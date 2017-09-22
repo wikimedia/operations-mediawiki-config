@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "2e7b3738_be47614f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7904,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2017-09-22T20:18:52Z",
+      "side": 1,
+      "message": "My understanding is that when you add the wiki to fishbowl.dblist you don\u0027t need to care about anything else as the permissions are modified accordingly not to allow account creations or editting but to members of the wiki. So if you added it to fishbowl.dblist that should be enough and fine :)",
+      "parentUuid": "2e7b3738_35d7192a",
+      "range": {
+        "startLine": 7898,
+        "startChar": 1,
+        "endLine": 7904,
+        "endChar": 7
+      },
+      "revId": "d1f31b52fb1e6ff8cf593bad1c9fc77a34b76cd7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e7b3738_68915a9c",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 1
