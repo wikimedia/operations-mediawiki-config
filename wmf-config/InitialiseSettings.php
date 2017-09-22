@@ -14978,6 +14978,13 @@ $wgConf->settings = [
 
 	// Roll out
 	'wiktionary' => true,
+	'wikiquote' => true,
+	'wikibooks' => true,
+	'wikisource' => true,
+	'wikinews' => true,
+	'wikiversity' => true,
+	'wikivoyage' => true,
+	'wikidatawiki' => true,
 ],
 
 'wgCiteResponsiveReferences' => [
