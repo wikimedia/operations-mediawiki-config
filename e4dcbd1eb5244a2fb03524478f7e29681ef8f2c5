@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e7b3738_092a0190",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 15
+      },
+      "writtenOn": "2017-09-22T22:21:34Z",
+      "side": 1,
+      "message": "keep the array syntax, just change the IP itself but keep the [ ]",
+      "revId": "e4dcbd1eb5244a2fb03524478f7e29681ef8f2c5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
