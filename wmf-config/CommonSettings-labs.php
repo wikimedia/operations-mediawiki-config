@@ -330,8 +330,6 @@ if ( $wmgUseLoginNotify ) {
 	$wgLoginNotifyAttemptsNewIP = 1;
 }
 
-$wgStructuredChangeFiltersEnableExperimentalViews = true;
-
 $wgMessageCacheType = CACHE_ACCEL;
 
 // Let Beta Cluster Commons do upload-from-URL from production Commons.
