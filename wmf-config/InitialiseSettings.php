@@ -14954,37 +14954,9 @@ $wgConf->settings = [
 // --------------- VisualEditor end ---------------
 
 // Whether to use jQuery 3.x or keep using the 1.x series.
-// Temporarily disabled during testing of the feature, 2017-04-13 – T124742.
+// See T124742.
 'wgUsejQueryThree' => [
-	'default' => false,
-
-	// group 0
-	'testwiki' => true,
-	'test2wiki' => true,
-	'testwikidatawiki' => true,
-	'mediawikiwiki' => true,
-
-	// opt-in (T124742)
-	'commonswiki' => true, // @Krinkle
-	'metawiki' => true, // @Krinkle
-	'nlwiki' => true, // @Krinkle
-	'nlwikibooks' => true, // @Krinkle
-	'nlwikinews' => true, // @Krinkle
-	'nlwikiquote' => true, // @Krinkle
-	'nlwikisource' => true, // @Krinkle
-	'nlwiktionary' => true, // @Krinkle
-	'plwiki' => true, // @MatmaRex
-	'svwiki' => true, // @Nirmos
-
-	// Roll out
-	'wiktionary' => true,
-	'wikiquote' => true,
-	'wikibooks' => true,
-	'wikisource' => true,
-	'wikinews' => true,
-	'wikiversity' => true,
-	'wikivoyage' => true,
-	'wikidatawiki' => true,
+	'default' => true,
 ],
 
 'wgCiteResponsiveReferences' => [
