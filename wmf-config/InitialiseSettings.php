@@ -19071,6 +19071,9 @@ $wgConf->settings = [
 	'default' => null,
 	'mediawikiwiki' => [ 'driver' => 'RemexHtml' ],
 	'testwiki' => [ 'driver' => 'RemexHtml' ],
+	'eswikiversity' => [ 'driver' => 'RemexHtml' ],
+	'wikitech' => [ 'driver' => 'RemexHtml' ],
+
 ],
 
 // Cache ResourceLoader modules in localStorage
