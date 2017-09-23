@@ -19036,7 +19036,6 @@ $wgConf->settings = [
 
 'wgUseTidy' => [
 	'default' => true,
-	'foundationwiki' => false,
 	'collabwiki' => false,
 	'donatewiki' => false,
 ],
@@ -19045,6 +19044,11 @@ $wgConf->settings = [
 	'default' => null,
 	'mediawikiwiki' => [ 'driver' => 'RemexHtml' ],
 	'testwiki' => [ 'driver' => 'RemexHtml' ],
+	'fawiki' => [ 'driver' => 'RemexHtml' ],
+	'eswikiversity' => [ 'driver' => 'RemexHtml' ],
+	'foundationwiki' => [ 'driver' => 'RemexHtml' ],
+	'wikitech' => [ 'driver' => 'RemexHtml' ],
+
 ],
 
 // Cache ResourceLoader modules in localStorage
