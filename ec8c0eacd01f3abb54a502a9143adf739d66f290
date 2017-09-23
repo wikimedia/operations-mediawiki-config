@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "2e7b3738_0411885f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 19039,
+      "author": {
+        "id": 4879
+      },
+      "writtenOn": "2017-09-23T14:35:17Z",
+      "side": 1,
+      "message": "Removed",
+      "parentUuid": "2e7b3738_841c987d",
+      "range": {
+        "startLine": 19039,
+        "startChar": 1,
+        "endLine": 19039,
+        "endChar": 26
+      },
+      "revId": "ec8c0eacd01f3abb54a502a9143adf739d66f290",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e7b3738_e430fcfe",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 4
@@ -36,6 +60,30 @@
       "writtenOn": "2017-09-23T14:31:30Z",
       "side": 1,
       "message": "typo",
+      "range": {
+        "startLine": 19050,
+        "startChar": 2,
+        "endLine": 19050,
+        "endChar": 15
+      },
+      "revId": "ec8c0eacd01f3abb54a502a9143adf739d66f290",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e7b3738_240e043f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 19050,
+      "author": {
+        "id": 4879
+      },
+      "writtenOn": "2017-09-23T14:35:17Z",
+      "side": 1,
+      "message": "Fixed",
+      "parentUuid": "2e7b3738_e430fcfe",
       "range": {
         "startLine": 19050,
         "startChar": 2,
