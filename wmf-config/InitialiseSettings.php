@@ -8484,7 +8484,14 @@ $wgConf->settings = [
 			'deletedtext'       => true,
 			'deletedhistory' => true,
 			'extendedconfirmed' => true,
-		], // T87558, T135370, T135725
+			'patrol' => true,
+			'move-categorypages' => true,
+			'rollback' => true,
+			'autopatrol' => true,
+			'upload' => true,
+			'reupload' => true,
+			'reupload-own' => true,
+		], // T87558, T135370, T135725, T176553
 		'sysop' => [
 			'extendedconfirmed' => true,
 		],
