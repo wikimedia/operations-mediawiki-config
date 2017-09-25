@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e7b3738_9676fcd3",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2983,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-09-25T17:27:20Z",
+      "side": 0,
+      "message": "Since the default is also 0.01, we should set this value to 0 , no? Should we also set RelatedArticlesEnabledBucketSize to 0?",
+      "revId": "a2893ef59617bf782088ed396021e644f7a6b9ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
