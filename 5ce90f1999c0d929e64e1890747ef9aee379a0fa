@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e7b3738_3becd1f1",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 19049,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2017-09-25T15:20:56Z",
+      "side": 1,
+      "message": "Yeah, let\u0027s skip foundationwiki for now given it\u0027s a raw HTML wiki without Tidy right now.",
+      "range": {
+        "startLine": 19049,
+        "startChar": 2,
+        "endLine": 19049,
+        "endChar": 16
+      },
+      "revId": "5ce90f1999c0d929e64e1890747ef9aee379a0fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
