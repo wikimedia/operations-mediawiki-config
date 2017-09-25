@@ -126,7 +126,7 @@ class Clean(main.AbstractSync):
             ])
             command_list.append([
                 'cleaning-patches',
-                ['rm' '-fR', os.path.join('/srv/patches', branch)]
+                ['rm', '-fR', os.path.join('/srv/patches', branch)]
             ])
         else:
             regex = r'".*\.?({0})$"'.format('|'.join(DELETABLE_TYPES))
