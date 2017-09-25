@@ -2980,7 +2980,7 @@ if ( $wmgUseInsider ) {
 if ( $wmgUseRelatedArticles ) {
 	wfLoadExtension( 'RelatedArticles' );
 
-	$wgRelatedArticlesLoggingBucketSize = 0.01;
+	$wgRelatedArticlesLoggingBucketSize = 0;
 	$wgRelatedArticlesUseCirrusSearch = $wmgRelatedArticlesUseCirrusSearch;
 	$wgRelatedArticlesOnlyUseCirrusSearch = false;
 }
