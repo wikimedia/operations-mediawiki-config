@@ -34,6 +34,24 @@
       "revId": "a2893ef59617bf782088ed396021e644f7a6b9ca",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e7b3738_effc3eb3",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2983,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-09-26T13:11:02Z",
+      "side": 0,
+      "message": "Yep, my bad for mixing the two config variables.",
+      "parentUuid": "2e7b3738_5e050612",
+      "revId": "a2893ef59617bf782088ed396021e644f7a6b9ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
