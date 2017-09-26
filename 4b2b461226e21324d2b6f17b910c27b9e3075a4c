@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e7b3738_945a6ff8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2017-09-26T11:07:22Z",
+      "side": 1,
+      "message": "IMHO unneeded. We already have the Bug reference. That message does not add anything useful :)",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 25
+      },
+      "revId": "4b2b461226e21324d2b6f17b910c27b9e3075a4c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e7b3738_b438cb9c",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 8283,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2017-09-26T11:07:22Z",
+      "side": 1,
+      "message": "A space between // and T176709 is required.",
+      "range": {
+        "startLine": 8283,
+        "startChar": 47,
+        "endLine": 8283,
+        "endChar": 56
+      },
+      "revId": "4b2b461226e21324d2b6f17b910c27b9e3075a4c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e7b3738_3445bb18",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 9893,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2017-09-26T11:07:22Z",
+      "side": 1,
+      "message": "It\u0027s useful to have this ordered alphabetically.",
+      "range": {
+        "startLine": 9893,
+        "startChar": 13,
+        "endLine": 9893,
+        "endChar": 45
+      },
+      "revId": "4b2b461226e21324d2b6f17b910c27b9e3075a4c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e7b3738_d451d7de",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 10638,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2017-09-26T11:07:22Z",
+      "side": 1,
+      "message": "Same as above.",
+      "range": {
+        "startLine": 10638,
+        "startChar": 13,
+        "endLine": 10638,
+        "endChar": 45
+      },
+      "revId": "4b2b461226e21324d2b6f17b910c27b9e3075a4c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
