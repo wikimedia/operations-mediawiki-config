@@ -8279,6 +8279,10 @@ $wgConf->settings = [
 		'user' => [ 'editinterface' => true ],
 		'flood' => [ 'bot' => true ],
 	],
+	'+dtywiki' => [
+		'user' => [ 'upload' => false, ],
+		'sysop' => [ 'upload' => true, ],
+	],
 	'+elwiktionary' => [
 		'interface-editor' => [ 'editinterface' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ], // T30612
