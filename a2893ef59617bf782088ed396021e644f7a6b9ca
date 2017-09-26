@@ -16,6 +16,24 @@
       "revId": "a2893ef59617bf782088ed396021e644f7a6b9ca",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e7b3738_5e050612",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2983,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-09-26T01:16:48Z",
+      "side": 0,
+      "message": "Arg. Good catch. That\u0027s a bad default. Fixed.\n\nIf we set RelatedArticlesEnabledBucketSize to 0 then nobody will have the feature so keeping at 1 is correct.. right?",
+      "parentUuid": "2e7b3738_9676fcd3",
+      "revId": "a2893ef59617bf782088ed396021e644f7a6b9ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
