@@ -17935,6 +17935,7 @@ $wgConf->settings = [
 
 'wmgUseArticlePlaceholder' => [
 	'default' => false,
+	'bnwiki' => true,
 	'cywiki' => true,
 	'eowiki' => true,
 	'guwiki' => true,
