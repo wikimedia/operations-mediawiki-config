@@ -8279,6 +8279,9 @@ $wgConf->settings = [
 		'user' => [ 'editinterface' => true ],
 		'flood' => [ 'bot' => true ],
 	],
+	'+dtywiki' => [
+		'autopatrolled' => [ 'autopatrol' => true ], //T176709
+	],
 	'+elwiktionary' => [
 		'interface-editor' => [ 'editinterface' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ], // T30612
@@ -9887,7 +9890,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'import', 'transwiki', 'inactive' ],
 	],
 	'+dtywiki' => [
-		'sysop' => [ 'transwiki' ], // T174226
+		'sysop' => [ 'transwiki', 'autopatrolled' ], // T174226, T176709
 	],
 	'+elwiki' => [
 		'bureaucrat' => [ 'accountcreator' ], // T61997
@@ -10632,7 +10635,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'sysop', 'bureaucrat', 'import', 'transwiki', 'inactive', 'confirmed' ],
 	],
 	'+dtywiki' => [
-		'sysop' => [ 'transwiki' ], // T174226
+		'sysop' => [ 'transwiki', 'autopatrolled' ], // T174226, T176709
 	],
 	'+elwiki' => [
 		'bureaucrat' => [ 'accountcreator' ], // T61997
