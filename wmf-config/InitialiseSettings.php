@@ -19569,6 +19569,16 @@ $wgConf->settings = [
 	'default' => [ 'legacy', 'html5' ],
 ],
 
+'wmgUse3d' => [
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+],
+
+'wg3dProcessEnviron' => [
+	'default' => [ 'DISPLAY' => ':99' ],
+],
+
 ];
 
 ### WMF Labs override #####
