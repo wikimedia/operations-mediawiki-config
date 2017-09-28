@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6af365_8aca8049",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 445,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2017-09-28T11:56:22Z",
+      "side": 1,
+      "message": "as well as wikidatawiki we should have a second patch enabling this for wikidataclient group I guess!",
+      "range": {
+        "startLine": 445,
+        "startChar": 4,
+        "endLine": 445,
+        "endChar": 16
+      },
+      "revId": "ea2dd83df692b112e247dfdae2c25e8ddf20b2f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
