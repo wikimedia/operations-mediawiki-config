@@ -9527,6 +9527,9 @@ $wgConf->settings = [
 		'patroller' => [ 'patrol' => true ], // T48828
 		'autopatrolled' => [ 'autopatrol' => true ], // T48828
 	],
+	'+viwiktionary' => [
+		'rollbacker' => [ 'rollback' => true ], // T176979
+	],
 	// T74589 SecurePoll rights
 	'+votewiki' => [
 		'electcomm' => [
@@ -10388,6 +10391,9 @@ $wgConf->settings = [
 			'flood'
 		],
 	],
+	'+viwiktionary' => [
+		'sysop' => [ 'rollbacker' ], // T176979
+	],
 	'+vecwiki' => [
 		'sysop' => [ 'flood' ],
 	],
@@ -11150,6 +11156,9 @@ $wgConf->settings = [
 			'eliminator', // T70612
 			'flood'
 		],
+	],
+	'+viwiktionary' => [
+		'sysop' => [ 'rollbacker' ], // T176979
 	],
 	'+vecwiki' => [
 		'sysop' => [ 'flood' ],
