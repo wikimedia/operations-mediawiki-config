@@ -10387,6 +10387,8 @@ $wgConf->settings = [
 			'eliminator', // T70612
 			'flood'
 		],
+	'+viwiktionary' => [
+			'sysop' => 'rollbacker' // T176979
 	],
 	'+vecwiki' => [
 		'sysop' => [ 'flood' ],
