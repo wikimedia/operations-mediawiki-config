@@ -1,6 +1,11 @@
 <?php
 
-require_once "$IP/extensions/Wikidata/Wikidata.php";
+// Temporary condition T176948
+if ( $wmgWikibaseUseConfigFromWikidataBuild ) {
+	require_once "$IP/extensions/Wikidata/Wikidata.php";
+} else {
+	require_once "{$wmfConfigDir}/Wikibase-buildentry.php";
+}
 
 // The version number now comes from the Wikidata build,
 // included above, so that cache invalidations can be in sync
