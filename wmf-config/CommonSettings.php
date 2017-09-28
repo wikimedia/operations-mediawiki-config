@@ -3136,11 +3136,6 @@ if ( $wmgUseInterwikiSorting ) {
 }
 
 if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {
-	if ( $wmgUseWikibaseRepo && $wmfRealm === 'labs' ) {
-		// enable on beta only
-		$wmgUseWikibasePropertySuggester = true;
-	}
-
 	include "$wmfConfigDir/Wikibase.php";
 }
 
