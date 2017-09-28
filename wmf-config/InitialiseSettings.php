@@ -17976,11 +17976,6 @@ $wgConf->settings = [
 	'wikidata' => true,
 ],
 
-'wmgUseWikibasePropertySuggester' => [
-	'default' => false,
-	'wikidata' => true,
-],
-
 'wmgUseWikibaseClient' => [
 	'default' => false,
 	'wikidataclient' => true,
