@@ -25,6 +25,29 @@
     },
     {
       "key": {
+        "uuid": "0e6af365_ead8dc2a",
+        "filename": "wmf-config/Wikibase-buildentry.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2017-09-28T12:00:33Z",
+      "side": 1,
+      "message": "Should probably rather be require_once (also below), but not urgent now",
+      "range": {
+        "startLine": 32,
+        "startChar": 1,
+        "endLine": 32,
+        "endChar": 13
+      },
+      "revId": "d30b3175609165a990d1d63f1184a07a651b9ed7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6af365_cab078db",
         "filename": "wmf-config/Wikibase-buildentry.php",
         "patchSetId": 1
