@@ -17970,6 +17970,10 @@ $wgConf->settings = [
 	'wikidata' => true,
 ],
 
+'wmgWikibaseUseConfigFromWikidataBuild' => [
+	'default' => true,
+],
+
 'wmgUseWikibaseRepo' => [
 	'default' => false,
 	'wikidata' => true,
