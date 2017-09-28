@@ -1,0 +1,142 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6af365_aaabc46c",
+        "filename": "wmf-config/Wikibase-buildentry.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2017-09-28T11:53:36Z",
+      "side": 1,
+      "message": "I can probably just remove the jenkins stuff commented out all together...",
+      "range": {
+        "startLine": 11,
+        "startChar": 13,
+        "endLine": 11,
+        "endChar": 18
+      },
+      "revId": "d30b3175609165a990d1d63f1184a07a651b9ed7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6af365_cab078db",
+        "filename": "wmf-config/Wikibase-buildentry.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2017-09-28T11:53:36Z",
+      "side": 1,
+      "message": "I can probably remove the commented out section re loading mediainfo as this isnt in prod yet.",
+      "range": {
+        "startLine": 43,
+        "startChar": 21,
+        "endLine": 43,
+        "endChar": 26
+      },
+      "revId": "d30b3175609165a990d1d63f1184a07a651b9ed7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6af365_eab1bce0",
+        "filename": "wmf-config/Wikibase-buildentry.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2017-09-28T11:53:36Z",
+      "side": 1,
+      "message": "This changes based on the branch being used:\n\nhttps://github.com/wikimedia/mediawiki-extensions-Wikidata/blob/wmf/1.31.0-wmf.1/WikibaseClient.settings.php",
+      "range": {
+        "startLine": 78,
+        "startChar": 63,
+        "endLine": 78,
+        "endChar": 92
+      },
+      "revId": "d30b3175609165a990d1d63f1184a07a651b9ed7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6af365_0ab770d4",
+        "filename": "wmf-config/Wikibase-buildentry.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2017-09-28T11:53:36Z",
+      "side": 1,
+      "message": "same here",
+      "range": {
+        "startLine": 81,
+        "startChar": 65,
+        "endLine": 81,
+        "endChar": 94
+      },
+      "revId": "d30b3175609165a990d1d63f1184a07a651b9ed7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6af365_6ac62c50",
+        "filename": "wmf-config/Wikibase-buildentry.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2017-09-28T11:53:36Z",
+      "side": 1,
+      "message": "We dont need to register unit tests here...",
+      "range": {
+        "startLine": 84,
+        "startChar": 58,
+        "endLine": 84,
+        "endChar": 73
+      },
+      "revId": "d30b3175609165a990d1d63f1184a07a651b9ed7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6af365_8ac3603d",
+        "filename": "wmf-config/Wikibase-buildentry.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2017-09-28T11:53:36Z",
+      "side": 1,
+      "message": "I can remove this jenkins cruft too",
+      "range": {
+        "startLine": 86,
+        "startChar": 19,
+        "endLine": 86,
+        "endChar": 24
+      },
+      "revId": "d30b3175609165a990d1d63f1184a07a651b9ed7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
