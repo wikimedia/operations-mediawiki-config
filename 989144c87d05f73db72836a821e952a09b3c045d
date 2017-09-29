@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0e6af365_2164d244",
+        "filename": "wmf-config/Wikibase-buildentry.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2017-09-29T10:44:09Z",
+      "side": 1,
+      "message": "automatic extension initialization was removed from Wikibase a while ago:\n\nhttps://github.com/wikimedia/mediawiki-extensions-Wikibase/commit/f43c553d7e9e116ee4272156281f8e76e13fd2b3#diff-b5d0ee8c97c7abd7e3fa29b9a27d1780\n\nso we don\u0027t need these two settings here",
+      "revId": "989144c87d05f73db72836a821e952a09b3c045d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6af365_7b591d5d",
         "filename": "wmf-config/Wikibase-buildentry.php",
         "patchSetId": 4
