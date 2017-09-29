@@ -44,13 +44,11 @@ $wmgThrottlingExceptions[] = [
 	'value' => 120 // 100 expected
 ];
 
-$wmgThrottlingExceptions[] = [ // T176287 - John Michael Kohler Art Center
-	'from'   => '2017-09-21T13:00-05:00', // Central
-	'to'     => '2017-09-26T22:00-05:00',
-	'IP'  => [
-		'192.168.50.52',
-	],
-	'dbname' => [ 'enwiki', 'commonswiki' ],
-	'value'  => 100, // 100 expected participants (not specified)
+$wmgThrottlingExceptions[] = [ // T177071 - Tzu Chi University Workshop
+	'from'   => '2017-10-01T18:00 +8:00', 
+	'to'     => '2017-10-01T21:00 +8:00',
+	'IP'  =>  '203.68.25.222',
+	'dbname' => [ 'zhwiki', 'commonswiki' ],
+	'value'  => 50,
 ];
 ## Add throttling definitions above.
