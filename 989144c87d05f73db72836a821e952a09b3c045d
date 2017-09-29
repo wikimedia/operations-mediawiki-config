@@ -33,6 +33,24 @@
       "revId": "989144c87d05f73db72836a821e952a09b3c045d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6af365_db15a94e",
+        "filename": "wmf-config/Wikibase-buildentry.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2017-09-29T02:02:44Z",
+      "side": 1,
+      "message": "see also https://gerrit.wikimedia.org/r/#/c/381371/ to stop using this in wmf config",
+      "parentUuid": "0e6af365_bb26b5c7",
+      "revId": "989144c87d05f73db72836a821e952a09b3c045d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
