@@ -16,6 +16,23 @@
       "revId": "989144c87d05f73db72836a821e952a09b3c045d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6af365_bb26b5c7",
+        "filename": "wmf-config/Wikibase-buildentry.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2017-09-29T01:55:54Z",
+      "side": 1,
+      "message": "we can set this to \u0027wikibase_shared/wikidata_\u0027 . $wmgVersionNumber and move it out of this wikidata build entry point",
+      "revId": "989144c87d05f73db72836a821e952a09b3c045d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
