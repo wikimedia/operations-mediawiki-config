@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6af365_7b591d5d",
+        "filename": "wmf-config/Wikibase-buildentry.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2017-09-29T01:51:52Z",
+      "side": 1,
+      "message": "now we always load the quality extensions for repo",
+      "revId": "989144c87d05f73db72836a821e952a09b3c045d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
