@@ -2,11 +2,9 @@
 
 require_once "$IP/extensions/Wikidata/Wikidata.php";
 
-// The version number now comes from the Wikidata build,
-// included above, so that cache invalidations can be in sync
-// extension changes when there is a new extension branch or
-// otherwise needed to change the cache key.
-$wgWBSharedCacheKey = '-' . $wmgWikibaseCachePrefix;
+// This allows cache invalidations to be in sync with deploys
+// and not shared across different versions of wikibase.
+$wgWBSharedCacheKey = '-wikibase_shared/wikidata_' . $wmgVersionNumber;
 
 if ( defined( 'HHVM_VERSION' ) ) {
 	// Split the cache up for hhvm. T73461
