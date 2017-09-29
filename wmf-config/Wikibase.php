@@ -4,11 +4,11 @@
 // TODO move that config into this file at some point...
 require_once "{$wmfConfigDir}/Wikibase-buildentry.php";
 
-// The version number now comes from the Wikidata build,
-// included above, so that cache invalidations can be in sync
-// extension changes when there is a new extension branch or
-// otherwise needed to change the cache key.
-$wgWBSharedCacheKey = '-' . $wmgWikibaseCachePrefix;
+// This allows cache invalidations to be in sync with deploys
+// and not shared across different versions of wikibase.
+// e.g. wikibase_shared/1_31_0-wmf_2-testwikidatawiki0 for test wikis
+// and wikibase_shared/1_31_0-wmf_2-wikidatawiki for all others.
+$wgWBSharedCacheKey = 'wikibase_shared/' . str_replace( '.', '_', $wmgVersionNumber ) . '-' . $wmgWikibaseCachePrefix;
 
 if ( defined( 'HHVM_VERSION' ) ) {
 	// Split the cache up for hhvm. T73461
@@ -126,7 +126,7 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBRepoSettings['dataSquidMaxage'] = 1 * 60 * 60;
 	$wgWBRepoSettings['sharedCacheDuration'] = 60 * 60 * 24;
-	$wgWBRepoSettings['sharedCacheKeyPrefix'] .= $wgWBSharedCacheKey;
+	$wgWBRepoSettings['sharedCacheKeyPrefix'] = $wgWBSharedCacheKey;
 
 	$wgPropertySuggesterMinProbability = 0.069;
 
@@ -219,7 +219,7 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['allowDataAccessInUserLanguage'] = $wmgWikibaseAllowDataAccessInUserLanguage;
 	$wgWBClientSettings['entityAccessLimit'] = $wmgWikibaseEntityAccessLimit;
 
-	$wgWBClientSettings['sharedCacheKeyPrefix'] .= $wgWBSharedCacheKey;
+	$wgWBClientSettings['sharedCacheKeyPrefix'] = $wgWBSharedCacheKey;
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
 }
 
