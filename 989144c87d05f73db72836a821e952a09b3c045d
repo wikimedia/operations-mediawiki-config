@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e6af365_21c3720c",
+        "filename": "wmf-config/Wikibase-buildentry.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2017-09-29T10:52:05Z",
+      "side": 1,
+      "message": "Ooooh, okay!\nI might remove these from build resources first :)",
+      "parentUuid": "0e6af365_2164d244",
+      "revId": "989144c87d05f73db72836a821e952a09b3c045d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6af365_7b591d5d",
         "filename": "wmf-config/Wikibase-buildentry.php",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2017-09-29T01:51:52Z",
       "side": 1,
       "message": "now we always load the quality extensions for repo",
+      "revId": "989144c87d05f73db72836a821e952a09b3c045d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6af365_41c8e625",
+        "filename": "wmf-config/Wikibase-buildentry.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2017-09-29T10:52:05Z",
+      "side": 1,
+      "message": "ack!",
+      "parentUuid": "0e6af365_7b591d5d",
       "revId": "989144c87d05f73db72836a821e952a09b3c045d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -65,6 +101,24 @@
       "side": 1,
       "message": "see also https://gerrit.wikimedia.org/r/#/c/381371/ to stop using this in wmf config",
       "parentUuid": "0e6af365_bb26b5c7",
+      "revId": "989144c87d05f73db72836a821e952a09b3c045d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6af365_01d2eed5",
+        "filename": "wmf-config/Wikibase-buildentry.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2017-09-29T10:52:05Z",
+      "side": 1,
+      "message": "Thanks for the links!\nI\u0027m pro that idea!",
+      "parentUuid": "0e6af365_db15a94e",
       "revId": "989144c87d05f73db72836a821e952a09b3c045d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
