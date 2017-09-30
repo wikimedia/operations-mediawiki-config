@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6af365_df9cae61",
+        "filename": "wmf-config/Wikibase-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2017-09-30T14:39:02Z",
+      "side": 1,
+      "message": "suggest to move the setting from Wikibase-production.php to Wikibase.php then it would apply to both production + labs",
+      "revId": "51998a37d0eb107d906192056f95ed190b4612be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
