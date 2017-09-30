@@ -140,6 +140,8 @@ if ( $wmgUseWikibaseRepo ) {
 		// Cirrus search will be used if useCirrus=1 parameter is set
 		$wgWBRepoSettings['entitySearch']['useCirrus'] = null;
 	}
+
+	$wgWBRepoSettings['dispatchingLockManager'] = 'redisLockManager';
 }
 
 if ( $wmgUseWikibaseClient ) {

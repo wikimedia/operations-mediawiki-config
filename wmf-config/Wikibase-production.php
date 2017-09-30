@@ -145,7 +145,6 @@ if ( $wmgUseWikibaseRepo ) {
 	}
 
 	$wgWBQualityConstraintsEnableConstraintsImportFromStatements = true;
-	$wgWBRepoSettings['dispatchingLockManager'] = 'redisLockManager';
 	$wgWBRepoSettings['writeFullEntityIdColumn'] = true;
 
 	// T112606
