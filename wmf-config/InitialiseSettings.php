@@ -19451,6 +19451,7 @@ $wgConf->settings = [
 	'testwiki' => true, // T110170
 	'mediawikiwiki' => true, // T110170
 	'officewiki' => true, // T176199
+	'hewiki' => true, // T177151
 ],
 
 'wmgUseLoginNotify' => [
