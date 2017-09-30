@@ -296,7 +296,8 @@ if ( $wmgReduceStartupExpiry ) {
 // Cache version key for ResourceLoader client-side module store
 // - Bumped to fix breakage due to old /static/$branchName/ urls still
 // being cached after the switch to /w/static.php (T134368).
-$wgResourceLoaderStorageVersion .= '-2';
+// - Bumped to fix broken SVG embedding being cached (T176884)
+$wgResourceLoaderStorageVersion .= '-3';
 
 $wgCacheDirectory = '/tmp/mw-cache-' . $wmgVersionNumber;
 $wgGitInfoCacheDirectory = "$IP/cache/gitinfo";
