@@ -198,8 +198,10 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['sendEchoNotification'] = true;
 	$wgWBClientSettings['echoIcon'] = [ 'url' => '/static/images/wikibase/echoIcon.svg' ];
 
+	// T177153
+	$wgWBClientSettings['disabledUsageAspects'] = [ 'D' ];
 	// T151717
 	if ( $wgDBname !== 'elwiki' ) {
-		$wgWBClientSettings['disabledUsageAspects'] = [ 'C' ];
+		$wgWBClientSettings['disabledUsageAspects'][] = 'C';
 	}
 }
