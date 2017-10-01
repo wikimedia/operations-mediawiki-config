@@ -166,7 +166,6 @@ if ( $wmgUseWikibaseClient ) {
 	}
 
 	$wgWBClientSettings['siteGroup'] = $wmgWikibaseSiteGroup;
-	$wgWBClientSettings['otherProjectsLinksByDefault'] = true;
 
 	$wgWBClientSettings['excludeNamespaces'] = function () {
 		global $wgDBname;
