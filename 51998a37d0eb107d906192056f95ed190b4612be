@@ -16,6 +16,24 @@
       "revId": "51998a37d0eb107d906192056f95ed190b4612be",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6af365_757a8121",
+        "filename": "wmf-config/Wikibase-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 920
+      },
+      "writtenOn": "2017-10-01T10:04:18Z",
+      "side": 1,
+      "message": "I disagree,  I think this configurations can diverge and it\u0027s not a common config and it should be easy to change because it\u0027s related to the setup and not the software.",
+      "parentUuid": "0e6af365_df9cae61",
+      "revId": "51998a37d0eb107d906192056f95ed190b4612be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
