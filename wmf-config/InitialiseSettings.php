@@ -882,7 +882,7 @@ $wgConf->settings = [
 	'tewiktionary' => '/static/images/project-logos/tewiktionary.png',  // T45240
 	'thwiktionary' => '/static/images/project-logos/thwiktionary.png',
 	'tkwiktionary' => '/static/images/project-logos/tkwiktionary.png',  // T45240
-	'trwiktionary' => '/static/images/project-logos/trwiktionary.png',
+	'trwiktionary' => '/static/images/project-logos/trwiktionary.png',  // T176008
 	'ttwiktionary' => '/static/images/project-logos/ttwiktionary.png',  // T45240
 	'ugwiktionary' => '/static/images/project-logos/ugwiktionary.png',  // T45240
 	'ukwiktionary' => '/static/images/project-logos/ukwiktionary.png',
@@ -1446,6 +1446,7 @@ $wgConf->settings = [
 	'towiki' => [ '1.5x' => '/static/images/project-logos/towiki-1.5x.png', '2x' => '/static/images/project-logos/towiki-2x.png' ], // T150618
 	'tpiwiki' => [ '1.5x' => '/static/images/project-logos/tpiwiki-1.5x.png', '2x' => '/static/images/project-logos/tpiwiki-2x.png' ], // T150618
 	'trwiki' => [ '1.5x' => '/static/images/project-logos/trwiki-1.5x.png', '2x' => '/static/images/project-logos/trwiki-2x.png' ], // T150618
+	'trwiktionary' => [ '1.5x' => '/static/images/project-logos/trwiktionary-1.5x.png', '2x' => '/static/images/project-logos/trwiktionary-2x.png' ], // T176008
 	'tswiki' => [ '1.5x' => '/static/images/project-logos/tswiki-1.5x.png', '2x' => '/static/images/project-logos/tswiki-2x.png' ], // T150618
 	'ttwiki' => [ '1.5x' => '/static/images/project-logos/ttwiki-1.5x.png', '2x' => '/static/images/project-logos/ttwiki-2x.png' ], // T150618
 	'tyvwiki' => [ '1.5x' => '/static/images/project-logos/tyvwiki-1.5x.png', '2x' => '/static/images/project-logos/tyvwiki-2x.png' ], // T150618
