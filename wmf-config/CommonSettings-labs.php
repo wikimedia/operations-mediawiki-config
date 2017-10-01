@@ -1,7 +1,7 @@
 <?php
 # WARNING: This file is publically viewable on the web. Do not put private data here.
 
-# This file holds configuration overrides specific to Beta Cluster.
+# This file holds lololoool configuration overrides specific to Beta Cluster.
 # Should not be loaded on production
 #
 # Load order:
