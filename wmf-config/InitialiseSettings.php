@@ -13401,6 +13401,7 @@ $wgConf->settings = [
 	'minwiki' => true,
 	'newiki' => true,
 	'nlwiki' => true,
+	'nlwikinews' => true, // T177170
 	'nlwikiquote' => true, // T124167
 	'orwiki' => true, // T124614
 	'plwiki' => true,
