@@ -772,7 +772,7 @@ $wgConf->settings = [
 	'zawiki' => '/static/images/project-logos/zawiki.png',  // T50397
 	'zeawiki' => '/static/images/project-logos/zeawiki.png',  // T51125
 	'zhwiki' => '/static/images/project-logos/zhwiki.png',
-	'zh_classicalwiki' => '/static/images/project-logos/zh_classicalwiki.png',  // T46974
+	'zh_classicalwiki' => '/static/images/project-logos/zh_classicalwiki.png',  // T177165
 	'zh_min_nanwiki' => '/static/images/project-logos/zh_min_nanwiki.png',
 	'zh_yuewiki' => '/static/images/project-logos/zh_yuewiki.png',
 
@@ -1471,6 +1471,7 @@ $wgConf->settings = [
 	'zawiki' => [ '1.5x' => '/static/images/project-logos/zawiki-1.5x.png', '2x' => '/static/images/project-logos/zawiki-2x.png' ], // T150618
 	'zeawiki' => [ '1.5x' => '/static/images/project-logos/zeawiki-1.5x.png', '2x' => '/static/images/project-logos/zeawiki-2x.png' ], // T150618
 	'zhwiki' => [ '1.5x' => '/static/images/project-logos/zhwiki-1.5x.png', '2x' => '/static/images/project-logos/zhwiki-2x.png' ],
+	'zh_classicalwiki' => [ '1.5x' => '/static/images/project-logos/zh_classicalwiki-1.5x.png', '2x' => '/static/images/project-logos/zh_classicalwiki-2x.png' ], // T177165
 	'zh_yuewiki' => [ '1.5x' => '/static/images/project-logos/zh_yuewiki-1.5x.png', '2x' => '/static/images/project-logos/zh_yuewiki-2x.png' ], // T150618
 
 	# Wiktionary
