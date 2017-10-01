@@ -38,7 +38,7 @@ $wgConf->settings = [
 	'svwiktionary' => 'windows-1252',
 ],
 
-'wgCapitalLinks' => [
+'wgCapitalLinks' => [  test
 	'default' => true,
 	'jbowiki' => false,
 	'wiktionary' => false,
