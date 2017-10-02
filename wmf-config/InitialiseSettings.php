@@ -7660,18 +7660,19 @@ $wgConf->settings = [
 	'+dewikiversity' => [ 106 => 1, 108 => 1 ],
 	'+dewikivoyage' => [ 6 => 1, 14 => 1, 100 => 1, 104 => 1, 106 => 1 ],
 	'+elwikisource' => [ 102 => 1, 108 => 1 ],
-	'+enwikibooks' => [ 4 => 1, 112 => 1 ],
+	'+enwikibooks' => [ 4 => 1, 102 => 1, 110 => 1, 112 => 1 ], // T176906
 	'+enwikinews' => [ 14 => 1, ], // T87522
 	'+enwikisource' => [ 100 => 1, 102 => 1, 106 => 1, 114 => 1 ], // T52007, T167511
 	'+eswiki' => [ 100 => 1, 104 => 1 ],
 	'+eswikisource' => [ 104 => 1 ],
 	'+etwikisource' => [ 104 => 1, 106 => 1 ],
+	'+fawikibooks' => [ 102 => 1, 110 => 1 ], // T176908
 	'+fawikisource' => [ 102 => 1 ],
 	'+frrwiki' => [ 102 => 1, 104 => 1, 106 => 1 ], // T40023
 	'+frwikisource' => [ 102 => 1, 112 => 1 ],
 	'+frwikiversity' => [ 104 => 1, 106 => 1, 108 => 1 ],
 	'+frwiktionary' => [ 100 => 1, 106 => 1, ], // T94698
-	'+hewikisource' => [ 108 => 1, 112 => 1 ],
+	'+hewikisource' => [ 100 => 1, 106 => 1, 108 => 1, 110 => 1, 112 => 1 ], // T176907
 	'+hewiktionary' => [ 14 => 1 ],
 	'+hrwikisource' => [ 100 => 1, 104 => 1 ],
 	'+huwikisource' => [ 100 => 1, 106 => 1 ],
