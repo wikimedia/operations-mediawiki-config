@@ -1,4 +1,5 @@
 import argparse
+import multiprocessing
 import os
 import re
 import subprocess
@@ -51,6 +52,11 @@ class CheckoutMediaWiki(cli.Application):
             if subprocess.call(['/usr/bin/git', 'config',
                                 'branch.autosetuprebase', 'always']) != 0:
                 self.get_logger().warn('Unable to setup auto-rebase')
+
+            num_procs = max(multiprocessing.cpu_count() / 2, 1)
+            if subprocess.call(['/usr/bin/git', 'config',
+                                'submodule.fetchJobs', num_procs]) != 0:
+                self.get_logger().warn('Unable to setup submodule fetch jobs')
 
         checkout_version = 'master'
         if self.branch != 'master':
