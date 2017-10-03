@@ -13002,6 +13002,7 @@ $wgConf->settings = [
 	'enwiki' => true,
 	'mediawikiwiki' => true,
 	'metawiki' => true,
+	'ptwiki' => true,
 	'testwiki' => true,
 	'wikidatawiki' => true,
 ],
