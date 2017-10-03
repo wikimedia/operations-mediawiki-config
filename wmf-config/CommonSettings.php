@@ -2810,12 +2810,16 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgGroupPermissions['contentadmin'] = $wgGroupPermissions['sysop'];
 	$wgGroupPermissions['contentadmin']['editusercss'] = false;
 	$wgGroupPermissions['contentadmin']['edituserjs'] = false;
-	$wgGroupPermissions['contentadmin']['editrestrictedfield'] = false;
 	$wgGroupPermissions['contentadmin']['editinterface'] = false;
 	$wgGroupPermissions['contentadmin']['tboverride'] = false;
 	$wgGroupPermissions['contentadmin']['titleblacklistlog'] = false;
 	$wgGroupPermissions['contentadmin']['override-antispoof'] = false;
 	$wgGroupPermissions['contentadmin']['createaccount'] = false;
+
+	// These are somehow not added as they are assigned to 'sysop' in the respective extension.json
+	$wgGroupPermissions['contentadmin']['nuke'] = true;
+	$wgGroupPermissions['contentadmin']['massmessage'] = true;
+	$wgGroupPermissions['contentadmin']['spamblacklistlog'] = true;
 
 	$wgMessageCacheType = 'memcached-pecl';
 
