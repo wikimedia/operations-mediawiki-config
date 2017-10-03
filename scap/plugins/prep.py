@@ -52,6 +52,10 @@ class CheckoutMediaWiki(cli.Application):
                                 'branch.autosetuprebase', 'always']) != 0:
                 self.get_logger().warn('Unable to setup auto-rebase')
 
+            if subprocess.call(['/usr/bin/git', 'config',
+                                'submodule.fetchJobs', '4']) != 0:
+                self.get_logger().warn('Unable to setup submodule fetch jobs')
+
         checkout_version = 'master'
         if self.branch != 'master':
             checkout_version = 'wmf/%s' % self.branch
