@@ -53,4 +53,11 @@ $wmgThrottlingExceptions[] = [ // T176287 - John Michael Kohler Art Center
 	'dbname' => [ 'enwiki', 'commonswiki' ],
 	'value'  => 100, // 100 expected participants (not specified)
 ];
+$wmgThrottlingExceptions[] = [ // T177370
+	'from' => '2017-10-04T15:00 +2:00',
+	'to' => '2017-10-04T17:00 +2:00',
+	'range' => [ '195.113.180.192/26', '2001:718:9::/48' ],
+	'dbname' => [ 'cswiki' ],
+	'value' => 20, // 16 expected
+];
 ## Add throttling definitions above.
