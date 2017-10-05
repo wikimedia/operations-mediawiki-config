@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0e6af365_0ea1999e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 519
+      },
+      "writtenOn": "2017-10-05T09:37:29Z",
+      "side": 1,
+      "message": "except FlaggedRevs wikis using non-protection modes of FR.",
+      "revId": "85eeb9dc12b94a18f57168323aaacba9daa20eb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6af365_2e6fbd90",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 2
