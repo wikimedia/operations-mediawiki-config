@@ -680,8 +680,3 @@ if ( isset( $wgGroupPermissions['reviewer'] ) ) {
 }
 
 $wgFlaggedRevsStatsAge = false;
-
-if ( !$wgFlaggedRevsProtection ) {
-	// Disable structured change filters on wikis without FR protection (T177445)
-	$wgStructuredChangeFiltersShowPreference = false;
-}
