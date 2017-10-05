@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6af365_2e6fbd90",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 19068,
+      "author": {
+        "id": 519
+      },
+      "writtenOn": "2017-10-05T09:28:23Z",
+      "side": 1,
+      "message": "with $wgFlaggedRevsProtection falsy (T177445)",
+      "revId": "85eeb9dc12b94a18f57168323aaacba9daa20eb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6af365_4e6c7199",
+        "filename": "wmf-config/flaggedrevs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 684,
+      "author": {
+        "id": 519
+      },
+      "writtenOn": "2017-10-05T09:28:23Z",
+      "side": 1,
+      "message": "!$wgFlaggedRevsProtection",
+      "revId": "85eeb9dc12b94a18f57168323aaacba9daa20eb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6af365_6e54d5c9",
+        "filename": "wmf-config/flaggedrevs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 685,
+      "author": {
+        "id": 519
+      },
+      "writtenOn": "2017-10-05T09:28:23Z",
+      "side": 1,
+      "message": "on FlaggedRevs wikis without FlaggedRevsProtection (since they show an old-style RecentChanges/Watchlist filter)",
+      "revId": "85eeb9dc12b94a18f57168323aaacba9daa20eb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
