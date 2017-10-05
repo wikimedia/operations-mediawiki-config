@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6af365_dec01032",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2017-10-05T16:35:33Z",
+      "side": 1,
+      "message": "technically this is only the config for it, deploying the test is in WikimediaEvents. Not a big deal either though.",
+      "revId": "ccbc9d41f7071e7a981d996058d21f60e39771d0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6af365_7eb1e4db",
+        "filename": "wmf-config/CirrusSearch-common.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 300,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2017-10-05T16:35:33Z",
+      "side": 1,
+      "message": "seems this could just be configured everywhere, but not a big deal. It would only be used if activated.",
+      "revId": "ccbc9d41f7071e7a981d996058d21f60e39771d0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
