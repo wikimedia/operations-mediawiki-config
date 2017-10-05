@@ -19153,7 +19153,6 @@ $wgConf->settings = [
 ],
 'wgStructuredChangeFiltersShowPreference' => [
 	'default' => true,
-	// Disabled on FlaggedRevs wikis with $wgFlaggedRevsProtection set to false in flaggedrevs.php (T177445)
 ],
 
 ### End (roughly) of general extensions ########################
