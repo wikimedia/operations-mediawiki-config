@@ -201,7 +201,7 @@ if ( $wmgUseWikibaseClient ) {
 	// T177153
 	$wgWBClientSettings['disabledUsageAspects'] = [ 'D' ];
 	// T151717
-	if ( $wgDBname !== 'elwiki' ) {
+	if ( !in_array( $wgDBname, [ 'elwiki', 'kowiki', 'trwiki' ] ) ) {
 		$wgWBClientSettings['disabledUsageAspects'][] = 'C';
 	}
 }
