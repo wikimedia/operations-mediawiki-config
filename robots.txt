@@ -5,6 +5,12 @@
 # irresponsible, your access to the site may be blocked.
 #
 
+# Observed spamming large amounts of https://en.wikipedia.org/?curid=NNNNNN
+# and ignoring 429 ratelimit responses, claims to respect robots:
+# http://mj12bot.com/
+User-agent: MJ12bot
+Disallow: /
+
 # advertising-related bots:
 User-agent: Mediapartners-Google*
 Disallow: /
