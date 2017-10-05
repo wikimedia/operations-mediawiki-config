@@ -1116,7 +1116,7 @@ $wgConf->settings = [
 	'zhwikivoyage' => '/static/images/project-logos/zhwikivoyage.png', // T61077
 
 	// Chapter wikis
-	'amwikimedia' => '/static/images/project-logos/amwikimedia.png',
+	'amwikimedia' => '/static/images/project-logos/amwikimedia.png', // T176042
 	'arwikimedia' => '/static/images/project-logos/arwikimedia.png',
 	'bdwikimedia' => '/static/images/project-logos/bdwikimedia.png',
 	'bewikimedia' => '/static/images/project-logos/bewikimedia.png',
