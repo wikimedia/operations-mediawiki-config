@@ -150,7 +150,8 @@ $wgLBFactoryConf = [
 		'db1096' => 1,   # A6 3.6TB 512GB, watchlist, recentchanges, contributions, logpager
 		# 'db1099' => 1,   # B2 3.6TB 512GB, watchlist, recentchanges, contributions, logpager #T174509
 		# 'db1100' => 1,   # C2 3.6TB 512GB, old master, crashed
-		# 'db1104' => 100,  # B3 3.6TB 512GB #catching up after being provisioned
+		# 'db1104' => 100,  # B3 3.6TB 512GB # Cloning db1106
+		# 'db1105' => 100,  # C3 3.6TB 512GB #catching up after being provisioned
 	],
 	's6' => [
 		'db1061' => 0,   # C3 2.8TB 128GB, master
@@ -514,6 +515,7 @@ $wgLBFactoryConf = [
 	'db1101' => '10.64.32.198', # do not remove or comment out
 	'db1103' => '10.64.0.164', # do not remove or comment out
 	'db1104' => '10.64.16.85', # do not remove or comment out
+	'db1105' => '10.64.32.222', # do not remove or comment out
 	'db2001' => '10.192.0.4', # do not remove or comment out
 	'db2002' => '10.192.0.5', # do not remove or comment out
 	'db2003' => '10.192.0.6', # do not remove or comment out
