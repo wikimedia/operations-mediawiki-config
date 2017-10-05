@@ -296,6 +296,34 @@ if ( $wmgCirrusSearchMLRModel ) {
 	];
 }
 
+# needed for recall A/B test (T177502)
+if ( $wgDBname === 'enwiki' ) {
+	$wgCirrusSearchFullTextQueryBuilderProfiles['rec_3t_80_66'] = $wgCirrusSearchFullTextQueryBuilderProfiles['perfield_builder'];
+	$wgCirrusSearchFullTextQueryBuilderProfiles['rec_3t_80_66']['settings']['filter'] = [
+		'type' => 'default',
+		'settings' => [
+			'all' => [
+				'minimum_should_match' => '3<80%'
+			],
+			'all.plain' => [
+				'minimum_should_match' => '3<66%'
+			],
+		]
+	];
+	$wgCirrusSearchFullTextQueryBuilderProfiles['rec_4t_80_66'] = $wgCirrusSearchFullTextQueryBuilderProfiles['perfield_builder'];
+	$wgCirrusSearchFullTextQueryBuilderProfiles['rec_4t_80_66']['settings']['filter'] = [
+		'type' => 'default',
+		'settings' => [
+			'all' => [
+				'minimum_should_match' => '4<80%'
+			],
+			'all.plain' => [
+				'minimum_should_match' => '4<66%'
+			],
+		]
+	];
+}
+
 $wgCirrusSearchUserTesting = $wmgCirrusSearchUserTesting;
 
 # Load per realm specific configuration, either:
