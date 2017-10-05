@@ -12109,6 +12109,7 @@ $wgConf->settings = [
 	'srwiktionary' => true, // T70346
 	'strategywiki' => true,
 	'viwiktionary' => true, // T10886
+	'trwiktionary' => true, // T177448
 ],
 
 'wmgUseFloatedToc' => [
