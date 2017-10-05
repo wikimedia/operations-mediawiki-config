@@ -18553,53 +18553,7 @@ $wgConf->settings = [
 ],
 
 'wmgCirrusSearchUserTesting' => [
-	// While this says default, it's actually only enabled for wikis
-	// that also have 'wmgCirrusSearchMLRModel' configured.
-	'default' => [
-		'ltr' => [
-			'globals' => [
-				'wgCirrusSearchCrossProjectProfiles' => [
-					'b' => [
-						'rescore' => 'wsum_inclinks_pv',
-					],
-					'wikt' => [
-						'rescore' => 'wsum_inclinks_pv',
-					],
-					'voy' => [
-						'rescore' => 'wsum_inclinks_pv',
-					],
-					's' => [
-						'rescore' => 'wsum_inclinks_pv',
-					],
-					'q' => [
-						'rescore' => 'wsum_inclinks_pv',
-					]
-				],
-			],
-			'buckets' => [
-				// control
-				'control' => [
-					'trigger' => 'control',
-				],
-				// ltr with small rescore window
-				'ltr-1024' => [
-					'trigger' => 'ltr-1024',
-					'globals' => [
-						'wgCirrusSearchRescoreProfile' => 'mlr-1024rs',
-					]
-				],
-				// interleaved ltr with large(er) rescore window
-				'ltr-i-1024' => [
-					'trigger' => 'ltr-i-1024',
-					'globals' => [
-						'wgCirrusSearchInterleaveConfig' => [
-							'CirrusSearchRescoreProfile' => 'mlr-1024rs',
-						],
-					],
-				],
-			],
-		],
-	],
+	'default' => [],
 ],
 
 'wmgCirrusSearchLanguageDetectors' => [
