@@ -296,9 +296,9 @@ if ( $wmgCirrusSearchMLRModel ) {
 			],
 		],
 	];
-
-	$wgCirrusSearchUserTesting = $wmgCirrusSearchUserTesting;
 }
+
+$wgCirrusSearchUserTesting = $wmgCirrusSearchUserTesting;
 
 # Load per realm specific configuration, either:
 # - CirrusSearch-labs.php
