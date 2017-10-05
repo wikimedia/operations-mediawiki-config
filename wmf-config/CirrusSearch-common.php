@@ -235,6 +235,8 @@ $wgCirrusSearchNumCrossProjectSearchResults = 1;
 // Control ordering of crossproject searchresults blocks
 // Must be a valid profile defined in $wgCirrusSearchCrossProjectBlockScoreProfiles
 $wgCirrusSearchCrossProjectOrder = $wmgCirrusSearchCrossProjectOrder;
+// Load other project config via cirrus dump config API
+$wgCirrusSearchFetchConfigFromApi = true;
 
 // Override sister search profiles for specific projects
 $wgCirrusSearchCrossProjectProfiles = [
