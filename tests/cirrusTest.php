@@ -111,7 +111,9 @@ class cirrusTests extends WgConfTestCase {
 		// but none of those are a part of this repository
 		$wgCirrusSearchRescoreProfiles = [];
 		$wgCirrusSearchRescoreFunctionScoreChains = [];
-		$wgCirrusSearchFullTextQueryBuilderProfiles = [];
+		$wgCirrusSearchFullTextQueryBuilderProfiles = [
+			'perfield_builder' => []
+		];
 		$wgCirrusSearchMaxShardsPerNode = [];
 		$wgJobTypeConf = [ 'default' => [] ];
 		$wgCirrusSearchWeights = [];
