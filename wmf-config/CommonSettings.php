@@ -491,9 +491,6 @@ $wgUseImageMagick               = true;
 $wgImageMagickConvertCommand    = '/usr/local/bin/mediawiki-firejail-convert';
 $wgSharpenParameter = '0x0.8'; # for IM>6.5, T26857
 
-$wgFileBlacklist[] = 'txt';
-$wgFileBlacklist[] = 'mht';
-
 if ( $wmgUsePagedTiffHandler ) {
 	wfLoadExtension( 'PagedTiffHandler' );
 }
@@ -504,6 +501,7 @@ $wgMaxImageArea = 10e7; // 100MP
 $wgMaxAnimatedGifArea = 10e7; // 100MP
 
 $wgFileExtensions = array_merge( $wgFileExtensions, $wmgFileExtensions );
+$wgFileBlacklist = array_merge( $wgFileBlacklist, $wmgFileBlacklist );
 
 if ( isset( $wmgUploadStashMaxAge ) ) {
 	$wgUploadStashMaxAge = $wmgUploadStashMaxAge;
