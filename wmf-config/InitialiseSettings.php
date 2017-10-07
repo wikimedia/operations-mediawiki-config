@@ -12806,6 +12806,7 @@ $wgConf->settings = [
 	'guwikisource' => true, // T42872
 	'hiwiki' => true,
 	'hiwikiquote' => true, // T133775
+	'hiwikiversity' => true, // T177690
 	'hifwiki' => true, // T99824
 	'incubatorwiki' => true,
 	'kkwiki' => true, // T149563
