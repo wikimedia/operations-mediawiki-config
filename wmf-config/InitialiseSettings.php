@@ -4471,7 +4471,7 @@ $wgConf->settings = [
 		'帮助' => NS_HELP,
 		'帮助讨论' => NS_HELP_TALK,
 		'分类' => NS_CATEGORY,
-		'模块' => 828, // NS_MODULE
+		'Module' => 828, // NS_MODULE
 	],
 	'+zh_classicalwiki' => [
 		'WP' => NS_PROJECT, // T162547
