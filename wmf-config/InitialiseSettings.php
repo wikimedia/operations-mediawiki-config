@@ -9276,6 +9276,9 @@ $wgConf->settings = [
 		'autopatrolled' => [ 'autopatrol' => true, ],
 		'flood' => [ 'bot' => true, ], // T111753
 	],
+	'+sdwiki' => [
+		'autopatrolled' => [ 'autopatrol' => true ], // T177141
+	],
 	'+sewikimedia' => [
 		'*' => [
 			'edit' => false,
@@ -10288,6 +10291,9 @@ $wgConf->settings = [
 	'+scowiki' => [
 		'sysop' => [ 'rollbacker', 'autopatrolled', 'flood', ] // T111753
 	],
+	'+sdwiki' => [
+		'sysop' => [ 'autopatrolled' ], // T177141
+	],
 	'+sewikimedia' => [
 		'bureaucrat' => [ 'medlem' ],
 		'sysop' => [ 'medlem' ],
@@ -11050,6 +11056,9 @@ $wgConf->settings = [
 	],
 	'+scowiki' => [
 		'sysop' => [ 'rollbacker', 'autopatrolled', 'flood', ] // T111753
+	],
+	'+sdwiki' => [
+		'sysop' => [ 'autopatrolled' ], // T177141
 	],
 	'+sewikimedia' => [
 		'bureaucrat' => [ 'sysop', 'bureaucrat', 'medlem' ],
