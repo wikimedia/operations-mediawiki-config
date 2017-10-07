@@ -12795,6 +12795,7 @@ $wgConf->settings = [
 	'arwikisource' => true,
 	'bhwiki' => true, // T97920
 	'commonswiki' => true,
+	'dtywiki' => true, // T177688
 	'enwikinews' => true,
 	'fawikibooks' => true, // T91861
 	'fawikinews' => true,
