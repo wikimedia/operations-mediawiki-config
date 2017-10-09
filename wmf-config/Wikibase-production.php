@@ -145,6 +145,8 @@ if ( $wmgUseWikibaseRepo ) {
 	}
 
 	$wgWBQualityConstraintsEnableConstraintsImportFromStatements = true;
+	$wgWBQualityConstraintsNewApiOutputFormat = true;
+
 	$wgWBRepoSettings['writeFullEntityIdColumn'] = true;
 
 	// T112606
