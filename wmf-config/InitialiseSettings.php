@@ -13384,6 +13384,7 @@ $wgConf->settings = [
 	'euwiki' => true, // T166553
 	'fawiki' => true,
 	'frwiki' => true, // T95604
+	'gawiki' => true, // T177775
 	'gdwiki' => true, // T156281
 	'hewiki' => true,
 	'hewikibooks' => true,
