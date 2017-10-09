@@ -7176,6 +7176,12 @@ $wgConf->settings = [
 	'nostalgiawiki' => 'nostalgia',
 ],
 
+// T169732
+'wgVectorExperimentalPrintStyles' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 'wgVectorResponsive' => [
 	'default' => false,
 	'testwiki' => true,
