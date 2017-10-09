@@ -39,4 +39,7 @@
 	<exclude-pattern>\.git/</exclude-pattern>
 	<exclude-pattern>vendor/</exclude-pattern>
 	<exclude-pattern>wmf-config/PrivateSettings.php</exclude-pattern>
+	<!-- Auto generated files -->
+	<exclude-pattern>wmf-config/interwiki.php</exclude-pattern>
+	<exclude-pattern>wmf-config/trusted-xff.php</exclude-pattern>
 </ruleset>
