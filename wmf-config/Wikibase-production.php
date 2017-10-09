@@ -206,8 +206,6 @@ if ( $wmgUseWikibaseClient ) {
 	}
 
 	// T171027
-	if ( in_array( $wgDBname, [ 'commonswiki', 'ruwiki' ] ) ) {
-		$wgWBClientSettings['injectRecentChanges'] = false;
-	}
+	$wgWBClientSettings['injectRecentChanges'] = false;
 
 }
