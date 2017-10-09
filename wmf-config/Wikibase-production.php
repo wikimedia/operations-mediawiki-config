@@ -204,4 +204,10 @@ if ( $wmgUseWikibaseClient ) {
 	if ( !in_array( $wgDBname, [ 'elwiki', 'kowiki', 'trwiki' ] ) ) {
 		$wgWBClientSettings['disabledUsageAspects'][] = 'C';
 	}
+
+	// T171027
+	if ( !in_array( $wgDBname, [ 'commonswiki', 'ruwiki' ] ) ) {
+		$wgWBClientSettings['injectRecentChanges'] = false;
+	}
+
 }
