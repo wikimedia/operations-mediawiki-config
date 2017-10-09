@@ -20,7 +20,6 @@ $wmfAllServices['eqiad'] = [
 		'deployment-elastic06.deployment-prep.eqiad.wmflabs',
 		'deployment-elastic07.deployment-prep.eqiad.wmflabs',
 	],
-	'ocg' => 'http://deployment-pdf01:8000',
 	'urldownloader' => 'http://deployment-urldownloader.deployment-prep.eqiad.wmflabs:8080',
 	'parsoid' => 'http://deployment-parsoid09.deployment-prep.eqiad.wmflabs:8000',
 	'mathoid' => 'http://deployment-mathoid.eqiad.wmflabs:10042',
