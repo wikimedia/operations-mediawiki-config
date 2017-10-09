@@ -652,11 +652,17 @@ if ( $wmgUseTimeless ) {
 
 // The Print logo for Vector should use the same wordmark as Minerva
 // This avoids duplicate config entries (T169732)
-$wgVectorPrintLogo = [
-	'width' => $wgMinervaCustomLogos['copyright-width'],
-	'height' => $wgMinervaCustomLogos['copyright-height'],
-	'url' =>  $wgMinervaCustomLogos['copyright'],
-];
+if (
+	isset( $wgMinervaCustomLogos['copyright'] ) &&
+	isset( $wgMinervaCustomLogos['copyright-height'] ) &&
+	isset( $wgMinervaCustomLogos['copyright-width'] )
+) {
+	$wgVectorPrintLogo = [
+		'width' => $wgMinervaCustomLogos['copyright-width'],
+		'height' => $wgMinervaCustomLogos['copyright-height'],
+		'url' =>  $wgMinervaCustomLogos['copyright'],
+	];
+}
 
 // Grants and rights
 // Note these have to be visible on all wikis, not just the ones the
