@@ -1838,7 +1838,6 @@ if ( $wgDBname === 'enwiki' || $wgDBname === 'fawiki' ) {
 if ( $wmgUseCollection ) {
 	// PediaPress / PDF generation
 	include "$IP/extensions/Collection/Collection.php";
-	$wgCollectionMWServeURL = $wmfLocalServices['ocg'];
 	// Use pediapress server for POD function (T73675)
 	$wgCollectionCommandToServeURL = [
 		'zip_post' => "{$wmfLocalServices['urldownloader']}|https://pediapress.com/wmfup/",
