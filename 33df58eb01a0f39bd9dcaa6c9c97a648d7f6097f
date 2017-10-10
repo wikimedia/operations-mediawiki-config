@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "0e6af365_147c2ee1",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 13754,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2017-10-10T12:39:14Z",
+      "side": 1,
+      "message": "False seems okay, as we don\u0027t have a wiki where the feature would be enabled, but default to disabled.",
+      "parentUuid": "0e6af365_54ce2660",
+      "range": {
+        "startLine": 13754,
+        "startChar": 14,
+        "endLine": 13754,
+        "endChar": 19
+      },
+      "revId": "33df58eb01a0f39bd9dcaa6c9c97a648d7f6097f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6af365_74c9ea54",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 10
@@ -36,6 +60,24 @@
       "writtenOn": "2017-10-10T12:18:44Z",
       "side": 1,
       "message": "What is the correct value here?",
+      "revId": "33df58eb01a0f39bd9dcaa6c9c97a648d7f6097f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6af365_9487bedb",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 13759,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2017-10-10T12:39:14Z",
+      "side": 1,
+      "message": "False seems okay, as we don\u0027t have a wiki where the feature would be enabed, but default to disabled.",
+      "parentUuid": "0e6af365_74c9ea54",
       "revId": "33df58eb01a0f39bd9dcaa6c9c97a648d7f6097f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
