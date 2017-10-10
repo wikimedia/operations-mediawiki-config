@@ -197,12 +197,7 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['sendEchoNotification'] = true;
 	$wgWBClientSettings['echoIcon'] = [ 'url' => '/static/images/wikibase/echoIcon.svg' ];
 
-	// T177153
-	$wgWBClientSettings['disabledUsageAspects'] = [ 'D' ];
-	// T151717
-	if ( !in_array( $wgDBname, [ 'elwiki', 'kowiki', 'trwiki' ] ) ) {
-		$wgWBClientSettings['disabledUsageAspects'][] = 'C';
-	}
+	$wgWBClientSettings['disabledUsageAspects'] = $wmgWikibaseDisabledUsageAspects;
 
 	// T171027
 	if ( in_array( $wgDBname, [ 'commonswiki', 'ruwiki' ] ) ) {

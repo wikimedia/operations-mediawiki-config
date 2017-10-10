@@ -17996,6 +17996,14 @@ $wgConf->settings = [
 	],
 ],
 
+// T151717 and T177153
+'wmgWikibaseDisabledUsageAspects' => [
+	'default' => [ 'D', 'C' ],
+	'elwiki' => [ 'D' ],
+	'kowiki' => [ 'D' ],
+	'trwiki' => [ 'D' ],
+],
+
 'wmgUseWikibaseQuality' => [
 	'default' => false,
 	'wikidata' => true,
