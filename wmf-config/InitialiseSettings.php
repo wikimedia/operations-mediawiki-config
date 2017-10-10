@@ -13745,7 +13745,6 @@ $wgConf->settings = [
 'wmgULSCompactLanguageLinksBetaFeature' => [
 	'default' => false,
 	'ruwikivoyage' => true,
-	'dewiki' => true,
 	'enwiki' => true,
 ],
 
