@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6af365_54ce2660",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 13754,
+      "author": {
+        "id": 54
+      },
+      "writtenOn": "2017-10-10T12:18:44Z",
+      "side": 1,
+      "message": "What is the correct value here?",
+      "range": {
+        "startLine": 13754,
+        "startChar": 14,
+        "endLine": 13754,
+        "endChar": 19
+      },
+      "revId": "33df58eb01a0f39bd9dcaa6c9c97a648d7f6097f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6af365_74c9ea54",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 13759,
+      "author": {
+        "id": 54
+      },
+      "writtenOn": "2017-10-10T12:18:44Z",
+      "side": 1,
+      "message": "What is the correct value here?",
+      "revId": "33df58eb01a0f39bd9dcaa6c9c97a648d7f6097f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
