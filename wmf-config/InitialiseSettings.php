@@ -19608,6 +19608,8 @@ $wgConf->settings = [
 // T152540
 'wgFragmentMode' => [
 	'default' => [ 'legacy', 'html5' ],
+	'testwiki' => [ 'html5', 'legacy' ],
+	'test2wiki' => [ 'html5', 'legacy' ],
 ],
 
 'wmgUse3d' => [
