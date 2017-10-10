@@ -7178,8 +7178,7 @@ $wgConf->settings = [
 
 // T169732
 'wgVectorExperimentalPrintStyles' => [
-	'default' => false,
-	'testwiki' => true,
+	'default' => true,
 ],
 
 'wgVectorResponsive' => [
