@@ -81,6 +81,24 @@
       "revId": "33df58eb01a0f39bd9dcaa6c9c97a648d7f6097f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6af365_54d866f4",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 13759,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2017-10-10T12:49:25Z",
+      "side": 1,
+      "message": "You could actually remove both of these from these files, unless we are planning to use them. But as far as I know we will run a script to set the preference to false for some users, and everybody else will use the default setting (true).",
+      "parentUuid": "0e6af365_9487bedb",
+      "revId": "33df58eb01a0f39bd9dcaa6c9c97a648d7f6097f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
