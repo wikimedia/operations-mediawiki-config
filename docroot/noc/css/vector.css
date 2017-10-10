@@ -1,15 +1,12 @@
 /* Framework */
-html,
-body {
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	font-family: sans-serif;
-	font-size: 1em;
-}
 body {
 	background-color: #f3f3f3;
 	background-image: url(images/page-base.png);
+
+	/* Vector: No outer padding */
+	padding: 0;
+	/* Vector: Larger base size, bodyContent resets */
+	font-size: 100%;
 }
 /* Head */
 #page-base {
@@ -166,35 +163,7 @@ body {
 #bodyContent td, #bodyContent th {
 	border: none;
 }
-/* Links */
-a {
-	text-decoration: none;
-	color: #0645ad;
-	background: none;
-}
-a:visited {
-	color: #0b0080;
-}
-a:active {
-	color: #faa700;
-}
-a:hover {
-	text-decoration: underline;
-}
-a.stub {
-	color: #772233;
-}
-a.new {
-	color: #ba0000;
-}
-a.new:visited {
-	color: #a55858;
-}
 /* Inline Elements */
-img {
-	border: none;
-	vertical-align: middle;
-}
 hr {
 	height: 1px;
 	color: #aaa;

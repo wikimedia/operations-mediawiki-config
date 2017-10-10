@@ -3,9 +3,14 @@
  * - noc.wikimedia.org
  */
 
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	background: #fff;
-	margin: 0;
 	padding: 0.5em 1em;
 	font: 14px/21px sans-serif;
 	color: #333;

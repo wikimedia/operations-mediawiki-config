@@ -108,11 +108,9 @@ if ( $format === 'json' ) {
 <head>
 	<meta charset="UTF-8">
 	<title>Wikimedia database configuration</title>
+	<link rel="stylesheet" href="css/base.css">
 	<style>
-	body { font: 14px/21px sans-serif; color: #252525; }
 	h2 { font-weight: normal; }
-	a { text-decoration: none; color: #0645ad; }
-	a:hover { text-decoration: underline; }
 	code { color: #000; background: #f9f9f9; border: 1px solid #ddd; border-radius: 2px; padding: 1px 4px; }
 	main { display: flex; flex-wrap: wrap; }
 	nav li { float: left; list-style: none; border: 1px solid #eee; padding: 1px 4px; margin: 0 1em 1em 0; }
