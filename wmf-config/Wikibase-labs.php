@@ -47,6 +47,7 @@ if ( $wmgUseWikibaseRepo ) {
 		'the Creative Commons Attribution-ShareAlike License; additional terms may apply.';
 	$wgRightsUrl = 'creativecommons.org/licenses/by-sa/3.0';
 
+	$wgWBRepoSettings['canonicalUriProperty'] = 'P174944';
 }
 
 if ( $wmgUseWikibaseClient ) {
