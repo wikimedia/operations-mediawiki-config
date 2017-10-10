@@ -135,10 +135,14 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		// Enable Cirrus on test.wikidata.org
 		$wgWBRepoSettings['entitySearch']['useCirrus'] = true;
+		// These are for testing only, one is Item and one is ExternalId
+		$wgWBRepoSettings['entitySearch']['searchIndexProperties'] = ['P7', 'P700'];
 	} else {
 		// Soft-enable Cirrus usage for wbsearchentities
 		// Cirrus search will be used if useCirrus=1 parameter is set
 		$wgWBRepoSettings['entitySearch']['useCirrus'] = null;
+		// Index: instance of, subclass of
+		$wgWBRepoSettings['entitySearch']['searchIndexProperties'] = ['P31', 'P279'];
 	}
 
 	$wgWBRepoSettings['dispatchingLockManager'] = 'redisLockManager';
