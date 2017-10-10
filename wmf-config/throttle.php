@@ -28,4 +28,12 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
+$wmgThrottlingExceptions[]  = [ // T177835 - XLDB Clermont-Ferrand
+	'from'   => '2017-10-12T00:00+02:00', // Central
+	'to'     => '2017-10-12T23:59+02:00',
+	'IP'  => '217.128.125.42', '82.127.41.166',
+	'dbname' => [ 'wikidatawiki', 'frwiki', 'enwiki', 'commonswiki' ],
+	'value'  => 60, // 45 expected participants
+];
+
 ## Add throttling definitions above.
