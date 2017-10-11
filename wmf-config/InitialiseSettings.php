@@ -19083,6 +19083,7 @@ $wgConf->settings = [
 	'testwiki' => [ 'driver' => 'RemexHtml' ],
 
 	'fawiki' => [ 'driver' => 'RemexHtml' ], // T176150
+	'nowiki' => [ 'driver' => 'RemexHtml' ], // T177989
 
 	'eswikiversity' => [ 'driver' => 'RemexHtml' ],
 
