@@ -19078,11 +19078,15 @@ $wgConf->settings = [
 
 'wgTidyConfig' => [
 	'default' => null,
+
 	'mediawikiwiki' => [ 'driver' => 'RemexHtml' ],
 	'testwiki' => [ 'driver' => 'RemexHtml' ],
-	'eswikiversity' => [ 'driver' => 'RemexHtml' ],
-	'wikitech' => [ 'driver' => 'RemexHtml' ],
 
+	'fawiki' => [ 'driver' => 'RemexHtml' ], // T176150
+
+	'eswikiversity' => [ 'driver' => 'RemexHtml' ],
+
+	'wikitech' => [ 'driver' => 'RemexHtml' ],
 ],
 
 // Cache ResourceLoader modules in localStorage
