@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6af365_fb0142ba",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2017-10-11T12:05:32Z",
+      "side": 1,
+      "message": "There is a bunch of Wikibase settings at line 17850. Can we please move this new one up, next to the existing ones? I suggest to have it directly after \u0027wmgWikibaseAllowDataAccessInUserLanguage\u0027.",
+      "revId": "3c65d30e88afeed9d7516384fe425eb6641841bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
