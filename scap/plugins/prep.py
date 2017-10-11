@@ -53,7 +53,7 @@ class CheckoutMediaWiki(cli.Application):
                                 'branch.autosetuprebase', 'always']) != 0:
                 self.get_logger().warn('Unable to setup auto-rebase')
 
-            num_procs = max(multiprocessing.cpu_count() / 2, 1)
+            num_procs = str(max(multiprocessing.cpu_count() / 2, 1))
             if subprocess.call(['/usr/bin/git', 'config',
                                 'submodule.fetchJobs', num_procs]) != 0:
                 self.get_logger().warn('Unable to setup submodule fetch jobs')
