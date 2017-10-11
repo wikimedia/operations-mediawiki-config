@@ -124,8 +124,8 @@ $wgLBFactoryConf = [
 	/* s3 */ 'DEFAULT' => [
 		'db1075' => 0,   # A2 3.6TB 512GB, master
 		# 'db1038' => 0,   # B2 1.4TB  64GB, vslow, dump, old master # T172679
-		'db1044' => 0,   # B2 1.4TB  64GB, #Temporary master for db1095 - new sanitarium #T150802 # temporary vslow
-		'db1072' => 10,  # B2 2.8TB 160GB, #future vslow and dump - low weight to warm it up
+		'db1044' => 0,   # B2 1.4TB  64GB, #Temporary master for db1095 - new sanitarium #T150802
+		'db1072' => 0,  # B2 2.8TB 160GB, vslow, dump, old master
 		'db1077' => 400, # B1 3.6TB 512GB #temporary special slave - T172679
 		'db1078' => 500, # C3 3.6TB 512GB
 		'db1103' => 50,  # A3 3.6TB 512GB, watchlist, recentchanges, contributions, logpager
@@ -307,10 +307,10 @@ $wgLBFactoryConf = [
 	],
 	/* s3 */ 'DEFAULT' => [
 		'vslow' => [
-			'db1044' => 1,
+			'db1072' => 1,
 		],
 		'dump' => [
-			'db1044' => 1,
+			'db1072' => 1,
 		],
 		'watchlist' => [
 			'db1077' => 1,
