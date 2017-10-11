@@ -7823,6 +7823,12 @@ $wgConf->settings = [
 			'extendedmover' => [ 16, 60 ], // T138703
 		],
 	],
+	'+plwiki' => [
+		// Limit to 3 per day for new users (T169268)
+		'thanks-notification' => [
+			'newbie' => [ 3, 86400 ],
+		],
+	],
 ],
 # @} end of wgRateLimits
 
