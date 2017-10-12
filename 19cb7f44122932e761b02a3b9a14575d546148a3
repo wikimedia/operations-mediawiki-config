@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6af365_fd7ccfe3",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2017-10-12T10:18:29Z",
+      "side": 1,
+      "message": "From what I see in https://gerrit.wikimedia.org/r/#/c/376645/21/repo/config/Wikibase.default.php this is not part of the \"entitySearch\" array. I don\u0027t know what the intention was, but now it\u0027s inconsistent.",
+      "range": {
+        "startLine": 139,
+        "startChar": 21,
+        "endLine": 139,
+        "endChar": 33
+      },
+      "revId": "19cb7f44122932e761b02a3b9a14575d546148a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
