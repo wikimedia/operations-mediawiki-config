@@ -191,49 +191,49 @@ $wgLBFactoryConf = [
 	's1' => [
 		'lagDetectionMethod' => 'pt-heartbeat',
 		'lagDetectionOptions' => [
-			'conds' => [ 'shard' => 's1', 'datacenter' => $wmfMasterDatacenter ]
+			'conds' => [ 'shard' => 's1', 'datacenter' => $wmgMasterDatacenter ]
 		],
 		'useGTIDs' => true
 	],
 	's2' => [
 		'lagDetectionMethod' => 'pt-heartbeat',
 		'lagDetectionOptions' => [
-			'conds' => [ 'shard' => 's2', 'datacenter' => $wmfMasterDatacenter ]
+			'conds' => [ 'shard' => 's2', 'datacenter' => $wmgMasterDatacenter ]
 		],
 		'useGTIDs' => true
 	],
 	'DEFAULT' /* s3 */  => [
 		'lagDetectionMethod' => 'pt-heartbeat',
 		'lagDetectionOptions' => [
-			'conds' => [ 'shard' => 's3', 'datacenter' => $wmfMasterDatacenter ]
+			'conds' => [ 'shard' => 's3', 'datacenter' => $wmgMasterDatacenter ]
 		],
 		'useGTIDs' => true
 	],
 	's4' => [
 		'lagDetectionMethod' => 'pt-heartbeat',
 		'lagDetectionOptions' => [
-			'conds' => [ 'shard' => 's4', 'datacenter' => $wmfMasterDatacenter ]
+			'conds' => [ 'shard' => 's4', 'datacenter' => $wmgMasterDatacenter ]
 		],
 		'useGTIDs' => true
 	],
 	's5' => [
 		'lagDetectionMethod' => 'pt-heartbeat',
 		'lagDetectionOptions' => [
-			'conds' => [ 'shard' => 's5', 'datacenter' => $wmfMasterDatacenter ]
+			'conds' => [ 'shard' => 's5', 'datacenter' => $wmgMasterDatacenter ]
 		],
 		'useGTIDs' => true
 	],
 	's6' => [
 		'lagDetectionMethod' => 'pt-heartbeat',
 		'lagDetectionOptions' => [
-			'conds' => [ 'shard' => 's6', 'datacenter' => $wmfMasterDatacenter ]
+			'conds' => [ 'shard' => 's6', 'datacenter' => $wmgMasterDatacenter ]
 		],
 		'useGTIDs' => true
 	],
 	's7' => [
 		'lagDetectionMethod' => 'pt-heartbeat',
 		'lagDetectionOptions' => [
-			'conds' => [ 'shard' => 's7', 'datacenter' => $wmfMasterDatacenter ]
+			'conds' => [ 'shard' => 's7', 'datacenter' => $wmgMasterDatacenter ]
 		],
 		'useGTIDs' => true
 	],

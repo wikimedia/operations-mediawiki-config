@@ -9,9 +9,9 @@
 #
 # ######################################################################
 
-$wmfAllServices = [];
+$wmgAllServices = [];
 
-$wmfAllServices['eqiad'] = [
+$wmgAllServices['eqiad'] = [
 	'udp2log' => 'deployment-fluorine02.eqiad.wmflabs:8420',
 	'statsd' => 'labmon1001.eqiad.wmnet',
 	'search' => [
@@ -39,20 +39,20 @@ $wmfAllServices['eqiad'] = [
 ];
 
 ### Logstash
-$wmfAllServices['eqiad']['logstash'] = [
+$wmgAllServices['eqiad']['logstash'] = [
 	'10.68.16.147', // deployment-logstash2.deployment-prep.eqiad.wmflabs
 ];
 
 ### Analytics Kafka cluster (analytics-deployment-prep)
-$wmfAllServices['eqiad']['kafka'] = [
+$wmgAllServices['eqiad']['kafka'] = [
 	'deployment-kafka01.deployment-prep.eqiad.wmflabs:9092',
 	'deployment-kafka03.deployment-prep.eqiad.wmflabs:9092',
 ];
 
 ### Restbase
-$wmfAllServices['eqiad']['restbase'] = 'http://10.68.17.189:7231'; // deployment-restbase02.deployment-prep.eqiad.wmflabs
+$wmgAllServices['eqiad']['restbase'] = 'http://10.68.17.189:7231'; // deployment-restbase02.deployment-prep.eqiad.wmflabs
 
 ### Poolcounter
-$wmfAllServices['eqiad']['poolcounter'] = [
+$wmgAllServices['eqiad']['poolcounter'] = [
 	'10.68.17.48', # deployment-poolcounter04.deployment-prep.eqiad.wmflabs
 ];

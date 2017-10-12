@@ -80,11 +80,11 @@ $wgPoolCounterConf = [
 ];
 
 $wgPoolCountClientConf = [
-	'servers' => $wmfLocalServices['poolcounter'],
+	'servers' => $wmgLocalServices['poolcounter'],
 	'timeout' => 0.5
 ];
 
 # Enable connect_timeout for testwiki
-if ( $wgDBname == 'testwiki' || $wmfDatacenter == 'codfw' || $wmfRealm == 'labs' ) {
+if ( $wgDBname == 'testwiki' || $wmgDatacenter == 'codfw' || $wmgRealm == 'labs' ) {
 	$wgPoolCountClientConf['connect_timeout'] = 0.01;
 }
