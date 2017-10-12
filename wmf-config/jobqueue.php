@@ -31,12 +31,12 @@ $jobQueueFederatedConfig = [
 	'class' => 'JobQueueFederated',
 	'configByPartition' => wmfRedisConfigByPartition(
 		$wmgRedisQueueBaseConfig,
-		$wmfLocalServices['jobqueue_redis']
+		$wmgLocalServices['jobqueue_redis']
 	),
 	'sectionsByWiki' => [], // default
 	// Weights for partitions in use: use this to depool redis masters
 	'partitionsBySection' => [
-		'default' => array_fill_keys( array_keys( $wmfLocalServices['jobqueue_redis'] ), 50 )
+		'default' => array_fill_keys( array_keys( $wmgLocalServices['jobqueue_redis'] ), 50 )
 	],
 	'maxPartitionsTry' => 5 // always covers 2+ servers
 ];
@@ -58,7 +58,7 @@ unset( $jobQueueFederatedConfig );
 // Note: on server failure, this should be changed to any other redis server
 $wgJobQueueAggregator = [
 	'class' => 'JobQueueAggregatorRedis',
-	'redisServers' => $wmfLocalServices['jobqueue_aggregator'],
+	'redisServers' => $wmgLocalServices['jobqueue_aggregator'],
 	'redisConfig' => [
 		'connectTimeout' => 0.5,
 		'password' => $wmgRedisPassword,
