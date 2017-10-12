@@ -3,11 +3,11 @@
 #
 # Included very early by CommonSettings.php
 # Only two sets of globals available here:
-# - $wmfRealm, $wmfDatacenter (from multiversion/MWRealm)
-# - $wmfLocalServices (from wmf-config/*Services.php)
+# - $wmgRealm, $wmgDatacenter (from multiversion/MWRealm)
+# - $wmgLocalServices (from wmf-config/*Services.php)
 
 function wmfSetupEtcd() {
-	global $wmfRealm, $wmfDatacenter, $wmfLocalServices, $wgReadOnly, $wmfMasterDatacenter;
+	global $wmgRealm, $wmgDatacenter, $wmgLocalServices, $wgReadOnly, $wmgMasterDatacenter;
 
 	# Create a local cache
 	if ( PHP_SAPI === 'cli' ) {
@@ -18,18 +18,18 @@ function wmfSetupEtcd() {
 
 	# Use a single EtcdConfig object for both local and common paths
 	$etcdConfig = new EtcdConfig( [
-		'host' => $wmfLocalServices['etcd'],
+		'host' => $wmgLocalServices['etcd'],
 		'protocol' => 'https',
 		'directory' => "conftool/v1/mediawiki-config",
 		'cache' => $localCache,
 	] );
 
 	# Read only mode
-	$wgReadOnly = $etcdConfig->get( "$wmfDatacenter/ReadOnly" );
+	$wgReadOnly = $etcdConfig->get( "$wmgDatacenter/ReadOnly" );
 
 	# Master datacenter
 	# The datacenter from which we serve traffic.
-	$wmfMasterDatacenter = $etcdConfig->get( 'common/WMFMasterDatacenter' );
+	$wmgMasterDatacenter = $etcdConfig->get( 'common/WMFMasterDatacenter' );
 }
 
 wmfSetupEtcd();
