@@ -38,9 +38,9 @@ class dbconfigTests extends WgConfTestCase {
 		}
 
 		// intentionally not marked as global
-		$wmfMasterDatacenter = $masterdatacenter;
-		$wmfRealm = $realm;
-		$wmfDatacenter = $datacenter;
+		$wmgMasterDatacenter = $masterdatacenter;
+		$wmgRealm = $realm;
+		$wmgDatacenter = $datacenter;
 		include getRealmSpecificFilename( __DIR__ . '/../wmf-config/db.php' );
 
 		$this->restoreGlobals();

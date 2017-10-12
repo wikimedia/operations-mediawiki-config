@@ -9,9 +9,9 @@
 #
 # ######################################################################
 
-$wmfAllServices = [];
+$wmgAllServices = [];
 
-$wmfAllServices['eqiad'] = [
+$wmgAllServices['eqiad'] = [
 	'udp2log' => 'mwlog1001.eqiad.wmnet:8420',
 	'statsd' => 'statsd.eqiad.wmnet',
 	'search' => [ 'search.svc.eqiad.wmnet' ], # elasticsearch must be accessed by hostname for SSL certificate verification to work
@@ -28,7 +28,7 @@ $wmfAllServices['eqiad'] = [
 	'electron' => 'http://pdfrender.discovery.wmnet:5252',
 ];
 
-$wmfAllServices['codfw'] = [
+$wmgAllServices['codfw'] = [
 	'udp2log' => 'mwlog1001.eqiad.wmnet:8420',
 	'statsd' => 'statsd.eqiad.wmnet',
 	'search' => [ 'search.svc.codfw.wmnet' ], # elasticsearch must be accessed by hostname for SSL certificate verification to work
@@ -46,15 +46,15 @@ $wmfAllServices['codfw'] = [
 ];
 
 ### Logstash
-$wmfAllServices['eqiad']['logstash'] = [
+$wmgAllServices['eqiad']['logstash'] = [
 	'10.64.0.122', // logstash1001.eqiad.wmnet
 	'10.64.32.137', // logstash1002.eqiad.wmnet
 	'10.64.48.113', // logstash1003.eqiad.wmnet
 ];
-$wmfAllServices['codfw']['logstash'] = $wmfAllServices['eqiad']['logstash'];
+$wmgAllServices['codfw']['logstash'] = $wmgAllServices['eqiad']['logstash'];
 
 ### Analytics Kafka cluster
-$wmfAllServices['eqiad']['kafka'] = [
+$wmgAllServices['eqiad']['kafka'] = [
 	'10.64.5.12:9092',   // kafka1012.eqiad.wmnet
 	'10.64.5.13:9092',   // kafka1013.eqiad.wmnet
 	'10.64.36.114:9092', // kafka1014.eqiad.wmnet
@@ -62,33 +62,33 @@ $wmfAllServices['eqiad']['kafka'] = [
 	'10.64.53.12:9092',  // kafka1020.eqiad.wmnet
 	'10.64.36.122:9092', // kafka1022.eqiad.wmnet
 ];
-$wmfAllServices['codfw']['kafka'] = $wmfAllServices['eqiad']['kafka'];
+$wmgAllServices['codfw']['kafka'] = $wmgAllServices['eqiad']['kafka'];
 
 ### IRC
-$wmfAllServices['eqiad']['irc'] = '208.80.153.44'; // codfw: kraz
-$wmfAllServices['codfw']['irc'] = $wmfAllServices['eqiad']['irc'];
+$wmgAllServices['eqiad']['irc'] = '208.80.153.44'; // codfw: kraz
+$wmgAllServices['codfw']['irc'] = $wmgAllServices['eqiad']['irc'];
 
 ### Restbase
-$wmfAllServices['eqiad']['restbase'] = 'http://restbase.discovery.wmnet:7231';
-$wmfAllServices['codfw']['restbase'] = 'http://restbase.discovery.wmnet:7231';
+$wmgAllServices['eqiad']['restbase'] = 'http://restbase.discovery.wmnet:7231';
+$wmgAllServices['codfw']['restbase'] = 'http://restbase.discovery.wmnet:7231';
 
 ### Poolcounter
-$wmfAllServices['eqiad']['poolcounter'] = [
+$wmgAllServices['eqiad']['poolcounter'] = [
 	'10.64.32.126', # poolcounter1001.eqiad.wmnet
 	'10.64.16.152', # poolcounter1002.eqiad.wmnet
 ];
-$wmfAllServices['codfw']['poolcounter'] = [
+$wmgAllServices['codfw']['poolcounter'] = [
 	'10.192.0.19', # poolcounter2001.codfw.wmnet
 	'10.192.16.21', # poolcounter2002.codfw.wmnet
 ];
 
 ### LockManager Redis
-$wmfAllServices['eqiad']['redis_lock'] = [
+$wmgAllServices['eqiad']['redis_lock'] = [
 	'rdb1' => '10.64.0.80',
 	'rdb2' => '10.64.16.107',
 	'rdb3' => '10.64.48.155'
 ];
-$wmfAllServices['codfw']['redis_lock'] = [
+$wmgAllServices['codfw']['redis_lock'] = [
 	'rdb1' => '10.192.0.83',
 	'rdb2' => '10.192.0.84',
 	'rdb3' => '10.192.0.85',
@@ -105,7 +105,7 @@ $wmfAllServices['codfw']['redis_lock'] = [
 // the MediaWiki config to direct traffic there.
 // Do NOT remove entries from here if they are still present in 'partitionsBySection'
 // in wmf-config/jobqueue.php
-$wmfAllServices['eqiad']['jobqueue_redis'] = [
+$wmgAllServices['eqiad']['jobqueue_redis'] = [
 	'rdb1-6379' => 'rdb1001.eqiad.wmnet:6379',
 	'rdb1-6380' => 'rdb1001.eqiad.wmnet:6380',
 	'rdb1-6381' => 'rdb1001.eqiad.wmnet:6381',
@@ -119,7 +119,7 @@ $wmfAllServices['eqiad']['jobqueue_redis'] = [
 	'rdb4-6380' => 'rdb1005.eqiad.wmnet:6380',
 	'rdb4-6381' => 'rdb1005.eqiad.wmnet:6381',
 ];
-$wmfAllServices['codfw']['jobqueue_redis'] = [
+$wmgAllServices['codfw']['jobqueue_redis'] = [
 	'rdb1-6379' => 'rdb2001.codfw.wmnet:6379',
 	'rdb1-6380' => 'rdb2001.codfw.wmnet:6380',
 	'rdb1-6381' => 'rdb2001.codfw.wmnet:6381',
@@ -133,13 +133,13 @@ $wmfAllServices['codfw']['jobqueue_redis'] = [
 	'rdb4-6380' => 'rdb2005.codfw.wmnet:6380',
 	'rdb4-6381' => 'rdb2005.codfw.wmnet:6381',
 ];
-$wmfAllServices['eqiad']['jobqueue_aggregator'] = [
+$wmgAllServices['eqiad']['jobqueue_aggregator'] = [
 	'rdb1001.eqiad.wmnet:6378', // preferred
 	'rdb1003.eqiad.wmnet:6378', // fallback
 	'rdb1005.eqiad.wmnet:6378', // fallback
 	'rdb1007.eqiad.wmnet:6378', // fallback
 ];
-$wmfAllServices['codfw']['jobqueue_aggregator'] = [
+$wmgAllServices['codfw']['jobqueue_aggregator'] = [
 	'rdb2001.codfw.wmnet:6378', // preferred
 	'rdb2003.codfw.wmnet:6378', // fallback
 	'rdb2005.codfw.wmnet:6378', // fallback
