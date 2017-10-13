@@ -16,6 +16,24 @@
       "revId": "235449e341440f00b0062638239d0c06b7e90e5c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6af365_227d5417",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 2267,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2017-10-13T20:02:44Z",
+      "side": 1,
+      "message": "I don\u0027t think one-line named functions are a good idea in a temporary hack in a configuration file. This file is huge, already hard to follow, and most often not viewed with an IDE that could follow function references.\nFeel free to change the code if you disagree, though.",
+      "parentUuid": "0e6af365_dfe77539",
+      "revId": "235449e341440f00b0062638239d0c06b7e90e5c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
