@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6af365_dfe77539",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 2267,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-10-13T17:30:37Z",
+      "side": 1,
+      "message": "Could we at least use a named function here - isWMFStaff - with documentation?",
+      "revId": "235449e341440f00b0062638239d0c06b7e90e5c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
