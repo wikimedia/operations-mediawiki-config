@@ -133,7 +133,7 @@ $wgLBFactoryConf = [
 	's4' => [
 		'db1068' => 0,   # D1 2.8TB 160GB, master
 		'db1053' => 1,   # A2 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
-		'db1056' => 1,   # C2 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
+		# 'db1056' => 1,   # C2 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
 		'db1064' => 0,   # D1 2.8TB 160GB, vslow, dump #Master for db1095 - new sanitarium
 		'db1081' => 300, # A2 3.6TB 512GB, api
 		'db1084' => 500, # B1 3.6TB 512GB
@@ -149,7 +149,7 @@ $wgLBFactoryConf = [
 		'db1092' => 500, # D2 3.6TB 512GB
 		'db1096' => 1,   # A6 3.6TB 512GB, watchlist, recentchanges, contributions, logpager
 		'db1099' => 1,   # B2 3.6TB 512GB, watchlist, recentchanges, contributions, logpager
-		# 'db1100' => 1,   # C2 3.6TB 512GB, old master, crashed
+		'db1100' => 1,   # C2 3.6TB 512GB, old master
 		# 'db1104' => 100,  # B3 3.6TB 512GB # Cloning db1106
 		'db1105' => 100,  # C3 3.6TB 512GB #low weight after being provisioned
 		'db1106' => 100,  # D3 3.6TB 512GB #low weight after being provisioned
@@ -341,23 +341,23 @@ $wgLBFactoryConf = [
 		],
 		'watchlist' => [
 			'db1053' => 1,
-			'db1056' => 1,
+		# 	'db1056' => 1,
 		],
 		'recentchanges' => [
 			'db1053' => 1,
-			'db1056' => 1,
+		# 	'db1056' => 1,
 		],
 		'recentchangeslinked' => [
 			'db1053' => 1,
-			'db1056' => 1,
+		# 	'db1056' => 1,
 		],
 		'contributions' => [
 			'db1053' => 1,
-			'db1056' => 1,
+		# 	'db1056' => 1,
 		],
 		'logpager' => [
 			'db1053' => 1,
-			'db1056' => 1,
+		# 	'db1056' => 1,
 		],
 	],
 	's5' => [
@@ -403,19 +403,19 @@ $wgLBFactoryConf = [
 			'db1085' => 1,
 		],
 		'watchlist' => [
-			'db1098' => 100,
+			'db1098' => 1,
 		],
 		'recentchanges' => [
-			'db1098' => 100,
+			'db1098' => 1,
 		],
 		'recentchangeslinked' => [
-			'db1098' => 100,
+			'db1098' => 1,
 		],
 		'contributions' => [
-			'db1098' => 100,
+			'db1098' => 1,
 		],
 		'logpager' => [
-			'db1098' => 100,
+			'db1098' => 1,
 		],
 	],
 	's7' => [
