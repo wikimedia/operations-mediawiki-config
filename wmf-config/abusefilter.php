@@ -189,6 +189,9 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterBlockDuration = '14 days'; // T167562
 		$wgAbuseFilterNotifications = false;
 		break;
+	case 'fawikibooks': // T178227
+		$wgAbuseFilterBlockDuration = '14 days';
+		$wgAbuseFilterAnonBlockDuration = '7 days';
 	case 'fiwiki': // T59395
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
