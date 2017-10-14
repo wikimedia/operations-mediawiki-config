@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6af365_363a7634",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2017-10-14T20:22:00Z",
+      "side": 1,
+      "message": "Please add\n\n  $wgGroupPermissions[\u0027sysop\u0027][\u0027abusefilter-modify-restricted\u0027] \u003d true;\n\nor no one could use that option nor modify a filter with \u0027block\u0027 set.",
+      "revId": "ec211611c84a9f1e592c3033eac1d7cfa017e95a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6af365_563daa27",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2017-10-14T20:22:00Z",
+      "side": 1,
+      "message": "needs an ending \"break;\"",
+      "revId": "ec211611c84a9f1e592c3033eac1d7cfa017e95a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
