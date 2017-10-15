@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6af365_1155fc51",
+        "filename": "dblists/wikidataclient.dblist",
+        "patchSetId": 3
+      },
+      "lineNbr": 232,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2017-10-15T11:14:28Z",
+      "side": 1,
+      "message": "I\u0027m not sure this is ready for wikt",
+      "revId": "81bc038168ad5977ada42657515d7d3e63c287e5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6af365_f1594891",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2017-10-15T11:14:28Z",
+      "side": 1,
+      "message": "Timezone exists well in the PHP tzinfo database (http://php.net/manual/en/timezones.pacific.php).\n\nDon\u0027t forget to append // Tid",
+      "revId": "81bc038168ad5977ada42657515d7d3e63c287e5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
