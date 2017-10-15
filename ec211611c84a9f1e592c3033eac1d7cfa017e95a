@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e6af365_030ccf3b",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2017-10-15T15:45:40Z",
+      "side": 1,
+      "message": "Also needs:\n\n  $wgAbuseFilterActions[\u0027block\u0027] \u003d true;",
+      "parentUuid": "0e6af365_363a7634",
+      "revId": "ec211611c84a9f1e592c3033eac1d7cfa017e95a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6af365_563daa27",
         "filename": "wmf-config/abusefilter.php",
         "patchSetId": 2
