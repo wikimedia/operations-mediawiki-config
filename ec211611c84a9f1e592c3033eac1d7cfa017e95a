@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "0e6af365_63026bc0",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 194
+      },
+      "writtenOn": "2017-10-15T18:29:40Z",
+      "side": 1,
+      "message": "Does it though? the section right before it is for fawp, does not have that variable set to true, and we do have this feature enabled in fawiki for years.\n\nI think somewhere further up (or in the default settings of the extension), this is already set as true and needs not to be set for each project.",
+      "parentUuid": "0e6af365_030ccf3b",
+      "revId": "ec211611c84a9f1e592c3033eac1d7cfa017e95a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6af365_563daa27",
         "filename": "wmf-config/abusefilter.php",
         "patchSetId": 2
