@@ -13758,7 +13758,6 @@ $wgConf->settings = [
 	'default' => false,
 	'ruwikivoyage' => true,
 	'wikisource' => true,
-	'dewiki' => true,
 	'enwiki' => true,
 ],
 
