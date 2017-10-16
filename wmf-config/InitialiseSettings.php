@@ -18561,13 +18561,13 @@ $wgConf->settings = [
 			'rec_3t_80_66' => [
 				'trigger' => 'rec_3t_80_66',
 				'globals' => [
-					'wgCirrusSearchFullTextQueryBuilderProfiles' => 'rec_3t_80_66',
+					'wgCirrusSearchFullTextQueryBuilderProfile' => 'rec_3t_80_66',
 				]
 			],
 			'rec_4t_80_66' => [
 				'trigger' => 'rec_4t_80_66',
 				'globals' => [
-					'wgCirrusSearchFullTextQueryBuilderProfiles' => 'rec_4t_80_66',
+					'wgCirrusSearchFullTextQueryBuilderProfile' => 'rec_4t_80_66',
 				]
 			],
 		]
