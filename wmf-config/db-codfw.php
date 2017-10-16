@@ -151,6 +151,7 @@ $wgLBFactoryConf = [
 		# 'db2081' => 400, # A6 3.3TB 512GB # Compressed InnoDB #T170662
 		# 'db2082' => 400, # B6 3.3TB 512GB # Compressed InnoDB #T170662
 		# 'db2083' => 400, # C6 3.3TB 512GB # Compressed InnoDB #T170662
+		# 'db2084' => 400, # D6 3.3TB 512GB # Compressed InnoDB #T170662
 	],
 	's6' => [
 		'db2028' => 0,   # B6  2.9TB  96GB, master
@@ -591,6 +592,7 @@ $wgLBFactoryConf = [
 	'db2081' => '10.192.0.7', # do not remove or comment out
 	'db2082' => '10.192.16.39', # do not remove or comment out
 	'db2083' => '10.192.32.170', # do not remove or comment out
+	'db2084' => '10.192.48.86', # do not remove or comment out
 	'virt1000' => '208.80.154.18', # do not remove or comment out
 	'silver' => '208.80.154.136', # do not remove or comment out
 	'labtestweb2001' => '208.80.153.14', # do not remove or comment out
