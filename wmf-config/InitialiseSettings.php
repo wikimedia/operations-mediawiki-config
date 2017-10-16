@@ -17996,7 +17996,7 @@ $wgConf->settings = [
 // T151717 and T177153
 'wmgWikibaseDisabledUsageAspects' => [
 	'default' => [ 'D', 'C' ],
-	'cawiki' => [ 'C' ],
+	'cawiki' => [],
 	'cewiki' => [],
 	'elwiki' => [],
 	'kowiki' => [],
