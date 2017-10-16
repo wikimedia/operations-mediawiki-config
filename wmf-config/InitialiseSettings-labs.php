@@ -658,5 +658,15 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
+		'wgOresModels' => [
+			'enwiki' => [
+				'damaging' => true,
+				'goodfaith' => true,
+				'draftquality' => true,
+			],
+		],
+		'wgOresDraftQualityNS' => [
+			'enwiki' => [ 0 => true, 118 => true ],
+		],
 	];
 } # wmflLabsSettings()
