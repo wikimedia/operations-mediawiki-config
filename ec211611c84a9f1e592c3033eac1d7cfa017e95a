@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "0e6af365_17f889e1",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2017-10-16T10:37:50Z",
+      "side": 1,
+      "message": "fawiki above has\n\n $wgGroupPermissions[\u0027abusefilter\u0027][\u0027abusefilter-modify-restricted\u0027] \u003d true;\n\n $wgGroupPermissions[\u0027sysop\u0027][\u0027abusefilter-modify-restricted\u0027] \u003d true;\n\n $wgAbuseFilterActions \u003d [ \u0027rangeblock\u0027 \u003d\u003e true ];\n\nso yes, I\u0027d say we need it here too as they ain\u0027t default.",
+      "parentUuid": "0e6af365_63026bc0",
+      "revId": "ec211611c84a9f1e592c3033eac1d7cfa017e95a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6af365_563daa27",
         "filename": "wmf-config/abusefilter.php",
         "patchSetId": 2
