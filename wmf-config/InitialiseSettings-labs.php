@@ -658,6 +658,10 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
+		'wmgUseReadingLists' => [
+			'default' => true,
+		],
+
 		'wgOresModels' => [
 			'enwiki' => [
 				'damaging' => true,

@@ -1,4 +1,5 @@
 $IP/extensions/ArticleCreationWorkflow/extension.json
 $IP/extensions/EmailAuth/extension.json
 $IP/extensions/PerformanceInspector/extension.json
+$IP/extensions/ReadingLists/extension.json
 $IP/extensions/Sentry/extension.json

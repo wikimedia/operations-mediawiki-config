@@ -325,6 +325,13 @@ if ( $wmgUseTimeless ) {
 	wfLoadSkin( 'Timeless' ); // T160643
 }
 
+if ( $wmgUseReadingLists ) {
+	wfLoadExtension( 'ReadingLists' );
+	$wgReadingListsCentralWiki = 'metawiki';
+	// no clusters in Beta; let's just pick a random wiki DB and use that
+	$wgReadingListsDatabase = 'metawiki';
+}
+
 if ( $wmgUseLoginNotify ) {
 	$wgLoginNotifyAttemptsKnownIP = 10;
 	$wgLoginNotifyAttemptsNewIP = 1;
