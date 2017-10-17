@@ -18554,19 +18554,21 @@ $wgConf->settings = [
 	'enwiki' => [
 		'recall' => [
 			'buckets' => [
-				'trigger' => 'control',
-			],
-			'rec_3t_80_66' => [
-				'trigger' => 'rec_3t_80_66',
-				'globals' => [
-					'wgCirrusSearchFullTextQueryBuilderProfile' => 'rec_3t_80_66',
-				]
-			],
-			'rec_4t_80_66' => [
-				'trigger' => 'rec_4t_80_66',
-				'globals' => [
-					'wgCirrusSearchFullTextQueryBuilderProfile' => 'rec_4t_80_66',
-				]
+				'control' => [
+					'trigger' => 'control',
+				],
+				'rec_3t_80_66' => [
+					'trigger' => 'rec_3t_80_66',
+					'globals' => [
+						'wgCirrusSearchFullTextQueryBuilderProfile' => 'rec_3t_80_66',
+					]
+				],
+				'rec_4t_80_66' => [
+					'trigger' => 'rec_4t_80_66',
+					'globals' => [
+						'wgCirrusSearchFullTextQueryBuilderProfile' => 'rec_4t_80_66',
+					]
+				],
 			],
 		]
 	]
