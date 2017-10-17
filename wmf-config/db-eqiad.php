@@ -107,7 +107,7 @@ $wgLBFactoryConf = [
 		'db1055' => 1,   # C2 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
 		'db1065' => 0,   # D1 2.8TB 160GB, vslow, dump, master for sanitarium
 		'db1066' => 50,  # D1 2.8TB 160GB, api
-		# 'db1073' => 50,  # B3 2.8TB 160GB, api 174509
+		'db1073' => 50,  # B3 2.8TB 160GB, api
 		'db1080' => 300, # A2 3.6TB 512GB, api #T172679#3650005
 		'db1083' => 500, # B1 3.6TB 512GB
 		'db1089' => 500, # C3 3.6TB 512GB
@@ -274,7 +274,7 @@ $wgLBFactoryConf = [
 		],
 		'api' => [
 			'db1080' => 1,
-			# 'db1073' => 1,
+			'db1073' => 1,
 			'db1066' => 1,
 		],
 	],
