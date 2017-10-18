@@ -13716,6 +13716,7 @@ $wgConf->settings = [
 	'avwiki' => 'popups',
 	'azwiki' => 'popups',
 	'azbwiki' => 'popups',
+	'itwiki' => 'Popup',
 	'bewiki' => 'popups',
 	'brwiki' => 'Popups',
 	'dawiki' => 'Popups',
