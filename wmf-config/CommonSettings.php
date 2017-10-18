@@ -2032,17 +2032,6 @@ $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
 $wgDefaultUserOptions['usenewrc'] = 0;
 $wgDefaultUserOptions['extendwatchlist'] = 0;
 
-# # Hack to block emails from some user who likes 'The Joker' --Andrew 2009-05-28
-$wgHooks['EmailUser'][] = function ( &$to, &$from, &$subject, &$text ) {
-	$blockedAddresses = [ 'the4joker@gmail.com', 'randomdude5555@gmail.com', 'siyang.li@yahoo.com', 'johnnywiki@gmail.com', 'wikifreedomfighter@googlemail.com' ];
-	$emailIsBlacklisted = in_array( $from->address, $blockedAddresses );
-	if ( $emailIsBlacklisted ) {
-		wfDebugLog( 'AdHocDebug', "Blocking email from {$from->address}" ); // T175419
-	}
-
-	return !$emailIsBlacklisted;
-};
-
 // ContributionTracking for handling PayPal redirects
 if ( $wgUseContributionTracking ) {
 	wfLoadExtension( 'ContributionTracking' );
