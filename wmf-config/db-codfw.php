@@ -137,6 +137,7 @@ $wgLBFactoryConf = [
 		'db2058' => 50,  # D6 3.3TB 160GB, dump (inactive), vslow
 		'db2065' => 200, # D6 3.3TB 160GB, api
 		'db2073' => 400, # C6 3.3TB 512GB # Compressed InnoDB
+		'db2084_3314' => 1, # D6 3.3TB 512GB # Compressed InnoDB
 	],
 	's5' => [
 		'db2023' => 0,   # B6 2.9TB  96GB, master
@@ -146,12 +147,12 @@ $wgLBFactoryConf = [
 		'db2059' => 100, # D6 3.3TB 160GB, api
 		'db2066' => 400, # D6 3.3TB 160GB
 		'db2075' => 400, # A1 3.3TB 512GB # Compressed InnoDB
+		'db2084_3315' => 1, # D6 3.3TB 512GB # Compressed InnoDB
 		# 'db2079' => 400, # A5 3.3TB 512GB # Compressed InnoDB #T170662
 		# 'db2080' => 400, # C5 3.3TB 512GB # Compressed InnoDB #T170662
 		# 'db2081' => 400, # A6 3.3TB 512GB # Compressed InnoDB #T170662
 		# 'db2082' => 400, # B6 3.3TB 512GB # Compressed InnoDB #T170662
 		# 'db2083' => 400, # C6 3.3TB 512GB # Compressed InnoDB #T170662
-		# 'db2084' => 400, # D6 3.3TB 512GB # Compressed InnoDB #T170662
 		# 'db2086' => 400, # B1 3.3TB 512GB # Compressed InnoDB #T170662
 	],
 	's6' => [
@@ -336,22 +337,27 @@ $wgLBFactoryConf = [
 		'watchlist' => [
 			'db2037' => 1,
 			'db2044' => 1,
+			'db2084_3314' => 1,
 		],
 		'recentchanges' => [
 			'db2037' => 1,
 			'db2044' => 1,
+			'db2084_3314' => 1,
 		],
 		'recentchangeslinked' => [
 			'db2037' => 1,
 			'db2044' => 1,
+			'db2084_3314' => 1,
 		],
 		'contributions' => [
 			'db2037' => 1,
 			'db2044' => 1,
+			'db2084_3314' => 1,
 		],
 		'logpager' => [
 			'db2037' => 1,
 			'db2044' => 1,
+			'db2084_3314' => 1,
 		],
 		'dump' => [
 			'db2058' => 1,
@@ -366,18 +372,23 @@ $wgLBFactoryConf = [
 	's5' => [
 		'watchlist' => [
 			'db2038' => 1,
+			'db2084_3315' => 1,
 		],
 		'recentchanges' => [
 			'db2038' => 1,
+			'db2084_3315' => 1,
 		],
 		'recentchangeslinked' => [
 			'db2038' => 1,
+			'db2084_3315' => 1,
 		],
 		'contributions' => [
 			'db2038' => 1,
+			'db2084_3315' => 1,
 		],
 		'logpager' => [
 			'db2038' => 1,
+			'db2084_3315' => 1,
 		],
 		'dump' => [
 			'db2052' => 1,
@@ -592,7 +603,8 @@ $wgLBFactoryConf = [
 	'db2081' => '10.192.0.7', # do not remove or comment out
 	'db2082' => '10.192.16.39', # do not remove or comment out
 	'db2083' => '10.192.32.170', # do not remove or comment out
-	'db2084' => '10.192.48.86', # do not remove or comment out
+	'db2084_3314' => '10.192.48.86:3314', # do not remove or comment out
+	'db2085_3315' => '10.192.48.86:3315', # do not remove or comment out
 	'db2086' => '10.192.16.40', # do not remove or comment out
 	'virt1000' => '208.80.154.18', # do not remove or comment out
 	'silver' => '208.80.154.136', # do not remove or comment out
