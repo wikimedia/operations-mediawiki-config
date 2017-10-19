@@ -103,7 +103,7 @@ $wgLBFactoryConf = [
 	's1' => [
 		'db2048' => 0,   # C6 2.9TB 160GB, master
 		# 'db2016' => 0,   # B6 2.9TB  96GB, old master
-		'db2034' => 50,  # A5 2.9TB 160GB, rc, log
+		# 'db2034' => 50,  # A5 2.9TB 160GB, rc, log #T178359
 		'db2042' => 50,  # C6 2.9TB 160GB, rc, log
 		'db2055' => 50,  # D6 3.3TB 160GB, dump (inactive), vslow, api
 		'db2062' => 50,  # B5 3.3TB 160GB, api # mariadb 10.1
@@ -123,10 +123,10 @@ $wgLBFactoryConf = [
 	],
 	/* s3 */ 'DEFAULT' => [
 		'db2018' => 0,   # B6 2.9TB  96GB, master
-		'db2036' => 50,  # C6 2.9TB 160GB, rc, log
+		# 'db2036' => 50,  # C6 2.9TB 160GB, rc, log #T178359
 		'db2043' => 50,  # C6 2.9TB 160GB, dump (inactive), vslow
 		'db2050' => 150, # C6 2.9TB 160GB, api
-		'db2057' => 400, # D6 3.3TB 160GB
+		'db2057' => 200, # D6 3.3TB 160GB #temporary rc #T178359
 		'db2074' => 400, # D6 3.3TB 512GB # InnoDB compressed
 	],
 	's4' => [
@@ -247,23 +247,23 @@ $wgLBFactoryConf = [
 'groupLoadsBySection' => [
 	's1' => [
 		'watchlist' => [
-			'db2034' => 1,
+			# 'db2034' => 1,
 			'db2042' => 1,
 		],
 		'recentchanges' => [
-			'db2034' => 1,
+			# 'db2034' => 1,
 			'db2042' => 1,
 		],
 		'recentchangeslinked' => [
-			'db2034' => 1,
+			# 'db2034' => 1,
 			'db2042' => 1,
 		],
 		'contributions' => [
-			'db2034' => 1,
+			# 'db2034' => 1,
 			'db2042' => 1,
 		],
 		'logpager' => [
-			'db2034' => 1,
+			# 'db2034' => 1,
 			'db2042' => 1,
 		],
 		'dump' => [
@@ -308,19 +308,19 @@ $wgLBFactoryConf = [
 	],
 	/* s3 */ 'DEFAULT' => [
 		'watchlist' => [
-			'db2036' => 1,
+			'db2057' => 1,
 		],
 		'recentchanges' => [
-			'db2036' => 1,
+			'db2057' => 1,
 		],
 		'recentchangeslinked' => [
-			'db2036' => 1,
+			'db2057' => 1,
 		],
 		'contributions' => [
-			'db2036' => 1,
+			'db2057' => 1,
 		],
 		'logpager' => [
-			'db2036' => 1,
+			'db2057' => 1,
 		],
 		'dump' => [
 			'db2043' => 1,
