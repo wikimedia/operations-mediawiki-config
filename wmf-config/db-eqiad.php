@@ -123,12 +123,12 @@ $wgLBFactoryConf = [
 	],
 	/* s3 */ 'DEFAULT' => [
 		'db1075' => 0,   # A2 3.6TB 512GB, master
-		# 'db1038' => 0,   # B2 1.4TB  64GB, vslow, dump, old master # T172679
+		'db1038' => 0,   # B2 1.4TB  64GB, temporary vslow, dump, old master # T172679
 		'db1044' => 0,   # B2 1.4TB  64GB, #Temporary master for db1095 - new sanitarium #T150802
-		'db1072' => 0,  # B2 2.8TB 160GB, vslow, dump, old master
+		# 'db1072' => 0,  # B2 2.8TB 160GB, vslow, dump, old master #T164488
 		'db1077' => 400, # B1 3.6TB 512GB #temporary special slave - T172679
 		'db1078' => 500, # C3 3.6TB 512GB
-		# 'db1103' => 0,  # A3 3.6TB 512GB, # not needed on s3 - has db1035's data that we have to checksum
+		# 'db1103' => 0,  # A3 3.6TB 512GB, # not needed on s3 - has db1044's data that we have to checksum
 	],
 	's4' => [
 		'db1068' => 0,   # D1 2.8TB 160GB, master
@@ -306,10 +306,10 @@ $wgLBFactoryConf = [
 	],
 	/* s3 */ 'DEFAULT' => [
 		'vslow' => [
-			'db1072' => 1,
+			'db1038' => 1,
 		],
 		'dump' => [
-			'db1072' => 1,
+			'db1038' => 1,
 		],
 		'watchlist' => [
 			'db1077' => 1,
