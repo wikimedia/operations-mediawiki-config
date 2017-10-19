@@ -5808,6 +5808,10 @@ $wgConf->settings = [
 		100 => 'Portal',
 		101 => 'Perbualan_Portal',
 	],
+	'mywiktionary' => [
+		100 => 'နောက်ဆက်တွဲ', // T178545, Appendix
+		101 => 'နောက်ဆက်တွဲ ဆွေးနွေးချက်',
+	],
 	'mznwiki' => [
 		100 => 'پورتال', # Portal
 		101 => 'پورتال_گپ', # Portal talk
