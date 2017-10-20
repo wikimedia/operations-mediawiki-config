@@ -18003,11 +18003,22 @@ $wgConf->settings = [
 // T151717 and T177153
 'wmgWikibaseDisabledUsageAspects' => [
 	'default' => [ 'D', 'C' ],
+	// Statement + description usage tracking wikis
 	'cawiki' => [],
 	'cewiki' => [],
 	'elwiki' => [],
 	'kowiki' => [],
 	'trwiki' => [],
+	// Description usage tracking wikis
+	'dewiki' => [ 'C' ],
+	'hewiki' => [ 'C' ],
+	'lvwiki' => [ 'C' ],
+	'mediawikiwiki' => [ 'C' ],
+	'metawiki' => [ 'C' ],
+	'nnwiki' => [ 'C' ],
+	'nowiki' => [ 'C' ],
+	'ruwikinews' => [ 'C' ],
+	'zhwiki' => [ 'C' ],
 	// First 20 small wikis with WikibaseClient (T177155)
 	'aawiki' => [ 'C' ],
 	'aawikibooks' => [ 'C' ],
