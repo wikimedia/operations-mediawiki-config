@@ -28,15 +28,12 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[] = [ // T177835 - XLDB Clermont-Ferrand
-	'from'   => '2017-10-12T00:00+02:00', // Central
-	'to'     => '2017-10-12T23:59+02:00',
-	'IP'  => [
-		'217.128.125.42',
-		'82.127.41.166',
-	],
-	'dbname' => [ 'wikidatawiki', 'frwiki', 'enwiki', 'commonswiki' ],
-	'value'  => 60, // 45 expected participants
+$wmgThrottlingExceptions[] = [ // T178689 - Working Class Movement Library (Salford)
+	'from' => '2017-11-19T09:00 -0:00',
+	'to' => '2017-11-19T17:00 -0:00',
+	'range' => '212.121.214.227',
+	'dbname' => [ 'enwiki', 'commonswiki' ],
+	'value' => 50,
 ];
 
 ## Add throttling definitions above.
