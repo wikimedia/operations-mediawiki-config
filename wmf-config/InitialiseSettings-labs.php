@@ -667,6 +667,8 @@ function wmfLabsSettings() {
 				'damaging' => true,
 				'goodfaith' => true,
 				'draftquality' => true,
+				'reverted' => false,
+				'wp10' => false,
 			],
 		],
 		'wgOresDraftQualityNS' => [
