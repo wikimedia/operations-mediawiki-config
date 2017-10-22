@@ -11790,6 +11790,23 @@ $wgConf->settings = [
 		118 => 'noindex,nofollow', // Draft - T86329
 		119 => 'noindex,nofollow',
 	],
+	'hewikisource' => [
+		NS_TALK => 'noindex,follow',
+		NS_USER => 'noindex,follow',
+		NS_USER_TALK => 'noindex,follow',
+		NS_PROJECT_TALK => 'noindex,follow',
+		NS_IMAGE_TALK => 'noindex,follow',
+		NS_MEDIAWIKI_TALK => 'noindex,follow',
+		NS_TEMPLATE_TALK => 'noindex,follow',
+		NS_HELP_TALK => 'noindex,follow',
+		NS_CATEGORY_TALK => 'noindex,follow',
+		104 => 'noindex,nofollow',    // מפתח
+		105 => 'noindex,nofollow',    // שיחת_מפתח
+		112 => 'noindex,nofollow',    // עמוד
+		113 => 'noindex,nofollow',    // שיחת_עמוד
+		116 => 'noindex,nofollow',    // מקור
+		117 => 'noindex,nofollow',    // שיחת_מקור
+	],
 	'itwiki' => [
 		NS_USER => 'noindex,follow', // T107992
 	],
