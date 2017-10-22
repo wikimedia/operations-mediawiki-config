@@ -2012,11 +2012,7 @@ if ( $wmgUseArticleCreationWorkflow ) {
 $wgDefaultUserOptions['thumbsize'] = $wmgThumbsizeIndex;
 $wgDefaultUserOptions['showhiddencats'] = $wmgShowHiddenCats;
 
-if ( $wgDBname === 'commonswiki' ) {
-	$wgDefaultUserOptions['watchcreations'] = 0;
-} else {
-	$wgDefaultUserOptions['watchcreations'] = 1;
-}
+$wgDefaultUserOptions['watchcreations'] = 1;
 
 // Temporary override: WMF is not hardcore enough to enable this.
 // See T37785, T38316, T47022 about it.
