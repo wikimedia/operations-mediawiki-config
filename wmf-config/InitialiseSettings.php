@@ -13222,6 +13222,7 @@ $wgConf->settings = [
 		'*.geograph.org.gg',                // Geograph Channel Islands - T174152
 		'geo.hlipp.de',                     // Geograph Deutschland - T174152
 		'geo-en.hlipp.de',                  // Geograph Deutschland - T174152
+    'aleph500.biblacad.ro:8991',        // Domain of the Romanian academy - T178753
 	],
 ],
 
