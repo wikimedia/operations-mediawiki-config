@@ -2519,6 +2519,10 @@ if ( $wmgUseTranslate ) {
 	$wgGroupPermissions['user']['translate-messagereview'] = true;
 	$wgGroupPermissions['user']['translate-groupreview'] = true;
 	$wgGroupPermissions['sysop']['pagelang'] = true; // T153209
+	$wgAddGroups['bureaucrat'][] = 'translationadmin'; // T178793
+	$wgRemoveGroups['bureaucrat'][] = 'translationadmin'; // T178793
+	$wgGroupsAddToSelf['sysop'][] = 'translationadmin'; // T178793
+	$wgGroupsRemoveToSelf['sysop'][] = 'translationadmin'; // T178793
 
 	$wgTranslateDocumentationLanguageCode = 'qqq';
 	$wgExtraLanguageNames['qqq'] = 'Message documentation'; # No linguistic content. Used for documenting messages
