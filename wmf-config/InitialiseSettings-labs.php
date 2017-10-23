@@ -674,5 +674,11 @@ function wmfLabsSettings() {
 		'wgOresDraftQualityNS' => [
 			'enwiki' => [ 0 => true, 118 => true ],
 		],
+
+		// TODO(T166759): Remove this setting once it is also
+		// the default for production.
+		'wgAutoloadAttemptLowercase' => [
+			'default' => false,
+		],
 	];
 } # wmflLabsSettings()
