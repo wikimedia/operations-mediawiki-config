@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce637b91_3a0154ba",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 13225,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2017-10-23T13:12:10Z",
+      "side": 1,
+      "message": "$wgCopyUploadsDomains is a list of domain.  That includes a port which is not correct since we whitelist solely against the domain:\n\n $ php maintenance/shell.php \n \u003e\u003e\u003e $wgCopyUploadsDomains \u003d [\u0027aleph500.biblacad.ro:8991\u0027];\n \u003d\u003e [\n      \"aleph500.biblacad.ro:8991\",\n    ]\n \u003e\u003e\u003e $url \u003d \u0027https://aleph500.biblacad.ro:8991/exlibris/aleph/a20_1/apache_media/A9UCKVYCJ3F38YD2PDQLEVVK76HCQ1.jpg\u0027;\n \u003d\u003e \"https://aleph500.biblacad.ro:8991/exlibris/aleph/a20_1/apache_media/A9UCKVYCJ3F38YD2PDQLEVVK76HCQ1.jpg\"\n \n \u003e\u003e\u003e UploadFromUrl::isAllowedHost( $url )\n \u003d\u003e false\n \n \u003e\u003e\u003e $wgCopyUploadsDomains \u003d [\u0027aleph500.biblacad.ro\u0027];\n \u003d\u003e [\n      \"aleph500.biblacad.ro\",\n    ]\n \u003e\u003e\u003e UploadFromUrl::isAllowedHost( $url )\n \u003d\u003e true",
+      "revId": "bebd7ee5d074fe1492dba43531f8f94bd6f19cae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
