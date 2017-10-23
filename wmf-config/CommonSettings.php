@@ -999,10 +999,10 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 	];
 
 	// Current stable release
-	$wgExtDistDefaultSnapshot = 'REL1_30';
+	$wgExtDistDefaultSnapshot = 'REL1_29';
 
 	// Current development snapshot
-	// $wgExtDistCandidateSnapshot = 'REL1_31';
+	$wgExtDistCandidateSnapshot = 'REL1_30';
 
 	// Available snapshots
 	$wgExtDistSnapshotRefs = [
@@ -1096,6 +1096,9 @@ if ( $wmgUsePoolCounter ) {
 if ( $wmgUseScore ) {
 	wfLoadExtension( 'Score' );
 	$wgScoreSafeMode = false;
+	$wgScoreLilypond = '/usr/local/bin/mediawiki-firejail-lilypond';
+	$wgScoreAbc2Ly = '/usr/local/bin/mediawiki-firejail-abc2ly';
+	$wgScoreTimidity = '/usr/local/bin/mediawiki-firejail-timidity';
 	$wgScoreFileBackend = $wmgScoreFileBackend;
 	$wgScorePath = $wmgScorePath;
 }
@@ -2519,6 +2522,13 @@ if ( $wmgUseTranslate ) {
 	$wgGroupPermissions['user']['translate-messagereview'] = true;
 	$wgGroupPermissions['user']['translate-groupreview'] = true;
 	$wgGroupPermissions['sysop']['pagelang'] = true; // T153209
+	// Bureaucrats to add/remove 'translationadmin' from everyone
+	// Administrators to add/remove to self that permission
+	// See T178793
+	$wgAddGroups['bureaucrat'][] = 'translationadmin';
+	$wgRemoveGroups['bureaucrat'][] = 'translationadmin';
+	$wgGroupsAddToSelf['sysop'][] = 'translationadmin';
+	$wgGroupsRemoveToSelf['sysop'][] = 'translationadmin';
 
 	$wgTranslateDocumentationLanguageCode = 'qqq';
 	$wgExtraLanguageNames['qqq'] = 'Message documentation'; # No linguistic content. Used for documenting messages
@@ -3408,9 +3418,7 @@ if ( $wmgUseOATHAuth ) {
 if ( $wmgUseORES ) {
 	wfLoadExtension( 'ORES' );
 	$wgOresBaseUrl = 'http://ores.discovery.wmnet:8081/';
-	$wgDefaultUserOptions['oresDamagingPref'] =
-		$wgDefaultUserOptions['rcOresDamagingPref'] =
-		$wmgOresDefaultSensitivityLevel;
+	$wgDefaultUserOptions['oresDamagingPref'] = $wmgOresDefaultSensitivityLevel;
 
 	// Backwards compatibility for upcoming config format change
 	if ( isset( $wgOresFiltersThresholds['goodfaith']['good'] ) ) {
