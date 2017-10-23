@@ -674,5 +674,9 @@ function wmfLabsSettings() {
 		'wgOresDraftQualityNS' => [
 			'enwiki' => [ 0 => true, 118 => true ],
 		],
+
+		'wgAutoloadAttemptLowercase' => [
+			'default' => false,
+		],
 	];
 } # wmflLabsSettings()
