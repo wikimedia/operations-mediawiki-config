@@ -680,5 +680,8 @@ function wmfLabsSettings() {
 		'wgAutoloadAttemptLowercase' => [
 			'default' => false,
 		],
+		'wmgEnableFundraiserLandingPage' => [
+			'default' => false,
+		],
 	];
 } # wmflLabsSettings()
