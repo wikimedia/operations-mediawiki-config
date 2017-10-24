@@ -17,11 +17,7 @@ $jobQueueRedisConfig = [
 
 if ( $wmgUseEventBus ) {
 	$wgJobTypeConf['default'] = [
-		'class' => 'JobQueueSecondTestQueue',
-		'mainqueue' => $jobQueueRedisConfig,
-		'debugqueue' => [
-			'class' => 'JobQueueEventBus'
-		]
+		'class' => 'JobQueueEventBus'
 	];
 } else {
 	$wgJobTypeConf['default'] = $jobQueueRedisConfig;
