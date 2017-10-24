@@ -4935,8 +4935,7 @@ $wgConf->settings = [
 ],
 
 'wgEnableUserEmailBlacklist' => [
-	'default' => false,
-	'metawiki' => true,
+	'default' => true,
 ],
 
 'wgAutoConfirmCount' => [
