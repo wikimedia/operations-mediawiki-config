@@ -152,7 +152,7 @@ $wgLBFactoryConf = [
 		'db1100' => 1,   # C2 3.6TB 512GB, old master
 		# 'db1104' => 100,  # B3 3.6TB 512GB # Cloning db1106
 		# 'db1105' => 1,   # C3 3.6TB 512GB,
-		'db1106' => 100,  # D3 3.6TB 512GB #low weight after being provisioned
+		'db1106' => 300,  # D3 3.6TB 512GB
 	],
 	's6' => [
 		'db1061' => 0,   # C3 2.8TB 128GB, master
