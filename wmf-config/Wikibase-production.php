@@ -200,6 +200,7 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['echoIcon'] = [ 'url' => '/static/images/wikibase/echoIcon.svg' ];
 
 	$wgWBClientSettings['disabledUsageAspects'] = $wmgWikibaseDisabledUsageAspects;
+	$wgWBClientSettings['fineGrainedLuaTracking'] = $wmgWikibaseFineGrainedLuaTracking;
 
 	// T171027
 	if ( in_array( $wgDBname, [ 'commonswiki', 'ruwiki' ] ) ) {
