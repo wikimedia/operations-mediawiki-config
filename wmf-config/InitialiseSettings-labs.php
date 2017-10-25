@@ -162,6 +162,7 @@ function wmfLabsSettings() {
 				'dnsblacklist' => 'debug',
 				'EventBus' => 'debug',
 				'runJobs' => [ 'logstash' => 'info' ],
+                'JobExecutor' => [ 'logstash' => 'debug' ],
 				'squid' => 'debug',
 				'MessageCache' => 'debug',
 			],
