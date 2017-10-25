@@ -161,6 +161,7 @@ function wmfLabsSettings() {
 				'CentralAuthVerbose' => 'debug',
 				'dnsblacklist' => 'debug',
 				'EventBus' => 'debug',
+		                'JobExecutor' => [ 'logstash' => 'debug' ],
 				'runJobs' => [ 'logstash' => 'info' ],
 				'squid' => 'debug',
 				'MessageCache' => 'debug',
