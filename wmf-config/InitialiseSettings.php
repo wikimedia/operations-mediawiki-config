@@ -19661,6 +19661,11 @@ $wgConf->settings = [
 	'default' => [ 'DISPLAY' => ':99' ],
 ],
 
+// T166759
+'wgAutoloadAttemptLowercase' => [
+	'default' => false,
+],
+
 ];
 
 ### WMF Labs override #####
