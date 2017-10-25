@@ -32,6 +32,8 @@ $wgAbuseFilterNotifications = "udp";
 // T113164 Change default AbuseFilter IP block duration to not indefinite
 $wgAbuseFilterAnonBlockDuration = '1 week';
 
+$wgAbuseFilterSlowFilterRuntimeLimit = 800;
+
 // Custom permissions
 switch ( $wgDBname ) {
 	case 'arwiki':
