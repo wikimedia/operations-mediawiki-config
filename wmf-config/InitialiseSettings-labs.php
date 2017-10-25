@@ -415,6 +415,7 @@ function wmfLabsSettings() {
 				'198.73.209.0/24', // T87841 Office IP
 				'162.222.72.0/21', // T126585 Sauce Labs IP range for browser tests
 				'66.85.48.0/21', // also Sauce Labs
+				'10.68.16.0/21', // Jenkins and Sauce labs T167432
 			],
 		],
 
