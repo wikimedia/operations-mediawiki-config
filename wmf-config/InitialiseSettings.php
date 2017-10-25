@@ -5185,6 +5185,7 @@ $wgConf->settings = [
 		'GlobalTitleFail' => [ 'sample' => 10000 ], // chad hates $wgTitle
 		'headers-sent' => 'debug',
 		'HttpError' => 'error', // Only log http errors with a 500+ code T85795
+		'JobExecutor' => [ 'logstash' => 'warning' ],
 		'jobqueue' => 'debug',
 		'JobQueueFederated' => 'debug',
 		'JobQueueRedis' => 'debug',
