@@ -18047,6 +18047,17 @@ $wgConf->settings = [
 	'atjwiki' => [ 'C' => 'O' ],
 ],
 
+// T172914
+'wmgWikibaseFineGrainedLuaTracking' => [
+	'default' => false,
+	// Wikis that also don't have Statement usages disabled
+	'cawiki' => true,
+	'cewiki' => true,
+	'elwiki' => true,
+	'kowiki' => true,
+	'trwiki' => true,
+],
+
 'wmgUseWikibaseQuality' => [
 	'default' => false,
 	'wikidata' => true,
