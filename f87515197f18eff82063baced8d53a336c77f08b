@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e5d03d5_a353ede1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2017-10-26T01:39:21Z",
+      "side": 1,
+      "message": "Use imperative form\n\nhttps://chris.beams.io/posts/git-commit/ is a good resource about Git commit messages.\n\n(You\u0027ve also https://www.mediawiki.org/wiki/Gerrit/Commit_message_guidelines for our comprehensive guideliens)",
+      "revId": "f87515197f18eff82063baced8d53a336c77f08b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
