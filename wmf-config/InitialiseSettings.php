@@ -17759,6 +17759,7 @@ $wgConf->settings = [
 
 'wmgUseTwoColConflict' => [
 	'default' => true,
+	'wikisource' => false // T179056
 ],
 
 'wmgUseUserMerge' => [
