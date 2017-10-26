@@ -1503,6 +1503,9 @@ if ( $wmgUseCentralAuth ) {
 		$wgCentralAuthAutoCreateWikis[] = 'mediawikiwiki';
 	}
 
+	// Link global block blockers to user pages on Meta
+	$wgCentralAuthGlobalBlockInterwikiPrefix = 'meta';
+
 	// Require 8-byte password for staff. Set MinimumPasswordLengthToLogin
 	// to 8 also, once staff have time to update.
 	$wgCentralAuthGlobalPasswordPolicies['staff'] = [
