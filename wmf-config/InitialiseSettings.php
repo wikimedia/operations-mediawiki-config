@@ -19647,6 +19647,7 @@ $wgConf->settings = [
 	'default' => [ 'legacy', 'html5' ],
 	'testwiki' => [ 'html5', 'legacy' ],
 	'test2wiki' => [ 'html5', 'legacy' ],
+	'mediawikiwiki' => [ 'html5', 'legacy' ],
 	'ruwiki' => [ 'html5', 'legacy' ],
 	'ruwikibooks' => [ 'html5', 'legacy' ],
 	'ruwikimedia' => [ 'html5', 'legacy' ],
