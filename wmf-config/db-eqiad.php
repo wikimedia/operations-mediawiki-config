@@ -126,8 +126,8 @@ $wgLBFactoryConf = [
 		# 'db1038' => 0,   # B2 1.4TB  64GB, vslow, dump, old master # T172679
 		'db1044' => 0,   # B2 1.4TB  64GB, #Temporary master for db1095 - new sanitarium #T150802
 		'db1072' => 0,  # B2 2.8TB 160GB, vslow, dump, old master
-		'db1077' => 400, # B1 3.6TB 512GB #temporary special slave - T172679
-		'db1078' => 500, # C3 3.6TB 512GB
+		# 'db1077' => 400, # B1 3.6TB 512GB #temporary special slave - T172679 #T164488
+		'db1078' => 500, # C3 3.6TB 512GB #temporary special slave #T164488
 		# 'db1103' => 0,  # A3 3.6TB 512GB, # not needed on s3 - has db1035's data that we have to checksum
 	],
 	's4' => [
@@ -312,19 +312,19 @@ $wgLBFactoryConf = [
 			'db1072' => 1,
 		],
 		'watchlist' => [
-			'db1077' => 1,
+			'db1078' => 1,
 		],
 		'recentchanges' => [
-			'db1077' => 1,
+			'db1078' => 1,
 		],
 		'recentchangeslinked' => [
-			'db1077' => 1,
+			'db1078' => 1,
 		],
 		'contributions' => [
-			'db1077' => 1,
+			'db1078' => 1,
 		],
 		'logpager' => [
-			'db1077' => 1,
+			'db1078' => 1,
 		],
 	],
 	's4' => [
