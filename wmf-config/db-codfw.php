@@ -111,6 +111,7 @@ $wgLBFactoryConf = [
 		'db2070' => 400, # C5 3.3TB 160GB
 		'db2071' => 50,  # A6 3.6TB 512GB, api
 		'db2072' => 500, # B6 3.6TB 512GB, # mariadb 10.1
+		# 'db2088' => 400, # D1 3.3TB 512GB # rc, log: s1 and s2
 	],
 	's2' => [
 		'db2017' => 0,   # B6 2.9TB  96GB, master
@@ -120,6 +121,7 @@ $wgLBFactoryConf = [
 		'db2056' => 50,  # D6 3.3TB 160GB, dump (inactive), vslow #innodb compressed
 		'db2063' => 100, # D6 3.3TB 160GB, api
 		'db2064' => 400, # D6 3.3TB 160GB
+		# 'db2088' => 400, # D1 3.3TB 512GB # rc, log: s1 and s2
 	],
 	/* s3 */ 'DEFAULT' => [
 		'db2018' => 0,   # B6 2.9TB  96GB, master
@@ -137,6 +139,7 @@ $wgLBFactoryConf = [
 		'db2058' => 50,  # D6 3.3TB 160GB, dump (inactive), vslow
 		'db2065' => 200, # D6 3.3TB 160GB, api
 		'db2073' => 400, # C6 3.3TB 512GB # Compressed InnoDB
+		# 'db2084' => 400, # D6 3.3TB 512GB # rc, log: s4 and s5
 	],
 	's5' => [
 		'db2023' => 0,   # B6 2.9TB  96GB, master
@@ -151,8 +154,8 @@ $wgLBFactoryConf = [
 		# 'db2081' => 400, # A6 3.3TB 512GB # Compressed InnoDB #T170662
 		# 'db2082' => 400, # B6 3.3TB 512GB # Compressed InnoDB #T170662
 		# 'db2083' => 400, # C6 3.3TB 512GB # Compressed InnoDB #T170662
-		# 'db2084' => 400, # D6 3.3TB 512GB # Compressed InnoDB #T170662
-		# 'db2086' => 400, # B1 3.3TB 512GB # Compressed InnoDB #T170662
+		# 'db2084' => 400, # D6 3.3TB 512GB # rc, log: s4 and s5
+		# 'db2086' => 400, # B1 3.3TB 512GB # rc, log: s5 and s7
 	],
 	's6' => [
 		'db2028' => 0,   # B6  2.9TB  96GB, master
@@ -171,6 +174,7 @@ $wgLBFactoryConf = [
 		'db2061' => 200, # D6 3.3TB 160GB, api
 		'db2068' => 300, # D6 3.3TB 160GB
 		'db2077' => 400, # C1 3.3TB 512GB
+		# 'db2086' => 400, # B1 3.3TB 512GB # rc, log: s5 and s7
 	],
 	'silver' => [
 		'silver' => 1,
