@@ -19116,15 +19116,16 @@ $wgConf->settings = [
 'wgTidyConfig' => [
 	'default' => null,
 
-	'mediawikiwiki' => [ 'driver' => 'RemexHtml' ],
-	'testwiki' => [ 'driver' => 'RemexHtml' ],
+	// TEMP disable: T178632
+	//'mediawikiwiki' => [ 'driver' => 'RemexHtml' ],
+	//'testwiki' => [ 'driver' => 'RemexHtml' ],
 
-	'fawiki' => [ 'driver' => 'RemexHtml' ], // T176150
-	'nowiki' => [ 'driver' => 'RemexHtml' ], // T177989
+	//'fawiki' => [ 'driver' => 'RemexHtml' ], // T176150
+	//'nowiki' => [ 'driver' => 'RemexHtml' ], // T177989
 
-	'eswikiversity' => [ 'driver' => 'RemexHtml' ],
+	//'eswikiversity' => [ 'driver' => 'RemexHtml' ],
 
-	'wikitech' => [ 'driver' => 'RemexHtml' ],
+	//'wikitech' => [ 'driver' => 'RemexHtml' ],
 ],
 
 // Cache ResourceLoader modules in localStorage
