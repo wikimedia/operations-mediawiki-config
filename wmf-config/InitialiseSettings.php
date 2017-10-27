@@ -17034,6 +17034,7 @@ $wgConf->settings = [
 	'orwiki' => true,
 	'orwikisource' => true, // T124429
 	'orwiktionary' => true, // T103644
+	'pawiki' => true, // T178919
 	'sawiki' => true, // T94660
 	'sawikibooks' => true, // T94660
 	'sawikiquote' => true, // T94660
