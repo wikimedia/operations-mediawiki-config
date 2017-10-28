@@ -2855,7 +2855,7 @@ if ( $wmgUseFlow && $wmgUseParsoid ) {
 	// as VisualEditor does.
 	$wgFlowParsoidURL = $wmgParsoidURL;
 	$wgFlowParsoidPrefix = $wgDBname;
-	$wgFlowParsoidTimeout = 100;
+	$wgFlowParsoidTimeout = 50;
 	if ( $wmgParsoidForwardCookies ) {
 		$wgFlowParsoidForwardCookies = true;
 	}
