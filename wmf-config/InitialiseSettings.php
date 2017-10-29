@@ -8722,6 +8722,9 @@ $wgConf->settings = [
 		'templateeditor' => [ 'templateeditor' => true, 'editprotected' => true ], // T120342
 		'autoconfirmed' => [ 'move' => false ] // T164239
 	],
+	'hiwikiversity' => [
+		'autopatrolled' => [ 'autopatrol' => true ], // T179251
+	],
 	'hrwiki' => [
 		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'rollback' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ],
@@ -10089,6 +10092,9 @@ $wgConf->settings = [
 	'+hiwiki' => [
 		'sysop' => [ 'abusefilter', 'autopatrolled', 'reviewer', 'rollbacker', 'filemover', 'templateeditor' ], // T37355, T56589, T120342
 	],
+	'+hiwikiversity' => [
+		'sysop' => [ 'autopatrolled' ], // T179251
+	],
 	'+hrwiki' => [
 		'bureaucrat' => [ 'patroller', 'autopatrolled' ],
 		'sysop' => [ 'patroller', 'autopatrolled' ],
@@ -10842,7 +10848,10 @@ $wgConf->settings = [
 		'sysop' => [ 'patroller', 'autopatrolled' ], // T140544
 	],
 	'+hiwiki' => [
-		'sysop' => [ 'abusefilter', 'autopatrolled', 'reviewer', 'rollbacker', 'filemover', 'templateeditor' ], // T37355, T56589, T120342
+		'sysop' => [ 'abusefilter', 'autopatrolled', 'reviewer', 'rollbacker', 'filemover', 'templateeditor' ], // T37355, T56589, 
+	],
+	'+hiwikiversity' => [
+		'sysop' => [ 'autopatrolled' ], // T179251
 	],
 	'+hiwiktionary' => [
 		'bureaucrat' => [ 'sysop', ],
@@ -13433,6 +13442,7 @@ $wgConf->settings = [
 	'hewikivoyage' => true,
 	'hifwiki' => true,
 	'hiwiki' => true,
+	'hiwikiversity' => true, // T179252
 	'huwiki' => true,
 	'hywiki' => true,
 	'ilowiki' => true,
