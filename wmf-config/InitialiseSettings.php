@@ -18905,7 +18905,7 @@ $wgConf->settings = [
 	'sqwiki' => true, // T170723
 	'trwiki' => true, // T139992
 
-	'wikidatawiki' => false, // T130212
+	'wikidatawiki' => true, // T130212
 ],
 'wgOresModels' => [
 	'default' => [
