@@ -137,7 +137,7 @@ $wgLBFactoryConf = [
 		'db1081' => 100, # A2 3.6TB 512GB, api #low weight T161088
 		'db1084' => 500, # B1 3.6TB 512GB
 		'db1091' => 500, # D2 3.6TB 512GB
-		# 'db1097' => 1,   # D1 3.6TB 512GB, api, old master #T161088
+		'db1097' => 100,   # D1 3.6TB 512GB, api, old master #T161088 #low weight after maintenance
 		# 'db1103' => 0,  # A3 3.6TB 512GB, #temporary on s4 to help rebuilding db1084 and db1091
 	],
 	's5' => [
