@@ -143,6 +143,9 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['dispatchingLockManager'] = 'redisLockManager';
 	// Cirrus usage for wbsearchentities is on
 	$wgWBRepoSettings['entitySearch']['useCirrus'] = true;
+
+	// T178180
+	$wgWBRepoSettings['canonicalUriProperty'] = 'P1921';
 }
 
 if ( $wmgUseWikibaseClient ) {
