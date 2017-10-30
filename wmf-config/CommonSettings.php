@@ -3130,6 +3130,10 @@ if ( $wmgUseContentTranslation ) {
 	];
 }
 
+if ( $wmgUseNewWikiDiff2Extension ) {
+	$wgWikiDiff2MovedParagraphDetectionCutoff = 25;
+}
+
 $wgExtensionEntryPointListFiles[] = "$IP/extensions/Wikidata/extension-list-wikidata";
 
 if ( $wmgUseCognate ) {
