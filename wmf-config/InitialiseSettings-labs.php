@@ -665,6 +665,13 @@ function wmfLabsSettings() {
 		],
 
 		'wgOresModels' => [
+			'default' => [
+				'damaging' => true,
+				'goodfaith' => false,
+				'draftquality' => false,
+				'reverted' => false,
+				'wp10' => false,
+			],
 			'enwiki' => [
 				'damaging' => true,
 				'goodfaith' => true,
