@@ -296,6 +296,13 @@ if ( $wmgCirrusSearchMLRModel ) {
 			],
 		],
 	];
+
+	$wgCirrusSearchRescoreProfiles['dbn20'] = $wgCirrusSearchRescoreProfiles['mlr-1024rs'];
+	$wgCirrusSearchRescoreProfiles['dbn20']['rescore'][2]['model'] = 'dbn20_enwiki_v1';
+
+	$wgCirrusSearchRescoreProfiles['dbn35'] = $wgCirrusSearchRescoreProfiles['mlr-1024rs'];
+	$wgCirrusSearchRescoreProfiles['dbn35']['rescore'][2]['model'] = 'dbn35_enwiki_v1';
+
 }
 
 # needed for recall A/B test (T177502)
