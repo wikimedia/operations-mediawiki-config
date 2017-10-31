@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "6e5a8fde_3c7072a3",
+        "filename": "wmf-config/CirrusSearch-common.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 301,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2017-10-31T16:35:07Z",
+      "side": 1,
+      "message": "doh, i flipped the naming here ... its dbn20_enwiki_v1",
+      "parentUuid": "6e5a8fde_bc0f8232",
+      "range": {
+        "startLine": 301,
+        "startChar": 67,
+        "endLine": 301,
+        "endChar": 82
+      },
+      "revId": "0608654ee28fd5c88067d654e09098e43cc01a3c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e5a8fde_dc0cbe3f",
         "filename": "wmf-config/CirrusSearch-common.php",
         "patchSetId": 2
@@ -42,6 +66,24 @@
     },
     {
       "key": {
+        "uuid": "6e5a8fde_3c49526b",
+        "filename": "wmf-config/CirrusSearch-common.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 303,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2017-10-31T16:35:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e5a8fde_dc0cbe3f",
+      "revId": "0608654ee28fd5c88067d654e09098e43cc01a3c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e5a8fde_7c190a7e",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 2
@@ -53,6 +95,30 @@
       "writtenOn": "2017-10-31T16:32:02Z",
       "side": 1,
       "message": "dbn20-i",
+      "range": {
+        "startLine": 18639,
+        "startChar": 19,
+        "endLine": 18639,
+        "endChar": 24
+      },
+      "revId": "0608654ee28fd5c88067d654e09098e43cc01a3c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e5a8fde_bc36a2e2",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 18639,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2017-10-31T16:35:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e5a8fde_7c190a7e",
       "range": {
         "startLine": 18639,
         "startChar": 19,
