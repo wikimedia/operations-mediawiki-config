@@ -587,7 +587,7 @@ if ( $wmfRealm === 'production' ) {
 	$wgStatsdMetricPrefix = 'BetaMediaWiki';
 	if ( $wmgUseClusterSquid ) {
 		$wgUseSquid = true;
-		require "$wmfConfigDir/squid-labs.php";
+		require "$wmfConfigDir/reverse-proxy-staging.php";
 	}
 }
 
