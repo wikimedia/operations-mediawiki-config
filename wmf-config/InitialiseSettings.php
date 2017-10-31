@@ -15402,6 +15402,7 @@ $wgConf->settings = [
 	'officewiki' => true,
 	'outreachwiki' => true, // T106264
 	'orwiki' => true, // T33172
+	'pawiki' => true, // T178919
 	'ptwiki' => true, // T33178
 	'sewikimedia' => true, // T32491
 	'siwiki' => true, // T35485
