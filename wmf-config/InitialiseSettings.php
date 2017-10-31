@@ -18629,16 +18629,32 @@ $wgConf->settings = [
 				'control' => [
 					'trigger' => 'control',
 				],
-				'rec_3t_80_66' => [
-					'trigger' => 'rec_3t_80_66',
+				'dbn20' => [
+					'trigger' => 'dbn20',
 					'globals' => [
-						'wgCirrusSearchFullTextQueryBuilderProfile' => 'rec_3t_80_66',
+						'wgCirrusSearchResoreProfile' => 'dbn20',
 					]
 				],
-				'rec_4t_80_66' => [
-					'trigger' => 'rec_4t_80_66',
+				'dbn20-i' => [
+					'trigger' => 'dbn20',
 					'globals' => [
-						'wgCirrusSearchFullTextQueryBuilderProfile' => 'rec_4t_80_66',
+						'wgCirrusSearchInterleaveConfig' => [
+							'wgCirrusSearchResoreProfile' => 'dbn20',
+						],
+					]
+				],
+				'dbn35' => [
+					'trigger' => 'dbn35',
+					'globals' => [
+						'wgCirrusSearchResoreProfile' => 'dbn35',
+					]
+				],
+				'dbn35-i' => [
+					'trigger' => 'dbn35-i',
+					'globals' => [
+						'wgCirrusSearchInterleaveConfig' => [
+							'wgCirrusSearchResoreProfile' => 'dbn35',
+						],
 					]
 				],
 			],
