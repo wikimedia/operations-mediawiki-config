@@ -100,7 +100,11 @@ class CheckoutMediaWiki(cli.Application):
             self.get_logger().info('Version already checked out')
             return 0
 
-        git.fetch(dest_dir, GERRIT_URL + 'mediawiki/core', copy_dir)
+        reference_dir = None
+        if os.path.isdir(copy_dir):
+            reference_dir = copy_dir
+
+        git.fetch(dest_dir, GERRIT_URL + 'mediawiki/core', reference_dir)
 
         with utils.cd(dest_dir):
             if subprocess.call(['/usr/bin/git', 'config',
