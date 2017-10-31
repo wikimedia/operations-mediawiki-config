@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e5a8fde_bc6ea291",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 18627,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2017-10-31T16:43:58Z",
+      "side": 1,
+      "message": "should we change the name?",
+      "range": {
+        "startLine": 18627,
+        "startChar": 3,
+        "endLine": 18627,
+        "endChar": 9
+      },
+      "revId": "5c717455bd97122210ff35dbb8592b4afb1f97b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e5a8fde_9cbf26f6",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 18635,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2017-10-31T16:43:58Z",
+      "side": 1,
+      "message": "Rescore (sorry missed that one on the first pass)",
+      "range": {
+        "startLine": 18635,
+        "startChar": 21,
+        "endLine": 18635,
+        "endChar": 27
+      },
+      "revId": "5c717455bd97122210ff35dbb8592b4afb1f97b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e5a8fde_bc478221",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 18642,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2017-10-31T16:43:58Z",
+      "side": 1,
+      "message": "wgCirrusSearchRescoreProfile",
+      "range": {
+        "startLine": 18642,
+        "startChar": 8,
+        "endLine": 18642,
+        "endChar": 35
+      },
+      "revId": "5c717455bd97122210ff35dbb8592b4afb1f97b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e5a8fde_9c4e463b",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 18649,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2017-10-31T16:43:58Z",
+      "side": 1,
+      "message": "wgCirrusSearchResoreProfile",
+      "range": {
+        "startLine": 18649,
+        "startChar": 7,
+        "endLine": 18649,
+        "endChar": 34
+      },
+      "revId": "5c717455bd97122210ff35dbb8592b4afb1f97b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e5a8fde_5c5f6ee8",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 18656,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2017-10-31T16:43:58Z",
+      "side": 1,
+      "message": "wgCirrusSearchResoreProfile",
+      "range": {
+        "startLine": 18656,
+        "startChar": 8,
+        "endLine": 18656,
+        "endChar": 35
+      },
+      "revId": "5c717455bd97122210ff35dbb8592b4afb1f97b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
