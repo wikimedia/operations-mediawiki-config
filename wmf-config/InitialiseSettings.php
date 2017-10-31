@@ -12797,6 +12797,7 @@ $wgConf->settings = [
 	'fawiki' => true, // T55981
 	'fawikibooks' => true, // T91861
 	'fawikinews' => true,
+	'fawikiquote' => true, // T179442
 	'fawikivoyage' => true, // T76716
 	'fawiktionary' => true, // T90831
 	// 'gomwiki' => true, // T106169.  Disabled until T131957 is fixed.
