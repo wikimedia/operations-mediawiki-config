@@ -29,8 +29,8 @@ $wmfAllServices['eqiad'] = [
 	'cxserver' => 'http://deployment-sca01.eqiad.wmflabs:8080',
 	'irc' => 'irc.beta.wmflabs.org', // deployment-ircd
 	'redis_lock' => [
-		'rdb1' => '10.68.16.177', // deployment-redis01.deployment-prep.eqiad.wmflabs
-		'rdb2' => '10.68.16.231', // deployment-redis02.deployment-prep.eqiad.wmflabs
+		'rdb1' => '10.68.19.242', // deployment-redis05.deployment-prep.eqiad.wmflabs
+		'rdb2' => '10.68.20.16', // deployment-redis06.deployment-prep.eqiad.wmflabs
 	],
 	'etcd' => 'deployment-etcd-01.deployment-prep.eqiad.wmflabs:2379',
 	'mediaSwiftAuth' => 'http://deployment-ms-fe02.deployment-prep.eqiad.wmflabs/auth',
