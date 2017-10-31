@@ -159,8 +159,8 @@ $wgLBFactoryConf = [
 	],
 	's6' => [
 		'db2028' => 0,   # B6  2.9TB  96GB, master
-		# 'db2039' => 50,  # C6 2.9TB 160GB, rc, log #re-import watchlist tables
-		'db2046' => 400, # C6 2.9TB 160GB #temporary rc
+		'db2039' => 50,  # C6 2.9TB 160GB, rc, log
+		'db2046' => 400, # C6 2.9TB 160GB
 		'db2053' => 100, # D6 2.9TB 160GB, dump (inactive), vslow
 		'db2060' => 100, # D6 3.3TB 160GB, api
 		'db2067' => 400, # D6 3.3TB 160GB
@@ -395,19 +395,19 @@ $wgLBFactoryConf = [
 	],
 	's6' => [
 		'watchlist' => [
-			'db2046' => 1,
+			'db2039' => 1,
 		],
 		'recentchanges' => [
-			'db2046' => 1,
+			'db2039' => 1,
 		],
 		'recentchangeslinked' => [
-			'db2046' => 1,
+			'db2039' => 1,
 		],
 		'contributions' => [
-			'db2046' => 1,
+			'db2039' => 1,
 		],
 		'logpager' => [
-			'db2046' => 1,
+			'db2039' => 1,
 		],
 		'dump' => [
 			'db2053' => 1,
