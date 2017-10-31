@@ -18639,7 +18639,7 @@ $wgConf->settings = [
 					'trigger' => 'dbn20-i',
 					'globals' => [
 						'wgCirrusSearchInterleaveConfig' => [
-							'wgCirrusSearchRescoreProfile' => 'dbn20',
+							'CirrusSearchRescoreProfile' => 'dbn20',
 						],
 					]
 				],
@@ -18653,7 +18653,7 @@ $wgConf->settings = [
 					'trigger' => 'dbn35-i',
 					'globals' => [
 						'wgCirrusSearchInterleaveConfig' => [
-							'wgCirrusSearchRescoreProfile' => 'dbn35',
+							'CirrusSearchRescoreProfile' => 'dbn35',
 						],
 					]
 				],
