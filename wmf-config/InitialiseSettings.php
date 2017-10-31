@@ -18622,23 +18622,39 @@ $wgConf->settings = [
 
 'wmgCirrusSearchUserTesting' => [
 	'default' => [],
-	// Recal A/B test (T177502)
+	// DBN sizing AB test
 	'enwiki' => [
-		'recall' => [
+		'dbn_sizing' => [
 			'buckets' => [
 				'control' => [
 					'trigger' => 'control',
 				],
-				'rec_3t_80_66' => [
-					'trigger' => 'rec_3t_80_66',
+				'dbn20' => [
+					'trigger' => 'dbn20',
 					'globals' => [
-						'wgCirrusSearchFullTextQueryBuilderProfile' => 'rec_3t_80_66',
+						'wgCirrusSearchRescoreProfile' => 'dbn20',
 					]
 				],
-				'rec_4t_80_66' => [
-					'trigger' => 'rec_4t_80_66',
+				'dbn20-i' => [
+					'trigger' => 'dbn20-i',
 					'globals' => [
-						'wgCirrusSearchFullTextQueryBuilderProfile' => 'rec_4t_80_66',
+						'wgCirrusSearchInterleaveConfig' => [
+							'wgCirrusSearchRescoreProfile' => 'dbn20',
+						],
+					]
+				],
+				'dbn35' => [
+					'trigger' => 'dbn35',
+					'globals' => [
+						'wgCirrusSearchRescoreProfile' => 'dbn35',
+					]
+				],
+				'dbn35-i' => [
+					'trigger' => 'dbn35-i',
+					'globals' => [
+						'wgCirrusSearchInterleaveConfig' => [
+							'wgCirrusSearchRescoreProfile' => 'dbn35',
+						],
 					]
 				],
 			],
