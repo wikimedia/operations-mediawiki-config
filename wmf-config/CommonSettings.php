@@ -20,7 +20,7 @@
 
 use MediaWiki\Logger\LoggerFactory;
 
-# Godforsaken hack to work around problems with the Squid caching changes...
+# Godforsaken hack to work around problems with the reverse proxy caching changes...
 #
 # To minimize damage on fatal PHP errors, output a default no-cache header
 # It will be overridden in cases where we actually specify caching behavior.
@@ -574,14 +574,14 @@ if ( defined( 'HHVM_VERSION' ) ) {
 	$wgSVGConverters['rsvg-wikitech'] = '$path/rsvg-convert -w $width -h $height -o $output $input';
 }
 # ######################################################################
-# Squid Configuration
+# Reverse proxy Configuration
 # ######################################################################
 
 $wgStatsdServer = $wmfLocalServices['statsd'];
 if ( $wmfRealm === 'production' ) {
 	if ( $wmgUseClusterSquid ) {
 		$wgUseSquid = true;
-		require "$wmfConfigDir/squid.php";
+		require "$wmfConfigDir/reverse-proxy.php";
 	}
 } elseif ( $wmfRealm === 'labs' ) {
 	$wgStatsdMetricPrefix = 'BetaMediaWiki';

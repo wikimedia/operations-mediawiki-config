@@ -41,7 +41,6 @@ mwconfig_files_txt=(
 	wgConf.php
 	reverse-proxy.php
 	reverse-proxy-staging.php
-	squid.php
 	session.php
 	session-labs.php
 	timeline.php
