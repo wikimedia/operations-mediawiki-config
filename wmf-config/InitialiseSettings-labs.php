@@ -689,5 +689,11 @@ function wmfLabsSettings() {
 		'wgAutoloadAttemptLowercase' => [
 			'default' => false,
 		],
+
+		// Use a constant MLR model for all wikis. It's not ideal, but
+		// no models were trained specifically for data in labs anyways.
+		'wmgCirrusSearchMLRModel' => [
+			'default' => '20171023_enwiki_v1'
+		],
 	];
 } # wmflLabsSettings()
