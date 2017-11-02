@@ -19710,6 +19710,11 @@ $wgConf->settings = [
 	'default' => false,
 ],
 
+'wmgUseNewWikiDiff2Extension' => [
+	'default' => false,
+	'group0' => true,
+],
+
 ];
 
 ### WMF Labs override #####
