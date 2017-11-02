@@ -352,10 +352,6 @@ $wgHooks['ImportSources'][] = 'wmfImportSources';
 // Reenable Preview and Changes tabs for wikieditor preview
 $wgHiddenPrefs = array_diff( $wgHiddenPrefs, [ 'wikieditor-preview' ] );
 
-if ( $wmgUseNewWikiDiff2Extension ) {
-	$wgWikiDiff2MovedParagraphDetectionCutoff = 25;
-}
-
 $wgAuthManagerAutoConfig['preauth'][GuanacoProvider::class] = [
 	'class' => GuanacoProvider::class,
 	'sort' => 0,
