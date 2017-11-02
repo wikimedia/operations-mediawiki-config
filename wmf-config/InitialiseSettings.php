@@ -5170,7 +5170,7 @@ $wgConf->settings = [
 		'Echo' => 'debug',
 		'error' => 'debug',
 		'es-hit' => 'debug',
-		'EventBus' => [ 'logstash' => false ], // T150106, temporarily disable to logstash (bd808)
+		'EventBus' => [ 'logstash' => 'error' ],
 		'EventLogging' => 'debug',
 		'exception' => 'debug',
 		'exception-json' => [ 'logstash' => false ],
