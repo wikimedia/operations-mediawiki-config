@@ -587,12 +587,10 @@ function wmfLabsSettings() {
 			'default' => false,
 		],
 
-		// T171853: For 25% of anonymous user sessions, Page Previews will be
-		// enabled by default as well as the instrumentation; for 25%, PP will be
-		// disabled by default; for 50%, PP will be disabled as will the
-		// instrumentation.
+		// In beta cluster popups should default to on for every user for the purpose of
+		// browser tests (T179546)
 		'-wgPopupsAnonsExperimentalGroupSize' => [
-			'default' => 0.5,
+			'default' => 0,
 		],
 
 		// T171853: Enable PP EventLogging instrumentation on enwiki only so that we
