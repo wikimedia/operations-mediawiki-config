@@ -136,7 +136,7 @@ $wgLBFactoryConf = [
 		'db1064' => 0,   # D1 2.8TB 160GB, vslow, dump #Master for db1095 - new sanitarium
 		'db1081' => 300, # A2 3.6TB 512GB, api
 		'db1084' => 500, # B1 3.6TB 512GB
-		'db1091' => 100, # D2 3.6TB 512GB #T161088 #low weight after maintenance
+		'db1091' => 200, # D2 3.6TB 512GB #T161088 #low weight after maintenance
 		'db1097' => 1,   # D1 3.6TB 512GB, api, old master
 		# 'db1103' => 0,  # A3 3.6TB 512GB, #temporary on s4 to help rebuilding db1084 and db1091
 	],
