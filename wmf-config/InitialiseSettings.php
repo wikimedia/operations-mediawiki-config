@@ -18934,7 +18934,19 @@ $wgConf->settings = [
 		'goodfaith' => true,
 		'reverted' => false,
 		'wp10' => false,
+		'draftquality' => false,
 	],
+	'enwiki' => [
+		'damaging' => true,
+		'goodfaith' => true,
+		'reverted' => false,
+		'wp10' => false,
+		'draftquality' => true, // T179596
+	],
+],
+'wgOresDraftQualityNS' => [
+	'default' => [ 0 => true ],
+	'enwiki' => [ 0 => true, 118 => true ], // T179596
 ],
 'wgOresFiltersThresholds' => [
 	'default' => [],
