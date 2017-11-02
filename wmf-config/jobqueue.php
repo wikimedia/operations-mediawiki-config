@@ -42,9 +42,11 @@ $jobQueueFederatedConfig = [
 ];
 
 if ( $wmgUseEventBus && $wmgDebugJobQueueEventBus ) {
-	$wgJobTypeConf['updateBetaFeaturesUserCounts'] = [
-		'class' => 'JobQueueEventBus'
-	];
+	$wgJobTypeConf['MessageIndexRebuildJob'] =
+		$wgJobTypeConf['flaggedrevs_CacheUpdate'] =
+		$wgJobTypeConf['deleteLinks'] =
+		$wgJobTypeConf['updateBetaFeaturesUserCounts'] =
+			[ 'class' => 'JobQueueEventBus' ];
 	$wgJobTypeConf['default'] = [
 		'class' => 'JobQueueSecondTestQueue',
 		'mainqueue' => $jobQueueFederatedConfig,
