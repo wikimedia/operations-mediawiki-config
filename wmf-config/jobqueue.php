@@ -42,6 +42,9 @@ $jobQueueFederatedConfig = [
 ];
 
 if ( $wmgUseEventBus && $wmgDebugJobQueueEventBus ) {
+	$wgJobTypeConf['updateBetaFeaturesUserCounts'] = [
+		'class' => 'JobQueueEventBus'
+	];
 	$wgJobTypeConf['default'] = [
 		'class' => 'JobQueueSecondTestQueue',
 		'mainqueue' => $jobQueueFederatedConfig,
