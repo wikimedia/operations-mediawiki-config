@@ -167,6 +167,7 @@ $wgLBFactoryConf = [
 		'db2060' => 100, # D6 3.3TB 160GB, api
 		'db2067' => 400, # D6 3.3TB 160GB
 		'db2076' => 400, # B1 3.3TB 512GB
+		'db2087:3316' => 1, # C1 3.3TB 512GB # rc, log: s6 and s7
 	],
 	's7' => [
 		'db2029' => 0,   # B6 2.9TB  96GB, master
@@ -177,6 +178,7 @@ $wgLBFactoryConf = [
 		'db2068' => 300, # D6 3.3TB 160GB
 		'db2077' => 400, # C1 3.3TB 512GB
 		# 'db2086' => 400, # B1 3.3TB 512GB # rc, log: s5 and s7
+		'db2087:3317' => 1, # C1 3.3TB 512GB # rc, log: s6 and s7
 	],
 	'silver' => [
 		'silver' => 1,
@@ -428,18 +430,23 @@ $wgLBFactoryConf = [
 	's6' => [
 		'watchlist' => [
 			'db2039' => 1,
+			'db2087:3316' => 1,
 		],
 		'recentchanges' => [
 			'db2039' => 1,
+			'db2087:3316' => 1,
 		],
 		'recentchangeslinked' => [
 			'db2039' => 1,
+			'db2087:3316' => 1,
 		],
 		'contributions' => [
 			'db2039' => 1,
+			'db2087:3316' => 1,
 		],
 		'logpager' => [
 			'db2039' => 1,
+			'db2087:3316' => 1,
 		],
 		'dump' => [
 			'db2053' => 1,
@@ -454,18 +461,23 @@ $wgLBFactoryConf = [
 	's7' => [
 		'watchlist' => [
 			'db2040' => 1,
+			'db2087:3317' => 1,
 		],
 		'recentchanges' => [
 			'db2040' => 1,
+			'db2087:3317' => 1,
 		],
 		'recentchangeslinked' => [
 			'db2040' => 1,
+			'db2087:3317' => 1,
 		],
 		'contributions' => [
 			'db2040' => 1,
+			'db2087:3317' => 1,
 		],
 		'logpager' => [
 			'db2040' => 1,
+			'db2087:3317' => 1,
 		],
 		'dump' => [
 			'db2054' => 1,
@@ -633,6 +645,8 @@ $wgLBFactoryConf = [
 	'db2085:3313' => '10.192.0.8:3313', # do not remove or comment out
 	'db2085:3315' => '10.192.0.8:3315', # do not remove or comment out
 	'db2086' => '10.192.16.40', # do not remove or comment out
+	'db2087:3316' => '10.192.32.171:3316', # do not remove or comment out
+	'db2087:3317' => '10.192.32.171:3317', # do not remove or comment out
 	'db2088:3311' => '10.192.48.87:3311', # do not remove or comment out
 	'db2088:3312' => '10.192.48.87:3312', # do not remove or comment out
 	'virt1000' => '208.80.154.18', # do not remove or comment out
