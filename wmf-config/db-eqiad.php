@@ -118,7 +118,7 @@ $wgLBFactoryConf = [
 		'db1060' => 1,   # C2 2.8TB  96GB, api #master for sanitarium #T153743
 		'db1074' => 300, # A2 3.6TB 512GB, api
 		'db1076' => 500, # B1 3.6TB 512GB
-		'db1090' => 400, # C3 3.6TB 512GB #temporary recentchanges #T178359
+		'db1090' => 500, # C3 3.6TB 512GB
 		'db1101' => 1,   # C2 3.6TB 512GB, watchlist, recentchanges, contributions, logpager, old master 2
 	],
 	/* s3 */ 'DEFAULT' => [
@@ -301,7 +301,7 @@ $wgLBFactoryConf = [
 			'db1101' => 1,
 		],
 		'logpager' => [
-			'db1090' => 1,
+			'db1101' => 1,
 		],
 	],
 	/* s3 */ 'DEFAULT' => [
