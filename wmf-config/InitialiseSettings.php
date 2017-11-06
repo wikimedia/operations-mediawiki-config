@@ -6328,6 +6328,10 @@ $wgConf->settings = [
 		102 => 'Forfatter',
 		103 => 'Forfatterdiskusjon',
 	],
+	'pawikisource' => [
+		114 => 'ਅਨੁਵਾਦ', // T179807 - Translation
+		115 => 'ਅਨੁਵਾਦ_ਗੱਲ-ਬਾਤ', // T179807
+	],
 	'plwikisource' => [
 		NS_USER => 'Wikiskryba',
 		NS_USER_TALK => 'Dyskusja_wikiskryby',
