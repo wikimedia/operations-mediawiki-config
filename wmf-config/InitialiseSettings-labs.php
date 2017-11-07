@@ -443,9 +443,7 @@ function wmfLabsSettings() {
 		],
 
 		'wmgWikibaseUseConfigFromWikidataBuild' => [
-			'default' => true,
-			'wikidatawiki' => false,
-			'wikidataclient' => false,
+			'default' => false,
 		],
 
 		// Test the extension Collection in other languages for book creator,
