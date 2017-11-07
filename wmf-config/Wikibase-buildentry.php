@@ -27,24 +27,6 @@ if ( !empty( $wmgUseWikibaseClient ) ) {
 	}
 }
 
-if ( file_exists( $wgWikidataBuildBaseDir . '/vendor/autoload.php' ) ) {
-	/**
-	 * Create a cache key per version based on wgVersion.
-	 * wgVersion returns strings such as '1.31.0-wmf.1'
-	 * We end up with a string like 'wikibase_shared/wikidata_1_31_0_wmf_1'
-	 */
-	$wgWikibaseSharedCacheKeyprefix = 'wikibase_shared/wikidata_' .
-		str_replace( '.', '_', str_replace( '-', '_', $wgVersion ) );
-	if ( !empty( $wmgUseWikibaseRepo ) ) {
-		// wikibase_shared/wikidata_1_31_0_wmf_1
-		$wgWBRepoSettings["sharedCacheKeyPrefix"] = $wgWikibaseSharedCacheKeyprefix;
-	}
-	if ( !empty( $wmgUseWikibaseClient ) ) {
-		// wikibase_shared/wikidata_1_31_0_wmf_1
-		$wgWBClientSettings["sharedCacheKeyPrefix"] = $wgWikibaseSharedCacheKeyprefix;
-	}
-}
-
 // This should be kept until the Wikidata build extension is actually turned off
 // so that we can keep track of the version deployed on Special:Version
 require_once "$wgWikidataBuildBaseDir/Wikidata.credits.php";
