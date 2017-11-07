@@ -157,8 +157,8 @@ $wgLBFactoryConf = [
 		# 'db2083' => 400, # C6 3.3TB 512GB # Compressed InnoDB #T170662
 		'db2084:3315' => 1, # D6 3.3TB 512GB # rc, log: s4 and s5
 		'db2085:3315' => 1, # A5 3.3TB 512GB # rc, log: s3 and s5(s8)
+		'db2086:3315' => 1, # B1 3.3TB 512GB # rc, log: s5 and s7
 		'db2089:3315' => 1, # A3 3.3TB 512GB # rc, log: s6 and s5(s8)
-		# 'db2086' => 400, # B1 3.3TB 512GB # rc, log: s5 and s7
 	],
 	's6' => [
 		'db2028' => 0,   # B6  2.9TB  96GB, master
@@ -179,7 +179,7 @@ $wgLBFactoryConf = [
 		'db2061' => 200, # D6 3.3TB 160GB, api
 		'db2068' => 300, # D6 3.3TB 160GB
 		'db2077' => 400, # C1 3.3TB 512GB
-		# 'db2086' => 400, # B1 3.3TB 512GB # rc, log: s5 and s7
+		'db2086:3317' => 1, # B1 3.3TB 512GB # rc, log: s5 and s7
 		'db2087:3317' => 1, # C1 3.3TB 512GB # rc, log: s6 and s7
 	],
 	'silver' => [
@@ -398,30 +398,35 @@ $wgLBFactoryConf = [
 			'db2045' => 1,
 			'db2084:3315' => 1,
 			'db2085:3315' => 1,
+			'db2086:3315' => 1,
 			'db2089:3315' => 1,
 		],
 		'recentchanges' => [
 			'db2045' => 1,
 			'db2084:3315' => 1,
 			'db2085:3315' => 1,
+			'db2086:3315' => 1,
 			'db2089:3315' => 1,
 		],
 		'recentchangeslinked' => [
 			'db2045' => 1,
 			'db2084:3315' => 1,
 			'db2085:3315' => 1,
+			'db2086:3315' => 1,
 			'db2089:3315' => 1,
 		],
 		'contributions' => [
 			'db2045' => 1,
 			'db2084:3315' => 1,
 			'db2085:3315' => 1,
+			'db2086:3315' => 1,
 			'db2089:3315' => 1,
 		],
 		'logpager' => [
 			'db2045' => 1,
 			'db2084:3315' => 1,
 			'db2085:3315' => 1,
+			'db2086:3315' => 1,
 			'db2089:3315' => 1,
 		],
 		'dump' => [
@@ -473,22 +478,27 @@ $wgLBFactoryConf = [
 	's7' => [
 		'watchlist' => [
 			'db2040' => 1,
+			'db2086:3317' => 1,
 			'db2087:3317' => 1,
 		],
 		'recentchanges' => [
 			'db2040' => 1,
+			'db2086:3317' => 1,
 			'db2087:3317' => 1,
 		],
 		'recentchangeslinked' => [
 			'db2040' => 1,
+			'db2086:3317' => 1,
 			'db2087:3317' => 1,
 		],
 		'contributions' => [
 			'db2040' => 1,
+			'db2086:3317' => 1,
 			'db2087:3317' => 1,
 		],
 		'logpager' => [
 			'db2040' => 1,
+			'db2086:3317' => 1,
 			'db2087:3317' => 1,
 		],
 		'dump' => [
@@ -655,7 +665,8 @@ $wgLBFactoryConf = [
 	'db2084:3315' => '10.192.48.86:3315', # do not remove or comment out
 	'db2085:3313' => '10.192.0.8:3313', # do not remove or comment out
 	'db2085:3315' => '10.192.0.8:3315', # do not remove or comment out
-	'db2086' => '10.192.16.40', # do not remove or comment out
+	'db2086:3315' => '10.192.16.40:3315', # do not remove or comment out
+	'db2086:3317' => '10.192.16.40:3317', # do not remove or comment out
 	'db2087:3316' => '10.192.32.171:3316', # do not remove or comment out
 	'db2087:3317' => '10.192.32.171:3317', # do not remove or comment out
 	'db2088:3311' => '10.192.48.87:3311', # do not remove or comment out
