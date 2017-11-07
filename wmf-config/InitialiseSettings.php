@@ -17974,9 +17974,7 @@ $wgConf->settings = [
 'wmgWikibaseUseConfigFromWikidataBuild' => [
 	'default' => true,
 	'wikidatawiki' => false,
-	'hewiki' => false,
-	'group0' => false,
-	'group1' => false,
+	'wikidataclient' => false,
 ],
 
 'wmgUseWikibaseRepo' => [
