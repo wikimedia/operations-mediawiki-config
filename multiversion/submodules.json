@@ -547,10 +547,6 @@
         "action": "branch",
         "ref": "."
     },
-    "extensions/VectorBeta": {
-        "action": "branch",
-        "ref": "."
-    },
     "extensions/VipsScaler": {
         "action": "branch",
         "ref": "."
