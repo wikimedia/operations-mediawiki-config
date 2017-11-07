@@ -123,7 +123,6 @@ $wgLBFactoryConf = [
 	],
 	/* s3 */ 'DEFAULT' => [
 		'db1075' => 0,   # A2 3.6TB 512GB, master
-		# 'db1038' => 0,   # B2 1.4TB  64GB, vslow, dump, old master # T172679
 		'db1044' => 0,   # B2 1.4TB  64GB, #Temporary master for db1095 - new sanitarium #T150802
 		'db1072' => 0,  # B2 2.8TB 160GB, vslow, dump, old master
 		'db1077' => 400, # B1 3.6TB 512GB, watchlist, recentchanges, contributions, logpager
@@ -460,7 +459,6 @@ $wgLBFactoryConf = [
 	'db1021' => '10.64.16.10', # do not remove or comment out
 	'db1030' => '10.64.16.19', # do not remove or comment out
 	'db1034' => '10.64.16.23', # do not remove or comment out
-	'db1038' => '10.64.16.27', # do not remove or comment out
 	'db1039' => '10.64.16.28', # do not remove or comment out
 	'db1043' => '10.64.16.32', # do not remove or comment out
 	'db1044' => '10.64.16.33', # do not remove or comment out
