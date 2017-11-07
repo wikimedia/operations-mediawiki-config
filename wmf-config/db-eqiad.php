@@ -150,7 +150,7 @@ $wgLBFactoryConf = [
 		'db1099' => 1,   # B2 3.6TB 512GB, watchlist, recentchanges, contributions, logpager
 		'db1100' => 1,   # C2 3.6TB 512GB, old master
 		# 'db1104' => 100,  # B3 3.6TB 512GB # Cloning db1106
-		# 'db1105' => 1,   # C3 3.6TB 512GB,
+		# 'db1105' => 1,   # C3 3.6TB 512GB, #DO NOT POOL - going to be multi-instance host #T178359
 		'db1106' => 300,  # D3 3.6TB 512GB
 	],
 	's6' => [
