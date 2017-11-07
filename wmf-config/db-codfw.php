@@ -112,6 +112,7 @@ $wgLBFactoryConf = [
 		'db2071' => 50,  # A6 3.6TB 512GB, api
 		'db2072' => 500, # B6 3.6TB 512GB, # mariadb 10.1
 		'db2088:3311' => 1, # D1 3.3TB 512GB # rc, log: s1 and s2
+		'db2092:3311' => 1, # B8 3.3TB 512GB # rc, log: s1 and s3
 	],
 	's2' => [
 		'db2017' => 0,   # B6 2.9TB  96GB, master
@@ -132,6 +133,7 @@ $wgLBFactoryConf = [
 		'db2057' => 400, # D6 3.3TB 160GB
 		'db2074' => 400, # D6 3.3TB 512GB # InnoDB compressed
 		'db2085:3313' => 1, # A5 3.3TB 512GB # rc, log: s3 and s5(s8)
+		'db2092:3313' => 1, # B8 3.3TB 512GB # rc, log: s1 and s3
 	],
 	's4' => [
 		'db2051' => 0,   # B8 2.9TB 160GB, master
@@ -262,26 +264,31 @@ $wgLBFactoryConf = [
 			'db2034' => 1,
 			'db2042' => 1,
 			'db2088:3311' => 1,
+			'db2092:3311' => 1,
 		],
 		'recentchanges' => [
 			'db2034' => 1,
 			'db2042' => 1,
 			'db2088:3311' => 1,
+			'db2092:3311' => 1,
 		],
 		'recentchangeslinked' => [
 			'db2034' => 1,
 			'db2042' => 1,
 			'db2088:3311' => 1,
+			'db2092:3311' => 1,
 		],
 		'contributions' => [
 			'db2034' => 1,
 			'db2042' => 1,
 			'db2088:3311' => 1,
+			'db2092:3311' => 1,
 		],
 		'logpager' => [
 			'db2034' => 1,
 			'db2042' => 1,
 			'db2088:3311' => 1,
+			'db2092:3311' => 1,
 		],
 		'dump' => [
 			'db2055' => 1,
@@ -337,22 +344,27 @@ $wgLBFactoryConf = [
 		'watchlist' => [
 			'db2036' => 1,
 			'db2085:3313' => 1,
+			'db2092:3313' => 1,
 		],
 		'recentchanges' => [
 			'db2036' => 1,
 			'db2085:3313' => 1,
+			'db2092:3313' => 1,
 		],
 		'recentchangeslinked' => [
 			'db2036' => 1,
 			'db2085:3313' => 1,
+			'db2092:3313' => 1,
 		],
 		'contributions' => [
 			'db2036' => 1,
 			'db2085:3313' => 1,
+			'db2092:3313' => 1,
 		],
 		'logpager' => [
 			'db2036' => 1,
 			'db2085:3313' => 1,
+			'db2092:3313' => 1,
 		],
 		'dump' => [
 			'db2043' => 1,
@@ -687,6 +699,8 @@ $wgLBFactoryConf = [
 	'db2089:3316' => '10.192.0.9:3316', # do not remove or comment out
 	'db2091:3312' => '10.192.0.10:3312', # do not remove or comment out
 	'db2091:3314' => '10.192.0.10:3314', # do not remove or comment out
+	'db2092:3311' => '10.192.16.41:3311', # do not remove or comment out
+	'db2092:3313' => '10.192.16.41:3313', # do not remove or comment out
 	'virt1000' => '208.80.154.18', # do not remove or comment out
 	'silver' => '208.80.154.136', # do not remove or comment out
 	'labtestweb2001' => '208.80.153.14', # do not remove or comment out
