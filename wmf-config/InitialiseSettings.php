@@ -8238,6 +8238,7 @@ $wgConf->settings = [
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'filemover' => [ 'movefile' => true ],
 		'Image-reviewer' => [ 'autopatrol' => true, 'upload_by_url' => true ],
+		'mp3-uploader' => [ 'autoconfirmed' => true, 'upload' => true, 'reupload' => true ],
 		'sysop' => [
 			'changetags' => true, // T134196
 			'upload_by_url' => true,
