@@ -108,6 +108,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-view-private'] = true;
 		$wgGroupPermissions['abusefilter-helper']['abusefilter-view-private'] = true; // T175684
 		$wgAbuseFilterNotificationsPrivate = true; // T46045
+		$wgAbuseFilterProfile = true;
 		break;
 	case 'enwikibooks':
 		$wgGroupPermissions['*']['abusefilter-view'] = false;
