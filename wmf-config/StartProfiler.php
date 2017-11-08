@@ -83,6 +83,7 @@ if ( extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
 		}
 
 		$entryPoint = basename( $_SERVER['SCRIPT_NAME'] );
+		$reqMethod = '{' . $_SERVER['REQUEST_METHOD'] . '}';
 
 		// Collate stack samples and fold into single lines.
 		// This is the format expected by FlameGraph.
@@ -120,6 +121,7 @@ if ( extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
 				if ( strpos( end( $stack ), $entryPoint ) !== false ) {
 					array_pop( $stack );
 				}
+				$stack[] = $reqMethod;
 				$stack[] = $entryPoint;
 
 				$strStack = implode( ';', array_reverse( $stack ) );
