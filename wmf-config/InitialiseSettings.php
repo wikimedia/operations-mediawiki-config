@@ -8243,6 +8243,7 @@ $wgConf->settings = [
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'filemover' => [ 'movefile' => true ],
 		'Image-reviewer' => [ 'autopatrol' => true, 'upload_by_url' => true ],
+		'mp3-uploader' => [ 'autoconfirmed' => true, 'upload' => true, 'reupload' => true ],
 		'sysop' => [
 			'changetags' => true, // T134196
 			'upload_by_url' => true,
@@ -9906,7 +9907,16 @@ $wgConf->settings = [
 			'accountcreator', // T144689
 		],
 		'checkuser' => [ 'ipblock-exempt' ],
-		'sysop' => [ 'rollbacker', 'confirmed', 'patroller', 'autopatrolled', 'filemover', 'Image-reviewer', 'upwizcampeditors' ],
+		'sysop' => [
+			'rollbacker',
+			'confirmed',
+			'patroller',
+			'autopatrolled',
+			'filemover',
+			'Image-reviewer',
+			'mp3-uploader', // T180002
+			'upwizcampeditors'
+		],
 		'Image-reviewer' => [ 'Image-reviewer' ],
 	],
 	'+dawiki' => [
