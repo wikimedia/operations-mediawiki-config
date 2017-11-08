@@ -18338,6 +18338,13 @@ $wgConf->settings = [
 	'enwiki' => [ 'n', 'v' ],
 ],
 
+// Define overridden interwiki prefixes
+// Mostly to match what's done in WikimediaMaintenance/dumpInterwiki.php ( see $prefixRewrites )
+'wmgCirrusSearchInterwikiPrefixOverrides' => [
+	'default' => [],
+	'svwiki' => [ 's' => 'src' ],
+],
+
 // Show/Hide multimedia content in the crossproject
 // search results sidebar
 'wmgCirrusSearchCrossProjectShowMultimedia' => [
