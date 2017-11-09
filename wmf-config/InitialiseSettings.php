@@ -4015,6 +4015,8 @@ $wgConf->settings = [
 	],
 	'+mwlwiki' => [
 		'Wikipedia_cumbersa' => NS_PROJECT_TALK,
+		'WP' => NS_PROJECT, // T180052
+		'BP' => NS_PROJECT, // T180052
 	],
 	'+mywiki' => [
 		'WP' => NS_PROJECT, // T119807
