@@ -36,4 +36,12 @@ $wmgThrottlingExceptions[] = [ // T178689 - Working Class Movement Library (Salf
 	'value' => 50,
 ];
 
+$wmgThrottlingExceptions[] = [ //T180046
+	'from' => '2017-11-11T07:00 -0:00',
+	'to' => '2017-12-11T19:00 -0:00',
+	'range' => '172.18.158.75/27',
+	'dbname' => [ 'dewiki' ],
+	'value' => 35, //30 expected
+];
+
 ## Add throttling definitions above.
