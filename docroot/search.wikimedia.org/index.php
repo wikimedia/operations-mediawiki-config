@@ -56,11 +56,9 @@ if ( isset( $_GET['search'] ) ) {
 }
 
 if ( isset( $_GET['limit'] ) ) {
-	if ( is_string( $_GET['limit'] ) && preg_match( '/^\d+/', $_GET['limit'] )
-		&& intval( $_GET['limit'] ) > 0 && intval( $_GET['limit'] ) < 100 ) {
-		$limit = intval( $_GET['limit'] );
-	} else {
-		dieOut( "Invalid limit parameter." );
+	$limitParam = intval( $_GET['limit'] );
+	if ( $limitParam >= 0 && $limitParam <= 100 ) {
+		$limit = $limitParam;
 	}
 }
 
