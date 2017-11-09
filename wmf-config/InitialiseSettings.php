@@ -19096,7 +19096,10 @@ $wgConf->settings = [
 		],
 	],
 	'frwiki' => [
-		// damaging uses defaults for everything
+		'damaging' => [
+			// likelygood, maybebad, likelybad use defaults
+			'verylikelybad' => [ 'min' => 'recall_at_precision(min_precision=0.85)', 'max' => 1 ],
+		],
 		'goodfaith' => [
 			// likelygood, maybebad, likelybad use defaults
 			'verylikelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.9)' ],
