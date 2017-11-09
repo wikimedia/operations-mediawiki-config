@@ -13472,6 +13472,7 @@ $wgConf->settings = [
 	'lvwiki' => true,
 	'maiwiki' => true,
 	'minwiki' => true,
+	'mwlwiki' => true, // T180052
 	'newiki' => true,
 	'nlwiki' => true,
 	'nlwikinews' => true, // T177170
