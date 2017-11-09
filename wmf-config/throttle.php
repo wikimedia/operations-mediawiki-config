@@ -44,4 +44,12 @@ $wmgThrottlingExceptions[] = [ // T180441 - Medicine Faculty campus
 	'value'  => 50 // Just in case value is 50
 ];
 
+$wmgThrottlingExceptions[] = [ // T180046
+	'from' => '2017-12-11T07:00 -0:00',
+	'to' => '2017-12-11T19:00 -0:00',
+	'range' => '139.18.1.5',
+	'dbname' => [ 'dewiki' ],
+	'value' => 35, // 30 expected
+];
+
 ## Add throttling definitions above.
