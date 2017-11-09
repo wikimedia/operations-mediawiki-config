@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e5a8fde_734c879f",
+        "filename": "docroot/search.wikimedia.org/index.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2017-11-09T23:46:41Z",
+      "side": 1,
+      "message": "\u003e\u003d",
+      "range": {
+        "startLine": 60,
+        "startChar": 18,
+        "endLine": 60,
+        "endChar": 20
+      },
+      "revId": "4a4840979ebbbdb53eb6a645074d9a76cfa610ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
