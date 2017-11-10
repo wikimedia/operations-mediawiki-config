@@ -1,10 +1,28 @@
 <?php
 /**
- * Initialization code for HHVM.
+ * Initialization code for HHVM worker threads.
  *
- * We configure HHVM to run this file at the very beginning of each
- * request by setting the path to this file as the value of HHVM's
- * `hhvm.server.request_init_document` setting.
+ * WARNING: This result of running this file is *cached* by HHVM.
+ *
+ * HHVM is configured to run this file at the beginning of each worker
+ * thread through the `hhvm.server.request_init_document` setting.
+ *
+ * The result of executing this PHP file is cached by taking a snapshot
+ * of the VM state. At the start of each request, the state is restored
+ * restored to that of the snapshot. That means, this file CAN expose
+ * variables, functions and other state to the "real" run-time for
+ * web requests, however, there are two important caveats:
+ *
+ * 1) This file itself does not have access to request-specific
+ *    data such as $_GET, $_POST, $_COOKIE and (most of) $_SERVER,
+ *    because it runs before that state is created and does not
+ *    re-run for each request.
+ * 2) This file is efffectively cached. Unlike other PHP files
+ *    executed by HHVM/PHP, this file is not ensured to be re-run
+ *    when it changes on-disk. To be safe, one should restart HHVM
+ *    between deploying a change to this file and depending on the
+ *    state elsewhere. Or (better yet), never depend on the state
+ *    created by this file.
  */
 if ( !defined( 'HHVM_VERSION' ) ) {
 	return;
