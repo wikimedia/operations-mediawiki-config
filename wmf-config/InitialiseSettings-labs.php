@@ -504,6 +504,7 @@ function wmfLabsSettings() {
 
 		'wmgUseAdvancedSearch' => [
 			'default' => true,
+			'deploymentwiki' => false,
 		],
 
 		// Test Wikidata descriptions on mobile: T127250
