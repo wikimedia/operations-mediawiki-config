@@ -1883,6 +1883,10 @@ if ( $wmgUseElectronPdfService ) {
 	wfLoadExtension( 'ElectronPdfService' );
 }
 
+if ( $wmgUseAdvancedSearch ) {
+	wfLoadExtension( 'AdvancedSearch' );
+}
+
 # Various system to allow/prevent flooding
 # (including exemptions for scheduled outreach events)
 require "$wmfConfigDir/throttle.php";

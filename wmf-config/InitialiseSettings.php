@@ -13677,7 +13677,13 @@ $wgConf->settings = [
 		'twocolconflict',                    // [WMDE TW] 2017-11-12 – New edit conflict view
 		'rcenhancedfilters',                 // [Editing] 2017-11-18 - Enhanced recent changes filters
 		'codemirror-syntax-highlight',       // [Community Tech] 2018-01-05 - Syntax highlighting
+		'advancedsearch',                    // [WMDE TW] 2018-05-22 - Advanced Search
 	],
+],
+
+'wmgUseAdvancedSearch' => [
+	'default' => false,
+	'group0' => true, // T180147
 ],
 
 'wmgUseCommonsMetadata' => [
