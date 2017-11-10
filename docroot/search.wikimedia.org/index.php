@@ -17,23 +17,9 @@ function dieOut( $msg = '' ) {
 error_reporting( E_ALL );
 ini_set( "display_errors", false );
 
-$site = 'wikipedia';
 $lang = 'en';
 $search = '';
 $limit = 20;
-
-$allowedSites = [
-	'wikipedia',
-	'wiktionary',
-	'wikinews',
-	'wikisource'
-];
-
-if ( isset( $_GET['site'] ) ) {
-	if ( is_string( $_GET['site'] ) && in_array( $_GET['site'], $allowedSites ) ) {
-		$site = $_GET['site'];
-	}
-}
 
 if ( isset( $_GET['lang'] ) ) {
 	if ( preg_match( '/^[a-z]+(-[a-z]+)*$/', $_GET['lang'] ) ) {
@@ -61,7 +47,7 @@ if ( isset( $_GET['limit'] ) ) {
 $urlSearch = urlencode( $search );
 
 # OpenSearch JSON suggest API
-$url = "https://$lang.$site.org/w/api.php?action=opensearch&search=$urlSearch&limit=$limit";
+$url = "https://$lang.wikipedia.org/w/api.php?action=opensearch&search=$urlSearch&limit=$limit";
 $c = curl_init( $url );
 curl_setopt_array( $c, [
 	CURLOPT_RETURNTRANSFER => true,
