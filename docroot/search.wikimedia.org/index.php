@@ -45,10 +45,12 @@ if ( isset( $_GET['lang'] ) ) {
 
 if ( isset( $_GET['search'] ) ) {
 	if ( is_string( $_GET['search'] ) ) {
-		$search = $_GET['search'];
-	} else {
-		dieOut( "Invalid search parameter." );
+		$search = trim( $_GET['search'] );
 	}
+}
+if ( !$search ) {
+	header( 'HTTP/1.0 400 Bad Request' );
+	die( "Wikimedia search service bad request.\n\nRequest must include a 'search' parameter" );
 }
 
 if ( isset( $_GET['limit'] ) ) {
