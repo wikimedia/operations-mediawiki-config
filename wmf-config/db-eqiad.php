@@ -250,7 +250,7 @@ $wgLBFactoryConf = [
 		],
 		'recentchanges' => [
 			'db1051' => 1,
-			# 'db1055' => 1,
+			'db1055' => 1,
 		],
 		'recentchangeslinked' => [
 			'db1051' => 1,
