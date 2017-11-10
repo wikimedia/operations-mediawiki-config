@@ -1,19 +1,51 @@
 <?php
-// WARNING: This file is publically viewable on the web. Do not put private
-// data here.
+# WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-// NOTE: this file is loaded early on in WebStart.php, so be careful with
-// globals.
+# ######################################################################
+# StartProfiler.php is where MediaWiki expects the $wgProfiler setting.
+#
+# This file is included by MediaWiki core's Setup.php. Aside from any
+# `auto_prepend_file`, and the first few lines of /w entrypoint, and some
+# of the WebStart.php file, nothing will have run yet.
+#
+# Specifically, StartProfiler runs *before* MediaWiki's Defines.php,
+# DefaultSettings.php, and wmf-config CommonSettings or InitialiseSettings.
+# ######################################################################
 
+/**
+ * File overview:
+ *
+ * 1. Parse X-Wikimedia-Header
+ * 2. One-off profile to stdout (via MediaWiki)
+ * 3. One-off profile to /tmp (from localhost)
+ * 4. Sampling profiler for production traffic
+ * 5. One-off profile to XHGui.
+ */
+
+/**
+ * 1) Parse X-Wikimedia-Header
+ *
+ * If the X-Wikimedia-Header is present, parse it into an associative array.
+ *
+ * See https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug
+ */
 $XWD = false;
-
-// Parse X-Wikimedia-Header (if present) into an associative array.
 if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
 	parse_str( preg_replace( '/; ?/', '&', $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ), $XWD );
 }
 
 if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
-	// Single-request profiling, via 'forceprofile=1' (web) or '--profiler=text' (CLI).
+	/**
+	 * 2) One-off profile to stdout
+	 *
+	 * MediaWiki's Profiler class can output raw profile data directly to the output
+	 * of a web response (web), or in stdout (CLI).
+	 *
+	 * For web: Set X-Wikimedia-Debug (to bypass cache) and query param 'forceprofile=1'.
+	 * For CLI: Set CLI option '--profiler=text'.
+	 *
+	 * See https://www.mediawiki.org/wiki/Manual:Profiling
+	 */
 	if (
 		( isset( $_GET['forceprofile'] ) && isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) )
 		|| PHP_SAPI === 'cli'
@@ -23,8 +55,17 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 			'flags'  => XHPROF_FLAGS_NO_BUILTINS,
 			'output' => 'text',
 		];
-	// If HTTP_FORCE_LOCAL_XHPROF is set in the shell environment,
-	// profile all requests from localhost.
+	}
+
+	/**
+	 * 3) One-off profile to /tmp
+	 *
+	 * When making requests to the local server using shell access,
+	 * setting the 'Force-Local-XHProf: 1' header will write raw profile data
+	 * directly to a local file in /tmp/xhprof/.
+	 *
+	 * Note: This is only allowed for requests within the same server.
+	 */
 	} elseif (
 		isset( $_SERVER['HTTP_FORCE_LOCAL_XHPROF'] )
 		&& isset( $_SERVER['REMOTE_ADDR'] )
@@ -58,22 +99,18 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 			}
 			file_put_contents( '/tmp/xhprof/' . date( 'Y-m-d\TH:i:s' ) . '.prof', $out );
 		} );
-	} else {
-		// 1:1000 request profiling
-
-		/*
-		$wgProfiler = array(
-			'class'    => 'ProfilerXhprof',
-			'exclude'  => array( 'section.*', 'run_init*' ),
-			'flags'    => ( XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS ),
-			'output'   => 'stats',
-			'prefix'   => 'xhprof',
-			'sampling' => 10000,
-		);
-		*/
 	}
 }
 
+/**
+ * 4) Sampling profiler for production traffic
+ *
+ * If Xenon is enabled, register a shutdown callback to ask HHVM for
+ * recently collected data. Will not end up yielding something every
+ * request.
+ *
+ * Based on https://github.com/wikimedia/arc-lamp
+ */
 if ( extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
 	register_shutdown_function( function () {
 		$data = HH\xenon_get_data();
@@ -141,8 +178,24 @@ if ( extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
 	} );
 }
 
+/**
+ * 5) One-off profile to XHGui
+ *
+ * Set X-Wikimedia-Debug header with 'profile' attribute to instrument a web request
+ * with XHProf and save the profile to XHGui's MongoDB.
+ *
+ * To find the profile in XHGui, either browse "Recent", or use wgRequestId value
+ * from the mw.config data in the HTML web response, e.g. by running the
+ * `mw.config.get('wgRequestId')` snippet in JavaScript. Then look up as follows:
+ *
+ * https://performance.wikimedia.org/xhgui/?url=WShdaQpAIHwAAF9HkX4AAAAW
+ *
+ * See https://performance.wikimedia.org/xhgui/
+ * See https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug#Request_profiling
+ */
 if (
 	ini_get( 'hhvm.stats.enable_hot_profiler' ) &&
+	// Require X-Forwarded-For to ignore non-remote requests (e.g. PyBal)
 	!empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) &&
 	isset( $XWD['profile'] )
 ) {
