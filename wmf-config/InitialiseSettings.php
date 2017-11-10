@@ -13684,6 +13684,7 @@ $wgConf->settings = [
 'wmgUseAdvancedSearch' => [
 	'default' => false,
 	'group0' => true, // T180147
+	'dewiki' => true, // T180128
 ],
 
 'wmgUseCommonsMetadata' => [
