@@ -17,8 +17,6 @@ function dieOut( $msg = '' ) {
 error_reporting( E_ALL );
 ini_set( "display_errors", false );
 
-$caching = true;
-
 $site = 'wikipedia';
 $lang = 'en';
 $search = '';
@@ -91,9 +89,7 @@ if ( is_array( $suggest ) && count( $suggest ) >= 2
 	dieOut( "Unexpected result format." );
 }
 
-if ( $caching ) {
-	header( "Cache-Control: public, max-age: 1200, s-maxage: 1200" );
-}
+header( "Cache-Control: public, max-age: 1200, s-maxage: 1200" );
 print "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"DTD/xhtml1-transitional.dtd\">\n" .
 	"<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"></head>\n" .
 	"<body>";
