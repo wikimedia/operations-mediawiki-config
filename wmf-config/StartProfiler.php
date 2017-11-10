@@ -1,9 +1,26 @@
 <?php
-// WARNING: This file is publically viewable on the web. Do not put private
-// data here.
+# WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-// NOTE: this file is loaded early on in WebStart.php, so be careful with
-// globals.
+# ######################################################################
+# StartProfiler.php is where MediaWiki expects the $wgProfiler setting.
+#
+# This file is included by MediaWiki core's Setup.php. Aside from any
+# `auto_prepend_file`, and the first few lines of /w entrypoint, and some
+# of the WebStart.php file, nothing will have run yet.
+#
+# Specifically, StartProfiler runs *before* MediaWiki's Defines.php,
+# DefaultSettings.php, and wmf-config CommonSettings or InitialiseSettings.
+# ######################################################################
+
+/**
+ * File overview:
+ *
+ * 1. Parse X-Wikimedia-Header.
+ * 2A. One-off debug profile via MediaWiki (output in web response by MediaWiki)
+ * 2B. One-off debug profile via XHProf directly, saved to disk in /tmp.
+ * 3. Sampling profiler for production.
+ * 4. One-off debug profile via XHProf, saved to XHGui.
+ */
 
 $XWD = false;
 
