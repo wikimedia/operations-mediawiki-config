@@ -1,5 +1,6 @@
 $IP/extensions/3D/extension.json
 $IP/extensions/AbuseFilter/extension.json
+$IP/extensions/AdvancedSearch/extension.json
 $IP/extensions/AntiSpoof/extension.json
 $IP/extensions/ApiFeatureUsage/extension.json
 $IP/extensions/ArticleCreationWorkflow/extension.json
