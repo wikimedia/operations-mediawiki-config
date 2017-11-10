@@ -34,16 +34,12 @@ $allowedSites = [
 if ( isset( $_GET['site'] ) ) {
 	if ( is_string( $_GET['site'] ) && in_array( $_GET['site'], $allowedSites ) ) {
 		$site = $_GET['site'];
-	} else {
-		dieOut( "Invalid parameter." );
 	}
 }
 
 if ( isset( $_GET['lang'] ) ) {
 	if ( preg_match( '/^[a-z]+(-[a-z]+)*$/', $_GET['lang'] ) ) {
 		$lang = $_GET['lang'];
-	} else {
-		dieOut( "Invalid language parameter." );
 	}
 }
 
