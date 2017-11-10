@@ -94,14 +94,14 @@ print "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"DTD/xh
 	"<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"></head>\n" .
 	"<body>";
 
-foreach ( $results as $result ) {
-	$htmlResult = htmlspecialchars( str_replace( ' ', '_', $result ) );
-	print "<div><span class=\"language\">$lang</span>:<span class=\"key\">$htmlResult</span></div>";
-}
-
-if ( empty( $results ) ) {
+if ( !$results ) {
 	$htmlSearch = htmlspecialchars( $search );
 	print "<p>No entries found for \"$lang:$htmlSearch\"</p>";
+} else {
+	foreach ( $results as $result ) {
+		$htmlResult = htmlspecialchars( str_replace( ' ', '_', $result ) );
+		print "<div><span class=\"language\">$lang</span>:<span class=\"key\">$htmlResult</span></div>";
+	}
 }
 
 print "</body></html>\n";
