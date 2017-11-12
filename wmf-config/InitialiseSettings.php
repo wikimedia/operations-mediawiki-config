@@ -13256,7 +13256,7 @@ $wgConf->settings = [
 		'davidabian.com',
 		'webapi.aucklandmuseum.com',        // Auckland Museum - T122995
 		'*.e-pics.ethz.ch',                 // ETH Library  - T123109
-		'*.museumvictoria.com.au',          // Victoria State (AU) Museum, requested in T125387
+		'*.museumvictoria.com.au',          // Victoria State (AU) Museum - T125387
 		'bio.acousti.ca',                   // Natural History Museum - T132140
 		'museumcommons.wikimedia.nl',       // Museum Catharijneconvent - T131841
 		'images.unsplash.com',              // Unsplash - T132701
@@ -13285,6 +13285,7 @@ $wgConf->settings = [
 		'geo.hlipp.de',                     // Geograph Deutschland - T174152
 		'geo-en.hlipp.de',                  // Geograph Deutschland - T174152
 		'aleph500.biblacad.ro',             // Domain of the Romanian academy - T178753
+		'images.collection.cooperhewitt.org', // Cooper Hewitt - T180241
 	],
 ],
 
