@@ -7852,6 +7852,9 @@ $wgConf->settings = [
 		'45.56.98.206',  // Wiki Education Foundation dashboard T126541
 		'2600:3c03::f03c:91ff:fe08:7973', // idem, T151823
 	],
+	'+testwikidatawiki' => [
+		'10.68.16.0/21', // Jenkins and Sauce labs T167432
+	],
 ],
 
 'wgEmailAuthentication' => [
