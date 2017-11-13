@@ -11,6 +11,8 @@ if ( file_exists( $wgWikidataBuildBaseDir . '/vendor/autoload.php' ) ) {
 	include_once $wgWikidataBuildBaseDir . '/vendor/autoload.php';
 }
 
+wfLoadExtension( 'DataTypes', "$wgWikidataBuildBaseDir/extensions/DataTypes/extension.json" );
+
 if ( !empty( $wmgUseWikibaseRepo ) ) {
 	include_once "$wgWikidataBuildBaseDir/extensions/Wikibase/repo/Wikibase.php";
 	include_once "$wgWikidataBuildBaseDir/extensions/Wikidata.org/WikidataOrg.php";
