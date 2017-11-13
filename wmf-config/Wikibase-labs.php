@@ -1,5 +1,7 @@
 <?php
 
+wfLoadExtension( 'DataTypes', "$wgWikidataBuildBaseDir/extensions/DataTypes/extension.json" );
+
 if ( $wmgUseWikibaseRepo ) {
 	$wgPropertySuggesterClassifyingPropertyIds = [ 694 ];
 	$wgPropertySuggesterInitialSuggestions = [ 694 ];
