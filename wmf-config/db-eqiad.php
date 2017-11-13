@@ -120,6 +120,7 @@ $wgLBFactoryConf = [
 		'db1076' => 500, # B1 3.6TB 512GB
 		'db1090' => 500, # C3 3.6TB 512GB
 		'db1101' => 1,   # C2 3.6TB 512GB, watchlist, recentchanges, contributions, logpager, old master 2
+		'db1103:3312' => 1,  # A3 3.6TB 512GB # rc, log: s2 and s4
 	],
 	/* s3 */ 'DEFAULT' => [
 		'db1075' => 0,   # A2 3.6TB 512GB, master
@@ -137,7 +138,7 @@ $wgLBFactoryConf = [
 		'db1084' => 500, # B1 3.6TB 512GB
 		'db1091' => 500, # D2 3.6TB 512GB
 		'db1097' => 1,   # D1 3.6TB 512GB, api, old master
-		# 'db1103' => 0,  # A3 3.6TB 512GB, #DO NOT POOL - multi-instance host being built
+		'db1103:3314' => 1,  # A3 3.6TB 512GB # rc, log: s2 and s4
 	],
 	's5' => [
 		'db1063' => 0,   # C5 2.8TB 128GB, master
@@ -289,18 +290,23 @@ $wgLBFactoryConf = [
 		],
 		'watchlist' => [
 			'db1101' => 1,
+			'db1103:3312' => 1,
 		],
 		'recentchanges' => [
 			'db1101' => 1,
+			'db1103:3312' => 1,
 		],
 		'recentchangeslinked' => [
 			'db1101' => 1,
+			'db1103:3312' => 1,
 		],
 		'contributions' => [
 			'db1101' => 1,
+			'db1103:3312' => 1,
 		],
 		'logpager' => [
 			'db1101' => 1,
+			'db1103:3312' => 1,
 		],
 	],
 	/* s3 */ 'DEFAULT' => [
@@ -340,22 +346,27 @@ $wgLBFactoryConf = [
 		'watchlist' => [
 			'db1053' => 1,
 			'db1056' => 1,
+			'db1103:3314' => 1,
 		],
 		'recentchanges' => [
 			'db1053' => 1,
 			'db1056' => 1,
+			'db1103:3314' => 1,
 		],
 		'recentchangeslinked' => [
 			'db1053' => 1,
 			'db1056' => 1,
+			'db1103:3314' => 1,
 		],
 		'contributions' => [
 			'db1053' => 1,
 			'db1056' => 1,
+			'db1103:3314' => 1,
 		],
 		'logpager' => [
 			'db1053' => 1,
 			'db1056' => 1,
+			'db1103:3314' => 1,
 		],
 	],
 	's5' => [
@@ -510,7 +521,8 @@ $wgLBFactoryConf = [
 	'db1099' => '10.64.16.84', # do not remove or comment out
 	'db1100' => '10.64.32.197', # do not remove or comment out
 	'db1101' => '10.64.32.198', # do not remove or comment out
-	'db1103' => '10.64.0.164', # do not remove or comment out
+	'db1103:3312' => '10.64.0.164:3312', # do not remove or comment out
+	'db1103:3314' => '10.64.0.164:3314', # do not remove or comment out
 	'db1104' => '10.64.16.85', # do not remove or comment out
 	'db1105' => '10.64.32.222', # do not remove or comment out
 	'db1106' => '10.64.48.13', # do not remove or comment out
