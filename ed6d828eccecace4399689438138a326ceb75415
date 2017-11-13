@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e5a8fde_f8991dc8",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2017-11-13T19:50:33Z",
+      "side": 1,
+      "message": "December",
+      "revId": "ed6d828eccecace4399689438138a326ceb75415",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e5a8fde_38833559",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2017-11-13T19:50:33Z",
+      "side": 1,
+      "message": "This is a private IP range.\n\nThere are three IPv4 of them:\n  - 10.0.0.0 - 10.255.255.255\n  - 172.16.0.0 - 172.31.255.255\n  - 192.168.0.0 - 192.168.255.255",
+      "revId": "ed6d828eccecace4399689438138a326ceb75415",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
