@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e5a8fde_6db6ced8",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 2207
+      },
+      "writtenOn": "2017-11-13T16:43:31Z",
+      "side": 1,
+      "message": "Since this was removed then re-added, perhaps we should add a comment as a reference, like // T179323",
+      "revId": "8001c0ad1233e1983a49aa9ec09b1f25b5372d59",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
