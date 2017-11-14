@@ -17270,7 +17270,6 @@ $wgConf->settings = [
 	'default' => false,
 	'arwiki' => true, // T59729
 	'cawiki' => true, // T73381
-	'cswiki' => true, // T56223
 	'dewikiversity' => true,
 	'elwiki' => true, // T58771
 	'enwiki' => true,
