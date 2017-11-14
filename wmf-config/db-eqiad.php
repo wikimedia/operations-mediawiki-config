@@ -111,6 +111,7 @@ $wgLBFactoryConf = [
 		'db1080' => 300, # A2 3.6TB 512GB, api
 		'db1083' => 500, # B1 3.6TB 512GB
 		'db1089' => 500, # C3 3.6TB 512GB
+		'db1105:3311' => 1,   # C3 3.6TB 512GB # rc, log: s1 and s2
 	],
 	's2' => [
 		'db1054' => 0,   # A3 2.8TB  96GB, master
@@ -121,6 +122,7 @@ $wgLBFactoryConf = [
 		'db1090' => 500, # C3 3.6TB 512GB
 		'db1101' => 1,   # C2 3.6TB 512GB, watchlist, recentchanges, contributions, logpager, old master 2
 		'db1103:3312' => 1,  # A3 3.6TB 512GB # rc, log: s2 and s4
+		'db1105:3312' => 1,   # C3 3.6TB 512GB # rc, log: s1 and s2
 	],
 	/* s3 */ 'DEFAULT' => [
 		'db1075' => 0,   # A2 3.6TB 512GB, master
@@ -151,7 +153,6 @@ $wgLBFactoryConf = [
 		'db1099' => 1,   # B2 3.6TB 512GB, watchlist, recentchanges, contributions, logpager
 		'db1100' => 1,   # C2 3.6TB 512GB, old master
 		# 'db1104' => 100,  # B3 3.6TB 512GB
-		# 'db1105' => 1,   # C3 3.6TB 512GB, #DO NOT POOL - going to be multi-instance host #T178359
 		'db1106' => 300,  # D3 3.6TB 512GB
 	],
 	's6' => [
@@ -246,24 +247,29 @@ $wgLBFactoryConf = [
 'groupLoadsBySection' => [
 	's1' => [
 		'watchlist' => [
-			'db1051' => 1,
-			'db1055' => 1,
+			'db1051' => 2,
+			'db1055' => 2,
+			'db1105:3311' => 1,
 		],
 		'recentchanges' => [
 			'db1051' => 1,
 			'db1055' => 1,
+			# 'db1105:3311' => 1,
 		],
 		'recentchangeslinked' => [
 			'db1051' => 1,
 			'db1055' => 1,
+			# 'db1105:3311' => 1,
 		],
 		'contributions' => [
 			'db1051' => 1,
 			'db1055' => 1,
+			# 'db1105:3311' => 1,
 		],
 		'logpager' => [
 			'db1051' => 1,
 			'db1055' => 1,
+			# 'db1105:3311' => 1,
 		],
 		'dump' => [
 			'db1065' => 1,
@@ -289,24 +295,29 @@ $wgLBFactoryConf = [
 			'db1074' => 1,
 		],
 		'watchlist' => [
-			'db1101' => 1,
-			'db1103:3312' => 1,
+			'db1101' => 2,
+			'db1103:3312' => 2,
+			'db1105:3312' => 1,
 		],
 		'recentchanges' => [
 			'db1101' => 1,
 			'db1103:3312' => 1,
+			# 'db1105:3312' => 1,
 		],
 		'recentchangeslinked' => [
 			'db1101' => 1,
 			'db1103:3312' => 1,
+			# 'db1105:3312' => 1,
 		],
 		'contributions' => [
 			'db1101' => 1,
 			'db1103:3312' => 1,
+			# 'db1105:3312' => 1,
 		],
 		'logpager' => [
 			'db1101' => 1,
 			'db1103:3312' => 1,
+			# 'db1105:3312' => 1,
 		],
 	],
 	/* s3 */ 'DEFAULT' => [
@@ -524,7 +535,8 @@ $wgLBFactoryConf = [
 	'db1103:3312' => '10.64.0.164:3312', # do not remove or comment out
 	'db1103:3314' => '10.64.0.164:3314', # do not remove or comment out
 	'db1104' => '10.64.16.85', # do not remove or comment out
-	'db1105' => '10.64.32.222', # do not remove or comment out
+	'db1105:3311' => '10.64.32.222:3311', # do not remove or comment out
+	'db1105:3312' => '10.64.32.222:3312', # do not remove or comment out
 	'db1106' => '10.64.48.13', # do not remove or comment out
 	'db2001' => '10.192.0.4', # do not remove or comment out
 	'db2002' => '10.192.0.5', # do not remove or comment out
