@@ -36,4 +36,12 @@ $wmgThrottlingExceptions[] = [ // T178689 - Working Class Movement Library (Salf
 	'value' => 50,
 ];
 
+$wmgThrottlingExceptions[] = [ // T180441 - Medicine Faculty campus
+	'from'   => '2017-11-14T00:00 +0:00',
+	'to'     => '2017-11-21T00:00 +0:00',
+	'IP'     => '84.89.157.249',
+	'dbname' => [ 'cawiki' ],
+	'value'  => 50 // Just in case value is 50
+];
+
 ## Add throttling definitions above.
