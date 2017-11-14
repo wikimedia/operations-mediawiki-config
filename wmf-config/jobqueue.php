@@ -46,6 +46,7 @@ if ( $wmgUseEventBus && $wmgDebugJobQueueEventBus ) {
 		$wgJobTypeConf['flaggedrevs_CacheUpdate'] =
 		$wgJobTypeConf['deleteLinks'] =
 		$wgJobTypeConf['updateBetaFeaturesUserCounts'] =
+		$wgJobTypeConf['RecordLintJob'] =
 			[ 'class' => 'JobQueueEventBus' ];
 	$wgJobTypeConf['default'] = [
 		'class' => 'JobQueueSecondTestQueue',
