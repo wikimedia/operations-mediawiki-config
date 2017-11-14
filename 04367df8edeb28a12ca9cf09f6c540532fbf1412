@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e578bb4_44c6ce4f",
+        "filename": "wmf-config/StartProfiler.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2017-11-14T22:18:23Z",
+      "side": 1,
+      "message": "Since this is just a stub now, we could swap the StartProfiler stage of `scap prep` to just put this instead, removing a layer of indirection.",
+      "revId": "04367df8edeb28a12ca9cf09f6c540532fbf1412",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
