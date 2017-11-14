@@ -3,12 +3,3 @@ $IP/extensions/EmailAuth/extension.json
 $IP/extensions/PerformanceInspector/extension.json
 $IP/extensions/ReadingLists/extension.json
 $IP/extensions/Sentry/extension.json
-$IP/extensions/Wikidata/extensions/ArticlePlaceholder/ArticlePlaceholder.php
-$IP/extensions/Wikidata/extensions/Constraints/WikibaseQualityConstraints.php
-$IP/extensions/Wikidata/extensions/PropertySuggester/PropertySuggester.php
-$IP/extensions/Wikidata/extensions/Quality/WikibaseQuality.php
-$IP/extensions/Wikidata/extensions/Wikibase/client/WikibaseClient.php
-$IP/extensions/Wikidata/extensions/Wikibase/repo/Wikibase.php
-$IP/extensions/Wikidata/extensions/Wikidata.org/WikidataOrg.php
-$IP/extensions/Wikidata/extensions/Wikidata.credits.php
-$IP/extensions/Wikidata/extensions/WikimediaBadges/extension.json
