@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e5a8fde_a4ca9c6f",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2017-11-14T13:11:17Z",
+      "side": 1,
+      "message": "we could add for instance db2084:3318 and db2086:3318 as recentchanges already to this list.\nThey can serve 3315 and 3318, they are already built",
+      "revId": "1db1937dc9718fe2b553f17488135696bbe61d86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e5a8fde_24ad4c98",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2017-11-14T13:11:17Z",
+      "side": 1,
+      "message": "As recentchanges we can add: db1105:3318 and db1105:3315 (to be built)\ndb1098 (currently temporary in s6, and needs to be removed from there as it is not needed anymore) can also come to s8.",
+      "revId": "1db1937dc9718fe2b553f17488135696bbe61d86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
