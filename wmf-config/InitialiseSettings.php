@@ -13748,8 +13748,6 @@ $wgConf->settings = [
 
 'wgPopupsEventLogging' => [
 	'default' => false,
-	'enwiki' => true,
-	'dewiki' => true,
 ],
 
 'wgPopupsGateway' => [
