@@ -8,6 +8,7 @@ import argparse
 import multiprocessing
 import os
 import re
+import shutil
 import subprocess
 
 import scap.cli as cli
@@ -90,19 +91,26 @@ class CheckoutMediaWiki(cli.Application):
             self.config['stage_dir'],
             '{}{}'.format(self.arguments.prefix, self.arguments.branch)
         )
-        old_branch = self.active_wikiversions().keys()[0]
-        copy_dir = os.path.join(
-            self.config['stage_dir'],
-            '{}{}'.format(self.arguments.prefix, old_branch)
-        )
+
+        checkout_version = 'master'
+        if self.arguments.branch != 'master':
+            checkout_version = 'wmf/%s' % self.arguments.branch
+
+        reference_dir = None
+        if checkout_version != 'master':
+            old_branch = self.active_wikiversions().keys()[0]
+            reference_dir = os.path.join(
+                self.config['stage_dir'],
+                '{}{}'.format(self.arguments.prefix, old_branch)
+            )
+            shutil.copytree(
+                os.path.join('/srv/patches', old_branch),
+                os.path.join('/srv/patches', self.arguments.branch)
+            )
 
         if os.path.isdir(dest_dir):
             self.get_logger().info('Version already checked out')
             return 0
-
-        reference_dir = None
-        if os.path.isdir(copy_dir):
-            reference_dir = copy_dir
 
         git.fetch(dest_dir, GERRIT_URL + 'mediawiki/core', reference_dir)
 
@@ -115,10 +123,6 @@ class CheckoutMediaWiki(cli.Application):
             if subprocess.call(['/usr/bin/git', 'config',
                                 'submodule.fetchJobs', num_procs]) != 0:
                 self.get_logger().warn('Unable to setup submodule fetch jobs')
-
-        checkout_version = 'master'
-        if self.arguments.branch != 'master':
-            checkout_version = 'wmf/%s' % self.arguments.branch
 
         git.checkout(dest_dir, checkout_version)
 
