@@ -34,6 +34,24 @@
       "revId": "e2907f063ceb804880b6543122b6db04107ae5f9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e5417b0_18ffd1a8",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 435,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2017-11-16T16:07:28Z",
+      "side": 1,
+      "message": "you are right, i missed it as I was looking at the comparison with what was changed from the previous patch.\napologies",
+      "parentUuid": "2e5417b0_18683184",
+      "revId": "e2907f063ceb804880b6543122b6db04107ae5f9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
