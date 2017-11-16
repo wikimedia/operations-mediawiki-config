@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "2e5417b0_b8847d5f",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2017-11-16T15:54:35Z",
+      "side": 1,
+      "message": "My point was: if we are going to start with testwikidatawiki on eqiad, wouldn\u0027t make sense to do the same for codfw, for consistency.",
+      "parentUuid": "2e5417b0_780cc53d",
+      "revId": "c28f2699324bed27c822b718976f5d3ee327a95d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e5417b0_3d595f5e",
         "filename": "wmf-config/db-codfw.php",
         "patchSetId": 3
@@ -101,6 +119,24 @@
       "side": 1,
       "message": "Not really, unless you want to apply it to all.",
       "parentUuid": "2e5417b0_dd34cbf9",
+      "revId": "c28f2699324bed27c822b718976f5d3ee327a95d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e5417b0_f88af56d",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 454,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2017-11-16T15:54:35Z",
+      "side": 1,
+      "message": "weird visualization I guess it is gerrit :-)",
+      "parentUuid": "2e5417b0_b820fd97",
       "revId": "c28f2699324bed27c822b718976f5d3ee327a95d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
