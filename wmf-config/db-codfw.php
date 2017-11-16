@@ -53,7 +53,6 @@ $wgLBFactoryConf = [
 
 	# s5: dewiki and wikidata
 	'dewiki'       => 's5',
-	'wikidatawiki' => 's5',
 
 	# s6: large wikis
 	'frwiki'       => 's6',
@@ -74,6 +73,9 @@ $wgLBFactoryConf = [
 	'fawiki'       => 's7',
 	'rowiki'       => 's7',
 	'kowiki'       => 's7',
+
+	# s8: wikidata
+	'wikidatawiki' => 's8',
 
 	# labs-related wikis
 	'labswiki'     => 'silver',
@@ -101,91 +103,94 @@ $wgLBFactoryConf = [
 
 'sectionLoads' => [
 	's1' => [
-		'db2048' => 0,   # C6 2.9TB 160GB, master
-		# 'db2016' => 0,   # B6 2.9TB  96GB, old master
-		'db2034' => 50,  # A5 2.9TB 160GB, rc, log
-		'db2042' => 50,  # C6 2.9TB 160GB, rc, log
-		'db2055' => 50,  # D6 3.3TB 160GB, dump (inactive), vslow, api
-		'db2062' => 50,  # B5 3.3TB 160GB, api # mariadb 10.1
-		'db2069' => 50,  # D6 3.3TB 160GB, api
-		'db2070' => 400, # C5 3.3TB 160GB
-		'db2071' => 50,  # A6 3.6TB 512GB, api
-		'db2072' => 500, # B6 3.6TB 512GB, # mariadb 10.1
+		'db2048'      => 0,   # C6 2.9TB 160GB, master
+		# 'db2016'      => 0,   # B6 2.9TB  96GB, old master
+		'db2034'      => 50,  # A5 2.9TB 160GB, rc, log
+		'db2042'      => 50,  # C6 2.9TB 160GB, rc, log
+		'db2055'      => 50,  # D6 3.3TB 160GB, dump (inactive), vslow, api
+		'db2062'      => 50,  # B5 3.3TB 160GB, api # mariadb 10.1
+		'db2069'      => 50,  # D6 3.3TB 160GB, api
+		'db2070'      => 400, # C5 3.3TB 160GB
+		'db2071'      => 50,  # A6 3.6TB 512GB, api
+		'db2072'      => 500, # B6 3.6TB 512GB, # mariadb 10.1
 		'db2088:3311' => 1, # D1 3.3TB 512GB # rc, log: s1 and s2
 		'db2092:3311' => 1, # B8 3.3TB 512GB # rc, log: s1 and s3
 	],
 	's2' => [
-		'db2017' => 0,   # B6 2.9TB  96GB, master
-		'db2035' => 50,  # C6 2.9TB 160GB, rc, log
-		'db2041' => 100, # C6 2.9TB 160GB, api
-		'db2049' => 400, # C6 2.9TB 160GB,
-		'db2056' => 50,  # D6 3.3TB 160GB, dump (inactive), vslow #innodb compressed
-		'db2063' => 100, # D6 3.3TB 160GB, api
-		'db2064' => 400, # D6 3.3TB 160GB
+		'db2017'      => 0,   # B6 2.9TB  96GB, master
+		'db2035'      => 50,  # C6 2.9TB 160GB, rc, log
+		'db2041'      => 100, # C6 2.9TB 160GB, api
+		'db2049'      => 400, # C6 2.9TB 160GB,
+		'db2056'      => 50,  # D6 3.3TB 160GB, dump (inactive), vslow #innodb compressed
+		'db2063'      => 100, # D6 3.3TB 160GB, api
+		'db2064'      => 400, # D6 3.3TB 160GB
 		'db2088:3312' => 1, # D1 3.3TB 512GB # rc, log: s1 and s2
 		'db2091:3312' => 1, # A8 3.3TB 512GB # rc, log: s2 and s4
 	],
 	/* s3 */ 'DEFAULT' => [
-		'db2018' => 0,   # B6 2.9TB  96GB, master
-		'db2036' => 50,  # C6 2.9TB 160GB, rc, log
-		'db2043' => 50,  # C6 2.9TB 160GB, dump (inactive), vslow
-		'db2050' => 150, # C6 2.9TB 160GB, api
-		'db2057' => 400, # D6 3.3TB 160GB
-		'db2074' => 400, # D6 3.3TB 512GB # InnoDB compressed
+		'db2018'      => 0,   # B6 2.9TB  96GB, master
+		'db2036'      => 50,  # C6 2.9TB 160GB, rc, log
+		'db2043'      => 50,  # C6 2.9TB 160GB, dump (inactive), vslow
+		'db2050'      => 150, # C6 2.9TB 160GB, api
+		'db2057'      => 400, # D6 3.3TB 160GB
+		'db2074'      => 400, # D6 3.3TB 512GB # InnoDB compressed
 		'db2085:3313' => 1, # A5 3.3TB 512GB # rc, log: s3 and s5(s8)
 		'db2092:3313' => 1, # B8 3.3TB 512GB # rc, log: s1 and s3
 	],
 	's4' => [
-		'db2051' => 0,   # B8 2.9TB 160GB, master
-		# 'db2019' => 0, # B6 2.9TB  96GB, old master
-		'db2037' => 50,  # C6 2.9TB 160GB, rc, log
-		'db2044' => 50,  # C6 2.9TB 160GB, rc, log
-		'db2058' => 50,  # D6 3.3TB 160GB, dump (inactive), vslow
-		'db2065' => 200, # D6 3.3TB 160GB, api
-		'db2073' => 400, # C6 3.3TB 512GB # Compressed InnoDB
+		'db2051'      => 0,   # B8 2.9TB 160GB, master
+		# 'db2019'      => 0, # B6 2.9TB  96GB, old master
+		'db2037'      => 50,  # C6 2.9TB 160GB, rc, log
+		'db2044'      => 50,  # C6 2.9TB 160GB, rc, log
+		'db2058'      => 50,  # D6 3.3TB 160GB, dump (inactive), vslow
+		'db2065'      => 200, # D6 3.3TB 160GB, api
+		'db2073'      => 400, # C6 3.3TB 512GB # Compressed InnoDB
 		'db2084:3314' => 1, # D6 3.3TB 512GB # rc, log: s4 and s5
 		'db2091:3314' => 1, # A8 3.3TB 512GB # rc, log: s2 and s4
 	],
 	's5' => [
-		'db2023' => 0,   # B6 2.9TB  96GB, master
-		'db2038' => 50,  # C6 2.9TB 160GB, rc, log
-		'db2045' => 400, # C6 2.9TB 160GB
-		'db2052' => 50,  # D6 2.9TB 160GB, dump (inactive), vslow
-		'db2059' => 100, # D6 3.3TB 160GB, api
-		'db2066' => 400, # D6 3.3TB 160GB
-		'db2075' => 400, # A1 3.3TB 512GB # Compressed InnoDB
-		# 'db2079' => 400, # A5 3.3TB 512GB # Compressed InnoDB #T170662
-		# 'db2080' => 400, # C5 3.3TB 512GB # Compressed InnoDB #T170662
-		# 'db2081' => 400, # A6 3.3TB 512GB # Compressed InnoDB #T170662
-		# 'db2082' => 400, # B6 3.3TB 512GB # Compressed InnoDB #T170662
-		# 'db2083' => 400, # C6 3.3TB 512GB # Compressed InnoDB #T170662
+		'db2023'      => 0,   # B6 2.9TB  96GB, master
+		'db2038'      => 50,  # C6 2.9TB 160GB, rc, log
+		'db2052'      => 50,  # D6 2.9TB 160GB, dump (inactive), vslow
+		'db2059'      => 100, # D6 3.3TB 160GB, api
+		'db2066'      => 400, # D6 3.3TB 160GB
+		'db2075'      => 400, # A1 3.3TB 512GB # Compressed InnoDB
 		'db2084:3315' => 1, # D6 3.3TB 512GB # rc, log: s4 and s5
-		'db2085:3315' => 1, # A5 3.3TB 512GB # rc, log: s3 and s5(s8)
-		'db2086:3315' => 1, # B1 3.3TB 512GB # rc, log: s5 and s7
-		'db2089:3315' => 1, # A3 3.3TB 512GB # rc, log: s6 and s5(s8)
+		'db2089:3315' => 1, # A3 3.3TB 512GB # rc, log: s5 and s6
 	],
 	's6' => [
-		'db2028' => 0,   # B6  2.9TB  96GB, master
-		'db2039' => 50,  # C6 2.9TB 160GB, rc, log
-		'db2046' => 400, # C6 2.9TB 160GB
-		'db2053' => 100, # D6 2.9TB 160GB, dump (inactive), vslow
-		'db2060' => 100, # D6 3.3TB 160GB, api
-		'db2067' => 400, # D6 3.3TB 160GB
-		'db2076' => 400, # B1 3.3TB 512GB
+		'db2028'      => 0,   # B6  2.9TB  96GB, master
+		'db2039'      => 50,  # C6 2.9TB 160GB, rc, log
+		'db2046'      => 400, # C6 2.9TB 160GB
+		'db2053'      => 100, # D6 2.9TB 160GB, dump (inactive), vslow
+		'db2060'      => 100, # D6 3.3TB 160GB, api
+		'db2067'      => 400, # D6 3.3TB 160GB
+		'db2076'      => 400, # B1 3.3TB 512GB
 		'db2087:3316' => 1, # C1 3.3TB 512GB # rc, log: s6 and s7
 		'db2089:3316' => 1, # A3 3.3TB 512GB # rc, log: s6 and s5(s8)
 	],
 	's7' => [
-		'db2029' => 0,   # B6 2.9TB  96GB, master
-		'db2040' => 200, # C6 2.9TB 160GB, rc, log
-		'db2047' => 400, # C6 2.9TB 160GB,
-		'db2054' => 200, # D6 2.9TB 160GB, dump (inactive), vslow
-		'db2061' => 200, # D6 3.3TB 160GB, api
-		'db2068' => 300, # D6 3.3TB 160GB
-		'db2077' => 400, # C1 3.3TB 512GB
+		'db2029'      => 0,   # B6 2.9TB  96GB, master
+		'db2040'      => 200, # C6 2.9TB 160GB, rc, log
+		'db2047'      => 400, # C6 2.9TB 160GB,
+		'db2054'      => 200, # D6 2.9TB 160GB, dump (inactive), vslow
+		'db2061'      => 200, # D6 3.3TB 160GB, api
+		'db2068'      => 300, # D6 3.3TB 160GB
+		'db2077'      => 400, # C1 3.3TB 512GB
 		'db2086:3317' => 1, # B1 3.3TB 512GB # rc, log: s5 and s7
 		'db2087:3317' => 1, # C1 3.3TB 512GB # rc, log: s6 and s7
 	],
+	's8' => [
+		'db2045'      => 0,   # C6 2.9TB 160GB, master
+		'db2079'      => 10,  # A5 3.3TB 512GB, vslow, dump
+		'db2080'      => 10,  # C5 3.3TB 512GB, api
+		'db2081'      => 10,  # A6 3.3TB 512GB, api
+		'db2082'      => 100, # B6 3.3TB 512GB
+		'db2083'      => 100, # C6 3.3TB 512GB
+		'db2085:3315' => 1, # A5 3.3TB 512GB # rc, log: s3 and s8
+		'db2086:3315' => 1, # B1 3.3TB 512GB # rc, log: s7 and s8
+	],
+
 	'silver' => [
 		'silver' => 1,
 	],
@@ -253,6 +258,13 @@ $wgLBFactoryConf = [
 		'lagDetectionMethod' => 'pt-heartbeat',
 		'lagDetectionOptions' => [
 			'conds' => [ 'shard' => 's7', 'datacenter' => $wmfMasterDatacenter ]
+		],
+		'useGTIDs' => true
+	],
+	's8' => [
+		'lagDetectionMethod' => 'pt-heartbeat',
+		'lagDetectionOptions' => [
+			'conds' => [ 'shard' => 's8', 'datacenter' => $wmfMasterDatacenter ]
 		],
 		'useGTIDs' => true
 	],
@@ -419,38 +431,28 @@ $wgLBFactoryConf = [
 	],
 	's5' => [
 		'watchlist' => [
-			'db2038' => 1,
+			'db2038'      => 1,
 			'db2084:3315' => 1,
-			'db2085:3315' => 1,
-			'db2086:3315' => 1,
 			'db2089:3315' => 1,
 		],
 		'recentchanges' => [
-			'db2038' => 1,
+			'db2038'      => 1,
 			'db2084:3315' => 1,
-			'db2085:3315' => 1,
-			'db2086:3315' => 1,
 			'db2089:3315' => 1,
 		],
 		'recentchangeslinked' => [
-			'db2038' => 1,
+			'db2038'      => 1,
 			'db2084:3315' => 1,
-			'db2085:3315' => 1,
-			'db2086:3315' => 1,
 			'db2089:3315' => 1,
 		],
 		'contributions' => [
-			'db2038' => 1,
+			'db2038'      => 1,
 			'db2084:3315' => 1,
-			'db2085:3315' => 1,
-			'db2086:3315' => 1,
 			'db2089:3315' => 1,
 		],
 		'logpager' => [
-			'db2038' => 1,
+			'db2038'      => 1,
 			'db2084:3315' => 1,
-			'db2085:3315' => 1,
-			'db2086:3315' => 1,
 			'db2089:3315' => 1,
 		],
 		'dump' => [
@@ -533,6 +535,38 @@ $wgLBFactoryConf = [
 		],
 		'api' => [
 			'db2061' => 1,
+		],
+	],
+	's8' => [
+		'watchlist' => [
+			'db2085:3315' => 1,
+			'db2086:3315' => 1,
+		],
+		'recentchanges' => [
+			'db2085:3315' => 1,
+			'db2086:3315' => 1,
+		],
+		'recentchangeslinked' => [
+			'db2085:3315' => 1,
+			'db2086:3315' => 1,
+		],
+		'contributions' => [
+			'db2085:3315' => 1,
+			'db2086:3315' => 1,
+		],
+		'logpager' => [
+			'db2085:3315' => 1,
+			'db2086:3315' => 1,
+		],
+		'dump' => [
+			'db2079' => 1,
+		],
+		'vslow' => [
+			'db2079' => 1,
+		],
+		'api' => [
+			'db2080' => 1,
+			'db2081' => 1,
 		],
 	],
 ],
@@ -794,6 +828,7 @@ $wgLBFactoryConf = [
 	's5'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
 	's6'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
 	's7'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
+	's8'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
 ],
 
 ];
