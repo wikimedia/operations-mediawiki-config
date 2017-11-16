@@ -14704,6 +14704,7 @@ $wgConf->settings = [
 	'bnwiki' => true,			// Starting from SET
 	'bowiki' => true,			// Starting from SET
 	'bpywiki' => true,			// Starting from SET
+	'cawiki' => true,           // T180660
 	'chrwiki' => true,			// Starting from SET
 	'ckbwiki' => true,			// Starting from SET
 	'dvwiki' => true,			// Starting from SET
