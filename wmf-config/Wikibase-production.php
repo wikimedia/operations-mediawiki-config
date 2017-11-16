@@ -38,8 +38,9 @@ if ( $wmgUseWikibaseRepo ) {
 		];
 
 		$wgWBQualityConstraintsSparqlEndpoint = 'https://query.wikidata.org/sparql';
-		$wgWBQualityConstraintsPropertyConstraintId = 'P400';
+		$wgWBQualityConstraintsPropertyConstraintId = 'P51064';
 		$wgWBQualityConstraintsFormatConstraintId = 'Q100086';
+		$wgWBQualityConstraintsFormatAsARegularExpressionId = 'P51065';
 	} else {
 		$wgPropertySuggesterClassifyingPropertyIds = [ 31, 279 ]; // T169060
 		$wgPropertySuggesterInitialSuggestions = [ 31, 279 ];
