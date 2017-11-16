@@ -36,6 +36,10 @@ if ( $wmgUseWikibaseRepo ) {
 				'propertyIds' => [ 'P400' ],
 			],
 		];
+
+		$wgWBQualityConstraintsSparqlEndpoint = 'https://query.wikidata.org/sparql';
+		$wgWBQualityConstraintsPropertyConstraintId = 'P400';
+		$wgWBQualityConstraintsFormatConstraintId = 'Q100086';
 	} else {
 		$wgPropertySuggesterClassifyingPropertyIds = [ 31, 279 ]; // T169060
 		$wgPropertySuggesterInitialSuggestions = [ 31, 279 ];
