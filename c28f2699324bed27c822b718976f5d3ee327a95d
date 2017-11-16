@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2e5417b0_780cc53d",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2017-11-16T15:44:17Z",
+      "side": 1,
+      "message": "Not for codfw.",
+      "parentUuid": "2e5417b0_5d621b08",
+      "revId": "c28f2699324bed27c822b718976f5d3ee327a95d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e5417b0_3d595f5e",
         "filename": "wmf-config/db-codfw.php",
         "patchSetId": 3
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "2e5417b0_38164d4e",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2017-11-16T15:44:17Z",
+      "side": 1,
+      "message": "Ok.",
+      "parentUuid": "2e5417b0_3d595f5e",
+      "revId": "c28f2699324bed27c822b718976f5d3ee327a95d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e5417b0_dd34cbf9",
         "filename": "wmf-config/db-codfw.php",
         "patchSetId": 3
@@ -47,6 +83,24 @@
       "writtenOn": "2017-11-16T15:39:18Z",
       "side": 1,
       "message": "tab?",
+      "revId": "c28f2699324bed27c822b718976f5d3ee327a95d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e5417b0_b820fd97",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 454,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2017-11-16T15:44:17Z",
+      "side": 1,
+      "message": "Not really, unless you want to apply it to all.",
+      "parentUuid": "2e5417b0_dd34cbf9",
       "revId": "c28f2699324bed27c822b718976f5d3ee327a95d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
