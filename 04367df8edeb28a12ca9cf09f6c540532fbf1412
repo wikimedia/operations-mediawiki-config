@@ -16,6 +16,24 @@
       "revId": "04367df8edeb28a12ca9cf09f6c540532fbf1412",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e5417b0_a962f935",
+        "filename": "wmf-config/StartProfiler.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-11-16T05:01:16Z",
+      "side": 1,
+      "message": "Maybe, but that\u0027s for a later stage.\n\nFor now, I think the indirection helps keep it clean. If we were to have this file copied/hardcoded in the MW directories, whilst still loading profile.php from wmf-config, that would create a setup that\u0027s somewhat hard to maintain (and easy to break).",
+      "parentUuid": "4e578bb4_44c6ce4f",
+      "revId": "04367df8edeb28a12ca9cf09f6c540532fbf1412",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
