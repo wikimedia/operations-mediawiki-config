@@ -53,7 +53,6 @@ $wgLBFactoryConf = [
 
 	# s5: dewiki and wikidata
 	'dewiki'       => 's5',
-	'wikidatawiki' => 's5',
 
 	# s6: large wikis
 	'frwiki'       => 's6',
@@ -74,6 +73,9 @@ $wgLBFactoryConf = [
 	'fawiki'       => 's7',
 	'rowiki'       => 's7',
 	'kowiki'       => 's7',
+
+	# s8: wikidata
+	'wikidatawiki' => 's8',
 
 	# labs-related wikis
 	'labswiki'     => 'silver',
@@ -149,20 +151,12 @@ $wgLBFactoryConf = [
 	's5' => [
 		'db2023' => 0,   # B6 2.9TB  96GB, master
 		'db2038' => 50,  # C6 2.9TB 160GB, rc, log
-		'db2045' => 400, # C6 2.9TB 160GB
 		'db2052' => 50,  # D6 2.9TB 160GB, dump (inactive), vslow
 		'db2059' => 100, # D6 3.3TB 160GB, api
 		'db2066' => 400, # D6 3.3TB 160GB
 		'db2075' => 400, # A1 3.3TB 512GB # Compressed InnoDB
-		# 'db2079' => 400, # A5 3.3TB 512GB # Compressed InnoDB #T170662
-		# 'db2080' => 400, # C5 3.3TB 512GB # Compressed InnoDB #T170662
-		# 'db2081' => 400, # A6 3.3TB 512GB # Compressed InnoDB #T170662
-		# 'db2082' => 400, # B6 3.3TB 512GB # Compressed InnoDB #T170662
-		# 'db2083' => 400, # C6 3.3TB 512GB # Compressed InnoDB #T170662
 		'db2084:3315' => 1, # D6 3.3TB 512GB # rc, log: s4 and s5
-		'db2085:3315' => 1, # A5 3.3TB 512GB # rc, log: s3 and s5(s8)
 		'db2086:3315' => 1, # B1 3.3TB 512GB # rc, log: s5 and s7
-		'db2089:3315' => 1, # A3 3.3TB 512GB # rc, log: s6 and s5(s8)
 	],
 	's6' => [
 		'db2028' => 0,   # B6  2.9TB  96GB, master
@@ -186,6 +180,17 @@ $wgLBFactoryConf = [
 		'db2086:3317' => 1, # B1 3.3TB 512GB # rc, log: s5 and s7
 		'db2087:3317' => 1, # C1 3.3TB 512GB # rc, log: s6 and s7
 	],
+	's8' => [
+		'db2045' => 0,   # C6 2.9TB 160GB, master
+		'db2079' => 10,  # A5 3.3TB 512GB, vslow, dump
+		'db2080' => 10,  # C5 3.3TB 512GB, api
+		'db2081' => 10,  # A6 3.3TB 512GB, api
+		'db2082' => 100, # B6 3.3TB 512GB
+		'db2083' => 100, # C6 3.3TB 512GB
+		'db2085:3315' => 1, # A5 3.3TB 512GB # rc, log: s3 and s8
+		'db2089:3315' => 1, # A3 3.3TB 512GB # rc, log: s6 and s8
+	],
+
 	'silver' => [
 		'silver' => 1,
 	],
@@ -253,6 +258,13 @@ $wgLBFactoryConf = [
 		'lagDetectionMethod' => 'pt-heartbeat',
 		'lagDetectionOptions' => [
 			'conds' => [ 'shard' => 's7', 'datacenter' => $wmfMasterDatacenter ]
+		],
+		'useGTIDs' => true
+	],
+	's8' => [
+		'lagDetectionMethod' => 'pt-heartbeat',
+		'lagDetectionOptions' => [
+			'conds' => [ 'shard' => 's8', 'datacenter' => $wmfMasterDatacenter ]
 		],
 		'useGTIDs' => true
 	],
@@ -419,39 +431,29 @@ $wgLBFactoryConf = [
 	],
 	's5' => [
 		'watchlist' => [
-			'db2038' => 1,
+			'db2038'      => 1,
 			'db2084:3315' => 1,
-			'db2085:3315' => 1,
 			'db2086:3315' => 1,
-			'db2089:3315' => 1,
 		],
 		'recentchanges' => [
-			'db2038' => 1,
+			'db2038'      => 1,
 			'db2084:3315' => 1,
-			'db2085:3315' => 1,
 			'db2086:3315' => 1,
-			'db2089:3315' => 1,
 		],
 		'recentchangeslinked' => [
-			'db2038' => 1,
+			'db2038'      => 1,
 			'db2084:3315' => 1,
-			'db2085:3315' => 1,
 			'db2086:3315' => 1,
-			'db2089:3315' => 1,
 		],
 		'contributions' => [
-			'db2038' => 1,
+			'db2038'      => 1,
 			'db2084:3315' => 1,
-			'db2085:3315' => 1,
 			'db2086:3315' => 1,
-			'db2089:3315' => 1,
 		],
 		'logpager' => [
-			'db2038' => 1,
+			'db2038'      => 1,
 			'db2084:3315' => 1,
-			'db2085:3315' => 1,
 			'db2086:3315' => 1,
-			'db2089:3315' => 1,
 		],
 		'dump' => [
 			'db2052' => 1,
@@ -533,6 +535,38 @@ $wgLBFactoryConf = [
 		],
 		'api' => [
 			'db2061' => 1,
+		],
+	],
+	's8' => [
+		'watchlist' => [
+			'db2085:3315' => 1,
+			'db2089:3315' => 1,
+		],
+		'recentchanges' => [
+			'db2085:3315' => 1,
+			'db2089:3315' => 1,
+		],
+		'recentchangeslinked' => [
+			'db2085:3315' => 1,
+			'db2089:3315' => 1,
+		],
+		'contributions' => [
+			'db2085:3315' => 1,
+			'db2089:3315' => 1,
+		],
+		'logpager' => [
+			'db2085:3315' => 1,
+			'db2089:3315' => 1,
+		],
+		'dump' => [
+			'db2079' => 1,
+		],
+		'vslow' => [
+			'db2079' => 1,
+		],
+		'api' => [
+			'db2080' => 1,
+			'db2081' => 1,
 		],
 	],
 ],
