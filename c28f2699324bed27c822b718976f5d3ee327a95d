@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e5417b0_5d621b08",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2017-11-16T15:39:18Z",
+      "side": 1,
+      "message": "do we want to start with testwikidatawiki maybe?",
+      "revId": "c28f2699324bed27c822b718976f5d3ee327a95d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e5417b0_3d595f5e",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2017-11-16T15:39:18Z",
+      "side": 1,
+      "message": "I would take db2084, so we can have DC row redundancy",
+      "revId": "c28f2699324bed27c822b718976f5d3ee327a95d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e5417b0_dd34cbf9",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 454,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2017-11-16T15:39:18Z",
+      "side": 1,
+      "message": "tab?",
+      "revId": "c28f2699324bed27c822b718976f5d3ee327a95d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
