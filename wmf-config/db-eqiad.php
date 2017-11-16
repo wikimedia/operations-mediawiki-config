@@ -144,9 +144,9 @@ $wgLBFactoryConf = [
 	],
 	's5' => [
 		# 'db1063' => 0,   # C5 2.8TB 128GB, master, down
-		'db1070' => 0,   # D1 2.8TB 160GB, vslow, dump #ROW based replication - master for db1095
+		'db1070' => 0,   # D1 2.8TB 160GB, master
 		# 'db1071' => 1,   # D1 2.8TB 160GB, future s8 master
-		'db1082' => 300, # A2 3.6TB 512GB, api
+		'db1082' => 300, # A2 3.6TB 512GB, api, recentchanges, slow
 		'db1087' => 500, # C2 3.6TB 512GB
 		# 'db1092' => 500, # D2 3.6TB 512GB #T174569
 		# 'db1096' => 1,   # A6 3.6TB 512GB, watchlist, recentchanges, contributions, logpager #T174569
@@ -382,34 +382,28 @@ $wgLBFactoryConf = [
 	],
 	's5' => [
 		'vslow' => [
-			'db1070' => 1,
+			'db1082' => 1,
 		],
 		'dump' => [
-			'db1070' => 1,
+			'db1082' => 1,
 		],
 		'api' => [
-			'db1082' => 5,
-			'db1104' => 1,
+			'db1082' => 1,
 		],
 		'watchlist' => [
-			# 'db1096' => 1,
-			'db1099' => 1,
+			'db1082' => 1,
 		],
 		'recentchanges' => [
-			# 'db1096' => 1,
-			'db1099' => 1,
+			'db1082' => 1,
 		],
 		'recentchangeslinked' => [
-			# 'db1096' => 1,
-			'db1099' => 1,
+			'db1082' => 1,
 		],
 		'contributions' => [
-			# 'db1096' => 1,
-			'db1099' => 1,
+			'db1082' => 1,
 		],
 		'logpager' => [
-			# 'db1096' => 1,
-			'db1099' => 1,
+			'db1082' => 1,
 		],
 	],
 	's6' => [
