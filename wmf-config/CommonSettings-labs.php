@@ -60,6 +60,9 @@ $wgDnsBlacklistUrls   = [
 	'proxies.dnsbl.sorbs.net.',
 ];
 
+# Test comment table schema before deploying it to production
+$wgCommentTableSchemaMigrationStage = MIGRATION_WRITE_BOTH;
+
 if ( $wmgUseFlow ) {
 	// Override CommonSettings.php, which has:
 	// $wgFlowExternalStore = $wgDefaultExternalStore;
