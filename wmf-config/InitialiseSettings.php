@@ -10656,7 +10656,16 @@ $wgConf->settings = [
 			'accountcreator', // T144689
 		],
 		'checkuser' => [ 'ipblock-exempt' ],
-		'sysop' => [ 'rollbacker', 'confirmed', 'patroller', 'autopatrolled', 'filemover', 'Image-reviewer', 'upwizcampeditors' ],
+		'sysop' => [
+			'rollbacker',
+			'confirmed',
+			'patroller',
+			'autopatrolled',
+			'filemover',
+			'Image-reviewer',
+			'mp3-uploader', // T180002
+			'upwizcampeditors'
+		],
 	],
 	'+cswiki' => [
 		'bureaucrat' => [ 'arbcom', 'autopatrolled' ], // T63418
