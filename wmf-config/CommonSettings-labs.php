@@ -21,15 +21,15 @@ if ( $wmfRealm == 'labs' ) {  # safe guard
 // test wiki
 if ( $wgDBname == 'testwiki' ) {
 	$wgDebugToolbar = true;
-	$wgProfiler['class'] = 'ProfilerXhprof';
-	$wgProfiler['output'] = [ 'text' ];
+	$wgProfiler = [
+		'class' => 'ProfilerXhprof',
+		'output' => 'text',
+	];
 }
 
 if ( file_exists( '/etc/wmflabs-instancename' ) ) {
 	$wgOverrideHostname = trim( file_get_contents( '/etc/wmflabs-instancename' ) );
 }
-
-$wgProfiler['udphost'] = 'labmon1001.eqiad.wmnet';
 
 $wgDebugTimestamps = true;
 
