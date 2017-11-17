@@ -695,5 +695,9 @@ function wmfLabsSettings() {
 		'-wmgCirrusSearchMLRModel' => [
 			'default' => '20171023_enwiki_v1'
 		],
+
+		'wgCommentTableSchemaMigrationStage' => [
+			'default' => MIGRATION_WRITE_BOTH,
+		],
 	];
 } # wmflLabsSettings()

@@ -19749,6 +19749,10 @@ $wgConf->settings = [
 	'group0' => true,
 ],
 
+'wgCommentTableSchemaMigrationStage' => [
+	'default' => MIGRATION_OLD,
+],
+
 ];
 
 ### WMF Labs override #####
