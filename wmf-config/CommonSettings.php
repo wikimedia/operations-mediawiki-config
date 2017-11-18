@@ -2197,7 +2197,11 @@ if ( $wmgUseGWToolset ) {
 		$wgJobTypeConf['gwtoolsetUploadMetadataJob'] = [ 'checkDelay' => true ] + $wgJobTypeConf['default'];
 	}
 	// extra throttling until the image scalers are more robust
-	GWToolset\Config::$mediafile_job_throttle_default = 5; // 5 files per batch
+	if ( class_exists( 'GWToolset\Config' ) ) {
+		GWToolset\Config::$mediafile_job_throttle_default = 5; // 5 files per batch
+	} else {
+		$wgGWToolsetConfigOverrides['mediafile_job_throttle_default'] = 5;
+	}
 	$wgJobBackoffThrottling['gwtoolsetUploadMetadataJob'] = 5 / 3600; // 5 batches per hour
 }
 
