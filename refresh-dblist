@@ -39,7 +39,7 @@ $defaultCluster = 's3';
 $clusterOverrides = loadClusterList( getRealmSpecificFilename( MEDIAWIKI_STAGING_DIR . '/wmf-config/db.php' ) );
 $clusterAssignments = [];
 
-$dbList = $wmfRealm === 'labs' ? 'all-labs' : 'all';
+$dbList = $wmgRealm === 'labs' ? 'all-labs' : 'all';
 $all = MWWikiversions::readDbListFile( $dbList );
 listOut( 'all', $all, false );
 printf( "%d wikis listed in " . basename(getRealmSpecificFilename( MEDIAWIKI_DBLIST_DIR . "/all.dblist" ) ) . "...\n", count( $all ) );
