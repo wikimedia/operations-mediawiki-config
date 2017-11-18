@@ -48,10 +48,10 @@ $wgCirrusSearchConnectionAttempts = 3;
 
 $wgCirrusSearchBackup['backups'] = [
 	'type' => 'swift',
-	'swift_url' => $wmfSwiftEqiadConfig['cirrusAuthUrl'],
+	'swift_url' => $wmgSwiftEqiadConfig['cirrusAuthUrl'],
 	'swift_container' => 'global-data-elastic-backups',
-	'swift_username' => $wmfSwiftEqiadConfig['cirrusUser'],
-	'swift_password' => $wmfSwiftEqiadConfig['cirrusKey'],
+	'swift_username' => $wmgSwiftEqiadConfig['cirrusUser'],
+	'swift_password' => $wmgSwiftEqiadConfig['cirrusKey'],
 	'max_snapshot_bytes_per_sec' => '10mb',
 	'compress' => false,
 	'chunk_size' => '1g',
@@ -81,8 +81,8 @@ if ( ! isset( $wmgCirrusSearchReplicas['eqiad'] ) ) {
 
 // 5 second timeout for local cluster, 10 seconds for remote.
 $wgCirrusSearchClientSideConnectTimeout = [
-	'eqiad' => $wmfDatacenter === 'eqiad' ? 5 : 10,
-	'codfw' => $wmfDatacenter === 'codfw' ? 5 : 10,
+	'eqiad' => $wmgDatacenter === 'eqiad' ? 5 : 10,
+	'codfw' => $wmgDatacenter === 'codfw' ? 5 : 10,
 ];
 
 $wgCirrusSearchDropDelayedJobsAfter = [
