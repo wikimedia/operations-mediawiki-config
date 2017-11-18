@@ -66,11 +66,11 @@ class loggingTests extends WgConfTestCase {
 		$wgDebugLogFile = false;
 		$wmgMonologAvroSchemas = [];
 		$wmgLogAuthmanagerMetrics = false;
-		$wmfUdp2logDest = 'localhost';
+		$wmgUdp2logDest = 'localhost';
 		$wmgLogstashServers = [ 'localhost' ];
 		$wmgKafkaServers = [ 'localhost' ];
 		$wmgMonologChannels = [ 'test' => $channelConfig ];
-		$wmfRealm = 'production';
+		$wmgRealm = 'production';
 
 		include __DIR__ . '/../wmf-config/logging.php';
 
