@@ -291,14 +291,14 @@ class MWMultiVersion {
 	 * The first item is the MW version
 	 */
 	private function loadVersionInfo() {
-		global $wmfRealm;
+		global $wmgRealm;
 
 		if ( $this->versionLoaded ) {
 			return;
 		}
 		$this->versionLoaded = true;
 
-		if ( $wmfRealm === 'labs' ) {
+		if ( $wmgRealm === 'labs' ) {
 			$phpFilename = MEDIAWIKI_DEPLOYMENT_DIR . '/wikiversions-labs.php';
 		} else {
 			$phpFilename = MEDIAWIKI_DEPLOYMENT_DIR . '/wikiversions.php';
