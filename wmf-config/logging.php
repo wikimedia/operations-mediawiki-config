@@ -17,8 +17,8 @@
  *   Defaults: [ 'udp2log'=>'debug', 'logstash'=>'info', 'kafka'=>false, 'sample'=>false ]
  *   Valid levels: 'debug', 'info', 'warning', 'error', false
  *   Note: sampled logs will not be sent to Logstash
- *   Note: Udp2log events are sent to udp://{$wmfUdp2logDest}/{$channel}
- * - $wmfUdp2logDest : udp2log host:port
+ *   Note: Udp2log events are sent to udp://{$wmgUdp2logDest}/{$channel}
+ * - $wmgUdp2logDest : udp2log host:port
  * - $wmgLogAuthmanagerMetrics : Controls additional authmanager logging
  */
 
@@ -36,7 +36,7 @@ if ( getenv( 'MW_DEBUG_LOCAL' ) ) {
 ) {
 	// Forward all log messages to logstash for debugging.
 	// See <https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug>.
-	$wgDebugLogFile = "udp://{$wmfUdp2logDest}/XWikimediaDebug";
+	$wgDebugLogFile = "udp://{$wmgUdp2logDest}/XWikimediaDebug";
 	$wmgDefaultMonologHandler = [ 'wgDebugLogFile' ];
 	if ( $wmgLogstashServers ) {
 		$wmgDefaultMonologHandler[] = 'logstash-debug';
@@ -230,7 +230,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 			$wmgMonologConfig['handlers'][$udp2logHandler] = [
 				'class' => '\\MediaWiki\\Logger\\Monolog\\LegacyHandler',
 				'args' => [
-					"udp://{$wmfUdp2logDest}/{channel}", false, $opts['udp2log']
+					"udp://{$wmgUdp2logDest}/{channel}", false, $opts['udp2log']
 				],
 				'formatter' => 'line',
 			];
