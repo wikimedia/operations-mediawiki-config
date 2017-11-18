@@ -29,7 +29,7 @@ if ( $zeroRated ) {
 	$extratext = ContentHandler::getContentText( $page->getContent() ) ?: '';
 	// Take last modified timestamp of page into account
 	$mtime = max( $mtime, wfTimestamp( TS_UNIX, $page->getTouched() ) );
-} elseif ( $wmfRealm == 'labs' ) {
+} elseif ( $wmgRealm == 'labs' ) {
 	echo $dontIndex;
 }
 
