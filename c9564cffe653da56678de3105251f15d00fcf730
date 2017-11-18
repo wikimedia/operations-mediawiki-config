@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e5417b0_2906f7d1",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2191,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2017-11-18T19:34:07Z",
+      "side": 1,
+      "message": "This can go away",
+      "range": {
+        "startLine": 2191,
+        "startChar": 1,
+        "endLine": 2191,
+        "endChar": 27
+      },
+      "revId": "c9564cffe653da56678de3105251f15d00fcf730",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
