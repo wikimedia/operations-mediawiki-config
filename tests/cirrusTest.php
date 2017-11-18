@@ -5,7 +5,7 @@ require_once __DIR__ . '/SiteConfiguration.php';
 
 class cirrusTests extends WgConfTestCase {
 	public function testClusterConfigurationForProdTestwiki() {
-		$wmfDatacenter = 'unittest';
+		$wmgDatacenter = 'unittest';
 		$config = $this->loadCirrusConfig( 'production', 'testwiki', 'wiki' );
 		$this->assertArrayNotHasKey( 'wgCirrusSearchServers', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchClusters', $config );
@@ -74,11 +74,11 @@ class cirrusTests extends WgConfTestCase {
 		$this->assertArrayNotHasKey( 'wgCirrusSearchWikiToNameMap', $config );
 	}
 
-	private function loadCirrusConfig( $wmfRealm, $wgDBname, $dbSuffix ) {
-		$wmfConfigDir = __DIR__ . "/../wmf-config";
+	private function loadCirrusConfig( $wmgRealm, $wgDBname, $dbSuffix ) {
+		$wmgConfigDir = __DIR__ . "/../wmf-config";
 		require __DIR__ . '/../private/PrivateSettings.php.example';
 		require __DIR__ . '/TestServices.php';
-		$wgConf = $this->loadWgConf( $wmfRealm );
+		$wgConf = $this->loadWgConf( $wmgRealm );
 
 		list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 		$wikiTags = [];
@@ -117,12 +117,12 @@ class cirrusTests extends WgConfTestCase {
 		$wgJobTypeConf = [ 'default' => [] ];
 		$wgCirrusSearchWeights = [];
 		$wgCirrusSearchNamespaceWeights = [];
-		$wmfDatacenter = 'unittest';
+		$wmgDatacenter = 'unittest';
 		$wgCirrusSearchPoolCounterKey = 'unittest:poolcounter:blahblahblah';
 		// not used for anything, just to prevent undefined variable
 		$IP = '/dev/null';
 
-		require "{$wmfConfigDir}/CirrusSearch-common.php";
+		require "{$wmgConfigDir}/CirrusSearch-common.php";
 
 		$ret = compact( array_keys( get_defined_vars() ) );
 		return $ret;
