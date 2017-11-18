@@ -83,6 +83,7 @@ return array(
     'Twig\\Extension\\InitRuntimeInterface' => $vendorDir . '/twig/twig/src/Extension/InitRuntimeInterface.php',
     'Twig\\Extension\\OptimizerExtension' => $vendorDir . '/twig/twig/src/Extension/OptimizerExtension.php',
     'Twig\\Extension\\ProfilerExtension' => $vendorDir . '/twig/twig/src/Extension/ProfilerExtension.php',
+    'Twig\\Extension\\RuntimeExtensionInterface' => $vendorDir . '/twig/twig/src/Extension/RuntimeExtensionInterface.php',
     'Twig\\Extension\\SandboxExtension' => $vendorDir . '/twig/twig/src/Extension/SandboxExtension.php',
     'Twig\\Extension\\StagingExtension' => $vendorDir . '/twig/twig/src/Extension/StagingExtension.php',
     'Twig\\Extension\\StringLoaderExtension' => $vendorDir . '/twig/twig/src/Extension/StringLoaderExtension.php',
