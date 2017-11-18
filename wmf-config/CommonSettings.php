@@ -2186,18 +2186,15 @@ if ( $wmgUseCommonsMetadata ) {
 }
 
 if ( $wmgUseGWToolset ) {
-	require_once "$IP/extensions/GWToolset/GWToolset.php";
+	wfLoadExtension( 'GWToolset' );
 	$wgGWTFileBackend = 'local-multiwrite';
 	$wgGWTFBMaxAge = '1 week';
 	if ( $wmgUseClusterJobqueue ) {
 		$wgJobTypeConf['gwtoolsetUploadMetadataJob'] = [ 'checkDelay' => true ] + $wgJobTypeConf['default'];
 	}
+
 	// extra throttling until the image scalers are more robust
-	if ( class_exists( 'GWToolset\Config' ) ) {
-		GWToolset\Config::$mediafile_job_throttle_default = 5; // 5 files per batch
-	} else {
-		$wgGWToolsetConfigOverrides['mediafile_job_throttle_default'] = 5;
-	}
+	$wgGWToolsetConfigOverrides['mediafile_job_throttle_default'] = 5; // 5 files per batch
 	$wgJobBackoffThrottling['gwtoolsetUploadMetadataJob'] = 5 / 3600; // 5 batches per hour
 }
 
