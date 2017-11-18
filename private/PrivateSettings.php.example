@@ -17,12 +17,12 @@ $wmgVERPsecret = '*';
 $wmgZeroPortalApiUserName = 'example';
 $wmgZeroPortalApiPassword = '*';
 
-$wmfSwiftEqiadConfig = $wmfSwiftCodfwConfig = [
+$wmgSwiftEqiadConfig = $wmgSwiftCodfwConfig = [
 	'cirrusAuthUrl' => '',
 	'cirrusUser' => '',
 	'cirrusKey' => '',
 ];
-$wmfSwiftConfig = [
-	'eqiad' => $wmfSwiftEqiadConfig,
-	'codfw' => $wmfSwiftCodfwConfig,
+$wmgSwiftConfig = [
+	'eqiad' => $wmgSwiftEqiadConfig,
+	'codfw' => $wmgSwiftCodfwConfig,
 ];
