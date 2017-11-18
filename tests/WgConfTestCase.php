@@ -86,22 +86,22 @@ class WgConfTestCase extends PHPUnit_Framework_TestCase {
 	 *
 	 *     $wgLogoHD = $this->loadWgConf( 'production' )->settings['wgLogoHD'];
 	 *
-	 * @param string $wmfRealm Realm to use for example: 'labs' or 'production'
+	 * @param string $wmgRealm Realm to use for example: 'labs' or 'production'
 	 * @return SiteConfiguration
 	 */
-	final protected function loadWgConf( $wmfRealm ) {
+	final protected function loadWgConf( $wmgRealm ) {
 		// Variables required for wgConf.php
-		$wmfConfigDir = __DIR__ . "/../wmf-config";
+		$wmgConfigDir = __DIR__ . "/../wmf-config";
 
-		require "{$wmfConfigDir}/wgConf.php";
+		require "{$wmgConfigDir}/wgConf.php";
 
 		// InitialiseSettings.php explicitly declares these as global, so we must too
 		$this->setGlobals( [
 			'wmfUdp2logDest' => 'localhost',
 			'wmfDatacenter' => 'unittest',
 			'wmfMasterDatacenter' => 'unittest',
-			'wmfRealm' => $wmfRealm,
-			'wmfConfigDir' => $wmfConfigDir,
+			'wmfRealm' => $wmgRealm,
+			'wmfConfigDir' => $wmgConfigDir,
 			'wgConf' => $wgConf,
 		] );
 
@@ -113,7 +113,7 @@ class WgConfTestCase extends PHPUnit_Framework_TestCase {
 		] );
 		require __DIR__ . '/TestServices.php';
 
-		require "{$wmfConfigDir}/InitialiseSettings.php";
+		require "{$wmgConfigDir}/InitialiseSettings.php";
 
 		$ret = $wgConf;
 		// Make sure globals are restored, else they will be serialized on each
