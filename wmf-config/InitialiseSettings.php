@@ -9767,7 +9767,7 @@ $wgConf->settings = [
 	// Default should include any privileged group that's on more than a few wikis
 	'default' => [ 'botadmin', 'bureaucrat', 'checkuser', 'eliminator', 'interface-editor', 'sysop', 'oversight' ],
 	'+enwiki' => [ 'abusefilter' ],
-	'+fawiki' => [ 'templateeditor' ],
+	'+fawiki' => [ 'templateeditor', 'rollbacker', 'extendedconfirmed' ],
 	'+fishbowl' => [ 'user' ],
 	'+incubatorwiki' => [ 'translator' ],
 	'+metawiki' => [ 'centralnoticeadmin', 'global-renamer', 'wmf-officeit', 'wmf-supportsafety' ],
