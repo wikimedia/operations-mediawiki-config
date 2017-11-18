@@ -74,6 +74,6 @@ if ( $wmgMobileFrontend ) {
 	$wgMFStripResponsiveImages = true;
 }
 
-if ( $wmfRealm === 'labs' ) {
+if ( $wmgRealm === 'labs' ) {
 	require_once __DIR__ . '/mobile-labs.php';
 }
