@@ -26,7 +26,7 @@ $wgCirrusSearchElasticQuirks = [];
 # Set up the the default cluster to send queries to,
 # and the list of clusters to write to.
 if ( $wmgCirrusSearchDefaultCluster === 'local' ) {
-	$wgCirrusSearchDefaultCluster = $wmfDatacenter;
+	$wgCirrusSearchDefaultCluster = $wmgDatacenter;
 } else {
 	$wgCirrusSearchDefaultCluster = $wmgCirrusSearchDefaultCluster;
 }
@@ -185,7 +185,7 @@ $wgCirrusSearchCompletionDefaultScore = 'popqual';
 // is pointed at a remote datacenter. Currently this makes the assumption that it will either
 // be eqiad or codfw which have ~40ms latency between them. Multiples are chosen using
 // (p75 + cross dc latency)/p75
-if ( $wgCirrusSearchDefaultCluster !== $wmfDatacenter ) {
+if ( $wgCirrusSearchDefaultCluster !== $wmgDatacenter ) {
 	// prefix has p75 of ~30ms
 	if ( isset( $wgPoolCounterConf[ 'CirrusSearch-Prefix' ] ) ) {
 		$wgPoolCounterConf['CirrusSearch-Prefix']['workers'] *= 2;
@@ -306,4 +306,4 @@ $wgCirrusSearchUserTesting = $wmgCirrusSearchUserTesting;
 # - CirrusSearch-labs.php
 # - CirrusSearch-production.php
 #
-require "{$wmfConfigDir}/CirrusSearch-{$wmfRealm}.php";
+require "{$wmgConfigDir}/CirrusSearch-{$wmgRealm}.php";
