@@ -26,7 +26,7 @@
  * @return array
  */
 function wmfLabsOverrideSettings() {
-	global $wmfConfigDir, $wgConf;
+	global $wmgConfigDir, $wgConf;
 
 	// Override (or add) settings that we need within the labs environment,
 	// but not in production.
@@ -73,7 +73,7 @@ function wmfLabsOverrideSettings() {
  * @return array
  */
 function wmfLabsSettings() {
-	global $wmfUdp2logDest;
+	global $wmgUdp2logDest;
 
 	return [
 
@@ -152,7 +152,7 @@ function wmfLabsSettings() {
 		],
 
 		'-wgDebugLogFile' => [
-			'default' => "udp://{$wmfUdp2logDest}/wfDebug",
+			'default' => "udp://{$wmgUdp2logDest}/wfDebug",
 		],
 
 		'-wmgDefaultMonologHandler' => [

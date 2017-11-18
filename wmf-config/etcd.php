@@ -3,11 +3,11 @@
 #
 # Included very early by CommonSettings.php
 # Only two sets of globals available here:
-# - $wmfRealm, $wmfDatacenter (from multiversion/MWRealm)
+# - $wmgRealm, $wmgDatacenter (from multiversion/MWRealm)
 # - $wmfLocalServices (from wmf-config/*Services.php)
 
 function wmfSetupEtcd() {
-	global $wmfRealm, $wmfDatacenter, $wmfLocalServices, $wgReadOnly, $wmfMasterDatacenter;
+	global $wmgRealm, $wmgDatacenter, $wmfLocalServices, $wgReadOnly, $wmfMasterDatacenter;
 
 	# Create a local cache
 	if ( PHP_SAPI === 'cli' ) {
@@ -25,7 +25,7 @@ function wmfSetupEtcd() {
 	] );
 
 	# Read only mode
-	$wgReadOnly = $etcdConfig->get( "$wmfDatacenter/ReadOnly" );
+	$wgReadOnly = $etcdConfig->get( "$wmgDatacenter/ReadOnly" );
 
 	# Master datacenter
 	# The datacenter from which we serve traffic.
