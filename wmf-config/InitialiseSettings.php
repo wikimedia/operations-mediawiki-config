@@ -13200,6 +13200,7 @@ $wgConf->settings = [
 		'*.eyefilm.nl',                     // EYE Film Institute Netherlands - T73883
 		'digitaltmuseum.no',                // Digitalt Museum - T73195
 		'*.dimu.no',                        // Digitalt Museum - T73195
+		'*.dimu.org',                       // Digitalt Museum - T180791
 		'*.byarkivet.oslo.kommune.no',      // Byarkivet - Oslo kommune - T73195
 		'*.nb.no',                          // Nasjonalbiblioteket - T73195
 		'*.kartverket.no',                  // Kartverket - T73195
