@@ -1,15 +1,15 @@
 <?php
 require_once __DIR__ . '/MWWikiversions.php';
 
-global $wmfCluster, $wmfDatacenter, $wmfRealm;
+global $wmfCluster, $wmgDatacenter, $wmgRealm;
 
 $wmfCluster = trim( file_get_contents( '/etc/wikimedia-cluster' ) );
 if ( $wmfCluster === 'labs' ) {
-	$wmfRealm = 'labs';
-	$wmfDatacenter = 'eqiad';
+	$wmgRealm = 'labs';
+	$wmgDatacenter = 'eqiad';
 } else {
-	$wmfRealm = 'production';
-	$wmfDatacenter = $wmfCluster;
+	$wmgRealm = 'production';
+	$wmgDatacenter = $wmfCluster;
 }
 
 /**
@@ -29,7 +29,7 @@ if ( $wmfCluster === 'labs' ) {
  * @return string Full path to file to be used
  */
 function getRealmSpecificFilename( $filename ) {
-	global $wmfRealm, $wmfDatacenter;
+	global $wmgRealm, $wmgDatacenter;
 
 	$pathinfo = pathinfo( $filename );
 	$ext = '';
@@ -47,18 +47,18 @@ function getRealmSpecificFilename( $filename ) {
 	//
 	// Please update /README whenever changing code below.
 
-	$new_filename = "{$base}-{$wmfRealm}-{$wmfDatacenter}{$ext}";
+	$new_filename = "{$base}-{$wmgRealm}-{$wmgDatacenter}{$ext}";
 	if ( file_exists( $new_filename ) ) {
 		return $new_filename;
 	}
 
 	# realm take precedence over datacenter.
-	$new_filename = "{$base}-{$wmfRealm}{$ext}";
+	$new_filename = "{$base}-{$wmgRealm}{$ext}";
 	if ( file_exists( $new_filename ) ) {
 		return $new_filename;
 	}
 
-	$new_filename = "{$base}-{$wmfDatacenter}{$ext}";
+	$new_filename = "{$base}-{$wmgDatacenter}{$ext}";
 	if ( file_exists( $new_filename ) ) {
 		return $new_filename;
 	}

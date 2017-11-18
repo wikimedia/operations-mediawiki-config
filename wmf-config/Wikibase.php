@@ -2,7 +2,7 @@
 
 // Load old build config T176948
 // TODO move that config into this file at some point...
-require_once "{$wmfConfigDir}/Wikibase-buildentry.php";
+require_once "{$wmgConfigDir}/Wikibase-buildentry.php";
 
 // This allows cache invalidations to be in sync with deploys
 // and not shared across different versions of wikibase.
@@ -103,10 +103,10 @@ if ( $wmgUseWikibaseRepo ) {
 		// Exclude closed wikis
 		$wgWBRepoSettings['clientDbList'] = array_diff(
 			$wgWBRepoSettings['clientDbList'],
-			MWWikiversions::readDbListFile( $wmfRealm === 'labs' ? 'closed-labs' : 'closed' )
+			MWWikiversions::readDbListFile( $wmgRealm === 'labs' ? 'closed-labs' : 'closed' )
 		);
 		// Exclude non-existent wikis in labs
-		if ( $wmfRealm === 'labs' ) {
+		if ( $wmgRealm === 'labs' ) {
 			$wgWBRepoSettings['clientDbList'] = array_intersect(
 				$wgWBRepoSettings['clientDbList'],
 				MWWikiversions::readDbListFile( 'all-labs' )
@@ -268,4 +268,4 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
 }
 
-require_once "{$wmfConfigDir}/Wikibase-{$wmfRealm}.php";
+require_once "{$wmgConfigDir}/Wikibase-{$wmgRealm}.php";

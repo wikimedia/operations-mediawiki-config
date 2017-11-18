@@ -17,7 +17,7 @@
 #  `-- wmf-config/CommonSettings-labs.php
 #
 
-if ( $wmfRealm == 'labs' ) {  # safe guard
+if ( $wmgRealm == 'labs' ) {  # safe guard
 // Profiler (similar to wmf-config/profiler.php for production)
 // 1. Web request for https://test.wikimedia.beta.wmflabs.org/
 // 2. Web request with X-Wikimedia-Debug and ?forceprofile=1
@@ -211,8 +211,8 @@ if ( $wmgUseCORS ) {
 // Temporary override to test T68699 on Beta Cluster.  Remove when in production.
 $wgExtendedLoginCookieExpiration = 365 * 86400;
 
-if ( file_exists( "$wmfConfigDir/extension-list-labs" ) ) {
-	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-labs";
+if ( file_exists( "$wmgConfigDir/extension-list-labs" ) ) {
+	$wgExtensionEntryPointListFiles[] = "$wmgConfigDir/extension-list-labs";
 }
 
 if ( $wmgUseCollection ) {
@@ -370,7 +370,7 @@ if ( $wgDBname == 'commonswiki' ) {
 
 // Test of new import source configuration on labs cluster
 $wgImportSources = false;
-include "$wmfConfigDir/import.php";
+include "$wmgConfigDir/import.php";
 $wgHooks['ImportSources'][] = 'wmfImportSources';
 
 // Reenable Preview and Changes tabs for wikieditor preview
