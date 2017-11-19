@@ -151,7 +151,7 @@ $wgLBFactoryConf = [
 		'db1092' => 500, # D2 3.6TB 512GB
 		'db1096' => 1,   # A6 3.6TB 512GB, watchlist, recentchanges, contributions, logpager #T174569
 		'db1099' => 1,   # B2 3.6TB 512GB, watchlist, recentchanges, contributions, logpager
-		'db1100' => 1,   # C2 3.6TB 512GB, old master, vslow
+		'db1100' => 0,   # C2 3.6TB 512GB, old master, vslow
 		'db1104' => 300,  # B3 3.6TB 512GB, api
 		'db1106' => 500,  # D3 3.6TB 512GB
 	],
