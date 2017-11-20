@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e5417b0_d419f328",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 19
+      },
+      "lineNbr": 11270,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2017-11-20T17:24:39Z",
+      "side": 1,
+      "message": "Now you\u0027re adding bad spaces here...",
+      "revId": "65113b5f124348c207ccf3f5a71caef4c01e145d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
