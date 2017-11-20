@@ -152,11 +152,6 @@ if ( $wmgUseWikibaseRepo ) {
 		];
 	}
 
-	$wgWBQualityConstraintsEnableConstraintsImportFromStatements = true;
-	$wgWBQualityConstraintsNewApiOutputFormat = true;
-	$wgWBQualityConstraintsCheckQualifiers = true;
-	$wgWBQualityConstraintsCheckReferences = true;
-
 	$wgWBRepoSettings['writeFullEntityIdColumn'] = true;
 
 	// T112606
