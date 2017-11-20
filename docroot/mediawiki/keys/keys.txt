@@ -1,3 +1,11 @@
+Tim Starling <tstarling@wikimedia.org>
+D7D6767D135A514BEB86E9BA75682B08E8A3FEC4
+Brion Vibber <brion@pobox.com>
+441276E9CCD15F44F6D97D18C119E1A64D70938E
+Tim Starling <tstarling@wikimedia.org>
+F7F780D82EBFB8A56556E7EE82403E59F9F8CD79
+Sam Reed <reedy@wikimedia.org>
+1D98867E82982C8FE0ABC25F9B69B3109D3BB7B0
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v1.4.11 (GNU/Linux)
 
@@ -123,6 +131,8 @@ AKCuSkj6F2+R4WtCozxxpO3/riMqlQ==
 =UPzx
 -----END PGP PUBLIC KEY BLOCK-----
 
+Brion Vibber <brion@pobox.com>
+441276E9CCD15F44F6D97D18C119E1A64D70938E
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v1.4.6 (GNU/Linux)
 
@@ -162,6 +172,8 @@ C8I=
 =T2xL
 -----END PGP PUBLIC KEY BLOCK-----
 
+Sam Reed <reedy@wikimedia.org>
+1D98867E82982C8FE0ABC25F9B69B3109D3BB7B0
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v1.4.6 (GNU/Linux)
 
@@ -193,6 +205,8 @@ KpU=
 =kbNd
 -----END PGP PUBLIC KEY BLOCK-----
 
+Chris Steipp <csteipp@wikimedia.org>
+162432D9E81C1C618B301EECEE1F663462D84F01
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v1.4.11 (GNU/Linux)
 
@@ -233,6 +247,8 @@ AP9OjS3X3+nbU/uHe6k4CyS7QtWp0yUN9UVS14Kkg01iCg==
 =XRoj
 -----END PGP PUBLIC KEY BLOCK-----
 
+Mark A. Hershberger <mah@everybody.org>
+3CEF8262806D3F0B6BA1DBDD7956EE477F901A30
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v1.4.12 (GNU/Linux)
 
@@ -270,6 +286,8 @@ uMiCZfq2natpCwPD2qAWQyapAQ1A/UUqntsf
 =f8Nf
 -----END PGP PUBLIC KEY BLOCK-----
 
+Markus Glaser <glaser@hallowelt.biz>
+280DB7845A1DCAC92BB5A00A946B02565DC00AA7
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v1.4.13 (MingW32)
 
@@ -301,6 +319,8 @@ cuxVGndtnTXP+onv6Hbaf/ppMYxdwiLSwMSIEOQoVEXumJHW+G2Qq7ROrZmZUasf
 =vhcr
 -----END PGP PUBLIC KEY BLOCK-----
 
+Chad Horohoe <chad@wikimedia.org>
+41B2ABE817ADD3E52BDA946F72BC1C5D23107F8A
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
 Comment: GPGTools - https://gpgtools.org
@@ -347,6 +367,8 @@ jUugJFudE4bbWlmq/2dYreAtqCtO9sMbhSRtbUGfjcHF7g==
 =ysCu
 -----END PGP PUBLIC KEY BLOCK-----
 
+Tyler Cipriani <tcipriani@wikimedia.org>
+6237D8D3ECC1AE918729296FF6DAD285018FAC02
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG/MacGPG2 v2
 Comment: GPGTools - https://gpgtools.org
