@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e5417b0_542d0340",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 18
+      },
+      "lineNbr": 10495,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2017-11-20T17:23:43Z",
+      "side": 1,
+      "message": "The space you\u0027re adding at the beginning of this line is what\u0027s breaking the tests.",
+      "revId": "b75538859ff6f446b4ccf31c3d786a66eeea5c3b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e5417b0_f4218f4c",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 18
+      },
+      "lineNbr": 11270,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2017-11-20T17:23:43Z",
+      "side": 1,
+      "message": "Same here.",
+      "revId": "b75538859ff6f446b4ccf31c3d786a66eeea5c3b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
