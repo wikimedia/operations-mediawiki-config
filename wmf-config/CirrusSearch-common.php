@@ -85,7 +85,7 @@ $wgCirrusSearchWikimediaExtraPlugin = [
 	'super_detect_noop_enable_native' => true,
 	'id_hash_mod_filter' => true,
 	'documentVersion' => true,
-	'token_count_router' => false,
+	'token_count_router' => true,
 ];
 
 # Enable the "experimental" highlighter on all wikis
