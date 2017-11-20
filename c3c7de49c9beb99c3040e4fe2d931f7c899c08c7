@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e5417b0_f4f66ff5",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 17
+      },
+      "lineNbr": 10487,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2017-11-20T17:07:01Z",
+      "side": 1,
+      "message": "Since this doesn\u0027t have a \u0027+\u0027 prefix, it doesn\u0027t inherit the default. So removing the group below is probably a bad idea.",
+      "revId": "c3c7de49c9beb99c3040e4fe2d931f7c899c08c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e5417b0_14fc6bd4",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 17
+      },
+      "lineNbr": 11262,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2017-11-20T17:07:01Z",
+      "side": 1,
+      "message": "Same.",
+      "revId": "c3c7de49c9beb99c3040e4fe2d931f7c899c08c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
