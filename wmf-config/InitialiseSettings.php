@@ -18945,13 +18945,13 @@ $wgConf->settings = [
 	'etwiki' => true, // T159609
 	'fawiki' => true, // T130211
 	'fiwiki' => true, // T163011
-	'frwiki' => true, // T165044
+	'frwiki' => false, // T181006
 	'hewiki' => true, // T161621
 	'nlwiki' => true, // T139432
 	'plwiki' => true, // T140005
 	'ptwiki' => true, // T139692
 	'rowiki' => true, // T170723
-	'ruwiki' => true, // T139541
+	'ruwiki' => false, // T181006
 	'sqwiki' => true, // T170723
 	'trwiki' => true, // T139992
 
