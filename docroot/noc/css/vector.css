@@ -1,37 +1,29 @@
 /* Framework */
 body {
-	background-color: #f3f3f3;
-	background-image: url(images/page-base.png);
+	background-color: #f6f6f6;
+	background-image: -webkit-linear-gradient(top, #ffffff 2.5em, #f6f6f6 5em);
+	background-image: -moz-linear-gradient(top, #ffffff 2.5em, #f6f6f6 5em);
+	background-image: linear-gradient(#ffffff 2.5em, #f6f6f6 5em);
 
-	/* Vector: No outer padding */
-	padding: 0;
-	/* Vector: Larger base size, bodyContent resets */
+	/* Vector: Layout */
+	padding-top: 2.5em; /* Like Vector div#mw-page-base */
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 10em; /* Like Vector div#content */
+
+	/* Vector: Larger base size #bodyContent resets */
 	font-size: 100%;
 }
-/* Head */
-#page-base {
-	height: 2.5em;
-	background-color: white;
-	background-image: url(images/page-fade.png);
-	background-position: bottom left;
-	background-repeat: repeat-x;
-}
-#head-base {
-	margin-top: -2.5em;
-	margin-left: 10em;
-	height: 2.5em;
-	background-image: url(images/border.png);
-	background-position: bottom left;
-	background-repeat: repeat-x;
-}
 /* Content */
-#content-container {
-	margin-left: 10em;
-	padding: 1em;
-	background-image: url(images/border.png);
-	background-position: top left;
-	background-repeat: repeat-y;
+#bodyContent {
 	background-color: white;
+	border: 1px solid #a7d7f9;
+	border-right-width: 0;
+	padding: 1.25em;
+	font-size: 0.8em;
+	position: relative;
+	width: 100%;
+	line-height: 1.5em;
 }
 
 /* Panel */
@@ -90,9 +82,6 @@ body {
 	margin-left: 10em;
 	margin-top: 0;
 	padding: 0.75em;
-	background-image: url(images/border.png);
-	background-position: top left;
-	background-repeat: repeat-x;
 }
 #footer ul {
 	list-style: none;
@@ -146,23 +135,6 @@ body {
 }
 
 
-/* Content */
-#content-container {
-	line-height: 1.5em;
-}
-#bodyContent {
-	font-size: 0.8em;
-	position: relative;
-	width: 100%;
-	line-height: 1.5em;
-}
-#bodyContent table {
-	font-size: 100%;
-	border: none;
-}
-#bodyContent td, #bodyContent th {
-	border: none;
-}
 /* Inline Elements */
 hr {
 	height: 1px;
@@ -183,10 +155,6 @@ acronym {
 	background: none;
 	cursor: help;
 }
-q {
-	font-family: Times, "Times New Roman", serif;
-	font-style: italic;
-}
 code {
 	background-color: #f9f9f9;
 }
@@ -197,17 +165,11 @@ pre {
 	background-color: #f9f9f9;
 	line-height: 1.1em;
 }
-tbody.file pre {
-     padding: 0;
-     border: 0;
-     background: transparent;
- }
 ul {
 	line-height: 1.5em;
 	list-style-type: square;
 	margin: .3em 0 0 1.5em;
 	padding: 0;
-	list-style-image: url(images/bullet-icon.png);
 }
 ol {
 	line-height: 1.5em;
@@ -224,10 +186,10 @@ dt {
 }
 dl {
 	margin-top: .2em;
-	margin-bottom: .5em;
+	margin-bottom: 3em;
 }
 dd {
 	line-height: 1.5em;
+	margin-bottom: 1em;
 	margin-left: 2em;
-	margin-bottom: .1em;
 }
