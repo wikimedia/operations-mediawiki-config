@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e5417b0_e885300c",
+        "filename": "docroot/mediawiki/keys/keys.html",
+        "patchSetId": 1
+      },
+      "lineNbr": 304,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-11-21T01:16:36Z",
+      "side": 1,
+      "message": "After this commit, some of these \u003cpre\u003e are intended and some are not..",
+      "range": {
+        "startLine": 304,
+        "startChar": 0,
+        "endLine": 304,
+        "endChar": 3
+      },
+      "revId": "e910fbb9b58f005ab3ced4762576e4d3b18b61f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
