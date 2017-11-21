@@ -18,6 +18,7 @@ class UpdateWikiversions(cli.Application):
                   help='The dblist file to use as input for migrating.')
     @cli.argument('branch', help='The name of the branch to migrate to.')
     def main(self, *extra_args):
+        """Update the json file, maybe update the branch symlink"""
         self.update_wikiversions_json()
         self.update_branch_pointer()
 
@@ -46,7 +47,7 @@ class UpdateWikiversions(cli.Application):
             with open(json_path) as json_in:
                 version_rows = json.load(json_in)
         else:
-            if db_list_name is not 'all':
+            if db_list_name != 'all':
                 raise RuntimeError(
                     'No %s file and not invoked with "all."' % json_path +
                     'Cowardly refusing to act.'
@@ -80,9 +81,9 @@ class UpdateWikiversions(cli.Application):
         """
         cur_version = self.active_wikiversions().popitem()[0]
 
-        utils.move_symlink(
-            os.path.join(self.config['stage_dir'],
-                         'php-%s' % cur_version),
-            os.path.join(self.config['stage_dir'], 'php')
-        )
-        self.get_logger().info('Symlink updated')
+        real_path = os.path.join(
+            self.config['stage_dir'], 'php-%s' % cur_version)
+        symlink = os.path.join(self.config['stage_dir'], 'php')
+        if os.path.realpath(symlink) != real_path:
+            utils.move_symlink(real_path, symlink)
+            self.get_logger().info('Symlink updated')
