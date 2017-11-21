@@ -146,13 +146,13 @@ $wgLBFactoryConf = [
 		'db1070' => 0,   # D1 2.8TB 160GB, master
 		# 'db1063' => 0,   # C5 2.8TB 128GB, master, crashed #T180714
 		# 'db1071' => 1,   # D1 2.8TB 160GB, future s8 master
-		'db1082' => 100, # A2 3.6TB 512GB, api #T177208
+		'db1082' => 300, # A2 3.6TB 512GB, api
 		'db1087' => 500, # C2 3.6TB 512GB
 		'db1092' => 500, # D2 3.6TB 512GB
 		'db1096' => 1,   # A6 3.6TB 512GB, watchlist, recentchanges, contributions, logpager #T174569
 		'db1099' => 1,   # B2 3.6TB 512GB, watchlist, recentchanges, contributions, logpager
 		'db1100' => 1,   # C2 3.6TB 512GB, old master, vslow
-		'db1104' => 100,  # B3 3.6TB 512GB, api #low weight
+		'db1104' => 300,  # B3 3.6TB 512GB, api
 		'db1106' => 500,  # D3 3.6TB 512GB
 		# 'db1109' => 500,  # D8 3.6TB 512GB #provisioning
 		# 'db1110' => 500,  # C3 3.6TB 512GB #provisioning
@@ -391,7 +391,7 @@ $wgLBFactoryConf = [
 			'db1100' => 1,
 		],
 		'api' => [
-			# 'db1082' => 1,
+			'db1082' => 1,
 			'db1104' => 1,
 		],
 		'watchlist' => [
