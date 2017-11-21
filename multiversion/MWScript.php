@@ -66,11 +66,12 @@ EOT
 	# other maintenance scripts we don't care what wiki DB is used...
 	$wikiless = [
 		'maintenance/purgeList.php',
-		'extensions/WikimediaMaintenance/addWiki.php', // 1.19
-		'extensions/WikimediaMaintenance/dumpInterwiki.php', // 1.19
+		'extensions/WikimediaMaintenance/addWiki.php',
+		'extensions/WikimediaMaintenance/dumpInterwiki.php',
 		'extensions/WikimediaMaintenance/getJobQueueLengths.php',
-		'extensions/WikimediaMaintenance/rebuildInterwiki.php', // 1.19
+		'extensions/WikimediaMaintenance/rebuildInterwiki.php',
 		'extensions/WikimediaMaintenance/filebackend/setZoneAccess.php',
+		'extensions/WikimediaMaintenance/purgeUrls.php',
 		'maintenance/mctest.php',
 		'maintenance/mcc.php',
 	];
