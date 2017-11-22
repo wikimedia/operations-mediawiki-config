@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0edf5380_dc0085b8",
+        "filename": "dblists/visualeditor-nondefault.dblist",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2017-11-22T20:55:14Z",
+      "side": 1,
+      "message": "What to do with these comments?",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 14
+      },
+      "revId": "db3a76b04d73538376731cc5c154dce2f0db5be6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
