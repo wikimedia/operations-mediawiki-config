@@ -15374,12 +15374,11 @@ $wgConf->settings = [
 
 // Whether to show "Publish" rather than "Save" on the edit page (and related circumstances)
 // This should be set to true for all public WMF wikis, and any changes should be discussed
-// with Editing before they are done due to the legal implications.
+// with Contributors and Legal before they are done, due to the legal implications.
 'wgEditSubmitButtonLabelPublish' => [
 	'default' => true,      // T131132 from 2017-03-15
 	'private' => false,     // Private wikis are not public
-	'enwiki' => false,      // Temporarily not set
-	'wikinews' => false,    // Done in local {{int:Copyrightwarning}}s instead.
+	'wikinews' => false,    // Done via local {{int:Copyrightwarning}}s instead.
 ],
 
 'wmgCheckUserForceSummary' => [
