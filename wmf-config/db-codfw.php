@@ -149,9 +149,9 @@ $wgLBFactoryConf = [
 		'db2091:3314' => 1, # A8 3.3TB 512GB # rc, log: s2 and s4
 	],
 	's5' => [
-		'db2023'      => 0,   # B6 2.9TB  96GB, master
-		'db2038'      => 50,  # C6 2.9TB 160GB, rc, log
-		'db2052'      => 50,  # D6 2.9TB 160GB, dump (inactive), vslow
+		'db2052'      => 50,  # D6 2.9TB 160GB, master
+		# 'db2023'      => 0,   # B6 2.9TB  96GB, old master
+		# 'db2038'      => 50,  # C6 2.9TB 160GB, dump (inactive), vslow
 		'db2059'      => 100, # D6 3.3TB 160GB, api
 		'db2066'      => 400, # D6 3.3TB 160GB
 		'db2075'      => 400, # A1 3.3TB 512GB # Compressed InnoDB
@@ -431,36 +431,31 @@ $wgLBFactoryConf = [
 	],
 	's5' => [
 		'watchlist' => [
-			'db2038'      => 1,
 			'db2084:3315' => 1,
 			'db2089:3315' => 1,
 		],
 		'recentchanges' => [
-			'db2038'      => 1,
 			'db2084:3315' => 1,
 			'db2089:3315' => 1,
 		],
 		'recentchangeslinked' => [
-			'db2038'      => 1,
 			'db2084:3315' => 1,
 			'db2089:3315' => 1,
 		],
 		'contributions' => [
-			'db2038'      => 1,
 			'db2084:3315' => 1,
 			'db2089:3315' => 1,
 		],
 		'logpager' => [
-			'db2038'      => 1,
 			'db2084:3315' => 1,
 			'db2089:3315' => 1,
 		],
-		'dump' => [
-			'db2052' => 1,
-		],
-		'vslow' => [
-			'db2052' => 1,
-		],
+		# 'dump' => [
+		# 	'db2038' => 1,
+		# ],
+		# 'vslow' => [
+		# 	'db2038' => 1,
+		# ],
 		'api' => [
 			'db2059' => 1,
 		],
