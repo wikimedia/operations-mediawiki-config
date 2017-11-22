@@ -22,6 +22,30 @@
       "revId": "4e477f81b375976b64d8a103030dd5b865d0afff",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0edf5380_77f232cf",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 454,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2017-11-22T21:53:44Z",
+      "side": 1,
+      "message": "No, the group just gets ignored. Check s3, which has the same code as the others. It is not ideal- but neither dumps nor maintenance queries run here (they are single-dc), but also no other queries! :-) It is not ideal for wikidata if active, but not breaking in any case.\n\nAnyway, this is all temporary until we remove the partitions.",
+      "parentUuid": "0edf5380_3c9c115f",
+      "range": {
+        "startLine": 454,
+        "startChar": 2,
+        "endLine": 454,
+        "endChar": 3
+      },
+      "revId": "4e477f81b375976b64d8a103030dd5b865d0afff",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
