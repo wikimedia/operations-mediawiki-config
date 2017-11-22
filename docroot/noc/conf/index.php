@@ -29,7 +29,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Wikimedia configuration files</title>
-	<link rel="shortcut icon" href="//www.wikimedia.org/static/favicon/wmf.ico">
+	<link rel="shortcut icon" href="/static/favicon/wmf.ico">
 	<link rel="stylesheet" href="../css/base.css">
 </head>
 <body>
