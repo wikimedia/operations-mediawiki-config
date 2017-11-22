@@ -13287,6 +13287,7 @@ $wgConf->settings = [
 		'geo-en.hlipp.de',                  // Geograph Deutschland - T174152
 		'aleph500.biblacad.ro',             // Domain of the Romanian academy - T178753
 		'images.collection.cooperhewitt.org', // Cooper Hewitt - T180241
+		'*.nli.org.il',                     // National Library of Israel - T1881179
 	],
 ],
 
