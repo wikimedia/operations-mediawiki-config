@@ -906,6 +906,9 @@ if ( $wmgUseTimedMediaHandler ) {
 	// overwrite enabling of local TimedText namespace
 	$wgEnableLocalTimedText = $wmgEnableLocalTimedText;
 
+	// enable uploading MP3s
+	$wgTmhEnableMp3Uploads = $wmgTmhEnableMp3Uploads;
+
 	// enable transcoding on all wikis that allow uploads
 	$wgEnableTranscode = $wgEnableUploads;
 
