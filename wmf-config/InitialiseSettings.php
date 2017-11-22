@@ -13641,6 +13641,10 @@ $wgConf->settings = [
 	'foundationwiki' => true,
 ],
 
+'wmgTmhEnableMp3Uploads' => [
+	'default' => false,
+],
+
 'wmgTmhWebPlayer' => [
 	'default' => 'mwembed',
 	'test2wiki' => 'videojs',
