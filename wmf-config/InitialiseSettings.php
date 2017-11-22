@@ -13694,15 +13694,15 @@ $wgConf->settings = [
 // DO NOT add entries here without OK from Greg Grossmeier or James Forrester.
 'wgBetaFeaturesWhitelist' => [
 	'default' => [
-		'visualeditor-enable',               // [Editing] On-going (special permission) – VisualEditor
-		'beta-feature-flow-user-talk-page',  // [Editing] On-going (special permission) – Flow opt-in
-		'uls-compact-links',                 // [Editing] 2017-11-20 – Compact language links
-		'popups',                            // [Reading] 2017-11-05 – Page Previews
-		'cx',                                // [Editing] 2017-11-20 - ContentTranslation
-		'visualeditor-newwikitext',          // [Editing] 2017-11-02 – New wikitext editor
-		'twocolconflict',                    // [WMDE TW] 2017-11-12 – New edit conflict view
-		'rcenhancedfilters',                 // [Editing] 2017-11-18 - Enhanced recent changes filters
-		'codemirror-syntax-highlight',       // [Community Tech] 2018-01-05 - Syntax highlighting
+		'visualeditor-enable',               // [Contrib] On-going (special permission) – VisualEditor
+		'beta-feature-flow-user-talk-page',  // [Contrib] On-going (special permission) – Flow opt-in
+		'uls-compact-links',                 // [Contrib] 2018-05-01 – Compact language links
+		'popups',                            // [Readers] 2018-04-01 – Page Previews
+		'cx',                                // [Contrib] 2018-05-05 - ContentTranslation
+		'visualeditor-newwikitext',          // [Contrib] 2018-05-02 – New wikitext editor
+		'twocolconflict',                    // [WMDE TW] 2018-04-30 – New edit conflict view
+		'rcenhancedfilters',                 // [Contrib] 2018-05-22 - Enhanced watchlist filters
+		'codemirror-syntax-highlight',       // [ComTech] 2018-05-06 - Syntax highlighting
 		'advancedsearch',                    // [WMDE TW] 2018-05-22 - Advanced Search
 	],
 ],
