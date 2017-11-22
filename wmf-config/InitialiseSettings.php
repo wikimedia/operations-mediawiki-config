@@ -19716,7 +19716,17 @@ $wgConf->settings = [
 ],
 
 'wmgUseTimeless' => [
-	'default' => true,
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'mediawikiwiki' => true,
+	'labswiki' => true,
+	'labtestwiki' => true,
+	'frwiki' => true, // T154371
+	'frwikinews' => true,
+	'frwikisource' => true,
+	'frwikiversity' => true,
+	'frwiktionary' => true,
 ],
 
 // T152540
