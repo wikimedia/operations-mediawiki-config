@@ -681,6 +681,13 @@ function wmfLabsSettings() {
 				'reverted' => false,
 				'wp10' => false,
 			],
+			'ruwiki' => [
+				'damaging' => true,
+				'goodfaith' => true,
+				'draftquality' => false,
+				'reverted' => false,
+				'wp10' => false,
+			],
 		],
 		'wgOresDraftQualityNS' => [
 			'enwiki' => [ 0 => true, 118 => true ],
