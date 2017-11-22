@@ -137,7 +137,7 @@ $wgLBFactoryConf = [
 		'db1081' => 100, # A2 3.6TB 512GB, api #lower weight T178359
 		'db1084' => 300, # B1 3.6TB 512GB, api #T178359
 		'db1091' => 500, # D2 3.6TB 512GB
-		# 'db1097' => 1,   # D1 3.6TB 512GB, api, old master #T178359
+		# 'db1097' => 1,   # D1 3.6TB 512GB, # rc, log: s4 and s5 # do not pool being built
 		'db1103:3314' => 1,  # A3 3.6TB 512GB # rc, log: s2 and s4
 	],
 	's5' => [
@@ -149,6 +149,7 @@ $wgLBFactoryConf = [
 		'db1087' => 500, # C2 3.6TB 512GB
 		'db1092' => 500, # D2 3.6TB 512GB
 		'db1096' => 1,   # A6 3.6TB 512GB, watchlist, recentchanges, contributions, logpager
+		# 'db1097' => 1,   # D1 3.6TB 512GB, # rc, log: s4 and s5 # do not pool being built
 		'db1099' => 1,   # B2 3.6TB 512GB, watchlist, recentchanges, contributions, logpager
 		'db1100' => 1,   # C2 3.6TB 512GB, old master, vslow
 		# 'db1101:3315' => 1,   # C2 3.6TB 512GB # rc, log: s5 and s7
@@ -346,7 +347,6 @@ $wgLBFactoryConf = [
 		'api' => [
 			'db1081' => 2,
 			'db1084' => 1,
-			# 'db1097' => 3,
 		],
 		'watchlist' => [
 			'db1053' => 1,
