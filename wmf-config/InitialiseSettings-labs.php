@@ -663,7 +663,9 @@ function wmfLabsSettings() {
 		'wmgUseReadingLists' => [
 			'default' => true,
 		],
-
+		'wmgUseORES' => [
+			'ruwiki' => true, // T181168
+		],
 		'wgOresModels' => [
 			'default' => [
 				'damaging' => true,
