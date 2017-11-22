@@ -275,6 +275,16 @@ function wmfLabsSettings() {
 		'-wgCopyUploadProxy' => [
 			'default' => false,
 		],
+		
+		'wmgFileExtensions' => [
+			'+commonswiki' => [
+				'mp3', // T120288
+			],
+		],
+		
+		'wmgTmhEnableMp3Uploads' => [
+			'commonswiki' => true, // T120288
+		],
 
 		///
 		/// ----------- BetaFeatures start ----------
