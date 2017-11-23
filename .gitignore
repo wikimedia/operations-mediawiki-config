@@ -4,6 +4,7 @@
 # Editors
 *~
 *.swp
+.vs/
 .idea/
 /nbproject/private/
 
@@ -29,3 +30,4 @@ wikiversions-labs.php
 /.tox
 mediawiki_config.egg-info
 __pycache__
+.vs/slnx.sqlite
