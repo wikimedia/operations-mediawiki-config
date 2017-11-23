@@ -3192,7 +3192,6 @@ if ( $wmgUsePageImages ) {
 
 if ( $wmgUseSearchExtraNS ) {
 	wfLoadExtension( 'SearchExtraNS' );
-	$wgSearchExtraNamespaces = $wmgSearchExtraNamespaces;
 }
 
 if ( $wmgZeroPortal || $wmgUseGraph || $wmgZeroBanner ) {
