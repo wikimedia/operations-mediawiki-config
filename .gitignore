@@ -4,6 +4,7 @@
 # Editors
 *~
 *.swp
+.vs/
 .idea/
 /nbproject/private/
 
