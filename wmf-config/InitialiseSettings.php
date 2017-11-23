@@ -17189,16 +17189,16 @@ $wgConf->settings = [
 	'test2wiki' => true,
 	'enwiki' => true,
 ],
-'wmgPageTriageEnableCurationToolbar' => [
+'wgPageTriageEnableCurationToolbar' => [
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
 	'enwiki' => true,
 ],
-'wmgPageTriageNoIndexUnreviewedNewArticles' => [
+'wgPageTriageNoIndexUnreviewedNewArticles' => [
 	'default' => true,
 ],
-'wmgPageTriageNoIndexTemplates' => [
+'wgPageTriageNoIndexTemplates' => [
 	'default' => [],
 	'enwiki' => [ 'NOINDEX' ]
 ],
