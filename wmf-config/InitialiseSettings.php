@@ -18172,7 +18172,7 @@ $wgConf->settings = [
 	'default' => false,
 	'commonswiki' => true,
 ],
-'wmgSearchExtraNamespaces' => [
+'wgSearchExtraNamespaces' => [
 	'default' => false,
 	'commonswiki' => [ NS_CATEGORY ],
 ],
