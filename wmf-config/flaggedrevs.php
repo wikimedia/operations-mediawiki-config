@@ -486,7 +486,7 @@ if ( $wgDBname == 'alswiki' ) {
 	$wgFlaggedRevsAutopromote['editComments'] = 30;
 	$wgFlaggedRevsAutopromote['userpageBytes'] = 100;
  } elseif ( $wgDBname == 'plwiktionary' ) {
-	$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_IMAGE, NS_TEMPLATE, 100, 102, 828 ]; // T55373
+	$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_FILE, NS_TEMPLATE, 100, 102, 828 ]; // T55373
  } elseif ( $wgDBname == 'ptwiki' ) { // T56828
 	$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_TEMPLATE, 102, 828 ];
 	# Show only on a per-page basis
