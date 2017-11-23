@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0edf5380_c952823f",
+        "filename": ".gitignore",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-11-23T03:45:34Z",
+      "side": 1,
+      "message": "Looks like these changes are unintentional?\n\nNote that there are specific files your personal workflow creates inside every repository, there are two ways in which these can be \u0027git ignored\u0027 in a different way, which might be useful to know.\n\n1) Local git ignore\n\nInside this directory, aside from .gitignore, there is also a file inside the local \u0027.git\u0027 clone, namely .git/info/exclude. Any patterns in there will be ignored, just like the ones in gitignore.\n\n2) Global git gitnore\n\nAnother way is to create `~/.gitignore_global` and write patterns  in there. This feature is not enabled by default, but you can enable it as follows:\n\n $ git config --global core.excludesfile ~/.gitignore_global",
+      "range": {
+        "startLine": 1,
+        "startChar": 2,
+        "endLine": 1,
+        "endChar": 12
+      },
+      "revId": "a26f667d7eaf84f8fbe492cb6e46b937d2aec61c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
