@@ -140,7 +140,7 @@ $wgLocalVirtualHosts = [
 	'wikisource.org',
 	'wikiversity.org',
 	'wikivoyage.org',
-	// 'wikimedia.org' // Removed 2008-09-30 by brion -- breaks codereview-proxy.wikimedia.org
+	'wikimedia.org',
 	'meta.wikimedia.org', // Presumably needed to load meta spam list. Any others?
 	'commons.wikimedia.org',
 ];
