@@ -3179,7 +3179,6 @@ if ( $wmgUsePageAssessments ) {
 
 if ( $wmgUsePageImages ) {
 	wfLoadExtension( 'PageImages' );
-	$wgPageImagesExpandOpenSearchXml = $wmgPageImagesExpandOpenSearchXml;
 }
 
 if ( $wmgUseSearchExtraNS ) {

@@ -18145,7 +18145,7 @@ $wgConf->settings = [
 	// T152115
 	'wikipedia' => true,
 ],
-'wmgPageImagesExpandOpenSearchXml' => [
+'wgPageImagesExpandOpenSearchXml' => [
 	'default' => true,
 ],
 'wgPageImagesAPIDefaultLicense' => [
