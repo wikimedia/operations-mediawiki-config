@@ -151,7 +151,7 @@ $wgLBFactoryConf = [
 		'db1096' => 1,   # A6 3.6TB 512GB, watchlist, recentchanges, contributions, logpager
 		# 'db1097' => 1,   # D1 3.6TB 512GB, # rc, log: s4 and s5 # do not pool being built
 		'db1099' => 1,   # B2 3.6TB 512GB, watchlist, recentchanges, contributions, logpager
-		'db1100' => 1,   # C2 3.6TB 512GB, old master, vslow
+		'db1100' => 500,   # C2 3.6TB 512GB, old master
 		# 'db1101:3315' => 1,   # C2 3.6TB 512GB # rc, log: s5 and s7
 		'db1104' => 300,  # B3 3.6TB 512GB, api
 		'db1106' => 500,  # D3 3.6TB 512GB
@@ -376,12 +376,10 @@ $wgLBFactoryConf = [
 	],
 	's5' => [
 		'vslow' => [
-			'db1100' => 3,
 			'db1063' => 1,
 			'db1051' => 1,
 		],
 		'dump' => [
-			'db1100' => 3,
 			'db1063' => 1,
 			'db1051' => 1,
 		],
