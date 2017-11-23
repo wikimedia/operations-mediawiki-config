@@ -140,9 +140,10 @@ $wgLocalVirtualHosts = [
 	'wikisource.org',
 	'wikiversity.org',
 	'wikivoyage.org',
-	// 'wikimedia.org' // Removed 2008-09-30 by brion -- breaks codereview-proxy.wikimedia.org
+	'www.wikidata.org',
 	'meta.wikimedia.org', // Presumably needed to load meta spam list. Any others?
 	'commons.wikimedia.org',
+	'login.wikimedia.org',
 ];
 
 # Is this database listed in dblist?
