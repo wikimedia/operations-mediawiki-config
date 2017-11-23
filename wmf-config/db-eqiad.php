@@ -114,10 +114,10 @@ $wgLBFactoryConf = [
 	],
 	's2' => [
 		'db1054' => 0,   # A3 2.8TB  96GB, master
-		'db1021' => 0,   # B1 1.4TB  64GB, vslow, dump
+		# 'db1021' => 0,   # B1 1.4TB  64GB, vslow, dump #cloning db1053
 		# 'db1053' => 1,   # A2 2.8TB  96GB, vslow, dump - DO NOT POOL
-		'db1060' => 1,   # C2 2.8TB  96GB, api #master for sanitarium #T153743
-		'db1074' => 300, # A2 3.6TB 512GB, api
+		'db1060' => 0,   # C2 2.8TB  96GB, api #master for sanitarium #T153743, temporary vslow while db1021 clones db1053
+		'db1074' => 100, # A2 3.6TB 512GB, api
 		'db1076' => 500, # B1 3.6TB 512GB
 		'db1090' => 500, # C3 3.6TB 512GB
 		'db1103:3312' => 1,  # A3 3.6TB 512GB # rc, log: s2 and s4
@@ -284,13 +284,13 @@ $wgLBFactoryConf = [
 	],
 	's2' => [
 		'vslow' => [
-			'db1021' => 1,
+			'db1060' => 1,
 		],
 		'dump' => [
-			'db1021' => 1,
+			'db1060' => 1,
 		],
 		'api' => [
-			'db1060' => 2,
+			# 'db1060' => 2,
 			'db1074' => 1,
 		],
 		'watchlist' => [
