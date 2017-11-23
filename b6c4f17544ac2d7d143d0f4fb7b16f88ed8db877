@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0edf5380_b85ca64f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 17204,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2017-11-23T23:00:15Z",
+      "side": 1,
+      "message": "Hmm, this one can\u0027t go... can it? Due to T142663",
+      "range": {
+        "startLine": 17201,
+        "startChar": 0,
+        "endLine": 17204,
+        "endChar": 2
+      },
+      "revId": "b6c4f17544ac2d7d143d0f4fb7b16f88ed8db877",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
