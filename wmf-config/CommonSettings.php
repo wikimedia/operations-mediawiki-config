@@ -130,6 +130,7 @@ function wmfLoadInitialiseSettings( $conf ) {
 	require "$wmfConfigDir/InitialiseSettings.php";
 }
 
+// Do not add wikimedia.org, because of other sites under that domain (such as codereview-proxy.wikimedia.org)
 $wgLocalVirtualHosts = [
 	'wikipedia.org',
 	'wiktionary.org',
@@ -140,9 +141,12 @@ $wgLocalVirtualHosts = [
 	'wikisource.org',
 	'wikiversity.org',
 	'wikivoyage.org',
-	// 'wikimedia.org' // Removed 2008-09-30 by brion -- breaks codereview-proxy.wikimedia.org
+	'www.wikidata.org',
 	'meta.wikimedia.org', // Presumably needed to load meta spam list. Any others?
 	'commons.wikimedia.org',
+	'login.wikimedia.org',
+	'vote.wikimedia.org',
+	'www.mediawiki.org',
 ];
 
 # Is this database listed in dblist?
