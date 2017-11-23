@@ -17242,7 +17242,7 @@ $wgConf->settings = [
 	'ukwiki' => true,
 	'zhwiki' => true,
 ],
-'wmgGettingStartedCategoriesForTaskTypes' => [
+'wgGettingStartedCategoriesForTaskTypes' => [
 	'default' => [],
 	'cawiki' => [
 		'copyedit' => 'Categoria:Articles amb ortografia per millorar',
@@ -17269,7 +17269,7 @@ $wgConf->settings = [
 		'copyedit' => 'Category:需要校對的頁面',
 	],
 ],
-'wmgGettingStartedExcludedCategories' => [
+'wgGettingStartedExcludedCategories' => [
 	'default' => [],
 	'astwiki' => [ 'Categoría:Persones vives' ],
 	'bswiki' => [ 'Kategorija:Živi ljudi' ],
@@ -17289,9 +17289,6 @@ $wgConf->settings = [
 	'ukwiki' => [ 'Категорія:Нині живуть' ],
 	'viwiki' => [ 'Thể loại:Nhân vật còn sống' ],
 	'zhwiki' => [ 'Category:在世人物' ],
-],
-'wmgGettingStartedRunTest' => [
-	'default' => false,
 ],
 'wmgUseGuidedTour' => [
 	'default' => true,

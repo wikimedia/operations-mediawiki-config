@@ -2957,10 +2957,6 @@ if ( $wmgUseGettingStarted ) {
 	wfLoadExtension( 'GettingStarted' );
 	$wgGettingStartedRedis = $wgObjectCaches['redis_master']['servers'][0];
 	$wgGettingStartedRedisOptions['password'] = $wmgRedisPassword;
-	$wgGettingStartedCategoriesForTaskTypes = $wmgGettingStartedCategoriesForTaskTypes;
-	$wgGettingStartedExcludedCategories = $wmgGettingStartedExcludedCategories;
-
-	$wgGettingStartedRunTest = $wmgGettingStartedRunTest;
 }
 
 if ( $wmgUseGeoCrumbs ) {
