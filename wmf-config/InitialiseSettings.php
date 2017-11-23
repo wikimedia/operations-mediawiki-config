@@ -17840,7 +17840,7 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
-'wmgRelatedSitesPrefixes' => [
+'wgRelatedSitesPrefixes' => [
 	'default' => [],
 	'wikivoyage' => [ 'wikipedia', 'dmoz', 'citizendium', 'commons' ],
 ],

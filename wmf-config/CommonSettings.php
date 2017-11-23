@@ -3006,7 +3006,6 @@ $wgExtensionFunctions[] = function () {
 
 if ( $wmgUseRelatedSites ) {
 	wfLoadExtension( 'RelatedSites' );
-	$wgRelatedSitesPrefixes = $wmgRelatedSitesPrefixes;
 }
 
 if ( $wmgUseRevisionSlider ) {
