@@ -571,10 +571,6 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
-		'wgEnableRcFiltersBetaFeature' => [
-			'default' => true,
-		],
-
 		'wgStructuredChangeFiltersShowPreference' => [
 			'default' => true,
 		],
