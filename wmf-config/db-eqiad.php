@@ -147,7 +147,7 @@ $wgLBFactoryConf = [
 		# 'db1071' => 1,   # D1 2.8TB 160GB, future s8 master
 		'db1082' => 300, # A2 3.6TB 512GB, api
 		'db1087' => 500, # C2 3.6TB 512GB
-		# 'db1092' => 500, # D2 3.6TB 512GB #restart mysql
+		'db1092' => 100, # D2 3.6TB 512GB #s8 #low weight after restart
 		'db1096' => 1,   # A6 3.6TB 512GB, watchlist, recentchanges, contributions, logpager
 		'db1097:3315' => 1,   # D1 3.6TB 512GB, # rc, log: s4 and s5
 		'db1099' => 1,   # B2 3.6TB 512GB, watchlist, recentchanges, contributions, logpager
@@ -401,7 +401,7 @@ $wgLBFactoryConf = [
 		],
 		'recentchangeslinked' => [
 			'db1096' => 1,
-			# 'db1097:3315' => 1,
+			'db1097:3315' => 1,
 			'db1099' => 1,
 			'db1101:3318' => 1,
 		],
@@ -415,7 +415,7 @@ $wgLBFactoryConf = [
 			'db1096' => 1,
 			# 'db1097:3315' => 1,
 			'db1099' => 1,
-			# 'db1101:3318' => 1,
+			'db1101:3318' => 1,
 		],
 	],
 	's6' => [
