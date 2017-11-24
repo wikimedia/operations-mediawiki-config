@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0edf5380_6e2a54d9",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2017-11-24T11:04:33Z",
+      "side": 1,
+      "message": "we normally give 0 to vslow, no?",
+      "revId": "b65c6e539dbb3f7ffd0781c448d6defd0cc68944",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
