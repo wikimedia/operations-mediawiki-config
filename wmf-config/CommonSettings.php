@@ -2394,10 +2394,6 @@ if ( PHP_SAPI === 'cli' ) {
 	$wgLanguageConverterCacheType = CACHE_NONE;
 }
 
-# Style version appendix
-# Shouldn't be needed much in 1.17 due to ResourceLoader, but some legacy things still need it
-$wgStyleVersion .= '-4';
-
 // DO NOT DISABLE WITHOUT CONTACTING PHILIPPE / LEGAL!
 // Installed by Andrew, 2011-04-26
 if ( $wmgUseDisableAccount ) {
