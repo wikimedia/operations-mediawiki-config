@@ -151,7 +151,7 @@ $wgLBFactoryConf = [
 	's5' => [
 		'db2052'      => 50,  # D6 2.9TB 160GB, master
 		# 'db2023'      => 0,   # B6 2.9TB  96GB, old master
-		# 'db2038'      => 50,  # C6 2.9TB 160GB, dump (inactive), vslow
+		'db2038'      => 1,   # C6 2.9TB 160GB, dump (inactive), vslow
 		'db2059'      => 100, # D6 3.3TB 160GB, api
 		'db2066'      => 400, # D6 3.3TB 160GB
 		'db2075'      => 400, # A1 3.3TB 512GB # Compressed InnoDB
@@ -187,8 +187,8 @@ $wgLBFactoryConf = [
 		'db2081'      => 10,  # A6 3.3TB 512GB, api
 		'db2082'      => 100, # B6 3.3TB 512GB
 		'db2083'      => 100, # C6 3.3TB 512GB
-		'db2085:3315' => 1, # A5 3.3TB 512GB # rc, log: s3 and s8
-		'db2086:3315' => 1, # B1 3.3TB 512GB # rc, log: s7 and s8
+		'db2085:3318' => 1, # A5 3.3TB 512GB # rc, log: s3 and s8
+		'db2086:3318' => 1, # B1 3.3TB 512GB # rc, log: s7 and s8
 	],
 
 	'silver' => [
@@ -450,12 +450,12 @@ $wgLBFactoryConf = [
 			'db2084:3315' => 1,
 			'db2089:3315' => 1,
 		],
-		# 'dump' => [
-		# 	'db2038' => 1,
-		# ],
-		# 'vslow' => [
-		# 	'db2038' => 1,
-		# ],
+		'dump' => [
+			'db2038' => 1,
+		],
+		'vslow' => [
+			'db2038' => 1,
+		],
 		'api' => [
 			'db2059' => 1,
 		],
@@ -534,24 +534,24 @@ $wgLBFactoryConf = [
 	],
 	's8' => [
 		'watchlist' => [
-			'db2085:3315' => 1,
-			'db2086:3315' => 1,
+			'db2085:3318' => 1,
+			'db2086:3318' => 1,
 		],
 		'recentchanges' => [
-			'db2085:3315' => 1,
-			'db2086:3315' => 1,
+			'db2085:3318' => 1,
+			'db2086:3318' => 1,
 		],
 		'recentchangeslinked' => [
-			'db2085:3315' => 1,
-			'db2086:3315' => 1,
+			'db2085:3318' => 1,
+			'db2086:3318' => 1,
 		],
 		'contributions' => [
-			'db2085:3315' => 1,
-			'db2086:3315' => 1,
+			'db2085:3318' => 1,
+			'db2086:3318' => 1,
 		],
 		'logpager' => [
-			'db2085:3315' => 1,
-			'db2086:3315' => 1,
+			'db2085:3318' => 1,
+			'db2086:3318' => 1,
 		],
 		'dump' => [
 			'db2079' => 1,
@@ -723,8 +723,8 @@ $wgLBFactoryConf = [
 	'db2084:3314' => '10.192.48.86:3314', # do not remove or comment out
 	'db2084:3315' => '10.192.48.86:3315', # do not remove or comment out
 	'db2085:3313' => '10.192.0.8:3313', # do not remove or comment out
-	'db2085:3315' => '10.192.0.8:3315', # do not remove or comment out
-	'db2086:3315' => '10.192.16.40:3315', # do not remove or comment out
+	'db2085:3318' => '10.192.0.8:3318', # do not remove or comment out
+	'db2086:3318' => '10.192.16.40:3318', # do not remove or comment out
 	'db2086:3317' => '10.192.16.40:3317', # do not remove or comment out
 	'db2087:3316' => '10.192.32.171:3316', # do not remove or comment out
 	'db2087:3317' => '10.192.32.171:3317', # do not remove or comment out
