@@ -659,7 +659,7 @@ if (
 	$wgVectorPrintLogo = [
 		'width' => $wgMinervaCustomLogos['copyright-width'],
 		'height' => $wgMinervaCustomLogos['copyright-height'],
-		'url' =>  $wgMinervaCustomLogos['copyright'],
+		'url' => $wgMinervaCustomLogos['copyright'],
 	];
 }
 
@@ -1502,9 +1502,9 @@ if ( $wmgUseCentralAuth ) {
 		$wgCentralAuthAutoCreateWikis[] = 'mediawikiwiki';
 	}
 
-	// Require 8-byte password for staff. Set MinimumPasswordLengthToLogin
-	// to 8 also, once staff have time to update.
-	$wgCentralAuthGlobalPasswordPolicies['staff'] = [
+	// Link global block blockers to user pages on Meta
+	$wgCentralAuthGlobalBlockInterwikiPrefix = 'meta';
+
 	// Require 8-byte password for staff. Set MinimumPasswordLengthToLogin
 	// to 8 also, once staff have time to update.
 	$wgCentralAuthGlobalPasswordPolicies['staff'] = [
@@ -1922,14 +1922,11 @@ if ( $wmgUseCodeReview ) {
 
 # AbuseFilter
 wfLoadExtension( 'AbuseFilter' );
-include "$wmgConfigDir/abusefilter.php";
-$wgAbuseFilterEmergencyDisableThreshold = $wmgAbuseFilterEmergencyDisableThreshold;
-$wgAbuseFilterEmergencyDisableCount = $wmgAbuseFilterEmergencyDisableCount;
-$wgAbuseFilterEmergencyDisableAge = $wmgAbuseFilterEmergencyDisableAge;
-
-if ( $wmgUsePdfHandler ) {
-	wfLoadExtension( 'PdfHandler' );
-	$wgPdfProcessor = '/usr/local/bin/mediawiki-firejail-ghostscript';
+include "$wmfConfigDir/abusefilter.php";
+if ( $wmgUseGlobalAbuseFilters ) {
+	$wgAbuseFilterCentralDB = $wmgAbuseFilterCentralDB;
+	$wgAbuseFilterIsCentral = ( $wgDBname === $wgAbuseFilterCentralDB );
+}
 
 if ( $wmgUsePdfHandler ) {
 	wfLoadExtension( 'PdfHandler' );
@@ -2204,7 +2201,11 @@ if ( $wmgUseGWToolset ) {
 		$wgJobTypeConf['gwtoolsetUploadMetadataJob'] = [ 'checkDelay' => true ] + $wgJobTypeConf['default'];
 	}
 	// extra throttling until the image scalers are more robust
-	GWToolset\Config::$mediafile_job_throttle_default = 5; // 5 files per batch
+	if ( class_exists( 'GWToolset\Config' ) ) {
+		GWToolset\Config::$mediafile_job_throttle_default = 5; // 5 files per batch
+	} else {
+		$wgGWToolsetConfigOverrides['mediafile_job_throttle_default'] = 5;
+	}
 	$wgJobBackoffThrottling['gwtoolsetUploadMetadataJob'] = 5 / 3600; // 5 batches per hour
 }
 
@@ -2688,10 +2689,7 @@ if ( $wmgUseFeaturedFeeds ) {
 $wgDisplayFeedsInSidebar = $wmgDisplayFeedsInSidebar;
 
 if ( $wmgEnablePageTriage ) {
-	require_once "$IP/extensions/PageTriage/PageTriage.php";
-	$wgPageTriageEnableCurationToolbar = $wmgPageTriageEnableCurationToolbar;
-	$wgPageTriageNoIndexUnreviewedNewArticles = $wmgPageTriageNoIndexUnreviewedNewArticles;
-	$wgPageTriageNoIndexTemplates = $wmgPageTriageNoIndexTemplates;
+	wfLoadExtension( 'PageTriage' );
 }
 
 if ( $wmgEnableInterwiki ) {
@@ -2956,10 +2954,6 @@ if ( $wmgUseGettingStarted ) {
 	wfLoadExtension( 'GettingStarted' );
 	$wgGettingStartedRedis = $wgObjectCaches['redis_master']['servers'][0];
 	$wgGettingStartedRedisOptions['password'] = $wmgRedisPassword;
-	$wgGettingStartedCategoriesForTaskTypes = $wmgGettingStartedCategoriesForTaskTypes;
-	$wgGettingStartedExcludedCategories = $wmgGettingStartedExcludedCategories;
-
-	$wgGettingStartedRunTest = $wmgGettingStartedRunTest;
 }
 
 if ( $wmgUseGeoCrumbs ) {
@@ -3008,7 +3002,6 @@ $wgExtensionFunctions[] = function () {
 
 if ( $wmgUseRelatedSites ) {
 	wfLoadExtension( 'RelatedSites' );
-	$wgRelatedSitesPrefixes = $wmgRelatedSitesPrefixes;
 }
 
 if ( $wmgUseRevisionSlider ) {
@@ -3186,17 +3179,10 @@ if ( $wmgUsePageAssessments ) {
 
 if ( $wmgUsePageImages ) {
 	wfLoadExtension( 'PageImages' );
-	$wgPageImagesExpandOpenSearchXml = $wmgPageImagesExpandOpenSearchXml;
 }
 
 if ( $wmgUseSearchExtraNS ) {
 	wfLoadExtension( 'SearchExtraNS' );
-	$wgSearchExtraNamespaces = $wmgSearchExtraNamespaces;
-}
-
-if ( $wmgUseGlobalAbuseFilters ) {
-	$wgAbuseFilterCentralDB = $wmgAbuseFilterCentralDB;
-	$wgAbuseFilterIsCentral = ( $wgDBname === $wgAbuseFilterCentralDB );
 }
 
 if ( $wmgZeroPortal || $wmgUseGraph || $wmgZeroBanner ) {
