@@ -36,8 +36,17 @@ use MediaWiki\Logger\LoggerFactory;
 #
 # More modern PHP versions will send a 500 result code on fatal error,
 # at least sometimes, but what we're running will send a 200.
-if ( PHP_SAPI != 'cli' ) {
+if ( PHP_SAPI !== 'cli' ) {
 	header( "Cache-control: no-cache" );
+} else {
+	# Override for sanity's sake. Log errors to stderr.
+	ini_set( 'display_errors', 'stderr' );
+
+	$wgShowExceptionDetails = true;
+	$wgShowDBErrorBacktrace = true;
+
+	# APC not available in CLI mode
+	$wgLanguageConverterCacheType = CACHE_NONE;
 }
 
 // Clobber any value in $_SERVER['SERVER_SOFTWARE'] other than Apache, so that
@@ -48,10 +57,6 @@ if ( isset( $_SERVER['SERVER_SOFTWARE'] ) ) {
 	$_SERVER['SERVER_SOFTWARE'] = 'Apache';
 }
 
-if ( PHP_SAPI === 'cli' ) {
-	# Override for sanity's sake. Log errors to stderr.
-	ini_set( 'display_errors', 'stderr' );
-}
 if ( isset( $_SERVER['SERVER_ADDR'] ) ) {
 	ini_set( 'error_append_string', ' (' . $_SERVER['SERVER_ADDR'] . ')' );
 }
@@ -493,11 +498,6 @@ if ( $wmgUseCentralAuth ) {
 $wgEnableBotPasswords = $wmgEnableBotPasswords;
 $wgBotPasswordsCluster = $wmgBotPasswordsCluster;
 $wgBotPasswordsDatabase = $wmgBotPasswordsDatabase;
-
-if ( PHP_SAPI === 'cli' ) {
-	$wgShowExceptionDetails = true;
-	$wgShowDBErrorBacktrace = true;
-}
 
 $wgUseImageResize               = true;
 $wgUseImageMagick               = true;
@@ -2424,11 +2424,6 @@ if ( $wmgUseGoogleNewsSitemap ) {
 
 if ( $wmgUseCLDR ) {
 	wfLoadExtension( 'cldr' );
-}
-
-# APC not available in CLI mode
-if ( PHP_SAPI === 'cli' ) {
-	$wgLanguageConverterCacheType = CACHE_NONE;
 }
 
 // DO NOT DISABLE WITHOUT CONTACTING PHILIPPE / LEGAL!
