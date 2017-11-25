@@ -13710,6 +13710,7 @@ $wgConf->settings = [
 'wmgUseAdvancedSearch' => [
 	'default' => false,
 	'group0' => true, // T180147
+	'arwiki' => true, // T180291
 ],
 
 'wmgUseCommonsMetadata' => [
