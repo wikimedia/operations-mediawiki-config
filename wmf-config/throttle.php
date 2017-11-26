@@ -28,20 +28,12 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[] = [ // T178689 - Working Class Movement Library (Salford)
-	'from' => '2017-11-19T09:00 -0:00',
-	'to' => '2017-11-19T17:00 -0:00',
-	'IP' => '212.121.214.227',
-	'dbname' => [ 'enwiki', 'commonswiki' ],
-	'value' => 50,
-];
-
-$wmgThrottlingExceptions[] = [ // T180441 - Medicine Faculty campus
-	'from'   => '2017-11-14T00:00 +0:00',
-	'to'     => '2017-11-22T00:00 +0:00',
-	'IP'     => '84.89.157.249',
-	'dbname' => [ 'cawiki' ],
-	'value'  => 50 // Just in case value is 50
+$wmgThrottlingExceptions[] = [ // T181360
+	'from' => '2017-11-29T09:00 +1:00',
+	'to' => '2017-11-29T18:00 +1:00',
+	'IP' => '81.246.2.2',
+	'dbname' => [ 'frwiki', 'commonswiki' ],
+	'value' => 30,
 ];
 
 $wmgThrottlingExceptions[] = [ // T180046
