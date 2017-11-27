@@ -18954,17 +18954,17 @@ $wgConf->settings = [
 	'etwiki' => true, // T159609
 	'fawiki' => true, // T130211
 	'fiwiki' => true, // T163011
-	'frwiki' => false, // T181006
+	'frwiki' => true,
 	'hewiki' => true, // T161621
 	'nlwiki' => true, // T139432
 	'plwiki' => true, // T140005
 	'ptwiki' => true, // T139692
 	'rowiki' => true, // T170723
-	'ruwiki' => false, // T181006
+	'ruwiki' => true,
 	'sqwiki' => true, // T170723
 	'trwiki' => true, // T139992
 
-	'wikidatawiki' => false, // T130212, temporarily disabled
+	'wikidatawiki' => true, // T130212
 ],
 'wgOresModels' => [
 	'default' => [
