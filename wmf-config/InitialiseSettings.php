@@ -13653,6 +13653,7 @@ $wgConf->settings = [
 
 'wmgTmhEnableMp3Uploads' => [
 	'default' => false,
+	'commonswiki' => true, // T120288
 ],
 
 'wmgTmhWebPlayer' => [
