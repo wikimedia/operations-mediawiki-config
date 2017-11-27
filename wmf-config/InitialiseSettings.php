@@ -16799,6 +16799,7 @@ $wgConf->settings = [
 	'nvwiki' => 'Choyoołʼįįhí %code%',
 	'nywiki' => 'User %code%',
 	'ocwiki' => 'Utilizaire %code%',
+	'officewiki' => 'User %code%',
 	'omwiki' => 'User %code%',
 	'orwiki' => 'User %code%',
 	'oswiki' => 'Архайджытæ %code%',
