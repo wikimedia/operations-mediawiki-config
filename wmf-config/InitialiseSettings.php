@@ -19050,8 +19050,8 @@ $wgConf->settings = [
 		'damaging' => [
 			// likelygood uses default
 			'maybebad' => false,
-			'likelybad' => [ 'min' => 'recall_at_precision(min_precision=0.08)', 'max' => 1 ],
-			'verylikelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.12)' ],
+			'likelybad' => [ 'min' => 'recall_at_precision(min_precision=0.75)', 'max' => 1 ],
+			// verylikelybad uses defaults
 		],
 		'goodfaith' => [
 			// likelygood uses default
