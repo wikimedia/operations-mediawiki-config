@@ -142,19 +142,19 @@ $wgLBFactoryConf = [
 	's5' => [
 		'db1070' => 0,   # D1 2.8TB 160GB, master
 		'db1051' => 0,  # B3 2.8TB  96GB, vslow, dump in s5
-		# 'db1063' => 0,   # C5 2.8TB 128GB, vslow, dump in s8
+		'db1063' => 0,   # C5 2.8TB 128GB, vslow, dump in s8
 		# 'db1071' => 1,   # D1 2.8TB 160GB, future s8 master
 		'db1082' => 300, # A2 3.6TB 512GB, api
 		# 'db1087' => 500, # C2 3.6TB 512GB #s8
-		# 'db1092' => 300, # D2 3.6TB 512GB #s8
+		'db1092' => 100, # D2 3.6TB 512GB #s8
 		'db1096' => 1,   # A6 3.6TB 512GB, watchlist, recentchanges, contributions, logpager
 		'db1097:3315' => 1,   # D1 3.6TB 512GB, # rc, log: s4 and s5
-		# 'db1099' => 1,   # B2 3.6TB 512GB, watchlist, recentchanges, contributions, logpager #s8
+		'db1099' => 1,   # B2 3.6TB 512GB, watchlist, recentchanges, contributions, logpager #s8
 		'db1100' => 50,   # C2 3.6TB 512GB, old master #api
-		# 'db1101:3318' => 1,   # C2 3.6TB 512GB # rc, log: s7 and s8
-		# 'db1104' => 300,  # B3 3.6TB 512GB, api #s8
+		'db1101:3318' => 1,   # C2 3.6TB 512GB # rc, log: s7 and s8
+		'db1104' => 100,  # B3 3.6TB 512GB, api #s8
 		'db1106' => 500,  # D3 3.6TB 512GB
-		# 'db1109' => 500,  # D8 3.6TB 512GB #s8
+		'db1109' => 100,  # D8 3.6TB 512GB #s8
 		'db1110' => 500,  # C3 3.6TB 512GB
 	],
 	's6' => [
@@ -375,47 +375,47 @@ $wgLBFactoryConf = [
 	],
 	's5' => [
 		'vslow' => [
-			# 'db1063' => 1,
+			'db1063' => 1,
 			'db1051' => 1,
 		],
 		'dump' => [
-			# 'db1063' => 1,
+			'db1063' => 1,
 			'db1051' => 1,
 		],
 		'api' => [
 			'db1082' => 1,
 			'db1100' => 3,
-			# 'db1104' => 1,
+			'db1104' => 1,
 		],
 		'watchlist' => [
 			'db1096' => 1,
 			'db1097:3315' => 1,
-			# 'db1099' => 1,
-			# 'db1101:3318' => 1,
+			'db1099' => 1,
+			'db1101:3318' => 1,
 		],
 		'recentchanges' => [
 			'db1096' => 1,
 			'db1097:3315' => 1,
-			# 'db1099' => 1,
-			# 'db1101:3318' => 1,
+			'db1099' => 1,
+			'db1101:3318' => 1,
 		],
 		'recentchangeslinked' => [
 			'db1096' => 1,
 			'db1097:3315' => 1,
-			# 'db1099' => 1,
-			# 'db1101:3318' => 1,
+			'db1099' => 1,
+			'db1101:3318' => 1,
 		],
 		'contributions' => [
 			'db1096' => 1,
 			'db1097:3315' => 1,
-			# 'db1099' => 1,
-			# 'db1101:3318' => 1,
+			'db1099' => 1,
+			'db1101:3318' => 1,
 		],
 		'logpager' => [
 			'db1096' => 1,
 			'db1097:3315' => 1,
-			# 'db1099' => 1,
-			# 'db1101:3318' => 1,
+			'db1099' => 1,
+			'db1101:3318' => 1,
 		],
 	],
 	's6' => [
