@@ -13653,6 +13653,7 @@ $wgConf->settings = [
 
 'wmgTmhEnableMp3Uploads' => [
 	'default' => false,
+	'commonswiki' => true, // T120288
 ],
 
 'wmgTmhWebPlayer' => [
@@ -19282,6 +19283,9 @@ $wgConf->settings = [
 		'ogv',
 		'svg',
 		'djvu',
+	],
+	'+commonswiki' => [
+		'mp3', // T120288
 	],
 	'+foundationwiki' => [
 		'otf',
