@@ -504,6 +504,18 @@ function wmfLabsSettings() {
 			'deploymentwiki' => false,
 		],
 
+		'wmgUseFileImporter' => [
+			'default' => false,
+			'commonswiki' => true,
+		],
+
+		'wmgUseFileExporter' => [
+			'default' => false,
+			'metawiki' => true,
+			'deploymentwiki' => true,
+			'wikipedia' => true,
+		],
+
 		// Test Wikidata descriptions on mobile: T127250
 		'wgMFDisplayWikibaseDescriptions' => [
 			'enwiki' => [

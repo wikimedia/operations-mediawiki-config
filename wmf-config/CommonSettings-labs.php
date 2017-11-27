@@ -80,6 +80,18 @@ if ( $wmgUseFlow ) {
 	$wgNamespaceContentModels[ 191 ] = 'flow-board'; // CONTENT_MODEL_FLOW_BOARD
 }
 
+if ( $wmgUseFileExporter ) {
+	// On Beta don't bother enabling beta feature mode.
+	$wgFileExporterBetaFeature = false;
+	$wgFileExporterTarget = 'https://commons.wikimedia.beta.wmflabs.org/wiki/Special:ImportFile';
+}
+
+if ( $wmgUseFileImporter ) {
+	$wgFileImporterSourceSiteServices = [
+		'FileImporter-WikimediaSitesTableSite',
+	];
+}
+
 if ( $wmgUseContentTranslation ) {
 	$wgContentTranslationSiteTemplates['cx'] = 'https://cxserver-beta.wmflabs.org/v1';
 	$wgContentTranslationSiteTemplates['cookieDomain'] = false;
