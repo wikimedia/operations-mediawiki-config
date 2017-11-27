@@ -8246,7 +8246,7 @@ $wgConf->settings = [
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'filemover' => [ 'movefile' => true ],
 		'Image-reviewer' => [ 'autopatrol' => true, 'upload_by_url' => true ],
-		'mp3-uploader' => [ 'autoconfirmed' => true, 'upload' => true, 'reupload' => true ],
+		'extended-uploader' => [ 'autoconfirmed' => true, 'upload' => true, 'reupload' => true ],
 		'sysop' => [
 			'changetags' => true, // T134196
 			'upload_by_url' => true,
@@ -9917,7 +9917,7 @@ $wgConf->settings = [
 			'autopatrolled',
 			'filemover',
 			'Image-reviewer',
-			'mp3-uploader', // T180002
+			'extended-uploader', // T180002
 			'upwizcampeditors'
 		],
 		'Image-reviewer' => [ 'Image-reviewer' ],
@@ -10664,7 +10664,7 @@ $wgConf->settings = [
 			'autopatrolled',
 			'filemover',
 			'Image-reviewer',
-			'mp3-uploader', // T180002
+			'extended-uploader', // T180002
 			'upwizcampeditors'
 		],
 	],
@@ -13657,6 +13657,7 @@ $wgConf->settings = [
 
 'wmgTmhEnableMp3Uploads' => [
 	'default' => false,
+	'commonswiki' => true, // T120288
 ],
 
 'wmgTmhWebPlayer' => [
