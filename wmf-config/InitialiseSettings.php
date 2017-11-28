@@ -15257,6 +15257,7 @@ $wgConf->settings = [
 	'ruwikiversity' => 'uca-ru', // T54997
 	'ruwikivoyage' => 'uca-ru', // T54997
 	'ruwiktionary' => 'uca-ru', // T54997
+	'sewiki' => 'uca-se-u-kn', // T181503
 	'shwiki' => 'uca-hr-u-kn', // T69287, T149002
 	'srwiki' => 'uca-sr-u-kn', // T115806, T149002
 	'srwikibooks' => 'uca-sr', // T115806
