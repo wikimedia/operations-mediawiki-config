@@ -154,7 +154,7 @@ $wgLBFactoryConf = [
 		# 'db1104' => 300,  # B3 3.6TB 512GB, api #s8
 		'db1106' => 500,  # D3 3.6TB 512GB
 		# 'db1109' => 500,  # D8 3.6TB 512GB #s8
-		'db1110' => 500,  # C3 3.6TB 512GB
+		# 'db1110' => 500,  # C3 3.6TB 512GB # dns-originated ip-conflict T165519
 	],
 	's6' => [
 		'db1061' => 0,   # C3 2.8TB 128GB, master
