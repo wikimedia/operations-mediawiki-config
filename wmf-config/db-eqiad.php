@@ -75,6 +75,9 @@ $wgLBFactoryConf = [
 	'rowiki'       => 's7',
 	'kowiki'       => 's7',
 
+	# s8: future dedicated wikidata
+	# 'wikidatawiki' => 's8',
+
 	# labs-related wikis
 	'labswiki'     => 'silver',
 	'labtestwiki'  => 'labtestweb2001',
@@ -141,19 +144,11 @@ $wgLBFactoryConf = [
 	's5' => [
 		'db1070' => 0,   # D1 2.8TB 160GB, master
 		'db1051' => 0,  # B3 2.8TB  96GB, vslow, dump in s5
-		# 'db1063' => 0,   # C5 2.8TB 128GB, vslow, dump in s8
-		# 'db1071' => 1,   # D1 2.8TB 160GB, future s8 master
 		'db1082' => 300, # A2 3.6TB 512GB, api
-		# 'db1087' => 500, # C2 3.6TB 512GB #s8
-		# 'db1092' => 300, # D2 3.6TB 512GB #s8
 		'db1096' => 1,   # A6 3.6TB 512GB, watchlist, recentchanges, contributions, logpager
 		'db1097:3315' => 1,   # D1 3.6TB 512GB, # rc, log: s4 and s5
-		# 'db1099' => 1,   # B2 3.6TB 512GB, watchlist, recentchanges, contributions, logpager #s8
 		'db1100' => 50,   # C2 3.6TB 512GB, old master #api
-		# 'db1101:3318' => 1,   # C2 3.6TB 512GB # rc, log: s7 and s8
-		# 'db1104' => 300,  # B3 3.6TB 512GB, api #s8
 		'db1106' => 500,  # D3 3.6TB 512GB
-		# 'db1109' => 500,  # D8 3.6TB 512GB #s8
 		# 'db1110' => 500,  # C3 3.6TB 512GB # dns-originated ip-conflict T165519
 	],
 	's6' => [
@@ -174,6 +169,17 @@ $wgLBFactoryConf = [
 		'db1094' => 500, # D2 3.6TB 512GB
 		'db1101:3317' => 1,   # C2 3.6TB 512GB # rc, log: s7 and s8
 	],
+	's8' => [
+		'db1071' => 0,   # D1 2.8TB 160GB, master
+		'db1063' => 0,   # C5 2.8TB 128GB, vslow, dump
+		'db1087' => 500, # C2 3.6TB 512GB, # db1095 master 
+		'db1092' => 300, # D2 3.6TB 512GB, api
+		'db1099:3318' => 1,   # B2 3.6TB 512GB # rc, log: s1 and s8
+		'db1101:3318' => 1,   # C2 3.6TB 512GB # rc, log: s7 and s8
+		'db1104' => 300,  # B3 3.6TB 512GB, api
+		'db1109' => 500,  # D8 3.6TB 512GB
+	],
+
 	'silver' => [
 		'silver' => 1,
 	],
@@ -241,6 +247,13 @@ $wgLBFactoryConf = [
 		'lagDetectionMethod' => 'pt-heartbeat',
 		'lagDetectionOptions' => [
 			'conds' => [ 'shard' => 's7', 'datacenter' => $wmfMasterDatacenter ]
+		],
+		'useGTIDs' => true
+	],
+	's8' => [
+		'lagDetectionMethod' => 'pt-heartbeat',
+		'lagDetectionOptions' => [
+			'conds' => [ 'shard' => 's8', 'datacenter' => $wmfMasterDatacenter ]
 		],
 		'useGTIDs' => true
 	],
@@ -475,6 +488,38 @@ $wgLBFactoryConf = [
 			'db1101:3317' => 1,
 		],
 	],
+	's8' => [
+		'vslow' => [
+			'db1063' => 1,
+		],
+		'dump' => [
+			'db1063' => 1,
+		],
+		'api' => [
+			'db1092' => 3,
+			'db1104' => 1,
+		],
+		'watchlist' => [
+			'db1099:3318' => 1,
+			'db1101:3318' => 1,
+		],
+		'recentchanges' => [
+			'db1099:3318' => 1,
+			'db1101:3318' => 1,
+		],
+		'recentchangeslinked' => [
+			'db1099:3318' => 1,
+			'db1101:3318' => 1,
+		],
+		'contributions' => [
+			'db1099:3318' => 1,
+			'db1101:3318' => 1,
+		],
+		'logpager' => [
+			'db1099:3318' => 1,
+			'db1101:3318' => 1,
+		],
+	],
 ],
 
 'groupLoadsByDB' => [],
@@ -539,7 +584,8 @@ $wgLBFactoryConf = [
 	'db1097:3314' => '10.64.48.11:3314', # do not remove or comment out
 	'db1097:3315' => '10.64.48.11:3315', # do not remove or comment out
 	'db1098' => '10.64.16.83', # do not remove or comment out
-	'db1099' => '10.64.16.84', # do not remove or comment out
+	'db1099:3311' => '10.64.16.84:3311', # do not remove or comment out
+	'db1099:3318' => '10.64.16.84:3318', # do not remove or comment out
 	'db1100' => '10.64.32.197', # do not remove or comment out
 	'db1101:3317' => '10.64.32.198:3317', # do not remove or comment out
 	'db1101:3318' => '10.64.32.198:3318', # do not remove or comment out
@@ -735,9 +781,10 @@ $wgLBFactoryConf = [
 	# 's2'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
 	# 'DEFAULT' => 'This request is served by a passive datacenter. If you see this something is really wrong.', # s3
 	# 's4'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
-	# 's5'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
+	# 's5'      => 'Temporary read-only time for maintenance, please try again in some minutes.',
 	# 's6'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
 	# 's7'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
+	's8'      => 'Temporary read-only time for maintenance, please try again in some minutes.',
 ],
 
 ];
