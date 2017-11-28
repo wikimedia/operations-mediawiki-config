@@ -4522,6 +4522,13 @@ $wgConf->settings = [
 		'书架' => 112, // T46308
 		'SB' => 112, // T46308, Subject
 	],
+	'+zhwikiquote' => [
+		'WQ' => NS_PROJECT, // T181374
+		'WT' => NS_PROJECT_TALK, // T181374
+		'T' => NS_TEMPLATE, // T181374
+		'H' => NS_HELP, // T181374
+		'CAT' => NS_CATEGORY // T181374
+	],
 	'+zhwikisource' => [
 		'作者' => 102, // Author
 		'作者讨论' => 103, // Author_talk
