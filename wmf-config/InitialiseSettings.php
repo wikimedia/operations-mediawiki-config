@@ -11934,6 +11934,10 @@ $wgConf->settings = [
 	'ukwiki' => [
 		NS_USER => 'noindex,follow', // T98926
 	],
+	'wikidatawiki' => [
+		NS_USER => 'noindex,follow',
+		NS_USER_TALK => 'noindex,follow',
+	],
 	'zh_classicalwiki' => [
 		106 => 'noindex,nofollow', // T163655
 		107 => 'noindex,nofollow', // T163655
