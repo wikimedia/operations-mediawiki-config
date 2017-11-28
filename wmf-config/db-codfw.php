@@ -581,7 +581,6 @@ $wgLBFactoryConf = [
 	'db1034' => '10.64.16.23', # do not remove or comment out
 	'db1039' => '10.64.16.28', # do not remove or comment out
 	'db1043' => '10.64.16.32', # do not remove or comment out
-	'db1044' => '10.64.16.33', # do not remove or comment out
 	'db1047' => '10.64.16.36', # do not remove or comment out
 	'db1051' => '10.64.16.76', # do not remove or comment out
 	'db1052' => '10.64.16.77', # do not remove or comment out
