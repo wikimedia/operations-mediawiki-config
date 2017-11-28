@@ -3415,7 +3415,7 @@ if ( $wmgUseOATHAuth ) {
 
 if ( $wmgUseORES ) {
 	wfLoadExtension( 'ORES' );
-	$wgOresBaseUrl = 'https://ores.discovery.wmnet/';
+	$wgOresBaseUrl = 'http://ores.discovery.wmnet:8081/';
 	$wgDefaultUserOptions['oresDamagingPref'] = $wmgOresDefaultSensitivityLevel;
 
 	// Backwards compatibility for upcoming config format change
