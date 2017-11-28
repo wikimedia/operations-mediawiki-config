@@ -47,6 +47,7 @@ if ( $wmgUseEventBus && $wmgDebugJobQueueEventBus ) {
 		$wgJobTypeConf['deleteLinks'] =
 		$wgJobTypeConf['updateBetaFeaturesUserCounts'] =
 		$wgJobTypeConf['RecordLintJob'] =
+		$wgJobTypeConf['wikibase-addUsagesForPage'] =
 			[ 'class' => 'JobQueueEventBus' ];
 	$wgJobTypeConf['default'] = [
 		'class' => 'JobQueueSecondTestQueue',
