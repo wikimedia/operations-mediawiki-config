@@ -682,35 +682,6 @@ function wmfLabsSettings() {
 		'wmgUseReadingLists' => [
 			'default' => true,
 		],
-		'wmgUseORES' => [
-			'ruwiki' => true, // T181168
-		],
-		'wgOresModels' => [
-			'default' => [
-				'damaging' => true,
-				'goodfaith' => false,
-				'draftquality' => false,
-				'reverted' => false,
-				'wp10' => false,
-			],
-			'enwiki' => [
-				'damaging' => true,
-				'goodfaith' => true,
-				'draftquality' => true,
-				'reverted' => false,
-				'wp10' => false,
-			],
-			'ruwiki' => [
-				'damaging' => true,
-				'goodfaith' => true,
-				'draftquality' => false,
-				'reverted' => false,
-				'wp10' => false,
-			],
-		],
-		'wgOresDraftQualityNS' => [
-			'enwiki' => [ 0 => true, 118 => true ],
-		],
 
 		// TODO(T166759): Remove this setting once it is also
 		// the default for production.
