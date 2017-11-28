@@ -11683,6 +11683,10 @@ $wgConf->settings = [
 ],
 # @} end of SVG related
 
+'wgRestrictionMethod' => [
+	'default' => 'firejail',
+],
+
 'wgFeedCacheTimeout' => [
 	'default' => 60,
 	'enwiki' => 15,
