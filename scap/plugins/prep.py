@@ -103,10 +103,12 @@ class CheckoutMediaWiki(cli.Application):
                 self.config['stage_dir'],
                 '{}{}'.format(self.arguments.prefix, old_branch)
             )
-            shutil.copytree(
-                os.path.join('/srv/patches', old_branch),
-                os.path.join('/srv/patches', self.arguments.branch)
-            )
+            patch_path = os.path.join('/srv/patches', self.arguments.branch)
+            if not os.path.exists(patch_path):
+                shutil.copytree(
+                    os.path.join('/srv/patches', old_branch),
+                    os.path.join(patch_path)
+                )
 
         if os.path.isdir(dest_dir):
             self.get_logger().info('Version already checked out')
