@@ -431,7 +431,7 @@ function wmfLabsSettings() {
 		],
 
 		'wmgUseWikidataBuild' => [
-			'default' => true,
+			'default' => false,
 		],
 
 		'wmgUseArticlePlaceholder' => [
