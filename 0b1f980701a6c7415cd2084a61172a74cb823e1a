@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0edf5380_fb5e0c16",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2017-11-29T11:18:22Z",
+      "side": 0,
+      "message": "db1082 should be in s5 according to our etherpad",
+      "revId": "0b1f980701a6c7415cd2084a61172a74cb823e1a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0edf5380_db5b4825",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2017-11-29T11:18:22Z",
+      "side": 1,
+      "message": "it has been rebuilt as multiinstance, so \u0027db1096:3315\u0027",
+      "revId": "7d0aa63c5b71a99a7974e90bcc6fa965015f2eeb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0edf5380_9bb0a040",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2017-11-29T11:18:22Z",
+      "side": 1,
+      "message": "currently serving in s5 while db1096 gets rebuilt as multi-instance",
+      "revId": "7d0aa63c5b71a99a7974e90bcc6fa965015f2eeb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0edf5380_7ba95cdc",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 402,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2017-11-29T11:18:22Z",
+      "side": 1,
+      "message": "db1096:3315",
+      "revId": "7d0aa63c5b71a99a7974e90bcc6fa965015f2eeb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
