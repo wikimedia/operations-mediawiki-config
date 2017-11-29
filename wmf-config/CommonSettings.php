@@ -3136,11 +3136,6 @@ if ( $wmgUseNewWikiDiff2Extension ) {
 	$wgWikiDiff2MovedParagraphDetectionCutoff = 25;
 }
 
-// XXX: T177060
-if ( $wmfRealm !== 'labs' ) {
-	$wgExtensionEntryPointListFiles[] = "$IP/extensions/Wikidata/extension-list-wikidata";
-}
-
 if ( $wmgUseCognate ) {
 	wfLoadExtension( 'Cognate' );
 	$wgCognateDb = 'cognate_' . $wmgUseCognate;
