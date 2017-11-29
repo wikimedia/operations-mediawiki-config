@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eee3df47_87a98a7b",
+        "filename": "docroot/noc/createTxtFileSymlinks.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-11-29T22:14:13Z",
+      "side": 1,
+      "message": "Indentation mismatch",
+      "range": {
+        "startLine": 66,
+        "startChar": 0,
+        "endLine": 66,
+        "endChar": 4
+      },
+      "revId": "41063c0c44cb3ea60495b2aa4f290e2ff0f612ff",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
