@@ -18012,7 +18012,6 @@ $wgConf->settings = [
 
 'wmgUseWikidataBuild' => [
 	'default' => false,
-	'enwiki' => true,
 ],
 
 'wmgUseWikibaseRepo' => [
