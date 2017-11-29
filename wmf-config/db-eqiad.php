@@ -146,7 +146,7 @@ $wgLBFactoryConf = [
 		'db1082' => 300, # A2 3.6TB 512GB, api
 		# 'db1087' => 500, # C2 3.6TB 512GB #s8
 		# 'db1092' => 300, # D2 3.6TB 512GB #s8
-		'db1096' => 1,   # A6 3.6TB 512GB, watchlist, recentchanges, contributions, logpager
+		# 'db1096' => 1,   # A6 3.6TB 512GB, watchlist, recentchanges, contributions, logpager #T178359
 		'db1097:3315' => 1,   # D1 3.6TB 512GB, # rc, log: s4 and s5
 		'db1099:3318' => 1,   # B2 3.6TB 512GB, watchlist, recentchanges, contributions, logpager #s8
 		'db1100' => 50,   # C2 3.6TB 512GB, old master #api
@@ -387,31 +387,31 @@ $wgLBFactoryConf = [
 			# 'db1104' => 1,
 		],
 		'watchlist' => [
-			'db1096' => 1,
+			# 'db1096' => 1,
 			'db1097:3315' => 1,
 			'db1099:3318' => 1,
 			# 'db1101:3318' => 1,
 		],
 		'recentchanges' => [
-			'db1096' => 1,
+			# 'db1096' => 1,
 			'db1097:3315' => 1,
 			'db1099:3318' => 1,
 			# 'db1101:3318' => 1,
 		],
 		'recentchangeslinked' => [
-			'db1096' => 1,
+			# 'db1096' => 1,
 			'db1097:3315' => 1,
 			'db1099:3318' => 1,
 			# 'db1101:3318' => 1,
 		],
 		'contributions' => [
-			'db1096' => 1,
+			# 'db1096' => 1,
 			'db1097:3315' => 1,
 			'db1099:3318' => 1,
 			# 'db1101:3318' => 1,
 		],
 		'logpager' => [
-			'db1096' => 1,
+			# 'db1096' => 1,
 			'db1097:3315' => 1,
 			'db1099:3318' => 1,
 			# 'db1101:3318' => 1,
