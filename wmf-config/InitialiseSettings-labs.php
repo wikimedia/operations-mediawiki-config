@@ -440,10 +440,6 @@ function wmfLabsSettings() {
 			'default' => false, // T69651
 		],
 
-		'wmgUseWikidataBuild' => [
-			'default' => false,
-		],
-
 		'wmgUseArticlePlaceholder' => [
 			'default' => false,
 			'wikidataclient' => true,
