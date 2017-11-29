@@ -4087,8 +4087,6 @@ $wgConf->settings = [
 	'+nowikimedia' => [
 		'Brukar' => NS_USER,
 		'Brukardiskusjon' => NS_USER_TALK,
-		'Fil' => NS_FILE,
-		'Fildiskusjon' => NS_FILE_TALK,
 		'Wikimedia_Noreg' => NS_PROJECT,
 		'Wikimedia_Norga' => NS_PROJECT,
 	],
@@ -5376,6 +5374,10 @@ $wgConf->settings = [
 	'nlwikimedia' => [
 		100 => 'De_Wikiaan',
 		101 => 'Overleg_De_Wikiaan',
+	],
+	'nowikimedia' => [
+		100 => 'Prosjekt', // T181625
+		101 => 'Prosjektdiskusjon', // T181625
 	],
 	'officewiki' => [
 		100 => 'Report',
@@ -7721,6 +7723,7 @@ $wgConf->settings = [
 	'+mlwikisource' => [ 100 => 1, 104 => 1 ],
 	'+nlwikisource' => [ 102 => 1 ],
 	'+nlwikivoyage' => [ 6 => 1, 14 => 1, 100 => 1, 104 => 1, 106 => 1 ],
+	'+nowikimedia' => [ 100 => 1 ], // T181625
 	'+nowikisource' => [ 102 => 1, 106 => 1 ],
 	'+plwiktionary' => [ 100 => 1, 102 => 1 ],
 	'+plwikisource' => [ 102 => 1, 104 => 1, 124 => 1, ], // T154711
@@ -12069,6 +12072,7 @@ $wgConf->settings = [
 	'+dewikivoyage' => [ 102 ], // T119420
 	'+frwiki' => [ 102 ], // T127688 - Projet
 	'+itwiki' => [ 102 ],
+	'+nowikimedia' => [ 100 ], // T181625 - Prosjekt
 	'+plwiki' => [ NS_USER, 100, 102 ], // T133978; 100 -> Portal, 102 -> Wikiproject
 	'+ruwiki' => [ 104 ], // T125509
 	'+ruwikinews' => [ 102 ], // T132241 - Комментарии
@@ -14967,6 +14971,9 @@ $wgConf->settings = [
 	// Wikimanias
 
 	// Wikimedias
+	'+nowikimedia' => [
+		'Prosjekt' => true, // T181625
+	],
 	'+sewikimedia' => [
 		'Projekt' => true, // T62882
 	],
