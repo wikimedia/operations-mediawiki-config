@@ -148,9 +148,9 @@ $wgLBFactoryConf = [
 		# 'db1096:3315' => 1,   # A6 3.6TB 512GB, watchlist, recentchanges, contributions, logpager
 		'db1097:3315' => 1,   # D1 3.6TB 512GB, # rc, log: s4 and s5
 		'db1099:3318' => 1,   # B2 3.6TB 512GB, watchlist, recentchanges, contributions, logpager #s8
-		'db1100' => 50,   # C2 3.6TB 512GB, old master #api
-		'db1106' => 500,  # D3 3.6TB 512GB
-		# 'db1110' => 500,  # C3 3.6TB 512GB # dns-originated ip-conflict T165519
+		'db1100' => 50,  # C2 3.6TB 512GB, old master #api
+		'db1106' => 500, # D3 3.6TB 512GB
+		'db1110' => 1,   # C3 3.6TB 512GB # low load because T165519
 	],
 	's6' => [
 		'db1061' => 0,   # C3 2.8TB 128GB, master
