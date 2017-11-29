@@ -63,6 +63,7 @@ mwconfig_files=(
 	wmf-config/extension-list
 	wmf-config/extension-list-labs
 	wmf-config/extension-list-wikitech
+	dblists
 )
 
 for i in ./*
@@ -81,9 +82,4 @@ done
 for i in "${mwconfig_files[@]}"
 do
 	ln -s ../../../$i "./$(basename $i)"
-done
-
-for i in ../../../dblists/*
-do
-	ln -s "$i" "./$(basename $i)"
 done

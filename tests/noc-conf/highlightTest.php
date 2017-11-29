@@ -53,7 +53,7 @@ class NocConfHighlightTest extends PHPUnit_Framework_TestCase {
 	public static function provideValidCases() {
 		return [
 			[ 'langlist', 'zh-classical', 'From root, without extension' ],
-			[ 'all.dblist', 'enwiki', 'From root, dblist file' ],
+			[ 'dblists/all.dblist', 'enwiki', 'From root, dblist file' ],
 			[ 'ExampleValid.php', 'smoigel', 'From wmf-config, dblist file' ],
 		];
 	}
