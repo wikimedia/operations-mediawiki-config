@@ -18001,6 +18001,8 @@ $wgConf->settings = [
 
 'wmgUseWikidataBuild' => [
 	'default' => true,
+	'testwiki' => false,
+	'testwikidatawiki' => false,
 ],
 
 'wmgUseWikibaseRepo' => [
