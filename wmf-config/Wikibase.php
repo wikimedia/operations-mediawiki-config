@@ -1,8 +1,22 @@
 <?php
 
-// Load old build config T176948
-// TODO move that config into this file at some point...
-require_once "{$wmfConfigDir}/Wikibase-buildentry.php";
+// Load the Repo extensions
+if ( !empty( $wmgUseWikibaseRepo ) ) {
+	include_once "$IP/extensions/Wikibase/repo/Wikibase.php";
+	include_once "$IP/extensions/Wikidata.org/WikidataOrg.php";
+	include_once "$IP/extensions/PropertySuggester/PropertySuggester.php";
+	include_once "$IP/extensions/Quality/WikibaseQuality.php";
+	include_once "$IP/extensions/Constraints/WikibaseQualityConstraints.php";
+}
+
+// Load the Client extensions
+if ( !empty( $wmgUseWikibaseClient ) ) {
+	include_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
+	wfLoadExtension( 'WikimediaBadges' );
+	if ( !empty( $wmgUseArticlePlaceholder ) ) {
+		wfLoadExtension( 'ArticlePlaceholder' );
+	}
+}
 
 // This allows cache invalidations to be in sync with deploys
 // and not shared across different versions of wikibase.
