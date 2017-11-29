@@ -19724,19 +19724,7 @@ $wgConf->settings = [
 
 // T152540
 'wgFragmentMode' => [
-	'default' => [ 'legacy', 'html5' ],
-	'testwiki' => [ 'html5', 'legacy' ],
-	'test2wiki' => [ 'html5', 'legacy' ],
-	'mediawikiwiki' => [ 'html5', 'legacy' ],
-	'ruwiki' => [ 'html5', 'legacy' ],
-	'ruwikibooks' => [ 'html5', 'legacy' ],
-	'ruwikimedia' => [ 'html5', 'legacy' ],
-	'ruwikinews' => [ 'html5', 'legacy' ],
-	'ruwikiquote' => [ 'html5', 'legacy' ],
-	'ruwikisource' => [ 'html5', 'legacy' ],
-	'ruwikiversity' => [ 'html5', 'legacy' ],
-	'ruwikivoyage' => [ 'html5', 'legacy' ],
-	'ruwiktionary' => [ 'html5', 'legacy' ],
+	'default' => [ 'html5', 'legacy' ],
 ],
 
 'wmgUse3d' => [
