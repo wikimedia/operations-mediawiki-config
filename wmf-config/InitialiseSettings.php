@@ -4854,6 +4854,10 @@ $wgConf->settings = [
 		'page' => 102,
 		'index' => 104,
 	],
+	'cywikisource' => [
+		'page' => 104,
+		'index' => 106,
+	],
 	'dawikisource' => [
 		'page' => 104,
 		'index' => 106,
@@ -6249,12 +6253,6 @@ $wgConf->settings = [
 	'cswikisource' => [
 		100 => 'Autor',
 		101 => 'Diskuse_k_autorovi',
-	],
-	'cywikisource' => [
-		104 => 'Tudalen',          // T41264 (Page)
-		105 => 'Sgwrs_Tudalen',    // T41264
-		106 => 'Indecs',           // T41264 (Index)
-		107 => 'Sgwrs_Indecs',     // T41264
 	],
 	'dawikisource' => [
 		102 => 'Forfatter', // T9796
