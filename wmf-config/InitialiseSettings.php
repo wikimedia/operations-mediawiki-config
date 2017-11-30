@@ -18010,6 +18010,10 @@ $wgConf->settings = [
 	'wikidata' => true,
 ],
 
+'wmgUseWikidataBuild' => [
+	'default' => true,
+],
+
 'wmgUseWikibaseRepo' => [
 	'default' => false,
 	'wikidata' => true,
