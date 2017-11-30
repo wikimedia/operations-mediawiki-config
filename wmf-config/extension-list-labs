@@ -1,4 +1,3 @@
-$IP/extensions/ArticleCreationWorkflow/extension.json
 $IP/extensions/EmailAuth/extension.json
 $IP/extensions/FileImporter/extension.json
 $IP/extensions/FileExporter/extension.json
