@@ -322,10 +322,6 @@ if ( $wmgUsePerformanceInspector ) {
 	wfLoadExtension( 'PerformanceInspector' );
 }
 
-if ( $wmgUseAdvancedSearch ) {
-	wfLoadExtension( 'AdvancedSearch' );
-}
-
 if ( $wmgUseUniversalLanguageSelector ) {
 	$wgDefaultUserOptions['compact-language-links'] = 0;
 }
