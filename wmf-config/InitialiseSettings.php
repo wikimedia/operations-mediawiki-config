@@ -13302,6 +13302,7 @@ $wgConf->settings = [
 		'aleph500.biblacad.ro',             // Domain of the Romanian academy - T178753
 		'images.collection.cooperhewitt.org', // Cooper Hewitt - T180241
 		'*.nli.org.il',                     // National Library of Israel - T1881179
+		'studiezaal.nijmegen.nl'            // Regionaal Archief Nijmegen, NL - T181713
 	],
 ],
 
