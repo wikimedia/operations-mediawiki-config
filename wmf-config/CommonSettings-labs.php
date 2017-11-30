@@ -344,11 +344,6 @@ if ( $wmgUseEmailAuth ) {
 	};
 }
 
-if ( $wmgUseTimeless ) {
-	// Test new Isarra responsive skin
-	wfLoadSkin( 'Timeless' ); // T160643
-}
-
 if ( $wmgUseReadingLists ) {
 	wfLoadExtension( 'ReadingLists' );
 	$wgReadingListsCentralWiki = 'metawiki';
