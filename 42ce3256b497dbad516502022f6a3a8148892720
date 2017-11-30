@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eee3df47_e01b1784",
+        "filename": "wmf-config/Wikibase-buildentry.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2017-11-30T20:43:54Z",
+      "side": 1,
+      "message": "Maybe this should be the opposite way around, as if wmgUseWikidataBuild is not set the default is the else... which is having us switched away from the build.",
+      "range": {
+        "startLine": 10,
+        "startChar": 5,
+        "endLine": 10,
+        "endChar": 25
+      },
+      "revId": "42ce3256b497dbad516502022f6a3a8148892720",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_20169f5a",
+        "filename": "wmf-config/Wikibase-buildentry.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2017-11-30T20:43:54Z",
+      "side": 1,
+      "message": "Incorrect directory, name in build is different to extension name.",
+      "range": {
+        "startLine": 41,
+        "startChar": 31,
+        "endLine": 41,
+        "endChar": 38
+      },
+      "revId": "42ce3256b497dbad516502022f6a3a8148892720",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_001b9b83",
+        "filename": "wmf-config/Wikibase-buildentry.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2017-11-30T20:43:54Z",
+      "side": 1,
+      "message": "Incorrect directory, name in build is different to extension name.",
+      "range": {
+        "startLine": 42,
+        "startChar": 31,
+        "endLine": 42,
+        "endChar": 42
+      },
+      "revId": "42ce3256b497dbad516502022f6a3a8148892720",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
