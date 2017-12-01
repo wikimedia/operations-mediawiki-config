@@ -114,7 +114,7 @@ $wgLBFactoryConf = [
 		'db2071'      => 50,  # A6 3.6TB 512GB, api
 		'db2072'      => 500, # B6 3.6TB 512GB, # mariadb 10.1
 		'db2088:3311' => 1, # D1 3.3TB 512GB # rc, log: s1 and s2
-		'db2092:3311' => 1, # B8 3.3TB 512GB # rc, log: s1 and s3
+		# 'db2085:3311' => 1, # A5 3.3TB 512GB # rc, log: s1 and s8
 	],
 	's2' => [
 		'db2017'      => 0,   # B6 2.9TB  96GB, master
@@ -129,13 +129,11 @@ $wgLBFactoryConf = [
 	],
 	/* s3 */ 'DEFAULT' => [
 		'db2018'      => 0,   # B6 2.9TB  96GB, master
-		'db2036'      => 50,  # C6 2.9TB 160GB, rc, log
+		'db2036'      => 50,  # C6 2.9TB 160GB
 		'db2043'      => 50,  # C6 2.9TB 160GB, dump (inactive), vslow
-		'db2050'      => 150, # C6 2.9TB 160GB, api
+		'db2050'      => 150, # C6 2.9TB 160GB
 		'db2057'      => 400, # D6 3.3TB 160GB
 		'db2074'      => 400, # D6 3.3TB 512GB # InnoDB compressed
-		'db2085:3313' => 1, # A5 3.3TB 512GB # rc, log: s3 and s5(s8)
-		'db2092:3313' => 1, # B8 3.3TB 512GB # rc, log: s1 and s3
 	],
 	's4' => [
 		'db2051'      => 0,   # B8 2.9TB 160GB, master
@@ -187,7 +185,7 @@ $wgLBFactoryConf = [
 		'db2081'      => 10,  # A6 3.3TB 512GB, api
 		'db2082'      => 100, # B6 3.3TB 512GB
 		'db2083'      => 100, # C6 3.3TB 512GB
-		'db2085:3318' => 1, # A5 3.3TB 512GB # rc, log: s3 and s8
+		'db2085:3318' => 1, # A5 3.3TB 512GB # rc, log: s1 and s8
 		'db2086:3318' => 1, # B1 3.3TB 512GB # rc, log: s7 and s8
 	],
 
@@ -276,31 +274,31 @@ $wgLBFactoryConf = [
 			'db2034' => 1,
 			'db2042' => 1,
 			'db2088:3311' => 1,
-			'db2092:3311' => 1,
+			# 'db2085:3311' => 1,
 		],
 		'recentchanges' => [
 			'db2034' => 1,
 			'db2042' => 1,
 			'db2088:3311' => 1,
-			'db2092:3311' => 1,
+			# 'db2085:3311' => 1,
 		],
 		'recentchangeslinked' => [
 			'db2034' => 1,
 			'db2042' => 1,
 			'db2088:3311' => 1,
-			'db2092:3311' => 1,
+			# 'db2085:3311' => 1,
 		],
 		'contributions' => [
 			'db2034' => 1,
 			'db2042' => 1,
 			'db2088:3311' => 1,
-			'db2092:3311' => 1,
+			# 'db2085:3311' => 1,
 		],
 		'logpager' => [
 			'db2034' => 1,
 			'db2042' => 1,
 			'db2088:3311' => 1,
-			'db2092:3311' => 1,
+			# 'db2085:3311' => 1,
 		],
 		'dump' => [
 			'db2055' => 1,
@@ -353,39 +351,11 @@ $wgLBFactoryConf = [
 		],
 	],
 	/* s3 */ 'DEFAULT' => [
-		'watchlist' => [
-			'db2036' => 1,
-			'db2085:3313' => 1,
-			'db2092:3313' => 1,
-		],
-		'recentchanges' => [
-			'db2036' => 1,
-			'db2085:3313' => 1,
-			'db2092:3313' => 1,
-		],
-		'recentchangeslinked' => [
-			'db2036' => 1,
-			'db2085:3313' => 1,
-			'db2092:3313' => 1,
-		],
-		'contributions' => [
-			'db2036' => 1,
-			'db2085:3313' => 1,
-			'db2092:3313' => 1,
-		],
-		'logpager' => [
-			'db2036' => 1,
-			'db2085:3313' => 1,
-			'db2092:3313' => 1,
-		],
 		'dump' => [
 			'db2043' => 1,
 		],
 		'vslow' => [
 			'db2043' => 1,
-		],
-		'api' => [
-			'db2050' => 1,
 		],
 	],
 	's4' => [
@@ -722,7 +692,7 @@ $wgLBFactoryConf = [
 	'db2083' => '10.192.32.170', # do not remove or comment out
 	'db2084:3314' => '10.192.48.86:3314', # do not remove or comment out
 	'db2084:3315' => '10.192.48.86:3315', # do not remove or comment out
-	'db2085:3313' => '10.192.0.8:3313', # do not remove or comment out
+	'db2085:3311' => '10.192.0.8:3311', # do not remove or comment out
 	'db2085:3318' => '10.192.0.8:3318', # do not remove or comment out
 	'db2086:3318' => '10.192.16.40:3318', # do not remove or comment out
 	'db2086:3317' => '10.192.16.40:3317', # do not remove or comment out
@@ -734,8 +704,6 @@ $wgLBFactoryConf = [
 	'db2089:3316' => '10.192.0.9:3316', # do not remove or comment out
 	'db2091:3312' => '10.192.0.10:3312', # do not remove or comment out
 	'db2091:3314' => '10.192.0.10:3314', # do not remove or comment out
-	'db2092:3311' => '10.192.16.41:3311', # do not remove or comment out
-	'db2092:3313' => '10.192.16.41:3313', # do not remove or comment out
 	'virt1000' => '208.80.154.18', # do not remove or comment out
 	'silver' => '208.80.154.136', # do not remove or comment out
 	'labtestweb2001' => '208.80.153.14', # do not remove or comment out
