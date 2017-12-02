@@ -2467,6 +2467,7 @@ $wgConf->settings = [
 	'vowiki' => 'Vükiped',
 	'vowikibooks' => 'Vükibuks',
 	'vowiktionary' => 'Vükivödabuk',
+	'wawiktionary' => 'Wiccionaire', // T181782
 	'wbwikimedia' => 'West Bengal Wikimedians', // T162510
 	'wg_enwiki' => 'Wikipedia Working Group',
 	'wikimaniateamwiki' => 'WikimaniaTeam',
@@ -2971,6 +2972,7 @@ $wgConf->settings = [
 	'vowiki' => 'Vükiped',
 	'vowikibooks' => 'Vükibuks',
 	'vowiktionary' => 'Vükivödabuk',
+	'wawiktionary' => 'Wiccionaire', // T181782
 	'wikimaniateamwiki' => 'WikimaniaTeam',
 	'xmfwiki' => 'ვიკიპედია',
 	'yiwiki' => 'װיקיפּעדיע',
@@ -3087,6 +3089,7 @@ $wgConf->settings = [
 	'ukwiktionary' => 'Обговорення_Вікісловника',
 	'ukwikinews' => 'Обговорення_Вікіновин', // T50843
 	'vepwiki' => 'Paginad_Vikipedii',
+	'wawiktionary' => 'Wiccionaire_copene', // T181782
 	'xmfwiki' => 'ვიკიპედია_სხუნუა',
 ],
 # @} end of wgMetaNamespaceTalk
