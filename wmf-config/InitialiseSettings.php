@@ -106,9 +106,6 @@ $wgConf->settings = [
 	# Wikis at the wrong domain
 	# FIXME: rename these wikis (T21986)
 	'alswiki' => 'gsw',
-	'alswiktionary' => 'gsw',
-	'alswikibooks' => 'gsw',
-	'alswikiquote' => 'gsw',
 	'bat_smgwiki' => 'sgs',
 	'bhwiki' => 'bho',
 	'bhwiktionary' => 'bho',
@@ -257,7 +254,6 @@ $wgConf->settings = [
 	'arbcom_dewiki' => 'Europe/Berlin',
 	'arbcom_fiwiki' => 'Europe/Helsinki',
 	'arbcom_nlwiki' => 'Europe/Berlin',
-	'alswiktionary' => 'Europe/Berlin',
 	'aswikisource' => 'Asia/Kolkata', // T45129
 	'atjwiki' => 'America/Montreal', // T167714
 	'barwiki' => 'Europe/Berlin',
@@ -11370,7 +11366,6 @@ $wgConf->settings = [
 
 	// content wikis
 	'alswiki' => [ 'de', 'wikt', 'b', 'q', 'en', 'fr', 'it', 'b:de' ],
-	'alswikibooks' => [ 'b:de', 'w' ], // T11163
 	'arbcom_enwiki' => [ 'meta', 'w' ], // T19730
 	'arbcom_dewiki' => [ 'w', 'w:de', ],
 	'arwiki' => [ 'meta' ],
@@ -19228,8 +19223,6 @@ $wgConf->settings = [
 	'itwiki' => [ 'driver' => 'RemexHtml' ], // T181190
 
 	// T182042: Enable RemexHtml on wikis with zero high-priority linter errors
-	'alswikiquote' => [ 'driver' => 'RemexHtml' ],
-	'alswiktionary' => [ 'driver' => 'RemexHtml' ],
 	'angwikisource' => [ 'driver' => 'RemexHtml' ],
 	'astwikibooks' => [ 'driver' => 'RemexHtml' ],
 	'astwikiquote' => [ 'driver' => 'RemexHtml' ],
@@ -19314,8 +19307,6 @@ $wgConf->settings = [
 	'miwikibooks' => [ 'driver' => 'RemexHtml' ],
 	'mkwiktionary' => [ 'driver' => 'RemexHtml' ],
 	'mnwikibooks' => [ 'driver' => 'RemexHtml' ],
-	'mowiki' => [ 'driver' => 'RemexHtml' ],
-	'mowiktionary' => [ 'driver' => 'RemexHtml' ],
 	'mtwiktionary' => [ 'driver' => 'RemexHtml' ],
 	'muswiki' => [ 'driver' => 'RemexHtml' ],
 	'mywikibooks' => [ 'driver' => 'RemexHtml' ],
