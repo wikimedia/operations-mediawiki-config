@@ -19314,8 +19314,6 @@ $wgConf->settings = [
 	'miwikibooks' => [ 'driver' => 'RemexHtml' ],
 	'mkwiktionary' => [ 'driver' => 'RemexHtml' ],
 	'mnwikibooks' => [ 'driver' => 'RemexHtml' ],
-	'mowiki' => [ 'driver' => 'RemexHtml' ],
-	'mowiktionary' => [ 'driver' => 'RemexHtml' ],
 	'mtwiktionary' => [ 'driver' => 'RemexHtml' ],
 	'muswiki' => [ 'driver' => 'RemexHtml' ],
 	'mywikibooks' => [ 'driver' => 'RemexHtml' ],
