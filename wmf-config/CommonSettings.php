@@ -1096,9 +1096,6 @@ if ( $wmgUsePoolCounter ) {
 if ( $wmgUseScore ) {
 	wfLoadExtension( 'Score' );
 	$wgScoreSafeMode = false;
-	$wgScoreLilypond = '/usr/local/bin/mediawiki-firejail-lilypond';
-	$wgScoreAbc2Ly = '/usr/local/bin/mediawiki-firejail-abc2ly';
-	$wgScoreTimidity = '/usr/local/bin/mediawiki-firejail-timidity';
 	$wgScoreFileBackend = $wmgScoreFileBackend;
 	$wgScorePath = $wmgScorePath;
 }
