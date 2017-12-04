@@ -19764,9 +19764,6 @@ $wgConf->settings = [
 
 'wgCommentTableSchemaMigrationStage' => [
 	'default' => MIGRATION_OLD,
-	'testwiki' => MIGRATION_WRITE_BOTH,
-	'test2wiki' => MIGRATION_WRITE_BOTH,
-	'testwikidatawiki' => MIGRATION_WRITE_BOTH,
 ],
 
 ];
