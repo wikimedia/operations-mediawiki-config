@@ -19216,13 +19216,13 @@ $wgConf->settings = [
 
 	'mediawikiwiki' => [ 'driver' => 'RemexHtml' ],
 	'testwiki' => [ 'driver' => 'RemexHtml' ],
+	'eswikiversity' => [ 'driver' => 'RemexHtml' ],
+	'wikitech' => [ 'driver' => 'RemexHtml' ],
 
 	'fawiki' => [ 'driver' => 'RemexHtml' ], // T176150
 	'nowiki' => [ 'driver' => 'RemexHtml' ], // T177989
-
-	'eswikiversity' => [ 'driver' => 'RemexHtml' ],
-
-	'wikitech' => [ 'driver' => 'RemexHtml' ],
+	'dewiki' => [ 'driver' => 'RemexHtml' ], // T181188
+	'itwiki' => [ 'driver' => 'RemexHtml' ], // T181190
 ],
 
 // Cache ResourceLoader modules in localStorage
