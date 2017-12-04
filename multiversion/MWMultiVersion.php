@@ -266,7 +266,8 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Handler for the wfShellMaintenanceCmd hook.
+	 * Handler for the wfShellWikiCmd hook.
+	 *
 	 * This converts shell commands like "php $IP/maintenance/foo.php" into
 	 * commands that use the "MWScript.php" wrapper, for example:
 	 * "php /srv/mediawiki-staging/multiversion/MWScript.php maintenance/foo.php"

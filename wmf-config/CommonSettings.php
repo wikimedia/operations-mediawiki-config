@@ -258,7 +258,7 @@ $wgAPIMaxLagThreshold = 3;
 
 ini_set( 'memory_limit', $wmgMemoryLimit );
 
-# Rewrite commands given to wfShellWikiCmd() to use Het-Deploy
+# Change calls to wfShellWikiCmd() to use MWScript.php wrapper
 $wgHooks['wfShellWikiCmd'][] = 'MWMultiVersion::onWfShellMaintenanceCmd';
 
 setlocale( LC_ALL, 'en_US.UTF-8' );
