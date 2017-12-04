@@ -688,9 +688,5 @@ function wmfLabsSettings() {
 		'wgCommentTableSchemaMigrationStage' => [
 			'default' => MIGRATION_WRITE_BOTH,
 		],
-
-		'wmgUseORES' => [
-			'simplewiki' => true, // T181848
-		],
 	];
 } # wmflLabsSettings()

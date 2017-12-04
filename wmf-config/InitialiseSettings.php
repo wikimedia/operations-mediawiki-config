@@ -18975,6 +18975,7 @@ $wgConf->settings = [
 	'ptwiki' => true, // T139692
 	'rowiki' => true, // T170723
 	'ruwiki' => true,
+	'simplewiki' => true, // T181848
 	'sqwiki' => true, // T170723
 	'trwiki' => true, // T139992
 
