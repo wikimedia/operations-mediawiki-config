@@ -52,6 +52,24 @@
       "revId": "e1bbd01775efaae012a47a7168c6d57275d1f9fe",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_6386da6b",
+        "filename": "robots.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 3963
+      },
+      "writtenOn": "2017-12-04T18:49:03Z",
+      "side": 0,
+      "message": "Hello Nemo_bis, and thanks for your review.\nI don\u0027t really understand about what whitelist that you\u0027re talking about. I don\u0027t see anything like that in this file. Where is it ?",
+      "parentUuid": "0e81134c_afa98323",
+      "revId": "e1bbd01775efaae012a47a7168c6d57275d1f9fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
