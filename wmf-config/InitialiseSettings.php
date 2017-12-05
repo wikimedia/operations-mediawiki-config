@@ -18073,44 +18073,15 @@ $wgConf->settings = [
 
 // T151717 and T177153
 'wmgWikibaseDisabledUsageAspects' => [
-	'default' => [ 'D' => 'O', 'C' => 'O' ],
+	'default' => [ 'C' => 'O' ],
 	// Statement + description usage tracking wikis
 	'cawiki' => [],
 	'cewiki' => [],
 	'elwiki' => [],
 	'kowiki' => [],
 	'trwiki' => [],
-	// Description usage tracking wikis
-	'dewiki' => [ 'C' => 'O' ],
-	'hewiki' => [ 'C' => 'O' ],
-	'lvwiki' => [ 'C' => 'O' ],
-	'mediawikiwiki' => [ 'C' => 'O' ],
-	'metawiki' => [ 'C' => 'O' ],
-	'nnwiki' => [ 'C' => 'O' ],
-	'nowiki' => [ 'C' => 'O' ],
-	'ruwikinews' => [ 'C' => 'O' ],
-	'zhwiki' => [ 'C' => 'O' ],
-	// First 20 small wikis with WikibaseClient (T177155)
-	'aawiki' => [ 'C' => 'O' ],
-	'aawikibooks' => [ 'C' => 'O' ],
-	'abwiki' => [ 'C' => 'O' ],
-	'adywiki' => [ 'C' => 'O' ],
-	'afwikibooks' => [ 'C' => 'O' ],
-	'afwikiquote' => [ 'C' => 'O' ],
-	'akwiki' => [ 'C' => 'O' ],
-	'akwikibooks' => [ 'C' => 'O' ],
-	'alswikibooks' => [ 'C' => 'O' ],
-	'alswikiquote' => [ 'C' => 'O' ],
-	'amwikiquote' => [ 'C' => 'O' ],
-	'angwikibooks' => [ 'C' => 'O' ],
-	'angwikiquote' => [ 'C' => 'O' ],
-	'angwikisource' => [ 'C' => 'O' ],
-	'arcwiki' => [ 'C' => 'O' ],
-	'astwikibooks' => [ 'C' => 'O' ],
-	'astwikiquote' => [ 'C' => 'O' ],
-	'aswikibooks' => [ 'C' => 'O' ],
-	'aswikisource' => [ 'C' => 'O' ],
-	'atjwiki' => [ 'C' => 'O' ],
+	// Description usage tracking for commons should be disabled
+	'commonswiki' => [ 'C' => 'O', 'D' => 'O' ];
 ],
 
 // T172914
