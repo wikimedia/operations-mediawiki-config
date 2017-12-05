@@ -3,7 +3,7 @@
 // Load the Repo extensions
 if ( !empty( $wmgUseWikibaseRepo ) ) {
 	include_once "$IP/extensions/Wikibase/repo/Wikibase.php";
-	include_once "$IP/extensions/Wikidata.org/WikidataOrg.php";
+	wfLoadExtension( 'Wikidata.org' );
 	wfLoadExtension( 'PropertySuggester' );
 	wfLoadExtension( 'WikibaseQuality' );
 	wfLoadExtension( 'WikibaseQualityConstraints' );
