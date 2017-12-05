@@ -109,7 +109,7 @@ $IP/extensions/Petition/extension.json
 $IP/extensions/Poem/extension.json
 $IP/extensions/Popups/extension.json
 $IP/extensions/ProofreadPage/extension.json
-$IP/extensions/PropertySuggester/PropertySuggester.php
+$IP/extensions/PropertySuggester/extension.json
 $IP/extensions/PoolCounter/extension.json
 $IP/extensions/QuickSurveys/extension.json
 $IP/extensions/Quiz/extension.json

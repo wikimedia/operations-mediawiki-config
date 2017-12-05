@@ -4,7 +4,7 @@
 if ( !empty( $wmgUseWikibaseRepo ) ) {
 	include_once "$IP/extensions/Wikibase/repo/Wikibase.php";
 	include_once "$IP/extensions/Wikidata.org/WikidataOrg.php";
-	include_once "$IP/extensions/PropertySuggester/PropertySuggester.php";
+	wfLoadExtension( 'PropertySuggester' );
 	include_once "$IP/extensions/WikibaseQuality/WikibaseQuality.php";
 	include_once "$IP/extensions/WikibaseQualityConstraints/WikibaseQualityConstraints.php";
 }
