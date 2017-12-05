@@ -19627,6 +19627,13 @@ $wgConf->settings = [
 	'votewiki' => false,
 ],
 
+// Temporary code for the first test of htmlCacheUpdate
+// on the EventBus JobQueue -disable old queue on wiktionaries only
+'wmgDisableHTMLCacheUpdateInRedis' => [
+	'default' => false,
+	'wiktionary' => true,
+],
+
 'wmgUseCapiunto' => [
 	'default' => false,
 	'testwiki' => true,
