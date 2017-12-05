@@ -121,7 +121,7 @@ $wgLBFactoryConf = [
 		'db1060' => 1,   # C2 2.8TB  96GB, api #master for sanitarium #T153743
 		'db1074' => 300, # A2 3.6TB 512GB, api
 		'db1076' => 500, # B1 3.6TB 512GB
-		'db1090' => 500, # C3 3.6TB 512GB
+		# 'db1090' => 500, # C3 3.6TB 512GB #T174569
 		'db1103:3312' => 1,  # A3 3.6TB 512GB # rc, log: s2 and s4
 		'db1105:3312' => 1,   # C3 3.6TB 512GB # rc, log: s1 and s2
 	],
