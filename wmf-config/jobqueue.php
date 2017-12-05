@@ -49,6 +49,9 @@ if ( $wmgUseEventBus && $wmgDebugJobQueueEventBus ) {
 		$wgJobTypeConf['RecordLintJob'] =
 		$wgJobTypeConf['wikibase-addUsagesForPage'] =
 			[ 'class' => 'JobQueueEventBus' ];
+	if ( $wmgDisableHTMLCacheUpdateInRedis ) {
+		$wgJobTypeConf['htmlCacheUpdate'] = [ 'class' => 'JobQueueEventBus' ];
+	}
 	$wgJobTypeConf['default'] = [
 		'class' => 'JobQueueSecondTestQueue',
 		'mainqueue' => $jobQueueFederatedConfig,
