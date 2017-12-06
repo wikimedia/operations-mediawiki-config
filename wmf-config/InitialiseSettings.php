@@ -19905,7 +19905,8 @@ $wgConf->settings = [
 
 'wmgUseNewWikiDiff2Extension' => [
 	'default' => false,
-	'group0' => true,
+	'group0' => true, // T177891
+	'dewiki' => true, // T180476
 ],
 
 'wgCommentTableSchemaMigrationStage' => [
