@@ -19124,6 +19124,7 @@ $wgConf->settings = [
 	'ptwiki' => true, // T139692
 	'rowiki' => true, // T170723
 	'ruwiki' => true,
+	'simplewiki' => true, // T182012
 	'sqwiki' => true, // T170723
 	'trwiki' => true, // T139992
 
@@ -19152,6 +19153,21 @@ $wgConf->settings = [
 'wgOresFiltersThresholds' => [
 	'default' => [],
 	'enwiki' => [
+		'damaging' => [
+			'likelygood' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.99)' ],
+			'maybebad' => [ 'min' => 'recall_at_precision(min_precision=0.15)', 'max' => 1 ],
+			'likelybad' => [ 'min' => 'recall_at_precision(min_precision=0.45)', 'max' => 1 ],
+			// verylikelybad uses default
+		],
+		'goodfaith' => [
+			'likelygood' => [ 'min' => 'recall_at_precision(min_precision=0.99)', 'max' => 1 ],
+			'maybebad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.15)' ],
+			// likelybad uses default
+			'verylikelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.9)' ],
+		],
+	],
+	'simplewiki' => [
+		// Same as enwiki
 		'damaging' => [
 			'likelygood' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.99)' ],
 			'maybebad' => [ 'min' => 'recall_at_precision(min_precision=0.15)', 'max' => 1 ],
