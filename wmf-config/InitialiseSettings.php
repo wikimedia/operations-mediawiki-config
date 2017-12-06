@@ -9994,7 +9994,7 @@ $wgConf->settings = [
 		'sysop' => [ 'curator' ], // T113109
 	],
 	'+eswiki' => [
-		'bureaucrat' => [ 'rollbacker' ],
+		'bureaucrat' => [ 'accountcreator' ], // T182201
 		'sysop' => [ 'rollbacker', 'autopatrolled', 'patroller' ],
 	],
 	'+eswikibooks' => [
@@ -10760,7 +10760,7 @@ $wgConf->settings = [
 		'sysop' => [ 'abusefilter', 'autopatrolled', ],
 	],
 	'+eswiki' => [
-		'bureaucrat' => [ 'rollbacker' ],
+		'bureaucrat' => [ 'accountcreator' ], // T182201
 		'sysop' => [ 'rollbacker', 'autopatrolled', 'patroller' ],
 	],
 	'+eswikibooks' => [
