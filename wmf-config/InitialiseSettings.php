@@ -19911,8 +19911,7 @@ $wgConf->settings = [
 ],
 
 'wmgUseReadingLists' => [
-	'default' => false,
-	'testwiki' => true,
+	'default' => true,
 	'private' => false,
 	'fishbowl' => false,
 	'nonglobal' => false,
