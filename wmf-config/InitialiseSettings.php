@@ -11985,6 +11985,7 @@ $wgConf->settings = [
 	'wikimania' => false,
 
 	// Individual wikis
+	'alswiki' => false, // T182154
 	'aswiki' => false,
 	'bewikimedia' => false,
 	'bnwiki' => false,
