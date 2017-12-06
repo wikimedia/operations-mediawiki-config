@@ -3638,6 +3638,10 @@ if ( $wmgUse3d && $wmgUseMultimediaViewer ) {
 	$wg3dProcessor = [ '/usr/bin/xvfb-run', '-a', '-s', '-ac -screen 0 1280x1024x24' ,'/srv/deployment/3d2png/deploy/src/3d2png.js' ];
 }
 
+if ( $wmgUseReadingLists ) {
+	wfLoadExtension( 'ReadingLists' );
+}
+
 if ( $wmfRealm === 'labs' ) {
 	require "$wmfConfigDir/CommonSettings-labs.php";
 }
