@@ -13728,6 +13728,8 @@ $wgConf->settings = [
 	'group0' => true, // T180147
 	'dewiki' => true, // T180128
 	'arwiki' => true, // T180291
+	'huwiki' => true, // T181329
+	'fawiki' => true, // T181498
 ],
 
 'wmgUseCommonsMetadata' => [
