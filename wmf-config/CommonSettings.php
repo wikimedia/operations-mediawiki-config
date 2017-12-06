@@ -717,6 +717,9 @@ $wgAvailableRights[] = 'newsletter-delete';
 $wgAvailableRights[] = 'newsletter-manage';
 $wgAvailableRights[] = 'newsletter-restore';
 
+// GWToolset permissions should also appear on Special:GlobalGroupPermissions. --MA 2017.12.06
+$wgAvalaibleRights[] = 'gwtoolset';
+
 // Enable a "viewdeletedfile" userright for [[m:Global deleted image review]] (T16801)
 $wgAvailableRights[] = 'viewdeletedfile';
 $wgHooks['TitleQuickPermissions'][] = function ( Title $title, User $user, $action, &$errors, $doExpensiveQueries, $short ) {
