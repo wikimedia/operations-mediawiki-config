@@ -692,21 +692,5 @@ function wmfLabsSettings() {
 		'wmgUseORES' => [
 			'simplewiki' => true, // T181848
 		],
-		'wgOresFiltersThresholds' => [
-			'simplewiki' => [ // Follows enwiki
-				'damaging' => [
-					'likelygood' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.99)' ],
-					'maybebad' => [ 'min' => 'recall_at_precision(min_precision=0.15)', 'max' => 1 ],
-					'likelybad' => [ 'min' => 'recall_at_precision(min_precision=0.45)', 'max' => 1 ],
-					// verylikelybad uses default
-				],
-				'goodfaith' => [
-					'likelygood' => [ 'min' => 'recall_at_precision(min_precision=0.99)', 'max' => 1 ],
-					'maybebad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.15)' ],
-					// likelybad uses default
-					'verylikelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.9)' ],
-				],
-			],
-		],
 	];
 } # wmflLabsSettings()
