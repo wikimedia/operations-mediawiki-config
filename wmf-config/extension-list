@@ -113,6 +113,7 @@ $IP/extensions/PropertySuggester/PropertySuggester.php
 $IP/extensions/PoolCounter/extension.json
 $IP/extensions/QuickSurveys/extension.json
 $IP/extensions/Quiz/extension.json
+$IP/extensions/ReadingLists/extension.json
 $IP/extensions/RelatedArticles/extension.json
 $IP/extensions/RelatedSites/extension.json
 $IP/extensions/Renameuser/extension.json

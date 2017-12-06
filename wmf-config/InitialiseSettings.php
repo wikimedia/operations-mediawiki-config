@@ -19910,6 +19910,23 @@ $wgConf->settings = [
 	'default' => MIGRATION_OLD,
 ],
 
+'wmgUseReadingLists' => [
+	'default' => false,
+	'testwiki' => true,
+	'private' => false,
+	'fishbowl' => false,
+	'nonglobal' => false,
+],
+'wgReadingListsCluster' => [
+	'default' => 'extension1',
+],
+'wgReadingListsDatabase' => [
+	'default' => 'wikishared',
+],
+'wgReadingListsCentralWiki' => [
+	'default' => 'metawiki',
+],
+
 ];
 
 ### WMF Labs override #####
