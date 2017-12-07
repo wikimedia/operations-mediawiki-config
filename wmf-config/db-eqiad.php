@@ -113,6 +113,7 @@ $wgLBFactoryConf = [
 		'db1080' => 300, # A2 3.6TB 512GB, api
 		'db1083' => 500, # B1 3.6TB 512GB
 		'db1089' => 500, # C3 3.6TB 512GB
+		'db1099:3311' => 1,   # B2 3.6TB 512GB # rc, log: s1 and s8
 		'db1105:3311' => 1,   # C3 3.6TB 512GB # rc, log: s1 and s2
 	],
 	's2' => [
@@ -264,22 +265,27 @@ $wgLBFactoryConf = [
 	's1' => [
 		'watchlist' => [
 			'db1055' => 1,
+			'db1099:3311' => 1,
 			'db1105:3311' => 1,
 		],
 		'recentchanges' => [
 			'db1055' => 1,
+			# 'db1099:3311' => 1,
 			'db1105:3311' => 1,
 		],
 		'recentchangeslinked' => [
 			'db1055' => 1,
+			# 'db1099:3311' => 1,
 			'db1105:3311' => 1,
 		],
 		'contributions' => [
 			'db1055' => 1,
+			# 'db1099:3311' => 1,
 			'db1105:3311' => 1,
 		],
 		'logpager' => [
 			'db1055' => 1,
+			# 'db1099:3311' => 1,
 			'db1105:3311' => 1,
 		],
 		'dump' => [
