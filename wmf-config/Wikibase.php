@@ -29,6 +29,23 @@ if ( defined( 'HHVM_VERSION' ) ) {
 	$wgWBSharedCacheKey .= '-hhvm';
 }
 
+// Lock manager config must use the master datacenter
+// Use a TTL of 15 mins, no script will run for longer than this
+$wgLockManagers[] = [
+	'name'         => 'wikibaseDispatchRedisLockManager',
+	'class'        => 'RedisLockManager',
+	'lockTTL'      => 900, // 15 mins ( 15 * 6 )
+	'lockServers'  => $wmfMasterServices['redis_lock'],
+	'srvsByBucket' => [
+		0 => $redisLockServers
+	],
+	'redisConfig'  => [
+		'connectTimeout' => 2,
+		'readTimeout'    => 2,
+		'password'       => $wmgRedisPassword
+	]
+];
+
 $wgWBSharedSettings = [];
 
 $wgWBSharedSettings['maxSerializedEntitySize'] = 2500;
