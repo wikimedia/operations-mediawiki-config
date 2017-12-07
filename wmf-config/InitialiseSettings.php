@@ -90,7 +90,6 @@ $wgConf->settings = [
 
 	# Non-ISO language codes
 	'be_x_oldwiki' => 'be-tarask',
-	'crhwiki' => 'crh-latn',
 	'nowiki' => 'nb',
 	'nowiktionary' => 'nb',
 	'nowikiquote' => 'nb',
@@ -12278,6 +12277,7 @@ $wgConf->settings = [
 
 # wgVariantArticlePath @{
 'wgVariantArticlePath' => [
+	'crhwiki' => '/$2/$1',
 	'srwiki' => '/$2/$1',
 	'srwiktionary' => '/$2/$1',
 	'srwikibooks' => '/$2/$1',
