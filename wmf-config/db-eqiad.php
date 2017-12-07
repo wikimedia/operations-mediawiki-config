@@ -158,7 +158,7 @@ $wgLBFactoryConf = [
 		'db1088' => 500, # C2 3.6TB 512GB
 		'db1093' => 1, # D2 3.6TB 512GB #temporary recentchanges #T178359
 		'db1096:3316' => 1,   # A6 3.6TB 512GB, # rc, log: s5 and s6
-		# 'db1098' => 1,   # B5 3.6TB 512GB, watchlist, recentchanges, contributions, logpager #T178359
+		'db1098:3316' => 1,   # B5 3.6TB 512GB, # rc, log: s6 and s7
 	],
 	's7' => [
 		'db1062' => 0,   # D4 2.8TB 128GB, master
@@ -168,6 +168,7 @@ $wgLBFactoryConf = [
 		'db1079' => 300, # A2 3.6TB 512GB, api #master for db1102 (sanitarium 3)
 		'db1086' => 500, # B3 3.6TB 512GB, api
 		'db1094' => 500, # D2 3.6TB 512GB
+		'db1098:3317' => 1,   # B5 3.6TB 512GB, # rc, log: s6 and s7
 		'db1101:3317' => 1,   # C2 3.6TB 512GB # rc, log: s7 and s8
 	],
 	's8' => [
@@ -431,22 +432,27 @@ $wgLBFactoryConf = [
 		'watchlist' => [
 			'db1093' => 1,
 			'db1096:3316' => 1,
+			'db1098:3316' => 1,
 		],
 		'recentchanges' => [
 			'db1093' => 1,
 			'db1096:3316' => 1,
+			# 'db1098:3316' => 1,
 		],
 		'recentchangeslinked' => [
 			'db1093' => 1,
 			'db1096:3316' => 1,
+			# 'db1098:3316' => 1,
 		],
 		'contributions' => [
 			'db1093' => 1,
 			'db1096:3316' => 1,
+			# 'db1098:3316' => 1,
 		],
 		'logpager' => [
 			'db1093' => 1,
 			'db1096:3316' => 1,
+			# 'db1098:3316' => 1,
 		],
 	],
 	's7' => [
@@ -462,22 +468,27 @@ $wgLBFactoryConf = [
 		],
 		'watchlist' => [
 			'db1034' => 1,
+			'db1098:3317' => 1,
 			'db1101:3317' => 1,
 		],
 		'recentchanges' => [
 			'db1034' => 1,
+			# 'db1098:3317' => 1,
 			'db1101:3317' => 1,
 		],
 		'recentchangeslinked' => [
 			'db1034' => 1,
+			# 'db1098:3317' => 1,
 			'db1101:3317' => 1,
 		],
 		'contributions' => [
 			'db1034' => 1,
+			# 'db1098:3317' => 1,
 			'db1101:3317' => 1,
 		],
 		'logpager' => [
 			'db1034' => 1,
+			# 'db1098:3317' => 1,
 			'db1101:3317' => 1,
 		],
 	],
@@ -576,7 +587,8 @@ $wgLBFactoryConf = [
 	'db1096:3316' => '10.64.0.163:3316', # do not remove or comment out
 	'db1097:3314' => '10.64.48.11:3314', # do not remove or comment out
 	'db1097:3315' => '10.64.48.11:3315', # do not remove or comment out
-	'db1098' => '10.64.16.83', # do not remove or comment out
+	'db1098:3316' => '10.64.16.83:3316', # do not remove or comment out
+	'db1098:3317' => '10.64.16.83:3317', # do not remove or comment out
 	'db1099:3311' => '10.64.16.84:3311', # do not remove or comment out
 	'db1099:3318' => '10.64.16.84:3318', # do not remove or comment out
 	'db1100' => '10.64.32.197', # do not remove or comment out
