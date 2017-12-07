@@ -18530,6 +18530,7 @@ $wgConf->settings = [
 
 'wmgWikibaseDispatchingLockManager' => [
 	'default' => 'redisLockManager',
+	'testwikidatawiki' => 'wikibaseDispatchRedisLockManager',
 ],
 
 'wmgWikibaseCachePrefix' => [
