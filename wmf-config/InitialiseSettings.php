@@ -18092,8 +18092,6 @@ $wgConf->settings = [
 	'elwiki' => [],
 	'kowiki' => [],
 	'trwiki' => [],
-	// Description usage tracking for commons should be disabled
-	'commonswiki' => [ 'C' => 'O', 'D' => 'O' ],
 ],
 
 // T172914
