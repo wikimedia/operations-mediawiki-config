@@ -17999,6 +17999,10 @@ $wgConf->settings = [
 	'yiwiki' => [ 'en', 'he', 'de' ],
 ],
 
+'wmgWikibaseDispatchingLockManager' => [
+	'default' => 'redisLockManager',
+],
+
 'wmgWikibaseCachePrefix' => [
 	'default' => 'wikidatawiki',
 	'testwikidatawiki' => 'testwikidatawiki0',

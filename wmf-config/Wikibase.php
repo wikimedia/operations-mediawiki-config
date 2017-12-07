@@ -156,7 +156,7 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['searchIndexProperties'] = [ 'P31', 'P279' ];
 	}
 
-	$wgWBRepoSettings['dispatchingLockManager'] = 'redisLockManager';
+	$wgWBRepoSettings['dispatchingLockManager'] = $wmgWikibaseDispatchingLockManager;
 	// Cirrus usage for wbsearchentities is on
 	$wgWBRepoSettings['entitySearch']['useCirrus'] = true;
 
