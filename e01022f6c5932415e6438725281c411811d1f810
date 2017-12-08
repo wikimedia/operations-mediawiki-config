@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eee3df47_252311a8",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 99
+      },
+      "writtenOn": "2017-12-08T13:26:53Z",
+      "side": 1,
+      "message": "You could actually remove this line, since \u0027crh\u0027 is the default for \u0027crhwiki\u0027, and the line is only needed here to override the default.",
+      "range": {
+        "startLine": 93,
+        "startChar": 2,
+        "endLine": 93,
+        "endChar": 20
+      },
+      "revId": "e01022f6c5932415e6438725281c411811d1f810",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
