@@ -315,10 +315,6 @@
         "action": "branch",
         "ref": "."
     },
-    "extensions/MoodBar": {
-        "action": "branch",
-        "ref": "."
-    },
     "extensions/MultimediaViewer": {
         "action": "branch",
         "ref": "."
