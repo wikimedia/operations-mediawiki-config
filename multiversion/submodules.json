@@ -598,10 +598,6 @@
         "ref": "."
     },
     "extensions/CentralNotice": "wmf_deploy",
-    "extensions/Wikidata": {
-        "action": "checkout-latest",
-        "ref": "wmf/.*"
-    },
     "skins/CologneBlue": {
         "action": "branch",
         "ref": "."
