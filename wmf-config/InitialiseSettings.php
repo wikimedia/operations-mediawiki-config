@@ -18902,6 +18902,7 @@ $wgConf->settings = [
 'wmgUseGlobalBlocking' => [
 	'default' => true,
 	'wikitech' => false,
+	'fishbowl' => false,
 	'private' => false,
 ],
 
