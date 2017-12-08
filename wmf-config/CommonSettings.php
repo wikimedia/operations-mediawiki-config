@@ -1967,14 +1967,8 @@ if ( $wmgEnableLandingCheck ) {
 		// === Fundraising Chapers
 		'DE', 'CH',
 
-		// --- France and it's territories (per WMFr email 2012-06-13)
-		// Not a fundraising chapter in 2013+ due to FR regulations
-		// 'FR',
-		// 'GP', 'MQ', 'GF', 'RE', 'YT', 'PM',
-				// 'NC', 'PF', 'WF', 'BL', 'MF', 'TF',
-
 		// === Blacklisted countries
-				'BY', 'CD', 'CI', 'CU', 'IQ', 'IR', 'KP', 'LB', 'LY', 'MM', 'SD', 'SO', 'SY', 'YE', 'ZW',
+		'BY', 'CD', 'CI', 'CU', 'IQ', 'IR', 'KP', 'LB', 'LY', 'MM', 'SD', 'SO', 'SY', 'YE', 'ZW',
 	];
 	$wgLandingCheckPriorityURLBase = "//wikimediafoundation.org/wiki/Special:LandingCheck";
 	$wgLandingCheckNormalURLBase = "//donate.wikimedia.org/wiki/Special:LandingCheck";
