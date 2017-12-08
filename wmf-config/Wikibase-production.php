@@ -160,6 +160,8 @@ if ( $wmgUseWikibaseRepo ) {
 		'the Creative Commons CC0 License; text in the other namespaces is available under ' .
 		'the Creative Commons Attribution-ShareAlike License; additional terms may apply.';
 	$wgRightsUrl = 'creativecommons.org/licenses/by-sa/3.0';
+
+	$wgWBQualityConstraintsIncludeDetailInApi = false; // T180614
 }
 
 if ( $wmgUseWikibaseClient ) {
