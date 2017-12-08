@@ -3,10 +3,6 @@
         "action": "branch",
         "ref": "."
     },
-    "extensions/AccountAudit": {
-        "action": "branch",
-        "ref": "."
-    },
     "extensions/ActiveAbstract": {
         "action": "branch",
         "ref": "."
