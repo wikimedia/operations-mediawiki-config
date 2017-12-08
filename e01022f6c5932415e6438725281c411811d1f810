@@ -22,6 +22,30 @@
       "revId": "e01022f6c5932415e6438725281c411811d1f810",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eee3df47_8595bd44",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 2705
+      },
+      "writtenOn": "2017-12-08T14:12:45Z",
+      "side": 1,
+      "message": "Thanks! I thought this could perhaps be removed, but I wasn\u0027t 100% sure.",
+      "parentUuid": "eee3df47_252311a8",
+      "range": {
+        "startLine": 93,
+        "startChar": 2,
+        "endLine": 93,
+        "endChar": 20
+      },
+      "revId": "e01022f6c5932415e6438725281c411811d1f810",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
