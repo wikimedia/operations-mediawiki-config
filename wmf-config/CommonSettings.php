@@ -1864,14 +1864,6 @@ if ( $wmgUseCollection ) {
 	$wgCollectionFormats = [
 		'rdf2latex' => 'PDF',
 		'rdf2text' => 'TXT',
-		// The following formats used the old mwlib renderer
-		// which was shut down Oct 3, 2014.
-		// They may eventually be reinstated when new OCG backends
-		// are written for them.
-	// 'epub' => 'EPUB',
-	// 'odf' => 'ODT',
-	// 'zim' => 'openZIM',
-	// 'rl' => 'mwlib PDF', // replaced by [[:mw:OCG]] 29 Sep 2014
 	];
 
 	$wgLicenseURL = "https://creativecommons.org/licenses/by-sa/3.0/";
