@@ -3881,7 +3881,8 @@ $wgConf->settings = [
 		'인' => NS_PROJECT,
 	],
 	'+kowikisource' => [
-		'Wikisource_talk' => NS_PROJECT_TALK,
+		'문' => NS_PROJECT, // T182487
+		'문토' => NS_PROJECT_TALK, // T182487
 		'글쓴이' => 100,
 		'글쓴이토론' => 101,
 		'Author' => 100,
