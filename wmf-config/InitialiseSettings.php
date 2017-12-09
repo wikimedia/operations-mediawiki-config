@@ -12988,6 +12988,7 @@ $wgConf->settings = [
 	'strategywiki' => [ 'sysop' => [ 'flood' ] ],
 	'wbwikimedia' => [ 'sysop' => [ 'translationadmin' ], ], // T162510
 	'wikidata' => [ 'sysop' => [ 'flood', 'translationadmin' ] ], // T50013, T48856
+	'wikimania2018wiki' => [ 'sysop' => [ 'translationadmin' ] ], // T182492
 	'wikitech' => [
 		'contentadmin' => [ 'flood' ],
 		'sysop' => [ 'flood' ],
@@ -13030,6 +13031,7 @@ $wgConf->settings = [
 		'sysop' => [ 'flood', 'translationadmin' ], // T50013, T48856
 		'flood' => [ 'flood' ], // T50013
 	],
+	'wikimania2018wiki' => [ 'sysop' => [ 'translationadmin' ] ], // T182492
 	'wikitech' => [
 		'contentadmin' => [ 'flood' ],
 		'sysop' => [ 'flood' ],
