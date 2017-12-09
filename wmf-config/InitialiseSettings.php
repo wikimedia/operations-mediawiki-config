@@ -7942,9 +7942,6 @@ $wgConf->settings = [
 			// for show only
 		],
 	],
-	'wikimania2017wiki' => [
-		'*' => [ 'createpage' => false ],
-	],
 
 	// Fishbowls
 	'fishbowl' => [
@@ -10490,9 +10487,6 @@ $wgConf->settings = [
 			'wikidata-staff', // T74459
 		],
 	],
-	'+wikimania2017wiki' => [
-		'bureaucrat' => [ 'translationadmin' ],
-	],
 	'wikitech' => [
 		'contentadmin' => [
 			'autopatrolled',
@@ -11271,9 +11265,6 @@ $wgConf->settings = [
 		'wikidata-staff' => [
 			'wikidata-staff', // T74459
 		],
-	],
-	'+wikimania2017wiki' => [
-		'bureaucrat' => [ 'translationadmin' ],
 	],
 	'+wikimaniateamwiki' => [
 		'bureaucrat' => [ 'sysop', 'bureaucrat', 'autopatrolled', 'import' ],
