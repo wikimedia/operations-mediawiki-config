@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eee3df47_767ca8e2",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 2531,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2017-12-10T11:24:34Z",
+      "side": 1,
+      "message": "$wgAddGroups[ \u0027bureucrat\u0027 ][] \u003d \u0027translationadmin\u0027; etc.\n\nThis might mean that translationadmin will appear there twice during the transition period, but that should be fine.",
+      "range": {
+        "startLine": 2528,
+        "startChar": 0,
+        "endLine": 2531,
+        "endChar": 52
+      },
+      "revId": "24c264f1603862d7487013cc5c16e84a410834d2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
