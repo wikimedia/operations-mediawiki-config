@@ -8263,7 +8263,12 @@ $wgConf->settings = [
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'filemover' => [ 'movefile' => true ],
 		'Image-reviewer' => [ 'autopatrol' => true, 'upload_by_url' => true ],
-		'extended-uploader' => [ 'autoconfirmed' => true, 'upload' => true, 'reupload' => true ],
+		'extended-uploader' => [
+			'autoconfirmed' => true,
+			'upload' => true,
+			'reupload' => true,
+			'upload_by_url' => true, // T182534
+		],
 		'sysop' => [
 			'changetags' => true, // T134196
 			'upload_by_url' => true,
