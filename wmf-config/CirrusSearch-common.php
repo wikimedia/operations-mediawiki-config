@@ -296,40 +296,7 @@ if ( $wmgCirrusSearchMLRModel ) {
 			],
 		],
 	];
-
-	$wgCirrusSearchRescoreProfiles['dbn20'] = $wgCirrusSearchRescoreProfiles['mlr-1024rs'];
-	$wgCirrusSearchRescoreProfiles['dbn20']['rescore'][2]['model'] = 'dbn20_enwiki_v1';
-
-	$wgCirrusSearchRescoreProfiles['dbn35'] = $wgCirrusSearchRescoreProfiles['mlr-1024rs'];
-	$wgCirrusSearchRescoreProfiles['dbn35']['rescore'][2]['model'] = 'dbn35_enwiki_v1';
-
 }
-
-# needed for recall A/B test (T177502)
-$wgCirrusSearchFullTextQueryBuilderProfiles['rec_3t_80_66'] = $wgCirrusSearchFullTextQueryBuilderProfiles['perfield_builder'];
-$wgCirrusSearchFullTextQueryBuilderProfiles['rec_3t_80_66']['settings']['filter'] = [
-	'type' => 'default',
-	'settings' => [
-		'all' => [
-			'minimum_should_match' => '3<80%'
-		],
-		'all.plain' => [
-			'minimum_should_match' => '3<66%'
-		],
-	]
-];
-$wgCirrusSearchFullTextQueryBuilderProfiles['rec_4t_80_66'] = $wgCirrusSearchFullTextQueryBuilderProfiles['perfield_builder'];
-$wgCirrusSearchFullTextQueryBuilderProfiles['rec_4t_80_66']['settings']['filter'] = [
-	'type' => 'default',
-	'settings' => [
-		'all' => [
-			'minimum_should_match' => '4<80%'
-		],
-		'all.plain' => [
-			'minimum_should_match' => '4<66%'
-		],
-	]
-];
 
 $wgCirrusSearchUserTesting = $wmgCirrusSearchUserTesting;
 
