@@ -19640,6 +19640,14 @@ $wgConf->settings = [
 // on the EventBus JobQueue -disable old queue on wiktionaries only
 'wmgDisableHTMLCacheUpdateInRedis' => [
 	'default' => false,
+	'cebwiki' => true,
+	'ruwiki' => true,
+	'wikibooks' => true,
+	'wikinews' => true,
+	'wikiquote' => true,
+	'wikisource' => true,
+	'wikiversity' => true,
+	'wikivoyage' => true,
 	'wiktionary' => true,
 ],
 
