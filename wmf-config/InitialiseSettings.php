@@ -18674,44 +18674,30 @@ $wgConf->settings = [
 
 'wmgCirrusSearchUserTesting' => [
 	'default' => [],
-	// DBN sizing AB test
-	'enwiki' => [
-		'dbn_sizing' => [
+	'hewiki' => [
+		'ltr' => [
+			'globals' => [],
 			'buckets' => [
 				'control' => [
 					'trigger' => 'control',
 				],
-				'dbn20' => [
-					'trigger' => 'dbn20',
+				'ltr-1024' => [
+					'trigger' => 'ltr-1024',
 					'globals' => [
-						'wgCirrusSearchRescoreProfile' => 'dbn20',
+						'wgCirrusSearchRescoreProfile' => 'mlr-1024rs',
 					]
 				],
-				'dbn20-i' => [
-					'trigger' => 'dbn20-i',
+				'ltr-1024-i' => [
+					'trigger' => 'ltr-1024-i',
 					'globals' => [
 						'wgCirrusSearchInterleaveConfig' => [
-							'CirrusSearchRescoreProfile' => 'dbn20',
+							'CirrusSearchRescoreProfile' => 'mlr-1024rs'
 						],
-					]
-				],
-				'dbn35' => [
-					'trigger' => 'dbn35',
-					'globals' => [
-						'wgCirrusSearchRescoreProfile' => 'dbn35',
-					]
-				],
-				'dbn35-i' => [
-					'trigger' => 'dbn35-i',
-					'globals' => [
-						'wgCirrusSearchInterleaveConfig' => [
-							'CirrusSearchRescoreProfile' => 'dbn35',
-						],
-					]
+					],
 				],
 			],
-		]
-	]
+		],
+	],
 ],
 
 'wmgCirrusSearchLanguageDetectors' => [
@@ -19873,7 +19859,7 @@ $wgConf->settings = [
 	'ruwiki' => '20170905_ruwiki_v1',
 	'dewiki' => '20170905_dewiki_v1',
 	'fiwiki' => '20170908_fiwiki_v1',
-	'hewiki' => '20170908_hewiki_v1',
+	'hewiki' => '20171130_hewiki_v1',
 	'idwiki' => '20170908_idwiki_v1',
 	'kowiki' => '20170908_kowiki_v1',
 	'nlwiki' => '20170908_nlwiki_v1',
