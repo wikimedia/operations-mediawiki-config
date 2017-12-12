@@ -207,6 +207,42 @@ if ( $wmgUseWikibaseRepo ) {
 		'uk' => [ 'index' => true, 'query' => true ],
 		'zh' => [ 'index' => true, 'query' => true ],
 	];
+
+	if ( is_array( $wgCirrusSearchSimilarityProfiles ) ) {
+		// TODO: have proper profile management in cirrus
+		$wgCirrusSearchSimilarityProfiles['wikibase_similarity'] = [
+			'similarity' => [
+				'default' => [
+					'type' => 'BM25',
+				],
+				'descriptions' => [
+					'type' => 'BM25',
+				],
+				// This is a bit verbose to redefine always the same settings
+				// but the advantage is that you can re-tune and specialize
+				// these on an existing index (requires closing the index).
+				// "labels" here means the label + aliases
+				'labels' => [
+					'type' => 'BM25',
+					'k1' => 1.2,
+					'b' => 0.3,
+				],
+				// We consider all as being very similar to an array field
+				// as it is a simple concatenation of all the item data
+				'all' => [
+					'type' => 'BM25',
+					'k1' => 1.2,
+					'b' => 0.3,
+				]
+			],
+			'fields' => [
+				'__default__' => 'default',
+				'labels' => 'labels',
+				'descriptions' => 'descriptions',
+				'all' => 'all',
+			]
+		];
+	}
 }
 
 if ( $wmgUseWikibaseClient ) {

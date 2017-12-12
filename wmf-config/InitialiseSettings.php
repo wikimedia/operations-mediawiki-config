@@ -18291,6 +18291,9 @@ $wgConf->settings = [
 	"jv" => "default",
 	"zh-min-nan" => "default", // needs to support deprecated language code (e.g. zh_min_nanwikisource)
 	"nan" => "default", // e.g. zh_min_nan
+	// Currently defined in Wikibase.php
+	"wikidata" => "wikibase_similarity",
+	"testwikidata" => "wikibase_similarity",
 ],
 
 'wmgCirrusSearchRescoreProfile' => [
