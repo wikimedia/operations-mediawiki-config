@@ -8985,6 +8985,7 @@ $wgConf->settings = [
 		'global-renamer' => [ // T142123, T71651
 			'autopatrol' => true,
 			'centralauth-rename' => true,
+			'sendemail-new-users' => true,
 		],
 		'massmessage-sender' => [ // T59611, T142123
 			'autopatrol' => true,
@@ -9028,6 +9029,7 @@ $wgConf->settings = [
 			'massmessage' => true,
 			'userrights' => true,
 			'userrights-interwiki' => true,
+			'sendemail-new-users' => true,
 		],
 	],
 	'mkwiki' => [
@@ -9745,9 +9747,11 @@ $wgConf->settings = [
 		],
 		'bureaucrat' => [
 			'noratelimit' => true,
+			'sendemail-new-users' => true,
 		],
 		'steward' => [
 			'noratelimit' => true,
+			'sendemail-new-users' => true,
 		],
 		// 'rollback' => array( 'rollback' => true, ),
 		'import' => [ 'importupload' => true, 'import' => true ],
@@ -9761,6 +9765,7 @@ $wgConf->settings = [
 			'move-subpages' => false, // for now...
 			'movefile' => false, // r93871 CR
 			'editcontentmodel' => false, // temp, pending T85847
+			'sendemail-new-users' => false,
 		],
 		'autoconfirmed' => [
 			'reupload' => true,
