@@ -138,7 +138,7 @@ $wgLBFactoryConf = [
 		'db1064' => 0,   # D1 2.8TB 160GB, vslow, dump #Master for db1095 - new sanitarium
 		'db1081' => 300, # A2 3.6TB 512GB, api
 		'db1084' => 400, # B1 3.6TB 512GB, api
-		# 'db1091' => 500, # D2 3.6TB 512GB # T174569
+		'db1091' => 500, # D2 3.6TB 512GB
 		'db1097:3314' => 1,   # D1 3.6TB 512GB, # rc, log: s4 and s5
 		'db1103:3314' => 1,  # A3 3.6TB 512GB # rc, log: s2 and s4
 	],
