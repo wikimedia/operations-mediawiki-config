@@ -13485,6 +13485,7 @@ $wgConf->settings = [
 	'default' => false,
 	'testwiki' => true,
 	'arwiki' => true,
+	'atjwiki' => true, // T182798
 	'bhwiki' => true,
 	'bnwiki' => true,
 	'bnwikibooks' => true,
