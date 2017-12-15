@@ -18679,6 +18679,9 @@ $wgConf->settings = [
 		104 => 0.9,
 		106 => 0.9,
 	],
+	'commonswiki' => [
+		6 => 1.0,
+	],
 	'wikisource' => [
 		'author' => 1,
 	],
