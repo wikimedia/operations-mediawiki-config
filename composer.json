@@ -11,7 +11,7 @@
 		"phpunit/phpunit": "4.8.36"
 	},
 	"scripts": {
-		"lint": "parallel-lint --exclude multiversion/vendor --ignore-fails .",
+		"lint": "parallel-lint --exclude multiversion/vendor .",
 		"phpcs": "phpcs -p -s",
 		"fix": "phpcbf",
 		"test": [
