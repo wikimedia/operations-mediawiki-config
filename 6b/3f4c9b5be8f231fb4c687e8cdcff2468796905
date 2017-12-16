@@ -1,0 +1,8 @@
+Verified+2: jenkins-bot
+Code-Review+1: Giuseppe Lavagetto <glavagetto@wikimedia.org>
+Code-Review+2: Jcrespo <jcrespo@wikimedia.org>
+Submitted-by: Jcrespo <jcrespo@wikimedia.org>
+Submitted-at: Sat, 16 Dec 2017 14:57:50 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/398645
+Project: operations/mediawiki-config
+Branch: refs/heads/master
