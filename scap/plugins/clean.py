@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-    scap.plugins.clean
-    ~~~~~~~~~~~~~~~~~~
-    For cleaning up old MediaWiki
-"""
+"""For cleaning up old MediaWiki."""
 import os
 import subprocess
 
@@ -49,13 +45,13 @@ DELETABLE_TYPES = [
 
 @cli.command('clean')
 class Clean(main.AbstractSync):
-    """ Scap sub-command to clean old branches """
+    """Scap sub-command to clean old branches."""
 
     @cli.argument('branch', help='The name of the branch to clean.')
     @cli.argument('--delete', action='store_true',
                   help='Delete everything (not just static assets).')
     def main(self, *extra_args):
-        """ Clean old branches from the cluster for space savings! """
+        """Clean old branches from the cluster for space savings."""
         self.arguments.message = 'Pruned MediaWiki: %s' % self.arguments.branch
         if not self.arguments.delete:
             self.arguments.message += ' [keeping static files]'
@@ -70,7 +66,7 @@ class Clean(main.AbstractSync):
 
     def cleanup_branch(self, branch, delete):
         """
-        Given a branch, go through the cleanup proccess on the master:
+        Given a branch, go through the cleanup proccess on the master.
 
         (1) Prune git branches [if deletion]
         (2) Remove l10nupdate cache

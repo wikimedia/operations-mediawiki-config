@@ -1,6 +1,5 @@
-"""
-Updates wiki versions json files and symlink pointers
-"""
+# -*- coding: utf-8 -*-
+"""Updates wiki versions json files and symlink pointers."""
 
 import json
 import os
@@ -12,21 +11,18 @@ import scap.utils as utils
 
 @cli.command('update-wikiversions')
 class UpdateWikiversions(cli.Application):
-    """ Scap subcommand for updating wikiversions.json to a new version"""
+    """Scap subcommand for updating wikiversions.json to a new version."""
 
     @cli.argument('dblist',
                   help='The dblist file to use as input for migrating.')
     @cli.argument('branch', help='The name of the branch to migrate to.')
     def main(self, *extra_args):
-        """Update the json file, maybe update the branch symlink"""
+        """Update the json file, maybe update the branch symlink."""
         self.update_wikiversions_json()
         self.update_branch_pointer()
 
     def update_wikiversions_json(self):
-        """
-        Does the first step of migrating: actually change all the requested
-        dblist entries to the new version!
-        """
+        """Change all the requested dblist entries to the new version."""
         json_path = utils.get_realm_specific_filename(
             'wikiversions.json', self.config['wmf_realm'],
             self.config['datacenter'])
@@ -75,10 +71,7 @@ class UpdateWikiversions(cli.Application):
                                (json_path, inserted, migrated))
 
     def update_branch_pointer(self):
-        """
-        This being the second step: if appropriate, swap the php symlink over
-        to the new version as well
-        """
+        """Swap the php symlink over to the new version as well, if needed."""
         cur_version = self.active_wikiversions().popitem()[0]
 
         real_path = os.path.join(

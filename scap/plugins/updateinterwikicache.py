@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-    scap.plugins.updateinterwikicache
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    For updating + syncing the interwiki cache
-"""
+"""For updating + syncing the interwiki cache."""
 import os
 import subprocess
 
@@ -15,10 +11,10 @@ import scap.utils as utils
 
 @cli.command('update-interwiki-cache')
 class UpdateInterwikiCache(main.SyncFile):
-    """ Scap sub-command to update and sync the interwiki cache """
+    """Scap sub-command to update and sync the interwiki cache."""
 
     def main(self, *extra_args):
-        """ Update the latest interwiki cache! """
+        """Update the latest interwiki cache."""
         self.arguments.message = 'Updating interwiki cache'
         return super(UpdateInterwikiCache, self).main(*extra_args)
 
