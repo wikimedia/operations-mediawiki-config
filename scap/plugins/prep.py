@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-    scap.plugins.prep
-    ~~~~~~~~~~~~~~~~~
-    Scap plugin for setting up a new version of MediaWiki for deployment
-"""
+"""Scap plugin for setting up a new version of MediaWiki for deployment."""
 import argparse
 import multiprocessing
 import os
@@ -19,16 +15,16 @@ GERRIT_URL = 'https://gerrit.wikimedia.org/r/'
 
 
 def version_parser(ver):
-    """Validation our version number formats"""
+    """Validate our version number formats."""
     try:
-        return re.match("(\d+\.\d+(\.\d+-)?wmf\.?\d+|master)", ver).group(0)
-    except:
+        return re.match(r"(1\.\d\d\.\d+-wmf\.\d+|master)", ver).group(0)
+    except re.error:
         raise argparse.ArgumentTypeError(
             "Branch '%s' does not match required format" % ver)
 
 
 def update_update_strategy(path):
-    """For all submodules, update the merge strategy"""
+    """For all submodules, update the merge strategy."""
     with utils.cd(path):
         base_cmd = '/usr/bin/git -C %s config ' % path
         base_cmd += 'submodule.$name.update rebase'
@@ -37,7 +33,7 @@ def update_update_strategy(path):
 
 
 def write_settings_stub(dest, include):
-    """Write a silly little PHP file that includes another"""
+    """Write a silly little PHP file that includes another."""
     file_stub = (
         '<?php\n' +
         '# Managed by scap (mediawiki-config:/scap/plugins/prep.py)\n' +
@@ -50,7 +46,7 @@ def write_settings_stub(dest, include):
 
 
 def master_stuff(dest_dir):
-    """If we're operating on a master branch, do some extra weird stuff"""
+    """If we're operating on a master branch, do some extra weird stuff."""
     repos = {
         'extensions': 'mediawiki/extensions',
         'vendor': 'mediawiki/vendor',
@@ -78,15 +74,15 @@ def master_stuff(dest_dir):
 
 @cli.command('prep', help='Checkout MediaWiki version to staging')
 class CheckoutMediaWiki(cli.Application):
-    """ Scap sub-command to manage checkout new MediaWiki versions """
+    """Scap sub-command to manage checkout new MediaWiki versions."""
+
     @cli.argument('-p', '--prefix', nargs=1, required=False,
                   default='php-', metavar='PREFIX',
                   help='Directory prefix to checkout version to.')
     @cli.argument('branch', metavar='BRANCH', type=version_parser,
                   help='The name of the branch to operate on.')
     def main(self, *extra_args):
-        """ Checkout next MediaWiki """
-
+        """Checkout next MediaWiki."""
         dest_dir = os.path.join(
             self.config['stage_dir'],
             '{}{}'.format(self.arguments.prefix, self.arguments.branch)
