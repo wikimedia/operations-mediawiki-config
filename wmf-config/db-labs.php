@@ -19,7 +19,7 @@ if ( $wmfRealm == 'labs' ) { # safe guard
 		'sectionLoads' => [
 			'DEFAULT' => [
 				'deployment-db03' => 0,
-				'deployment-db04' => 400,
+				# 'deployment-db04' => 400,
 			],
 		],
 
@@ -34,23 +34,23 @@ if ( $wmfRealm == 'labs' ) { # safe guard
 
 		'hostsByName' => [
 			'deployment-db03' => '10.68.23.30:3306', # deployment-db03.eqiad.wmflabs
-			'deployment-db04' => '10.68.18.35:3306', # deployment-db04.eqiad.wmflabs
+			# 'deployment-db04' => '10.68.18.35:3306', # deployment-db04.eqiad.wmflabs
 		],
 
 		'externalLoads' => [
 			'cluster1' => [
 				'10.68.23.30:3306' => 1,  # deployment-db03.eqiad.wmflabs, master
-				'10.68.18.35:3306' => 3 , # deployment-db04.eqiad.wmflabs
+				# '10.68.18.35:3306' => 3 , # deployment-db04.eqiad.wmflabs
 			],
 
 			'flow_cluster1' => [
 				'10.68.23.30:3306' => 1,  # deployment-db03.eqiad.wmflabs, master
-				'10.68.18.35:3306' => 3 , # deployment-db04.eqiad.wmflabs
+				# '10.68.18.35:3306' => 3 , # deployment-db04.eqiad.wmflabs
 			],
 
 			'extension1' => [
 				'10.68.23.30:3306' => 1,  # deployment-db03.eqiad.wmflabs, master
-				'10.68.18.35:3306' => 3 , # deployment-db04.eqiad.wmflabs
+				# '10.68.18.35:3306' => 3 , # deployment-db04.eqiad.wmflabs
 			],
 		],
 
