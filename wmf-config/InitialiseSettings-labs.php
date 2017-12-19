@@ -701,6 +701,10 @@ function wmfLabsSettings() {
 		'wmgUseORES' => [
 			'simplewiki' => true, // T181848
 		],
+		'wgOresUiEnabled' => [
+			'default' => true,
+			'wikidatawiki' => false,
+		],
 		'wgOresFiltersThresholds' => [
 			'simplewiki' => [ // Follows enwiki
 				'damaging' => [
