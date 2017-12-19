@@ -400,4 +400,7 @@ class GuanacoProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvider 
 	}
 }
 
+// TEMPORARY read-only measure while I fix the inconsistent DB state --Roan (T183252)
+$wgReadOnly = 'The database is read-only while I work on bringing it back. See T183252 -Roan';
+
 } # end safeguard
