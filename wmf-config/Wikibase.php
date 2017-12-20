@@ -160,6 +160,8 @@ if ( $wmgUseWikibaseRepo ) {
 	// Cirrus usage for wbsearchentities is on
 	$wgWBRepoSettings['entitySearch']['useCirrus'] = true;
 
+	// T183053
+	$wgCirrusSearchRefreshInterval = 5;
 	// T178180
 	$wgWBRepoSettings['canonicalUriProperty'] = 'P1921';
 	// T176903, T180169
