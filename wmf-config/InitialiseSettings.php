@@ -20021,6 +20021,12 @@ $wgConf->settings = [
 'wgReadingListsCentralWiki' => [
 	'default' => 'metawiki',
 ],
+// T183053
+'wmgCirrusSearchRefreshInterval' => [
+	'default' => 30,
+	'wikidatawiki' => 5,
+	'testwikidatawiki' => 5,
+],
 
 ];
 
