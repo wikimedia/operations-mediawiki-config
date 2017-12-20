@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cee8db29_cd2d5c8d",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 164,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2017-12-20T21:27:25Z",
+      "side": 1,
+      "message": "this should probably be configured from InitialiseSettings.php asa wmgCirrusSearchRefreshInterval",
+      "revId": "d80342d04a7a0e154da6d01e23b759be388d3786",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
