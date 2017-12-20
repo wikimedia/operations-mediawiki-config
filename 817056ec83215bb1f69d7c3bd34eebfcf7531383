@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cee8db29_bc43ecb5",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 17
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-12-20T16:14:07Z",
+      "side": 1,
+      "message": "vote.wikimedia.org is a fairly rarely used wiki. I\u0027m not sure why we should add it unless we also add the dozens of other private/special wikis that are currently not listed here.\n\nGiven that this configuration variable is primarily an optimisation, I\u0027d prefer we limit it to regular and public wikis.\n\nEspecially a sensitive vote.wikimedia.org is imho not worth the risk to add an optimisation like this for. I can imagine it being abused in someway by relying on routing for a subrequest to go to the same localhost. It\u0027s extra information an attacker could rely on that just isn\u0027t worth it.",
+      "range": {
+        "startLine": 147,
+        "startChar": 1,
+        "endLine": 148,
+        "endChar": 22
+      },
+      "revId": "817056ec83215bb1f69d7c3bd34eebfcf7531383",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
