@@ -15340,9 +15340,30 @@ $wgConf->settings = [
 ],
 'wmgGNSMfallbackCategory' => [
 	'default' => 'Published',
+	'arwikinews' => 'نشر', // T172875
+	'cawikinews' => 'Notícies publicades', // T172875
+	'dewikinews' => 'Veröffentlicht', // T172875
+	'eswikinews' => 'Artículos publicados', // T172875
 	'elwikinews' => 'Δημοσιευμένα', // T39608
+	'eowikinews' => 'Publikigitaj artikoloj', // T172875
 	'fawikinews' => 'منتشرشده',
+	'fiwikinews' => 'Julkaistut artikkelit', // T172875
+	'frwikinews' => 'Article publié', // T172875
+	'hewikinews' => 'פורסמו', // T172875
+	'itwikinews' => 'Pubblicati', // T172875
+	'jawikinews' => '公開中', // T172875
+	'kowikinews' => '발행됨', // T172875
+	'nowikinews' => 'Publisert', // T172875
+	'nlwikinews' => 'Gepubliceerd', // T172875
+	'ptwikinews' => 'Publicado', // T172875
+	'rowikinews' => 'Publicate', // T172875
+	'ruwikinews' => 'Опубликовано', // T172875
+	'srwikinews' => 'Објављено', // T172875
+	'trwikinews' => 'Yayınlandı', // T172875
+	'ukwikinews' => 'Опубліковані', // T172875
+	'zhwikinews' => '已发布', // T172875
 ],
+
 'wmgGNSMcommentNamespace' => [
 	'default' => true,
 	'elwikinews' => 102, // T39608
