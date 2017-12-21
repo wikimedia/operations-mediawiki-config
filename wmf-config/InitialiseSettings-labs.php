@@ -395,7 +395,9 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 		'wmgSentryDsn' => [
-			'default' => 'https://c357be0613e24340a96aeaa28dde08ad@sentry-beta.wmflabs.org/4',
+			'default' => null,
+			// Removed per https://phabricator.wikimedia.org/T106920#3807683
+			// 'default' => 'https://c357be0613e24340a96aeaa28dde08ad@sentry-beta.wmflabs.org/4',
 		],
 
 		'wgUploadThumbnailRenderHttpCustomHost' => [
