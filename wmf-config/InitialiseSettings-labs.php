@@ -81,6 +81,10 @@ function wmfLabsSettings() {
 			'default' => CACHE_MEMCACHED,
 		],
 
+		'wgLanguageCode' => [
+			'deploymentwiki' => 'en',
+		],
+
 		'wgSitename' => [
 			'deploymentwiki' => 'Deployment',
 			'wikivoyage'     => 'Wikivoyage',
