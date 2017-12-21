@@ -289,7 +289,8 @@ if ( $wmgUseQuickSurveys ) {
 
 if ( $wmgUseSentry ) {
 	require_once "$IP/extensions/Sentry/Sentry.php";
-	$wgSentryDsn = $wmgSentryDsn;
+	# $wgSentryDsn is unset per https://phabricator.wikimedia.org/T106920#3807683
+	# $wgSentryDsn = $wmgSentryDsn;
 	$wgSentryLogPhpErrors = false;
 }
 
