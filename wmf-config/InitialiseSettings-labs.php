@@ -76,6 +76,9 @@ function wmfLabsSettings() {
 	global $wmfUdp2logDest;
 
 	return [
+		'wgLanguageCode' => [
+			'deploymentwiki' => 'en',
+		],
 
 		'wgParserCacheType' => [
 			'default' => CACHE_MEMCACHED,
