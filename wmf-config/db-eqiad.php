@@ -106,6 +106,7 @@ $wgLBFactoryConf = [
 	's1' => [
 		'db1052' => 0,   # B3 2.8TB  96GB, master
 		'db1067' => 0,   # D1 2.8TB 160GB, old master
+		# 'db1055' => 1,   # C2 2.8TB  96GB, watchlist, recentchanges, contributions, logpager # T178359
 		'db1065' => 0,   # D1 2.8TB 160GB, vslow, dump, master for sanitarium
 		'db1066' => 50,  # D1 2.8TB 160GB, api
 		'db1073' => 50,  # B3 2.8TB 160GB, api
@@ -133,6 +134,7 @@ $wgLBFactoryConf = [
 	],
 	's4' => [
 		'db1068' => 0,   # D1 2.8TB 160GB, master
+		# 'db1056' => 1,   # C2 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
 		'db1064' => 0,   # D1 2.8TB 160GB, vslow, dump #Master for db1095 - new sanitarium
 		'db1081' => 300, # A2 3.6TB 512GB, api
 		'db1084' => 400, # B1 3.6TB 512GB, api
@@ -262,22 +264,27 @@ $wgLBFactoryConf = [
 'groupLoadsBySection' => [
 	's1' => [
 		'watchlist' => [
+			# 'db1055' => 1,
 			'db1099:3311' => 1,
 			'db1105:3311' => 1,
 		],
 		'recentchanges' => [
+			# 'db1055' => 1,
 			'db1099:3311' => 1,
 			'db1105:3311' => 1,
 		],
 		'recentchangeslinked' => [
+			# 'db1055' => 1,
 			'db1099:3311' => 1,
 			'db1105:3311' => 1,
 		],
 		'contributions' => [
+			# 'db1055' => 1,
 			'db1099:3311' => 1,
 			'db1105:3311' => 1,
 		],
 		'logpager' => [
+			# 'db1055' => 1,
 			'db1099:3311' => 1,
 			'db1105:3311' => 1,
 		],
@@ -360,22 +367,27 @@ $wgLBFactoryConf = [
 			'db1084' => 1,
 		],
 		'watchlist' => [
+			# 'db1056' => 1,
 			'db1097:3314' => 1,
 			'db1103:3314' => 1,
 		],
 		'recentchanges' => [
+			# 'db1056' => 1,
 			'db1097:3314' => 1,
 			'db1103:3314' => 1,
 		],
 		'recentchangeslinked' => [
+			# 'db1056' => 1,
 			'db1097:3314' => 1,
 			'db1103:3314' => 1,
 		],
 		'contributions' => [
+			# 'db1056' => 1,
 			'db1097:3314' => 1,
 			'db1103:3314' => 1,
 		],
 		'logpager' => [
+			# 'db1056' => 1,
 			'db1097:3314' => 1,
 			'db1103:3314' => 1,
 		],
@@ -528,6 +540,8 @@ $wgLBFactoryConf = [
 	'db1052' => '10.64.16.77', # do not remove or comment out
 	'db1053' => '10.64.0.87', # do not remove or comment out
 	'db1054' => '10.64.0.206', # do not remove or comment out
+	'db1055' => '10.64.32.25', # do not remove or comment out
+	'db1056' => '10.64.32.26', # do not remove or comment out
 	'db1060' => '10.64.32.30', # do not remove or comment out
 	'db1061' => '10.64.32.227', # do not remove or comment out
 	'db1062' => '10.64.48.15', # do not remove or comment out
