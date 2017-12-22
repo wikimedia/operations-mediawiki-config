@@ -528,6 +528,8 @@ $wgLBFactoryConf = [
 	'db1052' => '10.64.16.77', # do not remove or comment out
 	'db1053' => '10.64.0.87', # do not remove or comment out
 	'db1054' => '10.64.0.206', # do not remove or comment out
+	'db1055' => '10.64.32.25', # do not remove or comment out
+	'db1056' => '10.64.32.26', # do not remove or comment out
 	'db1060' => '10.64.32.30', # do not remove or comment out
 	'db1061' => '10.64.32.227', # do not remove or comment out
 	'db1062' => '10.64.48.15', # do not remove or comment out
@@ -720,6 +722,8 @@ $wgLBFactoryConf = [
 	'extension1' => [
 		'10.64.16.20' => 0, # db1031, B1 1.5TB 64GB, master
 		'10.64.16.18' => 1, # db1029, B1 1.5TB 64GB
+		'10.64.32.25' => 1, # db1055, C2 2.8TB 96GB
+		'10.64.32.26' => 1, # db1056, C3 2.8TB 96GB
 	],
 ],
 
