@@ -1,45 +1,26 @@
 # -*- coding: utf-8 -*-
 """For cleaning up old MediaWiki."""
 import os
+import shutil
 import subprocess
 
-import scap.cli as cli
-import scap.git as git
-import scap.log as log
-import scap.main as main
-import scap.utils as utils
+from scap import cli
+from scap import git
+from scap import log
+from scap import main
+from scap import utils
 
-DELETABLE_TYPES = [
-    'arcconfig',
-    'arclint',
-    'cdb',
-    'COPYING',
-    'CREDITS',
-    'FAQ',
-    'Gemfile',
-    'HISTORY',
-    'ini',
-    'inc',
-    'jshintignore',
-    'jscsrc',
-    'jshintrc',
-    'lock',
-    'md',
-    'md5',
-    'mailmap',
-    'Makefile'
-    'ml',
-    'mli',
-    'php',
-    'py',
-    'rb',
-    'README',
-    'sample',
-    'sh',
-    'sql',
-    'stylelintrc',
-    'txt',
-    'xsd',
+# basically everything except extensions, languages, resources and skins
+DELETABLE_DIRS = [
+    'cache',
+    'docs',
+    'images',
+    'includes',
+    'maintenance',
+    'mw-config',
+    'serialized',
+    'tests',
+    'vendor',
 ]
 
 
@@ -79,23 +60,21 @@ class Clean(main.AbstractSync):
         if not os.path.isdir(stage_dir):
             raise ValueError('No such branch exists, aborting')
 
-        command_list = []
+        with log.Timer('clean-l10nupdate-cache', self.get_stats()):
+            utils.sudo_check_call(
+                'www-data',
+                'rm -fR /var/lib/l10nupdate/caches/cache-%s' % branch
+            )
 
-        command_list.append([
-            'clean-l10nupdate-cache',
-            ['sudo', '-u', 'www-data', 'rm', '-fR',
-             '/var/lib/l10nupdate/caches/cache-%s' % branch]
-        ])
-        command_list.append([
-            'clean-l10nupdate-owned-files',
-            ['sudo', '-u', 'l10nupdate', 'find', stage_dir,
-             '-user', 'l10nupdate', '-delete']
-        ])
-        command_list.append([
-            'clean-l10n-bootstrap',
-            ['rm', '-fR', os.path.join(self.config['stage_dir'], 'wmf-config',
-                                       'ExtensionMessages-%s.php' % branch)]
-        ])
+        with log.Timer('clean-l10nupdate-owned-files', self.get_stats()):
+            utils.sudo_check_call(
+                'l10nupdate', 'find %s -user l10nupdate -delete' % stage_dir)
+
+        with log.Timer('clean-ExtensionMessages'):
+            ext_msg = os.path.join(self.config['stage_dir'], 'wmf-config',
+                                   'ExtensionMessages-%s.php' % branch)
+            if os.path.exists(ext_msg):
+                os.remove(ext_msg)
 
         logger = self.get_logger()
 
@@ -116,32 +95,14 @@ class Clean(main.AbstractSync):
                 with utils.cd(stage_dir):
                     if subprocess.call(gerrit_prune_cmd) != 0:
                         logger.info('Failed to prune core branch')
-            command_list.append([
-                'cleaning-branch',
-                ['rm', '-fR', stage_dir]
-            ])
-            command_list.append([
-                'cleaning-patches',
-                ['rm', '-fR', os.path.join('/srv/patches', branch)]
-            ])
+            with log.Timer('removing-local-copy'):
+                shutil.rmtree(stage_dir)
+            with log.Timer('cleaning-unused-patches', self.get_stats()):
+                shutil.rmtree(os.path.join('/srv/patches', branch))
         else:
-            regex = r'".*\.?({0})$"'.format('|'.join(DELETABLE_TYPES))
-            command_list.append([
-                'cleaning-branch',
-                ['find', stage_dir, '-type', 'f',
-                 '-regextype', 'posix-extended',
-                 '-regex', regex, '-delete']
-            ])
-
-        for command_signature in command_list:
-            name = command_signature[0]
-            command = command_signature[1]
-            with log.Timer(name + '-' + branch, self.get_stats()):
-                try:
-                    subprocess.check_call(command)
-                except (subprocess.CalledProcessError, OSError):
-                    logger.warning('Command failed [%s]: %s' % (
-                        name, ' '.join(command)))
+            with log.Timer('cleaning-unused-files', self.get_stats()):
+                for rmdir in DELETABLE_DIRS:
+                    shutil.rmtree(rmdir)
 
     def _after_lock_release(self):
         self.announce(self.arguments.message + ' (duration: %s)' %
