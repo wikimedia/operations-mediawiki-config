@@ -104,11 +104,9 @@ $wgLBFactoryConf = [
 
 'sectionLoads' => [
 	's1' => [
-		'db1052' => 0,   # B3 2.8TB  96GB, master
-		'db1067' => 0,   # D1 2.8TB 160GB, old master
-		'db1065' => 0,   # D1 2.8TB 160GB, vslow, dump, master for sanitarium
-		'db1066' => 50,  # D1 2.8TB 160GB, api
-		'db1073' => 50,  # B3 2.8TB 160GB, api
+		'db1067' => 0,   # D1 2.8TB 160GB, master
+		'db1065' => 0,   # D1 2.8TB 160GB, vslow, dump, old master
+		'db1076' => 500, # B1 3.6TB 512GB, api
 		'db1080' => 300, # A2 3.6TB 512GB, api
 		'db1083' => 500, # B1 3.6TB 512GB
 		'db1089' => 500, # C3 3.6TB 512GB
@@ -116,14 +114,13 @@ $wgLBFactoryConf = [
 		'db1105:3311' => 1,   # C3 3.6TB 512GB # rc, log: s1 and s2
 	],
 	's2' => [
-		'db1054' => 0,   # A3 2.8TB  96GB, master
-		'db1053' => 0,   # A2 2.8TB  96GB, vslow, dump
-		'db1060' => 1,   # C2 2.8TB  96GB, api #master for sanitarium
-		'db1074' => 300, # A2 3.6TB 512GB, api
-		'db1076' => 500, # B1 3.6TB 512GB
-		'db1090' => 500, # C3 3.6TB 512GB
+		'db1074' => 0, # A2 3.6TB 512GB, master
+		'db1066' => 0,  # D1 2.8TB 160GB, vslow
+		'db1085' => 300, # B3 3.6TB 512GB, api, master for sanitarium
+		'db1090' => 500, # C3 3.6TB 512GB, api
 		'db1103:3312' => 1,  # A3 3.6TB 512GB # rc, log: s2 and s4
 		'db1105:3312' => 1,   # C3 3.6TB 512GB # rc, log: s1 and s2
+		'db1110' => 500, # C3 3.6TB 512GB
 	],
 	/* s3 */ 'DEFAULT' => [
 		'db1075' => 0,   # A2 3.6TB 512GB, master
@@ -133,8 +130,8 @@ $wgLBFactoryConf = [
 	],
 	's4' => [
 		'db1068' => 0,   # D1 2.8TB 160GB, master
-		'db1064' => 0,   # D1 2.8TB 160GB, vslow, dump #Master for db1095 - new sanitarium
-		'db1081' => 300, # A2 3.6TB 512GB, api
+		'db1064' => 0,   # D1 2.8TB 160GB, vslow, dump
+		'db1081' => 300, # A2 3.6TB 512GB, api, master for sanitarium
 		'db1084' => 400, # B1 3.6TB 512GB, api
 		'db1091' => 500, # D2 3.6TB 512GB
 		'db1097:3314' => 1,   # D1 3.6TB 512GB, # rc, log: s4 and s5
@@ -142,18 +139,16 @@ $wgLBFactoryConf = [
 	],
 	's5' => [
 		'db1070' => 0,   # D1 2.8TB 160GB, master
-		'db1051' => 0,   # B3 2.8TB  96GB, vslow, dump in s5
+		'db1073' => 0,   # B3 2.8TB 160GB, vslow
 		'db1082' => 300, # A2 3.6TB 512GB, api # db1095 master
 		'db1096:3315' => 1,   # A6 3.6TB 512GB, # rc, log: s5 and s6
 		'db1097:3315' => 1,   # D1 3.6TB 512GB, # rc, log: s4 and s5
-		'db1100' => 50,  # C2 3.6TB 512GB, old master #api
+		'db1100' => 300,  # C2 3.6TB 512GB, old master #api
 		'db1106' => 500, # D3 3.6TB 512GB
-		'db1110' => 500, # C3 3.6TB 512GB
 	],
 	's6' => [
 		'db1061' => 0,   # C3 2.8TB 128GB, master
-		'db1030' => 0,   # B1 1.4TB  64GB, vslow, dump
-		'db1085' => 300, # B3 3.6TB 512GB, api #master for db1102 (sanitarium 3)
+		'db1063' => 0,   # C5 2.8TB 128GB, vslow, dump
 		'db1088' => 500, # C2 3.6TB 512GB
 		'db1093' => 300, # D2 3.6TB 512GB
 		'db1096:3316' => 1,   # A6 3.6TB 512GB, # rc, log: s5 and s6
@@ -161,7 +156,6 @@ $wgLBFactoryConf = [
 	],
 	's7' => [
 		'db1062' => 0,   # D4 2.8TB 128GB, master
-		# 'db1039' => 0,   # B2 1.4TB  64GB # T163190
 		'db1069' => 0,   # D1 2.8TB 160GB, vslow, dump, old master
 		'db1079' => 300, # A2 3.6TB 512GB, api #master for db1102 (sanitarium 3)
 		'db1086' => 500, # B3 3.6TB 512GB, api
@@ -171,8 +165,7 @@ $wgLBFactoryConf = [
 	],
 	's8' => [
 		'db1071' => 0,   # D1 2.8TB 160GB, master
-		'db1063' => 0,   # C5 2.8TB 128GB, vslow, dump
-		'db1087' => 500, # C2 3.6TB 512GB, # db1095 master
+		'db1087' => 500, # C2 3.6TB 512GB, vslow, # db1095 master
 		'db1092' => 300, # D2 3.6TB 512GB, api
 		'db1099:3318' => 1,   # B2 3.6TB 512GB # rc, log: s1 and s8
 		'db1101:3318' => 1,   # C2 3.6TB 512GB # rc, log: s7 and s8
@@ -516,14 +509,6 @@ $wgLBFactoryConf = [
 # Removing a server from this list does not remove the server from rotation,
 # it just breaks the site horribly.
 'hostsByName' => [
-	'db1001' => '10.64.0.5', # do not remove or comment out
-	'db1009' => '10.64.0.13', # do not remove or comment out
-	'db1011' => '10.64.0.15', # do not remove or comment out
-	'db1020' => '10.64.16.9', # do not remove or comment out
-	'db1030' => '10.64.16.19', # do not remove or comment out
-	'db1039' => '10.64.16.28', # do not remove or comment out
-	'db1043' => '10.64.16.32', # do not remove or comment out
-	'db1047' => '10.64.16.36', # do not remove or comment out
 	'db1051' => '10.64.16.76', # do not remove or comment out
 	'db1052' => '10.64.16.77', # do not remove or comment out
 	'db1053' => '10.64.0.87', # do not remove or comment out
@@ -720,9 +705,7 @@ $wgLBFactoryConf = [
 	],
 	# ExtensionStore shard1
 	'extension1' => [
-		'10.64.16.20' => 0,  # db1031, B1 1.5TB 64GB, master
-		'10.64.16.18' => 10, # db1029, B1 1.5TB 64GB
-		'10.64.32.25' => 1,  # db1055, C2 2.8TB 96GB
+		'10.64.32.25' => 1,  # db1055, C2 2.8TB 96GB, master
 		'10.64.32.26' => 1,  # db1056, C3 2.8TB 96GB
 	],
 ],
