@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cee8db29_120bcd2e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3547,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2017-12-23T12:26:01Z",
+      "side": 1,
+      "message": "English name will be useful for knowing what this is without looking at extra namespaces definition",
+      "range": {
+        "startLine": 3547,
+        "startChar": 27,
+        "endLine": 3547,
+        "endChar": 39
+      },
+      "revId": "f8ff17b0c62a570311e1c7045b030da953e6c2aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
