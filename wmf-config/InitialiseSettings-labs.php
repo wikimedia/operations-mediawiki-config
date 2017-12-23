@@ -506,7 +506,6 @@ function wmfLabsSettings() {
 
 		'wmgUseAdvancedSearch' => [
 			'default' => true,
-			'deploymentwiki' => false,
 		],
 
 		'wmgUseFileImporter' => [
