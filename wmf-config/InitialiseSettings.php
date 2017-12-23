@@ -3542,6 +3542,11 @@ $wgConf->settings = [
 		'Auxtoro' => 102,
 		'Auxtoro-Diskuto' => 103,
 	],
+	'+eswiki' => [
+		'CAT' => NS_CATEGORY, // T183612
+		'PR' => 102, // T183612 (Wikiproyecto)
+		'WP' => NS_PROJECT, // T183612
+	],
 	'+eswiktionary' => [
 		'WN' => NS_PROJECT, // T119006
 	],
