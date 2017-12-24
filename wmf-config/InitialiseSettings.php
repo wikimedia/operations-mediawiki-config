@@ -19765,6 +19765,7 @@ $wgConf->settings = [
 	'fiwiki' => true, // T151591
 	'frwiki' => true,
 	'hewiki' => true,
+	'lvwiki' => true, // T183661
 	'mkwiki' => true,
 	'nowiki' => true, // T154021
 	'ptwiki' => true, // T168915
