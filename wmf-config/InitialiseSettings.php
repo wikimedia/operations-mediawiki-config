@@ -9321,6 +9321,9 @@ $wgConf->settings = [
 		'patroller' => [ 'patrol' => true ], // T116143
 		'filemover' => [ 'movefile' => true ], // T116143
 	],
+	'+ruwiktionary' => [
+		'rollbacker' => [ 'rollback' => true ], // T183655
+	],
 	'+sawiki' => [
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'patroller' => [ 'patrol' => true ], // T117314
@@ -10350,6 +10353,9 @@ $wgConf->settings = [
 	'+ruwikivoyage' => [
 		'sysop' => [ 'autopatrolled', 'rollbacker', 'patroller', 'filemover' ], // T48915 and T116143
 	],
+	'+ruwiktionary' => [
+		'sysop' => [ 'rollbacker' ], // T183655
+	],
 	'+sawiki' => [
 		'sysop' => [ 'autopatrolled', 'patroller' ], // T117314
 	],
@@ -11126,6 +11132,9 @@ $wgConf->settings = [
 	],
 	'+ruwikivoyage' => [
 		'sysop' => [ 'autopatrolled', 'rollbacker', 'patroller', 'filemover' ], // T48915 and T116143
+	],
+	'+ruwiktionary' => [
+		'sysop' => [ 'rollbacker' ], // T183655
 	],
 	'+sawiki' => [
 		'sysop' => [ 'autopatrolled', 'patroller' ], // T117314
