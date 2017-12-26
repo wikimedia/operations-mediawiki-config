@@ -2328,6 +2328,7 @@ $wgConf->settings = [
 	'lbewiki' => 'Википедия',
 	'legalteamwiki' => 'Legal Team Wiki',
 	'lezwiki' => 'Википедия',
+	'lfnwiki' => 'Vicipedia',
 	'liwikibooks' => 'Wikibeuk',
 	'liwikisource' => 'Wikibrónne',
 	'loginwiki' => 'Wikimedia Login Wiki',
