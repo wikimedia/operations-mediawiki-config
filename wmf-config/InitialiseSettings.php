@@ -9323,6 +9323,8 @@ $wgConf->settings = [
 	],
 	'+ruwiktionary' => [
 		'rollbacker' => [ 'rollback' => true ], // T183655
+		'editor' => [ 'suppressredirect' => true ], // T183719
+		'autoreview' => [ 'suppressredirect' => true ], // T183719
 	],
 	'+sawiki' => [
 		'autopatrolled' => [ 'autopatrol' => true ],
