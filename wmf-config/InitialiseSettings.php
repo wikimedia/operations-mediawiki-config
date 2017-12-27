@@ -4509,6 +4509,10 @@ $wgConf->settings = [
 		'H' => NS_HELP,
 		'P' => 100,
 		'草稿' => 118, // T91223
+		'U' => NS_USER, // T183711
+		'UT' => NS_USER_TALK, // T183711
+		'F' => NS_FILE, // T183711
+		'FT' => NS_FILE_TALK, // T183711
 	],
 	'+zhwikibooks' => [
 		'维基教科书' => NS_PROJECT,
