@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cee8db29_c88c1102",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2017-12-27T08:22:23Z",
+      "side": 1,
+      "message": "why changing the sanitarium master if db1064 will not be moved? Perhaps your idea is to make db1064 STATEMENT BASED?",
+      "revId": "d6ef32ba4249e2f290543320ec076d59f19c879d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cee8db29_e88755da",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2017-12-27T08:22:23Z",
+      "side": 1,
+      "message": "This is a good candidate to be sanitarium master",
+      "revId": "d6ef32ba4249e2f290543320ec076d59f19c879d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
