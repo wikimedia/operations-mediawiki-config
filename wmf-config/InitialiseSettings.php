@@ -19747,6 +19747,7 @@ $wgConf->settings = [
 'wgKartographerEnableMapFrame' => [
 	'default' => true,
 	'wikipedia' => false,
+	'arwiki' => true, // T183764
 	'cawiki' => true,
 	'cswiki' => true, // T171588
 	'eswiki' => true, // T177695
