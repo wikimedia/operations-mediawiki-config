@@ -15223,6 +15223,7 @@ $wgConf->settings = [
 	'cywiktionary' => 'uca-cy', // T61800
 	'dewikisource' => 'uca-de-u-kn', // T149002 T155916
 	'enwiki' => 'uca-default-u-kn', // T136150
+	'eswiki' => 'uca-es-u-kn', // T183802
 	'eswikiversity' => 'uca-es-u-kn', // T149002
 	'etwiki' => 'xx-uca-et', // T56168
 	'etwikibooks' => 'xx-uca-et', // T56168
