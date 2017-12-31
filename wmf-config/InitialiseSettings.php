@@ -6288,6 +6288,8 @@ $wgConf->settings = [
 		101 => '저자토론',
 		102 => '포털', // T71522
 		103 => '포털토론',
+		114 => '번역', // T183836, Translation
+		115 => '번역토론', // T183836, Traslation talk
 	],
 	'lawikisource' => [
 		102 => 'Scriptor',
@@ -7731,7 +7733,7 @@ $wgConf->settings = [
 	'+itwikisource' => [ 102 => 1, 110 => 1 ],
 	'+itwikiversity' => [ 100 => 1, 102 => 1, 104 => 1 ], // T114932
 	'+itwikivoyage' => [ 100 => 1, 104 => 1, 106 => 1 ],
-	'+kowikisource' => [ 100 => 1 ],
+	'+kowikisource' => [ 100 => 1, 114 => 1 ], // T183836 for 114
 	'+lawikisource' => [ 102 => 1, 106 => 1 ],
 	'+wikitech' => [ 12 => 1, 116 => 1, 498 => 1 ],
 	'+ltwiki' => [ 100 => 1 ],
@@ -12080,7 +12082,7 @@ $wgConf->settings = [
 	'+idwikisource' => [ 100 ],
 	'+itwikisource' => [ 102 ],
 	'+itwikivoyage' => [ 100, 104 ], // T57620
-	'+kowikisource' => [ 100 ],
+	'+kowikisource' => [ 100, 114 ], // T183836 for 114
 	'+lawikisource' => [ 102 ],
 	'+ltwikipedia' => [ 104 ], // T144118
 	'+mediawikiwiki' => [ 100, 102, 104, 106 ], // Manuals, extensions, Api & skin - T86391
