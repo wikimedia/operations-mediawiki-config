@@ -8262,7 +8262,11 @@ $wgConf->settings = [
 		'patroller' => [ 'autopatrol' => true, 'patrol' => true, 'abusefilter-log-detail' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'filemover' => [ 'movefile' => true ],
-		'Image-reviewer' => [ 'autopatrol' => true, 'upload_by_url' => true ],
+		'Image-reviewer' => [
+			'autopatrol' => true,
+			'upload_by_url' => true,
+			'patrol' => true, // T183835
+		 ],
 		'extended-uploader' => [
 			'autoconfirmed' => true,
 			'upload' => true,
