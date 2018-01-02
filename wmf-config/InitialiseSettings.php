@@ -19736,23 +19736,7 @@ $wgConf->settings = [
 ],
 
 'wgKartographerStaticMapframe' => [
-	'default' => false,
-	'mediawikiwiki' => true,
-	'cawiki' => true,
-	'cswiki' => true, // T171588
-	'eswiki' => true, // T177695
-	'euwiki' => true, // T167619
-	'fiwiki' => true, // T151591
-	'frwiki' => true,
-	'hewiki' => true,
-	'mkwiki' => true,
-	'nowiki' => true, // T154021
-	'ptwiki' => true, // T168915
-	'ruwiki' => true,
-	'svwiki' => true, // T161032
-	'testwiki' => true,
-	'test2wiki' => true,
-	'uawikimedia' => true, // T164574
+	'default' => true, // T183981
 ],
 
 'wgKartographerEnableMapFrame' => [
