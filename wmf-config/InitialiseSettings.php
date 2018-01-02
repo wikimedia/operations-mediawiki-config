@@ -1217,7 +1217,6 @@ $wgConf->settings = [
 	'acewiki' => [ '1.5x' => '/static/images/project-logos/acewiki-1.5x.png', '2x' => '/static/images/project-logos/acewiki-2x.png' ], // T150618
 	'adywiki' => [ '1.5x' => '/static/images/project-logos/adywiki-1.5x.png', '2x' => '/static/images/project-logos/adywiki-2x.png' ], // T150618
 	'afwiki' => [ '1.5x' => '/static/images/project-logos/afwiki-1.5x.png', '2x' => '/static/images/project-logos/afwiki-2x.png' ], // T150618
-	'afwiktionary' => [ '1.5x' => '/static/images/project-logos/afwiktionary-1.5x.png', '2x' => '/static/images/project-logos/afwiktionary-2x.png' ], // T178824
 	'akwiki' => [ '1.5x' => '/static/images/project-logos/akwiki-1.5x.png', '2x' => '/static/images/project-logos/akwiki-2x.png' ], // T150618
 	'alswiki' => [ '1.5x' => '/static/images/project-logos/alswiki-1.5x.png', '2x' => '/static/images/project-logos/alswiki-2x.png' ], // T150618
 	'amwiki' => [ '1.5x' => '/static/images/project-logos/amwiki-1.5x.png', '2x' => '/static/images/project-logos/amwiki-2x.png' ], // T150618
@@ -1479,6 +1478,7 @@ $wgConf->settings = [
 	'zh_yuewiki' => [ '1.5x' => '/static/images/project-logos/zh_yuewiki-1.5x.png', '2x' => '/static/images/project-logos/zh_yuewiki-2x.png' ], // T150618
 
 	# Wiktionary
+	'afwiktionary' => [ '1.5x' => '/static/images/project-logos/afwiktionary-1.5x.png', '2x' => '/static/images/project-logos/afwiktionary-2x.png' ], // T178824
 	'amwiktionary' => [ '1.5x' => '/static/images/project-logos/amwiktionary-1.5x.png', '2x' => '/static/images/project-logos/amwiktionary-2x.png' ], // T150618
 	'arwiktionary' => [ '1.5x' => '/static/images/project-logos/arwiktionary-1.5x.png', '2x' => '/static/images/project-logos/arwiktionary-2x.png' ], // T150618
 	'azwiktionary' => [ '1.5x' => '/static/images/project-logos/azwiktionary-1.5x.png', '2x' => '/static/images/project-logos/azwiktionary-2x.png' ], // T150618
