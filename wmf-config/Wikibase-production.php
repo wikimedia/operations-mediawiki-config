@@ -140,9 +140,17 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBQualityConstraintsSparqlEndpoint = $wgWBRepoSettings['sparqlEndpoint'];
 		$wgWBQualityConstraintsSparqlMaxMillis = 5000; // limit SPARQL queries to just 5 seconds for now
 		$wgWBQualityConstraintsTypeCheckMaxEntities = 10; // only check few entities in PHP => fall back to SPARQL very quickly
-		// T148411: Use profile that demotes disambigs by default
+		// T148411: Use profile that demotes uses statement boosting by default
 		$wgWBRepoSettings['entitySearch']['defaultPrefixRescoreProfile'] = 'wikibase_prefix_boost';
-		$wgWBRepoSettings['entitySearch']['statementBoost'] = [ 'P31=Q4167410' => '-10' ];
+		$wgWBRepoSettings['entitySearch']['statementBoost'] = [
+			// Q4167410=Wikimedia disambiguation page
+			'P31=Q4167410' => '-10',
+			// T183510:
+			// Q13442814=scientific article
+			'P31=Q13442814' => '-5',
+			// Q18918145=academic journal article
+			'P31=Q18918145' => '-5',
+		];
 	}
 
 	if ( $wgDBname === 'wikidatawiki' ) {
