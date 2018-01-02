@@ -1217,7 +1217,6 @@ $wgConf->settings = [
 	'acewiki' => [ '1.5x' => '/static/images/project-logos/acewiki-1.5x.png', '2x' => '/static/images/project-logos/acewiki-2x.png' ], // T150618
 	'adywiki' => [ '1.5x' => '/static/images/project-logos/adywiki-1.5x.png', '2x' => '/static/images/project-logos/adywiki-2x.png' ], // T150618
 	'afwiki' => [ '1.5x' => '/static/images/project-logos/afwiki-1.5x.png', '2x' => '/static/images/project-logos/afwiki-2x.png' ], // T150618
-	'afwiktionary' => [ '1.5x' => '/static/images/project-logos/afwiktionary-1.5x.png', '2x' => '/static/images/project-logos/afwiktionary-2x.png' ], // T178824
 	'akwiki' => [ '1.5x' => '/static/images/project-logos/akwiki-1.5x.png', '2x' => '/static/images/project-logos/akwiki-2x.png' ], // T150618
 	'alswiki' => [ '1.5x' => '/static/images/project-logos/alswiki-1.5x.png', '2x' => '/static/images/project-logos/alswiki-2x.png' ], // T150618
 	'amwiki' => [ '1.5x' => '/static/images/project-logos/amwiki-1.5x.png', '2x' => '/static/images/project-logos/amwiki-2x.png' ], // T150618
@@ -1449,7 +1448,6 @@ $wgConf->settings = [
 	'towiki' => [ '1.5x' => '/static/images/project-logos/towiki-1.5x.png', '2x' => '/static/images/project-logos/towiki-2x.png' ], // T150618
 	'tpiwiki' => [ '1.5x' => '/static/images/project-logos/tpiwiki-1.5x.png', '2x' => '/static/images/project-logos/tpiwiki-2x.png' ], // T150618
 	'trwiki' => [ '1.5x' => '/static/images/project-logos/trwiki-1.5x.png', '2x' => '/static/images/project-logos/trwiki-2x.png' ], // T150618
-	'trwiktionary' => [ '1.5x' => '/static/images/project-logos/trwiktionary-1.5x.png', '2x' => '/static/images/project-logos/trwiktionary-2x.png' ], // T176008
 	'tswiki' => [ '1.5x' => '/static/images/project-logos/tswiki-1.5x.png', '2x' => '/static/images/project-logos/tswiki-2x.png' ], // T150618
 	'ttwiki' => [ '1.5x' => '/static/images/project-logos/ttwiki-1.5x.png', '2x' => '/static/images/project-logos/ttwiki-2x.png' ], // T150618
 	'tyvwiki' => [ '1.5x' => '/static/images/project-logos/tyvwiki-1.5x.png', '2x' => '/static/images/project-logos/tyvwiki-2x.png' ], // T150618
@@ -1479,6 +1477,7 @@ $wgConf->settings = [
 	'zh_yuewiki' => [ '1.5x' => '/static/images/project-logos/zh_yuewiki-1.5x.png', '2x' => '/static/images/project-logos/zh_yuewiki-2x.png' ], // T150618
 
 	# Wiktionary
+	'afwiktionary' => [ '1.5x' => '/static/images/project-logos/afwiktionary-1.5x.png', '2x' => '/static/images/project-logos/afwiktionary-2x.png' ], // T178824
 	'amwiktionary' => [ '1.5x' => '/static/images/project-logos/amwiktionary-1.5x.png', '2x' => '/static/images/project-logos/amwiktionary-2x.png' ], // T150618
 	'arwiktionary' => [ '1.5x' => '/static/images/project-logos/arwiktionary-1.5x.png', '2x' => '/static/images/project-logos/arwiktionary-2x.png' ], // T150618
 	'azwiktionary' => [ '1.5x' => '/static/images/project-logos/azwiktionary-1.5x.png', '2x' => '/static/images/project-logos/azwiktionary-2x.png' ], // T150618
@@ -1546,6 +1545,7 @@ $wgConf->settings = [
 	'swwiktionary' => [ '1.5x' => '/static/images/project-logos/swwiktionary-1.5x.png', '2x' => '/static/images/project-logos/swwiktionary-2x.png' ], // T150618
 	'tewiktionary' => [ '1.5x' => '/static/images/project-logos/tewiktionary-1.5x.png', '2x' => '/static/images/project-logos/tewiktionary-2x.png' ], // T150618
 	'tkwiktionary' => [ '1.5x' => '/static/images/project-logos/tkwiktionary-1.5x.png', '2x' => '/static/images/project-logos/tkwiktionary-2x.png' ], // T150618
+	'trwiktionary' => [ '1.5x' => '/static/images/project-logos/trwiktionary-1.5x.png', '2x' => '/static/images/project-logos/trwiktionary-2x.png' ], // T176008
 	'ttwiktionary' => [ '1.5x' => '/static/images/project-logos/ttwiktionary-1.5x.png', '2x' => '/static/images/project-logos/ttwiktionary-2x.png' ], // T150618
 	'ugwiktionary' => [ '1.5x' => '/static/images/project-logos/ugwiktionary-1.5x.png', '2x' => '/static/images/project-logos/ugwiktionary-2x.png' ], // T150618
 	'ukwiktionary' => [ '1.5x' => '/static/images/project-logos/ukwiktionary-1.5x.png', '2x' => '/static/images/project-logos/ukwiktionary-2x.png' ], // T150618
