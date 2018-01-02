@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "aeed6739_4d0dd840",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2018-01-02T08:39:19Z",
+      "side": 1,
+      "message": "Yes, to make master candidated \u003c\u003e ROW (sanitarium) everywhere.",
+      "parentUuid": "cee8db29_c88c1102",
+      "revId": "d6ef32ba4249e2f290543320ec076d59f19c879d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cee8db29_e88755da",
         "filename": "wmf-config/db-eqiad.php",
         "patchSetId": 3
@@ -30,6 +48,47 @@
       "writtenOn": "2017-12-27T08:22:23Z",
       "side": 1,
       "message": "This is a good candidate to be sanitarium master",
+      "revId": "d6ef32ba4249e2f290543320ec076d59f19c879d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_ad0aa427",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2018-01-02T08:39:19Z",
+      "side": 1,
+      "message": "It is a good candidate for master, too.",
+      "parentUuid": "cee8db29_e88755da",
+      "revId": "d6ef32ba4249e2f290543320ec076d59f19c879d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_8d07e01e",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2018-01-02T08:39:19Z",
+      "side": 1,
+      "message": "I would make any of these instead. Maybe we need one more host here?",
+      "range": {
+        "startLine": 152,
+        "startChar": 2,
+        "endLine": 152,
+        "endChar": 10
+      },
       "revId": "d6ef32ba4249e2f290543320ec076d59f19c879d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
