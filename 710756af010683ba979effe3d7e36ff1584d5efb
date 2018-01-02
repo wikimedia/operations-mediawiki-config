@@ -22,6 +22,30 @@
       "revId": "710756af010683ba979effe3d7e36ff1584d5efb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_91cd3a65",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-01-02T09:57:25Z",
+      "side": 1,
+      "message": "code reviews are for that! thanks!",
+      "parentUuid": "aeed6739_11d92a2d",
+      "range": {
+        "startLine": 54,
+        "startChar": 18,
+        "endLine": 54,
+        "endChar": 26
+      },
+      "revId": "710756af010683ba979effe3d7e36ff1584d5efb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
