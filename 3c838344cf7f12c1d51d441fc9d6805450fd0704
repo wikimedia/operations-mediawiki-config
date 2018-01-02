@@ -16,6 +16,24 @@
       "revId": "3c838344cf7f12c1d51d441fc9d6805450fd0704",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_a682be95",
+        "filename": "wmf-config/Wikibase-production.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 2096
+      },
+      "writtenOn": "2018-01-02T23:16:55Z",
+      "side": 1,
+      "message": "oops",
+      "parentUuid": "aeed6739_4622d251",
+      "revId": "3c838344cf7f12c1d51d441fc9d6805450fd0704",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
