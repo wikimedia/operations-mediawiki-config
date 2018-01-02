@@ -721,7 +721,6 @@ $wgLBFactoryConf = [
 	# ExtensionStore shard1
 	'extension1' => [
 		'10.64.16.20' => 0, # db1031, B1 1.5TB 64GB, master
-		'10.64.16.18' => 1, # db1029, B1 1.5TB 64GB
 		'10.64.32.25' => 1, # db1055, C2 2.8TB 96GB
 		'10.64.32.26' => 1, # db1056, C3 2.8TB 96GB
 	],
