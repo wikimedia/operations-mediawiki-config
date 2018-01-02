@@ -53,7 +53,6 @@ $wgLBFactoryConf = [
 
 	# s5: dewiki and wikidata
 	'dewiki'       => 's5',
-	'wikidatawiki' => 's5',
 
 	# s6: large wikis
 	'frwiki'       => 's6',
@@ -76,7 +75,7 @@ $wgLBFactoryConf = [
 	'kowiki'       => 's7',
 
 	# s8: future dedicated wikidata
-	# 'wikidatawiki' => 's8',
+	'wikidatawiki' => 's8',
 
 	# labs-related wikis
 	'labswiki'     => 'silver',
