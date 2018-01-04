@@ -7255,6 +7255,7 @@ $wgConf->settings = [
 		'filedesc',
 		'filestatus',
 		'filesource',
+		'movepage-summary', // T183848
 	],
 	'enwiki' => [
 		'licenses', // for upload form variants hack, 2007-02-22
