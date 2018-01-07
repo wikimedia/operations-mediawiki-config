@@ -20029,6 +20029,12 @@ $wgConf->settings = [
 	'wikidatawiki' => 5,
 	'testwikidatawiki' => 5,
 ],
+// T152115
+'wgMinervaAlwaysShowLanguageButton' => [
+	'default' => true,
+	'mediawikiwiki' => false,
+	'wikidatawiki' => false,
+],
 
 ];
 
