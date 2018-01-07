@@ -4,8 +4,8 @@ import os
 import subprocess
 
 import scap.cli as cli
+import scap.lint as lint
 import scap.main as main
-import scap.tasks as tasks
 import scap.utils as utils
 
 
@@ -31,7 +31,7 @@ class UpdateInterwikiCache(main.SyncFile):
             )
 
         # This shouldn't happen, but let's be safe
-        tasks.check_valid_syntax(interwikifile)
+        lint.check_valid_syntax(interwikifile)
 
         subprocess.check_call(['/usr/bin/git', 'add', interwikifile])
         subprocess.check_call(['/usr/bin/git', 'commit', '-q', '-m',
