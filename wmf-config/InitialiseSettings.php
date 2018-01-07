@@ -12518,7 +12518,7 @@ $wgConf->settings = [
 	'cswiktionary' => '/static/favicon/wiktionary/en.ico', // T47113
 	'enwiktionary' => '/static/favicon/wiktionary/en.ico', // T46843
 	'iswiktionary' => '/static/favicon/wiktionary/en.ico', // T48712
-	'mkwiktionary' => '/static/favicon/wiktionary/mk.ico', // T140566
+	'mkwiktionary' => '/static/favicon/wiktionary/en.ico',
 	'siwiktionary' => '/static/favicon/wiktionary/si.ico', // T40036
 
 	# Special wikis
