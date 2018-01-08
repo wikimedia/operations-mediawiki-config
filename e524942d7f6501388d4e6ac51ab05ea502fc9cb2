@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aeed6739_ba48e561",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 20037,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-08T19:15:31Z",
+      "side": 1,
+      "message": "In future ideally group this with other wgMinerva prefixed config variables as it helps findability!\n\nThat aside, change looks good! thanks!",
+      "revId": "e524942d7f6501388d4e6ac51ab05ea502fc9cb2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
