@@ -1,0 +1,9 @@
+Code-Review+1: TerraCodes <terracodes@tools.wmflabs.org>
+Code-Review+1: Debt <dtankersley@wikimedia.org>
+Code-Review+2: Hashar <hashar@free.fr>
+Verified+2: jenkins-bot
+Submitted-by: jenkins-bot
+Submitted-at: Mon, 08 Jan 2018 14:35:02 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/400682
+Project: operations/mediawiki-config
+Branch: refs/heads/master
