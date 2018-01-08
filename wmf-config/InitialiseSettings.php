@@ -15442,7 +15442,10 @@ $wgConf->settings = [
 'wgEditSubmitButtonLabelPublish' => [
 	'default' => true,      // T131132 from 2017-03-15
 	'private' => false,     // Private wikis are not public
-	'wikinews' => false,    // Done via local {{int:Copyrightwarning}}s instead.
+	'enwikinews' => false,  // Done via local {{int:Copyrightwarning}}s instead.
+	'eswikinews' => false,  // Done via local {{int:Copyrightwarning}}s instead.
+	'frwikinews' => false,  // Done via local {{int:Copyrightwarning}}s instead.
+	'ptwikinews' => false,  // Done via local {{int:Copyrightwarning}}s instead.
 ],
 
 'wmgCheckUserForceSummary' => [
