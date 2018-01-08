@@ -18155,6 +18155,7 @@ $wgConf->settings = [
 // T172914
 'wmgWikibaseFineGrainedLuaTracking' => [
 	'default' => false,
+	'hewiki' => true,
 ],
 
 'wmgUseWikibaseQuality' => [
