@@ -54,8 +54,9 @@ foreach ( $datacenters as $specificDC ) {
 		'cacheAuthInfo'      => true,
 		// When used by FileBackendMultiWrite, read from this cluster if it's the local one
 		'readAffinity'       => ( $specificDC === $wmfDatacenter ),
-		'readUsers'           => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
-		'writeUsers'          => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ]
+		'readUsers'          => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
+		'writeUsers'         => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
+		'headerWhitelist'    => [ '/^x-mediawiki-/' ],
 	];
 	$wgFileBackends[] = [ // backend config for wiki's access to shared repo
 		'class'              => 'SwiftFileBackend',
