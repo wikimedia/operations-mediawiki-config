@@ -763,10 +763,10 @@ $wgLBFactoryConf = [
 	# 's2'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
 	# 'DEFAULT' => 'This request is served by a passive datacenter. If you see this something is really wrong.', # s3
 	# 's4'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
-	's5'      => 'Temporary read-only time for maintenance, please try again in some minutes. https://www.wikidata.org/wiki/Wikidata:Project_chat#Wikidata_in_read-only_for_30min_on_January_9th',
+	# 's5'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
 	# 's6'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
 	# 's7'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
-	's8'      => 'Temporary read-only time for maintenance, please try again in some minutes. https://www.wikidata.org/wiki/Wikidata:Project_chat#Wikidata_in_read-only_for_30min_on_January_9th',
+	# 's8'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
 ],
 
 ];
