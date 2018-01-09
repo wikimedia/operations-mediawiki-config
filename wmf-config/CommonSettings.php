@@ -3627,6 +3627,10 @@ if ( $wmgUseReadingLists ) {
 	wfLoadExtension( 'ReadingLists' );
 }
 
+if ( PHP_SAPI === 'cli' ) {
+	wfLoadExtension( 'ActiveAbstract' );
+}
+
 if ( $wmfRealm === 'labs' ) {
 	require "$wmfConfigDir/CommonSettings-labs.php";
 }
