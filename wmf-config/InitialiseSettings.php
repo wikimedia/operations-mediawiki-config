@@ -5008,6 +5008,7 @@ $wgConf->settings = [
 	'frwiki' => [ '', 'autoconfirmed', 'editextendedsemiprotected', 'sysop' ], // T131109
 	'hewiki' => [ '', 'autoconfirmed', 'autopatrol',  'templateeditor' /* T102466 */, 'sysop' ], // T60207
 	'huwiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T74055
+	'kowiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T184675
 	'lvwiki' => [ '', 'autoconfirmed', 'autopatrol', 'sysop' ], // T92645
 	'plwiki' => [ '', 'autoconfirmed', 'editor', 'sysop' ], // T48990
 	'ptwiki' => [ '', 'autoconfirmed', 'autoreviewer', 'sysop' ], // T41652
@@ -5026,6 +5027,7 @@ $wgConf->settings = [
 	'+enwiki' => [ 'extendedconfirmed' ], // T126607
 	'+fawiki' => [ 'extendedconfirmed' ], // T140839
 	'+frwiki' => [ 'editextendedsemiprotected' ], // T132248
+	'+kowiki' => [ 'extendedconfirmed' ], // T184675
 ],
 
 'wgSiteNotice' => [
@@ -8930,6 +8932,15 @@ $wgConf->settings = [
 		],
 		'user' => [ 'reupload-own' => false ], // T85621
 		'autopatrolled' => [ 'autopatrol' => true ], // T130808
+		'bot' => [
+			'extendedconfirmed' => true,
+		], // T184675
+		'extendedconfirmed' => [
+			'extendedconfirmed' => true,
+		], // T184675
+		'sysop' => [
+			'extendedconfirmed' => true,
+		], // T184675
 	],
 	'ladwiki' => [
 		'flood' => [ 'bot' => true ], // T131527
@@ -10206,7 +10217,7 @@ $wgConf->settings = [
 		'sysop' => [ 'rollbacker' ], // T130215
 	],
 	'+kowiki' => [
-		'sysop' => [ 'rollbacker', 'confirmed', 'uploader', 'autopatrolled' ], // T85621, T130808
+		'sysop' => [ 'rollbacker', 'confirmed', 'uploader', 'autopatrolled', 'extendedconfirmed' ], // T85621, T130808, T184675
 	],
 	'+ladwiki' => [
 		'sysop' => [ 'flood' ], // T131527
@@ -10951,7 +10962,7 @@ $wgConf->settings = [
 		'sysop' => [ 'rollbacker' ], // T130215
 	],
 	'+kowiki' => [
-		'sysop' => [ 'rollbacker', 'confirmed', 'uploader', 'autopatrolled' ], // T85621, T130808
+		'sysop' => [ 'rollbacker', 'confirmed', 'uploader', 'autopatrolled', 'extendedconfirmed' ], // T85621, T130808, T184675
 	],
 	'+ladwiki' => [
 		'sysop' => [ 'flood' ], // T131527
@@ -12535,6 +12546,13 @@ $wgConf->settings = [
 			[ '!', [ APCOND_INGROUPS, 'eliminator' ] ],
 		], // T140839
 	],
+	'kowiki' => [
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 30 * 86400 ], // 30 days * seconds in a day
+			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+		], // T184675
 	'trwiki' => [
 		'autoreview' => [
 			'&', // AND
