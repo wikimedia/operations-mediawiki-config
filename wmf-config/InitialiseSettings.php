@@ -19655,19 +19655,18 @@ $wgConf->settings = [
 	'votewiki' => false,
 ],
 
-// Temporary code for the first test of htmlCacheUpdate
-// on the EventBus JobQueue -disable old queue on wiktionaries only
+// Temporary code for gradually integrating htmlCacheUpdate
+// jobs into the EventBus JobQueue - T182023
+// Step 2: enable everywhere but wikidata, enwiki and commons
 'wmgDisableHTMLCacheUpdateInRedis' => [
-	'default' => false,
-	'cebwiki' => true,
-	'ruwiki' => true,
-	'wikibooks' => true,
-	'wikinews' => true,
-	'wikiquote' => true,
-	'wikisource' => true,
-	'wikiversity' => true,
-	'wikivoyage' => true,
-	'wiktionary' => true,
+	'default' => true,
+	'wikitech' => false,
+	'private' => false,
+	'loginwiki' => false,
+	'votewiki' => false,
+	'commonswiki' => false,
+	'enwiki' => false,
+	'wikidatawiki' => false,
 ],
 
 'wmgUseCapiunto' => [
