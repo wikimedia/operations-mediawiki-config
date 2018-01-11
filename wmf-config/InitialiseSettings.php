@@ -20316,6 +20316,7 @@ $wgConf->settings = [
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
+	'commonswiki' => true,
 ],
 
 'wg3dProcessEnviron' => [
