@@ -111,7 +111,7 @@ $wgLBFactoryConf = [
 		'db1080' => 300, # A2 3.6TB 512GB, api
 		'db1083' => 500, # B1 3.6TB 512GB
 		# 'db1089' => 500, # C3 3.6TB 512GB # T162807
-		'db1099:3311' => 1,   # B2 3.6TB 512GB # rc, log: s1 and s8
+		# 'db1099:3311' => 1,   # B2 3.6TB 512GB # rc, log: s1 and s8 # T162807
 		'db1105:3311' => 1,   # C3 3.6TB 512GB # rc, log: s1 and s2
 	],
 	's2' => [
@@ -172,7 +172,7 @@ $wgLBFactoryConf = [
 		'db1063' => 0,   # C5 2.8TB 128GB, vslow, dump
 		'db1087' => 500, # C2 3.6TB 512GB, # db1095 master
 		'db1092' => 300, # D2 3.6TB 512GB, api
-		'db1099:3318' => 1,   # B2 3.6TB 512GB # rc, log: s1 and s8
+		# 'db1099:3318' => 1,   # B2 3.6TB 512GB # rc, log: s1 and s8
 		'db1101:3318' => 1,   # C2 3.6TB 512GB # rc, log: s7 and s8
 		'db1104' => 300,  # B3 3.6TB 512GB, api
 		'db1109' => 500,  # D8 3.6TB 512GB
@@ -260,23 +260,23 @@ $wgLBFactoryConf = [
 'groupLoadsBySection' => [
 	's1' => [
 		'watchlist' => [
-			'db1099:3311' => 1,
+			# 'db1099:3311' => 1,
 			'db1105:3311' => 1,
 		],
 		'recentchanges' => [
-			'db1099:3311' => 1,
+			# 'db1099:3311' => 1,
 			'db1105:3311' => 1,
 		],
 		'recentchangeslinked' => [
-			'db1099:3311' => 1,
+			# 'db1099:3311' => 1,
 			'db1105:3311' => 1,
 		],
 		'contributions' => [
-			'db1099:3311' => 1,
+			# 'db1099:3311' => 1,
 			'db1105:3311' => 1,
 		],
 		'logpager' => [
-			'db1099:3311' => 1,
+			# 'db1099:3311' => 1,
 			'db1105:3311' => 1,
 		],
 		'dump' => [
@@ -485,23 +485,23 @@ $wgLBFactoryConf = [
 			'db1104' => 1,
 		],
 		'watchlist' => [
-			'db1099:3318' => 1,
+			# 'db1099:3318' => 1,
 			'db1101:3318' => 1,
 		],
 		'recentchanges' => [
-			'db1099:3318' => 1,
+			# 'db1099:3318' => 1,
 			'db1101:3318' => 1,
 		],
 		'recentchangeslinked' => [
-			'db1099:3318' => 1,
+			# 'db1099:3318' => 1,
 			'db1101:3318' => 1,
 		],
 		'contributions' => [
-			'db1099:3318' => 1,
+			# 'db1099:3318' => 1,
 			'db1101:3318' => 1,
 		],
 		'logpager' => [
-			'db1099:3318' => 1,
+			# 'db1099:3318' => 1,
 			'db1101:3318' => 1,
 		],
 	],
