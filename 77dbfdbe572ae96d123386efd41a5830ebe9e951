@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ef26315_2fcde634",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 19978,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2018-01-11T14:05:44Z",
+      "side": 0,
+      "message": "This shouldn\u0027t have been removed",
+      "range": {
+        "startLine": 19978,
+        "startChar": 0,
+        "endLine": 19978,
+        "endChar": 2
+      },
+      "revId": "77dbfdbe572ae96d123386efd41a5830ebe9e951",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
