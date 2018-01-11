@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ef26315_92109e5d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3630,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-01-11T20:40:24Z",
+      "side": 1,
+      "message": "An inline comment here would be helpful for future reference, specifically that these are needed for maintenance scripts such as mediawiki/maintenance/backup.inc.",
+      "range": {
+        "startLine": 3630,
+        "startChar": 1,
+        "endLine": 3630,
+        "endChar": 27
+      },
+      "revId": "79fab9204ea808f27bd1927ba5b74783cd27360c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
