@@ -1,8 +1,8 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 #
-# Included by PhpAutoPrepend.php before any other wmf-config or mediawiki file.
-# Uses no predefined state, other than plain PHP.
+# Will later be included with PHP from a auto_prepend_file before any wmf-config or MediaWiki file.
+# Must not use predefined state, other than plain PHP.
 #
 # Exposes:
 # - $wmgProfiler (used by StartProfile.php)
