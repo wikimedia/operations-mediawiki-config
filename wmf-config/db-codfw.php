@@ -118,7 +118,7 @@ $wgLBFactoryConf = [
 	],
 	's2' => [
 		'db2017'      => 0,   # B6 2.9TB  96GB, master
-		'db2035'      => 50,  # C6 2.9TB 160GB, rc, log
+		# 'db2035'      => 50,  # C6 2.9TB 160GB, rc, log
 		'db2041'      => 100, # C6 2.9TB 160GB, api
 		'db2049'      => 400, # C6 2.9TB 160GB,
 		'db2056'      => 50,  # D6 3.3TB 160GB, dump (inactive), vslow #innodb compressed
@@ -314,27 +314,22 @@ $wgLBFactoryConf = [
 	],
 	's2' => [
 		'watchlist' => [
-			'db2035' => 1,
 			'db2088:3312' => 1,
 			'db2091:3312' => 1,
 		],
 		'recentchanges' => [
-			'db2035' => 1,
 			'db2088:3312' => 1,
 			'db2091:3312' => 1,
 		],
 		'recentchangeslinked' => [
-			'db2035' => 1,
 			'db2088:3312' => 1,
 			'db2091:3312' => 1,
 		],
 		'contributions' => [
-			'db2035' => 1,
 			'db2088:3312' => 1,
 			'db2091:3312' => 1,
 		],
 		'logpager' => [
-			'db2035' => 1,
 			'db2088:3312' => 1,
 			'db2091:3312' => 1,
 		],
