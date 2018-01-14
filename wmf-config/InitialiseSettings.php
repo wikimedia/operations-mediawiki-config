@@ -2822,7 +2822,7 @@ $wgConf->settings = [
 	'mznwiki' => 'ویکی‌پدیا',
 	'nahwiki' => 'Huiquipedia',
 	'nds_nlwiki' => 'Wikipedie',
-	'newiki' => 'विकिपीडिया',
+	'newiki' => 'विकिपिडिया', // T184865
 	'newikibooks' => 'विकिपुस्तक', // T124881
 	'newwiki' => 'विकिपिडिया',
 	'newiktionary' => 'विक्सनरी', // T129768
@@ -3044,7 +3044,7 @@ $wgConf->settings = [
 	'mrjwiki' => 'Википедим_кӓнгӓшӹмӓш',
 	'mrwikibooks'	=> 'विकिबुक्स_चर्चा', // T73774
 	'mznwiki' => 'ویکی‌پدیا_گپ', // T32752 T85383
-	'newiki' => 'विकिपीडिया_वार्ता',
+	'newiki' => 'विकिपिडिया_वार्ता', // T184865
 	'newwiki' => 'विकिपिडिया_खँलाबँला',
 	'noboard_chapterswikimedia' => 'Wikimedia-diskusjon',
 	'nsowiki' => 'Dipolelo_tša_Wikipedia',
@@ -4058,6 +4058,8 @@ $wgConf->settings = [
 		'ढाँ' => NS_TEMPLATE,
 		'ढाँवा' => NS_TEMPLATE_TALK,
 		'T' => NS_TEMPLATE,
+		'विकिपीडिया' => NS_PROJECT, // T184865
+		'विकिपीडिया_वार्ता' => NS_PROJECT_TALK, // T184865
 	],
 	'+newikibooks' => [
 		// Per T131754
