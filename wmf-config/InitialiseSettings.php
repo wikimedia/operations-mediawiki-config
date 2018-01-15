@@ -8244,6 +8244,7 @@ $wgConf->settings = [
 			'abusefilter-log-detail' => true,
 			'abusefilter-view-private' => true, // T174357
 			'abusefilter-log-private' => true, // T174357
+			'epcoordinator' => [ 'noratelimit' => true ], // T131684
 		],
 		'rollbacker' => [ 'rollback' => true, ], // T126931
 		'patroller' => [ // T126931
@@ -17352,6 +17353,7 @@ $wgConf->settings = [
 	'default' => false,
 	'arwiki' => true, // T59729
 	'cawiki' => true, // T73381
+	'cswiki' => true, // T56223
 	'dewikiversity' => true,
 	'elwiki' => true, // T58771
 	'enwiki' => true,
@@ -17374,6 +17376,7 @@ $wgConf->settings = [
 
 'wmgEducationProgramDYKCat' => [
 	'default' => 'MyCourses Did You Know',
+	'cswiki' => 'Moje kurzy - Víte že?', // T56223
 	'eswiki' => 'Mis cursos ¿sabías que?', // T56826
 	'fawiki' => 'نکته روز ویکی‌پدیا',
 	'lvwiki' => 'Mani kursi — Vai tu zināji?', // T89898
