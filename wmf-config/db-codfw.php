@@ -128,8 +128,8 @@ $wgLBFactoryConf = [
 		'db2091:3312' => 1, # A8 3.3TB 512GB # rc, log: s2 and s4
 	],
 	/* s3 */ 'DEFAULT' => [
-		'db2018'      => 0,   # B6 2.9TB  96GB, master
-		'db2036'      => 50,  # C6 2.9TB 160GB
+		'db2036'      => 0,   # C6 2.9TB 160GB, master
+		# 'db2018'      => 0,   # B6 2.9TB  96GB, old master
 		'db2043'      => 50,  # C6 2.9TB 160GB, dump (inactive), vslow
 		'db2050'      => 150, # C6 2.9TB 160GB
 		'db2057'      => 400, # D6 3.3TB 160GB
