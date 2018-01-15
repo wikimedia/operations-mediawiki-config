@@ -14611,6 +14611,7 @@ $wgConf->settings = [
 
 'wgLinterStatsdSampleFactor' => [
 	'default' => 1000,
+	'commonswiki' => 5000, // T184280
 	'small' => 50,
 	'medium' => 100,
 ],
