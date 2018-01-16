@@ -42,16 +42,14 @@ $jobQueueFederatedConfig = [
 ];
 
 if ( $wmgUseEventBus && $wmgDebugJobQueueEventBus ) {
-	$wgJobTypeConf['MessageIndexRebuildJob'] =
+	$wgJobTypeConf['deleteLinks'] =
 		$wgJobTypeConf['flaggedrevs_CacheUpdate'] =
-		$wgJobTypeConf['deleteLinks'] =
-		$wgJobTypeConf['updateBetaFeaturesUserCounts'] =
+		$wgJobTypeConf['htmlCacheUpdate'] =
+		$wgJobTypeConf['MessageIndexRebuildJob'] =
 		$wgJobTypeConf['RecordLintJob'] =
+		$wgJobTypeConf['updateBetaFeaturesUserCounts'] =
 		$wgJobTypeConf['wikibase-addUsagesForPage'] =
 			[ 'class' => 'JobQueueEventBus' ];
-	if ( $wmgDisableHTMLCacheUpdateInRedis ) {
-		$wgJobTypeConf['htmlCacheUpdate'] = [ 'class' => 'JobQueueEventBus' ];
-	}
 	$wgJobTypeConf['default'] = [
 		'class' => 'JobQueueSecondTestQueue',
 		'mainqueue' => $jobQueueFederatedConfig,
