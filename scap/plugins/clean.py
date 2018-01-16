@@ -82,16 +82,8 @@ class Clean(main.AbstractSync):
                                 'wmf/%s' % branch]
             with log.Timer('prune-git-branches', self.get_stats()):
                 # Prune all the submodules' remote branches
-                for submodule in git.list_submodules(stage_dir):
-                    submodule_path = submodule.lstrip(' ').split(' ')[1]
-                    with utils.cd(os.path.join(stage_dir, submodule_path)):
-                        if subprocess.call(gerrit_prune_cmd) != 0:
-                            logger.info(
-                                'Failed to prune submodule branch for %s' %
-                                submodule)
-
-                # Prune core last
                 with utils.cd(stage_dir):
+                    subprocess.check_output('git submodule foreach "git push origin --quiet --delete wmf/%s ||:"' % branch, shell=True)
                     if subprocess.call(gerrit_prune_cmd) != 0:
                         logger.info('Failed to prune core branch')
             with log.Timer('removing-local-copy'):
