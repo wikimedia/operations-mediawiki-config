@@ -18702,30 +18702,6 @@ $wgConf->settings = [
 
 'wmgCirrusSearchUserTesting' => [
 	'default' => [],
-	'hewiki' => [
-		'ltr' => [
-			'globals' => [],
-			'buckets' => [
-				'control' => [
-					'trigger' => 'control',
-				],
-				'ltr-1024' => [
-					'trigger' => 'ltr-1024',
-					'globals' => [
-						'wgCirrusSearchRescoreProfile' => 'mlr-1024rs',
-					]
-				],
-				'ltr-1024-i' => [
-					'trigger' => 'ltr-1024-i',
-					'globals' => [
-						'wgCirrusSearchInterleaveConfig' => [
-							'CirrusSearchRescoreProfile' => 'mlr-1024rs'
-						],
-					],
-				],
-			],
-		],
-	],
 ],
 
 'wmgCirrusSearchLanguageDetectors' => [
