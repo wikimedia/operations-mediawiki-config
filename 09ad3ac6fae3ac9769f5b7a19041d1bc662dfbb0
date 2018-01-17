@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ef26315_a4ea9471",
+        "filename": "tests/dblistTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2018-01-17T17:31:02Z",
+      "side": 1,
+      "message": "It looks like it does support them (sort of) with the exception loop below. You just have to manually add them to the exception list, right?",
+      "range": {
+        "startLine": 124,
+        "startChar": 10,
+        "endLine": 124,
+        "endChar": 57
+      },
+      "revId": "09ad3ac6fae3ac9769f5b7a19041d1bc662dfbb0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ef26315_64e24c9e",
+        "filename": "tests/dblistTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2018-01-17T17:31:02Z",
+      "side": 1,
+      "message": "Isn\u0027t arwikimedia (Wikimedia Argentina) ltr, not rtl?",
+      "range": {
+        "startLine": 129,
+        "startChar": 19,
+        "endLine": 129,
+        "endChar": 30
+      },
+      "revId": "09ad3ac6fae3ac9769f5b7a19041d1bc662dfbb0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
