@@ -7110,6 +7110,8 @@ $wgConf->settings = [
 		105 => 'Topic_talk',
 		106 => 'Collection',
 		107 => 'Collection_talk',
+		118 => 'Draft', // T184957
+		119 => 'Draft_talk',
 	],
 	'frwikiversity' => [
 		102 => 'Projet',
