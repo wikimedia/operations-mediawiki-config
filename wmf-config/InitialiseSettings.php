@@ -20199,14 +20199,6 @@ $wgConf->settings = [
 	'votewiki' => false,
 ],
 
-'wmgDebugJobQueueEventBus' => [
-	'default' => true,
-	'wikitech' => false,
-	'private' => false,
-	'loginwiki' => false,
-	'votewiki' => false,
-],
-
 'wmgDisableCirrusSearchJobsInRedis' => [
 	'default' => false,
 	'mediawikiwiki' => true,
