@@ -15189,6 +15189,8 @@ $wgConf->settings = [
 		'https://codeclimate.com/github/wikimedia/wikimedia-fundraising-php-queue/feed.atom',
 		'https://codeclimate.com/github/wikimedia/wikimedia-fundraising-SmashPig/feed.atom',
 		'https://codeclimate.com/github/wikimedia/wikimedia-fundraising-tools/feed.atom',
+
+		'https://discourse-mediawiki.wmflabs.org/latest.rss', // T185087
 	],
 	'metawiki' => [
 		'https://tagteam.harvard.edu/hubs/wmde-policy/items.rss', // WM DE political RSS feed - T165285
