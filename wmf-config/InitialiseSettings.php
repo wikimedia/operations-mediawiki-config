@@ -19634,14 +19634,6 @@ $wgConf->settings = [
 	'votewiki' => false,
 ],
 
-'wmgDebugJobQueueEventBus' => [
-	'default' => true,
-	'wikitech' => false,
-	'private' => false,
-	'loginwiki' => false,
-	'votewiki' => false,
-],
-
 // Temporary code for gradually integrating htmlCacheUpdate
 // jobs into the EventBus JobQueue - T182023
 // Step 2: enable everywhere but wikidata, enwiki and commons

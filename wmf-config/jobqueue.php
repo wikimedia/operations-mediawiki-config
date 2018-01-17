@@ -41,7 +41,7 @@ $jobQueueFederatedConfig = [
 	'maxPartitionsTry' => 5 // always covers 2+ servers
 ];
 
-if ( $wmgUseEventBus && $wmgDebugJobQueueEventBus ) {
+if ( $wmgUseEventBus ) {
 	$wgJobTypeConf['MessageIndexRebuildJob'] =
 		$wgJobTypeConf['flaggedrevs_CacheUpdate'] =
 		$wgJobTypeConf['deleteLinks'] =
