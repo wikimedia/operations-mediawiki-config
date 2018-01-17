@@ -15670,6 +15670,11 @@ $wgConf->settings = [
 		'copyright-width' => 116,
 		'copyright-height' => 18,
 	],
+	'pswiki' => [
+		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-ps.svg',
+		'copyright-width' => 66,
+		'copyright-height' => 26,
+	],
 	'arwiki' => [
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-ar.svg',
 		'copyright-width' => 79,
