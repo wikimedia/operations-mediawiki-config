@@ -119,4 +119,36 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 		sort( $expectedDbs );
 		$this->assertEquals( $exprDbs, $expectedDbs );
 	}
+
+	/**
+	 * @note Does not support special wikis in RTL languages, luckily there are none currently
+	 */
+	public function testRtlDblist() {
+		ini_set( 'user_agent', 'mediawiki-config tests' );
+		$siteMatrix = file_get_contents( 'https://meta.wikimedia.org/w/api.php?action=sitematrix&format=json&smtype=language&smlangprop=dir%7Ccode%7Csite&smsiteprop=dbname&formatversion=2' );
+		if ( !$siteMatrix ) {
+			$this->fail( 'Error retrieving site matrix!' );
+		}
+		$siteMatrix = json_decode( $siteMatrix, true );
+
+		$rtl = array_flip( MWWikiversions::readDbListFile( 'rtl' ) );
+		$shouldBeRtl = [];
+
+		foreach ( $siteMatrix['sitematrix'] as $key => $lang ) {
+			if ( !is_numeric( $key )
+				|| $lang['dir'] !== 'rtl'
+			) {
+				continue;
+			}
+			foreach ( $lang['site'] as $site ) {
+				$dbname = $site['dbname'];
+				if ( !isset( $rtl[$dbname] ) ) {
+					$shouldBeRtl[] = $dbname;
+				}
+				unset( $rtl[$dbname] );
+			}
+		}
+		$this->assertEquals( [], array_keys( $rtl ), 'All entries in rtl.dblist should correspond to RTL wikis' );
+		$this->assertEquals( [], $shouldBeRtl, 'All RTL wikis should be registered in rtl.dblist' );
+	}
 }
