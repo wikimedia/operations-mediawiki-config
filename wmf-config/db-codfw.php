@@ -105,7 +105,6 @@ $wgLBFactoryConf = [
 	's1' => [
 		'db2048'      => 0,   # C6 2.9TB 160GB, master
 		# 'db2016'      => 0,   # B6 2.9TB  96GB, old master
-		'db2034'      => 50,  # A5 2.9TB 160GB, rc, log
 		'db2042'      => 50,  # C6 2.9TB 160GB, rc, log
 		'db2055'      => 50,  # D6 3.3TB 160GB, dump (inactive), vslow, api
 		'db2062'      => 50,  # B5 3.3TB 160GB, api # mariadb 10.1
@@ -270,31 +269,26 @@ $wgLBFactoryConf = [
 'groupLoadsBySection' => [
 	's1' => [
 		'watchlist' => [
-			'db2034' => 1,
 			'db2042' => 1,
 			'db2088:3311' => 1,
 			'db2085:3311' => 1,
 		],
 		'recentchanges' => [
-			'db2034' => 1,
 			'db2042' => 1,
 			'db2088:3311' => 1,
 			'db2085:3311' => 1,
 		],
 		'recentchangeslinked' => [
-			'db2034' => 1,
 			'db2042' => 1,
 			'db2088:3311' => 1,
 			'db2085:3311' => 1,
 		],
 		'contributions' => [
-			'db2034' => 1,
 			'db2042' => 1,
 			'db2088:3311' => 1,
 			'db2085:3311' => 1,
 		],
 		'logpager' => [
-			'db2034' => 1,
 			'db2042' => 1,
 			'db2088:3311' => 1,
 			'db2085:3311' => 1,
