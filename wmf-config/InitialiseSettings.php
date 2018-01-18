@@ -4953,6 +4953,7 @@ $wgConf->settings = [
 	'tenwiki' => 0, // T28554
 	'wuuwiki' => 7 * 86400, // T122476
 	'zhwiki' => 7 * 3600 * 24, // T16624
+	'zhwikibooks' => 7 * 3600 * 24, // T185182
 ],
 
 // Turn this on so UserMailer::send() will be able to send both text and html email
@@ -4986,6 +4987,7 @@ $wgConf->settings = [
 	'wikidata' => 50, // T48461
 	'wuuwiki' => 10, // T122476
 	'zhwiki' => 50, // T16624
+	'zhwikibooks' => 10, // T185182
 	'zh_yuewiki' => 10, // T32538
 ],
 
@@ -9741,6 +9743,10 @@ $wgConf->settings = [
 		],
 	],
 
+	'zhwikibooks' => [
+		'autoconfirmed' => [ 'suppressredirect' => true ], // T185182
+		'flood' => [ 'bot' => true ], // T185182
+	],
 	'zhwikinews' => [
 		'rollbacker' => [ 'rollback' => true ], // T29268
 		'flood' => [ 'bot' => true ], // T54546
@@ -10551,6 +10557,9 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'flood' ],
 		'sysop' => [ 'patroller', 'rollbacker', 'autoreviewer', 'confirmed', 'massmessage-sender' ], // T130814
 	],
+	'+zhwikibooks' => [
+		'sysop' => [ 'flood' ], //T185182
+	],
 	'+zhwikinews' => [
 		'sysop' => [
 			'rollbacker',
@@ -11313,6 +11322,9 @@ $wgConf->settings = [
 	'+zhwiki' => [
 		'bureaucrat' => [ 'flood' ],
 		'sysop' => [ 'patroller', 'rollbacker', 'autoreviewer', 'confirmed', 'flood', 'massmessage-sender' ], // T130814
+	],
+	'+zhwikibooks' => [
+		'sysop' => [ 'flood' ], //T185182
 	],
 	'+zhwikinews' => [
 		'sysop' => [
