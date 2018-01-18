@@ -240,16 +240,8 @@ $wgCirrusSearchInterwikiPrefixOverrides = $wmgCirrusSearchInterwikiPrefixOverrid
 // Load other project config via cirrus dump config API
 $wgCirrusSearchFetchConfigFromApi = true;
 
-// Override sister search profiles for specific projects
-$wgCirrusSearchCrossProjectProfiles = [
-	// full text wikivoyage results are often irrelevant, filter the
-	// search with title matches to improve relevance.
-	'voy' => [
-		'ftbuilder' => 'perfield_builder_title_filter',
-		'rescore' => 'wsum_inclinks',
-	],
-];
-
+// Override sister search settings for specific projects
+$wgCirrusSearchCrossProjectProfiles = $wmgCirrusSearchCrossProjectProfiles;
 $wgCirrusSearchCrossProjectSearchBlackList = $wmgCirrusSearchCrossProjectSearchBlackList;
 $wgCirrusSearchCrossProjectShowMultimedia = $wmgCirrusSearchCrossProjectShowMultimedia;
 
