@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ef26315_f00c533f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 19992,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2018-01-18T08:27:28Z",
+      "side": 1,
+      "message": "Let\u0027s start with disabled everywhere, and enabled on Beta (the test cluster - it has a separate settings file), and then roll it out gradually, to make sure we are not breaking registration accidentally. Also once enabled, we\u0027ll probably want \u0027fishbowl\u0027 (kind of private) and \u0027nonglobal\u0027 (does share a single sign-on with Wikipedia) as false as well.",
+      "revId": "5ca89e8f318d97e1f96e7d680a361f9fe7ae1ada",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
