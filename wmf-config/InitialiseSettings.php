@@ -17900,14 +17900,14 @@ $wgConf->settings = [
 
 'wgRelatedSitesPrefixes' => [
 	'default' => [],
-	'wikivoyage' => [ 'wikipedia', 'dmoz', 'citizendium', 'commons' ],
+	'wikivoyage' => [ 'wikipedia', 'dmoz', 'commons' ],
 ],
 
 'wgExtraInterlanguageLinkPrefixes' => [
 	'default' => [],
 	'wikisource' => [ 'mul' ],
 	'wikiversity' => [ 'mul' ],
-	'wikivoyage' => [ 'wikipedia', 'dmoz', 'citizendium', 'commons' ],
+	'wikivoyage' => [ 'wikipedia', 'dmoz', 'commons' ],
 ],
 
 'wmgExtraLanguageNames' => [
