@@ -8042,6 +8042,9 @@ $wgConf->settings = [
 	'trwikimedia' => [ '*' => [
 		'edit' => false,
 	] ],
+	'sewikimedia' => [ '*' => [
+		'edit' => false,
+	] ],
 
 	// Miscellaneous
 	'+arbcom_enwiki' => [
@@ -9369,29 +9372,6 @@ $wgConf->settings = [
 	'+sdwiki' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T177141
 	],
-	'+sewikimedia' => [
-		'*' => [
-			'edit' => false,
-			'editallpages' => false,
-		],
-		'user' => [
-			'editallpages' => true, // T41671
-		],
-		'sysop' => [ // T63947
-			'editallpages' => true,
-		],
-		'medlem' => [
-			'move' => true,
-			'move-subpages' => true,
-			'read' => true,
-			'edit' => true,
-			'createpage' => true,
-			'createtalk' => true,
-			'minoredit' => true,
-			'purge' => true,
-			'editallpages' => true,
-		],
-	],
 	'+simplewiki' => [
 		'flood' => [ 'bot' => true ],
 		'rollbacker' => [ 'rollback' => true, ],
@@ -10385,10 +10365,6 @@ $wgConf->settings = [
 	'+sdwiki' => [
 		'sysop' => [ 'autopatrolled' ], // T177141
 	],
-	'+sewikimedia' => [
-		'bureaucrat' => [ 'medlem' ],
-		'sysop' => [ 'medlem' ],
-	],
 	'+simplewiki' => [
 		'bureaucrat' => [ 'rollbacker', 'transwiki', 'patroller' ],
 		'sysop' => [ 'rollbacker', 'flood', 'patroller', 'uploader', ], // T127826
@@ -11138,7 +11114,7 @@ $wgConf->settings = [
 		'sysop' => [ 'autopatrolled' ], // T177141
 	],
 	'+sewikimedia' => [
-		'bureaucrat' => [ 'sysop', 'bureaucrat', 'medlem' ],
+		'bureaucrat' => [ 'sysop', 'bureaucrat'],
 	],
 	'+shwiki' => [
 		'bureaucrat' => [
@@ -12392,26 +12368,6 @@ $wgConf->settings = [
 	],
 	'ruwiki' => [
 		106 => [ 'autoconfirmed' ],
-	],
-	'sewikimedia' => [
-		NS_MAIN => [ 'editallpages' ],
-		NS_TALK => [ 'editallpages' ],
-		NS_USER => [ 'editallpages' ],
-		NS_USER_TALK => [ 'editallpages' ],
-		NS_PROJECT => [ 'editallpages' ],
-		NS_PROJECT_TALK => [ 'editallpages' ],
-		NS_FILE => [ 'editallpages' ],
-		NS_FILE_TALK => [ 'editallpages' ],
-		NS_MEDIAWIKI => [ 'editallpages' ],
-		NS_MEDIAWIKI_TALK => [ 'editallpages' ],
-		NS_TEMPLATE => [ 'editallpages' ],
-		NS_TEMPLATE_TALK => [ 'editallpages' ],
-		NS_HELP => [ 'editallpages' ],
-		NS_HELP_TALK => [ 'editallpages' ],
-		NS_CATEGORY => [ 'editallpages' ],
-		NS_CATEGORY_TALK => [ 'editallpages' ],
-		100 => [ 'editallpages' ],
-		101 => [ 'editallpages' ],
 	],
 	'+wikidatawiki' => [
 		122 => [ 'query-update' ],  // Query namespace per T51001
