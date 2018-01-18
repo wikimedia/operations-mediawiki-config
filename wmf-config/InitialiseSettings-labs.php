@@ -724,5 +724,8 @@ function wmfLabsSettings() {
 				],
 			],
 		],
+		'wgWMEAICaptchaEnabled' => [
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()
