@@ -18437,6 +18437,24 @@ $wgConf->settings = [
 	'itwikivoyage' => false,
 ],
 
+'wmgCirrusSearchCrossProjectProfiles = [
+	'default' => [
+		// full text wikivoyage results are often irrelevant, filter the
+		// search with title matches to improve relevance
+		'voy' => [
+			'ftbuilder' => 'perfield_builder_title_filter',
+			'rescore' => 'wsum_inclinks',
+		],
+	],
+	'+enwiki' => [
+		// T185250
+		'wikt' => [
+			'ftbuilder' => 'perfield_builder_title_filter',
+			'rescore' => 'wsum_inclinks',
+		],
+	],
+],
+
 'wmgCirrusSearchIgnoreOnWikiBoostTemplates' => [
 	'default' => false,
 	// on wiki boost templates have to high boosts for enwiki
