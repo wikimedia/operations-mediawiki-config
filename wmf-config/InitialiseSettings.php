@@ -7061,6 +7061,10 @@ $wgConf->settings = [
 		100 => 'פורטל',
 		101 => 'שיחת_פורטל'
 	],
+	'itwikiquote' => [
+		100 => 'Portale', // T185232
+		101 => 'Discussioni_portale',
+	],
 	'kuwikiquote' => [
 		NS_PROJECT_TALK => 'Gotûbêja_Wîkîgotinê', // T39523
 	],
