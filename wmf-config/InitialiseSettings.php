@@ -19987,6 +19987,11 @@ $wgConf->settings = [
 	'mediawikiwiki' => false,
 	'wikidatawiki' => false,
 ],
+// T183869
+'wgWMEAICaptchaEnabled' => [
+	'default' => true,
+	'private' => false,
+],
 
 ];
 
