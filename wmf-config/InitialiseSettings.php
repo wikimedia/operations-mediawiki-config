@@ -5724,6 +5724,10 @@ $wgConf->settings = [
 		102 => 'Progetto',
 		103 => 'Discussioni_progetto',
 	],
+	'itwikiquote' => [
+		100 => 'Portale', // T185232
+		101 => 'Discussioni_portale',
+	],
 	'jawiki' => [
 		NS_TALK => "ノート",
 		NS_USER_TALK => "利用者‐会話",
