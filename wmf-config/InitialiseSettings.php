@@ -6694,6 +6694,14 @@ $wgConf->settings = [
 		102 => 'Індекс', // index
 		103 => 'Обговорення_індексу', // index talk
 	],
+	'wawiktionary' => [
+		100 => 'Rawete', // T185289
+		101 => 'Rawete_copene', // T185289
+		102 => 'Sourdant', // T185289
+		103 => 'Sourdant_copene', // T185289
+		104 => 'Motyince', // T185289
+		105 => 'Motyince_copene', // T185289
+	],
 	'zhwiktionary' => [
 		100 => '附录', // T31641 - appendix
 		101 => '附录讨论', // T31641 - appendix talk
