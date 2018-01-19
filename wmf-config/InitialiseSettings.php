@@ -10273,6 +10273,9 @@ $wgConf->settings = [
 	'+mlwiktionary' => [
 		'bureaucrat' => [ 'botadmin' ],
 	],
+	'+mrwiki' => [
+		'bureaucrat' => [ 'accountcreator' ], // T184553
+	],
 	'+newiki' => [
 		'sysop' => [
 			'autopatrolled',        // T89816
@@ -11020,6 +11023,9 @@ $wgConf->settings = [
 	],
 	'+mlwiktionary' => [
 		'bureaucrat' => [ 'botadmin' ],
+	],
+	'+mrwiki' => [
+		'bureaucrat' => [ 'accountcreator' ], // T184553
 	],
 	'+newiki' => [
 		'sysop' => [
