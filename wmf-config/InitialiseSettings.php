@@ -13319,6 +13319,18 @@ $wgConf->settings = [
 		'images.collection.cooperhewitt.org', // Cooper Hewitt - T180241
 		'*.nli.org.il',                     // National Library of Israel - T1881179
 		'studiezaal.nijmegen.nl'            // Regionaal Archief Nijmegen, NL - T181713
+		'president.gov.ua',                 // Ukraine government website - T185399
+		'kmu.gov.ua',                       // Ukraine government website - T185399
+		'vin.gov.ua',                       // Ukraine government website - T185399
+		'if.gov.ua',                        // Ukraine government website - T185399
+		'kr-admin.gov.ua',                  // Ukraine government website - T185399
+		'loda.gov.ua',                      // Ukraine government website - T185399
+		'loga.gov.ua',                      // Ukraine government website - T185399
+		'kmr.gov.ua',                       // Ukraine government website - T185399
+		'mil.gov.ua',                       // Ukraine government website - T185399
+		'mip.gov.ua',                       // Ukraine government website - T185399
+		'sfs.gov.ua',                       // Ukraine government website - T185399
+		'dknii.gov.ua',                     // Ukraine government website - T185399
 	],
 ],
 
