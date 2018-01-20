@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ef26315_6c1dfc65",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 7040,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2018-01-20T17:49:24Z",
+      "side": 1,
+      "message": "Here is the section where you want to add the new values.",
+      "range": {
+        "startLine": 7040,
+        "startChar": 4,
+        "endLine": 7040,
+        "endChar": 13
+      },
+      "revId": "39a646d2ef6a0d147de60c0ad29aa8265009a2ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
