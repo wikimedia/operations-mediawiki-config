@@ -13492,6 +13492,18 @@ $wgConf->settings = [
 		'studiezaal.nijmegen.nl',           // Regionaal Archief Nijmegen, NL - T181713
 		'audiovis.nac.gov.pl',              // Zbiori, Poland goverment - T184853
 		'mushroomobserver.org',              // Mushroom Observer - T188203
+		'www.president.gov.ua',             // Ukraine government website - T185399
+		'www.kmu.gov.ua',                   // Ukraine government website - T185399
+		'vin.gov.ua',                       // Ukraine government website - T185399
+		'if.gov.ua',                        // Ukraine government website - T185399
+		'kr-admin.gov.ua',                  // Ukraine government website - T185399
+		'loda.gov.ua',                      // Ukraine government website - T185399
+		'loga.gov.ua',                      // Ukraine government website - T185399
+		'kmr.gov.ua',                       // Ukraine government website - T185399
+		'www.mil.gov.ua',                   // Ukraine government website - T185399
+		'mip.gov.ua',                       // Ukraine government website - T185399
+		'sfs.gov.ua',                       // Ukraine government website - T185399
+		'dknii.gov.ua',                     // Ukraine government website - T185399
 	],
 ],
 
