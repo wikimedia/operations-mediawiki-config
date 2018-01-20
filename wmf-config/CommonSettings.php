@@ -197,7 +197,7 @@ if ( !$globals ) {
 			'nowikidatadescriptiontaglines',
 			'related-articles-footer-blacklisted-skins',
 			'top6-wikipedia', 'rtl',
-			'pp_stage0', 'pp_stage1'
+			'pp_stage0', 'pp_stage1', 'uploadsdisabled'
 		] as $tag ) {
 		$dblist = MWWikiversions::readDbListFile( $tag );
 		if ( in_array( $wgDBname, $dblist ) ) {

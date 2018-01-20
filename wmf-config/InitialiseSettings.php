@@ -1659,6 +1659,7 @@ $wgConf->settings = [
 	// Projects
 	'default' => true,
 	'commonsuploads' => true, // Soft-disabling
+	'uploadsdisabled' => false, // Hard-disabling - T143789
 	'wikidata' => false,
 
 	// Wikinews
@@ -1674,40 +1675,6 @@ $wgConf->settings = [
 	'nowikinews' => true,
 	'plwikinews' => true,
 	'trwikinews' => true, // T22215
-
-	// Other individual wikis
-	'azbwiki' => false, // T106305
-	'enwikiquote' => false, // http://en.wikiquote.org/wiki/Wikiquote_talk:Image_use_policy
-	'eswiki' => false, // T8408
-	'eswikibooks' => false, // T20865
-	'eswikiquote' => false, // T11728
-	'eswikivoyage' => false, // T44933
-	'euwiki' => false, // T30609
-	'gomwiki' => false, // T96468
-	'guwiki' => false,
-	'iawiki' => false, // T130425
-	'itwikiquote' => false, // T14012
-	'jawikisource' => false, // T5572
-	'jawiktionary' => false, // T13775
-	'loginwiki' => false,
-	'lrcwiki' => false, // T102026
-	'mswiki' => false, // T126944
-	'mswiktionary' => false, // T69152
-	'nlwikisource' => false, // T73403
-	'nlwikivoyage' => false, // T73403
-	'nlwiktionary' => false, // T73403
-	'ndswiki' => false, // http://mail.wikipedia.org/pipermail/wikitech-l/2005-October/032136.html
-	'outreachwiki' => false,
-	'plwikiquote' => false,
-	'ptwikivoyage' => false, // T44933
-	'ptwiktionary' => false, // T16193
-	'ruwikiquote' => false,
-	'specieswiki' => false,
-	'svwiki' => false, // T13954
-	'svwikiversity' => false, // T28037
-	'viwikivoyage' => false, // T54034
-	'vowiki' => false, // T15740
-	'xmfwiki' => false,
 ],
 # @} end of wgEnableUploads
 
@@ -1730,9 +1697,10 @@ $wgConf->settings = [
 	// Projects
 	'default' => false,
 	'commonsuploads' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=$lang',
+	'uploadsdisabled' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=$lang',
 	'wikinews' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 
-	// These are commonsuploads wikis (not specified below) where $lang does not work
+	// These are commonsuploads/uploadsdisabled wikis (not specified below) where $lang does not work
 	'betawikiversity' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 	'simplewiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 	'simplewiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
@@ -7950,6 +7918,26 @@ $wgConf->settings = [
 			'reupload' => true,
 			'reupload-own' => true,
 			'reupload-shared' => true,
+		],
+	],
+	'uploadsdisabled' => [ // T143789
+		'user' => [
+			'upload' => false,
+			'reupload' => false,
+			'reupload-own' => false,
+			'reupload-shared' => false,
+		],
+		'autoconfirmed' => [
+			'upload' => false,
+			'reupload' => false,
+			'reupload-own' => false,
+			'reupload-shared' => false,
+		],
+		'sysop' => [
+			'upload' => false,
+			'reupload' => false,
+			'reupload-own' => false,
+			'reupload-shared' => false,
 		],
 	],
 
