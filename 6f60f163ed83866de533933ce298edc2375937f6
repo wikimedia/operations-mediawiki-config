@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ef26315_d3f9534c",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 2013,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2018-01-20T12:00:39Z",
+      "side": 1,
+      "message": "T184865 only talks about namespaces, which makes the change to this setting look like a mistake.",
+      "range": {
+        "startLine": 2013,
+        "startChar": 1,
+        "endLine": 2013,
+        "endChar": 11
+      },
+      "revId": "6f60f163ed83866de533933ce298edc2375937f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ef26315_b3f48751",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 2519,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2018-01-20T12:00:39Z",
+      "side": 1,
+      "message": "I believe this is what you wanted to change.",
+      "range": {
+        "startLine": 2519,
+        "startChar": 1,
+        "endLine": 2519,
+        "endChar": 16
+      },
+      "revId": "6f60f163ed83866de533933ce298edc2375937f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
