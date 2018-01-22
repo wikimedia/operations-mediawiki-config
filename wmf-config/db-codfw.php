@@ -125,9 +125,9 @@ $wgLBFactoryConf = [
 		'db2091:3312' => 1, # A8 3.3TB 512GB # rc, log: s2 and s4
 	],
 	/* s3 */ 'DEFAULT' => [
-		'db2043'      => 0,  # C6 2.9TB 160GB, master
-		# 'db2036'      => 0,   # C6 2.9TB 160GB, old master, storage issues? T185294
-		'db2050'      => 50, # C6 2.9TB 160GB dump (inactive), vslow
+		'db2043'      => 0,   # C6 2.9TB 160GB, master
+		'db2036'      => 50,  # C6 2.9TB 160GB, old master, storage issues? T185294
+		'db2050'      => 50,  # C6 2.9TB 160GB dump (inactive), vslow
 		'db2057'      => 400, # D6 3.3TB 160GB
 		'db2074'      => 400, # D6 3.3TB 512GB # InnoDB compressed
 	],
