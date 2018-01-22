@@ -1,0 +1,8 @@
+Code-Review+1: Marostegui <marostegui@wikimedia.org>
+Code-Review+2: Jcrespo <jcrespo@wikimedia.org>
+Verified+2: jenkins-bot
+Submitted-by: jenkins-bot
+Submitted-at: Mon, 22 Jan 2018 09:51:51 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/405684
+Project: operations/mediawiki-config
+Branch: refs/heads/master
