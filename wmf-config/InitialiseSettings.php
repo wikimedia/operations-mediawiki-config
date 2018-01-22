@@ -10064,6 +10064,9 @@ $wgConf->settings = [
 	'+etwiki' => [
 		'sysop' => [ 'autopatrolled' ], // T150852
 	],
+	'+euwiki' => [
+		'bureaucrat' => [ 'accountcreator' ], // T185531
+	],
 	'+fawiki' => [
 		'bureaucrat' => [
 			'Image-reviewer', // T66532
@@ -10805,6 +10808,9 @@ $wgConf->settings = [
 	],
 	'+etwiki' => [
 		'sysop' => [ 'autopatrolled' ], // T150852
+	],
+	'+euwiki' => [
+		'bureaucrat' => [ 'accountcreator' ], // T185531
 	],
 	'+fawiki' => [
 		'bureaucrat' => [
