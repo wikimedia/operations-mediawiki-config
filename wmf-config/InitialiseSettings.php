@@ -7319,7 +7319,6 @@ $wgConf->settings = [
 		'licenses',
 	],
 	'wikidata' => [
-		'mainpage',
 		'portal-url',
 		'villagepump-url',
 		'helppage',
