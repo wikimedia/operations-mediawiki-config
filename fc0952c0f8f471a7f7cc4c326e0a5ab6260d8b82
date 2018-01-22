@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ef26315_9e5d07f2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3963
+      },
+      "writtenOn": "2018-01-22T20:23:22Z",
+      "side": 1,
+      "message": "please keep all lines of commit desc under 70 chars, see https://www.mediawiki.org/wiki/Gerrit/Commit_message_guidelines\n\nbasically you can move namespaces names from commit title to to commit description message",
+      "range": {
+        "startLine": 7,
+        "startChar": 50,
+        "endLine": 7,
+        "endChar": 136
+      },
+      "revId": "fc0952c0f8f471a7f7cc4c326e0a5ab6260d8b82",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ef26315_5e4d3f3e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 3963
+      },
+      "writtenOn": "2018-01-22T20:23:22Z",
+      "side": 1,
+      "message": "Please add this code here\n\n    Bug: T184499\n\nthanks",
+      "revId": "fc0952c0f8f471a7f7cc4c326e0a5ab6260d8b82",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ef26315_fe540bcb",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2453,
+      "author": {
+        "id": 3963
+      },
+      "writtenOn": "2018-01-22T20:23:22Z",
+      "side": 1,
+      "message": "please add task name , like\n\n    // T184499",
+      "revId": "fc0952c0f8f471a7f7cc4c326e0a5ab6260d8b82",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
