@@ -4647,6 +4647,7 @@ $wgConf->settings = [
 	'+bewikimedia' => [ 0 => 1 ],
 	'+boardwiki' => [ 0 => 1, 6 => 0, 8 => 0, 10 => 0 ],
 	'+brwikimedia' => [ 0 => 1 ],
+	'+cawikimedia' => [ 0 => 1 ], // T185436
 	'+chairwiki' => [ 0 => 1, 6 => 0, 8 => 0, 10 => 0 ],
 	'+chapcomwiki' => [ 0 => 1, 6 => 0, 8 => 0, 10 => 0 ],
 	'+checkuserwiki' => [ 0 => 1 ],
