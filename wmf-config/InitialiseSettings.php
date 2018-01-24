@@ -9861,7 +9861,7 @@ $wgConf->settings = [
 	// The '+' in front of the DB name means 'add to the default'. It saves us duplicating
 	// changes to the default across all overrides --Andrew 2009-04-28
 	'default' => [
-		'bureaucrat' => [ 'sysop', 'bureaucrat', 'bot', 'confirmed' ],
+		'bureaucrat' => [ 'accountcreator', 'sysop', 'bureaucrat', 'bot', 'confirmed' ],
 		'sysop' => [ 'ipblock-exempt' ],
 	],
 	'+testwiki' => [
@@ -10588,7 +10588,7 @@ $wgConf->settings = [
 	// The '+' in front of the DB name means 'add to the default'. It saves us duplicating
 	// changes to the default across all overrides --Andrew 2009-04-28
 	'default' => [
-		'bureaucrat' => [ 'bot', 'confirmed' ],
+		'bureaucrat' => [ 'accountcreator', 'bot', 'confirmed' ],
 		'sysop' => [ 'ipblock-exempt' ],
 	],
 	'+testwiki' => [
