@@ -5247,6 +5247,7 @@ $wgConf->settings = [
 		'Renameuser' => 'debug',
 		'resourceloader' => 'info',
 		'ResourceLoaderImage' => 'debug', // - demon, matmarex
+		'RevisionStore' => 'info',
 		'runJobs' => [ 'logstash' => 'warning' ], // - bd808, T113571
 		'session' => [ 'udp2log' => false, 'logstash' => 'warning' ],
 		'session-ip' => [ 'udp2log' => false, 'logstash' => 'info' ],
