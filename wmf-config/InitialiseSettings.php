@@ -10529,6 +10529,7 @@ $wgConf->settings = [
 		'bureaucrat' => [
 			'flood', // T50013
 			'wikidata-staff', // T74459
+			'accountcreator', // T185597
 		],
 		'wikidata-staff' => [
 			'wikidata-staff', // T74459
@@ -11295,6 +11296,7 @@ $wgConf->settings = [
 		'bureaucrat' => [
 			'flood', // T50013
 			'wikidata-staff', // T74459
+			'accountcreator', // T185597
 		],
 		'wikidata-staff' => [
 			'wikidata-staff', // T74459
