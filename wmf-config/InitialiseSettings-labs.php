@@ -510,7 +510,8 @@ function wmfLabsSettings() {
 
 		'wmgUseFileImporter' => [
 			'default' => false,
-			'commonswiki' => true,
+			'commonswiki' => 'FileImporter-WikimediaSitesTableSite',
+			'testwiki' => 'FileImporter-Site-DefaultMediaWiki',
 		],
 
 		'wmgUseFileExporter' => [
