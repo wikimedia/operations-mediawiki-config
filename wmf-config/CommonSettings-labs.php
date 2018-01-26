@@ -89,9 +89,7 @@ if ( $wmgUseFileExporter ) {
 
 if ( $wmgUseFileImporter ) {
 	wfLoadExtension( 'FileImporter' );
-	$wgFileImporterSourceSiteServices = [
-		'FileImporter-WikimediaSitesTableSite',
-	];
+	$wgFileImporterSourceSiteServices = [ $wmgUseFileImporter ];
 }
 
 if ( $wmgUseContentTranslation ) {
