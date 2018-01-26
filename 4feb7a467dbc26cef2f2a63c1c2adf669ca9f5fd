@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efcebec_dce7eddd",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 8099,
+      "author": {
+        "id": 3114
+      },
+      "writtenOn": "2018-01-26T04:44:16Z",
+      "side": 1,
+      "message": "Shouldn\u0027t there be a \"+\" before the wiki name here?",
+      "revId": "4feb7a467dbc26cef2f2a63c1c2adf669ca9f5fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
