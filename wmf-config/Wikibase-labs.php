@@ -66,7 +66,18 @@ if ( $wmgUseWikibaseClient ) {
 		'Q98651' => 'badge-validated'
 	];
 
-	$wgWBClientSettings['repoConceptBaseUri'] = 'https://wikidata.beta.wmflabs.org/entity/';
+	$wgWBClientSettings['repositories'] = [
+		'' => [
+			'repoDatabase' => 'wikidatawiki',
+			'entityNamespaces' => [
+				'item' => NS_MAIN,
+				'property' => WB_NS_PROPERTY
+			],
+			'baseUri' => 'https://wikidata.beta.wmflabs.org/entity/',
+			'prefixMapping' => [ '' => '' ],
+		],
+	];
+
 	$wgWBClientSettings['repoUrl'] = 'https://wikidata.beta.wmflabs.org';
 	$wgWBClientSettings['sendEchoNotification'] = true;
 	$wgWBClientSettings['echoIcon'] = [ 'path' => '/static/images/wikibase/echoIcon.svg' ];
