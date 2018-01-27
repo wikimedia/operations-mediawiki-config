@@ -4706,7 +4706,7 @@ $wgConf->settings = [
 	'+wikisource' => [ 0 => 1, 6 => 0, 8 => 0 ],
 	'+cswikisource' => [ 14 => 1 ],
 	'+enwikisource' => [ 114 => 1, 115 => 1 ], // T52007
-	'+huwikisource' => [ 10 => 0 ],
+	'+huwikisource' => [ 10 => 1 ],
 	'+plwikisource' => [ 124 => 1, 125 => 1 ], // T154711
 	'+trwikisource' => [ 10 => 0 ],
 	'+ukwikisource' => [ 114 => 1, 115 => 1 ], // T52561
