@@ -11899,6 +11899,9 @@ $wgConf->settings = [
 		118 => 'noindex,nofollow', // Draft - T92798
 		119 => 'noindex,nofollow', // T92798
 	],
+	'ptwiki' => [
+		NS_USER => 'noindex,follow', // T185660
+	],
 	'ruwiki' => [
 		102 => 'noindex,follow',
 		103 => 'noindex,follow',
