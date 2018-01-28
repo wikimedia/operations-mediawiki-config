@@ -9604,6 +9604,7 @@ $wgConf->settings = [
 		'eliminator' => [
 			'block' => true,
 			'delete' => true,
+			'undelete' => true, // T185829
 			'deleterevision' => true,
 			'mergehistory' => true,
 			'protect' => true,
