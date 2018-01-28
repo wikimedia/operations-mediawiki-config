@@ -4518,7 +4518,8 @@ $wgConf->settings = [
 		'UT' => NS_USER_TALK, // T183711
 		'F' => NS_FILE, // T183711
 		'FT' => NS_FILE_TALK, // T183711
-	],
+		'主题' => NS_PORTAL, // T184866
+		'主题讨论' => NS_PORTAL_TALK, // T184866
 	'+zhwikibooks' => [
 		'维基教科书' => NS_PROJECT,
 		'維基教科書' => NS_PROJECT,
