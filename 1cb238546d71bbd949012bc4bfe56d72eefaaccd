@@ -22,6 +22,30 @@
       "revId": "1cb238546d71bbd949012bc4bfe56d72eefaaccd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_0d9ab666",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 4879
+      },
+      "writtenOn": "2018-01-29T17:56:52Z",
+      "side": 1,
+      "message": "Can you fix it for me? Thanks.",
+      "parentUuid": "4efcebec_ada3c2a7",
+      "range": {
+        "startLine": 34,
+        "startChar": 11,
+        "endLine": 34,
+        "endChar": 134
+      },
+      "revId": "1cb238546d71bbd949012bc4bfe56d72eefaaccd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
