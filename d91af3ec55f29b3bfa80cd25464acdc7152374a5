@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efcebec_48278c0d",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2018-01-29T20:13:57Z",
+      "side": 1,
+      "message": "This is RFC 1918 (private) space.",
+      "revId": "d91af3ec55f29b3bfa80cd25464acdc7152374a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
