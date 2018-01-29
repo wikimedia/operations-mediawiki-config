@@ -8096,6 +8096,9 @@ $wgConf->settings = [
 			'autopatrol' => true, // T167071
 		],
 	],
+	'+arwikibooks' => [
+		'rollbacker' => [ 'rollback' => true ], // T185720
+	],
 	'+arwikisource' => [
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'patroller' => [ 'patrol' => true ],
@@ -9878,6 +9881,9 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'import', 'reviewer', 'abusefilter', 'accountcreator' ], // T143844
 		'sysop' => [ 'uploader', 'reviewer', 'confirmed', 'rollbacker', 'abusefilter', ],
 	],
+	'+arwikibooks' => [
+		'sysop' => [ 'rollbacker,' ], // T185720
+	],
 	'+arwikisource' => [
 		'sysop' => [ 'patroller', 'autopatrolled', 'rollbacker' ],
 	],
@@ -10612,6 +10618,9 @@ $wgConf->settings = [
 	'+arwiki' => [
 		'bureaucrat' => [ 'import', 'reviewer', 'abusefilter', 'accountcreator' ], // T143844
 		'sysop' => [ 'uploader', 'reviewer', 'confirmed', 'rollbacker', 'abusefilter', 'patroller', 'autopatrolled', ],
+	],
+	'+arwikibooks' => [
+		'sysop' => [ 'rollbacker,' ], // T185720
 	],
 	'+arwikisource' => [
 		'sysop' => [ 'patroller', 'autopatrolled', 'rollbacker' ],
