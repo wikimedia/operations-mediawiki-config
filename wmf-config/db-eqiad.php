@@ -151,7 +151,6 @@ $wgLBFactoryConf = [
 	],
 	's6' => [
 		'db1061' => 0,   # C3 2.8TB 128GB, master
-		# 'db1030' => 0,   # B1 1.4TB  64GB, vslow, dump # to be decomm T184397
 		'db1063' => 0,   # C5 2.8TB 128GB, vslow, dump # MariaDB 10.1
 		'db1085' => 300, # B3 3.6TB 512GB, api #master for db1102 (sanitarium 3)
 		'db1088' => 500, # C2 3.6TB 512GB
@@ -518,7 +517,6 @@ $wgLBFactoryConf = [
 	'db1009' => '10.64.0.13', # do not remove or comment out
 	'db1011' => '10.64.0.15', # do not remove or comment out
 	'db1020' => '10.64.16.9', # do not remove or comment out
-	'db1030' => '10.64.16.19', # do not remove or comment out
 	'db1043' => '10.64.16.32', # do not remove or comment out
 	'db1047' => '10.64.16.36', # do not remove or comment out
 	'db1051' => '10.64.16.76', # do not remove or comment out
