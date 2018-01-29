@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efcebec_0863c43c",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2018-01-29T20:18:17Z",
+      "side": 1,
+      "message": "Wrong task number, right?",
+      "revId": "7e1d2f21c95cac64250445b76b1bee9c0adbce11",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
