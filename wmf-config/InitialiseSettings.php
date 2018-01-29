@@ -18148,6 +18148,13 @@ $wgConf->settings = [
 	'arwiki' => true,
 	'fawiki' => true,
 	'viwiki' => true,
+	'cswiki' => true,
+	'ptwiki' => true,
+	'kowiki' => true,
+	'iawiki' => true,
+	'jawiki' => true,
+	'wikidatawiki' => true,
+	'ruwiki' => true,
 ],
 
 'wmgUseWikibaseQuality' => [
