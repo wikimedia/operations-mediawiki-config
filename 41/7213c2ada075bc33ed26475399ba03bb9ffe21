@@ -1,0 +1,8 @@
+Code-Review+1: TerraCodes <terracodes@tools.wmflabs.org>
+Code-Review+2: Ladsgroup <Ladsgroup@gmail.com>
+Verified+2: jenkins-bot
+Submitted-by: jenkins-bot
+Submitted-at: Mon, 29 Jan 2018 14:12:54 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/406256
+Project: operations/mediawiki-config
+Branch: refs/heads/master
