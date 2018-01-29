@@ -12521,6 +12521,12 @@ $wgConf->settings = [
 	'mkwiktionary' => '/static/favicon/wiktionary/mk.ico', // T140566
 	'siwiktionary' => '/static/favicon/wiktionary/si.ico', // T40036
 
+	# Wikibooks
+	'arwikibooks' => '/static/favicon/wikibooks-rtl.ico', // T185919
+	'fawikibooks' => '/static/favicon/wikibooks-rtl.ico', // T185919
+	'hewikibooks' => '/static/favicon/wikibooks-rtl.ico', // T185919
+	'urwikibooks' => '/static/favicon/wikibooks-rtl.ico', // T185919
+
 	# Special wikis
 	'advisorywiki' => '/static/favicon/wmf.ico',
 	'arbcom_dewiki' => '/static/favicon/arbcom_dewiki.ico', // T166947
