@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efcebec_ada3c2a7",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1569
+      },
+      "writtenOn": "2018-01-29T17:52:27Z",
+      "side": 1,
+      "message": "use array for multiple address. don\u0027t concat as string.",
+      "range": {
+        "startLine": 34,
+        "startChar": 11,
+        "endLine": 34,
+        "endChar": 134
+      },
+      "revId": "1cb238546d71bbd949012bc4bfe56d72eefaaccd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
