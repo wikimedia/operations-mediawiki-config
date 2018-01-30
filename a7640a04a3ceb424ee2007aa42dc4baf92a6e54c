@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efcebec_3776d8d5",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 11161,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-01-30T10:09:34Z",
+      "side": 0,
+      "message": "If you remove the whole section here, to remove sysops and bureaucrats from the chapter wiki you\u0027ll need to ask stewards at Meta-Wiki to do so. Is that the desired outcome? If not, you can simply keep the entire section but without the \u0027medlem\u0027 right.",
+      "range": {
+        "startLine": 11159,
+        "startChar": 0,
+        "endLine": 11161,
+        "endChar": 54
+      },
+      "revId": "a7640a04a3ceb424ee2007aa42dc4baf92a6e54c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

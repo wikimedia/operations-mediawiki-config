@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efcebec_f76bd0ec",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 8054,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-01-30T10:09:34Z",
+      "side": 1,
+      "message": "This opens editting to all (registered and unregistered users). Is this the desired outcome?",
+      "range": {
+        "startLine": 8052,
+        "startChar": 0,
+        "endLine": 8054,
+        "endChar": 5
+      },
+      "revId": "7fa0d61d7f5e1e27b61dcc0ad0bd2234e02ca0b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
