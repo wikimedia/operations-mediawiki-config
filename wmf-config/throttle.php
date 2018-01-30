@@ -28,28 +28,12 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[] = [ // T184579
-	'from' => '2018-01-11T09:00 +5:30',
-	'to' => '2018-01-11T18:00 +5:30',
-	'range' => '103.8.192.54',
-	'dbname' => [ 'enwiki', 'mrwiki' ],
-	'value' => 45 // 35 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T184618
-	'from' => '2018-01-11T13:00 +1:00',
-	'to' => '2018-01-11T17:00 +1:00',
-	'range' => '195.220.106.84',
-	'dbname' => [ 'enwiki', 'frwiki' ], // And commonswiki, but it is included automaticly
-	'value' => 50 // 40 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T182889
-	'from' => '2018-01-15T08:15 -6:00',
-	'to' => '2018-01-15T16:00 -6:00',
-	'range' => '138.129.0.0/16',
+$wmgThrottlingExceptions[] = [ // T186002
+	'from' => '2018-02-01T17:00 UTC',
+	'to' => '2018-02-01T20:00 UTC',
+	'IP' => '131.118.229.84',
 	'dbname' => [ 'enwiki' ],
-	'value' => 40 // 30 expected
+	'value' => 50 // 30 computers in the lab
 ];
 
 ## Add throttling definitions above.
