@@ -2601,7 +2601,6 @@ $wgConf->settings = [
 	'bxrwiki' => 'Википеэди', // T43877
 	'cawiki' => "Viquip\xc3\xa8dia",
 	'cawikibooks' => 'Viquillibres',
-	'cawikimedia' => 'Project',
 	'cawikinews' => 'Viquinotícies',
 	'cawikiquote' => 'Viquidites',
 	'cawikisource' => 'Viquitexts',
