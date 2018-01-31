@@ -1,8 +1,16 @@
 <?php
-# WARNING: This file is publically viewable on the web. Do not put private data here.
+# WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-# This file is for the default permissions and custom permissions of the AbuseFilter extension.
-# This file is referenced from an include in CommonSettings.php
+# This file is for the default permissions and custom permissions
+# of the AbuseFilter extension.
+#
+# NOTE: Included for all wikis.
+#
+# Load tree:
+#  |-- wmf-config/CommonSettings.php
+#      |
+#      `-- wmf-config/abusefilter.php
+#
 
 $wgGroupPermissions['*']['abusefilter-view'] = true;
 $wgGroupPermissions['*']['abusefilter-log'] = true;

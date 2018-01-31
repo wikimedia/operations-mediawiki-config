@@ -1,4 +1,6 @@
 <?php
+# WARNING: This file is publicly viewable on the web. Do not put private data here.
+
 # our text squid in beta labs gets forwarded requests
 # from the ssl terminator, to 127.0.0.1, so adding that
 # address to the NoPurge list so that XFF headers for it

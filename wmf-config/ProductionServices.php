@@ -1,5 +1,5 @@
 <?php
-# WARNING: This file is publically viewable on the web. Do not put private data here.
+# WARNING: This file is publicly viewable on the web. Do not put private data here.
 
 # ######################################################################
 # ProductionServices.php should include all the service hostnames/ips

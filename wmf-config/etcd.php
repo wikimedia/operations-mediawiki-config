@@ -1,5 +1,5 @@
 <?php
-# WARNING: This file is publically viewable on the web. Do not put private data here.
+# WARNING: This file is publicly viewable on the web. Do not put private data here.
 #
 # Included very early by CommonSettings.php
 # Only two sets of globals available here:

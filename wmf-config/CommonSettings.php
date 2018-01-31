@@ -1,5 +1,5 @@
 <?php
-# WARNING: This file is publically viewable on the web. Do not put private data here.
+# WARNING: This file is publicly viewable on the web. Do not put private data here.
 
 # ######################################################################
 # CommonSettings.php is the main configuration file of the WMF cluster.
@@ -831,6 +831,7 @@ if ( $wmgUseUnicodeConverter ) {
 
 // Per-wiki config for Flagged Revisions
 if ( $wmgUseFlaggedRevs ) {
+	// Include load of extension, and its config.
 	include "$wmfConfigDir/flaggedrevs.php";
 }
 
