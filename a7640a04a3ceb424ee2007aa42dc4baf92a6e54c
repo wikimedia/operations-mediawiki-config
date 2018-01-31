@@ -40,6 +40,24 @@
       "revId": "a7640a04a3ceb424ee2007aa42dc4baf92a6e54c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_8ec3523d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 11161,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-01-31T11:22:39Z",
+      "side": 0,
+      "message": "That\u0027s for wgAddGroups. For wgRemoveGroups (L10586) bureaucrats are only allowed to remove bot, confirmed and accountcreator (the config was recently updated, this patch needs a rebase). So if you wish sewikimedia \u0027crats to continue to be able to remove sysop and bureaucrat locally, just add\n\n  \u0027+sewikimedia\u0027 \u003d\u003e [\n          \u0027bureaucrat\u0027 \u003d\u003e [ \u0027sysop\u0027, \u0027bureaucrat\u0027 ],\n   ],\n\nand you\u0027ll have the default settings and this custom settings as well for wgRemoveGroups :)",
+      "parentUuid": "4efcebec_43b806e3",
+      "revId": "a7640a04a3ceb424ee2007aa42dc4baf92a6e54c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

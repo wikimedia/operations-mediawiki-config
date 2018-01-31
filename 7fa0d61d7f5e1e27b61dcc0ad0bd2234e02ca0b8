@@ -40,6 +40,24 @@
       "revId": "7fa0d61d7f5e1e27b61dcc0ad0bd2234e02ca0b8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_eec01632",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 8054,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-01-31T11:22:39Z",
+      "side": 1,
+      "message": "Sorry. Indeed that does as you say (I though you were removing that, but nope, it\u0027s an addition :) ).",
+      "parentUuid": "4efcebec_e3db1253",
+      "revId": "7fa0d61d7f5e1e27b61dcc0ad0bd2234e02ca0b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
