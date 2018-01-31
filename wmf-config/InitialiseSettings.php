@@ -18087,6 +18087,7 @@ $wgConf->settings = [
 	'bnwiki' => true,
 	'cywiki' => true,
 	'eowiki' => true,
+  'etwiki' => true, // T186107
 	'guwiki' => true,
 	'htwiki' => true,
 	'knwiki' => true,
