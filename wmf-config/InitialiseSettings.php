@@ -1,7 +1,7 @@
 <?php
 /* vim: set sw=4 ts=4 noet foldmarker=@{,@} foldmethod=marker: */
 
-# WARNING: This file is publically viewable on the web. Do not put private data here.
+# WARNING: This file is publicly viewable on the web. Do not put private data here.
 
 # ######################################################################
 # InitialiseSettings.php contains the specific configuration settings

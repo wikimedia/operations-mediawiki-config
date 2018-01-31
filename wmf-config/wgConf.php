@@ -1,6 +1,7 @@
 <?php
-# This file is used by commandLine.inc and CommonSettings.php to initialise $wgConf
-# WARNING: This file is publically viewable on the web. Do not put private data here.
+# WARNING: This file is publicly viewable on the web. Do not put private data here.
+
+# This file is used by commandLine.inc and CommonSettings.php to initialise $wgConf.
 
 $wgConf = new SiteConfiguration;
 

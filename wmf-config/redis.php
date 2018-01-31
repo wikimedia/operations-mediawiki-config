@@ -1,4 +1,6 @@
 <?php
+# WARNING: This file is publicly viewable on the web. Do not put private data here.
+
 foreach ( [ 'eqiad', 'codfw' ] as $dc ) {
 	$wgObjectCaches["redis_{$dc}"] = [
 		'class'       => 'RedisBagOStuff',

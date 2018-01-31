@@ -1,5 +1,5 @@
 <?php
-# WARNING: This file is publically viewable on the web. Do not put private data here.
+# WARNING: This file is publicly viewable on the web. Do not put private data here.
 
 # This file holds per-wiki configuration overrides specific to Beta Cluster.
 # Prefixing a setting key with '-' to override all values from InitialiseSettings.php

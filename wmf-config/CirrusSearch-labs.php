@@ -1,9 +1,17 @@
 <?php
-# WARNING: This file is publically viewable on the web. Do not put private data here.
+# WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-# This file holds the MediaWiki CirrusSearch configuration which is specific
-# to the 'labs' realm which in most of the cases means the beta cluster.
-# It should be loaded AFTER CirrusSearch-common.php
+# This file holds the CirrusSearch configuration for the Beta Cluster.
+#
+# This MUST NOT be loaded for production.
+#
+# Load tree:
+#  |-- wmf-config/CommonSettings.php
+#      |
+#      `-- wmf-config/CirrusSearch-common.php
+#          |
+#          `-- wmf-config/CirrusSearch-labs.php
+#
 
 $wgCirrusSearchClusters = [
 	'eqiad' => array_map( function ( $host ) {

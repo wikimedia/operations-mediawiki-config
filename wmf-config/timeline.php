@@ -1,7 +1,5 @@
 <?php
-
-# WARNING: This file is publiccally viewable on the web.
-# Do not put private data here.
+# WARNING: This file is publicly viewable on the web. Do not put private data here.
 
 wfLoadExtension( 'timeline' );
 $wgTimelineEpochTimestamp = '20130601000000';

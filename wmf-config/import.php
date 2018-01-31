@@ -1,5 +1,5 @@
 <?php
-# WARNING: This file is publically viewable on the web. Do not put private data here.
+# WARNING: This file is publicly viewable on the web. Do not put private data here.
 
 # This file contains the setup for transwiki importing across the WMF cluster.
 # This file is referenced from an include in CommonSettings.php
