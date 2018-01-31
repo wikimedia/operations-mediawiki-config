@@ -1,6 +1,3 @@
-[submodule "docroot/wikimedia.org/WikipediaMobileFirefoxOS"]
-	path = docroot/wikimedia.org/WikipediaMobileFirefoxOS
-	url = https://gerrit.wikimedia.org/r/p/apps/firefox/wikipedia.git
 [submodule "portals"]
 	path = portals
 	url = https://gerrit.wikimedia.org/r/wikimedia/portals
