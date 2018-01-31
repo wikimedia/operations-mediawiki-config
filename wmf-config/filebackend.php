@@ -1,9 +1,15 @@
 <?php
+# WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-# WARNING: This file is publically viewable on the web. Do not put private data here.
-
-#
 # This file hold the configuration for the file backends.
+#
+# NOTE: Included based on wmgUseClusterFileBackend (all wikis, except wikitech)
+#
+# Load tree:
+#  |-- wmf-config/CommonSettings.php
+#      |
+#      `-- wmf-config/filebackend.php
+#
 
 global $wmfSwiftConfig;
 // Common OpenStack Swift backend convenience variables

@@ -1,12 +1,19 @@
 <?php
-# WARNING: This file is publically viewable on the web. Do not put private data here.
+# WARNING: This file is publicly viewable on the web. Do not put private data here.
 
 # This file holds the CirrusSearch configuration which is common to all realms,
-# i.e. settings should apply to both the production cluster and the beta
-# cluster.
-# If you ever want to put in an IP address, you should use the realm-specific
-# files CirrusSearch-labs.php and CirrusSearch-production.php
-
+# i.e. settings that apply to both production and Beta Cluster.
+#
+# NOTE: Included for all wikis.
+#
+# Load tree:
+#  |-- wmf-config/CommonSettings.php
+#      |
+#      `-- wmf-config/CirrusSearch-common.php
+#
+# If you need to reference an IP address, use the realm-specific
+# files: CirrusSearch-labs.php, or CirrusSearch-production.php
+#
 # See: https://wikitech.wikimedia.org/wiki/Search
 #
 # Contact Wikimedia Operations or Wikimedia Discovery for more details.

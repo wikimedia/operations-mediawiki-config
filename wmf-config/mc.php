@@ -1,5 +1,6 @@
 <?php
-# WARNING: This file is publically viewable on the web. Do not put private data here.
+# WARNING: This file is publicly viewable on the web. Do not put private data here.
+
 $wgMainCacheType = 'memcached-pecl';
 $wgMemCachedPersistent = false;
 $wgMemCachedTimeout = 0.25 * 1e6;  // 250ms

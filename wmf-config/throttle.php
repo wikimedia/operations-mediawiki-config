@@ -1,7 +1,5 @@
 <?php
-
-# WARNING: This file is publically viewable on the web.
-# Do not put private data here.
+# WARNING: This file is publicly viewable on the web. Do not put private data here.
 
 # Initialize the array. Append to that array to add a throttle
 $wmgThrottlingExceptions = [];
