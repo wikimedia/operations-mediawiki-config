@@ -1,8 +1,13 @@
 <?php
-/*
- * WARNING: This file is publically viewable on the web. Do not put private data here.
- * Feed settings for WMF projects
- */
+# WARNING: This file is publicly viewable on the web. Do not put private data here.
+
+# This file hold wmf-specific hooks for the FeaturedFeeds extension.
+#
+# Load tree:
+#  |-- wmf-config/CommonSettings.php
+#      |
+#      `-- wmf-config/FeaturedFeedsWMF.php
+#
 
 $wgHooks['FeaturedFeeds::getFeeds'][] = function ( &$feeds ) {
 	global $wgConf, $wmgFeaturedFeedsOverrides;

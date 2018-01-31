@@ -1,5 +1,5 @@
 <?php
-# WARNING: This file is publically viewable on the web. Do not put private data here.
+# WARNING: This file is publicly viewable on the web. Do not put private data here.
 
 if ( !defined( 'DBO_DEFAULT' ) ) {
 	define( 'DBO_DEFAULT', 16 );

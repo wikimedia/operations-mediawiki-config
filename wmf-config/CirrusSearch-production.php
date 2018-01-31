@@ -1,9 +1,18 @@
 <?php
-# WARNING: This file is publically viewable on the web. Do not put private data here.
+# WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-# This file holds the MediaWiki CirrusSearch configuration which is specific
+# This file holds the CirrusSearch configuration which is specific
 # to the 'production' realm.
-# It should be loaded AFTER CirrusSearch-common.php
+#
+# NOTE: Included for all wikis.
+#
+# Load tree:
+#  |-- wmf-config/CommonSettings.php
+#      |
+#      `-- wmf-config/CirrusSearch-common.php
+#          |
+#          `-- wmf-config/CirrusSearch-production.php
+#
 
 // Our cluster often has issues completing master actions
 // within the default 30s timeout. Upgrade that to 2m to
