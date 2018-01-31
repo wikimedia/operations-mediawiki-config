@@ -22,6 +22,24 @@
       "revId": "a7640a04a3ceb424ee2007aa42dc4baf92a6e54c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_43b806e3",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 11161,
+      "author": {
+        "id": 1762
+      },
+      "writtenOn": "2018-01-31T11:06:11Z",
+      "side": 0,
+      "message": "Shouldn\u0027t this have inherited default from L9833 which sets `\u0027bureaucrat\u0027 \u003d\u003e [ \u0027sysop\u0027, \u0027bureaucrat\u0027, \u0027bot\u0027, \u0027confirmed\u0027 ]`",
+      "parentUuid": "",
+      "revId": "a7640a04a3ceb424ee2007aa42dc4baf92a6e54c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

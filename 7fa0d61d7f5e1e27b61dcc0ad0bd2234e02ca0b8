@@ -22,6 +22,24 @@
       "revId": "7fa0d61d7f5e1e27b61dcc0ad0bd2234e02ca0b8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_e3db1253",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 8054,
+      "author": {
+        "id": 1762
+      },
+      "writtenOn": "2018-01-31T11:06:11Z",
+      "side": 1,
+      "message": "shouldn\u0027t this block editing  by unregistered users only? (Also per the heading of this block and how I know fiwikimedia functions )",
+      "parentUuid": "",
+      "revId": "7fa0d61d7f5e1e27b61dcc0ad0bd2234e02ca0b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
