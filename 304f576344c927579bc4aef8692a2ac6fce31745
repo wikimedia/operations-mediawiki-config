@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efcebec_df8502a1",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 3963
+      },
+      "writtenOn": "2018-01-31T20:05:18Z",
+      "side": 1,
+      "message": "It can be great to set an higher number, as usual.\nseveral accounts can be created on one computer.",
+      "range": {
+        "startLine": 36,
+        "startChar": 12,
+        "endLine": 36,
+        "endChar": 14
+      },
+      "revId": "304f576344c927579bc4aef8692a2ac6fce31745",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
