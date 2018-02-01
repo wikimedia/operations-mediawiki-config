@@ -58,6 +58,24 @@
       "revId": "a7640a04a3ceb424ee2007aa42dc4baf92a6e54c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efcebec_34e2449d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 11161,
+      "author": {
+        "id": 1762
+      },
+      "writtenOn": "2018-02-01T09:15:05Z",
+      "side": 0,
+      "message": "My fault. I got lost in this monster of a config \u003d)",
+      "parentUuid": "4efcebec_8ec3523d",
+      "revId": "a7640a04a3ceb424ee2007aa42dc4baf92a6e54c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
