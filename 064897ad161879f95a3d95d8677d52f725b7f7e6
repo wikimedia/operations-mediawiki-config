@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efcebec_23e2109d",
+        "filename": "docroot/wikipedia.org/spec.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-02-01T00:59:57Z",
+      "side": 1,
+      "message": "The default url for load.php would be:\n\nhttps://en.wikipedia.org/w/load.php?debug\u003dfalse\u0026lang\u003den\u0026modules\u003dstartup\u0026only\u003dscripts\u0026skin\u003dvector\n\nResponse must be:\n\n- 200\n- text/javascript\n- body: /mw\\.loader\\./",
+      "range": {
+        "startLine": 29,
+        "startChar": 2,
+        "endLine": 29,
+        "endChar": 13
+      },
+      "revId": "064897ad161879f95a3d95d8677d52f725b7f7e6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
