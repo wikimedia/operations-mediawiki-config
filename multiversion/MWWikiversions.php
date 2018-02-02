@@ -76,7 +76,9 @@ class MWWikiversions {
 		$fileName = dirname( __DIR__ ) . '/dblists/' . basename( $dblist, '.dblist' ) . '.dblist';
 		$lines = @file( $fileName, FILE_IGNORE_NEW_LINES );
 		if ( !$lines ) {
-			throw new Exception( __METHOD__ . "(): unable to read $dblist.\n" );
+			// throw new Exception( __METHOD__ . "(): unable to read $dblist.\n" );
+			print "DBList $dblist not found; proceeding with empty list.\n";
+			return [];
 		}
 
 		$dbs = [];
