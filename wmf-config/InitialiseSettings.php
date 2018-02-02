@@ -19284,6 +19284,11 @@ $wgConf->settings = [
 	'dewiki' => [ 'driver' => 'RemexHtml' ], // T181188
 	'itwiki' => [ 'driver' => 'RemexHtml' ], // T181190
 
+	'fiwiki' => [ 'driver' => 'RemexHtml' ], // T185945
+	'hewiki' => [ 'driver' => 'RemexHtml' ], // T185945
+	'ruwiki' => [ 'driver' => 'RemexHtml' ], // T185945
+	'svwiki' => [ 'driver' => 'RemexHtml' ], // T185945
+
 	// T182042: Enable RemexHtml on wikis with zero high-priority linter errors
 	'angwikisource' => [ 'driver' => 'RemexHtml' ],
 	'astwikibooks' => [ 'driver' => 'RemexHtml' ],
