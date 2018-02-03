@@ -4419,6 +4419,10 @@ $wgConf->settings = [
 		'Portal' => 100, // T21569
 		'Portal_talk' => 101, // T21569
 	],
+	'+urwiktionary' => [
+		'ول' => NS_PROJECT, // T186393
+		'تبادلۂ_خیال_ول' => NS_PROJECT_TALK, // T186393
+	],
 	'+uzwiki' => [
 		'VP' => NS_PROJECT, // T48534
 		'VM' => NS_PROJECT_TALK, // T48534
@@ -6720,6 +6724,26 @@ $wgConf->settings = [
 		103 => 'Sourdant_copene', // T185289
 		104 => 'Motyince', // T185289
 		105 => 'Motyince_copene', // T185289
+	],
+	'urwiktionary' => [
+		100 => 'ضمیمہ', // T186393 - Appendix
+		101 => 'تبادلۂ_خیال_ضمیمہ', // T186393 - Appendix talk
+		102 => 'کلید', // T186393 - Concordance
+		103 => 'تبادلۂ_خیال_کلید', // T186393 - Concordance talk
+		104 => 'شاریہ', // T186393 - Index
+		105 => 'تبادلۂ_خیال_اشاریہ', // T186393 - Index talk
+		106 => 'قوافی', // T186393 - Rhymes
+		107 => 'تبادلۂ_خیال_قوافی', // T186393 - Rhymes talk
+		108 => 'ماورائے_ویکی', // T186393 - Transwiki
+		109 => 'تبادلۂ_خیال_ماورائے_ویکی', // T186393 - Transwiki talk
+		110 => 'مترادفات', // T186393 - Thesaurus
+		111 => 'تبادلۂ_خیال_مترادفات', // T186393 - Thesaurus talk
+		114 => 'حوالہ_جات', // T186393 - Citations
+		115 => 'تبادلۂ_خیال_حوالہ_جات', // T186393 - Citations talk
+		116 => 'فرہنگ_اشارات', // T186393 - Sign gloss
+		117 => 'تبادلۂ_خیال_فرہنگ_اشارات', // T186393 - Sign gloss talk
+		118 => 'تعمیرنو', // T186393 - Reconstruction
+		119 => 'تبادلۂ_خیال_تعمیرنو', // T186393 - Reconstruction talk
 	],
 	'zhwiktionary' => [
 		100 => '附录', // T31641 - appendix
