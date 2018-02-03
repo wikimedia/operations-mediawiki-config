@@ -4419,6 +4419,10 @@ $wgConf->settings = [
 		'Portal' => 100, // T21569
 		'Portal_talk' => 101, // T21569
 	],
+	'+urwiktionary' => [
+		'ول' => NS_PROJECT, // T186393
+		'تبادلۂ خیال ول' => NS_PROJECT_TALK, // T186393
+	],
 	'+uzwiki' => [
 		'VP' => NS_PROJECT, // T48534
 		'VM' => NS_PROJECT_TALK, // T48534
@@ -6720,6 +6724,27 @@ $wgConf->settings = [
 		103 => 'Sourdant_copene', // T185289
 		104 => 'Motyince', // T185289
 		105 => 'Motyince_copene', // T185289
+	],
+	'urwiktionary' => [
+		// T186393
+		100 => 'ضمیمہ', // Appendix
+		101 => 'تبادلۂ خیال ضمیمہ', // Appendix_talk
+		102 => 'کلید', // Concordance
+		103 => 'تبادلۂ خیال کلید', // Concordance_talk
+		104 => 'شاریہ', // Index
+		105 => 'تبادلۂ خیال اشاریہ', // Index_talk
+		106 => 'قوافی', // Rhymes
+		107 => 'تبادلۂ خیال قوافی', // Rhymes_talk
+		108 => 'بین الویکی', // Transwiki
+		109 => 'تبادلۂ خیال بین الویکی', // Transwiki_talk
+		110 => 'مترادفات', // Thesaurus
+		111 => 'تبادلۂ خیال مترادفات', // Thesaurus_talk
+		114 => 'حوالہ جات', // Citations
+		115 => 'تبادلۂ خیال حوالہ جات', // Citations_talk
+		116 => 'فرہنگ اشارات', // Sign_gloss
+		117 => 'تبادلۂ خیال فرہنگ اشارات', // Sign_gloss_talk
+		118 => 'تعمیرنو', // Reconstruction
+		119 => 'تبادلۂ خیال تعمیرنو', // Reconstruction_talk
 	],
 	'zhwiktionary' => [
 		100 => '附录', // T31641 - appendix
