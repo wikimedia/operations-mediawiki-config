@@ -12654,7 +12654,7 @@ $wgConf->settings = [
 ],
 
 'wgReferrerPolicy' => [
-	'default' => 'origin-when-cross-origin',
+	'default' => [ 'origin-when-cross-origin', 'origin-when-crossorigin', 'origin' ], // T180921
 	'private' => 'no-referrer',
 ],
 
