@@ -6699,6 +6699,11 @@ $wgConf->settings = [
 		102 => 'Індекс', // index
 		103 => 'Обговорення_індексу', // index talk
 	],
+	'urwiktionary' => [
+		// T186393
+		102 => 'اشاریہ', // index
+		103 => 'تبادلۂ خیال اشاریہ', // index talk
+	],
 	'zhwiktionary' => [
 		100 => '附录', // T31641 - appendix
 		101 => '附录讨论', // T31641 - appendix talk
