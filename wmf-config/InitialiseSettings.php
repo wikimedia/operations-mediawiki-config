@@ -4414,6 +4414,10 @@ $wgConf->settings = [
 		'Portal' => 100, // T21569
 		'Portal_talk' => 101, // T21569
 	],
+	'+urwiktionary' => [
+		'ول' => NS_PROJECT, // T186393
+		'تبادلۂ خیال ول' => NS_PROJECT_TALK, // T186393
+	],
 	'+uzwiki' => [
 		'VP' => NS_PROJECT, // T48534
 		'VM' => NS_PROJECT_TALK, // T48534
@@ -6698,6 +6702,11 @@ $wgConf->settings = [
 		101 => 'Обговорення_додатка', // appendix talk
 		102 => 'Індекс', // index
 		103 => 'Обговорення_індексу', // index talk
+	],
+	'urwiktionary' => [
+		// T186393
+		102 => 'اشاریہ', // index
+		103 => 'تبادلۂ خیال اشاریہ', // index talk
 	],
 	'zhwiktionary' => [
 		100 => '附录', // T31641 - appendix
