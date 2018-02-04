@@ -3709,6 +3709,7 @@ $wgConf->settings = [
 		'Portal' => 100, // T172977
 		'School' => 102, // T172977
 		'Collection' => 106, // T172977
+		'विकिविद्यालय' => NS_PROJECT, // T185347
 	],
 	'+hrwikisource' => [
 		'Author' => 100,
