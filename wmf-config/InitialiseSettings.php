@@ -9882,7 +9882,7 @@ $wgConf->settings = [
 	],
 	// ******************************************************************
 	'+arwiki' => [
-		'bureaucrat' => [ 'import', 'reviewer', 'abusefilter', 'accountcreator' ], // T143844
+		'bureaucrat' => [ 'import', 'reviewer', 'abusefilter' ], // T143844
 		'sysop' => [ 'uploader', 'reviewer', 'confirmed', 'rollbacker', 'abusefilter', ],
 	],
 	'+arwikibooks' => [
@@ -9940,7 +9940,7 @@ $wgConf->settings = [
 		'sysop' => [ 'rollbacker', 'suppressredirect', 'uploader' ], // T128205, T129005
 	],
 	'+checkuserwiki' => [
-		'bureaucrat' => [ 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt', ],
+		'bureaucrat' => [ 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt', ],
 	],
 	'+ckbwiki' => [
 		'sysop' => [
@@ -9956,7 +9956,6 @@ $wgConf->settings = [
 			'import', // T54633
 			'transwiki', // T54633
 			'interface-editor', // T54866
-			'accountcreator', // T71394
 		],
 	],
 	'+cswiki' => [
@@ -9979,7 +9978,6 @@ $wgConf->settings = [
 		'bureaucrat' => [
 			'gwtoolset', // T65124
 			'ipblock-exempt',
-			'accountcreator', // T144689
 		],
 		'checkuser' => [ 'ipblock-exempt' ],
 		'sysop' => [
@@ -9996,7 +9994,6 @@ $wgConf->settings = [
 	],
 	'+dawiki' => [
 		'sysop' => [ 'patroller', 'autopatrolled' ],
-		'bureaucrat' => [ 'accountcreator' ], // T93260
 	],
 	'+dawiktionary' => [
 		'sysop' => [ 'autopatrolled' ], // T86062
@@ -10017,15 +10014,12 @@ $wgConf->settings = [
 	'+dtywiki' => [
 		'sysop' => [ 'autopatrolled', 'transwiki' ], // T174226, T176709
 	],
-	'+elwiki' => [
-		'bureaucrat' => [ 'accountcreator' ], // T61997
-	],
 	'+elwiktionary' => [
 		'bureaucrat' => [ 'interface-editor' ],
 		'sysop' => [ 'autopatrolled' ],
 	],
 	'+enwiki' => [
-		'bureaucrat' => [ 'accountcreator', 'flow-bot' ],
+		'bureaucrat' => [ 'flow-bot' ],
 		'sysop' => [ 'abusefilter', 'abusefilter-helper', 'accountcreator', 'autoreviewer', 'confirmed', 'filemover', 'reviewer', 'rollbacker', 'templateeditor', 'massmessage-sender', 'extendedconfirmed', 'extendedmover', 'patroller' ], // T126607, T133981, T149019, T175684
 	],
 	'+enwikibooks' => [
@@ -10139,7 +10133,7 @@ $wgConf->settings = [
 	],
 	'+frwiki' => [
 		'sysop' => [ 'rollbacker' ], // T170780
-		'bureaucrat' => [ 'abusefilter', 'accountcreator', 'rollbacker' ],
+		'bureaucrat' => [ 'abusefilter', 'rollbacker' ],
 	],
 	'+frwikibooks' => [
 		'bureaucrat' => [ 'abusefilter' ],
@@ -10158,13 +10152,12 @@ $wgConf->settings = [
 		'sysop' => [ 'patroller' ],
 	],
 	'+frwiktionary' => [ // T138972
-		'bureaucrat' => [ 'accountcreator', 'patroller', 'transwiki', 'autopatrolled', 'confirmed', 'abusefilter', 'botadmin' ],
+		'bureaucrat' => [ 'patroller', 'transwiki', 'autopatrolled', 'confirmed', 'abusefilter', 'botadmin' ],
 	],
 	'+gawiki' => [
 		'sysop' => [ 'rollbacker' ],
 	],
 	'+glwiki' => [ // T128948
-		'bureaucrat' => [ 'accountcreator' ],
 		'sysop' => [ 'confirmed' ],
 	],
 	'+guwiki' => [
@@ -10207,7 +10200,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'rollbacker' ],
 	],
 	'+incubatorwiki' => [
-		'bureaucrat' => [ 'accountcreator', 'import', 'test-sysop', 'translator' ],
+		'bureaucrat' => [ 'import', 'test-sysop', 'translator' ],
 	],
 	'+itwiki' => [
 		'bureaucrat' => [ 'rollbacker' ],
@@ -10252,7 +10245,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'flood' ], // T131527
 	],
 	'+legalteamwiki' => [ // T63222
-		'bureaucrat' => [ 'accountcreator', 'import', 'transwiki', 'ipblock-exempt' ],
+		'bureaucrat' => [ 'import', 'transwiki', 'ipblock-exempt' ],
 	],
 	'+ltwiki' => [
 		'sysop' => [ 'abusefilter' ],
@@ -10268,7 +10261,7 @@ $wgConf->settings = [
 	],
 	'+mediawikiwiki' => [
 		'sysop' => [ 'autopatrolled' ],
-		'bureaucrat' => [ 'autopatrolled', 'transwiki', 'import', 'accountcreator' ],
+		'bureaucrat' => [ 'autopatrolled', 'transwiki', 'import' ],
 	],
 	'+metawiki' => [
 		'bureaucrat' => [ 'centralnoticeadmin', 'flood', 'uploader' ], // T48639, T110674
@@ -10288,9 +10281,6 @@ $wgConf->settings = [
 	'+mlwiktionary' => [
 		'bureaucrat' => [ 'botadmin' ],
 	],
-	'+mrwiki' => [
-		'bureaucrat' => [ 'accountcreator' ], // T184553
-	],
 	'+newiki' => [
 		'sysop' => [
 			'autopatrolled',        // T89816
@@ -10300,7 +10290,6 @@ $wgConf->settings = [
 			'filemover',            // T95103
 			'import',               // T100925
 		],
-		'bureaucrat' => [ 'accountcreator' ], // T96824
 	],
 	'+nlwiki' => [
 		'bureaucrat' => [ 'abusefilter', 'arbcom', 'rollbacker' ],
@@ -10319,7 +10308,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'import', 'transwiki' ],
 	],
 	'+nowiki' => [
-		'bureaucrat' => [ 'patroller', 'autopatrolled', 'accountcreator' ],
+		'bureaucrat' => [ 'patroller', 'autopatrolled' ],
 		'sysop' => [ 'patroller', 'autopatrolled', 'abusefilter', 'transwiki', 'confirmed' ],
 	],
 	'+nowikibooks' => [
@@ -10336,7 +10325,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'import', 'transwiki', 'communityapps', 'flood', 'securepoll' ],
 	],
 	'+ombudsmenwiki' => [
-		'bureaucrat' => [ 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt', ],
+		'bureaucrat' => [ 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt', ],
 	],
 	'+orwiki' => [
 		'sysop' => [ 'rollbacker' ],
@@ -10366,7 +10355,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'inactive' ],
 	],
 	'+ptwiki' => [
-		'bureaucrat' => [ 'eliminator', 'autoreviewer', 'interface-editor', 'accountcreator' ], // T41905, T65750
+		'bureaucrat' => [ 'eliminator', 'autoreviewer', 'interface-editor' ], // T41905, T65750
 		'sysop' => [ 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator' ], // T65750
 	],
 	'+quwiki' => [
@@ -10458,7 +10447,6 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt' ],
 	],
 	'+svwiki' => [
-		'bureaucrat' => [ 'accountcreator' ], // T56922
 		'sysop' => [ 'rollbacker', 'autopatrolled' ], // T161210
 	],
 	'+svwikisource' => [
@@ -10620,7 +10608,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'sysop', 'bureaucrat' ],
 	],
 	'+arwiki' => [
-		'bureaucrat' => [ 'import', 'reviewer', 'abusefilter', 'accountcreator' ], // T143844
+		'bureaucrat' => [ 'import', 'reviewer', 'abusefilter' ], // T143844
 		'sysop' => [ 'uploader', 'reviewer', 'confirmed', 'rollbacker', 'abusefilter', 'patroller', 'autopatrolled', ],
 	],
 	'+arwikibooks' => [
@@ -10682,7 +10670,7 @@ $wgConf->settings = [
 		'sysop' => [ 'rollbacker', 'suppressredirect', 'uploader' ], // T128205, T129005
 	],
 	'+checkuserwiki' => [
-		'bureaucrat' => [ 'sysop', 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt', 'bureaucrat', ],
+		'bureaucrat' => [ 'sysop', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt', 'bureaucrat', ],
 	],
 	'+ckbwiki' => [
 		'sysop' => [
@@ -10698,7 +10686,6 @@ $wgConf->settings = [
 			'import', // T54633
 			'transwiki', // T54633
 			'interface-editor', // T54866
-			'accountcreator', // T71394
 		],
 	],
 	'+collabwiki' => [
@@ -10708,7 +10695,6 @@ $wgConf->settings = [
 		'bureaucrat' => [
 			'gwtoolset', // T65124
 			'ipblock-exempt',
-			'accountcreator', // T144689
 		],
 		'checkuser' => [ 'ipblock-exempt' ],
 		'sysop' => [
@@ -10740,7 +10726,6 @@ $wgConf->settings = [
 	],
 	'+dawiki' => [
 		'sysop' => [ 'patroller', 'autopatrolled' ],
-		'bureaucrat' => [ 'accountcreator' ], // T93260
 	],
 	'+dawiktionary' => [
 		'sysop' => [ 'autopatrolled' ], // T86062
@@ -10761,15 +10746,12 @@ $wgConf->settings = [
 	'+dtywiki' => [
 		'sysop' => [ 'autopatrolled', 'transwiki' ], // T174226, T176709
 	],
-	'+elwiki' => [
-		'bureaucrat' => [ 'accountcreator' ], // T61997
-	],
 	'+elwiktionary' => [
 		'bureaucrat' => [ 'interface-editor' ],
 		'sysop' => [ 'autopatrolled' ],
 	],
 	'+enwiki' => [
-		'bureaucrat' => [ 'ipblock-exempt', 'accountcreator', 'sysop', 'flow-bot' ],
+		'bureaucrat' => [ 'ipblock-exempt', 'sysop', 'flow-bot' ],
 		'sysop' => [ 'rollbacker', 'accountcreator', 'abusefilter', 'abusefilter-helper', 'autoreviewer', 'confirmed', 'reviewer', 'filemover', 'templateeditor', 'massmessage-sender', 'extendedconfirmed', 'extendedmover', 'patroller' ], // T126607, T133981, T149019, T175684
 	],
 	'+enwikibooks' => [
@@ -10887,7 +10869,7 @@ $wgConf->settings = [
 	],
 	'+frwiki' => [
 		'sysop' => [ 'rollbacker' ], // T170780
-		'bureaucrat' => [ 'abusefilter', 'sysop', 'accountcreator', 'rollbacker' ],
+		'bureaucrat' => [ 'abusefilter', 'sysop', 'rollbacker' ],
 	],
 	'+frwikibooks' => [
 		'bureaucrat' => [ 'abusefilter' ],
@@ -10906,13 +10888,12 @@ $wgConf->settings = [
 		'sysop' => [ 'patroller' ],
 	],
 	'+frwiktionary' => [ // T138972
-		'bureaucrat' => [ 'accountcreator', 'patroller', 'transwiki', 'autopatrolled', 'confirmed', 'abusefilter', 'botadmin' ],
+		'bureaucrat' => [ 'patroller', 'transwiki', 'autopatrolled', 'confirmed', 'abusefilter', 'botadmin' ],
 	],
 	'+gawiki' => [
 		'sysop' => [ 'rollbacker' ],
 	],
 	'+glwiki' => [ // T128948
-		'bureaucrat' => [ 'accountcreator' ],
 		'sysop' => [ 'confirmed' ],
 	],
 	'+guwiki' => [ // T119787
@@ -10958,7 +10939,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'rollbacker' ],
 	],
 	'+incubatorwiki' => [
-		'bureaucrat' => [ 'accountcreator', 'import', 'test-sysop', 'translator' ],
+		'bureaucrat' => [ 'import', 'test-sysop', 'translator' ],
 	],
 	'+itwiki' => [
 		'bureaucrat' => [ 'rollbacker', 'autopatrolled', 'mover' ], // T55913, T102770
@@ -11006,7 +10987,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'flood' ], // T131527
 	],
 	'+legalteamwiki' => [ // T63222
-		'bureaucrat' => [ 'sysop', 'accountcreator', 'import', 'transwiki', 'ipblock-exempt', 'bureaucrat', ],
+		'bureaucrat' => [ 'sysop', 'import', 'transwiki', 'ipblock-exempt', 'bureaucrat', ],
 	],
 	'+ltwiki' => [
 		'sysop' => [ 'abusefilter' ],
@@ -11022,7 +11003,7 @@ $wgConf->settings = [
 	],
 	'+mediawikiwiki' => [
 		'sysop' => [ 'autopatrolled' ],
-		'bureaucrat' => [ 'autopatrolled', 'transwiki', 'import', 'accountcreator' ],
+		'bureaucrat' => [ 'autopatrolled', 'transwiki', 'import' ],
 	],
 	'+metawiki' => [
 		'bureaucrat' => [ 'flood', 'centralnoticeadmin', 'uploader' ], // T39198, T52287, T110674
@@ -11042,9 +11023,6 @@ $wgConf->settings = [
 	'+mlwiktionary' => [
 		'bureaucrat' => [ 'botadmin' ],
 	],
-	'+mrwiki' => [
-		'bureaucrat' => [ 'accountcreator' ], // T184553
-	],
 	'+newiki' => [
 		'sysop' => [
 			'autopatrolled',        // T89816, T148171
@@ -11055,7 +11033,6 @@ $wgConf->settings = [
 		'bureaucrat' => [
 			'abusefilter',          // T95102
 			'filemover',            // T95103
-			'accountcreator',       // T96824
 		],
 	],
 	'+nlwiki' => [
@@ -11075,7 +11052,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'sysop', 'bureaucrat', 'import', 'transwiki' ],
 	],
 	'+nowiki' => [
-		'bureaucrat' => [ 'patroller', 'autopatrolled', 'transwiki', 'accountcreator' ],
+		'bureaucrat' => [ 'patroller', 'autopatrolled', 'transwiki' ],
 		'sysop' => [ 'autopatrolled', 'abusefilter', 'confirmed' ],
 	],
 	'+nowikibooks' => [
@@ -11092,7 +11069,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'sysop', 'bureaucrat', 'import', 'transwiki', 'communityapps', 'flood', 'securepoll' ],
 	],
 	'+ombudsmenwiki' => [
-		'bureaucrat' => [ 'sysop', 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt', 'bureaucrat', ],
+		'bureaucrat' => [ 'sysop', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt', 'bureaucrat', ],
 	],
 	'+orwiki' => [
 		'sysop' => [ 'rollbacker' ],
@@ -11118,7 +11095,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'interface-editor' ], // T133472
 	],
 	'+ptwiki' => [
-		'bureaucrat' => [ 'eliminator', 'autoreviewer', 'interface-editor', 'accountcreator', 'bureaucrat', 'sysop' ], // T41905, T65750, T107661
+		'bureaucrat' => [ 'eliminator', 'autoreviewer', 'interface-editor', 'bureaucrat', 'sysop' ], // T41905, T65750, T107661
 		'sysop' => [ 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator' ], // T65750
 	],
 	'+ptwikinews' => [
@@ -11222,7 +11199,6 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'flood' ],
 	],
 	'+svwiki' => [
-		'bureaucrat' => [ 'accountcreator' ], // T56922
 		'sysop' => [ 'rollbacker', 'autopatrolled' ], // T161210
 	],
 	'+svwikisource' => [
