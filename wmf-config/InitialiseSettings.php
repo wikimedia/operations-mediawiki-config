@@ -2387,6 +2387,7 @@ $wgConf->settings = [
 	'sahwiki' => 'Бикипиэдьийэ',
 	'sahwikisource' => 'Бикитиэкэ',
 	'scnwiktionary' => 'Wikizziunariu',
+	'sdwiki' => 'وڪيپيڊيا',
 	'searchcomwiki' => 'Search Committee',
 	'siwiki' => 'විකිපීඩියා, නිදහස් විශ්වකෝෂය',
 	'skwiki' => 'Wikipédia',
