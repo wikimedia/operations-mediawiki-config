@@ -18112,6 +18112,7 @@ $wgConf->settings = [
 	'testwiki' => true,
 	'test2wiki' => true,
 	'testwikidatawiki' => true,
+	'urwiki' => true, // T186451
 ],
 
 'wmgWikibaseSiteGroup' => [
