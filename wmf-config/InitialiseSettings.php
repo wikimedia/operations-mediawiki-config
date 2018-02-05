@@ -9882,7 +9882,7 @@ $wgConf->settings = [
 		'sysop' => [ 'uploader', 'reviewer', 'confirmed', 'rollbacker', 'abusefilter', ],
 	],
 	'+arwikibooks' => [
-		'sysop' => [ 'rollbacker,' ], // T185720
+		'sysop' => [ 'rollbacker', ], // T185720
 	],
 	'+arwikisource' => [
 		'sysop' => [ 'patroller', 'autopatrolled', 'rollbacker' ],
@@ -10620,7 +10620,7 @@ $wgConf->settings = [
 		'sysop' => [ 'uploader', 'reviewer', 'confirmed', 'rollbacker', 'abusefilter', 'patroller', 'autopatrolled', ],
 	],
 	'+arwikibooks' => [
-		'sysop' => [ 'rollbacker,' ], // T185720
+		'sysop' => [ 'rollbacker', ], // T185720
 	],
 	'+arwikisource' => [
 		'sysop' => [ 'patroller', 'autopatrolled', 'rollbacker' ],
