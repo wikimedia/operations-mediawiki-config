@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d418b339_f6e58d6b",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 4879
+      },
+      "writtenOn": "2018-02-05T15:40:18Z",
+      "side": 1,
+      "message": "I think to you can add for example 50 just in case",
+      "range": {
+        "startLine": 60,
+        "startChar": 12,
+        "endLine": 60,
+        "endChar": 14
+      },
+      "revId": "fd0e561876952f08ad8b4f07c7ca71f940756f73",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
