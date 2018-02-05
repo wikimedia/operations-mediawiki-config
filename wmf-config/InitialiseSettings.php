@@ -20030,10 +20030,11 @@ $wgConf->settings = [
 // T183869
 'wgWMEAICaptchaEnabled' => [
 	'default' => false,
+	'group0' => true,
+	'group1' => true,
 	'private' => false,
 	'fishbowl' => false,
 	'nonglobal' => false,
-	'testwiki' => true,
 ],
 
 ];
