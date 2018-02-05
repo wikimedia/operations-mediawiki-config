@@ -20039,7 +20039,7 @@ $wgConf->settings = [
 ],
 // T183869
 'wgWMEAICaptchaEnabled' => [
-	'default' => false,
+	'default' => true,
 	'private' => false,
 	'fishbowl' => false,
 	'nonglobal' => false,
