@@ -20043,6 +20043,7 @@ $wgConf->settings = [
 	'private' => false,
 	'fishbowl' => false,
 	'nonglobal' => false,
+	'testwiki' => true,
 ],
 
 ];
