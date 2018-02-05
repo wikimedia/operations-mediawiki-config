@@ -37,16 +37,16 @@ $wmgThrottlingExceptions[] = [ // T185930
 ];
 
 $wmgThrottlingExceptions[] = [ // T185794
-	'from' => '2017-03-04T11:00 -5:00',
-	'to' => '2017-03-04T18:00 -5:00',
+	'from' => '2018-03-04T11:00 -5:00',
+	'to' => '2018-03-04T18:00 -5:00',
 	'IP' => '198.179.69.250',
 	'dbname' => [ 'enwiki', 'eswiki' ],
 	'value' => 70 // 50 expected
 ];
 
 $wmgThrottlingExceptions[] = [ // T185794
-	'from' => '2017-02-08T16:00 -7:00',
-	'to' => '2017-03-04T20:00 -7:00',
+	'from' => '2018-02-08T16:00 -7:00',
+	'to' => '2018-03-04T20:00 -7:00',
 	'IP' => '66.99.86.39',
 	'dbname' => [ 'enwiki' ],
 	'value' => 70 // 50 expected
