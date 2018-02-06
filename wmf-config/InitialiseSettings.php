@@ -7887,6 +7887,23 @@ $wgConf->settings = [
 			'newbie' => [ 3, 86400 ],
 		],
 	],
+	// T184948
+	'+wikidatawiki' => [
+		'edit' => [
+			// 8 ed./min per each non-autoconfirmed, or group thereof from same IP
+			'ip' => [ 8, 60 ],
+			'newbie' => [ 8, 60 ],
+			// 100 ed./min for regular users (including bots and sysops)
+			'user' => [ 100, 60 ],
+		],
+		'create' => [
+			// 4 creations/min per each non-autoconfirmed, or group thereof from same IP
+			'ip' => [ 4, 60 ],
+			'newbie' => [ 4, 60 ],
+			// 20 creations/min for regular users (including bots and sysops)
+			'user' => [ 20, 60 ],
+		],
+	],
 ],
 # @} end of wgRateLimits
 
