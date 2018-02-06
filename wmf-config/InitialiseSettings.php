@@ -90,7 +90,6 @@ $wgConf->settings = [
 
 	# Non-ISO language codes
 	'be_x_oldwiki' => 'be-tarask',
-	'crhwiki' => 'crh-latn',
 	'nowiki' => 'nb',
 	'nowiktionary' => 'nb',
 	'nowikiquote' => 'nb',
