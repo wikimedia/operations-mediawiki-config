@@ -316,6 +316,8 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['sharedCacheKeyPrefix'] = $wgWBSharedCacheKey;
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
+
+	$wgWBClientSettings['entityUsageModifierLimits'] = ['D' =>  10, 'L' => 10, 'C' => 73];
 }
 
 require_once "{$wmfConfigDir}/Wikibase-{$wmfRealm}.php";
