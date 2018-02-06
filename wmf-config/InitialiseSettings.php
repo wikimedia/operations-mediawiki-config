@@ -20087,6 +20087,15 @@ $wgConf->settings = [
 	'votewiki' => false,
 ],
 
+'wmgDisableRefreshLinksInRedis' => [
+	'testwiki' => true,
+	'test2wiki' => true,
+	'testwikidatawiki' => true,
+	'mediawikiwiki' => true,
+	'ruwikivoyage' => true,
+	'default' => false,
+],
+
 'wmgUseCapiunto' => [
 	'default' => false,
 	'testwiki' => true,
