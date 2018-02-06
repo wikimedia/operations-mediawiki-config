@@ -1,0 +1,8 @@
+Code-Review+1: TerraCodes <terracodes@tools.wmflabs.org>
+Code-Review+2: Zfilipin <zfilipin@wikimedia.org>
+Verified+2: jenkins-bot
+Submitted-by: jenkins-bot
+Submitted-at: Tue, 06 Feb 2018 14:51:21 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/406486
+Project: operations/mediawiki-config
+Branch: refs/heads/master
