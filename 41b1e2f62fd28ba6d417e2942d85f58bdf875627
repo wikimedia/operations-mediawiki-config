@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5d298f7e_eb4d2e9e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-02-06T11:26:16Z",
+      "side": 1,
+      "message": "Quite large. I suggest you use \u003chttps://commons.wikimedia.org/?oldid\u003d283024301#Proposal_to_uninstall_Flow\u003e if you think it\u0027s okay.",
+      "range": {
+        "startLine": 9,
+        "startChar": 11,
+        "endLine": 9,
+        "endChar": 138
+      },
+      "revId": "41b1e2f62fd28ba6d417e2942d85f58bdf875627",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
