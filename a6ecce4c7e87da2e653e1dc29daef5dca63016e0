@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "35e0be22_7dab6ef9",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 320,
+      "author": {
+        "id": 228
+      },
+      "writtenOn": "2018-02-06T14:07:57Z",
+      "side": 1,
+      "message": "this should be considered in terms of DB size vs more accurate changes tracking.\n73 means we strongly prefer good changes tracking (less recentchanges rows), and pay for it with large wbc_entity_usage.\n\n73 won\u0027t block wider deployment of T151717 due to operation limitations?",
+      "range": {
+        "startLine": 320,
+        "startChar": 76,
+        "endLine": 320,
+        "endChar": 85
+      },
+      "revId": "a6ecce4c7e87da2e653e1dc29daef5dca63016e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
