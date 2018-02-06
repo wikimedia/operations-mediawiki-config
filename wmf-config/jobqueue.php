@@ -49,7 +49,10 @@ if ( $wmgUseEventBus && $wmgDebugJobQueueEventBus ) {
 		$wgJobTypeConf['RecordLintJob'] =
 		$wgJobTypeConf['updateBetaFeaturesUserCounts'] =
 		$wgJobTypeConf['wikibase-addUsagesForPage'] =
-			[ 'class' => 'JobQueueEventBus' ];
+            [ 'class' => 'JobQueueEventBus' ];
+	if ( $wmgDisableRefreshLinksInRedis ) {
+		$wgJobTypeConf['refreshLinks'] = [ 'class' => 'JobQueueEventBus' ];
+	}
 	$wgJobTypeConf['default'] = [
 		'class' => 'JobQueueSecondTestQueue',
 		'mainqueue' => $jobQueueFederatedConfig,
