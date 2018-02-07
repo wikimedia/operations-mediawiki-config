@@ -17,7 +17,7 @@ class NocDblistTest extends PHPUnit_Framework_TestCase {
 	public function testNocDblists() {
 		$common = dirname( dirname( __DIR__ ) );
 		$dblistsDir = "$common/dblists/";
-		$nocConfDir = "$common/docroot/noc/conf/";
+		$nocConfDir = "$common/docroot/noc/conf/dblists/";
 
 		$existingLinks = self::getDblists( $nocConfDir );
 

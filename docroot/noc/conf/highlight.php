@@ -1,7 +1,7 @@
 <?php
 // Only allow viewing of files of which there is a copy (or link)
 // in noc/conf/* by the same name.
-$selectableFilepaths = glob( __DIR__ . '/*' );
+$selectableFilepaths = glob( __DIR__ . '/*,' . __DIR__ . "/dblists/*" );
 
 // Name of file from user input
 if ( isset( $_GET['file'] ) ) {
