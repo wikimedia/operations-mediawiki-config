@@ -3151,9 +3151,6 @@ $wgWBClientSettings['repoSiteName'] = 'wikibase-repo-name';
 
 if ( $wmgUseTemplateSandbox ) {
 	wfLoadExtension( 'TemplateSandbox' );
-	if ( $wmgUseScribunto ) {
-		$wgTemplateSandboxEditNamespaces[] = 828; // NS_MODULE
-	}
 }
 
 if ( $wmgUsePageAssessments ) {
