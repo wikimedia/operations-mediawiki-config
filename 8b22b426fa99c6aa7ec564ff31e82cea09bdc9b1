@@ -22,6 +22,30 @@
       "revId": "8b22b426fa99c6aa7ec564ff31e82cea09bdc9b1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bdf90952_c183eb5c",
+        "filename": "wmf-config/ProductionServices.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1629
+      },
+      "writtenOn": "2018-02-08T10:35:26Z",
+      "side": 1,
+      "message": "Fixed, any reason why only whitespaces and not also tabs are accepted?",
+      "parentUuid": "4efcebec_765b5027",
+      "range": {
+        "startLine": 76,
+        "startChar": 0,
+        "endLine": 76,
+        "endChar": 2
+      },
+      "revId": "8b22b426fa99c6aa7ec564ff31e82cea09bdc9b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
