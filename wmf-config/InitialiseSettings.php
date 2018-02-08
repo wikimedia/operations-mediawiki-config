@@ -20333,6 +20333,8 @@ $wgConf->settings = [
 	'testwiki' => MIGRATION_WRITE_BOTH,
 	'test2wiki' => MIGRATION_WRITE_BOTH,
 	'testwikidatawiki' => MIGRATION_WRITE_BOTH,
+	'mediawikiwiki' => MIGRATION_WRITE_BOTH,
+	'metawiki' => MIGRATION_WRITE_BOTH,
 ],
 
 'wmgUseReadingLists' => [
