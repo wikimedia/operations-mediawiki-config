@@ -728,5 +728,8 @@ function wmfLabsSettings() {
 		'wgWMEAICaptchaEnabled' => [
 			'default' => true,
 		],
+		'wgPropagateErrors' => [
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()
