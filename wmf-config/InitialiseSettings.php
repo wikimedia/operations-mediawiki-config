@@ -13802,6 +13802,7 @@ $wgConf->settings = [
 		'rcenhancedfilters',                 // [Contrib] 2018-05-22 - Enhanced watchlist filters
 		'codemirror-syntax-highlight',       // [ComTech] 2018-05-06 - Syntax highlighting
 		'advancedsearch',                    // [WMDE TW] 2018-05-22 - Advanced Search
+		'visualeditor-visualdiffpage',       // [Contrib] 2018-08-08 – Visual diffs
 	],
 ],
 
