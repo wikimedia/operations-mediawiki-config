@@ -75,10 +75,6 @@
         "action": "branch",
         "ref": "."
     },
-    "extensions/CleanChanges": {
-        "action": "branch",
-        "ref": "."
-    },
     "extensions/CodeEditor": {
         "action": "branch",
         "ref": "."

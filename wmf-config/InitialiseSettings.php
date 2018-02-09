@@ -17152,10 +17152,6 @@ $wgConf->settings = [
 	'wikimania2017wiki' => true,
 	'wikimania2018wiki' => true,
 ],
-'wmgUseCleanChanges' => [
-	'default' => false,
-// 'metawiki' => true, // T55541
-],
 'wmgUseVips' => [
 	'default' => true,
 	'wikitech' => false,

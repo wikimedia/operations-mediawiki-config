@@ -21,7 +21,6 @@ $IP/extensions/Cite/extension.json
 $IP/extensions/CiteThisPage/extension.json
 $IP/extensions/Citoid/extension.json
 $IP/extensions/cldr/extension.json
-$IP/extensions/CleanChanges/extension.json
 $IP/extensions/CodeEditor/extension.json
 $IP/extensions/CodeMirror/extension.json
 $IP/extensions/CodeReview/extension.json

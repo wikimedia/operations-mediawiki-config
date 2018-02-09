@@ -2633,12 +2633,6 @@ if ( $wmgUseTranslationNotifications ) {
 	$wgTranslationNotificationsContactMethods['talkpage-elsewhere'] = true;
 }
 
-if ( $wmgUseCleanChanges ) {
-	$wgDefaultUserOptions['usenewrc'] = 1;
-	wfLoadExtension( 'CleanChanges' );
-	$wgCCTrailerFilter = true;
-}
-
 if ( $wmgUseVips ) {
 	wfLoadExtension( 'VipsScaler' );
 	$wgVipsThumbnailerHost = '10.2.1.21';
