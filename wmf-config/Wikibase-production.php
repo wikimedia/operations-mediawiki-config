@@ -173,6 +173,17 @@ if ( $wmgUseWikibaseRepo ) {
 
 if ( $wmgUseWikibaseClient ) {
 	if ( in_array( $wgDBname, [ 'test2wiki', 'testwiki', 'testwikidatawiki' ] ) ) {
+		$wgWBClientSettings['repositories'] = [
+			'' => [
+				'repoDatabase' => 'testwikidatawiki',
+				'entityNamespaces' => [
+					'item' => NS_MAIN,
+					'property' => WB_NS_PROPERTY
+				],
+				'baseUri' => 'http://test.wikidata.org/entity/',
+				'prefixMapping' => [ '' => '' ],
+			],
+		];
 		$wgWBClientSettings['changesDatabase'] = 'testwikidatawiki';
 		$wgWBClientSettings['repoDatabase'] = 'testwikidatawiki';
 		$wgWBClientSettings['repoUrl'] = "https://test.wikidata.org";
@@ -180,6 +191,17 @@ if ( $wmgUseWikibaseClient ) {
 
 		$wgArticlePlaceholderImageProperty = 'P47';
 	} else {
+		$wgWBClientSettings['repositories'] = [
+			'' => [
+				'repoDatabase' => 'wikidatawiki',
+				'entityNamespaces' => [
+					'item' => NS_MAIN,
+					'property' => WB_NS_PROPERTY
+				],
+				'baseUri' => 'http://www.wikidata.org/entity/',
+				'prefixMapping' => [ '' => '' ],
+			],
+		];
 		$wgWBClientSettings['repoUrl'] = 'https://www.wikidata.org';
 		$wgWBClientSettings['repoConceptBaseUri'] = 'http://www.wikidata.org/entity/';
 		$wgArticlePlaceholderImageProperty = 'P18';
