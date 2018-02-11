@@ -359,6 +359,11 @@ $wgHooks['ImportSources'][] = 'wmfImportSources';
 // Reenable Preview and Changes tabs for wikieditor preview
 $wgHiddenPrefs = array_diff( $wgHiddenPrefs, [ 'wikieditor-preview' ] );
 
+// T57420: prevent creation of local password records for SUL users
+if ( isset( $wgAuthManagerAutoConfig['primaryauth'][\MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider::class] ) ) {
+	$wgAuthManagerAutoConfig['primaryauth'][\MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider::class]['args'][0]['loginOnly'] = true;
+}
+
 $wgAuthManagerAutoConfig['preauth'][GuanacoProvider::class] = [
 	'class' => GuanacoProvider::class,
 	'sort' => 0,
