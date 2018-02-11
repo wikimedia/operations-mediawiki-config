@@ -3621,6 +3621,7 @@ if ( $wmgUse3d && $wmgUseMultimediaViewer ) {
 }
 
 if ( $wmgUseReadingLists ) {
+	$wgReadingListsMaxEntriesPerList = 5000;
 	wfLoadExtension( 'ReadingLists' );
 }
 
