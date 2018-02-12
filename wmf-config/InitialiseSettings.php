@@ -4959,6 +4959,7 @@ $wgConf->settings = [
 	'wuuwiki' => 7 * 86400, // T122476
 	'zhwiki' => 7 * 3600 * 24, // T16624
 	'zhwikibooks' => 7 * 3600 * 24, // T185182
+	'zhwiktionary' => 7 * 86400, // T187018
 ],
 
 // Turn this on so UserMailer::send() will be able to send both text and html email
@@ -4993,6 +4994,7 @@ $wgConf->settings = [
 	'wuuwiki' => 10, // T122476
 	'zhwiki' => 50, // T16624
 	'zhwikibooks' => 10, // T185182
+	'zhwiktionary' => 10, // T187018
 	'zh_yuewiki' => 10, // T32538
 ],
 
