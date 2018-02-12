@@ -123,6 +123,7 @@ $IP/extensions/Score/extension.json
 $IP/extensions/Scribunto/extension.json
 $IP/extensions/SearchExtraNS/extension.json
 $IP/extensions/SecurePoll/extension.json
+$IP/extensions/Sentry/extension.json
 $IP/extensions/ShortUrl/extension.json
 $IP/extensions/SiteMatrix/extension.json
 $IP/extensions/SpamBlacklist/extension.json

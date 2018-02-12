@@ -19958,6 +19958,14 @@ $wgConf->settings = [
 	'default' => [],
 ],
 
+'wmgUseSentry' => [
+	'default' => false,
+],
+
+'wmgSentryDsn' => [
+	'default' => '',
+],
+
 // WikidataPageBanner extension (T98029)
 'wmgUseWikidataPageBanner' => [
 	'default' => false,
