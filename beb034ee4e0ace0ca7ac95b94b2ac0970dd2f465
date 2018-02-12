@@ -91,6 +91,30 @@
       "revId": "beb034ee4e0ace0ca7ac95b94b2ac0970dd2f465",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "778a2b1f_c1bf5d91",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7905,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-02-12T15:33:17Z",
+      "side": 1,
+      "message": "After my first round of comments I realised that create probably only refers to page creation not user creation, so this could make sense in the context of the ticket.\nHowever I think we should get some concrete numbers to back up our guesses of limits here.\n\nAlso I dont see \u0027create\u0027 documented anywhere for wgRateLimits.",
+      "parentUuid": "4ac1b03d_d9a106cf",
+      "range": {
+        "startLine": 7899,
+        "startChar": 2,
+        "endLine": 7905,
+        "endChar": 3
+      },
+      "revId": "beb034ee4e0ace0ca7ac95b94b2ac0970dd2f465",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
