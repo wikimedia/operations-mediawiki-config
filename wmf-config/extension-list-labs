@@ -2,5 +2,3 @@ $IP/extensions/EmailAuth/extension.json
 $IP/extensions/FileImporter/extension.json
 $IP/extensions/FileExporter/extension.json
 $IP/extensions/PerformanceInspector/extension.json
-$IP/extensions/Sentry/extension.json
-

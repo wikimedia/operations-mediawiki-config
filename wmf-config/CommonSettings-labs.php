@@ -286,12 +286,6 @@ if ( $wmgUseQuickSurveys ) {
 	];
 }
 
-if ( $wmgUseSentry ) {
-	require_once "$IP/extensions/Sentry/Sentry.php";
-	$wgSentryDsn = $wmgSentryDsn;
-	$wgSentryLogPhpErrors = false;
-}
-
 if ( $wmgUseEcho && $wmgUseCentralAuth ) {
 	$wgEchoSharedTrackingDB = 'wikishared';
 	// Set cluster back to false, to override CommonSettings.php setting it to 'extension1'
