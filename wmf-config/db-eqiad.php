@@ -706,7 +706,7 @@ $wgLBFactoryConf = [
 		'10.64.48.114' => 1, # es1017, D1 11TB 128GB
 		'10.64.48.116' => 1, # es1019, D8 11TB 128GB
 	],
-	# ExtensionStore shard1
+	# ExtensionStore shard1 (contains Echo databases and more)
 	'extension1' => [
 		'10.64.32.25' => 0, # db1055, C2 2.8TB 96GB, master
 		'10.64.32.26' => 1, # db1056, C3 2.8TB 96GB
