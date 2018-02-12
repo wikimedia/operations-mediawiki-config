@@ -9769,6 +9769,7 @@ $wgConf->settings = [
 	],
 	'+zhwiktionary' => [ // T7836
 		'bot' => [ 'patrol' => true ],
+		'flood' => [ 'bot' => true ], // T187018
 	],
 	'zh_yuewiki' => [
 		'autoconfirmed' => [ 'patrol' => true ],
@@ -10575,6 +10576,11 @@ $wgConf->settings = [
 	'+zhwikivoyage' => [
 		'sysop' => [ 'autopatrolled', 'confirmed', 'patroller', 'transwiki' ], // T62085, T62328
 	],
+	'+zhwiktionary' => [
+		'sysop' => [
+			'flood', // T187018
+		],
+	],
 	'+zh_yuewiki' => [
 		'sysop' => [ 'abusefilter', 'rollbacker', 'autoreviewer', 'confirmed' ],
 	],
@@ -11334,6 +11340,11 @@ $wgConf->settings = [
 	],
 	'+zhwikivoyage' => [
 		'sysop' => [ 'autopatrolled', 'confirmed', 'patroller', 'transwiki' ], // T62085, T62328
+	],
+	'+zhwiktionary' => [
+		'sysop' => [
+			'flood', // T187018
+		],
 	],
 	'+zh_yuewiki' => [
 		'sysop' => [ 'abusefilter', 'rollbacker', 'autoreviewer', 'confirmed' ],
@@ -13060,6 +13071,7 @@ $wgConf->settings = [
 	],
 	'zhwikibooks' => [ 'flood' => [ 'flood' ] ], // T185182
 	'zhwikinews' => [ 'flood' => [ 'flood' ] ], // T54546
+	'zhwiktionary' => [ 'flood' => [ 'flood' ] ], // T187018
 ],
 
 'wgEnableAPI' => [
