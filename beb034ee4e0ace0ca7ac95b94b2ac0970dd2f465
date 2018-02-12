@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2d8854f2_10b8d9b0",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7895,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-02-12T15:30:38Z",
+      "side": 1,
+      "message": "These are currently the defaults, not sure how the merging of these settings work, but perhaps we don\u0027t need this here?\nNot sure who would know.",
+      "range": {
+        "startLine": 7894,
+        "startChar": 3,
+        "endLine": 7895,
+        "endChar": 25
+      },
+      "revId": "beb034ee4e0ace0ca7ac95b94b2ac0970dd2f465",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d869cba3_7e9914ca",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7896,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-02-12T15:30:38Z",
+      "side": 1,
+      "message": "Including bots, this could hit quite a few people, on first read I assumed this was only users.\nI think we should do investigation to see what patterns we actually already have and what exactly we want to stamp out.",
+      "range": {
+        "startLine": 7896,
+        "startChar": 47,
+        "endLine": 7896,
+        "endChar": 51
+      },
+      "revId": "beb034ee4e0ace0ca7ac95b94b2ac0970dd2f465",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bab6f6c6_056e62b3",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7897,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-02-12T15:30:38Z",
+      "side": 1,
+      "message": "We should definitely communicate this one before merging.\nThere must be some query we can run to see how many people this could hit.",
+      "range": {
+        "startLine": 7897,
+        "startChar": 3,
+        "endLine": 7897,
+        "endChar": 25
+      },
+      "revId": "beb034ee4e0ace0ca7ac95b94b2ac0970dd2f465",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ac1b03d_d9a106cf",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7905,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-02-12T15:30:38Z",
+      "side": 1,
+      "message": "The create limits don\u0027t really seem too related to the reasoning in the ticket, so I think it would be worth leaving these at the defaults for now rather than adding it for the sake of adding it.",
+      "range": {
+        "startLine": 7899,
+        "startChar": 2,
+        "endLine": 7905,
+        "endChar": 3
+      },
+      "revId": "beb034ee4e0ace0ca7ac95b94b2ac0970dd2f465",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
