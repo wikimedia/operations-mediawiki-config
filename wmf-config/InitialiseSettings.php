@@ -9769,6 +9769,7 @@ $wgConf->settings = [
 	],
 	'+zhwiktionary' => [ // T7836
 		'bot' => [ 'patrol' => true ],
+		'autoconfirmed' => [ 'suppressredirect' ], // T187018
 	],
 	'zh_yuewiki' => [
 		'autoconfirmed' => [ 'patrol' => true ],
