@@ -3618,18 +3618,6 @@ if ( $wmgUse3d && $wmgUseMultimediaViewer ) {
 	$wgMediaViewerExtensions['stl'] = 'mmv.3d';
 
 	$wg3dProcessor = [ '/usr/bin/xvfb-run', '-a', '-s', '-ac -screen 0 1280x1024x24' ,'/srv/deployment/3d2png/deploy/src/3d2png.js' ];
-
-	// temporary override to ensure that only a select group of users have permissions to upload
-	// STL files on commons, so that we can do some testing, and are guaranteed to have the first
-	// upload: https://lists.wikimedia.org/pipermail/multimedia/2017-September/001322.html
-	if ( $wgDBname === 'commonswiki' ) {
-		$wgHooks['BeforeInitialize'][] = function ( &$title, &$article, &$output, &$user, $request, $mediaWiki ) {
-			global $wgFileExtensions;
-			if ( !in_array( 'sysop', $user->getGroups() ) ) {
-				$wgFileExtensions = array_diff( $wgFileExtensions, [ 'stl' ] );
-			}
-		};
-	}
 }
 
 if ( $wmgUseReadingLists ) {
