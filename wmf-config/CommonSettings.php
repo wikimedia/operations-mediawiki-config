@@ -3630,6 +3630,10 @@ if ( $wmgUseReadingLists ) {
 	wfLoadExtension( 'ReadingLists' );
 }
 
+if ( $wmgUseGlobalPreferences && $wmgUseCentralAuth ) {
+	wfLoadExtension( 'GlobalPreferences' );
+}
+
 if ( PHP_SAPI === 'cli' ) {
 	wfLoadExtension( 'ActiveAbstract' );
 }
