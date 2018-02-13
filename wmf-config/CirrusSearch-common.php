@@ -300,6 +300,8 @@ if ( $wmgCirrusSearchMLRModel ) {
 }
 
 $wgCirrusSearchUserTesting = $wmgCirrusSearchUserTesting;
+// Set SPARQL endpoint for categories
+$wgCirrusSearchCategoryEndpoint = 'https://query.wikidata.org/bigdata/namespace/categories/sparql';
 
 # Load per realm specific configuration, either:
 # - CirrusSearch-labs.php
