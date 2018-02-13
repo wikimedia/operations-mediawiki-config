@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d8312dbf_582238a9",
+        "filename": "wmf-config/Wikibase-production.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-02-13T09:59:19Z",
+      "side": 1,
+      "message": "This differs from the beta patch https://gerrit.wikimedia.org/r/#/c/406276/1/wmf-config/Wikibase-labs.php\n\nand it looks like having repoConceptBaseUri set will mean unset( $repoSettingsArray[\u0027\u0027] ); is called where $repoSettingsArray is what you just added in WikibaseClient::getRepositoryDefinitionsFromSettings",
+      "range": {
+        "startLine": 190,
+        "startChar": 23,
+        "endLine": 190,
+        "endChar": 41
+      },
+      "revId": "205467d8980fcf2f7dd816cc20b9d013e671b6f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
