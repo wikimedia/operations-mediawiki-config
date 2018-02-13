@@ -103,16 +103,16 @@ $wgLBFactoryConf = [
 
 'sectionLoads' => [
 	's1' => [
-		'db1052' => 0,   # B3 2.8TB  96GB, master
-		 'db1067' => 50,  # D1 2.8TB 160GB, old master
-		'db1065' => 0,   # D1 2.8TB 160GB, vslow, dump # master for db1095
-		'db1066' => 50,  # D1 2.8TB 160GB, api
-		'db1073' => 50,  # B3 2.8TB 160GB, api
-		'db1080' => 300, # A2 3.6TB 512GB, api
-		'db1083' => 500, # B1 3.6TB 512GB
-		# 'db1089' => 500, # C3 3.6TB 512GB # T162807
-		'db1099:3311' => 1,   # B2 3.6TB 512GB # rc, log: s1 and s8
-		'db1105:3311' => 1,   # C3 3.6TB 512GB # rc, log: s1 and s2
+		'db1052' => 0,      # B3 2.8TB  96GB, master
+		'db1067' => 50,     # D1 2.8TB 160GB, old master
+		'db1065' => 0,      # D1 2.8TB 160GB, vslow, dump # master for db1095
+		'db1066' => 50,     # D1 2.8TB 160GB, api
+		'db1073' => 50,     # B3 2.8TB 160GB, api
+		'db1080' => 300,    # A2 3.6TB 512GB, api
+		'db1083' => 500,    # B1 3.6TB 512GB
+		# 'db1089' => 500,    # C3 3.6TB 512GB # T162807
+		# 'db1099:3311' => 1, # B2 3.6TB 512GB # rc, log: s1 and s8
+		'db1105:3311' => 1, # C3 3.6TB 512GB # rc, log: s1 and s2
 	],
 	's2' => [
 		'db1054' => 0,   # A3 2.8TB  96GB, master
@@ -122,7 +122,7 @@ $wgLBFactoryConf = [
 		'db1076' => 500, # B1 3.6TB 512GB
 		'db1090' => 500, # C3 3.6TB 512GB
 		'db1103:3312' => 1,  # A3 3.6TB 512GB # rc, log: s2 and s4
-		'db1105:3312' => 1,   # C3 3.6TB 512GB # rc, log: s1 and s2
+		'db1105:3312' => 1,  # C3 3.6TB 512GB # rc, log: s1 and s2
 	],
 	/* s3 */ 'DEFAULT' => [
 		'db1075' => 0,   # A2 3.6TB 512GB, master
@@ -168,13 +168,13 @@ $wgLBFactoryConf = [
 		'db1101:3317' => 1,   # C2 3.6TB 512GB # rc, log: s7 and s8
 	],
 	's8' => [
-		'db1071' => 0,   # D1 2.8TB 160GB, master
-		'db1087' => 0, # C2 3.6TB 512GB, vslow, dump # master for db1095
-		'db1092' => 100, # D2 3.6TB 512GB, api
-		'db1099:3318' => 1,   # B2 3.6TB 512GB # rc, log: s1 and s8
-		'db1101:3318' => 1,   # C2 3.6TB 512GB # rc, log: s7 and s8
-		'db1104' => 300,  # B3 3.6TB 512GB, api
-		'db1109' => 500,  # D8 3.6TB 512GB
+		'db1071' => 0,      # D1 2.8TB 160GB, master
+		'db1087' => 0,      # C2 3.6TB 512GB, vslow, dump # master for db1095
+		'db1092' => 100,    # D2 3.6TB 512GB, api
+		# 'db1099:3318' => 1, # B2 3.6TB 512GB # rc, log: s1 and s8
+		'db1101:3318' => 1, # C2 3.6TB 512GB # rc, log: s7 and s8
+		'db1104' => 300,    # B3 3.6TB 512GB, api
+		'db1109' => 500,    # D8 3.6TB 512GB
 	],
 
 	'silver' => [
@@ -259,23 +259,23 @@ $wgLBFactoryConf = [
 'groupLoadsBySection' => [
 	's1' => [
 		'watchlist' => [
-			'db1099:3311' => 1,
+			# 'db1099:3311' => 1,
 			'db1105:3311' => 1,
 		],
 		'recentchanges' => [
-			'db1099:3311' => 1,
+			# 'db1099:3311' => 1,
 			'db1105:3311' => 1,
 		],
 		'recentchangeslinked' => [
-			'db1099:3311' => 1,
+			# 'db1099:3311' => 1,
 			'db1105:3311' => 1,
 		],
 		'contributions' => [
-			'db1099:3311' => 1,
+			# 'db1099:3311' => 1,
 			'db1105:3311' => 1,
 		],
 		'logpager' => [
-			'db1099:3311' => 1,
+			# 'db1099:3311' => 1,
 			'db1105:3311' => 1,
 		],
 		'dump' => [
@@ -484,23 +484,23 @@ $wgLBFactoryConf = [
 			'db1104' => 1,
 		],
 		'watchlist' => [
-			'db1099:3318' => 1,
+			# 'db1099:3318' => 1,
 			'db1101:3318' => 1,
 		],
 		'recentchanges' => [
-			'db1099:3318' => 1,
+			# 'db1099:3318' => 1,
 			'db1101:3318' => 1,
 		],
 		'recentchangeslinked' => [
-			'db1099:3318' => 1,
+			# 'db1099:3318' => 1,
 			'db1101:3318' => 1,
 		],
 		'contributions' => [
-			'db1099:3318' => 1,
+			# 'db1099:3318' => 1,
 			'db1101:3318' => 1,
 		],
 		'logpager' => [
-			'db1099:3318' => 1,
+			# 'db1099:3318' => 1,
 			'db1101:3318' => 1,
 		],
 	],
