@@ -731,5 +731,10 @@ function wmfLabsSettings() {
 		'wgPropagateErrors' => [
 			'default' => false,
 		],
+		// T184668
+		'wmgUseGlobalPreferences' => [
+			// Explicitly disabled on non-CentralAuth wikis in CommonSettings.php
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()

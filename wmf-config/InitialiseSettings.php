@@ -20378,6 +20378,14 @@ $wgConf->settings = [
 	'nonglobal' => false,
 ],
 
+// T184121, not yet ready for production
+'wmgUseGlobalPreferences' => [
+	'default' => false,
+],
+'wgGlobalPreferencesDB' => [
+	'default' => 'centralauth',
+],
+
 ];
 
 ### WMF Labs override #####
