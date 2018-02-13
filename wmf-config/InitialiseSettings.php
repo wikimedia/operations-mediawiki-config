@@ -9107,6 +9107,21 @@ $wgConf->settings = [
 			'undelete' => true, 'upload' => true, 'upload_by_url' => true, 'apihighlimits' => true, 'unwatchedpages' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-log-detail' => true,
 		],
 	],
+	'+mznwiki' => [
+		// Uploads are restricted to a uploader group - T187187
+		'user' => [
+			'upload' => false,
+			'reupload' => false,
+			'reupload-own' => false,
+			'reupload-shared' => false,
+		],
+		'uploader' => [
+			'upload' => true,
+			'reupload' => true,
+			'reupload-own' => true,
+			'reupload-shared' => true,
+		],
+	],
 	'newiki' => [
 		'autopatrolled' => [ 'autopatrol' => true ],      // T89816
 		'rollbacker' => [ 'rollback' => true ],           // T90888
@@ -10283,6 +10298,9 @@ $wgConf->settings = [
 	'+mlwiktionary' => [
 		'bureaucrat' => [ 'botadmin' ],
 	],
+	'+mznwiki' => [
+		'sysop' => [ 'uploader' ],
+	],
 	'+newiki' => [
 		'sysop' => [
 			'autopatrolled',        // T89816
@@ -11024,6 +11042,9 @@ $wgConf->settings = [
 	],
 	'+mlwiktionary' => [
 		'bureaucrat' => [ 'botadmin' ],
+	],
+	'+mznwiki' => [
+		'sysop' => [ 'uploader' ]
 	],
 	'+newiki' => [
 		'sysop' => [
@@ -12577,6 +12598,14 @@ $wgConf->settings = [
 			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
 			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
 		], // T184675
+	],
+        'mznwiki' => [
+                'uploader' => [ '&',
+                        [ APCOND_AGE, 4 * 86400 ],
+                        [ APCOND_EDITCOUNT, 10 ],
+                        [ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+                        [ '!', [ APCOND_INGROUPS, 'bureaucrat' ] ],
+                ], // T187187
 	],
 	'trwiki' => [
 		'autoreview' => [
