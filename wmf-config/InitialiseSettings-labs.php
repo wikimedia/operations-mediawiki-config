@@ -564,7 +564,7 @@ function wmfLabsSettings() {
 		],
 
 		'wmgUseEmailAuth' => [
-			'default' => 'true',
+			'default' => true,
 		],
 		'wmgUseLinter' => [
 			'default' => true,

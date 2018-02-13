@@ -319,20 +319,6 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	$wgDefaultUserOptions['compact-language-links'] = 0;
 }
 
-if ( $wmgUseEmailAuth ) {
-	wfLoadExtension( 'EmailAuth' );
-	// make it do something testable
-	$wgHooks['EmailAuthRequireToken'][] = function (
-		$user, &$verificationRequired, &$formMessage,
-		&$subjectMessage, &$bodyMessage
-	) {
-		if ( preg_match( '/\+emailauth@/', $user->getEmail() ) ) {
-			$verificationRequired = true;
-			return false;
-		}
-	};
-}
-
 if ( $wmgUseLoginNotify ) {
 	$wgLoginNotifyAttemptsKnownIP = 10;
 	$wgLoginNotifyAttemptsNewIP = 1;

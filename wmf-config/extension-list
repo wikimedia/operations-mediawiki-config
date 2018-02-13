@@ -45,6 +45,7 @@ $IP/extensions/Echo/extension.json
 $IP/extensions/EducationProgram/extension.json
 $IP/extensions/Elastica/extension.json
 $IP/extensions/ElectronPdfService/extension.json
+$IP/extensions/EmailAuth/extension.json
 $IP/extensions/EventBus/extension.json
 $IP/extensions/EventLogging/extension.json
 $IP/extensions/ExtensionDistributor/extension.json

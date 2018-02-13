@@ -3414,6 +3414,20 @@ if ( $wmgUseNewsletter ) {
 	wfLoadExtension( 'Newsletter' );
 }
 
+if ( $wmgUseEmailAuth ) {
+	wfLoadExtension( 'EmailAuth' );
+	// make it do something testable
+	$wgHooks['EmailAuthRequireToken'][] = function (
+		$user, &$verificationRequired, &$formMessage,
+		&$subjectMessage, &$bodyMessage
+	) {
+		if ( preg_match( '/\+emailauth@/', $user->getEmail() ) ) {
+			$verificationRequired = true;
+			return false;
+		}
+	};
+}
+
 ### End (roughly) of general extensions ########################
 
 $wgApplyIpBlocksToXff = true;

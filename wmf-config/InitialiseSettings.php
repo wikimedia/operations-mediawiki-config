@@ -14627,6 +14627,10 @@ $wgConf->settings = [
 	],
 ],
 
+'wmgUseEmailAuth' => [
+	'default' => false,
+],
+
 'wmgUseLinter' => [
 	'default' => true,
 	'votewiki' => false,
