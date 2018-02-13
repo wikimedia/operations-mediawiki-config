@@ -97,7 +97,10 @@ class Clean(main.AbstractSync):
 
     def _maybe_delete(self, path):
         if os.path.exists(path):
-            shutil.rmtree(path)
+            if os.path.isdir(path):
+                shutil.rmtree(path)
+            else:
+                os.remove(path)
         else:
             self.get_logger().info(
                 'Unable to delete %s, already missing', path)
