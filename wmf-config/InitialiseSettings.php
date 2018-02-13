@@ -18158,6 +18158,14 @@ $wgConf->settings = [
 	'huwiki' => true,
 	'rowiki' => true,
 	'ukwiki' => true,
+	'hywiki' => true,
+	'frwiki' => true,
+	'svwiki' => true,
+	'itwiki' => true,
+	'zhwiki' => true,
+	'bewiki' => true,
+	'nlwiki' => true,
+	'glwiki' => true
 ],
 
 'wmgUseWikibaseQuality' => [
