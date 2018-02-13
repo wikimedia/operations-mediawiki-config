@@ -882,7 +882,7 @@ $wgConf->settings = [
 	'ttwiktionary' => '/static/images/project-logos/ttwiktionary.png',  // T45240
 	'ugwiktionary' => '/static/images/project-logos/ugwiktionary.png',  // T45240
 	'ukwiktionary' => '/static/images/project-logos/ukwiktionary.png',
-	'urwiktionary' => '/static/images/project-logos/urwiktionary.png',  // T45240
+	'urwiktionary' => '/static/images/project-logos/urwiktionary.png',  // T187209
 	'uzwiktionary' => '/static/images/project-logos/uzwiktionary.png',  // T45240
 	'viwiktionary' => '/static/images/project-logos/viwiktionary.png',  // T45240
 	'vowiktionary' => '/static/images/project-logos/vowiktionary.png',
@@ -1545,7 +1545,7 @@ $wgConf->settings = [
 	'ttwiktionary' => [ '1.5x' => '/static/images/project-logos/ttwiktionary-1.5x.png', '2x' => '/static/images/project-logos/ttwiktionary-2x.png' ], // T150618
 	'ugwiktionary' => [ '1.5x' => '/static/images/project-logos/ugwiktionary-1.5x.png', '2x' => '/static/images/project-logos/ugwiktionary-2x.png' ], // T150618
 	'ukwiktionary' => [ '1.5x' => '/static/images/project-logos/ukwiktionary-1.5x.png', '2x' => '/static/images/project-logos/ukwiktionary-2x.png' ], // T150618
-	'urwiktionary' => [ '1.5x' => '/static/images/project-logos/urwiktionary-1.5x.png', '2x' => '/static/images/project-logos/urwiktionary-2x.png' ], // T150618
+	'urwiktionary' => [ '1.5x' => '/static/images/project-logos/urwiktionary-1.5x.png', '2x' => '/static/images/project-logos/urwiktionary-2x.png' ], // T187209
 	'uzwiktionary' => [ '1.5x' => '/static/images/project-logos/uzwiktionary-1.5x.png', '2x' => '/static/images/project-logos/uzwiktionary-2x.png' ], // T150618
 	'viwiktionary' => [ '1.5x' => '/static/images/project-logos/viwiktionary-1.5x.png', '2x' => '/static/images/project-logos/viwiktionary-2x.png' ],
 	'wawiktionary' => [ '1.5x' => '/static/images/project-logos/wawiktionary-1.5x.png', '2x' => '/static/images/project-logos/wawiktionary-2x.png' ], // T150618
