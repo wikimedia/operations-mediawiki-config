@@ -61,7 +61,10 @@ $wgSquidServersNoPurge = [
 	## ulsfo
 	'10.128.0.0/24',	# private1-ulsfo
 	'2620:0:863:101::/64',	# private1-ulsfo
-	'10.2.4.26',		# mobile.svc.ulsfo.wmnet, appears in XFF
+
+	## eqsin private1
+	'10.132.0.0/24',
+	'2001:df2:e500:101::/64'
 ];
 
 # IP addresses that aren't proxies, regardless of what the other sources might say
