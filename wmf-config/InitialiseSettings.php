@@ -20385,6 +20385,10 @@ $wgConf->settings = [
 ],
 
 'wmgUse3d' => [
+	'default' => true,
+],
+
+'wmgUpload3d' => [
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
