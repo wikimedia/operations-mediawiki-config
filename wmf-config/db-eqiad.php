@@ -143,7 +143,7 @@ $wgLBFactoryConf = [
 		'db1070' => 0,      # D1 2.8TB 160GB, master
 		'db1051' => 0,      # B3 2.8TB  96GB, vslow, dump in s5
 		'db1082' => 300,    # A2 3.6TB 512GB, api # master for db1095
-		# 'db1096:3315' => 1, # A6 3.6TB 512GB, # rc, log: s5 and s6 # alter table
+		'db1096:3315' => 1, # A6 3.6TB 512GB, # rc, log: s5 and s6
 		'db1097:3315' => 1, # D1 3.6TB 512GB, # rc, log: s4 and s5
 		'db1100' => 50,     # C2 3.6TB 512GB, old master #api # candidate master
 		'db1106' => 500,    # D3 3.6TB 512GB
@@ -155,7 +155,7 @@ $wgLBFactoryConf = [
 		'db1085' => 300,    # B3 3.6TB 512GB, api #master for db1102 (sanitarium 3)
 		'db1088' => 500,    # C2 3.6TB 512GB
 		'db1093' => 300,    # D2 3.6TB 512GB
-		# 'db1096:3316' => 1, # A6 3.6TB 512GB, # rc, log: s5 and s6 # upgrade mariadb
+		'db1096:3316' => 1, # A6 3.6TB 512GB, # rc, log: s5 and s6
 		'db1098:3316' => 1, # B5 3.6TB 512GB, # rc, log: s6 and s7
 	],
 	's7' => [
@@ -389,7 +389,7 @@ $wgLBFactoryConf = [
 			 'db1100' => 3,
 		],
 		'watchlist' => [
-			# 'db1096:3315' => 1,
+			'db1096:3315' => 1,
 			'db1097:3315' => 1,
 		],
 		'recentchanges' => [
@@ -420,7 +420,7 @@ $wgLBFactoryConf = [
 			'db1085' => 1,
 		],
 		'watchlist' => [
-			# 'db1096:3316' => 1,
+			'db1096:3316' => 1,
 			'db1098:3316' => 1,
 		],
 		'recentchanges' => [
