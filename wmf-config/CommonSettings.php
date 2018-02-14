@@ -3612,18 +3612,21 @@ if ( $wmgUseDynamicSidebar ) {
 	wfLoadExtension( 'DynamicSidebar' );
 }
 
-// MultimediaViewer is a dependency of 3d extension
-if ( $wmgUse3d && $wmgUseMultimediaViewer ) {
+if ( $wmg3dDisplay || $wmg3dUpload ) {
 	wfLoadExtension( '3D' );
 
-	// Add 3d file type
-	$wgFileExtensions[] = 'stl';
-	$wgTrustedMediaFiles[] = 'application/sla';
+	if ( $wmg3dDisplay ) {
+		if ( $wmgUseMultimediaViewer ) {
+			$wgMediaViewerExtensions['stl'] = 'mmv.3d';
+		}
 
-	// Add 3d media viewer extension
-	$wgMediaViewerExtensions['stl'] = 'mmv.3d';
+		$wgTrustedMediaFormats[] = 'application/sla';
+		$wg3dProcessor = [ '/usr/bin/xvfb-run', '-a', '-s', '-ac -screen 0 1280x1024x24' ,'/srv/deployment/3d2png/deploy/src/3d2png.js' ];
+	}
 
-	$wg3dProcessor = [ '/usr/bin/xvfb-run', '-a', '-s', '-ac -screen 0 1280x1024x24' ,'/srv/deployment/3d2png/deploy/src/3d2png.js' ];
+	if ( $wmg3dUpload ) {
+		$wgFileExtensions[] = 'stl';
+	}
 }
 
 if ( $wmgUseReadingLists ) {
