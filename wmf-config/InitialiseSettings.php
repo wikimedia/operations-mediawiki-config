@@ -3704,6 +3704,8 @@ $wgConf->settings = [
 		'P' => 100,
 		'प्र' => 100,
 		'प्रवा' => 101,
+		'Portal' => 100, // T187286
+		'Portal_talk' => 101,
 	],
 	'+hiwikiversity' => [
 		'Portal' => 100, // T172977
