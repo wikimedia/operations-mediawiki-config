@@ -20351,7 +20351,11 @@ $wgConf->settings = [
 	'default' => [ 'html5', 'legacy' ],
 ],
 
-'wmgUse3d' => [
+'wmg3dDisplay' => [
+	'default' => true,
+],
+
+'wmg3dUpload' => [
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
