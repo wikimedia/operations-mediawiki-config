@@ -16,6 +16,24 @@
       "revId": "713c7fa4991b564a3d4121c3b938a57a441cc713",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1d581057_0cc2243d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3619,
+      "author": {
+        "id": 214
+      },
+      "writtenOn": "2018-02-15T14:20:54Z",
+      "side": 1,
+      "message": "That page is hopelessly outdated :D\nTime for an update.",
+      "parentUuid": "43502e4e_74e58b9b",
+      "revId": "713c7fa4991b564a3d4121c3b938a57a441cc713",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
