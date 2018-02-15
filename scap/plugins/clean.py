@@ -5,7 +5,6 @@ import shutil
 import subprocess
 
 from scap import cli
-from scap import git
 from scap import log
 from scap import main
 from scap import utils
@@ -83,7 +82,9 @@ class Clean(main.AbstractSync):
             with log.Timer('prune-git-branches', self.get_stats()):
                 # Prune all the submodules' remote branches
                 with utils.cd(stage_dir):
-                    subprocess.check_output('git submodule foreach "git push origin --quiet --delete wmf/%s ||:"' % branch, shell=True)
+                    submodule_cmd = 'git submodule foreach "{} ||:"'.format(
+                        ' '.join(gerrit_prune_cmd))
+                    subprocess.check_output(submodule_cmd, shell=True)
                     if subprocess.call(gerrit_prune_cmd) != 0:
                         logger.info('Failed to prune core branch')
             with log.Timer('removing-local-copy'):
