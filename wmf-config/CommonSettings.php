@@ -2358,6 +2358,9 @@ if ( $wmgUseVisualEditor ) {
 	if ( $wmgCiteVisualEditorOtherGroup ) {
 		$wgCiteVisualEditorOtherGroup = true;
 	}
+
+	// Enable the diff page visual diff Beta Feature for opt-in
+	$wgVisualEditorEnableDiffPageBetaFeature = true;
 }
 
 if ( $wmgUseTemplateData ) { // T61702 - 2015-07-20
