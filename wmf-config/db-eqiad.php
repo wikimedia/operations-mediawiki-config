@@ -151,9 +151,9 @@ $wgLBFactoryConf = [
 	's6' => [
 		'db1061' => 0,      # C3 2.8TB 128GB, master
 		'db1063' => 0,      # C5 2.8TB 128GB, vslow, dump # MariaDB 10.1
-		'db1085' => 300,    # B3 3.6TB 512GB, api #master for db1102 (sanitarium 3)
+		'db1085' => 200,    # B3 3.6TB 512GB, api #master for db1102 (sanitarium 3)
 		'db1088' => 500,    # C2 3.6TB 512GB
-		'db1093' => 500,    # D2 3.6TB 512GB, api
+		# 'db1093' => 500,    # D2 3.6TB 512GB, api # upgrade kernel, mariadb, socket
 		'db1096:3316' => 1, # A6 3.6TB 512GB, # rc, log: s5 and s6
 		'db1098:3316' => 1, # B5 3.6TB 512GB, # rc, log: s6 and s7
 	],
@@ -417,7 +417,7 @@ $wgLBFactoryConf = [
 		],
 		'api' => [
 			'db1085' => 10,
-			'db1093' => 1,
+			# 'db1093' => 1,
 		],
 		'watchlist' => [
 			'db1096:3316' => 1,
