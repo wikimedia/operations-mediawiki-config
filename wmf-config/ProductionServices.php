@@ -26,6 +26,7 @@ $wmfAllServices['eqiad'] = [
 	'mediaSwiftAuth' => 'https://ms-fe.svc.eqiad.wmnet/auth',
 	'mediaSwiftStore' => 'https://ms-fe.svc.eqiad.wmnet/v1/AUTH_mw',
 	'electron' => 'http://pdfrender.discovery.wmnet:5252',
+	'etcd' => '_etcd._tcp.eqiad.wmnet',
 ];
 
 $wmfAllServices['codfw'] = [
@@ -43,6 +44,7 @@ $wmfAllServices['codfw'] = [
 	'mediaSwiftAuth' => 'https://ms-fe.svc.codfw.wmnet/auth',
 	'mediaSwiftStore' => 'https://ms-fe.svc.codfw.wmnet/v1/AUTH_mw',
 	'electron' => 'http://pdfrender.discovery.wmnet:5252',
+	'etcd' => '_etcd._tcp.codfw.wmnet',
 ];
 
 ### Logstash
