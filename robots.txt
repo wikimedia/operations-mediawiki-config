@@ -157,6 +157,13 @@ Allow: /api/rest_v1/?doc
 Disallow: /w/
 Disallow: /api/
 Disallow: /trap/
+Disallow: /wiki/Special:
+Disallow: /wiki/Spezial:
+Disallow: /wiki/Spesial:
+Disallow: /wiki/Special%3A
+Disallow: /wiki/Spezial%3A
+Disallow: /wiki/Spesial%3A
+
 #
 # ar:
 Disallow: /wiki/%D8%AE%D8%A7%D8%B5:Search
@@ -174,13 +181,6 @@ Disallow: /wiki/Wikipedia:Administratoren/Probleme/
 Disallow: /wiki/Wikipedia:Adminkandidaturen/
 Disallow: /wiki/Wikipedia:Qualitätssicherung/
 Disallow: /wiki/Wikipedia:Qualit%C3%A4tssicherung/
-# Search- and random-page
-Disallow: /wiki/Spezial:Suche
-Disallow: /wiki/Special:Suche
-Disallow: /wiki/Spezial:Zufällige_Seite
-Disallow: /wiki/Spezial:Zuf%C3%A4llige_Seite
-Disallow: /wiki/Special:Zufällige_Seite
-Disallow: /wiki/Special:Zuf%C3%A4llige_Seite
 # 4937#5
 Disallow: /wiki/Wikipedia:Vandalismusmeldung/
 Disallow: /wiki/Wikipedia:Gesperrte_Lemmata/
@@ -340,8 +340,6 @@ Disallow: /wiki/Wikipedia:Sletting
 Disallow: /wiki/Wikipedia%3ASletting
 Disallow: /wiki/Wikipedia-diskusjon:Sletting
 Disallow: /wiki/Wikipedia-diskusjon%3ASletting
-Disallow: /wiki/Spesial:
-Disallow: /wiki/Spesial%3A
 #
 # plwiki
 # T10067
@@ -433,7 +431,3 @@ Disallow: /wiki/Wikibooks:Votes_for_deletion
 # working...
 Disallow: /wiki/Fundraising_2007/comments
 #
-Disallow: /wiki/Special:Maintenance
-# Do not show banner content or record hits
-Disallow: /wiki/Special:BannerLoader
-Disallow: /wiki/Special:RecordImpression
