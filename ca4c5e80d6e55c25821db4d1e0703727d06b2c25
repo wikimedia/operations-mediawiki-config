@@ -22,6 +22,30 @@
       "revId": "ca4c5e80d6e55c25821db4d1e0703727d06b2c25",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eccae9a2_c7eb3da8",
+        "filename": "docroot/noc/conf/highlight.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2018-02-16T17:08:05Z",
+      "side": 1,
+      "message": "A-ha! I was wondering where the bug was hiding (I knew you\u0027d be able to find it :p)",
+      "parentUuid": "2219ad62_a21fcbbd",
+      "range": {
+        "startLine": 26,
+        "startChar": 12,
+        "endLine": 26,
+        "endChar": 34
+      },
+      "revId": "ca4c5e80d6e55c25821db4d1e0703727d06b2c25",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
