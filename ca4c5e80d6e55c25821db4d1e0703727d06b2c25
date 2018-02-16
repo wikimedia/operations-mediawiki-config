@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2219ad62_a21fcbbd",
+        "filename": "docroot/noc/conf/highlight.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-02-16T00:28:44Z",
+      "side": 1,
+      "message": "This will probably need to instead strip off __DIR__ and compare the remainder. Instead of current where we compare basename only.\n\nReason being that we want to view dblist/foo as ?file\u003ddblist/foo, not as ?file\u003dfoo, otherwise the git-related links will be broken.",
+      "range": {
+        "startLine": 26,
+        "startChar": 12,
+        "endLine": 26,
+        "endChar": 34
+      },
+      "revId": "ca4c5e80d6e55c25821db4d1e0703727d06b2c25",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
