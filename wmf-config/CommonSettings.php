@@ -107,9 +107,9 @@ default:
 # Shorthand when we have no master-slave situation to keep into account
 $wmfLocalServices = $wmfAllServices[$wmfDatacenter];
 
-# Labs-only for testing, eventually etcd.php will be used in production as well
-if ( $wmfRealm === 'labs' ) {
-	# Get configuration from etcd. This gives us the correct $wmfMasterDatacenter
+# Configuration from etcd (sets $wmfMasterDatacenter)
+# Currently testing in Beta Cluster, and on production mwdebug hosts.
+if ( $wmfRealm === 'labs' || isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
 	require "$wmfConfigDir/etcd.php";
 } else {
 	$wmfMasterDatacenter = 'eqiad';
