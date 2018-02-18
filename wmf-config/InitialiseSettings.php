@@ -3712,6 +3712,8 @@ $wgConf->settings = [
 		'School' => 102, // T172977
 		'Collection' => 106, // T172977
 		'विकिविद्यालय' => NS_PROJECT, // T185347
+		'Draft' => 118, // T187535
+		'Draft_talk' => 119, // T187535
 	],
 	'+hrwikisource' => [
 		'Author' => 100,
@@ -7165,6 +7167,8 @@ $wgConf->settings = [
 		105 => 'विषय_वार्ता', // T168765
 		106 => 'संग्रह', // T168765, Collection
 		107 => 'संग्रह_वार्ता', // T168765
+		118 => 'निर्माणाधीन', // T187535, Draft
+		119 => 'निर्माणाधीन_वार्ता', // T187535, Draft talk
 	],
 	'itwikiversity' => [
 		100 => 'Area',
