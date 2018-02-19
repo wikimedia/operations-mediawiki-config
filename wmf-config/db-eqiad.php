@@ -425,7 +425,7 @@ $wgLBFactoryConf = [
 		],
 		'recentchanges' => [
 			'db1096:3316' => 1,
-			# 'db1098:3316' => 1,
+			'db1098:3316' => 1,
 		],
 		'recentchangeslinked' => [
 			'db1096:3316' => 1,
@@ -456,7 +456,7 @@ $wgLBFactoryConf = [
 			'db1101:3317' => 1,
 		],
 		'recentchanges' => [
-			# 'db1098:3317' => 1,
+			'db1098:3317' => 1,
 			'db1101:3317' => 1,
 		],
 		'recentchangeslinked' => [
