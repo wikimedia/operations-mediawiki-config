@@ -13946,7 +13946,6 @@ $wgConf->settings = [
 	'default' => false,
 	'ruwikivoyage' => true,
 	'wikisource' => true,
-	'enwiki' => true,
 ],
 
 // Whether Compact Links is enabled for new accounts *by default*
