@@ -18197,37 +18197,7 @@ $wgConf->settings = [
 
 // T172914
 'wmgWikibaseFineGrainedLuaTracking' => [
-	'default' => false,
-	'hewiki' => true,
-	'cawiki' => true,
-	'cewiki' => true,
-	'elwiki' => true,
-	'kowiki' => true,
-	'trwiki' => true,
-	'arwiki' => true,
-	'fawiki' => true,
-	'viwiki' => true,
-	'cswiki' => true,
-	'ptwiki' => true,
-	'kowiki' => true,
-	'iawiki' => true,
-	'jawiki' => true,
-	'wikidatawiki' => true,
-	'ruwiki' => true,
-	'dewiki' => true,
-	'eswiki' => true,
-	'frwiktionary' => true,
-	'huwiki' => true,
-	'rowiki' => true,
-	'ukwiki' => true,
-	'hywiki' => true,
-	'frwiki' => true,
-	'svwiki' => true,
-	'itwiki' => true,
-	'zhwiki' => true,
-	'bewiki' => true,
-	'nlwiki' => true,
-	'glwiki' => true
+	'default' => true,
 ],
 
 'wmgUseWikibaseQuality' => [
