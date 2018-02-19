@@ -2889,6 +2889,7 @@ $wgConf->settings = [
 	'sahwiki' => 'Бикипиэдьийэ',
 	'sahwikisource' => 'Бикитиэкэ',
 	'scnwiktionary' => 'Wikizziunariu',
+	'sdwiki' => 'وڪيپيڊيا', // T186943
 	'searchcomwiki' => 'SearchCom',
 	'siwiki' => 'විකිපීඩියා',
 	'siwikibooks' => 'විකිපොත්',
@@ -3061,6 +3062,7 @@ $wgConf->settings = [
 	'sawikiquote' => 'विकिसूक्तिसम्भाषणम्', // T101634
 	'sahwiki' => 'Бикипиэдьийэ_ырытыыта',
 	'sahwikisource' => 'Бикитиэкэ_Ырытыы',
+	'sdwiki' => 'وڪيپيڊيا_بحث', // T186943
 	'siwiki' => 'විකිපීඩියා_සාකච්ඡාව',
 	'siwikibooks' => 'විකිපොත්_සාකච්ඡාව',
 	'siwiktionary' => 'වික්ෂනරි_සාකච්ඡාව',
@@ -5992,6 +5994,10 @@ $wgConf->settings = [
 	'scowiki' => [
 		100 => 'Portal', // T68107
 		101 => 'Portal_talk',
+	],
+	'sdwiki' => [
+		100 => 'باب', // T186943 - Portal
+		101 => 'باب_بحث', // T186943 - Portal talk
 	],
 	'sewiki' => [
 		100 => 'Portála', // T41206
