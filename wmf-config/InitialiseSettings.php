@@ -18227,7 +18227,8 @@ $wgConf->settings = [
 	'zhwiki' => true,
 	'bewiki' => true,
 	'nlwiki' => true,
-	'glwiki' => true
+	'glwiki' => true,
+	'commonswiki' => true,
 ],
 
 'wmgUseWikibaseQuality' => [
