@@ -444,6 +444,7 @@ $wgConf->settings = [
 	'pnbwiki' => 'Asia/Karachi',
 	'pnbwiktionary' => 'Asia/Karachi',
 	'rmwiki' => 'Europe/Berlin',
+	'romdwikimedia' => 'Europe/Chisinau',
 	'rowiki' => 'Europe/Chisinau',
 	'rowikisource' => 'Europe/Chisinau',
 	'rowikivoyage' => 'Europe/Bucharest',
@@ -1162,6 +1163,7 @@ $wgConf->settings = [
 	// Local user group wikis
 	'cnwikimedia' => '/static/images/project-logos/cnwikimedia.png', // T98676
 	'maiwikimedia' => '/static/images/project-logos/maiwikimedia.png',
+	'romdwikimedia' => '/static/images/project-logos/romdwikimedia.png',
 	'wbwikimedia' => '/static/images/project-logos/wbwikimedia.png', // T162510
 
 	// Special wikis
@@ -1662,6 +1664,7 @@ $wgConf->settings = [
 	'ecwikimedia' => [ '1.5x' => '/static/images/project-logos/ecwikimedia-1.5x.png', '2x' => '/static/images/project-logos/ecwikimedia-2x.png' ], // T135521
 	'maiwikimedia' => [ '1.5x' => '/static/images/project-logos/maiwikimedia-1.5x.png', '2x' => '/static/images/project-logos/maiwikimedia-2x.png' ],
 	'ptwikimedia' => [ '1.5x' => '/static/images/project-logos/ptwikimedia-1.5x.png', '2x' => '/static/images/project-logos/ptwikimedia-2x.png' ], // T126832
+	'romdwikimedia' => [ '1.5x' => '/static/images/project-logos/romdwikimedia-1.5x.png', '2x' => '/static/images/project-logos/romdwikimedia-2x.png' ],
 	'trwikimedia' => [ '1.5x' => '/static/images/project-logos/trwikimedia-1.5x.png', '2x' => '/static/images/project-logos/trwikimedia-2x.png' ],
 	'wbwikimedia' => [ '1.5x' => '/static/images/project-logos/wbwikimedia-1.5x.png', '2x' => '/static/images/project-logos/wbwikimedia-2x.png' ], // T162510
 
@@ -1914,6 +1917,7 @@ $wgConf->settings = [
 	'pa_uswikimedia' => '//pa-us.wikimedia.org',
 	'projectcomwiki' => '//projectcom.wikimedia.org', // T143138
 	'qualitywiki' => '//quality.wikimedia.org',
+	'romdwikimedia' => '//romd.wikimedia.org', // T187184
 	'searchcomwiki' => '//searchcom.wikimedia.org',
 	'sourceswiki' => '//wikisource.org',
 	'spcomwiki' => '//spcom.wikimedia.org',
@@ -2001,6 +2005,7 @@ $wgConf->settings = [
 	'outreachwiki' => 'https://outreach.wikimedia.org',
 	'pa_uswikimedia' => 'https://pa-us.wikimedia.org',
 	'qualitywiki' => 'https://quality.wikimedia.org',
+	'romdwikimedia' => 'https://romd.wikimedia.org', // T187184
 	'searchcomwiki' => 'https://searchcom.wikimedia.org',
 	'sourceswiki' => 'https://wikisource.org',
 	'spcomwiki' => 'https://spcom.wikimedia.org',
@@ -15403,6 +15408,7 @@ $wgConf->settings = [
 	'plwiktionary' => 'uca-default', // T48081
 	'ptwiki' => 'uca-pt-u-kn', // T47911, T149002
 	'ptwikibooks' => 'uca-pt', // T47911
+	'romdwikimedia' => 'uca-ro-u-kn',
 	'rowiki' => 'uca-ro-u-kn', // T168711
 	'rowikibooks' => 'uca-ro-u-kn', // T168711
 	'rowikinews' => 'uca-ro-u-kn', // T168711
