@@ -20414,8 +20414,7 @@ $wgConf->settings = [
 'wgCommentTableSchemaMigrationStage' => [
 	'default' => MIGRATION_OLD,
 	'group0' => MIGRATION_WRITE_BOTH,
-	'test2wiki' => MIGRATION_WRITE_BOTH,
-	'metawiki' => MIGRATION_WRITE_BOTH,
+	'group1' => MIGRATION_WRITE_BOTH,
 ],
 
 'wmgUseReadingLists' => [
