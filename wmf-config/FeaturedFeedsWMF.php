@@ -10,8 +10,8 @@
 #
 
 $wgHooks['FeaturedFeeds::getFeeds'][] = function ( &$feeds ) {
-	global $wgConf, $wmgFeaturedFeedsOverrides;
-	list( $site, $lang ) = $wgConf->siteFromDB( wfGetDB( DB_REPLICA )->getDBname() );
+	global $wgConf, $wgDBname, $wmgFeaturedFeedsOverrides;
+	list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 	$media = [
 		'potd' => [ // Picture Of The Day
 			'page' => 'ffeed-potd-page',
