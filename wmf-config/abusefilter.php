@@ -15,20 +15,23 @@
 $wgGroupPermissions['*']['abusefilter-view'] = true;
 $wgGroupPermissions['*']['abusefilter-log'] = true;
 $wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = true; // T44012
+
 // give to sysop to make sure it is always available to them, also on wikis where autoconfirmed does not have this right
 $wgGroupPermissions['sysop']['abusefilter-log-detail'] = true;
 $wgGroupPermissions['sysop']['abusefilter-modify'] = true;
 
-// leaks IP addresses according to Werdna [TS]
+// Provides access to private information - T160357
+// Only CheckUsers/Stewards/Staff and Ombudsmen allowed.
 $wgGroupPermissions['sysop']['abusefilter-private'] = false;
+$wgGroupPermissions['sysop']['abusefilter-private-log'] = false;
 
 // T160357 - Log accessing private abusefilter details
 $wgAbuseFilterPrivateLog = true;
 
-// T160357 - Allow those with CheckUser right to access AbuseLog private information on WMF projects
-// **Do not** enable until Legal signoff is given -- MA; Feb. 09, 2017.
-$wgGroupPermissions['checkuser']['abusefilter-private'] = false;
-$wgGroupPermissions['checkuser']['abusefilter-private-log'] = false;
+// T160357 - Allow those with CheckUser right to access AbuseLog private information on WMF projects and its log
+// Only CheckUsers/Stewards/Staff and Ombudsmen allowed
+$wgGroupPermissions['checkuser']['abusefilter-private'] = true;
+$wgGroupPermissions['checkuser']['abusefilter-private-log'] = true;
 
 // Disable some potentially dangerous actions
 $wgAbuseFilterActions = [
@@ -36,9 +39,6 @@ $wgAbuseFilterActions = [
 	'rangeblock' => false,
 	'degroup' => false,
 ];
-
-// T31922 - Prevent anyone being given the abusefilter-private(-log) rights by removing them
-$wgAvailableRights = array_diff( $wgAvailableRights, [ 'abusefilter-private', 'abusefilter-private-log' ] );
 
 // T66255 - Enable logging to irc.wikimedia.org by default
 $wgAbuseFilterNotifications = "udp";
@@ -333,6 +333,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true; // T76270
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true; // T76270
 		$wgGroupPermissions['steward']['abusefilter-modify-global'] = true; // T150752
+		$wgGroupPermissions['steward']['abusefilter-private'] = true; // T160357
 		$wgAbuseFilterActions['block'] = true; // T54681
 		$wgAbuseFilterAnonBlockDuration = '31 hours'; // T76270
 		$wgAbuseFilterProfile = true; // T149901
