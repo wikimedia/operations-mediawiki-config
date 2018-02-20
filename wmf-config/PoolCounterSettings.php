@@ -41,11 +41,11 @@ $wgPoolCounterConf = [
 		'workers' => 10,
 		'maxqueue' => 20,
 	],
-	// These should be very very fast and reasonably rare
+	// These should be very very fast
 	'CirrusSearch-NamespaceLookup' => [
 		'class' => 'PoolCounter_Client',
 		'timeout' => 5,
-		'workers' => 50,
+		'workers' => 100,
 		'maxqueue' => 200,
 	],
 	// These are very expensive and incredibly common at more than 5M per hour
