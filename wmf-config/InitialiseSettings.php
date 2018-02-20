@@ -15591,10 +15591,6 @@ $wgConf->settings = [
 'wmgMobileFrontend' => [
 	'default' => true,
 ],
-'wgMFBetaFeedbackLink' => [
-	// T182217
-	'default' => 'https://www.mediawiki.org/wiki/Talk:Reading/Web/Settings',
-],
 'wgMFQueryPropModules' => [
 	// workaround for T125672
 	'default' => [ 'pageprops' ],
