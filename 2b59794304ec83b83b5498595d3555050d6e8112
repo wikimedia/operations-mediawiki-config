@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7d6c8c1a_5de20a60",
+        "filename": "dblists/flow.dblist",
+        "patchSetId": 3
+      },
+      "lineNbr": 606,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-02-20T14:40:59Z",
+      "side": 1,
+      "message": "please ask on the task whether they want this",
+      "range": {
+        "startLine": 606,
+        "startChar": 0,
+        "endLine": 606,
+        "endChar": 13
+      },
+      "revId": "2b59794304ec83b83b5498595d3555050d6e8112",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
