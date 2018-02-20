@@ -222,7 +222,7 @@ $wgLocalFileRepo = [
 	'deletedHashLevels' => 3,
 	'abbrvThreshold'    => 160,
 	'isPrivate'         => $wmgPrivateWiki,
-	'thumbProxyUrl'     => $wmgPrivateWiki
+	'thumbProxyUrl'     => ( $wmgPrivateWiki && $lang !== 'office' )
 		? false
 		: ( $wmfSwiftConfig[$specificDC]['thumborUrl'] . '/' . $site . '/' . $lang . '/thumb/' ),
 	'thumbProxySecret'  => $wmfSwiftConfig[$specificDC]['thumborSecret'],
