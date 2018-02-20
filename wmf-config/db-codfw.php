@@ -132,8 +132,6 @@ $wgLBFactoryConf = [
 	],
 	's4' => [
 		'db2051'      => 0,   # B8 2.9TB 160GB, master
-		# 'db2037'      => 50,  # C6 2.9TB 160GB, rc, log
-		# 'db2044'      => 50,  # C6 2.9TB 160GB, rc, log
 		'db2058'      => 50,  # D6 3.3TB 160GB, dump (inactive), vslow
 		'db2065'      => 200, # D6 3.3TB 160GB, api
 		'db2073'      => 400, # C6 3.3TB 512GB # Compressed InnoDB
@@ -336,32 +334,22 @@ $wgLBFactoryConf = [
 	],
 	's4' => [
 		'watchlist' => [
-			'db2037' => 1,
-			'db2044' => 1,
 			'db2084:3314' => 1,
 			'db2091:3314' => 1,
 		],
 		'recentchanges' => [
-			'db2037' => 1,
-			'db2044' => 1,
 			'db2084:3314' => 1,
 			'db2091:3314' => 1,
 		],
 		'recentchangeslinked' => [
-			'db2037' => 1,
-			'db2044' => 1,
 			'db2084:3314' => 1,
 			'db2091:3314' => 1,
 		],
 		'contributions' => [
-			'db2037' => 1,
-			'db2044' => 1,
 			'db2084:3314' => 1,
 			'db2091:3314' => 1,
 		],
 		'logpager' => [
-			'db2037' => 1,
-			'db2044' => 1,
 			'db2084:3314' => 1,
 			'db2091:3314' => 1,
 		],
@@ -599,13 +587,11 @@ $wgLBFactoryConf = [
 	'db2034' => '10.192.0.87', # do not remove or comment out
 	'db2035' => '10.192.32.6', # do not remove or comment out
 	'db2036' => '10.192.32.7', # do not remove or comment out
-	'db2037' => '10.192.32.8', # do not remove or comment out
 	'db2038' => '10.192.32.9', # do not remove or comment out
 	'db2039' => '10.192.32.10', # do not remove or comment out
 	'db2040' => '10.192.32.11', # do not remove or comment out
 	'db2041' => '10.192.32.12', # do not remove or comment out
 	'db2043' => '10.192.32.103', # do not remove or comment out
-	'db2044' => '10.192.32.104', # do not remove or comment out
 	'db2045' => '10.192.32.105', # do not remove or comment out
 	'db2046' => '10.192.32.106', # do not remove or comment out
 	'db2047' => '10.192.32.107', # do not remove or comment out
