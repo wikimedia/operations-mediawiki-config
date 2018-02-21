@@ -2316,6 +2316,7 @@ $wgConf->settings = [
 	'mwlwiki' => 'Biquipédia',
 	'mxwikimedia' => 'Wikimedia México',
 	'mywiki' => 'ဝီကီပီးဒီးယား', // T123191
+	'mywiktionary' => 'ဝစ်ရှင်နရီ', // T187882
 	'myvwiki' => 'Википедиясь',
 	'mznwiki' => 'ویکی‌پدیا',
 	'nahwiki' => 'Huiquipedia',
