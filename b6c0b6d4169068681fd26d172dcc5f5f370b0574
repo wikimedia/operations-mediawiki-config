@@ -22,6 +22,30 @@
       "revId": "b6c0b6d4169068681fd26d172dcc5f5f370b0574",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7e4cda15_07596e36",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 336,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-02-21T00:17:37Z",
+      "side": 1,
+      "message": "That\u0027s intentional. We have the -log one in our global group which is active everywhere, included Meta.",
+      "parentUuid": "d7501a38_81df830a",
+      "range": {
+        "startLine": 336,
+        "startChar": 33,
+        "endLine": 336,
+        "endChar": 53
+      },
+      "revId": "b6c0b6d4169068681fd26d172dcc5f5f370b0574",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
