@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4fe48004_de096a0f",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2018-02-21T18:28:59Z",
+      "side": 1,
+      "message": "Task mentions 4pm, 14:00 is 2pm, could you update to 16:00?",
+      "revId": "f357a1e679e69d3f2e7a4c357ba8d4a2564ee1a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
