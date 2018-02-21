@@ -225,7 +225,6 @@ $wgLocalFileRepo = [
 	'thumbProxyUrl'     => $wmgPrivateWiki
 		? false
 		: ( $wmfSwiftConfig[$specificDC]['thumborUrl'] . '/' . $site . '/' . $lang . '/thumb/' ),
-	'thumbProxySecret'  => $wmfSwiftConfig[$specificDC]['thumborSecret'],
 	'zones'             => $wmgPrivateWiki
 		? [
 			'thumb' => [ 'url' => "$wgScriptPath/thumb_handler.php" ] ]
