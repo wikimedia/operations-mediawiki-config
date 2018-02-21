@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "803121b0_41c25973",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2018-02-21T18:28:59Z",
+      "side": 1,
+      "message": "T187803 mentions 10am to 4pm, 4pm is 16:00, 2pm is 14:00",
+      "revId": "ead56b0ccd3c3aae711eba7f6b9b1f7ad74d9703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
