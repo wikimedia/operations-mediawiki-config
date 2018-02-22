@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "52504350_f0bf0682",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 23
+      },
+      "lineNbr": 4432,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2018-02-22T14:22:32Z",
+      "side": 1,
+      "message": "This looks different on my machine.\n\nAdding screenshot because copy/pasting creates the same code as above. :|\n\nhttps://phab.wmfusercontent.org/file/data/whskrlkdwejxqlarfxcq/PHID-FILE-hjgi5nqcpidr2psa74tu/InitialiseSettings.png",
+      "revId": "2cb5b5acd2a70c20f054d605029daf4a6fc75aab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
