@@ -74,6 +74,7 @@ $wmgThrottlingExceptions[] = [ // T187870
 	'value' => 25 // 20 expected
 ];
 
+<<<<<<< 575b35912ad2c50298882da8f6e5ca114f2a717a
 $wmgThrottlingExceptions[] = [ // T188090
 	'from' => '2018-02-24T05:00 UTC',
 	'to' => '2018-02-24T10:00 UTC',
@@ -95,6 +96,14 @@ $wmgThrottlingExceptions[] = [ // T188292
 	'IP' => [ '38.125.33.54', '38.125.15.118' ],
 	'dbname' => [ 'enwiki' ],
 	'value' => 130 // up to 100 expected
+];
+
+$wmgThrottlingExceptions[] = [ // T188034
+	'from' => '2018-03-06T0:00 UTC',
+	'to' => '2018-03-11T0:00 UTC',
+	'IP' => '93.242.192.25',
+	'dbname' => [ 'enwiki', 'frwiki', 'eswiki', 'arwiki', 'ruwiki', 'zhwiki' ],
+	'value' => 250, // 200 expected
 ];
 
 ## Add throttling definitions above.
