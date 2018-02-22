@@ -658,6 +658,7 @@ $wgLBFactoryConf = [
 	'db2088:3312' => '10.192.48.87:3312', # do not remove or comment out
 	'db2089:3315' => '10.192.0.9:3315', # do not remove or comment out
 	'db2089:3316' => '10.192.0.9:3316', # do not remove or comment out
+	'db2090' => '10.192.32.172', # do not remove or comment out
 	'db2091:3312' => '10.192.0.10:3312', # do not remove or comment out
 	'db2091:3314' => '10.192.0.10:3314', # do not remove or comment out
 	'virt1000' => '208.80.154.18', # do not remove or comment out
