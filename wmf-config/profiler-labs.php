@@ -34,6 +34,12 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 		( isset( $_GET['forceprofile'] ) && isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) )
 		|| PHP_SAPI === 'cli'
 	) {
+		if ( isset( $_GET['forceprofile'] ) ) {
+			// Enable Xhprof now instead of waiting for MediaWiki to start it later.
+			// This ensures a balanced call graph. (T180183)
+			xhprof_enable( XHPROF_FLAGS_NO_BUILTINS );
+		}
+
 		$wmgProfiler = [
 			'class'  => 'ProfilerXhprof',
 			'flags'  => XHPROF_FLAGS_NO_BUILTINS,
