@@ -661,6 +661,10 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
+		'wgEchoMaxMentionsInEditSummary' => [
+			'default' => 5,
+		],
+
 		'wmgMinervaNeue' => [
 			'default' => true,
 		],
