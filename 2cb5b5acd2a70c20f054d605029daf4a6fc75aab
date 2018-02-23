@@ -16,6 +16,24 @@
       "revId": "2cb5b5acd2a70c20f054d605029daf4a6fc75aab",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ecb1b5e8_c1378fdc",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 23
+      },
+      "lineNbr": 4432,
+      "author": {
+        "id": 3915
+      },
+      "writtenOn": "2018-02-23T09:51:16Z",
+      "side": 1,
+      "message": "Yeah, there\u0027s some RTL-snafu going on there. But I can assure you it\u0027s correct – when I added these, I first wrote «\u0027\u0027 \u003d\u003e 110, // T183693», then pasted in the namespace names between the \u0027s. On your machine it actually looks like it should look, it\u0027s this view in Gerrit that\u0027s wrong/confusing. You can see the same thing happening in lines 3574–3587.",
+      "parentUuid": "52504350_f0bf0682",
+      "revId": "2cb5b5acd2a70c20f054d605029daf4a6fc75aab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
