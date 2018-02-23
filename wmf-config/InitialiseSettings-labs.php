@@ -674,10 +674,6 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
-		'wgFragmentMode' => [
-			'default' => [ 'html5', 'legacy' ],
-		],
-
 		'wmgUseNewWikiDiff2Extension' => [
 			'default' => true,
 		],
