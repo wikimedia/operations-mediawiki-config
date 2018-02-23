@@ -53,14 +53,14 @@ $wmfAllServices['eqiad']['logstash'] = [
 ];
 $wmfAllServices['codfw']['logstash'] = $wmfAllServices['eqiad']['logstash'];
 
-### Analytics Kafka cluster
+### Jumbo Kafka cluster (only in eqiad).
 $wmfAllServices['eqiad']['kafka'] = [
-	'10.64.5.12:9092',   // kafka1012.eqiad.wmnet
-	'10.64.5.13:9092',   // kafka1013.eqiad.wmnet
-	'10.64.36.114:9092', // kafka1014.eqiad.wmnet
-	'10.64.53.10:9092',  // kafka1018.eqiad.wmnet
-	'10.64.53.12:9092',  // kafka1020.eqiad.wmnet
-	'10.64.36.122:9092', // kafka1022.eqiad.wmnet
+	'10.64.0.175:9092',     # kafka-jumbo1001.eqiad.wmnet
+	'10.64.0.176:9092',     # kafka-jumbo1002.eqiad.wmnet
+	'10.64.16.99:9092',     # kafka-jumbo1003.eqiad.wmnet
+	'10.64.32.159:9092',    # kafka-jumbo1004.eqiad.wmnet
+	'10.64.32.160:9092',    # kafka-jumbo1005.eqiad.wmnet
+	'10.64.48.117:9092',    # kafka-jumbo1006.eqiad.wmnet
 ];
 $wmfAllServices['codfw']['kafka'] = $wmfAllServices['eqiad']['kafka'];
 
