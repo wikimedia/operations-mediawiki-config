@@ -82,4 +82,12 @@ $wmgThrottlingExceptions[] = [ // T188090
 	'value' => 60 // 50 expected
 ];
 
+$wmgThrottlingExceptions[] = [ // T188091
+	'from' => '2018-02-24T07:00 +5:30',
+	'to' => '2018-02-24T16:30 +5:30',
+	'range' => '117.213.182.0/24', // 117.213.182.220 provided, doesn't look as static IP
+	'dbname' => [ 'tewiki' ],
+	'value' => 50 // 40 expected
+];
+
 ## Add throttling definitions above.
