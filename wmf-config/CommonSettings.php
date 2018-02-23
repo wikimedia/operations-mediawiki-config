@@ -2306,6 +2306,7 @@ if ( $wmgUseVisualEditor ) {
 	}
 	if ( $wmgVisualEditorEnableWikitext ) {
 		$wgVisualEditorEnableWikitext = true;
+		$wgDefaultUserOptions['visualeditor-newwikitext'] = true;
 	}
 
 	// Namespace configuration
