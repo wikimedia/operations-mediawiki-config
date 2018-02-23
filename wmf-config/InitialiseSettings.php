@@ -15036,6 +15036,7 @@ $wgConf->settings = [
 // Whether to enable the 2017 wikitext editor by default.
 'wmgVisualEditorEnableWikitext' => [
 	'default' => false,
+	'officewiki' => true,
 ],
 
 // Namespaces for VisualEditor to be active in, as well as wgContentNamespaces
