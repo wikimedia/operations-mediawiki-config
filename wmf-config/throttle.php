@@ -50,14 +50,6 @@ $wmgThrottlingExceptions[] = [ // T185794
 	'value' => 70 // 50 expected
 ];
 
-$wmgThrottlingExceptions[] = [ // T187655 - University of Edinburgh enwiki & wikidata edit-a-thon.
-	'from' => '2018-02-21T08:00 +0:00',
-	'to' => '2018-02-21T22:00 +0:00',
-	'range' => '129.215.168.0/24',
-	'dbname' => [ 'enwiki' ],
-	'value' => 40 // 30 expected
-];
-
 $wmgThrottlingExceptions[] = [ // T187803
 	'from' => '2018-03-08T10:00 GMT',
 	'to' => '2018-03-08T16:00 GMT',
@@ -80,6 +72,14 @@ $wmgThrottlingExceptions[] = [ // T187870
 	'range' => [ '195.113.180.192/26', '2001:718:9::/48' ],
 	'dbname' => [ 'cswiki' ],
 	'value' => 25 // 20 expected
+];
+
+$wmgThrottlingExceptions[] = [ // T188090
+	'from' => '2018-02-24T05:00 UTC',
+	'to' => '2018-02-24T10:00 UTC',
+	'IP' => '58.177.143.26',
+	'dbname' => [ 'enwiki', 'zhwiki', 'zh_yuewiki' ],
+	'value' => 60 // 50 expected
 ];
 
 ## Add throttling definitions above.
