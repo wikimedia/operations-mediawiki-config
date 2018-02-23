@@ -157,7 +157,10 @@ class MWMultiVersion {
 
 		$lang = null;
 		$site = "wikipedia";
-		if ( isset( $staticMappings[$serverName] ) ) {
+		if ( getenv( 'MW_LANG' ) ) {
+			# Language forced from some hacky script like extract2.php
+			$lang = getenv( 'MW_LANG' );
+		} elseif ( isset( $staticMappings[$serverName] ) ) {
 			$lang = $staticMappings[$serverName];
 			if ( $serverName === 'ee.wikimedia.org' ) {
 				$site = "wikimedia";
