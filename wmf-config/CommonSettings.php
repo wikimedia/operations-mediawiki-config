@@ -2359,6 +2359,9 @@ if ( $wmgUseVisualEditor ) {
 		$wgCiteVisualEditorOtherGroup = true;
 	}
 
+	// Enable the wikitext mode Beta Feature for opt-in
+	$wgVisualEditorEnableWikitextBetaFeature = true;
+
 	// Enable the diff page visual diff Beta Feature for opt-in
 	$wgVisualEditorEnableDiffPageBetaFeature = true;
 }
