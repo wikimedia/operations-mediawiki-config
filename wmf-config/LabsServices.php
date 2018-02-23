@@ -43,10 +43,10 @@ $wmfAllServices['eqiad']['logstash'] = [
 	'deployment-logstash2.deployment-prep.eqiad.wmflabs',
 ];
 
-### Analytics Kafka cluster (analytics-deployment-prep)
+### Jumbo Kafka cluster (jumbo-deployment-prep)
 $wmfAllServices['eqiad']['kafka'] = [
-	'deployment-kafka01.deployment-prep.eqiad.wmflabs:9092',
-	'deployment-kafka03.deployment-prep.eqiad.wmflabs:9092',
+	'deployment-kafka-jumbo-1.deployment-prep.eqiad.wmflabs:9092',
+	'deployment-kafka-jumbo-2.deployment-prep.eqiad.wmflabs:9092',
 ];
 
 ### Restbase
