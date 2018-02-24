@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7c91cca4_b6308fa3",
+        "filename": "docroot/noc/conf/highlight.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-02-24T01:15:25Z",
+      "side": 1,
+      "message": "This should probably use $fileName instead now. so that in case of dblist/all.dblist the prefix is retained for where the raw text is viewable.",
+      "range": {
+        "startLine": 59,
+        "startChar": 46,
+        "endLine": 59,
+        "endChar": 72
+      },
+      "revId": "5d861e98615b60f99582719872e93d1dfede50f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c501f155_2df9d60e",
+        "filename": "docroot/noc/conf/highlight.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-02-24T01:15:25Z",
+      "side": 1,
+      "message": "Removing this exception will make it work as-is.",
+      "range": {
+        "startLine": 66,
+        "startChar": 30,
+        "endLine": 66,
+        "endChar": 37
+      },
+      "revId": "5d861e98615b60f99582719872e93d1dfede50f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
