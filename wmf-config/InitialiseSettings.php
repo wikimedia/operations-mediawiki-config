@@ -15198,12 +15198,6 @@ $wgConf->settings = [
 
 // --------------- VisualEditor end ---------------
 
-// Whether to use jQuery 3.x or keep using the 1.x series.
-// See T124742.
-'wgUsejQueryThree' => [
-	'default' => true,
-],
-
 'wgCiteResponsiveReferences' => [
 	'default' => false,
 
