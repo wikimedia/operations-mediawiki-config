@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "592b4e70_170d51e1",
+        "filename": "wmf-config/ProductionServices.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-02-24T01:36:00Z",
+      "side": 1,
+      "message": "Hm.. the hostname comments helped when using IPs, but not sure the opposite is true?",
+      "range": {
+        "startLine": 58,
+        "startChar": 35,
+        "endLine": 58,
+        "endChar": 46
+      },
+      "revId": "061f1b4f25fcdde8f297dc8cc5a49ac6b6eb0171",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
