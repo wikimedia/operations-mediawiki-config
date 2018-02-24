@@ -638,10 +638,6 @@ function wmfLabsSettings() {
 			'default' => false,
 		],
 
-		'wgEchoPerUserBlacklist' => [
-			'default' => true,
-		],
-
 		'wgEchoMaxMentionsInEditSummary' => [
 			'default' => 5,
 		],
