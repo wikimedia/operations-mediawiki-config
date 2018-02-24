@@ -634,10 +634,6 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
-		'wmgUseTimeless' => [
-			'default' => true,
-		],
-
 		'wmgUse3d' => [
 			'default' => true,
 		],
