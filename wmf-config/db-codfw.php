@@ -78,7 +78,7 @@ $wgLBFactoryConf = [
 	'wikidatawiki' => 's8',
 
 	# labs-related wikis
-	'labswiki'     => 'silver',
+	'labswiki'     => 'm5',
 	'labtestwiki'  => 'labtestweb2001',
 ],
 
@@ -179,8 +179,8 @@ $wgLBFactoryConf = [
 		'db2086:3318' => 1, # B1 3.3TB 512GB # rc, log: s7 and s8
 	],
 
-	'silver' => [
-		'silver' => 1,
+	'm5' => [
+		'm5-master' => 1,
 	],
 	'labtestweb2001' => [
 		'labtestweb2001' => 1,
@@ -648,6 +648,7 @@ $wgLBFactoryConf = [
 	'db2091:3314' => '10.192.0.10:3314', # do not remove or comment out
 	'virt1000' => '208.80.154.18', # do not remove or comment out
 	'silver' => '208.80.154.136', # do not remove or comment out
+	'm5-master' => '10.64.0.13', # do not remove or comment out
 	'labtestweb2001' => '208.80.153.14', # do not remove or comment out
 ],
 
