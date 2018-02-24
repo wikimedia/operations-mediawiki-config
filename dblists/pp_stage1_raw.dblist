@@ -1,6 +1,0 @@
-# This file is used to generate pp_stage1.dblist. It can be removed after the
-# progressive rollout of Page Previews to all but enwiki and dewiki, which are
-# explicitly disabled via InitialiseSettings.php
-# (see https://phabricator.wikimedia.org/T162672).
-
-%% wikipedia.dblist - pp_stage0.dblist
