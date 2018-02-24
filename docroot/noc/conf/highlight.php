@@ -56,14 +56,14 @@ if ( !$selectedFilePath ) {
 		$hlHtml = "Whitelist contains nonexistent entry: $selectedFilePath :(";
 		$selectedFilePath = false;
 	} else {
-		$selectedFileViewRawUrl = './' . urlencode( basename( $selectedFilePath ) );
+		$selectedFileViewRawUrl = './' . urlencode( $fileName );
 		// Resolve symlink
 		// Don't use readlink since that will return a path relative to where the symlink is.
 		// Which is a problem if our PWD is not the same dir (such as in unit tests).
 		$selectedFilePath = realpath( $selectedFilePath );
 		// Figure out path to selected file in the mediawiki-config repository
 		$baseDir = basename( dirname( $selectedFilePath ) );
-		if ( in_array( $baseDir, [ 'dblists', 'wmf-config' ] ) ) {
+		if ( in_array( $baseDir, [ 'wmf-config' ] ) ) {
 			$selectedFileRepoPath = $baseDir . '/' . $selectedFileName;
 		} else {
 			$selectedFileRepoPath = $selectedFileName;
