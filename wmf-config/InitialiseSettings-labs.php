@@ -652,9 +652,6 @@ function wmfLabsSettings() {
 		'wgReadingListsDatabase' => [
 			'default' => 'metawiki',
 		],
-		'wgReadingListsCentralWiki' => [
-			'default' => 'metawiki',
-		],
 
 		// TODO(T166759): Remove this setting once it is also
 		// the default for production.
