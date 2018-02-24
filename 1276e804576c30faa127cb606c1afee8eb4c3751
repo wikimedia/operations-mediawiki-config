@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "71f74dc7_e7556f34",
+        "filename": "docroot/noc/conf/highlight.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-02-24T00:52:58Z",
+      "side": 1,
+      "message": "This line needs to be removed, instead.",
+      "range": {
+        "startLine": 27,
+        "startChar": 1,
+        "endLine": 27,
+        "endChar": 35
+      },
+      "revId": "1276e804576c30faa127cb606c1afee8eb4c3751",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
