@@ -650,12 +650,6 @@ function wmfLabsSettings() {
 			'default' => 'metawiki',
 		],
 
-		// TODO(T166759): Remove this setting once it is also
-		// the default for production.
-		'wgAutoloadAttemptLowercase' => [
-			'default' => false,
-		],
-
 		// Use a constant MLR model for all wikis. It's not ideal, but
 		// no models were trained specifically for data in labs anyways.
 		'-wmgCirrusSearchMLRModel' => [
