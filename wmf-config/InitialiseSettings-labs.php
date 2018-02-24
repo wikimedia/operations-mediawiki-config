@@ -633,10 +633,6 @@ function wmfLabsSettings() {
 			'default' => false,
 		],
 
-		'wgEchoPerUserBlacklist' => [
-			'default' => true,
-		],
-
 		'wmgMinervaNeue' => [
 			'default' => true,
 		],
