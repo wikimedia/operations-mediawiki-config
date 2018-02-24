@@ -15215,15 +15215,16 @@ $wgConf->settings = [
 	// Wikis by request
 	'bgwiki' => true, // T162145
 	'cawiki' => true, // T161307
-	'frwiki' => true, // T160609
 	'elwiki' => true, // T163074
 	'enwiki' => true, // T173176
+	'frwiki' => true, // T160609
 	'hewiki' => true, // T161804
 	'ilowiki' => true, // T164230
 	'itwiki' => true, // T160932
 	'lawiki' => true, // T160844
 	'mswiki' => true, // T165247
 	'nowiki' => true, // T160362
+	'rowiki' => true, // T187997
 
 	// Wiki families
 	'wiktionary' => true, // T159895 overall, T160933 for enwikt
