@@ -9811,9 +9811,11 @@ $wgConf->settings = [
 		'patroller' => [ 'patrol' => true, 'autopatrol' => true ],
 		'autoreviewer' => [ 'autopatrol' => true ],
 		'flood' => [ 'bot' => true ],
-		'massmessage-sender' => [ // T130814
-			'massmessage' => true,
-		],
+		'massmessage-sender' => [ 'massmessage' => true ], // T130814
+	],
+
+	'zh_classicalwiki' => [
+		'editor' => [ 'rollback' => true ], // T188064
 	],
 
 	'zhwikibooks' => [
