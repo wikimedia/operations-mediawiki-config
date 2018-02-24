@@ -634,10 +634,6 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
-		'wmgUse3d' => [
-			'default' => true,
-		],
-
 		// Test jQuery 3 (T124742)
 		'wgUsejQueryThree' => [
 			'default' => true,
