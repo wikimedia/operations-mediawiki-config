@@ -337,13 +337,6 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
-		'wgSecureLogin' => [
-			// Setting false throughout Labs for now due to untrusted SSL certificate
-			// T50501
-			'default' => false,
-			'loginwiki' => false,
-		],
-
 		'wgSearchSuggestCacheExpiry' => [
 			'default' => 300,
 		],
