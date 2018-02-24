@@ -3,8 +3,8 @@
 	 * @param array $viewFilenames
 	 * @param bool $highlight
 	 */
-	function outputFiles( $viewFilenames, $highlight = true ) {
-		$viewFilenames = array_map( 'basename', $viewFilenames );
+	function outputFiles( $viewFilenames, $highlight = true, $prefixFunc = 'basename' ) {
+		$viewFilenames = array_map( $prefixFunc, $viewFilenames );
 		natsort( $viewFilenames );
 		foreach ( $viewFilenames as $viewFilename ) {
 			$srcFilename = substr( $viewFilename, -4 ) === '.txt'
@@ -64,7 +64,9 @@
 <h3><img src="./images/document.png" alt=""> Database lists</h3>
 <ul>
 <?php
-	outputFiles( glob( __DIR__ . '/dblists/*.dblist' ) );
+	outputFiles( glob( __DIR__ . '/dblists/*.dblist' ), true, function( $name ) {
+		return str_replace( __DIR__ . '/', '', $name );
+	} );
 ?>
 </ul>
 
