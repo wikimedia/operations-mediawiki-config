@@ -15,7 +15,6 @@ if ( isset( $_GET['file'] ) ) {
 $selectedFilePath = false;
 
 // Path to file in mediawiki-config repository
-$selectedFileRepoDirName = false;
 $selectedFileRepoPath = false;
 
 // Relative path to the symlink in conf/*
@@ -82,7 +81,6 @@ if ( !$selectedFilePath ) {
 }
 
 $selectedFileNameEsc = htmlspecialchars( $selectedFileName );
-$selectedFileRepoPathEsc = htmlspecialchars( $selectedFileRepoPath );
 $selectedFileViewRawUrlEsc = htmlspecialchars( $selectedFileViewRawUrl );
 ?>
 <!DOCTYPE html>
@@ -98,8 +96,8 @@ $selectedFileViewRawUrlEsc = htmlspecialchars( $selectedFileViewRawUrl );
 if ( $selectedFilePath !== false ) {
 ?>
 <p>(
-<a href="https://gerrit.wikimedia.org/g/operations/mediawiki-config/+log/master/<?php echo $selectedFileRepoPathEsc; ?>">version control</a> &bull;
-<a href="https://gerrit.wikimedia.org/g/operations/mediawiki-config/+blame/master/<?php echo $selectedFileRepoPathEsc; ?>?blame=1">blame</a> &bull;
+<a href="https://gerrit.wikimedia.org/g/operations/mediawiki-config/+log/master/<?php echo $selectedFileRepoPath; ?>">version control</a> &bull;
+<a href="https://gerrit.wikimedia.org/g/operations/mediawiki-config/+blame/master/<?php echo $selectedFileRepoPath; ?>?blame=1">blame</a> &bull;
 <a href="<?php echo $selectedFileViewRawUrlEsc; ?>">raw text</a>
 )</p>
 <?php
