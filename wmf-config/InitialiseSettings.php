@@ -12284,6 +12284,7 @@ $wgConf->settings = [
 	'wikisource' => true, // T10563 and T14423
 	'wikiversity' => true,
 
+	'bdwikimedia' => true, // T188109
 	'bswiki' => true, // T10240
 	'dewiktionary' => true,
 	'enwiktionary' => true,
