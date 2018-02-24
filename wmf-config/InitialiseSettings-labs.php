@@ -642,10 +642,6 @@ function wmfLabsSettings() {
 			'default' => 5,
 		],
 
-		'wmgMinervaNeue' => [
-			'default' => true,
-		],
-
 		'wmgUseNewWikiDiff2Extension' => [
 			'default' => true,
 		],
