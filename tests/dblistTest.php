@@ -101,7 +101,6 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 			'open.dblist',
 			'group1.dblist', // FIXME: Used in wmf-config
 			'group2.dblist', // FIXME: Used in wmf-config
-			'pp_stage1_raw.dblist', // FIXME: Rename to pp_stage1-computed
 		];
 		foreach ( $files as $file ) {
 			$name = basename( $file );
