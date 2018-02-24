@@ -637,9 +637,6 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
-		'wmgUseReadingLists' => [
-			'default' => true,
-		],
 		'wgReadingListsCluster' => [
 			'default' => false,
 		],
