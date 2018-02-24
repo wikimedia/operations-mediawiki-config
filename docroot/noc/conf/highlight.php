@@ -1,7 +1,8 @@
 <?php
 // Only allow viewing of files of which there is a copy (or link)
 // in noc/conf/* by the same name.
-$selectableFilepaths = glob( __DIR__ . '/*' );
+$selectableFilepaths = array_merge( glob( __DIR__ . '/*' ),
+	glob( __DIR__ . '/dblists/*.dblist' ) );
 
 // Name of file from user input
 if ( isset( $_GET['file'] ) ) {
@@ -23,7 +24,7 @@ $selectedFileViewRawUrl = false;
 $hlHtml = "";
 
 foreach ( $selectableFilepaths as $filePath ) {
-	$fileName = basename( $filePath );
+	$fileName = str_replace( __DIR__ . '/', '', $filePath );
 	// Map .txt links to the original filename
 	if ( substr( $fileName, -4 ) === '.txt' ) {
 		$fileName =  substr( $fileName, 0, -4 );
@@ -53,9 +54,6 @@ if ( !$selectedFilePath ) {
 	// Follow symlink
 	if ( !file_exists( $selectedFilePath ) ) {
 		$hlHtml = "Whitelist contains nonexistent entry: $selectedFilePath :(";
-		$selectedFilePath = false;
-	} elseif ( !is_link( $selectedFilePath ) ) {
-		$hlHtml = 'Whitelist must only contain symlinks.';
 		$selectedFilePath = false;
 	} else {
 		$selectedFileViewRawUrl = './' . urlencode( basename( $selectedFilePath ) );
