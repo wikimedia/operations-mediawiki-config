@@ -83,7 +83,4 @@ do
 	ln -s ../../../$i "./$(basename $i)"
 done
 
-for i in ../../../dblists/*
-do
-	ln -s "$i" "./$(basename $i)"
-done
+ln -s ../../../dblists dblists
