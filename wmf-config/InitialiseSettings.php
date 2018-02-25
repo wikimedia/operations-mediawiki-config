@@ -12364,6 +12364,7 @@ $wgConf->settings = [
 	'svwiki' => true,
 	'viwikibooks' => true, // T40361
 	'zhwiki' => true,
+	'zhwikibooks' => true, // T188213
 ],
 
 'wmgUseGadgets' => [
