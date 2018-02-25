@@ -13440,6 +13440,7 @@ $wgConf->settings = [
 		'*.nli.org.il',                     // National Library of Israel - T1881179
 		'studiezaal.nijmegen.nl',           // Regionaal Archief Nijmegen, NL - T181713
 		'audiovis.nac.gov.pl',              // Zbiori, Poland goverment - T184853
+		'mushroomobserver.org',              // Mushroom Observer - T188203
 	],
 ],
 
