@@ -11667,6 +11667,7 @@ $wgConf->settings = [
 	'orwikisource' => [ 'en', 'mul' ],
 	'otrs_wikiwiki' => [ 'meta' ],
 	'outreachwiki' => [ 'w:en', 'w:de', 'w:fr', 'w:pl', 'w:it', 'w:ja', 'w:es', 'w:nl', 'w:pt', 'w:ru', 'w:sv', 'commons', 'foundation', 'm', ], // T27345
+	'pawikisource' => [ 'en', 'bn', 'ml', 'gu', 'sa', 'te', 'ta', 'kn', 'mr', 'as', 'or' ], // T185982
 	'pflwiki' => [ 'de', 'fr', 'als', 'pdc', 'en' ], // T27996
 	'ptwikisource' => [ 'w', 'b' ],
 	'plwiki' => [ 's', 'b', 'q', 'n', 'wikt' ], // T10546, T22996, T23506
