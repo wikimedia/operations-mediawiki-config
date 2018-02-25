@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f64ef6f3_2c076fd9",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 17600,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2018-02-25T23:03:04Z",
+      "side": 1,
+      "message": "Or just move to CommonSettings.php?",
+      "range": {
+        "startLine": 17600,
+        "startChar": 1,
+        "endLine": 17600,
+        "endChar": 23
+      },
+      "revId": "86bf3de0dd309efe676ecf3e3f6553efaa5500da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
