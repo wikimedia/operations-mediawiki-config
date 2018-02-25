@@ -35,7 +35,8 @@ ini_set( 'display_errors', 1 );
 $wgShowExceptionDetails = true;
 
 // Session consistency is not helpful here and will slow things down in some cases
-wfGetLBFactory()->disableChronologyProtection();
+$lbFactory = MediaWiki\MediaWikiServices::getInstance()->getDBLoadBalancerFactory();
+$lbFactory->disableChronologyProtection();
 
 try {
 	$mediawiki = new MediaWiki();
