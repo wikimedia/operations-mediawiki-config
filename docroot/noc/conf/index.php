@@ -13,11 +13,11 @@
 			echo "\n<li>";
 
 			if ( $highlight ) {
-				echo '<a href="./highlight.php?file=' . htmlspecialchars( urlencode( $srcFilename ) ) . '">'
+				echo '<a href="./highlight.php?file=' . htmlspecialchars( $srcFilename ) . '">'
 					. htmlspecialchars( $srcFilename );
-				echo '</a> (<a href="./' . htmlspecialchars( urlencode( $viewFilename ) ) . '">raw text</a>)';
+				echo '</a> (<a href="./' . htmlspecialchars( $viewFilename ) . '">raw text</a>)';
 			} else {
-				echo '<a href="./' . htmlspecialchars( urlencode( $viewFilename ) ) . '">'
+				echo '<a href="./' . htmlspecialchars( $viewFilename ) . '">'
 					. htmlspecialchars( $srcFilename ) . '</a>';
 			}
 			echo '</li>';
