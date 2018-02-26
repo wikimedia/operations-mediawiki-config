@@ -127,7 +127,7 @@ if ( $wmgUseWikibaseRepo ) {
 			'P692',
 			'P491',
 		];
-		$wgWBRepoSettings['readFullEntityIdColumn'] = false;
+		$wgWBRepoSettings['readFullEntityIdColumn'] = true;
 
 		$wgWBRepoSettings['statementSections']['property'] = [
 			'statements' => null,
@@ -206,7 +206,12 @@ if ( $wmgUseWikibaseClient ) {
 	$wgArticlePlaceholderSearchEngineIndexed = $wmgArticlePlaceholderSearchEngineIndexed;
 	$wgWBClientSettings['propertyOrderUrl'] = 'https://www.wikidata.org/w/index.php?title=MediaWiki:Wikibase-SortedProperties&action=raw&sp_ver=1';
 	$wgWBClientSettings['hasFullEntityIdColumn'] = false;
-	$wgWBClientSettings['readFullEntityIdColumn'] = false;
+
+	if ( in_array( $wgDBname, [ 'fawiki', 'hewiki' ] ) ) {
+		$wgWBClientSettings['readFullEntityIdColumn'] = true;
+	} else {
+		$wgWBClientSettings['readFullEntityIdColumn'] = false;
+	}
 
 	// T142103
 	$wgWBClientSettings['sendEchoNotification'] = true;
