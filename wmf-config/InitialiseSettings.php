@@ -13877,6 +13877,14 @@ $wgConf->settings = [
 	'fawiki' => true, // T181498
 ],
 
+'wmgUseFileImporter' => [
+	'default' => false,
+],
+
+'wmgUseFileExporter' => [
+	'default' => false,
+],
+
 'wmgUseCommonsMetadata' => [
 	'default' => true,
 	'nonbetafeatures' => false,

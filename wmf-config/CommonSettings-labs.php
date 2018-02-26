@@ -82,15 +82,9 @@ if ( $wmgUseFlow ) {
 }
 
 if ( $wmgUseFileExporter ) {
-	wfLoadExtension( 'FileExporter' );
 	// On Beta don't bother enabling beta feature mode.
 	$wgFileExporterBetaFeature = false;
 	$wgFileExporterTarget = 'https://commons.wikimedia.beta.wmflabs.org/wiki/Special:ImportFile';
-}
-
-if ( $wmgUseFileImporter ) {
-	wfLoadExtension( 'FileImporter' );
-	$wgFileImporterSourceSiteServices = [ $wmgUseFileImporter ];
 }
 
 if ( $wmgUseContentTranslation ) {
