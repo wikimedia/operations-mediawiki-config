@@ -104,10 +104,10 @@ $wgLBFactoryConf = [
 'sectionLoads' => [
 	's1' => [
 		'db2048'      => 0,   # C6 2.9TB 160GB, master
-		# 'db2055'      => 50,  # D6 3.3TB 160GB, dump (inactive), vslow, api # rebuild
+		'db2055'      => 50,  # D6 3.3TB 160GB, dump (inactive), vslow, api
 		'db2062'      => 50,  # B5 3.3TB 160GB, api # mariadb 10.1
-		'db2069'      => 50,  # D6 3.3TB 160GB, api # temporary vslow
-		# 'db2070'      => 400, # C5 3.3TB 160GB # copying to db2055
+		'db2069'      => 50,  # D6 3.3TB 160GB, api
+		'db2070'      => 400, # C5 3.3TB 160GB
 		'db2071'      => 50,  # A6 3.6TB 512GB, api
 		'db2072'      => 500, # B6 3.6TB 512GB, # mariadb 10.1
 		'db2088:3311' => 1, # D1 3.3TB 512GB # rc, log: s1 and s2
@@ -281,10 +281,10 @@ $wgLBFactoryConf = [
 			'db2085:3311' => 1,
 		],
 		'dump' => [
-			'db2069' => 1,
+			'db2055' => 1,
 		],
 		'vslow' => [
-			'db2069' => 1,
+			'db2055' => 1,
 		],
 		'api' => [
 			'db2055' => 1,
