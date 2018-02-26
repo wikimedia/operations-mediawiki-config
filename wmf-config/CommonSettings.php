@@ -3088,6 +3088,15 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	$wgDefaultUserOptions['compact-language-links'] = 1;
 }
 
+if ( $wmgUseFileExporter ) {
+	wfLoadExtension( 'FileExporter' );
+}
+
+if ( $wmgUseFileImporter ) {
+	wfLoadExtension( 'FileImporter' );
+	$wgFileImporterSourceSiteServices = [ $wmgUseFileImporter ];
+}
+
 if ( $wmgUseContentTranslation ) {
 	wfLoadExtension( 'ContentTranslation' );
 

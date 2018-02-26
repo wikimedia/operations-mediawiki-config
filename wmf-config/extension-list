@@ -49,6 +49,8 @@ $IP/extensions/EventBus/extension.json
 $IP/extensions/EventLogging/extension.json
 $IP/extensions/ExtensionDistributor/extension.json
 $IP/extensions/FeaturedFeeds/extension.json
+$IP/extensions/FileExporter/extension.json
+$IP/extensions/FileImporter/extension.json
 $IP/extensions/FlaggedRevs/FlaggedRevs.php
 $IP/extensions/Flow/extension.json
 $IP/extensions/FundraiserLandingPage/extension.json
