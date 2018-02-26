@@ -34,6 +34,24 @@
       "revId": "ddb6c3a2e845a24dff9b85c3691913fd3329ebe4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6b39ed10_cb19e856",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 13951,
+      "author": {
+        "id": 2177
+      },
+      "writtenOn": "2018-02-26T20:22:14Z",
+      "side": 1,
+      "message": "If you want to enable it everywhere, then you need:\n\n  default \u003d\u003e \u0027restbaseHMTL\u0027,\n  private \u003d\u003e \u0027mwApiPlain\u0027\n\nAlso, you might consider checking wmgUseRestbaseVRS in CommonSettings.php and if it\u0027s set to true, use restbaseHTML, otherwise fallback to mwApiPlain.\n\nThe combination of both would be the safest way to go.",
+      "parentUuid": "8399d736_36baba90",
+      "revId": "ddb6c3a2e845a24dff9b85c3691913fd3329ebe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
