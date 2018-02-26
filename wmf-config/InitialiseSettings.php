@@ -18207,6 +18207,13 @@ $wgConf->settings = [
 	'elwiki' => [],
 	'kowiki' => [],
 	'trwiki' => [],
+	'arwiki' => [],
+	'dewiki' => [],
+	'rowiki' => [],
+	'ukwiki' => [],
+	'eswiki' => [],
+	'viwiki' => [],
+	'huwiki' => [],
 ],
 
 // T172914
