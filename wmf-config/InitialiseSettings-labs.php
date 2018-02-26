@@ -678,6 +678,10 @@ function wmfLabsSettings() {
 			'default' => MIGRATION_WRITE_BOTH,
 		],
 
+		'wmgUseJADE' => [
+			'default' => true,
+		],
+
 		'wgOresUiEnabled' => [
 			'default' => true,
 			'wikidatawiki' => false,

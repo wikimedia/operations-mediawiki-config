@@ -3425,6 +3425,10 @@ if ( $wmgUseOATHAuth ) {
 	}
 }
 
+if ( $wmgUseJADE ) {
+	wfLoadExtension( 'JADE' );
+}
+
 if ( $wmgUseORES ) {
 	wfLoadExtension( 'ORES' );
 	$wgOresBaseUrl = 'http://ores.discovery.wmnet:8081/';
