@@ -7592,6 +7592,7 @@ $wgConf->settings = [
 	'fawikibooks' => true, // T111024
 	'fawikinews' => true,
 	'fawiktionary' => true, // T85381
+	'fawikisource' => true, // T187662
 	'fiwiki' => true, // T144817
 	'frwiki' => true, // T9269
 	'frwikibooks' => true, // T23517
@@ -8678,6 +8679,8 @@ $wgConf->settings = [
 		'rollbacker' => [ 'rollback' => true ], // T85381
 	],
 	'+fawikisource' => [
+		'autopatrolled' => [ 'autopatrol' => true, 'move-categorypages' => true ], // T187662
+		'patroller' => [ 'patrol' => true, 'move-categorypages' => true ], // T187662
 		'rollbacker' => [ 'rollback' => true ], // T161946
 	],
 	'fiwiki' => [
@@ -10196,6 +10199,8 @@ $wgConf->settings = [
 	],
 	'+fawikisource' => [
 		'sysop' => [
+			'autopatrolled', // T187662
+			'patroller', // T187662
 			'rollbacker', // T161946
 		],
 	],
@@ -10940,6 +10945,8 @@ $wgConf->settings = [
 	],
 	'+fawikisource' => [
 		'sysop' => [
+			'autopatrolled', // T187662
+			'patroller', // T187662
 			'rollbacker', // T161946
 		],
 	],
