@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1c521b26_c4dbd4bf",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 13951,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-02-26T19:56:59Z",
+      "side": 1,
+      "message": "Just wondering if we should use \u0027default\u0027. I forget which other wikis we\u0027re on but it would be nice to assume every wiki we have enabled page previews on is using REST so we do not have to think too much about mwApiPlain.\n\nAre there wikis page previews is on which don\u0027t have REST?",
+      "revId": "ddb6c3a2e845a24dff9b85c3691913fd3329ebe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
