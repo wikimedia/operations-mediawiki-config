@@ -19808,10 +19808,7 @@ $wgConf->settings = [
 	'commonswiki' => null,
 	'foundationwiki' => null,
 	'incubatorwiki' => null,
-	'loginwiki' => null,
 	'metawiki' => null,
-	'test2wiki' => null,
-	'votewiki' => null,
 	'wikidatawiki' => null,
 
 	// Wikimedias
@@ -19823,9 +19820,6 @@ $wgConf->settings = [
 	'ruwikimedia' => null,
 	'trwikimedia' => null,
 	'uawikimedia' => null,
-
-	// Wikimanias
-	'wikimania2017wiki' => null,
 ],
 
 // Cache ResourceLoader modules in localStorage
