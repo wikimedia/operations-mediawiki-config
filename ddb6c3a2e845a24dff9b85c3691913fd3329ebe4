@@ -16,6 +16,24 @@
       "revId": "ddb6c3a2e845a24dff9b85c3691913fd3329ebe4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8399d736_36baba90",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 13951,
+      "author": {
+        "id": 2681
+      },
+      "writtenOn": "2018-02-26T20:07:35Z",
+      "side": 1,
+      "message": "We don\u0027t have RESTBase on wikitech and private wikis, others should be fine.",
+      "parentUuid": "1c521b26_c4dbd4bf",
+      "revId": "ddb6c3a2e845a24dff9b85c3691913fd3329ebe4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
