@@ -11805,7 +11805,7 @@ $wgConf->settings = [
 ],
 # @} end of SVG related
 
-'wgShellRestrictionMethod' => [
+'wgRestrictionMethod' => [
 	'default' => 'firejail',
 ],
 
