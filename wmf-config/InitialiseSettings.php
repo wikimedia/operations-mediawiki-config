@@ -13947,9 +13947,8 @@ $wgConf->settings = [
 'wgPopupsGateway' => [
 	'default' => 'mwApiPlain',
 
-	// Make Page Previews use RESTBase for all wikipedias
-	'wikipedia' => 'restbasePlain',
-	'cswiki' => 'restbaseHTML',
+	// Make Page Previews use RESTBase HTML for all wikipedias
+	'wikipedia' => 'restbaseHTML',
 ],
 
 // T160081 (and others): Make sure that Page Previews can detect the many, many
