@@ -702,6 +702,10 @@ function wmfLabsSettings() {
 			'default' => MIGRATION_WRITE_BOTH,
 		],
 
+		'wmgUseJADE' => [
+			'default' => true,
+		],
+
 		'wmgUseORES' => [
 			'simplewiki' => true, // T181848
 		],
