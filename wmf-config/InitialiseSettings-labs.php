@@ -616,6 +616,11 @@ function wmfLabsSettings() {
 			'default' => false,
 			'enwiki' => true,
 		],
+		// T184793: Enable the VirtualPageViews on beta so we can easily test and track
+		// Popups visible for more than 1s as a virtual page views
+		'wgPopupsVirtualPageViews' => [
+			'default' => true
+		],
 
 		// T165018: Make Page Previews (Popups) use RESTBase's page summary endpoint
 		// and consume the HTML returned.
