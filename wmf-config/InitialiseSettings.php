@@ -19126,6 +19126,7 @@ $wgConf->settings = [
 	'ruwiki' => true,
 	'simplewiki' => true, // T182012
 	'sqwiki' => true, // T170723
+	'svwiki' => true, // T174560
 	'trwiki' => true, // T139992
 
 	'wikidatawiki' => true, // T130212
@@ -19344,6 +19345,17 @@ $wgConf->settings = [
 			'likelygood' => [ 'min' => 'filter_rate_at_recall(min_recall=0.9)', 'max' => 1 ],
 			// maybebad, likelybad use defaults
 			'verylikelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.75)' ],
+		],
+	],
+	'svwiki' => [
+		'damaging' => [
+			// likelygood, maybebad use defaults
+			'likelybad' => [ 'min' => 'recall_at_precision(min_precision=0.75)', 'max' => 1 ],
+			'verylikelybad' => [ 'min' => 'recall_at_precision(min_precision=0.98)', 'max' => 1 ],
+		],
+		'goodfaith' => [
+			'likelygood' => [ 'min' => 'recall_at_precision(min_precision=0.999)', 'max' => 1 ],
+			// maybebad, likelybad, verylikelybad use defaults
 		],
 	],
 ],
