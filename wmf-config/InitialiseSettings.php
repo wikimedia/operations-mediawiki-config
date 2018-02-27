@@ -19114,6 +19114,7 @@ $wgConf->settings = [
 
 	'cswiki' => true, // T151611
 	'enwiki' => true, // T140003
+	'eswiki' => true, // T130279
 	'etwiki' => true, // T159609
 	'fawiki' => true, // T130211
 	'fiwiki' => true, // T163011
@@ -19359,12 +19360,22 @@ $wgConf->settings = [
 			'verylikelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.9)' ],
 		],
 	],
+	'eswiki' => [
+		// damaging uses defaults for everything
+		'goodfaith' => [
+			// likelygood uses default
+			'maybebad' => false,
+			'likelybad' => false,
+			'verylikelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.98)' ],
+		],
+	],
 ],
 'wmgOresDefaultSensitivityLevel' => [
 	'default' => 'soft', // likelybad
 	// One some wikis, there is no likelybad level for damaging ('likelybad' => false) above
 	// Set a different value on those wikis to prevent exceptions (T165011)
 	'fawiki' => 'hard', // maybebad
+	'eswiki' => 'softest', // verylikelybad
 ],
 'wgOresEnabledNamespaces' => [
 	'default' => [],
