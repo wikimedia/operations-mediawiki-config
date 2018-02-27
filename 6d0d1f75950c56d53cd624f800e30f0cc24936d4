@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "30003efe_95d5a6ba",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-02-27T00:18:09Z",
+      "side": 1,
+      "message": "May want to add a note here, saying: Do not enable on a per-wiki level, because localisation cache is shared between wikis, and scap only rebuilds l10n cache  once per currently active wikiversion, and it\u0027s not documented which wiki\u0027s config it will use for that.",
+      "range": {
+        "startLine": 313,
+        "startChar": 5,
+        "endLine": 313,
+        "endChar": 14
+      },
+      "revId": "6d0d1f75950c56d53cd624f800e30f0cc24936d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
