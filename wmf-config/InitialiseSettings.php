@@ -19730,23 +19730,6 @@ $wgConf->settings = [
 	'urwikiquote' => null,
 	'viwikiquote' => null,
 
-	// Wikivoyages
-	'elwikibooks' => null,
-	'enwikibooks' => null,
-	'eswikibooks' => null,
-	'fawikibooks' => null,
-	'fiwikibooks' => null,
-	'frwikibooks' => null,
-	'hewikibooks' => null,
-	'itwikibooks' => null,
-	'nlwikibooks' => null,
-	'ptwikibooks' => null,
-	'rowikibooks' => null,
-	'ruwikibooks' => null,
-	'ukwikibooks' => null,
-	'viwikibooks' => null,
-	'zhwikibooks' => null,
-
 	// Wikisources
 	'sourceswiki' => null,
 	'arwikisource' => null,
