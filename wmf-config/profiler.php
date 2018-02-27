@@ -30,7 +30,13 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 	 */
 	$xwd = false;
 	if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
-		parse_str( preg_replace( '/; ?/', '&', $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ), $xwd );
+		$xwd = [];
+		$matches = null;
+		preg_match_all( '/;\s*(\w+)/', $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'], $matches );
+		if ( !empty( $matches[1] ) ) {
+			$xwd = array_fill_keys( $matches[1], true );
+		}
+		unset( $matches );
 	}
 
 	/**

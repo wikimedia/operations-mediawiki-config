@@ -52,8 +52,12 @@ class ProfilerTest extends PHPUnit_Framework_TestCase {
 	 * Copy of logic in wmf-config/profiler.php.
 	 */
 	protected function parseXmlHeader( $input ) {
-		$xwd = null;
-		parse_str( preg_replace( '/; ?/', '&', $input ), $xwd );
-		return $xwd;
+		$xwd = [];
+		$matches = null;
+		preg_match_all( '/;\s*(\w+)/', $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'], $matches );
+		if ( !empty( $matches[1] ) ) {
+			$xwd = array_fill_keys( $matches[1], true );
+		}
+		unset( $matches );
 	}
 }
