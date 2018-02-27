@@ -310,6 +310,10 @@ $wmgAddWikiNotify = "newprojects@lists.wikimedia.org";
 $wgLocalisationCacheConf['storeDirectory'] = "$IP/cache/l10n";
 $wgLocalisationCacheConf['manualRecache'] = true;
 
+if ( $wmfRealm === 'labs' ) {
+	$wgLocalisationCacheConf['store'] = 'array';
+}
+
 // T29320: skip MessageBlobStore::clear(); handle via refreshMessageBlobs.php instead
 $wgHooks['LocalisationCacheRecache'][] = function ( $cache, $code, &$allData, &$purgeBlobs = true ) {
 	$purgeBlobs = false;
