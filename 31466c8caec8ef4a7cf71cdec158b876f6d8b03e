@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d28532ae_4a67ec17",
+        "filename": "wmf-config/profiler.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-02-27T03:20:00Z",
+      "side": 1,
+      "message": "Typo, fixed in I5ce8b85cdc9b03151f9b8b26d9d3c9a45d53a961.",
+      "range": {
+        "startLine": 134,
+        "startChar": 16,
+        "endLine": 134,
+        "endChar": 20
+      },
+      "revId": "31466c8caec8ef4a7cf71cdec158b876f6d8b03e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
