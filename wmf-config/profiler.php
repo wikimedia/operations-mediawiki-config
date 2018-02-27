@@ -20,19 +20,19 @@ $wmgProfiler = [];
  * 5. Sampling profiler for production traffic
  */
 
-/**
- * 1) Parse X-Wikimedia-Header
- *
- * If the X-Wikimedia-Header is present, parse it into an associative array.
- *
- * See https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug
- */
-$XWD = false;
-if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
-	parse_str( preg_replace( '/; ?/', '&', $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ), $XWD );
-}
-
 if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
+	/**
+	 * 1) Parse X-Wikimedia-Header
+	 *
+	 * If the X-Wikimedia-Header is present, parse it into an associative array.
+	 *
+	 * See https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug
+	 */
+	$XWD = false;
+	if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
+		parse_str( preg_replace( '/; ?/', '&', $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ), $XWD );
+	}
+
 	/**
 	 * 2) One-off profile to stdout
 	 *
