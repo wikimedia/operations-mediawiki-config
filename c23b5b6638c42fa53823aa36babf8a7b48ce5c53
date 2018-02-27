@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "404e3eea_ff6e8b8a",
+        "filename": "scap/plugins/wmfbetaautoupdate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-02-27T18:57:02Z",
+      "side": 1,
+      "message": "Seems like this second for-loop should be redundant now given the above touches the same dirs and also runs submodule update now, right?",
+      "range": {
+        "startLine": 37,
+        "startChar": 9,
+        "endLine": 37,
+        "endChar": 38
+      },
+      "revId": "c23b5b6638c42fa53823aa36babf8a7b48ce5c53",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
