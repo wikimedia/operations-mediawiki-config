@@ -16,8 +16,8 @@ $wmgProfiler = [];
  * 1. Parse X-Wikimedia-Header
  * 2. One-off profile to stdout (via MediaWiki)
  * 3. One-off profile to /tmp (from localhost)
- * 4. Sampling profiler for production traffic
- * 5. One-off profile to XHGui.
+ * 4. One-off profile to XHGui.
+ * 5. Sampling profiler for production traffic
  */
 
 /**
@@ -100,83 +100,7 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 }
 
 /**
- * 4) Sampling profiler for production traffic
- *
- * If Xenon is enabled, register a shutdown callback to ask HHVM for
- * recently collected data. Will not end up yielding something every
- * request.
- *
- * Based on https://github.com/wikimedia/arc-lamp
- */
-if ( extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
-	register_shutdown_function( function () {
-		$data = HH\xenon_get_data();
-
-		if ( empty( $data ) ) {
-			return;
-		}
-
-		$entryPoint = basename( $_SERVER['SCRIPT_NAME'] );
-		$reqMethod = '{' . $_SERVER['REQUEST_METHOD'] . '}';
-
-		// Collate stack samples and fold into single lines.
-		// This is the format expected by FlameGraph.
-		$stacks = [];
-
-		foreach ( $data as $sample ) {
-			$stack = [];
-
-			if ( empty( $sample['phpStack'] ) ) {
-				continue;
-			}
-
-			foreach ( $sample['phpStack'] as $frame ) {
-				if ( $frame['function'] === 'include' ) {
-					// For file scope, just use the path as the name.
-					$func = $frame['file'];
-				} elseif ( $frame['function'] === '{closure}' && isset( $frame['line'] ) ) {
-					// Annotate anonymous functions with their location in the
-					// source code. Example: {closure:/path/to/file.php(123)}
-					$func = "{closure:{$frame['file']}({$frame['line']})}";
-				} else {
-					$func = $frame['function'];
-				}
-
-				if ( $func !== end( $stack ) ) {
-					$stack[] = $func;
-				}
-			}
-
-			if ( count( $stack ) ) {
-				// The last element is usually (but not always) the full file
-				// path of the script name. We want things nice and consistent,
-				// so we pop off the path if it is there, and push the basename
-				// instead.
-				if ( strpos( end( $stack ), $entryPoint ) !== false ) {
-					array_pop( $stack );
-				}
-				$stack[] = $reqMethod;
-				$stack[] = $entryPoint;
-
-				$strStack = implode( ';', array_reverse( $stack ) );
-				if ( !isset( $stacks[$strStack] ) ) {
-					$stacks[$strStack] = 0;
-				}
-				$stacks[$strStack] += 1;
-			}
-		}
-
-		$redis = new Redis();
-		if ( $redis->connect( 'mwlog1001.eqiad.wmnet', 6379, 0.1 ) ) {
-			foreach ( $stacks as $stack => $count ) {
-				$redis->publish( 'xenon', "$stack $count" );
-			}
-		}
-	} );
-}
-
-/**
- * 5) One-off profile to XHGui
+ * 4) One-off profile to XHGui
  *
  * Set X-Wikimedia-Debug header with 'profile' attribute to instrument a web request
  * with XHProf and save the profile to XHGui's MongoDB.
@@ -255,5 +179,81 @@ if (
 			'db.db'        => 'xhprof',
 			'db.options'   => [],
 		] )->save( $data );
+	} );
+}
+
+/**
+ * 5) Sampling profiler for production traffic
+ *
+ * If Xenon is enabled, register a shutdown callback to ask HHVM for
+ * recently collected data. Will not end up yielding something every
+ * request.
+ *
+ * Based on https://github.com/wikimedia/arc-lamp
+ */
+if ( extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
+	register_shutdown_function( function () {
+		$data = HH\xenon_get_data();
+
+		if ( empty( $data ) ) {
+			return;
+		}
+
+		$entryPoint = basename( $_SERVER['SCRIPT_NAME'] );
+		$reqMethod = '{' . $_SERVER['REQUEST_METHOD'] . '}';
+
+		// Collate stack samples and fold into single lines.
+		// This is the format expected by FlameGraph.
+		$stacks = [];
+
+		foreach ( $data as $sample ) {
+			$stack = [];
+
+			if ( empty( $sample['phpStack'] ) ) {
+				continue;
+			}
+
+			foreach ( $sample['phpStack'] as $frame ) {
+				if ( $frame['function'] === 'include' ) {
+					// For file scope, just use the path as the name.
+					$func = $frame['file'];
+				} elseif ( $frame['function'] === '{closure}' && isset( $frame['line'] ) ) {
+					// Annotate anonymous functions with their location in the
+					// source code. Example: {closure:/path/to/file.php(123)}
+					$func = "{closure:{$frame['file']}({$frame['line']})}";
+				} else {
+					$func = $frame['function'];
+				}
+
+				if ( $func !== end( $stack ) ) {
+					$stack[] = $func;
+				}
+			}
+
+			if ( count( $stack ) ) {
+				// The last element is usually (but not always) the full file
+				// path of the script name. We want things nice and consistent,
+				// so we pop off the path if it is there, and push the basename
+				// instead.
+				if ( strpos( end( $stack ), $entryPoint ) !== false ) {
+					array_pop( $stack );
+				}
+				$stack[] = $reqMethod;
+				$stack[] = $entryPoint;
+
+				$strStack = implode( ';', array_reverse( $stack ) );
+				if ( !isset( $stacks[$strStack] ) ) {
+					$stacks[$strStack] = 0;
+				}
+				$stacks[$strStack] += 1;
+			}
+		}
+
+		$redis = new Redis();
+		if ( $redis->connect( 'mwlog1001.eqiad.wmnet', 6379, 0.1 ) ) {
+			foreach ( $stacks as $stack => $count ) {
+				$redis->publish( 'xenon', "$stack $count" );
+			}
+		}
 	} );
 }
