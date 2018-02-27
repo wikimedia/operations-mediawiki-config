@@ -46,6 +46,30 @@
       "revId": "b2c54a1347a8629568261e9d4a10445e395d01e0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9c59d940_2d786484",
+        "filename": "robots.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-02-27T02:51:04Z",
+      "side": 1,
+      "message": "The reason I\u0027m concerned about traffic to special pages is that many of them take query parameters, so a past visit being \u0027noindex\u0027 won\u0027t make it not hit the infinite number of variations to said special page.",
+      "parentUuid": "d01326c3_f12625ce",
+      "range": {
+        "startLine": 160,
+        "startChar": 24,
+        "endLine": 160,
+        "endChar": 25
+      },
+      "revId": "b2c54a1347a8629568261e9d4a10445e395d01e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
