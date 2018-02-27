@@ -18,21 +18,7 @@
 #      `-- wmf-config/CommonSettings-labs.php
 #
 
-if ( $wmfRealm == 'labs' ) {  # safe guard
-// Profiler (similar to wmf-config/profiler.php for production)
-// 1. Web request for https://test.wikimedia.beta.wmflabs.org/
-// 2. Web request with X-Wikimedia-Debug and ?forceprofile=1
-// 3. Maintenance script with --profiler=text
-if ( $wgDBname == 'testwiki'
-	|| PHP_SAPI === 'cli'
-	|| ( isset( $_GET['forceprofile'] ) && isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) )
-) {
-	$wgProfiler = [
-		'class' => 'ProfilerXhprof',
-		'output' => 'text',
-	];
-}
-
+if ( $wmfRealm == 'labs' ) { # safe guard
 if ( file_exists( '/etc/wmflabs-instancename' ) ) {
 	$wgOverrideHostname = trim( file_get_contents( '/etc/wmflabs-instancename' ) );
 }

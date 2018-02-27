@@ -28,15 +28,18 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 	 *
 	 * See https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug
 	 */
-	$xwd = [
-		'forceprofile' => isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) && isset( $_GET['forceprofile'] ),
-	];
+	$xwd = false;
+	if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
+		$xmd = [
+			'forceprofile' => isset( $_GET['forceprofile'] ),
+		];
+	}
 
 	/**
 	 * Enable request profiling
 	 */
 	$xhprofFlags = XHPROF_FLAGS_NO_BUILTINS;
-	if ( $xwd['forceprofile'] ) {
+	if ( isset( $xwd['forceprofile'] ) ) {
 		// Enable Xhprof now instead of waiting for MediaWiki to start it later.
 		// This ensures a balanced and complete call graph. (T180183)
 		xhprof_enable( $xhprofFlags );
@@ -53,7 +56,7 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 	 *
 	 * See https://www.mediawiki.org/wiki/Manual:Profiling
 	 */
-	if ( $xwd['forceprofile'] || PHP_SAPI === 'cli' ) {
+	if ( isset( $xwd['forceprofile'] ) || PHP_SAPI === 'cli' ) {
 		$wmgProfiler = [
 			'class'  => 'ProfilerXhprof',
 			'flags'  => $xhprofFlags,
