@@ -19,7 +19,7 @@ $wmgProfiler = [];
  * - Sampling profiler for production traffic.
  */
 
-if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
+if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) && isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
 	/**
 	 * Parse X-Wikimedia-Debug header.
 	 *
@@ -27,16 +27,13 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 	 *
 	 * See https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug
 	 */
-	$xwd = false;
-	if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
-		$xwd = [];
-		$matches = null;
-		preg_match_all( '/;\s*(\w+)/', $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'], $matches );
-		if ( !empty( $matches[1] ) ) {
-			$xwd = array_fill_keys( $matches[1], true );
-		}
-		unset( $matches );
+	$xwd = [];
+	$matches = null;
+	preg_match_all( '/;\s*(\w+)/', $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'], $matches );
+	if ( !empty( $matches[1] ) ) {
+		$xwd = array_fill_keys( $matches[1], true );
 	}
+	unset( $matches );
 
 	/**
 	 * One-off profile to stdout.
@@ -49,10 +46,7 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 	 *
 	 * See https://www.mediawiki.org/wiki/Manual:Profiling
 	 */
-	if (
-		( isset( $_GET['forceprofile'] ) && isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) )
-		|| PHP_SAPI === 'cli'
-	) {
+	if ( isset( $_GET['forceprofile'] ) || PHP_SAPI === 'cli' ) {
 		$wmgProfiler = [
 			'class'  => 'ProfilerXhprof',
 			'flags'  => XHPROF_FLAGS_NO_BUILTINS,
@@ -76,9 +70,9 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 	 * See https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug#Request_profiling
 	 */
 	if (
+		isset( $xwd['profile'] ) &&
 		// Require X-Forwarded-For to ignore non-remote requests (e.g. PyBal)
-		!empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) &&
-		isset( $xwd['profile'] )
+		!empty( $_SERVER['HTTP_X_FORWARDED_FOR'] )
 	) {
 		xhprof_enable( XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS );
 
