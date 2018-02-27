@@ -220,7 +220,7 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['fineGrainedLuaTracking'] = $wmgWikibaseFineGrainedLuaTracking;
 
 	// T171027
-	if ( in_array( $wgDBname, [ 'commonswiki', 'ruwiki' ] ) ) {
+	if ( in_array( $wgDBname, [ 'commonswiki' ] ) ) {
 		$wgWBClientSettings['injectRecentChanges'] = false;
 	}
 
