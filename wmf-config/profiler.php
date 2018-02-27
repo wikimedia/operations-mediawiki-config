@@ -15,7 +15,6 @@ $wmgProfiler = [];
  *
  * - Parse X-Wikimedia-Debug header.
  * - One-off profile to stdout (via MediaWiki).
- * - One-off profile to /tmp (from localhost).
  * - One-off profile to XHGui.
  * - Sampling profiler for production traffic.
  */
@@ -59,49 +58,6 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 			'flags'  => XHPROF_FLAGS_NO_BUILTINS,
 			'output' => 'text',
 		];
-
-	/**
-	 * One-off profile to /tmp.
-	 *
-	 * When making requests to the local server using shell access,
-	 * setting the 'Force-Local-XHProf: 1' header will write raw profile data
-	 * directly to a local file in /tmp/xhprof/.
-	 *
-	 * Note: This is only allowed for requests within the same server.
-	 */
-	} elseif (
-		isset( $_SERVER['HTTP_FORCE_LOCAL_XHPROF'] )
-		&& isset( $_SERVER['REMOTE_ADDR'] )
-		&& $_SERVER['REMOTE_ADDR'] == '127.0.0.1'
-		&& is_writable( '/tmp/xhprof' )
-	) {
-		xhprof_enable();
-		register_shutdown_function( function () {
-			$prof = xhprof_disable();
-			$titleFormat = "%-75s %6s %13s %13s %13s\n";
-			$format = "%-75s %6d %13.3f %13.3f %13.3f%%\n";
-			$out = sprintf( $titleFormat, 'Name', 'Calls', 'Total', 'Each', '%' );
-			if ( empty( $prof['main()']['wt'] ) ) {
-				return;
-			}
-			$total = $prof['main()']['wt'];
-			uksort( $prof, function ( $a, $b ) use ( $prof ) {
-				if ( $prof[$a]['wt'] < $prof[$b]['wt'] ) {
-					return 1;
-				} elseif ( $prof[$a]['wt'] > $prof[$b]['wt'] ) {
-					return -1;
-				} else {
-					return 0;
-				}
-			} );
-
-			foreach ( $prof as $name => $info ) {
-				$out .= sprintf( $format, $name, $info['ct'], $info['wt'] / 1000,
-					$info['wt'] / $info['ct'] / 1000,
-					$info['wt'] / $total * 100 );
-			}
-			file_put_contents( '/tmp/xhprof/' . date( 'Y-m-d\TH:i:s' ) . '.prof', $out );
-		} );
 	}
 
 	/**
