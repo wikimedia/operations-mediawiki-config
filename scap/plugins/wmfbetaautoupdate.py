@@ -20,19 +20,21 @@ class BetaUpdate(cli.Application):
     def main(self, *extra_args):
         """Do all kinds of weird stuff for beta."""
         pull_paths = [
-            'portal-master',
+            '',
             'php-master',
             'php-master/extensions',
             'php-master/skins',
-            'php-master/vendor'
+            'php-master/vendor',
         ]
+        stage_dir = self.config['stage_dir']
 
         for path in pull_paths:
             path = os.path.join(self.config['stage_dir'], path)
-            with utils.cd(path):
-                subprocess.check_call('/usr/bin/git pull', shell=True)
+            with utils.cd(os.path.join(stage_dir, path)):
+                subprocess.check_call(['/usr/bin/git', 'pull'])
+                subprocess.check_call(['/usr/bin/git', 'submodule', 'update',
+                                       '--init', '--recursive', '--remote'])
 
         for submodule in ['extensions', 'skins']:
-            path = os.path.join(self.config['stage_dir'], 'php-master',
-                                submodule)
+            path = os.path.join(stage_dir, 'php-master', submodule)
             git.update_submodules(path, use_upstream=True)
