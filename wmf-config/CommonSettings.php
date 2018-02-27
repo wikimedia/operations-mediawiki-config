@@ -310,6 +310,14 @@ $wmgAddWikiNotify = "newprojects@lists.wikimedia.org";
 $wgLocalisationCacheConf['storeDirectory'] = "$IP/cache/l10n";
 $wgLocalisationCacheConf['manualRecache'] = true;
 
+# Enabling here instead of CommonSettings-labs.php because we want to be in place before any
+# extensions could do something weird.
+# ALSO! At the moment this has to be enabled/disabled on a realm-wide basis--so don't go adding
+# $wgDBname === 'testwiki' or other nonsense or you'll break things. -- Chad 2018-02-26
+if ( $wmfRealm === 'labs' ) {
+	$wgLocalisationCacheConf['store'] = 'array';
+}
+
 // T29320: skip MessageBlobStore::clear(); handle via refreshMessageBlobs.php instead
 $wgHooks['LocalisationCacheRecache'][] = function ( $cache, $code, &$allData, &$purgeBlobs = true ) {
 	$purgeBlobs = false;
