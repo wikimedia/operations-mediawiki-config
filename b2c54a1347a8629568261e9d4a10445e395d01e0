@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e0d7a76d_9055c1b7",
+        "filename": "robots.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-02-27T02:44:46Z",
+      "side": 1,
+      "message": "I\u0027m not sure wildcards work here. All other entries suggest the string is interpreted as a loose prefix, so the wildcard wouldn\u0027t be needed.\n\nAlso, should we keep the %3A variation? I think it\u0027d be worth keeping for now.\n\nRegarding the individual pages already being noindex, that doesn\u0027t prevent a bot from hitting the page because it requires hitting the url first before finding out not to index it.\n\nGiven how expensive special pages can be, we\u0027re more concerned about bots constantly requesting these, then were are concerned about them being indexed in search engines.",
+      "range": {
+        "startLine": 160,
+        "startChar": 24,
+        "endLine": 160,
+        "endChar": 25
+      },
+      "revId": "b2c54a1347a8629568261e9d4a10445e395d01e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
