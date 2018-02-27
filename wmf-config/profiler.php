@@ -120,7 +120,7 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 	) {
 		xhprof_enable( XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS );
 
-		register_postsend_function( function () use ( $XWD ) {
+		register_postsend_function( function () {
 			$data = [ 'profile' => xhprof_disable() ];
 
 			$sec  = $_SERVER['REQUEST_TIME'];
