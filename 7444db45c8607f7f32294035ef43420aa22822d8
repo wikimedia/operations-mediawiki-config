@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5969f753_fe96e30d",
+        "filename": "scap/plugins/wmfbetaautoupdate.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-02-27T23:52:10Z",
+      "side": 1,
+      "message": "Didn\u0027t notice until PS4 that this is what makes it update wmf-config. I mistook it for a removed line.\n\nMight be worth adding comment here, one for \u0027\u0027 # operations/mediawiki-config, and one for \u0027php-master\u0027 # mediawiki/core, or some such?",
+      "range": {
+        "startLine": 23,
+        "startChar": 12,
+        "endLine": 23,
+        "endChar": 15
+      },
+      "revId": "7444db45c8607f7f32294035ef43420aa22822d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
