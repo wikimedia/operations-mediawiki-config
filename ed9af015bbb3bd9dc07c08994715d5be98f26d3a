@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eee9f399_8e260ca7",
+        "filename": "scap/plugins/wmfbetaautoupdate.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-02-27T03:58:53Z",
+      "side": 1,
+      "message": "One of these is not like the other :)",
+      "range": {
+        "startLine": 32,
+        "startChar": 12,
+        "endLine": 33,
+        "endChar": 29
+      },
+      "revId": "ed9af015bbb3bd9dc07c08994715d5be98f26d3a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
