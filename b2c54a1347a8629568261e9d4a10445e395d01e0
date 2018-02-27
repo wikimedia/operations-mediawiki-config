@@ -22,6 +22,30 @@
       "revId": "b2c54a1347a8629568261e9d4a10445e395d01e0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d01326c3_f12625ce",
+        "filename": "robots.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2018-02-27T02:49:53Z",
+      "side": 1,
+      "message": "* Yeah, I thought about that afterwords, easily dropped\n* Yes, probably. Can add!\n* Well the upside is that a /proper/ bot doesn\u0027t hit them the first time if they read robots.txt first. Also: what\u0027s the standard say on re-visiting a meta\u003dnoindex page to see if that changed? But I...think we agree here?\n* Yeah. And this doesn\u0027t stop that one bit. But we can at least be consistent between what MediaWiki itself does and what we list here.\n\nAlso, per our IRC discussion last week, we probably want to improve the logic in robots.txt anyway to automatically emit the Special namespace (localized) as an entry.",
+      "parentUuid": "e0d7a76d_9055c1b7",
+      "range": {
+        "startLine": 160,
+        "startChar": 24,
+        "endLine": 160,
+        "endChar": 25
+      },
+      "revId": "b2c54a1347a8629568261e9d4a10445e395d01e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
