@@ -97,89 +97,88 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 			file_put_contents( '/tmp/xhprof/' . date( 'Y-m-d\TH:i:s' ) . '.prof', $out );
 		} );
 	}
-}
 
-/**
- * 4) One-off profile to XHGui
- *
- * Set X-Wikimedia-Debug header with 'profile' attribute to instrument a web request
- * with XHProf and save the profile to XHGui's MongoDB.
- *
- * To find the profile in XHGui, either browse "Recent", or use wgRequestId value
- * from the mw.config data in the HTML web response, e.g. by running the
- * `mw.config.get('wgRequestId')` snippet in JavaScript. Then look up as follows:
- *
- * https://performance.wikimedia.org/xhgui/?url=WShdaQpAIHwAAF9HkX4AAAAW
- *
- * See https://performance.wikimedia.org/xhgui/
- * See https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug#Request_profiling
- */
-if (
-	ini_get( 'hhvm.stats.enable_hot_profiler' ) &&
-	// Require X-Forwarded-For to ignore non-remote requests (e.g. PyBal)
-	!empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) &&
-	isset( $XWD['profile'] )
-) {
-	xhprof_enable( XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS );
+	/**
+	 * 4) One-off profile to XHGui
+	 *
+	 * Set X-Wikimedia-Debug header with 'profile' attribute to instrument a web request
+	 * with XHProf and save the profile to XHGui's MongoDB.
+	 *
+	 * To find the profile in XHGui, either browse "Recent", or use wgRequestId value
+	 * from the mw.config data in the HTML web response, e.g. by running the
+	 * `mw.config.get('wgRequestId')` snippet in JavaScript. Then look up as follows:
+	 *
+	 * https://performance.wikimedia.org/xhgui/?url=WShdaQpAIHwAAF9HkX4AAAAW
+	 *
+	 * See https://performance.wikimedia.org/xhgui/
+	 * See https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug#Request_profiling
+	 */
+	if (
+		// Require X-Forwarded-For to ignore non-remote requests (e.g. PyBal)
+		!empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) &&
+		isset( $XWD['profile'] )
+	) {
+		xhprof_enable( XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS );
 
-	register_postsend_function( function () use ( $XWD ) {
-		$data = [ 'profile' => xhprof_disable() ];
+		register_postsend_function( function () use ( $XWD ) {
+			$data = [ 'profile' => xhprof_disable() ];
 
-		$sec  = $_SERVER['REQUEST_TIME'];
-		$usec = $_SERVER['REQUEST_TIME_FLOAT'] - $sec;
+			$sec  = $_SERVER['REQUEST_TIME'];
+			$usec = $_SERVER['REQUEST_TIME_FLOAT'] - $sec;
 
-		$keyWhitelist = array_flip( [
-			'HTTP_HOST', 'HTTP_X_WIKIMEDIA_DEBUG', 'REQUEST_METHOD',
-			'REQUEST_START_TIME', 'REQUEST_TIME', 'REQUEST_TIME_FLOAT',
-			'SERVER_ADDR', 'SERVER_NAME', 'THREAD_TYPE', 'action'
-		] );
+			$keyWhitelist = array_flip( [
+				'HTTP_HOST', 'HTTP_X_WIKIMEDIA_DEBUG', 'REQUEST_METHOD',
+				'REQUEST_START_TIME', 'REQUEST_TIME', 'REQUEST_TIME_FLOAT',
+				'SERVER_ADDR', 'SERVER_NAME', 'THREAD_TYPE', 'action'
+			] );
 
-		// Create sanitized copies of $_SERVER, $_ENV, and $_GET:
-		$server = array_intersect_key( $_SERVER, $keyWhitelist );
-		$env = array_intersect_key( $_ENV, $keyWhitelist );
-		$get = array_intersect_key( $_GET, $keyWhitelist );
+			// Create sanitized copies of $_SERVER, $_ENV, and $_GET:
+			$server = array_intersect_key( $_SERVER, $keyWhitelist );
+			$env = array_intersect_key( $_ENV, $keyWhitelist );
+			$get = array_intersect_key( $_GET, $keyWhitelist );
 
-		// Strip everything from the query string except 'action=' param:
-		preg_match( '/action=[^&]+/', $_SERVER['REQUEST_URI'], $matches );
-		$qs = $matches ? '?' . $matches[0] : '';
-		$url = $_SERVER['SCRIPT_NAME'] . $qs;
+			// Strip everything from the query string except 'action=' param:
+			preg_match( '/action=[^&]+/', $_SERVER['REQUEST_URI'], $matches );
+			$qs = $matches ? '?' . $matches[0] : '';
+			$url = $_SERVER['SCRIPT_NAME'] . $qs;
 
-		// If profiling was explicitly requested (via X-Wikimedia-Debug)
-		// then include the unique request ID in the reported URL, to make
-		// it easy for the person debugging to find the request in Xhgui.
-		if ( $XWD && method_exists( 'WebRequest', 'getRequestId' ) ) {
-			$reqId = WebRequest::getRequestId();
-			$url = '//' . $reqId . $url;
-			$env['UNIQUE_ID'] = $reqId;
-			$server['UNIQUE_ID'] = $reqId;
-		}
+			// If profiling was explicitly requested (via X-Wikimedia-Debug)
+			// then include the unique request ID in the reported URL, to make
+			// it easy for the person debugging to find the request in Xhgui.
+			if ( $XWD && method_exists( 'WebRequest', 'getRequestId' ) ) {
+				$reqId = WebRequest::getRequestId();
+				$url = '//' . $reqId . $url;
+				$env['UNIQUE_ID'] = $reqId;
+				$server['UNIQUE_ID'] = $reqId;
+			}
 
-		// Include web server name (SERVER_NAME is e.g. wikipedia.org,
-		// SERVER_ADDR is the LVS service name, e.g. appservers.svc)
-		$env['HOSTNAME'] = wfHostname();
+			// Include web server name (SERVER_NAME is e.g. wikipedia.org,
+			// SERVER_ADDR is the LVS service name, e.g. appservers.svc)
+			$env['HOSTNAME'] = wfHostname();
 
-		// Re-insert scrubbed URL as REQUEST_URL:
-		$server['REQUEST_URI'] = $url;
-		$env['REQUEST_URI'] = $url;
+			// Re-insert scrubbed URL as REQUEST_URL:
+			$server['REQUEST_URI'] = $url;
+			$env['REQUEST_URI'] = $url;
 
-		$data['meta'] = [
-			'url'              => $url,
-			'SERVER'           => $server,
-			'get'              => $get,
-			'env'              => $env,
-			'simple_url'       => Xhgui_Util::simpleUrl( $url ),
-			'request_ts'       => new MongoDate( $sec ),
-			'request_ts_micro' => new MongoDate( $sec, $usec ),
-			'request_date'     => date( 'Y-m-d', $sec ),
-		];
+			$data['meta'] = [
+				'url'              => $url,
+				'SERVER'           => $server,
+				'get'              => $get,
+				'env'              => $env,
+				'simple_url'       => Xhgui_Util::simpleUrl( $url ),
+				'request_ts'       => new MongoDate( $sec ),
+				'request_ts_micro' => new MongoDate( $sec, $usec ),
+				'request_date'     => date( 'Y-m-d', $sec ),
+			];
 
-		Xhgui_Saver::factory( [
-			'save.handler' => 'mongodb',
-			'db.host'      => 'mongodb://tungsten.eqiad.wmnet:27017',
-			'db.db'        => 'xhprof',
-			'db.options'   => [],
-		] )->save( $data );
-	} );
+			Xhgui_Saver::factory( [
+				'save.handler' => 'mongodb',
+				'db.host'      => 'mongodb://tungsten.eqiad.wmnet:27017',
+				'db.db'        => 'xhprof',
+				'db.options'   => [],
+			] )->save( $data );
+		} );
+	}
 }
 
 /**
