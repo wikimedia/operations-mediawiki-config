@@ -19114,6 +19114,7 @@ $wgConf->settings = [
 
 	'cswiki' => true, // T151611
 	'enwiki' => true, // T140003
+	'eswiki' => true, // T130279
 	'etwiki' => true, // T159609
 	'fawiki' => true, // T130211
 	'fiwiki' => true, // T163011
@@ -19357,6 +19358,15 @@ $wgConf->settings = [
 			'likelygood' => [ 'min' => 'recall_at_precision(min_precision=0.999)', 'max' => 1 ],
 			// maybebad, likelybad use defaults
 			'verylikelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.9)' ],
+		],
+	],
+	'eswiki' => [
+		// damaging uses defaults for everything
+		'goodfaith' => [
+			// likelygood uses default
+			'maybebad' => false,
+			'likelybad' => false,
+			'verylikelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.98)' ],
 		],
 	],
 ],
