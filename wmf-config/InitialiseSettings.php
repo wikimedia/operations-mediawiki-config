@@ -20401,9 +20401,7 @@ $wgConf->settings = [
 ],
 
 'wgCommentTableSchemaMigrationStage' => [
-	'default' => MIGRATION_OLD,
-	'group0' => MIGRATION_WRITE_BOTH,
-	'group1' => MIGRATION_WRITE_BOTH,
+	'default' => MIGRATION_WRITE_BOTH,
 ],
 
 'wmgUseReadingLists' => [
