@@ -206,11 +206,7 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['propertyOrderUrl'] = 'https://www.wikidata.org/w/index.php?title=MediaWiki:Wikibase-SortedProperties&action=raw&sp_ver=1';
 	$wgWBClientSettings['hasFullEntityIdColumn'] = false;
 
-	if ( in_array( $wgDBname, [ 'fawiki', 'hewiki' ] ) ) {
-		$wgWBClientSettings['readFullEntityIdColumn'] = true;
-	} else {
-		$wgWBClientSettings['readFullEntityIdColumn'] = false;
-	}
+	$wgWBClientSettings['readFullEntityIdColumn'] = true;
 
 	// T142103
 	$wgWBClientSettings['sendEchoNotification'] = true;
