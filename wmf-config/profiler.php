@@ -13,28 +13,28 @@ $wmgProfiler = [];
 /**
  * File overview:
  *
- * 1. Parse X-Wikimedia-Header
- * 2. One-off profile to stdout (via MediaWiki)
- * 3. One-off profile to /tmp (from localhost)
- * 4. One-off profile to XHGui.
- * 5. Sampling profiler for production traffic
+ * - Parse X-Wikimedia-Debug header.
+ * - One-off profile to stdout (via MediaWiki).
+ * - One-off profile to /tmp (from localhost).
+ * - One-off profile to XHGui.
+ * - Sampling profiler for production traffic.
  */
 
 if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 	/**
-	 * 1) Parse X-Wikimedia-Header
+	 * Parse X-Wikimedia-Debug header.
 	 *
 	 * If the X-Wikimedia-Header is present, parse it into an associative array.
 	 *
 	 * See https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug
 	 */
-	$XWD = false;
+	$xwd = false;
 	if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
-		parse_str( preg_replace( '/; ?/', '&', $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ), $XWD );
+		parse_str( preg_replace( '/; ?/', '&', $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ), $xwd );
 	}
 
 	/**
-	 * 2) One-off profile to stdout
+	 * One-off profile to stdout.
 	 *
 	 * MediaWiki's Profiler class can output raw profile data directly to the output
 	 * of a web response (web), or in stdout (CLI).
@@ -55,7 +55,7 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 		];
 
 	/**
-	 * 3) One-off profile to /tmp
+	 * One-off profile to /tmp.
 	 *
 	 * When making requests to the local server using shell access,
 	 * setting the 'Force-Local-XHProf: 1' header will write raw profile data
@@ -99,7 +99,7 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 	}
 
 	/**
-	 * 4) One-off profile to XHGui
+	 * One-off profile to XHGui.
 	 *
 	 * Set X-Wikimedia-Debug header with 'profile' attribute to instrument a web request
 	 * with XHProf and save the profile to XHGui's MongoDB.
@@ -116,7 +116,7 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 	if (
 		// Require X-Forwarded-For to ignore non-remote requests (e.g. PyBal)
 		!empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) &&
-		isset( $XWD['profile'] )
+		isset( $xwd['profile'] )
 	) {
 		xhprof_enable( XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS );
 
@@ -178,10 +178,12 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 			] )->save( $data );
 		} );
 	}
+
+	unset( $xwd );
 }
 
 /**
- * 5) Sampling profiler for production traffic
+ * Sampling profiler for production traffic.
  *
  * If Xenon is enabled, register a shutdown callback to ask HHVM for
  * recently collected data. Will not end up yielding something every
