@@ -19355,7 +19355,8 @@ $wgConf->settings = [
 		],
 		'goodfaith' => [
 			'likelygood' => [ 'min' => 'recall_at_precision(min_precision=0.999)', 'max' => 1 ],
-			// maybebad, likelybad, verylikelybad use defaults
+			// maybebad, likelybad use defaults
+			'verylikelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.9)' ],
 		],
 	],
 ],
