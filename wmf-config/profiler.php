@@ -126,34 +126,33 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 			$sec  = $_SERVER['REQUEST_TIME'];
 			$usec = $_SERVER['REQUEST_TIME_FLOAT'] - $sec;
 
+			// Fake the URL to have a prefix of the request ID, that way it can
+			// be easily found through XHGui through a predictable search URL
+			// that looks for the request ID.
+			$reqId = WebRequest::getRequestId();
+			// Create a simplified url with just script name and 'action' query param
+			$qs = isset( $get['action'] ) ? ( '?action=' . $get['action'] ) : '';
+			$url = '//' . $reqId . $_SERVER['SCRIPT_NAME'] . $qs;
+
+			// Create sanitized copies of $_SERVER, $_ENV, and $_GET that are
+			// appropiate for exposing publicly to the web.
+			// This intentionally omits 'REQUEST_URI' (added later)
 			$keyWhitelist = array_flip( [
 				'HTTP_HOST', 'HTTP_X_WIKIMEDIA_DEBUG', 'REQUEST_METHOD',
 				'REQUEST_START_TIME', 'REQUEST_TIME', 'REQUEST_TIME_FLOAT',
 				'SERVER_ADDR', 'SERVER_NAME', 'THREAD_TYPE', 'action'
 			] );
-
-			// Create sanitized copies of $_SERVER, $_ENV, and $_GET:
 			$server = array_intersect_key( $_SERVER, $keyWhitelist );
 			$env = array_intersect_key( $_ENV, $keyWhitelist );
 			$get = array_intersect_key( $_GET, $keyWhitelist );
 
-			// Strip everything from the query string except 'action=' param:
-			preg_match( '/action=[^&]+/', $_SERVER['REQUEST_URI'], $matches );
-			$qs = $matches ? '?' . $matches[0] : '';
-			$url = $_SERVER['SCRIPT_NAME'] . $qs;
+			// Add unique ID
+			$server['UNIQUE_ID'] = $reqId;
+			$env['UNIQUE_ID'] = $reqId;
 
-			// If profiling was explicitly requested (via X-Wikimedia-Debug)
-			// then include the unique request ID in the reported URL, to make
-			// it easy for the person debugging to find the request in Xhgui.
-			if ( $XWD && method_exists( 'WebRequest', 'getRequestId' ) ) {
-				$reqId = WebRequest::getRequestId();
-				$url = '//' . $reqId . $url;
-				$env['UNIQUE_ID'] = $reqId;
-				$server['UNIQUE_ID'] = $reqId;
-			}
-
-			// Include web server name (SERVER_NAME is e.g. wikipedia.org,
-			// SERVER_ADDR is the LVS service name, e.g. appservers.svc)
+			// Add hostname as web server name
+			// (SERVER_NAME is e.g. wikipedia.org, SERVER_ADDR is the LVS service name,
+			// e.g. appservers.svc)
 			$env['HOSTNAME'] = wfHostname();
 
 			// Re-insert scrubbed URL as REQUEST_URL:
