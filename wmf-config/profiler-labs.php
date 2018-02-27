@@ -20,7 +20,7 @@ $wmgProfiler = [];
  * Other profiler features not yet available in Beta Cluster (T180761).
  */
 
-if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
+if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) && isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
 	/**
 	 * Parse X-Wikimedia-Debug header.
 	 *
@@ -28,12 +28,9 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 	 *
 	 * See https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug
 	 */
-	$xwd = false;
-	if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
-		$xmd = [
-			'forceprofile' => isset( $_GET['forceprofile'] ),
-		];
-	}
+	$xmd = [
+		'forceprofile' => isset( $_GET['forceprofile'] ),
+	];
 
 	/**
 	 * Enable request profiling
