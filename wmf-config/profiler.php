@@ -131,7 +131,7 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 			// that looks for the request ID.
 			$reqId = WebRequest::getRequestId();
 			// Create a simplified url with just script name and 'action' query param
-			$qs = isset( $get['action'] ) ? ( '?action=' . $get['action'] ) : '';
+			$qs = isset( $_GET['action'] ) ? ( '?action=' . $_GET['action'] ) : '';
 			$url = '//' . $reqId . $_SERVER['SCRIPT_NAME'] . $qs;
 
 			// Create sanitized copies of $_SERVER, $_ENV, and $_GET that are
