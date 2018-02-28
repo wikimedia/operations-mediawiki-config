@@ -18245,20 +18245,12 @@ $wgConf->settings = [
 
 // T151717 and T177153
 'wmgWikibaseDisabledUsageAspects' => [
-	'default' => [ 'C' => 'O' ],
-	// Statement + description usage tracking wikis
-	'cawiki' => [],
-	'cewiki' => [],
-	'elwiki' => [],
-	'kowiki' => [],
-	'trwiki' => [],
-	'arwiki' => [],
-	'dewiki' => [],
-	'rowiki' => [],
-	'ukwiki' => [],
-	'eswiki' => [],
-	'viwiki' => [],
-	'huwiki' => [],
+	'default' => [],
+	// disabled statement usage tracking wikis
+	'commonswiki' => [ 'C' => 'O' ],
+	'cebwiki' => [ 'C' => 'O' ],
+	'warwiki' => [ 'C' => 'O' ],
+	'hywiki' => [ 'C' => 'O' ],
 ],
 
 // T172914
