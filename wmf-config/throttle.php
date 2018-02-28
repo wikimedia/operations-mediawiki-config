@@ -82,4 +82,12 @@ $wmgThrottlingExceptions[] = [ // T188034
 	'value' => 250, // 200 expected
 ];
 
+$wmgThrottlingExceptions[] = [ // T188529
+	'from' => '2018-03-11T0:00 -5:00',
+	'to' => '2018-03-11T8:00 -5:00',
+	'IP' => '72.43.130.34',
+	'dbname' => [ 'enwiki' ],
+	'value' => 60 // 50 expected
+];
+
 ## Add throttling definitions above.
