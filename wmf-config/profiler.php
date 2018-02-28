@@ -53,6 +53,14 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 	// - XHPROF_FLAGS_MEMORY: Only used by XHGui only.
 	//   Adds 'mu' and 'pmu' keys to profile entries.
 	$xhprofFlags = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
+	if ( isset( $xmd['forceprofile'] )
+		|| PHP_SAPI === 'cli'
+		|| isset( $xwd['profile'] )
+	) {
+		// Enable Xhprof now instead of waiting for MediaWiki to start it later.
+		// This ensures a balanced and complete call graph. (T180183)
+		xhprof_enable( $xhprofFlags );
+	}
 
 	/**
 	 * One-off profile to stdout.
