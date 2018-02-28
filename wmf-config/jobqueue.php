@@ -53,6 +53,9 @@ if ( $wmgUseEventBus && $wmgDebugJobQueueEventBus ) {
 	if ( $wmgDisableRefreshLinksInRedis ) {
 		$wgJobTypeConf['refreshLinks'] = [ 'class' => 'JobQueueEventBus' ];
 	}
+	if ( isset( $wmgDisableCDNPurgeInRedis ) && $wmgDisableCDNPurgeInRedis ) {
+		$wgJobTypeConf['cdnPurge'] = [ 'class' => 'JobQueueEventBus' ];
+	}
 	$wgJobTypeConf['default'] = [
 		'class' => 'JobQueueSecondTestQueue',
 		'mainqueue' => $jobQueueFederatedConfig,
