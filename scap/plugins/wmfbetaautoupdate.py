@@ -35,4 +35,7 @@ class BetaUpdate(cli.Application):
             with utils.cd(os.path.join(stage_dir, path)):
                 subprocess.check_call(['/usr/bin/git', 'pull'])
                 subprocess.check_call(['/usr/bin/git', 'submodule', 'update',
-                                       '--init', '--recursive', '--remote'])
+                                       '--init', '--recursive', '--jobs', '8',
+                                       '--rebase'])
+        subprocess.check_call(['/usr/bin/git', 'submodule', 'update',
+                               '--remote', 'portals'])
