@@ -66,29 +66,6 @@ $wmgThrottlingExceptions[] = [ // T187171
 	'value' => 50, // 20 expected
 ];
 
-$wmgThrottlingExceptions[] = [ // T187870
-	'from' => '2018-02-28T17:00 +1:00',
-	'to' => '2018-02-28T19:30 +1:00',
-	'range' => [ '195.113.180.192/26', '2001:718:9::/48' ],
-	'dbname' => [ 'cswiki' ],
-	'value' => 25 // 20 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T188090
-	'from' => '2018-02-24T05:00 UTC',
-	'to' => '2018-02-24T10:00 UTC',
-	'IP' => '58.177.143.26',
-	'dbname' => [ 'enwiki', 'zhwiki', 'zh_yuewiki' ],
-	'value' => 60 // 50 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T188129
-	'from' => '2018-02-27T09:00 UTC',
-	'to' => '2018-02-27T18:00 UTC',
-	'IP' => '213.30.22.156',
-	'dbname' => [ 'ptwiki' ],
-];
-
 $wmgThrottlingExceptions[] = [ // T188292
 	'from' => '2018-03-03T0:00 -5:00',
 	'to' => '2018-03-03T08:00 -5:00',
