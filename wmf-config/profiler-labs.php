@@ -41,7 +41,16 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 	/**
 	 * Enable request profiling
 	 */
-	$xhprofFlags = XHPROF_FLAGS_NO_BUILTINS;
+	// We can only enable XHProf once, and the first call controls the flags.
+	// Later calls are ignored. Therefore, always use the same flags.
+	//
+	// - XHPROF_FLAGS_NO_BUILTINS: Used by MediaWiki and by XHGui.
+	//   Doesn't modify output format, but makes output more concise.
+	// - XHPROF_FLAGS_CPU: Only used by XHGui only.
+	//   Adds 'cpu' keys to profile entries.
+	// - XHPROF_FLAGS_MEMORY: Only used by XHGui only.
+	//   Adds 'mu' and 'pmu' keys to profile entries.
+	$xhprofFlags = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
 	if ( isset( $xwd['forceprofile'] ) ) {
 		// Enable Xhprof now instead of waiting for MediaWiki to start it later.
 		// This ensures a balanced and complete call graph. (T180183)
@@ -67,5 +76,5 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 		];
 	}
 
-	unset( $xhprofFlags, $xwd );
+	unset( $xwd, $xhprofFlags );
 }
