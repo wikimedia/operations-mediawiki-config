@@ -92,11 +92,7 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 	 * See https://performance.wikimedia.org/xhgui/
 	 * See https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug#Request_profiling
 	 */
-	if (
-		// Require X-Forwarded-For to ignore non-remote requests (e.g. PyBal)
-		!empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) &&
-		isset( $xwd['profile'] )
-	) {
+	if ( isset( $xwd['profile'] ) ) {
 		xhprof_enable( $xhprofFlags );
 
 		register_postsend_function( function () {
