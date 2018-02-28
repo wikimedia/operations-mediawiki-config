@@ -28,13 +28,13 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 	 */
 	$xwd = false;
 	if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
-		$xmd = [];
+		$xwd = [];
 
 		// This is passed as query parameter instead of header attribute,
 		// but is nonetheless considered part of X-Wikimedia-Debug and must
 		// only be enabled when X-Wikimedia-Debug is also enabled, due to caching.
 		if ( isset( $_GET['forceprofile'] ) ) {
-			$xmd['forceprofile'] = true;
+			$xwd['forceprofile'] = true;
 		}
 	}
 

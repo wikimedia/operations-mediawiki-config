@@ -39,7 +39,7 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 		// but is nonetheless considered part of X-Wikimedia-Debug and must
 		// only be enabled when X-Wikimedia-Debug is also enabled, due to caching.
 		if ( isset( $_GET['forceprofile'] ) ) {
-			$xmd['forceprofile'] = true;
+			$xwd['forceprofile'] = true;
 		}
 	}
 
@@ -54,7 +54,7 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 	 *
 	 * https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug#Plaintext_request_profile
 	 */
-	if ( isset( $xmd['forceprofile'] ) || PHP_SAPI === 'cli' ) {
+	if ( isset( $xwd['forceprofile'] ) || PHP_SAPI === 'cli' ) {
 		$wmgProfiler = [
 			'class'  => 'ProfilerXhprof',
 			'flags'  => XHPROF_FLAGS_NO_BUILTINS,
