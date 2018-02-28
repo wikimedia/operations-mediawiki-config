@@ -44,6 +44,21 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 	}
 
 	/**
+	 * We can only enable XHProf once, and the first call controls the flags.
+	 * Later calls are ignored. Therefore, always use the same flags.
+	 *
+	 * - XHPROF_FLAGS_NO_BUILTINS: Used by MediaWiki and by XHGui.
+	 *   Doesn't modify output format, but makes output more concise.
+	 *
+	 * - XHPROF_FLAGS_CPU: Only used by XHGui only.
+	 *   Adds 'cpu' keys to profile entries.
+	 *
+	 * - XHPROF_FLAGS_MEMORY: Only used by XHGui only.
+	 *   Adds 'mu' and 'pmu' keys to profile entries.
+	 */
+	$xhprofFlags = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
+
+	/**
 	 * One-off profile to stdout.
 	 *
 	 * MediaWiki's Profiler class can output raw profile data directly to the output
@@ -57,7 +72,7 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 	if ( isset( $xmd['forceprofile'] ) || PHP_SAPI === 'cli' ) {
 		$wmgProfiler = [
 			'class'  => 'ProfilerXhprof',
-			'flags'  => XHPROF_FLAGS_NO_BUILTINS,
+			'flags'  => $xhprofFlags,
 			'output' => 'text',
 		];
 	}
@@ -82,7 +97,7 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 		!empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) &&
 		isset( $xwd['profile'] )
 	) {
-		xhprof_enable( XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS );
+		xhprof_enable( $xhprofFlags );
 
 		register_postsend_function( function () {
 			$data = [ 'profile' => xhprof_disable() ];
@@ -143,7 +158,7 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 		} );
 	}
 
-	unset( $xwd );
+	unset( $xwd, $xhprofFlags );
 }
 
 /**
