@@ -13,7 +13,7 @@ $wmgProfiler = [];
 /**
  * File overview:
  *
- * - Parse X-Wikimedia-Debug header.
+ * - Parse X-Wikimedia-Debug options.
  * - Enable request profiling.
  * - One-off profile to stdout (via MediaWiki).
  *
@@ -22,17 +22,20 @@ $wmgProfiler = [];
 
 if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 	/**
-	 * Parse X-Wikimedia-Debug header.
-	 *
-	 * If the X-Wikimedia-Header is present, parse it into an associative array.
+	 * Parse X-Wikimedia-Debug options.
 	 *
 	 * See https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug
 	 */
 	$xwd = false;
 	if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
-		$xmd = [
-			'forceprofile' => isset( $_GET['forceprofile'] ),
-		];
+		$xmd = [];
+
+		// This is passed as query parameter instead of header attribute,
+		// but is nonetheless considered part of X-Wikimedia-Debug and must
+		// only be enabled when X-Wikimedia-Debug is also enabled, due to caching.
+		if ( isset( $_GET['forceprofile'] ) ) {
+			$xmd['forceprofile'] = true;
+		}
 	}
 
 	/**
@@ -54,7 +57,7 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 	 * For web: Set X-Wikimedia-Debug (to bypass cache) and query param 'forceprofile=1'.
 	 * For CLI: Set CLI option '--profiler=text'.
 	 *
-	 * See https://www.mediawiki.org/wiki/Manual:Profiling
+	 * https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug#Plaintext_request_profile
 	 */
 	if ( isset( $xwd['forceprofile'] ) || PHP_SAPI === 'cli' ) {
 		$wmgProfiler = [
