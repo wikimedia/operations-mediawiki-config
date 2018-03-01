@@ -20472,6 +20472,28 @@ $wgConf->settings = [
 	'default' => false,
 ],
 
+// ext.NavigationTiming
+'wmgUseNavigationTiming' => [
+	'default' => true,
+],
+
+'wgNavigationTimingSamplingFactor' => [
+	// Careful! The LOWER the value, the MORE requests will be logged. A
+	// sampling factor of 1 means log every request. This should not be
+	// lowered without careful coordination with ops.
+	'default' => 1000,
+],
+
+'wgNavigationTimingOversampleFactor' => [
+	'default' => false,
+	'testwiki' => [
+		'geo' => [
+			'SG' => 100
+		],
+		'userAgent' => []
+	],
+]
+
 ];
 
 ### WMF Labs override #####

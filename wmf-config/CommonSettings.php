@@ -3051,11 +3051,6 @@ if ( $wmgUseEventLogging ) {
 	// Depends on EventLogging
 	if ( $wmgUseNavigationTiming ) {
 		wfLoadExtension( 'NavigationTiming' );
-		// Careful! The LOWER the value, the MORE requests will be logged. A
-		// sampling factor of 1 means log every request. This should not be
-		// lowered without careful coordination with ops.
-		$wgNavigationTimingSamplingFactor = 1000;
-		$wgNavigationTimingFirstPaintAsiaSamplingFactor = 100;
 	}
 }
 
