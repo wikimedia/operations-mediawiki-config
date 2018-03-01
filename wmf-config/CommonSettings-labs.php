@@ -296,7 +296,7 @@ if ( $wmgUsePerformanceInspector ) {
 }
 
 if ( $wmgUseUniversalLanguageSelector ) {
-	$wgDefaultUserOptions['compact-language-links'] = 0;
+	$wgDefaultUserOptions['compact-language-links'] = 1;
 }
 
 if ( $wmgUseLoginNotify ) {
