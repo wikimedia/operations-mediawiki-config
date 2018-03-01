@@ -3055,7 +3055,12 @@ if ( $wmgUseEventLogging ) {
 		// sampling factor of 1 means log every request. This should not be
 		// lowered without careful coordination with ops.
 		$wgNavigationTimingSamplingFactor = 1000;
-		$wgNavigationTimingFirstPaintAsiaSamplingFactor = 100;
+		$wgNavigationTimingOversampleFactor = [
+			'geo' => [
+				'SG' => 100
+			],
+			'userAgent' => []
+		];
 	}
 }
 
