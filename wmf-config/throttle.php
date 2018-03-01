@@ -15,7 +15,8 @@ $wmgThrottlingExceptions = [];
 #  'range'  => alternatively, the client IP CIDR ranges or array (default: any range)
 #  'dbname' => a $wgDBname or array of dbnames to compare to
 #             (eg. enwiki, metawiki, frwikibooks, eswikiversity)
-#             (default: any project)
+#             Note that the limit is for the total number of account
+#             creations on all projects. (default: any project)
 # Example:
 # $wmgThrottlingExceptions[] = [
 # 'from'   => '2016-01-01T00:00 +0:00',
