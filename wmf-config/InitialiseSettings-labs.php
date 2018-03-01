@@ -556,9 +556,6 @@ function wmfLabsSettings() {
 			'default' => 'en.wikipedia.org',
 		],
 
-		'wmgUseEmailAuth' => [
-			'default' => 'true',
-		],
 		'wmgUseLinter' => [
 			'default' => true,
 		],
