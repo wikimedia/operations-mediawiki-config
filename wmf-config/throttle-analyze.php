@@ -36,14 +36,6 @@ $wgExtensionFunctions[] = function () {
 			continue;
 		}
 
-		# Ensure that dbname field contain wikidatawiki and commonswiki
-		if ( gettype( $options['dbname'] ) == 'string' ) {
-			$options['dbname'] = [ $options['dbname'] ];
-		}
-		$options['dbname'][] = 'commonswiki';
-		$options['dbname'][] = 'wikidatawiki';
-		$options['dbname'] = array_unique( $options['dbname'] );
-
 		# Finally) set up the throttle value
 		global $wgAccountCreationThrottle, $wgRateLimits;
 		if ( isset( $options['value'] ) && is_numeric( $options['value'] ) ) {
