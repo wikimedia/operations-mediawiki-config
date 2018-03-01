@@ -61,7 +61,6 @@ mwconfig_files=(
 	wikiversions.json
 	wikiversions-labs.json
 	wmf-config/extension-list
-	wmf-config/extension-list-labs
 )
 
 for i in ./*

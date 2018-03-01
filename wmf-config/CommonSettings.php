@@ -3088,6 +3088,10 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	$wgDefaultUserOptions['compact-language-links'] = 1;
 }
 
+if ( $wmgUsePerformanceInspector ) {
+	wfLoadExtension( 'PerformanceInspector' );
+}
+
 if ( $wmgUseFileExporter ) {
 	wfLoadExtension( 'FileExporter' );
 }

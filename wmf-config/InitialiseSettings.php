@@ -20418,6 +20418,10 @@ $wgConf->settings = [
 	'default' => 'centralauth',
 ],
 
+'wmgUsePerformanceInspector' => [
+	'default' => false,
+],
+
 ];
 
 ### WMF Labs override #####
