@@ -91,9 +91,10 @@ $wmgThrottlingExceptions[] = [ // T188529
 ];
 
 $wmgThrottlingExceptions[] = [ // T188630
-	'from' => '2018-02-01T11:00 -8:00',
-	'to' => '2018-02-02T00:00 -8:00',
+	'from' => '2018-03-01T11:00 -8:00',
+	'to' => '2018-03-02T00:00 -8:00',
 	'IP' => '10.68.16.172', # outreachdashboard.wmflabs.org
+	'dbname' => [ 'enwiki' ],
 	'value' => 100,
 ];
 
