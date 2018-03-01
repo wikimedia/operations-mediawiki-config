@@ -11443,6 +11443,7 @@ $wgConf->settings = [
 	'ecwikimedia' => [ 'meta' ], // T135521
 	'etwikimedia' => [ 'wikipedia:et', 'meta' ],
 	'fiwikimedia' => [ 'wikipedia:fi', 'meta' ],
+	'maiwikimedia' => [ 'meta', 'commons', 'wikipedia:en', 'wikipedia:mai', 'wikipedia:ne', 'wikipedia:hi' ], // T188374
 	'mkwikimedia' => [ 'meta', 'wikipedia:mk' ],
 	'mxwikimedia' => [ 'meta', 'wikipedia:es', 'wikibooks:es', 'wikiversity:es', 'wikipedia:en', ],
 	'nowikimedia' => [ 'meta', 'wikipedia:no', 'wikipedia:nn', 'wikipedia:se' ],
