@@ -18806,6 +18806,50 @@ $wgConf->settings = [
 
 'wmgCirrusSearchUserTesting' => [
 	'default' => [],
+	'enwiki' => [
+		'query_explorer' => [
+			'globals' => [],
+			'buckets' => [
+				# Default LTR ranker
+				'control' => [
+					'trigger' => 'control',
+				],
+				# Classic non-ltr ranking
+				'classic' => [
+					'trigger' => 'classic',
+					'globals' => [
+						'wgCirrusSearchRescoreProfile' => 'wsum_inclinks_pv',
+					],
+				],
+				# New model with query explorer features
+				'explorer' => [
+					'trigger' => 'explorer',
+					'globals' => [
+						'wgCirrusSearchRescoreProfile' => 'mlr-1024rs-qe',
+					],
+				],
+				# interleave control and explorer
+				'control-explorer-i' => [
+					'trigger' => 'control-explorer-i',
+					'globals' => [
+						'wgCirrusSearchInterleaveConfig' => [
+							'CirrusSearchRescoreProfile' => 'mlr-1024rs-qe',
+						],
+					],
+				],
+				# interleave classic and explorer
+				'classic-explorer-i' => [
+					'trigger' => 'classic-explorer-i',
+					'globals' => [
+						'wgCirrusSearchRescoreProfile' => 'wsum_inclinks_pv',
+						'wgCirrusSearchInterleaveConfig' => [
+							'CirrusSearchRescoreProfile' => 'mlr-1024rs-qe',
+						],
+					],
+				],
+			],
+		],
+	],
 ],
 
 'wmgCirrusSearchLanguageDetectors' => [
@@ -20283,25 +20327,28 @@ $wgConf->settings = [
 
 'wmgCirrusSearchMLRModel' => [
 	'default' => false,
-	'enwiki' => '20171130_enwiki_v1',
-	'arwiki' => '20171130_arwiki_v1',
-	'fawiki' => '20171130_fawiki_v1',
-	'jawiki' => '20171130_jawiki_v1',
-	'svwiki' => '20171130_svwiki_v1',
-	'frwiki' => '20171130_frwiki_v1',
-	'itwiki' => '20171130_itwiki_v1',
-	'ptwiki' => '20171130_ptwiki_v1',
-	'ruwiki' => '20171130_ruwiki_v1',
-	'dewiki' => '20171130_dewiki_v1',
-	'fiwiki' => '20171130_fiwiki_v1',
-	'hewiki' => '20171130_hewiki_v1',
-	'idwiki' => '20171130_idwiki_v1',
-	'kowiki' => '20171130_kowiki_v1',
-	'nlwiki' => '20171130_nlwiki_v1',
-	'nowiki' => '20171130_nowiki_v1',
-	'plwiki' => '20171130_plwiki_v1',
-	'viwiki' => '20171130_viwiki_v1',
-	'zhwiki' => '20171130_zhwiki_v1',
+	'enwiki' => [
+		'mlr-1024rs' => '20171130_enwiki_v1',
+		'mlr-1024rs-qe' => '20180118-query_explorer-enwiki-v2',
+	],
+	'arwiki' => ['mlr-1024rs' => '20171130_arwiki_v1'],
+	'fawiki' => ['mlr-1024rs' => '20171130_fawiki_v1'],
+	'jawiki' => ['mlr-1024rs' => '20171130_jawiki_v1'],
+	'svwiki' => ['mlr-1024rs' => '20171130_svwiki_v1'],
+	'frwiki' => ['mlr-1024rs' => '20171130_frwiki_v1'],
+	'itwiki' => ['mlr-1024rs' => '20171130_itwiki_v1'],
+	'ptwiki' => ['mlr-1024rs' => '20171130_ptwiki_v1'],
+	'ruwiki' => ['mlr-1024rs' => '20171130_ruwiki_v1'],
+	'dewiki' => ['mlr-1024rs' => '20171130_dewiki_v1'],
+	'fiwiki' => ['mlr-1024rs' => '20171130_fiwiki_v1'],
+	'hewiki' => ['mlr-1024rs' => '20171130_hewiki_v1'],
+	'idwiki' => ['mlr-1024rs' => '20171130_idwiki_v1'],
+	'kowiki' => ['mlr-1024rs' => '20171130_kowiki_v1'],
+	'nlwiki' => ['mlr-1024rs' => '20171130_nlwiki_v1'],
+	'nowiki' => ['mlr-1024rs' => '20171130_nowiki_v1'],
+	'plwiki' => ['mlr-1024rs' => '20171130_plwiki_v1'],
+	'viwiki' => ['mlr-1024rs' => '20171130_viwiki_v1'],
+	'zhwiki' => ['mlr-1024rs' => '20171130_zhwiki_v1'],
 ],
 
 'wmgWMESearchRelevancePages' => [
