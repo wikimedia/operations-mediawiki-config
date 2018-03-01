@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "370c210f_a83c00d0",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3058,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-03-01T21:16:15Z",
+      "side": 1,
+      "message": "Looks like this should\u0027ve been removed when we removed the code from the extension, I think that update rolled out last week or this week.",
+      "range": {
+        "startLine": 3058,
+        "startChar": 2,
+        "endLine": 3058,
+        "endChar": 49
+      },
+      "revId": "3cb3743d13df9caca767e546d6f123f90d921d3c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
