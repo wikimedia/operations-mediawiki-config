@@ -3056,6 +3056,12 @@ if ( $wmgUseEventLogging ) {
 		// lowered without careful coordination with ops.
 		$wgNavigationTimingSamplingFactor = 1000;
 		$wgNavigationTimingFirstPaintAsiaSamplingFactor = 100;
+		$wgNavigationTimingOversampleFactor = [
+			'geo' => [
+				'SG' => 100
+			],
+			'userAgent' => []
+		];
 	}
 }
 
