@@ -3,6 +3,7 @@
 
 /**
  * Helper to easily add a throttling request.
+ * See throttle.php for the format of $wmgThrottlingExceptions.
  */
 $wgExtensionFunctions[] = function () {
 	global $wmgThrottlingExceptions, $wgDBname, $wgRequest;
