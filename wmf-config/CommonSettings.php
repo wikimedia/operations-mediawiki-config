@@ -3153,11 +3153,6 @@ if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {
 	include "$wmfConfigDir/Wikibase.php";
 }
 
-if ( $wmfRealm != 'labs' ) {
-	// Tell localization cache builder about extensions used in wikitech
-	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-wikitech";
-}
-
 // put this here to ensure it is available for localisation cache rebuild
 $wgWBClientSettings['repoSiteName'] = 'wikibase-repo-name';
 
