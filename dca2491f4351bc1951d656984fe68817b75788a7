@@ -22,6 +22,30 @@
       "revId": "dca2491f4351bc1951d656984fe68817b75788a7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c46e7fda_dddc293c",
+        "filename": "wmf-config/throttle-analyze.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2018-03-01T19:57:43Z",
+      "side": 1,
+      "message": "That\u0027s in https://gerrit.wikimedia.org/r/plugins/gitiles/operations/mediawiki-config/+/master/wmf-config/throttle.php . I guess it wouldn\u0027t hurt to refer to it here.",
+      "parentUuid": "50c51e26_652fac25",
+      "range": {
+        "startLine": 9,
+        "startChar": 1,
+        "endLine": 9,
+        "endChar": 51
+      },
+      "revId": "dca2491f4351bc1951d656984fe68817b75788a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
