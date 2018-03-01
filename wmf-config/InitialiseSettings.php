@@ -71,8 +71,7 @@ $wgConf->settings = [
 	'default' => true,
 	'private' => false,
 	'fishbowl' => false,
-	'nonglobal' => false,
-	'zerowiki' => true, # T135074
+	'nonglobal' => false
 ],
 'wmgBotPasswordsCluster' => [
 	'default' => false,
@@ -178,8 +177,7 @@ $wgConf->settings = [
 	'usabilitywiki' => 'en',
 	'votewiki' => 'en', // T132667, T148352
 	'wikimania' => 'en',
-	'wikimaniateamwiki' => 'en',
-	'zerowiki' => 'en',
+	'wikimaniateamwiki' => 'en'
 ],
 # @} end of wgLanguageCode
 
@@ -1915,8 +1913,7 @@ $wgConf->settings = [
 	'wikimania2016wiki' => '//wikimania2016.wikimedia.org',
 	'wikimania2017wiki' => '//wikimania2017.wikimedia.org',
 	'wikimania2018wiki' => '//wikimania2018.wikimedia.org',
-	'wikimaniateamwiki' => '//wikimaniateam.wikimedia.org',
-	'zerowiki' => '//zero.wikimedia.org'
+	'wikimaniateamwiki' => '//wikimaniateam.wikimedia.org'
 ],
 # @} end of wgServer
 
@@ -2002,8 +1999,7 @@ $wgConf->settings = [
 	'wikimania2016wiki' => 'https://wikimania2016.wikimedia.org',
 	'wikimania2017wiki' => 'https://wikimania2017.wikimedia.org',
 	'wikimania2018wiki' => 'https://wikimania2018.wikimedia.org',
-	'wikimaniateamwiki' => 'https://wikimaniateam.wikimedia.org',
-	'zerowiki' => 'https://zero.wikimedia.org',
+	'wikimaniateamwiki' => 'https://wikimaniateam.wikimedia.org'
 ],
 # @} end of wgCanonicalServer
 
@@ -2477,7 +2473,6 @@ $wgConf->settings = [
 	'yiwiki' => 'װיקיפּעדיע',
 	'yiwikisource' => 'װיקיביבליאָטעק',
 	'yiwiktionary' => 'װיקיװערטערבוך',
-	'zerowiki' => 'Wikipedia',
 	'zh_min_nanwikisource' => 'Wiki Tô·-su-kóan',
 	'zh_classicalwiki' => '維基大典',
 	'zhwikivoyage' => '维基导游', // T61077
@@ -2979,7 +2974,6 @@ $wgConf->settings = [
 	'yiwiki' => 'װיקיפּעדיע',
 	'yiwikisource' => 'װיקיביבליאָטעק',
 	'yiwiktionary' => 'װיקיװערטערבוך',
-	'zerowiki' => 'Project',
 	'zh_min_nanwikisource' => 'Wiki_Tô·-su-kóan',
 	'zh_classicalwiki' => '維基大典',
 ],
@@ -4964,8 +4958,7 @@ $wgConf->settings = [
 
 # wgWhitelistRead @{
 'wgWhitelistRead' => [
-	'private' => [ 'Main Page', 'Special:UserLogin', 'Special:UserLogout' ],
-	'+zerowiki' => [ 'Special:ZeroPortal' ],
+	'private' => [ 'Main Page', 'Special:UserLogin', 'Special:UserLogout' ]
 ],
 # @} end of wgWhitelistRead
 
@@ -5303,7 +5296,6 @@ $wgConf->settings = [
 		'xenon' => 'debug',
 		'XMP' => 'warning', // T89532
 		'xff' => [ 'logstash' => false ],
-		'zero' => [ 'logstash' => false ], // zero-rated debug log
 		'MessageCacheError' => 'debug',
 		'LocalFile' => 'debug',
 		'DBTransaction' => 'debug',
@@ -10622,9 +10614,6 @@ $wgConf->settings = [
 	'+wuuwiki' => [
 		'sysop' => [ 'rollbacker' ],
 	],
-	'zerowiki' => [
-		'sysop' => true,
-	],
 	'+zhwiki' => [
 		'bureaucrat' => [ 'flood' ],
 		'sysop' => [ 'patroller', 'rollbacker', 'autoreviewer', 'confirmed', 'massmessage-sender' ], // T130814
@@ -11391,9 +11380,6 @@ $wgConf->settings = [
 	],
 	'+wuuwiki' => [
 		'sysop' => [ 'rollbacker' ],
-	],
-	'zerowiki' => [
-		'sysop' => true,
 	],
 	'+zhwiki' => [
 		'bureaucrat' => [ 'flood' ],
@@ -12578,8 +12564,7 @@ $wgConf->settings = [
 	'usabilitywiki' => '/static/favicon/usability.ico',
 	'votewiki' => '/static/favicon/wmf.ico',
 	'wikidatawiki' => '/static/favicon/wikidata.ico',
-	'wikimaniateamwiki' => '/static/favicon/wikimania.ico',
-	'zerowiki' => '/static/favicon/wmf.ico',
+	'wikimaniateamwiki' => '/static/favicon/wikimania.ico'
 ],
 # @} end of wgFavicon
 
@@ -15642,19 +15627,6 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
-'wmgZeroBanner' => [
-	'default' => false,
-	'wikipedia' => true,
-	'wikidatawiki' => false, // safety
-	'metawiki' => false,
-	'zerowiki' => false,
-],
-
-'wmgZeroPortal' => [
-	'default' => false,
-	'zerowiki' => true,
-],
-
 // Enable Tabular data namespace on Commons - T148745
 'wmgEnableTabularData' => [
 	'default' => true,
@@ -15686,8 +15658,7 @@ $wgConf->settings = [
 
 // All graph data requests should be trusted on these wikis
 'wgGraphIsTrusted' => [
-	'default' => false, // MUST BE FALSE for any untrusted wiki
-	'zerowiki' => true,
+	'default' => false // MUST BE FALSE for any untrusted wiki
 ],
 
 // restbase format: /api/rest_v1/page/graph/png/{title}/{revid}/{hash}.png
@@ -15707,8 +15678,7 @@ $wgConf->settings = [
 	// Yurik would like new wikis only use <graph>...</graph>.
 	// See T97027 discussion for context.
 	'collabwiki' => true,
-	'mediawikiwiki' => true,
-	'zerowiki' => true,
+	'mediawikiwiki' => true
 ],
 
 'wmgUseSubPageList3' => [
@@ -17611,7 +17581,6 @@ $wgConf->settings = [
 	'legalteamwiki' => false,
 	'loginwiki' => false,
 	'votewiki' => false,
-	'zerowiki' => false,
 ],
 
 'wmgUseFlow' => [
@@ -20315,8 +20284,7 @@ $wgConf->settings = [
 ],
 
 'wgNonincludableNamespaces' => [
-	'default' => [],
-	'zerowiki' => [ 480 ], // NS_ZERO. See T162771
+	'default' => []
 ],
 
 'wmgUseCollaborationKit' => [
