@@ -1118,6 +1118,10 @@ if ( $wmgUseClusterFileBackend ) {
 	$wgUseInstantCommons = true;
 }
 
+if ( $wgDBname === 'labswiki' ) {
+	$wgUseInstantCommons = true;
+}
+
 if ( $wmgUseClusterJobqueue ) {
 	# Cluster-dependent files for job queue and job queue aggregator
 	require $wmfRealm === 'labs'
@@ -2829,7 +2833,7 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgMessageCacheType = 'memcached-pecl';
 
 	if ( $wgDBname === 'labswiki' ) {
-		$wgCookieDomain = "wikitech.wikimedia.org"; // TODO: Is this really necessary?
+		$wgCookieDomain = "newwikitech.wikimedia.org"; // TODO: Is this really necessary?
 	} elseif ( $wgDBname === 'labtestwiki' ) {
 		$wgCookieDomain = "labtestwikitech.wikimedia.org"; // TODO: Is this really necessary?
 	}
