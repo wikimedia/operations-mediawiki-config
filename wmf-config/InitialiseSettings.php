@@ -20112,9 +20112,13 @@ $wgConf->settings = [
 ],
 
 'wmgDisableRefreshLinksInRedis' => [
-	'wikipedia' => false,
-	'wiktionary' => false,
+	'enwiktionary' => false,
+	'frwiktionary' => false,
+	'warwiki' => false,
+	'dewiki' => false,
 	'commonswiki' => false,
+	'itwiki' => false,
+	'enwiki' => false,
 	'default' => true,
 ],
 
