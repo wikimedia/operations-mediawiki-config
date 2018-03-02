@@ -265,7 +265,9 @@ if ( $wgDBname === 'test2wiki' ) {
 		'abbrvThreshold'   => 160 /* Keep in sync with with local repo on testwiki or things break. */
 	];
 }
-if ( $wgDBname != 'commonswiki' ) {
+if ( $wgDBname != 'commonswiki' && $wgDBname != 'labswiki' ) {
+	// Commons is local to commonswiki :)
+	// wikitech uses $wgUseInstantCommons instead of db access.
 	$wgForeignFileRepos[] = [
 		'class'            => 'ForeignDBViaLBRepo',
 		'name'             => 'shared',
