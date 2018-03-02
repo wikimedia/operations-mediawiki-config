@@ -265,7 +265,7 @@ if ( $wgDBname === 'test2wiki' ) {
 		'abbrvThreshold'   => 160 /* Keep in sync with with local repo on testwiki or things break. */
 	];
 }
-if ( $wgDBname != 'commonswiki' ) {
+if ( $wgDBname != 'commonswiki' and $wgDBname != 'labswiki' ) {
 	$wgForeignFileRepos[] = [
 		'class'            => 'ForeignDBViaLBRepo',
 		'name'             => 'shared',
