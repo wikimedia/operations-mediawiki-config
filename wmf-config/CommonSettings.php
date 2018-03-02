@@ -567,11 +567,15 @@ $wgSVGConverters['rsvg-broken'] = '$path/rsvg-convert -w $width -h $height -o $o
 if ( defined( 'HHVM_VERSION' ) ) {
 	# Newer librsvg supports a sane security model by default and doesn't need our security patch
 	$wgSVGConverters['rsvg-secure'] = '$path/rsvg-convert -u -w $width -h $height -o $output $input';
+
+        # if wikitech has hhvm then we can use the standard setup here
+	$wgSVGConverters['rsvg-wikitech'] = '$path/rsvg-convert -u -w $width -h $height -o $output $input';
 } else {
 	# This converter will only work when rsvg has a suitable security patch
 	$wgSVGConverters['rsvg-secure'] = '$path/rsvg-convert --no-external-files -w $width -h $height -o $output $input';
 
-	// Special config for wikitech which runs trusty (and therefore the new librsvg2-bin package),
+	// Legacy config for php5-based wikitech.  This (and everything to do with rsvg-wikitech)
+        // can be removed when Silver is deprecated
 	// but on PHP 5.5 (not HHVM)
 	$wgSVGConverters['rsvg-wikitech'] = '$path/rsvg-convert -w $width -h $height -o $output $input';
 }
@@ -1115,6 +1119,10 @@ if ( $wmgUseClusterFileBackend ) {
 	# Cluster-dependent files for file backend
 	require "{$wmfConfigDir}/filebackend.php";
 } else {
+	$wgUseInstantCommons = true;
+}
+
+if ( $wgDBname === 'labswiki' ) {
 	$wgUseInstantCommons = true;
 }
 
