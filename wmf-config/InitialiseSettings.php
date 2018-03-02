@@ -2501,7 +2501,6 @@ $wgConf->settings = [
 	'default' => '//upload.wikimedia.org/$site/$lang',
 	'private' => '/w/img_auth.php',
 	'commonswiki' => 'https://upload.wikimedia.org/wikipedia/commons',
-	'labswiki' => '//wikitech.wikimedia.org/w/images',
 	'labtestwiki' => '//labtestwikitech.wikimedia.org/w/images',
 	'metawiki' => '//upload.wikimedia.org/wikipedia/meta',
 	'testwiki' => '//upload.wikimedia.org/wikipedia/test',
@@ -2509,7 +2508,6 @@ $wgConf->settings = [
 
 'wgUploadDirectory' => [
 	'default' => false,
-	'wikitech' => '/srv/org/wikimedia/controller/wikis/images',
 ],
 
 'wgImgAuthUrlPathMap' => [
@@ -11781,10 +11779,6 @@ $wgConf->settings = [
 # SVG related @{
 'wgSVGConverter' => [
 	'default' => 'rsvg-secure',
-
-	// silver runs PHP 5.5 (not HHVM) on trusty, and therefore has the security
-	// patch by default (and no --no-external-files) so rsvg-secure is broken
-	'wikitech' => 'rsvg-wikitech',
 ],
 'wgSVGConverterPath' => [
 	'default' => '/usr/bin',
@@ -15589,7 +15583,6 @@ $wgConf->settings = [
 
 'wgMathPath' => [
 	'default' => '//upload.wikimedia.org/math',
-	'labswiki' => '//wikitech.wikimedia.org/w/images/math', // T126338, T126628
 	'labtestwiki' => '//labtestwikitech.wikimedia.org/w/images/math', // T126338, T126628
 ],
 
@@ -19985,7 +19978,6 @@ $wgConf->settings = [
 
 'wmgUseClusterFileBackend' => [
 	'default'  => true,
-	'wikitech' => false,
 ],
 
 'wmgUseClusterJobqueue' => [

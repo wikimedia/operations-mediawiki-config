@@ -1118,6 +1118,10 @@ if ( $wmgUseClusterFileBackend ) {
 	$wgUseInstantCommons = true;
 }
 
+if ( $wgDBname === 'labswiki' ) {
+	$wgUseInstantCommons = true;
+}
+
 if ( $wmgUseClusterJobqueue ) {
 	# Cluster-dependent files for job queue and job queue aggregator
 	require $wmfRealm === 'labs'
