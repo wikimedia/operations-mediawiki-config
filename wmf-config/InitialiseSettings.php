@@ -20122,13 +20122,6 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
-'wmgDisableCDNPurgeInRedis' => [
-	'wikipedia' => false,
-	'commonswiki' => false,
-	'wikidatawiki' => false,
-	'default' => true,
-],
-
 'wmgUseCapiunto' => [
 	'default' => false,
 	'testwiki' => true,

@@ -49,12 +49,10 @@ if ( $wmgUseEventBus && $wmgDebugJobQueueEventBus ) {
 		$wgJobTypeConf['RecordLintJob'] =
 		$wgJobTypeConf['updateBetaFeaturesUserCounts'] =
 		$wgJobTypeConf['wikibase-addUsagesForPage'] =
+		$wgJobTypeConf['cdnPurge'] =
 			[ 'class' => 'JobQueueEventBus' ];
 	if ( $wmgDisableRefreshLinksInRedis ) {
 		$wgJobTypeConf['refreshLinks'] = [ 'class' => 'JobQueueEventBus' ];
-	}
-	if ( isset( $wmgDisableCDNPurgeInRedis ) && $wmgDisableCDNPurgeInRedis ) {
-		$wgJobTypeConf['cdnPurge'] = [ 'class' => 'JobQueueEventBus' ];
 	}
 	$wgJobTypeConf['default'] = [
 		'class' => 'JobQueueSecondTestQueue',
