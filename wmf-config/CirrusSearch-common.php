@@ -262,6 +262,9 @@ $wgCirrusSearchMaxPhraseTokens = $wmgCirrusSearchMaxPhraseTokens;
 $wgWMESearchRelevancePages = $wmgWMESearchRelevancePages;
 
 if ( $wmgCirrusSearchMLRModel ) {
+	if ( !is_array( $wmgCirrusSearchMLRModel ) ) {
+		$wmgCirrusSearchMLRModel = [ 'mlr-1024rs' => $wmgCirrusSearchMLRModel ];
+	}
 	foreach ( $wmgCirrusSearchMLRModel as $name => $mlrModel ) {
 		// LTR Rescore profile
 		$wgCirrusSearchRescoreProfiles[$name] = [
