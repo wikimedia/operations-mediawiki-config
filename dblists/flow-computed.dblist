@@ -1,6 +1,6 @@
-# + all (reglar public wikis enabled by default)
-# - nonflow.dblist (opt-out public wikis)
+# + flow.dblist (wikis where Flow is enabled by conscious decision or historical accident)
+# - nonflow.dblist (explicitly disabled public wikis)
 # - private.dblist (non-public wikis disabled by default)
 # - fishbowl.dblist (non-public wikis disabled by default)
 # + flowprivate.dblist (opt-in private wikis)
-%% all.dblist - nonflow.dblist - private.dblist - fishbowl.dblist + flowprivate.dblist
+%% flow.dblist - nonflow.dblist - private.dblist - fishbowl.dblist + flowprivate.dblist
