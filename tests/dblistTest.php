@@ -58,7 +58,7 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 			// 'all-labs' and 'flow_only_labs' are for beta.wmflabs.org only,
 			// which may have wikis not (yet) in production.
 			'all-labs',
-			'flow_computed_labs',
+			'flow-labs',
 			'flow_only_labs',
 
 			'closed',

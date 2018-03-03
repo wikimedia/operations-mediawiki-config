@@ -1,12 +1,12 @@
 EXPANDDBLIST=../multiversion/bin/expanddblist
 
-all: flow.dblist nowikidatadescriptiontaglines.dblist wikipedia-english.dblist
+all: flow-labs.dblist nowikidatadescriptiontaglines.dblist wikipedia-english.dblist
 
 clean:
-	rm -f flow.dblist nowikidatadescriptiontaglines.dblist wikipedia-english.dblist
+	rm -f flow-labs.dblist nowikidatadescriptiontaglines.dblist wikipedia-english.dblist
 
-flow.dblist:
-	${EXPANDDBLIST} flow-computed.dblist > flow.dblist
+flow-labs.dblist:
+	cat flow.dblist all-labs.dblist flow_only_labs.dblist | sort | uniq -d > flow-labs.dblist
 
 nowikidatadescriptiontaglines.dblist:
 	${EXPANDDBLIST} nowikidatadescriptiontaglines-computed.dblist > nowikidatadescriptiontaglines.dblist
