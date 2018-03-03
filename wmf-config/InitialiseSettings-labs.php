@@ -342,7 +342,7 @@ function wmfLabsSettings() {
 		],
 
 		'wmgUseFlow' => [
-			// 'flow_computed_labs' is full set applicable on Beta Cluster.
+			// 'flow-labs' is full set applicable on Beta Cluster.
 			'flow_only_labs' => true,
 		],
 		# No separate Flow DB or cluster (yet) for labs.
