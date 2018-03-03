@@ -17616,7 +17616,6 @@ $wgConf->settings = [
 
 'wmgUseFlow' => [
 	'default' => false,
-	// To update flow.dblist, regenerate it from flow-computed.dblist using expanddblist
 	'flow' => true,
 ],
 'wmgFlowEnglishNamespaceOnly' => [
