@@ -8174,6 +8174,12 @@ $wgConf->settings = [
 		'patroller' => [ 'patrol' => true ],
 		'rollbacker' => [ 'rollback' => true ],
 	],
+	'+arwikiversity' => [
+		'rollbacker' => [ 'rollback' => true ], // T188633
+	],
+	'+arwikiquote' => [
+		'rollbacker' => [ 'rollback' => true ], // T189732
+	],
 	'+arwiktionary' => [
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'rollbacker' => [ 'rollback' => true ],
@@ -9956,6 +9962,12 @@ $wgConf->settings = [
 	'+arwikisource' => [
 		'sysop' => [ 'patroller', 'autopatrolled', 'rollbacker' ],
 	],
+	'+arwikiversity' => [
+		'sysop' => [ 'rollbacker', ], // T188633
+	],
+	'+arwikiquote' => [
+		'sysop' => [ 'rollbacker', ], // T189732
+	],
 	'+arwiktionary' => [
 		'sysop' => [ 'autopatrolled', 'rollbacker' ],
 	],
@@ -10687,6 +10699,9 @@ $wgConf->settings = [
 	],
 	'+arwikisource' => [
 		'sysop' => [ 'patroller', 'autopatrolled', 'rollbacker' ],
+	],
+	'+arwikiversity' => [
+		'sysop' => [ 'rollbacker', ], // T188633
 	],
 	'+arwiktionary' => [
 		'sysop' => [ 'autopatrolled', 'rollbacker' ],
