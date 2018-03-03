@@ -1327,8 +1327,6 @@ if ( $wmfRealm == 'labs' ) {
 	$wgHTTPTimeout = 10;
 }
 
-$wgBrowserBlackList[] = '/^Lynx/';
-
 $wgHiddenPrefs[] = 'prefershttps'; // T91352, T102245
 
 if ( isset( $_REQUEST['captchabypass'] ) && $_REQUEST['captchabypass'] == $wmgCaptchaPassword ) {
