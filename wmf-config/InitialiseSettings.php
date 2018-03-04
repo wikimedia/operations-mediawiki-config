@@ -17121,6 +17121,7 @@ $wgConf->settings = [
 	'bewikimedia' => true, // T39391
 	'betawikiversity' => true, // T160120
 	'brwikimedia' => true, // T46054
+	'bdwikimedia' => true, // T188853
 	'cawikimedia' => true, // T75394
 	'collabwiki' => true,
 	'commonswiki' => true, // T50620
