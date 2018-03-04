@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cebe2a55_4538794b",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 9976,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-03-04T12:21:25Z",
+      "side": 1,
+      "message": "Unneeded. It\u0027s already default in commonsettings for all wikis using the translate extension.",
+      "range": {
+        "startLine": 9974,
+        "startChar": 0,
+        "endLine": 9976,
+        "endChar": 3
+      },
+      "revId": "1eff2ce5e18a5ba3c444c4ac03f8c7821e9b7997",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7c536b99_af4cb5ef",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 10714,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-03-04T12:21:25Z",
+      "side": 1,
+      "message": "Same as above.",
+      "range": {
+        "startLine": 10712,
+        "startChar": 0,
+        "endLine": 10714,
+        "endChar": 3
+      },
+      "revId": "1eff2ce5e18a5ba3c444c4ac03f8c7821e9b7997",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
