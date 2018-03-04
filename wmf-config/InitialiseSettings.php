@@ -9971,6 +9971,9 @@ $wgConf->settings = [
 			'transwiki', // T109755
 		],
 	],
+	'+bdwikimedia' => [
+		'bureaucrat' => [ 'translationadmin' ], // T188853
+	],
 	'+bewiki' => [
 		'sysop' => [ 'autoeditor' ],
 	],
@@ -10705,6 +10708,9 @@ $wgConf->settings = [
 	],
 	'+bawiki' => [
 		'bureaucrat' => [ 'sysop' ],
+	],
+	'+bdwikimedia' => [
+		'bureaucrat' => [ 'translationadmin' ], // T188853
 	],
 	'+bewiki' => [
 		'sysop' => [ 'autoeditor' ],
@@ -17121,6 +17127,7 @@ $wgConf->settings = [
 	'bewikimedia' => true, // T39391
 	'betawikiversity' => true, // T160120
 	'brwikimedia' => true, // T46054
+	'bdwikimedia' => true, // T188853
 	'cawikimedia' => true, // T75394
 	'collabwiki' => true,
 	'commonswiki' => true, // T50620
