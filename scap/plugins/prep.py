@@ -125,19 +125,27 @@ class CheckoutMediaWiki(cli.Application):
         git.checkout(dest_dir, checkout_version)
 
         if checkout_version == 'master':
+            # Specific to Beta Cluster
             master_stuff(dest_dir)
+
+            write_settings_stub(
+                os.path.join(dest_dir, 'StartProfiler.php'),
+                os.path.join(self.config['deploy_dir'], 'wmf-config',
+                             'StartProfiler-labs.php'))
         else:
+            # Specific to production
             git.update_submodules(dest_dir, use_upstream=True)
             update_update_strategy(dest_dir)
+
+            write_settings_stub(
+                os.path.join(dest_dir, 'StartProfiler.php'),
+                os.path.join(self.config['deploy_dir'], 'wmf-config',
+                             'StartProfiler.php'))
 
         write_settings_stub(
             os.path.join(dest_dir, 'LocalSettings.php'),
             os.path.join(self.config['deploy_dir'], 'wmf-config',
                          'CommonSettings.php'))
-        write_settings_stub(
-            os.path.join(dest_dir, 'StartProfiler.php'),
-            os.path.join(self.config['deploy_dir'], 'wmf-config',
-                         'StartProfiler.php'))
 
         cache_dir = os.path.join(dest_dir, 'cache')
         os.chmod(cache_dir, 0o777)
