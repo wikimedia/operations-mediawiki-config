@@ -53,6 +53,9 @@ $wgLocalVirtualHosts = [
 	'commons.wikimedia.beta.wmflabs.org',
 ];
 
+# Prevent AbuseFilter to collect private user information - T188862
+$wgAbuseFilterLogIP = false;
+
 # Attempt to auto block users using faulty servers
 # See also http://www.us.sorbs.net/general/using.shtml
 $wgEnableDnsBlacklist = true;
