@@ -1574,6 +1574,13 @@ if ( $wmgUseGlobalUserPage && $wmgUseCentralAuth ) {
 	$wgHooks['GlobalUserPageWikis'][] = 'wmfCentralAuthWikiList';
 }
 
+if ( $wmgLocalAuthLoginOnly && $wmgUseCentralAuth ) {
+	// T57420: prevent creation of local password records for SUL users
+	if ( isset( $wgAuthManagerAutoConfig['primaryauth'][\MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider::class] ) ) {
+		$wgAuthManagerAutoConfig['primaryauth'][\MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider::class]['args'][0]['loginOnly'] = true;
+	}
+}
+
 if ( $wmgUseApiFeatureUsage ) {
 	wfLoadExtension( 'ApiFeatureUsage' );
 	$wgApiFeatureUsageQueryEngineConf = [

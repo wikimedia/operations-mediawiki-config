@@ -687,5 +687,9 @@ function wmfLabsSettings() {
 			// Explicitly disabled on non-CentralAuth wikis in CommonSettings.php
 			'default' => true,
 		],
+		'wmgLocalAuthLoginOnly' => [
+			// Explicitly disabled on non-CentralAuth wikis in CommonSettings.php
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()
