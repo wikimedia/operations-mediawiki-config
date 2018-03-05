@@ -1731,7 +1731,7 @@ if ( $wmgUseCentralNotice ) {
 	$wgCentralGeoScriptURL = false;
 
 	// for banner loading
-	if ( $wgDBname === 'testwiki' ) {
+	if ( $wmfRealm === 'production' && $wgDBname === 'testwiki' ) {
 		$wgCentralPagePath = "//test.wikipedia.org/w/index.php";
 		$wgCentralSelectedBannerDispatcher = "//test.wikipedia.org/w/index.php?title=Special:BannerLoader";
 
