@@ -47,13 +47,11 @@ if ( $wmgUseEventBus && $wmgDebugJobQueueEventBus ) {
 		$wgJobTypeConf['htmlCacheUpdate'] =
 		$wgJobTypeConf['MessageIndexRebuildJob'] =
 		$wgJobTypeConf['RecordLintJob'] =
+		$wgJobTypeConf['refreshLinks'] =
 		$wgJobTypeConf['updateBetaFeaturesUserCounts'] =
 		$wgJobTypeConf['wikibase-addUsagesForPage'] =
 		$wgJobTypeConf['cdnPurge'] =
 			[ 'class' => 'JobQueueEventBus' ];
-	if ( $wmgDisableRefreshLinksInRedis ) {
-		$wgJobTypeConf['refreshLinks'] = [ 'class' => 'JobQueueEventBus' ];
-	}
 	$wgJobTypeConf['default'] = [
 		'class' => 'JobQueueSecondTestQueue',
 		'mainqueue' => $jobQueueFederatedConfig,
