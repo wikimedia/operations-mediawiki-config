@@ -37,3 +37,5 @@ function wmfEtcdConfig() {
 	# The datacenter from which we serve traffic.
 	$wmfMasterDatacenter = $etcdConfig->get( 'common/WMFMasterDatacenter' );
 }
+
+wmfEtcdConfig();
