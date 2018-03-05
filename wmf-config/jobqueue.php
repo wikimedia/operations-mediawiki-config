@@ -47,6 +47,8 @@ if ( $wmgUseEventBus && $wmgDebugJobQueueEventBus ) {
 		$wgJobTypeConf['htmlCacheUpdate'] =
 		$wgJobTypeConf['MessageIndexRebuildJob'] =
 		$wgJobTypeConf['RecordLintJob'] =
+        $wgJobTypeConf['refreshLinksDynamic'] =
+        $wgJobTypeConf['refreshLinksPrioritized'] =
 		$wgJobTypeConf['updateBetaFeaturesUserCounts'] =
 		$wgJobTypeConf['wikibase-addUsagesForPage'] =
 		$wgJobTypeConf['cdnPurge'] =
