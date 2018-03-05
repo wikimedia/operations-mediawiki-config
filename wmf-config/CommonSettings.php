@@ -109,9 +109,12 @@ $wmfLocalServices = $wmfAllServices[$wmfDatacenter];
 
 # Configuration from etcd (sets $wmfMasterDatacenter)
 # Currently testing in Beta Cluster, and on production mwdebug hosts.
+require "$wmfConfigDir/etcd.php";
 if ( $wmfRealm === 'labs' || isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
-	require "$wmfConfigDir/etcd.php";
+	wmfEtcdConfig();
 } else {
+	# Just fetch data from etcd, and fill LastModifiedIndex, do not use data for actual config
+	wmfSetupEtcd();
 	$wmfMasterDatacenter = 'eqiad';
 }
 
