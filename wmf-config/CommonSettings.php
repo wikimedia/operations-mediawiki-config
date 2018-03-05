@@ -109,10 +109,16 @@ $wmfLocalServices = $wmfAllServices[$wmfDatacenter];
 
 # Configuration from etcd (sets $wmfMasterDatacenter)
 # Currently testing in Beta Cluster, and on production mwdebug hosts.
+require "$wmfConfigDir/etcd.php";
 if ( $wmfRealm === 'labs' || isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
-	require "$wmfConfigDir/etcd.php";
+	wmfEtcdConfig();
 } else {
+<<<<<<< HEAD
 	global $wmfEtcdLastModifiedIndex;
+=======
+	# Just fetch data from etcd, and fill LastModifiedIndex, do not use data for actual config
+	wmfSetupEtcd();
+>>>>>>> bcf9911a6... Fetch data from etcd on every server, but use them only for labs/x-wikimedia-debug hosts.
 	$wmfMasterDatacenter = 'eqiad';
 	$wmfEtcdLastModifiedIndex = null;
 }
