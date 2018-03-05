@@ -79,10 +79,6 @@ if ( $wmgUseContentTranslation ) {
 	$wgContentTranslationTranslateInTarget = false;
 }
 
-if ( $wmgUseCentralNotice ) {
-	$wgCentralBannerRecorder = "//meta.wikimedia.beta.wmflabs.org/w/index.php?title=Special:RecordImpression";
-}
-
 if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthUseSlaves = true;
 }
