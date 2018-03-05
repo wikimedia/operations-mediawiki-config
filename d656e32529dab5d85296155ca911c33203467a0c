@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "838442d3_79615894",
+        "filename": "wmf-config/filebackend.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 268,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2018-03-05T23:54:13Z",
+      "side": 1,
+      "message": "Use \"\u0026\u0026\" rather than \"and\". PHP\u0027s \"and\" has weird operator precedence. \u003chttps://secure.php.net/manual/en/language.operators.precedence.php\u003e",
+      "revId": "d656e32529dab5d85296155ca911c33203467a0c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
