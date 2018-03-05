@@ -160,8 +160,8 @@ $IP/extensions/VipsScaler/extension.json
 $IP/extensions/VisualEditor/extension.json
 $IP/extensions/Wikibase/client/WikibaseClient.php
 $IP/extensions/Wikibase/repo/Wikibase.php
-$IP/extensions/WikibaseQuality/WikibaseQuality.php
-$IP/extensions/WikibaseQualityConstraints/WikibaseQualityConstraints.php
+$IP/extensions/WikibaseQuality/extension.json
+$IP/extensions/WikibaseQualityConstraints/extension.json
 $IP/extensions/Wikidata.org/WikidataOrg.php
 $IP/extensions/WikidataPageBanner/extension.json
 $IP/extensions/WikiEditor/extension.json
