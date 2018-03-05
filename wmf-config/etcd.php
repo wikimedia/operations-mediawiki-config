@@ -8,6 +8,7 @@
 
 function wmfSetupEtcd() {
 	global $wmfRealm, $wmfDatacenter, $wmfLocalServices, $wgReadOnly, $wmfMasterDatacenter;
+	global $wmfEtcdLastModifiedIndex;
 
 	# Create a local cache
 	if ( PHP_SAPI === 'cli' ) {
@@ -30,6 +31,9 @@ function wmfSetupEtcd() {
 	# Master datacenter
 	# The datacenter from which we serve traffic.
 	$wmfMasterDatacenter = $etcdConfig->get( 'common/WMFMasterDatacenter' );
+
+	# Last modified index on etcd; used to monitor if the config is up to date
+	$wmfEtcdLastModifiedIndex = $etcdConfig->getModifiedIndex();
 }
 
 wmfSetupEtcd();
