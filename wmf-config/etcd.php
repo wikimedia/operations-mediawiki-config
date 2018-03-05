@@ -27,7 +27,7 @@ function wmfSetupEtcd() {
 }
 
 function wmfEtcdConfig() {
-	global $wmfRealm, $wmfDatacenter, $wgReadOnly, $wmfMasterDatacenter;
+	global $wmfDatacenter, $wgReadOnly, $wmfMasterDatacenter;
 	$etcdConfig = wmfSetupEtcd();
 
 	# Read only mode
@@ -38,4 +38,4 @@ function wmfEtcdConfig() {
 	$wmfMasterDatacenter = $etcdConfig->get( 'common/WMFMasterDatacenter' );
 }
 
-wmfSetupEtcd();
+wmfEtcdConfig();
