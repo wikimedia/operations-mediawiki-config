@@ -34,6 +34,24 @@
       "revId": "724a8cbe6cdadf73ee44337b4a406af9d295c989",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f0c6acaf_9bb4cf50",
+        "filename": "wmf-config/jobqueue.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 2177
+      },
+      "writtenOn": "2018-03-05T20:25:48Z",
+      "side": 1,
+      "message": "Since we know these others are the same type as the normal job and need to drain them as well, I think it makes sense to do them in the same round.",
+      "parentUuid": "63477a22_de1870f5",
+      "revId": "724a8cbe6cdadf73ee44337b4a406af9d295c989",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
