@@ -20111,17 +20111,6 @@ $wgConf->settings = [
 	'votewiki' => false,
 ],
 
-'wmgDisableRefreshLinksInRedis' => [
-	'enwiktionary' => false,
-	'frwiktionary' => false,
-	'warwiki' => false,
-	'dewiki' => false,
-	'commonswiki' => false,
-	'itwiki' => false,
-	'enwiki' => false,
-	'default' => true,
-],
-
 'wmgUseCapiunto' => [
 	'default' => false,
 	'testwiki' => true,
