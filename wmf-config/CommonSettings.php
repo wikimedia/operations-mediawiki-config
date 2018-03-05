@@ -107,14 +107,15 @@ default:
 # Shorthand when we have no master-slave situation to keep into account
 $wmfLocalServices = $wmfAllServices[$wmfDatacenter];
 
-# Configuration from etcd (sets $wmfMasterDatacenter)
+# Configuration from etcd (sets $wmfMasterDatacenter, $wgReadOnly and wmfEtcdLastModifiedIndex)
 # Currently testing in Beta Cluster, and on production mwdebug hosts.
+require "$wmfConfigDir/etcd.php";
 if ( $wmfRealm === 'labs' || isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
-	require "$wmfConfigDir/etcd.php";
+	wmfEtcdConfig();
 } else {
-	global $wmfEtcdLastModifiedIndex;
+	# Just fetch data from etcd, and fill wmfEtcdLastModifiedIndex, do not use data for actual config
+	wmfSetupEtcd();
 	$wmfMasterDatacenter = 'eqiad';
-	$wmfEtcdLastModifiedIndex = null;
 }
 
 $wmfMasterServices = $wmfAllServices[$wmfMasterDatacenter];
