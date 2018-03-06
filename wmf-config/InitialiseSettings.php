@@ -12822,6 +12822,7 @@ $wgConf->settings = [
 'wmgLocalAuthLoginOnly' => [
 	'default' => false,
 	'group0' => true,
+	'group1' => true,
 	'private' => false,
 	'fishbowl' => false,
 	'nonglobal' => false,
