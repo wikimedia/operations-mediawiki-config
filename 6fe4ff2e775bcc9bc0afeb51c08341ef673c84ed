@@ -94,6 +94,30 @@
       "revId": "6fe4ff2e775bcc9bc0afeb51c08341ef673c84ed",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e6c0a17c_e7ba1da5",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 2504,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2018-03-06T20:15:19Z",
+      "side": 0,
+      "message": "That makes sense but I\u0027m not clear on what .../... would actually be in this case unless we go back to the original path of \u0027//wikitech.wikimedia.org/w/images\u0027",
+      "parentUuid": "aee286df_3625f9a1",
+      "range": {
+        "startLine": 2504,
+        "startChar": 1,
+        "endLine": 2504,
+        "endChar": 51
+      },
+      "revId": "6fe4ff2e775bcc9bc0afeb51c08341ef673c84ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
