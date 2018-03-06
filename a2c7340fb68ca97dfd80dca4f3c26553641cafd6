@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "508d6e8f_761f0e5a",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1764,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-03-06T01:10:35Z",
+      "side": 1,
+      "message": "This could use clean-up as well. At least merging with the above. But perhaps part of it could also be moved to InitialiseSettings.php instead of here. Moving to IS would require it not depend on wmfRealm, or requires that we properly set up beta\u0027s testwiki the same as prod, which seems simple enough actually. And might even be useful :) beta has a testwiki now.",
+      "range": {
+        "startLine": 1757,
+        "startChar": 1,
+        "endLine": 1764,
+        "endChar": 2
+      },
+      "revId": "a2c7340fb68ca97dfd80dca4f3c26553641cafd6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
