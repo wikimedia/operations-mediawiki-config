@@ -20410,6 +20410,7 @@ $wgConf->settings = [
 	'labswiki' => true,
 	'labtestwiki' => true,
 	'svwiki' => true, // T176082
+	'zhwiki' => true, // T189022
 ],
 
 'wgShortPagesNamespaceBlacklist' => [
