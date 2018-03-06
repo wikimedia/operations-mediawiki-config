@@ -22,6 +22,30 @@
       "revId": "decb3cefe85a579a8fcd5ece065f0980f93838d3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d90bbf2c_bb970566",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 3062,
+      "author": {
+        "id": 5462
+      },
+      "writtenOn": "2018-03-06T03:46:53Z",
+      "side": 1,
+      "message": "I\u0027ll check on the test that you added to see what the deal is.  \n\nThe \u0027userAgent\u0027 field isn\u0027t strictly necessary, there are existence checks everywhere that it\u0027s referenced in the code.  I added it as an empty array because that\u0027s generally best practice for configuration (as opposed to having it missing from the config but populated by a default that comes from elsewhere).\n\nI\u0027ll move to InitialiseSettings.php in the morning.  Presumably the rest of these settings should also move there?",
+      "parentUuid": "1e211547_d48afa9f",
+      "range": {
+        "startLine": 3062,
+        "startChar": 3,
+        "endLine": 3062,
+        "endChar": 20
+      },
+      "revId": "decb3cefe85a579a8fcd5ece065f0980f93838d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
