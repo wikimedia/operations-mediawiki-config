@@ -1362,6 +1362,11 @@ if ( $wmgEnableCaptcha ) {
 	if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 		$wgCaptchaTriggers['addurl'] = false;
 	}
+
+	# akosiaris 20180306. contact pages in metawiki are being abused by bots
+	if ( $wgDBname === 'metawiki' ) {
+		$wgCaptchaTriggers['contactpage'] = true;
+	}
 }
 
 if ( extension_loaded( 'wikidiff2' ) ) {
