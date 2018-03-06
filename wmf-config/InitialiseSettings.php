@@ -7331,6 +7331,7 @@ $wgConf->settings = [
 		'disclaimerpage', // T7925
 		'copyright', // T7925
 		'licenses',
+		'3d-patents',
 		'upload-url',
 		'license-header',
 		'filedesc',
