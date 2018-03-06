@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "09239dc6_9197f482",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 3215
+      },
+      "writtenOn": "2018-03-06T11:57:55Z",
+      "side": 1,
+      "message": "[nitpick] should be updated to include $wmfEtcdLastModifiedIndex too",
+      "revId": "cfa440876213a80eee2b9918437bc5608ccd1cbb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8ea99c4b_aa7b3152",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 3215
+      },
+      "writtenOn": "2018-03-06T11:57:55Z",
+      "side": 1,
+      "message": "[nitpick] wmfEtcdLastModifiedIndex",
+      "range": {
+        "startLine": 116,
+        "startChar": 39,
+        "endLine": 116,
+        "endChar": 56
+      },
+      "revId": "cfa440876213a80eee2b9918437bc5608ccd1cbb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "47ebc1f9_aaadf6f9",
+        "filename": "wmf-config/etcd.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 3215
+      },
+      "writtenOn": "2018-03-06T11:57:55Z",
+      "side": 1,
+      "message": "[nitpick] wmfRealm doesn\u0027t seem used",
+      "range": {
+        "startLine": 30,
+        "startChar": 9,
+        "endLine": 30,
+        "endChar": 17
+      },
+      "revId": "cfa440876213a80eee2b9918437bc5608ccd1cbb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "64647af0_a38ad47b",
+        "filename": "wmf-config/etcd.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 3215
+      },
+      "writtenOn": "2018-03-06T11:57:55Z",
+      "side": 1,
+      "message": "I think this is not anymore needed with the new API of this module and how is used",
+      "revId": "cfa440876213a80eee2b9918437bc5608ccd1cbb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
