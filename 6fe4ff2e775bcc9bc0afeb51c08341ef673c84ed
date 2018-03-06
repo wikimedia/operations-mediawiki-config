@@ -118,6 +118,30 @@
       "revId": "6fe4ff2e775bcc9bc0afeb51c08341ef673c84ed",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "985e72e7_db41e03e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 2504,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2018-03-06T22:10:17Z",
+      "side": 0,
+      "message": "I guess it all comes down to what $site is for wikitech. I\u0027m assuming $lang is \u0027en\u0027. Some of the other public special wikis would be telling here probably.",
+      "parentUuid": "e6c0a17c_e7ba1da5",
+      "range": {
+        "startLine": 2504,
+        "startChar": 1,
+        "endLine": 2504,
+        "endChar": 51
+      },
+      "revId": "6fe4ff2e775bcc9bc0afeb51c08341ef673c84ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
