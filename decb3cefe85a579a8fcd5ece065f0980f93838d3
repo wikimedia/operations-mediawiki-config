@@ -46,6 +46,30 @@
       "revId": "decb3cefe85a579a8fcd5ece065f0980f93838d3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "30c8afca_850780df",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 3062,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-03-06T03:47:49Z",
+      "side": 1,
+      "message": "RE: userAgent, sounds good to me.\n\nRE: IS, yes, let\u0027s move both the regular sampling factor (with just \u0027default\u0027) and the new one.",
+      "parentUuid": "d90bbf2c_bb970566",
+      "range": {
+        "startLine": 3062,
+        "startChar": 3,
+        "endLine": 3062,
+        "endChar": 20
+      },
+      "revId": "decb3cefe85a579a8fcd5ece065f0980f93838d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
