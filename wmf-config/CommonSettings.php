@@ -112,7 +112,9 @@ $wmfLocalServices = $wmfAllServices[$wmfDatacenter];
 if ( $wmfRealm === 'labs' || isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
 	require "$wmfConfigDir/etcd.php";
 } else {
+	global $wmfEtcdLastModifiedIndex;
 	$wmfMasterDatacenter = 'eqiad';
+	$wmfEtcdLastModifiedIndex = null;
 }
 
 $wmfMasterServices = $wmfAllServices[$wmfMasterDatacenter];
@@ -319,8 +321,10 @@ $wgHooks['LocalisationCacheRecache'][] = function ( $cache, $code, &$allData, &$
 // Add some useful config data to query=siteinfo
 $wgHooks['APIQuerySiteInfoGeneralInfo'][] = function ( $module, &$data ) {
 	global $wmfMasterDatacenter;
+	global $wmfEtcdLastModifiedIndex;
 	$data['wmf-config'] = [
-		'wmfMasterDatacenter' => $wmfMasterDatacenter
+		'wmfMasterDatacenter' => $wmfMasterDatacenter,
+		'wmfEtcdLastModifiedIndex' => $wmfEtcdLastModifiedIndex,
 	];
 };
 
