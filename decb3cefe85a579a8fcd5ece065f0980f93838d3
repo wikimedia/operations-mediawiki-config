@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1e211547_d48afa9f",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 3062,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-03-06T02:17:21Z",
+      "side": 1,
+      "message": "The \u0027userAgent\u0027 field should be redundant. I couldn\u0027t quite tell for user whether the code tolerates its absence, but I think it does, especially given the default value is false instead of empty array, or nested empty arrays. And indeed it supports it according to the added test at https://gerrit.wikimedia.org/r/#/c/416627/ - although I did notice some other unexpected behaviour in that new test. Could use some eyes on that.\n\nFor wmf-config, while I\u0027m sure things are fine, as a general practice we should enable things in Beta Cluster and/or test wikis before going to all wikis.\n\nI suggest placing this in InitialiseSettings.php with \u0027default\u0027 \u003d\u003e false, and \u0027testwiki\u0027 set to this array. Then, to apply to all wikis, we change the key \u0027testwiki\u0027 to \u0027default\u0027, and remove the default entry.\n\nThe test doesn\u0027t have to be long, could just be an hour or day.\n\nMaintaining settings in InitialiseSettings.php is generally preferred, although it\u0027s understandable you started here given the existing (bad) example. Sorry :)",
+      "range": {
+        "startLine": 3062,
+        "startChar": 3,
+        "endLine": 3062,
+        "endChar": 20
+      },
+      "revId": "decb3cefe85a579a8fcd5ece065f0980f93838d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
