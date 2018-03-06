@@ -15946,7 +15946,9 @@ $wgConf->settings = [
 	'default' => true,
 ],
 'wgMFEnableWikidataDescriptions' => [
-	'default' => true,
+	'default' => [
+		'base' => true, 'beta' => true,
+	],
 ],
 'wgMFDisplayWikibaseDescriptions' => [
 	'default' => [
