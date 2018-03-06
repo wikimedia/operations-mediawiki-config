@@ -20598,6 +20598,8 @@ $wgConf->settings = [
 	'ruwikiquote' => true, // T197526
 	'nowiki' => true, // T193786
 	'huwiktionary' => true, // T198725
+	'frwiki' => true, // T191452
+	'zhwiki' => true, // T189022
 ],
 
 'wgShortPagesNamespaceBlacklist' => [
