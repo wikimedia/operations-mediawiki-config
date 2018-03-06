@@ -15945,6 +15945,9 @@ $wgConf->settings = [
 'wgMFUseWikibase' => [
 	'default' => true,
 ],
+'wgMFEnableWikidataDescriptions' => [
+	'default' => true,
+],
 'wgMFDisplayWikibaseDescriptions' => [
 	'default' => [
 		'search' => true, 'nearby' => true, 'watchlist' => true, 'tagline' => true
