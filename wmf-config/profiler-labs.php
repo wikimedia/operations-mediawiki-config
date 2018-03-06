@@ -29,6 +29,12 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 	$xwd = false;
 	if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
 		$xwd = [];
+		$matches = null;
+		preg_match_all( '/;\s*(\w+)/', $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'], $matches );
+		if ( !empty( $matches[1] ) ) {
+			$xwd = array_fill_keys( $matches[1], true );
+		}
+		unset( $matches );
 
 		// This is passed as query parameter instead of header attribute,
 		// but is nonetheless considered part of X-Wikimedia-Debug and must
@@ -60,25 +66,22 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 		// Enable Xhprof now instead of waiting for MediaWiki to start it later.
 		// This ensures a balanced and complete call graph. (T180183)
 		xhprof_enable( $xhprofFlags );
-	}
 
-	/**
-	 * One-off profile to stdout.
-	 *
-	 * MediaWiki's Profiler class can output raw profile data directly to the output
-	 * of a web response (web), or in stdout (CLI).
-	 *
-	 * For web: Set X-Wikimedia-Debug (to bypass cache) and query param 'forceprofile=1'.
-	 * For CLI: Set CLI option '--profiler=text'.
-	 *
-	 * https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug#Plaintext_request_profile
-	 */
-	if ( isset( $xwd['forceprofile'] ) || PHP_SAPI === 'cli' ) {
-		$wmgProfiler = [
-			'class'  => 'ProfilerXhprof',
-			'flags'  => $xhprofFlags,
-			'output' => 'text',
-		];
+		/**
+		 * One-off profile to stdout.
+		 *
+		 * For web: Set X-Wikimedia-Debug (to bypass cache) and query param 'forceprofile=1'.
+		 * For CLI: Set CLI option '--profiler=text'.
+		 *
+		 * https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug#Plaintext_request_profile
+		 */
+		if ( isset( $xwd['forceprofile'] ) || PHP_SAPI === 'cli' ) {
+			$wmgProfiler = [
+				'class'  => 'ProfilerXhprof',
+				'flags'  => $xhprofFlags,
+				'output' => 'text',
+			];
+		}
 	}
 
 	unset( $xwd, $xhprofFlags );
