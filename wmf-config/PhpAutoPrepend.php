@@ -15,4 +15,4 @@
  */
 
 // https://phabricator.wikimedia.org/T180183
-require_once __DIR__ . '/profiler-labs.php';
+require_once __DIR__ . '/profiler.php';
