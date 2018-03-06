@@ -70,6 +70,30 @@
       "revId": "6fe4ff2e775bcc9bc0afeb51c08341ef673c84ed",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "aee286df_3625f9a1",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 2504,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2018-03-06T19:57:40Z",
+      "side": 0,
+      "message": "Chad is saying that the default \u0027//upload.wikimedia.org/$site/$lang\u0027 setting probably doesn\u0027t guess the correct $site and $lang and needs to be explicit like the other \u0027//upload.wikimedia.org/.../...\u0027 entries.",
+      "parentUuid": "8e0e1678_0d312b0d",
+      "range": {
+        "startLine": 2504,
+        "startChar": 1,
+        "endLine": 2504,
+        "endChar": 51
+      },
+      "revId": "6fe4ff2e775bcc9bc0afeb51c08341ef673c84ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
