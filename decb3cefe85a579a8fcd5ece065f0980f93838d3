@@ -70,6 +70,30 @@
       "revId": "decb3cefe85a579a8fcd5ece065f0980f93838d3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "78da933f_03721961",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 3062,
+      "author": {
+        "id": 5462
+      },
+      "writtenOn": "2018-03-06T18:38:36Z",
+      "side": 1,
+      "message": "Both done in latest rev.",
+      "parentUuid": "30c8afca_850780df",
+      "range": {
+        "startLine": 3062,
+        "startChar": 3,
+        "endLine": 3062,
+        "endChar": 20
+      },
+      "revId": "decb3cefe85a579a8fcd5ece065f0980f93838d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
