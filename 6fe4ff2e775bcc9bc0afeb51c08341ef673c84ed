@@ -22,6 +22,30 @@
       "revId": "6fe4ff2e775bcc9bc0afeb51c08341ef673c84ed",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "77e68c63_6dd740fa",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 2504,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2018-03-06T18:58:24Z",
+      "side": 0,
+      "message": "(note to self: how the heck does test2 and most of the rest of special.dblist work?!)",
+      "parentUuid": "bc6d53f7_c1a96f90",
+      "range": {
+        "startLine": 2504,
+        "startChar": 1,
+        "endLine": 2504,
+        "endChar": 51
+      },
+      "revId": "6fe4ff2e775bcc9bc0afeb51c08341ef673c84ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
