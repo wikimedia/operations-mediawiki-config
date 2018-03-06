@@ -20409,7 +20409,9 @@ $wgConf->settings = [
 	'mediawikiwiki' => true,
 	'labswiki' => true,
 	'labtestwiki' => true,
+	'frwiki' => true, // T191452
 	'svwiki' => true, // T176082
+	'zhwiki' => true, // T189022
 ],
 
 'wgShortPagesNamespaceBlacklist' => [
