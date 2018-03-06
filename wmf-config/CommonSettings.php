@@ -1732,14 +1732,12 @@ if ( $wmgUseCentralNotice ) {
 
 	// for banner loading
 	if ( $wmfRealm === 'production' && $wgDBname === 'testwiki' ) {
-		$wgCentralPagePath = "//test.wikipedia.org/w/index.php";
 		$wgCentralSelectedBannerDispatcher = "//test.wikipedia.org/w/index.php?title=Special:BannerLoader";
 
 		// No caching for banners on testwiki, so we can develop them there a bit faster - NeilK 2012-01-16
 		// Never set this to zero on a highly trafficked wiki, there are server-melting consequences
 		$wgNoticeBannerMaxAge = 0;
 	} else {
-		$wgCentralPagePath = "//{$wmfHostnames['meta']}/w/index.php";
 		$wgCentralSelectedBannerDispatcher = "//{$wmfHostnames['meta']}/w/index.php?title=Special:BannerLoader";
 	}
 	// Relative URL which is hardcoded to HTTP 204 in Varnish config.
