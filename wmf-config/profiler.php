@@ -13,7 +13,8 @@ $wmgProfiler = [];
 /**
  * File overview:
  *
- * - Parse X-Wikimedia-Debug header.
+ * - Parse X-Wikimedia-Debug options.
+ * - Enable request profiling.
  * - One-off profile to stdout (via MediaWiki).
  * - One-off profile to XHGui.
  * - Sampling profiler for production traffic.
@@ -66,102 +67,98 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 		// Enable Xhprof now instead of waiting for MediaWiki to start it later.
 		// This ensures a balanced and complete call graph. (T180183)
 		xhprof_enable( $xhprofFlags );
-	}
 
-	/**
-	 * One-off profile to stdout.
-	 *
-	 * MediaWiki's Profiler class can output raw profile data directly to the output
-	 * of a web response (web), or in stdout (CLI).
-	 *
-	 * For web: Set X-Wikimedia-Debug (to bypass cache) and query param 'forceprofile=1'.
-	 * For CLI: Set CLI option '--profiler=text'.
-	 *
-	 * https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug#Plaintext_request_profile
-	 */
-	if ( isset( $xwd['forceprofile'] ) || PHP_SAPI === 'cli' ) {
-		$wmgProfiler = [
-			'class'  => 'ProfilerXhprof',
-			'flags'  => $xhprofFlags,
-			'output' => 'text',
-		];
-	}
-
-	/**
-	 * One-off profile to XHGui.
-	 *
-	 * Set X-Wikimedia-Debug header with 'profile' attribute to instrument a web request
-	 * with XHProf and save the profile to XHGui's MongoDB.
-	 *
-	 * To find the profile in XHGui, either browse "Recent", or use wgRequestId value
-	 * from the mw.config data in the HTML web response, e.g. by running the
-	 * `mw.config.get('wgRequestId')` snippet in JavaScript. Then look up as follows:
-	 *
-	 * https://performance.wikimedia.org/xhgui/?url=WShdaQpAIHwAAF9HkX4AAAAW
-	 *
-	 * See https://performance.wikimedia.org/xhgui/
-	 * See https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug#Request_profiling
-	 */
-	if ( isset( $xwd['profile'] ) ) {
-		xhprof_enable( $xhprofFlags );
-
-		register_postsend_function( function () {
-			$data = [ 'profile' => xhprof_disable() ];
-
-			$sec  = $_SERVER['REQUEST_TIME'];
-			$usec = $_SERVER['REQUEST_TIME_FLOAT'] - $sec;
-
-			// Fake the URL to have a prefix of the request ID, that way it can
-			// be easily found through XHGui through a predictable search URL
-			// that looks for the request ID.
-			$reqId = WebRequest::getRequestId();
-			// Create a simplified url with just script name and 'action' query param
-			$qs = isset( $_GET['action'] ) ? ( '?action=' . $_GET['action'] ) : '';
-			$url = '//' . $reqId . $_SERVER['SCRIPT_NAME'] . $qs;
-
-			// Create sanitized copies of $_SERVER, $_ENV, and $_GET that are
-			// appropiate for exposing publicly to the web.
-			// This intentionally omits 'REQUEST_URI' (added later)
-			$keyWhitelist = array_flip( [
-				'HTTP_HOST', 'HTTP_X_WIKIMEDIA_DEBUG', 'REQUEST_METHOD',
-				'REQUEST_START_TIME', 'REQUEST_TIME', 'REQUEST_TIME_FLOAT',
-				'SERVER_ADDR', 'SERVER_NAME', 'THREAD_TYPE', 'action'
-			] );
-			$server = array_intersect_key( $_SERVER, $keyWhitelist );
-			$env = array_intersect_key( $_ENV, $keyWhitelist );
-			$get = array_intersect_key( $_GET, $keyWhitelist );
-
-			// Add unique ID
-			$server['UNIQUE_ID'] = $reqId;
-			$env['UNIQUE_ID'] = $reqId;
-
-			// Add hostname as web server name
-			// (SERVER_NAME is e.g. wikipedia.org, SERVER_ADDR is the LVS service name,
-			// e.g. appservers.svc)
-			$env['HOSTNAME'] = wfHostname();
-
-			// Re-insert scrubbed URL as REQUEST_URL:
-			$server['REQUEST_URI'] = $url;
-			$env['REQUEST_URI'] = $url;
-
-			$data['meta'] = [
-				'url'              => $url,
-				'SERVER'           => $server,
-				'get'              => $get,
-				'env'              => $env,
-				'simple_url'       => Xhgui_Util::simpleUrl( $url ),
-				'request_ts'       => new MongoDate( $sec ),
-				'request_ts_micro' => new MongoDate( $sec, $usec ),
-				'request_date'     => date( 'Y-m-d', $sec ),
+		/**
+		 * One-off profile to stdout.
+		 *
+		 * For web: Set X-Wikimedia-Debug (to bypass cache) and query param 'forceprofile=1'.
+		 * For CLI: Set CLI option '--profiler=text'.
+		 *
+		 * https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug#Plaintext_request_profile
+		 */
+		if ( isset( $xwd['forceprofile'] ) || PHP_SAPI === 'cli' ) {
+			$wmgProfiler = [
+				'class'  => 'ProfilerXhprof',
+				'flags'  => $xhprofFlags,
+				'output' => 'text',
 			];
+		}
 
-			Xhgui_Saver::factory( [
-				'save.handler' => 'mongodb',
-				'db.host'      => 'mongodb://tungsten.eqiad.wmnet:27017',
-				'db.db'        => 'xhprof',
-				'db.options'   => [],
-			] )->save( $data );
-		} );
+		/**
+		 * One-off profile to XHGui.
+		 *
+		 * Set X-Wikimedia-Debug header with 'profile' attribute to instrument a web request
+		 * with XHProf and save the profile to XHGui's MongoDB.
+		 *
+		 * To find the profile in XHGui, either browse "Recent", or use wgRequestId value
+		 * from the mw.config data in the HTML web response, e.g. by running the
+		 * `mw.config.get('wgRequestId')` snippet in JavaScript. Then look up as follows:
+		 *
+		 * https://performance.wikimedia.org/xhgui/?url=WShdaQpAIHwAAF9HkX4AAAAW
+		 *
+		 * See https://performance.wikimedia.org/xhgui/
+		 * See https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug#Request_profiling
+		 */
+		if ( isset( $xwd['profile'] ) ) {
+
+			register_postsend_function( function () {
+				$data = [ 'profile' => xhprof_disable() ];
+
+				$sec  = $_SERVER['REQUEST_TIME'];
+				$usec = $_SERVER['REQUEST_TIME_FLOAT'] - $sec;
+
+				// Fake the URL to have a prefix of the request ID, that way it can
+				// be easily found through XHGui through a predictable search URL
+				// that looks for the request ID.
+				$reqId = WebRequest::getRequestId();
+				// Create a simplified url with just script name and 'action' query param
+				$qs = isset( $_GET['action'] ) ? ( '?action=' . $_GET['action'] ) : '';
+				$url = '//' . $reqId . $_SERVER['SCRIPT_NAME'] . $qs;
+
+				// Create sanitized copies of $_SERVER, $_ENV, and $_GET that are
+				// appropiate for exposing publicly to the web.
+				// This intentionally omits 'REQUEST_URI' (added later)
+				$keyWhitelist = array_flip( [
+					'HTTP_HOST', 'HTTP_X_WIKIMEDIA_DEBUG', 'REQUEST_METHOD',
+					'REQUEST_START_TIME', 'REQUEST_TIME', 'REQUEST_TIME_FLOAT',
+					'SERVER_ADDR', 'SERVER_NAME', 'THREAD_TYPE', 'action'
+				] );
+				$server = array_intersect_key( $_SERVER, $keyWhitelist );
+				$env = array_intersect_key( $_ENV, $keyWhitelist );
+				$get = array_intersect_key( $_GET, $keyWhitelist );
+
+				// Add unique ID
+				$server['UNIQUE_ID'] = $reqId;
+				$env['UNIQUE_ID'] = $reqId;
+
+				// Add hostname as web server name
+				// (SERVER_NAME is e.g. wikipedia.org, SERVER_ADDR is the LVS service name,
+				// e.g. appservers.svc)
+				$env['HOSTNAME'] = wfHostname();
+
+				// Re-insert scrubbed URL as REQUEST_URL:
+				$server['REQUEST_URI'] = $url;
+				$env['REQUEST_URI'] = $url;
+
+				$data['meta'] = [
+					'url'              => $url,
+					'SERVER'           => $server,
+					'get'              => $get,
+					'env'              => $env,
+					'simple_url'       => Xhgui_Util::simpleUrl( $url ),
+					'request_ts'       => new MongoDate( $sec ),
+					'request_ts_micro' => new MongoDate( $sec, $usec ),
+					'request_date'     => date( 'Y-m-d', $sec ),
+				];
+
+				Xhgui_Saver::factory( [
+					'save.handler' => 'mongodb',
+					'db.host'      => 'mongodb://tungsten.eqiad.wmnet:27017',
+					'db.db'        => 'xhprof',
+					'db.options'   => [],
+				] )->save( $data );
+			} );
+		}
 	}
 
 	unset( $xwd, $xhprofFlags );
