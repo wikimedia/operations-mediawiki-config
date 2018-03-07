@@ -61,6 +61,24 @@ if ( $wmgUseEventBus && $wmgDebugJobQueueEventBus ) {
 			],
 			'readonly' => true,
 		];
+	if ( isset( $wmgDisableCirrusSearchJobsInRedis ) && $wmgDisableCirrusSearchJobsInRedis ) {
+		$wgJobTypeConf['cirrusSearchCheckerJob'] =
+			$wgJobTypeConf['cirrusSearchDeleteArchive'] =
+			$wgJobTypeConf['cirrusSearchDeletePages'] =
+			$wgJobTypeConf['cirrusSearchElasticaWrite'] =
+			$wgJobTypeConf['cirrusSearchIncomingLinkCount'] =
+			$wgJobTypeConf['cirrusSearchLinksUpdate'] =
+			$wgJobTypeConf['cirrusSearchLinksUpdatePrioritized'] =
+			$wgJobTypeConf['cirrusSearchMassIndex'] =
+			$wgJobTypeConf['cirrusSearchOtherIndex'] = [
+				'class' => 'JobQueueSecondTestQueue',
+				'mainqueue' => $jobQueueFederatedConfig,
+				'debugqueue' => [
+					'class' => 'JobQueueEventBus'
+				],
+				'readonly' => true,
+			];
+	}
 	$wgJobTypeConf['default'] = [
 		'class' => 'JobQueueSecondTestQueue',
 		'mainqueue' => $jobQueueFederatedConfig,
