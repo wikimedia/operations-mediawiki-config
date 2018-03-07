@@ -177,7 +177,9 @@ $wgLBFactoryConf = [
 	],
 
 	'm5' => [
-		'm5-master' => 1,
+		// Use the FQDN so that `sql labswiki` will work from hosts where the
+		// default DNS search path is not eqiad.wmnet (e.g. labweb1001)
+		'm5-master.eqiad.wmnet' => 1,
 	],
 	'labtestweb2001' => [
 		'labtestweb2001' => 1,
@@ -661,7 +663,7 @@ $wgLBFactoryConf = [
 	'db2091:3314' => '10.192.0.10:3314', # do not remove or comment out
 	'virt1000' => '208.80.154.18', # do not remove or comment out
 	'silver' => '208.80.154.136', # do not remove or comment out
-	'm5-master' => '10.64.0.13', # do not remove or comment out
+	'm5-master.eqiad.wmnet' => '10.64.0.13', # do not remove or comment out
 	'labtestweb2001' => '208.80.153.14', # do not remove or comment out
 ],
 
