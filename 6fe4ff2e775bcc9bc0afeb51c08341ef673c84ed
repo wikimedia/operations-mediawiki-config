@@ -142,6 +142,30 @@
       "revId": "6fe4ff2e775bcc9bc0afeb51c08341ef673c84ed",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "54eb3c66_75ff23c5",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 2504,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2018-03-07T16:51:42Z",
+      "side": 0,
+      "message": "Well, that\u0027s why I\u0027m confused.  If you look down a few lines, apparently $site for meta is \u0027wikimedia\u0027 and $lang is... meta?",
+      "parentUuid": "985e72e7_db41e03e",
+      "range": {
+        "startLine": 2504,
+        "startChar": 1,
+        "endLine": 2504,
+        "endChar": 51
+      },
+      "revId": "6fe4ff2e775bcc9bc0afeb51c08341ef673c84ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
