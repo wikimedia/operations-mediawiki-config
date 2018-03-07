@@ -3151,6 +3151,8 @@ if ( $wmgUseContentTranslation ) {
 		'key' => $wmgContentTranslationCXServerAuthKey,
 		'age' => '3600',
 	];
+
+	$wgContentTranslationSiteTemplates['cookieDomain'] = null;
 }
 
 if ( $wmgUseNewWikiDiff2Extension ) {
