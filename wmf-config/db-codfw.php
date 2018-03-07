@@ -646,7 +646,7 @@ $wgLBFactoryConf = [
 	'db2091:3314' => '10.192.0.10:3314', # do not remove or comment out
 	'virt1000' => '208.80.154.18', # do not remove or comment out
 	'silver' => '208.80.154.136', # do not remove or comment out
-	'm5-master' => '10.64.0.13', # do not remove or comment out
+	'm5-master' => '10.64.16.79', # do not remove or comment out
 	'labtestweb2001' => '208.80.153.14', # do not remove or comment out
 ],
 
