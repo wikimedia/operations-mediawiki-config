@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ef8db329_751d92bd",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 20476,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-03-07T19:42:40Z",
+      "side": 1,
+      "message": "This is already in the array on line 18014, and has to be as otherwise the current code in CS would reference an undefined variable.\n\nDefining the array twice is usually a no-op, but in this case it\u0027s somewhat harmful as we actually disable it on certain wikis, and the below is enabling it everywhere.\n\nIt is fine for the extra vars to exist and be unconditional, given they\u0027re not referenced otherwise, and matches what we do for other extensions.",
+      "range": {
+        "startLine": 20476,
+        "startChar": 0,
+        "endLine": 20476,
+        "endChar": 25
+      },
+      "revId": "cae6d0f706adcc4141d72f29ba7b8977e51f0cb4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
