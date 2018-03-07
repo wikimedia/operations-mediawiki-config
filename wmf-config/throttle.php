@@ -104,4 +104,12 @@ $wmgThrottlingExceptions[] = [ // T188626
 	'value' => 160, // 150 expected
 ];
 
+$wmgThrottlingExceptions[] = [ // T189121
+	'from' => '2018-03-08T8:00 +2:00',
+	'to' => '2018-03-08T22:00 +2:00',
+	'range' => '194.165.159.112/29',
+	'dbname' => [ 'arwiki' ],
+	'value' => 100 // unknown excepted
+];
+
 ## Add throttling definitions above.
