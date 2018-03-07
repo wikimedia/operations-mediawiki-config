@@ -1,21 +1,34 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-# This file holds configuration overrides specific to Beta Cluster.
+# This file holds common overrides specific to Beta Cluster.
+# For per-wiki overrides, see InitialiseSettings-labs.php.
 #
-# This MUST NOT be loaded for production.
+# This for BETA and MUST NOT be loaded for production.
 #
-# Load order:
-#  |-- mediawiki/DefaultSettings.php
-#  |
-#  `-- wmf-config/CommonSettings.php
-#      |
-#      |-- wmf-config/InitialiseSettings.php
-#      |   `-- wmf-config/InitialiseSettings-labs.php
-#      |
-#      |-- (main stuff in CommonSettings.php)
-#      |
-#      `-- wmf-config/CommonSettings-labs.php
+# Effective load order:
+# - multiversion
+# - mediawiki/DefaultSettings.php
+# - wmf-config/InitialiseSettings.php
+# - wmf-config/InitialiseSettings-labs.php
+# - wmf-config/CommonSettings.php
+# - wmf-config/CommonSettings-labs.php [THIS FILE]
+#
+# Load tree:
+# - multiversion
+# - mediawiki/index.php
+# - mediawiki/WebStart.php
+# - mediawiki/Setup.php
+# - mediawiki/DefaultSettings.php
+# - mediawiki/LocalSettings.php
+#   `-- wmf-config/CommonSettings.php
+#       |
+#       |-- wmf-config/InitialiseSettings.php
+#       |   `-- wmf-config/InitialiseSettings-labs.php
+#       |
+#       |-- (main stuff in CommonSettings.php)
+#       |
+#       `-- wmf-config/CommonSettings-labs.php [THIS FILE]
 #
 
 if ( $wmfRealm == 'labs' ) { # safe guard

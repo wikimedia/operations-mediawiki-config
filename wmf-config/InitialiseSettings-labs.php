@@ -1,21 +1,39 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-# This file holds per-wiki configuration overrides specific to Beta Cluster.
-# Prefixing a setting key with '-' to override all values from InitialiseSettings.php
-# Please wrap your code in functions to avoid tainting the global namespace.
+# This file holds per-wiki overrides specific to Beta Cluster.
+# For overrides common to all wikis, see CommonSettings-labs.php.
 #
-# Load order:
-#  |-- DefaultSettings.php
-#  |
-#  |-- wmf-config/CommonSettings.php
-#  |   |
-#  |   |-- wmf-config/InitialiseSettings.php
-#  |   |   `-- wmf-config/InitialiseSettings-labs.php
-#  |   |
-#  |   `-- (main stuff in CommonSettings.php)
-#  |
-#  `-- wmf-config/CommonSettings-labs.php
+# This for BETA and MUST NOT be loaded for production.
+#
+# Usage:
+# - Prefix a setting key with '-' to override all values from
+#   production InitialiseSettings.php.
+# - Please wrap your code in functions to avoid tainting the global scope.
+#
+# Effective load order:
+# - multiversion
+# - mediawiki/DefaultSettings.php
+# - wmf-config/InitialiseSettings.php
+# - wmf-config/InitialiseSettings-labs.php [THIS FILE]
+# - wmf-config/CommonSettings.php
+# - wmf-config/CommonSettings-labs.php
+#
+# Load tree:
+# - multiversion
+# - mediawiki/index.php
+# - mediawiki/WebStart.php
+# - mediawiki/Setup.php
+# - mediawiki/DefaultSettings.php
+# - mediawiki/LocalSettings.php
+#   `-- wmf-config/CommonSettings.php
+#       |
+#       |-- wmf-config/InitialiseSettings.php
+#       |   `-- wmf-config/InitialiseSettings-labs.php [THIS FILE]
+#       |
+#       |-- (main stuff in CommonSettings.php)
+#       |
+#       `-- wmf-config/CommonSettings-labs.php
 #
 
 /**
