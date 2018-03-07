@@ -22,6 +22,30 @@
       "revId": "cae6d0f706adcc4141d72f29ba7b8977e51f0cb4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aea4b40_6b6b7886",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 20476,
+      "author": {
+        "id": 5462
+      },
+      "writtenOn": "2018-03-07T20:17:20Z",
+      "side": 1,
+      "message": "When I searched for it, I accidentally searched for \"wgUseNavigationTiming\" instead.  Inconsistent naming conventions are inconvenient.\n\nFixed.",
+      "parentUuid": "ef8db329_751d92bd",
+      "range": {
+        "startLine": 20476,
+        "startChar": 0,
+        "endLine": 20476,
+        "endChar": 25
+      },
+      "revId": "cae6d0f706adcc4141d72f29ba7b8977e51f0cb4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
