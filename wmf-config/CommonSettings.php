@@ -3123,6 +3123,8 @@ if ( $wmgUseContentTranslation ) {
 	// T76200: Public URL for cxserver instance
 	$wgContentTranslationSiteTemplates['cx'] = '//cxserver.wikimedia.org/v1';
 
+	$wgContentTranslationSiteTemplates['cookieDomain'] = null;
+
 	$wgContentTranslationRESTBase = [
 		'url' => $wgRestbaseServer,
 		'domain' => $wgCanonicalServer,
