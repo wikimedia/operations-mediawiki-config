@@ -20027,6 +20027,9 @@ $wgConf->settings = [
 
 'wmgUseClusterSquid' => [
 	'default'  => true,
+	# Fixme:  Once we've fully moved wikitech to the labweb cluster
+	#  we can remove this next line along with the explicit include
+	#  of reverse-proxy.php in wikitech.php.
 	'wikitech' => false,
 ],
 
