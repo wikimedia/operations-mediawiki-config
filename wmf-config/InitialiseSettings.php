@@ -20170,6 +20170,13 @@ $wgConf->settings = [
 	'votewiki' => false,
 ],
 
+'wmgDisableCirrusSearchJobsInRedis' => [
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'testwikidatawiki' => true,
+],
+
 'wmgUseCapiunto' => [
 	'default' => false,
 	'testwiki' => true,
