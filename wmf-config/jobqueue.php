@@ -47,20 +47,13 @@ if ( $wmgUseEventBus && $wmgDebugJobQueueEventBus ) {
 		$wgJobTypeConf['htmlCacheUpdate'] =
 		$wgJobTypeConf['MessageIndexRebuildJob'] =
 		$wgJobTypeConf['RecordLintJob'] =
+		$wgJobTypeConf['refreshLinks'] =
+		$wgJobTypeConf['refreshLinksDynamic'] =
+		$wgJobTypeConf['refreshLinksPrioritized'] =
 		$wgJobTypeConf['updateBetaFeaturesUserCounts'] =
 		$wgJobTypeConf['wikibase-addUsagesForPage'] =
 		$wgJobTypeConf['cdnPurge'] =
 			[ 'class' => 'JobQueueEventBus' ];
-	$wgJobTypeConf['refreshLinks'] =
-		$wgJobTypeConf['refreshLinksDynamic'] =
-		$wgJobTypeConf['refreshLinksPrioritized'] = [
-			'class' => 'JobQueueSecondTestQueue',
-			'mainqueue' => $jobQueueFederatedConfig,
-			'debugqueue' => [
-				'class' => 'JobQueueEventBus'
-			],
-			'readonly' => true,
-		];
 	if ( isset( $wmgDisableCirrusSearchJobsInRedis ) && $wmgDisableCirrusSearchJobsInRedis ) {
 		$wgJobTypeConf['cirrusSearchCheckerJob'] =
 			$wgJobTypeConf['cirrusSearchDeleteArchive'] =
