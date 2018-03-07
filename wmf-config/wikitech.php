@@ -167,3 +167,23 @@ $wgOpenStackManagerProxyGateways = [ 'eqiad' => '208.80.155.156' ];
 if ( file_exists( '/etc/mediawiki/WikitechPrivateSettings.php' ) ) {
 	require_once '/etc/mediawiki/WikitechPrivateSettings.php';
 }
+
+# This next conditional bit is meant to select wikitech on labweb but
+# not on silver.  After Silver is switched off the conditional
+# can be removed as well as the first two lines here, in favor
+# of just setting wmgUseClusterSquid to true on wikitech.
+if ( defined( 'HHVM_VERSION' ) ) {
+	$wgUseSquid = true;
+	require "$wmfConfigDir/reverse-proxy.php";
+
+	# Wikitech on labweb is behind the misc-web varnishes so we need a different
+	# multicast IP for cache invalidation.  This file is loaded
+	# after the standard MW equivalent (in reverse-proxy.php)
+	# so we can just override it here.
+	$wgHTCPRouting = [
+		'' => [
+			'host' => '239.128.0.115',
+			'port' => 4827
+		]
+	];
+}
