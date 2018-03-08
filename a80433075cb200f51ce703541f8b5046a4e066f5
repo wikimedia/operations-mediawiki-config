@@ -16,6 +16,24 @@
       "revId": "a80433075cb200f51ce703541f8b5046a4e066f5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "585858d3_181f4a96",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2018-03-08T18:53:05Z",
+      "side": 1,
+      "message": "One non-obvious part of a section config is that the 0-indexed entry is the read-write connection and all the following entries are read-only connections. If we put the db2037 host in the eqiad config then it would be used for all read-only connections by default which is not a good outcome.\n\nI\u0027m not sure about the safety of treating db2037 as primary even when serving from codfw as it would imply master-master sync or at least controlled failover back to eqiad. That may be a bad assumption however which would mean that we should remove db1073 here.",
+      "parentUuid": "95e3b2ea_70e8032d",
+      "revId": "a80433075cb200f51ce703541f8b5046a4e066f5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
