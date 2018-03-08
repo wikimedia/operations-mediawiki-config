@@ -8203,6 +8203,9 @@ $wgConf->settings = [
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'rollbacker' => [ 'rollback' => true ],
 	],
+	'+arwikinews' => [
+		'rollbacker' => [ 'rollback' => true ], // T189206
+	],
 	'+azbwiki' => [
 		'autopatrolled' => [ // T109755
 			'autopatrol' => true, // T109755
@@ -9987,6 +9990,9 @@ $wgConf->settings = [
 	'+arwiktionary' => [
 		'sysop' => [ 'autopatrolled', 'rollbacker' ],
 	],
+	'+arwikinews' => [
+		'sysop' => [ 'rollbacker', ], // T189206
+	],
 	'+azbwiki' => [
 		'bureaucrat' => [
 			'interface-editor', // T109755
@@ -10721,6 +10727,9 @@ $wgConf->settings = [
 	],
 	'+arwiktionary' => [
 		'sysop' => [ 'autopatrolled', 'rollbacker' ],
+	],
+	'+arwikinews' => [
+		'sysop' => [ 'rollbacker', ], // T189206
 	],
 	'+azbwiki' => [
 		'bureaucrat' => [
