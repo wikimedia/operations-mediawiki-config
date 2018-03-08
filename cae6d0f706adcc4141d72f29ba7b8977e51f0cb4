@@ -46,6 +46,30 @@
       "revId": "cae6d0f706adcc4141d72f29ba7b8977e51f0cb4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a6338144_116976e5",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 20476,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-03-08T04:04:22Z",
+      "side": 1,
+      "message": "Aye, good point. \n\nThere was an effort at some point to rename wmg* to wgWMF* to reduce confusion. Would be good to pick that up again (T45956).\n\nThe current names are too similar, but they do need to remain separate, though.  \n\nThe \u0027wg*\u0027 vars are settings for MediaWiki (either core, or an extension). Such setting presumably has a default within MediaWiki, and is also used by MediaWiki.\n\nThe \u0027wmg*\u0027 vars, on the other hand, are purely for communication within wmf-config. In this case, the wmgUseNavigationTiming is set here, and then consumed by CommonSettings.php. It\u0027s not used elsewhere.",
+      "parentUuid": "1aea4b40_6b6b7886",
+      "range": {
+        "startLine": 20476,
+        "startChar": 0,
+        "endLine": 20476,
+        "endChar": 25
+      },
+      "revId": "cae6d0f706adcc4141d72f29ba7b8977e51f0cb4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
