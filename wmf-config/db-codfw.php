@@ -180,7 +180,8 @@ $wgLBFactoryConf = [
 	],
 
 	'm5' => [
-		'm5-master' => 1,
+		'db1073' => 1,
+		'db2037' => 1,
 	],
 	'labtestweb2001' => [
 		'labtestweb2001' => 1,
@@ -501,6 +502,7 @@ $wgLBFactoryConf = [
 	'db1001' => '10.64.0.5', # do not remove or comment out
 	'db1009' => '10.64.0.13', # do not remove or comment out
 	'db1020' => '10.64.16.9', # do not remove or comment out
+	'db1073' => '10.64.16.79', # do not remove or comment out
 	'db1043' => '10.64.16.32', # do not remove or comment out
 	'db1047' => '10.64.16.36', # do not remove or comment out
 	'db1051' => '10.64.16.76', # do not remove or comment out
@@ -586,6 +588,7 @@ $wgLBFactoryConf = [
 	'db2034' => '10.192.0.87', # do not remove or comment out
 	'db2035' => '10.192.32.6', # do not remove or comment out
 	'db2036' => '10.192.32.7', # do not remove or comment out
+	'db2037' => '10.192.32.8', # do not remove or comment out
 	'db2038' => '10.192.32.9', # do not remove or comment out
 	'db2039' => '10.192.32.10', # do not remove or comment out
 	'db2040' => '10.192.32.11', # do not remove or comment out
@@ -646,7 +649,6 @@ $wgLBFactoryConf = [
 	'db2091:3314' => '10.192.0.10:3314', # do not remove or comment out
 	'virt1000' => '208.80.154.18', # do not remove or comment out
 	'silver' => '208.80.154.136', # do not remove or comment out
-	'm5-master' => '10.64.16.79', # do not remove or comment out
 	'labtestweb2001' => '208.80.153.14', # do not remove or comment out
 ],
 
