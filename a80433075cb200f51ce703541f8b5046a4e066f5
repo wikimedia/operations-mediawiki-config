@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "95e3b2ea_70e8032d",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2018-03-08T18:48:20Z",
+      "side": 1,
+      "message": "I\u0027d expect to either have only the codfw host here, or both hosts for both eqiad and codfw",
+      "revId": "a80433075cb200f51ce703541f8b5046a4e066f5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
