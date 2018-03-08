@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "99f3e89d_c7cc9ceb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-03-08T11:58:13Z",
+      "side": 1,
+      "message": "we don\u0027t usually put that, but I guess that\u0027s okay to leave it",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 44
+      },
+      "revId": "c000e1c8410f4be99dfc0d2c7fb84843ced544c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
