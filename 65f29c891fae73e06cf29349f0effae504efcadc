@@ -16,6 +16,24 @@
       "revId": "65f29c891fae73e06cf29349f0effae504efcadc",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d0fc3905_e55a3ba3",
+        "filename": "wmf-config/etcd.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1616
+      },
+      "writtenOn": "2018-03-08T13:25:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e6bb63e5_2d7526ae",
+      "revId": "65f29c891fae73e06cf29349f0effae504efcadc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
