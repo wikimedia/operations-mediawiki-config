@@ -18057,8 +18057,7 @@ $wgConf->settings = [
 ],
 
 'wgNavigationTimingOversampleFactor' => [
-	'default' => false,
-	'testwiki' => [
+	'default' => [
 		'geo' => [
 			'SG' => 100
 		],
