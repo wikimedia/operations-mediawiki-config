@@ -351,6 +351,7 @@ $wgConf->settings = [
 	'hiwikiquote' => 'Asia/Kolkata', // T126185
 	'hiwikiversity' => 'Asia/Kolkata', // T168765
 	'hiwikivoyage' => 'Asia/Kolkata', // T173013
+	'hiwikimedia' => 'Asia/Kolkata',
 	'hrwiki' => 'Europe/Berlin',
 	'hrwikibooks' => 'Europe/Zagreb',
 	'hrwikiquote' => 'Europe/Berlin',
@@ -1146,6 +1147,7 @@ $wgConf->settings = [
 	'ecwikimedia' => '/static/images/project-logos/ecwikimedia.png', // T135521
 	'etwikimedia' => '/static/images/project-logos/etwikimedia.png',
 	'fiwikimedia' => '/static/images/project-logos/fiwikimedia.png',
+	'hiwikimedia' => '/static/imgages/project-logos/hiwikimedia.png',
 	'mkwikimedia' => '/static/images/project-logos/mkwikimedia.png',
 	'mxwikimedia' => '/static/images/project-logos/mxwikimedia.png',
 	'nlwikimedia' => '/static/images/project-logos/nlwikimedia.png',
@@ -1672,6 +1674,7 @@ $wgConf->settings = [
 	# Chapter wikis
 	'amwikimedia' => [ '1.5x' => '/static/images/project-logos/amwikimedia-1.5x.png', '2x' => '/static/images/project-logos/amwikimedia-2x.png' ], // T176042
 	'ecwikimedia' => [ '1.5x' => '/static/images/project-logos/ecwikimedia-1.5x.png', '2x' => '/static/images/project-logos/ecwikimedia-2x.png' ], // T135521
+	'hiwikimedia' => [ '1.5x' => '/static/images/project-logos/hiwikimedia-1.5x.png', '2x' => '/static/images/project-logos/hiwikimedia-2x.png' ],
 	'maiwikimedia' => [ '1.5x' => '/static/images/project-logos/maiwikimedia-1.5x.png', '2x' => '/static/images/project-logos/maiwikimedia-2x.png' ],
 	'ptwikimedia' => [ '1.5x' => '/static/images/project-logos/ptwikimedia-1.5x.png', '2x' => '/static/images/project-logos/ptwikimedia-2x.png' ], // T126832
 	'trwikimedia' => [ '1.5x' => '/static/images/project-logos/trwikimedia-1.5x.png', '2x' => '/static/images/project-logos/trwikimedia-2x.png' ],
@@ -1904,6 +1907,7 @@ $wgConf->settings = [
 	'fdcwiki' => '//fdc.wikimedia.org',
 	'foundationwiki' => '//wikimediafoundation.org',
 	'grantswiki' => '//grants.wikimedia.org',
+	'hiwikimedia' => '//hi.wikimedia.org',
 	'iegcomwiki' => '//iegcom.wikimedia.org',
 	'incubatorwiki' => '//incubator.wikimedia.org',
 	'internalwiki' => '//internal.wikimedia.org',
@@ -1993,6 +1997,7 @@ $wgConf->settings = [
 	'fdcwiki' => 'https://fdc.wikimedia.org',
 	'foundationwiki' => 'https://wikimediafoundation.org',
 	'grantswiki' => 'https://grants.wikimedia.org',
+	'hiwikimedia' => 'https://hi.wikimedia.org',
 	'iegcomwiki' => 'https://iegcom.wikimedia.org',
 	'incubatorwiki' => 'https://incubator.wikimedia.org',
 	'internalwiki' => 'https://internal.wikimedia.org',
@@ -17220,6 +17225,7 @@ $wgConf->settings = [
 	'collabwiki' => true,
 	'commonswiki' => true, // T50620
 	'frwiktionary' => true, // T138972
+	'hiwikimedia' => true,
 	'incubatorwiki' => true, // T36213
 	'legalteamwiki' => true, // T64610
 	'maiwikimedia' => true,
