@@ -700,7 +700,7 @@ $wgLBFactoryConf = [
 	# es3
 	'cluster25' => [
 		'10.64.16.187' => 0, # es1014, B1 11TB 128GB, master
-		'10.64.48.114' => 2, # es1017, D1 11TB 128GB
+		'10.64.48.114' => 1, # es1017, D1 11TB 128GB
 		'10.64.48.116' => 1, # es1019, D8 11TB 128GB
 	],
 	# ExtensionStore shard1
