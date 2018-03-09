@@ -5017,6 +5017,7 @@ $wgConf->settings = [
 	'wuuwiki' => 7 * 86400, // T122476
 	'zhwiki' => 7 * 3600 * 24, // T16624
 	'zhwikibooks' => 7 * 3600 * 24, // T185182
+	'zhwikiquote' => 7 * 86400, // T189289
 	'zhwiktionary' => 7 * 86400, // T187018
 ],
 
@@ -5052,6 +5053,7 @@ $wgConf->settings = [
 	'wuuwiki' => 10, // T122476
 	'zhwiki' => 50, // T16624
 	'zhwikibooks' => 10, // T185182
+	'zhwikiquote' => 10, // T189289
 	'zhwiktionary' => 10, // T187018
 	'zh_yuewiki' => 10, // T32538
 ],
@@ -9867,6 +9869,10 @@ $wgConf->settings = [
 		'rollbacker' => [ 'rollback' => true ], // T29268
 		'flood' => [ 'bot' => true ], // T54546
 	],
+	'+zhwikiquote' => [ // T189289
+		'autoconfirmed' => [ 'suppressredirect' => true ],
+		'flood' => [ 'bot' => true ],
+	],
 	'zhwikivoyage' => [ // T62328
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'patroller' => [ 'patrol' => true, 'rollback' => true ],
@@ -10685,6 +10691,9 @@ $wgConf->settings = [
 			'flood', // T54546
 		],
 	],
+	'+zhwikiquote' => [
+		'sysop' => [ 'flood' ], // T189289
+	],
 	'+zhwikivoyage' => [
 		'sysop' => [ 'autopatrolled', 'confirmed', 'patroller', 'transwiki' ], // T62085, T62328
 	],
@@ -11460,6 +11469,9 @@ $wgConf->settings = [
 			'rollbacker',
 			'flood', // T54546
 		],
+	],
+	'+zhwikiquote' => [
+		'sysop' => [ 'flood' ], // T189289
 	],
 	'+zhwikivoyage' => [
 		'sysop' => [ 'autopatrolled', 'confirmed', 'patroller', 'transwiki' ], // T62085, T62328
@@ -13201,6 +13213,7 @@ $wgConf->settings = [
 	],
 	'zhwikibooks' => [ 'flood' => [ 'flood' ] ], // T185182
 	'zhwikinews' => [ 'flood' => [ 'flood' ] ], // T54546
+	'zhwikiquote' => [ 'flood' => [ 'flood' ] ], // T189289
 	'zhwiktionary' => [ 'flood' => [ 'flood' ] ], // T187018
 ],
 
