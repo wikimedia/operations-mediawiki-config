@@ -4237,8 +4237,7 @@ $wgConf->settings = [
 		'WP' => NS_PROJECT,       // T166035
 		'Участница' => NS_USER,                    // T14320
 		'Обсуждение_участницы' => NS_USER_TALK,
-		'Wikiproject' => 104,                      // T36124
-		'Wikiproject_talk' => 105,
+		'ОПРО' => 105,                             // T189277
 		'Arbcom' => 106,                           // T36527
 	],
 	'+ruwikibooks' => [
