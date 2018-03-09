@@ -132,10 +132,10 @@ $wgLBFactoryConf = [
 	],
 	's4' => [
 		'db2051'      => 0,   # B8 2.9TB 160GB, master
-		'db2058'      => 50,  # D6 3.3TB 160GB, dump (inactive), vslow
-		'db2065'      => 200, # D6 3.3TB 160GB, api
+		# 'db2058'      => 50,  # D6 3.3TB 160GB, dump (inactive), vslow
+		'db2065'      => 200, # D6 3.3TB 160GB, api # temporary vslow
 		'db2073'      => 400, # C6 3.3TB 512GB # Compressed InnoDB
-		'db2084:3314' => 1,   # D6 3.3TB 512GB # rc, log: s4 and s5
+		# 'db2084:3314' => 1,   # D6 3.3TB 512GB # rc, log: s4 and s5
 		'db2090'      => 400, # C5 3.3TB 512GB # Compressed InnoDB
 		'db2091:3314' => 1,   # A8 3.3TB 512GB # rc, log: s2 and s4
 	],
@@ -145,7 +145,7 @@ $wgLBFactoryConf = [
 		'db2059'      => 100, # D6 3.3TB 160GB, api
 		'db2066'      => 400, # D6 3.3TB 160GB
 		'db2075'      => 400, # A1 3.3TB 512GB # Compressed InnoDB
-		'db2084:3315' => 1, # D6 3.3TB 512GB # rc, log: s4 and s5
+		# 'db2084:3315' => 1, # D6 3.3TB 512GB # rc, log: s4 and s5
 		'db2089:3315' => 1, # A3 3.3TB 512GB # rc, log: s5 and s6
 	],
 	's6' => [
@@ -335,30 +335,30 @@ $wgLBFactoryConf = [
 	],
 	's4' => [
 		'watchlist' => [
-			'db2084:3314' => 1,
+			# 'db2084:3314' => 1,
 			'db2091:3314' => 1,
 		],
 		'recentchanges' => [
-			'db2084:3314' => 1,
+			# 'db2084:3314' => 1,
 			'db2091:3314' => 1,
 		],
 		'recentchangeslinked' => [
-			'db2084:3314' => 1,
+			# 'db2084:3314' => 1,
 			'db2091:3314' => 1,
 		],
 		'contributions' => [
-			'db2084:3314' => 1,
+			# 'db2084:3314' => 1,
 			'db2091:3314' => 1,
 		],
 		'logpager' => [
-			'db2084:3314' => 1,
+			# 'db2084:3314' => 1,
 			'db2091:3314' => 1,
 		],
 		'dump' => [
-			'db2058' => 1,
+			'db2065' => 1,
 		],
 		'vslow' => [
-			'db2058' => 1,
+			'db2065' => 1,
 		],
 		'api' => [
 			'db2065' => 1,
@@ -366,23 +366,23 @@ $wgLBFactoryConf = [
 	],
 	's5' => [
 		'watchlist' => [
-			'db2084:3315' => 1,
+			# 'db2084:3315' => 1,
 			'db2089:3315' => 1,
 		],
 		'recentchanges' => [
-			'db2084:3315' => 1,
+			# 'db2084:3315' => 1,
 			'db2089:3315' => 1,
 		],
 		'recentchangeslinked' => [
-			'db2084:3315' => 1,
+			# 'db2084:3315' => 1,
 			'db2089:3315' => 1,
 		],
 		'contributions' => [
-			'db2084:3315' => 1,
+			# 'db2084:3315' => 1,
 			'db2089:3315' => 1,
 		],
 		'logpager' => [
-			'db2084:3315' => 1,
+			# 'db2084:3315' => 1,
 			'db2089:3315' => 1,
 		],
 		'dump' => [
