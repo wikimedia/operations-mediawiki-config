@@ -34,6 +34,23 @@
       "revId": "a80433075cb200f51ce703541f8b5046a4e066f5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "852034c9_d93c4342",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 539,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-03-09T06:51:29Z",
+      "side": 1,
+      "message": "For consistency, I would expect the db2037 line also added here (see how we also have codfw hosts on this array)",
+      "revId": "a80433075cb200f51ce703541f8b5046a4e066f5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
