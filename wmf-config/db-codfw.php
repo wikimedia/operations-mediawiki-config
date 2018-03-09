@@ -16,7 +16,7 @@ $wmgParserCacheDBs = [
 $wmgOldExtTemplate = [
 	'10.192.16.171' => 1, # es2011, B1 11TB 128GB
 	'10.192.32.129' => 1, # es2012, C1 11TB 128GB
-	# '10.192.48.40'  => 1, # es2013, D1 11TB 128GB
+	'10.192.48.40'  => 1, # es2013, D1 11TB 128GB
 ];
 
 $wgLBFactoryConf = [
