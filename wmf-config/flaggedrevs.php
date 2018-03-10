@@ -41,7 +41,7 @@ if ( $wgDBname == 'alswiki' ) {
 	$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 } elseif ( $wgDBname == 'arwiki' ) {
 	$wgFlaggedRevsWhitelist = [ 'الصفحة_الرئيسية' ];
-	$wgFlaggedRevsNamespaces = [ NS_MAIN ]; // T21332, T148603
+	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, [ 100, 104 ] ); // T21332
 } elseif ( $wgDBname == 'bewiki' ) {
 	$wgFlaggedRevsOverride = false;
 	$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
@@ -50,7 +50,7 @@ if ( $wgDBname == 'alswiki' ) {
 	$wgGroupPermissions['autoeditor']['autoconfirmed'] = true;
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
 } elseif ( $wgDBname == 'bnwiki' ) { // T30717
-	$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_PROJECT ];
+	$wgFlaggedRevsNamespaces = [ NS_MAIN ];
 	# Show only on a per-page basis
 	$wgFlaggedRevsOverride = false;
 	# We have only one tag with one level
