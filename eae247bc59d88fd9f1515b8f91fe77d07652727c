@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "62d146e9_d59321ac",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-03-10T16:17:40Z",
+      "side": 1,
+      "message": "Not sure if I should add `if ( $wmgUseFlow ) { ...` or this will also work.",
+      "revId": "eae247bc59d88fd9f1515b8f91fe77d07652727c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
