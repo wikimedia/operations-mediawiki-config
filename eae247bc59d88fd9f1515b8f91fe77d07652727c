@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "7695ead3_bb0bc94b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2018-03-11T15:09:01Z",
+      "side": 1,
+      "message": "Commit message may aswell say IP data.. As we\u0027re not preventing collection of any other \"private\" data",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 56
+      },
+      "revId": "eae247bc59d88fd9f1515b8f91fe77d07652727c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "62d146e9_d59321ac",
         "filename": "wmf-config/CommonSettings-labs.php",
         "patchSetId": 4
