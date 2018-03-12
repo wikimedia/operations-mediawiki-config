@@ -140,13 +140,14 @@ $wgLBFactoryConf = [
 	],
 	's5' => [
 		'db1070' => 0,      # D1 2.8TB 160GB, master
-		'db1051' => 0,      # B3 2.8TB  96GB, vslow, dump in s5
+		# 'db1051' => 0,      # B3 2.8TB  96GB, vslow, dump in s5 # to be moved to m5
 		'db1082' => 300,    # A2 3.6TB 512GB, api # master for db1095
 		'db1096:3315' => 1, # A6 3.6TB 512GB, # rc, log: s5 and s6
 		'db1097:3315' => 1, # D1 3.6TB 512GB, # rc, log: s4 and s5
 		'db1100' => 50,     # C2 3.6TB 512GB, old master #api # candidate master
 		'db1106' => 500,    # D3 3.6TB 512GB
 		'db1110' => 500,    # C3 3.6TB 512GB
+		'db1113:3315' => 1, # B8 3.6TB 512GB, # vslow, dump: s5 and s6
 	],
 	's6' => [
 		'db1061' => 0,      # C3 2.8TB 128GB, master
@@ -380,10 +381,10 @@ $wgLBFactoryConf = [
 	],
 	's5' => [
 		'vslow' => [
-			'db1051' => 1,
+			'db1113:3315' => 1,
 		],
 		'dump' => [
-			'db1051' => 1,
+			'db1113:3315' => 1,
 		],
 		'api' => [
 			'db1082' => 1,
