@@ -485,20 +485,6 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
-		'wmgUseArticleCreationWorkflow' => [
-			'default' => false,
-			'enwiki' => true,
-		],
-
-		'wgArticleCreationWorkflows' => [
-			'default' => [
-				[
-					'namespaces' => [ 0 ],
-					'excludeRight' => 'autoconfirmed'
-				],
-			],
-		],
-
 		// Ensure ?action=credits isn't break and allow to work
 		// to cache this information. See T130820.
 		'wgMaxCredits' => [

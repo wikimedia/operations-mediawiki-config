@@ -20282,25 +20282,10 @@ $wgConf->settings = [
 
 'wmgUseArticleCreationWorkflow' => [
 	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true, // T175302
-	'enwiki' => true,
 ],
 
 'wgArticleCreationWorkflows' => [
 	'default' => [],
-	'test2wiki' => [
-		[
-			'namespaces' => [ 0 ],
-			'excludeRight' => 'autoconfirmed'
-		],
-	],
-	'enwiki' => [
-		[
-			'namespaces' => [ 0 ],
-			'excludeRight' => 'autoconfirmed'
-		],
-	],
 ],
 
 'wgArticleCreationLandingPage' => [
