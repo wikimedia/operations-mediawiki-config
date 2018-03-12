@@ -18213,6 +18213,11 @@ $wgConf->settings = [
 	'testwiki' => 'testwikidatawiki0'
 ],
 
+'wmgWikibaseAllowLocalShortDesc' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 'wmgWikibaseEnableData' => [
 	'default' => true,
 	'wiktionary' => false,
