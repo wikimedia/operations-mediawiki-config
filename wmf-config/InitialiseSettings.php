@@ -737,7 +737,7 @@ $wgConf->settings = [
 	'sgwiki' => '/static/images/project-logos/sgwiki.png',  // T51125
 	'shwiki' => '/static/images/project-logos/shwiki.png',  // T51125
 	'siwiki' => '/static/images/project-logos/siwiki.png',
-	'simplewiki' => '/static/images/project-logos/simplewiki.png',
+	'simplewiki' => '/static/images/project-logos/simplewiki.png', // T181448
 	'skwiki' => '/static/images/project-logos/skwiki.png',
 	'slwiki' => '/static/images/project-logos/slwiki.png',
 	'smwiki' => '/static/images/project-logos/smwiki.png',  // T51125
@@ -1442,6 +1442,7 @@ $wgConf->settings = [
 	'sewiki' => [ '1.5x' => '/static/images/project-logos/sewiki-1.5x.png', '2x' => '/static/images/project-logos/sewiki-2x.png' ], // T150618
 	'sgwiki' => [ '1.5x' => '/static/images/project-logos/sgwiki-1.5x.png', '2x' => '/static/images/project-logos/sgwiki-2x.png' ], // T150618
 	'shwiki' => [ '1.5x' => '/static/images/project-logos/shwiki-1.5x.png', '2x' => '/static/images/project-logos/shwiki-2x.png' ], // T150618
+	'simplewiki' => [ '1.5x' => '/static/images/project-logos/simplewiki-1.5x.png', '2x' => '/static/images/project-logos/simplewiki-2x.png' ], // T181448
 	'siwiki' => [ '1.5x' => '/static/images/project-logos/siwiki-1.5x.png', '2x' => '/static/images/project-logos/siwiki-2x.png' ], // T150618
 	'skwiki' => [ '1.5x' => '/static/images/project-logos/skwiki-1.5x.png', '2x' => '/static/images/project-logos/skwiki-2x.png' ], // T150618
 	'slwiki' => [ '1.5x' => '/static/images/project-logos/slwiki-1.5x.png', '2x' => '/static/images/project-logos/slwiki-2x.png' ], // T150618
