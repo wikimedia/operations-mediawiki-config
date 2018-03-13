@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "22e32164_f47717e2",
+        "filename": "dblists/flow.dblist",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-03-13T13:43:20Z",
+      "side": 1,
+      "message": "Please put the wiki on nonflow.dblist as per T188812. The same for all newly created wikis until the patch by Nemo_bis is merged.",
+      "revId": "094343a0323b1b67dd3ffa43cf91e7904e109a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
