@@ -1065,6 +1065,7 @@ $wgConf->settings = [
 	'cywikisource' => '/static/images/project-logos/cywikisource.png',  // T58807
 	'dewikisource' => '/static/images/project-logos/dewikisource.png',
 	'elwikisource' => '/static/images/project-logos/elwikisource.png',
+	'euwikisource' => '/static/images/project-logos/euwikisource.png',
 	'eowikisource' => '/static/images/project-logos/eowikisource.png',
 	'etwikisource' => '/static/images/project-logos/etwikisource.png',
 	'fawikisource' => '/static/images/project-logos/fawikisource.png',
@@ -1636,6 +1637,7 @@ $wgConf->settings = [
 
 	# Wikisource
 	'cswikisource' => [ '1.5x' => '/static/images/project-logos/cswikisource-1.5x.png', '2x' => '/static/images/project-logos/cswikisource-2x.png' ], // T150618
+	'euwikisource' => [ '1.5x' => '/static/images/project-logos/euwikisource-1.5x.png', '2x' => '/static/images/project-logos/euwikisource-2x.png' ],
 	'nowikisource' => [ '1.5x' => '/static/images/project-logos/nowikisource-1.5x.png', '2x' => '/static/images/project-logos/nowikisource-2x.png' ], // T167192
 	'pawikisource' => [ '1.5x' => '/static/images/project-logos/pawikisource-1.5x.png', '2x' => '/static/images/project-logos/pawikisource-2x.png' ], // T149522
 	'srwikisource' => [ '1.5x' => '/static/images/project-logos/srwikisource-1.5x.png', '2x' => '/static/images/project-logos/srwikisource-2x.png' ], // T172268
@@ -2192,6 +2194,7 @@ $wgConf->settings = [
 	'etwikisource' => 'Vikitekstid',
 	'etwikiquote' => 'Vikitsitaadid',
 	'etwiktionary' => 'Vikisõnastik',
+	'euwikisource' => 'Wikiteka',
 	'execwiki' => 'Wikimedia Executive',
 	'extwiki' => 'Güiquipeya',
 	'fawiki' => 'ویکی‌پدیا',
