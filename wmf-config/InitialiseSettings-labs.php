@@ -687,208 +687,208 @@ function wmfLabsSettings() {
 			'default' => [],
 			'enwiki' => [
 				'damaging' => [
-					'likelygood' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.99' ],
-					'maybebad' => [ 'min' => 'max recall @ precision >= 0.15', 'max' => 1 ],
-					'likelybad' => [ 'min' => 'max recall @ precision >= 0.45', 'max' => 1 ],
+					'likelygood' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.99' ],
+					'maybebad' => [ 'min' => 'maximum recall @ precision >= 0.15', 'max' => 1 ],
+					'likelybad' => [ 'min' => 'maximum recall @ precision >= 0.45', 'max' => 1 ],
 					// verylikelybad uses default
 				],
 				'goodfaith' => [
-					'likelygood' => [ 'min' => 'max recall @ precision >= 0.99', 'max' => 1 ],
-					'maybebad' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.15' ],
+					'likelygood' => [ 'min' => 'maximum recall @ precision >= 0.99', 'max' => 1 ],
+					'maybebad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.15' ],
 					// likelybad uses default
-					'verylikelybad' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.9' ],
+					'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.9' ],
 				],
 			],
 			'simplewiki' => [
 				// Same as enwiki
 				'damaging' => [
-					'likelygood' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.99' ],
-					'maybebad' => [ 'min' => 'max recall @ precision >= 0.15', 'max' => 1 ],
-					'likelybad' => [ 'min' => 'max recall @ precision >= 0.45', 'max' => 1 ],
+					'likelygood' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.99' ],
+					'maybebad' => [ 'min' => 'maximum recall @ precision >= 0.15', 'max' => 1 ],
+					'likelybad' => [ 'min' => 'maximum recall @ precision >= 0.45', 'max' => 1 ],
 					// verylikelybad uses default
 				],
 				'goodfaith' => [
-					'likelygood' => [ 'min' => 'max recall @ precision >= 0.99', 'max' => 1 ],
-					'maybebad' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.15' ],
+					'likelygood' => [ 'min' => 'maximum recall @ precision >= 0.99', 'max' => 1 ],
+					'maybebad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.15' ],
 					// likelybad uses default
-					'verylikelybad' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.9' ],
+					'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.9' ],
 				],
 			],
 			'plwiki' => [
 				'damaging' => [
 					// likelygood uses default
 					'maybebad' => false,
-					'likelybad' => [ 'min' => 'max recall @ precision >= 0.75', 'max' => 1 ],
-					'verylikelybad' => [ 'min' => 'max recall @ precision >= 0.98', 'max' => 1 ],
+					'likelybad' => [ 'min' => 'maximum recall @ precision >= 0.75', 'max' => 1 ],
+					'verylikelybad' => [ 'min' => 'maximum recall @ precision >= 0.98', 'max' => 1 ],
 				],
 				'goodfaith' => [
 					// likelygood uses default
 					'maybebad' => false,
 					'likelybad' => false,
-					'verylikelybad' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.98' ],
+					'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.98' ],
 				],
 			],
 			'ptwiki' => [
 				'damaging' => [
-					'likelygood' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.99' ],
+					'likelygood' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.99' ],
 					// maybebad, likelybad, verylikelybad use defaults
 				],
 				'goodfaith' => [
 					// likelygood, maybebad, likelybad use defaults
-					'verylikelybad' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.9' ],
+					'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.9' ],
 				],
 			],
 			'cswiki' => [
 				'damaging' => [
 					// likelygood, maybebad, likelybad use defaults
-					'verylikelybad' => [ 'min' => 'max recall @ precision >= 0.98', 'max' => 1 ],
+					'verylikelybad' => [ 'min' => 'maximum recall @ precision >= 0.98', 'max' => 1 ],
 				],
 				'goodfaith' => [
 					// likelygood, maybebad, likelybad use defaults
-					'verylikelybad' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.98' ],
+					'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.98' ],
 				],
 			],
 			'fawiki' => [
 				'damaging' => [
 					// likelygood uses default
-					'maybebad' => [ 'min' => 'max recall @ precision >= 0.15', 'max' => 1 ],
+					'maybebad' => [ 'min' => 'maximum recall @ precision >= 0.15', 'max' => 1 ],
 					'likelybad' => false,
-					'verylikelybad' => [ 'min' => 'max recall @ precision >= 0.6', 'max' => 1 ],
+					'verylikelybad' => [ 'min' => 'maximum recall @ precision >= 0.6', 'max' => 1 ],
 				],
 				'goodfaith' => [
 					// likelygood uses default
-					'maybebad' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.15' ],
-					'likelybad' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.45' ],
-					'verylikelybad' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.75' ],
+					'maybebad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.15' ],
+					'likelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.45' ],
+					'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.75' ],
 				],
 			],
 			'nlwiki' => [
 				'damaging' => [
-					'likelygood' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.99' ],
+					'likelygood' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.99' ],
 					// maybebad, likelybad, verylikelybad use defaults
 				],
 				'goodfaith' => [
 					// likelygood, maybebad, likelybad use defaults
-					'verylikelybad' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.9' ],
+					'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.9' ],
 				],
 			],
 			'ruwiki' => [
 				'damaging' => [
-					'likelygood' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.99' ],
+					'likelygood' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.99' ],
 					// maybebad uses default
-					'likelybad' => [ 'min' => 'max recall @ precision >= 0.45', 'max' => 1 ],
-					'verylikelybad' => [ 'min' => 'max recall @ precision >= 0.75', 'max' => 1 ],
+					'likelybad' => [ 'min' => 'maximum recall @ precision >= 0.45', 'max' => 1 ],
+					'verylikelybad' => [ 'min' => 'maximum recall @ precision >= 0.75', 'max' => 1 ],
 				],
 				'goodfaith' => [
 					// likelygood uses default
-					'maybebad' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.15' ],
-					'likelybad' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.45' ],
-					'verylikelybad' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.75' ],
+					'maybebad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.15' ],
+					'likelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.45' ],
+					'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.75' ],
 				],
 			],
 			'trwiki' => [
 				'damaging' => [
 					// likelygood, maybebad use defaults
-					'likelybad' => [ 'min' => 'max recall @ precision >= 0.45', 'max' => 1 ],
-					'verylikelybad' => [ 'min' => 'max recall @ precision >= 0.75', 'max' => 1 ],
+					'likelybad' => [ 'min' => 'maximum recall @ precision >= 0.45', 'max' => 1 ],
+					'verylikelybad' => [ 'min' => 'maximum recall @ precision >= 0.75', 'max' => 1 ],
 				],
 				'goodfaith' => [
 					// likelygood, maybebad use defaults
-					'likelybad' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.45' ],
-					'verylikelybad' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.75' ],
+					'likelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.45' ],
+					'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.75' ],
 				],
 			],
 			'wikidatawiki' => [
 				'damaging' => [
 					// likelygood uses default
 					'maybebad' => false,
-					'likelybad' => [ 'min' => 'max recall @ precision >= 0.75', 'max' => 1 ],
+					'likelybad' => [ 'min' => 'maximum recall @ precision >= 0.75', 'max' => 1 ],
 					// verylikelybad uses defaults
 				],
 				'goodfaith' => [
 					// likelygood uses default
 					'maybebad' => false,
 					// likelybad uses default
-					'verylikelybad' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.9' ],
+					'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.9' ],
 				],
 			],
 			'hewiki' => [
 				'damaging' => [
 					// likelygood uses default
 					'maybebad' => false,
-					'likelybad' => [ 'min' => 'max recall @ precision >= 0.45', 'max' => 1 ],
-					'verylikelybad' => [ 'min' => 'max recall @ precision >= 0.98', 'max' => 1 ],
+					'likelybad' => [ 'min' => 'maximum recall @ precision >= 0.45', 'max' => 1 ],
+					'verylikelybad' => [ 'min' => 'maximum recall @ precision >= 0.98', 'max' => 1 ],
 				],
 				'goodfaith' => [
 					// likelygood uses default
 					'maybebad' => false,
-					'likelybad' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.45' ],
-					'verylikelybad' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.99' ],
+					'likelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.45' ],
+					'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.99' ],
 				],
 			],
 			'etwiki' => [
 				'damaging' => [
 					// likelygood, maybebad, likelybad use defaults
-					'verylikelybad' => [ 'min' => 'max recall @ precision >= 0.98', 'max' => 1 ],
+					'verylikelybad' => [ 'min' => 'maximum recall @ precision >= 0.98', 'max' => 1 ],
 				],
 				'goodfaith' => [
 					// likelygood, maybebad, likelybad use defaults
-					'verylikelybad' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.9' ],
+					'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.9' ],
 				],
 			],
 			'fiwiki' => [
 				// damaging uses defaults for everything
 				'goodfaith' => [
 					// likelygood, maybebad, likelybad use defaults
-					'verylikelybad' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.9' ],
+					'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.9' ],
 				],
 			],
 			'frwiki' => [
 				'damaging' => [
 					// likelygood, maybebad, likelybad use defaults
-					'verylikelybad' => [ 'min' => 'max recall @ precision >= 0.85', 'max' => 1 ],
+					'verylikelybad' => [ 'min' => 'maximum recall @ precision >= 0.85', 'max' => 1 ],
 				],
 				'goodfaith' => [
 					// likelygood, maybebad, likelybad use defaults
-					'verylikelybad' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.9' ],
+					'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.9' ],
 				],
 			],
 			'sqwiki' => [
 				'damaging' => [
 					// HACK: use recall-based likelygood threshold because it has a higher precision than even precision=0.995
-					'likelygood' => [ 'min' => 0, 'max' => 'filter_rate @ recall >= 0.9' ],
+					'likelygood' => [ 'min' => 0, 'max' => 'maximum filter_rate @ recall >= 0.9' ],
 					// maybebad, likelybad, verylikelybad use defaults
 				],
 				'goodfaith' => [
 					// HACK: use recall-based likelygood threshold because it has a higher precision than even precision=0.995
-					'likelygood' => [ 'min' => 'filter_rate @ recall >= 0.9', 'max' => 1 ],
-					'maybebad' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.15' ],
-					'likelybad' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.45' ],
-					'verylikelybad' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.9' ],
+					'likelygood' => [ 'min' => 'maximum filter_rate @ recall >= 0.9', 'max' => 1 ],
+					'maybebad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.15' ],
+					'likelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.45' ],
+					'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.9' ],
 				],
 			],
 			'rowiki' => [
 				'damaging' => [
 					// likelygood, maybebad, likelybad use defaults
-					'verylikelybad' => [ 'min' => 'max recall @ precision >= 0.75', 'max' => 1 ],
+					'verylikelybad' => [ 'min' => 'maximum recall @ precision >= 0.75', 'max' => 1 ],
 				],
 				'goodfaith' => [
 					// HACK: use recall-based likelygood threshold because it has a higher precision than even precision=0.995
-					'likelygood' => [ 'min' => 'filter_rate @ recall >= 0.9', 'max' => 1 ],
+					'likelygood' => [ 'min' => 'maximum filter_rate @ recall >= 0.9', 'max' => 1 ],
 					// maybebad, likelybad use defaults
-					'verylikelybad' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.75' ],
+					'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.75' ],
 				],
 			],
 			'svwiki' => [
 				'damaging' => [
 					// likelygood, maybebad use defaults
-					'likelybad' => [ 'min' => 'max recall @ precision >= 0.75', 'max' => 1 ],
-					'verylikelybad' => [ 'min' => 'max recall @ precision >= 0.98', 'max' => 1 ],
+					'likelybad' => [ 'min' => 'maximum recall @ precision >= 0.75', 'max' => 1 ],
+					'verylikelybad' => [ 'min' => 'maximum recall @ precision >= 0.98', 'max' => 1 ],
 				],
 				'goodfaith' => [
-					'likelygood' => [ 'min' => 'max recall @ precision >= 0.999', 'max' => 1 ],
+					'likelygood' => [ 'min' => 'maximum recall @ precision >= 0.999', 'max' => 1 ],
 					// maybebad, likelybad use defaults
-					'verylikelybad' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.9' ],
+					'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.9' ],
 				],
 			],
 			'eswiki' => [
@@ -897,7 +897,7 @@ function wmfLabsSettings() {
 					// likelygood uses default
 					'maybebad' => false,
 					'likelybad' => false,
-					'verylikelybad' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.98' ],
+					'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.98' ],
 				],
 			],
 			'eswikibooks' => [
@@ -907,10 +907,10 @@ function wmfLabsSettings() {
 					// likelybad, verylikelybad use defaults
 				],
 				'goodfaith' => [
-					'likelygood' => [ 'min' => 'max recall @ precision >= 0.99', 'max' => 1 ],
+					'likelygood' => [ 'min' => 'maximum recall @ precision >= 0.99', 'max' => 1 ],
 					'maybebad' => false,
 					// likelybad uses default
-					'verylikelybad' => [ 'min' => 0, 'max' => 'max recall @ precision >= 0.9' ],
+					'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.9' ],
 				],
 			],
 		],
