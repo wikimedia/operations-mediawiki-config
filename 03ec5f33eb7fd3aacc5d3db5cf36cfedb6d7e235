@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4b6d329b_6736aeb5",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2018-03-13T07:45:20Z",
+      "side": 1,
+      "message": "vslow dump with high load doesn\u0027t work well because of the long running queries. Should we make it multi source or put as slow the old api node?",
+      "range": {
+        "startLine": 114,
+        "startChar": 14,
+        "endLine": 114,
+        "endChar": 17
+      },
+      "revId": "03ec5f33eb7fd3aacc5d3db5cf36cfedb6d7e235",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
