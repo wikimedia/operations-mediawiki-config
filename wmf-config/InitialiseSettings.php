@@ -564,6 +564,7 @@ $wgConf->settings = [
 	'ckbwiki' => '/static/images/project-logos/ckbwiki.png',
 	'cowiki' => '/static/images/project-logos/cowiki.png',  // T42285
 	'crhwiki' => '/static/images/project-logos/crhwiki.png',
+	'crwiki' => '/static/images/project-logos/crwiki.png',
 	'csbwiki' => '/static/images/project-logos/csbwiki.png',  // T42285
 	'cswiki' => '/static/images/project-logos/cswiki.png',
 	'cuwiki' => '/static/images/project-logos/cuwiki.png',
