@@ -29,3 +29,6 @@ wikiversions-labs.php
 /.tox
 mediawiki_config.egg-info
 __pycache__
+
+# scap stuff
+scap/log
