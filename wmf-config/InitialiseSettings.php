@@ -8204,6 +8204,9 @@ $wgConf->settings = [
 	'+arwikibooks' => [
 		'rollbacker' => [ 'rollback' => true ], // T185720
 	],
+	'+arwikiquote' => [
+		'rollbacker' => [ 'rollback' => true ], // T189732
+	],
 	'+arwikisource' => [
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'patroller' => [ 'patrol' => true ],
@@ -9994,6 +9997,9 @@ $wgConf->settings = [
 	'+arwikibooks' => [
 		'sysop' => [ 'rollbacker', ], // T185720
 	],
+	'+arwikiquote' => [
+		'sysop' => [ 'rollbacker', ], // T189732
+	],
 	'+arwikisource' => [
 		'sysop' => [ 'patroller', 'autopatrolled', 'rollbacker' ],
 	],
@@ -10731,6 +10737,9 @@ $wgConf->settings = [
 	],
 	'+arwikibooks' => [
 		'sysop' => [ 'rollbacker', ], // T185720
+	],
+	'+arwikiquote' => [
+		'sysop' => [ 'rollbacker', ], // T189732
 	],
 	'+arwikisource' => [
 		'sysop' => [ 'patroller', 'autopatrolled', 'rollbacker' ],
