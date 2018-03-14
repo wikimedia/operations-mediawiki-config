@@ -208,6 +208,71 @@ if ( $wmgUseWikibaseRepo ) {
 		'zh' => [ 'index' => true, 'query' => true ],
 	];
 
+	$wgWBRepoSettings['entitySearch']['defaultPrefixProfile'] = 'wikibase_config_prefix_query';
+	$wgWBRepoSettings['entitySearch']['defaultPrefixRescoreProfile'] = 'wikibase_config_prefix_rescore';
+	// Fine tuning of the completion search (main elastic query)
+	$wgWBRepoSettings['entitySearch']['prefixSearchProfilea'] = [
+		'wikibase_config_prefix_query' => [
+			'any' => 0.001,
+			'lang-exact' => 2,
+			'lang-folded' => 1.6,
+			'lang-prefix' => 1.1,
+			'space-discount' => 0.8,
+			'fallback-exact' => 1.9,
+			'fallback-folded' => 1.3,
+			'fallback-prefix' => 0.4,
+			'fallback-discount' => 0.9,
+		]
+	];
+
+	// Cirrus rescore settings
+	$wgWBRepoSettings['entitySearch']['rescoreProfiles'] = [
+		'wikibase_config_prefix_rescore' => [
+			'i18n_msg' => 'wikibase-rescore-profile-prefix',
+			'supported_namespaces' => 'all',
+			'rescore' => [
+				[
+					'window' => 8192,
+					'window_size_override' => 'EntitySearchRescoreWindowSize',
+					'query_weight' => 1.0,
+					'rescore_query_weight' => 1.0,
+					'score_mode' => 'total',
+					'type' => 'function_score',
+					'function_chain' => 'wikibase_config_entity_weight'
+				]
+			]
+		]
+	];
+
+	// Cirrus rescore function chains
+	$wgWBRepoSettings['entitySearch']['rescoreFunctionChains'] = [
+		'wikibase_config_entity_weight' => [
+			'score_mode' => 'sum',
+			'functions' => [
+				[
+					// Incoming links: k = 50
+					'type' => 'satu',
+					'weight' => '0.6',
+					'params' => [ 'field' => 'incoming_links', 'missing' => 0, 'a' => 2 , 'k' => 50 ]
+				],
+				[
+					// Site links: k = 20
+					'type' => 'satu',
+					'weight' => '0.4',
+					'params' => [ 'field' => 'sitelink_count', 'missing' => 0, 'a' => 2, 'k' => 20 ]
+				],
+				// Activate boosting by statement
+				// (requires configuration of ['entitySearch']['statementBoost'] )
+				/*
+				 [
+					'type' => 'statement_boost',
+					'weight' => '0.1',
+				 ]
+				 */
+			]
+		]
+	];
+
 	if ( is_array( $wgCirrusSearchSimilarityProfiles ) ) {
 		// TODO: have proper profile management in cirrus
 		$wgCirrusSearchSimilarityProfiles['wikibase_similarity'] = [
