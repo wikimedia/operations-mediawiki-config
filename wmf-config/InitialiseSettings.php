@@ -15305,6 +15305,7 @@ $wgConf->settings = [
 	'lawiki' => true, // T160844
 	'mswiki' => true, // T165247
 	'nowiki' => true, // T160362
+	'ptwiki' => true, // T189658
 	'rowiki' => true, // T187997
 
 	// Wiki families
