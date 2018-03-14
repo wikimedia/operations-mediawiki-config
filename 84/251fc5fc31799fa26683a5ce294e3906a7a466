@@ -1,0 +1,8 @@
+Code-Review+1: Framawiki <framawiki@tools.wmflabs.org>
+Code-Review+2: Zfilipin <zfilipin@wikimedia.org>
+Verified+2: jenkins-bot
+Submitted-by: jenkins-bot
+Submitted-at: Wed, 14 Mar 2018 13:04:29 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/417687
+Project: operations/mediawiki-config
+Branch: refs/heads/master
