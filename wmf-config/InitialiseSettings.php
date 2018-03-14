@@ -19895,16 +19895,6 @@ $wgConf->settings = [
 	'ukwikisource' => null,
 	'viwikisource' => null,
 
-	// Wikiversities
-	'arwikiversity' => null,
-	'cswikiversity' => null,
-	'dewikiversity' => null,
-	'frwikiversity' => null,
-	'itwikiversity' => null,
-	'ruwikiversity' => null,
-	'slwikiversity' => null,
-	'svwikiversity' => null,
-
 	// Shared and testing wikis
 	'betawikiversity' => null,
 	'commonswiki' => null,
