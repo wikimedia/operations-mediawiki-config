@@ -20275,14 +20275,6 @@ $wgConf->settings = [
 	'rtl' => false, // T170001
 ],
 
-'wmgUseArticleCreationWorkflow' => [
-	'default' => false,
-],
-
-'wgArticleCreationWorkflows' => [
-	'default' => [],
-],
-
 'wgArticleCreationLandingPage' => [
 	'default' => 'Project:New user landing page',
 ],

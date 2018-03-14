@@ -3,7 +3,6 @@ $IP/extensions/AbuseFilter/extension.json
 $IP/extensions/AdvancedSearch/extension.json
 $IP/extensions/AntiSpoof/extension.json
 $IP/extensions/ApiFeatureUsage/extension.json
-$IP/extensions/ArticleCreationWorkflow/extension.json
 $IP/extensions/ArticlePlaceholder/extension.json
 $IP/extensions/Babel/extension.json
 $IP/extensions/BetaFeatures/extension.json
