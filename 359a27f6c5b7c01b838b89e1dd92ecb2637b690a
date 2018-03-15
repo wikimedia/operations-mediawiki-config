@@ -22,6 +22,30 @@
       "revId": "359a27f6c5b7c01b838b89e1dd92ecb2637b690a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "909a85d0_60582cf7",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2018-03-15T18:24:41Z",
+      "side": 1,
+      "message": "indeed, good catch, thanks! :)",
+      "parentUuid": "167fa712_0fbea0e8",
+      "range": {
+        "startLine": 214,
+        "startChar": 55,
+        "endLine": 214,
+        "endChar": 56
+      },
+      "revId": "359a27f6c5b7c01b838b89e1dd92ecb2637b690a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
