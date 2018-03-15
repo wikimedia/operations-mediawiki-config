@@ -11848,12 +11848,6 @@ $wgConf->settings = [
 # SVG related @{
 'wgSVGConverter' => [
 	'default' => 'rsvg-secure',
-
-	// silver runs PHP 5.5 (not HHVM) on trusty, and therefore has the security
-	// patch by default (and no --no-external-files) so rsvg-secure is broken
-	//
-	// TODO: This can be removed when silver is turned off.
-	'wikitech' => 'rsvg-wikitech',
 ],
 'wgSVGConverterPath' => [
 	'default' => '/usr/bin',
@@ -20001,10 +19995,6 @@ $wgConf->settings = [
 
 'wmgUseClusterSquid' => [
 	'default'  => true,
-	# Fixme:  Once we've fully moved wikitech to the labweb cluster
-	#  we can remove this next line along with the explicit include
-	#  of reverse-proxy.php in wikitech.php.
-	'wikitech' => false,
 ],
 
 'wmgUseClusterFileBackend' => [
