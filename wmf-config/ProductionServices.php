@@ -109,9 +109,9 @@ $wmfAllServices['eqiad']['jobqueue_redis'] = [
 	'rdb1-6379' => 'rdb1001.eqiad.wmnet:6379',
 	'rdb1-6380' => 'rdb1001.eqiad.wmnet:6380',
 	'rdb1-6381' => 'rdb1001.eqiad.wmnet:6381',
-	'rdb2-6379' => 'rdb1003.eqiad.wmnet:6379',
-	'rdb2-6380' => 'rdb1003.eqiad.wmnet:6380',
-	'rdb2-6381' => 'rdb1003.eqiad.wmnet:6381',
+# 'rdb2-6379' => 'rdb1003.eqiad.wmnet:6379',
+# 'rdb2-6380' => 'rdb1003.eqiad.wmnet:6380',
+# 'rdb2-6381' => 'rdb1003.eqiad.wmnet:6381',
 	'rdb3-6379' => 'rdb1007.eqiad.wmnet:6379',
 	'rdb3-6380' => 'rdb1007.eqiad.wmnet:6380',
 	'rdb3-6381' => 'rdb1007.eqiad.wmnet:6381',
@@ -135,7 +135,7 @@ $wmfAllServices['codfw']['jobqueue_redis'] = [
 ];
 $wmfAllServices['eqiad']['jobqueue_aggregator'] = [
 	'rdb1001.eqiad.wmnet:6378', // preferred
-	'rdb1003.eqiad.wmnet:6378', // fallback
+# 'rdb1003.eqiad.wmnet:6378', // fallback
 	'rdb1005.eqiad.wmnet:6378', // fallback
 	'rdb1007.eqiad.wmnet:6378', // fallback
 ];
