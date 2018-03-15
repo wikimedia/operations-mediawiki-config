@@ -176,6 +176,10 @@ if ( defined( 'HHVM_VERSION' ) ) {
 	$wgUseSquid = true;
 	require "$wmfConfigDir/reverse-proxy.php";
 
+        # wgCdnReboundPurgeDelay is set to 11 in reverse-proxy.php but
+        #  since we aren't using the shared jobqueue we don't support delays
+        $wgCdnReboundPurgeDelay = 0
+
 	# Wikitech on labweb is behind the misc-web varnishes so we need a different
 	# multicast IP for cache invalidation.  This file is loaded
 	# after the standard MW equivalent (in reverse-proxy.php)
