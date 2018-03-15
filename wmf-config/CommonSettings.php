@@ -1128,7 +1128,7 @@ if ( $wmgUseClusterFileBackend ) {
 	$wgUseInstantCommons = true;
 }
 
-if ( $wgDBname === 'labswiki' ) {
+if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgUseInstantCommons = true;
 }
 
