@@ -574,16 +574,9 @@ $wgSVGConverters['rsvg-broken'] = '$path/rsvg-convert -w $width -h $height -o $o
 if ( defined( 'HHVM_VERSION' ) ) {
 	# Newer librsvg supports a sane security model by default and doesn't need our security patch
 	$wgSVGConverters['rsvg-secure'] = '$path/rsvg-convert -u -w $width -h $height -o $output $input';
-
-	// wikitech running on hhvm can use the standard setup.
-	$wgSVGConverters['rsvg-wikitech'] = $wgSVGConverters['rsvg-secure'];
 } else {
 	# This converter will only work when rsvg has a suitable security patch
 	$wgSVGConverters['rsvg-secure'] = '$path/rsvg-convert --no-external-files -w $width -h $height -o $output $input';
-
-	// Legacy config for php5-based wikitech.  This (and everything to do with
-	// rsvg-wikitech) can be removed when Silver is deprecated.
-	$wgSVGConverters['rsvg-wikitech'] = '$path/rsvg-convert -w $width -h $height -o $output $input';
 }
 # ######################################################################
 # Reverse proxy Configuration
