@@ -51,6 +51,8 @@ if ( $wmgUseWikibaseRepo ) {
 
 	// Cirrus is not ready for this on beta, yet
 	$wgWBRepoSettings['entitySearch']['useCirrus'] = false;
+
+	$wgWBRepoSettings['useTermsTableSearchFields'] = false;
 }
 
 if ( $wmgUseWikibaseClient ) {
