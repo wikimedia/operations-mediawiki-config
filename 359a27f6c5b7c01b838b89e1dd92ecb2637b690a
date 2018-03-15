@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "167fa712_0fbea0e8",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2018-03-15T16:40:43Z",
+      "side": 1,
+      "message": "unintentional suffix?",
+      "range": {
+        "startLine": 214,
+        "startChar": 55,
+        "endLine": 214,
+        "endChar": 56
+      },
+      "revId": "359a27f6c5b7c01b838b89e1dd92ecb2637b690a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
