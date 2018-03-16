@@ -17714,6 +17714,11 @@ $wgConf->settings = [
 	'ptwikibooks' => true,
 ],
 
+'wgFlowReadOnly' => [
+	'default' => false,
+	'commonswiki' => true,
+],
+
 // Before updating wmgFlowNamespaces, you must run populateContentModel.php (from core) on
 // the affected namespaces.  See
 // https://www.mediawiki.org/wiki/Extension:Flow#Enabling_or_disabling_Flow
