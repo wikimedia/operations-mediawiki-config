@@ -2539,7 +2539,7 @@ $wgConf->settings = [
 	'private' => '/w/img_auth.php',
 	'commonswiki' => 'https://upload.wikimedia.org/wikipedia/commons',
 	'labswiki' => '//upload.wikimedia.org/wikipedia/labs',
-	'labtestwiki' => '//labtestwikitech.wikimedia.org/w/images',
+	'labtestwiki' => '//upload.wikimedia.org/wikipedia/labtest',
 	'metawiki' => '//upload.wikimedia.org/wikipedia/meta',
 	'testwiki' => '//upload.wikimedia.org/wikipedia/test',
 ],
@@ -15673,12 +15673,12 @@ $wgConf->settings = [
 
 'wgMathPath' => [
 	'default' => '//upload.wikimedia.org/math',
-	'labtestwiki' => '//labtestwikitech.wikimedia.org/w/images/math', // T126338, T126628
 ],
 
 'wgMathDirectory' => [
 	'default' => false,
 	'wikitech' => '/srv/math-images', // T126628
+	'labtestwiki' => '/srv/math-images',
 ],
 
 'wmgMinervaNeue' => [
