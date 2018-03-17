@@ -5305,6 +5305,7 @@ $wgConf->settings = [
 		'purge' => 'debug',
 		'query' => 'debug',
 		'ratelimit' => 'debug',
+		'readinglists' => 'warning',
 		'recursion-guard' => 'debug',
 		'redis' => 'info', // -asher 2012/10/12
 		'RecursiveLinkPurge' => 'debug',
