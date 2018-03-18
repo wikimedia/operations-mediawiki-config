@@ -283,7 +283,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
-		$wgAbuseFilterActions['block'] = true;
+		$wgAbuseFilterActions['block'] = true; // T30153
 		$wgAbuseFilterBlockDuration = '4 hours';
 		$wgAbuseFilterAnonBlockDuration = '4 hours';
 		$wgAbuseFilterNotifications = false;
