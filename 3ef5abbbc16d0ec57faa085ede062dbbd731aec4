@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "657260e7_54038354",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 3963
+      },
+      "writtenOn": "2018-03-19T18:24:30Z",
+      "side": 1,
+      "message": "you should add commonswiki and wikidatawiki, throttle-analyze.php doesn\u0027t handle that anymore",
+      "revId": "3ef5abbbc16d0ec57faa085ede062dbbd731aec4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
