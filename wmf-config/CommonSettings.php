@@ -3698,6 +3698,16 @@ if ( $wmfRealm === 'labs' ) {
 	require "$wmfConfigDir/CommonSettings-labs.php";
 }
 
+foreach ( $wgGroupPermissions as $group => $_ ) {
+	if ( $group !== 'jseditor' && $group !== 'global-jseditor' && (
+		!empty( $wgGroupPermissions[$group]['editsitejs'] )
+		|| !empty( $wgGroupPermissions[$group]['edituserjs'] )
+	) ) {
+		// enforce that jseditor is the only group that can edit sitewide JS
+		unset( $wgGroupPermissions[$group]['editsitejs'], $wgGroupPermissions[$group]['edituserjs'] );
+	}
+}
+
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
