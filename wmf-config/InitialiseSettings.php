@@ -10041,6 +10041,8 @@ $wgConf->settings = [
 			'deleterevision' => true,
 			'deletelogentry' => true,
 			'editcontentmodel' => true,
+			'edituserjs' => true, // temporary for T190015
+			'editusercss' => true, // temporary for T190015
 		],
 		'bot' => [
 			'noratelimit' => true,
