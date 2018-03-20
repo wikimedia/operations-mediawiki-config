@@ -46,6 +46,30 @@
       "revId": "17e5d1cdf8884e7e44c4f4bf280562b891c8205f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cf968d80_ee3438ec",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 20006,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2018-03-20T21:56:01Z",
+      "side": 0,
+      "message": "At the end of wikitech.php.",
+      "parentUuid": "bc5e72d7_75e4c849",
+      "range": {
+        "startLine": 20005,
+        "startChar": 44,
+        "endLine": 20006,
+        "endChar": 40
+      },
+      "revId": "17e5d1cdf8884e7e44c4f4bf280562b891c8205f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
