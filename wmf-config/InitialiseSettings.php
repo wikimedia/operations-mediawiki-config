@@ -18112,6 +18112,39 @@ $wgConf->settings = [
 		],
 		'userAgent' => []
 	],
+	'testwiki' => [
+		'geo' => [
+			// Asian countries: https://phabricator.wikimedia.org/T189252
+			'BD' => 100,
+			'BN' => 100,
+			'BT' => 100,
+			'HK' => 100,
+			'ID' => 100,
+			'JP' => 100,
+			'KH' => 100,
+			'LA' => 100,
+			'LK' => 100,
+			'MN' => 100,
+			'MO' => 100,
+			'MV' => 100,
+			'MY' => 100,
+			'NP' => 100,
+			'PH' => 100,
+			'PK' => 100,
+			'SG' => 100,
+			'TW' => 100,
+			'VN' => 100,
+			// Oceania: https://phabricator.wikimedia.org/T189252
+			'FM' => 100,
+			'KI' => 100,
+			'MH' => 100,
+			'NC' => 100,
+			'PW' => 100,
+			'TV' => 100,
+			'UM' => 100
+		],
+		'userAgent' => []
+	],
 ],
 
 'wgRCWatchCategoryMembership' => [
