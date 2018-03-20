@@ -8390,8 +8390,6 @@ $wgConf->settings = [
 		],
 		'interface-editor' => [ // T109755
 			'editinterface' => true, // T109755
-			'editusercss' => true, // T14110
-			'edituserjs' => true,  // T14110
 			'tboverride' => true, // T109755
 		],
 		'patroller' => [ // T109755
@@ -8504,8 +8502,6 @@ $wgConf->settings = [
 		], // T53232
 		'interface-editor' => [
 			'editinterface' => true, // T54866
-			'editusercss' => true, // T54866
-			'edituserjs' => true, // T54866
 			'apihighlimits' => true, // T67348
 			'noratelimit' => true, // T67348
 		],
@@ -8838,8 +8834,6 @@ $wgConf->settings = [
 		'templateeditor' => [
 			'editprotected' => true, // T74146
 			'tboverride' => true, // T74146
-			'editusercss' => true, // T89040
-			'edituserjs' => true // T89040
 		],
 		'eliminator' => [
 			'block' => true,
@@ -8965,8 +8959,6 @@ $wgConf->settings = [
 			'editinterface' => true,
 			'editprotected' => true,
 			'editsemiprotected' => true,
-			'editusercss' => true,
-			'edituserjs' => true,
 			'import' => true,
 			'move' => true,
 			'move-rootuserpages' => true,
@@ -9022,8 +9014,6 @@ $wgConf->settings = [
 			'abusefilter-view' => true,
 			'abusefilter-view-private' => true,
 			'editinterface' => true,
-			'editusercss' => true,// T14110
-			'edituserjs' => true, // T14110
 			'import' => true,
 			'tboverride' => true,
 			'templateeditor' => true, // T102466
@@ -9087,7 +9077,7 @@ $wgConf->settings = [
 		'editor' => [ 'noratelimit' => true, 'edittrustedprotected' => true ], // T194568
 		'sysop' => [ 'templateeditor' => true, 'edittrustedprotected' => true ], // T74055, T194568
 		'templateeditor' => [ 'templateeditor' => true ], // T74055
-		'interface-editor' => [ 'editinterface' => true, 'editusercss' => true, 'edituserjs' => true ], // T109408
+		'interface-editor' => [ 'editinterface' => true ], // T109408
 	],
 	'idwiki' => [
 		'*' => [ 'createpage' => false ],
@@ -9191,8 +9181,6 @@ $wgConf->settings = [
 			'editinterface' => true,
 			'editprotected' => true,
 			'editsemiprotected' => true,
-			'edituserjs' => true,
-			'editusercss' => true,
 			'ipblock-exempt' => true,
 			'suppressredirect' => true,
 		],
@@ -9361,7 +9349,7 @@ $wgConf->settings = [
 		'patroller' => [ 'patrol' => true ],
 		'rollbacker' => [ 'rollback' => true ],
 		'botadmin' => [
-			'blockemail' => true, 'block' => true, 'ipblock-exempt' => true, 'protect' => true, 'editprotected' => true, 'createaccount' => true, 'deleterevision' => true, 'delete' => true, 'globalblock-whitelist' => true, 'editusercss' => true, 'edituserjs' => true,
+			'blockemail' => true, 'block' => true, 'ipblock-exempt' => true, 'protect' => true, 'editprotected' => true, 'createaccount' => true, 'deleterevision' => true, 'delete' => true, 'globalblock-whitelist' => true,
 			'autoconfirmed' => true, 'editsemiprotected' => true, 'editinterface' => true, 'autopatrol' => true, 'import' => true, 'patrol' => true, 'markbotedits' => true, 'nuke' => true, 'abusefilter-modify' => true, 'movefile' => true, 'move' => true, 'move-subpages' => true,
 			'move-rootuserpages' => true, 'noratelimit' => true, 'suppressredirect' => true, 'reupload-shared' => true, 'override-antispoof' => true, 'tboverride' => true, 'reupload' => true, 'skipcaptcha' => true, 'rollback' => true, 'browsearchive' => true, 'unblockself' => true,
 			'undelete' => true, 'upload' => true, 'upload_by_url' => true, 'apihighlimits' => true, 'unwatchedpages' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-log-detail' => true,
@@ -9533,8 +9521,6 @@ $wgConf->settings = [
 		],
 		'interface-editor' => [ // T41905
 			'editinterface' => true,
-			'edituserjs' => true,
-			'editusercss' => true,
 		],
 	],
 	'ptwikinews' => [
@@ -9588,8 +9574,6 @@ $wgConf->settings = [
 			'editcontentmodel' => true,
 			'editinterface' => true,
 			'editprotected' => true,
-			'editusercss' => true,
-			'edituserjs' => true,
 			'jsonconfig-flush' => true,
 			'move-categorypages' => true,
 			'move-subpages' => true,
@@ -9833,8 +9817,6 @@ $wgConf->settings = [
 			'abusefilter-modify' => true, // T40690
 			'apihighlimits' => true, // T40690
 			'editinterface' => true, // T40690
-			'editusercss' => true, // T40690
-			'edituserjs' => true, // T40690
 			'noratelimit' => true, // T40690
 		],
 	],
@@ -9971,8 +9953,6 @@ $wgConf->settings = [
 			'editinterface' => true,
 			'editprotected' => true,
 			'editsemiprotected' => true,
-			'editusercss' => true,
-			'edituserjs' => true,
 			'import' => true,
 			'ipblock-exempt' => true,
 			'markbotedits' => true,
@@ -10069,8 +10049,6 @@ $wgConf->settings = [
 			'deleterevision' => true,
 			'deletelogentry' => true,
 			'editcontentmodel' => true,
-			'edituserjs' => true, // temporary for T190015
-			'editusercss' => true, // temporary for T190015
 		],
 		'bot' => [
 			'noratelimit' => true,
