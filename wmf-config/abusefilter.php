@@ -287,6 +287,7 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterBlockDuration = '4 hours';
 		$wgAbuseFilterAnonBlockDuration = '4 hours';
 		$wgAbuseFilterNotifications = false;
+		$wgAbuseFilterProfile = true;
 		break;
 	case 'itwikinews':
 		$wgAbuseFilterActions['block'] = true;
