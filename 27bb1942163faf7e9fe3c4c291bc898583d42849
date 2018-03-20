@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ae25e77_fec7e04a",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 18117,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-03-20T22:16:36Z",
+      "side": 1,
+      "message": "Would prefer \"Asia\" here :)",
+      "range": {
+        "startLine": 18117,
+        "startChar": 6,
+        "endLine": 18117,
+        "endChar": 21
+      },
+      "revId": "27bb1942163faf7e9fe3c4c291bc898583d42849",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
