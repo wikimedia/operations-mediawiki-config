@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee4edd72_a26926ee",
+        "filename": "scap/plugins/prep.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2018-03-20T15:44:51Z",
+      "side": 1,
+      "message": "These are identical. Why not just vary the filename and keep it below?",
+      "range": {
+        "startLine": 131,
+        "startChar": 2,
+        "endLine": 143,
+        "endChar": 50
+      },
+      "revId": "8d5840b379f9a6d39cb8ae2c77d27f820dfa3c75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
