@@ -13290,6 +13290,7 @@ $wgConf->settings = [
 	'default' => false,
 	'commonswiki' => true,
 	'enwiki' => true,
+	'itwiki' => true,
 	'mediawikiwiki' => true,
 	'metawiki' => true,
 	'ptwiki' => true,
