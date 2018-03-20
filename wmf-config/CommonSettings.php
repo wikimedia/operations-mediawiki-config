@@ -3673,6 +3673,14 @@ if ( $wmfRealm === 'labs' ) {
 	require "$wmfConfigDir/CommonSettings-labs.php";
 }
 
+// T190015 preserve the ability of existing groups to edit
+// sitewide javascript for a transition period
+foreach ( $wgGroupPermissions as $group => $_ ) {
+	if ( !empty( $wgGroupPermissions[$group]['editinterface'] ) ) {
+		$wgGroupPermissions[$group]['editsitejs'] = true;
+	}
+}
+
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
