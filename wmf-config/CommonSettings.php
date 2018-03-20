@@ -1306,8 +1306,6 @@ if ( $wgDBname === 'loginwiki' ) {
 		$wgGroupPermissions['sysop'],
 		[
 			'editinterface' => false,
-			'editusercss' => false,
-			'edituserjs' => false,
 		]
 	);
 }
@@ -2800,8 +2798,6 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgDefaultExternalStore = false;
 
 	$wgGroupPermissions['contentadmin'] = $wgGroupPermissions['sysop'];
-	$wgGroupPermissions['contentadmin']['editusercss'] = false;
-	$wgGroupPermissions['contentadmin']['edituserjs'] = false;
 	$wgGroupPermissions['contentadmin']['editinterface'] = false;
 	$wgGroupPermissions['contentadmin']['tboverride'] = false;
 	$wgGroupPermissions['contentadmin']['titleblacklistlog'] = false;
@@ -3671,16 +3667,6 @@ if ( PHP_SAPI === 'cli' ) {
 
 if ( $wmfRealm === 'labs' ) {
 	require "$wmfConfigDir/CommonSettings-labs.php";
-}
-
-// T190015 preserve the ability of existing groups to edit
-// sitewide javascript for a transition period
-foreach ( $wgGroupPermissions as $group => $_ ) {
-	if ( !empty( $wgGroupPermissions[$group]['editinterface'] ) ) {
-		$wgGroupPermissions[$group]['editsitecss'] = true;
-		$wgGroupPermissions[$group]['editsitejs'] = true;
-		$wgGroupPermissions[$group]['editsitejson'] = true;
-	}
 }
 
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
