@@ -70,6 +70,52 @@
       "revId": "17e5d1cdf8884e7e44c4f4bf280562b891c8205f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5efac496_2190658a",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 647,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2018-03-20T21:59:40Z",
+      "side": 0,
+      "message": "uh oh",
+      "range": {
+        "startLine": 647,
+        "startChar": 33,
+        "endLine": 647,
+        "endChar": 61
+      },
+      "revId": "17e5d1cdf8884e7e44c4f4bf280562b891c8205f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f782ced5_d76aa5a3",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 666,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2018-03-20T21:59:40Z",
+      "side": 0,
+      "message": ".",
+      "range": {
+        "startLine": 666,
+        "startChar": 33,
+        "endLine": 666,
+        "endChar": 61
+      },
+      "revId": "17e5d1cdf8884e7e44c4f4bf280562b891c8205f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
