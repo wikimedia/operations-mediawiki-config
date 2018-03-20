@@ -112,7 +112,7 @@ $wgLBFactoryConf = [
 		'db1089' => 500,    # C3 3.6TB 512GB
 		'db1099:3311' => 1, # B2 3.6TB 512GB # rc, log: s1 and s8
 		'db1105:3311' => 1, # C3 3.6TB 512GB # rc, log: s1 and s2
-		# 'db1106' => 0,    # D3 3.6TB 512GB, vslow, dump # T183469
+		'db1106' => 0,    # D3 3.6TB 512GB, vslow, dump
 		'db1114' => 300,    # D4 3.6TB 512GB, api # MariaDB 10.1
 	],
 	's2' => [
@@ -281,11 +281,11 @@ $wgLBFactoryConf = [
 		],
 		'dump' => [
 			'db1065' => 1,
-			# 'db1106' => 1,
+			'db1106' => 1,
 		],
 		'vslow' => [
 			'db1065' => 1,
-			# 'db1106' => 1,
+			'db1106' => 1,
 		],
 		'api' => [
 			'db1066' => 2,
