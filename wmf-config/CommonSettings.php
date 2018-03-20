@@ -3676,8 +3676,12 @@ if ( $wmfRealm === 'labs' ) {
 // T190015 preserve the ability of existing groups to edit
 // sitewide javascript for a transition period
 foreach ( $wgGroupPermissions as $group => $_ ) {
-	if ( !empty( $wgGroupPermissions[$group]['editinterface'] ) ) {
-		$wgGroupPermissions[$group]['editsitejs'] = true;
+	if ( $group !== 'jseditor' && $group !== 'global-jseditor' && (
+		!empty( $wgGroupPermissions[$group]['editsitejs'] 
+		|| !empty( $wgGroupPermissions[$group]['edituserjs']
+	) ) {
+		// enforce that jseditor is the only group that can edit sitewide JS
+		unset( $wgGroupPermissions[$group]['editsitejs'], $wgGroupPermissions[$group]['edituserjs'] );
 	}
 }
 
