@@ -18108,12 +18108,6 @@ $wgConf->settings = [
 'wgNavigationTimingOversampleFactor' => [
 	'default' => [
 		'geo' => [
-			'SG' => 100
-		],
-		'userAgent' => []
-	],
-	'testwiki' => [
-		'geo' => [
 			// Asian countries: https://phabricator.wikimedia.org/T189252
 			'BD' => 100,
 			'BN' => 100,
