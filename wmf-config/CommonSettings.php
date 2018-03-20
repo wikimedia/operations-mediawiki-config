@@ -3670,6 +3670,23 @@ if ( $wmfRealm === 'labs' ) {
 	require "$wmfConfigDir/CommonSettings-labs.php";
 }
 
+foreach ( $wgGroupPermissions as $group => $_ ) {
+	if ( $group !== 'interface-admin' && (
+		!empty( $wgGroupPermissions[$group]['editsitecss'] )
+		|| !empty( $wgGroupPermissions[$group]['editsites'] )
+		|| !empty( $wgGroupPermissions[$group]['editusercss'] )
+		|| !empty( $wgGroupPermissions[$group]['edituserjs'] )
+	) ) {
+		// enforce that techadmin is the only group that can edit non-own CSS/JS
+		unset(
+			$wgGroupPermissions[$group]['editsitecss'],
+			$wgGroupPermissions[$group]['editsitejs'],
+			$wgGroupPermissions[$group]['editusercss'],
+			$wgGroupPermissions[$group]['edituserjs']
+		);
+	}
+}
+
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
