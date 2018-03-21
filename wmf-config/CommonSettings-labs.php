@@ -60,11 +60,6 @@ $wgDnsBlacklistUrls   = [
 	'proxies.dnsbl.sorbs.net.',
 ];
 
-if ( $wmgUseAbuseFilter ) {
-	$wgAbuseFilterLogIP = false; // Prevent the collection of IP addresses
-	$wgAbuseFilterLogIPMaxAge = 2629746; // Purge data each 30 days, not 90
-}
-
 if ( $wmgUseFlow ) {
 	// Override CommonSettings.php, which has:
 	// $wgFlowExternalStore = $wgDefaultExternalStore;
