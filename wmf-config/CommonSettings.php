@@ -229,6 +229,11 @@ if ( !$globals ) {
 			unlink( $tmpFile );
 		};
 	}
+
+        # wgReadOnly is set by etcdConfig using datacenter-global configs.
+        #  since wikitech and labtestwikitech use their own databases, their 
+        #  $wgReadOnly shouldn't be determined by that.
+	$wgReadOnly=null;
 }
 
 extract( $globals );
