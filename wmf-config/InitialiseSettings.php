@@ -20481,14 +20481,14 @@ $wgConf->settings = [
 	'nonglobal' => false,
 ],
 
-// T184121
+// T189806
 'wmgUseGlobalPreferences' => [
-	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'testwikidatawiki' => true,
-	'mediawikiwiki' => true,
+	'default' => true,
+	'private' => false,
+	'fishbowl' => false,
+	'nonglobal' => false,
 ],
+
 'wgGlobalPreferencesDB' => [
 	'default' => 'centralauth',
 ],
