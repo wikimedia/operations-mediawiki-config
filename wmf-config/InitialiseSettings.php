@@ -20482,8 +20482,10 @@ $wgConf->settings = [
 ],
 
 // T184121
+// Wikis not under CentralAuth are excluded in CommonSettings.php
 'wmgUseGlobalPreferences' => [
-	'default' => false,
+	'default' => true,
+	'wikipedia' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
 	'testwikidatawiki' => true,
