@@ -10287,7 +10287,7 @@ $wgConf->settings = [
 		'sysop' => [ 'confirmed' ],
 	],
 	'+guwiki' => [
-		'sysop' => [ 'rollback' /* T119787 */, 'autopatrolled' /* T119787 */, 'transwiki' /* T120346 */ ],
+		'sysop' => [ 'autopatrolled', 'rollback', 'transwiki' ], // T119787, T119787, T120346
 	],
 	'+hewiki' => [
 		'sysop' => [ 'patroller', 'autopatrolled', 'accountcreator' ],
@@ -11040,8 +11040,8 @@ $wgConf->settings = [
 	'+glwiki' => [ // T128948
 		'sysop' => [ 'confirmed' ],
 	],
-	'+guwiki' => [ // T119787
-		'sysop' => [ 'rollback' /* T119787 */, 'autopatrolled' /* T119787 */, 'transwiki' /* T120346 */ ],
+	'+guwiki' => [
+		'sysop' => [ 'autopatrolled', 'rollback', 'transwiki' ], // T119787, T119787, T120346
 	],
 	'+hewiki' => [
 		'sysop' => [ 'patroller', 'autopatrolled', 'accountcreator' ],
