@@ -105,7 +105,6 @@ $wgLBFactoryConf = [
 	's1' => [
 		'db1052' => 0,      # B3 2.8TB  96GB, master
 		'db1067' => 50,     # D1 2.8TB 160GB, old master # candidate master
-		# 'db1065' => 0,      # D1 2.8TB 160GB, vslow, dump # master for db1095 # T183469
 		'db1066' => 50,     # D1 2.8TB 160GB, api
 		'db1080' => 300,    # A2 3.6TB 512GB, api
 		'db1083' => 500,    # B1 3.6TB 512GB
@@ -280,11 +279,9 @@ $wgLBFactoryConf = [
 			'db1105:3311' => 1,
 		],
 		'dump' => [
-			# 'db1065' => 1,
 			'db1106' => 1,
 		],
 		'vslow' => [
-			# 'db1065' => 1,
 			'db1106' => 1,
 		],
 		'api' => [
@@ -528,7 +525,6 @@ $wgLBFactoryConf = [
 	'db1061' => '10.64.32.227', # do not remove or comment out
 	'db1062' => '10.64.48.15', # do not remove or comment out
 	'db1064' => '10.64.48.19', # do not remove or comment out
-	'db1065' => '10.64.48.20', # do not remove or comment out
 	'db1066' => '10.64.48.21', # do not remove or comment out
 	'db1067' => '10.64.48.22', # do not remove or comment out
 	'db1068' => '10.64.48.23', # do not remove or comment out
