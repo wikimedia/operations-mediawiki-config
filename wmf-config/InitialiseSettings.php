@@ -19294,23 +19294,19 @@ $wgConf->settings = [
 ],
 'wgOresModels' => [
 	'default' => [
-		'damaging' => true,
-		'goodfaith' => true,
-		'reverted' => false,
-		'wp10' => false,
-		'draftquality' => false,
+		'damaging' => [ 'enabled' => true ],
+		'goodfaith' => [ 'enabled' => true ],
+		'reverted' => [ 'enabled' => false ],
+		'wp10' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanupParent' => true ],
+		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
 	],
 	'enwiki' => [
-		'damaging' => true,
-		'goodfaith' => true,
-		'reverted' => false,
-		'wp10' => false,
-		'draftquality' => true, // T179596
+		'damaging' => [ 'enabled' => true ],
+		'goodfaith' => [ 'enabled' => true ],
+		'reverted' => [ 'enabled' => false ],
+		'wp10' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanupParent' => true ],
+		'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ] ], // T179596
 	],
-],
-'wgOresDraftQualityNS' => [
-	'default' => [ 0 => true ],
-	'enwiki' => [ 0 => true, 118 => true ], // T179596
 ],
 'wgOresFiltersThresholds' => [
 	'default' => [],
