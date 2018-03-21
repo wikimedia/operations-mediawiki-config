@@ -440,7 +440,7 @@ if ( $wmgUseCentralAuth ) {
 		];
 
 		if ( array_intersect(
-			[ 'bureaucrat', 'sysop', 'checkuser', 'oversight', 'interface-editor' ],
+			[ 'bureaucrat', 'sysop', 'checkuser', 'oversight', 'interface-editor', 'interface-admin' ],
 			$central->getLocalGroups()
 		) ) {
 			$effectivePolicy = UserPasswordPolicy::maxOfPolicies(
