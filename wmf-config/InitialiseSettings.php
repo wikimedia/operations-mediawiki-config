@@ -13975,6 +13975,7 @@ $wgConf->settings = [
 'wgPopupsVirtualPageViews' => [
 	'default' => false,
 	'huwiki' => true,
+	's6' => true,
 ],
 
 'wmgPopupsBetaFeature' => [
