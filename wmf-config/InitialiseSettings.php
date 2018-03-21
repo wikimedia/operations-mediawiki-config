@@ -15685,6 +15685,10 @@ $wgConf->settings = [
 'wmgMobileFrontend' => [
 	'default' => true,
 ],
+'wgMFMobileMainPageCss' => [
+	'default' => false,
+	'hiwiki' => true,
+],
 'wgMFQueryPropModules' => [
 	// workaround for T125672
 	'default' => [ 'pageprops' ],
