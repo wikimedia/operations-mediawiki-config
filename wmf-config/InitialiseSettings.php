@@ -9962,7 +9962,7 @@ $wgConf->settings = [
 
 'wmgPrivilegedGroups' => [
 	// Default should include any privileged group that's on more than a few wikis
-	'default' => [ 'botadmin', 'bureaucrat', 'checkuser', 'eliminator', 'interface-editor', 'sysop', 'oversight' ],
+	'default' => [ 'botadmin', 'bureaucrat', 'checkuser', 'eliminator', 'interface-editor', 'sysop', 'oversight', 'jseditor' ],
 	'+enwiki' => [ 'abusefilter' ],
 	'+fawiki' => [ 'templateeditor' ],
 	'+fishbowl' => [ 'user' ],
