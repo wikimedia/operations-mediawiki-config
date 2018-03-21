@@ -104,7 +104,7 @@ $wgLBFactoryConf = [
 'sectionLoads' => [
 	's1' => [
 		'db1052' => 0,      # B3 2.8TB  96GB, master
-		'db1067' => 0,     # D1 2.8TB 160GB, old master # candidate master # temporary vslow T183469
+		'db1067' => 50,     # D1 2.8TB 160GB, old master # candidate master
 		# 'db1065' => 0,      # D1 2.8TB 160GB, vslow, dump # master for db1095 # T183469
 		'db1066' => 50,     # D1 2.8TB 160GB, api
 		'db1080' => 300,    # A2 3.6TB 512GB, api
@@ -112,7 +112,7 @@ $wgLBFactoryConf = [
 		'db1089' => 500,    # C3 3.6TB 512GB
 		'db1099:3311' => 1, # B2 3.6TB 512GB # rc, log: s1 and s8
 		'db1105:3311' => 1, # C3 3.6TB 512GB # rc, log: s1 and s2
-		# 'db1106' => 50,      # D3 3.6TB 512GB, vslow, dump # T183469
+		'db1106' => 50,      # D3 3.6TB 512GB, vslow, dump
 		'db1114' => 300,    # D4 3.6TB 512GB, api # MariaDB 10.1
 	],
 	's2' => [
@@ -281,11 +281,11 @@ $wgLBFactoryConf = [
 		],
 		'dump' => [
 			# 'db1065' => 1,
-			'db1067' => 1,
+			'db1106' => 1,
 		],
 		'vslow' => [
 			# 'db1065' => 1,
-			'db1067' => 1,
+			'db1106' => 1,
 		],
 		'api' => [
 			'db1066' => 2,
