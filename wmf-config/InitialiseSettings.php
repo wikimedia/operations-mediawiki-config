@@ -20474,9 +20474,12 @@ $wgConf->settings = [
 	'nonglobal' => false,
 ],
 
-// T184121, not yet ready for production
+// T189806
 'wmgUseGlobalPreferences' => [
-	'default' => false,
+	'default' => true,
+	'private' => false,
+	'fishbowl' => false,
+	'nonflobal' => false,
 ],
 'wgGlobalPreferencesDB' => [
 	'default' => 'centralauth',
