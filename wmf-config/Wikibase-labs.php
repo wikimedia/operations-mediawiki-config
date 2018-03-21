@@ -49,9 +49,6 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBRepoSettings['canonicalUriProperty'] = 'P174944';
 
-	// Cirrus is not ready for this on beta, yet
-	$wgWBRepoSettings['entitySearch']['useCirrus'] = false;
-
 	$wgWBRepoSettings['useTermsTableSearchFields'] = false;
 }
 
