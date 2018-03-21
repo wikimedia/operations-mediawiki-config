@@ -48,9 +48,6 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgRightsUrl = 'creativecommons.org/licenses/by-sa/3.0';
 
 	$wgWBRepoSettings['canonicalUriProperty'] = 'P174944';
-
-	// Cirrus is not ready for this on beta, yet
-	$wgWBRepoSettings['entitySearch']['useCirrus'] = false;
 }
 
 if ( $wmgUseWikibaseClient ) {
