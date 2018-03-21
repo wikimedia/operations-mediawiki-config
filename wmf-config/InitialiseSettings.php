@@ -18436,6 +18436,7 @@ $wgConf->settings = [
 	'enwiki' => true, // T146679
 	'enwikivoyage' => true, // T142056
 	'testwiki' => true, // T137918
+	'trwiki' => true, // T184969
 ],
 'wgPageAssessmentsOnTalkPages' => [
 	'default' => true,
