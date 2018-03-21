@@ -96,6 +96,30 @@
     },
     {
       "key": {
+        "uuid": "7fef40e8_247c62cc",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 647,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2018-03-21T14:45:46Z",
+      "side": 0,
+      "message": ":) I know it says not to remove, but what could this possibly be doing at this point?",
+      "parentUuid": "5efac496_2190658a",
+      "range": {
+        "startLine": 647,
+        "startChar": 33,
+        "endLine": 647,
+        "endChar": 61
+      },
+      "revId": "17e5d1cdf8884e7e44c4f4bf280562b891c8205f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f782ced5_d76aa5a3",
         "filename": "wmf-config/db-eqiad.php",
         "patchSetId": 3
