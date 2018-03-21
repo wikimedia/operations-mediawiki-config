@@ -8675,7 +8675,6 @@ $wgConf->settings = [
 		'templateeditor' => [
 			'editprotected' => true, // T74146
 			'tboverride' => true, // T74146
-			'editinterface' => true, // T89040
 			'editusercss' => true, // T89040
 			'edituserjs' => true // T89040
 		],
