@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "e5ecbd21_d54ee10d",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-03-22T21:33:33Z",
+      "side": 1,
+      "message": "Assuming it does have a stand-by master in codfw, we typically do reference it here as master, but assume that 1) it has mysql config to force it into readonly mode \"just in case\", and 2) at the bottom of db-codfw mediawiki is also proactively told to be in readonly mode.",
+      "parentUuid": "585858d3_181f4a96",
+      "revId": "a80433075cb200f51ce703541f8b5046a4e066f5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "852034c9_d93c4342",
         "filename": "wmf-config/db-eqiad.php",
         "patchSetId": 1
