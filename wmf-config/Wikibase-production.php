@@ -27,7 +27,6 @@ if ( $wmgUseWikibaseRepo ) {
 			'P153',
 			'P185',
 		];
-		$wgWBRepoSettings['readFullEntityIdColumn'] = true;
 
 		$wgWBRepoSettings['statementSections']['property'] = [
 			'statements' => null,
@@ -41,6 +40,9 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBQualityConstraintsPropertyConstraintId = 'P51064';
 		$wgWBQualityConstraintsFormatConstraintId = 'Q100086';
 		$wgWBQualityConstraintsFormatAsARegularExpressionId = 'P51065';
+
+		// T189776
+		$wgWBRepoSettings['useTermsTableSearchFields'] = false;
 	} else {
 		$wgPropertySuggesterClassifyingPropertyIds = [ 31, 279 ]; // T169060
 		$wgPropertySuggesterInitialSuggestions = [ 31, 279 ];
@@ -127,7 +129,6 @@ if ( $wmgUseWikibaseRepo ) {
 			'P692',
 			'P491',
 		];
-		$wgWBRepoSettings['readFullEntityIdColumn'] = true;
 
 		$wgWBRepoSettings['statementSections']['property'] = [
 			'statements' => null,
@@ -140,6 +141,7 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBQualityConstraintsSparqlEndpoint = $wgWBRepoSettings['sparqlEndpoint'];
 		$wgWBQualityConstraintsSparqlMaxMillis = 5000; // limit SPARQL queries to just 5 seconds for now
 		$wgWBQualityConstraintsTypeCheckMaxEntities = 10; // only check few entities in PHP => fall back to SPARQL very quickly
+		$wgWBQualityConstraintsCacheCheckConstraintsResults = true;
 		$wgWBQualityConstraintsPropertiesWithViolatingQualifiers = [ 'P1855', 'P2271' ]; // T183267
 		// T148411: Use profile that uses statement boosting by default to boost/unboost specific types
 		$wgWBRepoSettings['entitySearch']['defaultPrefixRescoreProfile'] = 'wikibase_prefix_boost';
@@ -161,14 +163,14 @@ if ( $wmgUseWikibaseRepo ) {
 		];
 	}
 
-	$wgWBRepoSettings['writeFullEntityIdColumn'] = true;
-
 	// T112606
 	$wgRightsPage = 'Wikidata:Copyright';
 	$wgRightsText = 'All structured data from the main and property namespace is available under ' .
 		'the Creative Commons CC0 License; text in the other namespaces is available under ' .
 		'the Creative Commons Attribution-ShareAlike License; additional terms may apply.';
 	$wgRightsUrl = 'creativecommons.org/licenses/by-sa/3.0';
+	// T183053 - make Cirrus instantly index new items
+	$wgCirrusSearchInstantIndexNew = [ NS_MAIN, WB_NS_PROPERTY ];
 }
 
 if ( $wmgUseWikibaseClient ) {
@@ -204,13 +206,6 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgArticlePlaceholderSearchEngineIndexed = $wmgArticlePlaceholderSearchEngineIndexed;
 	$wgWBClientSettings['propertyOrderUrl'] = 'https://www.wikidata.org/w/index.php?title=MediaWiki:Wikibase-SortedProperties&action=raw&sp_ver=1';
-	$wgWBClientSettings['hasFullEntityIdColumn'] = false;
-
-	if ( in_array( $wgDBname, [ 'fawiki', 'hewiki' ] ) ) {
-		$wgWBClientSettings['readFullEntityIdColumn'] = true;
-	} else {
-		$wgWBClientSettings['readFullEntityIdColumn'] = false;
-	}
 
 	// T142103
 	$wgWBClientSettings['sendEchoNotification'] = true;
@@ -220,7 +215,7 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['fineGrainedLuaTracking'] = $wmgWikibaseFineGrainedLuaTracking;
 
 	// T171027
-	if ( in_array( $wgDBname, [ 'commonswiki', 'ruwiki' ] ) ) {
+	if ( in_array( $wgDBname, [ 'commonswiki' ] ) ) {
 		$wgWBClientSettings['injectRecentChanges'] = false;
 	}
 

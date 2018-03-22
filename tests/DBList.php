@@ -32,8 +32,8 @@ class DBList {
 			$filenames = scandir( dirname( __DIR__ ) . '/dblists' );
 			foreach ( $filenames as $filename ) {
 				if ( substr( $filename, -7, 7 ) == '.dblist' ) {
-					$projectname = substr( $filename, 0, -7 );
-					$list[$projectname] = MWWikiversions::readDbListFile( $filename );
+					$basename = substr( $filename, 0, -7 );
+					$list[$basename] = MWWikiversions::readDbListFile( $filename );
 				}
 			}
 		}

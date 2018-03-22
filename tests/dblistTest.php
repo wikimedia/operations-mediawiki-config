@@ -58,7 +58,7 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 			// 'all-labs' and 'flow_only_labs' are for beta.wmflabs.org only,
 			// which may have wikis not (yet) in production.
 			'all-labs',
-			'flow_computed_labs',
+			'flow-labs',
 			'flow_only_labs',
 
 			'closed',
@@ -83,6 +83,53 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 		}
 	}
 
+	/**
+	 * This test ensures that any dblists that use expressions,
+	 * are either not used in production, or are pre-computed.
+	 */
+	public function testExpressionListsMustBeComputed() {
+		// Based on DBList::getLists()
+		$files = glob( dirname( __DIR__ ) . '/dblists/*.dblist' );
+		$suffix = '-computed.dblist';
+		// The following array should only contain dblists that:
+		// 1) use expressions, and
+		// 2) only exist as convenience preset for command-line usage,
+		// and are NOT read by wmf-config/CommonSettings.php or otherwise
+		// needed by wmf-config.
+		$notUsedFromWeb = [
+			'echo.dblist',
+			'open.dblist',
+			'group1.dblist', // FIXME: Used in wmf-config
+			'group2.dblist', // FIXME: Used in wmf-config
+		];
+		foreach ( $files as $file ) {
+			$name = basename( $file );
+			if ( strpos( $name, 'labs' ) !== false
+				|| in_array( $name, $notUsedFromWeb )
+			) {
+				continue;
+			}
+			if ( strpos( file_get_contents( $file ), '%%' ) !== false ) {
+				$this->assertEquals(
+					$suffix,
+					substr( $name, -strlen( $suffix ) ),
+					"Computed list '$name' must end its name with '$suffix'"
+				);
+			} else {
+				$this->assertFalse(
+					strpos( $name, 'computed' ),
+					"Keyword 'computed' found in non-computed list '$name'"
+				);
+			}
+		}
+	}
+
+	/**
+	 * This test ensures that:
+	 *
+	 * 1. Computed lists use a specific naming convention.
+	 * 2. Computed lists are up to date.
+	 */
 	public function testComputedListsFreshness() {
 		$lists = DBList::getLists();
 		foreach ( $lists as $listname => $dbnames ) {

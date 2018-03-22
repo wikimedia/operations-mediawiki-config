@@ -16,9 +16,20 @@ $wgDBuser = null;
 $wgDBpassword = null;
 $wmfMasterDatacenter = 'eqiad';
 
-define( 'DBO_DEFAULT', 'uniq' );
+// Load Defines (used by db-eqiad.php and InitialiseSettings.php)
+require_once __DIR__ . '/../../tests/Defines.php';
 
-require_once '../../wmf-config/db-eqiad.php';
+// Load db vars
+require_once __DIR__ . '/../../wmf-config/db-eqiad.php';
+
+// Mock vars from MWRealm.php for wgConf.php
+$wmfRealm = 'production';
+
+// Load $wgConf (for making canonical urls from dbnames)
+require_once __DIR__ . '/../../tests/SiteConfiguration.php';
+require_once __DIR__ . '/../../multiversion/MWWikiversions.php';
+require_once __DIR__ . '/../../wmf-config/wgConf.php';
+require_once __DIR__ . '/../../wmf-config/InitialiseSettings.php';
 
 class WmfClusters {
 	private $clusters;
@@ -65,6 +76,20 @@ class WmfClusters {
 	}
 
 	/**
+	 * @param string $db
+	 */
+	public function getServer( $db ) {
+		global $wgConf;
+		list( $site, $lang ) = $wgConf->siteFromDB( $db );
+		return $wgConf->get(
+			'wgCanonicalServer',
+			$db,
+			$site,
+			[ 'lang' => $lang, 'site' => $site ]
+		);
+	}
+
+	/**
 	 * @param string $clusterName
 	 */
 	public function htmlFor( $clusterName ) {
@@ -80,22 +105,32 @@ class WmfClusters {
 		if ( $clusterName == 'DEFAULT' ) {
 			print 'Any wiki not hosted on the other clusters.<br>';
 		} else {
-			foreach ( $this->getDBs( $clusterName ) as $db ) {
-				print "$db<br>";
+			foreach ( $this->getDBs( $clusterName ) as $i => $db ) {
+				print "$db";
+				// labtestweb seems unresponsive, avoid crawlers hitting it
+				if ( $i === 0 && strpos( $clusterName, 'labtestweb' ) !== 0 ) {
+					// Use format=xml because it's cheap to generate and view
+					// and browsers tend to render it nicely.
+					// (json is hard to read by default, jsonfm is slower)
+					$replagUrl = $this->getServer( $db ) . '/w/api.php?format=xml&action=query&meta=siteinfo&siprop=dbrepllag&sishowalldb=1';
+					print ' (replag: <a href="' . htmlspecialchars( $replagUrl ) . '">mw-api</a> &bull;';
+					print ' <a href="https://dbtree.wikimedia.org/">dbtree</a>)';
+				}
+				echo '<br>';
 			}
 		}
 	}
 }
 
-$wmf = new WmfClusters();
+$clusters = new WmfClusters();
 
 if ( $format === 'json' ) {
 	$data = [];
-	foreach ( $wmf->getNames() as $name ) {
+	foreach ( $clusters->getNames() as $name ) {
 		$data[$name] = [
-			'hosts' => $wmf->getHosts( $name ),
-			'loads' => $wmf->getLoads( $name ),
-			'dbs' => $wmf->getDBs( $name ),
+			'hosts' => $clusters->getHosts( $name ),
+			'loads' => $clusters->getLoads( $name ),
+			'dbs' => $clusters->getDBs( $name ),
 		];
 	}
 	header( 'Content-Type: application/json; charset=utf-8' );
@@ -126,7 +161,7 @@ if ( $format === 'json' ) {
 // Generate navigation links
 print '<nav><ul>';
 $tab = 0;
-foreach ( $wmf->getNames() as $name ) {
+foreach ( $clusters->getNames() as $name ) {
 	$tab++;
 	print '<li><a href="#tabs-' . $tab . '">Cluster ' . htmlspecialchars( $name ) . '</a></li>';
 }
@@ -134,13 +169,13 @@ print '</ul></nav><main>';
 
 // Generate content sections
 $tab = 0;
-foreach ( $wmf->getNames() as $name ) {
+foreach ( $clusters->getNames() as $name ) {
 	$tab++;
 	print "<section id=\"tabs-$tab\"><h2>Cluster <strong>" . htmlspecialchars( $name ) . '</strong></h2>';
-	print $wmf->htmlFor( $name ) . '</section>';
+	print $clusters->htmlFor( $name ) . '</section>';
 }
 print '</main>';
 ?>
-<footer>Automatically generated from <a href="./conf/highlight.php?file=db-eqiad.php">wmf-config/db-eqiad.php</a></footer>
+<footer>Automatically generated based on <a href="./conf/highlight.php?file=db-eqiad.php">wmf-config/db-eqiad.php</a></footer>
 </body>
 </html>

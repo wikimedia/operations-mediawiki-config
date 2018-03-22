@@ -55,7 +55,7 @@ if ( !$selectedFilePath ) {
 		$hlHtml = "Whitelist contains nonexistent entry: $selectedFilePath :(";
 		$selectedFilePath = false;
 	} else {
-		$selectedFileViewRawUrl = './' . urlencode( $fileName );
+		$selectedFileViewRawUrl = './' . $fileName;
 		// Resolve symlink
 		// Don't use readlink since that will return a path relative to where the symlink is.
 		// Which is a problem if our PWD is not the same dir (such as in unit tests).

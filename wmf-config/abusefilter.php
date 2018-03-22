@@ -160,6 +160,7 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterBlockDuration = 'indefinite'; // T96669
 		$wgAbuseFilterAnonBlockDuration = '31 hours'; // T96669
 		$wgAbuseFilterNotificationsPrivate = true; // T147744
+		$wgAbuseFilterProfile = true; // T190264
 		break;
 	case 'eswikiquote': // T177760, T177761
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;

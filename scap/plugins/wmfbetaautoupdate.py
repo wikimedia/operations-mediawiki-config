@@ -19,20 +19,23 @@ class BetaUpdate(cli.Application):
 
     def main(self, *extra_args):
         """Do all kinds of weird stuff for beta."""
+
+        # These are all joined with stage_dir, so '' becomes /srv/mediawiki-staging/, etc.
+        # php-master is like php-1.xx.y-wmf.z we use in production but is tracking...master ;-)
         pull_paths = [
-            'portal-master',
+            '',
             'php-master',
             'php-master/extensions',
             'php-master/skins',
-            'php-master/vendor'
+            'php-master/vendor',
         ]
+        stage_dir = self.config['stage_dir']
 
         for path in pull_paths:
-            path = os.path.join(self.config['stage_dir'], path)
-            with utils.cd(path):
-                subprocess.check_call('/usr/bin/git pull', shell=True)
-
-        for submodule in ['extensions', 'skins']:
-            path = os.path.join(self.config['stage_dir'], 'php-master',
-                                submodule)
-            git.update_submodules(path, use_upstream=True)
+            with utils.cd(os.path.join(stage_dir, path)):
+                subprocess.check_call(['/usr/bin/git', 'pull'])
+                subprocess.check_call(['/usr/bin/git', 'submodule', 'update',
+                                       '--init', '--recursive', '--jobs', '8',
+                                       '--rebase'])
+        subprocess.check_call(['/usr/bin/git', 'submodule', 'update',
+                               '--remote', 'portals'])

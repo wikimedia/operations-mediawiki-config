@@ -78,7 +78,7 @@ $wgLBFactoryConf = [
 	'wikidatawiki' => 's8',
 
 	# labs-related wikis
-	'labswiki'     => 'silver',
+	'labswiki'     => 'm5',
 	'labtestwiki'  => 'labtestweb2001',
 ],
 
@@ -104,15 +104,15 @@ $wgLBFactoryConf = [
 'sectionLoads' => [
 	's1' => [
 		'db1052' => 0,      # B3 2.8TB  96GB, master
-		# 'db1067' => 50,     # D1 2.8TB 160GB, old master # candidate master
-		'db1065' => 0,      # D1 2.8TB 160GB, vslow, dump # master for db1095
+		'db1067' => 50,     # D1 2.8TB 160GB, old master # candidate master
 		'db1066' => 50,     # D1 2.8TB 160GB, api
-		'db1073' => 50,     # B3 2.8TB 160GB, api
 		'db1080' => 300,    # A2 3.6TB 512GB, api
 		'db1083' => 500,    # B1 3.6TB 512GB
 		'db1089' => 500,    # C3 3.6TB 512GB
 		'db1099:3311' => 1, # B2 3.6TB 512GB # rc, log: s1 and s8
 		'db1105:3311' => 1, # C3 3.6TB 512GB # rc, log: s1 and s2
+		'db1106' => 50,      # D3 3.6TB 512GB, vslow, dump
+		'db1114' => 300,    # D4 3.6TB 512GB, api # MariaDB 10.1
 	],
 	's2' => [
 		'db1054' => 0,      # A3 2.8TB  96GB, master
@@ -120,7 +120,7 @@ $wgLBFactoryConf = [
 		'db1074' => 300,    # A2 3.6TB 512GB, api
 		'db1076' => 500,    # B1 3.6TB 512GB # candidate master
 		'db1090' => 500,    # C3 3.6TB 512GB
-		# 'db1103:3312' => 1, # A3 3.6TB 512GB # rc, log: s2 and s4 # alter table
+		'db1103:3312' => 1, # A3 3.6TB 512GB # rc, log: s2 and s4
 		'db1105:3312' => 1, # C3 3.6TB 512GB # rc, log: s1 and s2
 	],
 	/* s3 */ 'DEFAULT' => [
@@ -132,7 +132,7 @@ $wgLBFactoryConf = [
 	's4' => [
 		'db1068' => 0,      # D1 2.8TB 160GB, master
 		'db1064' => 0,      # D1 2.8TB 160GB, vslow, dump # master for db1095
-		'db1081' => 300,    # A2 3.6TB 512GB, api
+		'db1081' => 300,    # A2 3.6TB 512GB, api # candidate master
 		'db1084' => 400,    # B1 3.6TB 512GB, api
 		'db1091' => 500,    # D2 3.6TB 512GB
 		'db1097:3314' => 1, # D1 3.6TB 512GB, # rc, log: s4 and s5
@@ -140,26 +140,25 @@ $wgLBFactoryConf = [
 	],
 	's5' => [
 		'db1070' => 0,      # D1 2.8TB 160GB, master
-		'db1051' => 0,      # B3 2.8TB  96GB, vslow, dump in s5
 		'db1082' => 300,    # A2 3.6TB 512GB, api # master for db1095
 		'db1096:3315' => 1, # A6 3.6TB 512GB, # rc, log: s5 and s6
 		'db1097:3315' => 1, # D1 3.6TB 512GB, # rc, log: s4 and s5
 		'db1100' => 50,     # C2 3.6TB 512GB, old master #api # candidate master
-		'db1106' => 500,    # D3 3.6TB 512GB
 		'db1110' => 500,    # C3 3.6TB 512GB
+		'db1113:3315' => 0, # B8 3.6TB 512GB, # vslow, dump: s5 and s6
 	],
 	's6' => [
 		'db1061' => 0,      # C3 2.8TB 128GB, master
-		'db1063' => 0,      # C5 2.8TB 128GB, vslow, dump # MariaDB 10.1
 		'db1085' => 300,    # B3 3.6TB 512GB, api #master for db1102 (sanitarium 3)
 		'db1088' => 500,    # C2 3.6TB 512GB
-		'db1093' => 500,    # D2 3.6TB 512GB, api
+		'db1093' => 500,    # D2 3.6TB 512GB, api # candidate master
 		'db1096:3316' => 1, # A6 3.6TB 512GB, # rc, log: s5 and s6
 		'db1098:3316' => 1, # B5 3.6TB 512GB, # rc, log: s6 and s7
+		'db1113:3316' => 0, # B8 3.6TB 512GB, # vslow, dump: s5 and s6
 	],
 	's7' => [
 		'db1062' => 0,      # D4 2.8TB 128GB, master
-		'db1069' => 0,      # D1 2.8TB 160GB, vslow, dump, old master
+		'db1069' => 0,      # A1 2.8TB 160GB, vslow, dump, old master # candidate master
 		'db1079' => 300,    # A2 3.6TB 512GB, api #master for db1102 (sanitarium 3)
 		'db1086' => 500,    # B3 3.6TB 512GB, api
 		'db1094' => 500,    # D2 3.6TB 512GB
@@ -176,8 +175,10 @@ $wgLBFactoryConf = [
 		'db1109' => 500,    # D8 3.6TB 512GB
 	],
 
-	'silver' => [
-		'silver' => 1,
+	'm5' => [
+		// Use the FQDN so that `sql labswiki` will work from hosts where the
+		// default DNS search path is not eqiad.wmnet (e.g. labweb1001)
+		'm5-master.eqiad.wmnet' => 1,
 	],
 	'labtestweb2001' => [
 		'labtestweb2001' => 1,
@@ -278,15 +279,15 @@ $wgLBFactoryConf = [
 			'db1105:3311' => 1,
 		],
 		'dump' => [
-			'db1065' => 1,
+			'db1106' => 1,
 		],
 		'vslow' => [
-			'db1065' => 1,
+			'db1106' => 1,
 		],
 		'api' => [
-			'db1080' => 1,
-			'db1073' => 1,
-			'db1066' => 1,
+			'db1066' => 2,
+			'db1080' => 3,
+			'db1114' => 3,
 		],
 	],
 	's2' => [
@@ -301,23 +302,23 @@ $wgLBFactoryConf = [
 			'db1074' => 5,
 		],
 		'watchlist' => [
-			# 'db1103:3312' => 1,
+			'db1103:3312' => 1,
 			'db1105:3312' => 1,
 		],
 		'recentchanges' => [
-			# 'db1103:3312' => 1,
+			'db1103:3312' => 1,
 			'db1105:3312' => 1,
 		],
 		'recentchangeslinked' => [
-			# 'db1103:3312' => 1,
+			'db1103:3312' => 1,
 			'db1105:3312' => 1,
 		],
 		'contributions' => [
-			# 'db1103:3312' => 1,
+			'db1103:3312' => 1,
 			'db1105:3312' => 1,
 		],
 		'logpager' => [
-			# 'db1103:3312' => 1,
+			'db1103:3312' => 1,
 			'db1105:3312' => 1,
 		],
 	],
@@ -378,10 +379,10 @@ $wgLBFactoryConf = [
 	],
 	's5' => [
 		'vslow' => [
-			'db1051' => 1,
+			'db1113:3315' => 1,
 		],
 		'dump' => [
-			'db1051' => 1,
+			'db1113:3315' => 1,
 		],
 		'api' => [
 			'db1082' => 1,
@@ -410,10 +411,10 @@ $wgLBFactoryConf = [
 	],
 	's6' => [
 		'vslow' => [
-			'db1063' => 1,
+			'db1113:3316' => 1,
 		],
 		'dump' => [
-			'db1063' => 1,
+			'db1113:3316' => 1,
 		],
 		'api' => [
 			'db1085' => 10,
@@ -513,13 +514,6 @@ $wgLBFactoryConf = [
 # Removing a server from this list does not remove the server from rotation,
 # it just breaks the site horribly.
 'hostsByName' => [
-	'db1001' => '10.64.0.5', # do not remove or comment out
-	'db1009' => '10.64.0.13', # do not remove or comment out
-	'db1011' => '10.64.0.15', # do not remove or comment out
-	'db1020' => '10.64.16.9', # do not remove or comment out
-	'db1043' => '10.64.16.32', # do not remove or comment out
-	'db1047' => '10.64.16.36', # do not remove or comment out
-	'db1051' => '10.64.16.76', # do not remove or comment out
 	'db1052' => '10.64.16.77', # do not remove or comment out
 	'db1054' => '10.64.0.206', # do not remove or comment out
 	'db1055' => '10.64.32.25', # do not remove or comment out
@@ -527,17 +521,14 @@ $wgLBFactoryConf = [
 	'db1060' => '10.64.32.30', # do not remove or comment out
 	'db1061' => '10.64.32.227', # do not remove or comment out
 	'db1062' => '10.64.48.15', # do not remove or comment out
-	'db1063' => '10.64.32.228', # do not remove or comment out
 	'db1064' => '10.64.48.19', # do not remove or comment out
-	'db1065' => '10.64.48.20', # do not remove or comment out
 	'db1066' => '10.64.48.21', # do not remove or comment out
 	'db1067' => '10.64.48.22', # do not remove or comment out
 	'db1068' => '10.64.48.23', # do not remove or comment out
-	'db1069' => '10.64.48.24', # do not remove or comment out
+	'db1069' => '10.64.0.108', # do not remove or comment out
 	'db1070' => '10.64.48.25', # do not remove or comment out
 	'db1071' => '10.64.48.26', # do not remove or comment out
 	'db1072' => '10.64.16.39', # do not remove or comment out
-	'db1073' => '10.64.16.79', # do not remove or comment out
 	'db1074' => '10.64.0.204', # do not remove or comment out
 	'db1075' => '10.64.0.205', # do not remove or comment out
 	'db1076' => '10.64.16.190', # do not remove or comment out
@@ -578,27 +569,9 @@ $wgLBFactoryConf = [
 	'db1106' => '10.64.48.13', # do not remove or comment out
 	'db1109' => '10.64.48.172', # do not remove or comment out
 	'db1110' => '10.64.32.73', # do not remove or comment out
-	'db2001' => '10.192.0.4', # do not remove or comment out
-	'db2002' => '10.192.0.5', # do not remove or comment out
-	'db2003' => '10.192.0.6', # do not remove or comment out
-	'db2004' => '10.192.0.7', # do not remove or comment out
-	'db2005' => '10.192.0.8', # do not remove or comment out
-	'db2006' => '10.192.0.9', # do not remove or comment out
-	'db2007' => '10.192.0.10', # do not remove or comment out
-	'db2011' => '10.192.0.14', # do not remove or comment out
-	'db2012' => '10.192.0.15', # do not remove or comment out
-	'db2013' => '10.192.0.16', # do not remove or comment out
-	'db2014' => '10.192.0.17', # do not remove or comment out
-	'db2015' => '10.192.0.18', # do not remove or comment out
-	'db2020' => '10.192.16.8', # do not remove or comment out
-	'db2021' => '10.192.16.9', # do not remove or comment out
-	'db2022' => '10.192.16.10', # do not remove or comment out
-	'db2024' => '10.192.16.12', # do not remove or comment out
-	'db2025' => '10.192.16.13', # do not remove or comment out
-	'db2026' => '10.192.16.14', # do not remove or comment out
-	'db2027' => '10.192.16.15', # do not remove or comment out
-	'db2031' => '10.192.16.19', # do not remove or comment out
-	'db2032' => '10.192.16.20', # do not remove or comment out
+	'db1113:3315' => '10.64.16.11:3315', # do not remove or comment out
+	'db1113:3316' => '10.64.16.11:3316', # do not remove or comment out
+	'db1114' => '10.64.48.173', # do not remove or comment out
 	'db2033' => '10.192.32.4', # do not remove or comment out
 	'db2034' => '10.192.0.87', # do not remove or comment out
 	'db2035' => '10.192.32.6', # do not remove or comment out
@@ -662,7 +635,7 @@ $wgLBFactoryConf = [
 	'db2091:3312' => '10.192.0.10:3312', # do not remove or comment out
 	'db2091:3314' => '10.192.0.10:3314', # do not remove or comment out
 	'virt1000' => '208.80.154.18', # do not remove or comment out
-	'silver' => '208.80.154.136', # do not remove or comment out
+	'm5-master.eqiad.wmnet' => '10.64.16.79', # do not remove or comment out
 	'labtestweb2001' => '208.80.153.14', # do not remove or comment out
 ],
 
@@ -700,7 +673,7 @@ $wgLBFactoryConf = [
 	'cluster25' => [
 		'10.64.16.187' => 0, # es1014, B1 11TB 128GB, master
 		'10.64.48.114' => 1, # es1017, D1 11TB 128GB
-		'10.64.48.116' => 1, # es1019, D8 11TB 128GB
+		'10.64.48.116' => 1, # es1019, D8 11TB 128GB # update socket location
 	],
 	# ExtensionStore shard1
 	'extension1' => [
