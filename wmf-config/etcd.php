@@ -7,9 +7,8 @@
 # - $wmfLocalServices (from wmf-config/*Services.php)
 
 function wmfSetupEtcd() {
-	global $wmfRealm, $wmfDatacenter, $wmfLocalServices, $wgReadOnly, $wmfMasterDatacenter;
-
-	# Create a local cache
+	global $wmfLocalServices, $wmfEtcdLastModifiedIndex;
+		# Create a local cache
 	if ( PHP_SAPI === 'cli' ) {
 		$localCache = new HashBagOStuff;
 	} else {
@@ -23,6 +22,13 @@ function wmfSetupEtcd() {
 		'directory' => "conftool/v1/mediawiki-config",
 		'cache' => $localCache,
 	] );
+	$wmfEtcdLastModifiedIndex = $etcdConfig->getModifiedIndex();
+	return $etcdConfig;
+}
+
+function wmfEtcdConfig() {
+	global $wmfDatacenter, $wgReadOnly, $wmfMasterDatacenter;
+	$etcdConfig = wmfSetupEtcd();
 
 	# Read only mode
 	$wgReadOnly = $etcdConfig->get( "$wmfDatacenter/ReadOnly" );
@@ -31,5 +37,3 @@ function wmfSetupEtcd() {
 	# The datacenter from which we serve traffic.
 	$wmfMasterDatacenter = $etcdConfig->get( 'common/WMFMasterDatacenter' );
 }
-
-wmfSetupEtcd();

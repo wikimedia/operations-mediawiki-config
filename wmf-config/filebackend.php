@@ -61,7 +61,9 @@ foreach ( $datacenters as $specificDC ) {
 		// When used by FileBackendMultiWrite, read from this cluster if it's the local one
 		'readAffinity'       => ( $specificDC === $wmfDatacenter ),
 		'readUsers'           => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
-		'writeUsers'          => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ]
+		'writeUsers'          => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
+		'secureReadUsers'     => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ],
+		'secureWriteUsers'    => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ]
 	];
 	$wgFileBackends[] = [ // backend config for wiki's access to shared repo
 		'class'              => 'SwiftFileBackend',
@@ -88,7 +90,9 @@ foreach ( $datacenters as $specificDC ) {
 		// When used by FileBackendMultiWrite, read from this cluster if it's the local one
 		'readAffinity'       => ( $specificDC === $wmfDatacenter ),
 		'readUsers'           => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
-		'writeUsers'          => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ]
+		'writeUsers'          => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
+		'secureReadUsers'     => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ],
+		'secureWriteUsers'    => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ]
 	];
 	$wgFileBackends[] = [ // backend config for wiki's access to shared files
 		'class'              => 'SwiftFileBackend',
@@ -108,7 +112,9 @@ foreach ( $datacenters as $specificDC ) {
 		// When used by FileBackendMultiWrite, read from this cluster if it's the local one
 		'readAffinity'       => ( $specificDC === $wmfDatacenter ),
 		'readUsers'           => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
-		'writeUsers'          => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ]
+		'writeUsers'          => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
+		'secureReadUsers'     => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ],
+		'secureWriteUsers'    => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ]
 	];
 	$wgFileBackends[] = [ // backend config for wiki's access to shared test repo
 		'class'              => 'SwiftFileBackend',
@@ -125,7 +131,9 @@ foreach ( $datacenters as $specificDC ) {
 		// When used by FileBackendMultiWrite, read from this cluster if it's the local one
 		'readAffinity'       => ( $specificDC === $wmfDatacenter ),
 		'readUsers'           => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
-		'writeUsers'          => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ]
+		'writeUsers'          => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
+		'secureReadUsers'     => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ],
+		'secureWriteUsers'    => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ]
 	];
 }
 /* end DC-specific Swift backend config */
@@ -257,7 +265,9 @@ if ( $wgDBname === 'test2wiki' ) {
 		'abbrvThreshold'   => 160 /* Keep in sync with with local repo on testwiki or things break. */
 	];
 }
-if ( $wgDBname != 'commonswiki' ) {
+if ( $wgDBname != 'commonswiki' && $wgDBname != 'labswiki' && $wgDBname != 'labtestwiki' ) {
+	// Commons is local to commonswiki :)
+	// wikitech uses $wgUseInstantCommons instead of db access.
 	$wgForeignFileRepos[] = [
 		'class'            => 'ForeignDBViaLBRepo',
 		'name'             => 'shared',

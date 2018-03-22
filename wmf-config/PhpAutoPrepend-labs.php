@@ -14,4 +14,5 @@
  * @see https://secure.php.net/manual/en/ini.core.php#ini.auto-prepend-file
  */
 
+// https://phabricator.wikimedia.org/T180183
 require_once __DIR__ . '/profiler-labs.php';

@@ -1,38 +1,37 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-# This file holds configuration overrides specific to Beta Cluster.
+# This file holds common overrides specific to Beta Cluster.
+# For per-wiki overrides, see InitialiseSettings-labs.php.
 #
-# This MUST NOT be loaded for production.
+# This for BETA and MUST NOT be loaded for production.
 #
-# Load order:
-#  |-- mediawiki/DefaultSettings.php
-#  |
-#  `-- wmf-config/CommonSettings.php
-#      |
-#      |-- wmf-config/InitialiseSettings.php
-#      |   `-- wmf-config/InitialiseSettings-labs.php
-#      |
-#      |-- (main stuff in CommonSettings.php)
-#      |
-#      `-- wmf-config/CommonSettings-labs.php
+# Effective load order:
+# - multiversion
+# - mediawiki/DefaultSettings.php
+# - wmf-config/InitialiseSettings.php
+# - wmf-config/InitialiseSettings-labs.php
+# - wmf-config/CommonSettings.php
+# - wmf-config/CommonSettings-labs.php [THIS FILE]
+#
+# Load tree:
+# - multiversion
+# - mediawiki/index.php
+# - mediawiki/WebStart.php
+# - mediawiki/Setup.php
+# - mediawiki/DefaultSettings.php
+# - mediawiki/LocalSettings.php
+#   `-- wmf-config/CommonSettings.php
+#       |
+#       |-- wmf-config/InitialiseSettings.php
+#       |   `-- wmf-config/InitialiseSettings-labs.php
+#       |
+#       |-- (main stuff in CommonSettings.php)
+#       |
+#       `-- wmf-config/CommonSettings-labs.php [THIS FILE]
 #
 
-if ( $wmfRealm == 'labs' ) {  # safe guard
-// Profiler (similar to wmf-config/profiler.php for production)
-// 1. Web request for https://test.wikimedia.beta.wmflabs.org/
-// 2. Web request with X-Wikimedia-Debug and ?forceprofile=1
-// 3. Maintenance script with --profiler=text
-if ( $wgDBname == 'testwiki'
-	|| PHP_SAPI === 'cli'
-	|| ( isset( $_GET['forceprofile'] ) && isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) )
-) {
-	$wgProfiler = [
-		'class' => 'ProfilerXhprof',
-		'output' => 'text',
-	];
-}
-
+if ( $wmfRealm == 'labs' ) { # safe guard
 if ( file_exists( '/etc/wmflabs-instancename' ) ) {
 	$wgOverrideHostname = trim( file_get_contents( '/etc/wmflabs-instancename' ) );
 }
@@ -82,27 +81,15 @@ if ( $wmgUseFlow ) {
 }
 
 if ( $wmgUseFileExporter ) {
-	wfLoadExtension( 'FileExporter' );
 	// On Beta don't bother enabling beta feature mode.
 	$wgFileExporterBetaFeature = false;
 	$wgFileExporterTarget = 'https://commons.wikimedia.beta.wmflabs.org/wiki/Special:ImportFile';
-}
-
-if ( $wmgUseFileImporter ) {
-	wfLoadExtension( 'FileImporter' );
-	$wgFileImporterSourceSiteServices = [ $wmgUseFileImporter ];
 }
 
 if ( $wmgUseContentTranslation ) {
 	$wgContentTranslationSiteTemplates['cx'] = 'https://cxserver-beta.wmflabs.org/v1';
 	$wgContentTranslationSiteTemplates['cookieDomain'] = false;
 	$wgContentTranslationTranslateInTarget = false;
-}
-
-if ( $wmgUseCentralNotice ) {
-	$wgCentralPagePath = "//meta.wikimedia.beta.wmflabs.org/w/index.php";
-	$wgCentralSelectedBannerDispatcher = "//meta.wikimedia.beta.wmflabs.org/w/index.php?title=Special:BannerLoader";
-	$wgCentralBannerRecorder = "//meta.wikimedia.beta.wmflabs.org/w/index.php?title=Special:RecordImpression";
 }
 
 if ( $wmgUseCentralAuth ) {
@@ -210,10 +197,6 @@ if ( $wmgUseCORS ) {
 // Temporary override to test T68699 on Beta Cluster.  Remove when in production.
 $wgExtendedLoginCookieExpiration = 365 * 86400;
 
-if ( file_exists( "$wmfConfigDir/extension-list-labs" ) ) {
-	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-labs";
-}
-
 if ( $wmgUseCollection ) {
 	$wgCollectionPortletFormats[] = 'rdf2text';
 	// Don't use production proxy to reach PediaPress
@@ -311,26 +294,8 @@ if ( $wmgUseORES ) {
 	$wgOresBaseUrl = 'https://ores-beta.wmflabs.org/';
 }
 
-if ( $wmgUsePerformanceInspector ) {
-	wfLoadExtension( 'PerformanceInspector' );
-}
-
 if ( $wmgUseUniversalLanguageSelector ) {
 	$wgDefaultUserOptions['compact-language-links'] = 0;
-}
-
-if ( $wmgUseEmailAuth ) {
-	wfLoadExtension( 'EmailAuth' );
-	// make it do something testable
-	$wgHooks['EmailAuthRequireToken'][] = function (
-		$user, &$verificationRequired, &$formMessage,
-		&$subjectMessage, &$bodyMessage
-	) {
-		if ( preg_match( '/\+emailauth@/', $user->getEmail() ) ) {
-			$verificationRequired = true;
-			return false;
-		}
-	};
 }
 
 if ( $wmgUseLoginNotify ) {
@@ -352,11 +317,6 @@ $wgHooks['ImportSources'][] = 'wmfImportSources';
 
 // Reenable Preview and Changes tabs for wikieditor preview
 $wgHiddenPrefs = array_diff( $wgHiddenPrefs, [ 'wikieditor-preview' ] );
-
-// T57420: prevent creation of local password records for SUL users
-if ( isset( $wgAuthManagerAutoConfig['primaryauth'][\MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider::class] ) ) {
-	$wgAuthManagerAutoConfig['primaryauth'][\MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider::class]['args'][0]['loginOnly'] = true;
-}
 
 $wgAuthManagerAutoConfig['preauth'][GuanacoProvider::class] = [
 	'class' => GuanacoProvider::class,

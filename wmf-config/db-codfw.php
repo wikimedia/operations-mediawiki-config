@@ -78,7 +78,7 @@ $wgLBFactoryConf = [
 	'wikidatawiki' => 's8',
 
 	# labs-related wikis
-	'labswiki'     => 'silver',
+	'labswiki'     => 'm5',
 	'labtestwiki'  => 'labtestweb2001',
 ],
 
@@ -116,7 +116,7 @@ $wgLBFactoryConf = [
 	's2' => [
 		'db2035'      => 50,  # C6 2.9TB 160GB, master
 		'db2041'      => 100, # C6 2.9TB 160GB, api
-		# 'db2049'      => 400, # C6 2.9TB 160GB, # T187534
+		'db2049'      => 400, # C6 2.9TB 160GB,
 		'db2056'      => 50,  # D6 3.3TB 160GB, dump (inactive), vslow #innodb compressed
 		'db2063'      => 100, # D6 3.3TB 160GB, api
 		'db2064'      => 400, # D6 3.3TB 160GB
@@ -179,8 +179,8 @@ $wgLBFactoryConf = [
 		'db2086:3318' => 1, # B1 3.3TB 512GB # rc, log: s7 and s8
 	],
 
-	'silver' => [
-		'silver' => 1,
+	'm5' => [
+		'm5-master' => 1,
 	],
 	'labtestweb2001' => [
 		'labtestweb2001' => 1,
@@ -498,13 +498,6 @@ $wgLBFactoryConf = [
 # Removing a server from this list does not remove the server from rotation,
 # it just breaks the site horribly.
 'hostsByName' => [
-	'db1001' => '10.64.0.5', # do not remove or comment out
-	'db1009' => '10.64.0.13', # do not remove or comment out
-	'db1011' => '10.64.0.15', # do not remove or comment out
-	'db1020' => '10.64.16.9', # do not remove or comment out
-	'db1043' => '10.64.16.32', # do not remove or comment out
-	'db1047' => '10.64.16.36', # do not remove or comment out
-	'db1051' => '10.64.16.76', # do not remove or comment out
 	'db1052' => '10.64.16.77', # do not remove or comment out
 	'db1054' => '10.64.0.206', # do not remove or comment out
 	'db1055' => '10.64.32.25', # do not remove or comment out
@@ -512,17 +505,14 @@ $wgLBFactoryConf = [
 	'db1060' => '10.64.32.30', # do not remove or comment out
 	'db1061' => '10.64.32.227', # do not remove or comment out
 	'db1062' => '10.64.48.15', # do not remove or comment out
-	'db1063' => '10.64.32.228', # do not remove or comment out
 	'db1064' => '10.64.48.19', # do not remove or comment out
-	'db1065' => '10.64.48.20', # do not remove or comment out
 	'db1066' => '10.64.48.21', # do not remove or comment out
 	'db1067' => '10.64.48.22', # do not remove or comment out
 	'db1068' => '10.64.48.23', # do not remove or comment out
-	'db1069' => '10.64.48.24', # do not remove or comment out
+	'db1069' => '10.64.0.108', # do not remove or comment out
 	'db1070' => '10.64.48.25', # do not remove or comment out
 	'db1071' => '10.64.48.26', # do not remove or comment out
 	'db1072' => '10.64.16.39', # do not remove or comment out
-	'db1073' => '10.64.16.79', # do not remove or comment out
 	'db1074' => '10.64.0.204', # do not remove or comment out
 	'db1075' => '10.64.0.205', # do not remove or comment out
 	'db1076' => '10.64.16.190', # do not remove or comment out
@@ -563,27 +553,9 @@ $wgLBFactoryConf = [
 	'db1106' => '10.64.48.13', # do not remove or comment out
 	'db1109' => '10.64.48.172', # do not remove or comment out
 	'db1110' => '10.64.32.73', # do not remove or comment out
-	'db2001' => '10.192.0.4', # do not remove or comment out
-	'db2002' => '10.192.0.5', # do not remove or comment out
-	'db2003' => '10.192.0.6', # do not remove or comment out
-	'db2004' => '10.192.0.7', # do not remove or comment out
-	'db2005' => '10.192.0.8', # do not remove or comment out
-	'db2006' => '10.192.0.9', # do not remove or comment out
-	'db2007' => '10.192.0.10', # do not remove or comment out
-	'db2011' => '10.192.0.14', # do not remove or comment out
-	'db2012' => '10.192.0.15', # do not remove or comment out
-	'db2013' => '10.192.0.16', # do not remove or comment out
-	'db2014' => '10.192.0.17', # do not remove or comment out
-	'db2015' => '10.192.0.18', # do not remove or comment out
-	'db2020' => '10.192.16.8', # do not remove or comment out
-	'db2021' => '10.192.16.9', # do not remove or comment out
-	'db2022' => '10.192.16.10', # do not remove or comment out
-	'db2024' => '10.192.16.12', # do not remove or comment out
-	'db2025' => '10.192.16.13', # do not remove or comment out
-	'db2026' => '10.192.16.14', # do not remove or comment out
-	'db2027' => '10.192.16.15', # do not remove or comment out
-	'db2031' => '10.192.16.19', # do not remove or comment out
-	'db2032' => '10.192.16.20', # do not remove or comment out
+	'db1113:3315' => '10.64.16.11:3315', # do not remove or comment out
+	'db1113:3316' => '10.64.16.11:3316', # do not remove or comment out
+	'db1114' => '10.64.48.173', # do not remove or comment out
 	'db2033' => '10.192.32.4', # do not remove or comment out
 	'db2034' => '10.192.0.87', # do not remove or comment out
 	'db2035' => '10.192.32.6', # do not remove or comment out
@@ -647,7 +619,7 @@ $wgLBFactoryConf = [
 	'db2091:3312' => '10.192.0.10:3312', # do not remove or comment out
 	'db2091:3314' => '10.192.0.10:3314', # do not remove or comment out
 	'virt1000' => '208.80.154.18', # do not remove or comment out
-	'silver' => '208.80.154.136', # do not remove or comment out
+	'm5-master' => '10.64.16.79', # do not remove or comment out
 	'labtestweb2001' => '208.80.153.14', # do not remove or comment out
 ],
 

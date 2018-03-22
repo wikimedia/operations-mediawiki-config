@@ -1,14 +1,14 @@
 <?php
 require_once __DIR__ . '/MWWikiversions.php';
 
-global $wmfCluster, $wmfDatacenter, $wmfRealm;
+global $wmfCluster, $wmfDatacenter, $wmfRealm, $wmgRealm;
 
 $wmfCluster = trim( file_get_contents( '/etc/wikimedia-cluster' ) );
 if ( $wmfCluster === 'labs' ) {
-	$wmfRealm = 'labs';
+	$wmfRealm = $wmgRealm = 'labs';
 	$wmfDatacenter = 'eqiad';
 } else {
-	$wmfRealm = 'production';
+	$wmfRealm = $wmgRealm = 'production';
 	$wmfDatacenter = $wmfCluster;
 }
 

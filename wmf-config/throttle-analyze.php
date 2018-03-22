@@ -3,6 +3,7 @@
 
 /**
  * Helper to easily add a throttling request.
+ * See throttle.php for the format of $wmgThrottlingExceptions.
  */
 $wgExtensionFunctions[] = function () {
 	global $wmgThrottlingExceptions, $wgDBname, $wgRequest;
@@ -35,14 +36,6 @@ $wgExtensionFunctions[] = function () {
 		if ( isset( $options['range'] ) && !IP::isInRanges( $ip, (array)$options['range'] ) ) {
 			continue;
 		}
-
-		# Ensure that dbname field contain wikidatawiki and commonswiki
-		if ( gettype( $options['dbname'] ) == 'string' ) {
-			$options['dbname'] = [ $options['dbname'] ];
-		}
-		$options['dbname'][] = 'commonswiki';
-		$options['dbname'][] = 'wikidatawiki';
-		$options['dbname'] = array_unique( $options['dbname'] );
 
 		# Finally) set up the throttle value
 		global $wgAccountCreationThrottle, $wgRateLimits;

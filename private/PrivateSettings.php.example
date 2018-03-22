@@ -22,6 +22,7 @@ $wmfSwiftEqiadConfig = $wmfSwiftCodfwConfig = [
 	'cirrusUser' => '',
 	'cirrusKey' => '',
 	'thumborUser' => '',
+	'thumborPrivateUser' => '',
 	'thumborUrl' => '',
 	'thumborSecret' => '',
 ];

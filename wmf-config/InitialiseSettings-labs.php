@@ -1,21 +1,39 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-# This file holds per-wiki configuration overrides specific to Beta Cluster.
-# Prefixing a setting key with '-' to override all values from InitialiseSettings.php
-# Please wrap your code in functions to avoid tainting the global namespace.
+# This file holds per-wiki overrides specific to Beta Cluster.
+# For overrides common to all wikis, see CommonSettings-labs.php.
 #
-# Load order:
-#  |-- DefaultSettings.php
-#  |
-#  |-- wmf-config/CommonSettings.php
-#  |   |
-#  |   |-- wmf-config/InitialiseSettings.php
-#  |   |   `-- wmf-config/InitialiseSettings-labs.php
-#  |   |
-#  |   `-- (main stuff in CommonSettings.php)
-#  |
-#  `-- wmf-config/CommonSettings-labs.php
+# This for BETA and MUST NOT be loaded for production.
+#
+# Usage:
+# - Prefix a setting key with '-' to override all values from
+#   production InitialiseSettings.php.
+# - Please wrap your code in functions to avoid tainting the global scope.
+#
+# Effective load order:
+# - multiversion
+# - mediawiki/DefaultSettings.php
+# - wmf-config/InitialiseSettings.php
+# - wmf-config/InitialiseSettings-labs.php [THIS FILE]
+# - wmf-config/CommonSettings.php
+# - wmf-config/CommonSettings-labs.php
+#
+# Load tree:
+# - multiversion
+# - mediawiki/index.php
+# - mediawiki/WebStart.php
+# - mediawiki/Setup.php
+# - mediawiki/DefaultSettings.php
+# - mediawiki/LocalSettings.php
+#   `-- wmf-config/CommonSettings.php
+#       |
+#       |-- wmf-config/InitialiseSettings.php
+#       |   `-- wmf-config/InitialiseSettings-labs.php [THIS FILE]
+#       |
+#       |-- (main stuff in CommonSettings.php)
+#       |
+#       `-- wmf-config/CommonSettings-labs.php
 #
 
 /**
@@ -337,19 +355,12 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
-		'wgSecureLogin' => [
-			// Setting false throughout Labs for now due to untrusted SSL certificate
-			// T50501
-			'default' => false,
-			'loginwiki' => false,
-		],
-
 		'wgSearchSuggestCacheExpiry' => [
 			'default' => 300,
 		],
 
 		'wmgUseFlow' => [
-			// 'flow_computed_labs' is full set applicable on Beta Cluster.
+			// 'flow-labs' is full set applicable on Beta Cluster.
 			'flow_only_labs' => true,
 		],
 		# No separate Flow DB or cluster (yet) for labs.
@@ -439,6 +450,11 @@ function wmfLabsSettings() {
 			'wikidataclient' => true,
 		],
 
+		'wmgWikibaseAllowLocalShortDesc' => [
+			'default' => false,
+			'enwiki' => true,
+		],
+
 		'wmgWikibaseAllowDataAccessInUserLanguage' => [
 			'default' => false,
 			'wikidatawiki' => true,
@@ -472,20 +488,6 @@ function wmfLabsSettings() {
 
 		'-wmgUseCodeMirror' => [
 			'default' => true,
-		],
-
-		'wmgUseArticleCreationWorkflow' => [
-			'default' => false,
-			'enwiki' => true,
-		],
-
-		'wgArticleCreationWorkflows' => [
-			'default' => [
-				[
-					'namespaces' => [ 0 ],
-					'excludeRight' => 'autoconfirmed'
-				],
-			],
 		],
 
 		// Ensure ?action=credits isn't break and allow to work
@@ -563,9 +565,6 @@ function wmfLabsSettings() {
 			'default' => 'en.wikipedia.org',
 		],
 
-		'wmgUseEmailAuth' => [
-			'default' => 'true',
-		],
 		'wmgUseLinter' => [
 			'default' => true,
 		],
@@ -585,10 +584,6 @@ function wmfLabsSettings() {
 
 		// Probably no point in blocking Tool Labs edits to Beta Labs
 		'wmgAllowLabsAnonEdits' => [
-			'default' => true,
-		],
-
-		'wgStructuredChangeFiltersShowPreference' => [
 			'default' => true,
 		],
 
@@ -645,56 +640,23 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
-		'wmgUseTimeless' => [
-			'default' => true,
-		],
-
-		'wmgUse3d' => [
-			'default' => true,
-		],
-
-		// Test jQuery 3 (T124742)
-		'wgUsejQueryThree' => [
-			'default' => true,
-		],
-
 		'wgCognateReadOnly' => [
 			'default' => false,
 		],
 
-		'wgEchoPerUserBlacklist' => [
-			'default' => true,
-		],
-
-		'wmgMinervaNeue' => [
-			'default' => true,
-		],
-
-		'wgFragmentMode' => [
-			'default' => [ 'html5', 'legacy' ],
+		'wgEchoMaxMentionsInEditSummary' => [
+			'default' => 5,
 		],
 
 		'wmgUseNewWikiDiff2Extension' => [
 			'default' => true,
 		],
 
-		'wmgUseReadingLists' => [
-			'default' => true,
-		],
 		'wgReadingListsCluster' => [
 			'default' => false,
 		],
 		'wgReadingListsDatabase' => [
 			'default' => 'metawiki',
-		],
-		'wgReadingListsCentralWiki' => [
-			'default' => 'metawiki',
-		],
-
-		// TODO(T166759): Remove this setting once it is also
-		// the default for production.
-		'wgAutoloadAttemptLowercase' => [
-			'default' => false,
 		],
 
 		// Use a constant MLR model for all wikis. It's not ideal, but
@@ -707,28 +669,13 @@ function wmfLabsSettings() {
 			'default' => MIGRATION_WRITE_BOTH,
 		],
 
-		'wmgUseORES' => [
-			'simplewiki' => true, // T181848
+		'wmgUseJADE' => [
+			'default' => true,
 		],
+
 		'wgOresUiEnabled' => [
 			'default' => true,
 			'wikidatawiki' => false,
-		],
-		'wgOresFiltersThresholds' => [
-			'simplewiki' => [ // Follows enwiki
-				'damaging' => [
-					'likelygood' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.99)' ],
-					'maybebad' => [ 'min' => 'recall_at_precision(min_precision=0.15)', 'max' => 1 ],
-					'likelybad' => [ 'min' => 'recall_at_precision(min_precision=0.45)', 'max' => 1 ],
-					// verylikelybad uses default
-				],
-				'goodfaith' => [
-					'likelygood' => [ 'min' => 'recall_at_precision(min_precision=0.99)', 'max' => 1 ],
-					'maybebad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.15)' ],
-					// likelybad uses default
-					'verylikelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.9)' ],
-				],
-			],
 		],
 		'wgWMEAICaptchaEnabled' => [
 			'default' => true,
@@ -738,6 +685,10 @@ function wmfLabsSettings() {
 		],
 		// T184668
 		'wmgUseGlobalPreferences' => [
+			// Explicitly disabled on non-CentralAuth wikis in CommonSettings.php
+			'default' => true,
+		],
+		'wmgLocalAuthLoginOnly' => [
 			// Explicitly disabled on non-CentralAuth wikis in CommonSettings.php
 			'default' => true,
 		],

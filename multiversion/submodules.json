@@ -251,6 +251,10 @@
         "action": "branch",
         "ref": "."
     },
+    "extensions/JADE": {
+        "action": "branch",
+        "ref": "."
+    },
     "extensions/Josa": {
         "action": "branch",
         "ref": "."

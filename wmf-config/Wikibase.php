@@ -5,8 +5,8 @@ if ( !empty( $wmgUseWikibaseRepo ) ) {
 	include_once "$IP/extensions/Wikibase/repo/Wikibase.php";
 	include_once "$IP/extensions/Wikidata.org/WikidataOrg.php";
 	include_once "$IP/extensions/PropertySuggester/PropertySuggester.php";
-	include_once "$IP/extensions/WikibaseQuality/WikibaseQuality.php";
-	include_once "$IP/extensions/WikibaseQualityConstraints/WikibaseQualityConstraints.php";
+	wfLoadExtension( 'WikibaseQuality' );
+	wfLoadExtension( 'WikibaseQualityConstraints' );
 }
 
 // Load the Client extensions
@@ -310,6 +310,7 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings[$setting] = $value;
 	}
 
+	$wgWBClientSettings['allowLocalShortDesc'] = $wmgWikibaseAllowLocalShortDesc;
 	$wgWBClientSettings['allowDataTransclusion'] = $wmgWikibaseEnableData;
 	$wgWBClientSettings['allowDataAccessInUserLanguage'] = $wmgWikibaseAllowDataAccessInUserLanguage;
 	$wgWBClientSettings['entityAccessLimit'] = $wmgWikibaseEntityAccessLimit;
@@ -317,7 +318,7 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['sharedCacheKeyPrefix'] = $wgWBSharedCacheKey;
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
 
-	$wgWBClientSettings['entityUsageModifierLimits'] = [ 'D' => 10, 'L' => 10, 'C' => 73 ];
+	$wgWBClientSettings['entityUsageModifierLimits'] = [ 'D' => 10, 'L' => 10, 'C' => 33 ];
 }
 
 require_once "{$wmfConfigDir}/Wikibase-{$wmfRealm}.php";

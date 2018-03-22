@@ -3,7 +3,6 @@ $IP/extensions/AbuseFilter/extension.json
 $IP/extensions/AdvancedSearch/extension.json
 $IP/extensions/AntiSpoof/extension.json
 $IP/extensions/ApiFeatureUsage/extension.json
-$IP/extensions/ArticleCreationWorkflow/extension.json
 $IP/extensions/ArticlePlaceholder/extension.json
 $IP/extensions/Babel/extension.json
 $IP/extensions/BetaFeatures/extension.json
@@ -49,6 +48,8 @@ $IP/extensions/EventBus/extension.json
 $IP/extensions/EventLogging/extension.json
 $IP/extensions/ExtensionDistributor/extension.json
 $IP/extensions/FeaturedFeeds/extension.json
+$IP/extensions/FileExporter/extension.json
+$IP/extensions/FileImporter/extension.json
 $IP/extensions/FlaggedRevs/FlaggedRevs.php
 $IP/extensions/Flow/extension.json
 $IP/extensions/FundraiserLandingPage/extension.json
@@ -72,11 +73,13 @@ $IP/extensions/Insider/extension.json
 $IP/extensions/intersection/extension.json
 $IP/extensions/Interwiki/extension.json
 $IP/extensions/InterwikiSorting/extension.json
+$IP/extensions/JADE/extension.json
 $IP/extensions/Josa/extension.json
 $IP/extensions/JsonConfig/extension.json
 $IP/extensions/Kartographer/extension.json
 $IP/extensions/LabeledSectionTransclusion/extension.json
 $IP/extensions/LandingCheck/extension.json
+$IP/extensions/LdapAuthentication/LdapAuthentication.php
 $IP/extensions/Linter/extension.json
 $IP/extensions/LiquidThreads/extension.json
 $IP/extensions/Listings/extension.json
@@ -96,6 +99,7 @@ $IP/extensions/Nuke/extension.json
 $IP/extensions/OATHAuth/extension.json
 $IP/extensions/OAuth/extension.json
 $IP/extensions/ORES/extension.json
+$IP/extensions/OpenStackManager/OpenStackManager.php
 $IP/extensions/PageAssessments/extension.json
 $IP/extensions/PagedTiffHandler/extension.json
 $IP/extensions/PageImages/extension.json
@@ -105,6 +109,7 @@ $IP/extensions/ParserFunctions/extension.json
 $IP/extensions/ParserMigration/extension.json
 $IP/extensions/ParsoidBatchAPI/extension.json
 $IP/extensions/PdfHandler/extension.json
+$IP/extensions/PerformanceInspector/extension.json
 $IP/extensions/Petition/extension.json
 $IP/extensions/Poem/extension.json
 $IP/extensions/Popups/extension.json
@@ -155,8 +160,8 @@ $IP/extensions/VipsScaler/extension.json
 $IP/extensions/VisualEditor/extension.json
 $IP/extensions/Wikibase/client/WikibaseClient.php
 $IP/extensions/Wikibase/repo/Wikibase.php
-$IP/extensions/WikibaseQuality/WikibaseQuality.php
-$IP/extensions/WikibaseQualityConstraints/WikibaseQualityConstraints.php
+$IP/extensions/WikibaseQuality/extension.json
+$IP/extensions/WikibaseQualityConstraints/extension.json
 $IP/extensions/Wikidata.org/WikidataOrg.php
 $IP/extensions/WikidataPageBanner/extension.json
 $IP/extensions/WikiEditor/extension.json

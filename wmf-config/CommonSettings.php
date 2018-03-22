@@ -1,22 +1,31 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-# ######################################################################
 # CommonSettings.php is the main configuration file of the WMF cluster.
 # This file contains settings common to all (or many) WMF wikis.
+# For per-wiki configuration, see InitialiseSettings.php.
 #
-# For per-wiki configuration, see InitialiseSettings.php instead.
+# This for PRODUCTION.
 #
-# CommonSettings.php is included from LocalSettings.php.
-# LocalSettings.php is loaded by MediaWiki.
-# MediaWiki is loaded from Multiversion entrypoints, such as /w/index.php.
+# Effective load order:
+# - multiversion
+# - mediawiki/DefaultSettings.php
+# - wmf-config/InitialiseSettings.php
+# - wmf-config/CommonSettings.php [THIS FILE]
 #
-# At this point, only the following is available:
-# - Multiversion: Predefined globals $wmfRealm and $wmfDatacenter.
-# - MediaWiki (pre-Setup): Predefined global $IP, and loaded Autoloader,
-#                          Defines, Profiler, and DefaultSettings.
+# Load tree:
+# - multiversion
+# - mediawiki/index.php
+# - mediawiki/WebStart.php
+# - mediawiki/Setup.php
+# - mediawiki/DefaultSettings.php
+# - mediawiki/LocalSettings.php
+#   `-- wmf-config/CommonSettings.php
+#       |
+#       |-- wmf-config/InitialiseSettings.php
+#       |
+#       `-- (main stuff in CommonSettings.php) [THIS FILE]
 #
-# ######################################################################
 
 use MediaWiki\Logger\LoggerFactory;
 
@@ -107,13 +116,9 @@ default:
 # Shorthand when we have no master-slave situation to keep into account
 $wmfLocalServices = $wmfAllServices[$wmfDatacenter];
 
-# Configuration from etcd (sets $wmfMasterDatacenter)
-# Currently testing in Beta Cluster, and on production mwdebug hosts.
-if ( $wmfRealm === 'labs' || isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
-	require "$wmfConfigDir/etcd.php";
-} else {
-	$wmfMasterDatacenter = 'eqiad';
-}
+# Configuration from etcd (sets $wmfMasterDatacenter, $wgReadOnly and wmfEtcdLastModifiedIndex)
+require "$wmfConfigDir/etcd.php";
+wmfEtcdConfig();
 
 $wmfMasterServices = $wmfAllServices[$wmfMasterDatacenter];
 
@@ -319,8 +324,10 @@ $wgHooks['LocalisationCacheRecache'][] = function ( $cache, $code, &$allData, &$
 // Add some useful config data to query=siteinfo
 $wgHooks['APIQuerySiteInfoGeneralInfo'][] = function ( $module, &$data ) {
 	global $wmfMasterDatacenter;
+	global $wmfEtcdLastModifiedIndex;
 	$data['wmf-config'] = [
-		'wmfMasterDatacenter' => $wmfMasterDatacenter
+		'wmfMasterDatacenter' => $wmfMasterDatacenter,
+		'wmfEtcdLastModifiedIndex' => $wmfEtcdLastModifiedIndex,
 	];
 };
 
@@ -570,10 +577,6 @@ if ( defined( 'HHVM_VERSION' ) ) {
 } else {
 	# This converter will only work when rsvg has a suitable security patch
 	$wgSVGConverters['rsvg-secure'] = '$path/rsvg-convert --no-external-files -w $width -h $height -o $output $input';
-
-	// Special config for wikitech which runs trusty (and therefore the new librsvg2-bin package),
-	// but on PHP 5.5 (not HHVM)
-	$wgSVGConverters['rsvg-wikitech'] = '$path/rsvg-convert -w $width -h $height -o $output $input';
 }
 # ######################################################################
 # Reverse proxy Configuration
@@ -1118,6 +1121,10 @@ if ( $wmgUseClusterFileBackend ) {
 	$wgUseInstantCommons = true;
 }
 
+if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
+	$wgUseInstantCommons = true;
+}
+
 if ( $wmgUseClusterJobqueue ) {
 	# Cluster-dependent files for job queue and job queue aggregator
 	require $wmfRealm === 'labs'
@@ -1327,8 +1334,6 @@ if ( $wmfRealm == 'labs' ) {
 	$wgHTTPTimeout = 10;
 }
 
-$wgBrowserBlackList[] = '/^Lynx/';
-
 $wgHiddenPrefs[] = 'prefershttps'; // T91352, T102245
 
 if ( isset( $_REQUEST['captchabypass'] ) && $_REQUEST['captchabypass'] == $wmgCaptchaPassword ) {
@@ -1363,6 +1368,11 @@ if ( $wmgEnableCaptcha ) {
 
 	if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 		$wgCaptchaTriggers['addurl'] = false;
+	}
+
+	# akosiaris 20180306. contact pages in metawiki are being abused by bots
+	if ( $wgDBname === 'metawiki' ) {
+		$wgCaptchaTriggers['contactpage'] = true;
 	}
 }
 
@@ -1574,6 +1584,13 @@ if ( $wmgUseGlobalUserPage && $wmgUseCentralAuth ) {
 	$wgHooks['GlobalUserPageWikis'][] = 'wmfCentralAuthWikiList';
 }
 
+if ( $wmgLocalAuthLoginOnly && $wmgUseCentralAuth ) {
+	// T57420: prevent creation of local password records for SUL users
+	if ( isset( $wgAuthManagerAutoConfig['primaryauth'][\MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider::class] ) ) {
+		$wgAuthManagerAutoConfig['primaryauth'][\MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider::class]['args'][0]['loginOnly'] = true;
+	}
+}
+
 if ( $wmgUseApiFeatureUsage ) {
 	wfLoadExtension( 'ApiFeatureUsage' );
 	$wgApiFeatureUsageQueryEngineConf = [
@@ -1733,7 +1750,7 @@ if ( $wmgUseCentralNotice ) {
 	$wgCentralGeoScriptURL = false;
 
 	// for banner loading
-	if ( $wgDBname === 'testwiki' ) {
+	if ( $wmfRealm === 'production' && $wgDBname === 'testwiki' ) {
 		$wgCentralPagePath = "//test.wikipedia.org/w/index.php";
 		$wgCentralSelectedBannerDispatcher = "//test.wikipedia.org/w/index.php?title=Special:BannerLoader";
 
@@ -1993,6 +2010,21 @@ if ( $wmgUseSentry ) {
 
 if ( $wmgUseTemplateStyles ) {
 	wfLoadExtension( 'TemplateStyles' );
+	// allow protocol-relative URLs per T188760
+	$wgTemplateStylesAllowedUrls = [
+		'audio' => [
+			'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
+		],
+		'image' => [
+			'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
+		],
+		'svg' => [
+			'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/[^?#]*\\.svg(?:[?#]|$)>',
+		],
+		'font' => [],
+		'namespace' => [ '<.>' ],
+		'css' => [],
+	];
 }
 
 if ( $wmgUseLoginNotify && $wmgUseEcho ) {
@@ -2004,11 +2036,6 @@ if ( $wmgUseLoginNotify && $wmgUseEcho ) {
 if ( $wmgUseCodeMirror ) {
 	wfLoadExtension( 'CodeMirror' );
 	$wgCodeMirrorBetaFeature = true;
-}
-
-// Must be loaded BEFORE VisualEditor, or things will break
-if ( $wmgUseArticleCreationWorkflow ) {
-	wfLoadExtension( 'ArticleCreationWorkflow' );
 }
 
 $wgDefaultUserOptions['thumbsize'] = $wmgThumbsizeIndex;
@@ -2306,6 +2333,7 @@ if ( $wmgUseVisualEditor ) {
 	}
 	if ( $wmgVisualEditorEnableWikitext ) {
 		$wgVisualEditorEnableWikitext = true;
+		$wgDefaultUserOptions['visualeditor-newwikitext'] = true;
 	}
 
 	// Namespace configuration
@@ -2836,6 +2864,11 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 
 	// Some settings specific to wikitech's extensions
 	include "$wmfConfigDir/wikitech.php";
+
+	# wgReadOnly is set by etcdConfig using datacenter-global configs.
+	#  since wikitech and labtestwikitech use their own databases, their
+	#  $wgReadOnly shouldn't be determined by that.
+	$wgReadOnly = null;
 }
 
 if ( $wmgUseThanks ) {
@@ -3051,11 +3084,6 @@ if ( $wmgUseEventLogging ) {
 	// Depends on EventLogging
 	if ( $wmgUseNavigationTiming ) {
 		wfLoadExtension( 'NavigationTiming' );
-		// Careful! The LOWER the value, the MORE requests will be logged. A
-		// sampling factor of 1 means log every request. This should not be
-		// lowered without careful coordination with ops.
-		$wgNavigationTimingSamplingFactor = 1000;
-		$wgNavigationTimingFirstPaintAsiaSamplingFactor = 100;
 	}
 }
 
@@ -3086,6 +3114,19 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	$wgULSCompactLinksEnableAnon = $wmgULSCompactLinksEnableAnon;
 	$wgULSCompactLinksForNewAccounts = $wmgULSCompactLinksForNewAccounts;
 	$wgDefaultUserOptions['compact-language-links'] = 1;
+}
+
+if ( $wmgUsePerformanceInspector ) {
+	wfLoadExtension( 'PerformanceInspector' );
+}
+
+if ( $wmgUseFileExporter ) {
+	wfLoadExtension( 'FileExporter' );
+}
+
+if ( $wmgUseFileImporter ) {
+	wfLoadExtension( 'FileImporter' );
+	$wgFileImporterSourceSiteServices = [ $wmgUseFileImporter ];
 }
 
 if ( $wmgUseContentTranslation ) {
@@ -3142,11 +3183,6 @@ if ( $wmgUseInterwikiSorting ) {
 
 if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {
 	include "$wmfConfigDir/Wikibase.php";
-}
-
-if ( $wmfRealm != 'labs' ) {
-	// Tell localization cache builder about extensions used in wikitech
-	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-wikitech";
 }
 
 // put this here to ensure it is available for localisation cache rebuild
@@ -3397,6 +3433,10 @@ if ( $wmgUseOATHAuth ) {
 	}
 }
 
+if ( $wmgUseJADE ) {
+	wfLoadExtension( 'JADE' );
+}
+
 if ( $wmgUseORES ) {
 	wfLoadExtension( 'ORES' );
 	$wgOresBaseUrl = 'http://ores.discovery.wmnet:8081/';
@@ -3630,6 +3670,7 @@ if ( $wmgUse3d ) {
 }
 
 if ( $wmgUseReadingLists ) {
+	$wgReadingListsMaxEntriesPerList = 5000;
 	wfLoadExtension( 'ReadingLists' );
 }
 
