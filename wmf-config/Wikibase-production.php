@@ -27,7 +27,6 @@ if ( $wmgUseWikibaseRepo ) {
 			'P153',
 			'P185',
 		];
-		$wgWBRepoSettings['readFullEntityIdColumn'] = true;
 
 		$wgWBRepoSettings['statementSections']['property'] = [
 			'statements' => null,
@@ -41,6 +40,9 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBQualityConstraintsPropertyConstraintId = 'P51064';
 		$wgWBQualityConstraintsFormatConstraintId = 'Q100086';
 		$wgWBQualityConstraintsFormatAsARegularExpressionId = 'P51065';
+
+		// T189776
+		$wgWBRepoSettings['useTermsTableSearchFields'] = false;
 	} else {
 		$wgPropertySuggesterClassifyingPropertyIds = [ 31, 279 ]; // T169060
 		$wgPropertySuggesterInitialSuggestions = [ 31, 279 ];
@@ -127,7 +129,6 @@ if ( $wmgUseWikibaseRepo ) {
 			'P692',
 			'P491',
 		];
-		$wgWBRepoSettings['readFullEntityIdColumn'] = true;
 
 		$wgWBRepoSettings['statementSections']['property'] = [
 			'statements' => null,
@@ -161,8 +162,6 @@ if ( $wmgUseWikibaseRepo ) {
 			'args' => [ __DIR__ . '/unitConversionConfig.json' ]
 		];
 	}
-
-	$wgWBRepoSettings['writeFullEntityIdColumn'] = true;
 
 	// T112606
 	$wgRightsPage = 'Wikidata:Copyright';
@@ -207,9 +206,6 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgArticlePlaceholderSearchEngineIndexed = $wmgArticlePlaceholderSearchEngineIndexed;
 	$wgWBClientSettings['propertyOrderUrl'] = 'https://www.wikidata.org/w/index.php?title=MediaWiki:Wikibase-SortedProperties&action=raw&sp_ver=1';
-	$wgWBClientSettings['hasFullEntityIdColumn'] = false;
-
-	$wgWBClientSettings['readFullEntityIdColumn'] = true;
 
 	// T142103
 	$wgWBClientSettings['sendEchoNotification'] = true;

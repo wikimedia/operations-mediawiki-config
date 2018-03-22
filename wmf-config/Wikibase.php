@@ -243,12 +243,6 @@ if ( $wmgUseWikibaseRepo ) {
 			]
 		];
 	}
-
-	if ( $wgDBname === 'testwikidatawiki' ) {
-		// T189776
-		$wgWBRepoSettings['useTermsTableSearchFields'] = false;
-		$wgWBRepoSettings['forceWriteTermsTableSearchFields'] = true; // can be removed later
-	}
 }
 
 if ( $wmgUseWikibaseClient ) {
