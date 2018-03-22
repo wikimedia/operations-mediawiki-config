@@ -154,6 +154,10 @@ if ( $wmgUseWikibaseRepo ) {
 			// Q18918145=academic journal article
 			'P31=Q18918145' => '-5',
 		];
+
+		// T189777
+		$wgWBRepoSettings['useTermsTableSearchFields'] = false;
+		$wgWBRepoSettings['forceWriteTermsTableSearchFields'] = true; // can be removed later
 	}
 
 	if ( $wgDBname === 'wikidatawiki' ) {
