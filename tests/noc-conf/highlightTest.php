@@ -1,6 +1,6 @@
 <?php
 
-class NocConfHighlightTest extends PHPUnit_Framework_TestCase {
+class NocConfHighlightTest extends PHPUnit\Framework\TestCase {
 	private $created = [];
 
 	protected function setUp() {

@@ -1,6 +1,6 @@
 <?php
 
-class ProfilerTest extends PHPUnit_Framework_TestCase {
+class ProfilerTest extends PHPUnit\Framework\TestCase {
 
 	public static function provideParseXmlHeader() {
 		yield 'no attributes' => [

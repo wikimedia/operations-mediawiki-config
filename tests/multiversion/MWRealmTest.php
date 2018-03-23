@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../../multiversion/MWRealm.php';
 
-class MWRealmTests extends PHPUnit_Framework_TestCase {
+class MWRealmTests extends PHPUnit\Framework\TestCase {
 
 	private static $fixturesDir;
 	private static $fixturesFiles = [];

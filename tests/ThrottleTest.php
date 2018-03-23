@@ -1,5 +1,5 @@
 <?php
-class ThrottleTest extends PHPUnit_Framework_TestCase {
+class ThrottleTest extends PHPUnit\Framework\TestCase {
 
 	/**
 	 * @dataProvider provideRules

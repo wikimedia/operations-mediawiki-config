@@ -8,7 +8,7 @@
  * @file
  */
 
-class DbListTests extends PHPUnit_Framework_TestCase {
+class DbListTests extends PHPUnit\Framework\TestCase {
 
 	public static function provideProjectDbnames() {
 		$cases = [];

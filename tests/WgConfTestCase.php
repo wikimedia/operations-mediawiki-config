@@ -10,7 +10,7 @@
 
 require_once __DIR__ . '/SiteConfiguration.php';
 
-class WgConfTestCase extends PHPUnit_Framework_TestCase {
+class WgConfTestCase extends PHPUnit\Framework\TestCase {
 
 	protected $globals = [];
 	protected $globalsToUnset = [];

@@ -1,6 +1,6 @@
 <?php
 
-class timelineTest extends \PHPUnit_Framework_TestCase {
+class timelineTest extends PHPUnit\Framework\TestCase {
 
 	/**
 	 * Ploticus strip the '.ttf' suffix from the font name and then fails
