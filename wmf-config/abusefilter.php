@@ -167,8 +167,8 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-view-private'] = true;
 		$wgAbuseFilterActions['block'] = true;
-		$wgAbuseFilterBlockDuration = '24 hours';
-		$wgAbuseFilterAnonBlockDuration = '24 hours';
+		$wgAbuseFilterBlockDuration = '1 day';
+		$wgAbuseFilterAnonBlockDuration = '1 day';
 		$wgAbuseFilterNotificationsPrivate = true;
 		$wgAbuseFilterProfile = true;
 		break;
@@ -185,8 +185,8 @@ switch ( $wgDBname ) {
 	case 'eswikivoyage': // T64321
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 		$wgAbuseFilterActions['block'] = true;
-		$wgAbuseFilterBlockDuration = '24 hours';
-		$wgAbuseFilterAnonBlockDuration = '24 hours';
+		$wgAbuseFilterBlockDuration = '1 day';
+		$wgAbuseFilterAnonBlockDuration = '1 day';
 		break;
 	case 'fawiki': // T71073 and T74502
 		$wgGroupPermissions['*']['abusefilter-log'] = false;
@@ -213,15 +213,15 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 		$wgAbuseFilterActions = [ 'rangeblock' => true ];
-		$wgAbuseFilterAnonBlockDuration = '7 days'; // T87317
-		$wgAbuseFilterBlockDuration = '14 days'; // T167562
+		$wgAbuseFilterAnonBlockDuration = '1 week'; // T87317
+		$wgAbuseFilterBlockDuration = '2 weeks'; // T167562
 		$wgAbuseFilterNotifications = false;
 		break;
 	case 'fawikiquote': // T178227
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 		$wgAbuseFilterActions = [ 'rangeblock' => true ];
-		$wgAbuseFilterBlockDuration = '14 days';
-		$wgAbuseFilterAnonBlockDuration = '7 days';
+		$wgAbuseFilterBlockDuration = '2 weeks';
+		$wgAbuseFilterAnonBlockDuration = '1 week';
 		break;
 	case 'fiwiki': // T59395
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
@@ -291,8 +291,8 @@ switch ( $wgDBname ) {
 		break;
 	case 'itwikinews':
 		$wgAbuseFilterActions['block'] = true;
-		$wgAbuseFilterBlockDuration = '24 hours';
-		$wgAbuseFilterAnonBlockDuration = '24 hours';
+		$wgAbuseFilterBlockDuration = '1 day';
+		$wgAbuseFilterAnonBlockDuration = '1 day';
 		break;
 	case 'itwikiquote':
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
