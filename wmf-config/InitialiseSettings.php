@@ -9427,7 +9427,7 @@ $wgConf->settings = [
 			'suppressredirect' => true,
 			'upload' => true,
 		],
-		'engineer' => [ // T144599
+		'engineer' => [ // T144599, T190619
 			'apihighlimits' => true,
 			'editcontentmodel' => true,
 			'editinterface' => true,
@@ -9440,6 +9440,7 @@ $wgConf->settings = [
 			'movefile' => true,
 			'noratelimit' => true,
 			'suppressredirect' => true,
+			'tboverride' => true,
 		],
 		'filemover' => [ // T32984
 			'move-categorypages' => true, // T68871
