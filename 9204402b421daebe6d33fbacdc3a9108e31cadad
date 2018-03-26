@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5b8ea5b9_a4c725e1",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 20077,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-26T17:52:55Z",
+      "side": 1,
+      "message": "I forget what this is for, but you might want to check this.",
+      "revId": "9204402b421daebe6d33fbacdc3a9108e31cadad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0eb028f1_0edacd61",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 20081,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-26T17:52:55Z",
+      "side": 1,
+      "message": "This will load for all wikis (e.g. wiktionary etc). Intentional?",
+      "revId": "9204402b421daebe6d33fbacdc3a9108e31cadad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "009bb3f6_1e204f98",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 20094,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-26T17:52:55Z",
+      "side": 1,
+      "message": "Assume this is intended for testing purposes and you\u0027ll change that later?",
+      "revId": "9204402b421daebe6d33fbacdc3a9108e31cadad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
