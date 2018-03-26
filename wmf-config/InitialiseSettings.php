@@ -15973,6 +15973,13 @@ $wgConf->settings = [
 'wgMFNearby' => [
 	'default' => true, // Does not gets enabled on wikis w/o GeoData anyway
 ],
+
+// T190101
+'wgMFMobileMainPageCss' => [
+	'default' => false,
+	'hiwiki' => true
+],
+
 'wgMFPhotoUploadWiki' => [
 	'default' => 'commonswiki',
 	'test2wiki' => '',
