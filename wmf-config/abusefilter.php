@@ -440,6 +440,7 @@ switch ( $wgDBname ) {
 		break;
 	case 'zhwiki':
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true; // T73854
+		$wgAbuseFilterProfile = true; // T190663
 		break;
 	case 'zh_yuewiki':
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
