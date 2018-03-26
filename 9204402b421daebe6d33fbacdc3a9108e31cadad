@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0cf2cec5_887cbedf",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 20077,
+      "author": {
+        "id": 1357
+      },
+      "writtenOn": "2018-03-26T19:42:59Z",
+      "side": 1,
+      "message": "Yes, I\u0027ll add the list of wikis once it\u0027s defined. This is pending community approval.",
+      "parentUuid": "5b8ea5b9_a4c725e1",
+      "revId": "9204402b421daebe6d33fbacdc3a9108e31cadad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0eb028f1_0edacd61",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 3
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "3d7a577c_34a276e2",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 20081,
+      "author": {
+        "id": 1357
+      },
+      "writtenOn": "2018-03-26T19:42:59Z",
+      "side": 1,
+      "message": "It\u0027s intentional because the same survey will be shared between different wikis.",
+      "parentUuid": "0eb028f1_0edacd61",
+      "revId": "9204402b421daebe6d33fbacdc3a9108e31cadad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "009bb3f6_1e204f98",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 3
@@ -47,6 +83,24 @@
       "writtenOn": "2018-03-26T17:52:55Z",
       "side": 1,
       "message": "Assume this is intended for testing purposes and you\u0027ll change that later?",
+      "revId": "9204402b421daebe6d33fbacdc3a9108e31cadad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce95508e_d502a7f2",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 20094,
+      "author": {
+        "id": 1357
+      },
+      "writtenOn": "2018-03-26T19:42:59Z",
+      "side": 1,
+      "message": "Intentional, this survey isn\u0027t triggered by the normal randomness managed by QuickSurveys, it\u0027s being invoked by NavigationTiming, which has its own sampling logic.",
+      "parentUuid": "009bb3f6_1e204f98",
       "revId": "9204402b421daebe6d33fbacdc3a9108e31cadad",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
