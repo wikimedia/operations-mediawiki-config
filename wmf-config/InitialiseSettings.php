@@ -20172,10 +20172,32 @@ $wgConf->settings = [
 // https://phabricator.wikimedia.org/T110661
 'wmgUseQuickSurveys' => [
 	'default' => false,
+	'frwiki' => true,
+	'cawiki' => true,
+	'enwikivoyage' => true,
 ],
 
 'wgQuickSurveysConfig' => [
-	'default' => [],
+	'default' => [
+		// T187299
+		[
+			'enabled' => true,
+			'type' => 'internal',
+			'name' => 'perceived-performance-survey',
+			'question' => 'ext-quicksurveys-performance-internal-survey-question',
+			'description' => 'ext-quicksurveys-performance-internal-survey-description',
+			'answers' => [
+				'ext-quicksurveys-example-internal-survey-answer-positive',
+				'ext-quicksurveys-example-internal-survey-answer-neutral',
+				'ext-quicksurveys-example-internal-survey-answer-negative',
+			],
+			'coverage ' => 0.0,
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+			],
+			'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
+		],
+	],
 ],
 
 'wmgUseSentry' => [
