@@ -8161,6 +8161,9 @@ $wgConf->settings = [
 	'+arbcom_enwiki' => [
 		'bureaucrat' => [ 'disableaccount' => true ],
 	],
+	'+amwikimedia' => [
+		'sysop' => [ 'translationadmin' ],
+	],
 	'arwiki' => [
 		'autoconfirmed' => [ 'patrol' => true ],
 		'editor' => [
@@ -10731,6 +10734,9 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'flow-bot', 'sysop' ], // T131037
 	],
 	// ******************************************************************
+	'+amwikimedia' => [ // T180879
+		'sysop' => [ 'translationadmin' ],
+	],
 	'+arbcom_cswiki' => [ // T151731
 		'bureaucrat' => [ 'sysop', 'bureaucrat' ],
 	],
@@ -17221,6 +17227,7 @@ $wgConf->settings = [
 
 'wmgUseTranslate' => [
 	'default' => false,
+	'amwikimedia' => true, // T180879
 	'bewikimedia' => true, // T39391
 	'betawikiversity' => true, // T160120
 	'brwikimedia' => true, // T46054
@@ -17253,6 +17260,16 @@ $wgConf->settings = [
 ],
 'wmgTranslateWorkflowStates' => [
 	'default' => false,
+	'amwikimedia' => [
+		'progress' => [ 'color' => 'd33' ],
+		'proofreading' => [ 'color' => 'fc3' ],
+		'ready' => [ 'color' => 'FF0' ],
+		'state conditions' => [
+			[ 'ready', [ 'PROOFREAD' => 'MAX' ] ],
+			[ 'proofreading', [ 'TRANSLATED' => 'MAX' ] ],
+			[ 'progress', [ 'UNTRANSLATED' => 'NONZERO' ] ],
+		],
+	],
 	'commonswiki' => [ // T50620
 		'progress' => [ 'color' => 'd33' ],
 		'proofreading' => [ 'color' => 'fc3' ],
