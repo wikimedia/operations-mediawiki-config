@@ -20360,8 +20360,7 @@ $wgConf->settings = [
 'wmgCirrusSearchMLRModel' => [
 	'default' => false,
 	'enwiki' => [
-		'mlr-1024rs' => '20171130_enwiki_v1',
-		'mlr-1024rs-qe' => '20180118-query_explorer-enwiki-v2',
+		'mlr-1024rs' => '20180118-query_explorer-enwiki-v2',
 	],
 	'arwiki' => [ 'mlr-1024rs' => '20171130_arwiki_v1' ],
 	'fawiki' => [ 'mlr-1024rs' => '20171130_fawiki_v1' ],
