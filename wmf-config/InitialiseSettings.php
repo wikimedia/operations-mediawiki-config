@@ -13978,11 +13978,14 @@ $wgConf->settings = [
 
 'wgPopupsVirtualPageViews' => [
 	'default' => false,
-	'huwiki' => true,
-	// enable VirtualPageViews for S6 wikis T189906
-	'ruwiki' => true,
-	'jawiki' => true,
-	'frwiki' => true,
+	'wikipedia' => true,
+	// Temporarily disabled for the following larger wikis (T189906) as part of roll out
+	'enwiki' => false,
+	'dewiki' => false,
+	'eswiki' => false,
+	'itwiki' => false,
+	'ptwiki' => false,
+	'zhwiki' => false,
 ],
 
 'wmgPopupsBetaFeature' => [
