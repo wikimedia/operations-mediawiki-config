@@ -20431,6 +20431,7 @@ $wgConf->settings = [
 	'labswiki' => true,
 	'labtestwiki' => true,
 	'svwiki' => true, // T176082
+	'wikivoyage' => true, // T189838
 ],
 
 'wgShortPagesNamespaceBlacklist' => [
