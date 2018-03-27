@@ -303,6 +303,11 @@ if ( $wmgUseLoginNotify ) {
 	$wgLoginNotifyAttemptsNewIP = 1;
 }
 
+if ( $wmgUseKartographer ) {
+	$wgKartographerMapServer = 'https://maps-beta.wmflabs.org';
+	$wgKartographerIconServer = 'https://maps-beta.wmflabs.org';
+}
+
 $wgMessageCacheType = CACHE_ACCEL;
 
 // Let Beta Cluster Commons do upload-from-URL from production Commons.
