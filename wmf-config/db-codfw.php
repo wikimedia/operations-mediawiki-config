@@ -104,79 +104,27 @@ $wgLBFactoryConf = [
 'sectionLoads' => [
 	's1' => [
 		'db2048'      => 0,   # C6 2.9TB 160GB, master
-		'db2055'      => 50,  # D6 3.3TB 160GB, dump (inactive), vslow, api
-		'db2062'      => 50,  # B5 3.3TB 160GB, api # mariadb 10.1
-		'db2069'      => 50,  # D6 3.3TB 160GB, api
-		'db2070'      => 400, # C5 3.3TB 160GB
-		'db2071'      => 50,  # A6 3.6TB 512GB, api
-		'db2072'      => 500, # B6 3.6TB 512GB, # mariadb 10.1
-		'db2088:3311' => 1, # D1 3.3TB 512GB # rc, log: s1 and s2
-		'db2085:3311' => 1, # A5 3.3TB 512GB # rc, log: s1 and s8
 	],
 	's2' => [
 		'db2035'      => 50,  # C6 2.9TB 160GB, master
-		'db2041'      => 100, # C6 2.9TB 160GB, api
-		'db2049'      => 400, # C6 2.9TB 160GB,
-		'db2056'      => 50,  # D6 3.3TB 160GB, dump (inactive), vslow #innodb compressed
-		'db2063'      => 100, # D6 3.3TB 160GB, api
-		'db2064'      => 400, # D6 3.3TB 160GB
-		'db2088:3312' => 1, # D1 3.3TB 512GB # rc, log: s1 and s2
-		'db2091:3312' => 1, # A8 3.3TB 512GB # rc, log: s2 and s4
 	],
 	/* s3 */ 'DEFAULT' => [
 		'db2043'      => 0,   # C6 2.9TB 160GB, master
-		'db2036'      => 50,  # C6 2.9TB 160GB, old master, storage issues? T185294
-		'db2050'      => 50,  # C6 2.9TB 160GB dump (inactive), vslow
-		'db2057'      => 400, # D6 3.3TB 160GB
-		'db2074'      => 400, # D6 3.3TB 512GB # InnoDB compressed
 	],
 	's4' => [
 		'db2051'      => 0,   # B8 2.9TB 160GB, master
-		'db2058'      => 50,  # D6 3.3TB 160GB, dump (inactive), vslow
-		'db2065'      => 200, # D6 3.3TB 160GB, api
-		'db2073'      => 400, # C6 3.3TB 512GB # Compressed InnoDB
-		'db2084:3314' => 1,   # D6 3.3TB 512GB # rc, log: s4 and s5
-		'db2090'      => 400, # C5 3.3TB 512GB # Compressed InnoDB
-		'db2091:3314' => 1,   # A8 3.3TB 512GB # rc, log: s2 and s4
 	],
 	's5' => [
 		'db2052'      => 50,  # D6 2.9TB 160GB, master
-		'db2038'      => 0,   # C6 2.9TB 160GB, dump (inactive), vslow, old master
-		'db2059'      => 100, # D6 3.3TB 160GB, api
-		'db2066'      => 400, # D6 3.3TB 160GB
-		'db2075'      => 400, # A1 3.3TB 512GB # Compressed InnoDB
-		'db2084:3315' => 1, # D6 3.3TB 512GB # rc, log: s4 and s5
-		'db2089:3315' => 1, # A3 3.3TB 512GB # rc, log: s5 and s6
 	],
 	's6' => [
 		'db2039'      => 0,   # C6 2.9TB 160GB, master
-		'db2046'      => 400, # C6 2.9TB 160GB
-		'db2053'      => 100, # D6 2.9TB 160GB, dump (inactive), vslow
-		'db2060'      => 100, # D6 3.3TB 160GB, api
-		'db2067'      => 400, # D6 3.3TB 160GB
-		'db2076'      => 400, # B1 3.3TB 512GB
-		'db2087:3316' => 1, # C1 3.3TB 512GB # rc, log: s6 and s7
-		'db2089:3316' => 1, # A3 3.3TB 512GB # rc, log: s6 and s5(s8)
 	],
 	's7' => [
 		'db2040'      => 0,   # C6 2.9TB 160GB, master
-		'db2047'      => 400, # C6 2.9TB 160GB,
-		'db2054'      => 200, # D6 2.9TB 160GB, dump (inactive), vslow
-		'db2061'      => 200, # D6 3.3TB 160GB, api
-		'db2068'      => 300, # D6 3.3TB 160GB
-		'db2077'      => 400, # C1 3.3TB 512GB
-		'db2086:3317' => 1, # B1 3.3TB 512GB # rc, log: s5 and s7
-		'db2087:3317' => 1, # C1 3.3TB 512GB # rc, log: s6 and s7
 	],
 	's8' => [
 		'db2045'      => 0,   # C6 2.9TB 160GB, master
-		'db2079'      => 10,  # A5 3.3TB 512GB, vslow, dump
-		'db2080'      => 10,  # C5 3.3TB 512GB, api
-		'db2081'      => 10,  # A6 3.3TB 512GB, api
-		'db2082'      => 100, # B6 3.3TB 512GB
-		'db2083'      => 100, # C6 3.3TB 512GB
-		'db2085:3318' => 1, # A5 3.3TB 512GB # rc, log: s1 and s8
-		'db2086:3318' => 1, # B1 3.3TB 512GB # rc, log: s7 and s8
 	],
 
 	'm5' => [
@@ -259,236 +207,6 @@ $wgLBFactoryConf = [
 ],
 
 'groupLoadsBySection' => [
-	's1' => [
-		'watchlist' => [
-			'db2088:3311' => 1,
-			'db2085:3311' => 1,
-		],
-		'recentchanges' => [
-			'db2088:3311' => 1,
-			'db2085:3311' => 1,
-		],
-		'recentchangeslinked' => [
-			'db2088:3311' => 1,
-			'db2085:3311' => 1,
-		],
-		'contributions' => [
-			'db2088:3311' => 1,
-			'db2085:3311' => 1,
-		],
-		'logpager' => [
-			'db2088:3311' => 1,
-			'db2085:3311' => 1,
-		],
-		'dump' => [
-			'db2055' => 1,
-		],
-		'vslow' => [
-			'db2055' => 1,
-		],
-		'api' => [
-			'db2055' => 1,
-			'db2062' => 1,
-			'db2069' => 1,
-			'db2071' => 5,
-		],
-	],
-	's2' => [
-		'watchlist' => [
-			'db2088:3312' => 1,
-			'db2091:3312' => 1,
-		],
-		'recentchanges' => [
-			'db2088:3312' => 1,
-			'db2091:3312' => 1,
-		],
-		'recentchangeslinked' => [
-			'db2088:3312' => 1,
-			'db2091:3312' => 1,
-		],
-		'contributions' => [
-			'db2088:3312' => 1,
-			'db2091:3312' => 1,
-		],
-		'logpager' => [
-			'db2088:3312' => 1,
-			'db2091:3312' => 1,
-		],
-		'dump' => [
-			'db2056' => 1,
-		],
-		'vslow' => [
-			'db2056' => 1,
-		],
-		'api' => [
-			'db2041' => 1,
-			'db2063' => 1,
-		],
-	],
-	/* s3 */ 'DEFAULT' => [
-		'dump' => [
-			'db2050' => 1,
-		],
-		'vslow' => [
-			'db2050' => 1,
-		],
-	],
-	's4' => [
-		'watchlist' => [
-			'db2084:3314' => 1,
-			'db2091:3314' => 1,
-		],
-		'recentchanges' => [
-			'db2084:3314' => 1,
-			'db2091:3314' => 1,
-		],
-		'recentchangeslinked' => [
-			'db2084:3314' => 1,
-			'db2091:3314' => 1,
-		],
-		'contributions' => [
-			'db2084:3314' => 1,
-			'db2091:3314' => 1,
-		],
-		'logpager' => [
-			'db2084:3314' => 1,
-			'db2091:3314' => 1,
-		],
-		'dump' => [
-			'db2058' => 1,
-		],
-		'vslow' => [
-			'db2058' => 1,
-		],
-		'api' => [
-			'db2065' => 1,
-		],
-	],
-	's5' => [
-		'watchlist' => [
-			'db2084:3315' => 1,
-			'db2089:3315' => 1,
-		],
-		'recentchanges' => [
-			'db2084:3315' => 1,
-			'db2089:3315' => 1,
-		],
-		'recentchangeslinked' => [
-			'db2084:3315' => 1,
-			'db2089:3315' => 1,
-		],
-		'contributions' => [
-			'db2084:3315' => 1,
-			'db2089:3315' => 1,
-		],
-		'logpager' => [
-			'db2084:3315' => 1,
-			'db2089:3315' => 1,
-		],
-		'dump' => [
-			'db2038' => 1,
-		],
-		'vslow' => [
-			'db2038' => 1,
-		],
-		'api' => [
-			'db2059' => 1,
-		],
-	],
-	's6' => [
-		'watchlist' => [
-			'db2087:3316' => 1,
-			'db2089:3316' => 1,
-		],
-		'recentchanges' => [
-			'db2087:3316' => 1,
-			'db2089:3316' => 1,
-		],
-		'recentchangeslinked' => [
-			'db2087:3316' => 1,
-			'db2089:3316' => 1,
-		],
-		'contributions' => [
-			'db2087:3316' => 1,
-			'db2089:3316' => 1,
-		],
-		'logpager' => [
-			'db2087:3316' => 1,
-			'db2089:3316' => 1,
-		],
-		'dump' => [
-			'db2053' => 1,
-		],
-		'vslow' => [
-			'db2053' => 1,
-		],
-		'api' => [
-			'db2060' => 1,
-		],
-	],
-	's7' => [
-		'watchlist' => [
-			'db2086:3317' => 1,
-			'db2087:3317' => 1,
-		],
-		'recentchanges' => [
-			'db2086:3317' => 1,
-			'db2087:3317' => 1,
-		],
-		'recentchangeslinked' => [
-			'db2086:3317' => 1,
-			'db2087:3317' => 1,
-		],
-		'contributions' => [
-			'db2086:3317' => 1,
-			'db2087:3317' => 1,
-		],
-		'logpager' => [
-			'db2086:3317' => 1,
-			'db2087:3317' => 1,
-		],
-		'dump' => [
-			'db2054' => 1,
-		],
-		'vslow' => [
-			'db2054' => 1,
-		],
-		'api' => [
-			'db2061' => 1,
-		],
-	],
-	's8' => [
-		'watchlist' => [
-			'db2085:3318' => 1,
-			'db2086:3318' => 1,
-		],
-		'recentchanges' => [
-			'db2085:3318' => 1,
-			'db2086:3318' => 1,
-		],
-		'recentchangeslinked' => [
-			'db2085:3318' => 1,
-			'db2086:3318' => 1,
-		],
-		'contributions' => [
-			'db2085:3318' => 1,
-			'db2086:3318' => 1,
-		],
-		'logpager' => [
-			'db2085:3318' => 1,
-			'db2086:3318' => 1,
-		],
-		'dump' => [
-			'db2079' => 1,
-		],
-		'vslow' => [
-			'db2079' => 1,
-		],
-		'api' => [
-			'db2080' => 1,
-			'db2081' => 1,
-		],
-	],
 ],
 
 'groupLoadsByDB' => [],
@@ -714,6 +432,8 @@ $wgLBFactoryConf = [
 ],
 
 ];
+
+loadDataFromEtcdConfig($wgLBFactoryConf['sectionLoads'], $wgLBFactoryConf['groupLoadsBySection']);
 
 $wgDefaultExternalStore = [
 	'DB://cluster24',

@@ -5,10 +5,9 @@
 # Only two sets of globals available here:
 # - $wmfRealm, $wmfDatacenter (from multiversion/MWRealm)
 # - $wmfLocalServices (from wmf-config/*Services.php)
-
 function wmfSetupEtcd() {
 	global $wmfLocalServices, $wmfEtcdLastModifiedIndex;
-		# Create a local cache
+	# Create a local cache
 	if ( PHP_SAPI === 'cli' ) {
 		$localCache = new HashBagOStuff;
 	} else {
@@ -27,7 +26,7 @@ function wmfSetupEtcd() {
 }
 
 function wmfEtcdConfig() {
-	global $wmfDatacenter, $wgReadOnly, $wmfMasterDatacenter;
+	global $wmfDatacenter, $wgReadOnly, $wmfMasterDatacenter, $wmfDatabaseServers;
 	$etcdConfig = wmfSetupEtcd();
 
 	# Read only mode
@@ -36,4 +35,21 @@ function wmfEtcdConfig() {
 	# Master datacenter
 	# The datacenter from which we serve traffic.
 	$wmfMasterDatacenter = $etcdConfig->get( 'common/WMFMasterDatacenter' );
+
+	# Database servers
+	$wmfDatabaseServers = $etcdConfig->getAll( "db_${wmfDatacenter}/" );
+}
+
+
+function loadDataFromEtcdConfig( &$sectionLoads, $groupSectionLoads ) {
+	global $wmfDatabaseServers;
+	foreach ( $wmfDatabaseServers as $label =>$conf ) {
+		foreach ( $conf['sections'] as $section ) {
+			$section_name = $section['section'];
+			$sectionLoads[$section_name][$label] = $section['weight'];
+			foreach ($conf['special_uses'] as $use) {
+				$groupSectionLoads[$section_name][$use['use']][$label] = $use['weight'];
+			}
+		}
+	}
 }

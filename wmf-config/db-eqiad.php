@@ -19,6 +19,7 @@ $wmgOldExtTemplate = [
 	'10.64.48.115' => 1, # es1018, D1 11TB 128GB
 ];
 
+
 $wgLBFactoryConf = [
 
 'class' => 'LBFactoryMulti',
@@ -104,75 +105,30 @@ $wgLBFactoryConf = [
 'sectionLoads' => [
 	's1' => [
 		'db1052' => 0,      # B3 2.8TB  96GB, master
-		'db1067' => 50,     # D1 2.8TB 160GB, old master # candidate master
-		'db1066' => 50,     # D1 2.8TB 160GB, api
-		'db1080' => 300,    # A2 3.6TB 512GB, api
-		'db1083' => 500,    # B1 3.6TB 512GB
-		'db1089' => 500,    # C3 3.6TB 512GB
-		'db1099:3311' => 1, # B2 3.6TB 512GB # rc, log: s1 and s8
-		'db1105:3311' => 1, # C3 3.6TB 512GB # rc, log: s1 and s2
-		'db1106' => 50,      # D3 3.6TB 512GB, vslow, dump
-		'db1114' => 300,    # D4 3.6TB 512GB, api # MariaDB 10.1
 	],
 	's2' => [
 		'db1054' => 0,      # A3 2.8TB  96GB, master
-		'db1060' => 1,      # C2 2.8TB  96GB, vslow, dump, api #master for db1102 (sanitarium 3)
-		'db1074' => 300,    # A2 3.6TB 512GB, api
-		'db1076' => 500,    # B1 3.6TB 512GB # candidate master
-		'db1090' => 500,    # C3 3.6TB 512GB
-		'db1103:3312' => 1, # A3 3.6TB 512GB # rc, log: s2 and s4
-		'db1105:3312' => 1, # C3 3.6TB 512GB # rc, log: s1 and s2
 	],
 	/* s3 */ 'DEFAULT' => [
 		'db1075' => 0,      # A2 3.6TB 512GB, master
-		'db1072' => 100,    # B2 2.8TB 160GB, vslow, dump, old master # master for db1095
-		'db1077' => 400,    # B1 3.6TB 512GB, watchlist, recentchanges, contributions, logpager
-		'db1078' => 500,    # C3 3.6TB 512GB # candidate master
 	],
 	's4' => [
 		'db1068' => 0,      # D1 2.8TB 160GB, master
 		'db1064' => 0,      # D1 2.8TB 160GB, vslow, dump # master for db1095
-		'db1081' => 300,    # A2 3.6TB 512GB, api # candidate master
-		'db1084' => 400,    # B1 3.6TB 512GB, api
-		'db1091' => 500,    # D2 3.6TB 512GB
-		'db1097:3314' => 1, # D1 3.6TB 512GB, # rc, log: s4 and s5
-		'db1103:3314' => 1, # A3 3.6TB 512GB # rc, log: s2 and s4
 	],
 	's5' => [
 		'db1070' => 0,      # D1 2.8TB 160GB, master
-		'db1082' => 300,    # A2 3.6TB 512GB, api # master for db1095
-		'db1096:3315' => 1, # A6 3.6TB 512GB, # rc, log: s5 and s6
-		'db1097:3315' => 1, # D1 3.6TB 512GB, # rc, log: s4 and s5
-		'db1100' => 50,     # C2 3.6TB 512GB, old master #api # candidate master
-		'db1110' => 500,    # C3 3.6TB 512GB
-		'db1113:3315' => 0, # B8 3.6TB 512GB, # vslow, dump: s5 and s6
 	],
 	's6' => [
 		'db1061' => 0,      # C3 2.8TB 128GB, master
-		'db1085' => 300,    # B3 3.6TB 512GB, api #master for db1102 (sanitarium 3)
-		'db1088' => 500,    # C2 3.6TB 512GB
-		'db1093' => 500,    # D2 3.6TB 512GB, api # candidate master
-		'db1096:3316' => 1, # A6 3.6TB 512GB, # rc, log: s5 and s6
-		'db1098:3316' => 1, # B5 3.6TB 512GB, # rc, log: s6 and s7
-		'db1113:3316' => 0, # B8 3.6TB 512GB, # vslow, dump: s5 and s6
 	],
 	's7' => [
 		'db1062' => 0,      # D4 2.8TB 128GB, master
 		'db1069' => 0,      # A1 2.8TB 160GB, vslow, dump, old master # candidate master
-		'db1079' => 300,    # A2 3.6TB 512GB, api #master for db1102 (sanitarium 3)
-		'db1086' => 500,    # B3 3.6TB 512GB, api
-		'db1094' => 500,    # D2 3.6TB 512GB
-		'db1098:3317' => 1, # B5 3.6TB 512GB, # rc, log: s6 and s7
-		'db1101:3317' => 1, # C2 3.6TB 512GB # rc, log: s7 and s8
 	],
 	's8' => [
 		'db1071' => 0,      # D1 2.8TB 160GB, master
 		'db1087' => 0,      # C2 3.6TB 512GB, vslow, dump # master for db1095
-		'db1092' => 100,    # D2 3.6TB 512GB, api
-		'db1099:3318' => 1, # B2 3.6TB 512GB # rc, log: s1 and s8
-		'db1101:3318' => 1, # C2 3.6TB 512GB # rc, log: s7 and s8
-		'db1104' => 300,    # B3 3.6TB 512GB, api # candidate master
-		'db1109' => 500,    # D8 3.6TB 512GB
 	],
 
 	'm5' => [
@@ -256,256 +212,7 @@ $wgLBFactoryConf = [
 	],
 ],
 
-'groupLoadsBySection' => [
-	's1' => [
-		'watchlist' => [
-			'db1099:3311' => 1,
-			'db1105:3311' => 1,
-		],
-		'recentchanges' => [
-			'db1099:3311' => 1,
-			'db1105:3311' => 1,
-		],
-		'recentchangeslinked' => [
-			'db1099:3311' => 1,
-			'db1105:3311' => 1,
-		],
-		'contributions' => [
-			'db1099:3311' => 1,
-			'db1105:3311' => 1,
-		],
-		'logpager' => [
-			'db1099:3311' => 1,
-			'db1105:3311' => 1,
-		],
-		'dump' => [
-			'db1106' => 1,
-		],
-		'vslow' => [
-			'db1106' => 1,
-		],
-		'api' => [
-			'db1066' => 2,
-			'db1080' => 3,
-			'db1114' => 3,
-		],
-	],
-	's2' => [
-		'vslow' => [
-			'db1060' => 1,
-		],
-		'dump' => [
-			'db1060' => 1,
-		],
-		'api' => [
-			'db1060' => 1,
-			'db1074' => 5,
-		],
-		'watchlist' => [
-			'db1103:3312' => 1,
-			'db1105:3312' => 1,
-		],
-		'recentchanges' => [
-			'db1103:3312' => 1,
-			'db1105:3312' => 1,
-		],
-		'recentchangeslinked' => [
-			'db1103:3312' => 1,
-			'db1105:3312' => 1,
-		],
-		'contributions' => [
-			'db1103:3312' => 1,
-			'db1105:3312' => 1,
-		],
-		'logpager' => [
-			'db1103:3312' => 1,
-			'db1105:3312' => 1,
-		],
-	],
-	/* s3 */ 'DEFAULT' => [
-		'vslow' => [
-			'db1072' => 1,
-		],
-		'dump' => [
-			'db1072' => 1,
-		],
-		'watchlist' => [
-			'db1077' => 1,
-		],
-		'recentchanges' => [
-			'db1077' => 1,
-		],
-		'recentchangeslinked' => [
-			'db1077' => 1,
-		],
-		'contributions' => [
-			'db1077' => 1,
-		],
-		'logpager' => [
-			'db1077' => 1,
-		],
-	],
-	's4' => [
-		'vslow' => [
-			'db1064' => 1,
-		],
-		'dump' => [
-			'db1064' => 1,
-		],
-		'api' => [
-			'db1081' => 2,
-			'db1084' => 1,
-		],
-		'watchlist' => [
-			'db1097:3314' => 1,
-			'db1103:3314' => 1,
-		],
-		'recentchanges' => [
-			'db1097:3314' => 1,
-			'db1103:3314' => 1,
-		],
-		'recentchangeslinked' => [
-			'db1097:3314' => 1,
-			'db1103:3314' => 1,
-		],
-		'contributions' => [
-			'db1097:3314' => 1,
-			'db1103:3314' => 1,
-		],
-		'logpager' => [
-			'db1097:3314' => 1,
-			'db1103:3314' => 1,
-		],
-	],
-	's5' => [
-		'vslow' => [
-			'db1113:3315' => 1,
-		],
-		'dump' => [
-			'db1113:3315' => 1,
-		],
-		'api' => [
-			'db1082' => 1,
-			'db1100' => 3,
-		],
-		'watchlist' => [
-			'db1096:3315' => 1,
-			'db1097:3315' => 1,
-		],
-		'recentchanges' => [
-			'db1096:3315' => 1,
-			'db1097:3315' => 1,
-		],
-		'recentchangeslinked' => [
-			'db1096:3315' => 1,
-			'db1097:3315' => 1,
-		],
-		'contributions' => [
-			'db1096:3315' => 1,
-			'db1097:3315' => 1,
-		],
-		'logpager' => [
-			'db1096:3315' => 1,
-			'db1097:3315' => 1,
-		],
-	],
-	's6' => [
-		'vslow' => [
-			'db1113:3316' => 1,
-		],
-		'dump' => [
-			'db1113:3316' => 1,
-		],
-		'api' => [
-			'db1085' => 10,
-			'db1093' => 1,
-		],
-		'watchlist' => [
-			'db1096:3316' => 1,
-			'db1098:3316' => 1,
-		],
-		'recentchanges' => [
-			'db1096:3316' => 1,
-			'db1098:3316' => 1,
-		],
-		'recentchangeslinked' => [
-			'db1096:3316' => 1,
-			'db1098:3316' => 1,
-		],
-		'contributions' => [
-			'db1096:3316' => 1,
-			'db1098:3316' => 1,
-		],
-		'logpager' => [
-			'db1096:3316' => 1,
-			'db1098:3316' => 1,
-		],
-	],
-	's7' => [
-		'vslow' => [
-			'db1069' => 1,
-		],
-		'dump' => [
-			'db1069' => 1,
-		],
-		'api' => [
-			'db1079' => 100,
-			'db1086' => 1,
-		],
-		'watchlist' => [
-			'db1098:3317' => 1,
-			'db1101:3317' => 1,
-		],
-		'recentchanges' => [
-			'db1098:3317' => 1,
-			'db1101:3317' => 1,
-		],
-		'recentchangeslinked' => [
-			'db1098:3317' => 1,
-			'db1101:3317' => 1,
-		],
-		'contributions' => [
-			'db1098:3317' => 1,
-			'db1101:3317' => 1,
-		],
-		'logpager' => [
-			'db1098:3317' => 1,
-			'db1101:3317' => 1,
-		],
-	],
-	's8' => [
-		'vslow' => [
-			'db1087' => 1,
-		],
-		'dump' => [
-			'db1087' => 1,
-		],
-		'api' => [
-			'db1092' => 3,
-			'db1104' => 1,
-		],
-		'watchlist' => [
-			'db1099:3318' => 1,
-			'db1101:3318' => 1,
-		],
-		'recentchanges' => [
-			'db1099:3318' => 1,
-			'db1101:3318' => 1,
-		],
-		'recentchangeslinked' => [
-			'db1099:3318' => 1,
-			'db1101:3318' => 1,
-		],
-		'contributions' => [
-			'db1099:3318' => 1,
-			'db1101:3318' => 1,
-		],
-		'logpager' => [
-			'db1099:3318' => 1,
-			'db1101:3318' => 1,
-		],
-	],
-],
+'groupLoadsBySection' => [],
 
 'groupLoadsByDB' => [],
 
@@ -730,6 +437,8 @@ $wgLBFactoryConf = [
 ],
 
 ];
+# Load missing data from etcd/cache
+loadDataFromEtcdConfig($wgLBFactoryConf['sectionLoads'], $wgLBFactoryConf['groupLoadsBySection']);
 
 $wgDefaultExternalStore = [
 	'DB://cluster24',
