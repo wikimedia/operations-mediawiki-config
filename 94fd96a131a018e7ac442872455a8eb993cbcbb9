@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1109fc9a_1e5a6dfb",
+        "filename": "wmf-config/jobqueue.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2018-03-28T14:21:28Z",
+      "side": 1,
+      "message": "nitpick: this one is duplicated",
+      "revId": "94fd96a131a018e7ac442872455a8eb993cbcbb9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
