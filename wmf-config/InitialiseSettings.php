@@ -19023,6 +19023,12 @@ $wgConf->settings = [
 						'wgCirrusSearchRescoreProfile' => 'mlr-1024rs-minimal',
 					],
 				],
+				'classic' => [
+					'trigger' => 'classic',
+					'globals' => [
+						'wgCirrusSearchRescoreProfile' => 'wsum_inclinks',
+					],
+				],
 				# New model with query explorer features
 				'explorer' => [
 					'trigger' => 'explorer',
@@ -19035,6 +19041,65 @@ $wgConf->settings = [
 					'trigger' => 'control-explorer-i',
 					'globals' => [
 						'wgCirrusSearchRescoreProfile' => 'mlr-1024rs-minimal',
+						'wgCirrusSearchInterleaveConfig' => [
+							'CirrusSearchRescoreProfile' => 'mlr-1024rs-mrmr',
+						],
+					],
+				],
+				# interleave classic and explorer
+				'classic-explorer-i' => [
+					'trigger' => 'classic-explorer-i',
+					'globals' => [
+						'wgCirrusSearchRescoreProfile' => 'wsum_inclinks',
+						'wgCirrusSearchInterleaveConfig' => [
+							'CirrusSearchRescoreProfile' => 'mlr-1024rs-mrmr',
+						],
+					],
+				],
+			],
+		],
+	],
+	'enwiki' => [
+		'query_explorer' => [
+			'globals' => [],
+			'buckets' => [
+				# Default LTR ranker
+				'control' => [
+					'trigger' => 'control',
+					'globals' => [
+						'wgCirrusSearchRescoreProfile' => 'mlr-1024rs-minimal',
+					],
+				],
+				'classic' => [
+					'trigger' => 'classic',
+					'globals' => [
+						// enwiki differs from default with wsum_inclinks_pv
+						'wgCirrusSearchRescoreProfile' => 'wsum_inclinks_pv',
+					],
+				],
+				# New model with query explorer features
+				'explorer' => [
+					'trigger' => 'explorer',
+					'globals' => [
+						'wgCirrusSearchRescoreProfile' => 'mlr-1024rs-mrmr',
+					],
+				],
+				# interleave control and explorer
+				'control-explorer-i' => [
+					'trigger' => 'control-explorer-i',
+					'globals' => [
+						'wgCirrusSearchRescoreProfile' => 'mlr-1024rs-minimal',
+						'wgCirrusSearchInterleaveConfig' => [
+							'CirrusSearchRescoreProfile' => 'mlr-1024rs-mrmr',
+						],
+					],
+				],
+				# interleave classic and explorer
+				'classic-explorer-i' => [
+					'trigger' => 'classic-explorer-i',
+					'globals' => [
+						// enwiki differs from default with wsum_inclinks_pv
+						'wgCirrusSearchRescoreProfile' => 'wsum_inclinks_pv',
 						'wgCirrusSearchInterleaveConfig' => [
 							'CirrusSearchRescoreProfile' => 'mlr-1024rs-mrmr',
 						],
@@ -20381,6 +20446,7 @@ $wgConf->settings = [
 	'default' => false,
 	'enwiki' => [
 		'mlr-1024rs' => '20180118-query_explorer-enwiki-v2',
+<<<<<<< HEAD
 		'mlr-1024rs-minimal' => '20180316-minimal-large_enwiki_v1',
 		'mlr-1024rs-mrmr' => '20180316-mrmr-large_enwiki_v1',
 	],
@@ -20473,6 +20539,100 @@ $wgConf->settings = [
 		'mlr-1024rs' => '20171130_zhwiki_v1',
 		'mlr-1024rs-minimal' => '20180316-minimal-small_zhwiki_v1',
 		'mlr-1024rs-mrmr' => '20180316-mrmr-small_zhwiki_v1',
+=======
+		'mlr-1024rs-minimal' => '20180316-minimal_enwiki_v1',
+		'mlr-1024rs-mrmr' => '20180316-mrmr_enwiki_v1',
+	],
+	'arwiki' => [
+		'mlr-1024rs' => '20171130_arwiki_v1',
+		'mlr-1024rs-minimal' => '20180316-minimal_arwiki_v1',
+		'mlr-1024rs-mrmr' => '20180316-mrmr_arwiki_v1',
+	],
+	'fawiki' => [
+		'mlr-1024rs' => '20171130_fawiki_v1',
+		'mlr-1024rs-minimal' => '20180316-minimal_fawiki_v1',
+		'mlr-1024rs-mrmr' => '20180316-mrmr_fawiki_v1',
+	],
+	'jawiki' => [
+		'mlr-1024rs' => '20171130_jawiki_v1',
+		'mlr-1024rs-minimal' => '20180316-minimal_jawiki_v1',
+		'mlr-1024rs-mrmr' => '20180316-mrmr_jawiki_v1',
+	],
+	'svwiki' => [
+		'mlr-1024rs' => '20171130_svwiki_v1',
+		'mlr-1024rs-minimal' => '20180316-minimal_svwiki_v1',
+		'mlr-1024rs-mrmr' => '20180316-mrmr_svwiki_v1',
+	],
+	'frwiki' => [
+		'mlr-1024rs' => '20171130_frwiki_v1',
+		'mlr-1024rs-minimal' => '20180316-minimal_frwiki_v1',
+		'mlr-1024rs-mrmr' => '20180316-mrmr_frwiki_v1',
+	],
+	'itwiki' => [
+		'mlr-1024rs' => '20171130_itwiki_v1',
+		'mlr-1024rs-minimal' => '20180316-minimal_itwiki_v1',
+		'mlr-1024rs-mrmr' => '20180316-mrmr_itwiki_v1',
+	],
+	'ptwiki' => [
+		'mlr-1024rs' => '20171130_ptwiki_v1',
+		'mlr-1024rs-minimal' => '20180316-minimal_ptwiki_v1',
+		'mlr-1024rs-mrmr' => '20180316-mrmr_ptwiki_v1',
+	],
+	'ruwiki' => [
+		'mlr-1024rs' => '20171130_ruwiki_v1',
+		'mlr-1024rs-minimal' => '20180316-minimal_ruwiki_v1',
+		'mlr-1024rs-mrmr' => '20180316-mrmr_ruwiki_v1',
+	],
+	'dewiki' => [
+		'mlr-1024rs' => '20171130_dewiki_v1',
+		'mlr-1024rs-minimal' => '20180316-minimal_dewiki_v1',
+		'mlr-1024rs-mrmr' => '20180316-mrmr_dewiki_v1',
+	],
+	'fiwiki' => [
+		'mlr-1024rs' => '20171130_fiwiki_v1',
+		'mlr-1024rs-minimal' => '20180316-minimal_fiwiki_v1',
+		'mlr-1024rs-mrmr' => '20180316-mrmr_fiwiki_v1',
+	],
+	'hewiki' => [
+		'mlr-1024rs' => '20171130_hewiki_v1',
+		'mlr-1024rs-minimal' => '20180316-minimal_hewiki_v1',
+		'mlr-1024rs-mrmr' => '20180316-mrmr_hewiki_v1',
+	],
+	'idwiki' => [
+		'mlr-1024rs' => '20171130_idwiki_v1',
+		'mlr-1024rs-minimal' => '20180316-minimal_idwiki_v1',
+		'mlr-1024rs-mrmr' => '20180316-mrmr_idwiki_v1',
+	],
+	'kowiki' => [
+		'mlr-1024rs' => '20171130_kowiki_v1',
+		'mlr-1024rs-minimal' => '20180316-minimal_kowiki_v1',
+		'mlr-1024rs-mrmr' => '20180316-mrmr_kowiki_v1',
+	],
+	'nlwiki' => [
+		'mlr-1024rs' => '20171130_nlwiki_v1',
+		'mlr-1024rs-minimal' => '20180316-minimal_nlwiki_v1',
+		'mlr-1024rs-mrmr' => '20180316-mrmr_nlwiki_v1',
+	],
+	'nowiki' => [
+		'mlr-1024rs' => '20171130_nowiki_v1',
+		'mlr-1024rs-minimal' => '20180316-minimal_nowiki_v1',
+		'mlr-1024rs-mrmr' => '20180316-mrmr_nowiki_v1',
+	],
+	'plwiki' => [
+		'mlr-1024rs' => '20171130_plwiki_v1',
+		'mlr-1024rs-minimal' => '20180316-minimal_plwiki_v1',
+		'mlr-1024rs-mrmr' => '20180316-mrmr_plwiki_v1',
+	],
+	'viwiki' => [
+		'mlr-1024rs' => '20171130_viwiki_v1',
+		'mlr-1024rs-minimal' => '20180316-minimal_viwiki_v1',
+		'mlr-1024rs-mrmr' => '20180316-mrmr_viwiki_v1',
+	],
+	'zhwiki' => [
+		'mlr-1024rs' => '20171130_zhwiki_v1',
+		'mlr-1024rs-minimal' => '20180316-minimal_zhwiki_v1',
+		'mlr-1024rs-mrmr' => '20180316-mrmr_zhwiki_v1',
+>>>>>>> c6d2a50... Configure 5 buckets for next Cirrus AB test
 	],
 ],
 
