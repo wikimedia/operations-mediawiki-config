@@ -2767,6 +2767,7 @@ if ( $wmgEnableGeoData ) {
 }
 
 if ( $wmgUseEcho ) {
+	// This is intentionally loaded *before* the GlobalPreferences extension (below).
 	wfLoadExtension( 'Echo' );
 
 	if ( isset( $wgEchoConfig ) ) {
@@ -3675,6 +3676,7 @@ if ( $wmgUseReadingLists ) {
 }
 
 if ( $wmgUseGlobalPreferences && $wmgUseCentralAuth ) {
+	// This is intentionally loaded *after* the Echo extension (above).
 	wfLoadExtension( 'GlobalPreferences' );
 }
 
