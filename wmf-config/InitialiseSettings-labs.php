@@ -535,6 +535,7 @@ function wmfLabsSettings() {
 			'default' => 'uppercase',
 			'dewiki' => 'uca-de-u-kn', // T128806
 			'enwiki' => 'uca-default-u-kn',
+			'fawiki' => 'uppercase',
 		],
 
 		// Test Quiz. See T142692
