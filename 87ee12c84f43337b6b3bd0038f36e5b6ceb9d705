@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "cabfb75e_3133e8c7",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 18145,
+      "author": {
+        "id": 5462
+      },
+      "writtenOn": "2018-03-29T14:19:24Z",
+      "side": 1,
+      "message": "Added them.  Can\u0027t hurt.",
+      "parentUuid": "b01da279_8ec66687",
+      "revId": "87ee12c84f43337b6b3bd0038f36e5b6ceb9d705",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "72ddd7fc_aff171fb",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2018-03-28T19:06:21Z",
       "side": 1,
       "message": "Should probably add AU here.  Currently that one\u0027s up in the air pending various transit/peering fixes, and we may end up breaking it down by-state (i.e. just western AU to eqsin, eastern to ulsfo), but some kind of AU-\u003eeqsin is probably eventually in the cards.",
+      "revId": "87ee12c84f43337b6b3bd0038f36e5b6ceb9d705",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6159d137_733cd9f2",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 18168,
+      "author": {
+        "id": 5462
+      },
+      "writtenOn": "2018-03-29T14:19:24Z",
+      "side": 1,
+      "message": "Added",
+      "parentUuid": "72ddd7fc_aff171fb",
       "revId": "87ee12c84f43337b6b3bd0038f36e5b6ceb9d705",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
