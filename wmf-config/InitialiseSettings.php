@@ -20664,7 +20664,11 @@ $wgConf->settings = [
 
 'wmgUsePerformanceInspector' => [
 	'default' => false,
-]
+],
+
+'wgPropagateErrors' => [
+	'default' => false,
+],
 
 ];
 
