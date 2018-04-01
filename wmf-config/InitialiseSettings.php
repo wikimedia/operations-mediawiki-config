@@ -20845,6 +20845,10 @@ $wgConf->settings = [
 	'default' => false,
 ],
 
+'wgPropagateErrors' => [
+	'default' => false,
+],
+
 'wmgUseCongressLookup' => [ // Disabled per T205049
 	'default' => false,
 ],
