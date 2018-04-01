@@ -20751,6 +20751,10 @@ $wgConf->settings = [
 	'default' => false,
 ],
 
+'wgPropagateErrors' => [
+	'default' => false,
+],
+
 'wmgUseCongressLookup' => [
 	'default' => false,
 	'testwiki' => true,
