@@ -750,9 +750,6 @@ function wmfLabsSettings() {
 		'wgWMEAICaptchaEnabled' => [
 			'default' => true,
 		],
-		'wgPropagateErrors' => [
-			'default' => false,
-		],
 		// T184668
 		'wmgUseGlobalPreferences' => [
 			// Explicitly disabled on non-CentralAuth wikis in CommonSettings.php
