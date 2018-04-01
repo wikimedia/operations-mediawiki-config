@@ -27,48 +27,6 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[] = [ // T188626
-	'from' => '2018-03-06T11:30 -6:00',
-	'to' => '2018-03-23T13:00 -6:00',
-	'range' => '139.169.111.0/24',
-	'value' => 160, // 150 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T189241
-	'from' => '2018-03-28T10:00 -7:00',
-	'to' => '2018-03-28T14:00 -7:00',
-	'IP' => '129.107.76.40',
-	'value' => 70 // 60 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T190206
-	'from' => '2018-03-24T11:00 -5:00',
-	'to' => '2018-03-24T16:00 -5:00',
-	'IP' => '129.21.255.128/26',
-	'value' => 50
-];
-
-$wmgThrottlingExceptions[] = [ // T190206
-	'from' => '2018-03-24T11:00 -5:00',
-	'to' => '2018-03-24T16:00 -5:00',
-	'IP' => '129.21.176.0/24',
-	'value' => 50
-];
-
-$wmgThrottlingExceptions[] = [ // T190206
-	'from' => '2018-03-24T11:00 -5:00',
-	'to' => '2018-03-24T16:00 -5:00',
-	'IP' => '129.21.179.0/24',
-	'value' => 50
-];
-
-$wmgThrottlingExceptions[] = [ // T190206
-	'from' => '2018-03-24T11:00 -5:00',
-	'to' => '2018-03-24T16:00 -5:00',
-	'IP' => '129.21.180.0/24',
-	'value' => 50
-];
-
 $wmgThrottlingExceptions[] = [
 	'from' => '2018-04-04T10:00 -5:00',
 	'to' => '2018-04-04T11:00 -5:00',
@@ -77,11 +35,12 @@ $wmgThrottlingExceptions[] = [
 	'value' => 40 // 30 excepted
 ];
 
-$wmgThrottlingExceptions[] = [ // T189796
-	'from' => '2018-03-22T11:00:00 UTC',
-	'to' => '2018-03-22T13:00:00 UTC',
-	'range' => [ '193.1.98.0/24', '193.1.100.0/24', '193.1.104.0/28' ],
-	'value' => 30 // 22 expected
+$wmgThrottlingExceptions[] = [ // T191168
+	'from' => '2018-04-04T8:00 +2:00',
+	'to' => '2018-04-04T13:00 +2:00',
+	'range' => [ '185.153.192.0/23' ],
+	'dbname' => [ 'cswiki', 'commonswiki' ],
+	'value' => 20 // up to 20 expected
 ];
 
 ## Add throttling definitions above.
