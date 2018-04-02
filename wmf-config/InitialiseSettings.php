@@ -19931,23 +19931,7 @@ $wgConf->settings = [
 	'urwikibooks' => null,
 
 	// Wikiquotes
-	'arwikiquote' => null,
-	'cawikiquote' => null,
-	'dewikiquote' => null,
-	'enwikiquote' => null,
-	'fawikiquote' => null,
 	'frwikiquote' => null,
-	'glwikiquote' => null,
-	'hiwikiquote' => null,
-	'hywikiquote' => null,
-	'kawikiquote' => null,
-	'ptwikiquote' => null,
-	'ruwikiquote' => null,
-	'slwikiquote' => null,
-	'srwikiquote' => null,
-	'thwikiquote' => null,
-	'trwikiquote' => null,
-	'urwikiquote' => null,
 
 	// Wikisources
 	'sourceswiki' => null,
