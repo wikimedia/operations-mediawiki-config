@@ -180,7 +180,7 @@ $wgLBFactoryConf = [
 	],
 
 	'm5' => [
-		'm5-master' => 1,
+		'm5-master' => 1, # db2037, C6
 	],
 	'labtestweb2001' => [
 		'labtestweb2001' => 1,
