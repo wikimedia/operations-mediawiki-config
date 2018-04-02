@@ -15910,6 +15910,11 @@ $wgConf->settings = [
 		'copyright-width' => 116,
 		'copyright-height' => 18,
 	],
+	'fawiki' => [
+		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-fa.svg',
+		'copyright-width' => 50,
+		'copyright-height' => 18,
+	],
 	'jawiki' => [
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-ja.svg',
 		'copyright-width' => 116,
