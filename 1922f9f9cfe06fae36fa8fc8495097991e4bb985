@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e652295b_22ef45d7",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 15916,
+      "author": {
+        "id": 194
+      },
+      "writtenOn": "2018-04-02T17:41:51Z",
+      "side": 1,
+      "message": "Must be 80px wide and 30px tall as explained in the Phab task.",
+      "range": {
+        "startLine": 15915,
+        "startChar": 23,
+        "endLine": 15916,
+        "endChar": 27
+      },
+      "revId": "1922f9f9cfe06fae36fa8fc8495097991e4bb985",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
