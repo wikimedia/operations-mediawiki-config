@@ -46,6 +46,30 @@
       "revId": "1922f9f9cfe06fae36fa8fc8495097991e4bb985",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3064e187_239e958d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 15916,
+      "author": {
+        "id": 194
+      },
+      "writtenOn": "2018-04-02T20:20:35Z",
+      "side": 1,
+      "message": "Is that so? For \u0027urwiki\u0027 the config reads 66 by 26 (line 15949 of this file) and that is also the size I see in http://ur.m.wikipedia.org/\n\nIf you think the aspect ratio of the file I provided is not correct, we can fix that file. Right now it is 135x50, which is approximately the same as 81x30 (81 * 50 \u003d 135 * 30) so you can use 81x30 instead of 80x30 if you really are sensitive to the math. Or if you really don\u0027t want to go above 26px (the height used for urwiki) then you can use 70x26.",
+      "parentUuid": "9743bca9_820639ba",
+      "range": {
+        "startLine": 15915,
+        "startChar": 23,
+        "endLine": 15916,
+        "endChar": 27
+      },
+      "revId": "1922f9f9cfe06fae36fa8fc8495097991e4bb985",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
