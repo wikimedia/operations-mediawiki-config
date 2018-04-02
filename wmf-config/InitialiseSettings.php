@@ -18546,8 +18546,7 @@ $wgConf->settings = [
 // $wgTranslateTranslationDefaultService in CommonSettings.php if you plan to
 // bring down a specific cluster.
 'wmgCirrusSearchDefaultCluster' => [
-	'default' => 'local',
-	'enwiki' => 'codfw',
+	'default' => 'codfw',
 ],
 
 'wmgCirrusSearchClusterOverrides' => [

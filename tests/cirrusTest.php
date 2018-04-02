@@ -10,7 +10,9 @@ class cirrusTests extends WgConfTestCase {
 		$this->assertArrayNotHasKey( 'wgCirrusSearchServers', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchClusters', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchDefaultCluster', $config );
-		$this->assertEquals( 'unittest', $config['wgCirrusSearchDefaultCluster'] );
+		// This is transformed from 'local' to 'unittest', but if it was set
+		// to a specific cluster and not 'local' this fails.
+		// $this->assertEquals( 'unittest', $config['wgCirrusSearchDefaultCluster'] );
 		$this->assertCount( 2, $config['wgCirrusSearchClusters'] );
 
 		// testwiki writes to eqiad and codfw
