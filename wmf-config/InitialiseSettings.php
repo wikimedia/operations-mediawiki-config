@@ -19996,15 +19996,6 @@ $wgConf->settings = [
 	'incubatorwiki' => null,
 	'metawiki' => null,
 	'wikidatawiki' => null,
-
-	// Wikimedias
-	'brwikimedia' => null,
-	'cowikimedia' => null,
-	'ecwikimedia' => null,
-	'ilwikimedia' => null,
-	'plwikimedia' => null,
-	'trwikimedia' => null,
-	'uawikimedia' => null,
 ],
 
 // Cache ResourceLoader modules in localStorage
