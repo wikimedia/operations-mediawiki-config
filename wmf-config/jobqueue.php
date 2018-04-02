@@ -42,16 +42,21 @@ $jobQueueFederatedConfig = [
 ];
 
 if ( $wmgUseEventBus && $wmgDebugJobQueueEventBus ) {
-	$wgJobTypeConf['deleteLinks'] =
+	$wgJobTypeConf['categoryMembershipChange'] =
+		$wgJobTypeConf['deleteLinks'] =
+		$wgJobTypeConf['EchoNotificationDeleteJob'] =
 		$wgJobTypeConf['flaggedrevs_CacheUpdate'] =
 		$wgJobTypeConf['htmlCacheUpdate'] =
 		$wgJobTypeConf['MessageIndexRebuildJob'] =
+		$wgJobTypeConf['ORESFetchScoreJob'] =
+		$wgJobTypeConf['recentChangesUpdate'] =
 		$wgJobTypeConf['RecordLintJob'] =
 		$wgJobTypeConf['refreshLinks'] =
 		$wgJobTypeConf['refreshLinksDynamic'] =
 		$wgJobTypeConf['refreshLinksPrioritized'] =
 		$wgJobTypeConf['updateBetaFeaturesUserCounts'] =
 		$wgJobTypeConf['wikibase-addUsagesForPage'] =
+		$wgJobTypeConf['wikibase-InjectRCRecords'] =
 		$wgJobTypeConf['cdnPurge'] =
 			[ 'class' => 'JobQueueEventBus' ];
 	if ( isset( $wmgDisableCirrusSearchJobsInRedis ) && $wmgDisableCirrusSearchJobsInRedis ) {
@@ -72,18 +77,6 @@ if ( $wmgUseEventBus && $wmgDebugJobQueueEventBus ) {
 				'readonly' => true,
 			];
 	}
-	$wgJobTypeConf['recentChangesUpdate'] =
-	$wgJobTypeConf['categoryMembershipChange'] =
-	$wgJobTypeConf['EchoNotificationDeleteJob'] =
-	$wgJobTypeConf['ORESFetchScoreJob'] =
-	$wgJobTypeConf['wikibase-InjectRCRecords'] = [
-		'class' => 'JobQueueSecondTestQueue',
-		'mainqueue' => $jobQueueFederatedConfig,
-		'debugqueue' => [
-			'class' => 'JobQueueEventBus'
-		],
-		'readonly' => true,
-	];
 	$wgJobTypeConf['default'] = [
 		'class' => 'JobQueueSecondTestQueue',
 		'mainqueue' => $jobQueueFederatedConfig,
