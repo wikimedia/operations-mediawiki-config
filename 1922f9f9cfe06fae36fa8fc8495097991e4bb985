@@ -22,6 +22,30 @@
       "revId": "1922f9f9cfe06fae36fa8fc8495097991e4bb985",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9743bca9_820639ba",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 15916,
+      "author": {
+        "id": 920
+      },
+      "writtenOn": "2018-04-02T19:04:07Z",
+      "side": 1,
+      "message": "The ratio of the file is 135x50px, the ratio you are referring will distort the logo and give it a weird shape. Also the height, like all other logos here should be around 18px not 30px",
+      "parentUuid": "e652295b_22ef45d7",
+      "range": {
+        "startLine": 15915,
+        "startChar": 23,
+        "endLine": 15916,
+        "endChar": 27
+      },
+      "revId": "1922f9f9cfe06fae36fa8fc8495097991e4bb985",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
