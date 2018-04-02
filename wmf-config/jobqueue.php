@@ -72,6 +72,20 @@ if ( $wmgUseEventBus && $wmgDebugJobQueueEventBus ) {
 				'readonly' => true,
 			];
 	}
+	if ( isset( $wmgDisableHighTrafficJobsInRedis ) && $wmgDisableHighTrafficJobsInRedis ) {
+		$wgJobTypeConf['recentChangesUpdate'] =
+		$wgJobTypeConf['categoryMembershipChange'] =
+		$wgJobTypeConf['EchoNotificationDeleteJob'] =
+		$wgJobTypeConf['ORESFetchScoreJob'] =
+		$wgJobTypeConf['wikibase-InjectRCRecords'] = [
+			'class' => 'JobQueueSecondTestQueue',
+			'mainqueue' => $jobQueueFederatedConfig,
+			'debugqueue' => [
+				'class' => 'JobQueueEventBus'
+			],
+			'readonly' => true,
+		];
+	}
 	$wgJobTypeConf['default'] = [
 		'class' => 'JobQueueSecondTestQueue',
 		'mainqueue' => $jobQueueFederatedConfig,
