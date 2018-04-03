@@ -40,6 +40,9 @@ $wgAbuseFilterNotifications = "udp";
 // T113164 Change default AbuseFilter IP block duration to not indefinite
 $wgAbuseFilterAnonBlockDuration = '1 week';
 
+// T191039 Re-enable filter profiling on every wiki
+$wgAbuseFilterProfile = true;
+
 $wgAbuseFilterSlowFilterRuntimeLimit = 800;
 
 // Custom permissions
@@ -116,7 +119,6 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-view-private'] = true;
 		$wgGroupPermissions['abusefilter-helper']['abusefilter-view-private'] = true; // T175684
 		$wgAbuseFilterNotificationsPrivate = true; // T46045
-		$wgAbuseFilterProfile = true;
 		break;
 	case 'enwikibooks':
 		$wgGroupPermissions['*']['abusefilter-view'] = false;
@@ -139,7 +141,6 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['user']['abusefilter-log'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
-		$wgAbuseFilterProfile = true; // T152087
 		break;
 	case 'eswikibooks':
 		$wgGroupPermissions['*']['abusefilter-view'] = false;
@@ -154,7 +155,6 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterBlockDuration = 'indefinite'; // T96669
 		$wgAbuseFilterAnonBlockDuration = '31 hours'; // T96669
 		$wgAbuseFilterNotificationsPrivate = true; // T147744
-		$wgAbuseFilterProfile = true; // T190264
 		break;
 	case 'eswikiquote': // T177760, T177761
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
@@ -164,7 +164,6 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterBlockDuration = '1 day';
 		$wgAbuseFilterAnonBlockDuration = '1 day';
 		$wgAbuseFilterNotificationsPrivate = true;
-		$wgAbuseFilterProfile = true;
 		break;
 	case 'eswiktionary':
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
@@ -282,7 +281,6 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterBlockDuration = '4 hours';
 		$wgAbuseFilterAnonBlockDuration = '4 hours';
 		$wgAbuseFilterNotifications = false;
-		$wgAbuseFilterProfile = true; // T190137
 		break;
 	case 'itwikinews':
 		$wgAbuseFilterActions['block'] = true;
@@ -339,7 +337,6 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['steward']['abusefilter-private'] = true; // T160357
 		$wgAbuseFilterActions['block'] = true; // T54681
 		$wgAbuseFilterAnonBlockDuration = '31 hours'; // T76270
-		$wgAbuseFilterProfile = true; // T149901
 		$wgAbuseFilterNotificationsPrivate = true; // T154358
 		break;
 	case 'mrwiki':
@@ -371,9 +368,6 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // T44012
-		break;
-	case 'ptwiki':
-		$wgAbuseFilterProfile = true;
 		break;
 	case 'ptwiktionary':
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
@@ -442,7 +436,6 @@ switch ( $wgDBname ) {
 		break;
 	case 'zhwiki':
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true; // T73854
-		$wgAbuseFilterProfile = true; // T190663
 		break;
 	case 'zh_yuewiki':
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
