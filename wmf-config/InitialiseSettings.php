@@ -13286,18 +13286,7 @@ $wgConf->settings = [
 	'default' => 'AbuseFilterParser',
 ],
 'wgAbuseFilterRuntimeProfile' => [
-	'default' => false,
-	'commonswiki' => true,
-	'dewiki' => true,
-	'enwiki' => true,
-	'eswikibooks' => true, // T190264
-	'eswiki' => true,
-	'itwiki' => true,
-	'mediawikiwiki' => true,
-	'metawiki' => true,
-	'ptwiki' => true,
-	'testwiki' => true,
-	'wikidatawiki' => true,
+	'default' => true, // T191039
 ],
 # @}
 
