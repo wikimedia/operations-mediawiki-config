@@ -2768,6 +2768,10 @@ if ( $wmgEnableGeoData ) {
 
 if ( $wmgUseEcho ) {
 	// This is intentionally loaded *before* the GlobalPreferences extension (below).
+	if ( ExtensionRegistry::getInstance()->isLoaded( 'GlobalPreferences' ) ) {
+		throw new \Exception( "The GlobalPreferences extension must be loaded after Echo. See T190353." );
+	}
+
 	wfLoadExtension( 'Echo' );
 
 	if ( isset( $wgEchoConfig ) ) {
