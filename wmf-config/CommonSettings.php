@@ -2362,6 +2362,7 @@ if ( $wmgUseVisualEditor ) {
 	if ( $wmgVisualEditorConsolidateFeedback ) {
 		$wgVisualEditorFeedbackAPIURL = 'https://www.mediawiki.org/w/api.php';
 		$wgVisualEditorFeedbackTitle = 'VisualEditor/Feedback';
+		$wgVisualEditorSourceFeedbackTitle = '2017 wikitext editor/Feedback';
 	}
 
 	// Enable for auto-created accounts
