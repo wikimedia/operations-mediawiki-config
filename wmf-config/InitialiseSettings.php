@@ -5711,6 +5711,8 @@ $wgConf->settings = [
 		101 => 'Atari_eztabaida',
 		102 => 'Wikiproiektu',
 		103 => 'Wikiproiektu_eztabaida',
+		104 => 'Txikipedia', // T191396
+		105 => 'Txikipedia_eztabaida', // T191396
 	],
 	'fawiki' => [
 		100 => 'درگاه',
@@ -12213,6 +12215,7 @@ $wgConf->settings = [
 	'+enwikisource' => [ 102, 114 ], // T52007
 	'+eswiki' => [ 104 ], // T41866
 	'+etwikisource' => [ 106 ],
+	'+euwiki' => [ 104 ], // T191396
 	'+fawikibooks' => [ 102, 110 ], // T76663
 	'+fawikisource' => [ 102 ],
 	'+frrwiki' => [ 106 ], // T40023
