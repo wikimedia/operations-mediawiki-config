@@ -127,7 +127,7 @@ $wgLBFactoryConf = [
 		'db2043'      => 0,   # C6 2.9TB 160GB, master
 		'db2036'      => 50,  # C6 2.9TB 160GB, old master, storage issues? T185294
 		'db2050'      => 50,  # C6 2.9TB 160GB dump (inactive), vslow
-		# 'db2057'      => 400, # D6 3.3TB 160GB # T191275
+		'db2057'      => 400, # D6 3.3TB 160GB # candidate master
 		'db2074'      => 400, # D6 3.3TB 512GB # InnoDB compressed
 	],
 	's4' => [
