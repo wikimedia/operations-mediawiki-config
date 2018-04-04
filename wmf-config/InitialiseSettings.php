@@ -5711,6 +5711,8 @@ $wgConf->settings = [
 		101 => 'Atari_eztabaida',
 		102 => 'Wikiproiektu',
 		103 => 'Wikiproiektu_eztabaida',
+		104 => 'Txikipedia', // T191396
+		105 => 'Txikipedia_eztabaida', // T191396
 	],
 	'fawiki' => [
 		100 => 'درگاه',
