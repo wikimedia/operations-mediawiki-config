@@ -115,7 +115,7 @@ $wgLBFactoryConf = [
 	],
 	's2' => [
 		'db2035'      => 50,  # B1 2.9TB 160GB, master
-		# 'db2041'      => 100, # C6 2.9TB 160GB, api # restarting mysql and upgrading kernel
+		'db2041'      => 100, # C6 2.9TB 160GB, api # candidate master
 		'db2049'      => 400, # C6 2.9TB 160GB,
 		'db2056'      => 50,  # D6 3.3TB 160GB, dump (inactive), vslow #innodb compressed
 		'db2063'      => 100, # D6 3.3TB 160GB, api
@@ -321,7 +321,7 @@ $wgLBFactoryConf = [
 			'db2056' => 1,
 		],
 		'api' => [
-			# 'db2041' => 1,
+			'db2041' => 1,
 			'db2063' => 1,
 		],
 	],
