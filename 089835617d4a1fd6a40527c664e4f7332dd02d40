@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "97d12249_925b768a",
+        "filename": "wmf-config/WikibaseSearchSettings.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2018-04-05T17:10:18Z",
+      "side": 1,
+      "message": "I\u0027m attempting to remove it since term_boost has everything we need.",
+      "parentUuid": "f43701c3_27c0968e",
+      "revId": "089835617d4a1fd6a40527c664e4f7332dd02d40",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "2b0442ae_588dd704",
         "filename": "wmf-config/WikibaseSearchSettings.php",
         "patchSetId": 8
@@ -30,6 +48,24 @@
       "writtenOn": "2018-04-05T17:01:22Z",
       "side": 1,
       "message": "this previously was only for production, now it is for every install, which makes no sense since in test/beta the qids are different. I\u0027d prefer to keep $wgWBRepoSettings[\u0027entitySearch\u0027][\u0027statementBoost\u0027]",
+      "revId": "089835617d4a1fd6a40527c664e4f7332dd02d40",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8729801b_15e69b4e",
+        "filename": "wmf-config/WikibaseSearchSettings.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2018-04-05T17:10:18Z",
+      "side": 1,
+      "message": "I\u0027ll send another proposal using InitialiseSettings\nif that does not work out I\u0027ll keep statement_boost",
+      "parentUuid": "2b0442ae_588dd704",
       "revId": "089835617d4a1fd6a40527c664e4f7332dd02d40",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
