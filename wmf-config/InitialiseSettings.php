@@ -107,6 +107,12 @@ $wgConf->settings = [
 	'nonglobal' => false,
 ],
 
+# T184485
+'wgLogAutopatrol' => [
+	'default' => true,
+	'wikidatawiki' => false,
+],
+
 # wgLanguageCode @{
 'wgLanguageCode' => [
 	'default' => '$lang',
