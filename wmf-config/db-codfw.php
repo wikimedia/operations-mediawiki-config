@@ -650,13 +650,13 @@ $wgLBFactoryConf = [
 	'cluster24' => [
 		'10.192.48.41'  => 1, # es2016, D1 11TB 128GB, master
 		'10.192.0.141'  => 3, # es2014, A1 11TB 128GB
-		# '10.192.32.130' => 3, # es2015, C1 11TB 128GB, testing backups T153440
+		'10.192.32.130' => 3, # es2015, C1 11TB 128GB
 	],
 	# es3
 	'cluster25' => [
 		'10.192.0.142'  => 1, # es2017, A6 11TB 128GB, master
 		'10.192.16.172' => 3, # es2018, B6 11TB 128GB
-		'10.192.48.42'  => 3, # es2019, D6 11TB 128GB
+		# '10.192.48.42'  => 3, # es2019, D6 11TB 128GB, testing backups T153440
 	],
 	# ExtensionStore shard1
 	'extension1' => [
