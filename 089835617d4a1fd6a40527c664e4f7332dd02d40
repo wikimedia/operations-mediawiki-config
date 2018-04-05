@@ -69,6 +69,24 @@
       "revId": "089835617d4a1fd6a40527c664e4f7332dd02d40",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "29666891_f534cd20",
+        "filename": "wmf-config/WikibaseSearchSettings.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 2096
+      },
+      "writtenOn": "2018-04-05T17:21:47Z",
+      "side": 1,
+      "message": "Sure. I am ok with removing statement_boost - if we can keep different boost settings on different wikibases (will become even more important  once we have SDC)  without completely duplicating the profile. It\u0027s probably possible - just making params take a variable or something - so if it\u0027s done this way, I\u0027d be ok with dropping statement_boost.",
+      "parentUuid": "8729801b_15e69b4e",
+      "revId": "089835617d4a1fd6a40527c664e4f7332dd02d40",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
