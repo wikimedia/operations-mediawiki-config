@@ -481,6 +481,18 @@ function wmfLabsSettings() {
 			'default' => [],
 		],
 
+		'-wmgWikibaseSearchIndexProperties' => [
+			'default' => []
+		],
+
+		'-wmgWikibaseSearchIndexPropertiesExclude' => [
+			'default' => []
+		],
+
+		'-wmgWikibaseSearchStatementBoosts' => [
+			'default' => []
+		],
+
 		// Test the extension Collection in other languages for book creator,
 		// which avoids the bugs related to the PDF generator.
 		'wmgUseCollection' => [
