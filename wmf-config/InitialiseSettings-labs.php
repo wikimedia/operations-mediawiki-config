@@ -473,6 +473,16 @@ function wmfLabsSettings() {
 
 		'wmgWikibaseDisabledDataTypes' => [
 			'default' => [],
+		'-wmgWikibaseSearchIndexProperties' => [
+			'default' => []
+		],
+
+		'-wmgWikibaseSearchIndexPropertiesExclude' => [
+			'default' => []
+		],
+
+		'-wmgWikibaseSearchStatementBoosts' => [
+			'default' => []
 		],
 
 		// Test the extension Collection in other languages for book creator,
