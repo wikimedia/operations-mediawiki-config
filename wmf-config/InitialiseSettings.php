@@ -18447,6 +18447,25 @@ $wgConf->settings = [
 	'default' => false,
 ],
 
+// Wikidata search: configure boost based on statements (T148411)
+// see WikibaseSearchSettings.php
+'wmgWikibaseSearchStatementBoosts' => [
+	'default' => [],
+	'wikidatawiki' => [
+			// Q4167410=Wikimedia disambiguation page
+			'P31=Q4167410' => -10,
+			// T183510:
+			// Q13442814=scientific article
+			'P31=Q13442814' => -5,
+			// Q18918145=academic journal article
+			'P31=Q18918145' => -5,
+	],
+	'testwikidatawiki' => [
+		// Q15561=Wikimedia disambiguation page
+		'P31=Q15561' => -10,
+	]
+],
+
 'wmgUseTemplateSandbox' => [
 	'default' => true,
 	'loginwiki' => false,
