@@ -40,9 +40,6 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBQualityConstraintsPropertyConstraintId = 'P51064';
 		$wgWBQualityConstraintsFormatConstraintId = 'Q100086';
 		$wgWBQualityConstraintsFormatAsARegularExpressionId = 'P51065';
-
-		// T189776
-		$wgWBRepoSettings['useTermsTableSearchFields'] = false;
 	} else {
 		$wgPropertySuggesterClassifyingPropertyIds = [ 31, 279 ]; // T169060
 		$wgPropertySuggesterInitialSuggestions = [ 31, 279 ];
@@ -154,10 +151,6 @@ if ( $wmgUseWikibaseRepo ) {
 			// Q18918145=academic journal article
 			'P31=Q18918145' => '-5',
 		];
-
-		// T189777
-		$wgWBRepoSettings['useTermsTableSearchFields'] = false;
-		$wgWBRepoSettings['forceWriteTermsTableSearchFields'] = true; // can be removed later
 	}
 
 	if ( $wgDBname === 'wikidatawiki' ) {
@@ -175,6 +168,9 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgRightsUrl = 'creativecommons.org/licenses/by-sa/3.0';
 	// T183053 - make Cirrus instantly index new items
 	$wgCirrusSearchInstantIndexNew = [ NS_MAIN, WB_NS_PROPERTY ];
+
+	// T189776, T189777
+	$wgWBRepoSettings['useTermsTableSearchFields'] = false;
 }
 
 if ( $wmgUseWikibaseClient ) {
