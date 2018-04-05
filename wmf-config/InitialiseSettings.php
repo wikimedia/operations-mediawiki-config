@@ -18688,6 +18688,48 @@ $wgConf->settings = [
 	'default' => [ 'lexeme', 'form', 'sense' ],
 ],
 
+// List of properties to be indexed by elasticsearch
+// see WikibaseSearchSettings.php
+'wmgWikibaseSearchIndexProperties' => [
+	'default' => [],
+	'wikidatawiki' => [ 'P31', 'P279' ], // instance of, subclass of
+	'testwikidatawiki' => [ 'P7', 'P700' ], // test only: Item and ExternalId
+],
+
+'wmgWikibaseSearchIndexPropertiesExclude' => [
+	'default' => [],
+	'wikibase' => [ // T163642
+		'P304', // page(s)
+		'P433', // issue
+		'P478', // volume
+		'P558', // unit symbol (DEPRECATED)
+		'P3903', // column
+		'P3921', // Wikidata SPARQL query equivalent
+		'P4316', // kinship equivalent in SPARQL at Wikidata
+	]
+],
+
+// Wikidata search: configure boost based on statements (T148411)
+// see WikibaseSearchSettings.php
+// NOTE: these properties need to be indexed first (see wmgWikibaseSearchIndexProperties)
+'wmgWikibaseSearchStatementBoosts' => [
+	'default' => [],
+	'wikidatawiki' => [
+		// Q4167410=Wikimedia disambiguation page
+		'P31=Q4167410' => -10,
+		// T183510:
+		// Q13442814=scientific article
+		'P31=Q13442814' => -5,
+		// Q18918145=academic journal article
+		'P31=Q18918145' => -5,
+	],
+	'testwikidatawiki' => [
+		// not necessarily meaningful, for testing only
+		// Q15561=Wikimedia disambiguation page
+		'P7=Q15561' => -10,
+	]
+],
+
 'wmgUseTemplateSandbox' => [
 	'default' => true,
 	'loginwiki' => false,
@@ -18855,7 +18897,7 @@ $wgConf->settings = [
 	"jv" => "default",
 	"zh-min-nan" => "default", // needs to support deprecated language code (e.g. zh_min_nanwikisource)
 	"nan" => "default", // e.g. zh_min_nan
-	// Currently defined in Wikibase.php
+	// Currently defined in WikibaseSearchSettings.php
 	"wikidata" => "wikibase_similarity",
 	"testwikidata" => "wikibase_similarity",
 ],
@@ -19018,6 +19060,11 @@ $wgConf->settings = [
 		'user' => 5.0,
 		'wiki' => 2.5,
 	],
+],
+
+'wmgCirrusSearchInstantIndexNew' => [
+	'default' => [],
+	'wikidatawiki' => [ NS_MAIN, 120 ], // T183053
 ],
 
 // Shard each wiki to be under 2gb per shard if possible.  Changing this for a wiki
