@@ -111,6 +111,7 @@ $wgConf->settings = [
 'wgLogAutopatrol' => [
 	'default' => true,
 	'wikidatawiki' => false,
+	'commonswiki' => false,
 ],
 
 # wgLanguageCode @{
