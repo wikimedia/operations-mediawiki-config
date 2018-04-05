@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "f43701c3_27c0968e",
+        "filename": "wmf-config/WikibaseSearchSettings.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 2096
+      },
+      "writtenOn": "2018-04-05T17:05:10Z",
+      "side": 1,
+      "message": "shouldn\u0027t we use statement_boost function instead?",
+      "revId": "089835617d4a1fd6a40527c664e4f7332dd02d40",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "2b0442ae_588dd704",
         "filename": "wmf-config/WikibaseSearchSettings.php",
         "patchSetId": 8
