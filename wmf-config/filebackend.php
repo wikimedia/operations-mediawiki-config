@@ -135,6 +135,26 @@ foreach ( $datacenters as $specificDC ) {
 		'secureReadUsers'     => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ],
 		'secureWriteUsers'    => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ]
 	];
+	$wgLocalFileRepo = [
+		'class'             => 'LocalRepo',
+		'name'              => 'local',
+		'backend'           => 'local-multiwrite',
+		'url'               => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
+		'scriptDirUrl'      => $wgScriptPath,
+		'hashLevels'        => 2,
+		'thumbScriptUrl'    => $wgThumbnailScriptPath,
+		'transformVia404'   => true,
+		'initialCapital'    => $wgCapitalLinks,
+		'deletedHashLevels' => 3,
+		'abbrvThreshold'    => 160,
+		'isPrivate'         => $wmgPrivateWiki,
+		'thumbProxyUrl'     => $wmfSwiftConfig[$specificDC]['thumborUrl'] . '/' . $site . '/' . $lang . '/thumb/',
+		'thumbProxySecret'  => $wmfSwiftConfig[$specificDC]['thumborSecret'],
+		'zones'             => $wmgPrivateWiki
+			? [
+				'thumb' => [ 'url' => "$wgScriptPath/thumb_handler.php" ] ]
+			: [],
+	];
 }
 /* end DC-specific Swift backend config */
 
@@ -217,26 +237,6 @@ $wgLockManagers[] = [
 	]
 ];
 
-$wgLocalFileRepo = [
-	'class'             => 'LocalRepo',
-	'name'              => 'local',
-	'backend'           => 'local-multiwrite',
-	'url'               => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
-	'scriptDirUrl'      => $wgScriptPath,
-	'hashLevels'        => 2,
-	'thumbScriptUrl'    => $wgThumbnailScriptPath,
-	'transformVia404'   => true,
-	'initialCapital'    => $wgCapitalLinks,
-	'deletedHashLevels' => 3,
-	'abbrvThreshold'    => 160,
-	'isPrivate'         => $wmgPrivateWiki,
-	'thumbProxyUrl'     => $wmfSwiftConfig[$specificDC]['thumborUrl'] . '/' . $site . '/' . $lang . '/thumb/',
-	'thumbProxySecret'  => $wmfSwiftConfig[$specificDC]['thumborSecret'],
-	'zones'             => $wmgPrivateWiki
-		? [
-			'thumb' => [ 'url' => "$wgScriptPath/thumb_handler.php" ] ]
-		: [],
-];
 // test2wiki uses testwiki as foreign file repo (e.g. local => testwiki => commons)
 // Does not exist in labs.
 if ( $wgDBname === 'test2wiki' ) {
