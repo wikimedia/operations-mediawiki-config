@@ -44,6 +44,12 @@ class Clean(main.AbstractSync):
                              self.arguments.branch)
         self.cleanup_branch(self.arguments.branch, self.arguments.delete)
 
+    def _proxy_sync_command(self):
+        """Append the default sync command with --delete-excluded"""
+        cmd = super(Clean, self)._proxy_sync_command()
+        cmd.append('--delete-excluded')
+        return cmd
+
     def cleanup_branch(self, branch, delete):
         """
         Given a branch, go through the cleanup proccess on the master.
