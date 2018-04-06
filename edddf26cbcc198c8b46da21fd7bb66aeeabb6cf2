@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d8d2ea71_b191fbdb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-04-06T18:58:22Z",
+      "side": 1,
+      "message": "Prefer imperative mood. Without it, it is unsure whether this is stating a problem (is but shouldn\u0027t be), a feature objective (wasn\u0027t but now is), or a previously unmet restriction (meant to be, but previously wasn\u0027t correct).",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 43
+      },
+      "revId": "edddf26cbcc198c8b46da21fd7bb66aeeabb6cf2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
