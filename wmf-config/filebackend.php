@@ -230,13 +230,14 @@ $wgLocalFileRepo = [
 	'deletedHashLevels' => 3,
 	'abbrvThreshold'    => 160,
 	'isPrivate'         => $wmgPrivateWiki,
-	'thumbProxyUrl'     => $wmfSwiftConfig[$specificDC]['thumborUrl'] . '/' . $site . '/' . $lang . '/thumb/',
-	'thumbProxySecret'  => $wmfSwiftConfig[$specificDC]['thumborSecret'],
+	'thumbProxyUrl'     => $wmfSwiftConfig[$wmfDatacenter]['thumborUrl'] . '/' . $site . '/' . $lang . '/thumb/',
+	'thumbProxySecret'  => $wmfSwiftConfig[$wmfDatacenter]['thumborSecret'],
 	'zones'             => $wmgPrivateWiki
 		? [
 			'thumb' => [ 'url' => "$wgScriptPath/thumb_handler.php" ] ]
 		: [],
 ];
+
 // test2wiki uses testwiki as foreign file repo (e.g. local => testwiki => commons)
 // Does not exist in labs.
 if ( $wgDBname === 'test2wiki' ) {
