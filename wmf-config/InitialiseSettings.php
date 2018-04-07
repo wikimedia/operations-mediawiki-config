@@ -13505,7 +13505,7 @@ $wgConf->settings = [
 		'www.president.gov.ua',             // Ukraine government website - T185399
 		'www.kmu.gov.ua',                   // Ukraine government website - T185399
 		'vin.gov.ua',                       // Ukraine government website - T185399
-		'if.gov.ua',                        // Ukraine government website - T185399
+		'www.if.gov.ua',                    // Ukraine government website - T185399
 		'kr-admin.gov.ua',                  // Ukraine government website - T185399
 		'loda.gov.ua',                      // Ukraine government website - T185399
 		'loga.gov.ua',                      // Ukraine government website - T185399
@@ -13514,6 +13514,7 @@ $wgConf->settings = [
 		'mip.gov.ua',                       // Ukraine government website - T185399
 		'sfs.gov.ua',                       // Ukraine government website - T185399
 		'dknii.gov.ua',                     // Ukraine government website - T185399
+		'adm.dp.gov.ua',                    // Ukraine government website - T191692
 	],
 ],
 
