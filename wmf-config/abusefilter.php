@@ -12,13 +12,7 @@
 #      `-- wmf-config/abusefilter.php
 #
 
-$wgGroupPermissions['*']['abusefilter-view'] = true;
-$wgGroupPermissions['*']['abusefilter-log'] = true;
 $wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = true; // T44012
-
-// give to sysop to make sure it is always available to them, also on wikis where autoconfirmed does not have this right
-$wgGroupPermissions['sysop']['abusefilter-log-detail'] = true;
-$wgGroupPermissions['sysop']['abusefilter-modify'] = true;
 
 // Provides access to private information - T160357
 // Only CheckUsers/Stewards/Staff and Ombudsmen allowed.
