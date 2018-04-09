@@ -634,6 +634,7 @@ $wgLBFactoryConf = [
 	'db2090' => '10.192.32.172', # do not remove or comment out
 	'db2091:3312' => '10.192.0.10:3312', # do not remove or comment out
 	'db2091:3314' => '10.192.0.10:3314', # do not remove or comment out
+	'db2092' => '10.192.16.41', # do not remove or comment out
 	'm5-master.eqiad.wmnet' => '10.64.16.79', # do not remove or comment out
 	'labtestweb2001' => '208.80.153.14', # do not remove or comment out
 ],
