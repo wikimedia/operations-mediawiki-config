@@ -15098,6 +15098,7 @@ $wgConf->settings = [
 'wmgVisualEditorSingleEditTabSecondaryEditor' => [
 	'default' => false,
 	'enwiki' => true, // T132806
+	'frwiktionary' => true, // T169741
 ],
 
 // Whether VisualEditor's second tab and section link come after (rather than before) those for
