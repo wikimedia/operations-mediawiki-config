@@ -2851,6 +2851,11 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgGroupPermissions['contentadmin']['override-antispoof'] = false;
 	$wgGroupPermissions['contentadmin']['createaccount'] = false;
 
+        if ( $wgDBname === 'labtestwiki' ) {
+            # We don't want random strangers playing on this wiki
+	    $wgGroupPermissions['*']['createaccount'] = false;
+        }
+
 	// These are somehow not added as they are assigned to 'sysop' in the respective extension.json
 	$wgGroupPermissions['contentadmin']['nuke'] = true;
 	$wgGroupPermissions['contentadmin']['massmessage'] = true;
