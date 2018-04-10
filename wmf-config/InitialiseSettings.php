@@ -15293,6 +15293,7 @@ $wgConf->settings = [
 	'mediawikiwiki' => false,   // This is the consolidation point
 	'dewiki' => false,          // Retaining for local conversations
 	'enwiki' => false,          // Retaining for local conversations
+	'zh_yuewiki' => false,      // Retaining for local conversations
 	'betawikiversity' => false, // No local Flow install, so won't work
 	'dewikivoyage' => false,    // No local Flow install, so won't work
 	'enwikiversity' => false,   // No local Flow install, so won't work
