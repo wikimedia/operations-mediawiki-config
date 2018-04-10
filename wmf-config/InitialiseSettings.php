@@ -5314,6 +5314,7 @@ $wgConf->settings = [
 		'OutputBuffer' => 'debug',
 		'PageViewInfo' => 'info',
 		'poolcounter' => 'debug',
+		'preferences' => 'debug',
 		'purge' => 'debug',
 		'query' => 'debug',
 		'ratelimit' => 'debug',
