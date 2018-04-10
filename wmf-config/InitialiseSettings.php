@@ -18464,6 +18464,7 @@ $wgConf->settings = [
 	'testwiki' => true, // T137918
 	'trwiki' => true, // T184969
 	'arwiki' => true, // T185023
+	'huwiki' => true, // T191697
 ],
 'wgPageAssessmentsOnTalkPages' => [
 	'default' => true,
