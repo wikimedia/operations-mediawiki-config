@@ -77,6 +77,24 @@ if ( $wmgUseEventBus && $wmgDebugJobQueueEventBus ) {
 				'readonly' => true,
 			];
 	}
+	if ( isset( $wmgBulk2JobsInRedis ) && $wmgBulk2JobsInRedis ) {
+		$wgJobTypeConf['ChangeNotification'] =
+			$wgJobTypeConf['CognateCacheUpdateJob'] =
+			$wgJobTypeConf['CognateLocalJobSubmitJob'] =
+			$wgJobTypeConf['globalUsageCachePurge'] =
+			$wgJobTypeConf['GlobalUserPageLocalJobSubmitJob'] =
+			$wgJobTypeConf['LocalGlobalUserPageCacheUpdateJob'] =
+			$wgJobTypeConf['TranslateDeleteJob'] =
+			$wgJobTypeConf['TranslateRenderJob'] =
+			$wgJobTypeConf['TranslationsUpdateJob'] = [
+				'class' => 'JobQueueSecondTestQueue',
+				'mainqueue' => $jobQueueFederatedConfig,
+				'debugqueue' => [
+					'class' => 'JobQueueEventBus'
+				],
+				'readonly' => true,
+			];
+	}
 	$wgJobTypeConf['default'] = [
 		'class' => 'JobQueueSecondTestQueue',
 		'mainqueue' => $jobQueueFederatedConfig,
