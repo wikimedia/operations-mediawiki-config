@@ -91,6 +91,7 @@ if ( $wmgUseWikibaseRepo ) {
 			'Q20748092' => 'wb-badge-proofread',
 			'Q20748093' => 'wb-badge-validated',
 			'Q28064618' => 'wb-badge-digitaldocument', // T153186
+			'Q51759403' => 'wb-badge-goodlist', // T190976
 		];
 
 		$wgWBRepoSettings['preferredGeoDataProperties'] = [
