@@ -8663,7 +8663,10 @@ $wgConf->settings = [
 	],
 	'+etwiki' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T150852
-		],
+	],
+	'+euwiki' => [
+		'sysop' => [ 'flow-create-board' => true ], // T190500
+	],
 	'+fawiki' => [
 		'*' => [ 'createpage' => false ], // T29195
 		'user' => [ 'move-categorypages' => false ], // T67728
