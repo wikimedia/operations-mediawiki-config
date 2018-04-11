@@ -20474,9 +20474,13 @@ $wgConf->settings = [
 	'nonglobal' => false,
 ],
 
-// T184121, not yet ready for production
+// T184121
 'wmgUseGlobalPreferences' => [
 	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'testwikidatawiki' => true,
+	'mediawikiwiki' => true,
 ],
 'wgGlobalPreferencesDB' => [
 	'default' => 'centralauth',
