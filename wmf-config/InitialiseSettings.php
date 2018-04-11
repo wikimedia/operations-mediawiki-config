@@ -20186,12 +20186,21 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
+// TODO: remove when enabling EventBus on all wikis but for jobs only
 'wmgUseEventBus' => [
 	'default' => true,
 	'wikitech' => false,
 	'private' => false,
 	'loginwiki' => false,
 	'votewiki' => false,
+],
+
+'wgEnableEventBus' => [
+	'default' => 'TYPE_ALL',
+	'wikitech' => 'TYPE_JOB',
+	'private' => 'TYPE_JOB',
+	'loginwiki' => 'TYPE_JOB',
+	'votewiki' => 'TYPE_JOB',
 ],
 
 'wmgDebugJobQueueEventBus' => [
