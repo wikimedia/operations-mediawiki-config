@@ -14016,9 +14016,11 @@ $wgConf->settings = [
 ],
 
 'wgPopupsAnonsExperimentalGroupSize' => [
-	// Read: Enable previews for all anonymous users by default, which is the current behaviour on all wikis except enwiki and dewiki per T162672. Later in T191966 we decided to enable Popups for de wiki, and leave only enwiki in the experimental group.
+	// Read: Enable previews for all anonymous users by default. For English Wiki
+	// we want to gradually enable it , first for 10%, then 50%, and then for all
+	// @T189906
 	'default' => 0,
-	'enwiki' => 0.03,
+	'enwiki' => 0.1,
 ],
 
 'wgPopupsEventLogging' => [
