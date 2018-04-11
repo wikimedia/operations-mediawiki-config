@@ -13973,14 +13973,7 @@ $wgConf->settings = [
 'wmgUsePopups' => [
 	'default' => false,
 	'sewikimedia' => true, // T68374
-
-	// T136602, T162162, T162672: Make Page Previews enabled by default for the
-	// stage 0 and stage 1 wikis.
-	'pp_stage0' => true,
-	'pp_stage1' => true,
-	// T172291
-	'enwiki' => true,
-	'dewiki' => true,
+	'wikipedia' => true,
 ],
 
 'wgPopupsPageBlacklist' => [
@@ -14022,10 +14015,9 @@ $wgConf->settings = [
 ],
 
 'wgPopupsAnonsExperimentalGroupSize' => [
-	// Read: Enable previews for all anonymous users by default, which is the current behaviour on all wikis except enwiki and dewiki per T162672.
+	// Read: Enable previews for all anonymous users by default, which is the current behaviour on all wikis except enwiki and dewiki per T162672. Later in T191966 we decided to enable Popups for de wiki, and leave only enwiki in the experimental group.
 	'default' => 0,
 	'enwiki' => 0.03,
-	'dewiki' => 0.08,
 ],
 
 'wgPopupsEventLogging' => [
