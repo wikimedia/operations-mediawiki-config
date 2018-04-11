@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3295c76c_703490b3",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 20261,
+      "author": {
+        "id": 2177
+      },
+      "writtenOn": "2018-04-11T16:00:00Z",
+      "side": 0,
+      "message": "we should actually leave this here while we are switching so that we can sync/change only jobqueue.php",
+      "revId": "2d319d2c457c0eea2f21732f06d433bea9bf9d85",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
