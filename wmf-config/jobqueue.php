@@ -58,6 +58,15 @@ if ( $wmgUseEventBus && $wmgDebugJobQueueEventBus ) {
 		$wgJobTypeConf['wikibase-addUsagesForPage'] =
 		$wgJobTypeConf['wikibase-InjectRCRecords'] =
 		$wgJobTypeConf['cdnPurge'] =
+		$wgJobTypeConf['ChangeNotification'] =
+		$wgJobTypeConf['CognateCacheUpdateJob'] =
+		$wgJobTypeConf['CognateLocalJobSubmitJob'] =
+		$wgJobTypeConf['globalUsageCachePurge'] =
+		$wgJobTypeConf['GlobalUserPageLocalJobSubmitJob'] =
+		$wgJobTypeConf['LocalGlobalUserPageCacheUpdateJob'] =
+		$wgJobTypeConf['TranslateDeleteJob'] =
+		$wgJobTypeConf['TranslateRenderJob'] =
+		$wgJobTypeConf['TranslationsUpdateJob'] =
 			[ 'class' => 'JobQueueEventBus' ];
 	if ( isset( $wmgDisableCirrusSearchJobsInRedis ) && $wmgDisableCirrusSearchJobsInRedis ) {
 		$wgJobTypeConf['cirrusSearchCheckerJob'] =
@@ -69,24 +78,6 @@ if ( $wmgUseEventBus && $wmgDebugJobQueueEventBus ) {
 			$wgJobTypeConf['cirrusSearchLinksUpdatePrioritized'] =
 			$wgJobTypeConf['cirrusSearchMassIndex'] =
 			$wgJobTypeConf['cirrusSearchOtherIndex'] = [
-				'class' => 'JobQueueSecondTestQueue',
-				'mainqueue' => $jobQueueFederatedConfig,
-				'debugqueue' => [
-					'class' => 'JobQueueEventBus'
-				],
-				'readonly' => true,
-			];
-	}
-	if ( isset( $wmgBulk2JobsInRedis ) && $wmgBulk2JobsInRedis ) {
-		$wgJobTypeConf['ChangeNotification'] =
-			$wgJobTypeConf['CognateCacheUpdateJob'] =
-			$wgJobTypeConf['CognateLocalJobSubmitJob'] =
-			$wgJobTypeConf['globalUsageCachePurge'] =
-			$wgJobTypeConf['GlobalUserPageLocalJobSubmitJob'] =
-			$wgJobTypeConf['LocalGlobalUserPageCacheUpdateJob'] =
-			$wgJobTypeConf['TranslateDeleteJob'] =
-			$wgJobTypeConf['TranslateRenderJob'] =
-			$wgJobTypeConf['TranslationsUpdateJob'] = [
 				'class' => 'JobQueueSecondTestQueue',
 				'mainqueue' => $jobQueueFederatedConfig,
 				'debugqueue' => [
