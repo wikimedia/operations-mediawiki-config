@@ -66,7 +66,7 @@ if ( $wmgUseEventBus ) {
 		$wgJobTypeConf['LocalGlobalUserPageCacheUpdateJob'] =
 		$wgJobTypeConf['TranslateDeleteJob'] =
 		$wgJobTypeConf['TranslateRenderJob'] =
-		$wgJobTypeConf['TranslationsUpdateJob'] =
+		// T192107 $wgJobTypeConf['TranslationsUpdateJob'] =
 			[ 'class' => 'JobQueueEventBus' ];
 	if ( isset( $wmgDisableCirrusSearchJobsInRedis ) && $wmgDisableCirrusSearchJobsInRedis ) {
 		$wgJobTypeConf['cirrusSearchCheckerJob'] =
