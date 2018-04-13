@@ -665,8 +665,8 @@ $wgLBFactoryConf = [
 
 	# es2
 	'cluster24' => [
-		'10.64.0.6'    => 1, # es1011, A2 11TB 128GB, master
-		# '10.64.16.186' => 1, # es1013, B1 11TB 128GB, reimage to stretch
+		'10.64.0.6'    => 0, # es1011, A2 11TB 128GB, master
+		'10.64.16.186' => 1, # es1013, B1 11TB 128GB
 		'10.64.32.184' => 10, # es1015, C2 11TB 128GB
 	],
 	# es3
