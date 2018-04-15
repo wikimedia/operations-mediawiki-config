@@ -1889,6 +1889,7 @@ $wgConf->settings = [
 	'wiktionary' => '//$lang.wiktionary.org',
 
 	// Individual wikis
+	'advisorswiki' => '//advisors.wikimedia.org',
 	'advisorywiki' => '//advisory.wikimedia.org',
 	'amwikimedia' => '//am.wikimedia.org',
 	'arwikimedia' => '//ar.wikimedia.org',
@@ -1978,6 +1979,7 @@ $wgConf->settings = [
 	'wiktionary' => 'https://$lang.wiktionary.org',
 
 	// Individual wikis
+	'advisorswiki' => 'https://advisors.wikimedia.org',
 	'advisorywiki' => 'https://advisory.wikimedia.org',
 	'amwikimedia' => 'https://am.wikimedia.org',
 	'arwikimedia' => 'https://ar.wikimedia.org',
@@ -2071,6 +2073,7 @@ $wgConf->settings = [
 
 	// Individual wikis, alphabetically by DB name
 	'abwiki' => 'Авикипедиа',
+	'advisorswiki' => 'Advisors',
 	'advisorywiki' => 'Advisory Board',
 	'adywiki' => 'Википедие', // T125501
 	'amwikimedia' => 'Վիքիմեդիա Հայաստան', // T176042
