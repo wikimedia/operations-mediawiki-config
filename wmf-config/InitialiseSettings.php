@@ -17246,6 +17246,7 @@ $wgConf->settings = [
 
 'wmgUseTranslate' => [
 	'default' => false,
+	'advisorswiki' => true, // T189181
 	'amwikimedia' => true, // T180879
 	'bewikimedia' => true, // T39391
 	'betawikiversity' => true, // T160120
