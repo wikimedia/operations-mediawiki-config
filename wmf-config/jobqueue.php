@@ -58,7 +58,7 @@ if ( $wmgUseEventBus ) {
 		$wgJobTypeConf['wikibase-addUsagesForPage'] =
 		$wgJobTypeConf['wikibase-InjectRCRecords'] =
 		$wgJobTypeConf['cdnPurge'] =
-		$wgJobTypeConf['ChangeNotification'] =
+		// T192198 $wgJobTypeConf['ChangeNotification'] =
 		$wgJobTypeConf['CognateCacheUpdateJob'] =
 		$wgJobTypeConf['CognateLocalJobSubmitJob'] =
 		$wgJobTypeConf['globalUsageCachePurge'] =
