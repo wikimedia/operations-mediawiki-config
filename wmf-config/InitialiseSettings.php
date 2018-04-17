@@ -20001,7 +20001,6 @@ $wgConf->settings = [
 	'betawikiversity' => null,
 	'commonswiki' => null,
 	'incubatorwiki' => null,
-	'metawiki' => null,
 	'wikidatawiki' => null,
 ],
 
