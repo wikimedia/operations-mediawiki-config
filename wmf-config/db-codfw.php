@@ -103,7 +103,7 @@ $wgLBFactoryConf = [
 
 'sectionLoads' => [
 	's1' => [
-		'db2048'      => 0,   # C6 2.9TB 160GB, master
+		'db2048'      => 0,   # A1 2.9TB 160GB, master
 		'db2055'      => 50,  # D6 3.3TB 160GB, dump (inactive), vslow, api # candidate master
 		'db2062'      => 50,  # B5 3.3TB 160GB, api # mariadb 10.1
 		'db2070'      => 400, # C5 3.3TB 160GB
@@ -568,7 +568,7 @@ $wgLBFactoryConf = [
 	'db2045' => '10.192.16.74', # do not remove or comment out
 	'db2046' => '10.192.32.106', # do not remove or comment out
 	'db2047' => '10.192.32.107', # do not remove or comment out
-	'db2048' => '10.192.32.108', # do not remove or comment out
+	'db2048' => '10.192.0.99', # do not remove or comment out
 	'db2049' => '10.192.32.109', # do not remove or comment out
 	'db2050' => '10.192.32.110', # do not remove or comment out
 	'db2051' => '10.192.16.22', # do not remove or comment out
