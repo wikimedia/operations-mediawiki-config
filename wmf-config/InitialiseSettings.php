@@ -14020,7 +14020,7 @@ $wgConf->settings = [
 	// we want to gradually enable it, first for 10%, 25%, 50%, 75% and then for all
 	// @T189906
 	'default' => 0,
-	'enwiki' => 0.5,
+	'enwiki' => 0.75,
 ],
 
 'wgPopupsEventLogging' => [
