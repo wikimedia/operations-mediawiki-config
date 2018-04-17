@@ -14017,10 +14017,10 @@ $wgConf->settings = [
 
 'wgPopupsAnonsExperimentalGroupSize' => [
 	// Read: Enable previews for all anonymous users by default. For English Wiki
-	// we want to gradually enable it , first for 10%, then 50%, and then for all
+	// we want to gradually enable it, first for 10%, 25%, 50%, 75% and then for all
 	// @T189906
 	'default' => 0,
-	'enwiki' => 0.25,
+	'enwiki' => 0.5,
 ],
 
 'wgPopupsEventLogging' => [
