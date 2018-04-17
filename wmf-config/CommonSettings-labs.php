@@ -96,6 +96,12 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthUseSlaves = true;
 }
 
+if ( $wmgUseCentralNotice ) {
+	// Emit CSP headers on banner previews. This can go away when full CSP
+	// support (T135963) is deployed.
+	$wgCentralNoticeContentSecurityPolicy = "default-src *.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wiktionary.org *.wikisource.org *.wikibooks.org *.wikiversity.org *.wikiquote.org *.wikinews.org www.mediawiki.org www.wikidata.org *.wikivoyage.org data: blob: 'self'; script-src *.beta.wmflabs.org *.wikimedia.org 'unsafe-inline' 'unsafe-eval' 'self'; style-src *.beta.wmflabs.org *.wikimedia.org data: 'unsafe-inline' 'self';";
+}
+
 // Labs override for GlobalCssJs
 if ( $wmgUseGlobalCssJs && $wmgUseCentralAuth ) {
 	// Load from betalabs metawiki
