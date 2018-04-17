@@ -26,6 +26,13 @@ $wgObjectCaches['memcached-pecl'] = [
 	'loggroup' => 'memcached',
 ];
 
+$wgMainWANCache = 'wancache-main-mcrouter';
+$wgWANObjectCaches['wancache-main-mcrouter'] = [
+	'class'         => 'WANObjectCache',
+	'cacheId'       => 'memcached-pecl',
+	'mcrouterAware' => true
+];
+
 # Confirm page related key purges via scanning recent changes
 $wgEnableWANCacheReaper = true;
 
