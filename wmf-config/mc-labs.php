@@ -21,7 +21,7 @@ $wgObjectCaches['memcached-pecl'] = [
 	'class'      => 'MemcachedPeclBagOStuff',
 	'serializer' => 'php',
 	'persistent' => false,
-	'servers'    => [ '127.0.0.1:11212' ],
+	'servers'    => [ '127.0.0.1:11213' ], // mcrouter
 	'retry_timeout' => 1,
 	'loggroup' => 'memcached',
 ];
