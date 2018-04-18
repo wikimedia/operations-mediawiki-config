@@ -108,7 +108,7 @@ class WmfClusters {
 			foreach ( $this->getDBs( $clusterName ) as $i => $db ) {
 				print "$db";
 				// labtestweb seems unresponsive, avoid crawlers hitting it
-				if ( $i === 0 && strpos( $clusterName, 'labtestweb' ) !== 0 ) {
+				if ( $i === 0 && $db !== 'labtestwiki' ) {
 					// Use format=xml because it's cheap to generate and view
 					// and browsers tend to render it nicely.
 					// (json is hard to read by default, jsonfm is slower)
