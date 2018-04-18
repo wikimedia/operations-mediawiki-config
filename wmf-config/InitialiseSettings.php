@@ -12979,10 +12979,6 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
-'wgEnableWriteAPI' => [
-	'default' => true,
-],
-
 'wgAPIMaxResultSize' => [
 	'default' => 12582912, // 12 MB; temporary while I figure out what the deal with those overlarge revisions is --Roan
 ],
@@ -13293,10 +13289,6 @@ $wgConf->settings = [
 	'zhwikinews' => [ 'flood' => [ 'flood' ] ], // T54546
 	'zhwikiquote' => [ 'flood' => [ 'flood' ] ], // T189289
 	'zhwiktionary' => [ 'flood' => [ 'flood' ] ], // T187018
-],
-
-'wgEnableAPI' => [
-	'default' => true,
 ],
 
 'wmgUseCodeReview' => [
