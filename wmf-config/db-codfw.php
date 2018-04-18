@@ -164,14 +164,14 @@ $wgLBFactoryConf = [
 		'db2054'      => 200, # D6 2.9TB 160GB, dump (inactive), vslow
 		'db2061'      => 200, # D6 3.3TB 160GB, api
 		'db2068'      => 300, # D6 3.3TB 160GB
-		'db2077'      => 400, # C1 3.3TB 512GB
+		# 'db2077'      => 400, # C1 3.3TB 512GB
 		'db2086:3317' => 1, # B1 3.3TB 512GB # rc, log: s5 and s7
 		'db2087:3317' => 1, # C1 3.3TB 512GB # rc, log: s6 and s7
 	],
 	's8' => [
 		'db2045'      => 0,   # B3 2.9TB 160GB, master
 		'db2079'      => 10,  # A5 3.3TB 512GB, vslow, dump # candidate master
-		# 'db2080'      => 10,  # C5 3.3TB 512GB, api
+		'db2080'      => 10,  # C5 3.3TB 512GB, api
 		'db2081'      => 10,  # A6 3.3TB 512GB, api
 		'db2082'      => 100, # B6 3.3TB 512GB
 		# 'db2083'      => 100, # C6 3.3TB 512GB # used as testing host do not repool - T188279
@@ -485,7 +485,7 @@ $wgLBFactoryConf = [
 			'db2079' => 1,
 		],
 		'api' => [
-			# 'db2080' => 1,
+			'db2080' => 1,
 			'db2081' => 1,
 		],
 	],
