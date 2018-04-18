@@ -7652,6 +7652,7 @@ $wgConf->settings = [
 	'hewiktionary' => true, // T75197
 	'hewikinews' => true, // T140544
 	'hiwiki' => true,
+	'hiwikiversity' => true, // T192427
 	'hrwiki' => true, // by request of stemd from #wikipedia-hr 2007-05-15 -jeronim
 	'idwiki' => true, // T8042
 	'itwiki' => true,
@@ -8935,7 +8936,7 @@ $wgConf->settings = [
 		'autoconfirmed' => [ 'move' => false ] // T164239
 	],
 	'+hiwikiversity' => [
-		'autopatrolled' => [ 'autopatrol' => true ], // T179251
+		'autopatrolled' => [ 'autopatrol' => true, 'patrolmarks' => true ], // T179251, T192427
 	],
 	'hrwiki' => [
 		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'rollback' => true ],
