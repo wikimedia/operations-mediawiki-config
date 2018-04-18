@@ -170,6 +170,7 @@ $wgConf->settings = [
 
 	# Local user group wikis (xxwikimedia)
 	'cnwikimedia' => 'zh', // T98676
+	'hiwikimedia' => 'hi', // T188366
 	'romdwikimedia' => 'ro', // T187184
 	'wbwikimedia' => 'bn', // T162510
 
