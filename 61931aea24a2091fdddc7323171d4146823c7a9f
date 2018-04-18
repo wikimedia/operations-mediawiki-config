@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ac103280_6c19dcd7",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 18482,
+      "author": {
+        "id": 2096
+      },
+      "writtenOn": "2018-04-18T18:01:15Z",
+      "side": 1,
+      "message": "hmm this makes no sense as we don\u0027t index P31 for testwikidatawiki. Maybe we should use P7 instead.",
+      "revId": "61931aea24a2091fdddc7323171d4146823c7a9f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b2a1c6ff_00a9d49d",
+        "filename": "wmf-config/WikibaseSearchSettings.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 2096
+      },
+      "writtenOn": "2018-04-18T18:01:15Z",
+      "side": 1,
+      "message": "Not sure I understand what this check is meant for here.",
+      "revId": "61931aea24a2091fdddc7323171d4146823c7a9f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
