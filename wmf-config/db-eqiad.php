@@ -78,8 +78,8 @@ $wgLBFactoryConf = [
 	'wikidatawiki' => 's8',
 
 	# labs-related wikis
-	'labswiki'     => 'm5',
-	'labtestwiki'  => 'm5',
+	'labswiki'     => 'wikitech',
+	'labtestwiki'  => 'wikitech',
 ],
 
 # Load lists
@@ -175,10 +175,10 @@ $wgLBFactoryConf = [
 		'db1109' => 500,    # D8 3.6TB 512GB
 	],
 
-	'm5' => [
+	'wikitech' => [
 		// Use the FQDN so that `sql labswiki` will work from hosts where the
 		// default DNS search path is not eqiad.wmnet (e.g. labweb1001)
-		'm5-master.eqiad.wmnet' => 1,
+		'db1073' => 1,
 	],
 ],
 
@@ -526,6 +526,7 @@ $wgLBFactoryConf = [
 	'db1070' => '10.64.48.25', # do not remove or comment out
 	'db1071' => '10.64.48.26', # do not remove or comment out
 	'db1072' => '10.64.16.39', # do not remove or comment out
+	'db1073' => '10.64.16.79', # do not remove or comment out
 	'db1074' => '10.64.0.204', # do not remove or comment out
 	'db1075' => '10.64.0.205', # do not remove or comment out
 	'db1076' => '10.64.16.190', # do not remove or comment out
@@ -573,6 +574,7 @@ $wgLBFactoryConf = [
 	'db2034' => '10.192.0.87', # do not remove or comment out
 	'db2035' => '10.192.16.73', # do not remove or comment out
 	'db2036' => '10.192.32.7', # do not remove or comment out
+	'db2037' => '10.192.32.8', # do not remove or comment out
 	'db2038' => '10.192.32.9', # do not remove or comment out
 	'db2039' => '10.192.48.114', # do not remove or comment out
 	'db2040' => '10.192.0.39', # do not remove or comment out
@@ -632,7 +634,6 @@ $wgLBFactoryConf = [
 	'db2091:3312' => '10.192.0.10:3312', # do not remove or comment out
 	'db2091:3314' => '10.192.0.10:3314', # do not remove or comment out
 	'db2092' => '10.192.16.41', # do not remove or comment out
-	'm5-master.eqiad.wmnet' => '10.64.16.79', # do not remove or comment out
 ],
 
 'externalLoads' => [
