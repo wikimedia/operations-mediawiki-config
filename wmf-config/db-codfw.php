@@ -78,8 +78,8 @@ $wgLBFactoryConf = [
 	'wikidatawiki' => 's8',
 
 	# labs-related wikis
-	'labswiki'     => 'm5',
-	'labtestwiki'  => 'm5',
+	'labswiki'     => 'wikitech',
+	'labtestwiki'  => 'wikitech',
 ],
 
 # Load lists
@@ -179,7 +179,7 @@ $wgLBFactoryConf = [
 		'db2086:3318' => 1, # B1 3.3TB 512GB # rc, log: s7 and s8
 	],
 
-	'm5' => [
+	'wikitech' => [
 		'm5-master' => 1, # db2037, C6
 	],
 ],

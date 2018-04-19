@@ -78,8 +78,8 @@ $wgLBFactoryConf = [
 	'wikidatawiki' => 's8',
 
 	# labs-related wikis
-	'labswiki'     => 'm5',
-	'labtestwiki'  => 'm5',
+	'labswiki'     => 'wikitech',
+	'labtestwiki'  => 'wikitech',
 ],
 
 # Load lists
@@ -175,7 +175,7 @@ $wgLBFactoryConf = [
 		'db1109' => 500,    # D8 3.6TB 512GB
 	],
 
-	'm5' => [
+	'wikitech' => [
 		// Use the FQDN so that `sql labswiki` will work from hosts where the
 		// default DNS search path is not eqiad.wmnet (e.g. labweb1001)
 		'm5-master.eqiad.wmnet' => 1,
