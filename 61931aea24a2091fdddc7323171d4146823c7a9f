@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "827c0297_dfc60af0",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 18482,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2018-04-19T08:14:39Z",
+      "side": 1,
+      "message": "indeed, good catch\nI\u0027ll use P7 which seems to be \"something instance of duplicate\". It sounds close enough and it\u0027s only for testing purposes.",
+      "parentUuid": "ac103280_6c19dcd7",
+      "revId": "61931aea24a2091fdddc7323171d4146823c7a9f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b2a1c6ff_00a9d49d",
         "filename": "wmf-config/WikibaseSearchSettings.php",
         "patchSetId": 14
@@ -30,6 +48,24 @@
       "writtenOn": "2018-04-18T18:01:15Z",
       "side": 1,
       "message": "Not sure I understand what this check is meant for here.",
+      "revId": "61931aea24a2091fdddc7323171d4146823c7a9f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6c2a639a_6236b8b0",
+        "filename": "wmf-config/WikibaseSearchSettings.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2018-04-19T08:14:39Z",
+      "side": 1,
+      "message": "not sure either...\nI just copied what was I added in https://gerrit.wikimedia.org/r/#/c/397855/\nI was probably overcautious... I\u0027ll remove this check.",
+      "parentUuid": "b2a1c6ff_00a9d49d",
       "revId": "61931aea24a2091fdddc7323171d4146823c7a9f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
