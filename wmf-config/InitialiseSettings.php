@@ -412,6 +412,7 @@ $wgConf->settings = [
 	'mrjwiki' => 'Europe/Moscow',
 	'mrwiki' => 'Asia/Kolkata',
 	'mrwikisource' => 'Asia/Kolkata',
+	'napwiki' => 'Europe/Rome', // T192568
 	'ndswiki' => 'Europe/Berlin',
 	'ndswiktionary' => 'Europe/Berlin',
 	'ndswikibooks' => 'Europe/Berlin',
