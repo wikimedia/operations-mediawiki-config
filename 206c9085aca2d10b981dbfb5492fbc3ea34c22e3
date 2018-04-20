@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cba6d9e4_b963d4d5",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2018-04-20T14:55:53Z",
+      "side": 1,
+      "message": "Let\u0027s make changes 1 and last one at the same time next week, and add the possibility of serving labswiki from codfw. db2037 here.",
+      "range": {
+        "startLine": 183,
+        "startChar": 3,
+        "endLine": 183,
+        "endChar": 13
+      },
+      "revId": "206c9085aca2d10b981dbfb5492fbc3ea34c22e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a10c536c_aaf196ec",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 513,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2018-04-20T14:55:53Z",
+      "side": 1,
+      "message": "db1073 and db2037 need to be added here first (on both files).",
+      "range": {
+        "startLine": 513,
+        "startChar": 0,
+        "endLine": 513,
+        "endChar": 1
+      },
+      "revId": "206c9085aca2d10b981dbfb5492fbc3ea34c22e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c9aaae84_9f1d0be3",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 711,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2018-04-20T14:55:53Z",
+      "side": 1,
+      "message": "Let\u0027s add it as read only on codfw here",
+      "range": {
+        "startLine": 711,
+        "startChar": 0,
+        "endLine": 711,
+        "endChar": 1
+      },
+      "revId": "206c9085aca2d10b981dbfb5492fbc3ea34c22e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "94078be3_b4725504",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2018-04-20T14:55:53Z",
+      "side": 1,
+      "message": "db2073 here.",
+      "range": {
+        "startLine": 181,
+        "startChar": 3,
+        "endLine": 181,
+        "endChar": 24
+      },
+      "revId": "206c9085aca2d10b981dbfb5492fbc3ea34c22e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "75447a38_de3260f5",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 726,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2018-04-20T14:55:53Z",
+      "side": 1,
+      "message": "read only (commented)",
+      "range": {
+        "startLine": 726,
+        "startChar": 0,
+        "endLine": 726,
+        "endChar": 2
+      },
+      "revId": "206c9085aca2d10b981dbfb5492fbc3ea34c22e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
