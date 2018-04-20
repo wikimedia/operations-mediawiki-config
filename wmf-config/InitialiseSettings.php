@@ -615,6 +615,7 @@ $wgConf->settings = [
 	'glkwiki' => '/static/images/project-logos/glkwiki.png',  // T50397
 	'gnwiki' => '/static/images/project-logos/gnwiki.png',  // T51125
 	'gomwiki' => '/static/images/project-logos/gomwiki.png',
+	'gorwiki' => '/static/images/project-logos/gorwiki.png',
 	'gotwiki' => '/static/images/project-logos/gotwiki.png',
 	'guwiki' => '/static/images/project-logos/guwiki.png',
 	'gvwiki' => '/static/images/project-logos/gvwiki.png',  // T48589
@@ -1333,6 +1334,7 @@ $wgConf->settings = [
 	'glwiki' => [ '1.5x' => '/static/images/project-logos/glwiki-1.5x.png', '2x' => '/static/images/project-logos/glwiki-2x.png' ], // T150618
 	'gnwiki' => [ '1.5x' => '/static/images/project-logos/gnwiki-1.5x.png', '2x' => '/static/images/project-logos/gnwiki-2x.png' ], // T150618
 	'gomwiki' => [ '1.5x' => '/static/images/project-logos/gomwiki-1.5x.png', '2x' => '/static/images/project-logos/gomwiki-2x.png' ], // T150618
+	'gorwiki' => [ '1.5x' => '/static/images/project-logos/gorwiki-1.5x.png', '2x' => '/static/images/project-logos/gorwiki-2x.png' ],
 	'guwiki' => [ '1.5x' => '/static/images/project-logos/guwiki-1.5x.png', '2x' => '/static/images/project-logos/guwiki-2x.png' ], // T150618
 	'gvwiki' => [ '1.5x' => '/static/images/project-logos/gvwiki-1.5x.png', '2x' => '/static/images/project-logos/gvwiki-2x.png' ], // T150618
 	'hakwiki' => [ '1.5x' => '/static/images/project-logos/hakwiki-1.5x.png', '2x' => '/static/images/project-logos/hakwiki-2x.png' ], // T150618
