@@ -60,6 +60,9 @@ $wgDnsBlacklistUrls   = [
 	'proxies.dnsbl.sorbs.net.',
 ];
 
+# Use a $wgPasswordSender different from the production one - T192686
+$wgPasswordSender = 'wiki@wikimedia.beta.wmflabs.org';
+
 if ( $wmgUseFlow ) {
 	// Override CommonSettings.php, which has:
 	// $wgFlowExternalStore = $wgDefaultExternalStore;
