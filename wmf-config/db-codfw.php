@@ -165,7 +165,7 @@ $wgLBFactoryConf = [
 		'db2061'      => 200, # D6 3.3TB 160GB, api
 		'db2068'      => 300, # D6 3.3TB 160GB
 		'db2077'      => 400, # C1 3.3TB 512GB
-		'db2086:3317' => 1, # B1 3.3TB 512GB # rc, log: s5 and s7
+		# 'db2086:3317' => 1, # B1 3.3TB 512GB # rc, log: s7 and s8
 		'db2087:3317' => 1, # C1 3.3TB 512GB # rc, log: s6 and s7
 	],
 	's8' => [
@@ -176,7 +176,7 @@ $wgLBFactoryConf = [
 		'db2082'      => 100, # B6 3.3TB 512GB
 		# 'db2083'      => 100, # C6 3.3TB 512GB # used as testing host do not repool - T188279
 		'db2085:3318' => 1, # A5 3.3TB 512GB # rc, log: s1 and s8
-		'db2086:3318' => 1, # B1 3.3TB 512GB # rc, log: s7 and s8
+		# 'db2086:3318' => 1, # B1 3.3TB 512GB # rc, log: s7 and s8
 	],
 
 	'm5' => [
@@ -425,23 +425,23 @@ $wgLBFactoryConf = [
 	],
 	's7' => [
 		'watchlist' => [
-			'db2086:3317' => 1,
+			# 'db2086:3317' => 1,
 			'db2087:3317' => 1,
 		],
 		'recentchanges' => [
-			'db2086:3317' => 1,
+			# 'db2086:3317' => 1,
 			'db2087:3317' => 1,
 		],
 		'recentchangeslinked' => [
-			'db2086:3317' => 1,
+			# 'db2086:3317' => 1,
 			'db2087:3317' => 1,
 		],
 		'contributions' => [
-			'db2086:3317' => 1,
+			# 'db2086:3317' => 1,
 			'db2087:3317' => 1,
 		],
 		'logpager' => [
-			'db2086:3317' => 1,
+			# 'db2086:3317' => 1,
 			'db2087:3317' => 1,
 		],
 		'dump' => [
@@ -457,23 +457,23 @@ $wgLBFactoryConf = [
 	's8' => [
 		'watchlist' => [
 			'db2085:3318' => 1,
-			'db2086:3318' => 1,
+			# 'db2086:3318' => 1,
 		],
 		'recentchanges' => [
 			'db2085:3318' => 1,
-			'db2086:3318' => 1,
+			# 'db2086:3318' => 1,
 		],
 		'recentchangeslinked' => [
 			'db2085:3318' => 1,
-			'db2086:3318' => 1,
+			# 'db2086:3318' => 1,
 		],
 		'contributions' => [
 			'db2085:3318' => 1,
-			'db2086:3318' => 1,
+			# 'db2086:3318' => 1,
 		],
 		'logpager' => [
 			'db2085:3318' => 1,
-			'db2086:3318' => 1,
+			# 'db2086:3318' => 1,
 		],
 		'dump' => [
 			'db2079' => 1,
