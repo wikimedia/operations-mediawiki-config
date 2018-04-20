@@ -40,6 +40,9 @@ $wgDebugTimestamps = true;
 
 $wmgAddWikiNotify = false;
 
+# Use a different address from the production one - T192686
+$wgPasswordSender = 'wiki@wikimedia.beta.wmflabs.org';
+
 $wgLocalVirtualHosts = [
 	'wikipedia.beta.wmflabs.org',
 	'wiktionary.beta.wmflabs.org',
