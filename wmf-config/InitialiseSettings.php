@@ -20324,6 +20324,11 @@ $wgConf->settings = [
 	'test2wiki' => true,
 ],
 
+'wgKartographerDfltStyle' => [
+	'default' => 'osm-intl',
+	'testwiki' => 'osm-intl-i18n',
+],
+
 'wmgUseOATHAuth' => [
 	'default' => true,
 ],
