@@ -2727,6 +2727,7 @@ $wgConf->settings = [
 	'etwikisource' => 'Vikitekstid',
 	'etwikiquote' => 'Vikitsitaadid',
 	'etwiktionary' => 'Vikisõnastik',
+	'euwikisource' => 'Wikiteka', // T189465
 	'execwiki' => 'Project',
 	'extwiki' => 'Güiquipeya',
 	'fawiki' => 'ویکی‌پدیا',
