@@ -2556,14 +2556,6 @@ $wgConf->settings = [
 	'default' => 85,
 ],
 
-'wgSiteSupportPage' => [
-	'default' => '//wikimediafoundation.org/fundraising',
-	'dewiki' => '//wikimediafoundation.org/wiki/Spenden',
-	'frwiki' => '//wikimediafoundation.org/wiki/Faites_un_don',
-	'frwikibooks' => '//wikimediafoundation.org/wiki/Faites_un_don',
-	'frwiktionary' => '//wikimediafoundation.org/wiki/Faites_un_don',
-],
-
 'wgUploadPath' => [
 	'default' => '//upload.wikimedia.org/$site/$lang',
 	'private' => '/w/img_auth.php',
