@@ -20312,7 +20312,6 @@ $wgConf->settings = [
 	'ruwiki' => true,
 	'svwiki' => true, // T161032
 	'testwiki' => true,
-	'test2wiki' => true,
 	'uawikimedia' => true, // T164574
 ],
 
@@ -20342,6 +20341,7 @@ $wgConf->settings = [
 'wgKartographerDfltStyle' => [
 	'default' => 'osm-intl',
 	'testwiki' => 'osm-intl-i18n',
+	'test2wiki' => 'osm-intl-i18n',
 ],
 
 'wmgUseOATHAuth' => [
