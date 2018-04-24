@@ -21,9 +21,11 @@ if ( count( $argv ) < 2 ) {
  * @return string MW code version (e.g. "php-x.xx" or "php-trunk")
  */
 function getWikiVersion( $dbName ) {
-	$phpFilename = getRealmSpecificFilename(
-		MEDIAWIKI_DEPLOYMENT_DIR . '/wikiversions.php'
-	);
+	global $wmfRealm;
+	$phpFilename = $wmfRealm === 'labs' ?
+		MEDIAWIKI_DEPLOYMENT_DIR . '/wikiversions-labs.php' :
+		MEDIAWIKI_DEPLOYMENT_DIR . '/wikiversions.php';
+
 	$wikiversions = include( $phpFilename );
 	if ( !is_array( $wikiversions ) ) {
 		print "Unable to open $phpFilename.\n";
