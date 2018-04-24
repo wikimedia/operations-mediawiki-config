@@ -18453,7 +18453,8 @@ $wgConf->settings = [
 ],
 
 'wmgWikibaseSiteGroup' => [
-	'default' => null,
+	// The default for this is null, but we can't set this to null here,
+	// as null makes SiteConfiguration not set the variable at all.
 	'wikipedia' => 'wikipedia',
 	'wikibooks' => 'wikibooks',
 	'wikinews' => 'wikinews',

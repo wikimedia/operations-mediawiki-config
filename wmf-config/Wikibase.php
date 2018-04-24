@@ -260,13 +260,14 @@ if ( $wmgUseWikibaseClient ) {
 		'property' => 'Property'
 	];
 
-	$wgWBClientSettings['languageLinkSiteGroup'] = $wmgWikibaseSiteGroup;
+	$wbSiteGroup = isset( $wmgWikibaseSiteGroup ) ? $wmgWikibaseSiteGroup : null;
+	$wgWBClientSettings['languageLinkSiteGroup'] = $wbSiteGroup;
 
 	if ( in_array( $wgDBname, [ 'commonswiki', 'mediawikiwiki', 'metawiki', 'specieswiki' ] ) ) {
 		$wgWBClientSettings['languageLinkSiteGroup'] = 'wikipedia';
 	}
 
-	$wgWBClientSettings['siteGroup'] = $wmgWikibaseSiteGroup;
+	$wgWBClientSettings['siteGroup'] = $wbSiteGroup;
 
 	$wgWBClientSettings['excludeNamespaces'] = function () {
 		global $wgDBname;
