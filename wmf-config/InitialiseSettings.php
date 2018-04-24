@@ -19740,268 +19740,268 @@ $wgConf->settings = [
 	'default' => [ 'driver' => 'RemexHtml' ],
 
 	// Wikipedias
-	'afwiki' => null,
-	'alswiki' => null,
-	'amwiki' => null,
-	'anwiki' => null,
-	'angwiki' => null,
-	'arwiki' => null,
-	'arzwiki' => null,
-	'aswiki' => null,
-	'astwiki' => null,
-	'avwiki' => null,
-	'aywiki' => null,
-	'azwiki' => null,
-	'azbwiki' => null,
-	'bawiki' => null,
-	'barwiki' => null,
-	'bewiki' => null,
-	'be_x_oldwiki' => null,
-	'bgwiki' => null,
-	'bhwiki' => null,
-	'bnwiki' => null,
-	'bpywiki' => null,
-	'bxrwiki' => null,
-	'cewiki' => null,
-	'ckbwiki' => null,
-	'cowiki' => null,
-	'cswiki' => null,
-	'csbwiki' => null,
-	'cvwiki' => null,
-	'cywiki' => null,
-	'dawiki' => null,
-	'diqwiki' => null,
-	'dtywiki' => null,
-	'dvwiki' => null,
-	'elwiki' => null,
-	'emlwiki' => null,
-	'enwiki' => null,
-	'eowiki' => null,
-	'eswiki' => null,
-	'etwiki' => null,
-	'euwiki' => null,
-	'fowiki' => null,
-	'frwiki' => null,
-	'frpwiki' => null,
-	'fywiki' => null,
-	'gawiki' => null,
-	'gagwiki' => null,
-	'ganwiki' => null,
-	'gdwiki' => null,
-	'glwiki' => null,
-	'guwiki' => null,
-	'gvwiki' => null,
-	'hakwiki' => null,
-	'hiwiki' => null,
-	'hifwiki' => null,
-	'hrwiki' => null,
-	'htwiki' => null,
-	'huwiki' => null,
-	'hywiki' => null,
-	'idwiki' => null,
-	'iowiki' => null,
-	'iswiki' => null,
-	'jawiki' => null,
-	'jvwiki' => null,
-	'kawiki' => null,
-	'kabwiki' => null,
-	'kkwiki' => null,
-	'klwiki' => null,
-	'kmwiki' => null,
-	'knwiki' => null,
-	'koiwiki' => null,
-	'kswiki' => null,
-	'kuwiki' => null,
-	'kvwiki' => null,
-	'kywiki' => null,
-	'lmowiki' => null,
-	'lowiki' => null,
-	'lrcwiki' => null,
-	'ltwiki' => null,
-	'lvwiki' => null,
-	'maiwiki' => null,
-	'mgwiki' => null,
-	'mhrwiki' => null,
-	'minwiki' => null,
-	'mkwiki' => null,
-	'mlwiki' => null,
-	'mnwiki' => null,
-	'mrwiki' => null,
-	'mswiki' => null,
-	'mtwiki' => null,
-	'mwlwiki' => null,
-	'mywiki' => null,
-	'myvwiki' => null,
-	'nahwiki' => null,
-	'napwiki' => null,
-	'ndswiki' => null,
-	'nds_nlwiki' => null,
-	'newiki' => null,
-	'newwiki' => null,
-	'nnwiki' => null,
-	'nrmwiki' => null,
-	'nvwiki' => null,
-	'ocwiki' => null,
-	'omwiki' => null,
-	'orwiki' => null,
-	'pawiki' => null,
-	'pagwiki' => null,
-	'pamwiki' => null,
-	'pcdwiki' => null,
-	'plwiki' => null,
-	'pnbwiki' => null,
-	'pswiki' => null,
-	'ptwiki' => null,
-	'quwiki' => null,
-	'rowiki' => null,
-	'roa_rupwiki' => null,
-	'sawiki' => null,
-	'sahwiki' => null,
-	'scnwiki' => null,
-	'scowiki' => null,
-	'sdwiki' => null,
-	'shwiki' => null,
-	'siwiki' => null,
-	'simplewiki' => null,
-	'skwiki' => null,
-	'slwiki' => null,
-	'sowiki' => null,
-	'sqwiki' => null,
-	'srwiki' => null,
-	'stqwiki' => null,
-	'suwiki' => null,
-	'swwiki' => null,
-	'tawiki' => null,
-	'tewiki' => null,
-	'tgwiki' => null,
-	'thwiki' => null,
-	'tlwiki' => null,
-	'trwiki' => null,
-	'ttwiki' => null,
-	'ugwiki' => null,
-	'ukwiki' => null,
-	'urwiki' => null,
-	'uzwiki' => null,
-	'vecwiki' => null,
-	'viwiki' => null,
-	'vowiki' => null,
-	'wuuwiki' => null,
-	'xmfwiki' => null,
-	'yiwiki' => null,
-	'yowiki' => null,
-	'zhwiki' => null,
-	'zh_classicalwiki' => null,
-	'zh_min_nanwiki' => null,
-	'zh_yuewiki' => null,
+	'afwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'alswiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'amwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'anwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'angwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'arwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'arzwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'aswiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'astwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'avwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'aywiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'azwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'azbwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'bawiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'barwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'bewiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'be_x_oldwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'bgwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'bhwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'bnwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'bpywiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'bxrwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'cewiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'ckbwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'cowiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'cswiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'csbwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'cvwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'cywiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'dawiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'diqwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'dtywiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'dvwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'elwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'emlwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'enwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'eowiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'eswiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'etwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'euwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'fowiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'frwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'frpwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'fywiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'gawiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'gagwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'ganwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'gdwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'glwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'guwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'gvwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'hakwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'hiwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'hifwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'hrwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'htwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'huwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'hywiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'idwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'iowiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'iswiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'jawiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'jvwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'kawiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'kabwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'kkwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'klwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'kmwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'knwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'koiwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'kswiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'kuwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'kvwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'kywiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'lmowiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'lowiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'lrcwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'ltwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'lvwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'maiwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'mgwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'mhrwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'minwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'mkwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'mlwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'mnwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'mrwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'mswiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'mtwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'mwlwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'mywiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'myvwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'nahwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'napwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'ndswiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'nds_nlwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'newiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'newwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'nnwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'nrmwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'nvwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'ocwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'omwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'orwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'pawiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'pagwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'pamwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'pcdwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'plwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'pnbwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'pswiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'ptwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'quwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'rowiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'roa_rupwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'sawiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'sahwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'scnwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'scowiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'sdwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'shwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'siwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'simplewiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'skwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'slwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'sowiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'sqwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'srwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'stqwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'suwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'swwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'tawiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'tewiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'tgwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'thwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'tlwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'trwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'ttwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'ugwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'ukwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'urwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'uzwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'vecwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'viwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'vowiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'wuuwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'xmfwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'yiwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'yowiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'zhwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'zh_classicalwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'zh_min_nanwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'zh_yuewiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
 
 	// Wiktionaries
-	'arwiktionary' => null,
-	'azwiktionary' => null,
-	'bgwiktionary' => null,
-	'dawiktionary' => null,
-	'dewiktionary' => null,
-	'elwiktionary' => null,
-	'enwiktionary' => null,
-	'eowiktionary' => null,
-	'eswiktionary' => null,
-	'etwiktionary' => null,
-	'euwiktionary' => null,
-	'fawiktionary' => null,
-	'frwiktionary' => null,
-	'gawiktionary' => null,
-	'glwiktionary' => null,
-	'hiwiktionary' => null,
-	'huwiktionary' => null,
-	'hywiktionary' => null,
-	'iowiktionary' => null,
-	'itwiktionary' => null,
-	'jawiktionary' => null,
-	'jvwiktionary' => null,
-	'kawiktionary' => null,
-	'kowiktionary' => null,
-	'kuwiktionary' => null,
-	'ltwiktionary' => null,
-	'mnwiktionary' => null,
-	'mrwiktionary' => null,
-	'nowiktionary' => null,
-	'ocwiktionary' => null,
-	'plwiktionary' => null,
-	'ptwiktionary' => null,
-	'ruwiktionary' => null,
-	'siwiktionary' => null,
-	'simplewiktionary' => null,
-	'srwiktionary' => null,
-	'tawiktionary' => null,
-	'thwiktionary' => null,
-	'trwiktionary' => null,
-	'ukwiktionary' => null,
-	'uzwiktionary' => null,
-	'wawiktionary' => null,
-	'yiwiktionary' => null,
+	'arwiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'azwiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'bgwiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'dawiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'dewiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'elwiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'enwiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'eowiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'eswiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'etwiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'euwiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'fawiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'frwiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'gawiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'glwiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'hiwiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'huwiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'hywiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'iowiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'itwiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'jawiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'jvwiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'kawiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'kowiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'kuwiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'ltwiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'mnwiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'mrwiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'nowiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'ocwiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'plwiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'ptwiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'ruwiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'siwiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'simplewiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'srwiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'tawiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'thwiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'trwiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'ukwiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'uzwiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'wawiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'yiwiktionary' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
 
 	// Wikibookses
-	'dewikibooks' => null,
-	'enwikibooks' => null,
-	'eowikibooks' => null,
-	'eswikibooks' => null,
-	'fawikibooks' => null,
-	'fiwikibooks' => null,
-	'frwikibooks' => null,
-	'hewikibooks' => null,
-	'huwikibooks' => null,
-	'itwikibooks' => null,
-	'kawikibooks' => null,
-	'nlwikibooks' => null,
-	'plwikibooks' => null,
-	'ptwikibooks' => null,
-	'ruwikibooks' => null,
-	'sqwikibooks' => null,
-	'thwikibooks' => null,
-	'urwikibooks' => null,
+	'dewikibooks' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'enwikibooks' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'eowikibooks' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'eswikibooks' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'fawikibooks' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'fiwikibooks' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'frwikibooks' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'hewikibooks' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'huwikibooks' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'itwikibooks' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'kawikibooks' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'nlwikibooks' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'plwikibooks' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'ptwikibooks' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'ruwikibooks' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'sqwikibooks' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'thwikibooks' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'urwikibooks' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
 
 	// Wikiquotes
-	'frwikiquote' => null,
+	'frwikiquote' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
 
 	// Wikisources
-	'sourceswiki' => null,
-	'arwikisource' => null,
-	'bnwikisource' => null,
-	'brwikisource' => null,
-	'bswikisource' => null,
-	'dewikisource' => null,
-	'enwikisource' => null,
-	'eowikisource' => null,
-	'fawikisource' => null,
-	'frwikisource' => null,
-	'hewikisource' => null,
-	'hrwikisource' => null,
-	'hywikisource' => null,
-	'idwikisource' => null,
-	'itwikisource' => null,
-	'jawikisource' => null,
-	'kowikisource' => null,
-	'lawikisource' => null,
-	'mlwikisource' => null,
-	'nlwikisource' => null,
-	'pawikisource' => null,
-	'ptwikisource' => null,
-	'ruwikisource' => null,
-	'sawikisource' => null,
-	'slwikisource' => null,
-	'srwikisource' => null,
-	'tawikisource' => null,
-	'tewikisource' => null,
-	'thwikisource' => null,
-	'trwikisource' => null,
-	'ukwikisource' => null,
-	'viwikisource' => null,
+	'sourceswiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'arwikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'bnwikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'brwikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'bswikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'dewikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'enwikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'eowikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'fawikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'frwikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'hewikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'hrwikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'hywikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'idwikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'itwikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'jawikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'kowikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'lawikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'mlwikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'nlwikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'pawikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'ptwikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'ruwikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'sawikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'slwikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'srwikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'tawikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'tewikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'thwikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'trwikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'ukwikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'viwikisource' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
 
 	// Shared and testing wikis
-	'betawikiversity' => null,
-	'commonswiki' => null,
-	'incubatorwiki' => null,
-	'metawiki' => null,
-	'wikidatawiki' => null,
+	'betawikiversity' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'commonswiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'incubatorwiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'metawiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
+	'wikidatawiki' => [ 'driver' => defined( 'HHVM_VERSION' ) ? 'RaggettInternalHHVM' : 'RaggettInternalPHP' ]
 ],
 
 // Cache ResourceLoader modules in localStorage
