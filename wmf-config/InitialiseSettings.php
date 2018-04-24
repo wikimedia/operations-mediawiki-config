@@ -18453,6 +18453,7 @@ $wgConf->settings = [
 ],
 
 'wmgWikibaseSiteGroup' => [
+	'default' => null,
 	'wikipedia' => 'wikipedia',
 	'wikibooks' => 'wikibooks',
 	'wikinews' => 'wikinews',
