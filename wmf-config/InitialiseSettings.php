@@ -20320,6 +20320,7 @@ $wgConf->settings = [
 	'default' => true,
 	'wikipedia' => false,
 	'arwiki' => true, // T183764
+	'bgwiki' => true, // T192895
 	'cawiki' => true,
 	'cswiki' => true, // T171588
 	'eswiki' => true, // T177695
