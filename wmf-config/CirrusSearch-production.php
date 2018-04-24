@@ -111,3 +111,5 @@ $wgCirrusSearchCreateFrozenIndex = false;
 $wgCirrusSearchIndexDeletes = $wmgCirrusSearchIndexDeletes;
 // Enable searching archive
 $wgCirrusSearchEnableArchive = $wmgCirrusSearchEnableArchive;
+// Internal WDQS endpoint
+$wgCirrusSearchCategoryEndpoint = 'http://wdqs-internal.discovery.wmnet/bigdata/namespace/categories/sparql';
