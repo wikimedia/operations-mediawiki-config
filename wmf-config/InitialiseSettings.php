@@ -20685,7 +20685,16 @@ $wgConf->settings = [
 
 'wmgUsePerformanceInspector' => [
 	'default' => false,
-]
+],
+
+'wgExpiryWidgetNoDatePicker' => [
+	'default' => true,
+	'testwiki' => false,
+	'test2wiki' => false,
+	'metawiki' => false,
+	'mediawikiwiki' => false,
+	'dewiki' => false,
+],
 
 ];
 
