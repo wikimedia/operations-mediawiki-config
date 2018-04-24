@@ -20324,6 +20324,7 @@ $wgConf->settings = [
 	'arwiki' => true, // T183764
 	'cawiki' => true,
 	'cswiki' => true, // T171588
+	'enwiki' => true, // T191584
 	'eswiki' => true, // T177695
 	'euwiki' => true, // T167619
 	'fiwiki' => true, // T151591
