@@ -22,6 +22,30 @@
       "revId": "dab6f7a5d974a6bee832f0c79f7002540a9c291e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "336dbd2e_0d61d13a",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 20695,
+      "author": {
+        "id": 4911
+      },
+      "writtenOn": "2018-04-24T23:16:01Z",
+      "side": 1,
+      "message": "That\u0027s what was requested? https://phabricator.wikimedia.org/T132220#4086762\n\nor did I do that wrong?",
+      "parentUuid": "070d2496_c762f4d0",
+      "range": {
+        "startLine": 20695,
+        "startChar": 1,
+        "endLine": 20695,
+        "endChar": 26
+      },
+      "revId": "dab6f7a5d974a6bee832f0c79f7002540a9c291e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
