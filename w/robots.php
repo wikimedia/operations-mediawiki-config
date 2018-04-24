@@ -2,8 +2,7 @@
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 require MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
 
-$wgTitle = Title::newFromText( 'Mediawiki:robots.txt' );
-$page = WikiPage::factory( $wgTitle );
+$page = WikiPage::factory( Title::newFromText( 'Mediawiki:robots.txt' ) );
 
 header( 'Content-Type: text/plain; charset=utf-8' );
 header( 'X-Article-ID: ' . $page->getId() );
@@ -11,7 +10,7 @@ header( 'X-Language: ' . $lang );
 header( 'X-Site: ' . $site );
 header( 'Vary: X-Subdomain' );
 
-$robotsfile = '/srv/mediawiki/robots.txt';
+$robotsfile = MEDIAWIKI_DEPLOYMENT_DIR . '/robots.txt';
 $robots = fopen( $robotsfile, 'rb' );
 $robotsfilestats = fstat( $robots );
 $mtime = $robotsfilestats['mtime'];
