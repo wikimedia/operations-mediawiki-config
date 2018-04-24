@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3725442c_037f6578",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-04-24T14:35:53Z",
+      "side": 1,
+      "message": "Please, leave the comment with # C6 as that is the rack where the server is located and it help us to quickly locate where servers are.",
+      "revId": "c26f43fde904d214eb1fce0da671b696eeaa0222",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a4252e59_82bd68ab",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-04-24T14:35:53Z",
+      "side": 1,
+      "message": "Add \u0027# B3\u0027 as that is where the server is located and allow us to quickly see where the servers are located.",
+      "revId": "c26f43fde904d214eb1fce0da671b696eeaa0222",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
