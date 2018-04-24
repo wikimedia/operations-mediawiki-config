@@ -36,7 +36,7 @@ if ( $wmgUseWikibaseRepo ) {
 			],
 		];
 
-		$wgWBQualityConstraintsSparqlEndpoint = 'https://query.wikidata.org/sparql';
+		$wgWBQualityConstraintsSparqlEndpoint = 'http://wdqs-internal.discovery.wmnet/sparql';
 		$wgWBQualityConstraintsPropertyConstraintId = 'P51064';
 		$wgWBQualityConstraintsFormatConstraintId = 'Q100086';
 		$wgWBQualityConstraintsFormatAsARegularExpressionId = 'P51065';
@@ -136,7 +136,7 @@ if ( $wmgUseWikibaseRepo ) {
 			],
 		];
 
-		$wgWBQualityConstraintsSparqlEndpoint = $wgWBRepoSettings['sparqlEndpoint'];
+		$wgWBQualityConstraintsSparqlEndpoint = 'http://wdqs-internal.discovery.wmnet/sparql';
 		$wgWBQualityConstraintsSparqlMaxMillis = 5000; // limit SPARQL queries to just 5 seconds for now
 		$wgWBQualityConstraintsTypeCheckMaxEntities = 10; // only check few entities in PHP => fall back to SPARQL very quickly
 		$wgWBQualityConstraintsCacheCheckConstraintsResults = true;
