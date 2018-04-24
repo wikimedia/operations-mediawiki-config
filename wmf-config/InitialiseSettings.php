@@ -8038,7 +8038,7 @@ $wgConf->settings = [
 	'+wikidatawiki' => [
 		'edit' => [
 			'&can-bypass' => false,
-			'user' => [ 80, 60 ],
+			'user' => [ 400, 300 ],
 		],
 		'create' => [
 			'&can-bypass' => false,
