@@ -20443,11 +20443,18 @@ $wgConf->settings = [
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true, // T175302
+	'enwiki' => true, // T192455
 ],
 
 'wgArticleCreationWorkflows' => [
 	'default' => [],
 	'test2wiki' => [
+		[
+			'namespaces' => [ 0 ],
+			'excludeRight' => 'autoconfirmed'
+		],
+	],
+	'enwiki' => [
 		[
 			'namespaces' => [ 0 ],
 			'excludeRight' => 'autoconfirmed'
