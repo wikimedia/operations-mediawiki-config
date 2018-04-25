@@ -20439,6 +20439,22 @@ $wgConf->settings = [
 	'rtl' => false, // T170001
 ],
 
+'wmgUseArticleCreationWorkflow' => [
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true, // T175302
+],
+
+'wgArticleCreationWorkflows' => [
+	'default' => [],
+	'test2wiki' => [
+		[
+			'namespaces' => [ 0 ],
+			'excludeRight' => 'autoconfirmed'
+		],
+	],
+],
+
 'wgArticleCreationLandingPage' => [
 	'default' => 'Project:New user landing page',
 ],
