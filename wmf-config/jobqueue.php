@@ -66,7 +66,6 @@ if ( $wmgUseEventBus ) {
 		$wgJobTypeConf['LocalGlobalUserPageCacheUpdateJob'] =
 		$wgJobTypeConf['TranslateDeleteJob'] =
 		$wgJobTypeConf['TranslateRenderJob'] =
-		// T192107 $wgJobTypeConf['TranslationsUpdateJob'] =
 			[ 'class' => 'JobQueueEventBus' ];
 	if ( isset( $wmgDisableCirrusSearchJobsInRedis ) && $wmgDisableCirrusSearchJobsInRedis ) {
 		$wgJobTypeConf['cirrusSearchCheckerJob'] =
@@ -86,13 +85,28 @@ if ( $wmgUseEventBus ) {
 				'readonly' => true,
 			];
 	}
-	$wgJobTypeConf['default'] = [
-		'class' => 'JobQueueSecondTestQueue',
-		'mainqueue' => $jobQueueFederatedConfig,
-		'debugqueue' => [
-			'class' => 'JobQueueEventBus'
-		]
-	];
+	if ( isset( $wmgBulk2JobsInRedis ) && $wmgBulk2JobsInRedis ) {
+		$wgJobTypeConf['default'] = [ 'class' => 'JobQueueEventBus' ];
+		$wgJobTypeConf['TranslationsUpdateJob'] = // T192107
+			$wgJobTypeConf['gwtoolsetUploadMediafileJob'] = // T192946
+			$wgJobTypeConf['EchoNotification'] = // T192945
+			$wgJobTypeConf['webVideoTranscode'] = // T188947
+			$wgJobTypeConf['webVideoTranscodePrioritized'] = [ // T188947
+				'class' => 'JobQueueSecondTestQueue',
+				'mainqueue' => $jobQueueFederatedConfig,
+				'debugqueue' => [
+					'class' => 'JobQueueEventBus'
+				]
+			];
+	} else {
+		$wgJobTypeConf['default'] = [
+			'class' => 'JobQueueSecondTestQueue',
+			'mainqueue' => $jobQueueFederatedConfig,
+			'debugqueue' => [
+				'class' => 'JobQueueEventBus'
+			]
+		];
+	}
 } else {
 	$wgJobTypeConf['default'] = $jobQueueFederatedConfig;
 }
