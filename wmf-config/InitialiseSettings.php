@@ -20434,7 +20434,6 @@ $wgConf->settings = [
 
 'wmgUseCodeMirror' => [
 	'default' => true,
-	'rtl' => false, // T170001
 ],
 
 'wgArticleCreationLandingPage' => [
