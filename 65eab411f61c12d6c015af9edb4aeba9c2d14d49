@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "561db825_43cc1e44",
+        "filename": "wmf-config/Wikibase-production.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 2974
+      },
+      "writtenOn": "2018-04-25T13:38:13Z",
+      "side": 1,
+      "message": "If I read this correctly, it changes the endpoint only for \u0027testwikidatawiki\u0027. Is that because we want to test it there first (in which case the commit message should reflect this)? Or because I don\u0027t understand how this config works (in which case, I\u0027d love to learn a bit more)?",
+      "range": {
+        "startLine": 39,
+        "startChar": 2,
+        "endLine": 39,
+        "endChar": 39
+      },
+      "revId": "65eab411f61c12d6c015af9edb4aeba9c2d14d49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
