@@ -22,6 +22,30 @@
       "revId": "65eab411f61c12d6c015af9edb4aeba9c2d14d49",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ed83a5b1_7ac4990c",
+        "filename": "wmf-config/Wikibase-production.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2018-04-25T14:09:34Z",
+      "side": 1,
+      "message": "This is also changed for the \"real\" Wikidata below (line 139), but your observation about this specific line is right ;)\n\nGiven we have the same values for both, we could move this global out of this if completely, but I guess that\u0027s for another change.",
+      "parentUuid": "561db825_43cc1e44",
+      "range": {
+        "startLine": 39,
+        "startChar": 2,
+        "endLine": 39,
+        "endChar": 39
+      },
+      "revId": "65eab411f61c12d6c015af9edb4aeba9c2d14d49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
