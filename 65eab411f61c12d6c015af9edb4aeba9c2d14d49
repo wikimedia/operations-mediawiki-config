@@ -97,6 +97,30 @@
     },
     {
       "key": {
+        "uuid": "85953222_136ffad1",
+        "filename": "wmf-config/Wikibase-production.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 2096
+      },
+      "writtenOn": "2018-04-26T17:53:51Z",
+      "side": 1,
+      "message": "No, wgWBRepoSettings should not be moved, this is the generic endpoint.",
+      "parentUuid": "9bb84124_dbf633c9",
+      "range": {
+        "startLine": 39,
+        "startChar": 2,
+        "endLine": 39,
+        "endChar": 39
+      },
+      "revId": "65eab411f61c12d6c015af9edb4aeba9c2d14d49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "26e06c6a_6e35baed",
         "filename": "wmf-config/Wikibase-production.php",
         "patchSetId": 2
@@ -108,6 +132,24 @@
       "writtenOn": "2018-04-26T13:04:30Z",
       "side": 1,
       "message": "As far as I can tell, Wikibase itself uses $wgWBRepoSettings[\u0027sparqlEndpoint\u0027] for two things: it advertises it in action\u003dquery\u0026meta\u003dsiteinfo, and two maintenance scripts use it to discover the defined units and unit conversions. The former should definitely use the public endpoint, but perhaps the maintenance scripts to update the unit configuration should use the internal endpoint as well? Would it make sense to teach Wikibase about the internal SPARQL endpoint as well, in a separate setting?",
+      "revId": "65eab411f61c12d6c015af9edb4aeba9c2d14d49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ce5e4f91_064f9960",
+        "filename": "wmf-config/Wikibase-production.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 2096
+      },
+      "writtenOn": "2018-04-26T17:53:51Z",
+      "side": 1,
+      "message": "I\u0027d leave maintenance scripts as is, they don\u0027t have to be run in production (and in fact I do run them locally) so using public endpoint is better.",
+      "parentUuid": "26e06c6a_6e35baed",
       "revId": "65eab411f61c12d6c015af9edb4aeba9c2d14d49",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
