@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ccabe2b6_eec3dd6a",
+        "filename": "wmf-config/CirrusSearch-common.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 2974
+      },
+      "writtenOn": "2018-04-26T17:31:46Z",
+      "side": 1,
+      "message": "Comment should probably also be updated.",
+      "range": {
+        "startLine": 122,
+        "startChar": 12,
+        "endLine": 122,
+        "endChar": 41
+      },
+      "revId": "20a4389b95b2f17bba00e0a1e150732d56a5c90d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
