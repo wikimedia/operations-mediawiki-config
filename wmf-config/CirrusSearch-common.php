@@ -119,8 +119,11 @@ $wgCirrusSearchFullTextQueryBuilderProfile = $wmgCirrusSearchFullTextQueryBuilde
 $wgCirrusSearchIgnoreOnWikiBoostTemplates = $wmgCirrusSearchIgnoreOnWikiBoostTemplates;
 
 // We had an incident of filling up the entire clusters redis instances after
-// 6 hours, half of that seems reasonable.
-$wgCirrusSearchDropDelayedJobsAfter = 60 * 60 * 3;
+// 6 hours, and problems with the new kafka (before we enabled compression) 
+// based job queue as well. Cut the time down to 2 hours, as this is not supposed
+// to ride out a full-fledged outage, but paper over minor unavailabilities
+// for cluster/network/etc maintenance.
+$wgCirrusSearchDropDelayedJobsAfter = 60 * 60 * 2;
 
 // Enable cache warming for wikis with more than one shard.  Cache warming is good
 // for smoothing out I/O spikes caused by merges at the cost of potentially polluting
