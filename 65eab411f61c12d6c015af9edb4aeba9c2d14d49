@@ -46,6 +46,30 @@
       "revId": "65eab411f61c12d6c015af9edb4aeba9c2d14d49",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e4a7cb29_72e4897d",
+        "filename": "wmf-config/Wikibase-production.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 2974
+      },
+      "writtenOn": "2018-04-26T09:40:21Z",
+      "side": 1,
+      "message": "Oh, I see now! I was confused by `$wgWBRepoSettings` which still point to `query.wikidata.org`. I have no idea what that is, or if it needs to be moved as well.",
+      "parentUuid": "ed83a5b1_7ac4990c",
+      "range": {
+        "startLine": 39,
+        "startChar": 2,
+        "endLine": 39,
+        "endChar": 39
+      },
+      "revId": "65eab411f61c12d6c015af9edb4aeba9c2d14d49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
