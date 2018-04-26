@@ -119,7 +119,7 @@ $wgLBFactoryConf = [
 		'db1060' => 1,      # C2 2.8TB  96GB, vslow, dump, api #master for db1102 (sanitarium 3)
 		'db1074' => 300,    # A2 3.6TB 512GB, api
 		'db1076' => 500,    # B1 3.6TB 512GB # candidate master
-		# 'db1090' => 50,     # C3 3.6TB 512GB, depool for maintenance
+		# 'db1090:3312' => 1, # C3 3.6TB 512GB, vslow, dump # depooled for maintenance
 		'db1122' => 500,    # D6 3.6TB 512GB
 		# 'db1103:3312' => 1, # A3 3.6TB 512GB # rc, log: s2 and s4
 		'db1105:3312' => 1, # C3 3.6TB 512GB # rc, log: s1 and s2
@@ -162,6 +162,7 @@ $wgLBFactoryConf = [
 		# 'db1069' => 0,      # A1 2.8TB 160GB, old master
 		'db1079' => 300,    # A2 3.6TB 512GB, api #master for db1102 (sanitarium 3)
 		'db1086' => 100,    # B3 3.6TB 512GB, temp. vslow, dump, api # candidate master
+		# 'db1090:3317' => 1, # C3 3.6TB 512GB, vslow, dump # depooled for maintenance
 		'db1094' => 500,    # D2 3.6TB 512GB
 		'db1098:3317' => 1, # B5 3.6TB 512GB, # rc, log: s6 and s7
 		'db1101:3317' => 1, # C2 3.6TB 512GB # rc, log: s7 and s8
@@ -290,10 +291,12 @@ $wgLBFactoryConf = [
 	],
 	's2' => [
 		'vslow' => [
-			'db1060' => 1,
+			'db1060'      => 1,
+			# 'db1090:3312' => 1,
 		],
 		'dump' => [
-			'db1060' => 1,
+			'db1060'      => 1,
+			# 'db1090:3312' => 1,
 		],
 		'api' => [
 			'db1060' => 1,
@@ -441,10 +444,12 @@ $wgLBFactoryConf = [
 	],
 	's7' => [
 		'vslow' => [
-			'db1086' => 1,
+			'db1086'      => 1,
+			# 'db1090:3317' => 1,
 		],
 		'dump' => [
 			'db1086' => 1,
+			# 'db1090:3317' => 1,
 		],
 		'api' => [
 			'db1079' => 100,
@@ -544,7 +549,8 @@ $wgLBFactoryConf = [
 	'db1087' => '10.64.32.113', # do not remove or comment out
 	'db1088' => '10.64.32.114', # do not remove or comment out
 	'db1089' => '10.64.32.115', # do not remove or comment out
-	'db1090' => '10.64.32.116', # do not remove or comment out
+	'db1090:3312' => '10.64.32.116:3312', # do not remove or comment out
+	'db1090:3317' => '10.64.32.116:3317', # do not remove or comment out
 	'db1091' => '10.64.48.150', # do not remove or comment out
 	'db1092' => '10.64.48.151', # do not remove or comment out
 	'db1093' => '10.64.48.152', # do not remove or comment out
