@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8f7f87c7_1c048bf9",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-04-26T15:23:19Z",
+      "side": 1,
+      "message": "Sorry to be a pain. I normally, for clarity, I add the sections in which host serve (it is easy when in need to depool it completely). An example would be line 158 for instance, with db1113.",
+      "revId": "427670f486f57ed405d8ec99846b9e32e92efcd5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
