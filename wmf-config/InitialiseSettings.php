@@ -13599,31 +13599,30 @@ $wgConf->settings = [
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //
 	'default' => false,
-	'testwiki' => true, // Expanding out to testwiki -- Andrew 2009-10-13
 	'enwikinews' => true, // Per T23956 -- Andrew 2009-02-09
 	'enwiktionary' => true, // T25417 -- ariel 2010-16-05
 	'huwiki' => true, // T24909 -- Andrew 2010-09-06
 	'ptwikibooks' => true, // T26143 -- Andrew 2010-08-16
-	'strategywiki' => true, // Philippe says it's cool -- Andrew 2009-10-13
 	'svwikisource' => true, // T25220 -- Andrew 2010-08-28
-	'test2wiki' => true,
-	'wikimania2010wiki' => true, // Erik requested, by mail
 ],
 
 'wmgLiquidThreadsOptIn' => [
 	'default' => true, // New wikis by default are opt-in per-page LiquidThreads
 	// ---------
-	'strategywiki' => false,
 	'ptwikibooks' => false, // T50578
 ],
 
 'wmgLiquidThreadsFrozen' => [
 	// Preserve access to LQT namespaces after removing the extension
 	'default' => false,
+	'fiwikimedia' => true,
 	'mediawikiwiki' => true,
 	'officewiki' => true, // replaced with Flow 2014-11-25
 	'sewikimedia' => true, // T106302, T114277
-	'fiwikimedia' => true,
+	'strategywiki' => true,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'wikimania2010wiki' => true,
 ],
 
 'wmgLQTUserControlNamespaces' => [
