@@ -151,6 +151,7 @@ $wgConf->settings = [
 	'cowikimedia' => 'es',
 	'dkwikimedia' => 'da',
 	'ecwikimedia' => 'es', // T135521
+	'idwikimedia' => 'id', // T192726
 	'ilwikimedia' => 'he',
 	'mkwikimedia' => 'mk',
 	'mxwikimedia' => 'es',
@@ -367,6 +368,7 @@ $wgConf->settings = [
 	'huwikiquote' => 'Europe/Berlin',
 	'huwikisource' => 'Europe/Berlin',
 	'huwiktionary' => 'Europe/Berlin',
+	'idwikimedia' => 'Asia/Jakarta', // T192726
 	'itwiki' => 'Europe/Berlin',
 	'itwikinews' => 'Europe/Berlin',
 	'itwikiversity' => 'Europe/Berlin',
@@ -1159,6 +1161,7 @@ $wgConf->settings = [
 	'etwikimedia' => '/static/images/project-logos/etwikimedia.png',
 	'fiwikimedia' => '/static/images/project-logos/fiwikimedia.png',
 	'hiwikimedia' => '/static/images/project-logos/hiwikimedia.png',
+	'idwikimedia' => '/static/images/project-logos/idwikimedia.png', // T192726
 	'mkwikimedia' => '/static/images/project-logos/mkwikimedia.png',
 	'mxwikimedia' => '/static/images/project-logos/mxwikimedia.png',
 	'nlwikimedia' => '/static/images/project-logos/nlwikimedia.png',
@@ -1692,6 +1695,7 @@ $wgConf->settings = [
 	'amwikimedia' => [ '1.5x' => '/static/images/project-logos/amwikimedia-1.5x.png', '2x' => '/static/images/project-logos/amwikimedia-2x.png' ], // T176042
 	'ecwikimedia' => [ '1.5x' => '/static/images/project-logos/ecwikimedia-1.5x.png', '2x' => '/static/images/project-logos/ecwikimedia-2x.png' ], // T135521
 	'hiwikimedia' => [ '1.5x' => '/static/images/project-logos/hiwikimedia-1.5x.png', '2x' => '/static/images/project-logos/hiwikimedia-2x.png' ],
+	'idwikimedia' => [ '1.5x' => '/static/images/project-logos/idwikimedia-1.5x.png', '2x' => '/static/images/project-logos/idwikimedia-2x.png' ], // T192726
 	'maiwikimedia' => [ '1.5x' => '/static/images/project-logos/maiwikimedia-1.5x.png', '2x' => '/static/images/project-logos/maiwikimedia-2x.png' ],
 	'ptwikimedia' => [ '1.5x' => '/static/images/project-logos/ptwikimedia-1.5x.png', '2x' => '/static/images/project-logos/ptwikimedia-2x.png' ], // T126832
 	'romdwikimedia' => [ '1.5x' => '/static/images/project-logos/romdwikimedia-1.5x.png', '2x' => '/static/images/project-logos/romdwikimedia-2x.png' ],
@@ -2300,6 +2304,7 @@ $wgConf->settings = [
 	'iawiktionary' => 'Wiktionario',
 	'iegcomwiki' => 'Individual Engagement Grants Committee Wiki',
 	'idwikibooks' => 'Wikibuku',
+	'idwikimedia' => 'Wikimedia Indonesia', // T192726
 	'ilwikimedia' => 'ויקימדיה',
 	'incubatorwiki' => 'Wikimedia Incubator',
 	'inhwiki' => 'Википеди',
@@ -10402,6 +10407,9 @@ $wgConf->settings = [
 		'sysop' => [ 'rollbacker' ],
 		'bureaucrat' => [ 'rollbacker' ],
 	],
+	'+idwikimedia' => [ // T192726
+		'sysop' => [ 'import' ],
+	],
 	'+incubatorwiki' => [
 		'bureaucrat' => [ 'import', 'test-sysop', 'translator' ],
 	],
@@ -11158,6 +11166,10 @@ $wgConf->settings = [
 	'+idwiki' => [
 		'sysop' => [ 'rollbacker' ],
 		'bureaucrat' => [ 'rollbacker' ],
+	],
+	'+idwikimedia' => [ // T192726
+		'sysop' => [ 'import' ],
+		'bureaucrat' => [ 'bureaucrat', 'sysop' ],
 	],
 	'+incubatorwiki' => [
 		'bureaucrat' => [ 'import', 'test-sysop', 'translator' ],
@@ -15503,6 +15515,7 @@ $wgConf->settings = [
 	'hrwiki' => 'uca-hr-u-kn', // T148749, T148682
 	'hsbwiki' => 'uca-hsb', // T90689
 	'huwiki' => 'uca-hu-u-kn', // T47596, T146675
+	'idwikimedia' => 'uca-default-u-kn', // T192726, T192252
 	'ilowiki' => 'uca-tl-u-kn', // T149002
 	'iswiki' => 'uca-is', // T58859
 	'iswiktionary' => 'identity', // T32722
