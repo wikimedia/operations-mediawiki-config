@@ -7655,6 +7655,7 @@ $wgConf->settings = [
 	'brwikimedia' => true, // T65345
 	'cawiki' => true,
 	'commonswiki' => true, // T24834
+	'cswiki' => true, // T193242
 	'dawiki' => true, // wegge asked in #wikimedia-tech 2006-03-01
 	'dawikiquote' => true, // T15246
 	'dewikibooks' => true, // T9041
