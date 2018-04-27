@@ -3626,6 +3626,10 @@ $wgConf->settings = [
 		'Author' => 106,
 		'Author_talk' => 107,
 	],
+	'+euwikisource' => [ // T193225
+		'Author' => 106,
+		'Author_talk' => 107,
+	],
 	'+fawiki' => [
 		'كاربر' => NS_USER,
 		'بحث كاربر' => NS_USER_TALK,
@@ -6317,6 +6321,10 @@ $wgConf->settings = [
 	'etwikisource' => [
 		106 => 'Autor',
 		107 => 'Autori_arutelu',
+	],
+	'euwikisource' => [ // T193225 (Author namespaces)
+		106 => 'Egilea',
+		107 => 'Egilea_eztabaida',
 	],
 	'fawikisource' => [
 		100 => 'درگاه', // Portal
