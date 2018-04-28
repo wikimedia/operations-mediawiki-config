@@ -691,6 +691,26 @@ function wmfLabsSettings() {
 			'default' => true,
 			'wikidatawiki' => false,
 		],
+		'wgOresModels' => [
+			'default' => [
+				'damaging' => [ 'enabled' => true ],
+				'goodfaith' => [ 'enabled' => true ],
+				'reverted' => [ 'enabled' => false ],
+				'wp10' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanupParent' => true ],
+				'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
+			],
+			'enwiki' => [
+				'damaging' => [ 'enabled' => true, 'excludeBots' => true ],
+				'goodfaith' => [ 'enabled' => true, 'excludeBots' => true ],
+				'reverted' => [ 'enabled' => false ],
+				'wp10' => [ 'enabled' => true, 'namespaces' => [ 0 ], 'cleanupParent' => true ],
+				'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0 ], 'types' => [ 1 ], 'excludeBots' => true ],
+			],
+		],
+		'wgOresExcludeBots' => [
+			'default' => true,
+			'enwiki' => false,
+		],
 		'wgWMEAICaptchaEnabled' => [
 			'default' => true,
 		],
