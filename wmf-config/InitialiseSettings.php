@@ -9358,6 +9358,9 @@ $wgConf->settings = [
 		'sysop' => [ 'importupload' => true, ], // T101663
 		'securepoll' => [ 'securepoll-create-poll' => true, 'editinterface' => true ],
 	],
+	'+sourceswiki' => [
+		'flood' => [ 'bot' => true ], // T193350
+	],
 	'+ombudsmenwiki' => [
 		'autoconfirmed' => [
 			'autoconfirmed' => false,
@@ -11278,6 +11281,9 @@ $wgConf->settings = [
 	],
 	'+officewiki' => [
 		'bureaucrat' => [ 'sysop', 'bureaucrat', 'import', 'transwiki', 'communityapps', 'flood', 'securepoll' ],
+	],
+	'+sourceswiki' => [
+		'bureaucrat' => [ 'flooder' ], // T193350
 	],
 	'+ombudsmenwiki' => [
 		'bureaucrat' => [ 'sysop', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt', 'bureaucrat', ],
@@ -13218,6 +13224,7 @@ $wgConf->settings = [
 'wgGroupsAddToSelf' => [
 	'metawiki' => [ 'sysop' => [ 'flood' ] ], // T39198
 	'officewiki' => [ 'sysop' => [ 'flood' ] ], // T86237
+	'sourceswiki' => [ 'sysop' => [ 'flood' ] ], // T193350
 	'enwikibooks' => [ 'sysop' => [ 'flood' ] ],
 	'eswikibooks' => [ 'sysop' => [ 'flood' ] ], // T111455
 	'enwikinews' => [ 'sysop' => [ 'flood' ] ],
