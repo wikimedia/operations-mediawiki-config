@@ -79,7 +79,7 @@ $wgLBFactoryConf = [
 
 	# labs-related wikis
 	'labswiki'     => 'wikitech',
-	'labtestwiki'  => 'wikitech',
+	'labtestwiki'  => 'labtestwikitech',
 ],
 
 # Load lists
@@ -181,6 +181,12 @@ $wgLBFactoryConf = [
 
 	'wikitech' => [
 		'db2037' => 1, # C6
+	],
+
+	# labtestwikitech runs in labtest but needs an actual read/write host,
+	#  so we just point it at the eqiad misc host.
+	'labtestwikitech' => [
+		'db1073' => 1, # B3
 	],
 ],
 
