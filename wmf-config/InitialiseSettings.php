@@ -11284,7 +11284,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'sysop', 'bureaucrat', 'import', 'transwiki', 'communityapps', 'flood', 'securepoll' ],
 	],
 	'+sourceswiki' => [
-		'bureaucrat' => [ 'flooder' ], // T193350
+		'bureaucrat' => [ 'flood' ], // T193350
 	],
 	'+ombudsmenwiki' => [
 		'bureaucrat' => [ 'sysop', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt', 'bureaucrat', ],
@@ -13268,6 +13268,7 @@ $wgConf->settings = [
 	'mlwiktionary' => [ 'botadmin' => [ 'botadmin' ] ],
 	'simplewiki' => [ 'sysop' => [ 'flood' ] ],
 	'plwiki' => [ 'flood' => [ 'flood' ] ], // T22155 , T23238
+	'sourceswiki' => [ 'flood' => [ 'flood' ] ], // T193350
 	'strategywiki' => [ 'sysop' => [ 'flood' ] ],
 	'srwiki' => [ 'sysop' => [ 'flood' ] ],
 	'trwiki' => [ 'massmessage-sender' => [ 'massmessage-sender' ] ], // T147740
