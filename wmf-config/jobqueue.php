@@ -47,6 +47,7 @@ if ( $wmgUseEventBus ) {
 		$wgJobTypeConf['EchoNotificationDeleteJob'] =
 		$wgJobTypeConf['flaggedrevs_CacheUpdate'] =
 		$wgJobTypeConf['htmlCacheUpdate'] =
+		$wgJobTypeConf['LocalRenameUserJob'] =
 		$wgJobTypeConf['MessageIndexRebuildJob'] =
 		$wgJobTypeConf['ORESFetchScoreJob'] =
 		$wgJobTypeConf['recentChangesUpdate'] =
