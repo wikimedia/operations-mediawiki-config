@@ -20358,6 +20358,10 @@ $wgConf->settings = [
 	'test2wiki' => 'osm-intl-i18n',
 ],
 
+'wgKartographerUsePageLanguage' => [
+	'default' => false,
+],
+
 'wmgUseOATHAuth' => [
 	'default' => true,
 ],
