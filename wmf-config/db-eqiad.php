@@ -159,7 +159,6 @@ $wgLBFactoryConf = [
 	],
 	's7' => [
 		'db1062' => 0,      # D4 2.8TB 128GB, master
-		# 'db1069' => 0,      # A1 2.8TB 160GB, old master
 		'db1079' => 300,    # A2 3.6TB 512GB, api #master for db1102 (sanitarium 3)
 		'db1086' => 100,    # B3 3.6TB 512GB, api # candidate master
 		'db1090:3317' => 1, # C3 3.6TB 512GB, vslow, dump: s2 and s7, old master
@@ -680,6 +679,7 @@ $wgLBFactoryConf = [
 	'extension1' => [
 		'10.64.32.25' => 0, # db1055, C2 2.8TB 96GB, master
 		'10.64.32.26' => 1, # db1056, C3 2.8TB 96GB
+		# '10.64.0.108' => 0, # db1069, A1 2.8TB 160GB
 	],
 ],
 
