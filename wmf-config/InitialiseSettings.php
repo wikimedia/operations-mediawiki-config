@@ -3384,10 +3384,6 @@ $wgConf->settings = [
 		'Vikirječnik' => NS_PROJECT, // T159538
 		'Razgovor_s_Vikirječnikom' => NS_PROJECT_TALK, // T159538
 	],
-	'+cawiki' => [
-		'Usuària' => NS_USER,
-		'Usuària_discussió' => NS_USER_TALK,
-	],
 	'+cawikisource' => [
 		'Author' => 106,
 		'Author_talk' => 107,
