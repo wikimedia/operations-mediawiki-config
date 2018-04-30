@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "8bd80bb0_b85315c6",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 3400,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-04-30T21:46:58Z",
+      "side": 1,
+      "message": "Okay. This needs to be addressed, and I plan to do it soon after checking with the language team people. Hopefully they\u0027ll reply in less than ten years.",
+      "parentUuid": "0e73b29c_ee5152ad",
+      "range": {
+        "startLine": 3400,
+        "startChar": 19,
+        "endLine": 3400,
+        "endChar": 63
+      },
+      "revId": "f9dd6378eddbd19919d5f2bceb2830fad47622d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c732dfbe_0f556a95",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 3
@@ -36,6 +60,30 @@
       "writtenOn": "2018-04-30T21:03:31Z",
       "side": 1,
       "message": "Was this requested? Import flag is sensitive (because it includes importing via uploaded file). If this is because of the initial import, this rare flag-granting should be IMHO handled by stewards.",
+      "range": {
+        "startLine": 10395,
+        "startChar": 16,
+        "endLine": 10395,
+        "endChar": 22
+      },
+      "revId": "f9dd6378eddbd19919d5f2bceb2830fad47622d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "042c656e_15fb4009",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 10395,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-04-30T21:46:58Z",
+      "side": 1,
+      "message": "Wontfix: I am well aware of the working of \u0027import\u0027. They need to import a whole wiki, it just makes sense they can do that themselves in a fishbowl wiki. A request to the stewards from a fishbowl wiki to assign the import flag will rarely be declined t.b.h. so I decided to expedite the process.",
+      "parentUuid": "c732dfbe_0f556a95",
       "range": {
         "startLine": 10395,
         "startChar": 16,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "6cdaa33f_d93546d3",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 10396,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-04-30T21:46:58Z",
+      "side": 1,
+      "message": "Oversight of my part.",
+      "parentUuid": "66f5896d_08d2f931",
+      "range": {
+        "startLine": 10396,
+        "startChar": 20,
+        "endLine": 10396,
+        "endChar": 41
+      },
+      "revId": "f9dd6378eddbd19919d5f2bceb2830fad47622d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "402c6f03_a0e32b4b",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 3
@@ -82,6 +154,30 @@
       "writtenOn": "2018-04-30T21:03:31Z",
       "side": 1,
       "message": "As above: Was this requested? Import flag is sensitive (because it includes importing via uploaded file). If this is because of the initial import, this rare flag-granting should be IMHO handled by stewards.",
+      "range": {
+        "startLine": 11159,
+        "startChar": 16,
+        "endLine": 11159,
+        "endChar": 22
+      },
+      "revId": "f9dd6378eddbd19919d5f2bceb2830fad47622d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "52084977_8318dc20",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 11159,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-04-30T21:46:58Z",
+      "side": 1,
+      "message": "As above: wontfix.",
+      "parentUuid": "402c6f03_a0e32b4b",
       "range": {
         "startLine": 11159,
         "startChar": 16,
