@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e73b29c_ee5152ad",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 3400,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2018-04-30T21:03:31Z",
+      "side": 1,
+      "message": "Please do not add comments that are not related to the commit\u0027s aim. After 10 years, nobody would know why you added this comment while you were working on creating idwikimedia.",
+      "range": {
+        "startLine": 3400,
+        "startChar": 19,
+        "endLine": 3400,
+        "endChar": 63
+      },
+      "revId": "f9dd6378eddbd19919d5f2bceb2830fad47622d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c732dfbe_0f556a95",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 10395,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2018-04-30T21:03:31Z",
+      "side": 1,
+      "message": "Was this requested? Import flag is sensitive (because it includes importing via uploaded file). If this is because of the initial import, this rare flag-granting should be IMHO handled by stewards.",
+      "range": {
+        "startLine": 10395,
+        "startChar": 16,
+        "endLine": 10395,
+        "endChar": 22
+      },
+      "revId": "f9dd6378eddbd19919d5f2bceb2830fad47622d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "66f5896d_08d2f931",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 10396,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2018-04-30T21:03:31Z",
+      "side": 1,
+      "message": "Why are you explicitely allowing bcrats to assign bureaucrat/sysop flag? This is the default state.",
+      "range": {
+        "startLine": 10396,
+        "startChar": 20,
+        "endLine": 10396,
+        "endChar": 41
+      },
+      "revId": "f9dd6378eddbd19919d5f2bceb2830fad47622d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "402c6f03_a0e32b4b",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 11159,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2018-04-30T21:03:31Z",
+      "side": 1,
+      "message": "As above: Was this requested? Import flag is sensitive (because it includes importing via uploaded file). If this is because of the initial import, this rare flag-granting should be IMHO handled by stewards.",
+      "range": {
+        "startLine": 11159,
+        "startChar": 16,
+        "endLine": 11159,
+        "endChar": 22
+      },
+      "revId": "f9dd6378eddbd19919d5f2bceb2830fad47622d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
