@@ -96,8 +96,7 @@ if ( $wmgUseEventBus ) {
 	}
 	if ( isset( $wmgBulk2JobsInRedis ) && $wmgBulk2JobsInRedis ) {
 		$wgJobTypeConf['default'] = [ 'class' => 'JobQueueEventBus' ];
-		$wgJobTypeConf['TranslationsUpdateJob'] = // T192107
-			$wgJobTypeConf['gwtoolsetUploadMediafileJob'] = // T192946
+		$wgJobTypeConf['gwtoolsetUploadMediafileJob'] = // T192946
 			$wgJobTypeConf['EchoNotificationJob'] = // T192945
 			$wgJobTypeConf['webVideoTranscode'] = // T188947
 			$wgJobTypeConf['webVideoTranscodePrioritized'] = [ // T188947
