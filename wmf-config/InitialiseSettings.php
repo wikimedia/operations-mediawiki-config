@@ -20266,11 +20266,10 @@ $wgConf->settings = [
 ],
 
 'wmgBulk2JobsInRedis' => [
-	'default' => false,
-	'mediawikiwiki' => true,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'testwikidatawiki' => true,
+	'default' => true,
+	'wikipedia' => false,
+	'commonswiki' => false,
+	'wikidatawiki' => false,
 ],
 
 'wmgUseCapiunto' => [
