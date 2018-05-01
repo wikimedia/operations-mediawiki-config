@@ -1656,6 +1656,7 @@ $wgConf->settings = [
 	'pawikisource' => [ '1.5x' => '/static/images/project-logos/pawikisource-1.5x.png', '2x' => '/static/images/project-logos/pawikisource-2x.png' ], // T149522
 	'srwikisource' => [ '1.5x' => '/static/images/project-logos/srwikisource-1.5x.png', '2x' => '/static/images/project-logos/srwikisource-2x.png' ], // T172268
 	'viwikisource' => [ '1.5x' => '/static/images/project-logos/viwikisource-1.5x.png', '2x' => '/static/images/project-logos/viwikisource-2x.png' ],
+	'yiwikisource' => [ '1.5x' => '/static/images/project-logos/yiwikisource-1.5x.png', '2x' => '/static/images/project-logos/yiwikisource-2x.png' ], // T193562
 
 	# Wikiversity
 	'arwikiversity' => [ '1.5x' => '/static/images/project-logos/arwikiversity-1.5x.png', '2x' => '/static/images/project-logos/arwikiversity-2x.png' ],
