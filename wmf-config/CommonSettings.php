@@ -2983,6 +2983,9 @@ if ( $wmgUseScribunto ) {
 
 	$wgScribuntoDefaultEngine = 'luasandbox';
 	$wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
+	if ( $wgLocalisationCacheConf['manualRecache'] ) { // see T85461#3100878
+		$wgScribuntoEngineConf['luasandbox']['maxLangCacheSize'] = 200;
+	}
 
 	if ( defined( 'HHVM_VERSION' ) && !isset( $_REQUEST['forceprofile'] ) ) {
 		// Disable Luasandbox's profiling feature unless 'forceprofile' is set.
