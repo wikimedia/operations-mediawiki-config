@@ -47,12 +47,18 @@ if ( $wmgUseWikibaseRepo ) {
 		// T72346
 		$wgPropertySuggesterDeprecatedIds = [
 			143, // imported from
+			3452, // inferred from
+			4656, // Wikimedia import URL
 			/**
 			 * Deprecated properties
 			 * @see https://www.wikidata.org/wiki/Special:WhatLinksHere/Q18644427
 			 */
+			134, // has dialect (DEPRECATED)
+			558, // unit symbol (DEPRECATED)
 			1222, // (deprecated) NARA person ID
+			2237, // units used for this property (DEPRECATED)
 			2315, // comment (DEPRECATED)
+			4877, // print run (DEPRECATED)
 			/**
 			 * @see https://www.wikidata.org/w/index.php?oldid=335040857
 			 */
