@@ -47,10 +47,12 @@ if ( $wmgUseWikibaseRepo ) {
 		// T72346
 		$wgPropertySuggesterDeprecatedIds = [
 			143, // imported from
+			3452, // inferred from
 			/**
 			 * Deprecated properties
 			 * @see https://www.wikidata.org/wiki/Special:WhatLinksHere/Q18644427
 			 */
+			134, // has dialect (DEPRECATED)
 			1222, // (deprecated) NARA person ID
 			2315, // comment (DEPRECATED)
 			/**
