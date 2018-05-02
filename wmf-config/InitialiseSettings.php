@@ -18309,6 +18309,7 @@ $wgConf->settings = [
 // Whether web fonts are enabled *by default*
 'wmgULSWebfontsEnabled' => [
 	'default' => false,
+	'bnwikisource' => true, // T193367
 	'enwikisource' => true, // T71655
 	'dvwiki' => true,       // T71860
 	'dvwiktionary' => true, // T71860
