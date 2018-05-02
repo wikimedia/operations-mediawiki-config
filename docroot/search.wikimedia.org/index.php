@@ -9,9 +9,16 @@
 /**
  * @param string $msg
  */
-function dieOut( $msg = '' ) {
-	header( "HTTP/1.0 500 Internal Server Error" );
-	die( "Wikimedia search service internal error.\n\n$msg" );
+function dieOut( $msg = '', $code = 500 ) {
+	$error = 'bad request';
+	if ( $code < 400 ) {
+		$code = 500;
+	}
+	if ( $code >= 500 ) {
+		$error = 'internal error';
+	}
+	http_response_code( $code );
+	die( "Wikimedia search service $error.\n\n$msg" );
 }
 
 error_reporting( E_ALL );
@@ -33,8 +40,7 @@ if ( isset( $_GET['search'] ) ) {
 	}
 }
 if ( !$search ) {
-	header( 'HTTP/1.0 400 Bad Request' );
-	die( "Wikimedia search service bad request.\n\nRequest must include a 'search' parameter" );
+	dieOut( "Request must include a 'search' parameter", 400 );
 }
 
 if ( isset( $_GET['limit'] ) ) {
@@ -60,7 +66,7 @@ if ( $result === false || !$code ) {
 	dieOut( "Backend failure." );
 }
 if ( $code != 200 ) {
-	dieOut( "Backend failure: it returned HTTP code $code." );
+	dieOut( "Backend failure: it returned HTTP code $code.", $code );
 }
 
 $suggest = json_decode( $result );
