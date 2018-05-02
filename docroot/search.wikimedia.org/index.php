@@ -60,6 +60,9 @@ if ( $result === false || !$code ) {
 	dieOut( "Backend failure." );
 }
 if ( $code != 200 ) {
+	if ( $code >= 400 ) {
+		http_response_code( $code );
+	}
 	dieOut( "Backend failure: it returned HTTP code $code." );
 }
 
