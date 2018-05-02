@@ -13566,6 +13566,7 @@ $wgConf->settings = [
 		'sfs.gov.ua',                       // Ukraine government website - T185399
 		'dknii.gov.ua',                     // Ukraine government website - T185399
 		'adm.dp.gov.ua',                    // Ukraine government website - T191692
+		'images.rkd.nl',                    // Collection Netherlands - T193639
 	],
 ],
 
