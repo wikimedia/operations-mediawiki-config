@@ -20191,7 +20191,7 @@ $wgConf->settings = [
 				'ext-quicksurveys-example-internal-survey-answer-neutral',
 				'ext-quicksurveys-example-internal-survey-answer-negative',
 			],
-			'coverage ' => 0.0,
+			'coverage' => 0.0,
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 			],
