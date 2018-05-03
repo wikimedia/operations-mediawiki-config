@@ -8857,6 +8857,10 @@ $wgConf->settings = [
 			'upload' => true,
 			'reupload' => true,
 			'reupload-own' => true,
+			'autoerview' => true,
+			'autoreviewrestore' => true,
+			'validate' => true,
+			'review' => true,
 		], // T87558, T135370, T135725, T176553
 		'sysop' => [
 			'extendedconfirmed' => true,
