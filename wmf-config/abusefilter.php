@@ -198,6 +198,9 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['abusefilter']['abusefilter-revert'] = true;
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
 		$wgGroupPermissions['abusefilter']['abusefilter-modify-restricted'] = true;
+		$wgGroupPermissions['eliminator']['abusefilter-log'] = true;
+		$wgGroupPermissions['eliminator']['abusefilter-log-detail'] = true;
+		$wgGroupPermissions['eliminator']['abusefilter-view'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-log'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-log-private'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-view'] = true;
