@@ -9,7 +9,6 @@ import os
 import subprocess
 
 import scap.cli as cli
-import scap.git as git
 import scap.utils as utils
 
 
@@ -20,8 +19,10 @@ class BetaUpdate(cli.Application):
     def main(self, *extra_args):
         """Do all kinds of weird stuff for beta."""
 
-        # These are all joined with stage_dir, so '' becomes /srv/mediawiki-staging/, etc.
-        # php-master is like php-1.xx.y-wmf.z we use in production but is tracking...master ;-)
+        # These are all joined with stage_dir, so '' becomes
+        # /srv/mediawiki-staging/, etc.
+        # php-master is like php-1.xx.y-wmf.z we use in production but is
+        # tracking...master ;-)
         pull_paths = [
             '',
             'php-master',

@@ -77,15 +77,15 @@ class Clean(main.AbstractSync):
         logger = self.get_logger()
 
         if delete:
-            gerrit_prune_cmd = ['git', 'push', 'origin', '--quiet', '--delete',
-                                'wmf/%s' % branch]
+            git_prune_cmd = ['git', 'push', 'origin', '--quiet', '--delete',
+                             'wmf/%s' % branch]
             with log.Timer('prune-git-branches', self.get_stats()):
                 # Prune all the submodules' remote branches
                 with utils.cd(stage_dir):
                     submodule_cmd = 'git submodule foreach "{} ||:"'.format(
-                        ' '.join(gerrit_prune_cmd))
+                        ' '.join(git_prune_cmd))
                     subprocess.check_output(submodule_cmd, shell=True)
-                    if subprocess.call(gerrit_prune_cmd) != 0:
+                    if subprocess.call(git_prune_cmd) != 0:
                         logger.info('Failed to prune core branch')
             with log.Timer('removing-local-copy'):
                 self._maybe_delete(stage_dir)

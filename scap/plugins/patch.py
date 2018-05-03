@@ -1,10 +1,14 @@
+"""
+Handle patching of files
+"""
+
 from __future__ import unicode_literals
 
 import os.path
 import subprocess
 
-import scap.cli as cli
-import scap.utils as utils
+from scap import cli
+from scap import utils
 
 
 class PatchError(Exception):
@@ -58,17 +62,19 @@ class SecurityPatchManager(cli.Application):
                 patchfile = os.path.join(base, path, filename)
                 try:
                     self.apply_patch(patchfile, repo_dir)
-                except PatchError as e:
-                    os.rename(e.patch, e.patch + ".failed")
-                    logger.exception(e)
+                except PatchError as patche:
+                    os.rename(patche.patch, patche.patch + ".failed")
+                    logger.exception(patche)
 
     def checkdir(self, name, path):
+        """Make sure a directory exists"""
         if not os.path.isdir(path):
             msg = '%s directory "%s" does not exist.' % (name, path)
             self.get_logger().error(msg)
             raise ValueError(msg)
 
     def get_patches(self, path=''):
+        """Get patches in a directory"""
         patchdir = os.path.join(self.patchdir, path)
         prefix_length = len(self.patchdir) + 1
         for folder, subdirs, files in os.walk(patchdir):
@@ -80,6 +86,7 @@ class SecurityPatchManager(cli.Application):
                     yield self.patchdir, folder[prefix_length:], filename
 
     def check_patch(self, patch):
+        """Check if a patch file is ok"""
         try:
             subprocess.check_call(['git', 'apply', '--check', '-3', patch])
         except subprocess.CalledProcessError as ex:
@@ -87,6 +94,7 @@ class SecurityPatchManager(cli.Application):
             raise PatchError(msg, patch)
 
     def apply_patch(self, patch, repo_dir='./'):
+        """Apply a patch"""
         with utils.cd(repo_dir):
             self.check_patch(patch)
             if not self.arguments.check_only:

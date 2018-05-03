@@ -4,7 +4,7 @@
     ~~~~~~~~~~~~~~~~~~~~~~~
 
     Sync (scap pull) canary hosts
-    
+
     Copyright © 2014-2017 Wikimedia Foundation and Contributors.
 
     This file is part of Scap.
@@ -68,7 +68,7 @@ class SyncCanary(AbstractSync):
             self._sync_masters()
 
             sync_cmd = self._apache_sync_command(
-                self._get_master_list())
+                self.get_master_list())
             sync_cmd.append(socket.getfqdn())
             update_canaries = ssh.Job(
                 canaries,
@@ -79,7 +79,7 @@ class SyncCanary(AbstractSync):
                 log.reporter(
                     'sync-canaries',
                     self.config['fancy_progress']))
-            succeeded, failed = update_canaries.run()
+            _succeeded, failed = update_canaries.run()
 
             if failed:
                 self.get_logger().warning(

@@ -40,7 +40,7 @@ class UpdateInterwikiCache(main.SyncFile):
         subprocess.check_call(['/usr/bin/git', 'push', '-q', 'origin',
                                'HEAD:refs/for/master%l=Code-Review+2'])
 
-        if not utils.confirm('Has Jenkins merged your gerrit change yet?'):
+        if not utils.confirm('Has your change merged yet?'):
             subprocess.check_call(['/usr/bin/git', 'reset', '--hard',
                                    'origin/master'])
             raise RuntimeError('Aborting, you should not sync unmerged code')

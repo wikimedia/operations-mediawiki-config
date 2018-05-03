@@ -7,11 +7,11 @@ import re
 import shutil
 import subprocess
 
-import scap.cli as cli
-import scap.git as git
-import scap.utils as utils
+from scap import cli
+from scap import git
+from scap import utils
 
-GERRIT_URL = 'https://gerrit.wikimedia.org/r/'
+SOURCE_URL = 'https://gerrit.wikimedia.org/r/'
 
 
 def version_parser(ver):
@@ -55,7 +55,7 @@ def master_stuff(dest_dir):
 
     for dest, upstream in repos.items():
         path = os.path.join(dest_dir, dest)
-        url = GERRIT_URL + upstream
+        url = SOURCE_URL + upstream
 
         if os.path.exists(path):
             with utils.cd(path):
@@ -110,7 +110,7 @@ class CheckoutMediaWiki(cli.Application):
             self.get_logger().info('Version already checked out')
             return 0
 
-        git.fetch(dest_dir, GERRIT_URL + 'mediawiki/core', reference_dir)
+        git.fetch(dest_dir, SOURCE_URL + 'mediawiki/core', reference_dir)
 
         with utils.cd(dest_dir):
             if subprocess.call(['/usr/bin/git', 'config',
