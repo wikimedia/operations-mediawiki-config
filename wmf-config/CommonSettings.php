@@ -1825,6 +1825,8 @@ if ( $wmgUseCentralNotice ) {
 	// support (T135963) is deployed.
 	$wgCentralNoticeContentSecurityPolicy = "default-src *.wikimedia.org *.wikipedia.org *.wiktionary.org *.wikisource.org *.wikibooks.org *.wikiversity.org *.wikiquote.org *.wikinews.org www.mediawiki.org www.wikidata.org *.wikivoyage.org data: blob: 'self'; script-src *.wikimedia.org 'unsafe-inline' 'unsafe-eval' 'self'; style-src *.wikimedia.org data: 'unsafe-inline' 'self';";
 
+	// Temporary low-level activation of EventLogging impression data for testing
+	$wgCentralNoticeImpressionEventSampleRate = 0.01;
 }
 
 // Load our site-specific l10n extension
