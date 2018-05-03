@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dd8e0d96_e98102b2",
+        "filename": "docroot/search.wikimedia.org/index.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-05-03T00:13:24Z",
+      "side": 1,
+      "message": "Nice sanity filter, so if backend returns 1xx, 204, 3xx etc, we won\u0027t re-use.\n\nBut.. if that happens the good thing is we won\u0027t use it, the bad thing is, we won\u0027t use any, which means implicit 200 OK, where previous 500. Maybe still use 500 in that case?\n\nE.g.\n\n if ( $code \u003c 400 ) {\n   $code \u003d 500;\n }\n http_response_code( $code );\n $error \u003d ...\n ..",
+      "range": {
+        "startLine": 14,
+        "startChar": 6,
+        "endLine": 14,
+        "endChar": 18
+      },
+      "revId": "f5733c3fcb67058623be79b89da0f1ee49b50316",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
