@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7dfd8d72_d5bb0b0e",
+        "filename": "dblists/all.dblist",
+        "patchSetId": 5
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-05-03T22:28:09Z",
+      "side": 1,
+      "message": "Could you draft a separate commit for the sorting in this and other files?",
+      "range": {
+        "startLine": 71,
+        "startChar": 2,
+        "endLine": 71,
+        "endChar": 9
+      },
+      "revId": "4ed8382337e2252058d6cfbefefc339f3cee8eac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
