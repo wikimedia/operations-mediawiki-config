@@ -22,6 +22,30 @@
       "revId": "4ed8382337e2252058d6cfbefefc339f3cee8eac",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5cce4bcc_f12b9498",
+        "filename": "dblists/all.dblist",
+        "patchSetId": 5
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-05-04T08:11:48Z",
+      "side": 1,
+      "message": "I could but is it worth the effort? It\u0027s not like there are so many entries involved that makes the patch hard to review IMHO.",
+      "parentUuid": "7dfd8d72_d5bb0b0e",
+      "range": {
+        "startLine": 71,
+        "startChar": 2,
+        "endLine": 71,
+        "endChar": 9
+      },
+      "revId": "4ed8382337e2252058d6cfbefefc339f3cee8eac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
