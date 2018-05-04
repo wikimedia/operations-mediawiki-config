@@ -19451,6 +19451,7 @@ $wgConf->settings = [
 	'fiwiki' => true, // T163011
 	'frwiki' => true,
 	'hewiki' => true, // T161621
+	'lvwiki' => true, // T192499
 	'nlwiki' => true, // T139432
 	'plwiki' => true, // T140005
 	'ptwiki' => true, // T139692
@@ -19713,6 +19714,18 @@ $wgConf->settings = [
 		// damaging uses defaults for everything
 		'goodfaith' => [
 			'likelygood' => [ 'min' => 'maximum recall @ precision => 0.998', 'max' =>  1 ],
+			'maybebad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.15' ],
+			// likelybad uses default
+			'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.9' ],
+		],
+	],
+	'lvwiki' => [
+		'damaging' => [
+			'likelygood' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.998' ],
+			// maybebad, likelybad and verylikelybad use defaults
+		],
+		'goodfaith' => [
+			'likelygood' => [ 'min' => 'maximum recall @ precision => 0.997', 'max' =>  1 ],
 			'maybebad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.15' ],
 			// likelybad uses default
 			'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.9' ],
