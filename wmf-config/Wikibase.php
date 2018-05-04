@@ -117,7 +117,7 @@ if ( $wmgUseWikibaseRepo ) {
 	}
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		// These settings can be overridden by the cron parameters in operations/puppet
-		$wgWBRepoSettings['dispatchMaxTime'] = 900;
+		$wgWBRepoSettings['dispatchMaxTime'] = 0;
 		$wgWBRepoSettings['dispatchDefaultBatchSize'] = 200;
 		$wgWBRepoSettings['dispatchDefaultDispatchInterval'] = 30;
 	}
