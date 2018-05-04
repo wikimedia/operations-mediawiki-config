@@ -19441,6 +19441,7 @@ $wgConf->settings = [
 'wmgUseORES' => [
 	'default' => false,
 
+	'arwiki' => true, // T192498
 	'cswiki' => true, // T151611
 	'enwiki' => true, // T140003
 	'eswiki' => true, // T130279
@@ -19476,6 +19477,14 @@ $wgConf->settings = [
 		'reverted' => [ 'enabled' => false ],
 		'wp10' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanupParent' => true ],
 		'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ] ], // T179596
+	],
+	'arwiki' => [
+		'damaging' => [ 'enabled' => true ],
+		// goodfaith is disabled for arwiki (T192498, T193905)
+		'goodfaith' => [ 'enabled' => false ],
+		'reverted' => [ 'enabled' => false ],
+		'wp10' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanupParent' => true ],
+		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
 	],
 ],
 'wgOresFiltersThresholds' => [
@@ -19707,6 +19716,15 @@ $wgConf->settings = [
 			// likelybad uses default
 			'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.9' ],
 		],
+	],
+	'arwiki' => [
+		'damaging' => [
+			'likelygood' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.997' ],
+			// maybebad uses default
+			'likelybad' => [ 'min' => 'maximum recall @ prevision >= 0.45', 'max' => 1 ],
+			'verylikelybad' => false,
+		],
+		// goodfaith is disabled for arwiki (T192498, T193905)
 	],
 ],
 'wmgOresDefaultSensitivityLevel' => [
