@@ -19917,18 +19917,11 @@ $wgConf->settings = [
 	// Wikibookses
 	'dewikibooks' => null,
 	'enwikibooks' => null,
-	'eowikibooks' => null,
 	'eswikibooks' => null,
 	'fiwikibooks' => null,
 	'frwikibooks' => null,
 	'hewikibooks' => null,
-	'huwikibooks' => null,
-	'itwikibooks' => null,
-	'kawikibooks' => null,
-	'nlwikibooks' => null,
-	'ptwikibooks' => null,
 	'sqwikibooks' => null,
-	'urwikibooks' => null,
 
 	// Wikisources
 	'sourceswiki' => null,
