@@ -8,11 +8,10 @@
 """
 from __future__ import print_function, unicode_literals
 
-import sys
-import scap.cli as cli
-import scap.utils as utils
-import scap.ansi as ansi
-import scap.plugins.gerrit as gerrit
+from scap import ansi
+from scap import cli
+from scap import utils
+from . import gerrit
 
 
 @cli.command('swat', help='Mediawiki SWAT deployment helper.',
@@ -23,6 +22,14 @@ import scap.plugins.gerrit as gerrit
 @cli.argument('-m', '--message', nargs="+", default="",
               help='Include a message or comment with your action.')
 class Swat(cli.Application):
+    """Execute a swat session."""
+
+    def __init__(self, exe_name):
+        super(Swat, self).__init__(exe_name)
+        self.branches = None
+        self.changeids = None
+        self.message = ''
+
     '''
     scap swat: cherry-pick and deploy patches for Mediawiki SWAT.
 
@@ -47,12 +54,12 @@ class Swat(cli.Application):
     '''
     @cli.argument('changeid', nargs='+', default=[],
                   help='Change-id or gerrit patch url')
-    def merge(self, *extra_args):
+    def merge(self):
         """ scap swat """
         logger = self.get_logger()
         for changeid in self.changeids:
             change = gerrit.ChangeDetail(changeid)
-            data = change.get()
+            change.get()
             self.display_change(change)
             actions = change.revision('actions').get()
             if actions.rebase.enabled:
@@ -68,14 +75,15 @@ class Swat(cli.Application):
             change.get()
 
             def submit():
-
+                """Submit the change?"""
                 if utils.confirm('Submit the change?', True):
                     change.revision('submit').post()
 
             def approve():
+                """Approve the change?"""
                 logger.debug("Approval Message: %s", self.message)
                 if utils.confirm('Vote +2 and submit?', True):
-                    reviewinput={
+                    reviewinput = {
                         "message": self.message,
                         "labels": {
                             "Code-Review": "+2"
@@ -92,25 +100,24 @@ class Swat(cli.Application):
                 approve()
 
     def arg_val(self, name, default=None):
-        """ return a single value for the named cli argument """
+        """Return a single value for the named cli argument"""
         arg = getattr(self.arguments, name, default)
         if isinstance(arg, list) and len(arg) == 1:
             return arg.pop()
         return arg
 
-    def arg_values(self, name, default=[]):
-        """ return a list of values for the named cli argument """
+    def arg_values(self, name, default=None):
+        """Return a list of values for the named cli argument"""
+        if default is None:
+            default = []
         arg = getattr(self.arguments, name, default)
         return arg if isinstance(arg, list) else [arg]
 
     def _process_arguments(self, args, extra_args):
         self.arguments = args
         if 'branch' not in args or not args.branch:
-            try:
-                self.branches = self.active_wikiversions().keys()
-            except Exception:
-                self.branches = []
-        elif type(args.branch) is not list:
+            self.branches = self.active_wikiversions().keys()
+        elif not isinstance(args.branch, list):
             self.branches = [args.branch]
         else:
             self.branches = args.branch
@@ -125,13 +132,14 @@ class Swat(cli.Application):
         Get confirmation from the user if a specified cli flag was omitted.
         """
 
-        if (flag in self.arguments):
+        if flag in self.arguments:
             return True
         if bail:
             bail = Exception(bail)
         utils.confirm(prompt, default, on_rejected=bail)
 
     def display_change(self, change):
+        """Display the change."""
         data = change.data
         code_review = data.labels['Code-Review']
         del data.messages
@@ -142,9 +150,9 @@ class Swat(cli.Application):
         display = DataDisplay(data['owner'])
         display.show('username', 'name')
         display = DataDisplay(data)
-        display.show('status', 'subject', 'topic','updated',
+        display.show('status', 'subject', 'topic', 'updated',
                      'change_id', 'project', 'branch')
-        other_branches = mergeable.get(params={'other-branches':''})
+        other_branches = mergeable.get(params={'other-branches': ''})
         gerrit.dump_json(other_branches)
 
         print("Votes:")
@@ -156,7 +164,7 @@ class Swat(cli.Application):
 
     @cli.argument('changeid', nargs=1, default=[],
                   help='The ChangeId of a patch to merge.')
-    def pick(self, command):
+    def pick(self):
         '''Cherry-pick one or more changes to all active wiki branches.
 
         Once the changes have been cherry-picked, merge them and deploy.
@@ -180,23 +188,23 @@ class Swat(cli.Application):
                   help='Gerrit search term(s). E.g: status:open owner:self')
     @cli.argument('-n', type=int, nargs=1, default='10',
                   help='Number of results to show. Default: 10')
-    def search(self, args):
+    def search(self):
         ''' execute a gerrit query '''
 
         query = ' '.join(self.arguments.terms)
 
-        print ("Searching for: %s" % query)
+        print("Searching for: %s" % query)
         changes = gerrit.Changes()
         res = changes.query(query, n=self.arguments.n)
         gerrit.dump_json(res)
 
     @cli.argument('changeid', nargs="+",
                   help='The ChangeIds of one or more patches to display.')
-    def show(self, command):
+    def show(self):
         ''' Display details about the given changeids '''
         for changeid in self.changeids:
             change = gerrit.ChangeDetail(changeid)
-            data = change.get()
+            change.get()
             self.display_change(change)
 
     @cli.argument('changeid', nargs=1,
@@ -207,22 +215,22 @@ class Swat(cli.Application):
         changeids = self.arguments.changeid
         for changeid in changeids:
             change = gerrit.Change(changeid)
-            try:
-                res = change('revert').post(data={"message": message})
-                gerrit.dump_json(res)
-            except Exception as e:
-                print(e.message)
+            res = change('revert').post(data={"message": message})
+            gerrit.dump_json(res)
 
 
 class DataDisplay(object):
+    """Display some data in a pretty way."""
+
     def __init__(self, data):
         self.data = data
         self.longest_label = 0
 
     def show(self, *fields):
+        """Show the fields"""
         col = []
         for field in fields:
-            if (len(field) > self.longest_label):
+            if len(field) > self.longest_label:
                 self.longest_label = len(field)
             row = (field, self.data.get(field, ''))
             col.append(row)
