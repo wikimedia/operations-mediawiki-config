@@ -30,6 +30,10 @@ class PatchError(Exception):
 @cli.command('patch')
 class SecurityPatchManager(cli.Application):
     """ Scap sub-command to manage mediawiki security patches """
+    def __init__(self, exe_name):
+        super(SecurityPatchManager, self).__init__(exe_name)
+        self.branchdir = None
+        self.patchdir = None
 
     def _process_arguments(self, args, extra_args):
         return args, extra_args
@@ -77,7 +81,7 @@ class SecurityPatchManager(cli.Application):
         """Get patches in a directory"""
         patchdir = os.path.join(self.patchdir, path)
         prefix_length = len(self.patchdir) + 1
-        for folder, subdirs, files in os.walk(patchdir):
+        for folder, _, files in os.walk(patchdir):
             for filename in files:
                 if filename.endswith('.failed'):
                     self.get_logger().warning('Skipping failed patch: %s/%s',
