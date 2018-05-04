@@ -19438,6 +19438,7 @@ $wgConf->settings = [
 'wmgUseORES' => [
 	'default' => false,
 
+	'cawiki' => true, // T192501
 	'cswiki' => true, // T151611
 	'enwiki' => true, // T140003
 	'eswiki' => true, // T130279
@@ -19701,6 +19702,15 @@ $wgConf->settings = [
 		'goodfaith' => [
 			'likelygood' => [ 'min' => 'maximum recall @ precision >= 0.99', 'max' => 1 ],
 			'maybebad' => false,
+			// likelybad uses default
+			'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.9' ],
+		],
+	],
+	'cawiki' => [
+		// damaging uses defaults for everything
+		'goodfaith' => [
+			'likelygood' => [ 'min' => 'maximum recall @ precision => 0.998', 'max' => 1 ],
+			'maybebad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.15' ],
 			// likelybad uses default
 			'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.9' ],
 		],
