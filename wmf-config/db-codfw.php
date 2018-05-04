@@ -172,7 +172,7 @@ $wgLBFactoryConf = [
 		'db2045'      => 0,   # B3 2.9TB 160GB, master
 		'db2079'      => 10,  # A5 3.3TB 512GB, vslow, dump # candidate master
 		'db2080'      => 10,  # C5 3.3TB 512GB, api
-		# 'db2081'      => 10,  # A6 3.3TB 512GB, api # hardware issues? T193325
+		'db2081'      => 10,  # A6 3.3TB 512GB, api
 		'db2082'      => 100, # B6 3.3TB 512GB
 		# 'db2083'      => 100, # C6 3.3TB 512GB # used as testing host do not repool - T188279
 		'db2085:3318' => 1, # A5 3.3TB 512GB # rc, log: s1 and s8
@@ -483,7 +483,7 @@ $wgLBFactoryConf = [
 		],
 		'api' => [
 			'db2080' => 1,
-			# 'db2081' => 1,
+			'db2081' => 1,
 		],
 	],
 ],
