@@ -92,6 +92,18 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBRepoSettings = $wgWBSharedSettings + $wgWBRepoSettings;
 
+	if ( $wgDBname === 'wikidatawiki' ) {
+		$wgWBRepoSettings['dispatchMaxTime'] = 540;
+		$wgWBRepoSettings['dispatchDefaultBatchSize'] = 420;
+		$wgWBRepoSettings['dispatchDefaultDispatchInterval'] = 25;
+		$wgWBRepoSettings['dispatchDefaultDispatchRandomness'] = 15;
+	}
+	if ( $wgDBname === 'testwikidatawiki' ) {
+		$wgWBRepoSettings['dispatchMaxTime'] = 900;
+		$wgWBRepoSettings['dispatchDefaultBatchSize'] = 200;
+		$wgWBRepoSettings['dispatchDefaultDispatchInterval'] = 30;
+	}
+
 	$wgWBRepoSettings['statementSections'] = [
 		'item' => [
 			'statements' => null,
