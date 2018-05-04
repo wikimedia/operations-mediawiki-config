@@ -19451,6 +19451,7 @@ $wgConf->settings = [
 	'fiwiki' => true, // T163011
 	'frwiki' => true,
 	'hewiki' => true, // T161621
+	'huwiki' => true, // T192496
 	'lvwiki' => true, // T192499
 	'nlwiki' => true, // T139432
 	'plwiki' => true, // T140005
@@ -19729,6 +19730,21 @@ $wgConf->settings = [
 			'maybebad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.15' ],
 			// likelybad uses default
 			'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.9' ],
+		],
+	],
+	'huwiki' => [
+		'damaging' => [
+			// HACK: pegging this to recall because that's the only way to not have overlap with maybebad
+			// Pegging to precision >= 0.998 doesn't do the trick
+			'likelygood' => [ 'min' => 0, 'max' => 'maximum precision @ recall >= 0.9' ],
+			'maybebad' => [ 'min' => 'maximum recall @ precision >= 0.15' ],
+			// likelybad and verylikelybad use defaults
+		],
+		'goodfaith' => [
+			'likelygood' => [ 'min' => 'maximum recall @ precision => 0.997', 'max' =>  1 ],
+			'maybebad' => false,
+			'likelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.45' ],
+			'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.75' ],
 		],
 	],
 ],
