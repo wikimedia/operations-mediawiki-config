@@ -92,6 +92,20 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBRepoSettings = $wgWBSharedSettings + $wgWBRepoSettings;
 
+	if ( $wgDBname === 'wikidatawiki' ) {
+		// These settings can be overridden by the cron parameters in operations/puppet
+		$wgWBRepoSettings['dispatchMaxTime'] = 600;
+		$wgWBRepoSettings['dispatchDefaultBatchSize'] = 420;
+		$wgWBRepoSettings['dispatchDefaultDispatchInterval'] = 25;
+		$wgWBRepoSettings['dispatchDefaultDispatchRandomness'] = 15;
+	}
+	if ( $wgDBname === 'testwikidatawiki' ) {
+		// These settings can be overridden by the cron parameters in operations/puppet
+		$wgWBRepoSettings['dispatchMaxTime'] = 900;
+		$wgWBRepoSettings['dispatchDefaultBatchSize'] = 200;
+		$wgWBRepoSettings['dispatchDefaultDispatchInterval'] = 30;
+	}
+
 	$wgWBRepoSettings['statementSections'] = [
 		'item' => [
 			'statements' => null,
