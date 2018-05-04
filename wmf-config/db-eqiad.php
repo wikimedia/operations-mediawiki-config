@@ -116,7 +116,7 @@ $wgLBFactoryConf = [
 	],
 	's2' => [
 		'db1054' => 0,      # A3 2.8TB  96GB, master
-		# 'db1060' => 1,      # C2 2.8TB  96GB, vslow, dump, api #master for db1102 (sanitarium 3)
+		# 'db1060' => 1,      # C2 2.8TB  96GB, vslow, dump, api #master for db1102 (sanitarium 3) # to be decomm T193732
 		'db1074' => 300,    # A2 3.6TB 512GB, api
 		'db1076' => 500,    # B1 3.6TB 512GB # candidate master
 		'db1090:3312' => 1, # C3 3.6TB 512GB, vslow, dump: s2 and s7
