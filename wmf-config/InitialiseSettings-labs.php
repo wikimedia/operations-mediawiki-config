@@ -463,6 +463,37 @@ function wmfLabsSettings() {
 			'wikidatawiki' => true,
 		],
 
+		'wmgUseWikibaseLexeme' => [
+			'default' => false,
+		],
+
+		'wgLexemeLanguageCodePropertyId' => [
+			'default' => null,
+			'wikidatawiki' => 'P218',
+		],
+
+		'wmgWikibaseIdBlacklist' => [
+			'default' => [
+				'wikibase-lexeme' => [ 2, 4, 6, 8 ],
+			],
+		],
+
+		'wmgWikibaseDisabledDataTypes' => [
+			'default' => [ 'wikibase-sense' ],
+		],
+
+		'wgLexemeEnableSenses' => [
+			'default' => false,
+		],
+
+		'wmgWikibaseDisabledAccessEntityTypes' => [
+			'default' => [ 'lexeme', 'form', 'sense' ],
+		],
+
+		'wmgWikibaseDisabledRdfExportEntityTypes' => [
+			'default' => [ 'lexeme', 'form', 'sense' ],
+		],
+
 		// Test the extension Collection in other languages for book creator,
 		// which avoids the bugs related to the PDF generator.
 		'wmgUseCollection' => [
