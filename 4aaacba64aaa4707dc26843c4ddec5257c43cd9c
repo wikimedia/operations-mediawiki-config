@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4813bb71_62c988fd",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2986,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-05-06T03:28:08Z",
+      "side": 1,
+      "message": "While this key exists in mediawiki\u0027s DefaultSettings.php, the array is allowed to be recreated without it. Core code treats as an optional key with isset() e.g. in LocalisationCache.php.\n\nMight want to use isset() here as well, or !empty(), given this code isn\u0027t responsible for ensuring its existence.",
+      "range": {
+        "startLine": 2986,
+        "startChar": 6,
+        "endLine": 2986,
+        "endChar": 47
+      },
+      "revId": "4aaacba64aaa4707dc26843c4ddec5257c43cd9c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
