@@ -18430,6 +18430,10 @@ $wgConf->settings = [
 	'wiktionary' => true,
 ],
 
+'wmgUseWikibaseLexeme' => [
+	'default' => false,
+],
+
 'wmgUseArticlePlaceholder' => [
 	'default' => false,
 	'bnwiki' => true,
@@ -18475,6 +18479,33 @@ $wgConf->settings = [
 	// here does not work the same way. Instead, put defaults in Wikibase.php
 	'default' => [
 	],
+],
+
+'wgLexemeLanguageCodePropertyId' => [
+	'default' => null,
+	'wikidatawiki' => 'P218',
+	'testwikidatawiki' => 'null', //TODO
+],
+
+'wmgWikibaseIdBlacklist' => [
+	'default' => [],// TODO populate for LEXEME with IDs from https://gerrit.wikimedia.org/r/#/c/430611/
+],
+
+// TODO does this setting have the correct name?
+'wgDisabledDataTypes' => [
+	'default' => [ 'wikibase-sense' ], // TODO is this still named wikibase-sense ?
+],
+
+'wgLexemeEnableSenses' => [
+	'default' => false,
+],
+
+'wmgWikibaseDisabledAccessEntityTypes' => [
+	'default' => [ 'lexeme', 'form', 'sense'],
+],
+
+'wmgWikibaseDisabledRdfExportEntityTypes' => [
+	'default' => [ 'lexeme', 'form', 'sense'],
 ],
 
 // T151717 and T177153

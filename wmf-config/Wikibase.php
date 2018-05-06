@@ -18,6 +18,10 @@ if ( !empty( $wmgUseWikibaseClient ) ) {
 	}
 }
 
+if ( !empty( $wmgUseWikibaseLexeme ) ) {
+	wfLoadExtension( 'WikibaseLexeme' );
+}
+
 // This allows cache invalidations to be in sync with deploys
 // and not shared across different versions of wikibase.
 // e.g. wikibase_shared/1_31_0-wmf_2-testwikidatawiki0 for test wikis
@@ -101,6 +105,8 @@ if ( $wmgUseWikibaseRepo ) {
 			],
 		],
 	];
+
+	$wgWBRepoSettings['idBlacklist'] = $wmgWikibaseIdBlacklist;
 
 	$wgWBRepoSettings['normalizeItemByTitlePageNames'] = true;
 
@@ -311,6 +317,8 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings[$setting] = $value;
 	}
 
+	$wgWBClientSettings['disabledAccessEntityTypes'] = $wmgWikibaseDisabledAccessEntityTypes;
+	$wgWBClientSettings['disabledRdfExportEntityTypes'] = $wmgWikibaseDisabledRdfExportEntityTypes;
 	$wgWBClientSettings['allowLocalShortDesc'] = $wmgWikibaseAllowLocalShortDesc;
 	$wgWBClientSettings['allowDataTransclusion'] = $wmgWikibaseEnableData;
 	$wgWBClientSettings['allowDataAccessInUserLanguage'] = $wmgWikibaseAllowDataAccessInUserLanguage;

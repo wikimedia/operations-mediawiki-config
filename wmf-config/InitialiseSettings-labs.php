@@ -450,6 +450,10 @@ function wmfLabsSettings() {
 			'wikidataclient' => true,
 		],
 
+		'wmgUseWikibaseLexeme' => [
+			'default' => false,
+		],
+
 		'wmgWikibaseAllowLocalShortDesc' => [
 			'default' => false,
 			'enwiki' => true,
@@ -458,6 +462,12 @@ function wmfLabsSettings() {
 		'wmgWikibaseAllowDataAccessInUserLanguage' => [
 			'default' => false,
 			'wikidatawiki' => true,
+		],
+
+		'wgLexemeLanguageCodePropertyId' => [
+			'default' => null,
+			'wikidatawiki' => null, //TODO
+			'testwikidatawiki' => null, //TODO
 		],
 
 		// Test the extension Collection in other languages for book creator,
