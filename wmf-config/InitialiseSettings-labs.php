@@ -460,6 +460,36 @@ function wmfLabsSettings() {
 			'wikidatawiki' => true,
 		],
 
+		'wmgUseWikibaseLexeme' => [
+			'default' => false,
+		],
+
+		'wgLexemeLanguageCodePropertyId' => [
+			'default' => null,
+			'wikidatawiki' => null, //TODO
+		],
+
+		'wmgWikibaseIdBlacklist' => [
+			// TODO populate for PROD with IDs from https://gerrit.wikimedia.org/r/#/c/430611/
+			'default' => [],
+		],
+
+		'wmgWikibaseDisabledDataTypes' => [
+			'default' => [ 'wikibase-sense' ],
+		],
+
+		'wgLexemeEnableSenses' => [
+			'default' => false,
+		],
+
+		'wmgWikibaseDisabledAccessEntityTypes' => [
+			'default' => [ 'lexeme', 'form', 'sense'],
+		],
+
+		'wmgWikibaseDisabledRdfExportEntityTypes' => [
+			'default' => [ 'lexeme', 'form', 'sense'],
+		],
+
 		// Test the extension Collection in other languages for book creator,
 		// which avoids the bugs related to the PDF generator.
 		'wmgUseCollection' => [
