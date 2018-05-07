@@ -90,7 +90,7 @@ if ( $wmgUseFileExporter ) {
 }
 
 if ( $wmgUseContentTranslation ) {
-	$wgContentTranslationSiteTemplates['cx'] = 'https://cxserver-beta.wmflabs.org/v1';
+	$wgContentTranslationSiteTemplates['cx'] = '//en.wikipedia.beta.wmflabs.org/api/rest_v1';
 	$wgContentTranslationSiteTemplates['cookieDomain'] = false;
 	$wgContentTranslationTranslateInTarget = false;
 }
