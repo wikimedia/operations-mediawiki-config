@@ -257,6 +257,9 @@ function wmfLabsSettings() {
 		'-wgKartographerEnableMapFrame' => [
 			'default'	=> true,
 		],
+		'-wgKartographerUsePageLanguage' => [
+			'default' => true,
+		],
 
 		'wgMobileUrlTemplate' => [
 			'default' => '%h0.m.%h1.%h2.%h3.%h4',
