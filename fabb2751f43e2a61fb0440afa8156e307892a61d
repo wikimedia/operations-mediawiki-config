@@ -22,6 +22,30 @@
       "revId": "fabb2751f43e2a61fb0440afa8156e307892a61d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac068df_3a591c3b",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 491,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-05-07T14:26:55Z",
+      "side": 1,
+      "message": "So, they could be in wikibase-labs, but that will in the long run just require a long stack of IFs as different sites will require different configs.\nThis will become even more apparently and horrible once commons is also a wikibase repo.\n\nIMO it would be cool if all of the actual configuration from those files could end up in INITIALISE-settings, and the wikibase* files just provide the framework for transfering / configuring the wikibase specific config arrays.",
+      "parentUuid": "adbff5e0_94132446",
+      "range": {
+        "startLine": 463,
+        "startChar": 2,
+        "endLine": 491,
+        "endChar": 4
+      },
+      "revId": "fabb2751f43e2a61fb0440afa8156e307892a61d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
