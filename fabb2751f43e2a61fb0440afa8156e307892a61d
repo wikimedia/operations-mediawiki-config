@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "adbff5e0_94132446",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 491,
+      "author": {
+        "id": 920
+      },
+      "writtenOn": "2018-05-07T14:24:07Z",
+      "side": 1,
+      "message": "Most of these configs should go to wikibase-labs.php and not here.",
+      "range": {
+        "startLine": 463,
+        "startChar": 2,
+        "endLine": 491,
+        "endChar": 4
+      },
+      "revId": "fabb2751f43e2a61fb0440afa8156e307892a61d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
