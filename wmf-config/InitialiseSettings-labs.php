@@ -465,6 +465,7 @@ function wmfLabsSettings() {
 
 		'wmgUseWikibaseLexeme' => [
 			'default' => false,
+			'wikidatawiki' => true,
 		],
 
 		'wgLexemeLanguageCodePropertyId' => [
