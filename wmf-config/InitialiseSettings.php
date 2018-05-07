@@ -20323,10 +20323,6 @@ $wgConf->settings = [
 	'test2wiki' => true,
 ],
 
-'wgKartographerDfltStyle' => [
-	'default' => 'osm-intl',
-],
-
 'wgKartographerUsePageLanguage' => [
 	'default' => true,
 ],
