@@ -118,10 +118,10 @@ $wgLBFactoryConf = [
 	's2' => [
 		'db1054' => 0,      # A3 2.8TB  96GB, master
 		# 'db1060' => 1,      # C2 2.8TB  96GB, vslow, dump, api #master for db1102 (sanitarium 3) # to be decomm T193732
-		'db1074' => 300,    # A2 3.6TB 512GB, api
+		# 'db1074' => 300,    # A2 3.6TB 512GB, api # going to move db1102 there
 		'db1076' => 500,    # B1 3.6TB 512GB # candidate master
 		'db1090:3312' => 1, # C3 3.6TB 512GB, vslow, dump: s2 and s7
-		'db1122' => 500,    # D6 3.6TB 512GB, api
+		'db1122' => 200,    # D6 3.6TB 512GB, api # temporarily lower weight
 		'db1103:3312' => 1, # A3 3.6TB 512GB # rc, log: s2 and s4
 		'db1105:3312' => 1, # C3 3.6TB 512GB # rc, log: s1 and s2
 	],
@@ -298,7 +298,7 @@ $wgLBFactoryConf = [
 			'db1090:3312' => 1,
 		],
 		'api' => [
-			'db1074' => 10,
+			# 'db1074' => 10,
 			'db1122' => 1,
 		],
 		'watchlist' => [
