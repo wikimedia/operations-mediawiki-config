@@ -20327,12 +20327,12 @@ $wgConf->settings = [
 
 'wgKartographerDfltStyle' => [
 	'default' => 'osm-intl',
-	'testwiki' => 'osm-intl-i18n',
-	'test2wiki' => 'osm-intl-i18n',
 ],
 
 'wgKartographerUsePageLanguage' => [
 	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
 ],
 
 'wmgUseOATHAuth' => [
