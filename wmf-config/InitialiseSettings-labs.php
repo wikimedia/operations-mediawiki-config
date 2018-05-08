@@ -648,12 +648,6 @@ function wmfLabsSettings() {
 			'default' => false,
 		],
 
-		// In beta cluster popups should default to on for every user for the purpose of
-		// browser tests (T179546)
-		'-wgPopupsAnonsExperimentalGroupSize' => [
-			'default' => 0,
-		],
-
 		// T171853: Enable PP EventLogging instrumentation on enwiki only so that we
 		// can prove the killswitch works.
 		'-wgPopupsEventLogging' => [
