@@ -7,7 +7,30 @@
 # Exposes:
 # - $wmgProfiler (used by StartProfile.php)
 
-global $wmgProfiler;
+/**
+ * The following classes from composer packages are used when submitting
+ * profiles to XHGui. Inclusion ensured by MWMultiVersion.php.
+ *
+ * - MongoDate (inline)
+ * - Xhgui_Util (inline)
+ * - Xhgui_Saver::factory (inline)
+ *   - MongoClient
+ *   - MongoCollection (returned by MongoDB::__get)
+ *   - Xhgui_Saver_Mongo
+ * - Xhgui_Saver_Mongo::save (inline)
+ *     - Xhgui_Saver_Mongo::getLastProfilingId
+ *       - MongoId
+ *     - MongoCollection::insert
+ *
+ * Upstream XHGui depends on PHP5's ext-mongo interface, and recommends using
+ * alcaeus/mongo-php-adapter, which is a library that provides an interface compatible with
+ * PHP5's ext-mongo based on either ext-mongo (PHP5.3+) or ext-mongodb (PHP5.5+ and PHP7).
+ * The problem is, we can't use mongo-php-adapter because HHVM supports neither, and also
+ * neither our PHP5 nor PHP7 servers have either of the PHP extensions installed.
+ * Instead we use "mongofill", which is a plain PHP implementation originally written
+ * to support HHVM, but also seems to work fine on PHP5 and PHP7.
+ */
+
 $wmgProfiler = [];
 
 /**

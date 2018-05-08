@@ -6,8 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Xhgui_' => array($vendorDir . '/perftools/xhgui/src'),
-    'Twig_' => array($vendorDir . '/twig/twig/lib'),
-    'Slim' => array($vendorDir . '/slim/slim'),
-    'Pimple' => array($vendorDir . '/pimple/pimple/lib'),
+    'Xhgui_' => array($vendorDir . '/perftools/xhgui-collector/src'),
 );
