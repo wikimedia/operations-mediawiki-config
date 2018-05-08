@@ -3699,6 +3699,10 @@ if ( $wmgUseGlobalPreferences && $wmgUseCentralAuth ) {
 	wfLoadExtension( 'GlobalPreferences' );
 }
 
+if ( $wmgUseCongressLookup ) {
+	wfLoadExtension( 'CongressLookup' );
+}
+
 if ( PHP_SAPI === 'cli' ) {
 	wfLoadExtension( 'ActiveAbstract' );
 }

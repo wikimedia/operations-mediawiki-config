@@ -20701,6 +20701,10 @@ $wgConf->settings = [
 	'dewiki' => false,
 ],
 
+'wmgUseCongressLookup' => [
+	'default' => false,
+],
+
 ];
 
 ### WMF Labs override #####
