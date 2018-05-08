@@ -46,6 +46,30 @@
       "revId": "fabb2751f43e2a61fb0440afa8156e307892a61d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ca276b79_59b92b6d",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 491,
+      "author": {
+        "id": 920
+      },
+      "writtenOn": "2018-05-08T10:46:12Z",
+      "side": 1,
+      "message": "I think the exact opposite because the InitialiseSettings.php is already extremely big, making it really hard to find/distinguish Wikibase-related configs. I\u0027m well aware of the \"if\" issue in Wikibase-* files but the solution IMO is to reorg the files into Wikibase-client-labs.php or similar things",
+      "parentUuid": "5ac068df_3a591c3b",
+      "range": {
+        "startLine": 463,
+        "startChar": 2,
+        "endLine": 491,
+        "endChar": 4
+      },
+      "revId": "fabb2751f43e2a61fb0440afa8156e307892a61d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
