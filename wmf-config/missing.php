@@ -21,8 +21,6 @@
 
 // define( 'MISSING_PHP_TEST', 1 );
 
-require_once dirname( __DIR__ ) . '/multiversion/vendor/autoload.php';
-
 /**
  * The main function
  */
