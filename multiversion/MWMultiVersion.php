@@ -1,7 +1,6 @@
 <?php
 require_once __DIR__ . '/defines.php';
 require_once __DIR__ . '/MWRealm.php';
-require_once __DIR__ . '/vendor/autoload.php';
 
 /**
  * Class to handle basic information related to what
