@@ -152,6 +152,17 @@ if ( $wmgUseWikibaseRepo ) {
 			// Q18918145=academic journal article
 			'P31=Q18918145' => '-5',
 		];
+		// T163642
+		$wgWBRepoSettings['searchIndexPropertiesExclude'] = [ 
+			'P304',
+			'P433',
+			'P478',
+			'P558',
+			'P3903',
+			'P3921',
+			'P4316',			
+		];
+		
 	}
 
 	if ( $wgDBname === 'wikidatawiki' ) {
