@@ -1,0 +1,7 @@
+/composer.phar
+/tags
+/vendor
+config/config.php
+
+# phpstorm files
+.idea/

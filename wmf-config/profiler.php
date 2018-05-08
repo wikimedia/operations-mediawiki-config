@@ -7,8 +7,30 @@
 # Exposes:
 # - $wmgProfiler (used by StartProfile.php)
 
-// Ensure the autoloader for mediawiki-config's composer packages is installed,
-// because submitting profilers to XHGui requires MongoDate and Xhgui_Saver.
+/**
+ * Ensure the autoloader for mediawiki-config's composer packages is installed,
+ * because submitting profilers to XHGui requires the following classes:
+ *
+ * - MongoDate (inline)
+ * - Xhgui_Util (inline)
+ * - Xhgui_Saver::factory (inline)
+ *   - MongoClient
+ *   - MongoCollection (returned by MongoDB::__get)
+ *   - Xhgui_Saver_Mongo
+ * - Xhgui_Saver_Mongo::save (inline)
+ *     - Xhgui_Saver_Mongo::getLastProfilingId
+ *       - MongoId
+ *     - MongoCollection::insert
+ *
+ * Upstream XHGui depends on PHP5's ext-mongo interface, and recommends using
+ * alcaeus/mongo-php-adapter, which is a library that provides an interface
+ * compatible with PHP5's ext-mongo based on either ext-mongo (PHP5.3+) or
+ * ext-mongodb (PHP5.5+ and PHP7). The problem is, we can't use this because
+ * HHVM supports neither, and also neither our PHP5 nor PHP7 servers have
+ * either of the PHP extensions installed. So instead we use mongofill,
+ * which is a plain PHP implementation originally written to support HHVM,
+ * but also seems to work fine on PHP5 and PHP7.
+ */
 require_once __DIR__ . '/../vendor/autoload.php';
 
 global $wmgProfiler;
