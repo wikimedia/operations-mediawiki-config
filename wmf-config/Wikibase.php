@@ -155,6 +155,8 @@ if ( $wmgUseWikibaseRepo ) {
 		// Index: instance of, subclass of
 		$wgWBRepoSettings['searchIndexProperties'] = [ 'P31', 'P279' ];
 	}
+	// T163642, T99899
+	$wgWBRepoSettings['searchIndexTypes'] = [ 'string', 'external-id' ];
 
 	$wgWBRepoSettings['dispatchingLockManager'] = $wmgWikibaseDispatchingLockManager;
 	// Cirrus usage for wbsearchentities is on

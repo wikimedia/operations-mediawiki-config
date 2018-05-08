@@ -152,6 +152,17 @@ if ( $wmgUseWikibaseRepo ) {
 			// Q18918145=academic journal article
 			'P31=Q18918145' => '-5',
 		];
+		// T163642
+		$wgWBRepoSettings['searchIndexPropertiesExclude'] = [
+			'P304', // page(s)
+			'P433', // issue
+			'P478', // volume
+			'P558', // unit symbol (DEPRECATED)
+			'P3903', // column
+			'P3921', // Wikidata SPARQL query equivalent
+			'P4316', // kinship equivalent in SPARQL at Wikidata
+		];
+
 	}
 
 	if ( $wgDBname === 'wikidatawiki' ) {
