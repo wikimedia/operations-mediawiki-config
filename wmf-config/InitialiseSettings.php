@@ -14058,12 +14058,6 @@ $wgConf->settings = [
 	'default' => 0.01,
 ],
 
-'wgPopupsAnonsExperimentalGroupSize' => [
-	// Read: Enable previews for all anonymous users by default
-	// @T191101
-	'default' => 0,
-],
-
 'wgPopupsEventLogging' => [
 	'default' => false,
 ],
