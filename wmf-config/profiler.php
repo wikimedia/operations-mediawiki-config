@@ -9,7 +9,7 @@
 
 // Ensure the autoloader for mediawiki-config's composer packages is installed,
 // because submitting profilers to XHGui requires MongoDate and Xhgui_Saver.
-require_once __DIR__ . '/../multiversion/vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 global $wmgProfiler;
 $wmgProfiler = [];
