@@ -723,7 +723,7 @@ function wmfLabsSettings() {
 		// T184668
 		'wmgUseGlobalPreferences' => [
 			// Explicitly disabled on non-CentralAuth wikis in CommonSettings.php
-			'default' => true,
+			'default' => false, // Temporarily due to T194229
 		],
 		'wmgLocalAuthLoginOnly' => [
 			// Explicitly disabled on non-CentralAuth wikis in CommonSettings.php
