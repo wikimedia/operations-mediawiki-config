@@ -20617,6 +20617,7 @@ $wgConf->settings = [
 	'wikivoyage' => true, // T189838
 	'dewiki' => true, // T190910
 	'ruwiki' => true, // T188198
+	'nowiki' => true, // T193786
 ],
 
 'wgShortPagesNamespaceBlacklist' => [
