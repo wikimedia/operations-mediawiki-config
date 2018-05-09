@@ -20672,6 +20672,7 @@ $wgConf->settings = [
 
 'wmgUseCongressLookup' => [
 	'default' => false,
+	'testwiki' => true,
 ],
 
 ];
