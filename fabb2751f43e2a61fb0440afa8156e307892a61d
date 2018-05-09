@@ -70,6 +70,30 @@
       "revId": "fabb2751f43e2a61fb0440afa8156e307892a61d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6c65c367_a3822312",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 491,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-05-09T10:54:06Z",
+      "side": 1,
+      "message": "Taking Wikibase-client.php (a prod version) as an example.\nwmg settings in Initialize settings are again needed if different clients require different configuration.\nHaving the similar but different config spread throughout a bunch of different files makes it allot harder to spot things that are missing for 1 wiki IMO that should be set.\n\nMaybe it would be possible to create some sort of InitializeWikibaseSettings just for Wikibase related config things? I\u0027m not sure.",
+      "parentUuid": "ca276b79_59b92b6d",
+      "range": {
+        "startLine": 463,
+        "startChar": 2,
+        "endLine": 491,
+        "endChar": 4
+      },
+      "revId": "fabb2751f43e2a61fb0440afa8156e307892a61d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
