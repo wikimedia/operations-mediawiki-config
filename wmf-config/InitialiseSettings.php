@@ -19467,12 +19467,16 @@ $wgConf->settings = [
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
 	],
 	'enwiki' => [
-		'damaging' => [ 'enabled' => true ],
-		'goodfaith' => [ 'enabled' => true ],
+		'damaging' => [ 'enabled' => true, 'excludeBots' => true ],
+		'goodfaith' => [ 'enabled' => true, 'excludeBots' => true ],
 		'reverted' => [ 'enabled' => false ],
-		'wp10' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanupParent' => true ],
-		'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ] ], // T179596
+		'wp10' => [ 'enabled' => true, 'namespaces' => [ 0 ], 'cleanupParent' => true ],
+		'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0 ], 'types' => [ 1 ], 'excludeBots' => true ],
 	],
+],
+'wgOresExcludeBots' => [
+	'default' => true,
+	'enwiki' => false,
 ],
 'wgOresFiltersThresholds' => [
 	'default' => [],
