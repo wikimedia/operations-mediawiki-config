@@ -20704,6 +20704,7 @@ $wgConf->settings = [
 'wmgUseCongressLookup' => [
 	'default' => false,
 	'testwiki' => true,
+	'metawiki' => true, # T194230
 ],
 
 ];
