@@ -19711,7 +19711,7 @@ $wgConf->settings = [
 	'cawiki' => [
 		// damaging uses defaults for everything
 		'goodfaith' => [
-			'likelygood' => [ 'min' => 'maximum recall @ precision => 0.998', 'max' => 1 ],
+			'likelygood' => [ 'min' => 'maximum recall @ precision >= 0.998', 'max' => 1 ],
 			'maybebad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.15' ],
 			// likelybad uses default
 			'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.9' ],
