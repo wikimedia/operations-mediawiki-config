@@ -19742,7 +19742,7 @@ $wgConf->settings = [
 			// HACK: pegging this to recall because that's the only way to not have overlap with maybebad
 			// Pegging to precision >= 0.998 doesn't do the trick
 			'likelygood' => [ 'min' => 0, 'max' => 'maximum precision @ recall >= 0.9' ],
-			'maybebad' => [ 'min' => 'maximum recall @ precision >= 0.15' ],
+			'maybebad' => [ 'min' => 'maximum recall @ precision >= 0.15', 'max' => 1 ],
 			// likelybad and verylikelybad use defaults
 		],
 		'goodfaith' => [
