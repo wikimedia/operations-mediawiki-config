@@ -126,9 +126,10 @@ $wgLBFactoryConf = [
 	],
 	/* s3 */ 'DEFAULT' => [
 		'db1075' => 0,      # A2 3.6TB 512GB, master
-		# 'db1072' => 100,    # B2 2.8TB 160GB, vslow, dump, old master # master for db1095
-		'db1077' => 400,    # B1 3.6TB 512GB, rc, log, temp. vslow, dump
+		# 'db1072' => 100,    # B2 2.8TB 160GB, vslow, dump, old master
+		'db1077' => 400,    # B1 3.6TB 512GB, rc, log, temp. vslow, dump # master for db1095
 		'db1078' => 500,    # C3 3.6TB 512GB # candidate master
+		# 'db1123' => 100,    # D8 3.6TB 512GB, vslow, dump
 	],
 	's4' => [
 		'db1068' => 0,      # D1 2.8TB 160GB, master
@@ -573,6 +574,7 @@ $wgLBFactoryConf = [
 	'db1119' => '10.64.16.13', # do not remove or comment out
 	'db1121' => '10.64.32.12', # do not remove or comment out
 	'db1122' => '10.64.48.34', # do not remove or comment out
+	'db1123' => '10.64.48.35', # do not remove or comment out
 	'db2033' => '10.192.32.4', # do not remove or comment out
 	'db2034' => '10.192.0.87', # do not remove or comment out
 	'db2035' => '10.192.16.73', # do not remove or comment out
