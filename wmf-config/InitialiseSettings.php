@@ -16629,6 +16629,15 @@ $wgConf->settings = [
 		'5' => false,
 		'N' => 'Bruker %code%-N',
 	],
+	'officewiki' => [
+		'0' => 'User %code%-0',
+		'1' => 'User %code%-1',
+		'2' => 'User %code%-2',
+		'3' => 'User %code%-3',
+		'4' => 'User %code%-4',
+		'5' => 'User %code%-5',
+		'N' => 'User %code%-N',
+	],
 	'oswiki' => [
 		'0' => 'Архайджытæ %code%-0',
 		'1' => 'Архайджытæ %code%-1',
