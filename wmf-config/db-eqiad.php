@@ -105,7 +105,6 @@ $wgLBFactoryConf = [
 	's1' => [
 		'db1052' => 0,      # B3 2.8TB  96GB, master
 		'db1067' => 50,     # D1 2.8TB 160GB, old master # candidate master
-		# 'db1066' => 50,     # D1 2.8TB 160GB, api # going to be moved to s2
 		'db1080' => 200,    # A2 3.6TB 512GB, api
 		'db1083' => 500,    # B1 3.6TB 512GB
 		'db1089' => 500,    # C3 3.6TB 512GB
@@ -117,6 +116,7 @@ $wgLBFactoryConf = [
 	],
 	's2' => [
 		'db1054' => 0,      # A3 2.8TB  96GB, master
+		# 'db1066' => 50,     # D1 2.8TB 160GB, # candidate master: do not pool, not provisioned
 		'db1074' => 300,    # A2 3.6TB 512GB, api # master for for db1102
 		'db1076' => 500,    # B1 3.6TB 512GB # candidate master
 		'db1090:3312' => 1, # C3 3.6TB 512GB, vslow, dump: s2 and s7
@@ -126,10 +126,9 @@ $wgLBFactoryConf = [
 	],
 	/* s3 */ 'DEFAULT' => [
 		'db1075' => 0,      # A2 3.6TB 512GB, master
-		# 'db1072' => 100,    # B2 2.8TB 160GB, vslow, dump, old master
-		'db1077' => 400,    # B1 3.6TB 512GB, rc, log, temp. vslow, dump # master for db1095
+		'db1077' => 400,    # B1 3.6TB 512GB, rc, log # master for db1095
 		'db1078' => 500,    # C3 3.6TB 512GB # candidate master
-		'db1123' => 50,     # D8 3.6TB 512GB, vslow, dump
+		'db1123' => 100,    # D8 3.6TB 512GB, vslow, dump
 	],
 	's4' => [
 		'db1068' => 0,      # D1 2.8TB 160GB, master
@@ -284,7 +283,6 @@ $wgLBFactoryConf = [
 			'db1106' => 1,
 		],
 		'api' => [
-			# 'db1066' => 2,
 			'db1080' => 3,
 			'db1114' => 3,
 			'db1119' => 3,
@@ -324,10 +322,10 @@ $wgLBFactoryConf = [
 	],
 	/* s3 */ 'DEFAULT' => [
 		'vslow' => [
-			'db1077' => 1,
+			'db1123' => 1,
 		],
 		'dump' => [
-			'db1077' => 1,
+			'db1123' => 1,
 		],
 		'watchlist' => [
 			'db1077' => 1,
@@ -525,7 +523,6 @@ $wgLBFactoryConf = [
 	'db1069' => '10.64.0.108', # do not remove or comment out
 	'db1070' => '10.64.48.25', # do not remove or comment out
 	'db1071' => '10.64.48.26', # do not remove or comment out
-	'db1072' => '10.64.16.39', # do not remove or comment out
 	'db1073' => '10.64.16.79', # do not remove or comment out
 	'db1074' => '10.64.0.204', # do not remove or comment out
 	'db1075' => '10.64.0.205', # do not remove or comment out
