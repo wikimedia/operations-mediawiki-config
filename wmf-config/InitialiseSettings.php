@@ -19756,7 +19756,7 @@ $wgConf->settings = [
 		'damaging' => [
 			'likelygood' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.997' ],
 			// maybebad uses default
-			'likelybad' => [ 'min' => 'maximum recall @ prevision >= 0.45', 'max' => 1 ],
+			'likelybad' => [ 'min' => 'maximum recall @ precision >= 0.45', 'max' => 1 ],
 			'verylikelybad' => false,
 		],
 		// goodfaith is disabled for arwiki (T192498, T193905)
