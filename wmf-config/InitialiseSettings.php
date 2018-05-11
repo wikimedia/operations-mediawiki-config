@@ -4720,7 +4720,7 @@ $wgConf->settings = [
 	// Wikipedia @{
 	'+arwiki' => [ 14 => 1 ], // T121985
 	'+cswiki' => [ 6 => 0, 14 => 1 ],
-	'+dewiki' => [ 6 => 0, 8 => 0, 10 => 0 ],
+	'+dewiki' => [ 6 => 0, 8 => 0 ],
 	'+enwiki' => [ 6 => 0, 8 => 0 ],
 	'+eowiki' => [ 6 => 0, 8 => 0 ], // 0 => 1 removed per T57563
 	'+eswiki' => [ 6 => 0, 8 => 0 ],
@@ -4736,44 +4736,44 @@ $wgConf->settings = [
 	'+slwiki' => [ 6 => 0, 8 => 0, 14 => 1 ],
 	'+tenwiki' => [ 0 => 1 ],
 	'+zh_yuewiki' => [ 6 => 0, 8 => 0, 14 => 1 ],
-	'+zh_min_nanwiki' => [ 6 => 0, 8 => 0, 10 => 0 ],
+	'+zh_min_nanwiki' => [ 6 => 0, 8 => 0 ],
 	// @}
 
 	// Specials wiki @{
 	'+arbcom_cswiki' => [ 0 => 1 ],
-	'+arbcom_enwiki' => [ 0 => 1, 6 => 0, 8 => 0, 10 => 0 ],
+	'+arbcom_enwiki' => [ 0 => 1, 6 => 0, 8 => 0 ],
 	'+arbcom_nlwiki' => [ 0 => 1 ], // T147186
-	'+auditcomwiki' => [ 0 => 1, 6 => 0, 8 => 0, 10 => 0 ],
+	'+auditcomwiki' => [ 0 => 1, 6 => 0, 8 => 0 ],
 	'+bewikimedia' => [ 0 => 1 ],
-	'+boardwiki' => [ 0 => 1, 6 => 0, 8 => 0, 10 => 0 ],
+	'+boardwiki' => [ 0 => 1, 6 => 0, 8 => 0 ],
 	'+brwikimedia' => [ 0 => 1 ],
 	'+cawikimedia' => [ 0 => 1 ], // T185436
-	'+chairwiki' => [ 0 => 1, 6 => 0, 8 => 0, 10 => 0 ],
-	'+chapcomwiki' => [ 0 => 1, 6 => 0, 8 => 0, 10 => 0 ],
+	'+chairwiki' => [ 0 => 1, 6 => 0, 8 => 0 ],
+	'+chapcomwiki' => [ 0 => 1, 6 => 0, 8 => 0 ],
 	'+checkuserwiki' => [ 0 => 1 ],
 	'+collabwiki' => [ 0 => 1 ],
 	'+commonswiki' => [ 6 => 0, 8 => 0 ],
 	'+ecwikimedia' => [ 0 => 1 ],
-	'+execwiki' => [ 0 => 1, 6 => 0, 8 => 0, 10 => 0 ],
+	'+execwiki' => [ 0 => 1, 6 => 0, 8 => 0 ],
 	'+fdcwiki' => [ 0 => 1 ],
 	'+foundationwiki' => [ 0 => 1, 6 => 0, 8 => 0 ],
-	'+grantswiki' => [ 0 => 1, 6 => 0, 8 => 0, 10 => 0 ],
+	'+grantswiki' => [ 0 => 1, 6 => 0, 8 => 0 ],
 	'+incubatorwiki' => [ 0 => 1, 6 => 0, 14 => 1 ],
-	'+internalwiki' => [ 0 => 1, 6 => 0, 8 => 0, 10 => 0 ],
+	'+internalwiki' => [ 0 => 1, 6 => 0, 8 => 0 ],
 	'+wikitech' => [ 0 => 1, 110 => 1, 498 => 1, 666 => 1 ],
 	'+legalteamwiki' => [ 0 => 1 ],
 	'+mediawikiwiki' => [ 0 => 1, 6 => 0, 8 => 0, 14 => 1 ],
 	'+metawiki' => [ 0 => 1, 6 => 0, 8 => 0, 200 => 1, 201 => 1, 202 => 1, 203 => 1, 208 => 1, 209 => 1 ],
 	'+movementroleswiki' => [ 0 => 1 ],
 	'+nlwikimedia' => [ 0 => 1 ],
-	'+nostalgiawiki' => [ 0 => 1, 6 => 0, 8 => 0, 10 => 0 ],
+	'+nostalgiawiki' => [ 0 => 1, 6 => 0, 8 => 0 ],
 	'+nowikimedia' => [ 0 => 1 ],
 	'+officewiki' => [ 0 => 1, 6 => 0, 8 => 0, 113 => 1 ], // T99860 et al.
 	'+ombudsmenwiki' => [ 0 => 1 ],
 	'+otrs_wikiwiki' => [ 0 => 1 ],
 	'+outreachwiki' => [ 0 => 1 ],
-	'+plwikimedia' => [ 0 => 1, 6 => 0, 8 => 0, 10 => 0, 14 => 1 ],
-	'+rswikimedia' => [ 0 => 1, 6 => 0, 8 => 0, 10 => 0 ],
+	'+plwikimedia' => [ 0 => 1, 6 => 0, 8 => 0, 14 => 1 ],
+	'+rswikimedia' => [ 0 => 1, 6 => 0, 8 => 0 ],
 	'+ruwikimedia' => [ 0 => 1, 6 => 1, 7 => 0, 9 => 0, 14 => 1, 15 => 0 ],
 	'+sewikimedia' => [ 0 => 1 ],
 	'+stewardwiki' => [ 0 => 1, 6 => 1, 14 => 1 ],
@@ -4781,14 +4781,9 @@ $wgConf->settings = [
 	'+uawikimedia' => [ 0 => 1 ], // T91185
 	'+usabilitywiki' => [ 0 => 1 ],
 	'+wikidata' => [ 121 => 1 ], // T146271
-	'+wikimaniateamwiki' => [ 0 => 1, 6 => 0, 8 => 0, 10 => 0 ],
+	'+wikimaniateamwiki' => [ 0 => 1, 6 => 0, 8 => 0 ],
 
 	'+wikimania' => [ 0 => 1, 6 => 0, 8 => 0, ],
-	'+wikimania2006wiki' => [ 10 => 0 ],
-	'+wikimania2007wiki' => [ 10 => 0 ],
-	'+wikimania2008wiki' => [ 10 => 0 ],
-	'+wikimania2009wiki' => [ 10 => 0 ],
-	'+wikimania2010wiki' => [ 10 => 0 ],
 	// @}
 
 	// Wikibooks @{
@@ -4805,28 +4800,25 @@ $wgConf->settings = [
 	'+wikisource' => [ 0 => 1, 6 => 0, 8 => 0 ],
 	'+cswikisource' => [ 14 => 1 ],
 	'+enwikisource' => [ 114 => 1, 115 => 1 ], // T52007
-	'+huwikisource' => [ 10 => 1 ],
 	'+plwikisource' => [ 124 => 1, 125 => 1 ], // T154711
-	'+trwikisource' => [ 10 => 0 ],
 	'+ukwikisource' => [ 114 => 1, 115 => 1 ], // T52561
-	'+viwikisource' => [ 10 => 0 ],
-	'+zhwikisource' => [ 10 => 0, 114 => 1, 115 => 1 ], // T66127
+	'+zhwikisource' => [ 114 => 1, 115 => 1 ], // T66127
 	// @}
 
 	// Wikiversity @{
-	'+arwikiversity' => [ 0 => 1, 6 => 1, 10 => 0 ],
-	'+betawikiversity' => [ 0 => 1, 10 => 0 ],
+	'+arwikiversity' => [ 0 => 1, 6 => 1 ],
+	'+betawikiversity' => [ 0 => 1 ],
 	'+cswikiversity' => [ 0 => 1, 6 => 0, 14 => 1 ],
-	'+dewikiversity' => [ 0 => 1, 6 => 0, 8 => 0, 10 => 0 ],
-	'+enwikiversity' => [ 0 => 1, 6 => 0, 8 => 0, 10 => 0 ],
+	'+dewikiversity' => [ 0 => 1, 6 => 0, 8 => 0 ],
+	'+enwikiversity' => [ 0 => 1, 6 => 0, 8 => 0 ],
 	'+eswikiversity' => [
 		0 => 1, // T155498
 	],
-	'+fiwikiversity' => [ 0 => 1, 6 => 0, 8 => 0, 10 => 0 ],
+	'+fiwikiversity' => [ 0 => 1, 6 => 0, 8 => 0 ],
 	'+frwikiversity' => [ 0 => 1, 6 => 0, 8 => 0, 112 => 1, 113 => 1 ],
 	'+hiwikiversity' => [ 0 => 1 ], // T180913
 	'+itwikiversity' => [ 0 => 1, 6 => 0, 8 => 0, 14 => 0 ],
-	'+ptwikiversity' => [ 0 => 1, 10 => 0 ],
+	'+ptwikiversity' => [ 0 => 1 ],
 	'+ruwikiversity' => [ 0 => 1, 6 => 1, 14 => 1 ],
 	'+svwikiversity' => [ 0 => 1 ],
 	// @}
