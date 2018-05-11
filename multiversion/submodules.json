@@ -343,10 +343,6 @@
         "action": "branch",
         "ref": "."
     },
-    "extensions/OpenStackManager": {
-        "action": "branch",
-        "ref": "."
-    },
     "extensions/PagedTiffHandler": {
         "action": "branch",
         "ref": "."
