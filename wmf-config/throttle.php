@@ -43,4 +43,11 @@ $wmgThrottlingExceptions[] = [ // T194630
 	'value' => 100 // 70 expected
 ];
 
+$wmgThrottlingExceptions[] = [ // T194666
+	'from' => '2018-05-16T08:00 UTC',
+	'to' => '2018-05-16T22:00 UTC',
+	'range' => '192.41.128.0/22',
+	'value' => 25 // up to 20 expected
+];
+
 ## Add throttling definitions above.
