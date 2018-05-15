@@ -1,5 +1,20 @@
 <?php
 
+// Start WikibaseLexeme deploy config section
+if ( !empty( $wmgUseWikibaseLexeme ) ) {
+	wfLoadExtension( 'WikibaseLexeme' );
+	if ( $wmgUseWikibaseRepo ) {
+		$wgWBRepoSettings['idBlacklist'] = $wmgWikibaseIdBlacklist;
+		$wgWBRepoSettings['disabledDataTypes'] = $wmgWikibaseDisabledDataTypes;
+	}
+}
+
+if ( $wmgUseWikibaseClient ) {
+	$wgWBClientSettings['disabledAccessEntityTypes'] = $wmgWikibaseDisabledAccessEntityTypes;
+	$wgWBClientSettings['disabledRdfExportEntityTypes'] = $wmgWikibaseDisabledRdfExportEntityTypes;
+}
+// End WikibaseLexeme deploy config section
+
 // Load the Repo extensions
 if ( !empty( $wmgUseWikibaseRepo ) ) {
 	include_once "$IP/extensions/Wikibase/repo/Wikibase.php";

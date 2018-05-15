@@ -18496,6 +18496,39 @@ $wgConf->settings = [
 	'default' => false,
 ],
 
+'wmgUseWikibaseLexeme' => [
+	'default' => false,
+],
+
+'wgLexemeLanguageCodePropertyId' => [
+	'default' => null,
+	'testwikidatawiki' => 'P220',
+],
+
+'wmgWikibaseIdBlacklist' => [
+	'default' => [
+		'wikibase-lexeme' => [
+			1, 5, 8, 18, 42, 55, 99, 117, 123, 221, 314, 666, 777, 1729, 1887, 12345, 24601
+		],
+	],
+],
+
+'wmgWikibaseDisabledDataTypes' => [
+	'default' => [ 'wikibase-sense' ],
+],
+
+'wgLexemeEnableSenses' => [
+	'default' => false,
+],
+
+'wmgWikibaseDisabledAccessEntityTypes' => [
+	'default' => [ 'lexeme', 'form', 'sense' ],
+],
+
+'wmgWikibaseDisabledRdfExportEntityTypes' => [
+	'default' => [ 'lexeme', 'form', 'sense' ],
+],
+
 'wmgUseTemplateSandbox' => [
 	'default' => true,
 	'loginwiki' => false,
