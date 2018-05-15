@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1a253374_f4b60680",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 18505,
+      "author": {
+        "id": 1786
+      },
+      "writtenOn": "2018-05-15T15:41:35Z",
+      "side": 1,
+      "message": "It is apparently. I was also confused. On prod we\u0027ll use P218 and the only criteria we have for test is that it has data type string. P220 was chosen by Lydia.",
+      "parentUuid": "dd202556_99fc1494",
+      "range": {
+        "startLine": 18505,
+        "startChar": 24,
+        "endLine": 18505,
+        "endChar": 28
+      },
+      "revId": "652b4d6376ebee766cf0db6de3650ac6293fbdcc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d78dd81c_520a17e9",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 4
