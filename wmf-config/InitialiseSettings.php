@@ -9274,20 +9274,6 @@ $wgConf->settings = [
 	'+mlwikisource' => [
 		'patroller' => [ 'patrol' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ],
-		'botadmin' => [
-			'blockemail' => true, 'block' => true, 'ipblock-exempt' => true, 'protect' => true, 'editprotected' => true, 'createaccount' => true, 'deleterevision' => true, 'delete' => true, 'globalblock-whitelist' => true, 'editusercss' => true, 'edituserjs' => true,
-			'autoconfirmed' => true, 'editsemiprotected' => true, 'editinterface' => true, 'autopatrol' => true, 'import' => true, 'patrol' => true, 'markbotedits' => true, 'nuke' => true, 'abusefilter-modify' => true, 'movefile' => true, 'move' => true, 'move-subpages' => true,
-			'move-rootuserpages' => true, 'noratelimit' => true, 'suppressredirect' => true, 'reupload-shared' => true, 'override-antispoof' => true, 'tboverride' => true, 'reupload' => true, 'skipcaptcha' => true, 'rollback' => true, 'browsearchive' => true, 'unblockself' => true,
-			'undelete' => true, 'upload' => true, 'upload_by_url' => true, 'apihighlimits' => true, 'unwatchedpages' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-log-detail' => true,
-		],
-	],
-	'+mlwiktionary' => [
-		'botadmin' => [
-			'blockemail' => true, 'block' => true, 'ipblock-exempt' => true, 'protect' => true, 'editprotected' => true, 'createaccount' => true, 'deleterevision' => true, 'delete' => true, 'globalblock-whitelist' => true, 'editusercss' => true, 'edituserjs' => true,
-			'autoconfirmed' => true, 'editsemiprotected' => true, 'editinterface' => true, 'autopatrol' => true, 'import' => true, 'patrol' => true, 'markbotedits' => true, 'nuke' => true, 'abusefilter-modify' => true, 'movefile' => true, 'move' => true, 'move-subpages' => true,
-			'move-rootuserpages' => true, 'noratelimit' => true, 'suppressredirect' => true, 'reupload-shared' => true, 'override-antispoof' => true, 'tboverride' => true, 'reupload' => true, 'skipcaptcha' => true, 'rollback' => true, 'browsearchive' => true, 'unblockself' => true,
-			'undelete' => true, 'upload' => true, 'upload_by_url' => true, 'apihighlimits' => true, 'unwatchedpages' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-log-detail' => true,
-		],
 	],
 	'+mznwiki' => [
 		// Uploads are restricted to a uploader group - T187187
@@ -10476,10 +10462,6 @@ $wgConf->settings = [
 	],
 	'+mlwikisource' => [
 		'sysop' => [ 'patroller', 'autopatrolled' ],
-		'bureaucrat' => [ 'botadmin' ],
-	],
-	'+mlwiktionary' => [
-		'bureaucrat' => [ 'botadmin' ],
 	],
 	'+mznwiki' => [
 		'sysop' => [ 'uploader' ],
@@ -11239,10 +11221,6 @@ $wgConf->settings = [
 	],
 	'+mlwikisource' => [
 		'sysop' => [ 'patroller', 'autopatrolled' ],
-		'bureaucrat' => [ 'botadmin' ],
-	],
-	'+mlwiktionary' => [
-		'bureaucrat' => [ 'botadmin' ],
 	],
 	'+mznwiki' => [
 		'sysop' => [ 'uploader' ]
@@ -13271,8 +13249,6 @@ $wgConf->settings = [
 	'ladwiki' => [ 'flood' => [ 'flood' ] ], // T131527
 	'lvwiki' => [ 'flood' => [ 'flood' ] ], // T121238
 	'mlwiki' => [ 'botadmin' => [ 'botadmin' ] ],
-	'mlwikisource' => [ 'botadmin' => [ 'botadmin' ] ], // T46335
-	'mlwiktionary' => [ 'botadmin' => [ 'botadmin' ] ],
 	'simplewiki' => [ 'sysop' => [ 'flood' ] ],
 	'plwiki' => [ 'flood' => [ 'flood' ] ], // T22155 , T23238
 	'sourceswiki' => [ 'flood' => [ 'flood' ] ], // T193350
