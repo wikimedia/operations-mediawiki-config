@@ -5348,6 +5348,7 @@ $wgConf->settings = [
 		'ResourceLoaderImage' => 'debug', // - demon, matmarex
 		'RevisionStore' => 'info',
 		'runJobs' => [ 'logstash' => 'warning' ], // - bd808, T113571
+		'security' => 'debug',
 		'session' => [ 'udp2log' => false, 'logstash' => 'warning' ],
 		'session-ip' => [ 'udp2log' => false, 'logstash' => 'info' ],
 		'SimpleAntiSpam' => 'debug',
