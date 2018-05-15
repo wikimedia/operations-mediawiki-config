@@ -43,4 +43,11 @@ $wmgThrottlingExceptions[] = [ // T194630
 	'value' => 100 // 70 expected
 ];
 
+$wmgThrottlingExceptions[] = [ // T194392 - WMF Hackhathon
+	'from' => '2018-05-17T05:00 UTC',
+	'to' => '2018-05-21T10:00 UTC',
+	'range' => '158.109.94.208/28',
+	'value' => 250
+];
+
 ## Add throttling definitions above.
