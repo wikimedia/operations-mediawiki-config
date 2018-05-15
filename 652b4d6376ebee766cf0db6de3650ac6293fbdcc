@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "dd202556_99fc1494",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 18505,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-05-15T15:28:08Z",
+      "side": 1,
+      "message": "Is this really the property we want? :P https://test.wikidata.org/wiki/Property:P220",
+      "range": {
+        "startLine": 18505,
+        "startChar": 24,
+        "endLine": 18505,
+        "endChar": 28
+      },
+      "revId": "652b4d6376ebee766cf0db6de3650ac6293fbdcc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d78dd81c_520a17e9",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 4
