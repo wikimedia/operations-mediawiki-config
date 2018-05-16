@@ -25,6 +25,12 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 	 * Parse X-Wikimedia-Debug options.
 	 *
 	 * See https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug
+	 *
+	 * - 'forceprofile': One-off profile to stdout.
+	 * - 'profile': One-off profile to XHGui. – Unavailable on Beta Cluster (T180761)
+	 * - 'readonly': (See wmf-config/CommonSettings.php).
+	 * - 'log': (See wmf-config/logging.php).
+	 *
 	 */
 	$xwd = false;
 	if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
