@@ -13284,6 +13284,7 @@ $wgConf->settings = [
 		'rollbacker' => [ 'rollbacker' ], // T137532
 		'autoreviewer' => [ 'autoreviewer' ], // T137532
 		'flood' => [ 'flood' ], // T171379
+		'accountcreator' => [ 'accountcreator' ], // T194871
 	],
 	'zhwikibooks' => [ 'flood' => [ 'flood' ] ], // T185182
 	'zhwikinews' => [ 'flood' => [ 'flood' ] ], // T54546
