@@ -41,4 +41,12 @@ $wmgThrottlingExceptions[] = [ // T194392 - WMF Hackhathon
 	'value' => 250
 ];
 
+$wmgThrottlingExceptions[] = [ // T194888
+	'from' => '2018-05-19 05:00 UTC',
+	'to' => '2018-05-19 23:00 UTC',
+	'IP' => '80.113.4.226',
+	'dbname' => [ 'enwiki', 'nlwiki', 'commonswiki', 'wikidatawiki' ],
+	'value' => 300 // 250 expected
+];
+
 ## Add throttling definitions above.
