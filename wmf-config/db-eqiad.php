@@ -122,7 +122,7 @@ $wgLBFactoryConf = [
 		'db1090:3312' => 1, # C3 3.6TB 512GB, vslow, dump: s2 and s7
 		'db1122' => 500,    # D6 3.6TB 512GB, api
 		'db1103:3312' => 1, # A3 3.6TB 512GB # rc, log: s2 and s4
-		# 'db1105:3312' => 1, # C3 3.6TB 512GB # rc, log: s1 and s2
+		'db1105:3312' => 1, # C3 3.6TB 512GB # rc, log: s1 and s2
 	],
 	/* s3 */ 'DEFAULT' => [
 		'db1075' => 0,      # A2 3.6TB 512GB, master
@@ -146,7 +146,7 @@ $wgLBFactoryConf = [
 		'db1097:3315' => 1, # D1 3.6TB 512GB # rc, log: s4 and s5
 		'db1100' => 50,     # C2 3.6TB 512GB, old master #api # candidate master
 		'db1110' => 500,    # C3 3.6TB 512GB
-		'db1113:3315' => 0, # B8 3.6TB 512GB # vslow, dump: s5 and s6
+		'db1113:3315' => 1, # B8 3.6TB 512GB # vslow, dump: s5 and s6
 	],
 	's6' => [
 		'db1061' => 0,      # C3 2.8TB 128GB, master
@@ -155,7 +155,7 @@ $wgLBFactoryConf = [
 		'db1093' => 500,    # D2 3.6TB 512GB, api # candidate master
 		'db1096:3316' => 1, # A6 3.6TB 512GB # rc, log: s5 and s6
 		'db1098:3316' => 1, # B5 3.6TB 512GB, # rc, log: s6 and s7
-		'db1113:3316' => 0, # B8 3.6TB 512GB # vslow, dump: s5 and s6
+		'db1113:3316' => 1, # B8 3.6TB 512GB # vslow, dump: s5 and s6
 	],
 	's7' => [
 		'db1062' => 0,      # D4 2.8TB 128GB, master
@@ -168,7 +168,7 @@ $wgLBFactoryConf = [
 	],
 	's8' => [
 		'db1071' => 0,      # D1 2.8TB 160GB, master
-		'db1087' => 0,      # C2 3.6TB 512GB, vslow, dump # master for db1095
+		'db1087' => 1,      # C2 3.6TB 512GB, vslow, dump # master for db1095
 		'db1092' => 100,    # D2 3.6TB 512GB, api
 		'db1099:3318' => 1, # B2 3.6TB 512GB # rc, log: s1 and s8
 		'db1101:3318' => 1, # C2 3.6TB 512GB # rc, log: s7 and s8
@@ -301,23 +301,23 @@ $wgLBFactoryConf = [
 		],
 		'watchlist' => [
 			'db1103:3312' => 1,
-			# 'db1105:3312' => 1,
+			'db1105:3312' => 1,
 		],
 		'recentchanges' => [
 			'db1103:3312' => 1,
-			# 'db1105:3312' => 1,
+			'db1105:3312' => 1,
 		],
 		'recentchangeslinked' => [
 			'db1103:3312' => 1,
-			# 'db1105:3312' => 1,
+			'db1105:3312' => 1,
 		],
 		'contributions' => [
 			'db1103:3312' => 1,
-			# 'db1105:3312' => 1,
+			'db1105:3312' => 1,
 		],
 		'logpager' => [
 			'db1103:3312' => 1,
-			# 'db1105:3312' => 1,
+			'db1105:3312' => 1,
 		],
 	],
 	/* s3 */ 'DEFAULT' => [
