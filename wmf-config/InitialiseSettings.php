@@ -4231,6 +4231,12 @@ $wgConf->settings = [
 		'Collection' => 124, // T154711
 		'Collection_talk' => 125, // T154711
 	],
+	'+pmswikisource' => [
+		'Page' => 102,
+		'Page_talk' => 103,
+		'Index' => 104,
+		'Index_talk' => 105,
+	],
 	'+plwiktionary' => [
 		'WS' => NS_PROJECT,
 	],
@@ -6472,6 +6478,12 @@ $wgConf->settings = [
 		105 => 'Dyskusja_autora',
 		124 => 'Kolekcja', // T154711
 		125 => 'Dyskusja_kolekcji', // T154711
+	],
+	'pmswikisource' => [
+		102 => 'Pàgina', // Page
+		103 => 'Discussion_ëd_la_pàgina', // Page talk
+		104 => 'Tàula', // Index
+		105 => 'Discussion_ëd_la_tàula', // Index talk
 	],
 	'ptwikisource' => [
 		100 => 'Portal',
