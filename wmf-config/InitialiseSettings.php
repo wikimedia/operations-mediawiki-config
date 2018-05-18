@@ -1098,6 +1098,7 @@ $wgConf->settings = [
 	'orwikisource' => '/static/images/project-logos/orwikisource.png',  // T73875
 	'pawikisource' => '/static/images/project-logos/pawikisource.png',  // T149522
 	'plwikisource' => '/static/images/project-logos/plwikisource.png',
+	'pmswikisource' => '/static/images/project-logos/pmswikisource.png',
 	'ruwikisource' => '/static/images/project-logos/ruwikisource.png',
 	'sawikisource' => '/static/images/project-logos/sawikisource.png',
 	'sahwikisource' => '/static/images/project-logos/sahwikisource.png',
@@ -1653,6 +1654,7 @@ $wgConf->settings = [
 	'euwikisource' => [ '1.5x' => '/static/images/project-logos/euwikisource-1.5x.png', '2x' => '/static/images/project-logos/euwikisource-2x.png' ],
 	'nowikisource' => [ '1.5x' => '/static/images/project-logos/nowikisource-1.5x.png', '2x' => '/static/images/project-logos/nowikisource-2x.png' ], // T167192
 	'pawikisource' => [ '1.5x' => '/static/images/project-logos/pawikisource-1.5x.png', '2x' => '/static/images/project-logos/pawikisource-2x.png' ], // T149522
+	'pmswikisource' => [ '1.5x' => '/static/images/project-logos/pmswikisource-1.5x.png', '2x' => '/static/images/project-logos/pmswikisource-2x.png' ],
 	'srwikisource' => [ '1.5x' => '/static/images/project-logos/srwikisource-1.5x.png', '2x' => '/static/images/project-logos/srwikisource-2x.png' ], // T172268
 	'viwikisource' => [ '1.5x' => '/static/images/project-logos/viwikisource-1.5x.png', '2x' => '/static/images/project-logos/viwikisource-2x.png' ],
 
@@ -4212,6 +4214,12 @@ $wgConf->settings = [
 		'Collection' => 124, // T154711
 		'Collection_talk' => 125, // T154711
 	],
+	'+pmswikisource' => [
+		'Page' => 102,
+		'Page_talk' => 103,
+		'Index' => 104,
+		'Index_talk' => 105,
+	],
 	'+plwiktionary' => [
 		'WS' => NS_PROJECT,
 	],
@@ -6455,6 +6463,12 @@ $wgConf->settings = [
 		105 => 'Dyskusja_autora',
 		124 => 'Kolekcja', // T154711
 		125 => 'Dyskusja_kolekcji', // T154711
+	],
+	'pmswikisource' => [
+		102 => 'Pàgina', // Page
+		103 => 'Discussion_ëd_la_pàgina', // Page talk
+		104 => 'Tàula', // Index
+		105 => 'Discussion_ëd_la_tàula', // Index talk
 	],
 	'ptwikisource' => [
 		100 => 'Portal',
