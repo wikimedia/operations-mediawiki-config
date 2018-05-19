@@ -8015,6 +8015,9 @@ $wgConf->settings = [
 		],
 	],
 	'+commonswiki' => [ // T132930
+		'edit' => [
+			'user' => [ 200, 60 ], // T194864
+		],
 		'upload' => [
 			// 380 uploads per 72 minutes
 			'user' => [ 380, 4320 ],
