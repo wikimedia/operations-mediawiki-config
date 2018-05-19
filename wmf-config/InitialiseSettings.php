@@ -8015,6 +8015,13 @@ $wgConf->settings = [
 		],
 	],
 	'+commonswiki' => [ // T132930
+		'edit' => [
+			'user' => [ 200, 60 ], // T194864
+			// Effectively no edit rate limit for members of those groups
+			'Image-reviewer' => [ 999, 1 ],
+			'patroller' => [ 999, 1 ],
+			'autopatrolled' => [ 999, 1 ],
+		],
 		'upload' => [
 			// 380 uploads per 72 minutes
 			'user' => [ 380, 4320 ],
