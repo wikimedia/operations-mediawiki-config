@@ -8015,6 +8015,13 @@ $wgConf->settings = [
 		],
 	],
 	'+commonswiki' => [ // T132930
+		'edit' => [
+			'user' => [ 900, 60*3 ], // T194864
+			// Higher rate limit for trusted
+			'Image-reviewer' => [ 10500, 60*3 ],
+			'patroller' => [ 10500, 60*3 ],
+			'autopatrolled' => [ 10500, 60*3 ],
+		],
 		'upload' => [
 			// 380 uploads per 72 minutes
 			'user' => [ 380, 4320 ],
