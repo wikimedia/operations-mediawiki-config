@@ -20636,6 +20636,10 @@ $wgConf->settings = [
 	'dewiki' => true, // T180476
 ],
 
+'wmgDeactivateWikiDiff2InlineMovedParagaphDetection' => [
+	'default' => true,
+],
+
 'wgCommentTableSchemaMigrationStage' => [
 	'default' => MIGRATION_WRITE_BOTH,
 ],
