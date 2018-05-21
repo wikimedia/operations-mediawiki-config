@@ -9929,6 +9929,7 @@ $wgConf->settings = [
 		'autoreviewer' => [ 'autopatrol' => true ],
 		'flood' => [ 'bot' => true ],
 		'massmessage-sender' => [ 'massmessage' => true ], // T130814
+		'filemover' => [ 'movefile' => true ], // T195247
 	],
 
 	'zh_classicalwiki' => [
@@ -10758,7 +10759,7 @@ $wgConf->settings = [
 	],
 	'+zhwiki' => [
 		'bureaucrat' => [ 'flood' ],
-		'sysop' => [ 'patroller', 'rollbacker', 'autoreviewer', 'confirmed', 'massmessage-sender' ], // T130814
+		'sysop' => [ 'patroller', 'rollbacker', 'autoreviewer', 'confirmed', 'massmessage-sender', 'movefile' ], // T130814 and T195247
 	],
 	'+zhwikibooks' => [
 		'sysop' => [ 'flood' ], // T185182
@@ -11546,7 +11547,8 @@ $wgConf->settings = [
 	],
 	'+zhwiki' => [
 		'bureaucrat' => [ 'flood' ],
-		'sysop' => [ 'patroller', 'rollbacker', 'autoreviewer', 'confirmed', 'flood', 'massmessage-sender' ], // T130814
+		'sysop' => [ 'patroller', 'rollbacker', 'autoreviewer', 'confirmed', 'flood', 'massmessage-sender', 'movefile' ], // T130814 and T195247
+		'filemover' => [ 'movefile' ], // T195247
 	],
 	'+zhwikibooks' => [
 		'sysop' => [ 'flood' ], // T185182
