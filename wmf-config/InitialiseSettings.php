@@ -20672,7 +20672,8 @@ $wgConf->settings = [
 // T184121
 // Explicitly disabled for non-CentralAuth wikis in CommonSettings.php
 'wmgUseGlobalPreferences' => [
-	'default' => false,
+	'default' => true,
+	'wikipedia' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
 	'testwikidatawiki' => true,
