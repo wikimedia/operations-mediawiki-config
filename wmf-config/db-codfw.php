@@ -119,7 +119,7 @@ $wgLBFactoryConf = [
 		'db2049'      => 400, # C6 2.9TB 160GB,
 		'db2056'      => 50,  # D6 3.3TB 160GB, dump (inactive), vslow #innodb compressed
 		'db2063'      => 100, # D6 3.3TB 160GB, api # sanitarium master
-		'db2064'      => 400, # D6 3.3TB 160GB
+		# 'db2064'      => 400, # D6 3.3TB 160GB # crashed T195228
 		'db2088:3312' => 1, # D1 3.3TB 512GB # rc, log: s1 and s2
 		'db2091:3312' => 1, # A8 3.3TB 512GB # rc, log: s2 and s4
 	],
