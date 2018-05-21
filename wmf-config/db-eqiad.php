@@ -109,7 +109,7 @@ $wgLBFactoryConf = [
 		'db1083' => 500,    # B1 3.6TB 512GB
 		'db1089' => 500,    # C3 3.6TB 512GB
 		'db1099:3311' => 1, # B2 3.6TB 512GB # rc, log: s1 and s8
-		# 'db1105:3311' => 1, # C3 3.6TB 512GB # rc, log: s1 and s2
+		'db1105:3311' => 1, # C3 3.6TB 512GB # rc, log: s1 and s2
 		'db1106' => 50,     # D3 3.6TB 512GB, vslow, dump # master for db1095 (sanitarium)
 		'db1114' => 200,    # D4 3.6TB 512GB, api # MariaDB 10.1
 		'db1119' => 200,    # B8 3.6TB 512GB, api # MariaDB 10.1
@@ -257,24 +257,24 @@ $wgLBFactoryConf = [
 'groupLoadsBySection' => [
 	's1' => [
 		'watchlist' => [
-			'db1099:3311' => 1,
-			# 'db1105:3311' => 1,
+			'db1099:3311' => 10,
+			'db1105:3311' => 1,
 		],
 		'recentchanges' => [
-			'db1099:3311' => 1,
-			# 'db1105:3311' => 1,
+			'db1099:3311' => 10,
+			'db1105:3311' => 1,
 		],
 		'recentchangeslinked' => [
-			'db1099:3311' => 1,
-			# 'db1105:3311' => 1,
+			'db1099:3311' => 10,
+			'db1105:3311' => 1,
 		],
 		'contributions' => [
-			'db1099:3311' => 1,
-			# 'db1105:3311' => 1,
+			'db1099:3311' => 10,
+			'db1105:3311' => 1,
 		],
 		'logpager' => [
-			'db1099:3311' => 1,
-			# 'db1105:3311' => 1,
+			'db1099:3311' => 10,
+			'db1105:3311' => 1,
 		],
 		'dump' => [
 			'db1106' => 1,
