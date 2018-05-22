@@ -7930,6 +7930,7 @@ $wgConf->settings = [
 	'+vecwikisource' => [ 100 => 1, 104 => 1 ],
 	'+viwikibooks' => [ 102 => 1, 104 => 1, 106 => 1 ],
 	'+viwikisource' => [ 102 => 1, 106 => 1 ],
+	'+testwikidatawiki' => [ 120 => 1 ],
 	'+wikidatawiki' => [ 120 => 1 ],
 	'+zhwikisource' => [ 102 => 1, 106 => 1, 114 => 1 ], // T66127
 ],
