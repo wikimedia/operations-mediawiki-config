@@ -18511,6 +18511,7 @@ $wgConf->settings = [
 'wgLexemeLanguageCodePropertyId' => [
 	'default' => null,
 	'testwikidatawiki' => 'P220',
+	'wikidatawiki' => 'P218',
 ],
 
 'wmgWikibaseIdBlacklist' => [
