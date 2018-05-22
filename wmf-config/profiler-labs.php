@@ -30,11 +30,6 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 	 * - 'profile': One-off profile to XHGui. – Unavailable on Beta Cluster (T180761)
 	 * - 'readonly': (See wmf-config/CommonSettings.php).
 	 * - 'log': (See wmf-config/logging.php).
-	 * - 'sampleprofiler': Configure XHProf (if enabled via `profile` or `forceprofile`)
-	 *    to use sampled profiling instead of full profiling. – This is experimental
-	 *    and only on Beta Cluster currently, as part of determining whether it can
-	 *    be used as replacement for HHVM Xenon, for use on  all prod requests.
-	 *    See T176916 for more information.
 	 *
 	 */
 	$xwd = false;
@@ -76,25 +71,7 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 	) {
 		// Enable Xhprof now instead of waiting for MediaWiki to start it later.
 		// This ensures a balanced and complete call graph. (T180183)
-		if ( isset( $xwd['sampleprofiler'] ) ) {
-			// XXX:
-			// We enable it here so that the profiler starts immediately instead of
-			// only when MediaWiki later instantiates ProfilerXhprof. Normally that
-			// means we call xhprof_enable twice. XHProf internally ignores the
-			// second call if the profiler was already started.
-			// The sampling experiment could break this because it means we're
-			// starting early in sampling mode, but then later MediaWiki's ProfilerXhprof
-			// will call the regular xhprof_enable (it doesn't support sampling).
-			// This *should* be fine because both of these functions go through
-			// the same code path that simply ignores the call of any profiler started,
-			// regardless of different flags or sampling mode.
-			// Additionally, it *should* also be the case that letting MediaWiki
-			// collect the data via xhprof_disable (instead of xhprof_sample_disable()
-			// magically works because they are both the same function internally.
-			xhprof_sample_enable();
-		} else {
-			xhprof_enable( $xhprofFlags );
-		}
+		xhprof_enable( $xhprofFlags );
 
 		/**
 		 * One-off profile to stdout.
