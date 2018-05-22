@@ -999,6 +999,7 @@ $wgConf->settings = [
 	'itwikibooks' => '/static/images/project-logos/itwikibooks.png',
 	'kawikibooks' => '/static/images/project-logos/kawikibooks.png',
 	'kowikibooks' => '/static/images/project-logos/kowikibooks.png',  // T58760
+	'liwikibooks' => '/static/images/project-logos/liwikibooks.png', // T193680
 	'ltwikibooks' => '/static/images/project-logos/ltwikibooks.png',
 	'mkwikibooks' => '/static/images/project-logos/mkwikibooks.png',  // T54019
 	'mlwikibooks' => '/static/images/project-logos/mlwikibooks.png',  // T45111
