@@ -1,6 +1,7 @@
 <?php
+// phpcs:disable MediaWiki.Usage.ForbiddenFunctions.each
 
-class timelineTest extends PHPUnit\Framework\TestCase {
+class TimelineTest extends PHPUnit\Framework\TestCase {
 
 	/**
 	 * Ploticus strip the '.ttf' suffix from the font name and then fails
@@ -9,14 +10,14 @@ class timelineTest extends PHPUnit\Framework\TestCase {
 	 *
 	 * @dataProvider wgTimelineFontFileValues
 	 */
-	function testTimelineFontFileDoesNotHaveTtfSuffix( $filename ) {
+	public function testTimelineFontFileDoesNotHaveTtfSuffix( $filename ) {
 		$this->assertStringEndsNotWith( '.ttf', $filename );
 	}
 
 	/**
 	 * @dataProvider wgTimelineFontFileValues
 	 */
-	function testTimelineFontFileEexists( $filename ) {
+	public function testTimelineFontFileEexists( $filename ) {
 		$this->assertFileExists( __DIR__ . "/../fonts/" . $filename );
 	}
 

@@ -2,12 +2,12 @@
 
 require_once __DIR__ . '/../../multiversion/MWRealm.php';
 
-class MWRealmTests extends PHPUnit\Framework\TestCase {
+class MWRealmTest extends PHPUnit\Framework\TestCase {
 
 	private static $fixturesDir;
 	private static $fixturesFiles = [];
 
-	static function setupBeforeClass() {
+	public static function setupBeforeClass() {
 		self::$fixturesDir = sys_get_temp_dir() . "/" . __CLASS__;
 		if ( !is_dir( self::$fixturesDir ) ) {
 			mkdir( self::$fixturesDir."/" );
@@ -37,7 +37,7 @@ class MWRealmTests extends PHPUnit\Framework\TestCase {
 		}
 	}
 
-	static function tearDownAfterClass() {
+	public static function tearDownAfterClass() {
 		foreach ( self::$fixturesFiles as $fixture ) {
 			unlink( $fixture );
 		}
@@ -47,7 +47,7 @@ class MWRealmTests extends PHPUnit\Framework\TestCase {
 	/**
 	 * @dataProvider provideFilenames
 	 */
-	function testRealmFilenames( $expected, $filename, $realm = null, $datacenter = null ) {
+	public function testRealmFilenames( $expected, $filename, $realm = null, $datacenter = null ) {
 		global $wmfRealm, $wmfDatacenter;
 
 		// save globals
@@ -74,7 +74,7 @@ class MWRealmTests extends PHPUnit\Framework\TestCase {
 		$wmfDatacenter = $old['datacenter'];
 	}
 
-	function provideFilenames() {
+	public function provideFilenames() {
 		return [
 
 			// (expected, filename [, realm[, datacenter]])

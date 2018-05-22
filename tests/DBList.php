@@ -2,7 +2,7 @@
 /**
  * Helpers for DbListTests.
  *
- * @license GPLv2 or later
+ * @license GPL-2.0-or-later
  * @author Antoine Musso <hashar at free dot fr>
  * @copyright Copyright © 2012, Antoine Musso <hashar at free dot fr>
  * @file

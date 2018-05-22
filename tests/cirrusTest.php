@@ -3,7 +3,7 @@
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 require_once __DIR__ . '/SiteConfiguration.php';
 
-class cirrusTests extends WgConfTestCase {
+class CirrusTest extends WgConfTestCase {
 	public function testClusterConfigurationForProdTestwiki() {
 		$wmfDatacenter = 'unittest';
 		$config = $this->loadCirrusConfig( 'production', 'testwiki', 'wiki' );

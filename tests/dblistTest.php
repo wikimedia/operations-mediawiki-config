@@ -2,13 +2,13 @@
 /**
  * Various tests made to test Wikimedia Foundation .dblist files.
  *
- * @license GPLv2 or later
+ * @license GPL-2.0-or-later
  * @author Antoine Musso <hashar at free dot fr>
  * @copyright Copyright © 2012, Antoine Musso <hashar at free dot fr>
  * @file
  */
 
-class DbListTests extends PHPUnit\Framework\TestCase {
+class DbListTest extends PHPUnit\Framework\TestCase {
 
 	public static function provideProjectDbnames() {
 		$cases = [];

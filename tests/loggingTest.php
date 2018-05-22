@@ -2,13 +2,13 @@
 /**
  * Verify configuration of wmf-config/db.php
  *
- * @license GPLv2 or later
+ * @license GPL-2.0-or-later
  * @author Erik Bernhardson <ebernhardson@wikimedia.org>
  * @copyright Copyright © 2015, Erik Bernhardson <ebernhardson@wikimedia.org>
  * @file
  */
 
-class loggingTests extends WgConfTestCase {
+class LoggingTest extends WgConfTestCase {
 
 	public function provideHandlerSetup() {
 		return [

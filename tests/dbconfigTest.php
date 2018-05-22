@@ -2,7 +2,7 @@
 /**
  * Verify configuration of wmf-config/db.php
  *
- * @license GPLv2 or later
+ * @license GPL-2.0-or-later
  * @author Antoine Musso <hashar at free dot fr>
  * @copyright Copyright © 2012, Antoine Musso <hashar at free dot fr>
  * @file
@@ -10,7 +10,7 @@
 
 require_once __DIR__ . '/../multiversion/MWRealm.php';
 
-class dbconfigTests extends WgConfTestCase {
+class DbconfigTest extends WgConfTestCase {
 
 	public static function provideRealmDatacenter() {
 		return [
@@ -22,7 +22,7 @@ class dbconfigTests extends WgConfTestCase {
 		];
 	}
 
-	function loadDbFile( $realm, $datacenter, $masterdatacenter ) {
+	public function loadDbFile( $realm, $datacenter, $masterdatacenter ) {
 		// For getRealmSpecificFilename()
 		$this->setGlobals( [
 			'wmfRealm' => $realm,
@@ -52,7 +52,7 @@ class dbconfigTests extends WgConfTestCase {
 	 *
 	 * @dataProvider provideRealmDatacenter
 	 */
-	function testSectionLoadsInHostsbyname( $realm, $datacenter, $masterdatacenter ) {
+	public function testSectionLoadsInHostsbyname( $realm, $datacenter, $masterdatacenter ) {
 		$ok = true;
 		$lb = $this->loadDbFile( $realm, $datacenter, $masterdatacenter );
 		foreach ( $lb['sectionLoads'] as $clusterName => $cluster ) {
@@ -75,7 +75,7 @@ class dbconfigTests extends WgConfTestCase {
 	 *
 	 * @dataProvider provideRealmDatacenter
 	 */
-	function testDbAssignedToAnExistingCluster( $realm, $datacenter, $masterdatacenter ) {
+	public function testDbAssignedToAnExistingCluster( $realm, $datacenter, $masterdatacenter ) {
 		$ok = true;
 		$lb = $this->loadDbFile( $realm, $datacenter, $masterdatacenter );
 		foreach ( $lb['sectionsByDB'] as $dbname => $cluster ) {

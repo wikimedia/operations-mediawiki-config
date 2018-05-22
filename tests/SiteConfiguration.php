@@ -274,7 +274,7 @@ class SiteConfiguration {
 	 * @param string|array $in
 	 * @return string
 	 */
-	function doReplace( $from, $to, $in ) {
+	public function doReplace( $from, $to, $in ) {
 		if ( is_string( $in ) ) {
 			return str_replace( $from, $to, $in );
 		} elseif ( is_array( $in ) ) {
@@ -334,7 +334,7 @@ class SiteConfiguration {
 	 *
 	 * @return array
 	 */
-	function &getLocalDatabases() {
+	public function &getLocalDatabases() {
 		return $this->wikis;
 	}
 
@@ -578,7 +578,7 @@ class SiteConfiguration {
 	 *
 	 * @return array
 	 */
-	static function arrayMerge( $array1/* ... */ ) {
+	public static function arrayMerge( $array1/* ... */ ) {
 		$out = $array1;
 		$argsCount = func_num_args();
 		for ( $i = 1; $i < $argsCount; $i++ ) {

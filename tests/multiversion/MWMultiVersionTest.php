@@ -3,7 +3,7 @@
 require_once __DIR__ . '/../../multiversion/MWMultiVersion.php';
 require_once __DIR__ . '/../../multiversion/MWWikiversions.php';
 
-class MWMultiVersionTests extends PHPUnit\Framework\TestCase {
+class MWMultiVersionTest extends PHPUnit\Framework\TestCase {
 
 	protected function tearDown() {
 		MWMultiversion::destroySingleton();
@@ -13,13 +13,13 @@ class MWMultiVersionTests extends PHPUnit\Framework\TestCase {
 	/**
 	 * @dataProvider provideServerNameAndDocRoot
 	 */
-	function testRealmFilenames( $expectedDB, $serverName, $msg = '' ) {
+	public function testRealmFilenames( $expectedDB, $serverName, $msg = '' ) {
 		$version = MWMultiversion::initializeForWiki( $serverName );
 
 		$this->assertEquals( $expectedDB, $version->getDatabase() );
 	}
 
-	function provideServerNameAndDocRoot() {
+	public function provideServerNameAndDocRoot() {
 		$root = '/srv/mediawiki/docroot';
 
 		return [

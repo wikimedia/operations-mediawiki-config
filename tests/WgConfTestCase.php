@@ -2,7 +2,7 @@
 /**
  * PHPUnit testcase for $wgConf testing.
  *
- * @license GPLv2 or later
+ * @license GPL-2.0-or-later
  * @author Erik Bernhardson <ebernhardson@wikimedia.org>
  * @copyright Copyright © 2015, Erik Bernhardson <ebernhardson@wikimedia.org>
  * @file
@@ -69,7 +69,7 @@ class WgConfTestCase extends PHPUnit\Framework\TestCase {
 	 * We have to ensure global scope has been restored BEFORE the test run,
 	 * the only way to achieve that is when leaving the data provider scope.
 	 */
-	function __destruct() {
+	public function __destruct() {
 		if ( !empty( $this->globals ) || !empty( $this->globalsToUnset ) ) {
 			throw new Exception(
 				__CLASS__ . ": setGlobals() used without restoreGlobals().\n" .

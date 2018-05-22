@@ -15,8 +15,7 @@
  * http://incubator.wikimedia.org/wiki/Wp/xyz/Page
  *
  * @copyright Copyright © 2011-2013, Danny B., SPQRobin, Tim Starling
- *
- * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
+ * @license GPL-2.0-or-later
  */
 
 // define( 'MISSING_PHP_TEST', 1 );

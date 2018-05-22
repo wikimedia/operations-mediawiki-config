@@ -1,5 +1,186 @@
 [
     {
+        "name": "mongofill/mongofill",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/mongofill/mongofill.git",
+            "reference": "710e1cb3e17ecb499c8faeefd2c6a883ca907880"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/mongofill/mongofill/zipball/710e1cb3e17ecb499c8faeefd2c6a883ca907880",
+            "reference": "710e1cb3e17ecb499c8faeefd2c6a883ca907880",
+            "shasum": ""
+        },
+        "provide": {
+            "ext-mongo": "*"
+        },
+        "require-dev": {
+            "athletic/athletic": "dev-master",
+            "phpunit/phpunit": "~4.7.7"
+        },
+        "time": "2016-11-13T21:50:29+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "classmap": [
+                {
+                    "Mongofill": "src/"
+                },
+                {
+                    "Mongo": "src/Mongo.php"
+                },
+                {
+                    "MongoBinData": "src/MongoBinData.php"
+                },
+                {
+                    "MongoClient": "src/MongoClient.php"
+                },
+                {
+                    "MongoCode": "src/MongoCode.php"
+                },
+                {
+                    "MongoCollection": "src/MongoCollection.php"
+                },
+                {
+                    "MongoConnectionException": "src/MongoConnectionException.php"
+                },
+                {
+                    "MongoCursor": "src/MongoCursor.php"
+                },
+                {
+                    "MongoCursorException": "src/MongoCursorException.php"
+                },
+                {
+                    "MongoCursorTimeoutException": "src/MongoCursorTimeoutException.php"
+                },
+                {
+                    "MongoDB": "src/MongoDB.php"
+                },
+                {
+                    "MongoDBRef": "src/MongoDBRef.php"
+                },
+                {
+                    "MongoDate": "src/MongoDate.php"
+                },
+                {
+                    "MongoException": "src/MongoException.php"
+                },
+                {
+                    "MongoGridFS": "src/MongoGridFS.php"
+                },
+                {
+                    "MongoGridFSFile": "src/MongoGridFSFile.php"
+                },
+                {
+                    "MongoGridFSException": "src/MongoGridFSException.php"
+                },
+                {
+                    "MongoGridFSCursor": "src/MongoGridFSCursor.php"
+                },
+                {
+                    "MongoId": "src/MongoId.php"
+                },
+                {
+                    "MongoInt32": "src/MongoInt32.php"
+                },
+                {
+                    "MongoInt64": "src/MongoInt64.php"
+                },
+                {
+                    "MongoLog": "src/MongoLog.php"
+                },
+                {
+                    "MongoMaxKey": "src/MongoMaxKey.php"
+                },
+                {
+                    "MongoMinKey": "src/MongoMinKey.php"
+                },
+                {
+                    "MongoRegex": "src/MongoRegex.php"
+                },
+                {
+                    "MongoResultException": "src/MongoResultException.php"
+                },
+                {
+                    "MongoTimestamp": "src/MongoTimestamp.php"
+                }
+            ],
+            "files": [
+                "src/functions.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jakub Husák",
+                "email": "husak.j@gmail.com"
+            },
+            {
+                "name": "Mongofill Community",
+                "homepage": "https://github.com/mongofill/mongofill/graphs/contributors"
+            },
+            {
+                "name": "Máximo Cuadros",
+                "email": "mcuadros@gmail.com"
+            }
+        ],
+        "description": "Polyfill of PECL Mongo extension"
+    },
+    {
+        "name": "perftools/xhgui",
+        "version": "0.8.1",
+        "version_normalized": "0.8.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/perftools/xhgui.git",
+            "reference": "3d70b9aee4a46446eb27e0275b9d216cd6e1975c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/perftools/xhgui/zipball/3d70b9aee4a46446eb27e0275b9d216cd6e1975c",
+            "reference": "3d70b9aee4a46446eb27e0275b9d216cd6e1975c",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0",
+            "pimple/pimple": "^1.0.2",
+            "slim/slim": "^2.6.3",
+            "slim/views": "^0.1.0",
+            "twig/twig": "~1.17"
+        },
+        "require-dev": {
+            "alcaeus/mongo-php-adapter": "^1.0",
+            "ext-dom": "*",
+            "phpunit/phpunit": "3.7.x-dev"
+        },
+        "suggest": {
+            "alcaeus/mongo-php-adapter": "Mongo PHP Adapter is required for PHP >7 (when using ext-mongodb)",
+            "ext-mongo": "Mongo is needed to store profiler results for PHP < 7.",
+            "ext-mongodb": "Mongo is needed to store profiler results for PHP > 7.",
+            "ext-uprofiler": "You need to install either xhprof or uprofiler to use XHGui.",
+            "ext-xhprof": "You need to install either xhprof or uprofiler to use XHGui."
+        },
+        "time": "2017-04-07T14:29:44+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Xhgui_": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "A web based interface for viewing profile data collected by XHProf."
+    },
+    {
         "name": "pimple/pimple",
         "version": "v1.1.1",
         "version_normalized": "1.1.1.0",
@@ -150,187 +331,6 @@
             "slimphp",
             "templating"
         ]
-    },
-    {
-        "name": "perftools/xhgui",
-        "version": "0.8.1",
-        "version_normalized": "0.8.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/perftools/xhgui.git",
-            "reference": "3d70b9aee4a46446eb27e0275b9d216cd6e1975c"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/perftools/xhgui/zipball/3d70b9aee4a46446eb27e0275b9d216cd6e1975c",
-            "reference": "3d70b9aee4a46446eb27e0275b9d216cd6e1975c",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.0",
-            "pimple/pimple": "^1.0.2",
-            "slim/slim": "^2.6.3",
-            "slim/views": "^0.1.0",
-            "twig/twig": "~1.17"
-        },
-        "require-dev": {
-            "alcaeus/mongo-php-adapter": "^1.0",
-            "ext-dom": "*",
-            "phpunit/phpunit": "3.7.x-dev"
-        },
-        "suggest": {
-            "alcaeus/mongo-php-adapter": "Mongo PHP Adapter is required for PHP >7 (when using ext-mongodb)",
-            "ext-mongo": "Mongo is needed to store profiler results for PHP < 7.",
-            "ext-mongodb": "Mongo is needed to store profiler results for PHP > 7.",
-            "ext-uprofiler": "You need to install either xhprof or uprofiler to use XHGui.",
-            "ext-xhprof": "You need to install either xhprof or uprofiler to use XHGui."
-        },
-        "time": "2017-04-07T14:29:44+00:00",
-        "type": "library",
-        "installation-source": "source",
-        "autoload": {
-            "psr-0": {
-                "Xhgui_": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "description": "A web based interface for viewing profile data collected by XHProf."
-    },
-    {
-        "name": "mongofill/mongofill",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/mongofill/mongofill.git",
-            "reference": "710e1cb3e17ecb499c8faeefd2c6a883ca907880"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/mongofill/mongofill/zipball/710e1cb3e17ecb499c8faeefd2c6a883ca907880",
-            "reference": "710e1cb3e17ecb499c8faeefd2c6a883ca907880",
-            "shasum": ""
-        },
-        "provide": {
-            "ext-mongo": "*"
-        },
-        "require-dev": {
-            "athletic/athletic": "dev-master",
-            "phpunit/phpunit": "~4.7.7"
-        },
-        "time": "2016-11-13T21:50:29+00:00",
-        "type": "library",
-        "installation-source": "source",
-        "autoload": {
-            "classmap": [
-                {
-                    "Mongofill": "src/"
-                },
-                {
-                    "Mongo": "src/Mongo.php"
-                },
-                {
-                    "MongoBinData": "src/MongoBinData.php"
-                },
-                {
-                    "MongoClient": "src/MongoClient.php"
-                },
-                {
-                    "MongoCode": "src/MongoCode.php"
-                },
-                {
-                    "MongoCollection": "src/MongoCollection.php"
-                },
-                {
-                    "MongoConnectionException": "src/MongoConnectionException.php"
-                },
-                {
-                    "MongoCursor": "src/MongoCursor.php"
-                },
-                {
-                    "MongoCursorException": "src/MongoCursorException.php"
-                },
-                {
-                    "MongoCursorTimeoutException": "src/MongoCursorTimeoutException.php"
-                },
-                {
-                    "MongoDB": "src/MongoDB.php"
-                },
-                {
-                    "MongoDBRef": "src/MongoDBRef.php"
-                },
-                {
-                    "MongoDate": "src/MongoDate.php"
-                },
-                {
-                    "MongoException": "src/MongoException.php"
-                },
-                {
-                    "MongoGridFS": "src/MongoGridFS.php"
-                },
-                {
-                    "MongoGridFSFile": "src/MongoGridFSFile.php"
-                },
-                {
-                    "MongoGridFSException": "src/MongoGridFSException.php"
-                },
-                {
-                    "MongoGridFSCursor": "src/MongoGridFSCursor.php"
-                },
-                {
-                    "MongoId": "src/MongoId.php"
-                },
-                {
-                    "MongoInt32": "src/MongoInt32.php"
-                },
-                {
-                    "MongoInt64": "src/MongoInt64.php"
-                },
-                {
-                    "MongoLog": "src/MongoLog.php"
-                },
-                {
-                    "MongoMaxKey": "src/MongoMaxKey.php"
-                },
-                {
-                    "MongoMinKey": "src/MongoMinKey.php"
-                },
-                {
-                    "MongoRegex": "src/MongoRegex.php"
-                },
-                {
-                    "MongoResultException": "src/MongoResultException.php"
-                },
-                {
-                    "MongoTimestamp": "src/MongoTimestamp.php"
-                }
-            ],
-            "files": [
-                "src/functions.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Jakub Husák",
-                "email": "husak.j@gmail.com"
-            },
-            {
-                "name": "Mongofill Community",
-                "homepage": "https://github.com/mongofill/mongofill/graphs/contributors"
-            },
-            {
-                "name": "Máximo Cuadros",
-                "email": "mcuadros@gmail.com"
-            }
-        ],
-        "description": "Polyfill of PECL Mongo extension"
     },
     {
         "name": "twig/twig",
