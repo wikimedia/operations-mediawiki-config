@@ -1706,6 +1706,7 @@ $wgConf->settings = [
 	'techconductwiki' => [ '1.5x' => '/static/images/project-logos/techconductwiki-1.5x.png', '2x' => '/static/images/project-logos/techconductwiki-2x.png' ],
 	'test2wiki' => [ '1.5x' => '/static/images/project-logos/test2wiki-1.5x.png', '2x' => '/static/images/project-logos/test2wiki-2x.png' ],
 	'votewiki' => [ '1.5x' => '/static/images/project-logos/votewiki-1.5x.png', '2x' => '/static/images/project-logos/votewiki-2x.png' ],
+	'wikimania2018wiki' => [ '1.5x' => '/static/images/project-logos/wikimania2018wiki-1.5x.png', '2x' => '/static/images/project-logos/wikimania2018wiki-2x.png' ], // T194340
 ],
 # @} end of wgLogoHD
 
