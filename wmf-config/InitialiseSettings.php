@@ -5112,7 +5112,7 @@ $wgConf->settings = [
 	'fawiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T140839
 	'frwiki' => [ '', 'autoconfirmed', 'editextendedsemiprotected', 'sysop' ], // T131109
 	'hewiki' => [ '', 'autoconfirmed', 'autopatrol',  'templateeditor' /* T102466 */, 'sysop' ], // T60207
-	'huwiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T74055
+	'huwiki' => [ '', 'autoconfirmed', 'edittrustedprotected', 'templateeditor', 'sysop' ], // T74055, T194568
 	'kowiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T184675
 	'lvwiki' => [ '', 'autoconfirmed', 'autopatrol', 'sysop' ], // T92645
 	'plwiki' => [ '', 'autoconfirmed', 'editor', 'sysop' ], // T48990
@@ -8991,8 +8991,10 @@ $wgConf->settings = [
 		'autopatrolled' => [ 'autopatrol' => true ],
 	],
 	'huwiki' => [
-		'editor' => [ 'noratelimit' => true ],
-		'sysop' => [ 'templateeditor' => true ], // T74055
+		'bot' => [ 'edittrustedprotected' => true ], // T194568
+		'trusted' => [ 'edittrustedprotected' => true ], // T194568
+		'editor' => [ 'noratelimit' => true, 'edittrustedprotected' => true ], // T194568
+		'sysop' => [ 'templateeditor' => true, 'edittrustedprotected' => true ], // T74055, T194568
 		'templateeditor' => [ 'templateeditor' => true ], // T74055
 		'interface-editor' => [ 'editinterface' => true, 'editusercss' => true, 'edituserjs' => true ], // T109408
 	],
