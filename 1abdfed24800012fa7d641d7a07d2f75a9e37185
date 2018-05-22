@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "07665824_2cd21f5a",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 10762,
+      "author": {
+        "id": 5163
+      },
+      "writtenOn": "2018-05-22T05:20:19Z",
+      "side": 1,
+      "message": "It should be \u0027filemover\u0027",
+      "range": {
+        "startLine": 10762,
+        "startChar": 93,
+        "endLine": 10762,
+        "endChar": 103
+      },
+      "revId": "1abdfed24800012fa7d641d7a07d2f75a9e37185",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d6fee7d9_40d22f99",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 11550,
+      "author": {
+        "id": 5163
+      },
+      "writtenOn": "2018-05-22T05:20:19Z",
+      "side": 1,
+      "message": "It should be \u0027filemover\u0027",
+      "range": {
+        "startLine": 11550,
+        "startChar": 102,
+        "endLine": 11550,
+        "endChar": 112
+      },
+      "revId": "1abdfed24800012fa7d641d7a07d2f75a9e37185",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1403b604_3636cef9",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 11551,
+      "author": {
+        "id": 5163
+      },
+      "writtenOn": "2018-05-22T05:20:19Z",
+      "side": 1,
+      "message": "It should be \u0027filemover\u0027. And added to $wgGroupsRemoveFromSelf instead of here.",
+      "range": {
+        "startLine": 11551,
+        "startChar": 19,
+        "endLine": 11551,
+        "endChar": 29
+      },
+      "revId": "1abdfed24800012fa7d641d7a07d2f75a9e37185",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
