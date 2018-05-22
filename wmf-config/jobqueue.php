@@ -67,6 +67,15 @@ if ( $wmgUseEventBus ) {
 		$wgJobTypeConf['LocalGlobalUserPageCacheUpdateJob'] =
 		$wgJobTypeConf['TranslateDeleteJob'] =
 		$wgJobTypeConf['TranslateRenderJob'] =
+		// Cross-wiki posting jobs
+		$wgJobTypeConf['CentralAuthUnattachUserJob'] =
+		$wgJobTypeConf['CentralAuthCreateLocalAccountJob'] =
+		$wgJobTypeConf['BounceHandlerJob'] =
+		$wgJobTypeConf['BounceHandlerNotificationJob'] =
+		$wgJobTypeConf['securePollPopulateVoterList'] =
+		$wgJobTypeConf['LocalSharedHelpPageCacheUpdateJob'] =
+		$wgJobTypeConf['GlobalUserPageLocalJobSubmitJob'] =
+		$wgJobTypeConf['MassMessageSubmitJob'] =
 			[ 'class' => 'JobQueueEventBus' ];
 	if ( isset( $wmgDisableCirrusSearchJobsInRedis ) && $wmgDisableCirrusSearchJobsInRedis ) {
 		$wgJobTypeConf['cirrusSearchCheckerJob'] =
