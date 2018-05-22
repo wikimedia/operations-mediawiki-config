@@ -18506,6 +18506,7 @@ $wgConf->settings = [
 'wmgUseWikibaseLexeme' => [
 	'default' => false,
 	'testwikidatawiki' => true,
+	'wikidatawiki' => true,
 ],
 
 'wgLexemeLanguageCodePropertyId' => [
