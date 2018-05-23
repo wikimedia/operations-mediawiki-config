@@ -24,12 +24,12 @@ if ( !empty( $wmgUseWikibaseLexeme ) ) {
 	if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['idBlacklist'] = $wmgWikibaseIdBlacklist;
 		$wgWBRepoSettings['disabledDataTypes'] = $wmgWikibaseDisabledDataTypes;
+		$wgWBRepoSettings['disabledRdfExportEntityTypes'] = $wmgWikibaseDisabledRdfExportEntityTypes;
 	}
 }
 
 if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['disabledAccessEntityTypes'] = $wmgWikibaseDisabledAccessEntityTypes;
-	$wgWBClientSettings['disabledRdfExportEntityTypes'] = $wmgWikibaseDisabledRdfExportEntityTypes;
 }
 // End WikibaseLexeme deploy config section
 
