@@ -46,6 +46,30 @@
       "revId": "a1cbcb34ebf6a46b177f861af0153c113b062c3d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "54df725d_8c65d4c8",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3193,
+      "author": {
+        "id": 1883
+      },
+      "writtenOn": "2018-05-23T11:41:35Z",
+      "side": 1,
+      "message": "Sorry guys but imo this is just how things are done in the WMF config. This \"new variable\" will never show up anywhere else and does only bundle settings so they can be switched for the different wikis in InitialiseSettings.php. In the settings array there each wiki ( or group ) can the be set to have the feature on or of by using the switch.\n\nAt least that\u0027s how I understand the system.",
+      "parentUuid": "76d59d0c_b6151336",
+      "range": {
+        "startLine": 3193,
+        "startChar": 0,
+        "endLine": 3193,
+        "endChar": 60
+      },
+      "revId": "a1cbcb34ebf6a46b177f861af0153c113b062c3d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
