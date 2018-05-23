@@ -7930,7 +7930,7 @@ $wgConf->settings = [
 	'+vecwikisource' => [ 100 => 1, 104 => 1 ],
 	'+viwikibooks' => [ 102 => 1, 104 => 1, 106 => 1 ],
 	'+viwikisource' => [ 102 => 1, 106 => 1 ],
-	'+testwikidatawiki' => [ 120 => 1, 146 => 1 ],
+	'+testwikidatawiki' => [ 120 => 1, 146 => 0 ], // Search properties but not lexeme by default
 	'+wikidatawiki' => [ 120 => 1 ],
 	'+zhwikisource' => [ 102 => 1, 106 => 1, 114 => 1 ], // T66127
 ],
@@ -12329,6 +12329,7 @@ $wgConf->settings = [
 	'+zhwikisource' => [ 102, 114 ], // T66127
 	'+dewikivoyage' => [ 104 ],
 	'+commonswiki' => [ 6 ], // T167077
+	'+testwikidatawiki' => [ 146 ], // So that Lexeme are indexed in the content indes (Cirrus)
 ],
 
 'wgExtraSignatureNamespaces' => [
