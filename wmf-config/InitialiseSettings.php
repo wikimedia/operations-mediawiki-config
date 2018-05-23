@@ -18183,6 +18183,20 @@ $wgConf->settings = [
 	'default' => 1000,
 ],
 
+'wgNavigationTimingSurveySamplingFactor' => [
+	// Sub-factor of the above. The lower the value, the more the survey
+	// will be displayed to users.
+	'default' => 0,
+	'cawiki' => 3,
+	'enwikivoyage' => 2,
+],
+
+'wgNavigationTimingSurveyName' => [
+	'default' => false,
+	'cawiki' => 'internal-survey-perceived-performance-survey',
+	'enwikivoyage' => 'internal-survey-perceived-performance-survey',
+],
+
 'wgNavigationTimingOversampleFactor' => [
 	'default' => [
 		'geo' => [
