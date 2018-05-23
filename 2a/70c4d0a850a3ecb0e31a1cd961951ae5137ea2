@@ -1,0 +1,11 @@
+Code-Review+1: Rxy <wikitech.rxy@rxy.jp>
+Code-Review+1: Foks <jsutherland@wikimedia.org>
+Code-Review+1: Jforrester <jforrester@wikimedia.org>
+Code-Review+1: Dzahn <dzahn@wikimedia.org>
+Code-Review+2: EBernhardson <ebernhardson@wikimedia.org>
+Verified+2: jenkins-bot
+Submitted-by: jenkins-bot
+Submitted-at: Wed, 23 May 2018 23:08:07 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/433136
+Project: operations/mediawiki-config
+Branch: refs/heads/master
