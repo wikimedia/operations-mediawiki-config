@@ -22,6 +22,30 @@
       "revId": "a1cbcb34ebf6a46b177f861af0153c113b062c3d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "76d59d0c_b6151336",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3193,
+      "author": {
+        "id": 1099
+      },
+      "writtenOn": "2018-05-23T11:13:54Z",
+      "side": 1,
+      "message": "Thiemo, I agree. Just ini_set( \"wikidiff2.moved_paragraph_detection_cutoff_mobile\", 0 ); before LocalSettings gets read, which can then override the setting. Introducing a new variable just makes things unecessarily complicated. Or is there a good reason for having it?",
+      "parentUuid": "45de8c72_51cc2334",
+      "range": {
+        "startLine": 3193,
+        "startChar": 0,
+        "endLine": 3193,
+        "endChar": 60
+      },
+      "revId": "a1cbcb34ebf6a46b177f861af0153c113b062c3d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
