@@ -29,7 +29,7 @@ if ( !empty( $wmgUseWikibaseLexeme ) ) {
 
 if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['disabledAccessEntityTypes'] = $wmgWikibaseDisabledAccessEntityTypes;
-	$wgWBClientSettings['disabledRdfExportEntityTypes'] = $wmgWikibaseDisabledRdfExportEntityTypes;
+	$wgWBRepoSettings['disabledRdfExportEntityTypes'] = $wmgWikibaseDisabledRdfExportEntityTypes;
 }
 // End WikibaseLexeme deploy config section
 
