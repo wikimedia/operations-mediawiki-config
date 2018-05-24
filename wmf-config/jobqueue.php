@@ -76,24 +76,23 @@ if ( $wmgUseEventBus ) {
 		$wgJobTypeConf['LocalSharedHelpPageCacheUpdateJob'] =
 		$wgJobTypeConf['MassMessageSubmitJob'] =
 			[ 'class' => 'JobQueueEventBus' ];
-	if ( isset( $wmgDisableCirrusSearchJobsInRedis ) && $wmgDisableCirrusSearchJobsInRedis ) {
-		$wgJobTypeConf['cirrusSearchCheckerJob'] =
-			$wgJobTypeConf['cirrusSearchDeleteArchive'] =
-			$wgJobTypeConf['cirrusSearchDeletePages'] =
-			$wgJobTypeConf['cirrusSearchElasticaWrite'] =
-			$wgJobTypeConf['cirrusSearchIncomingLinkCount'] =
-			$wgJobTypeConf['cirrusSearchLinksUpdate'] =
-			$wgJobTypeConf['cirrusSearchLinksUpdatePrioritized'] =
-			$wgJobTypeConf['cirrusSearchMassIndex'] =
-			$wgJobTypeConf['cirrusSearchOtherIndex'] = [
-				'class' => 'JobQueueSecondTestQueue',
-				'mainqueue' => $jobQueueFederatedConfig,
-				'debugqueue' => [
-					'class' => 'JobQueueEventBus'
-				],
-				'readonly' => true,
-			];
-	}
+	// Cirrus search is an exception T189137
+	$wgJobTypeConf['cirrusSearchCheckerJob'] =
+		$wgJobTypeConf['cirrusSearchDeleteArchive'] =
+		$wgJobTypeConf['cirrusSearchDeletePages'] =
+		$wgJobTypeConf['cirrusSearchElasticaWrite'] =
+		$wgJobTypeConf['cirrusSearchIncomingLinkCount'] =
+		$wgJobTypeConf['cirrusSearchLinksUpdate'] =
+		$wgJobTypeConf['cirrusSearchLinksUpdatePrioritized'] =
+		$wgJobTypeConf['cirrusSearchMassIndex'] =
+		$wgJobTypeConf['cirrusSearchOtherIndex'] = [
+			'class' => 'JobQueueSecondTestQueue',
+			'mainqueue' => $jobQueueFederatedConfig,
+			'debugqueue' => [
+				'class' => 'JobQueueEventBus'
+			],
+			'readonly' => isset( $wmgDisableCirrusSearchJobsInRedis ) && $wmgDisableCirrusSearchJobsInRedis,
+		];
 	if ( isset( $wmgBulk2JobsInRedis ) && $wmgBulk2JobsInRedis ) {
 		$wgJobTypeConf['default'] = [ 'class' => 'JobQueueEventBus' ];
 		$wgJobTypeConf['gwtoolsetUploadMediafileJob'] = // T192946
