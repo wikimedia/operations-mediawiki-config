@@ -4,7 +4,7 @@
 if ( !empty( $wmgUseWikibaseRepo ) ) {
 	include_once "$IP/extensions/Wikibase/repo/Wikibase.php";
 	wfLoadExtension( 'Wikidata.org' );
-	wfLoadExtension( 'PropertySuggester' );
+	// wfLoadExtension( 'PropertySuggester' );
 	wfLoadExtension( 'WikibaseQuality' );
 	wfLoadExtension( 'WikibaseQualityConstraints' );
 }
@@ -14,7 +14,7 @@ if ( !empty( $wmgUseWikibaseClient ) ) {
 	include_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
 	wfLoadExtension( 'WikimediaBadges' );
 	if ( !empty( $wmgUseArticlePlaceholder ) ) {
-		wfLoadExtension( 'ArticlePlaceholder' );
+		wfLoadExtension( 'ArticlePlaceiholder' );
 	}
 }
 
