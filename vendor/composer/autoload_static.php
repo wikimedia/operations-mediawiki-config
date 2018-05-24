@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit77d65f2e0d4ada4815bb93d290a27837
+class ComposerStaticInit889a59e2eaedbbf5c38b3472b4f9e0c3
 {
     public static $files = array (
         '90dc6f051d52d4530c2c3a77301ca309' => __DIR__ . '/..' . '/mongofill/mongofill/src/functions.php',
@@ -514,10 +514,10 @@ class ComposerStaticInit77d65f2e0d4ada4815bb93d290a27837
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit77d65f2e0d4ada4815bb93d290a27837::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit77d65f2e0d4ada4815bb93d290a27837::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit77d65f2e0d4ada4815bb93d290a27837::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit77d65f2e0d4ada4815bb93d290a27837::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit889a59e2eaedbbf5c38b3472b4f9e0c3::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit889a59e2eaedbbf5c38b3472b4f9e0c3::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit889a59e2eaedbbf5c38b3472b4f9e0c3::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit889a59e2eaedbbf5c38b3472b4f9e0c3::$classMap;
 
         }, null, ClassLoader::class);
     }
