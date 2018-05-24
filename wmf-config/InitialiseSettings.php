@@ -20257,13 +20257,6 @@ $wgConf->settings = [
 	'testwikidatawiki' => true,
 ],
 
-'wmgBulk2JobsInRedis' => [
-	'default' => true,
-	'wikipedia' => false,
-	'commonswiki' => false,
-	'wikidatawiki' => false,
-],
-
 'wmgUseCapiunto' => [
 	'default' => false,
 	'testwiki' => true,
