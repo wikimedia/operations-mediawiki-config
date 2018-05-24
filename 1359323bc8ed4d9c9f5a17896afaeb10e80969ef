@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bc98d565_27cadea1",
+        "filename": "multiversion/MWMultiVersion.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-05-24T14:15:17Z",
+      "side": 1,
+      "message": "@Chad, @Reedy: Wondering if it matters to use .. or dirname here?",
+      "range": {
+        "startLine": 4,
+        "startChar": 25,
+        "endLine": 4,
+        "endChar": 28
+      },
+      "revId": "1359323bc8ed4d9c9f5a17896afaeb10e80969ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
