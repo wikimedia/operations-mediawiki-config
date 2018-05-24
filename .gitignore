@@ -21,8 +21,8 @@ wikiversions-labs.php
 ## Mac OS X
 .DS_Store
 
-/multiversion/vendor/**/.git
-/multiversion/vendor/slim/slim/tests/templates/test.php
+/vendor/**/.git
+/vendor/slim/slim/tests/templates/test.php
 
 # python stuff
 *.pyc
