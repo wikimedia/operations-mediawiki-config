@@ -15414,6 +15414,7 @@ $wgConf->settings = [
 		'https://blog.wikimedia.org/c/technology/feed/',
 		'https://blog.wikimedia.org/c/technology/mediawiki/feed/',
 		'https://git.wikimedia.org/feed/mediawiki/extensions/Translate.git',
+		'https://discourse-mediawiki.wmflabs.org/c/ask-here.rss',
 
 		// Feeds included for Fundraising Tech pages
 		'https://codeclimate.com/github/wikimedia/mediawiki-extensions-CentralNotice/feed.atom',
