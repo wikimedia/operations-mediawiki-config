@@ -7650,6 +7650,7 @@ $wgConf->settings = [
 	'alswiki' => true, // T6543
 	'arwikisource' => true,
 	'azbwiki' => true, // T109755
+	'azwiki' => true, // T194389
 	'bgwiki' => true,
 	'bnwiki' => true, // T13042
 	'brwikimedia' => true, // T65345
