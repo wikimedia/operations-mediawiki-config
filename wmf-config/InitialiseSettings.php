@@ -8009,11 +8009,6 @@ $wgConf->settings = [
 			'user' => [ 10, 30 ],
 		],
 	],
-	'+arwiki' => [
-		'edit' => [
-			'user' => [ 60, 60 ], // T192668 - mass vandalism, 20000+ edits/hour
-		],
-	],
 	'+dewiki' => [ // T59820
 		'rollback' => [
 			'editor' => [ 100, 60 ],
