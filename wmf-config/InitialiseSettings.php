@@ -5457,6 +5457,12 @@ $wgConf->settings = [
 		100 => 'Anfrage',
 		101 => 'Anfrage_Diskussion',
 	],
+	'bdwikimedia' => [
+		100 => 'কর্মশালা', // Workshop - T195700
+		101 => 'কর্মশালা_আলোচনা', // Workshop talk - T195700
+		102 => 'আড্ডা', // Meetup - T195700
+		103 => 'আড্ডা_আলোচনা', // Meetup talk - T195700
+	],
 	'boardwiki' => [
 		100 => 'Resolution',
 		101 => 'Resolution_talk',
