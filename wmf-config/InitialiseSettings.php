@@ -3294,6 +3294,12 @@ $wgConf->settings = [
 	'+barwiki' => [
 		'Portal_Diskussion' => 101, // T43962 - now "Portal Dischkrian"
 	],
+	'+bdwikimedia' => [
+		'Workshop' => 100, // T195700
+		'workshop_talk' => 101, // T195700
+		'Meetup' => 102, // T195700
+		'Meetup_talk' => 103, // T195700
+	],
 	'+betawikiversity' => [
 		'Aptarimas' => NS_TALK,
 		'Naudotojas' => NS_USER,
