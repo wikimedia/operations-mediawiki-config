@@ -162,7 +162,7 @@ if ( $wmgUseWikibaseRepo ) {
 			'P3921', // Wikidata SPARQL query equivalent
 			'P4316', // kinship equivalent in SPARQL at Wikidata
 		];
-
+		$wgSpecialPages['ItemDisambiguation'] = 'SpecialBlankpage';
 	}
 
 	if ( $wgDBname === 'wikidatawiki' ) {
