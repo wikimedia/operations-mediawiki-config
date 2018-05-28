@@ -722,7 +722,7 @@ $wgLBFactoryConf = [
 	# 'DEFAULT' => 'This request is served by a passive datacenter. If you see this something is really wrong.', # s3
 	# 's4'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
 	# 's5'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
-	# 's6'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
+	 's6'      => 'On going maintenance tasks, please retry in a few minutes: https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Le_Bistro/23_mai_2018#Wikip%C3%A9dia_en_fran%C3%A7ais_en_lecture_seule_pendant_15_minutes_le_29_mai https://ru.wikipedia.org/?diff=92816291 https://ja.wikipedia.org/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B#2018%E5%B9%B45%E6%9C%8829%E6%97%A5%E3%81%AE%E3%83%A1%E3%83%B3%E3%83%86%E3%83%8A%E3%83%B3%E3%82%B9%E4%BA%88%E5%AE%9A',
 	# 's7'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
 	# 's8'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
 ],
