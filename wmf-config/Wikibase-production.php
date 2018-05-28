@@ -163,6 +163,7 @@ if ( $wmgUseWikibaseRepo ) {
 			'P4316', // kinship equivalent in SPARQL at Wikidata
 		];
 
+		$wgSpecialPages['ItemDisambiguation'] = 'SpecialBlankPage';
 	}
 
 	if ( $wgDBname === 'wikidatawiki' ) {
