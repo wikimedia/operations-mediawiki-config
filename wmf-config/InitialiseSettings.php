@@ -20359,7 +20359,8 @@ $wgConf->settings = [
 
 'wmgArticlePlaceholderSearchEngineIndexed' => [
 	'default' => false,
-	'cywiki' => 'Q16956',
+	// Disabling it per T195520
+	// 'cywiki' => 'Q16956',
 ],
 
 'wgWMEReadingDepthEnabled' => [
