@@ -12442,6 +12442,11 @@ $wgConf->settings = [
 	'tawikisource' => true,
 ],
 
+'wgProofreadPagePageSeparator' => [
+	'default' => '&#32;',
+	'jawikisource' => '', // T195873
+],
+
 'wmgUseDPL' => [
 	// DynamicPageList extension
 	'default' => false,
