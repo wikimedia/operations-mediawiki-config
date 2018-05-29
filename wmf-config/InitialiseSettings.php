@@ -12440,6 +12440,7 @@ $wgConf->settings = [
 'wgProofreadPagePageSeparator' => [
 	'default' => '&#32;',
 	'jawikisource' => '', // T195873
+	'zhwikisource' => '', // T194875
 ],
 
 'wmgUseDPL' => [
