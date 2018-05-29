@@ -74,7 +74,7 @@ $wmfAllServices['codfw']['restbase'] = 'http://restbase.discovery.wmnet:7231';
 
 ### Poolcounter
 $wmfAllServices['eqiad']['poolcounter'] = [
-	'10.64.32.126', # poolcounter1001.eqiad.wmnet
+	# '10.64.32.126', # poolcounter1001.eqiad.wmnet
 	'10.64.0.19', # poolcounter1003.eqiad.wmnet
 ];
 $wmfAllServices['codfw']['poolcounter'] = [
