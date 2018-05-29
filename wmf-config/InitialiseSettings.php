@@ -20641,9 +20641,32 @@ $wgConf->settings = [
 ],
 
 'wmgUseNewWikiDiff2Extension' => [
-	'default' => false,
-	'group0' => true, // T177891
-	'dewiki' => true, // T180476
+	'default' => true, // T195375
+	'jawiki' => false,
+	'jawikibooks' => false,
+	'jawikinews' => false,
+	'jawikiquote' => false,
+	'jawikisource' => false,
+	'jawikiversity' => false,
+	'kowiki' => false,
+	'kowikibooks' => false,
+	'kowikinews' => false,
+	'kowikiquote' => false,
+	'kowikisource' => false,
+	'kowikiversity' => false,
+	'thwiki' => false,
+	'thwikibooks' => false,
+	'thwikisource' => false,
+	'thwiktionary' => false,
+	'thwikiquote' => false,
+	'zhwiki' => false,
+	'zhwikibooks' => false,
+	'zhwikinews' => false,
+	'zhwikiquote' => false,
+	'zhwikisource' => false,
+	'zhwikivoyage' => false,
+	'zhwiktionary' => false,
+	'zh_yuewiki' => false,
 ],
 
 'wmgDeactivateWikiDiff2InlineMovedParagaphDetection' => [
