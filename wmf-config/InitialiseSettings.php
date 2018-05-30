@@ -16051,7 +16051,8 @@ $wgConf->settings = [
 // T190101
 'wgMFMobileMainPageCss' => [
 	'default' => false,
-	'hiwiki' => true
+	'hiwiki' => true,
+	'ruwiki' => true, // T195905
 ],
 
 'wgMFPhotoUploadWiki' => [
