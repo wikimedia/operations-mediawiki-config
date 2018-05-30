@@ -13613,6 +13613,38 @@ $wgConf->settings = [
 		'sfs.gov.ua',                       // Ukraine government website - T185399
 		'dknii.gov.ua',                     // Ukraine government website - T185399
 		'adm.dp.gov.ua',                    // Ukraine government website - T191692
+		'journals.plos.org',                // Public Library Of Science - T195270
+		'pensoft.net',                      // Public Library Of Science - T195270
+		'*.memoriachilena.cl',              // Chilean government website - T195928
+		'*.coleccionesdigitales.cl',        // Chilean government website - T195928
+		'*.gob.cl',                         // Chilean government website - T195928
+		'*.gov.cl',                         // Chilean government website - T195928
+		'*.presidencia.cl',                 // Chilean government website - T195928
+		'*.minsal.cl',                      // Chilean government website - T195928
+		'*.mineduc.cl',                     // Chilean government website - T195928
+		'*.mop.cl',                         // Chilean government website - T195928
+		'*.minvu.cl',                       // Chilean government website - T195928
+		'*.bienesnacionales.cl',            // Chilean government website - T195928
+		'*.ind.cl',                         // Chilean government website - T195928
+		'*.minhda.cl',                      // Chilean government website - T195928
+		'*.goreantofagasta.cl',              // Chilean government website - T195928
+		'*.gorecoquimbo.cl',              // Chilean government website - T195928
+		'*.dellibertador.cl',              // Chilean government website - T195928
+		'*.gorebiobio.cl',              // Chilean government website - T195928
+		'*.goreloslagos.cl',              // Chilean government website - T195928
+		'*.goreatacama.cl',              // Chilean government website - T195928
+		'*.goremaule.cl',              // Chilean government website - T195928
+		'*.gorearaucania.cl',              // Chilean government website - T195928
+		'*.goreloslagos.cl',              // Chilean government website - T195928
+		'*.goreaysen.cl',              // Chilean government website - T195928
+		'*.goremagallanes.cl',              // Chilean government website - T195928
+		'*.gobiernosantiago.cl',              // Chilean government website - T195928
+		'*.goredelosrios.cl',              // Chilean government website - T195928
+		'*.gorearicayparinacota.cl',        // Chilean government website - T195928
+		'*.delegaciondeñuble.cl',           // Chilean government website - T195928
+		'*.bcn.cl',                         // Chilean government website - T195928
+		'*.senado.cl',                      // Chilean government website - T195928
+		'*.camara.cl',              // Chilean government website - T195928
 	],
 ],
 
