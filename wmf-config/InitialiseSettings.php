@@ -19403,11 +19403,6 @@ $wgConf->settings = [
 	'wikitech' => false,
 ],
 
-'wmgUseUnicodeConverter' => [
-	'default' => false,
-	'testwiki' => true,
-],
-
 'wmgUseInputBox' => [
 	'default' => true,
 	'loginwiki' => false,
