@@ -20271,11 +20271,10 @@ $wgConf->settings = [
 ],
 
 'wmgDisableCirrusSearchJobsInRedis' => [
-	'default' => false,
-	'mediawikiwiki' => true,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'testwikidatawiki' => true,
+	'default' => true,
+	'wikipedia' => false,
+	'wikidatawiki' => false,
+	'commonswiki' => false,
 ],
 
 'wmgUseCapiunto' => [
