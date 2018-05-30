@@ -833,10 +833,6 @@ if ( $wmgUsePoem ) {
 	wfLoadExtension( 'Poem' );
 }
 
-if ( $wmgUseUnicodeConverter ) {
-	wfLoadExtension( 'UnicodeConverter' );
-}
-
 // Per-wiki config for Flagged Revisions
 if ( $wmgUseFlaggedRevs ) {
 	// Include load of extension, and its config.
