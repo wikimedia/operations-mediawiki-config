@@ -20374,11 +20374,6 @@ $wgConf->settings = [
 	'cywiki' => 'Q16956',
 ],
 
-// T195753
-'wgArticlePlaceholderSearchIntegrationEnabled' => [
-	'default' => false,
-],
-
 'wgWMEReadingDepthEnabled' => [
 	'default' => false,
 	'wikipedia' => true,
