@@ -7,6 +7,9 @@ if ( !empty( $wmgUseWikibaseRepo ) ) {
 	wfLoadExtension( 'PropertySuggester' );
 	wfLoadExtension( 'WikibaseQuality' );
 	wfLoadExtension( 'WikibaseQualityConstraints' );
+	if ( !empty( $wmgUseWikibaseLexeme ) ) {
+		wfLoadExtension( 'WikibaseLexeme' );
+	}
 }
 
 // Load the Client extensions
@@ -16,22 +19,20 @@ if ( !empty( $wmgUseWikibaseClient ) ) {
 	if ( !empty( $wmgUseArticlePlaceholder ) ) {
 		wfLoadExtension( 'ArticlePlaceholder' );
 	}
+	if ( !empty( $wmgUseWikibaseLexeme ) ) {
+		wfLoadExtension( 'WikibaseLexeme' );
+	}
 }
 
-// Start WikibaseLexeme deploy config section
-if ( !empty( $wmgUseWikibaseLexeme ) ) {
-	wfLoadExtension( 'WikibaseLexeme' );
-	if ( $wmgUseWikibaseRepo ) {
-		$wgWBRepoSettings['idBlacklist'] = $wmgWikibaseIdBlacklist;
-		$wgWBRepoSettings['disabledDataTypes'] = $wmgWikibaseDisabledDataTypes;
-		$wgWBRepoSettings['disabledRdfExportEntityTypes'] = $wmgWikibaseDisabledRdfExportEntityTypes;
-	}
+if ( $wmgUseWikibaseRepo ) {
+	$wgWBRepoSettings['idBlacklist'] = $wmgWikibaseIdBlacklist;
+	$wgWBRepoSettings['disabledDataTypes'] = $wmgWikibaseDisabledDataTypes;
+	$wgWBRepoSettings['disabledRdfExportEntityTypes'] = $wmgWikibaseDisabledRdfExportEntityTypes;
 }
 
 if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['disabledAccessEntityTypes'] = $wmgWikibaseDisabledAccessEntityTypes;
 }
-// End WikibaseLexeme deploy config section
 
 // This allows cache invalidations to be in sync with deploys
 // and not shared across different versions of wikibase.
