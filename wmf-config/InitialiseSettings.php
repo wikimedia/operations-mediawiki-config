@@ -18671,6 +18671,7 @@ $wgConf->settings = [
 	'testwikidatawiki' => true,
 	'wikidatawiki' => true,
 	'group0' => true,
+	'group1' => true,
 ],
 
 'wgLexemeLanguageCodePropertyId' => [
