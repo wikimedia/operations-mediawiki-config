@@ -1,20 +1,5 @@
 <?php
 
-// Start WikibaseLexeme beta deploy config section
-if ( !empty( $wmgUseWikibaseLexeme ) ) {
-	wfLoadExtension( 'WikibaseLexeme' );
-	if ( $wmgUseWikibaseRepo ) {
-		$wgWBRepoSettings['idBlacklist'] = $wmgWikibaseIdBlacklist;
-		$wgWBRepoSettings['disabledDataTypes'] = $wmgWikibaseDisabledDataTypes;
-	}
-}
-
-if ( $wmgUseWikibaseClient ) {
-	$wgWBClientSettings['disabledAccessEntityTypes'] = $wmgWikibaseDisabledAccessEntityTypes;
-	$wgWBClientSettings['disabledRdfExportEntityTypes'] = $wmgWikibaseDisabledRdfExportEntityTypes;
-}
-// End WikibaseLexeme beta deploy config section
-
 if ( $wmgUseWikibaseRepo ) {
 	$wgPropertySuggesterClassifyingPropertyIds = [ 694 ];
 	$wgPropertySuggesterInitialSuggestions = [ 694 ];
