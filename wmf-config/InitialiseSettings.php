@@ -9931,8 +9931,8 @@ $wgConf->settings = [
 	'zhwiki' => [
 		// '*' => array( 'createpage' => false ),  # re-enabled createpage priv according to T27142, then redisabled *sigh*, then reenabled \o/
 		'rollbacker' => [ 'rollback' => true, 'abusefilter-log-private' => true, 'abusefilter-view-private' => true ], // T18988 & T39679 & T174978
-		'patroller' => [ 'patrol' => true, 'autopatrol' => true ],
-		'autoreviewer' => [ 'autopatrol' => true ],
+		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'movefile' => true, ], // T195247
+		'autoreviewer' => [ 'autopatrol' => true, 'movefile' => true ], // T195247
 		'flood' => [ 'bot' => true ],
 		'massmessage-sender' => [ 'massmessage' => true ], // T130814
 		'filemover' => [ 'movefile' => true ], // T195247
