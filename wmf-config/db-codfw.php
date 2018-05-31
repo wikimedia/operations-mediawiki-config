@@ -105,7 +105,7 @@ $wgLBFactoryConf = [
 	's1' => [
 		'db2048'      => 0,   # A1 2.9TB 160GB, master
 		'db2055'      => 50,  # D6 3.3TB 160GB, dump (inactive), vslow, api # candidate master
-		'db2062'      => 50,  # B5 3.3TB 160GB, api # mariadb 10.1
+		# 'db2062'      => 50,  # B5 3.3TB 160GB, api # mariadb 10.1 # cloning db2092
 		'db2070'      => 400, # C5 3.3TB 160GB
 		'db2071'      => 50,  # A6 3.6TB 512GB, api
 		'db2072'      => 500, # B6 3.6TB 512GB, # mariadb 10.1 # sanitarium master
@@ -284,7 +284,7 @@ $wgLBFactoryConf = [
 		],
 		'api' => [
 			'db2055' => 1,
-			'db2062' => 1,
+			# 'db2062' => 1,
 			'db2071' => 5,
 			# 'db2092' => 3,
 		],
