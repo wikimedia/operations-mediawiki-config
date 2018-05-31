@@ -173,7 +173,7 @@ $wgLBFactoryConf = [
 		'db2080'      => 10,  # C5 3.3TB 512GB, api
 		'db2081'      => 10,  # A6 3.3TB 512GB, api
 		'db2082'      => 100, # B6 3.3TB 512GB # sanitarium master
-		# 'db2083'      => 100, # C6 3.3TB 512GB # used as testing host do not repool - T188279
+		'db2083'      => 100, # C6 3.3TB 512GB
 		'db2085:3318' => 1, # A5 3.3TB 512GB # rc, log: s1 and s8
 		'db2086:3318' => 1, # B1 3.3TB 512GB # rc, log: s7 and s8
 	],
