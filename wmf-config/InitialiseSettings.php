@@ -18938,11 +18938,16 @@ $wgConf->settings = [
 		'indexing.slowlog.threshold.index.info' => '5s',
 		'indexing.slowlog.threshold.index.debug' => '2s',
 		'indexing.slowlog.threshold.index.trace' => -1,
-		// search slow log
-		'search.slowlog.threshold.fetch.warn' => '1s',
-		'search.slowlog.threshold.fetch.info' => '800ms',
-		'search.slowlog.threshold.fetch.debug' => '500ms',
-		'search.slowlog.threshold.fetch.trace' => '200ms',
+		// query slow log
+		'search.slowlog.threshold.query.warn' => '60s',
+		'search.slowlog.threshold.query.info' => '10s',
+		'search.slowlog.threshold.query.debug' => '5s',
+		'search.slowlog.threshold.query.trace' => -1,
+		// fetch slow log
+		'search.slowlog.threshold.fetch.warn' => '10s',
+		'search.slowlog.threshold.fetch.info' => '5s',
+		'search.slowlog.threshold.fetch.debug' => '1s',
+		'search.slowlog.threshold.fetch.trace' => '-1',
 		// Number of merge threads to use. Use only 1 thread
 		// (instead of 3) to avoid updates interfering with
 		// actual searches
