@@ -8,16 +8,21 @@
 	"require-dev": {
 		"jakub-onderka/php-parallel-lint": "0.9.2",
 		"mediawiki/mediawiki-codesniffer": "18.0.0",
-		"phpunit/phpunit": "4.8.36"
+		"phpunit/phpunit": "4.8.36",
+		"mediawiki/minus-x": "0.3.1"
 	},
 	"scripts": {
 		"lint": "parallel-lint --exclude vendor --ignore-fails .",
 		"phpcs": "phpcs -p -s",
-		"fix": "phpcbf",
+		"fix": [
+			"phpcbf",
+			"minus-x fix ."
+		],
 		"test": [
 			"composer lint",
 			"composer phpcs",
-			"phpunit"
+			"phpunit",
+			"minus-x check ."
 		]
 	},
 	"config": {
