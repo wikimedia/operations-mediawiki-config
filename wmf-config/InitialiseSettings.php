@@ -8106,7 +8106,6 @@ $wgConf->settings = [
 'wgCookieSetOnIpBlock' => [
 	'default' => false,
 	'testwiki' => true,
-	'itwiki' => true,
 ],
 
 # groupOverrides @{
