@@ -729,6 +729,7 @@ $wgConf->settings = [
 	'pnbwiki' => '/static/images/project-logos/pnbwiki.png',  // T50397
 	'pntwiki' => '/static/images/project-logos/pntwiki.png',  // T51125
 	'pswiki' => '/static/images/project-logos/pswiki.png',  // T50397
+	'pswikivoyage' => '/static/images/project-logos/pswikivoyage.png',
 	'ptwiki' => '/static/images/project-logos/ptwiki.png',
 	'quwiki' => '/static/images/project-logos/quwiki.png',
 	'rmwiki' => '/static/images/project-logos/rmwiki.png',  // T48589
@@ -1681,6 +1682,7 @@ $wgConf->settings = [
 	'eswikivoyage' => [ '1.5x' => '/static/images/project-logos/eswikivoyage-1.5x.png', '2x' => '/static/images/project-logos/eswikivoyage-2x.png' ], // T170604
 	'fiwikivoyage' => [ '1.5x' => '/static/images/project-logos/fiwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/fiwikivoyage-2x.png' ],
 	'hiwikivoyage' => [ '1.5x' => '/static/images/project-logos/hiwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/hiwikivoyage-2x.png' ], // T173013
+	'pswikivoyage' => [ '1.5x' => '/static/images/project-logos/pswikivoyage-1.5x.png', '2x' => '/static/images/project-logos/pswikivoyage-2x.png' ],
 	'viwikivoyage' => [ '1.5x' => '/static/images/project-logos/viwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/viwikivoyage-2x.png' ], // T151570
 
 	# Wikinews
@@ -2428,6 +2430,7 @@ $wgConf->settings = [
 	'projectcomwiki' => 'Project Grants Committee',
 	'pswiki' => 'ويکيپېډيا' ,
 	'pswikibooks' => 'ويکيتابونه' ,
+	'pswikivoyage' => 'ويکيسفر',
 	'pswiktionary' => 'ويکيسيند' ,
 	'ptwiki' => 'Wikipédia',
 	'ptwikibooks' => 'Wikilivros',
@@ -2928,6 +2931,7 @@ $wgConf->settings = [
 	'pntwiki' => 'Βικιπαίδεια',
 	'pswiki' => 'ويکيپېډيا' ,
 	'pswikibooks' => 'ويکيتابونه' ,
+	'pswikivoyage' => 'ويکيسفر_خبرې_اترې',
 	'pswiktionary' => 'ويکيسيند' ,
 	'ptwiki' => 'Wikipédia',
 	'ptwikibooks' => 'Wikilivros',
