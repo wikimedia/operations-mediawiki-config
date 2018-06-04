@@ -94,9 +94,7 @@ if ( $wmgUseEventBus ) {
 			'readonly' => isset( $wmgDisableCirrusSearchJobsInRedis ) && $wmgDisableCirrusSearchJobsInRedis,
 		];
 	$wgJobTypeConf['gwtoolsetUploadMediafileJob'] = // T192946
-		$wgJobTypeConf['EchoNotificationJob'] = // T192945
-		$wgJobTypeConf['webVideoTranscode'] = // T188947
-		$wgJobTypeConf['webVideoTranscodePrioritized'] = [ // T188947
+		$wgJobTypeConf['EchoNotificationJob'] = [ // T192945
 			'class' => 'JobQueueSecondTestQueue',
 			'mainqueue' => $jobQueueFederatedConfig,
 			'debugqueue' => [
