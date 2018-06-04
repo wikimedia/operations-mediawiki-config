@@ -15579,6 +15579,11 @@ $wgConf->settings = [
 	'wbwikimedia' => 'numeric', // T162510
 ],
 
+'wgPageCreationLog' => [
+	'default' => false,
+	'testwiki' => true, // T196400
+],
+
 // Varied for Labs only.
 'wmgUsePoolCounter' => [
 	'default' => true,
