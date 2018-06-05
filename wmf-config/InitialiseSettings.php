@@ -4,7 +4,7 @@
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
 # InitialiseSettings.php contains wiki-specific configuration for the WMF cluster.
-# For configuration shared my all wikis, see CommonSettings.php.
+# For configuration shared by all wikis, see CommonSettings.php.
 #
 # This for PRODUCTION.
 #
