@@ -1721,10 +1721,6 @@ $wgHooks['ChangeAuthenticationDataAudit'][] = function ( $req, $status ) {
 	}
 };
 
-if ( file_exists( '/etc/wikimedia-scaler' ) ) {
-	$wgDisableOutputCompression = true;
-}
-
 // Passed to ulimit
 
 $wgMaxShellFileSize = 512 * 1024; // Kilobytes
