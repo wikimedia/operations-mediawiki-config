@@ -622,8 +622,8 @@ function wmfLabsSettings() {
 		],
 
 		// T191888: Enable page previews configuration for newly created accounts
-		'-wmgPopupsOptInStateForNewAccounts' => [
-			'default' => 1,
+		'wgPopupsOptInStateForNewAccounts' => [
+			'default' => '1',
 		],
 
 		// T171853: Enable PP EventLogging instrumentation on enwiki only so that we
