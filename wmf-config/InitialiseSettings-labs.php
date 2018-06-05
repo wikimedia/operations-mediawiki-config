@@ -680,6 +680,10 @@ function wmfLabsSettings() {
 			'default' => 'metawiki',
 		],
 
+		'-wgPageCreationLog' => [
+			'default' => true, // T196400
+		],
+
 		// Use a constant MLR model for all wikis. It's not ideal, but
 		// no models were trained specifically for data in labs anyways.
 		'-wmgCirrusSearchMLRModel' => [
