@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "32adde96_410eda79",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 626,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2018-06-05T16:58:54Z",
+      "side": 1,
+      "message": "\"@PopupsOptInStateForNewAccounts\": \"@var string:[\u00271\u0027|\u00270\u0027] Default Page Previews visibility for newly created accounts (from Q2 2018). For more info see @T191888\",\n\t\t\"PopupsOptInStateForNewAccounts\": \"0\",\n\n\nWhy are we using an integer then? ;)",
+      "range": {
+        "startLine": 626,
+        "startChar": 16,
+        "endLine": 626,
+        "endChar": 17
+      },
+      "revId": "809aa9d50344192d0c7011e671b8ccad0d8bdf11",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
