@@ -1139,6 +1139,7 @@ $wgConf->settings = [
 	'svwikiversity' => '/static/images/project-logos/svwikiversity.png',
 
 	// Wikivoyage
+	'bnwikivoyage' => '/static/images/project-logos/bnwikivoyage.png',
 	'elwikivoyage' => '/static/images/project-logos/elwikivoyage.png',
 	'eswikivoyage' => '/static/images/project-logos/eswikivoyage.png', // T170604
 	'fawikivoyage' => '/static/images/project-logos/fawikivoyage.png', // T73382
@@ -1681,6 +1682,7 @@ $wgConf->settings = [
 	'svwikiversity' => [ '1.5x' => '/static/images/project-logos/svwikiversity-1.5x.png', '2x' => '/static/images/project-logos/svwikiversity-2x.png' ],
 
 	# Wikivoyage
+	'bnwikivoyage' => [ '1.5x' => '/static/images/project-logos/bnwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/bnwikivoyage-2x.png' ],
 	'cswikivoyage' => [ '1.5x' => '/static/images/project-logos/cswikivoyage-1.5x.png', '2x' => '/static/images/project-logos/cswikivoyage-2x.png' ], // T150618
 	'eswikivoyage' => [ '1.5x' => '/static/images/project-logos/eswikivoyage-1.5x.png', '2x' => '/static/images/project-logos/eswikivoyage-2x.png' ], // T170604
 	'fiwikivoyage' => [ '1.5x' => '/static/images/project-logos/fiwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/fiwikivoyage-2x.png' ],
@@ -2150,6 +2152,7 @@ $wgConf->settings = [
 	'bnwiki' => 'উইকিপিডিয়া',
 	'bnwikibooks' => 'উইকিবই',
 	'bnwikisource' => 'উইকিসংকলন',
+	'bnwikivoyage' => 'উইকিভ্রমণ',
 	'bnwiktionary' => 'উইকিঅভিধান',
 	'boardgovcomwiki' => 'Board Governance Committee',
 	'boardwiki' => 'Board',
@@ -2659,6 +2662,7 @@ $wgConf->settings = [
 	'bnwiki' => 'উইকিপিডিয়া',
 	'bnwikibooks' => 'উইকিবই',
 	'bnwikisource' => 'উইকিসংকলন',
+	'bnwikivoyage' => 'উইকিভ্রমণ',
 	'bnwiktionary' => 'উইকিঅভিধান',
 	'boardgovcomwiki' => 'Wikipedia', // This was set up incorrectly.
 	'boardwiki' => 'Project',
