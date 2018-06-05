@@ -42,57 +42,6 @@ $jobQueueFederatedConfig = [
 ];
 
 if ( $wmgUseEventBus ) {
-	$wgJobTypeConf['categoryMembershipChange'] =
-		$wgJobTypeConf['deleteLinks'] =
-		$wgJobTypeConf['EchoNotificationDeleteJob'] =
-		$wgJobTypeConf['flaggedrevs_CacheUpdate'] =
-		$wgJobTypeConf['htmlCacheUpdate'] =
-		$wgJobTypeConf['LocalRenameUserJob'] =
-		$wgJobTypeConf['MessageIndexRebuildJob'] =
-		$wgJobTypeConf['ORESFetchScoreJob'] =
-		$wgJobTypeConf['recentChangesUpdate'] =
-		$wgJobTypeConf['RecordLintJob'] =
-		$wgJobTypeConf['refreshLinks'] =
-		$wgJobTypeConf['refreshLinksDynamic'] =
-		$wgJobTypeConf['refreshLinksPrioritized'] =
-		$wgJobTypeConf['updateBetaFeaturesUserCounts'] =
-		$wgJobTypeConf['wikibase-addUsagesForPage'] =
-		$wgJobTypeConf['wikibase-InjectRCRecords'] =
-		$wgJobTypeConf['cdnPurge'] =
-		$wgJobTypeConf['ChangeNotification'] =
-		$wgJobTypeConf['CognateCacheUpdateJob'] =
-		$wgJobTypeConf['CognateLocalJobSubmitJob'] =
-		$wgJobTypeConf['globalUsageCachePurge'] =
-		$wgJobTypeConf['GlobalUserPageLocalJobSubmitJob'] =
-		$wgJobTypeConf['LocalGlobalUserPageCacheUpdateJob'] =
-		$wgJobTypeConf['TranslateDeleteJob'] =
-		$wgJobTypeConf['TranslateRenderJob'] =
-		// Cross-wiki posting jobs
-		$wgJobTypeConf['CentralAuthUnattachUserJob'] =
-		$wgJobTypeConf['CentralAuthCreateLocalAccountJob'] =
-		$wgJobTypeConf['BounceHandlerJob'] =
-		$wgJobTypeConf['BounceHandlerNotificationJob'] =
-		$wgJobTypeConf['securePollPopulateVoterList'] =
-		$wgJobTypeConf['LocalSharedHelpPageCacheUpdateJob'] =
-		$wgJobTypeConf['MassMessageSubmitJob'] =
-			[ 'class' => 'JobQueueEventBus' ];
-	// Cirrus search is an exception T189137
-	$wgJobTypeConf['cirrusSearchCheckerJob'] =
-		$wgJobTypeConf['cirrusSearchDeleteArchive'] =
-		$wgJobTypeConf['cirrusSearchDeletePages'] =
-		$wgJobTypeConf['cirrusSearchElasticaWrite'] =
-		$wgJobTypeConf['cirrusSearchIncomingLinkCount'] =
-		$wgJobTypeConf['cirrusSearchLinksUpdate'] =
-		$wgJobTypeConf['cirrusSearchLinksUpdatePrioritized'] =
-		$wgJobTypeConf['cirrusSearchMassIndex'] =
-		$wgJobTypeConf['cirrusSearchOtherIndex'] = [
-			'class' => 'JobQueueSecondTestQueue',
-			'mainqueue' => $jobQueueFederatedConfig,
-			'debugqueue' => [
-				'class' => 'JobQueueEventBus'
-			],
-			'readonly' => isset( $wmgDisableCirrusSearchJobsInRedis ) && $wmgDisableCirrusSearchJobsInRedis,
-		];
 	$wgJobTypeConf['gwtoolsetUploadMediafileJob'] = // T192946
 		$wgJobTypeConf['EchoNotificationJob'] = [ // T192945
 			'class' => 'JobQueueSecondTestQueue',

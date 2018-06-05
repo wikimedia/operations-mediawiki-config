@@ -20255,13 +20255,6 @@ $wgConf->settings = [
 	'votewiki' => 'TYPE_JOB',
 ],
 
-'wmgDisableCirrusSearchJobsInRedis' => [
-	'default' => true,
-	'wikipedia' => false,
-	'wikidatawiki' => false,
-	'commonswiki' => false,
-],
-
 'wmgUseCapiunto' => [
 	'default' => false,
 	'testwiki' => true,
