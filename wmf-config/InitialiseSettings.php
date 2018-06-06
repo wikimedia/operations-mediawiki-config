@@ -8299,6 +8299,10 @@ $wgConf->settings = [
 	'+arwikinews' => [
 		'rollbacker' => [ 'rollback' => true ], // T189206
 	],
+	'+azwiki' => [
+		'autopatrolled' => [ 'autopatrol' => true ], // T196488
+		'patroller' => [ 'patrol' => true ], // T196488
+	],
 	'+azbwiki' => [
 		'autopatrolled' => [ // T109755
 			'autopatrol' => true, // T109755
