@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a6182886_ab26869e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 8304,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2018-06-06T19:07:24Z",
+      "side": 1,
+      "message": "There should be no whitespace at the end of row.",
+      "range": {
+        "startLine": 8304,
+        "startChar": 49,
+        "endLine": 8304,
+        "endChar": 51
+      },
+      "revId": "f202db3766f51452bc9a9fb7e2484b9304333559",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
