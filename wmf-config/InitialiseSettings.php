@@ -5371,9 +5371,6 @@ $wgConf->settings = [
 		'headers-sent' => 'debug',
 		'HttpError' => 'error', // Only log http errors with a 500+ code T85795
 		'JobExecutor' => [ 'logstash' => 'warning' ],
-		'jobqueue' => 'debug',
-		'JobQueueFederated' => 'debug',
-		'JobQueueRedis' => 'debug',
 		'lc-recache' => 'debug',
 		'ldap' => 'warning',
 		'Linter' => 'debug',
@@ -20270,12 +20267,6 @@ $wgConf->settings = [
 // Varied for Labs only.
 'wmgUseCheckUser' => [
 	'default' => true,
-],
-
-// TODO: remove when enabling EventBus on ALL wikis but for jobs only
-'wmgUseEventBus' => [
-	'default' => true,
-	'wikitech' => false,
 ],
 
 'wgEnableEventBus' => [
