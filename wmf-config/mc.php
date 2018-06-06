@@ -6,8 +6,11 @@ if ( in_array( $wgDBname, [ 'testwiki', 'test2wiki' ], true ) ) {
 } else {
 	$wgMainCacheType = 'memcached-pecl';
 }
+// Disabled here for sanity (although matches MediaWiki default,
+// and isn't used given we set 'persistent' explicitly).
 $wgMemCachedPersistent = false;
-$wgMemCachedTimeout = 0.25 * 1e6;  // 250ms
+// Set timeout to 250ms (in microseconds)
+$wgMemCachedTimeout = 0.25 * 1e6;
 
 $wgObjectCaches['memcached-pecl'] = [
 	'class'                => 'MemcachedPeclBagOStuff',
@@ -16,10 +19,12 @@ $wgObjectCaches['memcached-pecl'] = [
 	'servers'              => defined( 'HHVM_VERSION' )
 		? [ '/var/run/nutcracker/nutcracker.sock:0' ]
 		: [ '127.0.0.1:11212' ],
+	// Basically disable failure limit (0 is invalid)
 	'server_failure_limit' => 1e9,
+	// Basically disable retry timeout
 	'retry_timeout'        => -1,
 	'loggroup'             => 'memcached',
-	'timeout'              => $wgMemCachedTimeout
+	'timeout'              => $wgMemCachedTimeout,
 ];
 
 $wgObjectCaches['memcached-mcrouter'] = [
@@ -34,16 +39,16 @@ $wgObjectCaches['memcached-mcrouter'] = [
 			'server_failure_limit' => 1e9,
 			'retry_timeout'        => -1,
 			'loggroup'             => 'memcached',
-			'timeout'              => $wgMemCachedTimeout
+			'timeout'              => $wgMemCachedTimeout,
 		],
 		// old nutcracker consistent hash scheme (uses shard tag);
 		// make sure this cache scheme gets purges and stays warm
 		1 => [
 			'factory' => [ 'ObjectCache', 'getInstance' ],
-			'args' => [ 'memcached-pecl' ]
+			'args' => [ 'memcached-pecl' ],
 		],
 	],
-	'reportDupes' => false
+	'reportDupes' => false,
 ];
 
 # vim: set sts=4 sw=4 et :
