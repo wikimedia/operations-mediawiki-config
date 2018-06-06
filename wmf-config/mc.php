@@ -3,7 +3,8 @@
 
 $wgMainCacheType = 'memcached-pecl';
 $wgMemCachedPersistent = false;
-$wgMemCachedTimeout = 0.25 * 1e6;  // 250ms
+// Set timeout to 250ms (in microseconds)
+$wgMemCachedTimeout = 0.25 * 1e6;
 
 $wgObjectCaches['memcached-pecl'] = [
 	'class'                => 'MemcachedPeclBagOStuff',
@@ -15,7 +16,7 @@ $wgObjectCaches['memcached-pecl'] = [
 	'server_failure_limit' => 1e9,
 	'retry_timeout'        => -1,
 	'loggroup'             => 'memcached',
-	'timeout'              => $wgMemCachedTimeout
+	'timeout'              => $wgMemCachedTimeout,
 ];
 
 # vim: set sts=4 sw=4 et :
