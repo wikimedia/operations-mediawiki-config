@@ -1132,10 +1132,7 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 }
 
 if ( $wmgUseClusterJobqueue ) {
-	# Cluster-dependent files for job queue and job queue aggregator
-	require $wmfRealm === 'labs'
-		? "$wmfConfigDir/jobqueue-labs.php"
-		: "$wmfConfigDir/jobqueue.php";
+    $wgJobTypeConf['default'] = [ 'class' => 'JobQueueEventBus' ];
 }
 
 if ( $wgDBname === 'nostalgiawiki' ) {
@@ -2225,9 +2222,6 @@ if ( $wmgUseGWToolset ) {
 	require_once "$IP/extensions/GWToolset/GWToolset.php";
 	$wgGWTFileBackend = 'local-multiwrite';
 	$wgGWTFBMaxAge = '1 week';
-	if ( $wmgUseClusterJobqueue ) {
-		$wgJobTypeConf['gwtoolsetUploadMetadataJob'] = [ 'checkDelay' => true ] + $wgJobTypeConf['default'];
-	}
 	// extra throttling until the image scalers are more robust
 	if ( class_exists( 'GWToolset\Config' ) ) {
 		GWToolset\Config::$mediafile_job_throttle_default = 5; // 5 files per batch
