@@ -22,6 +22,30 @@
       "revId": "26523fb7c62d2ebb95d50ea0f0c5235616b40982",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b9426a70_6b6da01f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 13991,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-06-07T11:53:50Z",
+      "side": 1,
+      "message": "So they are generally chronological for the date the item was added to the list i believe.\nNote the date in the comment doesn\u0027t actually relate to the date it was added to the list but the date of the last significant change.",
+      "parentUuid": "69165433_f9543d1f",
+      "range": {
+        "startLine": 13991,
+        "startChar": 14,
+        "endLine": 13991,
+        "endChar": 15
+      },
+      "revId": "26523fb7c62d2ebb95d50ea0f0c5235616b40982",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
