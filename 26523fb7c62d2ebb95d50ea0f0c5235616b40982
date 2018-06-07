@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "69165433_f9543d1f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 13991,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2018-06-07T11:47:30Z",
+      "side": 1,
+      "message": "It looks like the contents of this array are neither chronological nor alphabetical. Does it make sense to order this somehow? I know this has pretty much zero effect. ;-)",
+      "range": {
+        "startLine": 13991,
+        "startChar": 14,
+        "endLine": 13991,
+        "endChar": 15
+      },
+      "revId": "26523fb7c62d2ebb95d50ea0f0c5235616b40982",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
