@@ -1609,6 +1609,7 @@ $wgConf->settings = [
 	'wawiktionary' => [ '1.5x' => '/static/images/project-logos/wawiktionary-1.5x.png', '2x' => '/static/images/project-logos/wawiktionary-2x.png' ], // T150618
 
 	# Wikiquote
+	'bewikiquote' => [ '1.5x' => '/static/images/project-logos/bewikiquote-1.5x.png', '2x' => '/static/images/project-logos/bewikiquote-2x.png' ], // T196599
 	'cawikiquote' => [ '1.5x' => '/static/images/project-logos/cawikiquote-1.5x.png', '2x' => '/static/images/project-logos/cawikiquote-2x.png' ], // T150618
 	'cawikiquote' => [ '1.5x' => '/static/images/project-logos/cawikiquote-1.5x.png', '2x' => '/static/images/project-logos/cawikiquote-2x.png' ], // T150618
 	'cswikiquote' => [ '1.5x' => '/static/images/project-logos/cswikiquote-1.5x.png', '2x' => '/static/images/project-logos/cswikiquote-2x.png' ], // T150618
