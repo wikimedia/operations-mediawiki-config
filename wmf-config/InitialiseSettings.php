@@ -16082,6 +16082,11 @@ $wgConf->settings = [
 		'copyright-width' => 92,
 		'copyright-height' => 21,
 	],
+	'bnwikivoyage' => [ // T196680
+		'copyright' => '/static/images/mobile/copyright/wikivoyage-wordmark-bn.svg',
+		'copyright-width' => 106,
+		'copyright-height' => 21,
+	],
 	'bpywiki' => [
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-bn.svg',
 		'copyright-width' => 92,
