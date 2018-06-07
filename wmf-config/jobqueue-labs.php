@@ -2,7 +2,7 @@
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
 if ( $wmfRealm == 'labs' ) {  # safe guard
-$jobRedisServer = 'deployment-redis01.eqiad.wmflabs';
+$jobRedisServer = 'deployment-redis05.eqiad.wmflabs';
 
 $jobQueueRedisConfig = [
 	'class'       => 'JobQueueRedis',
