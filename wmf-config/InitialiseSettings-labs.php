@@ -694,6 +694,10 @@ function wmfLabsSettings() {
 			'default' => MIGRATION_WRITE_BOTH,
 		],
 
+		'wgChangeTagsSchemaMigrationStage' => [
+			'default' => MIGRATION_WRITE_BOTH,
+		],
+
 		'wmgUseJADE' => [
 			'default' => true,
 		],
