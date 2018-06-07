@@ -754,5 +754,16 @@ function wmfLabsSettings() {
 		'wgEnableRcFiltersBetaFeature' => [
 			'default' => false,
 		],
+		# Test LanguageConverter on deployment wiki by:
+		# (1) enabling the translate extension (which sets
+		#   $wgPageLanguageUseDB which is handy for creating test sandboxes)
+		# (2) enabling Pig Latin, so English has a defined variant
+		'wmgUseTranslate' => [
+			'deploymentwiki' => true,
+		],
+		'wgUsePigLatinVariant' => [
+			'deploymentwiki' => true,
+		],
+
 	];
 } # wmflLabsSettings()
