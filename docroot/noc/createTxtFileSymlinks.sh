@@ -24,9 +24,11 @@ mwconfig_files_txt=(
 	HHVMRequestInit.php
 	import.php
 	interwiki.php
+	interwiki-labs.php
 	jobqueue.php
 	jobqueue-labs.php
 	MetaContactPages.php
+	LabsServices.php
 	liquidthreads.php
 	logging.php
 	logging-labs.php
