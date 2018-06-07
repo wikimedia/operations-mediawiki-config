@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """For updating + syncing the interwiki cache."""
+import errno
 import os
 import subprocess
 
@@ -13,15 +14,22 @@ import scap.utils as utils
 class UpdateInterwikiCache(main.SyncFile):
     """Scap sub-command to update and sync the interwiki cache."""
 
+    @cli.argument('--force', action='store_true', help='Skip canary checks')
     def main(self, *extra_args):
         """Update the latest interwiki cache."""
         self.arguments.message = 'Updating interwiki cache'
+        self.arguments.file = os.path.join('wmf-config', 'interwiki.php')
         return super(UpdateInterwikiCache, self).main(*extra_args)
 
     def _before_cluster_sync(self):
-        interwikifile = os.path.join(self.config['stage_dir'], 'wmf-config',
-                                     'interwiki.php')
-        self.include = os.path.relpath(interwikifile, self.config['stage_dir'])
+        interwikifile = os.path.join(
+            self.config['stage_dir'], self.arguments.file)
+        if not os.path.exists(interwikifile):
+            raise IOError(
+                errno.ENOENT, 'File/directory not found', interwikifile)
+
+        relpath = os.path.relpath(interwikifile, self.config['stage_dir'])
+        self.include = relpath
 
         with open(interwikifile, 'w') as outfile:
             subprocess.check_call(
