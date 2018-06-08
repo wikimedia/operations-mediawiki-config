@@ -448,6 +448,7 @@ $wgConf->settings = [
 	'plwikinews' => 'Europe/Warsaw',
 	'plwikimedia' => 'Europe/Warsaw',
 	'plwikivoyage' => 'Europe/Warsaw',
+	'pmswikisource' => 'Europe/Rome', // T196763
 	'pnbwiki' => 'Asia/Karachi',
 	'pnbwiktionary' => 'Asia/Karachi',
 	'rmwiki' => 'Europe/Berlin',
