@@ -4325,6 +4325,15 @@ $wgConf->settings = [
 		'П' => 100,
 		'Обсуждение_ВикиНовостей' => NS_PROJECT_TALK,
 	],
+	'+ruwikisource' => [
+		'ВТ' => NS_PROJECT, // T196719
+		'У' => NS_USER, // T196719
+		'ОУ' => NS_USER_TALK, // T196719
+		'Ш' => NS_TEMPLATE, // T196719
+		'К' => NS_CATEGORY, // T196719
+		'М' => 828, // T196719
+
+	],
 	'ruwikiquote' => [
 		'ВЦ' => NS_PROJECT,
 	],
