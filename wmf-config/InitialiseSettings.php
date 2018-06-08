@@ -18574,6 +18574,12 @@ $wgConf->settings = [
 	'wikidatawiki' => true,
 ],
 
+'wgLexemeEnableRepo' => [
+	'default' => false,
+	'testwikidatawiki' => true,
+	'wikidatawiki' => true,
+],
+
 'wgLexemeLanguageCodePropertyId' => [
 	'default' => null,
 	'testwikidatawiki' => 'P220',
