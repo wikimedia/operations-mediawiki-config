@@ -33,6 +33,10 @@ $wgHooks['FeaturedFeeds::getFeeds'][] = function ( &$feeds ) {
 			$feeds += $media;
 			if ( $lang == 'commons' ) {
 				$feeds['potd']['inUserLanguage'] = $feeds['motd']['inUserLanguage'] = true;
+			} elseif ( $lang == 'mediawiki' ) {
+				$feeds['mediawikinews'] = [ // T165773 - News
+					'page' => 'ffeed-mediawikinews-page',
+				];
 			} elseif ( $lang == 'meta' ) {
 				$feeds['technews'] = [ // T65596 - Metawiki Tech News bulletin
 					'page' => 'ffeed-technews-page',
