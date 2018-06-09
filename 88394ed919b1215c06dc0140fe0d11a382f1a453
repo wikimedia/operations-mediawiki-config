@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c02d1d9d_2db58e13",
+        "filename": "wmf-config/FeaturedFeedsWMF.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2018-06-09T12:50:31Z",
+      "side": 1,
+      "message": "Is this supposed to be an elseif, and go before the else?\n\nOr do the french want these, and the else block too?",
+      "range": {
+        "startLine": 76,
+        "startChar": 3,
+        "endLine": 76,
+        "endChar": 25
+      },
+      "revId": "88394ed919b1215c06dc0140fe0d11a382f1a453",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
