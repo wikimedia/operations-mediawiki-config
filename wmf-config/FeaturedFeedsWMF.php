@@ -29,6 +29,11 @@ $wgHooks['FeaturedFeeds::getFeeds'][] = function ( &$feeds ) {
 		],
 	];
 	switch ( $site ) {
+		case 'mediawiki':
+			$feeds['mediawikinews'] = [ // T165773 - News
+				'page' => 'ffeed-mediawikinews-page',
+			];
+			break;
 		case 'wikipedia':
 			$feeds += $media;
 			if ( $lang == 'commons' ) {
