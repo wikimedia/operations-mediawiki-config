@@ -72,7 +72,8 @@ $wgHooks['FeaturedFeeds::getFeeds'][] = function ( &$feeds ) {
 						'entryName' => 'ffeed-dyk-entry',
 					],
 				];
-			} if ( $lang == 'fr' ) {
+			}
+			if ( $lang == 'fr' ) {
 				$feeds += [
 					'raw' => [ // T167617 - French Regards sur l'actualité de la Wikimedia bulletin
 						'page' => 'ffeed-raw-page',
