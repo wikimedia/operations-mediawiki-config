@@ -20749,8 +20749,7 @@ $wgConf->settings = [
 ],
 
 'wgCSPReportOnlyHeader' => [
-	'default' => false,
-	'group0' => true,
+	'default' => true,
 ],
 
 ];
