@@ -20748,6 +20748,11 @@ $wgConf->settings = [
 	'metawiki' => true, # T194230
 ],
 
+'wgCSPReportOnlyHeader' => [
+	'default' => false,
+	'group0' => true,
+],
+
 ];
 
 ### WMF Labs override #####
