@@ -934,6 +934,7 @@ $wgConf->settings = [
 	'angwikiquote' => '/static/images/project-logos/angwikiquote.png',
 	'arwikiquote' => '/static/images/project-logos/arwikiquote.png',
 	'azwikiquote' => '/static/images/project-logos/azwikiquote.png',
+	'bewikiquote' => '/static/images/project-logos/bewikiquote.png', // T196134
 	'bgwikiquote' => '/static/images/project-logos/bgwikiquote.png',
 	'bswikiquote' => '/static/images/project-logos/bswikiquote.png',
 	'cawikiquote' => '/static/images/project-logos/cawikiquote.png',
