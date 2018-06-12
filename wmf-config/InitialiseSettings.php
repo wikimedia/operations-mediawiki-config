@@ -5332,6 +5332,7 @@ $wgConf->settings = [
 		'exec' => 'debug',
 		'ExternalStoreDB' => 'debug',
 		'fatal' => 'debug',
+		'FileImporter' => 'debug',
 		'FileOperation' => 'debug',
 		'Flow' => 'debug', // -erikb 2014/03/08
 		'FSFileBackend' => 'debug', // - gilles for T75229
