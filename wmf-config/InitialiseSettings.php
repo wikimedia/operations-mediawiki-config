@@ -10238,7 +10238,7 @@ $wgConf->settings = [
 		'sysop' => [ 'rollbacker', 'suppressredirect', 'uploader' ], // T128205, T129005
 	],
 	'+checkuserwiki' => [
-		'bureaucrat' => [ 'user', 'autoconfirmed', 'ipblock-exempt', ],
+		'bureaucrat' => [ 'ipblock-exempt', ],
 	],
 	'+ckbwiki' => [
 		'sysop' => [
@@ -10622,7 +10622,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'communityapps', 'flood', 'securepoll' ],
 	],
 	'+ombudsmenwiki' => [
-		'bureaucrat' => [ 'user', 'autoconfirmed', 'ipblock-exempt', ],
+		'bureaucrat' => [ 'ipblock-exempt', ],
 	],
 	'+orwiki' => [
 		'sysop' => [ 'rollbacker' ],
@@ -10730,7 +10730,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'patroller', 'autopatrolled', ],
 	],
 	'+stewardwiki' => [
-		'bureaucrat' => [ 'user', 'autoconfirmed', 'ipblock-exempt' ],
+		'bureaucrat' => [ 'ipblock-exempt' ],
 	],
 	'+svwiki' => [
 		'sysop' => [ 'rollbacker', 'autopatrolled' ], // T161210
@@ -10979,7 +10979,7 @@ $wgConf->settings = [
 		'sysop' => [ 'rollbacker', 'suppressredirect', 'uploader' ], // T128205, T129005
 	],
 	'+checkuserwiki' => [
-		'bureaucrat' => [ 'user', 'autoconfirmed', 'ipblock-exempt', ],
+		'bureaucrat' => [ 'ipblock-exempt', ],
 	],
 	'+ckbwiki' => [
 		'sysop' => [
@@ -11377,7 +11377,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'flood' ], // T193350
 	],
 	'+ombudsmenwiki' => [
-		'bureaucrat' => [ 'user', 'autoconfirmed', 'ipblock-exempt' ],
+		'bureaucrat' => [ 'ipblock-exempt' ],
 	],
 	'+orwiki' => [
 		'sysop' => [ 'rollbacker' ],
@@ -11480,7 +11480,7 @@ $wgConf->settings = [
 		'sysop' => [ 'autopatrolled', 'patroller' ], // T89147
 	],
 	'+stewardwiki' => [
-		'bureaucrat' => [ 'user', 'ipblock-exempt' ],
+		'bureaucrat' => [ 'ipblock-exempt' ],
 	],
 	'+sqwiki' => [
 		'bureaucrat' => [ 'editor' ],
