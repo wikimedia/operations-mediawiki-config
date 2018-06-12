@@ -5004,6 +5004,10 @@ $wgConf->settings = [
 		'page' => 100,
 		'index' => 102,
 	],
+	'pmswikisource' => [
+		'page' => 102,
+		'index' => 104,
+	],
 	'ptwikisource' => [
 		'page' => 106,
 		'index' => 104,
