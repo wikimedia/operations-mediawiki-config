@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3be913af_70bf389e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10091,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-06-12T20:52:06Z",
+      "side": 1,
+      "message": "This permission is dissapearing after we remove Extension:DisableAccount. I guess we can keep it for now until the extension is gone, although it does nothing.",
+      "range": {
+        "startLine": 10091,
+        "startChar": 43,
+        "endLine": 10091,
+        "endChar": 53
+      },
+      "revId": "1ceab0fb9c27ed5dc464c56e0887b773919a8ae3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
