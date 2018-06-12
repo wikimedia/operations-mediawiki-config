@@ -10121,6 +10121,12 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'accountcreator', 'sysop', 'bureaucrat', 'bot', 'confirmed' ],
 		'sysop' => [ 'ipblock-exempt' ],
 	],
+	'+private' => [
+		'bureaucrat' => [ 'import', 'transwiki', 'inactive' ],
+	],
+	'+fishbowl' => [
+		'bureaucrat' => [ 'import', 'transwiki' ],
+	],
 	'+testwiki' => [
 		'bureaucrat' => [ 'researcher', 'centralnoticeadmin', 'flow-bot' ],
 		'sysop' => [ 'filemover', 'rollbacker', 'accountcreator', 'confirmed', 'templateeditor' ],
@@ -10622,9 +10628,6 @@ $wgConf->settings = [
 	'+ptwikivoyage' => [
 		'sysop' => [ 'autopatrolled' ], // T168981
 	],
-	'+private' => [ // Cary made me do it! --Andrew 2009-05-01
-		'bureaucrat' => [ 'inactive' ],
-	],
 	'+ptwiki' => [
 		'bureaucrat' => [ 'eliminator', 'autoreviewer', 'interface-editor' ], // T41905, T65750
 		'sysop' => [ 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator' ], // T65750
@@ -10863,6 +10866,12 @@ $wgConf->settings = [
 	'default' => [
 		'bureaucrat' => [ 'accountcreator', 'bot', 'confirmed' ],
 		'sysop' => [ 'ipblock-exempt' ],
+	],
+	'+private' => [
+		'bureaucrat' => [ 'sysop', 'bureaucrat', 'import', 'transwiki', 'inactive' ],
+	],
+	'+fishbowl' => [
+		'bureaucrat' => [ 'sysop', 'bureaucrat', 'import', 'transwiki' ],
 	],
 	'+testwiki' => [
 		'bureaucrat' => [ 'sysop', 'researcher', 'centralnoticeadmin', 'flow-bot' ],
@@ -11648,10 +11657,6 @@ $wgConf->settings = [
 	'+zh_yuewiki' => [
 		'sysop' => [ 'abusefilter', 'rollbacker', 'autoreviewer', 'confirmed' ],
 	],
-	'+private' => [ // Cary made me do it! --Andrew 2009-05-01
-		'bureaucrat' => [ 'inactive' ],
-	],
-
 ],
 # @} end of wgRemoveGroups
 
