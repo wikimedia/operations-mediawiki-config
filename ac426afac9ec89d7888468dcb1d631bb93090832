@@ -1,0 +1,165 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9d7fe1d5_e26a9a91",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10088,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-06-12T20:59:12Z",
+      "side": 1,
+      "message": "If this applies to all wikis, then see below :)",
+      "range": {
+        "startLine": 10088,
+        "startChar": 2,
+        "endLine": 10088,
+        "endChar": 34
+      },
+      "revId": "ac426afac9ec89d7888468dcb1d631bb93090832",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2028b682_801460ed",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10175,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-06-12T20:59:12Z",
+      "side": 1,
+      "message": "I even think this is entirely redundant as sysops can by default add this permission, and all bureaucrats are sysops there. See above.",
+      "range": {
+        "startLine": 10173,
+        "startChar": 2,
+        "endLine": 10175,
+        "endChar": 3
+      },
+      "revId": "ac426afac9ec89d7888468dcb1d631bb93090832",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a31a4e20_6040b6a2",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10559,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-06-12T20:59:12Z",
+      "side": 1,
+      "message": "Same as above. Redundant with sysop?",
+      "range": {
+        "startLine": 10557,
+        "startChar": 1,
+        "endLine": 10559,
+        "endChar": 3
+      },
+      "revId": "ac426afac9ec89d7888468dcb1d631bb93090832",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5e01d794_8a1823b5",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10667,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-06-12T20:59:12Z",
+      "side": 1,
+      "message": "Same as above.",
+      "range": {
+        "startLine": 10665,
+        "startChar": 0,
+        "endLine": 10667,
+        "endChar": 3
+      },
+      "revId": "ac426afac9ec89d7888468dcb1d631bb93090832",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4660b11e_06483fa5",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10910,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-06-12T20:59:12Z",
+      "side": 1,
+      "message": "Same as above.",
+      "range": {
+        "startLine": 10908,
+        "startChar": 0,
+        "endLine": 10910,
+        "endChar": 3
+      },
+      "revId": "ac426afac9ec89d7888468dcb1d631bb93090832",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "39cb14d7_58b258a1",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11308,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-06-12T20:59:12Z",
+      "side": 1,
+      "message": "Same as above.",
+      "range": {
+        "startLine": 11306,
+        "startChar": 0,
+        "endLine": 11308,
+        "endChar": 3
+      },
+      "revId": "ac426afac9ec89d7888468dcb1d631bb93090832",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8871fdb8_9f52fc37",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11411,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-06-12T20:59:12Z",
+      "side": 1,
+      "message": "Same as above.",
+      "range": {
+        "startLine": 11409,
+        "startChar": 0,
+        "endLine": 11411,
+        "endChar": 3
+      },
+      "revId": "ac426afac9ec89d7888468dcb1d631bb93090832",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
