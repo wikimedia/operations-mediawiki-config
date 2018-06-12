@@ -106,41 +106,18 @@ $wmfAllServices['codfw']['redis_lock'] = [
 // Do NOT remove entries from here if they are still present in 'partitionsBySection'
 // in wmf-config/jobqueue.php
 $wmfAllServices['eqiad']['jobqueue_redis'] = [
-	'rdb1-6379' => 'rdb1001.eqiad.wmnet:6379',
-	'rdb1-6380' => 'rdb1001.eqiad.wmnet:6380',
-	'rdb1-6381' => 'rdb1001.eqiad.wmnet:6381',
-	'rdb2-6379' => 'rdb1003.eqiad.wmnet:6379',
-	'rdb2-6380' => 'rdb1003.eqiad.wmnet:6380',
-	'rdb2-6381' => 'rdb1003.eqiad.wmnet:6381',
-	'rdb3-6379' => 'rdb1007.eqiad.wmnet:6379',
-	'rdb3-6380' => 'rdb1007.eqiad.wmnet:6380',
-	'rdb3-6381' => 'rdb1007.eqiad.wmnet:6381',
 	'rdb4-6379' => 'rdb1005.eqiad.wmnet:6379',
 	'rdb4-6380' => 'rdb1005.eqiad.wmnet:6380',
 	'rdb4-6381' => 'rdb1005.eqiad.wmnet:6381',
 ];
 $wmfAllServices['codfw']['jobqueue_redis'] = [
-	'rdb1-6379' => 'rdb2001.codfw.wmnet:6379',
-	'rdb1-6380' => 'rdb2001.codfw.wmnet:6380',
-	'rdb1-6381' => 'rdb2001.codfw.wmnet:6381',
-	'rdb2-6379' => 'rdb2003.codfw.wmnet:6379',
-	'rdb2-6380' => 'rdb2003.codfw.wmnet:6380',
-	'rdb2-6381' => 'rdb2003.codfw.wmnet:6381',
-	'rdb3-6379' => 'rdb2005.codfw.wmnet:6479',
-	'rdb3-6380' => 'rdb2005.codfw.wmnet:6480',
-	'rdb3-6381' => 'rdb2005.codfw.wmnet:6481',
 	'rdb4-6379' => 'rdb2005.codfw.wmnet:6379',
 	'rdb4-6380' => 'rdb2005.codfw.wmnet:6380',
 	'rdb4-6381' => 'rdb2005.codfw.wmnet:6381',
 ];
 $wmfAllServices['eqiad']['jobqueue_aggregator'] = [
-	'rdb1001.eqiad.wmnet:6378', // preferred
-	'rdb1003.eqiad.wmnet:6378', // fallback
-	'rdb1005.eqiad.wmnet:6378', // fallback
-	'rdb1007.eqiad.wmnet:6378', // fallback
+	'rdb1005.eqiad.wmnet:6378', // preferred, no fallback anymore
 ];
 $wmfAllServices['codfw']['jobqueue_aggregator'] = [
-	'rdb2001.codfw.wmnet:6378', // preferred
-	'rdb2003.codfw.wmnet:6378', // fallback
-	'rdb2005.codfw.wmnet:6378', // fallback
+	'rdb2005.codfw.wmnet:6378', // preferred
 ];
