@@ -14046,10 +14046,13 @@ $wgConf->settings = [
 
 'wmgUseFileImporter' => [
 	'default' => false,
+	'testwiki' => 'FileImporter-WikimediaSitesTableSite',
 ],
 
 'wmgUseFileExporter' => [
 	'default' => false,
+	'mediawikiwiki' => 'https://test.wikipedia.org/wiki/Special:ImportFile',
+	'test2wiki' => 'https://test.wikipedia.org/wiki/Special:ImportFile',
 ],
 
 'wmgUseCommonsMetadata' => [
