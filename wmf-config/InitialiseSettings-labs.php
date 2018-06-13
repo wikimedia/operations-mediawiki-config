@@ -697,6 +697,10 @@ function wmfLabsSettings() {
 			'default' => MIGRATION_WRITE_BOTH,
 		],
 
+		'wgMultiContentRevisionSchemaMigrationStage' => [
+			'default' => MIGRATION_OLD,
+		],
+
 		'wmgUseJADE' => [
 			'default' => true,
 		],
