@@ -116,7 +116,7 @@ $wgLBFactoryConf = [
 	],
 	's2' => [
 		'db1066' => 0,     # A6 2.8TB 160GB # master
-		# 'db1054' => 0,      # A3 2.8TB  96GB, old master
+		# 'db1054' => 0,      # A3 2.8TB  96GB, old master # to be decommissioned
 		'db1074' => 300,    # A2 3.6TB 512GB, api # master for sanitarium db1125
 		'db1076' => 500,    # B1 3.6TB 512GB
 		'db1090:3312' => 1, # C3 3.6TB 512GB, vslow, dump: s2 and s7
@@ -718,7 +718,7 @@ $wgLBFactoryConf = [
 # getting trasmmitted from codfw to eqiad when the master dc is eqiad.
 'readOnlyBySection' => [
 	# 's1'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
-	# 's2'      => 'Database maintenance ongoing, try again in a few minutes: https://meta.wikimedia.org/wiki/Tech/News/2018/23',
+	# 's2'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
 	# 'DEFAULT' => 'This request is served by a passive datacenter. If you see this something is really wrong.', # s3
 	# 's4'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
 	# 's5'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
