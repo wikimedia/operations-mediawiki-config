@@ -2814,6 +2814,7 @@ $wgConf->settings = [
 	'hywiktionary' => 'Վիքիբառարան',
 	'iawiktionary' => 'Wiktionario',
 	'idwikibooks' => 'Wikibuku',
+	'idwikimedia' => 'Wikimedia_Indonesia',
 	'iegcomwiki' => 'Project',
 	'ilwikimedia' => 'ויקימדיה',
 	'incubatorwiki' => 'Incubator',
