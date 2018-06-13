@@ -1561,6 +1561,8 @@ if ( $wmgUseCentralAuth ) {
 	}
 
 	$wgCentralAuthUseSlaves = true;
+	// Check global rename log on meta for new accounts
+	$wgCentralAuthOldNameAntiSpoofWiki = 'metawiki';
 }
 
 // Config for GlobalCssJs
