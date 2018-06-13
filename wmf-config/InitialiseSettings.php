@@ -10154,6 +10154,12 @@ $wgConf->settings = [
 			'transwiki', // T109755
 		],
 	],
+	'+azwiki' => [
+		'sysop' => [
+			'autopatrolled', // T196488
+			'patroller', // T196488
+		],
+	],
 	'+bewiki' => [
 		'sysop' => [ 'autoeditor' ],
 	],
@@ -10900,6 +10906,12 @@ $wgConf->settings = [
 			'patroller', // T109755
 			'rollbacker', // T109755
 			'transwiki', // T109755
+		],
+	],
+	'+azwiki' => [
+		'sysop' => [
+			'autopatrolled', // T196488
+			'patroller', // T196488
 		],
 	],
 	'+bawiki' => [
