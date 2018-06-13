@@ -19487,7 +19487,7 @@ $wgConf->settings = [
 	'loginwiki' => false, // T61702
 ],
 'wmgUseJADE' => [
-	'default' => false,
+	'default' => true,
 ],
 'wmgUseORES' => [
 	'default' => false,
