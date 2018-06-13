@@ -20422,6 +20422,11 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
+'wgCodeMirrorBetaFeature' => [
+	'default' => false,
+	'rtl' => true, // T185030
+],
+
 'wmgUseArticleCreationWorkflow' => [
 	'default' => false,
 	'testwiki' => true,
