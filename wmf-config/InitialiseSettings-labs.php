@@ -712,6 +712,10 @@ function wmfLabsSettings() {
 			'default' => MIGRATION_WRITE_BOTH,
 		],
 
+		'wgMultiContentRevisionSchemaMigrationStage' => [
+			'default' => SCHEMA_COMPAT_OLD,
+		],
+
 		'wgTagStatisticsNewTable' => [
 			'default' => true,
 		],

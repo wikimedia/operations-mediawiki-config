@@ -20657,6 +20657,10 @@ $wgConf->settings = [
 	'frwiki' => MIGRATION_WRITE_BOTH,
 ],
 
+'wgMultiContentRevisionSchemaMigrationStage' => [
+	'default' => SCHEMA_COMPAT_OLD,
+],
+
 'wmgUseReadingLists' => [
 	'default' => true,
 	'private' => false,
