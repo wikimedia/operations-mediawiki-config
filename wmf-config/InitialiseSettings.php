@@ -10201,9 +10201,6 @@ $wgConf->settings = [
 	'+cewiki' => [
 		'sysop' => [ 'rollbacker', 'suppressredirect', 'uploader' ], // T128205, T129005
 	],
-	'+checkuserwiki' => [
-		'bureaucrat' => [ 'ipblock-exempt', ],
-	],
 	'+ckbwiki' => [
 		'sysop' => [
 			'rollbacker', // T53312
@@ -10585,9 +10582,6 @@ $wgConf->settings = [
 	'+officewiki' => [
 		'bureaucrat' => [ 'communityapps', 'flood', 'securepoll' ],
 	],
-	'+ombudsmenwiki' => [
-		'bureaucrat' => [ 'ipblock-exempt', ],
-	],
 	'+orwiki' => [
 		'sysop' => [ 'rollbacker' ],
 	],
@@ -10692,9 +10686,6 @@ $wgConf->settings = [
 	],
 	'+srwikisource' => [
 		'bureaucrat' => [ 'patroller', 'autopatrolled', ],
-	],
-	'+stewardwiki' => [
-		'bureaucrat' => [ 'ipblock-exempt' ],
 	],
 	'+svwiki' => [
 		'sysop' => [ 'rollbacker', 'autopatrolled' ], // T161210
@@ -10941,9 +10932,6 @@ $wgConf->settings = [
 	],
 	'+cewiki' => [
 		'sysop' => [ 'rollbacker', 'suppressredirect', 'uploader' ], // T128205, T129005
-	],
-	'+checkuserwiki' => [
-		'bureaucrat' => [ 'ipblock-exempt', ],
 	],
 	'+ckbwiki' => [
 		'sysop' => [
@@ -11340,9 +11328,6 @@ $wgConf->settings = [
 	'+sourceswiki' => [
 		'bureaucrat' => [ 'flood' ], // T193350
 	],
-	'+ombudsmenwiki' => [
-		'bureaucrat' => [ 'ipblock-exempt' ],
-	],
 	'+orwiki' => [
 		'sysop' => [ 'rollbacker' ],
 	],
@@ -11442,9 +11427,6 @@ $wgConf->settings = [
 	],
 	'+specieswiki' => [
 		'sysop' => [ 'autopatrolled', 'patroller' ], // T89147
-	],
-	'+stewardwiki' => [
-		'bureaucrat' => [ 'ipblock-exempt' ],
 	],
 	'+sqwiki' => [
 		'bureaucrat' => [ 'editor' ],
