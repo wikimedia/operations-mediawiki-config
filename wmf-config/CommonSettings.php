@@ -2042,7 +2042,6 @@ if ( $wmgUseLoginNotify && $wmgUseEcho ) {
 
 if ( $wmgUseCodeMirror ) {
 	wfLoadExtension( 'CodeMirror' );
-	$wgCodeMirrorBetaFeature = true;
 }
 
 // Must be loaded BEFORE VisualEditor, or things will break
