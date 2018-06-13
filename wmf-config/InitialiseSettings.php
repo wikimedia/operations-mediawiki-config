@@ -14103,7 +14103,6 @@ $wgConf->settings = [
 		'visualeditor-newwikitext',          // [Contrib] 2018-05-02 – New wikitext editor
 		'twocolconflict',                    // [WMDE TW] 2018-04-30 – New edit conflict view
 		'rcenhancedfilters',                 // [Contrib] 2018-05-22 - Enhanced watchlist filters
-		'codemirror-syntax-highlight',       // [ComTech] 2018-05-06 - Syntax highlighting
 		'advancedsearch',                    // [WMDE TW] 2018-05-22 - Advanced Search
 		'visualeditor-visualdiffpage',       // [Contrib] 2018-08-08 – Visual diffs
 		'fileexporter',                      // [WMDE TW] 2018-12-07 – FileExporter
