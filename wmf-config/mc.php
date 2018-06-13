@@ -28,6 +28,7 @@ $wgObjectCaches['memcached-mcrouter'] = [
 		// new mcrouter consistent hash scheme (uses host:port)
 		0 => [
 			'class'                => 'MemcachedPeclBagOStuff',
+			'mcrouterAware'        => true,
 			'serializer'           => 'php',
 			'persistent'           => false,
 			'servers'              => [ '127.0.0.1:11213' ],
