@@ -185,7 +185,8 @@ if ( $wmgUseWikibaseRepo ) {
 		'the Creative Commons Attribution-ShareAlike License; additional terms may apply.';
 	$wgRightsUrl = 'creativecommons.org/licenses/by-sa/3.0';
 	// T183053 - make Cirrus instantly index new items
-	$wgCirrusSearchInstantIndexNew = [ NS_MAIN, WB_NS_PROPERTY ];
+	// T196896 - for Lexemes
+	$wgCirrusSearchInstantIndexNew = [ NS_MAIN, WB_NS_PROPERTY, 146 ];
 
 	// T189776, T189777
 	$wgWBRepoSettings['useTermsTableSearchFields'] = false;
