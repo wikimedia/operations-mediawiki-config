@@ -18,28 +18,15 @@ $wgObjectCaches['memcached-pecl'] = [
 ];
 
 $wgObjectCaches['memcached-mcrouter'] = [
-	'class' => 'MultiWriteBagOStuff',
-	'caches' => [
-		// new mcrouter consistent hash scheme (uses host:port)
-		0 => [
-			'class'                => 'MemcachedPeclBagOStuff',
-			'mcrouterAware'        => true, // use routing prefix wildcards
-			'serializer'           => 'php',
-			'persistent'           => false,
-			'servers'              => [ '127.0.0.1:11213' ],
-			'server_failure_limit' => 1e9,
-			'retry_timeout'        => -1,
-			'loggroup'             => 'memcached',
-			'timeout'              => $wgMemCachedTimeout
-		],
-		// old nutcracker consistent hash scheme (uses shard tag);
-		// make sure this cache scheme gets purges and stays warm
-		1 => [
-			'factory' => [ 'ObjectCache', 'getInstance' ],
-			'args' => [ 'memcached-pecl' ]
-		],
-	],
-	'reportDupes' => false
+	'class'                => 'MemcachedPeclBagOStuff',
+	'mcrouterAware'        => true, // use routing prefix wildcards
+	'serializer'           => 'php',
+	'persistent'           => false,
+	'servers'              => [ '127.0.0.1:11213' ],
+	'server_failure_limit' => 1e9,
+	'retry_timeout'        => -1,
+	'loggroup'             => 'memcached',
+	'timeout'              => $wgMemCachedTimeout
 ];
 
 $wgMainCacheType = 'memcached-mcrouter'; // mcrouter for reads; write to both
