@@ -42,23 +42,6 @@ $wgObjectCaches['memcached-mcrouter'] = [
 	'reportDupes' => false
 ];
 
-$wgObjectCaches['memcached-nutcracker'] = [
-	'class'       => 'ReplicatedBagOStuff',
-	'readFactory' => [
-		'factory' => [ 'ObjectCache', 'getInstance' ],
-		'args'    => [ 'memcached-pecl' ]
-	],
-	'writeFactory' => [
-		'factory' => [ 'ObjectCache', 'getInstance' ],
-		'args'    => [ 'memcached-mcrouter' ]
-	],
-	'reportDupes' => false
-];
-
-if ( in_array( $wgDBname, [ 'testwiki', 'test2wiki' ], true ) ) {
-	$wgMainCacheType = 'memcached-mcrouter'; // mcrouter for reads; write to both
-} else {
-	$wgMainCacheType = 'memcached-nutcracker'; // nutcracker for reads; write to both
-}
+$wgMainCacheType = 'memcached-mcrouter'; // mcrouter for reads; write to both
 
 # vim: set sts=4 sw=4 et :
