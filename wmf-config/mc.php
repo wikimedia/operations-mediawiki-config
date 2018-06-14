@@ -1,11 +1,6 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-if ( in_array( $wgDBname, [ 'testwiki', 'test2wiki' ], true ) ) {
-	$wgMainCacheType = 'memcached-mcrouter';
-} else {
-	$wgMainCacheType = 'memcached-pecl';
-}
 $wgMemCachedPersistent = false;
 $wgMemCachedTimeout = 0.25 * 1e6;  // 250ms
 
@@ -45,5 +40,26 @@ $wgObjectCaches['memcached-mcrouter'] = [
 	],
 	'reportDupes' => false
 ];
+
+$wgObjectCaches['memcached-nutcracker'] = [
+	'class'       => 'ReplicatedBagOStuff',
+	'readFactory' => [
+		'factory' => [ 'ObjectCache', 'getInstance' ],
+		'args'    => [ 'memcached-pecl' ]
+	],
+	'writeFactory' => [
+		'factory' => [ 'ObjectCache', 'getInstance' ],
+		'args'    => [ 'memcached-mcrouter' ]
+	],
+	'reportDupes' => false
+];
+
+if ( in_array( $wgDBname, [ 'testwiki', 'test2wiki' ], true ) ) {
+	$wgMainCacheType = 'memcached-mcrouter'; // mcrouter for reads; write to both
+} elseif ( $wgDBname === 'mediawikiwiki' ) {
+	$wgMainCacheType = 'memcached-nutcracker'; // nutcracker for reads; write to both
+} else {
+	$wgMainCacheType = 'memcached-pecl'; // nutcracker only
+}
 
 # vim: set sts=4 sw=4 et :
