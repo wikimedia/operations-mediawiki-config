@@ -15694,6 +15694,7 @@ $wgConf->settings = [
 
 'wgPageCreationLog' => [
 	'default' => false,
+	'testwiki' => true,
 ],
 
 // Varied for Labs only.
