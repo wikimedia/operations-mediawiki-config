@@ -56,10 +56,8 @@ $wgObjectCaches['memcached-nutcracker'] = [
 
 if ( in_array( $wgDBname, [ 'testwiki', 'test2wiki' ], true ) ) {
 	$wgMainCacheType = 'memcached-mcrouter'; // mcrouter for reads; write to both
-} elseif ( $wgDBname === 'mediawikiwiki' ) {
-	$wgMainCacheType = 'memcached-nutcracker'; // nutcracker for reads; write to both
 } else {
-	$wgMainCacheType = 'memcached-pecl'; // nutcracker only
+	$wgMainCacheType = 'memcached-nutcracker'; // nutcracker for reads; write to both
 }
 
 # vim: set sts=4 sw=4 et :
