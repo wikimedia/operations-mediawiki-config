@@ -1,12 +1,6 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-if ( in_array( $wgDBname, [ 'testwiki', 'test2wiki' ], true ) ) {
-	$wgMainCacheType = 'memcached-mcrouter';
-} else {
-	$wgMainCacheType = 'memcached-pecl';
-}
-
 // Disabled here for sanity (although matches MediaWiki default,
 // and isn't used given we set 'persistent' explicitly).
 $wgMemCachedPersistent = false;
@@ -39,7 +33,7 @@ $wgObjectCaches['mcrouter'] = [
 	'timeout'              => $wgMemCachedTimeout,
 ];
 
-$wgObjectCaches['memcached-mcrouter'] = [
+$wgObjectCaches['mcrouter+memcached'] = [
 	'class' => 'MultiWriteBagOStuff',
 	'caches' => [
 		// new mcrouter consistent hash scheme (uses host:port)
@@ -55,6 +49,33 @@ $wgObjectCaches['memcached-mcrouter'] = [
 		],
 	],
 	'reportDupes' => false,
+];
+
+$wgObjectCaches['memcached+mcrouter'] = [
+	'class'       => 'ReplicatedBagOStuff',
+	'readFactory' => [
+		'factory' => [ 'ObjectCache', 'getInstance' ],
+		'args'    => [ 'memcached-pecl' ]
+	],
+	'writeFactory' => [
+		'factory' => [ 'ObjectCache', 'getInstance' ],
+		'args'    => [ 'mcrouter+memcached' ]
+	],
+	'reportDupes' => false
+];
+
+if ( in_array( $wgDBname, [ 'testwiki', 'test2wiki' ], true ) ) {
+	$wgMainCacheType = 'memcached+mcrouter'; // nutcracker for reads; write to both
+	$wgMainWANCache = 'wancache-main-mcrouter';
+} else {
+	$wgMainCacheType = 'memcached-pecl'; // nutcracker only
+}
+
+$wgWANObjectCaches['wancache-main-mcrouter'] = [
+	'class'   => 'WANObjectCache',
+	'cacheId' => $wgMainCacheType,
+	'channels' => [ 'purge' => 'wancache-main-default-purge' ],
+	// 'mcrouterAware' => true, # wait until *only* mcrouter is used
 ];
 
 # vim: set sts=4 sw=4 et :
