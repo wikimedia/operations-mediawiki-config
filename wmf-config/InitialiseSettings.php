@@ -19959,41 +19959,11 @@ $wgConf->settings = [
 'wgStructuredChangeFiltersShowPreference' => [
 	'default' => true,
 ],
-'wmgWlFiltersDefault' => [
+'wgStructuredChangeFiltersShowWatchlistPreference' => [
 	'default' => true,
-	// DB list
-	'wikispecies' => false,
-	'wikidata' => false,
-	'wiktionary' => false,
-	'wikisource' => false,
-	// Wikis
-	'commonswiki' => false,
-	'metawiki' => false,
-	'mediawikiwiki' => false,
-	'enwiki' => false,
-	'dewiki' => false,
-	'nlwiki' => false,
-	'eswiki' => false,
-	'cawiki' => false,
-	'ptwiki' => false,
-	'itwiki' => false,
-	'plwiki' => false,
-	'cswiki' => false,
-	'huwiki' => false,
-	'ruwiki' => false,
-	'arwiki' => false,
-	'fawiki' => false,
-	'kowiki' => false,
-	'zhwiki' => false,
-	'zh_yuewiki' => false,
-	'jawiki' => false,
-	'idwiki' => false,
-	'svwiki' => false,
-	'nowiki' => false,
-	'fiwiki' => false,
-	'dawiki' => false,
-	'frwiki' => false,
-	'hewiki' => false,
+],
+'wgEnableRcFiltersBetaFeature' => [
+	'default' => false,
 ],
 ### End (roughly) of general extensions ########################
 
