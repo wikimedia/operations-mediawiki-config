@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "69d8e1c9_e58f051d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 259,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-06-15T21:04:56Z",
+      "side": 1,
+      "message": "Given this hasn\u0027t been working and (unlike the above) isn\u0027t about debugging, we may just want to remove this.\n\nThere are various areas in MediaWiki that consider APC/ACCELL/LocalServerCache, and none of them need this override because MW does that already (per ObjectCache::detectLocalServerCache).",
+      "range": {
+        "startLine": 258,
+        "startChar": 1,
+        "endLine": 259,
+        "endChar": 44
+      },
+      "revId": "4c50d15b488a2e0d96968eed9878b2d97b7d1ca0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
