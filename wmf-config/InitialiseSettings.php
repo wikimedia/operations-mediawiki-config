@@ -19882,7 +19882,9 @@ $wgConf->settings = [
 'wgStructuredChangeFiltersShowPreference' => [
 	'default' => true,
 ],
-
+'wgStructuredChangeFiltersShowWatchlistPreference' => [
+	'default' => false,
+],
 ### End (roughly) of general extensions ########################
 
 'wgUseTidy' => [
