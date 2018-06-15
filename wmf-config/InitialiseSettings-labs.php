@@ -748,11 +748,8 @@ function wmfLabsSettings() {
 			// Explicitly disabled on non-CentralAuth wikis in CommonSettings.php
 			'default' => true,
 		],
-		'wgStructuredChangeFiltersShowWatchlistPreference' => [
+		'wmgWlFiltersDefault' => [
 			'default' => true,
-		],
-		'wgEnableRcFiltersBetaFeature' => [
-			'default' => false,
 		],
 	];
 } # wmflLabsSettings()
