@@ -3676,17 +3676,6 @@ if ( PHP_SAPI === 'cli' ) {
 	wfLoadExtension( 'ActiveAbstract' );
 }
 
-if ( $wmgWlFiltersDefault ) {
-	// If a wiki has the StructuredChangesFilters on watchlist
-	// by default, and with an opt-out preference,
-	// then hide the beta feature for StructuredChangesFilters
-	$wgStructuredChangeFiltersShowWatchlistPreference = true;
-	$wgEnableRcFiltersBetaFeature = false;
-} else {
-	$wgStructuredChangeFiltersShowWatchlistPreference = false;
-	$wgEnableRcFiltersBetaFeature = true;
-}
-
 if ( $wmfRealm === 'labs' ) {
 	require "$wmfConfigDir/CommonSettings-labs.php";
 }
