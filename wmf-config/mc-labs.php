@@ -3,28 +3,55 @@
 
 if ( $wmfRealm == 'labs' ) {  # safe guard
 
-$wgMainCacheType = 'memcached-pecl';
+$wgMainCacheType = 'mcrouter+nutcracker';
 $wgMemCachedPersistent = false;
 // Beta Cluster: Increase timeout to 500ms (in microseconds)
 $wgMemCachedTimeout = 0.5 * 1e6;
 
-$wgObjectCaches['memcached-pecl'] = [
+$wgObjectCaches['nutcracker-memcached'] = [
 	'class'                => 'MemcachedPeclBagOStuff',
 	'serializer'           => 'php',
 	'persistent'           => false,
-	// Beta Cluster: Use mcrouter port
+	'servers'              => [ '127.0.0.1:11212' ],
+	'retry_timeout'        => -1,
+	'loggroup'             => 'memcached',
+	'timeout'              => $wgMemCachedTimeout,
+];
+
+$wgObjectCaches['mcrouter'] = [
+	'class'                => 'MemcachedPeclBagOStuff',
+	'serializer'           => 'php',
+	'persistent'           => false,
 	'servers'              => [ '127.0.0.1:11213' ],
 	'retry_timeout'        => -1,
 	'loggroup'             => 'memcached',
 	'timeout'              => $wgMemCachedTimeout,
 ];
 
+$wgObjectCaches['mcrouter+nutcracker'] = [
+	'class' => 'MultiWriteBagOStuff',
+	'caches' => [
+		// new mcrouter consistent hash scheme (uses host:port)
+		0 => [
+			'factory' => [ 'ObjectCache', 'getInstance' ],
+			'args' => [ 'mcrouter' ],
+		],
+		// old nutcracker consistent hash scheme (uses shard tag);
+		// make sure this cache scheme gets purges and stays warm
+		1 => [
+			'factory' => [ 'ObjectCache', 'getInstance' ],
+			'args' => [ 'nutcracker-memcached' ],
+		],
+	],
+	'reportDupes' => false,
+];
+
 // Beta Cluster: Make WANObjectCache mcrouter-aware
 $wgMainWANCache = 'wancache-main-mcrouter';
 $wgWANObjectCaches['wancache-main-mcrouter'] = [
 	'class'         => 'WANObjectCache',
-	'cacheId'       => 'memcached-pecl',
-	'mcrouterAware' => true,
+	'cacheId'       => 'mcrouter+nutcracker',
+	// 'mcrouterAware' => true, # wait until *only* mcrouter is used
 ];
 
 // Beta Cluster: Experimentally turn on CacheReaper.
