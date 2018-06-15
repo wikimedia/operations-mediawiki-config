@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "939445ec_a26f9536",
+        "filename": "wmf-config/mc.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2018-06-15T13:14:48Z",
+      "side": 1,
+      "message": "This is problematic because it directly invokes ObjectFactory instead of going through ObjectCache::newFromParams(), which sets important default parameters like the keyspace.",
+      "range": {
+        "startLine": 30,
+        "startChar": 3,
+        "endLine": 30,
+        "endChar": 54
+      },
+      "revId": "bd6a520d8e04833c50ef08ac24e73cfe48a4732e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
