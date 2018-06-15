@@ -41,12 +41,6 @@ if ( PHP_SAPI !== 'cli' ) {
 } else {
 	# Override for sanity's sake. Log errors to stderr.
 	ini_set( 'display_errors', 'stderr' );
-
-	$wgShowExceptionDetails = true;
-	$wgShowDBErrorBacktrace = true;
-
-	# APC not available in CLI mode
-	$wgLanguageConverterCacheType = CACHE_NONE;
 }
 
 // Clobber any value in $_SERVER['SERVER_SOFTWARE'] other than Apache, so that
@@ -254,6 +248,16 @@ $wgMemCachedServers = [];
 
 require "$wmfConfigDir/logging.php";
 require "$wmfConfigDir/redis.php";
+
+# Override certain settings in command-line mode
+# This must be after InitialiseSettings.php is processed (T197475)
+if ( PHP_SAPI === 'cli' ) {
+	$wgShowExceptionDetails = true;
+	$wgShowDBErrorBacktrace = true;
+
+	# APC not available in CLI mode
+	$wgLanguageConverterCacheType = CACHE_NONE;
+}
 
 if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) && preg_match( '/\breadonly\b/i', $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
 	$wgReadOnly = 'X-Wikimedia-Debug';
