@@ -748,8 +748,5 @@ function wmfLabsSettings() {
 			// Explicitly disabled on non-CentralAuth wikis in CommonSettings.php
 			'default' => true,
 		],
-		'wmgWlFiltersDefault' => [
-			'default' => true,
-		],
 	];
 } # wmflLabsSettings()
