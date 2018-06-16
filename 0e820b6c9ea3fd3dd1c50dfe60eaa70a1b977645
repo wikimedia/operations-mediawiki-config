@@ -22,6 +22,30 @@
       "revId": "0e820b6c9ea3fd3dd1c50dfe60eaa70a1b977645",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "975b40c4_167f937c",
+        "filename": "wmf-config/mc-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2018-06-16T07:35:28Z",
+      "side": 1,
+      "message": "The current names are super confusing. I\u0027ll be changing prod to names more like these in the next patch.",
+      "parentUuid": "9ccfa147_fadd1477",
+      "range": {
+        "startLine": 6,
+        "startChar": 20,
+        "endLine": 6,
+        "endChar": 39
+      },
+      "revId": "0e820b6c9ea3fd3dd1c50dfe60eaa70a1b977645",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
