@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ccfa147_fadd1477",
+        "filename": "wmf-config/mc-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-06-16T01:09:36Z",
+      "side": 1,
+      "message": "This name is different from the current names used in prod, and (from a quick look) also differs from the proposed prod changesets lined up.\n\nI may\u0027ve missed it, but if not, would be nice to keep these the same. Both names are fine I think, but we should pick one :)",
+      "range": {
+        "startLine": 6,
+        "startChar": 20,
+        "endLine": 6,
+        "endChar": 39
+      },
+      "revId": "0e820b6c9ea3fd3dd1c50dfe60eaa70a1b977645",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
