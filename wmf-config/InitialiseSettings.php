@@ -3554,7 +3554,6 @@ $wgConf->settings = [
 	],
 	'+dewikivoyage' => [ // T53794
 		'WD' => NS_PROJECT_TALK,
-		'BN' => NS_USER,
 		'BD' => NS_USER_TALK,
 		'H' => NS_HELP,
 		'HD' => NS_HELP_TALK,
