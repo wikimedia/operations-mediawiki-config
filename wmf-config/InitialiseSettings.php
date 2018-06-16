@@ -13807,7 +13807,6 @@ $wgConf->settings = [
 
 'wgDisabledVariants' => [
 	'default' => [],
-	'zhwiki' => [ 'zh-my' ],
 	'zhwikibooks' => [ 'zh-mo', 'zh-my' ],
 	'zhwikinews' => [ 'zh-mo', 'zh-my' ],
 	'zhwikiquote' => [ 'zh-mo', 'zh-my' ],
