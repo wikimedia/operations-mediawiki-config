@@ -10148,7 +10148,7 @@ $wgConf->settings = [
 	// The '+' in front of the DB name means 'add to the default'. It saves us duplicating
 	// changes to the default across all overrides --Andrew 2009-04-28
 	'default' => [
-		'bureaucrat' => [ 'accountcreator', 'sysop', 'bureaucrat', 'bot', 'confirmed' ],
+		'bureaucrat' => [ 'accountcreator', 'sysop', 'interface-admin', 'bureaucrat', 'bot', 'confirmed' ],
 		'sysop' => [ 'ipblock-exempt' ],
 	],
 	'+private' => [
@@ -10888,18 +10888,18 @@ $wgConf->settings = [
 		'sysop' => [ 'ipblock-exempt' ],
 	],
 	'+private' => [
-		'bureaucrat' => [ 'sysop', 'bureaucrat', 'import', 'transwiki', 'inactive' ],
+		'bureaucrat' => [ 'sysop', 'interface-admin', 'bureaucrat', 'import', 'transwiki', 'inactive' ],
 	],
 	'+fishbowl' => [
 		'bureaucrat' => [ 'sysop', 'bureaucrat', 'import', 'transwiki' ],
 	],
 	'+testwiki' => [
-		'bureaucrat' => [ 'sysop', 'researcher', 'centralnoticeadmin', 'flow-bot' ],
+		'bureaucrat' => [ 'sysop', 'interface-admin', 'researcher', 'centralnoticeadmin', 'flow-bot' ],
 		'sysop' => [ 'filemover', 'rollbacker', 'accountcreator', 'confirmed', 'templateeditor' ],
 		# 'user' => array( 'editor', 'reviewer' ),
 	],
 	'+test2wiki' => [
-		'bureaucrat' => [ 'flow-bot', 'sysop' ], // T131037
+		'bureaucrat' => [ 'flow-bot', 'sysop', 'interface-admin', ], // T131037
 	],
 	// ******************************************************************
 	'+amwikimedia' => [ // T180879
@@ -10946,7 +10946,7 @@ $wgConf->settings = [
 		],
 	],
 	'+bawiki' => [
-		'bureaucrat' => [ 'sysop' ],
+		'bureaucrat' => [ 'sysop', 'interface-admin' ],
 	],
 	'+bewiki' => [
 		'sysop' => [ 'autoeditor' ],
@@ -10967,7 +10967,7 @@ $wgConf->settings = [
 	],
 	'+brwikimedia' => [
 		'sysop' => [ 'translationadmin', 'autopatrolled', 'confirmed' ], // T7812, T65345
-		'bureaucrat' => [ 'sysop', 'bureaucrat' ], // T65345
+		'bureaucrat' => [ 'sysop', 'interface-admin', 'bureaucrat' ], // T65345
 	],
 	'+bswiki' => [
 		'sysop' => [ 'flood' ], // T52425
@@ -11061,7 +11061,7 @@ $wgConf->settings = [
 		'sysop' => [ 'autopatrolled' ],
 	],
 	'+enwiki' => [
-		'bureaucrat' => [ 'ipblock-exempt', 'sysop', 'flow-bot' ],
+		'bureaucrat' => [ 'ipblock-exempt', 'sysop', 'interface-admin', 'flow-bot' ],
 		'sysop' => [ 'rollbacker', 'accountcreator', 'abusefilter', 'abusefilter-helper', 'autoreviewer', 'confirmed', 'reviewer', 'filemover', 'templateeditor', 'massmessage-sender', 'extendedconfirmed', 'extendedmover', 'patroller', 'eventcoordinator' ], // T126607, T133981, T149019, T175684, T193075
 	],
 	'+enwikibooks' => [
@@ -11069,12 +11069,12 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'flood' ],
 	],
 	'+enwikinews' => [
-		'bureaucrat' => [ 'flood', 'sysop' ],
+		'bureaucrat' => [ 'flood', 'sysop', 'interface-admin' ],
 		'sysop' => [ 'flood' ],
 	],
 	'+enwikivoyage' => [
 		'sysop' => [ 'autopatrolled' ],
-		'bureaucrat' => [ 'sysop', 'patroller' ],
+		'bureaucrat' => [ 'sysop', 'interface-admin', 'patroller' ],
 	],
 	'+enwikiversity' => [
 		'sysop' => [ 'curator' ], // T113109
@@ -11107,7 +11107,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'autopatrolled', 'patroller', 'rollbacker' ],
 	],
 	'+enwiktionary' => [
-		'bureaucrat' => [ 'sysop' ], // bureaucrat removed per T44113
+		'bureaucrat' => [ 'sysop', 'interface-admin' ], // bureaucrat removed per T44113
 		'sysop' => [ 'autopatrolled', 'flood', 'patroller', 'rollbacker', 'templateeditor' ], // T148007
 	],
 	'+etwiki' => [
@@ -11122,6 +11122,7 @@ $wgConf->settings = [
 			'abusefilter', // T74502
 			'eliminator', // T87558
 			'sysop', // T140810
+			'interface-admin',
 		],
 		'sysop' => [
 			'rollbacker', // T25233
@@ -11169,11 +11170,11 @@ $wgConf->settings = [
 		],
 	],
 	'+fiwiki' => [
-		'bureaucrat' => [ 'sysop', 'bureaucrat', 'arbcom' ],
+		'bureaucrat' => [ 'sysop', 'interface-admin', 'bureaucrat', 'arbcom' ],
 		'sysop' => [ 'rollbacker', 'accountcreator' ], // T149986
 	],
 	'+fiwikimedia' => [
-		'bureaucrat' => [ 'sysop', 'bureaucrat' ],
+		'bureaucrat' => [ 'sysop', 'interface-admin', 'bureaucrat' ],
 	],
 	'+foundationwiki' => [
 		'sysop' => [ 'inactive', 'confirmed', 'flood' ],
@@ -11181,7 +11182,7 @@ $wgConf->settings = [
 	],
 	'+frwiki' => [
 		'sysop' => [ 'rollbacker' ], // T170780
-		'bureaucrat' => [ 'abusefilter', 'sysop', 'rollbacker' ],
+		'bureaucrat' => [ 'abusefilter', 'sysop', 'interface-admin', 'rollbacker' ],
 	],
 	'+frwikibooks' => [
 		'bureaucrat' => [ 'abusefilter' ],
@@ -11237,14 +11238,14 @@ $wgConf->settings = [
 		'sysop' => [ 'autopatrolled' ], // T179251
 	],
 	'+hiwiktionary' => [
-		'bureaucrat' => [ 'sysop', ],
+		'bureaucrat' => [ 'sysop', 'interface-admin', ],
 	],
 	'+hrwiki' => [
 		'bureaucrat' => [ 'patroller', 'autopatrolled' ],
 		'sysop' => [ 'patroller', 'autopatrolled' ],
 	],
 	'+huwiki' => [
-		'bureaucrat' => [ 'sysop', 'bureaucrat', 'templateeditor', 'interface-editor' ], // T74055, T109408
+		'bureaucrat' => [ 'sysop', 'interface-admin', 'bureaucrat', 'templateeditor', 'interface-editor' ], // T74055, T109408
 	],
 	'+idwiki' => [
 		'sysop' => [ 'rollbacker' ],
@@ -11388,7 +11389,7 @@ $wgConf->settings = [
 	],
 	'+outreachwiki' => [
 		'bureaucrat' => [
-			'sysop', 'bureaucrat', 'autopatrolled', 'import',
+			'sysop', 'interface-admin', 'bureaucrat', 'autopatrolled', 'import',
 		],
 	],
 	'+pawiki' => [
@@ -11404,7 +11405,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'interface-editor' ], // T133472
 	],
 	'+ptwiki' => [
-		'bureaucrat' => [ 'eliminator', 'autoreviewer', 'interface-editor', 'bureaucrat', 'sysop' ], // T41905, T65750, T107661
+		'bureaucrat' => [ 'eliminator', 'autoreviewer', 'interface-editor', 'bureaucrat', 'sysop', 'interface-admin' ], // T41905, T65750, T107661
 		'sysop' => [ 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator' ], // T65750
 	],
 	'+ptwikinews' => [
@@ -11421,7 +11422,7 @@ $wgConf->settings = [
 		'sysop' => [ 'autopatrolled', 'templateeditor' ], // T63172
 	],
 	'+ruwiki' => [
-		'bureaucrat' => [ 'arbcom', 'engineer', 'sysop' ], // T51334, T144599
+		'bureaucrat' => [ 'arbcom', 'engineer', 'sysop', 'interface-admin' ], // T51334, T144599
 		'sysop' => [ 'rollbacker', 'autoeditor', 'uploader', 'closer', 'filemover', 'suppressredirect' ],
 	],
 	'+ruwikiquote' => [
@@ -11450,7 +11451,7 @@ $wgConf->settings = [
 		'sysop' => [ 'autopatrolled' ], // T177141
 	],
 	'+sewikimedia' => [
-		'bureaucrat' => [ 'sysop', 'bureaucrat' ],
+		'bureaucrat' => [ 'sysop', 'interface-admin', 'bureaucrat' ],
 	],
 	'+shwiki' => [
 		'bureaucrat' => [
@@ -11470,11 +11471,11 @@ $wgConf->settings = [
 		'sysop' => [ 'rollbacker', 'accountcreator', 'abusefilter', 'autopatrolled', 'confirmed', 'reviewer', ],
 	],
 	'+simplewiki' => [
-		'bureaucrat' => [ 'flood', 'rollbacker', 'sysop', 'import', 'transwiki', 'patroller' ],
+		'bureaucrat' => [ 'flood', 'rollbacker', 'sysop', 'interface-admin', 'import', 'transwiki', 'patroller' ],
 		'sysop' => [ 'rollbacker', 'flood', 'patroller', 'uploader' ], // T127826
 	],
 	'+simplewiktionary' => [
-		'bureaucrat' => [ 'sysop' ],
+		'bureaucrat' => [ 'sysop', 'interface-admin' ],
 		'sysop' => [ 'rollbacker', 'autopatrolled' ],
 	],
 	'+skwiki' => [
@@ -11587,7 +11588,7 @@ $wgConf->settings = [
 		],
 	],
 	'+wikimaniateamwiki' => [
-		'bureaucrat' => [ 'sysop', 'bureaucrat', 'autopatrolled', 'import' ],
+		'bureaucrat' => [ 'sysop', 'interface-admin', 'bureaucrat', 'autopatrolled', 'import' ],
 	],
 	'wikitech' => [
 		'contentadmin' => [
@@ -11603,6 +11604,7 @@ $wgConf->settings = [
 			'oauthadmin',
 			'shell',
 			'sysop',
+			'interface-admin',
 			'transwiki',
 		],
 		'sysop' => [
