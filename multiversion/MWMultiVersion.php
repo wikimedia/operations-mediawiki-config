@@ -450,6 +450,11 @@ class MWMultiVersion {
 	public static function getMediaWikiCli( $file ) {
 		global $IP;
 
+		// don't wrangle absolute path
+		if ( substr( $file, 0, 1 ) === '/' ) {
+			return $file;
+		}
+
 		$multiVersion = self::getInstance();
 		if ( !$multiVersion ) {
 			$multiVersion = self::initializeForMaintenance();
