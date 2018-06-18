@@ -3145,6 +3145,7 @@ if ( $wmgUseFileExporter ) {
 
 if ( $wmgUseFileImporter ) {
 	wfLoadExtension( 'FileImporter' );
+	$wgFileImporterCommonsHelperServer = 'https://meta.wikimedia.org';
 	$wgFileImporterSourceSiteServices = [ $wmgUseFileImporter ];
 }
 
