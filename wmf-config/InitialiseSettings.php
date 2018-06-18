@@ -19564,7 +19564,7 @@ $wgConf->settings = [
 		'damaging' => [ 'enabled' => true ],
 		'goodfaith' => [ 'enabled' => true ],
 		'reverted' => [ 'enabled' => false ],
-		'wp10' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanupParent' => true ],
+		'wp10' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
 	],
 	'enwiki' => [
