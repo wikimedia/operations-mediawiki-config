@@ -14117,14 +14117,14 @@ $wgConf->settings = [
 	'default' => [
 		'visualeditor-enable',               // [Contrib] On-going (special permission) – VisualEditor
 		'beta-feature-flow-user-talk-page',  // [Contrib] On-going (special permission) – Flow opt-in
-		'uls-compact-links',                 // [Contrib] 2018-05-01 – Compact language links
-		'popups',                            // [Readers] 2018-04-01 – Page Previews
-		'cx',                                // [Contrib] 2018-05-05 - ContentTranslation
-		'visualeditor-newwikitext',          // [Contrib] 2018-05-02 – New wikitext editor
-		'twocolconflict',                    // [WMDE TW] 2018-04-30 – New edit conflict view
-		'rcenhancedfilters',                 // [Contrib] 2018-05-22 - Enhanced watchlist filters
-		'advancedsearch',                    // [WMDE TW] 2018-05-22 - Advanced Search
-		'visualeditor-visualdiffpage',       // [Contrib] 2018-08-08 – Visual diffs
+		'uls-compact-links',                 // [Contrib] 2018-09-13 – Compact language links
+		'popups',                            // [Readers] 2018-12-11 – Page Previews
+		'cx',                                // [Contrib] 2018-12-11 - ContentTranslation
+		'visualeditor-newwikitext',          // [Contrib] 2018-12-12 – New wikitext editor
+		'twocolconflict',                    // [WMDE TW] 2018-08-20 – New edit conflict view
+		'rcenhancedfilters',                 // [Contrib] 2018-12-18 - Enhanced watchlist filters
+		'advancedsearch',                    // [WMDE TW] 2018-12-18 - Advanced Search
+		'visualeditor-visualdiffpage',       // [Contrib] 2018-12-14 – Visual diffs
 		'fileexporter',                      // [WMDE TW] 2018-12-07 – FileExporter
 	],
 ],
