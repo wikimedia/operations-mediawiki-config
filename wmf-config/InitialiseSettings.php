@@ -4357,6 +4357,15 @@ $wgConf->settings = [
 		'Index_talk' => 105,
 		'Rhymes' => 106,
 		'Rhymes_talk' => 107,
+		'У' => NS_USER, // T197565
+		'U' => NS_USER, // T197565
+		'ОУ' => NS_USER_TALK, // T197565
+		'UT' => NS_USER_TALK, // T197565
+		'ВС' => NS_PROJECT, // T197565
+		'Ш' => NS_TEMPLATE, // T197565
+		'T' => NS_TEMPLATE, // T197565
+		'К' => NS_CATEGORY, // T197565
+		'М' => 828, // T197565
 	],
 	'+sawiki' => [
 		'WP' => NS_PROJECT,
