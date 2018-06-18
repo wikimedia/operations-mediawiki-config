@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eba2a3bf_6cc21a7f",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1550,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2018-06-18T13:10:25Z",
+      "side": 1,
+      "message": "It\u0027d be nice if we just folded all these into the array below.\n\nFor practical purposes, 10000 vs PHP_INT_MAX is going to be minimal difference",
+      "range": {
+        "startLine": 1527,
+        "startChar": 0,
+        "endLine": 1550,
+        "endChar": 3
+      },
+      "revId": "c9fcb76995eaa6ea254b00e55731fc60a9a0090d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
