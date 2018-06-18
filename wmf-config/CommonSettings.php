@@ -450,7 +450,7 @@ if ( $wmgUseCentralAuth ) {
 		];
 
 		if ( array_intersect(
-			[ 'bureaucrat', 'sysop', 'checkuser', 'oversight', 'interface-editor' ],
+			[ 'bureaucrat', 'sysop', 'checkuser', 'oversight', 'interface-editor', 'steward' ],
 			$central->getLocalGroups()
 		) ) {
 			$effectivePolicy = UserPasswordPolicy::maxOfPolicies(
@@ -1541,11 +1541,12 @@ if ( $wmgUseCentralAuth ) {
 		'PasswordCannotBePopular' => PHP_INT_MAX,
 	];
 
-	// See T104371
+	// See T104371 and T197577
 	$wgCentralAuthGlobalPasswordPolicies['steward'] = [
 		'MinimalPasswordLength' => 8,
 		'MinimumPasswordLengthToLogin' => 1,
 		'PasswordCannotMatchUsername' => true,
+		'PasswordCannotBePopular' => PHP_INT_MAX,
 	];
 
 	// See [[m:Requests_for_comment/Password_policy_for_users_with_certain_advanced_permissions]]
