@@ -440,7 +440,7 @@ if ( $wmgUseCentralAuth ) {
 		];
 
 		if ( array_intersect(
-			[ 'bureaucrat', 'sysop', 'checkuser', 'oversight', 'interface-editor' ],
+			[ 'bureaucrat', 'sysop', 'checkuser', 'oversight', 'interface-editor', 'steward' ],
 			$central->getLocalGroups()
 		) ) {
 			$effectivePolicy = UserPasswordPolicy::maxOfPolicies(
@@ -1517,39 +1517,26 @@ if ( $wmgUseCentralAuth ) {
 	// Link global block blockers to user pages on Meta
 	$wgCentralAuthGlobalBlockInterwikiPrefix = 'meta';
 
-	// Require 8-byte password for staff. Set MinimumPasswordLengthToLogin
-	// to 8 also, once staff have time to update.
-	$wgCentralAuthGlobalPasswordPolicies['staff'] = [
-		'MinimalPasswordLength' => 8,
-		'MinimumPasswordLengthToLogin' => 1,
-		'PasswordCannotMatchUsername' => true,
-		'PasswordCannotBePopular' => PHP_INT_MAX,
-	];
-
-	// WMF Staff and two volunteers
-	$wgCentralAuthGlobalPasswordPolicies['sysadmin'] = [
-		'MinimalPasswordLength' => 8,
-		'MinimumPasswordLengthToLogin' => 1,
-		'PasswordCannotMatchUsername' => true,
-		'PasswordCannotBePopular' => PHP_INT_MAX,
-	];
-
-	// See T104371
-	$wgCentralAuthGlobalPasswordPolicies['steward'] = [
-		'MinimalPasswordLength' => 8,
-		'MinimumPasswordLengthToLogin' => 1,
-		'PasswordCannotMatchUsername' => true,
+	$groupsToEnforceHigherPasswordPolicies = [
+		'founder',
+		'global-interface-editor',
+		'global-sysop',
+		'new-wikis-importer',
+		'ombudsman',
+		'staff',
+		// See T104371 and T197577
+		'steward',
+		'sysadmin',
+		'wmf-researcher',
 	];
 
 	// See [[m:Requests_for_comment/Password_policy_for_users_with_certain_advanced_permissions]]
-	foreach ( [ 'global-sysop', 'global-interface-editor', 'wmf-researcher',
-		'new-wikis-importer', 'ombudsman', 'founder' ] as $group
-	) {
+	foreach ( $groupsToEnforceHigherPasswordPolicies as $group ) {
 		$wgCentralAuthGlobalPasswordPolicies[$group] = [
 			'MinimalPasswordLength' => 8,
 			'MinimumPasswordLengthToLogin' => 1,
 			'PasswordCannotMatchUsername' => true,
-			'PasswordCannotBePopular' => 10000,
+			'PasswordCannotBePopular' => PHP_INT_MAX,
 		];
 	}
 
