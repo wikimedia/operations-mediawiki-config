@@ -3146,6 +3146,16 @@ if ( $wmgUseFileExporter ) {
 if ( $wmgUseFileImporter ) {
 	wfLoadExtension( 'FileImporter' );
 	$wgFileImporterSourceSiteServices = [ $wmgUseFileImporter ];
+	// Temporary solution until we have a stable implementation for this
+	// https://gerrit.wikimedia.org/r/440857
+	$wgFileImporterInterWikiMap = [
+		'test.wikipedia.org' => 'testwiki',
+		'test2.wikipedia.org' => 'test2wiki',
+		'mediawiki.org' => 'mw',
+		'ar.wikipedia.org' => 'w:ar', // T196969
+		'de.wikipedia.org' => 'w:de', // T196969
+		'fa.wikipedia.org' => 'w:fa', // T196969
+	];
 }
 
 if ( $wmgUseContentTranslation ) {
