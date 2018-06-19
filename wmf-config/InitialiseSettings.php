@@ -14125,6 +14125,7 @@ $wgConf->settings = [
 'wmgUseFileImporter' => [
 	'default' => false,
 	'testwiki' => 'FileImporter-WikimediaSitesTableSite',
+	'commonswiki' => 'FileImporter-WikimediaSitesTableSite',
 ],
 
 'wmgUseFileExporter' => [
