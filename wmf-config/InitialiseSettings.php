@@ -6099,6 +6099,9 @@ $wgConf->settings = [
 		100 => 'تانبه',
 		101 => 'د تانبې خبرې اترې', // T119510
 	],
+	'pswikivoyage' => [
+		NS_PROJECT => 'وس', // T197507
+	],
 	'ptwiki' => [
 		NS_USER => 'Usuário(a)', // T29495
 		NS_USER_TALK => 'Usuário(a)_Discussão',
