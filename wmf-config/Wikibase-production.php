@@ -147,27 +147,6 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBQualityConstraintsTypeCheckMaxEntities = 10; // only check few entities in PHP => fall back to SPARQL very quickly
 		$wgWBQualityConstraintsCacheCheckConstraintsResults = true;
 		$wgWBQualityConstraintsPropertiesWithViolatingQualifiers = [ 'P1855', 'P2271' ]; // T183267
-		// T148411: Use profile that uses statement boosting by default to boost/unboost specific types
-		$wgWBRepoSettings['entitySearch']['defaultPrefixRescoreProfile'] = 'wikibase_prefix_boost';
-		$wgWBRepoSettings['entitySearch']['statementBoost'] = [
-			// Q4167410=Wikimedia disambiguation page
-			'P31=Q4167410' => '-10',
-			// T183510:
-			// Q13442814=scientific article
-			'P31=Q13442814' => '-5',
-			// Q18918145=academic journal article
-			'P31=Q18918145' => '-5',
-		];
-		// T163642
-		$wgWBRepoSettings['searchIndexPropertiesExclude'] = [
-			'P304', // page(s)
-			'P433', // issue
-			'P478', // volume
-			'P558', // unit symbol (DEPRECATED)
-			'P3903', // column
-			'P3921', // Wikidata SPARQL query equivalent
-			'P4316', // kinship equivalent in SPARQL at Wikidata
-		];
 		$wgSpecialPages['ItemDisambiguation'] = 'SpecialBlankpage';
 	}
 
@@ -184,9 +163,6 @@ if ( $wmgUseWikibaseRepo ) {
 		'the Creative Commons CC0 License; text in the other namespaces is available under ' .
 		'the Creative Commons Attribution-ShareAlike License; additional terms may apply.';
 	$wgRightsUrl = 'creativecommons.org/licenses/by-sa/3.0';
-	// T183053 - make Cirrus instantly index new items
-	// T196896 - for Lexemes
-	$wgCirrusSearchInstantIndexNew = [ NS_MAIN, WB_NS_PROPERTY, 146 ];
 
 	// T189776, T189777
 	$wgWBRepoSettings['useTermsTableSearchFields'] = false;
