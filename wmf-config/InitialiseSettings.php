@@ -4250,6 +4250,9 @@ $wgConf->settings = [
 	'+plwiktionary' => [
 		'WS' => NS_PROJECT,
 	],
+	'+pswikivoyage' => [
+		'وس' => NS_PROJECT, // T197507
+	],
 	'+ptwiki' => [
 		'Utilizador' => NS_USER, // T29495
 		'Utilizador_Discussão' => NS_USER_TALK, // T29495
