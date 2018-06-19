@@ -14130,7 +14130,10 @@ $wgConf->settings = [
 
 'wmgUseFileExporter' => [
 	'default' => false,
-	'mediawikiwiki' => 'https://test.wikipedia.org/wiki/Special:ImportFile',
+	'arwiki' => 'https://commons.wikimedia.org/wiki/Special:ImportFile',
+	'dewiki' => 'https://commons.wikimedia.org/wiki/Special:ImportFile',
+	'fawiki' => 'https://commons.wikimedia.org/wiki/Special:ImportFile',
+	'mediawikiwiki' => 'https://commons.wikimedia.org/wiki/Special:ImportFile',
 	'test2wiki' => 'https://test.wikipedia.org/wiki/Special:ImportFile',
 ],
 
