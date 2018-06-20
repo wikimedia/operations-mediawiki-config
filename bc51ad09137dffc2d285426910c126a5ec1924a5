@@ -70,6 +70,30 @@
       "revId": "bc51ad09137dffc2d285426910c126a5ec1924a5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "317b68e8_97c3d703",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 672,
+      "author": {
+        "id": 798
+      },
+      "writtenOn": "2018-06-20T18:20:54Z",
+      "side": 1,
+      "message": "Oh wow I missed the difference with _ and -, so I assumed it was the \u0027https\u0027 that\u0027s important, and then was confused about how that worked in the context of this array...\n\nThanks for clarifying!",
+      "parentUuid": "c8f4dd66_e5cda033",
+      "range": {
+        "startLine": 672,
+        "startChar": 3,
+        "endLine": 672,
+        "endChar": 33
+      },
+      "revId": "bc51ad09137dffc2d285426910c126a5ec1924a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
