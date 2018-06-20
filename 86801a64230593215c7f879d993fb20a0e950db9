@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9f82d678_3594de24",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 672,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2018-06-20T15:49:42Z",
+      "side": 1,
+      "message": "Remove the protocol :)",
+      "range": {
+        "startLine": 672,
+        "startChar": 3,
+        "endLine": 672,
+        "endChar": 11
+      },
+      "revId": "86801a64230593215c7f879d993fb20a0e950db9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
