@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8d1696d8_5deb4061",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 19
+      },
+      "lineNbr": 19067,
+      "author": {
+        "id": 2096
+      },
+      "writtenOn": "2018-06-20T20:56:24Z",
+      "side": 1,
+      "message": "I\u0027d do the same for testwikidatawiki.",
+      "range": {
+        "startLine": 19067,
+        "startChar": 2,
+        "endLine": 19067,
+        "endChar": 14
+      },
+      "revId": "ec4371da4790d973c21cbde1881a6af6ba9c471a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
