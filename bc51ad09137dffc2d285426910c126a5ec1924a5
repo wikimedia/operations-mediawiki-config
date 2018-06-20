@@ -46,6 +46,30 @@
       "revId": "bc51ad09137dffc2d285426910c126a5ec1924a5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c8f4dd66_e5cda033",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 672,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2018-06-20T15:48:35Z",
+      "side": 1,
+      "message": "It shouldn\u0027t. The mistake Timo was pointing out is that it should be noboards-chapters.wikimedia.org not noboard_chapters.wikimedia.org\n\n\nI\u0027m guessing the https:// came from a copy paste from his browser whilst testing",
+      "parentUuid": "d173ceb6_77223003",
+      "range": {
+        "startLine": 672,
+        "startChar": 3,
+        "endLine": 672,
+        "endChar": 33
+      },
+      "revId": "bc51ad09137dffc2d285426910c126a5ec1924a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
