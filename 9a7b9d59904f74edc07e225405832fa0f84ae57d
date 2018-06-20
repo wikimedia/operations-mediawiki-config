@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "a9807a38_735f3fa4",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 18
+      },
+      "lineNbr": 18701,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2018-06-20T07:54:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dd4171ea_c7163fb1",
+      "range": {
+        "startLine": 18701,
+        "startChar": 2,
+        "endLine": 18701,
+        "endChar": 10
+      },
+      "revId": "9a7b9d59904f74edc07e225405832fa0f84ae57d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "714f9ada_1dac1e33",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 18
@@ -36,6 +60,24 @@
       "writtenOn": "2018-06-20T05:39:48Z",
       "side": 1,
       "message": "May want to add 146, see https://gerrit.wikimedia.org/r/c/operations/mediawiki-config/+/440420/1/wmf-config/Wikibase-production.php. Also, why 120 and not WB_NS_PROPERTY? Is it not defined yet?",
+      "revId": "9a7b9d59904f74edc07e225405832fa0f84ae57d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "25d76bcd_4d52b943",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 18
+      },
+      "lineNbr": 19067,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2018-06-20T07:54:50Z",
+      "side": 1,
+      "message": "indeed I can add 146 and abandon this other patch,\nWB_NS_PROPERTY is defined in wmf-config/Wikibase.php which is loaded after this file.",
+      "parentUuid": "714f9ada_1dac1e33",
       "revId": "9a7b9d59904f74edc07e225405832fa0f84ae57d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
