@@ -22,6 +22,30 @@
       "revId": "bc51ad09137dffc2d285426910c126a5ec1924a5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d173ceb6_77223003",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 672,
+      "author": {
+        "id": 798
+      },
+      "writtenOn": "2018-06-20T15:31:21Z",
+      "side": 1,
+      "message": "Just out of curiosity, why? No other entry in this array has the http(s) prefix, why only this one?",
+      "parentUuid": "86facf25_a6d53c14",
+      "range": {
+        "startLine": 672,
+        "startChar": 3,
+        "endLine": 672,
+        "endChar": 33
+      },
+      "revId": "bc51ad09137dffc2d285426910c126a5ec1924a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
