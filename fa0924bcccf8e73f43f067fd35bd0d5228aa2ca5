@@ -16,6 +16,24 @@
       "revId": "fa0924bcccf8e73f43f067fd35bd0d5228aa2ca5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "81cc4062_06f8ac28",
+        "filename": "wmf-config/CirrusSearch-common.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2018-06-21T08:34:58Z",
+      "side": 1,
+      "message": "I think it\u0027s because the CirrusSearch extension is loaded (by CommonSettings.php) just after InitialiseSettings. If we did not use wmg in IS.php our value set there would be overridden by Cirrus defaults.",
+      "parentUuid": "5797f682_26037684",
+      "revId": "fa0924bcccf8e73f43f067fd35bd0d5228aa2ca5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
