@@ -14024,14 +14024,6 @@ $wgConf->settings = [
 	'testwiki' => true,
 ],
 
-'wmgUseMwEmbedSupport' => [
-	'default' => true,
-	'wikitech' => false,
-	'loginwiki' => false,
-	'votewiki' => false,
-],
-
-// NOTE: TMH *requires* MwEmbedSupport to function
 'wmgUseTimedMediaHandler' => [
 	'default' => true,
 	'wikitech' => false,
