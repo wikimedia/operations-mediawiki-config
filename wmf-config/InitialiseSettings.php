@@ -13692,6 +13692,8 @@ $wgConf->settings = [
 		'*.bcn.cl',                         // Chilean government website - T195928
 		'*.senado.cl',                      // Chilean government website - T195928
 		'*.camara.cl',                      // Chilean government website - T195928
+		'*.nic.in',                         // India government website - T197944
+		'*.gov.in',                         // India government website - T197944
 	],
 ],
 
