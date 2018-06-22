@@ -315,10 +315,6 @@
         "action": "branch",
         "ref": "."
     },
-    "extensions/MwEmbedSupport": {
-        "action": "branch",
-        "ref": "."
-    },
     "extensions/NavigationTiming": {
         "action": "branch",
         "ref": "."
