@@ -93,7 +93,6 @@ $IP/extensions/Math/extension.json
 $IP/extensions/MobileApp/extension.json
 $IP/extensions/MobileFrontend/extension.json
 $IP/extensions/MultimediaViewer/extension.json
-$IP/extensions/MwEmbedSupport/extension.json
 $IP/extensions/NavigationTiming/extension.json
 $IP/extensions/Newsletter/extension.json
 $IP/extensions/NewUserMessage/extension.json
