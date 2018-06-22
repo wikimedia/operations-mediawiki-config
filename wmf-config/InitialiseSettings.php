@@ -20402,7 +20402,7 @@ $wgConf->settings = [
 ],
 
 'wgWMECitationUsagePopulationSize' => [
-	'enwiki' => 6.666666666666667  // 15% — T191086
+	'enwiki' => 1  // 100% — T191086
 ],
 
 'wgWMEReadingDepthEnabled' => [
