@@ -946,10 +946,6 @@ if ( $wmgUseGadgets ) {
 	$wgGadgetsCacheType = CACHE_ACCEL;
 }
 
-if ( $wmgUseMwEmbedSupport && !isset( $wmfIgnoreMwEmbed ) /* T191056, T197918 */ ) {
-	wfLoadExtension( 'MwEmbedSupport' );
-}
-
 if ( $wmgUseTimedMediaHandler ) {
 	require_once "$IP/extensions/TimedMediaHandler/TimedMediaHandler.php";
 	$wgTimedTextForeignNamespaces = [ 'commonswiki' => 102 ];
