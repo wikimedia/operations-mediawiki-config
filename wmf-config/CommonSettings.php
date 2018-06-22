@@ -900,10 +900,6 @@ if ( $wmgUseGadgets ) {
 	$wgGadgetsCacheType = CACHE_ACCEL;
 }
 
-if ( $wmgUseMwEmbedSupport ) {
-	wfLoadExtension( 'MwEmbedSupport' );
-}
-
 if ( $wmgUseTimedMediaHandler ) {
 	require_once "$IP/extensions/TimedMediaHandler/TimedMediaHandler.php";
 	$wgTimedTextForeignNamespaces = [ 'commonswiki' => 102 ];
