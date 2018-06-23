@@ -5148,6 +5148,7 @@ $wgConf->settings = [
 	'zhwiki' => 50, // T16624
 	'zhwikibooks' => 10, // T185182
 	'zhwikiquote' => 10, // T189289
+	'zhwikivoyage' => 10, // T198006
 	'zhwiktionary' => 10, // T187018
 	'zh_yuewiki' => 10, // T32538
 ],
