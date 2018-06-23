@@ -4693,9 +4693,17 @@ $wgConf->settings = [
 		'翻譯討論' => 115, // T66127
 		'翻译讨论' => 115, // T66127
 	],
-	'+zhwikivoyage' => [ // T62122
-		'维基导游' => NS_PROJECT,
-		'維基導遊' => NS_PROJECT,
+	'+zhwikivoyage' => [
+		'维基导游' => NS_PROJECT, // T62122
+		'維基導遊' => NS_PROJECT, // T62122
+		'WT' => NS_PROJECT_TALK, // T198007
+		'U' => NS_USER, // T198007
+		'UT' => NS_USER_TALK, // T198007
+		'T' => NS_TEMPLATE, // T198007
+		'CAT' => NS_CATEGORY, // T198007
+		'H' => NS_HELP, // T198007
+		'F' => NS_FILE, // T198007
+		'FT' => NS_FILE_TALK, // T198007
 	],
 	'+zh_yuewiki' => [
 		'WP' => NS_PROJECT,
