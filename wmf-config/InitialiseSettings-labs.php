@@ -452,6 +452,10 @@ function wmfLabsSettings() {
 			'wikidataclient' => true,
 		],
 
+		'wmgUseWikibaseLexeme' => [
+			'enwiki' => true,
+		],
+
 		'wmgWikibaseAllowLocalShortDesc' => [
 			'default' => false,
 			'enwiki' => true,
