@@ -6200,6 +6200,10 @@ $wgConf->settings = [
 		103 => 'Majadiliano_ya_Wikichanzo',
 	],
 	'tawiki' => [ 100 => 'வலைவாசல்', 101 => 'வலைவாசல்_பேச்சு', ],
+	'testwiki' => [
+		118 => 'Draft', // T198143
+		119 => 'Draft_talk',
+	],
 	'tewiki' => [ 100 => 'వేదిక', 101 => 'వేదిక_చర్చ', ],
 	'tgwiki' => [
 		100 => 'Портал',
@@ -17713,6 +17717,10 @@ $wgConf->settings = [
 'wgPageTriageNoIndexTemplates' => [
 	'default' => [],
 	'enwiki' => [ 'NOINDEX' ]
+],
+'wgPageTriageDraftNamespaceId' => [
+	'default' => false,
+	'testwiki' => 118,
 ],
 
 'wmgEnableInterwiki' => [
