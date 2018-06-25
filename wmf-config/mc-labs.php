@@ -3,7 +3,7 @@
 
 if ( $wmfRealm == 'labs' ) {  # safe guard
 
-$wgMainCacheType = 'mcrouter+nutcracker';
+$wgMainCacheType = 'nutcracker+mcrouter';
 $wgMemCachedPersistent = false;
 // Beta Cluster: Increase timeout to 500ms (in microseconds)
 $wgMemCachedTimeout = 0.5 * 1e6;
@@ -46,11 +46,25 @@ $wgObjectCaches['mcrouter+nutcracker'] = [
 	'reportDupes' => false,
 ];
 
+$wgObjectCaches['nutcracker+mcrouter'] = [
+	'class'       => 'ReplicatedBagOStuff',
+	'readFactory' => [
+		'factory' => [ 'ObjectCache', 'getInstance' ],
+		'args'    => [ 'nutcracker-memcached' ]
+	],
+	'writeFactory' => [
+		'factory' => [ 'ObjectCache', 'getInstance' ],
+		'args'    => [ 'mcrouter+nutcracker' ]
+	],
+	'reportDupes' => false
+];
+
 // Beta Cluster: Make WANObjectCache mcrouter-aware
 $wgMainWANCache = 'wancache-main-mcrouter';
 $wgWANObjectCaches['wancache-main-mcrouter'] = [
-	'class'         => 'WANObjectCache',
-	'cacheId'       => 'mcrouter+nutcracker',
+	'class'   => 'WANObjectCache',
+	'cacheId' => $wgMainCacheType,
+	'channels' => [ 'purge' => 'wancache-main-default-purge' ],
 	// 'mcrouterAware' => true, # wait until *only* mcrouter is used
 ];
 
