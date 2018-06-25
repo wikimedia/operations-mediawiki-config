@@ -7,6 +7,7 @@ import subprocess
 from scap import cli
 from scap import log
 from scap import main
+from scap import ssh
 from scap import utils
 
 # basically everything except extensions, languages, resources and skins
@@ -36,6 +37,14 @@ class Clean(main.AbstractSync):
         if not self.arguments.delete:
             self.arguments.message += ' [keeping static files]'
         self.arguments.force = False
+        self.branch_stage_dir = os.path.join(
+            self.config['stage_dir'],
+            'php-%s' % self.arguments.branch
+        )
+        self.branch_deploy_dir = os.path.join(
+            self.config['deploy_dir'],
+            'php-%s' % self.arguments.branch
+        )
         return super(Clean, self).main(*extra_args)
 
     def _before_cluster_sync(self):
@@ -55,8 +64,7 @@ class Clean(main.AbstractSync):
         (5) Remove some branch files [all if deletion]
         (6) Remove security patches [if deletion]
         """
-        stage_dir = os.path.join(self.config['stage_dir'], 'php-%s' % branch)
-        if not os.path.isdir(stage_dir):
+        if not os.path.isdir(self.branch_stage_dir):
             raise ValueError('No such branch exists, aborting')
 
         with log.Timer('clean-l10nupdate-cache', self.get_stats()):
@@ -67,7 +75,9 @@ class Clean(main.AbstractSync):
 
         with log.Timer('clean-l10nupdate-owned-files', self.get_stats()):
             utils.sudo_check_call(
-                'l10nupdate', 'find %s -user l10nupdate -delete' % stage_dir)
+                'l10nupdate',
+                'find %s -user l10nupdate -delete' % self.branch_stage_dir
+            )
 
         with log.Timer('clean-ExtensionMessages'):
             ext_msg = os.path.join(self.config['stage_dir'], 'wmf-config',
@@ -81,20 +91,50 @@ class Clean(main.AbstractSync):
                              'wmf/%s' % branch]
             with log.Timer('prune-git-branches', self.get_stats()):
                 # Prune all the submodules' remote branches
-                with utils.cd(stage_dir):
+                with utils.cd(self.branch_stage_dir):
                     submodule_cmd = 'git submodule foreach "{} ||:"'.format(
                         ' '.join(git_prune_cmd))
                     subprocess.check_output(submodule_cmd, shell=True)
                     if subprocess.call(git_prune_cmd) != 0:
                         logger.info('Failed to prune core branch')
             with log.Timer('removing-local-copy'):
-                self._maybe_delete(stage_dir)
+                self._maybe_delete(self.branch_stage_dir)
             with log.Timer('cleaning-unused-patches', self.get_stats()):
                 self._maybe_delete(os.path.join('/srv/patches', branch))
         else:
             with log.Timer('cleaning-unused-files', self.get_stats()):
                 for rmdir in DELETABLE_DIRS:
-                    self._maybe_delete(os.path.join(stage_dir, rmdir))
+                    self._maybe_delete(
+                        os.path.join(self.branch_stage_dir, rmdir)
+                    )
+
+    def _after_cluster_sync(self):
+        """
+        Need to remove cache dir manually after sync
+        """
+        branch_cache = os.path.join(self.branch_deploy_dir, 'cache')
+        target_hosts = self._get_target_list()
+        cmd = ['/bin/rm', '-rf', branch_cache]
+        with log.Timer('clean-remote-caches', self.get_stats()):
+            remove_remote_dirs = ssh.Job(
+                target_hosts,
+                user=self.config['ssh_user'],
+                key=self.get_keyholder_key()
+            )
+
+            remove_remote_dirs.command(cmd)
+            remove_remote_dirs.progress(
+                log.reporter(
+                    'clean-remote-caches',
+                    self.config['fancy_progress']
+                )
+            )
+            success, fail = remove_remote_dirs.run()
+            if fail:
+                self.get_logger().warning(
+                    '%d hosts failed to remove cache', fail
+                )
+                self.soft_errors = True
 
     def _maybe_delete(self, path):
         if os.path.exists(path):
