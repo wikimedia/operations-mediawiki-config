@@ -46,6 +46,30 @@
       "revId": "67e23ef3be8a72c9199be0a9abd12f1ab689662d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3f42ec41_78bcb6fa",
+        "filename": "wmf-config/mc-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-06-25T17:13:37Z",
+      "side": 1,
+      "message": "OK. But then I\u0027d suggest we keep it in comment-out fashion, or add the same to prod in its own commit.\n\nAs it stands, I do notice that looking in Setup.php (I\u0027m gonna assume nothing else in wmf-config tries to set these variables), in Setup.php the default also sets \u0027channels\u0027 which this doesn\u0027t do. That\u0027s another slight deviation between beta and prod right now.",
+      "parentUuid": "f1a3cd51_897d81b9",
+      "range": {
+        "startLine": 66,
+        "startChar": 1,
+        "endLine": 66,
+        "endChar": 31
+      },
+      "revId": "67e23ef3be8a72c9199be0a9abd12f1ab689662d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
