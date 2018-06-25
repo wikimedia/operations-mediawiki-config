@@ -259,7 +259,9 @@ function wmfLabsSettings() {
 		'-wgKartographerUsePageLanguage' => [
 			'default' => true,
 		],
-
+		'wgWMECitationUsagePopulationSize' => [
+			'enwiki' => 1  // 100% — T191086
+		],
 		'wgMobileUrlTemplate' => [
 			'default' => '%h0.m.%h1.%h2.%h3.%h4',
 			'wikidatawiki' => 'm.%h0.%h1.%h2.%h3', // T87440
