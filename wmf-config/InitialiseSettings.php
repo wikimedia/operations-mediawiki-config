@@ -19569,7 +19569,7 @@ $wgConf->settings = [
 		'damaging' => [ 'enabled' => true, 'excludeBots' => true ],
 		'goodfaith' => [ 'enabled' => true, 'excludeBots' => true ],
 		'reverted' => [ 'enabled' => false ],
-		'wp10' => [ 'enabled' => true, 'namespaces' => [ 0 ], 'cleanupParent' => true ],
+		'wp10' => [ 'enabled' => true, 'namespaces' => [ 0 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0 ], 'types' => [ 1 ], 'excludeBots' => true ],
 	],
 	'arwiki' => [
@@ -19577,7 +19577,7 @@ $wgConf->settings = [
 		// goodfaith is disabled for arwiki (T192498, T193905)
 		'goodfaith' => [ 'enabled' => false ],
 		'reverted' => [ 'enabled' => false ],
-		'wp10' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanupParent' => true ],
+		'wp10' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
 	],
 ],
