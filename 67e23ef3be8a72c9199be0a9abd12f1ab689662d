@@ -22,6 +22,30 @@
       "revId": "67e23ef3be8a72c9199be0a9abd12f1ab689662d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f1a3cd51_897d81b9",
+        "filename": "wmf-config/mc-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2018-06-25T17:04:17Z",
+      "side": 1,
+      "message": "I\u0027ll need it for mcrouterAware soon, so I\u0027d rather just leave it in for now.",
+      "parentUuid": "b8a45a55_31f25d4c",
+      "range": {
+        "startLine": 66,
+        "startChar": 1,
+        "endLine": 66,
+        "endChar": 31
+      },
+      "revId": "67e23ef3be8a72c9199be0a9abd12f1ab689662d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
