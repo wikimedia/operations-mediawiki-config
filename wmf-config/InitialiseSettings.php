@@ -4339,6 +4339,14 @@ $wgConf->settings = [
 	],
 	'ruwikiquote' => [
 		'ВЦ' => NS_PROJECT,
+		'У' => NS_USER, // T197058
+		'U' => NS_USER, // T197058
+		'ОУ' > NS_USER_TALK, // T197058
+		'UT' => NS_USER_TALK, // T197058
+		'Ш' => NS_TEMPLATE, // T197058
+		'T' => NS_TEMPLATE, // T197058
+		'К' => NS_CATEGORY, // T197058
+		'М' => 828, // T197058
 	],
 	'+ruwiktionary' => [
 		'Appendix' => 100,
