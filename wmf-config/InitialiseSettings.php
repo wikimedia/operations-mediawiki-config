@@ -5185,6 +5185,7 @@ $wgConf->settings = [
 	'dewiki' => [ '', 'autoconfirmed', 'editeditorprotected', 'sysop' ], // T94368
 	'enwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T126607, T57432
 	'enwiktionary' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T148007
+	'enwikivoyage' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T198056
 	'etwiki' => [ '', 'autoconfirmed', 'autopatrol', 'sysop' ], // T153465
 	'fawiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T140839
 	'frwiki' => [ '', 'autoconfirmed', 'editextendedsemiprotected', 'sysop' ], // T131109
@@ -8735,6 +8736,8 @@ $wgConf->settings = [
 	'enwikivoyage' => [
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'patroller' => [ 'patrol' => true, 'rollback' => true ],
+		'templateeditor' => [ 'templateeditor' => true, ], // T198056
+		'sysop' => [ 'templateeditor' => true ],
 	],
 	// T7033
 	'+enwiktionary' => [
@@ -10320,7 +10323,7 @@ $wgConf->settings = [
 		'sysop' => [ 'flood' ],
 	],
 	'+enwikivoyage' => [
-		'sysop' => [ 'autopatrolled' ],
+		'sysop' => [ 'autopatrolled', 'templateeditor' ],
 		'bureaucrat' => [ 'patroller' ],
 	],
 	'+enwikiversity' => [
@@ -11079,7 +11082,7 @@ $wgConf->settings = [
 		'sysop' => [ 'flood' ],
 	],
 	'+enwikivoyage' => [
-		'sysop' => [ 'autopatrolled' ],
+		'sysop' => [ 'autopatrolled', 'templateeditor' ],
 		'bureaucrat' => [ 'sysop', 'patroller' ],
 	],
 	'+enwikiversity' => [
