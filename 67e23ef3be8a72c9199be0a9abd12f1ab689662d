@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b8a45a55_31f25d4c",
+        "filename": "wmf-config/mc-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-06-25T16:52:48Z",
+      "side": 1,
+      "message": "Maybe we should comment out this entire block, assuming it is a no-op currently, and would help us gain confidence that (like in prod) this does indeed happen automatically based on wgMainCacheType.",
+      "range": {
+        "startLine": 66,
+        "startChar": 1,
+        "endLine": 66,
+        "endChar": 31
+      },
+      "revId": "67e23ef3be8a72c9199be0a9abd12f1ab689662d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
