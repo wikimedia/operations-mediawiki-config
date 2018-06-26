@@ -20284,6 +20284,12 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
+// TODO: remove when enabling EventBus on ALL wikis but for jobs only
+'wmgUseEventBus' => [
+	'default' => true,
+	'wikitech' => false,
+],
+
 'wgEnableEventBus' => [
 	'default' => 'TYPE_ALL',
 	'wikitech' => 'TYPE_NONE', // T192361
