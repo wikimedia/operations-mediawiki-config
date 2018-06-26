@@ -16,6 +16,24 @@
       "revId": "022497f5b6478c86189be62ff0cfb57b4ab20a8c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ebb597e6_06f92580",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 18359,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-06-26T20:53:45Z",
+      "side": 1,
+      "message": "Thanks, yeah, will add. Not sure actually why it said ops. It\u0027s old, is all I can think of. (Probably predate it using Kafka).",
+      "parentUuid": "aeafbe04_ee09bcf7",
+      "revId": "022497f5b6478c86189be62ff0cfb57b4ab20a8c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
