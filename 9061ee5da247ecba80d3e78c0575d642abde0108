@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "04e45ed4_f99a0cef",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 19928,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2018-06-26T17:03:08Z",
+      "side": 1,
+      "message": "You can just drop this block entirely, as [ \u0027driver\u0027 \u003d\u003e \u0027RemexHtml\u0027 ] is the MediaWiki default now.",
+      "range": {
+        "startLine": 19926,
+        "startChar": 1,
+        "endLine": 19928,
+        "endChar": 32
+      },
+      "revId": "9061ee5da247ecba80d3e78c0575d642abde0108",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
