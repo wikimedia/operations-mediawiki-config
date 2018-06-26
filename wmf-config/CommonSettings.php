@@ -900,7 +900,7 @@ if ( $wmgUseGadgets ) {
 	$wgGadgetsCacheType = CACHE_ACCEL;
 }
 
-if ( $wmgUseMwEmbedSupport ) {
+if ( $wmgUseMwEmbedSupport && !isset( $wmfIgnoreMwEmbed ) /* T191056, T197918 */ ) {
 	wfLoadExtension( 'MwEmbedSupport' );
 }
 
