@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aeafbe04_ee09bcf7",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 18359,
+      "author": {
+        "id": 5462
+      },
+      "writtenOn": "2018-06-26T20:50:19Z",
+      "side": 1,
+      "message": "probably worth also mentioning Analytics in this comment, since they almost certainly care most of all....",
+      "revId": "022497f5b6478c86189be62ff0cfb57b4ab20a8c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
