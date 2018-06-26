@@ -18354,10 +18354,11 @@ $wgConf->settings = [
 	'wikitech' => false,
 ],
 
+// Careful! The LOWER the value, the MORE requests will be logged.
+// 100 = 1 of every 100 (1%), 1 = 1 of every 1 (100%).
+// This must not be lowered without coordinating with Analytics and SRE.
 'wgNavigationTimingSamplingFactor' => [
-	// Careful! The LOWER the value, the MORE requests will be logged. A
-	// sampling factor of 1 means log every request. This should not be
-	// lowered without careful coordination with ops.
+	// 0.1% of all page loads in Grade A browsers.
 	'default' => 1000,
 ],
 
