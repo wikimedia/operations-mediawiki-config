@@ -116,7 +116,6 @@ $wgLBFactoryConf = [
 	],
 	's2' => [
 		'db1066' => 0,     # A6 2.8TB 160GB # master
-		# 'db1054' => 0,      # A3 2.8TB  96GB, old master # to be decommissioned
 		'db1074' => 300,    # A2 3.6TB 512GB, api # master for sanitarium db1125
 		'db1076' => 500,    # B1 3.6TB 512GB # candidate master
 		'db1090:3312' => 1, # C3 3.6TB 512GB, vslow, dump: s2 and s7
@@ -513,7 +512,6 @@ $wgLBFactoryConf = [
 # it just breaks the site horribly.
 'hostsByName' => [
 	'db1052' => '10.64.16.77', # do not remove or comment out
-	'db1054' => '10.64.0.206', # do not remove or comment out
 	'db1061' => '10.64.32.227', # do not remove or comment out
 	'db1062' => '10.64.48.15', # do not remove or comment out
 	'db1064' => '10.64.48.19', # do not remove or comment out

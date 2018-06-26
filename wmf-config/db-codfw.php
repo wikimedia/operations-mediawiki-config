@@ -495,7 +495,6 @@ $wgLBFactoryConf = [
 # it just breaks the site horribly.
 'hostsByName' => [
 	'db1052' => '10.64.16.77', # do not remove or comment out
-	'db1054' => '10.64.0.206', # do not remove or comment out
 	'db1061' => '10.64.32.227', # do not remove or comment out
 	'db1062' => '10.64.48.15', # do not remove or comment out
 	'db1064' => '10.64.48.19', # do not remove or comment out
