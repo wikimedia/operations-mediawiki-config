@@ -126,13 +126,13 @@ $wgWBRepoSettings['entitySearch']['rescoreFunctionChains'] = [
 		'score_mode' => 'sum',
 		'functions' => [
 			[
-				// Incoming links: k = 50
+				// Incoming links: k = 100, since it is normal to have a bunch of incoming links
 				'type' => 'satu',
 				'weight' => '0.6',
-				'params' => [ 'field' => 'incoming_links', 'missing' => 0, 'a' => 2 , 'k' => 50 ]
+				'params' => [ 'field' => 'incoming_links', 'missing' => 0, 'a' => 1 , 'k' => 100 ]
 			],
 			[
-				// Site links: k = 20
+				// Site links: k = 20, tens of sites is a lot
 				'type' => 'satu',
 				'weight' => '0.4',
 				'params' => [ 'field' => 'sitelink_count', 'missing' => 0, 'a' => 2, 'k' => 20 ]
@@ -142,7 +142,7 @@ $wgWBRepoSettings['entitySearch']['rescoreFunctionChains'] = [
 				'weight' => 0.1,
 				'params' => [
 					// Will be replaced by $wmgWikibaseSearchStatementBoosts
-					'statement_keyword' => '_statementBoost_',
+					'statement_keywords' => '_statementBoost_',
 				]
 			]
 		]
