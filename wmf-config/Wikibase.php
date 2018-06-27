@@ -178,6 +178,15 @@ if ( $wmgUseWikibaseRepo ) {
 	// on either Item or Property pages. T86453
 	$wgCaptchaTriggersOnNamespace[NS_MAIN]['addurl'] = false;
 	$wgCaptchaTriggersOnNamespace[WB_NS_PROPERTY]['addurl'] = false;
+	if ( $wgDBname === 'testwikidatawiki' ) {
+		// These are for testing only, one is Item and one is ExternalId
+		$wgWBRepoSettings['searchIndexProperties'] = [ 'P7', 'P700' ];
+	} else {
+		// Index: instance of, subclass of
+		$wgWBRepoSettings['searchIndexProperties'] = [ 'P31', 'P279' ];
+	}
+	// T163642, T99899
+	$wgWBRepoSettings['searchIndexTypes'] = [ 'string', 'external-id' ];
 
 	$wgWBRepoSettings['dispatchingLockManager'] = $wmgWikibaseDispatchingLockManager;
 	// Cirrus usage for wbsearchentities is on
@@ -185,7 +194,87 @@ if ( $wmgUseWikibaseRepo ) {
 
 	// T178180
 	$wgWBRepoSettings['canonicalUriProperty'] = 'P1921';
-	require_once "{$wmfConfigDir}/WikibaseSearchSettings.php";
+	// T176903, T180169
+	$wgWBRepoSettings['entitySearch']['useStemming'] = [
+		'ar' => [ 'index' => true, 'query' => true ],
+		'bg' => [ 'index' => true, 'query' => true ],
+		'ca' => [ 'index' => true, 'query' => true ],
+		'ckb' => [ 'index' => true, 'query' => true ],
+		'cs' => [ 'index' => true, 'query' => true ],
+		'da' => [ 'index' => true, 'query' => true ],
+		'de' => [ 'index' => true, 'query' => true ],
+		'el' => [ 'index' => true, 'query' => true ],
+		'en' => [ 'index' => true, 'query' => true ],
+		'en-ca' => [ 'index' => true, 'query' => true ],
+		'en-gb' => [ 'index' => true, 'query' => true ],
+		'es' => [ 'index' => true, 'query' => true ],
+		'eu' => [ 'index' => true, 'query' => true ],
+		'fa' => [ 'index' => true, 'query' => true ],
+		'fi' => [ 'index' => true, 'query' => true ],
+		'fr' => [ 'index' => true, 'query' => true ],
+		'ga' => [ 'index' => true, 'query' => true ],
+		'gl' => [ 'index' => true, 'query' => true ],
+		'he' => [ 'index' => true, 'query' => true ],
+		'hi' => [ 'index' => true, 'query' => true ],
+		'hu' => [ 'index' => true, 'query' => true ],
+		'hy' => [ 'index' => true, 'query' => true ],
+		'id' => [ 'index' => true, 'query' => true ],
+		'it' => [ 'index' => true, 'query' => true ],
+		'ja' => [ 'index' => true, 'query' => true ],
+		'ko' => [ 'index' => true, 'query' => true ],
+		'lt' => [ 'index' => true, 'query' => true ],
+		'lv' => [ 'index' => true, 'query' => true ],
+		'nb' => [ 'index' => true, 'query' => true ],
+		'nl' => [ 'index' => true, 'query' => true ],
+		'nn' => [ 'index' => true, 'query' => true ],
+		'pl' => [ 'index' => true, 'query' => true ],
+		'pt' => [ 'index' => true, 'query' => true ],
+		'pt-br' => [ 'index' => true, 'query' => true ],
+		'ro' => [ 'index' => true, 'query' => true ],
+		'ru' => [ 'index' => true, 'query' => true ],
+		'simple' => [ 'index' => true, 'query' => true ],
+		'sv' => [ 'index' => true, 'query' => true ],
+		'th' => [ 'index' => true, 'query' => true ],
+		'tr' => [ 'index' => true, 'query' => true ],
+		'uk' => [ 'index' => true, 'query' => true ],
+		'zh' => [ 'index' => true, 'query' => true ],
+	];
+
+	if ( is_array( $wgCirrusSearchSimilarityProfiles ) ) {
+		// TODO: have proper profile management in cirrus
+		$wgCirrusSearchSimilarityProfiles['wikibase_similarity'] = [
+			'similarity' => [
+				'default' => [
+					'type' => 'BM25',
+				],
+				'descriptions' => [
+					'type' => 'BM25',
+				],
+				// This is a bit verbose to redefine always the same settings
+				// but the advantage is that you can re-tune and specialize
+				// these on an existing index (requires closing the index).
+				// "labels" here means the label + aliases
+				'labels' => [
+					'type' => 'BM25',
+					'k1' => 1.2,
+					'b' => 0.3,
+				],
+				// We consider all as being very similar to an array field
+				// as it is a simple concatenation of all the item data
+				'all' => [
+					'type' => 'BM25',
+					'k1' => 1.2,
+					'b' => 0.3,
+				]
+			],
+			'fields' => [
+				'__default__' => 'default',
+				'labels' => 'labels',
+				'descriptions' => 'descriptions',
+				'all' => 'all',
+			]
+		];
+	}
 }
 
 if ( $wmgUseWikibaseClient ) {
