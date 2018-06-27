@@ -13898,6 +13898,7 @@ $wgConf->settings = [
 	'eowiki' => true,
 	'eswiki' => true,
 	'eswiktionary' => true, // T97135
+	'eswikiversity' => true, // T198335
 	'euwiki' => true, // T166553
 	'fawiki' => true,
 	'frwiki' => true, // T95604
