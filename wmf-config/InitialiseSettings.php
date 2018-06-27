@@ -15906,6 +15906,12 @@ $wgConf->settings = [
 	'labtestwiki' => '/srv/math-images',
 ],
 
+'wgMathEnableWikibaseDataType' => [
+	// T173949
+	'default' => false,
+	'wikidata' => true,
+],
+
 'wmgMinervaNeue' => [
 	'default' => true,
 ],
