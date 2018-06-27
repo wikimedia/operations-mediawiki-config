@@ -10016,6 +10016,12 @@ $wgConf->settings = [
 		'flood' => [ 'bot' => true ],
 		'massmessage-sender' => [ 'massmessage' => true ], // T130814
 		'filemover' => [ 'movefile' => true ], // T195247
+		'eventparticipant' => [
+			'autoconfirmed' => true, // T198167
+			'upload' => true, // T198167
+			'reupload' => true, // T198167
+			'skipcaptcha' => true, // T198167
+		],
 	],
 
 	'zh_classicalwiki' => [
@@ -10850,8 +10856,9 @@ $wgConf->settings = [
 		'sysop' => true,
 	],
 	'+zhwiki' => [
+		'accountcreator' => [ 'eventparticipant' ], // T198167
 		'bureaucrat' => [ 'flood' ],
-		'sysop' => [ 'patroller', 'rollbacker', 'autoreviewer', 'confirmed', 'massmessage-sender', 'filemover' ], // T130814 and T195247
+		'sysop' => [ 'patroller', 'rollbacker', 'autoreviewer', 'confirmed', 'massmessage-sender', 'filemover', 'eventparticipant' ], // T130814, T195247 and T198167
 	],
 	'+zhwikibooks' => [
 		'sysop' => [ 'flood' ], // T185182
@@ -11645,8 +11652,9 @@ $wgConf->settings = [
 		'sysop' => true,
 	],
 	'+zhwiki' => [
+		'accountcreator' => [ 'eventparticipant' ], // T198167
 		'bureaucrat' => [ 'flood' ],
-		'sysop' => [ 'patroller', 'rollbacker', 'autoreviewer', 'confirmed', 'flood', 'massmessage-sender', 'filemover' ], // T130814 and T195247
+		'sysop' => [ 'patroller', 'rollbacker', 'autoreviewer', 'confirmed', 'flood', 'massmessage-sender', 'filemover', 'eventparticipant' ], // T130814, T195247 and T198167
 	],
 	'+zhwikibooks' => [
 		'sysop' => [ 'flood' ], // T185182
