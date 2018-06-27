@@ -142,7 +142,7 @@ $wgWBRepoSettings['entitySearch']['rescoreFunctionChains'] = [
 				'weight' => 0.1,
 				'params' => [
 					// Will be replaced by $wmgWikibaseSearchStatementBoosts
-					'statement_keyword' => '_statementBoost_',
+					'statement_keywords' => '_statementBoost_',
 				]
 			]
 		]
