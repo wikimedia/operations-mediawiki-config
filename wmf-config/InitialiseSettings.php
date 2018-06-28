@@ -460,9 +460,9 @@ $wgConf->settings = [
 	'rowikivoyage' => 'Europe/Bucharest',
 	'ruwikivoyage' => 'Europe/Moscow', // T43992
 	'ruewiki' => 'Europe/Berlin',
-	'sawikiquote' => 'Asia/Kolkata',
 	'sahwikiquote' => 'Asia/Yakutsk',
 	'sahwikisource' => 'Asia/Yakutsk',
+	'sawikiquote' => 'Asia/Kolkata',
 	'scwiki' => 'Europe/Berlin',
 	'scnwiki' => 'Europe/Berlin',
 	'sewikimedia' => 'Europe/Berlin',
@@ -746,6 +746,7 @@ $wgConf->settings = [
 	'ruwiki' => '/static/images/project-logos/ruwiki.png',
 	'ruewiki' => '/static/images/project-logos/ruewiki.png',
 	'sahwiki' => '/static/images/project-logos/sahwiki.png',
+	'satwiki' => '/static/images/project-logos/satwiki.png',
 	'sawiki' => '/static/images/project-logos/sawiki.png',  // T50397
 	'scwiki' => '/static/images/project-logos/scwiki.png',
 	'scnwiki' => '/static/images/project-logos/scnwiki.png',  // T42285
@@ -1470,6 +1471,7 @@ $wgConf->settings = [
 	'ruewiki' => [ '1.5x' => '/static/images/project-logos/ruewiki-1.5x.png', '2x' => '/static/images/project-logos/ruewiki-2x.png' ], // T150618
 	'ruwiki' => [ '1.5x' => '/static/images/project-logos/ruwiki-1.5x.png', '2x' => '/static/images/project-logos/ruwiki-2x.png' ],
 	'sahwiki' => [ '1.5x' => '/static/images/project-logos/sahwiki-1.5x.png', '2x' => '/static/images/project-logos/sahwiki-2x.png' ], // T150618
+	'satwiki' => [ '1.5x' => '/static/images/project-logos/satwiki-1.5x.png', '2x' => '/static/images/project-logos/satwiki-2x.png' ],
 	'sawiki' => [ '1.5x' => '/static/images/project-logos/sawiki-1.5x.png', '2x' => '/static/images/project-logos/sawiki-2x.png' ], // T150618
 	'scnwiki' => [ '1.5x' => '/static/images/project-logos/scnwiki-1.5x.png', '2x' => '/static/images/project-logos/scnwiki-2x.png' ], // T150618
 	'scowiki' => [ '1.5x' => '/static/images/project-logos/scowiki-1.5x.png', '2x' => '/static/images/project-logos/scowiki-2x.png' ], // T150618
