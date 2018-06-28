@@ -730,6 +730,11 @@ function wmfLabsSettings() {
 			'default' => MIGRATION_WRITE_BOTH,
 		],
 
+		'wgMultiContentRevisionSchemaMigrationStage' => [
+			'default' => MIGRATION_OLD,
+			'commonswiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+		],
+
 		'wmgUseJADE' => [
 			'default' => true,
 		],
