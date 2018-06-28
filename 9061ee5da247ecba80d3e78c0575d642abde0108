@@ -22,6 +22,30 @@
       "revId": "9061ee5da247ecba80d3e78c0575d642abde0108",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a9c478a3_f8b9f48b",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 19928,
+      "author": {
+        "id": 664
+      },
+      "writtenOn": "2018-06-28T19:57:07Z",
+      "side": 1,
+      "message": "We can get rid of the \u0027wgUseTidy\u0027 block above this as well, since $wgTidyConfig \u003d \u003cnon-null\u003e overrides this. (And I\u0027d like to deprecate and remove $wgUseTidy; see I2e7d990da1da378eb6e828d4b3c0f5a41791dd92 )\n\nNote that we turned tidy on for collabwiki in 4c44c28a31, for donatewiki in d91b651242, and for foundationwiki in b5006093aa, so the $wgUseTidy block is entirely dead code other than setting default \u003d\u003e true (which is needed as long as there are cases where $wgTidyConfig is set to null).",
+      "parentUuid": "04e45ed4_f99a0cef",
+      "range": {
+        "startLine": 19926,
+        "startChar": 1,
+        "endLine": 19928,
+        "endChar": 32
+      },
+      "revId": "9061ee5da247ecba80d3e78c0575d642abde0108",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
