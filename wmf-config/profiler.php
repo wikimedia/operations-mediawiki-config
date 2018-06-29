@@ -31,6 +31,8 @@
  * to support HHVM, but also seems to work fine on PHP5 and PHP7.
  */
 
+global $wmgProfiler;
+
 $wmgProfiler = [];
 
 /**
