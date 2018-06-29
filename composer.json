@@ -9,7 +9,6 @@
 		"jakub-onderka/php-parallel-lint": "0.9.2",
 		"mediawiki/mediawiki-codesniffer": "18.0.0",
 		"phpunit/phpunit": "4.8.36 || ^6.5",
-		"phpunit/phpunit": "4.8.36",
 		"mediawiki/minus-x": "0.3.1"
 	},
 	"scripts": {
