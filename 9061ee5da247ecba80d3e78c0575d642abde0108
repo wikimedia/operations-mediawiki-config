@@ -70,6 +70,30 @@
       "revId": "9061ee5da247ecba80d3e78c0575d642abde0108",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "80288cda_903238fe",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 19928,
+      "author": {
+        "id": 257
+      },
+      "writtenOn": "2018-06-30T08:30:11Z",
+      "side": 1,
+      "message": "That said, since Remex is basically HTML5 (with some minor tidy compatibility changes), any fixes Remex would do would be the same things browsers would have done anyway, so, I think it is okay having Remex enabled everywhere on our wikis. Okay, so, I\u0027ll get rid of both these blocks then.",
+      "parentUuid": "9d0fa0db_bf34c237",
+      "range": {
+        "startLine": 19926,
+        "startChar": 1,
+        "endLine": 19928,
+        "endChar": 32
+      },
+      "revId": "9061ee5da247ecba80d3e78c0575d642abde0108",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
