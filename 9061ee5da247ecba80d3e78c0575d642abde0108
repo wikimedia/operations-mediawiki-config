@@ -46,6 +46,30 @@
       "revId": "9061ee5da247ecba80d3e78c0575d642abde0108",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9d0fa0db_bf34c237",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 19928,
+      "author": {
+        "id": 257
+      },
+      "writtenOn": "2018-06-30T08:12:36Z",
+      "side": 1,
+      "message": "That is interesting ... that Remex has been enabled on those wikis that shouldn\u0027t have had it enabled. Does anyone on collabwiki, donatewiki, foundationwiki care about this at all?",
+      "parentUuid": "a9c478a3_f8b9f48b",
+      "range": {
+        "startLine": 19926,
+        "startChar": 1,
+        "endLine": 19928,
+        "endChar": 32
+      },
+      "revId": "9061ee5da247ecba80d3e78c0575d642abde0108",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
