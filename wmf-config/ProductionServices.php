@@ -93,31 +93,3 @@ $wmfAllServices['codfw']['redis_lock'] = [
 	'rdb2' => '10.192.0.84',
 	'rdb3' => '10.192.0.85',
 ];
-
-### Jobqueue redis
-// Note: for each host:port combination, the local fallback slave is
-// the next server, so rdb1001:6379 => rdb1002:6379 and so on.
-// Note: on server failure, partition masters should be switched to the slave
-// Note: MediaWiki will fail-over to other shards when one is down. On master
-// failure, it is best to either do nothing or just disable the whole shard
-// until the master is fixed or full fail-over is done. Proper fail over
-// requires changing the slave to stop slaving the old master before updating
-// the MediaWiki config to direct traffic there.
-// Do NOT remove entries from here if they are still present in 'partitionsBySection'
-// in wmf-config/jobqueue.php
-$wmfAllServices['eqiad']['jobqueue_redis'] = [
-	'rdb4-6379' => 'rdb1005.eqiad.wmnet:6379',
-	'rdb4-6380' => 'rdb1005.eqiad.wmnet:6380',
-	'rdb4-6381' => 'rdb1005.eqiad.wmnet:6381',
-];
-$wmfAllServices['codfw']['jobqueue_redis'] = [
-	'rdb4-6379' => 'rdb2005.codfw.wmnet:6379',
-	'rdb4-6380' => 'rdb2005.codfw.wmnet:6380',
-	'rdb4-6381' => 'rdb2005.codfw.wmnet:6381',
-];
-$wmfAllServices['eqiad']['jobqueue_aggregator'] = [
-	'rdb1005.eqiad.wmnet:6378', // preferred, no fallback anymore
-];
-$wmfAllServices['codfw']['jobqueue_aggregator'] = [
-	'rdb2005.codfw.wmnet:6378', // preferred
-];
