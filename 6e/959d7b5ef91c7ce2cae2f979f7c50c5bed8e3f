@@ -1,0 +1,10 @@
+Verified+2: jenkins-bot
+Code-Review+2: Hashar <hashar@free.fr>
+Code-Review+1: MarcoAurelio <maurelio@tools.wmflabs.org>
+Code-Review+1: EddieGP <wikimedia.org@eddie-sh.de>
+Code-Review+1: Dvorapa <dvorapa@seznam.cz>
+Submitted-by: jenkins-bot
+Submitted-at: Mon, 02 Jul 2018 13:54:59 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/441422
+Project: operations/mediawiki-config
+Branch: refs/heads/master
