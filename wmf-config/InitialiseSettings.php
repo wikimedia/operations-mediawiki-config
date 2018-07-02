@@ -20717,6 +20717,13 @@ $wgConf->settings = [
 	'default' => MIGRATION_WRITE_BOTH,
 ],
 
+'wgChangeTagsSchemaMigrationStage' => [
+	'default' => MIGRATION_OLD,
+	'fawikisource' => MIGRATION_WRITE_BOTH,
+	'wikivoyage' => MIGRATION_WRITE_BOTH,
+	'wikibooks' => MIGRATION_WRITE_BOTH,
+],
+
 'wmgUseReadingLists' => [
 	'default' => true,
 	'private' => false,
