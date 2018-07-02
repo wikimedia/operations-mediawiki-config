@@ -20745,6 +20745,11 @@ $wgConf->settings = [
 	'default' => MIGRATION_WRITE_BOTH,
 ],
 
+'wgChangeTagsSchemaMigrationStage' => [
+	'default' => MIGRATION_OLD,
+	'frwiki' => MIGRATION_WRITE_BOTH,
+],
+
 'wmgUseReadingLists' => [
 	'default' => true,
 	'private' => false,
