@@ -20200,10 +20200,6 @@ $wgConf->settings = [
 	'default'  => true,
 ],
 
-'wmgUseClusterFileBackend' => [
-	'default'  => true,
-],
-
 'wmgUseClusterJobqueue' => [
 	'default'  => true,
 	'wikitech' => false,
