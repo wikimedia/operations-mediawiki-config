@@ -19628,8 +19628,8 @@ $wgConf->settings = [
 		'damaging' => [ 'enabled' => true, 'excludeBots' => true ],
 		'goodfaith' => [ 'enabled' => true, 'excludeBots' => true ],
 		'reverted' => [ 'enabled' => false ],
-		'wp10' => [ 'enabled' => true, 'namespaces' => [ 0 ], 'cleanParent' => true ],
-		'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0 ], 'types' => [ 1 ], 'excludeBots' => true ],
+		'wp10' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'cleanParent' => true ],
+		'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true ],
 	],
 	'arwiki' => [
 		'damaging' => [ 'enabled' => true ],
