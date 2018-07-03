@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "36830eba_846927c3",
+        "filename": "dblists/closed.dblist",
+        "patchSetId": 2
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-07-03T10:14:57Z",
+      "side": 1,
+      "message": "Sorted.",
+      "range": {
+        "startLine": 96,
+        "startChar": 0,
+        "endLine": 96,
+        "endChar": 11
+      },
+      "revId": "829157d035fe05a833c78b493aa784f35a930b4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
