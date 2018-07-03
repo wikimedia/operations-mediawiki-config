@@ -254,6 +254,7 @@ $wgMemCachedServers = [];
 
 require "$wmfConfigDir/logging.php";
 require "$wmfConfigDir/redis.php";
+require "$wmfConfigDir/filebackend.php";
 
 if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) && preg_match( '/\breadonly\b/i', $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
 	$wgReadOnly = 'X-Wikimedia-Debug';
@@ -1152,9 +1153,6 @@ $wgPasswordSender = 'wiki@wikimedia.org';
 
 # e-mailing password based on e-mail address (T36386)
 $wgPasswordResetRoutes['email'] = true;
-
-# Cluster-dependent files for file backend
-require "{$wmfConfigDir}/filebackend.php";
 
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgUseInstantCommons = true;
