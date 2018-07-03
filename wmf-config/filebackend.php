@@ -3,8 +3,6 @@
 
 # This file hold the configuration for the file backends.
 #
-# NOTE: Included based on wmgUseClusterFileBackend (all wikis, except wikitech)
-#
 # Load tree:
 #  |-- wmf-config/CommonSettings.php
 #      |
