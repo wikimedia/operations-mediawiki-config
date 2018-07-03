@@ -1213,11 +1213,6 @@ if ( in_array( $wgDBname, [ 'testwiki', 'test2wiki', 'mediawikiwiki', 'commonswi
 
 $wgInvalidateCacheOnLocalSettingsChange = false;
 
-// General Cache Epoch
-$wgCacheEpoch = '20130601000000';
-
-$wgThumbnailEpoch = '20130601000000';
-
 $wgEnableUserEmail = true;
 $wgNoFollowLinks = true; // In case the MediaWiki default changed, T44594
 
