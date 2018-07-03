@@ -157,12 +157,6 @@ if ( $wmgUseWikibaseRepo ) {
 		];
 	}
 
-	// T112606
-	$wgRightsPage = 'Wikidata:Copyright';
-	$wgRightsText = 'All structured data from the main and property namespace is available under ' .
-		'the Creative Commons CC0 License; text in the other namespaces is available under ' .
-		'the Creative Commons Attribution-ShareAlike License; additional terms may apply.';
-
 	// T189776, T189777
 	$wgWBRepoSettings['useTermsTableSearchFields'] = false;
 }
