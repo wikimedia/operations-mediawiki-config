@@ -20205,17 +20205,6 @@ $wgConf->settings = [
 ],
 ### End (roughly) of general extensions ########################
 
-'wgUseTidy' => [
-	'default' => true,
-	'foundationwiki' => false,
-	'collabwiki' => false,
-	'donatewiki' => false,
-],
-
-'wgTidyConfig' => [
-	'default' => [ 'driver' => 'RemexHtml' ],
-],
-
 // Cache ResourceLoader modules in localStorage
 'wgResourceLoaderStorageEnabled' => [
 	'default' => true,
