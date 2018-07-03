@@ -248,6 +248,7 @@ $wgMemCachedServers = [];
 
 require "$wmfConfigDir/logging.php";
 require "$wmfConfigDir/redis.php";
+require "$wmfConfigDir/filebackend.php";
 
 # Override certain settings in command-line mode
 # This must be after InitialiseSettings.php is processed (T197475)
@@ -1156,9 +1157,6 @@ $wgPasswordSender = 'wiki@wikimedia.org';
 
 # e-mailing password based on e-mail address (T36386)
 $wgPasswordResetRoutes['email'] = true;
-
-# Cluster-dependent files for file backend
-require "{$wmfConfigDir}/filebackend.php";
 
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgUseInstantCommons = true;
