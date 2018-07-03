@@ -20153,6 +20153,13 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
+'wgRightsPage' => [
+	// Default: Use wgRightsUrl
+	'default' => null,
+	// Wikidata footer, T112606
+	'wikidata' => 'Wikidata:Copyright',
+],
+
 'wgRightsUrl' => [
 	'default' => '//creativecommons.org/licenses/by-sa/3.0/',
 	'huwikinews' => '//creativecommons.org/licenses/by/3.0/',
@@ -20162,6 +20169,10 @@ $wgConf->settings = [
 	'default' => 'Creative Commons Attribution-Share Alike 3.0',
 	'huwikinews' => 'Creative Commons Attribution 3.0',
 	'wikinews' => 'Creative Commons Attribution 2.5',
+	// Wikidata footer, T112606
+	'wikidata' => 'All structured data from the main and property namespace is available under ' .
+		'the Creative Commons CC0 License; text in the other namespaces is available under ' .
+		'the Creative Commons Attribution-ShareAlike License; additional terms may apply.',
 ],
 'wgRightsIcon' => [
 	'default' => '//creativecommons.org/images/public/somerights20.png',
