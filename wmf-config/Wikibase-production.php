@@ -162,7 +162,6 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgRightsText = 'All structured data from the main and property namespace is available under ' .
 		'the Creative Commons CC0 License; text in the other namespaces is available under ' .
 		'the Creative Commons Attribution-ShareAlike License; additional terms may apply.';
-	$wgRightsUrl = 'creativecommons.org/licenses/by-sa/3.0';
 
 	// T189776, T189777
 	$wgWBRepoSettings['useTermsTableSearchFields'] = false;
