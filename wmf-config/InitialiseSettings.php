@@ -15751,6 +15751,16 @@ $wgConf->settings = [
 	'default' => CACHE_ACCEL,
 ],
 
+// General cache epochs
+'wgCacheEpoch' => [
+	'default' => '20130601000000',
+	'wikidatawiki' => '20170724130500',
+	'testwikidatawiki' => '20170724130500',
+],
+'wgThumbnailEpoch' => [
+	'default' => '20130601000000',
+],
+
 'wmgPFEnableStringFunctions' => [
 	'default' => false,
 	'donatewiki' => true,
