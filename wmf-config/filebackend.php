@@ -3,12 +3,19 @@
 
 # This file hold the configuration for the file backends.
 #
-# NOTE: Included based on wmgUseClusterFileBackend (all wikis, except wikitech)
+# Effective load order:
+# - multiversion
+# - mediawiki/DefaultSettings.php
+# - wmf-config/ProductionServices.php (or LabsServices.php)
+# - wmf-config/InitialiseSettings.php
+# - wmf-config/logging.php
+# - wmf-config/redis.php
+# - wmf-config/filebackend.php [THIS FILE]
 #
 # Load tree:
 #  |-- wmf-config/CommonSettings.php
 #      |
-#      `-- wmf-config/filebackend.php
+#      `-- wmf-config/filebackend.php [THIS FILE]
 #
 
 global $wmfSwiftConfig;

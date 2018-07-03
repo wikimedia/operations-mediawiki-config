@@ -1157,12 +1157,8 @@ $wgPasswordSender = 'wiki@wikimedia.org';
 # e-mailing password based on e-mail address (T36386)
 $wgPasswordResetRoutes['email'] = true;
 
-if ( $wmgUseClusterFileBackend ) {
-	# Cluster-dependent files for file backend
-	require "{$wmfConfigDir}/filebackend.php";
-} else {
-	$wgUseInstantCommons = true;
-}
+# Cluster-dependent files for file backend
+require "{$wmfConfigDir}/filebackend.php";
 
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgUseInstantCommons = true;
