@@ -14,26 +14,13 @@
 # Effective load order:
 # - multiversion
 # - mediawiki/DefaultSettings.php
+# - wmf-config/*Services.php
 # - wmf-config/InitialiseSettings.php
 # - wmf-config/InitialiseSettings-labs.php [THIS FILE]
 # - wmf-config/CommonSettings.php
 # - wmf-config/CommonSettings-labs.php
 #
-# Load tree:
-# - multiversion
-# - mediawiki/index.php
-# - mediawiki/WebStart.php
-# - mediawiki/Setup.php
-# - mediawiki/DefaultSettings.php
-# - mediawiki/LocalSettings.php
-#   `-- wmf-config/CommonSettings.php
-#       |
-#       |-- wmf-config/InitialiseSettings.php
-#       |   `-- wmf-config/InitialiseSettings-labs.php [THIS FILE]
-#       |
-#       |-- (main stuff in CommonSettings.php)
-#       |
-#       `-- wmf-config/CommonSettings-labs.php
+# Included from: wmf-config/InitialiseSettings.php.
 #
 
 /**

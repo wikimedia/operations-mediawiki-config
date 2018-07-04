@@ -9,26 +9,13 @@
 # Effective load order:
 # - multiversion
 # - mediawiki/DefaultSettings.php
+# - wmf-config/*Services.php
 # - wmf-config/InitialiseSettings.php
 # - wmf-config/InitialiseSettings-labs.php
 # - wmf-config/CommonSettings.php
 # - wmf-config/CommonSettings-labs.php [THIS FILE]
 #
-# Load tree:
-# - multiversion
-# - mediawiki/index.php
-# - mediawiki/WebStart.php
-# - mediawiki/Setup.php
-# - mediawiki/DefaultSettings.php
-# - mediawiki/LocalSettings.php
-#   `-- wmf-config/CommonSettings.php
-#       |
-#       |-- wmf-config/InitialiseSettings.php
-#       |   `-- wmf-config/InitialiseSettings-labs.php
-#       |
-#       |-- (main stuff in CommonSettings.php)
-#       |
-#       `-- wmf-config/CommonSettings-labs.php [THIS FILE]
+# Included from: wmf-config/CommonSettings.php.
 #
 
 if ( $wmfRealm == 'labs' ) { # safe guard
