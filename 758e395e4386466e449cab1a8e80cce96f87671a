@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ba83ae0_8b26d7f4",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 15757,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-07-04T09:34:52Z",
+      "side": 1,
+      "message": "It might be better to explicitly set this to wikidatawiki and testwikidatawiki.\nOtherwise I can see us accidently bumping the cacheepoch for commonswiki when commons becomes a wikidata repo.\nNot that that would matter too much as the date is still from 2017...",
+      "range": {
+        "startLine": 15757,
+        "startChar": 2,
+        "endLine": 15757,
+        "endChar": 10
+      },
+      "revId": "758e395e4386466e449cab1a8e80cce96f87671a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
