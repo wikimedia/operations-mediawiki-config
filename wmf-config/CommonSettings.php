@@ -113,7 +113,7 @@ $wmfConfigDir = "$IP/../wmf-config";
 # TODO: only include if in production, set up beta separately
 switch ( $wmfRealm ) {
 case 'labs':
-	require "$wmfConfigDir/LabsServices.php";
+	$wmfAllServices = require "$wmfConfigDir/LabsServices.php";
 	break;
 case 'production':
 default:
