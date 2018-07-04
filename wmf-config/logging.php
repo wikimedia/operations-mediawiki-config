@@ -1,28 +1,55 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-/**
- * Shared logging configuration
- *
- * Uses globals set by InitializeSettings:
- * - $wgDebugLogFile : udp2log destination for 'wgDebugLogFile' handler
- * - $wmgDefaultMonologHandler : default handler for log channels not
- *   explicitly configured in $wmgMonologChannels
- * - $wmgLogstashServers : Logstash syslog servers
- * - $wmgKafkaServers : Kafka logging servers
- * - $wmgMonologAvroSchemas: Map from monolog channel name to json
- *   string containing avro schema
- * - $wmgMonologChannels : per-channel logging config
- *   - channel => false  == ignore all log events on this channel
- *   - channel => level  == record all events of this level or higher to udp2log and logstash
- *   - channel => [ 'udp2log'=>level, 'logstash'=>level, 'kafka'=>level, 'sample'=>rate ]
- *   Defaults: [ 'udp2log'=>'debug', 'logstash'=>'info', 'kafka'=>false, 'sample'=>false ]
- *   Valid levels: 'debug', 'info', 'warning', 'error', false
- *   Note: sampled logs will not be sent to Logstash
- *   Note: Udp2log events are sent to udp://{$wmfUdp2logDest}/{$channel}
- * - $wmfUdp2logDest : udp2log host:port
- * - $wmgLogAuthmanagerMetrics : Controls additional authmanager logging
- */
+# logging.php holds the shared logging configuration.
+#
+# This for PRODUCTION.
+#
+# Effective load order:
+# - multiversion
+# - mediawiki/DefaultSettings.php
+# - wmf-config/*Services.php
+# - wmf-config/etcd.php
+# - wmf-config/InitialiseSettings.php
+# - wmf-config/logging.php [THIS FILE]
+#
+# Included from: wmf-config/CommonSettings.php.
+#
+
+#
+# The following globals from InitialiseSettings are used:
+#
+# - $wgDebugLogFile: udp2log destination for 'wgDebugLogFile' handler.
+# - $wmgDefaultMonologHandler: default handler for log channels not
+#   explicitly configured in $wmgMonologChannels.
+# - $wmgLogstashServers: Logstash syslog servers.
+# - $wmgKafkaServers: Kafka logging servers.
+# - $wmgMonologAvroSchemas: Map from monolog channel name to json
+#   string containing avro schema.
+# - $wmgMonologChannels: per-channel logging config
+#   - `channel => false`: ignore all log events on this channel.
+#   - `channel => level`: record all events of this level or higher to udp2log and logstash.
+#   - `channel => [ 'udp2log'=>level, 'logstash'=>level, 'kafka'=>level, 'sample'=>rate ]`
+#
+#   Default for all channels not otherwise specified:
+#   ```
+#   [
+#       'udp2log' = >'debug',
+#       'logstash' = >'info',
+#       'kafka' => false,
+#       'sample' => false,
+#   ]
+#   ```
+#
+#   Valid levels: 'debug', 'info', 'warning', 'error', false.
+#
+#   Note: Sampled logs will not be sent to Logstash!
+#
+#   Note: Udp2log events are sent to udp://{$wmfUdp2logDest}/{$channel}.
+#
+# - $wmfUdp2logDest: udp2log host and port.
+# - $wmgLogAuthmanagerMetrics: Controls additional authmanager logging.
+#
 
 use MediaWiki\Logger\LoggerFactory;
 

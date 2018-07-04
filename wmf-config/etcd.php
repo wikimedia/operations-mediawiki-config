@@ -1,10 +1,24 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
+
+# etcd.php provides wmfEtcdConfig() which will set certain MediaWiki
+# configuration variables based on values from Etcd.
 #
-# Included very early by CommonSettings.php
-# Only two sets of globals available here:
+# This for PRODUCTION.
+#
+# This is loaded very early. Only two sets of globals may be
+# used here:
 # - $wmfRealm, $wmfDatacenter (from multiversion/MWRealm)
 # - $wmfLocalServices (from wmf-config/*Services.php)
+#
+# Effective load order:
+# - multiversion
+# - mediawiki/DefaultSettings.php
+# - wmf-config/*Services.php
+# - wmf-config/etcd.php [THIS FILE]
+#
+# Included from: wmf-config/CommonSettings.php.
+#
 
 function wmfSetupEtcd() {
 	global $wmfLocalServices, $wmfEtcdLastModifiedIndex;

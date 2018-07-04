@@ -13,18 +13,26 @@
 # - wmf-config/InitialiseSettings.php
 # - wmf-config/CommonSettings.php [THIS FILE]
 #
-# Load tree:
+# Full load tree:
 # - multiversion
-# - mediawiki/index.php
+# - mediawiki/index.php (or other entry point)
 # - mediawiki/WebStart.php
 # - mediawiki/Setup.php
 # - mediawiki/DefaultSettings.php
 # - mediawiki/LocalSettings.php
-#   `-- wmf-config/CommonSettings.php
-#       |
+#   `-- wmf-config/CommonSettings.php [THIS FILE]
+#       |-- wmf-config/*Services.php
+#       |-- wmf-config/etcd.php
+#       |-- wmf-config/wgConf.php
 #       |-- wmf-config/InitialiseSettings.php
+#       |-- private/PrivateSettings.php
+#       |-- wmf-config/logging.php
+#       |-- wmf-config/redis.php
+#       |-- wmf-config/filebackend.php
+#       |-- wmf-config/db-*.php
+#       |-- wmf-config/mc.php
 #       |
-#       `-- (main stuff in CommonSettings.php) [THIS FILE]
+#       `-- (main stuff in CommonSettings.php)
 #
 
 use MediaWiki\Logger\LoggerFactory;

@@ -1,21 +1,23 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-# This file hold the configuration for the file backends.
+# filebackend.php holds the configuration for MediaWiki file backends and file repos.
+# See also <https://www.mediawiki.org/wiki/Manual:$wgFileBackends> and
+# <https://www.mediawiki.org/wiki/Manual:$wgForeignFileRepos>.
+#
+# This for PRODUCTION.
 #
 # Effective load order:
 # - multiversion
 # - mediawiki/DefaultSettings.php
-# - wmf-config/ProductionServices.php (or LabsServices.php)
+# - wmf-config/*Services.php
+# - wmf-config/etcd.php
 # - wmf-config/InitialiseSettings.php
 # - wmf-config/logging.php
 # - wmf-config/redis.php
 # - wmf-config/filebackend.php [THIS FILE]
 #
-# Load tree:
-#  |-- wmf-config/CommonSettings.php
-#      |
-#      `-- wmf-config/filebackend.php [THIS FILE]
+# Included from: wmf-config/CommonSettings.php.
 #
 
 global $wmfSwiftConfig;
