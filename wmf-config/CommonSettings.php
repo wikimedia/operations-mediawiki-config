@@ -117,7 +117,7 @@ case 'labs':
 	break;
 case 'production':
 default:
-	require "$wmfConfigDir/ProductionServices.php";
+	$wmfAllServices = require "$wmfConfigDir/ProductionServices.php";
 }
 
 # Shorthand when we have no master-slave situation to keep into account
