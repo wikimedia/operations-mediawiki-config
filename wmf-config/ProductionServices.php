@@ -1,13 +1,13 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-# ######################################################################
-# ProductionServices.php should include all the service hostnames/ips
-# for any service used in production, divided by datacenter.
+# ProductionServices.php statically defines all service hostnames/ips
+# for any service used by MediaWiki, divided by datacenter.
 #
-# It is included by CommonSettings.php
+# This for PRODUCTION.
 #
-# ######################################################################
+# Included from: wmf-config/CommonSettings.php.
+#
 
 $wmfAllServices = [];
 
