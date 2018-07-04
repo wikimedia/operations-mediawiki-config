@@ -15753,12 +15753,12 @@ $wgConf->settings = [
 
 // General cache epochs
 'wgCacheEpoch' => [
-	'default' => '20130601000000',
+	'default' => '20160101000000',
 	'wikidatawiki' => '20170724130500',
 	'testwikidatawiki' => '20170724130500',
 ],
 'wgThumbnailEpoch' => [
-	'default' => '20130601000000',
+	'default' => '20160101000000',
 ],
 
 'wmgPFEnableStringFunctions' => [
