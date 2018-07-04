@@ -42,7 +42,7 @@ $wmgProfiler = [];
  * - Enable request profiling.
  * - One-off profile to stdout (via MediaWiki).
  * - One-off profile to XHGui.
- * - Sampling profiler for production traffic.
+ * - Sampling profiler for live traffic.
  */
 
 if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {

@@ -16,8 +16,8 @@ $wmgProfiler = [];
  * - Parse X-Wikimedia-Debug options.
  * - Enable request profiling.
  * - One-off profile to stdout (via MediaWiki).
- *
- * Other profiler features not yet available in Beta Cluster (T180761).
+ * - <s>One-off profile to XHGui.</s> (Not yet availabe in Beta Cluster, T180761)
+ * - Sampling profiler for live traffic.
  */
 
 if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
@@ -91,4 +91,72 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 	}
 
 	unset( $xwd, $xhprofFlags );
+}
+
+/**
+ * Sampling profiler for production traffic.
+ *
+ * If Xenon is enabled, register a shutdown callback to ask HHVM for
+ * recently collected data. Will not end up yielding something every
+ * request.
+ *
+ * Based on https://github.com/wikimedia/arc-lamp
+ */
+if ( extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
+	register_shutdown_function( function () {
+		$data = HH\xenon_get_data();
+		if ( empty( $data ) ) {
+			return;
+		}
+
+		$entryPoint = basename( $_SERVER['SCRIPT_NAME'] );
+		$reqMethod = '{' . $_SERVER['REQUEST_METHOD'] . '}';
+
+		// Collate stack samples and fold into single lines.
+		// This is the format expected by FlameGraph.
+		$stacks = [];
+		foreach ( $data as $sample ) {
+			if ( empty( $sample['phpStack'] ) ) {
+				continue;
+			}
+			$stack = [];
+			foreach ( $sample['phpStack'] as $frame ) {
+				if ( $frame['function'] === 'include' ) {
+					// For file scope, just use the path as the name.
+					$func = $frame['file'];
+				} elseif ( $frame['function'] === '{closure}' && isset( $frame['line'] ) ) {
+					// Annotate anonymous functions with their location in the
+					// source code. Example: {closure:/path/to/file.php(123)}
+					$func = "{closure:{$frame['file']}({$frame['line']})}";
+				} else {
+					$func = $frame['function'];
+				}
+				if ( $func !== end( $stack ) ) {
+					$stack[] = $func;
+				}
+			}
+			if ( count( $stack ) ) {
+				// The last element is usually (but not always) the full file
+				// path of the script name. We want things nice and consistent,
+				// so we pop off the path if it is there, and push the basename
+				// instead.
+				if ( strpos( end( $stack ), $entryPoint ) !== false ) {
+					array_pop( $stack );
+				}
+				$stack[] = $reqMethod;
+				$stack[] = $entryPoint;
+				$strStack = implode( ';', array_reverse( $stack ) );
+				if ( !isset( $stacks[$strStack] ) ) {
+					$stacks[$strStack] = 0;
+				}
+				$stacks[$strStack] += 1;
+			}
+		}
+		$redis = new Redis();
+		if ( $redis->connect( 'deployment-fluorine02.deployment-prep.eqiad.wmflabs', 6379, 1.0 ) ) {
+			foreach ( $stacks as $stack => $count ) {
+				$redis->publish( 'xenon', "$stack $count" );
+			}
+		}
+	} );
 }
