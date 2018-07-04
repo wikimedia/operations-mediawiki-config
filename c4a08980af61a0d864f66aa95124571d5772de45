@@ -22,6 +22,30 @@
       "revId": "c4a08980af61a0d864f66aa95124571d5772de45",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e78fc2d0_3ad3a3cc",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 20175,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-07-04T21:15:44Z",
+      "side": 1,
+      "message": "Good point.\n\nFrom a quick glance, it seems the WikimediaMessages extension only overrides the desktop/mobile skin output, and not the variables themselves (which have a number of other consumers as well).\n\nSo might not be entirely safe to remove. But certainly worth improving. Either we should make this better to make the extension part obsolete, or vice versa.",
+      "parentUuid": "0bf27021_75d66bb8",
+      "range": {
+        "startLine": 20173,
+        "startChar": 16,
+        "endLine": 20175,
+        "endChar": 83
+      },
+      "revId": "c4a08980af61a0d864f66aa95124571d5772de45",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
