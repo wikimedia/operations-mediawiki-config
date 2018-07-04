@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0bf27021_75d66bb8",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 20175,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-07-04T09:21:12Z",
+      "side": 1,
+      "message": "This is also overridden in the WikimediaMessages extension, not sure if we actually need to keep this one here?",
+      "range": {
+        "startLine": 20173,
+        "startChar": 16,
+        "endLine": 20175,
+        "endChar": 83
+      },
+      "revId": "c4a08980af61a0d864f66aa95124571d5772de45",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
