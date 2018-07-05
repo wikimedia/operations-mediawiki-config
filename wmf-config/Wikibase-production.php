@@ -148,6 +148,7 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBQualityConstraintsCacheCheckConstraintsResults = true;
 		$wgWBQualityConstraintsPropertiesWithViolatingQualifiers = [ 'P1855', 'P2271' ]; // T183267
 		$wgSpecialPages['ItemDisambiguation'] = 'SpecialBlankpage';
+		$wgWBRepoSettings['dispatchLagToMaxLagFactor'] = 60;
 	}
 
 	if ( $wgDBname === 'wikidatawiki' ) {
