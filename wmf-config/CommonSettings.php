@@ -2497,7 +2497,7 @@ if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_P
 	$wgCookieSecure = true;
 	$_SERVER['HTTPS'] = 'on'; // Fake this so MW goes into HTTPS mode
 }
-$wgVaryOnXFPForAPI = $wgVaryOnXFP = true;
+$wgVaryOnXFP = true;
 
 $wgCookieExpiration = 30 * 86400;
 $wgExtendedLoginCookieExpiration = 365 * 86400;
