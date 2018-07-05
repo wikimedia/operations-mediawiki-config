@@ -299,10 +299,6 @@ function wmfLabsSettings() {
 			'default' => false,
 		],
 
-		'wmgMediaViewerNetworkPerformanceSamplingFactor' => [
-			'default' => 1,
-		],
-
 		'wmgVisualEditorUseSingleEditTab' => [
 			'enwiki' => true,
 		],
@@ -431,7 +427,11 @@ function wmfLabsSettings() {
 			'default' => false,
 		],
 
-		'wmgMediaViewerUseThumbnailGuessing' => [
+		'wgMediaViewerNetworkPerformanceSamplingFactor' => [
+			'default' => 1,
+		],
+
+		'wgMediaViewerUseThumbnailGuessing' => [
 			'default' => false, // T69651
 		],
 
