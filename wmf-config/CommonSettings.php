@@ -1424,8 +1424,6 @@ if ( $wmfRealm === 'labs' ) {
 	$wgInterwikiCache = include_once "$wmfConfigDir/interwiki.php";
 }
 
-$wgEnotifUseJobQ = true;
-
 // Keep this true; it's just whether the feature is available at all, not the default
 // setting. T142727
 $wgEnotifMinorEdits = true;
