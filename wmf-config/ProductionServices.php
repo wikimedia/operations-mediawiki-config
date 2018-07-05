@@ -11,68 +11,83 @@
 
 $wmfAllServices = [];
 
-$wmfAllServices['eqiad'] = [
-	'udp2log' => 'mwlog1001.eqiad.wmnet:8420',
-	'statsd' => 'statsd.eqiad.wmnet',
-	'search' => [ 'search.svc.eqiad.wmnet' ], # elasticsearch must be accessed by hostname for SSL certificate verification to work
-	'urldownloader' => 'http://url-downloader.eqiad.wikimedia.org:8080',
-	'parsoid' => 'http://parsoid.discovery.wmnet:8000',
-	'mathoid' => 'http://mathoid.discovery.wmnet:10042',
-	'eventlogging' => 'udp://10.64.32.167:8421', # eventlog1001.eqiad.wmnet
-	'eventbus' => 'http://eventbus.discovery.wmnet:8085',
-	'upload' => 'upload.svc.eqiad.wmnet',
-	'cxserver' => 'http://cxserver.discovery.wmnet:8080',
-	'etcd' => '_etcd._tcp.eqiad.wmnet',
-	'mediaSwiftAuth' => 'https://ms-fe.svc.eqiad.wmnet/auth',
-	'mediaSwiftStore' => 'https://ms-fe.svc.eqiad.wmnet/v1/AUTH_mw',
-	'electron' => 'http://pdfrender.discovery.wmnet:5252',
-	'etcd' => '_etcd._tcp.eqiad.wmnet',
+// Logging is not active-active.
+$wmfAllServices['eqiad']['udp2log'] =
+$wmfAllServices['codfw']['udp2log'] = 'mwlog1001.eqiad.wmnet:8420';
+
+// Statsd is not active-active.
+$wmfAllServices['eqiad']['statsd'] =
+$wmfAllServices['codfw']['statsd'] = 'statsd.eqiad.wmnet';
+
+// elasticsearch must be accessed by hostname for SSL certificate verification.
+$wmfAllServices['eqiad']['search'] = [
+	'search.svc.eqiad.wmnet',
+];
+$wmfAllServices['codfw']['search'] = [
+	'search.svc.codfw.wmnet',
 ];
 
-$wmfAllServices['codfw'] = [
-	'udp2log' => 'mwlog1001.eqiad.wmnet:8420',
-	'statsd' => 'statsd.eqiad.wmnet',
-	'search' => [ 'search.svc.codfw.wmnet' ], # elasticsearch must be accessed by hostname for SSL certificate verification to work
-	'urldownloader' => 'http://url-downloader.codfw.wikimedia.org:8080',
-	'parsoid' => 'http://parsoid.discovery.wmnet:8000',
-	'mathoid' => 'http://mathoid.discovery.wmnet:10042',
-	'eventlogging' => 'udp://10.64.32.167:8421',  # eventlog1001.eqiad.wmnet,
-	'eventbus' => 'http://eventbus.discovery.wmnet:8085',
-	'upload' => 'upload.svc.codfw.wmnet',
-	'cxserver' => 'http://cxserver.discovery.wmnet:8080',
-	'etcd' => '_etcd._tcp.codfw.wmnet',
-	'mediaSwiftAuth' => 'https://ms-fe.svc.codfw.wmnet/auth',
-	'mediaSwiftStore' => 'https://ms-fe.svc.codfw.wmnet/v1/AUTH_mw',
-	'electron' => 'http://pdfrender.discovery.wmnet:5252',
-	'etcd' => '_etcd._tcp.codfw.wmnet',
+$wmfAllServices['eqiad']['urldownloader'] = 'http://url-downloader.eqiad.wikimedia.org:8080';
+$wmfAllServices['codfw']['urldownloader'] = 'http://url-downloader.codfw.wikimedia.org:8080';
+
+$wmfAllServices['eqiad']['parsoid'] =
+$wmfAllServices['codfw']['parsoid'] = 'http://parsoid.discovery.wmnet:8000';
+
+$wmfAllServices['eqiad']['mathoid'] =
+$wmfAllServices['codfw']['mathoid'] = 'http://mathoid.discovery.wmnet:10042';
+
+// EventLogging is not active-active.
+$wmfAllServices['eqiad']['eventlogging'] =
+$wmfAllServices['codfw']['eventlogging'] = 'udp://10.64.32.167:8421'; # eventlog1001.eqiad.wmnet
+
+$wmfAllServices['eqiad']['eventbus'] =
+$wmfAllServices['codfw']['eventbus'] = 'http://eventbus.discovery.wmnet:8085';
+
+$wmfAllServices['eqiad']['upload'] = 'upload.svc.eqiad.wmnet';
+$wmfAllServices['codfw']['upload'] = 'upload.svc.codfw.wmnet';
+
+$wmfAllServices['eqiad']['cxserver'] =
+$wmfAllServices['codfw']['cxserver'] = 'http://cxserver.discovery.wmnet:8080';
+
+$wmfAllServices['eqiad']['mediaSwiftAuth'] = 'https://ms-fe.svc.eqiad.wmnet/auth';
+$wmfAllServices['codfw']['mediaSwiftAuth'] = 'https://ms-fe.svc.codfw.wmnet/auth';
+
+$wmfAllServices['eqiad']['mediaSwiftStore'] = 'https://ms-fe.svc.eqiad.wmnet/v1/AUTH_mw';
+$wmfAllServices['codfw']['mediaSwiftStore'] = 'https://ms-fe.svc.codfw.wmnet/v1/AUTH_mw';
+
+$wmfAllServices['eqiad']['etcd'] = '_etcd._tcp.eqiad.wmnet';
+$wmfAllServices['codfw']['etcd'] = '_etcd._tcp.codfw.wmnet';
+
+$wmfAllServices['eqiad']['electron'] =
+$wmfAllServices['codfw']['electron'] = 'http://pdfrender.discovery.wmnet:5252';
+
+// Logstash is not active-active.
+$wmfAllServices['eqiad']['logstash'] =
+$wmfAllServices['codfw']['logstash'] = [
+	'10.2.2.36', # logstash.svc.eqiad.wmnet
 ];
 
-### Logstash
-$wmfAllServices['eqiad']['logstash'] = [
-	'10.2.2.36', // logstash.svc.eqiad.wmnet
+// Analytics Kafka (not active-active).
+$wmfAllServices['eqiad']['kafka'] =
+$wmfAllServices['codfw']['kafka'] = [
+	'10.64.5.12:9092', # kafka1012.eqiad.wmnet
+	'10.64.5.13:9092', # kafka1013.eqiad.wmnet
+	'10.64.36.114:9092', # kafka1014.eqiad.wmnet
+	'10.64.53.10:9092', # kafka1018.eqiad.wmnet
+	'10.64.53.12:9092', # kafka1020.eqiad.wmnet
+	'10.64.36.122:9092', # kafka1022.eqiad.wmnet
 ];
-$wmfAllServices['codfw']['logstash'] = $wmfAllServices['eqiad']['logstash'];
 
-### Analytics Kafka cluster
-$wmfAllServices['eqiad']['kafka'] = [
-	'10.64.5.12:9092',   // kafka1012.eqiad.wmnet
-	'10.64.5.13:9092',   // kafka1013.eqiad.wmnet
-	'10.64.36.114:9092', // kafka1014.eqiad.wmnet
-	'10.64.53.10:9092',  // kafka1018.eqiad.wmnet
-	'10.64.53.12:9092',  // kafka1020.eqiad.wmnet
-	'10.64.36.122:9092', // kafka1022.eqiad.wmnet
-];
-$wmfAllServices['codfw']['kafka'] = $wmfAllServices['eqiad']['kafka'];
+// IRC (broadcast RCFeed for irc.wikimedia.org)
+// Not active-active.
+$wmfAllServices['eqiad']['irc'] =
+$wmfAllServices['codfw']['irc'] = '208.80.153.44'; # kraz.codfw.wmnet
 
-### IRC
-$wmfAllServices['eqiad']['irc'] = '208.80.153.44'; // codfw: kraz
-$wmfAllServices['codfw']['irc'] = $wmfAllServices['eqiad']['irc'];
-
-### Restbase
-$wmfAllServices['eqiad']['restbase'] = 'http://restbase.discovery.wmnet:7231';
+// Restbase
+$wmfAllServices['eqiad']['restbase'] =
 $wmfAllServices['codfw']['restbase'] = 'http://restbase.discovery.wmnet:7231';
 
-### Poolcounter
+// Poolcounter
 $wmfAllServices['eqiad']['poolcounter'] = [
 	'10.64.32.126', # poolcounter1001.eqiad.wmnet
 	'10.64.0.19', # poolcounter1003.eqiad.wmnet
@@ -82,7 +97,7 @@ $wmfAllServices['codfw']['poolcounter'] = [
 	'10.192.16.21', # poolcounter2002.codfw.wmnet
 ];
 
-### LockManager Redis
+// LockManager Redis
 $wmfAllServices['eqiad']['redis_lock'] = [
 	'rdb1' => '10.64.0.80',
 	'rdb2' => '10.64.16.107',
