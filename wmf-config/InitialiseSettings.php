@@ -20266,6 +20266,7 @@ $wgConf->settings = [
 	'default' => false,
 	'wikipedia' => true,
 	'test2wiki' => false,
+	'bgwiki' => false,
 	'mediawikiwiki' => true,
 	'uawikimedia' => true, // T164574
 ],
