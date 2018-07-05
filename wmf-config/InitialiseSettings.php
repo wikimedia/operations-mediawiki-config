@@ -19592,6 +19592,7 @@ $wgConf->settings = [
 'wmgUseORES' => [
 	'default' => false,
 	'arwiki' => true, // T192498
+	'bswiki' => true, // T197010
 	'cawiki' => true, // T192501
 	'cswiki' => true, // T151611
 	'enwiki' => true, // T140003
@@ -19918,6 +19919,18 @@ $wgConf->settings = [
 			'verylikelybad' => false,
 		],
 		// goodfaith is disabled for arwiki (T192498, T193905)
+	],
+	'bswiki' => [
+		'damaging' => [
+			// likelygood, maybebad and likelybad use default
+			'verylikelybad' => [ 'min' => 'maximum recall @ precision >= 0.80', 'max' => 1 ],
+		],
+		'goodfaith' => [
+			// likelygood uses default
+			'maybebad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.15' ],
+			// likelybad uses default
+			'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.80' ],
+		],
 	],
 ],
 'wmgOresDefaultSensitivityLevel' => [
