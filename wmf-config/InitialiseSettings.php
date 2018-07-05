@@ -14251,36 +14251,36 @@ $wgConf->settings = [
 	'officewiki' => true, // T160420
 ],
 
-'wmgMediaViewerEnableByDefault' => [
+'wgMediaViewerEnableByDefault' => [
 	'default' => true,
 	'commonswiki' => false, // T71363
 ],
 
-'wmgMediaViewerEnableByDefaultForAnonymous' => [
+'wgMediaViewerEnableByDefaultForAnonymous' => [
 	'default' => true,
 ],
 
-'wmgMediaViewerUseThumbnailGuessing' => [
+'wgMediaViewerUseThumbnailGuessing' => [
 	'default' => true,
 ],
 
-'wmgMediaViewerNetworkPerformanceSamplingFactor' => [
+'wgMediaViewerNetworkPerformanceSamplingFactor' => [
 	'default' => 1000,
 ],
 
-'wmgMediaViewerDurationLoggingSamplingFactor' => [
+'wgMediaViewerDurationLoggingSamplingFactor' => [
 	'default' => 1000,
 ],
 
-'wmgMediaViewerAttributionLoggingSamplingFactor' => [
+'wgMediaViewerAttributionLoggingSamplingFactor' => [
 	'default' => 1000,
 ],
 
-'wmgMediaViewerDimensionLoggingSamplingFactor' => [
+'wgMediaViewerDimensionLoggingSamplingFactor' => [
 	'default' => 1000,
 ],
 
-'wmgMediaViewerActionLoggingSamplingFactorMap' => [
+'wgMediaViewerActionLoggingSamplingFactorMap' => [
 	'default' => [ 'default' => 1 ],
 	'arwiki' => [
 		'default' => 1,
