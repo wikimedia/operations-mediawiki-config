@@ -19623,6 +19623,7 @@ $wgConf->settings = [
 	'ruwiki' => true,
 	'simplewiki' => true, // T182012
 	'sqwiki' => true, // T170723
+	'srwiki' => true, // T197012
 	'svwiki' => true, // T174560
 	'trwiki' => true, // T139992
 
@@ -19646,6 +19647,14 @@ $wgConf->settings = [
 	'arwiki' => [
 		'damaging' => [ 'enabled' => true ],
 		// goodfaith is disabled for arwiki (T192498, T193905)
+		'goodfaith' => [ 'enabled' => false ],
+		'reverted' => [ 'enabled' => false ],
+		'wp10' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
+		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
+	],
+	'srwiki' => [
+		'damaging' => [ 'enabled' => true ],
+		// goodfaith is disabled for srwiki (T197012)
 		'goodfaith' => [ 'enabled' => false ],
 		'reverted' => [ 'enabled' => false ],
 		'wp10' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
@@ -19942,6 +19951,15 @@ $wgConf->settings = [
 			// likelybad uses default
 			'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.80' ],
 		],
+	],
+	'srwiki' => [
+		'damaging' => [
+			'likelygood' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.999' ],
+			// maybebad uses default
+			'likelybad' => [ 'min' => 'maximum recall @ precision >= 0.45', 'max' => 1 ],
+			'verylikelybad' => [ 'min' => 'maximum recall @ precision >= 0.75', 'max' => 1 ],
+		],
+		// goodfaith is disabled for srwiki (T197012)
 	],
 ],
 'wmgOresDefaultSensitivityLevel' => [
