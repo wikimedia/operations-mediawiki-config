@@ -4576,6 +4576,7 @@ $wgConf->settings = [
 		'WD' => NS_PROJECT, // T43834
 		'WT' => NS_PROJECT_TALK,
 		'P' => 120, // T47079
+		'L' => 146, // T195493
 	],
 	'+yiwiki' => [
 		'וויקיפעדיע' => NS_PROJECT,
