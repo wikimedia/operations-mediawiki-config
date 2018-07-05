@@ -1419,9 +1419,9 @@ if ( extension_loaded( 'wikidiff2' ) ) {
 }
 
 if ( $wmfRealm === 'labs' ) {
-	$wgInterwikiCache = include_once "$wmfConfigDir/interwiki-labs.php";
+	$wgInterwikiCache = require "$wmfConfigDir/interwiki-labs.php";
 } else {
-	$wgInterwikiCache = include_once "$wmfConfigDir/interwiki.php";
+	$wgInterwikiCache = require "$wmfConfigDir/interwiki.php";
 }
 
 $wgEnotifUseJobQ = true;
