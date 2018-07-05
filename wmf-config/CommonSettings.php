@@ -2263,22 +2263,15 @@ if ( $wmgUseGWToolset ) {
 
 if ( $wmgUseMultimediaViewer ) {
 	wfLoadExtension( 'MultimediaViewer' );
-	$wgMediaViewerNetworkPerformanceSamplingFactor = $wmgMediaViewerNetworkPerformanceSamplingFactor;
-	$wgMediaViewerDurationLoggingSamplingFactor = $wmgMediaViewerDurationLoggingSamplingFactor;
-	$wgMediaViewerAttributionLoggingSamplingFactor = $wmgMediaViewerAttributionLoggingSamplingFactor;
-	$wgMediaViewerDimensionLoggingSamplingFactor = $wmgMediaViewerDimensionLoggingSamplingFactor;
-	$wgMediaViewerActionLoggingSamplingFactorMap = $wmgMediaViewerActionLoggingSamplingFactorMap;
-
 	if ( isset( $wmgMediaViewerEnableByDefault ) ) {
+		$wgMediaViewerNetworkPerformanceSamplingFactor = $wmgMediaViewerNetworkPerformanceSamplingFactor;
+		$wgMediaViewerDurationLoggingSamplingFactor = $wmgMediaViewerDurationLoggingSamplingFactor;
+		$wgMediaViewerAttributionLoggingSamplingFactor = $wmgMediaViewerAttributionLoggingSamplingFactor;
+		$wgMediaViewerDimensionLoggingSamplingFactor = $wmgMediaViewerDimensionLoggingSamplingFactor;
+		$wgMediaViewerActionLoggingSamplingFactorMap = $wmgMediaViewerActionLoggingSamplingFactorMap;
 		$wgMediaViewerEnableByDefault = $wmgMediaViewerEnableByDefault;
-	}
-
-	if ( isset( $wmgMediaViewerEnableByDefaultForAnonymous ) ) {
 		$wgMediaViewerEnableByDefaultForAnonymous = $wmgMediaViewerEnableByDefaultForAnonymous;
-	}
-
-	if ( $wmgMediaViewerUseThumbnailGuessing ) {
-		$wgMediaViewerUseThumbnailGuessing = true;
+		$wgMediaViewerUseThumbnailGuessing = $wmgMediaViewerUseThumbnailGuessing;
 	}
 }
 
