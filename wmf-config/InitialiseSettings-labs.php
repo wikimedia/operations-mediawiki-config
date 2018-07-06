@@ -761,5 +761,9 @@ function wmfLabsSettings() {
 		'wgEnableRcFiltersBetaFeature' => [
 			'default' => false,
 		],
+
+		'wgPageTriageDraftNamespaceId' => [
+			'enwiki' => 118,
+		],
 	];
 } # wmflLabsSettings()
