@@ -11882,6 +11882,7 @@ $wgConf->settings = [
 	'ptwikiversity' => [ 'incubator', 'w', 'b', ], // T16516
 	'rowikibooks' => [ 'w', 's' ],
 	'ruwikibooks' => [ 'w', 's', ],
+	'ruwikinews' => [ 'w', 'meta', 'ruwikimedia' ], // T199045
 	'ruwikisource' => [ 'b', ], // T123837
 	'ruwikiversity' => [ 'w', 'wikt', 'q', 'b', 's', 'n', 'betawikiversity' ],
 	'sahwiki' => [ 'incubator' ],
