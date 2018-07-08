@@ -8,7 +8,7 @@
 #
 # This is loaded very early. Only two sets of globals may be
 # used here:
-# - $wmfRealm, $wmfDatacenter (from multiversion/MWRealm)
+# - $wmgRealm, $wmfDatacenter (from multiversion/MWRealm)
 # - $wmfLocalServices (from wmf-config/*Services.php)
 #
 # Effective load order:
