@@ -15065,10 +15065,6 @@ $wgConf->settings = [
 
 // -------------- RESTBase start --------------
 
-'wgRestbaseServer' => [
-	'default' => $wmfLocalServices['restbase']
-],
-
 // whether to configure RESTBase as a Virtual REST Service
 // in MW Core
 'wmgUseRestbaseVRS' => [

@@ -2290,7 +2290,7 @@ if ( !isset( $wgVirtualRestConfig ) && ( $wmgUseRestbaseVRS || $wmgUseParsoid ||
 
 if ( $wmgUseRestbaseVRS ) {
 	$wgVirtualRestConfig['modules']['restbase'] = [
-		'url' => $wgRestbaseServer,
+		'url' => $wmfLocalServices['restbase'],
 		'domain' => $wgCanonicalServer,
 		'forwardCookies' => false,
 		'parsoidCompat' => false
@@ -3170,7 +3170,7 @@ if ( $wmgUseContentTranslation ) {
 	$wgContentTranslationSiteTemplates['cx'] = '//cxserver.wikimedia.org/v1';
 
 	$wgContentTranslationRESTBase = [
-		'url' => $wgRestbaseServer,
+		'url' => $wmfLocalServices['restbase'],
 		'domain' => $wgCanonicalServer,
 		'forwardCookies' => false,
 		'timeout' => 10000,
