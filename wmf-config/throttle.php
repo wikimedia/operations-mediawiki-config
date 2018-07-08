@@ -27,33 +27,19 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[] = [ // T194630
-	'from' => '2018-05-17T00:00 UTC',
-	'to' => '2018-05-19T00:00 UTC',
-	'range' => [ '46.140.254.0/28', '46.140.254.16/28', '46.140.254.32/28' ],
-	'value' => 100 // 70 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T194392 - WMF Hackhathon
-	'from' => '2018-05-17T05:00 UTC',
-	'to' => '2018-05-21T10:00 UTC',
-	'range' => '158.109.94.208/28',
-	'value' => 250
-];
-
-$wmgThrottlingExceptions[] = [ // T194888
-	'from' => '2018-05-19 05:00 UTC',
-	'to' => '2018-05-19 23:00 UTC',
-	'IP' => '80.113.4.226',
-	'dbname' => [ 'enwiki', 'nlwiki', 'commonswiki', 'wikidatawiki' ],
-	'value' => 300 // 250 expected
-];
-
 $wmgThrottlingExceptions[] = [ // T198288
 	'from' => '2018-07-18T09:00 UTC',
 	'to' => '2018-07-22T17:00 UTC',
 	'IP' => '197.101.76.134',
 	'value' => 300 // 250 expected
+];
+
+$wmgThrottlingExceptions[] = [ // T199040
+	'from' => '2018-07-21T09:00 -6:00',
+	'to' => '2018-07-22T19:00 -6:00',
+	'range' => '190.143.132.0/24',
+	'dbname' => [ 'incubatorwiki' ],
+	'value' => 30 // 20-25 expected
 ];
 
 ## Add throttling definitions above.
