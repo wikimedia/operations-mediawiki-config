@@ -84,7 +84,7 @@ set_include_path( "$IP:/usr/local/lib/php:/usr/share/php" );
 # spam blacklists hosted on meta.wikimedia.org which you will surely want to
 # reuse.
 $wmfHostnames = [];
-switch ( $wmfRealm ) {
+switch ( $wmgRealm ) {
 case 'labs':
 	$wmfHostnames['meta']     = 'meta.wikimedia.beta.wmflabs.org';
 	$wmfHostnames['test']     = 'test.wikimedia.beta.wmflabs.org';
@@ -111,7 +111,7 @@ $wmfConfigDir = "$IP/../wmf-config";
 
 # Include all the service definitions
 # TODO: only include if in production, set up beta separately
-switch ( $wmfRealm ) {
+switch ( $wmgRealm ) {
 case 'labs':
 	require "$wmfConfigDir/LabsServices.php";
 	break;
@@ -272,7 +272,7 @@ if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) && preg_match( '/\breadonly\b/i
 	$wgReadOnly = 'X-Wikimedia-Debug';
 }
 
-if ( $wmfRealm === 'labs' ) {
+if ( $wmgRealm === 'labs' ) {
 	require "$wmfConfigDir/db-labs.php";
 	require "$wmfConfigDir/mc-labs.php";
 } else {
@@ -601,12 +601,12 @@ if ( defined( 'HHVM_VERSION' ) ) {
 # ######################################################################
 
 $wgStatsdServer = $wmfLocalServices['statsd'];
-if ( $wmfRealm === 'production' ) {
+if ( $wmgRealm === 'production' ) {
 	if ( $wmgUseClusterSquid ) {
 		$wgUseSquid = true;
 		require "$wmfConfigDir/reverse-proxy.php";
 	}
-} elseif ( $wmfRealm === 'labs' ) {
+} elseif ( $wmgRealm === 'labs' ) {
 	$wgStatsdMetricPrefix = 'BetaMediaWiki';
 	if ( $wmgUseClusterSquid ) {
 		$wgUseSquid = true;
@@ -793,7 +793,7 @@ if ( $wmgUseWikiHiero ) {
 wfLoadExtension( 'SiteMatrix' );
 
 // Config for sitematrix
-$wgSiteMatrixFile = ( $wmfRealm === 'labs' ) ? "$IP/../langlist-labs" : "$IP/../langlist";
+$wgSiteMatrixFile = ( $wmgRealm === 'labs' ) ? "$IP/../langlist-labs" : "$IP/../langlist";
 
 $wgSiteMatrixSites = [
 	'wiki' => [
@@ -1367,7 +1367,7 @@ if ( is_array( $wmgExtraImplicitGroups ) ) {
 	$wgImplicitGroups = array_merge( $wgImplicitGroups, $wmgExtraImplicitGroups );
 }
 
-if ( $wmfRealm == 'labs' ) {
+if ( $wmgRealm == 'labs' ) {
 	$wgHTTPTimeout = 10;
 }
 
@@ -1418,7 +1418,7 @@ if ( extension_loaded( 'wikidiff2' ) ) {
 	$wgDiff = false;
 }
 
-if ( $wmfRealm === 'labs' ) {
+if ( $wmgRealm === 'labs' ) {
 	$wgInterwikiCache = require "$wmfConfigDir/interwiki-labs.php";
 } else {
 	$wgInterwikiCache = require "$wmfConfigDir/interwiki.php";
@@ -1445,14 +1445,14 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthUseEventLogging = true;
 	$wgCentralAuthPreventUnattached = true;
 
-	if ( $wmfRealm == 'production' ) {
+	if ( $wmgRealm == 'production' ) {
 		$wgCentralAuthRC[] = [
 			'formatter' => 'IRCColourfulCARCFeedFormatter',
 			'uri' => "udp://$wmgRC2UDPAddress:$wmgRC2UDPPort/#central\t",
 		];
 	}
 
-	switch ( $wmfRealm ) {
+	switch ( $wmgRealm ) {
 	case 'production':
 		// Production cluster
 		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\./';
@@ -1546,7 +1546,7 @@ if ( $wmgUseCentralAuth ) {
 
 	// Create some local accounts as soon as the global registration happens
 	$wgCentralAuthAutoCreateWikis = [ 'loginwiki', 'metawiki' ];
-	if ( $wmfRealm === 'production' ) {
+	if ( $wmgRealm === 'production' ) {
 		$wgCentralAuthAutoCreateWikis[] = 'mediawikiwiki';
 	}
 
@@ -1764,7 +1764,7 @@ $wgMaxShellTime = 50;  // seconds
 // with: mkdir -p -m777 /sys/fs/cgroup/memory/mediawiki/job
 $wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
 
-switch ( $wmfRealm ) {
+switch ( $wmgRealm ) {
 case 'production'  :
 	$wgImageMagickTempDir = '/tmp/magick-tmp';
 	break;
@@ -1781,7 +1781,7 @@ if ( $wmgUseCentralNotice ) {
 	$wgCentralHost = "//{$wmfHostnames['meta']}";
 
 	// for banner loading
-	if ( $wmfRealm === 'production' && $wgDBname === 'testwiki' ) {
+	if ( $wmgRealm === 'production' && $wgDBname === 'testwiki' ) {
 		$wgCentralSelectedBannerDispatcher = "//test.wikipedia.org/w/index.php?title=Special:BannerLoader";
 
 		// No caching for banners on testwiki, so we can develop them there a bit faster - NeilK 2012-01-16
@@ -1798,7 +1798,7 @@ if ( $wmgUseCentralNotice ) {
 
 	$wgCentralDBname = 'metawiki';
 	$wgNoticeInfrastructure = false;
-	if ( $wmfRealm == 'production' && $wgDBname === 'testwiki' ) {
+	if ( $wmgRealm == 'production' && $wgDBname === 'testwiki' ) {
 		// test.wikipedia.org has its own central database:
 		$wgCentralDBname = 'testwiki';
 		$wgNoticeInfrastructure = true;
@@ -2507,9 +2507,9 @@ if ( $wmgUseMath ) {
 	// HACK: $wgServerName is not available yet at this point, it's set by Setup.php
 	// so use a hook
 	$wgExtensionFunctions[] = function () {
-		global $wgServerName, $wgMathFullRestbaseURL, $wmfRealm;
+		global $wgServerName, $wgMathFullRestbaseURL, $wmgRealm;
 
-		$wgMathFullRestbaseURL = $wmfRealm === 'production'
+		$wgMathFullRestbaseURL = $wmgRealm === 'production'
 			? 'https://wikimedia.org/api/rest_'  // T136205
 			: "//$wgServerName/api/rest_";
 	};
@@ -3725,7 +3725,7 @@ if ( PHP_SAPI === 'cli' ) {
 	wfLoadExtension( 'ActiveAbstract' );
 }
 
-if ( $wmfRealm === 'labs' ) {
+if ( $wmgRealm === 'labs' ) {
 	require "$wmfConfigDir/CommonSettings-labs.php";
 }
 

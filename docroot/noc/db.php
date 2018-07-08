@@ -23,7 +23,7 @@ require_once __DIR__ . '/../../tests/Defines.php';
 require_once __DIR__ . '/../../wmf-config/db-eqiad.php';
 
 // Mock vars from MWRealm.php for wgConf.php
-$wmfRealm = 'production';
+$wmgRealm = 'production';
 
 // Load $wgConf (for making canonical urls from dbnames)
 require_once __DIR__ . '/../../tests/SiteConfiguration.php';

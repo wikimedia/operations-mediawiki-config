@@ -18,7 +18,7 @@
 # Included from: wmf-config/CommonSettings.php.
 #
 
-if ( $wmfRealm == 'labs' ) { # safe guard
+if ( $wmgRealm == 'labs' ) { # safe guard
 if ( file_exists( '/etc/wmflabs-instancename' ) ) {
 	$wgOverrideHostname = trim( file_get_contents( '/etc/wmflabs-instancename' ) );
 }

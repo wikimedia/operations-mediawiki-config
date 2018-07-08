@@ -70,7 +70,7 @@ class LoggingTest extends WgConfTestCase {
 		$wmgLogstashServers = [ 'localhost' ];
 		$wmgKafkaServers = [ 'localhost' ];
 		$wmgMonologChannels = [ 'test' => $channelConfig ];
-		$wmfRealm = 'production';
+		$wmgRealm = 'production';
 
 		include __DIR__ . '/../wmf-config/logging.php';
 

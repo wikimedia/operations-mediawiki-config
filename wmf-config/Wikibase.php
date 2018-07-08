@@ -147,10 +147,10 @@ if ( $wmgUseWikibaseRepo ) {
 		// Exclude closed wikis
 		$wgWBRepoSettings['clientDbList'] = array_diff(
 			$wgWBRepoSettings['clientDbList'],
-			MWWikiversions::readDbListFile( $wmfRealm === 'labs' ? 'closed-labs' : 'closed' )
+			MWWikiversions::readDbListFile( $wmgRealm === 'labs' ? 'closed-labs' : 'closed' )
 		);
 		// Exclude non-existent wikis in labs
-		if ( $wmfRealm === 'labs' ) {
+		if ( $wmgRealm === 'labs' ) {
 			$wgWBRepoSettings['clientDbList'] = array_intersect(
 				$wgWBRepoSettings['clientDbList'],
 				MWWikiversions::readDbListFile( 'all-labs' )
@@ -263,4 +263,4 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['entityUsageModifierLimits'] = [ 'D' => 10, 'L' => 10, 'C' => 33 ];
 }
 
-require_once "{$wmfConfigDir}/Wikibase-{$wmfRealm}.php";
+require_once "{$wmfConfigDir}/Wikibase-{$wmgRealm}.php";

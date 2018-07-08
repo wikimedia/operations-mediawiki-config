@@ -31,7 +31,7 @@
 # ######################################################################
 
 # Globals set in CommonSettings.php for use in settings values
-global $wmfUdp2logDest, $wmfDatacenter, $wmfRealm, $wmfConfigDir, $wgConf,
+global $wmfUdp2logDest, $wmfDatacenter, $wmgRealm, $wmfConfigDir, $wgConf,
 	$wmfAllServices, $wmfLocalServices, $wmfMasterServices, $wmfMasterDatacenter;
 
 $wgConf->settings = [
@@ -20678,7 +20678,7 @@ $wgConf->settings = [
 ];
 
 ### WMF Labs override #####
-if ( $wmfRealm == 'labs' ) {
+if ( $wmgRealm == 'labs' ) {
 	require "$wmfConfigDir/InitialiseSettings-labs.php";
 	wmfLabsOverrideSettings();
 }
