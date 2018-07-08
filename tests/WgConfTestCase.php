@@ -86,10 +86,10 @@ class WgConfTestCase extends PHPUnit\Framework\TestCase {
 	 *
 	 *     $wgLogoHD = $this->loadWgConf( 'production' )->settings['wgLogoHD'];
 	 *
-	 * @param string $wmfRealm Realm to use for example: 'labs' or 'production'
+	 * @param string $wmgRealm Realm to use for example: 'labs' or 'production'
 	 * @return SiteConfiguration
 	 */
-	final protected function loadWgConf( $wmfRealm ) {
+	final protected function loadWgConf( $wmgRealm ) {
 		// Variables required for wgConf.php
 		$wmfConfigDir = __DIR__ . "/../wmf-config";
 
@@ -100,7 +100,7 @@ class WgConfTestCase extends PHPUnit\Framework\TestCase {
 			'wmfUdp2logDest' => 'localhost',
 			'wmfDatacenter' => 'unittest',
 			'wmfMasterDatacenter' => 'unittest',
-			'wmfRealm' => $wmfRealm,
+			'wmgRealm' => $wmgRealm,
 			'wmfConfigDir' => $wmfConfigDir,
 			'wgConf' => $wgConf,
 		] );

@@ -25,7 +25,7 @@ class DbconfigTest extends WgConfTestCase {
 	public function loadDbFile( $realm, $datacenter, $masterdatacenter ) {
 		// For getRealmSpecificFilename()
 		$this->setGlobals( [
-			'wmfRealm' => $realm,
+			'wmgRealm' => $realm,
 			'wmfDatacenter' => $datacenter,
 		] );
 
@@ -39,7 +39,7 @@ class DbconfigTest extends WgConfTestCase {
 
 		// intentionally not marked as global
 		$wmfMasterDatacenter = $masterdatacenter;
-		$wmfRealm = $realm;
+		$wmgRealm = $realm;
 		$wmfDatacenter = $datacenter;
 		include getRealmSpecificFilename( __DIR__ . '/../wmf-config/db.php' );
 

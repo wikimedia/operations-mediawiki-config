@@ -48,14 +48,14 @@ class MWRealmTest extends PHPUnit\Framework\TestCase {
 	 * @dataProvider provideFilenames
 	 */
 	public function testRealmFilenames( $expected, $filename, $realm = null, $datacenter = null ) {
-		global $wmfRealm, $wmfDatacenter;
+		global $wmgRealm, $wmfDatacenter;
 
 		// save globals
-		$old['realm']      = $wmfRealm;
+		$old['realm']      = $wmgRealm;
 		$old['datacenter'] = $wmfDatacenter;
 
 		if ( $realm !== null ) {
-			$wmfRealm = $realm;
+			$wmgRealm = $realm;
 		}
 		if ( $datacenter !== null ) {
 			$wmfDatacenter = $datacenter;
@@ -70,7 +70,7 @@ class MWRealmTest extends PHPUnit\Framework\TestCase {
 		$this->assertEquals( $expected, $specific );
 
 		// restore globals
-		$wmfRealm      = $old['realm'];
+		$wmgRealm      = $old['realm'];
 		$wmfDatacenter = $old['datacenter'];
 	}
 

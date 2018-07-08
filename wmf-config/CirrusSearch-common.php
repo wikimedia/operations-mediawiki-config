@@ -310,4 +310,4 @@ $wgCirrusSearchCategoryEndpoint = 'https://query.wikidata.org/bigdata/namespace/
 # - CirrusSearch-labs.php
 # - CirrusSearch-production.php
 #
-require "{$wmfConfigDir}/CirrusSearch-{$wmfRealm}.php";
+require "{$wmfConfigDir}/CirrusSearch-{$wmgRealm}.php";
