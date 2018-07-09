@@ -263,4 +263,7 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['entityUsageModifierLimits'] = [ 'D' => 10, 'L' => 10, 'C' => 33 ];
 }
 
+unset( $wgWBSharedCacheKey );
+unset( $wgWBSharedSettings );
+
 require_once "{$wmfConfigDir}/Wikibase-{$wmfRealm}.php";
