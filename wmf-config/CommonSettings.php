@@ -2265,13 +2265,6 @@ if ( $wmgUseMultimediaViewer ) {
 	wfLoadExtension( 'MultimediaViewer' );
 }
 
-if ( $wmgUsePopups || ( $wmgPopupsBetaFeature && $wmgUseBetaFeatures ) ) {
-	wfLoadExtension( 'Popups' );
-
-	// Make sure we don't enable as a beta feature if we are set to be enabled by default.
-	$wgPopupsBetaFeature = $wmgPopupsBetaFeature && !$wmgUsePopups;
-}
-
 if ( $wmgUseLinter ) {
 	wfLoadExtension( 'Linter' );
 }
