@@ -38,11 +38,11 @@ if ( $wmgUseWikibaseClient ) {
 // and not shared across different versions of wikibase.
 // e.g. wikibase_shared/1_31_0-wmf_2-testwikidatawiki0 for test wikis
 // and wikibase_shared/1_31_0-wmf_2-wikidatawiki for all others.
-$wgWBSharedCacheKey = 'wikibase_shared/' . str_replace( '.', '_', $wmgVersionNumber ) . '-' . $wmgWikibaseCachePrefix;
+$wmgWBSharedCacheKey = 'wikibase_shared/' . str_replace( '.', '_', $wmgVersionNumber ) . '-' . $wmgWikibaseCachePrefix;
 
 if ( defined( 'HHVM_VERSION' ) ) {
 	// Split the cache up for hhvm. T73461
-	$wgWBSharedCacheKey .= '-hhvm';
+	$wmgWBSharedCacheKey .= '-hhvm';
 }
 
 // Lock manager config must use the master datacenter
@@ -63,11 +63,11 @@ $wgLockManagers[] = [
 	]
 ];
 
-$wgWBSharedSettings = [];
+$wmgWBSharedSettings = [];
 
-$wgWBSharedSettings['maxSerializedEntitySize'] = 2500;
+$wmgWBSharedSettings['maxSerializedEntitySize'] = 2500;
 
-$wgWBSharedSettings['siteLinkGroups'] = [
+$wmgWBSharedSettings['siteLinkGroups'] = [
 	'wikipedia',
 	'wikibooks',
 	'wikinews',
@@ -79,7 +79,7 @@ $wgWBSharedSettings['siteLinkGroups'] = [
 	'special'
 ];
 
-$wgWBSharedSettings['specialSiteLinkGroups'] = [
+$wmgWBSharedSettings['specialSiteLinkGroups'] = [
 	'commons',
 	'mediawiki',
 	'meta',
@@ -101,17 +101,17 @@ define( 'WB_NS_QUERY_TALK', $baseNs + 3 );
 // @note when we enable WikibaseRepo on commons, then having NS_MAIN for items
 // will be a problem, though commons should be aware that Wikidata items are in
 // the main namespace. (see T137444)
-$wgWBSharedSettings['entityNamespaces'] = [
+$wmgWBSharedSettings['entityNamespaces'] = [
 	'item' => NS_MAIN,
 	'property' => WB_NS_PROPERTY
 ];
 
 if ( in_array( $wgDBname, [ 'test2wiki', 'testwiki', 'testwikidatawiki' ] ) ) {
-	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'testwikidata';
-	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'test';
-	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'test2';
+	$wmgWBSharedSettings['specialSiteLinkGroups'][] = 'testwikidata';
+	$wmgWBSharedSettings['specialSiteLinkGroups'][] = 'test';
+	$wmgWBSharedSettings['specialSiteLinkGroups'][] = 'test2';
 } else {
-	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'wikidata';
+	$wmgWBSharedSettings['specialSiteLinkGroups'][] = 'wikidata';
 }
 
 if ( $wmgUseWikibaseRepo ) {
@@ -124,7 +124,7 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgExtraNamespaces[WB_NS_QUERY] = 'Query';
 	$wgExtraNamespaces[WB_NS_QUERY_TALK] = 'Query_talk';
 
-	$wgWBRepoSettings = $wgWBSharedSettings + $wgWBRepoSettings;
+	$wgWBRepoSettings = $wmgWBSharedSettings + $wgWBRepoSettings;
 
 	if ( $wgDBname === 'wikidatawiki' ) {
 		// These settings can be overridden by the cron parameters in operations/puppet
@@ -186,7 +186,7 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBRepoSettings['dataSquidMaxage'] = 1 * 60 * 60;
 	$wgWBRepoSettings['sharedCacheDuration'] = 60 * 60 * 24;
-	$wgWBRepoSettings['sharedCacheKeyPrefix'] = $wgWBSharedCacheKey;
+	$wgWBRepoSettings['sharedCacheKeyPrefix'] = $wmgWBSharedCacheKey;
 
 	$wgPropertySuggesterMinProbability = 0.069;
 
@@ -205,7 +205,7 @@ if ( $wmgUseWikibaseRepo ) {
 }
 
 if ( $wmgUseWikibaseClient ) {
-	$wgWBClientSettings = $wgWBSharedSettings + $wgWBClientSettings;
+	$wgWBClientSettings = $wmgWBSharedSettings + $wgWBClientSettings;
 
 	// to be safe, keeping this here although $wgDBname is default setting
 	$wgWBClientSettings['siteGlobalID'] = $wgDBname;
@@ -275,10 +275,13 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['allowDataAccessInUserLanguage'] = $wmgWikibaseAllowDataAccessInUserLanguage;
 	$wgWBClientSettings['entityAccessLimit'] = $wmgWikibaseEntityAccessLimit;
 
-	$wgWBClientSettings['sharedCacheKeyPrefix'] = $wgWBSharedCacheKey;
+	$wgWBClientSettings['sharedCacheKeyPrefix'] = $wmgWBSharedCacheKey;
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
 
 	$wgWBClientSettings['entityUsageModifierLimits'] = [ 'D' => 10, 'L' => 10, 'C' => 33 ];
 }
+
+unset( $wmgWBSharedCacheKey );
+unset( $wmgWBSharedSettings );
 
 require_once "{$wmfConfigDir}/Wikibase-{$wmfRealm}.php";
