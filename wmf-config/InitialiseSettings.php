@@ -16042,10 +16042,6 @@ $wgConf->settings = [
 	'wikitech' => true, // Not behind Varnish
 ],
 
-// T179914
-'wgMinervaDownloadIcon' => [
-	'default' => true,
-],
 'wgMinervaCustomLogos' => [
 	'default' => [],
 	'wikipedia-english' => [
