@@ -14247,10 +14247,6 @@ $wgConf->settings = [
 	'wikipedia' => true,
 ],
 
-'wmgPopupsBetaFeature' => [
-	'default' => false,
-],
-
 'wgPopupsStatsvSamplingRate' => [
 	// Careful! This value should not be increased without coordination with the
 	// Operations and/or Analytics teams.
