@@ -227,11 +227,6 @@ if ( !$globals ) {
 	$wikiTags[] = $wgConf->get( 'wgLanguageCode', $wgDBname, $dbSuffix, $confParams, $wikiTags );
 	$globals = $wgConf->getAll( $wgDBname, $dbSuffix, $confParams, $wikiTags );
 
-	// FIXME: Workaround broken getAll() which ignores `null` as value. – T192855
-	$globals['wgTidyConfig'] = $wgConf->get(
-		'wgTidyConfig', $wgDBname, $dbSuffix, $confParams, $wikiTags
-	);
-
 	# Save cache
 	@mkdir( '/tmp/mw-cache-' . $wmgVersionNumber );
 	$tmpFile = tempnam( '/tmp/', "conf-$wmgVersionNumber-$wgDBname" );
@@ -3677,7 +3672,6 @@ if ( $wmgUseParserMigration ) {
 	$wgParserMigrationTidiers = [
 		[
 			'driver' => 'RaggettInternalHHVM',
-			'tidyConfigFile' => $wgTidyConf,
 		],
 		[
 			'driver' => 'RemexHtml',
