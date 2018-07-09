@@ -1964,24 +1964,16 @@ if ( $wmgUseGlobalAbuseFilters ) {
 	$wgAbuseFilterIsCentral = ( $wgDBname === $wgAbuseFilterCentralDB );
 }
 
+# PdfHandler
 if ( $wmgUsePdfHandler ) {
 	wfLoadExtension( 'PdfHandler' );
 	$wgPdfProcessor = '/usr/local/bin/mediawiki-firejail-ghostscript';
 	$wgPdfPostProcessor = '/usr/local/bin/mediawiki-firejail-convert';
 }
 
+# WikiEditor
 wfLoadExtension( 'WikiEditor' );
-
-// Disable experimental things
-$wgWikiEditorFeatures['preview'] =
-	$wgWikiEditorFeatures['previewDialog'] =
-	$wgWikiEditorFeatures['publish'] = [ 'global' => false, 'user' => true ]; // Hidden from prefs view
-$wgHiddenPrefs[] = 'wikieditor-preview';
-$wgHiddenPrefs[] = 'wikieditor-previewDialog';
-$wgHiddenPrefs[] = 'wikieditor-publish';
-
 $wgDefaultUserOptions['usebetatoolbar'] = 1;
-$wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
 
 # LocalisationUpdate
 wfLoadExtension( 'LocalisationUpdate' );
