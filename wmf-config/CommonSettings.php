@@ -558,7 +558,6 @@ if ( $wmgPrivateWikiUploads ) {
 	$wgFileExtensions[] = 'dv';
 	$wgFileExtensions[] = 'avi';
 	$wgFileExtensions[] = 'mov';
-	$wgFileExtensions[] = 'mp3'; // for Jay for fundraising files
 	$wgFileExtensions[] = 'aif'; // "
 	$wgFileExtensions[] = 'aiff'; // "
 
