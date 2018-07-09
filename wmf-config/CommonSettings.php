@@ -366,12 +366,12 @@ if ( !isset( $wgLocaltimezone ) ) {
 }
 
 if ( $wgLocaltimezone !== 'UTC' ) {
-	$wgLocalTZOffset = timezone_offset_get(
+	$wgLocalTZoffset = timezone_offset_get(
 		timezone_open( $wgLocaltimezone ),
 		date_create( 'now', timezone_open( 'UTC' ) )
 	) / 60;
 } else {
-	$wgLocalTZOffset = 0;
+	$wgLocalTZoffset = 0;
 }
 
 $wgShowIPinHeader = false;
