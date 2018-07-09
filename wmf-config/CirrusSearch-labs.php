@@ -37,7 +37,7 @@ $wgCirrusSearchMaxShardsPerNode = [];
 # Override prod configuration, there is only one cluster in beta
 $wgCirrusSearchDefaultCluster = 'eqiad';
 # Don't specially configure cluster for more like queries in beta
-$wgCirrusSearchFullTextClusterOverrides = [];
+$wgCirrusSearchClusterOverrides = [];
 # write to all configured clusters, there should only be one in labs
 $wgCirrusSearchWriteClusters = null;
 
