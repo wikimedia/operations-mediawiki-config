@@ -6353,8 +6353,10 @@ $wgConf->settings = [
 		101 => 'লেখক_আলাপ', // Author talk
 		106 => 'প্রবেশদ্বার', // Portal
 		107 => 'প্রবেশদ্বার_আলাপ',
+		108 => 'প্রকাশক', // T199028 - Publisher
+		109 => 'প্রকাশক_আলোচনা', // T199028 - Publisher talk
 		114 => 'অনুবাদ', // T114623 - Translation
-		115 => 'অনুবাদ আলোচনা',
+		115 => 'অনুবাদ_আলোচনা',
 	],
 	'brwikisource' => [
 		104 => 'Oberour',
@@ -7949,7 +7951,7 @@ $wgConf->settings = [
 	'+aswikisource' => [ 104 => 1, 106 => 1 ], // T45129
 	'+bgwiki' => [ 100 => 1, 101 => 0 ],
 	'+bgwikisource' => [ 100 => 1 ],
-	'+bnwikisource' => [ 100 => 1, 106 => 1, 114 => 1 ], // T178041 - portal, author, translation
+	'+bnwikisource' => [ 100 => 1, 106 => 1, 108 => 1, 114 => 1 ], // T178041 - portal, author, translation and T199028 - Publisher
 	'+brwikisource' => [ 100 => 1, 104 => 1 ],
 	'+cawikisource' => [ 104 => 1, 106 => 1 ],
 	'+cswiki' => [ 100 => 1, 101 => 0, 102 => 1 ],
