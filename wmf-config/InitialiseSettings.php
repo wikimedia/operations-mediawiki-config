@@ -20656,7 +20656,7 @@ $wgConf->settings = [
 
 'wgChangeTagsSchemaMigrationStage' => [
 	'default' => MIGRATION_OLD,
-	'fawikisource' => MIGRATION_WRITE_BOTH,
+	'wikisource' => MIGRATION_WRITE_BOTH,
 	'wikivoyage' => MIGRATION_WRITE_BOTH,
 	'wikibooks' => MIGRATION_WRITE_BOTH,
 ],
