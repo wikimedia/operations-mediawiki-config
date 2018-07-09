@@ -31,10 +31,6 @@ if ( $wmgCirrusSearchDefaultCluster === 'local' ) {
 }
 $wgCirrusSearchWriteClusters = $wmgCirrusSearchWriteClusters;
 $wgCirrusSearchClusterOverrides = $wmgCirrusSearchClusterOverrides;
-// TODO: remove, transitional config hack to support
-// var name change and avoid warnings with interwiki
-// (textcat) searches
-$wgCirrusSearchFullTextClusterOverrides = $wmgCirrusSearchClusterOverrides;
 
 # Turn off leading wildcard matches, they are a very slow and inefficient query
 $wgCirrusSearchAllowLeadingWildcard = false;
@@ -103,7 +99,6 @@ $wgCirrusSearchReplicas = $wmgCirrusSearchReplicas;
 $wgCirrusSearchMaxShardsPerNode = $wmgCirrusSearchMaxShardsPerNode;
 $wgCirrusSearchPreferRecentDefaultDecayPortion = $wmgCirrusSearchPreferRecentDefaultDecayPortion;
 $wgCirrusSearchWeights = array_merge( $wgCirrusSearchWeights, $wmgCirrusSearchWeightsOverrides );
-$wgCirrusSearchPowerSpecialRandom = $wmgCirrusSearchPowerSpecialRandom;
 $wgCirrusSearchAllFields = $wmgCirrusSearchAllFields;
 $wgCirrusSearchNamespaceWeights = $wmgCirrusSearchNamespaceWeightOverrides +
 	$wgCirrusSearchNamespaceWeights;
@@ -137,7 +132,6 @@ if ( isset( $wgCirrusSearchShardCount['eqiad'] ) ) {
 // Commons is special
 if ( $wgDBname == 'commonswiki' ) {
 	$wgCirrusSearchNamespaceMappings[ NS_FILE ] = 'file';
-	$wgCirrusSearchReplicaCount['file'] = 2;
 } elseif ( $wgDBname == 'officewiki' || $wgDBname == 'foundationwiki' ) {
 	// T94856 - makes searching difficult for locally uploaded files
 	// T76957 - doesn't make sense to have Commons files on foundationwiki search
@@ -238,7 +232,7 @@ $wgCirrusSearchNewCrossProjectPage = true;
 // Display X results per crossproject
 $wgCirrusSearchNumCrossProjectSearchResults = 1;
 // Control ordering of crossproject searchresults blocks
-// Must be a valid profile defined in $wgCirrusSearchCrossProjectBlockScoreProfiles
+// Must be a valid profile defined in $wgCirrusSearchCrossProjectBlockScorerProfiles
 $wgCirrusSearchCrossProjectOrder = $wmgCirrusSearchCrossProjectOrder;
 // Set overridden interwiki prefixes
 $wgCirrusSearchInterwikiPrefixOverrides = $wmgCirrusSearchInterwikiPrefixOverrides;

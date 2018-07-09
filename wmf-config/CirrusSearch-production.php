@@ -55,17 +55,6 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 
 $wgCirrusSearchConnectionAttempts = 3;
 
-$wgCirrusSearchBackup['backups'] = [
-	'type' => 'swift',
-	'swift_url' => $wmfSwiftEqiadConfig['cirrusAuthUrl'],
-	'swift_container' => 'global-data-elastic-backups',
-	'swift_username' => $wmfSwiftEqiadConfig['cirrusUser'],
-	'swift_password' => $wmfSwiftEqiadConfig['cirrusKey'],
-	'max_snapshot_bytes_per_sec' => '10mb',
-	'compress' => false,
-	'chunk_size' => '1g',
-];
-
 $wgCirrusSearchInterwikiCacheTime = 60;
 
 if ( $wgDBname == 'enwiki' ) {
@@ -103,9 +92,6 @@ $wgCirrusSearchRecycleCompletionSuggesterIndex = $wmgCirrusSearchRecycleCompleti
 
 // cache morelike queries to ObjectCache for 24 hours
 $wgCirrusSearchMoreLikeThisTTL = 86400;
-
-// This was causing race conditions and is a temporary fix. A better fix is coming soon (T133793)
-$wgCirrusSearchCreateFrozenIndex = false;
 
 // Index deletes into archive
 $wgCirrusSearchIndexDeletes = $wmgCirrusSearchIndexDeletes;
