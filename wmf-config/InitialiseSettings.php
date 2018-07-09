@@ -18864,10 +18864,6 @@ $wgConf->settings = [
 	],
 ],
 
-'wmgCirrusSearchPowerSpecialRandom' => [
-	'default' => false,
-],
-
 'wmgCirrusSearchSimilarityProfile' => [
 	'default' => 'wmf_defaults',
 	// Uses the lang tag, list of spaceless languages
