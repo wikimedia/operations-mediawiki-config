@@ -13,8 +13,6 @@ if ( $wmgMobileFrontend ) {
 // T114552
 $wgMobileFrontendLogo = $wgLogo;
 
-$wgMFForceSecureLogin = false;
-
 // T49647
 $wgHooks['EnterMobileMode'][] = function () {
 	global $wgCentralAuthCookieDomain, $wgHooks;
