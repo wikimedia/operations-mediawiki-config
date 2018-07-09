@@ -316,9 +316,6 @@ $wgImportSources = false;
 include "$wmfConfigDir/import.php";
 $wgHooks['ImportSources'][] = 'wmfImportSources';
 
-// Reenable Preview and Changes tabs for wikieditor preview
-$wgHiddenPrefs = array_diff( $wgHiddenPrefs, [ 'wikieditor-preview' ] );
-
 $wgAuthManagerAutoConfig['preauth'][GuanacoProvider::class] = [
 	'class' => GuanacoProvider::class,
 	'sort' => 0,
