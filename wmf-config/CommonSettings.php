@@ -360,15 +360,6 @@ if ( !isset( $wgLocaltimezone ) ) {
 	$wgLocaltimezone = 'UTC';
 }
 
-if ( $wgLocaltimezone !== 'UTC' ) {
-	$wgLocalTZOffset = timezone_offset_get(
-		timezone_open( $wgLocaltimezone ),
-		date_create( 'now', timezone_open( 'UTC' ) )
-	) / 60;
-} else {
-	$wgLocalTZOffset = 0;
-}
-
 $wgShowIPinHeader = false;
 $wgRCMaxAge = 30 * 86400;
 
