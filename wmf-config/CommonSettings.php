@@ -1903,8 +1903,6 @@ if ( $wmgUseCollection ) {
 		'rdf2text' => 'TXT',
 	];
 
-	$wgLicenseURL = "https://creativecommons.org/licenses/by-sa/3.0/";
-
 	if ( !$wmgUseElectronPdfService ) {
 		$wgCollectionShowRenderNotes[] = 'coll-rendering_finished_note_article_rdf2latex';
 	}
