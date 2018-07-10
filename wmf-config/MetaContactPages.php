@@ -19,6 +19,7 @@ $wgContactConfig['affcomusergroup'] = [
 	'SenderName' => 'User group contact form on ' . $wgSitename,
 	'SenderEmail' => null,
 	'RequireDetails' => true,
+	'MustBeLoggedIn' => true,
 	'IncludeIP' => false,
 	'RLStyleModules' => [
 		'ext.wikimediamessages.contactpage.affcomusergroup',
