@@ -693,11 +693,7 @@ if ( $wmgUseCORS ) {
 	];
 }
 
-wfLoadSkins( [ 'Vector', 'MonoBook', 'Modern', 'CologneBlue' ] );
-
-if ( $wmgUseTimeless ) {
-	wfLoadSkin( 'Timeless' ); // T154371
-}
+wfLoadSkins( [ 'Vector', 'MonoBook', 'Modern', 'CologneBlue', 'Timeless' ] );
 
 // The Print logo for Vector should use the same wordmark as Minerva
 // This avoids duplicate config entries (T169732)

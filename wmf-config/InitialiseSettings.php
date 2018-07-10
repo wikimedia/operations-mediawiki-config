@@ -20590,10 +20590,6 @@ $wgConf->settings = [
 	'commonswiki' => [ NS_FILE ],
 ],
 
-'wmgUseTimeless' => [
-	'default' => true,
-],
-
 // T152540
 'wgFragmentMode' => [
 	'default' => [ 'html5', 'legacy' ],
