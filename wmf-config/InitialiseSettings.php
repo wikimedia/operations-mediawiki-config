@@ -14116,6 +14116,7 @@ $wgConf->settings = [
 	'dewiki' => 'https://commons.wikimedia.org/wiki/Special:ImportFile',
 	'fawiki' => 'https://commons.wikimedia.org/wiki/Special:ImportFile',
 	'mediawikiwiki' => 'https://commons.wikimedia.org/wiki/Special:ImportFile',
+	'sourceswiki' => 'https://commons.wikimedia.org/wiki/Special:ImportFile', // T198594
 	'test2wiki' => 'https://test.wikipedia.org/wiki/Special:ImportFile',
 ],
 
