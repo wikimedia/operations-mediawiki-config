@@ -14185,6 +14185,11 @@ $wgConf->settings = [
 	'wikipedia' => 'restbaseHTML',
 ],
 
+// T197719 Enable PagePreviews for all newly created accounts
+'wgPopupsOptInStateForNewAccounts' => [
+	'default' => '1'
+],
+
 // T160081 (and others): Make sure that Page Previews can detect the many, many
 // variants of the NavPopups gadget.
 //
