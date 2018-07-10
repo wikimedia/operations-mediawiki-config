@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e3df119e_1070d895",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 14187,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-07-10T20:24:24Z",
+      "side": 1,
+      "message": "Note, given Popups is only enabled on \u0027wikipedia\u0027 project, we\u0027ll need to remember this to be the case in future if we roll out to other projects.\n\nIf we want to be safe we might consider setting this to \u0027wikipedia\u0027 \u003d\u003e \u00271\u0027",
+      "revId": "7692229788b37a6e3ab1f60cf4aadc69af7ac643",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
