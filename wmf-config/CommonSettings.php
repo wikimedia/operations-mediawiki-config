@@ -356,10 +356,6 @@ $day = $tmarray['wday'];
 
 $wgEmergencyContact = 'noc@wikipedia.org';
 
-if ( !isset( $wgLocaltimezone ) ) {
-	$wgLocaltimezone = 'UTC';
-}
-
 $wgShowIPinHeader = false;
 $wgRCMaxAge = 30 * 86400;
 
