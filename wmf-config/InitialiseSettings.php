@@ -20008,10 +20008,6 @@ $wgConf->settings = [
 	'donatewiki' => false,
 ],
 
-'wgTidyConfig' => [
-	'default' => [ 'driver' => 'RemexHtml' ],
-],
-
 // Cache ResourceLoader modules in localStorage
 'wgResourceLoaderStorageEnabled' => [
 	'default' => true,
