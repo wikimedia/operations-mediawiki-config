@@ -16244,8 +16244,8 @@ $wgConf->settings = [
 
 'wgMFRemovableClasses' => [
 	'default' => [
-		'base' => [ '.navbox', '.nomobile' ],
-		'beta' => [ '.navbox', '.nomobile' ],
+		'base' => [ '.navbox', '.nomobile', '.mbox-image' ],
+		'beta' => [ '.navbox', '.nomobile', '.mbox-image' ],
 		'HTML' => [],
 	],
 ],
