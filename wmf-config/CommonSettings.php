@@ -1076,6 +1076,7 @@ if ( $wmgUseContactPage ) {
 		'SenderName' => 'Contact Form on ' . $wgSitename,
 		'RequireDetails' => false,
 		'IncludeIP' => false,
+		'MustBeLoggedIn' => false,
 		'RLModules' => [],
 		'RLStyleModules' => [],
 		'AdditionalFields' => [
