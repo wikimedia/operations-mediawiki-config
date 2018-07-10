@@ -349,11 +349,6 @@ $wgHooks['APIQuerySiteInfoGeneralInfo'][] = function ( $module, &$data ) {
 	];
 };
 
-# used for mysql/search settings
-$tmarray = getdate( time() );
-$hour = $tmarray['hours'];
-$day = $tmarray['wday'];
-
 $wgEmergencyContact = 'noc@wikipedia.org';
 
 $wgShowIPinHeader = false;
