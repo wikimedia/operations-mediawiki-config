@@ -263,6 +263,8 @@ $wgConf->settings = [
 
 # wgLocaltimezone @{
 'wgLocaltimezone' => [
+	'default' => 'UTC',
+
 	'alswiki' => 'Europe/Berlin',
 	'amwikimedia' => 'Asia/Yerevan', // T176042
 	'arbcom_cswiki' => 'Europe/Prague', // T151731
