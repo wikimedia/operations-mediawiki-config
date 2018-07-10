@@ -1712,24 +1712,6 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function ( $response, $user, $
 	}
 };
 
-$wgHooks['PrefsEmailAudit'][] = function ( $user, $old, $new ) {
-	if ( $user->isAllowed( 'delete' ) ) {
-		global $wgRequest;
-		$headers = function_exists( 'apache_request_headers' ) ? apache_request_headers() : [];
-
-		$logger = LoggerFactory::getInstance( 'badpass' );
-		$logger->info( "Email changed in prefs for sysop '" .
-			$user->getName() .
-			"' from '$old' to '$new'" .
-			" - " . $wgRequest->getIP() .
-			# " - " . serialize( $headers )
-			" - " . @$headers['X-Forwarded-For'] .
-			' - ' . @$headers['User-Agent']
-		);
-	}
-	return true;
-};
-
 // log sysop password changes
 $wgHooks['ChangeAuthenticationDataAudit'][] = function ( $req, $status ) {
 	$user = User::newFromName( $req->username );
