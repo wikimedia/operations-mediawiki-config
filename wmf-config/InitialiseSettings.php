@@ -971,6 +971,7 @@ $wgConf->settings = [
 	// Wikibooks
 	'arwikibooks' => '/static/images/project-logos/arwikibooks.png',
 	'azwikibooks' => '/static/images/project-logos/azwikibooks.png',  // T54019
+	'bewikibooks' => '/static/images/project-logos/bewikibooks.png',
 	'bgwikibooks' => '/static/images/project-logos/bgwikibooks.png',
 	'bnwikibooks' => '/static/images/project-logos/bnwikibooks.png',
 	'cawikibooks' => '/static/images/project-logos/cawikibooks.png',
