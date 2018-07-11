@@ -3635,6 +3635,7 @@ if ( $wmgUseParserMigration ) {
 	$wgParserMigrationTidiers = [
 		[
 			'driver' => 'RaggettInternalHHVM',
+			'tidyConfigFile' => $wgTidyConf,
 		],
 		[
 			'driver' => 'RemexHtml',
