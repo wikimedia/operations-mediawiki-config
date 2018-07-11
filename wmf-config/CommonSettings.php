@@ -1378,7 +1378,6 @@ if ( $wmgEnableCaptcha ) {
 }
 
 if ( extension_loaded( 'wikidiff2' ) ) {
-	$wgExternalDiffEngine = 'wikidiff2';
 	$wgDiff = false;
 }
 
