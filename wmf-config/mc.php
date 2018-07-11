@@ -64,8 +64,12 @@ $wgObjectCaches['memcached+mcrouter'] = [
 	'reportDupes' => false
 ];
 
-$wgMainCacheType = 'memcached+mcrouter'; // nutcracker for reads; write to both
-$wgMainWANCache = 'wancache-main-mcrouter';
+if ( in_array( $wgDBname, [ 'testwiki', 'test2wiki', 'mediawikiwiki' ], true ) ) {
+	$wgMainCacheType = 'memcached+mcrouter'; // nutcracker for reads; write to both
+	$wgMainWANCache = 'wancache-main-mcrouter';
+} else {
+	$wgMainCacheType = 'memcached-pecl'; // nutcracker only
+}
 
 $wgWANObjectCaches['wancache-main-mcrouter'] = [
 	'class'   => 'WANObjectCache',
