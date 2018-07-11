@@ -937,7 +937,6 @@ if ( $wmgUseFundraisingTranslateWorkflow ) {
 
 if ( $wmgUseGadgets ) {
 	wfLoadExtension( 'Gadgets' );
-	$wgGadgetsCacheType = CACHE_ACCEL;
 }
 
 if ( $wmgUseTimedMediaHandler ) {
