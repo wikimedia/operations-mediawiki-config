@@ -19,4 +19,15 @@ class InitialiseSettingsTest extends WgConfTestCase {
 		return [ '1.5x', '2x' ];
 	}
 
+	///
+	/// wgExtraNamespaces
+	///
+	public function testwgExtraNamespaces() {
+		$wgConf = $this->loadWgConf( 'unittest' );
+		foreach ( $wgConf->settings['wgExtraNamespaces'] as $db => $entry ) {
+			foreach ( $entry as $nb => $ns ) {
+				$this->assertFalse( strpos( $ns, ' ' ), "Unexpected spaces in '$ns' namespace title for $db, use underscores instead" );
+			}
+		}
+	}
 }
