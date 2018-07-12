@@ -715,7 +715,7 @@ $wgLBFactoryConf = [
 # Also keep these read only messages if eqiad is not the active dc, to prevent accidental writes
 # getting trasmmitted from codfw to eqiad when the master dc is eqiad.
 'readOnlyBySection' => [
-	# 's1'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
+	's1'      => 'Scheduled maintenance on enwiki from 06:00-06:30 UTC. Database in read-only mode.',
 	# 's2'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
 	# 'DEFAULT' => 'This request is served by a passive datacenter. If you see this something is really wrong.', # s3
 	# 's4'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
