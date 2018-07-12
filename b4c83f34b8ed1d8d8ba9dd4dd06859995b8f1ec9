@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c26997ac_21ede344",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 6120,
+      "author": {
+        "id": 3963
+      },
+      "writtenOn": "2018-07-12T21:53:02Z",
+      "side": 1,
+      "message": "and here",
+      "range": {
+        "startLine": 6120,
+        "startChar": 17,
+        "endLine": 6120,
+        "endChar": 18
+      },
+      "revId": "b4c83f34b8ed1d8d8ba9dd4dd06859995b8f1ec9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "269ae651_ca2df67f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 6120,
+      "author": {
+        "id": 3963
+      },
+      "writtenOn": "2018-07-12T21:53:02Z",
+      "side": 1,
+      "message": "I still see a space here",
+      "range": {
+        "startLine": 6120,
+        "startChar": 22,
+        "endLine": 6120,
+        "endChar": 23
+      },
+      "revId": "b4c83f34b8ed1d8d8ba9dd4dd06859995b8f1ec9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
