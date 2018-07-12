@@ -16,6 +16,24 @@
       "revId": "1f3a39aaa9b81fbe14fdfa17738e09ff9d5671b4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7f17a9ad_0f3f6e87",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-07-12T18:31:23Z",
+      "side": 1,
+      "message": "good catch! Ill make another patch",
+      "parentUuid": "0fc7c8e6_2e30db59",
+      "revId": "1f3a39aaa9b81fbe14fdfa17738e09ff9d5671b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
