@@ -103,8 +103,8 @@ $wgLBFactoryConf = [
 
 'sectionLoads' => [
 	's1' => [
-		'db1052' => 0,      # B3 2.8TB  96GB, master
-		'db1067' => 50,     # C6 2.8TB 160GB, old master # candidate master
+		'db1067' => 0,     # C6 2.8TB 160GB, # master
+		# 'db1052' => 0,      # B3 2.8TB  96GB, old master
 		'db1080' => 200,    # A2 3.6TB 512GB, api
 		'db1083' => 500,    # B1 3.6TB 512GB # future candidate master T197069#4418823
 		'db1089' => 500,    # C3 3.6TB 512GB # temporary candidate master T197069#4418823
