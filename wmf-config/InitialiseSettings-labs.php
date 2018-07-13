@@ -712,6 +712,10 @@ function wmfLabsSettings() {
 			'default' => MIGRATION_WRITE_BOTH,
 		],
 
+		'wgTagStatisticsNewTable' => [
+			'default' => true,
+		],
+
 		'wmgUseJADE' => [
 			'default' => true,
 		],
