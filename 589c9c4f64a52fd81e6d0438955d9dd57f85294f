@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ea4406b8_b3c0081e",
+        "filename": "tests/InitialiseSettingsTest.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2018-07-13T18:45:05Z",
+      "side": 1,
+      "message": "one tab is enough",
+      "revId": "589c9c4f64a52fd81e6d0438955d9dd57f85294f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
