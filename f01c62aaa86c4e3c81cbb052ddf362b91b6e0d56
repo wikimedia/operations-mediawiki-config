@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3cbde7dd_c9bc9a19",
+        "filename": "tests/InitialiseSettingsTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 3963
+      },
+      "writtenOn": "2018-07-13T20:00:02Z",
+      "side": 1,
+      "message": "@Dereckson, do I need to add other params to the function, like line 14 ? I can\u0027t find doc about it upstream",
+      "revId": "f01c62aaa86c4e3c81cbb052ddf362b91b6e0d56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
