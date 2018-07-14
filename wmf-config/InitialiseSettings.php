@@ -268,6 +268,7 @@ $wgConf->settings = [
 	'wikimania2016wiki' => [ 'wm2016' ],
 	'wikimania2017wiki' => [ 'wm2017' ],
 	'wikimania2018wiki' => [ 'wm2018' ],
+	'wikimaniawiki' => [ 'wm' ],
 ],
 
 # wgLocaltimezone @{
@@ -1253,6 +1254,7 @@ $wgConf->settings = [
 	'wikimania2016wiki' => '/static/images/project-logos/wikimania2016wiki.png',
 	'wikimania2017wiki' => '/static/images/project-logos/wikimania2017wiki.png',  // T122062
 	'wikimania2018wiki' => '/static/images/project-logos/wikimania2018wiki.png',  // T173042
+	'wikimaniawiki' => '/static/images/project-logos/wikimaniawiki.png',
 	'wikimaniateamwiki' => '/static/images/project-logos/wikimaniateamwiki.png',  // T50376
 ],
 # @} end of wgLogo
@@ -1732,6 +1734,7 @@ $wgConf->settings = [
 	'test2wiki' => [ '1.5x' => '/static/images/project-logos/test2wiki-1.5x.png', '2x' => '/static/images/project-logos/test2wiki-2x.png' ],
 	'votewiki' => [ '1.5x' => '/static/images/project-logos/votewiki-1.5x.png', '2x' => '/static/images/project-logos/votewiki-2x.png' ],
 	'wikimania2018wiki' => [ '1.5x' => '/static/images/project-logos/wikimania2018wiki-1.5x.png', '2x' => '/static/images/project-logos/wikimania2018wiki-2x.png' ], // T194340
+	'wikimaniawiki' => [ '1.5x' => '/static/images/project-logos/wikimaniawiki-1.5x.png', '2x' => '/static/images/project-logos/wikimaniawiki-2x.png' ], // T194340
 ],
 # @} end of wgLogoHD
 
@@ -2000,6 +2003,7 @@ $wgConf->settings = [
 	'wikimania2016wiki' => '//wikimania2016.wikimedia.org',
 	'wikimania2017wiki' => '//wikimania2017.wikimedia.org',
 	'wikimania2018wiki' => '//wikimania2018.wikimedia.org',
+	'wikimaniawiki' => '//wikimania2019.wikimedia.org',
 	'wikimaniateamwiki' => '//wikimaniateam.wikimedia.org',
 	'zerowiki' => '//zero.wikimedia.org'
 ],
@@ -2090,6 +2094,7 @@ $wgConf->settings = [
 	'wikimania2016wiki' => 'https://wikimania2016.wikimedia.org',
 	'wikimania2017wiki' => 'https://wikimania2017.wikimedia.org',
 	'wikimania2018wiki' => 'https://wikimania2018.wikimedia.org',
+	'wikimaniawiki' => 'https://wikimania2019.wikimedia.org',
 	'wikimaniateamwiki' => 'https://wikimaniateam.wikimedia.org',
 	'zerowiki' => 'https://zero.wikimedia.org',
 ],
@@ -7740,6 +7745,21 @@ $wgConf->settings = [
 		'IRC-url',
 		'Contact-url',
 	],
+	'wikimaniawiki' => [
+		'pagetitle',
+		'pagetitle-view-mainpage',
+		'Volunteers-url',
+		'Attendees-url',
+		'Press-url',
+		'Sponsors-url',
+		'Questions-url',
+		'FAQ-url',
+		'Site Map-url',
+		'Registration-url',
+		'Schedule-url',
+		'IRC-url',
+		'Contact-url',
+	],
 	'zhwiki' => [
 		'pagetitle-view-mainpage',
 	],
@@ -11982,6 +12002,7 @@ $wgConf->settings = [
 	'wikimania2016wiki' => [ 'en', 'meta', 'wm2011', 'wm2012', 'wm2013', 'wm2014', 'wm2015' ],
 	'wikimania2017wiki' => [ 'en', 'meta', 'wm2011', 'wm2012', 'wm2013', 'wm2014', 'wm2015', 'wm2016' ],
 	'wikimania2018wiki' => [ 'en' , 'meta', 'wm2011', 'wm2012', 'wm2013', 'wm2014', 'wm2015', 'wm2016', 'wm2017' ],
+	'wikimaniawiki' => [ 'en' , 'meta', 'wm2011', 'wm2012', 'wm2013', 'wm2014', 'wm2015', 'wm2016', 'wm2017', 'wm2018' ],
 	'wuuwiki' => [ 'en', 'th', 'fr', 'zh', ], // T19484
 	'xhwiki' => [ 'en' ], // T53327
 	'zhwikiquote' => [ 'w', 'b', 'wikt', 's', 'meta', 'commons' ],
@@ -17477,6 +17498,7 @@ $wgConf->settings = [
 	'wikimania2016wiki' => true,
 	'wikimania2017wiki' => true,
 	'wikimania2018wiki' => true,
+	'wikimaniawiki' => true,
 ],
 'wmgTranslateWorkflowStates' => [
 	'default' => false,
@@ -17568,6 +17590,7 @@ $wgConf->settings = [
 	'wikimania2016wiki' => true,
 	'wikimania2017wiki' => true,
 	'wikimania2018wiki' => true,
+	'wikimaniawiki' => true,
 ],
 'wmgUseVips' => [
 	'default' => true,
