@@ -1143,6 +1143,7 @@ $wgConf->settings = [
 	'ruwikiversity' => '/static/images/project-logos/ruwikiversity.png',
 	'slwikiversity' => '/static/images/project-logos/slwikiversity.png',
 	'svwikiversity' => '/static/images/project-logos/svwikiversity.png',
+	'zhwikiversity' => '/static/images/project-logos/zhwikiversity.png',
 
 	// Wikivoyage
 	'bnwikivoyage' => '/static/images/project-logos/bnwikivoyage.png',
@@ -1691,6 +1692,7 @@ $wgConf->settings = [
 	'ruwikiversity' => [ '1.5x' => '/static/images/project-logos/ruwikiversity-1.5x.png', '2x' => '/static/images/project-logos/ruwikiversity-2x.png' ], // T150618
 	'slwikiversity' => [ '1.5x' => '/static/images/project-logos/slwikiversity-1.5x.png', '2x' => '/static/images/project-logos/slwikiversity-2x.png' ], // T150618
 	'svwikiversity' => [ '1.5x' => '/static/images/project-logos/svwikiversity-1.5x.png', '2x' => '/static/images/project-logos/svwikiversity-2x.png' ],
+	'zhwikiversity' => [ '1.5x' => '/static/images/project-logos/zhwikiversity-1.5x.png', '2x' => '/static/images/project-logos/zhwikiversity-2x.png' ],
 
 	# Wikivoyage
 	'bnwikivoyage' => [ '1.5x' => '/static/images/project-logos/bnwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/bnwikivoyage-2x.png' ],
@@ -2575,6 +2577,7 @@ $wgConf->settings = [
 	'zerowiki' => 'Wikipedia',
 	'zh_min_nanwikisource' => 'Wiki Tô·-su-kóan',
 	'zh_classicalwiki' => '維基大典',
+	'zhwikiversity' => '維基學院',
 	'zhwikivoyage' => '维基导游', // T61077
 	'zh_yuewiki' => '維基百科',
 ],
