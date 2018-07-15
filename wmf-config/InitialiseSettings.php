@@ -6727,6 +6727,8 @@ $wgConf->settings = [
 		107 => 'Discussion_Thésaurus',
 		108 => 'Projet',
 		109 => 'Discussion_Projet',
+		110 => 'Reconstruction', // T199631
+		111 => 'Discussion Reconstruction',
 	],
 	'gawiktionary' => [
 		100 => 'Aguisín',
