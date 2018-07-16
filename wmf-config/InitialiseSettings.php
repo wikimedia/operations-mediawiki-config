@@ -57,6 +57,13 @@ $wgConf->settings = [
 	'wiktionary' => false,
 ],
 
+'wgCapitalLinkOverrides' => [
+	'zhwiktionary' => [
+		10 => true,
+		828 => true,
+	],
+],
+
 'wmgEnableLandingCheck' => [
 	'default' => false,
 	'donatewiki' => true,
