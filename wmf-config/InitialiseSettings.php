@@ -18460,6 +18460,7 @@ $wgConf->settings = [
 	'dvwiki' => true,       // T71860
 	'dvwiktionary' => true, // T71860
 	'hewikisource' => true, // T62939
+	'mywiki' => true,       // T196219
 ],
 
 'wmgULSEventLogging' => [
