@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /* vim: set sw=4 ts=4 noet foldmarker=@{,@} foldmethod=marker: */
 
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
@@ -18458,6 +18458,7 @@ $wgConf->settings = [
 	'dvwiki' => true,       // T71860
 	'dvwiktionary' => true, // T71860
 	'hewikisource' => true, // T62939
+	'mywiki' => true,       // T196219
 ],
 
 'wmgULSEventLogging' => [
