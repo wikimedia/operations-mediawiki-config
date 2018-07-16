@@ -1,4 +1,4 @@
-<?php
+hp
 /* vim: set sw=4 ts=4 noet foldmarker=@{,@} foldmethod=marker: */
 
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
@@ -6896,6 +6896,8 @@ $wgConf->settings = [
 		101 => 'Обговорення_додатка', // appendix talk
 		102 => 'Індекс', // index
 		103 => 'Обговорення_індексу', // index talk
+		106 => 'อรรถาภิธาน', // Thesaurus - T198585
+		107 => 'คุยเรื่องอรรถาภิธาน', // Thesaurus_talk
 	],
 	'wawiktionary' => [
 		100 => 'Rawete', // T185289
