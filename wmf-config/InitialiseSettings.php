@@ -20652,6 +20652,7 @@ $wgConf->settings = [
 	'wikisource' => MIGRATION_WRITE_BOTH,
 	'wikivoyage' => MIGRATION_WRITE_BOTH,
 	'wikibooks' => MIGRATION_WRITE_BOTH,
+	'frwiki' => MIGRATION_WRITE_BOTH,
 ],
 
 'wmgUseReadingLists' => [
