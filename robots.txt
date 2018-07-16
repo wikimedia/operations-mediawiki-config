@@ -267,10 +267,6 @@ Disallow: /wiki/Keskustelu_käyttäjästä:
 Disallow: /wiki/Wikipedia:Yll%C3%A4pit%C3%A4j%C3%A4t/
 Disallow: /wiki/Wikipedia:Ylläpitäjät/
 #
-# frwiki:
-Disallow: /wiki/Wikip%C3%A9dia:Pages_%C3%A0_supprimer/
-Disallow: /wiki/Wikip%C3%A9dia:Pages_soup%C3%A7onn%C3%A9es_de_violation_de_copyright/
-#
 # hewiki:
 Disallow: /wiki/%D7%9E%D7%99%D7%95%D7%97%D7%93:Search
 Disallow: /wiki/%D7%9E%D7%99%D7%95%D7%97%D7%93%3ASearch
