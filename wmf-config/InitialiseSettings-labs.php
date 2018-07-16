@@ -727,7 +727,6 @@ function wmfLabsSettings() {
 		'wgOresUiEnabled' => [
 			'default' => true,
 			'wikidatawiki' => false,
-			'enwiki' => false,
 		],
 		'wgOresModels' => [
 			'default' => [
@@ -738,11 +737,11 @@ function wmfLabsSettings() {
 				'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
 			],
 			'enwiki' => [
-				'damaging' => [ 'enabled' => false, 'excludeBots' => true ],
-				'goodfaith' => [ 'enabled' => false, 'excludeBots' => true ],
+				'damaging' => [ 'enabled' => true, 'excludeBots' => true ],
+				'goodfaith' => [ 'enabled' => true, 'excludeBots' => true ],
 				'reverted' => [ 'enabled' => false ],
 				'wp10' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'cleanupParent' => true ],
-				'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true ],
+				'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true ],
 			],
 		],
 		'wgOresExcludeBots' => [
