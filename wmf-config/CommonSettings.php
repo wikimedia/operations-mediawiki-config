@@ -609,7 +609,6 @@ if ( $wmgUseCORS ) {
 		'*.wikivoyage.org',
 		'www.mediawiki.org',
 		'm.mediawiki.org',
-		'wikimediafoundation.org',
 		'advisory.wikimedia.org',
 		'affcom.wikimedia.org',
 		'auditcom.wikimedia.org',
@@ -1157,7 +1156,7 @@ if ( $wgDBname === 'nostalgiawiki' ) {
 	wfLoadSkin( 'Nostalgia' );
 }
 
-$wgFooterIcons['copyright']['copyright'] = '<a href="https://wikimediafoundation.org/">' .
+$wgFooterIcons['copyright']['copyright'] = '<a href="https://foundation.wikimedia.org/">' .
 	'<img src="/static/images/wikimedia-button.png" ' .
 		'srcset="' .
 			'/static/images/wikimedia-button-1.5x.png 1.5x, ' .
@@ -1352,7 +1351,7 @@ if ( $wmgEnableCaptcha ) {
 	$wgCaptchaStorageClass = 'CaptchaCacheStore';
 	$wgCaptchaClass = 'FancyCaptcha';
 	$wgCaptchaWhitelist =
-		'#^(https?:)?//([.a-z0-9-]+\\.)?((wikimedia|wikipedia|wiktionary|wikiquote|wikibooks|wikisource|wikispecies|mediawiki|wikimediafoundation|wikinews|wikiversity|wikivoyage|wikidata|wmflabs)\.org'
+		'#^(https?:)?//([.a-z0-9-]+\\.)?((wikimedia|wikipedia|wiktionary|wikiquote|wikibooks|wikisource|wikispecies|mediawiki|wikinews|wikiversity|wikivoyage|wikidata|wmflabs)\.org'
 		. '|dnsstuff\.com|completewhois\.com|wikimedia\.de)([?/\#]|$)#i';
 
 	// 'XRumer' spambot
@@ -1797,7 +1796,7 @@ if ( $wmgUseCentralNotice ) {
 
 	// T18821
 	// Updates made here also need to be reflected in
-	// wikimediafoundation.org/wiki/Template:HideBanners
+	// foundation.wikimedia.org/wiki/Template:HideBanners
 	$wgNoticeHideUrls = [
 		'//en.wikipedia.org/w/index.php?title=Special:HideBanners',
 		'//meta.wikimedia.org/w/index.php?title=Special:HideBanners',
@@ -1967,7 +1966,7 @@ if ( $wmgEnableLandingCheck ) {
 		// === Blacklisted countries
 		'BY', 'CD', 'CI', 'CU', 'IQ', 'IR', 'KP', 'LB', 'LY', 'MM', 'SD', 'SO', 'SY', 'YE', 'ZW',
 	];
-	$wgLandingCheckPriorityURLBase = "//wikimediafoundation.org/wiki/Special:LandingCheck";
+	$wgLandingCheckPriorityURLBase = "//foundation.wikimedia.org/wiki/Special:LandingCheck";
 	$wgLandingCheckNormalURLBase = "//donate.wikimedia.org/wiki/Special:LandingCheck";
 }
 
@@ -3331,7 +3330,6 @@ if ( $wmgUseGraph ) {
 			'wikibooks.org',
 			'wikidata.org',
 			'wikimedia.org',
-			'wikimediafoundation.org',
 			'wikinews.org',
 			'wikipedia.org',
 			'wikiquote.org',
