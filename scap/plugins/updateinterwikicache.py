@@ -15,10 +15,18 @@ class UpdateInterwikiCache(main.SyncFile):
     """Scap sub-command to update and sync the interwiki cache."""
 
     @cli.argument('--force', action='store_true', help='Skip canary checks')
+    @cli.argument(
+        '--beta',
+        action='store_true',
+        help='Update the beta interwiki cache file')
     def main(self, *extra_args):
         """Update the latest interwiki cache."""
         self.arguments.message = 'Update interwiki cache'
-        self.arguments.file = os.path.join('wmf-config', 'interwiki.php')
+        interwiki_file = 'interwiki.php'
+        if self.arguments.beta:
+            self.arguments.message = 'Update interwiki cache for Beta Cluster'
+            interwiki_file = 'interwiki-labs.php'
+        self.arguments.file = os.path.join('wmf-config', interwiki_file)
         return super(UpdateInterwikiCache, self).main(*extra_args)
 
     def _before_cluster_sync(self):
