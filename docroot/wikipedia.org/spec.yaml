@@ -3,7 +3,7 @@ info:
   version: 1.31.0
   title: MediaWiki
   description: The Wiki software solution used on Wikipedia and its sister projects
-  termsOfService: https://wikimediafoundation.org/wiki/Terms_of_Use
+  termsOfService: https://foundation.wikimedia.org/wiki/Terms_of_Use
 paths:
   /wiki/{title}:
     get:

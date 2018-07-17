@@ -51,7 +51,7 @@ class MWMultiVersionTest extends PHPUnit\Framework\TestCase {
 			[ 'donatewiki', 'donate.wikimedia.org' ],
 			[ 'execwiki', 'exec.wikimedia.org' ],
 			[ 'fdcwiki', 'fdc.wikimedia.org' ],
-			[ 'foundationwiki', 'wikimediafoundation.org' ],
+			[ 'foundationwiki', 'foundation.wikimedia.org' ],
 			[ 'grantswiki', 'grants.wikimedia.org' ],
 			[ 'iegcomwiki', 'iegcom.wikimedia.org' ],
 			[ 'incubatorwiki', 'incubator.wikimedia.org' ],
