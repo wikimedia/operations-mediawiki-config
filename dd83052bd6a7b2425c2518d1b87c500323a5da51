@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "e81a670c_7a4a40b6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-07-17T22:49:28Z",
+      "side": 1,
+      "message": "This maybe should be fixed so no server addresses appear?",
+      "range": {
+        "startLine": 2,
+        "startChar": 12,
+        "endLine": 2,
+        "endChar": 70
+      },
+      "revId": "dd83052bd6a7b2425c2518d1b87c500323a5da51",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3de9530c_b55fb8e4",
         "filename": "wmf-config/interwiki-labs.php",
         "patchSetId": 3
