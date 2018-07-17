@@ -349,10 +349,6 @@ $wgHooks['APIQuerySiteInfoGeneralInfo'][] = function ( $module, &$data ) {
 	];
 };
 
-if ( $wgDBname === 'foundationwiki' ) {
-	$wgReadOnly = 'wikimediafoundation.org is readonly due to https://phabricator.wikimedia.org/T188776';
-}
-
 $wgEmergencyContact = 'noc@wikipedia.org';
 
 $wgShowIPinHeader = false;
