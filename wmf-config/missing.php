@@ -216,7 +216,7 @@ function showMobileError() {
 		<div id="message">
 			<h1>Internal error</h1>
 			<p>Mobile domains are not served from this server IP address.</p>
-			<p style="font-size: smaller;">A&nbsp;project of the <a href="//wikimediafoundation.org" title="Wikimedia Foundation">Wikimedia Foundation</a></p>
+			<p style="font-size: smaller;">A&nbsp;project of the <a href="//foundation.wikimedia.org" title="Wikimedia Foundation">Wikimedia Foundation</a></p>
 		</div>
 	</div>
 </body>
