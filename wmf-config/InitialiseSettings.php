@@ -6885,8 +6885,8 @@ $wgConf->settings = [
 		101 => 'คุยเรื่องภาคผนวก', // Appendix talk
 		102 => 'ดัชนี', // Index - T114458
 		103 => 'คุยเรื่องดัชนี', // Index Talk
-		106 => 'อรรถาภิธาน', // Thesaurus - T198585
-		107 => 'คุยเรื่องอรรถาภิธาน', // Thesaurus_talk
+		110 => 'อรรถาภิธาน', // Thesaurus - T198585
+		111 => 'คุยเรื่องอรรถาภิธาน', // Thesaurus_talk
 	],
 	'trwiktionary' => [
 		100 => 'Portal',
