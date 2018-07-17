@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3de9530c_b55fb8e4",
+        "filename": "wmf-config/interwiki-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 619,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-07-17T22:48:45Z",
+      "side": 1,
+      "message": "I\u0027m not sure why this is here. According to beta SiteMatrix there\u0027s just chr.wikipedia; and no chr.* sister projects...",
+      "range": {
+        "startLine": 619,
+        "startChar": 1,
+        "endLine": 619,
+        "endChar": 74
+      },
+      "revId": "dd83052bd6a7b2425c2518d1b87c500323a5da51",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
