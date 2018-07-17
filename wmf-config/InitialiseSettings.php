@@ -18774,6 +18774,7 @@ $wgConf->settings = [
 ],
 'wmgPageImagesExtraNamespaces' => [
 	'default' => false,
+	'commonswiki' => [ NS_CATEGORY ], // T198716
 ],
 
 'wmgUseTorBlock' => [
