@@ -18850,6 +18850,9 @@ $wgConf->settings = [
 	'default' => 'free',
 	'wikidata' => 'any', // T159678
 ],
+'wmgPageImagesExtraNamespaces' => [
+	'default' => false,
+],
 
 'wmgUseTorBlock' => [
 	'default' => true,
