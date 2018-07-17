@@ -24,7 +24,7 @@ http://commons.wikimedia.org/wiki/Main_page
 https://donate.wikimedia.org/
 https://exec.wikimedia.org/wiki/Main_page
 https://fdc.wikimedia.org/wiki/Main_page
-http://wikimediafoundation.org/wiki/Home
+http://foundation.wikimedia.org/wiki/Home
 https://grants.wikimedia.org/wiki/Main_page
 https://iegcom.wikimedia.org/wiki/Main_page
 http://incubator.wikimedia.org/wiki/Incubator:Main_Page
