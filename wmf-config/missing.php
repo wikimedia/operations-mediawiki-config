@@ -216,7 +216,7 @@ function showMobileError() {
 		<div id="message">
 			<h1>Internal error</h1>
 			<p>Mobile domains are not served from this server IP address.</p>
-			<p style="font-size: smaller;">A&nbsp;project of the <a href="//wikimediafoundation.org" title="Wikimedia Foundation">Wikimedia Foundation</a></p>
+			<p style="font-size: smaller;">A&nbsp;project of the <a href="//foundation.wikimedia.org" title="Wikimedia Foundation">Wikimedia Foundation</a></p>
 		</div>
 	</div>
 </body>
@@ -276,7 +276,7 @@ function showMissingSubdomainError( $project, $language ) {
 
 			<p>If you would like to request that this wiki be created, see the <a href="//meta.wikimedia.org/wiki/Requests_for_new_languages">requests for new languages</a> page on Meta-Wiki.</p>
 
-			<p style="font-size: smaller;">A&nbsp;project of the <a href="//wikimediafoundation.org" title="Wikimedia Foundation">Wikimedia Foundation</a></p>
+			<p style="font-size: smaller;">A&nbsp;project of the <a href="//foundation.wikiemdia.org" title="Wikimedia Foundation">Wikimedia Foundation</a></p>
 
 		</div>
 	</div>
@@ -312,7 +312,7 @@ function showGenericError() {
 			<p>Sorry, we were not able to work out what wiki you were trying to view.
 			Please specify a valid Host header.</p>
 
-			<p style="font-size: smaller;">A&nbsp;project of the <a href="//wikimediafoundation.org" title="Wikimedia Foundation">Wikimedia Foundation</a></p>
+			<p style="font-size: smaller;">A&nbsp;project of the <a href="//foundation.wikimedia.org" title="Wikimedia Foundation">Wikimedia Foundation</a></p>
 
 		</div>
 	</div>

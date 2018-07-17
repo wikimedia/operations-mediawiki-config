@@ -1930,7 +1930,7 @@ $wgConf->settings = [
 	'etwikimedia' => '//ee.wikimedia.org',
 	'execwiki' => '//exec.wikimedia.org',
 	'fdcwiki' => '//fdc.wikimedia.org',
-	'foundationwiki' => '//wikimediafoundation.org',
+	'foundationwiki' => '//foundation.wikimedia.org',
 	'grantswiki' => '//grants.wikimedia.org',
 	'hiwikimedia' => '//hi.wikimedia.org',
 	'iegcomwiki' => '//iegcom.wikimedia.org',
@@ -2022,7 +2022,7 @@ $wgConf->settings = [
 	'etwikimedia' => 'https://ee.wikimedia.org',
 	'execwiki' => 'https://exec.wikimedia.org',
 	'fdcwiki' => 'https://fdc.wikimedia.org',
-	'foundationwiki' => 'https://wikimediafoundation.org',
+	'foundationwiki' => 'https://foundation.wikimedia.org',
 	'grantswiki' => 'https://grants.wikimedia.org',
 	'hiwikimedia' => 'https://hi.wikimedia.org',
 	'iegcomwiki' => 'https://iegcom.wikimedia.org',
@@ -7847,7 +7847,6 @@ $wgConf->settings = [
 		# Original list 20111110 - T34309
 		'mediawiki.org',
 		'wikibooks.org',
-		'wikimediafoundation.org',
 		'wikimedia.org',
 		'wikinews.org',
 		'wikipedia.org',
@@ -20088,7 +20087,6 @@ $wgConf->settings = [
 'wgRedirectSources' => [
 	'default' => false,
 	'donatewiki' => '!^https?://donate\.wikimedia\.org/!',
-	'foundationwiki' => '!^https?://(www\.)?wikimediafoundation\.org/!',
 ],
 
 'wmgUsePetition' => [
