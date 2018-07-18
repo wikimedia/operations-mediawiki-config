@@ -767,5 +767,9 @@ function wmfLabsSettings() {
 		'wgPageTriageDraftNamespaceId' => [
 			'enwiki' => 118,
 		],
+		'wgPageTriageEnableOresFilters' => [
+			'default' => false,
+			'enwiki' => true,
+		]
 	];
 } # wmflLabsSettings()
