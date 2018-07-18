@@ -19589,6 +19589,7 @@ $wgConf->settings = [
 	'eswiki' => true, // T130279
 	'eswikibooks' => true, // T145394
 	'etwiki' => true, // T159609
+	'euwiki' => true, // T198358
 	'fawiki' => true, // T130211
 	'fiwiki' => true, // T163011
 	'frwiki' => true,
@@ -19605,7 +19606,34 @@ $wgConf->settings = [
 	'srwiki' => true, // T197012
 	'svwiki' => true, // T174560
 	'trwiki' => true, // T139992
-
+	'wikidatawiki' => true, // T130212
+],
+'wgOresUiEnabled' => [
+	'default' => false,
+	'arwiki' => true, // T192498
+	'bswiki' => true, // T197010
+	'cawiki' => true, // T192501
+	'cswiki' => true, // T151611
+	'enwiki' => true, // T140003
+	'eswiki' => true, // T130279
+	'eswikibooks' => true, // T145394
+	'etwiki' => true, // T159609
+	'fawiki' => true, // T130211
+	'fiwiki' => true, // T163011
+	'frwiki' => true,
+	'hewiki' => true, // T161621
+	'huwiki' => true, // T192496
+	'lvwiki' => true, // T192499
+	'nlwiki' => true, // T139432
+	'plwiki' => true, // T140005
+	'ptwiki' => true, // T139692
+	'rowiki' => true, // T170723
+	'ruwiki' => true,
+	'simplewiki' => true, // T182012
+	'sqwiki' => true, // T170723
+	'srwiki' => true, // T197012
+	'svwiki' => true, // T174560
+	'trwiki' => true, // T139992
 	'wikidatawiki' => true, // T130212
 ],
 'wgOresModels' => [
@@ -19639,10 +19667,18 @@ $wgConf->settings = [
 		'wp10' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
 	],
+	'euwiki' => [
+		'damaging' => [ 'enabled' => false ],
+		'goodfaith' => [ 'enabled' => false ],
+		'reverted' => [ 'enabled' => false ],
+		'wp10' => [ 'enabled' => true, 'namespaces' => [ 0 ], 'cleanParent' => true ],
+		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
+	],
 ],
 'wgOresExcludeBots' => [
 	'default' => true,
 	'enwiki' => false,
+	'euwiki' => false,
 ],
 'wgOresFiltersThresholds' => [
 	'default' => [],
