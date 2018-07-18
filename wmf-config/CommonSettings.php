@@ -2638,7 +2638,6 @@ if ( $wmgUseTranslationNotifications ) {
 
 if ( $wmgUseVips ) {
 	wfLoadExtension( 'VipsScaler' );
-	$wgVipsThumbnailerHost = '10.2.1.21';
 	$wgVipsOptions = [
 		[
 			'conditions' => [
