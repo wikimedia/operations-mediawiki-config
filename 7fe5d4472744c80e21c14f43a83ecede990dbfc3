@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6aa59c72_c2fb08f2",
+        "filename": "wmf-config/missing.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 279,
+      "author": {
+        "id": 3214
+      },
+      "writtenOn": "2018-07-18T07:27:21Z",
+      "side": 1,
+      "message": "I see a typo here. It says wikiemdia instead of wikimedia",
+      "revId": "7fe5d4472744c80e21c14f43a83ecede990dbfc3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
