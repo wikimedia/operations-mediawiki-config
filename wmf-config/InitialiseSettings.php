@@ -20665,6 +20665,11 @@ $wgConf->settings = [
 	'frwiki' => MIGRATION_WRITE_BOTH,
 ],
 
+'wgTagStatisticsNewTable' => [
+	'default' => false,
+	'fawikisource' => true,
+],
+
 'wgMultiContentRevisionSchemaMigrationStage' => [
 	'default' => SCHEMA_COMPAT_OLD,
 ],
