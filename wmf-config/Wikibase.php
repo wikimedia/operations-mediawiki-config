@@ -10,6 +10,9 @@ if ( !empty( $wmgUseWikibaseRepo ) ) {
 	if ( !empty( $wmgUseWikibaseLexeme ) ) {
 		wfLoadExtension( 'WikibaseLexeme' );
 	}
+	if ( !empty( $wmgUseWikibaseMediaInfo ) ) {
+		wfLoadExtension( 'WikibaseMediaInfo' );
+	}
 }
 
 // Load the Client extensions
