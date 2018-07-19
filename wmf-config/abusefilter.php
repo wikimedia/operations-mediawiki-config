@@ -290,6 +290,7 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterAnonBlockDuration = '1 day';
 		break;
 	case 'itwiktionary': // T199783
+		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 		$wgAbuseFilterActions['block'] = true;
 		$wgAbuseFilterBlockDuration = '1 day';
 		$wgAbuseFilterAnonBlockDuration = '1 day';
