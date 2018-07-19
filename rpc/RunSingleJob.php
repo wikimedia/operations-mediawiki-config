@@ -63,19 +63,6 @@ $lbFactory->disableChronologyProtection();
 try {
 	$mediawiki = new MediaWiki();
 	$executor = new JobExecutor();
-	// check if there are any base64-encoded parameters and if so decode them
-	foreach ( $event['params'] as $key => &$value ) {
-		if ( !is_string( $value ) ) {
-			continue;
-		}
-		if ( preg_match( '/^data:application/octet-stream;base64,([\s\S]+)$/', $value, $match ) ) {
-			$value = base64_decode( $match[1], true );
-			if ( $value === false ) {
-				throw new Exception( "base64_decode() failed for parameter {$key} ({$match[1]})" );
-			}
-		}
-	}
-	unset( $value );
 	// execute the job
 	$response = $executor->execute( $event );
 	if ( $response['status'] === true ) {
