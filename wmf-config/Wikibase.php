@@ -12,6 +12,14 @@ if ( !empty( $wmgUseWikibaseRepo ) ) {
 	}
 }
 
+// Load the Repo media extensions
+if ( !empty( $wmgUseWikibaseMediaInfo ) ) {
+	include_once "$IP/extensions/Wikibase/repo/Wikibase.php";
+	wfLoadExtension( 'WikibaseMediaInfo' );
+
+	// FIXME: Federation of the Wikibase installation, licensing, and all the random assumptions below.
+}
+
 // Load the Client extensions
 if ( !empty( $wmgUseWikibaseClient ) ) {
 	include_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
