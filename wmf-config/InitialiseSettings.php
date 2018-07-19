@@ -18929,6 +18929,16 @@ $wgConf->settings = [
 	]
 ],
 
+// Structured media file data (the WikibaseMediaInfo extension)
+'wmgUseWikibaseMediaInfo' => [
+	'default' => false,
+],
+
+// Feature flag for WikibaseMediaInfo during deployment
+'wgMediaInfoEnable' => [
+	'default' => false,
+],
+
 'wmgUseTemplateSandbox' => [
 	'default' => true,
 	'loginwiki' => false,
