@@ -20673,16 +20673,13 @@ $wgConf->settings = [
 ],
 
 'wgChangeTagsSchemaMigrationStage' => [
-	'default' => MIGRATION_OLD,
-	'wikisource' => MIGRATION_WRITE_BOTH,
-	'wikivoyage' => MIGRATION_WRITE_BOTH,
-	'wikibooks' => MIGRATION_WRITE_BOTH,
-	'frwiki' => MIGRATION_WRITE_BOTH,
+	'default' => MIGRATION_WRITE_BOTH,
 ],
 
 'wgTagStatisticsNewTable' => [
 	'default' => false,
 	'fawikisource' => true,
+	'frwiki' => true,
 ],
 
 'wgMultiContentRevisionSchemaMigrationStage' => [
