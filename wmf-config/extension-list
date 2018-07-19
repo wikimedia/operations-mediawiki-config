@@ -161,6 +161,7 @@ $IP/extensions/VisualEditor/extension.json
 $IP/extensions/Wikibase/client/WikibaseClient.php
 $IP/extensions/Wikibase/repo/Wikibase.php
 $IP/extensions/WikibaseLexeme/extension.json
+$IP/extensions/WikibaseMediaInfo/extension.json
 $IP/extensions/WikibaseQuality/extension.json
 $IP/extensions/WikibaseQualityConstraints/extension.json
 $IP/extensions/Wikidata.org/extension.json
