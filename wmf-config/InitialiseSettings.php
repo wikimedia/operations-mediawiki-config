@@ -18090,6 +18090,7 @@ $wgConf->settings = [
 	'frwikiversity' => true, // T162022
 	'frwikivoyage' => true, // T135702
 	'nowiki' => true, // T132693
+	'orwiki' => true, // T199971
 	'urwiki' => true,
 	'wawiki' => true, // T172947
 	'wawiktionary' => true, // T172947
