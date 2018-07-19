@@ -3032,9 +3032,6 @@ if ( $wmgUseEventLogging ) {
 		$wgCodeEditorEnableCore = $wmgUseCodeEditorForCore; // For safety's sake
 	}
 
-	// Temporary hack for 'jsonschema' API module migration
-	$wgEventLoggingSchemaIndexUri = $wgEventLoggingSchemaApiUri;
-
 	// Depends on EventLogging
 	if ( $wmgUseCampaigns ) {
 		wfLoadExtension( 'Campaigns' );
