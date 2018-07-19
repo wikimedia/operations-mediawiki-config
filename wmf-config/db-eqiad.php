@@ -108,7 +108,7 @@ $wgLBFactoryConf = [
 		'db1080' => 200,    # A2 3.6TB 512GB, api
 		'db1083' => 500,    # B1 3.6TB 512GB # future candidate master T197069#4418823
 		'db1089' => 500,    # C3 3.6TB 512GB # temporary candidate master T197069#4418823
-		# 'db1099:3311' => 1, # B2 3.6TB 512GB # rc, log: s1 and s8
+		'db1099:3311' => 1, # B2 3.6TB 512GB # rc, log: s1 and s8
 		'db1105:3311' => 1, # C3 3.6TB 512GB # rc, log: s1 and s2
 		'db1106' => 50,     # D3 3.6TB 512GB, vslow, dump # master for sanitarium db1124
 		'db1114' => 200,    # D4 3.6TB 512GB, api
@@ -169,7 +169,7 @@ $wgLBFactoryConf = [
 		'db1071' => 0,      # D1 2.8TB 160GB, master
 		'db1087' => 1,      # C2 3.6TB 512GB, vslow, dump # master for sanitarium db1124
 		'db1092' => 100,    # D2 3.6TB 512GB, api
-		# 'db1099:3318' => 1, # B2 3.6TB 512GB # rc, log: s1 and s8
+		'db1099:3318' => 1, # B2 3.6TB 512GB # rc, log: s1 and s8
 		'db1101:3318' => 1, # C2 3.6TB 512GB # rc, log: s7 and s8
 		'db1104' => 300,    # B3 3.6TB 512GB, api # candidate master
 		'db1109' => 500,    # D8 3.6TB 512GB
@@ -256,24 +256,24 @@ $wgLBFactoryConf = [
 'groupLoadsBySection' => [
 	's1' => [
 		'watchlist' => [
-			# 'db1099:3311' => 1,
-			'db1105:3311' => 1,
+			'db1099:3311' => 1,
+			'db1105:3311' => 10,
 		],
 		'recentchanges' => [
-			# 'db1099:3311' => 1,
-			'db1105:3311' => 1,
+			'db1099:3311' => 1,
+			'db1105:3311' => 10,
 		],
 		'recentchangeslinked' => [
-			# 'db1099:3311' => 1,
-			'db1105:3311' => 1,
+			'db1099:3311' => 1,
+			'db1105:3311' => 10,
 		],
 		'contributions' => [
-			# 'db1099:3311' => 1,
-			'db1105:3311' => 1,
+			'db1099:3311' => 1,
+			'db1105:3311' => 10,
 		],
 		'logpager' => [
-			# 'db1099:3311' => 1,
-			'db1105:3311' => 1,
+			'db1099:3311' => 1,
+			'db1105:3311' => 10,
 		],
 		'dump' => [
 			'db1106' => 1,
@@ -482,24 +482,24 @@ $wgLBFactoryConf = [
 			'db1104' => 1,
 		],
 		'watchlist' => [
-			# 'db1099:3318' => 1,
-			'db1101:3318' => 1,
+			'db1099:3318' => 1,
+			'db1101:3318' => 10,
 		],
 		'recentchanges' => [
-			# 'db1099:3318' => 1,
-			'db1101:3318' => 1,
+			'db1099:3318' => 1,
+			'db1101:3318' => 10,
 		],
 		'recentchangeslinked' => [
-			# 'db1099:3318' => 1,
-			'db1101:3318' => 1,
+			'db1099:3318' => 1,
+			'db1101:3318' => 10,
 		],
 		'contributions' => [
-			# 'db1099:3318' => 1,
-			'db1101:3318' => 1,
+			'db1099:3318' => 1,
+			'db1101:3318' => 10,
 		],
 		'logpager' => [
-			# 'db1099:3318' => 1,
-			'db1101:3318' => 1,
+			'db1099:3318' => 1,
+			'db1101:3318' => 10,
 		],
 	],
 ],
