@@ -43,6 +43,14 @@ if ( !$search ) {
 	dieOut( "Request must include a 'search' parameter", 400 );
 }
 
+// 1F at the beginning of the param produces a badvalue_notmultivalue error
+// from MW-API. We still receive a HTTP 200 but the code to parse the response
+// will error out as a 500 because the json does not contain the expected data.
+// Better to send a 400 directly saving a call to the backend.
+if ( $search[0] === chr( 0x1F ) ) {
+	dieOut( "Invalid 'search' parameter", 400 );
+}
+
 if ( isset( $_GET['limit'] ) ) {
 	$limitParam = intval( $_GET['limit'] );
 	if ( $limitParam >= 0 && $limitParam <= 100 ) {
