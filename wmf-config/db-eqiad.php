@@ -367,7 +367,7 @@ $wgLBFactoryConf = [
 		],
 		'contributions' => [
 			'db1097:3314' => 1,
-			# 'db1103:3314' => 1,
+			'db1103:3314' => 1,
 		],
 		'logpager' => [
 			'db1097:3314' => 1,
