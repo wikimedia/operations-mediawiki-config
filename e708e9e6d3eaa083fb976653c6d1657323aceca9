@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6891a321_19cf07e8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2018-07-20T16:39:32Z",
+      "side": 1,
+      "message": "This sentence seems like it was meant to be worded differently.",
+      "range": {
+        "startLine": 11,
+        "startChar": 38,
+        "endLine": 13,
+        "endChar": 5
+      },
+      "revId": "e708e9e6d3eaa083fb976653c6d1657323aceca9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
