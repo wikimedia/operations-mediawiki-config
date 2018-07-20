@@ -1135,7 +1135,7 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 }
 
 if ( $wmgUseClusterJobqueue ) {
-	$wgJobTypeConf['default'] = [ 'class' => 'JobQueueEventBus' ];
+	$wgJobTypeConf['default'] = [ 'class' => 'JobQueueEventBus', 'readOnlyReason' => false ];
 }
 
 if ( $wgDBname === 'nostalgiawiki' ) {
