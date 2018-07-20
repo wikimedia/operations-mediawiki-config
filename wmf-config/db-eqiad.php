@@ -116,11 +116,11 @@ $wgLBFactoryConf = [
 	],
 	's2' => [
 		'db1066' => 0,     # A6 2.8TB 160GB # master
-		'db1074' => 300,    # A2 3.6TB 512GB, api # master for sanitarium db1125
+		'db1074' => 200,    # A2 3.6TB 512GB, api # master for sanitarium db1125 # temporary vslow
 		'db1076' => 500,    # B1 3.6TB 512GB # candidate master
-		'db1090:3312' => 1, # C3 3.6TB 512GB, vslow, dump: s2 and s7
+		# 'db1090:3312' => 1, # C3 3.6TB 512GB, vslow, dump: s2 and s7 # T200061
 		'db1122' => 500,    # D6 3.6TB 512GB, api
-		'db1103:3312' => 1, # A3 3.6TB 512GB # rc, log: s2 and s4
+		# 'db1103:3312' => 1, # A3 3.6TB 512GB # rc, log: s2 and s4 # T200061
 		'db1105:3312' => 1, # C3 3.6TB 512GB # rc, log: s1 and s2
 	],
 	/* s3 */ 'DEFAULT' => [
@@ -289,33 +289,33 @@ $wgLBFactoryConf = [
 	],
 	's2' => [
 		'vslow' => [
-			'db1090:3312' => 1,
+			'db1074' => 1,
 		],
 		'dump' => [
-			'db1090:3312' => 1,
+			'db1074' => 1,
 		],
 		'api' => [
 			'db1074' => 10,
 			'db1122' => 1,
 		],
 		'watchlist' => [
-			'db1103:3312' => 1,
+			# 'db1103:3312' => 1,
 			'db1105:3312' => 1,
 		],
 		'recentchanges' => [
-			'db1103:3312' => 1,
+			# 'db1103:3312' => 1,
 			'db1105:3312' => 1,
 		],
 		'recentchangeslinked' => [
-			'db1103:3312' => 1,
+			# 'db1103:3312' => 1,
 			'db1105:3312' => 1,
 		],
 		'contributions' => [
-			'db1103:3312' => 1,
+			# 'db1103:3312' => 1,
 			'db1105:3312' => 1,
 		],
 		'logpager' => [
-			'db1103:3312' => 1,
+			# 'db1103:3312' => 1,
 			'db1105:3312' => 1,
 		],
 	],
