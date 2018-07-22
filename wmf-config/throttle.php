@@ -30,7 +30,14 @@ $wmgThrottlingExceptions = [];
 $wmgThrottlingExceptions[] = [ // T198288
 	'from' => '2018-07-18T09:00 UTC',
 	'to' => '2018-07-22T17:00 UTC',
-	'IP' => '197.101.76.150',
+	'IP' => '197.101.68.116/20',
+	'value' => 300 // 250 expected
+];
+
+$wmgThrottlingExceptions[] = [ // T198288
+	'from' => '2018-07-18T09:00 UTC',
+	'to' => '2018-07-22T17:00 UTC',
+	'IP' => '196.208.95.30',
 	'value' => 300 // 250 expected
 ];
 
