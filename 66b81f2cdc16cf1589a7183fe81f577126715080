@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fe04ba2d_24b5eaa1",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 10151,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-07-22T11:46:57Z",
+      "side": 1,
+      "message": "Is this a temporary measure or meant to be permanent? Discussion reveals that a centralized system is preferred, with only bureaucrats for the largest wikis be allowed to handle this locally afaik. Thanks.",
+      "range": {
+        "startLine": 10151,
+        "startChar": 47,
+        "endLine": 10151,
+        "endChar": 64
+      },
+      "revId": "66b81f2cdc16cf1589a7183fe81f577126715080",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
