@@ -22,6 +22,30 @@
       "revId": "66b81f2cdc16cf1589a7183fe81f577126715080",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "439ed1b6_36931bfa",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 10151,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2018-07-23T15:13:51Z",
+      "side": 1,
+      "message": "I don\u0027t think the discussion revealed that that; most people were skeptical.",
+      "parentUuid": "fe04ba2d_24b5eaa1",
+      "range": {
+        "startLine": 10151,
+        "startChar": 47,
+        "endLine": 10151,
+        "endChar": 64
+      },
+      "revId": "66b81f2cdc16cf1589a7183fe81f577126715080",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
