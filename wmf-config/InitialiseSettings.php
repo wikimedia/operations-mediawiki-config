@@ -20691,6 +20691,7 @@ $wgConf->settings = [
 
 'wgMultiContentRevisionSchemaMigrationStage' => [
 	'default' => SCHEMA_COMPAT_OLD,
+	'testwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 ],
 
 'wmgUseReadingLists' => [
