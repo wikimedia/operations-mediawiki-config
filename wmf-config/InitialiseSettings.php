@@ -20170,21 +20170,14 @@ $wgConf->settings = [
 	'default' => 100,
 ],
 
-// Thumbnail prerendering at upload time
-'wgUploadThumbnailRenderMap' => [
-	'default' => [ 320, 640, 800, 1024, 1280, 1920 ],
-],
-
-'wgUploadThumbnailRenderMethod' => [
-	'default' => 'http',
-],
-
+// Disabled per T200346
 'wgUploadThumbnailRenderHttpCustomHost' => [
-	'default' => 'upload.wikimedia.org',
+	'default' => false,
 ],
 
+// Disabled per T200346
 'wgUploadThumbnailRenderHttpCustomDomain' => [
-	'default' => $wmfLocalServices['upload'],
+	'default' => false,
 ],
 
 // Virtual media views endpoint used by Media Viewer

@@ -399,13 +399,6 @@ function wmfLabsSettings() {
 			'default' => 'https://c357be0613e24340a96aeaa28dde08ad@sentry-beta.wmflabs.org/4',
 		],
 
-		'wgUploadThumbnailRenderHttpCustomHost' => [
-			'default' => 'upload.beta.wmflabs.org',
-		],
-		'wgUploadThumbnailRenderHttpCustomDomain' => [
-			'default' => 'deployment-cache-upload04.eqiad.wmflabs',
-		],
-
 		'-wmgScorePath' => [
 			'default' => "//upload.beta.wmflabs.org/score",
 		],
