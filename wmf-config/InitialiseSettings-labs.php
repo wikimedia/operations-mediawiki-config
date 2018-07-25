@@ -402,8 +402,9 @@ function wmfLabsSettings() {
 		'wgUploadThumbnailRenderHttpCustomHost' => [
 			'default' => 'upload.beta.wmflabs.org',
 		],
+		// Disabled per T200346
 		'wgUploadThumbnailRenderHttpCustomDomain' => [
-			'default' => 'deployment-cache-upload04.eqiad.wmflabs',
+			'default' => false,
 		],
 
 		'-wmgScorePath' => [
