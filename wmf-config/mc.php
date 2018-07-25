@@ -64,18 +64,17 @@ $wgObjectCaches['memcached+mcrouter'] = [
 	'reportDupes' => false
 ];
 
-if ( in_array( $wgDBname, [ 'testwiki', 'test2wiki', 'mediawikiwiki' ], true ) ) {
+if ( $wgDBname === 'labswiki' ) {
+	$wgMainCacheType = 'memcached-pecl'; // nutcracker only; no mcrouter present
+} else {
 	$wgMainCacheType = 'memcached+mcrouter'; // nutcracker for reads; write to both
 	$wgMainWANCache = 'wancache-main-mcrouter';
-} else {
-	$wgMainCacheType = 'memcached-pecl'; // nutcracker only
+	$wgWANObjectCaches['wancache-main-mcrouter'] = [
+		'class'   => 'WANObjectCache',
+		'cacheId' => $wgMainCacheType,
+		'channels' => [ 'purge' => 'wancache-main-default-purge' ],
+		// 'mcrouterAware' => true, # wait until *only* mcrouter is used
+	];
 }
-
-$wgWANObjectCaches['wancache-main-mcrouter'] = [
-	'class'   => 'WANObjectCache',
-	'cacheId' => $wgMainCacheType,
-	'channels' => [ 'purge' => 'wancache-main-default-purge' ],
-	// 'mcrouterAware' => true, # wait until *only* mcrouter is used
-];
 
 # vim: set sts=4 sw=4 et :
