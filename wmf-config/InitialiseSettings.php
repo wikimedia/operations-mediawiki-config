@@ -20687,6 +20687,10 @@ $wgConf->settings = [
 	'default' => false,
 	'fawikisource' => true,
 	'frwiki' => true,
+	'enwiki' => true,
+	'commonswiki' => true,
+	'dewiki' => true,
+	'wikidatawiki' => true,
 ],
 
 'wgMultiContentRevisionSchemaMigrationStage' => [
