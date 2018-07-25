@@ -398,12 +398,13 @@ function wmfLabsSettings() {
 		'wmgSentryDsn' => [
 			'default' => 'https://c357be0613e24340a96aeaa28dde08ad@sentry-beta.wmflabs.org/4',
 		],
-
+		// Disabled per T200346
 		'wgUploadThumbnailRenderHttpCustomHost' => [
-			'default' => 'upload.beta.wmflabs.org',
+			'default' => false,
 		],
+		// Disabled per T200346
 		'wgUploadThumbnailRenderHttpCustomDomain' => [
-			'default' => 'deployment-cache-upload04.eqiad.wmflabs',
+			'default' => false,
 		],
 
 		'-wmgScorePath' => [
