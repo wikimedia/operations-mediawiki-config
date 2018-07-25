@@ -402,9 +402,9 @@ function wmfLabsSettings() {
 		'wgUploadThumbnailRenderHttpCustomHost' => [
 			'default' => 'upload.beta.wmflabs.org',
 		],
-		'wgUploadThumbnailRenderHttpCustomDomain' => [
-			'default' => 'deployment-cache-upload04.eqiad.wmflabs',
-		],
+		//'wgUploadThumbnailRenderHttpCustomDomain' => [
+		//	'default' => 'deployment-cache-upload04.eqiad.wmflabs',
+		//],
 
 		'-wmgScorePath' => [
 			'default' => "//upload.beta.wmflabs.org/score",
