@@ -20183,9 +20183,10 @@ $wgConf->settings = [
 	'default' => 'upload.wikimedia.org',
 ],
 
-'wgUploadThumbnailRenderHttpCustomDomain' => [
-	'default' => $wmfLocalServices['upload'],
-],
+// Disabled per T200346
+//'wgUploadThumbnailRenderHttpCustomDomain' => [
+//	'default' => $wmfLocalServices['upload'],
+//],
 
 // Virtual media views endpoint used by Media Viewer
 'wgMediaViewerRecordVirtualViewBeaconURI' => [
