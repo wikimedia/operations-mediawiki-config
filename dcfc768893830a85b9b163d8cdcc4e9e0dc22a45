@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a3e52da8_69d41076",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 403,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-07-25T18:54:40Z",
+      "side": 1,
+      "message": "Given these no longer vary from prod, they should be removed. (Inherits by default).",
+      "range": {
+        "startLine": 401,
+        "startChar": 2,
+        "endLine": 403,
+        "endChar": 8
+      },
+      "revId": "dcfc768893830a85b9b163d8cdcc4e9e0dc22a45",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0b4a8818_5c7fa65c",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 20185,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-07-25T18:54:40Z",
+      "side": 1,
+      "message": "If this is expected to be temporary, it can be set to false, but it seems not temporary. Given false is the default in core, we\u0027d usually remove the wmf-config override entirely.",
+      "range": {
+        "startLine": 20182,
+        "startChar": 1,
+        "endLine": 20185,
+        "endChar": 2
+      },
+      "revId": "dcfc768893830a85b9b163d8cdcc4e9e0dc22a45",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
