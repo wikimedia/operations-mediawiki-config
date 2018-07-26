@@ -50,6 +50,7 @@ if ( defined( 'HHVM_VERSION' ) ) {
 $wgLockManagers[] = [
 	'name'         => 'wikibaseDispatchRedisLockManager',
 	'class'        => 'RedisLockManager',
+	'logger'       => \MediaWiki\Logger\LoggerFactory::getInstance( 'wikibaseDispatchRedisLockManager' ),
 	'lockTTL'      => 900, // 15 mins ( 15 * 60 )
 	'lockServers'  => $wmfMasterServices['redis_lock'],
 	'domain'       => $wgDBname,
