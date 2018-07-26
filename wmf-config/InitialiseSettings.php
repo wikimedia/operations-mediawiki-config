@@ -32,7 +32,8 @@
 
 # Globals set in CommonSettings.php for use in settings values
 global $wmfUdp2logDest, $wmfDatacenter, $wmfRealm, $wmfConfigDir, $wgConf,
-	$wmfAllServices, $wmfLocalServices, $wmfMasterServices, $wmfMasterDatacenter;
+	$wmfHostnames, $wmfAllServices, $wmfLocalServices, $wmfMasterServices,
+	$wmfMasterDatacenter;
 
 $wgConf->settings = [
 
@@ -20192,6 +20193,14 @@ $wgConf->settings = [
 
 'wgUploadThumbnailRenderMethod' => [
 	'default' => 'http',
+],
+
+'wgUploadThumbnailRenderHttpCustomHost' => [
+	'default' => $wmfHostnames['upload'],
+],
+
+'wgUploadThumbnailRenderHttpCustomDomain' => [
+	'default' => $wmfLocalServices['upload'],
 ],
 
 // Virtual media views endpoint used by Media Viewer

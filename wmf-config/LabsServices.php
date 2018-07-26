@@ -22,7 +22,7 @@ return [
 		'mathoid' => 'http://deployment-mathoid.eqiad.wmflabs:10042',
 		'eventlogging' => 'udp://deployment-eventlogging03.eqiad.wmflabs:8421',
 		'eventbus' => 'http://deployment-kafka-main-1.deployment-prep.eqiad.wmflabs:8085',
-		'upload' => false,
+		'upload' => 'deployment-cache-upload04.eqiad.wmflabs',
 		'cxserver' => 'http://deployment-sca01.eqiad.wmflabs:8080',
 		'irc' => 'irc.beta.wmflabs.org', // deployment-ircd
 		'redis_lock' => [
