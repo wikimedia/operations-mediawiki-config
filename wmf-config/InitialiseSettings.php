@@ -20750,6 +20750,10 @@ $wgConf->settings = [
 	'group0' => true,
 ],
 
+'wgSpecialBlockFeedbackRequest' => [
+	'default' => true,
+],
+
 ];
 
 ### WMF Labs override #####
