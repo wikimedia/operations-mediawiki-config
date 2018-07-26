@@ -1626,6 +1626,7 @@ $wgConf->settings = [
 	'fawikiquote' => [ '1.5x' => '/static/images/project-logos/fawikiquote-1.5x.png', '2x' => '/static/images/project-logos/fawikiquote-2x.png' ], // T150618
 	'guwikiquote' => [ '1.5x' => '/static/images/project-logos/guwikiquote-1.5x.png', '2x' => '/static/images/project-logos/guwikiquote-2x.png' ],
 	'guwikiquote' => [ '1.5x' => '/static/images/project-logos/guwikiquote-1.5x.png', '2x' => '/static/images/project-logos/guwikiquote-2x.png' ], // T150618
+	'hewikiquote' => [ '1.5x' => '/static/images/project-logos/hewikiquote-1.5x.png', '2x' => '/static/images/project-logos/hewikiquote-2x.png' ],
 	'hrwikiquote' => [ '1.5x' => '/static/images/project-logos/hrwikiquote-1.5x.png', '2x' => '/static/images/project-logos/hrwikiquote-2x.png' ], // T150618
 	'hrwikiquote' => [ '1.5x' => '/static/images/project-logos/hrwikiquote-1.5x.png', '2x' => '/static/images/project-logos/hrwikiquote-2x.png' ], // T150618
 	'hywikiquote' => [ '1.5x' => '/static/images/project-logos/hywikiquote-1.5x.png', '2x' => '/static/images/project-logos/hywikiquote-2x.png' ], // T150618
