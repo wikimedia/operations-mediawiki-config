@@ -17927,13 +17927,6 @@ $wgConf->settings = [
 	'loginwiki' => false,
 	'votewiki' => false,
 ],
-'wmgUseEducationProgram' => [
-	'default' => false,
-],
-
-'wmgEducationProgramDYKCat' => [
-	'default' => 'MyCourses Did You Know',
-],
 
 'wmgUseWikimediaShopLink' => [
 	'default' => false,
