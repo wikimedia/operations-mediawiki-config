@@ -5458,7 +5458,6 @@ $wgConf->settings = [
 		'wfLogDBError' => 'debug', // Former $wgDBerrorLog
 		'wikibase-debug' => 'debug',
 		'WikibaseQualityConstraints' => 'debug',
-		'wikibaseDispatchRedisLockManager' => 'debug', // For T200420
 		'xenon' => 'debug',
 		'XMP' => 'warning', // T89532
 		'xff' => [ 'logstash' => false ],
