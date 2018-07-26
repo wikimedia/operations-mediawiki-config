@@ -19618,6 +19618,11 @@ $wgConf->settings = [
 	'trwiki' => true, // T139992
 	'wikidatawiki' => true, // T130212
 	'testwiki' => true, // T199913
+	'test2wiki' => true, // T200412
+],
+'wgOresWikiId' => [
+	'default' => null,
+	'test2wiki' => 'testwiki',
 ],
 'wgOresUiEnabled' => [
 	'default' => false,
@@ -19647,6 +19652,7 @@ $wgConf->settings = [
 	'trwiki' => true, // T139992
 	'wikidatawiki' => true, // T130212
 	'testwiki' => true, // T199913
+	'test2wiki' => true, // T200412
 ],
 'wgOresModels' => [
 	'default' => [
@@ -19692,6 +19698,15 @@ $wgConf->settings = [
 		'reverted' => [ 'enabled' => false ],
 		// wp10 and draftquality are disabled until ORES is configured to allow these
 		// for testwiki. See T198997
+		'wp10' => [ 'enabled' => false, 'namespaces' => [ 0, 118 ], 'cleanParent' => true ],
+		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true ],
+	],
+	'test2wiki' => [
+		'damaging' => [ 'enabled' => true, 'excludeBots' => true ],
+		'goodfaith' => [ 'enabled' => true, 'excludeBots' => true ],
+		'reverted' => [ 'enabled' => false ],
+		// wp10 and draftquality are disabled until ORES is configured to allow these
+		// for test2wiki. See T198997
 		'wp10' => [ 'enabled' => false, 'namespaces' => [ 0, 118 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true ],
 	],
