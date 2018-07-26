@@ -2698,8 +2698,64 @@ if ( $wmgUseEducationProgram ) {
 	wfLoadExtension( 'EducationProgram' );
 	$wgEPSettings['dykCategory'] = $wmgEducationProgramDYKCat;
 	$wgNamespaceProtection[/*EP_NS*/446] = [ 'ep-course' ]; // T112806 (security)
-	$wgAddGroups['sysop'] = array_merge( $wgAddGroups['sysop'], [ 'eponline', 'epcampus', 'epinstructor', 'epcoordinator' ] ); // T163167 remove when  T123085  is resolved
 	$wgRemoveGroups['sysop'] = array_merge( $wgRemoveGroups['sysop'], [ 'eponline', 'epcampus', 'epinstructor', 'epcoordinator' ] ); // T163167 remove  when  T123085  is resolved
+
+ 	$wgGroupPermissions['*']['ep-bereviewer'] = false;
+	$wgGroupPermissions['user']['ep-enroll'] = false;
+
+	$wgGroupPermissions['sysop']['ep-org'] = false;
+	$wgGroupPermissions['sysop']['ep-course'] = false;
+	$wgGroupPermissions['sysop']['ep-token'] = false;
+	$wgGroupPermissions['sysop']['ep-enroll'] = false;
+	$wgGroupPermissions['sysop']['ep-remstudent'] = false;
+	$wgGroupPermissions['sysop']['ep-online'] = false;
+	$wgGroupPermissions['sysop']['ep-campus'] = false;
+	$wgGroupPermissions['sysop']['ep-instructor'] = false;
+	$wgGroupPermissions['sysop']['ep-beonline'] = false;
+	$wgGroupPermissions['sysop']['ep-becampus'] = false;
+	$wgGroupPermissions['sysop']['ep-beinstructor'] = false;
+	$wgGroupPermissions['sysop']['ep-bereviewer'] = false;
+	$wgGroupPermissions['sysop']['ep-remreviewer'] = false;
+	$wgGroupPermissions['sysop']['ep-bulkdelorgs'] = false;
+	$wgGroupPermissions['sysop']['ep-bulkdelcourses'] = false;
+	$wgGroupPermissions['sysop']['ep-remarticle'] = false;
+	$wgGroupPermissions['sysop']['ep-addstudent'] = false;
+
+	$wgGroupPermissions['epcoordinator']['ep-org'] = false;
+	$wgGroupPermissions['epcoordinator']['ep-course'] = false;
+	$wgGroupPermissions['epcoordinator']['ep-token'] = false;
+	$wgGroupPermissions['epcoordinator']['ep-enroll'] = false;
+	$wgGroupPermissions['epcoordinator']['ep-remstudent'] = false;
+	$wgGroupPermissions['epcoordinator']['ep-campus'] = false;
+	$wgGroupPermissions['epcoordinator']['ep-online'] = false;
+	$wgGroupPermissions['epcoordinator']['ep-instructor'] = false;
+	$wgGroupPermissions['epcoordinator']['ep-beonline'] = false;
+	$wgGroupPermissions['epcoordinator']['ep-becampus'] = false;
+	$wgGroupPermissions['epcoordinator']['ep-beinstructor'] = false;
+	$wgGroupPermissions['epcoordinator']['ep-bereviewer'] = false;
+	$wgGroupPermissions['epcoordinator']['ep-remreviewer'] = false;
+	$wgGroupPermissions['epcoordinator']['ep-bulkdelcourses'] = false;
+	$wgGroupPermissions['epcoordinator']['ep-remarticle'] = false;
+	$wgGroupPermissions['epcoordinator']['ep-addstudent'] = false;
+
+	$wgGroupPermissions['eponline']['ep-org'] = false;
+	$wgGroupPermissions['eponline']['ep-course'] = false;
+	$wgGroupPermissions['eponline']['ep-token'] = false;
+	$wgGroupPermissions['eponline']['ep-beonline'] = false;
+	$wgGroupPermissions['eponline']['ep-remarticle'] = false;
+
+	$wgGroupPermissions['epcampus']['ep-org'] = false;
+	$wgGroupPermissions['epcampus']['ep-course'] = false;
+	$wgGroupPermissions['epcampus']['ep-token'] = false;
+	$wgGroupPermissions['epcampus']['ep-becampus'] = false;
+	$wgGroupPermissions['epcampus']['ep-remarticle'] = false;
+
+	$wgGroupPermissions['epinstructor']['ep-org'] = false;
+	$wgGroupPermissions['epinstructor']['ep-course'] = false;
+	$wgGroupPermissions['epinstructor']['ep-token'] = false;
+	$wgGroupPermissions['epinstructor']['ep-beinstructor'] = false;
+	$wgGroupPermissions['epinstructor']['ep-remstudent'] = false;
+	$wgGroupPermissions['epinstructor']['ep-remarticle'] = false;
 }
 
 if ( $wmgUseWikimediaShopLink ) {
