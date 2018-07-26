@@ -43,11 +43,11 @@ $wmfAllServices['codfw']['eventlogging'] = 'udp://10.64.32.167:8421'; # eventlog
 $wmfAllServices['eqiad']['eventbus'] =
 $wmfAllServices['codfw']['eventbus'] = 'http://eventbus.discovery.wmnet:8085';
 
-$wmfAllServices['eqiad']['upload'] = 'upload.svc.eqiad.wmnet';
-$wmfAllServices['codfw']['upload'] = 'upload.svc.codfw.wmnet';
-
 $wmfAllServices['eqiad']['cxserver'] =
 $wmfAllServices['codfw']['cxserver'] = 'http://cxserver.discovery.wmnet:8080';
+
+$wmfAllServices['eqiad']['upload'] = 'ms-fe.svc.eqiad.wmnet';
+$wmfAllServices['codfw']['upload'] = 'ms-fe.svc.codfw.wmnet';
 
 $wmfAllServices['eqiad']['mediaSwiftAuth'] = 'https://ms-fe.svc.eqiad.wmnet/auth';
 $wmfAllServices['codfw']['mediaSwiftAuth'] = 'https://ms-fe.svc.codfw.wmnet/auth';
