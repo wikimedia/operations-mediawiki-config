@@ -5407,6 +5407,7 @@ $wgConf->settings = [
 		'ldap' => 'warning',
 		'Linter' => 'debug',
 		'localhost' => [ 'logstash' => false ],
+		'LockManager' => 'warning',
 		'logging' => 'debug',
 		'MassMessage' => 'debug', // for 59464 -legoktm 2013/12/15
 		'Math' => 'info',  // mobrovac for T121445
