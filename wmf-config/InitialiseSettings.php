@@ -20251,7 +20251,7 @@ $wgConf->settings = [
 	'default' => false,
 ],
 
-'wmgSentryDsn' => [
+'wgSentryDsn' => [
 	'default' => '',
 ],
 
