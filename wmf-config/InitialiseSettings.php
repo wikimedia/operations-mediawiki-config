@@ -13931,6 +13931,7 @@ $wgConf->settings = [
 	'ukwiki' => true,
 	'urwiki' => true,
 	'zhwiki' => true,
+	'zuwiki' => true,
 ],
 
 'wmgUseUploadWizard' => [
