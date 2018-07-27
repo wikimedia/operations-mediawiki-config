@@ -2,10 +2,6 @@
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
 wfLoadExtension( 'LiquidThreads' );
-$extName = 'LiquidThreads';
-
-$wgLiquidThreadsExtensionName = $extName;
-$wgLiquidThreadsExtensionPath = "{$wgExtensionAssetsPath}/{$extName}";
 
 if ( $wmgLiquidThreadsFrozen ) {
 	// Preserve access to LQT edits and logs after converting all LQT, but prevent
