@@ -142,7 +142,7 @@ $IP/extensions/TemplateSandbox/extension.json
 $IP/extensions/TemplateStyles/extension.json
 $IP/extensions/TextExtracts/extension.json
 $IP/extensions/Thanks/extension.json
-$IP/extensions/TimedMediaHandler/TimedMediaHandler.php
+$IP/extensions/TimedMediaHandler/extension.json
 $IP/extensions/timeline/extension.json
 $IP/extensions/TitleBlacklist/extension.json
 $IP/extensions/TocTree/extension.json
