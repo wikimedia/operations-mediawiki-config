@@ -1990,7 +1990,6 @@ if ( $wmgUseLivePreview ) {
 
 if ( $wmgUseSentry ) {
 	wfLoadExtension( 'Sentry' );
-	$wgSentryDsn = $wmgSentryDsn;
 	$wgSentryLogPhpErrors = false;
 }
 
