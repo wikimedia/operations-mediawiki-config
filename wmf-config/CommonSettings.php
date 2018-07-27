@@ -2023,7 +2023,7 @@ if ( $wmgUseLivePreview ) {
 }
 
 if ( $wmgUseSentry ) {
-	require_once "$IP/extensions/Sentry/Sentry.php";
+	wfLoadExtension( 'Sentry' );
 	$wgSentryDsn = $wmgSentryDsn;
 	$wgSentryLogPhpErrors = false;
 }
