@@ -1,7 +1,7 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-require_once "$IP/extensions/LiquidThreads/LiquidThreads.php";
+wfLoadExtension( 'LiquidThreads' );
 $extName = 'LiquidThreads';
 
 $wgLiquidThreadsExtensionName = $extName;
