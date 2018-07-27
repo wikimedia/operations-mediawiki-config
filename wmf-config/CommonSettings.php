@@ -918,7 +918,8 @@ if ( $wmgUseGadgets ) {
 }
 
 if ( $wmgUseTimedMediaHandler ) {
-	require_once "$IP/extensions/TimedMediaHandler/TimedMediaHandler.php";
+	wfLoadExtension( 'TimedMediaHandler' );
+
 	$wgTimedTextForeignNamespaces = [ 'commonswiki' => 102 ];
 	if ( $wgDBname === 'commonswiki' ) {
 		$wgTimedTextNS = 102;
