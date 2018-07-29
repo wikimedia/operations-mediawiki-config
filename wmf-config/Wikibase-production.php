@@ -56,9 +56,10 @@ if ( $wmgUseWikibaseRepo ) {
 			134, // has dialect (DEPRECATED)
 			558, // unit symbol (DEPRECATED)
 			1222, // (deprecated) NARA person ID
-			2237, // units used for this property (DEPRECATED)
 			2315, // comment (DEPRECATED)
+			2731, // Projeto Excelências ID
 			4877, // print run (DEPRECATED)
+			5089, // USGS-ANSS event page
 			/**
 			 * @see https://www.wikidata.org/w/index.php?oldid=335040857
 			 */
@@ -80,6 +81,8 @@ if ( $wmgUseWikibaseRepo ) {
 			2536, // external-id
 			4045, // tabular-data
 			4047, // geo-shape
+			5188, // wikibase-lexeme
+			5189, // wikibase-form
 		];
 
 		$wgWBRepoSettings['sparqlEndpoint'] = 'https://query.wikidata.org/sparql';
@@ -146,7 +149,7 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBQualityConstraintsSparqlMaxMillis = 5000; // limit SPARQL queries to just 5 seconds for now
 		$wgWBQualityConstraintsTypeCheckMaxEntities = 10; // only check few entities in PHP => fall back to SPARQL very quickly
 		$wgWBQualityConstraintsCacheCheckConstraintsResults = true;
-		$wgWBQualityConstraintsPropertiesWithViolatingQualifiers = [ 'P1855', 'P2271' ]; // T183267
+		$wgWBQualityConstraintsPropertiesWithViolatingQualifiers = [ 'P1855', 'P2271', 'P5192', 'P5193' ]; // T183267
 		$wgSpecialPages['ItemDisambiguation'] = 'SpecialBlankpage';
 		$wgWBRepoSettings['dispatchLagToMaxLagFactor'] = 60;
 	}
