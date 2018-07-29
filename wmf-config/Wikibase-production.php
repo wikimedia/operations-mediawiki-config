@@ -51,21 +51,22 @@ if ( $wmgUseWikibaseRepo ) {
 			4656, // Wikimedia import URL
 			/**
 			 * Deprecated properties
-			 * @see https://www.wikidata.org/wiki/Special:WhatLinksHere/Q18644427
+			 * @see https://www.wikidata.org/wiki/Special:WhatLinksHere/Q18644427?namespace=120
 			 */
 			134, // has dialect (DEPRECATED)
 			558, // unit symbol (DEPRECATED)
-			1222, // (deprecated) NARA person ID
-			2237, // units used for this property (DEPRECATED)
+			1962, // patron (DEPRECATED)
 			2315, // comment (DEPRECATED)
+			4237, // Heritage Building in Finland ID (DEPRECATED)
 			4877, // print run (DEPRECATED)
+			5130, // island of location (DEPRECATED)
 			/**
 			 * @see https://www.wikidata.org/w/index.php?oldid=335040857
 			 */
 			646, // Freebase ID
 			/**
 			 * Sandbox properties
-			 * @see https://www.wikidata.org/wiki/Special:WhatLinksHere/Q18720640
+			 * @see https://www.wikidata.org/wiki/Special:WhatLinksHere/Q18720640?namespace=120
 			 */
 			368,  // commonsMedia
 			369,  // wikibase-item
@@ -80,6 +81,8 @@ if ( $wmgUseWikibaseRepo ) {
 			2536, // external-id
 			4045, // tabular-data
 			4047, // geo-shape
+			5188, // wikibase-lexeme
+			5189, // wikibase-form
 		];
 
 		$wgWBRepoSettings['sparqlEndpoint'] = 'https://query.wikidata.org/sparql';
@@ -146,7 +149,7 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBQualityConstraintsSparqlMaxMillis = 5000; // limit SPARQL queries to just 5 seconds for now
 		$wgWBQualityConstraintsTypeCheckMaxEntities = 10; // only check few entities in PHP => fall back to SPARQL very quickly
 		$wgWBQualityConstraintsCacheCheckConstraintsResults = true;
-		$wgWBQualityConstraintsPropertiesWithViolatingQualifiers = [ 'P1855', 'P2271' ]; // T183267
+		$wgWBQualityConstraintsPropertiesWithViolatingQualifiers = [ 'P1855', 'P2271', 'P5192', 'P5193' ]; // T183267
 		$wgSpecialPages['ItemDisambiguation'] = 'SpecialBlankpage';
 		$wgWBRepoSettings['dispatchLagToMaxLagFactor'] = 60;
 	}
