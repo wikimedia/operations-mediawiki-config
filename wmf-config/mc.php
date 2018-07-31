@@ -42,7 +42,7 @@ if ( $wgDBname === 'labswiki' ) {
 		'class'   => 'WANObjectCache',
 		'cacheId' => $wgMainCacheType,
 		'channels' => [ 'purge' => 'wancache-main-default-purge' ],
-		// 'mcrouterAware' => true, # wait until *only* mcrouter is used
+		'mcrouterAware' => true,
 	];
 }
 
