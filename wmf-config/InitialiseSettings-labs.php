@@ -735,7 +735,7 @@ function wmfLabsSettings() {
 				'goodfaith' => [ 'enabled' => true, 'excludeBots' => true ],
 				'reverted' => [ 'enabled' => false ],
 				'wp10' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'cleanupParent' => true ],
-				'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true ],
+				'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true, 'cleanupParent' => true ],
 			],
 		],
 		'wgOresExcludeBots' => [
