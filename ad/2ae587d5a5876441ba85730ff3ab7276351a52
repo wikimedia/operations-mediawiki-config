@@ -1,0 +1,8 @@
+Code-Review+2: Reedy <reedy@wikimedia.org>
+Code-Review+1: Jforrester <jforrester@wikimedia.org>
+Verified+2: jenkins-bot
+Submitted-by: jenkins-bot
+Submitted-at: Tue, 31 Jul 2018 12:00:49 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/448178
+Project: operations/mediawiki-config
+Branch: refs/heads/master
