@@ -55,7 +55,9 @@ $wgObjectCaches['memcached+mcrouter'] = [
 	'class'       => 'ReplicatedBagOStuff',
 	'readFactory' => [
 		'factory' => [ 'ObjectCache', 'getInstance' ],
-		'args'    => [ 'memcached-pecl' ]
+		'args'    => in_array( $wgDBname, [ 'testwiki', 'test2wiki' ] )
+			? [ 'mcrouter' ]
+			: [ 'memcached-pecl' ]
 	],
 	'writeFactory' => [
 		'factory' => [ 'ObjectCache', 'getInstance' ],
