@@ -1554,6 +1554,7 @@ $wgConf->settings = [
 	'fywiktionary' => [ '1.5x' => '/static/images/project-logos/fywiktionary-1.5x.png', '2x' => '/static/images/project-logos/fywiktionary-2x.png' ], // T150618
 	'gdwiktionary' => [ '1.5x' => '/static/images/project-logos/gdwiktionary-1.5x.png', '2x' => '/static/images/project-logos/gdwiktionary-2x.png' ], // T150618
 	'gvwiktionary' => [ '1.5x' => '/static/images/project-logos/gvwiktionary-1.5x.png', '2x' => '/static/images/project-logos/gvwiktionary-2x.png' ], // T150618
+	'hewiktionary' => [ '1.5x' => '/static/images/project-logos/hewiktionary-1.5x.png', '2x' => '/static/images/project-logos/hewiktionary-2x.png' ],
 	'hiwiktionary' => [ '1.5x' => '/static/images/project-logos/hiwiktionary-1.5x.png', '2x' => '/static/images/project-logos/hiwiktionary-2x.png' ], // T150618
 	'hsbwiktionary' => [ '1.5x' => '/static/images/project-logos/hsbwiktionary-1.5x.png', '2x' => '/static/images/project-logos/hsbwiktionary-2x.png' ], // T150618
 	'huwiktionary' => [ '1.5x' => '/static/images/project-logos/huwiktionary-1.5x.png', '2x' => '/static/images/project-logos/huwiktionary-2x.png' ], // T150618
