@@ -20603,6 +20603,7 @@ $wgConf->settings = [
 
 'wmgUseTemplateStyles' => [
 	'default' => false,
+	'metawiki' => true,
 	'testwiki' => true,
 	'mediawikiwiki' => true,
 	'labswiki' => true,
