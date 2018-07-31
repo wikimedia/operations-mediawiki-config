@@ -33,41 +33,10 @@ $wgObjectCaches['mcrouter'] = [
 	'timeout'              => $wgMemCachedTimeout,
 ];
 
-$wgObjectCaches['mcrouter+memcached'] = [
-	'class' => 'MultiWriteBagOStuff',
-	'caches' => [
-		// new mcrouter consistent hash scheme (uses host:port)
-		0 => [
-			'factory' => [ 'ObjectCache', 'getInstance' ],
-			'args' => [ 'mcrouter' ],
-		],
-		// old nutcracker consistent hash scheme (uses shard tag);
-		// make sure this cache scheme gets purges and stays warm
-		1 => [
-			'factory' => [ 'ObjectCache', 'getInstance' ],
-			'args' => [ 'memcached-pecl' ],
-		],
-	],
-	'reportDupes' => false,
-];
-
-$wgObjectCaches['memcached+mcrouter'] = [
-	'class'       => 'ReplicatedBagOStuff',
-	'readFactory' => [
-		'factory' => [ 'ObjectCache', 'getInstance' ],
-		'args'    => [ 'mcrouter' ]
-	],
-	'writeFactory' => [
-		'factory' => [ 'ObjectCache', 'getInstance' ],
-		'args'    => [ 'mcrouter+memcached' ]
-	],
-	'reportDupes' => false
-];
-
 if ( $wgDBname === 'labswiki' ) {
 	$wgMainCacheType = 'memcached-pecl'; // nutcracker only; no mcrouter present
 } else {
-	$wgMainCacheType = 'memcached+mcrouter'; // nutcracker for reads; write to both
+	$wgMainCacheType = 'mcrouter';
 	$wgMainWANCache = 'wancache-main-mcrouter';
 	$wgWANObjectCaches['wancache-main-mcrouter'] = [
 		'class'   => 'WANObjectCache',
