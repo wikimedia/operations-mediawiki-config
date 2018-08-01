@@ -929,14 +929,16 @@ if ( $wmgUseTimedMediaHandler ) {
 	$wgEnableTranscode = $wgEnableUploads;
 
 	$wgEnabledTranscodeSet = [
-		// Disable the old WebM VP8 flat-file transcodes
-		// while they are still the default.
-		'160p.webm' => false,
-		'240p.webm' => false,
-		'360p.webm' => false,
-		'480p.webm' => false,
-		'720p.webm' => false,
-		'1080p.webm' => false,
+		// Keep the old WebM VP8 flat-file transcodes enabled
+		// while we transition, or playback of un-upgraded files
+		// will revert to original high-res sources.
+		// Disable them again once T200747 batch process complete.
+		'160p.webm' => true,
+		'240p.webm' => true,
+		'360p.webm' => true,
+		'480p.webm' => true,
+		'720p.webm' => true,
+		'1080p.webm' => true,
 
 		// Enable the WebM VP9 flat-file transcodes
 		'120p.vp9.webm' => true,
