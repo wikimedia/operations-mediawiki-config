@@ -153,7 +153,7 @@ function getStyleSheet( $logo ) {
 }
 
 body {
-  background: #fff url('//upload.wikimedia.org/wikipedia/commons/9/96/Errorbg.png') repeat-x;
+  background: #fff url('https://upload.wikimedia.org/wikipedia/commons/9/96/Errorbg.png') repeat-x;
   color: #333;
   margin: 0;
   padding: 0;
@@ -171,7 +171,7 @@ body {
 }
 
 #message {
-	background: url('//upload.wikimedia.org/wikipedia/commons/9/97/Errorline.png') center left no-repeat;
+	background: url('https://upload.wikimedia.org/wikipedia/commons/9/97/Errorline.png') center left no-repeat;
 	margin-left: 300px;
 	padding-left: 15px;
 }
@@ -206,7 +206,7 @@ function showMobileError() {
 <head>
 <style type="text/css">
 /* <![CDATA[ */
-<?php echo getStyleSheet( '//upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/300px-Wikimedia-logo.svg.png' ); ?>
+<?php echo getStyleSheet( 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/300px-Wikimedia-logo.svg.png' ); ?>
 /* ]]> */
 </style>
 <title>Internal error</title>
@@ -216,7 +216,7 @@ function showMobileError() {
 		<div id="message">
 			<h1>Internal error</h1>
 			<p>Mobile domains are not served from this server IP address.</p>
-			<p style="font-size: smaller;">A&nbsp;project of the <a href="//foundation.wikimedia.org" title="Wikimedia Foundation">Wikimedia Foundation</a></p>
+			<p style="font-size: smaller;">A&nbsp;project of the <a href="https://wikimediafoundation.org" title="Wikimedia Foundation">Wikimedia Foundation</a></p>
 		</div>
 	</div>
 </body>
@@ -236,8 +236,8 @@ function showMobileError() {
 function showMissingSubdomainError( $project, $language ) {
 	$projectInfos = [
 		'wikiversity' => [
-			'logo' => '//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/300px-Wikiversity-logo.svg.png',
-			'home' => '//beta.wikiversity.org',
+			'logo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/300px-Wikiversity-logo.svg.png',
+			'home' => 'https://beta.wikiversity.org',
 			'name' => 'Wikiversity',
 			'home-name' => 'Beta Wikiversity',
 		]
@@ -274,9 +274,9 @@ function showMissingSubdomainError( $project, $language ) {
 
 			<p>You may like to visit <a href="<?php echo $info['home']; ?>"><?php echo $info['home-name']; ?></a> to start or improve <em><?php echo "$escLanguage&nbsp;$escName"; ?></em> there.</p>
 
-			<p>If you would like to request that this wiki be created, see the <a href="//meta.wikimedia.org/wiki/Requests_for_new_languages">requests for new languages</a> page on Meta-Wiki.</p>
+			<p>If you would like to request that this wiki be created, see the <a href="https://meta.wikimedia.org/wiki/Requests_for_new_languages">requests for new languages</a> page on Meta-Wiki.</p>
 
-			<p style="font-size: smaller;">A&nbsp;project of the <a href="//foundation.wikimedia.org" title="Wikimedia Foundation">Wikimedia Foundation</a></p>
+			<p style="font-size: smaller;">A&nbsp;project of the <a href="https://wikimediafoundation.org" title="Wikimedia Foundation">Wikimedia Foundation</a></p>
 
 		</div>
 	</div>
@@ -299,7 +299,7 @@ function showGenericError() {
 	<title>No wiki found</title>
 	<style type="text/css">
 /* <![CDATA[ */
-<?php echo getStyleSheet( '//upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/300px-Wikimedia-logo.svg.png' ); ?>
+<?php echo getStyleSheet( 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/300px-Wikimedia-logo.svg.png' ); ?>
 /* ]]> */
 	</style>
 </head>
@@ -312,7 +312,7 @@ function showGenericError() {
 			<p>Sorry, we were not able to work out what wiki you were trying to view.
 			Please specify a valid Host header.</p>
 
-			<p style="font-size: smaller;">A&nbsp;project of the <a href="//foundation.wikimedia.org" title="Wikimedia Foundation">Wikimedia Foundation</a></p>
+			<p style="font-size: smaller;">A&nbsp;project of the <a href="https://wikimediafoundation.org" title="Wikimedia Foundation">Wikimedia Foundation</a></p>
 
 		</div>
 	</div>
