@@ -1192,7 +1192,7 @@ if ( $wgDBname === 'nostalgiawiki' ) {
 	wfLoadSkin( 'Nostalgia' );
 }
 
-$wgFooterIcons['copyright']['copyright'] = '<a href="https://foundation.wikimedia.org/">' .
+$wgFooterIcons['copyright']['copyright'] = '<a href="https://wikimediafoundation.org/">' .
 	'<img src="/static/images/wikimedia-button.png" ' .
 		'srcset="' .
 			'/static/images/wikimedia-button-1.5x.png 1.5x, ' .
