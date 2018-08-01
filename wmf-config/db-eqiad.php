@@ -104,7 +104,6 @@ $wgLBFactoryConf = [
 'sectionLoads' => [
 	's1' => [
 		'db1067' => 0,     # C6 2.8TB 160GB, # master
-		# 'db1052' => 0,      # B3 2.8TB  96GB, old master
 		'db1080' => 200,    # A2 3.6TB 512GB, api
 		'db1083' => 500,    # B1 3.6TB 512GB # candidate master
 		'db1089' => 300,    # C3 3.6TB 512GB
@@ -511,7 +510,6 @@ $wgLBFactoryConf = [
 # Removing a server from this list does not remove the server from rotation,
 # it just breaks the site horribly.
 'hostsByName' => [
-	'db1052' => '10.64.16.77', # do not remove or comment out
 	'db1061' => '10.64.32.227', # do not remove or comment out
 	'db1062' => '10.64.48.15', # do not remove or comment out
 	'db1064' => '10.64.48.19', # do not remove or comment out
