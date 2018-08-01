@@ -1968,7 +1968,7 @@ $wgLocalisationUpdateRepository = 'local';
 $wgLocalisationUpdateRepositories['local'] = [
 	'mediawiki' => '/var/lib/l10nupdate/mediawiki/core/%PATH%',
 	'extension' => '/var/lib/l10nupdate/mediawiki/extensions/%NAME%/%PATH%',
-	'skins' => '/var/lib/l10nupdate/mediawiki/skins/%NAME%/%PATH%',
+	'skin' => '/var/lib/l10nupdate/mediawiki/skins/%NAME%/%PATH%',
 ];
 
 if ( $wmgEnableLandingCheck ) {
