@@ -1,3 +1,4 @@
+abwiki
 acewiki
 afwiki
 afwiktionary
@@ -26,6 +27,7 @@ bclwiki
 be_x_oldwiki
 betawikiversity
 bewiki
+bewikisource
 bgwiki
 bgwikiquote
 bgwiktionary
@@ -33,14 +35,17 @@ bhwiki
 bjnwiki
 bnwiki
 bnwikisource
+bnwiktionary
 bowiki
 bpywiki
 brwiki
 brwikisource
 brwiktionary
 bswiki
+bswiktionary
 bugwiki
 cawikinews
+cawikiquote
 cawikisource
 cawiktionary
 cdowiki
@@ -71,6 +76,7 @@ dewikivoyage
 dewiktionary
 diqwiki
 dsbwiki
+dtywiki
 dvwiki
 elwiki
 elwikinews
@@ -100,6 +106,7 @@ fawikiquote
 fawikisource
 fawikivoyage
 fawiktionary
+fiu_vrowiki
 fiwikibooks
 fiwikisource
 fiwiktionary
@@ -146,6 +153,8 @@ hywikisource
 hywiktionary
 iawiki
 idwikibooks
+idwikimedia
+idwikisource
 idwiktionary
 ilowiki
 iowiki
@@ -184,6 +193,7 @@ kvwiki
 kywiki
 kywiktionary
 labswiki
+labtestwiki
 ladwiki
 lawiki
 lawikisource
@@ -191,6 +201,7 @@ lawiktionary
 lbewiki
 lbwiki
 lbwiktionary
+lezwiki
 lijwiki
 liwiki
 liwiktionary
@@ -215,8 +226,10 @@ mnwiki
 mnwiktionary
 mrjwiki
 mrwiki
+mrwikisource
 mswiki
 mtwiki
+myvwiki
 mywiki
 mywiktionary
 mznwiki
@@ -226,6 +239,7 @@ nds_nlwiki
 ndswiki
 ndswiktionary
 newiki
+newiktionary
 newwiki
 nlwikibooks
 nlwikisource
@@ -247,6 +261,7 @@ otrs_wikiwiki
 outreachwiki
 pamwiki
 pawiki
+pawiktionary
 plwikibooks
 plwikinews
 plwikiquote
@@ -294,14 +309,15 @@ skwiktionary
 slwiki
 slwikisource
 slwiktionary
+snwiki
 sourceswiki
 sowiki
-specieswiki
 sqwiki
 sqwiktionary
 srwikinews
 srwikisource
 srwiktionary
+stqwiki
 strategywiki
 suwiki
 svwikisource
@@ -329,10 +345,12 @@ thwiktionary
 tkwiki
 tlwiki
 tlwiktionary
+trwikinews
 trwikiquote
 trwikisource
 trwiktionary
 ttwiki
+udmwiki
 ugwiki
 ukwikiquote
 ukwikisource
@@ -342,6 +360,7 @@ urwiktionary
 uzwiki
 uzwiktionary
 vecwiki
+vecwikisource
 vepwiki
 viwikisource
 viwiktionary
@@ -353,7 +372,9 @@ wawiktionary
 wikimania2014wiki
 wikimania2015wiki
 wikimania2016wiki
+wikimania2017wiki
 wuuwiki
+xalwiki
 xmfwiki
 yiwiki
 yowiki
@@ -363,6 +384,5 @@ zh_min_nanwiktionary
 zh_yuewiki
 zhwikibooks
 zhwikinews
-zhwikiquote
 zhwikisource
 zhwikivoyage
