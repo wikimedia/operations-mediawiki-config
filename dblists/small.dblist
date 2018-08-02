@@ -1,7 +1,6 @@
 aawiki
 aawikibooks
 aawiktionary
-abwiki
 abwiktionary
 advisorswiki
 advisorywiki
@@ -45,7 +44,6 @@ bdwikimedia
 bewikibooks
 bewikimedia
 bewikiquote
-bewikisource
 bewiktionary
 bgwikibooks
 bgwikinews
@@ -60,7 +58,6 @@ bmwikiquote
 bmwiktionary
 bnwikibooks
 bnwikivoyage
-bnwiktionary
 boardgovcomwiki
 boardwiki
 bowikibooks
@@ -71,11 +68,9 @@ bswikibooks
 bswikinews
 bswikiquote
 bswikisource
-bswiktionary
 bxrwiki
 cawikibooks
 cawikimedia
-cawikiquote
 cbk_zamwiki
 chairwiki
 chapcomwiki
@@ -106,7 +101,6 @@ dawikiquote
 dinwiki
 dkwikimedia
 donatewiki
-dtywiki
 dvwiktionary
 dzwiki
 dzwiktionary
@@ -132,7 +126,6 @@ execwiki
 extwiki
 fdcwiki
 ffwiki
-fiu_vrowiki
 fiwikimedia
 fiwikinews
 fiwikiquote
@@ -186,10 +179,8 @@ hywikiquote
 hzwiki
 iawikibooks
 iawiktionary
-idwikimedia
 id_internalwikimedia
 idwikiquote
-idwikisource
 iegcomwiki
 iewiki
 iewikibooks
@@ -250,7 +241,6 @@ lawikiquote
 lbwikibooks
 lbwikiquote
 legalteamwiki
-lezwiki
 lfnwiki
 lgwiki
 liwikibooks
@@ -284,7 +274,6 @@ mnwikibooks
 movementroleswiki
 mrwikibooks
 mrwikiquote
-mrwikisource
 mrwiktionary
 mswikibooks
 mswiktionary
@@ -292,7 +281,6 @@ mtwiktionary
 muswiki
 mwlwiki
 mxwikimedia
-myvwiki
 mywikibooks
 nahwikibooks
 nahwiktionary
@@ -303,7 +291,6 @@ nawiktionary
 ndswikibooks
 ndswikiquote
 newikibooks
-newiktionary
 ngwiki
 nlwikimedia
 nlwikinews
@@ -331,7 +318,6 @@ pagwiki
 papwiki
 pawikibooks
 pawikisource
-pawiktionary
 pcdwiki
 pdcwiki
 pflwiki
@@ -370,9 +356,9 @@ rwwiki
 rwwiktionary
 sahwikiquote
 sahwikisource
+satwiki
 sawikibooks
 sawikiquote
-satwiki
 scwiktionary
 sdwikinews
 sdwiktionary
@@ -392,7 +378,6 @@ slwikiquote
 slwikiversity
 smwiki
 smwiktionary
-snwiki
 snwiktionary
 sowiktionary
 spcomwiki
@@ -405,7 +390,6 @@ srwikiquote
 sswiki
 sswiktionary
 stewardwiki
-stqwiki
 stwiki
 stwiktionary
 suwikibooks
@@ -442,7 +426,6 @@ tpiwiktionary
 transitionteamwiki
 trwikibooks
 trwikimedia
-trwikinews
 tswiki
 tswiktionary
 ttwikibooks
@@ -454,7 +437,6 @@ twwiktionary
 tyvwiki
 tywiki
 uawikimedia
-udmwiki
 ugwikibooks
 ugwikiquote
 ugwiktionary
@@ -466,7 +448,6 @@ urwikiquote
 usabilitywiki
 uzwikibooks
 uzwikiquote
-vecwikisource
 vecwiktionary
 vewiki
 viwikibooks
@@ -487,14 +468,12 @@ wikimania2010wiki
 wikimania2011wiki
 wikimania2012wiki
 wikimania2013wiki
-wikimania2017wiki
 wikimania2018wiki
 wikimaniawiki
 wikimaniateamwiki
 wowiki
 wowikiquote
 wowiktionary
-xalwiki
 xhwiki
 xhwikibooks
 xhwiktionary
@@ -511,6 +490,7 @@ zerowiki
 zh_min_nanwikibooks
 zh_min_nanwikiquote
 zh_min_nanwikisource
+zhwikiquote
 zhwikiversity
 zuwiki
 zuwikibooks
