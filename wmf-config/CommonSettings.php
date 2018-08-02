@@ -636,6 +636,7 @@ if ( $wmgUseCORS ) {
 		'steward.wikimedia.org',
 		'strategy.wikimedia.org',
 		'usability.wikimedia.org',
+		'wikimania.wikimedia.org',
 		'wikimania????.wikimedia.org',
 		'wikimaniateam.wikimedia.org',
 		'am.wikimedia.org',
