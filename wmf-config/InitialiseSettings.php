@@ -8576,7 +8576,6 @@ $wgConf->settings = [
 			'abusefilter-view-private' => true, // T174357
 			'abusefilter-log-private' => true, // T174357
 		],
-		'epcoordinator' => [ 'noratelimit' => true ], // T131684
 		'rollbacker' => [ 'rollback' => true, ], // T126931
 		'patroller' => [ // T126931
 			'patrol' => true,
