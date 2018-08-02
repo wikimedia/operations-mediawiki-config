@@ -2003,7 +2003,7 @@ $wgConf->settings = [
 	'wikimania2016wiki' => '//wikimania2016.wikimedia.org',
 	'wikimania2017wiki' => '//wikimania2017.wikimedia.org',
 	'wikimania2018wiki' => '//wikimania2018.wikimedia.org',
-	'wikimaniawiki' => '//wikimania2019.wikimedia.org',
+	'wikimaniawiki' => '//wikimania.wikimedia.org',
 	'wikimaniateamwiki' => '//wikimaniateam.wikimedia.org',
 	'zerowiki' => '//zero.wikimedia.org'
 ],
@@ -2094,7 +2094,7 @@ $wgConf->settings = [
 	'wikimania2016wiki' => 'https://wikimania2016.wikimedia.org',
 	'wikimania2017wiki' => 'https://wikimania2017.wikimedia.org',
 	'wikimania2018wiki' => 'https://wikimania2018.wikimedia.org',
-	'wikimaniawiki' => 'https://wikimania2019.wikimedia.org',
+	'wikimaniawiki' => 'https://wikimania.wikimedia.org',
 	'wikimaniateamwiki' => 'https://wikimaniateam.wikimedia.org',
 	'zerowiki' => 'https://zero.wikimedia.org',
 ],
