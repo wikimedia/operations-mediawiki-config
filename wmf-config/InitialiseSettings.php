@@ -13732,6 +13732,7 @@ $wgConf->settings = [
 		'*.camara.cl',                      // Chilean government website - T195928
 		'*.nic.in',                         // India government website - T197944
 		'*.gov.in',                         // India government website - T197944
+		'media.farsnews.com',               // Fars News Agency - T200872
 	],
 ],
 
