@@ -9057,22 +9057,6 @@ $wgConf->settings = [
 			'autopatrol' => true,
 			'unwatchedpages' => true,
 		],
-		'interface-editor' => [
-			// Some rights removed per T111439
-			'abusefilter-log' => true,
-			'abusefilter-log-detail' => true,
-			'abusefilter-modify' => true,
-			'abusefilter-modify-restricted' => true,
-			'abusefilter-revert' => true,
-			'abusefilter-view' => true,
-			'abusefilter-view-private' => true,
-			'editinterface' => true,
-			'editusercss' => true,// T14110
-			'edituserjs' => true, // T14110
-			'import' => true,
-			'tboverride' => true,
-			'templateeditor' => true, // T102466
-		],
 		'interface-admin' => [ // T200698
 			'abusefilter-log' => true,
 			'abusefilter-log-detail' => true,
@@ -10522,7 +10506,6 @@ $wgConf->settings = [
 	],
 	'+hewiki' => [
 		'sysop' => [ 'patroller', 'autopatrolled', 'accountcreator' ],
-		'bureaucrat' => [ 'interface-editor' ],
 	],
 	'+hewikibooks' => [
 		'sysop' => [ 'patroller', 'autopatrolled' ],
@@ -11265,7 +11248,6 @@ $wgConf->settings = [
 	],
 	'+hewiki' => [
 		'sysop' => [ 'patroller', 'autopatrolled', 'accountcreator' ],
-		'bureaucrat' => [ 'interface-editor' ],
 	],
 	'+hewikibooks' => [
 		'sysop' => [ 'patroller', 'autopatrolled' ],
