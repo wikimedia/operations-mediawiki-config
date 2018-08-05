@@ -9073,6 +9073,18 @@ $wgConf->settings = [
 			'tboverride' => true,
 			'templateeditor' => true, // T102466
 		],
+		'interface-admin' => [ // T200698
+			'abusefilter-log' => true,
+			'abusefilter-log-detail' => true,
+			'abusefilter-modify' => true,
+			'abusefilter-modify-restricted' => true,
+			'abusefilter-revert' => true,
+			'abusefilter-view' => true,
+			'abusefilter-view-private' => true,
+			'import' => true,
+			'tboverride' => true,
+			'templateeditor' => true,
+		],
 		'checkuser' => [
 			'deletedhistory' => true,
 			'deletedtext' => true,
