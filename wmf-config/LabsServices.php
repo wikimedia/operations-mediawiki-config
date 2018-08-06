@@ -17,7 +17,7 @@ return [
 			'deployment-elastic06.deployment-prep.eqiad.wmflabs',
 			'deployment-elastic07.deployment-prep.eqiad.wmflabs',
 		],
-		'urldownloader' => 'http://deployment-urldownloader.deployment-prep.eqiad.wmflabs:8080',
+		'urldownloader' => 'http://deployment-urldownloader02.deployment-prep.eqiad.wmflabs:8080',
 		'parsoid' => 'http://deployment-parsoid09.deployment-prep.eqiad.wmflabs:8000',
 		'mathoid' => 'http://deployment-mathoid.eqiad.wmflabs:10042',
 		'eventlogging' => 'udp://deployment-eventlogging03.eqiad.wmflabs:8421',
