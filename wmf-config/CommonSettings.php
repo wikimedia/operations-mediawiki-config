@@ -3256,6 +3256,12 @@ if ( $wmgUsePageAssessments ) {
 
 if ( $wmgUsePageImages ) {
 	wfLoadExtension( 'PageImages' );
+	if ( $wmgPageImagesExtraNamespaces ) {
+		$wgPageImagesNamespaces = array_merge(
+			[ 0 ],
+			$wmgPageImagesExtraNamespaces
+		);
+	}
 }
 
 if ( $wmgUseSearchExtraNS ) {
