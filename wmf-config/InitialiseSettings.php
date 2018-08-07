@@ -20663,22 +20663,7 @@ $wgConf->settings = [
 ],
 
 'wmgUseTemplateStyles' => [
-	'default' => false,
-	'metawiki' => true, // T200613
-	'testwiki' => true,
-	'mediawikiwiki' => true,
-	'labswiki' => true,
-	'labtestwiki' => true,
-	'svwiki' => true, // T176082
-	'wikivoyage' => true, // T189838
-	'dewiki' => true, // T190910
-	'ruwiki' => true, // T188198
-	'ruwikiquote' => true, // T197526
-	'nowiki' => true, // T193786
-	'huwiktionary' => true, // T198725
-	'frwiki' => true, // T191452
-	'zhwiki' => true, // T189022
-	'enwiki' => true, // T197603
+	'default' => true,
 ],
 
 'wgShortPagesNamespaceBlacklist' => [
