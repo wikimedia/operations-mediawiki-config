@@ -11894,7 +11894,6 @@ $wgConf->settings = [
 	'jawikiversity' => [ 'betawikiversity', 'w', 'wikt', 'en', 'b', 'q', 's', 'n' ],
 	'jawiktionary' => [ 'w' ], // T10670
 	'kaawiki' => [ 'incubator' ],
-	// 'khmwiktionary' => array( 'en', 'fr', 'lm', 'th' ),
 	'kmwiki' => [ 'en', 'be', 'simple' ],
 	'knwiki' => [ 'en' ], // T37603
 	'knwikisource' => [ 'w', 'en', 'w:en' ], // T122955
