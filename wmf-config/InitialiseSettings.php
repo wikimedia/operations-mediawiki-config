@@ -10271,7 +10271,6 @@ $wgConf->settings = [
 	'+testwiki' => [
 		'bureaucrat' => [ 'researcher', 'centralnoticeadmin', 'flow-bot' ],
 		'sysop' => [ 'filemover', 'rollbacker', 'accountcreator', 'confirmed', 'templateeditor' ],
-		# 'user' => array( 'editor', 'reviewer' ),
 	],
 	'+test2wiki' => [
 		'bureaucrat' => [ 'flow-bot' ],
@@ -11009,7 +11008,6 @@ $wgConf->settings = [
 	'+testwiki' => [
 		'bureaucrat' => [ 'sysop', 'researcher', 'centralnoticeadmin', 'flow-bot' ],
 		'sysop' => [ 'filemover', 'rollbacker', 'accountcreator', 'confirmed', 'templateeditor' ],
-		# 'user' => array( 'editor', 'reviewer' ),
 	],
 	'+test2wiki' => [
 		'bureaucrat' => [ 'flow-bot', 'sysop' ], // T131037
