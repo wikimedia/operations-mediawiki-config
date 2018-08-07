@@ -10199,7 +10199,6 @@ $wgConf->settings = [
 		'steward' => [
 			'noratelimit' => true,
 		],
-		// 'rollback' => array( 'rollback' => true, ),
 		'import' => [ 'importupload' => true, 'import' => true ],
 		'transwiki' => [ 'import' => true ],
 		'user' => [
