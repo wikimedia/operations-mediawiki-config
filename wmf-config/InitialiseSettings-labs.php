@@ -767,6 +767,11 @@ function wmfLabsSettings() {
 		'wgPageTriageEnableOresFilters' => [
 			'default' => false,
 			'enwiki' => true,
+		],
+
+		// Testing CSP in report-only mode
+		'wgCSPReportOnlyHeader' => [
+			'default' => true,
 		]
 	];
 } # wmflLabsSettings()
