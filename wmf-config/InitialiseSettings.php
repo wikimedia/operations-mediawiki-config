@@ -10065,7 +10065,6 @@ $wgConf->settings = [
 
 	// due to mass vandalism complaint, 2006-04-11
 	'zhwiki' => [
-		// '*' => array( 'createpage' => false ),  # re-enabled createpage priv according to T27142, then redisabled *sigh*, then reenabled \o/
 		'rollbacker' => [
 			'rollback' => true, // T18988
 			'abusefilter-log-private' => true, // T39679
