@@ -27,7 +27,6 @@ if ( !empty( $wmgUseWikibaseClient ) ) {
 if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['idBlacklist'] = $wmgWikibaseIdBlacklist;
 	$wgWBRepoSettings['disabledDataTypes'] = $wmgWikibaseDisabledDataTypes;
-	$wgWBRepoSettings['disabledRdfExportEntityTypes'] = $wmgWikibaseDisabledRdfExportEntityTypes;
 }
 
 if ( $wmgUseWikibaseClient ) {
