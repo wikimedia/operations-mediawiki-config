@@ -10175,10 +10175,6 @@ $wgConf->settings = [
 			'torunblocked' => true,
 		],
 
-		# So that I can rename users with more than 6800 edits -- TS
-		# Removed as obsolete -- 2009-03-05 BV
-		# 'developer' => array( 'siteadmin' => true ),
-
 		# To allow for inline log suppression -- 2009-01-29 -- BV
 		'oversight' => [
 			'deleterevision' => true,
