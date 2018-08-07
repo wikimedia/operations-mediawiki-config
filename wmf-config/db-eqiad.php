@@ -114,11 +114,11 @@ $wgLBFactoryConf = [
 		'db1119' => 200,    # B8 3.6TB 512GB, api
 	],
 	's2' => [
-		'db1066' => 0,     # A6 2.8TB 160GB # master
+		'db1066' => 0,      # A6 2.8TB 160GB # master
 		'db1074' => 300,    # A2 3.6TB 512GB, api # master for sanitarium db1125
 		'db1076' => 500,    # B1 3.6TB 512GB # candidate master
 		'db1090:3312' => 50, # C3 3.6TB 512GB, vslow, dump: s2 and s7
-		# 'db1122' => 500,    # D6 3.6TB 512GB, api
+		'db1122' => 50,     # D6 3.6TB 512GB, api
 		'db1103:3312' => 50, # A3 3.6TB 512GB # rc, log: s2 and s4
 		'db1105:3312' => 50, # C3 3.6TB 512GB # rc, log: s1 and s2
 	],
@@ -295,7 +295,7 @@ $wgLBFactoryConf = [
 		],
 		'api' => [
 			'db1074' => 10,
-			# 'db1122' => 1,
+			'db1122' => 1,
 		],
 		'watchlist' => [
 			'db1103:3312' => 1,
@@ -668,7 +668,7 @@ $wgLBFactoryConf = [
 	'cluster25' => [
 		'10.64.32.65'  => 1, # es1017, C3 11TB 128GB, master
 		'10.64.16.187' => 3, # es1014, B1 11TB 128GB
-		# '10.64.48.116' => 1, # es1019, D8 11TB 128GB, hw maintenance T201132
+		'10.64.48.116' => 1, # es1019, D8 11TB 128GB, low load after maint. T201132
 	],
 	# ExtensionStore shard1
 	'extension1' => [
