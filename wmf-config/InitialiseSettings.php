@@ -12677,7 +12677,7 @@ $wgConf->settings = [
 	'zhwikiquote' => '/$2/$1',
 	'zhwikinews' => '/$2/$1',
 	'zhwikivoyage' => '/$2/$1',
-	// 'zhwikiversity' => '/$2/$1',
+	'zhwikiversity' => '/$2/$1',
 ],
 # @} end of wgVariantArticlePath
 
