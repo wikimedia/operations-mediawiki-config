@@ -19760,8 +19760,8 @@ $wgConf->settings = [
 		'reverted' => [ 'enabled' => false ],
 		// wp10 and draftquality are disabled until ORES is configured to allow these
 		// for testwiki. See T198997
-		'wp10' => [ 'enabled' => false, 'namespaces' => [ 0, 118 ], 'cleanParent' => true ],
-		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true, 'cleanParent' => true ],
+		'wp10' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'cleanParent' => true ],
+		'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true, 'cleanParent' => true ],
 	],
 	'test2wiki' => [
 		'damaging' => [ 'enabled' => true, 'excludeBots' => true ],
