@@ -10912,6 +10912,9 @@ $wgConf->settings = [
 	'+zhwikiquote' => [
 		'sysop' => [ 'flood' ], // T189289
 	],
+	'+zhwikiversity' => [
+		'sysop' => [ 'transwiki' ], // T201328
+	],
 	'+zhwikivoyage' => [
 		'sysop' => [ 'autopatrolled', 'confirmed', 'patroller', 'transwiki' ], // T62085, T62328
 	],
@@ -12010,6 +12013,7 @@ $wgConf->settings = [
 	'wuuwiki' => [ 'en', 'th', 'fr', 'zh', ], // T19484
 	'xhwiki' => [ 'en' ], // T53327
 	'zhwikiquote' => [ 'w', 'b', 'wikt', 's', 'meta', 'commons' ],
+	'zhwikiversity' => [ 'w:', 'b:', 'q:', 's:', 'en:', 'voy:', 'wikt:', 'meta:', 'commons:', 'betawikiversity:' ],
 	'zhwikivoyage' => [ 'w', 'b', 'q', 's', 'en', 'wikt', 'meta', 'commons' ], // T62248
 	'zhwiktionary' => [ 'w', 'b', 'q', 's', 'meta', 'commons' ],
 	'zhwikibooks' => [ 'w', 'wikt', 'q', 's', 'meta', 'commons' ],
