@@ -16179,11 +16179,6 @@ $wgConf->settings = [
 		'copyright-width' => 122,
 		'copyright-height' => 22,
 	],
-	'pswikivoyage' => [ // T200152
-		'copyright' => '/static/images/mobile/copyright/wikivoyage-wordmark-ps.svg',
-		'copyright-width' => 88,
-		'copyright-height' => 21,
-	],
 	'srwiki' => [ // T165896
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-sr.svg',
 		'copyright-width' => 122,
