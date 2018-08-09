@@ -5465,6 +5465,7 @@ $wgConf->settings = [
 		'T87645' => 'debug', // - Ori on behalf of Tim, for https://gerrit.wikimedia.org/r/#/c/188304/
 		'T143073' => 'debug',
 		'texvc' => 'debug',
+		'thumb-T201305' => 'debug',
 		'thumbnailaccess' => 'debug', // T106323
 		'thumbnail' => 'debug',
 		'throttler' => 'info',
