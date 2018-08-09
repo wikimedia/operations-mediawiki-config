@@ -658,7 +658,7 @@ $wgLBFactoryConf = [
 	'extension1' => [
 		'10.192.0.87' => 1, # db2034, A5 3.5TB 160GB,
 		# '10.192.32.4' => 1, # db2033, C6 3.5TB 160GB, BBU broken # T184888
-		'10.192.48.21' => 1, # db2069, D6 3.5TB 160GB # old master candidate master
+		# '10.192.48.21' => 1, # db2069, D6 3.5TB 160GB # old master candidate master
 	],
 ],
 
