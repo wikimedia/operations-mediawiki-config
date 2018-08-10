@@ -9674,6 +9674,7 @@ $wgConf->settings = [
 	],
 	'ruwikiquote' => [
 		'autoeditor' => [ 'autoreview' => true, 'autoconfirmed' => true, 'editsemiprotected' => true ],
+		'rollbacker' => [ 'rollback' => true ], // T200201
 	],
 	'ruwikisource' => [
 		'autoeditor' => [ 'autoreview' => true, 'autoconfirmed' => true, 'editsemiprotected' => true ],
@@ -10718,7 +10719,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'arbcom', 'engineer' ], // T51334, T144599
 	],
 	'+ruwikiquote' => [
-		'sysop' => [ 'autoeditor' ]
+		'sysop' => [ 'autoeditor', 'rollbacker' ], // T200201 
 	],
 	'+ruwikisource' => [
 		'bureaucrat' => [ 'autoeditor', 'rollbacker' ],
@@ -11478,7 +11479,7 @@ $wgConf->settings = [
 		'sysop' => [ 'rollbacker', 'autoeditor', 'uploader', 'closer', 'filemover', 'suppressredirect' ],
 	],
 	'+ruwikiquote' => [
-		'sysop' => [ 'autoeditor' ]
+		'sysop' => [ 'autoeditor', 'rollbacker' ], // T200201
 	],
 	'+ruwikisource' => [
 		'bureaucrat' => [ 'autoeditor', 'rollbacker' ],
