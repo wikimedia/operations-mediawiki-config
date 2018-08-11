@@ -22,8 +22,8 @@ $wgSearchType = 'CirrusSearch';
 
 $wgCirrusSearchElasticQuirks = [];
 
-# Set up the the default cluster to send queries to,
-# and the list of clusters to write to.
+# Set up the default cluster to send queries to, and
+# the list of clusters to write to.
 if ( $wmgCirrusSearchDefaultCluster === 'local' ) {
 	$wgCirrusSearchDefaultCluster = $wmfDatacenter;
 } else {
