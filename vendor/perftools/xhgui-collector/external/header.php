@@ -1,7 +1,7 @@
 <?php
 /* Things you may want to tweak in here:
  *  - xhprof_enable() uses a few constants.
- *  - The values passed to rand() determine the the odds of any particular run being profiled.
+ *  - The values passed to rand() determine the odds of any particular run being profiled.
  *  - The MongoDB collection and such.
  *
  * I use unsafe writes by default, let's not slow down requests any more than I need to. As a result you will
