@@ -15719,6 +15719,7 @@ $wgConf->settings = [
 	'thwikiquote' => 'uca-default', // T50097
 	'thwikisource' => 'uca-default', // T50097
 	'thwiktionary' => 'uca-default', // T50097
+	'trwiki' => 'uca-tr', // T184943
 	'uawikimedia' => 'uca-uk', // T47776
 	'ukwiki' => 'uca-uk-u-kn', // T47444, T148682
 	'ukwikibooks' => 'uca-uk', // T47776
