@@ -68,11 +68,11 @@ if ( false ) {
 require_once "$IP/extensions/OpenStackManager/OpenStackManager.php";
 switch ( $wgDBname ) {
 case 'labswiki' :
-	$wgOpenStackManagerNovaIdentityURI = 'http://labcontrol1001.wikimedia.org:35357/v2.0';
-	$wgOpenStackManagerNovaIdentityV3URI = 'http://labcontrol1001.wikimedia.org:35357/v3';
+	$wgOpenStackManagerNovaIdentityURI = 'http://cloudcontrol1003.wikimedia.org:35357/v2.0';
+	$wgOpenStackManagerNovaIdentityV3URI = 'http://cloudcontrol1003.wikimedia.org:35357/v3';
 	$wgOpenStackManagerDNSOptions = [
 		'enabled' => true,
-		'servers' => [ 'primary' => 'labcontrol1001.wikimedia.org' ],
+		'servers' => [ 'primary' => 'cloudcontrol1003.wikimedia.org' ],
 		'soa'     => [ 'hostmaster' => 'hostmaster.wikimedia.org', 'refresh' => '1800', 'retry' => '3600', 'expiry' => '86400', 'minimum' => '7200' ],
 	];
 		break;
