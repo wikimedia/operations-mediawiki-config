@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "05b58300_9ef22e8f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 17598,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-08-13T11:21:07Z",
+      "side": 1,
+      "message": "Was this feature requested as well? Please note that it is not currently maintained very much. See \u003chttps://phabricator.wikimedia.org/T186445\u003e (maintenance hasn\u0027t yet started though).",
+      "range": {
+        "startLine": 17598,
+        "startChar": 0,
+        "endLine": 17598,
+        "endChar": 34
+      },
+      "revId": "5b60949232ad6aca7b3fc60738aaeca7bc46e232",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
