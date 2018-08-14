@@ -20145,7 +20145,7 @@ $wgConf->settings = [
 
 'wgLegacyJavaScriptGlobals' => [
 	'default' => true,
-	'test2wiki' => false, // T67011
+	'group0' => false, // T35837
 ],
 
 'wgSecureLogin' => [
