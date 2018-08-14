@@ -1830,6 +1830,9 @@ if ( $wmgUseCentralNotice ) {
 	// Emit CSP headers on banner previews. This can go away when full CSP
 	// support (T135963) is deployed.
 	$wgCentralNoticeContentSecurityPolicy = "default-src *.wikimedia.org *.wikipedia.org *.wiktionary.org *.wikisource.org *.wikibooks.org *.wikiversity.org *.wikiquote.org *.wikinews.org www.mediawiki.org www.wikidata.org *.wikivoyage.org data: blob: 'self'; script-src *.wikimedia.org 'unsafe-inline' 'unsafe-eval' 'self'; style-src *.wikimedia.org data: 'unsafe-inline' 'self';";
+
+	// Turn on EventLogging data globally at a low level
+	$wgCentralNoticeImpressionEventSampleRate = 0.01;
 }
 
 // Load our site-specific l10n extension
