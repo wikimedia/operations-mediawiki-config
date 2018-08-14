@@ -624,10 +624,6 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
-		'-wmgPopupsBetaFeature' => [
-			'default' => false,
-		],
-
 		// T191888: Enable page previews configuration for newly created accounts
 		'wgPopupsOptInStateForNewAccounts' => [
 			'default' => '1',
