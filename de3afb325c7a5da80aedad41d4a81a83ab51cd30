@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e666078_65bc213b",
+        "filename": "wmf-config/mc.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-08-14T00:56:44Z",
+      "side": 1,
+      "message": "It looks like enabling mcrouterAware, makes the use of \u0027channels\u0027 inaccessible. If so, do we want to remove that?",
+      "range": {
+        "startLine": 44,
+        "startChar": 2,
+        "endLine": 44,
+        "endChar": 61
+      },
+      "revId": "de3afb325c7a5da80aedad41d4a81a83ab51cd30",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
