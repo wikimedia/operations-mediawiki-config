@@ -56,7 +56,7 @@ $wgWBRepoSettings['searchIndexProperties'] = $wmgWikibaseSearchIndexProperties;
 // Statement boosting
 $wgWBRepoSettings['entitySearch']['statementBoost'] = $wmgWikibaseSearchStatementBoosts;
 // T163642, T99899
-$wgWBRepoSettings['searchIndexTypes'] = [ 'string', 'external-id' ];
+$wgWBRepoSettings['searchIndexTypes'] = [ 'string', 'external-id', 'item', 'property', 'lexeme', 'form', 'sense' ];
 $wgWBRepoSettings['searchIndexPropertiesExclude'] = $wmgWikibaseSearchIndexPropertiesExclude;
 
 // Prefix search query
