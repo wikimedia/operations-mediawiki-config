@@ -13761,7 +13761,8 @@ $wgConf->settings = [
 'wmgUseFooterContactLink' => [
 	// Make sure 'MediaWiki:Contact' and 'MediaWiki:Contact-url' are defined.
 	'default' => false,
-	'enwiki' => true,  // T48392
+	'enwiki' => true, // T48392
+	'ruwiki' => true, // T201783
 	'ukwiki' => true, // T104924
 ],
 
