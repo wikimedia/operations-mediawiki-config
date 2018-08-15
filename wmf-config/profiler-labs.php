@@ -1,11 +1,11 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 #
-# Included by PhpAutoPrepend-labs.php before any other wmf-config or mediawiki file.
-# Uses no predefined state, other than plain PHP.
+# Included by PhpAutoPrepend-labs.php BEFORE any other wmf-config or mediawiki file.
+# MUST NOT use any predefined state, only plain PHP.
 #
 # Exposes:
-# - $wmgProfiler (used by StartProfile-labs.php)
+# - $wmgProfiler (used by CommonSettings.php)
 
 global $wmgProfiler;
 $wmgProfiler = [];

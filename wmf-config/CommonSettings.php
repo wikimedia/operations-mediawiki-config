@@ -275,6 +275,20 @@ if ( $wmfRealm === 'labs' ) {
 	require "$wmfConfigDir/db-{$wmfDatacenter}.php";
 }
 
+// profiler.php and profiler-labs.php define $wmgProfiler.
+// NOTE: This file is normally included much earlier via PhpAutoPrepend,
+// so that profiles trace the whole request (including MediaWiki setup).
+// That is also the reason we use $wmgProfiler as intermediary
+// because wmf-config/CommonSettings loads after mediawiki/DefaultSettings,
+// which defines $wgProfiler.
+if ( $wmfRealm === 'labs' ) {
+	require_once __DIR__ . '/profiler-labs.php';
+	$wgProfiler = $wmgProfiler;
+} else {
+	require_once __DIR__ . '/profiler.php';
+	$wgProfiler = $wmgProfiler;
+}
+
 # Disallow web request DB transactions slower than this
 $wgMaxUserDBWriteDuration = 3;
 # Activate read-only mode for bots when lag is getting high.
