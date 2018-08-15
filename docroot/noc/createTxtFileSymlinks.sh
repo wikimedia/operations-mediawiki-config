@@ -9,7 +9,6 @@ mwconfig_files_txt=(
 	InitialiseSettings.php
 	ProductionServices.php
 	PoolCounterSettings.php
-	StartProfiler.php
 	abusefilter.php
 	CirrusSearch-common.php
 	CirrusSearch-labs.php
