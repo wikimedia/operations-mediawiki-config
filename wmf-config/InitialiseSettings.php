@@ -18773,6 +18773,8 @@ $wgConf->settings = [
 		'P3903', // column
 		'P3921', // Wikidata SPARQL query equivalent
 		'P4316', // kinship equivalent in SPARQL at Wikidata
+		'P1433', // published in, too many instances for now
+		'P2860', // cites, too many instances for now
 	]
 ],
 
