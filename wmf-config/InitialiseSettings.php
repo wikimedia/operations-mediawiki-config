@@ -11453,6 +11453,9 @@ $wgConf->settings = [
 	'+plwikiquote' => [
 		'sysop' => [ 'patroller' ], // T30479
 	],
+	'+plwikisource' => [
+		'bureaucrat' => [ 'interface-admin' ], // T202085
+	],
 	'+pswiki' => [
 		'bureaucrat' => [ 'interface-editor' ], // T133472
 	],
