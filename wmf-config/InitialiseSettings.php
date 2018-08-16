@@ -17751,6 +17751,10 @@ $wgConf->settings = [
 	'default' => false,
 	'testwiki' => 118,
 ],
+'wgPageTriageEnableOresFilters' => [
+	'default' => false,
+	'testwiki' => true,
+],
 
 'wmgEnableInterwiki' => [
 	'default' => true,
