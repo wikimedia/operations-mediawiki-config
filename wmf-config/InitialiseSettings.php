@@ -13763,6 +13763,7 @@ $wgConf->settings = [
 	'default' => false,
 	'enwiki' => true,  // T48392
 	'ukwiki' => true, // T104924
+	'frwiki' => true, // T202014
 ],
 
 'wmgUseFooterCodeOfConductLink' => [
