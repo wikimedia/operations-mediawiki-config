@@ -3232,10 +3232,6 @@ if ( $wmgUseNewWikiDiff2Extension ) {
 	$wgWikiDiff2MovedParagraphDetectionCutoff = 25;
 }
 
-if ( $wmgDeactivateWikiDiff2InlineMovedParagaphDetection ) {
-	ini_set( "wikidiff2.moved_paragraph_detection_cutoff_mobile", 0 );
-}
-
 if ( $wmgUseCognate ) {
 	wfLoadExtension( 'Cognate' );
 	$wgCognateDb = 'cognate_' . $wmgUseCognate;
