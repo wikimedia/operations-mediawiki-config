@@ -1,0 +1,8 @@
+Code-Review+2: Zfilipin <zfilipin@wikimedia.org>
+Code-Review+1: Urbanecm <martin.urbanec@wikimedia.cz>
+Verified+2: jenkins-bot
+Submitted-by: jenkins-bot
+Submitted-at: Mon, 20 Aug 2018 11:12:16 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/451823
+Project: operations/mediawiki-config
+Branch: refs/heads/master
