@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ced4dea_23ce8ab9",
+        "filename": "docroot/search.wikimedia.org/index.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-08-20T22:51:24Z",
+      "side": 1,
+      "message": "Given we know $search is a non-empty string at this point, would it be simpler to compare $search[0] \u003d\u003d\u003d chr( 0x1F ), instead?",
+      "range": {
+        "startLine": 50,
+        "startChar": 5,
+        "endLine": 50,
+        "endChar": 41
+      },
+      "revId": "0401a96e3abf72912bd09dbed1889ecc071f0edf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
