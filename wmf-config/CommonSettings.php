@@ -3124,7 +3124,6 @@ if ( $wmgUseEventLogging ) {
 	if ( $wmgUseWikimediaEvents ) {
 		wfLoadExtension( 'WikimediaEvents' );
 		$wgWMEStatsdBaseUri = '/beacon/statsv';
-		$wgWMETrackGeoFeatures = $wmgWMETrackGeoFeatures;
 	}
 
 	// Depends on EventLogging
