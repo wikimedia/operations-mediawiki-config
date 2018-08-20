@@ -18386,10 +18386,6 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
-'wmgWMETrackGeoFeatures' => [
-	'default' => true,
-],
-
 'wmgUseWikimediaEvents' => [
 	'default' => true,
 	'closed' => false, // T158721
