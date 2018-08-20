@@ -685,10 +685,6 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
-		'wmgDeactivateWikiDiff2InlineMovedParagaphDetection' => [
-			'default' => false,
-		],
-
 		'wgReadingListsCluster' => [
 			'default' => false,
 		],

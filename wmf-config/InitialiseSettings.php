@@ -20723,36 +20723,7 @@ $wgConf->settings = [
 ],
 
 'wmgUseNewWikiDiff2Extension' => [
-	'default' => true, // T195375
-	'jawiki' => false,
-	'jawikibooks' => false,
-	'jawikinews' => false,
-	'jawikiquote' => false,
-	'jawikisource' => false,
-	'jawikiversity' => false,
-	'kowiki' => false,
-	'kowikibooks' => false,
-	'kowikinews' => false,
-	'kowikiquote' => false,
-	'kowikisource' => false,
-	'kowikiversity' => false,
-	'thwiki' => false,
-	'thwikibooks' => false,
-	'thwikisource' => false,
-	'thwiktionary' => false,
-	'thwikiquote' => false,
-	'zhwiki' => false,
-	'zhwikibooks' => false,
-	'zhwikinews' => false,
-	'zhwikiquote' => false,
-	'zhwikisource' => false,
-	'zhwikivoyage' => false,
-	'zhwiktionary' => false,
-	'zh_yuewiki' => false,
-],
-
-'wmgDeactivateWikiDiff2InlineMovedParagaphDetection' => [
-	'default' => true,
+	'default' => true, // T199800
 ],
 
 'wgCommentTableSchemaMigrationStage' => [
