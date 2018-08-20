@@ -42,6 +42,7 @@ if ( $wgDBname === 'labswiki' ) {
 		'class'   => 'WANObjectCache',
 		'cacheId' => $wgMainCacheType,
 		'channels' => [ 'purge' => 'wancache-main-default-purge' ],
+		'cluster' => 'mw-wan',
 		'mcrouterAware' => in_array( $wgDBname, [ 'testwiki', 'test2wiki', 'mediawikiwiki' ] ),
 	];
 }
