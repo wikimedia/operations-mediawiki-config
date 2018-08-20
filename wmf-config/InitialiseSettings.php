@@ -10869,6 +10869,7 @@ $wgConf->settings = [
 		],
 		'wikidata-staff' => [
 			'wikidata-staff', // T74459
+			'interface-admin', // T202065
 		],
 	],
 	'wikitech' => [
@@ -11635,6 +11636,7 @@ $wgConf->settings = [
 		],
 		'wikidata-staff' => [
 			'wikidata-staff', // T74459
+			'interface-admin', // T202065
 		],
 	],
 	'+wikimaniateamwiki' => [
