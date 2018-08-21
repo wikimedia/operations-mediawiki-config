@@ -1,0 +1,9 @@
+Code-Review+2: Thcipriani <tcipriani@wikimedia.org>
+Code-Review+1: EBernhardson <ebernhardson@wikimedia.org>
+Code-Review+1: DCausse <dcausse@wikimedia.org>
+Verified+2: jenkins-bot
+Submitted-by: jenkins-bot
+Submitted-at: Tue, 21 Aug 2018 23:31:25 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/452956
+Project: operations/mediawiki-config
+Branch: refs/heads/master
