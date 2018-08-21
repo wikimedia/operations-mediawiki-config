@@ -4269,6 +4269,10 @@ $wgConf->settings = [
 	],
 	'+plwiktionary' => [
 		'WS' => NS_PROJECT,
+		'Wikipedysta' => NS_USER, // T202347
+		'Wikipedystka' => NS_USER, // T202347
+		'Dyskusja_wikipedysty' => NS_USER_TALK, // T202347
+		'Dyskusja_wikipedystki' => NS_USER_TALK, // T202347
 	],
 	'+pswikivoyage' => [
 		'وس' => NS_PROJECT, // T197507
@@ -16371,9 +16375,9 @@ $wgConf->settings = [
 		NS_USER => [ 'male' => 'Wikireporter', 'female' => 'Wikireporterka' ],
 		NS_USER_TALK => [ 'male' => 'Dyskusja_wikireportera', 'female' => 'Dyskusja_wikireporterki' ],
 	],
-	'plwiktionary' => [
-		NS_USER => [ 'male' => 'Wikipedysta', 'female' => 'Wikipedystka' ],
-		NS_USER_TALK => [ 'male' => 'Dyskusja_wikipedysty', 'female' => 'Dyskusja_wikipedystki' ],
+	'plwiktionary' => [ // T202347
+		NS_USER => [ 'male' => 'Wikisłownikarz', 'female' => 'Wikisłownikarka' ],
+		NS_USER_TALK => [ 'male' => 'Dyskusja_wikisłownikarza', 'female' => 'Dyskusja_wikisłownikarki' ],
 	],
 	'ptwiki' => [
 		NS_USER => [ 'male' => 'Usuário', 'female' => 'Usuária' ],
