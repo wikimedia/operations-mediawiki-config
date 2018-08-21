@@ -662,7 +662,7 @@ $wgLBFactoryConf = [
 	'cluster24' => [
 		'10.64.0.6'    => 0, # es1011, A2 11TB 128GB, master
 		'10.64.16.186' => 1, # es1013, B1 11TB 128GB
-		'10.64.32.184' => 1, # es1015, C2 11TB 128GB
+		# '10.64.32.184' => 1, # es1015, C2 11TB 128GB
 	],
 	# es3
 	'cluster25' => [
@@ -728,7 +728,7 @@ $wgLBFactoryConf = [
 ];
 
 $wgDefaultExternalStore = [
-	'DB://cluster24',
+	# 'DB://cluster24',
 	'DB://cluster25',
 ];
 
