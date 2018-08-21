@@ -20819,6 +20819,7 @@ $wgConf->settings = [
 		'includeCORS' => false,
 		'default-src' => [
 			'*.wikimedia.org',
+			'wikimedia.org', // Needed for Math restbase
 			'*.wikipedia.org',
 			'*.wikinews.org',
 			'*.wiktionary.org',
