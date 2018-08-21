@@ -45,6 +45,30 @@
       "revId": "5756d62b53629927d116d7005002668dc7692a5f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d0a9bfd8_e513e71d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 6867,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2018-08-21T23:00:54Z",
+      "side": 1,
+      "message": "I think this serves as the default namespace name for users with unknown/unset gender, and should probably also be updated. See e.g. the example for Portuguese (ptwiki).",
+      "parentUuid": "601432e5_5e322fcc",
+      "range": {
+        "startLine": 6866,
+        "startChar": 0,
+        "endLine": 6867,
+        "endChar": 41
+      },
+      "revId": "5756d62b53629927d116d7005002668dc7692a5f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
