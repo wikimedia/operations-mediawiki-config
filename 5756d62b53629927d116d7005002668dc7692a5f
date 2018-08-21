@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e29a9837_ef4e0470",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 4275,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-08-21T09:15:49Z",
+      "side": 1,
+      "message": "These were the previous gendered namespaces which I moved to NamespaceAliases for backwards compatibility.",
+      "range": {
+        "startLine": 4272,
+        "startChar": 0,
+        "endLine": 4275,
+        "endChar": 53
+      },
+      "revId": "5756d62b53629927d116d7005002668dc7692a5f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "601432e5_5e322fcc",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 6867,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-08-21T09:15:49Z",
+      "side": 1,
+      "message": "Not sure why these two are in ExtraNamespaces. Maybe they should be moved to aliases in the future?",
+      "range": {
+        "startLine": 6866,
+        "startChar": 0,
+        "endLine": 6867,
+        "endChar": 41
+      },
+      "revId": "5756d62b53629927d116d7005002668dc7692a5f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
