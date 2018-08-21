@@ -10869,7 +10869,6 @@ $wgConf->settings = [
 		],
 		'wikidata-staff' => [
 			'wikidata-staff', // T74459
-			'interface-admin', // T202065
 		],
 	],
 	'wikitech' => [
@@ -11636,7 +11635,6 @@ $wgConf->settings = [
 		],
 		'wikidata-staff' => [
 			'wikidata-staff', // T74459
-			'interface-admin', // T202065
 		],
 	],
 	'+wikimaniateamwiki' => [
@@ -13377,7 +13375,10 @@ $wgConf->settings = [
 	'srwiki' => [ 'sysop' => [ 'flood' ] ],
 	'plwiki' => [ 'sysop' => [ 'flood' ] ], // T22155
 	'strategywiki' => [ 'sysop' => [ 'flood' ] ],
-	'wikidata' => [ 'sysop' => [ 'flood' ] ], // T50013, T48856
+	'wikidata' => [
+		'sysop' => [ 'flood' ], // T50013, T48856
+		'wikidata-staff' => [ 'interface-admin' ], // T202065
+	],
 	'wikitech' => [
 		'contentadmin' => [ 'flood' ],
 		'sysop' => [ 'flood' ],
@@ -13411,6 +13412,7 @@ $wgConf->settings = [
 	'wikidata' => [
 		'sysop' => [ 'flood' ], // T50013, T48856
 		'flood' => [ 'flood' ], // T50013
+		'wikidata-staff' => [ 'interface-admin' ], // T202065
 	],
 	'wikitech' => [
 		'contentadmin' => [ 'flood' ],
