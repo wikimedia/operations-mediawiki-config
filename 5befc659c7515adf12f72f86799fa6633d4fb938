@@ -22,6 +22,30 @@
       "revId": "5befc659c7515adf12f72f86799fa6633d4fb938",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0ce5d5d3_bc53b04c",
+        "filename": "wmf-config/Wikibase-production.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 2664
+      },
+      "writtenOn": "2018-08-21T08:06:56Z",
+      "side": 1,
+      "message": "Thanks, I have updated this config.",
+      "parentUuid": "5c470f5b_8f810b56",
+      "range": {
+        "startLine": 58,
+        "startChar": 0,
+        "endLine": 62,
+        "endChar": 32
+      },
+      "revId": "5befc659c7515adf12f72f86799fa6633d4fb938",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
