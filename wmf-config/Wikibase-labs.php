@@ -46,6 +46,8 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['useTermsTableSearchFields'] = false;
 
 	$wgWBRepoSettings['dispatchLagToMaxLagFactor'] = 60;
+
+	$wgWBRepoSettings['tmpMaxItemIdForNewItemIdHtmlFormatter'] = $wmgWikibaseMaxItemIdForNewItemIdHtmlFormatter;
 }
 
 if ( $wmgUseWikibaseClient ) {

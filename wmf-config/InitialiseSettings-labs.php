@@ -438,6 +438,10 @@ function wmfLabsSettings() {
 			'enwiki' => true,
 		],
 
+		'wmgWikibaseMaxItemIdForNewItemIdHtmlFormatter' => [
+			'default' => 0,
+		],
+
 		'wmgWikibaseAllowDataAccessInUserLanguage' => [
 			'default' => false,
 			'wikidatawiki' => true,
