@@ -93,6 +93,54 @@
       "revId": "5756d62b53629927d116d7005002668dc7692a5f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "71a2687a_2d23b8c8",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 6867,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-08-22T12:00:19Z",
+      "side": 1,
+      "message": "Disregard cmt@10:15 AM.",
+      "parentUuid": "7f511339_27eef461",
+      "range": {
+        "startLine": 6866,
+        "startChar": 0,
+        "endLine": 6867,
+        "endChar": 41
+      },
+      "revId": "5756d62b53629927d116d7005002668dc7692a5f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef3a121_15ed1f10",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 6867,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-08-22T12:00:19Z",
+      "side": 1,
+      "message": "I checked Manual:$wgExtraNamespaces and this can serve to rename actual namespaces, like you do. So yeah, in PS6 I think I got them all. Gender namespaces as requested, previous ones added as aliases for backwards compatibility and the \"extra\" ones modified as well so the NS_USER(_TALK) uses the masculine \u0026 neutral ones (and not those provided by MessagesPl.php@mediawiki/core).",
+      "parentUuid": "d0a9bfd8_e513e71d",
+      "range": {
+        "startLine": 6866,
+        "startChar": 0,
+        "endLine": 6867,
+        "endChar": 41
+      },
+      "revId": "5756d62b53629927d116d7005002668dc7692a5f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
