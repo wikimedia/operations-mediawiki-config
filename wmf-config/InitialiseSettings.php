@@ -13744,6 +13744,7 @@ $wgConf->settings = [
 		'*.nic.in',                         // India government website - T197944
 		'*.gov.in',                         // India government website - T197944
 		'media.farsnews.com',               // Fars News Agency - T200872
+		'www.mhs.ox.ac.uk',                 // University of Oxford museum - T201604
 	],
 ],
 
