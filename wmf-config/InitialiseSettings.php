@@ -12770,6 +12770,9 @@ $wgConf->settings = [
 		NS_FILE_TALK => [ 'editinterface' ],
 		828 => [ 'autoconfirmed' ], // T55558 - Module:
 	],
+	'+eswikibooks' => [
+		828 => [ 'autoconfirmed' ], // T202555 - Module:
+	],
 	'+ptwiki' => [
 		NS_FILE => [ 'autoconfirmed' ],
 	],
