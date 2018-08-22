@@ -18702,6 +18702,10 @@ $wgConf->settings = [
 	],
 ],
 
+'wmgWikibaseMaxItemIdForNewItemIdHtmlFormatter' => [
+	'default' => 0,
+],
+
 // T151717 and T177153
 'wmgWikibaseDisabledUsageAspects' => [
 	'default' => [],
