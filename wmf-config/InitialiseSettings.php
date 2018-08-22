@@ -20756,6 +20756,9 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
+'wgMultiContentRevisionSchemaMigrationStage' => [
+	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+],
 'wmgUseReadingLists' => [
 	'default' => true,
 	'private' => false,
