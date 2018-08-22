@@ -15920,6 +15920,7 @@ $wgConf->settings = [
 	'wikitech' => true,
 	'zhwiki' => true, // T32362
 	'zhwikivoyage' => true, // T75717
+	'zh_yuewiki' => true, // T202548
 ],
 
 // whether to use the Math extension
