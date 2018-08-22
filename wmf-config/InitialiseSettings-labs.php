@@ -440,6 +440,7 @@ function wmfLabsSettings() {
 
 		'wmgWikibaseMaxItemIdForNewItemIdHtmlFormatter' => [
 			'default' => 0,
+			'wikidatawiki' => 1,
 		],
 
 		'wmgWikibaseAllowDataAccessInUserLanguage' => [
