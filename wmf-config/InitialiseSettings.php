@@ -5490,6 +5490,7 @@ $wgConf->settings = [
 		'DBConnection' => 'error',
 		'DBQuery' => 'warning',
 		'LoginNotify' => 'debug',
+		'Wikibase.NewItemIdFormatter' => 'debug', // WMDE & Addshore T201832
 		'WMDE' => 'debug', // WMDE & Addshore T174948 & T191500
 		'AbuseFilterSlow' => 'debug',
 	],
