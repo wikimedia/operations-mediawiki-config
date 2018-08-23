@@ -41,6 +41,8 @@ if ( $wgDBname === 'labswiki' ) {
 	$wgWANObjectCaches['wancache-main-mcrouter'] = [
 		'class'   => 'WANObjectCache',
 		'cacheId' => $wgMainCacheType,
+		// Specify the route prefix that mcrouter listens for and broadcasts.
+		// The route prefix is configured in Puppet (profile::mediawiki::mcrouter_wancache).
 		'cluster' => 'mw-wan',
 		'mcrouterAware' => true
 	];
