@@ -42,6 +42,8 @@ if ( $wgDBname === 'labswiki' ) {
 		'class'   => 'WANObjectCache',
 		'cacheId' => $wgMainCacheType,
 		'channels' => [ 'purge' => 'wancache-main-default-purge' ],
+		// Specify the route alias that mcrouter listens for and broadcasts.
+		// This route is configured in Puppet (profile::mediawiki::mcrouter_wancache).
 		'cluster' => 'mw-wan',
 		'mcrouterAware' => in_array( $wgDBname, [ 'testwiki', 'test2wiki', 'mediawikiwiki' ] ),
 	];
