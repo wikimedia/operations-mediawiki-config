@@ -9350,8 +9350,9 @@ $wgConf->settings = [
 			'autopatrol' => true,
 			'centralauth-rename' => true,
 		],
-		'massmessage-sender' => [ // T59611, T142123
+		'massmessage-sender' => [ // T59611, T142123, T202597
 			'autopatrol' => true,
+			'editcontentmodel' => true,
 			'massmessage' => true,
 		],
 		'oauthadmin' => [ // T142123
