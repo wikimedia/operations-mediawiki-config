@@ -7999,16 +7999,6 @@ $wgConf->settings = [
 			'newbie' => [ 3, 86400 ],
 		],
 	],
-	'+wikidatawiki' => [
-		'edit' => [
-			'&can-bypass' => false,
-			'user' => [ 80, 60 ],
-		],
-		'create' => [
-			'&can-bypass' => false,
-			'user' => [ 40, 60 ],
-		],
-	],
 ],
 # @} end of wgRateLimits
 
