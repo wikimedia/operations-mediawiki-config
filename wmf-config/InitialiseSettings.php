@@ -2802,6 +2802,7 @@ $wgConf->settings = [
 	'frwiktionary' => 'Wiktionnaire',
 	'furwiki' => 'Vichipedie',
 	'fywiki' => 'Wikipedy',
+	'fywiktionary' => 'Wikiwurdboek', // T202769
 	'gawiki' => 'Vicipéid',
 	'gagwiki' => 'Vikipediya',
 	'gawikibooks' => 'Vicíleabhair',
