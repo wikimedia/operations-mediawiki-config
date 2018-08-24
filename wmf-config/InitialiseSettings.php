@@ -11687,7 +11687,7 @@ $wgConf->settings = [
 		'sysop' => [ 'flood' ], // T189289
 	],
 	'+zhwikiversity' => [
-		'sysop' => [ 'transwiki', 'patroller', 'autopatrolled', 'confirmed' ],
+		'sysop' => [ 'transwiki', 'patroller', 'autopatrolled', 'confirmed', 'flood' ],
 	],
 	'+zhwikivoyage' => [
 		'sysop' => [ 'autopatrolled', 'confirmed', 'patroller', 'transwiki' ], // T62085, T62328
