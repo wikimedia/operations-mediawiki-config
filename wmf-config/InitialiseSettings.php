@@ -1665,10 +1665,16 @@ $wgConf->settings = [
 	# Wikibooks
 	'bawikibooks' => [ '1.5x' => '/static/images/project-logos/bawikibooks-1.5x.png', '2x' => '/static/images/project-logos/bawikibooks-2x.png' ], // T173471
 	'bewikibooks' => [ '1.5x' => '/static/images/project-logos/bewikibooks-1.5x.png', '2x' => '/static/images/project-logos/bewikibooks-2x.png' ],
+	'cswikibooks' => [ '1.5x' => '/static/images/project-logos/cswikibooks-1.5x.png', '2x' => '/static/images/project-logos/cswikibooks-2x.png' ], // T177506
+	'dewikibooks' => [ '1.5x' => '/static/images/project-logos/dewikibooks-1.5x.png', '2x' => '/static/images/project-logos/dewikibooks-2x.png' ], // T177506
 	'enwikibooks' => [ '1.5x' => '/static/images/project-logos/enwikibooks-1.5x.png', '2x' => '/static/images/project-logos/enwikibooks-2x.png' ], // T177506
 	'eswikibooks' => [ '1.5x' => '/static/images/project-logos/eswikibooks-1.5x.png', '2x' => '/static/images/project-logos/eswikibooks-2x.png' ], // T170248
+	'fiwikibooks' => [ '1.5x' => '/static/images/project-logos/fiwikibooks-1.5x.png', '2x' => '/static/images/project-logos/fiwikibooks-2x.png' ], // T177506
 	'hewikibooks' => [ '1.5x' => '/static/images/project-logos/hewikibooks-1.5x.png', '2x' => '/static/images/project-logos/hewikibooks-2x.png' ], // T201562
+	'huwikibooks' => [ '1.5x' => '/static/images/project-logos/huwikibooks-1.5x.png', '2x' => '/static/images/project-logos/huwikibooks-2x.png' ], // T177506
+	'itwikibooks' => [ '1.5x' => '/static/images/project-logos/itwikibooks-1.5x.png', '2x' => '/static/images/project-logos/itwikibooks-2x.png' ], // T177506
 	'srwikibooks' => [ '1.5x' => '/static/images/project-logos/srwikibooks-1.5x.png', '2x' => '/static/images/project-logos/srwikibooks-2x.png' ], // T159534
+	'trwikibooks' => [ '1.5x' => '/static/images/project-logos/trwikibooks-1.5x.png', '2x' => '/static/images/project-logos/trwikibooks-2x.png' ], // T177506
 	'urwikibooks' => [ '1.5x' => '/static/images/project-logos/urwikibooks-1.5x.png', '2x' => '/static/images/project-logos/urwikibooks-2x.png' ], // T185977
 	'viwikibooks' => [ '1.5x' => '/static/images/project-logos/viwikibooks-1.5x.png', '2x' => '/static/images/project-logos/viwikibooks-2x.png' ],
 
