@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ad5ea69_c2d81906",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 478,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2018-08-24T17:29:02Z",
+      "side": 1,
+      "message": "wmgUseWikibaseMediaInfo",
+      "range": {
+        "startLine": 478,
+        "startChar": 3,
+        "endLine": 478,
+        "endChar": 20
+      },
+      "revId": "56a95fe7dfea68d9e1962ee32ab386ac893291a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
