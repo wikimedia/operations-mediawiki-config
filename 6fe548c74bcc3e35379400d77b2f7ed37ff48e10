@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7d95ee2b_80c9a491",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 2495,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-08-24T20:30:06Z",
+      "side": 0,
+      "message": "FIXME: Martin and I don\u0027t understand why this wiki got removed. This is also causing that this wiki be removed from Parsoid upgrades at I31cd3eef.",
+      "range": {
+        "startLine": 2495,
+        "startChar": 1,
+        "endLine": 2495,
+        "endChar": 36
+      },
+      "revId": "6fe548c74bcc3e35379400d77b2f7ed37ff48e10",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
