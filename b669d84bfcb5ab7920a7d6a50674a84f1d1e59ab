@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ed9cfc0a_a93a9007",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4879
+      },
+      "writtenOn": "2018-08-24T00:48:14Z",
+      "side": 1,
+      "message": "Where to allow? On which project?",
+      "revId": "b669d84bfcb5ab7920a7d6a50674a84f1d1e59ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
