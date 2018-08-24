@@ -9665,6 +9665,19 @@ $wgConf->settings = [
 			'patrol' => false, // T154285
 		],
 	],
+	'+ruwikinews' => [
+		'autoconfirmed' => [
+			'movestable' => false, // T201265
+		],
+		'autoreview' => [
+			'move-categorypages' => true,
+			'movestable' => true, // T201265
+		],
+		'user' => [
+			'move-categorypages' => false, // T201265
+		],
+		'rollbacker' => [ 'rollback' => true ], // T201265
+	],
 	'ruwikiquote' => [
 		'autoeditor' => [ 'autoreview' => true, 'autoconfirmed' => true, 'editsemiprotected' => true ],
 		'rollbacker' => [ 'rollback' => true ], // T200201
@@ -10721,6 +10734,9 @@ $wgConf->settings = [
 		'sysop' => [ 'rollbacker', 'autoeditor', 'uploader', 'closer', 'filemover', 'suppressredirect' ],
 		'bureaucrat' => [ 'arbcom', 'engineer' ], // T51334, T144599
 	],
+	'+ruwikinews' => [
+		'sysop' => [ 'rollbacker' ], // T201265
+	],
 	'+ruwikiquote' => [
 		'sysop' => [ 'autoeditor', 'rollbacker' ], // T200201
 	],
@@ -11479,6 +11495,9 @@ $wgConf->settings = [
 	'+ruwiki' => [
 		'bureaucrat' => [ 'arbcom', 'engineer', 'sysop' ], // T51334, T144599
 		'sysop' => [ 'rollbacker', 'autoeditor', 'uploader', 'closer', 'filemover', 'suppressredirect' ],
+	],
+	'+ruwikinews' => [
+		'sysop' => [ 'rollbacker' ], // T201265
 	],
 	'+ruwikiquote' => [
 		'sysop' => [ 'autoeditor', 'rollbacker' ], // T200201
