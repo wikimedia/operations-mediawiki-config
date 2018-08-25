@@ -283,7 +283,7 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Get the space-seperated list of version params for this wiki.
+	 * Get the space-separated list of version params for this wiki.
 	 * The first item is the MW version
 	 */
 	private function loadVersionInfo() {
