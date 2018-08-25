@@ -284,6 +284,12 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterNotifications = false;
 		$wgAbuseFilterProfile = true; // T190137
 		break;
+	case 'itwikibooks': // T202808
+		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
+		$wgAbuseFilterActions['block'] = true;
+		$wgAbuseFilterBlockDuration = '1 day';
+		$wgAbuseFilterAnonBlockDuration = '1 day';
+		break;
 	case 'itwikinews':
 		$wgAbuseFilterActions['block'] = true;
 		$wgAbuseFilterBlockDuration = '1 day';
