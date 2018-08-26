@@ -4918,6 +4918,7 @@ $wgConf->settings = [
 	'+ptwikiversity' => [ 0 => 1 ],
 	'+ruwikiversity' => [ 0 => 1, 6 => 1, 14 => 1 ],
 	'+svwikiversity' => [ 0 => 1 ],
+	`+zhwikiversity` => [ 0 => 1 ], // T202007
 	// @}
 
 	// Wikiquote
