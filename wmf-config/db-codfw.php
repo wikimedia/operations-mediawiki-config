@@ -109,7 +109,7 @@ $wgLBFactoryConf = [
 		'db2070'      => 400, # C5 3.3TB 160GB
 		'db2071'      => 50,  # A6 3.6TB 512GB, api
 		'db2072'      => 500, # B6 3.6TB 512GB, # mariadb 10.1 # master for sanitarium db2094
-		'db2088:3311' => 1, # D1 3.3TB 512GB # rc, log: s1 and s2
+		# 'db2088:3311' => 1, # D1 3.3TB 512GB # rc, log: s1 and s2 # T202822
 		'db2085:3311' => 1, # A5 3.3TB 512GB # rc, log: s1 and s8
 		'db2092'      => 300, # B8 3.6TB 512GB, api # mariadb 10.1
 	],
@@ -119,7 +119,7 @@ $wgLBFactoryConf = [
 		'db2049'      => 400, # C6 2.9TB 160GB,
 		'db2056'      => 50,  # D6 3.3TB 160GB, dump (inactive), vslow #innodb compressed
 		'db2063'      => 100, # D6 3.3TB 160GB, api # master for sanitarium db2095
-		'db2088:3312' => 1, # D1 3.3TB 512GB # rc, log: s1 and s2
+		# 'db2088:3312' => 1, # D1 3.3TB 512GB # rc, log: s1 and s2 # T202822
 		'db2091:3312' => 1, # A8 3.3TB 512GB # rc, log: s2 and s4
 	],
 	/* s3 */ 'DEFAULT' => [
@@ -257,23 +257,23 @@ $wgLBFactoryConf = [
 'groupLoadsBySection' => [
 	's1' => [
 		'watchlist' => [
-			'db2088:3311' => 1,
+			# 'db2088:3311' => 1,
 			'db2085:3311' => 1,
 		],
 		'recentchanges' => [
-			'db2088:3311' => 1,
+			# 'db2088:3311' => 1,
 			'db2085:3311' => 1,
 		],
 		'recentchangeslinked' => [
-			'db2088:3311' => 1,
+			# 'db2088:3311' => 1,
 			'db2085:3311' => 1,
 		],
 		'contributions' => [
-			'db2088:3311' => 1,
+			# 'db2088:3311' => 1,
 			'db2085:3311' => 1,
 		],
 		'logpager' => [
-			'db2088:3311' => 1,
+			# 'db2088:3311' => 1,
 			'db2085:3311' => 1,
 		],
 		'dump' => [
@@ -291,23 +291,23 @@ $wgLBFactoryConf = [
 	],
 	's2' => [
 		'watchlist' => [
-			'db2088:3312' => 1,
+			# 'db2088:3312' => 1,
 			'db2091:3312' => 1,
 		],
 		'recentchanges' => [
-			'db2088:3312' => 1,
+			# 'db2088:3312' => 1,
 			'db2091:3312' => 1,
 		],
 		'recentchangeslinked' => [
-			'db2088:3312' => 1,
+			# 'db2088:3312' => 1,
 			'db2091:3312' => 1,
 		],
 		'contributions' => [
-			'db2088:3312' => 1,
+			# 'db2088:3312' => 1,
 			'db2091:3312' => 1,
 		],
 		'logpager' => [
-			'db2088:3312' => 1,
+			# 'db2088:3312' => 1,
 			'db2091:3312' => 1,
 		],
 		'dump' => [
