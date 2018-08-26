@@ -4734,6 +4734,15 @@ $wgConf->settings = [
 		'翻譯討論' => 115, // T66127
 		'翻译讨论' => 115, // T66127
 	],
+	'+zhwikiversity' => [
+		'T' => NS_TEMPLATE, // T202821
+		'WV' => NS_PROJECT, // T202821
+		'WT' => NS_PROJECT_TALK, // T202821
+		'U' => NS_USER, // T202821
+		'UT' => NS_USER_TALK, // T202821
+		'H' => NS_HELP, // T202821
+		'CAT' => NS_CATEGORY, // T202821
+	],
 	'+zhwikivoyage' => [
 		'维基导游' => NS_PROJECT, // T62122
 		'維基導遊' => NS_PROJECT, // T62122
