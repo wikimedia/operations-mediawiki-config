@@ -4742,6 +4742,13 @@ $wgConf->settings = [
 		'UT' => NS_USER_TALK, // T202821
 		'H' => NS_HELP, // T202821
 		'CAT' => NS_CATEGORY, // T202821
+		'学部' => 100, // T201675
+		'學部' => 100, // T201675
+		'学院' => 102, // T201675
+		'學院' => 102, // T201675
+		'系' => 102, // T201675
+		'学科' => 104, // T201675
+		'學科' => 104, // T201675
 	],
 	'+zhwikivoyage' => [
 		'维基导游' => NS_PROJECT, // T62122
@@ -6330,6 +6337,14 @@ $wgConf->settings = [
 		101 => 'Portal_talk',
 		118 => 'Draft', // T91223
 		119 => 'Draft_talk' // T91223
+	],
+	'zhwikiversity' => [
+		100 => 'Portal', // T201675
+		101 => 'Portal_talk', // T201675
+		102 => 'School', // T201675
+		103 => 'School_talk', // T201675
+		104 => 'Subject', // T201675
+		105 => 'Subject_talk', // T201675
 	],
 	'zh_classicalwiki' => [
 		100 => '門',
