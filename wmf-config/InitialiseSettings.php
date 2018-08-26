@@ -13721,7 +13721,7 @@ $wgConf->settings = [
 		'dknii.gov.ua',                     // Ukraine government website - T185399
 		'adm.dp.gov.ua',                    // Ukraine government website - T191692
 		'journals.plos.org',                // Public Library Of Science - T195270
-		'pensoft.net',                      // Public Library Of Science - T195270
+		'*.pensoft.net',                    // Public Library Of Science - T195270, T202832
 		'*.memoriachilena.cl',              // Chilean government website - T195928
 		'*.coleccionesdigitales.cl',        // Chilean government website - T195928
 		'*.gob.cl',                         // Chilean government website - T195928
