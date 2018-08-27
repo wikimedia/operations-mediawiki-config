@@ -2495,6 +2495,7 @@ $wgConf->settings = [
 	'sahwikiquote' => 'Биики_Домох',
 	'sahwikisource' => 'Бикитиэкэ',
 	'satwiki' => 'ᱣᱤᱠᱤᱯᱤᱰᱤᱭᱟ',
+	'scnwiktionary' => 'Wikizziunariu',
 	'sdwiki' => 'وڪيپيڊيا',
 	'searchcomwiki' => 'Search Committee',
 	'siwiki' => 'විකිපීඩියා, නිදහස් විශ්වකෝෂය',
