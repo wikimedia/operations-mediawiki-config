@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7149f54b_672b1497",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 3758,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-08-27T16:46:53Z",
+      "side": 1,
+      "message": "This term is unfamiliar to me. Was this meant to be \"interface-admin\"?\n\nAlso, assuming that this only applies to settings from wmf-config (in that, extensions can still override it, as well as global groups), perhaps it would be more suitable as a structure test on the repository, that way we can fail the build, instead of silently removing it at run-time, which may be confusing.\n\nAlternatively, we could keep it here with a warning, which means scap will get it and prevent deployment, but a unit test might be cleaner/less risky.",
+      "range": {
+        "startLine": 3758,
+        "startChar": 18,
+        "endLine": 3758,
+        "endChar": 27
+      },
+      "revId": "0629eb978aef4433a18f4edf6e13a1083fa9a036",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
