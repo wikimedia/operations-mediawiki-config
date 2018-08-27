@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0bcd38c4_65b224d2",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 5441,
+      "author": {
+        "id": 6097
+      },
+      "writtenOn": "2018-08-27T16:09:44Z",
+      "side": 1,
+      "message": "Looks fine, although maybe \u0027warning\u0027 would suffice",
+      "revId": "2da98a417b73c747c4d05c8ac67ae4a19b0eda84",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
