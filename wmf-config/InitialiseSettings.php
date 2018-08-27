@@ -1195,6 +1195,7 @@ $wgConf->settings = [
 	'wbwikimedia' => '/static/images/project-logos/wbwikimedia.png', // T162510
 
 	// Special wikis
+	'advisorswiki' => '/static/images/project-logos/advisorswiki.png', // T202844
 	'advisorywiki' => '/static/images/project-logos/advisorywiki.png',
 	'arbcom_dewiki' => '/static/images/project-logos/arbcom_dewiki.png', // T166947
 	'arbcom_cswiki' => '/static/images/project-logos/arbcom_cswiki.png', // T151731
@@ -1725,6 +1726,7 @@ $wgConf->settings = [
 	'wbwikimedia' => [ '1.5x' => '/static/images/project-logos/wbwikimedia-1.5x.png', '2x' => '/static/images/project-logos/wbwikimedia-2x.png' ], // T162510
 
 	# Special wikis
+	'advisorswiki' => [ '1.5x' => '/static/images/project-logos/advisorswiki-1.5x.png', '2x' => '/static/images/project-logos/advisorswiki-2x.png' ], // T202844
 	'arbcom_dewiki' => [ '1.5x' => '/static/images/project-logos/arbcom_dewiki-1.5x.png', '2x' => '/static/images/project-logos/arbcom_dewiki-2x.png' ], // T166947
 	'arbcom_cswiki' => [ '1.5x' => '/static/images/project-logos/arbcom_cswiki-1.5x.png', '2x' => '/static/images/project-logos/arbcom_cswiki-2x.png' ], // T151731
 	'chapcomwiki' => [ '1.5x' => '/static/images/project-logos/chapcomwiki-1.5x.png', '2x' => '/static/images/project-logos/chapcomwiki-2x.png' ], // T193024
