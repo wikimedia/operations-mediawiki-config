@@ -8427,6 +8427,7 @@ $wgConf->settings = [
 		],
 		'interface-editor' => [ // T109755
 			'editinterface' => true, // T109755
+			'editsitejson' => true,
 			'tboverride' => true, // T109755
 		],
 		'patroller' => [ // T109755
@@ -8540,6 +8541,7 @@ $wgConf->settings = [
 		], // T53232
 		'interface-editor' => [
 			'editinterface' => true, // T54866
+			'editsitejson' => true,
 			'apihighlimits' => true, // T67348
 			'noratelimit' => true, // T67348
 		],
@@ -8671,14 +8673,14 @@ $wgConf->settings = [
 		'sysop' => [ 'importupload' => true, ],
 	],
 	'+donatewiki' => [
-		'user' => [ 'editinterface' => true ],
+		'user' => [ 'editinterface' => true, 'editsitejson' => true ],
 		'flood' => [ 'bot' => true ],
 	],
 	'+dtywiki' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T176709
 	],
 	'+elwiktionary' => [
-		'interface-editor' => [ 'editinterface' => true ],
+		'interface-editor' => [ 'editinterface' => true, 'editsitejson' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ], // T30612
 	],
 	'enwiki' => [
@@ -8939,7 +8941,7 @@ $wgConf->settings = [
 		'autoreview' => [ 'autopatrol' => true ], // T144817
 	],
 	'+foundationwiki' => [
-		'user' => [ 'editinterface' => true ],
+		'user' => [ 'editinterface' => true, 'editsitejson' => true ],
 		'flood' => [ 'bot' => true ],
 	],
 	'frwiki' => [
@@ -8998,6 +9000,7 @@ $wgConf->settings = [
 			'editinterface' => true,
 			'editprotected' => true,
 			'editsemiprotected' => true,
+			'editsitejson' => true,
 			'import' => true,
 			'move' => true,
 			'move-rootuserpages' => true,
@@ -9114,7 +9117,7 @@ $wgConf->settings = [
 		'editor' => [ 'noratelimit' => true, 'edittrustedprotected' => true ], // T194568
 		'sysop' => [ 'templateeditor' => true, 'edittrustedprotected' => true ], // T74055, T194568
 		'templateeditor' => [ 'templateeditor' => true ], // T74055
-		'interface-editor' => [ 'editinterface' => true ], // T109408
+		'interface-editor' => [ 'editinterface' => true, 'editsitejson' => true ], // T109408
 	],
 	'idwiki' => [
 		'*' => [ 'createpage' => false ],
@@ -9131,7 +9134,7 @@ $wgConf->settings = [
 			'blockemail' => true,
 			'rollback' => true,
 		],
-		'translator' => [ 'editinterface' => true, ],
+		'translator' => [ 'editinterface' => true, 'editsitejson' => true ],
 	],
 	// T7836
 	// T13326
@@ -9218,6 +9221,7 @@ $wgConf->settings = [
 			'editinterface' => true,
 			'editprotected' => true,
 			'editsemiprotected' => true,
+			'editsitejson' => true,
 			'ipblock-exempt' => true,
 			'suppressredirect' => true,
 		],
@@ -9270,6 +9274,7 @@ $wgConf->settings = [
 	'pswiki' => [
 		'interface-editor' => [ // T133472
 			'editinterface' => true,
+			'editsitejson' => true,
 		],
 	],
 	'wikitech' => [ // contentadmin is handled in CommonSettings, not here
@@ -9387,7 +9392,7 @@ $wgConf->settings = [
 		'rollbacker' => [ 'rollback' => true ],
 		'botadmin' => [
 			'blockemail' => true, 'block' => true, 'ipblock-exempt' => true, 'protect' => true, 'editprotected' => true, 'createaccount' => true, 'deleterevision' => true, 'delete' => true, 'globalblock-whitelist' => true,
-			'autoconfirmed' => true, 'editsemiprotected' => true, 'editinterface' => true, 'autopatrol' => true, 'import' => true, 'patrol' => true, 'markbotedits' => true, 'nuke' => true, 'abusefilter-modify' => true, 'movefile' => true, 'move' => true, 'move-subpages' => true,
+			'autoconfirmed' => true, 'editsemiprotected' => true, 'editinterface' => true, 'editsitejson' => true, 'autopatrol' => true, 'import' => true, 'patrol' => true, 'markbotedits' => true, 'nuke' => true, 'abusefilter-modify' => true, 'movefile' => true, 'move' => true, 'move-subpages' => true,
 			'move-rootuserpages' => true, 'noratelimit' => true, 'suppressredirect' => true, 'reupload-shared' => true, 'override-antispoof' => true, 'tboverride' => true, 'reupload' => true, 'skipcaptcha' => true, 'rollback' => true, 'browsearchive' => true, 'unblockself' => true,
 			'undelete' => true, 'upload' => true, 'upload_by_url' => true, 'apihighlimits' => true, 'unwatchedpages' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-log-detail' => true,
 		],
@@ -9558,6 +9563,7 @@ $wgConf->settings = [
 		],
 		'interface-editor' => [ // T41905
 			'editinterface' => true,
+			'editsitejson' => true,
 		],
 	],
 	'ptwikinews' => [
@@ -9580,6 +9586,7 @@ $wgConf->settings = [
 		'templateeditor' => [ // T63172
 			'templateeditor' => true,
 			'editinterface' => true,
+			'editsitejson' => true,
 		],
 	],
 	'+ruwiki' => [
@@ -9611,6 +9618,7 @@ $wgConf->settings = [
 			'editcontentmodel' => true,
 			'editinterface' => true,
 			'editprotected' => true,
+			'editsitejson' => true,
 			'jsonconfig-flush' => true,
 			'move-categorypages' => true,
 			'move-subpages' => true,
@@ -9855,6 +9863,7 @@ $wgConf->settings = [
 			'abusefilter-modify' => true, // T40690
 			'apihighlimits' => true, // T40690
 			'editinterface' => true, // T40690
+			'editsitejson' => true,
 			'noratelimit' => true, // T40690
 		],
 	],
@@ -9902,7 +9911,7 @@ $wgConf->settings = [
 		], // T184607
 		'accountcreator' => [ 'tboverride-account' => true, 'override-antispoof' => true ], // T137888
 		'filemover' => [ 'movefile' => true ], // T137888
-		'interface-editor' => [ 'editinterface' => true ], // T120348
+		'interface-editor' => [ 'editinterface' => true, 'editsitejson' => true ], // T120348
 		'rollbacker' => [ 'rollback' => true ], // T47642
 		'autopatrolled' => [ 'autopatrol' => true ], // T139302
 		'massmessage-sender' => [ // T144701
@@ -9991,6 +10000,7 @@ $wgConf->settings = [
 			'editinterface' => true,
 			'editprotected' => true,
 			'editsemiprotected' => true,
+			'editsitejson' => true,
 			'import' => true,
 			'ipblock-exempt' => true,
 			'markbotedits' => true,
