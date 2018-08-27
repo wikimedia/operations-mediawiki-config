@@ -34,6 +34,42 @@
       "revId": "2da98a417b73c747c4d05c8ac67ae4a19b0eda84",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "140fd660_6ea9296c",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 5441,
+      "author": {
+        "id": 2488
+      },
+      "writtenOn": "2018-08-27T17:13:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0bcd38c4_65b224d2",
+      "revId": "2da98a417b73c747c4d05c8ac67ae4a19b0eda84",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7ebd0517_d38c9802",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 5441,
+      "author": {
+        "id": 2488
+      },
+      "writtenOn": "2018-08-27T17:13:41Z",
+      "side": 1,
+      "message": "\u003e Please note that for specific investigations you can always use XWD\n \u003e Logging, which overrides this configuration to \u0027debug\u0027 for a\n \u003e specific request. – https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug\n \u003e \n \u003e That makes it easy to get what an impression whenever you want,\n \u003e without it being stored by default for other prod requests.\n\nGood to know for the future. In this case we\u0027re actually trying to find out which user requests are triggering a certain function.",
+      "parentUuid": "21b811af_7aa71d17",
+      "revId": "2da98a417b73c747c4d05c8ac67ae4a19b0eda84",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
