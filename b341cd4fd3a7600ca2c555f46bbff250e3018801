@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c55f423d_3ea2e925",
+        "filename": "tests/dblistTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-08-27T19:04:31Z",
+      "side": 1,
+      "message": "Does this also assert a wiki is not in more than one list?",
+      "range": {
+        "startLine": 98,
+        "startChar": 9,
+        "endLine": 98,
+        "endChar": 44
+      },
+      "revId": "b341cd4fd3a7600ca2c555f46bbff250e3018801",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
