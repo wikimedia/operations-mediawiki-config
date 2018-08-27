@@ -3785,7 +3785,7 @@ foreach ( $wgGroupPermissions as $group => $_ ) {
 		|| !empty( $wgGroupPermissions[$group]['editusercss'] )
 		|| !empty( $wgGroupPermissions[$group]['edituserjs'] )
 	) ) {
-		// enforce that techadmin is the only group that can edit non-own CSS/JS
+		// enforce that interace-admin is the only group that can edit non-own CSS/JS
 		unset(
 			$wgGroupPermissions[$group]['editsitecss'],
 			$wgGroupPermissions[$group]['editsitejs'],
