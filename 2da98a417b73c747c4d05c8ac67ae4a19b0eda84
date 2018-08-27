@@ -16,6 +16,24 @@
       "revId": "2da98a417b73c747c4d05c8ac67ae4a19b0eda84",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "21b811af_7aa71d17",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 5441,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-08-27T17:07:14Z",
+      "side": 1,
+      "message": "Agreed. Might be a better starting point indeed.\n\nPlease note that for specific investigations you can always use XWD Logging, which overrides this configuration to \u0027debug\u0027 for a specific request. – https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug\n\nThat makes it easy to get what an impression whenever you want, without it being stored by default for other prod requests.",
+      "parentUuid": "0bcd38c4_65b224d2",
+      "revId": "2da98a417b73c747c4d05c8ac67ae4a19b0eda84",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
