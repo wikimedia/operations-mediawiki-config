@@ -2055,6 +2055,10 @@ if ( $wmgUseCodeMirror ) {
 	wfLoadExtension( 'CodeMirror' );
 }
 
+if ( $wmgUseTemplateWizard ) {
+	wfLoadExtension( 'TemplateWizard' );
+}
+
 // Must be loaded BEFORE VisualEditor, or things will break
 if ( $wmgUseArticleCreationWorkflow ) {
 	wfLoadExtension( 'ArticleCreationWorkflow' );
