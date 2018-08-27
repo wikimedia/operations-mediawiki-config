@@ -1211,6 +1211,7 @@ $wgConf->settings = [
 	'commonswiki' => '/static/images/project-logos/commonswiki.png',
 	'donatewiki' => '/static/images/project-logos/donatewiki.png',
 	'execwiki' => '/static/images/project-logos/execwiki.png',
+	'fixcopyrightwiki' => '/static/images/project-logos/fixcopyrightwiki.png',
 	'fdcwiki' => '/static/images/project-logos/fdcwiki.png',  // T50379
 	'foundationwiki' => '/static/images/project-logos/foundationwiki.png',
 	'iegcomwiki' => '/static/images/project-logos/iegcomwiki.png',  // T50379
@@ -1737,6 +1738,7 @@ $wgConf->settings = [
 	'arbcom_cswiki' => [ '1.5x' => '/static/images/project-logos/arbcom_cswiki-1.5x.png', '2x' => '/static/images/project-logos/arbcom_cswiki-2x.png' ], // T151731
 	'chapcomwiki' => [ '1.5x' => '/static/images/project-logos/chapcomwiki-1.5x.png', '2x' => '/static/images/project-logos/chapcomwiki-2x.png' ], // T193024
 	'donatewiki' => [ '1.5x' => '/static/images/project-logos/donatewiki-1.5x.png', '2x' => '/static/images/project-logos/donatewiki-2x.png' ],
+	'fixcopyrightwiki' => [ '1.5x' => '/static/images/project-logos/fixcopyrightwiki-1.5x.png', '2x' => '/static/images/project-logos/fixcopyrightwiki-2x.png' ],
 	'foundationwiki' => [ '1.5x' => '/static/images/project-logos/foundationwiki-1.5x.png', '2x' => '/static/images/project-logos/foundationwiki-2x.png' ],
 	'metawiki' => [ '1.5x' => '/static/images/project-logos/metawiki-1.5x.png', '2x' => '/static/images/project-logos/metawiki-2x.png' ],
 	'officewiki' => [ '1.5x' => '/static/images/project-logos/officewiki-1.5x.png', '2x' => '/static/images/project-logos/officewiki-2x.png' ],
@@ -1960,6 +1962,7 @@ $wgConf->settings = [
 	'electcomwiki' => '//electcom.wikimedia.org',
 	'etwikimedia' => '//ee.wikimedia.org',
 	'execwiki' => '//exec.wikimedia.org',
+	'fixcopyrightwiki' => '//fixcopyright.wikimedia.org',
 	'fdcwiki' => '//fdc.wikimedia.org',
 	'foundationwiki' => '//foundation.wikimedia.org',
 	'grantswiki' => '//grants.wikimedia.org',
@@ -2053,6 +2056,7 @@ $wgConf->settings = [
 	'electcomwiki' => 'https://electcom.wikimedia.org',
 	'etwikimedia' => 'https://ee.wikimedia.org',
 	'execwiki' => 'https://exec.wikimedia.org',
+	'fixcopyrightwiki' => 'https://fixcopyright.wikimedia.org',
 	'fdcwiki' => 'https://fdc.wikimedia.org',
 	'foundationwiki' => 'https://foundation.wikimedia.org',
 	'grantswiki' => 'https://grants.wikimedia.org',
