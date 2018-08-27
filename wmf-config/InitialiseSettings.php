@@ -5438,6 +5438,7 @@ $wgConf->settings = [
 		'NewUserMessage' => 'debug',
 		'OAuth' => 'debug',
 		'OutputBuffer' => 'debug',
+		'PageTriage' => 'info', // sbisson - T202815
 		'PageViewInfo' => 'info',
 		'poolcounter' => 'debug',
 		'preferences' => 'info',
