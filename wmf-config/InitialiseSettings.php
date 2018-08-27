@@ -20548,6 +20548,11 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
+'wmgUseTemplateWizard' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 'wmgUseArticleCreationWorkflow' => [
 	'default' => false,
 	'testwiki' => true,
