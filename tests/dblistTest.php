@@ -83,6 +83,25 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 		}
 	}
 
+	public function testAllWikisAreSharded() {
+		$lists = DBList::getLists();
+
+		// Content of all.dblist
+		$all = $lists['all'];
+
+		// Remove everything in the shard lists
+		$shardLists = [
+			's1', 's2', 's3', 's4', 's5', 's6', 's7', 's8',
+			'wikitech',
+		];
+		foreach ( $shardLists as $shard ) {
+			$all = array_diff( $all, $lists[$shard] );
+		}
+
+		// Anything left?
+		$this->assertEquals( [], $all, "All names in 'all.dblist' are in one of the shard lists" );
+	}
+
 	/**
 	 * This test ensures that any dblists that use expressions,
 	 * are either not used in production, or are pre-computed.
