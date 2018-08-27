@@ -772,11 +772,6 @@ function wmfLabsSettings() {
 		'wgPageTriageEnableOresFilters' => [
 			'default' => false,
 			'enwiki' => true,
-		],
-		'groupOverrides' => [
-			'+enwiki' => [
-				'copyviobot' => [ 'pagetriage-copyvio' => true ],
-			],
-		],
+		]
 	];
 } # wmflLabsSettings()
