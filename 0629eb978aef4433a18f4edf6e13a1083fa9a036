@@ -22,6 +22,30 @@
       "revId": "0629eb978aef4433a18f4edf6e13a1083fa9a036",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2794c7c1_912b8f08",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 3758,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2018-08-27T16:56:10Z",
+      "side": 1,
+      "message": "Oops, yeah, that was the old name for interface admin.\n\nDo we have structure tests for mediawiki-config? I suppose it would have to require CommonSettings.php, which sounds a bit scary.\n\nA more robust approach would be to use a hook such as UserGetRights, although that probably does interfere with global groups so it\u0027s more effort to maintain.",
+      "parentUuid": "7149f54b_672b1497",
+      "range": {
+        "startLine": 3758,
+        "startChar": 18,
+        "endLine": 3758,
+        "endChar": 27
+      },
+      "revId": "0629eb978aef4433a18f4edf6e13a1083fa9a036",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
