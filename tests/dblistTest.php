@@ -83,6 +83,46 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 		}
 	}
 
+	public static function provideAllWikisAreIncluded() {
+		return [
+			'section' => [
+				'section',
+				// If you're adding a new section, make sure it's widely announced
+				// so all the people who do things per section know about it!
+				[ 's1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 'wikitech', ],
+			],
+
+			'size' => [
+				'size',
+				[ 'small', 'medium', 'large', ],
+			],
+		];
+	}
+
+	/**
+	 * @dataProvider provideAllWikisAreIncluded
+	 * @param string $description Description of this set of DBLists.
+	 * @param string[] $dbLists DBList names that should collectively contain all wikis
+	 */
+	public function testAllWikisAreIncluded( $description, array $dbLists ) {
+		$lists = DBList::getLists();
+
+		$all = array_fill_keys( $lists['all'], [] );
+
+		foreach ( $dbLists as $list ) {
+			foreach ( $lists[$list] as $name ) {
+				$all[$name][] = $list;
+			}
+		}
+
+		$all = array_filter( $all, function ( $v ) {
+			return count( $v ) !== 1;
+		} );
+
+		$this->assertSame( [], $all,
+			"All names in 'all.dblist' are in exactly one of the $description lists" );
+	}
+
 	/**
 	 * This test ensures that any dblists that use expressions,
 	 * are either not used in production, or are pre-computed.
