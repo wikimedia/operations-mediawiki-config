@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "426aca5e_d3fef60b",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 494,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2018-08-28T20:31:02Z",
+      "side": 1,
+      "message": "Should have had login \u003d\u003e false.",
+      "range": {
+        "startLine": 494,
+        "startChar": 4,
+        "endLine": 494,
+        "endChar": 20
+      },
+      "revId": "c3bc393d46e12116fe4c9b3aee99664cd4d13f24",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
