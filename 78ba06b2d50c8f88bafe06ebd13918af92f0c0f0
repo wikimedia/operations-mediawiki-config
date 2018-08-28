@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bf3b7536_35e117e9",
+        "filename": "tests/dblistTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2018-08-28T07:19:30Z",
+      "side": 1,
+      "message": "\"Sectioned\"? According to Tim, S is for section, we missuse shard and we are trying to stop using it, but no big deal.",
+      "range": {
+        "startLine": 86,
+        "startChar": 32,
+        "endLine": 86,
+        "endChar": 39
+      },
+      "revId": "78ba06b2d50c8f88bafe06ebd13918af92f0c0f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cfac2369_4296ddae",
+        "filename": "tests/dblistTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2018-08-28T07:19:30Z",
+      "side": 1,
+      "message": "Just a question- Could we get this from the list of list or the load section? Hardcoding the sections may lead to issues when more sections are created (which is not likely short term, but precisely because we will forget about this long term. It is not a big deal because I think test will just fail and we will eventually notice why.",
+      "range": {
+        "startLine": 92,
+        "startChar": 3,
+        "endLine": 92,
+        "endChar": 50
+      },
+      "revId": "78ba06b2d50c8f88bafe06ebd13918af92f0c0f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "66eae7c0_17de403b",
+        "filename": "tests/dblistTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2018-08-28T07:19:30Z",
+      "side": 1,
+      "message": "Stretch (not in scope). Could we put this in a function and do the same tests on small/medium/large",
+      "range": {
+        "startLine": 106,
+        "startChar": 4,
+        "endLine": 106,
+        "endChar": 67
+      },
+      "revId": "78ba06b2d50c8f88bafe06ebd13918af92f0c0f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
