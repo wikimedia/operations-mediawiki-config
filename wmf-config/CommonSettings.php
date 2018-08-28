@@ -2055,7 +2055,7 @@ if ( $wmgUseCodeMirror ) {
 	wfLoadExtension( 'CodeMirror' );
 }
 
-if ( $wmgUseTemplateWizard ) {
+if ( $wmgUseTemplateWizard && $wmgUseTemplateData ) {
 	wfLoadExtension( 'TemplateWizard' );
 }
 
