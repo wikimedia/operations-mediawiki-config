@@ -1,6 +1,12 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
+/**
+ * The InterwikiSorting mediawiki extension is controlled via this array through
+ * $wgInterwikiSortingInterwikiSortOrders.
+ * Please read the docs: https://www.mediawiki.org/wiki/Extension:InterwikiSorting#Configuration
+ */
+
 return [
 	'alphabetic' => [
 		'ace', 'kbd', 'ady', 'af', 'ak', 'als', 'am', 'ang', 'ab', 'ar', 'an', 'arc',
