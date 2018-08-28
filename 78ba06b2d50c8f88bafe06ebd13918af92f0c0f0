@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "73dbaa6c_a27d5a21",
+        "filename": "tests/dblistTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2018-08-28T14:45:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bf3b7536_35e117e9",
+      "range": {
+        "startLine": 86,
+        "startChar": 32,
+        "endLine": 86,
+        "endChar": 39
+      },
+      "revId": "78ba06b2d50c8f88bafe06ebd13918af92f0c0f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cfac2369_4296ddae",
         "filename": "tests/dblistTest.php",
         "patchSetId": 2
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "e8a0b24c_b4d483ca",
+        "filename": "tests/dblistTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2018-08-28T14:45:32Z",
+      "side": 1,
+      "message": "I kind of like the behavior of the test failing. That makes this a good place to put a comment saying \"if you add a new section, make sure it\u0027s widely announced so everyone else who does things per-section knows to change\".\n\nOr we could add a \"sections.dblistlist\" file for people to use when doing things by section ;)",
+      "parentUuid": "cfac2369_4296ddae",
+      "range": {
+        "startLine": 92,
+        "startChar": 3,
+        "endLine": 92,
+        "endChar": 50
+      },
+      "revId": "78ba06b2d50c8f88bafe06ebd13918af92f0c0f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "66eae7c0_17de403b",
         "filename": "tests/dblistTest.php",
         "patchSetId": 2
@@ -59,6 +107,30 @@
       "writtenOn": "2018-08-28T07:19:30Z",
       "side": 1,
       "message": "Stretch (not in scope). Could we put this in a function and do the same tests on small/medium/large",
+      "range": {
+        "startLine": 106,
+        "startChar": 4,
+        "endLine": 106,
+        "endChar": 67
+      },
+      "revId": "78ba06b2d50c8f88bafe06ebd13918af92f0c0f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5546d8e0_22119b0d",
+        "filename": "tests/dblistTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2018-08-28T14:45:32Z",
+      "side": 1,
+      "message": "Sure, we can do that.",
+      "parentUuid": "66eae7c0_17de403b",
       "range": {
         "startLine": 106,
         "startChar": 4,
