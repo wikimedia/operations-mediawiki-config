@@ -46,6 +46,30 @@
       "revId": "0629eb978aef4433a18f4edf6e13a1083fa9a036",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e1c66102_ba847f9d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 3758,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-08-28T00:03:49Z",
+      "side": 1,
+      "message": "We do have unit tests in wmf-config yes, and they do load the settings files (with a few mocks). Let me know if you need any pointers, but there\u0027s a few examples to look at as well.",
+      "parentUuid": "2794c7c1_912b8f08",
+      "range": {
+        "startLine": 3758,
+        "startChar": 18,
+        "endLine": 3758,
+        "endChar": 27
+      },
+      "revId": "0629eb978aef4433a18f4edf6e13a1083fa9a036",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
