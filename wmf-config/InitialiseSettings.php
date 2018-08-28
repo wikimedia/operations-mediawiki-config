@@ -15630,6 +15630,7 @@ $wgConf->settings = [
 	'mediawikiwiki' => 'uca-default',
 	// Single-language wikis
 	'abwiki' => 'uppercase-ab', // T183430
+	'azwiki' => 'uca-az', // T201770
 	'bawiki' => 'uppercase-ba', // T162823
 	'bawikibooks' => 'uppercase-ba', // T162823
 	'be_x_oldwiki' => 'uca-be-tarask', // T48005
