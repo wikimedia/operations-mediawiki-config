@@ -48,6 +48,8 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['dispatchLagToMaxLagFactor'] = 60;
 
 	$wgWBRepoSettings['tmpMaxItemIdForNewItemIdHtmlFormatter'] = $wmgWikibaseMaxItemIdForNewItemIdHtmlFormatter;
+
+	$wgWBQualityConstraintsSuggestionsBetaFeature[ 'value' ] = true;
 }
 
 if ( $wmgUseWikibaseClient ) {
