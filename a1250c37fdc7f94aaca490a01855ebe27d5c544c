@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "117a7da2_9c346ccd",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 18733,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-08-29T09:45:51Z",
+      "side": 1,
+      "message": "It might also be worth increasing it for testwikidata? or just setting the max super high to cover all items.\nThis also still isn\u0027t enabled for all items on beta yet.",
+      "range": {
+        "startLine": 18733,
+        "startChar": 23,
+        "endLine": 18733,
+        "endChar": 26
+      },
+      "revId": "a1250c37fdc7f94aaca490a01855ebe27d5c544c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
