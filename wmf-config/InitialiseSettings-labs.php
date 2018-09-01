@@ -772,6 +772,10 @@ function wmfLabsSettings() {
 		'wgPageTriageEnableOresFilters' => [
 			'default' => false,
 			'enwiki' => true,
-		]
+		],
+		'wmgUseSkinPerPage' => [
+			'default' => false,
+			'metawiki' => true,
+		],
 	];
 } # wmflLabsSettings()

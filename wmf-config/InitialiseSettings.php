@@ -20845,6 +20845,10 @@ $wgConf->settings = [
 	'metawiki' => true, # T194230
 ],
 
+'wmgUseSkinPerPage' => [
+	'default' => false,
+],
+
 'wgCSPReportOnlyHeader' => [
 	'default' => false,
 	'group0' => [
