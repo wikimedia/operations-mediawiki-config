@@ -3744,6 +3744,15 @@ if ( $wmgUseCongressLookup ) {
 	wfLoadExtension( 'CongressLookup' );
 }
 
+if ( $wmgUseSkinPerPage ) {
+	wfLoadExtension( 'SkinPerPage' );
+}
+
+if ( $wmgUseEUCopyrightCampaign ) {
+	wfLoadExtension( 'EUCopyrightCampaign' );
+	wfLoadSkin( 'EUCopyrightCampaignSkin' );
+}
+
 if ( PHP_SAPI === 'cli' ) {
 	wfLoadExtension( 'ActiveAbstract' );
 }
