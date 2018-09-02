@@ -1737,6 +1737,7 @@ $wgConf->settings = [
 	'arbcom_dewiki' => [ '1.5x' => '/static/images/project-logos/arbcom_dewiki-1.5x.png', '2x' => '/static/images/project-logos/arbcom_dewiki-2x.png' ], // T166947
 	'arbcom_cswiki' => [ '1.5x' => '/static/images/project-logos/arbcom_cswiki-1.5x.png', '2x' => '/static/images/project-logos/arbcom_cswiki-2x.png' ], // T151731
 	'chapcomwiki' => [ '1.5x' => '/static/images/project-logos/chapcomwiki-1.5x.png', '2x' => '/static/images/project-logos/chapcomwiki-2x.png' ], // T193024
+	'commonswiki' => [ '1.5x' => '/static/images/project-logos/commonswiki-1.5x.png', '2x' => '/static/images/project-logos/commonswiki-2x.png' ], // T203343
 	'donatewiki' => [ '1.5x' => '/static/images/project-logos/donatewiki-1.5x.png', '2x' => '/static/images/project-logos/donatewiki-2x.png' ],
 	'fixcopyrightwiki' => [ '1.5x' => '/static/images/project-logos/fixcopyrightwiki-1.5x.png', '2x' => '/static/images/project-logos/fixcopyrightwiki-2x.png' ],
 	'foundationwiki' => [ '1.5x' => '/static/images/project-logos/foundationwiki-1.5x.png', '2x' => '/static/images/project-logos/foundationwiki-2x.png' ],
