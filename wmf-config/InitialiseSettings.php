@@ -13794,6 +13794,7 @@ $wgConf->settings = [
 		'*.karbobala.com',                  // T201236
 		'www.mhs.ox.ac.uk',                 // University of Oxford museum - T201604
 		'yphc.ir',                          // Iranian website for amateur photographers - T201237
+		'*.bollywoodhungama.in',            // Indian television and bollywood related images - T203363
 	],
 ],
 
