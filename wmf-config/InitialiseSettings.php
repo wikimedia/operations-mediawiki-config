@@ -1685,6 +1685,7 @@ $wgConf->settings = [
 	'euwikisource' => [ '1.5x' => '/static/images/project-logos/euwikisource-1.5x.png', '2x' => '/static/images/project-logos/euwikisource-2x.png' ],
 	'nowikisource' => [ '1.5x' => '/static/images/project-logos/nowikisource-1.5x.png', '2x' => '/static/images/project-logos/nowikisource-2x.png' ], // T167192
 	'pawikisource' => [ '1.5x' => '/static/images/project-logos/pawikisource-1.5x.png', '2x' => '/static/images/project-logos/pawikisource-2x.png' ], // T149522
+	'ruwikisource' => [ '1.5x' => '/static/images/project-logos/ruwikisource-1.5x.png', '2x' => '/static/images/project-logos/ruwikisource-2x.png' ], // T203343
 	'srwikisource' => [ '1.5x' => '/static/images/project-logos/srwikisource-1.5x.png', '2x' => '/static/images/project-logos/srwikisource-2x.png' ], // T172268
 	'viwikisource' => [ '1.5x' => '/static/images/project-logos/viwikisource-1.5x.png', '2x' => '/static/images/project-logos/viwikisource-2x.png' ],
 	'yiwikisource' => [ '1.5x' => '/static/images/project-logos/yiwikisource-1.5x.png', '2x' => '/static/images/project-logos/yiwikisource-2x.png' ], // T193562
