@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "ef7f5811_f033c506",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2018-09-04T09:45:33Z",
+      "side": 1,
+      "message": "100% right, I missed that.",
+      "parentUuid": "19c93d80_9c188a92",
+      "range": {
+        "startLine": 114,
+        "startChar": 46,
+        "endLine": 114,
+        "endChar": 60
+      },
+      "revId": "7f9aa0cbd9a737156a6f7db1ac63222b27b443f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7385bc76_e0ea0f3d",
         "filename": "wmf-config/db-codfw.php",
         "patchSetId": 1
@@ -36,6 +60,24 @@
       "writtenOn": "2018-09-04T09:42:20Z",
       "side": 1,
       "message": ":-)",
+      "revId": "7f9aa0cbd9a737156a6f7db1ac63222b27b443f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "97351189_6cae256d",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2018-09-04T09:45:33Z",
+      "side": 1,
+      "message": "I don\u0027t think we should do that, but it is the right way for now.",
+      "parentUuid": "7385bc76_e0ea0f3d",
       "revId": "7f9aa0cbd9a737156a6f7db1ac63222b27b443f2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -59,6 +101,24 @@
     },
     {
       "key": {
+        "uuid": "24868a7d_6ee7a641",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2018-09-04T09:45:33Z",
+      "side": 1,
+      "message": "I would delete it from eqiad, honestly. Or not?",
+      "parentUuid": "f9f4d7d3_39196735",
+      "revId": "7f9aa0cbd9a737156a6f7db1ac63222b27b443f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b886afa9_290066b3",
         "filename": "wmf-config/db-codfw.php",
         "patchSetId": 1
@@ -70,6 +130,30 @@
       "writtenOn": "2018-09-04T09:42:20Z",
       "side": 1,
       "message": "This needs to be commented out so they are not set in read only",
+      "range": {
+        "startLine": 702,
+        "startChar": 0,
+        "endLine": 709,
+        "endChar": 107
+      },
+      "revId": "7f9aa0cbd9a737156a6f7db1ac63222b27b443f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b304d332_753c76e9",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 709,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2018-09-04T09:45:33Z",
+      "side": 1,
+      "message": "That should be done on a separate commit. We need to talk to mediawiki people to check read only is active for codfw without it.",
+      "parentUuid": "b886afa9_290066b3",
       "range": {
         "startLine": 702,
         "startChar": 0,
