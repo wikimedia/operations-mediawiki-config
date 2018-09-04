@@ -20849,10 +20849,12 @@ $wgConf->settings = [
 
 'wmgUseSkinPerPage' => [
 	'default' => false,
+	'fixcopyrightwiki' => true,
 ],
 
 'wmgUseEUCopyrightCampaign' => [
 	'default' => false,
+	'fixcopyrightwiki' => true,
 ],
 
 'wgCSPReportOnlyHeader' => [
