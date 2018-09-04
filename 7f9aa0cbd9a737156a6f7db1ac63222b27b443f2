@@ -84,6 +84,24 @@
     },
     {
       "key": {
+        "uuid": "d66d9330_03a4185e",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-09-04T09:48:41Z",
+      "side": 1,
+      "message": "Yeah, let\u0027s wait for Andrew\u0027s comment on the phabricator task.",
+      "parentUuid": "97351189_6cae256d",
+      "revId": "7f9aa0cbd9a737156a6f7db1ac63222b27b443f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f9f4d7d3_39196735",
         "filename": "wmf-config/db-codfw.php",
         "patchSetId": 1
@@ -113,6 +131,24 @@
       "side": 1,
       "message": "I would delete it from eqiad, honestly. Or not?",
       "parentUuid": "f9f4d7d3_39196735",
+      "revId": "7f9aa0cbd9a737156a6f7db1ac63222b27b443f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ed174455_ef8e96a8",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-09-04T09:48:41Z",
+      "side": 1,
+      "message": "I am fine with that service being spread across all the hosts in a section, so it is load balanced.\nShould we delete it from eqiad whilst it is passive maybe?",
+      "parentUuid": "24868a7d_6ee7a641",
       "revId": "7f9aa0cbd9a737156a6f7db1ac63222b27b443f2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -154,6 +190,30 @@
       "side": 1,
       "message": "That should be done on a separate commit. We need to talk to mediawiki people to check read only is active for codfw without it.",
       "parentUuid": "b886afa9_290066b3",
+      "range": {
+        "startLine": 702,
+        "startChar": 0,
+        "endLine": 709,
+        "endChar": 107
+      },
+      "revId": "7f9aa0cbd9a737156a6f7db1ac63222b27b443f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "05bca0e9_41fac3cf",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 709,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-09-04T09:48:41Z",
+      "side": 1,
+      "message": "Sounds good to me",
+      "parentUuid": "b304d332_753c76e9",
       "range": {
         "startLine": 702,
         "startChar": 0,
