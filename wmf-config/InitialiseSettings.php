@@ -18602,6 +18602,12 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
+'wgULSLanguageDetection' => [
+	'default' => false,
+	// see T203179
+	'fixcopyrightwiki' => true,
+],
+
 'wmgUseCognate' => [
 	'default' => false,
 	'wiktionary' => 'wiktionary', // T150182
