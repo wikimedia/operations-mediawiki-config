@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "19c93d80_9c188a92",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-09-04T09:42:20Z",
+      "side": 1,
+      "message": "can be removed too",
+      "range": {
+        "startLine": 114,
+        "startChar": 46,
+        "endLine": 114,
+        "endChar": 60
+      },
+      "revId": "7f9aa0cbd9a737156a6f7db1ac63222b27b443f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7385bc76_e0ea0f3d",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-09-04T09:42:20Z",
+      "side": 1,
+      "message": ":-)",
+      "revId": "7f9aa0cbd9a737156a6f7db1ac63222b27b443f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f9f4d7d3_39196735",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-09-04T09:42:20Z",
+      "side": 1,
+      "message": "we are missing the whole api, watchlist, recentchanges etc section here.\nI assume it is not needed, but just mentioning it as we do have it on db-eqiad.php. I guess it will just default to all the hosts defined on the section array.",
+      "revId": "7f9aa0cbd9a737156a6f7db1ac63222b27b443f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b886afa9_290066b3",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 709,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-09-04T09:42:20Z",
+      "side": 1,
+      "message": "This needs to be commented out so they are not set in read only",
+      "range": {
+        "startLine": 702,
+        "startChar": 0,
+        "endLine": 709,
+        "endChar": 107
+      },
+      "revId": "7f9aa0cbd9a737156a6f7db1ac63222b27b443f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
