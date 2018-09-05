@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "61b38a58_227fc9c6",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-09-05T15:17:56Z",
+      "side": 1,
+      "message": "as per the last DC failover meeting, this can go back to be db2037",
+      "revId": "b9b667188fc711bac401798d41aafa7d9288533c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
