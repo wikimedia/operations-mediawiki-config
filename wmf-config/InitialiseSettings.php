@@ -2285,6 +2285,7 @@ $wgConf->settings = [
 	'fiwikiversity' => 'Wikiopisto',
 	'fiwikivoyage' => 'Wikimatkat', // T151570
 	'fiwiktionary' => 'Wikisanakirja',
+	'fixcopyrightwiki' => 'Wikimedia Foundation',
 	'foundationwiki' => 'Wikimedia Foundation',
 	'fowikisource' => 'Wikiheimild',
 	'frpwiki' => 'Vouiquipèdia',
