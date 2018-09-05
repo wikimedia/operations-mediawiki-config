@@ -699,14 +699,14 @@ $wgLBFactoryConf = [
 # Also keep these read only messages if codfw is not the active dc, to prevent accidental writes
 # getting trasmmitted from codfw to eqiad when the master dc is eqiad.
 'readOnlyBySection' => [
-	's1'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
-	's2'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
-	'DEFAULT' => 'This request is served by a passive datacenter. If you see this something is really wrong.', # s3
-	's4'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
+	# 's1'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
+	# 's2'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
+	# 'DEFAULT' => 'This request is served by a passive datacenter. If you see this something is really wrong.', # s3
+	# 's4'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
 	# 's5'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
-	's6'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
-	's7'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
-	's8'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
+	# 's6'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
+	# 's7'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
+	# 's8'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
 ],
 
 ];
