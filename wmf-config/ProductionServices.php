@@ -27,7 +27,10 @@ $services['codfw']['search'] = [
 	'search.svc.codfw.wmnet',
 ];
 
+# urldownloader configuration. 1 per DC for latency reasons
+# eqiad urldownloader
 $services['eqiad']['urldownloader'] = 'http://url-downloader.eqiad.wikimedia.org:8080';
+# codfw urldownloader
 $services['codfw']['urldownloader'] = 'http://url-downloader.codfw.wikimedia.org:8080';
 
 $services['eqiad']['parsoid'] =
