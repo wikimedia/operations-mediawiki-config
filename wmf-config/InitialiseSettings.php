@@ -17812,6 +17812,7 @@ $wgConf->settings = [
 'wgPageTriageDraftNamespaceId' => [
 	'default' => false,
 	'testwiki' => 118,
+	'enwiki' => 118, // T203184
 ],
 'wgPageTriageEnableOresFilters' => [
 	'default' => false,
