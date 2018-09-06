@@ -33,7 +33,7 @@ $wgObjectCaches['mcrouter'] = [
 	'timeout'              => $wgMemCachedTimeout,
 ];
 
-if ( $wgDBname === 'labswiki' ) {
+if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgMainCacheType = 'memcached-pecl'; // nutcracker only; no mcrouter present
 } else {
 	$wgMainCacheType = 'mcrouter';
