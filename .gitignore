@@ -22,7 +22,6 @@ wikiversions-labs.php
 .DS_Store
 
 /vendor/**/.git
-/vendor/slim/slim/tests/templates/test.php
 
 # python stuff
 *.pyc
