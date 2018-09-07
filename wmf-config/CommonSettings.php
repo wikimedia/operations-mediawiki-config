@@ -109,6 +109,8 @@ $wgDBuser = 'wikiuser';
 # wmf-config directory (in common/)
 $wmfConfigDir = "$IP/../wmf-config";
 
+require "$wmfConfigDir/set-time-limit.php";
+
 # Include all the service definitions
 # TODO: only include if in production, set up beta separately
 switch ( $wmfRealm ) {
