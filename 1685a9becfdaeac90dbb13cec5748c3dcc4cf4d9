@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "749235ce_7d0b9eeb",
+        "filename": "wmf-config/set-time-limit.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1616
+      },
+      "writtenOn": "2018-09-07T05:47:02Z",
+      "side": 1,
+      "message": "we should add codfw as well.",
+      "revId": "1685a9becfdaeac90dbb13cec5748c3dcc4cf4d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8f035533_e75a86f6",
+        "filename": "wmf-config/set-time-limit.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1616
+      },
+      "writtenOn": "2018-09-07T05:47:02Z",
+      "side": 1,
+      "message": "60 seconds is a bit radical right now, but since it is a reasonable value, let\u0027s try with this.",
+      "revId": "1685a9becfdaeac90dbb13cec5748c3dcc4cf4d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
