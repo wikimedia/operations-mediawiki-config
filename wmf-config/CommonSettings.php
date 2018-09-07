@@ -421,6 +421,9 @@ $wgPasswordConfig['pbkdf2'] = [
 	'length' => '64',
 ];
 
+// Temporary for T57420
+$wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
+
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = 10;
 } else {
