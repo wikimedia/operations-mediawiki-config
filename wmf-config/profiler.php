@@ -7,30 +7,6 @@
 # Exposes:
 # - $wmgProfiler (used by CommonSettings.php)
 
-/**
- * The following classes from composer packages are used when submitting
- * profiles to XHGui. Inclusion ensured by MWMultiVersion.php.
- *
- * - MongoDate (inline)
- * - Xhgui_Util (inline)
- * - Xhgui_Saver::factory (inline)
- *   - MongoClient
- *   - MongoCollection (returned by MongoDB::__get)
- *   - Xhgui_Saver_Mongo
- * - Xhgui_Saver_Mongo::save (inline)
- *     - Xhgui_Saver_Mongo::getLastProfilingId
- *       - MongoId
- *     - MongoCollection::insert
- *
- * Upstream XHGui depends on PHP5's ext-mongo interface, and recommends using
- * alcaeus/mongo-php-adapter, which is a library that provides an interface compatible with
- * PHP5's ext-mongo based on either ext-mongo (PHP5.3+) or ext-mongodb (PHP5.5+ and PHP7).
- * The problem is, we can't use mongo-php-adapter because HHVM supports neither, and also
- * neither our PHP5 nor PHP7 servers have either of the PHP extensions installed.
- * Instead we use "mongofill", which is a plain PHP implementation originally written
- * to support HHVM, but also seems to work fine on PHP5 and PHP7.
- */
-
 global $wmgProfiler;
 
 $wmgProfiler = [];
@@ -131,6 +107,33 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 		 * See https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug#Request_profiling
 		 */
 		if ( isset( $xwd['profile'] ) ) {
+
+			/**
+			 * The following classes from composer packages are needed to submit
+			 * profiles to XHGui:
+			 *
+			 * - MongoDate
+			 * - Xhgui_Util
+			 * - Xhgui_Saver::factory
+			 *   - MongoClient
+			 *   - MongoCollection
+			 *   - Xhgui_Saver_Mongo
+			 * - Xhgui_Saver_Mongo::save
+			 *     - Xhgui_Saver_Mongo::getLastProfilingId
+			 *       - MongoId
+			 *     - MongoCollection::insert
+			 *
+			 * Upstream XHGui recommends using alcaeus/mongo-php-adapter, which is a library
+			 * that provides an interface compatible with PHP5's ext-mongo on top of either
+			 * ext-mongo itself (PHP5.3+) or ext-mongodb (PHP5.5+ and PHP7).
+			 * The problem is, we can't use mongo-php-adapter because HHVM supports neither
+			 * of the PHP extensions, and also neither WMF PHP5 nor PHP7 servers have either
+			 * of the PHP extensions installed. Instead we use "mongofill", which is a
+			 * plain PHP implementation originally written to support HHVM, but also works
+			 * fine on PHP5 and PHP7.s
+			 */
+			require_once __DIR__ . '/../vendor/autoload.php';
+
 			register_postsend_function( function () {
 				$data = [ 'profile' => xhprof_disable() ];
 
