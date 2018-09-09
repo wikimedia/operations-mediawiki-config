@@ -13821,7 +13821,6 @@ $wgConf->settings = [
 		'media.farsnews.com',               // Fars News Agency - T200872
 		'*.aucklandmuseum.com',             // Auckland Museum - T202680
 		'*.karbobala.com',                  // T201236
-		'www.mhs.ox.ac.uk',                 // University of Oxford museum - T201604
 		'yphc.ir',                          // Iranian website for amateur photographers - T201237
 	],
 ],
