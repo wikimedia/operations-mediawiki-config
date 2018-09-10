@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4966cc6b_54c3391e",
+        "filename": "wmf-config/set-time-limit.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-09-10T03:26:32Z",
+      "side": 1,
+      "message": "This might not be working in beta cluster. At least based on Logstash\u0027 impression of the host header, where prod attributes jobs to \"jobrunner.discovery.wmnet\", beta attributes jobs to hosts like \"deployment-jobrunner03.deployment-prep.eqiad.wmflabs\".",
+      "revId": "25bae4795d0e1a504143f9f4f693b6c8afe3b113",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
