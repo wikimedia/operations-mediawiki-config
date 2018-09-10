@@ -16,3 +16,5 @@
 
 // https://phabricator.wikimedia.org/T180183
 require_once __DIR__ . '/profiler-labs.php';
+
+require __DIR__ . '/set-time-limit.php';

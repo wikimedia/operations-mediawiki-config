@@ -9,22 +9,26 @@ function wmfSetTimeLimit() {
 	if ( PHP_SAPI === 'cli' ) {
 		// It should already be zero, and Maintenance.php should set it to zero
 	} else {
-		if ( defined( 'MEDIAWIKI_JOB_RUNNER' ) ) {
-			$host = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : '';
-			switch ( $host ) {
-				case 'videoscaler.svc.eqiad.wmnet':
-				case 'videoscaler.svc.codfw.wmnet':
-				case 'videoscaler.discovery.wmnet':
-					set_time_limit( 86400 );
-					break;
+		$host = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : '';
+		switch ( $host ) {
+			case 'videoscaler.svc.eqiad.wmnet':
+			case 'videoscaler.svc.codfw.wmnet':
+			case 'videoscaler.discovery.wmnet':
+				set_time_limit( 86400 );
+				break;
 
-				default:
-					set_time_limit( 1200 );
-			}
-		} elseif ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
-			set_time_limit( 200 );
-		} else {
-			set_time_limit( 60 );
+			case 'jobrunner.svc.eqiad.wmnet':
+			case 'jobrunner.svc.codfw.wmnet':
+			case 'jobrunner.discovery.wmnet':
+				set_time_limit( 1200 );
+				break;
+
+			default:
+				if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
+					set_time_limit( 200 );
+				} else {
+					set_time_limit( 60 );
+				}
 		}
 	}
 }
