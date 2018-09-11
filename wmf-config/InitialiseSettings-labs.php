@@ -711,7 +711,7 @@ function wmfLabsSettings() {
 		],
 
 		'wgChangeTagsSchemaMigrationStage' => [
-			'default' => MIGRATION_WRITE_BOTH,
+			'default' => MIGRATION_NEW,
 		],
 
 		'wgMultiContentRevisionSchemaMigrationStage' => [
