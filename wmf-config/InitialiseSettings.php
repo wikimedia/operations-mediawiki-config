@@ -5496,6 +5496,7 @@ $wgConf->settings = [
 		'SaveParse' => 'debug',
 		'SwiftBackend' => 'debug', // -aaron 5/15/12
 		'T87645' => 'debug', // - Ori on behalf of Tim, for https://gerrit.wikimedia.org/r/#/c/188304/
+		'T97368' => 'debug', // Addshore for T97368
 		'T143073' => 'debug',
 		'texvc' => 'debug',
 		'thumb-T201305' => 'debug',
