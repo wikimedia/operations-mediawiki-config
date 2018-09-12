@@ -830,6 +830,7 @@ $wgSiteMatrixSites = [
 $wgSiteMatrixClosedSites = MWWikiversions::readDbListFile( 'closed' );
 $wgSiteMatrixPrivateSites = MWWikiversions::readDbListFile( 'private' );
 $wgSiteMatrixFishbowlSites = MWWikiversions::readDbListFile( 'fishbowl' );
+$wgSiteMatrixNonGlobalSites = MWWikiversions::readDbListFile( 'nonglobal' );
 
 if ( $wmgUseCharInsert ) {
 	wfLoadExtension( 'CharInsert' );
@@ -1538,7 +1539,7 @@ if ( $wmgUseCentralAuth ) {
 			$wgSiteMatrixPrivateSites,
 			$wgSiteMatrixFishbowlSites,
 			$wgSiteMatrixClosedSites,
-			MWWikiversions::readDbListFile( 'nonglobal' )
+			$wgSiteMatrixNonGlobalSites
 		);
 		return false;
 	}
