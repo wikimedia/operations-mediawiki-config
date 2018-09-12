@@ -116,11 +116,11 @@ $wgLBFactoryConf = [
 	's2' => [
 		'db2035'      => 50,  # B1 2.9TB 160GB, master
 		'db2041'      => 100, # C6 2.9TB 160GB, api # candidate master
-		'db2049'      => 300, # C6 2.9TB 160GB,
+		'db2049'      => 100, # C6 2.9TB 160GB,
 		'db2056'      => 50,  # D6 3.3TB 160GB, dump (inactive), vslow #innodb compressed
 		'db2063'      => 100, # D6 3.3TB 160GB, api # master for sanitarium db2095
-		'db2088:3312' => 100,  # D1 3.3TB 512GB # rc, log: s1 and s2
-		'db2091:3312' => 100,  # A8 3.3TB 512GB # rc, log: s2 and s4
+		'db2088:3312' => 150,  # D1 3.3TB 512GB # rc, log: s1 and s2
+		'db2091:3312' => 150,  # A8 3.3TB 512GB # rc, log: s2 and s4
 	],
 	/* s3 */ 'DEFAULT' => [
 		'db2043'      => 0,   # C6 2.9TB 160GB, master
