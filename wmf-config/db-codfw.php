@@ -132,10 +132,10 @@ $wgLBFactoryConf = [
 	's4' => [
 		'db2051'      => 0,   # B8 2.9TB 160GB, master
 		'db2058'      => 50,  # D6 3.3TB 160GB, dump (inactive), vslow # candidate master
-		'db2065'      => 150, # D6 3.3TB 160GB, api
-		'db2073'      => 500, # C6 3.3TB 512GB # Compressed InnoDB # master for sanitarium db2095
+		'db2065'      => 50,  # D6 3.3TB 160GB, api
+		'db2073'      => 500, # C6 3.3TB 512GB, api # Compressed InnoDB # master for sanitarium db2095
 		'db2084:3314' => 300, # D6 3.3TB 512GB # rc, log: s4 and s5
-		'db2090'      => 500, # C5 3.3TB 512GB # Compressed InnoDB
+		'db2090'      => 500, # C5 3.3TB 512GB, api # Compressed InnoDB
 		'db2091:3314' => 100,  # A8 3.3TB 512GB # rc, log: s2 and s4
 	],
 	's5' => [
@@ -373,6 +373,8 @@ $wgLBFactoryConf = [
 		],
 		'api' => [
 			'db2065' => 1,
+			'db2073' => 1,
+			'db2090' => 1,
 		],
 	],
 	's5' => [
