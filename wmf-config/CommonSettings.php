@@ -1805,8 +1805,8 @@ if ( $wmgUseCentralNotice ) {
 	// Set fundraising banners to use HTTPS on foundation wiki
 	$wgNoticeFundraisingUrl = 'https://donate.wikimedia.org/wiki/Special:LandingCheck';
 
-	// Disable the CentralNotice/Translate integration
-	$wgNoticeUseTranslateExtension = false;
+	// Enable the CentralNotice/Translate integration
+	$wgNoticeUseTranslateExtension = true;
 
 	// T51905
 	$wgNoticeUseLanguageConversion = true;
