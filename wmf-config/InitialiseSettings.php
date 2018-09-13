@@ -5448,6 +5448,7 @@ $wgConf->settings = [
 		'exception' => 'debug',
 		'exception-json' => [ 'logstash' => false ],
 		'exec' => 'debug',
+		'export' => 'debug',
 		'ExternalStoreDB' => 'debug',
 		'fatal' => 'debug',
 		'FileImporter' => 'debug',
