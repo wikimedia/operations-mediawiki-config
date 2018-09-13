@@ -12886,13 +12886,6 @@ $wgConf->settings = [
 ],
 # @} end of wgNamespaceProtection
 
-'wgParserConf' => [
-	// libxml stuff seems to have iffy memory allocation
-	'default' => defined( 'HHVM_VERSION' )
-		? [ 'class' => 'Parser', 'preprocessorClass' => 'Preprocessor_Hash' ]
-		: [ 'class' => 'Parser', 'preprocessorClass' => 'Preprocessor_DOM' ],
-],
-
 # Enable magic links regardless of core default (T145604)
 'wgEnableMagicLinks' => [
 	'default' => [
