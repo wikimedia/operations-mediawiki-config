@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b8773134_451da652",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 364,
+      "author": {
+        "id": 3215
+      },
+      "writtenOn": "2018-09-13T21:51:32Z",
+      "side": 1,
+      "message": "I guess the fact that this is a hook called later on ensure that the variable is already set, is that right? I\u0027m not familiar with order of inclusion of configs in mediawiki ;)",
+      "revId": "e192cb5b25c1cca2ccaabe7c84491a182442d8fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
