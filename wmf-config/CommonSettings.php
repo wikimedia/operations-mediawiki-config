@@ -357,9 +357,11 @@ $wgHooks['LocalisationCacheRecache'][] = function ( $cache, $code, &$allData, &$
 $wgHooks['APIQuerySiteInfoGeneralInfo'][] = function ( $module, &$data ) {
 	global $wmfMasterDatacenter;
 	global $wmfEtcdLastModifiedIndex;
+	global $wmgCirrusSearchDefaultCluster;
 	$data['wmf-config'] = [
 		'wmfMasterDatacenter' => $wmfMasterDatacenter,
 		'wmfEtcdLastModifiedIndex' => $wmfEtcdLastModifiedIndex,
+		'wmgCirrusSearchDefaultCluster' => $wmgCirrusSearchDefaultCluster,
 	];
 };
 
