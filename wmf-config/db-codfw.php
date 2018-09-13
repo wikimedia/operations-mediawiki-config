@@ -114,13 +114,13 @@ $wgLBFactoryConf = [
 		'db2092'      => 300, # B8 3.6TB 512GB, api
 	],
 	's2' => [
-		'db2035'      => 50,  # B1 2.9TB 160GB, master
-		'db2041'      => 100, # C6 2.9TB 160GB, api # candidate master
-		'db2049'      => 100, # C6 2.9TB 160GB,
-		'db2056'      => 50,  # D6 3.3TB 160GB, dump (inactive), vslow #innodb compressed
-		'db2063'      => 100, # D6 3.3TB 160GB, api # master for sanitarium db2095
-		'db2088:3312' => 150,  # D1 3.3TB 512GB # rc, log: s1 and s2
-		'db2091:3312' => 150,  # A8 3.3TB 512GB # rc, log: s2 and s4
+		'db2035'      => 50, # B1 2.9TB 160GB, master
+		'db2041'      => 50, # C6 2.9TB 160GB, api # candidate master
+		'db2049'      => 50, # C6 2.9TB 160GB, api
+		'db2056'      => 100, # D6 3.3TB 160GB, dump (inactive), vslow #innodb compressed
+		'db2063'      => 50, # D6 3.3TB 160GB, api # master for sanitarium db2095
+		'db2088:3312' => 200, # D1 3.3TB 512GB # rc, log: s1 and s2
+		'db2091:3312' => 200, # A8 3.3TB 512GB # rc, log: s2 and s4
 	],
 	/* s3 */ 'DEFAULT' => [
 		'db2043'      => 0,   # C6 2.9TB 160GB, master
@@ -144,15 +144,15 @@ $wgLBFactoryConf = [
 		'db2059'      => 100, # D6 3.3TB 160GB, api
 		'db2066'      => 400, # D6 3.3TB 160GB # master for sanitarium db2094
 		'db2075'      => 400, # A1 3.3TB 512GB # Compressed InnoDB
-		'db2084:3315' => 50,  # D6 3.3TB 512GB # rc, log: s4 and s5
-		'db2089:3315' => 50,  # A3 3.3TB 512GB # rc, log: s5 and s6
+		'db2084:3315' => 100, # D6 3.3TB 512GB # rc, log: s4 and s5
+		'db2089:3315' => 100, # A3 3.3TB 512GB # rc, log: s5 and s6
 	],
 	's6' => [
 		'db2039'      => 0,   # D1 2.9TB 160GB, master
-		'db2046'      => 400, # C6 2.9TB 160GB # candidate master
+		'db2046'      => 300, # C6 2.9TB 160GB # candidate master
 		'db2053'      => 100, # D6 2.9TB 160GB, dump (inactive), vslow
 		'db2060'      => 100, # D6 3.3TB 160GB, api
-		'db2067'      => 400, # D6 3.3TB 160GB
+		'db2067'      => 300, # D6 3.3TB 160GB
 		'db2076'      => 400, # B1 3.3TB 512GB # master for sanitarium db2095
 		'db2087:3316' => 50,  # C1 3.3TB 512GB # rc, log: s6 and s7
 		'db2089:3316' => 50,  # A3 3.3TB 512GB # rc, log: s6 and s5(s8)
@@ -170,12 +170,12 @@ $wgLBFactoryConf = [
 	's8' => [
 		'db2045'      => 0,   # B3 2.9TB 160GB, master
 		'db2079'      => 10,  # A5 3.3TB 512GB, vslow, dump # candidate master
-		'db2080'      => 10,  # C5 3.3TB 512GB, api
-		'db2081'      => 10,  # A6 3.3TB 512GB, api
+		'db2080'      => 50,  # C5 3.3TB 512GB, api
+		'db2081'      => 50,  # A6 3.3TB 512GB, api
 		'db2082'      => 100, # B6 3.3TB 512GB # master for sanitarium db2094
 		'db2083'      => 100, # C6 3.3TB 512GB
-		'db2085:3318' => 50,  # A5 3.3TB 512GB # rc, log: s1 and s8
-		'db2086:3318' => 50,  # B1 3.3TB 512GB # rc, log: s7 and s8
+		'db2085:3318' => 1,   # A5 3.3TB 512GB # rc, log: s1 and s8
+		'db2086:3318' => 1,   # B1 3.3TB 512GB # rc, log: s7 and s8
 	],
 
 	'wikitech' => [
@@ -285,7 +285,7 @@ $wgLBFactoryConf = [
 		'api' => [
 			'db2055' => 1,
 			'db2062' => 1,
-			'db2071' => 5,
+			'db2071' => 10,
 			'db2092' => 3,
 		],
 	],
@@ -318,6 +318,7 @@ $wgLBFactoryConf = [
 		],
 		'api' => [
 			'db2041' => 1,
+			'db2049' => 1,
 			'db2063' => 1,
 		],
 	],
