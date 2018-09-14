@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "64985302_55b31dfb",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-09-14T12:40:18Z",
+      "side": 1,
+      "message": "No need to keep that anymore, as that was only informative for when the host had issues or was being repooled. 200 will be de definitive weight",
+      "range": {
+        "startLine": 165,
+        "startChar": 42,
+        "endLine": 165,
+        "endChar": 61
+      },
+      "revId": "6f94c2ab2028cb9e281043ac0d7225a5621768c5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
