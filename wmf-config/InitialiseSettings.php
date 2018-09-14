@@ -18308,11 +18308,6 @@ $wgConf->settings = [
 	'wg_enwiki' => false,
 ],
 
-'wmgContentTranslationDefaultSourceLanguage' => [
-	'default' => 'en',
-	'enwiki' => 'es',
-],
-
 'wmgContentTranslationTranslateInTarget' => [
 	'default' => true,
 	'testwiki' => false,
