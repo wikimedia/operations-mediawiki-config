@@ -3218,8 +3218,6 @@ if ( $wmgUseContentTranslation ) {
 
 	$wgContentTranslationDatabase = 'wikishared';
 
-	$wgContentTranslationCampaigns = $wmgContentTranslationCampaigns;
-
 	$wgContentTranslationDefaultSourceLanguage = $wmgContentTranslationDefaultSourceLanguage;
 
 	$wgContentTranslationCXServerAuth = [
