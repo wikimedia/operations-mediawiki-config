@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d0b1088c_46b11c72",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-09-14T12:43:12Z",
+      "side": 1,
+      "message": "Extra space :)",
+      "revId": "1e16d220da8270549bf81716115506de18d0fe15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
