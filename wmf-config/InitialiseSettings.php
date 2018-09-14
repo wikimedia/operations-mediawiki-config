@@ -17629,6 +17629,7 @@ $wgConf->settings = [
 	'commonswiki' => true, // T50620
 	'frwiktionary' => true, // T138972
 	'hiwikimedia' => true,
+	'idwikimedia' => true, // T204292
 	'incubatorwiki' => true, // T36213
 	'legalteamwiki' => true, // T64610
 	'maiwikimedia' => true,
