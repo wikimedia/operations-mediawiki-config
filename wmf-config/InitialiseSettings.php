@@ -8606,6 +8606,21 @@ $wgConf->settings = [
 			'patrolmarks' => true,
 			'unwatchedpages' => true,
 		],
+		'engineer' => [ // T203000
+			'abusefilter-log-detail' => true,
+			'abusefilter-modify' => true,
+			'editinterface' => true,
+			'editsemiprotected' => true,
+			'editprotected' => true,
+			'suppressredirect' => true,
+			'managechangetags' => true,
+			'deletechangetags' => true,
+			'editcontentmodel' => true,
+			'import' => true,
+			'move-subpages' => true,
+			'mergehistory' => true,
+			'apihighlimits' => true,
+		],
 	],
 	'+cswikinews' => [
 		'autopatrolled' => [ 'autopatrol' => true, ],
@@ -10347,7 +10362,7 @@ $wgConf->settings = [
 		],
 	],
 	'+cswiki' => [
-		'bureaucrat' => [ 'arbcom', 'autopatrolled' ], // T63418
+		'bureaucrat' => [ 'arbcom', 'autopatrolled', 'engineer' ], // T63418
 		'sysop' => [ 'rollbacker', 'patroller', 'accountcreator', 'confirmed' ], // T126931, T131684
 	],
 	'+cswikinews' => [
@@ -11108,7 +11123,7 @@ $wgConf->settings = [
 		],
 	],
 	'+cswiki' => [
-		'bureaucrat' => [ 'arbcom', 'autopatrolled' ], // T63418
+		'bureaucrat' => [ 'arbcom', 'autopatrolled', 'engineer' ], // T63418
 		'sysop' => [ 'rollbacker', 'patroller', 'accountcreator', 'confirmed' ], // T126931, T131684, T163206
 	],
 	'+cswikinews' => [
