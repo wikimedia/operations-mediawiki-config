@@ -9982,6 +9982,19 @@ $wgConf->settings = [
 		'patroller' => [ 'patrol' => true ], // T48828
 		'autopatrolled' => [ 'autopatrol' => true ], // T48828
 	],
+	'+viwikibooks' => [
+		'eliminator' => [ // T202207
+			'autopatrol' => true,
+			'delete' => true,
+			'deletedhistory' => true,
+			'deletedtext' => true,
+			'deleterevision' => true,
+			'patrol' => true,
+			'protect' => true,
+			'rollback' => true,
+			'undelete' => true,
+		],
+	],
 	'+viwiktionary' => [
 		'rollbacker' => [ 'rollback' => true ], // T176979
 	],
@@ -10877,6 +10890,11 @@ $wgConf->settings = [
 			'flood'
 		],
 	],
+	'+viwikibooks' => [
+		'bureaucrat' => [
+			'eliminator', // T202207
+		],
+	],
 	'+viwiktionary' => [
 		'sysop' => [ 'rollbacker' ], // T176979
 	],
@@ -11644,6 +11662,11 @@ $wgConf->settings = [
 		'bureaucrat' => [
 			'eliminator', // T70612
 			'flood'
+		],
+	],
+	'+viwikibooks' => [
+		'bureaucrat' => [
+			'eliminator', // T202207
 		],
 	],
 	'+viwiktionary' => [
