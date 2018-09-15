@@ -13858,6 +13858,7 @@ $wgConf->settings = [
 		'yphc.ir',                          // Iranian website for amateur photographers - T201237
 		'*.bollywoodhungama.in',            // Indian television and bollywood related images - T203363
 		'radlines.org',                     // Radiologists wiki - T203219
+		'*.nasimonline.ir',                 // Iranian news agency - T203371
 	],
 ],
 
