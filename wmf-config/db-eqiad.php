@@ -111,7 +111,7 @@ $wgLBFactoryConf = [
 		'db1105:3311' => 1, # C3 3.6TB 512GB # rc, log: s1 and s2
 		'db1106' => 50,     # D3 3.6TB 512GB, vslow, dump # master for sanitarium db1124
 		# 'db1114' => 0,      # Host is depooled because of reimaging # D4 3.6TB 512GB, api issues
-		'db1119' => 200,    # B8 3.6TB 512GB, api
+		# 'db1119' => 200,    # Host is depooled, it will be donor for db1114 # B8 3.6TB 512GB, api
 	],
 	's2' => [
 		'db1066' => 0,      # A6 2.8TB 160GB # master
@@ -283,7 +283,7 @@ $wgLBFactoryConf = [
 		'api' => [
 			'db1080' => 10,
 			# 'db1114' => 1,
-			'db1119' => 10,
+			# 'db1119' => 10,
 		],
 	],
 	's2' => [
