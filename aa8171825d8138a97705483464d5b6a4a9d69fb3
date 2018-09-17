@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ea4e524_f4c78364",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2018-09-17T14:07:48Z",
+      "side": 1,
+      "message": "This is not a labs db host, but mediawiki production (we call these hosts \"core dbs\").",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 6
+      },
+      "revId": "aa8171825d8138a97705483464d5b6a4a9d69fb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
