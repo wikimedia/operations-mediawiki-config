@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "46728693_b3c20f21",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-09-17T10:00:15Z",
+      "side": 1,
+      "message": "0 weight means mediawiki will not check for lag, unfortunately it doesn\u0027t mean it is depooled and due to mw load balancer issues it will create an outage: T180918\nYou need to depool it with \"#\"\n\nThis host is also present on API, so you need to depool it also from the API service.",
+      "revId": "1a6196289b39d10e36ad7ef8a7d0c6604ca96e7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
