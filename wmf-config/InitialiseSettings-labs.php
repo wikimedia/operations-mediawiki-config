@@ -706,8 +706,12 @@ function wmfLabsSettings() {
 			'default' => '20171023_enwiki_v1'
 		],
 
-		'wgCommentTableSchemaMigrationStage' => [
+		'wgActorTableSchemaMigrationStage' => [
 			'default' => MIGRATION_WRITE_BOTH,
+		],
+
+		'wgCommentTableSchemaMigrationStage' => [
+			'default' => MIGRATION_WRITE_NEW,
 		],
 
 		'wgChangeTagsSchemaMigrationStage' => [
