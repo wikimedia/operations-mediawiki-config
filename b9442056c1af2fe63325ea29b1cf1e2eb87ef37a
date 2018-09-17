@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "46a3f471_90994207",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-09-17T10:28:56Z",
+      "side": 1,
+      "message": "Check my previous comment about depooling this host also from API service below",
+      "range": {
+        "startLine": 113,
+        "startChar": 82,
+        "endLine": 113,
+        "endChar": 85
+      },
+      "revId": "b9442056c1af2fe63325ea29b1cf1e2eb87ef37a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
