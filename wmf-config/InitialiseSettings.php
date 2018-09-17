@@ -20418,6 +20418,7 @@ $wgConf->settings = [
 	'svwikivoyage' => false,
 	'cawiki' => true, // T114392
 	'euwiki' => true, // T171763
+	'glwiki' => true, // T199713
 ],
 
 'wgWPBSkinBlacklist' => [
