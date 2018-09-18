@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6d8dc868_3497a8ed",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-09-18T13:41:38Z",
+      "side": 1,
+      "message": "This needs to be cleaned up as it is not relevant anymore",
+      "range": {
+        "startLine": 113,
+        "startChar": 26,
+        "endLine": 113,
+        "endChar": 63
+      },
+      "revId": "8e3ecdaa672162f40557a0355ed7c87ec43c2ed0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
