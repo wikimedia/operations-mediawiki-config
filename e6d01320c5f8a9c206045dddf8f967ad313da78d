@@ -22,6 +22,29 @@
       "revId": "e6d01320c5f8a9c206045dddf8f967ad313da78d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e3aa816c_83372b73",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-09-18T13:47:52Z",
+      "side": 1,
+      "message": "let\u0027s leave this until we can confirm it is no longer an issue once we are back in eqiad",
+      "range": {
+        "startLine": 113,
+        "startChar": 40,
+        "endLine": 113,
+        "endChar": 50
+      },
+      "revId": "e6d01320c5f8a9c206045dddf8f967ad313da78d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
