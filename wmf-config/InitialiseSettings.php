@@ -10920,6 +10920,7 @@ $wgConf->settings = [
 			'bureaucrat',
 			'confirmed',
 			'contentadmin',
+			'interface-admin',
 			'oathauth',
 			'oauthadmin',
 			'shell',
