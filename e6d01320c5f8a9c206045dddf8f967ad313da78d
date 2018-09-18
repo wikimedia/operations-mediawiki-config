@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "05ea04d2_e1fa79b3",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2018-09-18T13:47:43Z",
+      "side": 1,
+      "message": "In theory no api issues? But that is what I commented to test. Can be done after repool, but I would remove it from the comment.",
+      "range": {
+        "startLine": 113,
+        "startChar": 43,
+        "endLine": 113,
+        "endChar": 50
+      },
+      "revId": "e6d01320c5f8a9c206045dddf8f967ad313da78d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
