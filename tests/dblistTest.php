@@ -61,13 +61,7 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 			'flow-labs',
 			'flow_only_labs',
 
-			'closed',
 			'deleted',
-			'new_wiktionaries',
-			'news',
-			'private',
-			'special',
-			'todo',
 		];
 
 		foreach ( $lists as $dbfile => $dbnames ) {
