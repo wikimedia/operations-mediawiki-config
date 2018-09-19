@@ -16317,6 +16317,11 @@ $wgConf->settings = [
 	'kowiki' => true, // T172630
 ],
 
+'wgMinervaABSamplingRate' => [
+	'default' => 0,
+	'lvwiki' => 1, // T204609
+],
+
 'wgMinervaApplyKnownTemplateHacks' => [
 	'default' => true,
 ],
