@@ -127,7 +127,7 @@ $wgLBFactoryConf = [
 		'db2036'      => 50,  # C6 2.9TB 160GB, old master
 		'db2050'      => 50,  # C6 2.9TB 160GB dump (inactive), vslow
 		'db2057'      => 150, # D6 3.3TB 160GB # rc, log # candidate master
-		# 'db2074'      => 400, # D6 3.3TB 512GB # InnoDB compressed # master for sanitarium db2094
+		'db2074'      => 400, # D6 3.3TB 512GB # InnoDB compressed # master for sanitarium db2094
 	],
 	's4' => [
 		'db2051'      => 0,   # B8 2.9TB 160GB, master
