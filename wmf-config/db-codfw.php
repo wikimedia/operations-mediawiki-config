@@ -126,8 +126,8 @@ $wgLBFactoryConf = [
 		'db2043'      => 0,   # C6 2.9TB 160GB, master
 		'db2036'      => 50,  # C6 2.9TB 160GB, old master
 		'db2050'      => 50,  # C6 2.9TB 160GB dump (inactive), vslow
-		'db2057'      => 150, # D6 3.3TB 160GB # rc, log # candidate master
-		'db2074'      => 400, # D6 3.3TB 512GB # InnoDB compressed # master for sanitarium db2094
+		# 'db2057'      => 150, # D6 3.3TB 160GB # rc, log # candidate master
+		'db2074'      => 400, # D6 3.3TB 512GB # InnoDB compressed # master for sanitarium db2094 # temporary rc
 	],
 	's4' => [
 		'db2051'      => 0,   # B8 2.9TB 160GB, master
@@ -330,19 +330,19 @@ $wgLBFactoryConf = [
 			'db2050' => 1,
 		],
 		'watchlist' => [
-			'db2057' => 1,
+			'db2074' => 1,
 		],
 		'recentchanges' => [
-			'db2057' => 1,
+			'db2074' => 1,
 		],
 		'recentchangeslinked' => [
-			'db2057' => 1,
+			'db2074' => 1,
 		],
 		'contributions' => [
-			'db2057' => 1,
+			'db2074' => 1,
 		],
 		'logpager' => [
-			'db2057' => 1,
+			'db2074' => 1,
 		],
 	],
 	's4' => [
