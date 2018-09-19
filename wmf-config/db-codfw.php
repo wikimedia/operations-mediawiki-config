@@ -144,16 +144,16 @@ $wgLBFactoryConf = [
 		'db2059'      => 100, # D6 3.3TB 160GB, api
 		'db2066'      => 200, # D6 3.3TB 160GB # master for sanitarium db2094
 		'db2075'      => 400, # A1 3.3TB 512GB # Compressed InnoDB
-		# 'db2084:3315' => 100, # D6 3.3TB 512GB # rc, log: s4 and s5 # testing new alert
+		'db2084:3315' => 100, # D6 3.3TB 512GB # rc, log: s4 and s5
 		'db2089:3315' => 100, # A3 3.3TB 512GB # rc, log: s5 and s6
 	],
 	's6' => [
 		'db2039'      => 0,   # D1 2.9TB 160GB, master
 		'db2046'      => 300, # C6 2.9TB 160GB # candidate master
-		# 'db2053'      => 100, # D6 2.9TB 160GB, dump (inactive), vslow # testing new alert
+		'db2053'      => 100, # D6 2.9TB 160GB, dump (inactive), vslow
 		'db2060'      => 100, # D6 3.3TB 160GB, api
 		'db2067'      => 300, # D6 3.3TB 160GB
-		'db2076'      => 400, # B1 3.3TB 512GB # master for sanitarium db2095 # temporary vslow
+		'db2076'      => 400, # B1 3.3TB 512GB # master for sanitarium db2095
 		'db2087:3316' => 100, # C1 3.3TB 512GB # rc, log: s6 and s7
 		'db2089:3316' => 100, # A3 3.3TB 512GB # rc, log: s6 and s5(s8)
 	],
@@ -380,23 +380,23 @@ $wgLBFactoryConf = [
 	],
 	's5' => [
 		'watchlist' => [
-			# 'db2084:3315' => 1,
+			'db2084:3315' => 1,
 			'db2089:3315' => 1,
 		],
 		'recentchanges' => [
-			# 'db2084:3315' => 1,
+			'db2084:3315' => 1,
 			'db2089:3315' => 1,
 		],
 		'recentchangeslinked' => [
-			# 'db2084:3315' => 1,
+			'db2084:3315' => 1,
 			'db2089:3315' => 1,
 		],
 		'contributions' => [
-			# 'db2084:3315' => 1,
+			'db2084:3315' => 1,
 			'db2089:3315' => 1,
 		],
 		'logpager' => [
-			# 'db2084:3315' => 1,
+			'db2084:3315' => 1,
 			'db2089:3315' => 1,
 		],
 		'dump' => [
@@ -431,10 +431,10 @@ $wgLBFactoryConf = [
 			'db2089:3316' => 1,
 		],
 		'dump' => [
-			'db2076' => 1,
+			'db2053' => 1,
 		],
 		'vslow' => [
-			'db2076' => 1,
+			'db2053' => 1,
 		],
 		'api' => [
 			'db2060' => 1,
