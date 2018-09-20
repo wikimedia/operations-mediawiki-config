@@ -15920,6 +15920,8 @@ $wgConf->settings = [
 	'default' => false,
 	'arbcom_enwiki' => true,
 	'checkuserwiki' => true,
+	'legalteamwiki' => true,
+	'ombudsmenwiki' => true,
 	'stewardwiki' => true,
 ],
 
