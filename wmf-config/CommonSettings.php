@@ -2414,13 +2414,6 @@ if ( $wmgUseCLDR ) {
 	wfLoadExtension( 'cldr' );
 }
 
-// DO NOT DISABLE WITHOUT CONTACTING PHILIPPE / LEGAL!
-// Installed by Andrew, 2011-04-26
-if ( $wmgUseDisableAccount ) {
-	wfLoadExtension( 'DisableAccount' );
-	$wgGroupPermissions['bureaucrat']['disableaccount'] = true;
-}
-
 if ( $wmgUseIncubator ) {
 	wfLoadExtension( 'WikimediaIncubator' );
 	$wmincClosedWikis = $wgSiteMatrixClosedSites;
