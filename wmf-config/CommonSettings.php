@@ -1532,7 +1532,8 @@ if ( $wmgUseCentralAuth ) {
 	 */
 	function wmfCentralAuthWikiList( &$list ) {
 		global $wgLocalDatabases, $IP, $wgSiteMatrixPrivateSites,
-			$wgSiteMatrixFishbowlSites, $wgSiteMatrixClosedSites;
+			$wgSiteMatrixFishbowlSites, $wgSiteMatrixClosedSites,
+			$wgSiteMatrixNonGlobalSites;
 
 		$list = array_diff(
 			$wgLocalDatabases,
