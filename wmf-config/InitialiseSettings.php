@@ -15910,10 +15910,6 @@ $wgConf->settings = [
 	'ptwikibooks' => '//commons.wikimedia.org/wiki/Special:Upload/pt?uselang=pt',
 ],
 
-'wmgUseDisableAccount' => [
-	'default' => false,
-],
-
 // Whether to show "Publish" rather than "Save" on the edit page (and related circumstances)
 // This should be set to true for all public WMF wikis, and any changes should be discussed
 // with Contributors and Legal before they are done, due to the legal implications.
