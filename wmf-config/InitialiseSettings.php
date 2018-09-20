@@ -8393,10 +8393,6 @@ $wgConf->settings = [
 		'edit' => false,
 	] ],
 
-	// Miscellaneous
-	'+arbcom_enwiki' => [
-		'bureaucrat' => [ 'disableaccount' => true ],
-	],
 	'+amwikimedia' => [
 		'sysop' => [ 'translationadmin' ],
 	],
@@ -15914,15 +15910,8 @@ $wgConf->settings = [
 	'ptwikibooks' => '//commons.wikimedia.org/wiki/Special:Upload/pt?uselang=pt',
 ],
 
-// DO NOT DISABLE WITHOUT CONTACTING LEGAL!
-// Installed by Andrew, 2011-04-26
 'wmgUseDisableAccount' => [
 	'default' => false,
-	'arbcom_enwiki' => true,
-	'checkuserwiki' => true,
-	'legalteamwiki' => true,
-	'ombudsmenwiki' => true,
-	'stewardwiki' => true,
 ],
 
 // Whether to show "Publish" rather than "Save" on the edit page (and related circumstances)
