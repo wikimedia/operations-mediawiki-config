@@ -19773,14 +19773,14 @@ $wgConf->settings = [
 		'damaging' => [ 'enabled' => true ],
 		'goodfaith' => [ 'enabled' => true ],
 		'reverted' => [ 'enabled' => false ],
-		'wp10' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
+		'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
 	],
 	'enwiki' => [
 		'damaging' => [ 'enabled' => true, 'excludeBots' => true ],
 		'goodfaith' => [ 'enabled' => true, 'excludeBots' => true ],
 		'reverted' => [ 'enabled' => false ],
-		'wp10' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'cleanParent' => true ],
+		'articlequality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true, 'cleanParent' => true ],
 	],
 	'arwiki' => [
@@ -19788,7 +19788,7 @@ $wgConf->settings = [
 		// goodfaith is disabled for arwiki (T192498, T193905)
 		'goodfaith' => [ 'enabled' => false ],
 		'reverted' => [ 'enabled' => false ],
-		'wp10' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
+		'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
 	],
 	'srwiki' => [
@@ -19796,32 +19796,30 @@ $wgConf->settings = [
 		// goodfaith is disabled for srwiki (T197012)
 		'goodfaith' => [ 'enabled' => false ],
 		'reverted' => [ 'enabled' => false ],
-		'wp10' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
+		'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
 	],
 	'euwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
 		'reverted' => [ 'enabled' => false ],
-		'wp10' => [ 'enabled' => true, 'namespaces' => [ 0 ], 'cleanParent' => true ],
+		'articlequality' => [ 'enabled' => true, 'namespaces' => [ 0 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
 	],
 	'testwiki' => [
 		'damaging' => [ 'enabled' => true, 'excludeBots' => true ],
 		'goodfaith' => [ 'enabled' => true, 'excludeBots' => true ],
 		'reverted' => [ 'enabled' => false ],
-		// wp10 and draftquality are disabled until ORES is configured to allow these
-		// for testwiki. See T198997
-		'wp10' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'cleanParent' => true ],
+		'articlequality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true, 'cleanParent' => true ],
 	],
 	'test2wiki' => [
 		'damaging' => [ 'enabled' => true, 'excludeBots' => true ],
 		'goodfaith' => [ 'enabled' => true, 'excludeBots' => true ],
 		'reverted' => [ 'enabled' => false ],
-		// wp10 and draftquality are disabled until ORES is configured to allow these
+		// articlequality and draftquality are disabled until ORES is configured to allow these
 		// for test2wiki. See T198997
-		'wp10' => [ 'enabled' => false, 'namespaces' => [ 0, 118 ], 'cleanParent' => true ],
+		'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0, 118 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true, 'cleanParent' => true ],
 	],
 ],
