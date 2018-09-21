@@ -12445,6 +12445,7 @@ $wgConf->settings = [
 	'enwikibooks' => false,
 	'fawikinews' => false, // T85380
 	'foundationwiki' => false,
+	'pflwiki' => false, // T205055
 	'rmwiki' => false,
 	'zhwiki' => false,
 ],
