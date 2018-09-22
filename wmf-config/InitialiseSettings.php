@@ -21707,22 +21707,6 @@ $wgConf->settings = [
 	'enwiki' => true, // T192455
 ],
 
-'wgArticleCreationWorkflows' => [
-	'default' => [],
-	'test2wiki' => [
-		[
-			'namespaces' => [ 0 ],
-			'excludeRight' => 'autoconfirmed'
-		],
-	],
-	'enwiki' => [
-		[
-			'namespaces' => [ 0 ],
-			'excludeRight' => 'autoconfirmed'
-		],
-	],
-],
-
 'wgArticleCreationLandingPage' => [
 	'default' => 'Project:New user landing page',
 ],
