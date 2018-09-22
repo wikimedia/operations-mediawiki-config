@@ -20599,7 +20599,7 @@ $wgConf->settings = [
 	// Operations and/or Analytics teams. At the very least, be mindful of the
 	// current rate of ReadingDepth events being logged:
 	// https://grafana.wikimedia.org/dashboard/db/eventlogging-schema?var-schema=ReadingDepth
-	'wikipedia' => 0.001,
+	'wikipedia' => 0.1,
 ],
 
 'wgWMEPrintEnabled' => [
