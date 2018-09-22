@@ -8752,11 +8752,15 @@ $wgConf->settings = [
 		'autopatrolled' => [ 'autopatrol' => true ], // T30612
 	],
 	'enwiki' => [
-		'*' => [ 'createpage' => false ], // See P2059
+		'*' => [
+			'createpage' => false, // See P2059
+			'createpagemainns' => false,
+		],
 		'user' => [
 			'move' => false, // autoconfirmed only
 			'collectionsaveasuserpage' => true, // T48944
 			'changetags' => false, // T97013
+			'createpagemainns' => false,
 		],
 		'founder' => [ 'userrights' => true ],
 		'rollbacker' => [ 'rollback' => true ],
@@ -9895,6 +9899,7 @@ $wgConf->settings = [
 		'centralnoticeadmin' => [ 'centralnotice-admin' => true, 'editinterface' => true ], // adding to allow CN access without local sysop JRA 2013-02-21
 	],
 	'test2wiki' => [
+		'*' => [ 'createpagemainns' => false ],
 		'autoreview' => [ // T134491
 			'autopatrol' => true,
 		],
@@ -9904,6 +9909,7 @@ $wgConf->settings = [
 		'user' => [
 			'upload_by_url' => true,
 			'upload' => true,
+			'createpagemainns' => false,
 		],
 		'qa_automation' => [ // For browser tests, T60375 and T63799
 			'block' => true,
