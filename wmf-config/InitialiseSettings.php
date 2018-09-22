@@ -20843,10 +20843,8 @@ $wgConf->settings = [
 	'default' => false,
 ],
 
-'wmgUseCongressLookup' => [
+'wmgUseCongressLookup' => [ // Disabled per T205049
 	'default' => false,
-	'testwiki' => true,
-	'metawiki' => true, # T194230
 ],
 
 'wmgUseSkinPerPage' => [
