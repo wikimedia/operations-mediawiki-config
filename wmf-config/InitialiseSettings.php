@@ -15461,6 +15461,9 @@ $wgConf->settings = [
 	'+ruwiki' => [
 		'Инкубатор' /* Draft / Incubator */ => true, // T86688
 	],
+	'+srwiki' => [
+		'Project' => true, // T205206
+	],
 	'+svwiki' => [
 		'Project' => true, // T144688
 		'Portal' => true, // T144688
