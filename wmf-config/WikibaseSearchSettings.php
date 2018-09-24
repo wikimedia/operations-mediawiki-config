@@ -70,7 +70,7 @@ $wgWBRepoSettings['entitySearch']['defaultPrefixRescoreProfile'] = 'wikibase_con
 // Fulltext search query
 $wgWBRepoSettings['entitySearch']['fulltextSearchProfile'] = 'wikibase_config_fulltext_query';
 // Fulltext search rescore
-$wgWBRepoSettings['entitySearch']['defaultFulltextRescoreProfile'] = 'wikibase_config_entity_weight';
+$wgWBRepoSettings['entitySearch']['defaultFulltextRescoreProfile'] = 'wikibase_config_phrase';
 
 // Fine tuning of the completion search (main elastic query)
 $wgWBRepoSettings['entitySearch']['prefixSearchProfiles'] = [
