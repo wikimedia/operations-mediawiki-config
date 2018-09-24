@@ -18436,10 +18436,6 @@ $wgConf->settings = [
 	'related-articles-footer-blacklisted-skins' => [],
 ],
 
-'wgRelatedArticlesEnabledBucketSize' => [
-	'default' => 1,
-],
-
 'wmgUseRelatedSites' => [
 	'default' => false,
 	'wikivoyage' => true,

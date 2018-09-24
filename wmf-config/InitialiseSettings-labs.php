@@ -369,10 +369,6 @@ function wmfLabsSettings() {
 		'wmgUseRelatedArticles' => [
 			'default' => true,
 		],
-		'wgRelatedArticlesEnabledBucketSize' => [
-			'default' => 1,
-			'enwiki' => 1,
-		],
 
 		// Enable anonymous editor acquisition experiment across labs
 		'wmgGettingStartedRunTest' => [
