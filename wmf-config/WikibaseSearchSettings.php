@@ -100,6 +100,11 @@ $wgWBRepoSettings['entitySearch']['fulltextSearchProfiles'] = [
 			'fallback-folded'   => 0.005,
 			'fallback-partial'  => 0.03,
 			'fallback-discount' => 0.1,
+			'phrase' => [
+				'all'           => 0.001,
+				'all.plain'     => 0.01,
+				'slop'          => 0,
+			],
 		]
 	],
 ];
@@ -119,6 +124,32 @@ $wgWBRepoSettings['entitySearch']['rescoreProfiles'] = [
 				'type' => 'function_score',
 				'function_chain' => 'wikibase_config_entity_weight'
 			]
+		]
+	],
+	// Fulltext profile with phrase scoring
+	'wikibase_config_phrase' => [
+		'i18n_msg' => 'wikibase-rescore-profile-fulltext',
+		'supported_namespaces' => 'all',
+		'rescore' => [
+			// phrase rescore
+			[
+				'window' => 512,
+				'window_size_override' => 'CirrusSearchPhraseRescoreWindowSize',
+				'rescore_query_weight' => 10,
+				'rescore_query_weight_override' => 'CirrusSearchPhraseRescoreBoost',
+				'query_weight' => 1.0,
+				'type' => 'phrase',
+				// defaults: 'score_mode' => 'total'
+			],
+			[
+				'window' => 8192,
+				'window_size_override' => 'EntitySearchRescoreWindowSize',
+				'query_weight' => 1.0,
+				'rescore_query_weight' => 2.0,
+				'score_mode' => 'total',
+				'type' => 'function_score',
+				'function_chain' => 'entity_weight_boost'
+			],
 		]
 	]
 ];
