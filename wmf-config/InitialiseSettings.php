@@ -93,6 +93,7 @@ $wgConf->settings = [
 	'private' => false,
 	'fishbowl' => false,
 	'nonglobal' => false,
+	'foundationwiki' => true, # T205368
 	'zerowiki' => true, # T135074
 ],
 'wmgBotPasswordsCluster' => [
