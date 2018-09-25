@@ -633,10 +633,6 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
-		'-wmgPopupsBetaFeature' => [
-			'default' => false,
-		],
-
 		// T191888: Enable page previews configuration for newly created accounts
 		'wgPopupsOptInStateForNewAccounts' => [
 			'default' => '1',
@@ -706,8 +702,12 @@ function wmfLabsSettings() {
 			'default' => '20171023_enwiki_v1'
 		],
 
-		'wgCommentTableSchemaMigrationStage' => [
+		'wgActorTableSchemaMigrationStage' => [
 			'default' => MIGRATION_WRITE_BOTH,
+		],
+
+		'wgCommentTableSchemaMigrationStage' => [
+			'default' => MIGRATION_WRITE_NEW,
 		],
 
 		'wgChangeTagsSchemaMigrationStage' => [
@@ -736,14 +736,14 @@ function wmfLabsSettings() {
 				'damaging' => [ 'enabled' => true ],
 				'goodfaith' => [ 'enabled' => true ],
 				'reverted' => [ 'enabled' => false ],
-				'wp10' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
+				'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
 				'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
 			],
 			'enwiki' => [
 				'damaging' => [ 'enabled' => true, 'excludeBots' => true ],
 				'goodfaith' => [ 'enabled' => true, 'excludeBots' => true ],
 				'reverted' => [ 'enabled' => false ],
-				'wp10' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'cleanParent' => true ],
+				'articlequality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'cleanParent' => true ],
 				'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true, 'cleanParent' => true ],
 			],
 		],

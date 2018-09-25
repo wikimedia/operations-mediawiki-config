@@ -68,6 +68,9 @@ try {
 	if ( $response['status'] === true ) {
 		http_response_code( 200 );
 	} else {
+		if ( $response['readonly'] ) {
+			header( 'X-Readonly: true' );
+		}
 		http_response_code( 500 );
 	}
 	$mediawiki->restInPeace();

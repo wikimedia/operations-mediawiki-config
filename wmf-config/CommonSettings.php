@@ -357,9 +357,11 @@ $wgHooks['LocalisationCacheRecache'][] = function ( $cache, $code, &$allData, &$
 $wgHooks['APIQuerySiteInfoGeneralInfo'][] = function ( $module, &$data ) {
 	global $wmfMasterDatacenter;
 	global $wmfEtcdLastModifiedIndex;
+	global $wmgCirrusSearchDefaultCluster;
 	$data['wmf-config'] = [
 		'wmfMasterDatacenter' => $wmfMasterDatacenter,
 		'wmfEtcdLastModifiedIndex' => $wmfEtcdLastModifiedIndex,
+		'wmgCirrusSearchDefaultCluster' => $wmgCirrusSearchDefaultCluster,
 	];
 };
 
@@ -828,6 +830,7 @@ $wgSiteMatrixSites = [
 $wgSiteMatrixClosedSites = MWWikiversions::readDbListFile( 'closed' );
 $wgSiteMatrixPrivateSites = MWWikiversions::readDbListFile( 'private' );
 $wgSiteMatrixFishbowlSites = MWWikiversions::readDbListFile( 'fishbowl' );
+$wgSiteMatrixNonGlobalSites = MWWikiversions::readDbListFile( 'nonglobal' );
 
 if ( $wmgUseCharInsert ) {
 	wfLoadExtension( 'CharInsert' );
@@ -1529,14 +1532,15 @@ if ( $wmgUseCentralAuth ) {
 	 */
 	function wmfCentralAuthWikiList( &$list ) {
 		global $wgLocalDatabases, $IP, $wgSiteMatrixPrivateSites,
-			$wgSiteMatrixFishbowlSites, $wgSiteMatrixClosedSites;
+			$wgSiteMatrixFishbowlSites, $wgSiteMatrixClosedSites,
+			$wgSiteMatrixNonGlobalSites;
 
 		$list = array_diff(
 			$wgLocalDatabases,
 			$wgSiteMatrixPrivateSites,
 			$wgSiteMatrixFishbowlSites,
 			$wgSiteMatrixClosedSites,
-			MWWikiversions::readDbListFile( 'nonglobal' )
+			$wgSiteMatrixNonGlobalSites
 		);
 		return false;
 	}
@@ -2253,11 +2257,8 @@ if ( $wmgUseMultimediaViewer ) {
 	wfLoadExtension( 'MultimediaViewer' );
 }
 
-if ( $wmgUsePopups || ( $wmgPopupsBetaFeature && $wmgUseBetaFeatures ) ) {
+if ( $wmgUsePopups ) {
 	wfLoadExtension( 'Popups' );
-
-	// Make sure we don't enable as a beta feature if we are set to be enabled by default.
-	$wgPopupsBetaFeature = $wmgPopupsBetaFeature && !$wmgUsePopups;
 }
 
 if ( $wmgUseLinter ) {
@@ -2411,13 +2412,6 @@ if ( $wmgUseGoogleNewsSitemap ) {
 
 if ( $wmgUseCLDR ) {
 	wfLoadExtension( 'cldr' );
-}
-
-// DO NOT DISABLE WITHOUT CONTACTING PHILIPPE / LEGAL!
-// Installed by Andrew, 2011-04-26
-if ( $wmgUseDisableAccount ) {
-	wfLoadExtension( 'DisableAccount' );
-	$wgGroupPermissions['bureaucrat']['disableaccount'] = true;
 }
 
 if ( $wmgUseIncubator ) {
@@ -3784,7 +3778,7 @@ foreach ( $wgGroupPermissions as $group => $_ ) {
 		|| !empty( $wgGroupPermissions[$group]['editusercss'] )
 		|| !empty( $wgGroupPermissions[$group]['edituserjs'] )
 	) ) {
-		// enforce that techadmin is the only group that can edit non-own CSS/JS
+		// enforce that interace-admin is the only group that can edit non-own CSS/JS
 		unset(
 			$wgGroupPermissions[$group]['editsitecss'],
 			$wgGroupPermissions[$group]['editsitejs'],

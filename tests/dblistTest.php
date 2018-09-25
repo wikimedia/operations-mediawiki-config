@@ -61,13 +61,7 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 			'flow-labs',
 			'flow_only_labs',
 
-			'closed',
 			'deleted',
-			'new_wiktionaries',
-			'news',
-			'private',
-			'special',
-			'todo',
 		];
 
 		foreach ( $lists as $dbfile => $dbnames ) {
@@ -86,14 +80,12 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 	public static function provideAllWikisAreIncluded() {
 		return [
 			'section' => [
-				'section',
 				// If you're adding a new section, make sure it's widely announced
 				// so all the people who do things per section know about it!
 				[ 's1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 'wikitech', ],
 			],
 
 			'size' => [
-				'size',
 				[ 'small', 'medium', 'large', ],
 			],
 		];
@@ -101,10 +93,9 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 
 	/**
 	 * @dataProvider provideAllWikisAreIncluded
-	 * @param string $description Description of this set of DBLists.
 	 * @param string[] $dbLists DBList names that should collectively contain all wikis
 	 */
-	public function testAllWikisAreIncluded( $description, array $dbLists ) {
+	public function testAllWikisAreIncluded( array $dbLists ) {
 		$lists = DBList::getLists();
 
 		$all = array_fill_keys( $lists['all'], [] );
@@ -120,7 +111,7 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 		} );
 
 		$this->assertSame( [], $all,
-			"All names in 'all.dblist' are in exactly one of the $description lists" );
+			"All names in 'all.dblist' are in exactly one of the lists" );
 	}
 
 	/**

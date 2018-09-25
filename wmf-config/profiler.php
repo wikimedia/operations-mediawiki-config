@@ -134,62 +134,68 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 			 */
 			require_once __DIR__ . '/../vendor/autoload.php';
 
+			// Use a nested register_postsend_function() function, so that the profile
+			// includes MediaWiki's post-send DeferredUpdates as well.
+			// The postsend functions are FIFO, and because this code runs before MediaWiki
+			// we become the first. By using nesting, we become the last instead.
 			register_postsend_function( function () {
-				$data = [ 'profile' => xhprof_disable() ];
+				register_postsend_function( function () {
+					$data = [ 'profile' => xhprof_disable() ];
 
-				$sec  = $_SERVER['REQUEST_TIME'];
-				$usec = $_SERVER['REQUEST_TIME_FLOAT'] - $sec;
+					$sec  = $_SERVER['REQUEST_TIME'];
+					$usec = $_SERVER['REQUEST_TIME_FLOAT'] - $sec;
 
-				// Fake the URL to have a prefix of the request ID, that way it can
-				// be easily found through XHGui through a predictable search URL
-				// that looks for the request ID.
-				$reqId = WebRequest::getRequestId();
-				// Create a simplified url with just script name and 'action' query param
-				$qs = isset( $_GET['action'] ) ? ( '?action=' . $_GET['action'] ) : '';
-				$url = '//' . $reqId . $_SERVER['SCRIPT_NAME'] . $qs;
+					// Fake the URL to have a prefix of the request ID, that way it can
+					// be easily found through XHGui through a predictable search URL
+					// that looks for the request ID.
+					$reqId = WebRequest::getRequestId();
+					// Create a simplified url with just script name and 'action' query param
+					$qs = isset( $_GET['action'] ) ? ( '?action=' . $_GET['action'] ) : '';
+					$url = '//' . $reqId . $_SERVER['SCRIPT_NAME'] . $qs;
 
-				// Create sanitized copies of $_SERVER, $_ENV, and $_GET that are
-				// appropiate for exposing publicly to the web.
-				// This intentionally omits 'REQUEST_URI' (added later)
-				$keyWhitelist = array_flip( [
-					'HTTP_HOST', 'HTTP_X_WIKIMEDIA_DEBUG', 'REQUEST_METHOD',
-					'REQUEST_START_TIME', 'REQUEST_TIME', 'REQUEST_TIME_FLOAT',
-					'SERVER_ADDR', 'SERVER_NAME', 'THREAD_TYPE', 'action'
-				] );
-				$server = array_intersect_key( $_SERVER, $keyWhitelist );
-				$env = array_intersect_key( $_ENV, $keyWhitelist );
-				$get = array_intersect_key( $_GET, $keyWhitelist );
+					// Create sanitized copies of $_SERVER, $_ENV, and $_GET that are
+					// appropiate for exposing publicly to the web.
+					// This intentionally omits 'REQUEST_URI' (added later)
+					$keyWhitelist = array_flip( [
+						'HTTP_HOST', 'HTTP_X_WIKIMEDIA_DEBUG', 'REQUEST_METHOD',
+						'REQUEST_START_TIME', 'REQUEST_TIME', 'REQUEST_TIME_FLOAT',
+						'SERVER_ADDR', 'SERVER_NAME', 'THREAD_TYPE', 'action'
+					] );
+					$server = array_intersect_key( $_SERVER, $keyWhitelist );
+					$env = array_intersect_key( $_ENV, $keyWhitelist );
+					$get = array_intersect_key( $_GET, $keyWhitelist );
 
-				// Add unique ID
-				$server['UNIQUE_ID'] = $reqId;
-				$env['UNIQUE_ID'] = $reqId;
+					// Add unique ID
+					$server['UNIQUE_ID'] = $reqId;
+					$env['UNIQUE_ID'] = $reqId;
 
-				// Add hostname as web server name
-				// (SERVER_NAME is e.g. wikipedia.org, SERVER_ADDR is the LVS service name,
-				// e.g. appservers.svc)
-				$env['HOSTNAME'] = wfHostname();
+					// Add hostname as web server name
+					// (SERVER_NAME is e.g. wikipedia.org, SERVER_ADDR is the LVS service name,
+					// e.g. appservers.svc)
+					$env['HOSTNAME'] = wfHostname();
 
-				// Re-insert scrubbed URL as REQUEST_URL:
-				$server['REQUEST_URI'] = $url;
-				$env['REQUEST_URI'] = $url;
+					// Re-insert scrubbed URL as REQUEST_URL:
+					$server['REQUEST_URI'] = $url;
+					$env['REQUEST_URI'] = $url;
 
-				$data['meta'] = [
-					'url'              => $url,
-					'SERVER'           => $server,
-					'get'              => $get,
-					'env'              => $env,
-					'simple_url'       => Xhgui_Util::simpleUrl( $url ),
-					'request_ts'       => new MongoDate( $sec ),
-					'request_ts_micro' => new MongoDate( $sec, $usec ),
-					'request_date'     => date( 'Y-m-d', $sec ),
-				];
+					$data['meta'] = [
+						'url'              => $url,
+						'SERVER'           => $server,
+						'get'              => $get,
+						'env'              => $env,
+						'simple_url'       => Xhgui_Util::simpleUrl( $url ),
+						'request_ts'       => new MongoDate( $sec ),
+						'request_ts_micro' => new MongoDate( $sec, $usec ),
+						'request_date'     => date( 'Y-m-d', $sec ),
+					];
 
-				Xhgui_Saver::factory( [
-					'save.handler' => 'mongodb',
-					'db.host'      => 'mongodb://tungsten.eqiad.wmnet:27017',
-					'db.db'        => 'xhprof',
-					'db.options'   => [],
-				] )->save( $data );
+					Xhgui_Saver::factory( [
+						'save.handler' => 'mongodb',
+						'db.host'      => 'mongodb://tungsten.eqiad.wmnet:27017',
+						'db.db'        => 'xhprof',
+						'db.options'   => [],
+					] )->save( $data );
+				} );
 			} );
 		}
 	}
