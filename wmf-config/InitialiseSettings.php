@@ -4762,6 +4762,13 @@ $wgConf->settings = [
 		'UT' => NS_USER_TALK, // T202821
 		'H' => NS_HELP, // T202821
 		'CAT' => NS_CATEGORY, // T202821
+		'学部' => 100, // T201675
+		'學部' => 100, // T201675
+		'学院' => 102, // T201675
+		'學院' => 102, // T201675
+		'系' => 102, // T201675
+		'学科' => 104, // T201675
+		'學科' => 104, // T201675
 	],
 	'+zhwikivoyage' => [
 		'维基导游' => NS_PROJECT, // T62122
@@ -6352,6 +6359,14 @@ $wgConf->settings = [
 		101 => 'Portal_talk',
 		118 => 'Draft', // T91223
 		119 => 'Draft_talk' // T91223
+	],
+	'zhwikiversity' => [
+		100 => 'Portal', // T201675
+		101 => 'Portal_talk', // T201675
+		102 => 'School', // T201675
+		103 => 'School_talk', // T201675
+		104 => 'Subject', // T201675
+		105 => 'Subject_talk', // T201675
 	],
 	'zh_classicalwiki' => [
 		100 => '門',
@@ -8055,7 +8070,7 @@ $wgConf->settings = [
 	'+frrwiki' => [ 102 => 1, 104 => 1, 106 => 1 ], // T40023
 	'+frwikisource' => [ 102 => 1, 112 => 1 ],
 	'+frwikiversity' => [ 104 => 1, 106 => 1, 108 => 1 ],
-	'+frwiktionary' => [ 100 => 1, 106 => 1, ], // T94698
+	'+frwiktionary' => [ 100 => 1, 106 => 1, 110 => 1, ], // T94698, T205198
 	'+hewikisource' => [ 100 => 1, 106 => 1, 108 => 1, 110 => 1, 112 => 1 ], // T176907
 	'+hewiktionary' => [ 14 => 1 ],
 	'+hrwikisource' => [ 100 => 1, 104 => 1 ],
@@ -8378,10 +8393,6 @@ $wgConf->settings = [
 		'edit' => false,
 	] ],
 
-	// Miscellaneous
-	'+arbcom_enwiki' => [
-		'bureaucrat' => [ 'disableaccount' => true ],
-	],
 	'+amwikimedia' => [
 		'sysop' => [ 'translationadmin' ],
 	],
@@ -8599,6 +8610,21 @@ $wgConf->settings = [
 			'abusefilter-log-detail' => true,
 			'abusefilter-view-private' => true, // T174357
 			'abusefilter-log-private' => true, // T174357
+		],
+		'engineer' => [ // T203000
+			'abusefilter-log-detail' => true,
+			'abusefilter-modify' => true,
+			'editinterface' => true,
+			'editsemiprotected' => true,
+			'editprotected' => true,
+			'suppressredirect' => true,
+			'managechangetags' => true,
+			'deletechangetags' => true,
+			'editcontentmodel' => true,
+			'import' => true,
+			'move-subpages' => true,
+			'mergehistory' => true,
+			'apihighlimits' => true,
 		],
 		'rollbacker' => [ 'rollback' => true, ], // T126931
 		'patroller' => [ // T126931
@@ -10080,7 +10106,6 @@ $wgConf->settings = [
 
 	// due to mass vandalism complaint, 2006-04-11
 	'zhwiki' => [
-		// '*' => array( 'createpage' => false ),  # re-enabled createpage priv according to T27142, then redisabled *sigh*, then reenabled \o/
 		'rollbacker' => [
 			'rollback' => true, // T18988
 			'abusefilter-log-private' => true, // T39679
@@ -10174,7 +10199,6 @@ $wgConf->settings = [
 		'steward' => [
 			'noratelimit' => true,
 		],
-		// 'rollback' => array( 'rollback' => true, ),
 		'import' => [ 'importupload' => true, 'import' => true ],
 		'transwiki' => [ 'import' => true ],
 		'user' => [
@@ -10200,10 +10224,6 @@ $wgConf->settings = [
 			'torunblocked' => true,
 		],
 
-		# So that I can rename users with more than 6800 edits -- TS
-		# Removed as obsolete -- 2009-03-05 BV
-		# 'developer' => array( 'siteadmin' => true ),
-
 		# To allow for inline log suppression -- 2009-01-29 -- BV
 		'oversight' => [
 			'deleterevision' => true,
@@ -10221,6 +10241,7 @@ $wgConf->settings = [
 'wmgPrivilegedGroups' => [
 	// Default should include any privileged group that's on more than a few wikis
 	'default' => [ 'botadmin', 'bureaucrat', 'checkuser', 'eliminator', 'interface-editor', 'sysop', 'oversight', 'interface-admin' ],
+	'+cswiki' => [ 'engineer' ],
 	'+enwiki' => [ 'abusefilter' ],
 	'+fawiki' => [ 'templateeditor' ],
 	'+fishbowl' => [ 'user' ],
@@ -10250,7 +10271,6 @@ $wgConf->settings = [
 	'+testwiki' => [
 		'bureaucrat' => [ 'researcher', 'centralnoticeadmin', 'flow-bot' ],
 		'sysop' => [ 'filemover', 'rollbacker', 'accountcreator', 'confirmed', 'templateeditor' ],
-		# 'user' => array( 'editor', 'reviewer' ),
 	],
 	'+test2wiki' => [
 		'bureaucrat' => [ 'flow-bot' ],
@@ -10347,7 +10367,7 @@ $wgConf->settings = [
 		],
 	],
 	'+cswiki' => [
-		'bureaucrat' => [ 'arbcom', 'autopatrolled' ], // T63418
+		'bureaucrat' => [ 'arbcom', 'autopatrolled', 'engineer' ], // T63418, T203000
 		'sysop' => [ 'rollbacker', 'patroller', 'accountcreator', 'confirmed' ], // T126931, T131684
 	],
 	'+cswikinews' => [
@@ -10920,6 +10940,7 @@ $wgConf->settings = [
 			'bureaucrat',
 			'confirmed',
 			'contentadmin',
+			'interface-admin',
 			'oathauth',
 			'oauthadmin',
 			'shell',
@@ -10988,7 +11009,6 @@ $wgConf->settings = [
 	'+testwiki' => [
 		'bureaucrat' => [ 'sysop', 'researcher', 'centralnoticeadmin', 'flow-bot' ],
 		'sysop' => [ 'filemover', 'rollbacker', 'accountcreator', 'confirmed', 'templateeditor' ],
-		# 'user' => array( 'editor', 'reviewer' ),
 	],
 	'+test2wiki' => [
 		'bureaucrat' => [ 'flow-bot', 'sysop' ], // T131037
@@ -11108,7 +11128,7 @@ $wgConf->settings = [
 		],
 	],
 	'+cswiki' => [
-		'bureaucrat' => [ 'arbcom', 'autopatrolled' ], // T63418
+		'bureaucrat' => [ 'arbcom', 'autopatrolled', 'engineer' ], // T63418, T203000
 		'sysop' => [ 'rollbacker', 'patroller', 'accountcreator', 'confirmed' ], // T126931, T131684, T163206
 	],
 	'+cswikinews' => [
@@ -11692,6 +11712,7 @@ $wgConf->settings = [
 			'confirmed',
 			'contentadmin',
 			'flood',
+			'interface-admin',
 			'oathauth',
 			'oauthadmin',
 			'shell',
@@ -11933,7 +11954,6 @@ $wgConf->settings = [
 	'jawikiversity' => [ 'betawikiversity', 'w', 'wikt', 'en', 'b', 'q', 's', 'n' ],
 	'jawiktionary' => [ 'w' ], // T10670
 	'kaawiki' => [ 'incubator' ],
-	// 'khmwiktionary' => array( 'en', 'fr', 'lm', 'th' ),
 	'kmwiki' => [ 'en', 'be', 'simple' ],
 	'knwiki' => [ 'en' ], // T37603
 	'knwikisource' => [ 'w', 'en', 'w:en' ], // T122955
@@ -12425,6 +12445,7 @@ $wgConf->settings = [
 	'enwikibooks' => false,
 	'fawikinews' => false, // T85380
 	'foundationwiki' => false,
+	'pflwiki' => false, // T205055
 	'rmwiki' => false,
 	'zhwiki' => false,
 ],
@@ -12494,6 +12515,7 @@ $wgConf->settings = [
 	'+viwikisource' => [ 102 ],
 	'+wikitech' => [ NS_HELP, 116 ], // Tools - T122865
 	'+zhwikisource' => [ 102, 114 ], // T66127
+	'+zhwikiversity' => [ 100, 102, 104 ], // T201675
 	'+dewikivoyage' => [ 104 ],
 	'+commonswiki' => [ 6 ], // T167077
 	'+testwikidatawiki' => [ 146 ], // So that Lexeme are indexed in the content indes (Cirrus)
@@ -13299,6 +13321,7 @@ $wgConf->settings = [
 	'incubatorwiki' => true,
 	'kkwiki' => true, // T149563
 	'knwiki' => true, // T172894
+	'knwikisource' => true, // T204405
 	'kowiki' => true,
 	'ladwiki' => true, // T32221
 	'lvwiki' => true,
@@ -13354,6 +13377,7 @@ $wgConf->settings = [
 	'incubatorwiki' => true,
 	'kkwiki' => true, // T149563
 	'knwiki' => true, // T172894
+	'knwikisource' => true, // T204405
 	'lvwiki' => true,
 	'maiwiki' => true, // T99488
 	'mlwiki' => true,
@@ -13797,7 +13821,6 @@ $wgConf->settings = [
 		'media.farsnews.com',               // Fars News Agency - T200872
 		'*.aucklandmuseum.com',             // Auckland Museum - T202680
 		'*.karbobala.com',                  // T201236
-		'www.mhs.ox.ac.uk',                 // University of Oxford museum - T201604
 		'yphc.ir',                          // Iranian website for amateur photographers - T201237
 	],
 ],
@@ -14230,6 +14253,7 @@ $wgConf->settings = [
 	'arwiki' => 'https://commons.wikimedia.org/wiki/Special:ImportFile',
 	'dewiki' => 'https://commons.wikimedia.org/wiki/Special:ImportFile',
 	'fawiki' => 'https://commons.wikimedia.org/wiki/Special:ImportFile',
+	'kowiki' => 'https://commons.wikimedia.org/wiki/Special:ImportFile',
 	'mediawikiwiki' => 'https://commons.wikimedia.org/wiki/Special:ImportFile',
 	'sourceswiki' => 'https://commons.wikimedia.org/wiki/Special:ImportFile', // T198594
 	'test2wiki' => 'https://test.wikipedia.org/wiki/Special:ImportFile',
@@ -14277,10 +14301,6 @@ $wgConf->settings = [
 'wgPopupsVirtualPageViews' => [
 	'default' => false,
 	'wikipedia' => true,
-],
-
-'wmgPopupsBetaFeature' => [
-	'default' => false,
 ],
 
 'wgPopupsStatsvSamplingRate' => [
@@ -15885,15 +15905,6 @@ $wgConf->settings = [
 	'ptwikibooks' => '//commons.wikimedia.org/wiki/Special:Upload/pt?uselang=pt',
 ],
 
-// DO NOT DISABLE WITHOUT CONTACTING LEGAL!
-// Installed by Andrew, 2011-04-26
-'wmgUseDisableAccount' => [
-	'default' => false,
-	'arbcom_enwiki' => true,
-	'checkuserwiki' => true,
-	'stewardwiki' => true,
-],
-
 // Whether to show "Publish" rather than "Save" on the edit page (and related circumstances)
 // This should be set to true for all public WMF wikis, and any changes should be discussed
 // with Contributors and Legal before they are done, due to the legal implications.
@@ -16314,6 +16325,11 @@ $wgConf->settings = [
 	'default' => false,
 	'arwiki' => true,
 	'kowiki' => true, // T172630
+],
+
+'wgMinervaABSamplingRate' => [
+	'default' => 0,
+	'lvwiki' => 1, // T204609
 ],
 
 'wgMinervaApplyKnownTemplateHacks' => [
@@ -17812,6 +17828,7 @@ $wgConf->settings = [
 'wgPageTriageDraftNamespaceId' => [
 	'default' => false,
 	'testwiki' => 118,
+	'enwiki' => 118, // T203184
 ],
 'wgPageTriageEnableOresFilters' => [
 	'default' => false,
@@ -17912,36 +17929,10 @@ $wgConf->settings = [
 ],
 'wmgUseEducationProgram' => [
 	'default' => false,
-	'arwiki' => true, // T59729
-	'cawiki' => true, // T73381
-	'cswiki' => true, // T56223
-	'dewikiversity' => true,
-	'elwiki' => true, // T58771
-	'enwiki' => true,
-	'enwikinews' => true, // T55984
-	'eswiki' => true, // T56826
-	'fawiki' => true,
-	'frwikisource' => true, // T105853
-	'hewiki' => true, // T50848
-	'hewiktionary' => true, // T89393
-	'itwikiversity' => true, // T162692
-	'lvwiki' => true, // T89898
-	'mkwiki' => true, // T50262
-	'nlwiki' => true, // T52574
-	'ptwiki' => true, // T54870
-	'ruwiki' => true, // T89588
-	'srwiki' => true, // T110619
-	'svwiki' => true, // T51009
-	'ukwiki' => true, // T66143
 ],
 
 'wmgEducationProgramDYKCat' => [
 	'default' => 'MyCourses Did You Know',
-	'cswiki' => 'Moje kurzy - Víte že?', // T56223
-	'eswiki' => 'Mis cursos ¿sabías que?', // T56826
-	'fawiki' => 'نکته روز ویکی‌پدیا',
-	'lvwiki' => 'Mani kursi — Vai tu zināji?', // T89898
-	'ptwiki' => '!Você Sabia sobre cursos', // T54870
 ],
 
 'wmgUseWikimediaShopLink' => [
@@ -19194,7 +19185,7 @@ $wgConf->settings = [
 	// Commons is special and has a 'file' index in addition to the regular ones.
 	// We're sharding 'file' like it is a content index because searching it is
 	// very very common. Increased to 15 because 7 generates giant 70Gb shards
-	'commonswiki' => [ 'content' => 1, 'general' => 8, 'file' => 15, 'titlesuggest' => 1 ],
+	'commonswiki' => [ 'content' => 1, 'general' => 8, 'file' => 21, 'titlesuggest' => 1 ],
 	'cswiki' => [ 'content' => 3, 'general' => 1, 'titlesuggest' => 1 ],
 	'dawiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ],
 	'dewiki' => [ 'content' => 7, 'general' => 8, 'titlesuggest' => 3 ],
@@ -19243,7 +19234,7 @@ $wgConf->settings = [
 	'trwiki' => [ 'content' => 2, 'general' => 2, 'titlesuggest' => 1 ],
 	'ukwiki' => [ 'content' => 7, 'general' => 2, 'titlesuggest' => 1 ],
 	'viwiki' => [ 'content' => 6, 'general' => 4, 'titlesuggest' => 1 ],
-	'wikidatawiki' => [ 'content' => 12, 'general' => 1 ],
+	'wikidatawiki' => [ 'content' => 21, 'general' => 1 ],
 	'warwiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ],
 	'zhwiki' => [ 'content' => 7, 'general' => 5, 'titlesuggest' => 2 ],
 	'zhwikisource' => [ 'content' => 5, 'general' => 1, 'titlesuggest' => 1 ],
@@ -19268,7 +19259,7 @@ $wgConf->settings = [
 	'default' => [],
 	'commonswiki' => [ 'file' => 3, 'general' => 2 ],
 	'dewiki' => [ 'content' => 1 ],
-	'wikidatawiki' => [ 'content' => 2 ],
+	'wikidatawiki' => [ 'content' => 3 ],
 	'enwiktionary' => [ 'content' => 1, 'general' => 1 ],
 	'enwiki' => [ 'content' => 1, 'general' => 2 ],
 	'eswiki' => [ 'content' => 1 ],
@@ -19756,14 +19747,14 @@ $wgConf->settings = [
 		'damaging' => [ 'enabled' => true ],
 		'goodfaith' => [ 'enabled' => true ],
 		'reverted' => [ 'enabled' => false ],
-		'wp10' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
+		'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
 	],
 	'enwiki' => [
 		'damaging' => [ 'enabled' => true, 'excludeBots' => true ],
 		'goodfaith' => [ 'enabled' => true, 'excludeBots' => true ],
 		'reverted' => [ 'enabled' => false ],
-		'wp10' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'cleanParent' => true ],
+		'articlequality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true, 'cleanParent' => true ],
 	],
 	'arwiki' => [
@@ -19771,7 +19762,7 @@ $wgConf->settings = [
 		// goodfaith is disabled for arwiki (T192498, T193905)
 		'goodfaith' => [ 'enabled' => false ],
 		'reverted' => [ 'enabled' => false ],
-		'wp10' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
+		'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
 	],
 	'srwiki' => [
@@ -19779,32 +19770,30 @@ $wgConf->settings = [
 		// goodfaith is disabled for srwiki (T197012)
 		'goodfaith' => [ 'enabled' => false ],
 		'reverted' => [ 'enabled' => false ],
-		'wp10' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
+		'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
 	],
 	'euwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
 		'reverted' => [ 'enabled' => false ],
-		'wp10' => [ 'enabled' => true, 'namespaces' => [ 0 ], 'cleanParent' => true ],
+		'articlequality' => [ 'enabled' => true, 'namespaces' => [ 0 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
 	],
 	'testwiki' => [
 		'damaging' => [ 'enabled' => true, 'excludeBots' => true ],
 		'goodfaith' => [ 'enabled' => true, 'excludeBots' => true ],
 		'reverted' => [ 'enabled' => false ],
-		// wp10 and draftquality are disabled until ORES is configured to allow these
-		// for testwiki. See T198997
-		'wp10' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'cleanParent' => true ],
+		'articlequality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true, 'cleanParent' => true ],
 	],
 	'test2wiki' => [
 		'damaging' => [ 'enabled' => true, 'excludeBots' => true ],
 		'goodfaith' => [ 'enabled' => true, 'excludeBots' => true ],
 		'reverted' => [ 'enabled' => false ],
-		// wp10 and draftquality are disabled until ORES is configured to allow these
+		// articlequality and draftquality are disabled until ORES is configured to allow these
 		// for test2wiki. See T198997
-		'wp10' => [ 'enabled' => false, 'namespaces' => [ 0, 118 ], 'cleanParent' => true ],
+		'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0, 118 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true, 'cleanParent' => true ],
 	],
 ],
@@ -20138,17 +20127,6 @@ $wgConf->settings = [
 ],
 ### End (roughly) of general extensions ########################
 
-'wgUseTidy' => [
-	'default' => true,
-	'foundationwiki' => false,
-	'collabwiki' => false,
-	'donatewiki' => false,
-],
-
-'wgTidyConfig' => [
-	'default' => [ 'driver' => 'RemexHtml' ],
-],
-
 // Cache ResourceLoader modules in localStorage
 'wgResourceLoaderStorageEnabled' => [
 	'default' => true,
@@ -20285,6 +20263,7 @@ $wgConf->settings = [
 // Thumbnail prerendering at upload time
 'wgUploadThumbnailRenderMap' => [
 	'default' => [ 320, 640, 800, 1024, 1280, 1920 ],
+	'private' => [],
 ],
 
 'wgUploadThumbnailRenderMethod' => [
@@ -20377,6 +20356,7 @@ $wgConf->settings = [
 	'svwikivoyage' => false,
 	'cawiki' => true, // T114392
 	'euwiki' => true, // T171763
+	'glwiki' => true, // T199713
 ],
 
 'wgWPBSkinBlacklist' => [
@@ -20530,6 +20510,14 @@ $wgConf->settings = [
 	'default' => false,
 ],
 
+'wgWMECitationUsagePopulationSize' => [
+	'enwiki' => 1  // 100% — T191086
+],
+
+'wgWMECitationUsagePageLoadPopulationSize' => [
+	'enwiki' => 3  // 33.3% — T191086
+],
+
 'wgWMEReadingDepthEnabled' => [
 	'default' => false,
 	'wikipedia' => true,
@@ -20542,7 +20530,7 @@ $wgConf->settings = [
 	// Operations and/or Analytics teams. At the very least, be mindful of the
 	// current rate of ReadingDepth events being logged:
 	// https://grafana.wikimedia.org/dashboard/db/eventlogging-schema?var-schema=ReadingDepth
-	'wikipedia' => 0.001,
+	'wikipedia' => 0.1, // T205176
 ],
 
 'wgWMEPrintEnabled' => [
@@ -20750,8 +20738,16 @@ $wgConf->settings = [
 	'default' => true, // T199800
 ],
 
+'wgActorTableSchemaMigrationStage' => [
+	'default' => MIGRATION_OLD,
+],
+
 'wgCommentTableSchemaMigrationStage' => [
 	'default' => MIGRATION_WRITE_BOTH,
+	'testwiki' => MIGRATION_WRITE_NEW,
+	'test2wiki' => MIGRATION_WRITE_NEW,
+	'testwikidatawiki' => MIGRATION_WRITE_NEW,
+	'mediawikiwiki' => MIGRATION_WRITE_NEW,
 ],
 
 'wgChangeTagsSchemaMigrationStage' => [
@@ -20764,6 +20760,7 @@ $wgConf->settings = [
 
 'wgMultiContentRevisionSchemaMigrationStage' => [
 	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	'testwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
 ],
 'wmgUseReadingLists' => [
 	'default' => true,

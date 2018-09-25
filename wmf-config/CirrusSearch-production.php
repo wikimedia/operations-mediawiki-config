@@ -55,8 +55,6 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 
 $wgCirrusSearchConnectionAttempts = 3;
 
-$wgCirrusSearchInterwikiCacheTime = 60;
-
 if ( $wgDBname == 'enwiki' ) {
 	$wgCirrusSearchPoolCounterKey .= '_enwiki';
 }
