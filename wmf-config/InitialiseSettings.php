@@ -5166,7 +5166,6 @@ $wgConf->settings = [
 'wgRawHtml' => [
 	'default' => false,
 	'donatewiki' => true,
-	'foundationwiki' => true,
 	'internalwiki' => true,
 	'collabwiki' => true, // T31269
 ],
