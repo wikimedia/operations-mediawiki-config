@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2156726b_078851bf",
+        "filename": "wmf-config/mobile-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-09-26T19:43:19Z",
+      "side": 1,
+      "message": "I would assume this already happens by default, and should not need ot be repeated. I\u0027m not sure what happens if a skin is loaded twice.",
+      "range": {
+        "startLine": 14,
+        "startChar": 1,
+        "endLine": 18,
+        "endChar": 2
+      },
+      "revId": "8c33427d6ca97efa7d69f0ff27a0e0673bd91c9b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
