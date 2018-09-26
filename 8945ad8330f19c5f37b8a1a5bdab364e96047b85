@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "35e5796a_48611b33",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 14277,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-26T20:06:53Z",
+      "side": 1,
+      "message": "This turns the feature on for ALL wikivoyages.\n\nOnly English Wikivoyage wants it at current time so that should be enwikivoyage\n\nAlso we\u0027ll need to set PopupsOptInDefaultState, PopupsGateway and PopupsOptInStateForNewAccounts per phabricator ticket.",
+      "revId": "8945ad8330f19c5f37b8a1a5bdab364e96047b85",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
