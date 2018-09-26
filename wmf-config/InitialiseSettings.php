@@ -15883,7 +15883,7 @@ $wgConf->settings = [
 'wgCacheEpoch' => [
 	'default' => '20130601000000',
 	'wikidatawiki' => '20170724130500',
-	'testwikidatawiki' => '20170724130500',
+	'testwikidatawiki' => '20180919200000',
 ],
 'wgThumbnailEpoch' => [
 	'default' => '20130601000000',
