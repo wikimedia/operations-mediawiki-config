@@ -14274,6 +14274,7 @@ $wgConf->settings = [
 	'default' => false,
 	'sewikimedia' => true, // T68374
 	'wikipedia' => true,
+	'enwikivoyage' => true, // T203981
 ],
 
 'wgPopupsPageBlacklist' => [
@@ -14317,13 +14318,22 @@ $wgConf->settings = [
 'wgPopupsGateway' => [
 	'default' => 'mwApiPlain',
 
+	// Make Page Previews use RESTBase HTML for enwikivoyage
+	'enwikivoyage' => 'restbaseHTML',
+
 	// Make Page Previews use RESTBase HTML for all wikipedias
 	'wikipedia' => 'restbaseHTML',
 ],
 
 // T197719 Enable PagePreviews for all newly created accounts
 'wgPopupsOptInStateForNewAccounts' => [
-	'default' => '1'
+	'default' => '1',
+	'enwikivoyage' => '1',
+],
+
+'wgPopupsOptInDefaultState' => [
+	'default' => '0',
+	'enwikivoyage' => '1',
 ],
 
 // T160081 (and others): Make sure that Page Previews can detect the many, many
