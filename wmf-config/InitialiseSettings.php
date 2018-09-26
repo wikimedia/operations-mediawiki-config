@@ -14274,6 +14274,7 @@ $wgConf->settings = [
 	'default' => false,
 	'sewikimedia' => true, // T68374
 	'wikipedia' => true,
+	'wikivoyage' => true, // T203981
 ],
 
 'wgPopupsPageBlacklist' => [
