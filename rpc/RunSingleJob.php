@@ -69,6 +69,14 @@ try {
 		http_response_code( 200 );
 	} else {
 		if ( $response['readonly'] ) {
+			// TODO - T204154
+			// if we detect that the DB is in read-only mode, we delay the return of the
+			// response by at most 45 seconds in order to minimise the number of requests
+			// made by change-prop; this will keep the request rate at a reasonably low
+			// level without causing request time outs
+			// NOTE: this is currently only a work-around, a proper solution is needed
+			sleep( rand( 40, 45 ) );
+			// END TODO
 			header( 'X-Readonly: true' );
 		}
 		http_response_code( 500 );
