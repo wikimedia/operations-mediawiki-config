@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "81a20fe2_bc26bc1d",
+        "filename": "rpc/RunSingleJob.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 2681
+      },
+      "writtenOn": "2018-09-26T15:50:36Z",
+      "side": 1,
+      "message": "I think it\u0027s always better to randomize the delays a bit. That way we minimize probability for spiky behavior.",
+      "revId": "efb5f9124155f49c9a14639753c67e6b2945dbf8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
