@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "51a06dc3_8a1a9df7",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 482,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-09-27T09:33:55Z",
+      "side": 1,
+      "message": "This is good. Eqiad is now passive but normally if you add a host to a service, try to remove a bit of weight from the main traffic.\nSo instead of giving it 500, give it maybe 300.",
+      "range": {
+        "startLine": 482,
+        "startChar": 3,
+        "endLine": 482,
+        "endChar": 16
+      },
+      "revId": "ae035e03312b9a757a640c62ddc8d898a780839f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
