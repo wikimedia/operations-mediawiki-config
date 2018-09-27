@@ -5530,7 +5530,9 @@ $wgConf->settings = [
 		'DBConnection' => 'error',
 		'DBQuery' => 'warning',
 		'LoginNotify' => 'debug',
-		'Wikibase.NewItemIdFormatter' => 'debug', // WMDE & Addshore T201832
+		// 'Wikibase.NewItemIdFormatter' => 'debug', // WMDE & Addshore T201832
+		// Disabled due to irresponsible use of CRITICAL. – T204791
+
 		'WMDE' => 'debug', // WMDE & Addshore T174948 & T191500
 		'AbuseFilterSlow' => 'debug',
 	],
