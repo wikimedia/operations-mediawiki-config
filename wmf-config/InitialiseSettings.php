@@ -15886,6 +15886,8 @@ $wgConf->settings = [
 // General cache epochs
 'wgCacheEpoch' => [
 	'default' => '20130601000000',
+	// If you want to purge parser cache entries for wikidata consider a RejectParserCacheValue
+	// in CommonSettings.php instead.
 	'wikidatawiki' => '20170724130500',
 	'testwikidatawiki' => '20180919200000',
 ],
