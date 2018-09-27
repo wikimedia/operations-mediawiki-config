@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "21d0db52_3718297d",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 479,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-09-27T09:25:11Z",
+      "side": 1,
+      "message": "You are leaving service without any server, it is a good practice to add one (or more, depending on the load) to each section.\nMediawiki, in theory, would failover to another host if there is not one, there but better to specify one.",
+      "revId": "ac2dfdff60d9d793c3b4fe00c97ac4509cec6e74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
