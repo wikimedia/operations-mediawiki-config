@@ -20149,21 +20149,6 @@ $wgConf->settings = [
 	'default' => [],
 	'wikidatawiki' => [ 0 => true, 120 => true ], // T139660
 ],
-'wgEnableRcFiltersBetaFeature' => [
-	'default' => true,
-],
-'wgStructuredChangeFiltersOnWatchlist' => [
-	'default' => true,
-],
-'wgStructuredChangeFiltersShowPreference' => [
-	'default' => true,
-],
-'wgStructuredChangeFiltersShowWatchlistPreference' => [
-	'default' => true,
-],
-'wgEnableRcFiltersBetaFeature' => [
-	'default' => false,
-],
 ### End (roughly) of general extensions ########################
 
 // Cache ResourceLoader modules in localStorage
