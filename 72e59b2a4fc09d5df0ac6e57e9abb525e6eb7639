@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a86fddbd_a03a13bb",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 14335,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-09-27T14:30:45Z",
+      "side": 1,
+      "message": "You\u0027ll need to set a default too!",
+      "revId": "72e59b2a4fc09d5df0ac6e57e9abb525e6eb7639",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
