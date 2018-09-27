@@ -7611,9 +7611,6 @@ $wgConf->settings = [
 		'mw-irc-url',
 		'mw-mailing lists-url',
 	],
-	'metawiki' => [
-		'mainpage', // T18701
-	],
 	'mlwiki' => [
 		'licenses', // T13538
 	],
