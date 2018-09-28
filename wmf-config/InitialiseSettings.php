@@ -931,6 +931,7 @@ $wgConf->settings = [
 	'uzwiktionary' => '/static/images/project-logos/uzwiktionary.png',  // T45240
 	'viwiktionary' => '/static/images/project-logos/viwiktionary.png',  // T45240
 	'vowiktionary' => '/static/images/project-logos/vowiktionary.png',
+	'yuewiktionary' => '/static/images/project-logos/yuewiktionary.png',
 	'wawiktionary' => '/static/images/project-logos/wawiktionary.png',  // T45240
 	'wowiktionary' => '/static/images/project-logos/wowiktionary.png',
 	'yiwiktionary' => '/static/images/project-logos/yiwiktionary.png',
@@ -1622,6 +1623,7 @@ $wgConf->settings = [
 	'urwiktionary' => [ '1.5x' => '/static/images/project-logos/urwiktionary-1.5x.png', '2x' => '/static/images/project-logos/urwiktionary-2x.png' ], // T187209
 	'uzwiktionary' => [ '1.5x' => '/static/images/project-logos/uzwiktionary-1.5x.png', '2x' => '/static/images/project-logos/uzwiktionary-2x.png' ], // T150618
 	'viwiktionary' => [ '1.5x' => '/static/images/project-logos/viwiktionary-1.5x.png', '2x' => '/static/images/project-logos/viwiktionary-2x.png' ],
+	'yuewiktionary' => [ '1.5x' => '/static/images/project-logos/yuewiktionary-1.5x.png', '2x' => '/static/images/project-logos/yuewiktionary-2x.png' ],
 	'wawiktionary' => [ '1.5x' => '/static/images/project-logos/wawiktionary-1.5x.png', '2x' => '/static/images/project-logos/wawiktionary-2x.png' ], // T150618
 
 	# Wikiquote
@@ -2591,6 +2593,7 @@ $wgConf->settings = [
 	'vowiki' => 'Vükiped',
 	'vowikibooks' => 'Vükibuks',
 	'vowiktionary' => 'Vükivödabuk',
+	'yuewiktionary' => '維基辭典',
 	'wawiktionary' => 'Wiccionaire', // T181782
 	'wbwikimedia' => 'West Bengal Wikimedians', // T162510
 	'wg_enwiki' => 'Wikipedia Working Group',
@@ -3104,6 +3107,7 @@ $wgConf->settings = [
 	'yiwiki' => 'װיקיפּעדיע',
 	'yiwikisource' => 'װיקיביבליאָטעק',
 	'yiwiktionary' => 'װיקיװערטערבוך',
+	'yuewiktionary' => '維基辭典',
 	'zerowiki' => 'Project',
 	'zh_min_nanwikisource' => 'Wiki_Tô·-su-kóan',
 	'zh_classicalwiki' => '維基大典',
