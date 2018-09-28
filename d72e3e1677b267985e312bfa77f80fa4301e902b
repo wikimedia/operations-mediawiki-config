@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5eb95944_f35017ff",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 6324
+      },
+      "writtenOn": "2018-09-28T08:52:54Z",
+      "side": 1,
+      "message": "This will be one of the backup sources. As the backup runs it will affect the hosts behaviour, so it\u0027s better if there\u0027s no traffic on that machine.",
+      "range": {
+        "startLine": 161,
+        "startChar": 0,
+        "endLine": 161,
+        "endChar": 64
+      },
+      "revId": "d72e3e1677b267985e312bfa77f80fa4301e902b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "52a99901_9d752d18",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 6324
+      },
+      "writtenOn": "2018-09-28T08:52:54Z",
+      "side": 1,
+      "message": "This will be the other backup source (for s8) the same applies here as db1086",
+      "revId": "d72e3e1677b267985e312bfa77f80fa4301e902b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f839483d_2663889e",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 6324
+      },
+      "writtenOn": "2018-09-28T08:52:54Z",
+      "side": 1,
+      "message": "this is a leftover comment (my bad) b/c when db1104 was depooled to be the clone source for db1092 it was out to the api pool temporary, but I forgot to remove this remark. Now this is fixed too.",
+      "revId": "d72e3e1677b267985e312bfa77f80fa4301e902b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
