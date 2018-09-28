@@ -399,6 +399,7 @@ $wgConf->settings = [
 	'kshwiki' => 'Europe/Berlin',
 	'lezwiki' => 'Europe/Moscow',
 	'liwiki' => 'Europe/Berlin',
+	'liwikinews' => 'Europe/Amsterdam',
 	'ltgwiki' => 'Europe/Riga',
 	'ltwiki' => 'Europe/Vilnius',
 	'lmowiki' => 'Europe/Rome',
@@ -1722,6 +1723,7 @@ $wgConf->settings = [
 	'viwikivoyage' => [ '1.5x' => '/static/images/project-logos/viwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/viwikivoyage-2x.png' ], // T151570
 
 	# Wikinews
+	'liwikinews' => [ '1.5x' => '/static/images/project-logos/liwikinews-1.5x.png', '2x' => '/static/images/project-logos/liwikinews-2x.png' ],
 	'srwikinews' => [ '1.5x' => '/static/images/project-logos/srwikinews-1.5x.png', '2x' => '/static/images/project-logos/srwikinews-2x.png' ], // T172255
 
 	# Chapter wikis
@@ -2405,6 +2407,7 @@ $wgConf->settings = [
 	'lezwiki' => 'Википедия',
 	'lfnwiki' => 'Vicipedia',
 	'liwikibooks' => 'Wikibeuk',
+	'liwikinews' => 'Wikinuujs',
 	'liwikisource' => 'Wikibrónne',
 	'loginwiki' => 'Wikimedia Login Wiki',
 	'lowiki' => 'ວິກິພີເດຍ',
@@ -2916,6 +2919,7 @@ $wgConf->settings = [
 	'lezwiki' => 'Википедия',
 	'lfnwiki' => 'Vicipedia', // T183561
 	'liwikibooks' => 'Wikibeuk',
+	'liwikinews' => 'Wikinuujs',
 	'liwikisource' => 'Wikibrónne',
 	'loginwiki' => 'Project',
 	'lowiki' => 'ວິກິພີເດຍ',
