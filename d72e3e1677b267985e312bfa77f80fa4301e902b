@@ -77,6 +77,24 @@
     },
     {
       "key": {
+        "uuid": "c9182023_cdf4d600",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 6324
+      },
+      "writtenOn": "2018-09-28T09:05:39Z",
+      "side": 1,
+      "message": "ah, yes",
+      "parentUuid": "c20d05f8_0bbd7849",
+      "revId": "d72e3e1677b267985e312bfa77f80fa4301e902b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "16d4338c_c588980f",
         "filename": "wmf-config/db-eqiad.php",
         "patchSetId": 2
@@ -88,6 +106,30 @@
       "writtenOn": "2018-09-28T08:56:02Z",
       "side": 1,
       "message": "You can see how I added it here now.",
+      "range": {
+        "startLine": 482,
+        "startChar": 4,
+        "endLine": 482,
+        "endChar": 16
+      },
+      "revId": "d72e3e1677b267985e312bfa77f80fa4301e902b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9285886b_204864b9",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 482,
+      "author": {
+        "id": 6324
+      },
+      "writtenOn": "2018-09-28T09:05:39Z",
+      "side": 1,
+      "message": "true dat!",
+      "parentUuid": "16d4338c_c588980f",
       "range": {
         "startLine": 482,
         "startChar": 4,
