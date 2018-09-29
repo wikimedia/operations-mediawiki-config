@@ -275,6 +275,7 @@ $wgConf->settings = [
 'wgLocaltimezone' => [
 	'default' => 'UTC',
 
+	'acewiki' => 'Asia/Jakarta', // T205693
 	'alswiki' => 'Europe/Berlin',
 	'amwikimedia' => 'Asia/Yerevan', // T176042
 	'arbcom_cswiki' => 'Europe/Prague', // T151731
