@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b8630330_39d66a69",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 5612,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2018-09-29T13:47:57Z",
+      "side": 1,
+      "message": "Seems there\u0027s a space between the two words. No spaces are allowed in namespace\u0027s name, all spaces should be replaced with an underscore (_). See other namespaces above, especially the talk namespaces.",
+      "range": {
+        "startLine": 5612,
+        "startChar": 10,
+        "endLine": 5612,
+        "endChar": 25
+      },
+      "revId": "67ada40861fbabc3d60085ce552c8c0bdee8724c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
