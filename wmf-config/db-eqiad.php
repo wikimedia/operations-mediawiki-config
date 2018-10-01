@@ -150,7 +150,7 @@ $wgLBFactoryConf = [
 		'db1061' => 0,      # C3 2.8TB 128GB, master
 		'db1085' => 300,    # B3 3.6TB 512GB, api # master for sanitarium db1125
 		'db1088' => 500,    # C2 3.6TB 512GB
-		'db1093' => 300,    # D2 3.6TB 512GB, api # candidate master
+		# 'db1093' => 300,    # D2 3.6TB 512GB, api # candidate master
 		'db1096:3316' => 1, # A6 3.6TB 512GB # rc, log: s5 and s6
 		'db1098:3316' => 1, # B5 3.6TB 512GB # rc, log: s6 and s7
 		'db1113:3316' => 1, # B8 3.6TB 512GB # vslow, dump: s5 and s6
@@ -673,7 +673,7 @@ $wgLBFactoryConf = [
 	# ExtensionStore shard1
 	'extension1' => [
 		'10.64.0.108' => 0, # db1069, A1 2.8TB 160GB # master
-		'10.64.48.19' => 1, # db1064, D1 2.8TB 160GB
+		# '10.64.48.19' => 1, # db1064, D1 2.8TB 160GB
 		'10.64.32.11' => 2, # db1120, C5 3.6TB 512GB
 	],
 ],
