@@ -16345,6 +16345,10 @@ $wgConf->settings = [
 'wgMinervaABSamplingRate' => [
 	'default' => 0,
 	'lvwiki' => 1, // T204609
+	'jawiki' => 0.05, // T200792
+	'ruwiki' => 0.05, // T200792
+	'fawiki' => 0.05, // T200792
+	'enwiki' => 0.05, // T200792
 ],
 
 'wgMinervaApplyKnownTemplateHacks' => [
