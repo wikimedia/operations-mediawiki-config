@@ -5426,6 +5426,7 @@ $wgConf->settings = [
 		'authentication' => 'info',
 		'autoloader' => 'debug',  // ori, for T166759 (2017-06-02)
 		'badpass' => 'debug',
+		'badpass-priv' => 'debug',
 		'BounceHandler' => 'debug',
 		'Bug58676' => 'debug', # Invalid message parameter
 		'captcha' => 'debug',
@@ -5469,6 +5470,8 @@ $wgConf->settings = [
 		'generated-pp-node-count' => 'debug',
 		'GettingStarted' => 'debug',
 		'GlobalTitleFail' => [ 'sample' => 10000 ], // chad hates $wgTitle
+		'goodpass' => 'debug',
+		'goodpass-priv' => 'debug',
 		'headers-sent' => 'debug',
 		'HttpError' => 'error', // Only log http errors with a 500+ code T85795
 		'JobExecutor' => [ 'logstash' => 'warning' ],
