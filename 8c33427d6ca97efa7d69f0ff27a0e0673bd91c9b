@@ -93,6 +93,30 @@
       "revId": "8c33427d6ca97efa7d69f0ff27a0e0673bd91c9b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b3b3849a_65e3da1b",
+        "filename": "wmf-config/mobile-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-10-02T16:54:32Z",
+      "side": 1,
+      "message": "Yep, that\u0027s fair. I reviewed it on its own, but looks like this is a pre-existing issue. Will file separately with Reading.",
+      "parentUuid": "9fe0f2b1_6fd3e35d",
+      "range": {
+        "startLine": 20,
+        "startChar": 1,
+        "endLine": 20,
+        "endChar": 21
+      },
+      "revId": "8c33427d6ca97efa7d69f0ff27a0e0673bd91c9b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
