@@ -16368,9 +16368,9 @@ $wgConf->settings = [
 'wgMinervaABSamplingRate' => [
 	'default' => 0,
 	'lvwiki' => 1, // T204609
-	'jawiki' => 0.2, // T200792
-	'ruwiki' => 0.2, // T200792
-	'fawiki' => 0.2, // T200792
+	'jawiki' => 1, // T200792
+	'ruwiki' => 1, // T200792
+	'fawiki' => 1, // T200792
 	'enwiki' => 0.2, // T200792
 ],
 
