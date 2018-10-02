@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d652750c_2d9e20d2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2018-10-02T08:12:58Z",
+      "side": 1,
+      "message": "Maybe mention Minerva in the commit message?",
+      "revId": "6617c05b2fdb8f5cf4e979367aafad4d7ec274c5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
