@@ -35,6 +35,7 @@
 #       `-- (main stuff in CommonSettings.php)
 #
 
+use MediaWiki\Auth\AuthenticationResponse;
 use MediaWiki\Logger\LoggerFactory;
 
 # Godforsaken hack to work around problems with the reverse proxy caching changes...
@@ -1702,26 +1703,36 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function ( $response, $user, $
 		$user = User::newFromName( $username );
 		$guessed = true;
 	}
-	if ( $user && $response->status === \MediaWiki\Auth\AuthenticationResponse::FAIL ) {
-		global $wgRequest;
-		$headers = function_exists( 'apache_request_headers' ) ? apache_request_headers() : [];
-
-		$privGroups = wfGetPrivilegedGroups( $username, $user );
-		$logger = LoggerFactory::getInstance( 'badpass' );
-		$logger->info( 'Login failed for {priv} {name} from {ip} - {xff} - {ua} - {geocookie}: {messagestr}', [
-			'successful' => false,
-			'groups' => implode( ', ', $privGroups ),
-			'priv' => count( $privGroups ) ? 'elevated' : 'normal',
-			'name' => $user->getName(),
-			'ip' => $wgRequest->getIP(),
-			'xff' => @$headers['X-Forwarded-For'],
-			'ua' => @$headers['User-Agent'],
-			'guessed' => $guessed,
-			'msgname' => $response->message->getKey(),
-			'messagestr' => $response->message->inLanguage( 'en' )->text(),
-			'geocookie' => $wgRequest->getCookie( 'GeoIP', '' ),
-		] );
+	if ( !$user || !in_array( $response->status,
+		[ AuthenticationResponse::PASS, AuthenticationResponse::FAIL ], true )
+	) {
+		return;
 	}
+	$successful = $response->status === AuthenticationResponse::PASS;
+	$privGroups = wfGetPrivilegedGroups( $username, $user );
+	if ( !$successful && !$privGroups ) {
+		// already handled via auth logging in core
+		return;
+	}
+
+	global $wgRequest;
+	$headers = function_exists( 'apache_request_headers' ) ? apache_request_headers() : [];
+
+	$logger = LoggerFactory::getInstance( $successful ? 'goodpass' : 'badpass-priv' );
+	$verb = $successful ? 'succeeded' : 'failed';
+	$logger->info( "Login $verb for {priv} {name} from {ip} - {xff} - {ua} - {geocookie}: {messagestr}", [
+		'successful' => $successful,
+		'groups' => implode( ', ', $privGroups ),
+		'priv' => count( $privGroups ) ? 'elevated' : 'normal',
+		'name' => $user->getName(),
+		'ip' => $wgRequest->getIP(),
+		'xff' => @$headers['X-Forwarded-For'],
+		'ua' => @$headers['User-Agent'],
+		'guessed' => $guessed,
+		'msgname' => $response->message ? $response->message->getKey() : '-',
+		'messagestr' => $response->message ? $response->message->inLanguage( 'en' )->text() : '',
+		'geocookie' => $wgRequest->getCookie( 'GeoIP', '' ),
+	] );
 };
 // T150554 log successful attempts too
 $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function ( $response, $user, $username ) {
