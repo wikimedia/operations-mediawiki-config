@@ -51,8 +51,13 @@ $wgLBFactoryConf = [
 	# s4: commons
 	'commonswiki'  => 's4',
 
-	# s5: dewiki
+	# s5: large wikis
+	'cebwiki'      => 's5',
 	'dewiki'       => 's5',
+	'enwikivoyage' => 's5',
+	'mgwiktionary' => 's5',
+	'shwiki'       => 's5',
+	'srwiki'       => 's5',
 
 	# s6: large wikis
 	'frwiki'       => 's6',
