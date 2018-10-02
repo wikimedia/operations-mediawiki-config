@@ -5756,7 +5756,7 @@ $wgConf->settings = [
 		102 => 'আড্ডা', // Meetup - T195700
 		103 => 'আড্ডা_আলোচনা', // Meetup talk - T195700
 		104 => 'ফটোওয়াক', // Photowalk - T205747
-		105 => 'ফটোওয়াক_আলোচনা', // Photowalk Talk - T205747
+		105 => 'ফটোওয়াক আলোচনা', // Photowalk Talk - T205747
 	],
 	'boardwiki' => [
 		100 => 'Resolution',
