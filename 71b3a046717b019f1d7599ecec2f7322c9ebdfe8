@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2fabfe76_e21d78eb",
+        "filename": "wmf-config/mobile-labs.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-10-02T16:56:26Z",
+      "side": 1,
+      "message": "I assume this is here for the same reason previous patch added the wfLoadExtension() call. But given our convention of only placing the minimal overrides in -labs.php needed that vary from prod, might make sense to remove this. That way if/when the header changes, we don\u0027t forget Beta\u0027s config, which is something that bit us a number of times in the past.\n\nIf this relates to the below though, then it might be helpful to keep together, but that doesn\u0027t seem to be the case. Either way, good to go whenever you feel like deploying it with or without this line.",
+      "range": {
+        "startLine": 12,
+        "startChar": 1,
+        "endLine": 12,
+        "endChar": 35
+      },
+      "revId": "71b3a046717b019f1d7599ecec2f7322c9ebdfe8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
