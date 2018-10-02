@@ -19780,8 +19780,8 @@ $wgConf->settings = [
 		'damaging' => [ 'enabled' => true, 'excludeBots' => true ],
 		'goodfaith' => [ 'enabled' => true, 'excludeBots' => true ],
 		'reverted' => [ 'enabled' => false ],
-		'articlequality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'cleanParent' => true ],
-		'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true, 'cleanParent' => true ],
+		'articlequality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'cleanParent' => true, 'keepForever' => true, ],
+		'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true, 'cleanParent' => true, 'keepForever' => true, ],
 	],
 	'arwiki' => [
 		'damaging' => [ 'enabled' => true ],
@@ -19810,8 +19810,8 @@ $wgConf->settings = [
 		'damaging' => [ 'enabled' => true, 'excludeBots' => true ],
 		'goodfaith' => [ 'enabled' => true, 'excludeBots' => true ],
 		'reverted' => [ 'enabled' => false ],
-		'articlequality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'cleanParent' => true ],
-		'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true, 'cleanParent' => true ],
+		'articlequality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'cleanParent' => true, 'keepForever' => true, ],
+		'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true, 'cleanParent' => true, 'keepForever' => true, ],
 	],
 	'test2wiki' => [
 		'damaging' => [ 'enabled' => true, 'excludeBots' => true ],
