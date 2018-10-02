@@ -22,6 +22,30 @@
       "revId": "71b3a046717b019f1d7599ecec2f7322c9ebdfe8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0c19f350_0bdf6968",
+        "filename": "wmf-config/mobile-labs.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 5462
+      },
+      "writtenOn": "2018-10-02T16:58:59Z",
+      "side": 1,
+      "message": "Good point.  Done.",
+      "parentUuid": "2fabfe76_e21d78eb",
+      "range": {
+        "startLine": 12,
+        "startChar": 1,
+        "endLine": 12,
+        "endChar": 35
+      },
+      "revId": "71b3a046717b019f1d7599ecec2f7322c9ebdfe8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
