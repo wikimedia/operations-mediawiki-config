@@ -111,7 +111,7 @@ $wgLBFactoryConf = [
 		'db2072'      => 300, # B6 3.6TB 512GB, # master for sanitarium db2094
 		'db2088:3311' => 100,  # D1 3.3TB 512GB # rc, log: s1 and s2
 		'db2085:3311' => 100,  # A5 3.3TB 512GB # rc, log: s1 and s8
-		'db2092'      => 300, # B8 3.6TB 512GB, api
+		# 'db2092'      => 300, # B8 3.6TB 512GB, api
 	],
 	's2' => [
 		'db2035'      => 50, # B1 2.9TB 160GB, master
@@ -286,7 +286,7 @@ $wgLBFactoryConf = [
 			'db2055' => 1,
 			'db2062' => 1,
 			'db2071' => 10,
-			'db2092' => 3,
+			# 'db2092' => 3,
 		],
 	],
 	's2' => [
