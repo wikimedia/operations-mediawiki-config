@@ -152,11 +152,18 @@ if ( extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
 				$stacks[$strStack] += 1;
 			}
 		}
-		$redis = new Redis();
-		if ( $redis->connect( 'deployment-fluorine02.deployment-prep.eqiad.wmflabs', 6379, 1.0 ) ) {
-			foreach ( $stacks as $stack => $count ) {
-				$redis->publish( 'xenon', "$stack $count" );
+
+		try {
+			$redis = new Redis();
+			if ( $redis->connect( 'deployment-fluorine02.deployment-prep.eqiad.wmflabs', 6379, 1.0 ) ) {
+				foreach ( $stacks as $stack => $count ) {
+					$redis->publish( 'xenon', "$stack $count" );
+				}
 			}
+		} catch ( Exception $e ) {
+			// Profiler instrumentation must be gentle.
+			// No exception may affect the overall request process.
+			trigger_error( get_class( $e ) . ': ' . $e->getMessage(), E_USER_NOTICE );
 		}
 	} );
 }
