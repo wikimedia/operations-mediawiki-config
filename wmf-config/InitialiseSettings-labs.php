@@ -275,6 +275,9 @@ function wmfLabsSettings() {
 			'default' => [
 			],
 		],
+		'wgMinervaErrorLogSamplingRate' => [
+			'default' => 1,
+		],
 
 		'wmgULSPosition' => [
 			# Beta-specific
