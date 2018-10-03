@@ -16,6 +16,24 @@
       "revId": "e6be038069a6d19a67828bf227d0e7e6f11a8855",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "994f6805_3dc09366",
+        "filename": "wmf-config/profiler.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-10-03T18:48:58Z",
+      "side": 1,
+      "message": "Yeah, that\u0027s the direction I\u0027m headed in, but not quite there yet.\n\nIt\u0027s been hardcoded for a while and difficult to migrate given this is before MW or Etcd are available. It\u0027s also not active-active currently (like statsd which we also hardcode).\n\nI think the next improvement in this area would be to move it to ProductionServices.php. I\u0027ve been working on making that stateless and easy to include (Ib079ec90ae515, I2bff4eff4e, I4db5d03f8af) without side-effects, including multiple times by unrelated code paths.",
+      "parentUuid": "bdedb424_cdae5fcd",
+      "revId": "e6be038069a6d19a67828bf227d0e7e6f11a8855",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
