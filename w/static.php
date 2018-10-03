@@ -30,7 +30,11 @@
  * - wmfstatic.notfound
  * - wmfstatic.mismatch
  */
-define( 'MW_NO_SESSION', 'warn' );
+
+// This endpoint is supposed to be independent of request cookies and other
+// details of the session. Enforce this constraint with respect to session use.
+define( 'MW_NO_SESSION', 1 );
+
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 require MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
 
