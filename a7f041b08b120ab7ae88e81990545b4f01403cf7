@@ -16,6 +16,24 @@
       "revId": "a7f041b08b120ab7ae88e81990545b4f01403cf7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c42391a1_38fc3e56",
+        "filename": "wmf-config/etcd.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-10-03T19:48:09Z",
+      "side": 1,
+      "message": "+1 for something simpler like\n\n elseif ( function_exists( \u0027apcu_fetch\u0027 ) {\n  // PHP 7 with php-apcu\n  $localCache \u003d new APCUBagOStuff;\n } else {\n  // HHVM\n  $localCache \u003d new APCBagOStuff;",
+      "parentUuid": "bc007fb3_9b04a32d",
+      "revId": "a7f041b08b120ab7ae88e81990545b4f01403cf7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
