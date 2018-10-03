@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bdedb424_cdae5fcd",
+        "filename": "wmf-config/profiler.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 5462
+      },
+      "writtenOn": "2018-10-03T18:42:43Z",
+      "side": 1,
+      "message": "Should this be a service host, instead of an actual hostname?  (Or, I guess, a config variable.)",
+      "revId": "e6be038069a6d19a67828bf227d0e7e6f11a8855",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
