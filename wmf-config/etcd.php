@@ -26,7 +26,8 @@ function wmfSetupEtcd() {
 	if ( PHP_SAPI === 'cli' ) {
 		$localCache = new HashBagOStuff;
 	} else {
-		$localCache = new APCBagOStuff;
+		$cacheId = \ObjectCache::detectLocalServerCache();
+		$localCache = \ObjectCache::newFromId( $cacheId );
 	}
 
 	# Use a single EtcdConfig object for both local and common paths
