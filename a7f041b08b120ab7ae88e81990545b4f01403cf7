@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bc007fb3_9b04a32d",
+        "filename": "wmf-config/etcd.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2018-10-03T19:24:15Z",
+      "side": 1,
+      "message": "Seems like it might be too early to do this. I\u0027d recommend using function_exists() with a simplified version of that code.",
+      "revId": "a7f041b08b120ab7ae88e81990545b4f01403cf7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
