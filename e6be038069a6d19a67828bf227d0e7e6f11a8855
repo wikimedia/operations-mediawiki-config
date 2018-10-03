@@ -34,6 +34,24 @@
       "revId": "e6be038069a6d19a67828bf227d0e7e6f11a8855",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7d9514ba_9ee42304",
+        "filename": "wmf-config/profiler.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 5462
+      },
+      "writtenOn": "2018-10-03T18:50:24Z",
+      "side": 1,
+      "message": "Cool, thanks.",
+      "parentUuid": "994f6805_3dc09366",
+      "revId": "e6be038069a6d19a67828bf227d0e7e6f11a8855",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
