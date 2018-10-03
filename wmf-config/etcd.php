@@ -26,7 +26,11 @@ function wmfSetupEtcd() {
 	if ( PHP_SAPI === 'cli' ) {
 		$localCache = new HashBagOStuff;
 	} else {
-		$localCache = new APCBagOStuff;
+		if ( function_exists( 'apcu_fetch' ) ) {
+			$localCache = new APCUBagOStuff;
+		} else {
+			$localCache = new APCBagOStuff;
+		}
 	}
 
 	# Use a single EtcdConfig object for both local and common paths
