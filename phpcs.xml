@@ -20,6 +20,7 @@
 		<exclude name="MediaWiki.VariableAnalysis.UnusedGlobalVariables" />
 		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.EmptyComment" />
 		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment" />
+		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.SingleSpaceBeforeSingleLineComment" />
 	</rule>
 	<file>.</file>
 	<arg name="encoding" value="utf8"/>

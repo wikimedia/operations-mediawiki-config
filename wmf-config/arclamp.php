@@ -76,12 +76,28 @@ function wmfArcLampFlush( $redisHost, $redisPort, $redisTimeout ) {
 		}
 	}
 
-	$redis = new Redis();
-	$ok = $redis->connect( $redisHost, $redisPort, $redisTimeout );
-	if ( !$ok ) {
-		return;
-	}
-	foreach ( $stacks as $stack => $count ) {
-		$redis->publish( 'xenon', "$stack $count" );
+	// Profiler instrumentation must be gentle.
+	// No exception may affect the overall request process.
+	try {
+		$redis = new Redis();
+		$ok = $redis->connect( $redisHost, $redisPort, $redisTimeout );
+		if ( !$ok ) {
+			return;
+		}
+		foreach ( $stacks as $stack => $count ) {
+			$redis->publish( 'xenon', "$stack $count" );
+		}
+	} catch ( Exception $e ) {
+		// Known failure scenarios:
+		//
+		// - "RedisException: read error on connection"
+		//   Each publish() in the above loop writes data to Redis and
+		//   subsequently reads from the socket for Redis' response.
+		//   If any socket read takes longer than $timeout, it throws (T206092).
+		//   As of writing, this is rare (a few times per day at most),
+		//   which is considered an acceptable loss in profile samples.
+
+		// Write to log with low severity
+		trigger_error( get_class( $e ) . ': ' . $e->getMessage(), E_USER_NOTICE );
 	}
 }
