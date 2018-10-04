@@ -70,6 +70,24 @@
       "revId": "a7f041b08b120ab7ae88e81990545b4f01403cf7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1d4eef0d_0742e316",
+        "filename": "wmf-config/etcd.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-10-04T19:25:10Z",
+      "side": 1,
+      "message": "I was actually hoping to keep this file as plain PHP (no MW classes), but I guess since we need EtcdConfig that\u0027s not really an option right now.\n\nI agree that detectLocalServerCache() would be fine to call. However it\u0027s return value isn\u0027t useful. It\u0027s only useful to pass to newFromId, which we don\u0027t want to do here.\n\nChecking its return value directly against strings would be unsupported given these are internal IDs.\n\nBut if we pretend for a moment that we\u0027ll definitely never change those and definitely remember about this file in wmf-config when we do change it, we\u0027d have it as follows:\n\n $cacheId \u003d \\ObjectCache::detectLocalServerCache();\n if ( $cacheId \u003d\u003d\u003d \u0027apcu\u0027 ) {\n   $localCache \u003d new APCUBagOStuff;\n } elseif {\n   $localCache \u003d new APCBagOStuff;\n }\n\nWhich doesn\u0027t seem beneficial for the added cost of indirection, compared to:\n\n if ( function_exists( \u0027apcu_fetch\u0027 ) ) {\n   $localCache \u003d new APCUBagOStuff;\n } elseif {\n   $localCache \u003d new APCBagOStuff;\n }",
+      "parentUuid": "89cc9406_0163f84a",
+      "revId": "a7f041b08b120ab7ae88e81990545b4f01403cf7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
