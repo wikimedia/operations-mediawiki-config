@@ -17890,6 +17890,7 @@ $wgConf->settings = [
 'wgPageTriageEnableOresFilters' => [
 	'default' => false,
 	'testwiki' => true,
+	'enwiki' => true, // T206149
 ],
 
 'wmgEnableInterwiki' => [
