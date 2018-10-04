@@ -9613,6 +9613,7 @@ $wgConf->settings = [
 			'suppressredirect' => true,
 			'autoreviewer' => true,
 			'movefile' => true, // T161532
+			'move-rootuserpages' => true, // T205595
 		],
 		'rollbacker' => [
 			'rollback' => true,
