@@ -52,6 +52,24 @@
       "revId": "a7f041b08b120ab7ae88e81990545b4f01403cf7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "89cc9406_0163f84a",
+        "filename": "wmf-config/etcd.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2018-10-04T16:24:26Z",
+      "side": 1,
+      "message": "I worry about the comment that says that no globals (aside from two) can be used and it being before InitialiseSettings.php. Calling newFromId() seems too risky/fragile, especially for something cross-repo where there is poor visibility into the dependency.",
+      "parentUuid": "54dc1162_e1a8d7d5",
+      "revId": "a7f041b08b120ab7ae88e81990545b4f01403cf7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
