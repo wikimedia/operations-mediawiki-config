@@ -34,6 +34,24 @@
       "revId": "a7f041b08b120ab7ae88e81990545b4f01403cf7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "54dc1162_e1a8d7d5",
+        "filename": "wmf-config/etcd.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1616
+      },
+      "writtenOn": "2018-10-04T06:40:57Z",
+      "side": 1,
+      "message": "I can assure it\u0027s not too early, I checked repeatedly and the  Object caches are setup in DefaultSettings.php which is loaded before this file. Also, I tested it in beta while trying to make php-fpm work :P\n\nA good middle ground would be to use the detectLocalServerCache, which is a static function that doesn\u0027t depend on anything else to be defined.\n\nWould that be ok? Else I\u0027ll just go with reproducing that function as you suggested.",
+      "parentUuid": "c42391a1_38fc3e56",
+      "revId": "a7f041b08b120ab7ae88e81990545b4f01403cf7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
