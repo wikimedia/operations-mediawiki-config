@@ -600,7 +600,10 @@ if ( $wgDBname == 'alswiki' ) {
 	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, [ NS_HELP, NS_PROJECT, 104, 106 ] );
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 
-	unset( $wgGroupPermissions['autoreview'] ); // T202139
+	unset(
+		$wgGroupPermissions['autoreview'], // T202139
+		$wgGroupPermissions['reviewer'] // T205997
+	);
 
 	$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
  } elseif ( $wgDBname == 'sqwiki' ) {
