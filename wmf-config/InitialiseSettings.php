@@ -5656,6 +5656,14 @@ $wgConf->settings = [
 	'foundationwiki' => [
 		100 => 'Resolution', // T132746
 		101 => 'Resolution_talk', // T132746
+		102 => 'Legal', // T206173
+		103 => 'Legal_talk', // T206173
+		104 => 'Minutes', // T206173
+		105 => 'Minutes_talk', // T206173
+		106 => 'Policy', // T206173
+		107 => 'Policy_talk', // T206173
+		112 => 'Archive', // T206173
+		113 => 'Archive_talk', // T206173
 	],
 	'wikitech' => [
 		110 => 'Obsolete',
@@ -8098,6 +8106,7 @@ $wgConf->settings = [
 	'+etwikisource' => [ 104 => 1, 106 => 1 ],
 	'+fawikibooks' => [ 102 => 1, 110 => 1 ], // T176908
 	'+fawikisource' => [ 102 => 1 ],
+	'+foundationwiki' => [ 100 => 1, 102 => 1, 104 => 1, 106 => 1 ], // T206173
 	'+frrwiki' => [ 102 => 1, 104 => 1, 106 => 1 ], // T40023
 	'+frwikisource' => [ 102 => 1, 112 => 1 ],
 	'+frwikiversity' => [ 104 => 1, 106 => 1, 108 => 1 ],
