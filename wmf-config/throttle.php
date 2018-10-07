@@ -27,14 +27,6 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[] = [ // T203909
-	'from' => '2018-09-10T09:00 +2:00',
-	'to' => '2018-10-10T09:00 +2:00',
-	'IP' => '93.91.145.154',
-	'dbname' => [ 'cswiki', 'cswikiversity', 'commonswiki', 'wikidatawiki' ],
-	'value' => 120 // 100 expected
-];
-
 $wmgThrottlingExceptions[] = [ // T204829
 	'from' => '2018-10-11T12:00 -5:00',
 	'to' => '2018-10-11T16:00 -5:00',
@@ -43,20 +35,12 @@ $wmgThrottlingExceptions[] = [ // T204829
 	'value' => 60 // 40 expected
 ];
 
-$wmgThrottlingExceptions[] = [ // T205529
-	'from' => '2018-09-26 14:30 +2:00',
-	'to' => '2018-09-26 20:00 +2:00',
-	'range' => [ '195.113.180.192/26', '2001:718:9::/48' ],
-	'dbname' => [ 'cswiki', 'commonswiki' ],
-	'value' => 20 // 12 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T206119
-	'from' => '2018-10-04T16:00 +2:00',
-	'to' => '2018-10-04T18:00 +2:00',
-	'IP' => '195.113.145.2',
-	'dbname' => [ 'cswiki', 'commonswiki', 'wikidatawiki' ],
-	'value' => 15 // no more than 15 expected
+$wmgThrottlingExceptions[] = [
+	'from' => '2018-10-25T05:00 UTC',
+	'to' => '2018-10-28T10:00',
+	'range' => '194.171.184.0/24',
+	'dbname' => [ 'enwiki', 'nlwiki', 'commonswiki', 'wikidatawiki' ],
+	'value' => 140, // 120 expected
 ];
 
 ## Add throttling definitions above.
