@@ -278,7 +278,9 @@ function wmfLabsSettings() {
 		'wgMinervaErrorLogSamplingRate' => [
 			'default' => 1,
 		],
-
+		'wgMinervaCountErrors' => [
+			'default' => true
+		],
 		'wmgULSPosition' => [
 			# Beta-specific
 			'deploymentwiki' => 'personal',
