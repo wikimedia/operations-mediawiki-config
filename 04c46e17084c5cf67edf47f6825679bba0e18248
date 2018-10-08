@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d436a0c1_715333ac",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 14292,
+      "author": {
+        "id": 1883
+      },
+      "writtenOn": "2018-10-08T15:28:56Z",
+      "side": 1,
+      "message": "This should be \u0027https://commons.wikimedia.org/wiki/Special:ImportFile\u0027",
+      "range": {
+        "startLine": 14292,
+        "startChar": 13,
+        "endLine": 14292,
+        "endChar": 17
+      },
+      "revId": "04c46e17084c5cf67edf47f6825679bba0e18248",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
