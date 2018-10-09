@@ -20621,14 +20621,6 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
-'wgWMECitationUsagePopulationSize' => [
-	'enwiki' => 1  // 100% — T191086
-],
-
-'wgWMECitationUsagePageLoadPopulationSize' => [
-	'enwiki' => 3  // 33.3% — T191086
-],
-
 'wgWMEReadingDepthEnabled' => [
 	'default' => false,
 	'wikipedia' => true,
