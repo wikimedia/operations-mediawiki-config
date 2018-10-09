@@ -434,6 +434,18 @@ function wmfLabsSettings() {
 			'wikidataclient' => true,
 		],
 
+		'wgArticlePlaceholderSearchIntegrationBackend' => [
+			'default' => 'API'
+		],
+
+		'wgArticlePlaceholderRepoApiUrl' => [
+			'default' => 'https://wikidata.beta.wmflabs.org/w/api.php',
+		],
+
+		'wgArticlePlaceholderSearchIntegrationEnabled' => [
+			'default' => true,
+		],
+
 		'wmgWikibaseAllowLocalShortDesc' => [
 			'default' => false,
 			'enwiki' => true,
