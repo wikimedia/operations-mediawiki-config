@@ -10648,7 +10648,8 @@ $wgConf->settings = [
 		'sysop' => [ 'accountcreator', 'autopatrolled', 'flood', 'mover' ], // T55913, T63109, T102770
 	],
 	'+itwikibooks' => [
-		'sysop' => [ 'autopatrolled', 'patroller' ],
+		'sysop' => [ 'autopatrolled', 'accountcreator', 'confirmed', 'patroller' ], // T206447
+		'accountcreator' => [ 'confirmed' ], // T206447
 	],
 	'+itwikinews' => [
 		'sysop' => [ 'autopatrolled', 'rollbacker' ], // T142571
@@ -11405,7 +11406,8 @@ $wgConf->settings = [
 		'sysop' => [ 'accountcreator', 'flood', ], // T63109
 	],
 	'+itwikibooks' => [
-		'sysop' => [ 'autopatrolled', 'patroller', 'flood' ], // flood added per T41569
+		'sysop' => [ 'autopatrolled', 'accountcreator', 'confirmed', 'patroller', 'flood' ], // flood added per T41569
+		'accountcreator' => [ 'confirmed' ], // T206447
 	],
 	'+itwikinews' => [
 		'sysop' => [ 'autopatrolled', 'rollbacker' ], // T142571
