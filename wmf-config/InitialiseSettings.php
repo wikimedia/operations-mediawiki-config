@@ -14289,9 +14289,10 @@ $wgConf->settings = [
 	'fawiki' => 'https://commons.wikimedia.org/wiki/Special:ImportFile',
 	'kowiki' => 'https://commons.wikimedia.org/wiki/Special:ImportFile',
 	'mediawikiwiki' => 'https://commons.wikimedia.org/wiki/Special:ImportFile',
+	'metawiki' => 'https://commons.wikimedia.org/wiki/Special:ImportFile', // T205201
+	'mrwiki' => 'https://commons.wikimedia.org/wiki/Special:ImportFile', // T206437
 	'sourceswiki' => 'https://commons.wikimedia.org/wiki/Special:ImportFile', // T198594
 	'test2wiki' => 'https://test.wikipedia.org/wiki/Special:ImportFile',
-	'mrwiki' => 'https://commons.wikimedia.org/wiki/Special:ImportFile', // T206437
 ],
 
 'wmgUseCommonsMetadata' => [
