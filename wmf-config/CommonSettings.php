@@ -2710,6 +2710,8 @@ $wgDisplayFeedsInSidebar = $wmgDisplayFeedsInSidebar;
 
 if ( $wmgEnablePageTriage ) {
 	wfLoadExtension( 'PageTriage' );
+	$wgAddGroups['bureaucrat'][] = 'copyviobot'; // T206731
+	$wgRemoveGroups['bureaucrat'][] = 'copyviobot'; // T206731
 }
 
 if ( $wmgEnableInterwiki ) {
