@@ -17759,6 +17759,7 @@ $wgConf->settings = [
 	'bnwiki' => true, // T62956
 	'bnwikisource' => true, // T127968
 	'eswikibooks' => true, // T96668
+	'gomwiki' => true, // T206741
 	'hiwiki' => true,
 	'hiwikiversity' => true, // T177187
 	'knwiki' => true, // T97218
