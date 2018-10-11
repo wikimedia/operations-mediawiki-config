@@ -716,7 +716,7 @@ function wmfLabsSettings() {
 		],
 
 		'wgActorTableSchemaMigrationStage' => [
-			'default' => MIGRATION_WRITE_BOTH,
+			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 		],
 
 		'wgCommentTableSchemaMigrationStage' => [
