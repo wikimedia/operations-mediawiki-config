@@ -20791,6 +20791,11 @@ $wgConf->settings = [
 
 'wgChangeTagsSchemaMigrationStage' => [
 	'default' => MIGRATION_WRITE_BOTH,
+	'mediawikiwiki' => MIGRATION_READ_NEW,
+	'testwiki' => MIGRATION_READ_NEW,
+	'testwikidatawiki' => MIGRATION_READ_NEW,
+	'fawiktionary' => MIGRATION_READ_NEW,
+	'fawikisource' => MIGRATION_READ_NEW,
 ],
 
 'wgTagStatisticsNewTable' => [
