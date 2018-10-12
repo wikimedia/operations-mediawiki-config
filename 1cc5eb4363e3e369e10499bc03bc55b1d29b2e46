@@ -1,0 +1,188 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "26959efe_cd14b899",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2018-10-12T19:59:30Z",
+      "side": 1,
+      "message": "These don\u0027t apply to how we\u0027re using repo mode in Commons (at least at first).",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 2
+      },
+      "revId": "1cc5eb4363e3e369e10499bc03bc55b1d29b2e46",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e64cead9_f298ab13",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2018-10-12T19:59:30Z",
+      "side": 1,
+      "message": "These don\u0027t apply to how we\u0027re using repo mode in Commons.",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 40,
+        "endChar": 1
+      },
+      "revId": "1cc5eb4363e3e369e10499bc03bc55b1d29b2e46",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5417a0ba_075b0839",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2018-10-12T19:59:30Z",
+      "side": 1,
+      "message": "Indeed.",
+      "range": {
+        "startLine": 110,
+        "startChar": 0,
+        "endLine": 116,
+        "endChar": 2
+      },
+      "revId": "1cc5eb4363e3e369e10499bc03bc55b1d29b2e46",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "62c5ae54_ab9ef4b1",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2018-10-12T19:59:30Z",
+      "side": 1,
+      "message": "These don\u0027t apply to how we\u0027re using repo mode in Commons.",
+      "range": {
+        "startLine": 127,
+        "startChar": 0,
+        "endLine": 134,
+        "endChar": 53
+      },
+      "revId": "1cc5eb4363e3e369e10499bc03bc55b1d29b2e46",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5ab0b1bb_8ad165c2",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2018-10-12T19:59:30Z",
+      "side": 1,
+      "message": "Presumably we\u0027re going to want similar-ish values for Commons too?",
+      "range": {
+        "startLine": 140,
+        "startChar": 0,
+        "endLine": 143,
+        "endChar": 62
+      },
+      "revId": "1cc5eb4363e3e369e10499bc03bc55b1d29b2e46",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c2d24fd6_77c868e9",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2018-10-12T19:59:30Z",
+      "side": 1,
+      "message": "These don\u0027t apply to how we\u0027re using repo mode in Commons.",
+      "range": {
+        "startLine": 151,
+        "startChar": 0,
+        "endLine": 163,
+        "endChar": 0
+      },
+      "revId": "1cc5eb4363e3e369e10499bc03bc55b1d29b2e46",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "aa633995_b2f9f60d",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2018-10-12T19:59:30Z",
+      "side": 1,
+      "message": "Needs final determination.",
+      "range": {
+        "startLine": 163,
+        "startChar": 0,
+        "endLine": 166,
+        "endChar": 0
+      },
+      "revId": "1cc5eb4363e3e369e10499bc03bc55b1d29b2e46",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2582ad7d_05f1b20c",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2018-10-12T19:59:30Z",
+      "side": 1,
+      "message": "More things we don\u0027t want, I think?",
+      "range": {
+        "startLine": 167,
+        "startChar": 0,
+        "endLine": 213,
+        "endChar": 59
+      },
+      "revId": "1cc5eb4363e3e369e10499bc03bc55b1d29b2e46",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
