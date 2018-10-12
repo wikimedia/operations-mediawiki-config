@@ -18873,6 +18873,7 @@ $wgConf->settings = [
 // Feature flag for WikibaseMediaInfo during deployment
 'wgMediaInfoEnable' => [
 	'default' => false,
+	'commonswiki' => true,
 ],
 
 'wmgUseTemplateSandbox' => [
