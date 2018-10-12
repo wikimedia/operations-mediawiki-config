@@ -642,6 +642,7 @@ $wgLBFactoryConf = [
 	'db2091:3312' => '10.192.0.10:3312', # do not remove or comment out
 	'db2091:3314' => '10.192.0.10:3314', # do not remove or comment out
 	'db2092' => '10.192.16.41', # do not remove or comment out
+	'db2096' => '10.192.16.34', # do not remove or comment out
 ],
 
 'externalLoads' => [
@@ -684,7 +685,8 @@ $wgLBFactoryConf = [
 	'extension1' => [
 		'10.192.0.87' => 1, # db2034, A5 3.5TB 160GB,
 		'10.192.32.4' => 1, # db2033, C6 3.5TB 160GB
-		# '10.192.48.21' => 1, # db2069, D6 3.5TB 160GB # old master candidate master
+		'10.192.48.21' => 1, # db2069, D6 3.5TB 160GB # old master candidate master
+		# '10.192.16.34' => 1, # db2096, B4 3.5TB 512GB
 	],
 ],
 
