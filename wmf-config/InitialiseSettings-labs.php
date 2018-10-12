@@ -498,7 +498,7 @@ function wmfLabsSettings() {
 		],
 
 		'wgMediaInfoEnable' => [
-			'commonswiki' => false,
+			'commonswiki' => true,
 		],
 
 		// Test the extension Collection in other languages for book creator,
