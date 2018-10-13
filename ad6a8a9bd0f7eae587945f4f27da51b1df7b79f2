@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa6f2846_25a258be",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1745,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-10-13T05:13:11Z",
+      "side": 1,
+      "message": "Should this hook be removed?",
+      "range": {
+        "startLine": 1745,
+        "startChar": 2,
+        "endLine": 1745,
+        "endChar": 25
+      },
+      "revId": "ad6a8a9bd0f7eae587945f4f27da51b1df7b79f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
