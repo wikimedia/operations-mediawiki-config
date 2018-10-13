@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d00c9000_f1524cff",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1734,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-10-13T22:25:02Z",
+      "side": 1,
+      "message": "Not new in this commit, but I\u0027ve noticed a few times recently that messages vary by wiki due to local message overrides and other variables. Might be worth adding something like useDatabase(false) if that isn\u0027t needed here.",
+      "range": {
+        "startLine": 1734,
+        "startChar": 59,
+        "endLine": 1734,
+        "endChar": 77
+      },
+      "revId": "e85acb507362a95f94df3d8c32c613d20b3c32ce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
