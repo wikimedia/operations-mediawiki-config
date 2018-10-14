@@ -2061,6 +2061,9 @@ if ( $wmgUseTemplateStyles ) {
 		'namespace' => [ '<.>' ],
 		'css' => [],
 	];
+	if ( $wmgUseScribunto ) {
+		$wgTemplateStylesNamespaces[828] = true; // NS_MODULE
+	}
 }
 
 if ( $wmgUseLoginNotify && $wmgUseEcho ) {
