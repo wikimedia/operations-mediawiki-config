@@ -20826,7 +20826,7 @@ $wgConf->settings = [
 ],
 // T183869
 'wgWMEAICaptchaEnabled' => [
-	'default' => true,
+	'default' => false,
 	'private' => false,
 	'fishbowl' => false,
 	'nonglobal' => false,
