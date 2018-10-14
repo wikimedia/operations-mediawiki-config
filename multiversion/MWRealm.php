@@ -1,14 +1,19 @@
 <?php
 global $wmfCluster, $wmfDatacenter, $wmfRealm, $wmgRealm;
 
-$wmfCluster = trim( file_get_contents( '/etc/wikimedia-cluster' ) );
-if ( $wmfCluster === 'labs' ) {
-	$wmfRealm = $wmgRealm = 'labs';
-	$wmfDatacenter = 'eqiad';
+$env = require __DIR__ . '/../wmf-config/env.php';
+
+$wmfRealm = $wmgRealm = $env['realm'];
+$wmfDatacenter = $env['dc'];
+
+// TODO: Remove (unused)
+if ( $env['realm'] === 'labs' ) {
+	$wmfCluster = 'labs';
 } else {
-	$wmfRealm = $wmgRealm = 'production';
-	$wmfDatacenter = $wmfCluster;
+	$wmfCluster = $env['dc'];
 }
+
+unset( $env );
 
 /**
  * Get the filename for the current realm/datacenter, falling back

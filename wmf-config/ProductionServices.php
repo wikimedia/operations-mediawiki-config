@@ -104,7 +104,9 @@ $services = [
 		],
 	],
 	'codfw' => $common + [
-		'search' => 'search.svc.eqiad.wmnet',
+		'search' => [
+			'search.svc.codfw.wmnet',
+		],
 
 		'urldownloader' => 'http://url-downloader.codfw.wikimedia.org:8080',
 
