@@ -1,6 +1,4 @@
 <?php
-require_once __DIR__ . '/MWWikiversions.php';
-
 global $wmfCluster, $wmfDatacenter, $wmfRealm, $wmgRealm;
 
 $wmfCluster = trim( file_get_contents( '/etc/wikimedia-cluster' ) );
@@ -13,7 +11,7 @@ if ( $wmfCluster === 'labs' ) {
 }
 
 /**
- * Function to get the filename for the current realm/datacenter, falling back
+ * Get the filename for the current realm/datacenter, falling back
  * to the $filename if not found.
  *
  * Files checked are:
@@ -23,8 +21,10 @@ if ( $wmfCluster === 'labs' ) {
  *   base.ext
  * ext is optional.
  *
- * @note The full path to the file is returned, not just the filename
+ * The full path to the file is returned, not just the filename
  *
+ * @deprecated since 2015 Use explicit paths instead, with one or two
+ *  conditonals as needed.
  * @param string $filename Full path to file
  * @return string Full path to file to be used
  */

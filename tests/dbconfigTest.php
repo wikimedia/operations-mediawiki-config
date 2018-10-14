@@ -23,7 +23,6 @@ class DbconfigTest extends WgConfTestCase {
 	}
 
 	public function loadDbFile( $realm, $datacenter, $masterdatacenter ) {
-		// For getRealmSpecificFilename()
 		$this->setGlobals( [
 			'wmfRealm' => $realm,
 			'wmfDatacenter' => $datacenter,
@@ -41,7 +40,12 @@ class DbconfigTest extends WgConfTestCase {
 		$wmfMasterDatacenter = $masterdatacenter;
 		$wmfRealm = $realm;
 		$wmfDatacenter = $datacenter;
-		include getRealmSpecificFilename( __DIR__ . '/../wmf-config/db.php' );
+		// Copied from CommonSettings.php
+		if ( $wmfRealm === 'labs' ) {
+			require __DIR__ . "/../wmf-config/db-labs.php";
+		} else {
+			require __DIR__ . "/../wmf-config/db-{$wmfDatacenter}.php";
+		}
 
 		$this->restoreGlobals();
 		return $wgLBFactoryConf;
