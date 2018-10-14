@@ -14,7 +14,6 @@
 		<exclude name="MediaWiki.Files.ClassMatchesFilename.NotMatch" />
 		<exclude name="MediaWiki.Files.ClassMatchesFilename.WrongCase" />
 		<exclude name="MediaWiki.NamingConventions.PrefixedGlobalFunctions.wfPrefix" />
-		<exclude name="MediaWiki.NamingConventions.ValidGlobalName.wgPrefix" />
 		<exclude name="MediaWiki.Usage.ForbiddenFunctions.extract" />
 		<exclude name="MediaWiki.Usage.SuperGlobalsUsage.SuperGlobals" />
 		<exclude name="MediaWiki.VariableAnalysis.UnusedGlobalVariables" />
@@ -42,6 +41,12 @@
 	</rule>
 	<rule ref="Squiz.Classes.ValidClassName.NotCamelCaps">
 		<severity>0</severity>
+	</rule>
+	<rule ref="MediaWiki.NamingConventions.ValidGlobalName">
+		<properties>
+			<property name="allowedPrefixes" type="array" value="wg,wmg" />
+			<property name="ignoreList" type="array" value="$IP" />
+		</properties>
 	</rule>
 
 	<exclude-pattern>\.git/</exclude-pattern>

@@ -10,7 +10,7 @@ class MWRealmTest extends PHPUnit\Framework\TestCase {
 	public static function setupBeforeClass() {
 		self::$fixturesDir = sys_get_temp_dir() . "/" . __CLASS__;
 		if ( !is_dir( self::$fixturesDir ) ) {
-			mkdir( self::$fixturesDir."/" );
+			mkdir( self::$fixturesDir . "/" );
 		}
 
 		$filenames = [
