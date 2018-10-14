@@ -1747,17 +1747,23 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function ( $response, $user, $
 $wgHooks['ChangeAuthenticationDataAudit'][] = function ( $req, $status ) {
 	$user = User::newFromName( $req->username );
 	$status = Status::wrap( $status );
-	if ( $user->isAllowed( 'delete' ) && $req instanceof \MediaWiki\Auth\PasswordAuthenticationRequest ) {
+	if ( $req instanceof \MediaWiki\Auth\PasswordAuthenticationRequest
+		&& wfGetPrivilegedGroups( $req->username, $user )
+	) {
 		global $wgRequest;
 		$headers = function_exists( 'apache_request_headers' ) ? apache_request_headers() : [];
 
+		$privGroups = wfGetPrivilegedGroups( $req->username, $user );
 		$logger = LoggerFactory::getInstance( 'badpass' );
-		$logger->info( 'Password change in prefs for sysop {name}: {status} - {ip} - {xff} - {ua}', [
+		$logger->info( 'Password change in prefs for {priv} {name}: {status} - {ip} - {xff} - {ua} - {geocookie}', [
 			'name' => $user->getName(),
+			'groups' => implode( ', ', $privGroups ),
+			'priv' => count( $privGroups ) ? 'elevated' : 'normal',
 			'status' => $status->isGood() ? 'ok' : $status->getWikiText( null, null, 'en' ),
 			'ip' => $wgRequest->getIP(),
 			'xff' => @$headers['X-Forwarded-For'],
 			'ua' => @$headers['User-Agent'],
+			'geocookie' => $wgRequest->getCookie( 'GeoIP', '' ),
 		] );
 	}
 };
