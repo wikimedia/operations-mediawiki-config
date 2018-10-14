@@ -20,8 +20,8 @@
 		],
 		"test": [
 			"composer lint",
-			"composer phpcs",
 			"phpunit",
+			"composer phpcs",
 			"minus-x check ."
 		]
 	},

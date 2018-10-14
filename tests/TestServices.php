@@ -5,12 +5,11 @@
 # TestServices.php should include all the service hostnames/ips
 # for any service referenced in unittests, divided by datacenter.
 #
-# It is included by CommonSettings.php
+# It is included by tests/WgConfTestCase.php
 #
 # ######################################################################
 
-# FIXME variables should be set in WgConfTestCase::loadWgConf??
-
+// FIXME: Should these variables be set in WgConfTestCase::loadWgConf??
 $wmfDatacenter = $wmfMasterDatacenter = 'unittest';
 $wmfAllServices = [];
 
