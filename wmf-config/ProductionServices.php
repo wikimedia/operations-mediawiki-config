@@ -56,7 +56,9 @@ $services = [
 	'eqiad' => $common + [
 		// elasticsearch must be accessed by hostname,
 		// for SSL certificate verification.
-		'search' => 'search.svc.eqiad.wmnet',
+		'search' => [
+			'search.svc.eqiad.wmnet',
+		],
 
 		// each DC has its own urldownloader for latency reasons
 		'urldownloader' => 'http://url-downloader.eqiad.wikimedia.org:8080',
@@ -104,7 +106,9 @@ $services = [
 		],
 	],
 	'codfw' => $common + [
-		'search' => 'search.svc.eqiad.wmnet',
+		'search' => [
+			'search.svc.eqiad.wmnet',
+		],
 
 		'urldownloader' => 'http://url-downloader.codfw.wikimedia.org:8080',
 
