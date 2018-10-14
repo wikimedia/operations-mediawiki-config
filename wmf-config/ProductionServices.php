@@ -4,140 +4,137 @@
 # ProductionServices.php statically defines all service hostnames/ips
 # for any service used by MediaWiki, divided by datacenter.
 #
+# May may included on app servers in contexts where MediaWiki is not (yet)
+# initialised (for example, fatal-error.php and profiler.php).
+#
+# MUST NOT use any predefined state, only primitive values in plain PHP.
+#
 # This for PRODUCTION.
 #
-# Included from: wmf-config/CommonSettings.php.
+# For MediaWiki, this is included from wmf-config/CommonSettings.php.
 #
 
-$services = [];
+$common = [
+	// Logging is not active-active.
+	'udp2log' => 'mwlog1001.eqiad.wmnet:8420',
 
-// Logging is not active-active.
-$services['eqiad']['udp2log'] =
-$services['codfw']['udp2log'] = 'mwlog1001.eqiad.wmnet:8420';
+	// Statsd is not active-active.
+	'statsd' => 'statsd.eqiad.wmnet',
 
-// Statsd is not active-active.
-$services['eqiad']['statsd'] =
-$services['codfw']['statsd'] = 'statsd.eqiad.wmnet';
+	// EventLogging is not active-active.
+	'eventlogging' => 'udp://10.64.32.167:8421', # eventlog1001.eqiad.wmnet
 
-// elasticsearch must be accessed by hostname for SSL certificate verification.
-$services['eqiad']['search'] = [
-	'search.svc.eqiad.wmnet',
-];
-$services['codfw']['search'] = [
-	'search.svc.codfw.wmnet',
-];
+	// Logstash is not active-active.
+	'logstash' => [
+		'10.2.2.36', # logstash.svc.eqiad.wmnet
+	],
 
-# urldownloader configuration. 1 per DC for latency reasons
-# eqiad urldownloader
-$services['eqiad']['urldownloader'] = 'http://url-downloader.eqiad.wikimedia.org:8080';
-# codfw urldownloader
-$services['codfw']['urldownloader'] = 'http://url-downloader.codfw.wikimedia.org:8080';
+	// Analytics Kafka (not active-active).
+	'kafka' => [
+		'10.64.5.12:9092', # kafka1012.eqiad.wmnet
+		'10.64.5.13:9092', # kafka1013.eqiad.wmnet
+		'10.64.36.114:9092', # kafka1014.eqiad.wmnet
+		'10.64.53.10:9092', # kafka1018.eqiad.wmnet
+		'10.64.53.12:9092', # kafka1020.eqiad.wmnet
+		'10.64.36.122:9092', # kafka1022.eqiad.wmnet
+	],
 
-$services['eqiad']['parsoid'] =
-$services['codfw']['parsoid'] = 'http://parsoid.discovery.wmnet:8000';
+	// IRC (broadcast RCFeed for irc.wikimedia.org)
+	// Not active-active.
+	'irc' => '208.80.153.44', # kraz.codfw.wmnet
 
-$services['eqiad']['mathoid'] =
-$services['codfw']['mathoid'] = 'http://mathoid.discovery.wmnet:10042';
-
-// EventLogging is not active-active.
-$services['eqiad']['eventlogging'] =
-$services['codfw']['eventlogging'] = 'udp://10.64.32.167:8421'; # eventlog1001.eqiad.wmnet
-
-$services['eqiad']['eventbus'] =
-$services['codfw']['eventbus'] = 'http://eventbus.discovery.wmnet:8085';
-
-$services['eqiad']['cxserver'] =
-$services['codfw']['cxserver'] = 'http://cxserver.discovery.wmnet:8080';
-
-$services['eqiad']['upload'] = 'ms-fe.svc.eqiad.wmnet';
-$services['codfw']['upload'] = 'ms-fe.svc.codfw.wmnet';
-
-$services['eqiad']['mediaSwiftAuth'] = 'https://ms-fe.svc.eqiad.wmnet/auth';
-$services['codfw']['mediaSwiftAuth'] = 'https://ms-fe.svc.codfw.wmnet/auth';
-
-$services['eqiad']['mediaSwiftStore'] = 'https://ms-fe.svc.eqiad.wmnet/v1/AUTH_mw';
-$services['codfw']['mediaSwiftStore'] = 'https://ms-fe.svc.codfw.wmnet/v1/AUTH_mw';
-
-$services['eqiad']['etcd'] = '_etcd._tcp.eqiad.wmnet';
-$services['codfw']['etcd'] = '_etcd._tcp.codfw.wmnet';
-
-$services['eqiad']['electron'] =
-$services['codfw']['electron'] = 'http://pdfrender.discovery.wmnet:5252';
-
-// Logstash is not active-active.
-$services['eqiad']['logstash'] =
-$services['codfw']['logstash'] = [
-	'10.2.2.36', # logstash.svc.eqiad.wmnet
+	// Automatic dc-local discovery
+	'parsoid' => 'http://parsoid.discovery.wmnet:8000',
+	'mathoid' => 'http://mathoid.discovery.wmnet:10042',
+	'eventbus' => 'http://eventbus.discovery.wmnet:8085',
+	'cxserver' => 'http://cxserver.discovery.wmnet:8080',
+	'electron' => 'http://pdfrender.discovery.wmnet:5252',
+	'restbase' => 'http://restbase.discovery.wmnet:7231',
 ];
 
-// Analytics Kafka (not active-active).
-$services['eqiad']['kafka'] =
-$services['codfw']['kafka'] = [
-	'10.64.5.12:9092', # kafka1012.eqiad.wmnet
-	'10.64.5.13:9092', # kafka1013.eqiad.wmnet
-	'10.64.36.114:9092', # kafka1014.eqiad.wmnet
-	'10.64.53.10:9092', # kafka1018.eqiad.wmnet
-	'10.64.53.12:9092', # kafka1020.eqiad.wmnet
-	'10.64.36.122:9092', # kafka1022.eqiad.wmnet
-];
+$services = [
+	'eqiad' => $common + [
+		// elasticsearch must be accessed by hostname,
+		// for SSL certificate verification.
+		'search' => 'search.svc.eqiad.wmnet',
 
-// IRC (broadcast RCFeed for irc.wikimedia.org)
-// Not active-active.
-$services['eqiad']['irc'] =
-$services['codfw']['irc'] = '208.80.153.44'; # kraz.codfw.wmnet
+		// each DC has its own urldownloader for latency reasons
+		'urldownloader' => 'http://url-downloader.eqiad.wikimedia.org:8080',
 
-// Restbase
-$services['eqiad']['restbase'] =
-$services['codfw']['restbase'] = 'http://restbase.discovery.wmnet:7231';
+		'upload' => 'ms-fe.svc.eqiad.wmnet',
+		'mediaSwiftAuth' => 'https://ms-fe.svc.eqiad.wmnet/auth',
+		'mediaSwiftStore' => 'https://ms-fe.svc.eqiad.wmnet/v1/AUTH_mw',
 
-// Poolcounter
-$services['eqiad']['poolcounter'] = [
-	'10.64.32.126', # poolcounter1001.eqiad.wmnet
-	'10.64.0.19', # poolcounter1003.eqiad.wmnet
-];
-$services['codfw']['poolcounter'] = [
-	'10.192.0.19', # poolcounter2001.codfw.wmnet
-	'10.192.16.21', # poolcounter2002.codfw.wmnet
-];
+		'etcd' => '_etcd._tcp.eqiad.wmnet',
 
-// LockManager Redis
-$services['eqiad']['redis_lock'] = [
-	'rdb1' => '10.64.0.80',
-	'rdb2' => '10.64.16.107',
-	'rdb3' => '10.64.48.155'
-];
-$services['codfw']['redis_lock'] = [
-	'rdb1' => '10.192.0.83',
-	'rdb2' => '10.192.0.84',
-	'rdb3' => '10.192.0.85',
-];
+		'poolcounter' => [
+			'10.64.32.126', # poolcounter1001.eqiad.wmnet
+			'10.64.0.19', # poolcounter1003.eqiad.wmnet
+		],
 
-### Jobqueue redis
-// Note: for each host:port combination, the local fallback slave is
-// the next server, so rdb1001:6379 => rdb1002:6379 and so on.
-// Note: on server failure, partition masters should be switched to the slave
-// Note: MediaWiki will fail-over to other shards when one is down. On master
-// failure, it is best to either do nothing or just disable the whole shard
-// until the master is fixed or full fail-over is done. Proper fail over
-// requires changing the slave to stop slaving the old master before updating
-// the MediaWiki config to direct traffic there.
-// Do NOT remove entries from here if they are still present in 'partitionsBySection'
-// in wmf-config/jobqueue.php
-$services['eqiad']['jobqueue_redis'] = [
-	'rdb4-6379' => 'rdb1005.eqiad.wmnet:6379',
-	'rdb4-6380' => 'rdb1005.eqiad.wmnet:6380',
-	'rdb4-6381' => 'rdb1005.eqiad.wmnet:6381',
-];
-$services['codfw']['jobqueue_redis'] = [
-	'rdb4-6379' => 'rdb2005.codfw.wmnet:6379',
-	'rdb4-6380' => 'rdb2005.codfw.wmnet:6380',
-	'rdb4-6381' => 'rdb2005.codfw.wmnet:6381',
-];
-$services['eqiad']['jobqueue_aggregator'] = [
-	'rdb1005.eqiad.wmnet:6378', // preferred, no fallback anymore
-];
-$services['codfw']['jobqueue_aggregator'] = [
-	'rdb2005.codfw.wmnet:6378', // preferred
-];
+		// LockManager Redis
+		'redis_lock' => [
+			'rdb1' => '10.64.0.80',
+			'rdb2' => '10.64.16.107',
+			'rdb3' => '10.64.48.155',
+		],
 
+		// JobQueue Redis
+		//
+		// Note: for each host:port combination, the local fallback slave is
+		// the next server, so rdb1001:6379 => rdb1002:6379 and so on.
+		//
+		// Note: on server failure, partition masters should be switched to the slave
+		//
+		// Note: MediaWiki will fail-over to other shards when one is down. On master
+		// failure, it is best to either do nothing or just disable the whole shard
+		// until the master is fixed or full fail-over is done. Proper fail over
+		// requires changing the slave to stop slaving the old master before updating
+		// the MediaWiki config to direct traffic there.
+		//
+		// Do NOT remove entries from here if they are still present in 'partitionsBySection'
+		// in wmf-config/jobqueue.php
+		'jobqueue_redis' => [
+			'rdb4-6379' => 'rdb1005.eqiad.wmnet:6379',
+			'rdb4-6380' => 'rdb1005.eqiad.wmnet:6380',
+			'rdb4-6381' => 'rdb1005.eqiad.wmnet:6381',
+		],
+		'jobqueue_aggregator' => [
+			'rdb1005.eqiad.wmnet:6378', // preferred, no fallback anymore
+		],
+	],
+	'codfw' => $common + [
+		'search' => 'search.svc.eqiad.wmnet',
+
+		'urldownloader' => 'http://url-downloader.codfw.wikimedia.org:8080',
+
+		'upload' => 'ms-fe.svc.codfw.wmnet',
+		'mediaSwiftAuth' => 'https://ms-fe.svc.codfw.wmnet/auth',
+		'mediaSwiftStore' => 'https://ms-fe.svc.codfw.wmnet/v1/AUTH_mw',
+
+		'etcd' => '_etcd._tcp.codfw.wmnet',
+
+		'poolcounter' => [
+			'10.192.0.19', # poolcounter2001.codfw.wmnet
+			'10.192.16.21', # poolcounter2002.codfw.wmnet
+		],
+
+		'redis_lock' => [
+			'rdb1' => '10.192.0.83',
+			'rdb2' => '10.192.0.84',
+			'rdb3' => '10.192.0.85',
+		],
+
+		// Do NOT remove entries here if they are still in wmf-config/jobqueue.php
+		'jobqueue_redis' => [
+			'rdb4-6379' => 'rdb2005.codfw.wmnet:6379',
+			'rdb4-6380' => 'rdb2005.codfw.wmnet:6380',
+			'rdb4-6381' => 'rdb2005.codfw.wmnet:6381',
+		],
+		'jobqueue_aggregator' => [
+			'rdb2005.codfw.wmnet:6378', // preferred
+		],
+	],
+];
+unset( $common );
 return $services;
