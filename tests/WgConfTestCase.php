@@ -107,6 +107,7 @@ class WgConfTestCase extends PHPUnit\Framework\TestCase {
 
 		// Other InitialiseSettings.php globals that we set in TestServices.php
 		$this->setGlobals( [
+			'wmfHostnames' => null,
 			'wmfAllServices' => null,
 			'wmfLocalServices' => null,
 			'wmfMasterServices' => null,
