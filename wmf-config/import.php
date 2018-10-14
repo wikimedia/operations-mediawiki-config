@@ -13,10 +13,8 @@
  */
 function wmfImportSources( &$sources ) {
 	global $wgConf, $IP, $lang;
-	$wikipedias = array_flip( MWWikiversions::readDbListFile(
-		getRealmSpecificFilename( "$IP/../wikipedia.dblist" ) ) );
-	$privates = array_flip( MWWikiversions::readDbListFile(
-		getRealmSpecificFilename( "$IP/../private.dblist" ) ) );
+	$wikipedias = array_flip( MWWikiversions::readDbListFile( 'wikipedia.dblist' ) );
+	$privates = array_flip( MWWikiversions::readDbListFile( 'private.dblist' ) );
 
 	// REMEMBER when editing this function, the values here are *interwiki prefixes*.
 	// Sometimes the interwiki map does things you don't expect.
