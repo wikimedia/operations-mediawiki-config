@@ -40,10 +40,22 @@ code { font-family: inherit; }
 	$message = $parts[0];
 	$message = preg_replace( "/^.*?exception '.*?' with message '(.*?)'.*$/im", '\1', $message );
 
-	// Increment a counter.
-	$sock = socket_create( AF_INET, SOCK_DGRAM, SOL_UDP );
-	$stat = 'MediaWiki.errors.fatal:1|c';
-	@socket_sendto( $sock, $stat, strlen( $stat ), 0, 'statsd.eqiad.wmnet', 8125 );
+	// Note: The below musn't fatal, as such:
+	// - Use 'include' instead of 'require'.
+	//   This will assign false if the file isn't found.
+	// - Check $dest before use. If $env and/or $services is
+	//   false, the array access will silently yield null.
+	$env = include __DIR__ . '/../wmf-config/env.php';
+	$services = $env['realm'] === 'labs'
+		? include __DIR__ . '/../wmf-config/LabsServices.php'
+		: include __DIR__ . '/../wmf-config/ProductionServices.php';
+	$dest = $services[ $env['dc'] ]['statsd'];
+	if ( $dest ) {
+		// Increment a counter.
+		$sock = socket_create( AF_INET, SOCK_DGRAM, SOL_UDP );
+		$stat = 'MediaWiki.errors.fatal:1|c';
+		@socket_sendto( $sock, $stat, strlen( $stat ), 0, $dest, 8125 );
+	}
 
   ?>: <br/>
   <?php echo htmlspecialchars( $message ); ?>
