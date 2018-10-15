@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d3abbbc9_6219b9e2",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 689,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-10-15T05:34:33Z",
+      "side": 1,
+      "message": "Add it depooled at first",
+      "revId": "bff7e1ec4bd344a046cc57c7c75de09a2c7c1e72",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
