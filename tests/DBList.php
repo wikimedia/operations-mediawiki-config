@@ -47,4 +47,14 @@ class DBList {
 	public static function isWikiProject( $dbname ) {
 		return in_array( $dbname, self::$wiki_projects );
 	}
+
+	/**
+	 * Checks if given dbname is in dblist
+	 * @param string $dbname
+	 * @param string $dblist
+	 * @return bool
+	 */
+	public static function isInDblist( $dbname, $dblist ) {
+		return in_array( $dbname, MWWikiversions::readDbListFile( $dblist ) );
+	}
 }
