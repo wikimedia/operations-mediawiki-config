@@ -1233,7 +1233,6 @@ $wgConf->settings = [
 	'specieswiki' => '/static/images/project-logos/specieswiki.png',
 	'stewardwiki' => '/static/images/project-logos/stewardwiki.png',  // T39700
 	'strategywiki' => '/static/images/project-logos/strategywiki.png',
-	'techcomwiki' => '/static/images/project-logos/techcomwiki.png',
 	'tenwiki' => '/static/images/project-logos/tenwiki.png',
 	'testwiki' => '/static/images/project-logos/testwiki.png',
 	'test2wiki' => '/static/images/project-logos/test2wiki.png',
