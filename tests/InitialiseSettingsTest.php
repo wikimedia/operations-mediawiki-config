@@ -30,4 +30,24 @@ class InitialiseSettingsTest extends WgConfTestCase {
 			}
 		}
 	}
+
+	///
+	/// only existing wikis or dblists may be referenced in IS.php
+	///
+	public function testOnlyExistingWikis() {
+		$wgConf = $this->loadWgConf( 'unittest' );
+		$dblistNames = array_keys( DBList::getLists() );
+		$langs = file( __DIR__ . "/../langlist", FILE_IGNORE_NEW_LINES );
+		foreach ( $wgConf->settings as $config ) {
+			foreach ( $config as $db => $entry ) {
+				$dbNormalized = str_replace( "+", "", $db );
+				$this->assertTrue(
+					in_array( $dbNormalized, $dblistNames ) ||
+					DBList::isInDblist( $dbNormalized, "all" ) ||
+					in_array( $dbNormalized,  $langs ) ||
+					in_array( $dbNormalized, [ "default", "lzh", "yue", "nan" ] ), // TODO: revert back to $db == "default"
+					"$dbNormalized is referenced, but it isn't either a wiki or a dblist" );
+			}
+		}
+	}
 }
