@@ -1712,7 +1712,6 @@ $wgConf->settings = [
 
 	# Wikivoyage
 	'bnwikivoyage' => [ '1.5x' => '/static/images/project-logos/bnwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/bnwikivoyage-2x.png' ],
-	'cswikivoyage' => [ '1.5x' => '/static/images/project-logos/cswikivoyage-1.5x.png', '2x' => '/static/images/project-logos/cswikivoyage-2x.png' ], // T150618
 	'eswikivoyage' => [ '1.5x' => '/static/images/project-logos/eswikivoyage-1.5x.png', '2x' => '/static/images/project-logos/eswikivoyage-2x.png' ], // T170604
 	'fiwikivoyage' => [ '1.5x' => '/static/images/project-logos/fiwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/fiwikivoyage-2x.png' ],
 	'hiwikivoyage' => [ '1.5x' => '/static/images/project-logos/hiwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/hiwikivoyage-2x.png' ], // T173013
