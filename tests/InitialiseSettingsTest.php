@@ -15,6 +15,9 @@ class InitialiseSettingsTest extends WgConfTestCase {
 				$this->assertFileExists( __DIR__ . '/..' . $logo, "$db has nonexistent $size logo" );
 			}
 
+			// Test if all logos belongs to existing wiki
+			$this->assertTrue( DBList::isInDblist( $db, "all" ) );
+
 			// Test if only 1.5x and 2x keys are used
 			$keys = array_keys( $entry );
 			$this->assertEquals( $requiredKeys, $keys, "Unexpected keys for $db", 0.0, 10, true ); // canonicalize
