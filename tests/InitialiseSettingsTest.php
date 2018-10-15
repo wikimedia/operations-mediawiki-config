@@ -11,12 +11,26 @@ class InitialiseSettingsTest extends WgConfTestCase {
 
 		foreach ( $wgConf->settings['wgLogoHD'] as $db => $entry ) {
 			$keys = array_keys( $entry );
+			foreach ( $entry as $size => $logo ) {
+				$this->assertFileExists( __DIR__ . '/..' . $logo, "$db has nonexistent $size logo" );
+			}
 			$this->assertEquals( $requiredKeys, $keys, "Unexpected keys for $db", 0.0, 10, true ); // canonicalize
 		}
 	}
 
 	public function getRequiredLogoHDKeys() {
 		return [ '1.5x', '2x' ];
+	}
+
+	///
+	/// wgLogo
+	///
+	public function testLogo() {
+		$wgConf = $this->loadWgConf( 'unittest' );
+
+		foreach ( $wgConf->settings['wgLogo'] as $db => $logo ) {
+			$this->assertFileExists( __DIR__ . '/..' . $logo, "$db has nonexistent 1x logo" );
+		}
 	}
 
 	///
