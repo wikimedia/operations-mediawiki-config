@@ -19074,7 +19074,7 @@ $wgConf->settings = [
 	"nan" => "default", // e.g. zh_min_nan
 	// Currently defined in WikibaseSearchSettings.php
 	"wikidata" => "wikibase_similarity",
-	"testwikidata" => "wikibase_similarity",
+	"testwikidatawiki" => "wikibase_similarity",
 ],
 
 'wmgCirrusSearchRescoreProfile' => [
