@@ -30,4 +30,24 @@ class InitialiseSettingsTest extends WgConfTestCase {
 			}
 		}
 	}
+
+	///
+	/// wgCanonicalServer & wgServer
+	///
+	public function testwgServer() {
+		$wgConf = $this->loadWgConf( 'unittest' );
+
+		// Test if wgCanonicalServer start with https://
+		foreach ($wgConf->settings['wgCanonicalServer'] as $db => $entry) {
+			$this->assertStringStartsWith( "https://", $entry, "wgCanonicalServer for $db doesn't start with https://" );
+		}
+
+		foreach ($wgConf->settings['wgServer'] as $db => $entry) {
+			// Test if wgServer start with //
+			$this->assertStringStartsWith( "//", $entry, "wgServer for $db doesn't start with //" );
+
+			// Test if wgServer is same like wgCanonicalServer, but protocol-relative
+			$this->assertEquals( "https:" . $entry, $wgConf->settings['wgCanonicalServer'][$db], "wgServer isn't protocol-relative version of wgCanonicalServer for $db" );
+		}
+	}
 }
