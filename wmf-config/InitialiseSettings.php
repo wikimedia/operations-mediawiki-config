@@ -201,6 +201,7 @@ $wgConf->settings = [
 	'tenwiki' => 'en',
 	'transitionteamwiki' => 'en',
 	'usabilitywiki' => 'en',
+	'vnwikimedia' => 'vi',
 	'votewiki' => 'en', // T132667, T148352
 	'wikimania' => 'en',
 	'wikimaniateamwiki' => 'en',
@@ -1193,6 +1194,7 @@ $wgConf->settings = [
 	'cnwikimedia' => '/static/images/project-logos/cnwikimedia.png', // T98676
 	'maiwikimedia' => '/static/images/project-logos/maiwikimedia.png',
 	'romdwikimedia' => '/static/images/project-logos/romdwikimedia.png',
+	'vnwikimedia' => '/static/images/project-logos/vnwikimedia.png',
 	'wbwikimedia' => '/static/images/project-logos/wbwikimedia.png', // T162510
 
 	// Special wikis
@@ -1730,6 +1732,7 @@ $wgConf->settings = [
 	'ptwikimedia' => [ '1.5x' => '/static/images/project-logos/ptwikimedia-1.5x.png', '2x' => '/static/images/project-logos/ptwikimedia-2x.png' ], // T126832
 	'romdwikimedia' => [ '1.5x' => '/static/images/project-logos/romdwikimedia-1.5x.png', '2x' => '/static/images/project-logos/romdwikimedia-2x.png' ],
 	'trwikimedia' => [ '1.5x' => '/static/images/project-logos/trwikimedia-1.5x.png', '2x' => '/static/images/project-logos/trwikimedia-2x.png' ],
+	'vnwikimedia' => [ '1.5x' => '/static/images/project-logos/vnwikimedia-1.5x.png', '2x' => '/static/images/project-logos/vnwikimedia-2x.png' ],
 	'wbwikimedia' => [ '1.5x' => '/static/images/project-logos/wbwikimedia-1.5x.png', '2x' => '/static/images/project-logos/wbwikimedia-2x.png' ], // T162510
 
 	# Special wikis
@@ -2585,6 +2588,7 @@ $wgConf->settings = [
 	'uzwiktionary' => 'Vikilug‘at',
 	'vecwiktionary' => 'Wikisionario',
 	'vepwiki' => 'Vikipedii',
+	'vnwikimedia' => 'Vietnam Wikimedians',
 	'votewiki' => 'Wikimedia Vote Wiki', // T53264
 	'vowiki' => 'Vükiped',
 	'vowikibooks' => 'Vükibuks',
@@ -17640,6 +17644,7 @@ $wgConf->settings = [
 	'specieswiki' => true, // T129888
 	'testwiki' => true,
 	'uawikimedia' => true, // T131731
+	'vnwikimedia' => true,
 	'wbwikimedia' => true, // T162510
 	'wikidata' => true, // T43585
 	'wikimania2012wiki' => true, // T36120
