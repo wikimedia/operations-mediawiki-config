@@ -18814,6 +18814,7 @@ $wgConf->settings = [
 
 'wgLexemeEnableSenses' => [
 	'default' => false,
+	'testwikidata' => true, // T203887
 ],
 
 'wmgWikibaseDisabledAccessEntityTypes' => [
