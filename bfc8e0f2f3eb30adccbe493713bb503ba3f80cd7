@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b67b4be5_794fd87d",
+        "filename": "tests/InitialiseSettingsTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-10-15T17:34:21Z",
+      "side": 1,
+      "message": "Be sure to add a message here to indicate what the assertion is for, e.g. \"Key $db known in dblist\"",
+      "range": {
+        "startLine": 19,
+        "startChar": 53,
+        "endLine": 19,
+        "endChar": 57
+      },
+      "revId": "bfc8e0f2f3eb30adccbe493713bb503ba3f80cd7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
