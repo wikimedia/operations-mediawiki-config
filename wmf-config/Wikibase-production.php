@@ -36,7 +36,6 @@ if ( $wmgUseWikibaseRepo ) {
 			],
 		];
 
-		$wgWBQualityConstraintsSuggestionsBetaFeature[ 'value' ] = true;
 		$wgWBQualityConstraintsSparqlEndpoint = 'http://wdqs-internal.discovery.wmnet/sparql';
 		$wgWBQualityConstraintsPropertyConstraintId = 'P51064';
 		$wgWBQualityConstraintsFormatConstraintId = 'Q100086';
@@ -84,6 +83,8 @@ if ( $wmgUseWikibaseRepo ) {
 			5188, // wikibase-lexeme
 			5189, // wikibase-form
 		];
+
+		$wgWBQualityConstraintsSuggestionsBetaFeature[ 'value' ] = true;
 
 		$wgWBRepoSettings['sparqlEndpoint'] = 'https://query.wikidata.org/sparql';
 
