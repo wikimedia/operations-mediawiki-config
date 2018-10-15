@@ -1436,7 +1436,7 @@ $wgConf->settings = [
 	'mywiki' => [ '1.5x' => '/static/images/project-logos/mywiki-1.5x.png', '2x' => '/static/images/project-logos/mywiki-2x.png' ], // T150618
 	'mznwiki' => [ '1.5x' => '/static/images/project-logos/mznwiki-1.5x.png', '2x' => '/static/images/project-logos/mznwiki-2x.png' ], // T150618
 	'nahwiki' => [ '1.5x' => '/static/images/project-logos/nahwiki-1.5x.png', '2x' => '/static/images/project-logos/nahwiki-2x.png' ], // T150618
-	'napwiki' => [ '1.5x' => '/static/images/project-logos/mapwiki-1.5x.png', '2x' => '/static/images/project-logos/napwiki-2x.png' ], // T150618
+	'napwiki' => [ '1.5x' => '/static/images/project-logos/napwiki-1.5x.png', '2x' => '/static/images/project-logos/napwiki-2x.png' ], // T150618
 	'nawiki' => [ '1.5x' => '/static/images/project-logos/nawiki-1.5x.png', '2x' => '/static/images/project-logos/nawiki-2x.png' ], // T150618
 	'ndswiki' => [ '1.5x' => '/static/images/project-logos/ndswiki-1.5x.png', '2x' => '/static/images/project-logos/ndswiki-2x.png' ], // T150618
 	'nds_nlwiki' => [ '1.5x' => '/static/images/project-logos/nds_nlwiki-1.5x.png', '2x' => '/static/images/project-logos/nds_nlwiki-2x.png' ], // T150618
