@@ -15,6 +15,11 @@ class InitialiseSettingsTest extends WgConfTestCase {
 				$this->assertFileExists( __DIR__ . '/..' . $logo, "$db has nonexistent $size logo" );
 			}
 
+			// Test if all logos belong to existing wiki
+			if ( $db != 'default' ) {
+				$this->assertTrue( DBList::isInDblist( $db, "all" ), "$db doesn't exist and it have HD logo defined" );
+			}
+
 			// Test if only 1.5x and 2x keys are used
 			$keys = array_keys( $entry );
 			$this->assertEquals( $requiredKeys, $keys, "Unexpected keys for $db", 0.0, 10, true ); // canonicalize
@@ -33,7 +38,12 @@ class InitialiseSettingsTest extends WgConfTestCase {
 
 		foreach ( $wgConf->settings['wgLogo'] as $db => $logo ) {
 			// Test if all logos exist
-			$this->assertFileExists( __DIR__ . '/..' . $logo, "$db has nonexistent 1x logo" );
+			if ( $db != 'default' ) {
+				$this->assertFileExists( __DIR__ . '/..' . $logo, "$db has nonexistent 1x logo" );
+			}
+
+			// Test if all logos belong to existing wiki
+			$this->assertTrue( DBList::isInDblist( $db, "all" ), "$db doesn't exist and it have logo defined" );
 		}
 	}
 
