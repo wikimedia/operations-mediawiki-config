@@ -257,6 +257,12 @@ function wmfLabsSettings() {
 			'default' => [ 'h2', 'h3', 'h4', 'h5', 'h6' ], // T110436, T110837
 		],
 
+		'wgMinervaShowShareButton' => [
+			'default' => [
+				'base' => false,
+				'beta' => true
+			]
+		],
 		'wgMFRemovableClasses' => [
 			'default' => [
 				'base' => [ '.navbox' ],
