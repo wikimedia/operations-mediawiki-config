@@ -22,6 +22,30 @@
       "revId": "721604f65022710c2d3c3be9a6548436eb510f2b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3c951b47_181c48a6",
+        "filename": "wmf-config/Wikibase-production.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-10-15T15:17:40Z",
+      "side": 0,
+      "message": "Yes, this was loading it on test.\nThe new location of the line runs for both test and production wikidatawiki.\n\n\n\u003cedit\u003e no, this is the wrong PS.... let me push an updated one\u003c/edit\u003e",
+      "parentUuid": "3de4ac0e_4ada8660",
+      "range": {
+        "startLine": 39,
+        "startChar": 2,
+        "endLine": 39,
+        "endChar": 66
+      },
+      "revId": "721604f65022710c2d3c3be9a6548436eb510f2b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
