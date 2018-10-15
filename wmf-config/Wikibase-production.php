@@ -36,7 +36,6 @@ if ( $wmgUseWikibaseRepo ) {
 			],
 		];
 
-		$wgWBQualityConstraintsSuggestionsBetaFeature[ 'value' ] = true;
 		$wgWBQualityConstraintsSparqlEndpoint = 'http://wdqs-internal.discovery.wmnet/sparql';
 		$wgWBQualityConstraintsPropertyConstraintId = 'P51064';
 		$wgWBQualityConstraintsFormatConstraintId = 'Q100086';
@@ -160,6 +159,9 @@ if ( $wmgUseWikibaseRepo ) {
 			'args' => [ __DIR__ . '/unitConversionConfig.json' ]
 		];
 	}
+
+	// T207019
+	$wgWBQualityConstraintsSuggestionsBetaFeature[ 'value' ] = true;
 
 	// T189776, T189777
 	$wgWBRepoSettings['useTermsTableSearchFields'] = false;
