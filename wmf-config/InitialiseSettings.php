@@ -469,6 +469,7 @@ $wgConf->settings = [
 	'scnwiki' => 'Europe/Berlin',
 	'sewikimedia' => 'Europe/Berlin',
 	'shwiki' => 'Europe/Berlin',
+	'shnwiki' => 'Asia/Yangon',
 	'slwiki' => 'Europe/Ljubljana',
 	'slwikibooks' => 'Europe/Ljubljana', // T142701
 	'slwikiquote' => 'Europe/Ljubljana',
@@ -757,6 +758,7 @@ $wgConf->settings = [
 	'sewiki' => '/static/images/project-logos/sewiki.png',
 	'sgwiki' => '/static/images/project-logos/sgwiki.png',  // T51125
 	'shwiki' => '/static/images/project-logos/shwiki.png',  // T51125
+	'shnwiki' => '/static/images/project-logos/shnwiki.png',
 	'siwiki' => '/static/images/project-logos/siwiki.png',
 	'simplewiki' => '/static/images/project-logos/simplewiki.png', // T181448
 	'skwiki' => '/static/images/project-logos/skwiki.png',
@@ -1486,6 +1488,7 @@ $wgConf->settings = [
 	'sewiki' => [ '1.5x' => '/static/images/project-logos/sewiki-1.5x.png', '2x' => '/static/images/project-logos/sewiki-2x.png' ], // T150618
 	'sgwiki' => [ '1.5x' => '/static/images/project-logos/sgwiki-1.5x.png', '2x' => '/static/images/project-logos/sgwiki-2x.png' ], // T150618
 	'shwiki' => [ '1.5x' => '/static/images/project-logos/shwiki-1.5x.png', '2x' => '/static/images/project-logos/shwiki-2x.png' ], // T150618
+	'shnwiki' => [ '1.5x' => '/static/images/project-logos/shnwiki-1.5x.png', '2x' => '/static/images/project-logos/shnwiki-2x.png' ],
 	'simplewiki' => [ '1.5x' => '/static/images/project-logos/simplewiki-1.5x.png', '2x' => '/static/images/project-logos/simplewiki-2x.png' ], // T181448
 	'siwiki' => [ '1.5x' => '/static/images/project-logos/siwiki-1.5x.png', '2x' => '/static/images/project-logos/siwiki-2x.png' ], // T150618
 	'skwiki' => [ '1.5x' => '/static/images/project-logos/skwiki-1.5x.png', '2x' => '/static/images/project-logos/skwiki-2x.png' ], // T150618
@@ -3018,6 +3021,7 @@ $wgConf->settings = [
 	'scnwiktionary' => 'Wikizziunariu',
 	'sdwiki' => 'وڪيپيڊيا', // T186943
 	'searchcomwiki' => 'SearchCom',
+	'shnwiki' => 'ဝီႇၶီႇၽီးတီးယႃး',
 	'siwiki' => 'විකිපීඩියා',
 	'siwikibooks' => 'විකිපොත්',
 	'siwiktionary' => 'වික්ෂනරි',
@@ -3193,6 +3197,7 @@ $wgConf->settings = [
 	'sahwiki' => 'Бикипиэдьийэ_ырытыыта',
 	'sahwikisource' => 'Бикитиэкэ_Ырытыы',
 	'sdwiki' => 'وڪيپيڊيا_بحث', // T186943
+	'shnwiki' => 'ဝီႇၶီႇၽီးတီးယႃး',
 	'siwiki' => 'විකිපීඩියා_සාකච්ඡාව',
 	'siwikibooks' => 'විකිපොත්_සාකච්ඡාව',
 	'siwiktionary' => 'වික්ෂනරි_සාකච්ඡාව',
