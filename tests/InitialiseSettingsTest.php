@@ -10,6 +10,12 @@ class InitialiseSettingsTest extends WgConfTestCase {
 		$wgConf = $this->loadWgConf( 'unittest' );
 
 		foreach ( $wgConf->settings['wgLogoHD'] as $db => $entry ) {
+			// Test if all logos exist
+			foreach ( $entry as $size => $logo ) {
+				$this->assertFileExists( __DIR__ . '/..' . $logo, "$db has nonexistent $size logo" );
+			}
+
+			// Test if only 1.5x and 2x keys are used
 			$keys = array_keys( $entry );
 			$this->assertEquals( $requiredKeys, $keys, "Unexpected keys for $db", 0.0, 10, true ); // canonicalize
 		}
@@ -17,6 +23,18 @@ class InitialiseSettingsTest extends WgConfTestCase {
 
 	public function getRequiredLogoHDKeys() {
 		return [ '1.5x', '2x' ];
+	}
+
+	///
+	/// wgLogo
+	///
+	public function testLogo() {
+		$wgConf = $this->loadWgConf( 'unittest' );
+
+		// Test if all logos exist
+		foreach ( $wgConf->settings['wgLogo'] as $db => $logo ) {
+			$this->assertFileExists( __DIR__ . '/..' . $logo, "$db has nonexistent 1x logo" );
+		}
 	}
 
 	///
