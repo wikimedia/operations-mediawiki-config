@@ -68,4 +68,18 @@ class InitialiseSettingsTest extends WgConfTestCase {
 			$this->assertEquals( "https:" . $entry, $wgConf->settings['wgCanonicalServer'][$db], "wgServer isn't protocol-relative version of wgCanonicalServer for $db" );
 		}
 	}
+
+	///
+	/// only existing wikis or dblists may be referenced in IS.php
+	///
+	public function testOnlyExistingWikis() {
+		$wgConf = $this->loadWgConf( 'unittest' );
+		$dblistNames = array_keys( DBList::getLists() );
+		foreach ($wgConf->settings as $config) {
+			foreach ($wgConf->settings[$config] as $db => $entry) {
+				$dbNormalized = str_replace( "+", "", $db );
+				$this->assertTrue( in_array( $dbNormalized , $dblistNames ) || DBList::isInDblist( $dbNormalized, "all" ), "$db is referenced, but it isn't either a wiki or a dblist" );
+			}
+		}
+	}
 }
