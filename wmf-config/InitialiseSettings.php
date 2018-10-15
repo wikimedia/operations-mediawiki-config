@@ -20783,6 +20783,7 @@ $wgConf->settings = [
 	'testwikidatawiki' => MIGRATION_NEW,
 	'fawiktionary' => MIGRATION_NEW,
 	'fawikisource' => MIGRATION_NEW,
+	's7' => MIGRATION_NEW,
 ],
 
 'wgTagStatisticsNewTable' => [
