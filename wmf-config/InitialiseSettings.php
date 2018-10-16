@@ -16385,6 +16385,11 @@ $wgConf->settings = [
 	'enwiki' => 0.2, // T200792
 ],
 
+// Enable client side error counting
+'wgMinervaCountErrors' => [
+	'default' => false,
+	'wikipedia' => true // T206702
+],
 'wgMinervaApplyKnownTemplateHacks' => [
 	'default' => true,
 ],
