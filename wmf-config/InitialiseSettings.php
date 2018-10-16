@@ -18771,6 +18771,18 @@ $wgConf->settings = [
 	'testwikidatawiki' => 10000000,
 ],
 
+'wmgWikibaseEntityDataFormats' => [
+	'default' => [
+		'json',
+		'php',
+		'rdfxml',
+		'n3',
+		'turtle',
+		'ntriples',
+		'html',
+	],
+],
+
 // T151717 and T177153
 'wmgWikibaseDisabledUsageAspects' => [
 	'default' => [],

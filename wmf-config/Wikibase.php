@@ -28,6 +28,7 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['idBlacklist'] = $wmgWikibaseIdBlacklist;
 	$wgWBRepoSettings['disabledDataTypes'] = $wmgWikibaseDisabledDataTypes;
 	$wgWBRepoSettings['tmpMaxItemIdForNewItemIdHtmlFormatter'] = $wmgWikibaseMaxItemIdForNewItemIdHtmlFormatter;
+	$wgWBRepoSettings['entityDataFormats'] = $wmgWikibaseEntityDataFormats;
 }
 
 if ( $wmgUseWikibaseClient ) {
