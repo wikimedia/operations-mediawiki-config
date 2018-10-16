@@ -18729,6 +18729,14 @@ $wgConf->settings = [
 	'urwiki' => true, // T186451
 ],
 
+'wgArticlePlaceholderSearchIntegrationBackend' => [
+	'default' => 'API',
+],
+
+'wgArticlePlaceholderRepoApiUrl' => [
+	'default' => 'https://www.wikidata.org/w/api.php',
+],
+
 'wmgWikibaseSiteGroup' => [
 	// The default for this is null, but we can't set this to null here,
 	// as null makes SiteConfiguration not set the variable at all.
@@ -20530,9 +20538,8 @@ $wgConf->settings = [
 	'cywiki' => 'Q16956',
 ],
 
-// T195753
 'wgArticlePlaceholderSearchIntegrationEnabled' => [
-	'default' => false,
+	'default' => true,
 ],
 
 'wgWMECitationUsagePopulationSize' => [
