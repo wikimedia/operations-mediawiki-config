@@ -14267,6 +14267,7 @@ $wgConf->settings = [
 		'advancedsearch',                    // [WMDE TW] 2018-12-18 - Advanced Search
 		'visualeditor-visualdiffpage',       // [Contrib] 2018-12-14 – Visual diffs
 		'fileexporter',                      // [WMDE TW] 2018-12-07 – FileExporter
+		'constraint-suggestions',            // [WMDE WD] 2019-04-16 – Wikibase ConstraintSuggestions
 	],
 ],
 
