@@ -18781,6 +18781,16 @@ $wgConf->settings = [
 		'ntriples',
 		'html',
 	],
+	'testwikidatawiki' => [
+		'json',
+		'php',
+		'rdfxml',
+		'n3',
+		'turtle',
+		'ntriples',
+		'html',
+		'jsonld',
+	],
 ],
 
 // T151717 and T177153
