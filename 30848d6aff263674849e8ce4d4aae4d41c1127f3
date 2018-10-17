@@ -34,6 +34,24 @@
       "revId": "30848d6aff263674849e8ce4d4aae4d41c1127f3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c4dc9105_e2bb32fb",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 18362,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2018-10-17T08:28:15Z",
+      "side": 1,
+      "message": "As far as I understand, those wiki specific settings override the default value, not merge with it.",
+      "parentUuid": "fd1a3e75_fe2e0eb0",
+      "revId": "30848d6aff263674849e8ce4d4aae4d41c1127f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
