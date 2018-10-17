@@ -16,6 +16,24 @@
       "revId": "30848d6aff263674849e8ce4d4aae4d41c1127f3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fd1a3e75_fe2e0eb0",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 18362,
+      "author": {
+        "id": 866
+      },
+      "writtenOn": "2018-10-17T07:53:54Z",
+      "side": 1,
+      "message": "Default is true for all wiki. Wikis below has specific campaign on or off.",
+      "parentUuid": "2da7949e_939be68d",
+      "revId": "30848d6aff263674849e8ce4d4aae4d41c1127f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
