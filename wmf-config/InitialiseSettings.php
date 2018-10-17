@@ -20810,24 +20810,7 @@ $wgConf->settings = [
 ],
 
 'wgChangeTagsSchemaMigrationStage' => [
-	'default' => MIGRATION_WRITE_BOTH,
-	'mediawikiwiki' => MIGRATION_NEW,
-	'testwiki' => MIGRATION_NEW,
-	'testwikidatawiki' => MIGRATION_NEW,
-	'fawiktionary' => MIGRATION_NEW,
-	'fawikisource' => MIGRATION_NEW,
-	'arwiki' => MIGRATION_NEW,
-	'cawiki' => MIGRATION_NEW,
-	'eswiki' => MIGRATION_NEW,
-	'fawiki' => MIGRATION_NEW,
-	'frwiktionary' => MIGRATION_NEW,
-	'hewiki' => MIGRATION_NEW,
-	'huwiki' => MIGRATION_NEW,
-	'kowiki' => MIGRATION_NEW,
-	'metawiki' => MIGRATION_NEW,
-	'rowiki' => MIGRATION_NEW,
-	'ukwiki' => MIGRATION_NEW,
-	'viwiki' => MIGRATION_NEW,
+	'default' => MIGRATION_NEW,
 ],
 
 'wgTagStatisticsNewTable' => [
