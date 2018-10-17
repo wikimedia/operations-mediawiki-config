@@ -18358,7 +18358,8 @@ $wgConf->settings = [
 		'cxstats' => true,
 		'newarticle' => true,
 		'specialcx' => true,
-		'staff-recommender' => true
+		'staff-recommender' => true,
+		'cx2outreach' => true
 	],
 	'dewiki' => [
 		'article-recommender-1' => true,
