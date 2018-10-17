@@ -18355,6 +18355,7 @@ $wgConf->settings = [
 'wmgContentTranslationCampaigns' => [
 	'default' => [
 		'article-recommender-1' => true,
+		'cx2outreach' => true,
 		'cxstats' => true,
 		'newarticle' => true,
 		'specialcx' => true,
@@ -18362,6 +18363,7 @@ $wgConf->settings = [
 	],
 	'dewiki' => [
 		'article-recommender-1' => true,
+		'cx2outreach' => true,
 		'cxstats' => true,
 		'newarticle' => false,
 		'specialcx' => true,
@@ -18369,6 +18371,7 @@ $wgConf->settings = [
 	],
 	'enwiki' => [
 		'article-recommender-1' => true,
+		'cx2outreach' => true,
 		'cxstats' => true,
 		'newarticle' => false,
 		'specialcx' => true,
@@ -18376,19 +18379,21 @@ $wgConf->settings = [
 	],
 	'eswiki' => [
 		'article-recommender-1' => true,
-		'newarticle' => true,
+		'cx2outreach' => true,
 		'cxstats' => true,
+		'eswiki-recommender' => true,
+		'newarticle' => true,
 		'specialcx' => true,
-		'staff-recommender' => true,
-		'eswiki-recommender' => true
+		'staff-recommender' => true
 	],
 	'frwiki' => [
 		'article-recommender-1' => true,
-		'newarticle' => true,
+		'cx2outreach' => true,
 		'cxstats' => true,
+		'frwiki-recommender' => true,
+		'newarticle' => true,
 		'specialcx' => true,
-		'staff-recommender' => true,
-		'frwiki-recommender' => true
+		'staff-recommender' => true
 	],
 ],
 
