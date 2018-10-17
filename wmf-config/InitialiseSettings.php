@@ -9837,6 +9837,11 @@ $wgConf->settings = [
 		'patroller' => [ 'patrol' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ],
 	],
+	'srwikiquote' => [ // T206936
+		'patroller' => [ 'patrol' => true ],
+		'autopatrolled' => [ 'autopatrol' => true ],
+		'rollbacker' => [ 'rollback' => true ],
+	],
 	'+stewardwiki' => [
 		'bureaucrat' => [ 'userrights' => true ], // T30773
 	],
