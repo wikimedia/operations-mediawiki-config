@@ -9223,7 +9223,7 @@ $wgConf->settings = [
 	'+itwikiversity' => [
 		'autoconfirmed' => [ 'patrol' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ], // T114930
-		'patroller' => [ 'autopatrol' => true, 'rollback' => true, ], // T114930
+		'patroller' => [ 'autopatrol' => true, 'rollback' => true, 'suppressredirect' => true, 'markbotedit' => true, ], // T114930 and T207300
 		'flood' => [ 'bot' => true, ], // T114930
 	],
 	'itwikibooks' => [
