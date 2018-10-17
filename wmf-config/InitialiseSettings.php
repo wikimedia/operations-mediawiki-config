@@ -9837,6 +9837,7 @@ $wgConf->settings = [
 	'+srwikisource' => [
 		'patroller' => [ 'patrol' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ],
+		'rollbacker' => [ 'rollback' => true ], // T206935
 	],
 	'+stewardwiki' => [
 		'bureaucrat' => [ 'userrights' => true ], // T30773
@@ -10869,7 +10870,8 @@ $wgConf->settings = [
 		'sysop' => [ 'rollbacker' ],
 	],
 	'+srwikisource' => [
-		'bureaucrat' => [ 'patroller', 'autopatrolled', ],
+		'bureaucrat' => [ 'patroller', 'autopatrolled', 'rollbacker' ], // T206935
+		'sysop' => [ 'rollbacker' ], // T206935
 	],
 	'+svwiki' => [
 		'sysop' => [ 'rollbacker', 'autopatrolled' ], // T161210
@@ -11641,7 +11643,8 @@ $wgConf->settings = [
 		'sysop' => [ 'rollbacker', ],
 	],
 	'+srwikisource' => [
-		'bureaucrat' => [ 'patroller', 'autopatrolled' ],
+		'bureaucrat' => [ 'patroller', 'autopatrolled', 'rollbacker' ], // T206935
+		'sysop' => [ 'rollbacker' ], // T206935
 	],
 	'+strategywiki' => [
 		'bureaucrat' => [ 'flood' ],
