@@ -9837,6 +9837,7 @@ $wgConf->settings = [
 	'+srwikisource' => [
 		'patroller' => [ 'patrol' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ],
+		'rollbacker' => [ 'rollback' => true ], // T206935
 	],
 	'+stewardwiki' => [
 		'bureaucrat' => [ 'userrights' => true ], // T30773
