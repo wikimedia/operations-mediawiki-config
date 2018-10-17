@@ -410,17 +410,6 @@ $wgObjectCaches['mysql-multiwrite'] = [
 	'reportDupes' => false
 ];
 
-// T205330: Purge wikidatawiki parser output from before 2018-09-19 20:00
-// This can be removed after the 11th October 2018.
-if ( $wgDBname === 'wikidatawiki' ) {
-	$wgHooks['RejectParserCacheValue'][] = function ( $value, $wikiPage, $popts ) {
-		if ( $value->expired( '20180919200000' ) ) {
-			return false;
-		}
-		return true;
-	};
-}
-
 $wgSessionsInObjectCache = true;
 session_name( $lang . 'wikiSession' );
 
