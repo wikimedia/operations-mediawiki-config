@@ -18358,21 +18358,24 @@ $wgConf->settings = [
 		'cxstats' => true,
 		'newarticle' => true,
 		'specialcx' => true,
-		'staff-recommender' => true
+		'staff-recommender' => true,
+		'cx2outreach' => true
 	],
 	'dewiki' => [
 		'article-recommender-1' => true,
 		'cxstats' => true,
 		'newarticle' => false,
 		'specialcx' => true,
-		'staff-recommender' => true
+		'staff-recommender' => true,
+		'cx2outreach' => true
 	],
 	'enwiki' => [
 		'article-recommender-1' => true,
 		'cxstats' => true,
 		'newarticle' => false,
 		'specialcx' => true,
-		'staff-recommender' => true
+		'staff-recommender' => true,
+		'cx2outreach' => true
 	],
 	'eswiki' => [
 		'article-recommender-1' => true,
@@ -18380,7 +18383,8 @@ $wgConf->settings = [
 		'cxstats' => true,
 		'specialcx' => true,
 		'staff-recommender' => true,
-		'eswiki-recommender' => true
+		'eswiki-recommender' => true,
+		'cx2outreach' => true
 	],
 	'frwiki' => [
 		'article-recommender-1' => true,
@@ -18388,7 +18392,8 @@ $wgConf->settings = [
 		'cxstats' => true,
 		'specialcx' => true,
 		'staff-recommender' => true,
-		'frwiki-recommender' => true
+		'frwiki-recommender' => true,
+		'cx2outreach' => true
 	],
 ],
 
