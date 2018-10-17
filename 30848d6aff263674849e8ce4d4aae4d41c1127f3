@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2da7949e_939be68d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 18362,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2018-10-17T07:18:42Z",
+      "side": 1,
+      "message": "What about the other wikis below?",
+      "revId": "30848d6aff263674849e8ce4d4aae4d41c1127f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
