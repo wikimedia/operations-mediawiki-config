@@ -32,7 +32,7 @@ $wmfSwiftShardCommon = in_array( 'commonswiki', $wmfSwiftBigWikis ) ? 2 : 0; // 
 if ( $wmfRealm === 'labs' ) {
 	$datacenters = [ 'eqiad' ];
 	$redisLockServers = [ 'rdb1', 'rdb2' ];
-	$commonsUrl = "//commons.wikimedia.beta.wmflabs.org";
+	$commonsUrl = "https://commons.wikimedia.beta.wmflabs.org";
 	$uploadUrl = "//upload.beta.wmflabs.org";
 } else {
 	$datacenters = [ 'eqiad', 'codfw' ];
