@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "840f8e78_fecd85e0",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 14271,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2018-10-18T21:54:34Z",
+      "side": 1,
+      "message": "I have no idea if this name is correct. Might be just \"templatewizard\". I\u0027m not sure which name the BetaFeatures extension is looking for here :P Guess I should dig into the code and figure it out.",
+      "range": {
+        "startLine": 14271,
+        "startChar": 3,
+        "endLine": 14271,
+        "endChar": 29
+      },
+      "revId": "0bd06d1db48ba44f3e34264073fd710985488281",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
