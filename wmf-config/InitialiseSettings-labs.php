@@ -472,10 +472,6 @@ function wmfLabsSettings() {
 			'wikidatawiki' => 'P218',
 		],
 
-		'wgLexemeEnableSenses' => [
-			'default' => true,
-		],
-
 		'wmgWikibaseDisabledDataTypes' => [
 			'default' => [],
 		],
