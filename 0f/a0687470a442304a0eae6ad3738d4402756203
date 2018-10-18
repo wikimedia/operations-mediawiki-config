@@ -1,0 +1,9 @@
+Verified+2: jenkins-bot
+Code-Review+1: Krinkle <krinklemail@gmail.com>
+Code-Review+2: Zfilipin <zfilipin@wikimedia.org>
+Code-Review+1: Framawiki <framawiki@tools.wmflabs.org>
+Submitted-by: jenkins-bot
+Submitted-at: Thu, 18 Oct 2018 11:50:57 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/467412
+Project: operations/mediawiki-config
+Branch: refs/heads/master
