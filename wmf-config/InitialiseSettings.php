@@ -16317,8 +16317,8 @@ $wgConf->settings = [
 		'copyright-width' => 66,
 		'copyright-height' => 26,
 	],
-	'ukwiki' => [
-		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-uk.svg',
+	'uzwiki' => [
+		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-uz.svg',
 		'copyright-width' => 116,
 		'copyright-height' => 18,
 	],
