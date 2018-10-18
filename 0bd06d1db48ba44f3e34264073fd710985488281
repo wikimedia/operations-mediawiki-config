@@ -22,6 +22,30 @@
       "revId": "0bd06d1db48ba44f3e34264073fd710985488281",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d9f6ecde_75ae672e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 14271,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2018-10-18T22:07:09Z",
+      "side": 1,
+      "message": "The name is correct. I\u0027ll go document how this works at https://www.mediawiki.org/wiki/Extension:BetaFeatures since it\u0027s never been documented.",
+      "parentUuid": "840f8e78_fecd85e0",
+      "range": {
+        "startLine": 14271,
+        "startChar": 3,
+        "endLine": 14271,
+        "endChar": 29
+      },
+      "revId": "0bd06d1db48ba44f3e34264073fd710985488281",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
