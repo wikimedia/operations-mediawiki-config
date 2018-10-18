@@ -18849,7 +18849,7 @@ $wgConf->settings = [
 ],
 
 'wmgWikibaseDisabledDataTypes' => [
-	'default' => [ 'wikibase-sense' ],
+	'default' => [],
 ],
 
 'wgLexemeEnableSenses' => [
