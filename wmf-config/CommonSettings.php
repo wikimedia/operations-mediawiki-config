@@ -410,6 +410,20 @@ $wgObjectCaches['mysql-multiwrite'] = [
 	'reportDupes' => false
 ];
 
+// T203888: Purge Wikidata Lexeme parser cache for senses deployment - Addshore
+if ( $wgDBname === 'wikidatawiki' ) {
+	/** @var WikiPage $wikiPage */
+	$wgHooks['RejectParserCacheValue'][] = function ( $value, $wikiPage, $popts ) {
+		if (
+			$wikiPage->getTitle()->getNamespace() === 146 &&
+			$value->expired( '20181018105500' )
+		) {
+			return false;
+		}
+		return true;
+	};
+}
+
 $wgSessionsInObjectCache = true;
 session_name( $lang . 'wikiSession' );
 
