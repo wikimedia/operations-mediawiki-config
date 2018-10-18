@@ -40,7 +40,7 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBQualityConstraintsPropertyConstraintId = 'P51064';
 		$wgWBQualityConstraintsFormatConstraintId = 'Q100086';
 		$wgWBQualityConstraintsFormatAsARegularExpressionId = 'P51065';
-	} else {
+	} elseif ( $wgDBname === 'wikidatawiki' ) {
 		$wgPropertySuggesterClassifyingPropertyIds = [ 31, 279 ]; // T169060
 		$wgPropertySuggesterInitialSuggestions = [ 31, 279 ];
 
@@ -151,9 +151,7 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBQualityConstraintsPropertiesWithViolatingQualifiers = [ 'P1855', 'P2271', 'P5192', 'P5193' ]; // T183267
 		$wgSpecialPages['ItemDisambiguation'] = 'SpecialBlankpage';
 		$wgWBRepoSettings['dispatchLagToMaxLagFactor'] = 60;
-	}
 
-	if ( $wgDBname === 'wikidatawiki' ) {
 		$wgWBRepoSettings['unitStorage'] = [
 			'class' => '\\Wikibase\\Lib\\Units\\JsonUnitStorage',
 			'args' => [ __DIR__ . '/unitConversionConfig.json' ]
