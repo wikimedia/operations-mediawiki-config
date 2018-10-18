@@ -14286,6 +14286,7 @@ $wgConf->settings = [
 		'visualeditor-visualdiffpage',       // [Contrib] 2018-12-14 – Visual diffs
 		'fileexporter',                      // [WMDE TW] 2018-12-07 – FileExporter
 		'constraint-suggestions',            // [WMDE WD] 2019-04-16 – Wikibase ConstraintSuggestions
+		'templatewizard-betafeature',        // [Contrib] 2019-04-18 - TemplateWizard
 	],
 ],
 
