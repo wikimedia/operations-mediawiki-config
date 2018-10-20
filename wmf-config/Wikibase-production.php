@@ -55,9 +55,7 @@ if ( $wmgUseWikibaseRepo ) {
 			 */
 			134, // has dialect (DEPRECATED)
 			558, // unit symbol (DEPRECATED)
-			1962, // patron (DEPRECATED)
 			2315, // comment (DEPRECATED)
-			4237, // Heritage Building in Finland ID (DEPRECATED)
 			5130, // island of location (DEPRECATED)
 			/**
 			 * @see https://www.wikidata.org/w/index.php?oldid=335040857
@@ -82,6 +80,7 @@ if ( $wmgUseWikibaseRepo ) {
 			4047, // geo-shape
 			5188, // wikibase-lexeme
 			5189, // wikibase-form
+			5979, // wikibase-sense
 		];
 
 		$wgWBRepoSettings['sparqlEndpoint'] = 'https://query.wikidata.org/sparql';
@@ -148,7 +147,7 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBQualityConstraintsSparqlMaxMillis = 5000; // limit SPARQL queries to just 5 seconds for now
 		$wgWBQualityConstraintsTypeCheckMaxEntities = 10; // only check few entities in PHP => fall back to SPARQL very quickly
 		$wgWBQualityConstraintsCacheCheckConstraintsResults = true;
-		$wgWBQualityConstraintsPropertiesWithViolatingQualifiers = [ 'P1855', 'P2271', 'P5192', 'P5193' ]; // T183267
+		$wgWBQualityConstraintsPropertiesWithViolatingQualifiers = [ 'P1855', 'P2271', 'P5192', 'P5193', 'P5977' ]; // T183267
 		$wgSpecialPages['ItemDisambiguation'] = 'SpecialBlankpage';
 		$wgWBRepoSettings['dispatchLagToMaxLagFactor'] = 60;
 
