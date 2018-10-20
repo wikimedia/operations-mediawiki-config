@@ -9422,6 +9422,8 @@ $wgConf->settings = [
 		'steward' => [
 			'centralauth-rename' => true,
 			'userrights-interwiki' => true,
+			'globalgroupmembership' => true, // T207531
+			'globalgrouppermissions' => true, // T207531
 		],
 		'translationadmin' => [
 			'autopatrol' => true, // T142123
