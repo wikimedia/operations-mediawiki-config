@@ -457,6 +457,7 @@ $wgConf->settings = [
 	'pmswikisource' => 'Europe/Rome', // T196763
 	'pnbwiki' => 'Asia/Karachi',
 	'pnbwiktionary' => 'Asia/Karachi',
+	'punjabiwikimedia' => 'Asia/Kolkata',
 	'rmwiki' => 'Europe/Berlin',
 	'romdwikimedia' => 'Europe/Chisinau',
 	'rowiki' => 'Europe/Chisinau',
@@ -1196,6 +1197,7 @@ $wgConf->settings = [
 	'cnwikimedia' => '/static/images/project-logos/cnwikimedia.png', // T98676
 	'maiwikimedia' => '/static/images/project-logos/maiwikimedia.png',
 	'romdwikimedia' => '/static/images/project-logos/romdwikimedia.png',
+	'punjabiwikimedia' => '/static/images/project-logos/punjabiwikimedia.png',
 	'wbwikimedia' => '/static/images/project-logos/wbwikimedia.png', // T162510
 
 	// Special wikis
@@ -1734,6 +1736,7 @@ $wgConf->settings = [
 	'id_internalwikimedia' => [ '1.5x' => '/static/images/project-logos/id_internalwikimedia-1.5x.png', '2x' => '/static/images/project-logos/id_internalwikimedia-2x.png' ],
 	'maiwikimedia' => [ '1.5x' => '/static/images/project-logos/maiwikimedia-1.5x.png', '2x' => '/static/images/project-logos/maiwikimedia-2x.png' ],
 	'ptwikimedia' => [ '1.5x' => '/static/images/project-logos/ptwikimedia-1.5x.png', '2x' => '/static/images/project-logos/ptwikimedia-2x.png' ], // T126832
+	'punjabiwikimedia' => [ '1.5x' => '/static/images/project-logos/punjabiwikimedia-1.5x.png', '2x' => '/static/images/project-logos/punjabiwikimedia-2x.png' ],
 	'romdwikimedia' => [ '1.5x' => '/static/images/project-logos/romdwikimedia-1.5x.png', '2x' => '/static/images/project-logos/romdwikimedia-2x.png' ],
 	'trwikimedia' => [ '1.5x' => '/static/images/project-logos/trwikimedia-1.5x.png', '2x' => '/static/images/project-logos/trwikimedia-2x.png' ],
 	'wbwikimedia' => [ '1.5x' => '/static/images/project-logos/wbwikimedia-1.5x.png', '2x' => '/static/images/project-logos/wbwikimedia-2x.png' ], // T162510
@@ -1995,6 +1998,7 @@ $wgConf->settings = [
 	'outreachwiki' => '//outreach.wikimedia.org',
 	'pa_uswikimedia' => '//pa-us.wikimedia.org',
 	'projectcomwiki' => '//projectcom.wikimedia.org', // T143138
+	'punjabiwikimedia' => '//punjabi.wikimedia.org',
 	'qualitywiki' => '//quality.wikimedia.org',
 	'romdwikimedia' => '//romd.wikimedia.org', // T187184
 	'searchcomwiki' => '//searchcom.wikimedia.org',
@@ -2087,6 +2091,7 @@ $wgConf->settings = [
 	'otrs_wikiwiki' => 'https://otrs-wiki.wikimedia.org',
 	'outreachwiki' => 'https://outreach.wikimedia.org',
 	'pa_uswikimedia' => 'https://pa-us.wikimedia.org',
+	'punjabiwikimedia' => 'https://punjabi.wikimedia.org',
 	'qualitywiki' => 'https://quality.wikimedia.org',
 	'romdwikimedia' => 'https://romd.wikimedia.org', // T187184
 	'searchcomwiki' => 'https://searchcom.wikimedia.org',
@@ -2491,6 +2496,7 @@ $wgConf->settings = [
 	'ptwikinews' => 'Wikinotícias',
 	'ptwikiversity' => 'Wikiversidade',
 	'ptwiktionary' => 'Wikcionário',
+	'punjabiwikimedia' => 'Punjabi Wikimedians',
 	'qualitywiki' => 'Wikimedia Quality',
 	'rmywiki' => 'Vikipidiya',
 	'rowikibooks' => 'Wikimanuale',
@@ -17733,6 +17739,7 @@ $wgConf->settings = [
 	'otrs_wikiwiki' => true, // T63297
 	'outreachwiki' => true,
 	'ruwikimedia' => true, // T121766
+	'punjabiwikimedia' => true, // T204477
 	'sourceswiki' => true, // T201814
 	'specieswiki' => true, // T129888
 	'testwiki' => true,
