@@ -1193,6 +1193,7 @@ $wgConf->settings = [
 	'cnwikimedia' => '/static/images/project-logos/cnwikimedia.png', // T98676
 	'maiwikimedia' => '/static/images/project-logos/maiwikimedia.png',
 	'romdwikimedia' => '/static/images/project-logos/romdwikimedia.png',
+	'punjabiwikimedia' => '/static/images/project-logos/punjabiwikimedia.png',
 	'wbwikimedia' => '/static/images/project-logos/wbwikimedia.png', // T162510
 
 	// Special wikis
@@ -1728,6 +1729,7 @@ $wgConf->settings = [
 	'id_internalwikimedia' => [ '1.5x' => '/static/images/project-logos/id_internalwikimedia-1.5x.png', '2x' => '/static/images/project-logos/id_internalwikimedia-2x.png' ],
 	'maiwikimedia' => [ '1.5x' => '/static/images/project-logos/maiwikimedia-1.5x.png', '2x' => '/static/images/project-logos/maiwikimedia-2x.png' ],
 	'ptwikimedia' => [ '1.5x' => '/static/images/project-logos/ptwikimedia-1.5x.png', '2x' => '/static/images/project-logos/ptwikimedia-2x.png' ], // T126832
+	'punjabiwikimedia' => [ '1.5x' => '/static/images/project-logos/punjabiwikimedia-1.5x.png', '2x' => '/static/images/project-logos/punjabiwikimedia-2x.png' ],
 	'romdwikimedia' => [ '1.5x' => '/static/images/project-logos/romdwikimedia-1.5x.png', '2x' => '/static/images/project-logos/romdwikimedia-2x.png' ],
 	'trwikimedia' => [ '1.5x' => '/static/images/project-logos/trwikimedia-1.5x.png', '2x' => '/static/images/project-logos/trwikimedia-2x.png' ],
 	'wbwikimedia' => [ '1.5x' => '/static/images/project-logos/wbwikimedia-1.5x.png', '2x' => '/static/images/project-logos/wbwikimedia-2x.png' ], // T162510
@@ -17650,6 +17652,7 @@ $wgConf->settings = [
 	'otrs_wikiwiki' => true, // T63297
 	'outreachwiki' => true,
 	'ruwikimedia' => true, // T121766
+	'punjabiwikimedia' => true, // T204477
 	'sourceswiki' => true, // T201814
 	'specieswiki' => true, // T129888
 	'testwiki' => true,
