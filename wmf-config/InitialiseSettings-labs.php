@@ -287,6 +287,11 @@ function wmfLabsSettings() {
 		'wgMinervaCountErrors' => [
 			'default' => true
 		],
+		# Do not run any A/B tests on beta cluster (T206179)
+		'wgMinervaABSamplingRate' => [
+			'default' => 0,
+		],
+
 		'wmgULSPosition' => [
 			# Beta-specific
 			'deploymentwiki' => 'personal',
