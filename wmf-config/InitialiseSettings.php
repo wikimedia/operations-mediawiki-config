@@ -20817,7 +20817,6 @@ $wgConf->settings = [
 
 'wgChangeTagsSchemaMigrationStage' => [
 	'default' => MIGRATION_NEW,
-	'wikidatawiki' => MIGRATION_WRITE_BOTH,
 ],
 
 'wgTagStatisticsNewTable' => [
