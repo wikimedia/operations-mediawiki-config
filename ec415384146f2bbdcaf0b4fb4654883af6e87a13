@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "761af2fe_8970cc56",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-10-22T21:20:20Z",
+      "side": 1,
+      "message": "prefix the task with `beta: ` to mark that this is the beta-cluster only change.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 7
+      },
+      "revId": "ec415384146f2bbdcaf0b4fb4654883af6e87a13",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "778ee7e2_eac16d9d",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 291,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-10-22T21:20:20Z",
+      "side": 1,
+      "message": "we should prefix that value with -, ex: \u0027-wgMinervaABSamplingRate\u0027. \n\nAdding `-` in front will override all values from InitializeSettings.php.\n\nCurrently (most probably) this task is a no-op, as it will keep the lvwiki, jawiki,ruwiki from InitializeSettings.php, it\u0027s going to override only the default, which is currently 0 in InitializeSettings.php.",
+      "range": {
+        "startLine": 291,
+        "startChar": 2,
+        "endLine": 291,
+        "endChar": 26
+      },
+      "revId": "ec415384146f2bbdcaf0b4fb4654883af6e87a13",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
