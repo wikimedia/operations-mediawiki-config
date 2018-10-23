@@ -3191,7 +3191,7 @@ if ( $wmgUseInterwikiSorting ) {
 	wfLoadExtension( 'InterwikiSorting' );
 }
 
-if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {
+if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient || $wmgUseWikibaseMediaInfo ) {
 	include "$wmfConfigDir/Wikibase.php";
 }
 
