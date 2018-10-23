@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "dfeb755b_15709007",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2018-10-23T15:59:10Z",
+      "side": 1,
+      "message": "This solves T207683 for now, right?",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 8
+      },
+      "revId": "d870754ab0d19cda6f54ecb02bcbf628dcb4c6a0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "7bbdc6cd_ab8f9b3b",
         "filename": "wmf-config/Wikibase.php",
         "patchSetId": 1
