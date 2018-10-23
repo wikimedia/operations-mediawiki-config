@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "faaca51b_604b9bf1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-10-23T16:17:40Z",
+      "side": 1,
+      "message": "No, it solves part of it, but not all of it",
+      "parentUuid": "dfeb755b_15709007",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 8
+      },
+      "revId": "d870754ab0d19cda6f54ecb02bcbf628dcb4c6a0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "7bbdc6cd_ab8f9b3b",
         "filename": "wmf-config/Wikibase.php",
         "patchSetId": 1
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "bdf146b0_af71f4b2",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-10-23T16:17:40Z",
+      "side": 1,
+      "message": "Good point!",
+      "parentUuid": "7bbdc6cd_ab8f9b3b",
+      "range": {
+        "startLine": 121,
+        "startChar": 1,
+        "endLine": 121,
+        "endChar": 62
+      },
+      "revId": "d870754ab0d19cda6f54ecb02bcbf628dcb4c6a0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "13b992a8_395b7074",
         "filename": "wmf-config/Wikibase.php",
         "patchSetId": 1
@@ -59,6 +107,30 @@
       "writtenOn": "2018-10-23T15:58:46Z",
       "side": 1,
       "message": "We\u0027ll want these (later) on Commons, but not now.\n\nUltimately there are four kinds of setting:\n* Things you need if you\u0027re running in Client mode. (Move to CS.)\n* Things you need if you\u0027re running in Repo mode. (Move to CS.)\n* Things you need if you\u0027re running in \"Wikidata.org\" repo mode. (Most of this file; maybe re-purpose this file as Wikidata.org config?)\n* Things you need if you\u0027re running in \"Commons SDC\" repo mode. (Right now that\u0027s a very short list; move to CS?)\n\nMaybe we should split these into those groups explicitly?",
+      "range": {
+        "startLine": 136,
+        "startChar": 1,
+        "endLine": 137,
+        "endChar": 59
+      },
+      "revId": "d870754ab0d19cda6f54ecb02bcbf628dcb4c6a0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7ade68b0_ccdfe921",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-10-23T16:17:40Z",
+      "side": 1,
+      "message": "I think that cleanup can happen after",
+      "parentUuid": "13b992a8_395b7074",
       "range": {
         "startLine": 136,
         "startChar": 1,
