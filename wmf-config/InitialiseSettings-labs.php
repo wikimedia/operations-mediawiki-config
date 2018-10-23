@@ -813,5 +813,8 @@ function wmfLabsSettings() {
 			'enwiki' => true,
 			'kowiki' => true,
 		],
+		'wgEnablePartialBlocks' => [
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()
