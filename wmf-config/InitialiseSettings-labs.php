@@ -809,5 +809,8 @@ function wmfLabsSettings() {
 		'wmgWikibaseCachePrefix' => [
 			'commonswiki' => 'commonswiki',
 		],
+		'wgEnablePartialBlocks' => [
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()
