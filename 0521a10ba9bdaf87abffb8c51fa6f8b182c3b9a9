@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d1930510_234d0219",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2018-10-23T09:06:48Z",
+      "side": 1,
+      "message": "Please mention the event in the commit message.",
+      "revId": "0521a10ba9bdaf87abffb8c51fa6f8b182c3b9a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
