@@ -76,44 +76,49 @@ $wmgWBSharedSettings = [];
 
 $wmgWBSharedSettings['maxSerializedEntitySize'] = 2500;
 
-$wmgWBSharedSettings['siteLinkGroups'] = [
-	'wikipedia',
-	'wikibooks',
-	'wikinews',
-	'wikiquote',
-	'wikisource',
-	'wikiversity',
-	'wikivoyage',
-	'wiktionary',
-	'special'
-];
+if ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) {
 
-$wmgWBSharedSettings['specialSiteLinkGroups'] = [
-	'commons',
-	'mediawiki',
-	'meta',
-	'species'
-];
+	$wmgWBSharedSettings['siteLinkGroups'] = [
+		'wikipedia',
+		'wikibooks',
+		'wikinews',
+		'wikiquote',
+		'wikisource',
+		'wikiversity',
+		'wikivoyage',
+		'wiktionary',
+		'special'
+	];
 
-$baseNs = 120;
+	$wmgWBSharedSettings['specialSiteLinkGroups'] = [
+		'commons',
+		'mediawiki',
+		'meta',
+		'species'
+	];
 
-// Define the namespace indexes for repo (and client wikis also need to be aware of these,
-// thus entityNamespaces need to be a shared setting).
-//
-// NOTE: do *not* define WB_NS_ITEM and WB_NS_ITEM_TALK when using a core namespace for items!
-define( 'WB_NS_PROPERTY', $baseNs );
-define( 'WB_NS_PROPERTY_TALK', $baseNs + 1 );
-define( 'WB_NS_QUERY', $baseNs + 2 );
-define( 'WB_NS_QUERY_TALK', $baseNs + 3 );
+	$baseNs = 120;
 
-// Tell Wikibase which namespace to use for which type of entities
-// @note when we enable WikibaseRepo on commons, then having NS_MAIN for items
-// will be a problem, though commons should be aware that Wikidata items are in
-// the main namespace. (see T137444)
-$wmgWBSharedSettings['entityNamespaces'] = [
-	'item' => NS_MAIN,
-	'property' => WB_NS_PROPERTY
-];
+	// Define the namespace indexes for repo (and client wikis also need to be aware of these,
+	// thus entityNamespaces need to be a shared setting).
+	//
+	// NOTE: do *not* define WB_NS_ITEM and WB_NS_ITEM_TALK when using a core namespace for items!
+	define( 'WB_NS_PROPERTY', $baseNs );
+	define( 'WB_NS_PROPERTY_TALK', $baseNs + 1 );
+	// TODO is the query namespace used? Can we remove this?
+	define( 'WB_NS_QUERY', $baseNs + 2 );
+	define( 'WB_NS_QUERY_TALK', $baseNs + 3 );
+
+	// Tell Wikibase which namespace to use for which type of entities
+	// @note when we enable WikibaseRepo on commons, then having NS_MAIN for items
+	// will be a problem, though commons should be aware that Wikidata items are in
+	// the main namespace. (see T137444)
+	$wmgWBSharedSettings['entityNamespaces'] = [
+		'item' => NS_MAIN,
+		'property' => WB_NS_PROPERTY
+	];
+
+}
 
 if ( in_array( $wgDBname, [ 'test2wiki', 'testwiki', 'testwikidatawiki' ] ) ) {
 	$wmgWBSharedSettings['specialSiteLinkGroups'][] = 'testwikidata';
@@ -123,7 +128,7 @@ if ( in_array( $wgDBname, [ 'test2wiki', 'testwiki', 'testwikidatawiki' ] ) ) {
 	$wmgWBSharedSettings['specialSiteLinkGroups'][] = 'wikidata';
 }
 
-if ( $wmgUseWikibaseRepo ) {
+if ( ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) && $wmgUseWikibaseRepo ) {
 	$wgNamespaceAliases['Item'] = NS_MAIN;
 	$wgNamespaceAliases['Item_talk'] = NS_TALK;
 
