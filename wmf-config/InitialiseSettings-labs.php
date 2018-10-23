@@ -809,5 +809,8 @@ function wmfLabsSettings() {
 		'wmgWikibaseCachePrefix' => [
 			'commonswiki' => 'commonswiki',
 		],
+		'WMEUnderstandingFirstDay' => [
+			'kowiki' => true,
+		],
 	];
 } # wmflLabsSettings()
