@@ -806,5 +806,8 @@ function wmfLabsSettings() {
 			'default' => false,
 			'metawiki' => true,
 		],
+		'wmgWikibaseCachePrefix' => [
+			'commonswiki' => 'commonswiki',
+		],
 	];
 } # wmflLabsSettings()
