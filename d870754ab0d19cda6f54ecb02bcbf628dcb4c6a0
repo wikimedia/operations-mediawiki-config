@@ -22,6 +22,29 @@
       "revId": "d870754ab0d19cda6f54ecb02bcbf628dcb4c6a0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "13b992a8_395b7074",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2018-10-23T15:58:46Z",
+      "side": 1,
+      "message": "We\u0027ll want these (later) on Commons, but not now.\n\nUltimately there are four kinds of setting:\n* Things you need if you\u0027re running in Client mode. (Move to CS.)\n* Things you need if you\u0027re running in Repo mode. (Move to CS.)\n* Things you need if you\u0027re running in \"Wikidata.org\" repo mode. (Most of this file; maybe re-purpose this file as Wikidata.org config?)\n* Things you need if you\u0027re running in \"Commons SDC\" repo mode. (Right now that\u0027s a very short list; move to CS?)\n\nMaybe we should split these into those groups explicitly?",
+      "range": {
+        "startLine": 136,
+        "startChar": 1,
+        "endLine": 137,
+        "endChar": 59
+      },
+      "revId": "d870754ab0d19cda6f54ecb02bcbf628dcb4c6a0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
