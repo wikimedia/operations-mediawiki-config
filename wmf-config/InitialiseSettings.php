@@ -20845,7 +20845,7 @@ $wgConf->settings = [
 'wgCommentTableSchemaMigrationStage' => [
 	'default' => MIGRATION_WRITE_BOTH,
 	'group0' => MIGRATION_WRITE_NEW,
-	'test2wiki' => MIGRATION_WRITE_NEW,
+	'group1' => MIGRATION_WRITE_NEW,
 ],
 
 'wgChangeTagsSchemaMigrationStage' => [
