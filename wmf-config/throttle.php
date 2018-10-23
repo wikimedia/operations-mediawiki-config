@@ -43,14 +43,6 @@ $wmgThrottlingExceptions[] = [ // T206408
 	'value' => 50 // 30 expected
 ];
 
-$wmgThrottlingExceptions[] = [ // T206914
-	'from' => '2018-10-17T11:00 UTC',
-	'to' => '2018-10-17T17:00',
-	'IP' => '190.96.71.19',
-	'dbname' => [ 'eswiki', 'enwiki', 'commonswiki', 'wikidatawiki' ],
-	'value' => 100, // 100 expected
-];
-
 $wmgThrottlingExceptions[] = [ // T207043
 	'from' => '2018-10-24T08:00 -4:00',
 	'to' => '2018-10-24T17:00 -4:00',
