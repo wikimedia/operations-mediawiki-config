@@ -140,6 +140,30 @@
       "revId": "d870754ab0d19cda6f54ecb02bcbf628dcb4c6a0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "59e1f2b3_3a8c83d1",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2018-10-23T17:28:58Z",
+      "side": 1,
+      "message": "Yeah, was thinking ahead. Will move to a task.",
+      "parentUuid": "7ade68b0_ccdfe921",
+      "range": {
+        "startLine": 136,
+        "startChar": 1,
+        "endLine": 137,
+        "endChar": 59
+      },
+      "revId": "d870754ab0d19cda6f54ecb02bcbf628dcb4c6a0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
