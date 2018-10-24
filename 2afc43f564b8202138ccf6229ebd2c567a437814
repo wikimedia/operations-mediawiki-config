@@ -22,6 +22,30 @@
       "revId": "2afc43f564b8202138ccf6229ebd2c567a437814",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a01a4727_5f207814",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-10-24T16:17:52Z",
+      "side": 1,
+      "message": "That is a good question again, that I would like to tackle once we have this working. :)",
+      "parentUuid": "2862ca03_ad2735c7",
+      "range": {
+        "startLine": 81,
+        "startChar": 2,
+        "endLine": 81,
+        "endChar": 21
+      },
+      "revId": "2afc43f564b8202138ccf6229ebd2c567a437814",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
