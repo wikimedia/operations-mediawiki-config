@@ -810,6 +810,7 @@ function wmfLabsSettings() {
 			'commonswiki' => 'commonswiki',
 		],
 		'WMEUnderstandingFirstDay' => [
+			'enwiki' => true,
 			'kowiki' => true,
 		],
 	];
