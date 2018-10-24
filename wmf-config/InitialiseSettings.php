@@ -17950,6 +17950,11 @@ $wgConf->settings = [
 	'testwiki' => true,
 	'enwiki' => true, // T206149
 ],
+'wgPageTriageEnableCopyvio' => [
+	'default' => false,
+	'testwiki' => true,
+	'enwiki' => true,
+],
 
 'wmgEnableInterwiki' => [
 	'default' => true,
