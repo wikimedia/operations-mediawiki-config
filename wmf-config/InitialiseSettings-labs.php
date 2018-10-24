@@ -809,7 +809,7 @@ function wmfLabsSettings() {
 		'wmgWikibaseCachePrefix' => [
 			'commonswiki' => 'commonswiki',
 		],
-		'WMEUnderstandingFirstDay' => [
+		'wgWMEUnderstandingFirstDay' => [
 			'enwiki' => true,
 			'kowiki' => true,
 		],
