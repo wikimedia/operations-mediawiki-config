@@ -20932,44 +20932,10 @@ $wgConf->settings = [
 	'fixcopyrightwiki' => true,
 ],
 
-'wgCSPReportOnlyHeader' => [
+'wmgUseCSPReportOnly' => [
 	'default' => false,
-	'group0' => [
-		'useNonces' => false,
-		'includeCORS' => false,
-		'default-src' => [
-			'*.wikimedia.org',
-			'*.wikipedia.org',
-			'*.wikinews.org',
-			'*.wiktionary.org',
-			'*.wikibooks.org',
-			'*.wikiversity.org',
-			'*.wikisource.org',
-			'wikisource.org',
-			'*.wikiquote.org',
-			'*.wikidata.org',
-			'*.wikivoyage.org',
-			'*.mediawiki.org',
-		],
-		'script-src' => [
-			// A future refinement might be
-			// to not allow wildcard on *.wikimedia.org
-			// but explicitly list instead
-			'*.wikimedia.org',
-			'*.wikipedia.org',
-			'*.wikinews.org',
-			'*.wiktionary.org',
-			'*.wikibooks.org',
-			'*.wikiversity.org',
-			'*.wikisource.org',
-			'wikisource.org',
-			'*.wikiquote.org',
-			'*.wikidata.org',
-			'*.wikivoyage.org',
-			'*.mediawiki.org',
-		],
-
-	],
+	'group0' => true,
+	'outreachwiki' => true,
 ],
 
 ];
