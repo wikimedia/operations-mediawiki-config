@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "b1eb88b0_8d60b3e5",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-10-24T15:10:52Z",
+      "side": 1,
+      "message": "I think we need to investigate this further.",
+      "parentUuid": "7c7a49f7_4c1d516a",
+      "range": {
+        "startLine": 81,
+        "startChar": 1,
+        "endLine": 99,
+        "endChar": 0
+      },
+      "revId": "1d6e7e47996b46a1a40e8ab9ac89bb3ea0d6d234",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "1d2d450c_0259b879",
         "filename": "wmf-config/Wikibase.php",
         "patchSetId": 1
