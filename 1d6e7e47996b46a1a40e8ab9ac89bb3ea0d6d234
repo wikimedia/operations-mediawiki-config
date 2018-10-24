@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "ac1d6c5a_f309000a",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2018-10-24T15:20:16Z",
+      "side": 1,
+      "message": "I pulled a locally-written version of this patch with the above stuff outside the if onto debug, and it still fataled on every page (same error). \n\nThat means the error comes from the code below this, which is some `define`s and setting `$wmgWBSharedSettings[\u0027entityNamespaces\u0027]`, so it sounds like something is reading entityNamespaces client-side.",
+      "parentUuid": "b1eb88b0_8d60b3e5",
+      "range": {
+        "startLine": 81,
+        "startChar": 1,
+        "endLine": 99,
+        "endChar": 0
+      },
+      "revId": "1d6e7e47996b46a1a40e8ab9ac89bb3ea0d6d234",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "1d2d450c_0259b879",
         "filename": "wmf-config/Wikibase.php",
         "patchSetId": 1
