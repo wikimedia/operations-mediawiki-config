@@ -18492,10 +18492,13 @@ $wgConf->settings = [
 	'related-articles-footer-blacklisted-skins' => [],
 ],
 
+// Being deprecated: T202761
 'wmgUseRelatedSites' => [
 	'default' => false,
-	'wikivoyage' => true,
-	'zhwikivoyage' => false, // T174979
+	'enwikivoyage' => true,
+	'fawikivoyage' => true,
+	'ptwikivoyage' => true,
+	'rowikivoyage' => true,
 ],
 
 'wmgUseRevisionSlider' => [
