@@ -20936,6 +20936,7 @@ $wgConf->settings = [
 	'default' => false,
 	'group0' => true,
 	'outreachwiki' => true,
+	'small' => true,
 ],
 
 ];
