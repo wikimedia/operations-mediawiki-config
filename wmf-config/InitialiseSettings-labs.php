@@ -798,6 +798,10 @@ function wmfLabsSettings() {
 			'default' => false,
 			'enwiki' => true,
 		],
+		'PageTriageEnableCopyvio' => [
+			'default' => false,
+			'enwiki' => true,
+		],
 		'wmgUseSkinPerPage' => [
 			'default' => false,
 			'metawiki' => true,
