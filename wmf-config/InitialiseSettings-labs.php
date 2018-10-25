@@ -494,7 +494,7 @@ function wmfLabsSettings() {
 		],
 
 		'wmgUseWikibaseMediaInfo' => [
-			'commonswiki' => false,
+			'commonswiki' => true,
 		],
 
 		'wgMediaInfoEnable' => [
