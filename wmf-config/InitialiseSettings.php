@@ -18745,6 +18745,11 @@ $wgConf->settings = [
 	'wiktionary' => true,
 ],
 
+'wgLexemeEnableRepo' => [
+	'default' => false,
+	'wikidata' => true,
+],
+
 'wmgUseArticlePlaceholder' => [
 	'default' => false,
 	'bnwiki' => true,
