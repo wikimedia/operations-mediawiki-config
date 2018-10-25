@@ -110,6 +110,8 @@ define( 'WB_NS_PROPERTY_TALK', $baseWikidataNs + 1 );
 // TODO is the query namespace used? Can we remove this?
 define( 'WB_NS_QUERY', $baseWikidataNs + 2 );
 define( 'WB_NS_QUERY_TALK', $baseWikidataNs + 3 );
+define( 'WB_NS_LEXEME', 146 );
+define( 'WB_NS_LEXEME_TALK', 147 );
 
 // Tell Wikibase which namespace to use for which type of entities
 // @note when we enable WikibaseRepo on commons, then having NS_MAIN for items
@@ -119,6 +121,7 @@ $wmgWBNamespaceSettings = [
 	'wikidata' => [
 		'item' => NS_MAIN,
 		'property' => WB_NS_PROPERTY,
+		'lexeme' => WB_NS_LEXEME,
 	],
 ];
 
