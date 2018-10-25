@@ -20941,6 +20941,11 @@ $wgConf->settings = [
 	'small' => true,
 ],
 
+'wmgUseCSPReportOnlyHasSession' => [
+	'default' => false,
+	'enwikiquote' => true,
+],
+
 ];
 
 ### WMF Labs override #####

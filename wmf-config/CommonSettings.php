@@ -3739,42 +3739,59 @@ foreach ( $wgGroupPermissions as $group => $_ ) {
 	}
 }
 
-if ( $wmgUseCSPReportOnly ) {
-	$wgCSPReportOnlyHeader = [
-		'useNonces' => false,
-		'includeCORS' => false,
-		'default-src' => [
-			'*.wikimedia.org',
-			'*.wikipedia.org',
-			'*.wikinews.org',
-			'*.wiktionary.org',
-			'*.wikibooks.org',
-			'*.wikiversity.org',
-			'*.wikisource.org',
-			'wikisource.org',
-			'*.wikiquote.org',
-			'*.wikidata.org',
-			'*.wikivoyage.org',
-			'*.mediawiki.org',
-		],
-		'script-src' => [
-			// A future refinement might be
-			// to not allow wildcard on *.wikimedia.org
-			// but explicitly list instead
-			'*.wikimedia.org',
-			'*.wikipedia.org',
-			'*.wikinews.org',
-			'*.wiktionary.org',
-			'*.wikibooks.org',
-			'*.wikiversity.org',
-			'*.wikisource.org',
-			'wikisource.org',
-			'*.wikiquote.org',
-			'*.wikidata.org',
-			'*.wikivoyage.org',
-			'*.mediawiki.org',
-		],
-	];
+if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession ) {
+	$wgExtensionFunctions[] = function () {
+		global $wgCSPReportOnlyHeader, $wmgUseCSPReportOnly, $wgCommadLineMode;
+		if ( !$wmgUseCSPReportOnly ) {
+			// This means that $wmgUseCSPReportOnlyHasSession
+			// is set, so only logged in users should trigger this.
+			if (
+				defined( 'MW_NO_SESSION' ) ||
+				$wgCommandLineMode ||
+				!MediaWiki\Session\SessionManager::getGlobalSession()->isPersistent()
+			) {
+				// There's a session, so don't set CSP, as we care more
+				// about actual users, and this allows quick revert since
+				// not cached in varnish
+				return;
+			}
+		}
+		$wgCSPReportOnlyHeader = [
+			'useNonces' => false,
+			'includeCORS' => false,
+			'default-src' => [
+				'*.wikimedia.org',
+				'*.wikipedia.org',
+				'*.wikinews.org',
+				'*.wiktionary.org',
+				'*.wikibooks.org',
+				'*.wikiversity.org',
+				'*.wikisource.org',
+				'wikisource.org',
+				'*.wikiquote.org',
+				'*.wikidata.org',
+				'*.wikivoyage.org',
+				'*.mediawiki.org',
+			],
+			'script-src' => [
+				// A future refinement might be
+				// to not allow wildcard on *.wikimedia.org
+				// but explicitly list instead
+				'*.wikimedia.org',
+				'*.wikipedia.org',
+				'*.wikinews.org',
+				'*.wiktionary.org',
+				'*.wikibooks.org',
+				'*.wikiversity.org',
+				'*.wikisource.org',
+				'wikisource.org',
+				'*.wikiquote.org',
+				'*.wikidata.org',
+				'*.wikivoyage.org',
+				'*.mediawiki.org',
+			],
+		];
+	};
 }
 
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
