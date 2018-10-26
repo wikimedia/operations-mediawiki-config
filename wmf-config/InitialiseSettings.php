@@ -20450,6 +20450,7 @@ $wgConf->settings = [
 				'desktop' => [ 'stable' ],
 			],
 			'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
+			'shuffleAnswersDisplay' => true,
 		],
 	],
 ],
