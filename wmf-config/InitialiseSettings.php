@@ -20943,7 +20943,7 @@ $wgConf->settings = [
 
 'wmgUseCSPReportOnlyHasSession' => [
 	'default' => false,
-	'enwikiquote' => true,
+	'group1' => true,
 ],
 
 ];

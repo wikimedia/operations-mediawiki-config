@@ -3750,7 +3750,7 @@ if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession ) {
 				$wgCommandLineMode ||
 				!MediaWiki\Session\SessionManager::getGlobalSession()->isPersistent()
 			) {
-				// There's a session, so don't set CSP, as we care more
+				// There is no session, so don't set CSP, as we care more
 				// about actual users, and this allows quick revert since
 				// not cached in varnish
 				return;
