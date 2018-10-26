@@ -5546,13 +5546,7 @@ $wgConf->settings = [
 	'+private' => [
 		'slow-parse' => false,  // Don't log slow parse on private wikis, so we can make the slow parse log public.
 	],
-	'+outreachwiki' => [
-		'authorization' => [ 'udp2log' => 'info', 'logstash' => false ],
-	],
-	'+loginwiki' => [
-		'authorization' => [ 'udp2log' => 'info', 'logstash' => false ],
-	],
-	'+donatewiki' => [
+	'+group1' => [
 		'authorization' => [ 'udp2log' => 'info', 'logstash' => false ],
 	],
 	'+group0' => [
