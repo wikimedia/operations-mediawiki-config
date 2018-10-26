@@ -20946,6 +20946,13 @@ $wgConf->settings = [
 	'group1' => true,
 	'medium' => true,
 	'arwiki' => true,
+	'fawiki' => true,
+	'frwiki' => true,
+	'svwiki' => true,
+	'eswiki' => true,
+	'ruwiki' => true,
+	'zhwiki' => true,
+	'dewiki' => true,
 ],
 
 ];
