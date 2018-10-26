@@ -3741,7 +3741,7 @@ foreach ( $wgGroupPermissions as $group => $_ ) {
 
 if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession ) {
 	$wgExtensionFunctions[] = function () {
-		global $wgCSPReportOnlyHeader, $wmgUseCSPReportOnly, $wgCommadLineMode;
+		global $wgCSPReportOnlyHeader, $wmgUseCSPReportOnly, $wgCommandLineMode;
 		if ( !$wmgUseCSPReportOnly ) {
 			// This means that $wmgUseCSPReportOnlyHasSession
 			// is set, so only logged in users should trigger this.
