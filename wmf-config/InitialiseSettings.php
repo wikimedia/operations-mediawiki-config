@@ -5552,6 +5552,12 @@ $wgConf->settings = [
 	'+loginwiki' => [
 		'authorization' => [ 'udp2log' => 'info', 'logstash' => false ],
 	],
+	'+donatewiki' => [
+		'authorization' => [ 'udp2log' => 'info', 'logstash' => false ],
+	],
+	'+group0' => [
+		'authorization' => [ 'udp2log' => 'info', 'logstash' => false ],
+	],
 ],
 # @} end of wmgMonologChannels
 
