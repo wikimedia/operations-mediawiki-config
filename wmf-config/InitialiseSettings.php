@@ -5552,6 +5552,9 @@ $wgConf->settings = [
 	'+group0' => [
 		'authorization' => [ 'udp2log' => 'info', 'logstash' => false ],
 	],
+	'+arwiki' => [
+		'authorization' => [ 'udp2log' => 'info', 'logstash' => false ],
+	],
 ],
 # @} end of wmgMonologChannels
 
