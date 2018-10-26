@@ -9434,6 +9434,10 @@ $wgConf->settings = [
 			'userrights-interwiki' => true,
 			'globalgroupmembership' => true, // T207531
 			'globalgrouppermissions' => true, // T207531
+			'centralauth-lock' => true, // T208035
+			'centralauth-oversight' => true, // T208035
+			'centralauth-unmerge' => true, // T208035
+			'globalblock' => true, // T208035
 		],
 		'translationadmin' => [
 			'autopatrol' => true, // T142123
@@ -10244,6 +10248,10 @@ $wgConf->settings = [
 		],
 		'steward' => [
 			'noratelimit' => true,
+			'centralauth-lock' => false, // T208035
+			'centralauth-oversight' => false, // T208035
+			'centralauth-unmerge' => false, // T208035
+			'globalblock' => false, // T208035
 		],
 		'import' => [ 'importupload' => true, 'import' => true ],
 		'transwiki' => [ 'import' => true ],
