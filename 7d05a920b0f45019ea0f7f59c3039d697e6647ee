@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c852989a_c03b708a",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3753,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2018-10-26T01:13:36Z",
+      "side": 1,
+      "message": "...no session...",
+      "range": {
+        "startLine": 3753,
+        "startChar": 15,
+        "endLine": 3753,
+        "endChar": 24
+      },
+      "revId": "7d05a920b0f45019ea0f7f59c3039d697e6647ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
