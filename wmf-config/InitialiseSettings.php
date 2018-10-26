@@ -20945,6 +20945,7 @@ $wgConf->settings = [
 	'default' => false,
 	'group1' => true,
 	'medium' => true,
+	'arwiki' => true,
 ],
 
 ];
