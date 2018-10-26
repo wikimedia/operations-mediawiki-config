@@ -20934,6 +20934,8 @@ $wgConf->settings = [
 	'fixcopyrightwiki' => true,
 ],
 
+// This is wikis that have it for all users
+// vs below where its only for users with sessions.
 'wmgUseCSPReportOnly' => [
 	'default' => false,
 	'group0' => true,
@@ -20942,18 +20944,7 @@ $wgConf->settings = [
 ],
 
 'wmgUseCSPReportOnlyHasSession' => [
-	'default' => false,
-	'group1' => true,
-	'medium' => true,
-	'arwiki' => true,
-	'fawiki' => true,
-	'frwiki' => true,
-	'svwiki' => true,
-	'eswiki' => true,
-	'ruwiki' => true,
-	'zhwiki' => true,
-	'dewiki' => true,
-	'enwiki' => true,
+	'default' => true,
 ],
 
 ];
