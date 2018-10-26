@@ -20944,6 +20944,7 @@ $wgConf->settings = [
 'wmgUseCSPReportOnlyHasSession' => [
 	'default' => false,
 	'group1' => true,
+	'medium' => true,
 ],
 
 ];

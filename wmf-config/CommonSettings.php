@@ -3772,6 +3772,8 @@ if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession ) {
 				'*.wikidata.org',
 				'*.wikivoyage.org',
 				'*.mediawiki.org',
+				// Needed for Math. Remove when/if math is fixed.
+				'wikimedia.org',
 			],
 			'script-src' => [
 				// A future refinement might be
