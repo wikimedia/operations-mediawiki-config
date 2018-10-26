@@ -20953,6 +20953,7 @@ $wgConf->settings = [
 	'ruwiki' => true,
 	'zhwiki' => true,
 	'dewiki' => true,
+	'enwiki' => true,
 ],
 
 ];
