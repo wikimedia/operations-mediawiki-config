@@ -5546,6 +5546,12 @@ $wgConf->settings = [
 	'+private' => [
 		'slow-parse' => false,  // Don't log slow parse on private wikis, so we can make the slow parse log public.
 	],
+	'+outreachwiki' => [
+		'authentication' => [ 'udp2log' => 'info', 'logstash' => false ],
+	],
+	'+loginwiki' => [
+		'authentication' => [ 'udp2log' => 'info', 'logstash' => false ],
+	],
 ],
 # @} end of wmgMonologChannels
 
