@@ -3436,6 +3436,8 @@ if ( $wmgUseOATHAuth ) {
 		}
 	}
 
+	$wgGroupPermissions['sysop']['oathauth-disable-for-user'] = false;
+
 	if ( $wmgUseCentralAuth ) {
 		$wgOATHAuthAccountPrefix = 'Wikimedia';
 		$wgOATHAuthDatabase = 'centralauth';
