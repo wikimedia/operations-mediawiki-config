@@ -304,6 +304,11 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['entityUsageModifierLimits'] = [ 'D' => 10, 'L' => 10, 'C' => 33 ];
 }
 
+// On commons do not yet register any entity types.
+if ( $wgDBname === 'commonswiki' && $wmgUseWikibaseMediaInfo ) {
+	$wgWBRepoSettings['entityNamespaces'] = [];
+}
+
 unset( $wmgWBSharedCacheKey );
 unset( $wmgWBSharedSettings );
 
