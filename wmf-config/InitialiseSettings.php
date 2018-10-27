@@ -18947,10 +18947,6 @@ $wgConf->settings = [
 	'wikidata' => true,
 ],
 
-'wmgUseWikibaseQualityExternalValidation' => [
-	'default' => false,
-],
-
 'wmgUseWikibaseLexeme' => [
 	'default' => false,
 	'testwikidatawiki' => true,
