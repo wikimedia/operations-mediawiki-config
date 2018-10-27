@@ -76,28 +76,24 @@ $wmgWBSharedSettings = [];
 
 $wmgWBSharedSettings['maxSerializedEntitySize'] = 2500;
 
-if ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) {
+$wmgWBSharedSettings['siteLinkGroups'] = [
+	'wikipedia',
+	'wikibooks',
+	'wikinews',
+	'wikiquote',
+	'wikisource',
+	'wikiversity',
+	'wikivoyage',
+	'wiktionary',
+	'special'
+];
 
-	$wmgWBSharedSettings['siteLinkGroups'] = [
-		'wikipedia',
-		'wikibooks',
-		'wikinews',
-		'wikiquote',
-		'wikisource',
-		'wikiversity',
-		'wikivoyage',
-		'wiktionary',
-		'special'
-	];
-
-	$wmgWBSharedSettings['specialSiteLinkGroups'] = [
-		'commons',
-		'mediawiki',
-		'meta',
-		'species'
-	];
-
-}
+$wmgWBSharedSettings['specialSiteLinkGroups'] = [
+	'commons',
+	'mediawiki',
+	'meta',
+	'species'
+];
 
 $baseWikidataNs = 120;
 
