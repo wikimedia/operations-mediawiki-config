@@ -18769,6 +18769,12 @@ $wgConf->settings = [
 	'wiktionary' => true,
 ],
 
+'wmgUseWikibaseWikimediaBadges' => [
+	'default' => false,
+	'wikidataclient' => true,
+	'wiktionary' => true,
+],
+
 'wgLexemeEnableRepo' => [
 	'default' => false,
 	'wikidata' => true,
@@ -18940,6 +18946,16 @@ $wgConf->settings = [
 // T172914
 'wmgWikibaseFineGrainedLuaTracking' => [
 	'default' => true,
+],
+
+'wmgUseWikibaseWikidataOrg' => [
+	'default' => false,
+	'wikidata' => true,
+],
+
+'wmgUseWikibasePropertySuggester' => [
+	'default' => false,
+	'wikidata' => true,
 ],
 
 'wmgUseWikibaseQuality' => [
