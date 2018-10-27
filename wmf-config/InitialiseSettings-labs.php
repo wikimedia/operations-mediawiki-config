@@ -453,11 +453,6 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
-		'wmgWikibaseAllowLocalShortDesc' => [
-			'default' => false,
-			'enwiki' => true,
-		],
-
 		'wmgWikibaseMaxItemIdForNewItemIdHtmlFormatter' => [
 			'default' => 0,
 			'wikidatawiki' => 10000000,
