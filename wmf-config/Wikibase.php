@@ -250,10 +250,6 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings['showExternalRecentChanges'] = false;
 	}
 
-	foreach ( $wmgWikibaseClientSettings as $setting => $value ) {
-		$wgWBClientSettings[$setting] = $value;
-	}
-
 	$wgWBClientSettings['allowLocalShortDesc'] = $wmgWikibaseAllowLocalShortDesc;
 	$wgWBClientSettings['allowDataTransclusion'] = $wmgWikibaseEnableData;
 	$wgWBClientSettings['allowDataAccessInUserLanguage'] = $wmgWikibaseAllowDataAccessInUserLanguage;
