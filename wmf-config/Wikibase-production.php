@@ -28,14 +28,6 @@ if ( $wmgUseWikibaseRepo ) {
 			'P185',
 		];
 
-		$wgWBRepoSettings['statementSections']['property'] = [
-			'statements' => null,
-			'constraints' => [
-				'type' => 'propertySet',
-				'propertyIds' => [ 'P400' ],
-			],
-		];
-
 		$wgWBQualityConstraintsSparqlEndpoint = 'http://wdqs-internal.discovery.wmnet/sparql';
 		$wgWBQualityConstraintsPropertyConstraintId = 'P51064';
 		$wgWBQualityConstraintsFormatConstraintId = 'Q100086';
@@ -136,13 +128,6 @@ if ( $wmgUseWikibaseRepo ) {
 			'P491',
 		];
 
-		$wgWBRepoSettings['statementSections']['property'] = [
-			'statements' => null,
-			'constraints' => [
-				'type' => 'propertySet',
-				'propertyIds' => [ 'P2302' ],
-			],
-		];
 
 		$wgWBQualityConstraintsSparqlEndpoint = 'http://wdqs-internal.discovery.wmnet/sparql';
 		$wgWBQualityConstraintsSparqlMaxMillis = 5000; // limit SPARQL queries to just 5 seconds for now
