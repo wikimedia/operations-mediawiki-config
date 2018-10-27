@@ -5731,6 +5731,12 @@ $wgConf->settings = [
 		100 => 'Multimedia',
 		101 => 'Multimedia_talk',
 	],
+	'wikidata' => [
+		120 => 'Property',
+		121 => 'Property_talk',
+		122 => 'Query',
+		123 => 'Query_talk',
+	],
 	# @} end of special wikis
 
 	// Wikipedia @{
