@@ -61,8 +61,6 @@ $wgLockManagers[] = [
 	]
 ];
 
-$wmgWBSharedSettings = [];
-
 if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['idBlacklist'] = $wmgWikibaseIdBlacklist;
 	$wgWBRepoSettings['disabledDataTypes'] = $wmgWikibaseDisabledDataTypes;
@@ -73,8 +71,6 @@ if ( $wmgUseWikibaseRepo ) {
 if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['disabledAccessEntityTypes'] = $wmgWikibaseDisabledAccessEntityTypes;
 }
-
-$wmgWBSharedSettings['maxSerializedEntitySize'] = $wmgWikibaseMaxSerializedEntitySize;
 
 $baseWikidataNs = 120;
 
@@ -112,7 +108,7 @@ if ( ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) && $wm
 	$wgExtraNamespaces[WB_NS_QUERY] = 'Query';
 	$wgExtraNamespaces[WB_NS_QUERY_TALK] = 'Query_talk';
 
-	$wgWBRepoSettings = $wmgWBSharedSettings + $wgWBRepoSettings;
+	$wgWBRepoSettings['maxSerializedEntitySize'] = $wmgWikibaseMaxSerializedEntitySize;
 
 	$wgWBRepoSettings['siteLinkGroups'] = $wmgWBSiteLinkGroups;
 	$wgWBRepoSettings['specialSiteLinkGroups'] = $wmgWikibaseRepoSpecialSiteLinkGroups;
@@ -198,7 +194,7 @@ if ( ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) && $wm
 }
 
 if ( $wmgUseWikibaseClient ) {
-	$wgWBClientSettings = $wmgWBSharedSettings + $wgWBClientSettings;
+	$wgWBClientSettings['maxSerializedEntitySize'] = $wmgWikibaseMaxSerializedEntitySize;
 
 	$wgWBClientSettings['siteLinkGroups'] = $wmgWBSiteLinkGroups;
 	$wgWBClientSettings['specialSiteLinkGroups'] = $wmgWikibaseClientSpecialSiteLinkGroups;
