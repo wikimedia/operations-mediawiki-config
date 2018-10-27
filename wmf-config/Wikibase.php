@@ -72,6 +72,7 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['maxSerializedEntitySize'] = $wmgWikibaseMaxSerializedEntitySize;
 	$wgWBRepoSettings['siteLinkGroups'] = $wmgWBSiteLinkGroups;
 	$wgWBRepoSettings['specialSiteLinkGroups'] = $wmgWikibaseRepoSpecialSiteLinkGroups;
+	$wgWBRepoSettings['statementSections'] = $wmgWikibaseRepoStatementSections;
 
 	$wgWBRepoSettings['normalizeItemByTitlePageNames'] = true;
 
@@ -155,16 +156,6 @@ $wmgWBNamespaceSettings = [
 
 if ( ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) && $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['entityNamespaces'] = $wmgWBNamespaceSettings['wikidata'];
-
-	$wgWBRepoSettings['statementSections'] = [
-		'item' => [
-			'statements' => null,
-			'identifiers' => [
-				'type' => 'dataType',
-				'dataTypes' => [ 'external-id' ],
-			],
-		],
-	];
 
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		$wgWBRepoSettings['clientDbList'] = [ 'testwiki', 'test2wiki', 'testwikidatawiki' ];

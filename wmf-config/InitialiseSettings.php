@@ -18780,6 +18780,42 @@ $wgConf->settings = [
 	'wikidata' => true,
 ],
 
+'wmgWikibaseRepoStatementSections' => [
+	'default' => [],
+	'wikidatawiki' => [
+		'item' => [
+			'statements' => null,
+			'identifiers' => [
+				'type' => 'dataType',
+				'dataTypes' => [ 'external-id' ],
+			],
+		],
+		'property' => [
+			'statements' => null,
+			'constraints' => [
+				'type' => 'propertySet',
+				'propertyIds' => [ 'P2302' ],
+			],
+		],
+	],
+	'testwikidatawiki' => [
+		'item' => [
+			'statements' => null,
+			'identifiers' => [
+				'type' => 'dataType',
+				'dataTypes' => [ 'external-id' ],
+			],
+		],
+		'property' => [
+			'statements' => null,
+			'constraints' => [
+				'type' => 'propertySet',
+				'propertyIds' => [ 'P400' ],
+			],
+		],
+	],
+],
+
 'wmgWikibaseRepoSpecialSiteLinkGroups' => [
 	'default' => [],
 	'wikidatawiki' => [
