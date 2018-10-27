@@ -102,12 +102,6 @@ if ( ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) && $wm
 	$wgNamespaceAliases['Item'] = NS_MAIN;
 	$wgNamespaceAliases['Item_talk'] = NS_TALK;
 
-	// Define the namespaces
-	$wgExtraNamespaces[WB_NS_PROPERTY] = 'Property';
-	$wgExtraNamespaces[WB_NS_PROPERTY_TALK] = 'Property_talk';
-	$wgExtraNamespaces[WB_NS_QUERY] = 'Query';
-	$wgExtraNamespaces[WB_NS_QUERY_TALK] = 'Query_talk';
-
 	$wgWBRepoSettings['maxSerializedEntitySize'] = $wmgWikibaseMaxSerializedEntitySize;
 
 	$wgWBRepoSettings['siteLinkGroups'] = $wmgWBSiteLinkGroups;
