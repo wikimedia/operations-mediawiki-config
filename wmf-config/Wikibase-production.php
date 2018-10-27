@@ -207,11 +207,6 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['disabledUsageAspects'] = $wmgWikibaseDisabledUsageAspects;
 	$wgWBClientSettings['fineGrainedLuaTracking'] = $wmgWikibaseFineGrainedLuaTracking;
 
-	// T171027
-	if ( in_array( $wgDBname, [ 'commonswiki' ] ) ) {
-		$wgWBClientSettings['injectRecentChanges'] = false;
-	}
-
 	$wgWBClientSettings['useTermsTableSearchFields'] = false;
 
 }
