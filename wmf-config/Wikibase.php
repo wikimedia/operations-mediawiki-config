@@ -247,7 +247,6 @@ if ( $wmgUseWikibaseClient ) {
 		];
 
 		$wgWBClientSettings['languageLinkSiteGroup'] = 'wikipedia';
-		$wgWBClientSettings['injectRecentChanges'] = false;
 		$wgWBClientSettings['showExternalRecentChanges'] = false;
 	}
 
@@ -259,6 +258,7 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['allowDataTransclusion'] = $wmgWikibaseEnableData;
 	$wgWBClientSettings['allowDataAccessInUserLanguage'] = $wmgWikibaseAllowDataAccessInUserLanguage;
 	$wgWBClientSettings['entityAccessLimit'] = $wmgWikibaseEntityAccessLimit;
+	$wgWBClientSettings['injectRecentChanges'] = $wmgWikibaseClientInjectRecentChanges;
 
 	$wgWBClientSettings['sharedCacheKeyPrefix'] = $wmgWBSharedCacheKey;
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
