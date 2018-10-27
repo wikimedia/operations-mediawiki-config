@@ -32,17 +32,6 @@ if ( !empty( $wmgUseWikibaseClient ) ) {
 	}
 }
 
-if ( $wmgUseWikibaseRepo ) {
-	$wgWBRepoSettings['idBlacklist'] = $wmgWikibaseIdBlacklist;
-	$wgWBRepoSettings['disabledDataTypes'] = $wmgWikibaseDisabledDataTypes;
-	$wgWBRepoSettings['tmpMaxItemIdForNewItemIdHtmlFormatter'] = $wmgWikibaseMaxItemIdForNewItemIdHtmlFormatter;
-	$wgWBRepoSettings['entityDataFormats'] = $wmgWikibaseEntityDataFormats;
-}
-
-if ( $wmgUseWikibaseClient ) {
-	$wgWBClientSettings['disabledAccessEntityTypes'] = $wmgWikibaseDisabledAccessEntityTypes;
-}
-
 // This allows cache invalidations to be in sync with deploys
 // and not shared across different versions of wikibase.
 // e.g. wikibase_shared/1_31_0-wmf_2-testwikidatawiki0 for test wikis
@@ -74,7 +63,18 @@ $wgLockManagers[] = [
 
 $wmgWBSharedSettings = [];
 
-$wmgWBSharedSettings['maxSerializedEntitySize'] = 2500;
+if ( $wmgUseWikibaseRepo ) {
+	$wgWBRepoSettings['idBlacklist'] = $wmgWikibaseIdBlacklist;
+	$wgWBRepoSettings['disabledDataTypes'] = $wmgWikibaseDisabledDataTypes;
+	$wgWBRepoSettings['tmpMaxItemIdForNewItemIdHtmlFormatter'] = $wmgWikibaseMaxItemIdForNewItemIdHtmlFormatter;
+	$wgWBRepoSettings['entityDataFormats'] = $wmgWikibaseEntityDataFormats;
+}
+
+if ( $wmgUseWikibaseClient ) {
+	$wgWBClientSettings['disabledAccessEntityTypes'] = $wmgWikibaseDisabledAccessEntityTypes;
+}
+
+$wmgWBSharedSettings['maxSerializedEntitySize'] = $wmgWikibaseMaxSerializedEntitySize;
 
 $wmgWBSiteLinkGroups = [
 	'wikipedia',
