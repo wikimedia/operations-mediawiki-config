@@ -28,14 +28,6 @@ if ( $wmgUseWikibaseRepo ) {
 			'P185',
 		];
 
-		$wgWBRepoSettings['statementSections']['property'] = [
-			'statements' => null,
-			'constraints' => [
-				'type' => 'propertySet',
-				'propertyIds' => [ 'P400' ],
-			],
-		];
-
 		$wgWBQualityConstraintsSparqlEndpoint = 'http://wdqs-internal.discovery.wmnet/sparql';
 		$wgWBQualityConstraintsPropertyConstraintId = 'P51064';
 		$wgWBQualityConstraintsFormatConstraintId = 'Q100086';
@@ -134,14 +126,6 @@ if ( $wmgUseWikibaseRepo ) {
 			'P117',
 			'P692',
 			'P491',
-		];
-
-		$wgWBRepoSettings['statementSections']['property'] = [
-			'statements' => null,
-			'constraints' => [
-				'type' => 'propertySet',
-				'propertyIds' => [ 'P2302' ],
-			],
 		];
 
 		$wgWBQualityConstraintsSparqlEndpoint = 'http://wdqs-internal.discovery.wmnet/sparql';
