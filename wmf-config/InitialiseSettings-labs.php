@@ -449,10 +449,6 @@ function wmfLabsSettings() {
 			'default' => 'https://wikidata.beta.wmflabs.org/w/api.php',
 		],
 
-		'wgArticlePlaceholderSearchIntegrationEnabled' => [
-			'default' => true,
-		],
-
 		'wmgWikibaseMaxItemIdForNewItemIdHtmlFormatter' => [
 			'default' => 0,
 			'wikidatawiki' => 10000000,
