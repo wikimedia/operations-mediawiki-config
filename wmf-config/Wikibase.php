@@ -99,9 +99,6 @@ $wmgWBNamespaceSettings = [
 ];
 
 if ( ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) && $wmgUseWikibaseRepo ) {
-	$wgNamespaceAliases['Item'] = NS_MAIN;
-	$wgNamespaceAliases['Item_talk'] = NS_TALK;
-
 	$wgWBRepoSettings['maxSerializedEntitySize'] = $wmgWikibaseMaxSerializedEntitySize;
 
 	$wgWBRepoSettings['siteLinkGroups'] = $wmgWBSiteLinkGroups;
