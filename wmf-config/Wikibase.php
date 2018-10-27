@@ -88,13 +88,6 @@ $wmgWBSiteLinkGroups = [
 	'special'
 ];
 
-$wmgWBSpecialSiteLinkGroups['specialSiteLinkGroups'] = [
-	'commons',
-	'mediawiki',
-	'meta',
-	'species'
-];
-
 $baseWikidataNs = 120;
 
 // Define the namespace indexes for repo (and client wikis also need to be aware of these,
@@ -121,14 +114,6 @@ $wmgWBNamespaceSettings = [
 	],
 ];
 
-if ( in_array( $wgDBname, [ 'test2wiki', 'testwiki', 'testwikidatawiki' ] ) ) {
-	$wmgWBSharedSettings['specialSiteLinkGroups'][] = 'testwikidata';
-	$wmgWBSharedSettings['specialSiteLinkGroups'][] = 'test';
-	$wmgWBSharedSettings['specialSiteLinkGroups'][] = 'test2';
-} else {
-	$wmgWBSharedSettings['specialSiteLinkGroups'][] = 'wikidata';
-}
-
 if ( ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) && $wmgUseWikibaseRepo ) {
 	$wgNamespaceAliases['Item'] = NS_MAIN;
 	$wgNamespaceAliases['Item_talk'] = NS_TALK;
@@ -142,7 +127,7 @@ if ( ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) && $wm
 	$wgWBRepoSettings = $wmgWBSharedSettings + $wgWBRepoSettings;
 
 	$wgWBRepoSettings['siteLinkGroups'] = $wmgWBSiteLinkGroups;
-	$wgWBRepoSettings['specialSiteLinkGroups'] = $wmgWBSpecialSiteLinkGroups;
+	$wgWBRepoSettings['specialSiteLinkGroups'] = $wmgWikibaseRepoSpecialSiteLinkGroups;
 
 	$wgWBRepoSettings['entityNamespaces'] = $wmgWBNamespaceSettings['wikidata'];
 
@@ -228,7 +213,7 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings = $wmgWBSharedSettings + $wgWBClientSettings;
 
 	$wgWBClientSettings['siteLinkGroups'] = $wmgWBSiteLinkGroups;
-	$wgWBClientSettings['specialSiteLinkGroups'] = $wmgWBSpecialSiteLinkGroups;
+	$wgWBClientSettings['specialSiteLinkGroups'] = $wmgWikibaseClientSpecialSiteLinkGroups;
 
 	$wgWBClientSettings['entityNamespaces'] = $wmgWBNamespaceSettings['wikidata'];
 
