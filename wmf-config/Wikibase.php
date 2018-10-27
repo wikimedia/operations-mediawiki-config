@@ -1,29 +1,32 @@
 <?php
 
-// Load the Repo extensions
+// Load the Repo, and Repo extensions
 if ( !empty( $wmgUseWikibaseRepo ) ) {
 	include_once "$IP/extensions/Wikibase/repo/Wikibase.php";
-	wfLoadExtension( 'Wikidata.org' );
-	wfLoadExtension( 'PropertySuggester' );
-	wfLoadExtension( 'WikibaseQuality' );
-	wfLoadExtension( 'WikibaseQualityConstraints' );
+	if ( !empty( $wmgUseWikibaseWikidataOrg ) ) {
+		wfLoadExtension( 'Wikidata.org' );
+	}
+	if ( !empty( $wmgUseWikibasePropertySuggester ) ) {
+		wfLoadExtension( 'PropertySuggester' );
+	}
+	if ( !empty( $wmgUseWikibaseQuality ) ) {
+		wfLoadExtension( 'WikibaseQuality' );
+		wfLoadExtension( 'WikibaseQualityConstraints' );
+	}
 	if ( !empty( $wmgUseWikibaseLexeme ) ) {
 		wfLoadExtension( 'WikibaseLexeme' );
 	}
+	if ( !empty( $wmgUseWikibaseMediaInfo ) ) {
+		wfLoadExtension( 'WikibaseMediaInfo' );
+	}
 }
 
-// Load the Repo media extensions
-if ( !empty( $wmgUseWikibaseMediaInfo ) ) {
-	include_once "$IP/extensions/Wikibase/repo/Wikibase.php";
-	wfLoadExtension( 'WikibaseMediaInfo' );
-
-	// FIXME: Federation of the Wikibase installation, licensing, and all the random assumptions below.
-}
-
-// Load the Client extensions
+// Load the Client, and Client extensions
 if ( !empty( $wmgUseWikibaseClient ) ) {
 	include_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
-	wfLoadExtension( 'WikimediaBadges' );
+	if ( !empty( $wmgUseWikibaseWikimediaBadges ) ) {
+		wfLoadExtension( 'WikimediaBadges' );
+	}
 	if ( !empty( $wmgUseArticlePlaceholder ) ) {
 		wfLoadExtension( 'ArticlePlaceholder' );
 	}
