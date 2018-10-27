@@ -4623,6 +4623,8 @@ $wgConf->settings = [
 		'Author_talk' => 101,
 	],
 	'+wikidata' => [
+		'Item' => NS_MAIN,
+		'Item_talk' => NS_TALK,
 		'WD' => NS_PROJECT, // T43834
 		'WT' => NS_PROJECT_TALK,
 		'P' => 120, // T47079
