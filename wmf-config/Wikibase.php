@@ -76,18 +76,6 @@ if ( $wmgUseWikibaseClient ) {
 
 $wmgWBSharedSettings['maxSerializedEntitySize'] = $wmgWikibaseMaxSerializedEntitySize;
 
-$wmgWBSiteLinkGroups = [
-	'wikipedia',
-	'wikibooks',
-	'wikinews',
-	'wikiquote',
-	'wikisource',
-	'wikiversity',
-	'wikivoyage',
-	'wiktionary',
-	'special'
-];
-
 $baseWikidataNs = 120;
 
 // Define the namespace indexes for repo (and client wikis also need to be aware of these,
