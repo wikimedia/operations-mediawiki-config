@@ -88,7 +88,7 @@ $wmgWBSiteLinkGroups = [
 	'special'
 ];
 
-$wmgWBSpecialSiteLinkGroups['specialSiteLinkGroups'] = [
+$wmgWBSpecialSiteLinkGroups = [
 	'commons',
 	'mediawiki',
 	'meta',
@@ -96,11 +96,11 @@ $wmgWBSpecialSiteLinkGroups['specialSiteLinkGroups'] = [
 ];
 
 if ( in_array( $wgDBname, [ 'test2wiki', 'testwiki', 'testwikidatawiki' ] ) ) {
-	$wmgWBSpecialSiteLinkGroups['specialSiteLinkGroups'][] = 'testwikidata';
-	$wmgWBSpecialSiteLinkGroups['specialSiteLinkGroups'][] = 'test';
-	$wmgWBSpecialSiteLinkGroups['specialSiteLinkGroups'][] = 'test2';
+	$wmgWBSpecialSiteLinkGroups[] = 'testwikidata';
+	$wmgWBSpecialSiteLinkGroups[] = 'test';
+	$wmgWBSpecialSiteLinkGroups[] = 'test2';
 } else {
-	$wmgWBSpecialSiteLinkGroups['specialSiteLinkGroups'][] = 'wikidata';
+	$wmgWBSpecialSiteLinkGroups[] = 'wikidata';
 }
 
 $baseWikidataNs = 120;
