@@ -76,24 +76,28 @@ $wmgWBSharedSettings = [];
 
 $wmgWBSharedSettings['maxSerializedEntitySize'] = 2500;
 
-$wmgWBSiteLinkGroups = [
-	'wikipedia',
-	'wikibooks',
-	'wikinews',
-	'wikiquote',
-	'wikisource',
-	'wikiversity',
-	'wikivoyage',
-	'wiktionary',
-	'special'
-];
+if ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) {
 
-$wmgWBSpecialSiteLinkGroups['specialSiteLinkGroups'] = [
-	'commons',
-	'mediawiki',
-	'meta',
-	'species'
-];
+	$wmgWBSharedSettings['siteLinkGroups'] = [
+		'wikipedia',
+		'wikibooks',
+		'wikinews',
+		'wikiquote',
+		'wikisource',
+		'wikiversity',
+		'wikivoyage',
+		'wiktionary',
+		'special'
+	];
+
+	$wmgWBSharedSettings['specialSiteLinkGroups'] = [
+		'commons',
+		'mediawiki',
+		'meta',
+		'species'
+	];
+
+}
 
 $baseWikidataNs = 120;
 
@@ -140,9 +144,6 @@ if ( ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) && $wm
 	$wgExtraNamespaces[WB_NS_QUERY_TALK] = 'Query_talk';
 
 	$wgWBRepoSettings = $wmgWBSharedSettings + $wgWBRepoSettings;
-
-	$wgWBRepoSettings['siteLinkGroups'] = $wmgWBSiteLinkGroups;
-	$wgWBRepoSettings['specialSiteLinkGroups'] = $wmgWBSpecialSiteLinkGroups;
 
 	$wgWBRepoSettings['entityNamespaces'] = $wmgWBNamespaceSettings['wikidata'];
 
@@ -226,9 +227,6 @@ if ( ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) && $wm
 
 if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings = $wmgWBSharedSettings + $wgWBClientSettings;
-
-	$wgWBClientSettings['siteLinkGroups'] = $wmgWBSiteLinkGroups;
-	$wgWBClientSettings['specialSiteLinkGroups'] = $wmgWBSpecialSiteLinkGroups;
 
 	$wgWBClientSettings['entityNamespaces'] = $wmgWBNamespaceSettings['wikidata'];
 
