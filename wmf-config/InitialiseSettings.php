@@ -18736,6 +18736,7 @@ $wgConf->settings = [
 	'default' => true,
 	'wiktionary' => false,
 	'enwiktionary' => true,
+	'trwiktionary' => true,
 ],
 
 'wmgWikibaseEntityAccessLimit' => [
