@@ -18823,6 +18823,20 @@ $wgConf->settings = [
 	],
 ],
 
+'wmgWBSiteLinkGroups' => [
+	'default' => [
+		'wikipedia',
+		'wikibooks',
+		'wikinews',
+		'wikiquote',
+		'wikisource',
+		'wikiversity',
+		'wikivoyage',
+		'wiktionary',
+		'special'
+	],
+],
+
 'wmgUseArticlePlaceholder' => [
 	'default' => false,
 	'bnwiki' => true,
