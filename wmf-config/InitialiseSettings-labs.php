@@ -458,11 +458,6 @@ function wmfLabsSettings() {
 			'wikidatawiki' => 10000000,
 		],
 
-		'wmgWikibaseAllowDataAccessInUserLanguage' => [
-			'default' => false,
-			'wikidatawiki' => true,
-		],
-
 		'wgLexemeLanguageCodePropertyId' => [
 			'default' => null,
 			'wikidatawiki' => 'P218',
