@@ -463,10 +463,6 @@ function wmfLabsSettings() {
 			'wikidatawiki' => 'P218',
 		],
 
-		'wmgWikibaseDisabledDataTypes' => [
-			'default' => [],
-		],
-
 		'-wmgWikibaseSearchIndexProperties' => [
 			'default' => []
 		],
