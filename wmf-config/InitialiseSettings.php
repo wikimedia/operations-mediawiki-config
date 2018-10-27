@@ -18766,6 +18766,63 @@ $wgConf->settings = [
 	'wikidata' => true,
 ],
 
+'wmgWikibaseRepoSpecialSiteLinkGroups' => [
+	'default' => [],
+	'wikidatawiki' => [
+		'commons',
+		'mediawiki',
+		'meta',
+		'species',
+		'wikidata',
+	],
+	'testwikidatawiki' => [
+		'commons',
+		'mediawiki',
+		'meta',
+		'species',
+		'test',
+		'test2',
+		'testwikidata',
+	],
+],
+
+'wmgWikibaseClientSpecialSiteLinkGroups' => [
+	'default' => [
+		'commons',
+		'mediawiki',
+		'meta',
+		'species',
+		'wikidata',
+	],
+	'testwiki' => [
+		'commons',
+		'mediawiki',
+		'meta',
+		'species',
+		'test',
+		'test2',
+		'testwikidata',
+	],
+	'test2wiki' => [
+		'commons',
+		'mediawiki',
+		'meta',
+		'species',
+		'test',
+		'test2',
+		'testwikidata',
+	],
+	'testwikidatawiki' => [
+		'commons',
+		'mediawiki',
+		'meta',
+		'species',
+		'test',
+		'test2',
+		'testwikidata',
+	],
+],
+
 'wmgUseArticlePlaceholder' => [
 	'default' => false,
 	'bnwiki' => true,
