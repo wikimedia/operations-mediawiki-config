@@ -18908,6 +18908,10 @@ $wgConf->settings = [
 	'default' => [ 'lexeme', 'form', 'sense' ],
 ],
 
+'wmgWikibaseMaxSerializedEntitySize' => [
+	'default' => 2500,
+],
+
 // List of properties to be indexed by elasticsearch
 // see WikibaseSearchSettings.php
 'wmgWikibaseSearchIndexProperties' => [
