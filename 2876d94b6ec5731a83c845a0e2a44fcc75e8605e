@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "64f493a6_dd283e3b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2018-10-28T14:50:49Z",
+      "side": 1,
+      "message": "Please use T208148, as this was done because of T208148, not because of T150618.",
+      "range": {
+        "startLine": 13,
+        "startChar": 5,
+        "endLine": 13,
+        "endChar": 12
+      },
+      "revId": "2876d94b6ec5731a83c845a0e2a44fcc75e8605e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
