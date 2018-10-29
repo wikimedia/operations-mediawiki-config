@@ -25,7 +25,6 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings['wikiPageUpdaterDbBatchSize'] = 20;
 	}
 
-	$wgArticlePlaceholderSearchEngineIndexed = $wmgArticlePlaceholderSearchEngineIndexed;
 	$wgWBClientSettings['propertyOrderUrl'] = 'https://www.wikidata.org/w/index.php?title=MediaWiki:Wikibase-SortedProperties&action=raw&sp_ver=1';
 
 	// T142103
