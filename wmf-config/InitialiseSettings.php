@@ -20994,6 +20994,11 @@ $wgConf->settings = [
 	'cywiki' => 'Q16956',
 ],
 
+'wgArticlePlaceholderSearchEngineIndexed' => [
+	'default' => false,
+	'cywiki' => 'Q16956',
+],
+
 'wgArticlePlaceholderSearchIntegrationEnabled' => [
 	'default' => true,
 ],
