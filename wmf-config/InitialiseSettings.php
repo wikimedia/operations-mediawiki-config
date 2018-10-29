@@ -18751,9 +18751,7 @@ $wgConf->settings = [
 
 'wmgWikibaseCachePrefix' => [
 	'default' => 'wikidatawiki',
-	'testwikidatawiki' => 'testwikidatawiki0',
-	'test2wiki' => 'testwikidatawiki0',
-	'testwiki' => 'testwikidatawiki0'
+	'wikidataclient-test' => 'testwikidatawiki0',
 ],
 
 'wmgWikibaseAllowLocalShortDesc' => [
@@ -18819,35 +18817,7 @@ $wgConf->settings = [
 			],
 		],
 	],
-	'testwiki' => [
-		'' => [
-			'repoDatabase' => 'testwikidatawiki',
-			'baseUri' => 'http://test.wikidata.org/entity/',
-			'entityNamespaces' => [
-				'item' => 0,
-				'property' => 123,
-				'lexeme' => 146,
-			],
-			'prefixMapping' => [
-				'' => '',
-			],
-		],
-	],
-	'test2wiki' => [
-		'' => [
-			'repoDatabase' => 'testwikidatawiki',
-			'baseUri' => 'http://test.wikidata.org/entity/',
-			'entityNamespaces' => [
-				'item' => 0,
-				'property' => 123,
-				'lexeme' => 146,
-			],
-			'prefixMapping' => [
-				'' => '',
-			],
-		],
-	],
-	'testwikidatawiki' => [
+	'wikidataclient-test' => [
 		'' => [
 			'repoDatabase' => 'testwikidatawiki',
 			'baseUri' => 'http://test.wikidata.org/entity/',
@@ -18865,30 +18835,22 @@ $wgConf->settings = [
 
 'wmgWikibaseClientChangesDatabase' => [
 	'default' => 'wikidatawiki',
-	'testwiki' => 'testwikidatawiki',
-	'test2wiki' => 'testwikidatawiki',
-	'testwikidatawiki' => 'testwikidatawiki',
+	'wikidataclient-test' => 'testwikidatawiki',
 ],
 
 'wmgWikibaseClientRepoDatabase' => [
 	'default' => 'wikidatawiki',
-	'testwiki' => 'testwikidatawiki',
-	'test2wiki' => 'testwikidatawiki',
-	'testwikidatawiki' => 'testwikidatawiki',
+	'wikidataclient-test' => 'testwikidatawiki',
 ],
 
 'wmgWikibaseClientRepoUrl' => [
 	'default' => 'https://www.wikidata.org',
-	'testwiki' => 'https://test.wikidata.org',
-	'test2wiki' => 'https://test.wikidata.org',
-	'testwikidatawiki' => 'https://test.wikidata.org',
+	'wikidataclient-test' => 'https://test.wikidata.org',
 ],
 
 'wmgWikibaseClientRepoConceptBaseUri' => [
 	'default' => 'http://www.wikidata.org/entity/',
-	'testwiki' => 'http://test.wikidata.org/entity/',
-	'test2wiki' => 'http://test.wikidata.org/entity/',
-	'testwikidatawiki' => 'http://test.wikidata.org/entity/',
+	'wikidataclient-test' => 'http://test.wikidata.org/entity/',
 ],
 
 'wmgWikibaseClientUseTermsTableSearchFields' => [
@@ -19022,25 +18984,7 @@ $wgConf->settings = [
 		'species',
 		'wikidata',
 	],
-	'testwiki' => [
-		'commons',
-		'mediawiki',
-		'meta',
-		'species',
-		'test',
-		'test2',
-		'testwikidata',
-	],
-	'test2wiki' => [
-		'commons',
-		'mediawiki',
-		'meta',
-		'species',
-		'test',
-		'test2',
-		'testwikidata',
-	],
-	'testwikidatawiki' => [
+	'wikidataclient-test' => [
 		'commons',
 		'mediawiki',
 		'meta',
@@ -19164,9 +19108,7 @@ $wgConf->settings = [
 
 'wgArticlePlaceholderImageProperty' => [
 	'default' => 'P18',
-	'testwiki' => 'P47',
-	'test2wiki' => 'P47',
-	'testwikidatawiki' => 'P47',
+	'wikidataclient-test' => 'P47',
 ],
 
 'wmgWikibaseSiteGroup' => [
@@ -19504,9 +19446,7 @@ $wgConf->settings = [
 
 'wmgAllowLabsAnonEdits' => [
 	'default' => false,
-	'testwiki' => true, // for CI
-	'test2wiki' => true, // for CI
-	'testwikidatawiki' => true, // for CI
+	'wikidataclient-test' => true, // for CI
 ],
 
 'wmgUseSearchExtraNS' => [
@@ -21019,9 +20959,7 @@ $wgConf->settings = [
 
 'wmgUseCapiunto' => [
 	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'testwikidatawiki' => true,
+	'wikidataclient-test' => true,
 ],
 
 'wmgUseKartographer' => [
