@@ -18797,6 +18797,50 @@ $wgConf->settings = [
 	'wiktionary' => true,
 ],
 
+'wmgWikibaseRepoBadgeItems' => [
+	'default' => [],
+	'testwikidatawiki' => [
+		'Q608' => 'wb-badge-goodarticle',
+		'Q609' => 'wb-badge-featuredarticle'
+	],
+	'wikidatawiki' => [
+		'Q17437798' => 'wb-badge-goodarticle',
+		'Q17437796' => 'wb-badge-featuredarticle',
+		'Q17559452' => 'wb-badge-recommendedarticle', // T72268
+		'Q17506997' => 'wb-badge-featuredlist', // T72332
+		'Q17580674' => 'wb-badge-featuredportal', // T75193
+		'Q20748091' => 'wb-badge-notproofread', // T97014 - Wikisource badges
+		'Q20748094' => 'wb-badge-problematic',
+		'Q20748092' => 'wb-badge-proofread',
+		'Q20748093' => 'wb-badge-validated',
+		'Q28064618' => 'wb-badge-digitaldocument', // T153186
+		'Q51759403' => 'wb-badge-goodlist', // T190976
+	],
+],
+
+'wmgWikibaseClientBadgeClassNames' => [
+	'default' => [
+		'Q17437796' => 'badge-featuredarticle',
+		'Q17437798' => 'badge-goodarticle',
+		'Q17559452' => 'badge-recommendedarticle', // T72268
+		'Q17506997' => 'badge-featuredlist', // T72332
+		'Q17580674' => 'badge-featuredportal', // T75193
+		'Q20748091' => 'badge-notproofread', // T97014 - Wikisource badges
+		'Q20748094' => 'badge-problematic',
+		'Q20748092' => 'badge-proofread',
+		'Q20748093' => 'badge-validated',
+		'Q28064618' => 'badge-digitaldocument', // T153186
+		'Q51759403' => 'badge-goodlist', // T190976
+	],
+],
+
+// Overwrite or add commons links in the "other projects sidebar" with the
+// "commons category" (P373), per T126960
+'wgWikimediaBadgesCommonsCategoryProperty' => [
+	'default' => 'P373',
+	'commonswiki' => null,
+],
+
 'wgLexemeEnableRepo' => [
 	'default' => false,
 	'wikidata' => true,
