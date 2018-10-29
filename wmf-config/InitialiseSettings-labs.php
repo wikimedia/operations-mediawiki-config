@@ -880,8 +880,8 @@ function wmfLabsSettings() {
 					'repoDatabase' => 'wikidatawiki',
 					'entityNamespaces' => [
 						'item' => NS_MAIN,
-						'property' => WB_NS_PROPERTY
-						// FIXME, this doesn't currently have lexeme....
+						'property' => WB_NS_PROPERTY,
+						'lexeme' => 146,
 					],
 					'baseUri' => 'https://wikidata.beta.wmflabs.org/entity/',
 					'prefixMapping' => [ '' => '' ],
