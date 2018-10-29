@@ -15,18 +15,6 @@ if ( $wmgUseWikibaseRepo ) {
 		'P964',
 	];
 
-	$wgWBRepoSettings['siteLinkGroups'] = [
-		'wikipedia',
-		'wikibooks',
-		'wikinews',
-		'wikiquote',
-		'wikisource',
-		'wikiversity',
-		'wikivoyage',
-		'wiktionary',
-		'special'
-	];
-
 	$wgWBRepoSettings['canonicalUriProperty'] = 'P174944';
 
 	$wgWBRepoSettings['useTermsTableSearchFields'] = false;
