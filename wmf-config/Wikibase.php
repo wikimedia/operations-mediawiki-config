@@ -289,5 +289,3 @@ if ( $wgDBname === 'commonswiki' && $wmgUseWikibaseMediaInfo ) {
 }
 
 unset( $wmgWBSharedCacheKey );
-
-require_once "{$wmfConfigDir}/Wikibase-{$wmfRealm}.php";
