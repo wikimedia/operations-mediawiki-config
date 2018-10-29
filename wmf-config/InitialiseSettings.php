@@ -19050,6 +19050,13 @@ $wgConf->settings = [
 	'default' => 'https://www.wikidata.org/w/api.php',
 ],
 
+'wgArticlePlaceholderImageProperty' => [
+	'default' => 'P18',
+	'testwiki' => 'P47',
+	'test2wiki' => 'P47',
+	'testwikidatawiki' => 'P47',
+],
+
 'wmgWikibaseSiteGroup' => [
 	// The default for this is null, but we can't set this to null here,
 	// as null makes SiteConfiguration not set the variable at all.

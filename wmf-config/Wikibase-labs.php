@@ -28,6 +28,4 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['repoUrl'] = 'https://wikidata.beta.wmflabs.org';
 	$wgWBClientSettings['sendEchoNotification'] = true;
 	$wgWBClientSettings['echoIcon'] = [ 'path' => '/static/images/wikibase/echoIcon.svg' ];
-
-	$wgArticlePlaceholderImageProperty = 'P964';
 }
