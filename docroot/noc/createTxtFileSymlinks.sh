@@ -47,8 +47,6 @@ mwconfig_files_txt=(
 	timeline.php
 	trusted-xff.php
 	Wikibase.php
-	Wikibase-labs.php
-	Wikibase-production.php
 	wikitech.php
 )
 
