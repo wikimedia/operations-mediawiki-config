@@ -18833,6 +18833,7 @@ $wgConf->settings = [
 'wmgUseWikibaseRepo' => [
 	'default' => false,
 	'wikidata' => true,
+	'commonswiki' => true,
 ],
 
 'wmgWBRepoCanonicalUriProperty' => [
@@ -19434,6 +19435,7 @@ $wgConf->settings = [
 // Structured media file data (the WikibaseMediaInfo extension)
 'wmgUseWikibaseMediaInfo' => [
 	'default' => false,
+	'commonswiki' => true,
 ],
 
 // Feature flag for WikibaseMediaInfo during deployment
