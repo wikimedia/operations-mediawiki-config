@@ -77,7 +77,12 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['formatterUrlProperty'] = $wmgWBRepoFormatterUrlProperty;
 	$wgWBRepoSettings['preferredGeoDataProperties'] = $wmgWBRepoPreferredGeoDataProperties;
 	$wgWBRepoSettings['preferredPageImagesProperties'] = $wmgWBRepoPreferredPageImagesProperties;
-	$wgWBRepoSettings['sparqlEndpoint'] = $wmgWBRepoSettingsSparqlEndpoint;
+
+	// IS.php has null as the default as testwikidata doesn't have a query service.
+	// To avoid an undefined variable wrap this in a condition.
+	if ( isset( $wmgWBRepoSettingsSparqlEndpoint ) ) {
+		$wgWBRepoSettings['sparqlEndpoint'] = $wmgWBRepoSettingsSparqlEndpoint;
+	}
 
 	$wgWBRepoSettings['normalizeItemByTitlePageNames'] = true;
 
