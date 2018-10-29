@@ -15,7 +15,6 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBQualityConstraintsCacheCheckConstraintsResults = true;
 		$wgWBQualityConstraintsPropertiesWithViolatingQualifiers = [ 'P1855', 'P2271', 'P5192', 'P5193' ]; // T183267
 		$wgSpecialPages['ItemDisambiguation'] = 'SpecialBlankpage';
-		$wgWBRepoSettings['dispatchLagToMaxLagFactor'] = 60;
 
 		$wgWBRepoSettings['unitStorage'] = [
 			'class' => '\\Wikibase\\Lib\\Units\\JsonUnitStorage',
@@ -25,9 +24,6 @@ if ( $wmgUseWikibaseRepo ) {
 
 	// T207019
 	$wgWBQualityConstraintsSuggestionsBetaFeature = true;
-
-	// T189776, T189777
-	$wgWBRepoSettings['useTermsTableSearchFields'] = false;
 }
 
 if ( $wmgUseWikibaseClient ) {

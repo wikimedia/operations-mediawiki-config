@@ -3,12 +3,6 @@
 if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['canonicalUriProperty'] = 'P174944';
 
-	$wgWBRepoSettings['useTermsTableSearchFields'] = false;
-
-	$wgWBRepoSettings['dispatchLagToMaxLagFactor'] = 60;
-
-	$wgWBRepoSettings['tmpMaxItemIdForNewItemIdHtmlFormatter'] = $wmgWikibaseMaxItemIdForNewItemIdHtmlFormatter;
-
 	$wgWBQualityConstraintsSuggestionsBetaFeature[ 'value' ] = true;
 }
 

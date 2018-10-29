@@ -90,11 +90,15 @@ if ( $wmgUseWikibaseRepo ) {
 	// Cirrus usage for wbsearchentities is on
 	$wgWBRepoSettings['entitySearch']['useCirrus'] = true;
 
+	// T189776, T189777
+	$wgWBRepoSettings['useTermsTableSearchFields'] = false;
+
 	// These settings can be overridden by the cron parameters in operations/puppet
 	$wgWBRepoSettings['dispatchingLockManager'] = $wmgWikibaseDispatchingLockManager;
 	$wgWBRepoSettings['dispatchDefaultDispatchInterval'] = $wmgWikibaseDispatchInterval;
 	$wgWBRepoSettings['dispatchMaxTime'] = $wmgWikibaseDispatchMaxTime;
 	$wgWBRepoSettings['dispatchDefaultBatchSize'] = $wmgWikibaseDispatchDefaultBatchSize;
+	$wgWBRepoSettings['dispatchLagToMaxLagFactor'] = 60;
 }
 
 if ( $wmgUseWikibaseClient ) {
