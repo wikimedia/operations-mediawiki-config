@@ -35,6 +35,16 @@ if ( !empty( $wmgUseWikibaseClient ) ) {
 	}
 }
 
+// Define the namespace indexes for repos and clients
+// NOTE: do *not* define WB_NS_ITEM and WB_NS_ITEM_TALK when using a core namespace for items!!..
+define( 'WB_NS_PROPERTY', 120 );
+define( 'WB_NS_PROPERTY_TALK', 121 );
+define( 'WB_NS_LEXEME', 146 );
+define( 'WB_NS_LEXEME_TALK', 147 );
+// TODO the query namespace is not actually used in prod. Remove me?
+define( 'WB_NS_QUERY', 122 );
+define( 'WB_NS_QUERY_TALK', 123 );
+
 // This allows cache invalidations to be in sync with deploys
 // and not shared across different versions of wikibase.
 // e.g. wikibase_shared/1_31_0-wmf_2-testwikidatawiki0 for test wikis
@@ -65,9 +75,22 @@ $wgLockManagers[] = [
 ];
 
 if ( $wmgUseWikibaseRepo ) {
-	// Disable Special:ItemDisambiguation on wikidata.org T195756
 	if ( $wgDBname === 'wikidatawiki' ) {
+		// Disable Special:ItemDisambiguation on wikidata.org T195756
 		$wgSpecialPages['ItemDisambiguation'] = 'SpecialBlankpage';
+	}
+
+	if ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) {
+		// Don't try to let users answer captchas if they try to add links
+		// on either Item or Property pages. T86453
+		$wgCaptchaTriggersOnNamespace[NS_MAIN]['addurl'] = false;
+		$wgCaptchaTriggersOnNamespace[WB_NS_PROPERTY]['addurl'] = false;
+
+		// T53637 and T48953
+		$wgGroupPermissions['*']['property-create'] = ( $wgDBname === 'testwikidatawiki' );
+
+		// Load search settings only on wikidata repos for now
+		require_once "{$wmfConfigDir}/WikibaseSearchSettings.php";
 	}
 
 	// Calculate the client Db lists based on our wikiversions db lists
@@ -93,6 +116,11 @@ if ( $wmgUseWikibaseRepo ) {
 	} elseif ( $wgDBname === 'commonswiki' ) {
 		// TODO eventually commonswiki will have clients that will need to be registered here
 	}
+
+	$wgWBRepoSettings['localClientDatabases'] = array_combine(
+		$wgWBRepoSettings['clientDbList'],
+		$wgWBRepoSettings['clientDbList']
+	);
 
 	$wgWBRepoSettings['entityNamespaces'] = $wmgWikibaseRepoEntityNamespaces;
 	$wgWBRepoSettings['idBlacklist'] = $wmgWikibaseIdBlacklist;
@@ -146,6 +174,21 @@ if ( $wmgUseWikibaseRepo ) {
 }
 
 if ( $wmgUseWikibaseClient ) {
+	$wbSiteGroup = isset( $wmgWikibaseSiteGroup ) ? $wmgWikibaseSiteGroup : null;
+	$wgWBClientSettings['languageLinkSiteGroup'] = $wbSiteGroup;
+
+	if ( in_array( $wgDBname, [ 'commonswiki', 'mediawikiwiki', 'metawiki', 'specieswiki' ] ) ) {
+		$wgWBClientSettings['languageLinkSiteGroup'] = 'wikipedia';
+	}
+
+	$wgWBClientSettings['siteGroup'] = $wbSiteGroup;
+
+	if ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) {
+		$wgWBClientSettings['languageLinkSiteGroup'] = 'wikipedia';
+		$wgWBClientSettings['showExternalRecentChanges'] = false;
+	}
+	// TODO clean up slightly messy client only config in this condition above this line
+
 	// to be safe, keeping this here although $wgDBname is default setting
 	$wgWBClientSettings['siteGlobalID'] = $wgDBname;
 
@@ -210,52 +253,6 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['disabledUsageAspects'] = $wmgWikibaseDisabledUsageAspects;
 	$wgWBClientSettings['fineGrainedLuaTracking'] = $wmgWikibaseFineGrainedLuaTracking;
 	$wgWBClientSettings['entityUsageModifierLimits'] = [ 'D' => 10, 'L' => 10, 'C' => 33 ];
-}
-
-// Define the namespace indexes for repos and clients
-// NOTE: do *not* define WB_NS_ITEM and WB_NS_ITEM_TALK when using a core namespace for items!!..
-define( 'WB_NS_PROPERTY', 120 );
-define( 'WB_NS_PROPERTY_TALK', 121 );
-define( 'WB_NS_LEXEME', 146 );
-define( 'WB_NS_LEXEME_TALK', 147 );
-// TODO the query namespace is not actually used in prod. Remove me?
-define( 'WB_NS_QUERY', 122 );
-define( 'WB_NS_QUERY_TALK', 123 );
-
-// Addshore config cleanup marker. Above this is tidy, below this needs to be sorted...
-
-if ( ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) && $wmgUseWikibaseRepo ) {
-	$wgWBRepoSettings['localClientDatabases'] = array_combine(
-		$wgWBRepoSettings['clientDbList'],
-		$wgWBRepoSettings['clientDbList']
-	);
-
-	// T53637 and T48953
-	$wgGroupPermissions['*']['property-create'] = ( $wgDBname === 'testwikidatawiki' );
-
-	// Don't try to let users answer captchas if they try to add links
-	// on either Item or Property pages. T86453
-	$wgCaptchaTriggersOnNamespace[NS_MAIN]['addurl'] = false;
-	$wgCaptchaTriggersOnNamespace[WB_NS_PROPERTY]['addurl'] = false;
-
-	require_once "{$wmfConfigDir}/WikibaseSearchSettings.php";
-}
-
-if ( $wmgUseWikibaseClient ) {
-	$wbSiteGroup = isset( $wmgWikibaseSiteGroup ) ? $wmgWikibaseSiteGroup : null;
-	$wgWBClientSettings['languageLinkSiteGroup'] = $wbSiteGroup;
-
-	if ( in_array( $wgDBname, [ 'commonswiki', 'mediawikiwiki', 'metawiki', 'specieswiki' ] ) ) {
-		$wgWBClientSettings['languageLinkSiteGroup'] = 'wikipedia';
-	}
-
-	$wgWBClientSettings['siteGroup'] = $wbSiteGroup;
-
-	if ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) {
-		$wgWBClientSettings['languageLinkSiteGroup'] = 'wikipedia';
-		$wgWBClientSettings['showExternalRecentChanges'] = false;
-	}
-
 }
 
 unset( $wmgWBSharedCacheKey );
