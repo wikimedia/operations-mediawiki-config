@@ -471,8 +471,13 @@ function wmfLabsSettings() {
 			'default' => []
 		],
 
+		// ###### Structured Data on Commons testing installation ######
+		'wmgUseWikibaseRepo' => [
+			'commonswiki' => true,
+		],
+
 		'wmgUseWikibaseMediaInfo' => [
-			'commonswiki' => false,
+			'commonswiki' => true,
 		],
 
 		'wgMediaInfoEnable' => [
