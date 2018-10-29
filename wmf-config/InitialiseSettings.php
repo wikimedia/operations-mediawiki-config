@@ -18801,6 +18801,53 @@ $wgConf->settings = [
 	'wiktionary' => true,
 ],
 
+// Current default setting extracted by running the following in production:
+// var_dump($wgWBClientSettings['repositories'](\Wikibase\WikibaseSettings::getClientSettings()));
+'wmgWikibaseClientRepositories' => [
+	'default' => [
+		'' => [
+			'repoDatabase' => false,
+			'baseUri' => 'https://www.wikidata.org/entity/',
+			'entityNamespaces' => [
+				'item' => 0,
+				'property' => 123,
+				'lexeme' => 146,
+			],
+			'prefixMapping' => [
+				'' => '',
+			],
+		],
+	],
+],
+
+'wmgWikibaseClientChangesDatabase' => [
+	'default' => 'wikidatawiki',
+	'testwiki' => 'testwikidatawiki',
+	'test2wiki' => 'testwikidatawiki',
+	'testwikidatawiki' => 'testwikidatawiki',
+],
+
+'wmgWikibaseClientRepoDatabase' => [
+	'default' => 'wikidatawiki',
+	'testwiki' => 'testwikidatawiki',
+	'test2wiki' => 'testwikidatawiki',
+	'testwikidatawiki' => 'testwikidatawiki',
+],
+
+'wmgWikibaseClientRepoUrl' => [
+	'default' => 'https://www.wikidata.org',
+	'testwiki' => 'https://test.wikidata.org',
+	'test2wiki' => 'https://test.wikidata.org',
+	'testwikidatawiki' => 'https://test.wikidata.org',
+],
+
+'wmgWikibaseClientRepoConceptBaseUri' => [
+	'default' => 'http://www.wikidata.org/entity/',
+	'testwiki' => 'http://test.wikidata.org/entity/',
+	'test2wiki' => 'http://test.wikidata.org/entity/',
+	'testwikidatawiki' => 'http://test.wikidata.org/entity/',
+],
+
 'wmgWikibaseClientUseTermsTableSearchFields' => [
 	'default' => false,
 ],
