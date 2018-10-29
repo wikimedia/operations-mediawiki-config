@@ -65,6 +65,11 @@ $wgLockManagers[] = [
 ];
 
 if ( $wmgUseWikibaseRepo ) {
+	// Disable Special:ItemDisambiguation on wikidata.org T195756
+	if ( $wgDBname === 'wikidatawiki' ) {
+		$wgSpecialPages['ItemDisambiguation'] = 'SpecialBlankpage';
+	}
+
 	$wgWBRepoSettings['idBlacklist'] = $wmgWikibaseIdBlacklist;
 	$wgWBRepoSettings['disabledDataTypes'] = $wmgWikibaseDisabledDataTypes;
 	$wgWBRepoSettings['tmpMaxItemIdForNewItemIdHtmlFormatter'] = $wmgWikibaseMaxItemIdForNewItemIdHtmlFormatter;
@@ -108,6 +113,11 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['dispatchMaxTime'] = $wmgWikibaseDispatchMaxTime;
 	$wgWBRepoSettings['dispatchDefaultBatchSize'] = $wmgWikibaseDispatchDefaultBatchSize;
 	$wgWBRepoSettings['dispatchLagToMaxLagFactor'] = 60;
+
+	$wgWBRepoSettings['unitStorage'] = [
+		'class' => '\\Wikibase\\Lib\\Units\\JsonUnitStorage',
+		'args' => [ __DIR__ . '/unitConversionConfig.json' ]
+	];
 }
 
 if ( $wmgUseWikibaseClient ) {
