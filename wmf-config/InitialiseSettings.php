@@ -1773,6 +1773,7 @@ $wgConf->settings = [
 	'commonsuploads' => true, // Soft-disabling
 	'wikidata' => false,
 	'testcommonswiki' => true, // Over-ride TestCommons appearing in wikidata.dblist
+	'commonswiki' => true, // Over-ride Commons appearing in wikidata.dblist
 
 	// Wikinews
 	'wikinews' => false,
@@ -19194,7 +19195,6 @@ $wgConf->settings = [
 
 'wmgUseWikibaseRepo' => [
 	'default' => false,
-	'testcommonswiki' => true,
 	'wikidata' => true,
 ],
 
@@ -19866,6 +19866,7 @@ $wgConf->settings = [
 // Structured media file data (the WikibaseMediaInfo extension)
 'wmgUseWikibaseMediaInfo' => [
 	'default' => false,
+	'commonswiki' => true,
 	'testcommonswiki' => true,
 ],
 
