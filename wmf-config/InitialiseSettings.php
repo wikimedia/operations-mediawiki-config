@@ -19907,6 +19907,7 @@ $wgConf->settings = [
 // Structured media file data (the WikibaseMediaInfo extension)
 'wmgUseWikibaseMediaInfo' => [
 	'default' => false,
+	'commonswiki' => true,
 	'testcommonswiki' => true,
 ],
 
