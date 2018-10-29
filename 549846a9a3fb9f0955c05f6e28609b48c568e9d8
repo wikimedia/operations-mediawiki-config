@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ee90836_7871f770",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1620
+      },
+      "writtenOn": "2018-10-29T11:34:27Z",
+      "side": 1,
+      "message": "wmgWikibaseDispatchingInterval\n\nNote the ing?",
+      "range": {
+        "startLine": 93,
+        "startChar": 57,
+        "endLine": 93,
+        "endChar": 84
+      },
+      "revId": "549846a9a3fb9f0955c05f6e28609b48c568e9d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
