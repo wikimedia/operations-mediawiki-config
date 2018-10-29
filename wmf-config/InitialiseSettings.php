@@ -18727,6 +18727,20 @@ $wgConf->settings = [
 	'default' => 'wikibaseDispatchRedisLockManager',
 ],
 
+'wmgWikibaseDispatchingInterval' => [
+	'default' => 25,
+],
+
+'wmgWikibaseDispatchMaxTime' => [
+	'default' => 30,
+	'wikidatawiki' => 360, // Cron every 3 mins, length 6 mins, 2 dispatching threads
+	'testwikidatawiki' => 900, // Cron every 15 mins, length 15 mins, 1 dispatching thread
+],
+
+'wmgWikibaseDispatchDefaultBatchSize' => [
+	'default' => 420,
+],
+
 'wmgWikibaseCachePrefix' => [
 	'default' => 'wikidatawiki',
 	'testwikidatawiki' => 'testwikidatawiki0',
