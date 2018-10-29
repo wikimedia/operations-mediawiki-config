@@ -22,6 +22,30 @@
       "revId": "549846a9a3fb9f0955c05f6e28609b48c568e9d8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b5319cee_0e2f2218",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-10-29T11:35:12Z",
+      "side": 1,
+      "message": "Good spot, this should be fixed in IS.php",
+      "parentUuid": "6ee90836_7871f770",
+      "range": {
+        "startLine": 93,
+        "startChar": 57,
+        "endLine": 93,
+        "endChar": 84
+      },
+      "revId": "549846a9a3fb9f0955c05f6e28609b48c568e9d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
