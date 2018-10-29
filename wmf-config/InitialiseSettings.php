@@ -19009,7 +19009,63 @@ $wgConf->settings = [
 ],
 
 'wgPropertySuggesterMinProbability' => [
-	'default' => 0.069,
+	'default' => 0.05,
+	'wikidata' => 0.069,
+],
+
+'wgPropertySuggesterClassifyingPropertyIds' => [
+	'default' => [],
+	'testwikidatawiki' => [ 7 ],
+	'wikidatawiki' => [ 31, 279 ], // T169060
+],
+
+'wgPropertySuggesterInitialSuggestions' => [
+	'default' => [],
+	'testwikidatawiki' => [ 7 ],
+	'wikidatawiki' => [ 31, 279 ],
+],
+
+'wgPropertySuggesterDeprecatedIds' => [
+	'default' => [],
+	'testwikidatawiki' => [ 107 ],
+	'wikidatawiki' => [ // T72346
+		143, // imported from
+		3452, // inferred from
+		4656, // Wikimedia import URL
+		/**
+		 * Deprecated properties
+		 * @see https://www.wikidata.org/wiki/Special:WhatLinksHere/Q18644427?namespace=120
+		 */
+		134, // has dialect (DEPRECATED)
+		558, // unit symbol (DEPRECATED)
+		1962, // patron (DEPRECATED)
+		2315, // comment (DEPRECATED)
+		4237, // Heritage Building in Finland ID (DEPRECATED)
+		5130, // island of location (DEPRECATED)
+		/**
+		 * @see https://www.wikidata.org/w/index.php?oldid=335040857
+		 */
+		646, // Freebase ID
+		/**
+		 * Sandbox properties
+		 * @see https://www.wikidata.org/wiki/Special:WhatLinksHere/Q18720640?namespace=120
+		 */
+		368,  // commonsMedia
+		369,  // wikibase-item
+		370,  // string
+		578,  // time
+		626,  // globe-coordinate
+		855,  // url
+		1106, // quantity
+		1450, // monolingualtext
+		2368, // wikibase-property
+		2535, // math
+		2536, // external-id
+		4045, // tabular-data
+		4047, // geo-shape
+		5188, // wikibase-lexeme
+		5189, // wikibase-form
+	],
 ],
 
 'wmgUseWikibaseQuality' => [

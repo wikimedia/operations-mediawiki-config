@@ -1,9 +1,6 @@
 <?php
 
 if ( $wmgUseWikibaseRepo ) {
-	$wgPropertySuggesterClassifyingPropertyIds = [ 694 ];
-	$wgPropertySuggesterInitialSuggestions = [ 694 ];
-	$wgPropertySuggesterDeprecatedIds = [ 107 ];
 	$wgWBRepoSettings['formatterUrlProperty'] = 'P9094';
 
 	$wgWBRepoSettings['badgeItems'] = [
