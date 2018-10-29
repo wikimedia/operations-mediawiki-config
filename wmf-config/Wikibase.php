@@ -73,6 +73,7 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['siteLinkGroups'] = $wmgWBSiteLinkGroups;
 	$wgWBRepoSettings['specialSiteLinkGroups'] = $wmgWikibaseRepoSpecialSiteLinkGroups;
 	$wgWBRepoSettings['statementSections'] = $wmgWikibaseRepoStatementSections;
+	$wgWBRepoSettings['badgeItems'] = $wmgWikibaseRepoBadgeItems;
 
 	$wgWBRepoSettings['normalizeItemByTitlePageNames'] = true;
 
@@ -102,6 +103,7 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['siteLinkGroups'] = $wmgWBSiteLinkGroups;
 	$wgWBClientSettings['specialSiteLinkGroups'] = $wmgWikibaseClientSpecialSiteLinkGroups;
+	$wgWBClientSettings['badgeClassNames'] = $wmgWikibaseClientBadgeClassNames;
 
 	$wgWBClientSettings['allowLocalShortDesc'] = $wmgWikibaseAllowLocalShortDesc;
 	$wgWBClientSettings['allowDataTransclusion'] = $wmgWikibaseEnableData;
