@@ -18801,7 +18801,7 @@ $wgConf->settings = [
 	'wikidataclient' => [
 		'item' => '',
 		'property' => 'Property',
-		// TODO lexeme should be here?
+		// TODO Lexeme should be here once removed from wmgWikibaseDisabledAccessEntityTypes
 	],
 ],
 
@@ -19372,6 +19372,7 @@ $wgConf->settings = [
 ],
 
 'wmgWikibaseDisabledAccessEntityTypes' => [
+	// Note: When lexeme is removed from here it needs to be added to wmgWikibaseClientRepoNamespaces
 	'default' => [ 'lexeme', 'form', 'sense' ],
 ],
 
