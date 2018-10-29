@@ -18778,6 +18778,51 @@ $wgConf->settings = [
 	'wikidata' => true,
 ],
 
+'wmgWikibaseRepoEntityNamespaces' => [
+	'default' => [],
+	'wikidata' => [
+		'item' => 0,
+		'property' => 120,
+		'lexeme' => 146,
+	],
+],
+
+'wmgWikibaseClientEntityNamespaces' => [
+	'default' => [],
+	'wikidataclient' => [
+		'item' => 0,
+		'property' => 120,
+		'lexeme' => 146,
+	],
+],
+
+'wmgWikibaseClientRepoNamespaces' => [
+	'default' => [],
+	'wikidataclient' => [
+		'item' => '',
+		'property' => 'Property',
+		// TODO lexeme should be here?
+	],
+],
+
+'wmgWikibaseClientNamespacesWithRepoAccess' => [
+	'default' => [], // default [] includes all namespaces
+	'wikidatawiki' => [
+		NS_CATEGORY,
+		NS_PROJECT,
+		NS_TEMPLATE,
+		NS_HELP,
+		828 // NS_MODULE
+	],
+	'testwikidatawiki' => [
+		NS_CATEGORY,
+		NS_PROJECT,
+		NS_TEMPLATE,
+		NS_HELP,
+		828 // NS_MODULE
+	],
+],
+
 'wmgUseWikibaseRepo' => [
 	'default' => false,
 	'wikidata' => true,

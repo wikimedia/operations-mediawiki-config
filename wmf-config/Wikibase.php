@@ -70,6 +70,7 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgSpecialPages['ItemDisambiguation'] = 'SpecialBlankpage';
 	}
 
+	$wgWBRepoSettings['entityNamespaces'] = $wmgWikibaseRepoEntityNamespaces;
 	$wgWBRepoSettings['idBlacklist'] = $wmgWikibaseIdBlacklist;
 	$wgWBRepoSettings['disabledDataTypes'] = $wmgWikibaseDisabledDataTypes;
 	$wgWBRepoSettings['tmpMaxItemIdForNewItemIdHtmlFormatter'] = $wmgWikibaseMaxItemIdForNewItemIdHtmlFormatter;
@@ -124,6 +125,34 @@ if ( $wmgUseWikibaseClient ) {
 	// to be safe, keeping this here although $wgDBname is default setting
 	$wgWBClientSettings['siteGlobalID'] = $wgDBname;
 
+	$wgWBClientSettings['entityNamespaces'] = $wmgWikibaseClientEntityNamespaces;
+	$wgWBClientSettings['repoNamespaces'] = $wmgWikibaseClientRepoNamespaces;
+	$wgWBClientSettings['namespaces'] = $wmgWikibaseClientNamespacesWithRepoAccess;
+
+	$wgWBClientSettings['excludeNamespaces'] = function () {
+		global $wgDBname;
+
+		// @fixme 102 is LiquidThread comments on wikinews and elsewhere?
+		// but is the Extension: namespace on mediawiki.org, so we need
+		// to allow wiki-specific settings here.
+		$excludeNamespaces = array_merge(
+			MWNamespace::getTalkNamespaces(),
+			// 90 => LiquidThread threads
+			// 92 => LiquidThread summary
+			// 118 => Draft
+			// 1198 => NS_TRANSLATE
+			// 2600 => Flow topic
+			[ NS_USER, NS_FILE, NS_MEDIAWIKI, 90, 92, 118, 1198, 2600 ]
+		);
+
+		if ( in_array( $wgDBname, MWWikiversions::readDbListFile( 'wiktionary' ) ) ) {
+			$excludeNamespaces[] = NS_MAIN;
+			$excludeNamespaces[] = 114; // citations ns
+		}
+
+		return $excludeNamespaces;
+	};
+
 	$wgWBClientSettings['changesDatabase'] = $wmgWikibaseClientChangesDatabase;
 	$wgWBClientSettings['repoDatabase'] = $wmgWikibaseClientRepoDatabase;
 	$wgWBClientSettings['repoUrl'] = $wmgWikibaseClientRepoUrl;
@@ -159,37 +188,19 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['entityUsageModifierLimits'] = [ 'D' => 10, 'L' => 10, 'C' => 33 ];
 }
 
-$baseWikidataNs = 120;
-
-// Define the namespace indexes for repo (and client wikis also need to be aware of these,
-// thus entityNamespaces need to be a shared setting).
-//
-// NOTE: do *not* define WB_NS_ITEM and WB_NS_ITEM_TALK when using a core namespace for items!
-define( 'WB_NS_PROPERTY', $baseWikidataNs );
-define( 'WB_NS_PROPERTY_TALK', $baseWikidataNs + 1 );
-// TODO is the query namespace used? Can we remove this?
-define( 'WB_NS_QUERY', $baseWikidataNs + 2 );
-define( 'WB_NS_QUERY_TALK', $baseWikidataNs + 3 );
+// Define the namespace indexes for repos and clients
+// NOTE: do *not* define WB_NS_ITEM and WB_NS_ITEM_TALK when using a core namespace for items!!..
+define( 'WB_NS_PROPERTY', 120 );
+define( 'WB_NS_PROPERTY_TALK', 121 );
 define( 'WB_NS_LEXEME', 146 );
 define( 'WB_NS_LEXEME_TALK', 147 );
+// TODO the query namespace is not actually used in prod. Remove me?
+define( 'WB_NS_QUERY', 122 );
+define( 'WB_NS_QUERY_TALK', 123 );
 
 // Addshore config cleanup marker. Above this is tidy, below this needs to be sorted...
 
-// Tell Wikibase which namespace to use for which type of entities
-// @note when we enable WikibaseRepo on commons, then having NS_MAIN for items
-// will be a problem, though commons should be aware that Wikidata items are in
-// the main namespace. (see T137444)
-$wmgWBNamespaceSettings = [
-	'wikidata' => [
-		'item' => NS_MAIN,
-		'property' => WB_NS_PROPERTY,
-		'lexeme' => WB_NS_LEXEME,
-	],
-];
-
 if ( ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) && $wmgUseWikibaseRepo ) {
-	$wgWBRepoSettings['entityNamespaces'] = $wmgWBNamespaceSettings['wikidata'];
-
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		$wgWBRepoSettings['clientDbList'] = [ 'testwiki', 'test2wiki', 'testwikidatawiki' ];
 	} else {
@@ -228,13 +239,6 @@ if ( ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) && $wm
 }
 
 if ( $wmgUseWikibaseClient ) {
-	$wgWBClientSettings['entityNamespaces'] = $wmgWBNamespaceSettings['wikidata'];
-
-	$wgWBClientSettings['repoNamespaces'] = [
-		'item' => '',
-		'property' => 'Property'
-	];
-
 	$wbSiteGroup = isset( $wmgWikibaseSiteGroup ) ? $wmgWikibaseSiteGroup : null;
 	$wgWBClientSettings['languageLinkSiteGroup'] = $wbSiteGroup;
 
@@ -244,48 +248,11 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['siteGroup'] = $wbSiteGroup;
 
-	$wgWBClientSettings['excludeNamespaces'] = function () {
-		global $wgDBname;
-
-		// @fixme 102 is LiquidThread comments on wikinews and elsewhere?
-		// but is the Extension: namespace on mediawiki.org, so we need
-		// to allow wiki-specific settings here.
-		$excludeNamespaces = array_merge(
-			MWNamespace::getTalkNamespaces(),
-			// 90 => LiquidThread threads
-			// 92 => LiquidThread summary
-			// 118 => Draft
-			// 1198 => NS_TRANSLATE
-			// 2600 => Flow topic
-			[ NS_USER, NS_FILE, NS_MEDIAWIKI, 90, 92, 118, 1198, 2600 ]
-		);
-
-		if ( in_array( $wgDBname, MWWikiversions::readDbListFile( 'wiktionary' ) ) ) {
-			$excludeNamespaces[] = NS_MAIN;
-			$excludeNamespaces[] = 114; // citations ns
-		}
-
-		return $excludeNamespaces;
-	};
-
 	if ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) {
-		$wgWBClientSettings['namespaces'] = [
-			NS_CATEGORY,
-			NS_PROJECT,
-			NS_TEMPLATE,
-			NS_HELP,
-			828 // NS_MODULE
-		];
-
 		$wgWBClientSettings['languageLinkSiteGroup'] = 'wikipedia';
 		$wgWBClientSettings['showExternalRecentChanges'] = false;
 	}
 
-}
-
-// On commons do not yet register any entity types.
-if ( $wgDBname === 'commonswiki' && $wmgUseWikibaseMediaInfo ) {
-	$wgWBRepoSettings['entityNamespaces'] = [];
 }
 
 unset( $wmgWBSharedCacheKey );
