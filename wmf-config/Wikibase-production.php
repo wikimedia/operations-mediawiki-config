@@ -4,10 +4,6 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		$wgWBRepoSettings['formatterUrlProperty'] = 'P368';
 
-		$wgWBRepoSettings['badgeItems'] = [
-			'Q608' => 'wb-badge-goodarticle',
-			'Q609' => 'wb-badge-featuredarticle'
-		];
 		$wgWBRepoSettings['preferredGeoDataProperties'] = [
 			'P125',
 			'P10',
@@ -32,20 +28,6 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['sparqlEndpoint'] = 'https://query.wikidata.org/sparql';
 
 		$wgWBRepoSettings['formatterUrlProperty'] = 'P1630';
-
-		$wgWBRepoSettings['badgeItems'] = [
-			'Q17437798' => 'wb-badge-goodarticle',
-			'Q17437796' => 'wb-badge-featuredarticle',
-			'Q17559452' => 'wb-badge-recommendedarticle', // T72268
-			'Q17506997' => 'wb-badge-featuredlist', // T72332
-			'Q17580674' => 'wb-badge-featuredportal', // T75193
-			'Q20748091' => 'wb-badge-notproofread', // T97014 - Wikisource badges
-			'Q20748094' => 'wb-badge-problematic',
-			'Q20748092' => 'wb-badge-proofread',
-			'Q20748093' => 'wb-badge-validated',
-			'Q28064618' => 'wb-badge-digitaldocument', // T153186
-			'Q51759403' => 'wb-badge-goodlist', // T190976
-		];
 
 		$wgWBRepoSettings['preferredGeoDataProperties'] = [
 			'P625',
@@ -116,23 +98,6 @@ if ( $wmgUseWikibaseClient ) {
 		$wgArticlePlaceholderImageProperty = 'P18';
 		$wgWBClientSettings['wikiPageUpdaterDbBatchSize'] = 20;
 	}
-
-	$wgWBClientSettings['badgeClassNames'] = [
-		'Q17437796' => 'badge-featuredarticle',
-		'Q17437798' => 'badge-goodarticle',
-		'Q17559452' => 'badge-recommendedarticle', // T72268
-		'Q17506997' => 'badge-featuredlist', // T72332
-		'Q17580674' => 'badge-featuredportal', // T75193
-		'Q20748091' => 'badge-notproofread', // T97014 - Wikisource badges
-		'Q20748094' => 'badge-problematic',
-		'Q20748092' => 'badge-proofread',
-		'Q20748093' => 'badge-validated',
-		'Q28064618' => 'badge-digitaldocument', // T153186
-		'Q51759403' => 'badge-goodlist', // T190976
-	];
-
-	// Overwrite or add commons links in the "other projects sidebar" with the "commons category" (P373), per T126960
-	$wgWikimediaBadgesCommonsCategoryProperty = $wgDBname === 'commonswiki' ? null : 'P373';
 
 	$wgArticlePlaceholderSearchEngineIndexed = $wmgArticlePlaceholderSearchEngineIndexed;
 	$wgWBClientSettings['propertyOrderUrl'] = 'https://www.wikidata.org/w/index.php?title=MediaWiki:Wikibase-SortedProperties&action=raw&sp_ver=1';
