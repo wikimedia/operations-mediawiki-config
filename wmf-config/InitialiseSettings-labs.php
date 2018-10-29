@@ -471,19 +471,6 @@ function wmfLabsSettings() {
 			'default' => []
 		],
 
-		// ###### Structured Data on Commons testing installation ######
-		'wmgUseWikibaseRepo' => [
-			'commonswiki' => true,
-		],
-
-		'wmgUseWikibaseMediaInfo' => [
-			'commonswiki' => true,
-		],
-
-		'wgMediaInfoEnable' => [
-			'commonswiki' => true,
-		],
-
 		// Test the extension Collection in other languages for book creator,
 		// which avoids the bugs related to the PDF generator.
 		'wmgUseCollection' => [
