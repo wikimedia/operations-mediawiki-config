@@ -90,18 +90,9 @@ if ( $wmgUseWikibaseRepo ) {
 
 	// These settings can be overridden by the cron parameters in operations/puppet
 	$wgWBRepoSettings['dispatchingLockManager'] = $wmgWikibaseDispatchingLockManager;
-	$wgWBRepoSettings['dispatchDefaultDispatchInterval'] = 30;
-	if ( $wgDBname === 'wikidatawiki' ) {
-		// Current puppet cron is every 3 mins
-		$wgWBRepoSettings['dispatchMaxTime'] = 360; // 6 mins
-		$wgWBRepoSettings['dispatchDefaultBatchSize'] = 420;
-		$wgWBRepoSettings['dispatchDefaultDispatchInterval'] = 25;
-	}
-	if ( $wgDBname === 'testwikidatawiki' ) {
-		// Current puppet cron is every 15 mins
-		$wgWBRepoSettings['dispatchMaxTime'] = 900; // 15 mins
-		$wgWBRepoSettings['dispatchDefaultBatchSize'] = 200;
-	}
+	$wgWBRepoSettings['dispatchDefaultDispatchInterval'] = $wmgWikibaseDispatchInterval;
+	$wgWBRepoSettings['dispatchMaxTime'] = $wmgWikibaseDispatchMaxTime;
+	$wgWBRepoSettings['dispatchDefaultBatchSize'] = $wmgWikibaseDispatchDefaultBatchSize;
 }
 
 if ( $wmgUseWikibaseClient ) {
