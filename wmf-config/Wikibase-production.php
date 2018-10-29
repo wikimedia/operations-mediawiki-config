@@ -36,12 +36,9 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings['repoDatabase'] = 'testwikidatawiki';
 		$wgWBClientSettings['repoUrl'] = "https://test.wikidata.org";
 		$wgWBClientSettings['repoConceptBaseUri'] = 'http://test.wikidata.org/entity/';
-
-		$wgArticlePlaceholderImageProperty = 'P47';
 	} else {
 		$wgWBClientSettings['repoUrl'] = 'https://www.wikidata.org';
 		$wgWBClientSettings['repoConceptBaseUri'] = 'http://www.wikidata.org/entity/';
-		$wgArticlePlaceholderImageProperty = 'P18';
 		$wgWBClientSettings['wikiPageUpdaterDbBatchSize'] = 20;
 	}
 

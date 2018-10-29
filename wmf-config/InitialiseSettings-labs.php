@@ -855,5 +855,8 @@ function wmfLabsSettings() {
 				'P964',
 			],
 		],
+		'wgArticlePlaceholderImageProperty' => [
+			'default' => 'P964',
+		],
 	];
 } # wmflLabsSettings()
