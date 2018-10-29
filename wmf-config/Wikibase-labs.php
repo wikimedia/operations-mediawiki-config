@@ -1,20 +1,6 @@
 <?php
 
 if ( $wmgUseWikibaseRepo ) {
-	$wgWBRepoSettings['formatterUrlProperty'] = 'P9094';
-
-	$wgWBRepoSettings['preferredGeoDataProperties'] = [
-		'P740',
-		'P477',
-	];
-	$wgWBRepoSettings['preferredPageImagesProperties'] = [
-		'P448',
-		'P715',
-		'P723',
-		'P733',
-		'P964',
-	];
-
 	$wgWBRepoSettings['canonicalUriProperty'] = 'P174944';
 
 	$wgWBRepoSettings['useTermsTableSearchFields'] = false;

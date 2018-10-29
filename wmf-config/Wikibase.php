@@ -74,6 +74,9 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['specialSiteLinkGroups'] = $wmgWikibaseRepoSpecialSiteLinkGroups;
 	$wgWBRepoSettings['statementSections'] = $wmgWikibaseRepoStatementSections;
 	$wgWBRepoSettings['badgeItems'] = $wmgWikibaseRepoBadgeItems;
+	$wgWBRepoSettings['formatterUrlProperty'] = $wmgWBRepoFormatterUrlProperty;
+	$wgWBRepoSettings['preferredGeoDataProperties'] = $wmgWBRepoPreferredGeoDataProperties;
+	$wgWBRepoSettings['preferredPageImagesProperties'] = $wmgWBRepoPreferredPageImagesProperties;
 
 	$wgWBRepoSettings['normalizeItemByTitlePageNames'] = true;
 

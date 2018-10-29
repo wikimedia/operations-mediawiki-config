@@ -18953,6 +18953,68 @@ $wgConf->settings = [
 	],
 ],
 
+'wmgWBRepoFormatterUrlProperty' => [
+	'default' => null,
+	'testwikidatawiki' => 'P368',
+	'wikidatawiki' => 'P1630',
+],
+
+'wmgWBRepoPreferredGeoDataProperties' => [
+	'default' => [],
+	'testwikidatawiki' => [
+		'P125',
+		'P10',
+	],
+	'wikidatawiki' => [
+		'P625',
+	],
+],
+
+'wmgWBRepoPreferredPageImagesProperties' => [
+	'default' => [],
+	'testwikidatawiki' => [
+		'P6',
+		'P47',
+		'P50',
+		'P98',
+		'P106',
+		'P118',
+		'P152',
+		'P153',
+		'P185',
+	],
+	'wikidatawiki' => [
+		// Photos
+		'P18',
+		// Complex graphics
+		'P41',
+		'P94',
+		'P154',
+		'P1766',
+		// Simple graphics
+		'P14',
+		'P158',
+		'P1543',
+		'P109',
+		'P367',
+		// Multi page content
+		'P996',
+		// Maps
+		'P1621',
+		'P15',
+		'P1846',
+		'P181',
+		'P242',
+		'P1944',
+		'P1943',
+		// Diagrams
+		'P207',
+		'P117',
+		'P692',
+		'P491',
+	],
+],
+
 'wmgWikibaseClientInjectRecentChanges' => [
 	'default' => true,
 	'wikidata' => false,

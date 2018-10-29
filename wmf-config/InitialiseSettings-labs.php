@@ -837,5 +837,23 @@ function wmfLabsSettings() {
 			'default' => 'P725',
 			'commonswiki' => null,
 		],
+		'wmgWBRepoFormatterUrlProperty' => [
+			'wikidatawiki' => 'P9094',
+		],
+		'wmgWBRepoPreferredGeoDataProperties' => [
+			'wikidatawiki' => [
+				'P740',
+				'P477',
+			],
+		],
+		'wmgWBRepoPreferredPageImagesProperties' => [
+			'wikidatawiki' => [
+				'P448',
+				'P715',
+				'P723',
+				'P733',
+				'P964',
+			],
+		],
 	];
 } # wmflLabsSettings()
