@@ -18777,10 +18777,32 @@ $wgConf->settings = [
 	'wikidata' => true,
 ],
 
+'wmgWBRepoCanonicalUriProperty' => [
+	'default' => null,
+	'wikidata' => 'P1921',
+],
+
+'wmgWBRepoSettingsSparqlEndpoint' => [
+	'default' => null,
+	'wikidatawiki' => 'https://query.wikidata.org/sparql',
+],
+
 'wmgUseWikibaseClient' => [
 	'default' => false,
 	'wikidataclient' => true,
 	'wiktionary' => true,
+],
+
+'wmgWikibaseClientUseTermsTableSearchFields' => [
+	'default' => false,
+],
+
+'wmgWikibaseClientPropertyOrderUrl' => [
+	'default' => 'https://www.wikidata.org/w/index.php?title=MediaWiki:Wikibase-SortedProperties&action=raw&sp_ver=1',
+],
+
+'wmgWikibaseClientEchoIcon' => [
+	'default' => [ 'url' => '/static/images/wikibase/echoIcon.svg' ],
 ],
 
 'wmgUseWikibaseWikimediaBadges' => [
