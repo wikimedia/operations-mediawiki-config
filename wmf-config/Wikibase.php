@@ -109,6 +109,13 @@ if ( $wmgUseWikibaseClient ) {
 	// to be safe, keeping this here although $wgDBname is default setting
 	$wgWBClientSettings['siteGlobalID'] = $wgDBname;
 
+	$wgWBClientSettings['changesDatabase'] = $wmgWikibaseClientChangesDatabase;
+	$wgWBClientSettings['repoDatabase'] = $wmgWikibaseClientRepoDatabase;
+	$wgWBClientSettings['repoUrl'] = $wmgWikibaseClientRepoUrl;
+	$wgWBClientSettings['repoConceptBaseUri'] = $wmgWikibaseClientRepoConceptBaseUri;
+	$wgWBClientSettings['repositories'] = $wmgWikibaseClientRepositories;
+	$wgWBClientSettings['wikiPageUpdaterDbBatchSize'] = 20;
+
 	$wgWBClientSettings['disabledAccessEntityTypes'] = $wmgWikibaseDisabledAccessEntityTypes;
 	$wgWBClientSettings['maxSerializedEntitySize'] = $wmgWikibaseMaxSerializedEntitySize;
 

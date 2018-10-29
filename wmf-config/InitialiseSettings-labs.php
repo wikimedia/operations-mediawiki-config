@@ -871,5 +871,22 @@ function wmfLabsSettings() {
 		'wmgWikibaseClientPropertyOrderUrl' => [
 			'default' => null,
 		],
+		'wmgWikibaseClientRepoUrl' => [
+			'default' => 'https://wikidata.beta.wmflabs.org',
+		],
+		'wmgWikibaseClientRepositories' => [
+			'default' => [
+				'' => [
+					'repoDatabase' => 'wikidatawiki',
+					'entityNamespaces' => [
+						'item' => NS_MAIN,
+						'property' => WB_NS_PROPERTY
+						// FIXME, this doesn't currently have lexeme....
+					],
+					'baseUri' => 'https://wikidata.beta.wmflabs.org/entity/',
+					'prefixMapping' => [ '' => '' ],
+				]
+			],
+		],
 	];
 } # wmflLabsSettings()
