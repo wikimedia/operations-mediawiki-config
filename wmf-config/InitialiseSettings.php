@@ -18553,7 +18553,7 @@ $wgConf->settings = [
 	'cawiki' => 1,
 	'enwikivoyage' => 1,
 	'frwiki' => 3,
-	'ruwiki' => 2,
+	'ruwiki' => 1,
 ],
 
 'wgNavigationTimingSurveyName' => [
