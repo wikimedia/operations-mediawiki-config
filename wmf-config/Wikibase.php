@@ -77,6 +77,7 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['formatterUrlProperty'] = $wmgWBRepoFormatterUrlProperty;
 	$wgWBRepoSettings['preferredGeoDataProperties'] = $wmgWBRepoPreferredGeoDataProperties;
 	$wgWBRepoSettings['preferredPageImagesProperties'] = $wmgWBRepoPreferredPageImagesProperties;
+	$wgWBRepoSettings['sparqlEndpoint'] = $wmgWBRepoSettingsSparqlEndpoint;
 
 	$wgWBRepoSettings['normalizeItemByTitlePageNames'] = true;
 
@@ -86,6 +87,9 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['dataSquidMaxage'] = 1 * 60 * 60;
 	$wgWBRepoSettings['sharedCacheDuration'] = 60 * 60 * 24;
 	$wgWBRepoSettings['sharedCacheKeyPrefix'] = $wmgWBSharedCacheKey;
+
+	// T178180
+	$wgWBRepoSettings['canonicalUriProperty'] = $wmgWBRepoCanonicalUriProperty;
 
 	// Cirrus usage for wbsearchentities is on
 	$wgWBRepoSettings['entitySearch']['useCirrus'] = true;
@@ -120,6 +124,13 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['sharedCacheKeyPrefix'] = $wmgWBSharedCacheKey;
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
+
+	// T142103
+	$wgWBClientSettings['sendEchoNotification'] = true;
+	$wgWBClientSettings['echoIcon'] = $wmgWikibaseClientEchoIcon;
+
+	$wgWBClientSettings['useTermsTableSearchFields'] = $wmgWikibaseClientUseTermsTableSearchFields;
+	$wgWBClientSettings['propertyOrderUrl'] = $wmgWikibaseClientPropertyOrderUrl;
 
 	$wgWBClientSettings['entityUsageModifierLimits'] = [ 'D' => 10, 'L' => 10, 'C' => 33 ];
 }
@@ -189,8 +200,6 @@ if ( ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) && $wm
 	$wgCaptchaTriggersOnNamespace[NS_MAIN]['addurl'] = false;
 	$wgCaptchaTriggersOnNamespace[WB_NS_PROPERTY]['addurl'] = false;
 
-	// T178180
-	$wgWBRepoSettings['canonicalUriProperty'] = 'P1921';
 	require_once "{$wmfConfigDir}/WikibaseSearchSettings.php";
 }
 

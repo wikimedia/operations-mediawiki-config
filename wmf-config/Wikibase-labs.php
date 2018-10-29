@@ -1,9 +1,5 @@
 <?php
 
-if ( $wmgUseWikibaseRepo ) {
-	$wgWBRepoSettings['canonicalUriProperty'] = 'P174944';
-}
-
 if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['repositories'] = [
 		'' => [
@@ -18,6 +14,4 @@ if ( $wmgUseWikibaseClient ) {
 	];
 
 	$wgWBClientSettings['repoUrl'] = 'https://wikidata.beta.wmflabs.org';
-	$wgWBClientSettings['sendEchoNotification'] = true;
-	$wgWBClientSettings['echoIcon'] = [ 'path' => '/static/images/wikibase/echoIcon.svg' ];
 }

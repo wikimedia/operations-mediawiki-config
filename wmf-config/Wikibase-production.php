@@ -2,8 +2,6 @@
 
 if ( $wmgUseWikibaseRepo ) {
 	if ( $wgDBname === 'wikidatawiki' ) {
-		$wgWBRepoSettings['sparqlEndpoint'] = 'https://query.wikidata.org/sparql';
-
 		$wgSpecialPages['ItemDisambiguation'] = 'SpecialBlankpage';
 
 		$wgWBRepoSettings['unitStorage'] = [
@@ -25,15 +23,6 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings['wikiPageUpdaterDbBatchSize'] = 20;
 	}
 
-	$wgWBClientSettings['propertyOrderUrl'] = 'https://www.wikidata.org/w/index.php?title=MediaWiki:Wikibase-SortedProperties&action=raw&sp_ver=1';
-
-	// T142103
-	$wgWBClientSettings['sendEchoNotification'] = true;
-	$wgWBClientSettings['echoIcon'] = [ 'url' => '/static/images/wikibase/echoIcon.svg' ];
-
 	$wgWBClientSettings['disabledUsageAspects'] = $wmgWikibaseDisabledUsageAspects;
 	$wgWBClientSettings['fineGrainedLuaTracking'] = $wmgWikibaseFineGrainedLuaTracking;
-
-	$wgWBClientSettings['useTermsTableSearchFields'] = false;
-
 }

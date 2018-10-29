@@ -858,5 +858,18 @@ function wmfLabsSettings() {
 		'wgArticlePlaceholderImageProperty' => [
 			'default' => 'P964',
 		],
+		'wmgWikibaseClientEchoIcon' => [
+			'default' => [ 'path' => '/static/images/wikibase/echoIcon.svg' ],
+		],
+		'wmgWBRepoCanonicalUriProperty' => [
+			'default' => null,
+			'wikidata' => 'P174944',
+		],
+		'wmgWikibaseClientUseTermsTableSearchFields' => [
+			'default' => true,
+		],
+		'wmgWikibaseClientPropertyOrderUrl' => [
+			'default' => null,
+		],
 	];
 } # wmflLabsSettings()
