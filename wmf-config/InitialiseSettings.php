@@ -19008,6 +19008,10 @@ $wgConf->settings = [
 	'wikidata' => true,
 ],
 
+'wgPropertySuggesterMinProbability' => [
+	'default' => 0.069,
+],
+
 'wmgUseWikibaseQuality' => [
 	'default' => false,
 	'wikidata' => true,
