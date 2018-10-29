@@ -798,5 +798,14 @@ function wmfLabsSettings() {
 		'wgEnablePartialBlocks' => [
 			'default' => true,
 		],
+		'wgPropertySuggesterClassifyingPropertyIds' => [
+			'wikidatawiki' => [ 694 ],
+		],
+		'wgPropertySuggesterInitialSuggestions' => [
+			'wikidatawiki' => [ 694 ],
+		],
+		'wgPropertySuggesterDeprecatedIds' => [
+			'wikidatawiki' => [ 107 ],
+		],
 	];
 } # wmflLabsSettings()
