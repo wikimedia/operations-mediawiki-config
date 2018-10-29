@@ -22,7 +22,4 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings['repoConceptBaseUri'] = 'http://www.wikidata.org/entity/';
 		$wgWBClientSettings['wikiPageUpdaterDbBatchSize'] = 20;
 	}
-
-	$wgWBClientSettings['disabledUsageAspects'] = $wmgWikibaseDisabledUsageAspects;
-	$wgWBClientSettings['fineGrainedLuaTracking'] = $wmgWikibaseFineGrainedLuaTracking;
 }
