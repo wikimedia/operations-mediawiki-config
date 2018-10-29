@@ -70,6 +70,30 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgSpecialPages['ItemDisambiguation'] = 'SpecialBlankpage';
 	}
 
+	// Calculate the client Db lists based on our wikiversions db lists
+	if ( $wgDBname === 'testwikidatawiki' ) {
+		$wgWBRepoSettings['clientDbList'] = [ 'testwiki', 'test2wiki', 'testwikidatawiki' ];
+	} elseif ( $wgDBname === 'wikidatawiki' ) {
+		$wgWBRepoSettings['clientDbList'] = array_diff(
+			MWWikiversions::readDbListFile( 'wikidataclient' ),
+			[ 'testwikidatawiki', 'testwiki', 'test2wiki' ]
+		);
+		// Exclude closed wikis
+		$wgWBRepoSettings['clientDbList'] = array_diff(
+			$wgWBRepoSettings['clientDbList'],
+			MWWikiversions::readDbListFile( $wmfRealm === 'labs' ? 'closed-labs' : 'closed' )
+		);
+		// Exclude non-existent wikis in labs
+		if ( $wmfRealm === 'labs' ) {
+			$wgWBRepoSettings['clientDbList'] = array_intersect(
+				$wgWBRepoSettings['clientDbList'],
+				MWWikiversions::readDbListFile( 'all-labs' )
+			);
+		}
+	} elseif ( $wgDBname === 'commonswiki' ) {
+		// TODO eventually commonswiki will have clients that will need to be registered here
+	}
+
 	$wgWBRepoSettings['entityNamespaces'] = $wmgWikibaseRepoEntityNamespaces;
 	$wgWBRepoSettings['idBlacklist'] = $wmgWikibaseIdBlacklist;
 	$wgWBRepoSettings['disabledDataTypes'] = $wmgWikibaseDisabledDataTypes;
@@ -201,27 +225,6 @@ define( 'WB_NS_QUERY_TALK', 123 );
 // Addshore config cleanup marker. Above this is tidy, below this needs to be sorted...
 
 if ( ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) && $wmgUseWikibaseRepo ) {
-	if ( $wgDBname === 'testwikidatawiki' ) {
-		$wgWBRepoSettings['clientDbList'] = [ 'testwiki', 'test2wiki', 'testwikidatawiki' ];
-	} else {
-		$wgWBRepoSettings['clientDbList'] = array_diff(
-			MWWikiversions::readDbListFile( 'wikidataclient' ),
-			[ 'testwikidatawiki', 'testwiki', 'test2wiki' ]
-		);
-		// Exclude closed wikis
-		$wgWBRepoSettings['clientDbList'] = array_diff(
-			$wgWBRepoSettings['clientDbList'],
-			MWWikiversions::readDbListFile( $wmfRealm === 'labs' ? 'closed-labs' : 'closed' )
-		);
-		// Exclude non-existent wikis in labs
-		if ( $wmfRealm === 'labs' ) {
-			$wgWBRepoSettings['clientDbList'] = array_intersect(
-				$wgWBRepoSettings['clientDbList'],
-				MWWikiversions::readDbListFile( 'all-labs' )
-			);
-		}
-	}
-
 	$wgWBRepoSettings['localClientDatabases'] = array_combine(
 		$wgWBRepoSettings['clientDbList'],
 		$wgWBRepoSettings['clientDbList']
