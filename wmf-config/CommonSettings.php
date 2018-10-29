@@ -2211,6 +2211,11 @@ if ( $wmgUseUploadWizard ) {
 		$wgUploadWizardConfig['flickrBlacklistPage'] = 'User:FlickreviewR/bad-authors';
 		$wgUploadWizardConfig['customLicenseTemplate'] = 'Template:License_template_tag';
 	}
+
+	// Enable Structured Data captions on upload
+	if ( $wgMediaInfoEnable ) {
+		$wgUploadWizardConfig['wikibase']['enabled'] = true;
+	}
 }
 
 if ( $wmgCustomUploadDialog ) {
