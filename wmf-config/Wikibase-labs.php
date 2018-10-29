@@ -2,8 +2,6 @@
 
 if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['canonicalUriProperty'] = 'P174944';
-
-	$wgWBQualityConstraintsSuggestionsBetaFeature[ 'value' ] = true;
 }
 
 if ( $wmgUseWikibaseClient ) {

@@ -19186,6 +19186,53 @@ $wgConf->settings = [
 	'wikidata' => true,
 ],
 
+'wgWBQualityConstraintsSuggestionsBetaFeature' => [
+	'default' => false,
+	'wikidata' => true, // T207019
+],
+
+'wgWBQualityConstraintsSparqlEndpoint' => [
+	'default' => 'http://wdqs-internal.discovery.wmnet/sparql',
+],
+
+'wgWBQualityConstraintsSparqlMaxMillis' => [
+	'default' => 10000,
+	'wikidatawiki' => 5000, // limit SPARQL queries to just 5 seconds for now
+],
+
+'wgWBQualityConstraintsTypeCheckMaxEntities' => [
+	'default' => 1000,
+	'wikidatawiki' => 10, // only check few entities in PHP => fall back to SPARQL very quickly
+],
+
+'wgWBQualityConstraintsCacheCheckConstraintsResults' => [
+	'default' => false,
+	'wikidatawiki' => true,
+],
+
+'wgWBQualityConstraintsPropertyConstraintId' => [
+	'default' => false,
+	'testwikidatawiki' => 'P51064',
+	'wikidatawiki' => 'P2302',
+],
+
+'wgWBQualityConstraintsFormatConstraintId' => [
+	'default' => false,
+	'testwikidatawiki' => 'Q100086',
+	'wikidatawiki' => 'Q21502404',
+],
+
+'wgWBQualityConstraintsFormatAsARegularExpressionId' => [
+	'default' => false,
+	'testwikidatawiki' => 'P51065',
+	'wikidatawiki' => 'P1793',
+],
+
+'wgWBQualityConstraintsPropertiesWithViolatingQualifiers' => [
+	'default' => [],
+	'wikidatawiki' => [ 'P1855', 'P2271', 'P5192', 'P5193' ], // T183267
+],
+
 'wmgUseWikibaseLexeme' => [
 	'default' => false,
 	'testwikidatawiki' => true,
