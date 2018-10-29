@@ -18801,6 +18801,96 @@ $wgConf->settings = [
 	'wiktionary' => true,
 ],
 
+// Current default setting extracted by running the following in production on enwiki:
+// var_dump($wgWBClientSettings['repositories'](\Wikibase\WikibaseSettings::getClientSettings()));
+// The repoDatabase element was set as it was previously null / false
+'wmgWikibaseClientRepositories' => [
+	'default' => [
+		'' => [
+			'repoDatabase' => 'wikidatawiki',
+			'baseUri' => 'https://www.wikidata.org/entity/',
+			'entityNamespaces' => [
+				'item' => 0,
+				'property' => 123,
+				'lexeme' => 146,
+			],
+			'prefixMapping' => [
+				'' => '',
+			],
+		],
+	],
+	'testwiki' => [
+		'' => [
+			'repoDatabase' => 'testwikidatawiki',
+			'baseUri' => 'http://test.wikidata.org/entity/',
+			'entityNamespaces' => [
+				'item' => 0,
+				'property' => 123,
+				'lexeme' => 146,
+			],
+			'prefixMapping' => [
+				'' => '',
+			],
+		],
+	],
+	'test2wiki' => [
+		'' => [
+			'repoDatabase' => 'testwikidatawiki',
+			'baseUri' => 'http://test.wikidata.org/entity/',
+			'entityNamespaces' => [
+				'item' => 0,
+				'property' => 123,
+				'lexeme' => 146,
+			],
+			'prefixMapping' => [
+				'' => '',
+			],
+		],
+	],
+	'testwikidatawiki' => [
+		'' => [
+			'repoDatabase' => 'testwikidatawiki',
+			'baseUri' => 'http://test.wikidata.org/entity/',
+			'entityNamespaces' => [
+				'item' => 0,
+				'property' => 123,
+				'lexeme' => 146,
+			],
+			'prefixMapping' => [
+				'' => '',
+			],
+		],
+	],
+],
+
+'wmgWikibaseClientChangesDatabase' => [
+	'default' => 'wikidatawiki',
+	'testwiki' => 'testwikidatawiki',
+	'test2wiki' => 'testwikidatawiki',
+	'testwikidatawiki' => 'testwikidatawiki',
+],
+
+'wmgWikibaseClientRepoDatabase' => [
+	'default' => 'wikidatawiki',
+	'testwiki' => 'testwikidatawiki',
+	'test2wiki' => 'testwikidatawiki',
+	'testwikidatawiki' => 'testwikidatawiki',
+],
+
+'wmgWikibaseClientRepoUrl' => [
+	'default' => 'https://www.wikidata.org',
+	'testwiki' => 'https://test.wikidata.org',
+	'test2wiki' => 'https://test.wikidata.org',
+	'testwikidatawiki' => 'https://test.wikidata.org',
+],
+
+'wmgWikibaseClientRepoConceptBaseUri' => [
+	'default' => 'http://www.wikidata.org/entity/',
+	'testwiki' => 'http://test.wikidata.org/entity/',
+	'test2wiki' => 'http://test.wikidata.org/entity/',
+	'testwikidatawiki' => 'http://test.wikidata.org/entity/',
+],
+
 'wmgWikibaseClientUseTermsTableSearchFields' => [
 	'default' => false,
 ],
