@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 cd $(dirname $0)/conf
 
 # Create .txt symlink from mediawiki-config
