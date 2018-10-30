@@ -18861,7 +18861,7 @@ $wgConf->settings = [
 			'baseUri' => 'https://www.wikidata.org/entity/',
 			'entityNamespaces' => [
 				'item' => 0,
-				'property' => 123,
+				'property' => 120,
 				'lexeme' => 146,
 			],
 			'prefixMapping' => [
@@ -18875,7 +18875,7 @@ $wgConf->settings = [
 			'baseUri' => 'http://test.wikidata.org/entity/',
 			'entityNamespaces' => [
 				'item' => 0,
-				'property' => 123,
+				'property' => 120,
 				'lexeme' => 146,
 			],
 			'prefixMapping' => [
