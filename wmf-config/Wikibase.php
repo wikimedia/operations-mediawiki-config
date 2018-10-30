@@ -10,7 +10,6 @@ if ( !empty( $wmgUseWikibaseRepo ) ) {
 		wfLoadExtension( 'PropertySuggester' );
 	}
 	if ( !empty( $wmgUseWikibaseQuality ) ) {
-		wfLoadExtension( 'WikibaseQuality' );
 		wfLoadExtension( 'WikibaseQualityConstraints' );
 	}
 	if ( !empty( $wmgUseWikibaseLexeme ) ) {
