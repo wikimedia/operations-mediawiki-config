@@ -220,6 +220,12 @@ if ( $wmgUseWikibaseClient ) {
 		return $excludeNamespaces;
 	};
 
+	// IS-labs.php has null as the default beta doesn't have a defined property order url.
+	// To avoid an undefined variable wrap this in a condition.
+	if ( isset( $wmgWikibaseClientPropertyOrderUrl ) ) {
+		$wgWBClientSettings['propertyOrderUrl'] = $wmgWikibaseClientPropertyOrderUrl;
+	}
+
 	$wgWBClientSettings['changesDatabase'] = $wmgWikibaseClientChangesDatabase;
 	$wgWBClientSettings['repoDatabase'] = $wmgWikibaseClientRepoDatabase;
 	$wgWBClientSettings['repoUrl'] = $wmgWikibaseClientRepoUrl;
@@ -248,7 +254,6 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['echoIcon'] = $wmgWikibaseClientEchoIcon;
 
 	$wgWBClientSettings['useTermsTableSearchFields'] = $wmgWikibaseClientUseTermsTableSearchFields;
-	$wgWBClientSettings['propertyOrderUrl'] = $wmgWikibaseClientPropertyOrderUrl;
 
 	$wgWBClientSettings['disabledUsageAspects'] = $wmgWikibaseDisabledUsageAspects;
 	$wgWBClientSettings['fineGrainedLuaTracking'] = $wmgWikibaseFineGrainedLuaTracking;
