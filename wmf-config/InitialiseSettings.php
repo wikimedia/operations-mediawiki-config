@@ -18796,6 +18796,11 @@ $wgConf->settings = [
 
 'wmgWikibaseClientEntityNamespaces' => [
 	'default' => [],
+	'wiktionary' => [ // T208317 wiktionary should be in wikidataclient?
+		'item' => 0,
+		'property' => 120,
+		'lexeme' => 146,
+	],
 	'wikidataclient' => [
 		'item' => 0,
 		'property' => 120,
@@ -18805,7 +18810,7 @@ $wgConf->settings = [
 
 'wmgWikibaseClientRepoNamespaces' => [
 	'default' => [],
-	'wiktionary' => [
+	'wiktionary' => [ // T208317 wiktionary should be in wikidataclient?
 		'item' => '',
 		'property' => 'Property',
 		// TODO Lexeme should be here once removed from wmgWikibaseDisabledAccessEntityTypes
