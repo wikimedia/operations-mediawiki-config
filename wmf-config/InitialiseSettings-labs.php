@@ -558,6 +558,9 @@ function wmfLabsSettings() {
 		'wmgUseAdvancedSearch' => [
 			'default' => true,
 		],
+		'wgAdvancedSearchBetaFeature' => [
+			'default' => false,
+		],
 
 		'wmgUseFileImporter' => [
 			'default' => false,
