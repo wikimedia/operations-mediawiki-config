@@ -14322,7 +14322,7 @@ $wgConf->settings = [
 ],
 
 'wmgUseAdvancedSearch' => [
-	'default' => true,
+	'default' => true
 ],
 
 'wmgUseFileImporter' => [
