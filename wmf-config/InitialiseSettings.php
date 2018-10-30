@@ -18805,6 +18805,11 @@ $wgConf->settings = [
 
 'wmgWikibaseClientRepoNamespaces' => [
 	'default' => [],
+	'wiktionary' => [
+		'item' => '',
+		'property' => 'Property',
+		// TODO Lexeme should be here once removed from wmgWikibaseDisabledAccessEntityTypes
+	],
 	'wikidataclient' => [
 		'item' => '',
 		'property' => 'Property',
