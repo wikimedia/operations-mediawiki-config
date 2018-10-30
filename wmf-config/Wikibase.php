@@ -132,14 +132,19 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['specialSiteLinkGroups'] = $wmgWikibaseRepoSpecialSiteLinkGroups;
 	$wgWBRepoSettings['statementSections'] = $wmgWikibaseRepoStatementSections;
 	$wgWBRepoSettings['badgeItems'] = $wmgWikibaseRepoBadgeItems;
-	$wgWBRepoSettings['formatterUrlProperty'] = $wmgWBRepoFormatterUrlProperty;
 	$wgWBRepoSettings['preferredGeoDataProperties'] = $wmgWBRepoPreferredGeoDataProperties;
 	$wgWBRepoSettings['preferredPageImagesProperties'] = $wmgWBRepoPreferredPageImagesProperties;
 
-	// IS.php has null as the default as testwikidata doesn't have a query service.
-	// To avoid an undefined variable wrap this in a condition.
+	// Various settings have null / no setting yet for various sites,
+	// so we need to check they are set before trying to use them to avoid warnings.
 	if ( isset( $wmgWBRepoSettingsSparqlEndpoint ) ) {
 		$wgWBRepoSettings['sparqlEndpoint'] = $wmgWBRepoSettingsSparqlEndpoint;
+	}
+	if( isset( $wmgWBRepoFormatterUrlProperty ) ) {
+		$wgWBRepoSettings['formatterUrlProperty'] = $wmgWBRepoFormatterUrlProperty;
+	}
+	if( isset( $wmgWBRepoCanonicalUriProperty ) ) {
+		$wgWBRepoSettings['canonicalUriProperty'] = $wmgWBRepoCanonicalUriProperty; // T178180
 	}
 
 	$wgWBRepoSettings['normalizeItemByTitlePageNames'] = true;
@@ -150,9 +155,6 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['dataSquidMaxage'] = 1 * 60 * 60;
 	$wgWBRepoSettings['sharedCacheDuration'] = 60 * 60 * 24;
 	$wgWBRepoSettings['sharedCacheKeyPrefix'] = $wmgWBSharedCacheKey;
-
-	// T178180
-	$wgWBRepoSettings['canonicalUriProperty'] = $wmgWBRepoCanonicalUriProperty;
 
 	// Cirrus usage for wbsearchentities is on
 	$wgWBRepoSettings['entitySearch']['useCirrus'] = true;
