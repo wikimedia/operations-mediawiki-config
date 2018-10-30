@@ -114,7 +114,7 @@ if ( $wmgUseWikibaseRepo ) {
 			);
 		}
 	} elseif ( $wgDBname === 'commonswiki' ) {
-		// TODO eventually commonswiki will have clients that will need to be registered here
+		$wgWBRepoSettings['clientDbList'] = [];
 	}
 
 	$wgWBRepoSettings['localClientDatabases'] = array_combine(
