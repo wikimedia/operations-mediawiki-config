@@ -1575,6 +1575,9 @@ if ( $wmgUseCentralAuth ) {
 	// Enables Special:GlobalRenameRequest
 	$wgCentralAuthEnableGlobalRenameRequest = true;
 
+	// Use queue only (T208083)
+	unset( $wgSpecialPages['GlobalRenameUser'] );
+
 	// Only allow users with global accounts to login
 	$wgCentralAuthStrict = true;
 
