@@ -66,6 +66,7 @@ $IP/extensions/GlobalUsage/extension.json
 $IP/extensions/GlobalUserPage/extension.json
 $IP/extensions/GoogleNewsSitemap/extension.json
 $IP/extensions/Graph/extension.json
+$IP/extensions/GrowthExperiments/extension.json
 $IP/extensions/GuidedTour/extension.json
 $IP/extensions/GWToolset/extension.json
 $IP/extensions/ImageMap/extension.json
