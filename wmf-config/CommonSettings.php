@@ -3721,6 +3721,10 @@ if ( $wgDBname === 'fixcopyrightwiki' ) {
 	};
 }
 
+if ( $wmgUseGrowthExperiments ) {
+	wfLoadExtension( 'GrowthExperiments' );
+}
+
 if ( PHP_SAPI === 'cli' ) {
 	wfLoadExtension( 'ActiveAbstract' );
 }
