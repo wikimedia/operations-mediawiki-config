@@ -18532,8 +18532,6 @@ $wgConf->settings = [
 	'default' => false,
 	'enwikivoyage' => true,
 	'fawikivoyage' => true,
-	'ptwikivoyage' => true,
-	'rowikivoyage' => true,
 ],
 
 'wmgUseRevisionSlider' => [
