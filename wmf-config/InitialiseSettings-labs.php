@@ -803,6 +803,10 @@ function wmfLabsSettings() {
 			'enwiki' => true,
 			'kowiki' => true,
 		],
+		'wmgUseGrowthExperiments' => [
+			'enwiki' => true,
+			'kowiki' => true,
+		],
 		'wgEnablePartialBlocks' => [
 			'default' => true,
 		],
