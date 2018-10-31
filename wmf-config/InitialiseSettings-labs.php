@@ -323,6 +323,7 @@ function wmfLabsSettings() {
 		],
 		'wmgVisualEditorEnableWikitext' => [
 			'default' => true,
+			'commonswiki' => false,
 		],
 
 		///
