@@ -34,6 +34,24 @@
       "revId": "24bc3a9479b47ba851ce243f37277acb6e433815",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a286b3fb_16c9313d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 8298,
+      "author": {
+        "id": 4911
+      },
+      "writtenOn": "2018-10-31T19:52:38Z",
+      "side": 1,
+      "message": "ha, it\u0027s not your fault, I just noticed that it wasn\u0027t on test.wikidata.org and I couldn\u0027t figure out why. :P",
+      "parentUuid": "f9b34666_411b6465",
+      "revId": "24bc3a9479b47ba851ce243f37277acb6e433815",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
