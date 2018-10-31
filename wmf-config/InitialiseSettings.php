@@ -21442,6 +21442,10 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
+'wmgUseGrowthExperiments' => [
+	'default' => false,
+],
+
 ];
 
 ### WMF Labs override #####
