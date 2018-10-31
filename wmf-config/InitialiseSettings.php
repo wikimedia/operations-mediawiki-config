@@ -21145,7 +21145,7 @@ $wgConf->settings = [
 ],
 
 'wgWMEPrintSamplingRate' => [
-	'default' => 0.1  // T176341
+	'default' => 0 // T208454
 ],
 
 'wmgUsePageViewInfo' => [
