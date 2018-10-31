@@ -8295,7 +8295,7 @@ $wgConf->settings = [
 'wgEnablePartialBlocks' => [
 	'default' => false,
 	'testwiki' => true,
-	'testwikidata' => true,
+	'testwikidatawiki' => true,
 ],
 
 # groupOverrides @{
