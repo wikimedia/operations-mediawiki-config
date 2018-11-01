@@ -18687,8 +18687,7 @@ $wgConf->settings = [
 
 'wmgUseInterwikiSorting' => [
 	'default' => false,
-	'wikidataclient' => true, // T150183
-	'wiktionary' => true, // T162253
+	'wikidataclient' => true, // T150183, T162253
 ],
 
 'wgInterwikiSortingSort' => [
@@ -18803,11 +18802,6 @@ $wgConf->settings = [
 
 'wmgWikibaseClientEntityNamespaces' => [
 	'default' => [],
-	'wiktionary' => [ // T208317 wiktionary should be in wikidataclient?
-		'item' => 0,
-		'property' => 120,
-		'lexeme' => 146,
-	],
 	'wikidataclient' => [
 		'item' => 0,
 		'property' => 120,
@@ -18817,11 +18811,6 @@ $wgConf->settings = [
 
 'wmgWikibaseClientRepoNamespaces' => [
 	'default' => [],
-	'wiktionary' => [ // T208317 wiktionary should be in wikidataclient?
-		'item' => '',
-		'property' => 'Property',
-		// TODO Lexeme should be here once removed from wmgWikibaseDisabledAccessEntityTypes
-	],
 	'wikidataclient' => [
 		'item' => '',
 		'property' => 'Property',
@@ -18865,7 +18854,6 @@ $wgConf->settings = [
 'wmgUseWikibaseClient' => [
 	'default' => false,
 	'wikidataclient' => true,
-	'wiktionary' => true,
 ],
 
 // Current default setting extracted by running the following in production on enwiki:
@@ -18937,7 +18925,6 @@ $wgConf->settings = [
 'wmgUseWikibaseWikimediaBadges' => [
 	'default' => false,
 	'wikidataclient' => true,
-	'wiktionary' => true,
 ],
 
 'wmgWikibaseRepoBadgeItems' => [
