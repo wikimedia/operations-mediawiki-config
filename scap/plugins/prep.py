@@ -94,7 +94,9 @@ class CheckoutMediaWiki(cli.Application):
 
         reference_dir = None
         if checkout_version != 'master':
-            old_branch = self.active_wikiversions().keys()[0]
+            # active_wikiversions() is already sorted by loose-version number,
+            # we want the latest version if there's more than 1
+            old_branch = self.active_wikiversions().keys()[-1]
             reference_dir = os.path.join(
                 self.config['stage_dir'],
                 '{}{}'.format(self.arguments.prefix, old_branch)
