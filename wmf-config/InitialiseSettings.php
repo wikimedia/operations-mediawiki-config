@@ -18753,7 +18753,7 @@ $wgConf->settings = [
 
 'wmgWikibaseDispatchMaxTime' => [
 	'default' => 30,
-	'wikidatawiki' => 360, // Cron every 3 mins, length 6 mins, 2 dispatching threads
+	'wikidatawiki' => 540, // Cron every 3 mins, length 9 mins, 3 dispatching threads
 	'testwikidatawiki' => 900, // Cron every 15 mins, length 15 mins, 1 dispatching thread
 ],
 
