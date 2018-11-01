@@ -14245,7 +14245,7 @@ $wgConf->settings = [
 	'test2wiki' => [ 'testwikirepo' ],
 	'testwiki' => [ 'local' ],
 	'wikitech' => [ 'local' ], // T162374
-	'zhwiki' => [ 'local' ], // T139257
+	'zhwiki' => [ ], // T208397
 ],
 
 'wmgCustomUploadDialog' => [
