@@ -5547,6 +5547,7 @@ $wgConf->settings = [
 		'Wikibase.NewItemIdFormatter' => 'debug', // WMDE & Addshore T201832
 		'WMDE' => 'debug', // WMDE & Addshore T174948 & T191500
 		'AbuseFilterSlow' => 'debug',
+		'WikimediaEvents' => 'error' // For T205754 & T208233
 	],
 
 	'+private' => [
