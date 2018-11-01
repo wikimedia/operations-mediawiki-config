@@ -19338,6 +19338,7 @@ $wgConf->settings = [
 
 'wgWBQualityConstraintsCacheCheckConstraintsResults' => [
 	'default' => false,
+	'testwikidatawiki' => true,
 	'wikidatawiki' => true,
 ],
 
