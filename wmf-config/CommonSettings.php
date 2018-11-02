@@ -2395,7 +2395,6 @@ if ( $wmgUseVisualEditor ) {
 
 	// Citoid
 	wfLoadExtension( 'Citoid' );
-	$wgCitoidServiceUrl = 'https://citoid.wikimedia.org/api';
 
 	// Move the citation button from the primary toolbar into the "other" group
 	if ( $wmgCiteVisualEditorOtherGroup ) {
