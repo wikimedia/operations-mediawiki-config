@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "29b87786_e7177c25",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 15748,
+      "author": {
+        "id": 27
+      },
+      "writtenOn": "2018-11-02T14:26:08Z",
+      "side": 1,
+      "message": "You replaced a wikimediacommons feed with a technology one :(",
+      "revId": "5409dfe0b1af6d7127f62d2a547115a92b89d685",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
