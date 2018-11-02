@@ -15754,19 +15754,14 @@ $wgConf->settings = [
 	'default' => [],  // as of Ext:RSS v2, this means no URLs are allowed.
 	'uawikimedia' => [ 'https://wikimediaukraine.wordpress.com/feed/' ],
 	'foundationwiki' => [
-		'http://blog.wikimedia.org/feed/',
-		'http://blog.wikimedia.org/c/our-wikis/wikimediacommons/feed/',
-		'http://blog.wikimedia.org/c/communications/picture-of-the-day/feed/',
-		'https://blog.wikimedia.org/feed/',
-		'https://blog.wikimedia.org/c/our-wikis/wikimediacommons/feed/',
-		'https://blog.wikimedia.org/c/communications/picture-of-the-day/feed/',
+		'https://wikimediafoundation.org/news/feed/',
+		'https://wikimediafoundation.org/category/wikimediacommons/feed/',
+		'https://wikimediafoundation.org/category/communications/picture-of-the-day/feed/',
 	],
 	'mediawikiwiki' => [
-		'http://blog.wikimedia.org/feed/',
-		'https://blog.wikimedia.org/feed/',
-		'https://blog.wikimedia.org/c/technology/feed/',
-		'https://blog.wikimedia.org/c/technology/mediawiki/feed/',
-		'https://git.wikimedia.org/feed/mediawiki/extensions/Translate.git',
+		'https://wikimediafoundation.org/news/feed/',
+		'https://wikimediafoundation.org/category/technology/feed/',
+		'https://wikimediafoundation.org/category/technology/mediawiki/feed/',
 		'https://discourse-mediawiki.wmflabs.org/c/ask-here.rss',
 
 		// Feeds included for Fundraising Tech pages
