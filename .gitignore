@@ -21,8 +21,6 @@ wikiversions-labs.php
 ## Mac OS X
 .DS_Store
 
-/vendor/**/.git
-
 # python stuff
 *.pyc
 /.tox
@@ -31,3 +29,6 @@ __pycache__
 
 # scap stuff
 scap/log
+
+# Vendor
+vendor/
