@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9bfe157f_7f8cb54f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 9866,
+      "author": {
+        "id": 3963
+      },
+      "writtenOn": "2018-11-04T08:42:38Z",
+      "side": 1,
+      "message": "Can you add Task number in comment at the bottom of both lines ?",
+      "revId": "54b29498f401250c9a92d231c050ea3d34effa92",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
