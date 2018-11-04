@@ -2000,6 +2000,27 @@ if ( $wmgUseCentralNotice ) {
 		$wgNoticeInfrastructure = true;
 	}
 	if ( $wgNoticeInfrastructure ) {
+
+		// List of available wiki groups within CentralNotice
+		// (Only referenced from the infrastructure special pages.)
+		$wgNoticeProjects = [
+			"wikipedia",
+			"wiktionary",
+			"wikiquote",
+			"wikibooks",
+			"wikidata",
+			"wikinews",
+			"wikisource",
+			"wikiversity",
+			"wikivoyage",
+			"wikimedia",
+			"commons",
+			"meta",
+			"wikispecies",
+			"test",
+			"mediawiki",
+		];
+
 		$wgCentralNoticeMessageProtectRight = 'banner-protect';
 	}
 
