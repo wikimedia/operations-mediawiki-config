@@ -1792,6 +1792,25 @@ case 'labs':
 if ( $wmgUseCentralNotice ) {
 	wfLoadExtension( 'CentralNotice' );
 
+	//list of available wiki groups within CentralNotice
+	$wgNoticeProjects = [
+		"wikipedia",
+		"wiktionary",
+		"wikiquote",
+		"wikibooks",
+		"wikidata",
+		"wikinews",
+		"wikisource",
+		"wikiversity",
+		"wikivoyage",
+		"wikimedia",
+		"commons",
+		"meta",
+		"wikispecies",
+		"test",
+		"mediawiki",
+	];
+
 	// for DNS prefetching
 	$wgCentralHost = "//{$wmfHostnames['meta']}";
 
