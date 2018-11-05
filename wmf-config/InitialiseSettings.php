@@ -18530,8 +18530,6 @@ $wgConf->settings = [
 // Being deprecated: T202761
 'wmgUseRelatedSites' => [
 	'default' => false,
-	'enwikivoyage' => true,
-	'fawikivoyage' => true,
 ],
 
 'wmgUseRevisionSlider' => [
@@ -18599,11 +18597,6 @@ $wgConf->settings = [
 
 'wgRCWatchCategoryMembership' => [
 	'default' => true,
-],
-
-'wgRelatedSitesPrefixes' => [
-	'default' => [],
-	'wikivoyage' => [ 'wikipedia', 'dmoz', 'commons' ],
 ],
 
 'wgExtraInterlanguageLinkPrefixes' => [

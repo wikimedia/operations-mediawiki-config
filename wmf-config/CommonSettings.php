@@ -3021,10 +3021,6 @@ $wgExtensionFunctions[] = function () {
 	$wgRelatedArticlesFooterWhitelistedSkins = $wmgRelatedArticlesFooterWhitelistedSkins;
 };
 
-if ( $wmgUseRelatedSites ) {
-	wfLoadExtension( 'RelatedSites' );
-}
-
 if ( $wmgUseRevisionSlider ) {
 	wfLoadExtension( 'RevisionSlider' );
 }
