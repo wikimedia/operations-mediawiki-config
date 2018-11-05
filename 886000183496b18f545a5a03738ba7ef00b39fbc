@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1afabc63_ba78d539",
+        "filename": "errorpages/hhvm-fatal-error.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-11-05T22:34:13Z",
+      "side": 1,
+      "message": "I considered abstracting this behind a EnvServices.php file or some such, which would return something like $services \u003d [ \u0027local\u0027 \u003d\u003e .., \u0027master\u0027 \u003d\u003e .. ];\n\nBut what I ran into is that when attempting to dog-feed it in wmf-config, I found that some things directly access the raw services array with specific DCs (in filebackend.php for swift, and in CommonSettings.php for elastic search).\n\nMaybe it could export all three as \u0027local\u0027, \u0027master\u0027 and \u0027all\u0027 (with sub keys eqiad/codfw).",
+      "range": {
+        "startLine": 48,
+        "startChar": 1,
+        "endLine": 51,
+        "endChar": 62
+      },
+      "revId": "886000183496b18f545a5a03738ba7ef00b39fbc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
