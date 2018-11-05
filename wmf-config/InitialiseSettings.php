@@ -18811,8 +18811,8 @@ $wgConf->settings = [
 'wgWMEUnderstandingFirstDay' => [
 	'default' => false,
 	'testwiki' => true,
-	'cswiki' => false,
-	'kowiki' => false,
+	'cswiki' => true,
+	'kowiki' => true,
 ],
 
 'wgWMEUnderstandingFirstDaySensitiveNamespaces' => [
