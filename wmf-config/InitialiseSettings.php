@@ -19415,11 +19415,6 @@ $wgConf->settings = [
 	'wikidatawiki' => 10, // only check few entities in PHP => fall back to SPARQL very quickly
 ],
 
-'wgWBQualityConstraintsCacheCheckConstraintsResults' => [
-	'default' => false,
-	'wikidatawiki' => true,
-],
-
 'wgWBQualityConstraintsPropertyConstraintId' => [
 	'default' => false,
 	'testwikidatawiki' => 'P51064',
