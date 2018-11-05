@@ -18527,11 +18527,6 @@ $wgConf->settings = [
 	'related-articles-footer-blacklisted-skins' => [],
 ],
 
-// Being deprecated: T202761
-'wmgUseRelatedSites' => [
-	'default' => false,
-],
-
 'wmgUseRevisionSlider' => [
 	'default' => true,
 ],
