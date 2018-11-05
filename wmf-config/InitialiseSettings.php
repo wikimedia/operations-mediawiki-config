@@ -18771,7 +18771,10 @@ $wgConf->settings = [
 	'default' => 'wikidatawiki',
 	'wikidataclient-test' => 'testwikidatawiki0',
 ],
-
+'wgWMEUnderstandingFirstDay' => [
+	'cswiki' => true,
+	'kowiki' => true,
+],
 'wmgWikibaseAllowLocalShortDesc' => [
 	'default' => false,
 	'testwiki' => true,
