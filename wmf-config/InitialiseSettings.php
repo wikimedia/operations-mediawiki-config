@@ -5547,6 +5547,8 @@ $wgConf->settings = [
 		'Wikibase.NewItemIdFormatter' => 'debug', // WMDE & Addshore T201832
 		'WMDE' => 'debug', // WMDE & Addshore T174948 & T191500
 		'AbuseFilterSlow' => 'debug',
+		'GrowthExperiments' => 'info',
+		'WikimediaEvents' => 'error', // For T205754 & T208233
 	],
 
 	'+private' => [
@@ -14245,7 +14247,7 @@ $wgConf->settings = [
 	'test2wiki' => [ 'testwikirepo' ],
 	'testwiki' => [ 'local' ],
 	'wikitech' => [ 'local' ], // T162374
-	'zhwiki' => [ 'local' ], // T139257
+	'zhwiki' => [], // T208397
 ],
 
 'wmgCustomUploadDialog' => [
@@ -18753,7 +18755,7 @@ $wgConf->settings = [
 
 'wmgWikibaseDispatchMaxTime' => [
 	'default' => 30,
-	'wikidatawiki' => 360, // Cron every 3 mins, length 6 mins, 2 dispatching threads
+	'wikidatawiki' => 540, // Cron every 3 mins, length 9 mins, 3 dispatching threads
 	'testwikidatawiki' => 900, // Cron every 15 mins, length 15 mins, 1 dispatching thread
 ],
 
@@ -21349,13 +21351,7 @@ $wgConf->settings = [
 ],
 
 'wgMultiContentRevisionSchemaMigrationStage' => [
-	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'testwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
-	'mediawikiwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
-	'igwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
-	'eswikivoyage' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
-	'ltwikisource' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
-	'commonswiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
+	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
 ],
 'wmgUseReadingLists' => [
 	'default' => true,
