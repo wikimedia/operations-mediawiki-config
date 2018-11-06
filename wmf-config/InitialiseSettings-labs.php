@@ -901,5 +901,15 @@ function wmfLabsSettings() {
 				]
 			],
 		],
+
+		// T208763
+		//
+		// The treatments are defined in Wikibase.php (see
+		// $wgWBClientSettings['pageSchemaSplitTestBuckets']).
+		//
+		// 50% of pages on the Beta Cluster will receive the treatment.
+		'wgWBClientSettings' => [
+			'pageSchemaSplitTestSamplingRatio' => 1,
+		],
 	];
 } # wmflLabsSettings()
