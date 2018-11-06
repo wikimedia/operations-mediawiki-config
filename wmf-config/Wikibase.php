@@ -259,6 +259,17 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['disabledUsageAspects'] = $wmgWikibaseDisabledUsageAspects;
 	$wgWBClientSettings['fineGrainedLuaTracking'] = $wmgWikibaseFineGrainedLuaTracking;
 	$wgWBClientSettings['entityUsageModifierLimits'] = [ 'D' => 10, 'L' => 10, 'C' => 33 ];
+
+	// T208763
+	$wgWBClientSettings['pageSchemaNamespace'] = [ 0 ];
+	$wgWBClientSettings['pageSchemaSplitTestBuckets'] = [
+		'control',
+		'treatment',
+	];
+
+	// By default, sample 0% of pages (read: 100% of pages receive the control
+	// treatment or the split test is disabled).
+	$wgWBClientSettings['pageSchemaSplitTestSamplingRatio'] = 0;
 }
 
 unset( $wmgWBSharedCacheKey );
