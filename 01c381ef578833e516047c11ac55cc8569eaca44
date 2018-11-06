@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d919077f_5708728b",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 264,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-06T17:56:25Z",
+      "side": 1,
+      "message": "This should be plural.",
+      "range": {
+        "startLine": 264,
+        "startChar": 22,
+        "endLine": 264,
+        "endChar": 41
+      },
+      "revId": "01c381ef578833e516047c11ac55cc8569eaca44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "80697ef0_cbe41d33",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 272,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-06T17:56:25Z",
+      "side": 1,
+      "message": "Since this is the default, do we want to override it?",
+      "range": {
+        "startLine": 272,
+        "startChar": 1,
+        "endLine": 272,
+        "endChar": 61
+      },
+      "revId": "01c381ef578833e516047c11ac55cc8569eaca44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
