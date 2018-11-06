@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "401499ec_85f5121b",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 912,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-06T18:00:41Z",
+      "side": 1,
+      "message": "Oh and this should be .5!",
+      "range": {
+        "startLine": 912,
+        "startChar": 41,
+        "endLine": 912,
+        "endChar": 43
+      },
+      "revId": "01c381ef578833e516047c11ac55cc8569eaca44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d919077f_5708728b",
         "filename": "wmf-config/Wikibase.php",
         "patchSetId": 3
