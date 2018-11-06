@@ -19121,7 +19121,6 @@ $wgConf->settings = [
 
 'wmgWikibaseClientInjectRecentChanges' => [
 	'default' => true,
-	'wikidata' => false,
 	'commonswiki' => false, // T171027
 ],
 
