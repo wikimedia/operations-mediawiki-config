@@ -259,6 +259,11 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['disabledUsageAspects'] = $wmgWikibaseDisabledUsageAspects;
 	$wgWBClientSettings['fineGrainedLuaTracking'] = $wmgWikibaseFineGrainedLuaTracking;
 	$wgWBClientSettings['entityUsageModifierLimits'] = [ 'D' => 10, 'L' => 10, 'C' => 33 ];
+
+	// T208763
+	$wgWBClientSettings['pageSchemaNamespaces'] = $wmgWikibaseClientPageSchemaNamespaces;
+	$wgWBClientSettings['pageSchemaSplitTestSamplingRatio'] = $wmgWikibaseClientPageSchemaSplitTestSamplingRatio;
+	$wgWBClientSettings['pageSchemaSplitTestBuckets'] = $wmgWikibaseClientPageSchemaSplitTestBuckets;
 }
 
 unset( $wmgWBSharedCacheKey );
