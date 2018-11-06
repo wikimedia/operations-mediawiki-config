@@ -805,6 +805,7 @@ function wmfLabsSettings() {
 			'commonswiki' => 'commonswiki',
 		],
 		'wgWMEUnderstandingFirstDay' => [
+			'default' => false,
 			'enwiki' => true,
 			'kowiki' => true,
 		],

@@ -18764,6 +18764,13 @@ $wgConf->settings = [
 	'trwiktionary' => true,
 ],
 
+'wgWMEUnderstandingFirstDay' => [
+	'default' => false,
+	'testwiki' => true,
+	'cswiki' => false,
+	'kowiki' => false,
+],
+
 'wmgWikibaseEntityAccessLimit' => [
 	'default' => 400,
 	'wikidatawiki' => 500,
