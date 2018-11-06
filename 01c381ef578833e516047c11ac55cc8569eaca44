@@ -25,6 +25,29 @@
     },
     {
       "key": {
+        "uuid": "9b683639_448a20fe",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 912,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-11-06T18:03:08Z",
+      "side": 1,
+      "message": "This is not how IS.php works, this key should be something matching a wiki.\n\nThis could be:\n\nwikidatawiki for example or default.\n\nPlease checkout how the other wgWBClientSettings are set between Wikibase.php and IS.php",
+      "range": {
+        "startLine": 912,
+        "startChar": 4,
+        "endLine": 912,
+        "endChar": 36
+      },
+      "revId": "01c381ef578833e516047c11ac55cc8569eaca44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d919077f_5708728b",
         "filename": "wmf-config/Wikibase.php",
         "patchSetId": 3
