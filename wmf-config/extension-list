@@ -110,7 +110,6 @@ $IP/extensions/ParserMigration/extension.json
 $IP/extensions/ParsoidBatchAPI/extension.json
 $IP/extensions/PdfHandler/extension.json
 $IP/extensions/PerformanceInspector/extension.json
-$IP/extensions/Petition/extension.json
 $IP/extensions/Poem/extension.json
 $IP/extensions/Popups/extension.json
 $IP/extensions/ProofreadPage/extension.json
