@@ -10613,7 +10613,7 @@ $wgConf->settings = [
 	],
 	'+foundationwiki' => [
 		'sysop' => [ 'inactive', 'flood' ],
-		'bureaucrat' => [ 'inactive', 'petitiondata', 'oauthadmin' ],
+		'bureaucrat' => [ 'inactive', 'oauthadmin' ],
 	],
 	'+frwiki' => [
 		'sysop' => [ 'rollbacker' ], // T170780
@@ -11371,7 +11371,7 @@ $wgConf->settings = [
 	],
 	'+foundationwiki' => [
 		'sysop' => [ 'inactive', 'confirmed', 'flood' ],
-		'bureaucrat' => [ 'inactive', 'confirmed', 'petitiondata', 'oauthadmin' ],
+		'bureaucrat' => [ 'inactive', 'confirmed', 'oauthadmin' ],
 	],
 	'+frwiki' => [
 		'sysop' => [ 'rollbacker' ], // T170780
