@@ -17,7 +17,7 @@ class UpdateInterwikiCache(main.SyncFile):
     @cli.argument('--force', action='store_true', help='Skip canary checks')
     def main(self, *extra_args):
         """Update the latest interwiki cache."""
-        self.arguments.message = 'Updating interwiki cache'
+        self.arguments.message = 'Update interwiki cache'
         self.arguments.file = os.path.join('wmf-config', 'interwiki.php')
         return super(UpdateInterwikiCache, self).main(*extra_args)
 
