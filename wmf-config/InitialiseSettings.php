@@ -12218,6 +12218,13 @@ $wgConf->settings = [
 'wgSVGMaxSize' => [
 	'default' => 4096, // 1024's a bit low?
 ],
+
+// T208899
+'wgMediaInTargetLanguage' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 # @} end of SVG related
 
 'wgRestrictionMethod' => [
