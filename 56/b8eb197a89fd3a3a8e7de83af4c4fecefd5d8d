@@ -1,0 +1,8 @@
+Verified+2: jenkins-bot
+Code-Review+1: Nikerabbit <niklas.laxstrom@gmail.com>
+Code-Review+2: Zfilipin <zfilipin@wikimedia.org>
+Submitted-by: jenkins-bot
+Submitted-at: Wed, 07 Nov 2018 12:14:24 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/468337
+Project: operations/mediawiki-config
+Branch: refs/heads/master
