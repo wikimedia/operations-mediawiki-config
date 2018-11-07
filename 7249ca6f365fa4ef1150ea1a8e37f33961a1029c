@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a71f870b_e7aebece",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-11-07T09:53:54Z",
+      "side": 1,
+      "message": "These $wmg vars will be undefined in production, so this will emit notices for every request.\n\nThis can be solved by either:\n 1 - Settings these $wmg variables to have defaults in IS.php as well as IS-labs.php\n 2 - Wrapping each one in a condition as is done on line 226 of this file for other vars.",
+      "range": {
+        "startLine": 264,
+        "startChar": 1,
+        "endLine": 266,
+        "endChar": 98
+      },
+      "revId": "7249ca6f365fa4ef1150ea1a8e37f33961a1029c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
