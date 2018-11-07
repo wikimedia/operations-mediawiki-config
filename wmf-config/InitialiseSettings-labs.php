@@ -401,11 +401,6 @@ function wmfLabsSettings() {
 			'default' => [ 'en-rtl' => 'English (rtl)' ],
 		],
 
-		'wmgUsePetition' => [
-			'default' => false,
-			'metawiki' => true,
-		],
-
 		'wmgUseQuickSurveys' => [
 			'default' => true,
 		],
