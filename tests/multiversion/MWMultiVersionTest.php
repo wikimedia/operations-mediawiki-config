@@ -11,7 +11,7 @@ class MWMultiVersionTest extends PHPUnit\Framework\TestCase {
 	}
 
 	/**
-	 * @dataProvider provideServerNameAndDocRoot
+	 * @dataProvider provideServerName
 	 */
 	public function testRealmFilenames( $expectedDB, $serverName, $msg = '' ) {
 		$version = MWMultiversion::initializeForWiki( $serverName );
@@ -19,9 +19,7 @@ class MWMultiVersionTest extends PHPUnit\Framework\TestCase {
 		$this->assertEquals( $expectedDB, $version->getDatabase() );
 	}
 
-	public function provideServerNameAndDocRoot() {
-		$root = '/srv/mediawiki/docroot';
-
+	public function provideServerName() {
 		return [
 			// (expected DB, server name [, message]]
 			[ 'enwiki', 'en.wikipedia.org' ],
