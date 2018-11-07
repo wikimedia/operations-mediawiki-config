@@ -20832,8 +20832,6 @@ $wgConf->settings = [
 
 'wmgUsePetition' => [
 	'default' => false,
-	'testwiki' => true,
-	'foundationwiki' => true,
 ],
 
 'wmgUseClusterSquid' => [
