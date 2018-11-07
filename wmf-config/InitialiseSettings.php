@@ -14352,6 +14352,11 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
+'wgAdvancedSearchBetaFeature' => [
+	'default' => true,
+	'group0' => false, // T207641
+],
+
 'wmgUseFileImporter' => [
 	'default' => false,
 	'testwiki' => 'FileImporter-WikimediaSitesTableSite',
