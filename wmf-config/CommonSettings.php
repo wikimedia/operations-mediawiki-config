@@ -3403,10 +3403,6 @@ if ( $wmgUseOAuth ) {
 	};
 }
 
-if ( $wmgUsePetition ) {
-	wfLoadExtension( 'Petition' );
-}
-
 // T15712
 if ( $wmgUseJosa ) {
 	wfLoadExtension( 'Josa' );
