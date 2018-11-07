@@ -72,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "060bbf6e_10cbb278",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 912,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2018-11-07T09:12:02Z",
+      "side": 1,
+      "message": "I\u0027d forgotten about the per-setting group key. I\u0027d assumed that Wikibase.php was loaded before IS-labs.php and not the other way around.\n\nThanks for checking the change.",
+      "parentUuid": "5787f2d9_4efcb44b",
+      "range": {
+        "startLine": 912,
+        "startChar": 4,
+        "endLine": 912,
+        "endChar": 36
+      },
+      "revId": "01c381ef578833e516047c11ac55cc8569eaca44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d919077f_5708728b",
         "filename": "wmf-config/Wikibase.php",
         "patchSetId": 3
