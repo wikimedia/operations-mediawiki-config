@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a40478e9_0318eed1",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3521,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2018-11-07T20:17:23Z",
+      "side": 1,
+      "message": "You have 172.17.0.0/16 here twice.",
+      "revId": "f18a30bdf33587992e5fcc5b18b797a37e1fe513",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5a0f11b8_93c7cb48",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3523,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2018-11-07T20:17:23Z",
+      "side": 1,
+      "message": "You could combine these two lines as\n\n \u0027172.18.0.0/15\u0027,",
+      "revId": "f18a30bdf33587992e5fcc5b18b797a37e1fe513",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "37a90cf2_98145191",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3527,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2018-11-07T20:17:23Z",
+      "side": 1,
+      "message": "You could combine these 4 lines as\n\n \u0027172.20.0.0/14\u0027,",
+      "revId": "f18a30bdf33587992e5fcc5b18b797a37e1fe513",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
