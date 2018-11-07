@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "5787f2d9_4efcb44b",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 912,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-07T04:49:37Z",
+      "side": 1,
+      "message": "Thanks for checking in on us.\n\nI\u0027ve taken @phuedx\u0027s changes and put the defaults here and used references in Wikibase.php.",
+      "parentUuid": "9b683639_448a20fe",
+      "range": {
+        "startLine": 912,
+        "startChar": 4,
+        "endLine": 912,
+        "endChar": 36
+      },
+      "revId": "01c381ef578833e516047c11ac55cc8569eaca44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d919077f_5708728b",
         "filename": "wmf-config/Wikibase.php",
         "patchSetId": 3
@@ -71,6 +95,30 @@
     },
     {
       "key": {
+        "uuid": "77fecf88_52906bf9",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 264,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-07T04:49:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d919077f_5708728b",
+      "range": {
+        "startLine": 264,
+        "startChar": 22,
+        "endLine": 264,
+        "endChar": 41
+      },
+      "revId": "01c381ef578833e516047c11ac55cc8569eaca44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "80697ef0_cbe41d33",
         "filename": "wmf-config/Wikibase.php",
         "patchSetId": 3
@@ -82,6 +130,30 @@
       "writtenOn": "2018-11-06T17:56:25Z",
       "side": 1,
       "message": "Since this is the default, do we want to override it?",
+      "range": {
+        "startLine": 272,
+        "startChar": 1,
+        "endLine": 272,
+        "endChar": 61
+      },
+      "revId": "01c381ef578833e516047c11ac55cc8569eaca44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c0f12d7b_402b36e3",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 272,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-07T04:49:37Z",
+      "side": 1,
+      "message": "This now becomes a reference.",
+      "parentUuid": "80697ef0_cbe41d33",
       "range": {
         "startLine": 272,
         "startChar": 1,
