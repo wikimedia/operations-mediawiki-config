@@ -5177,7 +5177,6 @@ $wgConf->settings = [
 'wgRawHtml' => [
 	'default' => false,
 	'donatewiki' => true,
-	'foundationwiki' => true,
 	'internalwiki' => true,
 	'collabwiki' => true, // T31269
 ],
@@ -16445,11 +16444,6 @@ $wgConf->settings = [
 
 'wgMinervaABSamplingRate' => [
 	'default' => 0,
-	'lvwiki' => 1, // T204609
-	'jawiki' => 1, // T200792
-	'ruwiki' => 1, // T200792
-	'fawiki' => 1, // T200792
-	'enwiki' => 0.2, // T200792
 ],
 
 // Enable client side error counting
@@ -18532,13 +18526,6 @@ $wgConf->settings = [
 	'related-articles-footer-blacklisted-skins' => [],
 ],
 
-// Being deprecated: T202761
-'wmgUseRelatedSites' => [
-	'default' => false,
-	'enwikivoyage' => true,
-	'fawikivoyage' => true,
-],
-
 'wmgUseRevisionSlider' => [
 	'default' => true,
 ],
@@ -18604,11 +18591,6 @@ $wgConf->settings = [
 
 'wgRCWatchCategoryMembership' => [
 	'default' => true,
-],
-
-'wgRelatedSitesPrefixes' => [
-	'default' => [],
-	'wikivoyage' => [ 'wikipedia', 'dmoz', 'commons' ],
 ],
 
 'wgExtraInterlanguageLinkPrefixes' => [
@@ -18779,6 +18761,13 @@ $wgConf->settings = [
 	'wiktionary' => false,
 	'enwiktionary' => true,
 	'trwiktionary' => true,
+],
+
+'wgWMEUnderstandingFirstDay' => [
+	'default' => false,
+	'testwiki' => true,
+	'cswiki' => false,
+	'kowiki' => false,
 ],
 
 'wmgWikibaseEntityAccessLimit' => [
@@ -19131,7 +19120,6 @@ $wgConf->settings = [
 
 'wmgWikibaseClientInjectRecentChanges' => [
 	'default' => true,
-	'wikidata' => false,
 	'commonswiki' => false, // T171027
 ],
 
@@ -19271,9 +19259,7 @@ $wgConf->settings = [
 		 */
 		134, // has dialect (DEPRECATED)
 		558, // unit symbol (DEPRECATED)
-		1962, // patron (DEPRECATED)
 		2315, // comment (DEPRECATED)
-		4237, // Heritage Building in Finland ID (DEPRECATED)
 		5130, // island of location (DEPRECATED)
 		/**
 		 * @see https://www.wikidata.org/w/index.php?oldid=335040857
@@ -19298,6 +19284,7 @@ $wgConf->settings = [
 		4047, // geo-shape
 		5188, // wikibase-lexeme
 		5189, // wikibase-form
+		5979, // wikibase-sense
 	],
 ],
 
@@ -19350,7 +19337,7 @@ $wgConf->settings = [
 
 'wgWBQualityConstraintsPropertiesWithViolatingQualifiers' => [
 	'default' => [],
-	'wikidatawiki' => [ 'P1855', 'P2271', 'P5192', 'P5193' ], // T183267
+	'wikidatawiki' => [ 'P1855', 'P2271', 'P5192', 'P5193', 'P5977' ], // T183267
 ],
 
 'wmgUseWikibaseLexeme' => [
