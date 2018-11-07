@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "47f1d721_8eeeb7d0",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 15758,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2018-11-07T20:23:48Z",
+      "side": 1,
+      "message": "This can just be https://wikimediafoundation.org/category/wikimediacommons/feed/ now, right?",
+      "range": {
+        "startLine": 15758,
+        "startChar": 3,
+        "endLine": 15758,
+        "endChar": 76
+      },
+      "revId": "6655090ed998fd33a5896ce30f3a72164352d066",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f4803863_70c4fea9",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 15759,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2018-11-07T20:23:48Z",
+      "side": 1,
+      "message": "This doesn\u0027t have any content yet; is it meant to start getting populated?",
+      "range": {
+        "startLine": 15759,
+        "startChar": 3,
+        "endLine": 15759,
+        "endChar": 83
+      },
+      "revId": "6655090ed998fd33a5896ce30f3a72164352d066",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f92380f1_745bb194",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 15765,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2018-11-07T20:23:48Z",
+      "side": 1,
+      "message": "Unrelated, but this has been broken for years now (and I don\u0027t think there\u0027s a replacement).",
+      "range": {
+        "startLine": 15765,
+        "startChar": 3,
+        "endLine": 15765,
+        "endChar": 68
+      },
+      "revId": "6655090ed998fd33a5896ce30f3a72164352d066",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
