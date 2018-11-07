@@ -20830,10 +20830,6 @@ $wgConf->settings = [
 	'donatewiki' => '!^https?://donate\.wikimedia\.org/!',
 ],
 
-'wmgUsePetition' => [
-	'default' => false,
-],
-
 'wmgUseClusterSquid' => [
 	'default'  => true,
 ],
