@@ -1,6 +1,6 @@
 <?php
 // get params
-$language = isset( $_GET['language'] ) ? $_GET['language'] : '';
+$language = isset( $_GET['language'] ) ? $_GET['language'] : 'en';
 $search   = isset( $_GET['search'] ) ? $_GET['search'] : '';
 $fulltext = isset( $_GET['fulltext'] ) ? $_GET['fulltext'] : false;
 $go       = isset( $_GET['go'] ) ? $_GET['go'] : false;
