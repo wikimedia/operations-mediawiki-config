@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1eadf644_d676956a",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2018-11-08T18:34:37Z",
+      "side": 1,
+      "message": "It may be slightly faster to use `defined( \u0027HHVM_VERSION\u0027 )` directly here rather than that helper function. This code can end up being many times during a normal web request, especially if there is a debug level handler enabled for some reason like when there is an \"X-WikiMedia-Debug: log\" header in the request.\n\nCloud just do something like:\n\n  $record[\u0027extra\u0027][\u0027php\u0027] \u003d defined( \u0027HHVM_VERSION\u0027 ) ? \u0027HHVM\u0027 : \u0027PHP\u0027 . PHP_MAJOR_VERSION . \u0027.\u0027 . PHP_MINOR_VERSION;",
+      "revId": "47de09cffe490433e1a8f76626d22b55075f954d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
