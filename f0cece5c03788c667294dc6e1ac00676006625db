@@ -70,6 +70,30 @@
       "revId": "f0cece5c03788c667294dc6e1ac00676006625db",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5a226a09_6daa6015",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 18765,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2018-11-08T20:59:22Z",
+      "side": 1,
+      "message": "Plain rebase wasn\u0027t good idea, git didn\u0027t merge definition from the patch you linked to this one. Uploaded PS3 which should fix this.",
+      "parentUuid": "3c125ff7_b2c720b0",
+      "range": {
+        "startLine": 18765,
+        "startChar": 1,
+        "endLine": 18765,
+        "endChar": 27
+      },
+      "revId": "f0cece5c03788c667294dc6e1ac00676006625db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
