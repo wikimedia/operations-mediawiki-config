@@ -128,6 +128,20 @@ $wmgMonologProcessors = [
 				return $record;
 			};
 		}
+	],
+	'php' => [
+		'factory' => function () {
+			/** Adds the minor PHP version (HHVM, PHP7.0, ...) */
+			return function ( array $record ) {
+				if ( wfIsHHVM() ) {
+					$version = 'HHVM';
+				} else {
+					$version = 'PHP' . PHP_MAJOR_VERSION . '.' . PHP_MINOR_VERSION;
+				}
+				$record['extra']['php'] = $version;
+				return $record;
+			};
+		}
 	]
 ];
 
