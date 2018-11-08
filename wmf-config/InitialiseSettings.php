@@ -18548,7 +18548,7 @@ $wgConf->settings = [
 ],
 
 'wmgUseTwoColConflict' => [
-	'default' => true,
+	'default' => false,
 ],
 
 'wmgUseUserMerge' => [
