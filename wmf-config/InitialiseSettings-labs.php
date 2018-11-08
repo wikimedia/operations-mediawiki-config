@@ -174,6 +174,7 @@ function wmfLabsSettings() {
 				'runJobs' => [ 'logstash' => 'info' ],
 				'squid' => 'debug',
 				'MessageCache' => 'debug',
+				'PageRandomLookup' => 'debug', // T208796
 			],
 		],
 
