@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "f5f99ff6_fcfcdd48",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-08T04:20:03Z",
+      "side": 1,
+      "message": "Thanks, I\u0027ve followed up there.",
+      "parentUuid": "783a0412_fb28bfb5",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 3
+      },
+      "revId": "eda2074f755ce8bcfb75a1a90c053c0f88d01030",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "097de296_211f4d1f",
         "filename": "wmf-config/InitialiseSettings-labs.php",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2018-11-08T03:43:47Z",
       "side": 1,
       "message": "-1, beta automatically inherits from production, so you don\u0027t need to duplicate it.",
+      "range": {
+        "startLine": 177,
+        "startChar": 4,
+        "endLine": 177,
+        "endChar": 9
+      },
+      "revId": "eda2074f755ce8bcfb75a1a90c053c0f88d01030",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "73a26213_cb76fcba",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-08T04:20:03Z",
+      "side": 1,
+      "message": "Thank you for identifying this bug. Fixed.",
+      "parentUuid": "097de296_211f4d1f",
       "range": {
         "startLine": 177,
         "startChar": 4,
