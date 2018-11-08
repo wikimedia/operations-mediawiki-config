@@ -21433,6 +21433,10 @@ $wgConf->settings = [
 	'default' => false,
 ],
 
+'wgWelcomeSurveyEnabled' => [
+	'default' => false,
+],
+
 ];
 
 ### WMF Labs override #####

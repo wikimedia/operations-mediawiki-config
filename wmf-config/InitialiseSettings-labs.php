@@ -808,6 +808,10 @@ function wmfLabsSettings() {
 			'enwiki' => true,
 			'kowiki' => true,
 		],
+		'wgWelcomeSurveyEnabled' => [
+			'enwiki' => true,
+			'kowiki' => true,
+		],
 		'wgEnablePartialBlocks' => [
 			'default' => true,
 		],
