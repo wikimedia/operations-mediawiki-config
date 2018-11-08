@@ -111,10 +111,10 @@ $wgLBFactoryConf = [
 		'db1067' => 0,     # C6 2.8TB 160GB, # master
 		'db1080' => 200,    # A2 3.6TB 512GB, api
 		'db1083' => 500,    # B1 3.6TB 512GB # candidate master
-		'db1089' => 500,    # C3 3.6TB 512GB
+		'db1089' => 400,    # C3 3.6TB 512GB # weight decreased from 500 to 400 while db1106 is depooled
 		'db1099:3311' => 1, # B2 3.6TB 512GB # rc, log: s1 and s8
 		'db1105:3311' => 1, # C3 3.6TB 512GB # rc, log: s1 and s2
-		'db1106' => 50,     # D3 3.6TB 512GB, vslow, dump # master for sanitarium db1124
+		# 'db1106' => 50,     # D3 3.6TB 512GB, vslow, dump # master for sanitarium db1124
 		'db1114' => 200,    # D4 3.6TB 512GB, api issues
 		'db1119' => 200,    # B8 3.6TB 512GB, api
 	],
@@ -280,10 +280,12 @@ $wgLBFactoryConf = [
 			'db1105:3311' => 1,
 		],
 		'dump' => [
-			'db1106' => 1,
+			# 'db1106' => 1,
+			'db1089' => 1, # temporary host only, remove then repooling db1106
 		],
 		'vslow' => [
-			'db1106' => 1,
+			# 'db1106' => 1,
+			'db1089' => 1, # temporary host only, remove when repooling db1106
 		],
 		'api' => [
 			'db1080' => 1,
