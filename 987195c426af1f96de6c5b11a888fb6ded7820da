@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b1701a64_e2ae3a94",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 3215
+      },
+      "writtenOn": "2018-11-08T10:55:54Z",
+      "side": 1,
+      "message": "[nitpick] typo: when repooling",
+      "range": {
+        "startLine": 284,
+        "startChar": 48,
+        "endLine": 284,
+        "endChar": 49
+      },
+      "revId": "987195c426af1f96de6c5b11a888fb6ded7820da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
