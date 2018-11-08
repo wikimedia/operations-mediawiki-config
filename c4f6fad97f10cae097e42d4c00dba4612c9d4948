@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5c41c995_22f0f8fc",
+        "filename": "tests/multiversion/MWMultiVersionTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2018-11-08T10:57:54Z",
+      "side": 0,
+      "message": "There should be a \"…, $msg\" here. Currently the parameter is unused and gets lost.",
+      "range": {
+        "startLine": 19,
+        "startChar": 59,
+        "endLine": 19,
+        "endChar": 60
+      },
+      "revId": "c4f6fad97f10cae097e42d4c00dba4612c9d4948",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
