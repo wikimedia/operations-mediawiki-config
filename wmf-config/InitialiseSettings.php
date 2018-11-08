@@ -5531,6 +5531,7 @@ $wgConf->settings = [
 		'updateTranstagOnNullRevisions' => 'debug',
 		'upload' => 'debug',
 		'wfLogDBError' => 'debug', // Former $wgDBerrorLog
+		'PageRandomLookup' => 'debug', // T208796
 		'wikibase-debug' => 'debug',
 		'WikibaseQualityConstraints' => 'debug',
 		'xenon' => 'debug',
