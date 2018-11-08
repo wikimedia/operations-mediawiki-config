@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0c8828f4_b2197f4c",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 18765,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2018-11-08T20:33:14Z",
+      "side": 1,
+      "message": "I think all variables should have their own default.",
+      "range": {
+        "startLine": 18765,
+        "startChar": 1,
+        "endLine": 18765,
+        "endChar": 27
+      },
+      "revId": "f0cece5c03788c667294dc6e1ac00676006625db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
