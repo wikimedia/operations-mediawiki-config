@@ -9048,9 +9048,23 @@ $wgConf->settings = [
 		'reviewer' => [ 'patrol' => true, 'autopatrol' => true ], // T144817
 		'autoreview' => [ 'autopatrol' => true ], // T144817
 	],
-	'+foundationwiki' => [
-		'user' => [ 'editinterface' => true, 'editsitejson' => true ],
-		// T205352:
+	// Replace, don't extend – Unlike all other fishbowls, regular users aren't allowed to do anything.
+	// T205350:
+	'foundationwiki' => [
+		'*' => [
+			'edit' => false,
+			'createaccount' => false
+		],
+		'user' => [
+			'edit' => false,
+			'move' => false,
+			'upload' => false,
+			'autoconfirmed' => false,
+			'editsemiprotected' => false,
+			'reupload' => false,
+			'skipcaptcha' => false,
+			'createaccount' => false
+		],
 		'editor' => [
 			'edit' => true,
 			'move' => true,
