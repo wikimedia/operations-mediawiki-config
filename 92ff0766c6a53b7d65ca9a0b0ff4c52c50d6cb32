@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "436392d1_83518fa8",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 179,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-11-09T13:16:12Z",
+      "side": 1,
+      "message": "If $wmgWikibaseUseSSRTermbox is set but $wmgWikibaseSSRTermboxServerUrl is not then this code will still run which would result in a NOTICE.\n\nEither both vars need to be checked here OR this needs to be 2 different if blocks, as done for other vars in the file such as line 139 to 147.\n\nI think this is just a mistake, I think you intended on checking both vars but copied and pasted but didn\u0027t alter.",
+      "range": {
+        "startLine": 176,
+        "startChar": 1,
+        "endLine": 179,
+        "endChar": 2
+      },
+      "revId": "92ff0766c6a53b7d65ca9a0b0ff4c52c50d6cb32",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
