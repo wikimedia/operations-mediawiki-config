@@ -52,6 +52,24 @@
       "revId": "47de09cffe490433e1a8f76626d22b55075f954d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a8079e79_807ccc54",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2018-11-09T20:33:35Z",
+      "side": 1,
+      "message": "That could make a tiny bit of difference, yes. I started thinking about the use of wfIsHHVM() because I wondered if there was a code path that would lead to a log event being emitted before GlobalFunctions.php was read. I think I convinced myself that would not be possible, but then decided to add the micro optimization comment anyway. ;)",
+      "parentUuid": "92319aa4_644be4d7",
+      "revId": "47de09cffe490433e1a8f76626d22b55075f954d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
