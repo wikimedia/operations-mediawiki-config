@@ -16,6 +16,24 @@
       "revId": "47de09cffe490433e1a8f76626d22b55075f954d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "92319aa4_644be4d7",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2018-11-09T17:13:12Z",
+      "side": 1,
+      "message": "Ack. If we want to optimize away function calls, would it make sense to combine the three factory closures then (normalized_message, shard, php)?",
+      "parentUuid": "1eadf644_d676956a",
+      "revId": "47de09cffe490433e1a8f76626d22b55075f954d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
