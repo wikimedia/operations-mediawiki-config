@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "82f03db5_1e507635",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 940,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-11-09T12:42:12Z",
+      "side": 1,
+      "message": "https://?",
+      "range": {
+        "startLine": 940,
+        "startChar": 22,
+        "endLine": 940,
+        "endChar": 26
+      },
+      "revId": "f05d69e41d47576dae5e97663918ddeaa8e4c74d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f9bb0597_6e74ca54",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-11-09T12:42:12Z",
+      "side": 1,
+      "message": "each of these lines still needs to be in a condition to check to see if $wmgWikibaseUseSSRTermbox is set, as it will not be set in production and this file is also used in production.\n\nSo:\n\nif( isset( $wmgWikibaseUseSSRTermbox ) ) {\n$wgWBRepoSettings[\u0027termboxEnabled\u0027] \u003d $wmgWikibaseUseSSRTermbox;\n}\n\nand the same for the other var.\nThen I think this is ready",
+      "range": {
+        "startLine": 176,
+        "startChar": 39,
+        "endLine": 176,
+        "endChar": 64
+      },
+      "revId": "f05d69e41d47576dae5e97663918ddeaa8e4c74d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
