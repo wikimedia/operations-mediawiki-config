@@ -8371,7 +8371,7 @@ $wgConf->settings = [
 			'createaccount' => false
 		],
 		'user' => [
-		'move' => true,
+			'move' => true,
 			'upload' => true,
 			'autoconfirmed' => true,
 			'editsemiprotected' => true,
@@ -9050,6 +9050,18 @@ $wgConf->settings = [
 	],
 	'+foundationwiki' => [
 		'user' => [ 'editinterface' => true, 'editsitejson' => true ],
+		// T205352:
+		'editor' => [
+			'edit' => true,
+			'move' => true,
+			'upload' => true,
+			'autoconfirmed' => true,
+			'editsemiprotected' => true,
+			'reupload' => true,
+			'skipcaptcha' => true,
+			'editinterface' => true,
+			'editsitejson' => true
+		],
 		'flood' => [ 'bot' => true ],
 	],
 	'frwiki' => [
