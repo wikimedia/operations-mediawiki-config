@@ -401,11 +401,6 @@ function wmfLabsSettings() {
 			'default' => [ 'en-rtl' => 'English (rtl)' ],
 		],
 
-		'wmgUsePetition' => [
-			'default' => false,
-			'metawiki' => true,
-		],
-
 		'wmgUseQuickSurveys' => [
 			'default' => true,
 		],
@@ -809,6 +804,14 @@ function wmfLabsSettings() {
 			'enwiki' => true,
 			'kowiki' => true,
 		],
+		'wmgUseGrowthExperiments' => [
+			'enwiki' => true,
+			'kowiki' => true,
+		],
+		'wgWelcomeSurveyEnabled' => [
+			'enwiki' => true,
+			'kowiki' => true,
+		],
 		'wgEnablePartialBlocks' => [
 			'default' => true,
 		],
@@ -926,5 +929,15 @@ function wmfLabsSettings() {
 			]
 		],
 
+		// T209143
+		'wmgWikibaseUseSSRTermbox' => [
+			'default' => false,
+			'wikidatawiki' => true,
+		],
+
+		'wmgWikibaseSSRTermboxServerUrl' => [
+			'default' => '',
+			'wikidatawiki' => 'https://ssr-termbox.wmflabs.org/termbox',
+		],
 	];
 } # wmflLabsSettings()

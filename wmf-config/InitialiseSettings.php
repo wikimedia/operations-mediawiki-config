@@ -93,6 +93,7 @@ $wgConf->settings = [
 	'private' => false,
 	'fishbowl' => false,
 	'nonglobal' => false,
+	'foundationwiki' => true, # T205368
 	'zerowiki' => true, # T135074
 ],
 'wmgBotPasswordsCluster' => [
@@ -5656,6 +5657,14 @@ $wgConf->settings = [
 	'foundationwiki' => [
 		100 => 'Resolution', // T132746
 		101 => 'Resolution_talk', // T132746
+		102 => 'Legal', // T206173
+		103 => 'Legal_talk', // T206173
+		104 => 'Minutes', // T206173
+		105 => 'Minutes_talk', // T206173
+		106 => 'Policy', // T206173
+		107 => 'Policy_talk', // T206173
+		112 => 'Archive', // T206173
+		113 => 'Archive_talk', // T206173
 	],
 	'wikitech' => [
 		110 => 'Obsolete',
@@ -8098,6 +8107,7 @@ $wgConf->settings = [
 	'+etwikisource' => [ 104 => 1, 106 => 1 ],
 	'+fawikibooks' => [ 102 => 1, 110 => 1 ], // T176908
 	'+fawikisource' => [ 102 => 1 ],
+	'+foundationwiki' => [ 100 => 1, 102 => 1, 104 => 1, 106 => 1 ], // T206173
 	'+frrwiki' => [ 102 => 1, 104 => 1, 106 => 1 ], // T40023
 	'+frwikisource' => [ 102 => 1, 112 => 1 ],
 	'+frwikiversity' => [ 104 => 1, 106 => 1, 108 => 1 ],
@@ -10612,7 +10622,7 @@ $wgConf->settings = [
 	],
 	'+foundationwiki' => [
 		'sysop' => [ 'inactive', 'flood' ],
-		'bureaucrat' => [ 'inactive', 'petitiondata', 'oauthadmin' ],
+		'bureaucrat' => [ 'inactive', 'oauthadmin' ],
 	],
 	'+frwiki' => [
 		'sysop' => [ 'rollbacker' ], // T170780
@@ -11370,7 +11380,7 @@ $wgConf->settings = [
 	],
 	'+foundationwiki' => [
 		'sysop' => [ 'inactive', 'confirmed', 'flood' ],
-		'bureaucrat' => [ 'inactive', 'confirmed', 'petitiondata', 'oauthadmin' ],
+		'bureaucrat' => [ 'inactive', 'confirmed', 'oauthadmin' ],
 	],
 	'+frwiki' => [
 		'sysop' => [ 'rollbacker' ], // T170780
@@ -12217,6 +12227,13 @@ $wgConf->settings = [
 'wgSVGMaxSize' => [
 	'default' => 4096, // 1024's a bit low?
 ],
+
+// T208899
+'wgMediaInTargetLanguage' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 # @} end of SVG related
 
 'wgRestrictionMethod' => [
@@ -14333,6 +14350,11 @@ $wgConf->settings = [
 
 'wmgUseAdvancedSearch' => [
 	'default' => true,
+],
+
+'wgAdvancedSearchBetaFeature' => [
+	'default' => true,
+	'group0' => false, // T207641
 ],
 
 'wmgUseFileImporter' => [
@@ -20829,12 +20851,6 @@ $wgConf->settings = [
 	'donatewiki' => '!^https?://donate\.wikimedia\.org/!',
 ],
 
-'wmgUsePetition' => [
-	'default' => false,
-	'testwiki' => true,
-	'foundationwiki' => true,
-],
-
 'wmgUseClusterSquid' => [
 	'default'  => true,
 ],
@@ -21417,6 +21433,14 @@ $wgConf->settings = [
 
 'wmgUseCSPReportOnlyHasSession' => [
 	'default' => true,
+],
+
+'wmgUseGrowthExperiments' => [
+	'default' => false,
+],
+
+'wgWelcomeSurveyEnabled' => [
+	'default' => false,
 ],
 
 ];
