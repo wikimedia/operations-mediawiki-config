@@ -34,6 +34,24 @@
       "revId": "47de09cffe490433e1a8f76626d22b55075f954d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "336fa928_1701e490",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2018-11-09T20:14:06Z",
+      "side": 1,
+      "message": "Would it help to calculate $version before line 135, and have line 135 be\n\n return function ( array $record ) use ( $version ) {\n\n?",
+      "parentUuid": "92319aa4_644be4d7",
+      "revId": "47de09cffe490433e1a8f76626d22b55075f954d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
