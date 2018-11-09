@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "a3ea29db_63d873ba",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 15759,
+      "author": {
+        "id": 6490
+      },
+      "writtenOn": "2018-11-09T13:08:25Z",
+      "side": 1,
+      "message": "I hope so; I\u0027ll just leave the link there in case it is reactivated.",
+      "parentUuid": "f4803863_70c4fea9",
+      "range": {
+        "startLine": 15759,
+        "startChar": 3,
+        "endLine": 15759,
+        "endChar": 83
+      },
+      "revId": "6655090ed998fd33a5896ce30f3a72164352d066",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f92380f1_745bb194",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 7
