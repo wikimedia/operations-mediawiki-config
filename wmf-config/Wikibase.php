@@ -172,6 +172,9 @@ if ( $wmgUseWikibaseRepo ) {
 		'class' => '\\Wikibase\\Lib\\Units\\JsonUnitStorage',
 		'args' => [ __DIR__ . '/unitConversionConfig.json' ]
 	];
+
+	$wgWBRepoSettings['termboxEnabled'] = $wmgWikibaseUseSSRTermbox;
+	$wgWBRepoSettings['ssrServerUrl'] = $wmgWikibaseSSRTermboxServerUrl;
 }
 
 if ( $wmgUseWikibaseClient ) {
