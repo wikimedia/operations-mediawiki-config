@@ -7940,6 +7940,7 @@ $wgConf->settings = [
 	'siwiki' => true,
 	'specieswiki' => true, // T89147
 	'srwiki' => true, // req by dungodung in #wikimedia-tech, 2008-02-25
+	'srwikinews' => true, // T209251
 	'srwikisource' => true, // #25963
 	'srwikiquote' => true, // T207732
 	'viwiki' => true, // T7060
@@ -9884,6 +9885,11 @@ $wgConf->settings = [
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'rollbacker' => [ 'rollback' => true ],
 	],
+	'+srwikinews' => [ // T209251
+		'patroller' => [ 'patrol' => true ],
+		'autopatrolled' => [ 'autopatrol' => true ],
+		'rollbacker' => [ 'rollback' => true ],
+	],
 	'+srwikisource' => [
 		'patroller' => [ 'patrol' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ],
@@ -10934,6 +10940,10 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'patroller', 'autopatrolled', 'rollbacker' ],
 		'sysop' => [ 'rollbacker' ],
 	],
+	'+srwikinews' => [ // T209251
+		'bureaucrat' => [ 'patroller', 'autopatrolled', 'rollbacker' ],
+		'sysop' => [ 'rollbacker' ],
+	],
 	'+srwikisource' => [
 		'bureaucrat' => [ 'patroller', 'autopatrolled', 'rollbacker' ], // T206935
 		'sysop' => [ 'rollbacker' ], // T206935
@@ -11712,6 +11722,10 @@ $wgConf->settings = [
 		'sysop' => [ 'rollbacker' ],
 	],
 	'+srwikibooks' => [
+		'bureaucrat' => [ 'patroller', 'rollbacker', 'autopatrolled' ],
+		'sysop' => [ 'rollbacker' ],
+	],
+	'+srwikinews' => [ // T209251
 		'bureaucrat' => [ 'patroller', 'rollbacker', 'autopatrolled' ],
 		'sysop' => [ 'rollbacker' ],
 	],
