@@ -929,5 +929,15 @@ function wmfLabsSettings() {
 			]
 		],
 
+		// T209143
+		'wmgWikibaseUseSSRTermbox' => [
+			'default' => false,
+			'wikidatawiki' => true,
+		],
+
+		'wmgWikibaseSSRTermboxServerUrl' => [
+			'default' => '',
+			'wikidatawiki' => 'https://ssr-termbox.wmflabs.org/termbox',
+		],
 	];
 } # wmflLabsSettings()
