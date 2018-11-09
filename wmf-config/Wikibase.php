@@ -274,4 +274,9 @@ if ( $wmgUseWikibaseClient ) {
 	}
 }
 
+if ( isset( $wmgWikibaseUseSSRTermbox ) && $wmgWikibaseUseSSRTermbox ) {
+	$wgWBRepoSettings['termboxEnabled'] = true;
+	$wgWBRepoSettings['ssrServerUrl'] = 'http://ssr-termbox.wmflabs.org/termbox';
+}
+
 unset( $wmgWBSharedCacheKey );
