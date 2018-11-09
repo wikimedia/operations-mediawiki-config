@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d5221ebd_da608957",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 277,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-11-09T12:07:07Z",
+      "side": 1,
+      "message": "So this code should go within the if block that starts on line 76 so that we only set this on site where wikibase repo is actually loaded.",
+      "range": {
+        "startLine": 277,
+        "startChar": 0,
+        "endLine": 277,
+        "endChar": 2
+      },
+      "revId": "d5af5ba9ee0227dbc5d8fffd278a5be6dbccf376",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f57b4a21_28d2593a",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 279,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-11-09T12:07:07Z",
+      "side": 1,
+      "message": "Rather than having the values of the config set in here, we want to set them in IS-labs.php and then we will also set the production ones in IS.php when this reaches production.\n\nSo instead of having wmgWikibaseUseSSRTermbox you would have wmgWikibaseUseSSRTermbox and wmgWikibaseSSRTermboxServerUrl for example for these 2 values.",
+      "range": {
+        "startLine": 278,
+        "startChar": 39,
+        "endLine": 279,
+        "endChar": 77
+      },
+      "revId": "d5af5ba9ee0227dbc5d8fffd278a5be6dbccf376",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
