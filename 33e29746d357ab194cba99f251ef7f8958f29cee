@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4d153118_076d0fa7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3963
+      },
+      "writtenOn": "2018-11-11T14:49:30Z",
+      "side": 1,
+      "message": "Can you use a smaller commit title, like just \"Add throttle for 2018-11-13 event\"? thanks",
+      "revId": "33e29746d357ab194cba99f251ef7f8958f29cee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
