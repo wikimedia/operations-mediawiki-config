@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bb49ee9d_74a60e43",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3963
+      },
+      "writtenOn": "2018-11-12T20:04:59Z",
+      "side": 1,
+      "message": "As https://www.mediawiki.org/wiki/Gerrit/Commit_message_guidelines#Structure says please keep commit title less than 80 chars long :)\n\nLike \"Disable FlaggedRevs, enable RC patrol and add rights on srwikinews\"",
+      "revId": "3ba2b937ea95dcc96d0064973c102fcb4b180375",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
