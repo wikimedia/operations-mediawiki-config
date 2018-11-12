@@ -7959,6 +7959,7 @@ $wgConf->settings = [
 	'srwiki' => true, // req by dungodung in #wikimedia-tech, 2008-02-25
 	'srwikisource' => true, // #25963
 	'srwikiquote' => true, // T207732
+	'srwiktionary' => true, // T209252
 	'viwiki' => true, // T7060
 	'testwiki' => true,
 	'test2wiki' => true, // request by Krinkle for testing
@@ -9908,6 +9909,11 @@ $wgConf->settings = [
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'rollbacker' => [ 'rollback' => true ],
 	],
+	'+srwiktionary' => [ // T209252
+		'patroller' => [ 'patrol' => true ],
+		'autopatrolled' => [ 'autopatrol' => true ],
+		'rollbacker' => [ 'rollback' => true ],
+	],
 	'+stewardwiki' => [
 		'bureaucrat' => [ 'userrights' => true ], // T30773
 	],
@@ -10956,6 +10962,10 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'patroller', 'autopatrolled', 'rollbacker' ],
 		'sysop' => [ 'rollbacker' ],
 	],
+	'+srwiktionary' => [ // T209252
+		'bureaucrat' => [ 'patroller', 'autopatrolled', 'rollbacker' ],
+		'sysop' => [ 'rollbacker' ],
+	],
 	'+svwiki' => [
 		'sysop' => [ 'rollbacker', 'autopatrolled' ], // T161210
 	],
@@ -11731,6 +11741,10 @@ $wgConf->settings = [
 	],
 	'+srwikiquote' => [ // T206936
 		'bureaucrat' => [ 'patroller', 'rollbacker', 'autopatrolled' ],
+		'sysop' => [ 'rollbacker' ],
+	],
+	'+srwiktionary' => [ // T209252
+		'bureaucrat' => [ 'patroller', 'autopatrolled', 'rollbacker' ],
 		'sysop' => [ 'rollbacker' ],
 	],
 	'+strategywiki' => [
