@@ -908,12 +908,6 @@ function wmfLabsSettings() {
 
 		// T208763
 		//
-		'wmgWikibaseClientPageSchemaNamespaces' => [
-			// All sampled pages in the main namespace will be tested.
-			'default' => [
-				0,
-			]
-		],
 		'wmgWikibaseClientPageSchemaSplitTestSamplingRatio' => [
 			// 50% of pages on the Beta Cluster will be sampled. Half of those (25%) will receive the new
 			// treatment.
