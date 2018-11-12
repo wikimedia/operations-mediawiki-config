@@ -7940,6 +7940,7 @@ $wgConf->settings = [
 	'siwiki' => true,
 	'specieswiki' => true, // T89147
 	'srwiki' => true, // req by dungodung in #wikimedia-tech, 2008-02-25
+	'srwikibooks' => true, // T209250
 	'srwikinews' => true,
 	'srwikisource' => true, // #25963
 	'srwikiquote' => true, // T207732
