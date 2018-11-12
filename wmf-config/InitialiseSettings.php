@@ -18935,6 +18935,40 @@ $wgConf->settings = [
 	'default' => [ 'url' => '/static/images/wikibase/echoIcon.svg' ],
 ],
 
+// ---T208755---
+'wmgWikibaseClientPageSchemaNamespaces' => [
+	// All sampled pages in the main namespace will be tested.
+	'default' => [
+		0,
+	]
+],
+'wmgWikibaseClientPageSchemaSplitTestSamplingRatio' => [
+	// 1% of pages will be sampled. Half of those (.005) will receive the new treatment.
+	'default' => 0.01,
+	'idwiki' => 0,
+	'ptwiki' => 0,
+	'pawiki' => 0,
+	'pnbwiki' => 0,
+	'kowiki' => 0,
+	'bhwiki' => 0,
+	'chrwiki' => 0,
+	'kkwiki' => 0,
+	'cawiki' => 0,
+	'frwiki' => 0,
+	'yowiki' => 0,
+	'xalwiki' => 0,
+],
+'wmgWikibaseClientPageSchemaSplitTestBuckets' => [
+	// Pages are bucketed in [0, .5) for control and [.5, 1) for treatment. If a page is sampled
+	// and bucketed in treatment, it will contain the new schema changes. Otherwise, it will have
+	// no changes.
+	'default' => [
+		'control',
+		'treatment',
+	]
+],
+// ---/T208755---
+
 'wmgUseWikibaseWikimediaBadges' => [
 	'default' => false,
 	'wikidataclient' => true,
