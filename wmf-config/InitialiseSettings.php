@@ -10942,9 +10942,9 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'patroller', 'autopatrolled', 'rollbacker' ],
 		'sysop' => [ 'rollbacker' ],
 	],
-	'+srwikisource' => [
-		'bureaucrat' => [ 'patroller', 'autopatrolled', 'rollbacker' ], // T206935
-		'sysop' => [ 'rollbacker' ], // T206935
+	'+srwikisource' => [ // T206935
+		'bureaucrat' => [ 'patroller', 'autopatrolled', 'rollbacker' ],
+		'sysop' => [ 'rollbacker' ],
 	],
 	'+srwikiquote' => [ // T206936
 		'bureaucrat' => [ 'patroller', 'autopatrolled', 'rollbacker' ],
@@ -11727,9 +11727,9 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'patroller', 'rollbacker', 'autopatrolled' ],
 		'sysop' => [ 'rollbacker' ],
 	],
-	'+srwikisource' => [
-		'bureaucrat' => [ 'patroller', 'autopatrolled', 'rollbacker' ], // T206935
-		'sysop' => [ 'rollbacker' ], // T206935
+	'+srwikisource' => [ // T206935
+		'bureaucrat' => [ 'patroller', 'autopatrolled', 'rollbacker' ],
+		'sysop' => [ 'rollbacker' ],
 	],
 	'+srwikiquote' => [ // T206936
 		'bureaucrat' => [ 'patroller', 'rollbacker', 'autopatrolled' ],
