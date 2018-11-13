@@ -9878,9 +9878,9 @@ $wgConf->settings = [
 	'srwiki' => [
 		'user' => [ 'upload' => false ],
 		'autoconfirmed' => [ 'upload' => true ],
-		'patroller' => [ 'patrol' => true ],
+		'patroller' => [ 'patrol' => true, 'movefile' => true ], // T208663
 		'autopatrolled' => [ 'autopatrol' => true ],
-		'rollbacker' => [ 'rollback' => true ],
+		'rollbacker' => [ 'rollback' => true, 'movefile' => true ], // T208663
 		'flood' => [ 'bot' => true ],
 	],
 	'+srwikibooks' => [
@@ -21354,7 +21354,11 @@ $wgConf->settings = [
 ],
 
 'wgActorTableSchemaMigrationStage' => [
-	'default' => MIGRATION_OLD,
+	'default' => SCHEMA_COMPAT_OLD,
+	'testwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	'test2wiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	'testwikidatawiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	'mediawikiwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 ],
 
 'wgCommentTableSchemaMigrationStage' => [
