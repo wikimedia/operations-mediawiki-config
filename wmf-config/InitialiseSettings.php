@@ -18919,7 +18919,7 @@ $wgConf->settings = [
 ],
 
 'wmgWikibaseClientRepoConceptBaseUri' => [
-	'default' => 'http://www.wikidata.org/entity/',
+	'default' => 'https://www.wikidata.org/entity/',
 	'wikidataclient-test' => 'http://test.wikidata.org/entity/',
 ],
 
