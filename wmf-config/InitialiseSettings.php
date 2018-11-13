@@ -18967,6 +18967,15 @@ $wgConf->settings = [
 ],
 
 'wmgWikibaseClientRepoConceptBaseUri' => [
+	// T153563, T209352: use HTTP not HTTPS. Entity URIs are supposed to be stable, and thanks to HSTS
+	// and HSTS preloading, they will effectively be loaded over HTTPS anyways on all modern browsers.
+	//
+	// A mismatch between a client repo URL and the repo concept URI should not be a problem –
+	// ultimately, the URI is just an identifier, and nothing in Wikibase should ever try to resolve
+	// it. (For example, on non-Wikidata Wikibase installations, the entity URI will often still be
+	// http://DOMAIN/entity, even if no redirect for /entity is set up in the web server.) If this
+	// mismatch is causing problems, then there’s a bug somewhere, but breaking the stable identifiers
+	// is not the correct solution.
 	'default' => 'http://www.wikidata.org/entity/',
 	'wikidataclient-test' => 'http://test.wikidata.org/entity/',
 ],
