@@ -18962,8 +18962,8 @@ $wgConf->settings = [
 	]
 ],
 'wmgWikibaseClientPageSchemaSplitTestSamplingRatio' => [
-	// 50% of pages will be sampled. Half of those (.25) will receive the new treatment.
-	'default' => 0.5,
+	// 100% of pages will be sampled. Half of those (.5) will receive the new treatment.
+	'default' => 1,
 
 	// Do not test on the Indonesian, Portuguese, Punjabi, Dutch, Korean, Bhojpuri, Cherokee,
 	// Kazakh, Catalan, French, Yoruba, and Kalmyk Wikipedias. These Wikipedias have been identified
