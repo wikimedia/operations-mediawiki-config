@@ -18943,9 +18943,9 @@ $wgConf->settings = [
 	]
 ],
 'wmgWikibaseClientPageSchemaSplitTestSamplingRatio' => [
-	// 25% of pages on the Beta Cluster will be sampled. Half of those (.125) will receive the new
+	// 50% of pages on the Beta Cluster will be sampled. Half of those (.25) will receive the new
 	// treatment.
-	'default' => 0.25,
+	'default' => 0.5,
 ],
 'wmgWikibaseClientPageSchemaSplitTestBuckets' => [
 	// Pages are bucketed in [0, .5) for control and [.5, 1) for treatment. If a page is sampled
