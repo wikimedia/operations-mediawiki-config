@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ca46f3c9_a76291ca",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-11-14T15:34:18Z",
+      "side": 1,
+      "message": "Add the ticket number, so if someone checks this file, it is easy to know why this host is depooled.",
+      "revId": "4afba0bc1826d327cb883d31d3cf4399711dc455",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
