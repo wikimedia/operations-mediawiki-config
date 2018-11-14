@@ -472,7 +472,6 @@ $wgConf->settings = [
 	'scnwiki' => 'Europe/Berlin',
 	'sewikimedia' => 'Europe/Berlin',
 	'shwiki' => 'Europe/Berlin',
-	'shnwiki' => 'Asia/Yangon',
 	'slwiki' => 'Europe/Ljubljana',
 	'slwikibooks' => 'Europe/Ljubljana', // T142701
 	'slwikiquote' => 'Europe/Ljubljana',
