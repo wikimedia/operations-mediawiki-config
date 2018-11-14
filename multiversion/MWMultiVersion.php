@@ -19,14 +19,60 @@ class MWMultiVersion {
 	 * @var string
 	 */
 	private $db;
+
 	/**
 	 * @var string
 	 */
 	private $version;
+
 	/**
 	 * @var bool
 	 */
 	private $versionLoaded = false;
+
+	/**
+	 * List of *.wikimedia.org subdomains that are wikis
+	 * @var array
+	 */
+	private $wikimediaSubdomains = [
+		'am',
+		'ar',
+		'bd',
+		'be',
+		'br',
+		'ca',
+		'cn',
+		'co',
+		'dk',
+		'ec',
+		'et',
+		'fi',
+		'hi',
+		'id',
+		'id-internal',
+		'il',
+		'mai',
+		'mk',
+		'mx',
+		'nl',
+		'noboard-chapters',
+		'no',
+		'nyc',
+		'nz',
+		'pa-us',
+		'pl',
+		'pt',
+		'punjabi',
+		'romd',
+		'rs',
+		'ru',
+		'se',
+		'tr',
+		'ua',
+		'uk',
+		've',
+		'wb'
+	];
 
 	/**
 	 * To get an instance of this class, use the static helper methods.
@@ -180,11 +226,7 @@ class MWMultiVersion {
 			if ( $matches[2] !== 'wikimedia'
 				|| ( $matches[2] === 'wikimedia' && in_array(
 					$lang,
-					[
-						'am', 'ar', 'bd', 'be', 'br', 'ca', 'cn', 'co', 'dk', 'ec', 'et', 'fi', 'hi', 'id', 'id-internal', 'il', 'mai', 'mk', 'mx',
-						'nl', 'noboard-chapters', 'no', 'nyc', 'nz', 'pa-us', 'pl', 'pt', 'punjabi', 'romd', 'rs', 'ru', 'se', 'tr', 'ua',
-						'uk', 've', 'wb'
-					]
+					$this->wikimediaSubdomains
 			) ) ) {
 				// wikimedia (non chapters) sites stay as wiki
 				$site = $matches[2];
