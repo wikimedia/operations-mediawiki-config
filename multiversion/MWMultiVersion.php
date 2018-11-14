@@ -182,7 +182,7 @@ class MWMultiVersion {
 					$lang,
 					[
 						'am', 'ar', 'bd', 'be', 'br', 'ca', 'cn', 'co', 'dk', 'ec', 'et', 'fi', 'hi', 'id', 'id-internal', 'il', 'mai', 'mk', 'mx',
-						'nl', 'noboard-chapters', 'no', 'nyc', 'nz', 'pa-us', 'pl', 'pt', 'punjabi', 'romd', 'rs', 'ru', 'se', 'tr', 'ua',
+						'nl', 'noboard-chapters', 'no', 'nyc', 'nz', 'pa-us', 'pl', 'pt', 'romd', 'rs', 'ru', 'se', 'tr', 'ua',
 						'uk', 've', 'wb'
 					]
 			) ) ) {
