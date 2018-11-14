@@ -16,6 +16,24 @@
       "revId": "1d612f656f555e899cfffbaa5bdfcded22d43690",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "43ed204d_bd8ba0d2",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 4879
+      },
+      "writtenOn": "2018-11-14T10:25:06Z",
+      "side": 0,
+      "message": "Oops, Visual Studio Code confused me. I will reschedule this for Morning SWAT at 15th November.",
+      "parentUuid": "2e39b4fc_b4ba9a61",
+      "revId": "1d612f656f555e899cfffbaa5bdfcded22d43690",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
