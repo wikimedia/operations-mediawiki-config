@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e39b4fc_b4ba9a61",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2018-11-14T00:22:32Z",
+      "side": 0,
+      "message": "It looks like this event is still ongoing so shouldn\u0027t be deleted.",
+      "revId": "1d612f656f555e899cfffbaa5bdfcded22d43690",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
