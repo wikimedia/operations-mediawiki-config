@@ -18883,6 +18883,21 @@ $wgConf->settings = [
 	'wikidatawiki' => 'https://query.wikidata.org/sparql',
 ],
 
+'wmgWikibaseStringLimits' => [
+	'multilang' => [
+		'length' => 250,
+	],
+	'VT:monolingualtext' => [
+		'length' => 1500,
+	],
+	'VT:string' => [
+		'length' => 1500,
+	],
+	'PT:url' => [
+		'length' => 1500,
+	],
+],
+
 'wmgUseWikibaseClient' => [
 	'default' => false,
 	'wikidataclient' => true,
