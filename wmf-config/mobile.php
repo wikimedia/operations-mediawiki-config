@@ -10,7 +10,8 @@ if ( $wmgMobileFrontend ) {
 	}
 
 	$wgMFMobileHeader = 'X-Subdomain';
-	$wgMFNoindexPages = false;
+	$wgMFNoindexPages = in_array( $wgDBName, [ 'itwiki', 'nlwiki', 'kowiki',
+												'arwiki', 'zhwiki', 'hiwiki' ] );
 	if ( !$wmgEnableGeoData ) {
 		$wgMFNearby = false;
 	}
