@@ -18811,6 +18811,13 @@ $wgConf->settings = [
 	'kowiki' => false,
 ],
 
+'wgWMEUnderstandingFirstDaySensitiveNamespaces' => [
+	'default' => [ 0, 1, 6, 7 ],
+	'testwiki' => [ 0, 1, 6, 7, 118, 119 ],
+  'cswiki' => [ 0, 1, 6, 7, 100, 101 ],
+	'kowiki' => [ 0, 1, 6, 7, 100, 101, 118, 119 ],
+],
+
 'wmgWikibaseEntityAccessLimit' => [
 	'default' => 400,
 	'wikidatawiki' => 500,
