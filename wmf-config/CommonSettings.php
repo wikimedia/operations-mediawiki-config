@@ -1805,6 +1805,7 @@ if ( $wmgUseCentralNotice ) {
 
 	$wgCentralDBname = 'metawiki';
 	$wgNoticeInfrastructure = false;
+	$wgCentralNoticeAdminGroup = false;
 	if ( $wmfRealm == 'production' && $wgDBname === 'testwiki' ) {
 		// test.wikipedia.org has its own central database:
 		$wgCentralDBname = 'testwiki';
