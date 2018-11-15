@@ -18903,6 +18903,11 @@ $wgConf->settings = [
 			'length' => 1500,
 		],
 	],
+	'commonswiki' => [
+		'multilang' => [
+			'length' => 255,
+		],
+	],
 ],
 
 'wmgUseWikibaseClient' => [
