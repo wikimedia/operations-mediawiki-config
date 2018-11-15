@@ -896,6 +896,9 @@ function wmfLabsSettings() {
 		'wmgWikibaseClientRepoUrl' => [
 			'default' => 'https://wikidata.beta.wmflabs.org',
 		],
+		'wmgWikibaseClientRepoConceptBaseUri' => [
+			'default' => 'http://www.wikidata.beta.wmflabs.org/entity/'
+		],
 		'wmgWikibaseClientRepositories' => [
 			'default' => [
 				'' => [
