@@ -18888,7 +18888,7 @@ $wgConf->settings = [
 ],
 
 'wmgWikibaseStringLimits' => [
-	'default' => [],
+	'default' => null,
 	'wikidata' => [
 		'multilang' => [
 			'length' => 250,
