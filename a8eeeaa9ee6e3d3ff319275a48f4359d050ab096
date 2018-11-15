@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e962ac35_7856fa1b",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 488,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-11-15T09:21:55Z",
+      "side": 1,
+      "message": "This doesn\u0027t need to be set if it is the same in production",
+      "range": {
+        "startLine": 475,
+        "startChar": 2,
+        "endLine": 488,
+        "endChar": 4
+      },
+      "revId": "a8eeeaa9ee6e3d3ff319275a48f4359d050ab096",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "896b3648_d69631f8",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 18899,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-11-15T09:21:55Z",
+      "side": 1,
+      "message": "your missing 1 layer of this array, which is the wikis it should be set on, for example see above which has default and wikidatawiki.\n\nWe can probably just set this as the default?",
+      "range": {
+        "startLine": 18886,
+        "startChar": 0,
+        "endLine": 18899,
+        "endChar": 2
+      },
+      "revId": "a8eeeaa9ee6e3d3ff319275a48f4359d050ab096",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
