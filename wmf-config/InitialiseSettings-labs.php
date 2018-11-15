@@ -472,6 +472,21 @@ function wmfLabsSettings() {
 			'default' => []
 		],
 
+		'wmgWikibaseStringLimits' => [
+			'multilang' => [
+				'length' => 250,
+			],
+			'VT:monolingualtext' => [
+				'length' => 1500,
+			],
+			'VT:string' => [
+				'length' => 1500,
+			],
+			'PT:url' => [
+				'length' => 1500,
+			],
+		],
+
 		// ###### Structured Data on Commons testing installation ######
 		'wmgUseWikibaseRepo' => [
 			'commonswiki' => true,
