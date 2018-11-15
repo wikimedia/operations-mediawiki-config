@@ -804,6 +804,11 @@ function wmfLabsSettings() {
 			'enwiki' => true,
 			'kowiki' => true,
 		],
+		'wgWMEUnderstandingFirstDaySensitiveNamespaces' => [
+			'default' => [ 0, 1, 6, 7 ],
+			'enwiki' => [ 0, 1, 6, 7, 100, 101, 118, 119 ],
+			'kowiki' => [ 0, 1, 6, 7, 100, 101, 118, 119 ],
+		],
 		'wmgUseGrowthExperiments' => [
 			'enwiki' => true,
 			'kowiki' => true,
