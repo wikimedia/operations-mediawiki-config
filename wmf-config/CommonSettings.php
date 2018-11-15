@@ -1813,6 +1813,9 @@ if ( $wmgUseCentralNotice ) {
 	} elseif ( $wgDBname === 'metawiki' ) {
 		$wgNoticeInfrastructure = true;
 	}
+	if ( $wgNoticeInfrastructure ) {
+		$wgCentralNoticeMessageProtectRight = 'banner-protect';
+	}
 
 	// Set fundraising banners to use HTTPS on foundation wiki
 	$wgNoticeFundraisingUrl = 'https://donate.wikimedia.org/wiki/Special:LandingCheck';

@@ -9453,6 +9453,7 @@ $wgConf->settings = [
 		],
 		'centralnoticeadmin' => [ // gerrit:50196, T142123
 			'autopatrol' => true,
+			'banner-protect' => true,
 			'centralnotice-admin' => true,
 			'editinterface' => true,
 		],
@@ -9488,6 +9489,7 @@ $wgConf->settings = [
 		],
 		'translationadmin' => [
 			'autopatrol' => true, // T142123
+			'banner-protect' => true,
 		],
 		'uploader' => [ // T52287
 			'upload' => true,
@@ -9954,7 +9956,11 @@ $wgConf->settings = [
 		],
 		'researcher' => [ 'browsearchive' => true, 'deletedhistory' => true, 'apihighlimits' => true ],
 		'rollbacker' => [ 'rollback' => true ],
-		'centralnoticeadmin' => [ 'centralnotice-admin' => true, 'editinterface' => true ], // adding to allow CN access without local sysop JRA 2013-02-21
+		'centralnoticeadmin' => [
+			'banner-protect' => true,
+			'centralnotice-admin' => true,
+			'editinterface' => true, // adding to allow CN access without local sysop JRA 2013-02-21
+		],
 	],
 	'test2wiki' => [
 		'*' => [ 'createpagemainns' => false ],
