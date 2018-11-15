@@ -177,6 +177,8 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['termboxEnabled'] = $wmgWikibaseUseSSRTermbox;
 		$wgWBRepoSettings['ssrServerUrl'] = $wmgWikibaseSSRTermboxServerUrl;
 	}
+
+	$wgWBRepoSettings['string-limits'] = $wmgWikibaseStringLimits;
 }
 
 if ( $wmgUseWikibaseClient ) {
