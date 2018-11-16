@@ -10,7 +10,7 @@ if ( !defined( 'DBO_DEFAULT' ) ) {
 $wmgParserCacheDBs = [
 	'10.64.0.12'   => '10.192.0.104',  # pc2007, A1 4.4TB 256GB
 	'10.64.32.72'  => '10.192.16.35',  # pc2008, B3 4.4TB 256GB
-	'10.64.48.128' => '10.192.48.14',  # temporary pc2010, D5 2.4TB 256GB
+	'10.64.48.128' => '10.192.32.10',  # pc2009, C1 4.4TB 256GB
 	# 'spare' => '10.192.48.14',  # pc2010, D3 4.4TB 256GB # spare host. Use it to replace any of the above if needed
 ];
 
