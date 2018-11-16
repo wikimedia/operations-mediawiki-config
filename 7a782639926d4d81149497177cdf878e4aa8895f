@@ -16,6 +16,24 @@
       "revId": "7a782639926d4d81149497177cdf878e4aa8895f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "330bbe48_b721f21f",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 5462
+      },
+      "writtenOn": "2018-11-16T17:42:29Z",
+      "side": 1,
+      "message": "Good point about whitespace, fixed to conform to convention (one extra indent).  \n\nDecided to do this here, in consultation with Anomie, because it\u0027s temporary -- once the experiment has been run we\u0027ll either enable or disable everywhere.  Simplest solution won out.",
+      "parentUuid": "2eb51a65_fa7d87ad",
+      "revId": "7a782639926d4d81149497177cdf878e4aa8895f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
