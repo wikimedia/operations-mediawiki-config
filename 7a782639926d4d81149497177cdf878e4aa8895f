@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2eb51a65_fa7d87ad",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-16T16:36:39Z",
+      "side": 1,
+      "message": "Whitespace intentional?\nAlso might be worth considering defining this in InitialiseSettings.php if possible.",
+      "revId": "7a782639926d4d81149497177cdf878e4aa8895f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
