@@ -5536,6 +5536,12 @@ $wgConf->settings = [
 		'updateTranstagOnNullRevisions' => 'debug',
 		'upload' => 'debug',
 		'wfLogDBError' => 'debug', // Former $wgDBerrorLog
+		'Wikibase' => [
+			'udp2log' => 'info',
+			'logstash' => 'warning',
+			'kafka' => false,
+			'sample' => false,
+		],
 		'wikibase-debug' => 'debug',
 		'WikibaseQualityConstraints' => 'debug',
 		'xenon' => 'debug',
