@@ -8850,6 +8850,7 @@ $wgConf->settings = [
 			'suppressredirect' => true,
 			'move-subpages' => true,
 			'move' => true,
+			'tboverride' => true, // T209753
 		],
 		'patroller' => [ 'patrol' => true ], // T149019
 	],
