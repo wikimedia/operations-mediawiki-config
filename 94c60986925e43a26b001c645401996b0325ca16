@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f8fba343_23b9adfe",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 4879
+      },
+      "writtenOn": "2018-11-17T11:36:19Z",
+      "side": 1,
+      "message": "Please change this, so this should be like this example:\n\nBug: T206952\nChange-Id: I5331506429e65237e324a2a0489dca31f9bd5933",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 13
+      },
+      "revId": "94c60986925e43a26b001c645401996b0325ca16",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
