@@ -21540,10 +21540,12 @@ $wgConf->settings = [
 
 'wmgUseGrowthExperiments' => [
 	'default' => false,
+	'testwiki' => true,
 ],
 
 'wgWelcomeSurveyEnabled' => [
 	'default' => false,
+	'testwiki' => true,
 ],
 
 ];
