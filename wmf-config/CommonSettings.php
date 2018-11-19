@@ -1180,6 +1180,9 @@ if ( $wmgUseSecurePoll ) {
 	// number of days after the vote was cast. Lower to 60 days so that
 	// overall time retained is not > 90 days.
 	$wgSecurePollKeepPrivateInfoDays = 60;
+
+	// T209802 - gpg2 is untested and evidently broken
+	$wgSecurePollGPGCommand = 'gpg1';
 }
 
 // PoolCounter
