@@ -18996,11 +18996,11 @@ $wgConf->settings = [
 'wmgWikibaseClientRepoConceptBaseUri' => [
 	// Note: these are base resource *identifiers*, not *locators*. While HTTPS would in principle be
 	// preferable over HTTP here, changing it now would be a potentially very disruptive change,
-	// breaking the stable nature of all our entity identifiers – see T153563 for some previous
+	// breaking the stable nature of all our entity identifiers - see T153563 for some previous
 	// discussion on this (ultimately declined).
 
 	// In practice, thanks to HSTS and HSTS preloading, most user agents should load these over HTTPS
-	// anyways (i. e., when the URI is used as a URL).
+	// anyways (i.e., when the URI is used as a URL).
 	'default' => 'http://www.wikidata.org/entity/',
 	'wikidataclient-test' => 'http://test.wikidata.org/entity/',
 ],
