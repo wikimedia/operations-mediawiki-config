@@ -956,7 +956,7 @@ function wmfLabsSettings() {
 					'baseUri' => 'https://wikidata.beta.wmflabs.org/entity/',
 					'supportedEntityTypes' => [ 'item', 'property' ],
 					'prefixMapping' => [],
-					'entityNamespaces' => [ 'item' => WB_NS_ITEM, 'property' => WB_NS_PROPERTY ]
+					'entityNamespaces' => [ 'item' => 0, 'property' => 120 ]
 				],
 			],
 			'wikidatawiki' => [
