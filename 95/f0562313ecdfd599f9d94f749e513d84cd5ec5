@@ -1,0 +1,8 @@
+Verified+2: jenkins-bot
+Code-Review+1: Thiemo Kreuz (WMDE) <thiemo.kreuz@wikimedia.de>
+Code-Review+2: Pmiazga <pmiazga@wikimedia.org>
+Submitted-by: Pmiazga <pmiazga@wikimedia.org>
+Submitted-at: Tue, 20 Nov 2018 22:18:22 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/473292
+Project: operations/mediawiki-config
+Branch: refs/heads/master
