@@ -910,7 +910,14 @@ function wmfLabsSettings() {
 					],
 					'baseUri' => 'https://wikidata.beta.wmflabs.org/entity/',
 					'prefixMapping' => [ '' => '' ],
-				]
+				],
+				'commons' => [
+					'repoDatabase' => 'commonswiki',
+					// TODO: Add Mediainfo here
+					'entityNamespaces' => [],
+					'baseUri' => 'https://commons.wikimedia.beta.wmflabs.org/entity/',
+					'prefixMapping' => [],
+				],
 			],
 		],
 
@@ -941,5 +948,27 @@ function wmfLabsSettings() {
 			'default' => '',
 			'wikidatawiki' => 'https://ssr-termbox.wmflabs.org/termbox',
 		],
+
+		'wmgWikibaseForeignRepositories' => [
+			'default' => [],
+			'commonswiki' => [
+				'wikidata' => [
+					'repoDatabase' => 'wikidatawiki',
+					'baseUri' => 'https://wikidata.beta.wmflabs.org/entity/',
+					'supportedEntityTypes' => [ 'item', 'property' ],
+					'prefixMapping' => [],
+					'entityNamespaces' => [ 'item' => WB_NS_ITEM, 'property' => WB_NS_PROPERTY ]
+				],
+			],
+			'wikidatawiki' => [
+				'commons' => [
+					'repoDatabase' => 'commonswiki',
+					'baseUri' => 'https://commons.wikimedia.beta.wmflabs.org/entity/',
+					'supportedEntityTypes' => [],
+					'prefixMapping' => [],
+					'entityNamespaces' => []
+				],
+			],
+		]
 	];
 } # wmflLabsSettings()
