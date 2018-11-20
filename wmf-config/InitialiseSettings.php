@@ -9899,9 +9899,9 @@ $wgConf->settings = [
 	'srwiki' => [
 		'user' => [ 'upload' => false ],
 		'autoconfirmed' => [ 'upload' => true ],
-		'patroller' => [ 'patrol' => true, 'movefile' => true ], // T208663
+		'patroller' => [ 'patrol' => true, 'movefile' => true, 'suppressredirect' => true ], // T208663 and T210000
 		'autopatrolled' => [ 'autopatrol' => true ],
-		'rollbacker' => [ 'rollback' => true, 'movefile' => true ], // T208663
+		'rollbacker' => [ 'rollback' => true, 'movefile' => true, 'suppressredirect' => true ], // T208663 and T210000
 		'flood' => [ 'bot' => true ],
 	],
 	'+srwikibooks' => [ // T209250
