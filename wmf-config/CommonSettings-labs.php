@@ -144,7 +144,7 @@ if ( $wmgUseBounceHandler ) {
 	// $wgVERPsecret = ''; // This was set in PrivateSettings.php by Legoktm
 	$wgBounceHandlerCluster = false;
 	$wgBounceHandlerSharedDB = false;
-	$wgBounceHandlerInternalIPs = [ '127.0.0.1', '::1', '10.68.23.220' ]; // deployment-mx02.deployment-prep.eqiad.wmflabs
+	$wgBounceHandlerInternalIPs = [ '127.0.0.1', '::1', '172.16.4.120' ]; // deployment-mx02.deployment-prep.eqiad.wmflabs
 	$wgBounceHandlerUnconfirmUsers = true;
 	$wgBounceRecordLimit = 5;
 	$wgVERPdomainPart = 'beta.wmflabs.org';
