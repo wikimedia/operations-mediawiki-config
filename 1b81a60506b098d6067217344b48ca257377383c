@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5b006099_7d2a1575",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 916,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2018-11-20T21:24:55Z",
+      "side": 1,
+      "message": "Oh! 6 \u003d\u003d NS_FILE, I take it?",
+      "range": {
+        "startLine": 916,
+        "startChar": 29,
+        "endLine": 916,
+        "endChar": 57
+      },
+      "revId": "1b81a60506b098d6067217344b48ca257377383c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
