@@ -12272,7 +12272,8 @@ $wgConf->settings = [
 // T208899
 'wgMediaInTargetLanguage' => [
 	'default' => false,
-	'testwiki' => true,
+	'group0' => true,
+	'group1' => true,
 ],
 
 # @} end of SVG related
