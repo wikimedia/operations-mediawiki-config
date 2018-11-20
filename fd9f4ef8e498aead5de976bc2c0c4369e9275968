@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1ec0c161_4a4f1be5",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-11-20T10:44:19Z",
+      "side": 1,
+      "message": "I wouldn\u0027t give this host more main traffic weight as it will get all the API traffic itself.\nMaybe give 150 to each rc ones",
+      "revId": "fd9f4ef8e498aead5de976bc2c0c4369e9275968",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
