@@ -1683,6 +1683,7 @@ $wgConf->settings = [
 	'hewikibooks' => [ '1.5x' => '/static/images/project-logos/hewikibooks-1.5x.png', '2x' => '/static/images/project-logos/hewikibooks-2x.png' ], // T201562
 	'huwikibooks' => [ '1.5x' => '/static/images/project-logos/huwikibooks-1.5x.png', '2x' => '/static/images/project-logos/huwikibooks-2x.png' ], // T177506
 	'itwikibooks' => [ '1.5x' => '/static/images/project-logos/itwikibooks-1.5x.png', '2x' => '/static/images/project-logos/itwikibooks-2x.png' ], // T177506
+	'ruwikibooks' => [ '1.5x' => '/static/images/project-logos/ruwikibooks-1.5x.png', '2x' => '/static/images/project-logos/ruwikibooks-2x.png' ], // T150618
 	'srwikibooks' => [ '1.5x' => '/static/images/project-logos/srwikibooks-1.5x.png', '2x' => '/static/images/project-logos/srwikibooks-2x.png' ], // T159534
 	'trwikibooks' => [ '1.5x' => '/static/images/project-logos/trwikibooks-1.5x.png', '2x' => '/static/images/project-logos/trwikibooks-2x.png' ], // T177506
 	'urwikibooks' => [ '1.5x' => '/static/images/project-logos/urwikibooks-1.5x.png', '2x' => '/static/images/project-logos/urwikibooks-2x.png' ], // T185977
@@ -1724,10 +1725,12 @@ $wgConf->settings = [
 	'hewikivoyage' => [ '1.5x' => '/static/images/project-logos/hewikivoyage-1.5x.png', '2x' => '/static/images/project-logos/hewikivoyage-2x.png' ], // T208148
 	'hiwikivoyage' => [ '1.5x' => '/static/images/project-logos/hiwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/hiwikivoyage-2x.png' ], // T173013
 	'pswikivoyage' => [ '1.5x' => '/static/images/project-logos/pswikivoyage-1.5x.png', '2x' => '/static/images/project-logos/pswikivoyage-2x.png' ],
+	'ruwikivoyage' => [ '1.5x' => '/static/images/project-logos/ruwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/ruwikivoyage-2x.png' ], // T150618
 	'viwikivoyage' => [ '1.5x' => '/static/images/project-logos/viwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/viwikivoyage-2x.png' ], // T151570
 
 	# Wikinews
 	'liwikinews' => [ '1.5x' => '/static/images/project-logos/liwikinews-1.5x.png', '2x' => '/static/images/project-logos/liwikinews-2x.png' ],
+	'ruwikivnews' => [ '1.5x' => '/static/images/project-logos/ruwikinews-1.5x.png', '2x' => '/static/images/project-logos/ruwikinews-2x.png' ], // T150618
 	'srwikinews' => [ '1.5x' => '/static/images/project-logos/srwikinews-1.5x.png', '2x' => '/static/images/project-logos/srwikinews-2x.png' ], // T172255
 
 	# Chapter wikis
