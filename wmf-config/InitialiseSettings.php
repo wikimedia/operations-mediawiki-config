@@ -18931,6 +18931,10 @@ $wgConf->settings = [
 	],
 ],
 
+'wmgWikibaseForeignRepositories' => [
+	'default' => [],
+],
+
 'wmgUseWikibaseClient' => [
 	'default' => false,
 	'wikidataclient' => true,
