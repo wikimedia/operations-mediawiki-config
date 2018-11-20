@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2bbe0a6f_d6b081c1",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 916,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2018-11-20T16:14:45Z",
+      "side": 1,
+      "message": "What needs to be added for WBMI?",
+      "range": {
+        "startLine": 916,
+        "startChar": 5,
+        "endLine": 916,
+        "endChar": 32
+      },
+      "revId": "4472995127d362d8faa340d17bf1623bcc939de0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
