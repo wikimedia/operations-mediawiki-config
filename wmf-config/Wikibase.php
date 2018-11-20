@@ -181,6 +181,8 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( isset( $wmgWikibaseStringLimits ) ) {
 		$wgWBRepoSettings['string-limits'] = $wmgWikibaseStringLimits;
 	}
+
+	$wgWBRepoSettings['foreignRepositories'] = $wmgWikibaseForeignRepositories;
 }
 
 if ( $wmgUseWikibaseClient ) {
