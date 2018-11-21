@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d3a4efd7_9251346c",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-11-21T09:45:35Z",
+      "side": 1,
+      "message": "task number to know why it is depooled",
+      "revId": "0ec920ba4364e43aef8dea9f36d74fbe12fd0828",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
