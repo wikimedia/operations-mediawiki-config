@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d59a79e1_17cbc67f",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-11-21T13:48:14Z",
+      "side": 1,
+      "message": "don\u0027t give more weight to this as it will support all the api weight already",
+      "range": {
+        "startLine": 158,
+        "startChar": 14,
+        "endLine": 158,
+        "endChar": 15
+      },
+      "revId": "a4d97a96ba30c46f8e167fd17b9e2777b7a919a2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d60f3c5a_701406aa",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-11-21T13:48:14Z",
+      "side": 1,
+      "message": "give 100 or 150 to these instead",
+      "revId": "a4d97a96ba30c46f8e167fd17b9e2777b7a919a2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
