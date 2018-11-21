@@ -405,6 +405,27 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
+		'wgQuickSurveysConfig' => [
+			'default' => [
+				// T209882
+				[
+					'enabled' => true,
+					'type' => 'external',
+					'name' => 'reader-trust-survey-en-v1',
+					'description' => 'Reader-trust-1-description',
+					'link' => 'Reader-trust-1-link',
+					'question' => 'Reader-trust-1-message',
+					'privacyPolicy' => 'Reader-trust-1-privacy',
+					'coverage' => 0.002,  // 1 out of 500
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ],
+					],
+
+				],
+			],
+		],
+
 		'wmgUseSentry' => [
 			'default' => true,
 		],
