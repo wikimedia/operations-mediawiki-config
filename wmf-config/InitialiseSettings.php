@@ -13693,7 +13693,8 @@ $wgConf->settings = [
 	'default' => 'metawiki',
 ],
 
-// emergency disable: shut off filters tagging >5% of posts on a total of at least 25 posts per day
+// emergency disable: disable dangerous actions for filters matching more than 2 actions, constituting
+// more than >5% of the last actions, if the filter was modified in the last day.
 'wgAbuseFilterEmergencyDisableThreshold' => [
 	'default' => [
 		'default' => 0.05,
