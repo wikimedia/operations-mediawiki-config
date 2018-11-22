@@ -7,3 +7,6 @@
 [submodule "fonts"]
 	path = fonts
 	url = https://gerrit.wikimedia.org/r/p/operations/mediawiki-config/fonts
+[submodule "docroot/wikipedia.org/speed-tests/http2priorities"]
+	path = docroot/wikipedia.org/speed-tests/http2priorities
+	url = https://github.com/pmeenan/http2priorities
