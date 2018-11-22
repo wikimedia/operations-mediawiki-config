@@ -6703,10 +6703,6 @@ $wgConf->settings = [
 		102 => 'Autor',
 		103 => 'Discuție_Autor',
 	],
-	'ruwikisource' => [
-		108 => 'Импортировано', // T123837 (transwiki)
-		109 => 'Обсуждение_импортированного',
-	],
 	'skwikisource' => [
 		102 => 'Autor',               // T122175
 		103 => 'Diskusia_k_autorovi',
