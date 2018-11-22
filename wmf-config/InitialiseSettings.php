@@ -18692,7 +18692,19 @@ $wgConf->settings = [
 'wgNavigationTimingOversampleFactor' => [
 	'default' => [
 		'geo' => [],
-		'userAgent' => []
+		'userAgent' => [],
+		'pageName' => [],
+	],
+	'ruwiki' => [
+		'geo' => [],
+		'userAgent' => [],
+		'pageName' => [
+			'Россия' => 100,
+			'Шизофрения' => 100,
+			'Википедия' => 100,
+			'Европейский_союз' => 100,
+			'Эйнштейн,_Альберт' => 100,
+		],
 	],
 ],
 
