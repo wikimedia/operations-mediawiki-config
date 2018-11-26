@@ -16373,6 +16373,9 @@ $wgConf->settings = [
 	'wikitech' => true, // Not behind Varnish
 ],
 
+'wgMinervaSchemaMainMenuClickTrackingSampleRate' => [
+	'default' => 0.5,
+],
 'wgMinervaCustomLogos' => [
 	'default' => [],
 	'wikipedia-english' => [
