@@ -70,9 +70,7 @@ $services = [
 			[
 				'host' => 'search.svc.eqiad.wmnet',
 				'transport' => 'Https',
-				// Still use the same cluster
-				// Switch to 9643 when psi is ready in eqiad
-				'port' => 9243,
+				'port' => 9643,
 				'group' => 'psi', // maps to production-search-psi-eqiad
 				'replica' => 'eqiad',
 			]
@@ -82,9 +80,7 @@ $services = [
 			[
 				'host' => 'search.svc.eqiad.wmnet',
 				'transport' => 'Https',
-				// Still use the same cluster
-				// Switch to 9443 when omega is ready in eqiad
-				'port' => 9243,
+				'port' => 9443,
 				'group' => 'omega', // maps to production-search-omega-eqiad
 				'replica' => 'eqiad',
 			]
