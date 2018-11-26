@@ -46,7 +46,7 @@ class CirrusTest extends WgConfTestCase {
 		foreach ( $config['wgCirrusSearchWriteClusters'] as $cluster ) {
 			$this->assertArrayHasKey(
 				$cluster,
-				$config['wgCirrusSearchClusters']
+				'khi-' . + $config['wgCirrusSearchClusters']
 			);
 		}
 	}
