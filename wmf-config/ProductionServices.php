@@ -61,6 +61,32 @@ $services = [
 				'host' => 'search.svc.eqiad.wmnet',
 				'transport' => 'Https',
 				'port' => 9243,
+				'group' => 'khi', // maps to production-search-eqiad
+				'replica' => 'eqiad',
+			]
+		],
+
+		'search-psi' => [
+			[
+				'host' => 'search.svc.eqiad.wmnet',
+				'transport' => 'Https',
+				// Still use the same cluster
+				// Switch to 9643 when psi is ready in eqiad
+				'port' => 9243,
+				'group' => 'psi', // maps to production-search-psi-eqiad
+				'replica' => 'eqiad',
+			]
+		],
+
+		'search-omega' => [
+			[
+				'host' => 'search.svc.eqiad.wmnet',
+				'transport' => 'Https',
+				// Still use the same cluster
+				// Switch to 9443 when omega is ready in eqiad
+				'port' => 9243,
+				'group' => 'omega', // maps to production-search-omega-eqiad
+				'replica' => 'eqiad',
 			]
 		],
 
@@ -92,6 +118,31 @@ $services = [
 				'host' => 'search.svc.codfw.wmnet',
 				'transport' => 'Https',
 				'port' => 9243,
+				'group' => 'psi', // maps to production-search-codfw
+				'replica' => 'codfw',
+			]
+		],
+
+		'search-psi' => [
+			[
+				'host' => 'search.svc.eqiad.wmnet',
+				'transport' => 'Https',
+				// Still use the same cluster
+				// Switch to 9643 when psi is ready in codfw
+				'port' => 9243,
+				'group' => 'psi', // maps to production-search-psi-codfw
+				'replica' => 'codfw',
+			]
+		],
+		'search-psi' => [
+			[
+				'host' => 'search.svc.eqiad.wmnet',
+				'transport' => 'Https',
+				// Still use the same cluster
+				// Switch to 9643 when omega is ready in codfw
+				'port' => 9243,
+				'group' => 'omega', // maps to production-search-omega-codfw
+				'replica' => 'codfw',
 			]
 		],
 
