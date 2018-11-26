@@ -43,11 +43,36 @@ $cirrusConfigUseHhvmPool = function ( $hostConfig, $pool ) {
 };
 
 $wgCirrusSearchClusters = [
-	'eqiad' => $cirrusConfigUseHhvmPool( $wmfAllServices['eqiad']['search'], 'cirrus-eqiad' ),
-	'codfw' => $cirrusConfigUseHhvmPool( $wmfAllServices['codfw']['search'], 'cirrus-codfw' ),
+	# Uses the 'default' group and replica set to the key name
+	'eqiad' => $cirrusConfigUseHhvmPool( $wmfAllServices['eqiad']['search-khi'], 'cirrus-eqiad' ),
+	'codfw' => $cirrusConfigUseHhvmPool( $wmfAllServices['codfw']['search-khi'], 'cirrus-codfw' ),
+	'eqiad-temp-psi' => $wmfAllServices['eqiad']['search-psi'],
+	'codfw-temp-psi' => $wmfAllServices['eqiad']['search-psi'],
+	'eqiad-temp-omega' => $wmfAllServices['eqiad']['search-omega'],
+	'codfw-temp-omega' => $wmfAllServices['eqiad']['search-omega'],
+
+	'eqiad-khi' => $cirrusConfigUseHhvmPool( $wmfAllServices['eqiad']['search-khi'], 'cirrus-eqiad' ) + [ 'group' => 'khi', 'replica' => 'eqiad' ],
+	'codfw-khi' => $cirrusConfigUseHhvmPool( $wmfAllServices['codfw']['search-khi'], 'cirrus-codfw' ) + [ 'group' => 'khi', 'replica' => 'codfw' ],
+	'eqiad-psi' => $cirrusConfigUseHhvmPool( $wmfAllServices['eqiad']['search-psi'], 'cirrus-eqiad' ) + [ 'group' => 'psi', 'replica' => 'eqiad' ],
+	'codfw-psi' => $cirrusConfigUseHhvmPool( $wmfAllServices['codfw']['search-psi'], 'cirrus-codfw' ) + [ 'group' => 'psi', 'replica' => 'codfw' ],
+	'eqiad-omega' => $cirrusConfigUseHhvmPool( $wmfAllServices['eqiad']['search-omega'], 'cirrus-eqiad' ) + [ 'group' => 'omega', 'replica' => 'eqiad' ],
+	'codfw-omega' => $cirrusConfigUseHhvmPool( $wmfAllServices['codfw']['search-omega'], 'cirrus-codfw' ) + [ 'group' => 'omega', 'replica' => 'codfw' ],
 ];
 
 unset( $cirrusConfigUseHhvmPool );
+
+# Transitional hack to write to the proper cluster
+$wgCirrusSearchWriteClusters = array_map( function ( $v ) use ( $wgDBname ) {
+	if ( is_array( $v ) ) {
+		$groups = $v['groups'];
+		$replica = $v['replica'];
+		$group = $groups[crc32( $wgDBname ) % count( $groups )];
+		return "$replica-temp-$group";
+	}
+	return $v;
+}, $wgCirrusSearchWriteClusters );
+
+$wgCirrusSearchReplicaGroup = $wmgCirrusSearchReplicaGroup;
 
 $wgCirrusSearchConnectionAttempts = 3;
 
