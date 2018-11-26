@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "818f601a_f451d6dc",
+        "filename": "wmf-config/ProductionServices.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 2974
+      },
+      "writtenOn": "2018-11-26T14:30:43Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this entry be `search-omega`?",
+      "range": {
+        "startLine": 135,
+        "startChar": 10,
+        "endLine": 135,
+        "endChar": 13
+      },
+      "revId": "bc8605958cd679a3ede8fff76bacdaf2acb1b0d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
