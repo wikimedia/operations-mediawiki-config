@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "071bcc81_cfe8e77a",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-11-26T14:27:42Z",
+      "side": 1,
+      "message": "missing ticket number",
+      "revId": "4dba4352b92ace1919b8f2b221dabbac864abaa4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
