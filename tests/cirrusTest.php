@@ -13,16 +13,19 @@ class CirrusTest extends WgConfTestCase {
 		// This is transformed from 'local' to 'unittest', but if it was set
 		// to a specific cluster and not 'local' this fails.
 		// $this->assertEquals( 'unittest', $config['wgCirrusSearchDefaultCluster'] );
-		$this->assertCount( 2, $config['wgCirrusSearchClusters'] );
+		// 2 DCs * 3 ES clusters per DC (*2 for transitional clusters)
+		$this->assertCount( 2 * 3 * 2, $config['wgCirrusSearchClusters'] );
 
 		// testwiki writes to eqiad and codfw
 		$this->assertCount( 2, $config['wgCirrusSearchWriteClusters'] );
 
 		foreach ( $config['wgCirrusSearchWriteClusters'] as $writeCluster ) {
-			$this->assertArrayHasKey(
-				$writeCluster,
-				$config['wgCirrusSearchClusters']
-			);
+			foreach ( [ 'khi', 'psi', 'omega' ] as $group ) {
+				$this->assertArrayHasKey(
+					"$group-$writeCluster",
+					$config['wgCirrusSearchClusters']
+				);
+			}
 		}
 	}
 
@@ -31,21 +34,35 @@ class CirrusTest extends WgConfTestCase {
 		$this->assertArrayNotHasKey( 'wgCirrusSearchServers', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchClusters', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchDefaultCluster', $config );
-		$this->assertCount( 2, $config['wgCirrusSearchClusters'] );
+		// 2 DCs * 3 ES clusters per DC (*2 for transitional clusters)
+		$this->assertCount( 2 * 3 * 2, $config['wgCirrusSearchClusters'] );
 		$this->assertCount( 2, $config['wgCirrusSearchShardCount'] );
 		$this->assertCount( 2, $config['wgCirrusSearchReplicas'] );
 		$this->assertCount( 2, $config['wgCirrusSearchClientSideConnectTimeout'] );
 
-		foreach ( array_keys( $config['wgCirrusSearchClusters'] ) as $cluster ) {
-			$this->assertArrayHasKey( $cluster, $config['wgCirrusSearchShardCount'] );
-			$this->assertArrayHasKey( $cluster, $config['wgCirrusSearchReplicas'] );
-			$this->assertArrayHasKey( $cluster, $config['wgCirrusSearchClientSideConnectTimeout'] );
+		/* Test diabled during transition to multi-instance
+		$dc_config_tested = 0;
+		foreach ( $config['wgCirrusSearchClusters'] as $key => $clusterConf ) {
+			$this->assertArrayHasKey( 'replica', $clusterConf );
+			$this->assertArrayHasKey( 'group', $clusterConf );
+			if ( 'khi' !== $clusterConf['group'] ) {
+				// enwiki is khi, the test would pass but it seems
+				// weird to test unrelated groups.
+				continue;
+			}
+			$dc = $clusterConf['replica'];
+			$dc_config_tested += 1;
+			$this->assertArrayHasKey( $dc, $config['wgCirrusSearchShardCount'] );
+			$this->assertArrayHasKey( $dc, $config['wgCirrusSearchReplicas'] );
+			$this->assertArrayHasKey( $dc, $config['wgCirrusSearchClientSideConnectTimeout'] );
 		}
-
+		// Test that we scanned 2 DCs for the group khi
+		$this->assertEquals( 2, $dc_config_tested );
+		*/
 		$this->assertCount( 2, $config['wgCirrusSearchWriteClusters'] );
 		foreach ( $config['wgCirrusSearchWriteClusters'] as $cluster ) {
 			$this->assertArrayHasKey(
-				$cluster,
+				$config['wgCirrusSearchReplicaGroup'] . '-' . $cluster,
 				$config['wgCirrusSearchClusters']
 			);
 		}
@@ -88,7 +105,7 @@ class CirrusTest extends WgConfTestCase {
 				'large', 'wikimania', 'wikidata', 'wikidataclient', 'visualeditor-nondefault',
 				'commonsuploads', 'nonbetafeatures', 'group0', 'group1', 'group2', 'wikipedia', 'nonglobal',
 				'wikitech', 'nonecho', 'mobilemainpagelegacy', 'nowikidatadescriptiontaglines',
-				'top6-wikipedia'
+				'top6-wikipedia', 'cirrussearch-big-indices'
 			] as $tag ) {
 			$dblist = MWWikiversions::readDbListFile( $tag );
 			if ( in_array( $wgDBname, $dblist ) ) {
