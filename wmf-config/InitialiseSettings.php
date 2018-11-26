@@ -21222,6 +21222,14 @@ $wgConf->settings = [
 	'cswiki' => 14, // T148327
 ],
 
+'wmgEnhancedRecentChanges' => [
+	'default' => false,
+],
+
+'wmgEnhancedWatchlist' => [
+	'default' => false,
+],
+
 'wgGalleryOptions' => [
 	'default' => [
 		'imagesPerRow' => 0,
