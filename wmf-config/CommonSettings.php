@@ -2101,8 +2101,17 @@ if ( $wmgWatchlistDefault ) {
 $wgDefaultUserOptions['enotifminoredits'] = $wmgEnotifMinorEditsUserDefault;
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
 
-$wgDefaultUserOptions['usenewrc'] = 0;
-$wgDefaultUserOptions['extendwatchlist'] = 0;
+if ( $wmgEnhancedRecentChanges ) {
+	$wgDefaultUserOptions['usenewrc'] = 1;
+} else {
+	$wgDefaultUserOptions['usenewrc'] = 0;
+}
+
+if ( $wmgEnhancedWatchlist ) {
+	$wgDefaultUserOptions['extendwatchlist'] = 1;
+} else {
+	$wgDefaultUserOptions['extendwatchlist'] = 0;
+}
 
 // ContributionTracking for handling PayPal redirects
 if ( $wgUseContributionTracking ) {
