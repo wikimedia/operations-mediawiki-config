@@ -205,11 +205,6 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
-		// T205040
-		'wgMediaInTargetLanguage' => [
-			'default' => true,
-		],
-
 		'-wmgEchoCluster' => [
 			'default' => false,
 		],
