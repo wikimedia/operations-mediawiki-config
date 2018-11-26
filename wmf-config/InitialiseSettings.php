@@ -9415,7 +9415,6 @@ $wgConf->settings = [
 		],
 		'sysop' => [
 			'deleterevision' => true,
-			'abusefilter-modify-restricted' => true,
 			'templateeditor' => true, // T102466
 		],
 		'patroller' => [
@@ -10752,8 +10751,6 @@ $wgConf->settings = [
 			'hideuser' => true, // was forgotten. added 2009-03-05 -- BV
 			'suppressrevision' => true,
 			'suppressionlog' => true,
-			'abusefilter-hide-log' => true, // Andrew, 2010-08-28
-			'abusefilter-hidden-log' => true, // Andrew, 2010-08-28
 		],
 	],
 ],
