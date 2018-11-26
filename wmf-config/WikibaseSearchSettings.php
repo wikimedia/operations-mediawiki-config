@@ -84,7 +84,20 @@ $wgWBRepoSettings['entitySearch']['prefixSearchProfiles'] = [
 		'fallback-folded' => 1.3,
 		'fallback-prefix' => 0.4,
 		'fallback-discount' => 0.9,
-	]
+	],
+	'wikibase_config_prefix_query_20181126' => [
+		'tie-breaker' => 0.35,
+		'any' => 0.4,
+		'lang-exact' => 0.2,
+		'lang-folded' => 0.1,
+		'lang-prefix' => 0.6,
+		'space-discount' => 1, // unused?
+		// untuned, this initial run was only done for english which has no fallbacks
+		'fallback-exact' => 1.9,
+		'fallback-folded' => 1.3,
+		'fallback-prefix' => 0.4,
+		'fallback-discount' => 0.9,
+	],
 ];
 
 // Fine tuning of the fulltext search (main elastic query)
@@ -123,6 +136,22 @@ $wgWBRepoSettings['entitySearch']['rescoreProfiles'] = [
 				'score_mode' => 'total',
 				'type' => 'function_score',
 				'function_chain' => 'wikibase_config_entity_weight'
+			]
+		]
+	],
+	'wikibase_config_entity_weight_20181126' => [
+		// TODO: Can this be excluded from being offered, and not need i18n?
+		'i18n_msg' => 'wikibase-rescore-profile-prefix',
+		'supported_namespaces' => 'all',
+		'rescore' => [
+			[
+				'window' => 8192,
+				'window_size_override' => 'EntitySearchRescoreWindowSize',
+				'query_weight' => 1,
+				'rescore_query_weight' => 0.9,
+				'score_mode' => 'total',
+				'type' => 'function_score',
+				'function_chain' => 'wikibase_config_entity_weight_20181126'
 			]
 		]
 	],
@@ -170,6 +199,31 @@ $wgWBRepoSettings['entitySearch']['rescoreFunctionChains'] = [
 				'type' => 'satu',
 				'weight' => '0.4',
 				'params' => [ 'field' => 'sitelink_count', 'missing' => 0, 'a' => 2, 'k' => 20 ]
+			],
+			[
+				'type' => 'term_boost',
+				'weight' => 0.1,
+				'params' => [
+					// Will be replaced by $wmgWikibaseSearchStatementBoosts
+					'statement_keywords' => '_statementBoost_',
+				]
+			]
+		]
+	],
+	'wikibase_config_entity_weight_20181126' => [
+		'score_mode' => 'sum',
+		'functions' => [
+			[
+				// Incoming links: k = 100, since it is normal to have a bunch of incoming links
+				'type' => 'satu',
+				'weight' => '0.9',
+				'params' => [ 'field' => 'incoming_links', 'missing' => 0, 'a' => 0.3 , 'k' => 400 ]
+			],
+			[
+				// Site links: k = 20, tens of sites is a lot
+				'type' => 'satu',
+				'weight' => '0.15',
+				'params' => [ 'field' => 'sitelink_count', 'missing' => 0, 'a' => 0.8, 'k' => 80 ]
 			],
 			[
 				'type' => 'term_boost',
