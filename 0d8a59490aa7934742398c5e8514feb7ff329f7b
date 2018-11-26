@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4d7d324d_cd99225b",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-11-26T14:26:58Z",
+      "side": 1,
+      "message": "Put the ticket number",
+      "revId": "0d8a59490aa7934742398c5e8514feb7ff329f7b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
