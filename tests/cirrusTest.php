@@ -13,16 +13,19 @@ class CirrusTest extends WgConfTestCase {
 		// This is transformed from 'local' to 'unittest', but if it was set
 		// to a specific cluster and not 'local' this fails.
 		// $this->assertEquals( 'unittest', $config['wgCirrusSearchDefaultCluster'] );
-		$this->assertCount( 2, $config['wgCirrusSearchClusters'] );
+		// 2 DCs * 3 ES clusters per DC
+		$this->assertCount( 2*3, $config['wgCirrusSearchClusters'] );
 
 		// testwiki writes to eqiad and codfw
 		$this->assertCount( 2, $config['wgCirrusSearchWriteClusters'] );
 
 		foreach ( $config['wgCirrusSearchWriteClusters'] as $writeCluster ) {
-			$this->assertArrayHasKey(
-				$writeCluster,
-				$config['wgCirrusSearchClusters']
-			);
+			foreach( [ 'khi', 'psi', 'omega' ] as $group ) {
+				$this->assertArrayHasKey(
+					$writeCluster,
+					$config['wgCirrusSearchClusters']
+				);
+			}
 		}
 	}
 
@@ -31,7 +34,8 @@ class CirrusTest extends WgConfTestCase {
 		$this->assertArrayNotHasKey( 'wgCirrusSearchServers', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchClusters', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchDefaultCluster', $config );
-		$this->assertCount( 2, $config['wgCirrusSearchClusters'] );
+		// 2 DCs * 3 ES clusters per DC
+		$this->assertCount( 2*3, $config['wgCirrusSearchClusters'] );
 		$this->assertCount( 2, $config['wgCirrusSearchShardCount'] );
 		$this->assertCount( 2, $config['wgCirrusSearchReplicas'] );
 		$this->assertCount( 2, $config['wgCirrusSearchClientSideConnectTimeout'] );
@@ -46,7 +50,7 @@ class CirrusTest extends WgConfTestCase {
 		foreach ( $config['wgCirrusSearchWriteClusters'] as $cluster ) {
 			$this->assertArrayHasKey(
 				$cluster,
-				$config['wgCirrusSearchClusters']
+				$config['wgCirrusSearchReplicaGroup'] . '-' .  $config['wgCirrusSearchClusters']
 			);
 		}
 	}
