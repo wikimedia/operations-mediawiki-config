@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "db6b0cfa_b900f8a0",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 304,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-11-26T14:43:58Z",
+      "side": 1,
+      "message": "reduce api weight too",
+      "range": {
+        "startLine": 304,
+        "startChar": 15,
+        "endLine": 304,
+        "endChar": 16
+      },
+      "revId": "ee0aee604bfb657635736de51501fbb723a225c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
