@@ -9164,7 +9164,6 @@ $wgConf->settings = [
 		],
 		'sysop' => [
 			'deleterevision' => true,
-			'abusefilter-modify-restricted' => true,
 			'templateeditor' => true, // T102466
 		],
 		'patroller' => [
