@@ -46,13 +46,6 @@ if ( defined( 'HHVM_VERSION' ) ) {
 	}, $wgCirrusSearchClusters['codfw'] );
 }
 
-if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
-	$wgCirrusSearchClusters = [
-		'eqiad' => $wmfAllServices['eqiad']['search'],
-		'codfw' => $wmfAllServices['codfw']['search'],
-	];
-}
-
 $wgCirrusSearchConnectionAttempts = 3;
 
 if ( $wgDBname == 'enwiki' ) {
