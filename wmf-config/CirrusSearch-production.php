@@ -19,42 +19,55 @@
 // help things along.
 $wgCirrusSearchMasterTimeout = '2m';
 
-$wgCirrusSearchClusters = [
-	'eqiad' => $wmfAllServices['eqiad']['search'],
-	'codfw' => $wmfAllServices['codfw']['search'],
-];
-
-if ( defined( 'HHVM_VERSION' ) ) {
-	$cirrus_config_use_hhvm_pool = function( $hostConfig, $pool ) {
-		if ( is_array( $hostConfig ) ) {
-			if ( isset( $hostConfig['transport'] ) && $hostConfig['transport'] === 'Https' ) {
-				$hostConfig['transport'] = 'CirrusSearch\\Elastica\\PooledHttps';
-				$hostConfig['config'] = [
-					'pool' => $pool
-				];
-			}
-			return $hostConfig;
-		}
-		return [
-			'transport' => 'CirrusSearch\\Elastica\\PooledHttps',
-			'port' => '9243',
-			'host' => $hostConfig,
-			'config' => [
-				'pool' => $pool,
+$cirrus_build_cluster_configs = function( $services ) {
+	$clusterConfigs = [];
+	foreach( [ 'eqiad', 'codfw' ] as $dc ) {
+		$searchServiceMap = [
+			'search' => [
+				'group' => 'khi',
+				'pool' => 'cirrus',
 			],
+			'search-psi' => [
+				'group' => 'psi',
+			],
+			'search-omega' => [
+				'group' => 'omega',
+			]
 		];
-	};
+		foreach ( $searchServiceMap as $searchService => $groupSetup ) {
+			$group = $groupSetup['group'];
+			$pool = null;
+			if ( isset( $groupSetup['pool'] ) ) {
+				$pool = "$dc-" . $groupSetup['pool'];
+			}
+			$searchServiceConfig = $services[$dc][$searchService];
+			if ( $pool !== null && defined( 'HHVM_VERSION' ) ) {
+				$pooledConfig = [];
+				foreach( $searchServiceConfig as $hostConfig ) {
+					if ( ( $hostConfig['transport'] ?? null ) === 'Https' ) {
+						$hostConfig['transport'] = 'CirrusSearch\\Elastica\\PooledHttps';
+						$hostConfig['config'] = [
+							'pool' => $pool
+						];
+					}
+					$pooledConfig[] = $hostConfig;
+				};
+				$searchServiceConfig = $pooledConfig;
+			}
 
-	$wgCirrusSearchClusters['eqiad'] = array_map(
-		function ( $host ) use ( $cirrus_config_use_hhvm_pool ) {
-			return $cirrus_config_use_hhvm_pool( $host, 'cirrus-eqiad' );
-		}, $wgCirrusSearchClusters['eqiad'] );
-	$wgCirrusSearchClusters['codfw'] = array_map(
-		function ( $host ) use ( $cirrus_config_use_hhvm_pool ) {
-			return $cirrus_config_use_hhvm_pool( $host, 'cirrus-codfw' );
-		}, $wgCirrusSearchClusters['codfw'] );
-	unset( $cirrus_config_use_hhvm_pool );
-}
+			$clusterConfigs["$group-$dc"] = $searchServiceConfig + [
+				'group' => $group,
+				'replica' => $dc,
+			];
+		}
+	}
+	return $clusterConfigs;
+};
+
+$wgCirrusSearchClusters = $cirrus_build_cluster_configs( $wmfAllServices );
+unset ( $cirrus_build_cluster_configs );
+
+$wgCirrusSearchReplicaGroup = $wmgCirrusSearchReplicaGroup;
 
 $wgCirrusSearchConnectionAttempts = 3;
 
