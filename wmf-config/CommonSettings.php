@@ -1669,7 +1669,7 @@ if ( $wmgUseApiFeatureUsage ) {
 	wfLoadExtension( 'ApiFeatureUsage' );
 	$wgApiFeatureUsageQueryEngineConf = [
 		'class' => 'ApiFeatureUsageQueryEngineElastica',
-		'serverList' => $wmfLocalServices['search'],
+		'serverList' => $wmfLocalServices['search-khi'],
 	];
 }
 
@@ -2576,11 +2576,11 @@ if ( $wmgUseTranslate ) {
 		// NOTE: these settings are also used for the labs cluster
 		// where codfw may not be available
 		$wgTranslateClustersAndMirrors = [
-			'eqiad' => isset( $wmfAllServices['codfw']['search'] ) ? [ 'codfw' ] : [],
-			'codfw' => isset( $wmfAllServices['eqiad']['search'] ) ? [ 'eqiad' ] : [],
+			'eqiad' => isset( $wmfAllServices['codfw']['search-khi'] ) ? [ 'codfw' ] : [],
+			'codfw' => isset( $wmfAllServices['eqiad']['search-khi'] ) ? [ 'eqiad' ] : [],
 		];
 		foreach ( $wgTranslateClustersAndMirrors as $cluster => $mirrors ) {
-			if ( !isset( $wmfAllServices[$cluster]['search'] ) ) {
+			if ( !isset( $wmfAllServices[$cluster]['search-khi'] ) ) {
 				continue;
 			}
 			$wgTranslateTranslationServices[$cluster] = [
@@ -2601,7 +2601,7 @@ if ( $wmgUseTranslate ) {
 							'port' => 9243,
 							'transport' => 'Https',
 						];
-					}, $wmfAllServices[$cluster]['search'] ),
+					}, $wmfAllServices[$cluster]['search-khi'] ),
 				],
 				'mirrors' => $mirrors,
 			];
