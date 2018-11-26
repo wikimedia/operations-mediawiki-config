@@ -14418,12 +14418,7 @@ $wgConf->settings = [
 ],
 
 'wgAdvancedSearchBetaFeature' => [
-	'default' => true,
-	'group0' => false, // T207641
-	'arwiki' => false, // T207640
-	'dewiki' => false, // T207640
-	'fawiki' => false, // T207640
-	'huwiki' => false, // T207640
+	'default' => false, // T207639
 ],
 
 'wmgUseFileImporter' => [
