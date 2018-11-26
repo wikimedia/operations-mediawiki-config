@@ -19,32 +19,35 @@
 // help things along.
 $wgCirrusSearchMasterTimeout = '2m';
 
+$cirrusConfigUseHhvmPool = function ( $hostConfig, $pool ) {
+	if ( !defined( 'HHVM_VERSION' ) ) {
+		return $hostConfig;
+	}
+	if ( is_array( $hostConfig ) ) {
+		if ( isset( $hostConfig['transport'] ) && $hostConfig['transport'] === 'Https' ) {
+			$hostConfig['transport'] = 'CirrusSearch\\Elastica\\PooledHttps';
+			$hostConfig['config'] = [
+				'pool' => $pool
+			];
+		}
+		return $hostConfig;
+	}
+	return [
+		'transport' => 'CirrusSearch\\Elastica\\PooledHttps',
+		'port' => '9243',
+		'host' => $hostConfig,
+		'config' => [
+			'pool' => $pool,
+		],
+	];
+};
+
 $wgCirrusSearchClusters = [
-	'eqiad' => $wmfAllServices['eqiad']['search'],
-	'codfw' => $wmfAllServices['codfw']['search'],
+	'eqiad' => $cirrusConfigUseHhvmPool( $wmfAllServices['eqiad']['search'], 'cirrus-eqiad' ),
+	'codfw' => $cirrusConfigUseHhvmPool( $wmfAllServices['codfw']['search'], 'cirrus-codfw' ),
 ];
-if ( defined( 'HHVM_VERSION' ) ) {
-	$wgCirrusSearchClusters['eqiad'] = array_map( function ( $host ) {
-		return [
-			'transport' => 'CirrusSearch\\Elastica\\PooledHttps',
-			'port' => '9243',
-			'host' => $host,
-			'config' => [
-				'pool' => 'cirrus-eqiad',
-			],
-		];
-	}, $wgCirrusSearchClusters['eqiad'] );
-	$wgCirrusSearchClusters['codfw'] = array_map( function ( $host ) {
-		return [
-			'transport' => 'CirrusSearch\\Elastica\\PooledHttps',
-			'port' => '9243',
-			'host' => $host,
-			'config' => [
-				'pool' => 'cirrus-codfw',
-			],
-		];
-	}, $wgCirrusSearchClusters['codfw'] );
-}
+
+unset( $cirrusConfigUseHhvmPool );
 
 $wgCirrusSearchConnectionAttempts = 3;
 
