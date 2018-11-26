@@ -2592,9 +2592,12 @@ if ( $wmgUseTranslate ) {
 				'cutoff' => 0.65,
 				'use_wikimedia_extra' => true,
 				'config' => [
-					'servers' => array_map( function ( $host ) {
+					'servers' => array_map( function ( $hostConfig ) {
+						if ( is_array ( $hostConfig ) ) {
+							return $hostConfig
+						}
 						return [
-							'host' => $host,
+							'host' => $hostConfig,
 							'port' => 9243,
 							'transport' => 'Https',
 						];
