@@ -722,7 +722,7 @@ function wmfLabsSettings() {
 		],
 
 		'wgCommentTableSchemaMigrationStage' => [
-			'default' => MIGRATION_WRITE_NEW,
+			'default' => MIGRATION_NEW,
 		],
 
 		'wgChangeTagsSchemaMigrationStage' => [
