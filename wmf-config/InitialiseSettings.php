@@ -19729,6 +19729,14 @@ $wgConf->settings = [
 	'default' => [ 'eqiad', 'codfw' ],
 ],
 
+'wmgCirrusSearchReplicaGroup' => [
+	'default' => [
+		'type' => 'roundrobin',
+		'groups' => [ 'psi', 'omega' ],
+	],
+	'cirrussearch-big-indices' => 'khi',
+],
+
 'wmgCirrusSearchPreferRecentDefaultDecayPortion' => [
 	'default' => 0,
 	'wikinews' => 0.6,
