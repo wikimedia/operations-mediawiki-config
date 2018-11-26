@@ -127,9 +127,7 @@ $services = [
 			[
 				'host' => 'search.svc.eqiad.wmnet',
 				'transport' => 'Https',
-				// Still use the same cluster
-				// Switch to 9643 when psi is ready in codfw
-				'port' => 9243,
+				'port' => 9643,
 				'group' => 'psi', // maps to production-search-psi-codfw
 				'replica' => 'codfw',
 			]
@@ -138,9 +136,7 @@ $services = [
 			[
 				'host' => 'search.svc.eqiad.wmnet',
 				'transport' => 'Https',
-				// Still use the same cluster
-				// Switch to 9643 when omega is ready in codfw
-				'port' => 9243,
+				'port' => 9443,
 				'group' => 'omega', // maps to production-search-omega-codfw
 				'replica' => 'codfw',
 			]
