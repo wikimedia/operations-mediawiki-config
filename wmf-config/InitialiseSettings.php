@@ -8879,8 +8879,8 @@ $wgConf->settings = [
 	],
 	'enwikiversity' => [
 		'user' => [ 'move' => false ], // autoconfirmed only
-		'sysop' => [ 'nuke' => false, 'unblockself' => false ], // T113109
-		'bureaucrat' => [ 'nuke' => true, 'unblockself' => true ], // T113109
+		'sysop' => [ 'nuke' => false ], // T113109
+		'bureaucrat' => [ 'nuke' => true ], // T113109
 		'curator' => [ // T113109
 			'createaccount' => true,
 			'delete' => true,
@@ -9533,7 +9533,7 @@ $wgConf->settings = [
 		'botadmin' => [
 			'blockemail' => true, 'block' => true, 'ipblock-exempt' => true, 'protect' => true, 'editprotected' => true, 'createaccount' => true, 'deleterevision' => true, 'delete' => true, 'globalblock-whitelist' => true,
 			'autoconfirmed' => true, 'editsemiprotected' => true, 'editinterface' => true, 'editsitejson' => true, 'autopatrol' => true, 'import' => true, 'patrol' => true, 'markbotedits' => true, 'nuke' => true, 'abusefilter-modify' => true, 'movefile' => true, 'move' => true, 'move-subpages' => true,
-			'move-rootuserpages' => true, 'noratelimit' => true, 'suppressredirect' => true, 'reupload-shared' => true, 'override-antispoof' => true, 'tboverride' => true, 'reupload' => true, 'skipcaptcha' => true, 'rollback' => true, 'browsearchive' => true, 'unblockself' => true,
+			'move-rootuserpages' => true, 'noratelimit' => true, 'suppressredirect' => true, 'reupload-shared' => true, 'override-antispoof' => true, 'tboverride' => true, 'reupload' => true, 'skipcaptcha' => true, 'rollback' => true, 'browsearchive' => true,
 			'undelete' => true, 'upload' => true, 'upload_by_url' => true, 'apihighlimits' => true, 'unwatchedpages' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-log-detail' => true,
 		],
 	],
@@ -10050,7 +10050,6 @@ $wgConf->settings = [
 	],
 	'trwikiquote' => [
 		'sysop' => [ // T122710
-			'unblockself' => false,
 			'reupload-own' => false,
 		],
 		'editor' => [ // T122710
@@ -10216,7 +10215,6 @@ $wgConf->settings = [
 			'titleblacklistlog' => true,
 			'translate-import' => true,
 			'translate-manage' => true,
-			'unblockself' => true,
 			'undelete' => true,
 			'unwatchedpages' => true,
 		], // T74459
@@ -10310,6 +10308,7 @@ $wgConf->settings = [
 			'deleterevision' => true,
 			'deletelogentry' => true,
 			'editcontentmodel' => true,
+			'unblockself' => false, # T150826
 		],
 		'bot' => [
 			'noratelimit' => true,
