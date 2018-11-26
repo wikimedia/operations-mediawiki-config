@@ -20,8 +20,12 @@
 $wgCirrusSearchMasterTimeout = '2m';
 
 $wgCirrusSearchClusters = [
-	'eqiad' => $wmfAllServices['eqiad']['search'],
-	'codfw' => $wmfAllServices['codfw']['search'],
+	'khi-eqiad' => $wmfAllServices['eqiad']['search'],
+	'khi-codfw' => $wmfAllServices['codfw']['search'],
+	'psi-eqiad' => $wmfAllServices['eqiad']['search-psi'],
+	'psi-codfw' => $wmfAllServices['codfw']['search-psi'],
+	'omega-eqiad' => $wmfAllServices['eqiad']['omega-psi'],
+	'omega-codfw' => $wmfAllServices['codfw']['omega-psi'],
 ];
 
 if ( defined( 'HHVM_VERSION' ) ) {
@@ -46,14 +50,24 @@ if ( defined( 'HHVM_VERSION' ) ) {
 		];
 
 	}
-	$wgCirrusSearchClusters['eqiad'] = array_map( function ( $host ) {
+	$wgCirrusSearchClusters['khi-eqiad'] = array_map( function ( $host ) {
 		return $func( $host, 'eqiad' );
-	}, $wgCirrusSearchClusters['eqiad'] );
-	$wgCirrusSearchClusters['codfw'] = array_map( function ( $host ) {
+	}, $wgCirrusSearchClusters['khi-eqiad'] );
+	$wgCirrusSearchClusters['khi-codfw'] = array_map( function ( $host ) {
 		return $func( $host, 'codfw' );
-	}, $wgCirrusSearchClusters['codfw'] );
+	}, $wgCirrusSearchClusters['khi-codfw'] );
 }
 
+$wgCirrusSearchReplicaGroup = $wmgCirrusSearchReplicaGroup;
+
+if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
+	$wgCirrusSearchClusters = [
+		'eqiad' => $wmfAllServices['eqiad']['khi-search'],
+		'codfw' => $wmfAllServices['codfw']['khi-search'],
+	];
+}
+
+>>>>>>> 646fcbb55... [cirrus] Start using cirrus multi-instance config
 $wgCirrusSearchConnectionAttempts = 3;
 
 if ( $wgDBname == 'enwiki' ) {
