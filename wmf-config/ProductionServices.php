@@ -57,7 +57,11 @@ $services = [
 		// elasticsearch must be accessed by hostname,
 		// for SSL certificate verification.
 		'search' => [
-			'search.svc.eqiad.wmnet',
+			[
+				'host' => 'search.svc.eqiad.wmnet',
+				'transport' => 'Https',
+				'port' => 9243,
+			]
 		],
 
 		// each DC has its own urldownloader for latency reasons
@@ -84,7 +88,11 @@ $services = [
 	],
 	'codfw' => $common + [
 		'search' => [
-			'search.svc.codfw.wmnet',
+			[
+				'host' => 'search.svc.codfw.wmnet',
+				'transport' => 'Https',
+				'port' => 9243,
+			]
 		],
 
 		'urldownloader' => 'http://url-downloader.codfw.wikimedia.org:8080',
