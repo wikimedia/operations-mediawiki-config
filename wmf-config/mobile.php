@@ -10,14 +10,7 @@ if ( $wmgMobileFrontend ) {
 	}
 
 	$wgMFMobileHeader = 'X-Subdomain';
-	// https://phabricator.wikimedia.org/T206497
-	// This results in <link rel="alternate"> tags being inserted onto the
-	// desktop version of these wikis, pointing to the mobile version that lives
-	// on the .m. URL.  This setting is intended to live only long enough to
-	// evaluate the effectiveness of the setting, and then it will become either
-	// true or false globally.
-	$wgMFNoindexPages = in_array( $wgDBName, [ 'itwiki', 'nlwiki', 'kowiki',
-		'arwiki', 'zhwiki', 'hiwiki' ] );
+	$wgMFNoindexPages = false;
 	if ( !$wmgEnableGeoData ) {
 		$wgMFNearby = false;
 	}
