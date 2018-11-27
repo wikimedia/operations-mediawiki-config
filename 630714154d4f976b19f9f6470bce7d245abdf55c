@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "f680bd1c_023fb9b0",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2018-11-27T01:08:58Z",
+      "side": 1,
+      "message": "The variable isn\u0027t $wgDBName, it\u0027s $wgDBname (lowercase n).",
+      "range": {
+        "startLine": 19,
+        "startChar": 32,
+        "endLine": 19,
+        "endChar": 40
+      },
+      "revId": "630714154d4f976b19f9f6470bce7d245abdf55c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "9b6c4a64_0fdeac83",
         "filename": "wmf-config/mobile.php",
         "patchSetId": 5
