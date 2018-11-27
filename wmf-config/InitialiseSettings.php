@@ -21285,6 +21285,35 @@ $wgConf->settings = [
 	'default' => 0 // T208454
 ],
 
+'wgWMEWikidataCompletionSearchClicks' => [
+	'default' => [],
+	'wikidatawiki' => [
+		'enabled' => true,
+		'buckets' => [
+			'control' => [
+				'samplingRate' => 0.6,
+			],
+			'item_en_tuned' => [
+				'samplingRate' => 0,
+				'context' => 'item',
+				'language' => 'en',
+				'searchApiParameters' => [
+					'cirrusWBProfile' => 'wikibase_config_prefix_query_20181126',
+					'cirrusRescoreProfile' => 'wikibase_config_entity_weight_20181126',
+				],
+			],
+			'classic_entity' => [
+				'samplingRate' => 0,
+				'context' => 'item',
+				'language' => 'en',
+				'searchApiParameters' => [
+					'useCirrus' => '0',
+				],
+			],
+		],
+	]
+],
+
 'wmgUsePageViewInfo' => [
 	'default' => true,
 	'private' => false,
