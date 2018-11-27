@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e673e1af_35043f79",
+        "filename": "wmf-config/CirrusSearch-production.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2018-11-27T21:45:56Z",
+      "side": 1,
+      "message": "i think snake_case might be banned here, even if you unset it when done :)",
+      "revId": "d7ea60068247416cd000c6f39a0bb9a916c4417b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
