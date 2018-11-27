@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9b6c4a64_0fdeac83",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2018-11-27T00:40:31Z",
+      "side": 1,
+      "message": "Please don\u0027t reinvent the per wiki settings logic, this should just go to InitialiseSettings.php",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 35
+      },
+      "revId": "630714154d4f976b19f9f6470bce7d245abdf55c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
