@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "26969d1e_c6264129",
+        "filename": "dblists/cirrussearch-big-indices.dblist",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2018-11-27T21:40:49Z",
+      "side": 1,
+      "message": "To get the shard counts roughly even between clustsers this ended up being the top 25% of wikis by combined index size (titlesuggest+content+general).\n\nOnly mildly important to call out, since the largest indices we start with will be closer to 200M.",
+      "revId": "059164b9bb395c933978eb66380ada2f3d3eb4a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
