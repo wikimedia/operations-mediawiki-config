@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+/* faster-one-regular - latin */
+@font-face {
+  font-family: 'Faster One';
+  font-display: block;
+  font-style: normal;
+  font-weight: 400;
+  src: url('resources/faster-one-v9-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Faster One'), local('FasterOne-Regular'),
+       url('resources/faster-one-v9-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('resources/faster-one-v9-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('resources/faster-one-v9-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('resources/faster-one-v9-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('resources/faster-one-v9-latin-regular.svg#FasterOne') format('svg'); /* Legacy iOS */
+}
+body {
+  font-family: 'Faster One';
+  background-color: yellow;
+  background-image: url(https://upload.wikimedia.org/wikipedia/mediawiki/f/fd/H2priorities_-_Background.png);
+}
+.display {
+  background: white;
+  padding: 10px;
+  width: 800px;
+}
+.spacer {
+  height: 4000px;
+}
+.hidden {
+  width: 600px;
+  height: 400px;
+}
+.visible {
+  width: 600px;
+  height: 450px;
+}
+</style>
+</head>
+<body>
+<div class="display">
+<h1>HTTP/2 priorities test page</h1>
+<span id="dcl">Waiting for DOM Content Loaded...</span>
+<p>Visible Image:</p>
+<img id="visible" class="visible">
+</div>
+<script src="resources/top.js"></script>
+<script>
+document.getElementById("visible").getBoundingClientRect();
+document.getElementById("visible").src = "https://upload.wikimedia.org/wikipedia/mediawiki/3/30/H2priorities_-_Visible.jpg";
+document.addEventListener("DOMContentLoaded", function(event) {
+  console.log("DOMContentLoaded");
+  document.getElementById("dcl").textContent="DOM Content Loaded!";
+});
+</script>
+<div class="spacer"></div>
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?1">
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?2">
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?3">
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?4">
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?5">
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?6">
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?7">
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?8">
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?9">
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?10">
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?11">
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?12">
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?13">
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?14">
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?15">
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?16">
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?17">
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?18">
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?19">
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?20">
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?21">
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?22">
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?23">
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?24">
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?25">
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?26">
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?27">
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?28">
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?29">
+<img class="hidden" src="https://upload.wikimedia.org/wikipedia/mediawiki/8/84/H2priorities_-_Hidden.jpg?30">
+<script >
+  document.write('<scr'+'ipt type="text/javascript" src="resources/bottom.js"></scr'+'ipt>');
+</script>
+</body>
+</html>
