@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c0f97656_b61954f7",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 19729,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2018-11-28T20:09:32Z",
+      "side": 1,
+      "message": "as soon as I switch back to this setup I must have a \u0027eqiad\u0027 replica set in the same group.\nI can perhaps fake the services in ProductionServices so that pis@eqiad and omega@eqiad all points to the elastic instance but this means that I\u0027ll have to go back again with all this process when I want to activate multi-instance in eqiad.\n\nI feel that it saves a lot of pain to set it up on both DC at the same time unless perhaps I missed something that could make it easier?",
+      "revId": "a87733aba67fdcd9a7d28cd1c8915827a936307a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
