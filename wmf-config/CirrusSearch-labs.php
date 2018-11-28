@@ -16,12 +16,9 @@
 $wgCirrusSearchClusters = [
 	'eqiad' => array_map( function ( $host ) {
 		return [
-			'transport' => 'CirrusSearch\\Elastica\\PooledHttps',
+			'transport' => 'Https',
 			'port' => '9243',
 			'host' => $host,
-			'config' => [
-				'pool' => 'cirrus-eqiad',
-			],
 		];
 	}, $wmfAllServices['eqiad']['search-chi'] ),
 ];
