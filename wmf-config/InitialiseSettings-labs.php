@@ -911,7 +911,7 @@ function wmfLabsSettings() {
 				],
 				'commons' => [
 					'repoDatabase' => 'commonswiki',
-					'entityNamespaces' => [ 'mediainfo' => '6/mediainfo' ],
+					'entityNamespaces' => [],
 					'baseUri' => 'https://commons.wikimedia.beta.wmflabs.org/entity/',
 					'prefixMapping' => [],
 				],
@@ -961,9 +961,9 @@ function wmfLabsSettings() {
 				'commons' => [
 					'repoDatabase' => 'commonswiki',
 					'baseUri' => 'https://commons.wikimedia.beta.wmflabs.org/entity/',
-					'supportedEntityTypes' => [ 'mediainfo' ],
+					'supportedEntityTypes' => [],
 					'prefixMapping' => [],
-					'entityNamespaces' => [ 'mediainfo' => '6/mediainfo' ]
+					'entityNamespaces' => []
 				],
 			],
 		]
