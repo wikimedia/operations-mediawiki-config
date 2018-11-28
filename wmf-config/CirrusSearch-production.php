@@ -20,37 +20,18 @@
 $wgCirrusSearchMasterTimeout = '2m';
 
 $cirrusConfigUseHhvmPool = function ( $hostConfig, $pool ) {
-	if ( !defined( 'HHVM_VERSION' ) ) {
-		return $hostConfig;
+	if ( defined( 'HHVM_VERSION' ) && isset( $hostConfig['transport'] )
+		&& $hostConfig['transport'] === 'Https'
+	) {
+		$hostConfig['transport'] = 'CirrusSearch\\Elastica\\PooledHttps';
+		$hostConfig['config'] = [
+			'pool' => $pool
+		];
 	}
-	if ( is_array( $hostConfig ) ) {
-		if ( isset( $hostConfig['transport'] ) && $hostConfig['transport'] === 'Https' ) {
-			$hostConfig['transport'] = 'CirrusSearch\\Elastica\\PooledHttps';
-			$hostConfig['config'] = [
-				'pool' => $pool
-			];
-		}
-		return $hostConfig;
-	}
-	return [
-		'transport' => 'CirrusSearch\\Elastica\\PooledHttps',
-		'port' => '9243',
-		'host' => $hostConfig,
-		'config' => [
-			'pool' => $pool,
-		],
-	];
+	return $hostConfig;
 };
 
 $wgCirrusSearchClusters = [
-	# Uses the 'default' group and replica set to the key name
-	'eqiad' => $cirrusConfigUseHhvmPool( $wmfAllServices['eqiad']['search-khi'], 'cirrus-eqiad' ),
-	'codfw' => $cirrusConfigUseHhvmPool( $wmfAllServices['codfw']['search-khi'], 'cirrus-codfw' ),
-	'eqiad-temp-psi' => $wmfAllServices['eqiad']['search-psi'],
-	'codfw-temp-psi' => $wmfAllServices['eqiad']['search-psi'],
-	'eqiad-temp-omega' => $wmfAllServices['eqiad']['search-omega'],
-	'codfw-temp-omega' => $wmfAllServices['eqiad']['search-omega'],
-
 	'eqiad-khi' => $cirrusConfigUseHhvmPool( $wmfAllServices['eqiad']['search-khi'], 'cirrus-eqiad' ) + [ 'group' => 'khi', 'replica' => 'eqiad' ],
 	'codfw-khi' => $cirrusConfigUseHhvmPool( $wmfAllServices['codfw']['search-khi'], 'cirrus-codfw' ) + [ 'group' => 'khi', 'replica' => 'codfw' ],
 	'eqiad-psi' => $cirrusConfigUseHhvmPool( $wmfAllServices['eqiad']['search-psi'], 'cirrus-eqiad' ) + [ 'group' => 'psi', 'replica' => 'eqiad' ],
@@ -60,17 +41,6 @@ $wgCirrusSearchClusters = [
 ];
 
 unset( $cirrusConfigUseHhvmPool );
-
-# Transitional hack to write to the proper cluster
-$wgCirrusSearchWriteClusters = array_map( function ( $v ) use ( $wgDBname ) {
-	if ( is_array( $v ) ) {
-		$groups = $v['groups'];
-		$replica = $v['replica'];
-		$group = $groups[crc32( $wgDBname ) % count( $groups )];
-		return "$replica-temp-$group";
-	}
-	return $v;
-}, $wgCirrusSearchWriteClusters );
 
 $wgCirrusSearchReplicaGroup = $wmgCirrusSearchReplicaGroup;
 
