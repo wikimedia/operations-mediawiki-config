@@ -2751,9 +2751,9 @@ if ( $wmgUseWikimediaShopLink ) {
 	 */
 	$wgHooks['SkinBuildSidebar'][] = function ( $skin, &$sidebar ) {
 		$sidebar['navigation'][] = [
-			'text'  => $skin->msg( 'wikimediashoplink-linktext' ),
+			'text'  => $skin->msg( 'wikimediashoplink-linktext' )->text(),
 			'href'  => '//shop.wikimedia.org',
-			'title' => $skin->msg( 'wikimediashoplink-link-tooltip' ),
+			'title' => $skin->msg( 'wikimediashoplink-link-tooltip' )->text(),
 			'id'    => 'n-shoplink',
 		];
 		return true;
