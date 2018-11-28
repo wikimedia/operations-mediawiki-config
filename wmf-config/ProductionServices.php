@@ -60,15 +60,6 @@ $services = [
 	'eqiad' => $common + [
 		// elasticsearch must be accessed by hostname,
 		// for SSL certificate verification.
-		'search' => [
-			// TODO remove in favor of search-chi
-			[
-				'host' => 'search.svc.eqiad.wmnet',
-				'transport' => 'Https',
-				'port' => 9243,
-			]
-		],
-
 		'search-chi' => [
 			[
 				'host' => 'search.svc.eqiad.wmnet',
@@ -116,15 +107,6 @@ $services = [
 
 	],
 	'codfw' => $common + [
-		'search' => [
-			// TODO remove in favor of search-chi
-			[
-				'host' => 'search.svc.codfw.wmnet',
-				'transport' => 'Https',
-				'port' => 9243,
-			]
-		],
-
 		'search-chi' => [
 			[
 				'host' => 'search.svc.codfw.wmnet',
