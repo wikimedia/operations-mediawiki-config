@@ -16,9 +16,9 @@ $wmfAllServices = [];
 $wmfAllServices['unittest'] = [
 	'udp2log' => 'localhost:8420',
 	'statsd' => 'localhost',
-	'search-khi' => [ 'localhost' ],
-	'search-psi' => [ 'localhost' ],
-	'search-omega' => [ 'localhost' ],
+	'search-khi' => [ [ 'host' => 'localhost' ] ],
+	'search-psi' => [ [ 'host' => 'localhost' ] ],
+	'search-omega' => [ [ 'host' => 'localhost' ] ],
 	'ocg' => 'localhost',
 	'urldownloader' => 'localhost',
 	'parsoidcache' => 'localhost',
