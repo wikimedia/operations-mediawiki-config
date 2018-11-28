@@ -16,6 +16,24 @@
       "revId": "d7ea60068247416cd000c6f39a0bb9a916c4417b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "458f6656_817d1860",
+        "filename": "wmf-config/CirrusSearch-production.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2018-11-28T15:36:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e673e1af_35043f79",
+      "revId": "d7ea60068247416cd000c6f39a0bb9a916c4417b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
