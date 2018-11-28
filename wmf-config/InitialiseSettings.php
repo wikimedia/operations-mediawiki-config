@@ -21051,7 +21051,6 @@ $wgConf->settings = [
 // https://phabricator.wikimedia.org/T110661
 'wmgUseQuickSurveys' => [
 	'default' => false,
-	'enwiki' => true,
 	'frwiki' => true,
 	'cawiki' => true,
 	'enwikivoyage' => true,
@@ -21077,24 +21076,6 @@ $wgConf->settings = [
 			],
 			'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
 			'shuffleAnswersDisplay' => true,
-		],
-	],
-	'enwiki' => [
-		// T209882
-		[
-			"enabled" => true,
-			"type" => "external",
-			"name" => "Reader-trust-survey-en-v1",
-			"description" => "Reader-trust-1-description",
-			"link" => "Reader-trust-1-link",
-			"instanceTokenParameterName" => "token",
-			"question" => "Reader-trust-1-message",
-			"privacyPolicy" => "Reader-trust-1-privacy",
-			"coverage" => 0.002,  // 1 out of 500
-			"platforms" => [
-				"desktop" => [ "stable" ],
-				"mobile" => [ "stable" ],
-			],
 		],
 	]
 ],
