@@ -48,14 +48,6 @@ $cirrusConfigUseHhvmPool = function ( $hosts, $pool ) {
 };
 
 $wgCirrusSearchClusters = [
-	# Uses the 'default' group and replica set to the key name
-	'eqiad' => $cirrusConfigUseHhvmPool( $wmfAllServices['eqiad']['search-chi'], 'cirrus-eqiad' ),
-	'codfw' => $cirrusConfigUseHhvmPool( $wmfAllServices['codfw']['search-chi'], 'cirrus-codfw' ),
-	'eqiad-temp-psi' => $wmfAllServices['eqiad']['search-psi'],
-	'codfw-temp-psi' => $wmfAllServices['codfw']['search-psi'],
-	'eqiad-temp-omega' => $wmfAllServices['eqiad']['search-omega'],
-	'codfw-temp-omega' => $wmfAllServices['codfw']['search-omega'],
-
 	'eqiad-chi' => $cirrusConfigUseHhvmPool( $wmfAllServices['eqiad']['search-chi'], 'cirrus-eqiad' ) + [ 'group' => 'chi', 'replica' => 'eqiad' ],
 	'codfw-chi' => $cirrusConfigUseHhvmPool( $wmfAllServices['codfw']['search-chi'], 'cirrus-codfw' ) + [ 'group' => 'chi', 'replica' => 'codfw' ],
 	'eqiad-psi' => $cirrusConfigUseHhvmPool( $wmfAllServices['eqiad']['search-psi'], 'cirrus-eqiad' ) + [ 'group' => 'psi', 'replica' => 'eqiad' ],
@@ -66,35 +58,13 @@ $wgCirrusSearchClusters = [
 
 unset( $cirrusConfigUseHhvmPool );
 
-# Transitional hack to write to the proper cluster
-$wgCirrusSearchWriteClusters = array_map( function ( $v ) use ( $wgDBname ) {
-	if ( is_array( $v ) ) {
-		$groups = $v['groups'];
-		$replica = $v['replica'];
-		$group = $groups[crc32( $wgDBname ) % count( $groups )];
-		return "$replica-temp-$group";
-	}
-	return $v;
-}, $wgCirrusSearchWriteClusters );
-
 $wgCirrusSearchReplicaGroup = $wmgCirrusSearchReplicaGroup;
 
 if ( isset( $wgCirrusSearchExtraIndexes[NS_FILE] ) ) {
 	$wgCirrusSearchExtraIndexes[NS_FILE] = 'chi:commonswiki_file';
 }
 
-// Do not duplicate Other index writes to these clusters
-$wgCirrusSearchExtraIndexClusterBlacklist = [
-	'commonswiki_file' => [
-		'eqiad-temp-psi' => true,
-		'codfw-temp-psi' => true,
-		'eqiad-temp-omega' => true,
-		'codfw-temp-omega' => true,
-	]
-];
-
 # Limit the sanitity check to eqiad&codfw
-# (not temp clusters or upcoming cloud replica)
 $wgCirrusSearchSanityCheck = [ 'eqiad', 'codfw' ];
 
 $wgCirrusSearchConnectionAttempts = 3;
@@ -110,10 +80,6 @@ $wgCirrusSearchEnableSearchLogging = true;
 $wgCirrusSearchShardCount = [
 	'eqiad' => $wmgCirrusSearchShardCount,
 	'codfw' => $wmgCirrusSearchShardCount,
-	'codfw-temp-psi' => $wmgCirrusSearchShardCount,
-	'codfw-temp-omega' => $wmgCirrusSearchShardCount,
-	'eqiad-temp-psi' => $wmgCirrusSearchShardCount,
-	'eqiad-temp-omega' => $wmgCirrusSearchShardCount,
 ];
 
 if ( ! isset( $wmgCirrusSearchReplicas['eqiad'] ) ) {
@@ -123,28 +89,15 @@ if ( ! isset( $wmgCirrusSearchReplicas['eqiad'] ) ) {
 	];
 }
 
-$wgCirrusSearchReplicas['codfw-temp-psi'] = $wgCirrusSearchReplicas['codfw'];
-$wgCirrusSearchReplicas['codfw-temp-omega'] = $wgCirrusSearchReplicas['codfw'];
-$wgCirrusSearchReplicas['eqiad-temp-psi'] = $wgCirrusSearchReplicas['eqiad'];
-$wgCirrusSearchReplicas['eqiad-temp-omega'] = $wgCirrusSearchReplicas['eqiad'];
-
 // 5 second timeout for local cluster, 10 seconds for remote.
 $wgCirrusSearchClientSideConnectTimeout = [
 	'eqiad' => $wmfDatacenter === 'eqiad' ? 5 : 10,
 	'codfw' => $wmfDatacenter === 'codfw' ? 5 : 10,
-	'codfw-temp-psi' => $wmfDatacenter === 'codfw' ? 5 : 10,
-	'codfw-temp-omega' => $wmfDatacenter === 'codfw' ? 5 : 10,
-	'eqiad-temp-psi' => $wmfDatacenter === 'eqiad' ? 5 : 10,
-	'eqiad-temp-omega' => $wmfDatacenter === 'eqiad' ? 5 : 10,
 ];
 
 $wgCirrusSearchDropDelayedJobsAfter = [
 	'eqiad' => $wgCirrusSearchDropDelayedJobsAfter,
 	'codfw' => $wgCirrusSearchDropDelayedJobsAfter,
-	'codfw-temp-psi' => $wgCirrusSearchDropDelayedJobsAfter,
-	'codfw-temp-omega' => $wgCirrusSearchDropDelayedJobsAfter,
-	'eqiad-temp-psi' => $wgCirrusSearchDropDelayedJobsAfter,
-	'eqiad-temp-omega' => $wgCirrusSearchDropDelayedJobsAfter,
 ];
 
 $wgCirrusSearchRecycleCompletionSuggesterIndex = $wmgCirrusSearchRecycleCompletionSuggesterIndex;
