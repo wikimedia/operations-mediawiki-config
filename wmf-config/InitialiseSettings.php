@@ -19473,6 +19473,10 @@ $wgConf->settings = [
 	'wikidatawiki' => 5000, // limit SPARQL queries to just 5 seconds for now
 ],
 
+'wgWBQualityConstraintsSparqlHasWikibaseSupport' => [
+	'default' => true,
+],
+
 'wgWBQualityConstraintsTypeCheckMaxEntities' => [
 	'default' => 1000,
 	'wikidatawiki' => 10, // only check few entities in PHP => fall back to SPARQL very quickly
