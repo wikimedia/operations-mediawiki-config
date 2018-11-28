@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "cd2455e0_c4209083",
+        "filename": "wmf-config/ProductionServices.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2018-11-28T15:36:41Z",
+      "side": 1,
+      "message": "yes this technique requires that all indices are created by hand prior to merging the next patch, and also that they won\u0027t be up to date for some period of time...\nI looked at your technique but I fear that working on the replica name we start to populate the jobqueues with these \"temp\" names and trigger another full sanitizer loop. It will also prevent doing this only for codfw.\nWe can perhaps disable the sanitizer during this transition?\nI\u0027ll work on the code to have a better understanding of your technique, it\u0027s still a bit unclear.",
+      "parentUuid": "0008fa28_4646c0ef",
+      "revId": "1c58e2d3d8c5ad2f9da3c8b8c5b5f14b103aa9e4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "931e9318_517280f0",
         "filename": "wmf-config/ProductionServices.php",
         "patchSetId": 5
