@@ -20,37 +20,18 @@
 $wgCirrusSearchMasterTimeout = '2m';
 
 $cirrusConfigUseHhvmPool = function ( $hostConfig, $pool ) {
-	if ( !defined( 'HHVM_VERSION' ) ) {
-		return $hostConfig;
+	if ( defined( 'HHVM_VERSION' ) && isset( $hostConfig['transport'] )
+		&& $hostConfig['transport'] === 'Https'
+	) {
+		$hostConfig['transport'] = 'CirrusSearch\\Elastica\\PooledHttps';
+		$hostConfig['config'] = [
+			'pool' => $pool
+		];
 	}
-	if ( is_array( $hostConfig ) ) {
-		if ( isset( $hostConfig['transport'] ) && $hostConfig['transport'] === 'Https' ) {
-			$hostConfig['transport'] = 'CirrusSearch\\Elastica\\PooledHttps';
-			$hostConfig['config'] = [
-				'pool' => $pool
-			];
-		}
-		return $hostConfig;
-	}
-	return [
-		'transport' => 'CirrusSearch\\Elastica\\PooledHttps',
-		'port' => '9243',
-		'host' => $hostConfig,
-		'config' => [
-			'pool' => $pool,
-		],
-	];
+	return $hostConfig;
 };
 
 $wgCirrusSearchClusters = [
-	# Uses the 'default' group and replica set to the key name
-	'eqiad' => $cirrusConfigUseHhvmPool( $wmfAllServices['eqiad']['search-chi'], 'cirrus-eqiad' ),
-	'codfw' => $cirrusConfigUseHhvmPool( $wmfAllServices['codfw']['search-chi'], 'cirrus-codfw' ),
-	'eqiad-temp-psi' => $wmfAllServices['eqiad']['search-psi'],
-	'codfw-temp-psi' => $wmfAllServices['codfw']['search-psi'],
-	'eqiad-temp-omega' => $wmfAllServices['eqiad']['search-omega'],
-	'codfw-temp-omega' => $wmfAllServices['codfw']['search-omega'],
-
 	'eqiad-chi' => $cirrusConfigUseHhvmPool( $wmfAllServices['eqiad']['search-chi'], 'cirrus-eqiad' ) + [ 'group' => 'chi', 'replica' => 'eqiad' ],
 	'codfw-chi' => $cirrusConfigUseHhvmPool( $wmfAllServices['codfw']['search-chi'], 'cirrus-codfw' ) + [ 'group' => 'chi', 'replica' => 'codfw' ],
 	'eqiad-psi' => $cirrusConfigUseHhvmPool( $wmfAllServices['eqiad']['search-psi'], 'cirrus-eqiad' ) + [ 'group' => 'psi', 'replica' => 'eqiad' ],
@@ -61,21 +42,9 @@ $wgCirrusSearchClusters = [
 
 unset( $cirrusConfigUseHhvmPool );
 
-# Transitional hack to write to the proper cluster
-$wgCirrusSearchWriteClusters = array_map( function ( $v ) use ( $wgDBname ) {
-	if ( is_array( $v ) ) {
-		$groups = $v['groups'];
-		$replica = $v['replica'];
-		$group = $groups[crc32( $wgDBname ) % count( $groups )];
-		return "$replica-temp-$group";
-	}
-	return $v;
-}, $wgCirrusSearchWriteClusters );
-
 $wgCirrusSearchReplicaGroup = $wmgCirrusSearchReplicaGroup;
 
 # Limit the sanitity check to eqiad&codfw
-# (not temp clusters or upcoming cloud replica)
 $wgCirrusSearchSanityCheck = [ 'eqiad', 'codfw' ];
 
 $wgCirrusSearchConnectionAttempts = 3;
@@ -91,20 +60,12 @@ $wgCirrusSearchEnableSearchLogging = true;
 $wgCirrusSearchShardCount = [
 	'eqiad' => $wmgCirrusSearchShardCount,
 	'codfw' => $wmgCirrusSearchShardCount,
-	'codfw-temp-psi' => $wmgCirrusSearchShardCount,
-	'codfw-temp-omega' => $wmgCirrusSearchShardCount,
-	'eqiad-temp-psi' => $wmgCirrusSearchShardCount,
-	'eqiad-temp-omega' => $wmgCirrusSearchShardCount,
 ];
 
 if ( ! isset( $wmgCirrusSearchReplicas['eqiad'] ) ) {
 	$wgCirrusSearchReplicas = [
 		'eqiad' => $wmgCirrusSearchReplicas,
 		'codfw' => $wmgCirrusSearchReplicas,
-		'codfw-temp-psi' => $wmgCirrusSearchReplicas,
-		'codfw-temp-omega' => $wmgCirrusSearchReplicas,
-		'eqiad-temp-psi' => $wmgCirrusSearchReplicas,
-		'eqiad-temp-omega' => $wmgCirrusSearchReplicas,
 	];
 }
 
@@ -112,19 +73,11 @@ if ( ! isset( $wmgCirrusSearchReplicas['eqiad'] ) ) {
 $wgCirrusSearchClientSideConnectTimeout = [
 	'eqiad' => $wmfDatacenter === 'eqiad' ? 5 : 10,
 	'codfw' => $wmfDatacenter === 'codfw' ? 5 : 10,
-	'codfw-temp-psi' => $wmfDatacenter === 'codfw' ? 5 : 10,
-	'codfw-temp-omega' => $wmfDatacenter === 'codfw' ? 5 : 10,
-	'eqiad-temp-psi' => $wmfDatacenter === 'eqiad' ? 5 : 10,
-	'eqiad-temp-omega' => $wmfDatacenter === 'eqiad' ? 5 : 10,
 ];
 
 $wgCirrusSearchDropDelayedJobsAfter = [
 	'eqiad' => $wgCirrusSearchDropDelayedJobsAfter,
 	'codfw' => $wgCirrusSearchDropDelayedJobsAfter,
-	'codfw-temp-psi' => $wgCirrusSearchDropDelayedJobsAfter,
-	'codfw-temp-omega' => $wgCirrusSearchDropDelayedJobsAfter,
-	'eqiad-temp-psi' => $wgCirrusSearchDropDelayedJobsAfter,
-	'eqiad-temp-omega' => $wgCirrusSearchDropDelayedJobsAfter,
 ];
 
 $wgCirrusSearchRecycleCompletionSuggesterIndex = $wmgCirrusSearchRecycleCompletionSuggesterIndex;
