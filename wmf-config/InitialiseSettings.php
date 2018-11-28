@@ -19726,17 +19726,15 @@ $wgConf->settings = [
 ],
 
 'wmgCirrusSearchWriteClusters' => [
-	'cirrussearch-big-indices' => [ 'eqiad', 'codfw' ],
-	'default' => [
-		'eqiad',
-		'codfw',
-		[ 'groups' => [ 'psi', 'omega' ], 'replica' => 'eqiad' ] ],
-		[ 'groups' => [ 'psi', 'omega' ], 'replica' => 'codfw' ] ],
-	]
+	'default' => [ 'eqiad', 'codfw' ]
 ],
 
 'wmgCirrusSearchReplicaGroup' => [
-	'default' => 'default',
+	'default' => [
+		'type' => 'roundrobin'
+		'groups' => [ 'psi', 'omega' ]
+	],
+	'cirrussearch-big-indices' => 'khi',
 ],
 
 'wmgCirrusSearchPreferRecentDefaultDecayPortion' => [
