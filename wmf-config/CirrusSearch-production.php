@@ -79,6 +79,16 @@ $wgCirrusSearchWriteClusters = array_map( function ( $v ) use ( $wgDBname ) {
 
 $wgCirrusSearchReplicaGroup = $wmgCirrusSearchReplicaGroup;
 
+// Do not duplicate Other index writes to these clusters
+$wgCirrusSearchExtraIndexClusterBlacklist = [
+	'commonswiki_file' => [
+		'eqiad-temp-psi' => true,
+		'codfw-temp-psi' => true,
+		'eqiad-temp-omega' => true,
+		'codfw-temp-omega' => true,
+	]
+];
+
 # Limit the sanitity check to eqiad&codfw
 # (not temp clusters or upcoming cloud replica)
 $wgCirrusSearchSanityCheck = [ 'eqiad', 'codfw' ];
