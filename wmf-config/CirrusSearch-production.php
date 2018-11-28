@@ -79,6 +79,10 @@ $wgCirrusSearchWriteClusters = array_map( function ( $v ) use ( $wgDBname ) {
 
 $wgCirrusSearchReplicaGroup = $wmgCirrusSearchReplicaGroup;
 
+if ( isset( $wgCirrusSearchExtraIndexes[NS_FILE] ) ) {
+	$wgCirrusSearchExtraIndexes[NS_FILE] = [ 'chi:commonswiki_file' ];
+}
+
 // Do not duplicate Other index writes to these clusters
 $wgCirrusSearchExtraIndexClusterBlacklist = [
 	'commonswiki_file' => [
