@@ -21286,7 +21286,7 @@ $wgConf->settings = [
 		'enabled' => true,
 		'buckets' => [
 			'control' => [
-				'samplingRate' => 0.8,
+				'samplingRate' => 0.9,
 			],
 			'item_en_tuned' => [
 				'samplingRate' => 0.1,
@@ -21298,7 +21298,7 @@ $wgConf->settings = [
 				],
 			],
 			'classic_entity' => [
-				'samplingRate' => 0.1,
+				'samplingRate' => 0.0,
 				'context' => 'item',
 				'language' => 'en',
 				'searchApiParameters' => [
