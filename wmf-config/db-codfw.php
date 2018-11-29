@@ -8,9 +8,10 @@ if ( !defined( 'DBO_DEFAULT' ) ) {
 # $wgReadOnly = "Wikimedia Sites are currently read-only during maintenance, please try again soon.";
 
 $wmgParserCacheDBs = [
-	'10.64.0.12'   => '10.192.0.104',  # pc2007, A1 4.4TB 256GB
-	'10.64.32.72'  => '10.192.16.35',  # pc2008, B3 4.4TB 256GB
-	'10.64.48.128' => '10.192.32.10',  # pc2009, C1 4.4TB 256GB
+    # 'sharding key' => 'server ip address' # Do not change the sharding key even if it is an unused IP - T210725 
+	'10.64.0.12'   => '10.192.0.104',  # pc2007, A1 4.4TB 256GB # pc1
+	'10.64.32.72'  => '10.192.16.35',  # pc2008, B3 4.4TB 256GB # pc2
+	'10.64.48.128' => '10.192.32.10',  # pc2009, C1 4.4TB 256GB # pc3
 	# 'spare' => '10.192.48.14',  # pc2010, D3 4.4TB 256GB # spare host. Use it to replace any of the above if needed
 ];
 
