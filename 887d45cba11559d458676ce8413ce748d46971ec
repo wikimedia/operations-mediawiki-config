@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eb2122a4_ed0a5694",
+        "filename": "tests/cirrusTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2018-11-29T20:36:10Z",
+      "side": 1,
+      "message": "$config[\u0027wgCirrusSearchReplicaGroup\u0027] ? Alternatively we could assert above that the replica group is set to khi. Might be nice to know if that accidentally changes some day.",
+      "range": {
+        "startLine": 62,
+        "startChar": 8,
+        "endLine": 62,
+        "endChar": 13
+      },
+      "revId": "887d45cba11559d458676ce8413ce748d46971ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
