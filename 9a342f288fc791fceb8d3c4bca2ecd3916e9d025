@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ba326fd_12ad9eef",
+        "filename": "wmf-config/CirrusSearch-production.php",
+        "patchSetId": 17
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2018-11-29T19:36:30Z",
+      "side": 1,
+      "message": "This is going to have replica \u003d\u003e \u0027eqiad\u0027, which means in total the eqiad replica will have the groups: default, khi, psi, omega.\n\nI think you\u0027re aware of this and handle it below in wgCirrusSearchWriteClusters, but i\u0027m not following how yet.",
+      "revId": "9a342f288fc791fceb8d3c4bca2ecd3916e9d025",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
