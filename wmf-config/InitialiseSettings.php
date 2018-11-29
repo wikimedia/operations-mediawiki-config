@@ -8478,6 +8478,15 @@ $wgConf->settings = [
 	'zhwiki' => true,
 ],
 
+'wgGroupBlockRestrictions' => [
+	'default' => [],
+	'fawiki' => [
+		'eliminator' => [
+			'sysop', 'autopatrolled', 'patroller', 'rollbacker'
+		]
+	],
+],
+
 # groupOverrides @{
 'groupOverrides' => [
 	// Note: don't change the default setting here, because it won't take
