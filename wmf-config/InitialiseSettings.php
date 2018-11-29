@@ -8331,6 +8331,15 @@ $wgConf->settings = [
 	'testwikidatawiki' => true,
 ],
 
+'wgGroupBlockRestrictions' => [
+	'default' => false,
+	'fawiki' => [
+		'eliminator' => [
+			'sysop', 'autopatrolled', 'patroller', 'rollbacker'
+		]
+	],
+],
+
 # groupOverrides @{
 'groupOverrides' => [
 	// Note: don't change the default setting here, because it won't take
