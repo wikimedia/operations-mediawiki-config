@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "39df9083_e9f2240c",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 8335,
+      "author": {
+        "id": 5450
+      },
+      "writtenOn": "2018-11-29T13:48:10Z",
+      "side": 1,
+      "message": "This should be [], according to the change proposed in the parent patch.",
+      "range": {
+        "startLine": 8335,
+        "startChar": 14,
+        "endLine": 8335,
+        "endChar": 19
+      },
+      "revId": "9bf2c688bcd60ffa6a5cc0a516c5d4a024e58e7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
