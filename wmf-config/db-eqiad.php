@@ -8,9 +8,10 @@ if ( !defined( 'DBO_DEFAULT' ) ) {
 # $wgReadOnly = "Wikimedia Sites are currently read-only during maintenance, please try again soon.";
 
 $wmgParserCacheDBs = [
-	'10.64.0.12'   => '10.64.48.174', # pc1010, D3 4.4TB 256GB
-	'10.64.32.72'  => '10.64.16.20',  # pc1008, B8 4.4TB 256GB
-	'10.64.48.128' => '10.64.32.29',  # pc1009, C3 4.4TB 256GB
+	# 'sharding key' => 'server ip address' # DO NOT CHANGE THE SHARDING KEY - T210725
+	'10.64.0.12'   => '10.64.48.174', # pc1010, D3 4.4TB 256GB # pc1
+	'10.64.32.72'  => '10.64.16.20',  # pc1008, B8 4.4TB 256GB # pc2
+	'10.64.48.128' => '10.64.32.29',  # pc1009, C3 4.4TB 256GB # pc3
 ];
 
 $wmgOldExtTemplate = [
