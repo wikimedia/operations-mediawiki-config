@@ -21286,23 +21286,15 @@ $wgConf->settings = [
 		'enabled' => true,
 		'buckets' => [
 			'control' => [
-				'samplingRate' => 0.9,
+				'samplingRate' => 0.5,
 			],
 			'item_en_tuned' => [
-				'samplingRate' => 0.1,
+				'samplingRate' => 0.5,
 				'context' => 'item',
 				'language' => 'en',
 				'searchApiParameters' => [
 					'cirrusWBProfile' => 'wikibase_config_prefix_query_20181126',
 					'cirrusRescoreProfile' => 'wikibase_config_entity_weight_20181126',
-				],
-			],
-			'classic_entity' => [
-				'samplingRate' => 0.0,
-				'context' => 'item',
-				'language' => 'en',
-				'searchApiParameters' => [
-					'useCirrus' => '0',
 				],
 			],
 		],
