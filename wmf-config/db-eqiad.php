@@ -10,7 +10,7 @@ if ( !defined( 'DBO_DEFAULT' ) ) {
 $wmgParserCacheDBs = [
 	'10.64.0.12'   => '10.64.48.174', # pc1010, D3 4.4TB 256GB
 	'10.64.32.72'  => '10.64.16.20',  # pc1008, B8 4.4TB 256GB
-	'10.64.48.128' => '10.64.48.128', # pc1006, D3 2.4TB 256GB
+	'10.64.48.128' => '10.64.16.20', # pc1006, D3 2.4TB 256GB # temporary pc1008, pc1006 will clone pc1009
 ];
 
 $wmgOldExtTemplate = [
