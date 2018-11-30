@@ -22,6 +22,30 @@
       "revId": "52a179af09102a4ac368bca3f0ac64a2faaead76",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b9746a9d_327bc30a",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2018-11-30T13:39:25Z",
+      "side": 1,
+      "message": "Thanks, so a proper way of fixing this is to define the array in IS.php and extend it here?",
+      "parentUuid": "e710e9ed_ffa83516",
+      "range": {
+        "startLine": 213,
+        "startChar": 1,
+        "endLine": 213,
+        "endChar": 25
+      },
+      "revId": "52a179af09102a4ac368bca3f0ac64a2faaead76",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
