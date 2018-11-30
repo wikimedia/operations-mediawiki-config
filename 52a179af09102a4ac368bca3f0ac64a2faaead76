@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e710e9ed_ffa83516",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-11-30T02:52:09Z",
+      "side": 1,
+      "message": "The reason is this PHP code variable assignment. Assigning a variable (as opposed to extending, or adding to) declare the full value in one place, which means any previous value is unset.\n\nTo avoid complexity from extending variable, we therefore set a variable either only in IS.php or CS.php.\n\nThis would be a good reason to have a test that automatically verifies a variable isn\u0027t set in both.",
+      "range": {
+        "startLine": 213,
+        "startChar": 1,
+        "endLine": 213,
+        "endChar": 25
+      },
+      "revId": "52a179af09102a4ac368bca3f0ac64a2faaead76",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
