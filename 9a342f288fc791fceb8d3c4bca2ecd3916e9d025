@@ -34,6 +34,24 @@
       "revId": "9a342f288fc791fceb8d3c4bca2ecd3916e9d025",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6213bb67_80bcda81",
+        "filename": "wmf-config/CirrusSearch-production.php",
+        "patchSetId": 17
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2018-11-30T09:23:05Z",
+      "side": 1,
+      "message": "yes basically the new clusters eqiad-[khi|psi|omega] are ignored because they are not in the group.\nAs for eqiad-temp-[khi|psi|omega] I agree that it\u0027s a bit misleading since I use the default values, in short it fakes 4 new replicas that we write to use using the hack in CirrusSearchWriteClusters\n\nWhile writing this I realiazed that I probably misunderstood the technique you suggested in phab...",
+      "parentUuid": "5717ccbb_ebb95cb2",
+      "revId": "9a342f288fc791fceb8d3c4bca2ecd3916e9d025",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
