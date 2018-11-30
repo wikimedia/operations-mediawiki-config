@@ -22,6 +22,30 @@
       "revId": "fa453f8003d122be4e670ff3542f63df3d11a771",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9ae6a6c0_da3a628e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 19478,
+      "author": {
+        "id": 6546
+      },
+      "writtenOn": "2018-11-30T12:20:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "40770799_6d8ac735",
+      "range": {
+        "startLine": 19478,
+        "startChar": 23,
+        "endLine": 19478,
+        "endChar": 87
+      },
+      "revId": "fa453f8003d122be4e670ff3542f63df3d11a771",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
