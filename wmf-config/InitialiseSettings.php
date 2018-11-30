@@ -19479,7 +19479,7 @@ $wgConf->settings = [
 
 'wgWBQualityConstraintsTypeCheckMaxEntities' => [
 	'default' => 1000,
-	'wikidatawiki' => 10, // only check few entities in PHP => fall back to SPARQL very quickly
+	'wikidatawiki' => 20,
 ],
 
 'wgWBQualityConstraintsPropertyConstraintId' => [
