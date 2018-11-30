@@ -8331,6 +8331,11 @@ $wgConf->settings = [
 	'testwikidatawiki' => true,
 ],
 
+'wgEnableBlockNoticeStats' => [
+	'default' => false,
+	'itwiki' => true,
+],
+
 # groupOverrides @{
 'groupOverrides' => [
 	// Note: don't change the default setting here, because it won't take
