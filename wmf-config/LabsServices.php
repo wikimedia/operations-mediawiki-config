@@ -26,8 +26,10 @@ return [
 		'cxserver' => 'http://deployment-sca01.eqiad.wmflabs:8080',
 		'irc' => 'irc.beta.wmflabs.org', // deployment-ircd
 		'redis_lock' => [
-			'rdb1' => 'deployment-redis05.deployment-prep.eqiad.wmflabs',
-			'rdb2' => 'deployment-redis06.deployment-prep.eqiad.wmflabs',
+			'rdb1' => 'deployment-memc04.deployment-prep.eqiad.wmflabs',
+			'rdb2' => 'deployment-memc05.deployment-prep.eqiad.wmflabs',
+			'rdb3' => 'deployment-memc06.deployment-prep.eqiad.wmflabs',
+			'rdb4' => 'deployment-memc07.deployment-prep.eqiad.wmflabs',
 		],
 		'etcd' => 'deployment-etcd-01.deployment-prep.eqiad.wmflabs:2379',
 		'mediaSwiftAuth' => 'http://deployment-ms-fe02.deployment-prep.eqiad.wmflabs/auth',
