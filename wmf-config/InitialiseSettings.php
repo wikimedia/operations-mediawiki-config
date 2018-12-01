@@ -5444,6 +5444,7 @@ $wgConf->settings = [
 			'buffer' => true,
 		],
 		'authentication' => 'info',
+		'authevents' => 'info',
 		'autoloader' => 'debug',  // ori, for T166759 (2017-06-02)
 		'badpass' => 'debug',
 		'badpass-priv' => 'debug',
