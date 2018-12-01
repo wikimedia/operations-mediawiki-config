@@ -5564,6 +5564,7 @@ function wmfGetVariantSettings() {
 		'api-request' => [ 'udp2log' => false, 'logstash' => false, 'eventbus' => 'debug', 'buffer' => true ],
 		'api-warning' => 'debug',
 		'authentication' => 'info',
+		'authevents' => 'info',
 		'autoloader' => 'debug',  // ori, for T166759 (2017-06-02)
 		'badpass' => 'debug',
 		'badpass-priv' => 'debug',
