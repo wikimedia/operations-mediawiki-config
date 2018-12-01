@@ -8881,13 +8881,8 @@ $wgConf->settings = [
 			'browsearchive' => true,
 			'deletedhistory' => true,
 			'deletedtext' => true,
-			'abusefilter-log-detail' => true,
-			'abusefilter-view-private' => true, // T174357
-			'abusefilter-log-private' => true, // T174357
 		],
 		'engineer' => [ // T203000
-			'abusefilter-log-detail' => true,
-			'abusefilter-modify' => true,
 			'editinterface' => true,
 			'editsemiprotected' => true,
 			'editprotected' => true,
@@ -8929,7 +8924,6 @@ $wgConf->settings = [
 		'patroller' => [ // T214003
 			'autopatrol' => true,
 			'patrol' => true,
-			'abusefilter-log-detail' => true,
 			'upload_by_url' => true,
 		],
 		'autopatrolled' => [ 'autopatrol' => true, 'upload_by_url' => true ], // T214003
@@ -8959,7 +8953,6 @@ $wgConf->settings = [
 		'patroller' => [ // T214003
 			'autopatrol' => true,
 			'patrol' => true,
-			'abusefilter-log-detail' => true,
 			'upload_by_url' => true,
 		],
 		'autopatrolled' => [ 'autopatrol' => true, 'upload_by_url' => true ], // T214003
@@ -9072,8 +9065,8 @@ $wgConf->settings = [
 			'changetags' => true, // T97013
 			'extendedconfirmed' => true // T126607
 		],
-		'oversight' => [ 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-view-private' => true ], // T30465, T119446
-		'checkuser' => [ 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-view-private' => true ], // T30465, T119446
+		'oversight' => [ 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true ], // T30465
+		'checkuser' => [ 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true ], // T30465
 		'bureaucrat' => [ 'move-subpages' => true, 'suppressredirect' => true, 'tboverride' => true, ],
 		'templateeditor' => [ 'templateeditor' => true, 'tboverride' => true, ], // T57432
 		'sysop' => [
@@ -9151,17 +9144,10 @@ $wgConf->settings = [
 	],
 	'+eswiki' => [
 		'autoconfirmed' => [ 'collectionsaveascommunitypage' => false ], // T163767
-		'rollbacker' => [
-			'rollback' => true,
-			'abusefilter-log-detail' => true, // T70319
-		],
+		'rollbacker' => [ 'rollback' => true ],
 		'*' => [ 'patrolmarks' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ],
-		'patroller' => [
-			'patrol' => true,
-			'autopatrol' => true,
-			'abusefilter-log-detail' => true, // T70319
-		],
+		'patroller' => [ 'patrol' => true, 'autopatrol' => true ],
 		'flood' => [ 'bot' => true ], // T50682
 	],
 	'eswikibooks' => [
@@ -9398,7 +9384,6 @@ $wgConf->settings = [
 		],
 		'sysop' => [
 			'deleterevision' => true,
-			'abusefilter-modify-restricted' => true,
 			'templateeditor' => true, // T102466
 		],
 		'patroller' => [
@@ -9413,13 +9398,6 @@ $wgConf->settings = [
 			'unwatchedpages' => true,
 		],
 		'interface-admin' => [ // T200698
-			'abusefilter-log' => true,
-			'abusefilter-log-detail' => true,
-			'abusefilter-modify' => true,
-			'abusefilter-modify-restricted' => true,
-			'abusefilter-revert' => true,
-			'abusefilter-view' => true,
-			'abusefilter-view-private' => true,
 			'import' => true,
 			'tboverride' => true,
 			'templateeditor' => true,
@@ -9427,7 +9405,6 @@ $wgConf->settings = [
 		'checkuser' => [
 			'deletedhistory' => true,
 			'deletedtext' => true,
-			'abusefilter-log-detail' => true,
 		],
 	],
 	'hewikibooks' => [
@@ -9769,9 +9746,9 @@ $wgConf->settings = [
 		'rollbacker' => [ 'rollback' => true ],
 		'botadmin' => [
 			'blockemail' => true, 'block' => true, 'ipblock-exempt' => true, 'protect' => true, 'editprotected' => true, 'createaccount' => true, 'deleterevision' => true, 'delete' => true, 'globalblock-whitelist' => true,
-			'autoconfirmed' => true, 'editsemiprotected' => true, 'editinterface' => true, 'editsitejson' => true, 'autopatrol' => true, 'import' => true, 'patrol' => true, 'markbotedits' => true, 'nuke' => true, 'abusefilter-modify' => true, 'movefile' => true, 'move' => true, 'move-subpages' => true,
+			'autoconfirmed' => true, 'editsemiprotected' => true, 'editinterface' => true, 'editsitejson' => true, 'autopatrol' => true, 'import' => true, 'patrol' => true, 'markbotedits' => true, 'nuke' => true, 'movefile' => true, 'move' => true, 'move-subpages' => true,
 			'move-rootuserpages' => true, 'noratelimit' => true, 'suppressredirect' => true, 'reupload-shared' => true, 'override-antispoof' => true, 'tboverride' => true, 'reupload' => true, 'skipcaptcha' => true, 'rollback' => true, 'browsearchive' => true,
-			'undelete' => true, 'upload' => true, 'upload_by_url' => true, 'apihighlimits' => true, 'unwatchedpages' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-log-detail' => true,
+			'undelete' => true, 'upload' => true, 'upload_by_url' => true, 'apihighlimits' => true, 'unwatchedpages' => true, 'deletedhistory' => true, 'deletedtext' => true,
 		],
 	],
 	'+mlwikisource' => [
@@ -9893,7 +9870,7 @@ $wgConf->settings = [
 	],
 	// T11024, T12362
 	'ptwiki' => [
-		'autoconfirmed' => [ 'patrol' => true, 'abusefilter-log-detail' => true ],
+		'autoconfirmed' => [ 'patrol' => true ],
 		'bot' => [ 'autoreviewer' => true, ],
 		'autoreviewer' => [
 			'autopatrol' => true,
@@ -9958,7 +9935,6 @@ $wgConf->settings = [
 	],
 	'+ruwiki' => [
 		'arbcom' => [ // T51334
-			'abusefilter-log-detail' => true,
 			'browsearchive' => true,
 			'deletedhistory' => true,
 			'deletedtext' => true,
@@ -10277,7 +10253,7 @@ $wgConf->settings = [
 	'tawiki' => [
 		'nocreate' => [ 'createpage' => false, ],
 		'autopatrolled' => [ 'autopatrol' => true ], // T95180
-		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'abusefilter-log-detail' => true ], // T95180
+		'patroller' => [ 'patrol' => true, 'autopatrol' => true ], // T95180
 		'rollbacker' => [ 'rollback' => true ], // T95180
 	],
 	'testwiki' => [
@@ -10362,8 +10338,6 @@ $wgConf->settings = [
 			'unreviewedpages' => true, // T40690
 		],
 		'interface-editor' => [ // Renamed from 'technician' per T144638
-			'abusefilter-log-detail' => true, // T40690
-			'abusefilter-modify' => true, // T40690
 			'apihighlimits' => true, // T40690
 			'editinterface' => true, // T40690
 			'editsitejson' => true,
@@ -10491,7 +10465,6 @@ $wgConf->settings = [
 			'move' => true, // T57495
 			'autoconfirmed' => true, // T57495
 			'skipcaptcha' => true, // T57495
-			'abusefilter-log-detail' => true, // T57495
 			'suppressredirect' => true, // T58203
 		],
 		'propertycreator' => [
@@ -10502,12 +10475,8 @@ $wgConf->settings = [
 			'move' => true, // T57495
 			'autoconfirmed' => true, // T57495
 			'skipcaptcha' => true, // T57495
-			'abusefilter-log-detail' => true, // T57495
 		],
 		'wikidata-staff' => [
-			'abusefilter-log-detail' => true,
-			'abusefilter-modify' => true,
-			'abusefilter-modify-restricted' => true,
 			'apihighlimits' => true,
 			'autoconfirmed' => true,
 			'autopatrol' => true,
@@ -10560,8 +10529,6 @@ $wgConf->settings = [
 	'zhwiki' => [
 		'rollbacker' => [
 			'rollback' => true, // T18988
-			'abusefilter-log-private' => true, // T39679
-			'abusefilter-view-private' => true, // T174978
 			'suppressredirect' => true, // T201160
 		],
 		'patroller' => [
@@ -10688,8 +10655,6 @@ $wgConf->settings = [
 			'hideuser' => true, // was forgotten. added 2009-03-05 -- BV
 			'suppressrevision' => true,
 			'suppressionlog' => true,
-			'abusefilter-hide-log' => true, // Andrew, 2010-08-28
-			'abusefilter-hidden-log' => true, // Andrew, 2010-08-28
 		],
 	],
 ],
@@ -14064,68 +14029,6 @@ $wgConf->settings = [
 	'default' => 14 * 24 * 3600, // 14 days (T124954)
 	'foundationwiki' => 3600, // 1 hour; template links may be funky
 ],
-
-# abuse filter @{
-'wmgAbuseFilterCentralDB' => [
-	'default' => 'metawiki',
-],
-
-// emergency disable: shut off filters tagging >5% of posts on a total of at least 25 posts per day
-'wgAbuseFilterEmergencyDisableThreshold' => [
-	'default' => [
-		'default' => 0.05,
-	],
-	'commonswiki' => [ // T87431
-		'default' => 0.30,
-	],
-	'testcommonswiki' => [ // T87431
-		'default' => 0.30,
-	],
-	'eswikibooks' => [
-		'default' => 0.30, // T145765
-	],
-	'metawiki' => [
-		'default' => 0.30,  // T173633
-	],
-	'mediawikiwiki' => [ // T212667
-		'default' => 0.30,
-	],
-],
-'wgAbuseFilterEmergencyDisableCount' => [
-	'default' => [
-		'default' => 2,
-	],
-	'enwiki' => [
-		'default' => 25,
-	],
-	'eswikibooks' => [
-		'default' => 10, // T145765
-	],
-	'commonswiki' => [ // T87431
-		'default' => 25,
-	],
-	'testcommonswiki' => [ // T87431
-		'default' => 25,
-	],
-	'metawiki' => [
-		'default' => 25, // T173633
-	],
-	'mediawikiwiki' => [ // T212667
-		'default' => 25,
-	],
-],
-'wgAbuseFilterEmergencyDisableAge' => [
-	'default' => [
-		'default' => 86400,
-	],
-],
-'wgAbuseFilterParserClass' => [
-	'default' => 'AbuseFilterParser',
-],
-'wgAbuseFilterRuntimeProfile' => [
-	'default' => true, // T191039
-],
-# @}
 
 'wgThumbLimits' => [
 	'default' => [ 120, 150, 180, 200, 220, 250, 300, 400 ],
@@ -20608,6 +20511,10 @@ $wgConf->settings = [
 	'testwiki' => true,
 	'votewiki' => true,
 	'officewiki' => true,
+],
+
+'wmgAbuseFilterCentralDB' => [
+	'default' => 'metawiki',
 ],
 
 'wmgUseGlobalAbuseFilters' => [
