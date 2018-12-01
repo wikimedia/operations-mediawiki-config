@@ -222,15 +222,6 @@ function wmfLabsSettings() {
 			'default' => false,
 		],
 
-		# To help fight spam, makes rules maintained on deploymentwiki
-		# to be available on all beta wikis.
-		'-wmgAbuseFilterCentralDB' => [
-			'default' => 'deploymentwiki',
-		],
-		'-wmgUseGlobalAbuseFilters' => [
-			'default' => true,
-		],
-
 		// T39852
 		'wmgUseWikimediaShopLink' => [
 			'default'    => false,
