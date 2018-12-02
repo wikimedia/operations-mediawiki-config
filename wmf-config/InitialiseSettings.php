@@ -1311,7 +1311,9 @@ $wgConf->settings = [
 	'cdowiki' => [ '1.5x' => '/static/images/project-logos/cdowiki-1.5x.png', '2x' => '/static/images/project-logos/cdowiki-2x.png' ], // T150618
 	'cebwiki' => [ '1.5x' => '/static/images/project-logos/cebwiki-1.5x.png', '2x' => '/static/images/project-logos/cebwiki-2x.png' ], // T150616
 	'cewiki' => [ '1.5x' => '/static/images/project-logos/cewiki-1.5x.png', '2x' => '/static/images/project-logos/cewiki-2x.png' ], // T150618
+	'chwiki' => [ '1.5x' => '/static/images/project-logos/chwiki-1.5x.png', '2x' => '/static/images/project-logos/chwiki-2x.png' ], // T150618
 	'chrwiki' => [ '1.5x' => '/static/images/project-logos/chrwiki-1.5x.png', '2x' => '/static/images/project-logos/chrwiki-2x.png' ],
+	'chywiki' => [ '1.5x' => '/static/images/project-logos/chywiki-1.5x.png', '2x' => '/static/images/project-logos/chywiki-2x.png' ], // T150618
 	'ckbwiki' => [ '1.5x' => '/static/images/project-logos/ckbwiki-1.5x.png', '2x' => '/static/images/project-logos/ckbwiki-2x.png' ], // T150618
 	'cowiki' => [ '1.5x' => '/static/images/project-logos/cowiki-1.5x.png', '2x' => '/static/images/project-logos/cowiki-2x.png' ], // T150618
 	'crhwiki' => [ '1.5x' => '/static/images/project-logos/crhwiki-1.5x.png', '2x' => '/static/images/project-logos/crhwiki-2x.png' ], // T150618
@@ -1370,8 +1372,6 @@ $wgConf->settings = [
 	'htwiki' => [ '1.5x' => '/static/images/project-logos/htwiki-1.5x.png', '2x' => '/static/images/project-logos/htwiki-2x.png' ], // T150618
 	'huwiki' => [ '1.5x' => '/static/images/project-logos/huwiki-1.5x.png', '2x' => '/static/images/project-logos/huwiki-2x.png' ], // T150618
 	'hywiki' => [ '1.5x' => '/static/images/project-logos/hywiki-1.5x.png', '2x' => '/static/images/project-logos/hywiki-2x.png' ], // T150620
-	'chwiki' => [ '1.5x' => '/static/images/project-logos/chwiki-1.5x.png', '2x' => '/static/images/project-logos/chwiki-2x.png' ], // T150618
-	'chywiki' => [ '1.5x' => '/static/images/project-logos/chywiki-1.5x.png', '2x' => '/static/images/project-logos/chywiki-2x.png' ], // T150618
 	'iawiki' => [ '1.5x' => '/static/images/project-logos/iawiki-1.5x.png', '2x' => '/static/images/project-logos/iawiki-2x.png' ], // T150618
 	'idwiki' => [ '1.5x' => '/static/images/project-logos/idwiki-1.5x.png', '2x' => '/static/images/project-logos/idwiki-2x.png' ], // T150618
 	'iewiki' => [ '1.5x' => '/static/images/project-logos/iewiki-1.5x.png', '2x' => '/static/images/project-logos/iewiki-2x.png' ], // T150618
