@@ -5956,6 +5956,8 @@ $wgConf->settings = [
 		103 => 'Wikiproiektu_eztabaida',
 		104 => 'Txikipedia', // T191396
 		105 => 'Txikipedia_eztabaida', // T191396
+		106 => 'Zerrenda', // T209834 - List
+		107 => 'Zerrenda_eztabaida', // T209834 - List talk
 	],
 	'fawiki' => [
 		100 => 'درگاه',
