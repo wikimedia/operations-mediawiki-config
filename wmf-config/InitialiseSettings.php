@@ -1665,7 +1665,6 @@ $wgConf->settings = [
 	'eswikibooks' => [ '1.5x' => '/static/images/project-logos/eswikibooks-1.5x.png', '2x' => '/static/images/project-logos/eswikibooks-2x.png' ], // T170248
 	'fiwikibooks' => [ '1.5x' => '/static/images/project-logos/fiwikibooks-1.5x.png', '2x' => '/static/images/project-logos/fiwikibooks-2x.png' ], // T177506
 	'hewikibooks' => [ '1.5x' => '/static/images/project-logos/hewikibooks-1.5x.png', '2x' => '/static/images/project-logos/hewikibooks-2x.png' ], // T201562
-	'hrwikibooks' => [ '1.5x' => '/static/images/project-logos/hrwikibooks-1.5x.png', '2x' => '/static/images/project-logos/hrwikibooks-2x.png' ], // T150618
 	'huwikibooks' => [ '1.5x' => '/static/images/project-logos/huwikibooks-1.5x.png', '2x' => '/static/images/project-logos/huwikibooks-2x.png' ], // T177506
 	'itwikibooks' => [ '1.5x' => '/static/images/project-logos/itwikibooks-1.5x.png', '2x' => '/static/images/project-logos/itwikibooks-2x.png' ], // T177506
 	'ruwikibooks' => [ '1.5x' => '/static/images/project-logos/ruwikibooks-1.5x.png', '2x' => '/static/images/project-logos/ruwikibooks-2x.png' ], // T150618
@@ -1677,8 +1676,6 @@ $wgConf->settings = [
 	# Wikisource
 	'cswikisource' => [ '1.5x' => '/static/images/project-logos/cswikisource-1.5x.png', '2x' => '/static/images/project-logos/cswikisource-2x.png' ], // T150618
 	'euwikisource' => [ '1.5x' => '/static/images/project-logos/euwikisource-1.5x.png', '2x' => '/static/images/project-logos/euwikisource-2x.png' ],
-	'hrwikisource' => [ '1.5x' => '/static/images/project-logos/hrwikisource-1.5x.png', '2x' => '/static/images/project-logos/hrwikisource-2x.png' ], // T150618
-	'itwikisource' => [ '1.5x' => '/static/images/project-logos/itwikisource-1.5x.png', '2x' => '/static/images/project-logos/itwikisource-2x.png' ], // T150618
 	'nowikisource' => [ '1.5x' => '/static/images/project-logos/nowikisource-1.5x.png', '2x' => '/static/images/project-logos/nowikisource-2x.png' ], // T167192
 	'pawikisource' => [ '1.5x' => '/static/images/project-logos/pawikisource-1.5x.png', '2x' => '/static/images/project-logos/pawikisource-2x.png' ], // T149522
 	'ruwikisource' => [ '1.5x' => '/static/images/project-logos/ruwikisource-1.5x.png', '2x' => '/static/images/project-logos/ruwikisource-2x.png' ], // T203343
