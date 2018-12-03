@@ -16,6 +16,24 @@
       "revId": "24b3f7d14601438bf9b1a917edcf886e2d8addad",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2dd0cbe3_1dbdde06",
+        "filename": "wmf-config/CirrusSearch-production.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2018-12-03T18:02:35Z",
+      "side": 1,
+      "message": "yes I tried it but looks like we still run a php55 check on this repo :(",
+      "parentUuid": "488400a9_eb09b91e",
+      "revId": "24b3f7d14601438bf9b1a917edcf886e2d8addad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
