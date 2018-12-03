@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "488400a9_eb09b91e",
+        "filename": "wmf-config/CirrusSearch-production.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2018-12-03T17:56:48Z",
+      "side": 1,
+      "message": "doesn\u0027t matter, but could replace isset with `$x[i] ?? \u0027\u0027 \u003d\u003d \u0027foo\u0027`.",
+      "revId": "24b3f7d14601438bf9b1a917edcf886e2d8addad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
