@@ -7065,6 +7065,12 @@ $wgConf->settings = [
 		118 => 'تعمیرنو', // T186393 - Reconstruction
 		119 => 'تبادلۂ_خیال_تعمیرنو', // T186393 - Reconstruction talk
 	],
+	'yuewiktionary' => [
+		100 => '附錄', // Appendix
+		101 => '附錄討論', // Appendix talk
+		102 => '索引', // Index
+		103 => '索引討論', // Index talk
+	],
 	'zhwiktionary' => [
 		100 => '附录', // T31641 - appendix
 		101 => '附录讨论', // T31641 - appendix talk
