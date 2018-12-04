@@ -146,6 +146,7 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['badgeItems'] = $wmgWikibaseRepoBadgeItems;
 	$wgWBRepoSettings['preferredGeoDataProperties'] = $wmgWBRepoPreferredGeoDataProperties;
 	$wgWBRepoSettings['preferredPageImagesProperties'] = $wmgWBRepoPreferredPageImagesProperties;
+	$wgWBRepoSettings['conceptBaseUri'] = $wmgWBRepoConceptBaseUri;
 
 	if ( isset( $wmgUseEntitySourceBasedFederation ) ) {
 		$wgWBRepoSettings['useEntitySourceBasedFederation'] = $wmgUseEntitySourceBasedFederation;
