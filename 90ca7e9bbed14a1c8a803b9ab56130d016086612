@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ac3ea80_b4d440a6",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-12-04T17:29:03Z",
+      "side": 1,
+      "message": "Don\u0027t give load to vslow hosts unless it is necessary. \nGive 100 to the rc slaves instead.",
+      "range": {
+        "startLine": 153,
+        "startChar": 19,
+        "endLine": 153,
+        "endChar": 22
+      },
+      "revId": "90ca7e9bbed14a1c8a803b9ab56130d016086612",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
