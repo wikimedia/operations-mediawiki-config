@@ -1082,6 +1082,9 @@ function wmfLabsSettings() {
 				'P964',
 			],
 		],
+		'-wmgWBRepoConceptBaseUri' => [
+			'wikidatawiki' => 'https://wikidata.beta.wmflabs.org/entity/',
+		],
 		'wgArticlePlaceholderImageProperty' => [
 			'default' => 'P964',
 		],
