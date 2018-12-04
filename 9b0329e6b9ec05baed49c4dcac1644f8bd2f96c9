@@ -22,6 +22,30 @@
       "revId": "9b0329e6b9ec05baed49c4dcac1644f8bd2f96c9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0d970ab3_b7ef5d6f",
+        "filename": "w/fatal-error.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 6178
+      },
+      "writtenOn": "2018-12-04T22:06:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f5e7495a_f29a32fd",
+      "range": {
+        "startLine": 89,
+        "startChar": 6,
+        "endLine": 89,
+        "endChar": 38
+      },
+      "revId": "9b0329e6b9ec05baed49c4dcac1644f8bd2f96c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
