@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c32cb776_a68daea5",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-12-04T17:28:04Z",
+      "side": 1,
+      "message": "Why more load?",
+      "range": {
+        "startLine": 152,
+        "startChar": 14,
+        "endLine": 152,
+        "endChar": 15
+      },
+      "revId": "9d0c351e6d543bfb660ec6ebe72993ad17d8fd5b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
