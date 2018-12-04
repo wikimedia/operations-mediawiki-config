@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b0eb8dff_0c8a1b52",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-12-04T17:27:27Z",
+      "side": 1,
+      "message": "why more weight?",
+      "range": {
+        "startLine": 152,
+        "startChar": 14,
+        "endLine": 152,
+        "endChar": 15
+      },
+      "revId": "c1bfd2fcb5cac957a6fa9ff0aa8651d1aac72d17",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "83a158ef_b952c6e7",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-12-04T17:27:27Z",
+      "side": 1,
+      "message": "don\u0027t give load to vslow hosts unless it is really necessary",
+      "range": {
+        "startLine": 153,
+        "startChar": 19,
+        "endLine": 153,
+        "endChar": 21
+      },
+      "revId": "c1bfd2fcb5cac957a6fa9ff0aa8651d1aac72d17",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
