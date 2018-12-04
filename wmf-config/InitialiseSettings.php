@@ -5422,6 +5422,7 @@ $wgConf->settings = [
 		'api' => [ 'logstash' => false ],
 		'api-feature-usage' => 'debug',
 		'api-readonly' => 'debug',
+		'api-warning' => 'debug',
 		'ApiAction' => [
 			'udp2log' => false,
 			'logstash' => false,
