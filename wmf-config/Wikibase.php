@@ -134,6 +134,14 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['preferredGeoDataProperties'] = $wmgWBRepoPreferredGeoDataProperties;
 	$wgWBRepoSettings['preferredPageImagesProperties'] = $wmgWBRepoPreferredPageImagesProperties;
 
+	if ( $wgDBname === 'wikidatawiki' ) {
+		// note: this intentionally uses HTTP, not HTTPS;
+		// see also comment on wmgWikibaseClientRepoConceptBaseUri in InitialiseSettings.php
+		$wgWBRepoSettings['conceptBaseUri'] = 'http://www.wikidata.org/entity/';
+	} elseif ( $wgDBname === 'testwikidatawiki' ) {
+		$wgWBRepoSettings['conceptBaseUri'] = 'http://test.wikidata.org/entity/';
+	}
+
 	// Various settings have null / no setting yet for various sites,
 	// so we need to check they are set before trying to use them to avoid warnings.
 	if ( isset( $wmgWBRepoSettingsSparqlEndpoint ) ) {
