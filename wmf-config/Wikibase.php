@@ -133,6 +133,7 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['badgeItems'] = $wmgWikibaseRepoBadgeItems;
 	$wgWBRepoSettings['preferredGeoDataProperties'] = $wmgWBRepoPreferredGeoDataProperties;
 	$wgWBRepoSettings['preferredPageImagesProperties'] = $wmgWBRepoPreferredPageImagesProperties;
+	$wgWBRepoSettings['conceptBaseUri'] = $wmgWBRepoConceptBaseUri;
 
 	// These can be removed once migration is complete & these vars no longer exist.
 	$wgWBRepoSettings['tmpMaxItemIdForNewItemIdHtmlFormatter'] = $wmgWikibaseMaxItemIdForNewItemIdHtmlFormatter;
