@@ -3139,6 +3139,7 @@ if ( $wmgUseFileImporter ) {
 	wfLoadExtension( 'FileImporter' );
 	$wgFileImporterCommonsHelperServer = 'https://www.mediawiki.org';
 	$wgFileImporterCommonsHelperBasePageName = 'Extension:FileImporter/Data/';
+	$wgFileImporterCommonsHelperHelpPage = 'https://www.mediawiki.org/wiki/Extension:FileImporter/Data';
 	$wgFileImporterSourceSiteServices = [ $wmgUseFileImporter ];
 	// Temporary solution until we have a stable implementation for this
 	// https://gerrit.wikimedia.org/r/440857
