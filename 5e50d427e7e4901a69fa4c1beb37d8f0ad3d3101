@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "74e5be53_278e15c2",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-12-05T13:44:23Z",
+      "side": 1,
+      "message": "clarify that this host will be temporary serving vslow",
+      "revId": "5e50d427e7e4901a69fa4c1beb37d8f0ad3d3101",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
