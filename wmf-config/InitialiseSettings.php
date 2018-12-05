@@ -18862,9 +18862,6 @@ $wgConf->settings = [
 
 'wmgWikibaseEnableData' => [
 	'default' => true,
-	'wiktionary' => false,
-	'enwiktionary' => true,
-	'trwiktionary' => true,
 ],
 
 'wgWMEUnderstandingFirstDay' => [
