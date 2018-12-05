@@ -37,6 +37,7 @@
 
 use MediaWiki\Auth\AuthenticationResponse;
 use MediaWiki\Logger\LoggerFactory;
+use Wikimedia\MWConfig\XWikimediaDebug;
 
 # Godforsaken hack to work around problems with the reverse proxy caching changes...
 #
@@ -52,9 +53,12 @@ if ( PHP_SAPI !== 'cli' ) {
 	ini_set( 'display_errors', 'stderr' );
 }
 
+# Set up config helper class files
+$wgAutoloadClasses['Wikimedia\MWConfig\XWikimediaDebug'] = __DIR__ . '/../src/XWikimediaDebug.php';
+
 // Clobber any value in $_SERVER['SERVER_SOFTWARE'] other than Apache, so that
 // IEUrlExtension::haveUndecodedRequestUri() always thinks we're running Apache.
-// Otherwise, the absense of 'Apache' from $_SERVER['SERVER_SOFTWARE'] causes it
+// Otherwise, the absence of 'Apache' from $_SERVER['SERVER_SOFTWARE'] causes it
 // to distrust REQUEST_URI, which leads to incorrect behavior.
 if ( isset( $_SERVER['SERVER_SOFTWARE'] ) ) {
 	$_SERVER['SERVER_SOFTWARE'] = 'Apache';
@@ -264,7 +268,7 @@ if ( PHP_SAPI === 'cli' ) {
 	$wgLanguageConverterCacheType = CACHE_NONE;
 }
 
-if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) && preg_match( '/\breadonly\b/i', $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
+if ( XWikimediaDebug::getInstance()->hasOption( 'readonly' ) ) {
 	$wgReadOnly = 'X-Wikimedia-Debug';
 }
 
@@ -276,17 +280,8 @@ if ( $wmfRealm === 'labs' ) {
 	require "$wmfConfigDir/db-{$wmfDatacenter}.php";
 }
 
-// profiler.php and profiler-labs.php define $wmgProfiler.
-// NOTE: This file is normally included much earlier via PhpAutoPrepend,
-// so that profiles trace the whole request (including MediaWiki setup).
-// That is also the reason we use $wmgProfiler as intermediary
-// because wmf-config/CommonSettings loads after mediawiki/DefaultSettings,
-// which defines $wgProfiler.
-if ( $wmfRealm === 'labs' ) {
-	require_once __DIR__ . '/profiler-labs.php';
-	$wgProfiler = $wmgProfiler;
-} else {
-	require_once __DIR__ . '/profiler.php';
+// Set $wgProfiler to the value provided by PhpAutoPrepend.php
+if ( isset( $wmgProfiler ) ) {
 	$wgProfiler = $wmgProfiler;
 }
 

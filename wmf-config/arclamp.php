@@ -101,3 +101,13 @@ function wmfArcLampFlush( $redisHost, $redisPort, $redisTimeout ) {
 		trigger_error( get_class( $e ) . ': ' . $e->getMessage(), E_USER_NOTICE );
 	}
 }
+
+function wmfSetupArcLamp( $options ) {
+	register_shutdown_function( function () use ( $options ) {
+		wmfArcLampFlush(
+			$options['redis-host'],
+			$options['redis-port'],
+			$options['redis-timeout']
+		);
+	} );
+}
