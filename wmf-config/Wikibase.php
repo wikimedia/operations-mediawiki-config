@@ -183,6 +183,9 @@ if ( $wmgUseWikibaseRepo ) {
 	}
 
 	$wgWBRepoSettings['foreignRepositories'] = $wmgWikibaseForeignRepositories;
+
+	// Temporary, see T184933
+	$wgWBRepoSettings['useKartographerGlobeCoordinateFormatter'] = $wgDBname === 'testwikidatawiki';
 }
 
 if ( $wmgUseWikibaseClient ) {
