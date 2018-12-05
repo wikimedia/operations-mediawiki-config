@@ -22,6 +22,30 @@
       "revId": "9d0c351e6d543bfb660ec6ebe72993ad17d8fd5b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "057d9dee_44e0f8db",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 6324
+      },
+      "writtenOn": "2018-12-05T13:41:08Z",
+      "side": 1,
+      "message": "because I reduced the load on db1100\nHowever I can leave this as-is",
+      "parentUuid": "c32cb776_a68daea5",
+      "range": {
+        "startLine": 152,
+        "startChar": 14,
+        "endLine": 152,
+        "endChar": 15
+      },
+      "revId": "9d0c351e6d543bfb660ec6ebe72993ad17d8fd5b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
