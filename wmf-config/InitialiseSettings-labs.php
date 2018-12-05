@@ -830,12 +830,16 @@ function wmfLabsSettings() {
 		],
 		'wgGEHelpPanelLinks' => [
 			'enwiki' => [
-				'title' => 'Help:Contents',
-				'text' => 'The most helpful help link',
+				[
+					'title' => 'Help:Contents',
+					'text' => 'The most helpful help link',
+				]
 			],
 			'kowiki' => [
-				'title' => '위키백과:도움말',
-				'text' => '도움말',
+				[
+					'title' => '위키백과:도움말',
+					'text' => '도움말',
+				]
 			],
 		],
 		'wgWelcomeSurveyPrivacyPolicyUrl' => [
