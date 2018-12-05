@@ -52,6 +52,7 @@
 #
 
 use MediaWiki\Logger\LoggerFactory;
+use Wikimedia\MWConfig\XWikimediaDebug;
 
 if ( getenv( 'MW_DEBUG_LOCAL' ) ) {
 	// Route all log messages to a local file
@@ -60,9 +61,7 @@ if ( getenv( 'MW_DEBUG_LOCAL' ) ) {
 	$wmgLogstashServers = false;
 	$wmgMonologChannels = [];
 	$wgDebugDumpSql = true;
-} elseif ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) &&
-	preg_match( '/\blog\b/i', $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] )
-) {
+} elseif ( XWikimediaDebug::getInstance()->hasOption( 'log' ) ) {
 	// Forward all log messages to logstash for debugging.
 	// See <https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug>.
 	$wgDebugLogFile = "udp://{$wmfUdp2logDest}/XWikimediaDebug";
