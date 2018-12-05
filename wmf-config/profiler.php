@@ -7,141 +7,132 @@
 # Exposes:
 # - $wmgProfiler (used by CommonSettings.php)
 
+use MWConfig\XWikimediaDebug;
+
 require_once __DIR__ . '/arclamp.php';
-
-global $wmgProfiler;
-
-$wmgProfiler = [];
+require_once __DIR__ . '/../src/XWikimediaDebug.php';
 
 /**
- * File overview:
- *
- * - Parse X-Wikimedia-Debug options.
- * - Enable request profiling.
- * - One-off profile to stdout (via MediaWiki).
- * - One-off profile to XHGui.
- * - Sampling profiler for live traffic.
+ * Set up the profiler
+ * @param array $options Associative array of options:
+ *   - redis-host: The host used for Xenon events
+ *   - redis-port: The port used for Xenon events
+ *   - redis-timeout: The redis socket timeout
+ *   - use-xhgui: True to use XHGui saver via MongoDB
+ *   - xhgui-conf: The configuration array to pass to Xhgui_Saver::factory
  */
+function wmfSetupProfiler( $options ) {
+	global $wmgProfiler;
 
-if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
+	$wmgProfiler = [];
+
 	/**
-	 * Parse X-Wikimedia-Debug options.
+	 * File overview:
 	 *
-	 * See https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug
-	 *
-	 * - 'forceprofile': One-off profile to stdout.
-	 * - 'profile': One-off profile to XHGui.
-	 * - 'readonly': (See wmf-config/CommonSettings.php).
-	 * - 'log': (See wmf-config/logging.php).
-	 *
+	 * - Parse X-Wikimedia-Debug options.
+	 * - Enable request profiling.
+	 * - One-off profile to stdout (via MediaWiki).
+	 * - One-off profile to XHGui.
+	 * - Sampling profiler for live traffic.
 	 */
-	$xwd = false;
-	if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
-		$xwd = [];
-		$matches = null;
-		preg_match_all( '/;\s*(\w+)/', $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'], $matches );
-		if ( !empty( $matches[1] ) ) {
-			$xwd = array_fill_keys( $matches[1], true );
-		}
-		unset( $matches );
+
+	if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
+		$xwd = XWikimediaDebug::getInstance();
+		$profileToStdout = $xwd->hasOption( 'forceprofile' );
+		$profileToXhgui = $xwd->hasOption( 'profile' ) && !empty( $options['use-xhgui'] );
 
 		// This is passed as query parameter instead of header attribute,
 		// but is nonetheless considered part of X-Wikimedia-Debug and must
 		// only be enabled when X-Wikimedia-Debug is also enabled, due to caching.
-		if ( isset( $_GET['forceprofile'] ) ) {
-			$xwd['forceprofile'] = true;
-		}
-	}
-
-	/**
-	 * Enable request profiling
-	 *
-	 * We can only enable XHProf once, and the first call controls the flags.
-	 * Later calls are ignored. Therefore, always use the same flags.
-	 *
-	 * - XHPROF_FLAGS_NO_BUILTINS: Used by MediaWiki and by XHGui.
-	 *   Doesn't modify output format, but makes output more concise.
-	 *
-	 * - XHPROF_FLAGS_CPU: Only used by XHGui only.
-	 *   Adds 'cpu' keys to profile entries.
-	 *
-	 * - XHPROF_FLAGS_MEMORY: Only used by XHGui only.
-	 *   Adds 'mu' and 'pmu' keys to profile entries.
-	 */
-	$xhprofFlags = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
-	if ( isset( $xwd['forceprofile'] )
-		|| PHP_SAPI === 'cli'
-		|| isset( $xwd['profile'] )
-	) {
-		// Enable Xhprof now instead of waiting for MediaWiki to start it later.
-		// This ensures a balanced and complete call graph. (T180183)
-		xhprof_enable( $xhprofFlags );
-
-		/**
-		 * One-off profile to stdout.
-		 *
-		 * For web: Set X-Wikimedia-Debug (to bypass cache) and query param 'forceprofile=1'.
-		 * For CLI: Set CLI option '--profiler=text'.
-		 *
-		 * https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug#Plaintext_request_profile
-		 */
-		if ( isset( $xwd['forceprofile'] ) || PHP_SAPI === 'cli' ) {
-			$wmgProfiler = [
-				'class'  => 'ProfilerXhprof',
-				'flags'  => $xhprofFlags,
-				'output' => 'text',
-			];
+		if ( $xwd->isHeaderPresent() && isset( $_GET['forceprofile'] ) ) {
+			$profileToStdout = true;
 		}
 
 		/**
-		 * One-off profile to XHGui.
+		 * Enable request profiling
 		 *
-		 * Set X-Wikimedia-Debug header with 'profile' attribute to instrument a web request
-		 * with XHProf and save the profile to XHGui's MongoDB.
+		 * We can only enable XHProf once, and the first call controls the flags.
+		 * Later calls are ignored. Therefore, always use the same flags.
 		 *
-		 * To find the profile in XHGui, either browse "Recent", or use wgRequestId value
-		 * from the mw.config data in the HTML web response, e.g. by running the
-		 * `mw.config.get('wgRequestId')` snippet in JavaScript. Then look up as follows:
+		 * - XHPROF_FLAGS_NO_BUILTINS: Used by MediaWiki and by XHGui.
+		 *   Doesn't modify output format, but makes output more concise.
 		 *
-		 * https://performance.wikimedia.org/xhgui/?url=WShdaQpAIHwAAF9HkX4AAAAW
+		 * - XHPROF_FLAGS_CPU: Only used by XHGui only.
+		 *   Adds 'cpu' keys to profile entries.
 		 *
-		 * See https://performance.wikimedia.org/xhgui/
-		 * See https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug#Request_profiling
+		 * - XHPROF_FLAGS_MEMORY: Only used by XHGui only.
+		 *   Adds 'mu' and 'pmu' keys to profile entries.
 		 */
-		if ( isset( $xwd['profile'] ) ) {
+		$xhprofFlags = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
+		if ( $profileToStdout
+			|| PHP_SAPI === 'cli'
+			|| $profileToXhgui
+		) {
+			// Enable Xhprof now instead of waiting for MediaWiki to start it later.
+			// This ensures a balanced and complete call graph. (T180183)
+			xhprof_enable( $xhprofFlags );
 
 			/**
-			 * The following classes from composer packages are needed to submit
-			 * profiles to XHGui:
+			 * One-off profile to stdout.
 			 *
-			 * - MongoDate
-			 * - Xhgui_Util
-			 * - Xhgui_Saver::factory
-			 *   - MongoClient
-			 *   - MongoCollection
-			 *   - Xhgui_Saver_Mongo
-			 * - Xhgui_Saver_Mongo::save
-			 *     - Xhgui_Saver_Mongo::getLastProfilingId
-			 *       - MongoId
-			 *     - MongoCollection::insert
+			 * For web: Set X-Wikimedia-Debug (to bypass cache) and query param 'forceprofile=1'.
+			 * For CLI: Set CLI option '--profiler=text'.
 			 *
-			 * Upstream XHGui recommends using alcaeus/mongo-php-adapter, which is a library
-			 * that provides an interface compatible with PHP5's ext-mongo on top of either
-			 * ext-mongo itself (PHP5.3+) or ext-mongodb (PHP5.5+ and PHP7).
-			 * The problem is, we can't use mongo-php-adapter because HHVM supports neither
-			 * of the PHP extensions, and also neither WMF PHP5 nor PHP7 servers have either
-			 * of the PHP extensions installed. Instead we use "mongofill", which is a
-			 * plain PHP implementation originally written to support HHVM, but also works
-			 * fine on PHP5 and PHP7.s
+			 * https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug#Plaintext_request_profile
 			 */
-			require_once __DIR__ . '/../vendor/autoload.php';
+			if ( $profileToStdout || PHP_SAPI === 'cli' ) {
+				$wmgProfiler = [
+					'class'  => 'ProfilerXhprof',
+					'flags'  => $xhprofFlags,
+					'output' => 'text',
+				];
+			}
 
-			// Use a nested register_postsend_function() function, so that the profile
-			// includes MediaWiki's post-send DeferredUpdates as well.
-			// The postsend functions are FIFO, and because this code runs before MediaWiki
-			// we become the first. By using nesting, we become the last instead.
-			register_postsend_function( function () {
-				register_postsend_function( function () {
+			/**
+			 * One-off profile to XHGui.
+			 *
+			 * Set X-Wikimedia-Debug header with 'profile' attribute to instrument a web request
+			 * with XHProf and save the profile to XHGui's MongoDB.
+			 *
+			 * To find the profile in XHGui, either browse "Recent", or use wgRequestId value
+			 * from the mw.config data in the HTML web response, e.g. by running the
+			 * `mw.config.get('wgRequestId')` snippet in JavaScript. Then look up as follows:
+			 *
+			 * https://performance.wikimedia.org/xhgui/?url=WShdaQpAIHwAAF9HkX4AAAAW
+			 *
+			 * See https://performance.wikimedia.org/xhgui/
+			 * See https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug#Request_profiling
+			 */
+			if ( $profileToXhgui ) {
+
+				/**
+				 * The following classes from composer packages are needed to submit
+				 * profiles to XHGui:
+				 *
+				 * - MongoDate
+				 * - Xhgui_Util
+				 * - Xhgui_Saver::factory
+				 *   - MongoClient
+				 *   - MongoCollection
+				 *   - Xhgui_Saver_Mongo
+				 * - Xhgui_Saver_Mongo::save
+				 *     - Xhgui_Saver_Mongo::getLastProfilingId
+				 *       - MongoId
+				 *     - MongoCollection::insert
+				 *
+				 * Upstream XHGui recommends using alcaeus/mongo-php-adapter, which is a library
+				 * that provides an interface compatible with PHP5's ext-mongo on top of either
+				 * ext-mongo itself (PHP5.3+) or ext-mongodb (PHP5.5+ and PHP7).
+				 * The problem is, we can't use mongo-php-adapter because HHVM supports neither
+				 * of the PHP extensions, and also neither WMF PHP5 nor PHP7 servers have either
+				 * of the PHP extensions installed. Instead we use "mongofill", which is a
+				 * plain PHP implementation originally written to support HHVM, but also works
+				 * fine on PHP5 and PHP7.s
+				 */
+				require_once __DIR__ . '/../vendor/autoload.php';
+
+				// XHGui save callback
+				$saveCallback = function () use ( $options ) {
 					$data = [ 'profile' => xhprof_disable() ];
 
 					$sec  = $_SERVER['REQUEST_TIME'];
@@ -191,27 +182,19 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 						'request_date'     => date( 'Y-m-d', $sec ),
 					];
 
-					Xhgui_Saver::factory( [
-						'save.handler' => 'mongodb',
-						'db.host'      => 'mongodb://tungsten.eqiad.wmnet:27017',
-						'db.db'        => 'xhprof',
-						'db.options'   => [],
-					] )->save( $data );
+					Xhgui_Saver::factory( $options['xhgui-conf'] )->save( $data );
+				};
+
+				// Use a nested register_postsend_function() function, so that the profile
+				// includes MediaWiki's post-send DeferredUpdates as well.
+				// The postsend functions are FIFO, and because this code runs before MediaWiki
+				// we become the first. By using nesting, we become the last instead.
+				register_postsend_function( function () use ( $saveCallback ) {
+					register_postsend_function( $saveCallback );
 				} );
-			} );
+			}
 		}
 	}
 
-	unset( $xwd, $xhprofFlags );
+	wmfSetupArcLamp( $options );
 }
-
-register_shutdown_function( function () {
-	wmfArcLampFlush(
-		// Redis host
-		'mwlog1001.eqiad.wmnet',
-		// Redis port
-		6379,
-		// Redis timeout (for socket reads)
-		0.1
-	);
-} );

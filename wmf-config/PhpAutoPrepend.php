@@ -17,4 +17,17 @@
 // https://phabricator.wikimedia.org/T180183
 require_once __DIR__ . '/profiler.php';
 
+wmfSetupProfiler( [
+	'redis-host' => 'mwlog1001.eqiad.wmnet',
+	'redis-port' => 6379,
+	'redis-timeout' => 0.1,
+	'use-xhgui' => true,
+	'xhgui-conf' => [
+		'save.handler' => 'mongodb',
+		'db.host'      => 'mongodb://tungsten.eqiad.wmnet:27017',
+		'db.db'        => 'xhprof',
+		'db.options'   => [],
+	]
+] );
+
 require __DIR__ . '/set-time-limit.php';
