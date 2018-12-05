@@ -4673,6 +4673,12 @@ $wgConf->settings = [
 		'Author' => 102,
 		'Author_talk' => 103,
 	],
+	'+yuewiktionary' => [
+		'Index' => 100,
+		'Index_talk' => 101,
+		'Appendix' => 102,
+		'Appendix_talk' => 103,
+	],
 	'+vowiki' => [
 		'Wikipedia_talk' => NS_PROJECT_TALK,
 	],
@@ -7060,6 +7066,12 @@ $wgConf->settings = [
 		117 => 'تبادلۂ_خیال_فرہنگ_اشارات', // T186393 - Sign gloss talk
 		118 => 'تعمیرنو', // T186393 - Reconstruction
 		119 => 'تبادلۂ_خیال_تعمیرنو', // T186393 - Reconstruction talk
+	],
+	'yuewiktionary' => [
+		100 => '索引', // Index
+		101 => '索引討論', // Index talk
+		102 => '附錄', // Appendix
+		104 => '附錄討論', // Appendix talk
 	],
 	'zhwiktionary' => [
 		100 => '附录', // T31641 - appendix
