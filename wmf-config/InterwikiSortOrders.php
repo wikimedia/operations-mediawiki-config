@@ -33,7 +33,7 @@ return [
 		'sh', 'shn', 'su', 'fi', 'sv', 'tl', 'ta', 'shi', 'kab', 'roa-tara', 'tt', 'te', 'tet',
 		'th', 'ti', 'tg', 'to', 'chr', 'chy', 've', 'tcy', 'tr', 'tk', 'tw', 'tyv', 'din', 'udm', 'bug',
 		'uk', 'ur', 'ug', 'za', 'vec', 'vep', 'vi', 'vo', 'fiu-vro', 'wa', 'zh-classical',
-		'vls', 'war', 'wo', 'wuu', 'ts', 'yi', 'yo', 'zh-yue', 'diq', 'zea', 'bat-smg',
+		'vls', 'war', 'wo', 'wuu', 'ts', 'yi', 'yo', 'yue', 'zh-yue', 'diq', 'zea', 'bat-smg',
 		'zh', 'zh-tw', 'zh-cn'
 	],
 	'alphabetic_revised' => [
@@ -60,7 +60,7 @@ return [
 		'fi', 'sv', 'tl', 'ta', 'shi', 'kab', 'roa-tara', 'tt', 'te', 'tet', 'din', 'th', 'vi',
 		'ti', 'tg', 'tpi', 'tokipona', 'tp', 'chr', 'chy', 've', 'tcy', 'tr', 'tk', 'tw',
 		'tyv', 'udm', 'uk', 'ur', 'ug', 'za', 'vec', 'vep', 'vo', 'fiu-vro', 'wa',
-		'zh-classical', 'vls', 'war', 'wo', 'wuu', 'ts', 'yi', 'yo', 'zh-yue', 'diq',
+		'zh-classical', 'vls', 'war', 'wo', 'wuu', 'ts', 'yi', 'yo', 'yue', 'zh-yue', 'diq',
 		'zea', 'bat-smg', 'zh', 'zh-tw', 'zh-cn'
 	],
 	'alphabetic_sr' => [
@@ -89,7 +89,7 @@ return [
 		'roa-tara', 'tt', 'te', 'tet', 'din', 'th', 'ti', 'vi', 'tg', 'tokipona', 'tp',
 		'tpi', 'chy', 've', 'tcy', 'tr', 'tk', 'tw', 'tyv', 'udm', 'uk', 'ur', 'ug', 'za', 'vec',
 		'vep', 'vo', 'fiu-vro', 'wa', 'vls', 'war', 'wo', 'wuu', 'ts', 'xmf', 'yi',
-		'yo', 'diq', 'zea', 'zh', 'zh-tw', 'zh-cn', 'zh-classical', 'zh-yue', 'bat-smg'
+		'yo', 'diq', 'zea', 'zh', 'zh-tw', 'zh-cn', 'zh-classical', 'yue', 'zh-yue', 'bat-smg'
 	],
 	'alphabetic_fy' => [
 		'aa', 'ab', 'ace', 'ady', 'af', 'ay', 'ak', 'als', 'am', 'an', 'ang', 'ar', 'arc',
@@ -115,7 +115,7 @@ return [
 		'sw', 'szl', 'ta', 'tcy', 'te', 'tet', 'tg', 'th', 'ti', 'ty', 'tk', 'tl', 'tn', 'to',
 		'tokipona', 'tp', 'tpi', 'tr', 'ts', 'tt', 'tum', 'tw', 'tyv', 'udm', 'ug', 'uk', 'ur',
 		'uz', 've', 'vec', 'vep', 'vi', 'vls', 'vo', 'wa', 'war', 'wo', 'wuu', 'xal',
-		'xh', 'xmf', 'za', 'zea', 'zh', 'zh-classical', 'zh-cn', 'zh-yue', 'zh-min-nan',
+		'xh', 'xmf', 'za', 'zea', 'zh', 'zh-classical', 'zh-cn', 'yue', 'zh-yue', 'zh-min-nan',
 		'zh-tw', 'zu'
 	],
 	'alphabetic_svwiktionary' => [
