@@ -7072,7 +7072,7 @@ $wgConf->settings = [
 		100 => '索引', // Index
 		101 => '索引討論', // Index talk
 		102 => '附錄', // Appendix
-		104 => '附錄討論', // Appendix talk
+		103 => '附錄討論', // Appendix talk
 	],
 	'zhwiktionary' => [
 		100 => '附录', // T31641 - appendix
