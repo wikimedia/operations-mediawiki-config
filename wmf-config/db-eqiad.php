@@ -110,7 +110,7 @@ $wgLBFactoryConf = [
 'sectionLoads' => [
 	's1' => [
 		'db1067' => 0,     # C6 2.8TB 160GB, # master
-		'db1080' => 200,    # A2 3.6TB 512GB, api
+		# 'db1080' => 200,    # A2 3.6TB 512GB, api # upgrade mysql
 		'db1083' => 500,    # B1 3.6TB 512GB # candidate master
 		'db1089' => 500,    # C3 3.6TB 512GB
 		'db1099:3311' => 1, # B2 3.6TB 512GB # rc, log: s1 and s8
@@ -287,7 +287,7 @@ $wgLBFactoryConf = [
 			'db1106' => 1,
 		],
 		'api' => [
-			'db1080' => 1,
+			# 'db1080' => 1,
 			'db1114' => 1,
 			'db1119' => 1,
 		],
