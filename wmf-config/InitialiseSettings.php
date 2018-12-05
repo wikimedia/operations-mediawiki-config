@@ -5233,6 +5233,7 @@ $wgConf->settings = [
 	'itwiktionary' => 10, // T24274
 	'jawiki' => 10, // T42270
 	'kowiki' => 10,// T46894
+	'metawiki' => 5, // T211188
 	'nowiki' => 20, // T71302
 	'plwiki' => 10,
 	'ptwiki' => 10, // T29954
