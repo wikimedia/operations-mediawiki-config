@@ -10,16 +10,12 @@
  * executed after output is sent to the browser, so it is expected that error information
  * will not be displayed on the page.
  *
- * See the ALLOWED_ACTIONS constant below for allowed values for "action".
+ * See $allowedActions below for allowed values for "action".
  */
 
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 require MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
 require_once __DIR__ . '/../private/FatalErrorSettings.php';
-
-define( 'ALLOWED_ACTIONS', [
-	'noerror', 'nomethod', 'oom', 'timeout', 'segfault',
-] );
 
 CauseFatalError::go();
 
@@ -27,6 +23,10 @@ CauseFatalError::go();
  * Implementing as a class helps avoid conflicts in an already well-populated global namespace.
  */
 class CauseFatalError {
+	private static $allowedActions = [
+		'noerror', 'nomethod', 'oom', 'timeout', 'segfault',
+	];
+
 	/**
 	 * Checks request parameters and (if possible) performs the requested action
 	 */
@@ -49,7 +49,7 @@ class CauseFatalError {
 		$postSend = $request->getVal( 'postsend', 'no' );
 
 		$paramsOkay = true;
-		$checkActionResult = static::checkParam( $action, 'action', ALLOWED_ACTIONS );
+		$checkActionResult = static::checkParam( $action, 'action', self::$allowedActions );
 		if ( $checkActionResult !== true ) {
 			echo "{$checkActionResult}";
 			$paramsOkay = false;
