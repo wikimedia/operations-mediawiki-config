@@ -10,6 +10,8 @@
 return [
 	'eqiad' => [
 		'udp2log' => 'deployment-fluorine02.eqiad.wmflabs:8420',
+		'xenon' => 'deployment-fluorine02.deployment-prep.eqiad.wmflabs',
+		'xhgui' => false, // Not yet available in Beta Cluster, T180761
 		'statsd' => 'labmon1001.eqiad.wmnet',
 		'search' => [
 			// TODO: remove once search-chi is used everywhere
