@@ -42,14 +42,11 @@ code { font-family: inherit; }
 
 	// Note: The below musn't fatal, as such:
 	// - Use 'include' instead of 'require'.
-	//   This will assign false if the file isn't found.
-	// - Check $dest before use. If $env and/or $services is
-	//   false, the array access will silently yield null.
-	$env = include __DIR__ . '/../wmf-config/env.php';
-	$services = $env['realm'] === 'labs'
-		? include __DIR__ . '/../wmf-config/LabsServices.php'
-		: include __DIR__ . '/../wmf-config/ProductionServices.php';
-	$dest = $services[ $env['dc'] ]['statsd'];
+	// - Check $dest before use.
+	if ( !class_exists( 'Wikimedia\MWConfig\ServiceConfig' ) ) {
+		include __DIR__ . '/../src/ServiceConfig.php';
+	}
+	$dest = Wikimedia\MWConfig\ServiceConfig::getInstance()->getLocalService( 'statsd' );
 	if ( $dest ) {
 		// Increment a counter.
 		$sock = socket_create( AF_INET, SOCK_DGRAM, SOL_UDP );

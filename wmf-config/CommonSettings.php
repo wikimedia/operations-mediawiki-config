@@ -37,6 +37,7 @@
 
 use MediaWiki\Auth\AuthenticationResponse;
 use MediaWiki\Logger\LoggerFactory;
+use Wikimedia\MWConfig\ServiceConfig;
 use Wikimedia\MWConfig\XWikimediaDebug;
 
 # Godforsaken hack to work around problems with the reverse proxy caching changes...
@@ -54,7 +55,7 @@ if ( PHP_SAPI !== 'cli' ) {
 }
 
 # Set up config helper class files
-$wgAutoloadClasses['Wikimedia\MWConfig\XWikimediaDebug'] = __DIR__ . '/../src/XWikimediaDebug.php';
+AutoLoader::$psr4Namespaces['Wikimedia\MWConfig'] = __DIR__ . '/../src';
 
 // Clobber any value in $_SERVER['SERVER_SOFTWARE'] other than Apache, so that
 // IEUrlExtension::haveUndecodedRequestUri() always thinks we're running Apache.
@@ -114,16 +115,8 @@ $wgDBuser = 'wikiuser';
 # wmf-config directory (in common/)
 $wmfConfigDir = "$IP/../wmf-config";
 
-# Include all the service definitions
-# TODO: only include if in production, set up beta separately
-switch ( $wmfRealm ) {
-case 'labs':
-	$wmfAllServices = require "$wmfConfigDir/LabsServices.php";
-	break;
-case 'production':
-default:
-	$wmfAllServices = require "$wmfConfigDir/ProductionServices.php";
-}
+# Get all the service definitions
+$wmfAllServices = ServiceConfig::getInstance()->getAllServices();
 
 # Shorthand when we have no master-slave situation to keep into account
 $wmfLocalServices = $wmfAllServices[$wmfDatacenter];
