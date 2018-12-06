@@ -1630,6 +1630,7 @@ $wgConf->settings = [
 	'viwiktionary' => [ '1.5x' => '/static/images/project-logos/viwiktionary-1.5x.png', '2x' => '/static/images/project-logos/viwiktionary-2x.png' ],
 	'yuewiktionary' => [ '1.5x' => '/static/images/project-logos/yuewiktionary-1.5x.png', '2x' => '/static/images/project-logos/yuewiktionary-2x.png' ],
 	'wawiktionary' => [ '1.5x' => '/static/images/project-logos/wawiktionary-1.5x.png', '2x' => '/static/images/project-logos/wawiktionary-2x.png' ], // T150618
+	'zh_min_nanwiktionary' => [ '1.5x' => '/static/images/project-logos/zh_min_nanwiktionary-1.5x.png', '2x' => '/static/images/project-logos/zh_min_nanwiktionary-2x.png' ], // T150618
 
 	# Wikiquote
 	'bewikiquote' => [ '1.5x' => '/static/images/project-logos/bewikiquote-1.5x.png', '2x' => '/static/images/project-logos/bewikiquote-2x.png' ], // T196134
@@ -1685,6 +1686,7 @@ $wgConf->settings = [
 
 	# Wikiversity
 	'arwikiversity' => [ '1.5x' => '/static/images/project-logos/arwikiversity-1.5x.png', '2x' => '/static/images/project-logos/arwikiversity-2x.png' ],
+	'betawikiversity' => [ '1.5x' => '/static/images/project-logos/betawikiversity-1.5x.png', '2x' => '/static/images/project-logos/betawikiversity-2x.png' ], // T150618
 	'cswikiversity' => [ '1.5x' => '/static/images/project-logos/cswikiversity-1.5x.png', '2x' => '/static/images/project-logos/cswikiversity-2x.png' ], // T150618
 	'dewikiversity' => [ '1.5x' => '/static/images/project-logos/dewikiversity-1.5x.png', '2x' => '/static/images/project-logos/dewikiversity-2x.png' ],
 	'elwikiversity' => [ '1.5x' => '/static/images/project-logos/elwikiversity-1.5x.png', '2x' => '/static/images/project-logos/elwikiversity-2x.png' ], // T150618
@@ -1716,6 +1718,7 @@ $wgConf->settings = [
 	'liwikinews' => [ '1.5x' => '/static/images/project-logos/liwikinews-1.5x.png', '2x' => '/static/images/project-logos/liwikinews-2x.png' ],
 	'ruwikivnews' => [ '1.5x' => '/static/images/project-logos/ruwikinews-1.5x.png', '2x' => '/static/images/project-logos/ruwikinews-2x.png' ], // T150618
 	'srwikinews' => [ '1.5x' => '/static/images/project-logos/srwikinews-1.5x.png', '2x' => '/static/images/project-logos/srwikinews-2x.png' ], // T172255
+	'trwikivnews' => [ '1.5x' => '/static/images/project-logos/trwikinews-1.5x.png', '2x' => '/static/images/project-logos/trwikinews-2x.png' ], // T150618
 
 	# Chapter wikis
 	'amwikimedia' => [ '1.5x' => '/static/images/project-logos/amwikimedia-1.5x.png', '2x' => '/static/images/project-logos/amwikimedia-2x.png' ], // T176042
