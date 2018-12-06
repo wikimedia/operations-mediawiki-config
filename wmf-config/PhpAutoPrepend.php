@@ -16,15 +16,18 @@
 
 // https://phabricator.wikimedia.org/T180183
 require_once __DIR__ . '/profiler.php';
+require_once __DIR__ . '/../src/ServiceConfig.php';
+
+$wmfServiceConfig = Wikimedia\MWConfig\ServiceConfig::getInstance();
 
 wmfSetupProfiler( [
-	'redis-host' => 'mwlog1001.eqiad.wmnet',
+	'redis-host' => $wmfServiceConfig->getLocalService( 'xenon' ),
 	'redis-port' => 6379,
-	'redis-timeout' => 0.1,
-	'use-xhgui' => true,
+	'redis-timeout' => $wmfServiceConfig->getRealm() === 'labs' ? 1 : 0.1,
+	'use-xhgui' => !!$wmfServiceConfig->getLocalService( 'xhgui' ),
 	'xhgui-conf' => [
 		'save.handler' => 'mongodb',
-		'db.host'      => 'mongodb://tungsten.eqiad.wmnet:27017',
+		'db.host'      => $wmfServiceConfig->getLocalService( 'xhgui' ),
 		'db.db'        => 'xhprof',
 		'db.options'   => [],
 	]
