@@ -3088,6 +3088,7 @@ $wgConf->settings = [
 	'trwikisource' => 'Vikikaynak', // T44721
 	'trwiktionary' => 'Vikisözlük',
 	'ttwiki' => 'Википедия',
+	'ttwiktionary' => 'Викисүзлек', // T211312
 	'tyvwiki' => 'Википедия', // T51328
 	'uawikimedia' => 'Вікімедіа',
 	'udmwiki' => 'Википедия', // T49820
