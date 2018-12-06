@@ -13,6 +13,9 @@
  *
  * @see https://secure.php.net/manual/en/ini.core.php#ini.auto-prepend-file
  */
+if ( !defined( 'HHVM_VERSION' ) ) {
+	require_once __DIR__ . '/php7.php';
+}
 
 // https://phabricator.wikimedia.org/T180183
 require_once __DIR__ . '/profiler.php';
