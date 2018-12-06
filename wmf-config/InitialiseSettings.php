@@ -1630,6 +1630,7 @@ $wgConf->settings = [
 	'viwiktionary' => [ '1.5x' => '/static/images/project-logos/viwiktionary-1.5x.png', '2x' => '/static/images/project-logos/viwiktionary-2x.png' ],
 	'yuewiktionary' => [ '1.5x' => '/static/images/project-logos/yuewiktionary-1.5x.png', '2x' => '/static/images/project-logos/yuewiktionary-2x.png' ],
 	'wawiktionary' => [ '1.5x' => '/static/images/project-logos/wawiktionary-1.5x.png', '2x' => '/static/images/project-logos/wawiktionary-2x.png' ], // T150618
+	'zhwiktionary' => [ '1.5x' => '/static/images/project-logos/zhwiktionary-1.5x.png', '2x' => '/static/images/project-logos/zhwiktionary-2x.png' ], // T150618
 
 	# Wikiquote
 	'bewikiquote' => [ '1.5x' => '/static/images/project-logos/bewikiquote-1.5x.png', '2x' => '/static/images/project-logos/bewikiquote-2x.png' ], // T196134
@@ -1711,11 +1712,13 @@ $wgConf->settings = [
 	'pswikivoyage' => [ '1.5x' => '/static/images/project-logos/pswikivoyage-1.5x.png', '2x' => '/static/images/project-logos/pswikivoyage-2x.png' ],
 	'ruwikivoyage' => [ '1.5x' => '/static/images/project-logos/ruwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/ruwikivoyage-2x.png' ], // T150618
 	'viwikivoyage' => [ '1.5x' => '/static/images/project-logos/viwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/viwikivoyage-2x.png' ], // T151570
+	'zhwikivoyage' => [ '1.5x' => '/static/images/project-logos/zhwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/zhwikivoyage-2x.png' ], // T150618
 
 	# Wikinews
 	'liwikinews' => [ '1.5x' => '/static/images/project-logos/liwikinews-1.5x.png', '2x' => '/static/images/project-logos/liwikinews-2x.png' ],
 	'ruwikivnews' => [ '1.5x' => '/static/images/project-logos/ruwikinews-1.5x.png', '2x' => '/static/images/project-logos/ruwikinews-2x.png' ], // T150618
 	'srwikinews' => [ '1.5x' => '/static/images/project-logos/srwikinews-1.5x.png', '2x' => '/static/images/project-logos/srwikinews-2x.png' ], // T172255
+	'zhwikinews' => [ '1.5x' => '/static/images/project-logos/zhwikinews-1.5x.png', '2x' => '/static/images/project-logos/zhwikinews-2x.png' ], // T150618
 
 	# Chapter wikis
 	'amwikimedia' => [ '1.5x' => '/static/images/project-logos/amwikimedia-1.5x.png', '2x' => '/static/images/project-logos/amwikimedia-2x.png' ], // T176042
