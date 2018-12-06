@@ -14,7 +14,7 @@
  */
 
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
-require MWMultiVersion::getMediaWiki( 'includes/WebStart.php', 'mediawiki' );
+require MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
 require_once __DIR__ . '/../private/FatalErrorSettings.php';
 
 define( 'ALLOWED_ACTIONS', [
