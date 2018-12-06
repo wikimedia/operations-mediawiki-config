@@ -1,19 +1,17 @@
 <?php
-global $wmfCluster, $wmfDatacenter, $wmfRealm, $wmgRealm;
 
-$env = require __DIR__ . '/../wmf-config/env.php';
+use Wikimedia\MWConfig\ServiceConfig;
 
-$wmfRealm = $wmgRealm = $env['realm'];
-$wmfDatacenter = $env['dc'];
+require_once __DIR__ . '/../src/ServiceConfig.php';
 
-// TODO: Remove (unused)
-if ( $env['realm'] === 'labs' ) {
-	$wmfCluster = 'labs';
-} else {
-	$wmfCluster = $env['dc'];
-}
+global $wmfDatacenter, $wmfRealm, $wmgRealm;
 
-unset( $env );
+$serviceConfig = ServiceConfig::getInstance();
+
+$wmfRealm = $wmgRealm = $serviceConfig->getRealm();
+$wmfDatacenter = $serviceConfig->getDatacenter();
+
+unset( $serviceConfig );
 
 /**
  * Get the filename for the current realm/datacenter, falling back
