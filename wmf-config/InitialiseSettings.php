@@ -4445,6 +4445,10 @@ $wgConf->settings = [
 		'Портал' => 100, // NS_PORTAL
 		'Разговор_о_порталу' => 101, // NS_PORTAL_TALK
 	],
+	'+shnwiki' => [
+		'WP' => NS_PROJECT,
+		'WT' => NS_PROJECT_TALK, // T210699
+	],
 	'+simplewiki' => [
 		'WP' => NS_PROJECT,
 	],
