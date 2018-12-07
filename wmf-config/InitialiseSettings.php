@@ -5550,7 +5550,6 @@ $wgConf->settings = [
 			'kafka' => false,
 			'sample' => false,
 		],
-		'wikibase-debug' => 'debug',
 		'WikibaseQualityConstraints' => 'debug',
 		'xenon' => 'debug',
 		'XMP' => 'warning', // T89532
