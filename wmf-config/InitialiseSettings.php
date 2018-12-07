@@ -1633,6 +1633,7 @@ $wgConf->settings = [
 	'yuewiktionary' => [ '1.5x' => '/static/images/project-logos/yuewiktionary-1.5x.png', '2x' => '/static/images/project-logos/yuewiktionary-2x.png' ],
 	'wawiktionary' => [ '1.5x' => '/static/images/project-logos/wawiktionary-1.5x.png', '2x' => '/static/images/project-logos/wawiktionary-2x.png' ], // T150618
 	'zhwiktionary' => [ '1.5x' => '/static/images/project-logos/zhwiktionary-1.5x.png', '2x' => '/static/images/project-logos/zhwiktionary-2x.png' ], // T150618
+	'zh_min_nanwiktionary' => [ '1.5x' => '/static/images/project-logos/zh_min_nanwiktionary-1.5x.png', '2x' => '/static/images/project-logos/zh_min_nanwiktionary-2x.png' ], // T150618
 
 	# Wikiquote
 	'bewikiquote' => [ '1.5x' => '/static/images/project-logos/bewikiquote-1.5x.png', '2x' => '/static/images/project-logos/bewikiquote-2x.png' ], // T196134
@@ -1670,6 +1671,7 @@ $wgConf->settings = [
 	'hewikibooks' => [ '1.5x' => '/static/images/project-logos/hewikibooks-1.5x.png', '2x' => '/static/images/project-logos/hewikibooks-2x.png' ], // T201562
 	'huwikibooks' => [ '1.5x' => '/static/images/project-logos/huwikibooks-1.5x.png', '2x' => '/static/images/project-logos/huwikibooks-2x.png' ], // T177506
 	'itwikibooks' => [ '1.5x' => '/static/images/project-logos/itwikibooks-1.5x.png', '2x' => '/static/images/project-logos/itwikibooks-2x.png' ], // T177506
+	'mlwikibooks' => [ '1.5x' => '/static/images/project-logos/mlwikibooks-1.5x.png', '2x' => '/static/images/project-logos/mlwikibooks-2x.png' ], // T150618
 	'ruwikibooks' => [ '1.5x' => '/static/images/project-logos/ruwikibooks-1.5x.png', '2x' => '/static/images/project-logos/ruwikibooks-2x.png' ], // T150618
 	'srwikibooks' => [ '1.5x' => '/static/images/project-logos/srwikibooks-1.5x.png', '2x' => '/static/images/project-logos/srwikibooks-2x.png' ], // T159534
 	'trwikibooks' => [ '1.5x' => '/static/images/project-logos/trwikibooks-1.5x.png', '2x' => '/static/images/project-logos/trwikibooks-2x.png' ], // T177506
@@ -1721,6 +1723,7 @@ $wgConf->settings = [
 	'ruwikinews' => [ '1.5x' => '/static/images/project-logos/ruwikinews-1.5x.png', '2x' => '/static/images/project-logos/ruwikinews-2x.png' ], // T150618
 	'srwikinews' => [ '1.5x' => '/static/images/project-logos/srwikinews-1.5x.png', '2x' => '/static/images/project-logos/srwikinews-2x.png' ], // T172255
 	'zhwikinews' => [ '1.5x' => '/static/images/project-logos/zhwikinews-1.5x.png', '2x' => '/static/images/project-logos/zhwikinews-2x.png' ], // T150618
+	'trwikivnews' => [ '1.5x' => '/static/images/project-logos/trwikinews-1.5x.png', '2x' => '/static/images/project-logos/trwikinews-2x.png' ], // T150618
 
 	# Chapter wikis
 	'amwikimedia' => [ '1.5x' => '/static/images/project-logos/amwikimedia-1.5x.png', '2x' => '/static/images/project-logos/amwikimedia-2x.png' ], // T176042
