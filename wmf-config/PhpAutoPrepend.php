@@ -33,7 +33,9 @@ wmfSetupProfiler( [
 		'db.host'      => $wmfServiceConfig->getLocalService( 'xhgui' ),
 		'db.db'        => 'xhprof',
 		'db.options'   => [],
-	]
+	],
+	'excimer-production-period' => 60,
+	'excimer-single-period' => 0.01,
 ] );
 
 require __DIR__ . '/set-time-limit.php';
