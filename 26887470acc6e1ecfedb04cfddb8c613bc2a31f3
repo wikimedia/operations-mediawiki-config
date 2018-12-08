@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "b822fb33_7725a526",
+        "filename": "errorpages/hhvm-fatal-error.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-12-08T01:02:18Z",
+      "side": 1,
+      "message": "I think being resilient against unknown is important here, but just checking whether require_once could suffice. I suppose maybe the class could exist by other means, but I\u0027m not sure if that was the motivation. Either way is fine.",
+      "range": {
+        "startLine": 47,
+        "startChar": 2,
+        "endLine": 47,
+        "endChar": 9
+      },
+      "revId": "26887470acc6e1ecfedb04cfddb8c613bc2a31f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2a42a589_12e9fb99",
         "filename": "src/ServiceConfig.php",
         "patchSetId": 2
