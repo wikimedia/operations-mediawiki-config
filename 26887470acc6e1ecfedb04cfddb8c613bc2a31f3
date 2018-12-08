@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2a42a589_12e9fb99",
+        "filename": "src/ServiceConfig.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-12-08T00:54:43Z",
+      "side": 1,
+      "message": "We\u0027ve been holding off on using namepaces in wmf-config for a while.\n\nI think it makes sense to start using them now and hence for bike-shedding to commence.\n\nWould recommend that the name be clearly WMF-specific, and reside somewhere under Wikimedia\\.\n\nE.g. Wikimedia\\MWConfig or Wikimedia\\WmfConfig.",
+      "range": {
+        "startLine": 3,
+        "startChar": 10,
+        "endLine": 3,
+        "endChar": 12
+      },
+      "revId": "26887470acc6e1ecfedb04cfddb8c613bc2a31f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
