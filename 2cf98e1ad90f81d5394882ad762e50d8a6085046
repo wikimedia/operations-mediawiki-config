@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a3a5687_12bba792",
+        "filename": "wmf-config/profiler.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 311,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-12-08T01:10:54Z",
+      "side": 1,
+      "message": "Afaik there are cases where this isn\u0027t set, as evidenced by Logstash/mwlog1001 entries that have a hexidecimal format from WebRequest::getRequestId() instead of the base64 format from Apache unique_id. I don\u0027t recall correctly what they had in common, but I think it\u0027s job runner HTTP requests and presumably CLI --profile as well.",
+      "range": {
+        "startLine": 311,
+        "startChar": 13,
+        "endLine": 311,
+        "endChar": 34
+      },
+      "revId": "2cf98e1ad90f81d5394882ad762e50d8a6085046",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
