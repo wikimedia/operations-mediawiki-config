@@ -8193,7 +8193,7 @@ $wgConf->settings = [
 
 # wgRateLimits @{
 'wgRateLimits' => [
-	'default' => [
+	'+default' => [
 		'move' => [
 			'newbie' => [ 2, 120 ],
 			# To limit high-rate move page attacks on smaller wikis
