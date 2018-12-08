@@ -8226,6 +8226,10 @@ $wgConf->settings = [
 			'newbie' => [ 5, 86400 ], // 5 per day for non-autoconfirmed
 			'user' => [ 20, 86400 ], // 20 per day for users
 		],
+		'changeemail' => [
+			'ip-all' => [ 10, 3600 ],
+			'user' => [ 4, 86400 ]
+		],
 		// For expanded rollback permissions...
 		'rollback' => [
 			'user' => [ 10, 60 ], // was [ 5, 60 ], -- brion 2008-05-15
