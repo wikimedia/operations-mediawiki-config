@@ -397,9 +397,83 @@ function wmfLabsSettings() {
 		],
 
 		'wmgUseQuickSurveys' => [
-			'default' => true,
+			'default' => false,
+			'enwiki' => true
 		],
 
+		'wgQuickSurveysConfig' => [
+			'default' => [
+				[
+					'name' => 'drink-survey',
+					'type' => 'internal',
+					'question' => 'anne-survey-question',
+					'answers' => [
+						'anne-survey-answer-one',
+						'anne-survey-answer-two',
+						'anne-survey-answer-three',
+						'anne-survey-answer-four'
+					],
+					'schema' => 'QuickSurveysResponses',
+					'enabled' => true,
+					'coverage' => 0,
+					'description' => 'anne-survey-description',
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable', 'beta' ],
+					],
+				],
+				[
+					'name' => 'internal example survey',
+					'type' => 'internal',
+					'question' => 'ext-quicksurveys-example-internal-survey-question',
+					'answers' => [
+						'ext-quicksurveys-example-internal-survey-answer-positive',
+						'ext-quicksurveys-example-internal-survey-answer-neutral',
+						'ext-quicksurveys-example-internal-survey-answer-negative',
+					],
+					'schema' => 'QuickSurveysResponses',
+					'enabled' => true,
+					'coverage' => 0,
+					'description' => 'ext-quicksurveys-example-internal-survey-description',
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable', 'beta' ],
+					],
+				],
+				[
+					'name' => 'external example survey',
+					'type' => 'external',
+					'question' => 'ext-quicksurveys-example-external-survey-question',
+					'description' => 'ext-quicksurveys-example-external-survey-description',
+					'link' => 'ext-quicksurveys-example-external-survey-link',
+					'privacyPolicy' => 'ext-quicksurveys-example-external-survey-privacy-policy',
+					'coverage' => 0,
+					'enabled' => true,
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable', 'beta' ],
+					],
+				],
+			],
+			'enwiki' => [
+				// T209882
+				[
+					'enabled' => true,
+					'type' => 'external',
+					'name' => 'Reader-trust-survey-en-v1',
+					'description' => 'Reader-trust-1-description',
+					'link' => 'Reader-trust-1-link',
+					'instanceTokenParameterName' => 'token',
+					'question' => 'Reader-trust-1-message',
+					'privacyPolicy' => 'Reader-trust-1-privacy',
+					'coverage' => 1,  // 1 out of 1
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ],
+					],
+				],
+			],
+		],
 		'wmgUseSentry' => [
 			'default' => true,
 		],
@@ -477,6 +551,10 @@ function wmfLabsSettings() {
 		],
 
 		'wgMediaInfoEnable' => [
+			'commonswiki' => true,
+		],
+
+		'wmgEnhancedRecentChanges' => [
 			'commonswiki' => true,
 		],
 
@@ -812,8 +890,71 @@ function wmfLabsSettings() {
 			'enwiki' => true,
 			'kowiki' => true,
 		],
+		'wgGEHelpPanelEnabled' => [
+			'enwiki' => true,
+			'kowiki' => true,
+		],
+		'wgGEHelpPanelHelpDeskTitle' => [
+			'enwiki' => 'Wikipedia:Help_desk',
+			'kowiki' => '위키백과:도움말',
+		],
+		'wgGEHelpPanelViewMoreTitle' => [
+			'enwiki' => 'Help:Contents',
+			'kowiki' => '위키백과:도움말',
+		],
+		'wgGEHelpPanelLinks' => [
+			'enwiki' => [
+				[
+					'title' => 'Help:Contents',
+					'text' => 'The most helpful help link',
+				]
+			],
+			'kowiki' => [
+				[
+					'title' => '위키백과:도움말',
+					'text' => '도움말',
+				]
+			],
+		],
 		'wgWelcomeSurveyPrivacyPolicyUrl' => [
 			'kowiki' => 'https://foundation.wikimedia.org/wiki/%EC%83%88_%EC%82%AC%EC%9A%A9%EC%9E%90_%ED%99%98%EC%98%81_%EC%84%A4%EB%AC%B8_%EA%B0%9C%EC%9D%B8_%EC%A0%95%EB%B3%B4_%EB%B3%B4%ED%98%B8_%EC%A0%95%EC%B1%85',
+		],
+		'wgWelcomeSurveyExperimentalGroups' => [
+			'kowiki' => [
+				'beta_no_survey' => [
+					'range' => '0-3',
+					'questions' => [],
+				],
+				'beta_specialpage' => [
+					'format' => 'specialpage',
+					'range' => '4-6',
+					'questions' => [
+						'reason',
+						'reason-other',
+						'edited',
+						'topics',
+						'topics-other-nojs',
+						'topics-other-js',
+						'email',
+						'mentor-info',
+						'mentor',
+					],
+				],
+				'beta_popup' => [
+					'format' => 'popup',
+					'range' => '7-9',
+					'nojs-fallback' => 'beta_specialpage',
+					'questions' => [
+						'reason',
+						'edited',
+						'topics',
+						'topics-other-js',
+						'email',
+						'mentor-info',
+						'mentor',
+					]
+				]
+			]
 		],
 		'wgEnablePartialBlocks' => [
 			'default' => true,

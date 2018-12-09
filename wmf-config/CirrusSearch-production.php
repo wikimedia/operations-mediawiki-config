@@ -19,32 +19,64 @@
 // help things along.
 $wgCirrusSearchMasterTimeout = '2m';
 
+$cirrusConfigUseHhvmPool = function ( $hostConfig, $pool ) {
+	if ( !defined( 'HHVM_VERSION' ) ) {
+		return $hostConfig;
+	}
+	if ( is_array( $hostConfig ) ) {
+		if ( isset( $hostConfig['transport'] ) && $hostConfig['transport'] === 'Https' ) {
+			$hostConfig['transport'] = 'CirrusSearch\\Elastica\\PooledHttps';
+			$hostConfig['config'] = [
+				'pool' => $pool
+			];
+		}
+		return $hostConfig;
+	}
+	return [
+		'transport' => 'CirrusSearch\\Elastica\\PooledHttps',
+		'port' => '9243',
+		'host' => $hostConfig,
+		'config' => [
+			'pool' => $pool,
+		],
+	];
+};
+
 $wgCirrusSearchClusters = [
-	'eqiad' => $wmfAllServices['eqiad']['search'],
-	'codfw' => $wmfAllServices['codfw']['search'],
+	# Uses the 'default' group and replica set to the key name
+	'eqiad' => $cirrusConfigUseHhvmPool( $wmfAllServices['eqiad']['search-chi'], 'cirrus-eqiad' ),
+	'codfw' => $cirrusConfigUseHhvmPool( $wmfAllServices['codfw']['search-chi'], 'cirrus-codfw' ),
+	'eqiad-temp-psi' => $wmfAllServices['eqiad']['search-psi'],
+	'codfw-temp-psi' => $wmfAllServices['eqiad']['search-psi'],
+	'eqiad-temp-omega' => $wmfAllServices['eqiad']['search-omega'],
+	'codfw-temp-omega' => $wmfAllServices['eqiad']['search-omega'],
+
+	'eqiad-chi' => $cirrusConfigUseHhvmPool( $wmfAllServices['eqiad']['search-chi'], 'cirrus-eqiad' ) + [ 'group' => 'chi', 'replica' => 'eqiad' ],
+	'codfw-chi' => $cirrusConfigUseHhvmPool( $wmfAllServices['codfw']['search-chi'], 'cirrus-codfw' ) + [ 'group' => 'chi', 'replica' => 'codfw' ],
+	'eqiad-psi' => $cirrusConfigUseHhvmPool( $wmfAllServices['eqiad']['search-psi'], 'cirrus-eqiad' ) + [ 'group' => 'psi', 'replica' => 'eqiad' ],
+	'codfw-psi' => $cirrusConfigUseHhvmPool( $wmfAllServices['codfw']['search-psi'], 'cirrus-codfw' ) + [ 'group' => 'psi', 'replica' => 'codfw' ],
+	'eqiad-omega' => $cirrusConfigUseHhvmPool( $wmfAllServices['eqiad']['search-omega'], 'cirrus-eqiad' ) + [ 'group' => 'omega', 'replica' => 'eqiad' ],
+	'codfw-omega' => $cirrusConfigUseHhvmPool( $wmfAllServices['codfw']['search-omega'], 'cirrus-codfw' ) + [ 'group' => 'omega', 'replica' => 'codfw' ],
 ];
-if ( defined( 'HHVM_VERSION' ) ) {
-	$wgCirrusSearchClusters['eqiad'] = array_map( function ( $host ) {
-		return [
-			'transport' => 'CirrusSearch\\Elastica\\PooledHttps',
-			'port' => '9243',
-			'host' => $host,
-			'config' => [
-				'pool' => 'cirrus-eqiad',
-			],
-		];
-	}, $wgCirrusSearchClusters['eqiad'] );
-	$wgCirrusSearchClusters['codfw'] = array_map( function ( $host ) {
-		return [
-			'transport' => 'CirrusSearch\\Elastica\\PooledHttps',
-			'port' => '9243',
-			'host' => $host,
-			'config' => [
-				'pool' => 'cirrus-codfw',
-			],
-		];
-	}, $wgCirrusSearchClusters['codfw'] );
-}
+
+unset( $cirrusConfigUseHhvmPool );
+
+# Transitional hack to write to the proper cluster
+$wgCirrusSearchWriteClusters = array_map( function ( $v ) use ( $wgDBname ) {
+	if ( is_array( $v ) ) {
+		$groups = $v['groups'];
+		$replica = $v['replica'];
+		$group = $groups[crc32( $wgDBname ) % count( $groups )];
+		return "$replica-temp-$group";
+	}
+	return $v;
+}, $wgCirrusSearchWriteClusters );
+
+$wgCirrusSearchReplicaGroup = $wmgCirrusSearchReplicaGroup;
+
+# Limit the sanitity check to eqiad&codfw
+# (not temp clusters or upcoming cloud replica)
+$wgCirrusSearchSanityCheck = [ 'eqiad', 'codfw' ];
 
 $wgCirrusSearchConnectionAttempts = 3;
 
