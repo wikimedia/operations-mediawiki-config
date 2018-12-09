@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c32748ec_b6f3d19c",
+        "filename": "tests/InitialiseSettingsTest.php",
+        "patchSetId": 25
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-12-09T18:00:46Z",
+      "side": 1,
+      "message": "I think it\u0027s okay to have a few exceptions, but can you also document what these exceptions are for? (If you know?)",
+      "range": {
+        "startLine": 66,
+        "startChar": 43,
+        "endLine": 66,
+        "endChar": 62
+      },
+      "revId": "7f2251014eba654d5493999239c1e39e6152f205",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
