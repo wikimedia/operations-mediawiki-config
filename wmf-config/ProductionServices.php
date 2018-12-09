@@ -57,7 +57,36 @@ $services = [
 		// elasticsearch must be accessed by hostname,
 		// for SSL certificate verification.
 		'search' => [
-			'search.svc.eqiad.wmnet',
+			// TODO remove in favor of search-chi
+			[
+				'host' => 'search.svc.eqiad.wmnet',
+				'transport' => 'Https',
+				'port' => 9243,
+			]
+		],
+
+		'search-chi' => [
+			[
+				'host' => 'search.svc.eqiad.wmnet',
+				'transport' => 'Https',
+				'port' => 9243,
+			]
+		],
+
+		'search-psi' => [
+			[
+				'host' => 'search.svc.eqiad.wmnet',
+				'transport' => 'Https',
+				'port' => 9643,
+			]
+		],
+
+		'search-omega' => [
+			[
+				'host' => 'search.svc.eqiad.wmnet',
+				'transport' => 'Https',
+				'port' => 9443,
+			]
 		],
 
 		// each DC has its own urldownloader for latency reasons
@@ -84,7 +113,35 @@ $services = [
 	],
 	'codfw' => $common + [
 		'search' => [
-			'search.svc.codfw.wmnet',
+			// TODO remove in favor of search-chi
+			[
+				'host' => 'search.svc.codfw.wmnet',
+				'transport' => 'Https',
+				'port' => 9243,
+			]
+		],
+
+		'search-chi' => [
+			[
+				'host' => 'search.svc.codfw.wmnet',
+				'transport' => 'Https',
+				'port' => 9243,
+			]
+		],
+
+		'search-psi' => [
+			[
+				'host' => 'search.svc.codfw.wmnet',
+				'transport' => 'Https',
+				'port' => 9643,
+			]
+		],
+		'search-omega' => [
+			[
+				'host' => 'search.svc.codfw.wmnet',
+				'transport' => 'Https',
+				'port' => 9443,
+			]
 		],
 
 		'urldownloader' => 'http://url-downloader.codfw.wikimedia.org:8080',

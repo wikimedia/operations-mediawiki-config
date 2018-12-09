@@ -1669,7 +1669,7 @@ if ( $wmgUseApiFeatureUsage ) {
 	wfLoadExtension( 'ApiFeatureUsage' );
 	$wgApiFeatureUsageQueryEngineConf = [
 		'class' => 'ApiFeatureUsageQueryEngineElastica',
-		'serverList' => $wmfLocalServices['search'],
+		'serverList' => $wmfLocalServices['search-chi'],
 	];
 }
 
@@ -2101,8 +2101,17 @@ if ( $wmgWatchlistDefault ) {
 $wgDefaultUserOptions['enotifminoredits'] = $wmgEnotifMinorEditsUserDefault;
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
 
-$wgDefaultUserOptions['usenewrc'] = 0;
-$wgDefaultUserOptions['extendwatchlist'] = 0;
+if ( $wmgEnhancedRecentChanges ) {
+	$wgDefaultUserOptions['usenewrc'] = 1;
+} else {
+	$wgDefaultUserOptions['usenewrc'] = 0;
+}
+
+if ( $wmgEnhancedWatchlist ) {
+	$wgDefaultUserOptions['extendwatchlist'] = 1;
+} else {
+	$wgDefaultUserOptions['extendwatchlist'] = 0;
+}
 
 // ContributionTracking for handling PayPal redirects
 if ( $wgUseContributionTracking ) {
@@ -2576,11 +2585,11 @@ if ( $wmgUseTranslate ) {
 		// NOTE: these settings are also used for the labs cluster
 		// where codfw may not be available
 		$wgTranslateClustersAndMirrors = [
-			'eqiad' => isset( $wmfAllServices['codfw']['search'] ) ? [ 'codfw' ] : [],
-			'codfw' => isset( $wmfAllServices['eqiad']['search'] ) ? [ 'eqiad' ] : [],
+			'eqiad' => isset( $wmfAllServices['codfw']['search-chi'] ) ? [ 'codfw' ] : [],
+			'codfw' => isset( $wmfAllServices['eqiad']['search-chi'] ) ? [ 'eqiad' ] : [],
 		];
 		foreach ( $wgTranslateClustersAndMirrors as $cluster => $mirrors ) {
-			if ( !isset( $wmfAllServices[$cluster]['search'] ) ) {
+			if ( !isset( $wmfAllServices[$cluster]['search-chi'] ) ) {
 				continue;
 			}
 			$wgTranslateTranslationServices[$cluster] = [
@@ -2592,13 +2601,16 @@ if ( $wmgUseTranslate ) {
 				'cutoff' => 0.65,
 				'use_wikimedia_extra' => true,
 				'config' => [
-					'servers' => array_map( function ( $host ) {
+					'servers' => array_map( function ( $hostConfig ) {
+						if ( is_array( $hostConfig ) ) {
+							return $hostConfig;
+						}
 						return [
-							'host' => $host,
+							'host' => $hostConfig,
 							'port' => 9243,
 							'transport' => 'Https',
 						];
-					}, $wmfAllServices[$cluster]['search'] ),
+					}, $wmfAllServices[$cluster]['search-chi'] ),
 				],
 				'mirrors' => $mirrors,
 			];
@@ -2751,9 +2763,9 @@ if ( $wmgUseWikimediaShopLink ) {
 	 */
 	$wgHooks['SkinBuildSidebar'][] = function ( $skin, &$sidebar ) {
 		$sidebar['navigation'][] = [
-			'text'  => $skin->msg( 'wikimediashoplink-linktext' ),
+			'text'  => $skin->msg( 'wikimediashoplink-linktext' )->text(),
 			'href'  => '//shop.wikimedia.org',
-			'title' => $skin->msg( 'wikimediashoplink-link-tooltip' ),
+			'title' => $skin->msg( 'wikimediashoplink-link-tooltip' )->text(),
 			'id'    => 'n-shoplink',
 		];
 		return true;
