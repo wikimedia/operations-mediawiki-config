@@ -2755,6 +2755,12 @@ $wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetUploadMetadataJob';
 $wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetUploadMediafileJob';
 $wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetGWTFileBackendCleanupJob';
 
+if ( $wmgUseEducationProgram ) {
+	$wgExtraNamespaces[446] = 'Education_Program';
+	$wgExtraNamespaces[447] = 'Educaton_Program_talk';
+	$wgNamespacesWithSubpages[447] = true;
+}
+
 if ( $wmgUseWikimediaShopLink ) {
 	/**
 	 * @param Skin $skin
