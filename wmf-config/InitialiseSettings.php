@@ -1649,6 +1649,7 @@ $wgConf->settings = [
 	'plwikiquote' => [ '1.5x' => '/static/images/project-logos/plwikiquote-1.5x.png', '2x' => '/static/images/project-logos/plwikiquote-2x.png' ], // T150618
 	'ruwikiquote' => [ '1.5x' => '/static/images/project-logos/ruwikiquote-1.5x.png', '2x' => '/static/images/project-logos/ruwikiquote-2x.png' ], // T197508
 	'slwikiquote' => [ '1.5x' => '/static/images/project-logos/slwikiquote-1.5x.png', '2x' => '/static/images/project-logos/slwikiquote-2x.png' ], // T150618
+    'slwikiquote' => [ '1.5x' => '/static/images/project-logos/slwikiquote-1.5x.png', '2x' => '/static/images/project-logos/slwikiquote-2x.png' ], // T150618
 	'sqwikiquote' => [ '1.5x' => '/static/images/project-logos/sqwikiquote-1.5x.png', '2x' => '/static/images/project-logos/sqwikiquote-2x.png' ], // T150618
 	'srwikiquote' => [ '1.5x' => '/static/images/project-logos/srwikiquote-1.5x.png', '2x' => '/static/images/project-logos/srwikiquote-2x.png' ], // T150618 and T168444
 	'suwikiquote' => [ '1.5x' => '/static/images/project-logos/suwikiquote-1.5x.png', '2x' => '/static/images/project-logos/suwikiquote-2x.png' ], // T150618
@@ -1716,6 +1717,7 @@ $wgConf->settings = [
 	'liwikinews' => [ '1.5x' => '/static/images/project-logos/liwikinews-1.5x.png', '2x' => '/static/images/project-logos/liwikinews-2x.png' ],
 	'ruwikinews' => [ '1.5x' => '/static/images/project-logos/ruwikinews-1.5x.png', '2x' => '/static/images/project-logos/ruwikinews-2x.png' ], // T150618
 	'srwikinews' => [ '1.5x' => '/static/images/project-logos/srwikinews-1.5x.png', '2x' => '/static/images/project-logos/srwikinews-2x.png' ], // T172255
+    'frwikinews' => [ '1.5x' => '/static/images/project-logos/frwikinews-1.5x.png', '2x' => '/static/images/project-logos/frwikinews-2x.png' ], // T150618
 
 	# Chapter wikis
 	'amwikimedia' => [ '1.5x' => '/static/images/project-logos/amwikimedia-1.5x.png', '2x' => '/static/images/project-logos/amwikimedia-2x.png' ], // T176042
@@ -1743,6 +1745,7 @@ $wgConf->settings = [
 	'officewiki' => [ '1.5x' => '/static/images/project-logos/officewiki-1.5x.png', '2x' => '/static/images/project-logos/officewiki-2x.png' ],
 	'techconductwiki' => [ '1.5x' => '/static/images/project-logos/techconductwiki-1.5x.png', '2x' => '/static/images/project-logos/techconductwiki-2x.png' ],
 	'test2wiki' => [ '1.5x' => '/static/images/project-logos/test2wiki-1.5x.png', '2x' => '/static/images/project-logos/test2wiki-2x.png' ],
+	'testwiki' => [ '1.5x' => '/static/images/project-logos/wikitest-1.5x.png', '2x' => '/static/images/project-logos/wikitest-2x.png' ],
 	'votewiki' => [ '1.5x' => '/static/images/project-logos/votewiki-1.5x.png', '2x' => '/static/images/project-logos/votewiki-2x.png' ],
 	'wikimania2018wiki' => [ '1.5x' => '/static/images/project-logos/wikimania2018wiki-1.5x.png', '2x' => '/static/images/project-logos/wikimania2018wiki-2x.png' ], // T194340
 	'wikimaniawiki' => [ '1.5x' => '/static/images/project-logos/wikimaniawiki-1.5x.png', '2x' => '/static/images/project-logos/wikimaniawiki-2x.png' ], // T194340
