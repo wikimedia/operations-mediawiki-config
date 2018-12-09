@@ -1693,7 +1693,7 @@ function wfGetPrivilegedGroups( $username, $user ) {
 		$groups = array_intersect(
 			array_merge(
 				$wmgPrivilegedGroups,
-				[ 'abusefilter-helper', 'founder', 'global-interface-editor', 'global-sysop', 'new-wikis-importer', 'ombudsman', 'staff', 'steward', 'sysadmin' ]
+				[ 'abusefilter-helper', 'founder', 'global-deleter', 'global-interface-editor', 'global-sysop', 'new-wikis-importer', 'ombudsman', 'staff', 'steward', 'sysadmin', 'wmf-researcher' ]
 			),
 			array_merge( $centralUser->getGlobalGroups(), $centralUser->getLocalGroups() )
 		);
