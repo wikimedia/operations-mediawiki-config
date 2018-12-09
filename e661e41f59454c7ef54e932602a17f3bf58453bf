@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3ea85f8f_4e1afc5f",
+        "filename": "tests/DBList.php",
+        "patchSetId": 21
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-12-09T02:14:36Z",
+      "side": 1,
+      "message": "This re-reads a file each time I think. Consider using getLists()[$dblist] instead which has a static cache, or perhaps in a separate commit something like a getList() method that shares the cache in the class.",
+      "range": {
+        "startLine": 58,
+        "startChar": 28,
+        "endLine": 58,
+        "endChar": 69
+      },
+      "revId": "e661e41f59454c7ef54e932602a17f3bf58453bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
