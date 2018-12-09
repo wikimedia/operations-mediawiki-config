@@ -19,6 +19,15 @@ class WmfConfigServicesTest extends PHPUnit\Framework\TestCase {
 		];
 	}
 
+	public static function getServicesFiles() {
+		$wmfConfigDir = dirname( __DIR__ ) . '/wmf-config';
+
+		return [
+			'production' => "$wmfConfigDir/ProductionServices.php",
+			'labs' => "$wmfConfigDir/LabsServices.php",
+		];
+	}
+
 	/**
 	 * Verify that the file parses correctly, without warnings,
 	 * and returns an array with exactly the keys we expect,
@@ -41,26 +50,57 @@ class WmfConfigServicesTest extends PHPUnit\Framework\TestCase {
 	 *
 	 * @dataProvider provideServicesFiles
 	 */
-	public function testCompatibility( $file ) {
+	public function testIntraRealmCompatibility( $file ) {
 		$allSubkeys = [];
 
-		$allServices = require $file;
-		foreach ( $allServices as $dc => $services ) {
+		$realm = require $file;
+		foreach ( $realm as $dc => $dcServices ) {
 			$allSubkeys = array_merge(
 				$allSubkeys,
-				array_keys( $services )
+				array_keys( $dcServices )
 			);
 		}
 
 		// Normalize
 		$allSubkeys = array_values( array_unique( $allSubkeys ) );
 
-		foreach ( $allServices as $dc => $services ) {
+		foreach ( $realm as $dc => $dcServices ) {
 			$this->assertSameValues(
 				$allSubkeys,
-				array_keys( $services ),
+				array_keys( $dcServices ),
 				"service keys for $dc"
 			);
+		}
+	}
+
+	/**
+	 * Verify that each DC key contains the same set of services.
+	 */
+	public function testCrossRealmCompatibility() {
+		$allSubkeys = [];
+		$realms = [];
+		foreach ( self::getServicesFiles() as $label => $file ) {
+			$realm = require $file;
+			foreach ( $realm as $dc => $services ) {
+				$allSubkeys = array_merge(
+					$allSubkeys,
+					array_keys( $services )
+				);
+			}
+			$realms[$label] = $realm;
+		}
+
+		// Normalize
+		$allSubkeys = array_values( array_unique( $allSubkeys ) );
+
+		foreach ( $realms as $label => $realm ) {
+			foreach ( $realm as $dc => $dcServices ) {
+				$this->assertSameValues(
+					$allSubkeys,
+					array_keys( $dcServices ),
+					"service keys for $label/$dc"
+				);
+			}
 		}
 	}
 
