@@ -22,6 +22,30 @@
       "revId": "e661e41f59454c7ef54e932602a17f3bf58453bf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f9215fc_0af6c631",
+        "filename": "tests/DBList.php",
+        "patchSetId": 21
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2018-12-09T13:05:50Z",
+      "side": 1,
+      "message": "Thanks, using the first approach, as it is simplier for this time-being.",
+      "parentUuid": "3ea85f8f_4e1afc5f",
+      "range": {
+        "startLine": 58,
+        "startChar": 28,
+        "endLine": 58,
+        "endChar": 69
+      },
+      "revId": "e661e41f59454c7ef54e932602a17f3bf58453bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
