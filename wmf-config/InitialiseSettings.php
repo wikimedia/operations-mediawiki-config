@@ -5408,6 +5408,10 @@ $wgConf->settings = [
 	'default' => $wmfLocalServices['logstash'],
 ],
 
+'wmgLogstashUseCee' => [
+	'default' => false,
+],
+
 # wmgKafkaServers @{
 // Kafka servers. Use false to disable all kafka logging.
 'wmgKafkaServers' => [

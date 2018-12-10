@@ -49,7 +49,7 @@ class LoggingTest extends WgConfTestCase {
 				[ 'failuregroup|udp2log-debug-sampled-1000' ],
 			],
 
-			'false yields backhole' => [
+			'false yields blackhole' => [
 				false,
 				[ 'blackhole' ],
 			],
@@ -68,6 +68,7 @@ class LoggingTest extends WgConfTestCase {
 		$wmgLogAuthmanagerMetrics = false;
 		$wmfUdp2logDest = 'localhost';
 		$wmgLogstashServers = [ 'localhost' ];
+		$wmgLogstashUseCee = false;
 		$wmgKafkaServers = [ 'localhost' ];
 		$wmgMonologChannels = [ 'test' => $channelConfig ];
 		$wmfRealm = 'production';
