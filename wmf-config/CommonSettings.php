@@ -451,7 +451,7 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 			$group = 'default'; // Covers 'user' in password policies
 		}
 
-		$wgPasswordPolicy['policies'][$group]['MinimalPasswordLength'] = 8;
+		$wgPasswordPolicy['policies'][$group]['MinimalPasswordLength'] = 10;
 		$wgPasswordPolicy['policies'][$group]['MinimumPasswordLengthToLogin'] = 1;
 		$wgPasswordPolicy['policies'][$group]['PasswordCannotBePopular'] = 10000;
 	}
@@ -468,7 +468,7 @@ if ( $wmgUseCentralAuth ) {
 		}
 
 		$privilegedPolicy = [
-			'MinimalPasswordLength' => 8,
+			'MinimalPasswordLength' => 10,
 			'MinimumPasswordLengthToLogin' => 1,
 			'PasswordCannotBePopular' => 10000,
 		];
@@ -1593,7 +1593,7 @@ if ( $wmgUseCentralAuth ) {
 	// Require 8-byte password for staff. Set MinimumPasswordLengthToLogin
 	// to 8 also, once staff have time to update.
 	$wgCentralAuthGlobalPasswordPolicies['staff'] = [
-		'MinimalPasswordLength' => 8,
+		'MinimalPasswordLength' => 10,
 		'MinimumPasswordLengthToLogin' => 1,
 		'PasswordCannotMatchUsername' => true,
 		'PasswordCannotBePopular' => PHP_INT_MAX,
@@ -1601,7 +1601,7 @@ if ( $wmgUseCentralAuth ) {
 
 	// WMF Staff and two volunteers
 	$wgCentralAuthGlobalPasswordPolicies['sysadmin'] = [
-		'MinimalPasswordLength' => 8,
+		'MinimalPasswordLength' => 10,
 		'MinimumPasswordLengthToLogin' => 1,
 		'PasswordCannotMatchUsername' => true,
 		'PasswordCannotBePopular' => PHP_INT_MAX,
@@ -1609,7 +1609,7 @@ if ( $wmgUseCentralAuth ) {
 
 	// See T104371
 	$wgCentralAuthGlobalPasswordPolicies['steward'] = [
-		'MinimalPasswordLength' => 8,
+		'MinimalPasswordLength' => 10,
 		'MinimumPasswordLengthToLogin' => 1,
 		'PasswordCannotMatchUsername' => true,
 	];
@@ -1619,7 +1619,7 @@ if ( $wmgUseCentralAuth ) {
 		'new-wikis-importer', 'ombudsman', 'founder' ] as $group
 	) {
 		$wgCentralAuthGlobalPasswordPolicies[$group] = [
-			'MinimalPasswordLength' => 8,
+			'MinimalPasswordLength' => 10,
 			'MinimumPasswordLengthToLogin' => 1,
 			'PasswordCannotMatchUsername' => true,
 			'PasswordCannotBePopular' => 10000,
