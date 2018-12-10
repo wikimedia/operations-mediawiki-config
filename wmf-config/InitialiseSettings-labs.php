@@ -177,6 +177,10 @@ function wmfLabsSettings() {
 			],
 		],
 
+		'-wmgLogstashUseCee' => [
+			'default' => true,
+		],
+
 		'wmgApplyGlobalBlocks' => [ // T123936
 			'default' => true,
 			'metawiki' => true,
