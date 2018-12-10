@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "40a7a790_904e7703",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4879
+      },
+      "writtenOn": "2018-12-10T10:38:47Z",
+      "side": 1,
+      "message": "Between lines 15-16 add new line which contains\n\nDepends-On: Icd02fee606df1586d3e2a111703ae8b5d8599c93",
+      "revId": "15f65dee69162b0f35d93ccfec36736b240fa3fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
