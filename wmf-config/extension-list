@@ -107,7 +107,6 @@ $IP/extensions/PageImages/extension.json
 $IP/extensions/PageTriage/extension.json
 $IP/extensions/PageViewInfo/extension.json
 $IP/extensions/ParserFunctions/extension.json
-$IP/extensions/ParserMigration/extension.json
 $IP/extensions/ParsoidBatchAPI/extension.json
 $IP/extensions/PdfHandler/extension.json
 $IP/extensions/PerformanceInspector/extension.json
