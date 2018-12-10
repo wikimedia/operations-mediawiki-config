@@ -23,6 +23,7 @@
 # - $wmgDefaultMonologHandler: default handler for log channels not
 #   explicitly configured in $wmgMonologChannels.
 # - $wmgLogstashServers: Logstash syslog servers.
+# - $wmgLogstashUseCee: Prefix Logstash messages with 'cee cookie'
 # - $wmgKafkaServers: Kafka logging servers.
 # - $wmgMonologAvroSchemas: Map from monolog channel name to json
 #   string containing avro schema.
@@ -147,7 +148,7 @@ if ( $wmgLogstashServers ) {
 	foreach ( [ 'debug', 'info', 'warning', 'error' ] as $logLevel ) {
 		$wmgMonologHandlers[ "logstash-$logLevel" ] = [
 			'class'     => '\\MediaWiki\\Logger\\Monolog\\SyslogHandler',
-			'formatter' => 'logstash',
+			'formatter' => $wmgLogstashUseCee ? 'cee' : 'logstash',
 			'args'      => [
 				'mediawiki',             // tag
 				$wmgLogstashServers[0],  // host
@@ -192,6 +193,10 @@ $wmgMonologConfig = [
 		],
 		'logstash' => [
 			'class' => '\\MediaWiki\\Logger\\Monolog\\LogstashFormatter',
+			'args'  => [ 'mediawiki', php_uname( 'n' ), null, '', 1 ],
+		],
+		'cee' => [
+			'class' => '\\MediaWiki\\Logger\\Monolog\\CeeFormatter',
 			'args'  => [ 'mediawiki', php_uname( 'n' ), null, '', 1 ],
 		],
 		'avro' => [
