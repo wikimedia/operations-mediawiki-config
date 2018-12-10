@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "51823845_87f8de2d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2018-12-10T13:49:11Z",
+      "side": 1,
+      "message": "{{citation needed}} ;)\n\nSeriously though, I have no idea how much of an effect this will have… I’d prefer some more ambiguous phrasing, e. g. “yet more checks” or “even more checks”.",
+      "range": {
+        "startLine": 11,
+        "startChar": 6,
+        "endLine": 11,
+        "endChar": 23
+      },
+      "revId": "5e4bd7e195764326279dea2480d54692e8ab625c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
