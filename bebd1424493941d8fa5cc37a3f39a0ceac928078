@@ -1,0 +1,141 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "52616993_d7735c7a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2018-12-10T11:34:09Z",
+      "side": 1,
+      "message": "Use something like \"Upload HD logos for several projects\" to prevnet confusion",
+      "revId": "bebd1424493941d8fa5cc37a3f39a0ceac928078",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "33af0d5d_77be247e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2018-12-10T11:34:09Z",
+      "side": 1,
+      "message": "it\u0027s testwiki",
+      "range": {
+        "startLine": 9,
+        "startChar": 10,
+        "endLine": 9,
+        "endChar": 18
+      },
+      "revId": "bebd1424493941d8fa5cc37a3f39a0ceac928078",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "68781790_705ab700",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2018-12-10T11:34:09Z",
+      "side": 1,
+      "message": "which wikiquote?",
+      "range": {
+        "startLine": 9,
+        "startChar": 20,
+        "endLine": 9,
+        "endChar": 29
+      },
+      "revId": "bebd1424493941d8fa5cc37a3f39a0ceac928078",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4e278243_e672be25",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2018-12-10T11:34:09Z",
+      "side": 1,
+      "message": "which wikinews?",
+      "range": {
+        "startLine": 9,
+        "startChar": 34,
+        "endLine": 9,
+        "endChar": 42
+      },
+      "revId": "bebd1424493941d8fa5cc37a3f39a0ceac928078",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2717662f_de978199",
+        "filename": "static/images/project-logos/slwikiquote-2x.png",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2018-12-10T11:34:09Z",
+      "side": 1,
+      "message": "Pick another project - this was already taken.",
+      "revId": "bebd1424493941d8fa5cc37a3f39a0ceac928078",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d8975091_f015d1ad",
+        "filename": "static/images/project-logos/wikitest-1.5x.png",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2018-12-10T11:34:09Z",
+      "side": 1,
+      "message": "it\u0027s testwiki",
+      "revId": "bebd1424493941d8fa5cc37a3f39a0ceac928078",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dc658811_6049cb92",
+        "filename": "static/images/project-logos/wikitest-2x.png",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2018-12-10T11:34:09Z",
+      "side": 1,
+      "message": "it\u0027s testwiki. Also, 135*2 is 270, not 209 - your image is of wrong size.",
+      "revId": "bebd1424493941d8fa5cc37a3f39a0ceac928078",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
