@@ -18275,6 +18275,13 @@ $wgConf->settings = [
 // Format: 'blahwiki' => [ 'web' => [ 'emailuser' => false ], 'email' => [ 'reverted' => true ] ]
 'wmgEchoDefaultUserSubscriptions' => [
 	'default' => [],
+	'officewiki' => [
+		'email' => [
+			'edit-user-talk' => true,
+			'flow-discussion' => true,
+			'mention' => true
+		]
+	],
 ],
 
 'wmgEchoMentionStatusNotifications' => [
