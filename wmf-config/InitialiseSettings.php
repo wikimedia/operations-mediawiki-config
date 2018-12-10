@@ -721,6 +721,7 @@ $wgConf->settings = [
 	'nrmwiki' => '/static/images/project-logos/nrmwiki.png',  // T51125
 	'nsowiki' => '/static/images/project-logos/nsowiki.png',
 	'nvwiki' => '/static/images/project-logos/nvwiki.png',  // T42285
+	'nywiki' => '/static/images/project-logos/nywiki.png',  // T211570
 	'ocwiki' => '/static/images/project-logos/ocwiki.png',
 	'olowiki' => '/static/images/project-logos/olowiki.png', // T146612
 	'omwiki' => '/static/images/project-logos/omwiki.png',  // T46974
@@ -1453,6 +1454,7 @@ $wgConf->settings = [
 	'nowiki' => [ '1.5x' => '/static/images/project-logos/nowiki-1.5x.png', '2x' => '/static/images/project-logos/nowiki-2x.png' ], // T150618
 	'nrmwiki' => [ '1.5x' => '/static/images/project-logos/nrmwiki-1.5x.png', '2x' => '/static/images/project-logos/nrmwiki-2x.png' ], // T150618
 	'nvwiki' => [ '1.5x' => '/static/images/project-logos/nvwiki-1.5x.png', '2x' => '/static/images/project-logos/nvwiki-2x.png' ], // T150618
+	'nywiki' => [ '1.5x' => '/static/images/project-logos/nywiki-1.5x.png', '2x' => '/static/images/project-logos/nywiki-2x.png' ], // T211570
 	'ocwiki' => [ '1.5x' => '/static/images/project-logos/ocwiki-1.5x.png', '2x' => '/static/images/project-logos/ocwiki-2x.png' ], // T150618
 	'olowiki' => [ '1.5x' => '/static/images/project-logos/olowiki-1.5x.png', '2x' => '/static/images/project-logos/olowiki-1.5x.png' ], // T146745
 	'omwiki' => [ '1.5x' => '/static/images/project-logos/omwiki-1.5x.png', '2x' => '/static/images/project-logos/omwiki-2x.png' ], // T150618
