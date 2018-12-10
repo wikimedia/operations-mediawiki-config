@@ -21377,9 +21377,6 @@ $wgConf->settings = [
 	'default' => 'Project:New user landing page',
 ],
 
-'wmgUseParserMigration' => [
-	'default' => true,
-],
 // Enable archive for testwiki
 'wmgCirrusSearchIndexDeletes' => [
 	'default' => true,
