@@ -3663,7 +3663,7 @@ if ( $wgDBname === 'foundationwiki' ) {
 		$resp->header( "Content-Security-Policy-Report-Only: $cspHeader" );
 	};
 }
-
+/*
 if ( $wmgUseParserMigration ) {
 	wfLoadExtension( 'ParserMigration' );
 	$wgParserMigrationTidiers = [
@@ -3675,7 +3675,7 @@ if ( $wmgUseParserMigration ) {
 			'driver' => 'RemexHtml',
 		],
 	];
-}
+}*/
 
 if ( $wmgUseDynamicSidebar ) {
 	wfLoadExtension( 'DynamicSidebar' );
