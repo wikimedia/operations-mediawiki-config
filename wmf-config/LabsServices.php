@@ -36,7 +36,7 @@ return [
 
 		### Logstash
 		'logstash' => [
-			'localhost',
+			'deployment-logstash2.deployment-prep.eqiad.wmflabs',
 		],
 
 		### Jumbo Kafka cluster (jumbo-deployment-prep)
