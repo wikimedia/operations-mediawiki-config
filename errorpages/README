@@ -31,9 +31,6 @@ default.html
 hhvm-fatal-error.php
  Configured by class mediawiki::hhvm in operations/puppet.git.
 
-php-fatal-error.php
- Configured by wmerrors.ini in operations/puppet.git.
-
 errorpage.html
  (Not in operations/mediawiki-config.git)
  Stored in 'varnish/errorpage.html' in operations/puppet.git.
