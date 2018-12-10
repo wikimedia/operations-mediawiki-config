@@ -1668,6 +1668,8 @@ $wgConf->settings = [
 	'enwikibooks' => [ '1.5x' => '/static/images/project-logos/enwikibooks-1.5x.png', '2x' => '/static/images/project-logos/enwikibooks-2x.png' ], // T177506
 	'eswikibooks' => [ '1.5x' => '/static/images/project-logos/eswikibooks-1.5x.png', '2x' => '/static/images/project-logos/eswikibooks-2x.png' ], // T170248
 	'fiwikibooks' => [ '1.5x' => '/static/images/project-logos/fiwikibooks-1.5x.png', '2x' => '/static/images/project-logos/fiwikibooks-2x.png' ], // T177506
+	'frwikibooks' => [ '1.5x' => '/static/images/project-logos/frwikibooks-1.5x.png', '2x' => '/static/images/project-logos/frwikibooks-2x.png' ], // T150618
+	'fywikibooks' => [ '1.5x' => '/static/images/project-logos/fywikibooks-1.5x.png', '2x' => '/static/images/project-logos/fywikibooks-2x.png' ], // T150618
 	'hewikibooks' => [ '1.5x' => '/static/images/project-logos/hewikibooks-1.5x.png', '2x' => '/static/images/project-logos/hewikibooks-2x.png' ], // T201562
 	'huwikibooks' => [ '1.5x' => '/static/images/project-logos/huwikibooks-1.5x.png', '2x' => '/static/images/project-logos/huwikibooks-2x.png' ], // T177506
 	'itwikibooks' => [ '1.5x' => '/static/images/project-logos/itwikibooks-1.5x.png', '2x' => '/static/images/project-logos/itwikibooks-2x.png' ], // T177506
@@ -1719,6 +1721,7 @@ $wgConf->settings = [
 	'zhwikivoyage' => [ '1.5x' => '/static/images/project-logos/zhwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/zhwikivoyage-2x.png' ], // T150618
 
 	# Wikinews
+	'enwikinews' => [ '1.5x' => '/static/images/project-logos/enwikinews-1.5x.png', '2x' => '/static/images/project-logos/enwikinews-2x.png' ], // T150618
 	'liwikinews' => [ '1.5x' => '/static/images/project-logos/liwikinews-1.5x.png', '2x' => '/static/images/project-logos/liwikinews-2x.png' ],
 	'ruwikinews' => [ '1.5x' => '/static/images/project-logos/ruwikinews-1.5x.png', '2x' => '/static/images/project-logos/ruwikinews-2x.png' ], // T150618
 	'srwikinews' => [ '1.5x' => '/static/images/project-logos/srwikinews-1.5x.png', '2x' => '/static/images/project-logos/srwikinews-2x.png' ], // T172255
