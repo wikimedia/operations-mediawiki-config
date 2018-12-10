@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "18e21529_8f11fedc",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1652,
+      "author": {
+        "id": 452
+      },
+      "writtenOn": "2018-12-10T00:02:34Z",
+      "side": 1,
+      "message": "Use 1 tab, not spaces (align properly with the other items)",
+      "revId": "d8474f8784f9bd9c6176b53c9c47b7d80ca786ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f4ab750b_d3109ebe",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1720,
+      "author": {
+        "id": 452
+      },
+      "writtenOn": "2018-12-10T00:02:34Z",
+      "side": 1,
+      "message": "Don\u0027t mix tabs and spaces. Use 1 tab.",
+      "revId": "d8474f8784f9bd9c6176b53c9c47b7d80ca786ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
