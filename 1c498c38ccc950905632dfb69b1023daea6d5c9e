@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "2a6321c2_ee07da92",
+        "filename": "dblists/medium.dblist",
+        "patchSetId": 6
+      },
+      "lineNbr": 388,
+      "author": {
+        "id": 3948
+      },
+      "writtenOn": "2018-12-11T16:03:55Z",
+      "side": 1,
+      "message": "\u003e Added a newline here?\n\nOops, that was my editor, thanks for the heads up",
+      "parentUuid": "3958b2f6_00144d06",
+      "revId": "1c498c38ccc950905632dfb69b1023daea6d5c9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "68b17973_b108f838",
         "filename": "dblists/nowikidatadescriptiontaglines.dblist",
         "patchSetId": 6
@@ -47,6 +65,30 @@
       "writtenOn": "2018-12-11T15:51:14Z",
       "side": 1,
       "message": "I am not sure wikisources belong to this dblist.",
+      "range": {
+        "startLine": 280,
+        "startChar": 0,
+        "endLine": 280,
+        "endChar": 13
+      },
+      "revId": "1c498c38ccc950905632dfb69b1023daea6d5c9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bb5ac513_22c3870e",
+        "filename": "dblists/nowikidatadescriptiontaglines.dblist",
+        "patchSetId": 6
+      },
+      "lineNbr": 280,
+      "author": {
+        "id": 3948
+      },
+      "writtenOn": "2018-12-11T16:03:55Z",
+      "side": 1,
+      "message": "\u003e I am not sure wikisources belong to this dblist.\n\nYes honestly I\u0027m also not sure, but the Jenkins log from patchset 3 told me to do so https://integration.wikimedia.org/ci/job/operations-mw-config-composer-test-docker/10278/console . There are some wikisources listed here btw",
+      "parentUuid": "68b17973_b108f838",
       "range": {
         "startLine": 280,
         "startChar": 0,
