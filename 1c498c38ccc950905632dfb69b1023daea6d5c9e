@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3958b2f6_00144d06",
+        "filename": "dblists/medium.dblist",
+        "patchSetId": 6
+      },
+      "lineNbr": 388,
+      "author": {
+        "id": 452
+      },
+      "writtenOn": "2018-12-11T15:45:28Z",
+      "side": 1,
+      "message": "Added a newline here?",
+      "revId": "1c498c38ccc950905632dfb69b1023daea6d5c9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "14b646b3_fc64c1d2",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 1118,
+      "author": {
+        "id": 452
+      },
+      "writtenOn": "2018-12-11T15:45:28Z",
+      "side": 1,
+      "message": "Mind changing the tab to be consistent?",
+      "revId": "1c498c38ccc950905632dfb69b1023daea6d5c9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
