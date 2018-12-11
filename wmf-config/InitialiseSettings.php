@@ -416,6 +416,7 @@ $wgConf->settings = [
 	'mrwiki' => 'Asia/Kolkata',
 	'mrwikisource' => 'Asia/Kolkata',
 	'napwiki' => 'Europe/Rome', // T192568
+	'napwikisource' => 'Europe/Rome', // T210752
 	'ndswiki' => 'Europe/Berlin',
 	'ndswiktionary' => 'Europe/Berlin',
 	'ndswikibooks' => 'Europe/Berlin',
@@ -1113,7 +1114,8 @@ $wgConf->settings = [
 	'mkwikisource' => '/static/images/project-logos/mkwikisource.png',  // T54019
 	'mlwikisource' => '/static/images/project-logos/mlwikisource.png',
 	'mrwikisource' => '/static/images/project-logos/mrwikisource.png',  // T103655
-	'nowikisource' => '/static/images/project-logos/nowikisource.png',	// T167192
+	'napwikisource' => '/static/images/project-logos/napwikisource.png', // T210752
+	'nowikisource' => '/static/images/project-logos/nowikisource.png',  // T167192
 	'orwikisource' => '/static/images/project-logos/orwikisource.png',  // T73875
 	'pawikisource' => '/static/images/project-logos/pawikisource.png',  // T149522
 	'plwikisource' => '/static/images/project-logos/plwikisource.png',
@@ -1683,6 +1685,7 @@ $wgConf->settings = [
 	# Wikisource
 	'cswikisource' => [ '1.5x' => '/static/images/project-logos/cswikisource-1.5x.png', '2x' => '/static/images/project-logos/cswikisource-2x.png' ], // T150618
 	'euwikisource' => [ '1.5x' => '/static/images/project-logos/euwikisource-1.5x.png', '2x' => '/static/images/project-logos/euwikisource-2x.png' ],
+	'napwikisource' => [ '1.5x' => '/static/images/project-logos/napwikisource-1.5x.png', '2x' => '/static/images/project-logos/napwikisource-2x.png' ], // T210752
 	'nowikisource' => [ '1.5x' => '/static/images/project-logos/nowikisource-1.5x.png', '2x' => '/static/images/project-logos/nowikisource-2x.png' ], // T167192
 	'pawikisource' => [ '1.5x' => '/static/images/project-logos/pawikisource-1.5x.png', '2x' => '/static/images/project-logos/pawikisource-2x.png' ], // T149522
 	'ruwikisource' => [ '1.5x' => '/static/images/project-logos/ruwikisource-1.5x.png', '2x' => '/static/images/project-logos/ruwikisource-2x.png' ], // T203343
@@ -1802,6 +1805,7 @@ $wgConf->settings = [
 	'lrcwiki' => false, // T102026
 	'mswiki' => false, // T126944
 	'mswiktionary' => false, // T69152
+	'napwikisource' => false, // T210752
 	'nlwikisource' => false, // T73403
 	'nlwikivoyage' => false, // T73403
 	'nlwiktionary' => false, // T73403
@@ -2452,6 +2456,7 @@ $wgConf->settings = [
 	'myvwiki' => 'Википедиясь',
 	'mznwiki' => 'ویکی‌پدیا',
 	'nahwiki' => 'Huiquipedia',
+	'napwikisource' => 'Wikisource', // T210752
 	'nds_nlwiki' => 'Wikipedie',
 	'newiki' => 'विकिपिडिया', // T186952
 	'newikibooks' => 'विकिपुस्तक', // T124881
@@ -6686,6 +6691,16 @@ $wgConf->settings = [
 		101 => 'दालन_चर्चा', // Portal talk
 		102 => 'साहित्यिक', // Author
 		103 => 'साहित्यिक_चर्चा', // Author talk
+	],
+	'napwikisource' => [
+		102 => 'Autore', // Author
+		103 => 'Autore_chiàcchiera', // Author talk
+		104 => 'Ennece', // Index
+		105 => 'Ennece_chiàcchiera', // Index talk
+		106 => 'Paggena', // Page
+		107 => 'Paggena_chiàcchiera', // Page talk
+		108 => 'Opera', // Work
+		109 => 'Opera_chiàcchiera', // Work talk
 	],
 	'nlwikisource' => [
 		100 => 'Hoofdportaal',
@@ -16004,6 +16019,7 @@ $wgConf->settings = [
 	'ltwiki' => 'uca-lt', // T123627
 	'lvwiki' => 'uca-lv', // T67003
 	'mkwiki' => 'uca-mk-u-kn', // T26953
+	'napwikisource' => 'uca-it-u-kn', // T210752
 	'nlwiki' => 'uca-nl', // T125774
 	'nowiki' => 'uca-nb-u-kn', // T146675, T148488
 	'nowikimedia' => 'uca-nb-u-kn', // T185630
