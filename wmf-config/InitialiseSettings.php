@@ -14232,6 +14232,7 @@ $wgConf->settings = [
 	'nlwiki' => true,
 	'nlwikinews' => true, // T177170
 	'nlwikiquote' => true, // T124167
+	'nowiki' => true, // T210325
 	'orwiki' => true, // T124614
 	'plwiki' => true,
 	'plwikisource' => true,
