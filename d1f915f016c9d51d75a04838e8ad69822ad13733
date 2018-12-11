@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f9e22185_9275ba21",
+        "filename": "wmf-config/LabsServices.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-12-11T18:59:22Z",
+      "side": 1,
+      "message": "false is totally fine, but the recently added unit test that requires this key to exist suggests \u0027null\u0027 instead. I don\u0027t mind really, but I would like for the value and the test comment to match. Whichever way :)",
+      "range": {
+        "startLine": 14,
+        "startChar": 13,
+        "endLine": 14,
+        "endChar": 18
+      },
+      "revId": "d1f915f016c9d51d75a04838e8ad69822ad13733",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
