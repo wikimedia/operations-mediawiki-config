@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e2d856d2_19c91d44",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 451,
+      "author": {
+        "id": 5095
+      },
+      "writtenOn": "2018-12-11T18:50:19Z",
+      "side": 1,
+      "message": "@Reedy: I\u0027m a bit confused as to why currently in production this sets `[\u0027policies\u0027][\u0027default\u0027][\u0027MinimalPasswordLength\u0027] \u003d 8` and yet you can create a password with 1 byte length. AFAIK this is the last step where we define configs.",
+      "revId": "31e256453d5436b0139aa566137408ac45ee5f35",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
