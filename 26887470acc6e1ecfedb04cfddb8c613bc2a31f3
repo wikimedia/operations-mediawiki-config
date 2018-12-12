@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "30dc6de7_491ec338",
+        "filename": "errorpages/hhvm-fatal-error.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 17
+      },
+      "writtenOn": "2018-12-12T04:45:47Z",
+      "side": 1,
+      "message": "There\u0027s a lot of ways this code could cause a fatal error, the comment is somewhat aspirational. The failure mode I\u0027m trying to guard against here is the prospect that the class was originally included with a different filename. If that happens then include_once would fail with a duplicate class error.",
+      "parentUuid": "b822fb33_7725a526",
+      "range": {
+        "startLine": 47,
+        "startChar": 2,
+        "endLine": 47,
+        "endChar": 9
+      },
+      "revId": "26887470acc6e1ecfedb04cfddb8c613bc2a31f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2a42a589_12e9fb99",
         "filename": "src/ServiceConfig.php",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2018-12-08T00:54:43Z",
       "side": 1,
       "message": "We\u0027ve been holding off on using namepaces in wmf-config for a while.\n\nI think it makes sense to start using them now and hence for bike-shedding to commence.\n\nWould recommend that the name be clearly WMF-specific, and reside somewhere under Wikimedia\\.\n\nE.g. Wikimedia\\MWConfig or Wikimedia\\WmfConfig.",
+      "range": {
+        "startLine": 3,
+        "startChar": 10,
+        "endLine": 3,
+        "endChar": 12
+      },
+      "revId": "26887470acc6e1ecfedb04cfddb8c613bc2a31f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "45d63e3f_fa09bb32",
+        "filename": "src/ServiceConfig.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 17
+      },
+      "writtenOn": "2018-12-12T04:45:47Z",
+      "side": 1,
+      "message": "MWConfig reflects the name of the repository, the idea is that it is shared across everything in the repository. I think WmfConfig would identify the subdirectory mediawiki-config/wmf-config.\n\nI can add Wikimedia\\ though.\n\n(You confused me for a minute, the correct place to bike-shed was actually the parent commit in which the namespace was introduced. There will be an update to both patchsets.)",
+      "parentUuid": "2a42a589_12e9fb99",
       "range": {
         "startLine": 3,
         "startChar": 10,
