@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d929599c_22138b4e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 452
+      },
+      "writtenOn": "2018-12-12T15:03:09Z",
+      "side": 1,
+      "message": "More clarity needed. IS.php -\u003e InitialiseSettings.php\n\nClearly state which logos.\n\nBug: T150618 (not just T150618)",
+      "revId": "1e31243bd969cf64797e234fbfcf03a793bc0abb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f4433ac1_00c07e05",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1652,
+      "author": {
+        "id": 452
+      },
+      "writtenOn": "2018-12-12T15:03:09Z",
+      "side": 1,
+      "message": "Remove this line, it\u0027s duplicated above.",
+      "revId": "1e31243bd969cf64797e234fbfcf03a793bc0abb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3e8e5cdf_f1f5c744",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1720,
+      "author": {
+        "id": 452
+      },
+      "writtenOn": "2018-12-12T15:03:09Z",
+      "side": 1,
+      "message": "Use a tab, not 4 spaces.",
+      "revId": "1e31243bd969cf64797e234fbfcf03a793bc0abb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
