@@ -16252,6 +16252,10 @@ $wgConf->settings = [
 	'default' => [ 'pageprops' ],
 	'wikidata' => [ 'pageterms' ],
 ],
+'wgMFContentProviderClass' => [
+	// The production should always use DefaultContentProvider
+	'default' => 'MobileFrontend\ContentProviders\DefaultContentProvider'
+],
 'wgMFSearchAPIParams' => [
 	// workaround for T125672, though also fixes T120197
 	'default' => [
