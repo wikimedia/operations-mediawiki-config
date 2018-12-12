@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9d320fce_9712f909",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2018-12-12T09:34:10Z",
+      "side": 1,
+      "message": "Even when the \u0027cee\u0027 formatter is not enabled, Monolog might attempt to load that class. If it is not available yet in MediaWiki, that would cause issues I guess.\n\nDouble check the class is available in both deployed branch :)",
+      "revId": "0cbc4f05b3c7fa48594273bdbad8f4a15f171284",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
