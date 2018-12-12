@@ -648,7 +648,11 @@ function wmfLabsSettings() {
 			'deploymentwiki' => true,
 			'wikipedia' => true,
 		],
-
+		"wgMFContentProviderClass" => [
+			'default' => 'MobileFrontend\ContentProviders\DefaultContentProvider',
+			// T207508
+			'enwiki' => 'MobileFrontend\ContentProviders\MwApiContentProvider',
+		],
 		// Test Wikidata descriptions on mobile: T127250
 		'wgMFDisplayWikibaseDescriptions' => [
 			'enwiki' => [
