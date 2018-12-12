@@ -22,6 +22,30 @@
       "revId": "ba22381a8b952a22b50388d080f22a6dea6d73b9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "59ab9752_bac22fe1",
+        "filename": "wmf-config/profiler.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 17
+      },
+      "writtenOn": "2018-12-12T23:01:54Z",
+      "side": 1,
+      "message": "It is refactored further in the subsequent commit https://gerrit.wikimedia.org/r/#/c/operations/mediawiki-config/+/478137/\n\nI think it is OK after that.",
+      "parentUuid": "4fcdc3d1_1cd82407",
+      "range": {
+        "startLine": 199,
+        "startChar": 1,
+        "endLine": 199,
+        "endChar": 29
+      },
+      "revId": "ba22381a8b952a22b50388d080f22a6dea6d73b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
