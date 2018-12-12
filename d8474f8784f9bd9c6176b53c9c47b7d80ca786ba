@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "875168d6_0a6415ac",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2018-12-12T08:17:28Z",
+      "side": 1,
+      "message": "You didn\u0027t upload anything in this logo. Please write something like \"Use uploaded logos in IS.php\"",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 21
+      },
+      "revId": "d8474f8784f9bd9c6176b53c9c47b7d80ca786ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "1bc40cae_d7272331",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
