@@ -47,9 +47,9 @@ $wgCirrusSearchClusters = [
 	'eqiad' => $cirrusConfigUseHhvmPool( $wmfAllServices['eqiad']['search-chi'], 'cirrus-eqiad' ),
 	'codfw' => $cirrusConfigUseHhvmPool( $wmfAllServices['codfw']['search-chi'], 'cirrus-codfw' ),
 	'eqiad-temp-psi' => $wmfAllServices['eqiad']['search-psi'],
-	'codfw-temp-psi' => $wmfAllServices['eqiad']['search-psi'],
+	'codfw-temp-psi' => $wmfAllServices['codfw']['search-psi'],
 	'eqiad-temp-omega' => $wmfAllServices['eqiad']['search-omega'],
-	'codfw-temp-omega' => $wmfAllServices['eqiad']['search-omega'],
+	'codfw-temp-omega' => $wmfAllServices['codfw']['search-omega'],
 
 	'eqiad-chi' => $cirrusConfigUseHhvmPool( $wmfAllServices['eqiad']['search-chi'], 'cirrus-eqiad' ) + [ 'group' => 'chi', 'replica' => 'eqiad' ],
 	'codfw-chi' => $cirrusConfigUseHhvmPool( $wmfAllServices['codfw']['search-chi'], 'cirrus-codfw' ) + [ 'group' => 'chi', 'replica' => 'codfw' ],
