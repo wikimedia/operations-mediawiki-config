@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "37aa64dd_80937d74",
+        "filename": "tests/profilerTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-12-12T05:45:55Z",
+      "side": 0,
+      "message": "Wow, how did I get to \"Xml\", or \"Xmd\" for that matter !?",
+      "range": {
+        "startLine": 5,
+        "startChar": 36,
+        "endLine": 5,
+        "endChar": 39
+      },
+      "revId": "92b8730613c1c2f9c46b9634c7b00b617f3761bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
