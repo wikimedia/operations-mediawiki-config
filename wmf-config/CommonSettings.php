@@ -1685,7 +1685,7 @@ $wgMajorSiteNoticeID = '2';
  * @param User $user
  * @return array Any elevated/privileged groups the user is a member of
  */
-function wfGetPrivilegedGroups( $username, $user ) {
+function wmfGetPrivilegedGroups( $username, $user ) {
 	global $wmgUseCentralAuth, $wmgPrivilegedGroups;
 	$groups = [];
 	if ( $wmgUseCentralAuth && CentralAuthUser::getInstanceByName( $username )->exists() ) {
@@ -1719,7 +1719,7 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function ( $response, $user, $
 	global $wgRequest;
 	$headers = function_exists( 'apache_request_headers' ) ? apache_request_headers() : [];
 	$successful = $response->status === AuthenticationResponse::PASS;
-	$privGroups = wfGetPrivilegedGroups( $username, $user );
+	$privGroups = wmfGetPrivilegedGroups( $username, $user );
 
 	$channel = $successful ? 'goodpass' : 'badpass';
 	if ( $privGroups ) {
@@ -1731,7 +1731,7 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function ( $response, $user, $
 	$logger->info( "Login $verb for {priv} {name} from {ip} - {xff} - {ua} - {geocookie}: {messagestr}", [
 		'successful' => $successful,
 		'groups' => implode( ', ', $privGroups ),
-		'priv' => count( $privGroups ) ? 'elevated' : 'normal',
+		'priv' => ( $privGroups ? 'elevated' : 'normal' ),
 		'name' => $user->getName(),
 		'ip' => $wgRequest->getIP(),
 		'xff' => @$headers['X-Forwarded-For'],
@@ -1748,17 +1748,17 @@ $wgHooks['ChangeAuthenticationDataAudit'][] = function ( $req, $status ) {
 	$user = User::newFromName( $req->username );
 	$status = Status::wrap( $status );
 	if ( $req instanceof \MediaWiki\Auth\PasswordAuthenticationRequest
-		&& wfGetPrivilegedGroups( $req->username, $user )
+		&& wmfGetPrivilegedGroups( $req->username, $user )
 	) {
 		global $wgRequest;
 		$headers = function_exists( 'apache_request_headers' ) ? apache_request_headers() : [];
 
-		$privGroups = wfGetPrivilegedGroups( $req->username, $user );
+		$privGroups = wmfGetPrivilegedGroups( $req->username, $user );
 		$logger = LoggerFactory::getInstance( 'badpass' );
 		$logger->info( 'Password change in prefs for {priv} {name}: {status} - {ip} - {xff} - {ua} - {geocookie}', [
 			'name' => $user->getName(),
 			'groups' => implode( ', ', $privGroups ),
-			'priv' => count( $privGroups ) ? 'elevated' : 'normal',
+			'priv' => ( $privGroups ? 'elevated' : 'normal' ),
 			'status' => $status->isGood() ? 'ok' : $status->getWikiText( null, null, 'en' ),
 			'ip' => $wgRequest->getIP(),
 			'xff' => @$headers['X-Forwarded-For'],
