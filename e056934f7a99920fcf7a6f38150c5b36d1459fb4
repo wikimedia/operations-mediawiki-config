@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b580a389_91d14b9c",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 6682,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2018-12-12T08:21:57Z",
+      "side": 1,
+      "message": "a) NS_PROJECT_TALK should be set using wgMetaNamespaceTalk, if needed\n\nb) NS_PROJECT_TALK for projects in nap defaults to `$1_chiàcchiera`, where $1 is NS_PROJECT. This match exactly your value, specifying it again is redundant.",
+      "range": {
+        "startLine": 6682,
+        "startChar": 2,
+        "endLine": 6682,
+        "endChar": 57
+      },
+      "revId": "e056934f7a99920fcf7a6f38150c5b36d1459fb4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
