@@ -1,0 +1,10 @@
+Code-Review+2: Zfilipin <zfilipin@wikimedia.org>
+Code-Review+1: Platonides <platonides@gmail.com>
+Code-Review+1: Framawiki <framawiki@tools.wmflabs.org>
+Code-Review+1: Urbanecm <martin.urbanec@wikimedia.cz>
+Verified+2: jenkins-bot
+Submitted-by: jenkins-bot
+Submitted-at: Wed, 12 Dec 2018 12:35:29 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/471345
+Project: operations/mediawiki-config
+Branch: refs/heads/master
