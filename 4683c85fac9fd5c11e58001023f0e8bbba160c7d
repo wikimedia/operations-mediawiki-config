@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "409d4a92_f0a1b3fd",
+        "filename": "static/images/project-logos/frwikinews-1.5x.png",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2018-12-12T07:52:45Z",
+      "side": 1,
+      "message": "This is too big - should be 202x156 (the original image from https://en.wikipedia.org/static/images/project-logos/frwikinews.png is 135x104, 135*1.5\u003d202, 104*1.5\u003d156),",
+      "revId": "4683c85fac9fd5c11e58001023f0e8bbba160c7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2201ebb3_c74b676d",
+        "filename": "static/images/project-logos/frwikinews-2x.png",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2018-12-12T07:52:45Z",
+      "side": 1,
+      "message": "This is too big, should be 2x of https://en.wikipedia.org/static/images/project-logos/frwikinews.png.",
+      "revId": "4683c85fac9fd5c11e58001023f0e8bbba160c7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "98d31de4_83d8de89",
+        "filename": "static/images/project-logos/slwikiquote-2x.png",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2018-12-12T07:52:45Z",
+      "side": 1,
+      "message": "Why did you modify this file? You\u0027re supposed to add only new HD logos, not modify existing ones. Thanks.",
+      "revId": "4683c85fac9fd5c11e58001023f0e8bbba160c7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b62160a3_d619d945",
+        "filename": "static/images/project-logos/testwiki-2x.png",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2018-12-12T07:52:45Z",
+      "side": 1,
+      "message": "This is too small - should be 2x of https://en.wikipedia.org/static/images/project-logos/testwiki.png.",
+      "revId": "4683c85fac9fd5c11e58001023f0e8bbba160c7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
