@@ -21547,9 +21547,7 @@ $wgConf->settings = [
 ],
 
 'wgActorTableSchemaMigrationStage' => [
-	'default' => SCHEMA_COMPAT_OLD,
-	'group0' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'group1' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 ],
 
 'wgCommentTableSchemaMigrationStage' => [
