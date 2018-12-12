@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4fcdc3d1_1cd82407",
+        "filename": "wmf-config/profiler.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-12-12T05:49:50Z",
+      "side": 1,
+      "message": "This call was lightly unexpected. From a quick check, it seems like we could call this directly after wmfSetupProfiler() in the same place. Would that work? Or is there a sharing of options I missed?",
+      "range": {
+        "startLine": 199,
+        "startChar": 1,
+        "endLine": 199,
+        "endChar": 29
+      },
+      "revId": "ba22381a8b952a22b50388d080f22a6dea6d73b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
