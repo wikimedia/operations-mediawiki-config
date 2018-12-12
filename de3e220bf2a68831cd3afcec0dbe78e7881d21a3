@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0239277c_3548c198",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 1718,
+      "author": {
+        "id": 452
+      },
+      "writtenOn": "2018-12-12T16:58:42Z",
+      "side": 1,
+      "message": "Please don\u0027t modify other lines. It should remain T172255.",
+      "range": {
+        "startLine": 1718,
+        "startChar": 144,
+        "endLine": 1718,
+        "endChar": 151
+      },
+      "revId": "de3e220bf2a68831cd3afcec0dbe78e7881d21a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
