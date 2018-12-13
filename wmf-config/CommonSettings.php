@@ -1590,11 +1590,10 @@ if ( $wmgUseCentralAuth ) {
 	// Link global block blockers to user pages on Meta
 	$wgCentralAuthGlobalBlockInterwikiPrefix = 'meta';
 
-	// Require 10 byte password for staff. Set MinimumPasswordLengthToLogin
-	// to 10 also, once staff have time to update.
+	// Require 10 byte password for staff.
 	$wgCentralAuthGlobalPasswordPolicies['staff'] = [
 		'MinimalPasswordLength' => 10,
-		'MinimumPasswordLengthToLogin' => 1,
+		'MinimumPasswordLengthToLogin' => 10,
 		'PasswordCannotMatchUsername' => true,
 		'PasswordCannotBePopular' => PHP_INT_MAX,
 	];
