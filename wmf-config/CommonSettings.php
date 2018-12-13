@@ -448,6 +448,7 @@ $wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = 8;
 $wmgPrivilegedPolicy = [
 	'MinimalPasswordLength' => [ 'value' => 10, 'forceChange' => true ],
 	'MinimumPasswordLengthToLogin' => 1,
+	'PasswordCannotBePopular' => PHP_INT_MAX,
 	'PasswordNotInLargeBlacklist' => true,
 ];
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
