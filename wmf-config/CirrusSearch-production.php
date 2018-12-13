@@ -91,12 +91,20 @@ $wgCirrusSearchEnableSearchLogging = true;
 $wgCirrusSearchShardCount = [
 	'eqiad' => $wmgCirrusSearchShardCount,
 	'codfw' => $wmgCirrusSearchShardCount,
+	'codfw-temp-psi' => $wmgCirrusSearchShardCount,
+	'codfw-temp-omega' => $wmgCirrusSearchShardCount,
+	'eqiad-temp-psi' => $wmgCirrusSearchShardCount,
+	'eqiad-temp-omega' => $wmgCirrusSearchShardCount,
 ];
 
 if ( ! isset( $wmgCirrusSearchReplicas['eqiad'] ) ) {
 	$wgCirrusSearchReplicas = [
 		'eqiad' => $wmgCirrusSearchReplicas,
 		'codfw' => $wmgCirrusSearchReplicas,
+		'codfw-temp-psi' => $wmgCirrusSearchReplicas,
+		'codfw-temp-omega' => $wmgCirrusSearchReplicas,
+		'eqiad-temp-psi' => $wmgCirrusSearchReplicas,
+		'eqiad-temp-omega' => $wmgCirrusSearchReplicas,
 	];
 }
 
@@ -104,11 +112,19 @@ if ( ! isset( $wmgCirrusSearchReplicas['eqiad'] ) ) {
 $wgCirrusSearchClientSideConnectTimeout = [
 	'eqiad' => $wmfDatacenter === 'eqiad' ? 5 : 10,
 	'codfw' => $wmfDatacenter === 'codfw' ? 5 : 10,
+	'codfw-temp-psi' => $wmfDatacenter === 'codfw' ? 5 : 10,
+	'codfw-temp-omega' => $wmfDatacenter === 'codfw' ? 5 : 10,
+	'eqiad-temp-psi' => $wmfDatacenter === 'eqiad' ? 5 : 10,
+	'eqiad-temp-omega' => $wmfDatacenter === 'eqiad' ? 5 : 10,
 ];
 
 $wgCirrusSearchDropDelayedJobsAfter = [
 	'eqiad' => $wgCirrusSearchDropDelayedJobsAfter,
 	'codfw' => $wgCirrusSearchDropDelayedJobsAfter,
+	'codfw-temp-psi' => $wgCirrusSearchDropDelayedJobsAfter,
+	'codfw-temp-omega' => $wgCirrusSearchDropDelayedJobsAfter,
+	'eqiad-temp-psi' => $wgCirrusSearchDropDelayedJobsAfter,
+	'eqiad-temp-omega' => $wgCirrusSearchDropDelayedJobsAfter,
 ];
 
 $wgCirrusSearchRecycleCompletionSuggesterIndex = $wmgCirrusSearchRecycleCompletionSuggesterIndex;
