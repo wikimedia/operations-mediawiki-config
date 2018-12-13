@@ -22,6 +22,30 @@
       "revId": "aa3fd9563e85c646832fbce97950a049e784a47f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "edde0cc4_e89dba47",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2018-12-13T18:19:27Z",
+      "side": 1,
+      "message": "Lydia says no.",
+      "parentUuid": "1a5eda4a_6dadaf8b",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 63
+      },
+      "revId": "aa3fd9563e85c646832fbce97950a049e784a47f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
