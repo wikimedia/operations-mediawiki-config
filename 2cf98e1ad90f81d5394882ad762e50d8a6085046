@@ -22,6 +22,30 @@
       "revId": "2cf98e1ad90f81d5394882ad762e50d8a6085046",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b0842c9b_c7f00266",
+        "filename": "wmf-config/profiler.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 311,
+      "author": {
+        "id": 17
+      },
+      "writtenOn": "2018-12-13T01:34:07Z",
+      "side": 1,
+      "message": "I don\u0027t think it\u0027s a problem for it to not be set in the case of some odd entry points, and to use the empty string instead, considering it is always an explicit request. All that will happen is that the URL will appear in XHGui without a request ID.",
+      "parentUuid": "9a3a5687_12bba792",
+      "range": {
+        "startLine": 311,
+        "startChar": 13,
+        "endLine": 311,
+        "endChar": 34
+      },
+      "revId": "2cf98e1ad90f81d5394882ad762e50d8a6085046",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
