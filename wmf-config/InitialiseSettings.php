@@ -19645,6 +19645,27 @@ $wgConf->settings = [
 	'default' => false,
 ],
 
+// Only enable this conservatively, having this on to many
+// wikis will take *a lot* of Graphite storage space. T191416
+'wmgWikibaseClientTrackLuaFunctionCallsPerWiki' => [
+	'default' => false,
+	'arwiki' => true,
+	'cawiki' => true,
+	'commonswiki' => true,
+	'dewiki' => true,
+	'enwiki' => true,
+	'frwiki' => true,
+	'itwiki' => true,
+	'ruwiki' => true,
+	'svwiki' => true,
+	'ukwiki' => true,
+	'zhwiki' => true,
+],
+
+'wmgWikibaseClientTrackLuaFunctionCallsPerSiteGroup' => [
+	'default' => true,
+],
+
 // Feature flag for WikibaseMediaInfo during deployment
 'wgMediaInfoEnable' => [
 	'default' => false,
