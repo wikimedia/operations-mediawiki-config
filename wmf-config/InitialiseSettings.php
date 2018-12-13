@@ -721,6 +721,7 @@ $wgConf->settings = [
 	'nrmwiki' => '/static/images/project-logos/nrmwiki.png',  // T51125
 	'nsowiki' => '/static/images/project-logos/nsowiki.png',
 	'nvwiki' => '/static/images/project-logos/nvwiki.png',  // T42285
+	'nywiki' => '/static/images/project-logos/nywiki.png',  // T211570
 	'ocwiki' => '/static/images/project-logos/ocwiki.png',
 	'olowiki' => '/static/images/project-logos/olowiki.png', // T146612
 	'omwiki' => '/static/images/project-logos/omwiki.png',  // T46974
@@ -1453,6 +1454,7 @@ $wgConf->settings = [
 	'nowiki' => [ '1.5x' => '/static/images/project-logos/nowiki-1.5x.png', '2x' => '/static/images/project-logos/nowiki-2x.png' ], // T150618
 	'nrmwiki' => [ '1.5x' => '/static/images/project-logos/nrmwiki-1.5x.png', '2x' => '/static/images/project-logos/nrmwiki-2x.png' ], // T150618
 	'nvwiki' => [ '1.5x' => '/static/images/project-logos/nvwiki-1.5x.png', '2x' => '/static/images/project-logos/nvwiki-2x.png' ], // T150618
+	'nywiki' => [ '1.5x' => '/static/images/project-logos/nywiki-1.5x.png', '2x' => '/static/images/project-logos/nywiki-2x.png' ], // T211570
 	'ocwiki' => [ '1.5x' => '/static/images/project-logos/ocwiki-1.5x.png', '2x' => '/static/images/project-logos/ocwiki-2x.png' ], // T150618
 	'olowiki' => [ '1.5x' => '/static/images/project-logos/olowiki-1.5x.png', '2x' => '/static/images/project-logos/olowiki-1.5x.png' ], // T146745
 	'omwiki' => [ '1.5x' => '/static/images/project-logos/omwiki-1.5x.png', '2x' => '/static/images/project-logos/omwiki-2x.png' ], // T150618
@@ -1630,6 +1632,8 @@ $wgConf->settings = [
 	'viwiktionary' => [ '1.5x' => '/static/images/project-logos/viwiktionary-1.5x.png', '2x' => '/static/images/project-logos/viwiktionary-2x.png' ],
 	'yuewiktionary' => [ '1.5x' => '/static/images/project-logos/yuewiktionary-1.5x.png', '2x' => '/static/images/project-logos/yuewiktionary-2x.png' ],
 	'wawiktionary' => [ '1.5x' => '/static/images/project-logos/wawiktionary-1.5x.png', '2x' => '/static/images/project-logos/wawiktionary-2x.png' ], // T150618
+	'zhwiktionary' => [ '1.5x' => '/static/images/project-logos/zhwiktionary-1.5x.png', '2x' => '/static/images/project-logos/zhwiktionary-2x.png' ], // T150618
+	'zh_min_nanwiktionary' => [ '1.5x' => '/static/images/project-logos/zh_min_nanwiktionary-1.5x.png', '2x' => '/static/images/project-logos/zh_min_nanwiktionary-2x.png' ], // T150618
 
 	# Wikiquote
 	'bewikiquote' => [ '1.5x' => '/static/images/project-logos/bewikiquote-1.5x.png', '2x' => '/static/images/project-logos/bewikiquote-2x.png' ], // T196134
@@ -1664,9 +1668,12 @@ $wgConf->settings = [
 	'enwikibooks' => [ '1.5x' => '/static/images/project-logos/enwikibooks-1.5x.png', '2x' => '/static/images/project-logos/enwikibooks-2x.png' ], // T177506
 	'eswikibooks' => [ '1.5x' => '/static/images/project-logos/eswikibooks-1.5x.png', '2x' => '/static/images/project-logos/eswikibooks-2x.png' ], // T170248
 	'fiwikibooks' => [ '1.5x' => '/static/images/project-logos/fiwikibooks-1.5x.png', '2x' => '/static/images/project-logos/fiwikibooks-2x.png' ], // T177506
+	'frwikibooks' => [ '1.5x' => '/static/images/project-logos/frwikibooks-1.5x.png', '2x' => '/static/images/project-logos/frwikibooks-2x.png' ], // T150618
+	'fywikibooks' => [ '1.5x' => '/static/images/project-logos/fywikibooks-1.5x.png', '2x' => '/static/images/project-logos/fywikibooks-2x.png' ], // T150618
 	'hewikibooks' => [ '1.5x' => '/static/images/project-logos/hewikibooks-1.5x.png', '2x' => '/static/images/project-logos/hewikibooks-2x.png' ], // T201562
 	'huwikibooks' => [ '1.5x' => '/static/images/project-logos/huwikibooks-1.5x.png', '2x' => '/static/images/project-logos/huwikibooks-2x.png' ], // T177506
 	'itwikibooks' => [ '1.5x' => '/static/images/project-logos/itwikibooks-1.5x.png', '2x' => '/static/images/project-logos/itwikibooks-2x.png' ], // T177506
+	'mlwikibooks' => [ '1.5x' => '/static/images/project-logos/mlwikibooks-1.5x.png', '2x' => '/static/images/project-logos/mlwikibooks-2x.png' ], // T150618
 	'ruwikibooks' => [ '1.5x' => '/static/images/project-logos/ruwikibooks-1.5x.png', '2x' => '/static/images/project-logos/ruwikibooks-2x.png' ], // T150618
 	'srwikibooks' => [ '1.5x' => '/static/images/project-logos/srwikibooks-1.5x.png', '2x' => '/static/images/project-logos/srwikibooks-2x.png' ], // T159534
 	'trwikibooks' => [ '1.5x' => '/static/images/project-logos/trwikibooks-1.5x.png', '2x' => '/static/images/project-logos/trwikibooks-2x.png' ], // T177506
@@ -1711,14 +1718,19 @@ $wgConf->settings = [
 	'pswikivoyage' => [ '1.5x' => '/static/images/project-logos/pswikivoyage-1.5x.png', '2x' => '/static/images/project-logos/pswikivoyage-2x.png' ],
 	'ruwikivoyage' => [ '1.5x' => '/static/images/project-logos/ruwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/ruwikivoyage-2x.png' ], // T150618
 	'viwikivoyage' => [ '1.5x' => '/static/images/project-logos/viwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/viwikivoyage-2x.png' ], // T151570
+	'zhwikivoyage' => [ '1.5x' => '/static/images/project-logos/zhwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/zhwikivoyage-2x.png' ], // T150618
 
 	# Wikinews
+	'enwikinews' => [ '1.5x' => '/static/images/project-logos/enwikinews-1.5x.png', '2x' => '/static/images/project-logos/enwikinews-2x.png' ], // T150618
 	'liwikinews' => [ '1.5x' => '/static/images/project-logos/liwikinews-1.5x.png', '2x' => '/static/images/project-logos/liwikinews-2x.png' ],
-	'ruwikivnews' => [ '1.5x' => '/static/images/project-logos/ruwikinews-1.5x.png', '2x' => '/static/images/project-logos/ruwikinews-2x.png' ], // T150618
+	'ruwikinews' => [ '1.5x' => '/static/images/project-logos/ruwikinews-1.5x.png', '2x' => '/static/images/project-logos/ruwikinews-2x.png' ], // T150618
 	'srwikinews' => [ '1.5x' => '/static/images/project-logos/srwikinews-1.5x.png', '2x' => '/static/images/project-logos/srwikinews-2x.png' ], // T172255
+	'zhwikinews' => [ '1.5x' => '/static/images/project-logos/zhwikinews-1.5x.png', '2x' => '/static/images/project-logos/zhwikinews-2x.png' ], // T150618
+	'trwikinews' => [ '1.5x' => '/static/images/project-logos/trwikinews-1.5x.png', '2x' => '/static/images/project-logos/trwikinews-2x.png' ], // T150618
 
 	# Chapter wikis
 	'amwikimedia' => [ '1.5x' => '/static/images/project-logos/amwikimedia-1.5x.png', '2x' => '/static/images/project-logos/amwikimedia-2x.png' ], // T176042
+	'cawikimedia' => [ '1.5x' => '/static/images/project-logos/cawikimedia-1.5x.png', '2x' => '/static/images/project-logos/cawikimedia-2x.png' ],
 	'ecwikimedia' => [ '1.5x' => '/static/images/project-logos/ecwikimedia-1.5x.png', '2x' => '/static/images/project-logos/ecwikimedia-2x.png' ], // T135521
 	'hiwikimedia' => [ '1.5x' => '/static/images/project-logos/hiwikimedia-1.5x.png', '2x' => '/static/images/project-logos/hiwikimedia-2x.png' ],
 	'idwikimedia' => [ '1.5x' => '/static/images/project-logos/idwikimedia-1.5x.png', '2x' => '/static/images/project-logos/idwikimedia-2x.png' ], // T192726
@@ -3077,6 +3089,7 @@ $wgConf->settings = [
 	'trwikisource' => 'Vikikaynak', // T44721
 	'trwiktionary' => 'Vikisözlük',
 	'ttwiki' => 'Википедия',
+	'ttwiktionary' => 'Викисүзлек', // T211312
 	'tyvwiki' => 'Википедия', // T51328
 	'uawikimedia' => 'Вікімедіа',
 	'udmwiki' => 'Википедия', // T49820
@@ -4445,6 +4458,10 @@ $wgConf->settings = [
 		'Портал' => 100, // NS_PORTAL
 		'Разговор_о_порталу' => 101, // NS_PORTAL_TALK
 	],
+	'+shnwiki' => [
+		'WP' => NS_PROJECT,
+		'WT' => NS_PROJECT_TALK, // T210699
+	],
 	'+simplewiki' => [
 		'WP' => NS_PROJECT,
 	],
@@ -4773,6 +4790,10 @@ $wgConf->settings = [
 		'T' => NS_TEMPLATE, // T202821
 		'WV' => NS_PROJECT, // T202821
 		'WT' => NS_PROJECT_TALK, // T202821
+		'维基学院' => NS_PROJECT, // T207544
+		'維基學院' => NS_PROJECT, // T207544
+		'维基学院讨论' => NS_PROJECT_TALK, // T207544
+		'維基學院討論' => NS_PROJECT_TALK, // T207544
 		'U' => NS_USER, // T202821
 		'UT' => NS_USER_TALK, // T202821
 		'H' => NS_HELP, // T202821
@@ -5550,7 +5571,6 @@ $wgConf->settings = [
 			'kafka' => false,
 			'sample' => false,
 		],
-		'wikibase-debug' => 'debug',
 		'WikibaseQualityConstraints' => 'debug',
 		'xenon' => 'debug',
 		'XMP' => 'warning', // T89532
@@ -7072,7 +7092,7 @@ $wgConf->settings = [
 		100 => '索引', // Index
 		101 => '索引討論', // Index talk
 		102 => '附錄', // Appendix
-		104 => '附錄討論', // Appendix talk
+		103 => '附錄討論', // Appendix talk
 	],
 	'zhwiktionary' => [
 		100 => '附录', // T31641 - appendix
@@ -8346,7 +8366,26 @@ $wgConf->settings = [
 
 'wgEnableBlockNoticeStats' => [
 	'default' => false,
+	'arwiki' => true,
+	'commonswiki' => true,
+	'dewiki' => true,
+	'enwiki' => true,
+	'enwiktionary' => true,
+	'eswiki' => true,
+	'fawiki' => true,
+	'frwiki' => true,
+	'hewiki' => true,
 	'itwiki' => true,
+	'jawiki' => true,
+	'kowiki' => true,
+	'mediawikiwiki' => true,
+	'metawiki' => true,
+	'nlwiki' => true,
+	'ruwiki' => true,
+	'plwiki' => true,
+	'ptwiki' => true,
+	'svwiki' => true,
+	'zhwiki' => true,
 ],
 
 # groupOverrides @{
@@ -9576,6 +9615,7 @@ $wgConf->settings = [
 		'reviewer' => [ 'patrol' => true ],              // T95101
 		'filemover' => [ 'movefile' => true ],            // T95103
 		'templateeditor' => [ 'templateeditor' => true, 'editprotected' => true ], // T195557
+		'flood' => [ 'bot' => true ], //T211181
 	],
 	'nlwiki' => [
 		'autoconfirmed' => [ 'patrol' => true ],
@@ -10381,7 +10421,7 @@ $wgConf->settings = [
 
 'wmgPrivilegedGroups' => [
 	// Default should include any privileged group that's on more than a few wikis
-	'default' => [ 'botadmin', 'bureaucrat', 'checkuser', 'eliminator', 'interface-editor', 'sysop', 'oversight', 'interface-admin' ],
+	'default' => [ 'botadmin', 'bureaucrat', 'checkuser', 'eliminator', 'importer', 'interface-admin', 'interface-editor', 'oversight',  'sysop', 'transwiki' ],
 	'+cswiki' => [ 'engineer' ],
 	'+enwiki' => [ 'abusefilter' ],
 	'+fawiki' => [ 'templateeditor' ],
@@ -10846,6 +10886,7 @@ $wgConf->settings = [
 			'filemover',            // T95103
 			'import',               // T100925
 			'templateeditor',       // T195557
+			'flood',                // T211181
 		],
 	],
 	'+nlwiki' => [
@@ -11622,6 +11663,7 @@ $wgConf->settings = [
 			'reviewer',             // T95101, T148171
 			'rollbacker',           // T90888, T148171
 			'templateeditor',       // T195557
+			'flood',                // T211181
 		],
 		'bureaucrat' => [
 			'abusefilter',          // T95102
@@ -14228,6 +14270,7 @@ $wgConf->settings = [
 	'nlwiki' => true,
 	'nlwikinews' => true, // T177170
 	'nlwikiquote' => true, // T124167
+	'nowiki' => true, // T210325
 	'orwiki' => true, // T124614
 	'plwiki' => true,
 	'plwikisource' => true,
@@ -16253,6 +16296,12 @@ $wgConf->settings = [
 		'name' => 'wbsearch',
 		'prefix' => 'wbs'
 	]
+],
+// If set to "false": No alternate links will be added to desktop pages,
+// and MobileFrontend won't add a canonical tag
+// If set to "true": Alternate link will be added, MF will add a canonical tag
+'wgMFNoindexPages' => [
+	'default' => false
 ],
 
 'wmgEnableTextExtracts' => [
@@ -18694,7 +18743,19 @@ $wgConf->settings = [
 'wgNavigationTimingOversampleFactor' => [
 	'default' => [
 		'geo' => [],
-		'userAgent' => []
+		'userAgent' => [],
+		'pageName' => [],
+	],
+	'ruwiki' => [
+		'geo' => [],
+		'userAgent' => [],
+		'pageName' => [
+			'Россия' => 100,
+			'Шизофрения' => 100,
+			'Википедия' => 100,
+			'Европейский_союз' => 100,
+			'Эйнштейн,_Альберт' => 100,
+		],
 	],
 ],
 
@@ -18973,7 +19034,7 @@ $wgConf->settings = [
 	],
 ],
 
-'wmgWikibaseForeignRepositories' => [
+'wmgWikibaseRepoForeignRepositories' => [
 	'default' => [],
 ],
 
@@ -21366,9 +21427,6 @@ $wgConf->settings = [
 	'default' => 'Project:New user landing page',
 ],
 
-'wmgUseParserMigration' => [
-	'default' => true,
-],
 // Enable archive for testwiki
 'wmgCirrusSearchIndexDeletes' => [
 	'default' => true,
@@ -21508,14 +21566,13 @@ $wgConf->settings = [
 ],
 
 'wgActorTableSchemaMigrationStage' => [
-	'default' => SCHEMA_COMPAT_OLD,
-	'group0' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'group1' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 ],
 
 'wgCommentTableSchemaMigrationStage' => [
 	'default' => MIGRATION_WRITE_NEW,
 	'group0' => MIGRATION_NEW,
+	'group1' => MIGRATION_NEW,
 ],
 
 'wgChangeTagsSchemaMigrationStage' => [

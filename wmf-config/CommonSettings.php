@@ -1693,7 +1693,7 @@ function wfGetPrivilegedGroups( $username, $user ) {
 		$groups = array_intersect(
 			array_merge(
 				$wmgPrivilegedGroups,
-				[ 'abusefilter-helper', 'founder', 'global-interface-editor', 'global-sysop', 'new-wikis-importer', 'ombudsman', 'staff', 'steward', 'sysadmin' ]
+				[ 'abusefilter-helper', 'founder', 'global-deleter', 'global-interface-editor', 'global-sysop', 'new-wikis-importer', 'ombudsman', 'staff', 'steward', 'sysadmin', 'wmf-researcher' ]
 			),
 			array_merge( $centralUser->getGlobalGroups(), $centralUser->getLocalGroups() )
 		);
@@ -1747,17 +1747,23 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function ( $response, $user, $
 $wgHooks['ChangeAuthenticationDataAudit'][] = function ( $req, $status ) {
 	$user = User::newFromName( $req->username );
 	$status = Status::wrap( $status );
-	if ( $user->isAllowed( 'delete' ) && $req instanceof \MediaWiki\Auth\PasswordAuthenticationRequest ) {
+	if ( $req instanceof \MediaWiki\Auth\PasswordAuthenticationRequest
+		&& wfGetPrivilegedGroups( $req->username, $user )
+	) {
 		global $wgRequest;
 		$headers = function_exists( 'apache_request_headers' ) ? apache_request_headers() : [];
 
+		$privGroups = wfGetPrivilegedGroups( $req->username, $user );
 		$logger = LoggerFactory::getInstance( 'badpass' );
-		$logger->info( 'Password change in prefs for sysop {name}: {status} - {ip} - {xff} - {ua}', [
+		$logger->info( 'Password change in prefs for {priv} {name}: {status} - {ip} - {xff} - {ua} - {geocookie}', [
 			'name' => $user->getName(),
+			'groups' => implode( ', ', $privGroups ),
+			'priv' => count( $privGroups ) ? 'elevated' : 'normal',
 			'status' => $status->isGood() ? 'ok' : $status->getWikiText( null, null, 'en' ),
 			'ip' => $wgRequest->getIP(),
 			'xff' => @$headers['X-Forwarded-For'],
 			'ua' => @$headers['User-Agent'],
+			'geocookie' => $wgRequest->getCookie( 'GeoIP', '' ),
 		] );
 	}
 };
@@ -3139,6 +3145,7 @@ if ( $wmgUseFileImporter ) {
 	wfLoadExtension( 'FileImporter' );
 	$wgFileImporterCommonsHelperServer = 'https://www.mediawiki.org';
 	$wgFileImporterCommonsHelperBasePageName = 'Extension:FileImporter/Data/';
+	$wgFileImporterCommonsHelperHelpPage = 'https://www.mediawiki.org/wiki/Extension:FileImporter/Data';
 	$wgFileImporterSourceSiteServices = [ $wmgUseFileImporter ];
 	// Temporary solution until we have a stable implementation for this
 	// https://gerrit.wikimedia.org/r/440857
@@ -3661,19 +3668,6 @@ if ( $wgDBname === 'foundationwiki' ) {
 		$resp->header( "X-Content-Security-Policy-Report-Only: $cspHeader" );
 		$resp->header( "Content-Security-Policy-Report-Only: $cspHeader" );
 	};
-}
-
-if ( $wmgUseParserMigration ) {
-	wfLoadExtension( 'ParserMigration' );
-	$wgParserMigrationTidiers = [
-		[
-			'driver' => 'RaggettInternalHHVM',
-			'tidyConfigFile' => $wgTidyConf,
-		],
-		[
-			'driver' => 'RemexHtml',
-		],
-	];
 }
 
 if ( $wmgUseDynamicSidebar ) {

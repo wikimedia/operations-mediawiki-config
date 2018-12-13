@@ -43,9 +43,10 @@ class CirrusTest extends WgConfTestCase {
 		$this->assertArrayHasKey( 'wgCirrusSearchDefaultCluster', $config );
 		// 2 DCs * 3 ES clusters per DC (*2 for transitional clusters)
 		$this->assertCount( 2 * 3 * 2, $config['wgCirrusSearchClusters'] );
-		$this->assertCount( 2, $config['wgCirrusSearchShardCount'] );
-		$this->assertCount( 2, $config['wgCirrusSearchReplicas'] );
-		$this->assertCount( 2, $config['wgCirrusSearchClientSideConnectTimeout'] );
+		// 2 DCs + 2 temp clusters per DC
+		$this->assertCount( 2 + ( 2 * 2 ), $config['wgCirrusSearchShardCount'] );
+		$this->assertCount( 2 + ( 2 * 2 ), $config['wgCirrusSearchReplicas'] );
+		$this->assertCount( 2 + ( 2 * 2 ), $config['wgCirrusSearchClientSideConnectTimeout'] );
 
 		/* Test diabled during transition to multi-instance
 		$dc_config_tested = 0;
