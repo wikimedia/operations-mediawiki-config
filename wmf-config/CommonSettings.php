@@ -452,7 +452,7 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 		}
 
 		$wgPasswordPolicy['policies'][$group]['MinimalPasswordLength'] = 10;
-		$wgPasswordPolicy['policies'][$group]['MinimumPasswordLengthToLogin'] = 1;
+		$wgPasswordPolicy['policies'][$group]['MinimumPasswordLengthToLogin'] = 10;
 		$wgPasswordPolicy['policies'][$group]['PasswordCannotBePopular'] = 10000;
 	}
 }
@@ -469,7 +469,7 @@ if ( $wmgUseCentralAuth ) {
 
 		$privilegedPolicy = [
 			'MinimalPasswordLength' => 10,
-			'MinimumPasswordLengthToLogin' => 1,
+			'MinimumPasswordLengthToLogin' => 10,
 			'PasswordCannotBePopular' => 10000,
 		];
 
@@ -1601,7 +1601,7 @@ if ( $wmgUseCentralAuth ) {
 	// WMF Staff and two volunteers
 	$wgCentralAuthGlobalPasswordPolicies['sysadmin'] = [
 		'MinimalPasswordLength' => 10,
-		'MinimumPasswordLengthToLogin' => 1,
+		'MinimumPasswordLengthToLogin' => 10,
 		'PasswordCannotMatchUsername' => true,
 		'PasswordCannotBePopular' => PHP_INT_MAX,
 	];
@@ -1609,7 +1609,7 @@ if ( $wmgUseCentralAuth ) {
 	// See T104371
 	$wgCentralAuthGlobalPasswordPolicies['steward'] = [
 		'MinimalPasswordLength' => 10,
-		'MinimumPasswordLengthToLogin' => 1,
+		'MinimumPasswordLengthToLogin' => 10,
 		'PasswordCannotMatchUsername' => true,
 	];
 
@@ -1619,7 +1619,7 @@ if ( $wmgUseCentralAuth ) {
 	) {
 		$wgCentralAuthGlobalPasswordPolicies[$group] = [
 			'MinimalPasswordLength' => 10,
-			'MinimumPasswordLengthToLogin' => 1,
+			'MinimumPasswordLengthToLogin' => 10,
 			'PasswordCannotMatchUsername' => true,
 			'PasswordCannotBePopular' => 10000,
 		];
