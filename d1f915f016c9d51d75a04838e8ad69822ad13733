@@ -22,6 +22,30 @@
       "revId": "d1f915f016c9d51d75a04838e8ad69822ad13733",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9d72e93b_8d2a30af",
+        "filename": "wmf-config/LabsServices.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 17
+      },
+      "writtenOn": "2018-12-13T01:49:36Z",
+      "side": 1,
+      "message": "It says that null is to be used when the service is \"only conditionally referenced\", to satisfy the unit test, which is not the case here. The value is referenced in both realms and the key is required. The service is explicitly absent rather than unconfigured.",
+      "parentUuid": "f9e22185_9275ba21",
+      "range": {
+        "startLine": 14,
+        "startChar": 13,
+        "endLine": 14,
+        "endChar": 18
+      },
+      "revId": "d1f915f016c9d51d75a04838e8ad69822ad13733",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
