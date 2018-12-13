@@ -444,12 +444,12 @@ $wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
 // Password policies; see https://meta.wikimedia.org/wiki/Password_policy
 $wgPasswordPolicy['policies']['default']['PasswordCannotBePopular'] = 100;
 $wmgPrivilegedPolicy = [
-	'MinimalPasswordLength' => 10,
+	'MinimalPasswordLength' => [ 'value' => 10, 'forceChange' => true ],
 	'MinimumPasswordLengthToLogin' => 1,
 	'PasswordNotInLargeBlacklist' => true,
 ];
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
-	$wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = 10;
+	$wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = [ 'value' => 10, 'forceChange' => true ];
 } else {
 	foreach ( $wmgPrivilegedGroups as $group ) {
 		// On non-SUL wikis this is the effective password policy. On SUL wikis, it will be overridden
@@ -472,10 +472,6 @@ if ( $wmgUseCentralAuth ) {
 			// hack; PasswordNotInLargeBlacklist obsoletes PasswordCannotBePopular but maxOfPolicies can't handle that
 			if ( $effectivePolicy['PasswordNotInLargeBlacklist'] ?? false ) {
 				$effectivePolicy['PasswordCannotBePopular'] = 0;
-			}
-
-			if ( in_array( 'staff', $privilegedGroups, true ) ) {
-				$effectivePolicy['MinimumPasswordLengthToLogin'] = 10;
 			}
 		}
 		return true;
@@ -1558,10 +1554,6 @@ if ( $wmgUseCentralAuth ) {
 	// See T104371 and [[m:Requests_for_comment/Password_policy_for_users_with_certain_advanced_permissions]]
 	foreach ( $wmgPrivilegedGlobalGroups as $group ) {
 		$wgCentralAuthGlobalPasswordPolicies[$group] = $wmgPrivilegedPolicy;
-		if ( $group === 'staff' ) {
-			// Require 10 byte password for staff.
-			$wgCentralAuthGlobalPasswordPolicies[$group]['MinimumPasswordLengthToLogin'] = 10;
-		}
 	}
 
 	$wgCentralAuthUseSlaves = true;
