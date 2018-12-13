@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "2e3c254c_984447b3",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2018-12-13T18:33:30Z",
+      "side": 1,
+      "message": "An alternative would be to use $wmgLogstashUseCee to change out the formatter class, but I think the way that Filippo has done this with different named formatters is more clear and safe now that the CeeFormatter class is present for all wikis.",
+      "revId": "0cbc4f05b3c7fa48594273bdbad8f4a15f171284",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9d320fce_9712f909",
         "filename": "wmf-config/logging.php",
         "patchSetId": 3
