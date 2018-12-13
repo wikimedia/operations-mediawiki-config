@@ -16,6 +16,24 @@
       "revId": "0cbc4f05b3c7fa48594273bdbad8f4a15f171284",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "32c7d667_d6082734",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 1629
+      },
+      "writtenOn": "2018-12-13T15:19:11Z",
+      "side": 1,
+      "message": "Indeed, wmf.8 is everywhere now so CeeFormatter is available too",
+      "parentUuid": "9d320fce_9712f909",
+      "revId": "0cbc4f05b3c7fa48594273bdbad8f4a15f171284",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
