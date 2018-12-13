@@ -16,6 +16,24 @@
       "revId": "31e256453d5436b0139aa566137408ac45ee5f35",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "641a1bec_f96533e7",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 451,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2018-12-13T10:10:17Z",
+      "side": 1,
+      "message": "It doesn\u0027t do that currently, but it could (\"reserved for future usage\" if you will).\n\n$wmgPrivilegedGroups doesn\u0027t contain \u0027user\u0027\n\n\u0027wmgPrivilegedGroups\u0027 \u003d\u003e [\n\t// Default should include any privileged group that\u0027s on more than a few wikis\n\t\u0027default\u0027 \u003d\u003e [ \u0027botadmin\u0027, \u0027bureaucrat\u0027, \u0027checkuser\u0027, \u0027eliminator\u0027, \u0027importer\u0027, \u0027interface-admin\u0027, \u0027interface-editor\u0027, \u0027oversight\u0027,  \u0027sysop\u0027, \u0027transwiki\u0027 ],\n\t\u0027+cswiki\u0027 \u003d\u003e [ \u0027engineer\u0027 ],\n\t\u0027+enwiki\u0027 \u003d\u003e [ \u0027abusefilter\u0027 ],\n\t\u0027+fawiki\u0027 \u003d\u003e [ \u0027templateeditor\u0027 ],\n\t\u0027+fishbowl\u0027 \u003d\u003e [ \u0027user\u0027 ],\n\t\u0027+incubatorwiki\u0027 \u003d\u003e [ \u0027translator\u0027 ],\n\t\u0027+metawiki\u0027 \u003d\u003e [ \u0027centralnoticeadmin\u0027, \u0027global-renamer\u0027, \u0027wmf-officeit\u0027, \u0027wmf-supportsafety\u0027 ],\n\t\u0027+private\u0027 \u003d\u003e [ \u0027user\u0027 ],\n\t\u0027+rowiki\u0027 \u003d\u003e [ \u0027templateeditor\u0027 ],\n\t\u0027+ruwiki\u0027 \u003d\u003e [ \u0027engineer\u0027 ],\n\t\u0027+testwiki\u0027 \u003d\u003e [ \u0027centralnoticeadmin\u0027 ],\n\t\u0027+wikidata\u0027 \u003d\u003e [ \u0027wikidata-staff\u0027 ],\n],",
+      "parentUuid": "e2d856d2_19c91d44",
+      "revId": "31e256453d5436b0139aa566137408ac45ee5f35",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
