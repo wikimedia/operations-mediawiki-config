@@ -444,6 +444,8 @@ $wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
 // T208441: Enforce for all users (at least) 8-byte passwords on creation/change, but not login
 $wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = 8;
 $wgPasswordPolicy['policies']['default']['MinimumPasswordLengthToLogin'] = 1;
+// Enforce for all users that passwords cannot match account names
+$wgPasswordPolicy['policies']['default']['PasswordCannotMatchUsername'] = true;
 
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = 10;
@@ -1598,7 +1600,6 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthGlobalPasswordPolicies['staff'] = [
 		'MinimalPasswordLength' => 10,
 		'MinimumPasswordLengthToLogin' => 10,
-		'PasswordCannotMatchUsername' => true,
 		'PasswordCannotBePopular' => PHP_INT_MAX,
 	];
 
@@ -1606,7 +1607,6 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthGlobalPasswordPolicies['sysadmin'] = [
 		'MinimalPasswordLength' => 10,
 		'MinimumPasswordLengthToLogin' => 10,
-		'PasswordCannotMatchUsername' => true,
 		'PasswordCannotBePopular' => PHP_INT_MAX,
 	];
 
@@ -1614,7 +1614,6 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthGlobalPasswordPolicies['steward'] = [
 		'MinimalPasswordLength' => 10,
 		'MinimumPasswordLengthToLogin' => 10,
-		'PasswordCannotMatchUsername' => true,
 	];
 
 	// See [[m:Requests_for_comment/Password_policy_for_users_with_certain_advanced_permissions]]
@@ -1624,7 +1623,6 @@ if ( $wmgUseCentralAuth ) {
 		$wgCentralAuthGlobalPasswordPolicies[$group] = [
 			'MinimalPasswordLength' => 10,
 			'MinimumPasswordLengthToLogin' => 10,
-			'PasswordCannotMatchUsername' => true,
 			'PasswordCannotBePopular' => 10000,
 		];
 	}
