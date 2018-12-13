@@ -441,6 +441,10 @@ $wgPasswordConfig['pbkdf2'] = [
 // Temporary for T57420
 $wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
 
+// T208441: Enforce for all users (at least) 8-byte passwords on creation/change, but not login
+$wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = 8;
+$wgPasswordPolicy['policies']['default']['MinimumPasswordLengthToLogin'] = 1;
+
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = 10;
 } else {
