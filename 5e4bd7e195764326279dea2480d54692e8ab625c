@@ -46,6 +46,30 @@
       "revId": "5e4bd7e195764326279dea2480d54692e8ab625c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c64ca473_98c27624",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2018-12-13T18:11:49Z",
+      "side": 1,
+      "message": "The goal, at least in T209504, is “more” constraint checks, not “almost all” :) bumping this limit will probably get us in the vicinity of “almost all checks”, but that itself is not really something we care about, I think: we care about the checks being fast, and right now the PHP checks are still faster than the SPARQL checks – that’s why we want to do more checks in PHP. If we overshoot with this change, and PHP checks are now slower than SPARQL checks, then we would want to reduce the limit again to improve performance.",
+      "parentUuid": "b9742e94_aa8bd866",
+      "range": {
+        "startLine": 11,
+        "startChar": 6,
+        "endLine": 11,
+        "endChar": 23
+      },
+      "revId": "5e4bd7e195764326279dea2480d54692e8ab625c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
