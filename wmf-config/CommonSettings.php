@@ -459,7 +459,7 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 
 		$wgPasswordPolicy['policies'][$group]['MinimalPasswordLength'] = 10;
 		$wgPasswordPolicy['policies'][$group]['MinimumPasswordLengthToLogin'] = 10;
-		$wgPasswordPolicy['policies'][$group]['PasswordCannotBePopular'] = 10000;
+		$wgPasswordPolicy['policies'][$group]['PasswordCannotBePopular'] = PHP_INT_MAX;
 	}
 }
 
@@ -476,7 +476,7 @@ if ( $wmgUseCentralAuth ) {
 		$privilegedPolicy = [
 			'MinimalPasswordLength' => 10,
 			'MinimumPasswordLengthToLogin' => 10,
-			'PasswordCannotBePopular' => 10000,
+			'PasswordCannotBePopular' => PHP_INT_MAX,
 		];
 
 		if ( array_intersect(
@@ -1614,6 +1614,7 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthGlobalPasswordPolicies['steward'] = [
 		'MinimalPasswordLength' => 10,
 		'MinimumPasswordLengthToLogin' => 10,
+		'PasswordCannotBePopular' => PHP_INT_MAX,
 	];
 
 	// See [[m:Requests_for_comment/Password_policy_for_users_with_certain_advanced_permissions]]
@@ -1623,7 +1624,7 @@ if ( $wmgUseCentralAuth ) {
 		$wgCentralAuthGlobalPasswordPolicies[$group] = [
 			'MinimalPasswordLength' => 10,
 			'MinimumPasswordLengthToLogin' => 10,
-			'PasswordCannotBePopular' => 10000,
+			'PasswordCannotBePopular' => PHP_INT_MAX,
 		];
 	}
 
