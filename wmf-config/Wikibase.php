@@ -183,7 +183,7 @@ if ( $wmgUseWikibaseRepo ) {
 	}
 
 	// Federation temporarily commented out, see T211237 & T204748
-	// $wgWBRepoSettings['foreignRepositories'] = $wmgWikibaseForeignRepositories;
+	$wgWBRepoSettings['foreignRepositories'] = $wmgWikibaseRepoForeignRepositories;
 
 	// Temporary, see T184933
 	$wgWBRepoSettings['useKartographerGlobeCoordinateFormatter'] = true;

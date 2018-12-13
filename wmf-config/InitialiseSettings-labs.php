@@ -1091,24 +1091,15 @@ function wmfLabsSettings() {
 			'wikidatawiki' => 'https://ssr-termbox.wmflabs.org/termbox',
 		],
 
-		'wmgWikibaseForeignRepositories' => [
+		'wmgWikibaseRepoForeignRepositories' => [
 			'default' => [],
 			'commonswiki' => [
-				'' => [
+				'wikidata' => [
 					'repoDatabase' => 'wikidatawiki',
 					'baseUri' => 'https://wikidata.beta.wmflabs.org/entity/',
 					'supportedEntityTypes' => [ 'item', 'property' ],
 					'prefixMapping' => [],
 					'entityNamespaces' => [ 'item' => 0, 'property' => 120 ]
-				],
-			],
-			'wikidatawiki' => [
-				'commons' => [
-					'repoDatabase' => 'commonswiki',
-					'baseUri' => 'https://commons.wikimedia.beta.wmflabs.org/entity/',
-					'supportedEntityTypes' => [ 'mediainfo' ],
-					'prefixMapping' => [],
-					'entityNamespaces' => [ 'mediainfo' => '6/mediainfo' ]
 				],
 			],
 		],

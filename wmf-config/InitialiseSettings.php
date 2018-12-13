@@ -19015,7 +19015,7 @@ $wgConf->settings = [
 	],
 ],
 
-'wmgWikibaseForeignRepositories' => [
+'wmgWikibaseRepoForeignRepositories' => [
 	'default' => [],
 ],
 
