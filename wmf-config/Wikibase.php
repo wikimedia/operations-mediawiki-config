@@ -269,6 +269,9 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['sharedCacheKeyPrefix'] = $wmgWBSharedCacheKey;
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
 
+	$wgWBClientSettings['trackLuaFunctionCallsPerSiteGroup'] = $wmgWikibaseClientTrackLuaFunctionCallsPerSiteGroup;
+	$wgWBClientSettings['trackLuaFunctionCallsPerWiki'] = $wmgWikibaseClientTrackLuaFunctionCallsPerWiki;
+
 	// T142103
 	$wgWBClientSettings['sendEchoNotification'] = true;
 	$wgWBClientSettings['echoIcon'] = $wmgWikibaseClientEchoIcon;
