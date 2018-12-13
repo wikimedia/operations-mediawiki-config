@@ -34,6 +34,24 @@
       "revId": "31e256453d5436b0139aa566137408ac45ee5f35",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1bf9e002_f0496d44",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 451,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2018-12-13T10:15:10Z",
+      "side": 1,
+      "message": "Uh. It mostly doesn\u0027t contain user (ie it\u0027s not in default). But for private and fishbowl wikis we add \u0027user\u0027 as a simple way to enforce higher standards there",
+      "parentUuid": "641a1bec_f96533e7",
+      "revId": "31e256453d5436b0139aa566137408ac45ee5f35",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
