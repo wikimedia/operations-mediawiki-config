@@ -443,6 +443,8 @@ $wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
 
 // Password policies; see https://meta.wikimedia.org/wiki/Password_policy
 $wgPasswordPolicy['policies']['default']['PasswordCannotBePopular'] = 100;
+$wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = 8;
+
 $wmgPrivilegedPolicy = [
 	'MinimalPasswordLength' => [ 'value' => 10, 'forceChange' => true ],
 	'MinimumPasswordLengthToLogin' => 1,
