@@ -648,7 +648,11 @@ function wmfLabsSettings() {
 			'deploymentwiki' => true,
 			'wikipedia' => true,
 		],
-
+		"wgMFContentProviderClass" => [
+			'default' => 'MobileFrontend\ContentProviders\DefaultContentProvider',
+			// T207508
+			'enwiki' => 'MobileFrontend\ContentProviders\MwApiContentProvider',
+		],
 		// Test Wikidata descriptions on mobile: T127250
 		'wgMFDisplayWikibaseDescriptions' => [
 			'enwiki' => [
@@ -1087,10 +1091,10 @@ function wmfLabsSettings() {
 			'wikidatawiki' => 'https://ssr-termbox.wmflabs.org/termbox',
 		],
 
-		'wmgWikibaseForeignRepositories' => [
+		'wmgWikibaseRepoForeignRepositories' => [
 			'default' => [],
 			'commonswiki' => [
-				'' => [
+				'wikidata' => [
 					'repoDatabase' => 'wikidatawiki',
 					'baseUri' => 'https://wikidata.beta.wmflabs.org/entity/',
 					'supportedEntityTypes' => [ 'item', 'property' ],
@@ -1098,15 +1102,12 @@ function wmfLabsSettings() {
 					'entityNamespaces' => [ 'item' => 0, 'property' => 120 ]
 				],
 			],
-			'wikidatawiki' => [
-				'commons' => [
-					'repoDatabase' => 'commonswiki',
-					'baseUri' => 'https://commons.wikimedia.beta.wmflabs.org/entity/',
-					'supportedEntityTypes' => [ 'mediainfo' ],
-					'prefixMapping' => [],
-					'entityNamespaces' => [ 'mediainfo' => '6/mediainfo' ]
-				],
-			],
+		],
+		// If set to "false": No alternate links will be added to desktop pages,
+		// and MobileFrontend won't add a canonical tag
+		// If set to "true": Alternate link will be added, MF will add a canonical tag
+		'wgMFNoindexPages' => [
+			'default' => true
 		]
 	];
 } # wmflLabsSettings()

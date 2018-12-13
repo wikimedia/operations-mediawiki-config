@@ -19,6 +19,15 @@ class WmfConfigServicesTest extends PHPUnit\Framework\TestCase {
 		];
 	}
 
+	public static function getServicesFiles() {
+		$wmfConfigDir = dirname( __DIR__ ) . '/wmf-config';
+
+		return [
+			'production' => "$wmfConfigDir/ProductionServices.php",
+			'labs' => "$wmfConfigDir/LabsServices.php",
+		];
+	}
+
 	/**
 	 * Verify that the file parses correctly, without warnings,
 	 * and returns an array with exactly the keys we expect,
@@ -41,26 +50,69 @@ class WmfConfigServicesTest extends PHPUnit\Framework\TestCase {
 	 *
 	 * @dataProvider provideServicesFiles
 	 */
-	public function testCompatibility( $file ) {
+	public function testIntraRealmCompatibility( $file ) {
 		$allSubkeys = [];
 
-		$allServices = require $file;
-		foreach ( $allServices as $dc => $services ) {
+		$realm = require $file;
+		foreach ( $realm as $dc => $dcServices ) {
 			$allSubkeys = array_merge(
 				$allSubkeys,
-				array_keys( $services )
+				array_keys( $dcServices )
 			);
 		}
 
 		// Normalize
 		$allSubkeys = array_values( array_unique( $allSubkeys ) );
 
-		foreach ( $allServices as $dc => $services ) {
+		foreach ( $realm as $dc => $dcServices ) {
 			$this->assertSameValues(
 				$allSubkeys,
-				array_keys( $services ),
+				array_keys( $dcServices ),
 				"service keys for $dc"
 			);
+		}
+	}
+
+	/**
+	 * Verify that each realm contains the same set of services.
+	 *
+	 * Regression tests for T211526.
+	 *
+	 * If you run into a failure from this test and are absolutely
+	 * sure that the service is only conditionally referenced in wmf-config
+	 * when in the same realm and not elsewhere, then:
+	 *
+	 * 1. Add a comment over any and all code that uses the config to point
+	 *    out that this key is only available in realm X.
+	 *
+	 * 2. Add the missing key to other realm(s) with null as the
+	 *    placeholder value, to satisfy this unit test.
+	 */
+	public function testCrossRealmCompatibility() {
+		$allSubkeys = [];
+		$realms = [];
+		foreach ( self::getServicesFiles() as $label => $file ) {
+			$realm = require $file;
+			foreach ( $realm as $dc => $services ) {
+				$allSubkeys = array_merge(
+					$allSubkeys,
+					array_keys( $services )
+				);
+			}
+			$realms[$label] = $realm;
+		}
+
+		// Normalize
+		$allSubkeys = array_values( array_unique( $allSubkeys ) );
+
+		foreach ( $realms as $label => $realm ) {
+			foreach ( $realm as $dc => $dcServices ) {
+				$this->assertSameValues(
+					$allSubkeys,
+					array_keys( $dcServices ),
+					"service keys for $label/$dc"
+				);
+			}
 		}
 	}
 

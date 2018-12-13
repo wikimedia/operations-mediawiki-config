@@ -182,10 +182,11 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['string-limits'] = $wmgWikibaseStringLimits;
 	}
 
-	$wgWBRepoSettings['foreignRepositories'] = $wmgWikibaseForeignRepositories;
+	// Federation temporarily commented out, see T211237 & T204748
+	$wgWBRepoSettings['foreignRepositories'] = $wmgWikibaseRepoForeignRepositories;
 
 	// Temporary, see T184933
-	$wgWBRepoSettings['useKartographerGlobeCoordinateFormatter'] = $wgDBname === 'testwikidatawiki';
+	$wgWBRepoSettings['useKartographerGlobeCoordinateFormatter'] = true;
 }
 
 if ( $wmgUseWikibaseClient ) {
