@@ -446,6 +446,8 @@ $wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = 8;
 $wgPasswordPolicy['policies']['default']['MinimumPasswordLengthToLogin'] = 1;
 // Enforce for all users that passwords cannot match account names
 $wgPasswordPolicy['policies']['default']['PasswordCannotMatchUsername'] = true;
+// Enforce for all users that passwords are not in the top 100,000 most common
+$wgPasswordPolicy['policies']['default']['PasswordCannotBePopular'] = 100000;
 
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = 10;
@@ -462,8 +464,6 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 		$wgPasswordPolicy['policies'][$group]['PasswordCannotBePopular'] = PHP_INT_MAX;
 	}
 }
-
-$wgPasswordPolicy['policies']['default']['PasswordCannotBePopular'] = 100;
 
 // Enforce password policy when users login on other wikis
 if ( $wmgUseCentralAuth ) {
