@@ -21553,6 +21553,7 @@ $wgConf->settings = [
 'wgCommentTableSchemaMigrationStage' => [
 	'default' => MIGRATION_WRITE_NEW,
 	'group0' => MIGRATION_NEW,
+	'group1' => MIGRATION_NEW,
 ],
 
 'wgChangeTagsSchemaMigrationStage' => [
