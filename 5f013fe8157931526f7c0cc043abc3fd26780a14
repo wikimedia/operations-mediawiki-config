@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "63b90c74_1f015e89",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 354,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-12-14T13:24:16Z",
+      "side": 1,
+      "message": "If possible don\u0027t use an rc slave, as they have special partitioning. Maybe use db1081",
+      "range": {
+        "startLine": 354,
+        "startChar": 4,
+        "endLine": 354,
+        "endChar": 10
+      },
+      "revId": "5f013fe8157931526f7c0cc043abc3fd26780a14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
