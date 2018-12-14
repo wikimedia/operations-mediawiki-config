@@ -10155,6 +10155,7 @@ $wgConf->settings = [
 		'massmessage-sender' => [ // T144701
 			'massmessage' => true,
 		],
+		'extendedmover' => [ 'move' => true, 'move-subpages' => true, 'suppressredirect' => true, 'tboverride' => true ], // T211978
 	],
 	'vecwiki' => [
 		'flood' => [ 'bot' => true ],
@@ -11085,9 +11086,9 @@ $wgConf->settings = [
 		'sysop' => [ 'autoeditor' ],
 	],
 	'+urwiki' => [
-		// T44737, T47643, T120348, T133564, T137888, T139302, T144701, T184607
+		// T44737, T47643, T120348, T133564, T137888, T139302, T144701, T184607, T211978
 		'bureaucrat' => [ 'import', 'abusefilter', 'rollbacker', 'massmessage-sender', 'interface-editor', 'eliminator' ],
-		'sysop' => [ 'confirmed', 'abusefilter', 'rollbacker', 'accountcreator', 'filemover', 'autopatrolled', 'massmessage-sender' ],
+		'sysop' => [ 'confirmed', 'abusefilter', 'rollbacker', 'accountcreator', 'filemover', 'autopatrolled', 'massmessage-sender', 'extendedmover' ],
 	],
 	'+viwiki' => [
 		'sysop' => [
@@ -11878,9 +11879,9 @@ $wgConf->settings = [
 		'sysop' => [ 'autoeditor' ],
 	],
 	'+urwiki' => [
-		// T44737, T47643, T120348, T133564, T137888, T139302, T144701, T184607
+		// T44737, T47643, T120348, T133564, T137888, T139302, T144701, T184607, T211978
 		'bureaucrat' => [ 'import', 'abusefilter', 'rollbacker', 'massmessage-sender', 'interface-editor', 'eliminator' ],
-		'sysop' => [ 'confirmed', 'accountcreator', 'filemover', 'autopatrolled', 'massmessage-sender' ],
+		'sysop' => [ 'confirmed', 'accountcreator', 'filemover', 'autopatrolled', 'massmessage-sender', 'extendedmover' ],
 	],
 	'+viwiki' => [
 		'sysop' => [
