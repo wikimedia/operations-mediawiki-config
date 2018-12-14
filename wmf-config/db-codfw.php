@@ -154,7 +154,7 @@ $wgLBFactoryConf = [
 		'db2046'      => 200, # C6 2.9TB 160GB # candidate master
 		'db2053'      => 50,  # D6 2.9TB 160GB, dump (inactive), vslow
 		'db2060'      => 100, # D6 3.3TB 160GB, api
-		'db2067'      => 100, # D6 3.3TB 160GB, api
+		# 'db2067'      => 100, # D6 3.3TB 160GB, api # upgrade mysql
 		'db2076'      => 400, # B1 3.3TB 512GB # master for sanitarium db2095
 		'db2087:3316' => 100, # C1 3.3TB 512GB # rc, log: s6 and s7
 		'db2089:3316' => 100, # A3 3.3TB 512GB # rc, log: s6 and s5(s8)
@@ -164,7 +164,7 @@ $wgLBFactoryConf = [
 		'db2047'      => 300, # C6 2.9TB 160GB, # candidate master
 		'db2054'      => 200, # D6 2.9TB 160GB, dump (inactive), vslow
 		'db2061'      => 200, # D6 3.3TB 160GB, api
-		'db2068'      => 200,  # D6 3.3TB 160GB
+		# 'db2068'      => 200,  # D6 3.3TB 160GB # upgrade mysql
 		'db2077'      => 500, # C1 3.3TB 512GB, api # master for sanitarium db2095
 		'db2086:3317' => 200, # B1 3.3TB 512GB # rc, log: s7 and s8
 		'db2087:3317' => 200, # C1 3.3TB 512GB # rc, log: s6 and s7
@@ -175,7 +175,7 @@ $wgLBFactoryConf = [
 		'db2080'      => 50,  # C5 3.3TB 512GB, api
 		'db2081'      => 50,  # A6 3.3TB 512GB, api
 		'db2082'      => 100, # B6 3.3TB 512GB # master for sanitarium db2094
-		'db2083'      => 100, # C6 3.3TB 512GB
+		# 'db2083'      => 100, # C6 3.3TB 512GB # upgrade mysql
 		'db2085:3318' => 1,   # A5 3.3TB 512GB # rc, log: s1 and s8
 		'db2086:3318' => 1,   # B1 3.3TB 512GB # rc, log: s7 and s8
 	],
@@ -446,7 +446,7 @@ $wgLBFactoryConf = [
 		],
 		'api' => [
 			'db2060' => 1,
-			'db2067' => 1,
+			# 'db2067' => 1,
 		],
 	],
 	's7' => [
