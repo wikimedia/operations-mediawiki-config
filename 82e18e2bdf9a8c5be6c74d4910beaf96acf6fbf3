@@ -22,6 +22,30 @@
       "revId": "82e18e2bdf9a8c5be6c74d4910beaf96acf6fbf3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ab850bce_0fcea605",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 450,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2018-12-14T11:50:07Z",
+      "side": 1,
+      "message": "Ideally, removing most of these overrides because we\u0027ve set them in MW Core DefaultSettings would be awesome",
+      "parentUuid": "442e0a74_c1146ae3",
+      "range": {
+        "startLine": 449,
+        "startChar": 0,
+        "endLine": 450,
+        "endChar": 77
+      },
+      "revId": "82e18e2bdf9a8c5be6c74d4910beaf96acf6fbf3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
