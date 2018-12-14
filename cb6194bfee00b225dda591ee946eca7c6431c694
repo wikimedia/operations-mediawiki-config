@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b4d91525_1c83cffa",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 365,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2018-12-14T13:59:54Z",
+      "side": 1,
+      "message": "Why are you disabling this host?",
+      "range": {
+        "startLine": 365,
+        "startChar": 3,
+        "endLine": 365,
+        "endChar": 24
+      },
+      "revId": "cb6194bfee00b225dda591ee946eca7c6431c694",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
