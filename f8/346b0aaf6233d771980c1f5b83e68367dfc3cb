@@ -1,0 +1,8 @@
+Verified+2: jenkins-bot
+Code-Review+2: Filippo Giunchedi <fgiunchedi@wikimedia.org>
+Code-Review+1: BryanDavis <bdavis@wikimedia.org>
+Submitted-by: Filippo Giunchedi <fgiunchedi@wikimedia.org>
+Submitted-at: Fri, 14 Dec 2018 10:16:27 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/478621
+Project: operations/mediawiki-config
+Branch: refs/heads/master
