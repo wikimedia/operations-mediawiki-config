@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3712d60f_70423813",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4879
+      },
+      "writtenOn": "2018-12-15T14:19:56Z",
+      "side": 1,
+      "message": "You can remove this or change name of group to actual defined group in file.",
+      "revId": "576ef31bc408a8f763d3b88bad83a065924a8133",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b48fdcab_70c288b4",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 10158,
+      "author": {
+        "id": 4879
+      },
+      "writtenOn": "2018-12-15T14:19:56Z",
+      "side": 1,
+      "message": "// T211978",
+      "range": {
+        "startLine": 10158,
+        "startChar": 116,
+        "endLine": 10158,
+        "endChar": 125
+      },
+      "revId": "576ef31bc408a8f763d3b88bad83a065924a8133",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
