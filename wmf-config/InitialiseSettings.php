@@ -16483,6 +16483,11 @@ $wgConf->settings = [
 		'copyright-width' => 92,
 		'copyright-height' => 21,
 	],
+	'cswiki' => [
+		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-cs.svg',
+		'copyright-width' => 120,
+		'copyright-height' => 18,
+	],
 	'cywiki' => [
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-cy.svg',
 		'copyright-width' => 116,
