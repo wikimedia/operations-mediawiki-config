@@ -19,6 +19,29 @@
     },
     {
       "key": {
+        "uuid": "2d83d047_a394e516",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-12-15T14:45:18Z",
+      "side": 1,
+      "message": "extendedmover",
+      "range": {
+        "startLine": 9,
+        "startChar": 16,
+        "endLine": 9,
+        "endChar": 25
+      },
+      "revId": "576ef31bc408a8f763d3b88bad83a065924a8133",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b48fdcab_70c288b4",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 2
