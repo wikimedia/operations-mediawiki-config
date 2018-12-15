@@ -18676,6 +18676,7 @@ $wgConf->settings = [
 'wmgUseListings' => [
 	'default' => false,
 	'wikivoyage' => true,
+	'dewikivoyage' => false, // T206102
 ],
 
 'wmgUseTocTree' => [
