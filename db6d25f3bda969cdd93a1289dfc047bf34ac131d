@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "40a82580_b521d8c4",
+        "filename": "errorpages/hhvm-fatal-error.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-12-16T22:41:54Z",
+      "side": 1,
+      "message": "per PS3, I now understand why this condition exists which seems fine, but I do think it should be a require now, given the below would fatal if not. That might provide a more helpful error message (e.g. failed to open required file vs Class not found).",
+      "range": {
+        "startLine": 47,
+        "startChar": 2,
+        "endLine": 47,
+        "endChar": 9
+      },
+      "revId": "db6d25f3bda969cdd93a1289dfc047bf34ac131d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
