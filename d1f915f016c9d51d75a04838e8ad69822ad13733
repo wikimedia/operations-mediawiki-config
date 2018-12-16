@@ -46,6 +46,30 @@
       "revId": "d1f915f016c9d51d75a04838e8ad69822ad13733",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e2fcf958_e49e6224",
+        "filename": "wmf-config/LabsServices.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-12-16T22:43:01Z",
+      "side": 1,
+      "message": "Ah, yeah, the getLocalService call is unconditional, and it evaluates the result. Thanks :)",
+      "parentUuid": "9d72e93b_8d2a30af",
+      "range": {
+        "startLine": 14,
+        "startChar": 13,
+        "endLine": 14,
+        "endChar": 18
+      },
+      "revId": "d1f915f016c9d51d75a04838e8ad69822ad13733",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
