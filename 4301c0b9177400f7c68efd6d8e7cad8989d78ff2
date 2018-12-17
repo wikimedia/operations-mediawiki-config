@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee0fb058_cbdbebfa",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 21729,
+      "author": {
+        "id": 2488
+      },
+      "writtenOn": "2018-12-17T16:41:30Z",
+      "side": 1,
+      "message": "Could you add an \u0027id\u0027 property to those links? \n\nThey can be any arbitrary value but it\u0027s important the the citation link, for example, has the same id across languages.",
+      "range": {
+        "startLine": 21729,
+        "startChar": 1,
+        "endLine": 21729,
+        "endChar": 19
+      },
+      "revId": "4301c0b9177400f7c68efd6d8e7cad8989d78ff2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
