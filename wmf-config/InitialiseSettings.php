@@ -1681,6 +1681,7 @@ $wgConf->settings = [
 	'viwikibooks' => [ '1.5x' => '/static/images/project-logos/viwikibooks-1.5x.png', '2x' => '/static/images/project-logos/viwikibooks-2x.png' ],
 
 	# Wikisource
+	'bewikisource' => [ '1.5x' => '/static/images/project-logos/bewikisource-1.5x.png', '2x' => '/static/images/project-logos/bewikisource-2x.png' ], // T150618
 	'cswikisource' => [ '1.5x' => '/static/images/project-logos/cswikisource-1.5x.png', '2x' => '/static/images/project-logos/cswikisource-2x.png' ], // T150618
 	'euwikisource' => [ '1.5x' => '/static/images/project-logos/euwikisource-1.5x.png', '2x' => '/static/images/project-logos/euwikisource-2x.png' ],
 	'nowikisource' => [ '1.5x' => '/static/images/project-logos/nowikisource-1.5x.png', '2x' => '/static/images/project-logos/nowikisource-2x.png' ], // T167192
