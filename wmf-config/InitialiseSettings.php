@@ -21713,6 +21713,121 @@ $wgConf->settings = [
 	'cswiki' => 'https://foundation.wikimedia.org/wiki/Uv%C3%ADtac%C3%AD_pr%C5%AFzkum_pro_nov%C3%A9_u%C5%BEivatele_Prohl%C3%A1%C5%A1en%C3%AD_o_ochran%C4%9B_osobn%C3%ADch_%C3%BAdaj%C5%AF',
 ],
 
+'wgGEHelpPanelEnabled' => [
+	'default' => false,
+	'testwiki' => true,
+	// Scheduled to be set to true on Jan 10 2019
+	'kowiki' => false,
+	'cswiki' => false,
+],
+
+'wgGEHelpPanelNewAccountEnableProportion' => [
+	'default' => 0,
+	'testwiki' => 0,
+	// Scheduled to be set to 2 on Jan 10 2019
+	'kowiki' => 0,
+	'cswiki' => 0,
+],
+
+'wgGEHelpPanelHelpDeskTitle' => [
+	'default' => '',
+	'testwiki' => 'Wikipedia:Requests/Help_desk',
+	'kowiki' => '위키백과:질문방',
+	'cswiki' => 'Wikipedie:Potřebuji_pomoc',
+],
+
+'wgGEHelpPanelViewMoreTitle' => [
+	'default' => '',
+	'testwiki' => 'Special:MyLanguage/Help:Contents',
+	'kowiki' => '위키백과:도움말',
+	'cswiki' => 'Nápověda:Obsah',
+],
+
+'wgGEHelpPanelLinks' => [
+	'default' => [],
+	'testwiki' => [
+		[
+			'title' => 'EditingHelp',
+			'text' => 'Write a Wikipedia article using the right style',
+			'id' => 'style',
+		],
+		[
+			'title' => 'Wikipedia:Creation_and_usage_of_media_files',
+			'text' => 'Add an image',
+			'id' => 'image',
+		],
+		[
+			'title' => 'Wikipedia:Citing_sources',
+			'text' => 'Add a citation',
+			'id' => 'citation',
+		],
+		[
+			'title' => 'How_to_add_an_external_link',
+			'text' => 'How to add an external link',
+			'id' => 'externallink',
+		],
+		[
+			'title' => 'Help:Infobox',
+			'text' => 'How to add/edit the infobox',
+			'id' => 'infobox',
+		]
+	],
+	'kowiki' => [
+		[
+			'title' => '위키백과:위키문법_요약',
+			'text' => '위키문법 요약',
+			'id' => 'wikitextsyntax',
+		],
+		[
+			'title' => '위키백과:빠른_길라잡이',
+			'text' => '빠른 길라잡이',
+			'id' => 'quicktutorial',
+		],
+		[
+			'title' => '위키백과:그림_사용하기',
+			'text' => '그림 넣기',
+			'id' => 'image'
+		],
+		[
+			'title' => '위키백과:각주',
+			'text' => '각주 달기',
+			'id' => 'citation',
+		],
+		[
+			'title' => '위키백과:문서_등재_기준',
+			'text' => '문서 등재 기준',
+			'id' => 'notability',
+		]
+	],
+	'cswiki' => [
+		[
+			'title' => 'Wikipedie:Průvodce',
+			'text' => 'Průvodce',
+			'id' => 'guide',
+		],
+		[
+			'title' => 'Wikipedie:Encyklopedická_významnost',
+			'text' => 'Encyklopedická významnost',
+			'id' => 'notability',
+		],
+		[
+			'title' => 'Wikipedie:Vzhled_a_styl',
+			'text' => 'Jak má vypadat článek pro Wikipedii',
+			'id' => 'style',
+		],
+		[
+			'title' => 'Nápověda:Jak_editovat_stránku',
+			'text' => 'Jak editovat stránku?',
+			'id' => 'editpage',
+		],
+		[
+			'title' => 'Wikipedie:Editujte_s_odvahou',
+			'text' => 'Editujte s odvahou',
+			'id' => 'bebold',
+		]
+	],
+],
+
 ];
 
 ### WMF Labs override #####
