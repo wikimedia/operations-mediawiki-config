@@ -14661,6 +14661,7 @@ $wgConf->settings = [
 
 'wgMediaViewerUseThumbnailGuessing' => [
 	'default' => true,
+	'private' => false, // T212099
 ],
 
 'wgMediaViewerNetworkPerformanceSamplingFactor' => [
