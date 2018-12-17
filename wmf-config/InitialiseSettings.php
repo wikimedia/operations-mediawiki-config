@@ -5406,10 +5406,14 @@ $wgConf->settings = [
 // Use false to disable all Logstash logging
 'wmgLogstashServers' => [
 	'default' => $wmfLocalServices['logstash'],
+	'group0' => 'localhost',
 ],
 
+// Use @cee: cookie when logging to logstash,
+// required to detect JSON syslog from non-structured syslog.
 'wmgLogstashUseCee' => [
 	'default' => false,
+	'group0' => true,
 ],
 
 # wmgKafkaServers @{
