@@ -523,11 +523,6 @@ function wmfLabsSettings() {
 			'default' => 'https://wikidata.beta.wmflabs.org/w/api.php',
 		],
 
-		'wmgWikibaseMaxItemIdForNewItemIdHtmlFormatter' => [
-			'default' => 0,
-			'wikidatawiki' => 10000000,
-		],
-
 		'wgLexemeLanguageCodePropertyId' => [
 			'default' => null,
 			'wikidatawiki' => 'P218',
