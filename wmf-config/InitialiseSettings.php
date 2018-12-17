@@ -19435,7 +19435,7 @@ $wgConf->settings = [
 
 'wmgWikibaseMaxItemIdForNewItemIdHtmlFormatter' => [
 	'default' => 0,
-	'wikidatawiki' => 100000,
+	'wikidatawiki' => 1000000,
 	'testwikidatawiki' => 10000000,
 ],
 
