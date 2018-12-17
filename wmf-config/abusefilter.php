@@ -16,16 +16,16 @@ $wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = true; // T44012
 
 // Provides access to private information - T160357
 // Only CheckUsers/Stewards/Staff and Ombudsmen allowed.
-$wgGroupPermissions['sysop']['abusefilter-private'] = false;
-$wgGroupPermissions['sysop']['abusefilter-private-log'] = false;
+$wgGroupPermissions['sysop']['abusefilter-privatedetails'] = false;
+$wgGroupPermissions['sysop']['abusefilter-privatedetails-log'] = false;
 
 // T160357 - Log accessing private abusefilter details
-$wgAbuseFilterPrivateLog = true;
+$wgAbuseFilterLogPrivateDetailsAccess = true;
 
 // T160357 - Allow those with CheckUser right to access AbuseLog private information on WMF projects and its log
 // Only CheckUsers/Stewards/Staff and Ombudsmen allowed
-$wgGroupPermissions['checkuser']['abusefilter-private'] = true;
-$wgGroupPermissions['checkuser']['abusefilter-private-log'] = true;
+$wgGroupPermissions['checkuser']['abusefilter-privatedetails'] = true;
+$wgGroupPermissions['checkuser']['abusefilter-privatedetails-log'] = true;
 
 // Disable some potentially dangerous actions
 $wgAbuseFilterActions = [
@@ -340,7 +340,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true; // T76270
 		$wgGroupPermissions['sysop']['abusefilter-modify-global'] = true; // T192722
 		$wgGroupPermissions['steward']['abusefilter-modify-global'] = true; // T150752
-		$wgGroupPermissions['steward']['abusefilter-private'] = true; // T160357
+		$wgGroupPermissions['steward']['abusefilter-privatedetails'] = true; // T160357
 		$wgAbuseFilterActions['block'] = true; // T54681
 		$wgAbuseFilterAnonBlockDuration = '31 hours'; // T76270
 		$wgAbuseFilterNotificationsPrivate = true; // T154358
