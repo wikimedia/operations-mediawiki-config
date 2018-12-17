@@ -46,6 +46,30 @@
       "revId": "4301c0b9177400f7c68efd6d8e7cad8989d78ff2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d71cfb42_5278c3fe",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 21729,
+      "author": {
+        "id": 6097
+      },
+      "writtenOn": "2018-12-17T16:57:16Z",
+      "side": 1,
+      "message": "I\u0027ve added IDs, but I think it\u0027s going to be difficult to maintain 1:1 parity between IDs. For example CS wiki has a link to a guide, but KO wiki has a quick tutorial. They\u0027re not really equivalent, but they are somewhat similar: should they have the same ID?",
+      "parentUuid": "78e60311_474594e1",
+      "range": {
+        "startLine": 21729,
+        "startChar": 1,
+        "endLine": 21729,
+        "endChar": 19
+      },
+      "revId": "4301c0b9177400f7c68efd6d8e7cad8989d78ff2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
