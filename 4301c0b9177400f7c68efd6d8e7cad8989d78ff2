@@ -22,6 +22,30 @@
       "revId": "4301c0b9177400f7c68efd6d8e7cad8989d78ff2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "78e60311_474594e1",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 21729,
+      "author": {
+        "id": 6097
+      },
+      "writtenOn": "2018-12-17T16:42:55Z",
+      "side": 1,
+      "message": "Yes, but I\u0027m going to post a clarification question on this in Phabricator.",
+      "parentUuid": "ee0fb058_cbdbebfa",
+      "range": {
+        "startLine": 21729,
+        "startChar": 1,
+        "endLine": 21729,
+        "endChar": 19
+      },
+      "revId": "4301c0b9177400f7c68efd6d8e7cad8989d78ff2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
