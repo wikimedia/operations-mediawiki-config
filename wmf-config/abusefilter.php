@@ -20,7 +20,7 @@ $wgGroupPermissions['sysop']['abusefilter-private'] = false;
 $wgGroupPermissions['sysop']['abusefilter-private-log'] = false;
 
 // T160357 - Log accessing private abusefilter details
-$wgAbuseFilterPrivateLog = true;
+$wgAbuseFilterLogPrivateDetailsAccess = true;
 
 // T160357 - Allow those with CheckUser right to access AbuseLog private information on WMF projects and its log
 // Only CheckUsers/Stewards/Staff and Ombudsmen allowed
