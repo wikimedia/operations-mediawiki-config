@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "37e4a6ed_5183c7f1",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-12-17T15:06:39Z",
+      "side": 1,
+      "message": "It would probably be best to set this in IS.php in the same way as the above settings are done.\n\nAdding things like this to here is now Wikibase.php originally got a bit out of control.",
+      "range": {
+        "startLine": 137,
+        "startChar": 1,
+        "endLine": 143,
+        "endChar": 2
+      },
+      "revId": "42ac73f462e872293444197e122add02480a45f8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
