@@ -14,13 +14,7 @@
  * @see https://secure.php.net/manual/en/ini.core.php#ini.auto-prepend-file
  */
 
-require_once __DIR__ . '/profiler.php';
-
-wmfSetupProfiler( [
-	'redis-host' => 'deployment-fluorine02.deployment-prep.eqiad.wmflabs',
-	'redis-port' => 6379,
-	'redis-timeout' => 1.0,
-	'use-xhgui' => false, // Not yet available in Beta Cluster, T180761
-] );
+// https://phabricator.wikimedia.org/T180183
+require_once __DIR__ . '/profiler-labs.php';
 
 require __DIR__ . '/set-time-limit.php';
