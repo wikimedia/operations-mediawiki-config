@@ -125,6 +125,7 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['idBlacklist'] = $wmgWikibaseIdBlacklist;
 	$wgWBRepoSettings['disabledDataTypes'] = $wmgWikibaseDisabledDataTypes;
 	$wgWBRepoSettings['tmpMaxItemIdForNewItemIdHtmlFormatter'] = $wmgWikibaseMaxItemIdForNewItemIdHtmlFormatter;
+	$wgWBRepoSettings['tmpMaxPropertyIdForNewItemIdHtmlFormatter'] = $wmgWikibaseMaxItemIdForNewPropertyIdHtmlFormatter;
 	$wgWBRepoSettings['entityDataFormats'] = $wmgWikibaseEntityDataFormats;
 	$wgWBRepoSettings['maxSerializedEntitySize'] = $wmgWikibaseMaxSerializedEntitySize;
 	$wgWBRepoSettings['siteLinkGroups'] = $wmgWBSiteLinkGroups;
