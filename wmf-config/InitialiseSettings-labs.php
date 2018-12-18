@@ -1079,6 +1079,11 @@ function wmfLabsSettings() {
 			]
 		],
 
+		'wmgWikibaseMaxItemIdForNewPropertyIdHtmlFormatter' => [
+			'default' => 0,
+			'wikidatawiki' => 1,
+		],
+
 		// T209143
 		'wmgWikibaseUseSSRTermbox' => [
 			'default' => false,
