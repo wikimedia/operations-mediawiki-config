@@ -5407,7 +5407,7 @@ $wgConf->settings = [
 // Use false to disable all Logstash logging
 'wmgLogstashServers' => [
 	'default' => $wmfLocalServices['logstash'],
-	'group0' => 'localhost',
+	'group0' => ['localhost'],
 ],
 
 // Use @cee: cookie when logging to logstash,
