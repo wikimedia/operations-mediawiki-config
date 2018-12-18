@@ -19611,6 +19611,306 @@ $wgConf->settings = [
 	'wikidatawiki' => [ 'P1855', 'P2271', 'P5192', 'P5193', 'P5977' ], // T183267
 ],
 
+'wgWBQualityConstraintsInstanceOfId' => [
+	'default' => 'P31',
+	'testwikidatawiki' => 'P82',
+],
+
+'wgWBQualityConstraintsSubclassOfId' => [
+	'default' => 'P279',
+	'testwikidatawiki' => 'P10208',
+],
+
+'wgWBQualityConstraintsExceptionToConstraintId' => [
+	'default' => 'P2303',
+	'testwikidatawiki' => 'P84116',
+],
+
+'wgWBQualityConstraintsConstraintStatusId' => [
+	'default' => 'P2316',
+	'testwikidatawiki' => 'P84117',
+],
+
+'wgWBQualityConstraintsMandatoryConstraintId' => [
+	'default' => 'Q21502408',
+	'testwikidatawiki' => 'Q187927',
+],
+
+'wgWBQualityConstraintsDistinctValuesConstraintId' => [
+	'default' => 'Q21502410',
+	'testwikidatawiki' => 'Q187928',
+],
+
+'wgWBQualityConstraintsMultiValueConstraintId' => [
+	'default' => 'Q21510857',
+	'testwikidatawiki' => 'Q187929',
+],
+
+'wgWBQualityConstraintsUsedAsQualifierConstraintId' => [
+	'default' => 'Q21510863',
+	'testwikidatawiki' => 'Q187930',
+],
+
+'wgWBQualityConstraintsSingleValueConstraintId' => [
+	'default' => 'Q19474404',
+	'testwikidatawiki' => 'Q187931',
+],
+
+'wgWBQualityConstraintsSymmetricConstraintId' => [
+	'default' => 'Q21510862',
+	'testwikidatawiki' => 'Q187932',
+],
+
+'wgWBQualityConstraintsTypeConstraintId' => [
+	'default' => 'Q21503250',
+	'testwikidatawiki' => 'Q187933',
+],
+
+'wgWBQualityConstraintsValueTypeConstraintId' => [
+	'default' => 'Q21510865',
+	'testwikidatawiki' => 'Q187934',
+],
+
+'wgWBQualityConstraintsInverseConstraintId' => [
+	'default' => 'Q21510855',
+	'testwikidatawiki' => 'Q187935',
+],
+
+'wgWBQualityConstraintsItemRequiresClaimConstraintId' => [
+	'default' => 'Q21503247',
+	'testwikidatawiki' => 'Q187936',
+],
+
+'wgWBQualityConstraintsValueRequiresClaimConstraintId' => [
+	'default' => 'Q21510864',
+	'testwikidatawiki' => 'Q187937',
+],
+
+'wgWBQualityConstraintsConflictsWithConstraintId' => [
+	'default' => 'Q21502838',
+	'testwikidatawiki' => 'Q187938',
+],
+
+'wgWBQualityConstraintsOneOfConstraintId' => [
+	'default' => 'Q21510859',
+	'testwikidatawiki' => 'Q187939',
+],
+
+'wgWBQualityConstraintsMandatoryQualifierConstraintId' => [
+	'default' => 'Q21510856',
+	'testwikidatawiki' => 'Q187940',
+],
+
+'wgWBQualityConstraintsAllowedQualifiersConstraintId' => [
+	'default' => 'Q21510851',
+	'testwikidatawiki' => 'Q187941',
+],
+
+'wgWBQualityConstraintsRangeConstraintId' => [
+	'default' => 'Q21510860',
+	'testwikidatawiki' => 'Q187942',
+],
+
+'wgWBQualityConstraintsDifferenceWithinRangeConstraintId' => [
+	'default' => 'Q21510854',
+	'testwikidatawiki' => 'Q187943',
+],
+
+'wgWBQualityConstraintsCommonsLinkConstraintId' => [
+	'default' => 'Q21510852',
+	'testwikidatawiki' => 'Q187944',
+],
+
+'wgWBQualityConstraintsContemporaryConstraintId' => [
+	'default' => 'Q25796498',
+	'testwikidatawiki' => 'Q187945',
+],
+
+'wgWBQualityConstraintsUsedForValuesOnlyConstraintId' => [
+	'default' => 'Q21528958',
+	'testwikidatawiki' => 'Q187946',
+],
+
+'wgWBQualityConstraintsUsedAsReferenceConstraintId' => [
+	'default' => 'Q21528959',
+	'testwikidatawiki' => 'Q187947',
+],
+
+'wgWBQualityConstraintsNoBoundsConstraintId' => [
+	'default' => 'Q51723761',
+	'testwikidatawiki' => 'Q187948',
+],
+
+'wgWBQualityConstraintsAllowedUnitsConstraintId' => [
+	'default' => 'Q21514353',
+	'testwikidatawiki' => 'Q187949',
+],
+
+'wgWBQualityConstraintsSingleBestValueConstraintId' => [
+	'default' => 'Q52060874',
+	'testwikidatawiki' => 'Q187950',
+],
+
+'wgWBQualityConstraintsAllowedEntityTypesConstraintId' => [
+	'default' => 'Q52004125',
+	'testwikidatawiki' => 'Q187951',
+],
+
+'wgWBQualityConstraintsCitationNeededConstraintId' => [
+	'default' => 'Q54554025',
+	'testwikidatawiki' => 'Q187952',
+],
+
+'wgWBQualityConstraintsPropertyScopeConstraintId' => [
+	'default' => 'Q53869507',
+	'testwikidatawiki' => 'Q187953',
+],
+
+'wgWBQualityConstraintsClassId' => [
+	'default' => 'P2308',
+	'testwikidatawiki' => 'P401',
+],
+
+'wgWBQualityConstraintsRelationId' => [
+	'default' => 'P2309',
+	'testwikidatawiki' => 'P403',
+],
+
+'wgWBQualityConstraintsInstanceOfRelationId' => [
+	'default' => 'Q21503252',
+	'testwikidatawiki' => 'Q187954',
+],
+
+'wgWBQualityConstraintsSubclassOfRelationId' => [
+	'default' => 'Q21514624',
+	'testwikidatawiki' => 'Q187955',
+],
+
+'wgWBQualityConstraintsInstanceOrSubclassOfRelationId' => [
+	'default' => 'Q30208840',
+	'testwikidatawiki' => 'Q187956',
+],
+
+'wgWBQualityConstraintsPropertyId' => [
+	'default' => 'P2306',
+	'testwikidatawiki' => 'P404',
+],
+
+'wgWBQualityConstraintsQualifierOfPropertyConstraintId' => [
+	'default' => 'P2305',
+	'testwikidatawiki' => 'P76946',
+],
+
+'wgWBQualityConstraintsMinimumQuantityId' => [
+	'default' => 'P2313',
+	'testwikidatawiki' => 'P84122',
+],
+
+'wgWBQualityConstraintsMaximumQuantityId' => [
+	'default' => 'P2312',
+	'testwikidatawiki' => 'P84123',
+],
+
+'wgWBQualityConstraintsMinimumDateId' => [
+	'default' => 'P2310',
+	'testwikidatawiki' => 'P84124',
+],
+
+'wgWBQualityConstraintsMaximumDateId' => [
+	'default' => 'P2311',
+	'testwikidatawiki' => 'P84125',
+],
+
+'wgWBQualityConstraintsNamespaceId' => [
+	'default' => 'P2307',
+	'testwikidatawiki' => 'P82189',
+],
+
+'wgWBQualityConstraintsSyntaxClarificationId' => [
+	'default' => 'P2916',
+	'testwikidatawiki' => 'P84127',
+],
+
+'wgWBQualityConstraintsConstraintScopeId' => [
+	'default' => 'P4680',
+	'testwikidatawiki' => 'P84128',
+],
+
+'wgWBQualityConstraintsSeparatorId' => [
+	'default' => 'P4155',
+	'testwikidatawiki' => 'P84129',
+],
+
+'wgWBQualityConstraintsConstraintCheckedOnMainValueId' => [
+	'default' => 'Q46466787',
+	'testwikidatawiki' => 'Q187957',
+],
+
+'wgWBQualityConstraintsConstraintCheckedOnQualifiersId' => [
+	'default' => 'Q46466783',
+	'testwikidatawiki' => 'Q187958',
+],
+
+'wgWBQualityConstraintsConstraintCheckedOnReferencesId' => [
+	'default' => 'Q46466805',
+	'testwikidatawiki' => 'Q187959',
+],
+
+'wgWBQualityConstraintsNoneOfConstraintId' => [
+	'default' => 'Q52558054',
+	'testwikidatawiki' => 'Q187960',
+],
+
+'wgWBQualityConstraintsIntegerConstraintId' => [
+	'default' => 'Q52848401',
+	'testwikidatawiki' => 'Q187961',
+],
+
+'wgWBQualityConstraintsWikibaseItemId' => [
+	'default' => 'Q29934200',
+	'testwikidatawiki' => 'Q187962',
+],
+
+'wgWBQualityConstraintsWikibasePropertyId' => [
+	'default' => 'Q29934218',
+	'testwikidatawiki' => 'Q187963',
+],
+
+'wgWBQualityConstraintsWikibaseLexemeId' => [
+	'default' => 'Q51885771',
+	'testwikidatawiki' => 'Q187964',
+],
+
+'wgWBQualityConstraintsWikibaseFormId' => [
+	'default' => 'Q54285143',
+	'testwikidatawiki' => 'Q187965',
+],
+
+'wgWBQualityConstraintsWikibaseSenseId' => [
+	'default' => 'Q54285715',
+	'testwikidatawiki' => 'Q187966',
+],
+
+'wgWBQualityConstraintsPropertyScopeId' => [
+	'default' => 'P5314',
+	'testwikidatawiki' => 'P84130',
+],
+
+'wgWBQualityConstraintsAsMainValueId' => [
+	'default' => 'Q54828448',
+	'testwikidatawiki' => 'Q187967',
+],
+
+'wgWBQualityConstraintsAsQualifiersId' => [
+	'default' => 'Q54828449',
+	'testwikidatawiki' => 'Q187968',
+],
+
+'wgWBQualityConstraintsAsReferencesId' => [
+	'default' => 'Q54828450',
+	'testwikidatawiki' => 'Q187969',
+],
+
 'wmgUseWikibaseLexeme' => [
 	'default' => false,
 	'testwikidatawiki' => true,
