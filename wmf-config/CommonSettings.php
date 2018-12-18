@@ -3457,8 +3457,8 @@ if ( $wmgUseOATHAuth ) {
 	}
 }
 
-if ( $wmgUseJADE ) {
-	wfLoadExtension( 'JADE' );
+if ( $wmgUseJade ) {
+	wfLoadExtension( 'Jade' );
 }
 
 if ( $wmgUseORES ) {
