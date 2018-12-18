@@ -813,7 +813,7 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
-		'wmgUseJADE' => [
+		'wmgUseJade' => [
 			'default' => true,
 		],
 
