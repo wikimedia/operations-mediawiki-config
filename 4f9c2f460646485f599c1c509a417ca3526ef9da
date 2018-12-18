@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e651fdd2_fe6390e1",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1121,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-12-18T10:27:12Z",
+      "side": 1,
+      "message": "These should all be prefixed with wg!",
+      "range": {
+        "startLine": 1121,
+        "startChar": 3,
+        "endLine": 1121,
+        "endChar": 35
+      },
+      "revId": "4f9c2f460646485f599c1c509a417ca3526ef9da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
