@@ -22,6 +22,29 @@
       "revId": "4f9c2f460646485f599c1c509a417ca3526ef9da",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "947a00f5_df0e0e3d",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1122,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-12-18T10:33:24Z",
+      "side": 1,
+      "message": "I\u0027m also not really sure if the defaults should be here.",
+      "range": {
+        "startLine": 1122,
+        "startChar": 17,
+        "endLine": 1122,
+        "endChar": 20
+      },
+      "revId": "4f9c2f460646485f599c1c509a417ca3526ef9da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
