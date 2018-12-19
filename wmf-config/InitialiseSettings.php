@@ -18133,7 +18133,8 @@ $wgConf->settings = [
 ],
 'wgPageTriageNoIndexTemplates' => [
 	'default' => [],
-	'enwiki' => [ 'NOINDEX' ]
+	'testwiki' => [ 'NOINDEX' ],
+	'enwiki' => [ 'NOINDEX' ],
 ],
 'wgPageTriageDraftNamespaceId' => [
 	'default' => false,
