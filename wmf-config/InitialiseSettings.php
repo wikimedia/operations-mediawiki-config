@@ -20080,7 +20080,7 @@ $wgConf->settings = [
 	'dewikisource' => [ 'content' => 3, 'general' => 1, 'titlesuggest' => 1 ],
 	'elwiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ],
 	// These shards are also significantly larger than the target 2GB.
-	'enwiki' => [ 'content' => 7, 'general' => 12, 'titlesuggest' => 4 ],
+	'enwiki' => [ 'content' => 7, 'general' => 15, 'titlesuggest' => 4 ],
 	'enwikinews' => [ 'content' => 1, 'general' => 4, 'titlesuggest' => 1 ],
 	'enwikisource' => [ 'content' => 7, 'general' => 1, 'titlesuggest' => 1 ],
 	'enwiktionary' => [ 'content' => 5, 'general' => 2, 'titlesuggest' => 2 ],
