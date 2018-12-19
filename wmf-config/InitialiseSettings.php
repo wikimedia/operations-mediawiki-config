@@ -10344,7 +10344,7 @@ $wgConf->settings = [
 	],
 	'zhwikivoyage' => [ // T62328
 		'autopatrolled' => [ 'autopatrol' => true ],
-		'patroller' => [ 'patrol' => true, 'rollback' => true ],
+		'patroller' => [ 'patrol' => true, 'rollback' => true, 'suppressredirect' => true ], // T212272
 	],
 	'+zhwiktionary' => [ // T7836
 		'bot' => [ 'patrol' => true ],
