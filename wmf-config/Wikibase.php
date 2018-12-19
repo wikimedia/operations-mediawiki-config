@@ -146,6 +146,10 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['canonicalUriProperty'] = $wmgWBRepoCanonicalUriProperty; // T178180
 	}
 
+	if ( isset( $wmgWBRepoIdGenerator ) ) {
+		$wgWBRepoSettings['idGenerator'] = $wmgWBRepoIdGenerator; // T194299
+	}
+
 	$wgWBRepoSettings['normalizeItemByTitlePageNames'] = true;
 
 	$wgWBRepoSettings['dataRightsText'] = 'Creative Commons CC0 License';
