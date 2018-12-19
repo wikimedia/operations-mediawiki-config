@@ -1090,10 +1090,6 @@ function wmfLabsSettings() {
 			'wikidatawiki' => 'https://ssr-termbox.wmflabs.org/termbox',
 		],
 
-		'wmgWBRepoIdGenerator' => [
-			'default' => 'mysql-upsert',
-		],
-
 		'wmgWikibaseRepoForeignRepositories' => [
 			'default' => [],
 			'commonswiki' => [
