@@ -20073,14 +20073,14 @@ $wgConf->settings = [
 	// Commons is special and has a 'file' index in addition to the regular ones.
 	// We're sharding 'file' like it is a content index because searching it is
 	// very very common. Increased to 15 because 7 generates giant 70Gb shards
-	'commonswiki' => [ 'content' => 1, 'general' => 8, 'file' => 21, 'titlesuggest' => 1 ],
+	'commonswiki' => [ 'content' => 1, 'general' => 8, 'file' => 28, 'titlesuggest' => 1 ],
 	'cswiki' => [ 'content' => 3, 'general' => 1, 'titlesuggest' => 1 ],
 	'dawiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ],
 	'dewiki' => [ 'content' => 7, 'general' => 8, 'titlesuggest' => 3 ],
 	'dewikisource' => [ 'content' => 3, 'general' => 1, 'titlesuggest' => 1 ],
 	'elwiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ],
 	// These shards are also significantly larger than the target 2GB.
-	'enwiki' => [ 'content' => 7, 'general' => 12, 'titlesuggest' => 4 ],
+	'enwiki' => [ 'content' => 8, 'general' => 21, 'titlesuggest' => 4 ],
 	'enwikinews' => [ 'content' => 1, 'general' => 4, 'titlesuggest' => 1 ],
 	'enwikisource' => [ 'content' => 7, 'general' => 1, 'titlesuggest' => 1 ],
 	'enwiktionary' => [ 'content' => 5, 'general' => 2, 'titlesuggest' => 2 ],
@@ -20149,7 +20149,7 @@ $wgConf->settings = [
 	'dewiki' => [ 'content' => 1 ],
 	'wikidatawiki' => [ 'content' => 3 ],
 	'enwiktionary' => [ 'content' => 1, 'general' => 1 ],
-	'enwiki' => [ 'content' => 1, 'general' => 2 ],
+	'enwiki' => [ 'content' => 1, 'general' => 3 ],
 	'eswiki' => [ 'content' => 1 ],
 	'frwiki' => [ 'content' => 1 ],
 	'nlwiki' => [ 'content' => 1 ],
