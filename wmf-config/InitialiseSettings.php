@@ -19048,8 +19048,7 @@ $wgConf->settings = [
 ],
 
 'wmgWBRepoIdGenerator' => [
-	'default' => 'original',
-	'testwikidatawiki' => 'mysql-upsert',
+	'default' => 'mysql-upsert',
 ],
 
 'wmgWikibaseStringLimits' => [
