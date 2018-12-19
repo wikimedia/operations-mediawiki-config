@@ -19047,6 +19047,11 @@ $wgConf->settings = [
 	'wikidatawiki' => 'https://query.wikidata.org/sparql',
 ],
 
+'wmgWBRepoIdGenerator' => [
+	'default' => 'original',
+	'testwikidatawiki' => 'mysql-upsert',
+],
+
 'wmgWikibaseStringLimits' => [
 	'default' => null,
 	'wikidata' => [
