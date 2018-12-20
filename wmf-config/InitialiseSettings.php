@@ -18752,6 +18752,7 @@ $wgConf->settings = [
 'wgNavigationTimingSamplingFactor' => [
 	// 0.1% of all page loads in Grade A browsers.
 	'default' => 1000,
+	'ruwiki' => 100,
 ],
 
 'wgNavigationTimingSurveySamplingFactor' => [
@@ -18760,7 +18761,7 @@ $wgConf->settings = [
 	'default' => 0,
 	'cawiki' => 1,
 	'enwikivoyage' => 1,
-	'frwiki' => 3,
+	'frwiki' => 1,
 	'ruwiki' => 1,
 ],
 
@@ -18777,17 +18778,6 @@ $wgConf->settings = [
 		'geo' => [],
 		'userAgent' => [],
 		'pageName' => [],
-	],
-	'ruwiki' => [
-		'geo' => [],
-		'userAgent' => [],
-		'pageName' => [
-			'Россия' => 100,
-			'Шизофрения' => 100,
-			'Википедия' => 100,
-			'Европейский_союз' => 100,
-			'Эйнштейн,_Альберт' => 100,
-		],
 	],
 ],
 
