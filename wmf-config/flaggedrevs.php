@@ -162,17 +162,17 @@ if ( $wgDBname == 'alswiki' ) {
 
 	$wgGroupPermissions['editor']['autopatrol'] = true; // T95085
 
-	$wgGroupPermissions['reviewer'] += [
+	$wgGroupPermissions['reviewer'] = array_merge( $wgGroupPermissions['reviewer'], [
 		'autopatrol' => true,         // T95085
 		'patrol' => true,             // T95085
-	];
+	]);
 
-	$wgGroupPermissions['sysop'] += [
+	$wgGroupPermissions['sysop'] = array_merge( $wgGroupPermissions['sysop'], [
 		'stablesettings' => true,     // T36135
 		'review' => true,             // T95085
 		'validate' => true,           // T95085
 		'unreviewedpages' => true,    // T95085
-	];
+	]);
 }
 
 // New deployment 2008-05-03
