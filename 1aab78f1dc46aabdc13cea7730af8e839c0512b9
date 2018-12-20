@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ff5dc70e_b4019614",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 20083,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2018-12-20T09:22:50Z",
+      "side": 1,
+      "message": "this might not be enough\nWe generally want shards to be less than 30G to estimate how many shards we need you cat:\n- fetch the size of the primary shards\n   curl https://search.svc.eqiad.wmnet:9243/enwiki_general/_stats | jq ._all.primaries.store.size_in_bytes\n\n- verify that the size is roughly the same on codfw\n- divide this number by 30G",
+      "range": {
+        "startLine": 20083,
+        "startChar": 44,
+        "endLine": 20083,
+        "endChar": 46
+      },
+      "revId": "1aab78f1dc46aabdc13cea7730af8e839c0512b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "92fd3a62_8026bafe",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 20152,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2018-12-20T09:22:50Z",
+      "side": 1,
+      "message": "depending on how many shards you need you may have to increase this number otherwise elastic may not be able to allocate all the shards.\n\nto know this you have to verify that:\nnumber_shards * number_of_copies \u003c number_of_hosts * max_shards_per_node\n\nat the moment we have:\nnumber_of_shards: 12\nnumber_of_copies: \u00270-2\u0027 \u003d\u003e 2 copies + 1 primary \u003d\u003e 3\n\nnumber_of_hosts: 30 in codfw, 35 in eqiad\nmax_shard_per_node: 2\nfor codfw: 12*3 \u003c 30*2 \u003d\u003e OK",
+      "range": {
+        "startLine": 20152,
+        "startChar": 44,
+        "endLine": 20152,
+        "endChar": 45
+      },
+      "revId": "1aab78f1dc46aabdc13cea7730af8e839c0512b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
