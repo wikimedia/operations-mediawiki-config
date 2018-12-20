@@ -9800,6 +9800,7 @@ $wgConf->settings = [
 		'patroller' => [ 'patrol' => true, 'autopatrol' => true, ], // T30479
 	],
 	'plwikisource' => [
+		'*' => [ 'pagequality' => true, ], // T212478
 		'editor' => [ 'autopatrol' => true, 'patrol' => true, 'suppressredirect' => true ], // T72459, T212655
 	],
 	'plwiktionary' => [
