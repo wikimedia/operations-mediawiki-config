@@ -18763,12 +18763,16 @@ $wgConf->settings = [
 'wmgUseWikimediaEvents' => [
 	'default' => true,
 	'closed' => false, // T158721
+	'private' => false,
+	'fishbowl' => false,
 ],
 
-// ext.NavigationTiming
 'wmgUseNavigationTiming' => [
 	'default' => true,
 	'wikitech' => false,
+	'closed' => false,
+	'private' => false,
+	'fishbowl' => false,
 ],
 
 // Careful! The LOWER the value, the MORE requests will be logged.
