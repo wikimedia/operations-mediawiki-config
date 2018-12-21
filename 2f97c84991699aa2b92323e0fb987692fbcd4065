@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a10001cf_53fa7994",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 20076,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2018-12-21T14:30:09Z",
+      "side": 1,
+      "message": "only one shard seems over the threshold, I\u0027d wait a bit to see if it\u0027s not caused by a merge in progress.",
+      "range": {
+        "startLine": 20076,
+        "startChar": 62,
+        "endLine": 20076,
+        "endChar": 64
+      },
+      "revId": "2f97c84991699aa2b92323e0fb987692fbcd4065",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b10a4033_1b773942",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 20083,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2018-12-21T14:30:09Z",
+      "side": 1,
+      "message": "I no longer see enwiki_content as problematic, what may happen is that a merge is running on one of its shard. Merging a big segment can cause a significant but temporary increase in the size of one shard. To double check that it\u0027s not the case we can list all the shards of this index and see if all of them are above the threshold or simply one.\nChecking eqiad and codfw enwiki_content I varying sizes between 27G and 33G I think it\u0027s good enough to keep enwiki_content at 7 for now.",
+      "range": {
+        "startLine": 20083,
+        "startChar": 28,
+        "endLine": 20083,
+        "endChar": 29
+      },
+      "revId": "2f97c84991699aa2b92323e0fb987692fbcd4065",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
