@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e2b9b5d7_a77ea610",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2018-12-21T16:59:42Z",
+      "side": 1,
+      "message": "these no longer exist in PS2, so IMHO the commit message should have been updated",
+      "range": {
+        "startLine": 10,
+        "startChar": 58,
+        "endLine": 11,
+        "endChar": 32
+      },
+      "revId": "4589a5cb05d4398959070afce7154aa425ac5638",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
