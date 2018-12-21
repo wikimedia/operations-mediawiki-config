@@ -14067,6 +14067,7 @@ $wgConf->settings = [
 		'radlines.org',                     // Radiologists wiki - T203219
 		'*.nasimonline.ir',                 // Iranian news agency - T203371
 		'idb.ub.uni-tuebingen.de',          // University Library Tübingen - T211466
+		'mbc.cyfrowemazowsze.pl',           // Polish biblioteka - T212469
 	],
 ],
 
