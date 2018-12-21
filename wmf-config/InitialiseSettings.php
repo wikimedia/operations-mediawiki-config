@@ -10439,6 +10439,10 @@ $wgConf->settings = [
 	'+wikidata' => [ 'wikidata-staff' ],
 ],
 
+'wmgPrivilegedGlobalGroups' => [
+	'default' => [ 'abusefilter-helper', 'founder', 'global-deleter', 'global-interface-editor', 'global-sysop', 'new-wikis-importer', 'ombudsman', 'staff', 'steward', 'sysadmin', 'wmf-researcher' ],
+],
+
 # wgAddGroups @{
 'wgAddGroups' => [
 	// The '+' in front of the DB name means 'add to the default'. It saves us duplicating
