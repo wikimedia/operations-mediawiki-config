@@ -10509,19 +10509,24 @@ $wgConf->settings = [
 # @} end of wgGroupOverrides2
 
 'wmgPrivilegedGroups' => [
-	// Default should include any privileged group that's on more than a few wikis
-	'default' => [ 'botadmin', 'bureaucrat', 'checkuser', 'eliminator', 'importer', 'interface-admin', 'interface-editor', 'oversight',  'sysop', 'transwiki' ],
-	'+cswiki' => [ 'engineer' ],
-	'+enwiki' => [ 'abusefilter' ],
-	'+fawiki' => [ 'templateeditor' ],
+	// Default should include any privileged group on any SUL wiki. Ideally we'd check for all wikis memberships on that wiki vs. wmgPrivilegedGroups for that wiki, but
+	// we can only check memberships on a non-current wiki, not config, so we need to mash everything together here.
+	'default' => [
+		// core or extension groups
+		'bureaucrat', 'checkuser', 'importer', 'interface-admin', 'oversight',  'sysop', 'transwiki',
+		// custom groups used on several wikis
+		'botadmin', 'eliminator', 'interface-editor', 'templateeditor',
+		// custom groups used on one or a few wikis
+		'abusefilter' /* enwiki */, 'engineer' /* cswiki, ruwiki */, 'translator' /* incubatorwiki */, 'wikidata-staff',
+		// metawiki local groups with global powers (some also on testwiki)
+		'centralnoticeadmin', 'global-renamer', 'wmf-officeit', 'wmf-supportsafety',
+	],
 	'+fishbowl' => [ 'user' ],
-	'+incubatorwiki' => [ 'translator' ],
-	'+metawiki' => [ 'centralnoticeadmin', 'global-renamer', 'wmf-officeit', 'wmf-supportsafety' ],
 	'+private' => [ 'user' ],
-	'+rowiki' => [ 'templateeditor' ],
-	'+ruwiki' => [ 'engineer' ],
-	'+testwiki' => [ 'centralnoticeadmin' ],
-	'+wikidata' => [ 'wikidata-staff' ],
+],
+
+'wmgPrivilegedGlobalGroups' => [
+	'default' => [ 'abusefilter-helper', 'founder', 'global-deleter', 'global-interface-editor', 'global-sysop', 'new-wikis-importer', 'ombudsman', 'staff', 'steward', 'sysadmin', 'wmf-researcher' ],
 ],
 
 # wgAddGroups @{
