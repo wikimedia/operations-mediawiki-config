@@ -1623,16 +1623,10 @@ function wfGetPrivilegedGroups( $username, $user ) {
 
 	if ( $wmgUseCentralAuth && CentralAuthUser::getInstanceByName( $username )->exists() ) {
 		$centralUser = CentralAuthUser::getInstanceByName( $username );
-		try {
-			$groups = array_intersect(
-				array_merge( $wmgPrivilegedGroups, $wmgPrivilegedGlobalGroups ),
-				array_merge( $centralUser->getGlobalGroups(), $centralUser->getLocalGroups() )
-			);
-		} catch ( Exception $e ) {
-			// Don't block login if we can't query attached (T119736)
-			MWExceptionHandler::logException( $e );
-			$groups = array_merge( $user->getGroups(), $centralUser->getGlobalGroups() );
-		}
+		$groups = array_intersect(
+			array_merge( $wmgPrivilegedGroups, $wmgPrivilegedGlobalGroups ),
+			array_merge( $centralUser->getGlobalGroups(), $centralUser->getLocalGroups() )
+		);
 	} else {
 		$groups = array_intersect( $wmgPrivilegedGroups, $user->getGroups() );
 	}
