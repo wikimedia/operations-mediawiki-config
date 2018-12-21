@@ -441,78 +441,43 @@ $wgPasswordConfig['pbkdf2'] = [
 // Temporary for T57420
 $wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
 
+// Password policies; see https://meta.wikimedia.org/wiki/Password_policy
+$wgPasswordPolicy['policies']['default']['PasswordCannotBePopular'] = 100;
+$wmgPrivilegedPolicy = [
+	'MinimalPasswordLength' => 10,
+	'MinimumPasswordLengthToLogin' => 1,
+	'PasswordNotInLargeBlacklist' => true,
+];
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = 10;
 } else {
-	// See password policy RFC on meta
-	// [[m:Requests_for_comment/Password_policy_for_users_with_certain_advanced_permissions]]
 	foreach ( $wmgPrivilegedGroups as $group ) {
+		// On non-SUL wikis this is the effective password policy. On SUL wikis, it will be overridden
+		// in the PasswordPoliciesForUser hook, but still needed for Special:PasswordPolicies
 		if ( $group === 'user' ) {
 			$group = 'default'; // For e.g. private and fishbowl wikis; covers 'user' in password policies
 		}
-
-		$wgPasswordPolicy['policies'][$group]['MinimalPasswordLength'] = 10;
-		$wgPasswordPolicy['policies'][$group]['MinimumPasswordLengthToLogin'] = 1;
-		$wgPasswordPolicy['policies'][$group]['PasswordCannotBePopular'] = 10000;
+		$wgPasswordPolicy['policies'][$group] = array_merge( $wgPasswordPolicy['policies'][$group] ?? [],
+			$wmgPrivilegedPolicy );
 	}
 }
 
-$wgPasswordPolicy['policies']['default']['PasswordCannotBePopular'] = 100;
-
-// Enforce password policy when users login on other wikis
+// Enforce password policy when users login on other wikis; also for sensitive global groups
+// FIXME does this just duplicate the the global policy checks down in the main $wmgUseCentralAuth block?
 if ( $wmgUseCentralAuth ) {
-	$wgHooks['PasswordPoliciesForUser'][] = function ( User $user, array &$effectivePolicy ) {
-		$central = CentralAuthUser::getInstance( $user );
-		if ( !$central->exists() ) {
-			return true;
-		}
+	$wgHooks['PasswordPoliciesForUser'][] = function ( User $user, array &$effectivePolicy ) use ( $wmgPrivilegedPolicy ) {
+		$privilegedGroups = wfGetPrivilegedGroups( $user->getName(), $user );
+		if ( $privilegedGroups ) {
+			$effectivePolicy = UserPasswordPolicy::maxOfPolicies( $effectivePolicy, $wmgPrivilegedPolicy );
+			// hack; PasswordNotInLargeBlacklist obsoletes PasswordCannotBePopular but maxOfPolicies can't handle that
+			if ( $effectivePolicy['PasswordNotInLargeBlacklist'] ?? false ) {
+				$effectivePolicy['PasswordCannotBePopular'] = 0;
+			}
 
-		$privilegedPolicy = [
-			'MinimalPasswordLength' => 10,
-			'MinimumPasswordLengthToLogin' => 1,
-			'PasswordCannotBePopular' => 10000,
-		];
-
-		if ( array_intersect(
-			[ 'bureaucrat', 'sysop', 'checkuser', 'oversight', 'interface-editor', 'interface-admin' ],
-			$central->getLocalGroups()
-		) ) {
-			$effectivePolicy = UserPasswordPolicy::maxOfPolicies(
-				$effectivePolicy,
-				$privilegedPolicy
-			);
-			return true;
-		}
-
-		// Result should be cached by getLocalGroups() above
-		try {
-			$attachInfo = $central->queryAttached();
-		} catch ( Exception $e ) {
-			// Don't block login if we can't query attached (T119736)
-			MWExceptionHandler::logException( $e );
-			return true;
-		}
-		$enforceWikiGroups = [
-			'centralnoticeadmin' => [ 'metawiki', 'testwiki' ],
-			'templateeditor' => [ 'fawiki', 'rowiki' ],
-			'botadmin' => [ 'frwiktionary', 'mlwiki', 'mlwikisource', 'mlwiktionary' ],
-			'translator' => [ 'incubatorwiki' ],
-			'wikidata-staff' => [ 'wikidata' ],
-		];
-
-		foreach ( $enforceWikiGroups as $group => $wikis ) {
-			foreach ( $wikis as $wiki ) {
-				if ( isset( $attachInfo[$wiki]['groups'] )
-					&& in_array( $group, $attachInfo[$wiki]['groups'] ) ) {
-					$effectivePolicy = UserPasswordPolicy::maxOfPolicies(
-						$effectivePolicy,
-						$privilegedPolicy
-					);
-					return true;
-				}
+			if ( in_array( 'staff', $privilegedGroups, true ) ) {
+				$effectivePolicy['MinimumPasswordLengthToLogin'] = 10;
 			}
 		}
-
 		return true;
 	};
 }
@@ -1590,39 +1555,13 @@ if ( $wmgUseCentralAuth ) {
 	// Link global block blockers to user pages on Meta
 	$wgCentralAuthGlobalBlockInterwikiPrefix = 'meta';
 
-	// Require 10 byte password for staff.
-	$wgCentralAuthGlobalPasswordPolicies['staff'] = [
-		'MinimalPasswordLength' => 10,
-		'MinimumPasswordLengthToLogin' => 10,
-		'PasswordCannotMatchUsername' => true,
-		'PasswordCannotBePopular' => PHP_INT_MAX,
-	];
-
-	// WMF Staff and two volunteers
-	$wgCentralAuthGlobalPasswordPolicies['sysadmin'] = [
-		'MinimalPasswordLength' => 10,
-		'MinimumPasswordLengthToLogin' => 1,
-		'PasswordCannotMatchUsername' => true,
-		'PasswordCannotBePopular' => PHP_INT_MAX,
-	];
-
-	// See T104371
-	$wgCentralAuthGlobalPasswordPolicies['steward'] = [
-		'MinimalPasswordLength' => 10,
-		'MinimumPasswordLengthToLogin' => 1,
-		'PasswordCannotMatchUsername' => true,
-	];
-
-	// See [[m:Requests_for_comment/Password_policy_for_users_with_certain_advanced_permissions]]
-	foreach ( [ 'global-sysop', 'global-interface-editor', 'wmf-researcher',
-		'new-wikis-importer', 'ombudsman', 'founder' ] as $group
-	) {
-		$wgCentralAuthGlobalPasswordPolicies[$group] = [
-			'MinimalPasswordLength' => 10,
-			'MinimumPasswordLengthToLogin' => 1,
-			'PasswordCannotMatchUsername' => true,
-			'PasswordCannotBePopular' => 10000,
-		];
+	// See T104371 and [[m:Requests_for_comment/Password_policy_for_users_with_certain_advanced_permissions]]
+	foreach ( $wmgPrivilegedGlobalGroups as $group ) {
+		$wgCentralAuthGlobalPasswordPolicies[$group] = $wmgPrivilegedPolicy;
+		if ( $group === 'staff' ) {
+			// Require 10 byte password for staff.
+			$wgCentralAuthGlobalPasswordPolicies[$group]['MinimumPasswordLengthToLogin'] = 10;
+		}
 	}
 
 	$wgCentralAuthUseSlaves = true;
@@ -1685,19 +1624,23 @@ $wgMajorSiteNoticeID = '2';
  * @return array Any elevated/privileged groups the user is a member of
  */
 function wfGetPrivilegedGroups( $username, $user ) {
-	global $wmgUseCentralAuth, $wmgPrivilegedGroups;
-	$groups = [];
+	global $wmgUseCentralAuth, $wmgPrivilegedGroups, $wmgPrivilegedGlobalGroups;
+
 	if ( $wmgUseCentralAuth && CentralAuthUser::getInstanceByName( $username )->exists() ) {
 		$centralUser = CentralAuthUser::getInstanceByName( $username );
-		$groups = array_intersect(
-			array_merge(
-				$wmgPrivilegedGroups,
-				[ 'abusefilter-helper', 'founder', 'global-deleter', 'global-interface-editor', 'global-sysop', 'new-wikis-importer', 'ombudsman', 'staff', 'steward', 'sysadmin', 'wmf-researcher' ]
-			),
-			array_merge( $centralUser->getGlobalGroups(), $centralUser->getLocalGroups() )
-		);
+		try {
+			$groups = array_intersect(
+				array_merge( $wmgPrivilegedGroups, $wmgPrivilegedGlobalGroups ),
+				array_merge( $centralUser->getGlobalGroups(), $centralUser->getLocalGroups() )
+			);
+		} catch ( Exception $e ) {
+			// Don't block login if we can't query attached (T119736)
+			MWExceptionHandler::logException( $e );
+			$groups = array_merge( $user->getGroups(), $centralUser->getGlobalGroups() );
+		}
 	} else {
-		$groups = array_intersect( $wmgPrivilegedGroups, $user->getGroups() );
+		// use effective groups, as we set 'user' as privileged for private/fishbowl wikis
+		$groups = array_intersect( $wmgPrivilegedGroups, $user->getEffectiveGroups() );
 	}
 	return $groups;
 }
