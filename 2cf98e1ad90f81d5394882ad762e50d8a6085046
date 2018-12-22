@@ -46,6 +46,30 @@
       "revId": "2cf98e1ad90f81d5394882ad762e50d8a6085046",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "65888fe0_509f39f9",
+        "filename": "wmf-config/profiler.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 311,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2018-12-22T05:52:54Z",
+      "side": 1,
+      "message": "Right. The only implication here is that we\u0027d codify that this is set through Apache, which we previously didn\u0027t. The request ID given to the client via mw.config (which XWD uses), is computed in WebRequest, and merely defaults to this header/ENV variable.\n\nI think that\u0027s fine, because what we get in return is plain PHP without reliance on MediaWiki. But something to keep in mind when things change.\n\nThere\u0027s some chatter about not needing Apache on app servers (given it\u0027s mainly just being used for redirects, everything else is cgi/nginx iirc). This would be one of a very small number of things that relies on something specific to Apache, afaik. Although we could of course make the same work in nginx.\n\nI\u0027d maybe add a small note containing the word \"Apache / mod_unique_id\" so we\u0027ll find it if/when the time comes.",
+      "parentUuid": "b0842c9b_c7f00266",
+      "range": {
+        "startLine": 311,
+        "startChar": 13,
+        "endLine": 311,
+        "endChar": 34
+      },
+      "revId": "2cf98e1ad90f81d5394882ad762e50d8a6085046",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
