@@ -12721,7 +12721,6 @@ $wgConf->settings = [
 	'+enwikisource' => [ 102, 114 ], // T52007
 	'+eswiki' => [ 104 ], // T41866
 	'+etwikisource' => [ 106 ],
-	'+euwiki' => [ 104 ], // T191396
 	'+fawikibooks' => [ 102, 110 ], // T76663
 	'+fawikisource' => [ 102 ],
 	'+frrwiki' => [ 106 ], // T40023
