@@ -39,6 +39,7 @@ mwconfig_files_txt=(
 	proofreadpage.php
 	redis.php
 	throttle.php
+	throttle-analyze.php
 	wgConf.php
 	reverse-proxy.php
 	reverse-proxy-staging.php
