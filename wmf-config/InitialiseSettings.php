@@ -2714,6 +2714,7 @@ $wgConf->settings = [
 	'bdwikimedia' => 'উইকিমিডিয়া_বাংলাদেশ',
 	'be_x_oldwiki' => 'Вікіпэдыя',
 	'bewiki' => 'Вікіпедыя',
+	'bewikibooks' => 'Вікікнігі', // T212665
 	'bewikiquote' => 'Вікіцытатнік', // T196230
 	'bewikisource' => 'Вікікрыніцы',
 	'bewiktionary' => 'Вікіслоўнік', // T175950
