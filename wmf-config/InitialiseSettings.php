@@ -13777,9 +13777,6 @@ $wgConf->settings = [
 	'metawiki' => [
 		'default' => 0.30 // T173633
 	],
-	'mediawikiwiki' => [ // temporary for T212667
-		'default' => 1,
-	],
 ],
 'wgAbuseFilterEmergencyDisableCount' => [
 	'default' => [
