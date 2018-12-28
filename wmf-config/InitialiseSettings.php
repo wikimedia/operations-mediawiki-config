@@ -9802,7 +9802,7 @@ $wgConf->settings = [
 		'patroller' => [ 'patrol' => true, 'autopatrol' => true, ], // T30479
 	],
 	'plwikisource' => [
-		'editor' => [ 'autopatrol' => true, 'patrol' => true ], // T72459
+		'editor' => [ 'autopatrol' => true, 'patrol' => true, 'suppressredirect' => true ], // T72459, T212655
 	],
 	'plwiktionary' => [
 		'editor' => [ 'patrolmarks' => true ],
