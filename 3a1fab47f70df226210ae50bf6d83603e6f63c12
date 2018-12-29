@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e22fe55_61a62be4",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 13780,
+      "author": {
+        "id": 5450
+      },
+      "writtenOn": "2018-12-29T13:36:32Z",
+      "side": 1,
+      "message": "I\u0027d suggest not to switch the order mediawiki-meta to keep the diff cleaner (and possibly the blame too).",
+      "range": {
+        "startLine": 13777,
+        "startChar": 1,
+        "endLine": 13780,
+        "endChar": 10
+      },
+      "revId": "3a1fab47f70df226210ae50bf6d83603e6f63c12",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "953bb91a_624e27d2",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 13800,
+      "author": {
+        "id": 5450
+      },
+      "writtenOn": "2018-12-29T13:36:32Z",
+      "side": 1,
+      "message": "As above",
+      "range": {
+        "startLine": 13797,
+        "startChar": 1,
+        "endLine": 13800,
+        "endChar": 11
+      },
+      "revId": "3a1fab47f70df226210ae50bf6d83603e6f63c12",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
