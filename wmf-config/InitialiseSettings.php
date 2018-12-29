@@ -13774,11 +13774,11 @@ $wgConf->settings = [
 	'eswikibooks' => [
 		'default' => 0.30, // T145765
 	],
-	'metawiki' => [
-		'default' => 0.30 // T173633
+	'mediawikiwiki' => [ // T212667
+		'default' => 0.30,
 	],
-	'mediawikiwiki' => [ // temporary for T212667
-		'default' => 1,
+	'metawiki' => [ // T173633
+		'default' => 0.30,
 	],
 ],
 'wgAbuseFilterEmergencyDisableCount' => [
@@ -13794,8 +13794,11 @@ $wgConf->settings = [
 	'commonswiki' => [ // T87431
 		'default' => 25,
 	],
-	'metawiki' => [
-		'default' => 25, // T173633
+	'mediawikiwiki' => [ // T212667
+		'default' => 25,
+	],
+	'metawiki' => [ // T173633
+		'default' => 25,
 	],
 ],
 'wgAbuseFilterEmergencyDisableAge' => [
