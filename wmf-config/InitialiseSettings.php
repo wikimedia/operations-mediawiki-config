@@ -7627,7 +7627,9 @@ $wgConf->settings = [
 # @} end of wgExtraNamespaces
 
 'wgAccountCreationThrottle' => [
-	'default' => 6, // previously 10
+	'default' => 4, // previously 10. Temp to 4 on Dec 29 T212667
+	'mediawikiwiki' => [ 'count' => 2, 'seconds' => 60 * 60 * 72 ], // temp T212667
+	'kowiki' => [ 'count' => 2, 'seconds' => 60 * 60 * 72 ], // temp T212667
 	'private' => 0, // disable for wikis with sysop-only account creation
 	'fishbowl' => 0,
 	'hewikibooks' => 4,
