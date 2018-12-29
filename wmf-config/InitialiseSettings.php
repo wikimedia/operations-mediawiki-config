@@ -9047,6 +9047,7 @@ $wgConf->settings = [
 	// T7033
 	'+enwiktionary' => [
 		'autopatrolled' => [ 'autopatrol' => true ],
+		'extendedmover' => [ 'move' => true, 'move-subpages' => true, 'suppressredirect' => true, 'tboverride' => true ], // T212662
 		'flood' => [ 'bot' => true ],
 		'patroller' => [ 'patrol' => true ],
 		'rollbacker' => [ 'rollback' => true ],
@@ -10742,7 +10743,7 @@ $wgConf->settings = [
 		'sysop' => [ 'abusefilter', 'autopatrolled' ],
 	],
 	'+enwiktionary' => [
-		'sysop' => [ 'autopatrolled', 'flood', 'patroller', 'rollbacker', 'templateeditor' ], // T148007
+		'sysop' => [ 'autopatrolled', 'flood', 'patroller', 'rollbacker', 'templateeditor', 'extendedmover' ], // T148007, T212662
 	],
 	'+etwiki' => [
 		'sysop' => [ 'autopatrolled' ], // T150852
@@ -11510,7 +11511,7 @@ $wgConf->settings = [
 	],
 	'+enwiktionary' => [
 		'bureaucrat' => [ 'sysop' ], // bureaucrat removed per T44113
-		'sysop' => [ 'autopatrolled', 'flood', 'patroller', 'rollbacker', 'templateeditor' ], // T148007
+		'sysop' => [ 'autopatrolled', 'flood', 'patroller', 'rollbacker', 'templateeditor', 'extendedmover' ], // T148007, T212662
 	],
 	'+etwiki' => [
 		'sysop' => [ 'autopatrolled' ], // T150852
