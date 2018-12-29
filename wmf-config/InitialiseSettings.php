@@ -13775,10 +13775,10 @@ $wgConf->settings = [
 		'default' => 0.30, // T145765
 	],
 	'metawiki' => [
-		'default' => 0.30 // T173633
+		'default' => 0.30,  // T173633
 	],
-	'mediawikiwiki' => [ // temporary for T212667
-		'default' => 1,
+	'mediawikiwiki' => [ // T212667
+		'default' => 0.30,
 	],
 ],
 'wgAbuseFilterEmergencyDisableCount' => [
@@ -13796,6 +13796,9 @@ $wgConf->settings = [
 	],
 	'metawiki' => [
 		'default' => 25, // T173633
+	],
+	'mediawikiwiki' => [ // T212667
+		'default' => 25,
 	],
 ],
 'wgAbuseFilterEmergencyDisableAge' => [
