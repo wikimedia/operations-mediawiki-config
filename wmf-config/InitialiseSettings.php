@@ -13774,11 +13774,11 @@ $wgConf->settings = [
 	'eswikibooks' => [
 		'default' => 0.30, // T145765
 	],
+	'mediawikiwiki' => [ // T212667
+		'default' => 0.30,
+	],
 	'metawiki' => [
 		'default' => 0.30 // T173633
-	],
-	'mediawikiwiki' => [ // temporary for T212667
-		'default' => 1,
 	],
 ],
 'wgAbuseFilterEmergencyDisableCount' => [
@@ -13792,6 +13792,9 @@ $wgConf->settings = [
 		'default' => 10, // T145765
 	],
 	'commonswiki' => [ // T87431
+		'default' => 25,
+	],
+	'mediawikiwiki' => [ // T212667
 		'default' => 25,
 	],
 	'metawiki' => [
