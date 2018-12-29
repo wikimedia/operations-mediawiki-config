@@ -45,6 +45,30 @@
       "revId": "3a1fab47f70df226210ae50bf6d83603e6f63c12",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2275c95f_83e91d39",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 13800,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-12-29T14:18:16Z",
+      "side": 1,
+      "message": "Agreed. I\u0027ll amend this or make a new patch.",
+      "parentUuid": "953bb91a_624e27d2",
+      "range": {
+        "startLine": 13797,
+        "startChar": 1,
+        "endLine": 13800,
+        "endChar": 11
+      },
+      "revId": "3a1fab47f70df226210ae50bf6d83603e6f63c12",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
