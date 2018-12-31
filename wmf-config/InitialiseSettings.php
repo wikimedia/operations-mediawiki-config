@@ -11214,9 +11214,9 @@ $wgConf->settings = [
 		'sysop' => [ 'autoeditor' ],
 	],
 	'+urwiki' => [
-		// T44737, T47643, T120348, T133564, T137888, T139302, T144701, T184607, T211978
+		// T44737, T47643, T120348, T133564, T137888, T139302, T144701, T184607, T211978, T212612
 		'bureaucrat' => [ 'import', 'abusefilter', 'rollbacker', 'massmessage-sender', 'interface-editor', 'eliminator' ],
-		'sysop' => [ 'confirmed', 'abusefilter', 'rollbacker', 'accountcreator', 'filemover', 'autopatrolled', 'massmessage-sender', 'extendedmover' ],
+		'sysop' => [ 'confirmed', 'abusefilter', 'rollbacker', 'accountcreator', 'filemover', 'autopatrolled', 'massmessage-sender', 'extendedmover', 'transwiki' ],
 	],
 	'+viwiki' => [
 		'sysop' => [
@@ -12007,9 +12007,9 @@ $wgConf->settings = [
 		'sysop' => [ 'autoeditor' ],
 	],
 	'+urwiki' => [
-		// T44737, T47643, T120348, T133564, T137888, T139302, T144701, T184607, T211978
+		// T44737, T47643, T120348, T133564, T137888, T139302, T144701, T184607, T211978, T212612
 		'bureaucrat' => [ 'import', 'abusefilter', 'rollbacker', 'massmessage-sender', 'interface-editor', 'eliminator' ],
-		'sysop' => [ 'confirmed', 'accountcreator', 'filemover', 'autopatrolled', 'massmessage-sender', 'extendedmover' ],
+		'sysop' => [ 'confirmed', 'accountcreator', 'filemover', 'autopatrolled', 'massmessage-sender', 'extendedmover', 'transwiki' ],
 	],
 	'+viwiki' => [
 		'sysop' => [
@@ -12422,6 +12422,7 @@ $wgConf->settings = [
 	'tetwiki' => [ 'en', 'de', 'pt' ],
 	'tnwiki' => [ 'en' ], // T53327
 	'tpiwiki' => [ 'en', 'simple', 'wikt:en', 'commons' ], // T26769
+	'urwiki' => [ 'ar', 'en', 'fa', 'fr', 'he' ], // T212612
 	'vecwiki' => [ 'it' ], // T21639
 	'vecwiktionary' => [ 'w', 'en', 'fr', 'it' ], // T51575
 	'viwiki' => [ 'wikt', 'b', 's', 'q' ], // T9854
