@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1ca67cff_5e88e6b1",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 4702,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2018-12-31T15:00:30Z",
+      "side": 1,
+      "message": "Looks good to me, but I\u0027d reference the Task in the code for future reference. You could do it after \u0027+yuewiktionary\u0027 \u003d\u003e [ // T....",
+      "range": {
+        "startLine": 4694,
+        "startChar": 0,
+        "endLine": 4702,
+        "endChar": 23
+      },
+      "revId": "85220b8d8ce51ae450f24dd0aa62efc02fa1a378",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
