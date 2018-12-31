@@ -4696,6 +4696,10 @@ $wgConf->settings = [
 		'Index_talk' => 101,
 		'Appendix' => 102,
 		'Appendix_talk' => 103,
+		'WT' => NS_PROJECT,
+		'T' => NS_TEMPLATE,
+		'U' => NS_USER,
+		'CAT' => NS_CATEGORY,
 	],
 	'+vowiki' => [
 		'Wikipedia_talk' => NS_PROJECT_TALK,
