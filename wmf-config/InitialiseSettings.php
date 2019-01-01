@@ -11032,7 +11032,7 @@ $wgConf->settings = [
 		'sysop' => [ 'autopatrolled' ], // T168981
 	],
 	'+ptwiki' => [
-		'bureaucrat' => [ 'eliminator', 'autoreviewer', 'interface-editor' ], // T41905, T65750
+		'bureaucrat' => [ 'rollbacker', 'eliminator', 'autoreviewer', 'interface-editor' ], // T41905, T65750, T212735
 		'sysop' => [ 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator' ], // T65750
 	],
 	'+quwiki' => [
@@ -11815,7 +11815,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'interface-editor' ], // T133472
 	],
 	'+ptwiki' => [
-		'bureaucrat' => [ 'eliminator', 'autoreviewer', 'interface-editor', 'bureaucrat', 'sysop' ], // T41905, T65750, T107661
+		'bureaucrat' => [ 'rollbacker', 'eliminator', 'autoreviewer', 'interface-editor', 'bureaucrat', 'sysop' ], // T41905, T65750, T107661, T212735
 		'sysop' => [ 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator' ], // T65750
 	],
 	'+ptwikinews' => [
