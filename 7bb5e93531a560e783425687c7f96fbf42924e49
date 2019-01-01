@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "abcddbb4_88cbf8dc",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 1795,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2019-01-01T14:21:38Z",
+      "side": 1,
+      "message": "A comment to explain what this is (and when and how items should be added or removed) would be good. Andrew might be best to write that?",
+      "range": {
+        "startLine": 1795,
+        "startChar": 1,
+        "endLine": 1795,
+        "endChar": 22
+      },
+      "revId": "7bb5e93531a560e783425687c7f96fbf42924e49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
