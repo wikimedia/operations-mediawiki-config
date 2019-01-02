@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "734b974d_3bf1f726",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 2869,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2019-01-02T21:55:01Z",
+      "side": 1,
+      "message": "Add Task number.",
+      "range": {
+        "startLine": 2869,
+        "startChar": 1,
+        "endLine": 2869,
+        "endChar": 27
+      },
+      "revId": "a668c7ab69ec1bc9f4591d5a03e6c950cdcbf274",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
