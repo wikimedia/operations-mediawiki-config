@@ -637,6 +637,7 @@ $wgConf->settings = [
 	'htwiki' => '/static/images/project-logos/htwiki.png',  // T42285
 	'huwiki' => '/static/images/project-logos/huwiki.png',
 	'hywiki' => '/static/images/project-logos/hywiki.png',
+	'hywwiki' => '/static/images/project-logos/hywwiki.png', // T212597
 	'iawiki' => '/static/images/project-logos/iawiki.png',
 	'idwiki' => '/static/images/project-logos/idwiki.png',
 	'iewiki' => '/static/images/project-logos/iewiki.png',  // T51125
@@ -1374,6 +1375,7 @@ $wgConf->settings = [
 	'htwiki' => [ '1.5x' => '/static/images/project-logos/htwiki-1.5x.png', '2x' => '/static/images/project-logos/htwiki-2x.png' ], // T150618
 	'huwiki' => [ '1.5x' => '/static/images/project-logos/huwiki-1.5x.png', '2x' => '/static/images/project-logos/huwiki-2x.png' ], // T150618
 	'hywiki' => [ '1.5x' => '/static/images/project-logos/hywiki-1.5x.png', '2x' => '/static/images/project-logos/hywiki-2x.png' ], // T150620
+	'hywwiki' => [ '1.5x' => '/static/images/project-logos/hywwiki-1.5x.png', '2x' => '/static/images/project-logos/hywwiki-2x.png' ], // T212597
 	'iawiki' => [ '1.5x' => '/static/images/project-logos/iawiki-1.5x.png', '2x' => '/static/images/project-logos/iawiki-2x.png' ], // T150618
 	'idwiki' => [ '1.5x' => '/static/images/project-logos/idwiki-1.5x.png', '2x' => '/static/images/project-logos/idwiki-2x.png' ], // T150618
 	'iewiki' => [ '1.5x' => '/static/images/project-logos/iewiki-1.5x.png', '2x' => '/static/images/project-logos/iewiki-2x.png' ], // T150618
@@ -2361,6 +2363,7 @@ $wgConf->settings = [
 	'huwikisource' => 'Wikiforrás',
 	'huwiktionary' => 'Wikiszótár',
 	'hywiki' => 'Վիքիպեդիա',
+	'hywwiki' => 'Ուիքիփետիա', // T212597
 	'hywikibooks' => 'Վիքիգրքեր',
 	'hywikiquote' => 'Վիքիքաղվածք',
 	'hywikisource' => 'Վիքիդարան',
@@ -2877,6 +2880,7 @@ $wgConf->settings = [
 	'huwikisource' => 'Wikiforrás',
 	'huwiktionary' => 'Wikiszótár',
 	'hywiki' => 'Վիքիպեդիա',
+	'hywwiki' => 'Ուիքիփետիա', // T212597
 	'hywikibooks' => 'Վիքիգրքեր',
 	'hywikiquote' => 'Վիքիքաղվածք',
 	'hywikisource' => 'Վիքիդարան',
