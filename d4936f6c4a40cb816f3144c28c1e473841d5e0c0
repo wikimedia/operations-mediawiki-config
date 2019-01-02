@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "91a9cd00_2b6dda0f",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2019-01-02T10:49:30Z",
+      "side": 1,
+      "message": "reduce it a bit maybe to 300",
+      "range": {
+        "startLine": 167,
+        "startChar": 14,
+        "endLine": 167,
+        "endChar": 15
+      },
+      "revId": "d4936f6c4a40cb816f3144c28c1e473841d5e0c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8d9a6970_87967c85",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2019-01-02T10:49:30Z",
+      "side": 1,
+      "message": "give them 100",
+      "revId": "d4936f6c4a40cb816f3144c28c1e473841d5e0c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
