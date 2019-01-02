@@ -897,6 +897,10 @@ function wmfLabsSettings() {
 			'enwiki' => true,
 			'kowiki' => true,
 		],
+		'wgGEHelpPanelLoggingEnabled' => [
+			'enwiki' => true,
+			'kowiki' => true,
+		],
 		'wgGEHelpPanelHelpDeskTitle' => [
 			'enwiki' => 'Wikipedia:Help_desk',
 			'kowiki' => '위키백과:도움말',
@@ -910,12 +914,14 @@ function wmfLabsSettings() {
 				[
 					'title' => 'Help:Contents',
 					'text' => 'The most helpful help link',
+					'id' => 'example',
 				]
 			],
 			'kowiki' => [
 				[
 					'title' => '위키백과:도움말',
 					'text' => '도움말',
+					'id' => 'example',
 				]
 			],
 		],
