@@ -5408,6 +5408,7 @@ $wgConf->settings = [
 'wmgLogstashServers' => [
 	'default' => $wmfLocalServices['logstash'],
 	'group0' => [ '127.0.0.1' ],
+	'group1' => [ '127.0.0.1' ],
 ],
 
 // Use @cee: cookie when logging to logstash,
@@ -5415,6 +5416,7 @@ $wgConf->settings = [
 'wmgLogstashUseCee' => [
 	'default' => false,
 	'group0' => true,
+	'group1' => true,
 ],
 
 # wmgKafkaServers @{
