@@ -27,21 +27,4 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
-
-$wmgThrottlingExceptions[] = [ // T206408
-	'from' => '2018-11-29T18:00 +1:00',
-	'to' => '2018-11-29T23:00 +1:00',
-	'IP' => [ '195.76.195.27' ],
-	'dbname' => [ 'cawiki', 'commonswiki' ],
-	'value' => 50 // 30 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T210681
-	'from' => '2018-12-06T14:00 -8:00',
-	'to' => '2018-12-06T16:00 -8:00',
-	'range' => '198.73.209.0/24',
-	'dbname' => 'enwiki',
-	'value' => 30 // 10-20 expected
-];
-
 ## Add throttling definitions above.
