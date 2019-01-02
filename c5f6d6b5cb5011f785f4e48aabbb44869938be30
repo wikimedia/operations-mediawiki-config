@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a6c1fec5_5a2aac3b",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2019-01-02T10:48:44Z",
+      "side": 1,
+      "message": "give them 100 to each rc slave, just in case",
+      "revId": "c5f6d6b5cb5011f785f4e48aabbb44869938be30",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
