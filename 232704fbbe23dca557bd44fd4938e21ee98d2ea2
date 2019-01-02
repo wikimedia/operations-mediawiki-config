@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f24f95d6_d2e79925",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2019-01-02T10:51:01Z",
+      "side": 1,
+      "message": "give it 1",
+      "revId": "232704fbbe23dca557bd44fd4938e21ee98d2ea2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cf7a2dab_5b0d8c7d",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2019-01-02T10:51:01Z",
+      "side": 1,
+      "message": "reduce to 300",
+      "revId": "232704fbbe23dca557bd44fd4938e21ee98d2ea2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7414524a_0287c122",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2019-01-02T10:51:01Z",
+      "side": 1,
+      "message": "give them 100",
+      "revId": "232704fbbe23dca557bd44fd4938e21ee98d2ea2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d33583e9_a0db75d2",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 457,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2019-01-02T10:51:01Z",
+      "side": 1,
+      "message": "depool from here",
+      "range": {
+        "startLine": 457,
+        "startChar": 15,
+        "endLine": 457,
+        "endChar": 16
+      },
+      "revId": "232704fbbe23dca557bd44fd4938e21ee98d2ea2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
