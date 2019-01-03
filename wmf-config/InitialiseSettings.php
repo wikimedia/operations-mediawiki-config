@@ -5223,7 +5223,6 @@ $wgConf->settings = [
 # wgWhitelistRead @{
 'wgWhitelistRead' => [
 	'private' => [ 'Main Page', 'Special:UserLogin', 'Special:UserLogout' ],
-	'+zerowiki' => [ 'Special:ZeroPortal' ],
 ],
 # @} end of wgWhitelistRead
 
