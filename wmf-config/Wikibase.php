@@ -112,7 +112,7 @@ if ( $wmgUseWikibaseRepo ) {
 				MWWikiversions::readDbListFile( 'all-labs' )
 			);
 		}
-	} elseif ( $wgDBname === 'commonswiki' ) {
+	} elseif ( $wgDBname === 'commonswiki' || $wgDBname === 'testcommonswiki' ) {
 		$wgWBRepoSettings['clientDbList'] = [];
 	}
 
