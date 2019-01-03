@@ -5598,7 +5598,6 @@ $wgConf->settings = [
 		'xenon' => 'debug',
 		'XMP' => 'warning', // T89532
 		'xff' => [ 'logstash' => false ],
-		'zero' => [ 'logstash' => false ], // zero-rated debug log
 		'MessageCacheError' => 'debug',
 		'LocalFile' => 'debug',
 		'DBTransaction' => 'debug',
