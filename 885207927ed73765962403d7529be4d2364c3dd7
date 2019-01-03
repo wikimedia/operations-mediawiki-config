@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b3a3c2a0_9db79fbc",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 444,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2019-01-03T13:17:25Z",
+      "side": 1,
+      "message": "This comment should explicitly say \"minimum password policy for all users\", and probably not refer to a community RfC that we have gone beyond since anyway (which refers to line 447, not 446).",
+      "range": {
+        "startLine": 444,
+        "startChar": 0,
+        "endLine": 444,
+        "endChar": 34
+      },
+      "revId": "885207927ed73765962403d7529be4d2364c3dd7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3636019e_cd509077",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1556,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2019-01-03T13:17:25Z",
+      "side": 1,
+      "message": "This is going to be all-advanced-permissions-users soon enough, but for now we can keep it down here.",
+      "range": {
+        "startLine": 1556,
+        "startChar": 0,
+        "endLine": 1556,
+        "endChar": 29
+      },
+      "revId": "885207927ed73765962403d7529be4d2364c3dd7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
