@@ -16336,14 +16336,6 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
-'wmgZeroBanner' => [
-	'default' => false,
-],
-
-'wmgZeroPortal' => [
-	'default' => false,
-],
-
 // Enable Tabular data namespace on Commons - T148745
 'wmgEnableTabularData' => [
 	'default' => true,
