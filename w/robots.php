@@ -16,15 +16,11 @@ $robotsfilestats = fstat( $robots );
 $mtime = $robotsfilestats['mtime'];
 $extratext = '';
 
-$zeroRated = isset( $_SERVER['HTTP_X_SUBDOMAIN'] ) && $_SERVER['HTTP_X_SUBDOMAIN'] === 'ZERO';
-
 header( 'Cache-Control: s-maxage=3600, must-revalidate, max-age=0' );
 
 $dontIndex = "User-agent: *\nDisallow: /\n";
 
-if ( $zeroRated ) {
-	echo $dontIndex;
-} elseif ( $page->exists() ) {
+if ( $page->exists() ) {
 	$extratext = ContentHandler::getContentText( $page->getContent() ) ?: '';
 	// Take last modified timestamp of page into account
 	$mtime = max( $mtime, wfTimestamp( TS_UNIX, $page->getTouched() ) );
