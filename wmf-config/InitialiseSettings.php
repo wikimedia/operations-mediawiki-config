@@ -19186,6 +19186,7 @@ $wgConf->settings = [
 
 'wmgUseWikibaseRepo' => [
 	'default' => false,
+	'testcommonswiki' => true,
 	'wikidata' => true,
 ],
 
@@ -19857,6 +19858,7 @@ $wgConf->settings = [
 // Structured media file data (the WikibaseMediaInfo extension)
 'wmgUseWikibaseMediaInfo' => [
 	'default' => false,
+	'testcommonswiki' => true,
 ],
 
 // Only enable this conservatively, having this on to many
