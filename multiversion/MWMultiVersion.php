@@ -140,7 +140,7 @@ class MWMultiVersion {
 		$staticMappings = [
 			// Production
 			'test.wikidata.org' => 'testwikidata',
-			'test-commons.wikimedia.org' => 'testcommonswiki',
+			'test-commons.wikimedia.org' => 'testcommons',
 			'www.mediawiki.org' => 'mediawiki',
 			'www.wikidata.org' => 'wikidata',
 			'wikisource.org' => 'sources',
