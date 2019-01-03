@@ -2908,7 +2908,7 @@ if ( $wmgUseDisambiguator ) {
 	wfLoadExtension( 'Disambiguator' );
 }
 
-if ( $wmgUseCodeEditorForCore || $wmgUseScribunto || $wmgZeroPortal ) {
+if ( $wmgUseCodeEditorForCore || $wmgUseScribunto ) {
 	wfLoadExtension( 'CodeEditor' );
 	$wgCodeEditorEnableCore = $wmgUseCodeEditorForCore;
 	if ( $wgDBname === 'metawiki' ) {
@@ -3057,7 +3057,7 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	$wgULSPosition = $wmgULSPosition;
 	$wgULSIMEEnabled = $wmgULSIMEEnabled;
 	$wgULSWebfontsEnabled = $wmgULSWebfontsEnabled;
-	if ( $wmgUseCodeEditorForCore || $wmgUseScribunto || $wmgZeroPortal ) {
+	if ( $wmgUseCodeEditorForCore || $wmgUseScribunto ) {
 		$wgULSNoImeSelectors[] = '.ace_editor textarea';
 	}
 	if ( $wmgUseTranslate && $wmgULSPosition === 'personal' ) {
@@ -3181,56 +3181,8 @@ if ( $wmgUseSearchExtraNS ) {
 	wfLoadExtension( 'SearchExtraNS' );
 }
 
-if ( $wmgZeroPortal || $wmgUseGraph || $wmgZeroBanner ) {
+if ( $wmgUseGraph ) {
 	wfLoadExtension( 'JsonConfig' );
-}
-
-if ( $wmgZeroPortal ) {
-	wfLoadExtensions( [ 'ZeroBanner', 'ZeroPortal' ] );
-
-	// zerowiki treats all logged-in users the same as anonymous, without giving them any extra rights
-	// Only sysops and scripts get additional rights on zerowiki
-	$zpUserRights = $wgGroupPermissions['user'];
-
-	$wgGroupPermissions['*']['createtalk'] = false;
-	$wgGroupPermissions['*']['createpage'] = false;
-	$wgGroupPermissions['*']['writeapi'] = false;
-	$wgGroupPermissions['user'] = $wgGroupPermissions['*'];
-
-	// fixme: this should go into groupOverrides or groupOverrides2, with or without a '+'
-	// 'sysop' => array( 'zero-edit', 'zero-script', 'zero-script-ips', 'jsonconfig-flush' ),
-	// 'zeroscript' => array( 'zero-script', 'jsonconfig-flush' ),
-	// 'zeroscriptips' => array( 'zero-script-ips', 'jsonconfig-flush' ),
-
-	$wgGroupPermissions['sysop']['zero-edit'] = true;
-	$wgGroupPermissions['sysop']['zero-script'] = true;
-	$wgGroupPermissions['sysop']['zero-script-ips'] = true;
-	$wgGroupPermissions['sysop']['jsonconfig-flush'] = true;
-	$wgGroupPermissions['sysop'] = $wgGroupPermissions['sysop'] + $zpUserRights;
-
-	$wgGroupPermissions['zeroscript']['zero-script'] = true;
-	$wgGroupPermissions['zeroscript']['jsonconfig-flush'] = true;
-	$wgGroupPermissions['zeroscript'] = $wgGroupPermissions['zeroscript'] + $zpUserRights;
-
-	$wgGroupPermissions['zeroscriptips']['zero-script-ips'] = true;
-	$wgGroupPermissions['zeroscriptips']['jsonconfig-flush'] = true;
-	$wgGroupPermissions['zeroscriptips'] = $wgGroupPermissions['zeroscriptips'] + $zpUserRights;
-
-	$wgGrantPermissions['zeroscript']['zero-script'] = true;
-	$wgGrantPermissionGroups['zeroscript'] = 'administration';
-
-	$wgZeroPortalImpersonateUser = 'Impersonator';
-
-	// zerowiki needs to enable Common.css for restricted pages in order to
-	// override default login page styling on Special:UserLogin
-	$wgAllowSiteCSSOnRestrictedPages = true;
-
-	unset( $zpUserRights );
-
-	$wgUsersNotifiedOnAllChanges[] = 'ABaso(WMF)';
-	$wgUsersNotifiedOnAllChanges[] = 'Dfoy';
-	$wgUsersNotifiedOnAllChanges[] = 'Jhobs';
-	$wgUsersNotifiedOnAllChanges[] = 'Yurik';
 }
 
 // Enable Tabular data namespace on Commons - T148745
