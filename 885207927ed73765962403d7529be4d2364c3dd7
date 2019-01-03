@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "4f2dc4b3_2f299878",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 444,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2019-01-03T19:00:34Z",
+      "side": 1,
+      "message": "Replaced with a reference to the password policy, which is probably more future-proof.",
+      "parentUuid": "b3a3c2a0_9db79fbc",
+      "range": {
+        "startLine": 444,
+        "startChar": 0,
+        "endLine": 444,
+        "endChar": 34
+      },
+      "revId": "885207927ed73765962403d7529be4d2364c3dd7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "3636019e_cd509077",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2019-01-03T13:17:25Z",
       "side": 1,
       "message": "This is going to be all-advanced-permissions-users soon enough, but for now we can keep it down here.",
+      "range": {
+        "startLine": 1556,
+        "startChar": 0,
+        "endLine": 1556,
+        "endChar": 29
+      },
+      "revId": "885207927ed73765962403d7529be4d2364c3dd7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ca9e0250_ddc48c04",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1556,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2019-01-03T19:00:34Z",
+      "side": 1,
+      "message": "TBH I\u0027m not sure about the significance of \"down here\" - that is, is there any difference between $wgCentralAuthGlobalPasswordPolicies and a $wgPasswordPolicy enhanced by wfGetPrivilegedGroups()? They seem to do the exact same thing. But I\u0027m not really sure about that so I\u0027d rather leave it to a more focused patch to mess with it. I duplicated this in the upper section for now, to make it harder to miss.",
+      "parentUuid": "3636019e_cd509077",
       "range": {
         "startLine": 1556,
         "startChar": 0,
