@@ -19,27 +19,32 @@
 // help things along.
 $wgCirrusSearchMasterTimeout = '2m';
 
-$cirrusConfigUseHhvmPool = function ( $hostConfig, $pool ) {
+$cirrusConfigUseHhvmPool = function ( $hosts, $pool ) {
 	if ( !defined( 'HHVM_VERSION' ) ) {
-		return $hostConfig;
+		return $hosts;
 	}
-	if ( is_array( $hostConfig ) ) {
-		if ( isset( $hostConfig['transport'] ) && $hostConfig['transport'] === 'Https' ) {
-			$hostConfig['transport'] = 'CirrusSearch\\Elastica\\PooledHttps';
-			$hostConfig['config'] = [
-				'pool' => $pool
-			];
+	if ( !is_array( $hosts ) ) {
+		return $hosts;
+	}
+	return array_map( function ( $hostConfig ) use ( $pool ) {
+		if ( is_array( $hostConfig ) ) {
+			if ( isset( $hostConfig['transport'] ) && $hostConfig['transport'] === 'Https' ) {
+				$hostConfig['transport'] = 'CirrusSearch\\Elastica\\PooledHttps';
+				$hostConfig['config'] = [
+					'pool' => $pool
+				];
+			}
+			return $hostConfig;
 		}
-		return $hostConfig;
-	}
-	return [
-		'transport' => 'CirrusSearch\\Elastica\\PooledHttps',
-		'port' => '9243',
-		'host' => $hostConfig,
-		'config' => [
-			'pool' => $pool,
-		],
-	];
+		return [
+			'transport' => 'CirrusSearch\\Elastica\\PooledHttps',
+			'port' => '9243',
+			'host' => $hostConfig,
+			'config' => [
+				'pool' => $pool,
+			],
+		];
+	}, $hosts );
 };
 
 $wgCirrusSearchClusters = [
