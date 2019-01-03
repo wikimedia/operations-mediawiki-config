@@ -22,6 +22,30 @@
       "revId": "53ad97d73c1d327f8f7a854e23a7a0091fa7db5f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f8ef0543_d49af0cc",
+        "filename": "dblists/s4.dblist",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2019-01-03T18:56:11Z",
+      "side": 1,
+      "message": "Ask DBAs what they want - s3 or s4 :)",
+      "parentUuid": "ad4ed26a_39a21ade",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 15
+      },
+      "revId": "53ad97d73c1d327f8f7a854e23a7a0091fa7db5f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
