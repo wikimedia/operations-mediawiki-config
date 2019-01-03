@@ -21879,13 +21879,6 @@ $wgConf->settings = [
 	'mediawikiwiki' => false,
 	'wikidatawiki' => false,
 ],
-// T183869
-'wgWMEAICaptchaEnabled' => [
-	'default' => false,
-	'private' => false,
-	'fishbowl' => false,
-	'nonglobal' => false,
-],
 
 // T184121
 // Explicitly disabled for non-CentralAuth wikis in CommonSettings.php
