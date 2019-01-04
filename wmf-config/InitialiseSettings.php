@@ -10271,6 +10271,9 @@ $wgConf->settings = [
 			'undelete' => true,
 		],
 	],
+	'+viwikisource' => [
+		'sysop' => [ 'flow-create-board' => true ], // T212929
+	],
 	'+viwiktionary' => [
 		'rollbacker' => [ 'rollback' => true ], // T176979
 	],
@@ -18689,6 +18692,7 @@ $wgConf->settings = [
 	'nowiki' => true, // T132693
 	'orwiki' => true, // T199971
 	'urwiki' => true,
+	'viwikisource' => true, // T212929
 	'wawiki' => true, // T172947
 	'wawiktionary' => true, // T172947
 	'zhwiki' => true,
