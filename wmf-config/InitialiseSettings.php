@@ -21969,9 +21969,8 @@ $wgConf->settings = [
 'wgGEHelpPanelNewAccountEnablePercentage' => [
 	'default' => 0,
 	'testwiki' => 0,
-	// Scheduled to be set to 50 on Jan 10 2019
-	'kowiki' => 0,
-	'cswiki' => 0,
+	'kowiki' => 50,
+	'cswiki' => 50,
 ],
 
 'wgGEHelpPanelHelpDeskTitle' => [
