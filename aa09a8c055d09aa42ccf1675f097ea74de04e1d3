@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cba0ce7f_76b13dfa",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 12413,
+      "author": {
+        "id": 5163
+      },
+      "writtenOn": "2019-01-04T11:21:14Z",
+      "side": 1,
+      "message": "Should be \"incubator\" and \"w:en\"? According to https://zh.wikiversity.org/wiki/Special:Interwiki .",
+      "range": {
+        "startLine": 12413,
+        "startChar": 102,
+        "endLine": 12413,
+        "endChar": 125
+      },
+      "revId": "aa09a8c055d09aa42ccf1675f097ea74de04e1d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
