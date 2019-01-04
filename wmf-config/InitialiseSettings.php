@@ -21909,10 +21909,10 @@ $wgConf->settings = [
 	'cswiki' => false,
 ],
 
-'wgGEHelpPanelNewAccountEnableProportion' => [
+'wgGEHelpPanelNewAccountEnablePercentage' => [
 	'default' => 0,
 	'testwiki' => 0,
-	// Scheduled to be set to 2 on Jan 10 2019
+	// Scheduled to be set to 50 on Jan 10 2019
 	'kowiki' => 0,
 	'cswiki' => 0,
 ],
