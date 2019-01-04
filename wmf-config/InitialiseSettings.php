@@ -21904,9 +21904,8 @@ $wgConf->settings = [
 'wgGEHelpPanelEnabled' => [
 	'default' => false,
 	'testwiki' => true,
-	// Scheduled to be set to true on Jan 10 2019
-	'kowiki' => false,
-	'cswiki' => false,
+	'kowiki' => true,
+	'cswiki' => true,
 ],
 
 'wgGEHelpPanelNewAccountEnablePercentage' => [
