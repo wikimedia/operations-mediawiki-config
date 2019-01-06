@@ -18621,6 +18621,7 @@ $wgConf->settings = [
 	'ptwiki' => [ 'Categoria:Pessoas vivas' ],
 	'ruwiki' => [ 'Категория:Ныне живущие' ],
 	'simplewiki' => [ 'Category:Living people' ],
+	'srwiki' => [ 'Категорија:Биографије живих особа' ],
 	'svwiki' => [ 'Kategori:Levande personer' ],
 	'ukwiki' => [ 'Категорія:Нині живуть' ],
 	'viwiki' => [ 'Thể loại:Nhân vật còn sống' ],
