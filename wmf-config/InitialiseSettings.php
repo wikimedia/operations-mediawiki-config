@@ -6386,6 +6386,7 @@ $wgConf->settings = [
 		101 => 'Portálaságastallan', // T41206
 	],
 	'shwiki' => [ 100 => 'Portal', 101 => 'Razgovor_o_portalu' ], // T32928
+	'shnwiki' => [ 100 => 'ၵိူၼ်ႇတူ', 101 => 'တွၼ်ႈဢုပ်ႇ_ၵိူၼ်ႇတူ' ], // T212992
 	'siwiki' => [ 100 => 'ද්වාරය', 101 => 'ද්වාරය_සාකච්ඡාව' ], // T8435, T26936
 	'skwiki' => [
 		NS_USER => 'Redaktor', // T143472
