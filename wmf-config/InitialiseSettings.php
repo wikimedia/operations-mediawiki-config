@@ -13107,6 +13107,11 @@ $wgConf->settings = [
 	'zhwikisource' => '', // T194875
 ],
 
+'wgProofreadPagePageJoiner' => [
+	'default' => '-',
+	'zhwikisource' => '__PAGEJOIN__', // T205826
+],
+
 'wmgUseDPL' => [
 	// DynamicPageList extension
 	'default' => false,
