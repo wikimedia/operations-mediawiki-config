@@ -10039,13 +10039,14 @@ $wgConf->settings = [
 			'autopatrol' => true,
 			],
 	],
-	'srwiki' => [
-		'user' => [ 'upload' => false ],
+	'srwiki' => [ // T208633, T210000 and T213050
+		'user' => [ 'upload' => false, 'move-categorypages' => false ],
 		'autoconfirmed' => [ 'upload' => true ],
-		'patroller' => [ 'patrol' => true, 'movefile' => true, 'suppressredirect' => true ], // T208663 and T210000
-		'autopatrolled' => [ 'autopatrol' => true ],
-		'rollbacker' => [ 'rollback' => true, 'movefile' => true, 'suppressredirect' => true ], // T208663 and T210000
-		'flood' => [ 'bot' => true ],
+		'patroller' => [ 'patrol' => true, 'movefile' => true, 'suppressredirect' => true, 'move-categorypages' => true ],
+		'autopatrolled' => [ 'autopatrol' => true, 'move-categorypages' => true ],
+		'rollbacker' => [ 'rollback' => true, 'movefile' => true, 'suppressredirect' => true, 'move-categorypages' => true ],
+		'flood' => [ 'bot' => true, 'move-categorypages' => true ],
+		'bot' => [ 'move-categorypages' => true ],
 	],
 	'+srwikibooks' => [ // T209250
 		'patroller' => [ 'patrol' => true ],
