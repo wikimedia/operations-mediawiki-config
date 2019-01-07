@@ -13623,7 +13623,6 @@ $wgConf->settings = [
 	'bhwiki' => true, // T97920
 	'ckbwiki' => true, // T54678
 	'commonswiki' => true,
-	'testcommonswiki' => true,
 	'dewikiversity' => true, // T51449
 	'dtywiki' => true, // T166121
 	'enwikinews' => true,
