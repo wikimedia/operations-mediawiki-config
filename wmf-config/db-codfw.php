@@ -52,7 +52,6 @@ $wgLBFactoryConf = [
 
 	# s4: commons
 	'commonswiki'     => 's4',
-	'testcommonswiki' => 's4',
 
 	# s5: dewiki and wikidata
 	'dewiki'       => 's5',
