@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b47a1845_92b8cfdb",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10042,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2019-01-07T07:45:01Z",
+      "side": 1,
+      "message": "Redundant, per Special:UserGroupRights, autoconfirmed are not granted move-categorypages by default.",
+      "range": {
+        "startLine": 10042,
+        "startChar": 41,
+        "endLine": 10042,
+        "endChar": 70
+      },
+      "revId": "ecbea0a3885680030f8e35272aa3b21824a124b6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
