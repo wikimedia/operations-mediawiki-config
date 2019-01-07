@@ -22,6 +22,30 @@
       "revId": "ecbea0a3885680030f8e35272aa3b21824a124b6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b8373264_d5867a59",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10042,
+      "author": {
+        "id": 4879
+      },
+      "writtenOn": "2019-01-07T07:47:01Z",
+      "side": 1,
+      "message": "Fixed",
+      "parentUuid": "b47a1845_92b8cfdb",
+      "range": {
+        "startLine": 10042,
+        "startChar": 41,
+        "endLine": 10042,
+        "endChar": 70
+      },
+      "revId": "ecbea0a3885680030f8e35272aa3b21824a124b6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
