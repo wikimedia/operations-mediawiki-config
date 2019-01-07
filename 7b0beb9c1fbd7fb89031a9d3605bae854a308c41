@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7762de2c_b933481e",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 4879
+      },
+      "writtenOn": "2019-01-07T09:46:55Z",
+      "side": 1,
+      "message": "Remove this G",
+      "range": {
+        "startLine": 49,
+        "startChar": 20,
+        "endLine": 49,
+        "endChar": 27
+      },
+      "revId": "7b0beb9c1fbd7fb89031a9d3605bae854a308c41",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
