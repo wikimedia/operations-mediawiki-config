@@ -8877,6 +8877,7 @@ $wgConf->settings = [
 			'upload_by_url' => true, // T182534
 		],
 		'sysop' => [
+			'importupload' => true, // TestCommons testing purposes only
 			'changetags' => true, // T134196
 			'upload_by_url' => true,
 		],
