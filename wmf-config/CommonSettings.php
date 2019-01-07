@@ -3630,6 +3630,7 @@ if ( $wmgUseQuickSurveys ) {
 if ( $wmgUseEventBus ) {
 	wfLoadExtension( 'EventBus' );
 	$wgEventServiceUrl = "{$wmfLocalServices['eventbus']}/v1/events";
+	$wgEventServiceTimeout = 60;
 
 	// Configure RecentChange to send recentchange events to EventBus service.
 	// Add a mapping from eventbus:// RCFeed URIs to the EventBusRCFeedEngine.
