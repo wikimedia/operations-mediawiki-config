@@ -1772,6 +1772,7 @@ $wgConf->settings = [
 	'default' => true,
 	'commonsuploads' => true, // Soft-disabling
 	'wikidata' => false,
+	'testcommonswiki' => true, // Over-ride TestCommons appearing in wikidata.dblist
 
 	// Wikinews
 	'wikinews' => false,
