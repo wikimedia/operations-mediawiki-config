@@ -113,7 +113,7 @@ class CirrusTest extends WgConfTestCase {
 		list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 		$wikiTags = [];
 		foreach ( [ 'private', 'fishbowl', 'special', 'closed', 'flow', 'flaggedrevs', 'small', 'medium',
-				'large', 'wikimania', 'wikidata', 'wikidataclient', 'visualeditor-nondefault',
+				'large', 'wikimania', 'wikidata', 'wikidatarepo', 'wikidataclient', 'visualeditor-nondefault',
 				'commonsuploads', 'nonbetafeatures', 'group0', 'group1', 'group2', 'wikipedia', 'nonglobal',
 				'wikitech', 'nonecho', 'mobilemainpagelegacy', 'nowikidatadescriptiontaglines',
 				'top6-wikipedia', 'cirrussearch-big-indices'
