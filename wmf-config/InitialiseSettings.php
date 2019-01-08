@@ -10556,13 +10556,15 @@ $wgConf->settings = [
 	// we can only check memberships on a non-current wiki, not config, so we need to mash everything together here.
 	'default' => [
 		// core or extension groups
-		'bureaucrat', 'checkuser', 'importer', 'interface-admin', 'oversight',  'sysop',
+		'bureaucrat', 'checkuser', 'importer', 'interface-admin', 'oauthadmin', 'oversight',  'sysop',
 		// custom groups used on several wikis
-		'botadmin', 'eliminator', 'interface-editor', 'transwiki',
+		'arbcom', 'botadmin', 'eliminator', 'interface-editor', 'transwiki',
 		// custom groups used on one or a few wikis
-		'abusefilter' /* enwiki */, 'engineer' /* cswiki, ruwiki */, 'templateeditor' /* rowiki */, 'translator' /* incubatorwiki */, 'wikidata-staff',
+		'abusefilter' /* enwiki */, 'curator' /* enwikiversity */, 'engineer' /* cswiki, ruwiki */, 'facilitator' /* frwikinews */, 'founder' /* enwiki */, 'templateeditor' /* rowiki */, 'test-sysop' /* incubatorwiki */, 'translator' /* incubatorwiki */, 'wikidata-staff',
 		// metawiki local groups with global powers (some also on testwiki)
-		'centralnoticeadmin', 'global-renamer', 'wmf-officeit', 'wmf-supportsafety',
+		'centralnoticeadmin', 'global-renamer', 'translationadmin', 'wmf-officeit', 'wmf-supportsafety',
+		// wikitech local groups with global powers
+		'cloudadmin', 'oathauth',
 	],
 	'+fishbowl' => [ 'user' ],
 	'+private' => [ 'user' ],
