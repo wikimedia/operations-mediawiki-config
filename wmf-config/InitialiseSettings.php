@@ -19154,6 +19154,7 @@ $wgConf->settings = [
 		'property' => 120,
 		'lexeme' => 146,
 	],
+	'testcommonswiki' => [],
 ],
 
 'wmgWikibaseClientEntityNamespaces' => [
