@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e921dab1_f300feca",
+        "filename": "docroot/m.wikipedia.org/w/mobilelanding.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-01-08T04:23:29Z",
+      "side": 1,
+      "message": "These two headers won\u0027t vary the response anymore, presumably.",
+      "range": {
+        "startLine": 19,
+        "startChar": 33,
+        "endLine": 19,
+        "endChar": 49
+      },
+      "revId": "cda72abc0b4cb11fc2beab421ff23363450c9bbb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
