@@ -1,0 +1,8 @@
+Verified+2: jenkins-bot
+Code-Review+1: EBernhardson <ebernhardson@wikimedia.org>
+Code-Review+2: DCausse <dcausse@wikimedia.org>
+Submitted-by: jenkins-bot
+Submitted-at: Tue, 08 Jan 2019 12:03:11 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/482082
+Project: operations/mediawiki-config
+Branch: refs/heads/master
