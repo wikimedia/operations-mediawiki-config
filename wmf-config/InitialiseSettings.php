@@ -21936,6 +21936,10 @@ $wgConf->settings = [
 	'cswiki' => false,
 ],
 
+'wgGEHelpPanelLoggingEnabled' => [
+	'default' => true,
+],
+
 'wgGEHelpPanelNewAccountEnableProportion' => [
 	'default' => 0,
 	'testwiki' => 0,
