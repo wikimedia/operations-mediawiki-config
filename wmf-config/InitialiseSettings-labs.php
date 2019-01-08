@@ -915,6 +915,26 @@ function wmfLabsSettings() {
 					'title' => 'Help:Contents',
 					'text' => 'The most helpful help link',
 					'id' => 'example',
+				],
+				[
+					'title' => 'Wikipedia:Community_portal',
+					'text' => 'Community Portal',
+					'id' => 'community',
+				],
+				[
+					'title' => 'Wikipedia:Village_pump',
+					'text' => 'Village pump',
+					'id' => 'village-pump',
+				],
+				[
+					'title' => 'Portal:Contents',
+					'text' => 'Portal contents',
+					'id' => 'portal-contents',
+				],
+				[
+					'title' => 'Wikipedia:File_Upload_Wizard',
+					'text' => 'File upload wizard',
+					'id' => 'file-upload-wizard',
 				]
 			],
 			'kowiki' => [
