@@ -1772,7 +1772,6 @@ $wgConf->settings = [
 	'default' => true,
 	'commonsuploads' => true, // Soft-disabling
 	'wikidata' => false,
-	'testcommonswiki' => true, // Over-ride TestCommons appearing in wikidata.dblist
 
 	// Wikinews
 	'wikinews' => false,
@@ -19195,8 +19194,7 @@ $wgConf->settings = [
 
 'wmgUseWikibaseRepo' => [
 	'default' => false,
-	'testcommonswiki' => true,
-	'wikidata' => true,
+	'wikidatarepo' => true,
 ],
 
 'wmgWBRepoCanonicalUriProperty' => [
@@ -19215,7 +19213,7 @@ $wgConf->settings = [
 
 'wmgWikibaseStringLimits' => [
 	'default' => null,
-	'wikidata' => [
+	'wikidatarepo' => [
 		'multilang' => [
 			'length' => 250,
 		],
@@ -19870,6 +19868,12 @@ $wgConf->settings = [
 	'testcommonswiki' => true,
 ],
 
+// Feature flag for WikibaseMediaInfo during deployment
+'wgMediaInfoEnable' => [
+	'default' => false,
+	'testcommonswiki' => true,
+],
+
 // Only enable this conservatively, having this on to many
 // wikis will take *a lot* of Graphite storage space. T191416
 'wmgWikibaseClientTrackLuaFunctionCallsPerWiki' => [
@@ -19890,12 +19894,6 @@ $wgConf->settings = [
 
 'wmgWikibaseClientTrackLuaFunctionCallsPerSiteGroup' => [
 	'default' => true,
-],
-
-// Feature flag for WikibaseMediaInfo during deployment
-'wgMediaInfoEnable' => [
-	'default' => false,
-	'testcommonswiki' => true,
 ],
 
 'wmgUseTemplateSandbox' => [
