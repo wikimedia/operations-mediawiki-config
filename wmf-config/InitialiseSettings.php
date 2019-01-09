@@ -9633,6 +9633,7 @@ $wgConf->settings = [
 			'banner-protect' => true,
 			'centralnotice-admin' => true,
 			'editinterface' => true,
+			'protect' => true, // T209873
 		],
 		'flood' => [ // T17176
 			'bot' => true,
