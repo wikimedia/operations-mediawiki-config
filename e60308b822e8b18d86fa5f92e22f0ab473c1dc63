@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7841b38d_58d11fa4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2019-01-09T02:23:07Z",
+      "side": 1,
+      "message": "\"oathauth (wikitech): can validate 2FA tokens on behalf of other users\"?",
+      "revId": "e60308b822e8b18d86fa5f92e22f0ab473c1dc63",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "110ca6ac_a12439b1",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10526,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2019-01-09T02:23:07Z",
+      "side": 1,
+      "message": "global?",
+      "revId": "e60308b822e8b18d86fa5f92e22f0ab473c1dc63",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
