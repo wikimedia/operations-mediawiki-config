@@ -466,7 +466,7 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 // FIXME does this just duplicate the the global policy checks down in the main $wmgUseCentralAuth block?
 if ( $wmgUseCentralAuth ) {
 	$wgHooks['PasswordPoliciesForUser'][] = function ( User $user, array &$effectivePolicy ) use ( $wmgPrivilegedPolicy ) {
-		$privilegedGroups = wfGetPrivilegedGroups( $user->getName(), $user );
+		$privilegedGroups = wmfGetPrivilegedGroups( $user->getName(), $user );
 		if ( $privilegedGroups ) {
 			$effectivePolicy = UserPasswordPolicy::maxOfPolicies( $effectivePolicy, $wmgPrivilegedPolicy );
 			// hack; PasswordNotInLargeBlacklist obsoletes PasswordCannotBePopular but maxOfPolicies can't handle that
