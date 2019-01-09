@@ -16599,15 +16599,10 @@ $wgConf->settings = [
 
 'wmgZeroBanner' => [
 	'default' => false,
-	'wikipedia' => true,
-	'wikidatawiki' => false, // safety
-	'metawiki' => false,
-	'zerowiki' => false,
 ],
 
 'wmgZeroPortal' => [
 	'default' => false,
-	'zerowiki' => true,
 ],
 
 // Enable Tabular data namespace on Commons - T148745
