@@ -8289,6 +8289,7 @@ $wgConf->settings = [
 	'+viwikisource' => [ 102 => 1, 106 => 1 ],
 	'+testwikidatawiki' => [ 120 => 1, 146 => 0 ], // Search properties but not lexeme by default
 	'+wikidatawiki' => [ 120 => 1, 146 => 0 ], // Search properties but not lexeme by default
+	'+wikimaniawiki' => [ 128 => 1 /* 2019 content */ ],
 	'+zhwikisource' => [ 102 => 1, 106 => 1, 114 => 1 ], // T66127
 ],
 # @} end of wgNamespacesToBeSearchedDefault
