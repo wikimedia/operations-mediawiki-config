@@ -16860,10 +16860,6 @@ $wgConf->settings = [
 
 'wmgZeroBanner' => [
 	'default' => false,
-	'wikipedia' => true,
-	'wikidatawiki' => false, // safety
-	'metawiki' => false,
-	'zerowiki' => false,
 ],
 
 'wmgZeroPortal' => [
