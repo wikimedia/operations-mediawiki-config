@@ -33,6 +33,24 @@
       "revId": "e60308b822e8b18d86fa5f92e22f0ab473c1dc63",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1f006575_a5512d58",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10526,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2019-01-09T02:30:25Z",
+      "side": 1,
+      "message": "They affect cloud stuff, not just the wiki. Could use better phrasing for sure.",
+      "parentUuid": "110ca6ac_a12439b1",
+      "revId": "e60308b822e8b18d86fa5f92e22f0ab473c1dc63",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
