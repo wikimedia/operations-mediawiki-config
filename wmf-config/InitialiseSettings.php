@@ -19791,7 +19791,7 @@ $wgConf->settings = [
 
 'wgWBQualityConstraintsTypeCheckMaxEntities' => [
 	'default' => 1000,
-	'wikidatawiki' => 100,
+	'wikidatawiki' => 150,
 ],
 
 'wgWBQualityConstraintsPropertyConstraintId' => [
