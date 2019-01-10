@@ -18987,7 +18987,7 @@ $wgConf->settings = [
 ],
 
 'wgNavigationTimingCpuBenchmarkSamplingFactor' => [
-	'default' => 100,
+	'default' => 10,
 ],
 
 'wgRCWatchCategoryMembership' => [
