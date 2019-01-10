@@ -21405,6 +21405,7 @@ $wgConf->settings = [
 // https://phabricator.wikimedia.org/T110661
 'wmgUseQuickSurveys' => [
 	'default' => false,
+	'enwiki' => true,
 	'frwiki' => true,
 	'cawiki' => true,
 	'enwikivoyage' => true,
