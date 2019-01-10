@@ -5416,17 +5416,13 @@ $wgConf->settings = [
 // Logstash servers running syslog endpoint to collect log events.
 // Use false to disable all Logstash logging
 'wmgLogstashServers' => [
-	'default' => $wmfLocalServices['logstash'],
-	'group0' => [ '127.0.0.1' ],
-	'group1' => [ '127.0.0.1' ],
+	'default' => [ '127.0.0.1' ],
 ],
 
 // Use @cee: cookie when logging to logstash,
 // required to detect JSON syslog from non-structured syslog.
 'wmgLogstashUseCee' => [
-	'default' => false,
-	'group0' => true,
-	'group1' => true,
+	'default' => true,
 ],
 
 # wmgKafkaServers @{
