@@ -18958,7 +18958,6 @@ $wgConf->settings = [
 'wgNavigationTimingSamplingFactor' => [
 	// 0.1% of all page loads in Grade A browsers.
 	'default' => 1000,
-	'ruwiki' => 100,
 ],
 
 'wgNavigationTimingSurveySamplingFactor' => [
@@ -18985,6 +18984,10 @@ $wgConf->settings = [
 		'userAgent' => [],
 		'pageName' => [],
 	],
+],
+
+'wgNavigationTimingCpuBenchmarkSamplingFactor' => [
+	'default' => 10,
 ],
 
 'wgRCWatchCategoryMembership' => [
@@ -19791,7 +19794,7 @@ $wgConf->settings = [
 
 'wgWBQualityConstraintsTypeCheckMaxEntities' => [
 	'default' => 1000,
-	'wikidatawiki' => 100,
+	'wikidatawiki' => 150,
 ],
 
 'wgWBQualityConstraintsPropertyConstraintId' => [
@@ -21958,10 +21961,19 @@ $wgConf->settings = [
 	'cswiki' => false,
 ],
 
+'wgGEHelpPanelLoggingEnabled' => [
+	'default' => true,
+],
+
 'wgGEHelpPanelNewAccountEnableProportion' => [
+	// Legacy config, remove this after wmf.12 has been rolled out everywhere
+	'default' => 0,
+],
+
+'wgGEHelpPanelNewAccountEnablePercentage' => [
 	'default' => 0,
 	'testwiki' => 0,
-	// Scheduled to be set to 2 on Jan 10 2019
+	// Scheduled to be set to 50 on Jan 10 2019
 	'kowiki' => 0,
 	'cswiki' => 0,
 ],
