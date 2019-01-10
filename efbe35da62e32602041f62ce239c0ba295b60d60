@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "f6963a85_5b56ca8d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 4824,
+      "author": {
+        "id": 4982
+      },
+      "writtenOn": "2019-01-10T14:47:05Z",
+      "side": 1,
+      "message": "Expected 1 space before \"\u003d\u003e\"",
+      "range": {
+        "startLine": 4824,
+        "startChar": 8,
+        "endLine": 4824,
+        "endChar": 10
+      },
+      "revId": "efbe35da62e32602041f62ce239c0ba295b60d60",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8c8e5074_177a04d0",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 5
