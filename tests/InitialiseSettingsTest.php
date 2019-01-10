@@ -42,9 +42,26 @@ class InitialiseSettingsTest extends WgConfTestCase {
 	///
 	public function testwgExtraNamespaces() {
 		$wgConf = $this->loadWgConf( 'unittest' );
+
+		// Test for invalid spaces
 		foreach ( $wgConf->settings['wgExtraNamespaces'] as $db => $entry ) {
 			foreach ( $entry as $nb => $ns ) {
 				$this->assertFalse( strpos( $ns, ' ' ), "Unexpected spaces in '$ns' namespace title for $db, use underscores instead" );
+			}
+		}
+
+		// Test namespace numbers
+		foreach ( $wgConf->settings['wgExtraNamespaces'] as $db => $entry ) {
+			foreach ( $entry as $number => $namespace ) {
+				if ( $number < 100 || in_array( $number, [ 828, 829 ] ) ) {
+					continue; // It's not an extra namespace, do not test
+				}
+
+				if ( $number % 2 == 0 ) {
+					$this->assertTrue( array_key_exists( $number + 1, $entry ), "Namespace $namespace (ID $number) for $db doesn't have corresponding talk namespace set" );
+				} else {
+					$this->assertTrue( array_key_exists( $number - 1, $entry ), "Namespace $namespace (ID $number) for $db doesn't have corresponding non-talk namespace set" );
+				}
 			}
 		}
 	}
