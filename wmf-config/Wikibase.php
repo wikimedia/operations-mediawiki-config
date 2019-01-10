@@ -17,6 +17,7 @@ if ( !empty( $wmgUseWikibaseRepo ) ) {
 	}
 	if ( !empty( $wmgUseWikibaseMediaInfo ) ) {
 		wfLoadExtension( 'WikibaseMediaInfo' );
+		$wgWBRepoSettings['enableEntitySearchUI'] = false;
 	}
 }
 
