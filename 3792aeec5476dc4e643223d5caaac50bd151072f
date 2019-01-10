@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6fd97bb5_9bee2ce4",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 5457,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-01-10T07:05:59Z",
+      "side": 1,
+      "message": "This suggests \u0027level\u0027 is ignored for Logstash, and is instead hardcoded to \u0027info\u0027 for this shortcut format. Is that true?\n\nSee *ref in the other file, which would also need updating if that\u0027s the case. Can you point to where that logic is? And what would do you think about changing that to reflect the previous docs instead?\n\nWhen it comes to managing the volume, I think it\u0027s quite important that setting this to \u0027warn\u0027 for example, does not send lower severities to Logstash either. In fact, if we are going to have a rounding down where one is less sensitive, Logstash should be the one more sensitive not less, given that\u0027s where we\u0027ve felt the most pressure.",
+      "range": {
+        "startLine": 5457,
+        "startChar": 24,
+        "endLine": 5457,
+        "endChar": 114
+      },
+      "revId": "3792aeec5476dc4e643223d5caaac50bd151072f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "17bb1f3a_86c2c980",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-01-10T07:05:59Z",
+      "side": 1,
+      "message": "*ref",
+      "range": {
+        "startLine": 32,
+        "startChar": 71,
+        "endLine": 32,
+        "endChar": 91
+      },
+      "revId": "3792aeec5476dc4e643223d5caaac50bd151072f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
