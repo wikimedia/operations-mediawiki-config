@@ -46,6 +46,30 @@
       "revId": "efbe35da62e32602041f62ce239c0ba295b60d60",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "df640811_ea58a389",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 12413,
+      "author": {
+        "id": 4982
+      },
+      "writtenOn": "2019-01-10T13:30:05Z",
+      "side": 1,
+      "message": "\u003e https://zh.wikiversity.org/wiki/w:en: links to enwiki. I don\u0027t know\n \u003e why this is wrong.\n\nBecause it is not a standard interwiki prefix, list of all interwiki prefixes for a wiki: https://zh.wikiversity.org/w/api.php?action\u003dquery\u0026meta\u003dsiteinfo\u0026siprop\u003dinterwikimap\n\nAlthough [[:w:en:]] will link to enwiki main page, this process has experienced two redirects. First redirect to [[en:]] on zhwiki, and the second redirect to enwiki.",
+      "parentUuid": "a3c6c869_1c5ac950",
+      "range": {
+        "startLine": 12413,
+        "startChar": 114,
+        "endLine": 12413,
+        "endChar": 120
+      },
+      "revId": "efbe35da62e32602041f62ce239c0ba295b60d60",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
