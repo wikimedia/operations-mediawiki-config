@@ -21963,6 +21963,11 @@ $wgConf->settings = [
 	'cswiki' => 'https://foundation.wikimedia.org/wiki/Uv%C3%ADtac%C3%AD_pr%C5%AFzkum_pro_nov%C3%A9_u%C5%BEivatele_Prohl%C3%A1%C5%A1en%C3%AD_o_ochran%C4%9B_osobn%C3%ADch_%C3%BAdaj%C5%AF',
 ],
 
+'wgWelcomeSurveyExperimentalGroups' => [
+	'kowiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-4' ], 'exp2_target_popup' => [ 'range' => '5-9' ] ],
+	'cswiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-4' ], 'exp2_target_popup' => [ 'range' => '5-9' ] ],
+],
+
 'wgGEHelpPanelEnabled' => [
 	'default' => false,
 	'testwiki' => true,
