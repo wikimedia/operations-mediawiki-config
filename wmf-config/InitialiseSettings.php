@@ -5459,11 +5459,13 @@ $wgConf->settings = [
 # @} end of wmgAvroSchemas
 
 # wmgMonologChannels @{
-// Configure Monolog logging to udp2log, Logstash and/or kafka
+// Configure Monolog logging to udp2log (logfiles), Logstash and/or Kafka
+// See logging.php for more detailed information
 // channel => false  == ignore all log events on this channel
-// channel => level  == record all events of this level or higher
-// channel => [ 'udp2log'=>level, 'logstash'=>level, 'kafka'=>level, 'sample'=>rate ]
-// Defaults: [ 'udp2log'=>'debug', 'logstash'=>'info', 'kafka'=>false, 'sample'=>false ]
+// channel => level  == record all events of this level or higher to udp2log and logstash (except:
+//    logstash won't go below info level, use explicit logstash=>debug field for that)
+// channel => [ 'udp2log'=>level, 'logstash'=>level, 'kafka'=>level, 'sample'=>rate, 'buffer'=>buffer ]
+// Defaults: [ 'udp2log'=>'debug', 'logstash'=>'info', 'kafka'=>false, 'sample'=>false, 'buffer'=>false ]
 // Valid levels: 'debug', 'info', 'warning', 'error', false
 // Note: sampled logs will not be sent to Logstash
 // Note: Udp2log events are sent to udp://{$wmfUdp2logDest}/{$channel}
