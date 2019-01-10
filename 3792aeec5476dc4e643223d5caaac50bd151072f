@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "bc97d585_53105e6a",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 5457,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2019-01-10T07:23:37Z",
+      "side": 1,
+      "message": "My bad, what I wrote in the other file is the correct version.",
+      "parentUuid": "6fd97bb5_9bee2ce4",
+      "range": {
+        "startLine": 5457,
+        "startChar": 24,
+        "endLine": 5457,
+        "endChar": 114
+      },
+      "revId": "3792aeec5476dc4e643223d5caaac50bd151072f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "17bb1f3a_86c2c980",
         "filename": "wmf-config/logging.php",
         "patchSetId": 1
