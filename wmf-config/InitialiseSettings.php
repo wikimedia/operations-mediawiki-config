@@ -18958,7 +18958,6 @@ $wgConf->settings = [
 'wgNavigationTimingSamplingFactor' => [
 	// 0.1% of all page loads in Grade A browsers.
 	'default' => 1000,
-	'ruwiki' => 100,
 ],
 
 'wgNavigationTimingSurveySamplingFactor' => [
