@@ -30,15 +30,17 @@
 # - $wmgMonologChannels: per-channel logging config
 #   - `channel => false`: ignore all log events on this channel.
 #   - `channel => level`: record all events of this level or higher to udp2log and logstash.
-#   - `channel => [ 'udp2log'=>level, 'logstash'=>level, 'kafka'=>level, 'sample'=>rate ]`
+#     Special case: `channel => debug` will not log to logstash.
+#   - `channel => [ 'udp2log'=>level, 'logstash'=>level, 'kafka'=>level, 'sample'=>rate, 'buffer'=>buffer ]`
 #
-#   Default for all channels not otherwise specified:
+#   Default for all channels for fields not otherwise specified:
 #   ```
 #   [
 #       'udp2log' = >'debug',
 #       'logstash' = >'info',
 #       'kafka' => false,
 #       'sample' => false,
+#       'buffer' => false,
 #   ]
 #   ```
 #
@@ -47,6 +49,7 @@
 #   Note: Sampled logs will not be sent to Logstash!
 #
 #   Note: Udp2log events are sent to udp://{$wmfUdp2logDest}/{$channel}.
+#   Ultimately they end up in logfiles on mwlog1001.
 #
 # - $wmfUdp2logDest: udp2log host and port.
 # - $wmgLogAuthmanagerMetrics: Controls additional authmanager logging.
