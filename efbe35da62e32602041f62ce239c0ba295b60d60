@@ -94,6 +94,30 @@
       "revId": "efbe35da62e32602041f62ce239c0ba295b60d60",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "61e512d4_580f135a",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 12413,
+      "author": {
+        "id": 4982
+      },
+      "writtenOn": "2019-01-10T14:39:25Z",
+      "side": 1,
+      "message": "\u003e There are many such usages above. Such as itwikivoyage,\n \u003e nowikibooks, etc.\n\nYou are right, my fault. MW will query sub-projects on the interwiki map of the target wiki (zhwiki).\n\nNow, patch looks good.",
+      "parentUuid": "3b1553dd_d4e2c8e7",
+      "range": {
+        "startLine": 12413,
+        "startChar": 114,
+        "endLine": 12413,
+        "endChar": 120
+      },
+      "revId": "efbe35da62e32602041f62ce239c0ba295b60d60",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
