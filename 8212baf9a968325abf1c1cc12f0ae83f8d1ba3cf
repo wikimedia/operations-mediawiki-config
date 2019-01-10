@@ -34,6 +34,24 @@
       "revId": "8212baf9a968325abf1c1cc12f0ae83f8d1ba3cf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7e0e8447_eedeb999",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 21405,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-10T16:20:09Z",
+      "side": 0,
+      "message": "Sure!\n\nthe default value is false, so removing this removed the Extension:QuickSurveys from production. If I visit Special:Version it would be gone. This means all it\u0027s JS code is gone.\n\nQuickSurveys adds JS to the page via OutputPage-\u003eaddModules - this injects mw.loader.load( [ \u0027ext.quicksurveys.init\u0027 ] ) into the HTML of a page.\n\nSince we use Varnish this gets cached, so when QuickSurveys is uninstalled from the wiki, this cached HTML remains and we now have code that doesn\u0027t exist being pointed to.\n\nThis is definitely a problem with the QuickSurveys extension. It should be possible to install QuickSurveys and not ship code when no surveys are active. ( Sam and I will follow up with a bug to take care of that.)\n\n\nThis line can be removed in a month (maybe 1 week - Varnish caches vary), after those cached pages have disappeared from Varnish but that doesn\u0027t seem like a sustainable approach! \n\nTo be clear, I don\u0027t think we could have known about this upfront, so we\u0027ve exposed an important bug in our survey workflow which is  good thing!",
+      "parentUuid": "6df3f1de_b588c9a3",
+      "revId": "8212baf9a968325abf1c1cc12f0ae83f8d1ba3cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
