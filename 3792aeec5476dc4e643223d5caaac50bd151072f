@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "edc3867f_52d01617",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 5457,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2019-01-10T17:30:28Z",
+      "side": 1,
+      "message": "The exclusion of debug from Logstash is not about privacy. It has historically been about the physical storage capacity of the backing Elasticsearch cluster and the ability of our ELK stack to keep up with the inbound log event volume. This probably should be re-examined once the ELK cluster has been updated fully.",
+      "parentUuid": "6fd97bb5_9bee2ce4",
+      "range": {
+        "startLine": 5457,
+        "startChar": 24,
+        "endLine": 5457,
+        "endChar": 114
+      },
+      "revId": "3792aeec5476dc4e643223d5caaac50bd151072f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "17bb1f3a_86c2c980",
         "filename": "wmf-config/logging.php",
         "patchSetId": 1
