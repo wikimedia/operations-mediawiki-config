@@ -16,6 +16,24 @@
       "revId": "8212baf9a968325abf1c1cc12f0ae83f8d1ba3cf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6df3f1de_b588c9a3",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 21405,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2019-01-10T12:22:11Z",
+      "side": 0,
+      "message": "Can you explain more? When would it be safe to remove it?",
+      "parentUuid": "d64688ad_d9d8fc55",
+      "revId": "8212baf9a968325abf1c1cc12f0ae83f8d1ba3cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
