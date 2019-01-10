@@ -21980,7 +21980,7 @@ $wgConf->settings = [
 'wgGEHelpPanelHelpDeskTitle' => [
 	'default' => '',
 	'testwiki' => 'Wikipedia:Requests/Help_desk',
-	'kowiki' => '위키백과:질문방',
+	'kowiki' => '위키백과:질문방/{{Y-M|0}}',
 	'cswiki' => 'Wikipedie:Potřebuji_pomoc',
 ],
 
