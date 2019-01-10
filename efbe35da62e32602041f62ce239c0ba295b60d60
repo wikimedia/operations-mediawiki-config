@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8c8e5074_177a04d0",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 12413,
+      "author": {
+        "id": 4982
+      },
+      "writtenOn": "2019-01-10T06:17:01Z",
+      "side": 1,
+      "message": "[[w:en:]] actually links to zhwiki, so it is illegal, add enwiki should is:\n\u0027wikipedia\u0027",
+      "range": {
+        "startLine": 12413,
+        "startChar": 114,
+        "endLine": 12413,
+        "endChar": 120
+      },
+      "revId": "efbe35da62e32602041f62ce239c0ba295b60d60",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
