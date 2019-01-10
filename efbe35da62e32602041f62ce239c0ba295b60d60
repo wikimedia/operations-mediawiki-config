@@ -70,6 +70,30 @@
       "revId": "efbe35da62e32602041f62ce239c0ba295b60d60",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3b1553dd_d4e2c8e7",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 12413,
+      "author": {
+        "id": 5163
+      },
+      "writtenOn": "2019-01-10T13:39:33Z",
+      "side": 1,
+      "message": "There are many such usages above. Such as itwikivoyage, nowikibooks, etc.",
+      "parentUuid": "df640811_ea58a389",
+      "range": {
+        "startLine": 12413,
+        "startChar": 114,
+        "endLine": 12413,
+        "endChar": 120
+      },
+      "revId": "efbe35da62e32602041f62ce239c0ba295b60d60",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
