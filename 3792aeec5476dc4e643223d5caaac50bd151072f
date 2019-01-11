@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "e654f10c_c902a124",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 5457,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-01-11T05:49:53Z",
+      "side": 1,
+      "message": "My \"less sensitive\" was a reference to how sensitive a backend is to capacity problems.\n\nI mentioned that Logstash is indeed the more sensitive one in this regard (compared to mwlog/udp2log).\n\nAnd if the code ignores this level (both when it is lower than \u0027warn\u0027 as well as when it is higher than \u0027warn\u0027) that would cause unexpected impact when attempting to limit data flow by raising the minimum log severity for a channel, if it still sends the same to Logstash.\n\nAnyhow, afaik, this isn\u0027t true. We have \u0027debug\u0027 ones listed here that do get (and should) be sent to Logstash, and ones with higher cut offs that aren\u0027t sent below that. At least, it worked sometime last October when I last fiddled with it.\n\nIf and when they should differ, that should be explicit, right?",
+      "parentUuid": "edc3867f_52d01617",
+      "range": {
+        "startLine": 5457,
+        "startChar": 24,
+        "endLine": 5457,
+        "endChar": 114
+      },
+      "revId": "3792aeec5476dc4e643223d5caaac50bd151072f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "17bb1f3a_86c2c980",
         "filename": "wmf-config/logging.php",
         "patchSetId": 1
