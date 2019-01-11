@@ -1,0 +1,8 @@
+Verified+2: jenkins-bot
+Code-Review+2: Krinkle <krinklemail@gmail.com>
+Code-Review+1: Thiemo Kreuz (WMDE) <thiemo.kreuz@wikimedia.de>
+Submitted-by: jenkins-bot
+Submitted-at: Fri, 11 Jan 2019 05:23:44 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/482501
+Project: operations/mediawiki-config
+Branch: refs/heads/master
