@@ -12349,6 +12349,7 @@ $wgConf->settings = [
 	'ndswiki' => [ 'en', 'de', 'nl', 'nds-nl', 'wikt' ],
 	'newiki' => [ 'en', 'commons' ], // T97396
 	'newikibooks' => [ 'w', 'w:en', 'w:hi', 'commons' ], // T129831
+	'newiktionary' => [ 'w:en', 'wikt:en', 'w:ne', 'commons' ], // T213023
 	'nlwikibooks' => [ 'w' ],
 	'nlwikisource' => [ 'w', 'wikt', 'q', 'b', 'n', 'nl', 'de', 'en' ],
 	'nlwiktionary' => [ 'w', 'en', 'fr' ], // T12856
