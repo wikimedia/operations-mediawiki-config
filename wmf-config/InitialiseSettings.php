@@ -19219,7 +19219,7 @@ $wgConf->settings = [
 		'property' => 120,
 		'lexeme' => 146,
 	],
-	'testcommonswiki' => [],
+	// WikibaseMediaInfo entity namespace and slot is hard-coded in the extension
 ],
 
 'wmgWikibaseClientEntityNamespaces' => [
