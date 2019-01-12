@@ -375,11 +375,6 @@ function wmfLabsSettings() {
 			'default' => [ 'en-rtl' => 'English (rtl)' ],
 		],
 
-		'wmgUseQuickSurveys' => [
-			'default' => false,
-			'enwiki' => true
-		],
-
 		'wgQuickSurveysConfig' => [
 			'default' => [
 				[
