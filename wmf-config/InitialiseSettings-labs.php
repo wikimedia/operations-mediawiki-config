@@ -669,10 +669,6 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
-		'wmgUseTemplateStyles' => [
-			'default' => true,
-		],
-
 		'wgCognateReadOnly' => [
 			'default' => false,
 		],
