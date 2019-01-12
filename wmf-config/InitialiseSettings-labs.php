@@ -638,11 +638,6 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
-		// T191888: Enable page previews configuration for newly created accounts
-		'wgPopupsOptInStateForNewAccounts' => [
-			'default' => '1',
-		],
-
 		// T171853: Enable PP EventLogging instrumentation on enwiki only so that we
 		// can prove the killswitch works.
 		'-wgPopupsEventLogging' => [
