@@ -333,11 +333,6 @@ function wmfLabsSettings() {
 			'default' => [ 'newarticle' ],
 		],
 
-		// Whether Compact Links is Beta feature
-		'wmgULSCompactLanguageLinksBetaFeature' => [
-			'default' => false,
-		],
-
 		// Whether Compact Links is enabled for new accounts *by default*
 		'wmgULSCompactLinksForNewAccounts' => [
 			'default' => true,

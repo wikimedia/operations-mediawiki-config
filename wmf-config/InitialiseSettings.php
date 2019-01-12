@@ -14877,6 +14877,7 @@ $wgConf->settings = [
 	'yiwiki' => 'NavigationPopups',
 ],
 
+// Whether Compact Links is a Beta feature
 'wmgULSCompactLanguageLinksBetaFeature' => [
 	'default' => false,
 	'ruwikivoyage' => true,
