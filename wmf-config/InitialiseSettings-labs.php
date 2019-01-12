@@ -310,9 +310,6 @@ function wmfLabsSettings() {
 			'default' => false,
 		],
 
-		'wmgVisualEditorTransitionDefault' => [
-			'default' => false,
-		],
 		'wmgVisualEditorEnableWikitext' => [
 			'default' => true,
 			'commonswiki' => false,
