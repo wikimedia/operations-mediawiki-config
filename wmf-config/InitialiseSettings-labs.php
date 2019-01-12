@@ -532,10 +532,6 @@ function wmfLabsSettings() {
 			'default' => true,  // T127297
 		],
 
-		'-wmgUseCodeMirror' => [
-			'default' => true,
-		],
-
 		// Ensure ?action=credits isn't break and allow to work
 		// to cache this information. See T130820.
 		'wgMaxCredits' => [
