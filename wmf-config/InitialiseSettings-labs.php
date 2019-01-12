@@ -371,11 +371,6 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
-		// Enable anonymous editor acquisition experiment across labs
-		'wmgGettingStartedRunTest' => [
-			'default' => true,
-		],
-
 		'wmgExtraLanguageNames' => [
 			'default' => [ 'en-rtl' => 'English (rtl)' ],
 		],
