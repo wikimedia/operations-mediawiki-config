@@ -730,10 +730,6 @@ function wmfLabsSettings() {
 			'default' => false,
 		],
 
-		'wgEchoMaxMentionsInEditSummary' => [
-			'default' => 5,
-		],
-
 		'wmgUseNewWikiDiff2Extension' => [
 			'default' => true,
 		],
