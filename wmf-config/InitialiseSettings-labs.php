@@ -555,10 +555,6 @@ function wmfLabsSettings() {
 			'default' => 10,
 		],
 
-		'wgAdvancedSearchBetaFeature' => [
-			'default' => false,
-		],
-
 		'wmgUseFileImporter' => [
 			'default' => false,
 			'commonswiki' => 'FileImporter-WikimediaSitesTableSite',
