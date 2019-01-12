@@ -612,9 +612,6 @@ function wmfLabsSettings() {
 			'default' => 10,
 		],
 
-		'wmgUseAdvancedSearch' => [
-			'default' => true,
-		],
 		'wgAdvancedSearchBetaFeature' => [
 			'default' => false,
 		],
