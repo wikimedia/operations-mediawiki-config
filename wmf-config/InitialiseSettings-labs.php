@@ -532,11 +532,6 @@ function wmfLabsSettings() {
 			'default' => true,  // T127297
 		],
 
-		'wmgUseLoginNotify' => [
-			'default' => true, // T158878
-			'nonecho' => false,
-		],
-
 		'-wmgUseCodeMirror' => [
 			'default' => true,
 		],
