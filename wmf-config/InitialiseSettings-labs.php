@@ -241,9 +241,6 @@ function wmfLabsSettings() {
 		'-wgKartographerEnableMapFrame' => [
 			'default'	=> true,
 		],
-		'-wgKartographerUsePageLanguage' => [
-			'default' => true,
-		],
 		'wgWMECitationUsagePopulationSize' => [
 			'enwiki' => 1  // 100% — T191086
 		],
