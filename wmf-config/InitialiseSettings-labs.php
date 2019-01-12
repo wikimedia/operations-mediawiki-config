@@ -607,9 +607,6 @@ function wmfLabsSettings() {
 			],
 		],
 
-		'wmgUsePageViewInfo' => [
-			'default' => true,
-		],
 		'wgPageViewInfoWikimediaDomain' => [
 			'default' => 'en.wikipedia.org',
 		],
