@@ -528,10 +528,6 @@ function wmfLabsSettings() {
 			'ptwiki' => 1024 * 500, // 500 KB - T25186
 		],
 
-		'wmgUseTemplateWizard' => [
-			'default' => true, // T202545
-		],
-
 		'wmgUseNewsletter' => [
 			'default' => true,  // T127297
 		],
