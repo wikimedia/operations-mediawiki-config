@@ -310,9 +310,6 @@ function wmfLabsSettings() {
 			'default' => false,
 		],
 
-		'wmgVisualEditorUseSingleEditTab' => [
-			'enwiki' => true,
-		],
 		'wmgVisualEditorTransitionDefault' => [
 			'default' => false,
 		],
