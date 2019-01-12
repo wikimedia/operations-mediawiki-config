@@ -673,10 +673,6 @@ function wmfLabsSettings() {
 			'default' => false,
 		],
 
-		'wmgUseNewWikiDiff2Extension' => [
-			'default' => true,
-		],
-
 		'wgReadingListsCluster' => [
 			'default' => false,
 		],
