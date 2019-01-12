@@ -611,9 +611,6 @@ function wmfLabsSettings() {
 			'default' => 'en.wikipedia.org',
 		],
 
-		'wmgUseLinter' => [
-			'default' => true,
-		],
 		'wgLinterSubmitterWhitelist' => [
 			'default' => [
 				'172.16.5.63' => true // deployment-parsoid09.deployment-prep.eqiad.wmflabs
