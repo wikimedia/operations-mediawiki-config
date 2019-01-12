@@ -575,10 +575,6 @@ function wmfLabsSettings() {
 			'nonecho' => false,
 		],
 
-		'-wmgUseCodeMirror' => [
-			'default' => true,
-		],
-
 		'wmgUseArticleCreationWorkflow' => [
 			'default' => false,
 			'enwiki' => true,
