@@ -22341,12 +22341,12 @@ $wgConf->settings = [
 			'id' => 'quicktutorial',
 		],
 		[
-			'title' => '위키백과:그림_사용하기',
+			'title' => 'mw:Help:VisualEditor/User_guide/ko#사진_편집_및_기타_미디어_파일들',
 			'text' => '그림 넣기',
 			'id' => 'image'
 		],
 		[
-			'title' => '위키백과:각주',
+			'title' => 'mw:Help:VisualEditor/User_guide/ko#각주_편집하기',
 			'text' => '각주 달기',
 			'id' => 'citation',
 		],
