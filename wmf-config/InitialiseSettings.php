@@ -7173,6 +7173,8 @@ $wgConf->settings = [
 		101 => 'উইকিশৈশব_আলাপ',
 		102 => 'বিষয়',
 		103 => 'বিষয়_আলাপ',
+		104 => 'রন্ধনপ্রণালী', // Cookbook, T203534
+		105 => 'রন্ধনপ্রণালী_আলোচনা', // Cookbooks talk, T203534
 	],
 	'cawikibooks' => [
 		100 => 'Portal', // T93811
@@ -14100,7 +14102,8 @@ $wgConf->settings = [
 		'*.ub.unibas.ch',                   // Universität Basel - T104178
 		'*.unibas.ch',                      // Universität Basel - T104178
 		'www.workwithsounds.eu',            // Work With Sounds - T105143
-		'*.archive.org', 'archive.org',     // Internet Archive - T106293
+		'archive.org', '*.archive.org',
+		'*.*.archive.org',                  // Internet Archive - T106293, T207581
 		'*.nps.gov',                        // National Park Service, United States - T113188
 		'*.unesco.org',                     // Unesco - T115338
 		'www.webarchive.org.uk',            // UK Web Archive - T116179
@@ -18944,12 +18947,16 @@ $wgConf->settings = [
 'wmgUseWikimediaEvents' => [
 	'default' => true,
 	'closed' => false, // T158721
+	'private' => false,
+	'fishbowl' => false,
 ],
 
-// ext.NavigationTiming
 'wmgUseNavigationTiming' => [
 	'default' => true,
 	'wikitech' => false,
+	'closed' => false,
+	'private' => false,
+	'fishbowl' => false,
 ],
 
 // Careful! The LOWER the value, the MORE requests will be logged.
@@ -19907,12 +19914,14 @@ $wgConf->settings = [
 // Structured media file data (the WikibaseMediaInfo extension)
 'wmgUseWikibaseMediaInfo' => [
 	'default' => false,
+	'commonswiki' => true,
 	'testcommonswiki' => true,
 ],
 
 // Feature flag for WikibaseMediaInfo during deployment
 'wgMediaInfoEnable' => [
 	'default' => false,
+	'commonswiki' => true,
 	'testcommonswiki' => true,
 ],
 
@@ -21405,6 +21414,7 @@ $wgConf->settings = [
 // https://phabricator.wikimedia.org/T110661
 'wmgUseQuickSurveys' => [
 	'default' => false,
+	'enwiki' => true,
 	'frwiki' => true,
 	'cawiki' => true,
 	'enwikivoyage' => true,
@@ -21882,13 +21892,6 @@ $wgConf->settings = [
 	'mediawikiwiki' => false,
 	'wikidatawiki' => false,
 ],
-// T183869
-'wgWMEAICaptchaEnabled' => [
-	'default' => false,
-	'private' => false,
-	'fishbowl' => false,
-	'nonglobal' => false,
-],
 
 // T184121
 // Explicitly disabled for non-CentralAuth wikis in CommonSettings.php
@@ -21956,32 +21959,25 @@ $wgConf->settings = [
 'wgGEHelpPanelEnabled' => [
 	'default' => false,
 	'testwiki' => true,
-	// Scheduled to be set to true on Jan 10 2019
-	'kowiki' => false,
-	'cswiki' => false,
+	'kowiki' => true,
+	'cswiki' => true,
 ],
 
 'wgGEHelpPanelLoggingEnabled' => [
 	'default' => true,
 ],
 
-'wgGEHelpPanelNewAccountEnableProportion' => [
-	// Legacy config, remove this after wmf.12 has been rolled out everywhere
-	'default' => 0,
-],
-
 'wgGEHelpPanelNewAccountEnablePercentage' => [
 	'default' => 0,
 	'testwiki' => 0,
-	// Scheduled to be set to 50 on Jan 10 2019
-	'kowiki' => 0,
-	'cswiki' => 0,
+	'kowiki' => 50,
+	'cswiki' => 50,
 ],
 
 'wgGEHelpPanelHelpDeskTitle' => [
 	'default' => '',
 	'testwiki' => 'Wikipedia:Requests/Help_desk',
-	'kowiki' => '위키백과:질문방',
+	'kowiki' => '위키백과:질문방/{{Y-M|0}}',
 	'cswiki' => 'Wikipedie:Potřebuji_pomoc',
 ],
 

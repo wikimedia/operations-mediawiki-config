@@ -540,19 +540,7 @@ function wmfLabsSettings() {
 			'default' => []
 		],
 
-		// ###### Structured Data on Commons testing installation ######
-		'wmgUseWikibaseRepo' => [
-			'commonswiki' => true,
-		],
-
-		'wmgUseWikibaseMediaInfo' => [
-			'commonswiki' => true,
-		],
-
-		'wgMediaInfoEnable' => [
-			'commonswiki' => true,
-		],
-
+		// For better testing of Structured Data on Commons edits
 		'wmgEnhancedRecentChanges' => [
 			'commonswiki' => true,
 		],
@@ -840,9 +828,6 @@ function wmfLabsSettings() {
 		'wgOresExcludeBots' => [
 			'default' => true,
 			'enwiki' => false,
-		],
-		'wgWMEAICaptchaEnabled' => [
-			'default' => true,
 		],
 		// T184668
 		'wmgUseGlobalPreferences' => [
