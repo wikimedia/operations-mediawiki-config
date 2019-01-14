@@ -125,7 +125,6 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['entityNamespaces'] = $wmgWikibaseRepoEntityNamespaces;
 	$wgWBRepoSettings['idBlacklist'] = $wmgWikibaseIdBlacklist;
 	$wgWBRepoSettings['disabledDataTypes'] = $wmgWikibaseDisabledDataTypes;
-	$wgWBRepoSettings['tmpMaxItemIdForNewItemIdHtmlFormatter'] = $wmgWikibaseMaxItemIdForNewItemIdHtmlFormatter;
 	$wgWBRepoSettings['entityDataFormats'] = $wmgWikibaseEntityDataFormats;
 	$wgWBRepoSettings['maxSerializedEntitySize'] = $wmgWikibaseMaxSerializedEntitySize;
 	$wgWBRepoSettings['siteLinkGroups'] = $wmgWBSiteLinkGroups;
@@ -134,6 +133,13 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['badgeItems'] = $wmgWikibaseRepoBadgeItems;
 	$wgWBRepoSettings['preferredGeoDataProperties'] = $wmgWBRepoPreferredGeoDataProperties;
 	$wgWBRepoSettings['preferredPageImagesProperties'] = $wmgWBRepoPreferredPageImagesProperties;
+
+	// These can be removed once migration is complete & these vars no longer exist.
+	$wgWBRepoSettings['tmpMaxItemIdForNewItemIdHtmlFormatter'] = $wmgWikibaseMaxItemIdForNewItemIdHtmlFormatter;
+	if ( isset( $wmgWikibaseMaxItemIdForNewPropertyIdHtmlFormatter ) ) {
+		$wgWBRepoSettings['tmpMaxItemIdForNewPropertyIdHtmlFormatter'] =
+			$wmgWikibaseMaxItemIdForNewPropertyIdHtmlFormatter;
+	}
 
 	// Various settings have null / no setting yet for various sites,
 	// so we need to check they are set before trying to use them to avoid warnings.

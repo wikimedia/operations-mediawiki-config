@@ -19687,6 +19687,10 @@ $wgConf->settings = [
 	'default' => 200000000,// 200 million (all entities everywhere)
 ],
 
+'wmgWikibaseMaxItemIdForNewPropertyIdHtmlFormatter' => [
+	'default' => 0,
+],
+
 'wmgWikibaseEntityDataFormats' => [
 	'default' => [
 		'json',
