@@ -10089,10 +10089,29 @@ $wgConf->settings = [
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'rollbacker' => [ 'rollback' => true ],
 	],
-	'+srwikinews' => [ // T209251
-		'patroller' => [ 'patrol' => true ],
-		'autopatrolled' => [ 'autopatrol' => true ],
-		'rollbacker' => [ 'rollback' => true ],
+	'+srwikinews' => [ // T209251, T213679, T213680, T213681 and T213682
+		'user' => [ 'move-categorypages' => false ],
+		'patroller' => [
+			'patrol' => true,
+			'move-categorypages' => true,
+			'movefile' => true,
+			'suppressredirect' => true,
+			'move-categorypages' => true
+		],
+		'autopatrolled' => [
+			'autopatrol' => true,
+			'move-categorypages' => true,
+			'movefile' => true,
+			'move-categorypages' => true
+		],
+		'rollbacker' => [
+			'rollback' => true,
+			'move-categorypages' => true,
+			'movefile' => true,
+			'suppressredirect' => true,
+			'move-categorypages' => true
+		],
+		'bot' => [ 'move-subpages' => true ],
 	],
 	'+srwikisource' => [ // T206935, T213055, T213059, T213063, T213065
 		'user' => [ 'move-categorypages' => false ],
