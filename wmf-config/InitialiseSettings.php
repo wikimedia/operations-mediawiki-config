@@ -19688,7 +19688,7 @@ $wgConf->settings = [
 ],
 
 'wmgWikibaseMaxItemIdForNewPropertyIdHtmlFormatter' => [
-	'default' => 0,
+	'default' => 3000,// 6362 currently on wikidata.org, 3000 = 50%
 ],
 
 'wmgWikibaseEntityDataFormats' => [
