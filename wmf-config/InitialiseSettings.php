@@ -19183,6 +19183,7 @@ $wgConf->settings = [
 	'testwiki' => true,
 	'cswiki' => true,
 	'kowiki' => true,
+	'viwiki' => true,
 ],
 
 'wgWMEUnderstandingFirstDaySensitiveNamespaces' => [
@@ -19190,6 +19191,7 @@ $wgConf->settings = [
 	'testwiki' => [ 0, 1, 6, 7, 118, 119 ],
 	'cswiki' => [ 0, 1, 6, 7, 100, 101 ],
 	'kowiki' => [ 0, 1, 6, 7, 100, 101, 118, 119 ],
+	'viwiki' => [ 0, 1, 6, 7, 100, 101 ],
 ],
 
 'wmgWikibaseEntityAccessLimit' => [
