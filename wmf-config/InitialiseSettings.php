@@ -10137,10 +10137,29 @@ $wgConf->settings = [
 		],
 		'bot' => [ 'move-subpages' => true ],
 	],
-	'srwikiquote' => [ // T206936
-		'patroller' => [ 'patrol' => true ],
-		'autopatrolled' => [ 'autopatrol' => true ],
-		'rollbacker' => [ 'rollback' => true ],
+	'srwikiquote' => [ // T206936, T213684, T213685, T213686, T213687
+		'user' => [ 'move-categorypages' => false ],
+		'patroller' => [
+			'patrol' => true,
+			'move-categorypages' => true,
+			'movefile' => true,
+			'suppressredirect' => true,
+			'move-categorypages' => true
+		],
+		'autopatrolled' => [
+			'autopatrol' => true,
+			'move-categorypages' => true,
+			'movefile' => true,
+			'move-categorypages' => true
+		],
+		'rollbacker' => [
+			'rollback' => true,
+			'move-categorypages' => true,
+			'movefile' => true,
+			'suppressredirect' => true,
+			'move-categorypages' => true
+		],
+		'bot' => [ 'move-subpages' => true ],
 	],
 	'+srwiktionary' => [ // T209252
 		'patroller' => [ 'patrol' => true ],
