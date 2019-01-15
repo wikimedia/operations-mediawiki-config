@@ -20396,7 +20396,13 @@ $wgConf->settings = [
 ],
 
 'wmgCirrusSearchWriteClusters' => [
-	'default' => [ 'eqiad', 'codfw' ],
+	'cirrussearch-big-indices' => [ 'eqiad', 'codfw' ],
+	'default' => [
+		'eqiad',
+		'codfw',
+		[ 'groups' => [ 'psi', 'omega' ], 'replica' => 'eqiad' ],
+		[ 'groups' => [ 'psi', 'omega' ], 'replica' => 'codfw' ],
+	]
 ],
 
 'wmgCirrusSearchReplicaGroup' => [
