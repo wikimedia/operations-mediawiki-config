@@ -4696,11 +4696,15 @@ $wgConf->settings = [
 		'Author' => 102,
 		'Author_talk' => 103,
 	],
-	'+yuewiktionary' => [
+	'+yuewiktionary' => [ // T212678
 		'Index' => 100,
 		'Index_talk' => 101,
 		'Appendix' => 102,
 		'Appendix_talk' => 103,
+		'WT' => NS_PROJECT,
+		'T' => NS_TEMPLATE,
+		'U' => NS_USER,
+		'CAT' => NS_CATEGORY,
 	],
 	'+vowiki' => [
 		'Wikipedia_talk' => NS_PROJECT_TALK,
@@ -6386,6 +6390,7 @@ $wgConf->settings = [
 		101 => 'Portálaságastallan', // T41206
 	],
 	'shwiki' => [ 100 => 'Portal', 101 => 'Razgovor_o_portalu' ], // T32928
+	'shnwiki' => [ 100 => 'ၵိူၼ်ႇတူ', 101 => 'တွၼ်ႈဢုပ်ႇ_ၵိူၼ်ႇတူ' ], // T212992
 	'siwiki' => [ 100 => 'ද්වාරය', 101 => 'ද්වාරය_සාකච්ඡාව' ], // T8435, T26936
 	'skwiki' => [
 		NS_USER => 'Redaktor', // T143472
@@ -10499,7 +10504,7 @@ $wgConf->settings = [
 	],
 	'zhwikivoyage' => [ // T62328
 		'autopatrolled' => [ 'autopatrol' => true ],
-		'patroller' => [ 'patrol' => true, 'rollback' => true ],
+		'patroller' => [ 'patrol' => true, 'rollback' => true, 'suppressredirect' => true ], // T212272
 	],
 	'+zhwiktionary' => [ // T7836
 		'bot' => [ 'patrol' => true ],
@@ -10589,13 +10594,15 @@ $wgConf->settings = [
 	// we can only check memberships on a non-current wiki, not config, so we need to mash everything together here.
 	'default' => [
 		// core or extension groups
-		'bureaucrat', 'checkuser', 'importer', 'interface-admin', 'oversight',  'sysop',
+		'bureaucrat', 'checkuser', 'importer', 'interface-admin', 'oauthadmin', 'oversight',  'sysop',
 		// custom groups used on several wikis
-		'botadmin', 'eliminator', 'interface-editor', 'transwiki',
+		'arbcom', 'botadmin', 'eliminator', 'interface-editor', 'transwiki',
 		// custom groups used on one or a few wikis
-		'abusefilter' /* enwiki */, 'engineer' /* cswiki, ruwiki */, 'templateeditor' /* rowiki */, 'translator' /* incubatorwiki */, 'wikidata-staff',
+		'abusefilter' /* enwiki */, 'curator' /* enwikiversity */, 'engineer' /* cswiki, ruwiki */, 'facilitator' /* frwikinews */, 'founder' /* enwiki */, 'templateeditor' /* rowiki */, 'test-sysop' /* incubatorwiki */, 'translator' /* incubatorwiki */, 'wikidata-staff',
 		// metawiki local groups with global powers (some also on testwiki)
-		'centralnoticeadmin', 'global-renamer', 'wmf-officeit', 'wmf-supportsafety',
+		'centralnoticeadmin', 'global-renamer', 'translationadmin', 'wmf-officeit', 'wmf-supportsafety',
+		// wikitech local groups with global powers
+		'cloudadmin', 'oathauth',
 	],
 	'+fishbowl' => [ 'user' ],
 	'+private' => [ 'user' ],
@@ -11251,9 +11258,9 @@ $wgConf->settings = [
 		'sysop' => [ 'autoeditor' ],
 	],
 	'+urwiki' => [
-		// T44737, T47643, T120348, T133564, T137888, T139302, T144701, T184607, T211978
+		// T44737, T47643, T120348, T133564, T137888, T139302, T144701, T184607, T211978, T212612
 		'bureaucrat' => [ 'import', 'abusefilter', 'rollbacker', 'massmessage-sender', 'interface-editor', 'eliminator' ],
-		'sysop' => [ 'confirmed', 'abusefilter', 'rollbacker', 'accountcreator', 'filemover', 'autopatrolled', 'massmessage-sender', 'extendedmover' ],
+		'sysop' => [ 'confirmed', 'abusefilter', 'rollbacker', 'accountcreator', 'filemover', 'autopatrolled', 'massmessage-sender', 'extendedmover', 'transwiki' ],
 	],
 	'+viwiki' => [
 		'sysop' => [
@@ -12044,9 +12051,9 @@ $wgConf->settings = [
 		'sysop' => [ 'autoeditor' ],
 	],
 	'+urwiki' => [
-		// T44737, T47643, T120348, T133564, T137888, T139302, T144701, T184607, T211978
+		// T44737, T47643, T120348, T133564, T137888, T139302, T144701, T184607, T211978, T212612
 		'bureaucrat' => [ 'import', 'abusefilter', 'rollbacker', 'massmessage-sender', 'interface-editor', 'eliminator' ],
-		'sysop' => [ 'confirmed', 'accountcreator', 'filemover', 'autopatrolled', 'massmessage-sender', 'extendedmover' ],
+		'sysop' => [ 'confirmed', 'accountcreator', 'filemover', 'autopatrolled', 'massmessage-sender', 'extendedmover', 'transwiki' ],
 	],
 	'+viwiki' => [
 		'sysop' => [
@@ -12382,6 +12389,7 @@ $wgConf->settings = [
 	'ndswiki' => [ 'en', 'de', 'nl', 'nds-nl', 'wikt' ],
 	'newiki' => [ 'en', 'commons' ], // T97396
 	'newikibooks' => [ 'w', 'w:en', 'w:hi', 'commons' ], // T129831
+	'newiktionary' => [ 'w:en', 'wikt:en', 'w:ne', 'commons' ], // T213023
 	'nlwikibooks' => [ 'w' ],
 	'nlwikisource' => [ 'w', 'wikt', 'q', 'b', 'n', 'nl', 'de', 'en' ],
 	'nlwiktionary' => [ 'w', 'en', 'fr' ], // T12856
@@ -12459,6 +12467,7 @@ $wgConf->settings = [
 	'tetwiki' => [ 'en', 'de', 'pt' ],
 	'tnwiki' => [ 'en' ], // T53327
 	'tpiwiki' => [ 'en', 'simple', 'wikt:en', 'commons' ], // T26769
+	'urwiki' => [ 'ar', 'en', 'fa', 'fr', 'he' ], // T212612
 	'vecwiki' => [ 'it' ], // T21639
 	'vecwiktionary' => [ 'w', 'en', 'fr', 'it' ], // T51575
 	'viwiki' => [ 'wikt', 'b', 's', 'q' ], // T9854
@@ -14248,6 +14257,7 @@ $wgConf->settings = [
 		'radlines.org',                     // Radiologists wiki - T203219
 		'*.nasimonline.ir',                 // Iranian news agency - T203371
 		'idb.ub.uni-tuebingen.de',          // University Library Tübingen - T211466
+		'mbc.cyfrowemazowsze.pl',           // Polish biblioteka - T212469
 	],
 ],
 
@@ -17371,6 +17381,15 @@ $wgConf->settings = [
 		'5' => 'Pengguna %code%-5',
 		'N' => 'Pengguna %code%-M',
 	],
+	'napwiki' => [
+		'0' => 'Utente %code%-0',
+		'1' => 'Utente %code%-1',
+		'2' => 'Utente %code%-2',
+		'3' => 'Utente %code%-3',
+		'4' => 'Utente %code%-4',
+		'5' => 'Utente %code%-5',
+		'N' => 'Utente %code%-N',
+	],
 	'nlwiki' => [
 		'0' => false,
 		'1' => 'Wikipedia:Gebruiker %code%-1',
@@ -19240,7 +19259,7 @@ $wgConf->settings = [
 		'property' => 120,
 		'lexeme' => 146,
 	],
-	'testcommonswiki' => [],
+	// WikibaseMediaInfo entity namespace and slot is hard-coded in the extension
 ],
 
 'wmgWikibaseClientEntityNamespaces' => [
@@ -19708,6 +19727,10 @@ $wgConf->settings = [
 	'default' => 200000000,// 200 million (all entities everywhere)
 ],
 
+'wmgWikibaseMaxItemIdForNewPropertyIdHtmlFormatter' => [
+	'default' => 1000000,// On for everything. 6362 properties currently on wikidata 14/01/2019
+],
+
 'wmgWikibaseEntityDataFormats' => [
 	'default' => [
 		'json',
@@ -19839,7 +19862,7 @@ $wgConf->settings = [
 
 'wgWBQualityConstraintsTypeCheckMaxEntities' => [
 	'default' => 1000,
-	'wikidatawiki' => 150,
+	'wikidatawiki' => 300,
 ],
 
 'wgWBQualityConstraintsPropertyConstraintId' => [
@@ -19863,6 +19886,306 @@ $wgConf->settings = [
 'wgWBQualityConstraintsPropertiesWithViolatingQualifiers' => [
 	'default' => [],
 	'wikidatawiki' => [ 'P1855', 'P2271', 'P5192', 'P5193', 'P5977' ], // T183267
+],
+
+'wgWBQualityConstraintsInstanceOfId' => [
+	'default' => 'P31',
+	'testwikidatawiki' => 'P82',
+],
+
+'wgWBQualityConstraintsSubclassOfId' => [
+	'default' => 'P279',
+	'testwikidatawiki' => 'P10208',
+],
+
+'wgWBQualityConstraintsExceptionToConstraintId' => [
+	'default' => 'P2303',
+	'testwikidatawiki' => 'P84116',
+],
+
+'wgWBQualityConstraintsConstraintStatusId' => [
+	'default' => 'P2316',
+	'testwikidatawiki' => 'P84117',
+],
+
+'wgWBQualityConstraintsMandatoryConstraintId' => [
+	'default' => 'Q21502408',
+	'testwikidatawiki' => 'Q187927',
+],
+
+'wgWBQualityConstraintsDistinctValuesConstraintId' => [
+	'default' => 'Q21502410',
+	'testwikidatawiki' => 'Q187928',
+],
+
+'wgWBQualityConstraintsMultiValueConstraintId' => [
+	'default' => 'Q21510857',
+	'testwikidatawiki' => 'Q187929',
+],
+
+'wgWBQualityConstraintsUsedAsQualifierConstraintId' => [
+	'default' => 'Q21510863',
+	'testwikidatawiki' => 'Q187930',
+],
+
+'wgWBQualityConstraintsSingleValueConstraintId' => [
+	'default' => 'Q19474404',
+	'testwikidatawiki' => 'Q187931',
+],
+
+'wgWBQualityConstraintsSymmetricConstraintId' => [
+	'default' => 'Q21510862',
+	'testwikidatawiki' => 'Q187932',
+],
+
+'wgWBQualityConstraintsTypeConstraintId' => [
+	'default' => 'Q21503250',
+	'testwikidatawiki' => 'Q187933',
+],
+
+'wgWBQualityConstraintsValueTypeConstraintId' => [
+	'default' => 'Q21510865',
+	'testwikidatawiki' => 'Q187934',
+],
+
+'wgWBQualityConstraintsInverseConstraintId' => [
+	'default' => 'Q21510855',
+	'testwikidatawiki' => 'Q187935',
+],
+
+'wgWBQualityConstraintsItemRequiresClaimConstraintId' => [
+	'default' => 'Q21503247',
+	'testwikidatawiki' => 'Q187936',
+],
+
+'wgWBQualityConstraintsValueRequiresClaimConstraintId' => [
+	'default' => 'Q21510864',
+	'testwikidatawiki' => 'Q187937',
+],
+
+'wgWBQualityConstraintsConflictsWithConstraintId' => [
+	'default' => 'Q21502838',
+	'testwikidatawiki' => 'Q187938',
+],
+
+'wgWBQualityConstraintsOneOfConstraintId' => [
+	'default' => 'Q21510859',
+	'testwikidatawiki' => 'Q187939',
+],
+
+'wgWBQualityConstraintsMandatoryQualifierConstraintId' => [
+	'default' => 'Q21510856',
+	'testwikidatawiki' => 'Q187940',
+],
+
+'wgWBQualityConstraintsAllowedQualifiersConstraintId' => [
+	'default' => 'Q21510851',
+	'testwikidatawiki' => 'Q187941',
+],
+
+'wgWBQualityConstraintsRangeConstraintId' => [
+	'default' => 'Q21510860',
+	'testwikidatawiki' => 'Q187942',
+],
+
+'wgWBQualityConstraintsDifferenceWithinRangeConstraintId' => [
+	'default' => 'Q21510854',
+	'testwikidatawiki' => 'Q187943',
+],
+
+'wgWBQualityConstraintsCommonsLinkConstraintId' => [
+	'default' => 'Q21510852',
+	'testwikidatawiki' => 'Q187944',
+],
+
+'wgWBQualityConstraintsContemporaryConstraintId' => [
+	'default' => 'Q25796498',
+	'testwikidatawiki' => 'Q187945',
+],
+
+'wgWBQualityConstraintsUsedForValuesOnlyConstraintId' => [
+	'default' => 'Q21528958',
+	'testwikidatawiki' => 'Q187946',
+],
+
+'wgWBQualityConstraintsUsedAsReferenceConstraintId' => [
+	'default' => 'Q21528959',
+	'testwikidatawiki' => 'Q187947',
+],
+
+'wgWBQualityConstraintsNoBoundsConstraintId' => [
+	'default' => 'Q51723761',
+	'testwikidatawiki' => 'Q187948',
+],
+
+'wgWBQualityConstraintsAllowedUnitsConstraintId' => [
+	'default' => 'Q21514353',
+	'testwikidatawiki' => 'Q187949',
+],
+
+'wgWBQualityConstraintsSingleBestValueConstraintId' => [
+	'default' => 'Q52060874',
+	'testwikidatawiki' => 'Q187950',
+],
+
+'wgWBQualityConstraintsAllowedEntityTypesConstraintId' => [
+	'default' => 'Q52004125',
+	'testwikidatawiki' => 'Q187951',
+],
+
+'wgWBQualityConstraintsCitationNeededConstraintId' => [
+	'default' => 'Q54554025',
+	'testwikidatawiki' => 'Q187952',
+],
+
+'wgWBQualityConstraintsPropertyScopeConstraintId' => [
+	'default' => 'Q53869507',
+	'testwikidatawiki' => 'Q187953',
+],
+
+'wgWBQualityConstraintsClassId' => [
+	'default' => 'P2308',
+	'testwikidatawiki' => 'P401',
+],
+
+'wgWBQualityConstraintsRelationId' => [
+	'default' => 'P2309',
+	'testwikidatawiki' => 'P403',
+],
+
+'wgWBQualityConstraintsInstanceOfRelationId' => [
+	'default' => 'Q21503252',
+	'testwikidatawiki' => 'Q187954',
+],
+
+'wgWBQualityConstraintsSubclassOfRelationId' => [
+	'default' => 'Q21514624',
+	'testwikidatawiki' => 'Q187955',
+],
+
+'wgWBQualityConstraintsInstanceOrSubclassOfRelationId' => [
+	'default' => 'Q30208840',
+	'testwikidatawiki' => 'Q187956',
+],
+
+'wgWBQualityConstraintsPropertyId' => [
+	'default' => 'P2306',
+	'testwikidatawiki' => 'P404',
+],
+
+'wgWBQualityConstraintsQualifierOfPropertyConstraintId' => [
+	'default' => 'P2305',
+	'testwikidatawiki' => 'P76946',
+],
+
+'wgWBQualityConstraintsMinimumQuantityId' => [
+	'default' => 'P2313',
+	'testwikidatawiki' => 'P84122',
+],
+
+'wgWBQualityConstraintsMaximumQuantityId' => [
+	'default' => 'P2312',
+	'testwikidatawiki' => 'P84123',
+],
+
+'wgWBQualityConstraintsMinimumDateId' => [
+	'default' => 'P2310',
+	'testwikidatawiki' => 'P84124',
+],
+
+'wgWBQualityConstraintsMaximumDateId' => [
+	'default' => 'P2311',
+	'testwikidatawiki' => 'P84125',
+],
+
+'wgWBQualityConstraintsNamespaceId' => [
+	'default' => 'P2307',
+	'testwikidatawiki' => 'P82189',
+],
+
+'wgWBQualityConstraintsSyntaxClarificationId' => [
+	'default' => 'P2916',
+	'testwikidatawiki' => 'P84127',
+],
+
+'wgWBQualityConstraintsConstraintScopeId' => [
+	'default' => 'P4680',
+	'testwikidatawiki' => 'P84128',
+],
+
+'wgWBQualityConstraintsSeparatorId' => [
+	'default' => 'P4155',
+	'testwikidatawiki' => 'P84129',
+],
+
+'wgWBQualityConstraintsConstraintCheckedOnMainValueId' => [
+	'default' => 'Q46466787',
+	'testwikidatawiki' => 'Q187957',
+],
+
+'wgWBQualityConstraintsConstraintCheckedOnQualifiersId' => [
+	'default' => 'Q46466783',
+	'testwikidatawiki' => 'Q187958',
+],
+
+'wgWBQualityConstraintsConstraintCheckedOnReferencesId' => [
+	'default' => 'Q46466805',
+	'testwikidatawiki' => 'Q187959',
+],
+
+'wgWBQualityConstraintsNoneOfConstraintId' => [
+	'default' => 'Q52558054',
+	'testwikidatawiki' => 'Q187960',
+],
+
+'wgWBQualityConstraintsIntegerConstraintId' => [
+	'default' => 'Q52848401',
+	'testwikidatawiki' => 'Q187961',
+],
+
+'wgWBQualityConstraintsWikibaseItemId' => [
+	'default' => 'Q29934200',
+	'testwikidatawiki' => 'Q187962',
+],
+
+'wgWBQualityConstraintsWikibasePropertyId' => [
+	'default' => 'Q29934218',
+	'testwikidatawiki' => 'Q187963',
+],
+
+'wgWBQualityConstraintsWikibaseLexemeId' => [
+	'default' => 'Q51885771',
+	'testwikidatawiki' => 'Q187964',
+],
+
+'wgWBQualityConstraintsWikibaseFormId' => [
+	'default' => 'Q54285143',
+	'testwikidatawiki' => 'Q187965',
+],
+
+'wgWBQualityConstraintsWikibaseSenseId' => [
+	'default' => 'Q54285715',
+	'testwikidatawiki' => 'Q187966',
+],
+
+'wgWBQualityConstraintsPropertyScopeId' => [
+	'default' => 'P5314',
+	'testwikidatawiki' => 'P84130',
+],
+
+'wgWBQualityConstraintsAsMainValueId' => [
+	'default' => 'Q54828448',
+	'testwikidatawiki' => 'Q187967',
+],
+
+'wgWBQualityConstraintsAsQualifiersId' => [
+	'default' => 'Q54828449',
+	'testwikidatawiki' => 'Q187968',
+],
+
+'wgWBQualityConstraintsAsReferencesId' => [
+	'default' => 'Q54828450',
+	'testwikidatawiki' => 'Q187969',
 ],
 
 'wmgUseWikibaseLexeme' => [
@@ -20111,7 +20434,13 @@ $wgConf->settings = [
 ],
 
 'wmgCirrusSearchWriteClusters' => [
-	'default' => [ 'eqiad', 'codfw' ],
+	'cirrussearch-big-indices' => [ 'eqiad', 'codfw' ],
+	'default' => [
+		'eqiad',
+		'codfw',
+		[ 'groups' => [ 'psi', 'omega' ], 'replica' => 'eqiad' ],
+		[ 'groups' => [ 'psi', 'omega' ], 'replica' => 'codfw' ],
+	]
 ],
 
 'wmgCirrusSearchReplicaGroup' => [
@@ -21724,22 +22053,6 @@ $wgConf->settings = [
 	'enwiki' => true, // T192455
 ],
 
-'wgArticleCreationWorkflows' => [
-	'default' => [],
-	'test2wiki' => [
-		[
-			'namespaces' => [ 0 ],
-			'excludeRight' => 'autoconfirmed'
-		],
-	],
-	'enwiki' => [
-		[
-			'namespaces' => [ 0 ],
-			'excludeRight' => 'autoconfirmed'
-		],
-	],
-],
-
 'wgArticleCreationLandingPage' => [
 	'default' => 'Project:New user landing page',
 ],
@@ -21994,6 +22307,11 @@ $wgConf->settings = [
 	'cswiki' => 'https://foundation.wikimedia.org/wiki/Uv%C3%ADtac%C3%AD_pr%C5%AFzkum_pro_nov%C3%A9_u%C5%BEivatele_Prohl%C3%A1%C5%A1en%C3%AD_o_ochran%C4%9B_osobn%C3%ADch_%C3%BAdaj%C5%AF',
 ],
 
+'wgWelcomeSurveyExperimentalGroups' => [
+	'kowiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-4' ], 'exp2_target_popup' => [ 'range' => '5-9' ] ],
+	'cswiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-4' ], 'exp2_target_popup' => [ 'range' => '5-9' ] ],
+],
+
 'wgGEHelpPanelEnabled' => [
 	'default' => false,
 	'testwiki' => true,
@@ -22067,12 +22385,12 @@ $wgConf->settings = [
 			'id' => 'quicktutorial',
 		],
 		[
-			'title' => '위키백과:그림_사용하기',
+			'title' => 'mw:Help:VisualEditor/User_guide/ko#사진_편집_및_기타_미디어_파일들',
 			'text' => '그림 넣기',
 			'id' => 'image'
 		],
 		[
-			'title' => '위키백과:각주',
+			'title' => 'mw:Help:VisualEditor/User_guide/ko#각주_편집하기',
 			'text' => '각주 달기',
 			'id' => 'citation',
 		],
