@@ -17,7 +17,8 @@ class CirrusTest extends WgConfTestCase {
 		$this->assertCount( 2 * 3 * 2, $config['wgCirrusSearchClusters'] );
 
 		// testwiki writes to eqiad and codfw
-		$this->assertCount( 2, $config['wgCirrusSearchWriteClusters'] );
+		// Transition: we write to 4 clusters
+		$this->assertCount( 2 * 2, $config['wgCirrusSearchWriteClusters'] );
 
 		foreach ( $config['wgCirrusSearchWriteClusters'] as $writeCluster ) {
 			$group = $config['wgCirrusSearchReplicaGroup'];
