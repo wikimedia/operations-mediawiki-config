@@ -916,6 +916,12 @@ function wmfLabsSettings() {
 				]
 			],
 		],
+		'wgGEHelpPanelSearchEnabled' => [
+			'default' => true,
+		],
+		'wgGEHelpPanelSearchDevMode' => [
+			'default' => true,
+		],
 		'wgWelcomeSurveyPrivacyPolicyUrl' => [
 			'kowiki' => 'https://foundation.wikimedia.org/wiki/%EC%83%88_%EC%82%AC%EC%9A%A9%EC%9E%90_%ED%99%98%EC%98%81_%EC%84%A4%EB%AC%B8_%EA%B0%9C%EC%9D%B8_%EC%A0%95%EB%B3%B4_%EB%B3%B4%ED%98%B8_%EC%A0%95%EC%B1%85',
 		],
