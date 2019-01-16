@@ -77,6 +77,7 @@ $wgCirrusSearchWriteClusters = array_map( function ( $v ) use ( $wgDBname ) {
 	return $v;
 }, $wgCirrusSearchWriteClusters );
 
+$wgCirrusSearchCrossClusterSearch = true;
 $wgCirrusSearchReplicaGroup = $wmgCirrusSearchReplicaGroup;
 
 if ( isset( $wgCirrusSearchExtraIndexes[NS_FILE] ) ) {
