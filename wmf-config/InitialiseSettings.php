@@ -19800,6 +19800,11 @@ $wgConf->settings = [
 	'wikidata' => true,
 ],
 
+'wgWBQualityConstraintsEnableConstraintsCheckJobsRatio' => [
+	'default' => 0, // 0% of edits trigger post edit job run constraint checks
+	'testwikidatawiki' => 50,
+],
+
 'wgWBQualityConstraintsSuggestionsBetaFeature' => [
 	'default' => false,
 	'wikidata' => true, // T207019
