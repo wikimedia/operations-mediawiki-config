@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "19dbb838_d1b6569b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2019-01-16T13:57:57Z",
+      "side": 1,
+      "message": "\"Set s3 to\" ?",
+      "range": {
+        "startLine": 7,
+        "startChar": 14,
+        "endLine": 7,
+        "endChar": 23
+      },
+      "revId": "874c35c9918e9f4ba044c3bcef3964934b14374c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0f8cf96b_1c9e13e6",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 730,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2019-01-16T13:57:57Z",
+      "side": 1,
+      "message": "\"Try again in a few minutes\"? Cannot this be set with etcd instead?",
+      "revId": "874c35c9918e9f4ba044c3bcef3964934b14374c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
