@@ -515,6 +515,11 @@ function wmfLabsSettings() {
 			'commonswiki' => true,
 		],
 
+		// Hard-enable 'depicts' statements for Beta Cluster Commons
+		'wgMediaInfoEnableFilePageDepicts' => [
+			'commonswiki' => true,
+		],
+
 		// Test the extension Collection in other languages for book creator,
 		// which avoids the bugs related to the PDF generator.
 		'wmgUseCollection' => [
