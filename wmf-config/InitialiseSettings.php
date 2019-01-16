@@ -19802,7 +19802,7 @@ $wgConf->settings = [
 
 'wgWBQualityConstraintsEnableConstraintsCheckJobsRatio' => [
 	'default' => 0, // 0% of edits trigger post edit job run constraint checks
-	'testwikidatawiki' => 50,
+	'testwikidatawiki' => 100,
 ],
 
 'wgWBQualityConstraintsSuggestionsBetaFeature' => [
