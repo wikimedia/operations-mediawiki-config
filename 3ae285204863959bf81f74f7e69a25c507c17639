@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "964b1318_181ba46c",
+        "filename": "wmf-config/CirrusSearch-production.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2019-01-16T16:02:02Z",
+      "side": 1,
+      "message": "I almost want a typed schema for cirrussearch configuration that we could check in a mw-config test case.",
+      "revId": "3ae285204863959bf81f74f7e69a25c507c17639",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
