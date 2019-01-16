@@ -19802,7 +19802,6 @@ $wgConf->settings = [
 
 'wgWBQualityConstraintsEnableConstraintsCheckJobs' => [
 	'default' => false,
-	'wikidata' => true,
 ],
 
 'wgWBQualityConstraintsEnableConstraintsCheckJobsRatio' => [
