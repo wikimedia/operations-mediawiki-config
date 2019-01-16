@@ -1112,6 +1112,10 @@ function wmfLabsSettings() {
 			'default' => true
 		],
 
+		'wgWBQualityConstraintsEnableConstraintsCheckJobsRatio' => [
+			'default' => 100, // 100% of edits trigger post edit job run constraint checks
+		],
+
 		// T209957 configure WikibaseQualityConstraints extension on beta
 		// the default values are entity IDs on production Wikidata,
 		// the custom values are corresponding entities on Beta Wikidata
