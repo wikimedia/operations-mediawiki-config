@@ -20360,6 +20360,11 @@ $wgConf->settings = [
 	'testcommonswiki' => true,
 ],
 
+// Feature flag for WikibaseMediaInfo showing 'depicts' statements during deployment
+'wgMediaInfoEnableFilePageDepicts' => [
+	'default' => false,
+],
+
 // Only enable this conservatively, having this on to many
 // wikis will take *a lot* of Graphite storage space. T191416
 'wmgWikibaseClientTrackLuaFunctionCallsPerWiki' => [
