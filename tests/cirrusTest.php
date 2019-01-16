@@ -17,29 +17,22 @@ class CirrusTest extends WgConfTestCase {
 		$this->assertCount( 2 * 3 * 2, $config['wgCirrusSearchClusters'] );
 
 		// testwiki writes to eqiad and codfw
-		$this->assertCount( 2, $config['wgCirrusSearchWriteClusters'] );
+		// Transition: we write to 4 clusters
+		$this->assertCount( 2 * 2, $config['wgCirrusSearchWriteClusters'] );
 
 		foreach ( $config['wgCirrusSearchWriteClusters'] as $writeCluster ) {
-			$groups = $config['wgCirrusSearchReplicaGroup'];
-			if ( is_array( $groups ) ) {
-				$groups = $groups['groups'];
-			} else {
-				$groups = [ $groups ];
-			}
+			$group = $config['wgCirrusSearchReplicaGroup'];
+			$replicaGroup = $group === 'default' ? '' : "-$group";
+			$replicaGroup = $writeCluster . $replicaGroup;
+			$this->assertArrayHasKey(
+				$replicaGroup,
+				$config['wgCirrusSearchClusters']
+			);
 
-			foreach ( $groups as $group ) {
-				$replicaGroup = $group === 'default' ? '' : "-$group";
-				$replicaGroup = $writeCluster . $replicaGroup;
-				$this->assertArrayHasKey(
-					$replicaGroup,
-					$config['wgCirrusSearchClusters']
-				);
-
-				if ( $group !== 'default' ) {
-					$servers = $config['wgCirrusSearchClusters'][$replicaGroup];
-					$this->assertArrayHasKey( 'group', $servers );
-					$this->assertEquals( $group, $servers['group'] );
-				}
+			if ( $group !== 'default' ) {
+				$servers = $config['wgCirrusSearchClusters'][$replicaGroup];
+				$this->assertArrayHasKey( 'group', $servers );
+				$this->assertEquals( $group, $servers['group'] );
 			}
 		}
 	}
@@ -77,21 +70,13 @@ class CirrusTest extends WgConfTestCase {
 		*/
 		$this->assertCount( 2, $config['wgCirrusSearchWriteClusters'] );
 		foreach ( $config['wgCirrusSearchWriteClusters'] as $replica ) {
-			$groups = $config['wgCirrusSearchReplicaGroup'];
-			if ( is_array( $groups ) ) {
-				$groups = $groups['groups'];
-			} else {
-				$groups = [ $groups ];
-			}
-			foreach ( $groups as $group ) {
-				$group = $config['wgCirrusSearchReplicaGroup'];
-				$replicaGroup = $group === 'default' ? '' : "-$group";
-				$replicaGroup = $replica . $replicaGroup;
-				$this->assertArrayHasKey(
-					$replicaGroup,
-					$config['wgCirrusSearchClusters']
-				);
-			}
+			$group = $config['wgCirrusSearchReplicaGroup'];
+			$replicaGroup = $group === 'default' ? '' : "-$group";
+			$replicaGroup = $replica . $replicaGroup;
+			$this->assertArrayHasKey(
+				$replicaGroup,
+				$config['wgCirrusSearchClusters']
+			);
 		}
 	}
 
