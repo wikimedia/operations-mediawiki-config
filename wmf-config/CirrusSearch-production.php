@@ -77,6 +77,11 @@ $wgCirrusSearchWriteClusters = array_map( function ( $v ) use ( $wgDBname ) {
 	return $v;
 }, $wgCirrusSearchWriteClusters );
 
+// TODO: Remove once running elastic 6.x
+// ref: https://github.com/elastic/elasticsearch/issues/26833
+$wgCirrusSearchElasticQuirks['cross_cluster_single_shard_search'] = true;
+
+$wgCirrusSearchCrossClusterSearch = true;
 $wgCirrusSearchReplicaGroup = $wmgCirrusSearchReplicaGroup;
 
 if ( isset( $wgCirrusSearchExtraIndexes[NS_FILE] ) ) {
