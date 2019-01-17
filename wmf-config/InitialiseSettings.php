@@ -19511,8 +19511,18 @@ $wgConf->settings = [
 	],
 ],
 
+// NOTE: The key should be the interwiki prefix for the target foreign repo wiki.
 'wmgWikibaseRepoForeignRepositories' => [
 	'default' => [],
+	'testcommonswiki' => [
+		'd' => [
+			'repoDatabase' => 'wikidatawiki',
+			'baseUri' => 'https://wikidata.org/entity/',
+			'supportedEntityTypes' => [ 'item', 'property' ],
+			'prefixMapping' => [],
+			'entityNamespaces' => [ 'item' => 0, 'property' => 120 ]
+		],
+	],
 ],
 
 'wmgUseWikibaseClient' => [
