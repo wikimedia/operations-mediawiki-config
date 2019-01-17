@@ -924,9 +924,6 @@ function wmfLabsSettings() {
 		'wgGEHelpPanelSearchEnabled' => [
 			'default' => true,
 		],
-		'wgGEHelpPanelSearchDevMode' => [
-			'default' => true,
-		],
 		'wgGEHelpPanelSearchForeignAPI' => [
 			'default' => 'https://en.wikipedia.org/w/api.php',
 			'cawiki' => 'https://cs.wikipedia.org/w/api.php',
