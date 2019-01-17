@@ -9739,6 +9739,7 @@ $wgConf->settings = [
 		'filemover' => [ 'movefile' => true ],            // T95103
 		'templateeditor' => [ 'templateeditor' => true, 'editprotected' => true ], // T195557
 		'flood' => [ 'bot' => true ], //T211181
+		'transwiki' => [ 'oathauth-enable' => true, 'import' => true ], // T214036
 	],
 	'nlwiki' => [
 		'autoconfirmed' => [ 'patrol' => true ],
@@ -11118,6 +11119,7 @@ $wgConf->settings = [
 			'import',               // T100925
 			'templateeditor',       // T195557
 			'flood',                // T211181
+			'transwiki',            // T214036
 		],
 	],
 	'+nlwiki' => [
@@ -11895,6 +11897,7 @@ $wgConf->settings = [
 			'rollbacker',           // T90888, T148171
 			'templateeditor',       // T195557
 			'flood',                // T211181
+			'transwiki',            // T214036
 		],
 		'bureaucrat' => [
 			'abusefilter',          // T95102
