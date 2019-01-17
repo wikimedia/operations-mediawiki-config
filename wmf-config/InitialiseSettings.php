@@ -12368,7 +12368,7 @@ $wgConf->settings = [
 	'frwikiquote' => [ 'w', 'wikt', 's', 'b', 'n', 'v', 'meta', 'en' ],
 	'frwikiversity' => [
 		'meta', 'commons', 'species', 'q', 'af', 'ak', 'ar', 'ang', 'ast', 'gn', 'id', 'zhminnan', 'bg', 'br', 'ca', 'cs', 'co', 'da', 'de', 'et', 'el', 'en', 'es', 'eo', 'fa', 'fy', 'ga', 'gl', 'gu', 'hy',
-		'hi', 'he', 'hsb', 'hr', 'io', 'ia', 'ie', 'is', 'it', 'kk', 'csb', 'sw', 'ko', 'ku', 'la', 'lt', 'li', 'lo', 'hu', 'ml', 'nl', 'ja', 'no', 'oc', 'nds', 'pl', 'pt', 'ro', 'ru', 'scn', 'simple', 'sk',
+		'hi', 'he', 'hsb', 'hr', 'io', 'ia', 'ie', 'is', 'it', 'k'php7k', 'csb', 'sw', 'ko', 'ku', 'la', 'lt', 'li', 'lo', 'hu', 'ml', 'nl', 'ja', 'no', 'oc', 'nds', 'pl', 'pt', 'ro', 'ru', 'scn', 'simple', 'sk',
 		'sl', 'sq', 'st', 'sr', 'fi', 'sv', 'ta', 'te', 'vi', 'th', 'tt', 'tr', 'uk', 'ur', 'vo', 'zh', 'w', 'n', 's', 'wikt', 'b',
 	], // T9824, T24663, T30024
 	'frwikivoyage' => [ 'w', 'meta', 'de', 'el', 'en', 'es', 'he', 'it', 'nl', 'pl', 'pt', 'ro', 'ru', 'sv', 'uk', 'vi' ], // T44103, T57745
@@ -14753,6 +14753,7 @@ $wgConf->settings = [
 		'fileexporter',                      // [WMDE TW] 2018-12-07 – FileExporter
 		'constraint-suggestions',            // [WMDE WD] 2019-04-16 – Wikibase ConstraintSuggestions
 		'templatewizard-betafeature',        // [Contrib] 2019-04-18 - TemplateWizard
+		'php7',                              // [SRE Services] 2019-07-24 — HHVM to PHP7 migration
 	],
 ],
 
