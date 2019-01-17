@@ -134,7 +134,7 @@ $wgLBFactoryConf = [
 		'db1078' => 0,    # C3 3.6TB 512GB, master
 		# 'db1075' => 0,      # A2 3.6TB 512GB, old master
 		'db1077' => 400,    # B1 3.6TB 512GB, rc, log # master for sanitarium db1124
-		'db1123' => 100,    # D8 3.6TB 512GB, vslow, dump
+		'db1123' => 250,    # D8 3.6TB 512GB, vslow, dump
 	],
 	's4' => [
 		'db1068' => 0,      # D1 2.8TB 160GB, master
