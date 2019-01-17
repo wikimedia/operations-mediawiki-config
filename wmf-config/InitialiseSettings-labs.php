@@ -859,6 +859,7 @@ function wmfLabsSettings() {
 		'wmgUseGrowthExperiments' => [
 			'enwiki' => true,
 			'kowiki' => true,
+			'cawiki' => true,
 		],
 		'wgWelcomeSurveyEnabled' => [
 			'enwiki' => true,
@@ -867,18 +868,22 @@ function wmfLabsSettings() {
 		'wgGEHelpPanelEnabled' => [
 			'enwiki' => true,
 			'kowiki' => true,
+			'cawiki' => true,
 		],
 		'wgGEHelpPanelLoggingEnabled' => [
 			'enwiki' => true,
 			'kowiki' => true,
+			'cawiki' => true,
 		],
 		'wgGEHelpPanelHelpDeskTitle' => [
 			'enwiki' => 'Wikipedia:Help_desk',
 			'kowiki' => '위키백과:도움말',
+			'cawiki' => 'Viquipèdia:Potřebuji_pomoc',
 		],
 		'wgGEHelpPanelViewMoreTitle' => [
 			'enwiki' => 'Help:Contents',
 			'kowiki' => '위키백과:도움말',
+			'cawiki' => 'Ajuda:Obsah',
 		],
 		'wgGEHelpPanelLinks' => [
 			'enwiki' => [
