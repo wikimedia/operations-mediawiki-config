@@ -19257,7 +19257,6 @@ $wgConf->settings = [
 'wmgUseWikibaseRepo' => [
 	'default' => false,
 	'wikibaserepo' => true,
-	'wikidatarepo' => true,
 ],
 
 'wmgWBRepoCanonicalUriProperty' => [
@@ -19277,20 +19276,6 @@ $wgConf->settings = [
 'wmgWikibaseStringLimits' => [
 	'default' => null,
 	'wikibaserepo' => [
-		'multilang' => [
-			'length' => 250,
-		],
-		'VT:monolingualtext' => [
-			'length' => 1500,
-		],
-		'VT:string' => [
-			'length' => 1500,
-		],
-		'PT:url' => [
-			'length' => 1500,
-		],
-	],
-	'wikidatarepo' => [
 		'multilang' => [
 			'length' => 250,
 		],
