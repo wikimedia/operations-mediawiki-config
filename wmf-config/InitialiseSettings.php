@@ -12466,6 +12466,7 @@ $wgConf->settings = [
 	'nowikiquote' => [ 'w', 'en', 'nn' ],
 	'nowikisource' => [ 'w' ],
 	'nowiktionary' => [ 'w' ],
+	'nywiki' => [ 'en' ],
 	'officewiki' => [ 'en', 'meta', 'commons' ],
 	'orwiki' => [ 'en', 'commons' ], // T33185
 	'orwikisource' => [ 'en', 'mul' ],
