@@ -22352,7 +22352,6 @@ $wgConf->settings = [
 	'testwiki' => true,
 	'kowiki' => true,
 	'cswiki' => true,
-	'viwiki' => true,
 ],
 
 'wgWelcomeSurveyEnabled' => [
@@ -22360,7 +22359,6 @@ $wgConf->settings = [
 	'testwiki' => true,
 	'kowiki' => true,
 	'cswiki' => true,
-	'viwiki' => true,
 ],
 
 'wgWelcomeSurveyPrivacyPolicyUrl' => [
