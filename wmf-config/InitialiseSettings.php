@@ -9745,12 +9745,12 @@ $wgConf->settings = [
 		],
 	],
 	'newiki' => [
-		'autopatrolled' => [ 'autopatrol' => true ],      // T89816
-		'rollbacker' => [ 'rollback' => true ],           // T90888
-		'reviewer' => [ 'patrol' => true ],              // T95101
-		'filemover' => [ 'movefile' => true ],            // T95103
+		'autopatrolled' => [ 'autopatrol' => true ], // T89816
+		'rollbacker' => [ 'rollback' => true, 'suppressredirect' => true ], // T90888 and T214012
+		'reviewer' => [ 'patrol' => true ], // T95101
+		'filemover' => [ 'movefile' => true ], // T95103
 		'templateeditor' => [ 'templateeditor' => true, 'editprotected' => true ], // T195557
-		'flood' => [ 'bot' => true ], //T211181
+		'flood' => [ 'bot' => true ], // T211181
 		'transwiki' => [ 'oathauth-enable' => true, 'import' => true ], // T214036
 	],
 	'nlwiki' => [
