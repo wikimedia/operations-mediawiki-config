@@ -11939,7 +11939,7 @@ $wgConf->settings = [
 	],
 	'+outreachwiki' => [
 		'bureaucrat' => [
-			'sysop', 'bureaucrat', 'autopatrolled', 'import',
+			'sysop', 'autopatrolled', 'import',
 		],
 	],
 	'+pawiki' => [
