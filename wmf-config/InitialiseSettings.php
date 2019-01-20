@@ -14186,7 +14186,7 @@ $wgConf->settings = [
 		'*.arkivverket.no',                 // The National Archives of Norway - T73195
 		'tools.wikimedia.pl',               // Facilities server for Wikimedia users - T74897
 		'*.nasa.gov',                       // NASA
-		'*.jpl.nasa.gov',                     // NASA - T196727
+		'*.jpl.nasa.gov',                   // NASA - T196727
 		'photos.wikimapia.org',             // WikiMapia - T75045
 		'pslava.info',                      // Ukraine interesting photography source - T75045
 		'ukrainaincognita.com',             // Ukraine interesting photography source - T75045
@@ -14271,7 +14271,7 @@ $wgConf->settings = [
 		'*.nli.org.il',                     // National Library of Israel - T1881179
 		'studiezaal.nijmegen.nl',           // Regionaal Archief Nijmegen, NL - T181713
 		'audiovis.nac.gov.pl',              // Zbiori, Poland goverment - T184853
-		'mushroomobserver.org',              // Mushroom Observer - T188203
+		'mushroomobserver.org',             // Mushroom Observer - T188203
 		'www.president.gov.ua',             // Ukraine government website - T185399
 		'www.kmu.gov.ua',                   // Ukraine government website - T185399
 		'vin.gov.ua',                       // Ukraine government website - T185399
@@ -14328,6 +14328,11 @@ $wgConf->settings = [
 		'*.nasimonline.ir',                 // Iranian news agency - T203371
 		'idb.ub.uni-tuebingen.de',          // University Library Tübingen - T211466
 		'mbc.cyfrowemazowsze.pl',           // Polish biblioteka - T212469
+		'mehrnews.com',                     // Iranian news agency - T213961
+		'mirror.netcologne.de',             // T213632
+		'*.getty.edu',                      // J. Paul Getty Museum - T213649
+		'mojnews.com',                      // Iranian news agency - T213901
+		'openaccess-cdn.clevelandart.org',  // Cleveland Museum of Art - T213924
 	],
 ],
 
