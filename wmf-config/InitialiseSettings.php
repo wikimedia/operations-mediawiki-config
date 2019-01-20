@@ -8879,19 +8879,18 @@ $wgConf->settings = [
 			'upload' => true, // exception for T14556
 		],
 		'rollbacker' => [ 'rollback' => true ],
-		'patroller' => [ 'autopatrol' => true, 'patrol' => true, 'abusefilter-log-detail' => true ],
-		'autopatrolled' => [ 'autopatrol' => true ],
+		'patroller' => [ // T214003
+			'autopatrol' => true,
+			'patrol' => true,
+			'abusefilter-log-detail' => true,
+			'upload_by_url' => true,
+		],
+		'autopatrolled' => [ 'autopatrol' => true, 'upload_by_url' => true ], // T214003
 		'filemover' => [ 'movefile' => true ],
 		'Image-reviewer' => [
 			'autopatrol' => true,
 			'upload_by_url' => true,
 			'patrol' => true, // T183835
-		 ],
-		'extended-uploader' => [
-			'autoconfirmed' => true,
-			'upload' => true,
-			'reupload' => true,
-			'upload_by_url' => true, // T182534
 		],
 		'sysop' => [
 			'changetags' => true, // T134196
@@ -8910,19 +8909,18 @@ $wgConf->settings = [
 			'upload' => true, // exception for T14556
 		],
 		'rollbacker' => [ 'rollback' => true ],
-		'patroller' => [ 'autopatrol' => true, 'patrol' => true, 'abusefilter-log-detail' => true ],
-		'autopatrolled' => [ 'autopatrol' => true ],
+		'patroller' => [ // T214003
+			'autopatrol' => true,
+			'patrol' => true,
+			'abusefilter-log-detail' => true,
+			'upload_by_url' => true,
+		],
+		'autopatrolled' => [ 'autopatrol' => true, 'upload_by_url' => true ], // T214003
 		'filemover' => [ 'movefile' => true ],
 		'Image-reviewer' => [
 			'autopatrol' => true,
 			'upload_by_url' => true,
 			'patrol' => true, // T183835
-		 ],
-		'extended-uploader' => [
-			'autoconfirmed' => true,
-			'upload' => true,
-			'reupload' => true,
-			'upload_by_url' => true, // T182534
 		],
 		'sysop' => [
 			'importupload' => true, // TestCommons testing purposes only
@@ -10803,7 +10801,6 @@ $wgConf->settings = [
 			'autopatrolled',
 			'filemover',
 			'Image-reviewer',
-			'extended-uploader', // T180002
 			'upwizcampeditors'
 		],
 		'Image-reviewer' => [ 'Image-reviewer' ],
@@ -11556,7 +11553,6 @@ $wgConf->settings = [
 			'autopatrolled',
 			'filemover',
 			'Image-reviewer',
-			'extended-uploader', // T180002
 			'upwizcampeditors'
 		],
 	],
