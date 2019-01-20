@@ -1882,6 +1882,7 @@ $wgConf->settings = [
 	'eswikivoyage' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=es', // T44933
 	'euwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=eu',
 	'fawiki' => '/wiki/ویکی‌پدیا:بارگذاری',
+	'fawikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?setlang=fa&campaign=fa', // T214048
 	'fawikivoyage' => '/wiki/%D9%88%DB%8C%DA%A9%DB%8C%E2%80%8C%D8%B3%D9%81%D8%B1:%D8%A8%D8%A7%D8%B1%DA%AF%D8%B0%D8%A7%D8%B1%DB%8C', // T102714
 	'frwiki' => '/wiki/Aide:Importer_un_fichier',
 	'gomwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=gom', // T96468
