@@ -8866,19 +8866,13 @@ $wgConf->settings = [
 		],
 		'rollbacker' => [ 'rollback' => true ],
 		'patroller' => [ 'autopatrol' => true, 'patrol' => true, 'abusefilter-log-detail' => true ],
-		'autopatrolled' => [ 'autopatrol' => true ],
+		'autopatrolled' => [ 'autopatrol' => true, 'upload_by_url' => true ], // T214003
 		'filemover' => [ 'movefile' => true ],
 		'Image-reviewer' => [
 			'autopatrol' => true,
 			'upload_by_url' => true,
 			'patrol' => true, // T183835
 		 ],
-		'extended-uploader' => [
-			'autoconfirmed' => true,
-			'upload' => true,
-			'reupload' => true,
-			'upload_by_url' => true, // T182534
-		],
 		'sysop' => [
 			'changetags' => true, // T134196
 			'upload_by_url' => true,
@@ -10807,7 +10801,6 @@ $wgConf->settings = [
 			'autopatrolled',
 			'filemover',
 			'Image-reviewer',
-			'extended-uploader', // T180002
 			'upwizcampeditors'
 		],
 		'Image-reviewer' => [ 'Image-reviewer' ],
@@ -11559,7 +11552,6 @@ $wgConf->settings = [
 			'autopatrolled',
 			'filemover',
 			'Image-reviewer',
-			'extended-uploader', // T180002
 			'upwizcampeditors'
 		],
 	],
