@@ -4523,6 +4523,7 @@ $wgConf->settings = [
 	'+svwiktionary' => [
 		'WT' => NS_PROJECT,
 		'WT-diskussion' => NS_PROJECT_TALK,
+		'KAT' => NS_CATEGORY, // T214329
 	],
 	'+swwiki' => [
 		'Portal' => 100,
