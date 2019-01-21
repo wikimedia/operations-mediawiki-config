@@ -20924,6 +20924,14 @@ $wgConf->settings = [
 		'limit' => 10,
 	],
 ],
+
+// Default profile for autocomplete for when the completion suggester is enabled
+'wmgCirrusSearchCompletionSettings' => [
+	'default' => 'fuzzy',
+	'mediawikiwiki' => 'fuzzy-subphrases',
+	'wikitech' => 'fuzzy-subphrases',
+],
+
 // @} end of wmgCirrusSearchCompletionSuggesterSubphrases
 
 // Enable phrase suggester (did you mean) on all wikis (except wikidata)
