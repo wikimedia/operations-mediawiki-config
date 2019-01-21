@@ -12628,8 +12628,9 @@ $wgConf->settings = [
 	'mediawikiwiki' => true,
 ],
 
+# ParserCache expire time set to 24 days: T210992
 'wgParserCacheExpireTime' => [
-	'default' => 86400 * 22, // T167784
+	'default' => 86400 * 24,
 ],
 
 # Captcha ...
