@@ -3497,7 +3497,7 @@ if ( $wmgAllowLabsAnonEdits ) {
 	// Cloud VPS users shouldn't be editing anonymously on most wikis, so we
 	// can block anonymous edits from the whole private ranges.
 	$wgSoftBlockRanges[] = '10.0.0.0/8';
-	$wgSoftBlockRanges[] = '17.16.0.0/12';
+	$wgSoftBlockRanges[] = '172.16.0.0/12';
 }
 
 // On Special:Version, link to useful release notes
