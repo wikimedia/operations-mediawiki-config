@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b6919c71_d3e980e5",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 8868,
+      "author": {
+        "id": 3238
+      },
+      "writtenOn": "2019-01-22T01:00:29Z",
+      "side": 1,
+      "message": "Also needs upload_by_url",
+      "range": {
+        "startLine": 8868,
+        "startChar": 3,
+        "endLine": 8868,
+        "endChar": 12
+      },
+      "revId": "79a85d66a64df7e1c95f7f812c5aba8dc561bd05",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
