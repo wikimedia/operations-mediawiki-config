@@ -16708,14 +16708,10 @@ $wgConf->settings = [
 'wgMinervaSchemaMainMenuClickTrackingSampleRate' => [
 	'default' => 0.5,
 ],
-// T210553
+// T210553, T210554
 'wgMinervaPageIssuesNewTreatment' => [
 	'default' => [
 		"base" => true,
-		"beta" => true,
-	],
-	'enwiki' => [
-		"base" => false,
 		"beta" => true,
 	],
 ],
