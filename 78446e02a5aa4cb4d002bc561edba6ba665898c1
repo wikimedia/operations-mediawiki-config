@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5b1ff910_c76bc117",
+        "filename": "errorpages/hhvm-fatal-error.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-01-22T04:53:46Z",
+      "side": 1,
+      "message": "per PS3, should be require now, given we can\u0027t recover from its absence under this particular condition (class known absent, unconditionally used on line 49). So for a better error message an least surprise, should use require I think - unless I missed something, in which case I think we should add a comment to the code explaining why, because my future self will no doubt try to \"fix\" this.",
+      "range": {
+        "startLine": 47,
+        "startChar": 2,
+        "endLine": 47,
+        "endChar": 9
+      },
+      "revId": "78446e02a5aa4cb4d002bc561edba6ba665898c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
