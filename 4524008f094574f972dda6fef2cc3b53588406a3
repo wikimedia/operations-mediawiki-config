@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5e1ba21c_b8336d5b",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12619,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-01-22T06:43:53Z",
+      "side": 1,
+      "message": "Might want to link the new ticket here instead.\nPerhaps also move the comment to over the value instead of next to it, which makes it easier to trace in git.",
+      "range": {
+        "startLine": 12619,
+        "startChar": 29,
+        "endLine": 12619,
+        "endChar": 36
+      },
+      "revId": "4524008f094574f972dda6fef2cc3b53588406a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
