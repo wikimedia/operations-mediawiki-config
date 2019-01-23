@@ -2759,11 +2759,6 @@ if ( $wmgUseEcho ) {
 		}
 	}
 
-	// Whether to show the footer notice
-	$wgEchoShowFooterNotice = $wmgEchoShowFooterNotice;
-	// URL to use in the footer notice
-	$wgEchoFooterNoticeURL = $wmgEchoFooterNoticeURL;
-
 	// Whether to make mention failure/success notifications available
 	$wgEchoMentionStatusNotifications = $wmgEchoMentionStatusNotifications;
 
