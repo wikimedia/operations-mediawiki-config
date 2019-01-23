@@ -22115,6 +22115,45 @@ $wgConf->settings = [
 	'default' => 0 // T208454
 ],
 
+'wgWMEWikidataCompletionSearchClicks' => [
+	'default' => [],
+	'wikidatawiki' => [
+		'enabled' => true,
+		'buckets' => [
+			'control' => [
+				'samplingRate' => 0.5,
+			],
+			'item_de_tuned' => [
+				'samplingRate' => 0.5,
+				'context' => 'item',
+				'language' => 'de',
+				'searchApiParameters' => [
+					'cirrusWBProfile' => 'wikibase_config_prefix_query-201901-de',
+					'cirrusRescoreProfile' => 'wikibase_config_entity_weight-201901-de',
+				],
+			],
+			'item_es_tuned' => [
+				'samplingRate' => 0.5,
+				'context' => 'item',
+				'language' => 'es',
+				'searchApiParameters' => [
+					'cirrusWBProfile' => 'wikibase_config_prefix_query-201901-es',
+					'cirrusRescoreProfile' => 'wikibase_config_entity_weight-201901-es',
+				],
+			],
+			'item_fr_tuned' => [
+				'samplingRate' => 0.5,
+				'context' => 'item',
+				'language' => 'fr',
+				'searchApiParameters' => [
+					'cirrusWBProfile' => 'wikibase_config_prefix_query-201901-fr',
+					'cirrusRescoreProfile' => 'wikibase_config_entity_weight-201901-fr',
+				],
+			],
+		],
+	],
+],
+
 'wmgUsePageViewInfo' => [
 	'default' => true,
 	'private' => false,
