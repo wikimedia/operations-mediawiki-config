@@ -18652,12 +18652,6 @@ $wgConf->settings = [
 	'fishbowl' => false,
 	'nonglobal' => false,
 ],
-'wmgEchoShowFooterNotice' => [
-	'default' => false,
-],
-'wmgEchoFooterNoticeURL' => [
-	'default' => '',
-],
 # from and reply to address when Echo sends email notifications
 'wmgNotificationSender' => [
 	'default' => 'wiki@wikimedia.org',
