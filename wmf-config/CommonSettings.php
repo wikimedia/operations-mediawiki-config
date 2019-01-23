@@ -2701,7 +2701,7 @@ $wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetGWTFileBackendCleanupJob';
 
 if ( $wmgUseEducationProgram ) {
 	$wgExtraNamespaces[446] = 'Education_Program';
-	$wgExtraNamespaces[447] = 'Educaton_Program_talk';
+	$wgExtraNamespaces[447] = 'Education_Program_talk';
 	$wgNamespacesWithSubpages[447] = true;
 }
 
