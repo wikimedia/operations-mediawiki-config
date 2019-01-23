@@ -442,6 +442,9 @@ switch ( $wgDBname ) {
 		break;
 	case 'zhwiki':
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true; // T73854
+		$wgAbuseFilterActions['block'] = true; // T210364
+		$wgAbuseFilterBlockDuration = '24 hours'; // T210364
+		$wgAbuseFilterAnonBlockDuration = '24 hours'; // T210364
 		break;
 	case 'zh_yuewiki':
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
