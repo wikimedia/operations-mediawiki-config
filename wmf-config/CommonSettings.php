@@ -2255,11 +2255,9 @@ if ( $wmgUseRestbaseVRS ) {
 if ( $wmgUseParsoid ) {
 	$wmgParsoidURL = $wmfLocalServices['parsoid'];
 
-	// The wiki prefix to use
-	$wgParsoidWikiPrefix = $wgDBname; // deprecated
 	$wgVirtualRestConfig['modules']['parsoid'] = [
 		'url' => $wmgParsoidURL,
-		'prefix' => $wgDBname, // deprecated
+		'prefix' => $wgDBname, // The wiki prefix to use; deprecated
 		'domain' => $wgCanonicalServer,
 		'forwardCookies' => $wmgParsoidForwardCookies,
 		'restbaseCompat' => false
