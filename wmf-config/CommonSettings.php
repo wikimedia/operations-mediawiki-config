@@ -2868,8 +2868,6 @@ if ( $wmgUseFlow && $wmgUseParsoid ) {
 	$wgFlowExternalStore = $wgDefaultExternalStore;
 	$wgFlowMaintenanceMode = $wmgFlowMaintenanceMode;
 
-	$wgFlowEventLogging = true;
-
 	if ( $wmgFlowAllowAutoconfirmedEdit ) {
 		$wgGroupPermissions['autoconfirmed']['flow-edit-post'] = true;
 	}
