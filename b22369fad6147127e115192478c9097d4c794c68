@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa821a75_f10ce0ea",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-01-23T22:44:40Z",
+      "side": 1,
+      "message": "This is a relatively expensive operation that should not happen on every web request globally.\n\nThe dblists are currently only used by wgConf for InitialiseSettings, which has its evaluation output cached.",
+      "range": {
+        "startLine": 58,
+        "startChar": 0,
+        "endLine": 59,
+        "endChar": 58
+      },
+      "revId": "b22369fad6147127e115192478c9097d4c794c68",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa3e73c6_76d6323c",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-01-23T22:44:40Z",
+      "side": 1,
+      "message": "Can this remain in InitialiseSettings?",
+      "range": {
+        "startLine": 61,
+        "startChar": 1,
+        "endLine": 61,
+        "endChar": 26
+      },
+      "revId": "b22369fad6147127e115192478c9097d4c794c68",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
