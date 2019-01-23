@@ -32,14 +32,14 @@ def update_update_strategy(path):
         subprocess.call(cmd, shell=True)
 
 
-def write_settings_stub(dest, include):
+def write_settings_stub(dest):
     """Write a silly little PHP file that includes another."""
     file_stub = (
         '<?php\n' +
         '# Managed by scap (mediawiki-config:/scap/plugins/prep.py)\n' +
         '# WARNING: This file is publically viewable on the web. ' +
         'Do not put private data here.\n' +
-        'include_once( "%s" );' % include
+        'require __DIR__ . "/../wmf-config/CommonSettings.php";'
     )
     with open(dest, 'w+') as destfile:
         destfile.write(file_stub)
@@ -134,10 +134,7 @@ class CheckoutMediaWiki(cli.Application):
             git.update_submodules(dest_dir, use_upstream=True)
             update_update_strategy(dest_dir)
 
-        write_settings_stub(
-            os.path.join(dest_dir, 'LocalSettings.php'),
-            os.path.join(self.config['deploy_dir'], 'wmf-config',
-                         'CommonSettings.php'))
+        write_settings_stub(os.path.join(dest_dir, 'LocalSettings.php'))
 
         cache_dir = os.path.join(dest_dir, 'cache')
         os.chmod(cache_dir, 0o777)
