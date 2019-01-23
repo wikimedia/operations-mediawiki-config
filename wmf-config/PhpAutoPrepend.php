@@ -13,8 +13,15 @@
  *
  * @see https://secure.php.net/manual/en/ini.core.php#ini.auto-prepend-file
  */
+
 if ( !defined( 'HHVM_VERSION' ) ) {
-	require_once __DIR__ . '/php7.php';
+	// Initialisation specific to PHP 7
+
+	// Open logs and set the syslog.ident to a sensible value on php-fpm
+	// See https://phabricator.wikimedia.org/T211184 for a discussion
+	if ( PHP_SAPI === 'fpm-fcgi' ) {
+		openlog( 'php7.2-fpm', LOG_ODELAY, LOG_DAEMON );
+	}
 }
 
 // https://phabricator.wikimedia.org/T180183
