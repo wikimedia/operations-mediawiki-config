@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "abc9d122_473e3941",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 5450
+      },
+      "writtenOn": "2019-01-23T23:19:24Z",
+      "side": 1,
+      "message": "Right. I\u0027ll fix this tomorrow.",
+      "parentUuid": "fa821a75_f10ce0ea",
+      "range": {
+        "startLine": 58,
+        "startChar": 0,
+        "endLine": 59,
+        "endChar": 58
+      },
+      "revId": "b22369fad6147127e115192478c9097d4c794c68",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa3e73c6_76d6323c",
         "filename": "wmf-config/abusefilter.php",
         "patchSetId": 7
@@ -41,6 +65,29 @@
         "startChar": 1,
         "endLine": 61,
         "endChar": 26
+      },
+      "revId": "b22369fad6147127e115192478c9097d4c794c68",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "621b8fd2_6b5d91aa",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 5450
+      },
+      "writtenOn": "2019-01-23T23:19:24Z",
+      "side": 1,
+      "message": "grammar",
+      "range": {
+        "startLine": 113,
+        "startChar": 17,
+        "endLine": 113,
+        "endChar": 18
       },
       "revId": "b22369fad6147127e115192478c9097d4c794c68",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
