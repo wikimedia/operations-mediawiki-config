@@ -2728,15 +2728,10 @@ if ( $wmgUseEcho ) {
 	// This is intentionally loaded *before* the GlobalPreferences extension (below).
 	wfLoadExtension( 'Echo' );
 
-	if ( isset( $wgEchoConfig ) ) {
-		// Eventlogging for Schema:EchoMail
-		$wgEchoConfig['eventlogging']['EchoMail']['enabled'] = true;
-		// Eventlogging for Schema:EchoInteraction
-		$wgEchoConfig['eventlogging']['EchoInteraction']['enabled'] = true;
-	} else {
-		$wgEchoEventLoggingSchemas['EchoMail']['enabled'] = true;
-		$wgEchoEventLoggingSchemas['EchoInteraction']['enabled'] = true;
-	}
+	// Eventlogging for Schema:EchoMail
+	$wgEchoEventLoggingSchemas['EchoMail']['enabled'] = true;
+	// Eventlogging for Schema:EchoInteraction
+	$wgEchoEventLoggingSchemas['EchoInteraction']['enabled'] = true;
 
 	$wgEchoEnableEmailBatch = $wmgEchoEnableEmailBatch;
 	$wgEchoEmailFooterAddress = $wmgEchoEmailFooterAddress;
