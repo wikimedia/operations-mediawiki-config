@@ -20812,15 +20812,15 @@ $wgConf->settings = [
 // Most wikis are fine with 0-2 replicas for all indexes
 // some of the larger ones will want more replicas for content indexes
 'wmgCirrusSearchReplicas' => [
-	'default' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2' ],
-	'commonswiki' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'file' => '0-2' ],
+	'default' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'archive' => '0-2' ],
+	'commonswiki' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'file' => '0-2', 'archive' => '0-2' ],
 	'enwiki' => [
-		'eqiad' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-3' ],
-		'codfw' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-3' ],
+		'eqiad' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-3', 'archive' => '0-2' ],
+		'codfw' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-3', 'archive' => '0-2' ],
 	],
 	'dewiki' => [
-		'eqiad' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-2' ],
-		'codfw' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2' ],
+		'eqiad' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-2', 'archive' => '0-2' ],
+		'codfw' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'archive' => '0-2' ],
 	],
 ],
 
