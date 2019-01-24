@@ -1,0 +1,9 @@
+Verified+2: jenkins-bot
+Code-Review+1: Addshore <addshorewiki@gmail.com>
+Code-Review+2: Zfilipin <zfilipin@wikimedia.org>
+Code-Review+1: Thiemo Kreuz (WMDE) <thiemo.kreuz@wikimedia.de>
+Submitted-by: jenkins-bot
+Submitted-at: Thu, 24 Jan 2019 12:20:54 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/486218
+Project: operations/mediawiki-config
+Branch: refs/heads/master
