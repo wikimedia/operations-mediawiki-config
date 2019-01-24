@@ -40,9 +40,6 @@ $wgAbuseFilterNotifications = "udp";
 // T113164 Change default AbuseFilter IP block duration to not indefinite
 $wgAbuseFilterAnonBlockDuration = '1 week';
 
-// T191039 Re-enable filter profiling on every wiki
-$wgAbuseFilterProfile = true;
-
 $wgAbuseFilterSlowFilterRuntimeLimit = 800;
 
 // Custom permissions
