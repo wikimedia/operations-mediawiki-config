@@ -45,10 +45,17 @@ class InitialiseSettingsTest extends WgConfTestCase {
 
 		// Test for invalid spaces
 		foreach ( $wgConf->settings['wgExtraNamespaces'] as $db => $entry ) {
-			foreach ( $entry as $nb => $ns ) {
-				$this->assertFalse( strpos( $ns, ' ' ), "Unexpected spaces in '$ns' namespace title for $db, use underscores instead" );
+			foreach ( $entry as $number => $namespace ) {
+				$this->assertFalse( strpos( $namespace, ' ' ), "Unexpected space in '$number' namespace title for $db, use underscores instead" );
 			}
 		}
+
+		// Test for invalid colons
+		foreach ( $wgConf->settings['wgExtraNamespaces'] as $db => $entry ) {
+			foreach ( $entry as $number => $namespace ) {
+				$this->assertFalse( strpos( $namespace, ':' ), "Unexpected colon in '$number' namespace title for $db, final colon is not needed and can be removed" );
+			}
+        }
 
 		// Test namespace numbers
 		foreach ( $wgConf->settings['wgExtraNamespaces'] as $db => $entry ) {
