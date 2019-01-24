@@ -242,8 +242,12 @@ function wmfLabsSettings() {
 			'default'	=> true,
 		],
 		'wgWMECitationUsagePopulationSize' => [
-			'enwiki' => 1  // 100% — T191086
+			'enwiki' => 1  // 100% — T213969
 		],
+		'wgWMECitationUsagePageLoadPopulationSize' => [
+			'enwiki' => 3  // 33.3% — T213969
+		],
+
 		'wgMobileUrlTemplate' => [
 			'default' => '%h0.m.%h1.%h2.%h3.%h4',
 			'wikidatawiki' => 'm.%h0.%h1.%h2.%h3', // T87440
