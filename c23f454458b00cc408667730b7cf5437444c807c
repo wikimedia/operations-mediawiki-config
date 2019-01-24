@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d4c6c8a2_574165a6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2019-01-24T08:39:51Z",
+      "side": 1,
+      "message": "Didn\u0027t we said this is a temporary flag, and we will never set it to true, just remove it when it is not needed any more?",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 60
+      },
+      "revId": "c23f454458b00cc408667730b7cf5437444c807c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b5c1b553_0d2b5854",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 14898,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2019-01-24T08:39:51Z",
+      "side": 1,
+      "message": "Isn\u0027t this obsolete, since `false` is the default anyway?",
+      "revId": "c23f454458b00cc408667730b7cf5437444c807c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
