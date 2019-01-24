@@ -6823,6 +6823,10 @@ $wgConf->settings = [
 		102 => 'Autor',
 		103 => 'Discuție_Autor',
 	],
+	'sawikisource' => [
+		102 => 'लेखकः', // T214553 - Author
+		103 => 'लेखकसम्भाषणम्', // T214553 - Author talk
+	],
 	'skwikisource' => [
 		102 => 'Autor',               // T122175
 		103 => 'Diskusia_k_autorovi',
