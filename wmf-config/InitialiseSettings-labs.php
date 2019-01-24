@@ -665,6 +665,10 @@ function wmfLabsSettings() {
 			'default' => 1,
 		],
 
+		'wgPopupsReferencePreviews' => [
+			'default' => true,
+		],
+
 		'wmgUseCollaborationKit' => [
 			'default' => false,
 			'enwiki' => true,
