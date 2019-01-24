@@ -22395,11 +22395,13 @@ $wgConf->settings = [
 'wgWelcomeSurveyPrivacyPolicyUrl' => [
 	'kowiki' => 'https://foundation.wikimedia.org/wiki/%EC%83%88_%EC%82%AC%EC%9A%A9%EC%9E%90_%ED%99%98%EC%98%81_%EC%84%A4%EB%AC%B8_%EA%B0%9C%EC%9D%B8_%EC%A0%95%EB%B3%B4_%EB%B3%B4%ED%98%B8_%EC%A0%95%EC%B1%85',
 	'cswiki' => 'https://foundation.wikimedia.org/wiki/Uv%C3%ADtac%C3%AD_pr%C5%AFzkum_pro_nov%C3%A9_u%C5%BEivatele_Prohl%C3%A1%C5%A1en%C3%AD_o_ochran%C4%9B_osobn%C3%ADch_%C3%BAdaj%C5%AF',
+	'viwiki' => 'https://foundation.wikimedia.org/wiki/Th%C3%B4ng_b%C3%A1o_v%E1%BB%81_Quy%E1%BB%81n_ri%C3%AAng_t%C6%B0_c%E1%BB%A7a_Cu%E1%BB%99c_kh%E1%BA%A3o_s%C3%A1t_ch%C3%A0o_%C4%91%C3%B3n_ng%C6%B0%E1%BB%9Di_d%C3%B9ng_m%E1%BB%9Bi',
 ],
 
 'wgWelcomeSurveyExperimentalGroups' => [
 	'kowiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-4' ], 'exp2_target_popup' => [ 'range' => '5-9' ] ],
 	'cswiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-4' ], 'exp2_target_popup' => [ 'range' => '5-9' ] ],
+	'viwiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-4' ], 'exp2_target_popup' => [ 'range' => '5-9' ] ],
 ],
 
 'wgGEHelpPanelEnabled' => [
