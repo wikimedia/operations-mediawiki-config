@@ -14894,6 +14894,10 @@ $wgConf->settings = [
 	'yiwiki' => 'NavigationPopups',
 ],
 
+'wgPopupsReferencePreviews' => [
+	'default' => false,
+],
+
 // Whether Compact Links is a Beta feature
 'wmgULSCompactLanguageLinksBetaFeature' => [
 	'default' => false,
