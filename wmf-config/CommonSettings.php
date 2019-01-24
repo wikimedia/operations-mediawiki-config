@@ -3531,8 +3531,14 @@ if ( $wmgUseRC2UDP ) {
 }
 
 // Confirmed can do anything autoconfirmed can.
-$wgGroupPermissions['confirmed'] = $wgGroupPermissions['autoconfirmed'];
-$wgGroupPermissions['confirmed']['skipcaptcha'] = true;
+// T213003: this should happen after all the extensions had been loaded, but
+// before their extension functions in case they're relying on permissions.
+array_unshift( $wgExtensionFunctions, function () {
+	global $wgGroupPermissions;
+
+	$wgGroupPermissions['confirmed'] = $wgGroupPermissions['autoconfirmed'];
+	$wgGroupPermissions['confirmed']['skipcaptcha'] = true;
+} );
 
 $wgImgAuthDetails = true;
 
