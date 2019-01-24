@@ -902,7 +902,9 @@ function wmfLabsSettings() {
 			]
 		],
 		'wgEnablePartialBlocks' => [
-			'default' => true,
+			'default' => false,
+			'enwiki' => true,
+			'wikidatawiki' => true,
 		],
 		'wgPropertySuggesterClassifyingPropertyIds' => [
 			'wikidatawiki' => [ 694 ],
