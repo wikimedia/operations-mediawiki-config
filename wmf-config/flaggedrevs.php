@@ -280,8 +280,6 @@ if ( $wgDBname == 'alswiki' ) {
 
 	unset( $wgGroupPermissions['reviewer'] );
 
-	$wgFeedbackAge = 180 * 24 * 3600;
-	$wgFeedbackSizeThreshhold = 5;
  } elseif ( $wgDBname == 'elwikinews' ) {
 	$wgFlaggedRevsAutoReviewNew = false;
 	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, [ NS_CATEGORY, 100 ] );
@@ -289,8 +287,6 @@ if ( $wgDBname == 'alswiki' ) {
 	$wgGroupPermissions['editor']['autoreview'] = false;
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
 	$wgGroupPermissions['sysop']['autoreview'] = false;
-
-	$wgFeedbackNamespaces = [ NS_MAIN ];
 
 	unset( $wgGroupPermissions['reviewer'] );
  } elseif ( $wgDBname == 'enwikinews' ) {
@@ -300,8 +296,6 @@ if ( $wgDBname == 'alswiki' ) {
 	$wgGroupPermissions['editor']['autoreview'] = false; // T25948
 	$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 	$wgGroupPermissions['sysop']['autoreview'] = false; // T25948
-
-	$wgFeedbackNamespaces = [ NS_MAIN ]; // per Aaron 2008-10-06
 
 	unset( $wgGroupPermissions['reviewer'] );
  } elseif ( $wgDBname == 'eowiki' ) {
@@ -435,10 +429,6 @@ if ( $wgDBname == 'alswiki' ) {
 
 	// # namespaces
 	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, [ NS_CATEGORY, 100 ] ); # 100 = Portal
-	$wgFeedbackNamespaces = [ NS_MAIN ];
-
-	// # levels
-	$wgFlaggedRevsFeedbackTags = [ 'reliability' => 3, 'completeness' => 2, 'npov' => 2, 'presentation' => 1 ];
 
 	// # reviewers
 	$wgGroupPermissions['editor']['rollback'] = true;
