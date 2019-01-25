@@ -3,20 +3,10 @@
 
 if ( $wmfRealm == 'labs' ) {  # safe guard
 
-$wgMainCacheType = 'nutcracker+mcrouter';
+$wgMainCacheType = 'mcrouter';
 $wgMemCachedPersistent = false;
 // Beta Cluster: Increase timeout to 500ms (in microseconds)
 $wgMemCachedTimeout = 0.5 * 1e6;
-
-$wgObjectCaches['nutcracker-memcached'] = [
-	'class'                => 'MemcachedPeclBagOStuff',
-	'serializer'           => 'php',
-	'persistent'           => false,
-	'servers'              => [ '127.0.0.1:11212' ],
-	'retry_timeout'        => -1,
-	'loggroup'             => 'memcached',
-	'timeout'              => $wgMemCachedTimeout,
-];
 
 $wgObjectCaches['mcrouter'] = [
 	'class'                => 'MemcachedPeclBagOStuff',
@@ -26,37 +16,6 @@ $wgObjectCaches['mcrouter'] = [
 	'retry_timeout'        => -1,
 	'loggroup'             => 'memcached',
 	'timeout'              => $wgMemCachedTimeout,
-];
-
-$wgObjectCaches['mcrouter+nutcracker'] = [
-	'class' => 'MultiWriteBagOStuff',
-	'caches' => [
-		// new mcrouter consistent hash scheme (uses host:port)
-		0 => [
-			'factory' => [ 'ObjectCache', 'getInstance' ],
-			'args' => [ 'mcrouter' ],
-		],
-		// old nutcracker consistent hash scheme (uses shard tag);
-		// make sure this cache scheme gets purges and stays warm
-		1 => [
-			'factory' => [ 'ObjectCache', 'getInstance' ],
-			'args' => [ 'nutcracker-memcached' ],
-		],
-	],
-	'reportDupes' => false,
-];
-
-$wgObjectCaches['nutcracker+mcrouter'] = [
-	'class'       => 'ReplicatedBagOStuff',
-	'readFactory' => [
-		'factory' => [ 'ObjectCache', 'getInstance' ],
-		'args'    => [ 'nutcracker-memcached' ]
-	],
-	'writeFactory' => [
-		'factory' => [ 'ObjectCache', 'getInstance' ],
-		'args'    => [ 'mcrouter+nutcracker' ]
-	],
-	'reportDupes' => false
 ];
 
 // Beta Cluster: Make WANObjectCache mcrouter-aware
