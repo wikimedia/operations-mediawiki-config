@@ -9104,7 +9104,6 @@ $wgConf->settings = [
 	],
 	'+eswiki' => [
 		'autoconfirmed' => [ 'collectionsaveascommunitypage' => false ], // T163767
-		'confirmed' => [ 'collectionsaveascommunitypage' => false ],
 		'rollbacker' => [
 			'rollback' => true,
 			'abusefilter-log-detail' => true, // T70319
@@ -9563,10 +9562,6 @@ $wgConf->settings = [
 			'upload' => false,
 			'reupload' => false,
 		],
-		'confirmed' => [ // T85621
-			'upload' => false,
-			'reupload' => false,
-		],
 		'rollbacker' => [ 'rollback' => true ],
 		'uploader' => [ // T85621
 			'upload' => true,
@@ -9777,20 +9772,6 @@ $wgConf->settings = [
 	'nowiki' => [
 		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'rollback' => true, 'unwatchedpages' => true, 'suppressredirect' => true, ],
 		'autopatrolled' => [ 'autopatrol' => true, 'unwatchedpages' => true ],
-		'confirmed' => [ // T125448
-			'autoconfirmed' => true,
-			'collectionsaveascommunitypage' => true,
-			'collectionsaveasuserpage' => true,
-			'editsemiprotected' => true,
-			'flow-edit-post' => true,
-			'mwoauthproposeconsumer' => true,
-			'mwoauthupdateownconsumer' => true,
-			'move' => true,
-			'reupload' => true,
-			'skipcaptcha' => true,
-			'transcode-reset' => true,
-			'upload' => true,
-		],
 	],
 	'+nowikibooks' => [
 		'user' => [ 'patrol' => false ],
