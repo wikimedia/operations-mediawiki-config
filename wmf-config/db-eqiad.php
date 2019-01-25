@@ -116,7 +116,7 @@ $wgLBFactoryConf = [
 		'db1083' => 500,    # B1 3.6TB 512GB # candidate master
 		'db1089' => 500,    # C3 3.6TB 512GB
 		'db1099:3311' => 1, # B2 3.6TB 512GB # rc, log: s1 and s8
-		'db1105:3311' => 1, # C3 3.6TB 512GB # rc, log: s1 and s2
+		# 'db1105:3311' => 1, # C3 3.6TB 512GB # rc, log: s1 and s2 # mysql upgrade
 		'db1106' => 50,     # D3 3.6TB 512GB, vslow, dump # master for sanitarium db1124
 		'db1114' => 200,    # D4 3.6TB 512GB, api
 		'db1119' => 200,    # B8 3.6TB 512GB, api
@@ -128,7 +128,7 @@ $wgLBFactoryConf = [
 		'db1090:3312' => 1, # C3 3.6TB 512GB, vslow, dump: s2 and s7
 		'db1122' => 500,    # D6 3.6TB 512GB, api
 		'db1103:3312' => 100, # A3 3.6TB 512GB # rc, log: s2 and s4
-		'db1105:3312' => 100, # C3 3.6TB 512GB # rc, log: s1 and s2
+		# 'db1105:3312' => 100, # C3 3.6TB 512GB # rc, log: s1 and s2 # alter
 	],
 	/* s3 */ 'DEFAULT' => [
 		'db1078' => 0,    # C3 3.6TB 512GB, master
@@ -264,23 +264,23 @@ $wgLBFactoryConf = [
 	's1' => [
 		'watchlist' => [
 			'db1099:3311' => 1,
-			'db1105:3311' => 1,
+			# 'db1105:3311' => 1,
 		],
 		'recentchanges' => [
 			'db1099:3311' => 1,
-			'db1105:3311' => 1,
+			# 'db1105:3311' => 1,
 		],
 		'recentchangeslinked' => [
 			'db1099:3311' => 1,
-			'db1105:3311' => 1,
+			# 'db1105:3311' => 1,
 		],
 		'contributions' => [
 			'db1099:3311' => 1,
-			'db1105:3311' => 1,
+			# 'db1105:3311' => 1,
 		],
 		'logpager' => [
 			'db1099:3311' => 1,
-			'db1105:3311' => 1,
+			# 'db1105:3311' => 1,
 		],
 		'dump' => [
 			'db1106' => 1,
@@ -308,23 +308,23 @@ $wgLBFactoryConf = [
 		],
 		'watchlist' => [
 			'db1103:3312' => 1,
-			'db1105:3312' => 1,
+			# 'db1105:3312' => 1,
 		],
 		'recentchanges' => [
 			'db1103:3312' => 1,
-			'db1105:3312' => 1,
+			# 'db1105:3312' => 1,
 		],
 		'recentchangeslinked' => [
 			'db1103:3312' => 1,
-			'db1105:3312' => 1,
+			# 'db1105:3312' => 1,
 		],
 		'contributions' => [
 			'db1103:3312' => 1,
-			'db1105:3312' => 1,
+			# 'db1105:3312' => 1,
 		],
 		'logpager' => [
 			'db1103:3312' => 1,
-			'db1105:3312' => 1,
+			# 'db1105:3312' => 1,
 		],
 	],
 	/* s3 */ 'DEFAULT' => [
