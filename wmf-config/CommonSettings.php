@@ -37,6 +37,8 @@
 
 use MediaWiki\Auth\AuthenticationResponse;
 use MediaWiki\Logger\LoggerFactory;
+use Wikimedia\MWConfig\ServiceConfig;
+use Wikimedia\MWConfig\XWikimediaDebug;
 
 # Godforsaken hack to work around problems with the reverse proxy caching changes...
 #
@@ -54,7 +56,7 @@ if ( PHP_SAPI !== 'cli' ) {
 
 // Clobber any value in $_SERVER['SERVER_SOFTWARE'] other than Apache, so that
 // IEUrlExtension::haveUndecodedRequestUri() always thinks we're running Apache.
-// Otherwise, the absense of 'Apache' from $_SERVER['SERVER_SOFTWARE'] causes it
+// Otherwise, the absence of 'Apache' from $_SERVER['SERVER_SOFTWARE'] causes it
 // to distrust REQUEST_URI, which leads to incorrect behavior.
 if ( isset( $_SERVER['SERVER_SOFTWARE'] ) ) {
 	$_SERVER['SERVER_SOFTWARE'] = 'Apache';
@@ -66,6 +68,10 @@ if ( isset( $_SERVER['SERVER_ADDR'] ) ) {
 
 # ----------------------------------------------------------------------
 # Initialisation
+
+# Load classes required by configuration files
+require_once __DIR__ . '/../src/XWikimediaDebug.php';
+require_once __DIR__ . '/../src/ServiceConfig.php';
 
 # Get the version object for this Wiki (must be set by now, along with $IP)
 if ( !class_exists( 'MWMultiVersion' ) ) {
@@ -110,16 +116,8 @@ $wgDBuser = 'wikiuser';
 # wmf-config directory (in common/)
 $wmfConfigDir = "$IP/../wmf-config";
 
-# Include all the service definitions
-# TODO: only include if in production, set up beta separately
-switch ( $wmfRealm ) {
-case 'labs':
-	$wmfAllServices = require "$wmfConfigDir/LabsServices.php";
-	break;
-case 'production':
-default:
-	$wmfAllServices = require "$wmfConfigDir/ProductionServices.php";
-}
+# Get all the service definitions
+$wmfAllServices = ServiceConfig::getInstance()->getAllServices();
 
 # Shorthand when we have no master-slave situation to keep into account
 $wmfLocalServices = $wmfAllServices[$wmfDatacenter];
@@ -265,7 +263,7 @@ if ( PHP_SAPI === 'cli' ) {
 	$wgLanguageConverterCacheType = CACHE_NONE;
 }
 
-if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) && preg_match( '/\breadonly\b/i', $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
+if ( XWikimediaDebug::getInstance()->hasOption( 'readonly' ) ) {
 	$wgReadOnly = 'X-Wikimedia-Debug';
 }
 
@@ -277,17 +275,8 @@ if ( $wmfRealm === 'labs' ) {
 	require "$wmfConfigDir/db-{$wmfDatacenter}.php";
 }
 
-// profiler.php and profiler-labs.php define $wmgProfiler.
-// NOTE: This file is normally included much earlier via PhpAutoPrepend,
-// so that profiles trace the whole request (including MediaWiki setup).
-// That is also the reason we use $wmgProfiler as intermediary
-// because wmf-config/CommonSettings loads after mediawiki/DefaultSettings,
-// which defines $wgProfiler.
-if ( $wmfRealm === 'labs' ) {
-	require_once __DIR__ . '/profiler-labs.php';
-	$wgProfiler = $wmgProfiler;
-} else {
-	require_once __DIR__ . '/profiler.php';
+// Set $wgProfiler to the value provided by PhpAutoPrepend.php
+if ( isset( $wmgProfiler ) ) {
 	$wgProfiler = $wmgProfiler;
 }
 
@@ -397,7 +386,7 @@ $wgObjectCaches['mysql-multiwrite'] = [
 	'caches' => [
 		0 => [
 			'factory' => [ 'ObjectCache', 'getInstance' ],
-			'args' => [ 'memcached-pecl' ]
+			'args' => [ 'mcrouter' ]
 		],
 		1 => [
 			'class' => 'SqlBagOStuff',
@@ -2706,7 +2695,7 @@ $wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetGWTFileBackendCleanupJob';
 
 if ( $wmgUseEducationProgram ) {
 	$wgExtraNamespaces[446] = 'Education_Program';
-	$wgExtraNamespaces[447] = 'Educaton_Program_talk';
+	$wgExtraNamespaces[447] = 'Education_Program_talk';
 	$wgNamespacesWithSubpages[447] = true;
 }
 

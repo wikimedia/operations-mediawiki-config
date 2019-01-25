@@ -1882,6 +1882,7 @@ $wgConf->settings = [
 	'eswikivoyage' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=es', // T44933
 	'euwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=eu',
 	'fawiki' => '/wiki/ویکی‌پدیا:بارگذاری',
+	'fawikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?setlang=fa&campaign=fa', // T214048
 	'fawikivoyage' => '/wiki/%D9%88%DB%8C%DA%A9%DB%8C%E2%80%8C%D8%B3%D9%81%D8%B1:%D8%A8%D8%A7%D8%B1%DA%AF%D8%B0%D8%A7%D8%B1%DB%8C', // T102714
 	'frwiki' => '/wiki/Aide:Importer_un_fichier',
 	'gomwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=gom', // T96468
@@ -2601,9 +2602,9 @@ $wgConf->settings = [
 	'ukwikivoyage' => 'Вікімандри',
 	'ukwiktionary' => 'Вікісловник',
 	'urwiki' => 'ویکیپیڈیا', // T44155
-	'urwikibooks' => 'وکی کتب',
-	'urwikiquote' => 'وکی اقتباسات',
-	'urwiktionary' => 'وکی لغت',
+	'urwikibooks' => 'ویکی کتب', // T214290
+	'urwikiquote' => 'ویکی اقتباس', // T214290
+	'urwiktionary' => 'ویکی لغت', // T214290
 	'usabilitywiki' => 'Wikimedia Usability Initiative',
 	'uzwiki' => 'Vikipediya',
 	'uzwikibooks' => 'Vikikitob',
@@ -3116,9 +3117,9 @@ $wgConf->settings = [
 	'ukwikivoyage' => 'Вікімандри',
 	'ukwiktionary' => 'Вікісловник',
 	'urwiki' => 'ویکیپیڈیا',
-	'urwikibooks' => 'وکی_کتب',
-	'urwikiquote' => 'وکی_اقتباسات',
-	'urwiktionary' => 'وکی_لغت',
+	'urwikibooks' => 'ویکی کتب', // T214290
+	'urwikiquote' => 'ویکی اقتباس', // T214290
+	'urwiktionary' => 'ویکی لغت', // T214290
 	'usabilitywiki' => 'Wikipedia',
 	'uzwiki' => 'Vikipediya',
 	'uzwikibooks' => 'Vikikitob',
@@ -3728,7 +3729,7 @@ $wgConf->settings = [
 		'ویکی پدیا' => NS_PROJECT,
 		'ويكي پديا' => NS_PROJECT,
 		'ويکي‌پديا' => NS_PROJECT,
-		'پوب' => NS_PROJECT_TALK, // T213733
+		'بوپ' => NS_PROJECT_TALK, // T213733
 		'بحث ویکی پدیا' => NS_PROJECT_TALK,
 		'بحث ويکي پديا' => NS_PROJECT_TALK,
 		'بحث ويکي‌پديا' => NS_PROJECT_TALK,
@@ -4523,6 +4524,7 @@ $wgConf->settings = [
 	'+svwiktionary' => [
 		'WT' => NS_PROJECT,
 		'WT-diskussion' => NS_PROJECT_TALK,
+		'KAT' => NS_CATEGORY, // T214329
 	],
 	'+swwiki' => [
 		'Portal' => 100,
@@ -9744,12 +9746,12 @@ $wgConf->settings = [
 		],
 	],
 	'newiki' => [
-		'autopatrolled' => [ 'autopatrol' => true ],      // T89816
-		'rollbacker' => [ 'rollback' => true ],           // T90888
-		'reviewer' => [ 'patrol' => true ],              // T95101
-		'filemover' => [ 'movefile' => true ],            // T95103
+		'autopatrolled' => [ 'autopatrol' => true ], // T89816
+		'rollbacker' => [ 'rollback' => true, 'suppressredirect' => true ], // T90888 and T214012
+		'reviewer' => [ 'patrol' => true ], // T95101
+		'filemover' => [ 'movefile' => true ], // T95103
 		'templateeditor' => [ 'templateeditor' => true, 'editprotected' => true ], // T195557
-		'flood' => [ 'bot' => true ], //T211181
+		'flood' => [ 'bot' => true ], // T211181
 		'transwiki' => [ 'oathauth-enable' => true, 'import' => true ], // T214036
 	],
 	'nlwiki' => [
@@ -12467,6 +12469,7 @@ $wgConf->settings = [
 	'nowikiquote' => [ 'w', 'en', 'nn' ],
 	'nowikisource' => [ 'w' ],
 	'nowiktionary' => [ 'w' ],
+	'nywiki' => [ 'en' ],
 	'officewiki' => [ 'en', 'meta', 'commons' ],
 	'orwiki' => [ 'en', 'commons' ], // T33185
 	'orwikisource' => [ 'en', 'mul' ],
@@ -12629,8 +12632,9 @@ $wgConf->settings = [
 	'mediawikiwiki' => true,
 ],
 
+# ParserCache expire time set to 24 days: T210992
 'wgParserCacheExpireTime' => [
-	'default' => 86400 * 22, // T167784
+	'default' => 86400 * 24,
 ],
 
 # Captcha ...
@@ -14184,7 +14188,7 @@ $wgConf->settings = [
 		'*.arkivverket.no',                 // The National Archives of Norway - T73195
 		'tools.wikimedia.pl',               // Facilities server for Wikimedia users - T74897
 		'*.nasa.gov',                       // NASA
-		'*.jpl.nasa.gov',                     // NASA - T196727
+		'*.jpl.nasa.gov',                   // NASA - T196727
 		'photos.wikimapia.org',             // WikiMapia - T75045
 		'pslava.info',                      // Ukraine interesting photography source - T75045
 		'ukrainaincognita.com',             // Ukraine interesting photography source - T75045
@@ -14269,7 +14273,7 @@ $wgConf->settings = [
 		'*.nli.org.il',                     // National Library of Israel - T1881179
 		'studiezaal.nijmegen.nl',           // Regionaal Archief Nijmegen, NL - T181713
 		'audiovis.nac.gov.pl',              // Zbiori, Poland goverment - T184853
-		'mushroomobserver.org',              // Mushroom Observer - T188203
+		'mushroomobserver.org',             // Mushroom Observer - T188203
 		'www.president.gov.ua',             // Ukraine government website - T185399
 		'www.kmu.gov.ua',                   // Ukraine government website - T185399
 		'vin.gov.ua',                       // Ukraine government website - T185399
@@ -14326,6 +14330,11 @@ $wgConf->settings = [
 		'*.nasimonline.ir',                 // Iranian news agency - T203371
 		'idb.ub.uni-tuebingen.de',          // University Library Tübingen - T211466
 		'mbc.cyfrowemazowsze.pl',           // Polish biblioteka - T212469
+		'mehrnews.com',                     // Iranian news agency - T213961
+		'mirror.netcologne.de',             // T213632
+		'*.getty.edu',                      // J. Paul Getty Museum - T213649
+		'mojnews.com',                      // Iranian news agency - T213901
+		'openaccess-cdn.clevelandart.org',  // Cleveland Museum of Art - T213924
 	],
 ],
 
@@ -14751,6 +14760,7 @@ $wgConf->settings = [
 		'fileexporter',                      // [WMDE TW] 2018-12-07 – FileExporter
 		'constraint-suggestions',            // [WMDE WD] 2019-04-16 – Wikibase ConstraintSuggestions
 		'templatewizard-betafeature',        // [Contrib] 2019-04-18 - TemplateWizard
+		'php7',                              // [SRE Services] 2019-07-24 — HHVM to PHP7 migration
 	],
 ],
 
@@ -14889,6 +14899,10 @@ $wgConf->settings = [
 	'tgwiki' => 'popups',
 	'vecwiki' => 'Popup',
 	'yiwiki' => 'NavigationPopups',
+],
+
+'wgPopupsReferencePreviews' => [
+	'default' => false,
 ],
 
 // Whether Compact Links is a Beta feature
@@ -20358,6 +20372,11 @@ $wgConf->settings = [
 	'testcommonswiki' => true,
 ],
 
+// Feature flag for WikibaseMediaInfo showing 'depicts' statements during deployment
+'wgMediaInfoEnableFilePageDepicts' => [
+	'default' => false,
+],
+
 // Only enable this conservatively, having this on to many
 // wikis will take *a lot* of Graphite storage space. T191416
 'wmgWikibaseClientTrackLuaFunctionCallsPerWiki' => [
@@ -20745,83 +20764,83 @@ $wgConf->settings = [
 // index then we do for the content indexes.
 'wmgCirrusSearchShardCount' => [
 	// Most wikis are too small to be worth sharding
-	'default' => [ 'content' => 1, 'general' => 1, 'titlesuggest' => 1 ],
-	'arwiki' => [ 'content' => 5, 'general' => 4, 'titlesuggest' => 1 ],
-	'arwikisource' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ],
-	'bgwiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ],
-	'cawiki' => [ 'content' => 5, 'general' => 1, 'titlesuggest' => 1 ],
-	'cebwiki' => [ 'content' => 4, 'general' => 1, 'titlesuggest' => 2 ],
+	'default' => [ 'content' => 1, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
+	'arwiki' => [ 'content' => 5, 'general' => 4, 'titlesuggest' => 1, 'archive' => 1 ],
+	'arwikisource' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
+	'bgwiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
+	'cawiki' => [ 'content' => 5, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
+	'cebwiki' => [ 'content' => 4, 'general' => 1, 'titlesuggest' => 2, 'archive' => 1 ],
 	// Commons is special and has a 'file' index in addition to the regular ones.
 	// We're sharding 'file' like it is a content index because searching it is
 	// very very common. Increased to 15 because 7 generates giant 70Gb shards
-	'commonswiki' => [ 'content' => 1, 'general' => 8, 'file' => 21, 'titlesuggest' => 1 ],
-	'testcommonswiki' => [ 'content' => 1, 'general' => 8, 'file' => 21, 'titlesuggest' => 1 ],
-	'cswiki' => [ 'content' => 3, 'general' => 1, 'titlesuggest' => 1 ],
-	'dawiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ],
-	'dewiki' => [ 'content' => 7, 'general' => 8, 'titlesuggest' => 3 ],
-	'dewikisource' => [ 'content' => 3, 'general' => 1, 'titlesuggest' => 1 ],
-	'elwiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ],
+	'commonswiki' => [ 'content' => 1, 'general' => 8, 'file' => 21, 'titlesuggest' => 1, 'archive' => 1 ],
+	'testcommonswiki' => [ 'content' => 1, 'general' => 8, 'file' => 21, 'titlesuggest' => 1, 'archive' => 1 ],
+	'cswiki' => [ 'content' => 3, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
+	'dawiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
+	'dewiki' => [ 'content' => 7, 'general' => 8, 'titlesuggest' => 3, 'archive' => 1 ],
+	'dewikisource' => [ 'content' => 3, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
+	'elwiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
 	// These shards are also significantly larger than the target 2GB.
-	'enwiki' => [ 'content' => 7, 'general' => 21, 'titlesuggest' => 4 ],
-	'enwikinews' => [ 'content' => 1, 'general' => 4, 'titlesuggest' => 1 ],
-	'enwikisource' => [ 'content' => 7, 'general' => 1, 'titlesuggest' => 1 ],
-	'enwiktionary' => [ 'content' => 5, 'general' => 2, 'titlesuggest' => 2 ],
-	'eswiki' => [ 'content' => 7, 'general' => 6, 'titlesuggest' => 2 ],
-	'eswikisource' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ],
-	'fawiki' => [ 'content' => 5, 'general' => 2, 'titlesuggest' => 2 ],
-	'fiwiki' => [ 'content' => 3, 'general' => 8, 'titlesuggest' => 1 ],
-	'frwiki' => [ 'content' => 7, 'general' => 8, 'titlesuggest' => 3 ],
-	'frwikisource' => [ 'content' => 7, 'general' => 1, 'titlesuggest' => 1 ],
-	'frwiktionary' => [ 'content' => 3, 'general' => 1, 'titlesuggest' => 1 ],
-	'hewiki' => [ 'content' => 3, 'general' => 2, 'titlesuggest' => 1 ],
-	'hewikisource' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ],
-	'huwiki' => [ 'content' => 4, 'general' => 2, 'titlesuggest' => 1 ],
-	'hywiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ],
-	'idwiki' => [ 'content' => 2, 'general' => 2, 'titlesuggest' => 1 ],
-	'incubatorwiki' => [ 'content' => 1, 'general' => 2, 'titlesuggest' => 1 ],
-	'itwiki' => [ 'content' => 7, 'general' => 8, 'titlesuggest' => 2 ],
-	'itwikisource' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ],
-	'jawiki' => [ 'content' => 7, 'general' => 6, 'titlesuggest' => 2 ],
-	'kkwiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ],
-	'kowiki' => [ 'content' => 4, 'general' => 1, 'titlesuggest' => 1 ],
-	'ltwiktionary' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ],
-	'mswiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ],
-	'metawiki' => [ 'content' => 1, 'general' => 8, 'titlesuggest' => 1 ],
-	'mgwiktionary' => [ 'content' => 4, 'general' => 1, 'titlesuggest' => 1 ],
-	'nlwiki' => [ 'content' => 7, 'general' => 4, 'titlesuggest' => 2 ],
-	'nowiki' => [ 'content' => 3, 'general' => 2, 'titlesuggest' => 1 ],
-	'plwiki' => [ 'content' => 7, 'general' => 3, 'titlesuggest' => 2 ],
-	'plwikisource' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ],
-	'ptwiki' => [ 'content' => 7, 'general' => 5, 'titlesuggest' => 2 ],
-	'rowiki' => [ 'content' => 3, 'general' => 2, 'titlesuggest' => 1 ],
-	'ruwiki' => [ 'content' => 7, 'general' => 8, 'titlesuggest' => 3 ],
-	'ruwikisource' => [ 'content' => 4, 'general' => 1, 'titlesuggest' => 1 ],
-	'ruwiktionary' => [ 'content' => 3, 'general' => 1, 'titlesuggest' => 1 ],
-	'shwiki' => [ 'content' => 4, 'general' => 1, 'titlesuggest' => 1 ],
-	'srwiki' => [ 'content' => 3, 'general' => 1, 'titlesuggest' => 1 ],
-	'svwiki' => [ 'content' => 7, 'general' => 2, 'titlesuggest' => 4 ],
-	'thwiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ],
-	'trwiki' => [ 'content' => 2, 'general' => 2, 'titlesuggest' => 1 ],
-	'ukwiki' => [ 'content' => 7, 'general' => 2, 'titlesuggest' => 1 ],
-	'viwiki' => [ 'content' => 6, 'general' => 4, 'titlesuggest' => 1 ],
-	'wikidatawiki' => [ 'content' => 21, 'general' => 1 ],
-	'warwiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ],
-	'zhwiki' => [ 'content' => 7, 'general' => 5, 'titlesuggest' => 2 ],
-	'zhwikisource' => [ 'content' => 5, 'general' => 1, 'titlesuggest' => 1 ],
+	'enwiki' => [ 'content' => 7, 'general' => 21, 'titlesuggest' => 4, 'archive' => 1 ],
+	'enwikinews' => [ 'content' => 1, 'general' => 4, 'titlesuggest' => 1, 'archive' => 1 ],
+	'enwikisource' => [ 'content' => 7, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
+	'enwiktionary' => [ 'content' => 5, 'general' => 2, 'titlesuggest' => 2, 'archive' => 1 ],
+	'eswiki' => [ 'content' => 7, 'general' => 6, 'titlesuggest' => 2, 'archive' => 1 ],
+	'eswikisource' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
+	'fawiki' => [ 'content' => 5, 'general' => 2, 'titlesuggest' => 2, 'archive' => 1 ],
+	'fiwiki' => [ 'content' => 3, 'general' => 8, 'titlesuggest' => 1, 'archive' => 1 ],
+	'frwiki' => [ 'content' => 7, 'general' => 8, 'titlesuggest' => 3, 'archive' => 1 ],
+	'frwikisource' => [ 'content' => 7, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
+	'frwiktionary' => [ 'content' => 3, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
+	'hewiki' => [ 'content' => 3, 'general' => 2, 'titlesuggest' => 1, 'archive' => 1 ],
+	'hewikisource' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
+	'huwiki' => [ 'content' => 4, 'general' => 2, 'titlesuggest' => 1, 'archive' => 1 ],
+	'hywiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
+	'idwiki' => [ 'content' => 2, 'general' => 2, 'titlesuggest' => 1, 'archive' => 1 ],
+	'incubatorwiki' => [ 'content' => 1, 'general' => 2, 'titlesuggest' => 1, 'archive' => 1 ],
+	'itwiki' => [ 'content' => 7, 'general' => 8, 'titlesuggest' => 2, 'archive' => 1 ],
+	'itwikisource' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
+	'jawiki' => [ 'content' => 7, 'general' => 6, 'titlesuggest' => 2, 'archive' => 1 ],
+	'kkwiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
+	'kowiki' => [ 'content' => 4, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
+	'ltwiktionary' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
+	'mswiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
+	'metawiki' => [ 'content' => 1, 'general' => 8, 'titlesuggest' => 1, 'archive' => 1 ],
+	'mgwiktionary' => [ 'content' => 4, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
+	'nlwiki' => [ 'content' => 7, 'general' => 4, 'titlesuggest' => 2, 'archive' => 1 ],
+	'nowiki' => [ 'content' => 3, 'general' => 2, 'titlesuggest' => 1, 'archive' => 1 ],
+	'plwiki' => [ 'content' => 7, 'general' => 3, 'titlesuggest' => 2, 'archive' => 1 ],
+	'plwikisource' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
+	'ptwiki' => [ 'content' => 7, 'general' => 5, 'titlesuggest' => 2, 'archive' => 1 ],
+	'rowiki' => [ 'content' => 3, 'general' => 2, 'titlesuggest' => 1, 'archive' => 1 ],
+	'ruwiki' => [ 'content' => 7, 'general' => 8, 'titlesuggest' => 3, 'archive' => 1 ],
+	'ruwikisource' => [ 'content' => 4, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
+	'ruwiktionary' => [ 'content' => 3, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
+	'shwiki' => [ 'content' => 4, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
+	'srwiki' => [ 'content' => 3, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
+	'svwiki' => [ 'content' => 7, 'general' => 2, 'titlesuggest' => 4, 'archive' => 1 ],
+	'thwiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
+	'trwiki' => [ 'content' => 2, 'general' => 2, 'titlesuggest' => 1, 'archive' => 1 ],
+	'ukwiki' => [ 'content' => 7, 'general' => 2, 'titlesuggest' => 1, 'archive' => 1 ],
+	'viwiki' => [ 'content' => 6, 'general' => 4, 'titlesuggest' => 1, 'archive' => 1 ],
+	'wikidatawiki' => [ 'content' => 21, 'general' => 1, 'archive' => 1 ],
+	'warwiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
+	'zhwiki' => [ 'content' => 7, 'general' => 5, 'titlesuggest' => 2, 'archive' => 1 ],
+	'zhwikisource' => [ 'content' => 5, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
 ],
 
 // Most wikis are fine with 0-2 replicas for all indexes
 // some of the larger ones will want more replicas for content indexes
 'wmgCirrusSearchReplicas' => [
-	'default' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2' ],
-	'commonswiki' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'file' => '0-2' ],
+	'default' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'archive' => '0-2' ],
+	'commonswiki' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'file' => '0-2', 'archive' => '0-2' ],
 	'enwiki' => [
-		'eqiad' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-3' ],
-		'codfw' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-3' ],
+		'eqiad' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-3', 'archive' => '0-2' ],
+		'codfw' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-3', 'archive' => '0-2' ],
 	],
 	'dewiki' => [
-		'eqiad' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-2' ],
-		'codfw' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2' ],
+		'eqiad' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-2', 'archive' => '0-2' ],
+		'codfw' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'archive' => '0-2' ],
 	],
 ],
 
@@ -20906,6 +20925,14 @@ $wgConf->settings = [
 		'limit' => 10,
 	],
 ],
+
+// Default profile for autocomplete for when the completion suggester is enabled
+'wmgCirrusSearchCompletionSettings' => [
+	'default' => 'fuzzy',
+	'mediawikiwiki' => 'fuzzy-subphrases',
+	'wikitech' => 'fuzzy-subphrases',
+],
+
 // @} end of wmgCirrusSearchCompletionSuggesterSubphrases
 
 // Enable phrase suggester (did you mean) on all wikis (except wikidata)
@@ -22089,6 +22116,45 @@ $wgConf->settings = [
 	'default' => 0 // T208454
 ],
 
+'wgWMEWikidataCompletionSearchClicks' => [
+	'default' => [],
+	'wikidatawiki' => [
+		'enabled' => true,
+		'buckets' => [
+			'control' => [
+				'samplingRate' => 0.5,
+			],
+			'item_de_tuned' => [
+				'samplingRate' => 0.5,
+				'context' => 'item',
+				'language' => 'de',
+				'searchApiParameters' => [
+					'cirrusWBProfile' => 'wikibase_config_prefix_query-201901-de',
+					'cirrusRescoreProfile' => 'wikibase_config_entity_weight-201901-de',
+				],
+			],
+			'item_es_tuned' => [
+				'samplingRate' => 0.5,
+				'context' => 'item',
+				'language' => 'es',
+				'searchApiParameters' => [
+					'cirrusWBProfile' => 'wikibase_config_prefix_query-201901-es',
+					'cirrusRescoreProfile' => 'wikibase_config_entity_weight-201901-es',
+				],
+			],
+			'item_fr_tuned' => [
+				'samplingRate' => 0.5,
+				'context' => 'item',
+				'language' => 'fr',
+				'searchApiParameters' => [
+					'cirrusWBProfile' => 'wikibase_config_prefix_query-201901-fr',
+					'cirrusRescoreProfile' => 'wikibase_config_entity_weight-201901-fr',
+				],
+			],
+		],
+	],
+],
+
 'wmgUsePageViewInfo' => [
 	'default' => true,
 	'private' => false,
@@ -22363,6 +22429,7 @@ $wgConf->settings = [
 	'testwiki' => true,
 	'kowiki' => true,
 	'cswiki' => true,
+	'viwiki' => true,
 ],
 
 'wgWelcomeSurveyEnabled' => [
@@ -22370,16 +22437,19 @@ $wgConf->settings = [
 	'testwiki' => true,
 	'kowiki' => true,
 	'cswiki' => true,
+	'viwiki' => true,
 ],
 
 'wgWelcomeSurveyPrivacyPolicyUrl' => [
 	'kowiki' => 'https://foundation.wikimedia.org/wiki/%EC%83%88_%EC%82%AC%EC%9A%A9%EC%9E%90_%ED%99%98%EC%98%81_%EC%84%A4%EB%AC%B8_%EA%B0%9C%EC%9D%B8_%EC%A0%95%EB%B3%B4_%EB%B3%B4%ED%98%B8_%EC%A0%95%EC%B1%85',
 	'cswiki' => 'https://foundation.wikimedia.org/wiki/Uv%C3%ADtac%C3%AD_pr%C5%AFzkum_pro_nov%C3%A9_u%C5%BEivatele_Prohl%C3%A1%C5%A1en%C3%AD_o_ochran%C4%9B_osobn%C3%ADch_%C3%BAdaj%C5%AF',
+	'viwiki' => 'https://foundation.wikimedia.org/wiki/Th%C3%B4ng_b%C3%A1o_v%E1%BB%81_Quy%E1%BB%81n_ri%C3%AAng_t%C6%B0_c%E1%BB%A7a_Cu%E1%BB%99c_kh%E1%BA%A3o_s%C3%A1t_ch%C3%A0o_%C4%91%C3%B3n_ng%C6%B0%E1%BB%9Di_d%C3%B9ng_m%E1%BB%9Bi',
 ],
 
 'wgWelcomeSurveyExperimentalGroups' => [
 	'kowiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-4' ], 'exp2_target_popup' => [ 'range' => '5-9' ] ],
 	'cswiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-4' ], 'exp2_target_popup' => [ 'range' => '5-9' ] ],
+	'viwiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-4' ], 'exp2_target_popup' => [ 'range' => '5-9' ] ],
 ],
 
 'wgGEHelpPanelEnabled' => [
