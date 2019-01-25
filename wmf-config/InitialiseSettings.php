@@ -14041,9 +14041,6 @@ $wgConf->settings = [
 'wgAbuseFilterParserClass' => [
 	'default' => 'AbuseFilterParser',
 ],
-'wgAbuseFilterRuntimeProfile' => [
-	'default' => true, // T191039
-],
 # @}
 
 'wgThumbLimits' => [
