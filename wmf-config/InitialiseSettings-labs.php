@@ -242,8 +242,12 @@ function wmfLabsSettings() {
 			'default'	=> true,
 		],
 		'wgWMECitationUsagePopulationSize' => [
-			'enwiki' => 1  // 100% — T191086
+			'enwiki' => 1  // 100% — T213969
 		],
+		'wgWMECitationUsagePageLoadPopulationSize' => [
+			'enwiki' => 3  // 33.3% — T213969
+		],
+
 		'wgMobileUrlTemplate' => [
 			'default' => '%h0.m.%h1.%h2.%h3.%h4',
 			'wikidatawiki' => 'm.%h0.%h1.%h2.%h3', // T87440
@@ -515,6 +519,11 @@ function wmfLabsSettings() {
 			'commonswiki' => true,
 		],
 
+		// Hard-enable 'depicts' statements for Beta Cluster Commons
+		'wgMediaInfoEnableFilePageDepicts' => [
+			'commonswiki' => true,
+		],
+
 		// Test the extension Collection in other languages for book creator,
 		// which avoids the bugs related to the PDF generator.
 		'wmgUseCollection' => [
@@ -658,6 +667,10 @@ function wmfLabsSettings() {
 
 		'-wgPopupsStatsvSamplingRate' => [
 			'default' => 1,
+		],
+
+		'wgPopupsReferencePreviews' => [
+			'default' => true,
 		],
 
 		'wmgUseCollaborationKit' => [
@@ -893,7 +906,9 @@ function wmfLabsSettings() {
 			]
 		],
 		'wgEnablePartialBlocks' => [
-			'default' => true,
+			'default' => false,
+			'enwiki' => true,
+			'wikidatawiki' => true,
 		],
 		'wgPropertySuggesterClassifyingPropertyIds' => [
 			'wikidatawiki' => [ 694 ],

@@ -199,6 +199,7 @@ if ( $wgCirrusSearchDefaultCluster !== $wmfDatacenter ) {
 
 // Enable completion suggester
 $wgCirrusSearchUseCompletionSuggester = $wmgCirrusSearchUseCompletionSuggester;
+$wgCirrusSearchCompletionSettings = $wmgCirrusSearchCompletionSettings;
 
 // Configure sub-phrases completion
 $wgCirrusSearchCompletionSuggesterSubphrases = $wmgCirrusSearchCompletionSuggesterSubphrases;

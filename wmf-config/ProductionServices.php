@@ -17,6 +17,10 @@
 $common = [
 	// Logging is not active-active.
 	'udp2log' => 'mwlog1001.eqiad.wmnet:8420',
+	'xenon' => 'mwlog1001.eqiad.wmnet',
+
+	// XHGui MongoDB
+	'xhgui' => 'mongodb://tungsten.eqiad.wmnet:27017',
 
 	// Statsd is not active-active.
 	'statsd' => 'statsd.eqiad.wmnet',
