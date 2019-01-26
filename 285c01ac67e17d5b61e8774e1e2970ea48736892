@@ -120,6 +120,30 @@
     },
     {
       "key": {
+        "uuid": "c5271b9f_3527083f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 6797,
+      "author": {
+        "id": 6619
+      },
+      "writtenOn": "2019-01-26T20:40:56Z",
+      "side": 1,
+      "message": "I explained that\u0027s not colon. In an enlarged size, it\u0027s distinctness with conventional colon is clear and it doesn\u0027t work in namespace as I just tested.  You can copy it and try accessing a certain page in project ns with it, it won\u0027t work and even on en.wiki it redirects to distinct page from where colon redirects.",
+      "parentUuid": "a84b2a30_74c794bf",
+      "range": {
+        "startLine": 6797,
+        "startChar": 10,
+        "endLine": 6797,
+        "endChar": 15
+      },
+      "revId": "285c01ac67e17d5b61e8774e1e2970ea48736892",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b95a1062_31ea7e29",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 6
