@@ -72,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "b8f581c4_187c9112",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 6797,
+      "author": {
+        "id": 6619
+      },
+      "writtenOn": "2019-01-26T09:28:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f1aaecd8_e90234e1",
+      "range": {
+        "startLine": 6797,
+        "startChar": 18,
+        "endLine": 6797,
+        "endChar": 27
+      },
+      "revId": "285c01ac67e17d5b61e8774e1e2970ea48736892",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b95a1062_31ea7e29",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 6
@@ -83,6 +107,30 @@
       "writtenOn": "2019-01-25T12:42:03Z",
       "side": 1,
       "message": "When adding translating namespaces we usually add an English description. I suggest:\n\n // T214553 - Author talk",
+      "range": {
+        "startLine": 6798,
+        "startChar": 26,
+        "endLine": 6798,
+        "endChar": 35
+      },
+      "revId": "285c01ac67e17d5b61e8774e1e2970ea48736892",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "84006909_5caaa30d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 6798,
+      "author": {
+        "id": 6619
+      },
+      "writtenOn": "2019-01-26T09:28:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b95a1062_31ea7e29",
       "range": {
         "startLine": 6798,
         "startChar": 26,
