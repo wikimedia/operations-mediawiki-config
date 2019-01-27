@@ -22,6 +22,30 @@
       "revId": "5bb66c2f4813703c9b443ab7cc679c7df3a1c402",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e7d7a19a_0b8e73a5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 10
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 6619
+      },
+      "writtenOn": "2019-01-27T12:33:07Z",
+      "side": 1,
+      "message": "Indeed. Thanks.",
+      "parentUuid": "c36a3c84_067cf905",
+      "range": {
+        "startLine": 9,
+        "startChar": 56,
+        "endLine": 9,
+        "endChar": 63
+      },
+      "revId": "5bb66c2f4813703c9b443ab7cc679c7df3a1c402",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
