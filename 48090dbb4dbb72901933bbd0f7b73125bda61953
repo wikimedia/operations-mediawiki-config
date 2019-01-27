@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "96c4a522_da741337",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 447,
+      "author": {
+        "id": 5450
+      },
+      "writtenOn": "2019-01-27T12:18:33Z",
+      "side": 1,
+      "message": "Note that this values are only in place to define a default value. Block durations will be customizable on a per-filte basis.",
+      "range": {
+        "startLine": 446,
+        "startChar": 2,
+        "endLine": 447,
+        "endChar": 58
+      },
+      "revId": "48090dbb4dbb72901933bbd0f7b73125bda61953",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
