@@ -1987,21 +1987,6 @@ if ( $wmgUseSentry ) {
 
 if ( $wmgUseTemplateStyles ) {
 	wfLoadExtension( 'TemplateStyles' );
-	// allow protocol-relative URLs per T188760
-	$wgTemplateStylesAllowedUrls = [
-		'audio' => [
-			'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
-		],
-		'image' => [
-			'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
-		],
-		'svg' => [
-			'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/[^?#]*\\.svg(?:[?#]|$)>',
-		],
-		'font' => [],
-		'namespace' => [ '<.>' ],
-		'css' => [],
-	];
 }
 
 if ( $wmgUseLoginNotify && $wmgUseEcho ) {
