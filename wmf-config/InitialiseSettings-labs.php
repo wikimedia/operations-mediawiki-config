@@ -856,6 +856,13 @@ function wmfLabsSettings() {
 					'id' => 'example',
 				]
 			],
+			'cawiki' => [
+				[
+					'title' => 'mw:Help:Contents',
+					'text' => 'Ajuda',
+					'id' => 'help',
+				]
+			]
 		],
 		'wgGEHelpPanelSearchEnabled' => [
 			'default' => true,
