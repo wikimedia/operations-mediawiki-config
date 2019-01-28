@@ -302,4 +302,13 @@ class GuanacoProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvider 
 	}
 }
 
+// Prevent using CheckUser tool unless authorized - T214820
+if ( $wmgUseCheckUser ) {
+	$wgHooks['UserGetRightsRemove'][] = function ( User $user, array &$aRights ) {
+		if ( !in_array( $user->getName(), [ 'Rxy' ], true ) ) {
+			$aRights = array_diff( $aRights, [ 'checkuser', 'checkuser-log' ] );
+		}
+	};
+}
+
 } # end safeguard
