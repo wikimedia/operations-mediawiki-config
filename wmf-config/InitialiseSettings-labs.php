@@ -477,7 +477,7 @@ function wmfLabsSettings() {
 		],
 
 		'wmgUseCheckUser' => [
-			'default' => false,
+			'default' => true, // T214820
 		],
 
 		'wgMediaViewerNetworkPerformanceSamplingFactor' => [
