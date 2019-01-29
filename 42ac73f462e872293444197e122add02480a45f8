@@ -22,6 +22,30 @@
       "revId": "42ac73f462e872293444197e122add02480a45f8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "24766386_a2acf486",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-01-29T11:57:36Z",
+      "side": 1,
+      "message": "Done, I think (not sure if correctly).",
+      "parentUuid": "37e4a6ed_5183c7f1",
+      "range": {
+        "startLine": 137,
+        "startChar": 1,
+        "endLine": 143,
+        "endChar": 2
+      },
+      "revId": "42ac73f462e872293444197e122add02480a45f8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
