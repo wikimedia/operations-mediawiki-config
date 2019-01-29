@@ -14872,6 +14872,7 @@ $wgConf->settings = [
 	'brwiki' => 'Popups',
 	'dawiki' => 'Popups',
 	'dewiki' => 'navigation-popups',
+	'enwikivoyage' => 'popups',
 	'elwiki' => 'popupdelay',
 	'eowiki' => 'Popups',
 	'eswiki' => 'Navigation_popups ',
