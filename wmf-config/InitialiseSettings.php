@@ -19631,6 +19631,13 @@ $wgConf->settings = [
 		'species',
 		'wikidata',
 	],
+	'commonswiki' => [
+		'commons',
+		'mediawiki',
+		'meta',
+		'species',
+		'wikidata',
+	],
 	'testwikidatawiki' => [
 		'commons',
 		'mediawiki',
