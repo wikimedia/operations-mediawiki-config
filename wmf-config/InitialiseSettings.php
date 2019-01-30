@@ -14484,6 +14484,7 @@ $wgConf->settings = [
 	'srwikiquote' => 'any', // T172974
 	'wikidatawiki' => 'any', // T144687
 	'zhwikinews' => 'any', // T53604
+	'zhwikiversity' => 'any', // T214946
 ],
 
 'wgUseContributionTracking' => [
