@@ -22,6 +22,30 @@
       "revId": "67bce3295223ee76272dff08deb2d3d28056ffeb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d5993340_de557bc8",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 14880,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-01-31T19:28:04Z",
+      "side": 1,
+      "message": "You\u0027re right, I just confirmed that per https://en.wikivoyage.org/wiki/MediaWiki:Gadgets-definition, it\u0027s called \"popups\". Thanks!",
+      "parentUuid": "7c9ca396_29483832",
+      "range": {
+        "startLine": 14880,
+        "startChar": 20,
+        "endLine": 14880,
+        "endChar": 29
+      },
+      "revId": "67bce3295223ee76272dff08deb2d3d28056ffeb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
