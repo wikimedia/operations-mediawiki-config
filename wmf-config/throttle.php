@@ -66,4 +66,5 @@ $wmgThrottlingExceptions[] = [ // T212226
 	'dbname' => 'enwiki',
 	'value' => 15 // 12 expected
 ];
+
 ## Add throttling definitions above.
