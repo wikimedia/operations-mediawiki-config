@@ -34,6 +34,24 @@
       "revId": "27b51695f060336e8168aa75f959e9f4fc51b572",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ca52ffc3_129c3bbc",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2019-02-05T21:38:19Z",
+      "side": 1,
+      "message": "Does the set_include_path() exist here in the first place only because we wanted to include $IP and /usr/local/lib/php, or also because we wanted to remove . and /srv/mediawiki/php? This goes back to the initial checkin of operations/mediawiki-config, so git history doesn\u0027t help.\n\nYou can see in T215224#4927484 what the include path is being set to by composer, which does just prepend its paths to the existing path.\n\nAt any rate, I\u0027d be wary of going back to including . in particular when we haven\u0027t had it in the path for many years. My goal here was just to add in composer\u0027s paths without changing anything else. If you want to follow up to change the non-composer bits or submit your own patch to do something different, feel free.",
+      "parentUuid": "fc7777df_20ed7936",
+      "revId": "27b51695f060336e8168aa75f959e9f4fc51b572",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
