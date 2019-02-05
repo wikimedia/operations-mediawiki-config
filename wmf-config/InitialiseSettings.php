@@ -20370,6 +20370,11 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
+'wmgWikibaseRepoIdGeneratorSeparateDbConnection' => [
+	'default' => false,
+	'testwikidatawiki' => true,
+],
+
 'wmgUseTemplateSandbox' => [
 	'default' => true,
 	'loginwiki' => false,
