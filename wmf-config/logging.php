@@ -88,6 +88,15 @@ $wmgMonologProcessors = [
 	'web' => [
 		'class' => '\\Monolog\\Processor\\WebProcessor',
 	],
+	'php' => [
+		'factory' => function () {
+			/** T215350: add PHP version information during the rollout of PHP7 */
+			return function ( array $record ) {
+				$record['extra']['phpversion'] = phpversion();
+				return $record;
+			};
+		},
+	],
 	'normalized_message' => [
 		'factory' => function () {
 			/**
@@ -114,7 +123,7 @@ $wmgMonologProcessors = [
 				$record['extra']['normalized_message'] = substr( $nm, 0, 255 );
 				return $record;
 			};
-		}
+		},
 	],
 	'shard' => [
 		'factory' => function () {
@@ -127,8 +136,8 @@ $wmgMonologProcessors = [
 					: 's3';
 				return $record;
 			};
-		}
-	]
+		},
+	],
 ];
 
 $wmgMonologHandlers = [
