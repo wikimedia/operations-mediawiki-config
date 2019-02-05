@@ -88,6 +88,24 @@
       "revId": "27b51695f060336e8168aa75f959e9f4fc51b572",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "267f0fc5_4f18b3a6",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-02-05T22:16:46Z",
+      "side": 1,
+      "message": "Yeah, I mentioned core as matter of principal. that is, core, wmf-config composer, and core composer are all in this run-time together and should in generally be able to add things to it and expect it to work.",
+      "parentUuid": "7e06b272_18062ad6",
+      "revId": "27b51695f060336e8168aa75f959e9f4fc51b572",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
