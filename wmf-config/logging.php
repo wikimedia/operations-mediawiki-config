@@ -79,6 +79,9 @@ if ( getenv( 'MW_DEBUG_LOCAL' ) ) {
 // a message in reverse list order (bottom to top). The normalized_message
 // processor needs to be listed *after* the psr processor to work as expected.
 $wmgMonologProcessors = [
+	'php' => [
+		'class' => '\\MediaWiki\\Logger\\Monolog\\PhpVersionProcessor',
+	],
 	'wiki' => [
 		'class' => '\\MediaWiki\\Logger\\Monolog\\WikiProcessor',
 	],
