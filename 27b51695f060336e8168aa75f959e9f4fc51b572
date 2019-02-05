@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "15601a97_2c3164e2",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2019-02-05T15:01:31Z",
+      "side": 1,
+      "message": "cf. https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/core/+/1762dcfd2f1bc8c33e059dba076c1af1503f9378/includes/Setup.php#68",
+      "revId": "27b51695f060336e8168aa75f959e9f4fc51b572",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
