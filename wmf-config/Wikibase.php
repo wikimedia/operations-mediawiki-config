@@ -198,6 +198,8 @@ if ( $wmgUseWikibaseRepo ) {
 
 	// Temporary, see T184933
 	$wgWBRepoSettings['useKartographerGlobeCoordinateFormatter'] = true;
+
+	$wgWBRepoSettings['idGeneratorSeparateDbConnection'] = $wmgWikibaseRepoIdGeneratorSeparateDbConnection;
 }
 
 if ( $wmgUseWikibaseClient ) {
