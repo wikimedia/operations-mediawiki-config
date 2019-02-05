@@ -52,6 +52,24 @@
       "revId": "27b51695f060336e8168aa75f959e9f4fc51b572",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "32aa7f4f_639374e1",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-02-05T21:41:56Z",
+      "side": 1,
+      "message": "Good point. This isn\u0027t just about trying to make it match what it would otherwise be, it\u0027s also about keeping out the other bits we don\u0027t want.\n\nI suppose we\u0027ll want to experiment after this with removing $IP and the other two include paths, assuming we don\u0027t use them currently.\n\nThen after that, we could try and find a way to make them not be in the include path in the first place, e.g. through php.ini or some such, then we could remove this in favour of MW core and Composer adding their bits and nothing else being in there.",
+      "parentUuid": "ca52ffc3_129c3bbc",
+      "revId": "27b51695f060336e8168aa75f959e9f4fc51b572",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
