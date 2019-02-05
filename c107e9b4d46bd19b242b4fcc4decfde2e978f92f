@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "65b1bb50_16c4d8cf",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-02-05T22:21:56Z",
+      "side": 1,
+      "message": "^^^ this translates \u0027channel\u0027 \u003d\u003e \u0027debug\u0027 to \u0027channel\u0027 \u003d\u003e [ \u0027udp2log\u0027 \u003d\u003e \u0027debug\u0027 ]",
+      "range": {
+        "startLine": 243,
+        "startChar": 37,
+        "endLine": 243,
+        "endChar": 59
+      },
+      "revId": "c107e9b4d46bd19b242b4fcc4decfde2e978f92f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dfa026a3_ea22e984",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-02-05T22:21:56Z",
+      "side": 1,
+      "message": "^^^ this further translates \u0027channel\u0027 \u003d\u003e \u0027debug\u0027 to \u0027channel\u0027 \u003d\u003e [ \u0027udp\u0027 \u003d\u003e \u0027debug\u0027, \u0027logstash\u0027 \u003d\u003e \u0027info\u0027 ].",
+      "range": {
+        "startLine": 247,
+        "startChar": 17,
+        "endLine": 247,
+        "endChar": 106
+      },
+      "revId": "c107e9b4d46bd19b242b4fcc4decfde2e978f92f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
