@@ -106,6 +106,24 @@
       "revId": "27b51695f060336e8168aa75f959e9f4fc51b572",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3a443489_13584259",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2019-02-05T22:34:48Z",
+      "side": 1,
+      "message": "\u003e Then after that, we could try and find a way to make them not be in the include path in the first place, e.g. through php.ini or some such, then we could remove this in favour of MW core and Composer adding their bits and nothing else being in there.\n\nOTOH it is pretty easy to catch unwanted includes at this point, while preventing them in INI files seems inherently fragile. Not sure how much we care about robustness (security maybe, if some of the included-by-default directories have different write permissions? seems unlikely though), but four extra lines of code seems like a small price to pay.\n\nAnyway this patch fixes a nasty bug in production which probably causes some Echo notifications to fail, so let\u0027s get it out before all else.",
+      "parentUuid": "267f0fc5_4f18b3a6",
+      "revId": "27b51695f060336e8168aa75f959e9f4fc51b572",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
