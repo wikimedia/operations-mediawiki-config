@@ -80,7 +80,14 @@ if ( !class_exists( 'MWMultiVersion' ) ) {
 }
 $multiVersion = MWMultiVersion::getInstance();
 
-set_include_path( "$IP:/usr/local/lib/php:/usr/share/php" );
+$includePaths = [ $IP, '/usr/local/lib/php', '/usr/share/php' ];
+if ( is_readable( "$IP/vendor/composer/include_paths.php" ) ) {
+	$includePaths = array_merge(
+		require "$IP/vendor/composer/include_paths.php",
+		$includePaths
+	);
+}
+set_include_path( implode( PATH_SEPARATOR, $includePaths ) );
 
 ### List of some service hostnames
 # 'meta'    : meta wiki for user editable content
