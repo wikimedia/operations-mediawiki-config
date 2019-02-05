@@ -16,6 +16,24 @@
       "revId": "27b51695f060336e8168aa75f959e9f4fc51b572",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fc7777df_20ed7936",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-02-05T21:17:34Z",
+      "side": 1,
+      "message": "Re-creating the include path imho violates the separation of concerns and seems costly in terms of maintenance long-term.\n\nCan we instead do a pure \"add\" for the two bits we want to add? (usr lib, and usr share). Presumably that\u0027s composer does as well.",
+      "parentUuid": "15601a97_2c3164e2",
+      "revId": "27b51695f060336e8168aa75f959e9f4fc51b572",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
