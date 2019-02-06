@@ -124,6 +124,24 @@
       "revId": "27b51695f060336e8168aa75f959e9f4fc51b572",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "aa6b5ef6_73a9a0c0",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2019-02-06T15:32:34Z",
+      "side": 1,
+      "message": "\u0027.\u0027 is often the security problem with respect to unexpected write permissions, as it\u0027s hard to know that the cwd is always going to be what you expect.\n\nBut, I just learned, even if \".\" isn\u0027t in the include_path PHP still acts like the include_path implicitly had __DIR__ and \u0027.\u0027 at the end anyway. Sigh. Still better for it to be at the very end rather than before the system directories though.",
+      "parentUuid": "3a443489_13584259",
+      "revId": "27b51695f060336e8168aa75f959e9f4fc51b572",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
