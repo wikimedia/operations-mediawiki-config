@@ -67,7 +67,6 @@ bawiki
 bawikibooks
 bclwiki
 bdwikimedia
-be_x_oldwiki
 betawikiversity
 bewiki
 bewikibooks
@@ -75,6 +74,7 @@ bewikimedia
 bewikiquote
 bewikisource
 bewiktionary
+be_x_oldwiki
 bgwikibooks
 bgwikinews
 bgwikiquote
@@ -572,10 +572,10 @@ orwiktionary
 oswiki
 otrs_wikiwiki
 outreachwiki
-pa_uswikimedia
 pagwiki
 pamwiki
 papwiki
+pa_uswikimedia
 pawiki
 pawikibooks
 pawikisource
@@ -876,7 +876,6 @@ zh_min_nanwikibooks
 zh_min_nanwikiquote
 zh_min_nanwikisource
 zh_min_nanwiktionary
-zh_yuewiki
 zhwikibooks
 zhwikinews
 zhwikiquote
@@ -884,6 +883,7 @@ zhwikisource
 zhwikiversity
 zhwikivoyage
 zhwiktionary
+zh_yuewiki
 zuwiki
 zuwikibooks
 zuwiktionary

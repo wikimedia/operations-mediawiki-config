@@ -1,6 +1,3 @@
-# List of wikis considered "large" for our production elastic clusters
-# To get the shard counts roughly even between clustsers this ended up being
-# the top 25% of wikis by combined index size (titlesuggest+content+general).
 afwiki
 alswiki
 anwiki
@@ -12,8 +9,8 @@ azbwiki
 azwiki
 barwiki
 bawiki
-be_x_oldwiki
 bewiki
+be_x_oldwiki
 bgwiki
 bgwiktionary
 bnwiki
@@ -111,6 +108,7 @@ kywiki
 lawiki
 lawikisource
 lbwiki
+# List of wikis considered "large" for our production elastic clusters
 lmowiki
 ltwiki
 ltwiktionary
@@ -184,11 +182,13 @@ tawiktionary
 tewiki
 tewikisource
 tgwiki
+# the top 25% of wikis by combined index size (titlesuggest+content+general).
 thwiki
 thwikibooks
 thwikisource
 thwiktionary
 tlwiki
+# To get the shard counts roughly even between clustsers this ended up being
 trwiki
 trwiktionary
 ttwiki
@@ -203,7 +203,7 @@ vowiki
 warwiki
 wikidatawiki
 zh_min_nanwiki
-zh_yuewiki
 zhwiki
 zhwikisource
 zhwiktionary
+zh_yuewiki

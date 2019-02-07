@@ -68,7 +68,6 @@ bawiki
 bawikibooks
 bclwiki
 bdwikimedia
-be_x_oldwiki
 betawikiversity
 bewiki
 bewikibooks
@@ -76,6 +75,7 @@ bewikimedia
 bewikiquote
 bewikisource
 bewiktionary
+be_x_oldwiki
 bgwiki
 bgwikibooks
 bgwikinews
@@ -351,10 +351,10 @@ hzwiki
 iawiki
 iawikibooks
 iawiktionary
+id_internalwikimedia
 idwiki
 idwikibooks
 idwikimedia
-id_internalwikimedia
 idwikiquote
 idwikisource
 idwiktionary
@@ -602,10 +602,10 @@ orwiktionary
 oswiki
 otrs_wikiwiki
 outreachwiki
-pa_uswikimedia
 pagwiki
 pamwiki
 papwiki
+pa_uswikimedia
 pawiki
 pawikibooks
 pawikisource
@@ -702,9 +702,9 @@ sewikibooks
 sewikimedia
 sgwiki
 sgwiktionary
+shnwiki
 shwiki
 shwiktionary
-shnwiki
 simplewiki
 simplewikibooks
 simplewikiquote
@@ -777,8 +777,8 @@ tcywiki
 techconductwiki
 tenwiki
 test2wiki
-testwiki
 testcommonswiki
+testwiki
 testwikidatawiki
 tetwiki
 tewiki
@@ -889,8 +889,8 @@ wikimania2015wiki
 wikimania2016wiki
 wikimania2017wiki
 wikimania2018wiki
-wikimaniawiki
 wikimaniateamwiki
+wikimaniawiki
 wowiki
 wowikiquote
 wowiktionary
@@ -919,7 +919,6 @@ zh_min_nanwikibooks
 zh_min_nanwikiquote
 zh_min_nanwikisource
 zh_min_nanwiktionary
-zh_yuewiki
 zhwiki
 zhwikibooks
 zhwikinews
@@ -928,6 +927,7 @@ zhwikisource
 zhwikiversity
 zhwikivoyage
 zhwiktionary
+zh_yuewiki
 zuwiki
 zuwikibooks
 zuwiktionary

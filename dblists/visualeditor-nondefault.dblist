@@ -1,17 +1,3 @@
-# Group 0 wikis - all Group 0 wikis
-# Other wikis (e.g. Commons, Meta)
-# Private wikis
-# Security exemptions
-# Wikibookses
-# Wikimanias - all Wikimanias
-# Wikimedias
-# Wikinewses
-# Wikipedias
-# Wikiquotes
-# Wikisources
-# Wikiversities
-# Wikivoyages
-# Wiktionaries
 aawikibooks
 aawiktionary
 abwiktionary
@@ -199,6 +185,7 @@ gnwikibooks
 gnwiktionary
 gotwikibooks
 grantswiki
+# Group 0 wikis - all Group 0 wikis
 guwikibooks
 guwikiquote
 guwikisource
@@ -377,6 +364,7 @@ ombudsmenwiki
 omwiktionary
 orwikisource
 orwiktionary
+# Other wikis (e.g. Commons, Meta)
 outreachwiki
 pa_uswikimedia
 pawikibooks
@@ -390,6 +378,7 @@ plwikiquote
 plwikisource
 plwiktionary
 pnbwiktionary
+# Private wikis
 pswikibooks
 pswikivoyage
 pswiktionary
@@ -432,6 +421,7 @@ scwiktionary
 sdwikinews
 sdwiktionary
 searchcomwiki
+# Security exemptions
 sewikibooks
 sewikimedia
 sgwiktionary
@@ -551,7 +541,17 @@ vowiktionary
 wawikibooks
 wawiktionary
 wg_enwiki
+# Wikibookses
 wikidatawiki
+# Wikimanias - all Wikimanias
+# Wikimedias
+# Wikinewses
+# Wikipedias
+# Wikiquotes
+# Wikisources
+# Wikiversities
+# Wikivoyages
+# Wiktionaries
 wowikiquote
 wowiktionary
 xhwikibooks
