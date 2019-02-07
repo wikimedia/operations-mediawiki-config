@@ -303,6 +303,8 @@ if ( $wmgUseWikibaseClient ) {
 	if ( isset( $wmgWikibaseClientPageSchemaSplitTestBuckets ) ) {
 		$wgWBClientSettings['pageSchemaSplitTestBuckets'] = $wmgWikibaseClientPageSchemaSplitTestBuckets;
 	}
+
+	$wgWBClientSettings['addEntityUsagesBatchSize'] = $wmgWikibaseClientAddEntityUsagesBatchSize;
 }
 
 unset( $wmgWBSharedCacheKey );
