@@ -58,38 +58,27 @@ $common = [
 
 $services = [
 	'eqiad' => $common + [
-		// elasticsearch must be accessed by hostname,
-		// for SSL certificate verification.
-		'search' => [
-			// TODO remove in favor of search-chi
-			[
-				'host' => 'search.svc.eqiad.wmnet',
-				'transport' => 'Https',
-				'port' => 9243,
-			]
-		],
-
 		'search-chi' => [
-			[
-				'host' => 'search.svc.eqiad.wmnet',
-				'transport' => 'Https',
-				'port' => 9243,
+			[ // forwarded to https://search.svc.eqiad.wmnet:9243/
+				'host' => 'localhost',
+				'transport' => 'Http',
+				'port' => 19243,
 			]
 		],
 
 		'search-psi' => [
-			[
-				'host' => 'search.svc.eqiad.wmnet',
-				'transport' => 'Https',
-				'port' => 9643,
+			[ // forwarded to https://search.svc.eqiad.wmnet:9643/
+				'host' => 'localhost',
+				'transport' => 'Http',
+				'port' => 19643,
 			]
 		],
 
 		'search-omega' => [
-			[
-				'host' => 'search.svc.eqiad.wmnet',
-				'transport' => 'Https',
-				'port' => 9443,
+			[ // forwarded to https://search.svc.eqiad.wmnet:9443/
+				'host' => 'localhost',
+				'transport' => 'Http',
+				'port' => 19443,
 			]
 		],
 
@@ -116,35 +105,27 @@ $services = [
 
 	],
 	'codfw' => $common + [
-		'search' => [
-			// TODO remove in favor of search-chi
-			[
-				'host' => 'search.svc.codfw.wmnet',
-				'transport' => 'Https',
-				'port' => 9243,
-			]
-		],
-
 		'search-chi' => [
-			[
-				'host' => 'search.svc.codfw.wmnet',
-				'transport' => 'Https',
-				'port' => 9243,
+			[ // forwarded to https://search.svc.codfw.wmnet:9243/
+				'host' => 'localhost',
+				'transport' => 'Http',
+				'port' => 14243,
 			]
 		],
 
 		'search-psi' => [
-			[
-				'host' => 'search.svc.codfw.wmnet',
-				'transport' => 'Https',
-				'port' => 9643,
+			[ // forwarded to https://search.svc.codfw.wmnet:9643/
+				'host' => 'localhost',
+				'transport' => 'Http',
+				'port' => 14643,
 			]
 		],
+
 		'search-omega' => [
-			[
-				'host' => 'search.svc.codfw.wmnet',
-				'transport' => 'Https',
-				'port' => 9443,
+			[ // forwarded to https://search.svc.codfw.wmnet:9443/
+				'host' => 'localhost',
+				'transport' => 'Http',
+				'port' => 14443,
 			]
 		],
 

@@ -13,13 +13,6 @@ return [
 		'xenon' => 'deployment-fluorine02.deployment-prep.eqiad.wmflabs',
 		'xhgui' => false, // Not yet available in Beta Cluster, T180761
 		'statsd' => 'labmon1001.eqiad.wmnet',
-		'search' => [
-			// TODO: remove once search-chi is used everywhere
-			// These MUST match the installed SSL certs
-			'deployment-elastic05.deployment-prep.eqiad.wmflabs',
-			'deployment-elastic06.deployment-prep.eqiad.wmflabs',
-			'deployment-elastic07.deployment-prep.eqiad.wmflabs',
-		],
 		'search-chi' => [
 			// These MUST match the installed SSL certs
 			'deployment-elastic05.deployment-prep.eqiad.wmflabs',
