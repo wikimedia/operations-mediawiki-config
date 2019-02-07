@@ -22426,6 +22426,13 @@ $wgConf->settings = [
 	'cswiki' => true,
 ],
 
+'wgGEHelpPanelSearchEnabled' => [
+	'default' => false,
+	'testwiki' => true,
+	'kowiki' => false,
+	'cswiki' => false,
+],
+
 'wgGEHelpPanelLoggingEnabled' => [
 	'default' => true,
 ],
