@@ -7,6 +7,7 @@ cluster configuration. Omitted files include passwords and security measures.
 dblists/
  List of wiki databases.
  For labs-only dblists, add "-labs" suffix before the file extension.
+ If you add a new wiki, make the files are sorted using `LC_COLLATE=C sort -n file -o file`.
 
 errorpages/
  Central management of error pages used by app servers at the PHP or Apache level.

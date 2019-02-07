@@ -199,6 +199,27 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 	}
 
 	/**
+	 * This test ensures that all dblists are alphasorted
+	 */
+	public function testListsAreSorted() {
+		$lists = DBList::getLists();
+		foreach ( $lists as $listname => $dbnames ) {
+			if ( strpos( $listname, 'computed' ) !== false ) {
+				continue;
+			}
+
+			$origdbnames = $dbnames;
+			sort( $dbnames );
+
+			$this->assertEquals(
+				$origdbnames,
+				$dbnames,
+				"{$listname}.dblist is not alphasorted"
+			);
+		}
+	}
+
+	/**
 	 * @note Does not support special wikis in RTL languages, luckily there are none currently
 	 */
 	public function testRtlDblist() {
