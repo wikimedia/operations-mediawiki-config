@@ -20362,6 +20362,10 @@ $wgConf->settings = [
 	'testwikidatawiki' => true,
 ],
 
+'wmgWikibaseClientAddEntityUsagesBatchSize' => [
+	'default' => 300,
+],
+
 'wmgUseTemplateSandbox' => [
 	'default' => true,
 	'loginwiki' => false,
