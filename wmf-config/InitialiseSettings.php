@@ -18523,25 +18523,16 @@ $wgConf->settings = [
 ],
 'wmgUseEducationProgram' => [
 	'default' => false,
-	'arwiki' => true, // T59729
-	'cawiki' => true, // T73381
 	'cswiki' => true, // T56223
-	'dewikiversity' => true,
 	'elwiki' => true, // T58771
 	'enwiki' => true,
-	'enwikinews' => true, // T55984
 	'eswiki' => true, // T56826
 	'fawiki' => true,
-	'frwikisource' => true, // T105853
 	'hewiki' => true, // T50848
-	'hewiktionary' => true, // T89393
 	'itwikiversity' => true, // T162692
 	'lvwiki' => true, // T89898
-	'mkwiki' => true, // T50262
-	'nlwiki' => true, // T52574
 	'ptwiki' => true, // T54870
 	'ruwiki' => true, // T89588
-	'srwiki' => true, // T110619
 	'svwiki' => true, // T51009
 	'ukwiki' => true, // T66143
 ],
