@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "19482e08_40d4b4e0",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2019-02-08T14:11:17Z",
+      "side": 1,
+      "message": "This should be an array",
+      "range": {
+        "startLine": 72,
+        "startChar": 10,
+        "endLine": 72,
+        "endChar": 77
+      },
+      "revId": "574680cd2e63ea98cb7ba675a8493ef842987d9f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cac929f2_331300d8",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2019-02-08T14:11:17Z",
+      "side": 1,
+      "message": "range",
+      "range": {
+        "startLine": 72,
+        "startChar": 2,
+        "endLine": 72,
+        "endChar": 4
+      },
+      "revId": "574680cd2e63ea98cb7ba675a8493ef842987d9f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
