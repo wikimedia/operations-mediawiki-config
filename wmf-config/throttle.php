@@ -27,43 +27,12 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[] = [ // T213311
-	'from' => '2019-01-15T13:00 -5:00',
-	'to' => '2019-01-15T15:00 -5:00',
-	'IP' => '192.136.22.4',
+$wmgThrottlingExceptions[] = [ // T215446
+	'from' => '2019-02-09T10:00 -5:00',
+	'to' => '2019-02-09T17:00 -5:00',
+	'IP' => ['173.195.49.134', '173.195.49.163'],
 	'dbname' => 'enwiki',
-	'value' => 30 // 20 expected
+	'value' => 60 // 50 expected
 ];
 
-$wmgThrottlingExceptions[] = [ // T212917
-	'from' => '2019-01-15T11:00 -8:00',
-	'to' => '2019-01-15T14:00 -8:00',
-	'range' => [ '128.125.146.0/24', '128.125.148.0/24', '207.151.52.0/24', '207.151.53.0/26' ],
-	'dbname' => 'enwiki',
-	'value' => 70 // 60 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T213848
-	'from' => '2019-01-17T08:00 +0:00',
-	'to' => '2019-01-17T10:00 +0:00',
-	'IP' => [ '80.82.239.53', '185.86.90.141' ],
-	'dbname' => [ 'frwiki' ],
-	'value' => 50 // ? expected
-];
-
-$wmgThrottlingExceptions[] = [ // T213848
-	'from' => '2019-01-23T08:00 +0:00',
-	'to' => '2019-01-23T10:00 +0:00',
-	'IP' => [ '80.82.239.53', '185.86.90.141' ],
-	'dbname' => [ 'frwiki' ],
-	'value' => 50 // ? expected
-];
-
-$wmgThrottlingExceptions[] = [ // T212226
-	'from' => '2019-01-29T08:00 UTC',
-	'to' => '2019-01-29T14:00 UTC',
-	'IP' => '195.194.178.1',
-	'dbname' => 'enwiki',
-	'value' => 15 // 12 expected
-];
 ## Add throttling definitions above.
