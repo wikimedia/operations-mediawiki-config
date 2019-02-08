@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e695670_c3532bae",
+        "filename": "tests/dblistTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2019-02-08T02:39:08Z",
+      "side": 1,
+      "message": "Meh, yes.",
+      "range": {
+        "startLine": 173,
+        "startChar": 0,
+        "endLine": 173,
+        "endChar": 42
+      },
+      "revId": "e20f7130492a5a3b5133352a104910a0f15f2637",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
