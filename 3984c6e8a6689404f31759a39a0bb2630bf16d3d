@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1b9347c8_81871703",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 14848,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2019-02-08T13:21:08Z",
+      "side": 1,
+      "message": "Could it be the rebase accidentally restored the wrong ID?",
+      "range": {
+        "startLine": 14848,
+        "startChar": 20,
+        "endLine": 14848,
+        "endChar": 29
+      },
+      "revId": "3984c6e8a6689404f31759a39a0bb2630bf16d3d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
