@@ -114,20 +114,14 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 			"All names in 'all.dblist' are in exactly one of the lists" );
 	}
 
-	/**
-	 * This test ensures that any dblists that use expressions,
-	 * are either not used in production, or are pre-computed.
-	 */
-	public function testExpressionListsMustBeComputed() {
+	public function testExpressionListsNaming() {
 		// Based on DBList::getLists()
 		$files = glob( dirname( __DIR__ ) . '/dblists/*.dblist' );
-		$suffix = '-computed.dblist';
-		// The following array should only contain dblists that:
-		// 1) use expressions, and
-		// 2) only exist as convenience preset for command-line usage,
-		// and are NOT read by wmf-config/CommonSettings.php or otherwise
-		// needed by wmf-config.
-		$notUsedFromWeb = [
+
+		// The following are dblists that do use expressions but aren't
+		// named as "-computed" because they're only used on the
+		// command-line and don't need an expanded variant for wmf-config.
+		$cliOnly = [
 			'echo.dblist',
 			'open.dblist',
 			'group1.dblist', // FIXME: Used in wmf-config
@@ -135,24 +129,51 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 		];
 		foreach ( $files as $file ) {
 			$name = basename( $file );
-			if ( strpos( $name, 'labs' ) !== false
-				|| in_array( $name, $notUsedFromWeb )
-			) {
+			if ( strpos( $name, 'labs' ) !== false ) {
 				continue;
 			}
-			if ( strpos( file_get_contents( $file ), '%%' ) !== false ) {
+			if ( strpos( file_get_contents( $file ), '%%' ) !== false && !in_array( $name, $cliOnly ) ) {
+				$suffix = '-computed.dblist';
+				$expected = preg_replace( '/(-computed)?\.dblist$/', $suffix, $name );
 				$this->assertEquals(
-					$suffix,
-					substr( $name, -strlen( $suffix ) ),
+					$expected,
+					$name,
 					"Computed list '$name' must end its name with '$suffix'"
 				);
 			} else {
 				$this->assertFalse(
 					strpos( $name, 'computed' ),
-					"Keyword 'computed' found in non-computed list '$name'"
+					"Keyword 'computed' must be absent from non-computed list '$name'"
 				);
 			}
 		}
+	}
+
+	/**
+	 * Production code that is web-facing MUST NOT use dblists
+	 * that contain expressions because these have performance cost.
+	 *
+	 * Assert that any dblist that uses expressions has its name end in "-computed".
+	 * These may be used as-is on the command-line. If they are needed in
+	 * InitialiseSettings or CommonSettings, then the expression must be
+	 * expanded and saved as its own dblist file.
+	 */
+	public function testNoExpressionListUsedInSettings() {
+		$dblists = DBList::getDblistsUsedInSettings();
+
+		$actual = [];
+		foreach ( $dblists as $file ) {
+			$content = file_get_contents( dirname( __DIR__ ) . "/dblists/$file.dblist" );
+			if ( strpos( $content, '%%' ) !== false ) {
+				$actual[] = $file;
+			}
+		}
+
+		// FIXME
+		$grandgathered = [ 'group1', 'group2' ];
+		$actual = array_diff( $actual, $grandgathered );
+
+		$this->assertEquals( [], $actual, 'Unexpanded dblists must not be used in production' );
 	}
 
 	/**
