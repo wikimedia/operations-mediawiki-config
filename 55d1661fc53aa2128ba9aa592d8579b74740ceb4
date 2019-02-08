@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "adecc8a7_bb0b34e6",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2019-02-08T15:48:25Z",
+      "side": 1,
+      "message": "missing an IP per T215446: 173.195.49.134",
+      "revId": "55d1661fc53aa2128ba9aa592d8579b74740ceb4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
