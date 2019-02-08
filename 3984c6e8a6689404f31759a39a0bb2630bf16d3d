@@ -22,6 +22,30 @@
       "revId": "3984c6e8a6689404f31759a39a0bb2630bf16d3d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bb1186fb_1a8a5399",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 14848,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-02-08T13:47:52Z",
+      "side": 1,
+      "message": "Yeah you\u0027re correct. My local version of the patch still had the wrong ID since I amended the patch last time from the Gerrit UI. Fixing this right now.",
+      "parentUuid": "1b9347c8_81871703",
+      "range": {
+        "startLine": 14848,
+        "startChar": 20,
+        "endLine": 14848,
+        "endChar": 29
+      },
+      "revId": "3984c6e8a6689404f31759a39a0bb2630bf16d3d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
