@@ -118,7 +118,7 @@ $wgLBFactoryConf = [
 		'db1099:3311' => 50, # B2 3.6TB 512GB # rc, log: s1 and s8
 		'db1105:3311' => 50, # C3 3.6TB 512GB # rc, log: s1 and s2
 		'db1106' => 50,     # D3 3.6TB 512GB, vslow, dump # master for sanitarium db1124
-		# 'db1114' => 200,    # D4 3.6TB 512GB, api, T214720
+		'db1118' => 1,      # D4 3.6TB 512GB, api
 		'db1119' => 200,    # B8 3.6TB 512GB, api
 	],
 	's2' => [
@@ -289,9 +289,9 @@ $wgLBFactoryConf = [
 			'db1106' => 1,
 		],
 		'api' => [
-			'db1080' => 1,
-			#'db1114' => 1,
-			'db1119' => 1,
+			'db1080' => 10,
+			'db1118' => 1,
+			'db1119' => 10,
 		],
 	],
 	's2' => [
@@ -572,7 +572,7 @@ $wgLBFactoryConf = [
 	'db1110' => '10.64.32.73', # do not remove or comment out
 	'db1113:3315' => '10.64.16.11:3315', # do not remove or comment out
 	'db1113:3316' => '10.64.16.11:3316', # do not remove or comment out
-	'db1114' => '10.64.48.173', # do not remove or comment out
+	'db1118' => '10.64.16.12', # do not remove or comment out
 	'db1119' => '10.64.16.13', # do not remove or comment out
 	'db1120' => '10.64.32.11', # do not remove or comment out
 	'db1121' => '10.64.32.12', # do not remove or comment out
