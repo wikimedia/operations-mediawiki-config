@@ -448,7 +448,6 @@ if ( $wgDBname === 'wikidatawiki' ) {
 	};
 }
 
-$wgSessionsInObjectCache = true;
 session_name( $lang . 'wikiSession' );
 
 // Use PBKDF2 for password hashing (T70766)
