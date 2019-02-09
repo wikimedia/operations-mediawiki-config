@@ -80,7 +80,14 @@ if ( !class_exists( 'MWMultiVersion' ) ) {
 }
 $multiVersion = MWMultiVersion::getInstance();
 
-set_include_path( "$IP:/usr/local/lib/php:/usr/share/php" );
+$includePaths = [ $IP, '/usr/local/lib/php', '/usr/share/php' ];
+if ( is_readable( "$IP/vendor/composer/include_paths.php" ) ) {
+	$includePaths = array_merge(
+		require "$IP/vendor/composer/include_paths.php",
+		$includePaths
+	);
+}
+set_include_path( implode( PATH_SEPARATOR, $includePaths ) );
 
 ### List of some service hostnames
 # 'meta'    : meta wiki for user editable content
@@ -199,18 +206,44 @@ if ( !$globals ) {
 	$wikiTags = [];
 	# When updating list please run ./docroot/noc/createTxtFileSymlinks.sh
 	# Expand computed dblists with ./multiversion/bin/expanddblist
-	foreach ( [ 'private', 'fishbowl', 'special', 'closed', 'flow', 'flaggedrevs', 'small', 'medium',
-			'large', 'wikimania', 'wikidata', 'wikidatarepo', 'wikidataclient', 'wikidataclient-test', 'visualeditor-nondefault',
-			'commonsuploads', 'nonbetafeatures', 'group0', 'group1', 'group2', 'wikipedia', 'nonglobal',
-			'wikitech', 'nonecho', 'mobilemainpagelegacy',
-			'wikipedia-cyrillic', 'wikipedia-e-acute', 'wikipedia-devanagari',
-			'wikipedia-english',
-			'nowikidatadescriptiontaglines',
-			'related-articles-footer-blacklisted-skins',
-			'top6-wikipedia', 'rtl',
-			'pp_stage0', 'pp_stage1',
-			'cirrussearch-big-indices'
-		] as $tag ) {
+	foreach ( [
+		'private',
+		'fishbowl',
+		'special',
+		'closed',
+		'flow',
+		'flaggedrevs',
+		'small',
+		'medium',
+		'large',
+		'wikimania',
+		'wikidata',
+		'wikibaserepo',
+		'wikidataclient',
+		'wikidataclient-test',
+		'visualeditor-nondefault',
+		'commonsuploads',
+		'nonbetafeatures',
+		'group0',
+		'group1',
+		'group2',
+		'wikipedia',
+		'nonglobal',
+		'wikitech',
+		'nonecho',
+		'mobilemainpagelegacy',
+		'wikipedia-cyrillic',
+		'wikipedia-e-acute',
+		'wikipedia-devanagari',
+		'wikipedia-english',
+		'nowikidatadescriptiontaglines',
+		'related-articles-footer-blacklisted-skins',
+		'top6-wikipedia',
+		'rtl',
+		'pp_stage0',
+		'pp_stage1',
+		'cirrussearch-big-indices',
+	] as $tag ) {
 		$dblist = MWWikiversions::readDbListFile( $tag );
 		if ( in_array( $wgDBname, $dblist ) ) {
 			$wikiTags[] = $tag;
@@ -2255,11 +2288,9 @@ if ( $wmgUseRestbaseVRS ) {
 if ( $wmgUseParsoid ) {
 	$wmgParsoidURL = $wmfLocalServices['parsoid'];
 
-	// The wiki prefix to use
-	$wgParsoidWikiPrefix = $wgDBname; // deprecated
 	$wgVirtualRestConfig['modules']['parsoid'] = [
 		'url' => $wmgParsoidURL,
-		'prefix' => $wgDBname, // deprecated
+		'prefix' => $wgDBname, // The wiki prefix to use; deprecated
 		'domain' => $wgCanonicalServer,
 		'forwardCookies' => $wmgParsoidForwardCookies,
 		'restbaseCompat' => false
@@ -2728,15 +2759,10 @@ if ( $wmgUseEcho ) {
 	// This is intentionally loaded *before* the GlobalPreferences extension (below).
 	wfLoadExtension( 'Echo' );
 
-	if ( isset( $wgEchoConfig ) ) {
-		// Eventlogging for Schema:EchoMail
-		$wgEchoConfig['eventlogging']['EchoMail']['enabled'] = true;
-		// Eventlogging for Schema:EchoInteraction
-		$wgEchoConfig['eventlogging']['EchoInteraction']['enabled'] = true;
-	} else {
-		$wgEchoEventLoggingSchemas['EchoMail']['enabled'] = true;
-		$wgEchoEventLoggingSchemas['EchoInteraction']['enabled'] = true;
-	}
+	// Eventlogging for Schema:EchoMail
+	$wgEchoEventLoggingSchemas['EchoMail']['enabled'] = true;
+	// Eventlogging for Schema:EchoInteraction
+	$wgEchoEventLoggingSchemas['EchoInteraction']['enabled'] = true;
 
 	$wgEchoEnableEmailBatch = $wmgEchoEnableEmailBatch;
 	$wgEchoEmailFooterAddress = $wmgEchoEmailFooterAddress;
@@ -2763,11 +2789,6 @@ if ( $wmgUseEcho ) {
 			$wgDefaultUserOptions['echo-cross-wiki-notifications'] = 1;
 		}
 	}
-
-	// Whether to show the footer notice
-	$wgEchoShowFooterNotice = $wmgEchoShowFooterNotice;
-	// URL to use in the footer notice
-	$wgEchoFooterNoticeURL = $wmgEchoFooterNoticeURL;
 
 	// Whether to make mention failure/success notifications available
 	$wgEchoMentionStatusNotifications = $wmgEchoMentionStatusNotifications;
@@ -2877,8 +2898,6 @@ if ( $wmgUseFlow && $wmgUseParsoid ) {
 	$wgFlowCluster = $wmgFlowCluster;
 	$wgFlowExternalStore = $wgDefaultExternalStore;
 	$wgFlowMaintenanceMode = $wmgFlowMaintenanceMode;
-
-	$wgFlowEventLogging = true;
 
 	if ( $wmgFlowAllowAutoconfirmedEdit ) {
 		$wgGroupPermissions['autoconfirmed']['flow-edit-post'] = true;
@@ -3545,8 +3564,14 @@ if ( $wmgUseRC2UDP ) {
 }
 
 // Confirmed can do anything autoconfirmed can.
-$wgGroupPermissions['confirmed'] = $wgGroupPermissions['autoconfirmed'];
-$wgGroupPermissions['confirmed']['skipcaptcha'] = true;
+// T213003: this should happen after all the extensions had been loaded, but
+// before their extension functions in case they're relying on permissions.
+array_unshift( $wgExtensionFunctions, function () {
+	global $wgGroupPermissions;
+
+	$wgGroupPermissions['confirmed'] = $wgGroupPermissions['autoconfirmed'];
+	$wgGroupPermissions['confirmed']['skipcaptcha'] = true;
+} );
 
 $wgImgAuthDetails = true;
 
