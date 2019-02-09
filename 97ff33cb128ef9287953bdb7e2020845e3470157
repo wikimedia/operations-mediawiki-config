@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d470bb1a_c04cdef1",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 451,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2019-02-09T22:49:48Z",
+      "side": 0,
+      "message": "And it\u0027s also the same as default",
+      "range": {
+        "startLine": 451,
+        "startChar": 0,
+        "endLine": 451,
+        "endChar": 32
+      },
+      "revId": "97ff33cb128ef9287953bdb7e2020845e3470157",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
