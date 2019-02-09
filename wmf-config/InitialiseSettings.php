@@ -5459,11 +5459,13 @@ $wgConf->settings = [
 # @} end of wmgAvroSchemas
 
 # wmgMonologChannels @{
-// Configure Monolog logging to udp2log, Logstash and/or kafka
+// Configure Monolog logging to udp2log (logfiles), Logstash and/or Kafka
+// See logging.php for more detailed information
 // channel => false  == ignore all log events on this channel
-// channel => level  == record all events of this level or higher
-// channel => [ 'udp2log'=>level, 'logstash'=>level, 'kafka'=>level, 'sample'=>rate ]
-// Defaults: [ 'udp2log'=>'debug', 'logstash'=>'info', 'kafka'=>false, 'sample'=>false ]
+// channel => level  == record all events of this level or higher to udp2log and logstash (except:
+//    logstash won't go below info level, use explicit logstash=>debug field for that)
+// channel => [ 'udp2log'=>level, 'logstash'=>level, 'kafka'=>level, 'sample'=>rate, 'buffer'=>buffer ]
+// Defaults: [ 'udp2log'=>'debug', 'logstash'=>'info', 'kafka'=>false, 'sample'=>false, 'buffer'=>false ]
 // Valid levels: 'debug', 'info', 'warning', 'error', false
 // Note: sampled logs will not be sent to Logstash
 // Note: Udp2log events are sent to udp://{$wmfUdp2logDest}/{$channel}
@@ -7478,8 +7480,8 @@ $wgConf->settings = [
 		103 => 'Komentet_diskutim',
 	],
 	'srwikinews' => [
-		102 => 'Коментар',
-		103 => 'Разговор_о_коментару',
+		100 => 'Портал',
+		101 => 'Разговор_о_порталу',
 	],
 	'svwikinews' => [
 		100 => 'Portal',
@@ -8877,19 +8879,18 @@ $wgConf->settings = [
 			'upload' => true, // exception for T14556
 		],
 		'rollbacker' => [ 'rollback' => true ],
-		'patroller' => [ 'autopatrol' => true, 'patrol' => true, 'abusefilter-log-detail' => true ],
-		'autopatrolled' => [ 'autopatrol' => true ],
+		'patroller' => [ // T214003
+			'autopatrol' => true,
+			'patrol' => true,
+			'abusefilter-log-detail' => true,
+			'upload_by_url' => true,
+		],
+		'autopatrolled' => [ 'autopatrol' => true, 'upload_by_url' => true ], // T214003
 		'filemover' => [ 'movefile' => true ],
 		'Image-reviewer' => [
 			'autopatrol' => true,
 			'upload_by_url' => true,
 			'patrol' => true, // T183835
-		 ],
-		'extended-uploader' => [
-			'autoconfirmed' => true,
-			'upload' => true,
-			'reupload' => true,
-			'upload_by_url' => true, // T182534
 		],
 		'sysop' => [
 			'changetags' => true, // T134196
@@ -8908,19 +8909,18 @@ $wgConf->settings = [
 			'upload' => true, // exception for T14556
 		],
 		'rollbacker' => [ 'rollback' => true ],
-		'patroller' => [ 'autopatrol' => true, 'patrol' => true, 'abusefilter-log-detail' => true ],
-		'autopatrolled' => [ 'autopatrol' => true ],
+		'patroller' => [ // T214003
+			'autopatrol' => true,
+			'patrol' => true,
+			'abusefilter-log-detail' => true,
+			'upload_by_url' => true,
+		],
+		'autopatrolled' => [ 'autopatrol' => true, 'upload_by_url' => true ], // T214003
 		'filemover' => [ 'movefile' => true ],
 		'Image-reviewer' => [
 			'autopatrol' => true,
 			'upload_by_url' => true,
 			'patrol' => true, // T183835
-		 ],
-		'extended-uploader' => [
-			'autoconfirmed' => true,
-			'upload' => true,
-			'reupload' => true,
-			'upload_by_url' => true, // T182534
 		],
 		'sysop' => [
 			'importupload' => true, // TestCommons testing purposes only
@@ -9104,7 +9104,6 @@ $wgConf->settings = [
 	],
 	'+eswiki' => [
 		'autoconfirmed' => [ 'collectionsaveascommunitypage' => false ], // T163767
-		'confirmed' => [ 'collectionsaveascommunitypage' => false ],
 		'rollbacker' => [
 			'rollback' => true,
 			'abusefilter-log-detail' => true, // T70319
@@ -9563,10 +9562,6 @@ $wgConf->settings = [
 			'upload' => false,
 			'reupload' => false,
 		],
-		'confirmed' => [ // T85621
-			'upload' => false,
-			'reupload' => false,
-		],
 		'rollbacker' => [ 'rollback' => true ],
 		'uploader' => [ // T85621
 			'upload' => true,
@@ -9650,6 +9645,7 @@ $wgConf->settings = [
 			'banner-protect' => true,
 			'centralnotice-admin' => true,
 			'editinterface' => true,
+			'protect' => true, // T209873
 		],
 		'flood' => [ // T17176
 			'bot' => true,
@@ -9777,20 +9773,6 @@ $wgConf->settings = [
 	'nowiki' => [
 		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'rollback' => true, 'unwatchedpages' => true, 'suppressredirect' => true, ],
 		'autopatrolled' => [ 'autopatrol' => true, 'unwatchedpages' => true ],
-		'confirmed' => [ // T125448
-			'autoconfirmed' => true,
-			'collectionsaveascommunitypage' => true,
-			'collectionsaveasuserpage' => true,
-			'editsemiprotected' => true,
-			'flow-edit-post' => true,
-			'mwoauthproposeconsumer' => true,
-			'mwoauthupdateownconsumer' => true,
-			'move' => true,
-			'reupload' => true,
-			'skipcaptcha' => true,
-			'transcode-reset' => true,
-			'upload' => true,
-		],
 	],
 	'+nowikibooks' => [
 		'user' => [ 'patrol' => false ],
@@ -10820,7 +10802,6 @@ $wgConf->settings = [
 			'autopatrolled',
 			'filemover',
 			'Image-reviewer',
-			'extended-uploader', // T180002
 			'upwizcampeditors'
 		],
 		'Image-reviewer' => [ 'Image-reviewer' ],
@@ -11573,7 +11554,6 @@ $wgConf->settings = [
 			'autopatrolled',
 			'filemover',
 			'Image-reviewer',
-			'extended-uploader', // T180002
 			'upwizcampeditors'
 		],
 	],
@@ -12515,7 +12495,7 @@ $wgConf->settings = [
 	'srnwiki' => [ 'incubator' ],
 	'srwiki' => [ 'wikt', 'meta' ], // T64533
 	'srwiktionary' => [ 'w' ],
-	'srwikinews' => [ 'no' ],
+	'srwikinews' => [ 'w:sr' ], // T214562
 	'srwikisource' => [ 'w' ],
 	'sswiki' => [ 've', 'st', 'zu', 'xh', 'af', 'en', 'es' ],
 	'sswiktionary' => [ 'w', 'en', 'af' ],
@@ -14062,19 +14042,7 @@ $wgConf->settings = [
 	'default' => 'AbuseFilterParser',
 ],
 'wgAbuseFilterRuntimeProfile' => [
-	'default' => false,
-	'commonswiki' => true,
-	'testcommonswiki' => true,
-	'dewiki' => true,
-	'enwiki' => true,
-	'eswikibooks' => true, // T190264
-	'eswiki' => true,
-	'itwiki' => true,
-	'mediawikiwiki' => true,
-	'metawiki' => true,
-	'ptwiki' => true,
-	'testwiki' => true,
-	'wikidatawiki' => true,
+	'default' => true, // T191039
 ],
 # @}
 
@@ -18556,25 +18524,16 @@ $wgConf->settings = [
 ],
 'wmgUseEducationProgram' => [
 	'default' => false,
-	'arwiki' => true, // T59729
-	'cawiki' => true, // T73381
 	'cswiki' => true, // T56223
-	'dewikiversity' => true,
 	'elwiki' => true, // T58771
 	'enwiki' => true,
-	'enwikinews' => true, // T55984
 	'eswiki' => true, // T56826
 	'fawiki' => true,
-	'frwikisource' => true, // T105853
 	'hewiki' => true, // T50848
-	'hewiktionary' => true, // T89393
 	'itwikiversity' => true, // T162692
 	'lvwiki' => true, // T89898
-	'mkwiki' => true, // T50262
-	'nlwiki' => true, // T52574
 	'ptwiki' => true, // T54870
 	'ruwiki' => true, // T89588
-	'srwiki' => true, // T110619
 	'svwiki' => true, // T51009
 	'ukwiki' => true, // T66143
 ],
@@ -18651,12 +18610,6 @@ $wgConf->settings = [
 	'private' => false,
 	'fishbowl' => false,
 	'nonglobal' => false,
-],
-'wmgEchoShowFooterNotice' => [
-	'default' => false,
-],
-'wmgEchoFooterNoticeURL' => [
-	'default' => '',
 ],
 # from and reply to address when Echo sends email notifications
 'wmgNotificationSender' => [
@@ -19374,7 +19327,7 @@ $wgConf->settings = [
 
 'wmgUseWikibaseRepo' => [
 	'default' => false,
-	'wikidatarepo' => true,
+	'wikibaserepo' => true,
 ],
 
 'wmgWBRepoCanonicalUriProperty' => [
@@ -19393,7 +19346,7 @@ $wgConf->settings = [
 
 'wmgWikibaseStringLimits' => [
 	'default' => null,
-	'wikidatarepo' => [
+	'wikibaserepo' => [
 		'multilang' => [
 			'length' => 250,
 		],
@@ -19425,7 +19378,7 @@ $wgConf->settings = [
 	'default' => [
 		'' => [
 			'repoDatabase' => 'wikidatawiki',
-			'baseUri' => 'https://www.wikidata.org/entity/',
+			'baseUri' => 'http://www.wikidata.org/entity/',
 			'entityNamespaces' => [
 				'item' => 0,
 				'property' => 120,
@@ -19625,6 +19578,13 @@ $wgConf->settings = [
 'wmgWikibaseRepoSpecialSiteLinkGroups' => [
 	'default' => [],
 	'wikidatawiki' => [
+		'commons',
+		'mediawiki',
+		'meta',
+		'species',
+		'wikidata',
+	],
+	'commonswiki' => [
 		'commons',
 		'mediawiki',
 		'meta',
@@ -20396,6 +20356,15 @@ $wgConf->settings = [
 
 'wmgWikibaseClientTrackLuaFunctionCallsPerSiteGroup' => [
 	'default' => true,
+],
+
+'wmgWikibaseRepoIdGeneratorSeparateDbConnection' => [
+	'default' => false,
+	'testwikidatawiki' => true,
+],
+
+'wmgWikibaseClientAddEntityUsagesBatchSize' => [
+	'default' => 300,
 ],
 
 'wmgUseTemplateSandbox' => [
@@ -22117,41 +22086,6 @@ $wgConf->settings = [
 
 'wgWMEWikidataCompletionSearchClicks' => [
 	'default' => [],
-	'wikidatawiki' => [
-		'enabled' => true,
-		'buckets' => [
-			'control' => [
-				'samplingRate' => 0.5,
-			],
-			'item_de_tuned' => [
-				'samplingRate' => 0.5,
-				'context' => 'item',
-				'language' => 'de',
-				'searchApiParameters' => [
-					'cirrusWBProfile' => 'wikibase_config_prefix_query-201901-de',
-					'cirrusRescoreProfile' => 'wikibase_config_entity_weight-201901-de',
-				],
-			],
-			'item_es_tuned' => [
-				'samplingRate' => 0.5,
-				'context' => 'item',
-				'language' => 'es',
-				'searchApiParameters' => [
-					'cirrusWBProfile' => 'wikibase_config_prefix_query-201901-es',
-					'cirrusRescoreProfile' => 'wikibase_config_entity_weight-201901-es',
-				],
-			],
-			'item_fr_tuned' => [
-				'samplingRate' => 0.5,
-				'context' => 'item',
-				'language' => 'fr',
-				'searchApiParameters' => [
-					'cirrusWBProfile' => 'wikibase_config_prefix_query-201901-fr',
-					'cirrusRescoreProfile' => 'wikibase_config_entity_weight-201901-fr',
-				],
-			],
-		],
-	],
 ],
 
 'wmgUsePageViewInfo' => [
@@ -22458,6 +22392,13 @@ $wgConf->settings = [
 	'cswiki' => true,
 ],
 
+'wgGEHelpPanelSearchEnabled' => [
+	'default' => false,
+	'testwiki' => true,
+	'kowiki' => false,
+	'cswiki' => false,
+],
+
 'wgGEHelpPanelLoggingEnabled' => [
 	'default' => true,
 ],
@@ -22566,6 +22507,10 @@ $wgConf->settings = [
 			'id' => 'bebold',
 		]
 	],
+],
+
+'wgEnableRollbackConfirmationPrompt' => [
+	'default' => false,
 ],
 
 ];

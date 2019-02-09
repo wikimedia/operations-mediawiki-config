@@ -1,4 +1,5 @@
 <?php
+define( 'MW_NO_SESSION', 'warn' ); // TODO: Change 'warn' to 1 if stable.
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 require MWMultiVersion::getMediaWiki( 'includes/WebStart.php', 'metawiki' );
 

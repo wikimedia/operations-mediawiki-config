@@ -198,6 +198,8 @@ if ( $wmgUseWikibaseRepo ) {
 
 	// Temporary, see T184933
 	$wgWBRepoSettings['useKartographerGlobeCoordinateFormatter'] = true;
+
+	$wgWBRepoSettings['idGeneratorSeparateDbConnection'] = $wmgWikibaseRepoIdGeneratorSeparateDbConnection;
 }
 
 if ( $wmgUseWikibaseClient ) {
@@ -301,6 +303,8 @@ if ( $wmgUseWikibaseClient ) {
 	if ( isset( $wmgWikibaseClientPageSchemaSplitTestBuckets ) ) {
 		$wgWBClientSettings['pageSchemaSplitTestBuckets'] = $wmgWikibaseClientPageSchemaSplitTestBuckets;
 	}
+
+	$wgWBClientSettings['addEntityUsagesBatchSize'] = $wmgWikibaseClientAddEntityUsagesBatchSize;
 }
 
 unset( $wmgWBSharedCacheKey );
