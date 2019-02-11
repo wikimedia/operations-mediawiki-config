@@ -5321,6 +5321,7 @@ $wgConf->settings = [
 	'ptwiki' => [ '', 'autoconfirmed', 'autoreviewer', 'sysop' ], // T41652
 	'rowiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T63172
 	'testwiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T61084
+	'viwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T215493
 ],
 # @} end of wgRestrictionLevels
 
@@ -5335,6 +5336,7 @@ $wgConf->settings = [
 	'+fawiki' => [ 'extendedconfirmed' ], // T140839
 	'+frwiki' => [ 'editextendedsemiprotected' ], // T132248
 	'+kowiki' => [ 'extendedconfirmed' ], // T184675
+	'+viwiki' => [ 'extendedconfirmed' ], // T215493
 ],
 
 'wgSiteNotice' => [
@@ -10381,12 +10383,16 @@ $wgConf->settings = [
 			'patrol' => true,
 			'protect' => true,
 			'rollback' => true,
-			'undelete' => true
-		],
+			'undelete' => true,
+			'extendedconfirmed' => true
+		], // T215493
 		'flood' => [ 'bot' => true ],
 		'rollbacker' => [ 'rollback' => true ],
 		'patroller' => [ 'patrol' => true ], // T48828
 		'autopatrolled' => [ 'autopatrol' => true ], // T48828
+		'sysop' => [ 'extendedconfirmed' => true ], // T215493
+		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T215493
+		'bot' => [ 'extendedconfirmed' => true ], // T215493
 	],
 	'+viwikibooks' => [
 		'eliminator' => [ // T202207
@@ -11316,7 +11322,8 @@ $wgConf->settings = [
 			'rollbacker',
 			'flood',
 			'patroller', // T48828
-			'autopatrolled' // T48828
+			'autopatrolled', // T48828
+			'extendedconfirmed' // T215493
 		],
 		'bureaucrat' => [
 			'eliminator', // T70612
@@ -12110,6 +12117,7 @@ $wgConf->settings = [
 			'flood',
 			'patroller', // T48828
 			'autopatrolled' // T48828
+			'extendedconfirmed' // T215493
 		],
 		'bureaucrat' => [
 			'eliminator', // T70612
@@ -13507,6 +13515,15 @@ $wgConf->settings = [
 			[ APCOND_AGE, 14 * 86400 ],
 			[ APCOND_EDITCOUNT, 20 ],
 		],
+	],
+	'viwiki' => [
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 30 * 86400 ], // 30 days * seconds in a day
+			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+			[ '!', [ APCOND_INGROUPS, 'eliminator' ] ],
+		], // T215493
 	],
 ],
 
