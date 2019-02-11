@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "f463b700_587036a1",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3596,
+      "author": {
+        "id": 55
+      },
+      "writtenOn": "2019-02-11T20:52:06Z",
+      "side": 1,
+      "message": "Yup, this is the intermediate patch, exactly.",
+      "parentUuid": "f6aa956f_09043d3d",
+      "revId": "4bfdfca3f2cc4b894aa83f6838facf103282c317",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1cc45253_05d914c1",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2019-02-11T20:49:51Z",
       "side": 1,
       "message": "Given that \u0027RCFeedEngine is deprecated and was left there for backward compatibility only, we\u0027d probably need to rename EventBusRCFeedEngine into EventBusRCFeed. Might worth to create an alias in EventBus code first, SWAT it together with this config change, use it here right away and then remove the \u0027EventBusRCFeedEngine together with the removal of the none-needed mapping code. This would save us a couple of SWATs I think",
+      "revId": "4bfdfca3f2cc4b894aa83f6838facf103282c317",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "35ffc3e5_e28a8e9b",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3597,
+      "author": {
+        "id": 55
+      },
+      "writtenOn": "2019-02-11T20:52:06Z",
+      "side": 1,
+      "message": "Not sure if it is worth it!  All of the other \u0027Engine/RCFeed\u0027 class implementations are suffixed with Engine.  E.g. UDPRCFeedEngine, RedisPupSubFeedEngine, etc.",
+      "parentUuid": "1cc45253_05d914c1",
       "revId": "4bfdfca3f2cc4b894aa83f6838facf103282c317",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
