@@ -3150,6 +3150,15 @@ if ( $wmgUseContentTranslation ) {
 	];
 }
 
+if ( $wmgUseExternalGuidance ) {
+	wfLoadExtension( 'ExternalGuidance' );
+
+	$wgExternalGuidanceMTReferrers = [
+		'translate.google.com',
+		'translate.googleusercontent.com'
+	];
+}
+
 if ( $wmgUseNewWikiDiff2Extension ) {
 	$wgWikiDiff2MovedParagraphDetectionCutoff = 25;
 }
