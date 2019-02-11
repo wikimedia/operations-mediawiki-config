@@ -14302,6 +14302,7 @@ $wgConf->settings = [
 		'*.getty.edu',                      // J. Paul Getty Museum - T213649
 		'mojnews.com',                      // Iranian news agency - T213901
 		'openaccess-cdn.clevelandart.org',  // Cleveland Museum of Art - T213924
+		'polona.pl', 						// Library of Poland - T215501
 	],
 ],
 
