@@ -20367,6 +20367,11 @@ $wgConf->settings = [
 	'default' => 300,
 ],
 
+'wmgUseWikibaseCirrusSearch' => [
+	'default' => false,
+	'testwikidatawiki' => true,
+],
+
 'wmgUseTemplateSandbox' => [
 	'default' => true,
 	'loginwiki' => false,
