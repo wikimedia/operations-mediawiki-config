@@ -20423,6 +20423,7 @@ $wgConf->settings = [
 
 'wmgUseWikibaseCirrusSearch' => [
 	'default' => false,
+	'testwikidatawiki' => true,
 ],
 
 'wmgUseTemplateSandbox' => [
