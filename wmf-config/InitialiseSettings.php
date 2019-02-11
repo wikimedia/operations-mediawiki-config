@@ -22390,6 +22390,7 @@ $wgConf->settings = [
 	'testwiki' => true,
 	'kowiki' => true,
 	'cswiki' => true,
+	'viwiki' => true,
 ],
 
 'wgGEHelpPanelSearchEnabled' => [
@@ -22397,6 +22398,7 @@ $wgConf->settings = [
 	'testwiki' => true,
 	'kowiki' => false,
 	'cswiki' => false,
+	'viwiki' => false,
 ],
 
 'wgGEHelpPanelLoggingEnabled' => [
@@ -22408,6 +22410,7 @@ $wgConf->settings = [
 	'testwiki' => 0,
 	'kowiki' => 50,
 	'cswiki' => 50,
+	'viwiki' => 0,
 ],
 
 'wgGEHelpPanelHelpDeskTitle' => [
@@ -22415,6 +22418,7 @@ $wgConf->settings = [
 	'testwiki' => 'Wikipedia:Requests/Help_desk',
 	'kowiki' => '위키백과:질문방/{{Y-M|0}}',
 	'cswiki' => 'Wikipedie:Potřebuji_pomoc',
+	'viwiki' => 'Wikipedia:Giúp_sử_dụng_Wikipedia',
 ],
 
 'wgGEHelpPanelViewMoreTitle' => [
@@ -22422,6 +22426,7 @@ $wgConf->settings = [
 	'testwiki' => 'Special:MyLanguage/Help:Contents',
 	'kowiki' => '위키백과:도움말',
 	'cswiki' => 'Nápověda:Obsah',
+	'viwiki' => '@TODO',
 ],
 
 'wgGEHelpPanelLinks' => [
@@ -22506,6 +22511,9 @@ $wgConf->settings = [
 			'text' => 'Editujte s odvahou',
 			'id' => 'bebold',
 		]
+	],
+	'viwiki' => [
+		// @TODO
 	],
 ],
 
