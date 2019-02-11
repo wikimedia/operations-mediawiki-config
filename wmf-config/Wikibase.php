@@ -141,6 +141,10 @@ if ( $wmgUseWikibaseRepo ) {
 			$wmgWikibaseMaxItemIdForNewPropertyIdHtmlFormatter;
 	}
 
+	if ( isset( $wmgUseEntitySourceBasedFederation ) ) {
+		$wgWBRepoSettings['useEntitySourceBasedFederation'] = $wmgUseEntitySourceBasedFederation;
+	}
+
 	// Various settings have null / no setting yet for various sites,
 	// so we need to check they are set before trying to use them to avoid warnings.
 	if ( isset( $wmgWBRepoSettingsSparqlEndpoint ) ) {
@@ -302,6 +306,10 @@ if ( $wmgUseWikibaseClient ) {
 
 	if ( isset( $wmgWikibaseClientPageSchemaSplitTestBuckets ) ) {
 		$wgWBClientSettings['pageSchemaSplitTestBuckets'] = $wmgWikibaseClientPageSchemaSplitTestBuckets;
+	}
+
+	if ( isset( $wmgUseEntitySourceBasedFederation ) ) {
+		$wgWBClientSettings['useEntitySourceBasedFederation'] = $wmgUseEntitySourceBasedFederation;
 	}
 
 	$wgWBClientSettings['addEntityUsagesBatchSize'] = $wmgWikibaseClientAddEntityUsagesBatchSize;
