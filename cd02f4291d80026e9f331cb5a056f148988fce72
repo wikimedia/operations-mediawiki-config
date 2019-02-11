@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d064fcb3_c9010e5f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11325,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2019-02-11T12:42:27Z",
+      "side": 1,
+      "message": "Missing comma at the end of \u0027autopatrolled\u0027 is casing jenkins to fail.",
+      "range": {
+        "startLine": 11325,
+        "startChar": 3,
+        "endLine": 11325,
+        "endChar": 18
+      },
+      "revId": "cd02f4291d80026e9f331cb5a056f148988fce72",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
