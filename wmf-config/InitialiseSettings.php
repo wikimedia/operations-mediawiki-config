@@ -22467,6 +22467,7 @@ $wgConf->settings = [
 	'testwiki' => true,
 	'kowiki' => true,
 	'cswiki' => true,
+	'viwiki' => true,
 ],
 
 'wgGEHelpPanelSearchEnabled' => [
@@ -22474,6 +22475,7 @@ $wgConf->settings = [
 	'testwiki' => true,
 	'kowiki' => true,
 	'cswiki' => true,
+	'viwiki' => true,
 ],
 
 'wgGEHelpPanelLoggingEnabled' => [
@@ -22485,6 +22487,7 @@ $wgConf->settings = [
 	'testwiki' => 0,
 	'kowiki' => 50,
 	'cswiki' => 50,
+	'viwiki' => 0,
 ],
 
 'wgGEHelpPanelHelpDeskTitle' => [
@@ -22492,6 +22495,7 @@ $wgConf->settings = [
 	'testwiki' => 'Wikipedia:Requests/Help_desk',
 	'kowiki' => '위키백과:질문방/{{Y-M|0}}',
 	'cswiki' => 'Wikipedie:Potřebuji_pomoc',
+	'viwiki' => 'Wikipedia:Giúp_sử_dụng_Wikipedia',
 ],
 
 'wgGEHelpPanelViewMoreTitle' => [
@@ -22499,6 +22503,7 @@ $wgConf->settings = [
 	'testwiki' => 'Special:MyLanguage/Help:Contents',
 	'kowiki' => '위키백과:도움말',
 	'cswiki' => 'Nápověda:Obsah',
+	'viwiki' => 'Trợ_giúp:Mục_lục',
 ],
 
 'wgGEHelpPanelLinks' => [
@@ -22583,6 +22588,33 @@ $wgConf->settings = [
 			'text' => 'Editujte s odvahou',
 			'id' => 'bebold',
 		]
+	],
+	'viwiki' => [
+		[
+			'title' => 'Wikipedia:Bài_viết_đầu_tiên_của_bạn',
+			'text' => 'Bài viết đầu tiên của bạn',
+			'id' => 'firstarticle',
+		],
+		[
+			'title' => 'Trợ_giúp:Sửa_đổi',
+			'text' => 'Sửa đổi',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'Wikipedia:Cẩm_nang_biên_soạn',
+			'text' => 'Cẩm nang biên soạn',
+			'id' => 'style',
+		],
+		[
+			'title' => 'Trợ_giúp:Hình_ảnh',
+			'text' => 'Hình ảnh',
+			'id' => 'image',
+		],
+		[
+			'title' => 'Wikipedia:Câu_thường_hỏi',
+			'text' => 'Câu thường hỏi',
+			'id' => 'faq',
+		],
 	],
 ],
 
