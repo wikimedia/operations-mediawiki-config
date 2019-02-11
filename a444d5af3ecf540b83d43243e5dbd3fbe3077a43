@@ -22,6 +22,30 @@
       "revId": "a444d5af3ecf540b83d43243e5dbd3fbe3077a43",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "47a0cc27_a6e8e5d0",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2019-02-11T10:29:10Z",
+      "side": 1,
+      "message": "Thanks, I copy pasted that. Thanks for noticing it.",
+      "parentUuid": "393c06cc_bebac659",
+      "range": {
+        "startLine": 121,
+        "startChar": 24,
+        "endLine": 121,
+        "endChar": 26
+      },
+      "revId": "a444d5af3ecf540b83d43243e5dbd3fbe3077a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
