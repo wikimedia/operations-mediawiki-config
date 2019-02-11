@@ -956,6 +956,9 @@ function wmfLabsSettings() {
 			'default' => 'P725',
 			'commonswiki' => null,
 		],
+		'wmgUseEntitySourceBasedFederation' => [
+			'default' => true,
+		],
 		'wmgWBRepoFormatterUrlProperty' => [
 			'wikidatawiki' => 'P9094',
 		],
