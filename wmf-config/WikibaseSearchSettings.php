@@ -93,7 +93,7 @@ $wgWBRepoSettings['entitySearch']['prefixSearchProfiles'] = [
 		'any' => 0.4,
 		'tie-breaker' => 0.35,
 	],
-	'wikibase_config_prefix_query-201901-de' => [
+	'wikibase_config_prefix_query-de' => [
 		'language-chain' => [ 'de', 'en' ],
 		'de-exact' => 0.44,
 		'de-folded' => 0.12,
@@ -104,7 +104,7 @@ $wgWBRepoSettings['entitySearch']['prefixSearchProfiles'] = [
 		'en-prefix' => 0.33,
 		'tie-breaker' => 0.13,
 	],
-	'wikibase_config_prefix_query-201901-es' => [
+	'wikibase_config_prefix_query-es' => [
 		'language-chain' => [ 'es', 'en' ],
 		'es-exact' => 0.90,
 		'es-folded' => 0.61,
@@ -115,7 +115,7 @@ $wgWBRepoSettings['entitySearch']['prefixSearchProfiles'] = [
 		'en-prefix' => 0.52,
 		'tie-breaker' => 0.34,
 	],
-	'wikibase_config_prefix_query-201901-fr' => [
+	'wikibase_config_prefix_query-fr' => [
 		'language-chain' => [ 'fr', 'en' ],
 		'fr-exact' => 0.71,
 		'fr-folded' => 0.48,
@@ -194,7 +194,7 @@ $wgWBRepoSettings['entitySearch']['rescoreProfiles'] = [
 			]
 		]
 	],
-	'wikibase_config_entity_weight-201901-de' => [
+	'wikibase_config_entity_weight-de' => [
 		'i18n_msg' => 'wikibase-rescore-profile-prefix',
 		'supported_namespaces' => 'all',
 		'rescore' => [
@@ -219,7 +219,7 @@ $wgWBRepoSettings['entitySearch']['rescoreProfiles'] = [
 			]
 		]
 	],
-	'wikibase_config_entity_weight-201901-es' => [
+	'wikibase_config_entity_weight-es' => [
 		'i18n_msg' => 'wikibase-rescore-profile-prefix',
 		'supported_namespaces' => 'all',
 		'rescore' => [
@@ -244,7 +244,7 @@ $wgWBRepoSettings['entitySearch']['rescoreProfiles'] = [
 			]
 		]
 	],
-	'wikibase_config_entity_weight-201901-fr' => [
+	'wikibase_config_entity_weight-fr' => [
 		'i18n_msg' => 'wikibase-rescore-profile-prefix',
 		'supported_namespaces' => 'all',
 		'rescore' => [
