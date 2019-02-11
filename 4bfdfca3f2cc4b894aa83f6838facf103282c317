@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f6aa956f_09043d3d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3596,
+      "author": {
+        "id": 2681
+      },
+      "writtenOn": "2019-02-11T20:49:51Z",
+      "side": 1,
+      "message": "Not related, just mental note. If I understand the future correctly, this will get changed to something like \u0027eventbus_instance\u0027 \u003d\u003e \u0027main\u0027 when we get to multiple EventBus services.",
+      "revId": "4bfdfca3f2cc4b894aa83f6838facf103282c317",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1cc45253_05d914c1",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3597,
+      "author": {
+        "id": 2681
+      },
+      "writtenOn": "2019-02-11T20:49:51Z",
+      "side": 1,
+      "message": "Given that \u0027RCFeedEngine is deprecated and was left there for backward compatibility only, we\u0027d probably need to rename EventBusRCFeedEngine into EventBusRCFeed. Might worth to create an alias in EventBus code first, SWAT it together with this config change, use it here right away and then remove the \u0027EventBusRCFeedEngine together with the removal of the none-needed mapping code. This would save us a couple of SWATs I think",
+      "revId": "4bfdfca3f2cc4b894aa83f6838facf103282c317",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
