@@ -5320,6 +5320,12 @@ $wgConf->settings = [
 	'plwiki' => [ '', 'autoconfirmed', 'editor', 'sysop' ], // T48990
 	'ptwiki' => [ '', 'autoconfirmed', 'autoreviewer', 'sysop' ], // T41652
 	'rowiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T63172
+	'srwiki' => [ '', 'autoconfirmed', 'autopatrol', 'patroller', 'rollbacker', 'bot', 'sysop', 'bureaucrat' ], // T215653
+	'srwikibooks' => [ '', 'autoconfirmed', 'autopatrol', 'patroller', 'rollbacker', 'bot', 'sysop', 'bureaucrat' ], // T215653
+	'srwikinews' => [ '', 'autoconfirmed', 'autopatrol', 'patroller', 'rollbacker', 'bot', 'sysop', 'bureaucrat' ], // T215653
+	'srwikisource' => [ '', 'autoconfirmed', 'autopatrol', 'patroller', 'rollbacker', 'bot', 'sysop', 'bureaucrat' ], // T215653
+	'srwikiquote' => [ '', 'autoconfirmed', 'autopatrol', 'patroller', 'rollbacker', 'bot', 'sysop', 'bureaucrat' ], // T215653
+	'srwiktionary' => [ '', 'autoconfirmed', 'autopatrol', 'patroller', 'rollbacker', 'bot', 'sysop', 'bureaucrat' ], // T215653
 	'testwiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T61084
 ],
 # @} end of wgRestrictionLevels
