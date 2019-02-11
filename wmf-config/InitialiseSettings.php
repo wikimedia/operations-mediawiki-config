@@ -18948,6 +18948,12 @@ $wgConf->settings = [
 	],
 ],
 
+'wmgUseExternalGuidance' => [
+	'default' => false,
+	'idwiki' => true,
+	'simplewiki' => true,
+],
+
 'wmgUseMapSources' => [
 	'default' => false,
 	'wikivoyage' => true,
