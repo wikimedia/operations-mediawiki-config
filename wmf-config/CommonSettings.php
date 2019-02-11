@@ -3150,6 +3150,10 @@ if ( $wmgUseContentTranslation ) {
 	];
 }
 
+if ( $wmgUseExternalGuidance ) {
+	wfLoadExtension( 'ExternalGuidance' );
+}
+
 if ( $wmgUseNewWikiDiff2Extension ) {
 	$wgWikiDiff2MovedParagraphDetectionCutoff = 25;
 }
