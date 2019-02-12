@@ -21264,6 +21264,7 @@ $wgConf->settings = [
 	'frwiki' => true,
 	'hewiki' => true, // T161621
 	'huwiki' => true, // T192496
+	'itwiki' => true, // T211032
 	'lvwiki' => true, // T192499
 	'nlwiki' => true, // T139432
 	'plwiki' => true, // T140005
@@ -21298,6 +21299,7 @@ $wgConf->settings = [
 	'frwiki' => true,
 	'hewiki' => true, // T161621
 	'huwiki' => true, // T192496
+	'itwiki' => true, // T211032
 	'lvwiki' => true, // T192499
 	'nlwiki' => true, // T139432
 	'plwiki' => true, // T140005
@@ -21339,6 +21341,14 @@ $wgConf->settings = [
 	'srwiki' => [
 		'damaging' => [ 'enabled' => true ],
 		// goodfaith is disabled for srwiki (T197012)
+		'goodfaith' => [ 'enabled' => false ],
+		'reverted' => [ 'enabled' => false ],
+		'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
+		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
+	],
+	'itwiki' => [
+		'damaging' => [ 'enabled' => true ],
+		// goodfaith is disabled for itwiki (T211032)
 		'goodfaith' => [ 'enabled' => false ],
 		'reverted' => [ 'enabled' => false ],
 		'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
@@ -21668,6 +21678,14 @@ $wgConf->settings = [
 			'verylikelybad' => [ 'min' => 'maximum recall @ precision >= 0.75', 'max' => 1 ],
 		],
 		// goodfaith is disabled for srwiki (T197012)
+	],
+	'itwiki' => [
+		'damaging' => [
+			// likelygood, maybebad use default
+			'likelybad' => [ 'min' => 'maximum recall @ precision >= 0.45', 'max' => 1 ],
+			'verylikelybad' => [ 'min' => 'maximum recall @ precision >= 0.75', 'max' => 1 ],
+		],
+		// goodfaith is disabled for itwiki (T211032)
 	],
 ],
 'wmgOresDefaultSensitivityLevel' => [
