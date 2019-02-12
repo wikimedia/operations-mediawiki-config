@@ -19393,6 +19393,10 @@ $wgConf->settings = [
 	'default' => [],
 ],
 
+'wmgWikibaseEntitySources' => [
+	'default' => [],
+],
+
 'wmgUseWikibaseClient' => [
 	'default' => false,
 	'wikidataclient' => true,
