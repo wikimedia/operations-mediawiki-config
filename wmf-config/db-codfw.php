@@ -118,7 +118,7 @@ $wgLBFactoryConf = [
 		'db2071'      => 50,  # A6 3.6TB 512GB, api
 		'db2072'      => 300, # B6 3.6TB 512GB, # master for sanitarium db2094
 		'db2088:3311' => 100,  # D1 3.3TB 512GB # rc, log: s1 and s2
-		'db2085:3311' => 100,  # A5 3.3TB 512GB # rc, log: s1 and s8
+		# 'db2085:3311' => 100,  # A5 3.3TB 512GB # rc, log: s1 and s8 # testing new kernel
 		'db2092'      => 300, # B8 3.6TB 512GB, api
 	],
 	's2' => [
@@ -182,7 +182,7 @@ $wgLBFactoryConf = [
 		'db2081'      => 50,  # A6 3.3TB 512GB, api
 		'db2082'      => 100, # B6 3.3TB 512GB # master for sanitarium db2094
 		'db2083'      => 100, # C6 3.3TB 512GB
-		'db2085:3318' => 1,   # A5 3.3TB 512GB # rc, log: s1 and s8
+		# 'db2085:3318' => 1,   # A5 3.3TB 512GB # rc, log: s1 and s8 # testing new kernel
 		'db2086:3318' => 1,   # B1 3.3TB 512GB # rc, log: s7 and s8
 	],
 
@@ -266,23 +266,23 @@ $wgLBFactoryConf = [
 	's1' => [
 		'watchlist' => [
 			'db2088:3311' => 1,
-			'db2085:3311' => 1,
+			# 'db2085:3311' => 1,
 		],
 		'recentchanges' => [
 			'db2088:3311' => 1,
-			'db2085:3311' => 1,
+			# 'db2085:3311' => 1,
 		],
 		'recentchangeslinked' => [
 			'db2088:3311' => 1,
-			'db2085:3311' => 1,
+			# 'db2085:3311' => 1,
 		],
 		'contributions' => [
 			'db2088:3311' => 1,
-			'db2085:3311' => 1,
+			# 'db2085:3311' => 1,
 		],
 		'logpager' => [
 			'db2088:3311' => 1,
-			'db2085:3311' => 1,
+			# 'db2085:3311' => 1,
 		],
 		'dump' => [
 			'db2055' => 1,
@@ -489,23 +489,23 @@ $wgLBFactoryConf = [
 	],
 	's8' => [
 		'watchlist' => [
-			'db2085:3318' => 1,
+			# 'db2085:3318' => 1,
 			'db2086:3318' => 1,
 		],
 		'recentchanges' => [
-			'db2085:3318' => 1,
+			# 'db2085:3318' => 1,
 			'db2086:3318' => 1,
 		],
 		'recentchangeslinked' => [
-			'db2085:3318' => 1,
+			# 'db2085:3318' => 1,
 			'db2086:3318' => 1,
 		],
 		'contributions' => [
-			'db2085:3318' => 1,
+			# 'db2085:3318' => 1,
 			'db2086:3318' => 1,
 		],
 		'logpager' => [
-			'db2085:3318' => 1,
+			# 'db2085:3318' => 1,
 			'db2086:3318' => 1,
 		],
 		'dump' => [
