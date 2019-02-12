@@ -1115,6 +1115,30 @@ function wmfLabsSettings() {
 				],
 			],
 		],
+
+		'wmgWikibaseRepoLocalEntitySourceName' => [
+			'default' => null,
+			'commonswiki' => 'commons',
+		],
+
+		'wmgWikibaseEntitySources' => [
+			'default' => [],
+			'commonswiki' => [
+				'wikidata' => [
+					'repoDatabase' => 'wikidatawiki',
+					'entityNamespaces' => [ 'item' => 0, 'property' => 120 ],
+					'baseUri' => 'https://wikidata.beta.wmflabs.org/entity/',
+					'interwikiPrefix' => 'wd',
+				],
+				'commons' => [
+					'repoDatabase' => 'wikidatawiki',
+					'entityNamespaces' => [ 'mediainfo' => '6/mediainfo' ],
+					'baseUri' => 'https://commons.wikimedia.beta.wmflabs.org/entity/',
+					'interwikiPrefix' => '',
+				],
+			],
+		],
+
 		// If set to "false": No alternate links will be added to desktop pages,
 		// and MobileFrontend won't add a canonical tag
 		// If set to "true": Alternate link will be added, MF will add a canonical tag
