@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7ea75924_1fab497d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 14331,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2019-02-12T12:17:24Z",
+      "side": 1,
+      "message": "Looks like the rest of the file uses spaces instead of tabs.",
+      "revId": "9bc83a75df043afd006fbe7f8244d5f7a917b509",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
