@@ -21254,6 +21254,7 @@ $wgConf->settings = [
 	'bswiki' => true, // T197010
 	'cawiki' => true, // T192501
 	'cswiki' => true, // T151611
+	'dewiki' => true, // T215354
 	'enwiki' => true, // T140003
 	'eswiki' => true, // T130279
 	'eswikibooks' => true, // T145394
@@ -21290,6 +21291,7 @@ $wgConf->settings = [
 	'bswiki' => true, // T197010
 	'cawiki' => true, // T192501
 	'cswiki' => true, // T151611
+	'dewiki' => true, // T215354
 	'enwiki' => true, // T140003
 	'eswiki' => true, // T130279
 	'eswikibooks' => true, // T145394
@@ -21686,6 +21688,15 @@ $wgConf->settings = [
 			'verylikelybad' => [ 'min' => 'maximum recall @ precision >= 0.75', 'max' => 1 ],
 		],
 		// goodfaith is disabled for itwiki (T211032)
+	],
+	'dewiki' => [
+		// damaging uses defaults for everything
+		'goodfaith' => [
+			'likelygood' => [ 'min' => 'maximum recall @ precision >= 0.99', 'max' => 1 ],
+			'maybebad' => [ 'min' => 'maximum recall @ precision >= 0.15', 'max' => 1 ],
+			// likelybad uses default
+			'verylikelybad' => [ 'min' => 'maximum recall @ precision >= 0.9', 'max' => 1 ],
+		],
 	],
 ],
 'wmgOresDefaultSensitivityLevel' => [
