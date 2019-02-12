@@ -8695,6 +8695,7 @@ $wgConf->settings = [
 	'+azwiki' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T196488
 		'patroller' => [ 'patrol' => true ], // T196488
+		'rollbacker' => [ 'rollback' => true ], // T215200
 	],
 	'+azbwiki' => [
 		'autopatrolled' => [ // T109755
@@ -10728,6 +10729,7 @@ $wgConf->settings = [
 		'sysop' => [
 			'autopatrolled', // T196488
 			'patroller', // T196488
+			'rollbacker', // T215200
 		],
 	],
 	'+bewiki' => [
@@ -11492,6 +11494,7 @@ $wgConf->settings = [
 		'sysop' => [
 			'autopatrolled', // T196488
 			'patroller', // T196488
+			'rollbacker', // T215200
 		],
 	],
 	'+bawiki' => [
