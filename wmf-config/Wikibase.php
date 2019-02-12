@@ -200,6 +200,8 @@ if ( $wmgUseWikibaseRepo ) {
 	// Federation temporarily commented out, see T211237 & T204748
 	$wgWBRepoSettings['foreignRepositories'] = $wmgWikibaseRepoForeignRepositories;
 
+	$wgWBRepoSettings['entitySources'] = $wmgWikibaseEntitySources;
+
 	// Temporary, see T184933
 	$wgWBRepoSettings['useKartographerGlobeCoordinateFormatter'] = true;
 
@@ -230,6 +232,8 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['entityNamespaces'] = $wmgWikibaseClientEntityNamespaces;
 	$wgWBClientSettings['repoNamespaces'] = $wmgWikibaseClientRepoNamespaces;
 	$wgWBClientSettings['namespaces'] = $wmgWikibaseClientNamespacesWithRepoAccess;
+
+	$wgWBClientSettings['entitySources'] = $wmgWikibaseEntitySources;
 
 	$wgWBClientSettings['excludeNamespaces'] = function () {
 		global $wgDBname;
