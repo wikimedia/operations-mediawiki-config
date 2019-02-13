@@ -1570,9 +1570,6 @@ if ( $wmgUseCentralAuth ) {
 
 	// Create some local accounts as soon as the global registration happens
 	$wgCentralAuthAutoCreateWikis = [ 'loginwiki', 'metawiki' ];
-	if ( $wmfRealm === 'production' ) {
-		$wgCentralAuthAutoCreateWikis[] = 'mediawikiwiki';
-	}
 
 	// Link global block blockers to user pages on Meta
 	$wgCentralAuthGlobalBlockInterwikiPrefix = 'meta';
