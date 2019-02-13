@@ -14099,12 +14099,14 @@ $wgConf->settings = [
 	'default' => [ 120, 150, 180, 200, 220, 250, 300, 400 ],
 	'+itwikiquote' => [ 360 ],
 	'svwiki' => [ 120, 200, 250, 300, 360 ],
+	'nlwiki' => [ 120, 150, 180, 220, 260, 300, 400 ],
 ],
 'wmgThumbsizeIndex' => [
 	'default' => 4,
 	'fiwiki' => 5, // T162376
 	'nowiki' => 5, // T155892
 	'svwiki' => 2, // T18739
+	'nlwiki' => 4, // T215106
 ],
 
 'wgTorTagChanges' => [
