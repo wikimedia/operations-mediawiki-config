@@ -22,6 +22,30 @@
       "revId": "2c30e4941946448dd09b0a60427d243dc15df4ec",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8b5227ca_160a57d7",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1072,
+      "author": {
+        "id": 2626
+      },
+      "writtenOn": "2019-02-13T07:59:06Z",
+      "side": 1,
+      "message": "If you mean sharing values between those two settings, then I guess, yeah, probably that could be than to lower the risk of typos and strings and what not.\nIf you meant using a single setting instead of two, I\u0027d rather not do it. The idea is that wmgWikibaseRepoForeignRepositories (and the similar counterpart on the \"client side\") would go and be replaced by wmgWikibaseEntitySources. Both will only co-exist during the transition phase which I hope will not last for longer than a month.\n\nAlso, I should apologize for being so slow, but there are two more config changes related to configuring Wikibase federation I should add to the chain, and those probably should precede this patch. Will add those today, hopefully that draws more complete picture.",
+      "parentUuid": "34f032d0_2f332829",
+      "range": {
+        "startLine": 1067,
+        "startChar": 19,
+        "endLine": 1072,
+        "endChar": 6
+      },
+      "revId": "2c30e4941946448dd09b0a60427d243dc15df4ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
