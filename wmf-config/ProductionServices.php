@@ -51,6 +51,7 @@ $common = [
 	'parsoid' => 'http://parsoid.discovery.wmnet:8000',
 	'mathoid' => 'http://mathoid.discovery.wmnet:10042',
 	'eventbus' => 'http://eventbus.discovery.wmnet:8085',
+	'eventgate-analytics' => 'http://eventgate-analytics.discovery.wmnet:31192',
 	'cxserver' => 'http://cxserver.discovery.wmnet:8080',
 	'electron' => 'http://pdfrender.discovery.wmnet:5252',
 	'restbase' => 'http://restbase.discovery.wmnet:7231',
