@@ -22428,8 +22428,8 @@ $wgConf->settings = [
 'wgGEHelpPanelSearchEnabled' => [
 	'default' => false,
 	'testwiki' => true,
-	'kowiki' => false,
-	'cswiki' => false,
+	'kowiki' => true,
+	'cswiki' => true,
 ],
 
 'wgGEHelpPanelLoggingEnabled' => [
