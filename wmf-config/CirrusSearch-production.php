@@ -133,6 +133,17 @@ $wgCirrusSearchReplicas['codfw-temp-omega'] = $wgCirrusSearchReplicas['codfw'];
 $wgCirrusSearchReplicas['eqiad-temp-psi'] = $wgCirrusSearchReplicas['eqiad'];
 $wgCirrusSearchReplicas['eqiad-temp-omega'] = $wgCirrusSearchReplicas['eqiad'];
 
+$wgCirrusSearchMergeSettings = [
+	// Aggressive settings to try to keep the content index more optimized
+	// because it is searched more frequently.
+	'content' => [
+		'max_merge_at_once' => 5,
+		'segments_per_tier' => 5,
+		'deletes_pct_allowed' => 25.0,
+		'max_merged_segment' => '25g',
+	],
+];
+
 // 5 second timeout for local cluster, 10 seconds for remote.
 $wgCirrusSearchClientSideConnectTimeout = [
 	'eqiad' => $wmfDatacenter === 'eqiad' ? 5 : 10,
