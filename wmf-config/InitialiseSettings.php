@@ -20418,6 +20418,10 @@ $wgConf->settings = [
 	'wikidatawiki' => true, // T203888
 ],
 
+'wmgWikibaseEntityTypesWithoutRdfOutput' => [
+	'default' => [],
+],
+
 'wmgWikibaseDisabledAccessEntityTypes' => [
 	// Note: When lexeme is removed from here it needs to be added to wmgWikibaseClientRepoNamespaces
 	'default' => [ 'lexeme', 'form', 'sense' ],
