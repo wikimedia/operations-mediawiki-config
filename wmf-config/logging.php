@@ -24,21 +24,19 @@
 #   explicitly configured in $wmgMonologChannels.
 # - $wmgLogstashServers: Logstash syslog servers.
 # - $wmgLogstashUseCee: Prefix Logstash messages with 'cee cookie'
-# - $wmgKafkaServers: Kafka logging servers.
-# - $wmgMonologAvroSchemas: Map from monolog channel name to json
-#   string containing avro schema.
 # - $wmgMonologChannels: per-channel logging config
 #   - `channel => false`: ignore all log events on this channel.
 #   - `channel => level`: record all events of this level or higher to udp2log and logstash.
 #     Special case: `channel => debug` will not log to logstash.
-#   - `channel => [ 'udp2log'=>level, 'logstash'=>level, 'kafka'=>level, 'sample'=>rate, 'buffer'=>buffer ]`
+#   - `channel => [ 'udp2log'=>level, 'logstash'=>level, 'eventbus'=>level, 'sample'=>rate, 'buffer'=>buffer ]`
+# - $wmgUseEventBus: Whether EventBus extension is enabled on the wiki
 #
 #   Default for all channels for fields not otherwise specified:
 #   ```
 #   [
 #       'udp2log' = >'debug',
 #       'logstash' = >'info',
-#       'kafka' => false,
+#       'eventbus' => false,
 #       'sample' => false,
 #       'buffer' => false,
 #   ]
@@ -210,10 +208,14 @@ $wmgMonologConfig = [
 			'class' => '\\MediaWiki\\Logger\\Monolog\\CeeFormatter',
 			'args'  => [ 'mediawiki', php_uname( 'n' ), null, '', 1 ],
 		],
-		'avro' => [
-			'class' => '\\MediaWiki\\Logger\\Monolog\\AvroFormatter',
-			'args' => [ $wmgMonologAvroSchemas ],
-		],
+		'eventbus' => [
+			'class' => 'EventBusMonologFormatter',
+			'args' => [
+				[
+					'ApiAction' => '/schema/for/api/action'
+				]
+			]
+		]
 	],
 ];
 
@@ -253,7 +255,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 		[
 			'udp2log' => 'debug',
 			'logstash' => ( isset( $opts['udp2log'] ) && $opts['udp2log'] !== 'debug' ) ? $opts['udp2log'] : 'info',
-			'kafka' => false,
+			'eventbus' => false,
 			'sample' => false,
 			'buffer' => false,
 		],
@@ -287,32 +289,21 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 		}
 	}
 
-	// Configure kafka handler
-	if ( $opts['kafka'] && $wmgKafkaServers ) {
-		$kafkaHandler = "kafka-{$opts['kafka']}";
-		if ( !isset( $wmgMonologConfig['handlers'][$kafkaHandler] ) ) {
+	// Configure eventbus handler
+	if ( $opts['eventbus'] && $wmgUseEventBus ) {
+		$eventBusHandler = "eventbus-{$opts['eventbus']}";
+		if ( !isset( $wmgMonologConfig['handlers'][$eventBusHandler] ) ) {
 			// Register handler that will only pass events of the given
 			// log level
-			$wmgMonologConfig['handlers'][$kafkaHandler] = [
-				'factory' => '\\MediaWiki\\Logger\\Monolog\\KafkaHandler::factory',
+			$wmgMonologConfig['handlers'][$eventBusHandler] = [
+				'class' => 'EventBusMonologHandler',
 				'args' => [
-					$wmgKafkaServers,
-					[
-						'alias' => [],
-						'swallowExceptions' => true,
-						'logExceptions' => 'wfDebugLogFile',
-						'sendTimeout' => 0.01,
-						'recvTimeout' => 0.5,
-						'requireAck' => 1,
-					],
+					'eventbus-analytics' // EventServiceName
 				],
-				'formatter' => 'avro'
+				'formatter' => 'eventbus'
 			];
 		}
-		// include an alias to prefix this channel with
-		// 'mediawiki_' in kafka
-		$wmgMonologConfig['handlers'][$kafkaHandler]['args'][1]['alias'][$channel] = "mediawiki_$channel";
-		$handlers[] = $kafkaHandler;
+		$handlers[] = $eventBusHandler;
 	}
 
 	// Configure Logstash handler

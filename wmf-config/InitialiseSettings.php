@@ -5441,39 +5441,14 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
-# wmgKafkaServers @{
-// Kafka servers. Use false to disable all kafka logging.
-'wmgKafkaServers' => [
-	'default' => $wmfLocalServices['kafka'],
-],
-# @} end of wmgKafkaServers
-
-# wmgMonologAvroSchemas @{
-// Configure schemas used for avro serialization. This is temporary,
-// something will be built up around the EventLogging schema model
-// to store these in a wiki and cache them locally.
-'wmgMonologAvroSchemas' => [
-	'default' => [
-		'CirrusSearchRequestSet' => [
-			'schema' => file_get_contents( __DIR__ . '/event-schemas/avro/mediawiki/CirrusSearchRequestSet/121456865906.avsc' ),
-			'revision' => 121456865906,
-		],
-		'ApiAction' => [
-			'schema' => file_get_contents( __DIR__ . '/event-schemas/avro/mediawiki/ApiAction/101453221640.avsc' ),
-			'revision' => 101453221640,
-		],
-	],
-],
-# @} end of wmgAvroSchemas
-
 # wmgMonologChannels @{
-// Configure Monolog logging to udp2log (logfiles), Logstash and/or Kafka
+// Configure Monolog logging to udp2log (logfiles), Logstash and/or EventBus
 // See logging.php for more detailed information
 // channel => false  == ignore all log events on this channel
 // channel => level  == record all events of this level or higher to udp2log and logstash (except:
 //    logstash won't go below info level, use explicit logstash=>debug field for that)
-// channel => [ 'udp2log'=>level, 'logstash'=>level, 'kafka'=>level, 'sample'=>rate, 'buffer'=>buffer ]
-// Defaults: [ 'udp2log'=>'debug', 'logstash'=>'info', 'kafka'=>false, 'sample'=>false, 'buffer'=>false ]
+// channel => [ 'udp2log'=>level, 'logstash'=>level, 'eventbus'=>level, 'sample'=>rate, 'buffer'=>buffer ]
+// Defaults: [ 'udp2log'=>'debug', 'logstash'=>'info', 'eventbus'=>false, 'sample'=>false, 'buffer'=>false ]
 // Valid levels: 'debug', 'info', 'warning', 'error', false
 // Note: sampled logs will not be sent to Logstash
 // Note: Udp2log events are sent to udp://{$wmfUdp2logDest}/{$channel}
@@ -5489,7 +5464,7 @@ $wgConf->settings = [
 		'ApiAction' => [
 			'udp2log' => false,
 			'logstash' => false,
-			'kafka' => 'debug',
+			'eventbus' => 'debug',
 			'buffer' => true,
 		],
 		'authentication' => 'info',
@@ -5507,7 +5482,7 @@ $wgConf->settings = [
 		'CirrusSearch' => 'debug',
 		'CirrusSearchChangeFailed' => 'debug',
 		'CirrusSearchRequestSet' => [
-			'kafka' => 'debug',
+			'eventbus' => 'debug',
 			'udp2log' => false,
 			'logstash' => false,
 			'buffer' => true
@@ -5603,7 +5578,7 @@ $wgConf->settings = [
 		'Wikibase' => [
 			'udp2log' => 'info',
 			'logstash' => 'warning',
-			'kafka' => false,
+			'eventbus' => false,
 			'sample' => false,
 		],
 		'WikibaseQualityConstraints' => 'debug',
