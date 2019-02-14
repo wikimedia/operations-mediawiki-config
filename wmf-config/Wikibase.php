@@ -201,6 +201,7 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['foreignRepositories'] = $wmgWikibaseRepoForeignRepositories;
 
 	$wgWBRepoSettings['entitySources'] = $wmgWikibaseEntitySources;
+	$wgWBRepoSettings['localEntitySourceName'] = $wmgWikibaseRepoLocalEntitySourceName;
 
 	// Temporary, see T184933
 	$wgWBRepoSettings['useKartographerGlobeCoordinateFormatter'] = true;
