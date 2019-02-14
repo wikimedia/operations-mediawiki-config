@@ -20419,7 +20419,7 @@ $wgConf->settings = [
 ],
 
 'wmgWikibaseEntityTypesWithoutRdfOutput' => [
-	'default' => [],
+	'default' => [ 'mediainfo' ],
 ],
 
 'wmgWikibaseDisabledAccessEntityTypes' => [
