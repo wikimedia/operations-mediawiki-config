@@ -204,6 +204,8 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['useKartographerGlobeCoordinateFormatter'] = true;
 
 	$wgWBRepoSettings['idGeneratorSeparateDbConnection'] = $wmgWikibaseRepoIdGeneratorSeparateDbConnection;
+
+	$wgWBRepoSettings['entityTypesWithoutRdfOutput'] = $wmgWikibaseEntityTypesWithoutRdfOutput;
 }
 
 if ( $wmgUseWikibaseClient ) {
