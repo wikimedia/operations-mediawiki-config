@@ -1062,6 +1062,11 @@ function wmfLabsSettings() {
 		],
 
 		'wmgWikibaseRepoLocalEntitySourceName' => [
+			'default' => false,
+			'commonswiki' => true,
+		],
+
+		'wmgWikibaseRepoLocalEntitySourceName' => [
 			'default' => null,
 			'commonswiki' => 'commons',
 		],
