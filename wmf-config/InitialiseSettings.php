@@ -20400,6 +20400,10 @@ $wgConf->settings = [
 	'default' => 300,
 ],
 
+'wmgUseWikibaseCirrusSearch' => [
+	'default' => false,
+],
+
 'wmgUseTemplateSandbox' => [
 	'default' => true,
 	'loginwiki' => false,
