@@ -30,9 +30,6 @@ $wmfAllServices['unittest'] = [
 ### Logstash
 $wmfAllServices['unittest']['logstash'] = [ '127.0.0.1' ];
 
-### Analytics Kafka cluster
-$wmfAllServices['unittest']['kafka'] = [ '127.0.0.1:9092' ];
-
 ### IRC
 $wmfAllServices['unittest']['irc'] = '127.0.0.1';
 
