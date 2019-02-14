@@ -58,12 +58,6 @@ return [
 			'localhost',
 		],
 
-		### Jumbo Kafka cluster (jumbo-deployment-prep)
-		'kafka' => [
-			'deployment-kafka-jumbo-1.deployment-prep.eqiad.wmflabs:9092',
-			'deployment-kafka-jumbo-2.deployment-prep.eqiad.wmflabs:9092',
-		],
-
 		### Restbase
 		'restbase' => 'http://deployment-restbase02.deployment-prep.eqiad.wmflabs:7231',
 
