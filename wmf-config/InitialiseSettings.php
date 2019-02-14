@@ -20404,6 +20404,7 @@ $wgConf->settings = [
 	'default' => false,
 	'testwikidatawiki' => true,
 	'wikidatawiki' => true,
+	'commonswiki' => true,
 ],
 
 'wmgUseTemplateSandbox' => [
