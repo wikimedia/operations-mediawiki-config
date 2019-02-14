@@ -200,6 +200,7 @@ if ( $wmgUseWikibaseRepo ) {
 	// Federation temporarily commented out, see T211237 & T204748
 	$wgWBRepoSettings['foreignRepositories'] = $wmgWikibaseRepoForeignRepositories;
 
+	$wgWBRepoSettings['useEntitySourceBasedFederation'] = $wmgUseEntitySourceBasedFederation;
 	$wgWBRepoSettings['entitySources'] = $wmgWikibaseEntitySources;
 	$wgWBRepoSettings['localEntitySourceName'] = $wmgWikibaseRepoLocalEntitySourceName;
 
@@ -232,6 +233,7 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['repoNamespaces'] = $wmgWikibaseClientRepoNamespaces;
 	$wgWBClientSettings['namespaces'] = $wmgWikibaseClientNamespacesWithRepoAccess;
 
+	$wgWBClientSettings['useEntitySourceBasedFederation'] = $wmgUseEntitySourceBasedFederation;
 	$wgWBClientSettings['entitySources'] = $wmgWikibaseEntitySources;
 
 	$wgWBClientSettings['excludeNamespaces'] = function () {

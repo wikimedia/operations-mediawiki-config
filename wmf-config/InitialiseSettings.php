@@ -19393,6 +19393,10 @@ $wgConf->settings = [
 	'default' => [],
 ],
 
+'wmgUseEntitySourceBasedFederation' => [
+	'default' => false,
+],
+
 'wmgWikibaseEntitySources' => [
 	'default' => [],
 ],
