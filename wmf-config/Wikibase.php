@@ -19,6 +19,9 @@ if ( !empty( $wmgUseWikibaseRepo ) ) {
 		wfLoadExtension( 'WikibaseMediaInfo' );
 		$wgWBRepoSettings['enableEntitySearchUI'] = false;
 	}
+	if ( !empty( $wmgUseWikibaseCirrusSearch ) ) {
+		wfLoadExtension( 'WikibaseCirrusSearch' );
+	}
 }
 
 // Load the Client, and Client extensions
