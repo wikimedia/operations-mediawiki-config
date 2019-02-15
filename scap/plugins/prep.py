@@ -97,21 +97,26 @@ class CheckoutMediaWiki(cli.Application):
             # active_wikiversions() is already sorted by loose-version number,
             # we want the latest version if there's more than 1
             old_branch = self.active_wikiversions().keys()[-1]
-            reference_dir = os.path.join(
+            old_branch_dir = os.path.join(
                 self.config['stage_dir'],
                 '{}{}'.format(self.arguments.prefix, old_branch)
             )
+            reference_dir = None
+            if (os.path.exists(old_branch_dir)):
+                reference_dir = old_branch_dir
             patch_path = os.path.join('/srv/patches', self.arguments.branch)
             if not os.path.exists(patch_path):
-                shutil.copytree(
-                    os.path.join('/srv/patches', old_branch),
-                    os.path.join(patch_path)
-                )
+                if os.path.exists(os.path.join('/srv/patches', old_branch)):
+                    shutil.copytree(
+                        os.path.join('/srv/patches', old_branch),
+                        os.path.join(patch_path)
+                    )
 
         if os.path.isdir(dest_dir):
             self.get_logger().info('Version already checked out')
             return 0
 
+        self.get_logger().info('Fetching core to {}'.format(dest_dir))
         git.fetch(dest_dir, SOURCE_URL + 'mediawiki/core', reference_dir)
 
         with utils.cd(dest_dir):
@@ -124,6 +129,7 @@ class CheckoutMediaWiki(cli.Application):
                                 'submodule.fetchJobs', num_procs]) != 0:
                 self.get_logger().warn('Unable to setup submodule fetch jobs')
 
+        self.get_logger().info('Checkout {} in {}'.format(checkout_version, dest_dir))
         git.checkout(dest_dir, checkout_version)
 
         if checkout_version == 'master':
@@ -131,11 +137,14 @@ class CheckoutMediaWiki(cli.Application):
             master_stuff(dest_dir)
         else:
             # Specific to production
+            self.get_logger().info('Update submodules for {}'.format(dest_dir))
             git.update_submodules(dest_dir, use_upstream=True)
             update_update_strategy(dest_dir)
 
+        self.get_logger().info('Creating LocalSettings.php stub')
         write_settings_stub(os.path.join(dest_dir, 'LocalSettings.php'))
 
+        self.get_logger().info('Creating l10n cache dir')
         cache_dir = os.path.join(dest_dir, 'cache')
         os.chmod(cache_dir, 0o777)
         utils.sudo_check_call('l10nupdate',
