@@ -14473,6 +14473,7 @@ $wgConf->settings = [
 	'default' => 'link',
 	'cswikinews' => 'any', // T45525
 	'enwikibooks' => 'any', // T29256, T188472
+	'fiwikinews' => 'any', // T216333
 	'ptwikibooks' => 'any', // T29256, T188472
 	'guwikisource' => 'any', // T42173
 	'plwikisource' => 'any', // T131771
