@@ -4823,14 +4823,29 @@ $wgConf->settings = [
 		'学院' => 102, // T201675
 		'學院' => 102, // T201675
 		'系' => 102, // T201675
+		'院系' => 102, // T212919
 		'学院讨论' => 103, // T201675
 		'學院討論' => 103, // T201675
 		'系讨论' => 103, // T201675
 		'系討論' => 103, // T201675
+		'院系讨论' => 103, // T212919
+		'院系討論' => 103, // T212919
 		'学科' => 104, // T201675
 		'學科' => 104, // T201675
 		'学科讨论' => 105, // T201675
 		'學科討論' => 105, // T201675
+		'實驗' => 106, // T212919
+		'实验' => 106, // T212919
+		'實驗討論' => 107, // T212919
+		'实验讨论' => 107, // T212919
+		'課程' => 108, // T212919
+		'课程' => 108, // T212919
+		'課程討論' => 109, // T212919
+		'课程讨论' => 109, // T212919
+		'幫助' => NS_HELP, // T212919
+		'帮助' => NS_HELP, // T212919
+		'帮助讨论' => NS_HELP_TALK, // T212919
+		'幫助討論' => NS_HELP_TALK, // T212919
 	],
 	'+zhwikivoyage' => [
 		'维基导游' => NS_PROJECT, // T62122
@@ -6442,6 +6457,10 @@ $wgConf->settings = [
 	'thwiki' => [
 		100 => 'สถานีย่อย',
 		101 => 'คุยเรื่องสถานีย่อย',
+		108 => 'หนังสือ', // T216322, Book
+		109 => 'คุยเรื่องหนังสือ', // Book talk
+		118 => 'ฉบับร่าง', // T216322, Draft
+		119 => 'คุยเรื่องฉบับร่าง', // Draft talk
 	],
 	'tlwiki' => [
 		100 => 'Portada', // Portal
@@ -6519,7 +6538,7 @@ $wgConf->settings = [
 		100 => 'Portal',
 		101 => 'Portal_talk',
 		118 => 'Draft', // T91223
-		119 => 'Draft_talk' // T91223
+		119 => 'Draft_talk', // T91223
 	],
 	'zhwikiversity' => [
 		100 => 'Portal', // T201675
@@ -6528,6 +6547,10 @@ $wgConf->settings = [
 		103 => 'School_talk', // T201675
 		104 => 'Subject', // T201675
 		105 => 'Subject_talk', // T201675
+		106 => 'Experiment', // T212919
+		107 => 'Experiment_talk', // T212919
+		108 => 'Lesson', // T212919
+		109 => 'Lesson_talk', // T212919
 	],
 	'zh_classicalwiki' => [
 		100 => '門',
@@ -7113,7 +7136,9 @@ $wgConf->settings = [
 	],
 	'srwiktionary' => [
 		100 => 'Портал',
-		101 => 'Разговор_о_порталу'
+		101 => 'Разговор_о_порталу',
+		102 => 'Додатак', // T216343
+		103 => 'Разговор_о_додатку', // T216343
 	],
 	'svwiktionary' => [ // T9933
 		102 => 'Appendix',
@@ -8473,6 +8498,8 @@ $wgConf->settings = [
 	'testwiki' => true,
 	'testwikidatawiki' => true,
 	'itwiki' => true,
+	'mediawikiwiki' => true,
+	'metawiki' => true,
 ],
 
 'wgEnableBlockNoticeStats' => [
@@ -12555,7 +12582,7 @@ $wgConf->settings = [
 	'wuuwiki' => [ 'en', 'th', 'fr', 'zh', ], // T19484
 	'xhwiki' => [ 'en' ], // T53327
 	'zhwikiquote' => [ 'w', 'b', 'wikt', 's', 'meta', 'commons' ],
-	'zhwikiversity' => [ 'w', 'b', 'q', 's', 'en', 'voy', 'wikt', 'meta', 'commons', 'betawikiversity' ],
+	'zhwikiversity' => [ 'w', 'b', 'q', 's', 'en', 'voy', 'wikt', 'meta', 'commons', 'betawikiversity', 'incubator', 'w:en' ], // T212919
 	'zhwikivoyage' => [ 'w', 'b', 'q', 's', 'en', 'wikt', 'meta', 'commons' ], // T62248
 	'zhwiktionary' => [ 'w', 'b', 'q', 's', 'meta', 'commons' ],
 	'zhwikibooks' => [ 'w', 'wikt', 'q', 's', 'meta', 'commons' ],
@@ -12998,7 +13025,7 @@ $wgConf->settings = [
 	'+viwikisource' => [ 102 ],
 	'+wikitech' => [ NS_HELP, 116 ], // Tools - T122865
 	'+zhwikisource' => [ 102, 114 ], // T66127
-	'+zhwikiversity' => [ 100, 102, 104 ], // T201675
+	'+zhwikiversity' => [ 100, 102, 104, 106, 108 ], // T201675, T212919 (106, 108)
 	'+dewikivoyage' => [ 104 ],
 	'+commonswiki' => [ 6 ], // T167077
 	'+testwikidatawiki' => [ 146 ], // So that Lexeme are indexed in the content indes (Cirrus)
@@ -14452,6 +14479,7 @@ $wgConf->settings = [
 	'default' => 'link',
 	'cswikinews' => 'any', // T45525
 	'enwikibooks' => 'any', // T29256, T188472
+	'fiwikinews' => 'any', // T216333
 	'ptwikibooks' => 'any', // T29256, T188472
 	'guwikisource' => 'any', // T42173
 	'plwikisource' => 'any', // T131771
@@ -19091,6 +19119,7 @@ $wgConf->settings = [
 	'enwikivoyage' => 1,
 	'frwiki' => 1,
 	'ruwiki' => 1,
+	'eswiki' => 1,
 ],
 
 'wgNavigationTimingSurveyName' => [
@@ -19099,6 +19128,7 @@ $wgConf->settings = [
 	'enwikivoyage' => 'internal-survey-perceived-performance-survey',
 	'frwiki' => 'internal-survey-perceived-performance-survey',
 	'ruwiki' => 'internal-survey-perceived-performance-survey',
+	'eswiki' => 'internal-survey-perceived-performance-survey',
 ],
 
 'wgNavigationTimingOversampleFactor' => [
@@ -21903,6 +21933,7 @@ $wgConf->settings = [
 	'cawiki' => true,
 	'enwikivoyage' => true,
 	'ruwiki' => true,
+	'eswiki' => true,
 ],
 
 'wgQuickSurveysConfig' => [
