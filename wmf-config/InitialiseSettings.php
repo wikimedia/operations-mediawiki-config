@@ -19091,6 +19091,7 @@ $wgConf->settings = [
 	'enwikivoyage' => 1,
 	'frwiki' => 1,
 	'ruwiki' => 1,
+	'eswiki' => 1,
 ],
 
 'wgNavigationTimingSurveyName' => [
@@ -19099,6 +19100,7 @@ $wgConf->settings = [
 	'enwikivoyage' => 'internal-survey-perceived-performance-survey',
 	'frwiki' => 'internal-survey-perceived-performance-survey',
 	'ruwiki' => 'internal-survey-perceived-performance-survey',
+	'eswiki' => 'internal-survey-perceived-performance-survey',
 ],
 
 'wgNavigationTimingOversampleFactor' => [
@@ -21903,6 +21905,7 @@ $wgConf->settings = [
 	'cawiki' => true,
 	'enwikivoyage' => true,
 	'ruwiki' => true,
+	'eswiki' => true,
 ],
 
 'wgQuickSurveysConfig' => [
