@@ -352,13 +352,11 @@ function wmfSetupTideways( $options ) {
 				Xhgui_Saver::factory( $options['xhgui-conf'] )->save( $data );
 			};
 
-			// Use a nested register_postsend_function() function, so that the profile
+			// Register the callback as a shutdown_function, so that the profile
 			// includes MediaWiki's post-send DeferredUpdates as well.
-			// The postsend functions are FIFO, and because this code runs before MediaWiki
-			// we become the first. By using nesting, we become the last instead.
-			register_postsend_function( function () use ( $saveCallback ) {
-				register_postsend_function( $saveCallback );
-			} );
+			// Zend PHP doesn't have register_postsend_function so we can't really make
+			// this happen earlier.
+			register_shutdown_function( $saveCallback );
 		}
 	}
 }
