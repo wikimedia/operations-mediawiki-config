@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "68a15615_f4790a53",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 5446,
+      "author": {
+        "id": 55
+      },
+      "writtenOn": "2019-02-19T17:18:49Z",
+      "side": 0,
+      "message": "We will need to run these in parallel for a while until we know it is all working.",
+      "revId": "9a8796a368318bc66966d6104a241a115dea7405",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
