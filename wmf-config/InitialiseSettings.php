@@ -20419,6 +20419,7 @@ $wgConf->settings = [
 'wmgWikibaseRepoIdGeneratorSeparateDbConnection' => [
 	'default' => false,
 	'testwikidatawiki' => true,
+	'wikidatawiki' => true,
 ],
 
 'wmgWikibaseClientAddEntityUsagesBatchSize' => [
