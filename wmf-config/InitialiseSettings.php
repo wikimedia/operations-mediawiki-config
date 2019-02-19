@@ -19815,14 +19815,6 @@ $wgConf->settings = [
 	'testwikidatawiki' => 'testwikidata',
 ],
 
-'wmgWikibaseMaxItemIdForNewItemIdHtmlFormatter' => [
-	'default' => 200000000,// 200 million (all entities everywhere)
-],
-
-'wmgWikibaseMaxItemIdForNewPropertyIdHtmlFormatter' => [
-	'default' => 1000000,// On for everything. 6362 properties currently on wikidata 14/01/2019
-],
-
 'wmgWikibaseEntityDataFormats' => [
 	'default' => [
 		'json',
