@@ -134,13 +134,6 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['preferredGeoDataProperties'] = $wmgWBRepoPreferredGeoDataProperties;
 	$wgWBRepoSettings['preferredPageImagesProperties'] = $wmgWBRepoPreferredPageImagesProperties;
 
-	// These can be removed once migration is complete & these vars no longer exist.
-	$wgWBRepoSettings['tmpMaxItemIdForNewItemIdHtmlFormatter'] = $wmgWikibaseMaxItemIdForNewItemIdHtmlFormatter;
-	if ( isset( $wmgWikibaseMaxItemIdForNewPropertyIdHtmlFormatter ) ) {
-		$wgWBRepoSettings['tmpMaxItemIdForNewPropertyIdHtmlFormatter'] =
-			$wmgWikibaseMaxItemIdForNewPropertyIdHtmlFormatter;
-	}
-
 	if ( isset( $wmgUseEntitySourceBasedFederation ) ) {
 		$wgWBRepoSettings['useEntitySourceBasedFederation'] = $wmgUseEntitySourceBasedFederation;
 	}
