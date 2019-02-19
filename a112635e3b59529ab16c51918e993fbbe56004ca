@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6117d7f3_ebb35e34",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 301,
+      "author": {
+        "id": 55
+      },
+      "writtenOn": "2019-02-19T17:14:14Z",
+      "side": 1,
+      "message": "This will probably be called eventgate-analytics",
+      "revId": "a112635e3b59529ab16c51918e993fbbe56004ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
