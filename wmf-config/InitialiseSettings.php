@@ -14920,6 +14920,9 @@ $wgConf->settings = [
 
 'wgPopupsReferencePreviews' => [
 	'default' => false,
+	'mediawikiwiki' => true, // T214905
+	'testwiki' => true,
+	'test2wiki' => true,
 ],
 
 // Whether Compact Links is a Beta feature
