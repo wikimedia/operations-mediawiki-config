@@ -1,5 +1,5 @@
 #!/usr/bin/env python2
-
+from pywikibot import pagegenerators
 from glob import glob
 from distutils.core import setup
 
