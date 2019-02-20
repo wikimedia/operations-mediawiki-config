@@ -14923,6 +14923,7 @@ $wgConf->settings = [
 
 'wgPopupsReferencePreviews' => [
 	'default' => false,
+	'group0' => true, // T214905
 ],
 
 // Whether Compact Links is a Beta feature
