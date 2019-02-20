@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fc4cebf9_5d9258d9",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 6445,
+      "author": {
+        "id": 3963
+      },
+      "writtenOn": "2019-02-20T18:20:14Z",
+      "side": 1,
+      "message": "As I can see a lot of other wikis have Book space as NS 108.",
+      "range": {
+        "startLine": 6445,
+        "startChar": 2,
+        "endLine": 6445,
+        "endChar": 5
+      },
+      "revId": "3dc337d37f52f868c0060618a0c527e4a13241d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3ea3eb6f_a28a59e7",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 6447,
+      "author": {
+        "id": 3963
+      },
+      "writtenOn": "2019-02-20T18:20:14Z",
+      "side": 1,
+      "message": "As I can see a lot of other wikis have Draft space as NS 118.",
+      "range": {
+        "startLine": 6447,
+        "startChar": 2,
+        "endLine": 6447,
+        "endChar": 5
+      },
+      "revId": "3dc337d37f52f868c0060618a0c527e4a13241d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
