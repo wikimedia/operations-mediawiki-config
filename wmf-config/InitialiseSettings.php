@@ -22466,7 +22466,7 @@ $wgConf->settings = [
 'wgWelcomeSurveyExperimentalGroups' => [
 	'kowiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-4' ], 'exp2_target_popup' => [ 'range' => '5-9' ] ],
 	'cswiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-4' ], 'exp2_target_popup' => [ 'range' => '5-9' ] ],
-	'viwiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-4' ], 'exp2_target_popup' => [ 'range' => '5-9' ] ],
+	'viwiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-4' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
 ],
 
 'wgGEHelpPanelEnabled' => [
