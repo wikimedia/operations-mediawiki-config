@@ -1,0 +1,8 @@
+Verified+2: jenkins-bot
+Code-Review+2: Ottomata <aotto@wikimedia.org>
+Code-Review+1: Ppchelko <ppchelko@wikimedia.org>
+Submitted-by: Ottomata <aotto@wikimedia.org>
+Submitted-at: Thu, 21 Feb 2019 20:39:17 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/490418
+Project: operations/mediawiki-config
+Branch: refs/heads/master
