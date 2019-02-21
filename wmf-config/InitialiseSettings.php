@@ -18661,7 +18661,7 @@ $wgConf->settings = [
 	'default' => false,
 ],
 'wmgEchoCrossWikiByDefault' => [
-	'default' => true,
+	'default' => false, //T214230 disable crosswiki upload temporarily to fix issues with broken images
 	'private' => false,
 	'fishbowl' => false,
 	'nonglobal' => false,
