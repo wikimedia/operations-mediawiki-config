@@ -77,7 +77,7 @@ $wgLockManagers[] = [
 if ( $wmgUseWikibaseRepo ) {
 	if ( $wgDBname === 'wikidatawiki' ) {
 		// Disable Special:ItemDisambiguation on wikidata.org T195756
-		$wgSpecialPages['ItemDisambiguation'] = 'DisabledSpecialPage';
+		$wgSpecialPages['ItemDisambiguation'] = 'SpecialBlankpage';
 	}
 
 	if ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) {
