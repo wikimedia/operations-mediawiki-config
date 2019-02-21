@@ -18658,7 +18658,7 @@ $wgConf->settings = [
 	'default' => false,
 ],
 'wmgEchoCrossWikiByDefault' => [
-	'default' => true,
+	'default' => false,
 	'private' => false,
 	'fishbowl' => false,
 	'nonglobal' => false,
