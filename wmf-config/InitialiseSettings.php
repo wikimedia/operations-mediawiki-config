@@ -20950,6 +20950,12 @@ $wgConf->settings = [
 		'type' => 'anywords',
 		'limit' => 10,
 	],
+	'officewiki' => [
+		'build' => true,
+		'use' => false,
+		'type' => 'anywords',
+		'limit' => 10,
+	],
 ],
 
 // Default profile for autocomplete for when the completion suggester is enabled
