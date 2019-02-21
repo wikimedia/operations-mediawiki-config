@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0b5c63f5_10d42a39",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 3623,
+      "author": {
+        "id": 2681
+      },
+      "writtenOn": "2019-02-21T18:24:55Z",
+      "side": 1,
+      "message": "We can change it to \u0027EventServiceName\u0027 straight away with this change",
+      "revId": "91f3a764a0757c26554fde3c9ff31f1de1a85080",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
