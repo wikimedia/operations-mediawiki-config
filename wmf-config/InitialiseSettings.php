@@ -20540,8 +20540,6 @@ $wgConf->settings = [
 // bring down a specific cluster.
 'wmgCirrusSearchDefaultCluster' => [
 	'default' => 'codfw',
-	'cirrussearch-big-indices' => 'local',
-	
 ],
 
 'wmgCirrusSearchClusterOverrides' => [
