@@ -20952,7 +20952,7 @@ $wgConf->settings = [
 	],
 	'officewiki' => [
 		'build' => true,
-		'use' => false,
+		'use' => true,
 		'type' => 'anywords',
 		'limit' => 10,
 	],
@@ -20963,6 +20963,7 @@ $wgConf->settings = [
 	'default' => 'fuzzy',
 	'mediawikiwiki' => 'fuzzy-subphrases',
 	'wikitech' => 'fuzzy-subphrases',
+	'officewiki' => 'fuzzy-subphrases',
 ],
 
 // @} end of wmgCirrusSearchCompletionSuggesterSubphrases
