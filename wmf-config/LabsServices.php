@@ -41,6 +41,7 @@ return [
 		'mathoid' => 'http://deployment-mathoid.eqiad.wmflabs:10042',
 		'eventlogging' => 'udp://deployment-eventlogging03.eqiad.wmflabs:8421',
 		'eventbus' => 'http://deployment-kafka-main-1.deployment-prep.eqiad.wmflabs:8085',
+		'eventgate-analytics' => 'http://deployment-eventgate-analytics-1.deployment-prep.eqiad.wmflabs:8192',
 		'upload' => 'deployment-ms-fe02.deployment-prep.eqiad.wmflabs',
 		'cxserver' => 'http://deployment-sca01.eqiad.wmflabs:8080',
 		'irc' => 'irc.beta.wmflabs.org', // deployment-ircd
