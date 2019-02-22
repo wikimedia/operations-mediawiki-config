@@ -3603,6 +3603,10 @@ if ( $wmgUseEventBus ) {
 			'url' => "{$wmfLocalServices['eventbus']}/v1/events",
 			'timeout' => 60,
 		],
+		'eventgate-analytics' => [
+			'url' => "{$wmfLocalServices['eventgate-analytics']}/v1/events",
+			'timeout' => 60,
+		]
 	];
 
 	// Configure RecentChange to send recentchange events to EventBus service.
