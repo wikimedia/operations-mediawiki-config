@@ -5505,6 +5505,7 @@ $wgConf->settings = [
 			'udp2log' => false,
 			'logstash' => false,
 			'kafka' => 'debug',
+			'eventbus' => 'debug',
 			'buffer' => true,
 		],
 		'authentication' => 'info',
@@ -5523,6 +5524,7 @@ $wgConf->settings = [
 		'CirrusSearchChangeFailed' => 'debug',
 		'CirrusSearchRequestSet' => [
 			'kafka' => 'debug',
+			'eventbus' => 'debug',
 			'udp2log' => false,
 			'logstash' => false,
 			'buffer' => true
