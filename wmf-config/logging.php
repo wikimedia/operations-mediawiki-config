@@ -31,13 +31,21 @@
 #   - `channel => false`: ignore all log events on this channel.
 #   - `channel => level`: record all events of this level or higher to udp2log and logstash.
 #     Special case: `channel => debug` will not log to logstash.
-#   - `channel => [ 'udp2log'=>level, 'logstash'=>level, 'kafka'=>level, 'sample'=>rate, 'buffer'=>buffer ]`
+#   - `channel => [
+#           'udp2log'=>level,
+#           'logstash'=>level,
+#           'eventbus'=>level,
+#           'kafka'=>level,
+#           'sample'=>rate,
+#           'buffer'=>buffer ]`
+# - $wmgUseEventBus: Whether EventBus extension is enabled on the wiki
 #
 #   Default for all channels for fields not otherwise specified:
 #   ```
 #   [
 #       'udp2log' = >'debug',
 #       'logstash' = >'info',
+#       'eventbus' => false,
 #       'kafka' => false,
 #       'sample' => false,
 #       'buffer' => false,
@@ -254,6 +262,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 			'udp2log' => 'debug',
 			'logstash' => ( isset( $opts['udp2log'] ) && $opts['udp2log'] !== 'debug' ) ? $opts['udp2log'] : 'info',
 			'kafka' => false,
+			'eventbus' => false,
 			'sample' => false,
 			'buffer' => false,
 		],
@@ -288,6 +297,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 	}
 
 	// Configure kafka handler
+    // Deprecated. Will be removed when we switch to EventBus handler
 	if ( $opts['kafka'] && $wmgKafkaServers ) {
 		$kafkaHandler = "kafka-{$opts['kafka']}";
 		if ( !isset( $wmgMonologConfig['handlers'][$kafkaHandler] ) ) {
@@ -314,6 +324,21 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 		$wmgMonologConfig['handlers'][$kafkaHandler]['args'][1]['alias'][$channel] = "mediawiki_$channel";
 		$handlers[] = $kafkaHandler;
 	}
+
+    if ( $opts['eventbus'] && $wmgUseEventBus ) {
+        $eventBusHandler = "eventbus-{$opts['eventbus']}";
+        if ( !isset( $wmgMonologConfig['handlers'][$eventBusHandler] ) ) {
+            // Register handler that will only pass events of the given
+            // log level
+            $wmgMonologConfig['handlers'][$eventBusHandler] = [
+                'class' => 'EventBusMonologHandler',
+                'args' => [
+                    'eventbus-analytics' // EventServiceName
+                ]
+            ];
+        }
+        $handlers[] = $eventBusHandler;
+    }
 
 	// Configure Logstash handler
 	if ( $opts['logstash'] && $wmgLogstashServers ) {

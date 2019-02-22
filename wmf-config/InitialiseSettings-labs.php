@@ -170,6 +170,18 @@ function wmfLabsSettings() {
 				'CentralAuthVerbose' => 'debug',
 				'dnsblacklist' => 'debug',
 				'EventBus' => 'debug',
+                'ApiAction' => [
+                    'udp2log' => false,
+                    'logstash' => false,
+                    'eventbus' => 'debug',
+                    'buffer' => true,
+                ],
+                'CirrusSearchRequestSet' => [
+                    'eventbus' => 'debug',
+                    'udp2log' => false,
+                    'logstash' => false,
+                    'buffer' => true
+                ],
 				'JobExecutor' => [ 'logstash' => 'debug' ],
 				'runJobs' => [ 'logstash' => 'info' ],
 				'squid' => 'debug',
