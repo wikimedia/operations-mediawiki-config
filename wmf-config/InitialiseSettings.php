@@ -11813,9 +11813,6 @@ $wgConf->settings = [
 	'+hiwikiversity' => [
 		'sysop' => [ 'autopatrolled' ], // T179251
 	],
-	'+hiwiktionary' => [
-		'bureaucrat' => [ 'sysop', ],
-	],
 	'+hrwiki' => [
 		'bureaucrat' => [ 'patroller', 'autopatrolled' ],
 		'sysop' => [ 'patroller', 'autopatrolled' ],
