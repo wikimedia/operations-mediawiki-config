@@ -5322,6 +5322,7 @@ $wgConf->settings = [
 	'arwiki' => [ '', 'autoconfirmed', 'review', 'sysop' ], // T54109, T146575
 	'ckbwiki' => [ '', 'autoconfirmed', 'autopatrol', 'sysop' ], // T54533
 	'dewiki' => [ '', 'autoconfirmed', 'editeditorprotected', 'sysop' ], // T94368
+	'dewiktionary' => [ '', 'autoconfirmed', 'autoreview', 'editor', 'sysop' ], // T216885
 	'enwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T126607, T57432
 	'enwiktionary' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T148007
 	'enwikivoyage' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T198056
