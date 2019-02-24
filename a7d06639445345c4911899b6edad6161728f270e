@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1dc2b5b0_ef2fe163",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2019-02-24T11:39:08Z",
+      "side": 1,
+      "message": "This commit message does not conform with the guidelines at \n\u003chttps://www.mediawiki.org/wiki/Gerrit/Commit_message_guidelines\u003e. In particular, it is very extense (you do not need to quote vermatim the Phabricator task description, and lines should be shorter in order to to surpase the vertical ruler you can see in this view.",
+      "revId": "a7d06639445345c4911899b6edad6161728f270e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
