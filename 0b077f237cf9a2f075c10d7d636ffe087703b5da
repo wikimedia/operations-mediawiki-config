@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4d254ba9_88b49e8c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2019-02-24T15:19:58Z",
+      "side": 1,
+      "message": "Use imperative mood here.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 5
+      },
+      "revId": "0b077f237cf9a2f075c10d7d636ffe087703b5da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "970c334e_34ee0223",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 5325,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2019-02-24T15:19:58Z",
+      "side": 1,
+      "message": "This isn\u0027t going to work. wgRestrictionLevels contains a list of _user rights_, not _user groups_. You should solve it by adding \"editeditorprotected\" right here and assign this right to editors in groupOverrides. See dewiki\u0027s entry.",
+      "range": {
+        "startLine": 5325,
+        "startChar": 57,
+        "endLine": 5325,
+        "endChar": 63
+      },
+      "revId": "0b077f237cf9a2f075c10d7d636ffe087703b5da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
