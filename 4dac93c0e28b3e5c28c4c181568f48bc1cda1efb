@@ -16,6 +16,24 @@
       "revId": "4dac93c0e28b3e5c28c4c181568f48bc1cda1efb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7b8b7366_612f7996",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 329,
+      "author": {
+        "id": 2681
+      },
+      "writtenOn": "2019-02-25T18:04:22Z",
+      "side": 1,
+      "message": "This will create a handler called \u0027eventbus-debug\u0027 - same as in the kafka handlers",
+      "parentUuid": "0c69892c_2139438d",
+      "revId": "4dac93c0e28b3e5c28c4c181568f48bc1cda1efb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
