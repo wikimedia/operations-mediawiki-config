@@ -156,7 +156,7 @@ $wgLBFactoryConf = [
 	],
 	's6' => [
 		'db1061' => 0,      # C3 2.8TB 128GB, master
-		# 'db1085' => 300,    # B3 3.6TB 512GB, api # master for sanitarium db1125 # mysql upgrade and schema change
+		'db1085' => 100,    # B3 3.6TB 512GB, api # master for sanitarium db1125 # low weight
 		'db1088' => 500,    # C2 3.6TB 512GB
 		'db1093' => 300,    # D2 3.6TB 512GB, api # candidate master
 		'db1096:3316' => 1, # A6 3.6TB 512GB # rc, log: s5 and s6
