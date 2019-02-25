@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7893e3a4_53099a7a",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 677,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2019-02-25T13:49:42Z",
+      "side": 1,
+      "message": "Note: We want to be able to test reference previews for anonymous (not logged-in) users. To be able to to this it can\u0027t be a Beta feature.",
+      "revId": "9402875e9c01a13b5c69c069cba2f463bc050ee4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cdec456a_be761f2a",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 14926,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2019-02-25T13:49:42Z",
+      "side": 1,
+      "message": "Note: The file dblists/group0.dblist contains a surprisingly large amount of wikis. These are closed wikis, added to the list via I36182c4. We think this is fine and would like to stick to the \"group0\" shortcut instead of listing test wikis individually.",
+      "revId": "9402875e9c01a13b5c69c069cba2f463bc050ee4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
