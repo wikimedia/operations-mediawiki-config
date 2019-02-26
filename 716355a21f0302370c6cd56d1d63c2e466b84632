@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fcfaee6a_8fb33adc",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 19139,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-02-26T23:10:57Z",
+      "side": 1,
+      "message": "(unrelated), these placeholders are useful, but might want to comment them out to save bytes given they\u0027re optional all the way. Given the minimalistic way in which we consume them it\u0027ll actually save a few dummy forEach loops I think, but the startup bytes are more valuable I suppose than the runtime ms.",
+      "revId": "716355a21f0302370c6cd56d1d63c2e466b84632",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
