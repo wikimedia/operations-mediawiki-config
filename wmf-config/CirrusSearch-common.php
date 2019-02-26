@@ -51,12 +51,12 @@ $wgCirrusSearchInstantIndexNew = $wmgCirrusSearchInstantIndexNew;
 # Lower the timeouts - the defaults are too high and allow to scan too many
 # pages. 40s shard timeout for regex allowed to deep scan 9million pages for
 # insource:/the/ on commons. Keep client timeout relatively high in comparaison,
-# this is because the shard level timeout is a passive check, i.e. if no doc
-# match the check is only done when collecting new segments, and we really
-# don't want to timeout the client before the shard retrieval (we may release
-# the poolcounter before the end of the query on the backend)
-$wgCirrusSearchSearchShardTimeout[ 'regex' ] = '20s';
-$wgCirrusSearchClientSideSearchTimeout[ 'regex' ] = 80;
+# but not higher than 60sec as it's the max time allowed for GET requests.
+# we really don't want to timeout the client before the shard retrieval (we may
+# release the poolcounter before the end of the query on the backend)
+$wgCirrusSearchSearchShardTimeout[ 'regex' ] = '15s';
+// GET requests timeout at 60s, give some room to treat request timeout (T216860)
+$wgCirrusSearchClientSideSearchTimeout[ 'regex' ] = 50;
 $wgCirrusSearchSearchShardTimeout[ 'default' ] = '10s';
 $wgCirrusSearchClientSideSearchTimeout[ 'default' ] = 40;
 
@@ -76,7 +76,6 @@ $wgCirrusSearchWikimediaExtraPlugin = [
 	'regex' => [
 		'build',
 		'use',
-		'use_extra_timeout', // More accurate timeout (T152895)
 	],
 	'super_detect_noop' => true,
 	'documentVersion' => true,
