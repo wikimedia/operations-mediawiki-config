@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "16732c43_922883a4",
+        "filename": "wmf-config/LabsServices.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 55
+      },
+      "writtenOn": "2019-02-26T17:38:29Z",
+      "side": 1,
+      "message": "should use fqdn hostname",
+      "revId": "0728fd4dacab1e420d1119d1498a47695c74a86c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e95cf61_13891aa7",
+        "filename": "wmf-config/ProductionServices.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 55
+      },
+      "writtenOn": "2019-02-26T17:38:29Z",
+      "side": 1,
+      "message": "This will be eventgate-analytics.discovery.wmnet:31192",
+      "revId": "0728fd4dacab1e420d1119d1498a47695c74a86c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
