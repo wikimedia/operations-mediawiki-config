@@ -912,6 +912,12 @@ function wmfLabsSettings() {
 				]
 			]
 		],
+		'wgGEHomepageEnabled' => [
+			'default' => true,
+		],
+		'wgGEHomepageNewAccountEnablePercentage' => [
+			'default' => 0,
+		],
 		'wgEnablePartialBlocks' => [
 			'default' => false,
 			'enwiki' => true,
