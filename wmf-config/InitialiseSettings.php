@@ -12301,6 +12301,7 @@ $wgConf->settings = [
 	'arwikisource' => [ 'w' ],
 	'arwikiversity' => [ 'w', 'b', 'n', 'q', 's', 'wikt' ],
 	'arzwiki' => [ 'incubator', 'en', 'ar', 'es', 'fr', ],
+	'azwiki' => [ 'en' ], //T217104
 	'azbwiki' => [ 'az', 'en', 'fa', 'incubator' ], // T109755
 	'betawikiversity' => [ 'meta', 'b', 'en', 'incubator', 'de', 'wikipedia:lt', 'wikipedia:zh' ], // T139922
 	'bhwiki' => [ 'commons', 'meta', 'species', 'de', 'en', 'wikibooks:en', 'wikiquote:en', 'wikinews:en', 'wikisource:en', 'wikiversity:en', 'es', 'fa', 'fr', 'hi', 'ml', 'ne', 'nl', 'ro', 'ru', 'pl', 'pt', 'simple', 'ta', 'ur' ], // T70616
