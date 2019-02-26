@@ -1318,5 +1318,13 @@ function wmfLabsSettings() {
 			'wikidatawiki' => true,
 			'commonswiki' => true,
 		],
+
+		'wgMusicalNotationEnableWikibaseDataType' => [
+			'default' => false,
+			'wikidatawiki' => true,
+		],
+		'wgScoreTrim' => [
+			'default' => true
+		],
 	];
 } # wmflLabsSettings()
