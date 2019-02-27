@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "deb7496e_0cc329d0",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 16163,
+      "author": {
+        "id": 110
+      },
+      "writtenOn": "2019-02-27T11:19:57Z",
+      "side": 1,
+      "message": "ExternalGuidance extersion initiated edit tags\n\nAlso add the ticket in comment for future reference. Same for CX change.",
+      "revId": "440d815d750d77e4bb94f0b80f4e97acf9cff7dc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
