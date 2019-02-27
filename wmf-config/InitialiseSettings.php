@@ -19425,6 +19425,15 @@ $wgConf->settings = [
 
 'wmgWikibaseRepoForeignRepositories' => [
 	'default' => [],
+	'commonswiki' => [
+		'wikidata' => [
+			'repoDatabase' => 'wikidatawiki',
+			'baseUri' => 'https://www.wikidata.org/entity/',
+			'supportedEntityTypes' => [ 'item', 'property' ],
+			'prefixMapping' => [],
+			'entityNamespaces' => [ 'item' => 0, 'property' => 120 ]
+		],
+	],
 ],
 
 'wmgUseWikibaseClient' => [
