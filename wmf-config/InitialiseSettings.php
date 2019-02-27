@@ -16160,6 +16160,11 @@ $wgConf->settings = [
 	'default' => false,
 ],
 
+// Enable ExternalGuidance edittag in VE
+'wmgWMEEditCampaigns' => [
+	'external-machine-translation'
+],
+
 // --------------- VisualEditor end ---------------
 
 'wgCiteResponsiveReferences' => [
@@ -18963,7 +18968,10 @@ $wgConf->settings = [
 		'cxstats' => true,
 		'newarticle' => true,
 		'specialcx' => true,
-		'staff-recommender' => true
+		'staff-recommender' => true,
+		'external-machine-translation' => [
+			"edittag" =>  "external-machine-translation"
+		],
 	],
 	'dewiki' => [
 		'article-recommender-1' => true,
