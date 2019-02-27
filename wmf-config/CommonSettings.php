@@ -3046,6 +3046,7 @@ if ( $wmgUseEventLogging ) {
 	// Depends on EventLogging
 	if ( $wmgUseWikimediaEvents ) {
 		wfLoadExtension( 'WikimediaEvents' );
+		$wgWMEEditCampaigns = $wmgWMEEditCampaigns;
 		$wgWMEStatsdBaseUri = '/beacon/statsv';
 	}
 
