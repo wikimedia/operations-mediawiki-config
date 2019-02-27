@@ -21,6 +21,10 @@ if ( !empty( $wmgUseWikibaseRepo ) ) {
 	}
 	if ( !empty( $wmgUseWikibaseCirrusSearch ) ) {
 		wfLoadExtension( 'WikibaseCirrusSearch' );
+		if ( !empty( $wmgNewWikibaseCirrusSearch ) ) {
+			$wgWBCSUseCirrus = true;
+			$wgWBRepoSettings['disableCirrus'] = true;
+		}
 	}
 }
 
