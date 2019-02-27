@@ -22494,7 +22494,7 @@ $wgConf->settings = [
 	'testwiki' => 0,
 	'kowiki' => 50,
 	'cswiki' => 50,
-	'viwiki' => 0,
+	'viwiki' => 50,
 ],
 
 'wgGEHelpPanelHelpDeskTitle' => [
