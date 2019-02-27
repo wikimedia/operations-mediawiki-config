@@ -20421,7 +20421,13 @@ $wgConf->settings = [
 	'default' => 300,
 ],
 
+// Load WikibaseCirrusSearch extension
 'wmgUseWikibaseCirrusSearch' => [
+	'default' => false,
+],
+
+// Enable WikibaseCirrusSearch extension code (and disable Wikibase search code)
+'wmgNewWikibaseCirrusSearch' => [
 	'default' => false,
 ],
 
