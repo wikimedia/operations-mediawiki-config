@@ -1294,8 +1294,13 @@ function wmfLabsSettings() {
 			'wikidatawiki' => 'Q505138',
 		],
 
-		// T215684: Temporarily enable on Beta Cluster during deployment
+		// T215684: Load WikibaseCirrusSearch on Beta Cluster
 		'wmgUseWikibaseCirrusSearch' => [
+			'wikidatawiki' => true,
+			'commonswiki' => true,
+		],
+		// T215684: Enable WikibaseCirrusSearch on Beta Cluster
+		'wmgNewWikibaseCirrusSearch' => [
 			'wikidatawiki' => true,
 			'commonswiki' => true,
 		],
