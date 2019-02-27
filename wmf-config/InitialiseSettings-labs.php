@@ -934,6 +934,9 @@ function wmfLabsSettings() {
 		'wgGEHomepageNewAccountEnablePercentage' => [
 			'default' => 0,
 		],
+		'wgGEConfirmEmailEnabled' => [
+			'default' => true,
+		],
 		'wgEnablePartialBlocks' => [
 			'default' => false,
 			'enwiki' => true,
