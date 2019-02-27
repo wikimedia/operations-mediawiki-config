@@ -452,6 +452,7 @@ function wmfLabsSettings() {
 				],
 				// T217171
 				[
+					'enabled' => true,
 					'name' => 'reader-demographics-en-pilot',
 					'type' => 'external',
 					'description' => 'Reader-demographics-1-description',
