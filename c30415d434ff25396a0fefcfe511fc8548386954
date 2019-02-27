@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "203d0d63_8f3c3272",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2019-02-27T10:33:06Z",
+      "side": 1,
+      "message": "Commit message needs to be updated again, sorry. Pursuant the global inactivity policy the remaining bureaucrat has lost their permissions so there\u0027s no bureaucrat left at hi.wiktionary.",
+      "revId": "c30415d434ff25396a0fefcfe511fc8548386954",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
