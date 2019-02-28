@@ -2335,6 +2335,10 @@ if ( $wmgUseVisualEditor ) {
 		$wgDefaultUserOptions['visualeditor-newwikitext'] = true;
 	}
 
+	if ( $wmgVisualEditorEnableVisualSectionEditing ) {
+		$wgVisualEditorEnableVisualSectionEditing = $wmgVisualEditorEnableVisualSectionEditing;
+	}
+
 	// Namespace configuration
 	$wgVisualEditorAvailableNamespaces = $wmgVisualEditorAvailableNamespaces;
 	if ( !isset( $wgVisualEditorAvailableNamespaces ) ) {
