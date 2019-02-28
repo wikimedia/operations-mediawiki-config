@@ -22511,6 +22511,10 @@ $wgConf->settings = [
 	'viwiki' => 50,
 ],
 
+'wgGEHelpPanelReadingModeNamespaces' => [
+	'default' => [ 2, 4, 12 ]
+],
+
 'wgGEHelpPanelHelpDeskTitle' => [
 	'default' => '',
 	'testwiki' => 'Wikipedia:Requests/Help_desk',
