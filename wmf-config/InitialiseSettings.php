@@ -20451,6 +20451,7 @@ $wgConf->settings = [
 // Enable WikibaseCirrusSearch extension code (and disable Wikibase search code)
 'wmgNewWikibaseCirrusSearch' => [
 	'default' => false,
+	'testwikidatawiki' => true,
 ],
 
 'wmgUseTemplateSandbox' => [
