@@ -2640,7 +2640,6 @@ if ( $wmgUseTranslate ) {
 		};
 	};
 
-	$wgSpecialPages['FirstSteps'] = DisabledSpecialPage::getCallback( 'FirstSteps' );
 	$wgSpecialPages['ManageMessageGroups'] = DisabledSpecialPage::getCallback( 'ManageMessageGroups' );
 	$wgSpecialPages['TranslationStats'] = DisabledSpecialPage::getCallback( 'TranslationStats' );
 
