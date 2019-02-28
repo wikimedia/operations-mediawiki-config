@@ -2640,9 +2640,9 @@ if ( $wmgUseTranslate ) {
 		};
 	};
 
-	unset( $wgSpecialPages['FirstSteps'] );
-	unset( $wgSpecialPages['ManageMessageGroups'] );
-	unset( $wgSpecialPages['TranslationStats'] );
+	$wgSpecialPages['FirstSteps'] = DisabledSpecialPage::getCallback( 'FirstSteps' );
+	$wgSpecialPages['ManageMessageGroups'] = DisabledSpecialPage::getCallback( 'ManageMessageGroups' );
+	$wgSpecialPages['TranslationStats'] = DisabledSpecialPage::getCallback( 'TranslationStats' );
 
 	$wgTranslateTranslationServices['Apertium'] = [
 		'type' => 'cxserver',
