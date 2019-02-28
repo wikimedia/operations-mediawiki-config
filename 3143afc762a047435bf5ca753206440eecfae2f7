@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9038963f_6013fefc",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 18973,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-02-28T17:10:30Z",
+      "side": 0,
+      "message": "Don\u0027t forget this. And it should be carefully checked when deploying that it indeed remains false.",
+      "range": {
+        "startLine": 18973,
+        "startChar": 0,
+        "endLine": 18973,
+        "endChar": 24
+      },
+      "revId": "3143afc762a047435bf5ca753206440eecfae2f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fa5f3338_cd9d289e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 18981,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-02-28T17:10:30Z",
+      "side": 0,
+      "message": "Ditto",
+      "revId": "3143afc762a047435bf5ca753206440eecfae2f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
