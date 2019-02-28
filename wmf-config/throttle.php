@@ -88,4 +88,11 @@ $wmgThrottlingExceptions[] = [ // T217305
 	'value' => 100
 ];
 
+$wmgThrottlingExceptions[] = [ // T217311
+	'from' => '2019-03-08T10:00 UTC',
+	'to' => '2019-03-08T22:00 UTC',
+	'IP' => '86.83.7.133',
+	'value' => 30 // 25 expected
+];
+
 ## Add throttling definitions above.
