@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e51004d7_d1ff39cb",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 16163,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-02-28T14:53:48Z",
+      "side": 1,
+      "message": "extension",
+      "range": {
+        "startLine": 16163,
+        "startChar": 20,
+        "endLine": 16163,
+        "endChar": 29
+      },
+      "revId": "3d83a67c88744bda39401f119c6cac4cf4979c0b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cdd61d2c_580d7f79",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 18972,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-02-28T14:53:48Z",
+      "side": 1,
+      "message": "Since the specific wiki overrides below are not merged with defaults, this tag should be added to all of the wikis below if it should be enabled there too.\n\nThis could be made simpler by using mergeable values: https://github.com/wikimedia/mediawiki/blob/master/includes/SiteConfiguration.php#L79-L93\n\nBut that change must be careful to not introduce any unexpected changes.",
+      "revId": "3d83a67c88744bda39401f119c6cac4cf4979c0b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
