@@ -887,6 +887,9 @@ function wmfLabsSettings() {
 		'wgGEHelpPanelSearchEnabled' => [
 			'default' => true,
 		],
+		'wgGEHelpPanelReadingModeNamespaces' => [
+			'default' => [ 2, 3, 4, 12 ]
+		],
 		'wgGEHelpPanelSearchForeignAPI' => [
 			'default' => 'https://en.wikipedia.org/w/api.php',
 			'cawiki' => 'https://cs.wikipedia.org/w/api.php',
