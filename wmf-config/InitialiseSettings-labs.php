@@ -323,6 +323,11 @@ function wmfLabsSettings() {
 		/// ------------ BetaFeatures end -----------
 		///
 
+		// Whether to enable true section editing. false, true or 'mobile'
+		'wmgVisualEditorEnableVisualSectionEditing' => [
+			'default' => 'mobile',
+		],
+
 		'wmgUseRSSExtension' => [
 			'dewiki' => true,
 		],
