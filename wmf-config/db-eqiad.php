@@ -141,9 +141,9 @@ $wgLBFactoryConf = [
 		'db1081' => 100,    # A2 3.6TB 512GB, api # candidate master
 		'db1084' => 300,    # B1 3.6TB 512GB, api
 		'db1091' => 500,    # D2 3.6TB 512GB
-		'db1097:3314' => 150, # D1 3.6TB 512GB # rc, log: s4 and s5
+		'db1097:3314' => 50, # D1 3.6TB 512GB # rc, log: s4 and s5 # temporary vslow
 		'db1103:3314' => 150, # A3 3.6TB 512GB # rc, log: s2 and s4
-		'db1121' => 1,      # C6 3.6TB 512GB, vslow, dump # master for sanitarium db1125
+		# 'db1121' => 1,      # C6 3.6TB 512GB, vslow, dump # master for sanitarium db1125 # upgrade mysql
 	],
 	's5' => [
 		'db1070' => 0,      # D1 2.8TB 160GB, master
@@ -352,10 +352,10 @@ $wgLBFactoryConf = [
 	],
 	's4' => [
 		'vslow' => [
-			'db1121' => 1,
+			'db1097:3314' => 1,
 		],
 		'dump' => [
-			'db1121' => 1,
+			'db1097:3314' => 1,
 		],
 		'api' => [
 			'db1081' => 3,
