@@ -19064,7 +19064,12 @@ $wgConf->settings = [
 
 'wmgUseExternalGuidance' => [
 	'default' => false,
-	'idwiki' => true,
+	'wikipedia' => true,
+],
+
+'wgExternalGuidanceEnableContextDetection' => [
+	'default' => false,
+	'enwiki' => true,
 	'simplewiki' => true,
 ],
 
