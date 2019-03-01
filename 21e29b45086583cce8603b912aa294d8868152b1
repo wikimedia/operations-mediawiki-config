@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "99fb5ae3_5cd1d7a4",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 21418,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2019-03-01T23:54:23Z",
+      "side": 1,
+      "message": "Since this brings itwiki back to the default settings, could you please remove the itwiki block altogether (possibly in a follow-up patch)?",
+      "revId": "21e29b45086583cce8603b912aa294d8868152b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
