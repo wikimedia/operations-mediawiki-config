@@ -313,6 +313,9 @@ if ( $wmgUseWikibaseClient ) {
 	}
 
 	$wgWBClientSettings['addEntityUsagesBatchSize'] = $wmgWikibaseClientAddEntityUsagesBatchSize;
+
+	// Temporary, see T210926
+	$wgWBClientSettings['useKartographerMaplinkInWikitext'] = true;
 }
 
 unset( $wmgWBSharedCacheKey );
