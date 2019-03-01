@@ -21413,14 +21413,6 @@ $wgConf->settings = [
 		'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
 	],
-	'itwiki' => [
-		'damaging' => [ 'enabled' => true ],
-		// goodfaith is disabled for itwiki (T211032)
-		'goodfaith' => [ 'enabled' => false ],
-		'reverted' => [ 'enabled' => false ],
-		'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
-		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
-	],
 	'euwiki' => [
 		'damaging' => [ 'enabled' => false ],
 		'goodfaith' => [ 'enabled' => false ],
@@ -21752,7 +21744,12 @@ $wgConf->settings = [
 			'likelybad' => [ 'min' => 'maximum recall @ precision >= 0.45', 'max' => 1 ],
 			'verylikelybad' => [ 'min' => 'maximum recall @ precision >= 0.75', 'max' => 1 ],
 		],
-		// goodfaith is disabled for itwiki (T211032)
+		'goodfaith' => [
+			// likelygood uses default
+			'maybebad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.15' ],
+			// likelybad uses default
+			'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.9' ],
+		],
 	],
 ],
 'wmgOresDefaultSensitivityLevel' => [
