@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "80ad251c_c17665b0",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 14349,
+      "author": {
+        "id": 3963
+      },
+      "writtenOn": "2019-03-03T11:52:04Z",
+      "side": 1,
+      "message": "Why not adding media.mehrnews.com instead of a wildcard subdomain?",
+      "range": {
+        "startLine": 14349,
+        "startChar": 3,
+        "endLine": 14349,
+        "endChar": 4
+      },
+      "revId": "008c3892cfcc87e5d78aa73f135804d6c15426a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
