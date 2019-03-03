@@ -10385,7 +10385,11 @@ $wgConf->settings = [
 			'upload' => true, // Exception to T14556, used for testing of upload tools
 			'pagelang' => true, // testing of T69223
 		],
-		'templateeditor' => [ 'templateeditor' => true, 'tboverride' => true, ], // T61084
+		'templateeditor' => [
+			'templateeditor' => true, // T61084
+			'tboverride' => true,
+			'editcontentmodel' => true, // T217499
+		],
 		'sysop' => [
 			'deleterevision' => true,
 			'templateeditor' => true,
