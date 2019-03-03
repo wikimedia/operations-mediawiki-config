@@ -14346,7 +14346,7 @@ $wgConf->settings = [
 		'*.nasimonline.ir',                 // Iranian news agency - T203371
 		'idb.ub.uni-tuebingen.de',          // University Library Tübingen - T211466
 		'mbc.cyfrowemazowsze.pl',           // Polish biblioteka - T212469
-		'mehrnews.com',                     // Iranian news agency - T213961
+		'media.mehrnews.com',               // Iranian news agency - T213961
 		'mirror.netcologne.de',             // T213632
 		'*.getty.edu',                      // J. Paul Getty Museum - T213649
 		'mojnews.com',                      // Iranian news agency - T213901
