@@ -22633,9 +22633,15 @@ $wgConf->settings = [
 	],
 ],
 
-'wgEnableRollbackConfirmationPrompt' => [
-	'default' => false,
+'wgDisableRollbackConfirmationFeature' => [
+	'dewiki' => true
 ],
+
+'wgDefaultUserOptions' => [
+	'dewiki' => [
+		'showrollbackconfirmation' => 1
+	]
+]
 
 ];
 
