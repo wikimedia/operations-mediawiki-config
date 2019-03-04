@@ -16,6 +16,24 @@
       "revId": "21e29b45086583cce8603b912aa294d8868152b1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a9bec627_1ce9fd27",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 21418,
+      "author": {
+        "id": 2488
+      },
+      "writtenOn": "2019-03-04T14:06:17Z",
+      "side": 1,
+      "message": "Good point. I prefer to do it in one go.",
+      "parentUuid": "99fb5ae3_5cd1d7a4",
+      "revId": "21e29b45086583cce8603b912aa294d8868152b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
