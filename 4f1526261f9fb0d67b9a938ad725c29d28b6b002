@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7cf2f453_45ad5cd2",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 10274,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-03-04T08:47:41Z",
+      "side": 1,
+      "message": "Yeah, this is obviously better now. Thanks @Marco!",
+      "range": {
+        "startLine": 10270,
+        "startChar": 2,
+        "endLine": 10274,
+        "endChar": 4
+      },
+      "revId": "4f1526261f9fb0d67b9a938ad725c29d28b6b002",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
