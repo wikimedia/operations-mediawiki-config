@@ -22,6 +22,30 @@
       "revId": "63fce411c6d6322d9fe0e0173b36eba72bd4fe8e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4f95299c_d9dd9a81",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 10270,
+      "author": {
+        "id": 6619
+      },
+      "writtenOn": "2019-03-04T08:50:08Z",
+      "side": 1,
+      "message": "I initially did that, then I saw there are groups that have more than 3 rights on the same line, that\u0027s why I changed it to that.  I now restored what I did first. Thanks.",
+      "parentUuid": "e2e5e6c7_1111de6e",
+      "range": {
+        "startLine": 10270,
+        "startChar": 2,
+        "endLine": 10270,
+        "endChar": 121
+      },
+      "revId": "63fce411c6d6322d9fe0e0173b36eba72bd4fe8e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
