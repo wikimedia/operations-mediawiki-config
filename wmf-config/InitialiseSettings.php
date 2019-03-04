@@ -21346,6 +21346,7 @@ $wgConf->settings = [
 	'wikidatawiki' => true, // T130212
 	'testwiki' => true, // T199913
 	'test2wiki' => true, // T200412
+	'kowiki' => true, // T161628
 ],
 'wgOresWikiId' => [
 	'default' => null,
@@ -21381,6 +21382,7 @@ $wgConf->settings = [
 	'wikidatawiki' => true, // T130212
 	'testwiki' => true, // T199913
 	'test2wiki' => true, // T200412
+	'kowiki' => true, // T161628
 ],
 'wgOresModels' => [
 	'default' => [
@@ -21753,6 +21755,20 @@ $wgConf->settings = [
 			'verylikelybad' => [ 'min' => 'maximum recall @ precision >= 0.75', 'max' => 1 ],
 		],
 		// goodfaith is disabled for itwiki (T211032)
+	],
+	'kowiki' => [
+		'damaging' => [
+			'likelygood' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.99' ],
+			// maybebad uses default
+			'likelybad' => [ 'min' => 'maximum recall @ precision >= 0.45', 'max' => 1 ],
+			'verylikelybad' => [ 'min' => 'maximum recall @ precision >= 0.75', 'max' => 1 ],
+		],
+		'goodfaith' => [
+			'likelygood' => [ 'min' => 'maximum recall @ precision >= 0.99', 'max' => 1 ],
+			'maybebad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.15' ],
+			// likelybad uses default
+			// verylikelybad uses default (disabled)
+		],
 	],
 ],
 'wmgOresDefaultSensitivityLevel' => [
