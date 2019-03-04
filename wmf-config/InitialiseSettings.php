@@ -5456,6 +5456,12 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
+// Whether udp2log handler will also mirror data to localhost syslog, thus
+// ingesting udp2log into the logging pipeline.
+'wmgUseSyslogForUdp2log' => [
+	'default' => false,
+],
+
 # wmgKafkaServers @{
 // Kafka servers. Use false to disable all kafka logging.
 'wmgKafkaServers' => [

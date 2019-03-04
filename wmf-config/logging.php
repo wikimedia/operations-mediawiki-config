@@ -285,6 +285,26 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 			// T117019: Send events to default handler location as well
 			$handlers[] = $wmgDefaultMonologHandler;
 		}
+
+		// Install an additional handler for 'mwlog' data
+		if ( $wmgUseSyslogForUdp2log ) {
+			$mwlogHandler = "mwlog-{$opts['udp2log']}";
+			if ( !isset( $wmgMonologConfig['handlers'][$mwlogHandler] ) ) {
+				// Register handler that will only pass events of the given
+				// log level
+				$wmgMonologConfig['handlers'][$mwlogHandler] = [
+					'class' => '\\MediaWiki\\Logger\\Monolog\\SyslogHandler',
+					'formatter' => 'line',
+					'args'      => [
+						'mwlog',          // tag
+						'localhost',      // host
+						10515,            // port
+						LOG_USER,         // facility
+						$opts['udp2log'], // log level threshold
+					],
+				];
+			}
+		}
 	}
 
 	// Configure kafka handler
