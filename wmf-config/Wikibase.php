@@ -203,9 +203,6 @@ if ( $wmgUseWikibaseRepo ) {
 	// Temporary, see T184933
 	$wgWBRepoSettings['useKartographerGlobeCoordinateFormatter'] = true;
 
-	// Temporary, see T210926
-	$wgWBRepoSettings['useKartographerMaplinkInWikitext'] = true;
-
 	$wgWBRepoSettings['idGeneratorSeparateDbConnection'] = $wmgWikibaseRepoIdGeneratorSeparateDbConnection;
 }
 
