@@ -22633,6 +22633,15 @@ $wgConf->settings = [
 	],
 ],
 
+'wgGEHomepageEnabled' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
+'wgGEHomepageNewAccountEnablePercentage' => [
+	'default' => 0,
+],
+
 'wgEnableRollbackConfirmationPrompt' => [
 	'default' => false,
 ],
