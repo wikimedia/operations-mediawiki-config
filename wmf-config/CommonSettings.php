@@ -3592,13 +3592,6 @@ if ( $wmgUseQuickSurveys ) {
 if ( $wmgUseEventBus ) {
 	wfLoadExtension( 'EventBus' );
 
-	// TODO: these globals can be removed in favor of the
-	// $wgEventServices['eventbus'] setting below once
-	// https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/EventBus/+/485969/
-	// is deployed.
-	$wgEventServiceUrl = "{$wmfLocalServices['eventbus']}/v1/events";
-	$wgEventServiceTimeout = 60;
-
 	// Define production event service endpoints.
 	$wgEventServices = [
 		// EventBus is the (legacy) eventlogging-service endpoint
