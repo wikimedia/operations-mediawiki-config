@@ -79,6 +79,30 @@ class ThrottleTest extends PHPUnit\Framework\TestCase {
 		}
 	}
 
+	/**
+	 * @dataProvider provideRules
+	 */
+	public function testOnlyExistingWikis( $rule ) {
+		$this->assertTrue( true );
+		if ( array_key_exists( 'dbname', $rule ) ) {
+			if ( is_array( $rule['dbname'] ) ) {
+				foreach ( $rule['dbname'] as $dbname ) {
+					$this->assertTrue(
+						DBList::isInDblist( $dbname, "all" ),
+						"Invalid value in a throtle rule detected: dbname $dbname doesn't match any existing wiki"
+					);
+				}
+			}
+			else {
+				$dbname = $rule['dbname'];
+				$this->assertTrue(
+					DBList::isInDblist( $dbname, "all" ),
+					"Invalid value in a throtle rule detected: dbname $dbname doesn't match any existing wiki"
+				);
+			}
+		}
+	}
+
 	protected static function getThrottlingExceptionsValidParameters() {
 		return [
 			'from',
