@@ -46,6 +46,30 @@
       "revId": "63fce411c6d6322d9fe0e0173b36eba72bd4fe8e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d72273dc_afeca2fe",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 10270,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-03-04T08:52:06Z",
+      "side": 1,
+      "message": "Cool! The changes on multiple lines look better since we have the comments (phab task) beside saying which task is being addressed. If we didn\u0027t have that, a one-liner would have been a good fit.",
+      "parentUuid": "4f95299c_d9dd9a81",
+      "range": {
+        "startLine": 10270,
+        "startChar": 2,
+        "endLine": 10270,
+        "endChar": 121
+      },
+      "revId": "63fce411c6d6322d9fe0e0173b36eba72bd4fe8e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
