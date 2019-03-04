@@ -9659,13 +9659,18 @@ $wgConf->settings = [
 		'patroller' => [ 'patrol' => true ], // T118934
 		'rollbacker' => [ 'rollback' => true ], // T118934
 	],
-	'mediawikiwiki' => [
+	'+mediawikiwiki' => [
 		'user' => [
 			'move' => false,
 			'flow-create-board' => true,
 		],
 		'autopatrolled' => [
 			'autopatrol' => true,
+		],
+		'uploader' => [ // T217523
+			'upload' => true,
+			'reupload' => true,
+			'reupload-own' => true,
 		],
 	],
 	'+metawiki' => [
@@ -11119,8 +11124,15 @@ $wgConf->settings = [
 		'sysop' => [ 'autopatrolled', 'patroller', 'rollbacker', 'import', 'accountcreator' ], // T89346, T99491, T118934, T126950
 	],
 	'+mediawikiwiki' => [
-		'sysop' => [ 'autopatrolled' ],
-		'bureaucrat' => [ 'autopatrolled', 'transwiki', 'import' ],
+		'sysop' => [
+			'autopatrolled',
+			'uploader' // T217523
+		],
+		'bureaucrat' => [
+			'autopatrolled',
+			'transwiki',
+			'import'
+		],
 	],
 	'+metawiki' => [
 		'bureaucrat' => [ 'centralnoticeadmin', 'flood', 'uploader' ], // T48639, T110674
@@ -11900,8 +11912,15 @@ $wgConf->settings = [
 		'sysop' => [ 'autopatrolled', 'patroller', 'rollbacker', 'import', 'accountcreator' ], // T89346, T99491, T118934, T126950
 	],
 	'+mediawikiwiki' => [
-		'sysop' => [ 'autopatrolled' ],
-		'bureaucrat' => [ 'autopatrolled', 'transwiki', 'import' ],
+		'sysop' => [
+			'autopatrolled',
+			'uploader' // T217523
+		],
+		'bureaucrat' => [
+			'autopatrolled',
+			'transwiki',
+			'import'
+		],
 	],
 	'+metawiki' => [
 		'bureaucrat' => [ 'flood', 'centralnoticeadmin', 'uploader' ], // T39198, T52287, T110674
