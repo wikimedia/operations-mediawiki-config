@@ -285,6 +285,27 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 			// T117019: Send events to default handler location as well
 			$handlers[] = $wmgDefaultMonologHandler;
 		}
+
+		// Install an additional handler to mirror udp2log data
+		// onto the logging pipeline localhost syslog shim
+		if ( $wmgUdp2logMirror ) {
+			$mwlogHandler = "mwlog-{$opts['udp2log']}";
+			if ( !isset( $wmgMonologConfig['handlers'][$mwlogHandler] ) ) {
+				$wmgMonologConfig['handlers'][$mwlogHandler] = [
+					'class' => '\\MediaWiki\\Logger\\Monolog\\MwlogHandler',
+					'formatter' => 'line',
+					'args'      => [
+						'mwlog-',         // prefix
+						'localhost',      // host
+						10515,            // port
+						LOG_USER,         // facility
+						// XXX defaults to DEBUG, however sysloghandler wants an int and opts['udp2log'] is a string?
+						#$opts['udp2log'], // log level threshold
+					],
+				];
+			}
+			$handlers[] = $mwlogHandler;
+		}
 	}
 
 	// Configure kafka handler

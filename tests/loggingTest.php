@@ -69,6 +69,7 @@ class LoggingTest extends WgConfTestCase {
 		$wmfUdp2logDest = 'localhost';
 		$wmgLogstashServers = [ 'localhost' ];
 		$wmgLogstashUseCee = false;
+		$wmgUdp2logMirror = false;
 		$wmgKafkaServers = [ 'localhost' ];
 		$wmgMonologChannels = [ 'test' => $channelConfig ];
 		$wmfRealm = 'production';
