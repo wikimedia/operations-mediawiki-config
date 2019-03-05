@@ -22076,6 +22076,24 @@ $wgConf->settings = [
 			'shuffleAnswersDisplay' => true,
 		],
 	],
+	'enwiki' => [
+		// T217576
+		[
+			"enabled" => true,
+			"type" => "external",
+			"name" => "reader trust survey en v2",
+			"description" => "Reader-trust-2-description",
+			"link" => "Reader-trust-2-link",
+			"instanceTokenParameterName" => "token",
+			"question" => "Reader-trust-2-message",
+			"privacyPolicy" => "Reader-trust-2-privacy",
+			"coverage" => 0.004,  // 1 out of 250
+			"platforms" => [
+				"desktop" => [ "stable" ],
+				"mobile" => [ "stable" ],
+			],
+		],
+	],
 ],
 
 'wmgUseSentry' => [
