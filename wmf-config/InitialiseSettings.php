@@ -22617,13 +22617,13 @@ $wgConf->settings = [
 	'cswiki' => [
 		[
 			'title' => 'Wikipedie:Průvodce',
-			'text' => 'Průvodce',
+			'text' => 'Rychlý průvodce',
 			'id' => 'guide',
 		],
 		[
-			'title' => 'Wikipedie:Encyklopedická_významnost',
-			'text' => 'Encyklopedická významnost',
-			'id' => 'notability',
+			'title' => 'Nápověda:Obrázky ve Vizuálním editoru',
+			'text' => 'Jak přidat obrázek?',
+			'id' => 'photo',
 		],
 		[
 			'title' => 'Wikipedie:Vzhled_a_styl',
