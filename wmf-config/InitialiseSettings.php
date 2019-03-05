@@ -21998,24 +21998,6 @@ $wgConf->settings = [
 			'shuffleAnswersDisplay' => true,
 		],
 	],
-	'enwiki' => [
-		// T217080
-		[
-			'enabled' => true,
-			'name' => 'reader-demographics-en-pilot',
-			'type' => 'external',
-			'description' => 'Reader-demographics-1-description',
-			'link' => 'Reader-demographics-1-link',
-			'question' => 'Reader-demographics-1-message',
-			'privacyPolicy' => 'Reader-demographics-1-privacy',
-			'coverage' => 0.004,  // 1 out of 250
-			'instanceTokenParameterName' => 'entry.1791119923',
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-		]
-	]
 ],
 
 'wmgUseSentry' => [
