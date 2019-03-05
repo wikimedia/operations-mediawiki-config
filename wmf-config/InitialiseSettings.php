@@ -19127,12 +19127,6 @@ $wgConf->settings = [
 	'eswiki' => 1,
 ],
 
-'wgNavigationTimingSurveyAuthenticatedSamplingFactor' => [
-	'default' => 0,
-	'ruwiki' => 10,
-	'eswiki' => 10,
-],
-
 'wgNavigationTimingSurveyName' => [
 	'default' => false,
 	'cawiki' => 'internal-survey-perceived-performance-survey',
@@ -19144,15 +19138,9 @@ $wgConf->settings = [
 
 'wgNavigationTimingOversampleFactor' => [
 	'default' => [
-		// 'geo' => [],
-		// 'userAgent' => [],
-		// 'pageName' => [],
-	],
-	'ruwiki' => [
-		'wiki' => 100,
-	],
-	'eswiki' => [
-		'wiki' => 100,
+		'geo' => [],
+		'userAgent' => [],
+		'pageName' => [],
 	],
 ],
 
