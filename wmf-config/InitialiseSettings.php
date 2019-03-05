@@ -16168,6 +16168,11 @@ $wgConf->settings = [
 	'default' => false,
 ],
 
+// ExternalGuidance extension initiated edit tags in VE (T216123)
+'wgWMEEditCampaigns' => [
+	'default' => [ 'external-machine-translation' ],
+],
+
 // --------------- VisualEditor end ---------------
 
 'wgCiteResponsiveReferences' => [
@@ -18971,7 +18976,10 @@ $wgConf->settings = [
 		'cxstats' => true,
 		'newarticle' => true,
 		'specialcx' => true,
-		'staff-recommender' => true
+		'staff-recommender' => true,
+		'external-machine-translation' => [
+			'edittag' => 'external-machine-translation', // T216123
+		],
 	],
 	'dewiki' => [
 		'article-recommender-1' => true,
@@ -18979,7 +18987,7 @@ $wgConf->settings = [
 		'cxstats' => true,
 		'newarticle' => false,
 		'specialcx' => true,
-		'staff-recommender' => true
+		'staff-recommender' => true,
 	],
 	'enwiki' => [
 		'article-recommender-1' => true,
@@ -18987,7 +18995,7 @@ $wgConf->settings = [
 		'cxstats' => true,
 		'newarticle' => false,
 		'specialcx' => true,
-		'staff-recommender' => true
+		'staff-recommender' => true,
 	],
 	'eswiki' => [
 		'article-recommender-1' => true,
@@ -18996,7 +19004,7 @@ $wgConf->settings = [
 		'eswiki-recommender' => true,
 		'newarticle' => true,
 		'specialcx' => true,
-		'staff-recommender' => true
+		'staff-recommender' => true,
 	],
 	'frwiki' => [
 		'article-recommender-1' => true,
@@ -19005,7 +19013,7 @@ $wgConf->settings = [
 		'frwiki-recommender' => true,
 		'newarticle' => true,
 		'specialcx' => true,
-		'staff-recommender' => true
+		'staff-recommender' => true,
 	],
 ],
 
