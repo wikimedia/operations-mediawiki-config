@@ -27,19 +27,12 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[] = [ // T216998
-	'from' => '2019-03-01T10:00 UTC',
-	'to' => '2019-03-01T22:00 UTC',
-	'IP' => '80.113.4.226',
-	'value' => 80 // 75 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T215839
-	'from' => '2019-03-03T11:00 -4:00',
-	'to' => '2019-03-03T17:00 -4:00',
-	'IP' => '198.179.69.250',
-	'dbname' => [ 'enwiki', 'commonswiki', 'wikidatawiki' ],
-	'value' => 80 // 70 expected
+$wmgThrottlingExceptions[] = [ // T217492
+	'from' => '2019-03-07T16:00 CST',
+	'to' => '2019-03-07T21:00 CST',
+	'IP' => [ '131.212.251.13', '131.212.251.62' ],
+	'dbname' => 'enwiki',
+	'value' => 50
 ];
 
 $wmgThrottlingExceptions[] = [ // T216642
@@ -50,30 +43,6 @@ $wmgThrottlingExceptions[] = [ // T216642
 	'value' => 50
 ];
 
-$wmgThrottlingExceptions[] = [ // T217270
-	'from' => '2019-03-08T13:00 +1:00',
-	'to' => '2019-03-08T19:00 +1:00',
-	'IP' => '194.228.196.244',
-	'dbname' => [ 'cswiki', 'commonswiki', 'wikidatawiki' ],
-	'value' => 30
-];
-
-$wmgThrottlingExceptions[] = [ // T217155
-	'from' => '2019-03-26T08:30 -5:00',
-	'to' => '2019-03-26T21:00 -5:00',
-	'IP' => '192.154.64.244',
-	'dbname' => [ 'enwiki', 'commonswiki', 'wikidatawiki' ],
-	'value' => 220 // 200 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T217336
-	'from' => '2019-03-03T10:00 -5:00',
-	'to' => '2019-03-03T20:00 -5:00',
-	'IP' => '72.43.130.34',
-	'dbname' => [ 'enwiki', 'commonswiki', 'wikidatawiki' ],
-	'value' => 70 // up to 70 new accounts expected
-];
-
 $wmgThrottlingExceptions[] = [ // T217063
 	'from' => '2019-03-07T16:00 UTC',
 	'to' => '2019-03-09T22:00 UTC',
@@ -81,11 +50,19 @@ $wmgThrottlingExceptions[] = [ // T217063
 	'value' => 80 // 75 expected
 ];
 
-$wmgThrottlingExceptions[] = [ // T217305
-	'from' => '2019-03-02T10:00 -6:00',
-	'to' => '2019-03-02T20:00 -6:00',
-	'range' => [ '65.211.53.0/24', '63.117.124.0/24', '38.125.15.0/24', '38.125.33.0/24' ],
-	'value' => 100
+$wmgThrottlingExceptions[] = [ // T217485
+	'from' => '2019-03-08T11:00',
+	'to' => '2019-03-03T20:00',
+	'IP' => [ '2a01:388:3ec:150::1:69', '31.220.243.2' ],
+	'value' => 30 // 25 expected
+];
+
+$wmgThrottlingExceptions[] = [ // T217270
+	'from' => '2019-03-08T13:00 +1:00',
+	'to' => '2019-03-08T19:00 +1:00',
+	'IP' => '194.228.196.244',
+	'dbname' => [ 'cswiki', 'commonswiki', 'wikidatawiki' ],
+	'value' => 30
 ];
 
 $wmgThrottlingExceptions[] = [ // T217311
@@ -95,19 +72,19 @@ $wmgThrottlingExceptions[] = [ // T217311
 	'value' => 30 // 25 expected
 ];
 
-$wmgThrottlingExceptions[] = [ // T217663
-	'from' => '2019-03-06T14:00 +1:00',
-	'to' => '2019-03-06T17:00 +1:00',
-	'range' => [ '195.113.180.192/26', '2001:718:9::/48' ],
-	'dbname' => 'cswiki',
-	'value' => 30 // 25 expected
-];
-
 $wmgThrottlingExceptions[] = [ // T217676
 	'from' => '2019-03-08T10:00 UTC',
 	'to' => '2019-03-08T23:59 UTC',
 	'IP' => '37.0.85.138',
 	'value' => 25 // max 25 expected
+];
+
+$wmgThrottlingExceptions[] = [ // T217155
+	'from' => '2019-03-26T08:30 -5:00',
+	'to' => '2019-03-26T21:00 -5:00',
+	'IP' => '192.154.64.244',
+	'dbname' => [ 'enwiki', 'commonswiki', 'wikidatawiki' ],
+	'value' => 220 // 200 expected
 ];
 
 ## Add throttling definitions above.
