@@ -57,42 +57,110 @@ $common = [
 	'restbase' => 'http://restbase.discovery.wmnet:7231',
 ];
 
+// Search will be directed to a local proxy from php7, while HHVM will
+// keep using its own pooling mechanism.
+if ( defined( 'HHVM_VERSION' ) ) {
+	$search_services = [
+		'eqiad' => [
+			'search-chi' => [
+				[
+					'host' => 'search.svc.eqiad.wmnet',
+					'transport' => 'Https',
+					'port' => 9243,
+				]
+			],
+			'search-psi' => [
+				[
+					'host' => 'search.svc.eqiad.wmnet',
+					'transport' => 'Https',
+					'port' => 9643,
+				]
+			],
+			'search-omega' => [
+				[
+					'host' => 'search.svc.eqiad.wmnet',
+					'transport' => 'Https',
+					'port' => 9443,
+				]
+			]
+		],
+		'codfw' => [
+			'search-chi' => [
+				[
+					'host' => 'search.svc.codfw.wmnet',
+					'transport' => 'Https',
+					'port' => 9243,
+				]
+			],
+			'search-psi' => [
+				[
+					'host' => 'search.svc.codfw.wmnet',
+					'transport' => 'Https',
+					'port' => 9643,
+				]
+			],
+			'search-omega' => [
+				[
+					'host' => 'search.svc.codfw.wmnet',
+					'transport' => 'Https',
+					'port' => 9443,
+				]
+			]
+		]
+	];
+} else {
+	$search_services = [
+		'eqiad' => [
+			'search-chi' => [
+				[ // forwarded to https://search.svc.eqiad.wmnet:9243/
+					'host' => 'localhost',
+					'transport' => 'Http',
+					'port' => 19243,
+				]
+			],
+			'search-psi' => [
+				[ // forwarded to https://search.svc.eqiad.wmnet:9643/
+					'host' => 'localhost',
+					'transport' => 'Http',
+					'port' => 19643,
+				]
+			],
+			'search-omega' => [
+				[ // forwarded to https://search.svc.eqiad.wmnet:9443/
+					'host' => 'localhost',
+					'transport' => 'Http',
+					'port' => 19443,
+				]
+			],
+		],
+		'codfw' => [
+			'search-chi' => [
+				[ // forwarded to https://search.svc.codfw.wmnet:9243/
+					'host' => 'localhost',
+					'transport' => 'Http',
+					'port' => 14243,
+				]
+			],
+			'search-psi' => [
+				[ // forwarded to https://search.svc.codfw.wmnet:9643/
+					'host' => 'localhost',
+					'transport' => 'Http',
+					'port' => 14643,
+				]
+			],
+			'search-omega' => [
+				[ // forwarded to https://search.svc.codfw.wmnet:9443/
+					'host' => 'localhost',
+					'transport' => 'Http',
+					'port' => 14443,
+				]
+			],
+		]
+	];
+}
+
 $services = [
-	'eqiad' => $common + [
-		// elasticsearch must be accessed by hostname,
-		// for SSL certificate verification.
-		'search' => [
-			// TODO remove in favor of search-chi
-			[
-				'host' => 'search.svc.eqiad.wmnet',
-				'transport' => 'Https',
-				'port' => 9243,
-			]
-		],
-
-		'search-chi' => [
-			[
-				'host' => 'search.svc.eqiad.wmnet',
-				'transport' => 'Https',
-				'port' => 9243,
-			]
-		],
-
-		'search-psi' => [
-			[
-				'host' => 'search.svc.eqiad.wmnet',
-				'transport' => 'Https',
-				'port' => 9643,
-			]
-		],
-
-		'search-omega' => [
-			[
-				'host' => 'search.svc.eqiad.wmnet',
-				'transport' => 'Https',
-				'port' => 9443,
-			]
-		],
+	'eqiad' => $common + $search_services['eqiad'] + [
 
 		// each DC has its own urldownloader for latency reasons
 		'urldownloader' => 'http://url-downloader.eqiad.wikimedia.org:8080',
@@ -116,38 +184,7 @@ $services = [
 		],
 
 	],
-	'codfw' => $common + [
-		'search' => [
-			// TODO remove in favor of search-chi
-			[
-				'host' => 'search.svc.codfw.wmnet',
-				'transport' => 'Https',
-				'port' => 9243,
-			]
-		],
-
-		'search-chi' => [
-			[
-				'host' => 'search.svc.codfw.wmnet',
-				'transport' => 'Https',
-				'port' => 9243,
-			]
-		],
-
-		'search-psi' => [
-			[
-				'host' => 'search.svc.codfw.wmnet',
-				'transport' => 'Https',
-				'port' => 9643,
-			]
-		],
-		'search-omega' => [
-			[
-				'host' => 'search.svc.codfw.wmnet',
-				'transport' => 'Https',
-				'port' => 9443,
-			]
-		],
+	'codfw' => $common + $search_services['codfw'] + [
 
 		'urldownloader' => 'http://url-downloader.codfw.wikimedia.org:8080',
 
@@ -171,4 +208,5 @@ $services = [
 	],
 ];
 unset( $common );
+unset( $search_services );
 return $services;
