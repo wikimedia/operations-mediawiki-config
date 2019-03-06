@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4110dbc5_a5053d98",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 18980,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-03-06T12:13:26Z",
+      "side": 1,
+      "message": "So you need to copy paste this to all wikis below.",
+      "revId": "34c44a9fb99d3706ca4423d48bc5da03d696caad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
