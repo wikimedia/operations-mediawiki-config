@@ -22677,11 +22677,7 @@ $wgConf->settings = [
 
 'wgGEHomepageNewAccountEnablePercentage' => [
 	'default' => 0,
-],
-
-'wgEnableRollbackConfirmationPrompt' => [
-	'default' => false,
-],
+]
 
 ];
 
