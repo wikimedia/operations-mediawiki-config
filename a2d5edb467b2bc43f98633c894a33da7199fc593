@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4499b90e_d09f2d94",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 22680,
+      "author": {
+        "id": 1883
+      },
+      "writtenOn": "2019-03-06T13:50:43Z",
+      "side": 1,
+      "message": "Please keep the comma :-)",
+      "range": {
+        "startLine": 22680,
+        "startChar": 0,
+        "endLine": 22680,
+        "endChar": 1
+      },
+      "revId": "a2d5edb467b2bc43f98633c894a33da7199fc593",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
