@@ -22679,10 +22679,6 @@ $wgConf->settings = [
 	'default' => 0,
 ],
 
-'wgEnableRollbackConfirmationPrompt' => [
-	'default' => false,
-],
-
 ];
 
 ### WMF Labs override #####
