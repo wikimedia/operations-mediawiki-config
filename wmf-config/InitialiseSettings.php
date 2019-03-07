@@ -16632,6 +16632,9 @@ $wgConf->settings = [
 'wmgMobileFrontend' => [
 	'default' => true,
 ],
+'wgMFAdvancedMobileContributions' => [
+	'default' => true,
+],
 'wgMFQueryPropModules' => [
 	// workaround for T125672
 	'default' => [ 'pageprops' ],
