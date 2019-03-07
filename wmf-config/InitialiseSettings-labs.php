@@ -262,9 +262,6 @@ function wmfLabsSettings() {
 			'default' => '%h0.m.%h1.%h2.%h3.%h4',
 			'wikidatawiki' => 'm.%h0.%h1.%h2.%h3', // T87440
 		],
-		'wgMFMobileFormatterHeadings' => [
-			'default' => [ 'h2', 'h3', 'h4', 'h5', 'h6' ], // T110436, T110837
-		],
 
 		'wgMinervaShowShareButton' => [
 			'default' => [
@@ -272,23 +269,13 @@ function wmfLabsSettings() {
 				'beta' => true
 			]
 		],
-		'wgMFRemovableClasses' => [
-			'default' => [
-				'base' => [ '.navbox' ],
-				'beta' => [ '.navbox' ],
-				'HTML' => [],
-			],
-		],
 		'wgMFPhotoUploadEndpoint' => [
 			'default' => 'https://commons.wikimedia.$variant.wmflabs.org/w/api.php',
 		],
 		'wgMFSpecialCaseMainPage' => [
-			'default' => true,
-			'enwiki' => false,
-		],
-		'wgMFExperiments' => [
-			'default' => [
-			],
+			// We don't want to support this
+			// See https://www.mediawiki.org/wiki/Recommendations_for_mobile_friendly_articles_on_Wikimedia_wikis#Make_sure_your_main_page_is_mobile_friendly
+			'default' => false,
 		],
 		'wgMinervaErrorLogSamplingRate' => [
 			'default' => 1,
@@ -618,12 +605,6 @@ function wmfLabsSettings() {
 			'default' => 'MobileFrontend\ContentProviders\DefaultContentProvider',
 			// T207508
 			'enwiki' => 'MobileFrontend\ContentProviders\MwApiContentProvider',
-		],
-		// Test Wikidata descriptions on mobile: T127250
-		'wgMFDisplayWikibaseDescriptions' => [
-			'enwiki' => [
-				'tagline' => true, 'search' => true, 'nearby' => true, 'watchlist' => true
-			]
 		],
 
 		// Test numeric sorting. See T8948.
