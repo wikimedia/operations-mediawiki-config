@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3959a85a_6bf23fb1",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 22640,
+      "author": {
+        "id": 1883
+      },
+      "writtenOn": "2019-03-07T11:50:04Z",
+      "side": 1,
+      "message": "I\u0027m not sure if it works straight like that.\n\nI think instead you need to create an artificial \"wmg\" variable here, that can be used as switch for the specific wikis, and depending on that variable you can overwrite the settings in the CommonSettings.php.\n\nSee for example \"wmgProofreadPageShowHeaders\".\n\nWe can also have a little hangout around that if you like.",
+      "revId": "3969ee1a5cec6b3ccaaa5772e182f2354bdbc3c6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
