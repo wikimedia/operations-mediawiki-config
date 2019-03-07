@@ -1856,6 +1856,7 @@ $wgConf->settings = [
 	'bhwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=bho',
 	'crhwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=crh-latn',
 	'fiu_vrowiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=vro',
+	'mediawikiwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 	'roa_rupwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=rup',
 	'roa_rupwiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=rup',
 	'zh_classicalwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=lzh',
@@ -9672,6 +9673,7 @@ $wgConf->settings = [
 			'upload' => true,
 			'reupload' => true,
 			'reupload-own' => true,
+			'reupload-shared' => true,
 		],
 	],
 	'+metawiki' => [
