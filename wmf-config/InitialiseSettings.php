@@ -8496,6 +8496,7 @@ $wgConf->settings = [
 	'itwiki' => true,
 	'mediawikiwiki' => true,
 	'metawiki' => true,
+	'arwiki' => true,
 ],
 
 'wgEnableBlockNoticeStats' => [
