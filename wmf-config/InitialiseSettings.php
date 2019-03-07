@@ -20410,6 +20410,20 @@ $wgConf->settings = [
 	'default' => false,
 ],
 
+// Depicts-related configuration
+'wgMediaInfoProperties' => [
+	'default' => [],
+	'commonswiki' => [
+		'depicts' => 'P180',
+	],
+	'testcommonswiki' => [
+		'depicts' => 'P292',
+	],
+],
+'wgDepictsQualifierProperties' => [
+	'default' => [],
+],
+
 // Only enable this conservatively, having this on to many
 // wikis will take *a lot* of Graphite storage space. T191416
 'wmgWikibaseClientTrackLuaFunctionCallsPerWiki' => [
