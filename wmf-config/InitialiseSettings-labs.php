@@ -254,6 +254,10 @@ function wmfLabsSettings() {
 			'enwiki' => 3  // 33.3% — T213969
 		],
 
+		'wgMFAdvancedMobileContributions' => [
+			'default' => true,
+		],
+
 		'wgMobileUrlTemplate' => [
 			'default' => '%h0.m.%h1.%h2.%h3.%h4',
 			'wikidatawiki' => 'm.%h0.%h1.%h2.%h3', // T87440
