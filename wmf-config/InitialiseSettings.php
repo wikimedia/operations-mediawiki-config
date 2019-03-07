@@ -20496,13 +20496,6 @@ $wgConf->settings = [
 	'testcommonswiki' => true,
 ],
 
-// Feature flag for WikibaseMediaInfo during deployment
-'wgMediaInfoEnable' => [
-	'default' => false,
-	'commonswiki' => true,
-	'testcommonswiki' => true,
-],
-
 // Feature flag for WikibaseMediaInfo showing 'depicts' statements during deployment
 'wgMediaInfoEnableFilePageDepicts' => [
 	'default' => false,
