@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e4fa1d2_f3373864",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 542,
+      "author": {
+        "id": 214
+      },
+      "writtenOn": "2019-03-08T16:46:08Z",
+      "side": 1,
+      "message": "This is going to need the $wg prefix (varnames in extension.json get turned into $wg\u003cVarname\u003e globals)",
+      "revId": "de3a497f004cb7723cb484b08e1344d3e57172d5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
