@@ -12656,11 +12656,6 @@ $wgConf->settings = [
 	'default' => 4096, // 1024's a bit low?
 ],
 
-// T208899
-'wgMediaInTargetLanguage' => [
-	'default' => true,
-],
-
 # @} end of SVG related
 
 'wgRestrictionMethod' => [
