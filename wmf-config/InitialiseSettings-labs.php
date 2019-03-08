@@ -549,7 +549,7 @@ function wmfLabsSettings() {
 		'wgDepictsQualifierProperties' => [
 		],
 
-		'wgMediaInfoExternalEntitySearchApiBase' => [
+		'wgMediaInfoExternalEntitySearchBaseUri' => [
 			'commonswiki' => 'https://wikidata.beta.wmflabs.org/w/api.php',
 		],
 
