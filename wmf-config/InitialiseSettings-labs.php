@@ -549,7 +549,11 @@ function wmfLabsSettings() {
 		'wgDepictsQualifierProperties' => [
 		],
 
-		// Test the extension Collection in other languages for book creator,
+        'wgMediaInfoExternalEntitySearchApiBase' => [
+            'commonswiki' => 'https://wikidata.beta.wmflabs.org/w/api.php',
+        ],
+
+        // Test the extension Collection in other languages for book creator,
 		// which avoids the bugs related to the PDF generator.
 		'wmgUseCollection' => [
 			'zhwiki' => true, // T128425
