@@ -9868,6 +9868,7 @@ $wgConf->settings = [
 		'sysop' => [ 'import' => true ],
 	],
 	'pawiki' => [
+		'autoconfirmed' => [ 'upload_by_url' => true ], //T217486
 		'patroller' => [ 'patrol' => true ], // T120369
 		'autopatrolled' => [ 'autopatrol' => true ], // T120369
 		'transwiki' => [ 'import' => true ] // T120369
@@ -14166,6 +14167,7 @@ $wgConf->settings = [
 ],
 'wgAllowCopyUploads' => [
 	'default' => false,
+	'pawiki' => true, // T217486
 	'testwiki' => true,
 	'test2wiki' => true,
 	'commonswiki' => true,
@@ -14186,6 +14188,7 @@ $wgConf->settings = [
 
 'wgCopyUploadsDomains' => [
 	'default' => [ '*.flickr.com', '*.staticflickr.com', ], // For Flickr uploads via UploadWizard - 2012-11-20
+	'+pawiki' => [ 'upload.wikimedia.org' ], // T217486
 	'+testwiki' => [ 'upload.wikimedia.org' ],
 	'+commonswiki' => [
 		'*.collectie.legermuseum.nl',       // Legermuseum
