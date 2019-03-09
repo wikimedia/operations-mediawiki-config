@@ -1106,6 +1106,13 @@ function wmfLabsSettings() {
 			'default' => true
 		],
 
+		// Needed by browser tests for Minerva otherwise those will fail
+		'wgMFDisplayWikibaseDescriptions' => [
+			'enwiki' => [
+				'search' => true, 'nearby' => true, 'watchlist' => true, 'tagline' => true
+			]
+		],
+
 		'wgWBQualityConstraintsEnableConstraintsCheckJobsRatio' => [
 			'default' => 100, // 100% of edits trigger post edit job run constraint checks
 		],
