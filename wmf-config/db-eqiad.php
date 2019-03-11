@@ -362,11 +362,11 @@ $wgLBFactoryConf = [
 			'db1084' => 1,
 		],
 		'watchlist' => [
-			# 'db1097:3314' => 1,
+			'db1097:3314' => 1,
 			'db1103:3314' => 1,
 		],
 		'recentchanges' => [
-			# 'db1097:3314' => 1,
+			'db1097:3314' => 1,
 			'db1103:3314' => 1,
 		],
 		'recentchangeslinked' => [
@@ -395,11 +395,11 @@ $wgLBFactoryConf = [
 		],
 		'watchlist' => [
 			'db1096:3315' => 1,
-			# 'db1097:3315' => 1,
+			'db1097:3315' => 1,
 		],
 		'recentchanges' => [
 			'db1096:3315' => 1,
-			# 'db1097:3315' => 1,
+			'db1097:3315' => 1,
 		],
 		'recentchangeslinked' => [
 			'db1096:3315' => 1,
