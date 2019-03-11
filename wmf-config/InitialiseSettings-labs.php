@@ -1093,7 +1093,11 @@ function wmfLabsSettings() {
 		'wmgWikibaseRepoForeignRepositories' => [
 			'default' => [],
 			'commonswiki' => [
-				'wikidata' => [
+				// This config is now used by the back compat entity source config layer.
+				// As a result this key is used as the interwiki prefix for entities.
+				// wikidata links to the production wikidata install always
+				// thus d should be used here instead (and can also be used in production)
+				'd' => [
 					'repoDatabase' => 'wikidatawiki',
 					'baseUri' => 'https://wikidata.beta.wmflabs.org/entity/',
 					'supportedEntityTypes' => [ 'item', 'property' ],
