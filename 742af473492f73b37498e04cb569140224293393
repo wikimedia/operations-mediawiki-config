@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1d2fd223_ab90e73d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 19007,
+      "author": {
+        "id": 4983
+      },
+      "writtenOn": "2019-03-11T12:59:23Z",
+      "side": 1,
+      "message": "Do we need this block, since the same config is already set as default in extension.json?",
+      "range": {
+        "startLine": 19005,
+        "startChar": 1,
+        "endLine": 19007,
+        "endChar": 3
+      },
+      "revId": "742af473492f73b37498e04cb569140224293393",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
