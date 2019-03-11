@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4c896d97_90ac164a",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 22751,
+      "author": {
+        "id": 1883
+      },
+      "writtenOn": "2019-03-11T15:39:50Z",
+      "side": 1,
+      "message": "I think you need to set a default for this variable, because it will \"always\" be expected to be there in the CommonsSettings.php. \n\nAlternatively you could check for the unsetted variable there but looking at other places in this file \"wmg-vars\" always seem to have a default set.",
+      "revId": "84900382cc98ff1e976beb66e312122c3a96a301",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
