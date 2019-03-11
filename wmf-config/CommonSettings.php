@@ -3795,6 +3795,10 @@ if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession ) {
 	};
 }
 
+if ( $wmgShowRollbackConfirmationDefaultUserOptions ) {
+	$wgDefaultUserOptions['showrollbackconfirmation'] = 1;
+}
+
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
