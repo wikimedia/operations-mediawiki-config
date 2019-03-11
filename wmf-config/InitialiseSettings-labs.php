@@ -544,9 +544,12 @@ function wmfLabsSettings() {
 
 		// Depicts-related Beta Cluster Commons configuration
 		'wgMediaInfoProperties' => [
-			'depicts' => 'P245962',
+			'commonswiki' => [
+				'depicts' => 'P245962',
+			]
 		],
 		'wgDepictsQualifierProperties' => [
+			'commonswiki' => [],
 		],
 
 		'wgMediaInfoExternalEntitySearchBaseUri' => [
