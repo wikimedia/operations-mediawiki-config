@@ -19191,6 +19191,15 @@ $wgConf->settings = [
 	'testwiki' => false,
 ],
 
+'wgContentTranslationPublishRequirements' => [
+	'default' => [
+		'userGroups' => [ '*' ]
+	],
+	'enwiki' => [
+		'userGroups' => [ 'extendedconfirmed' ]
+	],
+],
+
 // CX Campaigns
 'wmgContentTranslationCampaigns' => [
 	'default' => [
