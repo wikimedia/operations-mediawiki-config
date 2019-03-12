@@ -5322,6 +5322,7 @@ $wgConf->settings = [
 	'arwiki' => [ '', 'autoconfirmed', 'review', 'sysop' ], // T54109, T146575
 	'ckbwiki' => [ '', 'autoconfirmed', 'autopatrol', 'sysop' ], // T54533
 	'dewiki' => [ '', 'autoconfirmed', 'editeditorprotected', 'sysop' ], // T94368
+	'dewiktionary' => [ '', 'autoconfirmed', 'editeditorprotected', 'autoreviewprotected', 'sysop' ], // T216885
 	'enwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T126607, T57432
 	'enwiktionary' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T148007
 	'enwikivoyage' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T198056
@@ -9102,7 +9103,10 @@ $wgConf->settings = [
 		'autopatrolled' => [ 'autopatrol' => true, ], // T67495
 	],
 	'+dewiktionary' => [
-		'sysop' => [ 'importupload' => true, ],
+		'sysop' => [ 'importupload' => true, 'editeditorprotected' => true, 'autoreviewprotected' => true, ], // T216885
+		'bot' => [ 'editeditorprotected' => true, 'autoreviewprotected' => true, ], // T216885
+		'editor' => [ 'editeditorprotected' => true, 'autoreviewprotected' => true, ], // T216885
+		'autoreview' => [ 'autoreviewprotected' => true, ] // T216885
 	],
 	'+donatewiki' => [
 		'user' => [ 'editinterface' => true, 'editsitejson' => true ],
