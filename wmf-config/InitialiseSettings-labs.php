@@ -958,6 +958,10 @@ function wmfLabsSettings() {
 			'default' => false,
 			'enwiki' => true,
 			'wikidatawiki' => true,
+			'enwiktionary' => true,
+			'enwikibooks' => true,
+			'enwikisource' => true,
+			'commonswiki' => true,
 		],
 		'wgPropertySuggesterClassifyingPropertyIds' => [
 			'wikidatawiki' => [ 694 ],
