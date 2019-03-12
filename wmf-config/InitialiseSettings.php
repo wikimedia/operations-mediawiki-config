@@ -19011,7 +19011,7 @@ $wgConf->settings = [
 		'specialcx' => true,
 		'staff-recommender' => true,
 		'external-machine-translation' => [
-			'edittag' => 'external-machine-translation', // T216123
+			'edittag' => 'campaign-external-machine-translation', // T216123
 		],
 	],
 	'dewiki' => [
@@ -19022,7 +19022,7 @@ $wgConf->settings = [
 		'specialcx' => true,
 		'staff-recommender' => true,
 		'external-machine-translation' => [
-			'edittag' => 'external-machine-translation',
+			'edittag' => 'campaign-external-machine-translation',
 		],
 	],
 	'enwiki' => [
@@ -19033,7 +19033,7 @@ $wgConf->settings = [
 		'specialcx' => true,
 		'staff-recommender' => true,
 		'external-machine-translation' => [
-			'edittag' => 'external-machine-translation',
+			'edittag' => 'campaign-external-machine-translation',
 		],
 	],
 	'eswiki' => [
@@ -19045,7 +19045,7 @@ $wgConf->settings = [
 		'specialcx' => true,
 		'staff-recommender' => true,
 		'external-machine-translation' => [
-			'edittag' => 'external-machine-translation',
+			'edittag' => 'campaign-external-machine-translation',
 		],
 	],
 	'frwiki' => [
@@ -19057,7 +19057,7 @@ $wgConf->settings = [
 		'specialcx' => true,
 		'staff-recommender' => true,
 		'external-machine-translation' => [
-			'edittag' => 'external-machine-translation',
+			'edittag' => 'campaign-external-machine-translation',
 		],
 	],
 ],
