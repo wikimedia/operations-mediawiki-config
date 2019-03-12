@@ -128,10 +128,16 @@ $wgWBRepoSettings['entitySearch']['prefixSearchProfiles'] = [
 	],
 ];
 
+if ( !empty( $wmgUseWikibaseCirrusSearch ) && !empty( $wmgNewWikibaseCirrusSearch ) ) {
+	$wmgBuilderClass = '\Wikibase\Search\Elastic\EntityFullTextQueryBuilder';
+} else {
+	$wmgBuilderClass = '\Wikibase\Repo\Search\Elastic\EntityFullTextQueryBuilder';
+}
+
 // Fine tuning of the fulltext search (main elastic query)
 $wgWBRepoSettings['entitySearch']['fulltextSearchProfiles'] = [
 	'wikibase_config_fulltext_query' => [
-		'builder_class' => '\Wikibase\Repo\Search\Elastic\EntityFullTextQueryBuilder',
+		'builder_class' => $wmgBuilderClass,
 		'settings' => [
 			'any'               => 0.04,
 			'lang-exact'        => 0.78,
