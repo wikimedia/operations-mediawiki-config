@@ -1340,5 +1340,15 @@ function wmfLabsSettings() {
 		'wgScoreTrim' => [
 			'default' => true
 		],
+		'wmgUseWikimediaEditorTasks' => [
+			'default' => false,
+			'wikidatawiki' => true,
+		],
+		'wgWikimediaEditorTasksCluster' => [
+			'default' => false,
+		],
+		'wgWikimediaEditorTasksDatabase' => [
+			'default' => 'metawiki',
+		],
 	];
 } # wmflLabsSettings()
