@@ -5649,6 +5649,7 @@ $wgConf->settings = [
 	],
 	'+group0' => [
 		'authorization' => [ 'udp2log' => 'info', 'logstash' => false ],
+		'api-request' => [ 'udp2log' => false, 'logstash' => false, 'eventbus' => 'debug', 'buffer' => true ],
 	],
 	'+arwiki' => [
 		'authorization' => [ 'udp2log' => 'info', 'logstash' => false ],
