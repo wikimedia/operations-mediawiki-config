@@ -20401,7 +20401,7 @@ $wgConf->settings = [
 ],
 
 'wmgWikibaseMaxSerializedEntitySize' => [
-	'default' => 2500,
+	'default' => 3000, //T217739
 ],
 
 // List of properties to be indexed by elasticsearch
