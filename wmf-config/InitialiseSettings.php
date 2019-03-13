@@ -22749,6 +22749,26 @@ $wgConf->settings = [
 	'default' => false,
 ],
 
+'wmgUseWikimediaEditorTasks' => [
+	'default' => false,
+],
+'wgWikimediaEditorTasksCluster' => [
+	'default' => 'extension1',
+],
+'wgWikimediaEditorTasksDatabase' => [
+	'default' => 'wikishared',
+],
+'wgWikimediaEditorTasksEnabledCounters' => [
+	'default' => [
+		[
+			'class' => 'MediaWiki\\Extension\\WikimediaEditorTasks\\WikipediaAppDescriptionEditCounter',
+			'counter_key' => 'app_description_edits',
+			'target_counts' => [ 5, 50 ],
+			'delay' => 172800
+		],
+	],
+],
+
 ];
 
 ### WMF Labs override #####
