@@ -171,6 +171,7 @@ $IP/extensions/wikihiero/extension.json
 $IP/extensions/WikiLove/extension.json
 $IP/extensions/WikimediaBadges/extension.json
 $IP/extensions/WikimediaEvents/extension.json
+$IP/extensions/WikimediaEditorTasks/extension.json
 $IP/extensions/WikimediaIncubator/extension.json
 $IP/extensions/WikimediaMessages/extension.json
 $IP/extensions/XAnalytics/extension.json
