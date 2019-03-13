@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "95041d2f_0024a2af",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 3798,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2019-03-13T16:15:56Z",
+      "side": 1,
+      "message": "I think this patch needs to depend on I6fad8c994a921d2950690c4bc18ec3b84c8d6ccb, otherwise this variable is not declared.",
+      "range": {
+        "startLine": 3798,
+        "startChar": 5,
+        "endLine": 3798,
+        "endChar": 51
+      },
+      "revId": "2b591b79aa7a29320f352c4798c57cea48443ccd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
