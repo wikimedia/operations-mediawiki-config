@@ -464,14 +464,16 @@ $wgPasswordConfig['pbkdf2'] = [
 $wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
 
 // Password policies; see https://meta.wikimedia.org/wiki/Password_policy
-$wgPasswordPolicy['policies']['default']['PasswordCannotBePopular'] = 100;
 $wmgPrivilegedPolicy = [
-	'MinimalPasswordLength' => 10,
-	'MinimumPasswordLengthToLogin' => 1,
-	'PasswordNotInLargeBlacklist' => true,
+	'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
+	'MinimumPasswordLengthToLogin' => [ 'value' => 1, 'suggestChangeOnLogin' => true ],
+	'PasswordNotInLargeBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 ];
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
-	$wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = 10;
+	$wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = [
+		'value' => 10,
+		'suggestChangeOnLogin' => true,
+	];
 } else {
 	foreach ( $wmgPrivilegedGroups as $group ) {
 		// On non-SUL wikis this is the effective password policy. On SUL wikis, it will be overridden
@@ -483,6 +485,16 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 			$wmgPrivilegedPolicy );
 	}
 }
+
+$wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = [
+	'value' => 8,
+	'suggestChangeOnLogin' => false,
+];
+
+$wgPasswordPolicy['policies']['default']['PasswordCannotBePopular'] = [
+	'value' => 100,
+	'suggestChangeOnLogin' => true,
+];
 
 // Enforce password policy when users login on other wikis; also for sensitive global groups
 // FIXME does this just duplicate the the global policy checks down in the main $wmgUseCentralAuth block?
@@ -497,7 +509,10 @@ if ( $wmgUseCentralAuth ) {
 			}
 
 			if ( in_array( 'staff', $privilegedGroups, true ) ) {
-				$effectivePolicy['MinimumPasswordLengthToLogin'] = 10;
+				$effectivePolicy['MinimumPasswordLengthToLogin'] = [
+					'value' => 10,
+					'suggestChangeOnLogin' => true,
+				];
 			}
 		}
 		return true;
