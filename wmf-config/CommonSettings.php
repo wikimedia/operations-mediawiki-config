@@ -3809,8 +3809,13 @@ if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession ) {
 	};
 }
 
+
 if ( $wmgShowRollbackConfirmationDefaultUserOptions ) {
 	$wgDefaultUserOptions['showrollbackconfirmation'] = 1;
+}
+
+if ( $wmgUseWikimediaEditorTasks ) {
+	wfLoadExtension( 'WikimediaEditorTasks' );
 }
 
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
