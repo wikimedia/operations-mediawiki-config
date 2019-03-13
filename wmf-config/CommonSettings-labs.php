@@ -30,6 +30,56 @@ $wmgAddWikiNotify = false;
 # Use a different address from the production one - T192686
 $wgPasswordSender = 'wiki@wikimedia.beta.wmflabs.org';
 
+// Password policies; see https://meta.wikimedia.org/wiki/Password_policy
+$wmgPrivilegedPolicy = [
+	'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
+	'MinimumPasswordLengthToLogin' => [ 'value' => 1, 'suggestChangeOnLogin' => true ],
+	'PasswordNotInLargeBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+];
+foreach ( $wmgPrivilegedGroups as $group ) {
+	// On non-SUL wikis this is the effective password policy. On SUL wikis, it will be overridden
+	// in the PasswordPoliciesForUser hook, but still needed for Special:PasswordPolicies
+	if ( $group === 'user' ) {
+		$group = 'default'; // For e.g. private and fishbowl wikis; covers 'user' in password policies
+	}
+	$wgPasswordPolicy['policies'][$group] = array_merge( $wgPasswordPolicy['policies'][$group] ?? [],
+		$wmgPrivilegedPolicy );
+
+}
+
+$wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = [
+	'value' => 8,
+	'suggestChangeOnLogin' => false,
+];
+
+$wgPasswordPolicy['policies']['default']['PasswordCannotBePopular'] = [
+	'value' => 100,
+	'suggestChangeOnLogin' => true,
+];
+
+// Enforce password policy when users login on other wikis; also for sensitive global groups
+// FIXME does this just duplicate the the global policy checks down in the main $wmgUseCentralAuth block?
+if ( $wmgUseCentralAuth ) {
+	$wgHooks['PasswordPoliciesForUser'][] = function ( User $user, array &$effectivePolicy ) use ( $wmgPrivilegedPolicy ) {
+		$privilegedGroups = wmfGetPrivilegedGroups( $user->getName(), $user );
+		if ( $privilegedGroups ) {
+			$effectivePolicy = UserPasswordPolicy::maxOfPolicies( $effectivePolicy, $wmgPrivilegedPolicy );
+			// hack; PasswordNotInLargeBlacklist obsoletes PasswordCannotBePopular but maxOfPolicies can't handle that
+			if ( $effectivePolicy['PasswordNotInLargeBlacklist'] ?? false ) {
+				$effectivePolicy['PasswordCannotBePopular'] = 0;
+			}
+
+			if ( in_array( 'staff', $privilegedGroups, true ) ) {
+				$effectivePolicy['MinimumPasswordLengthToLogin'] = [
+					'value' => 10,
+					'suggestChangeOnLogin' => true,
+				];
+			}
+		}
+		return true;
+	};
+}
+
 $wgLocalVirtualHosts = [
 	'wikipedia.beta.wmflabs.org',
 	'wiktionary.beta.wmflabs.org',
