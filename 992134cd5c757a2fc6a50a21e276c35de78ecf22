@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4665ba1d_c0a182fe",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 22748,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2019-03-13T16:15:49Z",
+      "side": 1,
+      "message": "This configuration will be used by the code implemented with I6ed59af.\n\nNote the patches should *not* depend on each other. The config change here should be deployed before the code goes live.",
+      "revId": "992134cd5c757a2fc6a50a21e276c35de78ecf22",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bc2b693a_fdcc8a44",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 22753,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2019-03-13T16:15:49Z",
+      "side": 1,
+      "message": "This part goes along with Ib34024ab758fedf39b366f9d7079d9c05423e4c6, where this config flag will be used.",
+      "revId": "992134cd5c757a2fc6a50a21e276c35de78ecf22",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
