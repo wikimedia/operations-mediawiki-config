@@ -22,6 +22,30 @@
       "revId": "219506f35128c180b6733fb35272ae10a1086d08",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "778de660_d9ef0b81",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3798,
+      "author": {
+        "id": 5899
+      },
+      "writtenOn": "2019-03-13T09:34:58Z",
+      "side": 1,
+      "message": "Good catch, thanks",
+      "parentUuid": "6da1f1f9_e2c0e716",
+      "range": {
+        "startLine": 3798,
+        "startChar": 5,
+        "endLine": 3798,
+        "endChar": 33
+      },
+      "revId": "219506f35128c180b6733fb35272ae10a1086d08",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
