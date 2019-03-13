@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6da1f1f9_e2c0e716",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3798,
+      "author": {
+        "id": 1883
+      },
+      "writtenOn": "2019-03-13T07:48:34Z",
+      "side": 1,
+      "message": "Should be wmgShowRollbackConfirmationDefaultUserOptions now I guess :-)",
+      "range": {
+        "startLine": 3798,
+        "startChar": 5,
+        "endLine": 3798,
+        "endChar": 33
+      },
+      "revId": "219506f35128c180b6733fb35272ae10a1086d08",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
