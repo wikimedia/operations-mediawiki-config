@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b84df5b2_4660540d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3610,
+      "author": {
+        "id": 2177
+      },
+      "writtenOn": "2019-03-14T15:07:02Z",
+      "side": 1,
+      "message": "+1 for hasty for these events.",
+      "revId": "b8de34169b4835a0832585c07bbdb4a638e8b66c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "629da89f_b7f94710",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3611,
+      "author": {
+        "id": 2177
+      },
+      "writtenOn": "2019-03-14T15:07:02Z",
+      "side": 1,
+      "message": "I\u0027d prefer a higher number first for the transition period. Dropping from 60 to 1 seems too aggressive to me.",
+      "revId": "b8de34169b4835a0832585c07bbdb4a638e8b66c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
