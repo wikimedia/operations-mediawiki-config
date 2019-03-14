@@ -3159,7 +3159,6 @@ if ( $wmgUseExternalGuidance ) {
 		'translate.google.com',
 		'translate.googleusercontent.com'
 	];
-	$wgExternalGuidanceEnableContextDetection = $wmgExternalGuidanceEnableContextDetection;
 }
 
 if ( $wmgUseNewWikiDiff2Extension ) {
