@@ -19067,7 +19067,7 @@ $wgConf->settings = [
 	'wikipedia' => true,
 ],
 
-'wgExternalGuidanceEnableContextDetection' => [
+'wmgExternalGuidanceEnableContextDetection' => [
 	'default' => false,
 	'enwiki' => true,
 	'simplewiki' => true,
