@@ -138,7 +138,7 @@ $wgLBFactoryConf = [
 	],
 	's4' => [
 		'db1068' => 0,      # D1 2.8TB 160GB, master
-		# 'db1081' => 100,    # A2 3.6TB 512GB, api # candidate master # schema change
+		'db1081' => 100,    # A2 3.6TB 512GB, api # candidate master
 		'db1084' => 300,    # B1 3.6TB 512GB, api
 		'db1091' => 500,    # D2 3.6TB 512GB
 		'db1097:3314' => 150, # D1 3.6TB 512GB # rc, log: s4 and s5
