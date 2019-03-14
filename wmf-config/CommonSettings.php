@@ -486,6 +486,11 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	}
 }
 
+$wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = [
+	'value' => 8,
+	'suggestChangeOnLogin' => false,
+];
+
 $wgPasswordPolicy['policies']['default']['PasswordCannotBePopular'] = [
 	'value' => 100,
 	'suggestChangeOnLogin' => true,
