@@ -206,3 +206,61 @@ $wgContactConfig['licenseabuse'] = [
 ];
 
 unset( $trademark );
+
+/**
+ * Configuration for signup form for [[:meta:Movement_communications_group]]
+ *
+ * @see T218363
+ */
+
+$wgContactConfig['movecomsignup'] = [
+	'RecipientUser' => 'MoveCom-WMF',
+	'SenderName' => 'Movement communications group signup form on ' . $wgSitename,
+	'SenderEmail' => null,
+	'RequireDetails' => true,
+	'MustBeLoggedIn' => true,
+	'IncludeIP' => false,
+	'RLStyleModules' => [
+		'ext.wikimediamessages.contactpage.affcomusergroup',
+	],
+	'AdditionalFields' => [
+		'Username' => [
+			'label-message' => 'contactpage-movecom-signup-username-label',
+			'type' => 'text',
+			'required' => true,
+		],
+		'Affiliation' => [
+			'type' => 'selectorother',
+			'label-message' => 'contactpage-movecom-signup-affiliation-label',
+			'options-messages' => [
+				'contactpage-movecom-signup-affiliation-affiliates' => 'affiliates',
+				'contactpage-movecom-signup-affiliation-foundation' => 'foundation',
+				'contactpage-movecom-signup-affiliation-group' => 'group',
+				'contactpage-movecom-signup-affiliation-projects' => 'projects'
+			],
+			'required' => true,
+		],
+		'Affiliate' => [
+			'label-message' => 'contactpage-movecom-signup-affiliate-label',
+			'type' => 'text',
+		],
+		'Display' => [
+			'label-message' => 'contactpage-movecom-signup-display-label',
+			'type' => 'radio',
+			'options-messages' => [
+				'contactpage-movecom-signup-display-name' => 'Name',
+				'contactpage-movecom-signup-display-username' => 'Username',
+				'contactpage-movecom-signup-display-nameusername' => 'NameUsername'
+			],
+			'required' => true,
+		],
+		'Terms' => [
+			'label-message' => 'contactpage-movecom-signup-terms-label',
+			'type' => 'check',
+			'required' => true,
+			'validation-callback' => function ( $value ) {
+				return !!$value;
+			}
+		]
+	]
+];
