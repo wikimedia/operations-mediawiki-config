@@ -14060,6 +14060,12 @@ $wgConf->settings = [
 	'mediawikiwiki' => true,
 ],
 
+// Temporarily setting both …Cdn and …Squid for cut-over.
+'wgCdnMaxAge' => [
+	'default' => 14 * 24 * 3600, // 14 days (T124954)
+	'foundationwiki' => 3600, // 1 hour; template links may be funky
+],
+
 'wgSquidMaxage' => [
 	'default' => 14 * 24 * 3600, // 14 days (T124954)
 	'foundationwiki' => 3600, // 1 hour; template links may be funky
