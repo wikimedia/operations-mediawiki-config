@@ -1,7 +1,7 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-# HTCP multicast squid purging
+# HTCP multicast CDN purging
 $wgHTCPRouting = [
 	'' => [
 		'host' => '239.128.0.112',
@@ -11,7 +11,8 @@ $wgHTCPRouting = [
 $wgHTCPMulticastTTL = 8;
 
 # Accept XFF from these proxies
-$wgSquidServersNoPurge = [
+// Temporarily setting both …Cdn and …Squid for cut-over.
+$wgCdnServersNoPurge = [
 	# Note: the general idea here is to cover infrastructure space
 	# where e.g. Varnish and SSL servers could be located, but exclude
 	# other misc subnets (e.g. labs, analytics).
@@ -66,6 +67,7 @@ $wgSquidServersNoPurge = [
 	'10.132.0.0/24',
 	'2001:df2:e500:101::/64'
 ];
+$wgSquidServersNoPurge = $wgCdnServersNoPurge;
 
 # IP addresses that aren't proxies, regardless of what the other sources might say
 $wgProxyWhitelist = [
