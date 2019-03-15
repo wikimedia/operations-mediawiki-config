@@ -600,9 +600,7 @@ $wgStatsdServer = $wmfLocalServices['statsd'];
 if ( $wmfRealm === 'labs' ) {
 	$wgStatsdMetricPrefix = 'BetaMediaWiki';
 }
-// Temporarily setting both …Cdn and …Squid for cut-over.
 $wgUseCdn = true;
-$wgUseSquid = true;
 require "$wmfConfigDir/reverse-proxy-staging.php";
 
 // CORS (cross-domain AJAX, T22814)
@@ -3487,9 +3485,7 @@ $wgSoftBlockRanges = array_merge(
 	],
 
 	// Addresses used by WMF, people should log in to edit from them directly.
-	// Temporarily setting both …Cdn and …Squid for cut-over.
-	$wgCdnServersNoPurge,
-	$wgSquidServersNoPurge
+	$wgCdnServersNoPurge
 );
 if ( $wmgAllowLabsAnonEdits ) {
 	// CI makes anonymous edits on some wikis, so don't block Cloud VPS

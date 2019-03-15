@@ -11,7 +11,6 @@ $wgHTCPRouting = [
 $wgHTCPMulticastTTL = 8;
 
 # Accept XFF from these proxies
-// Temporarily setting both …Cdn and …Squid for cut-over.
 $wgCdnServersNoPurge = [
 	# Note: the general idea here is to cover infrastructure space
 	# where e.g. Varnish and SSL servers could be located, but exclude
@@ -67,7 +66,6 @@ $wgCdnServersNoPurge = [
 	'10.132.0.0/24',
 	'2001:df2:e500:101::/64'
 ];
-$wgSquidServersNoPurge = $wgCdnServersNoPurge;
 
 # IP addresses that aren't proxies, regardless of what the other sources might say
 $wgProxyWhitelist = [
