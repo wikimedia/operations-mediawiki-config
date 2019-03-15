@@ -703,9 +703,7 @@ $wgDjvuTxt = '/usr/bin/djvutxt';
 
 $wgStatsdServer = $wmfLocalServices['statsd'];
 
-// Temporarily setting both …Cdn and …Squid for cut-over.
 $wgUseCdn = true;
-$wgUseSquid = true;
 if ( $wmfRealm === 'production' ) {
 	require "$wmfConfigDir/reverse-proxy.php";
 } elseif ( $wmfRealm === 'labs' ) {
@@ -3681,9 +3679,7 @@ $wgSoftBlockRanges = array_merge(
 	],
 
 	// Addresses used by WMF, people should log in to edit from them directly.
-	// Temporarily setting both …Cdn and …Squid for cut-over.
-	$wgCdnServersNoPurge,
-	$wgSquidServersNoPurge
+	$wgCdnServersNoPurge
 );
 if ( $wmgAllowLabsAnonEdits ) {
 	// CI makes anonymous edits on some wikis, so don't block Cloud VPS

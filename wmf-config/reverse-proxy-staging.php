@@ -11,12 +11,10 @@
 # requests directly to the varnish instances.  They have varnishhtcpd listening
 # on UDP port 4827.
 
-// Temporarily setting both …Cdn and …Squid for cut-over.
 $wgCdnServersNoPurge = [ '127.0.0.1',
 	'172.16.4.21',  # deployment-cache-text04
 	'172.16.5.14',  # deployment-cache-upload04
 ];
-$wgSquidServersNoPurge = $wgCdnServersNoPurge;
 
 $wgHTCPRouting = [
 	'|^https?://upload\.beta\.wmflabs\.org|' => [
