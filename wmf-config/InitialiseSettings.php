@@ -21987,10 +21987,6 @@ $wgConf->settings = [
 	'donatewiki' => '!^https?://donate\.wikimedia\.org/!',
 ],
 
-'wmgUseClusterSquid' => [
-	'default'  => true,
-],
-
 'wmgUseClusterJobqueue' => [
 	'default'  => true,
 	'wikitech' => false,
