@@ -611,21 +611,15 @@ if ( defined( 'HHVM_VERSION' ) ) {
 # ######################################################################
 
 $wgStatsdServer = $wmfLocalServices['statsd'];
+
+// Temporarily setting both …Cdn and …Squid for cut-over.
+$wgUseCdn = true;
+$wgUseSquid = true;
 if ( $wmfRealm === 'production' ) {
-	if ( $wmgUseClusterSquid ) {
-		// Temporarily setting both …Cdn and …Squid for cut-over.
-		$wgUseCdn = true;
-		$wgUseSquid = true;
-		require "$wmfConfigDir/reverse-proxy.php";
-	}
+	require "$wmfConfigDir/reverse-proxy.php";
 } elseif ( $wmfRealm === 'labs' ) {
 	$wgStatsdMetricPrefix = 'BetaMediaWiki';
-	if ( $wmgUseClusterSquid ) {
-		// Temporarily setting both …Cdn and …Squid for cut-over.
-		$wgUseCdn = true;
-		$wgUseSquid = true;
-		require "$wmfConfigDir/reverse-proxy-staging.php";
-	}
+	require "$wmfConfigDir/reverse-proxy-staging.php";
 }
 
 // CORS (cross-domain AJAX, T22814)
