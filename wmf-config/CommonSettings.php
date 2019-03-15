@@ -613,12 +613,16 @@ if ( defined( 'HHVM_VERSION' ) ) {
 $wgStatsdServer = $wmfLocalServices['statsd'];
 if ( $wmfRealm === 'production' ) {
 	if ( $wmgUseClusterSquid ) {
+		// Temporarily setting both …Cdn and …Squid for cut-over.
+		$wgUseCdn = true;
 		$wgUseSquid = true;
 		require "$wmfConfigDir/reverse-proxy.php";
 	}
 } elseif ( $wmfRealm === 'labs' ) {
 	$wgStatsdMetricPrefix = 'BetaMediaWiki';
 	if ( $wmgUseClusterSquid ) {
+		// Temporarily setting both …Cdn and …Squid for cut-over.
+		$wgUseCdn = true;
 		$wgUseSquid = true;
 		require "$wmfConfigDir/reverse-proxy-staging.php";
 	}
@@ -3571,6 +3575,8 @@ $wgSoftBlockRanges = array_merge(
 	],
 
 	// Addresses used by WMF, people should log in to edit from them directly.
+	// Temporarily setting both …Cdn and …Squid for cut-over.
+	$wgCdnServersNoPurge,
 	$wgSquidServersNoPurge
 );
 if ( $wmgAllowLabsAnonEdits ) {
