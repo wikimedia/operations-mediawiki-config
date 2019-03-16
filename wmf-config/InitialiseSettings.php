@@ -16128,6 +16128,11 @@ $wgConf->settings = [
 	'+wikidata' => [
 		'Project' => true,
 	],
+	'+wikitech' => [
+		'Obsolete' => true,
+		'OfficeIT' => true,
+		'Tool' => true,
+	],
 
 	// Private wikis
 	'+officewiki' => [
