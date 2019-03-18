@@ -22,7 +22,8 @@ case 'labtestwiki' :
 	$wgLDAPServerNames = [ 'labs' => 'labtestservices2001.wikimedia.org' ];
 		break;
 }
-$wgLDAPSearchAttributes = [ 'labs' => 'cn' ];
+// T165795: require exact case matching of username via :caseExactMatch:
+$wgLDAPSearchAttributes = [ 'labs' => 'cn:caseExactMatch:' ];
 $wgLDAPBaseDNs = [ 'labs' => 'dc=wikimedia,dc=org' ];
 $wgLDAPUserBaseDNs = [ 'labs' => 'ou=people,dc=wikimedia,dc=org' ];
 $wgLDAPEncryptionType = [ 'labs' => 'tls' ];
