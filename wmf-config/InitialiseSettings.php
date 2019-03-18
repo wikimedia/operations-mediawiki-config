@@ -8480,6 +8480,7 @@ $wgConf->settings = [
 	'default' => false,
 	'private' => true, // T55871
 	'votewiki' => true, // T74589
+	'labswiki' => true, // T218589
 ],
 
 'wgCookieSetOnAutoblock' => [

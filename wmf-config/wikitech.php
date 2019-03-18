@@ -32,7 +32,8 @@ $wgLDAPUpdateLDAP = [ 'labs' => true ];
 $wgLDAPPasswordHash = [ 'labs' => 'clear' ];
 // 'invaliddomain' is set to true so that mail password options
 // will be available on user creation and password mailing
-$wgLDAPMailPassword = [ 'labs' => true, 'invaliddomain' => true ];
+// Force strict mode. T218589
+//$wgLDAPMailPassword = [ 'labs' => true, 'invaliddomain' => true ];
 $wgLDAPPreferences = [ 'labs' => [ "email" => "mail" ] ];
 $wgLDAPUseFetchedUsername = [ 'labs' => true ];
 $wgLDAPLowerCaseUsernameScheme = [ 'labs' => false, 'invaliddomain' => false ];
