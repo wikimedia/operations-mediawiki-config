@@ -9481,7 +9481,7 @@ $wgConf->settings = [
 		'bot' => [ 'edittrustedprotected' => true ], // T194568
 		'trusted' => [ 'edittrustedprotected' => true ], // T194568
 		'editor' => [ 'noratelimit' => true, 'edittrustedprotected' => true ], // T194568
-		'sysop' => [ 'templateeditor' => true, 'edittrustedprotected' => true ], // T74055, T194568
+		'sysop' => [ 'templateeditor' => true, 'edittrustedprotected' => true, 'flow-create-board' => true ], // T74055, T194568, T119365
 		'templateeditor' => [ 'templateeditor' => true ], // T74055
 		'interface-editor' => [ 'editinterface' => true, 'editsitejson' => true ], // T109408
 	],
