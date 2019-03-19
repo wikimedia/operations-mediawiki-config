@@ -20516,13 +20516,11 @@ $wgConf->settings = [
 'wgMusicalNotationEnableWikibaseDataType' => [
 	'default' => false,
 	'testwikidatawiki' => true,
-	'wikidatawiki' => true,
 ],
 
 'wgScoreTrim' => [
-	'default' => false,
+	'default' => null,
 	'testwikidatawiki' => true,
-	'wikidatawiki' => true,
 ],
 
 'wmgUseTemplateSandbox' => [
