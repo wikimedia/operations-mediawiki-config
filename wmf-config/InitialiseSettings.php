@@ -19722,6 +19722,7 @@ $wgConf->settings = [
 		'meta',
 		'species',
 		'wikidata',
+		'wikimania',
 	],
 	'commonswiki' => [
 		'commons',
@@ -19729,6 +19730,7 @@ $wgConf->settings = [
 		'meta',
 		'species',
 		'wikidata',
+		'wikimania',
 	],
 	'testwikidatawiki' => [
 		'commons',
@@ -19748,6 +19750,7 @@ $wgConf->settings = [
 		'meta',
 		'species',
 		'wikidata',
+		'wikimania',
 	],
 	'wikidataclient-test' => [
 		'commons',
