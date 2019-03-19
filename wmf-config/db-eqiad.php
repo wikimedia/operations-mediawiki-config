@@ -727,7 +727,7 @@ $wgLBFactoryConf = [
 # getting trasmmitted from codfw to eqiad when the master dc is eqiad.
 'readOnlyBySection' => [
 	# 's1'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
-	's2'      => 'Read only due to maintenance - https://meta.wikimedia.org/wiki/User:Johan_(WMF)/ReadOnly20190319',
+	# 's2'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
 	# 'DEFAULT' => 'This request is served by a passive datacenter. If you see this something is really wrong.', # s3
 	# 's4'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
 	# 's5'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
