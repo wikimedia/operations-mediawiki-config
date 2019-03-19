@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "14388368_c2b9d8da",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 16971,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-19T22:07:28Z",
+      "side": 1,
+      "message": "This will be overriden in wmf-config/InitialiseSettings-labs.php to do default \u003d\u003e true - probably worth mentioning in a comment so we remember to clean that up if we ever set this to true.",
+      "revId": "f1478195502612a3a026a1bbca7b96e061aba5b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
