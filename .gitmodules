@@ -6,4 +6,4 @@
 	url = https://gerrit.wikimedia.org/r/mediawiki/event-schemas
 [submodule "fonts"]
 	path = fonts
-	url = https://gerrit.wikimedia.org/r/p/operations/mediawiki-config/fonts
+	url = https://gerrit.wikimedia.org/r/operations/mediawiki-config/fonts
