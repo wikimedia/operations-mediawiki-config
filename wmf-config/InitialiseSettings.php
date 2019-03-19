@@ -16966,6 +16966,16 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
+// T217643
+'wgMFAdvancedMobileContributions' => [
+	'default => false,
+	'eswiki' => true,
+	'idwiki' => true,
+	'arwiki' => true,
+	'testwiki' => true,
+	'test2wiki' => true,
+],
+
 'wgMinervaEnableSiteNotice' => [
 	'default' => false,
 	'arwiki' => true,
