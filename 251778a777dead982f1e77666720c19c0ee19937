@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0306efea_22505f66",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 748,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2019-03-19T13:45:33Z",
+      "side": 1,
+      "message": "I wonder if these are still needed :)",
+      "range": {
+        "startLine": 745,
+        "startChar": 0,
+        "endLine": 748,
+        "endChar": 73
+      },
+      "revId": "251778a777dead982f1e77666720c19c0ee19937",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
