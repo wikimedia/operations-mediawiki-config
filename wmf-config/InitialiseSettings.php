@@ -20520,9 +20520,7 @@ $wgConf->settings = [
 ],
 
 'wgScoreTrim' => [
-	'default' => false,
-	'testwikidatawiki' => true,
-	'wikidatawiki' => true,
+	'default' => true,
 ],
 
 'wmgUseTemplateSandbox' => [
