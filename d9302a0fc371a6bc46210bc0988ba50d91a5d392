@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b50cef63_35100a44",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 363,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2019-03-19T14:08:11Z",
+      "side": 1,
+      "message": "Maybe we should pool another host with low load on api (e.g. 91)? commons can be at times high on api.",
+      "range": {
+        "startLine": 363,
+        "startChar": 4,
+        "endLine": 363,
+        "endChar": 9
+      },
+      "revId": "d9302a0fc371a6bc46210bc0988ba50d91a5d392",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
