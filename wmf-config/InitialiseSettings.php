@@ -16113,6 +16113,9 @@ $wgConf->settings = [
 	// Wikivoyages
 
 	// Wikimanias
+	'+wikimaniawiki' => [
+		'2019' => true, // T218645
+	],
 
 	// Wikimedias
 	'+nowikimedia' => [
