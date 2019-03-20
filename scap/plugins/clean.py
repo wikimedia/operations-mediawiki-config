@@ -92,9 +92,12 @@ class Clean(main.AbstractSync):
             with log.Timer('prune-git-branches', self.get_stats()):
                 # Prune all the submodules' remote branches
                 with utils.cd(self.branch_stage_dir):
+                    logger.info('Pruning branch %s in submodules of %s' % (
+                                branch, self.branch_stage_dir))
                     submodule_cmd = 'git submodule foreach "{} ||:"'.format(
                         ' '.join(git_prune_cmd))
                     subprocess.check_output(submodule_cmd, shell=True)
+                    logger.info('Pruning branch %s for core')
                     if subprocess.call(git_prune_cmd) != 0:
                         logger.info('Failed to prune core branch')
             with log.Timer('removing-local-copy'):
