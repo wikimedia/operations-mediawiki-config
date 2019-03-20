@@ -39,7 +39,9 @@ $wgLDAPUseFetchedUsername = [ 'labs' => true ];
 $wgLDAPLowerCaseUsernameScheme = [ 'labs' => false, 'invaliddomain' => false ];
 $wgLDAPLowerCaseUsername = [ 'labs' => false, 'invaliddomain' => false ];
 // Only enable UseLocal if you need to promote an LDAP user
-# $wgLDAPUseLocal = true;
+// $wgLDAPUseLocal = true;
+// T168692: Attempt to lock LDAP accounts when blocked
+$wgLDAPLockOnBlock = true;
 
 $wgLDAPDebug = 5; // Maximally verbose logs for Andrew Bogott, 8-Dec-2015
 
