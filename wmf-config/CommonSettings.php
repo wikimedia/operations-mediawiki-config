@@ -939,10 +939,6 @@ if ( $wmgUseQuiz ) {
 	wfLoadExtension( 'Quiz' );
 }
 
-if ( $wmgUseFundraisingTranslateWorkflow ) {
-	wfLoadExtension( 'FundraisingTranslateWorkflow' );
-}
-
 if ( $wmgUseGadgets ) {
 	wfLoadExtension( 'Gadgets' );
 }
@@ -2670,6 +2666,10 @@ if ( $wmgUseTranslationNotifications ) {
 	$wgNotificationUserPassword = $wmgTranslationNotificationUserPassword;
 
 	$wgTranslationNotificationsContactMethods['talkpage-elsewhere'] = true;
+}
+
+if ( $wmgUseFundraisingTranslateWorkflow ) {
+	wfLoadExtension( 'FundraisingTranslateWorkflow' );
 }
 
 if ( $wmgUseVips ) {
