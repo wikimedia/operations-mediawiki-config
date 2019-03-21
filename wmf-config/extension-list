@@ -162,6 +162,7 @@ $IP/extensions/Wikibase/client/WikibaseClient.php
 $IP/extensions/Wikibase/repo/Wikibase.php
 $IP/extensions/WikibaseCirrusSearch/extension.json
 $IP/extensions/WikibaseLexeme/extension.json
+$IP/extensions/WikibaseLexemeCirrusSearch/extension.json
 $IP/extensions/WikibaseMediaInfo/extension.json
 $IP/extensions/WikibaseQualityConstraints/extension.json
 $IP/extensions/Wikidata.org/extension.json
