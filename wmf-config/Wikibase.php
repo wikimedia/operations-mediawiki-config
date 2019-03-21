@@ -26,6 +26,15 @@ if ( !empty( $wmgUseWikibaseRepo ) ) {
 			$wgWBRepoSettings['disableCirrus'] = true;
 		}
 	}
+	if ( !empty( $wmgUseWikibaseLexemeCirrusSearch ) ) {
+		wfLoadExtension( 'WikibaseLexemeCirrusSearch' );
+		if ( !empty( $wmgNewWikibaseLexemeCirrusSearch ) ) {
+			// Enable new code
+			$wgLexemeUseCirrus = true;
+			// Disable old Lexeme code
+			$wgLexemeDisableCirrus = true;
+		}
+	}
 }
 
 // Load the Client, and Client extensions
