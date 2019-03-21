@@ -22619,7 +22619,6 @@ $wgConf->settings = [
 	'testwiki' => true,
 	'kowiki' => true,
 	'cswiki' => true,
-	'viwiki' => true,
 ],
 
 'wgWelcomeSurveyPrivacyPolicyUrl' => [
@@ -22631,7 +22630,6 @@ $wgConf->settings = [
 'wgWelcomeSurveyExperimentalGroups' => [
 	'kowiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-9' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
 	'cswiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-9' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
-	'viwiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-4' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
 ],
 
 'wgGEHelpPanelEnabled' => [
