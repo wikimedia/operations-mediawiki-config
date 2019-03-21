@@ -1336,6 +1336,7 @@ function wmfLabsSettings() {
 		// T216206: Enable WikibaseLexemeCirrusSearch on Beta Cluster
 		'wmgNewWikibaseLexemeCirrusSearch' => [
 			'wikidatawiki' => true,
+			'commonswiki' => true,
 		],
 
 		'wgMusicalNotationEnableWikibaseDataType' => [
