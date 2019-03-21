@@ -20488,6 +20488,7 @@ $wgConf->settings = [
 // Feature flag for WikibaseMediaInfo showing 'depicts' statements during deployment
 'wgMediaInfoEnableFilePageDepicts' => [
 	'default' => false,
+	'testcommonswiki' => true,
 ],
 
 // Only enable this conservatively, having this on to many
