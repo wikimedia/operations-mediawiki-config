@@ -20531,6 +20531,7 @@ $wgConf->settings = [
 // Feature flag for WikibaseMediaInfo showing 'depicts' statements during deployment
 'wgMediaInfoEnableFilePageDepicts' => [
 	'default' => false,
+	'commonswiki' => true,
 	'testcommonswiki' => true,
 ],
 
@@ -20541,12 +20542,16 @@ $wgConf->settings = [
 
 // Structured Data on Commons: Depicts-related configuration
 'wgMediaInfoProperties' => [
+	'commonswiki' => [
+		'depicts' => 'P180',
+	],
 	'testcommonswiki' => [
 		'depicts' => 'P180',
-	]
+	],
 ],
 
 'wgDepictsQualifierProperties' => [
+	'commonswiki' => [],
 	'testcommonswiki' => [],
 ],
 
