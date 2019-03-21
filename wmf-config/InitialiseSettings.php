@@ -20502,6 +20502,10 @@ $wgConf->settings = [
 	'testcommonswiki' => [],
 ],
 
+'wgMediaInfoExternalEntitySearchBaseUri' => [
+	'default' => 'https://www.wikidata.org/w/api.php',
+],
+
 // Only enable this conservatively, having this on to many
 // wikis will take *a lot* of Graphite storage space. T191416
 'wmgWikibaseClientTrackLuaFunctionCallsPerWiki' => [
