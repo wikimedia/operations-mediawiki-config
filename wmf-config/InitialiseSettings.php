@@ -20564,6 +20564,11 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
+'wmgUseEntitySourceBasedFederation' => [
+	'default' => false,
+	'testcommonswiki' => true,
+],
+
 'wmgUseTemplateSandbox' => [
 	'default' => true,
 	'loginwiki' => false,
