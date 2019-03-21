@@ -20491,6 +20491,17 @@ $wgConf->settings = [
 	'testcommonswiki' => true,
 ],
 
+// Structured Data on Commons: Depicts-related configuration
+'wgMediaInfoProperties' => [
+	'testcommonswiki' => [
+		'depicts' => 'P180',
+	]
+],
+
+'wgDepictsQualifierProperties' => [
+	'testcommonswiki' => [],
+],
+
 // Only enable this conservatively, having this on to many
 // wikis will take *a lot* of Graphite storage space. T191416
 'wmgWikibaseClientTrackLuaFunctionCallsPerWiki' => [
