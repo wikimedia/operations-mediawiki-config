@@ -16002,6 +16002,16 @@ $wgConf->settings = [
 	'bnwiki' => 'mobile',
 	'hewiki' => 'mobile',
 	'zh_yuewiki' => 'mobile',
+	'hiwiki' => 'mobile-ab',
+	'arwiki' => 'mobile-ab',
+	'fawiki' => 'mobile-ab',
+	'idwiki' => 'mobile-ab',
+	'mrwiki' => 'mobile-ab',
+	'mswiki' => 'mobile-ab',
+	'mlwiki' => 'mobile-ab',
+	'thwiki' => 'mobile-ab',
+	'azwiki' => 'mobile-ab',
+	'sqwiki' => 'mobile-ab',
 ],
 
 // Namespaces for VisualEditor to be active in, as well as wgContentNamespaces
