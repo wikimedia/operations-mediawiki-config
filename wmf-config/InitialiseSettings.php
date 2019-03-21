@@ -20498,7 +20498,7 @@ $wgConf->settings = [
 		'depicts' => 'P180',
 	],
 	'testcommonswiki' => [
-		'depicts' => 'P180',
+		'depicts' => 'P292',
 	],
 ],
 
@@ -20509,6 +20509,7 @@ $wgConf->settings = [
 
 'wgMediaInfoExternalEntitySearchBaseUri' => [
 	'default' => 'https://www.wikidata.org/w/api.php',
+	'testcommonswiki' => 'https://test.wikidata.org/w/api.php',
 ],
 
 // Only enable this conservatively, having this on to many
