@@ -320,7 +320,7 @@ function wmfLabsSettings() {
 		/// ------------ BetaFeatures end -----------
 		///
 
-		// Whether to enable true section editing. false, true or 'mobile'
+		// Whether to enable true section editing. false, true, 'mobile', or 'mobile-ab'
 		'wmgVisualEditorEnableVisualSectionEditing' => [
 			'default' => 'mobile',
 		],
