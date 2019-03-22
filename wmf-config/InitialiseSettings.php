@@ -19921,6 +19921,7 @@ $wgConf->settings = [
 	'specieswiki' => 'species',
 	'wikidatawiki' => 'wikidata',
 	'testwikidatawiki' => 'testwikidata',
+	'wikimaniawiki' => 'wikimania',
 ],
 
 'wmgWikibaseEntityDataFormats' => [
