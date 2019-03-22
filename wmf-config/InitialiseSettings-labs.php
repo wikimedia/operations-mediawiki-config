@@ -1099,22 +1099,6 @@ function wmfLabsSettings() {
 			'wikidatawiki' => 'https://ssr-termbox.wmflabs.org/termbox',
 		],
 
-		'wmgWikibaseRepoForeignRepositories' => [
-			'default' => [],
-			'commonswiki' => [
-				// This config is now used by the back compat entity source config layer.
-				// As a result this key is used as the interwiki prefix for entities.
-				// wikidata links to the production wikidata install always
-				// thus d should be used here instead (and can also be used in production)
-				'd' => [
-					'repoDatabase' => 'wikidatawiki',
-					'baseUri' => 'https://wikidata.beta.wmflabs.org/entity/',
-					'supportedEntityTypes' => [ 'item', 'property' ],
-					'prefixMapping' => [],
-					'entityNamespaces' => [ 'item' => 0, 'property' => 120 ]
-				],
-			],
-		],
 		// If set to "false": No alternate links will be added to desktop pages,
 		// and MobileFrontend won't add a canonical tag
 		// If set to "true": Alternate link will be added, MF will add a canonical tag
