@@ -14984,6 +14984,8 @@ $wgConf->settings = [
 'wgPopupsReferencePreviews' => [
 	'default' => false,
 	'group0' => true, // T214905
+	'arwiki' => true, // T218766
+	'dewiki' => true, // T218766
 ],
 
 // Whether Compact Links is a Beta feature
