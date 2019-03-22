@@ -1105,6 +1105,7 @@ function wmfGetVariantSettings() {
 	'frwikisource' => '/static/images/project-logos/frwikisource.png',
 	'guwikisource' => '/static/images/project-logos/guwikisource.png',
 	'hewikisource' => '/static/images/project-logos/hewikisource.png',
+	'hiwikisource' => '/static/images/project-logos/hiwikisource.png',
 	'htwikisource' => '/static/images/project-logos/htwikisource.png',  // T54019
 	'huwikisource' => '/static/images/project-logos/huwikisource.png',  // T54019
 	'hywikisource' => '/static/images/project-logos/hywikisource.png',  // T54019
@@ -1693,6 +1694,7 @@ function wmfGetVariantSettings() {
 	'cswikisource' => [ '1.5x' => '/static/images/project-logos/cswikisource-1.5x.png', '2x' => '/static/images/project-logos/cswikisource-2x.png' ], // T150618
 	'enwikisource' => [ '1.5x' => '/static/images/project-logos/enwikisource-1.5x.png', '2x' => '/static/images/project-logos/enwikisource-2x.png' ],
 	'euwikisource' => [ '1.5x' => '/static/images/project-logos/euwikisource-1.5x.png', '2x' => '/static/images/project-logos/euwikisource-2x.png' ],
+	'hiwikisource' => [ '1.5x' => '/static/images/project-logos/hiwikisource-1.5x.png', '2x' => '/static/images/project-logos/hiwikisource-2x.png' ],
 	'napwikisource' => [ '1.5x' => '/static/images/project-logos/napwikisource-1.5x.png', '2x' => '/static/images/project-logos/napwikisource-2x.png' ], // T210752
 	'nowikisource' => [ '1.5x' => '/static/images/project-logos/nowikisource-1.5x.png', '2x' => '/static/images/project-logos/nowikisource-2x.png' ], // T167192
 	'pawikisource' => [ '1.5x' => '/static/images/project-logos/pawikisource-1.5x.png', '2x' => '/static/images/project-logos/pawikisource-2x.png' ], // T149522
@@ -2355,6 +2357,7 @@ function wmfGetVariantSettings() {
 	'hewiktionary' => 'ויקימילון',
 	'hifwiktionary' => 'Sabdkosh', // T173643
 	'hiwiki' => 'विकिपीडिया',
+	'hiwikisource' => 'विकिस्रोत',
 	'hiwikimedia' => 'Hindi Wikimedians User Group', // T188366
 	'hiwikiversity' => 'विकिविश्वविद्यालय', // T168765
 	'hiwikivoyage' => 'विकियात्रा', // T173013
@@ -2866,6 +2869,7 @@ function wmfGetVariantSettings() {
 	'hifwiktionary' => 'Sabdkosh', // T173643
 	'hiwiki' => 'विकिपीडिया',
 	'hiwikimedia' => 'विकिमीडिया', // T188366
+	'hiwikisource' => 'विकिस्रोत',
 	'hiwikiversity' => 'विकिविश्वविद्यालय',
 	'hiwikivoyage' => 'विकियात्रा', // T173013
 	'hiwikiquote' => 'विकिसूक्ति', // T126185
@@ -3894,6 +3898,16 @@ function wmfGetVariantSettings() {
 		'विकिविद्यालय' => NS_PROJECT, // T185347
 		'Draft' => 118, // T187535
 		'Draft_talk' => 119, // T187535
+	],
+	'hiwikisource' => [
+		100 => 'पृष्ठ', // T218155
+		101 => 'पृष्ठ_वार्ता', // T218155
+		102 => 'लेखक', // T218155
+		103 => 'लेखक_वार्ता', // T218155
+		104 => 'विषयसूची', // T218155
+		105 => 'विषयसूची_वार्ता', // T218155
+		114 => 'अनुवाद', // T218155
+		115 => 'अनुवाद_वार्ता', // T218155
 	],
 	'+hrwikisource' => [
 		'Author' => 100,
