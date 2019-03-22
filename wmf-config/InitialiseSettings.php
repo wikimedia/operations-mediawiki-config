@@ -20551,6 +20551,7 @@ $wgConf->settings = [
 	'testwikidatawiki' => true,
 	'wikidatawiki' => true,
 	'commonswiki' => true,
+	'testcommonswiki' => true,
 ],
 
 // Enable WikibaseCirrusSearch extension code (and disable Wikibase search code)
@@ -20558,6 +20559,7 @@ $wgConf->settings = [
 	'default' => false,
 	'testwikidatawiki' => true,
 	'wikidatawiki' => true,
+	'testcommonswiki' => true,
 ],
 
 'wgMusicalNotationEnableWikibaseDataType' => [
