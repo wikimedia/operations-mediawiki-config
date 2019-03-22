@@ -546,6 +546,7 @@ function wmfLabsSettings() {
 		'wgMediaInfoProperties' => [
 			'commonswiki' => [
 				'depicts' => 'P245962',
+				'digitalRepresentationOf' => 'P248141',
 			]
 		],
 		'wgDepictsQualifierProperties' => [
