@@ -197,9 +197,6 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['string-limits'] = $wmgWikibaseStringLimits;
 	}
 
-	// Federation temporarily commented out, see T211237 & T204748
-	$wgWBRepoSettings['foreignRepositories'] = $wmgWikibaseRepoForeignRepositories;
-
 	// Temporary, see T184933
 	$wgWBRepoSettings['useKartographerGlobeCoordinateFormatter'] = true;
 
