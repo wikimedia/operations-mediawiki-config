@@ -952,6 +952,10 @@ function wmfLabsSettings() {
 		'wgGEHomepageNewAccountEnablePercentage' => [
 			'default' => 0,
 		],
+		'wgGEHomepageMentorsList' => [
+			'default' => '',
+			'enwiki' => 'Wikipedia:Mentors',
+		],
 		'wgGEConfirmEmailEnabled' => [
 			'default' => true,
 		],
