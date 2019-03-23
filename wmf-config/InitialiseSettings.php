@@ -20609,6 +20609,12 @@ $wgConf->settings = [
 	'commonswiki' => true,
 ],
 
+'wgMusicalNotationLineWidthInches' => [
+    'default' => 8,
+    'testwikidatawiki' => 3,
+    'wikidatawiki' => 3,
+],
+
 'wgScoreTrim' => [
 	'default' => true,
 ],
