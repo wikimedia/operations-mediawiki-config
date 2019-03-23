@@ -20568,6 +20568,12 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
+'wgScoreLineWidthInches' => [
+	'default' => 8,
+	'testwikidatawiki' => 3,
+	'wikidatawiki' => 3,
+],
+
 'wmgUseEntitySourceBasedFederation' => [
 	'default' => false,
 	'testcommonswiki' => true,
