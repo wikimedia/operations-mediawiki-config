@@ -20710,6 +20710,12 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
+'wgWikibaseMusicalNotationLineWidthInches' => [
+	'default' => 8,
+	'testwikidatawiki' => 3,
+	'wikidatawiki' => 3,
+],
+
 'wmgUseEntitySourceBasedFederation' => [
 	'default' => false,
 	'testcommonswiki' => true,
