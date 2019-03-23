@@ -721,7 +721,7 @@ function wmfLabsSettings() {
 			'default' => false,
 		],
 		'wgReadingListsDatabase' => [
-			'default' => 'metawiki',
+			'default' => 'wikidatawiki',
 		],
 
 		'-wgPageCreationLog' => [
