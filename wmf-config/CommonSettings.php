@@ -3173,6 +3173,12 @@ if ( $wmgUseExternalGuidance ) {
 		'translate.google.com',
 		'translate.googleusercontent.com'
 	];
+
+	$wgExternalGuidanceKnownServices = [
+		'Google',
+		'translate.google.com',
+		'translate.googleusercontent.com'
+	];
 }
 
 if ( $wmgUseNewWikiDiff2Extension ) {
