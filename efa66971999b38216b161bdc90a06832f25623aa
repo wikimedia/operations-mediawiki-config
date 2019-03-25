@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e2de1fc8_698b47bf",
+        "filename": "wmf-config/flaggedrevs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-03-25T18:36:09Z",
+      "side": 1,
+      "message": "I’m not sure if the removal of array_merge() is correct, but I’m pretty sure this should at least be [ 100 ], not 100. https://www.mediawiki.org/wiki/Extension:FlaggedRevs#Basic_settings says this variable should be an array of integers, not a single integer.",
+      "revId": "efa66971999b38216b161bdc90a06832f25623aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
