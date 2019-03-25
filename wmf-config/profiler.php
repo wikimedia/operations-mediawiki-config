@@ -412,10 +412,6 @@ function wmfSetupExcimer( $options ) {
  * more samples to arrive before the end of the request, they probably won't.
  */
 function wmfExcimerFlushCallback( $log, $options ) {
-	$reqMethod = '{' . $_SERVER['REQUEST_METHOD'] . '}';
-	$scriptFilename = $_SERVER['SCRIPT_FILENAME'];
-	$baseName = basename( $scriptFilename );
-
 	$redis = new Redis();
 	try {
 		$ok = $redis->connect( $options['redis-host'], $options['redis-port'], $options['redis-timeout'] );
@@ -423,17 +419,22 @@ function wmfExcimerFlushCallback( $log, $options ) {
 			return;
 		}
 
+		// Arc Lamp expects the first frame to be a PHP file.
+		// This is used to group related traces for the same web entry point.
+		// In most cases, this happens by default already. But at least for destructor
+		// callbacks, this isn't the case on PHP 7.2. E.g. a line may be:
+		// "LBFactory::__destruct;LBFactory::LBFactory::shutdown;… 1".
+		$firstFrame = realpath( $_SERVER['SCRIPT_FILENAME'] ) . ';';
 		$collapsed = $log->formatCollapsed();
-		// The first frame is usually (but not always) the full file
-		// path of the script name. We replace the path with the basename
-		// and method.
-		$collapsed = preg_replace( '!^' . preg_quote( $scriptFilename, '!' ) . '!m',
-			"$baseName;$reqMethod", $collapsed );
-
 		foreach ( explode( "\n", $collapsed ) as $line ) {
 			if ( $line === '' ) {
 				// $collapsed ends with a line break
 				continue;
+			}
+			// If the expected first frame isn't the entry point, prepend it.
+			// This check includes the semicolon to avoid false positives.
+			if ( substr( $line, 0, strlen( $entrypoint ) ) !== $entrypoint ) {
+				$line = $entrypoint . $line;
 			}
 			$redis->publish( 'excimer', $line );
 		}
