@@ -16036,6 +16036,9 @@ $wgConf->settings = [
 		'Book' => true, // T58001
 		'Draft' => true,
 	],
+	'+etwiki' => [
+		'Mustand' /* Draft */ => true, // T192254
+	],
 	'+fawiki' => [
 		'پیش‌نویس' /* Draft */ => true, // T118060
 	],
