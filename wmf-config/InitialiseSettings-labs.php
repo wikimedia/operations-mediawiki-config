@@ -539,7 +539,7 @@ function wmfLabsSettings() {
 
 		// Hard-enable 'depicts' statements for Beta Cluster Commons
 		'wgMediaInfoEnableFilePageDepicts' => [
-			'commonswiki' => true,
+			'commonswiki' => false,
 		],
 
 		// Depicts-related Beta Cluster Commons configuration
