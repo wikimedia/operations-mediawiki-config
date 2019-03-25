@@ -41,7 +41,7 @@ if ( $wgDBname == 'alswiki' ) {
 	$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 } elseif ( $wgDBname == 'arwiki' ) {
 	$wgFlaggedRevsWhitelist = [ 'الصفحة_الرئيسية' ];
-	$wgFlaggedRevsNamespaces = 100; // T21332 and T217507
+	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, [ 100, 104 ] ); // T21332
 } elseif ( $wgDBname == 'bewiki' ) {
 	$wgFlaggedRevsOverride = false;
 	$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
