@@ -5639,6 +5639,7 @@ $wgConf->settings = [
 		'AbuseFilter' => 'debug',
 		'GrowthExperiments' => 'info',
 		'WikimediaEvents' => 'error', // For T205754 & T208233
+		'Elastica' => 'info',
 	],
 
 	'+private' => [
