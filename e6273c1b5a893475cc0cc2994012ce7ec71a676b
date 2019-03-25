@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bd7610bc_07bb8011",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2019-03-25T21:22:44Z",
+      "side": 0,
+      "message": "ypu, removing this will break testcommons, as this is relied upon to to generate the entity source based config that is not yet defined in this mediawiki-config repo.\n\nThis logic is done in https://github.com/wikimedia/mediawiki-extensions-Wikibase/blob/master/repo/includes/WikibaseRepo.php#L444-L449",
+      "range": {
+        "startLine": 201,
+        "startChar": 1,
+        "endLine": 201,
+        "endChar": 80
+      },
+      "revId": "e6273c1b5a893475cc0cc2994012ce7ec71a676b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
