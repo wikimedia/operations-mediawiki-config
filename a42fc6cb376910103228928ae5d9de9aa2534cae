@@ -22,6 +22,52 @@
       "revId": "a42fc6cb376910103228928ae5d9de9aa2534cae",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d088bd71_d923c1be",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 19528,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2019-03-25T21:15:16Z",
+      "side": 1,
+      "message": "Per my comment in the other file this should perhaps be wmgWikibaseRepoEntitySources for now?",
+      "range": {
+        "startLine": 19528,
+        "startChar": 1,
+        "endLine": 19528,
+        "endChar": 25
+      },
+      "revId": "a42fc6cb376910103228928ae5d9de9aa2534cae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "46dcd84b_c401bea2",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2019-03-25T21:15:16Z",
+      "side": 1,
+      "message": "Adding this here now is all good and fine, BUT, it should be noted that right now foreignRepositories is empty for clients in $wgWBClientSettings, and the plan would be to leave ti empty until it is decided that client support for anything other than wikidata.org is needed?\n\naddshore@deploy1001:~$ mwscript eval.php --wiki testcommonswiki\n\u003e var_dump($wgWBClientSettings[\u0027foreignRepositories\u0027]);\nNULL\n\n\u003e var_dump($wgWBRepoSettings[\u0027foreignRepositories\u0027]);\narray(1) {\n  [\"d\"]\u003d\u003e\n  array(5) {\n.........",
+      "range": {
+        "startLine": 236,
+        "startChar": 1,
+        "endLine": 236,
+        "endChar": 66
+      },
+      "revId": "a42fc6cb376910103228928ae5d9de9aa2534cae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
