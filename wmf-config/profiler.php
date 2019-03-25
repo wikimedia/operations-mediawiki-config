@@ -412,10 +412,6 @@ function wmfSetupExcimer( $options ) {
  * more samples to arrive before the end of the request, they probably won't.
  */
 function wmfExcimerFlushCallback( $log, $options ) {
-	$reqMethod = '{' . $_SERVER['REQUEST_METHOD'] . '}';
-	$scriptFilename = $_SERVER['SCRIPT_FILENAME'];
-	$baseName = basename( $scriptFilename );
-
 	$redis = new Redis();
 	try {
 		$ok = $redis->connect( $options['redis-host'], $options['redis-port'], $options['redis-timeout'] );
@@ -424,12 +420,6 @@ function wmfExcimerFlushCallback( $log, $options ) {
 		}
 
 		$collapsed = $log->formatCollapsed();
-		// The first frame is usually (but not always) the full file
-		// path of the script name. We replace the path with the basename
-		// and method.
-		$collapsed = preg_replace( '!^' . preg_quote( $scriptFilename, '!' ) . '!m',
-			"$baseName;$reqMethod", $collapsed );
-
 		foreach ( explode( "\n", $collapsed ) as $line ) {
 			if ( $line === '' ) {
 				// $collapsed ends with a line break
