@@ -9057,6 +9057,7 @@ $wgConf->settings = [
 			'collectionsaveasuserpage' => true, // T48944
 			'changetags' => false, // T97013
 			'createpagemainns' => false,
+			'move-categorypages' => false, // T219261
 		],
 		'founder' => [ 'userrights' => true ],
 		'rollbacker' => [ 'rollback' => true ],
@@ -9093,6 +9094,7 @@ $wgConf->settings = [
 			'move-subpages' => true,
 			'move' => true,
 			'tboverride' => true, // T209753
+			'move-categorypages' => true, // T219261
 		],
 		'patroller' => [ 'patrol' => true ], // T149019
 	],
