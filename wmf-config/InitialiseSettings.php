@@ -9057,6 +9057,7 @@ $wgConf->settings = [
 			'collectionsaveasuserpage' => true, // T48944
 			'changetags' => false, // T97013
 			'createpagemainns' => false,
+			'move-categorypages' => false, // T219261
 		],
 		'founder' => [ 'userrights' => true ],
 		'rollbacker' => [ 'rollback' => true ],
@@ -9074,6 +9075,7 @@ $wgConf->settings = [
 			'ipblock-exempt' => true, // T30914
 			'changetags' => true, // T97013
 			'extendedconfirmed' => true // T126607
+			'move-categorypages' => true, // T219261
 		],
 		'oversight' => [ 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-view-private' => true ], // T30465, T119446
 		'checkuser' => [ 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-view-private' => true ], // T30465, T119446
@@ -9093,6 +9095,7 @@ $wgConf->settings = [
 			'move-subpages' => true,
 			'move' => true,
 			'tboverride' => true, // T209753
+			'move-categorypages' => true, // T219261
 		],
 		'patroller' => [ 'patrol' => true ], // T149019
 	],
