@@ -177,6 +177,7 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBRepoSettings['dataSquidMaxage'] = 1 * 60 * 60;
 	$wgWBRepoSettings['sharedCacheDuration'] = 60 * 60 * 24;
+	$wgWBRepoSettings['sharedCacheKeyGroup'] = $wmgWikibaseCachePrefix;
 	$wgWBRepoSettings['sharedCacheKeyPrefix'] = $wmgWBSharedCacheKey;
 
 	// T189776, T189777
@@ -287,6 +288,7 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['entityAccessLimit'] = $wmgWikibaseEntityAccessLimit;
 	$wgWBClientSettings['injectRecentChanges'] = $wmgWikibaseClientInjectRecentChanges;
 
+	$wgWBClientSettings['sharedCacheKeyGroup'] = $wmgWikibaseCachePrefix;
 	$wgWBClientSettings['sharedCacheKeyPrefix'] = $wmgWBSharedCacheKey;
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
 
