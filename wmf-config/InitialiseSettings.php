@@ -9057,6 +9057,7 @@ $wgConf->settings = [
 			'collectionsaveasuserpage' => true, // T48944
 			'changetags' => false, // T97013
 			'createpagemainns' => false,
+			'move-categorypages' => false, // T219261
 		],
 		'founder' => [ 'userrights' => true ],
 		'rollbacker' => [ 'rollback' => true ],
