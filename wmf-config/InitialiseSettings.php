@@ -8532,11 +8532,20 @@ $wgConf->settings = [
 	'default' => [],
 	'ruwiki' => [
 		// T216499 Priority Hints, token originally due to expire on 2019-04-02, renewable until 2019-05-29
-		'Aq3kBZfnEiSKSGftuvXgxz83ex6pKdjY5/g9LeDm+YINUgfZ7PliX7AY6qm5e9q+MDlZ5PhIohflorFFqmdWLg8AAABqeyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IlByaW9yaXR5SGludHMiLCJleHBpcnkiOjE1NTQyMDY4OTMsImlzU3ViZG9tYWluIjp0cnVlfQ=='
+		'Aq3kBZfnEiSKSGftuvXgxz83ex6pKdjY5/g9LeDm+YINUgfZ7PliX7AY6qm5e9q+MDlZ5PhIohflorFFqmdWLg8AAABqeyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IlByaW9yaXR5SGludHMiLCJleHBpcnkiOjE1NTQyMDY4OTMsImlzU3ViZG9tYWluIjp0cnVlfQ==',
+		// T216598 Element Timing for Images, expires on 2019-05-07, renewable until 2019-09-04
+		'AoD78afco+vEg78OklsVKj9ihT2miCnaMEp5EXT8xLIU2XM2Cxgyc2LNKj8Udf9Ry+y9YNtxLrmGGxu3n7qFgg0AAABweyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IkVsZW1lbnRUaW1pbmdJbWFnZXMiLCJleHBpcnkiOjE1NTcyMjIzNDcsImlzU3ViZG9tYWluIjp0cnVlfQ==',
+		// T216594 Layout Stability, expires on 2019-05-07, renewable until 2019-09-04
+		'AuQYzuuLO3A3VPePIRfKVSXIhxgeP6EI5QMoLJkkbjqsLwp8bKGH47moULCjjf3fciSjZIlbofgYkr353lWymg0AAABqeyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IkxheW91dEphbmtBUEkiLCJleHBpcnkiOjE1NTcyMjI2MDMsImlzU3ViZG9tYWluIjp0cnVlfQ=='
 	],
 ],
 
 'wgPriorityHints' => [
+	'default' => false,
+	'ruwiki' => true,
+],
+
+'wgElementTiming' => [
 	'default' => false,
 	'ruwiki' => true,
 ],
