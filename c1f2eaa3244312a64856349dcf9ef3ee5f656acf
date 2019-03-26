@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f1703d9a_f83e6766",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3238
+      },
+      "writtenOn": "2019-03-26T04:51:50Z",
+      "side": 1,
+      "message": "Capitalization",
+      "range": {
+        "startLine": 7,
+        "startChar": 71,
+        "endLine": 7,
+        "endChar": 88
+      },
+      "revId": "c1f2eaa3244312a64856349dcf9ef3ee5f656acf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "62dde151_eedbd684",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 3238
+      },
+      "writtenOn": "2019-03-26T04:51:50Z",
+      "side": 1,
+      "message": "Needs \"Bug: \" prefix",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 7
+      },
+      "revId": "c1f2eaa3244312a64856349dcf9ef3ee5f656acf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba52939e_924b2621",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 3238
+      },
+      "writtenOn": "2019-03-26T04:51:50Z",
+      "side": 1,
+      "message": "No blank line here",
+      "revId": "c1f2eaa3244312a64856349dcf9ef3ee5f656acf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
