@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "01358dcf_c84ded9f",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-03-26T17:21:54Z",
+      "side": 1,
+      "message": "Unless your nick matches /^[JM][ca]r[eo]s[pt][eo]/ :D",
+      "range": {
+        "startLine": 11,
+        "startChar": 43,
+        "endLine": 11,
+        "endChar": 73
+      },
+      "revId": "794b7a6d7b229ecdd70d9369fe708793a905515c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
