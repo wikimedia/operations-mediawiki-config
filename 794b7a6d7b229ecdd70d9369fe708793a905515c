@@ -22,6 +22,30 @@
       "revId": "794b7a6d7b229ecdd70d9369fe708793a905515c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ee66e5d_80e7ecb8",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2019-03-26T17:38:08Z",
+      "side": 1,
+      "message": "While that may be a joke, it is actually a nice reminder. That was added by ourselves because the keys -being ips- weren\u0027t very clear, and we feared someone would change them by mistake. It can go away when the 3 keys have more reasonable names.\n\nThere are more extreme \"DO NOT TOUCH this\" messages at the end of the file- and probably they were there for a reason...",
+      "parentUuid": "01358dcf_c84ded9f",
+      "range": {
+        "startLine": 11,
+        "startChar": 43,
+        "endLine": 11,
+        "endChar": 73
+      },
+      "revId": "794b7a6d7b229ecdd70d9369fe708793a905515c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
