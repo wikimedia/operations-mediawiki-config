@@ -22844,10 +22844,10 @@ $wgConf->settings = [
 	'default' => false,
 	'testwikidatawiki' => true,
 ],
-'wgWikimediaEditorTasksCluster' => [
+'wgWikimediaEditorTasksUserCountsCluster' => [
 	'default' => 'extension1',
 ],
-'wgWikimediaEditorTasksDatabase' => [
+'wgWikimediaEditorTasksUserCountsDatabase' => [
 	'default' => 'wikishared',
 ],
 'wgWikimediaEditorTasksEnabledCounters' => [
