@@ -20503,6 +20503,7 @@ $wgConf->settings = [
 // Feature flag for UploadWizard letting users set 'depicts' statements during deployment
 'wmgMediaInfoEnableUploadWizardDepicts' => [
 	'default' => false,
+	'testcommonswiki' => true,
 ],
 
 // Structured Data on Commons: Depicts-related configuration
