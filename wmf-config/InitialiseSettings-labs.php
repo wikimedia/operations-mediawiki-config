@@ -956,6 +956,10 @@ function wmfLabsSettings() {
 			'default' => '',
 			'enwiki' => 'Wikipedia:Mentors',
 		],
+		'wgGEHomepageTutorialTitle' => [
+			'default' => '',
+			'enwiki' => 'Help:Getting started',
+		],
 		'wgGEConfirmEmailEnabled' => [
 			'default' => true,
 		],
