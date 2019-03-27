@@ -7015,6 +7015,8 @@ $wgConf->settings = [
 	'idwiktionary' => [
 		100 => 'Indeks',
 		101 => 'Pembicaraan_Indeks',
+		102 => 'Lampiran',
+		103 => 'Pembicaraan_Lampiran',
 	],
 	'iswiktionary' => [
 		106 => 'Viðauki',
