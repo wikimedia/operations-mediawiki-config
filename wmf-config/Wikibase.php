@@ -179,9 +179,6 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['sharedCacheDuration'] = 60 * 60 * 24;
 	$wgWBRepoSettings['sharedCacheKeyPrefix'] = $wmgWBSharedCacheKey;
 
-	// Cirrus usage for wbsearchentities is on
-	$wgWBRepoSettings['entitySearch']['useCirrus'] = true;
-
 	// T189776, T189777
 	$wgWBRepoSettings['useTermsTableSearchFields'] = false;
 
