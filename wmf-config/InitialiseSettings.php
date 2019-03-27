@@ -19521,7 +19521,7 @@ $wgConf->settings = [
 	'commonswiki' => [
 		'd' => [
 			'repoDatabase' => 'wikidatawiki',
-			'baseUri' => 'https://wikidata.org/entity/',
+			'baseUri' => 'http://www.wikidata.org/entity/',
 			'supportedEntityTypes' => [ 'item', 'property' ],
 			'prefixMapping' => [],
 			'entityNamespaces' => [ 'item' => 0, 'property' => 120 ]
@@ -19530,7 +19530,7 @@ $wgConf->settings = [
 	'testcommonswiki' => [
 		'd' => [
 			'repoDatabase' => 'wikidatawiki',
-			'baseUri' => 'https://wikidata.org/entity/',
+			'baseUri' => 'http://www.wikidata.org/entity/',
 			'supportedEntityTypes' => [ 'item', 'property' ],
 			'prefixMapping' => [],
 			'entityNamespaces' => [ 'item' => 0, 'property' => 120 ]
