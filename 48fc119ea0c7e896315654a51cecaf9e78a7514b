@@ -16,6 +16,24 @@
       "revId": "48fc119ea0c7e896315654a51cecaf9e78a7514b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f8a2d2a3_2780f17d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 19524,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2019-03-27T16:46:28Z",
+      "side": 1,
+      "message": "Fixes should happen to all the config, not just one line, though. Let\u0027s do as a follow-up.",
+      "parentUuid": "824964fd_fc66f6da",
+      "revId": "48fc119ea0c7e896315654a51cecaf9e78a7514b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
