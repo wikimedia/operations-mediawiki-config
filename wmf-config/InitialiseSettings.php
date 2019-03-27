@@ -20574,6 +20574,7 @@ $wgConf->settings = [
 // Load WikibaseLexemeCirrusSearch extension
 'wmgUseWikibaseLexemeCirrusSearch' => [
 	'default' => false,
+	'testwikidatawiki' => true,
 ],
 
 // Enable WikibaseLexemeCirrusSearch extension
