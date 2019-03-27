@@ -542,6 +542,11 @@ function wmfLabsSettings() {
 			'commonswiki' => true,
 		],
 
+		// … and $wgUploadWizardConfig
+		'wmgMediaInfoEnableUploadWizardDepicts' => [
+			'commonswiki' => true,
+		],
+
 		// Depicts-related Beta Cluster Commons configuration
 		'wgMediaInfoProperties' => [
 			'commonswiki' => [
