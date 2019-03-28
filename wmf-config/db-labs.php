@@ -17,8 +17,8 @@ if ( $wmfRealm == 'labs' ) { # safe guard
 
 		'sectionLoads' => [
 			'DEFAULT' => [
-				'deployment-db04' => 0,
-				'deployment-db05' => 400,
+				'deployment-db05' => 0,
+				'deployment-db04' => 400,
 				'deployment-db06' => 400,
 			],
 		],
@@ -33,27 +33,27 @@ if ( $wmfRealm == 'labs' ) { # safe guard
 		],
 
 		'hostsByName' => [
-			'deployment-db04' => '172.16.5.5:3306', # deployment-db04.eqiad.wmflabs, master
-			'deployment-db05' => '172.16.5.170:3306', # deployment-db05.eqiad.wmflabs
+			'deployment-db04' => '172.16.5.5:3306', # deployment-db04.eqiad.wmflabs
+			'deployment-db05' => '172.16.5.170:3306', # deployment-db05.eqiad.wmflabs, master
 			'deployment-db06' => '172.16.4.147:3306', # deployment-db06.eqiad.wmflabs
 		],
 
 		'externalLoads' => [
 			'cluster1' => [
-				'172.16.5.5:3306' => 1 , # deployment-db04.eqiad.wmflabs, master
-				'172.16.5.170:3306' => 3 , #deployment-db05.eqiad.wmflabs
+				'172.16.5.5:3306' => 3 , # deployment-db04.eqiad.wmflabs
+				'172.16.5.170:3306' => 1 , #deployment-db05.eqiad.wmflabs, master
 				'172.16.4.147:3306' => 3 , #deployment-db06.eqiad.wmflabs
 			],
 
 			'flow_cluster1' => [
-				'172.16.5.5:3306' => 1 , # deployment-db04.eqiad.wmflabs, master
-				'172.16.5.170:3306' => 3 , #deployment-db05.eqiad.wmflabs
+				'172.16.5.5:3306' => 3 , # deployment-db04.eqiad.wmflabs
+				'172.16.5.170:3306' => 1 , #deployment-db05.eqiad.wmflabs, master
 				'172.16.4.147:3306' => 3 , #deployment-db06.eqiad.wmflabs
 			],
 
 			'extension1' => [
-				'172.16.5.5:3306' => 1 , # deployment-db04.eqiad.wmflabs, master
-				'172.16.5.170:3306' => 3 , #deployment-db05.eqiad.wmflabs
+				'172.16.5.5:3306' => 3 , # deployment-db04.eqiad.wmflabs
+				'172.16.5.170:3306' => 1 , #deployment-db05.eqiad.wmflabs, master
 				'172.16.4.147:3306' => 3 , #deployment-db06.eqiad.wmflabs
 			],
 		],
