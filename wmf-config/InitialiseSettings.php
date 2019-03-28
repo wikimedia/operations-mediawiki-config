@@ -20572,6 +20572,7 @@ $wgConf->settings = [
 // Enable WikibaseLexemeCirrusSearch extension
 'wmgNewWikibaseLexemeCirrusSearch' => [
 	'default' => false,
+	'testwikidatawiki' => true,
 ],
 
 'wgMusicalNotationEnableWikibaseDataType' => [
