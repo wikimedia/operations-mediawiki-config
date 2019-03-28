@@ -9,7 +9,7 @@ if ( !defined( 'DBO_DEFAULT' ) ) {
 
 $wmgParserCacheDBs = [
 	# 'sharding key' => 'server ip address' # DO NOT CHANGE THE SHARDING KEY - T210725
-	'pc1'   => '10.192.48.14',  # temporary pc2010
+	'pc1'   => '10.192.0.104',  # pc2007, A1 4.4TB 256GB # pc1
 	'10.64.32.72'  => '10.192.16.35',  # pc2008, B3 4.4TB 256GB # pc2
 	'10.64.48.128' => '10.192.32.10',  # pc2009, C1 4.4TB 256GB # pc3
 	# 'spare' => '10.192.48.14',  # pc2010, D3 4.4TB 256GB # spare host. Use it to replace any of the above if needed
