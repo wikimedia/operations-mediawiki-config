@@ -16113,6 +16113,9 @@ $wgConf->settings = [
 	// Wikivoyages
 
 	// Wikimanias
+	'+wikimaniawiki' => [
+		128 => true, // T218645; reference via ID until T219562 is fixed
+	],
 
 	// Wikimedias
 	'+nowikimedia' => [
