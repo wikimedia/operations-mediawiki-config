@@ -312,10 +312,6 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings['pageSchemaSplitTestBuckets'] = $wmgWikibaseClientPageSchemaSplitTestBuckets;
 	}
 
-	if ( isset( $wmgUseEntitySourceBasedFederation ) ) {
-		$wgWBClientSettings['useEntitySourceBasedFederation'] = $wmgUseEntitySourceBasedFederation;
-	}
-
 	$wgWBClientSettings['addEntityUsagesBatchSize'] = $wmgWikibaseClientAddEntityUsagesBatchSize;
 
 	// Temporary, see T210926
