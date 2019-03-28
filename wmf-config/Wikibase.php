@@ -22,15 +22,12 @@ if ( !empty( $wmgUseWikibaseRepo ) ) {
 	if ( !empty( $wmgUseWikibaseCirrusSearch ) ) {
 		wfLoadExtension( 'WikibaseCirrusSearch' );
 		if ( !empty( $wmgNewWikibaseCirrusSearch ) ) {
-			$wgWBCSUseCirrus = true;
 			$wgWBRepoSettings['disableCirrus'] = true;
 		}
 	}
 	if ( !empty( $wmgUseWikibaseLexemeCirrusSearch ) ) {
 		wfLoadExtension( 'WikibaseLexemeCirrusSearch' );
 		if ( !empty( $wmgNewWikibaseLexemeCirrusSearch ) ) {
-			// Enable new code
-			$wgLexemeUseCirrus = true;
 			// Disable old Lexeme code
 			$wgLexemeDisableCirrus = true;
 		}
