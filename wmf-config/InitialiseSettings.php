@@ -9745,6 +9745,7 @@ $wgConf->settings = [
 			'centralauth-oversight' => true, // T208035
 			'centralauth-unmerge' => true, // T208035
 			'globalblock' => true, // T208035
+			'urlshortener-manage-url' => true, // T133109
 		],
 		'translationadmin' => [
 			'autopatrol' => true, // T142123

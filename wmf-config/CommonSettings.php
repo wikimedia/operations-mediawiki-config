@@ -1066,6 +1066,7 @@ if ( $wmgUseUrlShortener ) {
 		'*.wikidata.org',
 	];
 	$wgUrlShortenerReadOnly = true;
+	$wgGroupPermissions['sysop']['urlshortener-manage-url'] = false;
 }
 
 if ( $wmgPFEnableStringFunctions ) {
