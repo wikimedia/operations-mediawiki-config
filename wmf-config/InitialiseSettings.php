@@ -22835,6 +22835,7 @@ $wgConf->settings = [
 'wmgUseWikimediaEditorTasks' => [
 	'default' => false,
 	'testwikidatawiki' => true,
+	'wikidatawiki' => true,
 ],
 'wgWikimediaEditorTasksUserCountsCluster' => [
 	'default' => 'extension1',
