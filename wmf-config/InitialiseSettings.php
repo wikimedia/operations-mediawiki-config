@@ -20744,29 +20744,6 @@ $wgConf->settings = [
 
 'wmgCirrusSearchSimilarityProfile' => [
 	'default' => 'wmf_defaults',
-	// Uses the lang tag, list of spaceless languages
-	// (see https://www.mediawiki.org/wiki/User:TJones_(WMF)/Notes/Spaceless_Writing_Systems_and_Wiki-Projects)
-	"bo" => "default",
-	"dz" => "default",
-	"gan" => "default",
-	"ja" => "default",
-	"km" => "default",
-	"lo" => "default",
-	"my" => "default",
-	"th" => "default",
-	"wuu" => "default",
-	"zh-classical" => "default", // should be deprecated in favor of lzh
-	"lzh" => "default", // zh-classical
-	"zh-yue" => "default", // should be deprecated in favor of yue
-	"yue" => "default", // zh_yue
-	// This list below are languages that may use use mixed scripts
-	"bug" => "default",
-	"cdo" => "default",
-	"cr" => "default",
-	"hak" => "default",
-	"jv" => "default",
-	"zh-min-nan" => "default", // needs to support deprecated language code (e.g. zh_min_nanwikisource)
-	"nan" => "default", // e.g. zh_min_nan
 	// Currently defined in WikibaseSearchSettings.php
 	"wikidata" => "wikibase_similarity",
 	"testwikidatawiki" => "wikibase_similarity",
