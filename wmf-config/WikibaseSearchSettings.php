@@ -4,6 +4,13 @@
 
 // Cirrus usage for wbsearchentities is on
 $wgWBRepoSettings['entitySearch']['useCirrus'] = true;
+if ( !empty( $wmgNewWikibaseCirrusSearch ) ) {
+	$wgWBCSUseCirrus = true;
+}
+if ( !empty( $wmgNewWikibaseLexemeCirrusSearch ) ) {
+	// Enable new code
+	$wgLexemeUseCirrus = true;	
+}
 
 // T176903, T180169
 $wgWBRepoSettings['entitySearch']['useStemming'] = [
