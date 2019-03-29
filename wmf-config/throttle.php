@@ -34,6 +34,14 @@ $wmgThrottlingExceptions[] = [ // T213869 - Wikimedia Hackathon 2019, Prague
 	'value' => 400,
 ];
 
+$wmgThrottlingExceptions[] = [ // T219594
+	'from' => '2019-03-29T12:00 UTC',
+	'to' => '2019-03-29T17:00 UTC',
+	'IP' => '194.214.199.130',
+	'dbname' => 'frwiki',
+	'value' => 50
+];
+
 $wmgThrottlingExceptions[] = [ // T219291
 	'from' => '2019-03-30T0:00 UTC',
 	'to' => '2019-03-30T23:59 UTC',
