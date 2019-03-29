@@ -102,8 +102,11 @@ if ( $wmgUseWikibaseRepo ) {
 		// T53637 and T48953
 		$wgGroupPermissions['*']['property-create'] = ( $wgDBname === 'testwikidatawiki' );
 
-		// Load search settings only on wikidata repos for now
-		require_once "{$wmfConfigDir}/WikibaseSearchSettings.php";
+		// Load wikidata search settings
+		require_once "{$wmfConfigDir}/WikidataSearchSettings.php";
+	} elseif ( $wgDBname === 'commonswiki' || $wgDBname === 'testcommonswiki' ) {
+		// Load wikidata search settings
+		require_once "{$wmfConfigDir}/CommonsWikibaseSearchSettings.php";
 	}
 
 	// Calculate the client Db lists based on our wikiversions db lists
