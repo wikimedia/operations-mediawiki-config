@@ -12,6 +12,9 @@ if ( !empty( $wmgNewWikibaseLexemeCirrusSearch ) ) {
 	$wgLexemeUseCirrus = true;
 }
 
+// T218954
+$wgWBCSEnableDispatchingQueryBuilder = $wgDBname !== 'commonswiki';
+
 // T176903, T180169
 $wgWBRepoSettings['entitySearch']['useStemming'] = [
 	'ar' => [ 'index' => true, 'query' => true ],
