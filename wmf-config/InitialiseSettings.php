@@ -20410,6 +20410,7 @@ $wgConf->settings = [
 	'default' => [],
 	'wikidatawiki' => [ 'P31', 'P279' ], // instance of, subclass of
 	'testwikidatawiki' => [ 'P7', 'P700' ], // test only: Item and ExternalId
+	'testcommonswiki' => [ 'P180' ], // depicts
 ],
 
 'wmgWikibaseSearchIndexPropertiesExclude' => [
