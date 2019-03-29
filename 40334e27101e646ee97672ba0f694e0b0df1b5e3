@@ -16,6 +16,24 @@
       "revId": "40334e27101e646ee97672ba0f694e0b0df1b5e3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "95518087_345dfdcb",
+        "filename": "wmf-config/WikibaseSearchSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2019-03-29T18:13:51Z",
+      "side": 1,
+      "message": "\u003eI\u0027m not sure this file is loaded on commons now.\n\nThis looks to only be gated on wmgUseWikibaseRepo, which is set for commons and test-commons since they are in the wikibaserepo dblist\n\n\u003e Also, we might want to add testcommonswiki here probably?\n\nChecking with multimedia, seems probably they do want it disabled",
+      "parentUuid": "5bef2b92_8d1e715f",
+      "revId": "40334e27101e646ee97672ba0f694e0b0df1b5e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
