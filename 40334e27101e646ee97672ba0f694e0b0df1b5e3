@@ -34,6 +34,24 @@
       "revId": "40334e27101e646ee97672ba0f694e0b0df1b5e3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "86b718f7_1618a78a",
+        "filename": "wmf-config/WikibaseSearchSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2019-03-29T18:20:43Z",
+      "side": 1,
+      "message": "And i\u0027m failing to read indentation properly, WikibaseSearchSettings.php is indeed only loaded for wikidata, maybe we should rename it to WikidataSearchSettings since it includes tunings and whatnot specific to wikidata.org?\n\nWill fixup this patch.",
+      "parentUuid": "95518087_345dfdcb",
+      "revId": "40334e27101e646ee97672ba0f694e0b0df1b5e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
