@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "17e39880_fc684592",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-03-29T11:10:25Z",
+      "side": 1,
+      "message": "task description says 13:00 UTC but I guess 12:00 is fine too",
+      "revId": "25238941b46ccfa5e50fab725c1dcf0004797423",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "647f2248_cd0d89f5",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-03-29T11:10:25Z",
+      "side": 1,
+      "message": "trailing comma would be nice but not required :)",
+      "revId": "25238941b46ccfa5e50fab725c1dcf0004797423",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
