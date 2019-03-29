@@ -20507,7 +20507,7 @@ $wgConf->settings = [
 ],
 
 // List of properties to be indexed by elasticsearch
-// see WikibaseSearchSettings.php
+// see SearchSettingsForWikibase.php
 'wmgWikibaseSearchIndexProperties' => [
 	'default' => [],
 	'wikidatawiki' => [ 'P31', 'P279' ], // instance of, subclass of
@@ -20531,7 +20531,7 @@ $wgConf->settings = [
 ],
 
 // Wikidata search: configure boost based on statements (T148411)
-// see WikibaseSearchSettings.php
+// see SearchSettingsForWikibase.php
 // NOTE: these properties need to be indexed first (see wmgWikibaseSearchIndexProperties)
 'wmgWikibaseSearchStatementBoosts' => [
 	'default' => [],
