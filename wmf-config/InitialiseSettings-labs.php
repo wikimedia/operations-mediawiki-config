@@ -528,6 +528,10 @@ function wmfLabsSettings() {
 			'default' => []
 		],
 
+		'wmgWikibaseTmpSerializeEmptyListsAsObjects' => [
+			'default' => true,
+		],
+
 		'-wmgWikibaseSearchStatementBoosts' => [
 			'default' => []
 		],

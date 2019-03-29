@@ -210,6 +210,9 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['idGeneratorSeparateDbConnection'] = $wmgWikibaseRepoIdGeneratorSeparateDbConnection;
 
 	$wgWBRepoSettings['entityTypesWithoutRdfOutput'] = $wmgWikibaseEntityTypesWithoutRdfOutput;
+
+	// Temporary, T138104
+	$wgWBRepoSettings['tmpSerializeEmptyListsAsObjects'] = $wmgWikibaseTmpSerializeEmptyListsAsObjects;
 }
 
 if ( $wmgUseWikibaseClient ) {

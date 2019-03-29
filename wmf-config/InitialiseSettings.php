@@ -19401,6 +19401,10 @@ $wgConf->settings = [
 	'default' => 'wikibaseDispatchRedisLockManager',
 ],
 
+'wmgWikibaseTmpSerializeEmptyListsAsObjects' => [
+	'default' => false,
+],
+
 'wmgWikibaseDispatchInterval' => [
 	'default' => 25,
 ],
