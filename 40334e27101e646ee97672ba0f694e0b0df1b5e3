@@ -52,6 +52,24 @@
       "revId": "40334e27101e646ee97672ba0f694e0b0df1b5e3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bdcdd236_479d82fc",
+        "filename": "wmf-config/WikibaseSearchSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 2096
+      },
+      "writtenOn": "2019-03-29T19:53:12Z",
+      "side": 1,
+      "message": "I think it probably makes sense to have separate file for commons, since commons searches probably are different from wikidata ones. Also, from what I understand, now WBCS is disabled completely on commons, since without your patch it broke search. So we need to wait until the train arrives with your patch, and then we can enable WBCS on commons and enable this config too. Again, I\u0027d say probably worth putting it into a separate file so it\u0027d be clear what\u0027s going on.",
+      "parentUuid": "86b718f7_1618a78a",
+      "revId": "40334e27101e646ee97672ba0f694e0b0df1b5e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
