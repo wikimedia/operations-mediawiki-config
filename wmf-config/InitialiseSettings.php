@@ -22883,6 +22883,13 @@ $wgConf->settings = [
 	],
 ],
 
+'wgWBCSEnableDispatchingQueryBuilder' => [
+	'default' => true,
+	// T218954
+	'commonswiki' => false,
+	'testcommonswiki' => false,
+],
+
 ];
 
 ### WMF Labs override #####
