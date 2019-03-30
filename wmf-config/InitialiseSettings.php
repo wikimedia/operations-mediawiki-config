@@ -14392,6 +14392,9 @@ $wgConf->settings = [
 		'openaccess-cdn.clevelandart.org',  // Cleveland Museum of Art - T213924
 		'polona.pl',                        // Library of Poland - T215501
 		'img.raremaps.com',                 // Barry Lawrence Ruderman Antique Maps Inc. - T216638
+		'mmp.sub.uni-hamburg.de',           // T216886
+		'bruun-rasmussen.dk',               // Danish auction house Bruun Rasmussen - T219075
+		'*.bruun-rasmussen.dk',             // Danish auction house Bruun Rasmussen - T219075
 	],
 ],
 
