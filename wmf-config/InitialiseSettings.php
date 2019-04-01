@@ -10575,12 +10575,14 @@ $wgConf->settings = [
 			'abusefilter-log-private' => true, // T39679
 			'abusefilter-view-private' => true, // T174978
 			'suppressredirect' => true, // T201160
+			'unwatchedpages' => true, // T219285
 		],
 		'patroller' => [
 			'patrol' => true,
 			'autopatrol' => true,
 			'movefile' => true, // T195247
 			'suppressredirect' => true, // T201160
+			'unwatchedpages' => true, // T219285
 		],
 		'autoreviewer' => [ 'autopatrol' => true, 'movefile' => true ], // T195247
 		'flood' => [ 'bot' => true ],
