@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5728fb9c_5bc9ec0d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 21934,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2019-04-02T21:10:21Z",
+      "side": 1,
+      "message": "We conventionally omit default values and replace them with a comment (see e.g. the block above this one). In this case, damaging maybebad, damaging likelybad, goodfaith likelybad, and goodfaith verylikelybad appear to use the default values.\n\n(When I say \"we\" and \"conventionally\", what I really mean is that that\u0027s what I\u0027ve always been doing, Stephane followed my lead the ~2 times he added to this config, and nobody else has ever touched it.)",
+      "revId": "b554767cfe1fe29c0cb631d797144dfccecdb7cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
