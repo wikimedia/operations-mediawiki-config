@@ -21505,6 +21505,7 @@ $wgConf->settings = [
 	'enwiki' => true, // T140003
 	'eswiki' => true, // T130279
 	'eswikibooks' => true, // T145394
+	'eswikiquote' => true, // T219160
 	'etwiki' => true, // T159609
 	'euwiki' => true, // T198358
 	'fawiki' => true, // T130211
@@ -21542,6 +21543,7 @@ $wgConf->settings = [
 	'enwiki' => true, // T140003
 	'eswiki' => true, // T130279
 	'eswikibooks' => true, // T145394
+	'eswikiquote' => true, // T219160
 	'etwiki' => true, // T159609
 	'fawiki' => true, // T130211
 	'fiwiki' => true, // T163011
@@ -21932,6 +21934,20 @@ $wgConf->settings = [
 			'maybebad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.15' ],
 			// likelybad uses default
 			'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.9' ],
+		],
+	],
+	'eswikiquote' => [
+		'damaging' => [
+			'likelygood' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.99' ],
+			// maybebad uses default
+			// likelybad uses default
+			'verylikelybad' => [ 'min' => 'maximum recall @ precision >= 0.98', 'max' => 1 ],
+		],
+		'goodfaith' => [
+			'likelygood' => [ 'min' => 'maximum recall @ precision >= 0.98', 'max' => 1 ],
+			'maybebad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.15' ],
+			// likelybad uses default
+			// verylikelybad uses default (disabled)
 		],
 	],
 	'kowiki' => [
