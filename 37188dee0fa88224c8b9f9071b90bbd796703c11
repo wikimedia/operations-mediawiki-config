@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3eee7cd6_cc9efb4d",
+        "filename": "wmf-config/CommonsWikibaseSearchSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 2096
+      },
+      "writtenOn": "2019-04-02T23:51:56Z",
+      "side": 1,
+      "message": "We also want this:\nif ( !empty( $wmgNewWikibaseCirrusSearch ) ) {\n\t$wgWBCSUseCirrus \u003d true;\n}\nbecause we want to use the new code (which is disabled by default).",
+      "revId": "37188dee0fa88224c8b9f9071b90bbd796703c11",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d43d0333_c0303c0b",
+        "filename": "wmf-config/WikidataSearchSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 2096
+      },
+      "writtenOn": "2019-04-02T23:51:56Z",
+      "side": 1,
+      "message": "I wonder if this one should be in Commons file too. We do have labels search there, IIRC.",
+      "revId": "37188dee0fa88224c8b9f9071b90bbd796703c11",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
