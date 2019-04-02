@@ -13163,6 +13163,12 @@ $wgConf->settings = [
 	'default' => '//upload.wikimedia.org/score'
 ],
 
+'wgScoreMaxLength' => [
+	'default' => 400,
+	'wikidatawiki' => 1500,
+	'testwikidatawiki' => 1500,
+],
+
 'wmgUseProofreadPage' => [
 	'default' => false,
 	'wikisource' => true,
