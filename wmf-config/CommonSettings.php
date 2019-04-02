@@ -1194,6 +1194,7 @@ if ( $wmgUseScore ) {
 	$wgScoreSafeMode = false;
 	$wgScoreFileBackend = $wmgScoreFileBackend;
 	$wgScorePath = $wmgScorePath;
+	$wgScoreMaxLength = $wmgScoreMaxLength;
 }
 
 $wgHiddenPrefs[] = 'realname';
