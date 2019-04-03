@@ -365,6 +365,10 @@ $wgEnotifWatchlist = true;
 // setting. T142727
 $wgEnotifMinorEdits = true;
 
+$wgEchoPerUserBlacklist = true;
+
+$wgEchoMaxMentionsInEditSummary = 5;
+
 # ######################################################################
 # Anti-abuse settings
 # ######################################################################
@@ -2887,7 +2891,7 @@ if ( $wmgUseEcho ) {
 	}
 
 	// Whether to make mention failure/success notifications available
-	$wgEchoMentionStatusNotifications = $wmgEchoMentionStatusNotifications;
+	$wgEchoMentionStatusNotifications = true;
 
 	// Enable tracking table only on SULed wikis
 	if ( $wmgUseCentralAuth ) {
