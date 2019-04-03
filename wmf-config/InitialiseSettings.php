@@ -14795,10 +14795,7 @@ $wgConf->settings = [
 	'loginwiki' => false,
 	'votewiki' => false,
 ],
-'wmgUrlShortenerReadOnly' => [
-	'default' => true,
-	'mediawikiwiki' => false,
-],
+
 'wgAllowMicrodataAttributes' => [
 	'default' => false,
 	'hewikisource' => true, // T89655
