@@ -22849,6 +22849,16 @@ $wgConf->settings = [
 	'default' => 0,
 ],
 
+'wgGEHomepageTutorialTitle' => [
+	'default' => '',
+	'testwiki' => 'Help:Help',
+],
+
+'wgGEHomepageMentorsList' => [
+	'default' => '',
+	'testwiki' => 'Wikipedia:Requests/Help desk/Mentors',
+],
+
 'wgDisableRollbackConfirmationFeature' => [
 	'default' => false,
 	'dewiki' => true
