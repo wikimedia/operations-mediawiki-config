@@ -19227,10 +19227,6 @@ $wgConf->settings = [
 	'mywiki' => true,       // T196219
 ],
 
-'wmgULSEventLogging' => [
-	'default' => true,
-],
-
 'wgULSLanguageDetection' => [
 	'default' => false,
 	// see T203179
