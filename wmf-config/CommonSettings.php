@@ -349,6 +349,35 @@ $wgQueryCacheLimit = 5000;
 $wgParserCacheExpireTime = 86400 * 30;
 
 # ######################################################################
+# Account- and notifications-related settings
+# ######################################################################
+
+$wgSecureLogin = true;
+
+$wgMaxNameChars = 85;
+
+// Turn this on so UserMailer::send() will be able to send both text and html email
+$wgAllowHTMLEmail = true;
+
+$wgEnotifUserTalk = true;
+
+$wgEnotifWatchlist = true;
+
+// Keep this true; it's just whether the feature is available at all, not the default
+// setting. T142727
+$wgEnotifMinorEdits = true;
+
+# ######################################################################
+# Anti-abuse settings
+# ######################################################################
+
+$wgCookieSetOnAutoblock = true;
+
+$wgCookieSetOnIpBlock = true;
+
+$wgEnableUserEmailBlacklist = true;
+
+# ######################################################################
 # ResourceLoader settings
 # ######################################################################
 
@@ -1540,10 +1569,6 @@ if ( $wmfRealm === 'labs' ) {
 	$wgInterwikiCache = require "$wmfConfigDir/interwiki.php";
 }
 
-// Keep this true; it's just whether the feature is available at all, not the default
-// setting. T142727
-$wgEnotifMinorEdits = true;
-
 // Username spoofing / mixed-script / similarity check detection
 wfLoadExtension( 'AntiSpoof' );
 
@@ -1573,7 +1598,7 @@ if ( $wmgUseCentralAuth ) {
 		// Production cluster
 		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\./';
 		$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
-		$wgCentralAuthLoginWiki = $wmgCentralAuthLoginWiki;
+		$wgCentralAuthLoginWiki = 'loginwiki';
 		break;
 
 	case 'labs':
