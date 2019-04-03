@@ -5627,6 +5627,7 @@ $wgConf->settings = [
 			'sample' => false,
 		],
 		'WikibaseQualityConstraints' => 'debug',
+		'WikitechPhabBan' => 'debug',
 		'xenon' => 'debug',
 		'XMP' => 'warning', // T89532
 		'xff' => [ 'logstash' => false ],
