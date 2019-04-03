@@ -22193,10 +22193,6 @@ $wgConf->settings = [
 	'cswiki' => true, // T148328
 ],
 
-'wmgWatchPagesCreated' => [
-	'default' => true,
-],
-
 'wmgWatchlistNumberOfDaysShow' => [
 	'default' => 3,
 	'cswiki' => 14, // T148327

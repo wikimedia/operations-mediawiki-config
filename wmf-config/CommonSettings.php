@@ -2148,7 +2148,7 @@ if ( $wmgUseArticleCreationWorkflow ) {
 $wgDefaultUserOptions['thumbsize'] = $wmgThumbsizeIndex;
 $wgDefaultUserOptions['showhiddencats'] = $wmgShowHiddenCats;
 
-$wgDefaultUserOptions['watchcreations'] = $wmgWatchPagesCreated;
+$wgDefaultUserOptions['watchcreations'] = true;
 
 // Temporary override: WMF is not hardcore enough to enable this.
 // See T37785, T38316, T47022 about it.
