@@ -46,6 +46,30 @@
       "revId": "29056a648545414b6f5508f9356806d9529d98a3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "40aeb09f_0f9e645b",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 14798,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-04-03T15:18:40Z",
+      "side": 1,
+      "message": "Beware that page is outdated. This advice and workaround only applies when:\n\n1) … the extension uses a PHP entry file instead of extension.json.\n\n2) … Or,  the variables are dependent on other logic or only meant to be conditionally exported for some reason.\n\nIn the vast majority of cases, extensions use extension.json, and it is fine to export the config values unconditionally, which means \u0027wg…\u0027 can and should be used directly.",
+      "parentUuid": "b6fcd10e_9fcef31b",
+      "range": {
+        "startLine": 14798,
+        "startChar": 1,
+        "endLine": 14798,
+        "endChar": 3
+      },
+      "revId": "29056a648545414b6f5508f9356806d9529d98a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
