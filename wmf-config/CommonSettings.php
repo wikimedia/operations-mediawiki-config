@@ -2122,38 +2122,24 @@ if ( $wmgUseSentry ) {
 	$wgSentryLogPhpErrors = false;
 }
 
-if ( $wmgUseTemplateStyles ) {
-	wfLoadExtension( 'TemplateStyles' );
-	// allow protocol-relative URLs per T188760
-	$wgTemplateStylesAllowedUrls = [
-		'audio' => [
-			'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
-		],
-		'image' => [
-			'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
-		],
-		'svg' => [
-			'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/[^?#]*\\.svg(?:[?#]|$)>',
-		],
-		'font' => [],
-		'namespace' => [ '<.>' ],
-		'css' => [],
-	];
-}
+wfLoadExtension( 'TemplateStyles' );
+// allow protocol-relative URLs per T188760
+$wgTemplateStylesAllowedUrls = [
+	'audio' => [
+		'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
+	],
+	'image' => [
+		'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
+	],
+	'svg' => [
+		'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/[^?#]*\\.svg(?:[?#]|$)>',
+	],
+	'font' => [],
+	'namespace' => [ '<.>' ],
+	'css' => [],
+];
 
-if ( $wmgUseLoginNotify && $wmgUseEcho ) {
-	wfLoadExtension( 'LoginNotify' );
-	$wgNotifyTypeAvailabilityByCategory['login-success']['web'] = false;
-	$wgLoginNotifyAttemptsNewIP = 3;
-}
-
-if ( $wmgUseCodeMirror ) {
-	wfLoadExtension( 'CodeMirror' );
-}
-
-if ( $wmgUseTemplateWizard && $wmgUseTemplateData ) {
-	wfLoadExtension( 'TemplateWizard' );
-}
+wfLoadExtension( 'CodeMirror' );
 
 // Must be loaded BEFORE VisualEditor, or things will break
 if ( $wmgUseArticleCreationWorkflow ) {
@@ -2510,6 +2496,9 @@ if ( $wmgUseTemplateData ) { // T61702 - 2015-07-20
 	wfLoadExtension( 'TemplateData' );
 	// TemplateData GUI enabled for all wikis - 2014-11-06
 	$wgTemplateDataUseGUI = true;
+
+	// TemplateWizard enabled for all TemplateData wikis – T202545
+	wfLoadExtension( 'TemplateWizard' );
 }
 
 if ( $wmgUseGoogleNewsSitemap ) {
@@ -2871,6 +2860,11 @@ if ( $wmgEnableGeoData ) {
 }
 
 if ( $wmgUseEcho ) {
+	// LoginNotify code loaded before Notifications
+	wfLoadExtension( 'LoginNotify' );
+	$wgNotifyTypeAvailabilityByCategory['login-success']['web'] = false;
+	$wgLoginNotifyAttemptsNewIP = 3;
+
 	// This is intentionally loaded *before* the GlobalPreferences extension (below).
 	wfLoadExtension( 'Echo' );
 
@@ -3527,9 +3521,7 @@ if ( $wmgUseJosa ) {
 	wfLoadExtension( 'Josa' );
 }
 
-if ( $wmgUseParsoidBatchAPI ) {
-	wfLoadExtension( 'ParsoidBatchAPI' );
-}
+wfLoadExtension( 'ParsoidBatchAPI' );
 
 if ( $wmgUseOATHAuth ) {
 	wfLoadExtension( 'OATHAuth' );

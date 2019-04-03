@@ -290,10 +290,8 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	$wgDefaultUserOptions['compact-language-links'] = 0;
 }
 
-if ( $wmgUseLoginNotify ) {
-	$wgLoginNotifyAttemptsKnownIP = 10;
-	$wgLoginNotifyAttemptsNewIP = 1;
-}
+$wgLoginNotifyAttemptsKnownIP = 10;
+$wgLoginNotifyAttemptsNewIP = 1;
 
 if ( $wmgUseKartographer ) {
 	$wgKartographerMapServer = 'https://maps-beta.wmflabs.org';
