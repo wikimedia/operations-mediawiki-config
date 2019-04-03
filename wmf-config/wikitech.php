@@ -163,6 +163,11 @@ $wgOpenStackManagerPuppetDocBase = 'http://doc.wikimedia.org/puppet/classes/__si
 
 $wgOpenStackManagerProxyGateways = [ 'eqiad' => '208.80.155.156' ];
 
+// Dummy setting for conduit api token to be used by the BlockIpComplete hook
+// that tries to disable Phabricator accounts. Real value should be provided
+// by /etc/mediawiki/WikitechPrivateSettings.php
+$wmfPhabricatorApiToken = false;
+
 # This must be loaded AFTER OSM, to overwrite it's defaults
 # Except when we're not an OSM host and we're running like a maintenance script.
 if ( file_exists( '/etc/mediawiki/WikitechPrivateSettings.php' ) ) {
@@ -191,5 +196,65 @@ $wgHooks['BlockIpComplete'][] = function ( $block, $performer, $priorBlock ) {
 	global $wgBlockDisablesLogin;
 	if ( $wgBlockDisablesLogin && $block->getTarget() instanceof User && $block->getExpiry() === 'infinity' && $block->isSitewide() ) {
 		MediaWiki\Auth\AuthManager::singleton()->revokeAccessForUser( $block->getTarget()->getName() );
+	}
+};
+
+// Attempt to disable related accounts when a developer account is
+// permablocked.
+$wgHooks['BlockIpComplete'][] = function ( $block, $user, $prior ) use ( $wmfPhabricatorApiToken ) {
+	if ( $wmfPhabricatorApiToken
+		&& $block->getType() === /* Block::TYPE_USER */ 1
+		&& $block->getExpiry() === 'infinity'
+		&& $block->isSitewide()
+	) {
+		try {
+			// Lookup and block phab user tied to developer account
+			$phabClient = function ( $path, $query ) use ( $wmfPhabricatorApiToken ) {
+				$query['__conduit__'] = [ 'token' => $wmfPhabricatorApiToken ];
+				$post = [
+					'params' => json_encode( $query ),
+						'output' => 'json',
+					];
+				$phabUrl = 'https://phabricator.wikimedia.org';
+				$ch = curl_init( "{$phabUrl}/api/{$path}" );
+				curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+				curl_setopt( $ch, CURLOPT_POSTFIELDS, $post );
+				$ret = curl_exec( $ch );
+				curl_close( $ch );
+				if ( $ret ) {
+					$resp = json_decode( $ret, true );
+					if ( !$resp['error_code'] ) {
+						return $resp['result'];
+					}
+				}
+				wfDebugLog(
+					'BlockIpComplete',
+					"Phab {$path} error " . var_export( $ret, true )
+				);
+				return false;
+			};
+
+			$username = $block->getTarget()->getName();
+			$resp = $phabClient( 'user.ldapquery', [
+				'ldapnames' => [ $username ],
+				'offset' => 0,
+				'limit' => 1,
+			] );
+			if ( $resp ) {
+				wfDebugLog(
+					'BlockIpComplete',
+					'Response: ' . var_export( $resp, true )
+				);
+				$phid = $resp[0]['phid'];
+				$phabClient( 'user.disable', [
+					'phids' => [ $phid ],
+				] );
+			}
+		} catch ( Throwable $t ) {
+			wfDebugLog(
+				'BlockIpComplete',
+				"Unhandled error blocking Phabricator user: {$t}"
+			);
+		}
 	}
 };
