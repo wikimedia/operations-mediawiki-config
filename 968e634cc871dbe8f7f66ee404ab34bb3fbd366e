@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eb069eb_497c107a",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-04-03T16:47:59Z",
+      "side": 1,
+      "message": "I believe there’s a digit ‘1’ missing here?",
+      "range": {
+        "startLine": 31,
+        "startChar": 22,
+        "endLine": 31,
+        "endChar": 24
+      },
+      "revId": "968e634cc871dbe8f7f66ee404ab34bb3fbd366e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
