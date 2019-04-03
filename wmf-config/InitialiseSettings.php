@@ -18837,18 +18837,6 @@ $wgConf->settings = [
 	'default' => [],
 ],
 
-'wmgEchoMentionStatusNotifications' => [
-	'default' => true,
-],
-
-'wgEchoPerUserBlacklist' => [
-	'default' => true,
-],
-
-'wgEchoMaxMentionsInEditSummary' => [
-	'default' => 5,
-],
-
 // Thanks should be enabled for wikis with Echo
 'wmgUseThanks' => [
 	'default' => true,
