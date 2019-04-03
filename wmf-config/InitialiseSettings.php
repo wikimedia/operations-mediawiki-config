@@ -22852,6 +22852,9 @@ $wgConf->settings = [
 'wgGEHomepageTutorialTitle' => [
 	'default' => '',
 	'testwiki' => 'Help:Help',
+	'cswiki' => 'Wikipedie:Průvodce',
+	'kowiki' => '위키백과:빠른 길라잡이',
+	'viwiki' => 'Wikipedia:Sách_hướng_dẫn',
 ],
 
 'wgGEHomepageMentorsList' => [
