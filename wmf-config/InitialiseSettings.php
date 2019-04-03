@@ -2627,10 +2627,6 @@ $wgConf->settings = [
 ],
 # @} end of wgSitename
 
-'wgMaxNameChars' => [
-	'default' => 85,
-],
-
 'wgUploadPath' => [
 	'default' => '//upload.wikimedia.org/$site/$lang',
 	'private' => '/w/img_auth.php',
@@ -5261,15 +5257,6 @@ $wgConf->settings = [
 	'zhwikibooks' => 7 * 3600 * 24, // T185182
 	'zhwikiquote' => 7 * 86400, // T189289
 	'zhwiktionary' => 7 * 86400, // T187018
-],
-
-// Turn this on so UserMailer::send() will be able to send both text and html email
-'wgAllowHTMLEmail' => [
-	'default' => true,
-],
-
-'wgEnableUserEmailBlacklist' => [
-	'default' => true,
 ],
 
 'wgAutoConfirmCount' => [
@@ -8474,14 +8461,6 @@ $wgConf->settings = [
 	'private' => true, // T55871
 	'votewiki' => true, // T74589
 	'labswiki' => true, // T218589
-],
-
-'wgCookieSetOnAutoblock' => [
-	'default' => true,
-],
-
-'wgCookieSetOnIpBlock' => [
-	'default' => true,
 ],
 
 'wgEnablePartialBlocks' => [
@@ -12712,15 +12691,6 @@ $wgConf->settings = [
 	'default' => 2,
 ],
 
-# Cleaned up old commented wikis -- hashar 20110830
-'wgEnotifUserTalk' => [
-	'default' => true,
-],
-
-'wgEnotifWatchlist' => [
-	'default' => true,
-],
-
 // This controls whether minor edits trigger
 // an email notification by default.
 // The feature is always available ($wgEnotifMinorEdits).
@@ -13691,10 +13661,6 @@ $wgConf->settings = [
 	'+ptwikiversity' => [ 'br.wikimedia.org' => 'brwikimedia' ],
 	'+ptwikivoyage' => [ 'br.wikimedia.org' => 'brwikimedia' ],
 
-],
-
-'wmgCentralAuthLoginWiki' => [
-	'default' => 'loginwiki',
 ],
 
 // This is also guarded by $wmgUseCentralAuth
@@ -21962,10 +21928,6 @@ $wgConf->settings = [
 'wgLegacyJavaScriptGlobals' => [
 	'default' => true,
 	'group0' => false, // T35837
-],
-
-'wgSecureLogin' => [
-	'default' => true,
 ],
 
 'wgRightsPage' => [
