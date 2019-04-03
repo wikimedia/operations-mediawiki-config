@@ -18972,6 +18972,7 @@ $wgConf->settings = [
 	'wawiki' => true, // T172947
 	'wawiktionary' => true, // T172947
 	'zhwiki' => true,
+	'zhwikisource' => true, // T219588
 	'wikidatawiki' => true,
 	'specieswiki' => true, // T134898
 	'outreachwiki' => true, // T135582
