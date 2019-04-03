@@ -22091,11 +22091,6 @@ $wgConf->settings = [
 ],
 ### End (roughly) of general extensions ########################
 
-// Cache ResourceLoader modules in localStorage
-'wgResourceLoaderStorageEnabled' => [
-	'default' => true,
-],
-
 'wgAllowUserJs' => [
 	'default' => true,
 	'loginwiki' => false,
