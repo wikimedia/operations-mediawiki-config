@@ -22845,6 +22845,10 @@ $wgConf->settings = [
 	'testwiki' => true,
 ],
 
+'GEHomepageLoggingEnabled' => [
+	'default' => true,
+],
+
 'wgGEHomepageNewAccountEnablePercentage' => [
 	'default' => 0,
 ],
