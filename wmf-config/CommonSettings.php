@@ -2908,6 +2908,10 @@ if ( $wmgUseEcho ) {
 	// This is intentionally loaded *before* the GlobalPreferences extension (below).
 	wfLoadExtension( 'Echo' );
 
+	// Common settings, never varied
+	$wgEchoPerUserBlacklist = true;
+	$wgEchoMaxMentionsInEditSummary = 5;
+
 	// Eventlogging for Schema:EchoMail
 	$wgEchoEventLoggingSchemas['EchoMail']['enabled'] = true;
 	// Eventlogging for Schema:EchoInteraction
@@ -2938,7 +2942,7 @@ if ( $wmgUseEcho ) {
 	}
 
 	// Whether to make mention failure/success notifications available
-	$wgEchoMentionStatusNotifications = $wmgEchoMentionStatusNotifications;
+	$wgEchoMentionStatusNotifications = true;
 
 	// Enable tracking table only on SULed wikis
 	if ( $wmgUseCentralAuth ) {
