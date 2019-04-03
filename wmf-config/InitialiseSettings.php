@@ -12899,20 +12899,6 @@ $wgConf->settings = [
 	'enwiki' => false,
 ],
 
-# DJVU @{
-'wgDjvuDump' => [
-	'default' => '/usr/bin/djvudump',
-],
-
-'wgDjvuRenderer' => [
-	'default' => '/usr/bin/ddjvu',
-],
-
-'wgDjvuTxt' => [
-	'default' => '/usr/bin/djvutxt',
-],
-# @}
-
 'wgRestrictDisplayTitle' => [
 	'default' => true,
 
