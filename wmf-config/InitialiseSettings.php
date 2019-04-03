@@ -22092,10 +22092,6 @@ $wgConf->settings = [
 	'default' => 'P948',
 ],
 
-'wmgUseParsoidBatchAPI' => [
-	'default' => true,
-],
-
 // Varied for Labs only.
 'wmgUseCheckUser' => [
 	'default' => true,
@@ -22268,18 +22264,6 @@ $wgConf->settings = [
 	'officewiki' => true, // T176199
 ],
 
-'wmgUseLoginNotify' => [
-	'default' => true, // But disabled on wikis without Echo in CommonSettings.php
-],
-
-'wmgUseCodeMirror' => [
-	'default' => true,
-],
-
-'wmgUseTemplateWizard' => [
-	'default' => true, // T202545
-],
-
 'wmgUseArticleCreationWorkflow' => [
 	'default' => false,
 	'testwiki' => true,
@@ -22394,10 +22378,6 @@ $wgConf->settings = [
 'wmgUseCollaborationKit' => [
 	'default' => false,
 	'testwiki' => true,
-],
-
-'wmgUseTemplateStyles' => [
-	'default' => true,
 ],
 
 'wgShortPagesNamespaceBlacklist' => [
