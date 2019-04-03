@@ -582,6 +582,12 @@ $wgEnableBotPasswords = $wmgEnableBotPasswords;
 $wgBotPasswordsCluster = $wmgBotPasswordsCluster;
 $wgBotPasswordsDatabase = $wmgBotPasswordsDatabase;
 
+# ######################################################################
+# Server security settings
+# ######################################################################
+
+$wgRestrictionMethod = 'firejail';
+
 $wgUseImageMagick               = true;
 $wgImageMagickConvertCommand    = '/usr/local/bin/mediawiki-firejail-convert';
 $wgSharpenParameter = '0x0.8'; # for IM>6.5, T26857
@@ -654,6 +660,16 @@ if ( $wmgPrivateWikiUploads ) {
 		[ 'application/zip' ] );
 }
 
+# ######################################################################
+# SVG renderer settings
+# ######################################################################
+
+$wgSVGConverter = 'rsvg-secure';
+
+$wgSVGConverterPath = '/usr/bin';
+
+$wgSVGMaxSize = 4096 // 1024's a bit low?;
+
 # Hack for rsvg broken by security patch
 $wgSVGConverters['rsvg-broken'] = '$path/rsvg-convert -w $width -h $height -o $output < $input';
 if ( defined( 'HHVM_VERSION' ) ) {
@@ -663,6 +679,7 @@ if ( defined( 'HHVM_VERSION' ) ) {
 	# This converter will only work when rsvg has a suitable security patch
 	$wgSVGConverters['rsvg-secure'] = '$path/rsvg-convert --no-external-files -w $width -h $height -o $output $input';
 }
+
 # ######################################################################
 # Reverse proxy Configuration
 # ######################################################################
