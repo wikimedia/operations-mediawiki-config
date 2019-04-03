@@ -959,7 +959,7 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 		'wgGEHomepageNewAccountEnablePercentage' => [
-			'default' => 0,
+			'default' => 50,
 		],
 		'wgGEHomepageMentorsList' => [
 			'default' => '',
