@@ -22845,7 +22845,7 @@ $wgConf->settings = [
 	'testwiki' => true,
 ],
 
-'GEHomepageLoggingEnabled' => [
+'wgGEHomepageLoggingEnabled' => [
 	'default' => true,
 ],
 
