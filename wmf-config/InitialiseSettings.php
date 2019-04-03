@@ -78,10 +78,6 @@ $wgConf->settings = [
 	'donatewiki' => true,
 ],
 
-'wgCompressRevisions' => [
-	'default' => true,
-],
-
 'wgInterwikiMagic' => [
 	'default' => true,
 	'metawiki' => false,
@@ -1933,14 +1929,6 @@ $wgConf->settings = [
 	'zh_yuewiki' => '/wiki/Project:%E4%B8%8A%E8%BC%89',
 ],
 # @} end of wgUploadNavigationUrl
-
-'wgMiserMode' => [
-	'default' => true, // Slaves aren't fast enough to generate all special pages all the time.
-],
-
-'wgQueryCacheLimit' => [
-	'default' => 5000,
-],
 
 // wgScriptPath and wgArticlePath are the same for all wikis, but they have to be here
 // because some things (e.g. WikiMap) retrieve these values from $wgConf
@@ -8225,10 +8213,6 @@ $wgConf->settings = [
 	'testcommonswiki' => true,
 ],
 
-'wgExternalStores' => [
-	'default' => [ 'DB' ],
-],
-
 'wmgUseRC2UDP' => [
 	'default' => true,
 	'private' => false,
@@ -12824,11 +12808,6 @@ $wgConf->settings = [
 'wgExportFromNamespaces' => [ // T61947
 	'default' => false,
 	'mediawikiwiki' => true,
-],
-
-# ParserCache expire time set to 30 days
-'wgParserCacheExpireTime' => [
-	'default' => 86400 * 30,
 ],
 
 # Captcha ...
@@ -19466,10 +19445,6 @@ $wgConf->settings = [
 		'sms' => 'sääʹmǩiõll',      // T220118
 		'srq' => 'mbia cheë',       // T113408
 	],
-],
-
-'wgContentHandlerUseDB' => [
-	'default' => true,
 ],
 
 'wmgUseUniversalLanguageSelector' => [
