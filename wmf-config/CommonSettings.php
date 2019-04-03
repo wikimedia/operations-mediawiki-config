@@ -3186,7 +3186,7 @@ if ( $wmgUseUniversalLanguageSelector ) {
 		$wgTranslatePageTranslationULS = true;
 	}
 
-	$wgULSEventLogging = $wmgULSEventLogging;
+	$wgULSEventLogging = true;
 
 	// Compact Language Links …
 
