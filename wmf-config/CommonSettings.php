@@ -407,6 +407,9 @@ $wgExtensionAssetsPath = "{$wgResourceBasePath}/extensions";
 $wgStylePath = "{$wgResourceBasePath}/skins";
 $wgLocalStylePath = $wgStylePath;
 
+// Cache ResourceLoader modules in localStorage
+$wgResourceLoaderStorageEnabled = true;
+
 // Deprecated
 $wgIncludeLegacyJavaScript = true;
 
