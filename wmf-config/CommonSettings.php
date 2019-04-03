@@ -326,6 +326,31 @@ $wgHooks['wfShellWikiCmd'][] = 'MWMultiVersion::onWfShellMaintenanceCmd';
 
 setlocale( LC_ALL, 'en_US.UTF-8' );
 
+# ######################################################################
+# Database settings
+# ######################################################################
+
+$wgCompressRevisions = true;
+
+$wgExternalStores = [ 'DB' ];
+
+$wgContentHandlerUseDB = true;
+
+
+# ######################################################################
+# Performance settings and restrictions
+# ######################################################################
+
+$wgMiserMode = true; // Replicas aren't fast enough to generate all special pages all the time.
+
+$wgQueryCacheLimit = 5000;
+
+$wgParserCacheExpireTime = 86400 * 30; # ParserCache expire time set to 30 days
+
+# ######################################################################
+# ResourceLoader settings
+# ######################################################################
+
 unset( $wgStylePath );
 
 $wgInternalServer = $wgCanonicalServer;
