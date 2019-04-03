@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "77fee0d2_606f9918",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 14798,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-04-03T10:30:14Z",
+      "side": 1,
+      "message": "https://wikitech.wikimedia.org/wiki/Configuration_files claims that $wg… variables for extensions don’t work (they’re overwritten when extension registration runs); instead, this should define wmgUrlShortenerReadOnly and then the block in CommonSettings.php should assign $wgUrlShortenerReadOnly \u003d $wmgUrlShortenerReadOnly.",
+      "range": {
+        "startLine": 14798,
+        "startChar": 1,
+        "endLine": 14798,
+        "endChar": 3
+      },
+      "revId": "29056a648545414b6f5508f9356806d9529d98a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
