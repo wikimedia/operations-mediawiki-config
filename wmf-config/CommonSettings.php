@@ -380,6 +380,12 @@ $wgCookieSetOnIpBlock = true;
 $wgEnableUserEmailBlacklist = true;
 
 # ######################################################################
+# Legal matters
+# ######################################################################
+
+$wgRightsIcon = '//creativecommons.org/images/public/somerights20.png';
+
+# ######################################################################
 # ResourceLoader settings
 # ######################################################################
 

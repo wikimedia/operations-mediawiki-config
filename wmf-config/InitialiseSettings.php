@@ -21899,9 +21899,6 @@ $wgConf->settings = [
 		'the Creative Commons CC0 License; text in the other namespaces is available under ' .
 		'the Creative Commons Attribution-ShareAlike License; additional terms may apply.',
 ],
-'wgRightsIcon' => [
-	'default' => '//creativecommons.org/images/public/somerights20.png',
-],
 'wgSessionCacheType' => [
 	'default' => 'redis_local',  // declared in redis.php
 	'wikitech' => 'memcached-pecl',
