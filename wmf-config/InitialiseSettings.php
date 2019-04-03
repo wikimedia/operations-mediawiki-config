@@ -12632,23 +12632,6 @@ $wgConf->settings = [
 	'zhwikisource' => 108, // Transwiki
 ],
 
-# SVG related @{
-'wgSVGConverter' => [
-	'default' => 'rsvg-secure',
-],
-'wgSVGConverterPath' => [
-	'default' => '/usr/bin',
-],
-'wgSVGMaxSize' => [
-	'default' => 4096, // 1024's a bit low?
-],
-
-# @} end of SVG related
-
-'wgRestrictionMethod' => [
-	'default' => 'firejail',
-],
-
 'wgFeedCacheTimeout' => [
 	'default' => 60,
 	'enwiki' => 15,
