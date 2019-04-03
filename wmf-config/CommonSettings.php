@@ -1052,6 +1052,7 @@ if ( $wmgUseUrlShortener ) {
 		'(.*\.)?wikivoyage\.org',
 		'(.*\.)?wikimedia\.org',
 		'(.*\.)?wikidata\.org',
+		'(.*\.)?mediawiki\.org',
 	];
 	$wgUrlShortenerApprovedDomains = [
 		'*.wikipedia.org',
@@ -1064,6 +1065,7 @@ if ( $wmgUseUrlShortener ) {
 		'*.wikivoyage.org',
 		'*.wikimedia.org',
 		'*.wikidata.org',
+		'*.mediawiki.org',
 	];
 	$wgUrlShortenerReadOnly = true;
 	$wgGroupPermissions['sysop']['urlshortener-manage-url'] = false;
