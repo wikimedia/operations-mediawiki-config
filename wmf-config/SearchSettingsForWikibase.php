@@ -1,9 +1,7 @@
 <?php
 
 // Configure CirrusSearch settings for wikibase
-
 // Cirrus usage for wbsearchentities is on
-$wgWBRepoSettings['entitySearch']['useCirrus'] = true;
 if ( !empty( $wmgNewWikibaseCirrusSearch ) ) {
 	$wgWBCSUseCirrus = true;
 }
@@ -13,7 +11,7 @@ if ( !empty( $wmgNewWikibaseLexemeCirrusSearch ) ) {
 }
 
 // T176903, T180169
-$wgWBRepoSettings['entitySearch']['useStemming'] = [
+$wgWBCSUseStemming = [
 	'ar' => [ 'index' => true, 'query' => true ],
 	'bg' => [ 'index' => true, 'query' => true ],
 	'ca' => [ 'index' => true, 'query' => true ],
@@ -58,10 +56,11 @@ $wgWBRepoSettings['entitySearch']['useStemming'] = [
 	'zh' => [ 'index' => true, 'query' => true ],
 ];
 
+// Statement boosting
+$wgWBCSStatementBoost = $wmgWikibaseSearchStatementBoosts;
+
 // Properties to index
 $wgWBRepoSettings['searchIndexProperties'] = $wmgWikibaseSearchIndexProperties;
-// Statement boosting
-$wgWBRepoSettings['entitySearch']['statementBoost'] = $wmgWikibaseSearchStatementBoosts;
 // T163642, T99899
 $wgWBRepoSettings['searchIndexTypes'] = [
 	'string', 'external-id', 'wikibase-item', 'wikibase-property',
@@ -104,6 +103,7 @@ $wgCirrusSearchSimilarityProfiles['wikibase_similarity'] = [
 	]
 ];
 
+// Load site-specific configs
 if ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) {
 	// Load wikidata specific search config
 	require_once "{$wmfConfigDir}/SearchSettingsForWikidata.php";
