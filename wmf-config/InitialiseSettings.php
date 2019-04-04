@@ -10358,6 +10358,21 @@ $wgConf->settings = [
 	'thwiki' => [
 		'autoconfirmed' => [
 			'patrol' => true, // T48154
+			'upload' => false, // T216615
+			'reupload' => false, // T216615
+		],
+		'uploader' => [ // T216615
+			'upload' => true,
+			'reupload' => true,
+			'reupload-shared' => true,
+			'reupload-own' => true,
+			'movefile' => true,
+		],
+		'user' => [
+			'reupload-own' => false, // T216615
+		],
+		'sysop' => [
+			'reupload-own' => true,
 		],
 	],
 	'trwiki' => [
@@ -11394,6 +11409,9 @@ $wgConf->settings = [
 		'sysop' => [ 'patroller', 'massmessage-sender' ], // bureaucrat -> sysop, T40690, T147740
 		'bureaucrat' => [ 'interface-editor' ], // T41690
 	],
+	'+thwiki' => [
+		'sysop' => [ 'uploader' ], // T216615
+	],
 	'+ukwiki' => [
 		'sysop' => [ 'patroller', 'rollbacker', 'accountcreator', 'filemover' ], // T104034, T119636
 	],
@@ -12192,6 +12210,9 @@ $wgConf->settings = [
 	'+trwiki' => [
 		'sysop' => [ 'patroller', 'massmessage-sender' ], // bureaucrat -> sysop, T40690, T147740
 		'bureaucrat' => [ 'interface-editor' ], // T41690
+	],
+	'+thwiki' => [
+		'sysop' => [ 'uploader' ], // T216615
 	],
 	'+ukwiki' => [
 		'sysop' => [ 'patroller', 'rollbacker', 'accountcreator', 'filemover' ], // T104034, T119636
