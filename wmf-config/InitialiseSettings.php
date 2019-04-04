@@ -20820,6 +20820,8 @@ $wgConf->settings = [
 	// Currently defined in WikibaseSearchSettings.php
 	"wikidata" => "wikibase_similarity",
 	"testwikidatawiki" => "wikibase_similarity",
+	"commonswiki" => "wikibase_similarity",
+	"testwikidatawiki" => "wikibase_similarity",
 ],
 
 'wmgCirrusSearchRescoreProfile' => [
