@@ -22,6 +22,30 @@
       "revId": "ee27da413b6722fe7c9390614b07082d01ccd0fd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "06a48232_b7cb3914",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2019-04-04T15:00:35Z",
+      "side": 1,
+      "message": "The `use` capture does seem to be done at compile time based on this test script I tried at 3v4l: \u003chhttps://3v4l.org/bvh2H\u003e.\n\nThat should be fine however as the \"real\" value will be loaded on line 174 above so it should be in the environment by the time the PHP parser actually evaluates this code block.\n\nIf it is somehow found to be problematic the fix would be to pull the token in via a `global $wmfPhabricatorApiToken` statement rather than the `use` binding.",
+      "parentUuid": "456cfb22_ed1a7092",
+      "range": {
+        "startLine": 204,
+        "startChar": 67,
+        "endLine": 204,
+        "endChar": 98
+      },
+      "revId": "ee27da413b6722fe7c9390614b07082d01ccd0fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
