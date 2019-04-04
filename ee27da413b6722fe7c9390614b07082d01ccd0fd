@@ -96,6 +96,30 @@
     },
     {
       "key": {
+        "uuid": "64886658_7f6a25d5",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2019-04-04T16:14:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ce4bb459_fc9b422f",
+      "range": {
+        "startLine": 205,
+        "startChar": 1,
+        "endLine": 209,
+        "endChar": 4
+      },
+      "revId": "ee27da413b6722fe7c9390614b07082d01ccd0fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2053be03_ce0f065c",
         "filename": "wmf-config/wikitech.php",
         "patchSetId": 4
@@ -107,6 +131,30 @@
       "writtenOn": "2019-04-04T16:00:53Z",
       "side": 1,
       "message": "Might be better for Logstash to name this after the caller rather than the hook. E.g. \"WikitechConfig\" or something like that.",
+      "range": {
+        "startLine": 231,
+        "startChar": 5,
+        "endLine": 231,
+        "endChar": 22
+      },
+      "revId": "ee27da413b6722fe7c9390614b07082d01ccd0fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8595fff6_b2f60091",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2019-04-04T16:14:40Z",
+      "side": 1,
+      "message": "Done. I added basic logging config for the channel too.",
+      "parentUuid": "2053be03_ce0f065c",
       "range": {
         "startLine": 231,
         "startChar": 5,
