@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "456cfb22_ed1a7092",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2019-04-04T14:47:03Z",
+      "side": 1,
+      "message": "Will this work as expected?\n\nIs the value passed at the time the anon function is constructed/assigned, or pulled in magically later?\n\nBecause at this point, it\u0027s going to be the dummy value above, surely?",
+      "range": {
+        "startLine": 204,
+        "startChar": 67,
+        "endLine": 204,
+        "endChar": 98
+      },
+      "revId": "ee27da413b6722fe7c9390614b07082d01ccd0fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
