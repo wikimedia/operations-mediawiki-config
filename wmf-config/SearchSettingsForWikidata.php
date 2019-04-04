@@ -3,17 +3,17 @@
 // Configure CirrusSearch settings for wikidata
 
 // Prefix search query
-$wgWBRepoSettings['entitySearch']['defaultPrefixProfile'] = 'wikibase_config_prefix_query';
+$wWBCSPrefixSearchProfile = 'wikibase_config_prefix_query';
 // Prefix search rescore
-$wgWBRepoSettings['entitySearch']['defaultPrefixRescoreProfile'] = 'wikibase_config_entity_weight';
+$wgWBCSDefaultPrefixRescoreProfile = 'wikibase_config_entity_weight';
 
 // Fulltext search query
-$wgWBRepoSettings['entitySearch']['fulltextSearchProfile'] = 'wikibase_config_fulltext_query';
+$wgWBCSFulltextSearchProfile = 'wikibase_config_fulltext_query';
 // Fulltext search rescore
-$wgWBRepoSettings['entitySearch']['defaultFulltextRescoreProfile'] = 'wikibase_config_phrase';
+$wgWBCSDefaultFulltextRescoreProfile = 'wikibase_config_phrase';
 
 // Fine tuning of the completion search (main elastic query)
-$wgWBRepoSettings['entitySearch']['prefixSearchProfiles'] = [
+$wgWBCSPrefixSearchProfiles = [
 	'wikibase_config_prefix_query' => [
 		'any' => 0.001,
 		'lang-exact' => 2,
@@ -75,7 +75,7 @@ if ( !empty( $wmgUseWikibaseCirrusSearch ) && !empty( $wmgNewWikibaseCirrusSearc
 }
 
 // Fine tuning of the fulltext search (main elastic query)
-$wgWBRepoSettings['entitySearch']['fulltextSearchProfiles'] = [
+$wgWBCSFulltextSearchProfiles = [
 	'wikibase_config_fulltext_query' => [
 		'builder_class' => $wmgBuilderClass,
 		'settings' => [
@@ -97,7 +97,7 @@ $wgWBRepoSettings['entitySearch']['fulltextSearchProfiles'] = [
 ];
 
 // Cirrus rescore settings
-$wgWBRepoSettings['entitySearch']['rescoreProfiles'] = [
+$wgWBCSRescoreProfiles = [
 	'wikibase_config_entity_weight' => [
 		'i18n_msg' => 'wikibase-rescore-profile-prefix',
 		'supported_namespaces' => 'all',
@@ -244,7 +244,7 @@ $wgWBRepoSettings['entitySearch']['rescoreProfiles'] = [
 ];
 
 // Cirrus rescore function chains
-$wgWBRepoSettings['entitySearch']['rescoreFunctionChains'] = [
+$wgWBCSRescoreFunctionChains = [
 	'wikibase_config_entity_weight' => [
 		'score_mode' => 'sum',
 		'functions' => [
