@@ -46,6 +46,53 @@
       "revId": "ee27da413b6722fe7c9390614b07082d01ccd0fd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ea174f3_785db872",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2019-04-04T15:24:29Z",
+      "side": 1,
+      "message": "Oh. Duh. I was looking for where that was and completely managed to miss it, even though it\u0027s the next block of code",
+      "parentUuid": "06a48232_b7cb3914",
+      "range": {
+        "startLine": 204,
+        "startChar": 67,
+        "endLine": 204,
+        "endChar": 98
+      },
+      "revId": "ee27da413b6722fe7c9390614b07082d01ccd0fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce4bb459_fc9b422f",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2019-04-04T15:24:29Z",
+      "side": 1,
+      "message": "Any chance we can invert this and return early just to save some indenting?\n\n\tif ( !$wmfPhabricatorApiToken\n\t\t|| $block-\u003egetType() !\u003d\u003d 1\n\t\t|| $block-\u003egetExpiry() !\u003d\u003d \u0027infinity\u0027\n\t\t|| !$block-\u003eisSitewide()\n\t) {\n\t\treturn;\n\t}",
+      "range": {
+        "startLine": 205,
+        "startChar": 1,
+        "endLine": 209,
+        "endChar": 4
+      },
+      "revId": "ee27da413b6722fe7c9390614b07082d01ccd0fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
