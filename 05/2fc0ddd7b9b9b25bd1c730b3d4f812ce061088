@@ -1,0 +1,8 @@
+Verified+2: jenkins-bot
+Code-Review+2: Ladsgroup <Ladsgroup@gmail.com>
+Code-Review+1: Lucas Werkmeister (WMDE) <lucas.werkmeister@wikimedia.de>
+Submitted-by: jenkins-bot
+Submitted-at: Thu, 04 Apr 2019 11:29:30 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/500976
+Project: operations/mediawiki-config
+Branch: refs/heads/master
