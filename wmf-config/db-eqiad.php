@@ -131,8 +131,8 @@ $wgLBFactoryConf = [
 		'db1105:3312' => 100, # C3 3.6TB 512GB # rc, log: s1 and s2
 	],
 	/* s3 */ 'DEFAULT' => [
-		'db1078' => 0,      # C3 3.6TB 512GB, master
-		# 'db1075' => 500,    # A2 3.6TB 512GB, old master # preparing before failover
+		'db1075' => 0,    # A2 3.6TB 512GB, master
+		# 'db1078' => 500,      # C3 3.6TB 512GB, candidate master bad BBU T219115
 		'db1077' => 400,    # B1 3.6TB 512GB, rc, log # master for sanitarium db1124
 		'db1123' => 100,    # D8 3.6TB 512GB, vslow, dump
 	],
