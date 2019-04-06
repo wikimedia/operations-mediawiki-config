@@ -22423,6 +22423,7 @@ $wgConf->settings = [
 
 'wmgWatchlistDefault' => [
 	'default' => false,
+	'arwiki' => true, // T220186
 	'cswiki' => true, // T148328
 ],
 
@@ -22433,6 +22434,7 @@ $wgConf->settings = [
 
 'wmgEnhancedRecentChanges' => [
 	'default' => false,
+	'arwiki' => true, // T220186
 ],
 
 'wmgEnhancedWatchlist' => [
@@ -23013,7 +23015,22 @@ $wgConf->settings = [
 'wgSpecialSearchFormOptions' => [
 	'testwikidatawiki' => [ 'showDescriptions' => true ],
 ],
-
+'wmgForceEditSummary' => [
+	'default' => false,
+	'arwiki' => true, // T220186
+],
+'wmgShowWikidataInWatchlist' => [
+	'default' => false,
+	'arwiki' => true, // T220186
+],
+'wmgWatchMoves' => [
+	'default' => false,
+	'arwiki' => true, // T220186
+],
+'wmgWatchRollback' => [
+	'default' => false,
+	'arwiki' => true, // T220186
+]
 ];
 
 ### WMF Labs override #####
