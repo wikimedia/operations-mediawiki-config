@@ -2203,6 +2203,18 @@ if ( $wmgWatchlistDefault ) {
 	$wgDefaultUserOptions['watchdefault'] = 0;
 }
 
+if ( $wmgWatchMoves ) {
+	$wgDefaultUserOptions['watchmoves'] = 1;
+} else {
+	$wgDefaultUserOptions['watchmoves'] = 0;
+}
+
+if ( $wmgWatchRollback ) {
+	$wgDefaultUserOptions['watchrollback'] = 1;
+} else {
+	$wgDefaultUserOptions['watchrollback'] = 0;
+}
+
 $wgDefaultUserOptions['enotifminoredits'] = $wmgEnotifMinorEditsUserDefault;
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
 
@@ -2218,6 +2230,17 @@ if ( $wmgEnhancedWatchlist ) {
 	$wgDefaultUserOptions['extendwatchlist'] = 0;
 }
 
+if ( $wmgForceEditSummary ) {
+	$wgDefaultUserOptions['forceeditsummary'] = 1;
+} else {
+	$wgDefaultUserOptions['forceeditsummary'] = 0;
+}
+
+if ( $wmgShowWikidataInWatchlist ) {
+	$wgDefaultUserOptions['wlshowwikibase'] = 1;
+} else {
+	$wgDefaultUserOptions['wlshowwikibase'] = 0;
+}
 // ContributionTracking for handling PayPal redirects
 if ( $wgUseContributionTracking ) {
 	wfLoadExtension( 'ContributionTracking' );

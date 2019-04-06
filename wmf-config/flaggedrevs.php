@@ -102,6 +102,10 @@ if ( $wgDBname == 'alswiki' ) {
 } elseif ( $wgDBname == 'arwiki' ) {
 	$wgFlaggedRevsWhitelist = [ 'الصفحة_الرئيسية' ];
 	$wgFlaggedRevsNamespaces[] = 100; // T21332 and T217507
+
+	// Change default user options
+	$wgDefaultUserOptions['flaggedrevswatch'] = 1; // T220186
+	$wgDefaultUserOptions['flaggedrevsviewdiffs'] = 1; // T220186
 } elseif ( $wgDBname == 'bewiki' ) {
 	$wgFlaggedRevsOverride = false;
 	$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
