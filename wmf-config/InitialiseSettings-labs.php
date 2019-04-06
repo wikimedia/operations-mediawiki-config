@@ -1372,5 +1372,11 @@ function wmfLabsSettings() {
 			'default' => false,
 			'wikidatawiki' => true,
 		],
+		'wgWikimediaEditorTasksUserCountsCluster' => [
+			'default' => false,
+		],
+		'wgWikimediaEditorTasksUserCountsDatabase' => [
+			'default' => 'wikidatawiki',
+		],
 	];
 } # wmflLabsSettings()
