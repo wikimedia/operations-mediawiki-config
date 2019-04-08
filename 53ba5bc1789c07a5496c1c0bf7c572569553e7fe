@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6488b7bc_60f8cf88",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2019-04-08T11:11:38Z",
+      "side": 1,
+      "message": "Check alignment, may be disaligned?",
+      "range": {
+        "startLine": 134,
+        "startChar": 20,
+        "endLine": 135,
+        "endChar": 24
+      },
+      "revId": "53ba5bc1789c07a5496c1c0bf7c572569553e7fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
