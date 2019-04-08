@@ -498,7 +498,7 @@ function wmfLabsSettings() {
 			'default' => 'https://c357be0613e24340a96aeaa28dde08ad@sentry-beta.wmflabs.org/4',
 		],
 
-		'-wmgScorePath' => [
+		'-wgScorePath' => [
 			'default' => "//upload.beta.wmflabs.org/score",
 		],
 
