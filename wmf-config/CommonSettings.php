@@ -1195,8 +1195,6 @@ if ( $wmgUsePoolCounter ) {
 if ( $wmgUseScore ) {
 	wfLoadExtension( 'Score' );
 	$wgScoreSafeMode = false;
-	$wgScoreFileBackend = $wmgScoreFileBackend;
-	$wgScorePath = $wmgScorePath;
 }
 
 $wgHiddenPrefs[] = 'realname';
