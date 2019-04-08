@@ -70,6 +70,30 @@
       "revId": "80fd33b82ce63febdab576206cebe359cba2df79",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5359074f_74706ab7",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 13205,
+      "author": {
+        "id": 920
+      },
+      "writtenOn": "2019-04-08T18:34:16Z",
+      "side": 1,
+      "message": "From IS-labs.php\n# Effective load order:\n# - multiversion\n# - mediawiki/DefaultSettings.php\n# - wmf-config/*Services.php\n# - wmf-config/InitialiseSettings.php\n# - wmf-config/InitialiseSettings-labs.php [THIS FILE]\n# - wmf-config/CommonSettings.php\n# - wmf-config/CommonSettings-labs.php\n\nSo having it in CommonSettings-labs.php should be enough I guess",
+      "parentUuid": "054f4bb3_5751d7ca",
+      "range": {
+        "startLine": 13197,
+        "startChar": 0,
+        "endLine": 13205,
+        "endChar": 0
+      },
+      "revId": "80fd33b82ce63febdab576206cebe359cba2df79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
