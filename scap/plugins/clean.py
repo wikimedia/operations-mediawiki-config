@@ -31,6 +31,8 @@ class Clean(main.AbstractSync):
     @cli.argument('branch', help='The name of the branch to clean.')
     @cli.argument('--delete', action='store_true',
                   help='Delete everything (not just static assets).')
+    @cli.argument('--delete-gerrit-branch', action='store_true',
+                  help='Delete the branch on gerrit as well.')
     def main(self, *extra_args):
         """Clean old branches from the cluster for space savings."""
         self.arguments.message = 'Pruned MediaWiki: %s' % self.arguments.branch
@@ -87,16 +89,20 @@ class Clean(main.AbstractSync):
         logger = self.get_logger()
 
         if delete:
-            git_prune_cmd = ['git', 'push', 'origin', '--quiet', '--delete',
-                             'wmf/%s' % branch]
-            with log.Timer('prune-git-branches', self.get_stats()):
-                # Prune all the submodules' remote branches
-                with utils.cd(self.branch_stage_dir):
-                    submodule_cmd = 'git submodule foreach "{} ||:"'.format(
-                        ' '.join(git_prune_cmd))
-                    subprocess.check_output(submodule_cmd, shell=True)
-                    if subprocess.call(git_prune_cmd) != 0:
-                        logger.info('Failed to prune core branch')
+            # Moved behind a feature flag until T218750 is resolved
+            if self.arguments.delete_gerrit_branch:
+                git_prune_cmd = [
+                    'git', 'push', 'origin', '--quiet', '--delete',
+                    'wmf/%s' % branch
+                ]
+                with log.Timer('prune-git-branches', self.get_stats()):
+                    # Prune all the submodules' remote branches
+                    with utils.cd(self.branch_stage_dir):
+                        submodule_cmd = 'git submodule foreach "{} ||:"'.format(
+                            ' '.join(git_prune_cmd))
+                        subprocess.check_output(submodule_cmd, shell=True)
+                        if subprocess.call(git_prune_cmd) != 0:
+                            logger.info('Failed to prune core branch')
             with log.Timer('removing-local-copy'):
                 self._maybe_delete(self.branch_stage_dir)
             with log.Timer('cleaning-unused-patches', self.get_stats()):
