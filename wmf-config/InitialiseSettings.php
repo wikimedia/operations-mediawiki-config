@@ -13195,11 +13195,11 @@ $wgConf->settings = [
 	'votewiki' => false,
 ],
 
-'wmgScoreFileBackend' => [
+'wgScoreFileBackend' => [
 	'default' => 'global-multiwrite'
 ],
 
-'wmgScorePath' => [
+'wgScorePath' => [
 	'default' => '//upload.wikimedia.org/score'
 ],
 
