@@ -1,0 +1,10 @@
+Verified+2: jenkins-bot
+Code-Review+2: Hoo man <hoo@online.de>
+Code-Review+1: Addshore <addshorewiki@gmail.com>
+Code-Review+1: Lucas Werkmeister (WMDE) <lucas.werkmeister@wikimedia.de>
+Code-Review+1: Alaa Sarhan <alaa.sarhan@wikimedia.de>
+Submitted-by: jenkins-bot
+Submitted-at: Mon, 08 Apr 2019 11:51:19 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/501335
+Project: operations/mediawiki-config
+Branch: refs/heads/master
