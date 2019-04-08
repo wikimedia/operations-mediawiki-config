@@ -958,6 +958,9 @@ function wmfLabsSettings() {
 		'wgGEHomepageEnabled' => [
 			'default' => true,
 		],
+		'wgGEHomepageLoggingEnabled' => [
+			'default' => true,
+		],
 		'wgGEHomepageNewAccountEnablePercentage' => [
 			'default' => 50,
 		],
