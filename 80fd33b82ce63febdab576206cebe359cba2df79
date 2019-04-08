@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3f585920_58c7678e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 13205,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2019-04-08T17:22:35Z",
+      "side": 1,
+      "message": "Are these values ever going to vary per-wiki? If not, you can just move them directly to CommonSettings.php to reduce overhead even more.",
+      "range": {
+        "startLine": 13197,
+        "startChar": 0,
+        "endLine": 13205,
+        "endChar": 0
+      },
+      "revId": "80fd33b82ce63febdab576206cebe359cba2df79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
