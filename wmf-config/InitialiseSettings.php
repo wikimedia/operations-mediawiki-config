@@ -12308,6 +12308,7 @@ function wmfGetVariantSettings() {
 	// otherwise they would be overwritten by the specific wiki entry
 	'wikisource' => [ 'meta', 'commons' ],
 	'wikiversity' => [ 'meta', 'b', 'incubator' ],
+	'wikidata' => [ 'meta', 'commons', 'en', 'de', 'fr', 'es' ],
 
 	// Specific wikis
 
@@ -12615,8 +12616,6 @@ function wmfGetVariantSettings() {
 	'viwikibooks' => [ 'en', 'w', 'wikt', 's', 'q', 'fr', 'it' ], // T9854, T39457
 	'viwikisource' => [ 'w', 'wikt', 'b', 'q' ], // T9854
 	'viwikiquote' => [ 'w', 'wikt', 'b', 's' ], // T9854
-	'wikidata' => [ 'meta', 'commons', 'en', 'de', 'fr', 'es' ],
-	'testwikidatawiki' => [ 'meta', 'commons', 'en', 'de', 'fr', 'es' ],
 	'wikimaniawiki' => [ 'en' , 'meta', 'wm2011', 'wm2012', 'wm2013', 'wm2014', 'wm2015', 'wm2016', 'wm2017', 'wm2018' ],
 	'wuuwiki' => [ 'en', 'th', 'fr', 'zh', ], // T19484
 	'xhwiki' => [ 'en' ], // T53327
