@@ -559,7 +559,16 @@ function wmfLabsSettings() {
 			]
 		],
 		'wgDepictsQualifierProperties' => [
-			'commonswiki' => [],
+			'commonswiki' => [
+				'features' => 'P100',
+				'colour' => 'P101',
+				'wears' => 'P102',
+				'appliesToPart' => 'P103',
+				'quantity' => 'P104',
+				'eyeColour' => 'P105',
+				'shape' => 'P106',
+				'relativePosition' => 'P2677',
+			],
 		],
 
 		'wgMediaInfoExternalEntitySearchBaseUri' => [
