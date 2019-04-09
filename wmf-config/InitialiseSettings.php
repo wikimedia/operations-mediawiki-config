@@ -12441,6 +12441,7 @@ $wgConf->settings = [
 	// otherwise they would be overwritten by the specific wiki entry
 	'wikisource' => [ 'meta', 'commons' ],
 	'wikiversity' => [ 'meta', 'b', 'incubator' ],
+	'wikidata' => [ 'meta', 'commons', 'en', 'de', 'fr', 'es' ],
 
 	// Specific wikis
 
@@ -12742,8 +12743,6 @@ $wgConf->settings = [
 	'viwikibooks' => [ 'en', 'w', 'wikt', 's', 'q', 'fr', 'it' ], // T9854, T39457
 	'viwikisource' => [ 'w', 'wikt', 'b', 'q' ], // T9854
 	'viwikiquote' => [ 'w', 'wikt', 'b', 's' ], // T9854
-	'wikidata' => [ 'meta', 'commons', 'en', 'de', 'fr', 'es' ],
-	'testwikidatawiki' => [ 'meta', 'commons', 'en', 'de', 'fr', 'es' ],
 	'wikimania2012wiki' => [ 'en', 'meta', 'wm2011' ],
 	'wikimania2013wiki' => [ 'en', 'meta', 'wm2011', 'wm2012' ],
 	'wikimania2014wiki' => [ 'en', 'meta', 'wm2011', 'wm2012', 'wm2013' ],
