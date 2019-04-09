@@ -13447,6 +13447,14 @@ $wgConf->settings = [
 ],
 # @} end of wgNamespaceProtection
 
+# Default to Preprocessor_Hash (T219901)
+'wgParserConf' => [
+	'default' => [
+		'class' => Parser::class,
+		'preprocessorClass' => Preprocessor_Hash::class,
+	],
+],
+
 # Enable magic links regardless of core default (T145604)
 'wgEnableMagicLinks' => [
 	'default' => [
