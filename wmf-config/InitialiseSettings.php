@@ -19554,7 +19554,7 @@ $wgConf->settings = [
 
 'wmgWBRepoCanonicalUriProperty' => [
 	'default' => null,
-	'wikidata' => 'P1921',
+	'wikidatawiki' => 'P1921',
 ],
 
 'wmgWBRepoSettingsSparqlEndpoint' => [
