@@ -55,6 +55,72 @@ $common = [
 	'cxserver' => 'http://cxserver.discovery.wmnet:8080',
 	'electron' => 'http://pdfrender.discovery.wmnet:5252',
 	'restbase' => 'http://restbase.discovery.wmnet:7231',
+	'search-cloudelastic-chi' => [
+		[
+			'host' => 'cloudelastic1001.wikimedia.org',
+			'transport' => 'Https',
+			'port' => 9243,
+		],
+		[
+			'host' => 'cloudelastic1002.wikimedia.org',
+			'transport' => 'Https',
+			'port' => 9243,
+		],
+		[
+			'host' => 'cloudelastic1003.wikimedia.org',
+			'transport' => 'Https',
+			'port' => 9243,
+		],
+		[
+			'host' => 'cloudelastic1004.wikimedia.org',
+			'transport' => 'Https',
+			'port' => 9243,
+		],
+	],
+	'search-cloudelastic-omega' => [
+		[
+			'host' => 'cloudelastic1001.wikimedia.org',
+			'transport' => 'Https',
+			'port' => 9443,
+		],
+		[
+			'host' => 'cloudelastic1002.wikimedia.org',
+			'transport' => 'Https',
+			'port' => 9443,
+		],
+		[
+			'host' => 'cloudelastic1003.wikimedia.org',
+			'transport' => 'Https',
+			'port' => 9443,
+		],
+		[
+			'host' => 'cloudelastic1004.wikimedia.org',
+			'transport' => 'Https',
+			'port' => 9443,
+		],
+	],
+	'search-cloudelastic-psi' => [
+		[
+			'host' => 'cloudelastic1001.wikimedia.org',
+			'transport' => 'Https',
+			'port' => 9643,
+		],
+		[
+			'host' => 'cloudelastic1002.wikimedia.org',
+			'transport' => 'Https',
+			'port' => 9643,
+		],
+		[
+			'host' => 'cloudelastic1003.wikimedia.org',
+			'transport' => 'Https',
+			'port' => 9643,
+		],
+		[
+			'host' => 'cloudelastic1004.wikimedia.org',
+			'transport' => 'Https',
+			'port' => 9643,
+		],
+	],
 ];
 
 // Search will be directed to a local proxy from php7, while HHVM will

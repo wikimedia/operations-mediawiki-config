@@ -4,6 +4,11 @@
  */
 
 class WmfConfigServicesTest extends PHPUnit\Framework\TestCase {
+	static $IGNORED_SERVICES = [
+		'search-cloudelastic-chi',
+		'search-cloudelastic-omega',
+		'search-cloudelastic-psi',
+	];
 
 	public static function provideServicesFiles() {
 		$wmfConfigDir = dirname( __DIR__ ) . '/wmf-config';
@@ -118,8 +123,8 @@ class WmfConfigServicesTest extends PHPUnit\Framework\TestCase {
 
 	protected function assertSameValues( array $expected, array $actual, $message ) {
 		// Normalize
-		sort( $expected );
-		sort( $actual );
+		sort( array_filter( $expected, self::$IGNORED_SERVICES ) );
+		sort( array_filter( $actual, self::$IGNORED_SERVICES ) );
 
 		// Compare as new-line delimited string so that failure diff is useful.
 		//
