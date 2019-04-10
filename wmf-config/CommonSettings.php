@@ -1067,7 +1067,6 @@ if ( $wmgUseUrlShortener ) {
 		'*.wikidata.org',
 		'*.mediawiki.org',
 	];
-	$wgUrlShortenerReadOnly = true;
 	$wgUrlShortenerEnableSidebar = false;
 	$wgGroupPermissions['sysop']['urlshortener-manage-url'] = false;
 
