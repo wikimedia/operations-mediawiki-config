@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4264eb45_ced9e46b",
+        "filename": "tests/WmfConfigServicesTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2019-04-10T18:03:27Z",
+      "side": 1,
+      "message": "i think you\u0027ll have to $expected \u003d array_diff( $expected, ...) ?",
+      "revId": "38be615eb15a39ad093e0263e9027a396e0d76be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3de69043_5fb8d9ba",
+        "filename": "wmf-config/ProductionServices.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2019-04-10T18:03:27Z",
+      "side": 1,
+      "message": "perhaps add a note about why these don\u0027t have lvs or discovery",
+      "revId": "38be615eb15a39ad093e0263e9027a396e0d76be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
