@@ -3884,13 +3884,15 @@ foreach ( $wgGroupPermissions as $group => $_ ) {
 		|| !empty( $wgGroupPermissions[$group]['editsitejs'] )
 		|| !empty( $wgGroupPermissions[$group]['editusercss'] )
 		|| !empty( $wgGroupPermissions[$group]['edituserjs'] )
+		|| !empty( $wgGroupPermissions[$group]['editmyuserjsredirect'] )
 	) ) {
 		// enforce that interace-admin is the only group that can edit non-own CSS/JS
 		unset(
 			$wgGroupPermissions[$group]['editsitecss'],
 			$wgGroupPermissions[$group]['editsitejs'],
 			$wgGroupPermissions[$group]['editusercss'],
-			$wgGroupPermissions[$group]['edituserjs']
+			$wgGroupPermissions[$group]['edituserjs'],
+			$wgGroupPermissions[$group]['editmyuserjsredirect']
 		);
 	}
 }
