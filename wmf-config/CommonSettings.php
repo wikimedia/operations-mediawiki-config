@@ -1068,7 +1068,12 @@ if ( $wmgUseUrlShortener ) {
 		'*.mediawiki.org',
 	];
 	$wgUrlShortenerReadOnly = true;
+	$wgUrlShortenerEnableSidebar = false;
 	$wgGroupPermissions['sysop']['urlshortener-manage-url'] = false;
+
+	// Never ever change this config
+	// Changing it would change target of all short urls
+	$wgUrlShortenerIdSet = '23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz$';
 }
 
 if ( $wmgPFEnableStringFunctions ) {
