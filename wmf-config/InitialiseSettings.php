@@ -14830,7 +14830,6 @@ $wgConf->settings = [
 
 'wgUrlShortenerReadOnly' => [
 	'default' => true,
-	'mediawikiwiki' => false,
 ],
 
 'wgAllowMicrodataAttributes' => [
