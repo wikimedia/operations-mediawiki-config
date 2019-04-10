@@ -1349,6 +1349,8 @@ $wgGroupPermissions['bureaucrat']['userrights'] = false;
 
 $wgGroupPermissions['sysop']['bigdelete'] = false; // quick hack
 
+$wgGroupPermissions['user']['editmyuserjsredirect'] = false;
+
 foreach ( $groupOverrides2 as $group => $permissions ) {
 	if ( !array_key_exists( $group, $wgGroupPermissions ) ) {
 		$wgGroupPermissions[$group] = [];
