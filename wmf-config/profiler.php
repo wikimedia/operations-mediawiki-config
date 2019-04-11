@@ -372,7 +372,8 @@ function wmfSetupExcimer( $options ) {
 	$prodProf = new ExcimerProfiler;
 	$prodProf->setEventType( EXCIMER_CPU );
 	$prodProf->setPeriod( $options['excimer-production-period'] );
-	$prodProf->setMaxDepth( 30 );
+	// T176916
+	$prodProf->setMaxDepth( 250 );
 	$prodProf->setFlushCallback(
 		function ( $log ) use ( $options ) {
 			wmfExcimerFlushCallback( $log, $options );
