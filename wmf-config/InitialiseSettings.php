@@ -19325,7 +19325,7 @@ $wgConf->settings = [
 	// but available to encode information on Wikidata.
 	// Note: If the language is only supposed to be used with
 	// Monolingual text statements, it should rather be added to:
-	// Wikibase\Repo\WikibaseRepo::getMonolingualTextLanguages
+	// Wikibase\Lib\WikibaseContentLanguages::getDefaultMonolingualTextLanguages
 	'wikidata' => [
 		'kea' => 'Kabuverdianu',    // T127435
 		'nod' => 'ᨣᩴᩤᨾᩮᩥᩬᨦ',            // T93880
