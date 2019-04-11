@@ -14836,6 +14836,7 @@ $wgConf->settings = [
 
 'wgUrlShortenerReadOnly' => [
 	'default' => true,
+	'metawiki' => false,
 ],
 
 'wgAllowMicrodataAttributes' => [
