@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c0266fbf_d1b5ab4e",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 1373,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-04-12T15:06:54Z",
+      "side": 1,
+      "message": "There is no testwikidatawiki on Beta :)",
+      "revId": "fb5acdb7777b90a6ef79cba9bf5142cddf46f8bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
