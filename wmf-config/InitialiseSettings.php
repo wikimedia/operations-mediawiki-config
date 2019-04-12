@@ -14974,7 +14974,6 @@ $wgConf->settings = [
 		'twocolconflict',                    // [WMDE TW] 2019-10-30 – New edit conflict view
 		'visualeditor-visualdiffpage',       // [Editing] 2019-11-06 – Visual diffs
 		'fileexporter',                      // [WMDE TW] 2018-12-07 – FileExporter
-		'constraint-suggestions',            // [WMDE WD] 2019-04-16 – Wikibase ConstraintSuggestions
 	],
 ],
 
@@ -20259,11 +20258,6 @@ $wgConf->settings = [
 	'default' => 0, // 0% of edits trigger post edit job run constraint checks
 	'testwikidatawiki' => 100,
 	'wikidatawiki' => 25,
-],
-
-'wgWBQualityConstraintsSuggestionsBetaFeature' => [
-	'default' => false,
-	'wikidata' => true, // T207019
 ],
 
 'wgWBQualityConstraintsSparqlEndpoint' => [
