@@ -19301,6 +19301,12 @@ $wgConf->settings = [
 	'eswiki' => [
 		'wiki' => 100,
 	],
+	'cawiki' => [
+		'wiki' => 1,
+	],
+	'commonswiki' => [
+		'wiki' => 10,
+	],
 ],
 
 'wgNavigationTimingCpuBenchmarkSamplingFactor' => [
