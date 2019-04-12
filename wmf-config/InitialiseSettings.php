@@ -14873,7 +14873,6 @@ $wgConf->settings = [
 		'advancedsearch',                    // [WMDE TW] 2018-12-18 - Advanced Search
 		'visualeditor-visualdiffpage',       // [Contrib] 2018-12-14 – Visual diffs
 		'fileexporter',                      // [WMDE TW] 2018-12-07 – FileExporter
-		'constraint-suggestions',            // [WMDE WD] 2019-04-16 – Wikibase ConstraintSuggestions
 		'templatewizard-betafeature',        // [Contrib] 2019-04-18 - TemplateWizard
 		'php7',                              // [SRE Services] 2019-07-24 — HHVM to PHP7 migration
 	],
@@ -20132,11 +20131,6 @@ $wgConf->settings = [
 	'default' => 0, // 0% of edits trigger post edit job run constraint checks
 	'testwikidatawiki' => 100,
 	'wikidatawiki' => 25,
-],
-
-'wgWBQualityConstraintsSuggestionsBetaFeature' => [
-	'default' => false,
-	'wikidata' => true, // T207019
 ],
 
 'wgWBQualityConstraintsSparqlEndpoint' => [
