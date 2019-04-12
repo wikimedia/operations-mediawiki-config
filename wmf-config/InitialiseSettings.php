@@ -19267,7 +19267,7 @@ $wgConf->settings = [
 	// Sub-factor of the above. The lower the value, the more the survey
 	// will be displayed to users.
 	'default' => 0,
-	'cawiki' => 1,
+	'cawiki' => 100,
 	'enwikivoyage' => 1,
 	'frwiki' => 1,
 	'ruwiki' => 1,
@@ -19278,6 +19278,7 @@ $wgConf->settings = [
 	'default' => 0,
 	'ruwiki' => 10,
 	'eswiki' => 10,
+	'cawiki' => 1000,
 ],
 
 'wgNavigationTimingSurveyName' => [
