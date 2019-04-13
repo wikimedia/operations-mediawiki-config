@@ -413,31 +413,43 @@ function wmfSetupExcimer( $options ) {
  * more samples to arrive before the end of the request, they probably won't.
  */
 function wmfExcimerFlushCallback( $log, $options ) {
-	$redis = new Redis();
+	$error = null;
+	$toobig = 0;
 	try {
+		$redis = new Redis();
 		$ok = $redis->connect( $options['redis-host'], $options['redis-port'], $options['redis-timeout'] );
 		if ( !$ok ) {
-			return;
-		}
+			$error = 'connect_error';
+		} else {
+			// Arc Lamp expects the first frame to be a PHP file.
+			// This is used to group related traces for the same web entry point.
+			// In most cases, this happens by default already. But at least for destructor
+			// callbacks, this isn't the case on PHP 7.2. E.g. a line may be:
+			// "LBFactory::__destruct;LBFactory::LBFactory::shutdown;… 1".
+			$firstFrame = realpath( $_SERVER['SCRIPT_FILENAME'] ) . ';';
+			$collapsed = $log->formatCollapsed();
+			foreach ( explode( "\n", $collapsed ) as $line ) {
+				if ( ( substr_count( $line, ';' ) + 1 ) >= 249 ) {
+					// Stacks are separated by semi-colon, so +1 to get the frame count.
+					// Anything size 249 or more, may be cut off (per setMaxDepth).
+					// We discard those because depth limitation results in the early frames
+					// (starting with the entry point) being omitted, which are the ones we need
+					// for a flame graph (T220623)
+					$toobig++;
+					continue;
+				}
+				if ( $line === '' ) {
+					// $collapsed ends with a line break
+					continue;
+				}
 
-		// Arc Lamp expects the first frame to be a PHP file.
-		// This is used to group related traces for the same web entry point.
-		// In most cases, this happens by default already. But at least for destructor
-		// callbacks, this isn't the case on PHP 7.2. E.g. a line may be:
-		// "LBFactory::__destruct;LBFactory::LBFactory::shutdown;… 1".
-		$firstFrame = realpath( $_SERVER['SCRIPT_FILENAME'] ) . ';';
-		$collapsed = $log->formatCollapsed();
-		foreach ( explode( "\n", $collapsed ) as $line ) {
-			if ( $line === '' ) {
-				// $collapsed ends with a line break
-				continue;
+				// If the expected first frame isn't the entry point, prepend it.
+				// This check includes the semicolon to avoid false positives.
+				if ( substr( $line, 0, strlen( $firstFrame ) ) !== $firstFrame ) {
+					$line = $firstFrame . $line;
+				}
+				$redis->publish( 'excimer', $line );
 			}
-			// If the expected first frame isn't the entry point, prepend it.
-			// This check includes the semicolon to avoid false positives.
-			if ( substr( $line, 0, strlen( $firstFrame ) ) !== $firstFrame ) {
-				$line = $firstFrame . $line;
-			}
-			$redis->publish( 'excimer', $line );
 		}
 	} catch ( Exception $e ) {
 		// Known failure scenarios:
@@ -451,5 +463,24 @@ function wmfExcimerFlushCallback( $log, $options ) {
 
 		// Write to log with low severity
 		trigger_error( get_class( $e ) . ': ' . $e->getMessage(), E_USER_NOTICE );
+		$error = 'exception';
+	}
+
+
+	if ( $error || $maxed ) {
+		if ( !class_exists( Wikimedia\MWConfig\ServiceConfig::class ) ) {
+			require_once __DIR__ . '/../src/ServiceConfig.php';
+		}
+		$dest = Wikimedia\MWConfig\ServiceConfig::getInstance()->getLocalService( 'statsd' );
+		if ( $dest ) {
+			$sock = socket_create( AF_INET, SOCK_DGRAM, SOL_UDP );
+			if ( $error ) {
+				$stat = "MediaWiki.arclamp_client_error.{$error}:1|c";
+				@socket_sendto( $sock, $stat, strlen( $stat ), 0, $dest, 8125 );
+			}
+			if ( $maxed ) {
+				$stat = "MediaWiki.arclamp_client_discarded.toobig:{$maxed}|c";
+				@socket_sendto( $sock, $stat, strlen( $stat ), 0, $dest, 8125 );
+			}
 	}
 }
