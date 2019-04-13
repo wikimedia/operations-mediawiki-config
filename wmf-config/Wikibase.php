@@ -324,8 +324,8 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['addEntityUsagesBatchSize'] = $wmgWikibaseClientAddEntityUsagesBatchSize;
 
-	// This needs Kartographer mapframes to be enabled (T218051)
-	$wgWBClientSettings['useKartographerMaplinkInWikitext'] = $wgKartographerEnableMapFrame;
+	// Temporary, see T210926
+	$wgWBClientSettings['useKartographerMaplinkInWikitext'] = true;
 }
 
 unset( $wmgWBSharedCacheKey );
