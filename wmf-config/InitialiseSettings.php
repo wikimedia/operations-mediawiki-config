@@ -16184,6 +16184,13 @@ $wgConf->settings = [
 	// Wikinewses
 
 	// Wikiversities
+	'+enwikiversity' => [
+		'Draft' => true, // T220881
+		'Help' => true, // T220881
+		'Portal' => true, // T220881
+		'School' => true, // T220881
+		'Wikiversity' => true, // T220881
+	],
 	'+frwikiversity' => [
 		'Recherche' => true, // T63874
 	],
