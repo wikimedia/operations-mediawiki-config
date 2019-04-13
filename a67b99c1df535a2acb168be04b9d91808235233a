@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9efde35c_5b0bddb0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 4879
+      },
+      "writtenOn": "2019-04-13T23:10:18Z",
+      "side": 1,
+      "message": "Commit message should be improved and look like this:\n\nAdd few active namespaces for VisualEditor on en.wikiversity",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 59
+      },
+      "revId": "a67b99c1df535a2acb168be04b9d91808235233a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4a3b0cfc_67db6cdf",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 16166,
+      "author": {
+        "id": 4879
+      },
+      "writtenOn": "2019-04-13T23:10:18Z",
+      "side": 1,
+      "message": "Each comment should be // T220881",
+      "range": {
+        "startLine": 16166,
+        "startChar": 19,
+        "endLine": 16166,
+        "endChar": 28
+      },
+      "revId": "a67b99c1df535a2acb168be04b9d91808235233a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
