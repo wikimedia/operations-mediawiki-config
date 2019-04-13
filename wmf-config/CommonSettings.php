@@ -2054,7 +2054,6 @@ if ( $wmgUseTemplateStyles ) {
 
 if ( $wmgUseLoginNotify && $wmgUseEcho ) {
 	wfLoadExtension( 'LoginNotify' );
-	$wgNotifyTypeAvailabilityByCategory['login-success']['web'] = false;
 	$wgLoginNotifyAttemptsNewIP = 3;
 }
 
