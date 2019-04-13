@@ -13673,6 +13673,7 @@ $wgConf->settings = [
 	'wiktionary' => '/static/apple-touch/wiktionary.png',
 	'wikidata' => '/static/apple-touch/wikidata.png', // T72996
 	'enwiktionary' => '/static/apple-touch/wiktionary/en.png', // T48431
+	'dewiktionary' => '/static/apple-touch/wiktionary/de.png', // T202902
 ],
 
 'wgReferrerPolicy' => [
