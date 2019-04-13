@@ -14513,6 +14513,7 @@ $wgConf->settings = [
 		'mmp.sub.uni-hamburg.de',           // T216886
 		'bruun-rasmussen.dk',               // Danish auction house Bruun Rasmussen - T219075
 		'*.bruun-rasmussen.dk',             // Danish auction house Bruun Rasmussen - T219075
+		'www4.bibl.ulaval.ca',              // Université Laval library - T220704
 	],
 ],
 
