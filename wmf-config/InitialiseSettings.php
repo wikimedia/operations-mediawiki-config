@@ -20801,12 +20801,16 @@ $wgConf->settings = [
 // bring down a specific cluster.
 'wmgCirrusSearchDefaultCluster' => [
 	'default' => 'local',
+	'wikidatawiki' => 'codfw',
+	'enwiki' => 'codfw',
 ],
 
 'wmgCirrusSearchClusterOverrides' => [
 	'default' => [
 		'more_like' => 'codfw',
 		'regex' => 'codfw',
+		'comp_suggest' => 'eqiad',
+		'prefix' => 'eqiad',
 	],
 ],
 
