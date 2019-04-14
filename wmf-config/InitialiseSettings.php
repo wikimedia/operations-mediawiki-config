@@ -9546,6 +9546,28 @@ $wgConf->settings = [
 			'move-subpages' => true,
 			'suppressredirect' => true
 		],
+		'botadmin' => [ // T220915
+			'apihighlimits' => true,
+			'autoconfirmed' => true,
+			'autopatrol' => true,
+			'bot' => true,
+			'browsearchive' => true,
+			'delete' => true,
+			'deleterevision' => true,
+			'editprotected' => true,
+			'editsemiprotected' => true,
+			'ipblock-exempt' => true,
+			'massmessage' => true,
+			'nominornewtalk' => true,
+			'noratelimit' => true,
+			'oathauth-enable' => true,
+			'override-antispoof' => true,
+			'protect' => true,
+			'skipcaptcha' => true,
+			'suppressredirect' => true,
+			'tboverride' => true,
+			'writeapi' => true,
+		],
 	],
 	'+itwikisource' => [
 		'flood' => [ 'bot' => true ], // T38600
@@ -11131,7 +11153,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'import', 'test-sysop', 'translator' ],
 	],
 	'+itwiki' => [
-		'bureaucrat' => [ 'rollbacker' ],
+		'bureaucrat' => [ 'rollbacker', 'botadmin' ], // T220915
 		'sysop' => [ 'accountcreator', 'autopatrolled', 'flood', 'mover' ], // T55913, T63109, T102770
 	],
 	'+itwikibooks' => [
@@ -11916,7 +11938,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'import', 'test-sysop', 'translator' ],
 	],
 	'+itwiki' => [
-		'bureaucrat' => [ 'rollbacker', 'autopatrolled', 'mover' ], // T55913, T102770
+		'bureaucrat' => [ 'rollbacker', 'autopatrolled', 'mover', 'botadmin' ], // T55913, T102770, T220915
 		'sysop' => [ 'accountcreator', 'flood', ], // T63109
 	],
 	'+itwikibooks' => [
