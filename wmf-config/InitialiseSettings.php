@@ -20801,7 +20801,6 @@ $wgConf->settings = [
 // bring down a specific cluster.
 'wmgCirrusSearchDefaultCluster' => [
 	'default' => 'local',
-	'wikidatawiki' => 'codfw',
 	'enwiki' => 'codfw',
 ],
 
