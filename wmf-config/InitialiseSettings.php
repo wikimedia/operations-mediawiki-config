@@ -20804,7 +20804,10 @@ $wgConf->settings = [
 ],
 
 'wmgCirrusSearchClusterOverrides' => [
-	'default' => [],
+	'default' => [
+		'more_like' => 'codfw',
+		'regex' => 'codfw',
+	],
 ],
 
 'wmgCirrusSearchWriteClusters' => [
