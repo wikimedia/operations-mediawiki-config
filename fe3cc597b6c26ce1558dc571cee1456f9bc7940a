@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "47dddc38_61c43355",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2019-04-15T16:30:39Z",
+      "side": 1,
+      "message": "Are we going to add some logging, or just announce it (possibly both on a mailing list, and on a login notice type thing on wikitech), and clean up from there?",
+      "range": {
+        "startLine": 17,
+        "startChar": 68,
+        "endLine": 19,
+        "endChar": 55
+      },
+      "revId": "fe3cc597b6c26ce1558dc571cee1456f9bc7940a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
