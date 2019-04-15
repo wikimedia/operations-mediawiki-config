@@ -22,6 +22,30 @@
       "revId": "fe3cc597b6c26ce1558dc571cee1456f9bc7940a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c7ee2747_a3809040",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2019-04-15T21:31:30Z",
+      "side": 1,
+      "message": "We will do an email announce for sure. Another thing I would like to do is to customize the \"wrongpassword\" message on Wikitech to warn people to check the case of the username they are supplying. Probably with a link to the task here so we have a place to put some details.\n\nAdding specific logging would require some amount of patching in LdapAuthentication, and I\u0027m not sure it would actually be something that we would have time to monitor and respond to.",
+      "parentUuid": "47dddc38_61c43355",
+      "range": {
+        "startLine": 17,
+        "startChar": 68,
+        "endLine": 19,
+        "endChar": 55
+      },
+      "revId": "fe3cc597b6c26ce1558dc571cee1456f9bc7940a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
