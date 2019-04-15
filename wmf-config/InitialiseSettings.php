@@ -4930,6 +4930,12 @@ $wgConf->settings = [
 		117 => true,
 		118 => true,
 		119 => true,
+		124 => true,
+		125 => true,
+		126 => true,
+		127 => true,
+		128 => true,
+		129 => true,
 	],
 
 	// Wikipedia @{
