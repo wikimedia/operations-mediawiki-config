@@ -19267,6 +19267,7 @@ $wgConf->settings = [
 	'private' => false,
 	'fishbowl' => false,
 	'nonglobal' => false,
+	'labswiki' => true, // T165795
 ],
 
 'wmgUseEventLogging' => [
