@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ee99310_c0112c93",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 20714,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2019-04-16T11:17:51Z",
+      "side": 1,
+      "message": "In which case would 8 be a good value?",
+      "revId": "c89a81986547e73a7cc7bfbad4b09e010b31716c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
