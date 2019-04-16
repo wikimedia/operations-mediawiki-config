@@ -3775,6 +3775,12 @@ foreach ( $wgGroupPermissions as $group => $_ ) {
 }
 
 if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession ) {
+	// Temporary global whitelist for origins used by trusted
+	// opt-in scripts, until a per-user ability for this exists.
+	// T207900#4846582
+	$wgCSPFalsePositiveUrls[] = 'https://cvn.wmflabs.org';
+	$wgCSPFalsePositiveUrls[] = 'https://tools.wmflabs.org/intuiion/';
+
 	$wgExtensionFunctions[] = function () {
 		global $wgCSPReportOnlyHeader, $wmgUseCSPReportOnly, $wgCommandLineMode;
 		if ( !$wmgUseCSPReportOnly ) {
