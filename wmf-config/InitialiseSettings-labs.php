@@ -1177,6 +1177,9 @@ function wmfLabsSettings() {
 		'wgWBQualityConstraintsMandatoryConstraintId' => [
 			'wikidatawiki' => 'Q505095',
 		],
+		'wgWBQualityConstraintsSuggestionConstraintId' => [
+			'wikidatawiki' => 'Q524851',
+		],
 		'wgWBQualityConstraintsDistinctValuesConstraintId' => [
 			'wikidatawiki' => 'Q505096',
 		],
