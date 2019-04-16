@@ -9690,6 +9690,9 @@ $wgConf->settings = [
 			'extendedconfirmed' => true,
 		], // T184675
 	],
+	'+labswiki' => [
+		'bureaucrat' => [ 'usermerge' => true ],
+	],
 	'ladwiki' => [
 		'flood' => [ 'bot' => true ], // T131527
 		'autoconfirmed' => [ 'upload' => false, 'reupload' => false ], // T145090
