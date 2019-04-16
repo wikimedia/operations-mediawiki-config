@@ -19237,12 +19237,6 @@ $wgConf->settings = [
 	'wikipedia' => true,
 ],
 
-'wgExternalGuidanceEnableContextDetection' => [
-	'default' => false,
-	'enwiki' => true,
-	'simplewiki' => true,
-],
-
 'wmgUseMapSources' => [
 	'default' => false,
 	'wikivoyage' => true,
