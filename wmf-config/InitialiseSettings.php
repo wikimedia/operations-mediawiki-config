@@ -8517,6 +8517,7 @@ $wgConf->settings = [
 	'fawiki' => true,
 	'frwiki' => true,
 	'plwiki' => true,
+	'zhwiki' => true,
 ],
 
 'wgEnableBlockNoticeStats' => [
