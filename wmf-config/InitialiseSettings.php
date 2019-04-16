@@ -14520,6 +14520,7 @@ $wgConf->settings = [
 		'bruun-rasmussen.dk',               // Danish auction house Bruun Rasmussen - T219075
 		'*.bruun-rasmussen.dk',             // Danish auction house Bruun Rasmussen - T219075
 		'www4.bibl.ulaval.ca',              // Université Laval library - T220704
+		'static.inaturalist.org',           // iNaturalist - T221154
 	],
 ],
 
