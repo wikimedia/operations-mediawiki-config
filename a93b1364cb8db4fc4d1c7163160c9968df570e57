@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "f841a46e_e88747a2",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2019-04-16T16:52:41Z",
+      "side": 1,
+      "message": "Hmm, sure, I can change that.",
+      "parentUuid": "c3b0d6b9_585f0837",
+      "range": {
+        "startLine": 330,
+        "startChar": 2,
+        "endLine": 330,
+        "endChar": 19
+      },
+      "revId": "a93b1364cb8db4fc4d1c7163160c9968df570e57",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cf68f928_a643cc62",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 2
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "5b07b46f_9fef8a73",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 343,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2019-04-16T16:52:41Z",
+      "side": 1,
+      "message": "I wanted as much as possible to \"lift and shift\", but yes. In this particular case, this is a justification from ~2005 that we probably can take as given nowadays. :-)",
+      "parentUuid": "cf68f928_a643cc62",
+      "range": {
+        "startLine": 343,
+        "startChar": 19,
+        "endLine": 343,
+        "endChar": 21
+      },
+      "revId": "a93b1364cb8db4fc4d1c7163160c9968df570e57",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fe53099e_dd20694c",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 2
@@ -59,6 +107,30 @@
       "writtenOn": "2019-04-15T23:01:01Z",
       "side": 1,
       "message": "Maybe // while at it.",
+      "range": {
+        "startLine": 347,
+        "startChar": 39,
+        "endLine": 347,
+        "endChar": 40
+      },
+      "revId": "a93b1364cb8db4fc4d1c7163160c9968df570e57",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eba8aa83_fc526df0",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 347,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2019-04-16T16:52:41Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "fe53099e_dd20694c",
       "range": {
         "startLine": 347,
         "startChar": 39,
