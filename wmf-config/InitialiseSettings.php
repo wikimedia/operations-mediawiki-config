@@ -20518,6 +20518,11 @@ $wgConf->settings = [
 	'testwikidatawiki' => 'Q187969',
 ],
 
+'wgWBQualityConstraintsEnableSuggestionConstraintStatus' => [
+	'default' => false,
+	'testwikidatawiki' => true,
+],
+
 'wmgUseWikibaseLexeme' => [
 	'default' => false,
 	'testwikidatawiki' => true,
