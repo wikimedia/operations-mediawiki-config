@@ -20238,6 +20238,11 @@ $wgConf->settings = [
 	'testwikidatawiki' => 'Q187927',
 ],
 
+'wgWBQualityConstraintsSuggestionConstraintId' => [
+	'default' => 'Q62026391',
+	'testwikidatawiki' => 'Q204138',
+],
+
 'wgWBQualityConstraintsDistinctValuesConstraintId' => [
 	'default' => 'Q21502410',
 	'testwikidatawiki' => 'Q187928',
