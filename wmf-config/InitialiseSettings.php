@@ -13158,6 +13158,7 @@ $wgConf->settings = [
 	'+ruwikinews' => [ 102 ], // T132241 - Комментарии
 	'+sewikimedia' => [ 100 ], // T175363 - Projekt
 	'+trwiki' => [ 102 ], // T166522 - Vikiproje
+	'+wikimaniawiki' => [ 128 ], // T221062
 ],
 
 'wmgAllowRobotsControlInAllNamespaces' => [
