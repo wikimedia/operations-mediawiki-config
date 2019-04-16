@@ -1351,6 +1351,9 @@ function wmfLabsSettings() {
 		'wgWBQualityConstraintsAsReferencesId' => [
 			'wikidatawiki' => 'Q505138',
 		],
+		'wgWBQualityConstraintsEnableSuggestionConstraintStatus' => [
+			'wikidatawiki' => true,
+		],
 
 		// T215684: Load WikibaseCirrusSearch on Beta Cluster
 		'wmgUseWikibaseCirrusSearch' => [
