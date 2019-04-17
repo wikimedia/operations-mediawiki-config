@@ -8552,7 +8552,9 @@ $wgConf->settings = [
 		// T216598 Element Timing for Images, expires on 2019-05-07, renewable until 2019-09-04
 		'AoD78afco+vEg78OklsVKj9ihT2miCnaMEp5EXT8xLIU2XM2Cxgyc2LNKj8Udf9Ry+y9YNtxLrmGGxu3n7qFgg0AAABweyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IkVsZW1lbnRUaW1pbmdJbWFnZXMiLCJleHBpcnkiOjE1NTcyMjIzNDcsImlzU3ViZG9tYWluIjp0cnVlfQ==',
 		// T216594 Layout Stability, expires on 2019-05-07, renewable until 2019-09-04
-		'AuQYzuuLO3A3VPePIRfKVSXIhxgeP6EI5QMoLJkkbjqsLwp8bKGH47moULCjjf3fciSjZIlbofgYkr353lWymg0AAABqeyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IkxheW91dEphbmtBUEkiLCJleHBpcnkiOjE1NTcyMjI2MDMsImlzU3ViZG9tYWluIjp0cnVlfQ=='
+		'AuQYzuuLO3A3VPePIRfKVSXIhxgeP6EI5QMoLJkkbjqsLwp8bKGH47moULCjjf3fciSjZIlbofgYkr353lWymg0AAABqeyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IkxheW91dEphbmtBUEkiLCJleHBpcnkiOjE1NTcyMjI2MDMsImlzU3ViZG9tYWluIjp0cnVlfQ==',
+		// T216597 Event Timing, expires on 2019-05-29 (coincides with end of trial)
+		'AtMksQhRmZpsP42EMfzLN/jihicyFX5tQuSfuJFH3UDdxLHeb0XYIwrzEWML4hKJRZs7OGMj8bDdErm2PYh/4wQAAABoeyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IkV2ZW50VGltaW5nIiwiZXhwaXJ5IjoxNTU5MDg3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZX0=',
 	],
 	'eswiki' => [
 		// T216499 Priority Hints, expires on 2019-05-28, renewable until 2019-05-29
@@ -8561,6 +8563,8 @@ $wgConf->settings = [
 		'AjmxZDNUsZvDlpCYsb9z+SfuoChq5RbD1vX/b+7JC4L4xB1QjqoeUHIKBL4GbfAEvNtB3gbou/GemAYzrhwA5gcAAAByeyJvcmlnaW4iOiJodHRwczovL2VzLm0ud2lraXBlZGlhLm9yZzo0NDMiLCJmZWF0dXJlIjoiRWxlbWVudFRpbWluZ0ltYWdlcyIsImV4cGlyeSI6MTU1OTAzNjkzNSwiaXNTdWJkb21haW4iOnRydWV9',
 		// T216594 Layout Stability, expires on 2019-05-28, renewable until 2019-09-04
 		'Ah/oetLmHjJoyoTFk5FyK0i6E25SHDYiWkOi/s/eHATR8p8TJRvvNxlwF4FajekkcsQIL9v1KhiBY3oPTfXEuwcAAABseyJvcmlnaW4iOiJodHRwczovL2VzLm0ud2lraXBlZGlhLm9yZzo0NDMiLCJmZWF0dXJlIjoiTGF5b3V0SmFua0FQSSIsImV4cGlyeSI6MTU1OTAzNzAwMSwiaXNTdWJkb21haW4iOnRydWV9',
+		// T216597 Event Timing, expires on 2019-05-29 (coincides with end of trial)
+		'AlTUR1e069KBKcnNPHcHoJki4b7OTwJFZZAsI8yDvSVSmvB7/LMQzMBvYcGeV2gxh5bdT62+6oJRfvOqMBkCDQAAAABqeyJvcmlnaW4iOiJodHRwczovL2VzLm0ud2lraXBlZGlhLm9yZzo0NDMiLCJmZWF0dXJlIjoiRXZlbnRUaW1pbmciLCJleHBpcnkiOjE1NTkwODc5OTksImlzU3ViZG9tYWluIjp0cnVlfQ==',
 	],
 ],
 
