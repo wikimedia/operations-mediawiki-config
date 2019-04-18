@@ -22,6 +22,30 @@
       "revId": "dabd24cf7ac2170c0078229b2e79c496882ab513",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cbb06631_6ad64c36",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 4933,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2019-04-18T12:37:34Z",
+      "side": 1,
+      "message": "Quoting from commit message:\n\u003e 120-123 is intentionally excluded, because\n\u003e https://www.mediawiki.org/wiki/Extension_default_namespaces says\n\u003e they are used by Wikibase extension. I\u0027ve no idea how much\n\u003e instances would change of default settings for those namespaces\n\u003e affect and in which way.\n\nI\u0027m unsure if I should add 120-123 to default and set them to true and override settings for wikidatawiki, or go the other way around - set this true just for wikimaniawiki. \n\nThis is the reason why I didn\u0027t schedule this yet, I\u0027d like to hear some opinions. \n\n\u003e Going up to 129 as extra namespaces is very rare, maybe unique to Wikimaniawiki.\nYes indeed, but it isn\u0027t impossible. In case this happens again, we wouldn\u0027t need to change anything - it will \"just work\".",
+      "parentUuid": "05fcdc36_0b711628",
+      "range": {
+        "startLine": 4933,
+        "startChar": 8,
+        "endLine": 4933,
+        "endChar": 9
+      },
+      "revId": "dabd24cf7ac2170c0078229b2e79c496882ab513",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
