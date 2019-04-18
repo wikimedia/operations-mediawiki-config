@@ -19356,6 +19356,8 @@ $wgConf->settings = [
 
 'wgNavigationTimingCpuBenchmarkSamplingFactor' => [
 	'default' => 2,
+	'eswiki' => 1,
+	'ruwiki' => 1,
 ],
 
 'wgRCWatchCategoryMembership' => [
