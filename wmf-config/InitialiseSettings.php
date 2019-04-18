@@ -5056,6 +5056,9 @@ $wgConf->settings = [
 	// Wikivoyage
 	'+dewikivoyage' => [ 0 => 1, 100 => 0, 104 => 0 ],
 	'+itwikivoyage' => [ 0 => 1, 100 => 0, 104 => 0 ],
+
+	// Wikimania
+	'+wikimaniawiki' => [ 120 => 1, 122 => 1, 124 => 1, 126 => 1, 128 => 1 ], //T220950
 ],
 # @} end of wgNamespacesWithSubpages
 
