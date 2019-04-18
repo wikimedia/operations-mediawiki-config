@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cce36eac_321b46c6",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 5061,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2019-04-18T18:48:16Z",
+      "side": 1,
+      "message": "T220950. :-)\n\nAlso, do we only want 2015:+ and not the previous ones?",
+      "range": {
+        "startLine": 5061,
+        "startChar": 77,
+        "endLine": 5061,
+        "endChar": 84
+      },
+      "revId": "9f5788de1b30054d222d8111105d6cf4f66c46b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
