@@ -1,0 +1,9 @@
+Verified+2: jenkins-bot
+Verified+2: Mobrovac <mobrovac@wikimedia.org>
+Code-Review+2: Mobrovac <mobrovac@wikimedia.org>
+Code-Review+1: Jforrester <jforrester@wikimedia.org>
+Submitted-by: Mobrovac <mobrovac@wikimedia.org>
+Submitted-at: Thu, 18 Apr 2019 23:04:22 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/504939
+Project: operations/mediawiki-config
+Branch: refs/heads/master
