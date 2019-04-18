@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "05fcdc36_0b711628",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 4933,
+      "author": {
+        "id": 318
+      },
+      "writtenOn": "2019-04-18T12:30:02Z",
+      "side": 1,
+      "message": "Going up to 129 as extra namespaces is very rare, maybe unique to Wikimaniawiki.\nLeaving out 120-123 also means namespaces 2015 and 2016 would not have subpages. As I understand it we might import the WikimaniaWikis specific to years before 2019 to the general one at some point in those namespaces. I don\u0027t see the point to leave 2015-2016 out.",
+      "range": {
+        "startLine": 4933,
+        "startChar": 8,
+        "endLine": 4933,
+        "endChar": 9
+      },
+      "revId": "dabd24cf7ac2170c0078229b2e79c496882ab513",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
