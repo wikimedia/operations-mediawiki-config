@@ -8577,11 +8577,13 @@ $wgConf->settings = [
 'wgPriorityHints' => [
 	'default' => false,
 	'ruwiki' => true,
+	'eswiki' => true,
 ],
 
 'wgElementTiming' => [
 	'default' => false,
 	'ruwiki' => true,
+	'eswiki' => true,
 ],
 
 # groupOverrides @{
