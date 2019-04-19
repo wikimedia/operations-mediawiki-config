@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2054bcfc_22a20114",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 55
+      },
+      "writtenOn": "2019-04-19T19:22:29Z",
+      "side": 1,
+      "message": "does this need the - on it to override the one in InitialiseSettings.php?",
+      "revId": "88b53a16a190ccb267acde4152a868c2e912a23c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
