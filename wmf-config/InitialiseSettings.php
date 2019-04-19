@@ -9275,7 +9275,6 @@ $wgConf->settings = [
 		'rollbacker' => [ 'rollback' => true ], // T25233
 		'autopatrolled' => [ 'autopatrol' => true, 'move-categorypages' => true ], // T31007, T67728, T144699
 		'Image-reviewer' => [ 'movefile' => true, 'delete' => true ], // T66532 and T73229
-		'uploader' => [ 'upload' => true, 'reupload' => true, 'reupload-own' => true ], // T71171
 		'botadmin' => [
 			'block' => true,
 			'delete' => true,
@@ -11046,7 +11045,6 @@ $wgConf->settings = [
 		'sysop' => [
 			'rollbacker', // T25233
 			'autopatrolled', // T31007, T144699
-			'uploader', // T71171
 			'confirmed', // T87348
 			'patroller', // T118847
 			'extendedconfirmed', // T140839
@@ -11827,7 +11825,6 @@ $wgConf->settings = [
 		'sysop' => [
 			'rollbacker', // T25233
 			'autopatrolled', // T31007, T144699
-			'uploader', // T71171
 			'confirmed', // T87348
 			'patroller', // T118847
 			'extendedconfirmed', // T140839
@@ -13612,12 +13609,6 @@ $wgConf->settings = [
 		],
 	], // T126607
 	'fawiki' => [
-		'uploader' => [ '&',
-			[ APCOND_AGE, 4 * 86400 ],
-			[ APCOND_EDITCOUNT, 10 ],
-			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
-			[ '!', [ APCOND_INGROUPS, 'bureaucrat' ] ],
-		], // T71171
 		'extendedconfirmed' => [ '&',
 			[ APCOND_EDITCOUNT, 500 ],
 			[ APCOND_AGE, 30 * 86400 ], // 30 days * seconds in a day
