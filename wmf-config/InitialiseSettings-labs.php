@@ -176,11 +176,22 @@ function wmfLabsSettings() {
 				'eventbus' => 'debug',
 				'buffer' => true,
 			],
+			'cirrussearch-request' => [
+				'udp2log' => false,
+				'logstash' => false,
+				'eventbus' => 'debug',
+				'buffer' => true,
+			],
 			'JobExecutor' => [ 'logstash' => 'debug' ],
 				'runJobs' => [ 'logstash' => 'info' ],
 				'squid' => 'debug',
 				'MessageCache' => 'debug',
 			],
+		],
+
+		// Turn on all cirrussearch-request logging in beta
+		'wmgCirrusSearchRequestEventSampling' => [
+			'default' => 1.0,
 		],
 
 		'-wmgLogstashUseCee' => [
