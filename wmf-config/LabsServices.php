@@ -35,7 +35,7 @@ return [
 		'eventlogging' => 'udp://deployment-eventlogging03.eqiad.wmflabs:8421',
 		'eventbus' => 'http://deployment-kafka-main-1.deployment-prep.eqiad.wmflabs:8085',
 		'eventgate-analytics' => 'http://deployment-eventgate-analytics-1.deployment-prep.eqiad.wmflabs:8192',
-		'upload' => 'deployment-ms-fe02.deployment-prep.eqiad.wmflabs',
+		'upload' => 'deployment-ms-fe03.deployment-prep.eqiad.wmflabs',
 		'cxserver' => 'http://deployment-sca01.eqiad.wmflabs:8080',
 		'irc' => 'irc.beta.wmflabs.org', // deployment-ircd
 		'redis_lock' => [
@@ -43,8 +43,8 @@ return [
 			'rdb2' => 'deployment-memc05.deployment-prep.eqiad.wmflabs',
 		],
 		'etcd' => 'deployment-etcd-01.deployment-prep.eqiad.wmflabs:2379',
-		'mediaSwiftAuth' => 'http://deployment-ms-fe02.deployment-prep.eqiad.wmflabs/auth',
-		'mediaSwiftStore' => 'http://deployment-ms-fe02.deployment-prep.eqiad.wmflabs/v1/AUTH_mw',
+		'mediaSwiftAuth' => 'http://deployment-ms-fe03.deployment-prep.eqiad.wmflabs/auth',
+		'mediaSwiftStore' => 'http://deployment-ms-fe03.deployment-prep.eqiad.wmflabs/v1/AUTH_mw',
 		'electron' => 'http://deployment-pdfrender02.deployment-prep.eqiad.wmflabs:5252',
 
 		### Logstash
