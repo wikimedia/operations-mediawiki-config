@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e4f6057_416c3de1",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2019-04-19T18:45:28Z",
+      "side": 1,
+      "message": "because cirrussearch still does classic extension loading, rather than extension.json, this needs to be a wmg* variable and code somewhere else needs to do `$wg... \u003d $wmg...`",
+      "revId": "fcb80a36ff62b546bfe8fd86ea5ba09806f2e029",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
