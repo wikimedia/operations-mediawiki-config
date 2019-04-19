@@ -3164,6 +3164,8 @@ if ( $wmgUseContentTranslation ) {
 
 	$wgContentTranslationTranslateInTarget = $wmgContentTranslationTranslateInTarget;
 
+	$wgContentTranslationUnmodifiedMTThresholdForPublish = $wmgContentTranslationUnmodifiedMTThresholdForPublish;
+
 	$wgContentTranslationEventLogging = $wmgContentTranslationEventLogging;
 
 	if ( $wmgContentTranslationCluster ) {

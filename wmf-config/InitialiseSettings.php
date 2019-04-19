@@ -19131,6 +19131,11 @@ $wgConf->settings = [
 	'wg_enwiki' => false,
 ],
 
+'wmgContentTranslationUnmodifiedMTThresholdForPublish' => [
+	'default' => 99,
+	'idwiki' => 35,
+],
+
 'wmgContentTranslationTranslateInTarget' => [
 	'default' => true,
 	'testwiki' => false,
