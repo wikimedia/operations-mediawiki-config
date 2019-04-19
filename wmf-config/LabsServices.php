@@ -63,7 +63,7 @@ return [
 
 		### Poolcounter
 		'poolcounter' => [
-			'deployment-poolcounter04.deployment-prep.eqiad.wmflabs',
+			'deployment-poolcounter05.deployment-prep.eqiad.wmflabs',
 		],
 	],
 ];
