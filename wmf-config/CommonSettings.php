@@ -3839,6 +3839,13 @@ if ( $wmgUseWikimediaEditorTasks ) {
 	wfLoadExtension( 'WikimediaEditorTasks' );
 }
 
+# Temporary for the HHVM => PHP7.2 migration. Adds an array of unicode chars
+# that have broken uppercasing in HHVM. In this phase, we want php7 to behave
+# like HHVM. See T219279 for details.
+if ( PHP_VERSION_ID >= 70200 ) {
+	$wgOverrideUcfirstCharacters = include __DIR__ . '/Php72ToUpper.php';
+}
+
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
