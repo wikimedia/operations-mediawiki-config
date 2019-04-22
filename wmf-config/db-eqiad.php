@@ -263,7 +263,7 @@ $wgLBFactoryConf = [
 'groupLoadsBySection' => [
 	's1' => [
 		'watchlist' => [
-			# 'db1099:3311' => 1,
+			'db1099:3311' => 1,
 			'db1105:3311' => 1,
 		],
 		'recentchanges' => [
@@ -490,7 +490,7 @@ $wgLBFactoryConf = [
 			'db1104' => 1,
 		],
 		'watchlist' => [
-			# 'db1099:3318' => 1,
+			'db1099:3318' => 1,
 			'db1101:3318' => 1,
 		],
 		'recentchanges' => [
