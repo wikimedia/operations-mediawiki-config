@@ -3219,6 +3219,10 @@ if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient || $wmgUseWikibaseMediaInfo ) 
 	include "$wmfConfigDir/Wikibase.php";
 }
 
+if ( $wmgUseWikibaseSchema ) {
+	wfLoadExtension( 'WikibaseSchema' );
+}
+
 // put this here to ensure it is available for localisation cache rebuild
 $wgWBClientSettings['repoSiteName'] = 'wikibase-repo-name';
 

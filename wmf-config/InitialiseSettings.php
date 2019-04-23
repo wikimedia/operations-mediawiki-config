@@ -20777,6 +20777,10 @@ $wgConf->settings = [
 	'testcommonswiki' => true,
 ],
 
+'wmgUseWikibaseSchema' => [
+	'default' => false,
+],
+
 'wmgUseTemplateSandbox' => [
 	'default' => true,
 	'loginwiki' => false,
