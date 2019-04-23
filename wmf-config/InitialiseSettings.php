@@ -8580,6 +8580,12 @@ $wgConf->settings = [
 	'eswiki' => true,
 ],
 
+'wgPriorityHintsRatio' => [
+	'default' => 1.0,
+	'ruwiki' => 0.5,
+	'eswiki' => 0.5,
+],
+
 'wgElementTiming' => [
 	'default' => false,
 	'ruwiki' => true,
