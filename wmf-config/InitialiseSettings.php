@@ -5343,6 +5343,7 @@ $wgConf->settings = [
 	'lvwiki' => [ '', 'autoconfirmed', 'autopatrol', 'sysop' ], // T92645
 	'plwiki' => [ '', 'autoconfirmed', 'editor', 'sysop' ], // T48990
 	'ptwiki' => [ '', 'autoconfirmed', 'autoreviewer', 'sysop' ], // T41652
+	'ptwikinews' => [ '', 'autoconfirmed', 'autoreviewer', 'sysop' ], // T221521
 	'rowiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T63172
 	'srwiki' => [ '', 'autoconfirmed', 'autopatrol', 'patroller', 'rollbacker', 'bot', 'sysop', 'bureaucrat' ], // T215653
 	'srwikibooks' => [ '', 'autoconfirmed', 'autopatrol', 'patroller', 'rollbacker', 'bot', 'sysop', 'bureaucrat' ], // T215653
