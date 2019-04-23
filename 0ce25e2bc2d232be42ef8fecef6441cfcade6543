@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2d49e583_6a872037",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-04-23T21:07:48Z",
+      "side": 1,
+      "message": "I don\u0027t know how mediawiki-config changes are deployed but in the past they seem to have been swatted and had immediate effect. So, if that\u0027s true, I think that any time after May 2 (the Thursday after your PageSplitTester changes are merged and available on all wikis) is the appropriate date.",
+      "revId": "0ce25e2bc2d232be42ef8fecef6441cfcade6543",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
