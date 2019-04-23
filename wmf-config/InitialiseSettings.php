@@ -18938,6 +18938,10 @@ $wgConf->settings = [
 	'zerowiki' => false,
 ],
 
+'wmgUseEntitySchema' => [
+	'default' => false,
+],
+
 'wmgUseFlow' => [
 	'default' => false,
 	'flow' => true,

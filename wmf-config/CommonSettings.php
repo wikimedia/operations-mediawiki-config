@@ -2929,6 +2929,10 @@ if ( $wmgUseThanks ) {
 	wfLoadExtension( 'Thanks' );
 }
 
+if ( $wmgUseEntitySchema ) {
+	wfLoadExtension( 'EntitySchema' );
+}
+
 // Flow configuration
 
 // We always set this variable, as it's required by the create table
