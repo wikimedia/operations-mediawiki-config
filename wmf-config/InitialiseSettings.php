@@ -19752,38 +19752,6 @@ $wgConf->settings = [
 		0,
 	]
 ],
-'wmgWikibaseClientPageSchemaSplitTestSamplingRatio' => [
-	// 100% of pages will be sampled. Half of those (.5) will receive the new treatment.
-	'default' => 1,
-
-	// Do not test on the Indonesian, Portuguese, Punjabi, Dutch, Korean, Bhojpuri, Cherokee,
-	// Kazakh, Catalan, French, Yoruba, and Kalmyk Wikipedias. These Wikipedias have been identified
-	// as good control candidates or are part of another ongoing test.
-	'idwiki' => 0,
-	'ptwiki' => 0,
-	'pawiki' => 0,
-	'pnbwiki' => 0,
-	'nlwiki' => 0,
-	'nds_nlwiki' => 0,
-	'kowiki' => 0,
-	'bhwiki' => 0,
-	'chrwiki' => 0,
-	'kkwiki' => 0,
-	'cawiki' => 0,
-	'frwiki' => 0,
-	'yowiki' => 0,
-	'xalwiki' => 0,
-],
-'wmgWikibaseClientPageSchemaSplitTestBuckets' => [
-	// Pages are bucketed in [0, .5) for control and [.5, 1) for treatment. If a page is sampled
-	// and bucketed in treatment, it will contain the new schema changes. Otherwise, it will have
-	// no changes.
-	'default' => [
-		'control',
-		'treatment',
-	]
-],
-// ---/T208755---
 
 'wmgUseWikibaseWikimediaBadges' => [
 	'default' => false,

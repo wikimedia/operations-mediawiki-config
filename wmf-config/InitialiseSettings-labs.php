@@ -1115,23 +1115,6 @@ function wmfLabsSettings() {
 			],
 		],
 
-		// T208763
-		//
-		'wmgWikibaseClientPageSchemaSplitTestSamplingRatio' => [
-			// 50% of pages on the Beta Cluster will be sampled. Half of those (25%) will receive the new
-			// treatment.
-			'default' => 0.5,
-		],
-		'wmgWikibaseClientPageSchemaSplitTestBuckets' => [
-			// Pages are bucketed in [0, .5) for control and [.5, 1) for treatment. If a page is sampled
-			// and bucketed in treatment, it will contain the new schema changes. Otherwise, it will have
-			// no changes.
-			'default' => [
-				'control',
-				'treatment',
-			]
-		],
-
 		// T209143
 		'wmgWikibaseUseSSRTermbox' => [
 			'default' => false,
