@@ -526,6 +526,10 @@ function wmfLabsSettings() {
 			'default' => 'https://wikidata.beta.wmflabs.org/w/api.php',
 		],
 
+		'wmgUseEntitySchema' => [
+			'default' => true,
+		],
+
 		'wgLexemeLanguageCodePropertyId' => [
 			'default' => null,
 			'wikidatawiki' => 'P218',
