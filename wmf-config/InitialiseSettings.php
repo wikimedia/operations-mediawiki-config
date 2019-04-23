@@ -480,6 +480,7 @@ $wgConf->settings = [
 	'slwiktionary' => 'Europe/Ljubljana', // T142701
 	'sqwiki' => 'Europe/Berlin',
 	'sqwikinews' => 'Europe/Berlin',
+	'sqwikiquote' => 'Europe/Berlin',
 	'srwiki' => 'Europe/Berlin',
 	'srwikibooks' => 'Europe/Berlin',
 	'srwikiquote' => 'Europe/Berlin',
