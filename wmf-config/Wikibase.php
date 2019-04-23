@@ -310,14 +310,6 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings['pageSchemaNamespaces'] = $wmgWikibaseClientPageSchemaNamespaces;
 	}
 
-	if ( isset( $wmgWikibaseClientPageSchemaSplitTestSamplingRatio ) ) {
-		$wgWBClientSettings['pageSchemaSplitTestSamplingRatio'] = $wmgWikibaseClientPageSchemaSplitTestSamplingRatio;
-	}
-
-	if ( isset( $wmgWikibaseClientPageSchemaSplitTestBuckets ) ) {
-		$wgWBClientSettings['pageSchemaSplitTestBuckets'] = $wmgWikibaseClientPageSchemaSplitTestBuckets;
-	}
-
 	if ( isset( $wmgUseEntitySourceBasedFederation ) ) {
 		$wgWBClientSettings['useEntitySourceBasedFederation'] = $wmgUseEntitySourceBasedFederation;
 	}
