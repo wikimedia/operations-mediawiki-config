@@ -6976,6 +6976,8 @@ $wgConf->settings = [
 	'eowiktionary' => [
 		NS_USER => 'Uzanto', // T24426
 		NS_USER_TALK => 'Uzanta_diskuto',
+		102 => 'Aldono', // T221525
+		103 => 'Aldono-Diskuto',
 	],
 	'eswiktionary' => [
 		100 => 'Apéndice',
