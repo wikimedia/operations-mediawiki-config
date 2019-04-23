@@ -5509,11 +5509,19 @@ $wgConf->settings = [
 		'api-feature-usage' => 'debug',
 		'api-readonly' => 'debug',
 		'api-warning' => 'debug',
+		// ApiAction is being deprecated by api-request.
+		// https://phabricator.wikimedia.org/T214080
 		'ApiAction' => [
 			'udp2log' => false,
 			'logstash' => false,
 			'kafka' => 'debug',
 			'buffer' => true,
+		],
+		'api-request' => [
+			'udp2log' => false,
+			'logstash' => false,
+			'eventbus' => 'debug',
+			'buffer' => true
 		],
 		'authentication' => 'info',
 		'autoloader' => 'debug',  // ori, for T166759 (2017-06-02)
@@ -5655,12 +5663,9 @@ $wgConf->settings = [
 	],
 	'+group1' => [
 		'authorization' => [ 'udp2log' => 'info', 'logstash' => false ],
-		'api-request' => [ 'udp2log' => false, 'logstash' => false, 'eventbus' => 'debug', 'buffer' => true ],
-
 	],
 	'+group0' => [
 		'authorization' => [ 'udp2log' => 'info', 'logstash' => false ],
-		'api-request' => [ 'udp2log' => false, 'logstash' => false, 'eventbus' => 'debug', 'buffer' => true ],
 	],
 	'+arwiki' => [
 		'authorization' => [ 'udp2log' => 'info', 'logstash' => false ],
