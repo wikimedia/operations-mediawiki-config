@@ -165,6 +165,7 @@ $IP/extensions/WikibaseLexeme/extension.json
 $IP/extensions/WikibaseLexemeCirrusSearch/extension.json
 $IP/extensions/WikibaseMediaInfo/extension.json
 $IP/extensions/WikibaseQualityConstraints/extension.json
+$IP/extensions/WikibaseSchema/extension.json
 $IP/extensions/Wikidata.org/extension.json
 $IP/extensions/WikidataPageBanner/extension.json
 $IP/extensions/WikiEditor/extension.json
