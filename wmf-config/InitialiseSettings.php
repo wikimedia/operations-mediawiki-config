@@ -3566,6 +3566,7 @@ $wgConf->settings = [
 		'Author' => 100,
 		'Author_talk' => 101,
 		'Autor_diskuse' => 101,
+		'Edice_diskuse' => 103, // T221697
 	],
 	'+cswikiversity' => [
 		'WV' => NS_PROJECT,
@@ -6655,6 +6656,8 @@ $wgConf->settings = [
 	'cswikisource' => [
 		100 => 'Autor',
 		101 => 'Diskuse_k_autorovi',
+		102 => 'Edice', // T221697
+		103 => 'Diskuse_k_edici', // T221697
 	],
 	'dawikisource' => [
 		102 => 'Forfatter', // T9796
