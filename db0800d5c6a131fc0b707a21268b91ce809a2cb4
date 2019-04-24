@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce11fbb5_423de171",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 6659,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-04-24T17:16:51Z",
+      "side": 1,
+      "message": "102 seems to be an Author namespace on many Wikisources. I guess we don’t need to keep that reserved (Author is already 100 on cswikisource, it looks like), but do you know if there is any semi-standard namespace number for editions on Wikisources? (I couldn’t find any.)",
+      "range": {
+        "startLine": 6659,
+        "startChar": 2,
+        "endLine": 6659,
+        "endChar": 5
+      },
+      "revId": "db0800d5c6a131fc0b707a21268b91ce809a2cb4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
