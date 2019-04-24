@@ -6655,6 +6655,8 @@ $wgConf->settings = [
 	'cswikisource' => [
 		100 => 'Autor',
 		101 => 'Diskuse_k_autorovi',
+		102 => 'Edice', // T221697
+		103 => 'Diskuse_k_edici', // T221697
 	],
 	'dawikisource' => [
 		102 => 'Forfatter', // T9796
