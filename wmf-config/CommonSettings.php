@@ -652,6 +652,7 @@ if ( $wmgUseCORS ) {
 		'checkuser.wikimedia.org',
 		'collab.wikimedia.org',
 		'commons.wikimedia.org',
+		'commons.m.wikimedia.org',
 		'test-commons.wikimedia.org',
 		'donate.wikimedia.org',
 		'exec.wikimedia.org',
