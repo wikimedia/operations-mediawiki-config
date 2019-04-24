@@ -18853,9 +18853,6 @@ $wgConf->settings = [
 	'wikidatawiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikidata-logo.svg.png',
 	'testwikidatawiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikidata-logo.svg.png',
 ],
-'wmgEchoUseCrossWikiBetaFeature' => [
-	'default' => false,
-],
 'wmgEchoCrossWikiByDefault' => [
 	'default' => true,
 	'private' => false,

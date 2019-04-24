@@ -2807,10 +2807,8 @@ if ( $wmgUseEcho ) {
 
 	// CentralAuth is extra check to be absolutely sure we don't enable on non-SUL
 	// wikis.
-	if ( $wmgUseCentralAuth && ( $wmgEchoUseCrossWikiBetaFeature || $wmgEchoCrossWikiByDefault ) ) {
+	if ( $wmgUseCentralAuth && $wmgEchoCrossWikiByDefault ) {
 		$wgEchoCrossWikiNotifications = true;
-		// Whether to make the cross-wiki notifications beta feature available
-		$wgEchoUseCrossWikiBetaFeature = $wmgEchoUseCrossWikiBetaFeature;
 		if ( $wmgEchoCrossWikiByDefault ) {
 			$wgDefaultUserOptions['echo-cross-wiki-notifications'] = 1;
 		}
