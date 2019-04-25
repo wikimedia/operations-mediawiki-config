@@ -177,13 +177,13 @@ $wgLBFactoryConf = [
 	],
 	's8' => [
 		'db2079'      => 0,  # A5 3.3TB 512GB, # master
-		'db2045'      => 10,   # B3 2.9TB 160GB, old master # vslow, dump
-		'db2080'      => 50,  # C5 3.3TB 512GB, api
-		'db2081'      => 50,  # A6 3.3TB 512GB, api
-		'db2082'      => 100, # B6 3.3TB 512GB # master for sanitarium db2094
-		'db2083'      => 100, # C6 3.3TB 512GB
-		'db2085:3318' => 1,   # A5 3.3TB 512GB # rc, log: s1 and s8
-		'db2086:3318' => 1,   # B1 3.3TB 512GB # rc, log: s7 and s8
+		# 'db2045'      => 10,   # B3 2.9TB 160GB, old master # vslow, dump # to be moved to x1
+		'db2080'      => 200,  # C5 3.3TB 512GB, api # candidate master
+		'db2081'      => 200,  # A6 3.3TB 512GB, api
+		'db2082'      => 1, # B6 3.3TB 512GB # vslow,dump # master for sanitarium db2094
+		'db2083'      => 500, # C6 3.3TB 512GB
+		'db2085:3318' => 100,   # A5 3.3TB 512GB # rc, log: s1 and s8
+		'db2086:3318' => 100,   # B1 3.3TB 512GB # rc, log: s7 and s8
 	],
 
 	'wikitech' => [
@@ -509,10 +509,10 @@ $wgLBFactoryConf = [
 			'db2086:3318' => 1,
 		],
 		'dump' => [
-			'db2045' => 1,
+			'db2082' => 1,
 		],
 		'vslow' => [
-			'db2045' => 1,
+			'db2082' => 1,
 		],
 		'api' => [
 			'db2080' => 1,
