@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "110d2246_c0f0a513",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 6980,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-04-25T11:21:49Z",
+      "side": 1,
+      "message": "The task description says “Aldono-Diskuto” (with hyphen and uppercase D). Which one is correct, the task or this change?",
+      "range": {
+        "startLine": 6980,
+        "startChar": 10,
+        "endLine": 6980,
+        "endChar": 24
+      },
+      "revId": "90071e94e86d58a035fe0b11db7a9528d0d75084",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
