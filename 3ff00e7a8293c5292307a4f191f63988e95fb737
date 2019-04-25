@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "74107f2c_b456fe6a",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 2383,
+      "author": {
+        "id": 15
+      },
+      "writtenOn": "2019-04-25T19:00:36Z",
+      "side": 1,
+      "message": "Initiatives vs Iniciatives",
+      "revId": "3ff00e7a8293c5292307a4f191f63988e95fb737",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
