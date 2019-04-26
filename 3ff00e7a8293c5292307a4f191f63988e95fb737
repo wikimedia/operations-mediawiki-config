@@ -16,6 +16,24 @@
       "revId": "3ff00e7a8293c5292307a4f191f63988e95fb737",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c7f0f8c3_0b02245f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 2383,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2019-04-26T15:58:32Z",
+      "side": 1,
+      "message": "Thank you, Dzahn. Find and replaces doesn\u0027t catch that :-). Fixed.",
+      "parentUuid": "74107f2c_b456fe6a",
+      "revId": "3ff00e7a8293c5292307a4f191f63988e95fb737",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
