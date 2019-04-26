@@ -172,6 +172,12 @@ $wgOpenStackManagerProxyGateways = [ 'eqiad' => '208.80.155.156' ];
 // by /etc/mediawiki/WikitechPrivateSettings.php
 $wmfPhabricatorApiToken = false;
 
+// Dummy settings for Gerrit api access to be used by the BlockIpComplete hook
+// that tries to disable Gerrit accounts. Real values should be provided by
+// /etc/mediawiki/WikitechPrivateSettings.php
+$wmfGerritApiUser = false;
+$wmfGerritApiPassword = false;
+
 # This must be loaded AFTER OSM, to overwrite it's defaults
 # Except when we're not an OSM host and we're running like a maintenance script.
 if ( file_exists( '/etc/mediawiki/WikitechPrivateSettings.php' ) ) {
@@ -258,6 +264,51 @@ $wgHooks['BlockIpComplete'][] = function ( $block, $user, $prior ) use ( $wmfPha
 		wfDebugLog(
 			'WikitechPhabBan',
 			"Unhandled error blocking Phabricator user: {$t}"
+		);
+	}
+};
+$wgHooks['BlockIpComplete'][] = function ( $block, $user, $prior ) use ( $wmfGerritApiUser, $wmfGerritApiPassword ) {
+	if ( !$wmfGerritApiUser
+		|| !$wmfGerritApiPassword
+		|| $block->getType() !== /* Block::TYPE_USER */ 1
+		|| $block->getExpiry() !== 'infinity'
+		|| !$block->isSitewide()
+	) {
+		// Nothing to do if we don't have config or if the block is not
+		// a site-wide indefinite block of a named user.
+		return;
+	}
+	try {
+		// Disable gerrit user tied to developer account
+		$gerritUrl = 'https://gerrit.wikimedia.org';
+		$username = strtolower( $block->getTarget()->getName() );
+		$ch = curl_init(
+			"{$gerritUrl}/r/a/accounts/" . urlencode( $username ) . '/active'
+		);
+		curl_setopt( $ch, CURLOPT_CUSTOMREQUEST, 'DELETE' );
+		curl_setopt(
+			$ch, CURLOPT_USERPWD,
+			"{$wmfGerritApiUser}:{$wmfGerritApiPassword}"
+		);
+		if ( !curl_exec( $ch ) ) {
+			wfDebugLog(
+				'WikitechGerritBan',
+				"Gerrit block of {$username} failed: " . curl_error( $ch )
+			);
+		} else {
+			$status = curl_getinfo( $ch, CURLINFO_HTTP_CODE );
+			if ( $status !== 204 ) {
+				wfDebugLog(
+					'WikitechGerritBan',
+					"Gerrit block of {$username} failed with status {$status}"
+				);
+			}
+		}
+		curl_close( $ch );
+	} catch ( Throwable $t ) {
+		wfDebugLog(
+			'WikitechGerritBan',
+			"Unhandled error blocking Gerrit user: {$t}"
 		);
 	}
 };
