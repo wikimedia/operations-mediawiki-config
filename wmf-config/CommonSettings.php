@@ -2209,10 +2209,7 @@ if ( $wmgUseUploadWizard ) {
 	// Enable Structured Data captions on upload
 	if ( $wmgUseWikibaseMediaInfo ) {
 		$wgUploadWizardConfig['wikibase']['enabled'] = true;
-
-		if ( $wmgMediaInfoEnableUploadWizardDepicts ) {
-			$wgUploadWizardConfig['wikibase']['depicts'] = true;
-		}
+		$wgUploadWizardConfig['wikibase']['statements'] = $wmgMediaInfoEnableUploadWizardStatements;
 	}
 }
 

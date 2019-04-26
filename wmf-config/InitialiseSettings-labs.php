@@ -558,7 +558,7 @@ function wmfLabsSettings() {
 		],
 
 		// … and $wgUploadWizardConfig
-		'wmgMediaInfoEnableUploadWizardDepicts' => [
+		'wmgMediaInfoEnableUploadWizardStatements' => [
 			'commonswiki' => true,
 		],
 
