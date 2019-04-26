@@ -16,6 +16,24 @@
       "revId": "0ce25e2bc2d232be42ef8fecef6441cfcade6543",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "91028dcc_fcab33ed",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2626
+      },
+      "writtenOn": "2019-04-26T13:26:05Z",
+      "side": 1,
+      "message": "yes, they\u0027re swatted, and yes, client wikis should get the update code by May, 2nd. Swatting late on May, 2nd should be the option then, if train finishes rolling.\nIf it is not possible on May, 2nd, I guess you might want to adjust configs on May, 6th then.",
+      "parentUuid": "2d49e583_6a872037",
+      "revId": "0ce25e2bc2d232be42ef8fecef6441cfcade6543",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
