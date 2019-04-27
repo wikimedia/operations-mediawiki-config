@@ -11013,7 +11013,11 @@ $wgConf->settings = [
 		'sysop' => [ 'flood' ],
 	],
 	'+enwikivoyage' => [
-		'sysop' => [ 'autopatrolled', 'templateeditor' ],
+		'sysop' => [
+			'autopatrolled',
+			'templateeditor',
+			'patroller' // T222008
+		],
 		'bureaucrat' => [ 'patroller' ],
 	],
 	'+enwikiversity' => [
@@ -11792,7 +11796,11 @@ $wgConf->settings = [
 		'sysop' => [ 'flood' ],
 	],
 	'+enwikivoyage' => [
-		'sysop' => [ 'autopatrolled', 'templateeditor' ],
+		'sysop' => [
+			'autopatrolled',
+			'templateeditor',
+			'patroller' // T222008
+		],
 		'bureaucrat' => [ 'sysop', 'patroller' ],
 	],
 	'+enwikiversity' => [
