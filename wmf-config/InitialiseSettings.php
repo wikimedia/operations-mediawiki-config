@@ -4857,6 +4857,12 @@ $wgConf->settings = [
 		'F' => NS_FILE, // T198007
 		'FT' => NS_FILE_TALK, // T198007
 	],
+	'+zhwiktionary' => [
+		'Appendix' => 100, // T222024
+		'附錄' => 100, // T222024
+		'Appendix_talk' => 101, // T222024
+		'附錄討論' => 101, // T222024
+	],
 	'+zh_yuewiki' => [
 		'WP' => NS_PROJECT,
 		'WT' => NS_PROJECT_TALK,
