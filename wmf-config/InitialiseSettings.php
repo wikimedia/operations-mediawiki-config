@@ -5669,6 +5669,12 @@ $wgConf->settings = [
 	],
 	'+group0' => [
 		'authorization' => [ 'udp2log' => 'info', 'logstash' => false ],
+		'cirrussearch-request' => [
+			'udp2log' => false,
+			'logstash' => false,
+			'eventbus' => 'debug',
+			'buffer' => true,
+		],
 	],
 	'+arwiki' => [
 		'authorization' => [ 'udp2log' => 'info', 'logstash' => false ],
@@ -22673,7 +22679,7 @@ $wgConf->settings = [
 ],
 
 'wmgCirrusSearchRequestEventSampling' => [
-	'default' => 0.0,
+	'default' => 1.0,
 ],
 
 'wmgWMESearchRelevancePages' => [
