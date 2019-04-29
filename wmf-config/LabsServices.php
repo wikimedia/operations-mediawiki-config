@@ -29,6 +29,11 @@ return [
 			// These MUST match the installed SSL certs
 			'deployment-elastic07.deployment-prep.eqiad.wmflabs',
 		],
+		// cloudelastic is not duplicated in labs, it is a write-only cluster and multi-cluster
+		// is sufficiently tested with the clusters above.
+		'cloudelastic-chi' => null,
+		'cloudelastic-psi' => null,
+		'cloudelastic-omega' => null,
 		'urldownloader' => 'http://deployment-urldownloader02.deployment-prep.eqiad.wmflabs:8080',
 		'parsoid' => 'http://deployment-parsoid09.deployment-prep.eqiad.wmflabs:8000',
 		'mathoid' => 'http://deployment-mathoid.eqiad.wmflabs:10042',
