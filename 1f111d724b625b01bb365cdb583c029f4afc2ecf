@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e89fd4c7_6683be03",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 309,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2019-04-29T02:41:43Z",
+      "side": 1,
+      "message": "Is it a good idea to suppress errors like that? IMO it would be nicer to rethrow or pass to MWExceptionHandler::logException.",
+      "revId": "1f111d724b625b01bb365cdb583c029f4afc2ecf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
