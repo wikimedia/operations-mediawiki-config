@@ -23038,10 +23038,8 @@ $wgConf->settings = [
 
 'wgGEHomepageNewAccountEnablePercentage' => [
 	'default' => 0,
-	// Tentatively scheduled to set to 50 on May 2, 2019
-	'cswiki' => 0,
-	// Tentatively scheduled to set to 50 on May 2, 2019
-	'kowiki' => 0,
+	'cswiki' => 50,
+	'kowiki' => 50,
 	'viwiki' => 0,
 ],
 
