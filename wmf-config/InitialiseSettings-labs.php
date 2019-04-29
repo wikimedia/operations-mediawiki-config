@@ -552,11 +552,6 @@ function wmfLabsSettings() {
 			'commonswiki' => true,
 		],
 
-		// Hard-enable 'depicts' statements for Beta Cluster Commons
-		'wgMediaInfoEnableFilePageDepicts' => [
-			'commonswiki' => true,
-		],
-
 		// … and $wgUploadWizardConfig
 		'wmgMediaInfoEnableUploadWizardStatements' => [
 			'commonswiki' => true,
