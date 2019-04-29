@@ -21219,10 +21219,12 @@ $wgConf->settings = [
 	'enwiki' => [
 		'eqiad' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-3', 'archive' => '0-2' ],
 		'codfw' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-3', 'archive' => '0-2' ],
+		'cloudelastic' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'archive' => '0-2' ],
 	],
 	'dewiki' => [
 		'eqiad' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-2', 'archive' => '0-2' ],
 		'codfw' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'archive' => '0-2' ],
+		'cloudelastic' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'archive' => '0-2' ],
 	],
 ],
 

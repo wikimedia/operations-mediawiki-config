@@ -55,6 +55,75 @@ $common = [
 	'cxserver' => 'http://cxserver.discovery.wmnet:8080',
 	'electron' => 'http://pdfrender.discovery.wmnet:5252',
 	'restbase' => 'http://restbase.discovery.wmnet:7231',
+
+	// cloudelastic only exists in eqiad. No load balancer is available due to
+	// the part of the network that they live in so each host is enumerated
+	'cloudelastic-chi' => [
+		[
+			'host' => 'cloudelastic1001.wikimedia.org',
+			'transport' => 'Https',
+			'port' => 9243,
+		],
+		[
+			'host' => 'cloudelastic1002.wikimedia.org',
+			'transport' => 'Https',
+			'port' => 9243,
+		],
+		[
+			'host' => 'cloudelastic1003.wikimedia.org',
+			'transport' => 'Https',
+			'port' => 9243,
+		],
+		[
+			'host' => 'cloudelastic1004.wikimedia.org',
+			'transport' => 'Https',
+			'port' => 9243,
+		]
+	],
+	'cloudelastic-psi' => [
+		[
+			'host' => 'cloudelastic1001.wikimedia.org',
+			'transport' => 'Https',
+			'port' => 9443,
+		],
+		[
+			'host' => 'cloudelastic1002.wikimedia.org',
+			'transport' => 'Https',
+			'port' => 9443,
+		],
+		[
+			'host' => 'cloudelastic1003.wikimedia.org',
+			'transport' => 'Https',
+			'port' => 9443,
+		],
+		[
+			'host' => 'cloudelastic1004.wikimedia.org',
+			'transport' => 'Https',
+			'port' => 9443,
+		]
+	],
+	'cloudelastic-omega' => [
+		[
+			'host' => 'cloudelastic1001.wikimedia.org',
+			'transport' => 'Https',
+			'port' => 9643,
+		],
+		[
+			'host' => 'cloudelastic1002.wikimedia.org',
+			'transport' => 'Https',
+			'port' => 9643,
+		],
+		[
+			'host' => 'cloudelastic1003.wikimedia.org',
+			'transport' => 'Https',
+			'port' => 9643,
+		],
+		[
+			'host' => 'cloudelastic1004.wikimedia.org',
+			'transport' => 'Https',
+			'port' => 9643,
+		]
+	]
 ];
 
 // Search will be directed to a local proxy from php7, while HHVM will
