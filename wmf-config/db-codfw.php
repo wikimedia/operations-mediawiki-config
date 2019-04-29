@@ -177,7 +177,6 @@ $wgLBFactoryConf = [
 	],
 	's8' => [
 		'db2079'      => 0,  # A5 3.3TB 512GB, # master
-		# 'db2045'      => 10,   # B3 2.9TB 160GB, old master # vslow, dump # to be moved to x1
 		'db2080'      => 200,  # C5 3.3TB 512GB, api # candidate master
 		'db2081'      => 200,  # A6 3.3TB 512GB, api
 		'db2082'      => 1, # B6 3.3TB 512GB # vslow,dump # master for sanitarium db2094
@@ -691,6 +690,7 @@ $wgLBFactoryConf = [
 	# ExtensionStore shard1
 	'extension1' => [
 		'10.192.0.87' => 1, # db2034, A5 3.5TB 160GB,
+		# 'db2045'      => 10,   # B3 2.9TB 160GB, # to be provisioned
 		'10.192.48.21' => 1, # db2069, D6 3.5TB 160GB # old master candidate master
 		'10.192.16.34' => 1, # db2096, B4 3.5TB 512GB
 	],
