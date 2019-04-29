@@ -14662,6 +14662,7 @@ $wgConf->settings = [
 
 'wgArticleCountMethod' => [
 	'default' => 'link',
+	'bgwikinews' => 'any', // T222044
 	'cswikinews' => 'any', // T45525
 	'enwikibooks' => 'any', // T29256, T188472
 	'fiwikinews' => 'any', // T216333
