@@ -23066,8 +23066,8 @@ $wgConf->settings = [
 		[
 			'class' => 'MediaWiki\\Extension\\WikimediaEditorTasks\\WikipediaAppDescriptionEditCounter',
 			'counter_key' => 'app_description_edits',
-			'target_counts' => [ 5, 50 ],
-			'delay' => 172800
+			'target_counts' => [ 3, 50 ],
+			'delay' => 86400
 		],
 	],
 ],
