@@ -23050,6 +23050,9 @@ $wgConf->settings = [
 'wgGEHomepageEnabled' => [
 	'default' => false,
 	'testwiki' => true,
+	'cswiki' => true,
+	'kowiki' => true,
+	'viwiki' => false,
 ],
 
 'wgGEHomepageLoggingEnabled' => [
@@ -23058,6 +23061,11 @@ $wgConf->settings = [
 
 'wgGEHomepageNewAccountEnablePercentage' => [
 	'default' => 0,
+	// Tentatively scheduled to set to 50 on May 6, 2019
+	'cswiki' => 0,
+	// Tentatively scheduled to set to 50 on May 6, 2019
+	'kowiki' => 0,
+	'viwiki' => 0,
 ],
 
 'wgGEHomepageTutorialTitle' => [
@@ -23071,6 +23079,8 @@ $wgConf->settings = [
 'wgGEHomepageMentorsList' => [
 	'default' => '',
 	'testwiki' => 'Wikipedia:Requests/Help desk/Mentors',
+	'cswiki' => 'Wikipedie:Potřebuji_pomoc/Mentoři',
+	'kowiki' => '위키백과:새_사용자_경험/새_사용자_멘토',
 ],
 
 'wgDisableRollbackConfirmationFeature' => [
