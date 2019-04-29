@@ -19540,6 +19540,7 @@ $wgConf->settings = [
 	'testwikidatawiki' => true,
 	'wikidatawiki' => true,
 	'testcommonswiki' => true,
+	'commonswiki' => true,
 ],
 
 'wmgWikibaseDispatchInterval' => [
