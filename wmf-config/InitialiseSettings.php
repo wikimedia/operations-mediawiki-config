@@ -19537,6 +19537,7 @@ $wgConf->settings = [
 
 'wmgWikibaseTmpSerializeEmptyListsAsObjects' => [
 	'default' => false,
+	'testwikidatawiki' => true,
 ],
 
 'wmgWikibaseDispatchInterval' => [
