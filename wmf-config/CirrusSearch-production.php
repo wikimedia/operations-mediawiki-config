@@ -50,10 +50,15 @@ $cirrusConfigUseHhvmPool = function ( $hosts, $pool ) {
 $wgCirrusSearchClusters = [
 	'eqiad-chi' => $cirrusConfigUseHhvmPool( $wmfAllServices['eqiad']['search-chi'], 'cirrus-eqiad' ) + [ 'group' => 'chi', 'replica' => 'eqiad' ],
 	'codfw-chi' => $cirrusConfigUseHhvmPool( $wmfAllServices['codfw']['search-chi'], 'cirrus-codfw' ) + [ 'group' => 'chi', 'replica' => 'codfw' ],
+	// cloudelastic servers talk directly, with no connection pool, as only jobrunners ever communicate with them. Additionally cloudelastic
+	// is only available in the 'production' realm, which this file services.
+	'cloudelastic-chi' => $wmfAllServices['eqiad']['cloudelastic-chi'] + [ 'group' => 'chi', 'replica' => 'cloudelastic' ],
 	'eqiad-psi' => $cirrusConfigUseHhvmPool( $wmfAllServices['eqiad']['search-psi'], 'cirrus-eqiad' ) + [ 'group' => 'psi', 'replica' => 'eqiad' ],
 	'codfw-psi' => $cirrusConfigUseHhvmPool( $wmfAllServices['codfw']['search-psi'], 'cirrus-codfw' ) + [ 'group' => 'psi', 'replica' => 'codfw' ],
+	'cloudelastic-psi' => $wmfAllServices['eqiad']['cloudelastic-psi'] + [ 'group' => 'psi', 'replica' => 'cloudelastic' ],
 	'eqiad-omega' => $cirrusConfigUseHhvmPool( $wmfAllServices['eqiad']['search-omega'], 'cirrus-eqiad' ) + [ 'group' => 'omega', 'replica' => 'eqiad' ],
 	'codfw-omega' => $cirrusConfigUseHhvmPool( $wmfAllServices['codfw']['search-omega'], 'cirrus-codfw' ) + [ 'group' => 'omega', 'replica' => 'codfw' ],
+	'cloudelastic-omega' => $wmfAllServices['eqiad']['cloudelastic-omega'] + [ 'group' => 'omega', 'replica' => 'cloudelastic' ],
 ];
 
 unset( $cirrusConfigUseHhvmPool );
@@ -85,12 +90,14 @@ $wgCirrusSearchEnableSearchLogging = true;
 $wgCirrusSearchShardCount = [
 	'eqiad' => $wmgCirrusSearchShardCount,
 	'codfw' => $wmgCirrusSearchShardCount,
+	'cloudelastic' => $wmgCirrusSearchShardCount,
 ];
 
 if ( ! isset( $wmgCirrusSearchReplicas['eqiad'] ) ) {
 	$wgCirrusSearchReplicas = [
 		'eqiad' => $wmgCirrusSearchReplicas,
 		'codfw' => $wmgCirrusSearchReplicas,
+		'cloudelastic' => $wmgCirrusSearchReplicas,
 	];
 }
 
@@ -98,11 +105,15 @@ if ( ! isset( $wmgCirrusSearchReplicas['eqiad'] ) ) {
 $wgCirrusSearchClientSideConnectTimeout = [
 	'eqiad' => $wmfDatacenter === 'eqiad' ? 5 : 10,
 	'codfw' => $wmfDatacenter === 'codfw' ? 5 : 10,
+	'cloudelastic' => $wmfDatacenter === 'eqiad' ? 5 : 10,
 ];
 
 $wgCirrusSearchDropDelayedJobsAfter = [
 	'eqiad' => $wgCirrusSearchDropDelayedJobsAfter,
 	'codfw' => $wgCirrusSearchDropDelayedJobsAfter,
+	// cloudelastic jobs are dropped after 15 minutes, it is not as important as prod services
+	// and can be backfilled as necessary.
+	'cloudelastic' => 900,
 ];
 
 $wgCirrusSearchRecycleCompletionSuggesterIndex = $wmgCirrusSearchRecycleCompletionSuggesterIndex;
