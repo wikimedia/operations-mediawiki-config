@@ -9671,12 +9671,10 @@ $wgConf->settings = [
 			'undelete' => true,
 			'unwatchedpages' => true,
 		],
-		'interface-editor' => [
+		'interface-admin' => [ // T222018
 			'delete' => true,
-			'editinterface' => true,
 			'editprotected' => true,
 			'editsemiprotected' => true,
-			'editsitejson' => true,
 			'ipblock-exempt' => true,
 			'suppressredirect' => true,
 		],
@@ -11220,7 +11218,7 @@ $wgConf->settings = [
 	],
 	'+jawiki' => [
 		'sysop' => [ 'abusefilter' ],
-		'bureaucrat' => [ 'rollbacker', 'eliminator', 'interface-editor' ],
+		'bureaucrat' => [ 'rollbacker', 'eliminator' ],
 	],
 	'+jawiktionary' => [
 		'sysop' => [ 'autopatrolled' ], // T63366
@@ -12012,7 +12010,7 @@ $wgConf->settings = [
 	],
 	'+jawiki' => [
 		'sysop' => [ 'abusefilter' ],
-		'bureaucrat' => [ 'rollbacker', 'eliminator', 'interface-editor' ],
+		'bureaucrat' => [ 'rollbacker', 'eliminator' ],
 	],
 	'+jawiktionary' => [
 		'sysop' => [ 'autopatrolled' ], // T63366
