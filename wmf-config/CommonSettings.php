@@ -3124,7 +3124,7 @@ if ( $wmgUseEventLogging ) {
 		$wgWMEStatsdBaseUri = '/beacon/statsv';
 		// Sampling rate: 1 out of N users will be directed to PHP7
 		// A value of 0 means no user will be sampled.
-		$wgWMEPhp7SamplingRate = 1000;
+		$wgWMEPhp7SamplingRate = 100;
 	}
 
 	// Depends on EventLogging
