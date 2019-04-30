@@ -34,6 +34,24 @@
       "revId": "1f111d724b625b01bb365cdb583c029f4afc2ecf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cc656645_f5d452c1",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 309,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2019-04-30T01:54:52Z",
+      "side": 1,
+      "message": "I don\u0027t think problems talking with gerrit could result in exceptions, curl methods never throw. But if something does throw, this will make it hard to notice. Exceptions should be logged to the exception channel. (Also, I think if someone needs to debug this they\u0027ll have an easier life if you just use MwHttpRequest which has better error reporting.)",
+      "parentUuid": "4e8046d5_c3420016",
+      "revId": "1f111d724b625b01bb365cdb583c029f4afc2ecf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
