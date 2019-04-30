@@ -1,0 +1,9 @@
+Verified+2: jenkins-bot
+Code-Review+1: Jforrester <jforrester@wikimedia.org>
+Code-Review+2: Effie Mouzeli <effie@wikimedia.org>
+Code-Review+1: Fsero <fsero@wikimedia.org>
+Submitted-by: Giuseppe Lavagetto <glavagetto@wikimedia.org>
+Submitted-at: Tue, 30 Apr 2019 15:05:20 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/506953
+Project: operations/mediawiki-config
+Branch: refs/heads/master
