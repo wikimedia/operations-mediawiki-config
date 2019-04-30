@@ -52,6 +52,24 @@
       "revId": "1f111d724b625b01bb365cdb583c029f4afc2ecf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "16df0ddd_83cf9693",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 309,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2019-04-30T16:58:55Z",
+      "side": 1,
+      "message": "Made a follow-up task for this cleanup: T222209",
+      "parentUuid": "cc656645_f5d452c1",
+      "revId": "1f111d724b625b01bb365cdb583c029f4afc2ecf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
