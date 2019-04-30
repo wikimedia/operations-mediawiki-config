@@ -22,6 +22,30 @@
       "revId": "094ce8e740d0c5f211e4551a1ab6a981a6100e15",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f460bb18_14142ac5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-04-30T11:08:51Z",
+      "side": 1,
+      "message": "True, but I don’t think it hurts either.",
+      "parentUuid": "457c00c1_ac64ae55",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 12
+      },
+      "revId": "094ce8e740d0c5f211e4551a1ab6a981a6100e15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
