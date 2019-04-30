@@ -16,6 +16,24 @@
       "revId": "1f111d724b625b01bb365cdb583c029f4afc2ecf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4e8046d5_c3420016",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 309,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2019-04-30T00:14:16Z",
+      "side": 1,
+      "message": "Failing an on-wiki block because of some problem talking to gerrit seems like a bad idea to me. That\u0027s why I\u0027m catching broadly and logging. If folks what the logging done differently, that\u0027s fine. I was just using the hammer I found lying on the tool bench.",
+      "parentUuid": "e89fd4c7_6683be03",
+      "revId": "1f111d724b625b01bb365cdb583c029f4afc2ecf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
