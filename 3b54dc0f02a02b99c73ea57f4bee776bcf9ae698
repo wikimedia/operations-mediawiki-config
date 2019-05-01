@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "39c88ec7_3f177dbe",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 370,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2019-05-01T21:55:30Z",
+      "side": 1,
+      "message": "I think it makes more sense for these two to be in the Echo block starting at line 2558 (which you\u0027re changing below)",
+      "revId": "3b54dc0f02a02b99c73ea57f4bee776bcf9ae698",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
