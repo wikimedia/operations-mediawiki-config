@@ -8614,16 +8614,6 @@ $wgConf->settings = [
 	'eswiki' => true,
 ],
 
-'wgReportToEndpoints' => [
-	'default' => [],
-	'ruwiki' => [
-		'https://ru.wikipedia.org/beacon/reporting',
-	],
-	'eswiki' => [
-		'https://es.wikipedia.org/beacon/reporting',
-	],
-],
-
 'wgFeaturePolicyReportOnly' => [
 	'default' => [],
 	'ruwiki' => [ "sync-xhr 'none'" ],
