@@ -203,14 +203,7 @@ if ( !$globals ) {
 	$globals = MWConfigCacheGenerator::getMWConfigForCacheing( $wgDBname, $wgConf );
 
 	# Save cache
-	@mkdir( '/tmp/mw-cache-' . $wmgVersionNumber );
-	$tmpFile = tempnam( '/tmp/', "conf-$wmgVersionNumber-$wgDBname" );
-	if ( $tmpFile && file_put_contents( $tmpFile, serialize( $globals ) ) ) {
-		if ( !rename( $tmpFile, $filename ) ) {
-			// T136258: Rename failed, cleanup temp file
-			unlink( $tmpFile );
-		};
-	}
+	MWConfigCacheGenerator::writeToSerialisedCache( $cacheDir, $cacheFilename, $globals );
 }
 
 extract( $globals );
