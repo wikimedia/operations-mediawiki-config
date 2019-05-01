@@ -76,4 +76,12 @@ class MWConfigCacheGenerator {
 		$wikiTags[] = $wgConf->get( 'wgLanguageCode', $wikiDBname, $dbSuffix, $confParams, $wikiTags );
 		$globals = $wgConf->getAll( $wikiDBname, $dbSuffix, $confParams, $wikiTags );
 	}
+
+	public static function readFromSerialisedCache( $cacheFile ) {
+		$cacheRecord = @file_get_contents( $cacheFile );
+		if ( $cacheRecord !== false ) {
+			return unserialize( $cacheRecord );
+		}
+		return null;
+	}
 }

@@ -187,17 +187,16 @@ $wmgVersionNumber = $multiVersion->getVersionNumber();
 
 # Try configuration cache
 
-$filename = "/tmp/mw-cache-$wmgVersionNumber/conf-$wgDBname";
+$cacheDir = "/tmp/mw-cache-$wmgVersionNumber";
+$cacheFilename = "conf-$wgDBname";
 if ( defined( 'HHVM_VERSION' ) ) {
-	$filename .= '-hhvm';
+	$cacheFilename .= '-hhvm';
 }
+$filename = $cacheDir . "/" . $cacheFilename;
 
 $globals = false;
 if ( @filemtime( $filename ) >= filemtime( "$wmfConfigDir/InitialiseSettings.php" ) ) {
-	$cacheRecord = @file_get_contents( $filename );
-	if ( $cacheRecord !== false ) {
-		$globals = unserialize( $cacheRecord );
-	}
+	$globals = MWConfigCacheGenerator::readFromSerialisedCache( $filename );
 }
 
 if ( !$globals ) {
