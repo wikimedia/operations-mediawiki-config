@@ -199,16 +199,6 @@ $wgHTCPRouting = [
 	]
 ];
 
-// Temporarily disable password resets. Revisit in 2 weeks
-$wgPasswordResetRoutes = false;
-// T218654
-$wgHooks['BlockIpComplete'][] = function ( $block, $performer, $priorBlock ) {
-	global $wgBlockDisablesLogin;
-	if ( $wgBlockDisablesLogin && $block->getTarget() instanceof User && $block->getExpiry() === 'infinity' && $block->isSitewide() ) {
-		MediaWiki\Auth\AuthManager::singleton()->revokeAccessForUser( $block->getTarget()->getName() );
-	}
-};
-
 // Attempt to disable related accounts when a developer account is
 // permablocked.
 $wgHooks['BlockIpComplete'][] = function ( $block, $user, $prior ) use ( $wmfPhabricatorApiToken ) {
