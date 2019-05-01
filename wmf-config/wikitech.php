@@ -199,8 +199,6 @@ $wgHTCPRouting = [
 	]
 ];
 
-// Temporarily disable password resets. Revisit in 2 weeks
-$wgPasswordResetRoutes = false;
 // T218654
 $wgHooks['BlockIpComplete'][] = function ( $block, $performer, $priorBlock ) {
 	global $wgBlockDisablesLogin;
