@@ -79,4 +79,19 @@ class MWConfigCacheGenerator {
 		}
 		return null;
 	}
+
+	public static function writeToSerialisedCache( $cacheDir, $cacheShard, $configObject ) {
+		@mkdir( $cacheDir );
+
+		$serialisedCacheObject = serialize( $configObject );
+
+		$tmpFile = tempnam( '/tmp/', $cacheShard );
+
+		if ( $tmpFile && file_put_contents( $tmpFile, $serialisedCacheObject ) ) {
+			if ( !rename( $tmpFile, $cacheDir . '/' . $cacheShard ) ) {
+				// T136258: Rename failed, cleanup temp file
+				unlink( $tmpFile );
+			};
+		}
+	}
 }
