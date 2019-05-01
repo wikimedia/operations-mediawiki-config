@@ -8626,8 +8626,8 @@ $wgConf->settings = [
 
 'wgFeaturePolicyReportOnly' => [
 	'default' => [],
-	'ruwiki' => [ 'sync-xhr', 'document-write', 'unsized-media' ],
-	'eswiki' => [ 'sync-xhr', 'document-write', 'unsized-media' ],
+	'ruwiki' => [ "sync-xhr 'none'", "document-write 'none'", "unsized-media 'none'" ],
+	'eswiki' => [ "sync-xhr 'none'", "document-write 'none'", "unsized-media 'none'" ],
 ],
 
 # groupOverrides @{
