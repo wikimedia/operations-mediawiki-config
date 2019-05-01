@@ -8579,6 +8579,8 @@ $wgConf->settings = [
 		'ArGnqY0sh9M9e+Dq0iYaBdxFMNUnFvtg+NlavaNt/GCiU2XS/UD2E++Pa/REpvXkMj4mP79rmGcsPkQ54PsAdAkAAABqeyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IkxheW91dEphbmtBUEkiLCJleHBpcnkiOjE1NjAzMzc2MTksImlzU3ViZG9tYWluIjp0cnVlfQ==',
 		// T216597 Event Timing, expires on 2019-05-29 (coincides with end of trial)
 		'AtMksQhRmZpsP42EMfzLN/jihicyFX5tQuSfuJFH3UDdxLHeb0XYIwrzEWML4hKJRZs7OGMj8bDdErm2PYh/4wQAAABoeyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IkV2ZW50VGltaW5nIiwiZXhwaXJ5IjoxNTU5MDg3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZX0=',
+		// T209572 Feature policy reporting, expires 2019-06-12, renewable until 2019-07-24
+		'AmOH8MYeXpdgDFadZqFCx+GcuJ5uNca4t6XwnBKA6tZSAOK5p/tR9IusLATP0yZ63gHtdhXstv9jpMhj4nQLgggAAABzeyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IkZlYXR1cmVQb2xpY3lSZXBvcnRpbmciLCJleHBpcnkiOjE1NjAzNDM5NDAsImlzU3ViZG9tYWluIjp0cnVlfQ==',
 	],
 	'eswiki' => [
 		// T216499 Priority Hints, expires on 2019-05-28, renewable until 2019-05-29
@@ -8589,6 +8591,8 @@ $wgConf->settings = [
 		'Ah/oetLmHjJoyoTFk5FyK0i6E25SHDYiWkOi/s/eHATR8p8TJRvvNxlwF4FajekkcsQIL9v1KhiBY3oPTfXEuwcAAABseyJvcmlnaW4iOiJodHRwczovL2VzLm0ud2lraXBlZGlhLm9yZzo0NDMiLCJmZWF0dXJlIjoiTGF5b3V0SmFua0FQSSIsImV4cGlyeSI6MTU1OTAzNzAwMSwiaXNTdWJkb21haW4iOnRydWV9',
 		// T216597 Event Timing, expires on 2019-05-29 (coincides with end of trial)
 		'AlTUR1e069KBKcnNPHcHoJki4b7OTwJFZZAsI8yDvSVSmvB7/LMQzMBvYcGeV2gxh5bdT62+6oJRfvOqMBkCDQAAAABqeyJvcmlnaW4iOiJodHRwczovL2VzLm0ud2lraXBlZGlhLm9yZzo0NDMiLCJmZWF0dXJlIjoiRXZlbnRUaW1pbmciLCJleHBpcnkiOjE1NTkwODc5OTksImlzU3ViZG9tYWluIjp0cnVlfQ==',
+		// T209572 Feature policy reporting, expires 2019-06-12, renewable until 2019-07-24
+		'Apnnt+ImX4D+lv5imLhYMLNOMA2OkTCqwk139XR0Gv36GVhMuH3GSYQ+MKSGbKm6I8mUdby08NRWFto7LyAfpAMAAAB1eyJvcmlnaW4iOiJodHRwczovL2VzLm0ud2lraXBlZGlhLm9yZzo0NDMiLCJmZWF0dXJlIjoiRmVhdHVyZVBvbGljeVJlcG9ydGluZyIsImV4cGlyeSI6MTU2MDM0NDAzNiwiaXNTdWJkb21haW4iOnRydWV9',
 	],
 ],
 
@@ -8608,6 +8612,22 @@ $wgConf->settings = [
 	'default' => false,
 	'ruwiki' => true,
 	'eswiki' => true,
+],
+
+'wgReportToEndpoints' => [
+	'default' => [],
+	'ruwiki' => [
+		'https://ru.wikipedia.org/beacon/reporting',
+	],
+	'eswiki' => [
+		'https://es.wikipedia.org/beacon/reporting',
+	],
+],
+
+'wgFeaturePolicyReportOnly' => [
+	'default' => [],
+	'ruwiki' => [ 'sync-xhr', 'document-write', 'unsized-media' ],
+	'eswiki' => [ 'sync-xhr', 'document-write', 'unsized-media' ],
 ],
 
 # groupOverrides @{
