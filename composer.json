@@ -12,7 +12,7 @@
 		"mediawiki/minus-x": "0.3.1"
 	},
 	"scripts": {
-		"lint": "parallel-lint --exclude vendor --ignore-fails .",
+		"lint": "parallel-lint --exclude vendor --exclude multiversion/vendor --ignore-fails .",
 		"phpcs": "phpcs -p -s",
 		"fix": [
 			"phpcbf",
