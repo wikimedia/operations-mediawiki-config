@@ -8571,12 +8571,12 @@ $wgConf->settings = [
 'wgOriginTrials' => [
 	'default' => [],
 	'ruwiki' => [
-		// T216499 Priority Hints, expires on 2019-05-13, renewable until 2019-05-29
-		'Apa99wRTZI4m5urwekOLNJowlsWH0BX15Sg1Lo/1BDFkbJAx9SjT3E4WwRU7Wqo1FCrV6NIVEbEIQ1Gvgls0uA0AAABqeyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IlByaW9yaXR5SGludHMiLCJleHBpcnkiOjE1NTc3NzU5NzAsImlzU3ViZG9tYWluIjp0cnVlfQ==',
-		// T216598 Element Timing for Images, expires on 2019-05-07, renewable until 2019-09-04
-		'AoD78afco+vEg78OklsVKj9ihT2miCnaMEp5EXT8xLIU2XM2Cxgyc2LNKj8Udf9Ry+y9YNtxLrmGGxu3n7qFgg0AAABweyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IkVsZW1lbnRUaW1pbmdJbWFnZXMiLCJleHBpcnkiOjE1NTcyMjIzNDcsImlzU3ViZG9tYWluIjp0cnVlfQ==',
-		// T216594 Layout Stability, expires on 2019-05-07, renewable until 2019-09-04
-		'AuQYzuuLO3A3VPePIRfKVSXIhxgeP6EI5QMoLJkkbjqsLwp8bKGH47moULCjjf3fciSjZIlbofgYkr353lWymg0AAABqeyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IkxheW91dEphbmtBUEkiLCJleHBpcnkiOjE1NTcyMjI2MDMsImlzU3ViZG9tYWluIjp0cnVlfQ==',
+		// T216499 Priority Hints, expires on 2019-05-29
+		'AnAFtuea7E4UBkJyTR4dXFknMKZYjA5Y8ohITioXGMfPjby/qQmNcjI5mpR5ajcs361GS0WO7RsywzIfi9chLwoAAABqeyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IlByaW9yaXR5SGludHMiLCJleHBpcnkiOjE1NTkwODc5OTksImlzU3ViZG9tYWluIjp0cnVlfQ==',
+		// T216598 Element Timing for Images, expires on 2019-06-12, renewable until 2019-09-04
+		'AoO5jEQfMKlbyFG0UWKyTmRk6m6enO8+XQGFoDIE3whfd/+x4feASe4FeyuHtclVfy6/FD6A6n1h6zHhZ3tvUggAAABweyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IkVsZW1lbnRUaW1pbmdJbWFnZXMiLCJleHBpcnkiOjE1NjAzMzc2NDgsImlzU3ViZG9tYWluIjp0cnVlfQ==',
+		// T216594 Layout Stability, expires on 2019-06-12, renewable until 2019-09-04
+		'ArGnqY0sh9M9e+Dq0iYaBdxFMNUnFvtg+NlavaNt/GCiU2XS/UD2E++Pa/REpvXkMj4mP79rmGcsPkQ54PsAdAkAAABqeyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IkxheW91dEphbmtBUEkiLCJleHBpcnkiOjE1NjAzMzc2MTksImlzU3ViZG9tYWluIjp0cnVlfQ==',
 		// T216597 Event Timing, expires on 2019-05-29 (coincides with end of trial)
 		'AtMksQhRmZpsP42EMfzLN/jihicyFX5tQuSfuJFH3UDdxLHeb0XYIwrzEWML4hKJRZs7OGMj8bDdErm2PYh/4wQAAABoeyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IkV2ZW50VGltaW5nIiwiZXhwaXJ5IjoxNTU5MDg3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZX0=',
 	],
