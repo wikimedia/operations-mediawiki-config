@@ -310,3 +310,19 @@ $wgHooks['BlockIpComplete'][] = function ( $block, $user, $prior ) use ( $wmfGer
 		);
 	}
 };
+
+/**
+ * Invalidates sessions of a blocked user and therefore logs them out.
+ */
+$wgHooks['BlockIpComplete'][] = function ( $block, $user, $prior ) {
+	if ( $block->getType() !== /* Block::TYPE_USER */ 1
+		|| $block->getExpiry() !== 'infinity'
+		|| !$block->isSitewide()
+	) {
+		// Nothing to do if we don't have config or if the block is not
+		// a site-wide indefinite block of a named user.
+		return;
+	}
+	$blockedUser = $block->getTarget();
+	MediaWiki\Session\SessionManager::singleton()->invalidateSessionsForUser( $blockedUser );
+};
