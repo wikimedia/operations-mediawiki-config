@@ -2900,9 +2900,6 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 		$wgGroupPermissions['*']['createaccount'] = false;
 	}
 
-	# temporary: disable signups on wikitech
-	$wgGroupPermissions['*']['createaccount'] = false;
-
 	// These are somehow not added as they are assigned to 'sysop' in the respective extension.json
 	$wgGroupPermissions['contentadmin']['nuke'] = true;
 	$wgGroupPermissions['contentadmin']['massmessage'] = true;
