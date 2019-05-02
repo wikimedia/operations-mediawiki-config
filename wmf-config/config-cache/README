@@ -1,0 +1,2 @@
+Configuration files are generated into this directory as part of the build process. They must not be
+edited manually. Run `composer build` to generate them.

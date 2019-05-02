@@ -23,6 +23,9 @@
 			"phpunit",
 			"composer phpcs",
 			"minus-x check ."
+		],
+		"build": [
+			"php -e tests/buildConfigCache.php"
 		]
 	},
 	"config": {

@@ -99,4 +99,19 @@ class MWConfigCacheGenerator {
 			};
 		}
 	}
+
+	public static function writeToStaticCache( $cacheDir, $cacheShard, $configObject ) {
+		$staticCacheObject = json_encode(
+			$configObject,
+			JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
+		) . "\n";
+
+		$tmpFile = tempnam( '/tmp/', "$cacheShard.json" );
+		if ( $tmpFile && file_put_contents( $tmpFile, $staticCacheObject ) ) {
+			if ( !rename( $tmpFile, $cacheDir . '/' . $cacheShard . ".json" ) ) {
+				// T136258: Rename failed, cleanup temp file
+				unlink( $tmpFile );
+			};
+		}
+	}
 }

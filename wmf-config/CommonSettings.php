@@ -204,6 +204,8 @@ if ( !$globals ) {
 
 	# Save cache
 	MWConfigCacheGenerator::writeToSerialisedCache( $cacheDir, $cacheFilename, $globals );
+
+	MWConfigCacheGenerator::writeToStaticCache( $wmfConfigDir . '/config-cache', $cacheFilename . '.json', $globals );
 }
 
 extract( $globals );
