@@ -13,7 +13,7 @@
 # For MediaWiki, this is included in multiversion/MWRealm.php.
 #
 
-$cluster = trim( file_get_contents( '/etc/wikimedia-cluster' ) );
+@$cluster = trim( file_get_contents( '/etc/wikimedia-cluster' ) ?: 'no-cluster-configured!' );
 if ( $cluster === 'labs' ) {
 	return [
 		'realm' => 'labs',
