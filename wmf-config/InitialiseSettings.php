@@ -977,6 +977,7 @@ $wgConf->settings = [
 	'plwikiquote' => '/static/images/project-logos/plwikiquote.png',
 	'rowikiquote' => '/static/images/project-logos/rowikiquote.png',
 	'ruwikiquote' => '/static/images/project-logos/ruwikiquote.png',
+	'sahwikiquote' => '/static/images/project-logos/sahwikiquote.png', // T222065
 	'sawikiquote' => '/static/images/project-logos/sawikiquote.png',  // T45812
 	'skwikiquote' => '/static/images/project-logos/skwikiquote.png',
 	'slwikiquote' => '/static/images/project-logos/slwikiquote.png',
@@ -1656,6 +1657,7 @@ $wgConf->settings = [
 	'mlwikiquote' => [ '1.5x' => '/static/images/project-logos/mlwikiquote-1.5x.png', '2x' => '/static/images/project-logos/mlwikiquote-2x.png' ], // T150618
 	'plwikiquote' => [ '1.5x' => '/static/images/project-logos/plwikiquote-1.5x.png', '2x' => '/static/images/project-logos/plwikiquote-2x.png' ], // T150618
 	'ruwikiquote' => [ '1.5x' => '/static/images/project-logos/ruwikiquote-1.5x.png', '2x' => '/static/images/project-logos/ruwikiquote-2x.png' ], // T197508
+	'sahwikiquote' => [ '1.5x' => '/static/images/project-logos/sahwikiquote-1.5x.png', '2x' => '/static/images/project-logos/sahwikiquote-2x.png' ], // T222065
 	'slwikiquote' => [ '1.5x' => '/static/images/project-logos/slwikiquote-1.5x.png', '2x' => '/static/images/project-logos/slwikiquote-2x.png' ], // T150618
 	'sqwikiquote' => [ '1.5x' => '/static/images/project-logos/sqwikiquote-1.5x.png', '2x' => '/static/images/project-logos/sqwikiquote-2x.png' ], // T150618
 	'srwikiquote' => [ '1.5x' => '/static/images/project-logos/srwikiquote-1.5x.png', '2x' => '/static/images/project-logos/srwikiquote-2x.png' ], // T150618 and T168444
