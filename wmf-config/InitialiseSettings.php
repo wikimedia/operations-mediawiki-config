@@ -22484,6 +22484,7 @@ $wgConf->settings = [
 	'sqwiki' => false,
 	'trwiki' => false,
 	'zh_classicalwiki' => false,
+	'zhwiki' => false, // T221933
 ],
 
 'wgKartographerUsePageLanguage' => [

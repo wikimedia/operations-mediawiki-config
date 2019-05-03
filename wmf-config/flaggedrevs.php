@@ -672,6 +672,14 @@ if ( $wgDBname == 'alswiki' ) {
 	$wgGroupPermissions['autoeditor']['autoconfirmed'] = true;
 
 	$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
+ } elseif ( $wgDBname === 'zhwiki' ) {
+	// New deployment per T221933
+
+	// Group permissions
+	$wgGroupPermissions['sysop']['autoreview'] = true;
+	$wgGroupPermissions['sysop']['review'] = true;
+	$wgGroupPermissions['rollbacker']['autoreview'] = true;
+	$wgGroupPermissions['rollbacker']['review'] = true;
  }
 
 # All wikis...
