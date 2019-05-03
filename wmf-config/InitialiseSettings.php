@@ -20707,6 +20707,7 @@ $wgConf->settings = [
 'wmgMediaInfoEnableUploadWizardStatements' => [
 	'default' => false,
 	'testcommonswiki' => true,
+	'commonswiki' => true,
 ],
 
 // Structured Data on Commons: Depicts-related configuration
