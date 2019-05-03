@@ -672,6 +672,28 @@ if ( $wgDBname == 'alswiki' ) {
 	$wgGroupPermissions['autoeditor']['autoconfirmed'] = true;
 
 	$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
+ } elseif ( $wgDBname === 'zhwiki' ) {
+	// New deployment per T221933
+	$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_PROJECT ];
+	$wgFlaggedRevsTags = [
+		'status' => [ 'levels' => 1, 'quality' => 2, 'pristine' => 3 ],
+	];
+	$wgFlaggedRevsTagsRestrictions = [
+		'status' => [ 'review' => 1, 'autoreview' => 1 ],
+	];
+	$wgFlaggedRevsOverride = false;
+	$wgFlaggedRevsRestrictionLevels = [ '', 'autoconfirmed' ];
+	$wgFlaggedRevsProtection = true;
+	$wgFlaggedRevsHandleIncludes = true;
+
+	// Group permissions
+	$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
+	$wgGroupPermissions['sysop']['autoreview'] = true;
+	$wgGroupPermissions['sysop']['review'] = true;
+	$wgGroupPermissions['sysop']['stablesettings'] = true;
+	$wgGroupPermissions['rollbacker']['autoreview'] = true;
+	$wgGroupPermissions['rollbacker']['review'] = true;
+	unset( $wgGroupPermissions['editor'], $wgGroupPermissions['autoreview'], $wgGroupPermissions['reviewer'] );
  }
 
 # All wikis...
