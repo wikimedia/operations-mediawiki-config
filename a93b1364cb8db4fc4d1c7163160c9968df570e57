@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "e773f1a1_9205f8ac",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2019-05-03T19:49:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f841a46e_e88747a2",
+      "range": {
+        "startLine": 330,
+        "startChar": 2,
+        "endLine": 330,
+        "endChar": 19
+      },
+      "revId": "a93b1364cb8db4fc4d1c7163160c9968df570e57",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cf68f928_a643cc62",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 2
@@ -96,6 +120,30 @@
     },
     {
       "key": {
+        "uuid": "fcfe720f_aea71be1",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 343,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2019-05-03T19:49:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5b07b46f_9fef8a73",
+      "range": {
+        "startLine": 343,
+        "startChar": 19,
+        "endLine": 343,
+        "endChar": 21
+      },
+      "revId": "a93b1364cb8db4fc4d1c7163160c9968df570e57",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fe53099e_dd20694c",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 2
@@ -131,6 +179,30 @@
       "side": 1,
       "message": "Ack",
       "parentUuid": "fe53099e_dd20694c",
+      "range": {
+        "startLine": 347,
+        "startChar": 39,
+        "endLine": 347,
+        "endChar": 40
+      },
+      "revId": "a93b1364cb8db4fc4d1c7163160c9968df570e57",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a9cdb270_f2d6f6dd",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 347,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2019-05-03T19:49:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eba8aa83_fc526df0",
       "range": {
         "startLine": 347,
         "startChar": 39,
