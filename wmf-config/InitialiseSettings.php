@@ -977,6 +977,7 @@ $wgConf->settings = [
 	'plwikiquote' => '/static/images/project-logos/plwikiquote.png',
 	'rowikiquote' => '/static/images/project-logos/rowikiquote.png',
 	'ruwikiquote' => '/static/images/project-logos/ruwikiquote.png',
+	'sahwikiquote' => '/static/images/project-logos/sahwikiquote.png', // T222065
 	'sawikiquote' => '/static/images/project-logos/sawikiquote.png',  // T45812
 	'skwikiquote' => '/static/images/project-logos/skwikiquote.png',
 	'slwikiquote' => '/static/images/project-logos/slwikiquote.png',
