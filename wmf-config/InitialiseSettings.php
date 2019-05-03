@@ -22483,6 +22483,7 @@ $wgConf->settings = [
 	'plwiki' => false,
 	'sqwiki' => false,
 	'trwiki' => false,
+	'zhwiki' => false, // T221933
 	'zh_classicalwiki' => false,
 ],
 
