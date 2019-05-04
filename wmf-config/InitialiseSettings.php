@@ -15007,6 +15007,7 @@ $wgConf->settings = [
 	'sewikimedia' => true, // T68374
 	'wikipedia' => true,
 	'enwikivoyage' => true, // T203981
+	'hewikivoyage' => true // T222017
 ],
 
 'wgPopupsPageBlacklist' => [
@@ -15060,12 +15061,12 @@ $wgConf->settings = [
 // T197719 Enable PagePreviews for all newly created accounts
 'wgPopupsOptInStateForNewAccounts' => [
 	'default' => '1',
-	'enwikivoyage' => '1',
 ],
 
 'wgPopupsOptInDefaultState' => [
 	'default' => '0',
 	'enwikivoyage' => '1',
+	'hewikivoyage' => '1',
 ],
 
 // T160081 (and others): Make sure that Page Previews can detect the many, many
