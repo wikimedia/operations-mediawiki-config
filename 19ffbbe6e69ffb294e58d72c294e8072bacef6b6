@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2429bcfb_d62c8beb",
+        "filename": "wmf-config/flaggedrevs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 679,
+      "author": {
+        "id": 5163
+      },
+      "writtenOn": "2019-05-05T03:42:27Z",
+      "side": 1,
+      "message": "Does this override the original permission?",
+      "range": {
+        "startLine": 679,
+        "startChar": 1,
+        "endLine": 679,
+        "endChar": 33
+      },
+      "revId": "19ffbbe6e69ffb294e58d72c294e8072bacef6b6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "28cd5577_b11af07f",
+        "filename": "wmf-config/flaggedrevs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 680,
+      "author": {
+        "id": 5163
+      },
+      "writtenOn": "2019-05-05T03:42:27Z",
+      "side": 1,
+      "message": "movestable is granted to autoconfirmed by default. It\u0027s not necessary.",
+      "range": {
+        "startLine": 680,
+        "startChar": 2,
+        "endLine": 680,
+        "endChar": 23
+      },
+      "revId": "19ffbbe6e69ffb294e58d72c294e8072bacef6b6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
