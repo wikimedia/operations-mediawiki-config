@@ -14974,7 +14974,6 @@ $wgConf->settings = [
 		'visualeditor-visualdiffpage',       // [Editing] 2019-11-06 – Visual diffs
 		'fileexporter',                      // [WMDE TW] 2018-12-07 – FileExporter
 		'constraint-suggestions',            // [WMDE WD] 2019-04-16 – Wikibase ConstraintSuggestions
-		'php7',                              // [SrvcOps] 2019-11-07 — HHVM to PHP7 migration
 	],
 ],
 
