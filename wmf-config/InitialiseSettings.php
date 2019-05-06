@@ -20951,6 +20951,7 @@ $wgConf->settings = [
 'wmgCirrusSearchWriteClusters' => [
 	'default' => [ 'eqiad', 'codfw' ],
 	'group0' => [ 'eqiad', 'codfw', 'cloudelastic' ],
+	'private' => [ 'eqiad', 'codfw' ],
 ],
 
 'wmgCirrusSearchReplicaGroup' => [
