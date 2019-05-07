@@ -111,7 +111,6 @@ fiwikibooks
 fiwikisource
 fiwiktionary
 fjwiktionary
-foundationwiki
 fowiki
 frrwiki
 frwikibooks
@@ -131,7 +130,6 @@ guwiki
 guwikisource
 gvwiki
 hakwiki
-hewiki
 hewikibooks
 hewikiquote
 hewikisource
@@ -206,6 +204,7 @@ lijwiki
 liwiki
 liwiktionary
 lmowiki
+lowiki
 lowiktionary
 ltwiki
 ltwiktionary
@@ -242,6 +241,7 @@ newiki
 newiktionary
 newwiki
 nlwikibooks
+nlwikinews
 nlwikisource
 nlwikivoyage
 nlwiktionary
@@ -261,6 +261,7 @@ otrs_wikiwiki
 outreachwiki
 pamwiki
 pawiki
+pawikisource
 pawiktionary
 plwikibooks
 plwikinews
@@ -331,7 +332,6 @@ tawikinews
 tawikisource
 tawiktionary
 test2wiki
-testcommonswiki
 testwiki
 testwikidatawiki
 tewiki
@@ -385,5 +385,6 @@ zh_min_nanwiktionary
 zh_yuewiki
 zhwikibooks
 zhwikinews
+zhwikiquote
 zhwikisource
 zhwikivoyage
