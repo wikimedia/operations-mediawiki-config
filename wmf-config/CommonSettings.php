@@ -367,7 +367,7 @@ $wgGitInfoCacheDirectory = "$IP/cache/gitinfo";
 // @var string|bool: E-mail address to send notifications to, or false to disable notifications.
 $wmgAddWikiNotify = "newprojects@lists.wikimedia.org";
 
-// Comment out the following lines to get the old-style l10n caching -- TS 2011-02-22
+$wgLocalisationCacheConf['storeClass'] = LCStoreCDB::class;
 $wgLocalisationCacheConf['storeDirectory'] = "$IP/cache/l10n";
 $wgLocalisationCacheConf['manualRecache'] = true;
 
