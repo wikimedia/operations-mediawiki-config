@@ -80,6 +80,11 @@ if ( $wmgUseCentralAuth ) {
 	};
 }
 
+// T99740: Test LCStoreStaticArray on Beta testwiki — James F. 2019.05.07
+if ( $wgDBname === 'test2wiki' ) {
+	$wgLocalisationCacheConf['storeClass'] = 'array';
+}
+
 $wgLocalVirtualHosts = [
 	'wikipedia.beta.wmflabs.org',
 	'wiktionary.beta.wmflabs.org',
