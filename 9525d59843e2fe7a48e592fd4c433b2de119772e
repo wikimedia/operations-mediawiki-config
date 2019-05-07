@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "90e539db_62a758b1",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 3161,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-05-07T12:41:10Z",
+      "side": 1,
+      "message": "I might be mistaken but I believe this indirection via `wmg` is no longer mandatory and we can just set the variable name directly in InitialiseSettings.php.",
+      "revId": "9525d59843e2fe7a48e592fd4c433b2de119772e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
