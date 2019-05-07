@@ -638,10 +638,16 @@ function wmfLabsSettings() {
 			'deploymentwiki' => true,
 			'wikipedia' => true,
 		],
-		"wgMFContentProviderClass" => [
+		'wgMFContentProviderClass' => [
 			'default' => 'MobileFrontend\ContentProviders\DefaultContentProvider',
 			// T207508
 			'enwiki' => 'MobileFrontend\ContentProviders\MwApiContentProvider',
+			// For testing T216961
+			'dewiki' => 'MobileFrontend\ContentProviders\MwApiContentProvider',
+		],
+		'wgMFMwApiContentProviderBaseUri' => [
+			'default' => 'https://en.wikipedia.org/w/api.php',
+			'dewiki' => 'https://de.wikipedia.org/w/api.php',
 		],
 
 		// Test numeric sorting. See T8948.
