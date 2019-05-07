@@ -16,6 +16,24 @@
       "revId": "9525d59843e2fe7a48e592fd4c433b2de119772e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "18d80ed6_44e828ca",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 3161,
+      "author": {
+        "id": 866
+      },
+      "writtenOn": "2019-05-07T12:45:21Z",
+      "side": 1,
+      "message": "Yes. This can be removed.",
+      "parentUuid": "90e539db_62a758b1",
+      "revId": "9525d59843e2fe7a48e592fd4c433b2de119772e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
