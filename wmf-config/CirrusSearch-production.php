@@ -63,6 +63,9 @@ $wgCirrusSearchClusters = [
 
 unset( $cirrusConfigUseHhvmPool );
 
+// Limit archive indices to our internal search clusters (and not cloudelastic)
+$wgCirrusSearchPrivateClusters = [ 'eqiad', 'codfw' ];
+
 // TODO: Remove once running elastic 6.x
 // ref: https://github.com/elastic/elasticsearch/issues/26833
 $wgCirrusSearchElasticQuirks['cross_cluster_single_shard_search'] = true;
