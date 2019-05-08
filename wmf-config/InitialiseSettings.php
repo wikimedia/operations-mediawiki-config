@@ -23097,6 +23097,8 @@ $wgConf->settings = [
 	'default' => false,
 	'testwikidatawiki' => true,
 	'wikidatawiki' => true,
+	'testcommonswiki' => true,
+	'commonswiki' => true,
 ],
 'wgWikimediaEditorTasksUserCountsCluster' => [
 	'default' => 'extension1',
@@ -23110,7 +23112,13 @@ $wgConf->settings = [
 			'class' => 'MediaWiki\\Extension\\WikimediaEditorTasks\\WikipediaAppDescriptionEditCounter',
 			'counter_key' => 'app_description_edits',
 			'target_counts' => [ 3, 50 ],
-			'delay' => 86400
+			'delay' => 86400,
+		],
+		[
+			'class' => 'MediaWiki\\Extension\\WikimediaEditorTasks\\WikipediaAppCaptionEditCounter',
+			'counter_key' => 'app_caption_edits',
+			'target_counts' => [ 50 ],
+			'delay' => 86400,
 		],
 	],
 ],
