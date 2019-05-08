@@ -14969,7 +14969,6 @@ $wgConf->settings = [
 		'cx',                                // [LangEng] 2019-11-07 - ContentTranslation
 		'twocolconflict',                    // [WMDE TW] 2019-10-30 – New edit conflict view
 		'rcenhancedfilters',                 // [Growth*] 2018-12-18 - Enhanced watchlist filters
-		'advancedsearch',                    // [WMDE TW] 2019-10-04 - Advanced Search
 		'visualeditor-visualdiffpage',       // [Editing] 2019-11-06 – Visual diffs
 		'fileexporter',                      // [WMDE TW] 2018-12-07 – FileExporter
 		'constraint-suggestions',            // [WMDE WD] 2019-04-16 – Wikibase ConstraintSuggestions
@@ -14979,10 +14978,6 @@ $wgConf->settings = [
 
 'wmgUseAdvancedSearch' => [
 	'default' => true,
-],
-
-'wgAdvancedSearchBetaFeature' => [
-	'default' => false, // T207639
 ],
 
 'wmgUseFileImporter' => [
