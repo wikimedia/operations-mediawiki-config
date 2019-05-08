@@ -41,10 +41,10 @@ $IP/extensions/DismissableSiteNotice/extension.json
 $IP/extensions/DonationInterface/extension.json
 $IP/extensions/DoubleWiki/extension.json
 $IP/extensions/DynamicSidebar/extension.json
-$IP/extensions/EUCopyrightCampaign/extension.json
 $IP/extensions/Echo/extension.json
 $IP/extensions/Elastica/extension.json
 $IP/extensions/ElectronPdfService/extension.json
+$IP/extensions/EUCopyrightCampaign/extension.json
 $IP/extensions/EventBus/extension.json
 $IP/extensions/EventLogging/extension.json
 $IP/extensions/ExtensionDistributor/extension.json
@@ -100,8 +100,8 @@ $IP/extensions/NewUserMessage/extension.json
 $IP/extensions/Nuke/extension.json
 $IP/extensions/OATHAuth/extension.json
 $IP/extensions/OAuth/extension.json
-$IP/extensions/ORES/extension.json
 $IP/extensions/OpenStackManager/OpenStackManager.php
+$IP/extensions/ORES/extension.json
 $IP/extensions/PageAssessments/extension.json
 $IP/extensions/PagedTiffHandler/extension.json
 $IP/extensions/PageImages/extension.json
@@ -112,10 +112,10 @@ $IP/extensions/ParsoidBatchAPI/extension.json
 $IP/extensions/PdfHandler/extension.json
 $IP/extensions/PerformanceInspector/extension.json
 $IP/extensions/Poem/extension.json
+$IP/extensions/PoolCounter/extension.json
 $IP/extensions/Popups/extension.json
 $IP/extensions/ProofreadPage/extension.json
 $IP/extensions/PropertySuggester/extension.json
-$IP/extensions/PoolCounter/extension.json
 $IP/extensions/QuickSurveys/extension.json
 $IP/extensions/Quiz/extension.json
 $IP/extensions/ReadingLists/extension.json
@@ -171,8 +171,8 @@ $IP/extensions/WikiEditor/extension.json
 $IP/extensions/wikihiero/extension.json
 $IP/extensions/WikiLove/extension.json
 $IP/extensions/WikimediaBadges/extension.json
-$IP/extensions/WikimediaEvents/extension.json
 $IP/extensions/WikimediaEditorTasks/extension.json
+$IP/extensions/WikimediaEvents/extension.json
 $IP/extensions/WikimediaIncubator/extension.json
 $IP/extensions/WikimediaMessages/extension.json
 $IP/extensions/XAnalytics/extension.json
