@@ -19175,7 +19175,7 @@ $wgConf->settings = [
 
 'wmgContentTranslationUnmodifiedMTThresholdForPublish' => [
 	'default' => 99,
-	'idwiki' => 35,
+	'idwiki' => 45,
 ],
 
 'wmgContentTranslationTranslateInTarget' => [
