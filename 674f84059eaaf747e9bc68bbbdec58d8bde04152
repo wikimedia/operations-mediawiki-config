@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "80bcce33_e6a37fbb",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 606,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2019-05-08T22:58:21Z",
+      "side": 1,
+      "message": "!",
+      "range": {
+        "startLine": 605,
+        "startChar": 19,
+        "endLine": 606,
+        "endChar": 50
+      },
+      "revId": "674f84059eaaf747e9bc68bbbdec58d8bde04152",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
