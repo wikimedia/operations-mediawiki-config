@@ -14968,7 +14968,6 @@ $wgConf->settings = [
 		'cx',                                // [Contrib] 2018-12-11 - ContentTranslation
 		'visualeditor-newwikitext',          // [Contrib] 2018-12-12 – New wikitext editor
 		'twocolconflict',                    // [WMDE TW] 2018-08-20 – New edit conflict view
-		'rcenhancedfilters',                 // [Contrib] 2018-12-18 - Enhanced watchlist filters
 		'advancedsearch',                    // [WMDE TW] 2018-12-18 - Advanced Search
 		'visualeditor-visualdiffpage',       // [Contrib] 2018-12-14 – Visual diffs
 		'fileexporter',                      // [WMDE TW] 2018-12-07 – FileExporter
