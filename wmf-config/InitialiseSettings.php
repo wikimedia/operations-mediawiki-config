@@ -14960,21 +14960,21 @@ $wgConf->settings = [
 // DO NOT add entries here without OK from Greg Grossmeier or James Forrester.
 'wgBetaFeaturesWhitelist' => [
 	'default' => [
-		'visualeditor-enable',               // [Contrib] On-going (special permission) – VisualEditor
-		'beta-feature-flow-user-talk-page',  // [Contrib] On-going (special permission) – Flow opt-in
-		'uls-compact-links',                 // [Contrib] 2018-09-13 – Compact language links
-		'popups',                            // [Readers] 2018-12-11 – Page Previews
-		'popupsreferencepreviews',           // [WMDE TW] 2018-02-28 – Reference Previews
-		'cx',                                // [Contrib] 2018-12-11 - ContentTranslation
-		'visualeditor-newwikitext',          // [Contrib] 2018-12-12 – New wikitext editor
-		'twocolconflict',                    // [WMDE TW] 2018-08-20 – New edit conflict view
-		'rcenhancedfilters',                 // [Contrib] 2018-12-18 - Enhanced watchlist filters
-		'advancedsearch',                    // [WMDE TW] 2018-12-18 - Advanced Search
-		'visualeditor-visualdiffpage',       // [Contrib] 2018-12-14 – Visual diffs
+		'visualeditor-enable',               // [Editing] On-going (special permission) – VisualEditor
+		'beta-feature-flow-user-talk-page',  // [Growth*] On-going (special permission) – Flow opt-in
+		'visualeditor-newwikitext',          // [Editing] On-going (special permission) – New wikitext editor
+		'uls-compact-links',                 // [LangEng] 2018-09-13 – Compact language links (Wikisource only)
+		'popups',                            // [WebTeam] 2019-10-04 – Page Previews
+		'popupsreferencepreviews',           // [WMDE TW] 2019-10-04 – Reference Previews
+		'cx',                                // [LangEng] 2019-11-07 - ContentTranslation
+		'twocolconflict',                    // [WMDE TW] 2019-10-30 – New edit conflict view
+		'rcenhancedfilters',                 // [Growth*] 2018-12-18 - Enhanced watchlist filters
+		'advancedsearch',                    // [WMDE TW] 2019-10-04 - Advanced Search
+		'visualeditor-visualdiffpage',       // [Editing] 2019-11-06 – Visual diffs
 		'fileexporter',                      // [WMDE TW] 2018-12-07 – FileExporter
 		'constraint-suggestions',            // [WMDE WD] 2019-04-16 – Wikibase ConstraintSuggestions
-		'templatewizard-betafeature',        // [Contrib] 2019-04-18 - TemplateWizard
-		'php7',                              // [SRE Services] 2019-07-24 — HHVM to PHP7 migration
+		'templatewizard-betafeature',        // [ComTech] 2019-04-18 - TemplateWizard
+		'php7',                              // [SrvcOps] 2019-11-07 — HHVM to PHP7 migration
 	],
 ],
 
