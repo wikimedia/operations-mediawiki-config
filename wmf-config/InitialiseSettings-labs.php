@@ -1398,6 +1398,7 @@ function wmfLabsSettings() {
 		'wmgUseWikimediaEditorTasks' => [
 			'default' => false,
 			'wikidatawiki' => true,
+			'commonswiki' => true,
 		],
 		'wgWikimediaEditorTasksUserCountsCluster' => [
 			'default' => false,
