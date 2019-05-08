@@ -14976,10 +14976,6 @@ $wgConf->settings = [
 	],
 ],
 
-'wmgUseAdvancedSearch' => [
-	'default' => true,
-],
-
 'wmgUseFileImporter' => [
 	'default' => false,
 	'testwiki' => 'FileImporter-WikimediaSitesTableSite',
