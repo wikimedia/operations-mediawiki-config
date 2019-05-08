@@ -578,6 +578,8 @@ $wgLBFactoryConf = [
 	'db1121' => '10.64.32.12', # do not remove or comment out
 	'db1122' => '10.64.48.34', # do not remove or comment out
 	'db1123' => '10.64.48.35', # do not remove or comment out
+	'db1127' => '10.64.0.97', # do not remove or comment out
+	'db1137' => '10.64.48.111', # do not remove or comment out
 	'db2034' => '10.192.0.87', # do not remove or comment out
 	'db2035' => '10.192.16.73', # do not remove or comment out
 	'db2036' => '10.192.32.7', # do not remove or comment out
@@ -682,8 +684,10 @@ $wgLBFactoryConf = [
 	# ExtensionStore shard1
 	'extension1' => [
 		'10.64.0.108' => 0, # db1069, A1 2.8TB 160GB # master
-		'10.64.48.19' => 1, # db1064, D1 2.8TB 160GB
+		'10.64.48.19' => 1, # db1064, D1 2.8TB 160GB # to be decommissioned
 		'10.64.32.11' => 2, # db1120, C5 3.6TB 512GB
+		'10.64.0.97' => 1, # db1127, C5 3.6TB 512GB
+		'10.64.48.111' => 1, # db1137, C5 3.6TB 512GB
 	],
 ],
 
