@@ -162,6 +162,7 @@ $wgLBFactoryConf = [
 		'db1096:3316' => 1, # A6 3.6TB 512GB # rc, log: s5 and s6
 		'db1098:3316' => 1, # B5 3.6TB 512GB # rc, log: s6 and s7
 		'db1113:3316' => 1, # B8 3.6TB 512GB # vslow, dump: s5 and s6
+		'db1131' => 1,      # B5 4.4TB 512GB,# future candidate master
 	],
 	's7' => [
 		'db1062' => 0,      # D4 2.8TB 128GB, master
@@ -579,6 +580,7 @@ $wgLBFactoryConf = [
 	'db1122' => '10.64.48.34', # do not remove or comment out
 	'db1123' => '10.64.48.35', # do not remove or comment out
 	'db1127' => '10.64.0.97', # do not remove or comment out
+	'db1131' => '10.64.16.34', # do not remove or comment out
 	'db1137' => '10.64.48.111', # do not remove or comment out
 	'db2034' => '10.192.0.87', # do not remove or comment out
 	'db2035' => '10.192.16.73', # do not remove or comment out
