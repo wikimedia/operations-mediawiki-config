@@ -1404,7 +1404,7 @@ function wmfLabsSettings() {
 			'default' => false,
 		],
 		'wgWikimediaEditorTasksUserCountsDatabase' => [
-			'default' => 'wikidatawiki',
+			'default' => false,
 		],
 	];
 } # wmflLabsSettings()
