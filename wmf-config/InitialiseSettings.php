@@ -22448,6 +22448,14 @@ $wgConf->settings = [
 	'votewiki' => 'TYPE_JOB',
 ],
 
+'wgEventBusEventDestination' => [
+	'default' => [
+		'mediawiki.user-blocks-change' => 'eventgate-main',
+		'mediawiki.revision-tags-change' => 'eventgate-main',
+		'default' => 'eventbus',
+	],
+],
+
 'wmgUseCapiunto' => [
 	'default' => false,
 	'wikidataclient-test' => true,

@@ -3683,6 +3683,7 @@ if ( $wmgUseEventBus ) {
 		'eventbus' => [
 			'url' => "{$wmfLocalServices['eventbus']}/v1/events",
 			'timeout' => 60,
+			'factory' => 'EventBusEventFactory',
 		],
 		'eventgate-analytics' => [
 			'url' => "{$wmfLocalServices['eventgate-analytics']}/v1/events?hasty=true",
