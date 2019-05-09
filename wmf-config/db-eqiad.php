@@ -129,7 +129,7 @@ $wgLBFactoryConf = [
 		'db1122' => 500,    # D6 3.6TB 512GB, api
 		'db1103:3312' => 150, # A3 3.6TB 512GB # rc, log: s2 and s4
 		'db1105:3312' => 150, # C3 3.6TB 512GB # rc, log: s1 and s2
-		'db1129' => 500,     # A8 4.4TB 512GB
+		'db1129' => 500,     # A8 4.4TB 512GB, api
 	],
 	/* s3 */ 'DEFAULT' => [
 		'db1075' => 0,      # A2 3.6TB 512GB, master
@@ -307,6 +307,7 @@ $wgLBFactoryConf = [
 			'db1074' => 2,
 			'db1076' => 1,
 			'db1122' => 1,
+			'db1129' => 1,
 		],
 		'watchlist' => [
 			'db1103:3312' => 1,
