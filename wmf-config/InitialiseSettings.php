@@ -17072,6 +17072,14 @@ $wgConf->settings = [
 	'test2wiki' => true,
 ],
 
+'wgMinervaOverflowInPageActions' => [
+	'default' => [
+		'base' => false,
+		'beta' => false,
+		'amc' => true, // T223883
+	],
+],
+
 'wgMinervaEnableSiteNotice' => [
 	'default' => false,
 	'arwiki' => true,
