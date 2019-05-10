@@ -25,6 +25,8 @@ $wgLBFactoryConf = [
 
 'class' => 'LBFactoryMulti',
 
+'secret' => $wgSecretKey,
+
 'sectionsByDB' => [
 	# s1: enwiki
 	'enwiki'       => 's1',
