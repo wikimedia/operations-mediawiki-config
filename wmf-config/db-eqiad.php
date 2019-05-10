@@ -753,6 +753,8 @@ $wgLBFactoryConf = [
 	# 's8'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
 ],
 
+'secret' => $wgSecretKey,
+
 ];
 
 $wgDefaultExternalStore = [
