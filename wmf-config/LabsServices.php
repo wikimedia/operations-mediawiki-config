@@ -36,7 +36,7 @@ return [
 		'cloudelastic-omega' => null,
 		'urldownloader' => 'http://deployment-urldownloader02.deployment-prep.eqiad.wmflabs:8080',
 		'parsoid' => 'http://deployment-parsoid09.deployment-prep.eqiad.wmflabs:8000',
-		'mathoid' => 'http://deployment-mathoid.eqiad.wmflabs:10042',
+		'mathoid' => 'http://deployment-docker-mathoid01.eqiad.wmflabs:10044',
 		'eventlogging' => 'udp://deployment-eventlogging03.eqiad.wmflabs:8421',
 		'eventbus' => 'http://deployment-kafka-main-1.deployment-prep.eqiad.wmflabs:8085',
 		'eventgate-analytics' => 'http://deployment-eventgate-analytics-1.deployment-prep.eqiad.wmflabs:8192',
