@@ -13310,6 +13310,7 @@ $wgConf->settings = [
 	'default' => false,
 	'bnwikisource' => true,
 	'enwikisource' => true,
+	'pawikisource' => true,
 	'svwikisource' => true,
 	'tawikisource' => true,
 ],
