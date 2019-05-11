@@ -14790,6 +14790,7 @@ $wgConf->settings = [
 	'ukwiki' => true,
 	'urwiki' => true,
 	'zhwiki' => true,
+	'zhwikiversity' => true,
 	'zuwiki' => true,
 ],
 
