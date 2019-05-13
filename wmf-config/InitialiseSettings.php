@@ -5523,7 +5523,7 @@ $wgConf->settings = [
 		'api-request' => [
 			'udp2log' => false,
 			'logstash' => false,
-			'eventbus' => 'debug',
+			'eventbus' => false,
 			'buffer' => true
 		],
 		'authentication' => 'info',
@@ -5549,7 +5549,7 @@ $wgConf->settings = [
 		'cirrussearch-request' => [
 			'udp2log' => false,
 			'logstash' => false,
-			'eventbus' => 'debug',
+			'eventbus' => false,
 			'buffer' => true,
 		],
 		'CirrusSearchSlowRequests' => 'debug',
