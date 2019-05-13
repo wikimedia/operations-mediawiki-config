@@ -2304,6 +2304,11 @@ if ( $wmgUseCommonsMetadata ) {
 	wfLoadExtension( 'CommonsMetadata' );
 	$wgCommonsMetadataSetTrackingCategories = true;
 	$wgCommonsMetadataForceRecalculate = $wmgCommonsMetadataForceRecalculate;
+	// T222954: evict defective cache entries made while I2a316a758d7 was live
+	$wgHooks['ValidateExtendedMetadataCache'] = function( $timestamp, File $file ) {
+		$timestamp = wfTimestamp( TS_UNIX, $timestamp );
+		return $timestamp < 1557014400 /* 2019-05-05 */ || $timestamp > 1557792000 /* 2019-06-14 */;
+	};
 }
 
 if ( $wmgUseGWToolset ) {
