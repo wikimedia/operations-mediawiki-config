@@ -18935,6 +18935,10 @@ $wgConf->settings = [
 	'zerowiki' => false,
 ],
 
+'wgEntitySchemaShExSimpleUrl' => [
+	'default' => 'https://tools.wmflabs.org/shex-simple/wikidata/packages/shex-webapp/doc/shex-simple.html?data=Endpoint:%20https://query.wikidata.org/sparql&hideData&manifest=[]&textMapIsSparqlQuery'
+],
+
 'wmgUseFlow' => [
 	'default' => false,
 	'flow' => true,
