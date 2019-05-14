@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "06b97fd3_3e71b3cd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-05-14T12:52:35Z",
+      "side": 1,
+      "message": "Bug: T223120",
+      "revId": "2556d0b92ef69bc69dbd2e0dcddc7245496476e8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
