@@ -8117,6 +8117,10 @@ $wgConf->settings = [
 	'hiwiki' => true,
 	'hiwikiversity' => true, // T192427
 	'hrwiki' => true, // by request of stemd from #wikipedia-hr 2007-05-15 -jeronim
+	'hrwikibooks' => true, // T219617
+	'hrwikisource' => true, // T219617
+	'hrwikiquote' => true, // T219617
+	'hrwiktionary' => true, // T219617
 	'idwiki' => true, // T8042
 	'itwiki' => true,
 	'itwikinews' => true,
@@ -9562,6 +9566,26 @@ $wgConf->settings = [
 	'hrwiki' => [
 		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'rollback' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ],
+	],
+	'hrwikibooks' => [ // T219617
+		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'rollback' => true ],
+		'autopatrolled' => [ 'autopatrol' => true ],
+		'rollbacker' => [ 'rollback' => true ],
+	],
+	'hrwikisource' => [ // T219617
+		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'rollback' => true ],
+		'autopatrolled' => [ 'autopatrol' => true ],
+		'rollbacker' => [ 'rollback' => true ],
+	],
+	'hrwikiquote' => [ // T219617
+		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'rollback' => true ],
+		'autopatrolled' => [ 'autopatrol' => true ],
+		'rollbacker' => [ 'rollback' => true ],
+	],
+	'hrwiktionary' => [ // T219617
+		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'rollback' => true ],
+		'autopatrolled' => [ 'autopatrol' => true ],
+		'rollbacker' => [ 'rollback' => true ],
 	],
 	'huwiki' => [
 		'bot' => [ 'edittrustedprotected' => true ], // T194568
@@ -11196,6 +11220,22 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'patroller', 'autopatrolled' ],
 		'sysop' => [ 'patroller', 'autopatrolled' ],
 	],
+	'+hrwikibooks' => [ // T219617
+		'bureaucrat' => [ 'patroller', 'autopatrolled' ],
+		'sysop' => [ 'patroller', 'autopatrolled' ],
+	],
+	'+hrwikisource' => [ // T219617
+		'bureaucrat' => [ 'patroller', 'autopatrolled' ],
+		'sysop' => [ 'patroller', 'autopatrolled' ],
+	],
+	'+hrwikiquote' => [ // T219617
+		'bureaucrat' => [ 'patroller', 'autopatrolled' ],
+		'sysop' => [ 'patroller', 'autopatrolled' ],
+	],
+	'+hrwiktionary' => [ // T219617
+		'bureaucrat' => [ 'patroller', 'autopatrolled' ],
+		'sysop' => [ 'patroller', 'autopatrolled' ],
+	],
 	'+huwiki' => [
 		'bureaucrat' => [ 'templateeditor', 'interface-editor' ], // T74055, T109408
 	],
@@ -11980,6 +12020,22 @@ $wgConf->settings = [
 		'sysop' => [ 'autopatrolled' ], // T179251
 	],
 	'+hrwiki' => [
+		'bureaucrat' => [ 'patroller', 'autopatrolled' ],
+		'sysop' => [ 'patroller', 'autopatrolled' ],
+	],
+	'+hrwikibooks' => [ // T219617
+		'bureaucrat' => [ 'patroller', 'autopatrolled' ],
+		'sysop' => [ 'patroller', 'autopatrolled' ],
+	],
+	'+hrwikisource' => [ // T219617
+		'bureaucrat' => [ 'patroller', 'autopatrolled' ],
+		'sysop' => [ 'patroller', 'autopatrolled' ],
+	],
+	'+hrwikiquote' => [ // T219617
+		'bureaucrat' => [ 'patroller', 'autopatrolled' ],
+		'sysop' => [ 'patroller', 'autopatrolled' ],
+	],
+	'+hrwiktionary' => [ // T219617
 		'bureaucrat' => [ 'patroller', 'autopatrolled' ],
 		'sysop' => [ 'patroller', 'autopatrolled' ],
 	],
