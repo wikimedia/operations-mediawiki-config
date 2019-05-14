@@ -543,6 +543,10 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
+		'wmgWikibaseFeatureFlagWbeditentitySetAliasesToEmpty' => [
+			'default' => false,
+		],
+
 		'-wmgWikibaseSearchStatementBoosts' => [
 			'default' => []
 		],
