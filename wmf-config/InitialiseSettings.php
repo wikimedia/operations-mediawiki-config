@@ -19488,6 +19488,10 @@ $wgConf->settings = [
 	'commonswiki' => true,
 ],
 
+'wmgWikibaseFeatureFlagWbeditentitySetEmptyAliases' => [
+	'default' => false,
+],
+
 'wmgWikibaseDispatchInterval' => [
 	'default' => 25,
 ],

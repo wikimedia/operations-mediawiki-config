@@ -548,6 +548,11 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
+		'wmgWikibaseFeatureFlagWbeditentitySetEmptyAliases' => [
+			'default' => false,
+			'wikidatawiki' => true,
+		],
+
 		'-wmgWikibaseSearchStatementBoosts' => [
 			'default' => []
 		],

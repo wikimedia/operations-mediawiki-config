@@ -213,6 +213,9 @@ if ( $wmgUseWikibaseRepo ) {
 
 	// Temporary, T138104
 	$wgWBRepoSettings['tmpSerializeEmptyListsAsObjects'] = $wmgWikibaseTmpSerializeEmptyListsAsObjects;
+
+	// Temporary, T223300
+	$wgWBRepoSettings['featureFlagWbeditentitySetEmptyAliases'] = $wmgWikibaseFeatureFlagWbeditentitySetEmptyAliases;
 }
 
 if ( $wmgUseWikibaseClient ) {
