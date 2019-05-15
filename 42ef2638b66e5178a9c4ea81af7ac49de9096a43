@@ -34,6 +34,24 @@
       "revId": "42ef2638b66e5178a9c4ea81af7ac49de9096a43",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1229c7a0_e861d827",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3699,
+      "author": {
+        "id": 55
+      },
+      "writtenOn": "2019-05-15T16:26:47Z",
+      "side": 1,
+      "message": "Yeah we had 60 for eventgate analytics at first too.  Let\u0027s do 10 for eventgate-main",
+      "parentUuid": "3e476518_f56ffb7e",
+      "revId": "42ef2638b66e5178a9c4ea81af7ac49de9096a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
