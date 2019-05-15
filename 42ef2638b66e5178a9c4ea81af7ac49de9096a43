@@ -16,6 +16,24 @@
       "revId": "42ef2638b66e5178a9c4ea81af7ac49de9096a43",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3e476518_f56ffb7e",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3699,
+      "author": {
+        "id": 2681
+      },
+      "writtenOn": "2019-05-15T16:15:21Z",
+      "side": 1,
+      "message": "I\u0027ve used the same one we use for EventBus. Happy to change it, I also think 60 is an overkill.. I\u0027m fine with 10.",
+      "parentUuid": "ba4e129a_754a7057",
+      "revId": "42ef2638b66e5178a9c4ea81af7ac49de9096a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
