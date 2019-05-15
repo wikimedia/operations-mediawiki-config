@@ -42,7 +42,7 @@ return [
 		'eventgate-analytics' => 'http://deployment-eventgate-1.deployment-prep.eqiad.wmflabs:8192',
 		'eventgate-main' => 'http://deployment-eventgate-1.deployment-prep.eqiad.wmflabs:8292',
 		'upload' => 'deployment-ms-fe03.deployment-prep.eqiad.wmflabs',
-		'cxserver' => 'http://deployment-sca01.eqiad.wmflabs:8080',
+		'cxserver' => 'http://deployment-docker-cxserver01.eqiad.wmflabs:8080',
 		'irc' => 'irc.beta.wmflabs.org', // deployment-ircd
 		'redis_lock' => [
 			'rdb1' => 'deployment-memc04.deployment-prep.eqiad.wmflabs',
