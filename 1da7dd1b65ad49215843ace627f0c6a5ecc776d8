@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9f399581_29a7f02f",
+        "filename": "wmf-config/flaggedrevs.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 687,
+      "author": {
+        "id": 5163
+      },
+      "writtenOn": "2019-05-15T12:49:41Z",
+      "side": 1,
+      "message": "Should be FR_INCLUDES_CURRENT. https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/FlaggedRevs/+/wmf/1.34.0-wmf.5/FlaggedRevs.defines.php#15",
+      "range": {
+        "startLine": 687,
+        "startChar": 32,
+        "endLine": 687,
+        "endChar": 36
+      },
+      "revId": "1da7dd1b65ad49215843ace627f0c6a5ecc776d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
