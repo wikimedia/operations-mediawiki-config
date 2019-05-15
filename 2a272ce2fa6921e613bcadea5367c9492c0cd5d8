@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aa596347_577bc79b",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 10876,
+      "author": {
+        "id": 6729
+      },
+      "writtenOn": "2019-05-15T01:36:13Z",
+      "side": 1,
+      "message": "By default, no one can add the \"rollbacker\" group",
+      "range": {
+        "startLine": 10876,
+        "startChar": 2,
+        "endLine": 10876,
+        "endChar": 9
+      },
+      "revId": "2a272ce2fa6921e613bcadea5367c9492c0cd5d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4aa1c6a7_38af8511",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 11238,
+      "author": {
+        "id": 6729
+      },
+      "writtenOn": "2019-05-15T01:36:13Z",
+      "side": 1,
+      "message": "No group is given the power to add the \"rollbacker\" group",
+      "range": {
+        "startLine": 11223,
+        "startChar": 1,
+        "endLine": 11238,
+        "endChar": 3
+      },
+      "revId": "2a272ce2fa6921e613bcadea5367c9492c0cd5d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6682f0ee_7d0bd5c5",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 11670,
+      "author": {
+        "id": 6729
+      },
+      "writtenOn": "2019-05-15T01:36:13Z",
+      "side": 1,
+      "message": "By default, no group has the power to remove the \"rollbacker\" group",
+      "range": {
+        "startLine": 11670,
+        "startChar": 2,
+        "endLine": 11670,
+        "endChar": 9
+      },
+      "revId": "2a272ce2fa6921e613bcadea5367c9492c0cd5d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1b97de60_a1d54756",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 12041,
+      "author": {
+        "id": 6729
+      },
+      "writtenOn": "2019-05-15T01:36:13Z",
+      "side": 1,
+      "message": "No group is given the power to remove the \"rollbacker\" group",
+      "range": {
+        "startLine": 12026,
+        "startChar": 1,
+        "endLine": 12041,
+        "endChar": 3
+      },
+      "revId": "2a272ce2fa6921e613bcadea5367c9492c0cd5d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
