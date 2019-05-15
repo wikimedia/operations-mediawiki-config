@@ -22,6 +22,30 @@
       "revId": "1da7dd1b65ad49215843ace627f0c6a5ecc776d8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1f06d6a5_23364ba1",
+        "filename": "wmf-config/flaggedrevs.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 687,
+      "author": {
+        "id": 4982
+      },
+      "writtenOn": "2019-05-15T12:56:11Z",
+      "side": 1,
+      "message": "FR_INCLUDES_CURRENT is 0, equivalent to FALSE.",
+      "parentUuid": "9f399581_29a7f02f",
+      "range": {
+        "startLine": 687,
+        "startChar": 32,
+        "endLine": 687,
+        "endChar": 36
+      },
+      "revId": "1da7dd1b65ad49215843ace627f0c6a5ecc776d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
