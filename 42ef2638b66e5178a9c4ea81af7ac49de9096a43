@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba4e129a_754a7057",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3699,
+      "author": {
+        "id": 55
+      },
+      "writtenOn": "2019-05-15T13:11:06Z",
+      "side": 1,
+      "message": "timeout \u003d\u003e 60 is still pretty large.  Let\u0027s do timeout \u003d\u003e 10 or something?",
+      "revId": "42ef2638b66e5178a9c4ea81af7ac49de9096a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
