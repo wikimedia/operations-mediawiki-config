@@ -12946,6 +12946,10 @@ $wgConf->settings = [
 		118 => 'noindex,nofollow', // draft
 		119 => 'noindex,nofollow', // draft talk
 	],
+	'etwiki' => [
+		102 => 'noindex,nofollow', // draft - T223474
+		103 => 'noindex,nofollow', // draft talk - T223474
+	],
 	'fawiki' => [
 		118 => 'noindex,nofollow', // draft, T92760
 		119 => 'noindex,nofollow', // draft talk, T92760
@@ -12984,6 +12988,14 @@ $wgConf->settings = [
 		118 => 'noindex,nofollow', // Draft - T92798
 		119 => 'noindex,nofollow', // T92798
 	],
+	'knwiki' => [
+		118 => 'noindex,nofollow', // Draft - T92798
+		119 => 'noindex,nofollow', // Draft talk - T92798
+	],
+	'newiki' => [
+		118 => 'noindex,nofollow', // Draft - T92798
+		119 => 'noindex,nofollow', // Draft talk - T92798
+	],
 	'ptwiki' => [
 		NS_USER => 'noindex,follow', // T185660
 	],
@@ -12994,6 +13006,10 @@ $wgConf->settings = [
 		105 => 'noindex,follow',
 		106 => 'noindex,follow',
 		107 => 'noindex,follow',
+	],
+	'srwiki' => [
+		118 => 'noindex,nofollow', // Draft - T92798
+		119 => 'noindex,nofollow', // Draft talk - T92798
 	],
 	'thwiki' => [
 		NS_TALK => 'noindex,follow',
@@ -13062,6 +13078,10 @@ $wgConf->settings = [
 	],
 	'ukwiki' => [
 		NS_USER => 'noindex,follow', // T98926
+	],
+	'urwiki' => [
+		118 => 'noindex,nofollow', // Draft - T92798
+		119 => 'noindex,nofollow', // Draft talk - T92798
 	],
 	'wikidatawiki' => [ // T181525
 		NS_USER => 'noindex,follow',
