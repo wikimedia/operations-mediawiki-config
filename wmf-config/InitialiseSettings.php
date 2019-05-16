@@ -4631,7 +4631,7 @@ $wgConf->settings = [
 		'ВС' => NS_PROJECT,
 	],
 	'+urwiki' => [
-		'وپ' => NS_PROJECT,                         // T122045
+		'وپ' => NS_PROJECT, // T122045
 		'ویکیپیڈیا' => NS_PROJECT,
 		'ویکیپیڈیا_تبادلۂ_خیال' => NS_PROJECT_TALK,
 		'Portal' => 100, // T21569
@@ -5950,8 +5950,8 @@ $wgConf->settings = [
 		101 => 'مناقشة_بوابة',
 	],
 	'aswiki' => [
-			100 => "ৱিকিচ'ৰা", // Portal
-			101 => "ৱিকিচ'ৰা_আলোচনা",// Portal talk
+		100 => "ৱিকিচ'ৰা", // Portal
+		101 => "ৱিকিচ'ৰা_আলোচনা",// Portal talk
 	],
 	'azwiki' => [
 		100 => 'Portal',
