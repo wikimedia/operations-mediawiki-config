@@ -52,6 +52,24 @@
       "revId": "42ef2638b66e5178a9c4ea81af7ac49de9096a43",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8b7dc758_5a2dbe9d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3699,
+      "author": {
+        "id": 2177
+      },
+      "writtenOn": "2019-05-16T10:34:08Z",
+      "side": 1,
+      "message": "+1 for 10, in case it\u0027s too optimistic, we can increase it, but let\u0027s start with conservative values.",
+      "parentUuid": "1229c7a0_e861d827",
+      "revId": "42ef2638b66e5178a9c4ea81af7ac49de9096a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
