@@ -1942,6 +1942,11 @@ $wgConf->settings = [
 	'default' => 5000,
 ],
 
+// Allow the `X-Request-Id` header to be honoured if set
+'wgAllowExternalReqID' => [
+	'default' => true,
+],
+
 // wgScriptPath and wgArticlePath are the same for all wikis, but they have to be here
 // because some things (e.g. WikiMap) retrieve these values from $wgConf
 
