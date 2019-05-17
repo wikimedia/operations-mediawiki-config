@@ -19447,7 +19447,7 @@ $wgConf->settings = [
 		'sje' => 'bidumsámegiella', // T146707
 		'smj' => 'julevsámegiella', // T146707
 		'smn' => 'anarâškielâ',     // T220118
-		'sms' => 'sääʹmǩiõll',      // T220118
+		'sms' => 'nuõrttsääʹmǩiõll', // T220118, T223544
 		'srq' => 'mbia cheë',       // T113408
 	],
 ],
