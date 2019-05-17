@@ -1088,7 +1088,7 @@ if ( $wmgUseUploadsLink ) {
 if ( $wmgUseUrlShortener ) {
 	wfLoadExtension( 'UrlShortener' );
 	$wgUrlShortenerTemplate = '/$1';
-	$wgUrlShortenerServer = 'w.wiki';
+	$wgUrlShortenerServer = 'https://w.wiki';
 	$wgUrlShortenerDBCluster = 'extension1';
 	$wgUrlShortenerDBName = 'wikishared';
 	$wgUrlShortenerDomainsWhitelist = [
