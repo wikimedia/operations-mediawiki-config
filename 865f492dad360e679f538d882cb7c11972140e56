@@ -22,6 +22,30 @@
       "revId": "865f492dad360e679f538d882cb7c11972140e56",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0f56d1ca_b65a7d8e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 14285,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-05-17T12:58:49Z",
+      "side": 1,
+      "message": "From Linker.php#makeImageLink, as called by Parser.php\n\n\n if ( $widthOption \u003d\u003d\u003d null || !isset( $wgThumbLimits[$widthOption] ) ) {\n\t\t\t\t\t$widthOption \u003d User::getDefaultOption( \u0027thumbsize\u0027 );\n\t\t\t\t}\n\nSo it falls back to the default.\n\nIs there a reason to remove \u0027200\u0027? Could we change only 250 to 260? and set default size index to 5?",
+      "parentUuid": "d33fa03d_b1e35ffe",
+      "range": {
+        "startLine": 14285,
+        "startChar": 13,
+        "endLine": 14285,
+        "endChar": 51
+      },
+      "revId": "865f492dad360e679f538d882cb7c11972140e56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
