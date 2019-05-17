@@ -46,6 +46,30 @@
       "revId": "865f492dad360e679f538d882cb7c11972140e56",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "257419a4_73e64bce",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 14285,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-05-17T13:00:09Z",
+      "side": 1,
+      "message": "I thought maybe the reason to keep the default index as before is for compat with stored preferences, but almost nobody has \u00274\u0027 stored, which makes sense given it is the default.\n\n\u00272\u0027 is the most popular non-default optoin, which isn\u0027t affecred, so probably fine to change the default.",
+      "parentUuid": "0f56d1ca_b65a7d8e",
+      "range": {
+        "startLine": 14285,
+        "startChar": 13,
+        "endLine": 14285,
+        "endChar": 51
+      },
+      "revId": "865f492dad360e679f538d882cb7c11972140e56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
