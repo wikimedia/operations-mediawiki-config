@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d33fa03d_b1e35ffe",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 14285,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-05-17T12:56:02Z",
+      "side": 1,
+      "message": "I wonder what happens to users that have currently selected the last entry, given the array is getting shorter.\n\n\n\n\n nlwiki thumblimit user_properties\n +----------+----------+\n| COUNT(*) | up_value |\n+----------+----------+\n|      2## | 0        |\n|       5# | 1        |\n|  2##,### | 2        |\n|      5## | 3        |\n|       3# | 4        |\n|      6## | 5        |\n|      3## | 6        |\n|      1## | 7        |\n+----------+----------+",
+      "range": {
+        "startLine": 14285,
+        "startChar": 13,
+        "endLine": 14285,
+        "endChar": 51
+      },
+      "revId": "865f492dad360e679f538d882cb7c11972140e56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
