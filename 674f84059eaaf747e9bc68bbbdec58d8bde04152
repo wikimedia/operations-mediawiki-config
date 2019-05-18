@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "7cc976b5_9647a584",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 603,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2019-05-18T14:40:07Z",
+      "side": 1,
+      "message": "Not temporary",
+      "range": {
+        "startLine": 603,
+        "startChar": 0,
+        "endLine": 603,
+        "endChar": 57
+      },
+      "revId": "674f84059eaaf747e9bc68bbbdec58d8bde04152",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "80bcce33_e6a37fbb",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 1
