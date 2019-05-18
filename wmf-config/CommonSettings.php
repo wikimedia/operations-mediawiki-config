@@ -2392,16 +2392,13 @@ if ( $wmgUseVisualEditor ) {
 	if ( $wmgVisualEditorUseSingleEditTab ) {
 		$wgVisualEditorUseSingleEditTab = true;
 		$wgVisualEditorSingleEditTabSwitchTime = $wmgVisualEditorSingleEditTabSwitchTime;
-		if ( $wmgVisualEditorSingleEditTabSecondaryEditor ) {
-			$wgDefaultUserOptions['visualeditor-editor'] = 'wikitext';
-		} else {
-			$wgDefaultUserOptions['visualeditor-editor'] = 'visualeditor';
-		}
 		$wgDefaultUserOptions['T47877-buster'] = 1;
+	}
+	if ( $wmgVisualEditorIsSecondaryEditor ) {
+		$wgVisualEditorTabPosition = 'after';
+		$wgDefaultUserOptions['visualeditor-editor'] = 'wikitext';
 	} else {
-		if ( $wmgVisualEditorSecondaryTabs ) {
-			$wgVisualEditorTabPosition = 'after';
-		}
+		$wgDefaultUserOptions['visualeditor-editor'] = 'visualeditor';
 	}
 	if ( $wmgVisualEditorEnableWikitext ) {
 		$wgVisualEditorEnableWikitext = true;
