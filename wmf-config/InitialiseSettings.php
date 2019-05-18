@@ -16131,24 +16131,6 @@ $wgConf->settings = [
 	'officewiki' => 20160303000000,
 ],
 
-// TODO Remove this
-// Whether the wikitext editor should be the default (first-open) editor on SET wikis
-'wmgVisualEditorSingleEditTabSecondaryEditor' => [
-	'default' => false,
-	'enwiki' => true, // T132806
-	'frwiktionary' => true, // T169741
-],
-
-// TODO Remove this
-// Whether VisualEditor's second tab and section link come after (rather than before) those for
-// wikitext (on non-SET wikis)
-'wmgVisualEditorSecondaryTabs' => [
-	'default' => false,
-	'enwiki' => true,
-	'eswiki' => true, // T62188
-	'hewiki' => true, // T54552
-],
-
 // Whether the wikitext editor should be the default editor.
 // * on SET wikis, this affects the text and behavior of the edit tab
 // * on non-SET wikis, this affects the order of tabs (and behavior of red links after T223705)
