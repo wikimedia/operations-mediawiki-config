@@ -19313,6 +19313,11 @@ $wgConf->settings = [
 	'wikivoyage' => false, // T164391
 ],
 
+// T223824
+'wgSkipSkins' => [
+	'default' => [ 'cologneblue' ],
+],
+
 'wmgRelatedArticlesFooterWhitelistedSkins' => [
 	// T144812
 	'default' => [ 'minerva' ],
