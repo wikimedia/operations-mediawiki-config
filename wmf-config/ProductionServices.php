@@ -61,16 +61,6 @@ $common = [
 	// the part of the network that they live in so each host is enumerated
 	'cloudelastic-chi' => [
 		[
-			'host' => 'cloudelastic1001.wikimedia.org',
-			'transport' => 'Https',
-			'port' => 9243,
-		],
-		[
-			'host' => 'cloudelastic1002.wikimedia.org',
-			'transport' => 'Https',
-			'port' => 9243,
-		],
-		[
 			'host' => 'cloudelastic1003.wikimedia.org',
 			'transport' => 'Https',
 			'port' => 9243,
@@ -83,16 +73,6 @@ $common = [
 	],
 	'cloudelastic-psi' => [
 		[
-			'host' => 'cloudelastic1001.wikimedia.org',
-			'transport' => 'Https',
-			'port' => 9443,
-		],
-		[
-			'host' => 'cloudelastic1002.wikimedia.org',
-			'transport' => 'Https',
-			'port' => 9443,
-		],
-		[
 			'host' => 'cloudelastic1003.wikimedia.org',
 			'transport' => 'Https',
 			'port' => 9443,
@@ -104,16 +84,6 @@ $common = [
 		]
 	],
 	'cloudelastic-omega' => [
-		[
-			'host' => 'cloudelastic1001.wikimedia.org',
-			'transport' => 'Https',
-			'port' => 9643,
-		],
-		[
-			'host' => 'cloudelastic1002.wikimedia.org',
-			'transport' => 'Https',
-			'port' => 9643,
-		],
 		[
 			'host' => 'cloudelastic1003.wikimedia.org',
 			'transport' => 'Https',
