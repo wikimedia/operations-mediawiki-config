@@ -138,10 +138,9 @@ $wgLBFactoryConf = [
 	],
 	/* s3 */ 'DEFAULT' => [
 		'db2043'      => 0,   # C6 2.9TB 160GB, master
-		'db2036'      => 50,  # C6 2.9TB 160GB, old master, rc, log
 		'db2050'      => 50,  # C6 2.9TB 160GB dump (inactive), vslow
-		'db2057'      => 50,  # D6 3.3TB 160GB # rc, log # candidate master
-		'db2074'      => 500, # D6 3.3TB 512GB # InnoDB compressed # master for sanitarium db2094
+		'db2057'      => 50,  # D6 3.3TB 160GB # candidate master
+		'db2074'      => 500, # D6 3.3TB 512GB # rc,log # master for sanitarium db2094
 		'db2105'      => 500, # A6 5.2TB 512GB
 		'db2109'      => 500, # B5 5.2TB 512GB
 	],
@@ -351,24 +350,19 @@ $wgLBFactoryConf = [
 			'db2050' => 1,
 		],
 		'watchlist' => [
-			'db2036' => 1,
-			'db2057' => 1,
+			'db2074' => 1,
 		],
 		'recentchanges' => [
-			'db2036' => 1,
-			'db2057' => 1,
+			'db2074' => 1,
 		],
 		'recentchangeslinked' => [
-			'db2036' => 1,
-			'db2057' => 1,
+			'db2074' => 1,
 		],
 		'contributions' => [
-			'db2036' => 1,
-			'db2057' => 1,
+			'db2074' => 1,
 		],
 		'logpager' => [
-			'db2036' => 1,
-			'db2057' => 1,
+			'db2074' => 1,
 		],
 	],
 	's4' => [
@@ -609,7 +603,6 @@ $wgLBFactoryConf = [
 	'db1137' => '10.64.48.111', # do not remove or comment out
 	'db1138' => '10.64.48.124', # do not remove or comment out
 	'db2035' => '10.192.16.73', # do not remove or comment out
-	'db2036' => '10.192.32.7', # do not remove or comment out
 	'db2037' => '10.192.32.8', # do not remove or comment out
 	'db2038' => '10.192.32.9', # do not remove or comment out
 	'db2039' => '10.192.48.114', # do not remove or comment out
