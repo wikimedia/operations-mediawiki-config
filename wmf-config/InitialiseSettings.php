@@ -22776,12 +22776,8 @@ $wgConf->settings = [
 
 'wgActorTableSchemaMigrationStage' => [
 	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
-	'testwiki' => SCHEMA_COMPAT_NEW,
+	'group0' => SCHEMA_COMPAT_NEW,
 	'test2wiki' => SCHEMA_COMPAT_NEW,
-	'testwikidatawiki' => SCHEMA_COMPAT_NEW,
-	'testcommonswiki' => SCHEMA_COMPAT_NEW,
-	'labtestwiki' => SCHEMA_COMPAT_NEW,
-	'mediawikiwiki' => SCHEMA_COMPAT_NEW,
 ],
 
 'wgCommentTableSchemaMigrationStage' => [
