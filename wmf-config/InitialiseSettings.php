@@ -22774,10 +22774,6 @@ $wgConf->settings = [
 	'default' => false,
 ],
 
-'wmgUseNewWikiDiff2Extension' => [
-	'default' => true, // T199800
-],
-
 'wgActorTableSchemaMigrationStage' => [
 	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
 	'group0' => SCHEMA_COMPAT_NEW,
