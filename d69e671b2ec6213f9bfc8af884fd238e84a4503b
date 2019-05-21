@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "411c47fd_eb993729",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-05-21T10:29:54Z",
+      "side": 1,
+      "message": "Bug: T216957 ?",
+      "revId": "d69e671b2ec6213f9bfc8af884fd238e84a4503b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
