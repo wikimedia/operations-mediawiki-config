@@ -18856,6 +18856,12 @@ $wgConf->settings = [
 	'wikidatawiki' => 'https://tools.wmflabs.org/shex-simple/wikidata/packages/shex-webapp/doc/shex-simple.html?data=Endpoint:%20https://query.wikidata.org/sparql&hideData&manifest=[]&textMapIsSparqlQuery'
 ],
 
+'wgEntitySchemaSkippedIDs' => [
+	'default' => [],
+	'wikidatawiki' => [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 40, 42, 123, 570, 734, 735, 999, 1234, 3300, 11424, 12345 ],
+	'testwikidatawiki' => [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 40, 42, 123, 570, 734, 735, 999, 1234, 3300, 11424, 12345 ],
+],
+
 'wmgUseFlow' => [
 	'default' => false,
 	'flow' => true,
