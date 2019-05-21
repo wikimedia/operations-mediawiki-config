@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a0706da8_09a5abc1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-05-21T10:23:21Z",
+      "side": 1,
+      "message": "Either this needs to be updated, or the “enable on Beta” part needs to happen in a separate commit. (I’d prefer doing the Beta part in a separate commit.)",
+      "range": {
+        "startLine": 10,
+        "startChar": 11,
+        "endLine": 11,
+        "endChar": 38
+      },
+      "revId": "bb84015d3bea5a62306796d29838f086e3e75c96",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "09619816_eb331793",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 530,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-05-21T10:23:21Z",
+      "side": 1,
+      "message": "should only be set to true on wikidatawiki, I think, not on other Beta wikis",
+      "revId": "bb84015d3bea5a62306796d29838f086e3e75c96",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
