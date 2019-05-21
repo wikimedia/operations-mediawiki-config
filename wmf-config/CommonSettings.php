@@ -3248,10 +3248,6 @@ if ( $wmgUseExternalGuidance ) {
 	];
 }
 
-if ( $wmgUseNewWikiDiff2Extension ) {
-	$wgWikiDiff2MovedParagraphDetectionCutoff = 25;
-}
-
 if ( $wmgUseCognate ) {
 	wfLoadExtension( 'Cognate' );
 	$wgCognateDb = 'cognate_' . $wmgUseCognate;
