@@ -176,6 +176,7 @@ $wgLBFactoryConf = [
 		'db2076'      => 400, # B1 3.3TB 512GB # master for sanitarium db2095
 		'db2087:3316' => 100, # C1 3.3TB 512GB # rc, log: s6 and s7
 		'db2089:3316' => 100, # A3 3.3TB 512GB # rc, log: s6 and s5(s8)
+		'db2114'      => 400, # C5 5.2TB 512GB
 		'db2117'      => 400, # D1 5.2TB 512GB
 	],
 	's7' => [
@@ -674,6 +675,7 @@ $wgLBFactoryConf = [
 	'db2111' => '10.192.16.124', # do not remove or comment out
 	'db2112' => '10.192.32.4', # do not remove or comment out
 	'db2113' => '10.192.32.124', # do not remove or comment out
+	'db2114' => '10.192.32.125', # do not remove or comment out
 	'db2115' => '10.192.32.134', # do not remove or comment out
 	'db2116' => '10.192.32.135', # do not remove or comment out
 	'db2117' => '10.192.48.34', # do not remove or comment out
