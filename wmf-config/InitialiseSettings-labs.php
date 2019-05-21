@@ -526,6 +526,11 @@ function wmfLabsSettings() {
 			'default' => 'https://wikidata.beta.wmflabs.org/w/api.php',
 		],
 
+		'wgEntitySchemaSkippedIDs' => [
+			'default' => [],
+			'wikidatawiki' => [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 42, 123, 999 ],
+		],
+
 		'wmgUseEntitySchema' => [
 			'default' => false,
 			'wikidatawiki' => true,
