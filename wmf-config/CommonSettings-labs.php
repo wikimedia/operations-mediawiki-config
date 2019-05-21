@@ -300,6 +300,16 @@ if ( $wmgUseKartographer ) {
 	$wgKartographerIconServer = 'https://maps-beta.wmflabs.org';
 }
 
+if ( $wmgUseFileImporter ) {
+	// Beta commons references configuration files hosted locally.
+	// Note that beta testwiki will continue to fetch its configuration from production mw.org .
+	if ( $wgDBname == 'commonswiki' ) {
+		$wgFileImporterCommonsHelperServer = 'https://commons.wikimedia.beta.wmflabs.org';
+		$wgFileImporterCommonsHelperBasePageName = 'Extension:FileImporter/Data/';
+		$wgFileImporterCommonsHelperHelpPage = 'https://commons.wikimedia.beta.wmflabs.org/wiki/Extension:FileImporter/Data';
+	}
+}
+
 $wgMessageCacheType = CACHE_ACCEL;
 
 // Let Beta Cluster Commons do upload-from-URL from production Commons.
