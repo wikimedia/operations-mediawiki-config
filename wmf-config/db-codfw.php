@@ -180,7 +180,6 @@ $wgLBFactoryConf = [
 	],
 	's7' => [
 		'db2047'      => 0,   # C6 2.9TB 160GB, master
-		# 'db2040'      => 300, # A3 2.9TB 160GB, candidate master
 		'db2054'      => 200, # D6 2.9TB 160GB, dump (inactive), vslow
 		'db2061'      => 200, # D6 3.3TB 160GB, api
 		'db2068'      => 200, # D6 3.3TB 160GB
@@ -608,7 +607,6 @@ $wgLBFactoryConf = [
 	'db2037' => '10.192.32.8', # do not remove or comment out
 	'db2038' => '10.192.32.9', # do not remove or comment out
 	'db2039' => '10.192.48.114', # do not remove or comment out
-	'db2040' => '10.192.0.39', # do not remove or comment out
 	'db2043' => '10.192.32.103', # do not remove or comment out
 	'db2045' => '10.192.16.74', # do not remove or comment out
 	'db2046' => '10.192.32.106', # do not remove or comment out
