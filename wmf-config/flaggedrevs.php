@@ -266,7 +266,11 @@ if ( $wgDBname == 'alswiki' ) {
  } elseif ( $wgDBname == 'dewiktionary' ) {
 	$wgFlaggedRevsOverride = false;
 	$wgFlaggedRevsTags['accuracy']['levels'] = 1;
-	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, [ 102, 104, 106, 108 ] ); // T67316 and T76657
+	// T67316, T76657
+	$wgFlaggedRevsNamespaces[] = 102;
+	$wgFlaggedRevsNamespaces[] = 104;
+	$wgFlaggedRevsNamespaces[] = 106;
+	$wgFlaggedRevsNamespaces[] = 108;
 
 	$wgFlaggedRevsAutoconfirm = [ // T46103
 		'days'                => 60,
@@ -315,7 +319,8 @@ if ( $wgDBname == 'alswiki' ) {
  } elseif ( $wgDBname == 'enwikibooks' ) {
 	$wgFlaggedRevsOverride = false;
 	// Cookbook, WikiJunior
-	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, [ 102, 110 ] );
+	$wgFlaggedRevsNamespaces[] = 102;
+	$wgFlaggedRevsNamespaces[] = 110;
 	$wgFlaggedRevsTags = [
 		'value' => [ 'levels' => 3, 'quality' => 2, 'pristine' => 3 ]
 	];
@@ -342,7 +347,8 @@ if ( $wgDBname == 'alswiki' ) {
 
  } elseif ( $wgDBname == 'elwikinews' ) {
 	$wgFlaggedRevsAutoReviewNew = false;
-	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, [ NS_CATEGORY, 100 ] );
+	$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
+	$wgFlaggedRevsNamespaces[] = 100;
 	$wgGroupPermissions['editor']['rollback'] = true;
 	$wgGroupPermissions['editor']['autoreview'] = false;
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
@@ -351,7 +357,8 @@ if ( $wgDBname == 'alswiki' ) {
 	unset( $wgGroupPermissions['reviewer'] );
  } elseif ( $wgDBname == 'enwikinews' ) {
 	$wgFlaggedRevsAutoReviewNew = false; // T17639
-	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, [ NS_CATEGORY, 100 ] );
+	$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
+	$wgFlaggedRevsNamespaces[] = 100;
 	$wgGroupPermissions['editor']['rollback'] = true; // T21815
 	$wgGroupPermissions['editor']['autoreview'] = false; // T25948
 	$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
@@ -401,7 +408,8 @@ if ( $wgDBname == 'alswiki' ) {
 	$wgRemoveGroups['bureaucrat'] = array_diff( $wgRemoveGroups['bureaucrat'], [ 'reviewer' ] );
  } elseif ( $wgDBname == 'fawikinews' ) {
 	$wgFlaggedRevsAutoReviewNew = false;
-	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, [ NS_CATEGORY, 100 ] );
+	$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
+	$wgFlaggedRevsNamespaces[] = 100;
 	$wgGroupPermissions['editor']['rollback'] = true;
 	$wgGroupPermissions['editor']['autoreview'] = false;
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
@@ -426,7 +434,8 @@ if ( $wgDBname == 'alswiki' ) {
 		'accuracy' => [ 'review' => 3, 'autoreview' => 2 ],
 	];
  } elseif ( $wgDBname == 'frwikinews' ) {
-	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, [ 104, 106 ] );
+	$wgFlaggedRevsNamespaces[] = 104;
+	$wgFlaggedRevsNamespaces[] = 106;
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
 
@@ -437,7 +446,12 @@ if ( $wgDBname == 'alswiki' ) {
 		$wgGroupPermissions['reviewer']
 	);
  } elseif ( $wgDBname == 'hewikisource' ) {
-	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, [ 100, 104, 106, 108, 110, 112 ] );
+	$wgFlaggedRevsNamespaces[] = 100;
+	$wgFlaggedRevsNamespaces[] = 104;
+	$wgFlaggedRevsNamespaces[] = 106;
+	$wgFlaggedRevsNamespaces[] = 108;
+	$wgFlaggedRevsNamespaces[] = 110;
+	$wgFlaggedRevsNamespaces[] = 112;
 	$wgFlaggedRevsTags = [ 'completeness' => 3, 'accuracy' => 3, 'formatting' => 3 ];
 	$wgFlaggedRevValues = 4;
 	$wgFlaggedRevsAutoReviewNew = false;
@@ -450,7 +464,9 @@ if ( $wgDBname == 'alswiki' ) {
 	$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
  } elseif ( $wgDBname == 'hiwiki' ) {
 	// # namespaces
-	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, [ NS_PROJECT, NS_CATEGORY, 100 ] ); # 100 = Portal
+	$wgFlaggedRevsNamespaces[] = NS_PROJECT;
+	$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
+	$wgFlaggedRevsNamespaces[] = 100;
 	# Show only on a per-page basis
 	$wgFlaggedRevsOverride = false;
 	# We have only one tag with one level
@@ -488,7 +504,8 @@ if ( $wgDBname == 'alswiki' ) {
 	$wgFlaggedRevsLowProfile = false;
 
 	// # namespaces
-	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, [ NS_CATEGORY, 100 ] ); # 100 = Portal
+	$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
+	$wgFlaggedRevsNamespaces[] = 100;
 
 	// # reviewers
 	$wgGroupPermissions['editor']['rollback'] = true;
@@ -623,7 +640,11 @@ if ( $wgDBname == 'alswiki' ) {
 	$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
  } elseif ( $wgDBname == 'ptwikisource' ) {
 	$wgFlaggedRevsLowProfile = false;
-	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, [ 102, 104, 106, 108, 110 ] );
+	$wgFlaggedRevsNamespaces[] = 102;
+	$wgFlaggedRevsNamespaces[] = 104;
+	$wgFlaggedRevsNamespaces[] = 106;
+	$wgFlaggedRevsNamespaces[] = 108;
+	$wgFlaggedRevsNamespaces[] = 110;
 	$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
  } elseif ( $wgDBname == 'ruwiki' ) {
@@ -645,9 +666,16 @@ if ( $wgDBname == 'alswiki' ) {
 	$wgGroupPermissions['sysop']['review'] = true;
 	unset( $wgGroupPermissions['reviewer'] );
  } elseif ( $wgDBname == 'ruwiktionary' ) {
-	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, [ NS_PROJECT, NS_CATEGORY, 100, 104, 106 ] );
+	$wgFlaggedRevsNamespaces[] = NS_PROJECT;
+	$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
+	$wgFlaggedRevsNamespaces[] = 100;
+	$wgFlaggedRevsNamespaces[] = 104;
+	$wgFlaggedRevsNamespaces[] = 106;
  } elseif ( $wgDBname == 'ruwikisource' ) {
-	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, [ NS_HELP, NS_PROJECT, 104, 106 ] );
+	$wgFlaggedRevsNamespaces[] = NS_HELP;
+	$wgFlaggedRevsNamespaces[] = NS_PROJECT;
+	$wgFlaggedRevsNamespaces[] = 104;
+	$wgFlaggedRevsNamespaces[] = 106;
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 
 	unset(
@@ -714,7 +742,11 @@ if ( $wgDBname == 'alswiki' ) {
 	$wgFlaggedRevsOverride = false;
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
  } elseif ( $wgDBname == 'plwikisource' ) {
-	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, [ NS_CATEGORY, NS_HELP, 100, 102, 104 ] );
+	$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
+	$wgFlaggedRevsNamespaces[] = NS_HELP;
+	$wgFlaggedRevsNamespaces[] = 100;
+	$wgFlaggedRevsNamespaces[] = 102;
+	$wgFlaggedRevsNamespaces[] = 104;
 
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 	$wgFlaggedRevsAutopromote['edits'] = 100;
