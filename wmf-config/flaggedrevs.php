@@ -233,17 +233,13 @@ if ( $wgDBname == 'alswiki' ) {
 
 	$wgGroupPermissions['editor']['autopatrol'] = true; // T95085
 
-	$wgGroupPermissions['reviewer'] = array_merge( $wgGroupPermissions['reviewer'], [
-		'autopatrol' => true,         // T95085
-		'patrol' => true,             // T95085
-	] );
+	$wgGroupPermissions['reviewer']['autopatrol'] = true; // T95085
+	$wgGroupPermissions['reviewer']['patrol'] = true; // T95085
 
-	$wgGroupPermissions['sysop'] = array_merge( $wgGroupPermissions['sysop'], [
-		'stablesettings' => true,     // T36135
-		'review' => true,             // T95085
-		'validate' => true,           // T95085
-		'unreviewedpages' => true,    // T95085
-	] );
+	$wgGroupPermissions['sysop']['stablesettings'] = true; // T36135
+	$wgGroupPermissions['sysop']['review'] = true; // T95085
+	$wgGroupPermissions['sysop']['validate'] = true; // T95085
+	$wgGroupPermissions['sysop']['unreviewedpages'] = true; // T95085
 }
 
 // New deployment 2008-05-03
