@@ -327,6 +327,7 @@ $wgConf->settings = [
 	'etwikiquote' => 'Europe/Tallinn',
 	'etwikisource' => 'Europe/Tallinn',
 	'etwiktionary' => 'Europe/Tallinn',
+	'euwiki' => 'Europe/Berlin',
 	'fawikinews' => 'Asia/Tehran',
 	'fiwiki' => 'Europe/Helsinki',
 	'fiwikimedia' => 'Europe/Helsinki',
