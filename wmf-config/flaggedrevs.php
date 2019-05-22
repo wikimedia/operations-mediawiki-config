@@ -19,7 +19,34 @@ include "$IP/extensions/FlaggedRevs/FlaggedRevs.php";
 ///////////////////////////////////////
 // Common configuration
 // DO NOT CHANGE without hard-coding these values into the relevant wikis first.
-$wgFlaggedRevsNamespaces[] = 828; // NS_MODULE
+
+$wgSimpleFlaggedRevsUI = true;
+$wgFlaggedRevsLowProfile = true;
+$wgFlaggedRevsWhitelist = [];
+$wgFlaggedRevsOverride = true;
+$wgFlaggedRevsExceptions = [
+	'user'
+];
+$wgFlaggedRevsAutoReview = 3;
+$wgFlaggedRevsTagsAuto = [
+	'accuracy' => 1, 'depth' => 1, 'style' => 1
+];
+$wgFlaggedRevsRestrictionLevels = [ '', 'sysop' ];
+$wgFlaggedRevsProtection = false;
+$wgFlaggedRevsAutoconfirm = false;
+$wgFlaggedRevsOversightAge = 2592000;
+$wgFlaggedRevsStats = [
+	'topReviewersCount' => 5,
+	'topReviewersHours' => 1
+];
+$wgFlaggedRevsHandleIncludes = 2;
+
+$wgFlaggedRevsNamespaces = [
+	0,   // NS_MAIN
+	6,   // NS_FILE
+	10,  // NS_TEMPLATE
+	828, // NS_MODULE
+];
 $wgFlaggedRevsTags = [
 	'accuracy' => [ 'levels' => 2, 'quality' => 2, 'pristine' => 4 ],
 ];
@@ -45,7 +72,26 @@ $wmfStandardAutoPromote = [
 
 $wgFlaggedRevsAutopromote = false;
 
+$wgGroupPermissions['editor']['review'] = true;
+$wgGroupPermissions['editor']['autoreview'] = true;
+$wgGroupPermissions['editor']['autoconfirmed'] = true;
+$wgGroupPermissions['editor']['editsemiprotected'] = true;
+$wgGroupPermissions['editor']['unreviewedpages'] = true;
+
+$wgGroupPermissions['reviewer']['validate'] = true;
+$wgGroupPermissions['reviewer']['review'] = true;
+$wgGroupPermissions['reviewer']['autoreview'] = true;
+$wgGroupPermissions['reviewer']['autoconfirmed'] = true;
+$wgGroupPermissions['reviewer']['editsemiprotected'] = true;
+$wgGroupPermissions['reviewer']['unreviewedpages'] = true;
+
+$wgGroupPermissions['sysop']['autoreview'] = true;
 $wgGroupPermissions['sysop']['stablesettings'] = false; // -aaron 3/20/10
+$wgGroupPermissions['sysop']['movestable'] = true;
+
+$wgGroupPermissions['autoreview']['autoreview'] = true;
+
+$wgGroupPermissions['bot']['autoreview'] = true;
 
 ///////////////////////////////////////
 // Wiki-specific configurations
