@@ -18945,6 +18945,7 @@ $wgConf->settings = [
 
 'wmgUseEntitySchema' => [
 	'default' => false,
+	'testwikidatawiki' => true,
 ],
 
 'wgEntitySchemaShExSimpleUrl' => [
