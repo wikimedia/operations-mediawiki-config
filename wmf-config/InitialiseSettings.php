@@ -8572,28 +8572,28 @@ $wgConf->settings = [
 'wgOriginTrials' => [
 	'default' => [],
 	'ruwiki' => [
-		// T216499 Priority Hints, expires on 2019-05-29
-		'AnAFtuea7E4UBkJyTR4dXFknMKZYjA5Y8ohITioXGMfPjby/qQmNcjI5mpR5ajcs361GS0WO7RsywzIfi9chLwoAAABqeyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IlByaW9yaXR5SGludHMiLCJleHBpcnkiOjE1NTkwODc5OTksImlzU3ViZG9tYWluIjp0cnVlfQ==',
-		// T216598 Element Timing for Images, expires on 2019-06-12, renewable until 2019-09-04
-		'AoO5jEQfMKlbyFG0UWKyTmRk6m6enO8+XQGFoDIE3whfd/+x4feASe4FeyuHtclVfy6/FD6A6n1h6zHhZ3tvUggAAABweyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IkVsZW1lbnRUaW1pbmdJbWFnZXMiLCJleHBpcnkiOjE1NjAzMzc2NDgsImlzU3ViZG9tYWluIjp0cnVlfQ==',
-		// T216594 Layout Stability, expires on 2019-06-12, renewable until 2019-09-04
-		'ArGnqY0sh9M9e+Dq0iYaBdxFMNUnFvtg+NlavaNt/GCiU2XS/UD2E++Pa/REpvXkMj4mP79rmGcsPkQ54PsAdAkAAABqeyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IkxheW91dEphbmtBUEkiLCJleHBpcnkiOjE1NjAzMzc2MTksImlzU3ViZG9tYWluIjp0cnVlfQ==',
-		// T216597 Event Timing, expires on 2019-05-29 (coincides with end of trial)
-		'AtMksQhRmZpsP42EMfzLN/jihicyFX5tQuSfuJFH3UDdxLHeb0XYIwrzEWML4hKJRZs7OGMj8bDdErm2PYh/4wQAAABoeyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IkV2ZW50VGltaW5nIiwiZXhwaXJ5IjoxNTU5MDg3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZX0=',
-		// T209572 Feature policy reporting, expires 2019-06-12, renewable until 2019-07-24
-		'AmOH8MYeXpdgDFadZqFCx+GcuJ5uNca4t6XwnBKA6tZSAOK5p/tR9IusLATP0yZ63gHtdhXstv9jpMhj4nQLgggAAABzeyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IkZlYXR1cmVQb2xpY3lSZXBvcnRpbmciLCJleHBpcnkiOjE1NjAzNDM5NDAsImlzU3ViZG9tYWluIjp0cnVlfQ==',
+		// T216499 Priority Hints, expires on 2019-07-02, renewable until 2019-09-03
+		'AuXhoh7Y3Sex3mYAtBIbGf0wFMMO+WZuPxEfDeR2m63NVSFLCEzTYhMtch/aRvE8+UpbOhY+hnSYl4JcEaWjIwgAAABqeyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IlByaW9yaXR5SGludHMiLCJleHBpcnkiOjE1NjIxMjc5NzgsImlzU3ViZG9tYWluIjp0cnVlfQ==',
+		// T216598 Element Timing for Images, expires on 2019-07-02, renewable until 2019-09-04
+		'Av09x0i8yN9MrBsKyZ9gYwRMezndnJpo0UUK+AqqW/7swoiaZpaug3lYyZoHRmqgT4UwDqZjOOB+KqwowD7RowUAAABweyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IkVsZW1lbnRUaW1pbmdJbWFnZXMiLCJleHBpcnkiOjE1NjIxMjgwMDUsImlzU3ViZG9tYWluIjp0cnVlfQ==',
+		// T216594 Layout Stability, expires on 2019-07-02, renewable until 2019-09-04
+		'Arn/Kn1KkjFVccJEbUki/g32SNyVEBMi+nT87MwJeWIamUvDn8/3zWB5aQsoRP/OQkGzPuMqXNL/Nlq88mKLnAoAAABqeyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IkxheW91dEphbmtBUEkiLCJleHBpcnkiOjE1NjIxMjgwMjYsImlzU3ViZG9tYWluIjp0cnVlfQ==',
+		// T216597 Event Timing, expires on 2019-07-02, renewable until 2019-07-23
+		'AlXHmCNUUArTtqyTVepJ2IdBeURp0IzDGn3o7KvvbVgHueslvqgGjER+8dHxLV0beGadO15UDJL6KL+D+tThiAUAAABoeyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IkV2ZW50VGltaW5nIiwiZXhwaXJ5IjoxNTYyMTI4MDU3LCJpc1N1YmRvbWFpbiI6dHJ1ZX0=',
+		// T209572 Feature policy reporting, expires 2019-07-02, renewable until 2019-07-24
+		'An3ObzW78O4o1nVJYo2IihOyycce4wrdAKJIfE2g2X30psH4PDYlVtziFKsMu6UgAhPTz1NnWVzyscrFre3o8g8AAABzeyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IkZlYXR1cmVQb2xpY3lSZXBvcnRpbmciLCJleHBpcnkiOjE1NjIxMjgwNzUsImlzU3ViZG9tYWluIjp0cnVlfQ==',
 	],
 	'eswiki' => [
-		// T216499 Priority Hints, expires on 2019-05-28, renewable until 2019-05-29
-		'Asni0zlReArHklStk+1ojn9WVycosRDZBqMcGBF7+G3Pae5+oVuvWY3UTFNHB1QbdldH2ZfSNYTQc9w8lOcD/A4AAABseyJvcmlnaW4iOiJodHRwczovL2VzLm0ud2lraXBlZGlhLm9yZzo0NDMiLCJmZWF0dXJlIjoiUHJpb3JpdHlIaW50cyIsImV4cGlyeSI6MTU1OTAzNjgzMSwiaXNTdWJkb21haW4iOnRydWV9',
-		// T216598 Element Timing for Images, expires on 2019-05-28, renewable until 2019-09-04
-		'AjmxZDNUsZvDlpCYsb9z+SfuoChq5RbD1vX/b+7JC4L4xB1QjqoeUHIKBL4GbfAEvNtB3gbou/GemAYzrhwA5gcAAAByeyJvcmlnaW4iOiJodHRwczovL2VzLm0ud2lraXBlZGlhLm9yZzo0NDMiLCJmZWF0dXJlIjoiRWxlbWVudFRpbWluZ0ltYWdlcyIsImV4cGlyeSI6MTU1OTAzNjkzNSwiaXNTdWJkb21haW4iOnRydWV9',
-		// T216594 Layout Stability, expires on 2019-05-28, renewable until 2019-09-04
-		'Ah/oetLmHjJoyoTFk5FyK0i6E25SHDYiWkOi/s/eHATR8p8TJRvvNxlwF4FajekkcsQIL9v1KhiBY3oPTfXEuwcAAABseyJvcmlnaW4iOiJodHRwczovL2VzLm0ud2lraXBlZGlhLm9yZzo0NDMiLCJmZWF0dXJlIjoiTGF5b3V0SmFua0FQSSIsImV4cGlyeSI6MTU1OTAzNzAwMSwiaXNTdWJkb21haW4iOnRydWV9',
-		// T216597 Event Timing, expires on 2019-05-29 (coincides with end of trial)
-		'AlTUR1e069KBKcnNPHcHoJki4b7OTwJFZZAsI8yDvSVSmvB7/LMQzMBvYcGeV2gxh5bdT62+6oJRfvOqMBkCDQAAAABqeyJvcmlnaW4iOiJodHRwczovL2VzLm0ud2lraXBlZGlhLm9yZzo0NDMiLCJmZWF0dXJlIjoiRXZlbnRUaW1pbmciLCJleHBpcnkiOjE1NTkwODc5OTksImlzU3ViZG9tYWluIjp0cnVlfQ==',
-		// T209572 Feature policy reporting, expires 2019-06-12, renewable until 2019-07-24
-		'Apnnt+ImX4D+lv5imLhYMLNOMA2OkTCqwk139XR0Gv36GVhMuH3GSYQ+MKSGbKm6I8mUdby08NRWFto7LyAfpAMAAAB1eyJvcmlnaW4iOiJodHRwczovL2VzLm0ud2lraXBlZGlhLm9yZzo0NDMiLCJmZWF0dXJlIjoiRmVhdHVyZVBvbGljeVJlcG9ydGluZyIsImV4cGlyeSI6MTU2MDM0NDAzNiwiaXNTdWJkb21haW4iOnRydWV9',
+		// T216499 Priority Hints, expires on 2019-07-02, renewable until 2019-09-03
+		'AqhN8rOkEKLnLBxkGwq4KFn8Tz8jcn3l6eypLXzFh3jKbUqLsdmyEf6vedaCGtv8ivf07HXnbPUwg9DsJVYlKAoAAABseyJvcmlnaW4iOiJodHRwczovL2VzLm0ud2lraXBlZGlhLm9yZzo0NDMiLCJmZWF0dXJlIjoiUHJpb3JpdHlIaW50cyIsImV4cGlyeSI6MTU2MjEyNzc0MiwiaXNTdWJkb21haW4iOnRydWV9',
+		// T216598 Element Timing for Images, expires on 2019-07-02, renewable until 2019-09-04
+		'Ag9Q9u2cGFpuAC4RzMAQZADHJTthpgDakCX5UgEoz4bD/C6S/kk62zNxR7vGz5xFFRtrFj37E4l20MT2kA2JqQYAAAByeyJvcmlnaW4iOiJodHRwczovL2VzLm0ud2lraXBlZGlhLm9yZzo0NDMiLCJmZWF0dXJlIjoiRWxlbWVudFRpbWluZ0ltYWdlcyIsImV4cGlyeSI6MTU2MjEyNzcwMCwiaXNTdWJkb21haW4iOnRydWV9',
+		// T216594 Layout Stability, expires on 2019-07-02, renewable until 2019-09-04
+		'Aivcl1+c4la4klQ13bt4IRe3HCX+LvpiK2h7rQVnBR1Bus8LtKgtoXmpuPv0nIT1os2Ajy0DOCOb0sM3DyHobQ8AAABseyJvcmlnaW4iOiJodHRwczovL2VzLm0ud2lraXBlZGlhLm9yZzo0NDMiLCJmZWF0dXJlIjoiTGF5b3V0SmFua0FQSSIsImV4cGlyeSI6MTU2MjEyNzc2OSwiaXNTdWJkb21haW4iOnRydWV9',
+		// T216597 Event Timing, expires on 2019-07-02, renewable until 2019-07-23
+		'AsJ2tOgA4zM4H0Kq3mWObc1wuKA4U1QI73vxtwPAQ86RxX/CNh0TEM52B8jh5npqia7wrQNkkV76kBwCjdCUZQYAAABqeyJvcmlnaW4iOiJodHRwczovL2VzLm0ud2lraXBlZGlhLm9yZzo0NDMiLCJmZWF0dXJlIjoiRXZlbnRUaW1pbmciLCJleHBpcnkiOjE1NjIxMjc4OTgsImlzU3ViZG9tYWluIjp0cnVlfQ==',
+		// T209572 Feature policy reporting, expires 2019-07-02, renewable until 2019-07-24
+		'AnMFm7OqZ63oumcnitf/VsUwMIMcg2UPU0h5XCk6ZlAafkyrTZTaPs7jOGD++qSkcntjcT7Qhgi1+N5V1fgZ0w0AAAB1eyJvcmlnaW4iOiJodHRwczovL2VzLm0ud2lraXBlZGlhLm9yZzo0NDMiLCJmZWF0dXJlIjoiRmVhdHVyZVBvbGljeVJlcG9ydGluZyIsImV4cGlyeSI6MTU2MjEyNzkzOCwiaXNTdWJkb21haW4iOnRydWV9',
 	],
 ],
 
