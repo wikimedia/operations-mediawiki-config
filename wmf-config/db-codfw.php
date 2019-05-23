@@ -199,8 +199,8 @@ $wgLBFactoryConf = [
 	],
 
 	'wikitech' => [
-		'db2037' => 1, # C6, read only
-		# 'db2070'      => 100, # C5 3.3TB 160GB
+		'db2070' => 1, # C5, 3.3TB 160GB read only
+		# 'db2037'      => 1, # C6 # old master to be decommissioned
 	],
 ],
 
