@@ -176,7 +176,7 @@ $wgLBFactoryConf = [
 		'db1094' => 500,    # D2 3.6TB 512GB
 		'db1098:3317' => 150, # B5 3.6TB 512GB # rc, log: s6 and s7
 		'db1101:3317' => 150, # C2 3.6TB 512GB # rc, log: s7 and s8
-		'db1136' => 100,     # D1 4.4TB 512GB # future candidate master
+		'db1136' => 200,    # D1 4.4TB 512GB # future candidate master
 	],
 	's8' => [
 		'db1071' => 0,      # D1 2.8TB 160GB, master
