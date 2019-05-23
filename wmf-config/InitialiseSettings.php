@@ -21531,6 +21531,17 @@ $wgConf->settings = [
 	],
 ],
 
+// Method to use when detecting the namespace prefix
+// within queries:
+// elastic: lookup against elastic (default)
+// utr30: uses PHP Transliterator with UTR30 rule
+// naise: uses PHP Transliterator with naive folding rules (unicode diacritics
+// removal)
+'wgCirrusSearchNamespaceResolutionMethod' => [
+	'default' => 'elastic',
+	'group0' => 'utr30'
+],
+
 // List of languages detected by the short-text
 // profiles.
 // See: https://www.mediawiki.org/wiki/User:TJones_(WMF)/Notes/Language_Detection_Evaluation
