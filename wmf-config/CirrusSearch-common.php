@@ -251,6 +251,9 @@ $wgCirrusSearchMaxPhraseTokens = $wmgCirrusSearchMaxPhraseTokens;
 // Enable the search relevance survey where configured
 $wgWMESearchRelevancePages = $wmgWMESearchRelevancePages;
 
+// Configure how namespaces are looked up
+$wgCirrusSearchNamespaceResolutionMethod = $wmgCirrusSearchNamespaceResolutionMethod;
+
 if ( $wmgCirrusSearchMLRModel ) {
 	if ( !is_array( $wmgCirrusSearchMLRModel ) ) {
 		$wmgCirrusSearchMLRModel = [ 'mlr-1024rs' => $wmgCirrusSearchMLRModel ];
