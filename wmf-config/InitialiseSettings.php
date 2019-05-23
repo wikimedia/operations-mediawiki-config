@@ -16184,6 +16184,7 @@ $wgConf->settings = [
 	],
 	'+srwiki' => [
 		'Project' => true, // T205206
+		'Нацрт' /* Draft */ => true, // T223024
 	],
 	'+svwiki' => [
 		'Project' => true, // T144688
