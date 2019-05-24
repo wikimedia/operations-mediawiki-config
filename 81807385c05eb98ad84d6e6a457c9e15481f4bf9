@@ -69,6 +69,29 @@
       "revId": "81807385c05eb98ad84d6e6a457c9e15481f4bf9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "df63b61e_77c4a643",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-05-24T21:52:59Z",
+      "side": 1,
+      "message": "OK. Took me a while, and I think this is correct, but I think we should document the intention here to avoid confusion.\n\nPreviously:\n\n default \u003d\u003e true\n but, if $wmgEnableGeoData \u003d\u003d false, then false.\n\nNow:\n\n if $wmgEnableGeoData \u003d\u003d true, then true.\n if $wmgEnableGeoData \u003d\u003d false, then false (basically).\n\nIntent being, only on when GeoData is on (it\u0027s off by default).\n\nAlternate:\n\n if ( $wmgEnableGeoData ) {\n   $wgMFNearby \u003d true;\n }",
+      "range": {
+        "startLine": 12,
+        "startChar": 14,
+        "endLine": 12,
+        "endChar": 34
+      },
+      "revId": "81807385c05eb98ad84d6e6a457c9e15481f4bf9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
