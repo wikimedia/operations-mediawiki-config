@@ -1661,6 +1661,7 @@ $wgConf->settings = [
 	'zhwikiquote' => [ '1.5x' => '/static/images/project-logos/zhwikiquote-1.5x.png', '2x' => '/static/images/project-logos/zhwikiquote-2x.png' ], // T150618
 
 	# Wikibooks
+	'angwikibooks' => [ '1.5x' => '/static/images/project-logos/angwikibooks-1.5x.png', '2x' => '/static/images/project-logos/angwikibooks-2x.png' ],
 	'bawikibooks' => [ '1.5x' => '/static/images/project-logos/bawikibooks-1.5x.png', '2x' => '/static/images/project-logos/bawikibooks-2x.png' ], // T173471
 	'bewikibooks' => [ '1.5x' => '/static/images/project-logos/bewikibooks-1.5x.png', '2x' => '/static/images/project-logos/bewikibooks-2x.png' ],
 	'cswikibooks' => [ '1.5x' => '/static/images/project-logos/cswikibooks-1.5x.png', '2x' => '/static/images/project-logos/cswikibooks-2x.png' ], // T177506
