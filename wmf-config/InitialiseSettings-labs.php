@@ -790,10 +790,6 @@ function wmfLabsSettings() {
 			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
 		],
 
-		'wgTagStatisticsNewTable' => [
-			'default' => true,
-		],
-
 		'wmgUseJADE' => [
 			'default' => true,
 		],
@@ -821,11 +817,6 @@ function wmfLabsSettings() {
 		'wgOresExcludeBots' => [
 			'default' => true,
 			'enwiki' => false,
-		],
-		// T184668
-		'wmgUseGlobalPreferences' => [
-			// Explicitly disabled on non-CentralAuth wikis in CommonSettings.php
-			'default' => true,
 		],
 		'wmgLocalAuthLoginOnly' => [
 			// Explicitly disabled on non-CentralAuth wikis in CommonSettings.php
