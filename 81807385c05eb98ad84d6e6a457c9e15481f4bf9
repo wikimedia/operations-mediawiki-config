@@ -46,6 +46,29 @@
       "revId": "81807385c05eb98ad84d6e6a457c9e15481f4bf9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "237753dc_f1890283",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 13167,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-05-24T21:46:07Z",
+      "side": 1,
+      "message": "meaning of the word \"varied\" isn\u0027t obvious here imho. In context of reviewing this commit, I get that you mean it\u0027s here in IS.php (as opposed to CS.php). But it would confuse a day later, I think, seeing it without context.\n\nMaybe:\n\n // Keep in InitialiseSettings.php to easily override for Beta Cluster",
+      "range": {
+        "startLine": 13167,
+        "startChar": 8,
+        "endLine": 13167,
+        "endChar": 14
+      },
+      "revId": "81807385c05eb98ad84d6e6a457c9e15481f4bf9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
