@@ -65,6 +65,21 @@ class InitialiseSettingsTest extends WgConfTestCase {
 	}
 
 	///
+	/// wgMetaNamespace
+	///
+	public function testwgMetaNamespace() {
+		$wgConf = $this->loadWgConf( 'unittest' );
+
+		foreach ( $wgConf->settings['wgMetaNamespace'] as $db => $entry ) {
+			// Test for invalid spaces	
+			$this->assertFalse( strpos( $namespace, ' ' ), "Unexpected space in meta namespace title for $db, use underscores instead" );
+
+			// Test for invalid colons
+			$this->assertFalse( strpos( $namespace, ':' ), "Unexpected colon in meta namespace title for $db, final colon is not needed and should be removed" );
+		}
+	}
+
+	///
 	/// only existing wikis or dblists may be referenced in IS.php
 	///
 	public function testOnlyExistingWikis() {
