@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e6acda32_c2414ff6",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 289,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-05-24T21:41:38Z",
+      "side": 1,
+      "message": "To avoid confused greppers, might want to move this into an else below for non-CLI only, which is what it would do currently.",
+      "range": {
+        "startLine": 289,
+        "startChar": 0,
+        "endLine": 289,
+        "endChar": 29
+      },
+      "revId": "81807385c05eb98ad84d6e6a457c9e15481f4bf9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
