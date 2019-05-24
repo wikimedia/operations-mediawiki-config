@@ -166,7 +166,7 @@ $wgLBFactoryConf = [
 		'db1096:3316' => 1, # A6 3.6TB 512GB # rc, log: s5 and s6
 		'db1098:3316' => 1, # B5 3.6TB 512GB # rc, log: s6 and s7
 		'db1113:3316' => 1, # B8 3.6TB 512GB # vslow, dump: s5 and s6
-		'db1131' => 200,      # B5 4.4TB 512GB,# future candidate master
+		'db1131' => 300,      # B5 4.4TB 512GB,# future candidate master
 	],
 	's7' => [
 		'db1062' => 0,      # D4 2.8TB 128GB, master
@@ -176,7 +176,7 @@ $wgLBFactoryConf = [
 		'db1094' => 500,    # D2 3.6TB 512GB
 		'db1098:3317' => 150, # B5 3.6TB 512GB # rc, log: s6 and s7
 		'db1101:3317' => 150, # C2 3.6TB 512GB # rc, log: s7 and s8
-		'db1136' => 200,    # D1 4.4TB 512GB # future candidate master
+		'db1136' => 300,    # D1 4.4TB 512GB # future candidate master
 	],
 	's8' => [
 		'db1071' => 0,      # D1 2.8TB 160GB, master
@@ -186,7 +186,7 @@ $wgLBFactoryConf = [
 		'db1101:3318' => 100, # C2 3.6TB 512GB # rc, log: s7 and s8
 		'db1104' => 200,    # B3 3.6TB 512GB, api # candidate master
 		'db1109' => 500,    # D8 3.6TB 512GB
-		'db1126' => 300,    # A1 4.4TB 512GB
+		'db1126' => 400,    # A1 4.4TB 512GB
 	],
 
 	'wikitech' => [
