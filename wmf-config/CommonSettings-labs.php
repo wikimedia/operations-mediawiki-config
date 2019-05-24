@@ -190,15 +190,13 @@ if ( $wmgUseUrlShortener ) {
 }
 
 // Labs override for BounceHandler
-if ( $wmgUseBounceHandler ) {
-	// $wgVERPsecret = ''; // This was set in PrivateSettings.php by Legoktm
-	$wgBounceHandlerCluster = false;
-	$wgBounceHandlerSharedDB = false;
-	$wgBounceHandlerInternalIPs = [ '127.0.0.1', '::1', '172.16.4.120' ]; // deployment-mx02.deployment-prep.eqiad.wmflabs
-	$wgBounceHandlerUnconfirmUsers = true;
-	$wgBounceRecordLimit = 5;
-	$wgVERPdomainPart = 'beta.wmflabs.org';
-}
+// $wgVERPsecret = ''; // This was set in PrivateSettings.php by Legoktm
+$wgBounceHandlerCluster = false;
+$wgBounceHandlerSharedDB = false;
+$wgBounceHandlerInternalIPs = [ '127.0.0.1', '::1', '172.16.4.120' ]; // deployment-mx02.deployment-prep.eqiad.wmflabs
+$wgBounceHandlerUnconfirmUsers = true;
+$wgBounceRecordLimit = 5;
+$wgVERPdomainPart = 'beta.wmflabs.org';
 
 if ( $wmgUseTimedMediaHandler ) {
 	$wgMwEmbedModuleConfig[ 'MediaWiki.ApiProviders' ] = [
@@ -273,14 +271,12 @@ $wgEchoNotifications['thank-you-edit']['notify-type-availability']['web'] = true
 // Enabling article-reminder on beta for testing T166973. Still disabled in prod.
 $wgAllowArticleReminderNotification = true;
 
-if ( $wmgUseGraph ) {
-	// **** THIS LIST MUST MATCH puppet/hieradata/labs/deployment-prep/common.yaml ****
-	// See https://www.mediawiki.org/wiki/Extension:Graph#External_data
-	$wgGraphAllowedDomains['http'] = [ 'wmflabs.org' ];
-	$wgGraphAllowedDomains['https'][] = 'beta.wmflabs.org';
-	$wgGraphAllowedDomains['wikirawupload'][] = 'upload.beta.wmflabs.org';
-	$wgGraphAllowedDomains['wikidatasparql'][] = 'wdqs-test.wmflabs.org';
-}
+// **** THIS LIST MUST MATCH puppet/hieradata/labs/deployment-prep/common.yaml ****
+// See https://www.mediawiki.org/wiki/Extension:Graph#External_data
+$wgGraphAllowedDomains['http'] = [ 'wmflabs.org' ];
+$wgGraphAllowedDomains['https'][] = 'beta.wmflabs.org';
+$wgGraphAllowedDomains['wikirawupload'][] = 'upload.beta.wmflabs.org';
+$wgGraphAllowedDomains['wikidatasparql'][] = 'wdqs-test.wmflabs.org';
 
 if ( $wmgUseORES ) {
 	$wgOresBaseUrl = 'https://ores-beta.wmflabs.org/';

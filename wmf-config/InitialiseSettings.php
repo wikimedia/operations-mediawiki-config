@@ -92,9 +92,7 @@ $wgConf->settings = [
 	'foundationwiki' => true, # T205368
 	'zerowiki' => true, # T135074
 ],
-'wmgBotPasswordsCluster' => [
-	'default' => false,
-],
+
 'wmgBotPasswordsDatabase' => [
 	'default' => 'metawiki',
 	'private' => false,
@@ -2141,10 +2139,6 @@ $wgConf->settings = [
 ],
 # @} end of wgCanonicalServer
 
-'wgEnableCanonicalServerLink' => [
-	'default' => true, // T50402
-],
-
 # wgSitename @{
 'wgSitename' => [
 	// Projects
@@ -2647,10 +2641,6 @@ $wgConf->settings = [
 	'labtestwiki' => '//upload.wikimedia.org/wikipedia/labtest',
 	'metawiki' => '//upload.wikimedia.org/wikipedia/meta',
 	'testwiki' => '//upload.wikimedia.org/wikipedia/test',
-],
-
-'wgUploadDirectory' => [
-	'default' => false,
 ],
 
 'wgImgAuthUrlPathMap' => [
@@ -5362,6 +5352,7 @@ $wgConf->settings = [
 	'+viwiki' => [ 'extendedconfirmed' ], // T215493
 ],
 
+// Available for emergency variation only.
 'wgSiteNotice' => [
 	'default' => '',
 ],
@@ -5381,10 +5372,6 @@ $wgConf->settings = [
 	'private' => false, // :D
 	'qualitywiki' => false,
 	'votewiki' => false, // T61702
-],
-
-'wgCentralNoticeLoader' => [
-	'default' => true, // *gulp* -- bv 2008-11-03
 ],
 
 // For CentralNotice project pickers
@@ -8242,14 +8229,6 @@ $wgConf->settings = [
 'wmgUseRC2UDP' => [
 	'default' => true,
 	'private' => false,
-],
-
-'wmgRC2UDPAddress' => [
-	'default' => $wmfLocalServices['irc'],
-],
-
-'wmgRC2UDPPort' => [
-	'default' => 9390,
 ],
 
 'wmgRC2UDPPrefix' => [
@@ -12807,14 +12786,6 @@ $wgConf->settings = [
 	'enwiki' => 15,
 ],
 
-'wgExportAllowHistory' => [
-	'default' => true
-],
-
-'wgExportMaxHistory' => [
-	'default' => 1000, # changed from 100 -- brion 2008-07-10
-],
-
 'wgExportFromNamespaces' => [ // T61947
 	'default' => false,
 	'mediawikiwiki' => true,
@@ -12835,14 +12806,11 @@ $wgConf->settings = [
 	'wikitech' => false,
 ],
 
+// Available for emergency variation only.
 'wmgEmergencyCaptcha' => [
 	'default' => false,
 ],
 # @} end of Captcha
-
-'wgWantedPagesThreshold' => [
-	'default' => 2,
-],
 
 // This controls whether minor edits trigger
 // an email notification by default.
@@ -12866,14 +12834,6 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
-'wgAllowTitlesInSVG' => [
-	'default' => true,
-],
-
-'wgIgnoreImageErrors' => [
-	'default' => true, // keeps temporary errors from messing the cached output
-],
-
 'wgThumbnailScriptPath' => [
 	'default' => false,
 	'private' => '/w/thumb.php',
@@ -12882,10 +12842,6 @@ $wgConf->settings = [
 'wgGenerateThumbnailOnParse' => [
 	'wikitech' => true,
 	'default' => false,
-],
-
-'wgUnwatchedPageThreshold' => [
-	'default' => 30, // Default value of https://toolserver.org/~mzmcbride/watcher/
 ],
 
 # ROBOT @{
@@ -13257,10 +13213,7 @@ $wgConf->settings = [
 	'votewiki' => false,
 ],
 
-'wmgScoreFileBackend' => [
-	'default' => 'global-multiwrite'
-],
-
+// Only varied for Beta Cluster
 'wmgScorePath' => [
 	'default' => '//upload.wikimedia.org/score'
 ],
@@ -13451,10 +13404,6 @@ $wgConf->settings = [
 	],
 ],
 # @} end of wgDisableQueryPageUpdate
-
-'wgShowHostnames' => [
-	'default' => true,
-],
 
 # wgNamespaceProtection @{
 'wgNamespaceProtection' => [
@@ -13722,10 +13671,6 @@ $wgConf->settings = [
 	'frwiki' => [ 'autopatrolled' ],
 ],
 
-'wgDeleteRevisionsLimit' => [
-	'default' => 5000,
-],
-
 'wgAppleTouchIcon' => [
 	'default' => false, // iOS searches for icons in docroot by default
 
@@ -13743,18 +13688,6 @@ $wgConf->settings = [
 'wgReferrerPolicy' => [
 	'default' => [ 'origin-when-cross-origin', 'origin-when-crossorigin', 'origin' ], // T180921
 	'private' => 'no-referrer',
-],
-
-'wgUserEmailUseReplyTo' => [
-	'default' => true, // T66795
-],
-
-'wgStatsMethod' => [
-	'default' => 'udp',
-],
-
-'wgUseLocalMessageCache' => [
-	'default' => true,
 ],
 
 # CENTRAL AUTH @{
@@ -13847,10 +13780,6 @@ $wgConf->settings = [
 
 'wgCookieHttpOnly' => [
 	'default' => true,
-],
-
-'wgAPIMaxResultSize' => [
-	'default' => 12582912, // 12 MB; temporary while I figure out what the deal with those overlarge revisions is --Roan
 ],
 
 'wmgUseCollection' => [
@@ -14183,6 +14112,8 @@ $wgConf->settings = [
 ],
 
 # abuse filter @{
+
+// Only varied for Beta Cluster
 'wmgAbuseFilterCentralDB' => [
 	'default' => 'metawiki',
 ],
@@ -14236,9 +14167,6 @@ $wgConf->settings = [
 		'default' => 86400,
 	],
 ],
-'wgAbuseFilterParserClass' => [
-	'default' => 'AbuseFilterParser',
-],
 # @}
 
 'wgThumbLimits' => [
@@ -14275,9 +14203,6 @@ $wgConf->settings = [
 	],
 ],
 
-'wgCopyUploadProxy' => [
-	'default' => $wmfLocalServices['urldownloader'],
-],
 'wgAllowCopyUploads' => [
 	'default' => false,
 	'testwiki' => true,
@@ -14536,10 +14461,6 @@ $wgConf->settings = [
 	'mediawikiwiki' => true,
 	'labswiki' => true,
 	'labtestwiki' => true,
-],
-
-'wgMaxMsgCacheEntrySize' => [
-	'default' => 1024,
 ],
 
 'wmgUseLiquidThreads' => [
@@ -15111,10 +15032,6 @@ $wgConf->settings = [
 	'default' => true,
 	'commonswiki' => false, // T71363
 	'testcommonswiki' => false, // T71363
-],
-
-'wgMediaViewerEnableByDefaultForAnonymous' => [
-	'default' => true,
 ],
 
 'wgMediaViewerUseThumbnailGuessing' => [
@@ -16567,7 +16484,7 @@ $wgConf->settings = [
 	'wikidatawiki' => false,
 ],
 
-// Varied for Labs only.
+// Varied for Beta Cluster only.
 'wmgUsePoolCounter' => [
 	'default' => true,
 ],
@@ -16619,10 +16536,6 @@ $wgConf->settings = [
 	'wikitech' => 'memcached-pecl',
 ],
 
-'wgLanguageConverterCacheType' => [
-	'default' => CACHE_ACCEL,
-],
-
 // General cache epochs
 'wgCacheEpoch' => [
 	'default' => '20130601000000',
@@ -16630,9 +16543,6 @@ $wgConf->settings = [
 	// in CommonSettings.php instead.
 	'wikidatawiki' => '20170724130500',
 	'testwikidatawiki' => '20180919200000',
-],
-'wgThumbnailEpoch' => [
-	'default' => '20130601000000',
 ],
 
 'wmgPFEnableStringFunctions' => [
@@ -16661,10 +16571,6 @@ $wgConf->settings = [
 	'eswikinews' => false,  // Done via local {{int:Copyrightwarning}}s instead.
 	'frwikinews' => false,  // Done via local {{int:Copyrightwarning}}s instead.
 	'ptwikinews' => false,  // Done via local {{int:Copyrightwarning}}s instead.
-],
-
-'wmgCheckUserForceSummary' => [
-	'default' => true, // T73457
 ],
 
 'wmgUseIncubator' => [
@@ -16742,26 +16648,17 @@ $wgConf->settings = [
 	'wikitech' => false, // T126338, T126628
 ],
 
-'wgMathPath' => [
-	'default' => '//upload.wikimedia.org/math',
-],
-
 'wgMathDirectory' => [
 	'default' => false,
 	'wikitech' => '/srv/math-images', // T126628
 	'labtestwiki' => '/srv/math-images',
 ],
 
-'wmgMinervaNeue' => [
-	'default' => true,
-],
 'wmgUseMobileApp' => [
 	'default' => true,
 	'wikitech' => false,
 ],
-'wmgMobileFrontend' => [
-	'default' => true,
-],
+
 'wgMFQueryPropModules' => [
 	// workaround for T125672
 	'default' => [ 'pageprops' ],
@@ -16793,9 +16690,6 @@ $wgConf->settings = [
 	'default' => false
 ],
 
-'wmgEnableTextExtracts' => [
-	'default' => true,
-],
 'wgExtractsRemoveClasses' => [
 	'default' => [
 		// This is a good thing to remove in any case
@@ -16803,9 +16697,6 @@ $wgConf->settings = [
 		// b/c rules, @todo: consider just whacking class="noexcerpt" on these
 		'span.coordinates', 'span.geo-multi-punct', 'span.geo-nondefault', '#coordinates',
 	],
-],
-'wgExtractsExtendOpenSearchXml' => [
-	'default' => true,
 ],
 
 'wmgZeroBanner' => [
@@ -16840,14 +16731,6 @@ $wgConf->settings = [
 'wmgEnableDashikiData' => [
 	'default' => false,
 	'metawiki' => true,
-],
-
-'wmgUseGraph' => [
-	'default' => true,
-],
-
-'wgGraphDefaultVegaVer' => [
-	'default' => 2,
 ],
 
 // All graph data requests should be trusted on these wikis
@@ -17074,9 +16957,6 @@ $wgConf->settings = [
 'wgMFLogWrappedInfoboxes' => [
 	'default' => false,
 	'enwiki' => true,
-],
-'wgMFNearby' => [
-	'default' => true, // Does not gets enabled on wikis w/o GeoData anyway
 ],
 
 // T190101
@@ -18385,12 +18265,6 @@ $wgConf->settings = [
 	'incubatorwiki' => true,
 	'wikidata' => true,
 ],
-'wmgUseApiFeatureUsage' => [
-	'default' => true,
-],
-'wmgUseBounceHandler' => [
-	'default' => true,
-],
 
 'wmgUseTranslate' => [
 	'default' => false,
@@ -18641,15 +18515,9 @@ $wgConf->settings = [
 		],
 	],
 ],
+
 'wmgReduceStartupExpiry' => [
 	'default' => false,
-],
-
-'wmgMemoryLimit' => [
-	'default' => 660 * 1024 * 1024, // 660MB
-],
-'wgMaxGeneratedPPNodeCount' => [
-	'default' => 1500000,
 ],
 
 'wmgEnablePageTriage' => [
@@ -18686,10 +18554,6 @@ $wgConf->settings = [
 	'default' => false,
 	'testwiki' => true,
 	'enwiki' => true,
-],
-
-'wmgEnableInterwiki' => [
-	'default' => true,
 ],
 
 'wmgUseGettingStarted' => [
@@ -18831,12 +18695,7 @@ $wgConf->settings = [
 	'default' => true,
 	'nonecho' => false,
 ],
-'wmgEchoEnableEmailBatch' => [
-	'default' => true,
-],
-'wmgEchoEmailFooterAddress' => [
-	'default' => 'Wikimedia Foundation, 1 Montgomery Street, Suite 1600, San Francisco, CA 94104, USA',
-],
+
 'wmgEchoSiteNotificationIconUrl' => [
 	'default' => false,
 
@@ -19094,10 +18953,6 @@ $wgConf->settings = [
 	'votewiki' => false, // T61702
 ],
 
-'wmgUseCodeEditorForCore' => [
-	'default' => true,
-],
-
 'wmgUseScribunto' => [
 	'default' => true,
 	'loginwiki' => false,
@@ -19308,24 +19163,12 @@ $wgConf->settings = [
 	'related-articles-footer-blacklisted-skins' => [],
 ],
 
-'wmgUseRevisionSlider' => [
-	'default' => true,
-],
-
-'wmgUseTwoColConflict' => [
-	'default' => true,
-],
-
 'wmgUseUserMerge' => [
 	'default' => true,
 	'private' => false,
 	'fishbowl' => false,
 	'nonglobal' => false,
 	'labswiki' => true, // T165795
-],
-
-'wmgUseEventLogging' => [
-	'default' => true,
 ],
 
 'wmgUseWikimediaEvents' => [
@@ -20749,10 +20592,6 @@ $wgConf->settings = [
 	'testwikidatawiki' => true,
 	'wikidatawiki' => true,
 	'commonswiki' => true,
-],
-
-'wgScoreTrim' => [
-	'default' => true,
 ],
 
 'wgWikibaseMusicalNotationLineWidthInches' => [
@@ -22658,25 +22497,12 @@ $wgConf->settings = [
 	'testcommonswiki' => [ NS_FILE ],
 ],
 
-// T152540
-'wgFragmentMode' => [
-	'default' => [ 'html5', 'legacy' ],
-],
-
-'wmgUse3d' => [
-	'default' => true,
-],
-
 'wmgUpload3d' => [
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
 	'commonswiki' => true,
 	'testcommonswiki' => true,
-],
-
-'wg3dProcessEnviron' => [
-	'default' => [ 'DISPLAY' => ':99' ],
 ],
 
 // T166759
@@ -22694,10 +22520,6 @@ $wgConf->settings = [
 
 'wgChangeTagsSchemaMigrationStage' => [
 	'default' => MIGRATION_NEW,
-],
-
-'wgTagStatisticsNewTable' => [
-	'default' => true,
 ],
 
 'wgMultiContentRevisionSchemaMigrationStage' => [
@@ -22729,15 +22551,6 @@ $wgConf->settings = [
 	'default' => true,
 	'mediawikiwiki' => false,
 	'wikidatawiki' => false,
-],
-
-// T184121
-// Explicitly disabled for non-CentralAuth wikis in CommonSettings.php
-'wmgUseGlobalPreferences' => [
-	'default' => true,
-],
-'wgGlobalPreferencesDB' => [
-	'default' => 'centralauth',
 ],
 
 'wmgUsePerformanceInspector' => [
