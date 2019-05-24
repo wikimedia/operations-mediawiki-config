@@ -49,6 +49,52 @@
     },
     {
       "key": {
+        "uuid": "86610b07_3f8500d1",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3133,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-05-24T22:00:22Z",
+      "side": 1,
+      "message": "Looks like this is the default in the extension, since 2015 possibly longer. Anyway, for another commit.",
+      "range": {
+        "startLine": 3133,
+        "startChar": 1,
+        "endLine": 3133,
+        "endChar": 32
+      },
+      "revId": "81807385c05eb98ad84d6e6a457c9e15481f4bf9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da565824_56dcb254",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3412,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-05-24T22:00:22Z",
+      "side": 1,
+      "message": "LGTM, but warrants a comment I think to say that we install it for use by the Graph extension (and ZeroBanner/ZeroPortal).\n\nOn its own it doesn\u0027t do much, and if somehow those extensions were disabled or removed in a future, we\u0027d want a grep for them to identify this as being only there for it (like a ref count).",
+      "range": {
+        "startLine": 3412,
+        "startChar": 0,
+        "endLine": 3412,
+        "endChar": 15
+      },
+      "revId": "81807385c05eb98ad84d6e6a457c9e15481f4bf9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "237753dc_f1890283",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 2
