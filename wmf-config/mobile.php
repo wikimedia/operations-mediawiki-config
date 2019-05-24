@@ -15,25 +15,6 @@ if ( $wmgMobileFrontend ) {
 		$wgMFNearby = false;
 	}
 
-	if ( $wmgZeroBanner && !$wmgZeroPortal ) {
-		wfLoadExtension( 'ZeroBanner' );
-
-		if ( !isset( $wgJsonConfigs ) ) {
-			$wgJsonConfigs = [];
-		}
-		if ( !isset( $wgJsonConfigs['JsonZeroConfig'] ) ) {
-			$wgJsonConfigs['JsonZeroConfig'] = [];
-		}
-		$wgJsonConfigs['JsonZeroConfig']['isLocal'] = false;
-		$wgJsonConfigs['JsonZeroConfig']['remote'] = [
-			'url' => 'https://zero.wikimedia.org/w/api.php',
-			'username' => $wmgZeroPortalApiUserName,
-			'password' => $wmgZeroPortalApiPassword,
-		];
-
-		$wgGroupPermissions['sysop']['jsonconfig-flush'] = true;
-	}
-
 	$wgHooks['EnterMobileMode'][] = function () {
 		global $wgCentralAuthCookieDomain, $wgHooks, $wgIncludeLegacyJavaScript;
 
