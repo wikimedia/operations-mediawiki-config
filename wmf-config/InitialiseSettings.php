@@ -5688,11 +5688,11 @@ $wgConf->settings = [
 	// Meta wiki @{
 	'metawiki' => [
 		200 => 'Grants', // T24810
-		201 => 'Grants_talk',
+		201 => 'Grants talk',
 		202 => 'Research', // T30742
-		203 => 'Research_talk',
+		203 => 'Research talk',
 		206 => 'Iberocoop', // T40398
-		207 => 'Iberocoop_talk',
+		207 => 'Iberocoop talk',
 	],
 	// @}
 
