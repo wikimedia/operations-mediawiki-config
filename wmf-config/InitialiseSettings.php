@@ -12688,6 +12688,8 @@ $wgConf->settings = [
 		'meta', 'commons',
 	], // T34411
 	'specieswiki' => [ 'd', 'c', 'incubator', 'outreach', 'm', 'mediawiki', 'en' ], // T170094
+	'sqwiki' => [ 'q' ], // T221234
+	'sqwikiquote' => [ 'w' ], // T221234
 	'srnwiki' => [ 'incubator' ],
 	'srwiki' => [ 'wikt', 'meta' ], // T64533
 	'srwiktionary' => [ 'w' ],
