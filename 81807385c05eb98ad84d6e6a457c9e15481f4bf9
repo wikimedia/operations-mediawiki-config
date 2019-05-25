@@ -72,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "72582b94_8a2eecfb",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3133,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2019-05-25T00:39:49Z",
+      "side": 1,
+      "message": "Agreed. We should probably drop the feature\u0027s disablement if there\u0027s no reasonable need for it.",
+      "parentUuid": "86610b07_3f8500d1",
+      "range": {
+        "startLine": 3133,
+        "startChar": 1,
+        "endLine": 3133,
+        "endChar": 32
+      },
+      "revId": "81807385c05eb98ad84d6e6a457c9e15481f4bf9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da565824_56dcb254",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 2
@@ -83,6 +107,30 @@
       "writtenOn": "2019-05-24T22:00:22Z",
       "side": 1,
       "message": "LGTM, but warrants a comment I think to say that we install it for use by the Graph extension (and ZeroBanner/ZeroPortal).\n\nOn its own it doesn\u0027t do much, and if somehow those extensions were disabled or removed in a future, we\u0027d want a grep for them to identify this as being only there for it (like a ref count).",
+      "range": {
+        "startLine": 3412,
+        "startChar": 0,
+        "endLine": 3412,
+        "endChar": 15
+      },
+      "revId": "81807385c05eb98ad84d6e6a457c9e15481f4bf9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1d631a20_3eed7576",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3412,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2019-05-25T00:39:49Z",
+      "side": 1,
+      "message": "Sadly it also is (ab)used for primary content, see https://commons.wikimedia.org/wiki/Special:Random/Data",
+      "parentUuid": "da565824_56dcb254",
       "range": {
         "startLine": 3412,
         "startChar": 0,
@@ -118,6 +166,30 @@
     },
     {
       "key": {
+        "uuid": "051dd4d2_50f8201e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 13167,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2019-05-25T00:39:49Z",
+      "side": 1,
+      "message": "This is already the phrasing used in this file, and I didn\u0027t want to adjust it yet – e.g.:\n\n // Varied for Labs only.\n \u0027wmgUsePoolCounter\u0027 \u003d\u003e [\n \t\u0027default\u0027 \u003d\u003e true,\n ],",
+      "parentUuid": "237753dc_f1890283",
+      "range": {
+        "startLine": 13167,
+        "startChar": 8,
+        "endLine": 13167,
+        "endChar": 14
+      },
+      "revId": "81807385c05eb98ad84d6e6a457c9e15481f4bf9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "df63b61e_77c4a643",
         "filename": "wmf-config/mobile.php",
         "patchSetId": 2
@@ -129,6 +201,30 @@
       "writtenOn": "2019-05-24T21:52:59Z",
       "side": 1,
       "message": "OK. Took me a while, and I think this is correct, but I think we should document the intention here to avoid confusion.\n\nPreviously:\n\n default \u003d\u003e true\n but, if $wmgEnableGeoData \u003d\u003d false, then false.\n\nNow:\n\n if $wmgEnableGeoData \u003d\u003d true, then true.\n if $wmgEnableGeoData \u003d\u003d false, then false (basically).\n\nIntent being, only on when GeoData is on (it\u0027s off by default).\n\nAlternate:\n\n if ( $wmgEnableGeoData ) {\n   $wgMFNearby \u003d true;\n }",
+      "range": {
+        "startLine": 12,
+        "startChar": 14,
+        "endLine": 12,
+        "endChar": 34
+      },
+      "revId": "81807385c05eb98ad84d6e6a457c9e15481f4bf9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a3ae2513_5e386a9c",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2019-05-25T00:39:49Z",
+      "side": 1,
+      "message": "Yeah, we could; I wanted this to not error if it\u0027s unset.",
+      "parentUuid": "df63b61e_77c4a643",
       "range": {
         "startLine": 12,
         "startChar": 14,
