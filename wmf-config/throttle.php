@@ -27,18 +27,4 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[] = [ // T220001
-	'from' => '2019-04-14T10:00 UTC',
-	'to' => '2019-04-14T15:00 UTC',
-	'IP' => '172.16.128.31',
-	'value' => 30, // 25 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T213869 - Wikimedia Hackathon 2019, Prague
-	'from' => '2019-05-15T0:00 UTC',
-	'to' => '2019-05-20T0:00 UTC',
-	'range' => '195.113.241.0/24',
-	'value' => 400,
-];
-
 ## Add throttling definitions above.
