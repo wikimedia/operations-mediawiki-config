@@ -173,6 +173,7 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['dataRightsUrl'] = 'https://creativecommons.org/publicdomain/zero/1.0/';
 
 	$wgWBRepoSettings['dataSquidMaxage'] = 1 * 60 * 60;
+	$wgWBRepoSettings['dataCdnMaxAge'] = 1 * 60 * 60;
 	$wgWBRepoSettings['sharedCacheDuration'] = 60 * 60 * 24;
 	$wgWBRepoSettings['sharedCacheKeyGroup'] = $wmgWikibaseCachePrefix;
 	$wgWBRepoSettings['sharedCacheKeyPrefix'] = $wmgWBSharedCacheKey;
