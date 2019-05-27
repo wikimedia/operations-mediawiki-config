@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c999ddc4_5aa6c592",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 18862,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-05-27T12:57:27Z",
+      "side": 1,
+      "message": "Are we planning to create them on testwikidatawiki as well?",
+      "revId": "5998671cf737290867d30738f722df730de91e50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
