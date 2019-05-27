@@ -13878,7 +13878,7 @@ $wgConf->settings = [
 ],
 
 'wmgCollectionPortletFormats' => [
-	'default' => [ 'rdf2latex' ],
+	'default' => [], // T224433
 	// The old PDF renderer choked on Indic languages.  The
 	// new renderer should render these fine (and the ODF
 	// renderer is in a data center which is being shut down).
