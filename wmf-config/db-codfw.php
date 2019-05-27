@@ -128,7 +128,7 @@ $wgLBFactoryConf = [
 		'db2056'      => 100, # D6 3.3TB 160GB, dump (inactive), vslow
 		'db2063'      => 50, # D6 3.3TB 160GB, api # master for sanitarium db2095
 		'db2088:3312' => 200, # D1 3.3TB 512GB # rc, log: s1 and s2
-		'db2091:3312' => 200, # A8 3.3TB 512GB # rc, log: s2 and s4
+		# 'db2091:3312' => 200, # A8 3.3TB 512GB # rc, log: s2 and s4 # Depooled T224393
 		'db2104'      => 300, # A5 5.2TB 512GB, api # candidate master
 		'db2107'      => 300, # B1 5.2TB 512GB # future master
 		'db2108'      => 300, # B3 5.2TB 512GB
@@ -147,7 +147,7 @@ $wgLBFactoryConf = [
 		'db2073'      => 1,   # C6 3.3TB 512GB, vslow, dump # master for sanitarium db2095
 		'db2084:3314' => 150, # D6 3.3TB 512GB # rc, log: s4 and s5
 		'db2090'      => 100, # C5 3.3TB 512GB, api # candidate master
-		'db2091:3314' => 150, # A8 3.3TB 512GB # rc, log: s2 and s4
+		# 'db2091:3314' => 150, # A8 3.3TB 512GB # rc, log: s2 and s4 # Depooled T224393
 		'db2106'      => 300, # A8 5.2TB 512GB, api
 		'db2110'      => 500, # B6 5.2TB 512GB # future master
 		'db2119'      => 500, # D3 5.2TB 512GB
@@ -310,23 +310,23 @@ $wgLBFactoryConf = [
 	's2' => [
 		'watchlist' => [
 			'db2088:3312' => 1,
-			'db2091:3312' => 1,
+		#	'db2091:3312' => 1, # Depooled T224393
 		],
 		'recentchanges' => [
 			'db2088:3312' => 1,
-			'db2091:3312' => 1,
+		#	'db2091:3312' => 1, # Depooled T224393
 		],
 		'recentchangeslinked' => [
 			'db2088:3312' => 1,
-			'db2091:3312' => 1,
+		#	'db2091:3312' => 1, # Depooled T224393
 		],
 		'contributions' => [
 			'db2088:3312' => 1,
-			'db2091:3312' => 1,
+		#	'db2091:3312' => 1, # Depooled T224393
 		],
 		'logpager' => [
 			'db2088:3312' => 1,
-			'db2091:3312' => 1,
+		#	'db2091:3312' => 1, # Depooled T224393
 		],
 		'dump' => [
 			'db2056' => 1,
@@ -366,23 +366,23 @@ $wgLBFactoryConf = [
 	's4' => [
 		'watchlist' => [
 			'db2084:3314' => 1,
-			'db2091:3314' => 1,
+	   	#	'db2091:3314' => 1, # Depooled T224393
 		],
 		'recentchanges' => [
 			'db2084:3314' => 1,
-			'db2091:3314' => 1,
+	   	#	'db2091:3314' => 1, # Depooled T224393
 		],
 		'recentchangeslinked' => [
 			'db2084:3314' => 1,
-			'db2091:3314' => 1,
+		#	'db2091:3314' => 1, # Depooled T224393
 		],
 		'contributions' => [
 			'db2084:3314' => 1,
-			'db2091:3314' => 1,
+		#	'db2091:3314' => 1, # Depooled T224393
 		],
 		'logpager' => [
 			'db2084:3314' => 1,
-			'db2091:3314' => 1,
+	 	#	'db2091:3314' => 1, # Depooled T224393
 		],
 		'dump' => [
 			'db2073' => 1,
