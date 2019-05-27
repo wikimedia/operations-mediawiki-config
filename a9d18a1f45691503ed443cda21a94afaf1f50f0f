@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "07ca426f_36fa10b7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-05-27T11:39:21Z",
+      "side": 1,
+      "message": "I’m not sure if this dependency makes a lot of sense. On the one hand, this change really requires the other change to be deployed, not just merged, because mediawiki-config changes are deployed immediately whereas other changes have to wait for the train (unless they’re backports). On the other hand, it’s totally possible to deploy this before the extension is ready, and in fact I believe we intend to do this anyways.",
+      "revId": "a9d18a1f45691503ed443cda21a94afaf1f50f0f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
