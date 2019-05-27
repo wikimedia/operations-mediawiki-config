@@ -2467,7 +2467,9 @@ if ( $wmgUseVisualEditor ) {
 		$wgDefaultUserOptions['T47877-buster'] = 1;
 	}
 	if ( $wmgVisualEditorIsSecondaryEditor ) {
-		$wgVisualEditorTabPosition = 'after';
+		if ( !$wmgVisualEditorUseSingleEditTab ) {
+			$wgVisualEditorTabPosition = 'after';
+		}
 		$wgDefaultUserOptions['visualeditor-editor'] = 'wikitext';
 	} else {
 		$wgDefaultUserOptions['visualeditor-editor'] = 'visualeditor';
