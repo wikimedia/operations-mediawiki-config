@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8236c22e_5782bf29",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 13953,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2019-05-27T21:32:02Z",
+      "side": 1,
+      "message": "not opposing, but why the at sign char?",
+      "range": {
+        "startLine": 13953,
+        "startChar": 21,
+        "endLine": 13953,
+        "endChar": 22
+      },
+      "revId": "3ed02cbff0e59cbc3a3163062bcafeb7e47095be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
