@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c4b0b2c7_d01150b8",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 18848,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-05-27T11:50:26Z",
+      "side": 1,
+      "message": "stray tab",
+      "range": {
+        "startLine": 18848,
+        "startChar": 0,
+        "endLine": 18848,
+        "endChar": 1
+      },
+      "revId": "ba8fa70f0db19eb5cc453f4e7f1e1bd8f31b7e50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9c1714d8_6d8fe553",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 18849,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-05-27T11:50:26Z",
+      "side": 1,
+      "message": "should be below wmgUseEntitySchema IMHO – that variable “begins” the EntitySchema “section”\n\n(not sure if it should be above or below wgEntityschemaShExSimpleUrl though)",
+      "revId": "ba8fa70f0db19eb5cc453f4e7f1e1bd8f31b7e50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
