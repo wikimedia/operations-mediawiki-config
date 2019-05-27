@@ -52,6 +52,24 @@
       "revId": "5998671cf737290867d30738f722df730de91e50",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4e2c647f_63dbaade",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 18862,
+      "author": {
+        "id": 6546
+      },
+      "writtenOn": "2019-05-27T13:32:54Z",
+      "side": 1,
+      "message": "Good, then we can ensure that it also properly handles already existing IDs 🙃\n\nOr should we start at, say, 7 then?",
+      "parentUuid": "23045433_a481d9b4",
+      "revId": "5998671cf737290867d30738f722df730de91e50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
