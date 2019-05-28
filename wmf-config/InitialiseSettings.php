@@ -22997,8 +22997,8 @@ $wgConf->settings = [
 ],
 'wgSpecialSearchFormOptions' => [
 	'testwikidatawiki' => [ 'showDescriptions' => true ],
+	'wikidatawiki' => [ 'showDescriptions' => true ],
 ],
-
 ];
 
 ### WMF Labs override #####
