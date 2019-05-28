@@ -22,6 +22,30 @@
       "revId": "3ebeacd9e9703ebe0d46f536acfb851feeeef5ce",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "49eb3ce8_6c932c8f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 13886,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-05-28T12:03:34Z",
+      "side": 1,
+      "message": "Tge rdf2latex was old \"new renderer\". There are some problems with PDF rendering anyway, then we shifted to ElectronPDF, that also had problems, now we\u0027re shifting to Proton (chromium-render). This code needs some clean-up anyway.\n\nWe have a patch to fix it properly, for now we want to disable the rdf2latex render, disable button, get Proton deployed, and then we will clean up this mess.",
+      "parentUuid": "e9d40a8c_d62e1ee8",
+      "range": {
+        "startLine": 13882,
+        "startChar": 0,
+        "endLine": 13886,
+        "endChar": 60
+      },
+      "revId": "3ebeacd9e9703ebe0d46f536acfb851feeeef5ce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
