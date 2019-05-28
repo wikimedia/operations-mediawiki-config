@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e9d40a8c_d62e1ee8",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 13886,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-05-28T12:00:12Z",
+      "side": 1,
+      "message": "Is this comment still okay or did “the new renderer” refer to rdf2latex?",
+      "range": {
+        "startLine": 13882,
+        "startChar": 0,
+        "endLine": 13886,
+        "endChar": 60
+      },
+      "revId": "3ebeacd9e9703ebe0d46f536acfb851feeeef5ce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
