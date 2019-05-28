@@ -22812,7 +22812,7 @@ $wgConf->settings = [
 'wgGEHelpPanelHelpDeskTitle' => [
 	'default' => '',
 	'testwiki' => 'Wikipedia:Requests/Help_desk',
-	'kowiki' => '위키백과:질문방/2019년_5월', //T224224
+	'kowiki' => '위키백과:질문방/{{Y-M|0}}',
 	'cswiki' => 'Wikipedie:Potřebuji_pomoc',
 	'viwiki' => 'Wikipedia:Giúp_sử_dụng_Wikipedia',
 ],
