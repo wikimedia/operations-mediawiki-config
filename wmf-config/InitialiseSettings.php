@@ -23014,6 +23014,7 @@ $wgConf->settings = [
 ],
 'wgSpecialSearchFormOptions' => [
 	'testwikidatawiki' => [ 'showDescriptions' => true ],
+	'wikidatawiki' => [ 'showDescriptions' => true ],
 ],
 'wmgForceEditSummary' => [
 	'default' => false,
