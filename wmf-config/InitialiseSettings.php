@@ -22995,6 +22995,9 @@ $wgConf->settings = [
 		],
 	],
 ],
+'wgSpecialSearchFormOptions' => [
+	'testwikidatawiki' => [ 'showDescriptions' => true ],
+],
 
 ];
 
