@@ -22,6 +22,30 @@
       "revId": "3ed02cbff0e59cbc3a3163062bcafeb7e47095be",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4427a69b_55b040af",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 13953,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-05-28T10:15:40Z",
+      "side": 1,
+      "message": "bit too much PHP background :)\n\nhttps://docs.phpdoc.org/references/phpdoc/tags/see.html\n\nWhen I add comments that are somehow structured (link somewhere) I prefer to mark stuff as PHPDocblocks, I checked and looks like we\u0027re using three ways to mark things\n - only \u0027// Txxxxx\u0027 (most popular)\n - \u0027see Txxxx\u0027 (less popular)\n - \u0027@see Txxxx\u0027 \n\nI think it\u0027s the best to remove the @see, and just follow `// Txxxx` schema. Any objections?",
+      "parentUuid": "8236c22e_5782bf29",
+      "range": {
+        "startLine": 13953,
+        "startChar": 21,
+        "endLine": 13953,
+        "endChar": 22
+      },
+      "revId": "3ed02cbff0e59cbc3a3163062bcafeb7e47095be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
