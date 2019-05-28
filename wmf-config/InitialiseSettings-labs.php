@@ -1422,5 +1422,8 @@ function wmfLabsSettings() {
 		'wgWikimediaEditorTasksUserCountsDatabase' => [
 			'default' => false,
 		],
+		'-wgSpecialSearchFormOptions' => [
+			'wikidatawiki' => [ 'showDescriptions' => true ],
+		],
 	];
 } # wmflLabsSettings()
