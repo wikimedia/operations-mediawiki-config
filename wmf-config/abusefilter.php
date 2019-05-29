@@ -373,6 +373,9 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
 		$wgGroupPermissions['abusefilter']['abusefilter-modify-restricted'] = true; // T224308
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // T44012
+		$wgAbuseFilterActions['block'] = true; // T224617
+		$wgAbuseFilterBlockDuration = '2 hours'; // T224617
+		$wgAbuseFilterAnonBlockDuration = '2 hours'; // T224617
 		break;
 	case 'ptwiktionary':
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
