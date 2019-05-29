@@ -1392,7 +1392,7 @@ $wgFooterIcons['copyright']['copyright'] = '<a href="https://wikimediafoundation
 # All wikis are special and get Cirrus :)
 # Must come *AFTER* PoolCounterSettings.php
 wfLoadExtension( 'Elastica' );
-require_once "$IP/extensions/CirrusSearch/CirrusSearch.php";
+wfLoadExtension( 'CirrusSearch' );
 include "$wmfConfigDir/CirrusSearch-common.php";
 
 // Various DB contention settings
