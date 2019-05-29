@@ -90,6 +90,25 @@ $wgCirrusSearchOptimizeIndexForExperimentalHighlighter = true;
 # Setup the feedback link on Special:Search if enabled
 $wgCirrusSearchFeedbackLink = $wmgCirrusSearchFeedbackLink;
 
+# Basic config from the repo for over-riding locally, before the code is loaded. T224634
+$wgCirrusSearchWeights = [
+	'title' => 20,
+	'redirect' => 15,
+	'category' => 8,
+	'heading' => 5,
+	'opening_text' => 3,
+	'text' => 1,
+	'auxiliary_text' => 0.5,
+	'file_text' => 0.5,
+];
+$wgCirrusSearchNamespaceWeights = [
+	NS_USER => 0.05,
+	NS_PROJECT => 0.1,
+	NS_MEDIAWIKI => 0.05,
+	NS_TEMPLATE => 0.005,
+	NS_HELP => 0.1,
+];
+
 # Settings customized per index.
 $wgCirrusSearchShardCount = $wmgCirrusSearchShardCount;
 $wgCirrusSearchReplicas = $wmgCirrusSearchReplicas;
