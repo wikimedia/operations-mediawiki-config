@@ -130,7 +130,7 @@ if ( $wgDBname == 'alswiki' ) {
 	# Use flag "protection" levels
 	$wgFlaggedRevsProtection = true;
 	# Use current templates/files
-	$wgFlaggedRevsHandleIncludes = FR_INCLUDES_CURRENT;
+	$wgFlaggedRevsHandleIncludes = /*FR_INCLUDES_CURRENT*/0;
 	# Group permissions for autoconfirmed
 	$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
 
@@ -181,7 +181,7 @@ if ( $wgDBname == 'alswiki' ) {
 	# Use flag "protection" levels
 	$wgFlaggedRevsProtection = true;
 	# Use current templates/files
-	$wgFlaggedRevsHandleIncludes = FR_INCLUDES_CURRENT;
+	$wgFlaggedRevsHandleIncludes = /*FR_INCLUDES_CURRENT*/0;
 
 	# User groups permissions
 	$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
@@ -306,7 +306,7 @@ if ( $wgDBname == 'alswiki' ) {
 	# Use flag "protection" levels
 	$wgFlaggedRevsProtection = true;
 	# Use current templates/files
-	$wgFlaggedRevsHandleIncludes = FR_INCLUDES_CURRENT;
+	$wgFlaggedRevsHandleIncludes = /*FR_INCLUDES_CURRENT*/0;
 	# Group permissions for autoconfirmed
 	$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
 
@@ -392,7 +392,7 @@ if ( $wgDBname == 'alswiki' ) {
 	# Use flag "protection" levels
 	$wgFlaggedRevsProtection = true;
 	# Use current templates/files
-	$wgFlaggedRevsHandleIncludes = FR_INCLUDES_CURRENT;
+	$wgFlaggedRevsHandleIncludes = /*FR_INCLUDES_CURRENT*/0;
 
 	# User groups permissions
 	$wgGroupPermissions['rollbacker']['autoreviewrestore'] = true;
@@ -486,7 +486,7 @@ if ( $wgDBname == 'alswiki' ) {
 	# Use flag "protection" levels
 	$wgFlaggedRevsProtection = true;
 	# Use current templates/files
-	$wgFlaggedRevsHandleIncludes = FR_INCLUDES_CURRENT;
+	$wgFlaggedRevsHandleIncludes = /*FR_INCLUDES_CURRENT*/0;
 	# Group permissions for autoconfirmed
 	$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
 
@@ -587,7 +587,7 @@ if ( $wgDBname == 'alswiki' ) {
 	# Use flag "protection" levels
 	$wgFlaggedRevsProtection = true;
 	# Use current templates/files
-	$wgFlaggedRevsHandleIncludes = FR_INCLUDES_CURRENT;
+	$wgFlaggedRevsHandleIncludes = 0 /*FR_INCLUDES_CURRENT*/;
 
 	# Group permissions
 	$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
