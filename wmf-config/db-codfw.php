@@ -170,7 +170,7 @@ $wgLBFactoryConf = [
 		'db2060'      => 100, # D6 3.3TB 160GB, api
 		'db2067'      => 100, # D6 3.3TB 160GB, api
 		'db2076'      => 400, # B1 3.3TB 512GB # master for sanitarium db2095
-		# 'db2087:3316' => 100, # C1 3.3TB 512GB # rc, log: s6 and s7
+		'db2087:3316' => 100, # C1 3.3TB 512GB # rc, log: s6 and s7
 		'db2089:3316' => 100, # A3 3.3TB 512GB # rc, log: s6 and s5(s8)
 		'db2114'      => 400, # C5 5.2TB 512GB
 		'db2117'      => 400, # D1 5.2TB 512GB
@@ -182,7 +182,7 @@ $wgLBFactoryConf = [
 		'db2068'      => 200, # D6 3.3TB 160GB
 		'db2077'      => 500, # C1 3.3TB 512GB, api # master for sanitarium db2095
 		'db2086:3317' => 200, # B1 3.3TB 512GB # rc, log: s7 and s8
-		# 'db2087:3317' => 200, # C1 3.3TB 512GB # rc, log: s6 and s7
+		'db2087:3317' => 200, # C1 3.3TB 512GB # rc, log: s6 and s7
 		'db2118'      => 300, # D3 5.2TB 512GB, candidate master
 		'db2120'      => 300, # D5 5.2TB 512GB
 	],
@@ -429,23 +429,23 @@ $wgLBFactoryConf = [
 	],
 	's6' => [
 		'watchlist' => [
-			# 'db2087:3316' => 1,
+			'db2087:3316' => 1,
 			'db2089:3316' => 1,
 		],
 		'recentchanges' => [
-			# 'db2087:3316' => 1,
+			'db2087:3316' => 1,
 			'db2089:3316' => 1,
 		],
 		'recentchangeslinked' => [
-			# 'db2087:3316' => 1,
+			'db2087:3316' => 1,
 			'db2089:3316' => 1,
 		],
 		'contributions' => [
-			# 'db2087:3316' => 1,
+			'db2087:3316' => 1,
 			'db2089:3316' => 1,
 		],
 		'logpager' => [
-			# 'db2087:3316' => 1,
+			'db2087:3316' => 1,
 			'db2089:3316' => 1,
 		],
 		'dump' => [
@@ -462,23 +462,23 @@ $wgLBFactoryConf = [
 	's7' => [
 		'watchlist' => [
 			'db2086:3317' => 1,
-			# 'db2087:3317' => 1,
+			'db2087:3317' => 1,
 		],
 		'recentchanges' => [
 			'db2086:3317' => 1,
-			# 'db2087:3317' => 1,
+			'db2087:3317' => 1,
 		],
 		'recentchangeslinked' => [
 			'db2086:3317' => 1,
-			# 'db2087:3317' => 1,
+			'db2087:3317' => 1,
 		],
 		'contributions' => [
 			'db2086:3317' => 1,
-			# 'db2087:3317' => 1,
+			'db2087:3317' => 1,
 		],
 		'logpager' => [
 			'db2086:3317' => 1,
-			# 'db2087:3317' => 1,
+			'db2087:3317' => 1,
 		],
 		'dump' => [
 			'db2054' => 1,
