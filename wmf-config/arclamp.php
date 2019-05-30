@@ -31,7 +31,6 @@ function wmfArcLampFlush( $redisHost, $redisPort, $redisTimeout ) {
 	}
 
 	$entryPoint = basename( $_SERVER['SCRIPT_NAME'] );
-	$reqMethod = '{' . $_SERVER['REQUEST_METHOD'] . '}';
 
 	// Collate stack samples and fold into single lines,
 	// in the format expected by FlameGraph.
@@ -65,7 +64,6 @@ function wmfArcLampFlush( $redisHost, $redisPort, $redisTimeout ) {
 			if ( strpos( end( $stack ), $entryPoint ) !== false ) {
 				array_pop( $stack );
 			}
-			$stack[] = $reqMethod;
 			$stack[] = $entryPoint;
 
 			$strStack = implode( ';', array_reverse( $stack ) );
