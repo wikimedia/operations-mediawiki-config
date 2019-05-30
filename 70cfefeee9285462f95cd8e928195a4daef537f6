@@ -22,6 +22,30 @@
       "revId": "70cfefeee9285462f95cd8e928195a4daef537f6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b48dbd77_c6ef54f3",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 706,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2019-05-30T13:18:54Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "86343565_fe90af88",
+      "range": {
+        "startLine": 706,
+        "startChar": 20,
+        "endLine": 706,
+        "endChar": 21
+      },
+      "revId": "70cfefeee9285462f95cd8e928195a4daef537f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
