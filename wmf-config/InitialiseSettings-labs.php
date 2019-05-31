@@ -190,7 +190,7 @@ function wmfLabsSettings() {
 		],
 
 		// Turn on all cirrussearch-request logging in beta
-		'-wmgCirrusSearchRequestEventSampling' => [
+		'-wgCirrusSearchRequestEventSampling' => [
 			'default' => 1.0,
 		],
 
