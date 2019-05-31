@@ -22985,7 +22985,7 @@ $wgConf->settings = [
 			'class' => 'MediaWiki\\Extension\\WikimediaEditorTasks\\WikipediaAppCaptionEditCounter',
 			'counter_key' => 'app_caption_edits',
 			'target_counts' => [ 3, 15 ],
-			'delay' => 86400,
+			'delay' => 0,
 		],
 	],
 ],
