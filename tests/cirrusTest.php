@@ -193,7 +193,7 @@ class CirrusTest extends WgConfTestCase {
 		$wgConf = $this->loadWgConf( 'unittest' );
 		$shards = $wgConf->settings['wmgCirrusSearchShardCount'];
 		$replicas = $wgConf->settings['wmgCirrusSearchReplicas'];
-		$maxShardPerNode = $wgConf->settings['wmgCirrusSearchMaxShardsPerNode'];
+		$maxShardPerNode = $wgConf->settings['wgCirrusSearchMaxShardsPerNode'];
 		$wikis = array_merge( array_keys( $shards ), array_keys( $replicas ), array_keys( $maxShardPerNode ) );
 		foreach ( $wikis as $idx => $wiki ) {
 			if ( $wiki[0] === '+' ) {
@@ -283,52 +283,52 @@ class CirrusTest extends WgConfTestCase {
 		return [
 			'zhwiki' => [ 'zhwiki', 'wiki',
 				[
-					'wmgCirrusSearchSimilarityProfile' => 'wmf_defaults',
-					'wmgCirrusSearchRescoreProfile' => 'classic',
-					'wmgCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
-					'wmgCirrusSearchMaxPhraseTokens' => 10,
+					'wgCirrusSearchSimilarityProfile' => 'wmf_defaults',
+					'wgCirrusSearchRescoreProfile' => 'classic',
+					'wgCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
+					'wgCirrusSearchMaxPhraseTokens' => 10,
 				],
 			],
 			'zh_min_nanwikisource' => [ 'zh_min_nanwikisource', 'wikisource',
 				[
-					'wmgCirrusSearchSimilarityProfile' => 'wmf_defaults',
-					'wmgCirrusSearchRescoreProfile' => 'classic',
-					'wmgCirrusSearchFullTextQueryBuilderProfile' => 'default',
+					'wgCirrusSearchSimilarityProfile' => 'wmf_defaults',
+					'wgCirrusSearchRescoreProfile' => 'classic',
+					'wgCirrusSearchFullTextQueryBuilderProfile' => 'default',
 				],
 			],
 			'zh_classicalwiki' => [ 'zh_classicalwiki', 'wiki',
 				[
-					'wmgCirrusSearchSimilarityProfile' => 'wmf_defaults',
-					'wmgCirrusSearchRescoreProfile' => 'classic',
-					'wmgCirrusSearchFullTextQueryBuilderProfile' => 'default',
+					'wgCirrusSearchSimilarityProfile' => 'wmf_defaults',
+					'wgCirrusSearchRescoreProfile' => 'classic',
+					'wgCirrusSearchFullTextQueryBuilderProfile' => 'default',
 				],
 			],
 			'thwiktionary' => [ 'thwiktionary', 'wiktionary',
 				[
-					'wmgCirrusSearchSimilarityProfile' => 'wmf_defaults',
-					'wmgCirrusSearchRescoreProfile' => 'classic',
-					'wmgCirrusSearchFullTextQueryBuilderProfile' => 'default',
+					'wgCirrusSearchSimilarityProfile' => 'wmf_defaults',
+					'wgCirrusSearchRescoreProfile' => 'classic',
+					'wgCirrusSearchFullTextQueryBuilderProfile' => 'default',
 				],
 			],
 			'zh_yuewiki' => [ 'zh_yuewiki', 'wiki',
 				[
-					'wmgCirrusSearchSimilarityProfile' => 'wmf_defaults',
-					'wmgCirrusSearchRescoreProfile' => 'classic',
-					'wmgCirrusSearchFullTextQueryBuilderProfile' => 'default',
+					'wgCirrusSearchSimilarityProfile' => 'wmf_defaults',
+					'wgCirrusSearchRescoreProfile' => 'classic',
+					'wgCirrusSearchFullTextQueryBuilderProfile' => 'default',
 				],
 			],
 			'enwiki' => [ 'enwiki', 'wiki',
 				[
-					'wmgCirrusSearchSimilarityProfile' => 'wmf_defaults',
-					'wmgCirrusSearchRescoreProfile' => 'mlr-1024rs',
-					'wmgCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
+					'wgCirrusSearchSimilarityProfile' => 'wmf_defaults',
+					'wgCirrusSearchRescoreProfile' => 'mlr-1024rs',
+					'wgCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
 				],
 			],
 			'frwiktionary' => [ 'frwiktionary', 'wiktionary',
 				[
-					'wmgCirrusSearchSimilarityProfile' => 'wmf_defaults',
-					'wmgCirrusSearchRescoreProfile' => 'wsum_inclinks',
-					'wmgCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
+					'wgCirrusSearchSimilarityProfile' => 'wmf_defaults',
+					'wgCirrusSearchRescoreProfile' => 'wsum_inclinks',
+					'wgCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
 				],
 			],
 		];
