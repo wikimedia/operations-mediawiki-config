@@ -18,6 +18,48 @@
 #
 # Contact Wikimedia Operations or Wikimedia Discovery for more details.
 
+// BC code before removing wmgCirrusSearch ephemeral config vars
+if ( !isset( $wmgCirrusSearchWriteClusters ) ) {
+	$wmgCirrusSearchClusterOverrides = $wgCirrusSearchClusterOverrides;
+	$wmgCirrusSearchWriteClusters = $wgCirrusSearchWriteClusters;
+	$wmgCirrusSearchReplicaGroup = $wgCirrusSearchReplicaGroup;
+	$wmgCirrusSearchPreferRecentDefaultDecayPortion = $wgCirrusSearchPreferRecentDefaultDecayPortion;
+	$wmgCirrusSearchWeightsOverrides = $wgCirrusSearchWeights;
+	$wmgCirrusSearchSimilarityProfile = $wgCirrusSearchSimilarityProfile;
+	$wmgCirrusSearchRescoreProfile = $wgCirrusSearchRescoreProfile;
+	$wmgCirrusSearchFullTextQueryBuilderProfile = $wgCirrusSearchFullTextQueryBuilderProfile;
+	$wmgCirrusSearchEnableCrossProjectSearch = $wgCirrusSearchEnableCrossProjectSearch;
+	$wmgCirrusSearchCrossProjectOrder = $wgCirrusSearchCrossProjectOrder;
+	$wmgCirrusSearchCrossProjectSearchBlackList = $wgCirrusSearchCrossProjectSearchBlackList;
+	$wmgCirrusSearchInterwikiPrefixOverrides = $wgCirrusSearchInterwikiPrefixOverrides;
+	$wmgCirrusSearchCrossProjectShowMultimedia = $wgCirrusSearchCrossProjectShowMultimedia;
+	$wmgCirrusSearchCrossProjectProfiles = $wgCirrusSearchCrossProjectProfiles;
+	$wmgCirrusSearchIgnoreOnWikiBoostTemplates = $wgCirrusSearchIgnoreOnWikiBoostTemplates;
+	$wmgCirrusSearchLanguageWeight = $wgCirrusSearchLanguageWeight;
+	$wmgCirrusSearchInstantIndexNew = $wgCirrusSearchInstantIndexNew;
+	$wmgCirrusSearchMaxShardsPerNode = $wgCirrusSearchMaxShardsPerNode;
+	$wmgCirrusSearchExtraIndexSettings = $wgCirrusSearchExtraIndexSettings;
+	$wmgCirrusSearchUseCompletionSuggester = $wgCirrusSearchUseCompletionSuggester;
+	$wmgCirrusSearchCompletionSuggesterSubphrases = $wgCirrusSearchCompletionSuggesterSubphrases;
+	$wmgCirrusSearchCompletionSettings = $wgCirrusSearchCompletionSettings;
+	$wmgCirrusSearchEnablePhraseSuggest = $wgCirrusSearchEnablePhraseSuggest;
+	$wmgCirrusSearchRecycleCompletionSuggesterIndex = $wgCirrusSearchRecycleCompletionSuggesterIndex;
+	$wmgCirrusSearchMaxPhraseTokens = $wgCirrusSearchMaxPhraseTokens;
+	$wmgCirrusSearchUseIcuFolding = $wgCirrusSearchUseIcuFolding;
+	$wmgCirrusSearchAllFields = $wgCirrusSearchAllFields;
+	$wmgCirrusSearchNamespaceWeightOverrides = $wgCirrusSearchNamespaceWeights;
+	$wmgCirrusSearchFeedbackLink = $wgCirrusSearchFeedbackLink;
+	$wmgCirrusSearchUserTesting = $wgCirrusSearchUserTesting;
+	$wmgCirrusSearchLanguageDetectors = $wgCirrusSearchLanguageDetectors;
+	$wmgCirrusSearchEnableAltLanguage = $wgCirrusSearchEnableAltLanguage;
+	$wmgCirrusSearchTextcatLanguages = $wgCirrusSearchTextcatLanguages;
+	$wmgCirrusSearchLanguageToWikiMap = $wgCirrusSearchLanguageToWikiMap;
+	$wmgCirrusSearchIndexDeletes = $wgCirrusSearchIndexDeletes;
+	$wmgCirrusSearchEnableArchive = $wgCirrusSearchEnableArchive;
+	$wmgCirrusSearchRequestEventSampling = $wgCirrusSearchRequestEventSampling;
+	$wmgCirrusSearchRefreshInterval = $wgCirrusSearchRefreshInterval;
+}
+
 $wgSearchType = 'CirrusSearch';
 
 $wgCirrusSearchElasticQuirks = [];
