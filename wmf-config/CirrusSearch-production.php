@@ -73,7 +73,6 @@ $wgCirrusSearchElasticQuirks = [
 ];
 
 $wgCirrusSearchCrossClusterSearch = true;
-$wgCirrusSearchReplicaGroup = $wmgCirrusSearchReplicaGroup;
 
 // wgCirrusSearchExtraIndexes is set in CirrusSearch-common.php
 if ( isset( $wgCirrusSearchExtraIndexes[NS_FILE] ) ) {
@@ -122,14 +121,8 @@ $wgCirrusSearchDropDelayedJobsAfter = [
 	'cloudelastic' => 900,
 ];
 
-$wgCirrusSearchRecycleCompletionSuggesterIndex = $wmgCirrusSearchRecycleCompletionSuggesterIndex;
-
 // cache morelike queries to ObjectCache for 24 hours
 $wgCirrusSearchMoreLikeThisTTL = 86400;
 
-// Index deletes into archive
-$wgCirrusSearchIndexDeletes = $wmgCirrusSearchIndexDeletes;
-// Enable searching archive
-$wgCirrusSearchEnableArchive = $wmgCirrusSearchEnableArchive;
 // Internal WDQS endpoint
 $wgCirrusSearchCategoryEndpoint = 'http://wdqs-internal.discovery.wmnet/bigdata/namespace/categories/sparql';

@@ -446,10 +446,12 @@ $wgHooks['APIQuerySiteInfoGeneralInfo'][] = function ( $module, &$data ) {
 	global $wmfMasterDatacenter;
 	global $wmfEtcdLastModifiedIndex;
 	global $wmgCirrusSearchDefaultCluster;
+	global $wgCirrusSearchDefaultCluster;
 	$data['wmf-config'] = [
 		'wmfMasterDatacenter' => $wmfMasterDatacenter,
 		'wmfEtcdLastModifiedIndex' => $wmfEtcdLastModifiedIndex,
 		'wmgCirrusSearchDefaultCluster' => $wmgCirrusSearchDefaultCluster,
+		'wgCirrusSearchDefaultCluster' => $wgCirrusSearchDefaultCluster,
 	];
 };
 
