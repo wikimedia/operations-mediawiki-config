@@ -20839,21 +20839,25 @@ $wgConf->settings = [
 // NOTE: don't forget to update TTM default cluster via
 // $wgTranslateTranslationDefaultService in CommonSettings.php if you plan to
 // bring down a specific cluster.
+'wgCirrusSearchDefaultCluster' => [
+	'default' => $wmfDatacenter,
+],
+// Kept for BC with SRE tools that checks siteinfo (see APIQuerySiteInfoGeneralInfo in CommonSettings.php)
 'wmgCirrusSearchDefaultCluster' => [
 	'default' => 'local',
 ],
 
-'wmgCirrusSearchClusterOverrides' => [
+'wgCirrusSearchClusterOverrides' => [
 	'default' => [],
 ],
 
-'wmgCirrusSearchWriteClusters' => [
+'wgCirrusSearchWriteClusters' => [
 	'default' => [ 'eqiad', 'codfw' ],
 	'group0' => [ 'eqiad', 'codfw', 'cloudelastic' ],
 	'private' => [ 'eqiad', 'codfw' ],
 ],
 
-'wmgCirrusSearchReplicaGroup' => [
+'wgCirrusSearchReplicaGroup' => [
 	'default' => [
 		'type' => 'roundrobin',
 		'groups' => [ 'psi', 'omega' ]
@@ -20861,12 +20865,12 @@ $wgConf->settings = [
 	'cirrussearch-big-indices' => 'chi',
 ],
 
-'wmgCirrusSearchPreferRecentDefaultDecayPortion' => [
+'wgCirrusSearchPreferRecentDefaultDecayPortion' => [
 	'default' => 0,
 	'wikinews' => 0.6,
 ],
 
-'wmgCirrusSearchWeightsOverrides' => [
+'wgCirrusSearchWeights' => [
 	'default' => [],
 	'commonswiki' => [
 		'title' => 25.0,
@@ -20876,7 +20880,7 @@ $wgConf->settings = [
 	],
 ],
 
-'wmgCirrusSearchSimilarityProfile' => [
+'wgCirrusSearchSimilarityProfile' => [
 	'default' => 'wmf_defaults',
 	// Currently defined in WikibaseSearchSettings.php
 	"wikidata" => "wikibase_similarity",
@@ -20885,7 +20889,7 @@ $wgConf->settings = [
 	"testwikidatawiki" => "wikibase_similarity",
 ],
 
-'wmgCirrusSearchRescoreProfile' => [
+'wgCirrusSearchRescoreProfile' => [
 	'default' => 'wsum_inclinks',
 	'commonswiki' => 'classic_noboostlinks',
 	'testcommonswiki' => 'classic_noboostlinks',
@@ -20933,7 +20937,7 @@ $wgConf->settings = [
 	"nan" => "classic", // e.g. zh_min_nan
 ],
 
-'wmgCirrusSearchFullTextQueryBuilderProfile' => [
+'wgCirrusSearchFullTextQueryBuilderProfile' => [
 	'default' => 'perfield_builder',
 	// Uses the lang tag, list of spaceless languages
 	// (see https://www.mediawiki.org/wiki/User:TJones_(WMF)/Notes/Spaceless_Writing_Systems_and_Wiki-Projects)
@@ -20961,7 +20965,7 @@ $wgConf->settings = [
 ],
 
 // Enable crossprocess search (side bar)
-'wmgCirrusSearchEnableCrossProjectSearch' => [
+'wgCirrusSearchEnableCrossProjectSearch' => [
 	'default' => false,
 	// Activated on all wikipedias
 	'wikipedia' => true,
@@ -20977,14 +20981,14 @@ $wgConf->settings = [
 ],
 
 // Tune crossproject ordering
-'wmgCirrusSearchCrossProjectOrder' => [
+'wgCirrusSearchCrossProjectOrder' => [
 	'default' => 'recall',
 	'enwiki' => 'wmf_enwiki', // T171803: 'wikt' always first, 'b' always last, others ordered by recall
 ],
 
 // Define list of projects to blacklist from CrossProject search
 // (only effective if SiteMatrix implementation is being used)
-'wmgCirrusSearchCrossProjectSearchBlackList' => [
+'wgCirrusSearchCrossProjectSearchBlackList' => [
 	'default' => [],
 	// Blacklist wikinews and wikiversity T163463
 	'enwiki' => [ 'n', 'v' ],
@@ -20992,14 +20996,14 @@ $wgConf->settings = [
 
 // Define overridden interwiki prefixes
 // Mostly to match what's done in WikimediaMaintenance/dumpInterwiki.php ( see $prefixRewrites )
-'wmgCirrusSearchInterwikiPrefixOverrides' => [
+'wgCirrusSearchInterwikiPrefixOverrides' => [
 	'default' => [],
 	'svwiki' => [ 's' => 'src' ],
 ],
 
 // Show/Hide multimedia content in the crossproject
 // search results sidebar
-'wmgCirrusSearchCrossProjectShowMultimedia' => [
+'wgCirrusSearchCrossProjectShowMultimedia' => [
 	'default' => true,
 	'enwiki' => false, // T163463, requested during RfC
 	// Disable multimedia on italian non-wikipedias
@@ -21012,7 +21016,7 @@ $wgConf->settings = [
 	'itwikivoyage' => false,
 ],
 
-'wmgCirrusSearchCrossProjectProfiles' => [
+'wgCirrusSearchCrossProjectProfiles' => [
 	'default' => [
 		// full text wikivoyage results are often irrelevant, filter the
 		// search with title matches to improve relevance
@@ -21030,13 +21034,13 @@ $wgConf->settings = [
 	],
 ],
 
-'wmgCirrusSearchIgnoreOnWikiBoostTemplates' => [
+'wgCirrusSearchIgnoreOnWikiBoostTemplates' => [
 	'default' => false,
 	// on wiki boost templates have to high boosts for enwiki
 	'enwiki' => true,
 ],
 
-'wmgCirrusSearchLanguageWeight' => [
+'wgCirrusSearchLanguageWeight' => [
 	'default' => [
 		'user' => 0.0,
 		'wiki' => 0,0,
@@ -21047,7 +21051,7 @@ $wgConf->settings = [
 	],
 ],
 
-'wmgCirrusSearchInstantIndexNew' => [
+'wgCirrusSearchInstantIndexNew' => [
 	'default' => [],
 	'testwikidatawiki' => [
 		NS_MAIN, 120, // NS_MAN & WB_NS_PROPERTY (T183053),
@@ -21057,6 +21061,13 @@ $wgConf->settings = [
 		NS_MAIN, 120, // NS_MAN & WB_NS_PROPERTY (T183053),
 		146 // Lexemes (T196896)
 	],
+],
+
+// T183053
+'wgCirrusSearchRefreshInterval' => [
+	'default' => 30,
+	'wikidatawiki' => 5,
+	'testwikidatawiki' => 5,
 ],
 
 // Shard each wiki to be under 2gb per shard if possible.  Changing this for a wiki
@@ -21151,7 +21162,7 @@ $wgConf->settings = [
 	],
 ],
 
-'wmgCirrusSearchMaxShardsPerNode' => [
+'wgCirrusSearchMaxShardsPerNode' => [
 	'default' => [],
 	'commonswiki' => [ 'file' => 3, 'general' => 2 ],
 	'dewiki' => [ 'content' => 1 ],
@@ -21168,7 +21179,7 @@ $wgConf->settings = [
 
 // Setup our custom index settings, only used at index
 // creation time.
-'wmgCirrusSearchExtraIndexSettings' => [
+'wgCirrusSearchExtraIndexSettings' => [
 	'default' => [
 		// indexing slow log
 		'indexing.slowlog.threshold.index.warn' => '10s',
@@ -21197,16 +21208,16 @@ $wgConf->settings = [
 ],
 
 // Enable completion suggester on all wikis (except wikidata)
-'wmgCirrusSearchUseCompletionSuggester' => [
+'wgCirrusSearchUseCompletionSuggester' => [
 	'default' => 'yes',
 	'wikidatawiki' => 'no',
 ],
 
-// wmgCirrusSearchCompletionSuggesterSubphrases @{
+// wgCirrusSearchCompletionSuggesterSubphrases @{
 // Please verify mem usage on the cluster before adding new wiki here.
 // NOTE: activate 'build' => true first then verify that the index has been
 // updated with the new mapping then you can switch 'use' to true
-'wmgCirrusSearchCompletionSuggesterSubphrases' => [
+'wgCirrusSearchCompletionSuggesterSubphrases' => [
 	'default' => [
 		'build' => false,
 		'use' => false,
@@ -21240,24 +21251,24 @@ $wgConf->settings = [
 ],
 
 // Default profile for autocomplete for when the completion suggester is enabled
-'wmgCirrusSearchCompletionSettings' => [
+'wgCirrusSearchCompletionSettings' => [
 	'default' => 'fuzzy',
 	'mediawikiwiki' => 'fuzzy-subphrases',
 	'wikitech' => 'fuzzy-subphrases',
 	'officewiki' => 'fuzzy-subphrases',
 ],
 
-// @} end of wmgCirrusSearchCompletionSuggesterSubphrases
+// @} end of wgCirrusSearchCompletionSuggesterSubphrases
 
 // Enable phrase suggester (did you mean) on all wikis (except wikidata)
-'wmgCirrusSearchEnablePhraseSuggest' => [
+'wgCirrusSearchEnablePhraseSuggest' => [
 	'default' => true,
 	'wikidatawiki' => false
 ],
 
-// wmgCirrusSearchRecycleCompletionSuggesterIndex @{
+// wgCirrusSearchRecycleCompletionSuggesterIndex @{
 // Recycle suggester indices for small wikis (less than 100MB store size)
-'wmgCirrusSearchRecycleCompletionSuggesterIndex' => [
+'wgCirrusSearchRecycleCompletionSuggesterIndex' => [
 	'default' => true,
 	'enwiki' => false,
 	'svwiki' => false,
@@ -21299,26 +21310,26 @@ $wgConf->settings = [
 	'cswiki' => false,
 	'ltwiktionary' => false,
 ],
-// @} end of wmgCirrusSearchRecycleCompletionSuggesterIndex
+// @} end of wgCirrusSearchRecycleCompletionSuggesterIndex
 
 // Disable phrase rescore on queries with too many tokens.
 // Bandaid for T169498, should be removed when a proper
 // fix is determined
-'wmgCirrusSearchMaxPhraseTokens' => [
+'wgCirrusSearchMaxPhraseTokens' => [
 	'default' => 10,
 ],
 
 // Configure ICU Folding, 'default': controlled by cirrus
 // 'no': disable, 'yes': force
-'wmgCirrusSearchUseIcuFolding' => [
+'wgCirrusSearchUseIcuFolding' => [
 	'default' => 'default',
 ],
 
-'wmgCirrusSearchAllFields' => [
+'wgCirrusSearchAllFields' => [
 	'default' => [ 'build' => true, 'use' => true ],
 ],
 
-'wmgCirrusSearchNamespaceWeightOverrides' => [
+'wgCirrusSearchNamespaceWeights' => [
 	'default' => [],
 	'mediawikiwiki' => [ // T155142
 		12 => 0.9,
@@ -21336,15 +21347,15 @@ $wgConf->settings = [
 ],
 
 // Enable the "Give us feedback" link after search results on enwiki
-'wmgCirrusSearchFeedbackLink' => [
+'wgCirrusSearchFeedbackLink' => [
 	'default' => false,
 ],
 
-'wmgCirrusSearchUserTesting' => [
+'wgCirrusSearchUserTesting' => [
 	'default' => [],
 ],
 
-'wmgCirrusSearchLanguageDetectors' => [
+'wgCirrusSearchLanguageDetectors' => [
 	'default' => [],
 	'dewiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
 	'enwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
@@ -21359,11 +21370,11 @@ $wgConf->settings = [
 
 // Enable interwiki search by language detection. The list of language
 // detected and their corresponding wiki is defined by
-// wmgCirrusSearchLanguageToWikiMap and SiteMatrix.
+// wgCirrusSearchLanguageToWikiMap and SiteMatrix.
 // Note that if language detectors are enabled they will always run, this
 // gates if the result of running is shown to the user (for AB test control
 // bucket reasons).
-'wmgCirrusSearchEnableAltLanguage' => [
+'wgCirrusSearchEnableAltLanguage' => [
 	'default' => false,
 	'dewiki' => true,
 	'enwiki' => true,
@@ -21376,7 +21387,7 @@ $wgConf->settings = [
 	'ruwiki' => true,
 ],
 
-'wmgCirrusSearchTextcatLanguages' => [
+'wgCirrusSearchTextcatLanguages' => [
 	'default' => [],
 	'dewiki' => [
 		'de', 'en', 'la', 'it', 'es', 'fr', 'zh', 'pl',
@@ -21423,8 +21434,8 @@ $wgConf->settings = [
 // profiles.
 // See: https://www.mediawiki.org/wiki/User:TJones_(WMF)/Notes/Language_Detection_Evaluation
 // This includes also the lang codes that might be used by browsers in Accept-Language
-# wmgCirrusSearchLanguageToWikiMap @{
-'wmgCirrusSearchLanguageToWikiMap' => [
+# wgCirrusSearchLanguageToWikiMap @{
+'wgCirrusSearchLanguageToWikiMap' => [
 	'default' => [],
 	'wikipedia' => [
 		"ar" => "ar",
@@ -21487,7 +21498,7 @@ $wgConf->settings = [
 		"zh-tw" => "zh"
 	],
 ],
-# @} end of wmgCirrusSearchLanguageToWikiMap
+# @} end of wgCirrusSearchLanguageToWikiMap
 
 'wmgUseCite' => [
 	'default' => true,
@@ -22487,13 +22498,13 @@ $wgConf->settings = [
 ],
 
 // Enable archive for testwiki
-'wmgCirrusSearchIndexDeletes' => [
+'wgCirrusSearchIndexDeletes' => [
 	'default' => true,
 	'wikidatawiki' => false,
 	'testwikidatawiki' => false,
 ],
 
-'wmgCirrusSearchEnableArchive' => [
+'wgCirrusSearchEnableArchive' => [
 	'default' => true,
 	'wikidatawiki' => false,
 	'testwikidatawiki' => false,
@@ -22571,7 +22582,7 @@ $wgConf->settings = [
 	*/
 ],
 
-'wmgCirrusSearchRequestEventSampling' => [
+'wgCirrusSearchRequestEventSampling' => [
 	'default' => 1.0,
 ],
 
@@ -22663,12 +22674,6 @@ $wgConf->settings = [
 ],
 'wgReadingListsCentralWiki' => [
 	'default' => 'metawiki',
-],
-// T183053
-'wmgCirrusSearchRefreshInterval' => [
-	'default' => 30,
-	'wikidatawiki' => 5,
-	'testwikidatawiki' => 5,
 ],
 // T183665
 'wgMinervaAlwaysShowLanguageButton' => [
