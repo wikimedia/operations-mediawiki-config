@@ -400,6 +400,9 @@ function wmfLabsSettings() {
 
 		'wmgExtraLanguageNames' => [
 			'default' => [ 'en-rtl' => 'English (rtl)' ],
+			'commonswiki' => [
+				'sms' => 'sääʹmǩiõll',	  // T222309
+			],
 		],
 
 		'wgQuickSurveysConfig' => [
