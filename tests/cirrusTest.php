@@ -158,17 +158,8 @@ class CirrusTest extends WgConfTestCase {
 		extract( $globals );
 
 		// variables that would have been setup elsewhere, perhaps in mediawiki
-		// default settings or by CommonSettings.php, or by CirrusSearch.php,
-		// but none of those are a part of this repository
-		$wgCirrusSearchRescoreProfiles = [];
-		$wgCirrusSearchRescoreFunctionScoreChains = [];
-		$wgCirrusSearchFullTextQueryBuilderProfiles = [
-			'perfield_builder' => []
-		];
-		$wgCirrusSearchMaxShardsPerNode = [];
+		// default settings or by CommonSettings.php
 		$wgJobTypeConf = [ 'default' => [] ];
-		$wgCirrusSearchWeights = [];
-		$wgCirrusSearchNamespaceWeights = [];
 		$wmfDatacenter = 'unittest';
 		$wgCirrusSearchPoolCounterKey = 'unittest:poolcounter:blahblahblah';
 		// not used for anything, just to prevent undefined variable

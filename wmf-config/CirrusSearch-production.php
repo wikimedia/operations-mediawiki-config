@@ -68,11 +68,14 @@ $wgCirrusSearchPrivateClusters = [ 'eqiad', 'codfw' ];
 
 // TODO: Remove once running elastic 6.x
 // ref: https://github.com/elastic/elasticsearch/issues/26833
-$wgCirrusSearchElasticQuirks['cross_cluster_single_shard_search'] = true;
+$wgCirrusSearchElasticQuirks = [
+	'cross_cluster_single_shard_search' => true
+];
 
 $wgCirrusSearchCrossClusterSearch = true;
 $wgCirrusSearchReplicaGroup = $wmgCirrusSearchReplicaGroup;
 
+// wgCirrusSearchExtraIndexes is set in CirrusSearch-common.php
 if ( isset( $wgCirrusSearchExtraIndexes[NS_FILE] ) ) {
 	$wgCirrusSearchExtraIndexes[NS_FILE] = [ 'chi:commonswiki_file' ];
 }

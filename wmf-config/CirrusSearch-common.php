@@ -69,7 +69,7 @@ $wgCirrusSearchClientSideSearchTimeout[ 'default' ] = 40;
 // $wgJobBackoffThrottling['cirrusSearchIncomingLinkCount'] = 1; -- disabled, Ori 3-Dec-2015
 
 # Ban the hebrew plugin, it is unstable
-$wgCirrusSearchBannedPlugins[] = 'elasticsearch-analysis-hebrew';
+$wgCirrusSearchBannedPlugins = [ 'elasticsearch-analysis-hebrew' ];
 
 # Build and use an ngram index for faster regex matching
 $wgCirrusSearchWikimediaExtraPlugin = [
@@ -147,12 +147,12 @@ if ( isset( $wgCirrusSearchShardCount['eqiad'] ) ) {
 
 // Commons is special
 if ( $wgDBname == 'commonswiki' ) {
-	$wgCirrusSearchNamespaceMappings[ NS_FILE ] = 'file';
+	$wgCirrusSearchNamespaceMappings = [ NS_FILE => 'file' ];
 } elseif ( $wgDBname == 'officewiki' || $wgDBname == 'foundationwiki' ) {
 	// T94856 - makes searching difficult for locally uploaded files
 	// T76957 - doesn't make sense to have Commons files on foundationwiki search
 } else { // So is everyone else, for using commons
-	$wgCirrusSearchExtraIndexes[ NS_FILE ] = [ 'commonswiki_file' ];
+	$wgCirrusSearchExtraIndexes = [ NS_FILE => 'commonswiki_file' ];
 	$wgCirrusSearchExtraIndexBoostTemplates = [
 		'commonswiki_file' => [
 			'wiki' => 'commonswiki',
@@ -270,6 +270,7 @@ $wgCirrusSearchMaxPhraseTokens = $wmgCirrusSearchMaxPhraseTokens;
 // Enable the search relevance survey where configured
 $wgWMESearchRelevancePages = $wmgWMESearchRelevancePages;
 
+$wgCirrusSearchRescoreProfile = [];
 if ( $wmgCirrusSearchMLRModel ) {
 	if ( !is_array( $wmgCirrusSearchMLRModel ) ) {
 		$wmgCirrusSearchMLRModel = [ 'mlr-1024rs' => $wmgCirrusSearchMLRModel ];
