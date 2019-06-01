@@ -13144,6 +13144,7 @@ $wgConf->settings = [
 
 	'+dewiki' => [ 100 ], // T145619 - Portal
 	'+dewikivoyage' => [ 102 ], // T119420
+	'+fiwiki' => [ 106 ], // T224215
 	'+frwiki' => [ 102 ], // T127688 - Projet
 	'+itwiki' => [ 102 ],
 	'+nowikimedia' => [ 100 ], // T181625 - Prosjekt
