@@ -16125,6 +16125,9 @@ $wgConf->settings = [
 	'+etwiki' => [
 		'Mustand' /* Draft */ => true, // T192254
 	],
+	'+euwiki' => [
+		'Zerrenda' /* List */ => true, // T224801
+	],
 	'+fawiki' => [
 		'پیش‌نویس' /* Draft */ => true, // T118060
 	],
