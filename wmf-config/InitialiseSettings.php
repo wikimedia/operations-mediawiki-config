@@ -23003,10 +23003,6 @@ $wgConf->settings = [
 	*/
 ],
 
-'wgCirrusSearchRequestEventSampling' => [
-	'default' => 1.0,
-],
-
 'wmgWMESearchRelevancePages' => [
 	'default' => [],
 ],
