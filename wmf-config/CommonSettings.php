@@ -2487,7 +2487,6 @@ if ( $wmgUseVisualEditor ) {
 	if ( $wmgVisualEditorUseSingleEditTab ) {
 		$wgVisualEditorUseSingleEditTab = true;
 		$wgVisualEditorSingleEditTabSwitchTime = $wmgVisualEditorSingleEditTabSwitchTime;
-		$wgDefaultUserOptions['T47877-buster'] = 1;
 	}
 	if ( $wmgVisualEditorIsSecondaryEditor ) {
 		if ( !$wmgVisualEditorUseSingleEditTab ) {
