@@ -145,7 +145,6 @@ $wgLBFactoryConf = [
 	],
 	's4' => [
 		'db2051'      => 0,   # B8 2.9TB 160GB, master
-		# 'db2058'      => 50, # D6 3.3TB 160GB, # candidate master # to be moved away
 		'db2073'      => 1,   # C6 3.3TB 512GB, vslow, dump # master for sanitarium db2095
 		'db2084:3314' => 150, # D6 3.3TB 512GB # rc, log: s4 and s5
 		'db2090'      => 100, # C5 3.3TB 512GB, api # candidate master
@@ -169,6 +168,7 @@ $wgLBFactoryConf = [
 		'db2039'      => 0,   # D1 2.9TB 160GB, master
 		'db2046'      => 200, # C6 2.9TB 160GB # candidate master
 		'db2053'      => 50,  # D6 2.9TB 160GB, dump (inactive), vslow
+		# 'db2058'      => 50, # D6 3.3TB 160GB, # future candidate master
 		'db2060'      => 100, # D6 3.3TB 160GB, api
 		'db2067'      => 100, # D6 3.3TB 160GB, api
 		'db2076'      => 400, # B1 3.3TB 512GB # master for sanitarium db2095
