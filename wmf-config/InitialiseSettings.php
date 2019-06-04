@@ -7081,6 +7081,8 @@ $wgConf->settings = [
 		103 => 'Gotûbêja_nimînokê', // T39524
 		104 => 'Portal', // T30398
 		105 => 'Gotûbêja_portalê', // T39524
+		106 => 'Tewandin', // T224327
+		107 => 'Gotûbêja_tewandinê',
 	],
 	'lbwiktionary' => [
 		100 => 'Annexen',
