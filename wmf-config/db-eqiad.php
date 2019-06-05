@@ -148,6 +148,7 @@ $wgLBFactoryConf = [
 		'db1097:3314' => 150, # D1 3.6TB 512GB # rc, log: s4 and s5
 		'db1103:3314' => 150, # A3 3.6TB 512GB # rc, log: s2 and s4
 		'db1121' => 1,      # C6 3.6TB 512GB, vslow, dump # master for sanitarium db1125
+		# 'db1135' => 100,     # C8 4.4TB 512GB # temporary host to cover for db1091 T225060
 		'db1138' => 300,     # D8 4.4TB 512GB # future candidate master # api
 	],
 	's5' => [
@@ -593,6 +594,7 @@ $wgLBFactoryConf = [
 	'db1130' => '10.64.16.33', # do not remove or comment out
 	'db1131' => '10.64.16.34', # do not remove or comment out
 	'db1134' => '10.64.32.76', # do not remove or comment out
+	'db1135' => '10.64.32.77', # do not remove or comment out
 	'db1136' => '10.64.48.109', # do not remove or comment out
 	'db1137' => '10.64.48.111', # do not remove or comment out
 	'db1138' => '10.64.48.124', # do not remove or comment out
