@@ -72,6 +72,8 @@ $wmfStandardAutoPromote = [
 
 $wgFlaggedRevsAutopromote = false;
 
+$wgFlaggedRevsStatsAge = false;
+
 $wgAddGroups['sysop'][] = 'editor'; // promote to basic reviewer (established editors)
 $wgRemoveGroups['sysop'][] = 'editor'; // demote from basic reviewer (established editors)
 $wgAddGroups['sysop'][] = 'autoreview'; // promote to basic auto-reviewer (semi-trusted users)
@@ -786,4 +788,18 @@ if ( isset( $wgGroupPermissions['reviewer'] ) ) {
 	}
 }
 
-$wgFlaggedRevsStatsAge = false;
+/**
+  * Unsets stuff we don't want setting from extension.json
+  */
+$wgExtensionFunctions[] = function() {
+	global $wgFlaggedRevsTags, $wgFlaggedRevsTagsAuto, $wgFlaggedRevsTagsRestrictions;
+
+	unset( $wgFlaggedRevsTags['depth'] );
+	unset( $wgFlaggedRevsTags['style'] );
+
+	unset( $wgFlaggedRevsTagsAuto['depth'] );
+	unset( $wgFlaggedRevsTagsAuto['style'] );
+
+	unset( $wgFlaggedRevsTagsRestrictions['depth'] );
+	unset( $wgFlaggedRevsTagsRestrictions['style'] );
+};
