@@ -17156,6 +17156,13 @@ $wgConf->settings = [
 		'base' => true, 'beta' => true,
 	],
 ],
+'wgMFUseDesktopSpecialHistoryPage' => [ // T219895
+	'default' => [
+		'base' => false,
+		'beta' => false,
+		'amc' => true,
+	],
+],
 'wgMFDisplayWikibaseDescriptions' => [
 	'default' => [
 		'search' => true, 'nearby' => true, 'watchlist' => true, 'tagline' => true
