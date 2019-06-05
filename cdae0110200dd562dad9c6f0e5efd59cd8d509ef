@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0b089daa_09297d82",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-06-05T16:34:15Z",
+      "side": 1,
+      "message": "I think this should be outside the `if` block – after all, commonswiki is a Wikibase repo as well, but I assume you don’t want the feature enabled there :) so instead set the setting to `false` everywhere and then afterwards override it with `true` just on testwikidata.",
+      "revId": "cdae0110200dd562dad9c6f0e5efd59cd8d509ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "54e1d3b7_50b4cc6b",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-06-05T16:34:15Z",
+      "side": 1,
+      "message": "I think it’s a bit confusing to have this in the middle of the larger clientDbList block – would probably be better to have a separate block for this, even if it means repeating the `if ( $wgDBname \u003d\u003d\u003d \u0027testwikidatawiki\u0027 )` condition. (Or you could introduce a $wmgWBRepoEnableRefTabs setting, unconditionally set $wgWBRepoSettings[\u0027enableRefTabs\u0027] \u003d $wmgWBRepoEnableRefTabs in this file, and then set wmgWBRepoEnableRefTabs in InitializeSettings.php for the different wikis – that seems to be how a lot of the other settings are set too, see below.)",
+      "revId": "cdae0110200dd562dad9c6f0e5efd59cd8d509ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
