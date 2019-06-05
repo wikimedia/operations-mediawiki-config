@@ -19705,6 +19705,7 @@ function wmfGetVariantSettings() {
 
 'wmgWikibaseRepoEnableRefTabs' => [
 	'default' => false,
+	'testwikidatawiki' => true, // T228412
 ],
 
 'wmgUseWikibaseClient' => [
