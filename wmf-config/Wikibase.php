@@ -93,6 +93,11 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgSpecialPages['ItemDisambiguation'] = 'SpecialBlankpage';
 	}
 
+	// Only enable reference tabs on testwikidata - temporary T199197
+	if ( $wgDBname === 'testwikidatawiki' ) {
+		$wgWBRepoSettings['enableRefTabs'] = true;
+	}
+
 	if ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) {
 		// Don't try to let users answer captchas if they try to add links
 		// on either Item or Property pages. T86453
