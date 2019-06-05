@@ -22367,7 +22367,7 @@ $wgConf->settings = [
 ],
 
 'wgEventServiceStreamConfig' => [
-	'group0' => [
+	'default' => [
 		'mediawiki.user-blocks-change' => [
 			'EventServiceName' => 'eventgate-main',
 		],
