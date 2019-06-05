@@ -20567,12 +20567,6 @@ $wgConf->settings = [
 	'default' => [],
 ],
 
-'wgLexemeEnableSenses' => [
-	'default' => false,
-	'testwikidatawiki' => true, // T203887
-	'wikidatawiki' => true, // T203888
-],
-
 'wmgWikibaseEntityTypesWithoutRdfOutput' => [
 	'default' => [ 'mediainfo' ],
 ],
