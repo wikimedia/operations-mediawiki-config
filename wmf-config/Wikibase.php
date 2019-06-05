@@ -91,6 +91,8 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( $wgDBname === 'wikidatawiki' ) {
 		// Disable Special:ItemDisambiguation on wikidata.org T195756
 		$wgSpecialPages['ItemDisambiguation'] = 'SpecialBlankpage';
+		// Disable reference tabs on wikidata - temporary T199197
+		$wgWBRepoSettings['enableRefTabs'] = false;
 	}
 
 	if ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) {
@@ -109,6 +111,8 @@ if ( $wmgUseWikibaseRepo ) {
 	// Calculate the client Db lists based on our wikiversions db lists
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		$wgWBRepoSettings['clientDbList'] = [ 'testwiki', 'test2wiki', 'testwikidatawiki' ];
+		// Only enable reference tabs on testwikidata - temporary T199197
+		$wgWBRepoSettings['enableRefTabs'] = true;
 	} elseif ( $wgDBname === 'wikidatawiki' ) {
 		$wgWBRepoSettings['clientDbList'] = array_diff(
 			MWWikiversions::readDbListFile( 'wikidataclient' ),
