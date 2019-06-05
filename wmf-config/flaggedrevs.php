@@ -72,6 +72,11 @@ $wmfStandardAutoPromote = [
 
 $wgFlaggedRevsAutopromote = false;
 
+$wgAddGroups['sysop'][] = 'editor'; // promote to basic reviewer (established editors)
+$wgRemoveGroups['sysop'][] = 'editor'; // demote from basic reviewer (established editors)
+$wgAddGroups['sysop'][] = 'autoreview'; // promote to basic auto-reviewer (semi-trusted users)
+$wgRemoveGroups['sysop'][] = 'autoreview'; // demote from basic auto-reviewer (semi-trusted users)
+
 $wgGroupPermissions['editor']['review'] = true;
 $wgGroupPermissions['editor']['autoreview'] = true;
 $wgGroupPermissions['editor']['autoconfirmed'] = true;
