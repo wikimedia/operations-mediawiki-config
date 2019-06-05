@@ -368,7 +368,7 @@ $wgLBFactoryConf = [
 			'db1121' => 1,
 		],
 		'api' => [
-			'db1084' => 1,
+			'db1084' => 3,
 			'db1138' => 1,
 		],
 		'watchlist' => [
