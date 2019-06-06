@@ -27,10 +27,6 @@ if ( !empty( $wmgUseWikibaseRepo ) ) {
 	}
 	if ( !empty( $wmgUseWikibaseLexemeCirrusSearch ) ) {
 		wfLoadExtension( 'WikibaseLexemeCirrusSearch' );
-		if ( !empty( $wmgNewWikibaseLexemeCirrusSearch ) ) {
-			// Disable old Lexeme code
-			$wgLexemeDisableCirrus = true;
-		}
 	}
 }
 
