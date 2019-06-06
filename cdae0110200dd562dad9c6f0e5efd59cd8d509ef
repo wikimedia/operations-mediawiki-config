@@ -19,6 +19,42 @@
     },
     {
       "key": {
+        "uuid": "5b7d4aaa_f84e2773",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1567
+      },
+      "writtenOn": "2019-06-06T09:35:48Z",
+      "side": 1,
+      "message": "It\u0027s set as false as the default here: https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/Wikibase/+/514280/12/repo/config/Wikibase.default.php\n\nSo maybe we don\u0027t need it at all?",
+      "parentUuid": "0b089daa_09297d82",
+      "revId": "cdae0110200dd562dad9c6f0e5efd59cd8d509ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7b9b92a9_a5ca7f3e",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1567
+      },
+      "writtenOn": "2019-06-06T09:35:48Z",
+      "side": 1,
+      "message": "It\u0027s set to false in the default: https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/Wikibase/+/514280/12/repo/config/Wikibase.default.php\n\nAnd set to false if undefined: https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/Wikibase/+/514280/12/lib/includes/Modules/ViewModule.php\n\nSo maybe we don\u0027t need it set as false at all? Or should we do it anyway just to be extra safe ;P",
+      "parentUuid": "0b089daa_09297d82",
+      "revId": "cdae0110200dd562dad9c6f0e5efd59cd8d509ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "54e1d3b7_50b4cc6b",
         "filename": "wmf-config/Wikibase.php",
         "patchSetId": 1
