@@ -1163,6 +1163,11 @@ if ( $wmgUseTimedMediaHandler ) {
 	// use new ffmpeg build w/ VP9 & Opus support
 	$wgFFmpegLocation = '/usr/bin/ffmpeg';
 
+	// For MIDI to Ogg/MP3 conversion:
+	// add Debian paths for fluidsynth and the sound font to use
+	$wgTmhFluidsynthLocation = '/usr/bin/fluidsynth';
+	$wgTmhSoundfontLocation = '/usr/share/sounds/sf2/FluidR3_GM.sf2';
+
 	// The type of HTML5 player to use
 	$wgTmhWebPlayer = $wmgTmhWebPlayer;
 
