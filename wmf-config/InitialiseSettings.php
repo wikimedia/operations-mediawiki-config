@@ -19132,10 +19132,6 @@ $wgConf->settings = [
 	'wikivoyage' => true,
 ],
 
-'wmgContentTranslationEventLogging' => [
-	'default' => true,
-],
-
 'wmgContentTranslationCluster' => [
 	'default' => 'extension1',
 ],
