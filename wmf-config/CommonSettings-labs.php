@@ -305,6 +305,8 @@ if ( $wmgUseFileImporter ) {
 		$wgFileImporterCommonsHelperServer = 'https://commons.wikimedia.beta.wmflabs.org';
 		$wgFileImporterCommonsHelperBasePageName = 'Extension:FileImporter/Data/';
 		$wgFileImporterCommonsHelperHelpPage = 'https://commons.wikimedia.beta.wmflabs.org/wiki/Extension:FileImporter/Data';
+		$wgFileImporterWikidataEntityEndpoint = 'https://wikidata.beta.wmflabs.org/wiki/Special:EntityData/';
+		$wgFileImporterWikidataNowCommonsEntity = 'Q531650';
 	}
 }
 
