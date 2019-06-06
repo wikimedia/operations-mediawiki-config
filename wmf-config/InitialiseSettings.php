@@ -20019,14 +20019,6 @@ $wgConf->settings = [
 	],
 ],
 
-'wmgWBRepoConceptBaseUri' => [
-	'default' => null,
-	// note: this intentionally uses HTTP, not HTTPS;
-	// see also the comment on wmgWikibaseClientRepoConceptBaseUri
-	'testwikidatawiki' => 'http://test.wikidata.org/entity/',
-	'wikidatawiki' => 'http://www.wikidata.org/entity/',
-],
-
 'wmgWikibaseClientInjectRecentChanges' => [
 	'default' => true,
 	'commonswiki' => false, // T171027
