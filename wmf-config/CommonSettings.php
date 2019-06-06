@@ -3305,6 +3305,8 @@ if ( $wmgUseFileImporter ) {
 		'de.wikipedia.org' => 'w:de', // T196969
 		'fa.wikipedia.org' => 'w:fa', // T196969
 	];
+	$wgFileImporterWikidataEntityEndpoint = 'https://www.wikidata.org/wiki/Special:EntityData/';
+	$wgFileImporterWikidataNowCommonsEntity = 'Q5611625';
 }
 
 if ( $wmgUseContentTranslation ) {
