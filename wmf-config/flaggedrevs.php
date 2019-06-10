@@ -24,9 +24,6 @@ $wgSimpleFlaggedRevsUI = true;
 $wgFlaggedRevsLowProfile = true;
 $wgFlaggedRevsWhitelist = [];
 $wgFlaggedRevsOverride = true;
-$wgFlaggedRevsExceptions = [
-	'user'
-];
 $wgFlaggedRevsAutoReview = 3;
 $wgFlaggedRevsTagsAuto = [
 	'accuracy' => 1, 'depth' => 1, 'style' => 1
@@ -41,12 +38,6 @@ $wgFlaggedRevsStats = [
 ];
 $wgFlaggedRevsHandleIncludes = 2;
 
-$wgFlaggedRevsNamespaces = [
-	0,   // NS_MAIN
-	6,   // NS_FILE
-	10,  // NS_TEMPLATE
-	828, // NS_MODULE
-];
 $wgFlaggedRevsTags = [
 	'accuracy' => [ 'levels' => 2, 'quality' => 2, 'pristine' => 4 ],
 ];
