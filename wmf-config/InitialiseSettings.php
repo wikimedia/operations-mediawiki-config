@@ -5477,10 +5477,6 @@ $wgConf->settings = [
 			'schema' => file_get_contents( __DIR__ . '/event-schemas/avro/mediawiki/CirrusSearchRequestSet/121456865906.avsc' ),
 			'revision' => 121456865906,
 		],
-		'ApiAction' => [
-			'schema' => file_get_contents( __DIR__ . '/event-schemas/avro/mediawiki/ApiAction/101453221640.avsc' ),
-			'revision' => 101453221640,
-		],
 	],
 ],
 # @} end of wmgAvroSchemas
@@ -5505,14 +5501,6 @@ $wgConf->settings = [
 		'api-feature-usage' => 'debug',
 		'api-readonly' => 'debug',
 		'api-warning' => 'debug',
-		// ApiAction is being deprecated by api-request.
-		// https://phabricator.wikimedia.org/T214080
-		'ApiAction' => [
-			'udp2log' => false,
-			'logstash' => false,
-			'kafka' => 'debug',
-			'buffer' => true,
-		],
 		'api-request' => [
 			'udp2log' => false,
 			'logstash' => false,
