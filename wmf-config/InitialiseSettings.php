@@ -3706,6 +3706,10 @@ $wgConf->settings = [
 		'PR' => 102, // T183612
 		'WP' => NS_PROJECT, // T183612
 	],
+	'+eswikibooks' => [
+		'CAT' => NS_CATEGORY, // T216143
+		'WL' => NS_PROJECT, // T216143
+	],
 	'+eswiktionary' => [
 		'WN' => NS_PROJECT, // T119006
 	],
