@@ -20702,7 +20702,7 @@ $wgConf->settings = [
 ],
 
 'wmgWikibaseClientAddEntityUsagesBatchSize' => [
-	'default' => 300,
+	'default' => 100,
 ],
 
 // Load WikibaseCirrusSearch extension
