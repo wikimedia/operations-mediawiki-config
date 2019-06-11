@@ -2486,6 +2486,11 @@ if ( $wmgUseVisualEditor ) {
 	if ( $wmgVisualEditorAccessRESTbaseDirectly ) {
 		$wgVisualEditorRestbaseURL = "/api/rest_v1/page/html/";
 		$wgVisualEditorFullRestbaseURL = "/api/rest_";
+		// There should be no lossy switching in RESTBase mode, but just in case
+		$wgVisualEditorAllowLossySwitching = false;
+	} else {
+		// Prefer lossy switching (dirty diffs) to not being able to switch editors
+		$wgVisualEditorAllowLossySwitching = true;
 	}
 
 	// Tab configuration
