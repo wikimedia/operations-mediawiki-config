@@ -16108,13 +16108,9 @@ $wgConf->settings = [
 	'officewiki' => true,
 ],
 
-// Whether to enable true section editing. false, true, 'mobile', or 'mobile-ab'
+// Whether to enable true section editing. false, true or 'mobile'
 'wmgVisualEditorEnableVisualSectionEditing' => [
-	'default' => 'mobile-ab',
-	'testwiki' => 'mobile',
-	'bnwiki' => 'mobile',
-	'hewiki' => 'mobile',
-	'zh_yuewiki' => 'mobile',
+	'default' => 'mobile',
 ],
 
 // Namespaces for VisualEditor to be active in, as well as wgContentNamespaces
