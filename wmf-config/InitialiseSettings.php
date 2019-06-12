@@ -10691,7 +10691,14 @@ $wgConf->settings = [
 		'sysop' => [ 'property-create' => true ], // T48953
 		'flood' => [ 'bot' => true ], // T50013
 	],
-
+	'wikimaniawiki' => [
+		// Uploads are restricted to sysop and an uploader group - T225505
+		'uploader' => [
+			'upload' => true,
+			'reupload' => true,
+			'reupload-own' => true,
+		],
+	],
 	'wuuwiki' => [
 		'rollbacker' => [ 'rollback' => true, 'autopatrol' => true, 'patrol' => true ], // T116270
 	],
@@ -11575,6 +11582,9 @@ $wgConf->settings = [
 			'wikidata-staff', // T74459
 		],
 	],
+	'+wikimaniawiki' => [
+		'sysop' => [ 'uploader' ], // T225505
+	],
 	'wikitech' => [
 		'contentadmin' => [
 			'autopatrolled',
@@ -12379,6 +12389,9 @@ $wgConf->settings = [
 		'wikidata-staff' => [
 			'wikidata-staff', // T74459
 		],
+	],
+	'+wikimaniawiki' => [
+		'sysop' => [ 'uploader' ],  // T225505
 	],
 	'+wikimaniateamwiki' => [
 		'bureaucrat' => [ 'sysop', 'bureaucrat', 'autopatrolled', 'import' ],
