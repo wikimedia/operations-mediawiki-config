@@ -19545,6 +19545,8 @@ $wgConf->settings = [
 
 'wmgWikibaseFeatureFlagWbeditentitySetEmptyAliases' => [
 	'default' => false,
+	'testwikidatawiki' => true,
+	'wikidatawiki' => true,
 ],
 
 'wmgWikibaseDispatchInterval' => [
