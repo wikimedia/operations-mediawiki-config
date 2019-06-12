@@ -8471,6 +8471,7 @@ $wgConf->settings = [
 	],
 	'+commonswiki' => [ // T132930
 		'edit' => [
+			'newbie' => [ 8 * 15, 60 * 15 ], // T225148
 			'user' => [ 900, 60 * 3 ], // T194864
 			// Higher rate limit for trusted users
 			'Image-reviewer' => [ 10500, 60 * 3 ],
