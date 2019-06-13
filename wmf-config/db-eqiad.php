@@ -137,7 +137,7 @@ $wgLBFactoryConf = [
 	/* s3 */ 'DEFAULT' => [
 		'db1075' => 0,      # A2 3.6TB 512GB, master
 		'db1078' => 500,    # C3 3.6TB 512GB, candidate master
-		'db1077' => 100,    # B1 3.6TB 512GB, rc, log # master for sanitarium db1124 # low weight
+		'db1077' => 200,    # B1 3.6TB 512GB, rc, log # master for sanitarium db1124 # low weight
 		'db1123' => 300,    # D8 3.6TB 512GB, vslow, dump
 	],
 	's4' => [
@@ -358,7 +358,7 @@ $wgLBFactoryConf = [
 			'db1077' => 1,
 		],
 		'logpager' => [
-			'db1123' => 1,
+			'db1077' => 1,
 		],
 	],
 	's4' => [
