@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "789a7816_06761924",
+        "filename": "wmf-config/interwiki-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1014,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2019-06-13T09:42:35Z",
+      "side": 0,
+      "message": "I would be wary of altering this one without altering the source it comes from...\n\nThough, it looks like wgServer and wgCanonicalServer in InitialiseSettings-labs.php already don\u0027t have the www...\n\nhttps://github.com/wikimedia/mediawiki-extensions-WikimediaMaintenance/blob/master/dumpInterwiki.php#L80 has the www hardcoded and would therefore probably revert this next time it\u0027s run for labs...",
+      "range": {
+        "startLine": 1014,
+        "startChar": 1,
+        "endLine": 1014,
+        "endChar": 67
+      },
+      "revId": "81d076969a57679a40a5e8fb1eff6cea31b1c4e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
