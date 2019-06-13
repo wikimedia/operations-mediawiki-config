@@ -19430,6 +19430,10 @@ $wgConf->settings = [
 		'sms' => 'sääʹmǩiõll',      // T220118
 		'srq' => 'mbia cheë',       // T113408
 	],
+	'commonswiki' => [
+		'smn' => 'anarâškielâ',	  // T222309
+		'sms' => 'sääʹmǩiõll',	  // T222309
+	],
 ],
 
 'wmgUseUniversalLanguageSelector' => [
