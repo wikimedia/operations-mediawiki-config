@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1e0de639_d001bafb",
+        "filename": "errorpages/php7-fatal-error.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-06-13T23:54:16Z",
+      "side": 1,
+      "message": "If there isn\u0027t an issue with re-using \"exception.trace\" or \"fatal.trace\" then that would help with compatibility for existing Logstash dashboards and queries that look for related namespaces/classes/directories in \"exception.trace\" to build team/service-related dashboards.",
+      "range": {
+        "startLine": 75,
+        "startChar": 2,
+        "endLine": 75,
+        "endChar": 7
+      },
+      "revId": "f4fa6a738b2ce32b0fd2e69512ca4bb5446d883e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
