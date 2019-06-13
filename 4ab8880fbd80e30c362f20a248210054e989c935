@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "36bffb13_e57c08d5",
+        "filename": "wmf-config/SearchSettingsForWikidata.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 2096
+      },
+      "writtenOn": "2019-06-13T22:26:29Z",
+      "side": 1,
+      "message": "I think this gets overridden by DispatchingQueryBuilder anyway?",
+      "revId": "4ab8880fbd80e30c362f20a248210054e989c935",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
