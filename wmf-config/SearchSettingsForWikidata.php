@@ -77,7 +77,7 @@ if ( !empty( $wmgUseWikibaseCirrusSearch ) && !empty( $wmgNewWikibaseCirrusSearc
 // Fine tuning of the fulltext search (main elastic query)
 $wgWBCSFulltextSearchProfiles = [
 	'wikibase_config_fulltext_query' => [
-		'builder_class' => $wmgBuilderClass,
+		'builder_factory' => [ $wmgBuilderClass, 'newFromGlobals' ],
 		'settings' => [
 			'any'               => 0.04,
 			'lang-exact'        => 0.78,
