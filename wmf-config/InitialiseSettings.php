@@ -14348,7 +14348,7 @@ $wgConf->settings = [
 		'*.arkivverket.no',                 // The National Archives of Norway - T73195
 		'tools.wikimedia.pl',               // Facilities server for Wikimedia users - T74897
 		'*.nasa.gov',                       // NASA
-		'*.jpl.nasa.gov',                   // NASA - T196727
+		'*.*.nasa.gov',                     // NASA - T196727 T225852
 		'photos.wikimapia.org',             // WikiMapia - T75045
 		'pslava.info',                      // Ukraine interesting photography source - T75045
 		'ukrainaincognita.com',             // Ukraine interesting photography source - T75045
