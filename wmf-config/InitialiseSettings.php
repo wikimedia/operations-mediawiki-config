@@ -14501,6 +14501,7 @@ $wgConf->settings = [
 		'www4.bibl.ulaval.ca',              // Université Laval library - T220704
 		'static.inaturalist.org',           // iNaturalist - T221154
 		'deliver.odai.yale.edu',            // Yale Peabody Museum - T224875
+		'*.mojnews.com',                    // Iranian news agency Moj - T213901
 	],
 ],
 
