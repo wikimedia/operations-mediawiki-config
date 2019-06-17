@@ -22378,6 +22378,9 @@ $wgConf->settings = [
 		'mediawiki.revision-tags-change' => [
 			'EventServiceName' => 'eventgate-main',
 		],
+		'mediawiki.user-blocks-change' => [
+			'EventServiceName' => 'eventgate-main',
+		],
 		'default' => [
 			'EventServiceName' => 'eventbus',
 		],
