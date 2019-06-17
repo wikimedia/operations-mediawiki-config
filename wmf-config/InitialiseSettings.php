@@ -8549,6 +8549,9 @@ $wgConf->settings = [
 	'bnwiki' => true,
 	'huwiki' => true,
 	'jawiki' => true,
+	'enwiktionary' => true,
+	'enwikisource' => true,
+	'enwikivoyage' => true,
 ],
 
 'wgEnableBlockNoticeStats' => [
