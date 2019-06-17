@@ -20673,7 +20673,15 @@ $wgConf->settings = [
 ],
 
 'wgDepictsQualifierProperties' => [
-	'commonswiki' => [],
+	'commonswiki' => [
+		'features' => 'P1354',
+		'colour' => 'P462',
+		'wears' => 'P3828',
+		'appliesToPart' => 'P518',
+		'quantity' => 'P1114',
+		'eyeColour' => 'P1340',
+		'shape' => 'P1419',
+	],
 	'testcommonswiki' => [
 		'features' => 'P1354',
 		'colour' => 'P462',
