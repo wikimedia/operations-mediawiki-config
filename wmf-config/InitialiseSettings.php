@@ -18542,6 +18542,7 @@ $wgConf->settings = [
 	'votewiki' => false,
 ],
 
+// NO FURTHER DEPLOYMENTS OF THIS EXTENSION.
 'wmgUseShortUrl' => [
 	'default' => false,
 	'bdwikimedia' => true, // T146014
