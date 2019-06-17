@@ -17101,6 +17101,10 @@ $wgConf->settings = [
 	'eswiki' => true,
 	'idwiki' => true,
 	'arwiki' => true,
+	'fawiki' => true, // T225123
+	'jawiki' => true, // T225123
+	'thwiki' => true, // T225123
+	'itwiki' => true, // T225123
 	'testwiki' => true,
 	'test2wiki' => true,
 ],
