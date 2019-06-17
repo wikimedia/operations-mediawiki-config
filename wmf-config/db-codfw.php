@@ -133,7 +133,7 @@ $wgLBFactoryConf = [
 		'db2088:3312' => 200, # D1 3.3TB 512GB # rc, log: s1 and s2
 		'db2091:3312' => 200, # A8 3.3TB 512GB # rc, log: s2 and s4
 		'db2104'      => 300, # A5 5.2TB 512GB, api # candidate master
-		'db2107'      => 300, # B1 5.2TB 512GB # future master
+		# 'db2107'      => 300, # B1 5.2TB 512GB # future master
 		'db2108'      => 300, # B3 5.2TB 512GB
 	],
 	/* s3 */ 'DEFAULT' => [
