@@ -212,6 +212,10 @@ if ( $wmgUseWikibaseRepo ) {
 
 	// Temporary, T223300
 	$wgWBRepoSettings['featureFlagWbeditentitySetEmptyAliases'] = $wmgWikibaseFeatureFlagWbeditentitySetEmptyAliases;
+
+	// Migration, T226086
+	$wbWBRepoSettings['tmpPropertyTermsMigrationStage'] = $wmgWikibaseTmpPropertyTermsMigrationStage;
+	$wbWBRepoSettings['tmpItemTermsMigrationStage'] = $wmgWikibaseTmpItemTermsMigrationStage;
 }
 
 if ( $wmgUseWikibaseClient ) {
@@ -317,6 +321,10 @@ if ( $wmgUseWikibaseClient ) {
 
 	// Temporary, see T210926
 	$wgWBClientSettings['useKartographerMaplinkInWikitext'] = true;
+
+	// Migration, T226086
+	$wgWBClientSettings['tmpPropertyTermsMigrationStage'] = $wmgWikibaseTmpPropertyTermsMigrationStage;
+	$wgWBClientSettings['tmpItemTermsMigrationStage'] = $wmgWikibaseTmpItemTermsMigrationStage;
 }
 
 unset( $wmgWBSharedCacheKey );
