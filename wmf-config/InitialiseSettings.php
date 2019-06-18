@@ -22409,6 +22409,9 @@ $wgConf->settings = [
 		'mediawiki.page-properties-change' => [
 			'EventServiceName' => 'eventgate-main',
 		],
+		'mediawiki.page-restrictions-change' => [
+			'EventServiceName' => 'eventgate-main',
+		],
 		'mediawiki.revision-tags-change' => [
 			'EventServiceName' => 'eventgate-main',
 		],
