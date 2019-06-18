@@ -23086,7 +23086,13 @@ $wgConf->settings = [
 'wmgWatchRollback' => [
 	'default' => false,
 	'arwiki' => true, // T220186
-]
+],
+'wmgWikibaseTmpPropertyTermsMigrationStage' => [
+	'default' => MIGRATION_OLD,
+],
+'wmgWikibaseTmpItemTermsMigrationStage' => [
+	'default' => [ 'max' => MIGRATION_OLD ],
+],
 ];
 
 ### WMF Labs override #####
