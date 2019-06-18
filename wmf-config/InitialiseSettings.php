@@ -22403,6 +22403,9 @@ $wgConf->settings = [
 
 'wgEventServiceStreamConfig' => [
 	'default' => [
+		'mediawiki.page-properties-change' => [
+			'EventServiceName' => 'eventgate-main',
+		],
 		'mediawiki.revision-tags-change' => [
 			'EventServiceName' => 'eventgate-main',
 		],
