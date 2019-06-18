@@ -74,11 +74,6 @@ $wgFlaggedRevsAutopromote = false;
 
 $wgFlaggedRevsStatsAge = false;
 
-$wgAddGroups['sysop'][] = 'editor'; // promote to basic reviewer (established editors)
-$wgRemoveGroups['sysop'][] = 'editor'; // demote from basic reviewer (established editors)
-$wgAddGroups['sysop'][] = 'autoreview'; // promote to basic auto-reviewer (semi-trusted users)
-$wgRemoveGroups['sysop'][] = 'autoreview'; // demote from basic auto-reviewer (semi-trusted users)
-
 $wgGroupPermissions['editor']['review'] = true;
 $wgGroupPermissions['editor']['autoreview'] = true;
 $wgGroupPermissions['editor']['autoconfirmed'] = true;
@@ -785,6 +780,25 @@ if ( isset( $wgGroupPermissions['reviewer'] ) ) {
 	}
 	if ( !in_array( 'reviewer', $wgRemoveGroups['bureaucrat'] ) ) {
 		$wgRemoveGroups['bureaucrat'][] = 'reviewer'; // demote from full reviewers
+	}
+}
+
+# Rights for Sysops
+if ( isset( $wgGroupPermissions['editor'] ) ) {
+	if ( !in_array( 'editor', $wgAddGroups['sysop'] ) ) {
+		$wgAddGroups['sysop'][] = 'editor'; // promote to basic reviewer (established editors)
+	}
+	if ( !in_array( 'editor', $wgRemoveGroups['sysop'] ) ) {
+		$wgRemoveGroups['sysop'][] = 'editor'; // demote from basic reviewer (established editors)
+	}
+}
+
+if ( isset( $wgGroupPermissions['autoreview'] ) ) {
+	if ( !in_array( 'autoreview', $wgAddGroups['sysop'] ) ) {
+		$wgAddGroups['sysop'][] = 'autoreview'; // promote to basic auto-reviewer (semi-trusted users)
+	}
+	if ( !in_array( 'autoreview', $wgRemoveGroups['sysop'] ) ) {
+		$wgRemoveGroups['sysop'][] = 'autoreview'; // demote from basic auto-reviewer (semi-trusted users)
 	}
 }
 
