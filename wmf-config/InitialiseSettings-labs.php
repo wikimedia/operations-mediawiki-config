@@ -240,6 +240,10 @@ function wmfLabsSettings() {
 			'default' => false,
 		],
 
+		'wgEchoPollForUpdates' => [
+			'cawiki' => true,
+		],
+
 		# FIXME: make that settings to be applied
 		'-wgShowExceptionDetails' => [
 			'default' => true,
