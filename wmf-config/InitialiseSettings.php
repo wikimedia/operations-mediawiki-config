@@ -23097,8 +23097,9 @@ $wgConf->settings = [
 	'arwiki' => true, // T220186
 ],
 'wmgWikibaseTmpPropertyTermsMigrationStage' => [
-    'default' => MIGRATION_OLD,
-    'testwikidatawiki' => MIGRATION_WRITE_BOTH,
+	'default' => MIGRATION_OLD,
+	'testwikidatawiki' => MIGRATION_WRITE_BOTH,
+	'wikidatawiki' => MIGRATION_WRITE_BOTH,
 ],
 ];
 
