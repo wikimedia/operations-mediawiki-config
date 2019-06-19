@@ -1,9 +1,6 @@
 [submodule "portals"]
 	path = portals
 	url = https://gerrit.wikimedia.org/r/wikimedia/portals/deploy
-[submodule "wmf-config/event-schemas"]
-	path = wmf-config/event-schemas
-	url = https://gerrit.wikimedia.org/r/mediawiki/event-schemas
 [submodule "fonts"]
 	path = fonts
 	url = https://gerrit.wikimedia.org/r/operations/mediawiki-config/fonts

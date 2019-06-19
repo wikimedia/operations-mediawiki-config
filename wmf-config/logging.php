@@ -24,9 +24,6 @@
 #   explicitly configured in $wmgMonologChannels.
 # - $wmgLogstashServers: Logstash syslog servers.
 # - $wmgLogstashUseCee: Prefix Logstash messages with 'cee cookie'
-# - $wmgKafkaServers: Kafka logging servers.
-# - $wmgMonologAvroSchemas: Map from monolog channel name to json
-#   string containing avro schema.
 # - $wmgMonologChannels: per-channel logging config
 #   - `channel => false`: ignore all log events on this channel.
 #   - `channel => level`: record all events of this level or higher to udp2log and logstash.
