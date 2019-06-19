@@ -589,7 +589,6 @@ function wmfLabsSettings() {
 		'wgMediaInfoProperties' => [
 			'commonswiki' => [
 				'depicts' => 'P245962',
-				'digitalRepresentationOf' => 'P248141',
 			]
 		],
 		'wgDepictsQualifierProperties' => [
@@ -603,6 +602,9 @@ function wmfLabsSettings() {
 				'shape' => 'P252388',
 				'relativePosition' => 'P2677',
 			],
+		],
+		'wgMediaInfoEnableOtherStatements' => [
+			'commonswiki' => true
 		],
 
 		'wgMediaInfoExternalEntitySearchBaseUri' => [
