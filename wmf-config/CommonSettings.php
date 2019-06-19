@@ -2768,6 +2768,8 @@ if ( $wmgUseTranslate ) {
 			];
 		}
 		unset( $wgTranslateClustersAndMirrors );
+	} else {
+		$wgTranslateTranslationDefaultService = false;
 	}
 
 	$wgTranslateWorkflowStates = $wmgTranslateWorkflowStates;
