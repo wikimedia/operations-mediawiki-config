@@ -1425,5 +1425,11 @@ function wmfLabsSettings() {
 		'-wgSpecialSearchFormOptions' => [
 			'wikidatawiki' => [ 'showDescriptions' => true ],
 		],
+		'wmgWikibaseTmpItemTermsMigrationStage' => [
+			'default' => [ 'max' => MIGRATION_OLD ],
+		],
+		'wmgWikibaseTmpPropertyTermsMigrationStage' => [
+			'default' => MIGRATION_OLD,
+		],
 	];
 } # wmflLabsSettings()
