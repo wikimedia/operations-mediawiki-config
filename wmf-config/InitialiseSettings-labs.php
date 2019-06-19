@@ -496,8 +496,64 @@ function wmfLabsSettings() {
 						'desktop' => [ 'stable' ],
 						'mobile' => [ 'stable' ]
 					],
+				],
+				// T225819
+				[
+					'enabled' => true,
+					"name" => "reader-demographics-en",
+					"type" => "external",
+					"description" => "Reader-demographics-1-description",
+					"link" => "Reader-demographics-1-link",
+					"question" => "Reader-demographics-1-message",
+					"privacyPolicy" => "Reader-demographics-1-privacy",
+					"coverage" => 1,
+					"instanceTokenParameterName" => "entry.1791119923",
+					"platforms" => [
+						"desktop" => [ "stable" ],
+						"mobile" => [ "stable" ]
+					],
+				],
+				// T225042
+				[
+					"enabled" => true,
+					"type" => "internal",
+					"name" => "editor-gender-1-en",
+					"question" => "Editor-gender-1-message",
+					"description" => "Editor-gender-1-description",
+					"answers" => [
+						"Editor-gender-1-answer-man",
+						"Editor-gender-1-answer-woman",
+					],
+					"freeformTextLabel" => "Editor-gender-1-free-form-text-label",
+					"privacyPolicy" => "Editor-gender-1-privacy",
+					"coverage" => 1,
+					"audience" => [
+						"anons" => false,
+					],
+					"platforms" => [
+						"desktop" => [ "stable" ],
+						"mobile" => [ "stable" ]
+					],
 				]
 			],
+			'hewiki' => [
+				// T225819
+				[
+					'enabled' => true,
+					"name" => "reader-demographics-he",
+					"type" => "external",
+					"description" => "Reader-demographics-1-description",
+					"link" => "Reader-demographics-1-link",
+					"question" => "Reader-demographics-1-message",
+					"privacyPolicy" => "Reader-demographics-1-privacy",
+					"coverage" => 1,
+					"instanceTokenParameterName" => "entry.1791119923",
+					"platforms" => [
+						"desktop" => [ "stable" ],
+						"mobile" => [ "stable" ]
+					],
+				]
+			]
 		],
 		'wmgUseSentry' => [
 			'default' => true,
