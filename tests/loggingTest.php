@@ -34,11 +34,6 @@ class LoggingTest extends WgConfTestCase {
 				[ 'failuregroup|logstash-info' ]
 			],
 
-			'can enable only kafka' => [
-				[ 'kafka' => 'debug', 'logstash' => false, 'udp2log' => false ],
-				[ 'failuregroup|kafka-debug' ],
-			],
-
 			'can enable only eventbus' => [
 				[ 'eventbus' => 'debug', 'logstash' => false, 'udp2log' => false ],
 				[ 'failuregroup|eventbus-debug' ],
@@ -74,7 +69,6 @@ class LoggingTest extends WgConfTestCase {
 		$wmfUdp2logDest = 'localhost';
 		$wmgLogstashServers = [ 'localhost' ];
 		$wmgLogstashUseCee = false;
-		$wmgKafkaServers = [ 'localhost' ];
 		$wmgUseEventBus = true;
 		$wmgMonologChannels = [ 'test' => $channelConfig ];
 		$wmfRealm = 'production';
@@ -145,7 +139,7 @@ class LoggingTest extends WgConfTestCase {
 	}
 
 	public function assertChannelConfig( $config ) {
-		$allowed = [ 'udp2log', 'logstash', 'kafka', 'eventbus', 'sample', 'buffer' ];
+		$allowed = [ 'udp2log', 'logstash', 'eventbus', 'sample', 'buffer' ];
 		$extra = array_diff( array_keys( $config ), $allowed );
 		$this->assertEquals( [], $extra, 'Expect config keys limited to: ' . implode( ', ', $allowed ) );
 		if ( isset( $config['buffer'] ) ) {
@@ -158,7 +152,7 @@ class LoggingTest extends WgConfTestCase {
 				'Sample must be either false or integer > 0'
 			);
 		}
-		foreach ( [ 'udp2log', 'logstash', 'kafka', 'eventbus' ] as $handler ) {
+		foreach ( [ 'udp2log', 'logstash', 'eventbus' ] as $handler ) {
 			if ( isset( $config[$handler] ) ) {
 				$this->assertValidLogLevel( $config[$handler] );
 			}

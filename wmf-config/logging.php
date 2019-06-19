@@ -32,7 +32,6 @@
 #           'udp2log'=>level,
 #           'logstash'=>level,
 #           'eventbus'=>level,
-#           'kafka'=>level,
 #           'sample'=>rate,
 #           'buffer'=>buffer ]`
 # - $wmgUseEventBus: Whether EventBus extension is enabled on the wiki
@@ -43,7 +42,6 @@
 #       'udp2log' = >'debug',
 #       'logstash' = >'info',
 #       'eventbus' => false,
-#       'kafka' => false,
 #       'sample' => false,
 #       'buffer' => false,
 #   ]
@@ -258,7 +256,6 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 		[
 			'udp2log' => 'debug',
 			'logstash' => ( isset( $opts['udp2log'] ) && $opts['udp2log'] !== 'debug' ) ? $opts['udp2log'] : 'info',
-			'kafka' => false,
 			'eventbus' => false,
 			'sample' => false,
 			'buffer' => false,
@@ -291,35 +288,6 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 			// T117019: Send events to default handler location as well
 			$handlers[] = $wmgDefaultMonologHandler;
 		}
-	}
-
-	// Configure kafka handler
-	// Deprecated. Will be removed when we switch to EventBus handler
-	if ( $opts['kafka'] && $wmgKafkaServers ) {
-		$kafkaHandler = "kafka-{$opts['kafka']}";
-		if ( !isset( $wmgMonologConfig['handlers'][$kafkaHandler] ) ) {
-			// Register handler that will only pass events of the given
-			// log level
-			$wmgMonologConfig['handlers'][$kafkaHandler] = [
-				'factory' => '\\MediaWiki\\Logger\\Monolog\\KafkaHandler::factory',
-				'args' => [
-					$wmgKafkaServers,
-					[
-						'alias' => [],
-						'swallowExceptions' => true,
-						'logExceptions' => 'wfDebugLogFile',
-						'sendTimeout' => 0.01,
-						'recvTimeout' => 0.5,
-						'requireAck' => 1,
-					],
-				],
-				'formatter' => 'avro'
-			];
-		}
-		// include an alias to prefix this channel with
-		// 'mediawiki_' in kafka
-		$wmgMonologConfig['handlers'][$kafkaHandler]['args'][1]['alias'][$channel] = "mediawiki_$channel";
-		$handlers[] = $kafkaHandler;
 	}
 
 	if ( $opts['eventbus'] && $wmgUseEventBus ) {
