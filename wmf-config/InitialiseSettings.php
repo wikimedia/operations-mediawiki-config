@@ -8546,6 +8546,7 @@ $wgConf->settings = [
 	'enwiktionary' => true,
 	'enwikisource' => true,
 	'enwikivoyage' => true,
+	'hewikivoyage' => true,
 ],
 
 'wgEnableBlockNoticeStats' => [
