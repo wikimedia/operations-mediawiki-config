@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "083f2e5e_5daa7ebb",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 920
+      },
+      "writtenOn": "2019-06-20T12:58:36Z",
+      "side": 1,
+      "message": "This needs to be $wg not $wb",
+      "range": {
+        "startLine": 217,
+        "startChar": 1,
+        "endLine": 217,
+        "endChar": 18
+      },
+      "revId": "13d8c9fc8bfb671f66949b4f90675619557988e4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
