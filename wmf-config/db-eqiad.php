@@ -137,7 +137,8 @@ $wgLBFactoryConf = [
 	/* s3 */ 'DEFAULT' => [
 		'db1075' => 0,      # A2 3.6TB 512GB, master
 		'db1078' => 500,    # C3 3.6TB 512GB, candidate master
-		'db1077' => 400,    # B1 3.6TB 512GB, rc, log # master for sanitarium db1124 # T225981
+		'db1077' => 400,    # B1 3.6TB 512GB, rc, log
+		'db1112' => 100,    # B1 3.6TB 512GB, rc, log # master for sanitarium db1124
 		'db1123' => 300,    # D8 3.6TB 512GB, vslow, dump
 	],
 	's4' => [
@@ -580,6 +581,7 @@ $wgLBFactoryConf = [
 	'db1106' => '10.64.48.13', # do not remove or comment out
 	'db1109' => '10.64.48.172', # do not remove or comment out
 	'db1110' => '10.64.32.73', # do not remove or comment out
+	'db1112' => '10.64.16.7', # do not remove or comment out
 	'db1113:3315' => '10.64.16.11:3315', # do not remove or comment out
 	'db1113:3316' => '10.64.16.11:3316', # do not remove or comment out
 	'db1118' => '10.64.16.12', # do not remove or comment out
