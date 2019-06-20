@@ -9019,8 +9019,13 @@ $wgConf->settings = [
 			'patrol' => true,
 			'abusefilter-log-detail' => true,
 			'upload_by_url' => true,
+			'mass-upload' => true, // T226217
 		],
-		'autopatrolled' => [ 'autopatrol' => true, 'upload_by_url' => true ], // T214003
+		'autopatrolled' => [ // T214003
+			'autopatrol' => true,
+			'upload_by_url' => true,
+			'mass-upload' => true, // T226217
+		],
 		'filemover' => [ 'movefile' => true ],
 		'Image-reviewer' => [
 			'autopatrol' => true,
