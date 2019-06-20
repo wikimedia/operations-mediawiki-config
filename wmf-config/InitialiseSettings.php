@@ -16110,6 +16110,14 @@ $wgConf->settings = [
 	'default' => 'mobile',
 ],
 
+// Whether to enable the new mobile contexts
+'wmgVisualEditorEnableNewMobileContext' => [
+	'default' => false,
+	'bnwiki' => true,
+	'fawiki' => true,
+	'hewiki' => true
+],
+
 // Namespaces for VisualEditor to be active in, as well as wgContentNamespaces
 'wmgVisualEditorAvailableNamespaces' => [
 	'default' => [

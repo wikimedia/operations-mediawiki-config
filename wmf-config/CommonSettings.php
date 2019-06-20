@@ -2510,6 +2510,10 @@ if ( $wmgUseVisualEditor ) {
 		$wgVisualEditorEnableVisualSectionEditing = $wmgVisualEditorEnableVisualSectionEditing;
 	}
 
+	if ( $wmgVisualEditorEnableNewMobileContext ) {
+		$wgVisualEditorEnableNewMobileContext = $wmgVisualEditorEnableNewMobileContext;
+	}
+
 	// Namespace configuration
 	$wgVisualEditorAvailableNamespaces = $wmgVisualEditorAvailableNamespaces;
 	if ( !isset( $wgVisualEditorAvailableNamespaces ) ) {
