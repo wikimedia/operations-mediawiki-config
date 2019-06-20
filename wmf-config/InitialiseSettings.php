@@ -22397,9 +22397,6 @@ $wgConf->settings = [
 		'mediawiki.page-links-change' => [
 			'EventServiceName' => 'eventgate-main',
 		],
-		'mediawiki.page-properties-change' => [
-			'EventServiceName' => 'eventgate-main',
-		],
 		'mediawiki.page-restrictions-change' => [
 			'EventServiceName' => 'eventgate-main',
 		],
