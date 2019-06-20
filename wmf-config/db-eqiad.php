@@ -353,13 +353,13 @@ $wgLBFactoryConf = [
 			'db1112' => 1,
 		],
 		'recentchangeslinked' => [
-			'db1077' => 1,
+			'db1112' => 1,
 		],
 		'contributions' => [
-			'db1077' => 1,
+			'db1112' => 1,
 		],
 		'logpager' => [
-			'db1077' => 1,
+			'db1112' => 1,
 		],
 	],
 	's4' => [
