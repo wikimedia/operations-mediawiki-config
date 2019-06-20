@@ -214,8 +214,8 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['featureFlagWbeditentitySetEmptyAliases'] = $wmgWikibaseFeatureFlagWbeditentitySetEmptyAliases;
 
 	// Migration, T226086
-	$wbWBRepoSettings['tmpPropertyTermsMigrationStage'] = $wmgWikibaseTmpPropertyTermsMigrationStage;
-	$wbWBRepoSettings['tmpItemTermsMigrationStage'] = $wmgWikibaseTmpItemTermsMigrationStage;
+	$wgWBRepoSettings['tmpPropertyTermsMigrationStage'] = $wmgWikibaseTmpPropertyTermsMigrationStage;
+	$wgWBRepoSettings['tmpItemTermsMigrationStage'] = $wmgWikibaseTmpItemTermsMigrationStage;
 }
 
 if ( $wmgUseWikibaseClient ) {
