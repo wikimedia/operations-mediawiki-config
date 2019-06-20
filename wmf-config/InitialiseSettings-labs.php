@@ -946,30 +946,36 @@ function wmfLabsSettings() {
 			'enwiki' => true,
 			'kowiki' => true,
 			'cawiki' => true,
+			'arwiki' => true,
 		],
 		'wgWelcomeSurveyEnabled' => [
 			'enwiki' => true,
 			'kowiki' => true,
+			'arwiki' => true,
 		],
 		'wgGEHelpPanelEnabled' => [
 			'enwiki' => true,
 			'kowiki' => true,
 			'cawiki' => true,
+			'arwiki' => true,
 		],
 		'wgGEHelpPanelLoggingEnabled' => [
 			'enwiki' => true,
 			'kowiki' => true,
 			'cawiki' => true,
+			'arwiki' => true,
 		],
 		'wgGEHelpPanelHelpDeskTitle' => [
 			'enwiki' => 'Wikipedia:Help_desk',
 			'kowiki' => '위키백과:도움말',
 			'cawiki' => 'Viquipèdia:Potřebuji_pomoc',
+			'arwiki' => 'مساعدة',
 		],
 		'wgGEHelpPanelViewMoreTitle' => [
 			'enwiki' => 'Help:Contents',
 			'kowiki' => '위키백과:도움말',
 			'cawiki' => 'Ajuda:Obsah',
+			'arwiki' => 'مساعدة',
 		],
 		'wgGEHelpPanelLinks' => [
 			'enwiki' => [
@@ -1012,7 +1018,14 @@ function wmfLabsSettings() {
 					'text' => 'Ajuda',
 					'id' => 'help',
 				]
-			]
+			],
+			'arwiki' => [
+				[
+					'title' => 'mw:Help:Contents',
+					'text' => 'مساعدة',
+					'id' => 'help',
+				]
+			],
 		],
 		'wgGEHelpPanelSearchEnabled' => [
 			'default' => true,
@@ -1024,6 +1037,7 @@ function wmfLabsSettings() {
 			'default' => 'https://en.wikipedia.org/w/api.php',
 			'cawiki' => 'https://cs.wikipedia.org/w/api.php',
 			'kowiki' => 'https://ko.wikipedia.org/w/api.php',
+			'arwiki' => 'https://ar.wikipedia.org/w/api.php',
 		],
 		'wgWelcomeSurveyPrivacyPolicyUrl' => [
 			'kowiki' => 'https://foundation.wikimedia.org/wiki/%EC%83%88_%EC%82%AC%EC%9A%A9%EC%9E%90_%ED%99%98%EC%98%81_%EC%84%A4%EB%AC%B8_%EA%B0%9C%EC%9D%B8_%EC%A0%95%EB%B3%B4_%EB%B3%B4%ED%98%B8_%EC%A0%95%EC%B1%85',
@@ -1069,8 +1083,7 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 		'wgGEHomepageMobileEnabled' => [
-			'default' => false,
-			'enwiki' => true,
+			'default' => true,
 		],
 		'wgGEHomepageNewAccountEnablePercentage' => [
 			'default' => 50,
@@ -1078,10 +1091,12 @@ function wmfLabsSettings() {
 		'wgGEHomepageMentorsList' => [
 			'default' => '',
 			'enwiki' => 'Wikipedia:Mentors',
+			'arwiki' => 'Wikipedia:Mentors',
 		],
 		'wgGEHomepageTutorialTitle' => [
 			'default' => '',
 			'enwiki' => 'Help:Getting started',
+			'arwiki' => 'Help:Tutorial',
 		],
 		'wgGEConfirmEmailEnabled' => [
 			'default' => true,
