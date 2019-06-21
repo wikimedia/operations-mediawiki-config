@@ -410,6 +410,12 @@ function wmfLabsSettings() {
 			],
 		],
 
+		'wmgUseQuickSurveys' => [
+			'default' => false,
+			'enwiki' => true,
+			'hewiki' => true,
+		],
+
 		'wgQuickSurveysConfig' => [
 			'default' => [
 				[
