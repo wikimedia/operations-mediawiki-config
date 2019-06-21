@@ -14505,6 +14505,7 @@ $wgConf->settings = [
 		'static.inaturalist.org',           // iNaturalist - T221154
 		'deliver.odai.yale.edu',            // Yale Peabody Museum - T224875
 		'*.mojnews.com',                    // Iranian news agency Moj - T213901
+		'hualab.nl',                        // Utrecht Archives - T225917
 	],
 ],
 
