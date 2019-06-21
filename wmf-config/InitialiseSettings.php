@@ -19177,7 +19177,7 @@ $wgConf->settings = [
 		'userGroups' => [ '*' ]
 	],
 	'enwiki' => [
-		'userGroups' => [ 'extendedconfirmed' ]
+		'userGroups' => [ 'extendedconfirmed', 'sysop' ]
 	],
 ],
 
