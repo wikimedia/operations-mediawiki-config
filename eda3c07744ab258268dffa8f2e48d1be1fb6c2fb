@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6691f39d_97b604ab",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 5468,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2019-06-21T07:35:54Z",
+      "side": 0,
+      "message": "might generate logspam if ProductionService is deployed first",
+      "revId": "eda3c07744ab258268dffa8f2e48d1be1fb6c2fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "057dd515_52ef091a",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2019-06-21T07:35:54Z",
+      "side": 0,
+      "message": "you might want to guard this with isset( $wmgKafkaServers ) :\nif ( $opts[\u0027kafka\u0027] \u0026\u0026 isset( $wmgKafkaServers ) \u0026\u0026 $wmgKafkaServers )\n\nunless you carefully deploy every single file in the right order",
+      "revId": "eda3c07744ab258268dffa8f2e48d1be1fb6c2fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
