@@ -410,6 +410,10 @@ function wmfLabsSettings() {
 			],
 		],
 
+		'wmgUseQuickSurveys' => [
+			'hewiki' => true, // T225819
+		],
+
 		'wgQuickSurveysConfig' => [
 			'default' => [
 				[
