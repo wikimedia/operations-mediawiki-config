@@ -38,7 +38,7 @@ $wgExtensionFunctions[] = function () {
 		}
 
 		# Finally) set up the throttle value
-		global $wgAccountCreationThrottle, $wgRateLimits;
+		global $wgAccountCreationThrottle, $wgRateLimits, $wgGroupPermissions;
 		if ( isset( $options['value'] ) && is_numeric( $options['value'] ) ) {
 			$wgAccountCreationThrottle = $options['value'];
 		} else {
@@ -46,6 +46,7 @@ $wgExtensionFunctions[] = function () {
 		}
 		$wgRateLimits['badcaptcha']['ip'] = [ 1000, 86400 ];
 		$wgRateLimits['badcaptcha']['newbie'] = [ 1000, 86400 ];
+		$wgGroupPermissions['user']['autoconfirmed'] = true; // T204583
 		return; # No point in proceeding to another entry
 	}
 };
