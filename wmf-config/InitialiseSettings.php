@@ -14130,7 +14130,7 @@ $wgConf->settings = [
 
 'wgFlaggedRevsAutoReview' => [
 	'default' => 3,
-	'fiwiki' => true,
+	'fiwiki' => 1,
 ],
 
 'wgFlaggedRevsLowProfile' => [
