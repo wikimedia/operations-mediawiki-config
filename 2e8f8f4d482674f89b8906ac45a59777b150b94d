@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c84e528f_540b0d78",
+        "filename": "rpc/RunSingleJob.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-06-24T15:59:04Z",
+      "side": 1,
+      "message": "The only property consumed here is \u0027database\u0027. The rest is passed as-is to JobExecutor. If that is indeed the case, might make sense to maintain (and test) those checks as part of that class instead.",
+      "range": {
+        "startLine": 41,
+        "startChar": 4,
+        "endLine": 44,
+        "endChar": 3
+      },
+      "revId": "2e8f8f4d482674f89b8906ac45a59777b150b94d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
