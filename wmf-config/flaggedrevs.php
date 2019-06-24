@@ -98,10 +98,9 @@ if ( $wgDBname == 'alswiki' ) {
 $wgExtensionFunctions[] = function () {
 	global $wgAddGroups, $wgDBname, $wgDefaultUserOptions, $wgFlaggedRevsAutoconfirm,
 		$wgFlaggedRevsAutopromote, $wgFlaggedRevsAutoReviewNew, $wgFlaggedRevsLowProfile,
-		$wgFlaggedRevsNamespaces, $wgFlaggedRevsOverride, $wgFlaggedRevsRestrictionLevels,
-		$wgFlaggedRevsStatsAge, $wgFlaggedRevsTags, $wgFlaggedRevsTagsRestrictions,
-		$wgFlaggedRevsWhitelist, $wgFlaggedRevValues, $wgGroupPermissions, $wgRemoveGroups,
-		$wgSimpleFlaggedRevsUI;
+		$wgFlaggedRevsNamespaces, $wgFlaggedRevsRestrictionLevels, $wgFlaggedRevsStatsAge,
+		$wgFlaggedRevsTags, $wgFlaggedRevsTagsRestrictions, $wgFlaggedRevsWhitelist,
+		$wgFlaggedRevValues, $wgGroupPermissions, $wgRemoveGroups;
 
 	///////////////////////////////////////
 	// Common configuration
@@ -278,10 +277,7 @@ $wgExtensionFunctions[] = function () {
 		];
 
 		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
-	} elseif ( $wgDBname == 'dewikiquote' ) {
-		$wgFlaggedRevsOverride = false;
 	} elseif ( $wgDBname == 'dewiktionary' ) {
-		$wgFlaggedRevsOverride = false;
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 		// T67316, T76657
 		$wgFlaggedRevsNamespaces[] = 102;
@@ -334,8 +330,6 @@ $wgExtensionFunctions[] = function () {
 		$wgFlaggedRevsTags = [
 			'value' => [ 'levels' => 3, 'quality' => 2, 'pristine' => 3 ]
 		];
-
-		$wgSimpleFlaggedRevsUI = false;
 
 		$wgFlaggedRevsAutopromote = [
 			'days' => 30,
