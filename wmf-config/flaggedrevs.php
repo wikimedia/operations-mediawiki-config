@@ -179,7 +179,7 @@ $wgExtensionFunctions[] = function () {
 		// T58408
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 100, 828 ];
 
-		$wgFlaggedRevsTags['accuracy']['levels'] = 3; // Is this needed?
+		$wgFlaggedRevsTags['accuracy']['levels'] = 3;
 
 		$wgGroupPermissions['autoeditor']['autoreview'] = true;
 		$wgGroupPermissions['autoeditor']['autoconfirmed'] = true;
@@ -618,7 +618,7 @@ $wgExtensionFunctions[] = function () {
 		// T39675, T49337
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 100, 828 ];
 
-		$wgFlaggedRevsTags['accuracy']['levels'] = 3; // Is this needed?
+		$wgFlaggedRevsTags['accuracy']['levels'] = 3;
 
 		// T17478
 		$wgGroupPermissions['autoeditor']['autoreview'] = true;
@@ -719,7 +719,7 @@ $wgExtensionFunctions[] = function () {
 		$wgGroupPermissions['editor']['rollback'] = true;
 	} elseif ( $wgDBname == 'vecwiki' ) {
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
-		$wgFlaggedRevsTags['accuracy']['levels'] = 3; // Is this needed?
+		$wgFlaggedRevsTags['accuracy']['levels'] = 3;
 
 		// T17478
 		$wgGroupPermissions['autoeditor']['autoreview'] = true;
