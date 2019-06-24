@@ -14071,13 +14071,6 @@ $wgConf->settings = [
 
 'wmgUseFlaggedRevs' => [
 	'default' => false,
-	# To update this dblist:
-	#   * ADD THE TABLES TO THE DATABASE
-	#       mwscript sql.php --wiki=ruwikinews extensions/FlaggedRevs/backend/schema/mysql/FlaggedRevs.sql
-	#   * edit flaggedrevs.dblist (or the corresponding file for the current realm)
-	#   * touch InitialiseSettings.php to invalidate the cache
-	#   * sync-common-all
-	#   * press enter
 	'flaggedrevs' => true,
 ],
 
