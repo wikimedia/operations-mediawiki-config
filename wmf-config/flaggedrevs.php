@@ -96,13 +96,12 @@ if ( $wgDBname == 'alswiki' ) {
 }
 
 $wgExtensionFunctions[] = function () {
-	global $wgAddGroups, $wgDBname, $wgDefaultUserOptions, $wgFlaggedRevComments,
-		$wgFlaggedRevsAutoconfirm, $wgFlaggedRevsAutopromote, $wgFlaggedRevsAutoReview,
-		$wgFlaggedRevsAutoReviewNew, $wgFlaggedRevsHandleIncludes, $wgFlaggedRevsLowProfile,
-		$wgFlaggedRevsNamespaces, $wgFlaggedRevsOverride, $wgFlaggedRevsProtection,
-		$wgFlaggedRevsRestrictionLevels, $wgFlaggedRevsStatsAge, $wgFlaggedRevsTags,
-		$wgFlaggedRevsTagsRestrictions, $wgFlaggedRevsWhitelist, $wgFlaggedRevValues,
-		$wgGroupPermissions, $wgRemoveGroups, $wgSimpleFlaggedRevsUI;
+	global $wgAddGroups, $wgDBname, $wgDefaultUserOptions, $wgFlaggedRevsAutoconfirm,
+		$wgFlaggedRevsAutopromote, $wgFlaggedRevsAutoReviewNew, $wgFlaggedRevsLowProfile,
+		$wgFlaggedRevsNamespaces, $wgFlaggedRevsOverride, $wgFlaggedRevsRestrictionLevels,
+		$wgFlaggedRevsStatsAge, $wgFlaggedRevsTags, $wgFlaggedRevsTagsRestrictions,
+		$wgFlaggedRevsWhitelist, $wgFlaggedRevValues, $wgGroupPermissions, $wgRemoveGroups,
+		$wgSimpleFlaggedRevsUI;
 
 	///////////////////////////////////////
 	// Common configuration
@@ -127,7 +126,6 @@ $wgExtensionFunctions[] = function () {
 	// Wiki-specific configurations
 
 	if ( $wgDBname == 'alswiki' ) {
-		$wgFlaggedRevsOverride = false;
 		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 	} elseif ( $wgDBname == 'arwiki' ) {
 		$wgFlaggedRevsWhitelist = [ 'الصفحة_الرئيسية' ];
@@ -137,7 +135,6 @@ $wgExtensionFunctions[] = function () {
 		$wgDefaultUserOptions['flaggedrevswatch'] = 1; // T220186
 		$wgDefaultUserOptions['flaggedrevsviewdiffs'] = 1; // T220186
 	} elseif ( $wgDBname == 'bewiki' ) {
-		$wgFlaggedRevsOverride = false;
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 		$wgGroupPermissions['autoeditor']['autoreview'] = true;
@@ -145,8 +142,7 @@ $wgExtensionFunctions[] = function () {
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
 	} elseif ( $wgDBname == 'bnwiki' ) { // T30717
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_PROJECT ];
-		# Show only on a per-page basis
-		$wgFlaggedRevsOverride = false;
+
 		# We have only one tag with one level
 		$wgFlaggedRevsTags = [
 			'status' => [ 'levels' => 1, 'quality' => 2, 'pristine' => 3 ],
@@ -157,10 +153,7 @@ $wgExtensionFunctions[] = function () {
 		];
 		# Restriction levels for auto-review/review rights
 		$wgFlaggedRevsRestrictionLevels = [ '', 'autoconfirmed', 'review' ];
-		# Use flag "protection" levels
-		$wgFlaggedRevsProtection = true;
-		# Use current templates/files
-		$wgFlaggedRevsHandleIncludes = /*FR_INCLUDES_CURRENT*/0;
+
 		# Group permissions for autoconfirmed
 		$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
 
@@ -187,7 +180,6 @@ $wgExtensionFunctions[] = function () {
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 100, 828 ];
 
 		$wgFlaggedRevsTags['accuracy']['levels'] = 3; // Is this needed?
-		$wgFlaggedRevsOverride = false;
 
 		$wgGroupPermissions['autoeditor']['autoreview'] = true;
 		$wgGroupPermissions['autoeditor']['autoconfirmed'] = true;
@@ -196,8 +188,6 @@ $wgExtensionFunctions[] = function () {
 	} elseif ( $wgDBname == 'ckbwiki' ) {
 		# Namespaces
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_PROJECT, NS_HELP, NS_TEMPLATE, NS_CATEGORY, NS_FILE, 100, 102, 828 ];
-		# Show only on a per-page basis
-		$wgFlaggedRevsOverride = false;
 		# We have only one tag with one level
 		$wgFlaggedRevsTags = [
 			'status' => [ 'levels' => 1, 'quality' => 2, 'pristine' => 3 ],
@@ -208,10 +198,6 @@ $wgExtensionFunctions[] = function () {
 		];
 		# Restriction levels for autoconfirmed, autopatrol and review rights
 		$wgFlaggedRevsRestrictionLevels = [ '', 'autoconfirmed', 'autopatrol', 'review' ];
-		# Use flag "protection" levels
-		$wgFlaggedRevsProtection = true;
-		# Use current templates/files
-		$wgFlaggedRevsHandleIncludes = /*FR_INCLUDES_CURRENT*/0;
 
 		# User groups permissions
 		$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
@@ -318,8 +304,6 @@ $wgExtensionFunctions[] = function () {
 		];
 	} elseif ( $wgDBname == 'enwiki' ) {
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_PROJECT ];
-		# Show only on a per-page basis
-		$wgFlaggedRevsOverride = false;
 		# We have only one tag with one level
 		$wgFlaggedRevsTags = [
 			'status' => [ 'levels' => 1, 'quality' => 2, 'pristine' => 3 ],
@@ -330,10 +314,6 @@ $wgExtensionFunctions[] = function () {
 		];
 		# Restriction levels for auto-review/review rights
 		$wgFlaggedRevsRestrictionLevels = [ '', 'autoconfirmed' ];
-		# Use flag "protection" levels
-		$wgFlaggedRevsProtection = true;
-		# Use current templates/files
-		$wgFlaggedRevsHandleIncludes = /*FR_INCLUDES_CURRENT*/0;
 		# Group permissions for autoconfirmed
 		$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
 
@@ -348,7 +328,6 @@ $wgExtensionFunctions[] = function () {
 		$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], [ 'editor', 'autoreview' ] );
 		$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], [ 'editor', 'autoreview' ] );
 	} elseif ( $wgDBname == 'enwikibooks' ) {
-		$wgFlaggedRevsOverride = false;
 		// Cookbook, WikiJunior
 		$wgFlaggedRevsNamespaces[] = 102;
 		$wgFlaggedRevsNamespaces[] = 110;
@@ -377,7 +356,6 @@ $wgExtensionFunctions[] = function () {
 		unset( $wgGroupPermissions['reviewer'] );
 
 	} elseif ( $wgDBname == 'elwikinews' ) {
-		$wgFlaggedRevsAutoReviewNew = false;
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 		$wgFlaggedRevsNamespaces[] = 100;
 		$wgGroupPermissions['editor']['rollback'] = true;
@@ -387,7 +365,6 @@ $wgExtensionFunctions[] = function () {
 
 		unset( $wgGroupPermissions['reviewer'] );
 	} elseif ( $wgDBname == 'enwikinews' ) {
-		$wgFlaggedRevsAutoReviewNew = false; // T17639
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 		$wgFlaggedRevsNamespaces[] = 100;
 		$wgGroupPermissions['editor']['rollback'] = true; // T21815
@@ -397,15 +374,10 @@ $wgExtensionFunctions[] = function () {
 
 		unset( $wgGroupPermissions['reviewer'] );
 	} elseif ( $wgDBname == 'eowiki' ) {
-		$wgFlaggedRevsOverride = false;
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
-		# Disable autopromotion of users - T150591
-		$wgFlaggedRevsAutopromote = false; // T150591
 	} elseif ( $wgDBname == 'fawiki' ) {
 		# Namespaces
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_PROJECT, NS_HELP, NS_TEMPLATE, NS_CATEGORY, NS_FILE, 100, 102, 828 ];
-		# Show only on a per-page basis
-		$wgFlaggedRevsOverride = false;
 		# We have only one tag with one level
 		$wgFlaggedRevsTags = [
 			'status' => [ 'levels' => 1, 'quality' => 2, 'pristine' => 3 ],
@@ -416,10 +388,6 @@ $wgExtensionFunctions[] = function () {
 		];
 		# Restriction levels for auto-review/review rights
 		$wgFlaggedRevsRestrictionLevels = [ '', 'autoconfirmed', 'autoreview' ];
-		# Use flag "protection" levels
-		$wgFlaggedRevsProtection = true;
-		# Use current templates/files
-		$wgFlaggedRevsHandleIncludes = /*FR_INCLUDES_CURRENT*/0;
 
 		# User groups permissions
 		$wgGroupPermissions['rollbacker']['autoreviewrestore'] = true;
@@ -438,7 +406,6 @@ $wgExtensionFunctions[] = function () {
 		$wgAddGroups['bureaucrat'] = array_diff( $wgAddGroups['bureaucrat'], [ 'reviewer' ] );
 		$wgRemoveGroups['bureaucrat'] = array_diff( $wgRemoveGroups['bureaucrat'], [ 'reviewer' ] );
 	} elseif ( $wgDBname == 'fawikinews' ) {
-		$wgFlaggedRevsAutoReviewNew = false;
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 		$wgFlaggedRevsNamespaces[] = 100;
 		$wgGroupPermissions['editor']['rollback'] = true;
@@ -448,11 +415,6 @@ $wgExtensionFunctions[] = function () {
 
 		unset( $wgGroupPermissions['reviewer'] );
 	} elseif ( $wgDBname == 'fiwiki' ) {
-		// $wgFlaggedRevsTags = array( 'accuracy' => 2 );
-		$wgFlaggedRevsAutoReview = true;
-		$wgFlaggedRevsAutoReviewNew = true;
-		$wgFlaggedRevsOverride = false;
-		$wgSimpleFlaggedRevsUI = false;
 		$wgGroupPermissions['sysop']['review'] = true;
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
 		$wgGroupPermissions['reviewer']['stablesettings'] = true; // T149987
@@ -498,8 +460,6 @@ $wgExtensionFunctions[] = function () {
 		$wgFlaggedRevsNamespaces[] = NS_PROJECT;
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 		$wgFlaggedRevsNamespaces[] = 100;
-		# Show only on a per-page basis
-		$wgFlaggedRevsOverride = false;
 		# We have only one tag with one level
 		$wgFlaggedRevsTags = [
 			'status' => [ 'levels' => 1, 'quality' => 2, 'pristine' => 3 ],
@@ -510,10 +470,6 @@ $wgExtensionFunctions[] = function () {
 		];
 		# Restriction levels for auto-review/review rights
 		$wgFlaggedRevsRestrictionLevels = [ '', 'autoconfirmed', 'review', 'sysop' ];
-		# Use flag "protection" levels
-		$wgFlaggedRevsProtection = true;
-		# Use current templates/files
-		$wgFlaggedRevsHandleIncludes = /*FR_INCLUDES_CURRENT*/0;
 		# Group permissions for autoconfirmed
 		$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
 
@@ -528,12 +484,6 @@ $wgExtensionFunctions[] = function () {
 		$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], [ 'editor' ] );
 		$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], [ 'editor' ] );
 	} elseif ( $wgDBname == 'huwiki' ) {
-		// Test from to April to October 2018 - T121995
-		$wgFlaggedRevsOverride = false;
-
-		// # UI
-		$wgFlaggedRevsLowProfile = false;
-
 		// # namespaces
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 		$wgFlaggedRevsNamespaces[] = 100;
@@ -572,10 +522,8 @@ $wgExtensionFunctions[] = function () {
 		$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], [ 'autoreview' ] );
 		$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], [ 'autoreview' ] );
 	} elseif ( $wgDBname == 'iawiki' ) {
-		$wgFlaggedRevsOverride = false;
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 	} elseif ( $wgDBname == 'iswiktionary' ) {
-		$wgFlaggedRevsOverride = false;
 	} elseif ( $wgDBname == 'kawiki' ) {
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
@@ -599,8 +547,6 @@ $wgExtensionFunctions[] = function () {
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_FILE, NS_TEMPLATE, 100, 102, 828 ]; // T55373
 	} elseif ( $wgDBname == 'ptwiki' ) { // T56828
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_TEMPLATE, 102, 828 ];
-		# Show only on a per-page basis
-		$wgFlaggedRevsOverride = false;
 		# We have only one tag with one level
 		$wgFlaggedRevsTags = [
 			'status' => [ 'levels' => 1, 'quality' => 2, 'pristine' => 3 ],
@@ -611,10 +557,6 @@ $wgExtensionFunctions[] = function () {
 		];
 		# Restriction levels for autoconfirmed rights
 		$wgFlaggedRevsRestrictionLevels = [ '', 'autoconfirmed' ];
-		# Use flag "protection" levels
-		$wgFlaggedRevsProtection = true;
-		# Use current templates/files
-		$wgFlaggedRevsHandleIncludes = /*FR_INCLUDES_CURRENT*/0;
 
 		# Group permissions
 		$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
@@ -637,13 +579,7 @@ $wgExtensionFunctions[] = function () {
 		$wgAddGroups['bureaucrat'] = array_diff( $wgAddGroups['bureaucrat'], [ 'reviewer' ] );
 		$wgRemoveGroups['bureaucrat'] = array_diff( $wgRemoveGroups['bureaucrat'], [ 'reviewer' ] );
 	} elseif ( $wgDBname == 'ptwikibooks' ) {
-		// Sets the most recent version as shown
-		$wgFlaggedRevsOverride = false;
-
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_TEMPLATE, NS_HELP, NS_PROJECT, 828 ];
-
-		$wgSimpleFlaggedRevsUI = false;
-		$wgFlaggedRevComments = false;
 
 		$wgFlaggedRevsAutopromote = [
 			'days' => 30, # days since registration
@@ -683,7 +619,6 @@ $wgExtensionFunctions[] = function () {
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 100, 828 ];
 
 		$wgFlaggedRevsTags['accuracy']['levels'] = 3; // Is this needed?
-		$wgFlaggedRevsOverride = false;
 
 		// T17478
 		$wgGroupPermissions['autoeditor']['autoreview'] = true;
@@ -766,10 +701,8 @@ $wgExtensionFunctions[] = function () {
 	} elseif ( $wgDBname == 'trwikiquote' ) {
 		unset( $wgGroupPermissions['reviewer'] );
 	} elseif ( $wgDBname == 'ukwiki' ) {
-		$wgFlaggedRevValues = 1;
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 828 ];
 		$wgFlaggedRevsTags['accuracy']['levels'] = 3;
-		$wgFlaggedRevsOverride = false;
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
 	} elseif ( $wgDBname == 'plwikisource' ) {
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
@@ -787,7 +720,6 @@ $wgExtensionFunctions[] = function () {
 	} elseif ( $wgDBname == 'vecwiki' ) {
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 		$wgFlaggedRevsTags['accuracy']['levels'] = 3; // Is this needed?
-		$wgFlaggedRevsOverride = false;
 
 		// T17478
 		$wgGroupPermissions['autoeditor']['autoreview'] = true;
