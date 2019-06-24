@@ -56,12 +56,10 @@ if ( $wgDBname == 'alswiki' ) {
 } elseif ( $wgDBname == 'fawiki' ) {
 	$wgFlaggedRevsOverride = false;
 	$wgFlaggedRevsProtection = true;
-	# Use current templates/files
 	$wgFlaggedRevsHandleIncludes = /*FR_INCLUDES_CURRENT*/0;
 } elseif ( $wgDBname == 'fawikinews' ) {
 	$wgFlaggedRevsAutoReviewNew = false;
 } elseif ( $wgDBname == 'fiwiki' ) {
-	// $wgFlaggedRevsTags = array( 'accuracy' => 2 );
 	$wgFlaggedRevsAutoReview = true;
 	$wgFlaggedRevsAutoReviewNew = true;
 	$wgFlaggedRevsOverride = false;
@@ -79,7 +77,7 @@ if ( $wgDBname == 'alswiki' ) {
 	$wgFlaggedRevsOverride = false;
 } elseif ( $wgDBname == 'iswiktionary' ) {
 	$wgFlaggedRevsOverride = false;
-} elseif ( $wgDBname == 'ptwiki' ) { // T56828
+} elseif ( $wgDBname == 'ptwiki' ) {
 	$wgFlaggedRevsOverride = false;
 	$wgFlaggedRevsProtection = true;
 	$wgFlaggedRevsHandleIncludes = /*FR_INCLUDES_CURRENT*/0;
