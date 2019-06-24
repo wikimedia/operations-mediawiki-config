@@ -16,6 +16,87 @@
 
 include "$IP/extensions/FlaggedRevs/FlaggedRevs.php";
 
+///////////////////////////////////////
+// Wiki-specific configurations (simple non array values only!)
+///////////////////////////////////////
+
+if ( $wgDBname == 'alswiki' ) {
+	$wgFlaggedRevsOverride = false;
+} elseif ( $wgDBname == 'bewiki' ) {
+	$wgFlaggedRevsOverride = false;
+} elseif ( $wgDBname == 'bnwiki' ) {
+	$wgFlaggedRevsOverride = false;
+	$wgFlaggedRevsProtection = true;
+	$wgFlaggedRevsHandleIncludes = /*FR_INCLUDES_CURRENT*/0;
+} elseif ( $wgDBname == 'cewiki' ) {
+	$wgFlaggedRevsOverride = false;
+} elseif ( $wgDBname == 'ckbwiki' ) {
+	$wgFlaggedRevsOverride = false;
+	$wgFlaggedRevsProtection = true;
+	$wgFlaggedRevsHandleIncludes = /*FR_INCLUDES_CURRENT*/0;
+} elseif ( $wgDBname == 'dewikiquote' ) {
+	$wgFlaggedRevsOverride = false;
+} elseif ( $wgDBname == 'dewiktionary' ) {
+	$wgFlaggedRevsOverride = false;
+} elseif ( $wgDBname == 'enwiki' ) {
+	$wgFlaggedRevsOverride = false;
+	$wgFlaggedRevsProtection = true;
+	$wgFlaggedRevsHandleIncludes = /*FR_INCLUDES_CURRENT*/0;
+} elseif ( $wgDBname == 'enwikibooks' ) {
+	$wgFlaggedRevsOverride = false;
+	$wgSimpleFlaggedRevsUI = false;
+} elseif ( $wgDBname == 'elwikinews' ) {
+	$wgFlaggedRevsAutoReviewNew = false;
+} elseif ( $wgDBname == 'enwikinews' ) {
+	$wgFlaggedRevsAutoReviewNew = false; // T17639
+} elseif ( $wgDBname == 'eowiki' ) {
+	$wgFlaggedRevsOverride = false;
+	$wgFlaggedRevsTags['accuracy']['levels'] = 1;
+	$wgFlaggedRevsAutopromote = false; // T150591
+} elseif ( $wgDBname == 'fawiki' ) {
+	$wgFlaggedRevsOverride = false;
+	$wgFlaggedRevsProtection = true;
+	# Use current templates/files
+	$wgFlaggedRevsHandleIncludes = /*FR_INCLUDES_CURRENT*/0;
+} elseif ( $wgDBname == 'fawikinews' ) {
+	$wgFlaggedRevsAutoReviewNew = false;
+} elseif ( $wgDBname == 'fiwiki' ) {
+	// $wgFlaggedRevsTags = array( 'accuracy' => 2 );
+	$wgFlaggedRevsAutoReview = true;
+	$wgFlaggedRevsAutoReviewNew = true;
+	$wgFlaggedRevsOverride = false;
+	$wgSimpleFlaggedRevsUI = false;
+} elseif ( $wgDBname == 'hewikisource' ) {
+	$wgFlaggedRevsAutoReviewNew = false;
+} elseif ( $wgDBname == 'hiwiki' ) {
+	$wgFlaggedRevsOverride = false;
+	$wgFlaggedRevsProtection = true;
+	$wgFlaggedRevsHandleIncludes = /*FR_INCLUDES_CURRENT*/0;
+} elseif ( $wgDBname == 'huwiki' ) {
+	$wgFlaggedRevsOverride = false;
+	$wgFlaggedRevsLowProfile = false;
+} elseif ( $wgDBname == 'iawiki' ) {
+	$wgFlaggedRevsOverride = false;
+} elseif ( $wgDBname == 'iswiktionary' ) {
+	$wgFlaggedRevsOverride = false;
+} elseif ( $wgDBname == 'ptwiki' ) { // T56828
+	$wgFlaggedRevsOverride = false;
+	$wgFlaggedRevsProtection = true;
+	$wgFlaggedRevsHandleIncludes = /*FR_INCLUDES_CURRENT*/0;
+} elseif ( $wgDBname == 'ptwikibooks' ) {
+	$wgFlaggedRevsOverride = false;
+	$wgSimpleFlaggedRevsUI = false;
+	$wgFlaggedRevComments = false;
+} elseif ( $wgDBname == 'ptwikisource' ) {
+	$wgFlaggedRevsLowProfile = false;
+} elseif ( $wgDBname == 'ruwiki' ) {
+	$wgFlaggedRevsOverride = false;
+} elseif ( $wgDBname == 'ukwiki' ) {
+	$wgFlaggedRevValues = 1;
+} elseif ( $wgDBname == 'vecwiki' ) {
+	$wgFlaggedRevsOverride = false;
+}
+
 $wgExtensionFunctions[] = function () {
 	global $wgAddGroups, $wgDBname, $wgDefaultUserOptions, $wgFlaggedRevComments,
 		$wgFlaggedRevsAutoconfirm, $wgFlaggedRevsAutopromote, $wgFlaggedRevsAutoReview,
