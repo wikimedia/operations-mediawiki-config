@@ -23349,8 +23349,8 @@ $wgConf->settings = [
 'wgGEHomepageMobileEnabled' => [
 	'default' => false,
 	'testwiki' => true,
-	'cswiki' => false,
-	'kowiki' => false,
+	'cswiki' => true,
+	'kowiki' => true,
 	'viwiki' => false,
 ],
 
