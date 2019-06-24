@@ -40,9 +40,11 @@ try {
 // check that we have the needed components of the event
 if ( !isset( $event['database'] )
 		|| !isset( $event['type'] )
-		|| !isset( $event['page_title'] )
 		|| !isset( $event['params'] )
 ) {
+    MWExceptionHandler::handleException(
+        new Exception( 'Invalid job received: ' . json_encode( $event ) )
+    );
 	http_response_code( 400 );
 	die( 'Invalid event received!' );
 }
