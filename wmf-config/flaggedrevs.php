@@ -105,6 +105,8 @@ $wgExtensionFunctions[] = function () {
 	///////////////////////////////////////
 	// Common configuration
 	// DO NOT CHANGE without hard-coding these values into the relevant wikis first.
+	///////////////////////////////////////
+
 	$wgFlaggedRevsNamespaces[] = 828; // NS_MODULE
 	$wgFlaggedRevsTags = [
 		'accuracy' => [ 'levels' => 2, 'quality' => 2, 'pristine' => 4 ],
@@ -123,6 +125,7 @@ $wgExtensionFunctions[] = function () {
 
 	///////////////////////////////////////
 	// Wiki-specific configurations
+	///////////////////////////////////////
 
 	if ( $wgDBname == 'alswiki' ) {
 		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
