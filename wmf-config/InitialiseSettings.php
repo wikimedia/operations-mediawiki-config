@@ -5474,7 +5474,9 @@ $wgConf->settings = [
 // something will be built up around the EventLogging schema model
 // to store these in a wiki and cache them locally.
 // TODO: T226436
-'wmgMonologAvroSchemas' => [],
+'wmgMonologAvroSchemas' => [
+	'default' => [],
+],
 # @} end of wmgAvroSchemas
 
 # wmgMonologChannels @{
