@@ -33,15 +33,6 @@ $common = [
 		'10.2.2.36', # logstash.svc.eqiad.wmnet
 	],
 
-	// Analytics Kafka (not active-active).
-	'kafka' => [
-		'10.64.5.12:9092', # kafka1012.eqiad.wmnet
-		'10.64.5.13:9092', # kafka1013.eqiad.wmnet
-		'10.64.36.114:9092', # kafka1014.eqiad.wmnet
-		'10.64.53.12:9092', # kafka1020.eqiad.wmnet
-		'10.64.36.122:9092', # kafka1022.eqiad.wmnet
-	],
-
 	// IRC (broadcast RCFeed for irc.wikimedia.org)
 	// Not active-active.
 	'irc' => '208.80.153.44', # kraz.codfw.wmnet

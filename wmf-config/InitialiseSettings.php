@@ -5462,23 +5462,6 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
-# wmgKafkaServers @{
-// Kafka servers. Use false to disable all kafka logging.
-'wmgKafkaServers' => [
-	'default' => $wmfLocalServices['kafka'],
-],
-# @} end of wmgKafkaServers
-
-# wmgMonologAvroSchemas @{
-// Configure schemas used for avro serialization. This is temporary,
-// something will be built up around the EventLogging schema model
-// to store these in a wiki and cache them locally.
-// TODO: T226436
-'wmgMonologAvroSchemas' => [
-	'default' => [],
-],
-# @} end of wmgAvroSchemas
-
 # wmgMonologChannels @{
 // Configure Monolog logging to udp2log (logfiles), Logstash, EventBus extension, etc.
 // See logging.php for more detailed information
