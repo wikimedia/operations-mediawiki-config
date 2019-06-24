@@ -37,21 +37,7 @@ $wgExtensionFunctions[] = function () {
 	];
 	$wgGroupPermissions['autoconfirmed']['movestable'] = true; // T16166
 
-	$wmfStandardAutoPromote = [
-		'days'                  => 60, # days since registration
-		'edits'                 => 250, # total edit count
-		'excludeLastDays'       => 1, # exclude the last X days of edits from below edit counts
-		'benchmarks'            => 15, # number of "spread out" edits
-		'spacing'               => 3, # number of days between these edits (the "spread")
-		'totalContentEdits'     => 300, # edits to pages in $wgContentNamespaces
-		'totalCheckedEdits'     => 200, # edits before the stable version of pages
-		'uniqueContentPages'    => 14, # unique pages in $wgContentNamespaces edited
-		'editComments'          => 50, # number of manual edit summaries used
-		'userpageBytes'         => 0, # size of userpage (use 0 to not require a userpage)
-		'neverBlocked'          => true, # username was never blocked before?
-		'maxRevertedEditRatio'  => 0.03, # max fraction of edits reverted via "rollback"/"undo"
-	];
-
+	$wmfStandardAutoPromote = $wgFlaggedRevsAutopromote; // flaggedrevs defaults
 	$wgFlaggedRevsAutopromote = false;
 
 	$wgFlaggedRevsStatsAge = false;
