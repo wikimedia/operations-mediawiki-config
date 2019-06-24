@@ -20,17 +20,7 @@ include "$IP/extensions/FlaggedRevs/FlaggedRevs.php";
 // Wiki-specific configurations (simple non array values only!)
 ///////////////////////////////////////
 
-// TODO: Cleanup as per T226435
-if ( $wgDBname == 'elwikinews' ) {
-	$wgFlaggedRevsAutoReviewNew = false;
-} elseif ( $wgDBname == 'enwikinews' ) {
-	$wgFlaggedRevsAutoReviewNew = false; // T17639
-} elseif ( $wgDBname == 'fawikinews' ) {
-	$wgFlaggedRevsAutoReviewNew = false;
-} elseif ( $wgDBname == 'fiwiki' ) {
-	$wgFlaggedRevsAutoReviewNew = true;
-} elseif ( $wgDBname == 'hewikisource' ) {
-	$wgFlaggedRevsAutoReviewNew = false;
+if ( $wgDBname == 'hewikisource' ) {
 	$wgFlaggedRevValues = 4;
 }
 
