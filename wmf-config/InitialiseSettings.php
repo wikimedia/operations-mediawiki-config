@@ -5473,14 +5473,8 @@ $wgConf->settings = [
 // Configure schemas used for avro serialization. This is temporary,
 // something will be built up around the EventLogging schema model
 // to store these in a wiki and cache them locally.
-'wmgMonologAvroSchemas' => [
-	'default' => [
-		'CirrusSearchRequestSet' => [
-			'schema' => file_get_contents( __DIR__ . '/event-schemas/avro/mediawiki/CirrusSearchRequestSet/121456865906.avsc' ),
-			'revision' => 121456865906,
-		],
-	],
-],
+// TODO: T226436
+'wmgMonologAvroSchemas' => [],
 # @} end of wmgAvroSchemas
 
 # wmgMonologChannels @{
@@ -5523,12 +5517,6 @@ $wgConf->settings = [
 		'CentralNotice' => 'debug',
 		'CirrusSearch' => 'debug',
 		'CirrusSearchChangeFailed' => 'debug',
-		'CirrusSearchRequestSet' => [
-			'kafka' => 'debug',
-			'udp2log' => false,
-			'logstash' => false,
-			'buffer' => true
-		],
 		'cirrussearch-request' => [
 			'udp2log' => false,
 			'logstash' => false,
