@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "de452050_72f574ee",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 414,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-06-24T11:08:26Z",
+      "side": 1,
+      "message": "I suspect this will turn off QuickSurveys on beta cawiki again, where they’re currently enabled (https://ca.wikipedia.beta.wmflabs.org/wiki/Especial:Versi%C3%B3) – is that intended? As far as I’m aware it’s fairly common to leave off the \u0027default\u0027 in IS-labs.php, so that IS.php still applies.",
+      "revId": "79c8f58a1151d24d443428bfe325eb2bd95a8ebb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
