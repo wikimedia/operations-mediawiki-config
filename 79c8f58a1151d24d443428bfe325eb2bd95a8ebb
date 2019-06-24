@@ -34,6 +34,24 @@
       "revId": "79c8f58a1151d24d443428bfe325eb2bd95a8ebb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "953ff2e9_f765b22e",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 414,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2019-06-24T11:20:06Z",
+      "side": 1,
+      "message": "I see, OK, I\u0027ll just add hewiki and leave the default untouched.",
+      "parentUuid": "33e63269_238f4d47",
+      "revId": "79c8f58a1151d24d443428bfe325eb2bd95a8ebb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
