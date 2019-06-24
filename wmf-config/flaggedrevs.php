@@ -16,14 +16,6 @@
 
 include "$IP/extensions/FlaggedRevs/FlaggedRevs.php";
 
-///////////////////////////////////////
-// Wiki-specific configurations (simple non array values only!)
-///////////////////////////////////////
-
-if ( $wgDBname == 'hewikisource' ) {
-	$wgFlaggedRevValues = 4;
-}
-
 $wgExtensionFunctions[] = function () {
 	global $wgAddGroups, $wgDBname, $wgDefaultUserOptions, $wgFlaggedRevsAutoconfirm,
 		$wgFlaggedRevsAutopromote, $wgFlaggedRevsLowProfile, $wgFlaggedRevsNamespaces,
@@ -371,7 +363,11 @@ $wgExtensionFunctions[] = function () {
 		$wgFlaggedRevsNamespaces[] = 108;
 		$wgFlaggedRevsNamespaces[] = 110;
 		$wgFlaggedRevsNamespaces[] = 112;
-		$wgFlaggedRevsTags = [ 'completeness' => 3, 'accuracy' => 3, 'formatting' => 3 ];
+		$wgFlaggedRevsTags = [
+			'completeness' => [ 'levels' => 4, 'quality' => 3, 'pristine' => 5 ],
+			'accuracy' => [ 'levels' => 4, 'quality' => 3, 'pristine' => 5 ],
+			'formatting' => [ 'levels' => 4, 'quality' => 3, 'pristine' => 5 ],
+		];
 		$wgFlaggedRevsTagsRestrictions = [
 			'completeness' => [ 'review' => 3, 'autoreview' => 3 ],
 			'accuracy'     => [ 'review' => 3, 'autoreview' => 3 ],
