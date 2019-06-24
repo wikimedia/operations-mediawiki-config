@@ -16,6 +16,24 @@
       "revId": "79c8f58a1151d24d443428bfe325eb2bd95a8ebb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "33e63269_238f4d47",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 414,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-06-24T11:11:27Z",
+      "side": 1,
+      "message": "Hm, then again, perhaps it won’t… but I think it would be clearer to have just a single entry:\n\n \u0027wmgUseQuickSurveys\u0027 \u003d\u003e [\n \t\u0027hewiki\u0027 \u003d\u003e true,\n ],\n\nAccording to the comment in L73-L76, this will combine the settings with the regular settings (because the key doesn’t start with a hyphen).",
+      "parentUuid": "de452050_72f574ee",
+      "revId": "79c8f58a1151d24d443428bfe325eb2bd95a8ebb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
