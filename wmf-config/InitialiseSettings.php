@@ -23362,7 +23362,7 @@ $wgConf->settings = [
 	'default' => 0,
 	'cswiki' => 50,
 	'kowiki' => 50,
-	'viwiki' => 0,
+	'viwiki' => 50,
 ],
 
 'wgGEHomepageTutorialTitle' => [
