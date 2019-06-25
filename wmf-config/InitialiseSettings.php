@@ -20724,6 +20724,10 @@ $wgConf->settings = [
 	],
 ],
 
+'wgMediaInfoEnableOtherStatements' => [
+	'testcommonswiki' => true
+],
+
 'wgMediaInfoExternalEntitySearchBaseUri' => [
 	'default' => 'https://www.wikidata.org/w/api.php',
 ],
