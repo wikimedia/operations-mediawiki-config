@@ -23334,7 +23334,7 @@ $wgConf->settings = [
 	'testwiki' => true,
 	'cswiki' => true,
 	'kowiki' => true,
-	'viwiki' => false,
+	'viwiki' => true,
 ],
 
 'wgGEHomepageMobileEnabled' => [
@@ -23342,7 +23342,7 @@ $wgConf->settings = [
 	'testwiki' => true,
 	'cswiki' => true,
 	'kowiki' => true,
-	'viwiki' => false,
+	'viwiki' => true,
 ],
 
 'wgGEHomepageLoggingEnabled' => [
@@ -23369,6 +23369,7 @@ $wgConf->settings = [
 	'testwiki' => 'Wikipedia:Requests/Help desk/Mentors',
 	'cswiki' => 'Wikipedie:Potřebuji_pomoc/Mentoři',
 	'kowiki' => '위키백과:새_사용자_경험/새_사용자_멘토',
+	'viwiki' => 'Wikipedia:Phát_triển_cộng_đồng/Danh_sách_thành_viên_mentor',
 ],
 
 'wgDisableRollbackConfirmationFeature' => [
