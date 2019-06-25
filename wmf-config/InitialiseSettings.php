@@ -23042,9 +23042,9 @@ $wgConf->settings = [
 'wgGEHomepageMobileEnabled' => [
 	'default' => false,
 	'testwiki' => true,
-	'cswiki' => false,
-	'kowiki' => false,
-	'viwiki' => false,
+	'cswiki' => true,
+	'kowiki' => true,
+	'viwiki' => true,
 ],
 
 'wgGEHomepageLoggingEnabled' => [
