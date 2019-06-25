@@ -22,10 +22,9 @@ $wgFlaggedRevsStatsAge = false;
 
 $wgExtensionFunctions[] = function () {
 	global $wgAddGroups, $wgDBname, $wgDefaultUserOptions, $wgFlaggedRevsAutoconfirm,
-		$wgFlaggedRevsAutopromote, $wgFlaggedRevsLowProfile, $wgFlaggedRevsNamespaces,
-		$wgFlaggedRevsRestrictionLevels, $wgFlaggedRevsStatsAge, $wgFlaggedRevsTags,
-		$wgFlaggedRevsTagsRestrictions, $wgFlaggedRevsWhitelist, $wgGroupPermissions,
-		$wgRemoveGroups;
+		$wgFlaggedRevsAutopromote, $wgFlaggedRevsNamespaces, $wgFlaggedRevsRestrictionLevels,
+		$wgFlaggedRevsStatsAge, $wgFlaggedRevsTags, $wgFlaggedRevsTagsRestrictions,
+		$wgFlaggedRevsWhitelist, $wgGroupPermissions, $wgRemoveGroups;
 
 	///////////////////////////////////////
 	// Common configuration
@@ -540,7 +539,6 @@ $wgExtensionFunctions[] = function () {
 		$wgFlaggedRevsAutopromote['days'] = 30;
 		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 	} elseif ( $wgDBname == 'ptwikisource' ) {
-		$wgFlaggedRevsLowProfile = false;
 		$wgFlaggedRevsNamespaces[] = 102;
 		$wgFlaggedRevsNamespaces[] = 104;
 		$wgFlaggedRevsNamespaces[] = 106;
