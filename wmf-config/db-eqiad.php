@@ -194,6 +194,7 @@ $wgLBFactoryConf = [
 		// Use the FQDN so that `sql labswiki` will work from hosts where the
 		// default DNS search path is not eqiad.wmnet (e.g. labweb1001)
 		'db1073' => 1, # B3
+		# 'db1133' => 1, # C3 # future master
 	],
 ],
 
@@ -591,6 +592,7 @@ $wgLBFactoryConf = [
 	'db1129' => '10.64.0.99', # do not remove or comment out
 	'db1130' => '10.64.16.33', # do not remove or comment out
 	'db1131' => '10.64.16.34', # do not remove or comment out
+	'db1133' => '10.64.32.72', # do not remove or comment out
 	'db1134' => '10.64.32.76', # do not remove or comment out
 	'db1136' => '10.64.48.109', # do not remove or comment out
 	'db1137' => '10.64.48.111', # do not remove or comment out
