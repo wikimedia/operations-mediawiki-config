@@ -12116,6 +12116,9 @@ $wgConf->settings = [
 	'+nowikimedia' => [
 		'sysop' => [ 'translationadmin' ], // T152490
 	],
+	'+nycwikimedia' => [
+		'bureaucrat' => [ 'sysop', 'bureaucrat' ], // T226591
+	],
 	'+officewiki' => [
 		'bureaucrat' => [ 'communityapps', 'flood', 'securepoll' ],
 	],
