@@ -554,11 +554,15 @@ function wmfLabsSettings() {
 				]
 			]
 		],
+
 		'wmgUseSentry' => [
 			'default' => true,
 		],
 		'wgSentryDsn' => [
 			'default' => 'https://c357be0613e24340a96aeaa28dde08ad@sentry-beta.wmflabs.org/4',
+		],
+		'wgSentryEventGateUri' => [
+			'default' => 'https://eventgate-logging.wmflabs.org/v1/events',
 		],
 
 		'-wmgScorePath' => [

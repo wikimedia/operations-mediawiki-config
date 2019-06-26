@@ -22677,8 +22677,10 @@ $wgConf->settings = [
 'wmgUseSentry' => [
 	'default' => false,
 ],
-
 'wgSentryDsn' => [
+	'default' => '',
+],
+'wgSentryEventGateUri' => [
 	'default' => '',
 ],
 
