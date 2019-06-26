@@ -3254,15 +3254,38 @@ $wgConf->settings = [
 # wgNamespaceAliases @{
 'wgNamespaceAliases' => [
 	// defaults to aid when things are switched
-	'+wikibooks' => [ 'Wikibooks' => NS_PROJECT ],
-	'+wikinews' => [ 'Wikinews' => NS_PROJECT ],
-	'+wikiquote' => [ 'Wikiquote' => NS_PROJECT ],
-	'+wikisource' => [ 'Wikisource' => NS_PROJECT ],
-	'+wikiversity' => [ 'Wikiversity' => NS_PROJECT ],
-	'+wikipedia' => [ 'Wikipedia' => NS_PROJECT ],
-	'+wiktionary' => [ 'Wiktionary' => NS_PROJECT ],
+	// Set default aliases for project_talk for all projects // T173070
+	'+wikibooks' => [
+		'Wikibooks' => NS_PROJECT,
+		'Wikibooks_talk' => NS_PROJECT_TALK,
+	],
+	'+wikinews' => [
+		'Wikinews' => NS_PROJECT,
+		'Wikinews_talk' => NS_PROJECT_TALK,
+	],
+	'+wikiquote' => [
+		'Wikiquote' => NS_PROJECT,
+		'Wikiquote_talk' => NS_PROJECT_TALK,
+	],
+	'+wikisource' => [
+		'Wikisource' => NS_PROJECT,
+		'Wikisource_talk' => NS_PROJECT_TALK,
+	],
+	'+wikiversity' => [
+		'Wikiversity' => NS_PROJECT,
+		'Wikiversity_talk' => NS_PROJECT_TALK,
+	],
+	'+wikipedia' => [
+		'Wikipedia' => NS_PROJECT,
+		'Wikipedia_talk' => NS_PROJECT_TALK,
+	],
+	'+wiktionary' => [
+		'Wiktionary' => NS_PROJECT,
+		'Wiktionary_talk' => NS_PROJECT_TALK,
+	],
 	'+wikivoyage' => [
 		'Wikivoyage' => NS_PROJECT,
+		'Wikivoyage_talk' => NS_PROJECT_TALK,
 		'WV' => NS_PROJECT,
 	],
 	'+abwiki' => [
