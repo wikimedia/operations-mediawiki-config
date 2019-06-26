@@ -2170,7 +2170,7 @@ if ( $wmgUseSentry ) {
 	wfLoadExtension( 'Sentry' );
 	$wgSentryLogPhpErrors = false;
 	# T217142
-	$wgSentryEventGateUri = "http://eventgate-logging.wmflabs.org/v1/events";
+	$wgSentryEventGateUri = "https://eventgate-logging.wmflabs.org/v1/events";
 }
 
 wfLoadExtension( 'TemplateStyles' );
