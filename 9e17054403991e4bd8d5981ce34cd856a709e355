@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "94b86552_403c7ae8",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 22336,
+      "author": {
+        "id": 6796
+      },
+      "writtenOn": "2019-06-26T15:53:04Z",
+      "side": 0,
+      "message": "@bmansurov should QuickSurveys be turned off for the wikis that are not running other surveys?",
+      "revId": "9e17054403991e4bd8d5981ce34cd856a709e355",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
