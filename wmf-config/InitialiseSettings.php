@@ -22429,7 +22429,7 @@ $wgConf->settings = [
 		// T226273
 		[
 			'enabled' => true,
-			'name' => 'reader-demographics-en',
+			'name' => 'reader-demographics-en-af',
 			'type' => 'external',
 			'description' => 'Reader-demographics-1-description',
 			'link' => 'Reader-demographics-1-link',
@@ -22510,7 +22510,7 @@ $wgConf->settings = [
 		// T226273
 		[
 			'enabled' => true,
-			'name' => 'reader-demographics-fr',
+			'name' => 'reader-demographics-fr-af',
 			'type' => 'external',
 			'description' => 'Reader-demographics-1-description',
 			'link' => 'Reader-demographics-1-link',
