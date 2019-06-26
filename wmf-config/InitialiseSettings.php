@@ -23434,7 +23434,7 @@ $wgConf->settings = [
 ],
 'wmgWikibaseTmpPropertyTermsMigrationStage' => [
 	'default' => MIGRATION_OLD,
-	'testwikidatawiki' => MIGRATION_WRITE_BOTH, // T225055
+	'testwikidatawiki' => MIGRATION_WRITE_NEW, // T225053
 	'wikidatawiki' => MIGRATION_WRITE_BOTH,  // T225055
 ],
 'wmgWikibaseTmpItemTermsMigrationStage' => [
