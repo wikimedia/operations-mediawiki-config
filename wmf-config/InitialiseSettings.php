@@ -10685,7 +10685,7 @@ $wgConf->settings = [
 		'sysop' => [ 'property-create' => true ], // T48953
 		'flood' => [ 'bot' => true ], // T50013
 	],
-	'wikimaniawiki' => [
+	'+wikimaniawiki' => [
 		// Uploads are restricted to sysop and an uploader group - T225505
 		'uploader' => [
 			'upload' => true,
