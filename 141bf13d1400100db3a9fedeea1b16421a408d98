@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "693ab546_19d17f88",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 8851,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2019-06-27T18:46:59Z",
+      "side": 1,
+      "message": "affected",
+      "range": {
+        "startLine": 8851,
+        "startChar": 3,
+        "endLine": 8851,
+        "endChar": 15
+      },
+      "revId": "141bf13d1400100db3a9fedeea1b16421a408d98",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a6937669_1e8d0278",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 9480,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2019-06-27T18:46:59Z",
+      "side": 1,
+      "message": "affected",
+      "range": {
+        "startLine": 9480,
+        "startChar": 3,
+        "endLine": 9480,
+        "endChar": 9
+      },
+      "revId": "141bf13d1400100db3a9fedeea1b16421a408d98",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
