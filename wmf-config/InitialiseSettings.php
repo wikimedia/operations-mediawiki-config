@@ -22283,8 +22283,9 @@ $wgConf->settings = [
 		'the Creative Commons Attribution-ShareAlike License; additional terms may apply.',
 ],
 'wgSessionCacheType' => [
-	'default' => 'redis_local',  // declared in redis.php
+	'default' => 'redis_local',  // declared in redis.php. This will change to kask-transition.
 	'wikitech' => 'memcached-pecl',
+	'testwiki' => 'kask-transition', // change this to kask-session after the transition is complete
 ],
 'wgCentralAuthSessionCacheType' => [
 	'default' => 'redis_local',  // declared in redis.php

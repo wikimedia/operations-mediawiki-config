@@ -501,6 +501,33 @@ $wgObjectCaches['mysql-multiwrite'] = [
 	'replication' => 'async',
 	'reportDupes' => false
 ];
+$wgObjectCaches['kask-session'] = [
+	'class' => 'RESTBagOStuff',
+	'url' => "{$wmfLocalServices['kask']}/sessions/v1/",
+	'httpParams' => [
+		'writeHeaders' => [
+			'content-type' => 'application/octet-stream',
+		],
+		'writeMethod' => 'POST',
+	],
+	'extendedErrorBodyFields' => [ 'type', 'title', 'detail', 'instance' ]
+];
+$wgObjectCaches['kask-transition'] = [
+	'class' => 'MultiWriteBagOStuff',
+	‘caches’ => [
+		0 => [
+			'factory' => [ 'ObjectCache', 'getInstance' ],
+			'args' => [ 'redis_local' ]
+		],
+		1 => [
+			'factory' => [ 'ObjectCache', 'getInstance' ],
+			'args' => [ 'kask-session' ]
+		],
+
+	],
+	'replication' => 'async',
+	'reportDupes' => false,
+];
 
 // T203888: Purge Wikidata Lexeme parser cache for senses deployment - Addshore
 if ( $wgDBname === 'wikidatawiki' ) {

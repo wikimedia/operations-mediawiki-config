@@ -65,5 +65,8 @@ return [
 		'poolcounter' => [
 			'deployment-poolcounter05.deployment-prep.eqiad.wmflabs',
 		],
+
+		### Kask
+		'kask' => 'https://deployment-sessionstore01.deployment-prep.eqiad.wmflabs:8080',
 	],
 ];
