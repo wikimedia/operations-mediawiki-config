@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8076ba43_9b6fb094",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 9887,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2019-06-27T18:02:46Z",
+      "side": 1,
+      "message": "affects upload",
+      "range": {
+        "startLine": 9887,
+        "startChar": 3,
+        "endLine": 9887,
+        "endChar": 9
+      },
+      "revId": "510498358e92f8d02832e2eaddb63d6d87bf6d6e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ef5ffd83_1bac9103",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10298,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2019-06-27T18:02:46Z",
+      "side": 1,
+      "message": "affects upload",
+      "range": {
+        "startLine": 10298,
+        "startChar": 3,
+        "endLine": 10298,
+        "endChar": 14
+      },
+      "revId": "510498358e92f8d02832e2eaddb63d6d87bf6d6e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "469e12a8_98e923b0",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10483,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2019-06-27T18:02:46Z",
+      "side": 1,
+      "message": "affect upload",
+      "range": {
+        "startLine": 10483,
+        "startChar": 3,
+        "endLine": 10483,
+        "endChar": 14
+      },
+      "revId": "510498358e92f8d02832e2eaddb63d6d87bf6d6e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "194d5e7e_40cfc765",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10665,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2019-06-27T18:02:46Z",
+      "side": 1,
+      "message": "affect upload",
+      "range": {
+        "startLine": 10665,
+        "startChar": 3,
+        "endLine": 10665,
+        "endChar": 10
+      },
+      "revId": "510498358e92f8d02832e2eaddb63d6d87bf6d6e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "db20a43d_99e795d8",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10697,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2019-06-27T18:02:46Z",
+      "side": 1,
+      "message": "affect upload",
+      "range": {
+        "startLine": 10697,
+        "startChar": 3,
+        "endLine": 10697,
+        "endChar": 19
+      },
+      "revId": "510498358e92f8d02832e2eaddb63d6d87bf6d6e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
