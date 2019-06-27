@@ -16215,6 +16215,7 @@ $wgConf->settings = [
 		'Portal' => true, // T97313
 	],
 	'+kowiki' => [
+		'포털' /* Portal */ => true, // T224813
 		'초안' /* Draft */ => true, // T92798
 	],
 	'+plwiki' => [
