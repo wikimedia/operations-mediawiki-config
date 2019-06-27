@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f74a4546_419e3d7a",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 4276,
+      "author": {
+        "id": 6729
+      },
+      "writtenOn": "2019-06-27T20:34:47Z",
+      "side": 1,
+      "message": "Is `outreachwiki` part of the `+wikipedia` group?",
+      "range": {
+        "startLine": 4273,
+        "startChar": 1,
+        "endLine": 4276,
+        "endChar": 3
+      },
+      "revId": "f80a6c2c108193bb4c4839eafa5fef5095cf9967",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
