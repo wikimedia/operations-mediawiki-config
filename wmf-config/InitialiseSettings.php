@@ -8412,6 +8412,11 @@ $wgConf->settings = [
 			'ip-all' => [ 10, 3600 ],
 			'user' => [ 4, 86400 ]
 		],
+		// T226733
+		'confirmemail' => [
+			'ip-all' => [ 10, 3600 ],
+			'user' => [ 4, 86400 ]
+		],
 		// For expanded rollback permissions...
 		'rollback' => [
 			'user' => [ 10, 60 ], // was [ 5, 60 ], -- brion 2008-05-15
