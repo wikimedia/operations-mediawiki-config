@@ -8750,7 +8750,7 @@ $wgConf->settings = [
 	'+amwikimedia' => [
 		'sysop' => [ 'translationadmin' ],
 	],
-	'arwiki' => [
+	'+arwiki' => [
 		'autoconfirmed' => [ 'patrol' => true ],
 		'editor' => [
 			'movefile' => true, // T131249
@@ -8838,7 +8838,7 @@ $wgConf->settings = [
 			'importupload' => true, // T109755
 		],
 	],
-	'bnwiki' => [
+	'+bnwiki' => [
 		'user' => [ 'patrol' => false ],
 		'autoconfirmed' => [ 'patrol' => true ],
 		'sysop' => [ 'patrol' => true ],
@@ -8848,7 +8848,7 @@ $wgConf->settings = [
 		'flood' => [ 'bot' => true ], // T30717
 		'filemover' => [ 'movefile' => true ], // T58103
 	],
-	'bnwikisource' => [
+	'+bnwikisource' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T199475
 		'flood' => [ 'bot' => true ], // T129087
 		'filemover' => [ 'movefile' => true ], // T129087
@@ -8858,10 +8858,10 @@ $wgConf->settings = [
 		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'rollback' => true, ],
 		'sysop' => [ 'autopatrol' => false, ],
 	],
-	'brwikimedia' => [ // T65345
+	'+brwikimedia' => [ // T65345
 		'autopatrolled' => [ 'autopatrol' => true, ],
 	],
-	'bswiki' => [
+	'+bswiki' => [
 		'rollbacker' => [ 'rollback' => true ],
 		'flood' => [
 			'bot' => true, // T52425
@@ -8872,7 +8872,7 @@ $wgConf->settings = [
 			'patrol' => false,
 		],
 	],
-	'cawiki' => [
+	'+cawiki' => [
 		'user' => [ 'patrol' => false ],
 		'autoconfirmed' => [ 'patrol' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ],
@@ -9000,7 +9000,7 @@ $wgConf->settings = [
 	'+cswiktionary' => [
 		'autopatrolled' => [ 'autopatrol' => true, ],
 	],
-	'commonswiki' => [
+	'+commonswiki' => [
 		'user' => [
 			'changetags' => false, // T134196
 			'move' => false, // requested by Bdka on #wikimedia-tech, 2006-05-04
@@ -9035,7 +9035,7 @@ $wgConf->settings = [
 		],
 		'translationadmin' => [ 'noratelimit' => true, ], // T155162
 	],
-	'testcommonswiki' => [
+	'+testcommonswiki' => [
 		'user' => [
 			'changetags' => false, // T134196
 			'move' => false, // requested by Bdka on #wikimedia-tech, 2006-05-04
@@ -9066,7 +9066,7 @@ $wgConf->settings = [
 		],
 		'translationadmin' => [ 'noratelimit' => true, ], // T155162
 	],
-	'dawiki' => [
+	'+dawiki' => [
 		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'rollback' => true, ],
 		'autopatrolled' => [ 'autopatrol' => true, ],
 	],
@@ -9076,7 +9076,7 @@ $wgConf->settings = [
 	'+dawikiquote' => [
 		'autopatrolled' => [ 'autopatrol' => true, ], // T88591
 	],
-	'dewiki' => [
+	'+dewiki' => [
 		'*' => [
 			'patrolmarks' => true, // T100682
 		],
@@ -9102,7 +9102,7 @@ $wgConf->settings = [
 			'editeditorprotected' => true, // T94368
 		],
 	],
-	'dewikibooks' => [
+	'+dewikibooks' => [
 		'user' => [ 'move' => false ], // Request by DaBPunkt on #wikimedia-tech, JF 2007-01-27
 	],
 	'+dewikiquote' => [
@@ -9133,7 +9133,7 @@ $wgConf->settings = [
 		'interface-editor' => [ 'editinterface' => true, 'editsitejson' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ], // T30612
 	],
-	'enwiki' => [
+	'+enwiki' => [
 		'*' => [
 			'createpage' => false, // See P2059
 			'createpagemainns' => false,
@@ -9192,18 +9192,18 @@ $wgConf->settings = [
 		'flood' => [ 'bot' => true ],
 		'uploader' => [ 'upload' => true, 'reupload' => true ],
 	],
-	'enwikinews' => [
+	'+enwikinews' => [
 		'flood' => [ 'bot' => true ],
 	],
-	'enwikiquote' => [
+	'+enwikiquote' => [
 		'user' => [ 'move' => false ], // autoconfirmed only, per request due to wow 2007-05-08
 	],
-	'enwikisource' => [
+	'+enwikisource' => [
 		'autoconfirmed' => [ 'patrol' => true ], // T14355
 		'autopatrolled' => [ 'autopatrol' => true ], // T20307
 		'flood' => [ 'bot' => true ], // T38863
 	],
-	'enwikiversity' => [
+	'+enwikiversity' => [
 		'user' => [ 'move' => false ], // autoconfirmed only
 		'sysop' => [ 'nuke' => false ], // T113109
 		'bureaucrat' => [ 'nuke' => true ], // T113109
@@ -9224,7 +9224,7 @@ $wgConf->settings = [
 			'upload' => true,
 		],
 	],
-	'enwikivoyage' => [
+	'+enwikivoyage' => [
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'patroller' => [ 'patrol' => true, 'rollback' => true ],
 		'templateeditor' => [ 'templateeditor' => true, ], // T198056
@@ -9256,7 +9256,7 @@ $wgConf->settings = [
 		],
 		'flood' => [ 'bot' => true ], // T50682
 	],
-	'eswikibooks' => [
+	'+eswikibooks' => [
 		'*' => [ 'createpage' => false, 'createtalk' => false, ],
 		'flood' => [ 'bot' => true ],
 		'rollbacker' => [ 'rollback' => true ],
@@ -9266,12 +9266,12 @@ $wgConf->settings = [
 			'autopatrol' => true,
 		], // T93371
 	],
-	'eswikinews' => [
+	'+eswikinews' => [
 		'bot' => [ 'editprotected' => true ],
 		'editprotected' => [ 'editprotected' => true, 'editsemiprotected' => true ],
 		'flood' => [ 'bot' => true ],
 	],
-	'eswikiquote' => [ // T64911
+	'+eswikiquote' => [ // T64911
 		'rollbacker' => [
 			'rollback' => true,
 		],
@@ -9286,7 +9286,7 @@ $wgConf->settings = [
 	'+eswikisource' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T69557
 	],
-	'eswikivoyage' => [
+	'+eswikivoyage' => [
 		'rollbacker' => [
 			'rollback' => true, // T46285
 			'autopatrol' => true, // T49325
@@ -9388,7 +9388,7 @@ $wgConf->settings = [
 		'patroller' => [ 'patrol' => true, 'move-categorypages' => true ], // T187662
 		'rollbacker' => [ 'rollback' => true ], // T161946
 	],
-	'fiwiki' => [
+	'+fiwiki' => [
 		'patroller' => [ 'patrol' => true ],
 		'rollbacker' => [ 'rollback' => true ],
 		// T21561:
@@ -9401,7 +9401,7 @@ $wgConf->settings = [
 		'user' => [ 'editinterface' => true, 'editsitejson' => true ],
 		'flood' => [ 'bot' => true ],
 	],
-	'frwiki' => [
+	'+frwiki' => [
 		'user' => [ 'move' => false, 'changetags' => false ], // requested by hashar, T98629
 		'bot' => [ 'changetags' => true, 'editextendedsemiprotected' => true ], // T98629, T131109
 		'autopatrolled' => [
@@ -9418,7 +9418,7 @@ $wgConf->settings = [
 	'+frwikibooks' => [
 		'patroller' => [ 'patrol' => true, 'autopatrol' => true ],
 	],
-	'frwikinews' => [
+	'+frwikinews' => [
 		'flood' => [ 'bot' => true ],
 		'trusteduser' => [ // T90979
 			'autoreview' => true,
@@ -9477,11 +9477,11 @@ $wgConf->settings = [
 	'+gawiki' => [
 		'rollbacker' => [ 'rollback' => true ],
 	],
-	'guwiki' => [ // T119787
+	'+guwiki' => [ // T119787
 		'rollbacker' => [ 'rollback' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ],
 	],
-	'hewiki' => [
+	'+hewiki' => [
 		'user' => [
 			'move' => false,
 			'upload' => true,
@@ -9521,7 +9521,7 @@ $wgConf->settings = [
 			'abusefilter-log-detail' => true,
 		],
 	],
-	'hewikibooks' => [
+	'+hewikibooks' => [
 		'patroller' => [
 			'patrol' => true, // T29918
 			'patrolmarks' => true, // T29918
@@ -9531,14 +9531,14 @@ $wgConf->settings = [
 			],
 		'autopatrolled' => [ 'autopatrol' => true ], // T29918
 	],
-	'hewikiquote' => [
+	'+hewikiquote' => [
 		'autopatrolled' => [ 'autopatrol' => true ],
 	],
-	'hewikivoyage' => [
+	'+hewikivoyage' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T52377
 		'sysop' => [ 'importupload' => true ], // T61601
 	],
-	'hewiktionary' => [
+	'+hewiktionary' => [
 		'patroller'     => [ 'patrol' => true, 'autopatrol' => true, 'unwatchedpages' => true, 'rollback' => true, ], // T75197
 		'autopatrolled' => [ 'autopatrol' => true, 'unwatchedpages' => true, ], // T75197
 	],
@@ -9552,7 +9552,7 @@ $wgConf->settings = [
 			'unwatchedpages' => true,
 		],
 	],
-	'hiwiki' => [
+	'+hiwiki' => [
 		'rollbacker' => [ 'rollback' => true ], // T56589
 		'filemover' => [ 'movefile' => true ], // T56589
 		'reviewer' => [ 'patrol' => true, 'autopatrol' => true ],
@@ -9564,11 +9564,11 @@ $wgConf->settings = [
 	'+hiwikiversity' => [
 		'autopatrolled' => [ 'autopatrol' => true, 'patrolmarks' => true ], // T179251, T192427
 	],
-	'hrwiki' => [
+	'+hrwiki' => [
 		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'rollback' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ],
 	],
-	'huwiki' => [
+	'+huwiki' => [
 		'bot' => [ 'edittrustedprotected' => true ], // T194568
 		'trusted' => [ 'edittrustedprotected' => true ], // T194568
 		'editor' => [ 'noratelimit' => true, 'edittrustedprotected' => true ], // T194568
@@ -9595,7 +9595,7 @@ $wgConf->settings = [
 	],
 	// T7836
 	// T13326
-	'itwiki' => [
+	'+itwiki' => [
 		'user' => [ 'upload' => false, 'move' => false ],
 		'autoconfirmed' => [ 'patrol' => true, 'upload' => true ],
 		'flood' => [ 'bot' => true, ],
@@ -9669,7 +9669,7 @@ $wgConf->settings = [
 		'transwiki' => [ 'suppressredirect' => true, 'mergehistory' => true, ],
 		'flood' => [ 'bot' => true, ], // T41306
 	],
-	'jawiki' => [
+	'+jawiki' => [
 		'autoconfirmed' => [ 'patrol' => true ], // T15055
 		'rollbacker' => [
 			'autopatrol' => true,
@@ -9703,23 +9703,19 @@ $wgConf->settings = [
 			'suppressredirect' => true,
 		],
 	],
-	'jawikinews' => [
+	'+jawikinews' => [
 		'user' => [ 'move' => false ], // autoconfirmed only, per request by britty 2007-05-16
 	],
-	'jawiktionary' => [
+	'+jawiktionary' => [
 		'autopatrolled' => [ 'autopatrol' => true, 'patrol' => true ], // T63366
 	],
-	'kawiki' => [
+	'+kawiki' => [
 		'editor' => [ 'rollback' => true ],
 	],
-	'kkwiki' => [
+	'+kkwiki' => [
 		'rollbacker' => [ 'rollback' => true ], // T130215
 	],
-	'kowiki' => [
-		'autoconfirmed' => [ // T85621
-			'upload' => false,
-			'reupload' => false,
-		],
+	'+kowiki' => [
 		'rollbacker' => [ 'rollback' => true ],
 		'uploader' => [ // T85621
 			'upload' => true,
