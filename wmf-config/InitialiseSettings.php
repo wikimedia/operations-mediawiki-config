@@ -3292,7 +3292,6 @@ $wgConf->settings = [
 		'Wikipedia' => NS_PROJECT,
 	],
 	'+angwiki' => [ // T58634, T60711
-		'Wikipedia_talk' => NS_PROJECT_TALK,
 		'Wikipaedia' => NS_PROJECT,
 		'Wikipædiamotung' => NS_PROJECT_TALK,
 		'Wikipaediamotung' => NS_PROJECT_TALK,
@@ -3317,7 +3316,6 @@ $wgConf->settings = [
 		'Ƿicipaediamotung' => NS_PROJECT_TALK,
 	],
 	'+angwiktionary' => [ // T58634, T60711
-		'Wiktionary_talk' => NS_PROJECT_TALK,
 		'Wikiwordboc' => NS_PROJECT,
 		'Wikiwordbocmotung' => NS_PROJECT_TALK,
 		'Wiciwordbōc' => NS_PROJECT,
@@ -3361,7 +3359,6 @@ $wgConf->settings = [
 		'Portal_talk' => 101,
 	],
 	'+aswiki' => [
-		'Wikipedia_talk' => NS_PROJECT_TALK,
 		'প্ৰকল্প' => NS_PROJECT,
 		'প্ৰকল্প_আলোচনা' => NS_PROJECT_TALK,
 		'Wikipedia_বার্তা' => NS_PROJECT_TALK,
@@ -3386,7 +3383,6 @@ $wgConf->settings = [
 	],
 	'+azwikibooks' => [
 		'Wikibooks_müzakirəsi' => NS_PROJECT_TALK, // T33068
-		'Wikibooks_talk' => NS_PROJECT_TALK, // T33068
 	],
 	'+azwikiquote' => [
 		'Wikiquote_talk' => NS_PROJECT_TALK,
@@ -3553,7 +3549,6 @@ $wgConf->settings = [
 		'WB' => NS_PROJECT,
 		'WK' => NS_PROJECT,
 		'Wikibooks_diskuse' => NS_PROJECT_TALK,
-		'Wikibooks_talk' => NS_PROJECT_TALK,
 	],
 	'+cswikinews' => [
 		'Redaktorka' => NS_USER,
@@ -3565,20 +3560,17 @@ $wgConf->settings = [
 		'WN' => NS_PROJECT,
 		'WZ' => NS_PROJECT,
 		'Wikinews_diskuse' => NS_PROJECT_TALK,
-		'Wikinews_talk' => NS_PROJECT_TALK,
 	],
 	'+cswikiquote' => [
 		'WC' => NS_PROJECT,
 		'WQ' => NS_PROJECT,
 		'Wikiquote_diskuse' => NS_PROJECT_TALK,
-		'Wikiquote_talk' => NS_PROJECT_TALK,
 		'Dílo_diskuse' => 101,
 	],
 	'+cswikisource' => [
 		'WS' => NS_PROJECT,
 		'WZ' => NS_PROJECT,
 		'Wikisource_diskuse' => NS_PROJECT_TALK,
-		'Wikisource_talk' => NS_PROJECT_TALK,
 		'Author' => 100,
 		'Author_talk' => 101,
 		'Autor_diskuse' => 101,
@@ -3587,7 +3579,6 @@ $wgConf->settings = [
 	'+cswikiversity' => [
 		'WV' => NS_PROJECT,
 		'Wikiversity_diskuse' => NS_PROJECT_TALK,
-		'Wikiversity_talk' => NS_PROJECT_TALK,
 		'Forum' => 100,
 		'Forum_talk' => 101,
 		'Fórum_diskuse' => 101,
@@ -3596,7 +3587,6 @@ $wgConf->settings = [
 		'WS' => NS_PROJECT,
 		'WT' => NS_PROJECT,
 		'Wiktionary_diskuse' => NS_PROJECT_TALK,
-		'Wiktionary_talk' => NS_PROJECT_TALK,
 		'Příloha_diskuse' => 101,
 	],
 	'+chapcomwiki' => [
@@ -3663,7 +3653,6 @@ $wgConf->settings = [
 		'BD' => NS_USER_TALK,
 	],
 	'+dvwiki' => [
-		'Wikipedia_talk' => NS_PROJECT_TALK, // T50075
 		'Portal' => 100,
 		'Portal_talk' => 101,
 	],
@@ -4086,7 +4075,6 @@ $wgConf->settings = [
 	'+kowikisource' => [
 		'문' => NS_PROJECT, // T182487
 		'문토' => NS_PROJECT_TALK, // T182487
-		'Wikisource_talk' => NS_PROJECT_TALK,
 		'글쓴이' => 100,
 		'글쓴이토론' => 101,
 		'Author' => 100,
@@ -4361,7 +4349,6 @@ $wgConf->settings = [
 		'Wikipedia_Discussão' => NS_PROJECT_TALK,
 	],
 	'+ptwikibooks' => [
-		'Wikibooks_Talk' => NS_PROJECT_TALK,
 		'Wikibooks_Discussão' => NS_PROJECT_TALK,
 	],
 	'+ptwikisource' => [
@@ -4474,7 +4461,6 @@ $wgConf->settings = [
 	'+sawiki' => [
 		'WP' => NS_PROJECT,
 		'WT' => NS_PROJECT_TALK,
-		'Wikipedia_talk' => NS_PROJECT_TALK,
 		'सहाय्यस्य_प्रवेशद्वारम्' => 101, // T101634 - Portal talk
 	],
 	'+sawikiquote' => [
@@ -4512,7 +4498,6 @@ $wgConf->settings = [
 		'WT' => NS_PROJECT,
 	],
 	'+siwiki' => [
-		'Wikipedia_talk' => NS_PROJECT_TALK,
 		'Portal' => 100,
 		'Portal_talk' => 101,
 	],
@@ -4559,7 +4544,6 @@ $wgConf->settings = [
 	],
 	'+tawiki' => [
 		'WP' => NS_PROJECT, // T126604
-		'Wikipedia_talk' => NS_PROJECT_TALK,
 		'WT' => NS_PROJECT_TALK, // T126604
 	],
 	'+testwiki' => [
@@ -4608,7 +4592,6 @@ $wgConf->settings = [
 	'+ttwiki' => [
 		'WP' => NS_PROJECT,
 		'ВП' => NS_PROJECT,
-		'Wikipedia_talk' => NS_PROJECT_TALK,
 	],
 	'+ukwiki' => [
 		'ВП' => NS_PROJECT,
@@ -4776,7 +4759,6 @@ $wgConf->settings = [
 		'P' => 100, // T162547
 		'Portal' => 100, // T162547
 		'Portal_talk' => 101, // T162547
-		'Wikipedia_talk' => NS_PROJECT_TALK, // T162547
 	],
 	'+zhwiki' => [
 		'维基百科' => NS_PROJECT,
@@ -4899,7 +4881,6 @@ $wgConf->settings = [
 		'H' => NS_HELP,
 		'P' => 100,
 		# 'PT' => 101,
-		'Wikipedia_talk' => NS_PROJECT_TALK,
 		'MediaWiki_talk' => NS_MEDIAWIKI_TALK,
 		# Aliases for MediaWiki core "yue" namespace names.
 		'媒體' => NS_MEDIA,
