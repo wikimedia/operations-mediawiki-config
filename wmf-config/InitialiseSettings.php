@@ -16865,6 +16865,31 @@ $wgConf->settings = [
 'wgMFNoindexPages' => [
 	'default' => false
 ],
+// Which editor to use as the default on MobileFrontend
+// 'source', 'visual', 'preference' (to use the desktop editor preference), or 'abtest'
+'wmgMFDefaultEditor' => [
+	'default' => false,
+	'azwiki' => 'abtest', // Azerbaijani
+	'bgwiki' => 'abtest', // Bulgarian
+	'zh_yuewiki' => 'abtest', // Cantonese
+	'cawiki' => 'abtest', // Catalan
+	'hrwiki' => 'abtest', // Croatian
+	'dawiki' => 'abtest', // Danish
+	'etwiki' => 'abtest', // Estonian
+	'fiwiki' => 'abtest', // Finnish
+	'elwiki' => 'abtest', // Greek
+	'huwiki' => 'abtest', // Hungarian
+	'mswiki' => 'abtest', // Malay
+	'mlwiki' => 'abtest', // Malayalam
+	'nowiki' => 'abtest', // Norwegian (Bokmål)
+	'ptwiki' => 'abtest', // Portugese
+	'rowiki' => 'abtest', // Romanian
+	'srwiki' => 'abtest', // Serbian
+	'svwiki' => 'abtest', // Swedish
+	'tawiki' => 'abtest', // Tamil
+	'thwiki' => 'abtest', // Thai
+	'urwiki' => 'abtest' // Urdu
+],
 
 'wmgEnableTextExtracts' => [
 	'default' => true,

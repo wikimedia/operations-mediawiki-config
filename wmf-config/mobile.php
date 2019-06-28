@@ -73,6 +73,10 @@ if ( $wmgMobileFrontend ) {
 
 	// Oversample logging for visualeditor
 	$wgMFSchemaEditAttemptStepOversample = 'visualeditor';
+
+	if ( $wmgMFDefaultEditor ) {
+		$wgMFDefaultEditor = $wmgMFDefaultEditor;
+	}
 }
 
 if ( $wmfRealm === 'labs' ) {
