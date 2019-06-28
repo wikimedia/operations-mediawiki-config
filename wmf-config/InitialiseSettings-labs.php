@@ -1240,6 +1240,19 @@ function wmfLabsSettings() {
 				],
 			],
 		],
+		'wmgWikibaseEntityDataFormats' => [
+			'default' => [
+				'json',
+				'php',
+				'rdfxml',
+				'n3',
+				'turtle',
+				'ntriples',
+				'html',
+				'jsonld',
+			],
+		],
+
 		// If set to "false": No alternate links will be added to desktop pages,
 		// and MobileFrontend won't add a canonical tag
 		// If set to "true": Alternate link will be added, MF will add a canonical tag
