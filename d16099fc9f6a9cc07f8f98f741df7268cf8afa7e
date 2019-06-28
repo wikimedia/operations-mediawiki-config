@@ -34,6 +34,24 @@
       "revId": "d16099fc9f6a9cc07f8f98f741df7268cf8afa7e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a4efc693_3af362f7",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 8417,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2019-06-28T20:27:20Z",
+      "side": 1,
+      "message": "ip-all means a per-IP limit for all users; ip means a per-IP limit for anonymous or new users. Both are problems for an editathon or such, where a large number of new people register and start editing on the same network. The limit could simply be removed but for some reason throttle-analyze.php just changes the other limits to some very high value so it\u0027s probably more consistent to follow that.",
+      "parentUuid": "8dc04388_f7d14248",
+      "revId": "d16099fc9f6a9cc07f8f98f741df7268cf8afa7e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
