@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e8962c1_7dcefd83",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 8417,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2019-06-28T07:35:46Z",
+      "side": 1,
+      "message": "Should probably be lifted in throttle-analyze.php for whitelisted addresses.",
+      "revId": "d16099fc9f6a9cc07f8f98f741df7268cf8afa7e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
