@@ -16,6 +16,24 @@
       "revId": "d16099fc9f6a9cc07f8f98f741df7268cf8afa7e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8dc04388_f7d14248",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 8417,
+      "author": {
+        "id": 6368
+      },
+      "writtenOn": "2019-06-28T17:05:43Z",
+      "side": 1,
+      "message": "Not super-familiar with this code - are we talking about just changing the ip-all key to ip?  Couldn\u0027t find anything in the doc and it\u0027s not immediately clear to me in User::pingLimiter().",
+      "parentUuid": "8e8962c1_7dcefd83",
+      "revId": "d16099fc9f6a9cc07f8f98f741df7268cf8afa7e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
