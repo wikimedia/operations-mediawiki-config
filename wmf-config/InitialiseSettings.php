@@ -8791,6 +8791,9 @@ $wgConf->settings = [
 		'autoreview' => [
 			'autopatrol' => true, // T167071
 		],
+		'checkuser' => [
+			'abusefilter-view-private' => true, // T226899
+		]
 	],
 	'+arwikibooks' => [
 		'rollbacker' => [ 'rollback' => true ], // T185720
