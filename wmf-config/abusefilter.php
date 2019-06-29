@@ -48,6 +48,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
+		$wgGroupPermissions['checkuser']['abusefilter-view-private'] = true;
 		break;
 	case 'azbwiki': // T109755
 		$wgGroupPermissions['abusefilter']['abusefilter-log'] = true;
