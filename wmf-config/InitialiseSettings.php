@@ -8790,7 +8790,7 @@ $wgConf->settings = [
 		],
 		'autoreview' => [
 			'autopatrol' => true, // T167071
-		],
+		]
 	],
 	'+arwikibooks' => [
 		'rollbacker' => [ 'rollback' => true ], // T185720
