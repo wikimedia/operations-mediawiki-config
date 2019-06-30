@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "30645298_88b643ee",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2019-06-30T09:18:59Z",
+      "side": 1,
+      "message": "Depends-On: I6d0215082fe902cd7f2f0569f0b549f5af8e7310",
+      "revId": "215199816e0865628985124028deb82cbb1b11eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
