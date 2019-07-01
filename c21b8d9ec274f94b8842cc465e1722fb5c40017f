@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eafa99d5_b196ae68",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-07-01T16:34:10Z",
+      "side": 1,
+      "message": "I’m not sure if this will do the right thing in production, where these variables are never defined in InitialiseSettings.php… that should definitely be tested during deployment.",
+      "revId": "c21b8d9ec274f94b8842cc465e1722fb5c40017f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
