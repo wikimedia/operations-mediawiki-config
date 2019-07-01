@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "6a48eda9_b4a600fc",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1231,
+      "author": {
+        "id": 5897
+      },
+      "writtenOn": "2019-07-01T11:38:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5c54df85_18ed3a9b",
+      "range": {
+        "startLine": 1228,
+        "startChar": 0,
+        "endLine": 1231,
+        "endChar": 4
+      },
+      "revId": "b879845393179661d43dfdf69d283e91db92922f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c146e1b2_b3d8441b",
         "filename": "wmf-config/InitialiseSettings-labs.php",
         "patchSetId": 3
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "ceb5c742_9ed5f577",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1235,
+      "author": {
+        "id": 5897
+      },
+      "writtenOn": "2019-07-01T11:38:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c146e1b2_b3d8441b",
+      "range": {
+        "startLine": 1235,
+        "startChar": 30,
+        "endLine": 1235,
+        "endChar": 55
+      },
+      "revId": "b879845393179661d43dfdf69d283e91db92922f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "8bc27572_4431cdbf",
         "filename": "wmf-config/Wikibase.php",
         "patchSetId": 3
@@ -59,6 +107,30 @@
       "writtenOn": "2019-07-01T11:18:41Z",
       "side": 1,
       "message": "no spaces here (same thing for the next line)",
+      "range": {
+        "startLine": 331,
+        "startChar": 21,
+        "endLine": 331,
+        "endChar": 44
+      },
+      "revId": "b879845393179661d43dfdf69d283e91db92922f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4e851b59_e63c1517",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 331,
+      "author": {
+        "id": 5897
+      },
+      "writtenOn": "2019-07-01T11:38:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8bc27572_4431cdbf",
       "range": {
         "startLine": 331,
         "startChar": 21,
