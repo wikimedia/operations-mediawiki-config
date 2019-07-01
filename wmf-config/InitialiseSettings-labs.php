@@ -1228,6 +1228,15 @@ function wmfLabsSettings() {
 			'default' => MIGRATION_WRITE_NEW,
 			'commonswiki' => MIGRATION_WRITE_BOTH, // T225053#5301287
 		],
+			
+		// T226816
+		'wmgWikibaseUseDataBridge' => [
+			'default' => true,
+		],
+
+		'wmgWikibaseDataBridgeHrefRegExp' => [
+			'default' => 'https://wikidata\.beta\.wmflabs\.org/wiki/(Q[1-9][0-9]*).*#(P[1-9][0-9]*)',
+		],
 
 		'wmgWikibaseRepoForeignRepositories' => [
 			'default' => [],
