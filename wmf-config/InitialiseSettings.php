@@ -20614,7 +20614,7 @@ $wgConf->settings = [
 ],
 
 'wmgWikibaseEntityTypesWithoutRdfOutput' => [
-	'default' => [ 'mediainfo' ],
+	'default' => [],
 ],
 
 'wmgWikibaseDisabledAccessEntityTypes' => [
