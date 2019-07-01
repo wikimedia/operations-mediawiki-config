@@ -193,6 +193,11 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['ssrServerUrl'] = $wmgWikibaseSSRTermboxServerUrl;
 	}
 
+	if ( isset( $wmgWikibaseUseDataBridge ) && isset( $wmgWikibaseDataBridgeHefRegExp ) ) {
+		$wgWBClientSettings[ 'dataBridgeEnabled' ] = $wmgWikibaseUseDataBridge;
+		$wgWBClientSettings[ 'dataBridgeHrefRegExp' ] = $wmgWikibaseDataBridgeHefRegExp;
+	}
+
 	if ( isset( $wmgWikibaseStringLimits ) ) {
 		$wgWBRepoSettings['string-limits'] = $wmgWikibaseStringLimits;
 	}
