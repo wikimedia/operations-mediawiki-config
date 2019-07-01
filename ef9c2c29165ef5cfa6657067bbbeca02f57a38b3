@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "93a61bcb_1e0869a1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-07-01T11:18:41Z",
+      "side": 1,
+      "message": "I think it should be in the subject, not only in the body.",
+      "parentUuid": "3b8323bc_7e84d9df",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 17
+      },
+      "revId": "ef9c2c29165ef5cfa6657067bbbeca02f57a38b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "0abb1f42_7c4281b5",
         "filename": "wmf-config/InitialiseSettings-labs.php",
         "patchSetId": 1
