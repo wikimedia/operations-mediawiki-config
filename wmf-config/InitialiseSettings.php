@@ -22439,6 +22439,15 @@ $wgConf->settings = [
 
 'wgEventServiceStreamConfig' => [
 	'default' => [
+		'mediawiki.centralnotice.campaign-create' => [
+			'EventServiceName' => 'eventgate-main',
+		],
+		'mediawiki.centralnotice.campaign-change' => [
+			'EventServiceName' => 'eventgate-main',
+		],
+		'mediawiki.centralnotice.campaign-delete' => [
+			'EventServiceName' => 'eventgate-main',
+		],
 		'mediawiki.page-links-change' => [
 			'EventServiceName' => 'eventgate-main',
 		],
