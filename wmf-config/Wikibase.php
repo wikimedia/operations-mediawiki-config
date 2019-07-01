@@ -325,6 +325,12 @@ if ( $wmgUseWikibaseClient ) {
 	// Migration, T226086
 	$wgWBClientSettings['tmpPropertyTermsMigrationStage'] = $wmgWikibaseTmpPropertyTermsMigrationStage;
 	$wgWBClientSettings['tmpItemTermsMigrationStage'] = $wmgWikibaseTmpItemTermsMigrationStage;
+
+	// T226816
+	if ( isset( $wmgWikibaseUseDataBridge ) && isset( $wmgWikibaseDataBridgeHrefRegExp ) ) {
+		$wgWBClientSettings[ 'dataBridgeEnabled' ] = $wmgWikibaseUseDataBridge;
+		$wgWBClientSettings[ 'dataBridgeHrefRegExp' ] = $wmgWikibaseDataBridgeHrefRegExp;
+	}
 }
 
 unset( $wmgWBSharedCacheKey );

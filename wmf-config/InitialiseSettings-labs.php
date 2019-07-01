@@ -1224,6 +1224,17 @@ function wmfLabsSettings() {
 			'wikidatawiki' => 'https://ssr-termbox.wmflabs.org/termbox',
 		],
 
+		// T226816
+		'wmgWikibaseUseDataBridge' => [
+			'default' => false,
+			'wikidatawiki' => true,
+		],
+
+		'wmgWikibaseDataBridgeHrefRegExp' => [
+			'default' => '',
+			'wikidatawiki' => 'https://wikidata.beta.wmflabs.org/wiki/(Q[1-9][0-9]*).*#(P[1-9][0-9]*)',
+		],
+
 		'wmgWikibaseRepoForeignRepositories' => [
 			'default' => [],
 			'commonswiki' => [
