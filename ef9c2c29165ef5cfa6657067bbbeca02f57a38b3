@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2d93c121_65168626",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-07-01T11:10:02Z",
+      "side": 1,
+      "message": "… on Beta :)",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 17
+      },
+      "revId": "ef9c2c29165ef5cfa6657067bbbeca02f57a38b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0abb1f42_7c4281b5",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1233,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-07-01T11:10:02Z",
+      "side": 1,
+      "message": "Href",
+      "range": {
+        "startLine": 1233,
+        "startChar": 24,
+        "endLine": 1233,
+        "endChar": 27
+      },
+      "revId": "ef9c2c29165ef5cfa6657067bbbeca02f57a38b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d37a6a97_ba6ed975",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1235,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-07-01T11:10:02Z",
+      "side": 1,
+      "message": "No domain part?",
+      "range": {
+        "startLine": 1235,
+        "startChar": 22,
+        "endLine": 1235,
+        "endChar": 53
+      },
+      "revId": "ef9c2c29165ef5cfa6657067bbbeca02f57a38b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d8ed1ce9_8a908e2a",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-07-01T11:10:02Z",
+      "side": 1,
+      "message": "This should be in the $wmgUseWikibaseClient block, since it’s modifying client settings, not repo settings.",
+      "revId": "ef9c2c29165ef5cfa6657067bbbeca02f57a38b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
