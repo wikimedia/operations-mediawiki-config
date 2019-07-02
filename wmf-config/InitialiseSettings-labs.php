@@ -236,7 +236,7 @@ function wmfLabsSettings() {
 		],
 
 		'wgEchoPollForUpdates' => [
-			'cawiki' => true,
+			'cawiki' => 60,
 		],
 
 		# FIXME: make that settings to be applied
