@@ -1226,6 +1226,7 @@ function wmfLabsSettings() {
 
 		'wmgWikibaseTmpPropertyTermsMigrationStage' => [
 			'default' => MIGRATION_WRITE_NEW,
+			'commonswiki' => MIGRATION_WRITE_BOTH, // T225053#5301287
 		],
 
 		'wmgWikibaseRepoForeignRepositories' => [
