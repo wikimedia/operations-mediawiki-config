@@ -6734,6 +6734,14 @@ $wgConf->settings = [
 	'pawikisource' => [
 		114 => 'ਅਨੁਵਾਦ', // T179807 - Translation
 		115 => 'ਅਨੁਵਾਦ_ਗੱਲ-ਬਾਤ', // T179807
+		100 => 'ਲੇਖਕ', // T226959 - Author
+		101 => 'ਲੇਖਕ_ਗੱਲ-ਬਾਤ', // T226959 - Author talk
+		106 => 'ਪੋਰਟਲ', // T226959 - Portal
+		107 => 'ਪੋਰਟਲ_ਗੱਲ-ਬਾਤ', // T226959 - Portal talk
+		108 => 'ਪ੍ਰਕਾਸ਼ਕ', // T226959 - Publisher
+		109 => 'ਪ੍ਰਕਾਸ਼ਕ_ਗੱਲ-ਬਾਤ', // T226959 - Publisher talk
+		110 => 'ਲਿਖਤ', // T226959 - Work
+		111 => 'ਲਿਖਤ_ਗੱਲ-ਬਾਤ', // T226959 - Work talk
 	],
 	'plwikisource' => [
 		NS_USER => 'Wikiskryba',
