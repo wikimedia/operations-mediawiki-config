@@ -1511,11 +1511,6 @@ foreach ( $groupOverrides as $group => $permissions ) {
 	$wgGroupPermissions[$group] = $permissions + $wgGroupPermissions[$group];
 }
 
-# Temporary for T216406
-if ( $wgDBname === 'commonswiki' ) {
-	$wgGroupPermissions['image-reviewer'] = $wgGroupPermissions['Image-reviewer'];
-}
-
 if ( $wgDBname === 'loginwiki' ) {
 	$wgGroupPermissions['*'] = [
 		'read' => true,
