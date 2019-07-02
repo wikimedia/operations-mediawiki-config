@@ -8381,7 +8381,7 @@ $wgConf->settings = [
 			'newbie' => [ 8 * 15, 60 * 15 ], // T225148
 			'user' => [ 900, 60 * 3 ], // T194864
 			// Higher rate limit for trusted users
-			'Image-reviewer' => [ 10500, 60 * 3 ],
+			'image-reviewer' => [ 10500, 60 * 3 ],
 			'patroller' => [ 10500, 60 * 3 ],
 			'autopatrolled' => [ 10500, 60 * 3 ],
 		],
@@ -8389,7 +8389,7 @@ $wgConf->settings = [
 			// 380 uploads per 72 minutes
 			'user' => [ 380, 4320 ],
 			// Effectively no upload rate limit for members of these groups
-			'Image-reviewer' => [ 999, 1 ],
+			'image-reviewer' => [ 999, 1 ],
 			'patroller' => [ 999, 1 ],
 			'autopatrolled' => [ 999, 1 ],
 		],
@@ -8946,7 +8946,7 @@ $wgConf->settings = [
 			'mass-upload' => true, // T226217
 		],
 		'filemover' => [ 'movefile' => true ],
-		'Image-reviewer' => [
+		'image-reviewer' => [
 			'autopatrol' => true,
 			'upload_by_url' => true,
 			'patrol' => true, // T183835
@@ -8976,7 +8976,7 @@ $wgConf->settings = [
 		],
 		'autopatrolled' => [ 'autopatrol' => true, 'upload_by_url' => true ], // T214003
 		'filemover' => [ 'movefile' => true ],
-		'Image-reviewer' => [
+		'image-reviewer' => [
 			'autopatrol' => true,
 			'upload_by_url' => true,
 			'patrol' => true, // T183835
@@ -10923,10 +10923,10 @@ $wgConf->settings = [
 			'patroller',
 			'autopatrolled',
 			'filemover',
-			'Image-reviewer',
+			'image-reviewer',
 			'upwizcampeditors'
 		],
-		'Image-reviewer' => [ 'Image-reviewer' ],
+		'image-reviewer' => [ 'image-reviewer' ],
 	],
 	'+dawiki' => [
 		'sysop' => [ 'patroller', 'autopatrolled' ],
@@ -11693,7 +11693,7 @@ $wgConf->settings = [
 			'patroller',
 			'autopatrolled',
 			'filemover',
-			'Image-reviewer',
+			'image-reviewer',
 			'upwizcampeditors'
 		],
 	],
