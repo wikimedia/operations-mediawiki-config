@@ -46,6 +46,30 @@
       "revId": "eef1ec2a1f6cb3c32e523faa0952fc5c0de241ce",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9b5a32a8_b1634ebc",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 6742,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2019-07-02T07:08:19Z",
+      "side": 1,
+      "message": "Author/Author talk can stay (not part of ProofreadPage).",
+      "parentUuid": "98104514_9a93ebac",
+      "range": {
+        "startLine": 6737,
+        "startChar": 0,
+        "endLine": 6742,
+        "endChar": 50
+      },
+      "revId": "eef1ec2a1f6cb3c32e523faa0952fc5c0de241ce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
