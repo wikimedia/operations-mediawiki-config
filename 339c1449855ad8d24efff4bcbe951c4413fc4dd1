@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d331ed26_88484d91",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2019-07-02T09:38:24Z",
+      "side": 1,
+      "message": "I think an isset check here could save us a lot of trouble later (only set the repo setting when the wmg global is set and not null).",
+      "revId": "339c1449855ad8d24efff4bcbe951c4413fc4dd1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
