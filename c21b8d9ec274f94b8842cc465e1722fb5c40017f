@@ -16,6 +16,24 @@
       "revId": "c21b8d9ec274f94b8842cc465e1722fb5c40017f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e43a7761_68da1e46",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 5897
+      },
+      "writtenOn": "2019-07-02T10:10:37Z",
+      "side": 1,
+      "message": "It was once suggest by Adam during a similar thing in termbox...bundle both together just makes sure that nothing will explode, while somebody remove one of the vars by accident.",
+      "parentUuid": "eafa99d5_b196ae68",
+      "revId": "c21b8d9ec274f94b8842cc465e1722fb5c40017f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
