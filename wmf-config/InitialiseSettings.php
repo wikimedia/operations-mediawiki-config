@@ -21528,7 +21528,8 @@ $wgConf->settings = [
 // removal)
 'wgCirrusSearchNamespaceResolutionMethod' => [
 	'default' => 'elastic',
-	'group0' => 'utr30'
+	'group0' => 'utr30',
+	'group1' => 'utr30'
 ],
 
 // List of languages detected by the short-text
