@@ -16,6 +16,24 @@
       "revId": "339c1449855ad8d24efff4bcbe951c4413fc4dd1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e320cce6_7c8f003a",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-07-02T15:31:13Z",
+      "side": 1,
+      "message": "It might also mean that we don’t notice cases where the wmg global becomes unset/null by accident – but in this case I guess that’s acceptable, since the default value is also okay, we only set it to avoid a debug warning.\n\nWould adding an isset() check here also remove the need to sync IS.php first? If Wikibase.php is synced first, it just sees that the variable isn’t set yet and does nothing special, I’d assume.",
+      "parentUuid": "d331ed26_88484d91",
+      "revId": "339c1449855ad8d24efff4bcbe951c4413fc4dd1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
