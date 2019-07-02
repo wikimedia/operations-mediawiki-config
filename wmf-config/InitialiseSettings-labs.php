@@ -1224,6 +1224,10 @@ function wmfLabsSettings() {
 			'wikidatawiki' => 'https://ssr-termbox.wmflabs.org/termbox',
 		],
 
+		'wmgWikibaseTmpPropertyTermsMigrationStage' => [
+			'default' => MIGRATION_WRITE_NEW,
+		],
+
 		'wmgWikibaseRepoForeignRepositories' => [
 			'default' => [],
 			'commonswiki' => [
