@@ -34,6 +34,24 @@
       "revId": "c21b8d9ec274f94b8842cc465e1722fb5c40017f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5a0f4da8_6d5a6c1c",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2019-07-02T14:17:49Z",
+      "side": 1,
+      "message": "My question wasn’t about using both variables at once, it was about using variables here that are never declared in IS.php. (Though I’m not sure I agree with that logic either – is it really better to quietly break the feature than to loudly break the site? If the site explodes, one would hope that’s noticed on a test system first.)",
+      "parentUuid": "e43a7761_68da1e46",
+      "revId": "c21b8d9ec274f94b8842cc465e1722fb5c40017f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
