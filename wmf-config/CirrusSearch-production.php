@@ -15,9 +15,8 @@
 #
 
 // Our cluster often has issues completing master actions
-// within the default 30s timeout. Upgrade that to 2m to
-// help things along.
-$wgCirrusSearchMasterTimeout = '30s';
+// within the default 30s timeout.
+$wgCirrusSearchMasterTimeout = '5m';
 
 $cirrusConfigUseHhvmPool = function ( $hosts, $pool ) {
 	if ( !defined( 'HHVM_VERSION' ) ) {
