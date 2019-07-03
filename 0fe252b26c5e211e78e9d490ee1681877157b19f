@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "571e6071_5e1fb949",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 26
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 5450
+      },
+      "writtenOn": "2019-07-03T07:53:10Z",
+      "side": 1,
+      "message": "Right, thanks, I bunch-updated these yesterday without looking at the diff and realizing that I had already removed line 74.",
+      "parentUuid": "ea25fa2d_8e73753e",
+      "range": {
+        "startLine": 77,
+        "startChar": 2,
+        "endLine": 77,
+        "endChar": 67
+      },
+      "revId": "0fe252b26c5e211e78e9d490ee1681877157b19f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ad3180db_4d1c39a2",
         "filename": "wmf-config/abusefilter.php",
         "patchSetId": 26
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "dff0e1a0_e9113727",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 26
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 5450
+      },
+      "writtenOn": "2019-07-03T07:53:10Z",
+      "side": 1,
+      "message": "Same as line 77.",
+      "parentUuid": "ad3180db_4d1c39a2",
+      "range": {
+        "startLine": 116,
+        "startChar": 2,
+        "endLine": 117,
+        "endChar": 66
+      },
+      "revId": "0fe252b26c5e211e78e9d490ee1681877157b19f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "be716a3c_fbe57bdd",
         "filename": "wmf-config/abusefilter.php",
         "patchSetId": 26
@@ -59,6 +107,30 @@
       "writtenOn": "2019-07-03T07:47:27Z",
       "side": 1,
       "message": "autoconfirmed has this.",
+      "range": {
+        "startLine": 226,
+        "startChar": 2,
+        "endLine": 226,
+        "endChar": 66
+      },
+      "revId": "0fe252b26c5e211e78e9d490ee1681877157b19f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5bd7c2fc_9a674e04",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 26
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 5450
+      },
+      "writtenOn": "2019-07-03T07:53:10Z",
+      "side": 1,
+      "message": "Ugh, that\u0027s super weird! But yes, you\u0027re right.",
+      "parentUuid": "be716a3c_fbe57bdd",
       "range": {
         "startLine": 226,
         "startChar": 2,
