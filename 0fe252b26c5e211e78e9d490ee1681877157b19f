@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ea25fa2d_8e73753e",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 26
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 3238
+      },
+      "writtenOn": "2019-07-03T07:47:27Z",
+      "side": 1,
+      "message": "Should be true (or removed) based on the current config.",
+      "range": {
+        "startLine": 77,
+        "startChar": 2,
+        "endLine": 77,
+        "endChar": 67
+      },
+      "revId": "0fe252b26c5e211e78e9d490ee1681877157b19f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ad3180db_4d1c39a2",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 26
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 3238
+      },
+      "writtenOn": "2019-07-03T07:47:27Z",
+      "side": 1,
+      "message": "Should be true (or removed) based on the current config.",
+      "range": {
+        "startLine": 116,
+        "startChar": 2,
+        "endLine": 117,
+        "endChar": 66
+      },
+      "revId": "0fe252b26c5e211e78e9d490ee1681877157b19f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "be716a3c_fbe57bdd",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 26
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 3238
+      },
+      "writtenOn": "2019-07-03T07:47:27Z",
+      "side": 1,
+      "message": "autoconfirmed has this.",
+      "range": {
+        "startLine": 226,
+        "startChar": 2,
+        "endLine": 226,
+        "endChar": 66
+      },
+      "revId": "0fe252b26c5e211e78e9d490ee1681877157b19f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
