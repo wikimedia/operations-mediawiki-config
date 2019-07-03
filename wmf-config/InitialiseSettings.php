@@ -9011,6 +9011,9 @@ $wgConf->settings = [
 		'patroller' => [ 'patrol' => true ], // T196488
 		'rollbacker' => [ 'rollback' => true ], // T215200
 	],
+	'+azwiktionary' => [
+		'autopatrolled' => [ 'autopatrol' => true ], // T227208
+	],
 	'+azbwiki' => [
 		'autopatrolled' => [ // T109755
 			'autopatrol' => true, // T109755
@@ -11113,6 +11116,9 @@ $wgConf->settings = [
 			'rollbacker', // T215200
 		],
 	],
+	'+azwiktionary' => [
+		'sysop' => [ 'autopatrolled', ], //T227208
+	],
 	'+bewiki' => [
 		'sysop' => [ 'autoeditor' ],
 	],
@@ -11894,6 +11900,9 @@ $wgConf->settings = [
 			'patroller', // T196488
 			'rollbacker', // T215200
 		],
+	],
+	'+azwiktionary' => [
+		'sysop' => [ 'autopatrolled', ], //T227208
 	],
 	'+bawiki' => [
 		'bureaucrat' => [ 'sysop' ],
