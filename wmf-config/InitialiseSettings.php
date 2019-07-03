@@ -8470,10 +8470,9 @@ $wgConf->settings = [
 	'bnwiki' => true,
 	'huwiki' => true,
 	'jawiki' => true,
-	'enwiktionary' => true,
-	'enwikisource' => true,
-	'enwikivoyage' => true,
-	'hewikivoyage' => true,
+	'wiktionary' => true,
+	'wikisource' => true,
+	'wikivoyage' => true,
 ],
 
 'wgEnableBlockNoticeStats' => [
