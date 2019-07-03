@@ -19466,14 +19466,20 @@ $wgConf->settings = [
 		'nod' => 'ᨣᩴᩤᨾᩮᩥᩬᨦ',            // T93880
 		'nys' => 'Noongar',         // T127858
 		'ota' => 'لسان توركى',      // T59342
+		'rmf' => 'kaalengo tšimb', // T226701
 		'rwr' => 'मारवाड़ी',           // T61905
+		'sjd' => 'Кӣллт са̄мь кӣлл', // T226701
 		'sje' => 'bidumsámegiella', // T146707
+		'sju' => 'ubmejesámiengiälla', // T226701
 		'smj' => 'julevsámegiella', // T146707
 		'smn' => 'anarâškielâ',     // T220118
 		'sms' => 'sääʹmǩiõll',      // T220118
 		'srq' => 'mbia cheë',       // T113408
 	],
 	'commonswiki' => [
+		'rmf' => 'kaalengo tšimb', // T226701
+		'sjd' => 'Кӣллт са̄мь кӣлл', // T226701
+		'sju' => 'ubmejesámiengiälla', // T226701
 		'smn' => 'anarâškielâ',	  // T222309
 		'sms' => 'sääʹmǩiõll',	  // T222309
 	],
