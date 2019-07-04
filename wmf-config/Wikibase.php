@@ -242,7 +242,7 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['namespaces'] = $wmgWikibaseClientNamespacesWithRepoAccess;
 
 	$wgWBClientSettings['excludeNamespaces'] = function () {
-		global $wgDBname;
+		global $wgDBname, $wgProofreadPageNamespaceIds;
 
 		// @fixme 102 is LiquidThread comments on wikinews and elsewhere?
 		// but is the Extension: namespace on mediawiki.org, so we need
@@ -254,7 +254,8 @@ if ( $wmgUseWikibaseClient ) {
 			// 118 => Draft
 			// 1198 => NS_TRANSLATE
 			// 2600 => Flow topic
-			[ NS_USER, NS_FILE, NS_MEDIAWIKI, 90, 92, 118, 1198, 2600 ]
+			[ NS_USER, NS_FILE, NS_MEDIAWIKI, 90, 92, 118, 1198, 2600 ],
+			array_values( $wgProofreadPageNamespaceIds )
 		);
 
 		if ( in_array( $wgDBname, MWWikiversions::readDbListFile( 'wiktionary' ) ) ) {
