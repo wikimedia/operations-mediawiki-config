@@ -175,7 +175,7 @@ $wgLBFactoryConf = [
 		'db1090:3317' => 1, # C3 3.6TB 512GB, vslow, dump: s2 and s7, old master
 		'db1094' => 500,    # D2 3.6TB 512GB
 		'db1098:3317' => 150, # B5 3.6TB 512GB # rc, log: s6 and s7
-		'db1101:3317' => 150, # C2 3.6TB 512GB # rc, log: s7 and s8 # low weight
+		'db1101:3317' => 150, # C2 3.6TB 512GB # rc, log: s7 and s8
 		'db1136' => 300,    # D1 4.4TB 512GB # future candidate master
 	],
 	's8' => [
@@ -183,7 +183,7 @@ $wgLBFactoryConf = [
 		'db1087' => 1,      # C2 3.6TB 512GB, vslow, dump # master for sanitarium db1124
 		'db1092' => 200,    # D2 3.6TB 512GB, api
 		'db1099:3318' => 100, # B2 3.6TB 512GB # rc, log: s1 and s8
-		'db1101:3318' => 100, # C2 3.6TB 512GB # rc, log: s7 and s8 # low weight
+		'db1101:3318' => 100, # C2 3.6TB 512GB # rc, log: s7 and s8
 		'db1104' => 200,    # B3 3.6TB 512GB, api # candidate master
 		'db1109' => 500,    # D8 3.6TB 512GB
 		'db1126' => 400,    # A1 4.4TB 512GB
@@ -484,7 +484,7 @@ $wgLBFactoryConf = [
 		],
 		'logpager' => [
 			'db1098:3317' => 1,
-			# 'db1101:3317' => 1,
+			'db1101:3317' => 1,
 		],
 	],
 	's8' => [
@@ -516,7 +516,7 @@ $wgLBFactoryConf = [
 		],
 		'logpager' => [
 			'db1099:3318' => 1,
-			# 'db1101:3318' => 1,
+			'db1101:3318' => 1,
 		],
 	],
 ],
