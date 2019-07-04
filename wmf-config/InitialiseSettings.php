@@ -21523,9 +21523,7 @@ $wgConf->settings = [
 // naise: uses PHP Transliterator with naive folding rules (unicode diacritics
 // removal)
 'wgCirrusSearchNamespaceResolutionMethod' => [
-	'default' => 'elastic',
-	'group0' => 'utr30',
-	'group1' => 'utr30'
+	'default' => 'utr30',
 ],
 
 // List of languages detected by the short-text
