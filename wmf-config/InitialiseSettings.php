@@ -14771,6 +14771,18 @@ $wgConf->settings = [
 		'deliver.odai.yale.edu',            // Yale Peabody Museum - T224875
 		'*.mojnews.com',                    // Iranian news agency Moj - T213901
 		'hualab.nl',                        // Utrecht Archives - T225917
+		'*.voladm.gov.ua',                  // Ukrainian government website - T227366
+		'dn.gov.ua',                        // Ukrainian government website - T227366
+		'carpathia.gov.ua',                 // Ukrainian government website - T227366
+		'*.rv.gov.ua',                      // Ukrainian government website - T227366
+		'sm.gov.ua',                        // Ukrainian government website - T227366
+		'*.oda.te.gov.ua',                  // Ukrainian government website - T227366
+		'kharkivoda.gov.ua',                // Ukrainian government website - T227366
+		'khoda.gov.ua',                     // Ukrainian government website - T227366
+		'*.adm-km.gov.ua',                  // Ukrainian government website - T227366
+		'*.ck-oda.gov.ua',                  // Ukrainian government website - T227366
+		'bukoda.gov.ua',                    // Ukrainian government website - T227366
+		'kyivcity.gov.ua',                  // Ukrainian government website - T227366
 	],
 ],
 
