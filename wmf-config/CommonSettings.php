@@ -1383,11 +1383,6 @@ wfLoadExtension( 'Elastica' );
 wfLoadExtension( 'CirrusSearch' );
 include "$wmfConfigDir/CirrusSearch-common.php";
 
-// Various DB contention settings
-if ( in_array( $wgDBname, [ 'testwiki', 'test2wiki', 'mediawikiwiki', 'commonswiki' ] ) ) {
-	$wgSiteStatsAsyncFactor = 1;
-}
-
 $wgInvalidateCacheOnLocalSettingsChange = false;
 
 $wgEnableUserEmail = true;
