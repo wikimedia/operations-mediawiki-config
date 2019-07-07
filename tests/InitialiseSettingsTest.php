@@ -1,40 +1,40 @@
 <?php
 
 class InitialiseSettingsTest extends WgConfTestCase {
-
 	///
-	/// wgLogoHD
+	/// wgLogoHD and wgLogo
 	///
-	public function testLogoHD() {
+	public function testLogos() {
 		$requiredKeys = $this->getRequiredLogoHDKeys();
 		$wgConf = $this->loadWgConf( 'unittest' );
 
+		// Build an array of logos to test everything in one cycle
+		$logos = [];
+		foreach ( $wgConf->settings['wgLogo'] as $db => $logo ) {
+			$logos[$db]['1x'] = $logo;
+		}
 		foreach ( $wgConf->settings['wgLogoHD'] as $db => $entry ) {
-			// Test if all logos exist
-			foreach ( $entry as $size => $logo ) {
-				$this->assertFileExists( __DIR__ . '/..' . $logo, "$db has nonexistent $size logo" );
-			}
-
 			// Test if only 1.5x and 2x keys are used
+			// Only relevant to wgLogoHD, so can stay here
 			$keys = array_keys( $entry );
 			$this->assertEquals( $requiredKeys, $keys, "Unexpected keys for $db", 0.0, 10, true ); // canonicalize
+
+			foreach ( $entry as $size => $logo ) {
+				$logos[$db][$size] = $logo;
+			}
+		}
+
+		// Really test stuff
+		foreach ( $logos as $db => $entry ) {
+			foreach ( $entry as $size => $logo ) {
+				// Test if all logos exist
+				$this->assertFileExists( __DIR__ . '/..' . $logo, "$db has nonexistent $size logo" );
+			}
 		}
 	}
 
 	public function getRequiredLogoHDKeys() {
 		return [ '1.5x', '2x' ];
-	}
-
-	///
-	/// wgLogo
-	///
-	public function testLogo() {
-		$wgConf = $this->loadWgConf( 'unittest' );
-
-		foreach ( $wgConf->settings['wgLogo'] as $db => $logo ) {
-			// Test if all logos exist
-			$this->assertFileExists( __DIR__ . '/..' . $logo, "$db has nonexistent 1x logo" );
-		}
 	}
 
 	///
