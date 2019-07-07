@@ -85,7 +85,7 @@ if ( $wgDBname == 'commonswiki' ) {
 	// T94856 - makes searching difficult for locally uploaded files
 	// T76957 - doesn't make sense to have Commons files on foundationwiki search
 } else { // So is everyone else, for using commons
-	$wgCirrusSearchExtraIndexes = [ NS_FILE => 'commonswiki_file' ];
+	$wgCirrusSearchExtraIndexes = [ NS_FILE => [ 'commonswiki_file' ] ];
 	$wgCirrusSearchExtraIndexBoostTemplates = [
 		'commonswiki_file' => [
 			'wiki' => 'commonswiki',
