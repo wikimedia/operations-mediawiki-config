@@ -124,6 +124,34 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 						$this->variantSettings[ $baseKey ],
 						"$db has an over-ride HD logo set for $size in $key but not for regular resoltion in $baseKey"
 					);
+
+					// Test if 2x and 1.5x is really of correct size
+					// Tolerate up to 5 px difference
+					$imagesizeOne = getimagesize( __DIR__ . '/../..' . $this->variantSettings[ $scalarLogoKeys[ '1x' ] ][ $db ] )[0];
+					$imagesizeOneAndHalf = getimagesize( __DIR__ . '/../..' . $this->variantSettings[ $scalarLogoKeys[ '1.5x' ] ][ $db ] )[0];
+					$imagesizeTwo = getimagesize( __DIR__ . '/../..' . $this->variantSettings[ $scalarLogoKeys[ '2x' ] ][ $db ] )[0];
+
+					// Remove this exception as soon as the logos are updated to meet the condition
+					if ( !in_array( $db, [
+						'hiwiki',
+						'cawikiquote', 'enwikiquote', 'eowikiquote', 'eswikiquote', 'hrwikiquote', 'hywikiquote', 'knwikiquote', 'slwikiquote', 'srwikiquote',
+						'zhwikinews',
+						'ruwikivoyage', 'zhwikivoyage'
+					] ) ) {
+						$this->assertTrue(
+							$imagesizeOneAndHalf >= (int)( $imagesizeOne * 1.5 - 5 ),
+							"$db has 1.5x HD logo of $imagesizeOneAndHalf width, at least " . (int)( $imagesizeOne * 1.5 ) . " expected"
+						);
+					}
+
+					// Remove this exception as soon as the logo is updated to meet the condition
+					if ( $db !== 'zhwikivoyage' ) {
+						$this->assertTrue(
+							$imagesizeTwo >= $imagesizeOne * 2 - 5,
+							"$db has 2x HD logo of $imagesizeTwo width, at least " . $imagesizeOne * 2 . " expected"
+						);
+					}
+
 				}
 			}
 		}
