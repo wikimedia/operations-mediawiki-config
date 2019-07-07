@@ -26,6 +26,9 @@ class InitialiseSettingsTest extends WgConfTestCase {
 
 		// Really test stuff
 		foreach ( $logos as $db => $entry ) {
+			// 1x must be defined
+			$this->assertArrayHasKey( '1x', $entry, "$db has HD logo defined, but no 1x logo" );
+
 			foreach ( $entry as $size => $logo ) {
 				// Test if all logos exist
 				$this->assertFileExists( __DIR__ . '/..' . $logo, "$db has nonexistent $size logo" );
