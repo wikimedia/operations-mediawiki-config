@@ -16826,6 +16826,32 @@ $wgConf->settings = [
 	'thwiki' => 'abtest', // Thai
 	'urwiki' => 'abtest' // Urdu
 ],
+// Whether to oversample EditAttemptStep logging on MobileFrontend
+// 'visualeditor' or 'all', currently kept in sync with the above
+// wmgMFDefaultEditor preference so wikis with abtest are being oversampled.
+'wgMFSchemaEditAttemptStepOversample' => [
+	'default' => 'visualeditor',
+	'azwiki' => 'all', // Azerbaijani
+	'bgwiki' => 'all', // Bulgarian
+	'zh_yuewiki' => 'all', // Cantonese
+	'cawiki' => 'all', // Catalan
+	'hrwiki' => 'all', // Croatian
+	'dawiki' => 'all', // Danish
+	'etwiki' => 'all', // Estonian
+	'fiwiki' => 'all', // Finnish
+	'elwiki' => 'all', // Greek
+	'huwiki' => 'all', // Hungarian
+	'mswiki' => 'all', // Malay
+	'mlwiki' => 'all', // Malayalam
+	'nowiki' => 'all', // Norwegian (Bokmål)
+	'ptwiki' => 'all', // Portugese
+	'rowiki' => 'all', // Romanian
+	'srwiki' => 'all', // Serbian
+	'svwiki' => 'all', // Swedish
+	'tawiki' => 'all', // Tamil
+	'thwiki' => 'all', // Thai
+	'urwiki' => 'all' // Urdu
+],
 
 'wmgEnableTextExtracts' => [
 	'default' => true,

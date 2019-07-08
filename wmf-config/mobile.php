@@ -52,9 +52,6 @@ if ( $wmgMobileFrontend ) {
 	// Brute-force bandwidth optimization by stripping srcset (T119797)
 	$wgMFStripResponsiveImages = true;
 
-	// Oversample logging for visualeditor
-	$wgMFSchemaEditAttemptStepOversample = 'visualeditor';
-
 	if ( $wmgMFDefaultEditor ) {
 		$wgMFDefaultEditor = $wmgMFDefaultEditor;
 	}
