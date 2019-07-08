@@ -5271,6 +5271,7 @@ $wgConf->settings = [
 	],
 	'arwiki' => [ '', 'autoconfirmed', 'autoreview', 'review', 'sysop' ], // T54109, T146575, T225896
 	'ckbwiki' => [ '', 'autoconfirmed', 'autopatrol', 'sysop' ], // T54533
+	'commonswiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T227420
 	'dewiki' => [ '', 'autoconfirmed', 'editeditorprotected', 'sysop' ], // T94368
 	'dewiktionary' => [ '', 'autoconfirmed', 'editeditorprotected', 'autoreviewprotected', 'sysop' ], // T216885
 	'enwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T126607, T57432
@@ -8961,12 +8962,17 @@ $wgConf->settings = [
 		'sysop' => [
 			'changetags' => true, // T134196
 			'upload_by_url' => true,
+			'templateeditor' => true, // T227420
 		],
 		'bot' => [
 			'changetags' => true, // T134196
 			'upload_by_url' => true, // T145010
 		],
 		'translationadmin' => [ 'noratelimit' => true, ], // T155162
+		'templateeditor' => [ // T227420
+			'templateeditor' => true,
+			'tboverride' => true,
+		],
 	],
 	'+testcommonswiki' => [
 		'user' => [
@@ -10934,7 +10940,8 @@ $wgConf->settings = [
 			'autopatrolled',
 			'filemover',
 			'Image-reviewer',
-			'upwizcampeditors'
+			'upwizcampeditors',
+			'templateeditor', // T227420
 		],
 		'Image-reviewer' => [ 'Image-reviewer' ],
 	],
@@ -11707,7 +11714,8 @@ $wgConf->settings = [
 			'autopatrolled',
 			'filemover',
 			'Image-reviewer',
-			'upwizcampeditors'
+			'upwizcampeditors',
+			'templateeditor', // T227420
 		],
 	],
 	'+cswiki' => [
