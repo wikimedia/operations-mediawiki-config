@@ -375,7 +375,6 @@ $wgExtensionFunctions[] = function () {
 		$wgFlaggedRevsNamespaces[] = 106;
 		$wgFlaggedRevsNamespaces[] = 108;
 		$wgFlaggedRevsNamespaces[] = 110;
-		$wgFlaggedRevsNamespaces[] = 112;
 		$wgFlaggedRevsTags = [
 			'completeness' => [ 'levels' => 4, 'quality' => 3, 'pristine' => 5 ],
 			'accuracy' => [ 'levels' => 4, 'quality' => 3, 'pristine' => 5 ],
