@@ -1064,6 +1064,7 @@ $wgConf->settings = [
 	'itwikinews' => '/static/images/project-logos/itwikinews.png',
 	'jawikinews' => '/static/images/project-logos/jawikinews.png',
 	'kowikinews' => '/static/images/project-logos/kowikinews.png',
+	'liwikinews' => '/static/images/project-logos/liwikinews.png',
 	'nlwikinews' => '/static/images/project-logos/nlwikinews.png',
 	'nowikinews' => '/static/images/project-logos/nowikinews.png',
 	'plwikinews' => '/static/images/project-logos/plwikinews.png',
@@ -1728,6 +1729,7 @@ $wgConf->settings = [
 	'enwikinews' => [ '1.5x' => '/static/images/project-logos/enwikinews-1.5x.png', '2x' => '/static/images/project-logos/enwikinews-2x.png' ], // T150618
 	'elwikinews' => [ '1.5x' => '/static/images/project-logos/elwikinews-1.5x.png', '2x' => '/static/images/project-logos/elwikinews-2x.png' ], // T150618
 	'frwikinews' => [ '1.5x' => '/static/images/project-logos/frwikinews-1.5x.png', '2x' => '/static/images/project-logos/frwikinews-2x.png' ], // T150618
+	'liwikinews' => [ '1.5x' => '/static/images/project-logos/liwikinews-1.5x.png', '2x' => '/static/images/project-logos/liwikinews-2x.png' ],
 	'ruwikinews' => [ '1.5x' => '/static/images/project-logos/ruwikinews-1.5x.png', '2x' => '/static/images/project-logos/ruwikinews-2x.png' ], // T150618
 	'srwikinews' => [ '1.5x' => '/static/images/project-logos/srwikinews-1.5x.png', '2x' => '/static/images/project-logos/srwikinews-2x.png' ], // T172255
 	'zhwikinews' => [ '1.5x' => '/static/images/project-logos/zhwikinews-1.5x.png', '2x' => '/static/images/project-logos/zhwikinews-2x.png' ], // T150618
