@@ -670,6 +670,12 @@ function wmfLabsSettings() {
 			'commonswiki' => 'https://wikidata.beta.wmflabs.org/w/api.php',
 		],
 
+		'wgMediaInfoHelpUrls' => [
+			'commonswiki' => [
+				'P245962' => 'https://commons.wikimedia.org/wiki/Special:MyLanguage/Commons:Depicts',
+			],
+		],
+
 		// Test the extension Collection in other languages for book creator,
 		// which avoids the bugs related to the PDF generator.
 		'wmgUseCollection' => [

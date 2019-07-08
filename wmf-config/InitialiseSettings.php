@@ -20704,7 +20704,7 @@ $wgConf->settings = [
 	'commonswiki' => true,
 ],
 
-// Structured Data on Commons: Depicts-related configuration
+// Structured Data on Commons: wikibase properties that will be editable by default
 'wgMediaInfoProperties' => [
 	'commonswiki' => [
 		'depicts' => 'P180',
@@ -20741,6 +20741,15 @@ $wgConf->settings = [
 
 'wgMediaInfoExternalEntitySearchBaseUri' => [
 	'default' => 'https://www.wikidata.org/w/api.php',
+],
+
+'wgMediaInfoHelpUrls' => [
+	'commonswiki' => [
+		'P180' => 'https://commons.wikimedia.org/wiki/Special:MyLanguage/Commons:Depicts',
+	],
+	'testcommonswiki' => [
+		'P180' => 'https://commons.wikimedia.org/wiki/Special:MyLanguage/Commons:Depicts',
+	],
 ],
 
 // Only enable this conservatively, having this on to many
