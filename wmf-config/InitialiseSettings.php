@@ -7695,6 +7695,8 @@ $wgConf->settings = [
 
 'wgAccountCreationThrottle' => [
 	'default' => 6, // previously 10
+	'eswikiquote' => [ 'count' => 2, 'seconds' => 60 * 60 * 72 ], // temp T226963
+	'simple' => [ 'count' => 2, 'seconds' => 60 * 60 * 72 ], // temp T226963
 	'private' => 0, // disable for wikis with sysop-only account creation
 	'fishbowl' => 0,
 	'hewikibooks' => 4,
@@ -8343,6 +8345,11 @@ $wgConf->settings = [
 			'user' => [ 20, 86400 ], // 20 per day for users
 		],
 		'changeemail' => [
+			'ip-all' => [ 10, 3600 ],
+			'user' => [ 4, 86400 ]
+		],
+		// T226733
+		'confirmemail' => [
 			'ip-all' => [ 10, 3600 ],
 			'user' => [ 4, 86400 ]
 		],
