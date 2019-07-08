@@ -1462,7 +1462,7 @@ $wgConf->settings = [
 	'nvwiki' => [ '1.5x' => '/static/images/project-logos/nvwiki-1.5x.png', '2x' => '/static/images/project-logos/nvwiki-2x.png' ], // T150618
 	'nywiki' => [ '1.5x' => '/static/images/project-logos/nywiki-1.5x.png', '2x' => '/static/images/project-logos/nywiki-2x.png' ], // T211570
 	'ocwiki' => [ '1.5x' => '/static/images/project-logos/ocwiki-1.5x.png', '2x' => '/static/images/project-logos/ocwiki-2x.png' ], // T150618
-	'olowiki' => [ '1.5x' => '/static/images/project-logos/olowiki-1.5x.png', '2x' => '/static/images/project-logos/olowiki-1.5x.png' ], // T146745
+	'olowiki' => [ '1.5x' => '/static/images/project-logos/olowiki-1.5x.png', '2x' => '/static/images/project-logos/olowiki-2x.png' ], // T146745
 	'omwiki' => [ '1.5x' => '/static/images/project-logos/omwiki-1.5x.png', '2x' => '/static/images/project-logos/omwiki-2x.png' ], // T150618
 	'orwiki' => [ '1.5x' => '/static/images/project-logos/orwiki-1.5x.png', '2x' => '/static/images/project-logos/orwiki-2x.png' ], // T150618
 	'oswiki' => [ '1.5x' => '/static/images/project-logos/oswiki-1.5x.png', '2x' => '/static/images/project-logos/oswiki-2x.png' ], // T150618
