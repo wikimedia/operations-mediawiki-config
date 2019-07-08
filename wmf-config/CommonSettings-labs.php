@@ -360,6 +360,13 @@ if ( $wmgUseEventBus ) {
 	$wgEventBusEnableRunJobAPI = true;
 }
 
+if ( $wmgUseStopForumSpam ) {
+	wfLoadExtension( 'StopForumSpam' );
+	$wgSFSIPListLocation = 'https://www.stopforumspam.com/downloads/listed_ip_90_ipv46_all.gz';
+	$wgSFSIPListLocationMD5 = 'https://www.stopforumspam.com/downloads/listed_ip_90_ipv46_all.gz.md5';
+	$wgSFSReportOnly = true;
+}
+
 $wgMessageCacheType = CACHE_ACCEL;
 
 // This will work for most wikis, which is considered good enough.
