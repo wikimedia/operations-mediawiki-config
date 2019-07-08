@@ -22480,13 +22480,25 @@ $wgConf->settings = [
 
 'wgEventServiceStreamConfig' => [
 	'default' => [
+		'mediawiki.page-create' => [
+			'EventServiceName' => 'eventgate-main',
+		],
+		'mediawiki.page-delete' => [
+			'EventServiceName' => 'eventgate-main',
+		],
 		'mediawiki.page-links-change' => [
+			'EventServiceName' => 'eventgate-main',
+		],
+		'mediawiki.page-move' => [
 			'EventServiceName' => 'eventgate-main',
 		],
 		'mediawiki.page-properties-change' => [
 			'EventServiceName' => 'eventgate-main',
 		],
 		'mediawiki.page-restrictions-change' => [
+			'EventServiceName' => 'eventgate-main',
+		],
+		'mediawiki.page-undelete' => [
 			'EventServiceName' => 'eventgate-main',
 		],
 		'mediawiki.revision-tags-change' => [
