@@ -370,6 +370,7 @@ $wgExtensionFunctions[] = function () {
 			$wgGroupPermissions['reviewer']
 		);
 	} elseif ( $wgDBname == 'hewikisource' ) {
+		$wgFlaggedRevsWhitelist = [ 'עמוד_ראשי' ]; // T227000
 		$wgFlaggedRevsNamespaces[] = 100;
 		$wgFlaggedRevsNamespaces[] = 104;
 		$wgFlaggedRevsNamespaces[] = 106;
