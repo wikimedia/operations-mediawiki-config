@@ -22285,6 +22285,14 @@ $wgConf->settings = [
 	'default' => 'redis_local',  // declared in redis.php
 	'wikitech' => 'memcached-pecl',
 ],
+'wgCentralAuthSessionCacheType' => [
+	'default' => 'redis_local',  // declared in redis.php
+	'wikitech' => 'memcached-pecl',
+],
+'wgMWOAuthSessionCacheType' => [
+	'default' => 'redis_local',  // declared in redis.php
+	'wikitech' => 'memcached-pecl',
+],
 'wgMainStash' => [
 	'default' => 'redis_local',  // declared in redis.php
 	'wikitech' => 'memcached-pecl',
