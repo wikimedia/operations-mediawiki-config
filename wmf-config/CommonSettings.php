@@ -3821,12 +3821,15 @@ if ( $wmgUseEventBus ) {
 		]
 	];
 
-	// Configure RecentChange to send recentchange events to EventBus service.
+	// Use wgEventServiceStreamConfig to configure the EventBusRCFeedEngine eventServiceName.
+	$rcEventServiceName =
+		$wgEventServiceStreamConfig['mediawiki.recentchange']['EventServiceName'] ??
+		$wgEventServiceStreamConfig['default']['EventServiceName'];
+
 	$wgRCFeeds['eventbus'] = [
 		'formatter' => 'EventBusRCFeedFormatter',
 		'class' => 'EventBusRCFeedEngine',
-		// This must match an entry in $wgEventServices.
-		'eventServiceName' => 'eventbus',
+		'eventServiceName' => $rcEventServiceName,
 	];
 }
 

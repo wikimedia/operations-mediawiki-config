@@ -164,8 +164,8 @@ function wmfLabsSettings() {
 			'default' => 'wgDebugLogFile',
 		],
 
-		# Use eventgate-main as default EventService in beta
-		# This can be removed once this is set in InitialiseSettings.php
+		// Use eventgate-main as default EventService in beta
+		// This can be removed once this is set in InitialiseSettings.php
 		'wgEventServiceStreamConfig' => [
 			'default' => [
 				'default' => [
