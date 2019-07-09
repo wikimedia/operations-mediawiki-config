@@ -98,7 +98,7 @@ if ( $selectedFilePath !== false ) {
 <p>(
 <a href="https://gerrit.wikimedia.org/g/operations/mediawiki-config/+log/master/<?php echo $selectedFileRepoPath; ?>">version control</a> &bull;
 <a href="https://gerrit.wikimedia.org/g/operations/mediawiki-config/+blame/master/<?php echo $selectedFileRepoPath; ?>?blame=1">blame</a> &bull;
-<a href="<?php echo $selectedFileViewRawUrlEsc; ?>">raw text</a>
+<a href="<?php echo $selectedFileViewRawUrlEsc; ?>.txt">raw text</a>
 )</p>
 <?php
 }
