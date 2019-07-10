@@ -19,9 +19,6 @@
 #
 
 if ( $wmfRealm == 'labs' ) { # safe guard
-if ( file_exists( '/etc/wmflabs-instancename' ) ) {
-	$wgOverrideHostname = trim( file_get_contents( '/etc/wmflabs-instancename' ) );
-}
 
 $wgDebugTimestamps = true;
 
