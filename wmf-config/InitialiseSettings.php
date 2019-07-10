@@ -5415,18 +5415,14 @@ $wgConf->settings = [
 'wmgMonologChannels' => [
 	'default' => [
 		'404' => 'debug',
+		'AbuseFilter' => 'debug',
 		'AdHocDebug' => 'debug', // for temp live debugging
 		'antispoof' => 'debug',
 		'api' => [ 'logstash' => false ],
 		'api-feature-usage' => 'debug',
 		'api-readonly' => 'debug',
+		'api-request' => [ 'udp2log' => false, 'logstash' => false, 'eventbus' => 'debug', 'buffer' => true ],
 		'api-warning' => 'debug',
-		'api-request' => [
-			'udp2log' => false,
-			'logstash' => false,
-			'eventbus' => 'debug',
-			'buffer' => true
-		],
 		'authentication' => 'info',
 		'autoloader' => 'debug',  // ori, for T166759 (2017-06-02)
 		'badpass' => 'debug',
@@ -5440,23 +5436,23 @@ $wgConf->settings = [
 		'CentralAuthUserMerge' => 'debug',
 		'CentralNotice' => 'debug',
 		'CirrusSearch' => 'debug',
+		'cirrussearch-request' => [ 'udp2log' => false, 'logstash' => false, 'eventbus' => 'debug', 'buffer' => true, ],
 		'CirrusSearchChangeFailed' => 'debug',
-		'cirrussearch-request' => [
-			'udp2log' => false,
-			'logstash' => false,
-			'eventbus' => 'debug',
-			'buffer' => true,
-		],
 		'CirrusSearchSlowRequests' => 'debug',
 		'cite' => 'debug',
 		'Cognate' => 'debug', // WMDE & Addshore
 		'collection' => 'debug', // -cscott for T73675
 		'csp' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 		'csp-report-only' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
+		'DBConnection' => 'error',
 		'DBPerformance' => [ 'logstash' => 'debug', 'udp2log' => 'warning' ],
+		'DBQuery' => 'warning',
+		'DBReplication' => 'warning',
+		'DBTransaction' => 'debug',
 		'deprecated' => 'debug',
 		'diff' => 'debug',
 		'Echo' => 'debug',
+		'Elastica' => 'info',
 		'error' => 'debug',
 		'es-hit' => 'debug',
 		'EventBus' => [ 'logstash' => 'error' ],
@@ -5477,23 +5473,27 @@ $wgConf->settings = [
 		'GlobalTitleFail' => [ 'sample' => 10000 ], // chad hates $wgTitle
 		'goodpass' => 'debug',
 		'goodpass-priv' => 'debug',
+		'GrowthExperiments' => 'info',
 		'headers-sent' => 'debug',
 		'HttpError' => 'error', // Only log http errors with a 500+ code T85795
 		'JobExecutor' => [ 'logstash' => 'warning' ],
 		'lc-recache' => 'debug',
 		'ldap' => 'warning',
 		'Linter' => 'debug',
+		'LocalFile' => 'debug',
 		'localhost' => [ 'logstash' => false ],
 		'LockManager' => 'warning',
 		'logging' => 'debug',
+		'LoginNotify' => 'debug',
 		'MassMessage' => 'debug', // for 59464 -legoktm 2013/12/15
 		'Math' => 'info',  // mobrovac for T121445
 		'memcached' => 'error', // -aaron 2012/10/24
-		'objectcache' => 'warning',
 		'message-format' => [ 'logstash' => 'warning' ],
+		'MessageCacheError' => 'debug',
 		'mobile' => 'debug',
 		'NewUserMessage' => 'debug',
 		'OAuth' => 'debug',
+		'objectcache' => 'warning',
 		'OutputBuffer' => 'debug',
 		'PageTriage' => 'debug',
 		'PageViewInfo' => 'info',
@@ -5504,13 +5504,14 @@ $wgConf->settings = [
 		'ratelimit' => 'debug',
 		'readinglists' => 'warning',
 		'recursion-guard' => 'debug',
-		'redis' => 'info', // -asher 2012/10/12
 		'RecursiveLinkPurge' => 'debug',
+		'redis' => 'info', // -asher 2012/10/12
 		'Renameuser' => 'debug',
 		'resourceloader' => 'info',
 		'ResourceLoaderImage' => 'debug', // - demon, matmarex
 		'RevisionStore' => 'info',
 		'runJobs' => [ 'logstash' => 'warning' ], // - bd808, T113571
+		'SaveParse' => 'debug',
 		'security' => 'debug',
 		'session' => [ 'udp2log' => false, 'logstash' => 'warning' ],
 		'session-ip' => [ 'udp2log' => false, 'logstash' => 'info' ],
@@ -5520,15 +5521,14 @@ $wgConf->settings = [
 		'SpamRegex' => 'debug',
 		'SQLBagOStuff' => 'debug',
 		'StashEdit' => 'debug',
-		'SaveParse' => 'debug',
 		'SwiftBackend' => 'debug', // -aaron 5/15/12
-		'T87645' => 'debug', // - Ori on behalf of Tim, for https://gerrit.wikimedia.org/r/#/c/188304/
 		'T143073' => 'debug',
+		'T87645' => 'debug', // - Ori on behalf of Tim, for https://gerrit.wikimedia.org/r/#/c/188304/
 		'texvc' => 'debug',
-		'thumb-T201305' => 'debug',
-		'thumbnailaccess' => 'debug', // T106323
-		'thumbnail' => 'debug',
 		'throttler' => 'info',
+		'thumb-T201305' => 'debug',
+		'thumbnail' => 'debug',
+		'thumbnailaccess' => 'debug', // T106323
 		'TitleBlacklist-cache' => 'debug', // For T85428
 		'torblock' => 'debug',
 		'ts_badpass' => 'debug',
@@ -5536,30 +5536,16 @@ $wgConf->settings = [
 		'updateTranstagOnNullRevisions' => 'debug',
 		'upload' => 'debug',
 		'wfLogDBError' => 'debug', // Former $wgDBerrorLog
-		'Wikibase' => [
-			'udp2log' => 'info',
-			'logstash' => 'warning',
-			'sample' => false,
-		],
+		'Wikibase' => [ 'udp2log' => 'info', 'logstash' => 'warning', 'sample' => false, ],
+		'Wikibase.NewItemIdFormatter' => 'debug', // WMDE & Addshore T201832
 		'WikibaseQualityConstraints' => 'debug',
+		'WikimediaEvents' => 'error', // For T205754 & T208233
 		'WikitechGerritBan' => 'debug',
 		'WikitechPhabBan' => 'debug',
-		'xenon' => 'debug',
-		'XMP' => 'warning', // T89532
-		'xff' => [ 'logstash' => false ],
-		'MessageCacheError' => 'debug',
-		'LocalFile' => 'debug',
-		'DBTransaction' => 'debug',
-		'DBReplication' => 'warning',
-		'DBConnection' => 'error',
-		'DBQuery' => 'warning',
-		'LoginNotify' => 'debug',
-		'Wikibase.NewItemIdFormatter' => 'debug', // WMDE & Addshore T201832
 		'WMDE' => 'debug', // WMDE & Addshore T174948 & T191500
-		'AbuseFilter' => 'debug',
-		'GrowthExperiments' => 'info',
-		'WikimediaEvents' => 'error', // For T205754 & T208233
-		'Elastica' => 'info',
+		'xenon' => 'debug',
+		'xff' => [ 'logstash' => false ],
+		'XMP' => 'warning', // T89532
 	],
 
 	'+private' => [
