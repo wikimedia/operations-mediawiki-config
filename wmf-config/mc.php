@@ -21,14 +21,15 @@ $wgObjectCaches['memcached-pecl'] = [
 ];
 
 $wgObjectCaches['mcrouter'] = [
-	'class'                => 'MemcachedPeclBagOStuff',
-	'serializer'           => 'php',
-	'persistent'           => false,
-	'servers'              => [ '127.0.0.1:11213' ],
-	'server_failure_limit' => 1e9,
-	'retry_timeout'        => -1,
-	'loggroup'             => 'memcached',
-	'timeout'              => $wgMemCachedTimeout,
+	'class'                 => 'MemcachedPeclBagOStuff',
+	'serializer'            => 'php',
+	'persistent'            => false,
+	'servers'               => [ '127.0.0.1:11213' ],
+	'server_failure_limit'  => 1e9,
+	'retry_timeout'         => -1,
+	'loggroup'              => 'memcached',
+	'timeout'               => $wgMemCachedTimeout,
+	'allow_tcp_nagle_delay' => false
 ];
 
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
