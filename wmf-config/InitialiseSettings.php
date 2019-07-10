@@ -13547,12 +13547,6 @@ $wgConf->settings = [
 # wmgAutopromoteExtraGroups @{
 'wmgAutopromoteExtraGroups' => [
 	'default' => false,
-	'testwiki' => [
-		'patroller' => [ '&',
-				[ APCOND_EDITCOUNT, 10 ],
-				[ APCOND_AGE, 100 * 86400 ], // 100 days * seconds in a day
-		],
-	],
 	'frwiki' => [
 		'autopatrolled' => [ '&',
 			[ APCOND_EDITCOUNT, 500 ],
