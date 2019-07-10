@@ -993,6 +993,7 @@ $wgConf->settings = [
 	'angwikibooks' => '/static/images/project-logos/angwikibooks.png',
 	'arwikibooks' => '/static/images/project-logos/arwikibooks.png',
 	'azwikibooks' => '/static/images/project-logos/azwikibooks.png',  // T54019
+	'bawikibooks' => '/static/images/project-logos/bawikibooks.png',
 	'bewikibooks' => '/static/images/project-logos/bewikibooks.png',
 	'bgwikibooks' => '/static/images/project-logos/bgwikibooks.png',
 	'bnwikibooks' => '/static/images/project-logos/bnwikibooks.png',
@@ -1665,6 +1666,7 @@ $wgConf->settings = [
 
 	# Wikibooks
 	'angwikibooks' => [ '1.5x' => '/static/images/project-logos/angwikibooks-1.5x.png', '2x' => '/static/images/project-logos/angwikibooks-2x.png' ],
+	'bawikibooks' => [ '1.5x' => '/static/images/project-logos/bawikibooks-1.5x.png', '2x' => '/static/images/project-logos/bawikibooks-2x.png' ], // T227418
 	'bewikibooks' => [ '1.5x' => '/static/images/project-logos/bewikibooks-1.5x.png', '2x' => '/static/images/project-logos/bewikibooks-2x.png' ],
 	'cswikibooks' => [ '1.5x' => '/static/images/project-logos/cswikibooks-1.5x.png', '2x' => '/static/images/project-logos/cswikibooks-2x.png' ], // T177506
 	'dewikibooks' => [ '1.5x' => '/static/images/project-logos/dewikibooks-1.5x.png', '2x' => '/static/images/project-logos/dewikibooks-2x.png' ], // T177506
