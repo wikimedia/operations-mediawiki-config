@@ -9879,7 +9879,6 @@ $wgConf->settings = [
 	] ],
 
 	'+officewiki' => [
-		'communityapps' => [ 'view-community-applications' => true ],
 		'flood' => [ 'bot' => true ], // T86237
 		'user' => [ 'massmessage' => true, ], // T66978
 		'sysop' => [ 'importupload' => true, ], // T101663
@@ -11283,7 +11282,7 @@ $wgConf->settings = [
 		'sysop' => [ 'translationadmin' ], // T152490
 	],
 	'+officewiki' => [
-		'bureaucrat' => [ 'communityapps', 'flood', 'securepoll' ],
+		'bureaucrat' => [ 'flood', 'securepoll' ],
 	],
 	'+orwiki' => [
 		'sysop' => [ 'rollbacker' ],
@@ -12083,7 +12082,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'sysop' ], // T226591
 	],
 	'+officewiki' => [
-		'bureaucrat' => [ 'communityapps', 'flood', 'securepoll' ],
+		'bureaucrat' => [ 'flood', 'securepoll' ],
 	],
 	'+sourceswiki' => [
 		'bureaucrat' => [ 'flood' ], // T193350
