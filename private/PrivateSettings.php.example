@@ -14,9 +14,6 @@ $wmgTranslationNotificationUserPassword = '*';
 
 $wmgVERPsecret = '*';
 
-$wmgZeroPortalApiUserName = 'example';
-$wmgZeroPortalApiPassword = '*';
-
 $wmfSwiftEqiadConfig = $wmfSwiftCodfwConfig = [
 	'cirrusAuthUrl' => '',
 	'cirrusUser' => '',
