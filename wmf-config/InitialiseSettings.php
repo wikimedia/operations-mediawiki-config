@@ -22749,11 +22749,6 @@ $wgConf->settings = [
 	'labtestwiki' => true,
 ],
 
-// TODO: Can we drop this?
-'wgNonincludableNamespaces' => [
-	'default' => [],
-],
-
 'wmgUseCollaborationKit' => [
 	'default' => false,
 	'testwiki' => true,
