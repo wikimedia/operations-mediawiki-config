@@ -3416,9 +3416,7 @@ if ( $wmgUseGraph ) {
 	wfLoadExtension( 'JsonConfig' );
 }
 
-// Enable Tabular data namespace on Commons - T148745
-// TODO: $wmgEnableMapData and $wmgEnableTabularData should probably be merged into one
-if ( $wmgEnableTabularData ) {
+if ( $wmgEnableJsonConfigDataMode ) {
 	// Safety: before extension.json, these values were initialized by JsonConfig.php
 	if ( !isset( $wgJsonConfigModels ) ) {
 		$wgJsonConfigModels = [];
@@ -3426,7 +3424,11 @@ if ( $wmgEnableTabularData ) {
 	if ( !isset( $wgJsonConfigs ) ) {
 		$wgJsonConfigs = [];
 	}
+
+	$wgJsonConfigEnableLuaSupport = true;
+
 	// https://www.mediawiki.org/wiki/Extension:JsonConfig#Configuration
+
 	$wgJsonConfigModels['Tabular.JsonConfig'] = 'JsonConfig\JCTabularContent';
 	$wgJsonConfigs['Tabular.JsonConfig'] = [
 		'namespace' => 486,
@@ -3436,31 +3438,7 @@ if ( $wmgEnableTabularData ) {
 		'license' => 'CC0-1.0',
 		'isLocal' => false,
 	];
-	if ( $wgDBname === 'commonswiki' ) {
-		// Ensure we have a stable cross-wiki title resolution
-		// See JCSingleton::parseTitle()
-		$wgJsonConfigInterwikiPrefix = "meta";
-		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
-	} else {
-		$wgJsonConfigInterwikiPrefix = "commons";
-		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
-			'url' => 'https://commons.wikimedia.org/w/api.php'
-		];
-	}
-	$wgJsonConfigEnableLuaSupport = true;
-}
 
-// Enable Map (GeoJSON) data namespace on Commons - T149548
-// TODO: $wmgEnableMapData and $wmgEnableTabularData should probably be merged into one
-if ( $wmgEnableMapData ) {
-	// Safety: before extension.json, these values were initialized by JsonConfig.php
-	if ( !isset( $wgJsonConfigModels ) ) {
-		$wgJsonConfigModels = [];
-	}
-	if ( !isset( $wgJsonConfigs ) ) {
-		$wgJsonConfigs = [];
-	}
-	// https://www.mediawiki.org/wiki/Extension:JsonConfig#Configuration
 	$wgJsonConfigModels['Map.JsonConfig'] = 'JsonConfig\JCMapDataContent';
 	$wgJsonConfigs['Map.JsonConfig'] = [
 		'namespace' => 486,
@@ -3470,18 +3448,27 @@ if ( $wmgEnableMapData ) {
 		'license' => 'CC0-1.0',
 		'isLocal' => false,
 	];
+
+	// Enable Tabular data namespace on Commons - T148745
+	// Enable Map (GeoJSON) data namespace on Commons - T149548
+	// TODO: Consider whether this hard-coding to Commons is appropriate
 	if ( $wgDBname === 'commonswiki' ) {
 		// Ensure we have a stable cross-wiki title resolution
 		// See JCSingleton::parseTitle()
 		$wgJsonConfigInterwikiPrefix = "meta";
+
+		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
 		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
 	} else {
 		$wgJsonConfigInterwikiPrefix = "commons";
+
+		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
+			'url' => 'https://commons.wikimedia.org/w/api.php'
+		];
 		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
 			'url' => 'https://commons.wikimedia.org/w/api.php'
 		];
 	}
-	$wgJsonConfigEnableLuaSupport = true;
 }
 
 // Enable Config:Dashiki: sub-namespace on meta.wikimedia.org - T156971
