@@ -16858,22 +16858,6 @@ $wgConf->settings = [
 	'fishbowl' => false,
 ],
 
-// Enable Tabular data namespace on Commons - T148745
-'wmgEnableTabularData' => [
-	'default' => true,
-	# Technically they could be enabled as well, but keep them off just in case for now
-	'private' => false,
-	'fishbowl' => false,
-],
-
-// Enable Map (GeoJSON) data namespace on Commons - T149548
-'wmgEnableMapData' => [
-	'default' => true,
-	# Technically they could be enabled as well, but keep them off just in case for now
-	'private' => false,
-	'fishbowl' => false,
-],
-
 'wmgEnableDashikiData' => [
 	'default' => false,
 	'metawiki' => true,
