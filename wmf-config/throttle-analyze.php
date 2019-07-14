@@ -47,6 +47,7 @@ $wgExtensionFunctions[] = function () {
 		$wgRateLimits['badcaptcha']['ip'] = [ 1000, 86400 ];
 		$wgRateLimits['badcaptcha']['newbie'] = [ 1000, 86400 ];
 		$wgGroupPermissions['user']['autoconfirmed'] = true; // T204583
+		$wgGroupPermissions['*']['skipcaptcha'] = true; // T227487
 		return; # No point in proceeding to another entry
 	}
 };
