@@ -8550,49 +8550,6 @@ $wgConf->settings = [
 		],
 	],
 
-	// Whitelist read wikis
-	'private' => [
-		'*' => [
-			'read' => false,
-			'edit' => false,
-			'createaccount' => false
-		],
-		'user' => [
-			'move' => true,
-			'upload' => true,
-			'autoconfirmed' => true,
-			'editsemiprotected' => true,
-			'reupload' => true,
-			'skipcaptcha' => true,
-			'collectionsaveascommunitypage' => true,
-			'collectionsaveasuserpage' => true,
-		],
-		'inactive' => [
-			// for show only
-		],
-	],
-
-	// Fishbowls
-	'fishbowl' => [
-		'*' => [
-			'edit' => false,
-			'createaccount' => false
-		],
-		'user' => [
-		'move' => true,
-			'upload' => true,
-			'autoconfirmed' => true,
-			'editsemiprotected' => true,
-			'reupload' => true,
-			'skipcaptcha' => true,
-			'collectionsaveascommunitypage' => true,
-			'collectionsaveasuserpage' => true,
-		],
-		'inactive' => [
-			// for show only
-		],
-	],
-
 	// Read-only (except stewards)
 	'closed' => [
 		'*' => [
@@ -10736,6 +10693,49 @@ $wgConf->settings = [
 			'suppressionlog' => true,
 			'abusefilter-hide-log' => true, // Andrew, 2010-08-28
 			'abusefilter-hidden-log' => true, // Andrew, 2010-08-28
+		],
+	],
+
+	// Whitelist read wikis
+	'+private' => [
+		'*' => [
+			'read' => false,
+			'edit' => false,
+			'createaccount' => false
+		],
+		'user' => [
+			'move' => true,
+			'upload' => true,
+			'autoconfirmed' => true,
+			'editsemiprotected' => true,
+			'reupload' => true,
+			'skipcaptcha' => true,
+			'collectionsaveascommunitypage' => true,
+			'collectionsaveasuserpage' => true,
+		],
+		'inactive' => [
+			// for show only
+		],
+	],
+
+	// Fishbowls
+	'+fishbowl' => [
+		'*' => [
+			'edit' => false,
+			'createaccount' => false
+		],
+		'user' => [
+		'move' => true,
+			'upload' => true,
+			'autoconfirmed' => true,
+			'editsemiprotected' => true,
+			'reupload' => true,
+			'skipcaptcha' => true,
+			'collectionsaveascommunitypage' => true,
+			'collectionsaveasuserpage' => true,
+		],
+		'inactive' => [
+			// for show only
 		],
 	],
 ],
