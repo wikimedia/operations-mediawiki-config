@@ -22955,7 +22955,7 @@ $wgConf->settings = [
 	'kowiki' => 50,
 	'cswiki' => 50,
 	'viwiki' => 50,
-	'arwiki' => 0,
+	'arwiki' => 50,
 ],
 
 'wgGEHelpPanelReadingModeNamespaces' => [
