@@ -8429,6 +8429,7 @@ $wgConf->settings = [
 	'metawiki' => true,
 	'arwiki' => true,
 	'fawiki' => true,
+	'fiwiki' => true, // T228008
 	'frwiki' => true,
 	'plwiki' => true,
 	'zhwiki' => true,
