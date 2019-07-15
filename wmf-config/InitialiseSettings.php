@@ -23158,7 +23158,7 @@ $wgConf->settings = [
 	'cswiki' => 50,
 	'kowiki' => 50,
 	'viwiki' => 50,
-	'arwiki' => 0,
+	'arwiki' => 50,
 ],
 
 'wgGEHomepageTutorialTitle' => [
