@@ -10908,11 +10908,9 @@ $wgConf->settings = [
 			'patroller',
 			'autopatrolled',
 			'filemover',
-			'Image-reviewer',
 			'upwizcampeditors',
 			'templateeditor', // T227420
 		],
-		'Image-reviewer' => [ 'Image-reviewer' ],
 	],
 	'+dawiki' => [
 		'sysop' => [ 'patroller', 'autopatrolled' ],
@@ -11679,7 +11677,6 @@ $wgConf->settings = [
 			'patroller',
 			'autopatrolled',
 			'filemover',
-			'Image-reviewer',
 			'upwizcampeditors',
 			'templateeditor', // T227420
 		],
