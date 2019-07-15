@@ -22490,6 +22490,9 @@ $wgConf->settings = [
 		'mediawiki.recentchange' => [
 			'EventServiceName' => 'eventgate-main',
 		],
+		'mediawiki.revision-create' => [
+			'EventServiceName' => 'eventgate-main',
+		],
 		'mediawiki.revision-tags-change' => [
 			'EventServiceName' => 'eventgate-main',
 		],
