@@ -50,9 +50,6 @@ define( 'DB_REPLICA', -1 );     # Read from a replica (or only server)
 define( 'DB_MASTER', -2 );    # Write to master (or only server)
 /**@}*/
 
-# Obsolete aliases
-define( 'DB_SLAVE', -1 );
-
 /**@{
  * Virtual namespaces; don't appear in the page database
  */
@@ -66,7 +63,7 @@ define( 'NS_SPECIAL', -1 );
  * Number 100 and beyond are reserved for custom namespaces;
  * DO NOT assign standard namespaces at 100 or beyond.
  * DO NOT Change integer values as they are most probably hardcoded everywhere
- * see bug #696 which talked about that.
+ * see T2696 which talked about that.
  */
 define( 'NS_MAIN', 0 );
 define( 'NS_TALK', 1 );
@@ -84,17 +81,6 @@ define( 'NS_HELP', 12 );
 define( 'NS_HELP_TALK', 13 );
 define( 'NS_CATEGORY', 14 );
 define( 'NS_CATEGORY_TALK', 15 );
-
-/**
- * NS_IMAGE and NS_IMAGE_TALK are the pre-v1.14 names for NS_FILE and
- * NS_FILE_TALK respectively, and are kept for compatibility.
- *
- * When writing code that should be compatible with older MediaWiki
- * versions, either stick to the old names or define the new constants
- * yourself, if they're not defined already.
- */
-define( 'NS_IMAGE', NS_FILE );
-define( 'NS_IMAGE_TALK', NS_FILE_TALK );
 /**@}*/
 
 /**@{
@@ -104,7 +90,7 @@ define( 'CACHE_ANYTHING', -1 );  // Use anything, as long as it works
 define( 'CACHE_NONE', 0 );       // Do not cache
 define( 'CACHE_DB', 1 );         // Store cache objects in the DB
 define( 'CACHE_MEMCACHED', 2 );  // MemCached, must specify servers in $wgMemCacheServers
-define( 'CACHE_ACCEL', 3 );      // APC, XCache or WinCache
+define( 'CACHE_ACCEL', 3 );      // APC or WinCache
 /**@}*/
 
 /**@{
@@ -189,7 +175,7 @@ define( 'EDIT_INTERNAL', 128 );
 /**@}*/
 
 /**@{
- * Flags for Database::makeList()
+ * Obsolete IDatabase::makeList() constants
  * These are also available as Database class constants
  */
 define( 'LIST_COMMA', 0 );
@@ -356,4 +342,15 @@ define( 'MIGRATION_OLD', 0x00000000 | SCHEMA_COMPAT_OLD );
 define( 'MIGRATION_WRITE_BOTH', 0x10000000 | SCHEMA_COMPAT_READ_BOTH | SCHEMA_COMPAT_WRITE_BOTH );
 define( 'MIGRATION_WRITE_NEW', 0x20000000 | SCHEMA_COMPAT_READ_BOTH | SCHEMA_COMPAT_WRITE_NEW );
 define( 'MIGRATION_NEW', 0x30000000 | SCHEMA_COMPAT_NEW );
+/**@}*/
+
+/**@{
+ * XML dump schema versions, for use with XmlDumpWriter.
+ * See also the corresponding export-nnnn.xsd files in the docs directory,
+ * which are also listed at <https://www.mediawiki.org/xml/>.
+ * Note that not all old schema versions are represented here, as several
+ * were already unsupported at the time these constants were introduced.
+ */
+define( 'XML_DUMP_SCHEMA_VERSION_10', '0.10' );
+define( 'XML_DUMP_SCHEMA_VERSION_11', '0.11' );
 /**@}*/
