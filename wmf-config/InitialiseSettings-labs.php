@@ -1086,9 +1086,6 @@ function wmfLabsSettings() {
 		'wgGEHomepageEnabled' => [
 			'default' => true,
 		],
-		'wgGEHomepageMobileEnabled' => [
-			'default' => true,
-		],
 		'wgGEHomepageNewAccountEnablePercentage' => [
 			'default' => 50,
 		],
