@@ -8886,6 +8886,7 @@ $wgConf->settings = [
 			'autopatrol' => true,
 			'upload_by_url' => true,
 			'patrol' => true, // T183835
+			'mass-upload' => true, // T226217
 		],
 		'sysop' => [
 			'changetags' => true, // T134196
