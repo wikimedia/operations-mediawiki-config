@@ -2351,6 +2351,12 @@ if ( $wmgUseUploadWizard ) {
 		$wgUploadWizardConfig["missingCategoriesWikiText"] = "{{subst:unc}}";
 		$wgUploadWizardConfig['flickrBlacklistPage'] = 'User:FlickreviewR/bad-authors';
 		$wgUploadWizardConfig['customLicenseTemplate'] = 'Template:License_template_tag';
+
+		# commonswiki has lowercase image-reviewer, unset the uppercase set by UploadWizard's extension.json (T216406)
+		$wgExtensionFunctions[] = function () {
+			global $wgGroupPermissions;
+			unset( $wgGroupPermissions['Image-reviewer'] );
+		};
 	}
 
 	// Enable Structured Data captions on upload
