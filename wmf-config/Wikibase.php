@@ -217,6 +217,8 @@ if ( $wmgUseWikibaseRepo ) {
 	// Migration, T226086
 	$wgWBRepoSettings['tmpPropertyTermsMigrationStage'] = $wmgWikibaseTmpPropertyTermsMigrationStage;
 	$wgWBRepoSettings['tmpItemTermsMigrationStage'] = $wmgWikibaseTmpItemTermsMigrationStage;
+
+	$wgWBRepoSettings['enableRefTabs'] = $wmgWikibaseRepoEnableRefTabs;
 }
 
 if ( $wmgUseWikibaseClient ) {
