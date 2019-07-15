@@ -19745,6 +19745,10 @@ $wgConf->settings = [
 	],
 ],
 
+'wmgWikibaseRepoEnableRefTabs' => [
+	'default' => false,
+],
+
 'wmgUseWikibaseClient' => [
 	'default' => false,
 	'wikidataclient' => true,
@@ -23186,6 +23190,10 @@ $wgConf->settings = [
 ],
 
 'wmgUseTheWikipediaLibrary' => [
+	'default' => false,
+],
+
+'wgWBCitoidFullRestbaseURL' => [
 	'default' => false,
 ],
 ];
