@@ -22933,6 +22933,7 @@ $wgConf->settings = [
 	'kowiki' => true,
 	'cswiki' => true,
 	'viwiki' => true,
+	'arwiki' => true,
 ],
 
 'wgGEHelpPanelSearchEnabled' => [
@@ -22941,6 +22942,7 @@ $wgConf->settings = [
 	'kowiki' => true,
 	'cswiki' => true,
 	'viwiki' => true,
+	'arwiki' => true,
 ],
 
 'wgGEHelpPanelLoggingEnabled' => [
@@ -22953,6 +22955,7 @@ $wgConf->settings = [
 	'kowiki' => 50,
 	'cswiki' => 50,
 	'viwiki' => 50,
+	'arwiki' => 0,
 ],
 
 'wgGEHelpPanelReadingModeNamespaces' => [
@@ -22965,6 +22968,7 @@ $wgConf->settings = [
 	'kowiki' => '위키백과:질문방/{{Y-M|0}}',
 	'cswiki' => 'Wikipedie:Potřebuji_pomoc',
 	'viwiki' => 'Wikipedia:Giúp_sử_dụng_Wikipedia',
+	'arwiki' => ' ويكيبيديا:فريق_المساعدة/طلبات',
 ],
 
 'wgGEHelpPanelViewMoreTitle' => [
@@ -22973,6 +22977,7 @@ $wgConf->settings = [
 	'kowiki' => '위키백과:도움말',
 	'cswiki' => 'Nápověda:Obsah',
 	'viwiki' => 'Trợ_giúp:Mục_lục',
+	'arwiki' => 'مساعدة:محتويات',
 ],
 
 'wgGEHelpPanelLinks' => [
@@ -23083,6 +23088,33 @@ $wgConf->settings = [
 			'title' => 'Wikipedia:Câu_thường_hỏi',
 			'text' => 'Câu thường hỏi',
 			'id' => 'faq',
+		],
+	],
+	'arwiki' => [
+		[
+			'title' => 'مساعدة:محتويات',
+			'text' => 'إجابات عن الأسئلة الأكثر شيوعاً',
+			'id' => 'contents',
+		],
+		[
+			'title' => 'ويكيبيديا:بوابة_المشاركة/إنشاء_مقالة_جديدة',
+			'text' => 'انشاء مقالة جديدة',
+			'id' => 'newarticle',
+		],
+		[
+			'title' => 'ويكيبيديا:بوابة_المشاركة/تصحيح_خطأ_في_مقالة',
+			'text' => 'تصحيح خطأ في مقالة',
+			'id' => 'correcting',
+		],
+		[
+			'title' => 'مساعدة:مقدمة_عن_الوصلات/1',
+			'text' => 'الوصلات',
+			'id' => 'links',
+		],
+		[
+			'title' => 'ويكيبيديا:بوابة_المشاركة/مراسلة_مستخدم',
+			'text' => 'مراسلة مستخدم',
+			'id' => 'discussion',
 		],
 	],
 ],
