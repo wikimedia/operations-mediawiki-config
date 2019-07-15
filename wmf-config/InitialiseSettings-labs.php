@@ -1179,6 +1179,9 @@ function wmfLabsSettings() {
 		'wgArticlePlaceholderImageProperty' => [
 			'default' => 'P964',
 		],
+		'wmgWikibaseRepoEnableRefTabs' => [
+			'wikidatawiki' => true,
+		],
 		'wmgWikibaseClientEchoIcon' => [
 			'default' => [ 'path' => '/static/images/wikibase/echoIcon.svg' ],
 		],
@@ -1542,6 +1545,9 @@ function wmfLabsSettings() {
 		],
 		'wmgUseSecureLinkFixer' => [
 			'default' => true,
+		],
+		'wgWBCitoidFullRestbaseURL' => [
+			'wikidatawiki' => 'https://en.wikipedia.beta.wmflabs.org/api/rest_',
 		],
 	];
 } # wmflLabsSettings()
