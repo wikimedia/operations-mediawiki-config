@@ -18606,11 +18606,6 @@ function wmfGetVariantSettings() {
 'wgPageTriageNoIndexUnreviewedNewArticles' => [
 	'default' => true,
 ],
-'wgPageTriageNoIndexTemplates' => [
-	'default' => [],
-	'testwiki' => [ 'NOINDEX' ],
-	'enwiki' => [ 'NOINDEX' ],
-],
 'wgPageTriageDraftNamespaceId' => [
 	'default' => false,
 	'testwiki' => 118,
