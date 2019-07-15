@@ -23146,6 +23146,7 @@ $wgConf->settings = [
 	'cswiki' => true,
 	'kowiki' => true,
 	'viwiki' => true,
+	'arwiki' => true,
 ],
 
 'wgGEHomepageLoggingEnabled' => [
@@ -23157,6 +23158,7 @@ $wgConf->settings = [
 	'cswiki' => 50,
 	'kowiki' => 50,
 	'viwiki' => 50,
+	'arwiki' => 0,
 ],
 
 'wgGEHomepageTutorialTitle' => [
@@ -23165,6 +23167,7 @@ $wgConf->settings = [
 	'cswiki' => 'Wikipedie:Průvodce',
 	'kowiki' => '위키백과:빠른 길라잡이',
 	'viwiki' => 'Wikipedia:Sách_hướng_dẫn',
+	'arwiki' => 'ويكيبيديا:دروس',
 ],
 
 'wgGEHomepageMentorsList' => [
@@ -23173,6 +23176,7 @@ $wgConf->settings = [
 	'cswiki' => 'Wikipedie:Potřebuji_pomoc/Mentoři',
 	'kowiki' => '위키백과:새_사용자_경험/새_사용자_멘토',
 	'viwiki' => 'Wikipedia:Phát_triển_cộng_đồng/Danh_sách_thành_viên_mentor',
+	'arwiki' => 'ويكيبيديا:مشروع_فريق_النمو/قائمة_المتطوعين',
 ],
 
 'wgDisableRollbackConfirmationFeature' => [
