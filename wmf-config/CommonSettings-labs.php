@@ -214,13 +214,12 @@ if ( $wgDBname == 'commonswiki' ) {
 	$wgUseInstantCommons = true;
 }
 
-// Enable Tabular data namespace on Commons - T148745
-if ( $wmgEnableTabularData && $wgDBname !== 'commonswiki' ) {
-	$wgJsonConfigs['Tabular.JsonConfig']['remote']['url'] = 'https://commons.wikimedia.beta.wmflabs.org/w/api.php';
-}
+if ( $wmgEnableJsonConfigDataMode && $wgDBname !== 'commonswiki' ) {
 
-// Enable Map (GeoJSON) data namespace on Commons - T149548
-if ( $wmgEnableMapData && $wgDBname !== 'commonswiki' ) {
+	// Enable Tabular data namespace on Commons - T148745
+	$wgJsonConfigs['Tabular.JsonConfig']['remote']['url'] = 'https://commons.wikimedia.beta.wmflabs.org/w/api.php';
+
+	// Enable Map (GeoJSON) data namespace on Commons - T149548
 	$wgJsonConfigs['Map.JsonConfig']['remote']['url'] = 'https://commons.wikimedia.beta.wmflabs.org/w/api.php';
 }
 
