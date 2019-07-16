@@ -304,8 +304,6 @@ if ( $wmgUseFileImporter ) {
 		$wgFileImporterWikidataEntityEndpoint = 'https://wikidata.beta.wmflabs.org/wiki/Special:EntityData/';
 		$wgFileImporterWikidataNowCommonsEntity = 'Q531650';
 
-		$wgFileImporterSourceWikiDeletion = true;
-		$wgFileImporterSourceWikiTemplating = true;
 	}
 }
 

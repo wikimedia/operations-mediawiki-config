@@ -3328,6 +3328,8 @@ if ( $wmgUseFileImporter ) {
 	];
 	$wgFileImporterWikidataEntityEndpoint = 'https://www.wikidata.org/wiki/Special:EntityData/';
 	$wgFileImporterWikidataNowCommonsEntity = 'Q5611625';
+	$wgFileImporterSourceWikiDeletion = true;
+	$wgFileImporterSourceWikiTemplating = true;
 }
 
 if ( $wmgUseContentTranslation ) {
