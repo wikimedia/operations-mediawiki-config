@@ -23182,6 +23182,10 @@ $wgConf->settings = [
 'wmgWikibaseTmpItemTermsMigrationStage' => [
 	'default' => [ 'max' => MIGRATION_OLD ],
 ],
+
+'wmgUseTheWikipediaLibrary' => [
+	'default' => false,
+],
 ];
 
 ### WMF Labs override #####

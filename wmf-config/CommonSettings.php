@@ -3960,6 +3960,10 @@ if ( $wmgUseWikimediaEditorTasks ) {
 	wfLoadExtension( 'WikimediaEditorTasks' );
 }
 
+if ( $wmgUseTheWikipediaLibrary ) {
+	wfLoadExtension( 'TheWikipediaLibrary' );
+}
+
 # Temporary for the HHVM => PHP7.2 migration. Adds an array of unicode chars
 # that have broken uppercasing in HHVM. In this phase, we want php7 to behave
 # like HHVM. See T219279 for details.

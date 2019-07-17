@@ -1533,5 +1533,8 @@ function wmfLabsSettings() {
 		'-wgSpecialSearchFormOptions' => [
 			'wikidatawiki' => [ 'showDescriptions' => true ],
 		],
+		'wmgUseTheWikipediaLibrary' => [
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()
