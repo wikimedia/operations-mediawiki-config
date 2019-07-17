@@ -1536,5 +1536,8 @@ function wmfLabsSettings() {
 		'wmgUseTheWikipediaLibrary' => [
 			'default' => true,
 		],
+		'wgTwlEditCount' => [
+			'default' => 100,
+		],
 	];
 } # wmflLabsSettings()
