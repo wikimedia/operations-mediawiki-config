@@ -1093,6 +1093,7 @@ function wmfLabsSettings() {
 			'default' => '',
 			'enwiki' => 'Wikipedia:Mentors',
 			'arwiki' => 'Wikipedia:Mentors',
+			'kowiki' => '위키백과:새_사용자_경험/새_사용자_멘토',
 		],
 		'wgGEHomepageTutorialTitle' => [
 			'default' => '',
