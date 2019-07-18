@@ -1340,6 +1340,10 @@ if ( $wmgUsePoolCounter ) {
 	include "$wmfConfigDir/PoolCounterSettings.php";
 }
 
+if ( $wmgUseSecureLinkFixer ) {
+	wfLoadExtension( 'SecureLinkFixer' );
+}
+
 if ( $wmgUseScore ) {
 	wfLoadExtension( 'Score' );
 	$wgScoreSafeMode = false;
