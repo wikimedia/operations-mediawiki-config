@@ -1540,5 +1540,8 @@ function wmfLabsSettings() {
 		'wgTwlEditCount' => [
 			'default' => 100,
 		],
+		'wmgUseSecureLinkFixer' => [
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()

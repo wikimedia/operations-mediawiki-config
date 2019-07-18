@@ -13168,6 +13168,10 @@ $wgConf->settings = [
 	'metawiki' => true,
 ],
 
+'wmgUseSecureLinkFixer' => [
+	'default' => false,
+],
+
 'wmgUseScore' => [
 	'default' => true,
 	'wikitech' => false,
