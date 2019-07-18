@@ -128,6 +128,7 @@ $IP/extensions/SandboxLink/extension.json
 $IP/extensions/Score/extension.json
 $IP/extensions/Scribunto/extension.json
 $IP/extensions/SearchExtraNS/extension.json
+$IP/extensions/SecureLinkFixer/extension.json
 $IP/extensions/SecurePoll/extension.json
 $IP/extensions/Sentry/extension.json
 $IP/extensions/ShortUrl/extension.json
@@ -143,6 +144,7 @@ $IP/extensions/TemplateStyles/extension.json
 $IP/extensions/TemplateWizard/extension.json
 $IP/extensions/TextExtracts/extension.json
 $IP/extensions/Thanks/extension.json
+$IP/extensions/TheWikipediaLibrary/extension.json
 $IP/extensions/TimedMediaHandler/extension.json
 $IP/extensions/timeline/extension.json
 $IP/extensions/TitleBlacklist/extension.json
