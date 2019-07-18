@@ -20930,7 +20930,7 @@ $wgConf->settings = [
 // $wgTranslateTranslationDefaultService in CommonSettings.php if you plan to
 // bring down a specific cluster.
 'wgCirrusSearchDefaultCluster' => [
-	'default' => 'codfw',
+	'default' => $wmfDatacenter,
 ],
 // Kept for BC with SRE tools that checks siteinfo (see APIQuerySiteInfoGeneralInfo in CommonSettings.php)
 'wmgCirrusSearchDefaultCluster' => [
@@ -20938,9 +20938,7 @@ $wgConf->settings = [
 ],
 
 'wgCirrusSearchClusterOverrides' => [
-	'default' => [
-		'completion' => $wmfDatacenter,
-	],
+	'default' => [],
 ],
 
 'wgCirrusSearchWriteClusters' => [
