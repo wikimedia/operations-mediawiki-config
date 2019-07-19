@@ -19,26 +19,18 @@ $dbConfigFileName = ( isset( $_GET['dc'] ) && isset( $allowedDCs[$_GET['dc']] ) 
 	? $allowedDCs[$_GET['dc']]
 	: $allowedDCs['eqiad'];
 
-// Mock vars from CommonSettings.php for db-*.php
+// Mock vars needed by db-*.php (normally set by CommonSettings.php)
 $wgDBname = null;
 $wgDBuser = null;
 $wgDBpassword = null;
-$wmfMasterDatacenter = 'eqiad';
+$wgSecretKey = null;
+$wmfMasterDatacenter = null;
 
-// Load Defines (used by db-*.php and InitialiseSettings.php)
+// Mock vars needed by db-*.php and InitialiseSettings.php (normally set by MediaWiki)
 require_once __DIR__ . '/../../tests/Defines.php';
 
-// Load db vars
+// Load the actual db vars
 require_once __DIR__ . "/../../wmf-config/{$dbConfigFileName}";
-
-// Mock vars from MWRealm.php for wgConf.php
-$wmfRealm = 'production';
-
-// Load $wgConf (for making canonical urls from dbnames)
-require_once __DIR__ . '/../../tests/SiteConfiguration.php';
-require_once __DIR__ . '/../../multiversion/MWWikiversions.php';
-require_once __DIR__ . '/../../wmf-config/wgConf.php';
-require_once __DIR__ . '/../../wmf-config/InitialiseSettings.php';
 
 class WmfClusters {
 	private $clusters;
@@ -88,14 +80,40 @@ class WmfClusters {
 	 * @param string $db
 	 */
 	public function getServer( $db ) {
-		global $wgConf;
-		list( $site, $lang ) = $wgConf->siteFromDB( $db );
-		return $wgConf->get(
-			'wgCanonicalServer',
-			$db,
-			$site,
-			[ 'lang' => $lang, 'site' => $site ]
-		);
+		static $canonicalServers;
+		if ( $canonicalServers === null ) {
+			// Mock variable to capture the property assignment
+			global $wgConf;
+			$wgConf = new stdClass();
+			require_once __DIR__ . '/../../wmf-config/InitialiseSettings.php';
+			$canonicalServers = $wgConf->settings['wgCanonicalServer'];
+		}
+		if ( isset( $canonicalServers[$db] ) ) {
+			// If the wiki is special or otherwise has an explicit server name, use it.
+			$server = $canonicalServers[$db];
+		} else {
+			// Try the tag defaults (from db suffix to wgConf tag)
+			$suffixes = [
+				'wiki' => 'wikipedia',
+				'wiktionary' => 'wiktionary',
+				'wikiquote' => 'wikiquote',
+				'wikibooks' => 'wikibooks',
+				'wikiquote' => 'wikiquote',
+				'wikinews' => 'wikinews',
+				'wikisource' => 'wikisource',
+				'wikiversity' => 'wikiversity',
+				'wikimedia' => 'wikimedia',
+				'wikivoyage' => 'wikivoyage',
+			];
+			foreach ( $suffixes as $suffix => $tag ) {
+				if ( substr( $db, -strlen( $suffix ) ) === $suffix ) {
+					$lang = substr( $db, 0, -strlen( $suffix ) );
+					$server = strtr( $canonicalServers[$tag], '$lang', $lang );
+					break;
+				}
+			}
+		}
+		return $server;
 	}
 
 	/**
