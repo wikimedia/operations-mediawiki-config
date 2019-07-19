@@ -9913,6 +9913,9 @@ $wgConf->settings = [
 			'editinterface' => true,
 			'editsitejson' => true,
 		],
+		'flood' => [
+			'bot' => true, // T228521
+		],
 	],
 	'+ptwikinews' => [
 		'editprotected' => [ 'editprotected' => true, 'editsemiprotected' => true ], // T162577
@@ -11291,8 +11294,8 @@ $wgConf->settings = [
 		'sysop' => [ 'autopatrolled' ], // T168981
 	],
 	'+ptwiki' => [
-		'bureaucrat' => [ 'rollbacker', 'eliminator', 'autoreviewer', 'interface-editor' ], // T41905, T65750, T212735
-		'sysop' => [ 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator' ], // T65750
+		'bureaucrat' => [ 'rollbacker', 'eliminator', 'autoreviewer', 'interface-editor', 'flood' ], // T41905, T65750, T212735, T228521
+		'sysop' => [ 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator', 'flood' ], // T65750, T228521
 	],
 	'+quwiki' => [
 		'sysop' => [ 'rollbacker' ],
@@ -12093,8 +12096,8 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'interface-editor' ], // T133472
 	],
 	'+ptwiki' => [
-		'bureaucrat' => [ 'rollbacker', 'eliminator', 'autoreviewer', 'interface-editor', 'bureaucrat', 'sysop' ], // T41905, T65750, T107661, T212735
-		'sysop' => [ 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator' ], // T65750
+		'bureaucrat' => [ 'rollbacker', 'eliminator', 'autoreviewer', 'interface-editor', 'bureaucrat', 'sysop', 'flood' ], // T41905, T65750, T107661, T212735, T228521
+		'sysop' => [ 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator', 'flood' ], // T65750, T228521
 	],
 	'+ptwikinews' => [
 		'sysop' => [ 'reviewer', 'editprotected' ], // T162577
@@ -14116,6 +14119,7 @@ $wgConf->settings = [
 	'mlwiki' => [ 'botadmin' => [ 'botadmin' ] ],
 	'simplewiki' => [ 'sysop' => [ 'flood' ] ],
 	'plwiki' => [ 'flood' => [ 'flood' ] ], // T22155 , T23238
+	'ptwiki' => [ 'flood' => [ 'flood' ] ], // T228521
 	'sourceswiki' => [ 'flood' => [ 'flood' ] ], // T193350
 	'strategywiki' => [ 'sysop' => [ 'flood' ] ],
 	'srwiki' => [ 'sysop' => [ 'flood' ] ],
