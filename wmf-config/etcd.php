@@ -45,7 +45,7 @@ function wmfSetupEtcd() {
 }
 
 function wmfEtcdConfig() {
-	global $wmfDatacenter, $wgReadOnly, $wmfMasterDatacenter;
+	global $wmfDatacenter, $wgReadOnly, $wmfMasterDatacenter, $wmfDbconfigFromEtcd;
 	$etcdConfig = wmfSetupEtcd();
 
 	# Read only mode
@@ -54,4 +54,35 @@ function wmfEtcdConfig() {
 	# Master datacenter
 	# The datacenter from which we serve traffic.
 	$wmfMasterDatacenter = $etcdConfig->get( 'common/WMFMasterDatacenter' );
+
+	# Database load balancer config (sectionLoads, groupLoadsBySection, etc) from etcd.
+	# See https://wikitech.wikimedia.org/wiki/Dbctl
+	$wmfDbconfigFromEtcd = $etcdConfig->get( "$wmfDatacenter/dbconfig" );
+}
+
+// Phased rollout of dbctl: database loadbalancer config from etcd.
+// Eventually this will be used on all appservers, but to start, just a small set.
+// See https://wikitech.wikimedia.org/wiki/Dbctl and https://phabricator.wikimedia.org/T229070
+//
+// This function must be called after db-{eqiad,codfw}.php has been loaded!
+// It overwrites a few sections of $wgLBFactoryConf with data from etcd.
+function wmfEtcdApplyDBConfig() {
+	global $wgLBFactoryConf, $wmfDbconfigFromEtcd;
+
+	// This is treated as a set; the presence of a key, rather than its value,
+	// is what is relevant.
+	$dbctl_enabled_hosts = [
+		'mwdebug1001' => true,
+	];
+	if ( isset( $dbctl_enabled_hosts[ wfHostname() ] ) ) {
+		$wgLBFactoryConf['readOnlyBySection'] = $wmfDbconfigFromEtcd['readOnlyBySection'];
+		$wgLBFactoryConf['groupLoadsBySection'] = $wmfDbconfigFromEtcd['groupLoadsBySection'];
+
+		// Because JSON dictionaries are unordered, but the order of sectionLoads is
+		// rather significant to Mediawiki, dbctl stores the master in a dictionary by itself,
+		// and then the remaining replicas in a second dict.
+		foreach ( $wmfDbconfigFromEtcd['sectionLoads'] as $section => $sectionLoads ) {
+			$wgLBFactoryConf['sectionLoads'][$section] = array_merge( $sectionLoads[0], $sectionLoads[1] );
+		}
+	}
 }

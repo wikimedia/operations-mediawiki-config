@@ -308,6 +308,11 @@ if ( $wmfRealm === 'labs' ) {
 	require "$wmfConfigDir/db-{$wmfDatacenter}.php";
 }
 
+// Phased rollout of dbctl: database loadbalancer config from etcd.
+// Eventually this will be used on all appservers, but to start, just a small set.
+// See https://wikitech.wikimedia.org/wiki/Dbctl and https://phabricator.wikimedia.org/T229070
+wmfEtcdApplyDBConfig();
+
 // Set $wgProfiler to the value provided by PhpAutoPrepend.php
 if ( isset( $wmgProfiler ) ) {
 	$wgProfiler = $wmgProfiler;
