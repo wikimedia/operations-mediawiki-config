@@ -26,7 +26,7 @@ $IP/extensions/CodeMirror/extension.json
 $IP/extensions/CodeReview/extension.json
 $IP/extensions/Cognate/extension.json
 $IP/extensions/CollaborationKit/extension.json
-$IP/extensions/Collection/Collection.php
+$IP/extensions/Collection/extension.json
 $IP/extensions/CommonsMetadata/extension.json
 $IP/extensions/ConfirmEdit/extension.json
 $IP/extensions/ConfirmEdit/FancyCaptcha/extension.json
