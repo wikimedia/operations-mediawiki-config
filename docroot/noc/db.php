@@ -10,17 +10,26 @@ if ( $format === 'json' ) {
 	ini_set( 'display_errors', 1 );
 }
 
-// Mock vars from CommonSettings.php for db-eqiad.php
+// Default to eqiad but allow limited other DCs to be specified with ?dc=foo.
+$allowedDCs = [
+	'codfw' => 'db-codfw.php',
+	'eqiad' => 'db-eqiad.php',
+];
+$dbConfigFileName = ( isset( $_GET['dc'] ) && isset( $allowedDCs[$_GET['dc']] ) )
+	? $allowedDCs[$_GET['dc']]
+	: $allowedDCs['eqiad'];
+
+// Mock vars from CommonSettings.php for db-*.php
 $wgDBname = null;
 $wgDBuser = null;
 $wgDBpassword = null;
 $wmfMasterDatacenter = 'eqiad';
 
-// Load Defines (used by db-eqiad.php and InitialiseSettings.php)
+// Load Defines (used by db-*.php and InitialiseSettings.php)
 require_once __DIR__ . '/../../tests/Defines.php';
 
 // Load db vars
-require_once __DIR__ . '/../../wmf-config/db-eqiad.php';
+require_once __DIR__ . "/../../wmf-config/{$dbConfigFileName}";
 
 // Mock vars from MWRealm.php for wgConf.php
 $wmfRealm = 'production';
@@ -175,7 +184,8 @@ foreach ( $clusters->getNames() as $name ) {
 	print $clusters->htmlFor( $name ) . '</section>';
 }
 print '</main>';
+print '<footer>Automatically generated based on <a href="./conf/highlight.php?file='. htmlspecialchars( $dbConfigFileName ) . '">';
+print 'wmf-config/' . htmlspecialchars( $dbConfigFileName ) . '</a></footer>'
 ?>
-<footer>Automatically generated based on <a href="./conf/highlight.php?file=db-eqiad.php">wmf-config/db-eqiad.php</a></footer>
 </body>
 </html>
