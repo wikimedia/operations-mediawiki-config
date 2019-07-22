@@ -47,6 +47,15 @@ class WmfClusters {
 	 * @param string $clusterName
 	 * @return array
 	 */
+	public function getReadOnly( $clusterName ) {
+		global $wgLBFactoryConf;
+		return $wgLBFactoryConf['readOnlyBySection'][$clusterName] ?? false;
+	}
+
+	/**
+	 * @param string $clusterName
+	 * @return array
+	 */
 	public function getHosts( $clusterName ) {
 		global $wgLBFactoryConf;
 		return array_keys( $wgLBFactoryConf['sectionLoads'][$clusterName] );
@@ -59,6 +68,15 @@ class WmfClusters {
 	public function getLoads( $clusterName ) {
 		global $wgLBFactoryConf;
 		return $wgLBFactoryConf['sectionLoads'][$clusterName];
+	}
+
+	/**
+	 * @param string $clusterName
+	 * @return string
+	 */
+	public function getGroupLoads( $clusterName ) {
+		global $wgLBFactoryConf;
+		return $wgLBFactoryConf['groupLoadsBySection'][$clusterName];
 	}
 
 	/**
@@ -157,7 +175,9 @@ if ( $format === 'json' ) {
 		$data[$name] = [
 			'hosts' => $clusters->getHosts( $name ),
 			'loads' => $clusters->getLoads( $name ),
+			'groupLoads' => $clusters->getGroupLoads( $name ),
 			'dbs' => $clusters->getDBs( $name ),
+			'readOnly' => $clusters->getReadOnly( $name ),
 		];
 	}
 	header( 'Content-Type: application/json; charset=utf-8' );
