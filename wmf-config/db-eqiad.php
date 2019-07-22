@@ -184,8 +184,8 @@ $wgLBFactoryConf = [
 		'db1092' => 200,    # D2 3.6TB 512GB, api
 		'db1099:3318' => 100, # B2 3.6TB 512GB # rc, log: s1 and s8
 		'db1101:3318' => 100, # C2 3.6TB 512GB # rc, log: s7 and s8
-		'db1104' => 200,    # B3 3.6TB 512GB, api # candidate master
-		'db1109' => 400,    # D8 3.6TB 512GB # future candidate master # api
+		'db1104' => 300,    # B3 3.6TB 512GB, api # candidate master
+		'db1109' => 300,    # D8 3.6TB 512GB # future candidate master # api
 		'db1126' => 500,    # A1 4.4TB 512GB
 	],
 
@@ -497,7 +497,7 @@ $wgLBFactoryConf = [
 		'api' => [
 			'db1092' => 3,
 			'db1104' => 2,
-			'db1109' => 1,
+			'db1109' => 2,
 		],
 		'watchlist' => [
 			'db1099:3318' => 1,
