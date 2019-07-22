@@ -12874,10 +12874,10 @@ $wgConf->settings = [
 		NS_TEMPLATE_TALK => 'noindex,follow',
 		NS_HELP_TALK => 'noindex,follow',
 		NS_CATEGORY_TALK => 'noindex,follow',
-		104 => 'noindex,nofollow',    // מפתח
-		105 => 'noindex,nofollow',    // שיחת_מפתח
-		112 => 'noindex,nofollow',    // עמוד
-		113 => 'noindex,nofollow',    // שיחת_עמוד
+		104 => 'noindex,nofollow',    // עמוד
+		105 => 'noindex,nofollow',    // שיחת_עמוד
+		112 => 'noindex,nofollow',    // מפתח
+		113 => 'noindex,nofollow',    // שיחת_מפתח
 		116 => 'noindex,nofollow',    // מקור
 		117 => 'noindex,nofollow',    // שיחת_מקור
 	],

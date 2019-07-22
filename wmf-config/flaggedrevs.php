@@ -372,10 +372,10 @@ $wgExtensionFunctions[] = function () {
 	} elseif ( $wgDBname == 'hewikisource' ) {
 		$wgFlaggedRevsWhitelist = [ 'עמוד_ראשי' ]; // T227000
 		$wgFlaggedRevsNamespaces[] = 100;
-		$wgFlaggedRevsNamespaces[] = 104;
 		$wgFlaggedRevsNamespaces[] = 106;
 		$wgFlaggedRevsNamespaces[] = 108;
 		$wgFlaggedRevsNamespaces[] = 110;
+		$wgFlaggedRevsNamespaces[] = 112;
 		$wgFlaggedRevsTags = [
 			'completeness' => [ 'levels' => 4, 'quality' => 3, 'pristine' => 5 ],
 			'accuracy' => [ 'levels' => 4, 'quality' => 3, 'pristine' => 5 ],
