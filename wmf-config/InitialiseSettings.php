@@ -8378,6 +8378,11 @@ $wgConf->settings = [
 			'extendedmover' => [ 16, 60 ], // T138703
 		],
 	],
+	'+hewiki' => [
+		'rollback' => [
+			'patroller' => [ 50, 60 ], // T228649
+		],
+	],
 	'+plwiki' => [
 		// Limit to 3 per day for new users (T169268)
 		'thanks-notification' => [
