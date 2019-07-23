@@ -204,6 +204,7 @@ $services = [
 		'poolcounter' => [
 			'10.64.32.126', # poolcounter1001.eqiad.wmnet
 			'10.64.0.19', # poolcounter1003.eqiad.wmnet
+			'10.64.0.151', # poolcounter1004.eqiad.wmnet
 		],
 
 		// LockManager Redis
