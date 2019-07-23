@@ -202,7 +202,6 @@ $services = [
 		'etcd' => '_etcd._tcp.eqiad.wmnet',
 
 		'poolcounter' => [
-			'10.64.0.19', # poolcounter1003.eqiad.wmnet
 			'10.64.0.151', # poolcounter1004.eqiad.wmnet
 			'10.64.32.236', # poolcounter1005.eqiad.wmnet
 		],
@@ -226,8 +225,8 @@ $services = [
 		'etcd' => '_etcd._tcp.codfw.wmnet',
 
 		'poolcounter' => [
-			'10.192.0.19', # poolcounter2001.codfw.wmnet
-			'10.192.16.21', # poolcounter2002.codfw.wmnet
+			'10.192.0.132', # poolcounter2003.codfw.wmnet
+			'10.192.16.129', # poolcounter2004.codfw.wmnet
 		],
 
 		'redis_lock' => [
