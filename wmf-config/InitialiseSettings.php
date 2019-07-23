@@ -20830,6 +20830,14 @@ $wgConf->settings = [
 	'wikidatawiki' => 3,
 ],
 
+'wmgWikibaseUseSSRTermbox' => [
+	'testwikidatawiki' => true,
+],
+
+'wmgWikibaseSSRTermboxServerUrl' => [
+	'testwikidatawiki' => 'http://termbox-test.staging.svc.eqiad.wmnet:3031'
+],
+
 'wmgUseEntitySourceBasedFederation' => [
 	'default' => false,
 	'commonswiki' => true,
