@@ -114,73 +114,59 @@ $wgLBFactoryConf = [
 # For more info see also https://wikitech.wikimedia.org/wiki/dbctl
 
 'serverTemplate' => [
-	'dbname'	  => $wgDBname,
-	'user'		  => $wgDBuser,
-	'password'	  => $wgDBpassword,
-	'type'		  => 'mysql',
-	'flags'		  => DBO_DEFAULT,
-	'max lag'	  => 6, // should be safely less than $wgCdnReboundPurgeDelay
-	'variables'   => [
+	'dbname'             => $wgDBname,
+	'user'               => $wgDBuser,
+	'password'           => $wgDBpassword,
+	'type'               => 'mysql',
+	'flags'              => DBO_DEFAULT,
+	'max lag'            => 6, // should be safely less than $wgCdnReboundPurgeDelay
+	'useGTIDs'           => true,
+	'lagDetectionMethod' => 'pt-heartbeat',
+	'variables'          => [
 		'innodb_lock_wait_timeout' => 15
 	]
 ],
 
 'templateOverridesBySection' => [
 	's1' => [
-		'lagDetectionMethod' => 'pt-heartbeat',
 		'lagDetectionOptions' => [
 			'conds' => [ 'shard' => 's1', 'datacenter' => $wmfMasterDatacenter ]
 		],
-		'useGTIDs' => true
 	],
 	's2' => [
-		'lagDetectionMethod' => 'pt-heartbeat',
 		'lagDetectionOptions' => [
 			'conds' => [ 'shard' => 's2', 'datacenter' => $wmfMasterDatacenter ]
 		],
-		'useGTIDs' => true
 	],
 	'DEFAULT' /* s3 */  => [
-		'lagDetectionMethod' => 'pt-heartbeat',
 		'lagDetectionOptions' => [
 			'conds' => [ 'shard' => 's3', 'datacenter' => $wmfMasterDatacenter ]
 		],
-		'useGTIDs' => true
 	],
 	's4' => [
-		'lagDetectionMethod' => 'pt-heartbeat',
 		'lagDetectionOptions' => [
 			'conds' => [ 'shard' => 's4', 'datacenter' => $wmfMasterDatacenter ]
 		],
-		'useGTIDs' => true
 	],
 	's5' => [
-		'lagDetectionMethod' => 'pt-heartbeat',
 		'lagDetectionOptions' => [
 			'conds' => [ 'shard' => 's5', 'datacenter' => $wmfMasterDatacenter ]
 		],
-		'useGTIDs' => true
 	],
 	's6' => [
-		'lagDetectionMethod' => 'pt-heartbeat',
 		'lagDetectionOptions' => [
 			'conds' => [ 'shard' => 's6', 'datacenter' => $wmfMasterDatacenter ]
 		],
-		'useGTIDs' => true
 	],
 	's7' => [
-		'lagDetectionMethod' => 'pt-heartbeat',
 		'lagDetectionOptions' => [
 			'conds' => [ 'shard' => 's7', 'datacenter' => $wmfMasterDatacenter ]
 		],
-		'useGTIDs' => true
 	],
 	's8' => [
-		'lagDetectionMethod' => 'pt-heartbeat',
 		'lagDetectionOptions' => [
 			'conds' => [ 'shard' => 's8', 'datacenter' => $wmfMasterDatacenter ]
 		],
-		'useGTIDs' => true
 	],
 ],
 
@@ -204,6 +190,7 @@ $wgLBFactoryConf = [
 
 'externalTemplateOverrides' => [
 	'flags' => 0, // No transactions
+	'lagDetectionMethod' => 'Seconds_Behind_Master', // no pt-heartbeat
 ],
 
 'templateOverridesByCluster' => [
