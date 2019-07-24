@@ -13183,8 +13183,7 @@ $wgConf->settings = [
 ],
 
 'wmgUseSecureLinkFixer' => [
-	'default' => false,
-	'group0' => true,
+	'default' => true,
 ],
 
 'wmgUseScore' => [

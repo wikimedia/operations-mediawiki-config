@@ -1543,9 +1543,6 @@ function wmfLabsSettings() {
 		'wgTwlEditCount' => [
 			'default' => 100,
 		],
-		'wmgUseSecureLinkFixer' => [
-			'default' => true,
-		],
 		'wgWBCitoidFullRestbaseURL' => [
 			'wikidatawiki' => 'https://en.wikipedia.beta.wmflabs.org/api/rest_',
 		],
