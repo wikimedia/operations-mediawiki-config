@@ -24,7 +24,7 @@ CauseFatalError::go();
  */
 class CauseFatalError {
 	private static $allowedActions = [
-		'noerror', 'nomethod', 'oom', 'timeout', 'segfault',
+		'noerror', 'exception', 'nomethod', 'oom', 'timeout', 'segfault',
 	];
 
 	/**
@@ -112,6 +112,13 @@ class CauseFatalError {
 	 */
 	public static function doNoerror() {
 		echo "No error was generated.<br />";
+	}
+
+	/**
+	 * Throws an ordinary exception
+	 */
+	public static function doException() {
+		throw new Exception( __METHOD__ );
 	}
 
 	/**

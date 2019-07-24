@@ -5451,6 +5451,7 @@ $wgConf->settings = [
 		'DBQuery' => 'warning',
 		'DBReplication' => 'warning',
 		'DBTransaction' => 'debug',
+		'DeferredUpdates' => 'error',
 		'deprecated' => 'debug',
 		'diff' => 'debug',
 		'Echo' => 'debug',
