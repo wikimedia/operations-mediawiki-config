@@ -39,7 +39,6 @@ use MediaWiki\Auth\AuthenticationResponse;
 use MediaWiki\Logger\LoggerFactory;
 use Wikimedia\MWConfig\ServiceConfig;
 use Wikimedia\MWConfig\XWikimediaDebug;
-use Wikimedia\MWConfig\MWConfigCacheGenerator;
 
 # Godforsaken hack to work around problems with the reverse proxy caching changes...
 #
@@ -73,7 +72,6 @@ if ( isset( $_SERVER['SERVER_ADDR'] ) ) {
 # Load classes required by configuration files
 require_once __DIR__ . '/../src/XWikimediaDebug.php';
 require_once __DIR__ . '/../src/ServiceConfig.php';
-require_once __DIR__ . '/../src/MWConfigCacheGenerator.php';
 
 # Get the version object for this Wiki (must be set by now, along with $IP)
 if ( !class_exists( 'MWMultiVersion' ) ) {
@@ -201,7 +199,66 @@ if ( @filemtime( $filename ) >= filemtime( "$wmfConfigDir/InitialiseSettings.php
 }
 
 if ( !$globals ) {
-	$globals = MWConfigCacheGenerator::getMWConfigForCacheing( $wgDBname, $wgConf );
+	# Get configuration from SiteConfiguration object
+	require "$wmfConfigDir/InitialiseSettings.php";
+
+	# Collect all the dblist tags associated with this wiki
+	$wikiTags = [];
+	# When updating list please run ./docroot/noc/createTxtFileSymlinks.sh
+	# Expand computed dblists with ./multiversion/bin/expanddblist
+	foreach ( [
+		'private',
+		'fishbowl',
+		'special',
+		'closed',
+		'flow',
+		'flaggedrevs',
+		'small',
+		'medium',
+		'large',
+		'wikimania',
+		'wikidata',
+		'wikibaserepo',
+		'wikidataclient',
+		'wikidataclient-test',
+		'visualeditor-nondefault',
+		'commonsuploads',
+		'nonbetafeatures',
+		'group0',
+		'group1',
+		'group2',
+		'wikipedia',
+		'nonglobal',
+		'wikitech',
+		'nonecho',
+		'mobilemainpagelegacy',
+		'wikipedia-cyrillic',
+		'wikipedia-e-acute',
+		'wikipedia-devanagari',
+		'wikipedia-english',
+		'nowikidatadescriptiontaglines',
+		'related-articles-footer-blacklisted-skins',
+		'top6-wikipedia',
+		'rtl',
+		'pp_stage0',
+		'pp_stage1',
+		'cirrussearch-big-indices',
+	] as $tag ) {
+		$dblist = MWWikiversions::readDbListFile( $tag );
+		if ( in_array( $wgDBname, $dblist ) ) {
+			$wikiTags[] = $tag;
+		}
+	}
+
+	$dbSuffix = ( $site === 'wikipedia' ) ? 'wiki' : $site;
+	$confParams = [
+		'lang'    => $lang,
+		'docRoot' => $_SERVER['DOCUMENT_ROOT'],
+		'site'    => $site,
+	];
+	// Add a per-language tag as well
+	$wikiTags[] = $wgConf->get( 'wgLanguageCode', $wgDBname, $dbSuffix, $confParams, $wikiTags );
+	$globals = $wgConf->getAll( $wgDBname, $dbSuffix, $confParams, $wikiTags );
 
 	# Save cache
 	@mkdir( '/tmp/mw-cache-' . $wmgVersionNumber );
