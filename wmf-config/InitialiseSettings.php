@@ -20743,7 +20743,8 @@ $wgConf->settings = [
 ],
 
 'wgMediaInfoEnableOtherStatements' => [
-	'testcommonswiki' => true
+	'testcommonswiki' => true,
+	'commonswiki' => true,
 ],
 
 'wgMediaInfoExternalEntitySearchBaseUri' => [
