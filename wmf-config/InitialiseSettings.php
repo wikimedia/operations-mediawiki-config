@@ -22544,6 +22544,9 @@ $wgConf->settings = [
 		'mediawiki.user-blocks-change' => [
 			'EventServiceName' => 'eventgate-main',
 		],
+		'resource_change' => [
+			'EventServiceName' => 'eventgate-main',
+		],
 		'default' => [
 			'EventServiceName' => 'eventbus',
 		],
