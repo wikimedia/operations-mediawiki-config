@@ -9195,7 +9195,7 @@ $wgConf->settings = [
 		'patroller' => [ 'patrol' => true, 'move-categorypages' => true ], // T67728
 		'rollbacker' => [ 'rollback' => true ], // T25233
 		'autopatrolled' => [ 'autopatrol' => true, 'move-categorypages' => true ], // T31007, T67728, T144699
-		'Image-reviewer' => [ 'movefile' => true, 'delete' => true ], // T66532 and T73229
+		'image-reviewer' => [ 'movefile' => true, 'delete' => true ], // T66532 and T73229
 		'botadmin' => [
 			'block' => true,
 			'delete' => true,
@@ -11017,7 +11017,7 @@ $wgConf->settings = [
 	],
 	'+fawiki' => [
 		'bureaucrat' => [
-			'Image-reviewer', // T66532
+			'image-reviewer', // T66532
 			'botadmin', // T71411
 			'OTRS-member', // T56368
 			'templateeditor', // T74146
@@ -11804,7 +11804,7 @@ $wgConf->settings = [
 	],
 	'+fawiki' => [
 		'bureaucrat' => [
-			'Image-reviewer', // T66532
+			'image-reviewer', // T66532
 			'botadmin', // T71411
 			'OTRS-member', // T56368
 			'templateeditor', // T74146
