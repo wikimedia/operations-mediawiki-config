@@ -3998,6 +3998,10 @@ if ( $wmgUseWikimediaEditorTasks ) {
 	wfLoadExtension( 'WikimediaEditorTasks' );
 }
 
+if ( $wmgUseMachineVision ) {
+	wfLoadExtension( 'MachineVision' );
+}
+
 if ( $wmgUseTheWikipediaLibrary ) {
 	wfLoadExtension( 'TheWikipediaLibrary' );
 }
