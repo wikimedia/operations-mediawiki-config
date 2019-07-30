@@ -5,6 +5,7 @@ import shutil
 import subprocess
 
 from scap import cli
+from scap import git
 from scap import log
 from scap import main
 from scap import ssh
@@ -106,7 +107,10 @@ class Clean(main.AbstractSync):
             with log.Timer('removing-local-copy'):
                 self._maybe_delete(self.branch_stage_dir)
             with log.Timer('cleaning-unused-patches', self.get_stats()):
-                self._maybe_delete(os.path.join('/srv/patches', branch))
+                patch_base_dir = '/srv/patches'
+                self._maybe_delete(os.path.join(patch_base_dir, branch))
+                srv_patches_git_message = 'Scap clean for "{}"'.format(branch)
+                git.add_all(patch_base_dir, message=srv_patches_git_message)
         else:
             with log.Timer('cleaning-unused-files', self.get_stats()):
                 for rmdir in DELETABLE_DIRS:
