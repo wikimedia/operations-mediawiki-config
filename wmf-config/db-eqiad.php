@@ -757,7 +757,7 @@ $wgLBFactoryConf = [
 	# 's5'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
 	# 's6'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
 	# 's7'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
-	 's8'      => 'read-only due to scheduled maintenance on the primary database master from 05:00 AM UTC to 05:30 AM UTC. Try again in a few minutes',
+	# 's8'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
 ],
 
 ];
