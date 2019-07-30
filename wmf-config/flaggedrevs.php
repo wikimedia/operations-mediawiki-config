@@ -57,6 +57,10 @@ $wgExtensionFunctions[] = function () {
 
 	$wgGroupPermissions['sysop']['stablesettings'] = false; // -aaron 3/20/10
 
+	$allowSysopsAssignEditor = true;
+	$allowSysopsAssignAutoreview = true;
+	$allowBureaucratsAssignReviewer = true;
+
 	///////////////////////////////////////
 	// Wiki-specific configurations
 	///////////////////////////////////////
@@ -443,12 +447,7 @@ $wgExtensionFunctions[] = function () {
 		$wgAddGroups['bureaucrat'][] = 'trusted';
 		$wgRemoveGroups['bureaucrat'][] = 'trusted';
 		// # Normally admins promote/demote editors...not here
-		if ( is_array( $wgAddGroups['sysop'] ) ) {
-			unset( $wgAddGroups['sysop'][ array_search( 'editor', $wgAddGroups['sysop'] ) ] );
-		}
-		if ( is_array( $wgRemoveGroups['sysop'] ) ) {
-			unset( $wgRemoveGroups['sysop'][ array_search( 'editor', $wgRemoveGroups['sysop'] ) ] );
-		}
+		$allowSysopsAssignEditor = false;
 
 		// # Remove 'autoreview' user group; T74055
 		unset( $wgGroupPermissions['autoreview'] );
@@ -663,7 +662,7 @@ $wgExtensionFunctions[] = function () {
 	# All wikis...
 
 	# Rights for Bureaucrats (b/c)
-	if ( isset( $wgGroupPermissions['reviewer'] ) ) {
+	if ( isset( $wgGroupPermissions['reviewer'] ) && $allowBureaucratsAssignReviewer ) {
 		if ( !in_array( 'reviewer', $wgAddGroups['bureaucrat'] ) ) {
 			$wgAddGroups['bureaucrat'][] = 'reviewer'; // promote to full reviewers
 		}
@@ -673,7 +672,7 @@ $wgExtensionFunctions[] = function () {
 	}
 
 	# Rights for Sysops
-	if ( isset( $wgGroupPermissions['editor'] ) ) {
+	if ( isset( $wgGroupPermissions['editor'] ) && $allowSysopsAssignEditor ) {
 		if ( !in_array( 'editor', $wgAddGroups['sysop'] ) ) {
 			$wgAddGroups['sysop'][] = 'editor'; // promote to basic reviewer (established editors)
 		}
@@ -682,7 +681,7 @@ $wgExtensionFunctions[] = function () {
 		}
 	}
 
-	if ( isset( $wgGroupPermissions['autoreview'] ) ) {
+	if ( isset( $wgGroupPermissions['autoreview'] ) && $allowSysopsAssignAutoreview ) {
 		if ( !in_array( 'autoreview', $wgAddGroups['sysop'] ) ) {
 			$wgAddGroups['sysop'][] = 'autoreview'; // promote to basic auto-reviewer (semi-trusted users)
 		}
