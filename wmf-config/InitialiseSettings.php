@@ -23253,6 +23253,11 @@ $wgConf->settings = [
 		],
 	],
 ],
+
+'wmgUseMachineVision' => [
+	'default' => false,
+],
+
 'wgSpecialSearchFormOptions' => [
 	'testwikidatawiki' => [ 'showDescriptions' => true ],
 	'wikidatawiki' => [ 'showDescriptions' => true ],
