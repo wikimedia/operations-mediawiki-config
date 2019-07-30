@@ -77,7 +77,15 @@ function wmfEtcdApplyDBConfig() {
 		'mwdebug2001' => true,
 		'mwdebug1002' => true,
 		'mw1261' => true,
+		'mw1262' => true,
+		'mw1263' => true,
+		'mw1264' => true,
+		'mw1265' => true,
 		'mw1276' => true,
+		'mw1277' => true,
+		'mw1278' => true,
+		'mw1279' => true,
+		'mw1311' => true,
 	];
 	if ( isset( $dbctl_enabled_hosts[ wfHostname() ] ) ) {
 		$wgLBFactoryConf['readOnlyBySection'] = $wmfDbconfigFromEtcd['readOnlyBySection'];
