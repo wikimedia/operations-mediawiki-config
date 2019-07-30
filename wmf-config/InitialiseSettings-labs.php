@@ -1537,6 +1537,19 @@ function wmfLabsSettings() {
 		'wgWikimediaEditorTasksUserCountsDatabase' => [
 			'default' => false,
 		],
+		'wmgUseMachineVision' => [
+			'default' => false,
+			'commonswiki' => true,
+		],
+		'wgMachineVisionHandlers' => [
+			'default' => [
+				'class' => 'MediaWiki\\Extension\\MachineVision\\Handler\\WikidataIdHandler',
+				'services' => [ 'MachineVisionClient', 'MachineVisionRepository' ],
+				'args' => [
+					'https://visionoid.wmflabs.org/labels?title=$1', // apiUrlTemplate
+				],
+			],
+		],
 		'-wgSpecialSearchFormOptions' => [
 			'wikidatawiki' => [ 'showDescriptions' => true ],
 		],
