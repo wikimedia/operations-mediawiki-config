@@ -619,13 +619,11 @@ function wmfLabsSettings() {
 			'default' => []
 		],
 
-		'wmgWikibaseTmpSerializeEmptyListsAsObjects' => [
-			'default' => true,
-		],
-
-		'wmgWikibaseFeatureFlagWbeditentitySetEmptyAliases' => [
-			'default' => false,
-			'wikidatawiki' => true,
+		'wmgWikibaseTmpItemTermsMigrationStage' => [
+			'default' => [
+				253529 => MIGRATION_WRITE_BOTH,
+				'max' => MIGRATION_OLD
+			],
 		],
 
 		'-wmgWikibaseSearchStatementBoosts' => [
