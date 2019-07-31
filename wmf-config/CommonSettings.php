@@ -514,7 +514,7 @@ $wgObjectCaches['kask-session'] = [
 ];
 $wgObjectCaches['kask-transition'] = [
 	'class' => 'MultiWriteBagOStuff',
-	‘caches’ => [
+	'caches' => [
 		0 => [
 			'factory' => [ 'ObjectCache', 'getInstance' ],
 			'args' => [ 'redis_local' ]
