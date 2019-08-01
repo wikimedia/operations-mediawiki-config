@@ -518,11 +518,11 @@ $wgObjectCaches['kask-transition'] = [
 	'caches' => [
 		0 => [
 			'factory' => [ 'ObjectCache', 'getInstance' ],
-			'args' => [ 'redis_local' ]
+			'args' => [ 'kask-session' ]
 		],
 		1 => [
 			'factory' => [ 'ObjectCache', 'getInstance' ],
-			'args' => [ 'kask-session' ]
+			'args' => [ 'redis_local' ]
 		],
 
 	],
