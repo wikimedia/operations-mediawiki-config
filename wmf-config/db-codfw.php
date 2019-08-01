@@ -135,6 +135,7 @@ $wgLBFactoryConf = [
 		'db2107'      => 300, # B1 5.2TB 512GB # future master
 		'db2108'      => 300, # B3 5.2TB 512GB
 		'db2125'      => 100, # C1 5.2TB 512GB # api
+		'db2126'      => 100, # C5 5.2TB 512GB # api # future master for sanitarium db2095
 	],
 	/* s3 */ 'DEFAULT' => [
 		'db2043'      => 0,   # C6 2.9TB 160GB, master
@@ -339,6 +340,7 @@ $wgLBFactoryConf = [
 			'db2063' => 1,
 			'db2104' => 3,
 			'db2125' => 3,
+			'db2126' => 3,
 		],
 	],
 	/* s3 */ 'DEFAULT' => [
@@ -673,6 +675,7 @@ $wgLBFactoryConf = [
 	'db2120' => '10.192.48.37', # do not remove or comment out
 	'db2123' => '10.192.16.12', # do not remove or comment out
 	'db2125' => '10.192.32.181', # do not remove or comment out
+	'db2126' => '10.192.32.182', # do not remove or comment out
 	'db2128' => '10.192.48.114', # do not remove or comment out
 ],
 
