@@ -14508,6 +14508,7 @@ $wgConf->settings = [
 		'*.ck-oda.gov.ua',                  // Ukrainian government website - T227366
 		'bukoda.gov.ua',                    // Ukrainian government website - T227366
 		'kyivcity.gov.ua',                  // Ukrainian government website - T227366
+		'nlm.nih.gov',                      // US Government website - T229470
 	],
 ],
 
