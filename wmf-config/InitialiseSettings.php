@@ -12471,6 +12471,7 @@ $wgConf->settings = [
 	], // T25900
 	'enwikisource' => [ 'w', 'mul', 'b', 'commons', 'q', 'mw', 'd' ], // T17571 T155922 T160403
 	'enwikibooks' => [ 'w', 's', 'q', 'v', 'wikt', 'n', 'meta', 'simple', 'species', 'OldWikisource', 'commons' ], // T13226, T14665, T142333
+	'enwikiquote' => [ 'w', 'commons', 'wikidata' ], // T228607
 	'enwikiversity' => [ 'betawikiversity', 'w', 'b', 'q', 's', 'w:simple', 'commons' ], // T115938, T123212
 	'enwikivoyage' => [ 'b', 'meta', 'w' ], // T44450, T65095
 	'eowikisource' => [ 'meta', 'commons', 'b:eo' ], // T45659
