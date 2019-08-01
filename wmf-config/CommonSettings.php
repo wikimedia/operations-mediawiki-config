@@ -308,9 +308,10 @@ if ( $wmfRealm === 'labs' ) {
 	require "$wmfConfigDir/db-{$wmfDatacenter}.php";
 }
 
-// Phased rollout of dbctl: database loadbalancer config from etcd.
-// Eventually this will be used on all appservers, but to start, just a small set.
-// See https://wikitech.wikimedia.org/wiki/Dbctl and https://phabricator.wikimedia.org/T229070
+// In production, read the database loadbalancer config from etcd.
+// See https://wikitech.wikimedia.org/wiki/Dbctl
+// This must be called after db-{eqiad,codfw}.php has been loaded!
+// It overwrites a few sections of $wgLBFactoryConf with data from etcd.
 wmfEtcdApplyDBConfig();
 
 // Set $wgProfiler to the value provided by PhpAutoPrepend.php
