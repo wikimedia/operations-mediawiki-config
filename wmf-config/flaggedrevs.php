@@ -105,8 +105,6 @@ $wgExtensionFunctions[] = function () {
 		$wgRemoveGroups['sysop'][] = 'reviewer';
 		# Remove 'editor' group
 		unset( $wgGroupPermissions['editor'] );
-		$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], [ 'editor' ] );
-		$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], [ 'editor' ] );
 	} elseif ( $wgDBname == 'bswiki' ) { // T158662
 		$wgFlaggedRevsTags = [
 			'status' => [ 'levels' => 1, 'quality' => 2, 'pristine' => 3 ],
@@ -150,8 +148,6 @@ $wgExtensionFunctions[] = function () {
 
 		# Remove editor and autoreview user groups
 		unset( $wgGroupPermissions['editor'], $wgGroupPermissions['autoreview'] );
-		$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], [ 'editor', 'autoreview' ] );
-		$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], [ 'editor', 'autoreview' ] );
 	} elseif ( $wgDBname == 'test2wiki' ) {
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
@@ -262,8 +258,6 @@ $wgExtensionFunctions[] = function () {
 		$wgRemoveGroups['sysop'][] = 'reviewer';
 		# Remove 'editor' and 'autoreview' (T91934) user groups
 		unset( $wgGroupPermissions['editor'], $wgGroupPermissions['autoreview'] );
-		$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], [ 'editor', 'autoreview' ] );
-		$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], [ 'editor', 'autoreview' ] );
 	} elseif ( $wgDBname == 'enwikibooks' ) {
 		// Cookbook, WikiJunior
 		$wgFlaggedRevsNamespaces[] = 102;
@@ -336,10 +330,6 @@ $wgExtensionFunctions[] = function () {
 
 		# Remove all user groups (editor, reviewer, autoreview)
 		unset( $wgGroupPermissions['editor'], $wgGroupPermissions['reviewer'], $wgGroupPermissions['autoreview'] );
-		$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], [ 'editor', 'autoreview' ] );
-		$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], [ 'editor', 'autoreview' ] );
-		$wgAddGroups['bureaucrat'] = array_diff( $wgAddGroups['bureaucrat'], [ 'reviewer' ] );
-		$wgRemoveGroups['bureaucrat'] = array_diff( $wgRemoveGroups['bureaucrat'], [ 'reviewer' ] );
 	} elseif ( $wgDBname == 'fawikinews' ) {
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 		$wgFlaggedRevsNamespaces[] = 100;
@@ -418,8 +408,6 @@ $wgExtensionFunctions[] = function () {
 		$wgGroupPermissions['bot']['autoreview'] = true;
 		# Remove 'editor' group
 		unset( $wgGroupPermissions['editor'] );
-		$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], [ 'editor' ] );
-		$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], [ 'editor' ] );
 	} elseif ( $wgDBname == 'huwiki' ) {
 		// # namespaces
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
@@ -451,8 +439,6 @@ $wgExtensionFunctions[] = function () {
 
 		// # Remove 'autoreview' user group; T74055
 		unset( $wgGroupPermissions['autoreview'] );
-		$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], [ 'autoreview' ] );
-		$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], [ 'autoreview' ] );
 	} elseif ( $wgDBname == 'iawiki' ) {
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 	} elseif ( $wgDBname == 'iswiktionary' ) {
@@ -506,10 +492,6 @@ $wgExtensionFunctions[] = function () {
 
 		# Remove 'editor', 'reviewer' and 'autoreview' groups
 		unset( $wgGroupPermissions['editor'], $wgGroupPermissions['reviewer'], $wgGroupPermissions['autoreview'] );
-		$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], [ 'editor', 'reviewer' ] );
-		$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], [ 'editor', 'reviewer' ] );
-		$wgAddGroups['bureaucrat'] = array_diff( $wgAddGroups['bureaucrat'], [ 'reviewer' ] );
-		$wgRemoveGroups['bureaucrat'] = array_diff( $wgRemoveGroups['bureaucrat'], [ 'reviewer' ] );
 	} elseif ( $wgDBname == 'ptwikibooks' ) {
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_TEMPLATE, NS_HELP, NS_PROJECT, 828 ];
 
@@ -619,12 +601,7 @@ $wgExtensionFunctions[] = function () {
 		$wgGroupPermissions['sysop']['validate'] = true;
 	} elseif ( $wgDBname == 'trwiki' ) {
 		unset( $wgGroupPermissions['reviewer'] ); // T40690
-		$wgAddGroups['bureaucrat'] = array_diff( $wgAddGroups['bureaucrat'], [ 'reviewer' ] ); // T40690
-		$wgRemoveGroups['bureaucrat'] = array_diff( $wgRemoveGroups['bureaucrat'], [ 'reviewer' ] ); // T40690
-
 		unset( $wgGroupPermissions['editor'] ); // T40690
-		$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], [ 'editor' ] ); // T40690
-		$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], [ 'editor' ] ); // T40690
 
 		// T46587:
 		$wgFlaggedRevsNamespaces[] = 100; // NS_PORTAL
