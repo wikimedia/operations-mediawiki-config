@@ -136,8 +136,8 @@ $wgLBFactoryConf = [
 	/* s3 */ 'DEFAULT' => [
 		'db1075' => 0,      # A2 3.6TB 512GB, master
 		'db1078' => 500,    # C3 3.6TB 512GB, candidate master
-		# 'db1112' => 400,    # B1 3.6TB 512GB, rc, log # master for sanitarium db1124 # host acting weirdly
-		'db1123' => 300,    # D8 3.6TB 512GB, vslow, dump # temporary rc
+		'db1112' => 400,    # B1 3.6TB 512GB, rc, log # master for sanitarium db1124
+		'db1123' => 300,    # D8 3.6TB 512GB, vslow, dump
 	],
 	's4' => [
 		'db1081' => 0,    # A2 3.6TB 512GB, # master
@@ -344,19 +344,19 @@ $wgLBFactoryConf = [
 			'db1123' => 1,
 		],
 		'watchlist' => [
-			'db1123' => 1,
+			'db1112' => 1,
 		],
 		'recentchanges' => [
-			'db1123' => 1,
+			'db1112' => 1,
 		],
 		'recentchangeslinked' => [
-			'db1123' => 1,
+			'db1112' => 1,
 		],
 		'contributions' => [
-			'db1123' => 1,
+			'db1112' => 1,
 		],
 		'logpager' => [
-			'db1123' => 1,
+			'db1112' => 1,
 		],
 	],
 	's4' => [
