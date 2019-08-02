@@ -126,7 +126,7 @@ class WmfClusters {
 			foreach ( $suffixes as $suffix => $tag ) {
 				if ( substr( $db, -strlen( $suffix ) ) === $suffix ) {
 					$lang = substr( $db, 0, -strlen( $suffix ) );
-					$server = strtr( $canonicalServers[$tag], '$lang', $lang );
+					$server = strtr( $canonicalServers[$tag], [ '$lang' => $lang ] );
 					break;
 				}
 			}
