@@ -19352,7 +19352,6 @@ $wgConf->settings = [
 	'htwiki' => [ 'minerva', 'vector' ],
 	'hewiki' => [ 'minerva', 'vector' ], // T191573
 	'wikivoyage' => [ 'minerva', 'vector' ],
-	'related-articles-footer-blacklisted-skins' => [],
 ],
 
 'wmgUseRevisionSlider' => [

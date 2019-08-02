@@ -237,7 +237,6 @@ if ( !$globals ) {
 		'wikipedia-devanagari',
 		'wikipedia-english',
 		'nowikidatadescriptiontaglines',
-		'related-articles-footer-blacklisted-skins',
 		'top6-wikipedia',
 		'rtl',
 		'pp_stage0',
