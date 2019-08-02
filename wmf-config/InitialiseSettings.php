@@ -17003,9 +17003,6 @@ $wgConf->settings = [
 	'wikitech' => true, // Not behind Varnish
 ],
 
-'wgMinervaSchemaMainMenuClickTrackingSampleRate' => [
-	'default' => 0.5,
-],
 // T210553, T210554
 'wgMinervaPageIssuesNewTreatment' => [
 	'default' => [
