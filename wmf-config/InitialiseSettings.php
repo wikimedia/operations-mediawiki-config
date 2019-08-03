@@ -12487,6 +12487,7 @@ $wgConf->settings = [
 	'etwikisource' => [ 'w' ], // T35960
 	'etwiktionary' => [ 'w' ], // T35960
 	'extwiki' => [ 'incubator' ],
+	'fawiki' => [ 'en', 'de', 'fr', 'meta', 'commons', 'wikidata' ], // T229717
 	'fawikivoyage' => [ 'w', 'w:en', 'en' ], // T73681
 	'fdcwiki' => [ 'meta' ],
 	'fiwikisource' => [ 'OldWikisource', 'w', 'b' ],
