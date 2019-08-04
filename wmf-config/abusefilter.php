@@ -466,7 +466,11 @@ if ( $wmfRealm === 'labs' ) {
 	$wgAbuseFilterActions['block'] = true;
 	$wgAbuseFilterBlockDuration = 'indefinite';
 	$wgAbuseFilterAnonBlockDuration = '48 hours';
-	$wgAbuseFilterParserClass = 'AbuseFilterCachingParser';
+	// Use CachingParser to detect new bugs, but keep the old parser on deploymentwiki
+	// for testing purposes.
+	$wgAbuseFilterParserClass = $wgDBname === 'deploymentwiki'
+		? 'AbuseFilterParser'
+		: 'AbuseFilterCachingParser';
 	$wgAbuseFilterLogIP = false; // Prevent the collection of IP addresses - T188862
 	$wgAbuseFilterLogIPMaxAge = 1; // Purge data older than 1 second (hack to clean all data)
 }
