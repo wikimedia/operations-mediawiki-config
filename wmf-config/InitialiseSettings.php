@@ -22438,6 +22438,81 @@ $wgConf->settings = [
 			'shuffleAnswersDisplay' => true,
 		],
 	],
+	'arwiki' => [
+		// T227793
+		[
+			'enabled' => true,
+			'type' => 'internal',
+			'name' => 'editor-gender-1-ar',
+			'question' => 'Editor-gender-1-message',
+			'description' => 'Editor-gender-1-description',
+			'answers' => [
+				'Editor-gender-1-answer-man',
+				'Editor-gender-1-answer-woman',
+				'Editor-gender-1-answer-decline',
+			],
+			'freeformTextLabel' => 'Editor-gender-1-free-form-text-label',
+			'privacyPolicy' => 'Editor-gender-1-privacy',
+			'coverage' => 0.5, // 1 in 2
+			'audience' => [
+				'anons' => false,
+			],
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			]
+		],
+	],
+	'enwiki' => [
+		// T227793
+		[
+			'enabled' => true,
+			'type' => 'internal',
+			'name' => 'editor-gender-1-en',
+			'question' => 'Editor-gender-1-message',
+			'description' => 'Editor-gender-1-description',
+			'answers' => [
+				'Editor-gender-1-answer-man',
+				'Editor-gender-1-answer-woman',
+				'Editor-gender-1-answer-decline',
+			],
+			'freeformTextLabel' => 'Editor-gender-1-free-form-text-label',
+			'privacyPolicy' => 'Editor-gender-1-privacy',
+			'coverage' => 0.1, // 1 in 10
+			'audience' => [
+				'anons' => false,
+			],
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+		]
+	],
+	'nowiki' => [
+		// T227793
+		[
+			'enabled' => true,
+			'type' => 'internal',
+			'name' => 'editor-gender-1-no',
+			'question' => 'Editor-gender-1-message',
+			'description' => 'Editor-gender-1-description',
+			'answers' => [
+				'Editor-gender-1-answer-man',
+				'Editor-gender-1-answer-woman',
+				'Editor-gender-1-answer-decline',
+			],
+			'freeformTextLabel' => 'Editor-gender-1-free-form-text-label',
+			'privacyPolicy' => 'Editor-gender-1-privacy',
+			'coverage' => 1, // all signed-in users
+			'audience' => [
+				'anons' => false,
+			],
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+		]
+	]
 ],
 
 'wmgUseSentry' => [
