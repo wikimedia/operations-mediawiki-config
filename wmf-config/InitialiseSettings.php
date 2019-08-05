@@ -22595,6 +22595,7 @@ $wgConf->settings = [
 
 'wgEventServiceStreamConfig' => [
 	'default' => [
+		// EventBus events
 		'mediawiki.centralnotice.campaign-create' => [
 			'EventServiceName' => 'eventgate-main',
 		],
@@ -22641,6 +22642,10 @@ $wgConf->settings = [
 			'EventServiceName' => 'eventgate-main',
 		],
 		'resource_change' => [
+			'EventServiceName' => 'eventgate-main',
+		],
+		// Jobs
+		'mediawiki.job.updateBetaFeaturesUserCounts' => [
 			'EventServiceName' => 'eventgate-main',
 		],
 		'default' => [
