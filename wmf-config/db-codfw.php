@@ -125,17 +125,17 @@ $wgLBFactoryConf = [
 	],
 	's2' => [
 		'db2035'      => 50, # B1 2.9TB 160GB, master
-		'db2049'      => 50, # C6 2.9TB 160GB
-		'db2051'      => 100,   # B8 2.9TB 160GB
-		'db2056'      => 100, # D6 3.3TB 160GB, dump (inactive), vslow
-		'db2063'      => 50, # D6 3.3TB 160GB, api # master for sanitarium db2095
-		'db2088:3312' => 200, # D1 3.3TB 512GB # rc, log: s1 and s2
-		'db2091:3312' => 200, # A8 3.3TB 512GB # rc, log: s2 and s4
-		'db2104'      => 300, # A5 5.2TB 512GB, api # candidate master
+		# 'db2049'      => 50, # C6 2.9TB 160GB # to be decommissioned T228258
+		# 'db2051'      => 100,   # B8 2.9TB 160GB # to be decommissioned T228258
+		# 'db2056'      => 100, # D6 3.3TB 160GB, # to be decommissioned T228258
+		# 'db2063'      => 50, # D6 3.3TB 160GB # to be decommissioned T228258
+		'db2088:3312' => 150, # D1 3.3TB 512GB # rc, log: s1 and s2
+		'db2091:3312' => 150, # A8 3.3TB 512GB # rc, log: s2 and s4
+		'db2104'      => 500, # A5 5.2TB 512GB, api # candidate master
 		'db2107'      => 300, # B1 5.2TB 512GB # future master
-		'db2108'      => 300, # B3 5.2TB 512GB
-		'db2125'      => 100, # C1 5.2TB 512GB # api
-		'db2126'      => 100, # C5 5.2TB 512GB # api # future master for sanitarium db2095
+		'db2108'      => 100, # B3 5.2TB 512GB # vslow, dump
+		'db2125'      => 500, # C1 5.2TB 512GB # api
+		'db2126'      => 200, # C5 5.2TB 512GB # api # master for sanitarium db2095
 	],
 	/* s3 */ 'DEFAULT' => [
 		'db2043'      => 0,   # C6 2.9TB 160GB, master
@@ -332,15 +332,14 @@ $wgLBFactoryConf = [
 			'db2091:3312' => 1,
 		],
 		'dump' => [
-			'db2056' => 1,
+			'db2108' => 1,
 		],
 		'vslow' => [
-			'db2056' => 1,
+			'db2108' => 1,
 		],
 		'api' => [
-			'db2063' => 1,
-			'db2104' => 3,
-			'db2125' => 3,
+			'db2104' => 1,
+			'db2125' => 1,
 			'db2126' => 3,
 		],
 	],
