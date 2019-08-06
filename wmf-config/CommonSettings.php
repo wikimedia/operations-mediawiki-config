@@ -194,20 +194,20 @@ list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 
 # Try configuration cache
 
-$confCacheFile = "$wgCacheDirectory/conf-$wgDBname";
+$confCacheFile = "$wgCacheDirectory/conf2-$wgDBname";
 if ( defined( 'HHVM_VERSION' ) ) {
 	$confCacheFile .= '-hhvm';
 }
 
-$globals = false;
 $confActualMtime = filemtime( "$wmfConfigDir/InitialiseSettings.php" );
-// Ignore file warnings (file might not exist yet)
-if ( @filemtime( $confCacheFile ) >= $confActualMtime ) {
-	// Ignore file warnings (file may be inaccessible, or deleted in a race)
-	$confCacheStr = @file_get_contents( $confCacheFile );
-	if ( $confCacheStr !== false ) {
-		$globals = unserialize( $confCacheStr );
-	}
+// Ignore file warnings (file may be inaccessible, or not exist yet)
+$confCacheStr = @file_get_contents( $confCacheFile );
+$confCacheData = $confCacheStr !== false ? unserialize( $confCacheStr ) : false;
+// Ignore non-array and array offset warnings (file may be in an older format)
+if ( @$confCacheData['mtime'] === $confActualMtime ) {
+	$globals = $confCacheData['globals'];
+} else {
+	$globals = false;
 }
 
 if ( !$globals ) {
@@ -274,7 +274,7 @@ if ( !$globals ) {
 	# Save cache
 	@mkdir( $wgCacheDirectory );
 	$tmpFile = tempnam( '/tmp/', "conf-$wmgVersionNumber-$wgDBname" );
-	$confCacheStr = serialize( $globals );
+	$confCacheStr = serialize( [ 'mtime' => $confActualMtime, 'globals' => $globals ] );
 	if ( $tmpFile && file_put_contents( $tmpFile, $confCacheStr ) ) {
 		if ( !rename( $tmpFile, $confCacheFile ) ) {
 			// T136258: Rename failed, cleanup temp file
