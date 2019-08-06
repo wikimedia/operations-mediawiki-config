@@ -123,6 +123,16 @@ $wgDBuser = 'wikiuser';
 # wmf-config directory (in common/)
 $wmfConfigDir = "$IP/../wmf-config";
 
+$wmgVersionNumber = $multiVersion->getVersionNumber();
+
+# Used further down this file for per-wiki SiteConfiguration caching:
+# - MUST be in /tmp to allow atomic rename from elsewhere in /tmp.
+# - MUST vary by MediaWiki branch (aka MWMultiversion deployment version).
+#
+# Also used by MediaWiki core for various caching purposes, and may
+# be shared between wikis (e.g. does not need to vary by wgDBname).
+$wgCacheDirectory = '/tmp/mw-cache-' . $wmgVersionNumber;
+
 # Get all the service definitions
 $wmfAllServices = ServiceConfig::getInstance()->getAllServices();
 
@@ -182,20 +192,21 @@ if ( array_search( $wgDBname, $wgLocalDatabases ) === false ) {
 # Determine domain and language and the directories for this instance
 list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 
-$wmgVersionNumber = $multiVersion->getVersionNumber();
-
 # Try configuration cache
 
-$filename = "/tmp/mw-cache-$wmgVersionNumber/conf-$wgDBname";
+$confCacheFile = "$wgCacheDirectory/conf-$wgDBname";
 if ( defined( 'HHVM_VERSION' ) ) {
-	$filename .= '-hhvm';
+	$confCacheFile .= '-hhvm';
 }
 
 $globals = false;
-if ( @filemtime( $filename ) >= filemtime( "$wmfConfigDir/InitialiseSettings.php" ) ) {
-	$cacheRecord = @file_get_contents( $filename );
-	if ( $cacheRecord !== false ) {
-		$globals = unserialize( $cacheRecord );
+$confActualMtime = filemtime( "$wmfConfigDir/InitialiseSettings.php" );
+// Ignore file warnings (file might not exist yet)
+if ( @filemtime( $confCacheFile ) >= $confActualMtime ) {
+	// Ignore file warnings (file may be inaccessible, or deleted in a race)
+	$confCacheStr = @file_get_contents( $confCacheFile );
+	if ( $confCacheStr !== false ) {
+		$globals = unserialize( $confCacheStr );
 	}
 }
 
@@ -261,15 +272,17 @@ if ( !$globals ) {
 	$globals = $wgConf->getAll( $wgDBname, $dbSuffix, $confParams, $wikiTags );
 
 	# Save cache
-	@mkdir( '/tmp/mw-cache-' . $wmgVersionNumber );
+	@mkdir( $wgCacheDirectory );
 	$tmpFile = tempnam( '/tmp/', "conf-$wmgVersionNumber-$wgDBname" );
-	if ( $tmpFile && file_put_contents( $tmpFile, serialize( $globals ) ) ) {
-		if ( !rename( $tmpFile, $filename ) ) {
+	$confCacheStr = serialize( $globals );
+	if ( $tmpFile && file_put_contents( $tmpFile, $confCacheStr ) ) {
+		if ( !rename( $tmpFile, $confCacheFile ) ) {
 			// T136258: Rename failed, cleanup temp file
 			unlink( $tmpFile );
 		};
 	}
 }
+unset( $confCacheFile, $confCacheStr, $confActualMtime );
 
 extract( $globals );
 
@@ -428,7 +441,6 @@ if ( $wmgReduceStartupExpiry ) {
 // - Bumped to fix broken SVG embedding being cached (T176884)
 $wgResourceLoaderStorageVersion .= '-3';
 
-$wgCacheDirectory = '/tmp/mw-cache-' . $wmgVersionNumber;
 $wgGitInfoCacheDirectory = "$IP/cache/gitinfo";
 
 // @var string|bool: E-mail address to send notifications to, or false to disable notifications.
