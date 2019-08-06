@@ -21982,7 +21982,7 @@ $wgConf->settings = [
 	],
 	'lvwiki' => [
 		'damaging' => [
-			'likelygood' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.998' ],
+			'likelygood' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.995' ],
 			// maybebad, likelybad and verylikelybad use defaults
 		],
 		'goodfaith' => [
