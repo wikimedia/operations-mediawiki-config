@@ -4002,6 +4002,18 @@ if ( $wmgUseTheWikipediaLibrary ) {
 	wfLoadExtension( 'TheWikipediaLibrary' );
 }
 
+// This is a temporary hack for hooking up Parsoid/PHP with MediaWiki on scandium
+if ( wfHostName() === 'scandium' ) {
+	$parsoidDir = '/srv/deployment/parsoid/deploy/src';
+	if ( file_exists( "$parsoidDir/extension.json" ) ) {
+		wfLoadExtension( 'Parsoid/PHP', "$parsoidDir/extension.json" );
+		$wgEnableRestAPI = true;
+		if ( file_exists( "$parsoidDir/tests/RTTestSettings.php" ) ) {
+			require_once "$parsoidDir/tests/RTTestSettings.php";
+		}
+	}
+}
+
 # Temporary for the HHVM => PHP7.2 migration. Adds an array of unicode chars
 # that have broken uppercasing in HHVM. In this phase, we want php7 to behave
 # like HHVM. See T219279 for details.
