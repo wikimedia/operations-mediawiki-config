@@ -20640,7 +20640,9 @@ $wgConf->settings = [
 ],
 
 'wmgWikibaseDisabledDataTypes' => [
-	'default' => [],
+	'default' => [
+		'entity-schema' // T229904 :'(
+	],
 ],
 
 'wmgWikibaseEntityTypesWithoutRdfOutput' => [

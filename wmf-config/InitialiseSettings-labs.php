@@ -630,6 +630,10 @@ function wmfLabsSettings() {
 			'default' => []
 		],
 
+		'-wmgWikibaseDisabledDataTypes' => [
+			'default' => []
+		],
+
 		// For better testing of Structured Data on Commons edits
 		'wmgEnhancedRecentChanges' => [
 			'commonswiki' => true,
