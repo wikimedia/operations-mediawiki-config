@@ -539,8 +539,8 @@ $wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = [
 	'suggestChangeOnLogin' => false,
 ];
 
-$wgPasswordPolicy['policies']['default']['PasswordCannotBePopular'] = [
-	'value' => 100,
+$wgPasswordPolicy['policies']['default']['PasswordNotInLargeBlacklist'] = [
+	'value' => true,
 	'suggestChangeOnLogin' => true,
 ];
 
