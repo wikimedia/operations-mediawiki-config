@@ -21647,6 +21647,7 @@ $wgConf->settings = [
 	'testwiki' => true, // T199913
 	'test2wiki' => true, // T200412
 	'kowiki' => true, // T161628
+	'zhwiki' => true, // T225562
 ],
 'wgOresWikiId' => [
 	'default' => null,
@@ -21684,6 +21685,7 @@ $wgConf->settings = [
 	'testwiki' => true, // T199913
 	'test2wiki' => true, // T200412
 	'kowiki' => true, // T161628
+	'zhwiki' => true, // T225562
 ],
 'wgOresModels' => [
 	'default' => [
@@ -21721,6 +21723,13 @@ $wgConf->settings = [
 		'goodfaith' => [ 'enabled' => false ],
 		'reverted' => [ 'enabled' => false ],
 		'articlequality' => [ 'enabled' => true, 'namespaces' => [ 0 ], 'cleanParent' => true ],
+		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
+	],
+	'zhwiki' => [
+		'damaging' => [ 'enabled' => true ],
+		'goodfaith' => [ 'enabled' => true ],
+		'reverted' => [ 'enabled' => false ],
+		'articlequality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'cleanParent' => true ],
 		'draftquality' => [ 'enabled' => false, 'namespaces' => [ 0 ], 'types' => [ 1 ] ],
 	],
 	'testwiki' => [
@@ -22080,6 +22089,20 @@ $wgConf->settings = [
 			'maybebad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.15' ],
 			// likelybad uses default
 			// verylikelybad uses default (disabled)
+		],
+	],
+	'zhwiki' => [
+		'damaging' => [
+			'likelygood' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.99' ],
+			'maybebad' => [ 'min' => 'maximum recall @ precision >= 0.15', 'max' => 1 ],
+			// likelybad uses default
+			'verylikelybad' => false,
+		],
+		'goodfaith' => [
+			'likelygood' => [ 'min' => 'maximum recall @ precision >= 0.99', 'max' => 1 ],
+			'maybebad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.15' ],
+			'likelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.45' ],
+			'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.75' ],
 		],
 	],
 ],
