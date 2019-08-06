@@ -16762,12 +16762,6 @@ $wgConf->settings = [
 	'default' => 2,
 ],
 
-// TODO: Drop this insanely dangerous config option from Graph
-// All graph data requests should be trusted on these wikis
-'wgGraphIsTrusted' => [
-	'default' => false, // MUST BE FALSE for any untrusted wiki
-],
-
 // restbase format: /api/rest_v1/page/graph/png/{title}/{revid}/{hash}.png
 // %1\$s = domain
 // %2\$s = title
