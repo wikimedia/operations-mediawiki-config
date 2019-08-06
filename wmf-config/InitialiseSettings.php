@@ -17156,18 +17156,9 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
-// T217643
 'wgMFAdvancedMobileContributions' => [
 	'default' => false,
-	'eswiki' => true,
-	'idwiki' => true,
-	'arwiki' => true,
-	'fawiki' => true, // T225123
-	'jawiki' => true, // T225123
-	'thwiki' => true, // T225123
-	'itwiki' => true, // T225123
-	'testwiki' => true,
-	'test2wiki' => true,
+	'wikipedia' => true, // T228916
 ],
 
 'wgMinervaOverflowInPageActions' => [
