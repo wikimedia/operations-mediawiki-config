@@ -180,7 +180,6 @@ $wgLBFactoryConf = [
 	],
 	's8' => [
 		'db1104' => 0,    # B3 3.6TB 512GB, # master
-		# 'db1071' => 0,      # D1 2.8TB 160GB, old master to be decommissioned
 		'db1087' => 1,      # C2 3.6TB 512GB, vslow, dump # master for sanitarium db1124
 		'db1092' => 200,    # D2 3.6TB 512GB, api
 		'db1099:3318' => 100, # B2 3.6TB 512GB # rc, log: s1 and s8
@@ -533,7 +532,6 @@ $wgLBFactoryConf = [
 	'db1066' => '10.64.0.110', # do not remove or comment out
 	'db1067' => '10.64.32.64', # do not remove or comment out
 	'db1070' => '10.64.48.25', # do not remove or comment out
-	'db1071' => '10.64.48.26', # do not remove or comment out
 	'db1073' => '10.64.16.79', # do not remove or comment out
 	'db1074' => '10.64.0.204', # do not remove or comment out
 	'db1075' => '10.64.0.205', # do not remove or comment out
