@@ -70,12 +70,9 @@ class CirrusTest extends WgConfTestCase {
 			$this->assertArrayHasKey( $dc, $config['wgCirrusSearchReplicas'] );
 			$this->assertArrayHasKey( $dc, $config['wgCirrusSearchClientSideConnectTimeout'] );
 		}
-		// Test that we scanned 2 DCs for the group chi
+		// Test that we scanned 2 DCs + cloudelastic for the group chi
 		$this->assertEquals( 3, $dc_config_tested );
-
-		// While we have 3 dcs, cloudelastic is not currently written to. Expect
-		// only 2 clusters to write to.
-		$this->assertCount( 2, $config['wgCirrusSearchWriteClusters'] );
+		$this->assertCount( 3, $config['wgCirrusSearchWriteClusters'] );
 		foreach ( $config['wgCirrusSearchWriteClusters'] as $replica ) {
 			$groups = $config['wgCirrusSearchReplicaGroup'];
 			if ( is_array( $groups ) ) {
