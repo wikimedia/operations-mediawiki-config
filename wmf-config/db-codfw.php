@@ -122,6 +122,7 @@ $wgLBFactoryConf = [
 		'db2103'      => 300, # A3 5.2TB 512GB
 		'db2112'      => 300, # C1 5.2TB 512GB
 		'db2116'      => 300, # C6 5.2TB 512GB
+		'db2130'      => 300, # D6 5.2TB 512GB
 	],
 	's2' => [
 		'db2107'      => 0, # B1 5.2TB 512GB # master
@@ -677,6 +678,7 @@ $wgLBFactoryConf = [
 	'db2127' => '10.192.32.183', # do not remove or comment out
 	'db2128' => '10.192.48.114', # do not remove or comment out
 	'db2129' => '10.192.48.115', # do not remove or comment out
+	'db2130' => '10.192.48.133', # do not remove or comment out
 ],
 
 'externalLoads' => [
