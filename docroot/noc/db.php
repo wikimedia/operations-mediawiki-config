@@ -18,6 +18,13 @@ $allowedDCs = [
 $dbConfigFileName = ( isset( $_GET['dc'] ) && isset( $allowedDCs[$_GET['dc']] ) )
 	? $allowedDCs[$_GET['dc']]
 	: $allowedDCs['eqiad'];
+$dbctlJsonByDC = [
+	'codfw' => 'codfw.json',
+	'eqiad' => 'eqiad.json',
+];
+$dbConfigEtcdJsonFilename = ( isset( $_GET['dc'] ) && isset( $dbctlJsonByDC[$_GET['dc']] ) )
+	? $dbctlJsonByDC[$_GET['dc']]
+	: $dbctlJsonByDC['eqiad'];
 
 // Mock vars needed by db-*.php (normally set by CommonSettings.php)
 $wgDBname = null;
@@ -31,6 +38,21 @@ require_once __DIR__ . '/../../tests/Defines.php';
 
 // Load the actual db vars
 require_once __DIR__ . "/../../wmf-config/{$dbConfigFileName}";
+// Now load dbctl JSON from disk and merge it in, mimicking what etcd.php's wmfEtcdApplyDBConfig()
+// does in production.
+// On mwmaint hosts, the JSON files are produced by a 'fetch_dbconfig' script & systemd timer defined in puppet.
+// For local testing, you can fetch JSON files from https://noc.wikimedia.org/dbconfig/eqiad.json
+// and then set WMF_NOC_ETCD_JSON_PATH to the directory containing the downloaded eqiad.json.
+$dbConfigEtcdPrefix = getenv( 'WMF_NOC_ETCD_JSON_PATH' ) !== false
+	? getenv( 'WMF_NOC_ETCD_JSON_PATH' )
+	: '/srv/dbconfig';
+$wmfDbconfigFromEtcd = json_decode( file_get_contents( "$dbConfigEtcdPrefix/$dbConfigEtcdJsonFilename" ), true );
+global $wgLBFactoryConf;
+$wgLBFactoryConf['readOnlyBySection'] = $wmfDbconfigFromEtcd['readOnlyBySection'];
+$wgLBFactoryConf['groupLoadsBySection'] = $wmfDbconfigFromEtcd['groupLoadsBySection'];
+foreach ( $wmfDbconfigFromEtcd['sectionLoads'] as $section => $sectionLoads ) {
+	$wgLBFactoryConf['sectionLoads'][$section] = array_merge( $sectionLoads[0], $sectionLoads[1] );
+}
 
 require_once __DIR__ . '/../../src/WmfClusters.php';
 
@@ -90,7 +112,9 @@ foreach ( $clusters->getNames() as $name ) {
 }
 print '</main>';
 print '<footer>Automatically generated based on <a href="./conf/highlight.php?file='. htmlspecialchars( $dbConfigFileName ) . '">';
-print 'wmf-config/' . htmlspecialchars( $dbConfigFileName ) . '</a>.<br/>';
+print 'wmf-config/' . htmlspecialchars( $dbConfigFileName ) . '</a> ';
+print 'and on <a href="/dbconfig/' . htmlspecialchars( $dbConfigEtcdJsonFilename ) . '">';
+print htmlspecialchars( $dbConfigEtcdJsonFilename ) . '</a>.<br/>';
 foreach ( $allowedDCs as $dc => $file ) {
 	if ( $file !== $dbConfigFileName ) {
 		print 'View <a href="' . htmlspecialchars( "?dc=$dc" ) . '">' . htmlspecialchars( ucfirst( $dc ) ) . '</a>. ';
