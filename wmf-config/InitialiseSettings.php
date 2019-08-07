@@ -22429,6 +22429,33 @@ $wgConf->settings = [
 		'mediawiki.job.updateBetaFeaturesUserCounts' => [
 			'EventServiceName' => 'eventgate-main',
 		],
+		'mediawiki.job.ThumbnailRender' => [
+			'EventServiceName' => 'eventgate-main',
+		],
+		'mediawiki.job.categoryMembershipChange' => [
+			'EventServiceName' => 'eventgate-main',
+		],
+		'mediawiki.job.ORESFetchScoreJob' => [
+			'EventServiceName' => 'eventgate-main',
+		],
+		'mediawiki.job.RecordLintJob' => [
+			'EventServiceName' => 'eventgate-main',
+		],
+		'mediawiki.job.wikibase-addUsagesForPage' => [
+			'EventServiceName' => 'eventgate-main',
+		],
+		'mediawiki.job.constraintsRunCheck' => [
+			'EventServiceName' => 'eventgate-main',
+		],
+		'mediawiki.job.webVideoTranscode' => [
+			'EventServiceName' => 'eventgate-main',
+		],
+		'mediawiki.job.refreshLinks' => [
+			'EventServiceName' => 'eventgate-main',
+		],
+		'mediawiki.job.htmlCacheUpdate' => [
+			'EventServiceName' => 'eventgate-main',
+		],
 		'default' => [
 			'EventServiceName' => 'eventbus',
 		],
