@@ -5375,11 +5375,11 @@ function wmfGetVariantSettings() {
 		'autoconfirmed', // semi-protection level on
 		'sysop',
 	],
-	'arwiki' => [ '', 'autoconfirmed', 'autoreview', 'review', 'sysop' ], // T54109, T146575, T225896
+	'arwiki' => [ '', 'autoconfirmed', 'editautoreviewprotected', 'review', 'sysop' ], // T54109, T146575, T225896
 	'ckbwiki' => [ '', 'autoconfirmed', 'autopatrol', 'sysop' ], // T54533
 	'commonswiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T227420
 	'dewiki' => [ '', 'autoconfirmed', 'editeditorprotected', 'sysop' ], // T94368
-	'dewiktionary' => [ '', 'autoconfirmed', 'editeditorprotected', 'autoreviewprotected', 'sysop' ], // T216885
+	'dewiktionary' => [ '', 'autoconfirmed', 'editeditorprotected', 'editautoreviewprotected', 'sysop' ], // T216885
 	'enwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T126607, T57432
 	'enwiktionary' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T148007
 	'enwikivoyage' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T198056
@@ -5391,8 +5391,8 @@ function wmfGetVariantSettings() {
 	'kowiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T184675
 	'lvwiki' => [ '', 'autoconfirmed', 'autopatrol', 'sysop' ], // T92645
 	'plwiki' => [ '', 'autoconfirmed', 'editor', 'sysop' ], // T48990
-	'ptwiki' => [ '', 'autoconfirmed', 'autoreviewer', 'sysop' ], // T41652
-	'ptwikinews' => [ '', 'autoconfirmed', 'autoreviewer', 'sysop' ], // T221521
+	'ptwiki' => [ '', 'autoconfirmed', 'editautoreviewprotected', 'sysop' ], // T41652
+	'ptwikinews' => [ '', 'autoconfirmed', 'editautoreviewprotected', 'sysop' ], // T221521
 	'rowiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T63172
 	'srwiki' => [ '', 'autoconfirmed', 'autopatrol', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
 	'srwikibooks' => [ '', 'autoconfirmed', 'autopatrol', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
@@ -8700,6 +8700,7 @@ function wmfGetVariantSettings() {
 			'reupload-own' => true,
 			'reupload-shared' => true,
 			'autopatrol' => true, // T167071
+			'editautoreviewprotected' => true,
 		],
 		'rollbacker' => [ 'rollback' => true ],
 
@@ -8728,10 +8729,18 @@ function wmfGetVariantSettings() {
 			'reupload-own' => true,
 			'reupload-shared' => true,
 			'autopatrol' => true, // T167071
+			'editautoreviewprotected' => true,
 		],
 		'autoreview' => [
 			'autopatrol' => true, // T167071
+			'editautoreviewprotected' => true,
 		],
+		'bot' => [
+			'editautoreviewprotected' => true,
+		],
+		'sysop' => [
+			'editautoreviewprotected' => true,
+		]
 	],
 	'+arwikibooks' => [
 		'rollbacker' => [ 'rollback' => true ], // T185720
@@ -9036,10 +9045,10 @@ function wmfGetVariantSettings() {
 		'autopatrolled' => [ 'autopatrol' => true, ], // T67495
 	],
 	'+dewiktionary' => [
-		'sysop' => [ 'importupload' => true, 'editeditorprotected' => true, 'autoreviewprotected' => true, ], // T216885
-		'bot' => [ 'editeditorprotected' => true, 'autoreviewprotected' => true, ], // T216885
-		'editor' => [ 'editeditorprotected' => true, 'autoreviewprotected' => true, ], // T216885
-		'autoreview' => [ 'autoreviewprotected' => true, ] // T216885
+		'sysop' => [ 'importupload' => true, 'editeditorprotected' => true, 'editautoreviewprotected' => true, ], // T216885
+		'bot' => [ 'editeditorprotected' => true, 'editautoreviewprotected' => true, ], // T216885
+		'editor' => [ 'editeditorprotected' => true, 'editautoreviewprotected' => true, ], // T216885
+		'autoreview' => [ 'editautoreviewprotected' => true, ] // T216885
 	],
 	'+donatewiki' => [
 		'user' => [ 'editinterface' => true, 'editsitejson' => true ],
@@ -9876,10 +9885,10 @@ function wmfGetVariantSettings() {
 	// T11024, T12362
 	'+ptwiki' => [
 		'autoconfirmed' => [ 'patrol' => true, 'abusefilter-log-detail' => true ],
-		'bot' => [ 'autoreviewer' => true, ],
+		'bot' => [ 'editautoreviewprotected' => true, ],
 		'autoreviewer' => [
 			'autopatrol' => true,
-			'autoreviewer' => true,
+			'editautoreviewprotected' => true,
 			'movefile' => true, // T161532
 		],
 		'eliminator' => [
@@ -9891,7 +9900,7 @@ function wmfGetVariantSettings() {
 			'deletedtext' => true,
 			'autopatrol' => true,
 			'suppressredirect' => true,
-			'autoreviewer' => true,
+			'editautoreviewprotected' => true,
 			'movefile' => true, // T161532
 			'move-rootuserpages' => true, // T205595
 		],
@@ -9902,11 +9911,11 @@ function wmfGetVariantSettings() {
 			'abusefilter-log-private' => true, //T237830
 		], // T29563
 		'user' => [ 'move-rootuserpages' => false, ],
-		'sysop' => [ 'autoreviewer' => true ],
+		'sysop' => [ 'editautoreviewprotected' => true ],
 		'bureaucrat' => [
 			'move-rootuserpages' => true,
 			'autopatrol' => true,
-			'autoreviewer' => true
+			'editautoreviewprotected' => true
 		],
 		'interface-editor' => [ // T41905
 			'editinterface' => true,
