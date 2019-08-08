@@ -129,7 +129,7 @@ $wgLBFactoryConf = [
 		# 'db2049'      => 50, # C6 2.9TB 160GB # to be decommissioned T228258
 		# 'db2051'      => 100,   # B8 2.9TB 160GB # to be decommissioned T228258
 		# 'db2056'      => 100, # D6 3.3TB 160GB, # to be decommissioned T228258
-		# 'db2063'      => 50, # D6 3.3TB 160GB # to be decommissioned T228258
+		# 'db2063'      => 50, # D6 3.3TB 160GB # to replace db2044 in m2 codfw
 		'db2088:3312' => 150, # D1 3.3TB 512GB # rc, log: s1 and s2
 		'db2091:3312' => 150, # A8 3.3TB 512GB # rc, log: s2 and s4
 		'db2104'      => 500, # A5 5.2TB 512GB, api # candidate master
@@ -622,7 +622,6 @@ $wgLBFactoryConf = [
 	'db2066' => '10.192.48.18', # do not remove or comment out
 	'db2067' => '10.192.48.19', # do not remove or comment out
 	'db2068' => '10.192.48.20', # do not remove or comment out
-	'db2069' => '10.192.48.21', # do not remove or comment out
 	'db2070' => '10.192.32.5', # do not remove or comment out
 	'db2071' => '10.192.0.4', # do not remove or comment out
 	'db2072' => '10.192.16.37', # do not remove or comment out
@@ -721,7 +720,6 @@ $wgLBFactoryConf = [
 	# ExtensionStore shard1
 	'extension1' => [
 		'10.192.16.34' => 0, # db2096, B4 3.5TB 512GB, master
-		# '10.192.48.21' => 0, # db2069, D6 3.5TB 160GB, to be decommissioned
 		'10.192.32.134' => 1, # db2115, C6 5.2TB 512GB
 		'10.192.48.134' => 1, # db2131, D8 5.2TB 512GB
 	],
