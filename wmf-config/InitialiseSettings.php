@@ -14516,6 +14516,8 @@ $wgConf->settings = [
 		'kyivcity.gov.ua',                  // Ukrainian government website - T227366
 		'nlm.nih.gov',                      // US Government website - T229470
 		'files.geocollections.info',        // Estonian Museum of Natural History - T229547
+		'hubblesite.org',                   // US Government website - T230083
+		'spacetelescope.org',               // ESA website - T230083
 	],
 ],
 
