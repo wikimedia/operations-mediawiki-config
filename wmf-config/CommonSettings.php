@@ -916,6 +916,12 @@ $wgHooks['TitleQuickPermissions'][] = function ( Title $title, User $user, $acti
 	return ( !in_array( $action, [ 'deletedhistory', 'deletedtext' ] ) || !$title->inNamespaces( NS_FILE, NS_FILE_TALK ) || !$user->isAllowed( 'viewdeletedfile' ) );
 };
 
+// Assign "editautopatrolprotected" to sysops and bots, if autopatroller restriction level is enabled
+if ( in_array( 'editautopatrolprotected', $wgRestrictionLevels ) ) {
+	$wgGroupPermissions['sysop']['editautopatrolprotected'] = true;
+	$wgGroupPermissions['bot']['editautopatrolprotected'] = true;
+}
+
 if ( $wmgUseTimeline ) {
 	include "$wmfConfigDir/timeline.php";
 }

@@ -140,6 +140,7 @@ $wgExtensionFunctions[] = function () {
 		# User groups permissions
 		$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
 		$wgGroupPermissions['reviewer']['autopatrol'] = true;
+		$wgGroupPermissions['reviewer']['editautopatrolprotected'] = true;
 		$wgGroupPermissions['reviewer']['patrol'] = true;
 		$wgGroupPermissions['reviewer']['unwatchedpages'] = true;
 		$wgGroupPermissions['sysop']['review'] = true;
