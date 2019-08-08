@@ -720,8 +720,8 @@ $wgLBFactoryConf = [
 	],
 	# ExtensionStore shard1
 	'extension1' => [
-		'10.192.48.21' => 0, # db2069, D6 3.5TB 160GB, master
-		'10.192.16.34' => 1, # db2096, B4 3.5TB 512GB
+		'10.192.16.34' => 0, # db2096, B4 3.5TB 512GB, master
+		# '10.192.48.21' => 0, # db2069, D6 3.5TB 160GB, to be decommissioned
 		'10.192.32.134' => 1, # db2115, C6 5.2TB 512GB
 		'10.192.48.134' => 1, # db2131, D8 5.2TB 512GB
 	],
