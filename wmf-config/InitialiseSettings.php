@@ -6458,6 +6458,7 @@ $wgConf->settings = [
 		118 => 'Draft', // T91223
 		119 => 'Draft_talk', // T91223
 	],
+	'zhwikisource' => [ 100 => 'Portal', 101 => 'Portal_talk' ], // T230294
 	'zhwikiversity' => [
 		100 => 'Portal', // T201675
 		101 => 'Portal_talk', // T201675
