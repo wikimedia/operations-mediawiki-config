@@ -7672,17 +7672,9 @@ $wgConf->settings = [
 # @} end of wgExtraNamespaces
 
 'wgAccountCreationThrottle' => [
-	'default' => 6,
+	'default' => 2, // was 6, set to 2 for T230304
 	'private' => 0, // disable for wikis with sysop-only account creation
 	'fishbowl' => 0,
-	'small' => 2, // T230304
-	'medium' => 2, // T230304
-	'warwiki' => 2, // T230304
-	'hewikibooks' => 4,
-	'hewikinews' => 4,
-	'hewikiquote' => 4,
-	'hewikisource' => 4,
-	'hewiktionary' => 4,
 ],
 
 'wgDefaultSkin' => [
