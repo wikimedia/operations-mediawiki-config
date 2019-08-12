@@ -7677,6 +7677,7 @@ $wgConf->settings = [
 	'fishbowl' => 0,
 	'small' => 2, // T230304
 	'medium' => 2, // T230304
+	'warwiki' => 2, // T230304
 	'hewikibooks' => 4,
 	'hewikinews' => 4,
 	'hewikiquote' => 4,
