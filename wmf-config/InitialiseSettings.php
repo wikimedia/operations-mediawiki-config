@@ -20970,6 +20970,7 @@ $wgConf->settings = [
 	'incubatorwiki' => true,
 	'wikidatawiki' => true,
 	'ptwiki' => true, // T140395
+	'warwiki' => true, // T230304
 ],
 
 'wmgUseCampaigns' => [
