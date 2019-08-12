@@ -140,10 +140,10 @@ $wgLBFactoryConf = [
 	/* s3 */ 'DEFAULT' => [
 		'db2105'      => 0, # A6 5.2TB 512GB # master
 		# 'db2043'      => 0,   # C6 2.9TB 160GB, # old  master # to be decommissioned
-		'db2050'      => 50,  # C6 2.9TB 160GB dump (inactive), vslow
-		'db2057'      => 50,  # D6 3.3TB 160GB # old candidate master # to be decommissioned
-		'db2074'      => 500, # D6 3.3TB 512GB # rc,log # master for sanitarium db2094
-		'db2109'      => 500, # B5 5.2TB 512GB
+		# 'db2050'      => 50,  # C6 2.9TB 160GB # to be decommissioned
+		# 'db2057'      => 50,  # D6 3.3TB 160GB # old candidate master # to be decommissioned
+		'db2074'      => 400, # D6 3.3TB 512GB # rc,log # master for sanitarium db2094
+		'db2109'      => 300, # B5 5.2TB 512GB # vslow, dump
 		'db2127'      => 500, # C6 5.2TB 512GB # candidate master
 	],
 	's4' => [
@@ -347,10 +347,10 @@ $wgLBFactoryConf = [
 	],
 	/* s3 */ 'DEFAULT' => [
 		'dump' => [
-			'db2050' => 1,
+			'db2109' => 1,
 		],
 		'vslow' => [
-			'db2050' => 1,
+			'db2109' => 1,
 		],
 		'watchlist' => [
 			'db2074' => 1,
