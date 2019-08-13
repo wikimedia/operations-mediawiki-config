@@ -139,7 +139,6 @@ $wgLBFactoryConf = [
 	],
 	/* s3 */ 'DEFAULT' => [
 		'db2105'      => 0, # A6 5.2TB 512GB # master
-		# 'db2050'      => 50,  # C6 2.9TB 160GB # to be decommissioned
 		# 'db2057'      => 50,  # D6 3.3TB 160GB # old candidate master # to be decommissioned
 		'db2074'      => 400, # D6 3.3TB 512GB # rc,log # master for sanitarium db2094
 		'db2109'      => 300, # B5 5.2TB 512GB # vslow, dump
@@ -607,7 +606,6 @@ $wgLBFactoryConf = [
 	'db2047' => '10.192.32.107', # do not remove or comment out
 	'db2048' => '10.192.0.99', # do not remove or comment out
 	'db2049' => '10.192.32.109', # do not remove or comment out
-	'db2050' => '10.192.32.110', # do not remove or comment out
 	'db2051' => '10.192.16.22', # do not remove or comment out
 	'db2052' => '10.192.48.4', # do not remove or comment out
 	'db2053' => '10.192.48.5', # do not remove or comment out
