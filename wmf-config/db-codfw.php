@@ -190,6 +190,7 @@ $wgLBFactoryConf = [
 		'db2118'      => 300, # D3 5.2TB 512GB, candidate master
 		'db2120'      => 300, # D5 5.2TB 512GB
 		'db2121'      => 300, # A5 5.2TB 512GB, # future candidate master
+		'db2122'      => 300, # A6 5.2TB 512GB
 	],
 	's8' => [
 		'db2079'      => 0,  # A5 3.3TB 512GB, # master
@@ -670,6 +671,7 @@ $wgLBFactoryConf = [
 	'db2119' => '10.192.48.36', # do not remove or comment out
 	'db2120' => '10.192.48.37', # do not remove or comment out
 	'db2121' => '10.192.0.134', # do not remove or comment out
+	'db2122' => '10.192.0.146', # do not remove or comment out
 	'db2123' => '10.192.16.12', # do not remove or comment out
 	'db2124' => '10.192.16.19', # do not remove or comment out
 	'db2125' => '10.192.32.181', # do not remove or comment out
