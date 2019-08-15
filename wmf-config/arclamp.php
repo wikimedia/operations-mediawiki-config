@@ -102,6 +102,8 @@ function wmfArcLampFlush( $redisHost, $redisPort, $redisTimeout ) {
 
 /**
  * Setup ArcLamp
+ *
+ * @param array $options
  */
 function wmfSetupArcLamp( $options ) {
 	register_shutdown_function( function () use ( $options ) {

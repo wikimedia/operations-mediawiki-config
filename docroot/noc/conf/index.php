@@ -2,6 +2,7 @@
 	/**
 	 * @param array $viewFilenames
 	 * @param bool $highlight
+	 * @param string $prefixFunc
 	 */
 	function outputFiles( $viewFilenames, $highlight = true, $prefixFunc = 'basename' ) {
 		$viewFilenames = array_map( $prefixFunc, $viewFilenames );

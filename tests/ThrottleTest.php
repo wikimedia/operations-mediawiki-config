@@ -8,10 +8,10 @@ class ThrottleTest extends PHPUnit\Framework\TestCase {
 		$validParameters = self::getThrottlingExceptionsValidParameters();
 
 		foreach ( $rule as $key => $value ) {
-				$this->assertContains(
-					$key, $validParameters,
-					"Invalid parameter in a throttle rule detected: $key"
-				);
+			$this->assertContains(
+				$key, $validParameters,
+				"Invalid parameter in a throttle rule detected: $key"
+			);
 		}
 	}
 

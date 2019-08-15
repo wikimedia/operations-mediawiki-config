@@ -8,6 +8,7 @@
 
 /**
  * @param string $msg
+ * @param int $code
  */
 function dieOut( $msg = '', $code = 500 ) {
 	$error = 'bad request';

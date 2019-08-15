@@ -34,8 +34,7 @@ class XWikimediaDebugTest extends PHPUnit\Framework\TestCase {
 	}
 
 	/**
-	 * Test of XWikimediaDebug::getOption
-	 *
+	 * @covers XWikimediaDebug::getOption
 	 * @dataProvider provider
 	 */
 	public function testGetOption( $input, $expected ) {
@@ -52,8 +51,7 @@ class XWikimediaDebugTest extends PHPUnit\Framework\TestCase {
 	}
 
 	/**
-	 * Test of XWikimediaDebug::hasOption
-	 *
+	 * @covers XWikimediaDebug::hasOption
 	 * @dataProvider provider
 	 */
 	public function testHasOption( $input, $expected ) {
