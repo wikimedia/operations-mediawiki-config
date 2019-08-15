@@ -6460,7 +6460,6 @@ $wgConf->settings = [
 		118 => 'Draft', // T91223
 		119 => 'Draft_talk', // T91223
 	],
-	'zhwikisource' => [ 100 => 'Portal', 101 => 'Portal_talk' ], // T230294
 	'zhwikiversity' => [
 		100 => 'Portal', // T201675
 		101 => 'Portal_talk', // T201675
@@ -6822,6 +6821,8 @@ $wgConf->settings = [
 		103 => 'Thảo_luận_Tác_gia',
 	],
 	'zhwikisource' => [ // Added on 2009-03-19 per T17722
+		100 => 'Portal', // T230294
+		101 => 'Portal_talk', // T230294
 		102 => 'Author',
 		103 => 'Author_talk',
 		108 => 'Transwiki', // T42474
