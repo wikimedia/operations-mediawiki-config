@@ -29,16 +29,12 @@ $lang = 'en';
 $search = '';
 $limit = 20;
 
-if ( isset( $_GET['lang'] ) ) {
-	if ( preg_match( '/^[a-z]+(-[a-z]+)*$/', $_GET['lang'] ) ) {
-		$lang = $_GET['lang'];
-	}
+if ( isset( $_GET['lang'] ) && preg_match( '/^[a-z]+(-[a-z]+)*$/', $_GET['lang'] ) ) {
+	$lang = $_GET['lang'];
 }
 
-if ( isset( $_GET['search'] ) ) {
-	if ( is_string( $_GET['search'] ) ) {
-		$search = trim( $_GET['search'] );
-	}
+if ( isset( $_GET['search'] ) && is_string( $_GET['search'] ) ) {
+	$search = trim( $_GET['search'] );
 }
 if ( !$search ) {
 	dieOut( "Request must include a 'search' parameter", 400 );
