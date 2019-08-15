@@ -96,6 +96,7 @@ class WmfClusters {
 
 	/**
 	 * @param string $db
+	 * @return string
 	 */
 	public function getServer( $db ) {
 		static $canonicalServers;

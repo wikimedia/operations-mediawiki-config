@@ -26,7 +26,7 @@ foreach ( $selectableFilepaths as $filePath ) {
 	$fileName = str_replace( __DIR__ . '/', '', $filePath );
 	// Map .txt links to the original filename
 	if ( substr( $fileName, -4 ) === '.txt' ) {
-		$fileName =  substr( $fileName, 0, -4 );
+		$fileName = substr( $fileName, 0, -4 );
 	}
 	if ( $fileName === $selectedFileName ) {
 		$selectedFilePath = $filePath;

@@ -64,7 +64,7 @@
 <h3><img src="./images/document.png" alt=""> Database lists</h3>
 <ul>
 <?php
-	outputFiles( glob( __DIR__ . '/dblists/*.dblist' ), true, function( $name ) {
+	outputFiles( glob( __DIR__ . '/dblists/*.dblist' ), true, function ( $name ) {
 		return str_replace( __DIR__ . '/', '', $name );
 	} );
 ?>
