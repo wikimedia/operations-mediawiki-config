@@ -5144,6 +5144,10 @@ $wgConf->settings = [
 		'page' => 104,
 		'index' => 106,
 	],
+	'napwikisource' => [
+		'page' => 106,
+		'index' => 104,
+	],
 	'nlwikisource' => [
 		'page' => 104,
 		'index' => 106
@@ -6707,10 +6711,6 @@ $wgConf->settings = [
 	'napwikisource' => [
 		102 => 'Autore', // Author
 		103 => 'Autore_chiàcchiera', // Author talk
-		104 => 'Ennece', // Index
-		105 => 'Ennece_chiàcchiera', // Index talk
-		106 => 'Paggena', // Page
-		107 => 'Paggena_chiàcchiera', // Page talk
 		108 => 'Opera', // Work
 		109 => 'Opera_chiàcchiera', // Work talk
 	],
