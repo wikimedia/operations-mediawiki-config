@@ -12615,6 +12615,7 @@ $wgConf->settings = [
 	'mswiki' => [ 'id' ], // T18033
 	'mswiktionary' => [ 'w' ],
 	'myvwiki' => [ 'incubator' ],
+	'napwikisource' => [ 'meta', 'commons', 'oldwikisource', 'en', 'it', 'fr' ], // T230533
 	'ndswiki' => [ 'en', 'de', 'nl', 'nds-nl', 'wikt' ],
 	'newiki' => [ 'en', 'commons' ], // T97396
 	'newikibooks' => [ 'w', 'w:en', 'w:hi', 'commons' ], // T129831
