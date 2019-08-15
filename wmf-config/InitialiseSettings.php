@@ -991,21 +991,21 @@ $wgConf->settings = [
 	// Wikibooks
 	'angwikibooks' => '/static/images/project-logos/angwikibooks.png',
 	'arwikibooks' => '/static/images/project-logos/arwikibooks.png',
-	'azwikibooks' => '/static/images/project-logos/azwikibooks.png',  // T54019
+	'azwikibooks' => '/static/images/project-logos/azwikibooks.png', // T54019
 	'bawikibooks' => '/static/images/project-logos/bawikibooks.png',
 	'bewikibooks' => '/static/images/project-logos/bewikibooks.png',
 	'bgwikibooks' => '/static/images/project-logos/bgwikibooks.png',
 	'bnwikibooks' => '/static/images/project-logos/bnwikibooks.png',
 	'cawikibooks' => '/static/images/project-logos/cawikibooks.png',
 	'cswikibooks' => '/static/images/project-logos/cswikibooks.png',
-	'cywikibooks' => '/static/images/project-logos/cywikibooks.png',  // T54019
+	'cywikibooks' => '/static/images/project-logos/cywikibooks.png', // T54019
 	'dewikibooks' => '/static/images/project-logos/dewikibooks.png',
 	'elwikibooks' => '/static/images/project-logos/elwikibooks.png',
 	'enwikibooks' => '/static/images/project-logos/enwikibooks.png',
-	'eowikibooks' => '/static/images/project-logos/eowikibooks.png',  // T54019
+	'eowikibooks' => '/static/images/project-logos/eowikibooks.png', // T54019
 	'eswikibooks' => '/static/images/project-logos/eswikibooks.png',
-	'etwikibooks' => '/static/images/project-logos/etwikibooks.png',  // T54019
-	'euwikibooks' => '/static/images/project-logos/euwikibooks.png',  // T54019
+	'etwikibooks' => '/static/images/project-logos/etwikibooks.png', // T54019
+	'euwikibooks' => '/static/images/project-logos/euwikibooks.png', // T54019
 	'fawikibooks' => '/static/images/project-logos/fawikibooks.png',
 	'fiwikibooks' => '/static/images/project-logos/fiwikibooks.png',
 	'frwikibooks' => '/static/images/project-logos/frwikibooks.png',
@@ -1018,31 +1018,31 @@ $wgConf->settings = [
 	'iswikibooks' => '/static/images/project-logos/iswikibooks.png',
 	'itwikibooks' => '/static/images/project-logos/itwikibooks.png',
 	'kawikibooks' => '/static/images/project-logos/kawikibooks.png',
-	'kowikibooks' => '/static/images/project-logos/kowikibooks.png',  // T58760
+	'kowikibooks' => '/static/images/project-logos/kowikibooks.png', // T58760
 	'liwikibooks' => '/static/images/project-logos/liwikibooks.png', // T193680
 	'ltwikibooks' => '/static/images/project-logos/ltwikibooks.png',
-	'mkwikibooks' => '/static/images/project-logos/mkwikibooks.png',  // T54019
-	'mlwikibooks' => '/static/images/project-logos/mlwikibooks.png',  // T45111
-	'mrwikibooks' => '/static/images/project-logos/mrwikibooks.png',  // T104132
+	'mkwikibooks' => '/static/images/project-logos/mkwikibooks.png', // T54019
+	'mlwikibooks' => '/static/images/project-logos/mlwikibooks.png', // T45111
+	'mrwikibooks' => '/static/images/project-logos/mrwikibooks.png', // T104132
 	'mswikibooks' => '/static/images/project-logos/mswikibooks.png',
-	'newikibooks' => '/static/images/project-logos/newikibooks.png',  // T124881
+	'newikibooks' => '/static/images/project-logos/newikibooks.png', // T124881
 	'nowikibooks' => '/static/images/project-logos/nowikibooks.png',
-	'ocwikibooks' => '/static/images/project-logos/ocwikibooks.png',  // T54019
+	'ocwikibooks' => '/static/images/project-logos/ocwikibooks.png', // T54019
 	'ptwikibooks' => '/static/images/project-logos/ptwikibooks.png',
 	'rowikibooks' => '/static/images/project-logos/rowikibooks.png',
 	'ruwikibooks' => '/static/images/project-logos/ruwikibooks.png',
 	'siwikibooks' => '/static/images/project-logos/siwikibooks.png',
 	'skwikibooks' => '/static/images/project-logos/skwikibooks.png',
-	'slwikibooks' => '/static/images/project-logos/slwikibooks.png',  // T54019
+	'slwikibooks' => '/static/images/project-logos/slwikibooks.png', // T54019
 	'sqwikibooks' => '/static/images/project-logos/sqwikibooks.png',
 	'srwikibooks' => '/static/images/project-logos/srwikibooks.png',
-	'tawikibooks' => '/static/images/project-logos/tawikibooks.png',  // T33862
+	'tawikibooks' => '/static/images/project-logos/tawikibooks.png', // T33862
 	'thwikibooks' => '/static/images/project-logos/thwikibooks.png',
 	'trwikibooks' => '/static/images/project-logos/trwikibooks.png',
 	'ttwikibooks' => '/static/images/project-logos/ttwikibooks.png',
 	'ukwikibooks' => '/static/images/project-logos/ukwikibooks.png',
 	'urwikibooks' => '/static/images/project-logos/urwikibooks.png', // T185977
-	'viwikibooks' => '/static/images/project-logos/viwikibooks.png',  // T39661
+	'viwikibooks' => '/static/images/project-logos/viwikibooks.png', // T39661
 	'zhwikibooks' => '/static/images/project-logos/zhwikibooks.png',
 
 	// Wikinews
@@ -1136,7 +1136,7 @@ $wgConf->settings = [
 	'vecwikisource' => '/static/images/project-logos/vecwikisource.png', // T132157
 	'viwikisource' => '/static/images/project-logos/viwikisource.png',
 	'yiwikisource' => '/static/images/project-logos/yiwikisource.png',
-	'zhwikisource' => '/static/images/project-logos/zhwikisource.png', //T229715
+	'zhwikisource' => '/static/images/project-logos/zhwikisource.png', // T229715
 	'zh_min_nanwikisource' => '/static/images/project-logos/zh_min_nanwikisource.png',
 
 	// Wikiversity
@@ -1700,7 +1700,7 @@ $wgConf->settings = [
 	'srwikisource' => [ '1.5x' => '/static/images/project-logos/srwikisource-1.5x.png', '2x' => '/static/images/project-logos/srwikisource-2x.png' ], // T172268
 	'viwikisource' => [ '1.5x' => '/static/images/project-logos/viwikisource-1.5x.png', '2x' => '/static/images/project-logos/viwikisource-2x.png' ],
 	'yiwikisource' => [ '1.5x' => '/static/images/project-logos/yiwikisource-1.5x.png', '2x' => '/static/images/project-logos/yiwikisource-2x.png' ], // T193562
-	'zhwikisource' => [ '1.5x' => '/static/images/project-logos/zhwikisource-1.5x.png', '2x' => '/static/images/project-logos/zhwikisource-2x.png' ], //T229715
+	'zhwikisource' => [ '1.5x' => '/static/images/project-logos/zhwikisource-1.5x.png', '2x' => '/static/images/project-logos/zhwikisource-2x.png' ], // T229715
 
 	# Wikiversity
 	'arwikiversity' => [ '1.5x' => '/static/images/project-logos/arwikiversity-1.5x.png', '2x' => '/static/images/project-logos/arwikiversity-2x.png' ],
@@ -5014,7 +5014,7 @@ $wgConf->settings = [
 	'+itwikivoyage' => [ 0 => 1, 100 => 0, 104 => 0 ],
 
 	// Wikimania
-	'+wikimaniawiki' => [ 120 => 1, 122 => 1, 124 => 1, 126 => 1, 128 => 1 ], //T220950
+	'+wikimaniawiki' => [ 120 => 1, 122 => 1, 124 => 1, 126 => 1, 128 => 1 ], // T220950
 ],
 # @} end of wgNamespacesWithSubpages
 
@@ -10860,10 +10860,10 @@ $wgConf->settings = [
 		],
 	],
 	'+azwikisource' => [
-		'sysop' => [ 'autopatrolled', ], //T229371
+		'sysop' => [ 'autopatrolled', ], // T229371
 	],
 	'+azwiktionary' => [
-		'sysop' => [ 'autopatrolled', ], //T227208
+		'sysop' => [ 'autopatrolled', ], // T227208
 	],
 	'+bewiki' => [
 		'sysop' => [ 'autoeditor' ],
@@ -11646,10 +11646,10 @@ $wgConf->settings = [
 		],
 	],
 	'+azwikisource' => [
-		'sysop' => [ 'autopatrolled', ], //T229371
+		'sysop' => [ 'autopatrolled', ], // T229371
 	],
 	'+azwiktionary' => [
-		'sysop' => [ 'autopatrolled', ], //T227208
+		'sysop' => [ 'autopatrolled', ], // T227208
 	],
 	'+bawiki' => [
 		'bureaucrat' => [ 'sysop' ],
@@ -20670,7 +20670,7 @@ $wgConf->settings = [
 ],
 
 'wmgWikibaseMaxSerializedEntitySize' => [
-	'default' => 3000, //T217739
+	'default' => 3000, // T217739
 ],
 
 // List of properties to be indexed by elasticsearch

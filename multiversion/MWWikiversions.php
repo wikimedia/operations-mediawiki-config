@@ -6,8 +6,8 @@ require_once __DIR__ . '/defines.php';
  */
 class MWWikiversions {
 	/**
-	 * @param $srcPath string Path to wikiversions.json
-	 * @return Array List of wiki version rows
+	 * @param string $srcPath Path to wikiversions.json
+	 * @return array List of wiki version rows
 	 */
 	public static function readWikiVersionsFile( $srcPath ) {
 		$data = file_get_contents( $srcPath );
@@ -49,8 +49,8 @@ class MWWikiversions {
 	 *  %% all.dblist - wikipedia.dblist
 	 * @endcode
 	 *
-	 * @param $expr string
-	 * @return Array
+	 * @param string $expr
+	 * @return array
 	 */
 	public static function evalDbListExpression( $expr ) {
 		$expr = trim( strtok( $expr, "#\n" ), "% " );
@@ -71,7 +71,7 @@ class MWWikiversions {
 	/**
 	 * Get an array of DB names from a .dblist file.
 	 *
-	 * @param $srcPath string
+	 * @param string $dblist
 	 * @return Array
 	 */
 	public static function readDbListFile( $dblist ) {

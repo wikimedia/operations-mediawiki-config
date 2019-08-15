@@ -326,14 +326,30 @@ $wgAuthManagerAutoConfig['preauth'][GuanacoProvider::class] = [
 class GuanacoProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvider {
 	const EVILUA = 'Bawolff test';
 
+	/**
+	 * @param User $user
+	 * @param array $autocreate
+	 * @param array $options
+	 * @return Status
+	 */
 	public function testUserForCreation( $user, $autocreate, array $options = [] ) {
 		return $this->testUser( $user );
 	}
 
+	/**
+	 * @param User $user
+	 * @param User $creator
+	 * @param array $reqs
+	 * @return Status
+	 */
 	public function testForAccountCreation( $user, $creator, array $reqs ) {
 		return $this->testUser( $user );
 	}
 
+	/**
+	 * @param User $user
+	 * @return Status
+	 */
 	public function testUser( $user ) {
 		$ua = $this->manager->getRequest()->getHeader( 'User-agent' );
 		$logger = \MediaWiki\Logger\LoggerFactory::getInstance( 'badpass' );

@@ -31,7 +31,7 @@
  * @return array
  */
 function wmfLabsOverrideSettings() {
-	global $wmfConfigDir, $wgConf;
+	global $wgConf;
 
 	// Override (or add) settings that we need within the labs environment,
 	// but not in production.

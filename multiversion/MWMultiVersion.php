@@ -311,10 +311,10 @@ class MWMultiVersion {
 	 * commands that use the "MWScript.php" wrapper, for example:
 	 * "php /srv/mediawiki-staging/multiversion/MWScript.php maintenance/foo.php"
 	 *
-	 * @param &$script string
-	 * @param &$params array
-	 * @param &$options array
-	 * @return boolean
+	 * @param string &$script
+	 * @param array &$params
+	 * @param array &$options
+	 * @return bool
 	 */
 	public static function onWfShellMaintenanceCmd( &$script, array &$params, array &$options ) {
 		global $IP;
@@ -437,8 +437,8 @@ class MWMultiVersion {
 	 * (b) Sets the MW_INSTALL_PATH environmental variable
 	 * (c) Changes PHP's current directory to the directory of this file.
 	 *
-	 * @param $file string File path (relative to MediaWiki dir)
-	 * @param $wiki string Force the Wiki ID rather than detecting it
+	 * @param string $file File path (relative to MediaWiki dir)
+	 * @param string $wiki Force the Wiki ID rather than detecting it
 	 * @return string Absolute file path with proper MW location
 	 */
 	public static function getMediaWiki( $file, $wiki = null ) {
@@ -486,7 +486,7 @@ class MWMultiVersion {
 	 * (b) Sets the MW_INSTALL_PATH environmental variable
 	 * (c) Changes PHP's current directory to the directory of this file.
 	 *
-	 * @param $file string File path (relative to MediaWiki dir or absolute)
+	 * @param string $file File path (relative to MediaWiki dir or absolute)
 	 * @return string Absolute file path with proper MW location
 	 */
 	public static function getMediaWikiCli( $file ) {

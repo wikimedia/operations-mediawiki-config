@@ -20,6 +20,11 @@
 # Included from: wmf-config/CommonSettings.php.
 #
 
+/**
+ * Setup etcd!
+ *
+ * @return EtcdConfig
+ */
 function wmfSetupEtcd() {
 	global $wmfLocalServices, $wmfEtcdLastModifiedIndex;
 		# Create a local cache
@@ -60,11 +65,12 @@ function wmfEtcdConfig() {
 	$wmfDbconfigFromEtcd = $etcdConfig->get( "$wmfDatacenter/dbconfig" );
 }
 
-// In production, read the database loadbalancer config from etcd.
-// See https://wikitech.wikimedia.org/wiki/Dbctl
-//
-// This function must be called after db-{eqiad,codfw}.php has been loaded!
-// It overwrites a few sections of $wgLBFactoryConf with data from etcd.
+/** In production, read the database loadbalancer config from etcd.
+ * See https://wikitech.wikimedia.org/wiki/Dbctl
+ *
+ * This function must be called after db-{eqiad,codfw}.php has been loaded!
+ * It overwrites a few sections of $wgLBFactoryConf with data from etcd.
+ */
 function wmfEtcdApplyDBConfig() {
 	global $wgLBFactoryConf, $wmfDbconfigFromEtcd, $wmfRealm;
 	// In labs, the relevant key exists in etcd, but does not contain real data.

@@ -9,10 +9,10 @@
 /**
  * Set up import sources for transwiki import (T17583)
  *
- * @param array $sources
+ * @param array &$sources
  */
 function wmfImportSources( &$sources ) {
-	global $wgConf, $IP, $lang;
+	global $wgConf, $lang;
 	$wikipedias = array_flip( MWWikiversions::readDbListFile( 'wikipedia.dblist' ) );
 	$privates = array_flip( MWWikiversions::readDbListFile( 'private.dblist' ) );
 

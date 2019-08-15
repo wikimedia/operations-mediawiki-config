@@ -220,6 +220,8 @@ function wmfSetupXhprof( $options ) {
  * Set up Tideways XHProf. This code is mostly duplicated from wmfSetupXhprof,
  * with the idea that we can delete the former once migration to PHP 7 is
  * complete.
+ *
+ * @param array $options
  */
 function wmfSetupTideways( $options ) {
 	$xwd = XWikimediaDebug::getInstance();
@@ -363,6 +365,8 @@ function wmfSetupTideways( $options ) {
 
 /**
  * Set up Excimer for production and one-shot profiling
+ *
+ * @param array $options
  */
 function wmfSetupExcimer( $options ) {
 	// Use a static variable to keep the object in scope until the end
@@ -411,6 +415,9 @@ function wmfSetupExcimer( $options ) {
  * The callback for production profiling. This is called every time Excimer
  * collects a stack trace. The period is 60s, so there's no point waiting for
  * more samples to arrive before the end of the request, they probably won't.
+ *
+ * @param string $log
+ * @param array $options
  */
 function wmfExcimerFlushCallback( $log, $options ) {
 	$error = null;
