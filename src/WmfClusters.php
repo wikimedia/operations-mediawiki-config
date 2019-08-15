@@ -105,33 +105,35 @@ class WmfClusters {
 
 	/**
 	 * @param string $clusterName
+	 * @return string HTML
 	 */
 	public function htmlFor( $clusterName ) {
-		print "<strong>Hosts</strong><br>";
+		$ret = [ "<strong>Hosts</strong><br>" ];
 		foreach ( $this->getHosts( $clusterName ) as $host ) {
-			print "<code>$host</code> ";
+			$ret[] = "<code>$host</code>";
 		}
-		print '<br><strong>Loads</strong>:<br>';
+		$ret[] = '<br><strong>Loads</strong>:<br>';
 		foreach ( $this->getLoads( $clusterName ) as $host => $load ) {
-			print "$host => $load<br>";
+			$ret[] = "$host => $load<br>";
 		}
-		print '<br><strong>Databases</strong>:<br>';
+		$ret[] = '<br><strong>Databases</strong>:<br>';
 		if ( $clusterName == 'DEFAULT' ) {
-			print 'Any wiki not hosted on the other clusters.<br>';
+			$ret[] = 'Any wiki not hosted on the other clusters.<br>';
 		} else {
 			foreach ( $this->getDBs( $clusterName ) as $i => $db ) {
-				print "$db";
+				$ret[] = $db;
 				// labtestweb seems unresponsive, avoid crawlers hitting it
 				if ( $i === 0 && $db !== 'labtestwiki' ) {
 					// Use format=xml because it's cheap to generate and view
 					// and browsers tend to render it nicely.
 					// (json is hard to read by default, jsonfm is slower)
 					$replagUrl = $this->getServer( $db ) . '/w/api.php?format=xml&action=query&meta=siteinfo&siprop=dbrepllag&sishowalldb=1';
-					print ' (replag: <a href="' . htmlspecialchars( $replagUrl ) . '">mw-api</a> &bull;';
-					print ' <a href="https://dbtree.wikimedia.org/">dbtree</a>)';
+					$ret[] = ' (replag: <a href="' . htmlspecialchars( $replagUrl ) . '">mw-api</a> &bull;';
+					$ret[] = ' <a href="https://dbtree.wikimedia.org/">dbtree</a>)';
 				}
-				echo '<br>';
+				$ret[] = '<br>';
 			}
 		}
+		return implode( "\n", $ret );
 	}
 }
