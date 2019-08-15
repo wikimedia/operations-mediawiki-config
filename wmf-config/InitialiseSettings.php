@@ -5144,10 +5144,6 @@ $wgConf->settings = [
 		'page' => 104,
 		'index' => 106,
 	],
-	'napwikisource' => [
-		'page' => 106,
-		'index' => 104,
-	],
 	'nlwikisource' => [
 		'page' => 104,
 		'index' => 106
