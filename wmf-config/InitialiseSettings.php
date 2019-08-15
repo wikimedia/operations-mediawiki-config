@@ -4755,6 +4755,8 @@ $wgConf->settings = [
 		'CAT' => NS_CATEGORY // T181374
 	],
 	'+zhwikisource' => [
+		'WS' => NS_PROJECT, // T230548
+		'CAT' => NS_CATEGORY, // T230548
 		'作者' => 102, // Author
 		'作者讨论' => 103, // Author_talk
 		'作者討論' => 103,
