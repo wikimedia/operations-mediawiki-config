@@ -4026,6 +4026,12 @@ if ( PHP_VERSION_ID >= 70200 ) {
 	$wgOverrideUcfirstCharacters = include __DIR__ . '/Php72ToUpper.php';
 }
 
+# Temporary, until T112147 is done
+if ( isset( $wgGroupPermissions['suppress'] ) ) {
+	$wgGroupPermissions['oversight'] += $wgGroupPermissions['suppress'];
+	unset( $wgGroupPermissions['suppress'] );
+}
+
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
