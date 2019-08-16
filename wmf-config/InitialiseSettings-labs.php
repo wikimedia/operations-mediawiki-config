@@ -1547,7 +1547,7 @@ function wmfLabsSettings() {
 					'class' => 'MediaWiki\\Extension\\MachineVision\\Handler\\WikidataIdHandler',
 					'services' => [ 'MachineVisionClient', 'MachineVisionRepository' ],
 					'args' => [
-						'https://visionoid.wmflabs.org/labels?title=$1', // apiUrlTemplate
+						'https://visionoid.wmflabs.org/labels?target=beta&title=$1', // apiUrlTemplate
 					],
 				],
 			],
