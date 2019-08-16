@@ -234,6 +234,7 @@ function wmfLabsSettings() {
 		],
 
 		'wgEchoPollForUpdates' => [
+			'enwiki' => 60,
 			'cawiki' => 60,
 		],
 
