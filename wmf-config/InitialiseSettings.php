@@ -13294,26 +13294,29 @@ function wmfGetVariantSettings() {
 ],
 
 # Disable all the query pages that take more than about 15 minutes to update
+# Specifiy a "run mode" when a cron job is set up for the special page and
+# also create a message for the "run mode" in WikimediaMessages extension with
+# the message key 'querypage-updates-<run mode>'
 # wgDisableQueryPageUpdate @{
 'wgDisableQueryPageUpdate' => [
 	'default' => [
-		'Ancientpages' => 'periodical',
-		'Deadendpages' => 'periodical',
-		'Fewestrevisions' => 'periodical',
-		'Mostlinked' => 'periodical',
-		'Mostrevisions' => 'periodical',
-		'Wantedpages' => 'periodical',
+		'Ancientpages' => 'half-monthly',
+		'Deadendpages' => 'half-monthly',
+		'Fewestrevisions' => 'half-monthly',
+		'Mostlinked' => 'half-monthly',
+		'Mostrevisions' => 'half-monthly',
+		'Wantedpages' => 'half-monthly',
 	],
 	'small' => [],
 
 	// Individual wikis
 	'+enwiki' => [
-		'Lonelypages' => 'periodical',
-		'Mostcategories' => 'periodical',
-		'Mostlinkedcategories' => 'periodical',
-		'Mostlinkedtemplates' => 'periodical',
-		'Uncategorizedcategories' => 'periodical',
-		'Wantedtemplates' => 'periodical',
+		'Lonelypages' => 'monthly',
+		'Mostcategories' => 'monthly',
+		'Mostlinkedcategories' => 'monthly',
+		'Mostlinkedtemplates' => 'monthly',
+		'Uncategorizedcategories' => 'monthly',
+		'Wantedtemplates' => 'monthly',
 	],
 	'+frwiki' => [
 		'Mostcategories',
