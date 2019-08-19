@@ -167,7 +167,6 @@ $wgLBFactoryConf = [
 		'db2046'      => 0, # C6 2.9TB 160GB # master
 		'db2053'      => 50,  # D6 2.9TB 160GB, dump (inactive), vslow
 		'db2060'      => 100, # D6 3.3TB 160GB, api
-		'db2067'      => 100, # D6 3.3TB 160GB, api
 		'db2076'      => 400, # B1 3.3TB 512GB # master for sanitarium db2095
 		'db2087:3316' => 100, # C1 3.3TB 512GB # rc, log: s6 and s7
 		'db2089:3316' => 100, # A3 3.3TB 512GB # rc, log: s6 and s5(s8)
@@ -459,7 +458,6 @@ $wgLBFactoryConf = [
 		],
 		'api' => [
 			'db2060' => 1,
-			'db2067' => 1,
 		],
 	],
 	's7' => [
@@ -614,7 +612,6 @@ $wgLBFactoryConf = [
 	'db2060' => '10.192.48.12', # do not remove or comment out
 	'db2061' => '10.192.48.13', # do not remove or comment out
 	'db2066' => '10.192.48.18', # do not remove or comment out
-	'db2067' => '10.192.48.19', # do not remove or comment out
 	'db2068' => '10.192.48.20', # do not remove or comment out
 	'db2070' => '10.192.32.5', # do not remove or comment out
 	'db2071' => '10.192.0.4', # do not remove or comment out
