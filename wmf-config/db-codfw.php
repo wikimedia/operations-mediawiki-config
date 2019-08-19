@@ -126,7 +126,6 @@ $wgLBFactoryConf = [
 	],
 	's2' => [
 		'db2107'      => 0, # B1 5.2TB 512GB # master
-		# 'db2049'      => 50, # C6 2.9TB 160GB # to be decommissioned T228258
 		# 'db2051'      => 100,   # B8 2.9TB 160GB # to be decommissioned T228258
 		# 'db2056'      => 100, # D6 3.3TB 160GB, # to be decommissioned T228258
 		'db2088:3312' => 150, # D1 3.3TB 512GB # rc, log: s1 and s2
@@ -601,7 +600,6 @@ $wgLBFactoryConf = [
 	'db2046' => '10.192.32.106', # do not remove or comment out
 	'db2047' => '10.192.32.107', # do not remove or comment out
 	'db2048' => '10.192.0.99', # do not remove or comment out
-	'db2049' => '10.192.32.109', # do not remove or comment out
 	'db2051' => '10.192.16.22', # do not remove or comment out
 	'db2052' => '10.192.48.4', # do not remove or comment out
 	'db2053' => '10.192.48.5', # do not remove or comment out
