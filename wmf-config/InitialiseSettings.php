@@ -8341,10 +8341,8 @@ $wgConf->settings = [
 		],
 		// For expanded rollback permissions...
 		'rollback' => [
-			'user' => [ 10, 60 ], // was [ 5, 60 ], -- brion 2008-05-15
+			'user' => [ 100, 60 ], // T228708
 			'newbie' => [ 5, 120 ],
-			// practicality has won out over paranoia on enwiki, raising from 20 to 100 -- TS 2008-05-21
-			'rollbacker' => [ 100, 60 ],
 		],
 		'purge' => [
 			// 30 page purges per minute
