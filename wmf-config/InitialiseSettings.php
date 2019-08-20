@@ -19347,6 +19347,7 @@ $wgConf->settings = [
 	'default' => false,
 	'wikipedia' => true,
 	'wikivoyage' => true,
+	'eswikinews' => true, //T230660
 	'frwikinews' => true, // T143480
 ],
 
@@ -19368,8 +19369,8 @@ $wgConf->settings = [
 'wmgRelatedArticlesFooterWhitelistedSkins' => [
 	// T144812
 	'default' => [ 'minerva' ],
-	// T126826
-	'htwiki' => [ 'minerva', 'vector' ],
+	'eswikinews' => [], // T230660
+	'htwiki' => [ 'minerva', 'vector' ], // T126826
 	'hewiki' => [ 'minerva', 'vector' ], // T191573
 	'wikivoyage' => [ 'minerva', 'vector' ],
 ],
