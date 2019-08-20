@@ -8139,6 +8139,7 @@ $wgConf->settings = [
 'wgEnableDnsBlacklist' => [
 	'default' => false,
 	'enwikinews' => true,
+	'eswikiquote' => true, // T230796
 	'thwiki' => true,
 	'thwiktionary' => true,
 	'thwikiquote' => true,
