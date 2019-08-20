@@ -151,15 +151,15 @@ $wgLBFactoryConf = [
 		'db2119'      => 500, # D3 5.2TB 512GB
 	],
 	's5' => [
-		'db2052'      => 0,   # D6 2.9TB 160GB, master
+		'db2123'      => 0, # B3 5.2TB 512GB # master
+		# 'db2052'      => 0,   # D6 2.9TB 160GB, master # old master, will be decommissioned
 		# 'db2059'      => 100, # D6 3.3TB 160GB, api # to be decommissioned
 		# 'db2066'      => 100, # D6 3.3TB 160GB, api # to be decommissioned
 		'db2075'      => 100, # A1 3.3TB 512GB # api
 		'db2084:3315' => 100, # D6 3.3TB 512GB # rc, log: s4 and s5
 		'db2089:3315' => 100, # A3 3.3TB 512GB # rc, log: s5 and s6
 		'db2111'      => 500, # B6 5.2TB 512GB
-		'db2113'      => 1, # C3 5.2TB 512GB # dump (inactive), vslow future candidate master
-		'db2123'      => 0, # B3 5.2TB 512GB # future master
+		'db2113'      => 1, # C3 5.2TB 512GB # dump (inactive), vslow # candidate master
 		'db2128'      => 300, # D1 5.2TB 512GB # api # master for sanitarium db2094
 	],
 	's6' => [
