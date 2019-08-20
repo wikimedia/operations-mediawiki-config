@@ -8217,10 +8217,10 @@ $wgConf->settings = [
 
 # wgNamespacesToBeSearchedDefault @{
 'wgNamespacesToBeSearchedDefault' => [
-	'default' => [ 0 => 1 ], // T230797
+	'default' => [ 0 => 1, 1 => 0, 2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0 ],
 	'+arwikisource' => [ 102 => 1 ],
 	'+aswikisource' => [ 104 => 1, 106 => 1 ], // T45129
-	'+bgwiki' => [ 100 => 1 ],
+	'+bgwiki' => [ 100 => 1, 101 => 0 ],
 	'+bgwikisource' => [ 100 => 1 ],
 	'+bnwikisource' => [ 100 => 1, 106 => 1, 108 => 1, 114 => 1 ], // T178041 - portal, author, translation and T199028 - Publisher
 	'+brwikisource' => [ 100 => 1, 104 => 1 ],
@@ -8228,6 +8228,10 @@ $wgConf->settings = [
 	'+cswiki' => [ 100 => 1, 101 => 0, 102 => 1 ],
 	'+commonswiki' => [ 6 => 1, 12 => 1, 14 => 1, 100 => 1, 106 => 1 ],
 	'+testcommonswiki' => [ 6 => 1, 12 => 1, 14 => 1, 100 => 1, 106 => 1 ],
+	'+cswikinews' => [ 14 => 0, 15 => 0 ],
+	'+cswikiquote' => [ 14 => 0, 15 => 0, 100 => 1, 101 => 0 ],
+	'+cswikisource' => [ 100 => 1, 101 => 0 ],
+	'+cswikiversity' => [ 14 => 0, 15 => 0, 100 => 0, 101 => 0 ],
 	'+dawikisource' => [ 102 => 1, 106 => 1 ],
 	'+dewikisource' => [ 102 => 1, 104 => 1 ],
 	'+dewikiversity' => [ 106 => 1, 108 => 1 ],
@@ -8272,6 +8276,7 @@ $wgConf->settings = [
 	'+plwikisource' => [ 102 => 1, 104 => 1, 124 => 1, ], // T154711
 	'+ptwikisource' => [ 102 => 1, 104 => 1 ],
 	'+rowikisource' => [ 102 => 1, 106 => 1 ], // T31190
+	'+ruwiki' => [ 104 => 0, 105 => 0, 106 => 0, 107 => 0 ],
 	'+ruwikisource' => [ 106 => 1 ],
 	'+ruwikivoyage' => [ 6 => 1, 14 => 1, 100 => 1, 104 => 1, 106 => 1 ],
 	'+sewikimedia' => [ 100 => 1 ], // T48882
@@ -8281,15 +8286,15 @@ $wgConf->settings = [
 	'+svwikivoyage' => [ 6 => 1, 14 => 1, 100 => 1, 104 => 1, 106 => 1 ],
 	'+strategywiki' => [ 106 => 1, 107 => 1 ], // T22514
 	'+tewikisource' => [ 102 => 1, 106 => 1 ],
-	'+tlwikibooks' => [ 100 => 1 ],
+	'+tlwikibooks' => [ 100 => 1, 101 => 0 ],
 	'+trwikisource' => [ 100 => 1 ],
 	'+ukwikinews' => [ 14 => 1 ], // T51335
 	'+ukwikisource' => [ 102 => 1, 114 => 1, 252 => 1 ], // T52561, T53684
 	'+vecwikisource' => [ 100 => 1, 104 => 1 ],
 	'+viwikibooks' => [ 102 => 1, 104 => 1, 106 => 1 ],
 	'+viwikisource' => [ 102 => 1, 106 => 1 ],
-	'+testwikidatawiki' => [ 120 => 1 ], // Search properties by default
-	'+wikidatawiki' => [ 120 => 1 ], // Search properties by default
+	'+testwikidatawiki' => [ 120 => 1, 146 => 0 ], // Search properties but not lexeme by default
+	'+wikidatawiki' => [ 120 => 1, 146 => 0 ], // Search properties but not lexeme by default
 	'+wikimaniawiki' => [ 128 => 1 /* 2019 content */ ],
 	'+zhwikisource' => [ 102 => 1, 106 => 1, 114 => 1 ], // T66127
 ],
