@@ -22703,21 +22703,6 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
-'wgWMEReadingDepthEnabled' => [
-	'default' => false,
-	'wikipedia' => true,
-],
-
-'wgWMEReadingDepthSamplingRate' => [
-	'default' => 0,
-
-	// Careful! This value should not be increased without coordination with the
-	// Operations and/or Analytics teams. At the very least, be mindful of the
-	// current rate of ReadingDepth events being logged:
-	// https://grafana.wikimedia.org/dashboard/db/eventlogging-schema?var-schema=ReadingDepth
-	'wikipedia' => 0.1, // T205176
-],
-
 'wgWMEPrintEnabled' => [
 	'default' => true  // T176341
 ],
