@@ -1122,6 +1122,10 @@ function wmfLabsSettings() {
 			'enwikisource' => true,
 			'commonswiki' => true,
 		],
+		'wgEnableSpecialMute' => [
+			'default' => false,
+			'enwiki' => true,
+		],
 		'wgPropertySuggesterClassifyingPropertyIds' => [
 			'wikidatawiki' => [ 694 ],
 		],
