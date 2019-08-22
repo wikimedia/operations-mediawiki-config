@@ -8693,29 +8693,21 @@ $wgConf->settings = [
 		'autopatrolled' => [ 'autopatrol' => true ], // T227208
 	],
 	'+azbwiki' => [
-		'autopatrolled' => [ // T109755
-			'autopatrol' => true, // T109755
-		],
+		'autopatrolled' => [ 'autopatrol' => true, ], // T109755
 		'interface-editor' => [ // T109755
 			'editinterface' => true, // T109755
 			'editsitejson' => true,
 			'tboverride' => true, // T109755
 		],
-		'patroller' => [ // T109755
-			'patrol' => true, // T109755
-		],
-		'rollbacker' => [ // T109755
-			'rollback' => true, // T109755
-		],
+		'patroller' => [ 'patrol' => true, ], // T109755
+		'rollbacker' => [ 'rollback' => true, ], // T109755
 		'transwiki' => [ // T109755
 			'import' => true, // T109755
 			'importupload' => true, // T109755
 		],
 	],
 	'+bnwiki' => [
-		'user' => [ 'patrol' => false ],
 		'autoconfirmed' => [ 'patrol' => true ],
-		'sysop' => [ 'patrol' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ], // T30717
 		'rollbacker' => [ 'rollback' => true ], // T30717
 		'reviewer' => [ 'patrol' => true ], // T30717
@@ -8737,20 +8729,12 @@ $wgConf->settings = [
 	],
 	'+bswiki' => [
 		'rollbacker' => [ 'rollback' => true ],
-		'flood' => [
-			'bot' => true, // T52425
-			'autopatrol' => false, // T158662
-		],
-		'sysop' => [ // T158662
-			'autopatrol' => false,
-			'patrol' => false,
-		],
+		'flood' => [ 'bot' => true, 'autopatrol' => false, ], // T52425, T158662
+		'sysop' => [ 'autopatrol' => false, 'patrol' => false, ], // T158662
 	],
 	'+cawiki' => [
-		'user' => [ 'patrol' => false ],
 		'autoconfirmed' => [ 'patrol' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ],
-		'sysop' => [ 'patrol' => true ],
 		'rollbacker' => [ 'rollback' => true ],
 	],
 	'+cawikinews' => [
@@ -8877,7 +8861,6 @@ $wgConf->settings = [
 	'+commonswiki' => [
 		'user' => [
 			'changetags' => false, // T134196
-			'move' => false, // requested by Bdka on #wikimedia-tech, 2006-05-04
 			'upload' => true, // exception for T14556
 		],
 		'rollbacker' => [ 'rollback' => true ],
@@ -8905,20 +8888,13 @@ $wgConf->settings = [
 			'upload_by_url' => true,
 			'templateeditor' => true, // T227420
 		],
-		'bot' => [
-			'changetags' => true, // T134196
-			'upload_by_url' => true, // T145010
-		],
+		'bot' => [ 'changetags' => true, 'upload_by_url' => true, ], // T134196, T145010
 		'translationadmin' => [ 'noratelimit' => true, ], // T155162
-		'templateeditor' => [ // T227420
-			'templateeditor' => true,
-			'tboverride' => true,
-		],
+		'templateeditor' => [ 'templateeditor' => true, 'tboverride' => true, ], // T227420
 	],
 	'+testcommonswiki' => [
 		'user' => [
 			'changetags' => false, // T134196
-			'move' => false, // requested by Bdka on #wikimedia-tech, 2006-05-04
 			'upload' => true, // exception for T14556
 		],
 		'rollbacker' => [ 'rollback' => true ],
@@ -8940,10 +8916,7 @@ $wgConf->settings = [
 			'changetags' => true, // T134196
 			'upload_by_url' => true,
 		],
-		'bot' => [
-			'changetags' => true, // T134196
-			'upload_by_url' => true, // T145010
-		],
+		'bot' => [ 'changetags' => true, 'upload_by_url' => true, ], // T134196, T145010
 		'translationadmin' => [ 'noratelimit' => true, ], // T155162
 	],
 	'+dawiki' => [
@@ -8957,19 +8930,8 @@ $wgConf->settings = [
 		'autopatrolled' => [ 'autopatrol' => true, ], // T88591
 	],
 	'+dewiki' => [
-		'*' => [
-			'patrolmarks' => true, // T100682
-		],
-		'user' => [
-			'move' => false, // Report by sansculotte on #mediawiki, TS 2004-10-15
-			'upload' => false, // T14391
-		],
-		'autoconfirmed' => [
-			'upload' => true, // T14391
-		],
-		'bot' => [
-			'editeditorprotected' => true, // T94368
-		],
+		'*' => [ 'patrolmarks' => true, ], // T100682
+		'bot' => [ 'editeditorprotected' => true, ], // T94368
 		'editor' => [
 			'rollback' => true, // per DaBPunkt's request, 2008-05-07
 			'editeditorprotected' => true, // T94368
@@ -8978,20 +8940,10 @@ $wgConf->settings = [
 			'autoreview' => true,
 			'noratelimit' => true,
 		],
-		'sysop' => [
-			'editeditorprotected' => true, // T94368
-		],
-	],
-	'+dewikibooks' => [
-		'user' => [ 'move' => false ], // Request by DaBPunkt on #wikimedia-tech, JF 2007-01-27
+		'sysop' => [ 'editeditorprotected' => true, ], // T94368
 	],
 	'+dewikiquote' => [
 		'sysop' => [ 'importupload' => true, ],
-	],
-	'+dewikiversity' => [
-		'user' => [ 'patrol' => false, ],
-		'autoconfirmed' => [ 'patrol' => false, ],
-		'sysop' => [ 'patrol' => true, ],
 	],
 	'+dewikivoyage' => [
 		'autopatrolled' => [ 'autopatrol' => true, ], // T67495
@@ -9019,7 +8971,6 @@ $wgConf->settings = [
 			'createpagemainns' => false,
 		],
 		'user' => [
-			'move' => false, // autoconfirmed only
 			'collectionsaveasuserpage' => true, // T48944
 			'changetags' => false, // T97013
 			'createpagemainns' => false,
@@ -9075,16 +9026,12 @@ $wgConf->settings = [
 	'+enwikinews' => [
 		'flood' => [ 'bot' => true ],
 	],
-	'+enwikiquote' => [
-		'user' => [ 'move' => false ], // autoconfirmed only, per request due to wow 2007-05-08
-	],
 	'+enwikisource' => [
 		'autoconfirmed' => [ 'patrol' => true ], // T14355
 		'autopatrolled' => [ 'autopatrol' => true ], // T20307
 		'flood' => [ 'bot' => true ], // T38863
 	],
 	'+enwikiversity' => [
-		'user' => [ 'move' => false ], // autoconfirmed only
 		'sysop' => [ 'nuke' => false ], // T113109
 		'bureaucrat' => [ 'nuke' => true ], // T113109
 		'curator' => [ // T113109
@@ -9119,7 +9066,6 @@ $wgConf->settings = [
 		'rollbacker' => [ 'rollback' => true ],
 		'sysop' => [ 'templateeditor' => true ], // T148007
 		'templateeditor' => [ 'templateeditor' => true ], // T148007
-		'user' => [ 'move' => false ], // requested in beer parlour, 13 june 2006
 	],
 	'+eswiki' => [
 		'autoconfirmed' => [ 'collectionsaveascommunitypage' => false ], // T163767
@@ -9141,10 +9087,7 @@ $wgConf->settings = [
 		'flood' => [ 'bot' => true ],
 		'rollbacker' => [ 'rollback' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ], // T93371
-		'patroller' => [
-			'patrol' => true,
-			'autopatrol' => true,
-		], // T93371
+		'patroller' => [ 'patrol' => true, 'autopatrol' => true, ], // T93371
 	],
 	'+eswikinews' => [
 		'bot' => [ 'editprotected' => true ],
@@ -9152,32 +9095,17 @@ $wgConf->settings = [
 		'flood' => [ 'bot' => true ],
 	],
 	'+eswikiquote' => [ // T64911
-		'rollbacker' => [
-			'rollback' => true,
-		],
-		'autopatrolled' => [
-			'autopatrol' => true,
-		],
-		'patroller' => [
-			'patrol' => true,
-			'autopatrol' => true,
-		],
+		'rollbacker' => [ 'rollback' => true, ],
+		'autopatrolled' => [ 'autopatrol' => true, ],
+		'patroller' => [ 'patrol' => true, 'autopatrol' => true, ],
 	],
 	'+eswikisource' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T69557
 	],
 	'+eswikivoyage' => [
-		'rollbacker' => [
-			'rollback' => true, // T46285
-			'autopatrol' => true, // T49325
-		],
-		'patroller' => [
-			'patrol' => true, // T46285
-			'autopatrol' => true, // T49325
-		],
-		'autopatrolled' => [
-			'autopatrol' => true, // T57665
-		],
+		'rollbacker' => [ 'rollback' => true, 'autopatrol' => true, ], // T46285, T49325
+		'patroller' => [ 'patrol' => true, 'autopatrol' => true, ], // T46285, T49325
+		'autopatrolled' => [ 'autopatrol' => true, ], // T57665
 	],
 	'+eswiktionary' => [
 		'patroller' => [ 'patrol' => true ],
@@ -9209,10 +9137,7 @@ $wgConf->settings = [
 			'extendedconfirmed' => true,
 		], // T71411
 		'OTRS-member' => [ 'read' => true ], // T56368
-		'templateeditor' => [
-			'editprotected' => true, // T74146
-			'tboverride' => true, // T74146
-		],
+		'templateeditor' => [ 'editprotected' => true, 'tboverride' => true, ], // T74146
 		'eliminator' => [
 			'block' => true,
 			'delete' => true,
@@ -9235,12 +9160,8 @@ $wgConf->settings = [
 			'validate' => true,
 			'review' => true,
 		], // T87558, T135370, T135725, T176553
-		'sysop' => [
-			'extendedconfirmed' => true,
-		],
-		'extendedconfirmed' => [
-			'extendedconfirmed' => true,
-		], // T140839
+		'sysop' => [ 'extendedconfirmed' => true, ],
+		'extendedconfirmed' => [ 'extendedconfirmed' => true, ], // T140839
 	],
 	'+fawikibooks' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T111024
@@ -9286,7 +9207,7 @@ $wgConf->settings = [
 		'flood' => [ 'bot' => true ],
 	],
 	'+frwiki' => [
-		'user' => [ 'move' => false, 'changetags' => false ], // requested by hashar, T98629
+		'user' => [ 'changetags' => false ], // requested by hashar, T98629
 		'bot' => [ 'changetags' => true, 'editextendedsemiprotected' => true ], // T98629, T131109
 		'autopatrolled' => [
 			'patrol' => true, // T10904
@@ -9304,10 +9225,7 @@ $wgConf->settings = [
 	],
 	'+frwikinews' => [
 		'flood' => [ 'bot' => true ],
-		'trusteduser' => [ // T90979
-			'autoreview' => true,
-			'unreviewedpages' => true,
-		],
+		'trusteduser' => [ 'autoreview' => true, 'unreviewedpages' => true, ], // T90979
 		'facilitator' => [ // T90979
 			'autoreview' => true,
 			'review' => true,
@@ -9366,15 +9284,8 @@ $wgConf->settings = [
 		'autopatrolled' => [ 'autopatrol' => true ],
 	],
 	'+hewiki' => [
-		'user' => [
-			'move' => false,
-			'upload' => true,
-			'move-rootuserpages' => false,
-		],
-		'sysop' => [
-			'deleterevision' => true,
-			'templateeditor' => true, // T102466
-		],
+		'user' => [ 'upload' => true, 'move-rootuserpages' => false, ],
+		'sysop' => [ 'templateeditor' => true, ], // T102466
 		'patroller' => [
 			'patrol' => true,
 			'autopatrol' => true,
@@ -9382,10 +9293,7 @@ $wgConf->settings = [
 			'rollback' => true,
 			'move-rootuserpages' => true,
 		],
-		'autopatrolled' => [
-			'autopatrol' => true,
-			'unwatchedpages' => true,
-		],
+		'autopatrolled' => [ 'autopatrol' => true, 'unwatchedpages' => true, ],
 		'interface-admin' => [ // T200698
 			'abusefilter-log' => true,
 			'abusefilter-log-detail' => true,
@@ -9479,8 +9387,7 @@ $wgConf->settings = [
 	// T7836
 	// T13326
 	'+itwiki' => [
-		'user' => [ 'upload' => false, 'move' => false ],
-		'autoconfirmed' => [ 'patrol' => true, 'upload' => true ],
+		'autoconfirmed' => [ 'patrol' => true, ],
 		'flood' => [ 'bot' => true, ],
 		'rollbacker' => [ 'rollback' => true, 'autopatrol' => true, ],
 		'autopatrolled' => [ 'autopatrol' => true ],
@@ -9539,9 +9446,7 @@ $wgConf->settings = [
 		'sysop' => [ 'autopatrol' => true ],
 	],
 	'+itwikivoyage' => [
-		'autopatrolled' => [
-			'autopatrol' => true, // T45327, T45524
-		],
+		'autopatrolled' => [ 'autopatrol' => true, ], // T45327, T45524
 		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'rollback' => true ], // T47638
 	],
 	'+itwiktionary' => [
@@ -9586,9 +9491,6 @@ $wgConf->settings = [
 			'suppressredirect' => true,
 		],
 	],
-	'+jawikinews' => [
-		'user' => [ 'move' => false ], // autoconfirmed only, per request by britty 2007-05-16
-	],
 	'+jawiktionary' => [
 		'autopatrolled' => [ 'autopatrol' => true, 'patrol' => true ], // T63366
 	],
@@ -9609,15 +9511,9 @@ $wgConf->settings = [
 		],
 		'user' => [ 'reupload-own' => false ], // T85621
 		'autopatrolled' => [ 'autopatrol' => true ], // T130808
-		'bot' => [
-			'extendedconfirmed' => true,
-		], // T184675
-		'extendedconfirmed' => [
-			'extendedconfirmed' => true,
-		], // T184675
-		'sysop' => [
-			'extendedconfirmed' => true,
-		], // T184675
+		'bot' => [ 'extendedconfirmed' => true, ], // T184675
+		'extendedconfirmed' => [ 'extendedconfirmed' => true, ], // T184675
+		'sysop' => [ 'extendedconfirmed' => true, ], // T184675
 	],
 	'+labswiki' => [
 		'bureaucrat' => [ 'usermerge' => true ],
@@ -9632,10 +9528,7 @@ $wgConf->settings = [
 		],
 	],
 	'wikitech' => [ // contentadmin is handled in CommonSettings, not here
-		'*' => [
-			'edit' => false,
-			'createaccount' => true,
-		],
+		'*' => [ 'edit' => false, 'createaccount' => true, ],
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'cloudadmin' => [
 			'autopatrol' => true,
@@ -9667,13 +9560,8 @@ $wgConf->settings = [
 		'rollbacker' => [ 'rollback' => true ], // T118934
 	],
 	'+mediawikiwiki' => [
-		'user' => [
-			'move' => false,
-			'flow-create-board' => true,
-		],
-		'autopatrolled' => [
-			'autopatrol' => true,
-		],
+		'user' => [ 'flow-create-board' => true, ],
+		'autopatrolled' => [ 'autopatrol' => true, ],
 		'uploader' => [ // T217523
 			'upload' => true,
 			'reupload' => true,
@@ -9682,9 +9570,7 @@ $wgConf->settings = [
 		],
 	],
 	'+metawiki' => [
-		'autopatrolled' => [ // T27160
-			'autopatrol' => true,
-		],
+		'autopatrolled' => [ 'autopatrol' => true, ], // T27160
 		'centralnoticeadmin' => [ // gerrit:50196, T142123
 			'autopatrol' => true,
 			'banner-protect' => true,
@@ -9692,9 +9578,7 @@ $wgConf->settings = [
 			'editinterface' => true,
 			'protect' => true, // T209873
 		],
-		'flood' => [ // T17176
-			'bot' => true,
-		],
+		'flood' => [ 'bot' => true, ], // T17176
 		'global-renamer' => [ // T142123, T71651
 			'autopatrol' => true,
 			'centralauth-rename' => true,
@@ -9703,9 +9587,7 @@ $wgConf->settings = [
 			'autopatrol' => true,
 			'massmessage' => true,
 		],
-		'oauthadmin' => [ // T142123
-			'autopatrol' => true,
-		],
+		'oauthadmin' => [ 'autopatrol' => true, ], // T142123
 		'patroller' => [ // T176079
 			'autopatrol' => true,
 			'patrol' => true,
@@ -9761,10 +9643,46 @@ $wgConf->settings = [
 		'patroller' => [ 'patrol' => true ],
 		'rollbacker' => [ 'rollback' => true ],
 		'botadmin' => [
-			'blockemail' => true, 'block' => true, 'ipblock-exempt' => true, 'protect' => true, 'editprotected' => true, 'createaccount' => true, 'deleterevision' => true, 'delete' => true, 'globalblock-whitelist' => true,
-			'autoconfirmed' => true, 'editsemiprotected' => true, 'editinterface' => true, 'editsitejson' => true, 'autopatrol' => true, 'import' => true, 'patrol' => true, 'markbotedits' => true, 'nuke' => true, 'abusefilter-modify' => true, 'movefile' => true, 'move' => true, 'move-subpages' => true,
-			'move-rootuserpages' => true, 'noratelimit' => true, 'suppressredirect' => true, 'reupload-shared' => true, 'override-antispoof' => true, 'tboverride' => true, 'reupload' => true, 'skipcaptcha' => true, 'rollback' => true, 'browsearchive' => true,
-			'undelete' => true, 'upload' => true, 'upload_by_url' => true, 'apihighlimits' => true, 'unwatchedpages' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-log-detail' => true,
+			'blockemail' => true,
+			'block' => true,
+			'ipblock-exempt' => true,
+			'protect' => true,
+			'editprotected' => true,
+			'createaccount' => true,
+			'deleterevision' => true,
+			'delete' => true,
+			'globalblock-whitelist' => true,
+			'autoconfirmed' => true,
+			'editsemiprotected' => true,
+			'editinterface' => true,
+			'editsitejson' => true,
+			'autopatrol' => true,
+			'import' => true,
+			'patrol' => true,
+			'markbotedits' => true,
+			'nuke' => true,
+			'abusefilter-modify' => true,
+			'movefile' => true,
+			'move' => true,
+			'move-subpages' => true,
+			'move-rootuserpages' => true,
+			'noratelimit' => true,
+			'suppressredirect' => true,
+			'reupload-shared' => true,
+			'override-antispoof' => true,
+			'tboverride' => true,
+			'reupload' => true,
+			'skipcaptcha' => true,
+			'rollback' => true,
+			'browsearchive' => true,
+			'undelete' => true,
+			'upload' => true,
+			'upload_by_url' => true,
+			'apihighlimits' => true,
+			'unwatchedpages' => true,
+			'deletedhistory' => true,
+			'deletedtext' => true,
+			'abusefilter-log-detail' => true,
 		],
 	],
 	'+mlwikisource' => [
@@ -9773,12 +9691,7 @@ $wgConf->settings = [
 	],
 	'+mznwiki' => [
 		// Uploads are restricted to a uploader group - T187187
-		'user' => [
-			'upload' => false,
-			'reupload' => false,
-			'reupload-own' => false,
-			'reupload-shared' => false,
-		],
+		'user' => [ 'reupload-own' => false, ],
 		'uploader' => [
 			'upload' => true,
 			'reupload' => true,
@@ -9805,10 +9718,7 @@ $wgConf->settings = [
 	],
 	'+nlwiktionary' => [ 'user' => [ 'patrol' => true ] ],
 	'+nlwikivoyage' => [
-		'autopatrolled' => [
-			'autopatrol' => true, // T46082
-			'patrol' => true, // T46082
-		],
+		'autopatrolled' => [ 'autopatrol' => true, 'patrol' => true, ], // T46082
 	],
 	'+nlwikibooks' => [ 'user' => [ 'patrol' => true ] ],
 	// 'nlwikinews' => [ 'user' => [ 'patrol' => true ] ],
@@ -9823,7 +9733,6 @@ $wgConf->settings = [
 	'+nowikibooks' => [
 		'user' => [ 'patrol' => false ],
 		'autoconfirmed' => [ 'patrol' => false ],
-		'sysop' => [ 'patrol' => true ],
 		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'rollback' => true, 'markbotedits' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ],
 	],
@@ -9866,11 +9775,9 @@ $wgConf->settings = [
 	],
 	// T8303
 	'+plwiki' => [
-		'user' => [ 'upload' => false ],
-		'autoconfirmed' => [ 'upload' => true ],
 		'editor' => [ 'rollback' => true, 'patrolmarks' => true, 'editor' => true ], // T22154 and T48990
 		'flood' => [ 'bot' => true ], // T22155
-		'sysop' => [ 'deleterevision' => true, 'editor' => true ], // T48990
+		'sysop' => [ 'editor' => true ], // T48990
 		'bot' => [ 'editor' => true ], // T48990
 	],
 	'+plwikiquote' => [
@@ -9910,10 +9817,7 @@ $wgConf->settings = [
 			'unwatchedpages' => true,
 			'block' => true, // T37261
 		], // T29563
-		'user' => [
-			'move' => false,
-			'move-rootuserpages' => false,
-		],
+		'user' => [ 'move-rootuserpages' => false, ],
 		'sysop' => [ 'autoreviewer' => true ],
 		'bureaucrat' => [
 			'move-rootuserpages' => true,
@@ -9924,9 +9828,7 @@ $wgConf->settings = [
 			'editinterface' => true,
 			'editsitejson' => true,
 		],
-		'flood' => [
-			'bot' => true, // T228521
-		],
+		'flood' => [ 'bot' => true, ], // T228521
 	],
 	'+ptwikinews' => [
 		'editprotected' => [ 'editprotected' => true, 'editsemiprotected' => true ], // T162577
@@ -9938,11 +9840,7 @@ $wgConf->settings = [
 		'rollbacker' => [ 'rollback' => true ],
 	],
 	'rowiki' => [
-		'sysop' => [
-			'autopatrol' => true,
-			'patrol' => true,
-			'templateeditor' => true, // T63172
-		],
+		'sysop' => [ 'templateeditor' => true, ], // T63172
 		'patroller' => [ 'patrol' => true, 'upwizcampaigns' => true, ], // T61242
 		'autopatrolled' => [ 'autopatrol' => true, 'movefile' => true ], // T168192
 		'templateeditor' => [ // T63172
@@ -9958,9 +9856,7 @@ $wgConf->settings = [
 			'deletedhistory' => true,
 			'deletedtext' => true,
 		],
-		'autoconfirmed' => [
-			'collectionsaveascommunitypage' => false, // T85780
-		],
+		'autoconfirmed' => [ 'collectionsaveascommunitypage' => false, ], // T85780
 		'bot' => [
 			'autopatrol' => false, // T154285
 			'changetags' => true, // T136187
@@ -9998,7 +9894,6 @@ $wgConf->settings = [
 			'suppressredirect' => true,
 			'upload' => true,
 		],
-
 		'uploader' => [ // T14334
 			'upload' => true,
 			'reupload-own' => true,
@@ -10008,9 +9903,7 @@ $wgConf->settings = [
 			'changetags' => false, // T136187
 			'move-categorypages' => false,
 		],
-		'rollbacker' => [
-			'rollback' => true
-		],
+		'rollbacker' => [ 'rollback' => true ],
 		'suppressredirect' => [ // T40408, T68871
 			'move-categorypages' => true,
 			'suppressredirect' => true,
@@ -10022,16 +9915,12 @@ $wgConf->settings = [
 		],
 	],
 	'+ruwikinews' => [
-		'autoconfirmed' => [
-			'movestable' => false, // T201265
-		],
+		'autoconfirmed' => [ 'movestable' => false, ], // T201265
 		'autoreview' => [
 			'move-categorypages' => true,
 			'movestable' => true, // T201265
 		],
-		'user' => [
-			'move-categorypages' => false, // T201265
-		],
+		'user' => [ 'move-categorypages' => false, ], // T201265
 		'rollbacker' => [ 'rollback' => true ], // T201265
 	],
 	'+ruwikiquote' => [
@@ -10090,15 +9979,9 @@ $wgConf->settings = [
 	],
 	'shwiki' => [ // T52802
 		'patroller' => [ 'patrol' => true ],
-		'autopatrolled' => [
-			'autopatrol' => true,
-			'patrolmarks' => true, // T62818
-		],
-		'rollbacker' => [
-			'rollback' => true,
-			'markbotedits' => true, // T64462
-		],
-		'filemover' => [ 'movefile' => true, 'suppressredirect' => true ],
+		'autopatrolled' => [ 'autopatrol' => true, 'patrolmarks' => true, ], // T62818
+		'rollbacker' => [ 'rollback' => true, 'markbotedits' => true, ], // T64462
+		'filemover' => [ 'movefile' => true, 'suppressredirect' => true, ],
 		'flood' => [ 'bot' => true ],
 	],
 	'+shwiktionary' => [
@@ -10113,17 +9996,23 @@ $wgConf->settings = [
 	],
 	'+specieswiki' => [ // T89147
 		'autopatrolled' => [ 'autopatrol' => true ],
-		'patroller' => [
-			'patrol' => true,
-			'autopatrol' => true,
-			],
+		'patroller' => [ 'patrol' => true, 'autopatrol' => true, ],
 	],
 	'+srwiki' => [ // T208633, T210000 and T213050
-		'user' => [ 'upload' => false, 'move-categorypages' => false ],
-		'autoconfirmed' => [ 'upload' => true ],
-		'patroller' => [ 'patrol' => true, 'movefile' => true, 'suppressredirect' => true, 'move-categorypages' => true ],
+		'user' => [ 'move-categorypages' => false ],
+		'patroller' => [
+			'patrol' => true,
+			'movefile' => true,
+			'suppressredirect' => true,
+			'move-categorypages' => true
+		],
 		'autopatrolled' => [ 'autopatrol' => true, 'move-categorypages' => true ],
-		'rollbacker' => [ 'rollback' => true, 'movefile' => true, 'suppressredirect' => true, 'move-categorypages' => true ],
+		'rollbacker' => [
+			'rollback' => true,
+			'movefile' => true,
+			'suppressredirect' => true,
+			'move-categorypages' => true
+		],
 		'flood' => [ 'bot' => true, 'move-categorypages' => true ],
 		'bot' => [ 'move-categorypages' => true ],
 	],
@@ -10134,20 +10023,17 @@ $wgConf->settings = [
 			'move-categorypages' => true,
 			'movefile' => true,
 			'suppressredirect' => true,
-			'move-categorypages' => true
 		],
 		'autopatrolled' => [
 			'autopatrol' => true,
 			'move-categorypages' => true,
 			'movefile' => true,
-			'move-categorypages' => true
 		],
 		'rollbacker' => [
 			'rollback' => true,
 			'move-categorypages' => true,
 			'movefile' => true,
 			'suppressredirect' => true,
-			'move-categorypages' => true
 		],
 		'bot' => [ 'move-subpages' => true ],
 	],
@@ -10158,20 +10044,17 @@ $wgConf->settings = [
 			'move-categorypages' => true,
 			'movefile' => true,
 			'suppressredirect' => true,
-			'move-categorypages' => true
 		],
 		'autopatrolled' => [
 			'autopatrol' => true,
 			'move-categorypages' => true,
 			'movefile' => true,
-			'move-categorypages' => true
 		],
 		'rollbacker' => [
 			'rollback' => true,
 			'move-categorypages' => true,
 			'movefile' => true,
 			'suppressredirect' => true,
-			'move-categorypages' => true
 		],
 		'bot' => [ 'move-subpages' => true ],
 	],
@@ -10182,20 +10065,17 @@ $wgConf->settings = [
 			'move-categorypages' => true,
 			'movefile' => true,
 			'suppressredirect' => true,
-			'move-categorypages' => true
 		],
 		'autopatrolled' => [
 			'autopatrol' => true,
 			'move-categorypages' => true,
 			'movefile' => true,
-			'move-categorypages' => true
 		],
 		'rollbacker' => [
 			'rollback' => true,
 			'move-categorypages' => true,
 			'movefile' => true,
 			'suppressredirect' => true,
-			'move-categorypages' => true
 		],
 		'bot' => [ 'move-subpages' => true ],
 	],
@@ -10206,20 +10086,17 @@ $wgConf->settings = [
 			'move-categorypages' => true,
 			'movefile' => true,
 			'suppressredirect' => true,
-			'move-categorypages' => true
 		],
 		'autopatrolled' => [
 			'autopatrol' => true,
 			'move-categorypages' => true,
 			'movefile' => true,
-			'move-categorypages' => true
 		],
 		'rollbacker' => [
 			'rollback' => true,
 			'move-categorypages' => true,
 			'movefile' => true,
 			'suppressredirect' => true,
-			'move-categorypages' => true
 		],
 		'bot' => [ 'move-subpages' => true ],
 	],
@@ -10230,20 +10107,17 @@ $wgConf->settings = [
 			'move-categorypages' => true,
 			'movefile' => true,
 			'suppressredirect' => true,
-			'move-categorypages' => true
 		],
 		'autopatrolled' => [
 			'autopatrol' => true,
 			'move-categorypages' => true,
 			'movefile' => true,
-			'move-categorypages' => true
 		],
 		'rollbacker' => [
 			'rollback' => true,
 			'move-categorypages' => true,
 			'movefile' => true,
 			'suppressredirect' => true,
-			'move-categorypages' => true
 		],
 		'bot' => [ 'move-subpages' => true ],
 	],
@@ -10256,7 +10130,12 @@ $wgConf->settings = [
 		'rollbacker' => [ 'rollback' => true, 'autopatrol' => true ],
 	],
 	'+svwikisource' => [ // T30614 & 36895
-		'autopatrolled' => [ 'autopatrol' => true, 'suppressredirect' => true, 'upload' => true, 'reupload' => true ],
+		'autopatrolled' => [
+			'autopatrol' => true,
+			'suppressredirect' => true,
+			'upload' => true,
+			'reupload' => true
+		],
 	],
 	'+svwikivoyage' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T93339
@@ -10270,7 +10149,6 @@ $wgConf->settings = [
 		'*' => [ 'createpage' => false ], // T44894
 	],
 	'+tawiki' => [
-		'nocreate' => [ 'createpage' => false, ],
 		'autopatrolled' => [ 'autopatrol' => true ], // T95180
 		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'abusefilter-log-detail' => true ], // T95180
 		'rollbacker' => [ 'rollback' => true ], // T95180
@@ -10293,9 +10171,7 @@ $wgConf->settings = [
 			'templateeditor' => true,
 			'securepoll-create-poll' => true,
 		],
-		'reviewer' => [
-			'stablesettings' => true,
-		],
+		'reviewer' => [ 'stablesettings' => true, ],
 		'researcher' => [ 'browsearchive' => true, 'deletedhistory' => true, 'apihighlimits' => true ],
 		'rollbacker' => [ 'rollback' => true ],
 		'centralnoticeadmin' => [
@@ -10306,12 +10182,8 @@ $wgConf->settings = [
 	],
 	'test2wiki' => [
 		'*' => [ 'createpagemainns' => false ],
-		'autoreview' => [ // T134491
-			'autopatrol' => true,
-		],
-		'editor' => [ // T134491
-			'patrol' => true,
-		],
+		'autoreview' => [ 'autopatrol' => true, ], // T134491
+		'editor' => [ 'patrol' => true, ], // T134491
 		'user' => [
 			'upload_by_url' => true,
 			'upload' => true,
@@ -10336,25 +10208,17 @@ $wgConf->settings = [
 			'reupload-own' => true,
 			'movefile' => true,
 		],
-		'user' => [
-			'reupload-own' => false, // T216615
-		],
-		'sysop' => [
-			'reupload-own' => true,
-		],
+		'user' => [ 'reupload-own' => false, ], // T216615
+		'sysop' => [ 'reupload-own' => true, ],
 	],
 	'+trwiki' => [
-		'autoreview' => [
-			'autopatrol' => true, // T40690
-		],
+		'autoreview' => [ 'autopatrol' => true, ], // T40690
 		'checkuser' => [
 			'browsearchive' => true, // T40690
 			'deletedhistory' => true, // T40690
 			'deletedtext' => true, // T40690
 		],
-		'massmessage-sender' => [ // T147740
-			'massmessage' => true,
-		],
+		'massmessage-sender' => [ 'massmessage' => true, ], // T147740
 		'oversight' => [
 			'browsearchive' => true, // T40690
 			'deletedhistory' => true, // T40690
@@ -10371,10 +10235,7 @@ $wgConf->settings = [
 			'unreviewedpages' => true, // T40690
 			'movefile' => true, // T46587
 		],
-		'sysop' => [
-			'review' => true, // T40690
-			'unreviewedpages' => true, // T40690
-		],
+		'sysop' => [ 'review' => true, 'unreviewedpages' => true, ], // T40690
 		'interface-editor' => [ // Renamed from 'technician' per T144638
 			'abusefilter-log-detail' => true, // T40690
 			'abusefilter-modify' => true, // T40690
@@ -10385,9 +10246,6 @@ $wgConf->settings = [
 		],
 	],
 	'+trwikiquote' => [
-		'sysop' => [ // T122710
-			'reupload-own' => false,
-		],
 		'editor' => [ // T122710
 			'patrol' => true,
 			'autopatrol' => true,
@@ -10395,16 +10253,12 @@ $wgConf->settings = [
 			'movefile' => true,
 		],
 		'autoreview' => [ 'autopatrol' => true ], // T122710
-		'checkuser' => [ // T122710
-			'deletedtext' => true,
-			'deletedhistory' => true,
-		],
-		'user' => [ 'reupload-own' => true ], // T122710
+		'checkuser' => [ 'deletedtext' => true, 'deletedhistory' => true, ], // T122710
 	],
 	'+ukwiki' => [
 		'patroller' => [ 'patrol' => true, 'autopatrol' => true, ],
 		'rollbacker' => [ 'rollback' => true ],
-		'filemover' => [ 'movefile' => true, 'suppressredirect' => true ] // T119636
+		'filemover' => [ 'movefile' => true, 'suppressredirect' => true ], // T119636
 	],
 	'+ukwikivoyage' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T56299
@@ -10430,10 +10284,13 @@ $wgConf->settings = [
 		'interface-editor' => [ 'editinterface' => true, 'editsitejson' => true ], // T120348
 		'rollbacker' => [ 'rollback' => true ], // T47642
 		'autopatrolled' => [ 'autopatrol' => true ], // T139302
-		'massmessage-sender' => [ // T144701
-			'massmessage' => true,
-		],
-		'extendedmover' => [ 'move' => true, 'move-subpages' => true, 'suppressredirect' => true, 'tboverride' => true ], // T211978
+		'massmessage-sender' => [ 'massmessage' => true, ], // T144701
+		'extendedmover' => [
+			'move' => true,
+			'move-subpages' => true,
+			'suppressredirect' => true,
+			'tboverride' => true
+		], // T211978
 	],
 	'+vecwiki' => [
 		'flood' => [ 'bot' => true ],
@@ -10480,23 +10337,12 @@ $wgConf->settings = [
 	],
 	// T74589 SecurePoll rights
 	'+votewiki' => [
-		'electcomm' => [
-			'securepoll-create-poll' => true,
-			'editinterface' => true
-		],
-		'staffsupport' => [
-			'securepoll-create-poll' => true,
-			'editinterface' => true
-		],
-		'electionadmin' => [
-			'editinterface' => true
-		],
+		'electcomm' => [ 'securepoll-create-poll' => true, 'editinterface' => true ],
+		'staffsupport' => [ 'securepoll-create-poll' => true, 'editinterface' => true ],
+		'electionadmin' => [ 'editinterface' => true ],
 	],
 	'wikidata' => [
-		'autoconfirmed' => [
-			'patrol' => true, // T58203
-			'autopatrol' => true, // T58203
-		],
+		'autoconfirmed' => [ 'patrol' => true, 'autopatrol' => true, ], // T58203
 		'rollbacker' => [
 			'rollback' => true, // T47165
 			'autopatrol' => true, // T57495
@@ -10576,7 +10422,6 @@ $wgConf->settings = [
 	'+wuuwiki' => [
 		'rollbacker' => [ 'rollback' => true, 'autopatrol' => true, 'patrol' => true ], // T116270
 	],
-
 	// due to mass vandalism complaint, 2006-04-11
 	'+zhwiki' => [
 		'rollbacker' => [
@@ -10604,11 +10449,9 @@ $wgConf->settings = [
 			'skipcaptcha' => true, // T198167
 		],
 	],
-
 	'+zh_classicalwiki' => [
 		'editor' => [ 'rollback' => true ], // T188064
 	],
-
 	'+zhwikibooks' => [
 		'autoconfirmed' => [ 'suppressredirect' => true ], // T185182
 		'flood' => [ 'bot' => true ], // T185182
@@ -10645,7 +10488,9 @@ $wgConf->settings = [
 		'rollbacker' => [ 'rollback' => true ],
 		'autoreviewer' => [ 'autopatrol' => true ],
 	],
-	'+strategywiki' => [ 'flood' => [ 'bot' => true ] ],
+	'+strategywiki' => [
+		'flood' => [ 'bot' => true ]
+	],
 ],
 # @} end of groupOverrides
 
