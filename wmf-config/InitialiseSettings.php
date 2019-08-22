@@ -8372,11 +8372,6 @@ $wgConf->settings = [
 			'user' => [ 10, 30 ],
 		],
 	],
-	'+dewiki' => [ // T59820
-		'rollback' => [
-			'editor' => [ 100, 60 ],
-		],
-	],
 	'+commonswiki' => [ // T132930
 		'edit' => [
 			'newbie' => [ 8 * 15, 60 * 15 ], // T225148
@@ -8398,11 +8393,6 @@ $wgConf->settings = [
 	'+enwiki' => [
 		'move' => [
 			'extendedmover' => [ 16, 60 ], // T138703
-		],
-	],
-	'+hewiki' => [
-		'rollback' => [
-			'patroller' => [ 50, 60 ], // T228649
 		],
 	],
 	'+plwiki' => [
