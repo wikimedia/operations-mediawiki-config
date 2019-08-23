@@ -9818,7 +9818,11 @@ $wgConf->settings = [
 	],
 	'rowiki' => [
 		'sysop' => [ 'templateeditor' => true, ], // T63172
-		'patroller' => [ 'patrol' => true, 'upwizcampaigns' => true, ], // T61242
+		'patroller' => [
+			'patrol' => true,
+			'upwizcampaigns' => true, // T61242
+			'rollback' => true, // T231099
+		],
 		'autopatrolled' => [ 'autopatrol' => true, 'movefile' => true ], // T168192
 		'templateeditor' => [ // T63172
 			'templateeditor' => true,
@@ -11137,8 +11141,8 @@ $wgConf->settings = [
 		'sysop' => [ 'rollbacker' ],
 	],
 	'+rowiki' => [
-		'sysop' => [ 'autopatrolled', 'templateeditor' ], // T63172
-		'bureaucrat' => [ 'abusefilter', 'patroller' ], // T28634
+		'sysop' => [ 'autopatrolled', 'templateeditor', 'patroller' ], // T63172, T231099
+		'bureaucrat' => [ 'abusefilter' ], // T28634
 	],
 	'+rswikimedia' => [ // T109613
 		'sysop' => [ 'import' ],
