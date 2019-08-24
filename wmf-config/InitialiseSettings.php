@@ -19198,12 +19198,11 @@ $wgConf->settings = [
 ],
 
 'wmgRelatedArticlesFooterWhitelistedSkins' => [
-	// T144812
-	'default' => [ 'minerva' ],
+	'default' => [ 'minerva', 'timeless' ], // T144812, T181242
 	'eswikinews' => [], // T230660
-	'htwiki' => [ 'minerva', 'vector' ], // T126826
-	'hewiki' => [ 'minerva', 'vector' ], // T191573
-	'wikivoyage' => [ 'minerva', 'vector' ],
+	'htwiki' => [ 'minerva', 'vector', 'timeless' ], // T126826
+	'hewiki' => [ 'minerva', 'vector', 'timeless' ], // T191573
+	'wikivoyage' => [ 'minerva', 'vector', 'timeless' ],
 ],
 
 'wmgUseRevisionSlider' => [
