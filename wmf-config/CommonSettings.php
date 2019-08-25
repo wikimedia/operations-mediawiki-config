@@ -1673,6 +1673,10 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthUseEventLogging = true;
 	$wgCentralAuthPreventUnattached = true;
 
+	// Optimisation: Avoid overhead of computing localised urls
+	// See https://phabricator.wikimedia.org/T189966#5436482
+	$wgCentralAuthCookiesP3P = "CP=\"See $wgCanonicalServer/wiki/Special:CentralAutoLogin/P3P for more info.\"";
+
 	if ( $wmfRealm == 'production' ) {
 		$wgCentralAuthRC[] = [
 			'formatter' => 'IRCColourfulCARCFeedFormatter',
