@@ -14345,6 +14345,7 @@ $wgConf->settings = [
 		'files.geocollections.info',        // Estonian Museum of Natural History - T229547
 		'*.hubblesite.org',                 // US Government website - T230083
 		'*.spacetelescope.org',             // ESA website - T230083
+		'*.wikimedia.cz',                   // Wikimedia Czech Republic - T231247
 	],
 ],
 
