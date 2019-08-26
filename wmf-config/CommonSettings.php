@@ -2738,7 +2738,7 @@ if ( $wmgUseBounceHandler ) {
 }
 
 if ( $wmgUseTranslate ) {
-	require_once "$IP/extensions/Translate/Translate.php";
+	wfLoadExtension( 'Translate' );
 
 	$wgGroupPermissions['*']['translate'] = true;
 	$wgGroupPermissions['translationadmin']['pagetranslation'] = true;
