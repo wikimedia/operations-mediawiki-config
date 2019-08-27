@@ -12726,6 +12726,17 @@ $wgConf->settings = [
 		116 => 'noindex,nofollow',    // מקור
 		117 => 'noindex,nofollow',    // שיחת_מקור
 	],
+	'iswiki' => [ // T231179
+		NS_TALK => 'noindex',
+		NS_USER => 'noindex',
+		NS_USER_TALK => 'noindex',
+		NS_PROJECT_TALK => 'noindex',
+		NS_FILE_TALK => 'noindex',
+		NS_MEDIAWIKI_TALK => 'noindex',
+		NS_TEMPLATE_TALK => 'noindex',
+		NS_HELP_TALK => 'noindex',
+		NS_CATEGORY_TALK => 'noindex',
+	],
 	'itwiki' => [
 		NS_USER => 'noindex,follow', // T107992
 	],
