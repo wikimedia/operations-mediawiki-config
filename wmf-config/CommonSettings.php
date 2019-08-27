@@ -3227,6 +3227,7 @@ if ( $wmgUseRelatedArticles ) {
 	$wgRelatedArticlesLoggingBucketSize = 0;
 	$wgRelatedArticlesUseCirrusSearch = $wmgRelatedArticlesUseCirrusSearch;
 	$wgRelatedArticlesOnlyUseCirrusSearch = false;
+	$wgRelatedArticlesDescriptionSource = 'wikidata';
 }
 
 // Workaround for T142663 - override flat arrays
