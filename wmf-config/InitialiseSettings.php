@@ -8456,6 +8456,7 @@ $wgConf->settings = [
 	'bnwiki' => true,
 	'huwiki' => true,
 	'jawiki' => true,
+	'ruwiki' => true, // T231298
 	'wiktionary' => true,
 	'wikisource' => true,
 	'wikivoyage' => true,
