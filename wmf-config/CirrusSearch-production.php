@@ -78,8 +78,8 @@ if ( isset( $wgCirrusSearchExtraIndexes[NS_FILE] ) ) {
 	$wgCirrusSearchExtraIndexes[NS_FILE] = [ 'chi:commonswiki_file' ];
 }
 
-# Limit the sanitity check to eqiad&codfw
-$wgCirrusSearchSanityCheck = [ 'eqiad', 'codfw' ];
+# Stop generating new checkerJobs (relates to T231194)
+$wgCirrusSearchSanityCheck = false;
 
 $wgCirrusSearchConnectionAttempts = 3;
 
