@@ -8461,31 +8461,6 @@ $wgConf->settings = [
 	'wikivoyage' => true,
 ],
 
-'wgEnableBlockNoticeStats' => [
-	'default' => false,
-	'arwiki' => true,
-	'commonswiki' => true,
-	'testcommonswiki' => true,
-	'dewiki' => true,
-	'enwiki' => true,
-	'enwiktionary' => true,
-	'eswiki' => true,
-	'fawiki' => true,
-	'frwiki' => true,
-	'hewiki' => true,
-	'itwiki' => true,
-	'jawiki' => true,
-	'kowiki' => true,
-	'mediawikiwiki' => true,
-	'metawiki' => true,
-	'nlwiki' => true,
-	'ruwiki' => true,
-	'plwiki' => true,
-	'ptwiki' => true,
-	'svwiki' => true,
-	'zhwiki' => true,
-],
-
 'wgOriginTrials' => [
 	'default' => [],
 	'ruwiki' => [
