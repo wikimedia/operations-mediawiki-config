@@ -1770,6 +1770,7 @@ $wgConf->settings = [
 	'foundationwiki' => [ '1.5x' => '/static/images/project-logos/foundationwiki-1.5x.png', '2x' => '/static/images/project-logos/foundationwiki-2x.png' ],
 	'metawiki' => [ '1.5x' => '/static/images/project-logos/metawiki-1.5x.png', '2x' => '/static/images/project-logos/metawiki-2x.png' ],
 	'officewiki' => [ '1.5x' => '/static/images/project-logos/officewiki-1.5x.png', '2x' => '/static/images/project-logos/officewiki-2x.png' ],
+	'specieswiki' => [ '1.5x' => '/static/images/project-logos/specieswiki-1.5x.png', '2x' => '/static/images/project-logos/specieswiki-2x.png' ], // T230113
 	'testwiki' => [ '1.5x' => '/static/images/project-logos/testwiki-1.5x.png', '2x' => '/static/images/project-logos/testwiki-2x.png' ], // T150618
 	'test2wiki' => [ '1.5x' => '/static/images/project-logos/test2wiki-1.5x.png', '2x' => '/static/images/project-logos/test2wiki-2x.png' ],
 	'votewiki' => [ '1.5x' => '/static/images/project-logos/votewiki-1.5x.png', '2x' => '/static/images/project-logos/votewiki-2x.png' ],
