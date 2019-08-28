@@ -14363,6 +14363,7 @@ $wgConf->settings = [
 		'*.hubblesite.org',                 // US Government website - T230083
 		'*.spacetelescope.org',             // ESA website - T230083
 		'*.wikimedia.cz',                   // Wikimedia Czech Republic - T231247
+		'*.scielo.br',                      // Brazilian scientific papers - T231402
 	],
 ],
 
