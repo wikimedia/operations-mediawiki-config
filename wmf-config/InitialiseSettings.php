@@ -23118,6 +23118,10 @@ $wgConf->settings = [
 ],
 'wmgWikibaseTmpItemTermsMigrationStage' => [
 	'default' => [ 'max' => MIGRATION_OLD ],
+	'testwikidatawiki' => [
+		1000 => MIGRATION_WRITE_BOTH,
+		'max' => MIGRATION_OLD,
+	],
 ],
 
 'wmgUseTheWikipediaLibrary' => [
