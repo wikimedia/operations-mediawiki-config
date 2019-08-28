@@ -16992,6 +16992,14 @@ $wgConf->settings = [
 	'wikipedia' => true, // T228916
 ],
 
+'wgMFAmcOutreach' => [
+	'default' => true, // T231206
+],
+
+'wgMFAmcOutreachMinEditCount' => [
+	'default' => 100, // T231206
+],
+
 'wgMinervaOverflowInPageActions' => [
 	'default' => [
 		'base' => false,
