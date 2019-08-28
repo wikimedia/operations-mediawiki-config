@@ -11960,8 +11960,8 @@ $wgConf->settings = [
 		'sysop' => [ 'rollbacker' ],
 	],
 	'+rowiki' => [
-		'bureaucrat' => [ 'abusefilter', 'patroller' ], // T28634
-		'sysop' => [ 'autopatrolled', 'templateeditor' ], // T63172
+		'bureaucrat' => [ 'abusefilter' ], // T28634
+		'sysop' => [ 'autopatrolled', 'templateeditor', 'patroller' ], // T63172, T231099
 	],
 	'+ruwiki' => [
 		'bureaucrat' => [ 'arbcom', 'engineer', 'sysop' ], // T51334, T144599
