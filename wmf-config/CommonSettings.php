@@ -4028,10 +4028,14 @@ if ( PHP_VERSION_ID >= 70200 ) {
 }
 
 # Temporary, until T112147 is done
-if ( isset( $wgGroupPermissions['suppress'] ) ) {
-	$wgGroupPermissions['oversight'] += $wgGroupPermissions['suppress'];
-	unset( $wgGroupPermissions['suppress'] );
-}
+# Assign everything assigned to suppressors to oversighters
+# and delete suppress group.
+$wgExtensionFunctions[] = function () use ( $wgGroupPermissions ) {
+	if ( isset( $wgGroupPermissions['suppress'] ) ) {
+		$wgGroupPermissions['oversight'] += $wgGroupPermissions['suppress'];
+		unset( $wgGroupPermissions['suppress'] );
+	}
+};
 
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
