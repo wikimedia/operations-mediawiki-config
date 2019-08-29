@@ -19069,6 +19069,11 @@ $wgConf->settings = [
 	'testwiki' => false,
 ],
 
+'wgContentTranslationAsBetaFeature' => [
+	'default' => true,
+	'jvwiki' => false,
+],
+
 'wgContentTranslationPublishRequirements' => [
 	'default' => [
 		'userGroups' => [ '*' ]
