@@ -113,6 +113,36 @@ class MWConfigCacheGenerator {
 	}
 
 	/**
+	 * Read a static cached MultiVersion object from disc
+	 *
+	 * @param string $confCacheFile The full filepath for the wiki's cached config object
+	 * @param string $confActualMtime The expected mtime for the cached config object
+	 * @return object|null The wiki's config object, or null if not yet cached or stale
+	 */
+	public static function readFromStaticCache( $confCacheFile, $confActualMtime ) {
+		// Ignore file warnings (file may be inaccessible, or deleted in a race)
+		$cacheRecord = @file_get_contents( $confCacheFile );
+
+		if ( $cacheRecord !== false ) {
+			// TODO: Use JSON_THROW_ON_ERROR with a try/catch once production is running PHP 7.3.
+			$staticCacheObject = json_decode( $cacheRecord, /* assoc */ true );
+
+			if ( json_last_error() === JSON_ERROR_NONE ) {
+				// Ignore non-array and array offset warnings (file may be in an older format)
+				if ( @$staticCacheObject['mtime'] === $confActualMtime ) {
+					return $staticCacheObject['globals'];
+				}
+			} else {
+				// Something went wrong; raise an error
+				trigger_error( "Config cache failure: Static decoding failed", E_USER_ERROR );
+			}
+		}
+
+		// Reached if the file doesn't exist yet, can't be read, was out of date, or was corrupt.
+		return null;
+	}
+
+	/**
 	 * Write a MultiVersion object to disc cache
 	 *
 	 * @param string $cacheDir The full filepath for cached multiversion config storage directory
