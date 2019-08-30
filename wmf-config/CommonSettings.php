@@ -202,15 +202,10 @@ if ( defined( 'HHVM_VERSION' ) ) {
 }
 
 $confActualMtime = filemtime( "$wmfConfigDir/InitialiseSettings.php" );
-// Ignore file warnings (file may be inaccessible, or not exist yet)
-$confCacheStr = @file_get_contents( $confCacheFile );
-$confCacheData = $confCacheStr !== false ? unserialize( $confCacheStr ) : false;
-// Ignore non-array and array offset warnings (file may be in an older format)
-if ( @$confCacheData['mtime'] === $confActualMtime ) {
-	$globals = $confCacheData['globals'];
-} else {
-	$globals = false;
-}
+
+$globals = Wikimedia\MWConfig\MWConfigCacheGenerator::readFromSerialisedCache(
+	$confCacheFile, $confActualMtime
+);
 
 if ( !$globals ) {
 	# Get configuration from SiteConfiguration object
@@ -231,7 +226,7 @@ if ( !$globals ) {
 		};
 	}
 }
-unset( $confCacheFile, $confCacheStr, $confActualMtime );
+unset( $confCacheFile, $confActualMtime );
 
 extract( $globals );
 

@@ -82,4 +82,24 @@ class MWConfigCacheGenerator {
 
 		return $globals;
 	}
+
+	/**
+	 * Read a cached MultiVersion object from disc based on a filename, if current
+	 *
+	 * @param string $confCacheFile The full filepath for the wiki's cached config object
+	 * @param string $confActualMtime The expected mtime for the cached config object
+	 * @return object|null The wiki's config object, or null if not yet cached or stale
+	 */
+	public static function readFromSerialisedCache( $confCacheFile, $confActualMtime ) {
+		// Ignore file warnings (file may be inaccessible, or deleted in a race)
+		$confCacheStr = @file_get_contents( $confCacheFile );
+		$confCacheData = $confCacheStr !== false ? unserialize( $confCacheStr ) : false;
+
+		// Ignore non-array and array offset warnings (file may be in an older format)
+		if ( @$confCacheData['mtime'] === $confActualMtime ) {
+			return $confCacheData['globals'];
+		}
+
+		return null;
+	}
 }
