@@ -216,15 +216,9 @@ if ( !$globals ) {
 	);
 
 	# Save cache
-	@mkdir( $wgCacheDirectory );
-	$tmpFile = tempnam( '/tmp/', "conf-$wmgVersionNumber-$wgDBname" );
-	$confCacheStr = serialize( [ 'mtime' => $confActualMtime, 'globals' => $globals ] );
-	if ( $tmpFile && file_put_contents( $tmpFile, $confCacheStr ) ) {
-		if ( !rename( $tmpFile, $confCacheFile ) ) {
-			// T136258: Rename failed, cleanup temp file
-			unlink( $tmpFile );
-		};
-	}
+	Wikimedia\MWConfig\MWConfigCacheGenerator::writeToSerialisedCache(
+		$wgCacheDirectory, $confCacheFile, $confActualMtime, $globals
+	);
 }
 unset( $confCacheFile, $confActualMtime );
 

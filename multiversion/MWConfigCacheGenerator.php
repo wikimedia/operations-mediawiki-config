@@ -102,4 +102,26 @@ class MWConfigCacheGenerator {
 
 		return null;
 	}
+
+	/**
+	 * Write a MultiVersion object to disc cache
+	 *
+	 * @param string $cacheDir The filepath for cached multiversion config storage
+	 * @param string $cacheShard The filename for the cached multiversion config object
+	 * @param string $configMtime The mtime to set for the cached multiversion config object
+	 * @param object $configObject The config object for this wiki
+	 */
+	public static function writeToSerialisedCache( $cacheDir, $cacheShard, $configMtime, $configObject ) {
+		@mkdir( $cacheDir );
+		$tmpFile = tempnam( '/tmp/', $cacheShard );
+		$cacheObject = [ 'mtime' => $configMtime, 'globals' => $configObject ];
+		$serialisedCacheObject = serialize( $cacheObject );
+
+		if ( $tmpFile && file_put_contents( $tmpFile, $serialisedCacheObject ) ) {
+			if ( !rename( $tmpFile, $cacheDir . '/' . $cacheShard ) ) {
+				// T136258: Rename failed, cleanup temp file
+				unlink( $tmpFile );
+			};
+		}
+	}
 }
