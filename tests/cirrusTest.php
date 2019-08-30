@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
+require_once __DIR__ . '/../multiversion/MWConfigCacheGenerator.php';
 require_once __DIR__ . '/SiteConfiguration.php';
 
 class CirrusTest extends WgConfTestCase {
@@ -131,12 +132,7 @@ class CirrusTest extends WgConfTestCase {
 
 		list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 		$wikiTags = [];
-		foreach ( [ 'private', 'fishbowl', 'special', 'closed', 'flow', 'flaggedrevs', 'small', 'medium',
-				'large', 'wikimania', 'wikidata', 'wikibaserepo', 'wikidataclient', 'visualeditor-nondefault',
-				'commonsuploads', 'nonbetafeatures', 'group0', 'group1', 'group2', 'wikipedia', 'nonglobal',
-				'wikitech', 'nonecho', 'mobilemainpagelegacy', 'nowikidatadescriptiontaglines',
-				'top6-wikipedia', 'cirrussearch-big-indices'
-			] as $tag ) {
+		foreach ( Wikimedia\MWConfig\MWConfigCacheGenerator::$dbLists as $tag ) {
 			$dblist = MWWikiversions::readDbListFile( $tag );
 			if ( in_array( $wgDBname, $dblist ) ) {
 				$wikiTags[] = $tag;
@@ -188,8 +184,8 @@ class CirrusTest extends WgConfTestCase {
 
 	public function providePerClusterShardsAndReplicas() {
 		$wgConf = $this->loadWgConf( 'unittest' );
-		$shards = $wgConf->settings['wmgCirrusSearchShardCount'];
-		$replicas = $wgConf->settings['wmgCirrusSearchReplicas'];
+		$shards = $wgConf->settings['wgCirrusSearchShardCount'];
+		$replicas = $wgConf->settings['wgCirrusSearchReplicas'];
 		$maxShardPerNode = $wgConf->settings['wgCirrusSearchMaxShardsPerNode'];
 		$wikis = array_merge( array_keys( $shards ), array_keys( $replicas ), array_keys( $maxShardPerNode ) );
 		foreach ( $wikis as $idx => $wiki ) {
