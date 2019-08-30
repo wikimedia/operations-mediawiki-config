@@ -8,6 +8,7 @@
  * @file
  */
 require_once __DIR__ . '/../multiversion/MWWikiversions.php';
+require_once __DIR__ . '/../multiversion/MWConfigCacheGenerator.php';
 
 class DBList {
 
@@ -69,26 +70,6 @@ class DBList {
 	 * @throws Exception
 	 */
 	public static function getDblistsUsedInSettings() {
-		$dblists = [];
-
-		// Hacky hack hack:
-		// Extract an array from the code that reads dblists at run-time.
-		$content = file_get_contents( dirname( __DIR__ ) . '/wmf-config/CommonSettings.php' );
-		$matches = null;
-		preg_match_all( '/\/bin\/expanddblist.+?\]/ms', $content, $matches );
-		if ( isset( $matches[0][0] ) ) {
-			$strLiteralPattern = "/^[^']*'(.+)'[^']*$/";
-			foreach ( explode( "\n", $matches[0][0] ) as $line ) {
-				if ( preg_match( $strLiteralPattern, $line ) === 1 ) {
-					$dblists[] = preg_replace( $strLiteralPattern, '$1', $line );
-				}
-			}
-		}
-
-		if ( !$dblists ) {
-			throw new Exception( 'Failed to extract dblists from CommonSettings' );
-		}
-
-		return $dblists;
+		return Wikimedia\MWConfig\MWConfigCacheGenerator::$dbLists;
 	}
 }
