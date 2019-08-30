@@ -124,4 +124,38 @@ class MWConfigCacheGenerator {
 		}
 	}
 
+	/**
+	 * Write a static MultiVersion object to disc cache
+	 *
+	 * @param string $cacheDir The filepath for cached multiversion config storage
+	 * @param string $cacheShard The filename for the cached multiversion config object
+	 * @param object $configObject The config object for this wiki
+	 */
+	public static function writeToStaticCache( $cacheDir, $cacheShard, $configObject ) {
+		@mkdir( $cacheDir );
+		$tmpFile = tempnam( '/tmp/', $cacheShard );
+
+		$staticCacheObject = json_encode(
+			$configObject,
+			// TODO: Use JSON_THROW_ON_ERROR with a try/catch once production is running PHP 7.3.
+			JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
+		) . "\n";
+
+		if ( $tmpFile ) {
+			if ( json_last_error() !== JSON_ERROR_NONE ) {
+				// Something went wrong; for safety, don't write anything, and raise an error
+				trigger_error( "Config cache failure: Static encoding failed", E_USER_ERROR );
+			} else {
+				if ( file_put_contents( $tmpFile, $staticCacheObject ) ) {
+					if ( rename( $tmpFile, $cacheDir . '/' . $cacheShard ) ) {
+						// Rename succeded; no need to clean up temp file
+						return;
+					};
+				}
+			}
+			// T136258: Rename failed, write failed, or data wasn't cacheable; clean up temp file
+			unlink( $tmpFile );
+		}
+	}
+
 }
