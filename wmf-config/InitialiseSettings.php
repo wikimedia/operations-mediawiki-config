@@ -8665,6 +8665,9 @@ $wgConf->settings = [
 		'patroller' => [ 'patrol' => true ], // T196488
 		'rollbacker' => [ 'rollback' => true ], // T215200
 	],
+	'+azwikibooks' => [
+		'autopatrolled' => [ 'autopatrol' => true ], // T231493
+	],
 	'+azwikisource' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T229371
 	],
@@ -10676,6 +10679,9 @@ $wgConf->settings = [
 			'rollbacker', // T215200
 		],
 	],
+	'+azwikibooks' => [
+		'sysop' => [ 'autopatrolled', ], // T231493
+	],
 	'+azwikisource' => [
 		'sysop' => [ 'autopatrolled', ], // T229371
 	],
@@ -11461,6 +11467,9 @@ $wgConf->settings = [
 			'patroller', // T196488
 			'rollbacker', // T215200
 		],
+	],
+	'+azwikibooks' => [
+		'sysop' => [ 'autopatrolled', ], // T231493
 	],
 	'+azwikisource' => [
 		'sysop' => [ 'autopatrolled', ], // T229371
