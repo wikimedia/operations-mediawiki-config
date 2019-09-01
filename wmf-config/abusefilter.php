@@ -131,11 +131,12 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterActions['block'] = true; // T57868
 		break;
 	case 'enwikisource':
+		$wgAbuseFilterActions['block'] = true; // T231750
 		$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
 		$wgGroupPermissions['sysop']['abusefilter-view-private'] = false;
 		$wgGroupPermissions['sysop']['abusefilter-log-private'] = false;
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
-		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // T44012
+		$wgGroupPermissions['abusefilter']['abusefilter-modify-restricted'] = true; // T231750
 		break;
 	case 'eswiki':
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // T44012
