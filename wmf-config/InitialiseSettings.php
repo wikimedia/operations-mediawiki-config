@@ -22548,7 +22548,7 @@ $wgConf->settings = [
 ],
 
 'wgWMEMobileWebUIActionsTracking' => [
-	'default' => 0.0001, // T220016
+	'default' => 0.01, // T220016
 ],
 
 'wgWMEWikidataCompletionSearchClicks' => [
