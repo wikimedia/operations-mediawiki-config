@@ -23134,6 +23134,10 @@ $wgConf->settings = [
 		1000 => MIGRATION_WRITE_BOTH,
 		'max' => MIGRATION_OLD,
 	],
+	'wikidatawiki' => [
+		1000 => MIGRATION_WRITE_BOTH,
+		'max' => MIGRATION_OLD,
+	],
 ],
 
 'wmgUseTheWikipediaLibrary' => [
