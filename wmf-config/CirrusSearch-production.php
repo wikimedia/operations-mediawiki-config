@@ -78,8 +78,7 @@ if ( isset( $wgCirrusSearchExtraIndexes[NS_FILE] ) ) {
 	$wgCirrusSearchExtraIndexes[NS_FILE] = [ 'chi:commonswiki_file' ];
 }
 
-# Stop generating new checkerJobs (relates to T231194)
-$wgCirrusSearchSanityCheck = false;
+$wgCirrusSearchSanityCheck = true;
 
 $wgCirrusSearchConnectionAttempts = 3;
 
