@@ -1453,6 +1453,13 @@ $wgInvalidateCacheOnLocalSettingsChange = false;
 $wgEnableUserEmail = true;
 $wgNoFollowLinks = true; // In case the MediaWiki default changed, T44594
 
+$wgExtensionFunctions[] = function () {
+	global $wmgGEHelpPanelLinks, $wgGEHelpPanelLinks;
+	if ( $wmgGEHelpPanelLinks ) {
+		$wgGEHelpPanelLinks = $wmgGEHelpPanelLinks;
+	}
+};
+
 # XFF log for vandal tracking
 $wgExtensionFunctions[] = function () {
 	global $wmfUdp2logDest, $wgRequest;

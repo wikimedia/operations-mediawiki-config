@@ -22884,7 +22884,7 @@ $wgConf->settings = [
 	'arwiki' => 'مساعدة:محتويات',
 ],
 
-'wgGEHelpPanelLinks' => [
+'wmgGEHelpPanelLinks' => [
 	'default' => [],
 	'testwiki' => [
 		[
