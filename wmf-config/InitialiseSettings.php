@@ -23184,11 +23184,11 @@ $wgConf->settings = [
 'wmgWikibaseTmpItemTermsMigrationStage' => [
 	'default' => [ 'max' => MIGRATION_OLD ],
 	'testwikidatawiki' => [
-		1000 => MIGRATION_WRITE_BOTH,
-		'max' => MIGRATION_OLD,
+		1000 => MIGRATION_WRITE_NEW,
+		'max' => MIGRATION_WRITE_BOTH,
 	],
 	'wikidatawiki' => [
-		1000 => MIGRATION_WRITE_BOTH,
+		2000000 => MIGRATION_WRITE_BOTH,
 		'max' => MIGRATION_OLD,
 	],
 ],
