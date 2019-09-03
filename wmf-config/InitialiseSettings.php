@@ -13877,6 +13877,7 @@ $wgConf->settings = [
 	'ptwiki' => false,
 	'ptwikibooks' => false,
 	'ruwiki' => false,
+	'ukwiki' => false,
 	'vecwiki' => false,
 ],
 
