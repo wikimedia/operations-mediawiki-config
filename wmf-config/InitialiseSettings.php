@@ -1774,6 +1774,7 @@ $wgConf->settings = [
 	'testwiki' => [ '1.5x' => '/static/images/project-logos/testwiki-1.5x.png', '2x' => '/static/images/project-logos/testwiki-2x.png' ], // T150618
 	'test2wiki' => [ '1.5x' => '/static/images/project-logos/test2wiki-1.5x.png', '2x' => '/static/images/project-logos/test2wiki-2x.png' ],
 	'votewiki' => [ '1.5x' => '/static/images/project-logos/votewiki-1.5x.png', '2x' => '/static/images/project-logos/votewiki-2x.png' ],
+	'wikidatawiki' => [ '1.5x' => '/static/images/project-logos/wikidatawiki-1.5x.png', '2x' => '/static/images/project-logos/wikidatawiki-2x.png' ], // T230120
 	'wikimania2018wiki' => [ '1.5x' => '/static/images/project-logos/wikimania2018wiki-1.5x.png', '2x' => '/static/images/project-logos/wikimania2018wiki-2x.png' ], // T194340
 	'wikimaniawiki' => [ '1.5x' => '/static/images/project-logos/wikimaniawiki-1.5x.png', '2x' => '/static/images/project-logos/wikimaniawiki-2x.png' ], // T194340
 ],
