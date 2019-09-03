@@ -3768,15 +3768,9 @@ if ( $wmgUseEventBus ) {
 		]
 	];
 
-	// Use wgEventServiceStreamConfig to configure the EventBusRCFeedEngine eventServiceName.
-	$rcEventServiceName =
-		$wgEventServiceStreamConfig['mediawiki.recentchange']['EventServiceName'] ??
-		$wgEventServiceStreamConfig['default']['EventServiceName'];
-
 	$wgRCFeeds['eventbus'] = [
 		'formatter' => 'EventBusRCFeedFormatter',
 		'class' => 'EventBusRCFeedEngine',
-		'eventServiceName' => $rcEventServiceName,
 	];
 }
 
