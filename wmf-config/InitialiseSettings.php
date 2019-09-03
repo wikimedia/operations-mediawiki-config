@@ -1768,6 +1768,7 @@ $wgConf->settings = [
 	'donatewiki' => [ '1.5x' => '/static/images/project-logos/donatewiki-1.5x.png', '2x' => '/static/images/project-logos/donatewiki-2x.png' ],
 	'fixcopyrightwiki' => [ '1.5x' => '/static/images/project-logos/fixcopyrightwiki-1.5x.png', '2x' => '/static/images/project-logos/fixcopyrightwiki-2x.png' ],
 	'foundationwiki' => [ '1.5x' => '/static/images/project-logos/foundationwiki-1.5x.png', '2x' => '/static/images/project-logos/foundationwiki-2x.png' ],
+	'incubatorwiki' => [ '1.5x' => '/static/images/project-logos/incubatorwiki-1.5x.png', '2x' => '/static/images/project-logos/incubatorwiki-2x.png' ], // T230122
 	'metawiki' => [ '1.5x' => '/static/images/project-logos/metawiki-1.5x.png', '2x' => '/static/images/project-logos/metawiki-2x.png' ],
 	'officewiki' => [ '1.5x' => '/static/images/project-logos/officewiki-1.5x.png', '2x' => '/static/images/project-logos/officewiki-2x.png' ],
 	'specieswiki' => [ '1.5x' => '/static/images/project-logos/specieswiki-1.5x.png', '2x' => '/static/images/project-logos/specieswiki-2x.png' ], // T230113
