@@ -22465,6 +22465,9 @@ $wgConf->settings = [
 		'mediawiki.job.categoryMembershipChange' => [
 			'EventServiceName' => 'eventgate-main',
 		],
+		'mediawiki.job.cdnPurge' => [
+			'EventServiceName' => 'eventgate-main',
+		],
 		'mediawiki.job.ORESFetchScoreJob' => [
 			'EventServiceName' => 'eventgate-main',
 		],
@@ -22477,7 +22480,34 @@ $wgConf->settings = [
 		'mediawiki.job.constraintsRunCheck' => [
 			'EventServiceName' => 'eventgate-main',
 		],
+		'mediawiki.job.cirrusSearchCheckerJob' => [
+			'EventServiceName' => 'eventgate-main',
+		],
+		'mediawiki.job.cirrusSearchDeleteArchive' => [
+			'EventServiceName' => 'eventgate-main',
+		],
+		'mediawiki.job.cirrusSearchDeletePages' => [
+			'EventServiceName' => 'eventgate-main',
+		],
+		'mediawiki.job.cirrusSearchElasticaWrite' => [
+			'EventServiceName' => 'eventgate-main',
+		],
+		'mediawiki.job.cirrusSearchIncomingLinkCount' => [
+			'EventServiceName' => 'eventgate-main',
+		],
+		'mediawiki.job.cirrusSearchLinksUpdate' => [
+			'EventServiceName' => 'eventgate-main',
+		],
+		'mediawiki.job.cirrusSearchLinksUpdatePrioritized' => [
+			'EventServiceName' => 'eventgate-main',
+		],
+		'mediawiki.job.cirrusSearchOtherIndex' => [
+			'EventServiceName' => 'eventgate-main',
+		],
 		'mediawiki.job.webVideoTranscode' => [
+			'EventServiceName' => 'eventgate-main',
+		],
+		'mediawiki.job.webVideoTranscodePrioritized' => [
 			'EventServiceName' => 'eventgate-main',
 		],
 		'mediawiki.job.refreshLinks' => [
