@@ -3980,13 +3980,16 @@ if ( $wmgUseTheWikipediaLibrary ) {
 	wfLoadExtension( 'TheWikipediaLibrary' );
 }
 
-// This is a temporary hack for hooking up Parsoid/PHP with MediaWiki on scandium
-if ( wfHostName() === 'scandium' ) {
+// This is a temporary hack for hooking up Parsoid/PHP with MediaWiki
+// on scandium and the beta cluster
+if ( wfHostName() === 'scandium' || $wmfRealm === 'labs' ) {
 	$parsoidDir = '/srv/deployment/parsoid/deploy/src';
 	if ( file_exists( "$parsoidDir/extension.json" ) ) {
 		wfLoadExtension( 'Parsoid/PHP', "$parsoidDir/extension.json" );
 		$wgEnableRestAPI = true;
-		if ( file_exists( "$parsoidDir/tests/RTTestSettings.php" ) ) {
+		if ( wfHostName() === 'scandium' &&
+			file_exists( "$parsoidDir/tests/RTTestSettings.php" )
+		) {
 			require_once "$parsoidDir/tests/RTTestSettings.php";
 		}
 	}
