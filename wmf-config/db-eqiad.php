@@ -191,8 +191,8 @@ $wgLBFactoryConf = [
 	'wikitech' => [
 		// Use the FQDN so that `sql labswiki` will work from hosts where the
 		// default DNS search path is not eqiad.wmnet (e.g. labweb1001)
-		'db1073' => 1, # B3
-		# 'db1133' => 1, # C3 # future master
+		'db1133' => 1, # C3
+		# 'db1073' => 1, # B3 # old  master
 	],
 ],
 
