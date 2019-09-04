@@ -12848,6 +12848,8 @@ $wgConf->settings = [
 		107 => 'noindex,nofollow', // T163655
 	],
 	'zhwiki' => [
+		NS_USER => 'noindex,nofollow', // T231982
+		NS_USER_TALK => 'noindex,nofollow', // T231982
 		118 => 'noindex,nofollow', // T91223
 		119 => 'noindex,nofollow',
 	],
