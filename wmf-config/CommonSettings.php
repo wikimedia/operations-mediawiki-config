@@ -215,12 +215,14 @@ if ( !$globals ) {
 		$wgDBname, $site, $lang, $wgConf
 	);
 
+	$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals ];
+
 	# Save cache
 	Wikimedia\MWConfig\MWConfigCacheGenerator::writeToSerialisedCache(
-		$wgCacheDirectory, $confCacheFile, $confActualMtime, $globals
+		$wgCacheDirectory, $confCacheFile, $confCacheObject
 	);
 }
-unset( $confCacheFile, $confActualMtime );
+unset( $confCacheFile, $confActualMtime, $confCacheObject );
 
 extract( $globals );
 
