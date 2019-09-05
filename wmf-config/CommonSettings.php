@@ -196,15 +196,15 @@ list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 
 require_once __DIR__ . '/../multiversion/MWConfigCacheGenerator.php';
 
-$confCacheFile = "$wgCacheDirectory/conf2-$wgDBname";
+$confCacheFileName = "conf2-$wgDBname";
 if ( defined( 'HHVM_VERSION' ) ) {
-	$confCacheFile .= '-hhvm';
+	$confCacheFileName .= '-hhvm';
 }
 
 $confActualMtime = filemtime( "$wmfConfigDir/InitialiseSettings.php" );
 
 $globals = Wikimedia\MWConfig\MWConfigCacheGenerator::readFromSerialisedCache(
-	$confCacheFile, $confActualMtime
+	$wgCacheDirectory . '/' . $confCacheFileName, $confActualMtime
 );
 
 if ( !$globals ) {
@@ -219,10 +219,10 @@ if ( !$globals ) {
 
 	# Save cache
 	Wikimedia\MWConfig\MWConfigCacheGenerator::writeToSerialisedCache(
-		$wgCacheDirectory, $confCacheFile, $confCacheObject
+		$wgCacheDirectory, $confCacheFileName, $confCacheObject
 	);
 }
-unset( $confCacheFile, $confActualMtime, $confCacheObject );
+unset( $confCacheFileName, $confCacheFile, $confActualMtime, $confCacheObject );
 
 extract( $globals );
 

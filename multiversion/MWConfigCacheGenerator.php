@@ -106,8 +106,8 @@ class MWConfigCacheGenerator {
 	/**
 	 * Write a MultiVersion object to disc cache
 	 *
-	 * @param string $cacheDir The filepath for cached multiversion config storage
-	 * @param string $cacheShard The filename for the cached multiversion config object
+	 * @param string $cacheDir The full filepath for cached multiversion config storage directory
+	 * @param string $cacheShard The temporary filename for the cached multiversion config object
 	 * @param object $configObject The config object for this wiki
 	 */
 	public static function writeToSerialisedCache( $cacheDir, $cacheShard, $configObject ) {
