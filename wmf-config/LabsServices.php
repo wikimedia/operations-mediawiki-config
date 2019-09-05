@@ -38,7 +38,6 @@ return [
 		'parsoid' => 'http://deployment-parsoid09.deployment-prep.eqiad.wmflabs:8000',
 		'mathoid' => 'http://deployment-docker-mathoid01.eqiad.wmflabs:10044',
 		'eventlogging' => 'udp://deployment-eventlogging03.eqiad.wmflabs:8421',
-		'eventbus' => 'http://deployment-kafka-main-1.deployment-prep.eqiad.wmflabs:8085',
 		'eventgate-analytics' => 'http://deployment-eventgate-1.deployment-prep.eqiad.wmflabs:8192',
 		'eventgate-main' => 'http://deployment-eventgate-1.deployment-prep.eqiad.wmflabs:8292',
 		'upload' => 'deployment-ms-fe03.deployment-prep.eqiad.wmflabs',

@@ -40,7 +40,6 @@ $common = [
 	// Automatic dc-local discovery
 	'parsoid' => 'http://parsoid.discovery.wmnet:8000',
 	'mathoid' => 'http://mathoid.discovery.wmnet:10042',
-	'eventbus' => 'http://eventbus.discovery.wmnet:8085',
 	'eventgate-analytics' => 'http://eventgate-analytics.discovery.wmnet:31192',
 	'eventgate-main' => 'http://eventgate-main.discovery.wmnet:32192',
 	'cxserver' => 'http://cxserver.discovery.wmnet:8080',

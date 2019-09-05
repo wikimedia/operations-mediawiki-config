@@ -3758,11 +3758,6 @@ if ( $wmgUseEventBus ) {
 
 	// Define production event service endpoints.
 	$wgEventServices = [
-		// EventBus is the (legacy) eventlogging-service endpoint
-		'eventbus' => [
-			'url' => "{$wmfLocalServices['eventbus']}/v1/events",
-			'timeout' => 60,
-		],
 		'eventgate-analytics' => [
 			'url' => "{$wmfLocalServices['eventgate-analytics']}/v1/events?hasty=true",
 			'timeout' => 5,
