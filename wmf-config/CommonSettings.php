@@ -335,10 +335,6 @@ $wgEnotifMinorEdits = true;
 # Anti-abuse settings
 # ######################################################################
 
-$wgCookieSetOnAutoblock = true;
-
-$wgCookieSetOnIpBlock = true;
-
 $wgEnableUserEmailBlacklist = true;
 
 # ######################################################################
