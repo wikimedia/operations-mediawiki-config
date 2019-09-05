@@ -562,10 +562,6 @@ if ( $wmgUseCentralAuth ) {
 		$privilegedGroups = wmfGetPrivilegedGroups( $user->getName(), $user );
 		if ( $privilegedGroups ) {
 			$effectivePolicy = UserPasswordPolicy::maxOfPolicies( $effectivePolicy, $wmgPrivilegedPolicy );
-			// hack; PasswordNotInLargeBlacklist obsoletes PasswordCannotBePopular but maxOfPolicies can't handle that
-			if ( $effectivePolicy['PasswordNotInLargeBlacklist'] ?? false ) {
-				$effectivePolicy['PasswordCannotBePopular'] = 0;
-			}
 
 			if ( in_array( 'staff', $privilegedGroups, true ) ) {
 				$effectivePolicy['MinimumPasswordLengthToLogin'] = [
