@@ -180,6 +180,7 @@ $wmgMonologLoggerCalls = [
 	'useMicrosecondTimestamps' => [ false ],
 ];
 
+$phpUname = php_uname( 'n' );
 $wmgMonologConfig = [
 	'loggers' => [
 		// Template for all undefined log channels
@@ -207,11 +208,13 @@ $wmgMonologConfig = [
 		],
 		'logstash' => [
 			'class' => '\\MediaWiki\\Logger\\Monolog\\LogstashFormatter',
-			'args'  => [ 'mediawiki', php_uname( 'n' ), null, '', 1 ],
+			// Parsoid/PHP runs on scandium which is in the production cluster
+			'args'  => [ $phpUname === 'scandium' ? 'parsoid-tests' : 'mediawiki', $phpUname, null, '', 1 ],
 		],
 		'cee' => [
 			'class' => '\\MediaWiki\\Logger\\Monolog\\CeeFormatter',
-			'args'  => [ 'mediawiki', php_uname( 'n' ), null, '', 1 ],
+			// Parsoid/PHP runs on scandium which is in the production cluster
+			'args'  => [ $phpUname === 'scandium' ? 'parsoid-tests' : 'mediawiki', $phpUname, null, '', 1 ],
 		],
 	],
 ];
