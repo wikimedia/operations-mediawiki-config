@@ -93,26 +93,6 @@ class MWConfigCacheGenerator {
 	}
 
 	/**
-	 * Read a cached MultiVersion object from disc based on a filename, if current
-	 *
-	 * @param string $confCacheFile The full filepath for the wiki's cached config object
-	 * @param string $confActualMtime The expected mtime for the cached config object
-	 * @return object|null The wiki's config object, or null if not yet cached or stale
-	 */
-	public static function readFromSerialisedCache( $confCacheFile, $confActualMtime ) {
-		// Ignore file warnings (file may be inaccessible, or deleted in a race)
-		$confCacheStr = @file_get_contents( $confCacheFile );
-		$confCacheData = $confCacheStr !== false ? unserialize( $confCacheStr ) : false;
-
-		// Ignore non-array and array offset warnings (file may be in an older format)
-		if ( @$confCacheData['mtime'] === $confActualMtime ) {
-			return $confCacheData['globals'];
-		}
-
-		return null;
-	}
-
-	/**
 	 * Read a static cached MultiVersion object from disc
 	 *
 	 * @param string $confCacheFile The full filepath for the wiki's cached config object
@@ -140,27 +120,6 @@ class MWConfigCacheGenerator {
 
 		// Reached if the file doesn't exist yet, can't be read, was out of date, or was corrupt.
 		return null;
-	}
-
-	/**
-	 * Write a MultiVersion object to disc cache
-	 *
-	 * @param string $cacheDir The full filepath for cached multiversion config storage directory
-	 * @param string $cacheShard The temporary filename for the cached multiversion config object
-	 * @param object $configObject The config object for this wiki
-	 */
-	public static function writeToSerialisedCache( $cacheDir, $cacheShard, $configObject ) {
-		@mkdir( $cacheDir );
-		$tmpFile = tempnam( '/tmp/', $cacheShard );
-
-		$serialisedCacheObject = serialize( $configObject );
-
-		if ( $tmpFile && file_put_contents( $tmpFile, $serialisedCacheObject ) ) {
-			if ( !rename( $tmpFile, $cacheDir . '/' . $cacheShard ) ) {
-				// T136258: Rename failed, cleanup temp file
-				unlink( $tmpFile );
-			};
-		}
 	}
 
 	/**

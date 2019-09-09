@@ -206,11 +206,12 @@ $confCacheFileName = "conf2-$wgDBname";
 if ( defined( 'HHVM_VERSION' ) ) {
 	$confCacheFileName .= '-hhvm';
 }
+$confCacheFileName .= '.json';
 
 $confActualMtime = filemtime( "$wmfConfigDir/VariantSettings.php" );
 
 $globals = Wikimedia\MWConfig\MWConfigCacheGenerator::readFromStaticCache(
-	$wgCacheDirectory . '/' . $confCacheFileName . '.json', $confActualMtime
+	$wgCacheDirectory . '/' . $confCacheFileName, $confActualMtime
 );
 
 if ( !$globals ) {
@@ -224,11 +225,8 @@ if ( !$globals ) {
 	$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals ];
 
 	# Save cache
-	Wikimedia\MWConfig\MWConfigCacheGenerator::writeToSerialisedCache(
-		$wgCacheDirectory, $confCacheFileName, $confCacheObject
-	);
 	Wikimedia\MWConfig\MWConfigCacheGenerator::writeToStaticCache(
-		$wgCacheDirectory, $confCacheFileName . '.json', $confCacheObject
+		$wgCacheDirectory, $confCacheFileName, $confCacheObject
 	);
 }
 unset( $confCacheFileName, $confActualMtime, $confCacheObject );
