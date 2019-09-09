@@ -227,11 +227,9 @@ if ( !$globals ) {
 	Wikimedia\MWConfig\MWConfigCacheGenerator::writeToSerialisedCache(
 		$wgCacheDirectory, $confCacheFileName, $confCacheObject
 	);
-	if ( $wgDBname === 'testwiki' ) {
-		Wikimedia\MWConfig\MWConfigCacheGenerator::writeToStaticCache(
-			$wgCacheDirectory, $confCacheFileName . '.json', $confCacheObject
-		);
-	}
+	Wikimedia\MWConfig\MWConfigCacheGenerator::writeToStaticCache(
+		$wgCacheDirectory, $confCacheFileName . '.json', $confCacheObject
+	);
 }
 unset( $confCacheFileName, $confActualMtime, $confCacheObject );
 
