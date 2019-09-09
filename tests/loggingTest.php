@@ -67,7 +67,6 @@ class LoggingTest extends WgConfTestCase {
 		$wmgLogAuthmanagerMetrics = false;
 		$wmfUdp2logDest = 'localhost';
 		$wmgLogstashServers = [ 'localhost' ];
-		$wmgLogstashUseCee = false;
 		$wmgUseEventBus = true;
 		$wmgMonologChannels = [ 'test' => $channelConfig ];
 		$wmfRealm = 'production';

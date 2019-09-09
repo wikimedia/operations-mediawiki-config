@@ -5415,12 +5415,6 @@ $wgConf->settings = [
 	'default' => [ '127.0.0.1' ],
 ],
 
-// Use @cee: cookie when logging to logstash,
-// required to detect JSON syslog from non-structured syslog.
-'wmgLogstashUseCee' => [
-	'default' => true,
-],
-
 # wmgMonologChannels @{
 // Configure Monolog logging to udp2log (logfiles), Logstash, EventBus extension, etc.
 // See logging.php for more detailed information
