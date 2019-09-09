@@ -23,7 +23,6 @@
 # - $wmgDefaultMonologHandler: default handler for log channels not
 #   explicitly configured in $wmgMonologChannels.
 # - $wmgLogstashServers: Logstash syslog servers.
-# - $wmgLogstashUseCee: Prefix Logstash messages with 'cee cookie'
 # - $wmgMonologChannels: per-channel logging config
 #   - `channel => false`: ignore all log events on this channel.
 #   - `channel => level`: record all events of this level or higher to udp2log and logstash.
@@ -162,7 +161,7 @@ if ( $wmgLogstashServers ) {
 	foreach ( [ 'debug', 'info', 'warning', 'error' ] as $logLevel ) {
 		$wmgMonologHandlers[ "logstash-$logLevel" ] = [
 			'class'     => '\\MediaWiki\\Logger\\Monolog\\SyslogHandler',
-			'formatter' => $wmgLogstashUseCee ? 'cee' : 'logstash',
+			'formatter' => 'cee',
 			'args'      => [
 				'mediawiki',             // tag
 				$wmgLogstashServers[0],  // host
@@ -205,11 +204,6 @@ $wmgMonologConfig = [
 				true, // ignoreEmptyContextAndExtra
 				true, // includeStacktraces
 			],
-		],
-		'logstash' => [
-			'class' => '\\MediaWiki\\Logger\\Monolog\\LogstashFormatter',
-			// Parsoid/PHP runs on scandium which is in the production cluster
-			'args'  => [ $phpUname === 'scandium' ? 'parsoid-tests' : 'mediawiki', $phpUname, null, '', 1 ],
 		],
 		'cee' => [
 			'class' => '\\MediaWiki\\Logger\\Monolog\\CeeFormatter',
