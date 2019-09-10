@@ -326,6 +326,7 @@ class CirrusTest extends WgConfTestCase {
 			],
 		];
 	}
+
 	/**
 	 * @dataProvider provideConfigByLanguage
 	 */

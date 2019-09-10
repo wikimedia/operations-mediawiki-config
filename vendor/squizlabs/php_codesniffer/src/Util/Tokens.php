@@ -34,6 +34,7 @@ define('T_MODULUS', 'PHPCS_T_MODULUS');
 define('T_BITWISE_AND', 'PHPCS_T_BITWISE_AND');
 define('T_BITWISE_OR', 'PHPCS_T_BITWISE_OR');
 define('T_BITWISE_XOR', 'PHPCS_T_BITWISE_XOR');
+define('T_BITWISE_NOT', 'PHPCS_T_BITWISE_NOT');
 define('T_ARRAY_HINT', 'PHPCS_T_ARRAY_HINT');
 define('T_GREATER_THAN', 'PHPCS_T_GREATER_THAN');
 define('T_LESS_THAN', 'PHPCS_T_LESS_THAN');
@@ -144,9 +145,9 @@ final class Tokens
         T_FUNCTION            => 100,
         T_CLOSURE             => 100,
 
-                                 /*
-                                     Conditions.
-                                 */
+        /*
+         * Conditions.
+         */
 
         T_WHILE               => 50,
         T_FOR                 => 50,
@@ -163,9 +164,9 @@ final class Tokens
         T_SELF                => 25,
         T_PARENT              => 25,
 
-                                 /*
-                                     Operators and arithmetic.
-                                 */
+        /*
+         * Operators and arithmetic.
+         */
 
         T_BITWISE_AND         => 8,
         T_BITWISE_OR          => 8,
@@ -200,9 +201,9 @@ final class Tokens
         T_BOOLEAN_AND         => 5,
         T_BOOLEAN_OR          => 5,
 
-                                 /*
-                                     Equality.
-                                 */
+        /*
+         * Equality.
+         */
 
         T_IS_EQUAL            => 5,
         T_IS_NOT_EQUAL        => 5,
@@ -280,6 +281,40 @@ final class Tokens
         T_DIVIDE   => T_DIVIDE,
         T_MODULUS  => T_MODULUS,
         T_POW      => T_POW,
+    ];
+
+    /**
+     * Tokens that perform operations.
+     *
+     * @var array<int, int>
+     */
+    public static $operators = [
+        T_MINUS       => T_MINUS,
+        T_PLUS        => T_PLUS,
+        T_MULTIPLY    => T_MULTIPLY,
+        T_DIVIDE      => T_DIVIDE,
+        T_MODULUS     => T_MODULUS,
+        T_POW         => T_POW,
+        T_SPACESHIP   => T_SPACESHIP,
+        T_COALESCE    => T_COALESCE,
+        T_BITWISE_AND => T_BITWISE_AND,
+        T_BITWISE_OR  => T_BITWISE_OR,
+        T_BITWISE_XOR => T_BITWISE_XOR,
+        T_SL          => T_SL,
+        T_SR          => T_SR,
+    ];
+
+    /**
+     * Tokens that perform boolean operations.
+     *
+     * @var array<int, int>
+     */
+    public static $booleanOperators = [
+        T_BOOLEAN_AND => T_BOOLEAN_AND,
+        T_BOOLEAN_OR  => T_BOOLEAN_OR,
+        T_LOGICAL_AND => T_LOGICAL_AND,
+        T_LOGICAL_OR  => T_LOGICAL_OR,
+        T_LOGICAL_XOR => T_LOGICAL_XOR,
     ];
 
     /**
@@ -375,40 +410,6 @@ final class Tokens
     ];
 
     /**
-     * Tokens that perform operations.
-     *
-     * @var array<int, int>
-     */
-    public static $operators = [
-        T_MINUS       => T_MINUS,
-        T_PLUS        => T_PLUS,
-        T_MULTIPLY    => T_MULTIPLY,
-        T_DIVIDE      => T_DIVIDE,
-        T_MODULUS     => T_MODULUS,
-        T_POW         => T_POW,
-        T_SPACESHIP   => T_SPACESHIP,
-        T_COALESCE    => T_COALESCE,
-        T_BITWISE_AND => T_BITWISE_AND,
-        T_BITWISE_OR  => T_BITWISE_OR,
-        T_BITWISE_XOR => T_BITWISE_XOR,
-        T_SL          => T_SL,
-        T_SR          => T_SR,
-    ];
-
-    /**
-     * Tokens that perform boolean operations.
-     *
-     * @var array<int, int>
-     */
-    public static $booleanOperators = [
-        T_BOOLEAN_AND => T_BOOLEAN_AND,
-        T_BOOLEAN_OR  => T_BOOLEAN_OR,
-        T_LOGICAL_AND => T_LOGICAL_AND,
-        T_LOGICAL_OR  => T_LOGICAL_OR,
-        T_LOGICAL_XOR => T_LOGICAL_XOR,
-    ];
-
-    /**
      * Tokens that open code blocks.
      *
      * @var array<int, int>
@@ -469,11 +470,11 @@ final class Tokens
      * @var array<int, int>
      */
     public static $phpcsCommentTokens = [
-        T_PHPCS_ENABLE           => T_PHPCS_ENABLE,
-        T_PHPCS_DISABLE          => T_PHPCS_DISABLE,
-        T_PHPCS_SET              => T_PHPCS_SET,
-        T_PHPCS_IGNORE           => T_PHPCS_IGNORE,
-        T_PHPCS_IGNORE_FILE      => T_PHPCS_IGNORE_FILE,
+        T_PHPCS_ENABLE      => T_PHPCS_ENABLE,
+        T_PHPCS_DISABLE     => T_PHPCS_DISABLE,
+        T_PHPCS_SET         => T_PHPCS_SET,
+        T_PHPCS_IGNORE      => T_PHPCS_IGNORE,
+        T_PHPCS_IGNORE_FILE => T_PHPCS_IGNORE_FILE,
     ];
 
     /**
@@ -565,7 +566,7 @@ final class Tokens
     ];
 
     /**
-     * Tokens that are open class and object scopes.
+     * Tokens that open class and object scopes.
      *
      * @var array<int, int>
      */

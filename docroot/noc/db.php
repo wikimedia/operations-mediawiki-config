@@ -111,7 +111,7 @@ foreach ( $clusters->getNames() as $name ) {
 	print $clusters->htmlFor( $name ) . '</section>';
 }
 print '</main>';
-print '<footer>Automatically generated based on <a href="./conf/highlight.php?file='. htmlspecialchars( $dbConfigFileName ) . '">';
+print '<footer>Automatically generated based on <a href="./conf/highlight.php?file=' . htmlspecialchars( $dbConfigFileName ) . '">';
 print 'wmf-config/' . htmlspecialchars( $dbConfigFileName ) . '</a> ';
 print 'and on <a href="/dbconfig/' . htmlspecialchars( $dbConfigEtcdJsonFilename ) . '">';
 print htmlspecialchars( $dbConfigEtcdJsonFilename ) . '</a>.<br/>';

@@ -72,7 +72,7 @@ $wgContactConfig['affcomusergroup'] = [
 			'type' => 'check',
 			'required' => true,
 			'validation-callback' => function ( $value ) {
-				return !!$value;
+				return (bool)$value;
 			}
 		]
 	]
@@ -259,7 +259,7 @@ $wgContactConfig['movecomsignup'] = [
 			'type' => 'check',
 			'required' => true,
 			'validation-callback' => function ( $value ) {
-				return !!$value;
+				return (bool)$value;
 			}
 		]
 	]

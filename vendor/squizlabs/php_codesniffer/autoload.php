@@ -23,7 +23,7 @@ if (class_exists('PHP_CodeSniffer\Autoload', false) === false) {
         /**
          * The composer autoloader.
          *
-         * @var Composer\Autoload\ClassLoader
+         * @var \Composer\Autoload\ClassLoader
          */
         private static $composerAutoloader = null;
 
@@ -215,6 +215,18 @@ if (class_exists('PHP_CodeSniffer\Autoload', false) === false) {
             self::$searchPaths[$path] = rtrim(trim((string) $nsPrefix), '\\');
 
         }//end addSearchPath()
+
+
+        /**
+         * Retrieve the namespaces and paths registered by external standards.
+         *
+         * @return array
+         */
+        public static function getSearchPaths()
+        {
+            return self::$searchPaths;
+
+        }//end getSearchPaths()
 
 
         /**

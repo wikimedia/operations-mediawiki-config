@@ -12,6 +12,7 @@ namespace PHP_CodeSniffer\Standards\Zend\Sniffs\NamingConventions;
 use PHP_CodeSniffer\Sniffs\AbstractVariableSniff;
 use PHP_CodeSniffer\Util\Common;
 use PHP_CodeSniffer\Files\File;
+use PHP_CodeSniffer\Util\Tokens;
 
 class ValidVariableNameSniff extends AbstractVariableSniff
 {
@@ -31,23 +32,8 @@ class ValidVariableNameSniff extends AbstractVariableSniff
         $tokens  = $phpcsFile->getTokens();
         $varName = ltrim($tokens[$stackPtr]['content'], '$');
 
-        $phpReservedVars = [
-            '_SERVER'              => true,
-            '_GET'                 => true,
-            '_POST'                => true,
-            '_REQUEST'             => true,
-            '_SESSION'             => true,
-            '_ENV'                 => true,
-            '_COOKIE'              => true,
-            '_FILES'               => true,
-            'GLOBALS'              => true,
-            'http_response_header' => true,
-            'HTTP_RAW_POST_DATA'   => true,
-            'php_errormsg'         => true,
-        ];
-
         // If it's a php reserved var, then its ok.
-        if (isset($phpReservedVars[$varName]) === true) {
+        if (isset($this->phpReservedVars[$varName]) === true) {
             return;
         }
 
@@ -94,7 +80,7 @@ class ValidVariableNameSniff extends AbstractVariableSniff
                 // this: MyClass::$_variable, so we don't know its scope.
                 $inClass = true;
             } else {
-                $inClass = $phpcsFile->hasCondition($stackPtr, [T_CLASS, T_INTERFACE, T_TRAIT]);
+                $inClass = $phpcsFile->hasCondition($stackPtr, Tokens::$ooScopeTokens);
             }
 
             if ($inClass === true) {
@@ -183,25 +169,10 @@ class ValidVariableNameSniff extends AbstractVariableSniff
     {
         $tokens = $phpcsFile->getTokens();
 
-        $phpReservedVars = [
-            '_SERVER',
-            '_GET',
-            '_POST',
-            '_REQUEST',
-            '_SESSION',
-            '_ENV',
-            '_COOKIE',
-            '_FILES',
-            'GLOBALS',
-            'http_response_header',
-            'HTTP_RAW_POST_DATA',
-            'php_errormsg',
-        ];
-
         if (preg_match_all('|[^\\\]\$([a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)|', $tokens[$stackPtr]['content'], $matches) !== 0) {
             foreach ($matches[1] as $varName) {
                 // If it's a php reserved var, then its ok.
-                if (in_array($varName, $phpReservedVars) === true) {
+                if (isset($this->phpReservedVars[$varName]) === true) {
                     continue;
                 }
 

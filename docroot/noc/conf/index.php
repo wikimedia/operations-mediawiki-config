@@ -1,4 +1,5 @@
 <?php
+
 	/**
 	 * @param array $viewFilenames
 	 * @param bool $highlight

@@ -32,6 +32,9 @@ class ForbiddenFunctionsSniff implements Sniff {
 	 */
 	private $functions = [
 		'is_integer' => 'is_int',
+		'is_long' => 'is_int',
+		'is_double' => 'is_float',
+		'is_real' => 'is_float',
 		'is_writeable' => 'is_writable',
 		'join' => 'implode',
 		'key_exists' => 'array_key_exists',
@@ -44,6 +47,16 @@ class ForbiddenFunctionsSniff implements Sniff {
 		'each' => false,
 		'parse_str' => false,
 		'mb_parse_str' => false,
+		// MediaWiki wrappers for external program execution should be used,
+		// forbid PHP's (https://secure.php.net/manual/en/ref.exec.php)
+		'escapeshellarg' => false,
+		'escapeshellcmd' => false,
+		'exec' => false,
+		'passthru' => false,
+		'popen' => false,
+		'proc_open' => false,
+		'shell_exec' => false,
+		'system' => false,
 	];
 
 	/**

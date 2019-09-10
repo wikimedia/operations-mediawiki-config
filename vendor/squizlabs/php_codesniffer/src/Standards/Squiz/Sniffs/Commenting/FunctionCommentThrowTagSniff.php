@@ -51,15 +51,8 @@ class FunctionCommentThrowTagSniff implements Sniff
         $find[] = T_WHITESPACE;
 
         $commentEnd = $phpcsFile->findPrevious($find, ($stackPtr - 1), null, true);
-        if ($tokens[$commentEnd]['code'] === T_COMMENT) {
-            // Function is using the wrong type of comment.
-            return;
-        }
-
-        if ($tokens[$commentEnd]['code'] !== T_DOC_COMMENT_CLOSE_TAG
-            && $tokens[$commentEnd]['code'] !== T_COMMENT
-        ) {
-            // Function doesn't have a doc comment.
+        if ($tokens[$commentEnd]['code'] !== T_DOC_COMMENT_CLOSE_TAG) {
+            // Function doesn't have a doc comment or is using the wrong type of comment.
             return;
         }
 
@@ -69,6 +62,7 @@ class FunctionCommentThrowTagSniff implements Sniff
         $thrownExceptions = [];
         $currPos          = $stackPtr;
         $foundThrows      = false;
+        $unknownCount     = 0;
         do {
             $currPos = $phpcsFile->findNext([T_THROW, T_ANON_CLASS, T_CLOSURE], ($currPos + 1), $stackPtrEnd);
             if ($currPos === false) {
@@ -156,6 +150,8 @@ class FunctionCommentThrowTagSniff implements Sniff
                         }
                     }
                 }
+            } else {
+                ++$unknownCount;
             }//end if
         } while ($currPos < $stackPtrEnd && $currPos !== false);
 
@@ -196,7 +192,7 @@ class FunctionCommentThrowTagSniff implements Sniff
         }
 
         // Make sure @throws tag count matches thrown count.
-        $thrownCount = count($thrownExceptions);
+        $thrownCount = (count($thrownExceptions) + $unknownCount);
         $tagCount    = count($throwTags);
         if ($thrownCount !== $tagCount) {
             $error = 'Expected %s @throws tag(s) in function comment; %s found';
@@ -209,11 +205,19 @@ class FunctionCommentThrowTagSniff implements Sniff
         }
 
         foreach ($thrownExceptions as $throw) {
-            if (isset($throwTags[$throw]) === false) {
-                $error = 'Missing @throws tag for "%s" exception';
-                $data  = [$throw];
-                $phpcsFile->addError($error, $commentEnd, 'Missing', $data);
+            if (isset($throwTags[$throw]) === true) {
+                continue;
             }
+
+            foreach ($throwTags as $tag => $ignore) {
+                if (strrpos($tag, $throw) === (strlen($tag) - strlen($throw))) {
+                    continue 2;
+                }
+            }
+
+            $error = 'Missing @throws tag for "%s" exception';
+            $data  = [$throw];
+            $phpcsFile->addError($error, $commentEnd, 'Missing', $data);
         }
 
     }//end process()

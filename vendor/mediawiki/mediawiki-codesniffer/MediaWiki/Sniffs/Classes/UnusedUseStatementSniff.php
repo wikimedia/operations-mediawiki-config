@@ -86,7 +86,7 @@ class UnusedUseStatementSniff implements Sniff {
 		// Search where the class name is used. PHP treats class names case
 		// insensitive, that's why we cannot search for the exact class name string
 		// and need to iterate over all T_STRING tokens in the file.
-		$classUsed = $phpcsFile->findNext( T_STRING, $semiColon + 1 );
+		$classUsed = $semiColon + 1;
 		$className = $tokens[$classPtr]['content'];
 
 		// Check if the referenced class is in the same namespace as the current
@@ -127,7 +127,7 @@ class UnusedUseStatementSniff implements Sniff {
 			);
 
 			if ( strcasecmp( $namespace, $use_namespace ) === 0 ) {
-				$classUsed = false;
+				$classUsed = $phpcsFile->numTokens;
 			}
 		}
 
@@ -141,63 +141,54 @@ class UnusedUseStatementSniff implements Sniff {
 			return;
 		}
 
-		while ( $classUsed !== false ) {
-			if ( strcasecmp( $tokens[$classUsed]['content'], $className ) === 0 ) {
+		for ( ; $classUsed < $phpcsFile->numTokens; $classUsed++ ) {
+			if ( $tokens[$classUsed]['code'] === T_RETURN_TYPE ) {
 				// If the name is used in a PHP 7 function return type declaration
 				// stop.
-				if ( $tokens[$classUsed]['code'] === T_RETURN_TYPE ) {
+				if ( strcasecmp( $tokens[$classUsed]['content'], $className ) === 0 ) {
 					return;
 				}
+			} elseif ( $tokens[$classUsed]['code'] === T_STRING ) {
+				if ( strcasecmp( $tokens[$classUsed]['content'], $className ) === 0 ) {
+					$beforeUsage = $phpcsFile->findPrevious(
+						Tokens::$emptyTokens,
+						( $classUsed - 1 ),
+						null,
+						true
+					);
 
-				$beforeUsage = $phpcsFile->findPrevious(
-					Tokens::$emptyTokens,
-					( $classUsed - 1 ),
-					null,
-					true
-				);
-				// If a backslash is used before the class name then this is some other
-				// use statement.
-				if ( $tokens[$beforeUsage]['code'] !== T_USE
-					&& $tokens[$beforeUsage]['code'] !== T_NS_SEPARATOR
-				) {
-					return;
-				}
-
-				// Trait use statement within a class.
-				if ( $tokens[$beforeUsage]['code'] === T_USE
-					&& !empty( $tokens[$beforeUsage]['conditions'] )
-				) {
-					return;
-				}
-			}
-
-			// Usage in a doc comment
-			if ( $tokens[$classUsed]['code'] === T_DOC_COMMENT_TAG
-				&& in_array( $tokens[$classUsed]['content'], $this->classTags )
-				&& $tokens[$classUsed + 1]['code'] === T_DOC_COMMENT_WHITESPACE
-				&& $tokens[$classUsed + 2]['code'] === T_DOC_COMMENT_STRING
-			) {
-				// For tags like "@param ClassName $var Description" we just want the class name
-				$exploded = explode( ' ', $tokens[$classUsed + 2]['content'] );
-
-				// Now explode stuff like @var (Class1|Class2)[]|Class3<Class4,Class5>
-				$classes = preg_split( '/[|<>(),\\[\\]]/', $exploded[0], -1, PREG_SPLIT_NO_EMPTY );
-				foreach ( $classes as $tagClassName ) {
-					// Handle partially qualified names
-					$firstBackslash = strpos( $tagClassName, '\\' );
-					if ( $firstBackslash > 0 ) {
-						$tagClassName = substr( $tagClassName, 0, $firstBackslash );
+					// If a backslash is used before the class name then this is some other
+					// use statement.
+					// T_STRING also used for $this->property or self::function()
+					if ( $tokens[$beforeUsage]['code'] !== T_USE
+						&& $tokens[$beforeUsage]['code'] !== T_NS_SEPARATOR
+						&& $tokens[$beforeUsage]['code'] !== T_OBJECT_OPERATOR
+						&& $tokens[$beforeUsage]['code'] !== T_DOUBLE_COLON
+					) {
+						return;
 					}
-					if ( strcasecmp( $tagClassName, $className ) === 0 ) {
+
+					// Trait use statement within a class.
+					if ( $tokens[$beforeUsage]['code'] === T_USE
+						&& !empty( $tokens[$beforeUsage]['conditions'] )
+					) {
 						return;
 					}
 				}
+			} elseif ( $tokens[$classUsed]['code'] === T_DOC_COMMENT_TAG ) {
+				// Usage in a doc comment
+				if ( in_array( $tokens[$classUsed]['content'], $this->classTags )
+					&& $tokens[$classUsed + 2]['code'] === T_DOC_COMMENT_STRING
+					// We aren't interested in the later, whitespace-separated parts of comments
+					// like `@param (Class1|Class2)[]|Class3<Class4,Class5> $var Description`.
+					&& preg_match(
+						'{^\S*?\b(?<!\\\\)' . preg_quote( $className ) . '\b}i',
+						$tokens[$classUsed + 2]['content']
+					)
+				) {
+					return;
+				}
 			}
-
-			$classUsed = $phpcsFile->findNext(
-				[ T_STRING, T_RETURN_TYPE, T_DOC_COMMENT_TAG ],
-				( $classUsed + 1 )
-			);
 		}
 
 		$warning = 'Unused use statement';

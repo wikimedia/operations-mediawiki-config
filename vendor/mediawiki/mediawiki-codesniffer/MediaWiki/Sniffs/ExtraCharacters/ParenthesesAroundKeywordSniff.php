@@ -31,6 +31,8 @@ class ParenthesesAroundKeywordSniff implements Sniff {
 			T_REQUIRE_ONCE,
 			T_INCLUDE,
 			T_INCLUDE_ONCE,
+			T_BREAK,
+			T_CONTINUE,
 		];
 	}
 

@@ -19187,7 +19187,7 @@ $wgConf->settings = [
 	'default' => false,
 	'wikipedia' => true,
 	'wikivoyage' => true,
-	'eswikinews' => true, //T230660
+	'eswikinews' => true, // T230660
 	'frwikinews' => true, // T143480
 ],
 

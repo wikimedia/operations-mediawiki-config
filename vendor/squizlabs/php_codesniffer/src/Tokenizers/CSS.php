@@ -27,7 +27,7 @@ class CSS extends PHP
      * @param string                  $eolChar The EOL char used in the content.
      *
      * @return void
-     * @throws TokenizerException If the file appears to be minified.
+     * @throws \PHP_CodeSniffer\Exceptions\TokenizerException If the file appears to be minified.
      */
     public function __construct($content, Config $config, $eolChar='\n')
     {
@@ -35,7 +35,7 @@ class CSS extends PHP
             throw new TokenizerException('File appears to be minified and cannot be processed');
         }
 
-        return parent::__construct($content, $config, $eolChar);
+        parent::__construct($content, $config, $eolChar);
 
     }//end __construct()
 
@@ -91,10 +91,14 @@ class CSS extends PHP
                 || $token['code'] === T_FOREACH
                 || $token['code'] === T_WHILE
                 || $token['code'] === T_DEC
+                || $token['code'] === T_NEW
             ) {
                 $token['type'] = 'T_STRING';
                 $token['code'] = T_STRING;
             }
+
+            $token['content'] = str_replace('^PHPCS_CSS_T_OPEN_TAG^', '<?php', $token['content']);
+            $token['content'] = str_replace('^PHPCS_CSS_T_CLOSE_TAG^', '?>', $token['content']);
 
             if (PHP_CODESNIFFER_VERBOSITY > 1) {
                 $type    = $token['type'];
@@ -106,7 +110,7 @@ class CSS extends PHP
                 && $tokens[($stackPtr + 1)]['content'] === 'PHPCS_CSS_T_OPEN_TAG'
             ) {
                 $content = '<?php';
-                for ($stackPtr = ($stackPtr + 3); $stackPtr < $numTokens; $stackPtr++) {
+                for ($stackPtr += 3; $stackPtr < $numTokens; $stackPtr++) {
                     if ($tokens[$stackPtr]['code'] === T_BITWISE_XOR
                         && $tokens[($stackPtr + 1)]['content'] === 'PHPCS_CSS_T_CLOSE_TAG'
                     ) {
@@ -390,7 +394,7 @@ class CSS extends PHP
 
                     // Needs to be in the format "url(" for it to be a URL.
                     if ($finalTokens[$x]['code'] !== T_OPEN_PARENTHESIS) {
-                        continue;
+                        continue 2;
                     }
 
                     // Make sure the content isn't empty.
@@ -401,7 +405,7 @@ class CSS extends PHP
                     }
 
                     if ($finalTokens[$y]['code'] === T_CLOSE_PARENTHESIS) {
-                        continue;
+                        continue 2;
                     }
 
                     if (PHP_CODESNIFFER_VERBOSITY > 1) {

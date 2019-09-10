@@ -77,10 +77,9 @@ class LicenseCommentSniff implements Sniff {
 			return;
 		}
 
-		// Only allow license on file comments
 		if ( $tokens[$tag]['level'] !== 0 ) {
 			$phpcsFile->addWarning(
-				'@license should only be used on file comments',
+				'@license should only be used on the top level',
 				$tag, 'LicenseTagNonFileComment'
 			);
 		}
@@ -131,11 +130,27 @@ class LicenseCommentSniff implements Sniff {
 					$tag, 'InvalidLicenseTag', [ $license ]
 				);
 			}
-		} elseif ( $licenseValidator->isDeprecatedByIdentifier( $license ) ) {
-			$phpcsFile->addWarning(
-				'Deprecated SPDX license identifier "%s", see <https://spdx.org/licenses/>',
-				$tag, 'DeprecatedLicenseTag', [ $license ]
-			);
+		} else {
+			// Split list to check each license for deprecation
+			$singleLicenses = preg_split( '/\s+(?:AND|OR)\s+/i', $license );
+			foreach ( $singleLicenses as $singleLicense ) {
+				// Check if the splitted license is known to the validator - T195429
+				if ( !is_array( $licenseValidator->getLicenseByIdentifier( $singleLicense ) ) ) {
+					// @codeCoverageIgnoreStart
+					$phpcsFile->addWarning(
+						'An error occurred during processing SPDX license identifier "%s"',
+						$tag, 'ErrorLicenseTag', [ $license ]
+					);
+					break;
+					// @codeCoverageIgnoreEnd
+				}
+				if ( $licenseValidator->isDeprecatedByIdentifier( $singleLicense ) ) {
+					$phpcsFile->addWarning(
+						'Deprecated SPDX license identifier "%s", see <https://spdx.org/licenses/>',
+						$tag, 'DeprecatedLicenseTag', [ $singleLicense ]
+					);
+				}
+			}
 		}
 	}
 

@@ -34,7 +34,7 @@ wmfSetupProfiler( [
 	'redis-host' => $wmfServiceConfig->getLocalService( 'xenon' ),
 	'redis-port' => 6379,
 	'redis-timeout' => $wmfServiceConfig->getRealm() === 'labs' ? 1 : 0.1,
-	'use-xhgui' => !!$wmfServiceConfig->getLocalService( 'xhgui' ),
+	'use-xhgui' => (bool)$wmfServiceConfig->getLocalService( 'xhgui' ),
 	'xhgui-conf' => [
 		'save.handler' => 'mongodb',
 		'db.host'      => $wmfServiceConfig->getLocalService( 'xhgui' ),

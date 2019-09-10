@@ -133,15 +133,8 @@ class FunctionCommentSniff implements Sniff {
 					$error = 'Content missing for @see tag in function comment';
 					$phpcsFile->addError( $error, $tag, 'EmptySees' );
 				}
-			} elseif ( $tagText === '@inheritDoc' ) {
+			} elseif ( strcasecmp( $tagText, '@inheritDoc' ) === 0 ) {
 				$skipDoc = true;
-			} elseif ( $tagText === '@inheritdoc' ) {
-				$skipDoc = true;
-				$error = 'Incorrect capitalization of @inheritDoc';
-				$fix = $phpcsFile->addFixableError( $error, $tag, 'LowercaseInheritDoc' );
-				if ( $fix ) {
-					$phpcsFile->fixer->replaceToken( $tag, "@inheritDoc" );
-				}
 			} elseif ( $tagText === '@deprecated' ) {
 				// No need to validate deprecated functions
 				$skipDoc = true;
@@ -592,6 +585,7 @@ class FunctionCommentSniff implements Sniff {
 				}
 			}
 			// Make sure the param name is correct.
+			$defaultNull = false;
 			if ( isset( $realParams[$pos] ) ) {
 				$realName = $realParams[$pos]['name'];
 				if ( $realName !== $var ) {
@@ -608,6 +602,11 @@ class FunctionCommentSniff implements Sniff {
 					$error .= 'actual variable name %s';
 					$phpcsFile->addError( $error, $param['tag'], $code, $data );
 				}
+				if ( isset( $realParams[$pos]['default'] ) &&
+					$realParams[$pos]['default'] === 'null'
+				) {
+					$defaultNull = true;
+				}
 			} elseif ( !$param['variadic_arg'] ) {
 				// We must have an extra parameter comment.
 				$error = 'Superfluous parameter comment';
@@ -616,6 +615,7 @@ class FunctionCommentSniff implements Sniff {
 			$foundParams[] = $var;
 			// Check the short type of boolean and integer
 			$explodedType = explode( '|', $param['type'] );
+			$nullFound = false;
 			$fixType = false;
 			foreach ( $explodedType as $index => $singleType ) {
 				if ( isset( self::$shortTypeMapping[$singleType] ) ) {
@@ -633,6 +633,33 @@ class FunctionCommentSniff implements Sniff {
 						$explodedType[$index] = $newType;
 						$fixType = true;
 					}
+				}
+				if ( $singleType === 'null' ) {
+					$nullFound = true;
+				}
+				if ( substr( $singleType, -10 ) === '[optional]' ) {
+					$fix = $phpcsFile->addFixableError(
+						'Key word "[optional]" on "%s" should not be used',
+						$param['tag'],
+						'NoOptionalKeyWord',
+						[ $param['type'] ]
+					);
+					if ( $fix ) {
+						$explodedType[$index] = substr( $singleType, 0, -10 );
+						$fixType = true;
+					}
+				}
+			}
+			// Check if the default of null is in the type list
+			if ( $defaultNull && !$nullFound ) {
+				$fix = $phpcsFile->addFixableError(
+					'Default of null should be declared in @param tag',
+					$param['tag'],
+					'DefaultNullTypeParam'
+				);
+				if ( $fix ) {
+					$explodedType[] = 'null';
+					$fixType = true;
 				}
 			}
 			if ( $fixType ) {

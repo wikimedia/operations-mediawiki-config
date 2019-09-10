@@ -90,6 +90,10 @@ class Standards
                 continue;
             }
 
+            if (is_dir($standardsDir) === false) {
+                continue;
+            }
+
             $di = new \DirectoryIterator($standardsDir);
             foreach ($di as $file) {
                 if ($file->isDir() === true && $file->isDot() === false) {
@@ -112,7 +116,7 @@ class Standards
         $installedStandards = [];
 
         foreach ($rulesets as $rulesetPath) {
-            $ruleset = simplexml_load_string(file_get_contents($rulesetPath));
+            $ruleset = @simplexml_load_string(file_get_contents($rulesetPath));
             if ($ruleset === false) {
                 continue;
             }

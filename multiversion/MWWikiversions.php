@@ -87,7 +87,7 @@ class MWWikiversions {
 			$line = trim( substr( $line, 0, strcspn( $line, '#' ) ) );
 			if ( substr( $line, 0, 2 ) === '%%' ) {
 				if ( !empty( $dbs ) ) {
-					throw new Exception( __METHOD__ ."(): Encountered dblist expression inside dblist list file.\n" );
+					throw new Exception( __METHOD__ . "(): Encountered dblist expression inside dblist list file.\n" );
 				}
 				$dbs = self::evalDbListExpression( $line );
 				break;

@@ -43,13 +43,13 @@ if ( $wmfRealm == 'labs' ) { # safe guard
 			],
 
 			'flow_cluster1' => [
-				'172.16.5.170:3306' => 1 , #deployment-db05.eqiad.wmflabs, master
-				'172.16.4.147:3306' => 3 , #deployment-db06.eqiad.wmflabs
+				'172.16.5.170:3306' => 1 , # deployment-db05.eqiad.wmflabs, master
+				'172.16.4.147:3306' => 3 , # deployment-db06.eqiad.wmflabs
 			],
 
 			'extension1' => [
-				'172.16.5.170:3306' => 1 , #deployment-db05.eqiad.wmflabs, master
-				'172.16.4.147:3306' => 3 , #deployment-db06.eqiad.wmflabs
+				'172.16.5.170:3306' => 1 , # deployment-db05.eqiad.wmflabs, master
+				'172.16.4.147:3306' => 3 , # deployment-db06.eqiad.wmflabs
 			],
 		],
 

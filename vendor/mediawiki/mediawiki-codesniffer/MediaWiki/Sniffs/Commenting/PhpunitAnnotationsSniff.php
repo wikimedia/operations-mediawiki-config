@@ -38,6 +38,12 @@ class PhpunitAnnotationsSniff implements Sniff {
 	 * @see https://phpunit.de/manual/current/en/appendixes.annotations.html
 	 */
 	private static $allowedAnnotations = [
+		'@after' => true,
+		'@afterClass' => true,
+
+		'@before' => true,
+		'@beforeClass' => true,
+
 		'@covers' => true,
 		'@cover' => [ '@covers', 'SingularCover' ],
 
@@ -71,16 +77,10 @@ class PhpunitAnnotationsSniff implements Sniff {
 	 * @var array
 	 */
 	private static $forbiddenAnnotations = [
-		'@after' => 'Do not use %s, use tearDown() function.',
-		'@afterClass' => 'Do not use %s, use tearDownAfterClass() function.',
-
-		'@before' => 'Do not use %s, use setUp() function.',
-		'@beforeClass' => 'Do not use %s, use setUpBeforeClass() function.',
-
 		// Name the function with test prefix, some other sniffs depends on that
 		'@test' => 'Do not use %s, name the function to begin with "test".',
 
-		 // Use @dataProvider
+		// Use @dataProvider
 		'@testWith' => 'Do not use %s, use @dataProvider and a provider function.',
 
 		'@doesNotPerformAssertions' => true,
@@ -100,6 +100,44 @@ class PhpunitAnnotationsSniff implements Sniff {
 		'@small',
 		'@medium',
 		'@large',
+		'@after',
+		'@afterClass',
+		'@before',
+		'@beforeClass',
+	];
+
+	/**
+	 * A list of naming patterns for annotations
+	 * Annotations not found here using default test* name
+	 *
+	 * @var array
+	 */
+	private static $functionNamingPattern = [
+		'@after' => [
+			'regex' => '/TearDown$/',
+			'message' => 'tearDown functions (*TearDown)',
+			'code' => 'NotTearDownFunction',
+		],
+		'@afterClass' => [
+			'regex' => '/TearDownAfterClass$/',
+			'message' => 'tearDown functions (*TearDownAfterClass)',
+			'code' => 'NotTearDownAfterClassFunction',
+		],
+		'@before' => [
+			'regex' => '/SetUp$/',
+			'message' => 'setUp functions (*SetUp)',
+			'code' => 'NotSetUpFunction',
+		],
+		'@beforeClass' => [
+			'regex' => '/SetUpBeforeClass$/',
+			'message' => 'setUp functions (*SetUpBeforeClass)',
+			'code' => 'NotSetUpBeforeClassFunction',
+		],
+		'*' => [
+			'regex' => '/^(?:test|provide)|Provider$/',
+			'message' => 'test functions',
+			'code' => 'NotTestFunction',
+		],
 	];
 
 	/**
@@ -148,8 +186,28 @@ class PhpunitAnnotationsSniff implements Sniff {
 			return;
 		}
 
-		$classToken = $this->findObjectStructureToken( $phpcsFile, $tokens, $end );
-		if ( !$classToken || !$this->isTestClass( $phpcsFile, $classToken ) ) {
+		if ( $tokens[$end]['level'] === 0 ) {
+			$objectToken = $this->findClassToken( $phpcsFile, $tokens, $end );
+			if ( !$objectToken ) {
+				$phpcsFile->addWarning(
+					'The phpunit annotation %s should only be used in class level comments.',
+					$tag, 'NotClass', [ $tagText ]
+				);
+				return;
+			}
+		} else {
+			$objectToken = $this->findObjectStructureTokenFunctionLevel( $tokens, $end );
+			if ( !$objectToken ) {
+				$phpcsFile->addWarning(
+					'The phpunit annotation %s should only be used inside classes or traits.',
+					$tag, 'NotInClassTrait', [ $tagText ]
+				);
+				return;
+			}
+		}
+		if ( $tokens[$objectToken]['code'] === T_CLASS &&
+			!$this->isTestClass( $phpcsFile, $objectToken )
+		) {
 			$phpcsFile->addWarning(
 				'The phpunit annotation %s should only be used inside test classes.',
 				$tag, 'NotTestClass', [ $tagText ]
@@ -183,11 +241,21 @@ class PhpunitAnnotationsSniff implements Sniff {
 
 		// Check the name of the function
 		if ( $tokens[$tag]['level'] > 0 ) {
+			if ( isset( self::$functionNamingPattern[$tagText] ) ) {
+				$namingPattern = self::$functionNamingPattern[$tagText];
+			} else {
+				$namingPattern = self::$functionNamingPattern['*'];
+			}
+
 			$functionToken = $this->findFunctionToken( $phpcsFile, $tokens, $end );
-			if ( !$functionToken || !$this->isTestFunction( $phpcsFile, $functionToken ) ) {
+			if ( !$functionToken ||
+				!$this->isFunctionOkay( $phpcsFile, $functionToken, $namingPattern['regex'] )
+			) {
+				$message = 'The phpunit annotation %s should only be used for ' .
+					$namingPattern['message'] . '.';
 				$phpcsFile->addWarning(
-					'The phpunit annotation %s should only be used for test functions.',
-					$tag, 'NotTestFunction', [ $tagText ]
+					$message,
+					$tag, $namingPattern['code'], [ $tagText ]
 				);
 			}
 		}
@@ -204,25 +272,28 @@ class PhpunitAnnotationsSniff implements Sniff {
 	}
 
 	/**
-	 * Find the class or trait this comment depends on.
+	 * Find the class this class level comment depends on.
 	 */
-	private function findObjectStructureToken( File $phpcsFile, array $tokens, $commentEnd ) {
-		// class level comment
-		if ( $tokens[$commentEnd]['level'] === 0 ) {
-			$next = $phpcsFile->findNext( [ T_CLASS ], $commentEnd + 1 );
+	private function findClassToken( File $phpcsFile, array $tokens, $commentEnd ) {
+		$next = $phpcsFile->findNext( [ T_CLASS ], $commentEnd + 1 );
 
-			// Only process class directly located after the comment
-			if ( $next &&
-				$tokens[$commentEnd]['line'] + 1 === $tokens[$next]['line']
-			) {
-				return $next;
-			}
-		} else {
-			// function level comment
-			foreach ( $tokens[$commentEnd]['conditions'] as $ptr => $type ) {
-				if ( $type === T_CLASS || $type === T_TRAIT ) {
-					return $ptr;
-				}
+		// Only process class directly located after the comment
+		if ( $next &&
+			$tokens[$commentEnd]['line'] + 1 === $tokens[$next]['line']
+		) {
+			return $next;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Find the class or trait this function level comment depends on.
+	 */
+	private function findObjectStructureTokenFunctionLevel( array $tokens, $commentEnd ) {
+		foreach ( $tokens[$commentEnd]['conditions'] as $ptr => $type ) {
+			if ( $type === T_CLASS || $type === T_TRAIT ) {
+				return $ptr;
 			}
 		}
 
@@ -247,13 +318,13 @@ class PhpunitAnnotationsSniff implements Sniff {
 
 	private function isTestClass( File $phpcsFile, $classPtr ) {
 		return preg_match(
-			'/(?:Test[BC]ase|Suite|Test)$/', $phpcsFile->getDeclarationName( $classPtr )
+			'/(?:Test(?:Case)?(?:Base)?|Suite)$/', $phpcsFile->getDeclarationName( $classPtr )
 		);
 	}
 
-	private function isTestFunction( File $phpcsFile, $functionPtr ) {
+	private function isFunctionOkay( File $phpcsFile, $functionPtr, $pattern ) {
 		return preg_match(
-			'/^(?:test|provide)|Provider$/', $phpcsFile->getDeclarationName( $functionPtr )
+			$pattern, $phpcsFile->getDeclarationName( $functionPtr )
 		);
 	}
 

@@ -35,7 +35,7 @@ class DeprecatedConstantUsageSniff implements Sniff {
 	private $deprecated = [
 		'DB_SLAVE' => [
 			'replace' => 'DB_REPLICA',
-			'version' => '1.27',
+			'version' => '1.27.3',
 		],
 		'NS_IMAGE' => [
 			'replace' => 'NS_FILE',

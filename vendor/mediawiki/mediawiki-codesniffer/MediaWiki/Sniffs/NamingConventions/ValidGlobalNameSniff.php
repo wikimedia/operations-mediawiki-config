@@ -31,6 +31,13 @@ class ValidGlobalNameSniff implements Sniff {
 		'$argv'
 	];
 
+	/**
+	 * A list of global variable prefixes allowed.
+	 *
+	 * @var array
+	 */
+	public $allowedPrefixes = [ 'wg' ];
+
 	public $ignoreList = [];
 
 	/**
@@ -63,15 +70,38 @@ class ValidGlobalNameSniff implements Sniff {
 					return;
 				}
 
-				// Skip '$' and forge a valid global variable name
-				$expected = '$wg' . ucfirst( substr( $globalName, 1 ) );
+				// Determine if a simple error message can be used
 
-				// Verify global is prefixed with wg
-				if ( substr( $globalName, 1, 2 ) !== 'wg' ) {
+				if ( count( $this->allowedPrefixes ) === 1 ) {
+					// Skip '$' and forge a valid global variable name
+					$expected = '$' . $this->allowedPrefixes[0] . ucfirst( substr( $globalName, 1 ) );
+
+					// Build message telling you the allowed prefix
+					$msg = 'Global variable "%s" is lacking \''
+						. $this->allowedPrefixes[0]
+						. '\' prefix. Should be "%s".';
+				// If there are no prefixes specified, don't do anything
+				} elseif ( $this->allowedPrefixes === [] ) {
+					return;
+				} else {
+					// Build a list of forged valid global variable names
+					$expected = 'one of "$'
+						. implode( ucfirst( substr( $globalName, 1 ) . '", "$' ), $this->allowedPrefixes )
+						. ucfirst( substr( $globalName, 1 ) )
+						. '"';
+
+					// Build message telling you which prefixes are allowed
+					$msg = 'Global variable "%s" is lacking an allowed prefix (one of \''
+						. implode( '\', \'', $this->allowedPrefixes )
+						. '\'). Should be "%s"';
+				}
+
+				// Verify global is prefixed with an allowed prefix
+				if ( !in_array( substr( $globalName, 1, 2 ), $this->allowedPrefixes ) ) {
 					$phpcsFile->addError(
-						'Global variable "%s" is lacking \'wg\' prefix. Should be "%s".',
+						$msg,
 						$stackPtr,
-						'wgPrefix',
+						'allowedPrefix',
 						[ $globalName, $expected ]
 					);
 				} else {

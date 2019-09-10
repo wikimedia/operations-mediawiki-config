@@ -1,7 +1,7 @@
 {
     "0BSD": [
         "BSD Zero Clause License",
-        false,
+        true,
         false
     ],
     "AAL": [
@@ -61,6 +61,16 @@
     ],
     "AGPL-1.0": [
         "Affero General Public License v1.0",
+        false,
+        true
+    ],
+    "AGPL-1.0-only": [
+        "Affero General Public License v1.0 only",
+        false,
+        false
+    ],
+    "AGPL-1.0-or-later": [
+        "Affero General Public License v1.0 or later",
         false,
         false
     ],
@@ -305,152 +315,152 @@
         false
     ],
     "CC-BY-1.0": [
-        "Creative Commons Attribution 1.0",
+        "Creative Commons Attribution 1.0 Generic",
         false,
         false
     ],
     "CC-BY-2.0": [
-        "Creative Commons Attribution 2.0",
+        "Creative Commons Attribution 2.0 Generic",
         false,
         false
     ],
     "CC-BY-2.5": [
-        "Creative Commons Attribution 2.5",
+        "Creative Commons Attribution 2.5 Generic",
         false,
         false
     ],
     "CC-BY-3.0": [
-        "Creative Commons Attribution 3.0",
+        "Creative Commons Attribution 3.0 Unported",
         false,
         false
     ],
     "CC-BY-4.0": [
-        "Creative Commons Attribution 4.0",
+        "Creative Commons Attribution 4.0 International",
         false,
         false
     ],
     "CC-BY-NC-1.0": [
-        "Creative Commons Attribution Non Commercial 1.0",
+        "Creative Commons Attribution Non Commercial 1.0 Generic",
         false,
         false
     ],
     "CC-BY-NC-2.0": [
-        "Creative Commons Attribution Non Commercial 2.0",
+        "Creative Commons Attribution Non Commercial 2.0 Generic",
         false,
         false
     ],
     "CC-BY-NC-2.5": [
-        "Creative Commons Attribution Non Commercial 2.5",
+        "Creative Commons Attribution Non Commercial 2.5 Generic",
         false,
         false
     ],
     "CC-BY-NC-3.0": [
-        "Creative Commons Attribution Non Commercial 3.0",
+        "Creative Commons Attribution Non Commercial 3.0 Unported",
         false,
         false
     ],
     "CC-BY-NC-4.0": [
-        "Creative Commons Attribution Non Commercial 4.0",
+        "Creative Commons Attribution Non Commercial 4.0 International",
         false,
         false
     ],
     "CC-BY-NC-ND-1.0": [
-        "Creative Commons Attribution Non Commercial No Derivatives 1.0",
+        "Creative Commons Attribution Non Commercial No Derivatives 1.0 Generic",
         false,
         false
     ],
     "CC-BY-NC-ND-2.0": [
-        "Creative Commons Attribution Non Commercial No Derivatives 2.0",
+        "Creative Commons Attribution Non Commercial No Derivatives 2.0 Generic",
         false,
         false
     ],
     "CC-BY-NC-ND-2.5": [
-        "Creative Commons Attribution Non Commercial No Derivatives 2.5",
+        "Creative Commons Attribution Non Commercial No Derivatives 2.5 Generic",
         false,
         false
     ],
     "CC-BY-NC-ND-3.0": [
-        "Creative Commons Attribution Non Commercial No Derivatives 3.0",
+        "Creative Commons Attribution Non Commercial No Derivatives 3.0 Unported",
         false,
         false
     ],
     "CC-BY-NC-ND-4.0": [
-        "Creative Commons Attribution Non Commercial No Derivatives 4.0",
+        "Creative Commons Attribution Non Commercial No Derivatives 4.0 International",
         false,
         false
     ],
     "CC-BY-NC-SA-1.0": [
-        "Creative Commons Attribution Non Commercial Share Alike 1.0",
+        "Creative Commons Attribution Non Commercial Share Alike 1.0 Generic",
         false,
         false
     ],
     "CC-BY-NC-SA-2.0": [
-        "Creative Commons Attribution Non Commercial Share Alike 2.0",
+        "Creative Commons Attribution Non Commercial Share Alike 2.0 Generic",
         false,
         false
     ],
     "CC-BY-NC-SA-2.5": [
-        "Creative Commons Attribution Non Commercial Share Alike 2.5",
+        "Creative Commons Attribution Non Commercial Share Alike 2.5 Generic",
         false,
         false
     ],
     "CC-BY-NC-SA-3.0": [
-        "Creative Commons Attribution Non Commercial Share Alike 3.0",
+        "Creative Commons Attribution Non Commercial Share Alike 3.0 Unported",
         false,
         false
     ],
     "CC-BY-NC-SA-4.0": [
-        "Creative Commons Attribution Non Commercial Share Alike 4.0",
+        "Creative Commons Attribution Non Commercial Share Alike 4.0 International",
         false,
         false
     ],
     "CC-BY-ND-1.0": [
-        "Creative Commons Attribution No Derivatives 1.0",
+        "Creative Commons Attribution No Derivatives 1.0 Generic",
         false,
         false
     ],
     "CC-BY-ND-2.0": [
-        "Creative Commons Attribution No Derivatives 2.0",
+        "Creative Commons Attribution No Derivatives 2.0 Generic",
         false,
         false
     ],
     "CC-BY-ND-2.5": [
-        "Creative Commons Attribution No Derivatives 2.5",
+        "Creative Commons Attribution No Derivatives 2.5 Generic",
         false,
         false
     ],
     "CC-BY-ND-3.0": [
-        "Creative Commons Attribution No Derivatives 3.0",
+        "Creative Commons Attribution No Derivatives 3.0 Unported",
         false,
         false
     ],
     "CC-BY-ND-4.0": [
-        "Creative Commons Attribution No Derivatives 4.0",
+        "Creative Commons Attribution No Derivatives 4.0 International",
         false,
         false
     ],
     "CC-BY-SA-1.0": [
-        "Creative Commons Attribution Share Alike 1.0",
+        "Creative Commons Attribution Share Alike 1.0 Generic",
         false,
         false
     ],
     "CC-BY-SA-2.0": [
-        "Creative Commons Attribution Share Alike 2.0",
+        "Creative Commons Attribution Share Alike 2.0 Generic",
         false,
         false
     ],
     "CC-BY-SA-2.5": [
-        "Creative Commons Attribution Share Alike 2.5",
+        "Creative Commons Attribution Share Alike 2.5 Generic",
         false,
         false
     ],
     "CC-BY-SA-3.0": [
-        "Creative Commons Attribution Share Alike 3.0",
+        "Creative Commons Attribution Share Alike 3.0 Unported",
         false,
         false
     ],
     "CC-BY-SA-4.0": [
-        "Creative Commons Attribution Share Alike 4.0",
+        "Creative Commons Attribution Share Alike 4.0 International",
         false,
         false
     ],
@@ -509,6 +519,16 @@
         false,
         false
     ],
+    "CERN-OHL-1.1": [
+        "CERN Open Hardware License v1.1",
+        false,
+        false
+    ],
+    "CERN-OHL-1.2": [
+        "CERN Open Hardware Licence v1.2",
+        false,
+        false
+    ],
     "ClArtistic": [
         "Clarified Artistic License",
         false,
@@ -531,6 +551,16 @@
     ],
     "Condor-1.1": [
         "Condor Public License v1.1",
+        false,
+        false
+    ],
+    "copyleft-next-0.3.0": [
+        "copyleft-next 0.3.0",
+        false,
+        false
+    ],
+    "copyleft-next-0.3.1": [
+        "copyleft-next 0.3.1",
         false,
         false
     ],
@@ -894,6 +924,11 @@
         true,
         false
     ],
+    "HPND-sell-variant": [
+        "Historical Permission Notice and Disclaimer - sell variant",
+        false,
+        false
+    ],
     "IBM-pibs": [
         "IBM PowerPC Initialization and Boot Software",
         false,
@@ -1015,7 +1050,7 @@
         true
     ],
     "LGPL-2.1+": [
-        "GNU Library General Public License v2 or later",
+        "GNU Library General Public License v2.1 or later",
         true,
         true
     ],
@@ -1079,6 +1114,11 @@
         true,
         false
     ],
+    "Linux-OpenIB": [
+        "Linux Kernel Variant of OpenIB.org license",
+        false,
+        false
+    ],
     "LPL-1.0": [
         "Lucent Public License Version 1.0",
         true,
@@ -1126,6 +1166,11 @@
     ],
     "MIT": [
         "MIT License",
+        true,
+        false
+    ],
+    "MIT-0": [
+        "MIT No Attribution",
         true,
         false
     ],
@@ -1319,6 +1364,11 @@
         false,
         false
     ],
+    "ODC-By-1.0": [
+        "Open Data Commons Attribution License v1.0",
+        false,
+        false
+    ],
     "OFL-1.0": [
         "SIL Open Font License 1.0",
         false,
@@ -1327,6 +1377,21 @@
     "OFL-1.1": [
         "SIL Open Font License 1.1",
         true,
+        false
+    ],
+    "OGL-UK-1.0": [
+        "Open Government Licence v1.0",
+        false,
+        false
+    ],
+    "OGL-UK-2.0": [
+        "Open Government Licence v2.0",
+        false,
+        false
+    ],
+    "OGL-UK-3.0": [
+        "Open Government Licence v3.0",
+        false,
         false
     ],
     "OGTSL": [
@@ -1569,6 +1634,11 @@
         false,
         false
     ],
+    "Sendmail-8.23": [
+        "Sendmail License 8.23",
+        false,
+        false
+    ],
     "SGI-B-1.0": [
         "SGI Free Software License B v1.0",
         false,
@@ -1654,6 +1724,11 @@
         false,
         false
     ],
+    "TAPR-OHL-1.0": [
+        "TAPR Open Hardware License v1.0",
+        false,
+        false
+    ],
     "TCL": [
         "TCL/TK License",
         false,
@@ -1676,6 +1751,16 @@
     ],
     "TOSL": [
         "Trusster Open Source License",
+        false,
+        false
+    ],
+    "TU-Berlin-1.0": [
+        "Technische Universitaet Berlin License 1.0",
+        false,
+        false
+    ],
+    "TU-Berlin-2.0": [
+        "Technische Universitaet Berlin License 2.0",
         false,
         false
     ],

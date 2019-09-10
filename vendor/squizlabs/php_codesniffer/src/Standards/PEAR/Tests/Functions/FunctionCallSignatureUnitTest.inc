@@ -65,7 +65,7 @@ $something
 
 // This is not a function call.
 function &testFunction($arg1,
-    $arg2,
+    $arg2
 ) {
 }
 
@@ -105,7 +105,7 @@ $foo = new stdClass(
     2,
     3);
 
-public function doSomething()
+function doSomething()
 {
     return $this->getFoo()
         ->doBar(
@@ -142,7 +142,7 @@ $bar = new stdClass(
     4, /* thanks */ 5, /* PSR-2 */ 6
 );
 
-public function doSomething()
+function doSomething()
 {
     return $this->getFoo()
         ->doBar(
@@ -204,7 +204,7 @@ function foo()
         /* comment
          * comment
         */
-        'string'.
+        'string'
     );
 }
 
@@ -345,7 +345,7 @@ $x = $var('y',
 $obj->{$x}(1,
   2);
 
-(function ($a, $b) {
+return (function ($a, $b) {
     return function ($c, $d) use ($a, $b) {
         echo $a, $b, $c, $d;
     };
@@ -366,7 +366,7 @@ class Foo
     }
 }
 
-(function ($a, $b) {
+return (function ($a, $b) {
     return function ($c, $d) use ($a, $b) {
         echo $a, $b, $c, $d;
     };
@@ -390,8 +390,29 @@ $deprecated_functions = [
 
 $deprecated_functions = [
     'the_category_ID'
-         => function_call( // 7 spaces, not 8. This is the problem line.
+         => function_call( // 9 spaces, not 8. This is the problem line.
         $a,
         $b
     ),
 ];
+
+// phpcs:set PEAR.Functions.FunctionCallSignature allowMultipleArguments false
+
+printf(
+    '<select name="%1$s" id="%2$s">%3$s</select>',
+    $obj->getName(), // Trailing comment.
+    $obj->getID(), // phpcs:ignore Standard.Category.SniffName -- for reasons.
+    $option
+);
+
+// Handling of PHP 7.3 trailing comma's.
+functionCall($args, $foo,);
+functionCall(
+    $args, $foo,
+);
+functionCall(
+    $args,
+    $foo,
+);
+
+// phpcs:set PEAR.Functions.FunctionCallSignature allowMultipleArguments true

@@ -26,7 +26,7 @@ class ForbiddenStylesSniff implements Sniff
      * A list of forbidden styles with their alternatives.
      *
      * The value is NULL if no alternative exists. i.e., the
-     * function should just not be used.
+     * style should just not be used.
      *
      * @var array<string, string|null>
      */
@@ -115,7 +115,7 @@ class ForbiddenStylesSniff implements Sniff
             // Remove the pattern delimiters and modifier.
             $pattern = substr($pattern, 1, -2);
         } else {
-            if (in_array($style, $this->forbiddenStyleNames) === false) {
+            if (in_array($style, $this->forbiddenStyleNames, true) === false) {
                 return;
             }
         }//end if

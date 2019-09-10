@@ -60,7 +60,7 @@ class UnusedGlobalVariablesSniff implements Sniff {
 				&& !array_key_exists( ltrim( $global[0], '$' ), $strVariables )
 			) {
 				$phpcsFile->addWarning(
-					'Global ' . $global[0] .' is never used.',
+					'Global ' . $global[0] . ' is never used.',
 					$global[1],
 					'UnusedGlobal' . $global[0]
 				);

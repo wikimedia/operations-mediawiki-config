@@ -438,7 +438,7 @@ class MWMultiVersion {
 	 * (c) Changes PHP's current directory to the directory of this file.
 	 *
 	 * @param string $file File path (relative to MediaWiki dir)
-	 * @param string $wiki Force the Wiki ID rather than detecting it
+	 * @param string|null $wiki Force the Wiki ID rather than detecting it
 	 * @return string Absolute file path with proper MW location
 	 */
 	public static function getMediaWiki( $file, $wiki = null ) {

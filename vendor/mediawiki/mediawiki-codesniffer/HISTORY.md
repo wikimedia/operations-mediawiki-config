@@ -1,5 +1,90 @@
 # MediaWiki-Codesniffer release history #
 
+## 26.0.0 / 2019-0511 ##
+* Update composer/spdx-licenses from 1.4.0 to 1.5.1 (Reedy)
+* Update composer/semver from 1.4.2 to 1.5.0 (Reedy)
+* Enable sniff to check for newlines between functions (Umherirrender)
+* Upgrade PHP_CodeSniffer to 3.4.2 (Umherirrender)
+
+## 25.0.0 / 2019-04-05 ##
+* Prohibit aliases is_long, is_double and is_real (mainframe98)
+* Streamline PHPDoc comment parsing in UnusedUseStatement sniff (Thiemo Kreuz)
+* Upgrade PHP_CodeSniffer to 3.4.1 (Kunal Mehta)
+* Whitelist more phan annotations (Kunal Mehta)
+
+## 24.0.0 / 2019-02-05 ##
+* Whitelist @after and @before phpunit annotations (Umherirrender)
+* Update PHP_CodeSniffer to 3.4.0 (Kunal Mehta)
+* Enable new Generic.VersionControl.GitMergeConflict sniff (Kunal Mehta)
+* Copyedit comments (Max Semenik)
+* Exclude methods in anonymous classes from the nested_functions sniff (mainframe98)
+* Disallow use of @access (Umherirrender)
+* Add $wgLang and $wgOut to ExtendClassUsageSniff (Umherirrender)
+* Enable Generic.WhiteSpace.IncrementDecrementSpacing (Umherirrender)
+* Enable Generic.Formatting.SpaceAfterNot with spacing 0 (Umherirrender)
+* Require mbstring since it is needed for FunctionAnnotationsSniff (Mark A. Hershberger)
+* Enable Generic.CodeAnalysis.EmptyPHPStatement (Umherirrender)
+* Fix UnusedUseStatementSniff to find more unused statements (Umherirrender)
+* Remove ForLoopWithTestFunctionCall (Tim Starling)
+* Add a sniff to replace !! with a cast to boolean (mainframe98)
+* Adjust warning text for PhpunitAnnotations.NotClassTrait sniff (Umherirrender)
+* Expand ExtendClassUsageSniff to check for config globals (Umherirrender)
+* Also exclude anonymous classes in AssignmentInReturnSniff (mainframe98)
+* Replace sniff for forbidden globals by deprecated globals (Umherirrender)
+
+## 23.0.0 / 2018-11-14 ##
+* Add comment why @private and @protected are okay (Umherirrender)
+* Add sniff to detect + for string concat (Umherirrender)
+* Add sniff to detect __METHOD__ in closures (Umherirrender)
+* Fix deprecation check for compounded licenses (Umherirrender)
+* Recognize MediaWikiTestCaseBase as test class (Aryeh Gregor)
+* Remove [optional] from types in @param (Umherirrender)
+* Update message to talk about "top level" instead of "file comment" (Thiemo Kreuz)
+* Upgrade squizlabs/php_codesniffer to 3.3.2 (Kunal Mehta)
+
+## 22.0.0 / 2018-09-02 ##
+* Detect nesting of inline ternary statements without parentheses (Kevin Israel)
+* Disable 'Generic.PHP.DeprecatedFunctions' sniff (Kunal Mehta)
+* Enable PSR2.Classes.ClassDeclaration (Umherirrender)
+* Enable Squiz.Functions.FunctionDeclarationArgumentSpacing (Umherirrender)
+* Enable Squiz.PHP.NonExecutableCodeSniff (Matěj Suchánek)
+* Enable Squiz.Strings.ConcatenationSpacing (Umherirrender)
+* Enable Squiz.WhiteSpace.ObjectOperatorSpacing (Umherirrender)
+* Fix documentation of ExtendClassUsageSniff (Matěj Suchánek)
+* Cleanups to the UnusedUseStatement sniff (Thiemo Kreuz)
+* Update DB_REPLICA's last version to 1.27.3 (Kunal Mehta)
+* Upgrade squizlabs/php_codesniffer to 3.3.1 (Reedy)
+* Whitelist @param-taint and @return-taint (Umherirrender)
+
+## 21.0.0 / 2018-07-26 ##
+* Add FunctionAnnotations checking tags in function comments only (Thiemo Kreuz)
+* Add "Generic.PHP.LowerCaseType" to ruleset (Kunal Mehta)
+* Add InArrayUsageSniff from Wikibase CodeSniffer (Kunal Mehta)
+* Add possibility to change allowed prefixes (MGChecker)
+* Automatically fix `@gropu` to `@group` (Kunal Mehta)
+* Enforce format of PHP 7 UTF-8 codepoint escapes (Kevin Israel)
+* ForbiddenFunctionsSniff: fix typo of "passthru" (Kevin Israel)
+* Prohibit nested functions (Max Semenik)
+* Update composer/spdx-licenses from 1.3.0 to 1.4.0 (Reedy)
+* Upgrade squizlabs/php_codesniffer to 3.3.0 (Kunal Mehta)
+* Use "PSR12.Keywords.ShortFormTypeKeywords" in place of custom sniff (Kunal Mehta)
+
+## 20.0.0 / 2018-05-24 ##
+* Require PHP 7 or HHVM to run (Kunal Mehta)
+* Document why we still need to keep ScalarTypeHintUsageSniff (Kunal Mehta)
+* Drop PHP7UnicodeSyntaxSniff sniff (Kunal Mehta)
+
+## 19.0.0 / 2018-05-24 ##
+Note: This will be the final release with PHP 5.5 and 5.6 support.
+
+* Add break and continue to ParenthesesAroundKeywordSniff (Umherirrender)
+* Check if the default of null is in the type list of @param (Umherirrender)
+* Do not enforce name for traits with phpunit annotations (Umherirrender)
+* Don't allow 'iterable' type hint (Kunal Mehta)
+* Prevent usage of nullable and void type hints (Kunal Mehta)
+* Prohibit PHP's vanilla execution (Max Semenik)
+* Reorganize PHP 7.0 compatibility sniffs into a category (Kunal Mehta)
+
 ## 18.0.0 / 2018-04-13 ##
 * Add common autofix replacements for invalid license tag sniff (Kunal Mehta)
 * Add test for 'You must use "/**" style comments for a function' (Thiemo Kreuz)

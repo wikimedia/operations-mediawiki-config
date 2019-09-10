@@ -229,3 +229,28 @@ $x = $foo ? function ($foo) use /* comment */ ($bar): int {
 $x = !$foo ? $bar : function (): int {
     return 1;
 };
+
+$a =
+    // Comment.
+    [
+        'a',
+        'b',
+    ];
+
+$a =
+// phpcs:ignore Standard.Category.Sniff -- for reasons.
+[
+    'a',
+    'b',
+];
+
+$foo = is_array($bar) ? array_map(
+        function () {},
+        $bar
+    ) : $bar;
+
+function bar(): array {}
+
+if ($line{-1} === ':') {
+    $line = substr($line, 0, -1);
+}

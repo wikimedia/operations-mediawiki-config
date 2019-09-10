@@ -132,3 +132,27 @@ function myFunction( $param )
           // phpcs:enable Standard.Category.Sniff -- for reasons.
     // }//end myFunction()
     //
+
+echo 'something'; // @codeCoverageIgnore
+echo 'something'; // @codeCoverageIgnoreStart
+echo 'something'; // @SuppressWarnings(PHPMD.UnusedLocalVariable)
+
+// Ok!
+
+/* Go! */
+
+// ISO-639-3
+
+			// But override with a different text if any.
+			/*
+			$id = intval( str_replace( 'hook_name', '', $order_method['method_id'] ) );
+			if ( ! empty( $id ) ) {
+				$info_text = get_post_meta( $location_id, 'meta_name' );
+
+				if ( ! empty( $info_text ) ) {
+					$text = $info_text;
+				}
+
+			}
+			*/
+			// function() { $a = $b; };

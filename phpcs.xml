@@ -1,14 +1,16 @@
 <?xml version="1.0"?>
 <ruleset>
 	<rule ref="vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
+		<exclude name="Generic.Classes.DuplicateClassName.Found" />
 		<exclude name="MediaWiki.Commenting.MissingCovers.MissingCovers" />
 		<exclude name="MediaWiki.Files.ClassMatchesFilename.NotMatch" />
 		<exclude name="MediaWiki.Files.ClassMatchesFilename.WrongCase" />
 		<exclude name="MediaWiki.NamingConventions.PrefixedGlobalFunctions.wfPrefix" />
-		<exclude name="MediaWiki.NamingConventions.ValidGlobalName.wgPrefix" />
+		<exclude name="MediaWiki.NamingConventions.ValidGlobalName.allowedPrefix" />
 		<exclude name="MediaWiki.Usage.SuperGlobalsUsage.SuperGlobals" />
 		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment" />
 		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.SingleSpaceBeforeSingleLineComment" />
+		<exclude name="Squiz.PHP.NonExecutableCode.ReturnNotRequired" />
 	</rule>
 	<file>.</file>
 	<arg name="bootstrap" value="./vendor/mediawiki/mediawiki-codesniffer/utils/bootstrap-ci.php"/>
@@ -35,6 +37,10 @@
 	</rule>
 	<rule ref="Squiz.Classes.ValidClassName.NotCamelCaps">
 		<severity>0</severity>
+	</rule>
+	<rule ref="MediaWiki.Usage.ForbiddenFunctions.exec">
+		<exclude-pattern>docroot/noc/conf/index\.php</exclude-pattern>
+		<exclude-pattern>docroot/noc/conf/activeMWVersions\.php</exclude-pattern>
 	</rule>
 
 	<exclude-pattern>\.git/</exclude-pattern>

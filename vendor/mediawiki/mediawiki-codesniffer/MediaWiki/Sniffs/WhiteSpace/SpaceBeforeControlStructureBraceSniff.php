@@ -30,6 +30,7 @@ class SpaceBeforeControlStructureBraceSniff implements Sniff {
 			T_CATCH,
 		];
 	}
+
 	/**
 	 * @param File $phpcsFile
 	 * @param int $stackPtr The index of current token.

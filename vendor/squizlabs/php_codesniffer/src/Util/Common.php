@@ -9,9 +9,6 @@
 
 namespace PHP_CodeSniffer\Util;
 
-use PHP_CodeSniffer\Config;
-use PHP_CodeSniffer\Exceptions\RuntimeException;
-
 class Common
 {
 
@@ -229,31 +226,31 @@ class Common
     public static function prepareForOutput($content, $exclude=[])
     {
         if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
-            if (in_array("\r", $exclude) === false) {
+            if (in_array("\r", $exclude, true) === false) {
                 $content = str_replace("\r", '\r', $content);
             }
 
-            if (in_array("\n", $exclude) === false) {
+            if (in_array("\n", $exclude, true) === false) {
                 $content = str_replace("\n", '\n', $content);
             }
 
-            if (in_array("\t", $exclude) === false) {
+            if (in_array("\t", $exclude, true) === false) {
                 $content = str_replace("\t", '\t', $content);
             }
         } else {
-            if (in_array("\r", $exclude) === false) {
+            if (in_array("\r", $exclude, true) === false) {
                 $content = str_replace("\r", "\033[30;1m\\r\033[0m", $content);
             }
 
-            if (in_array("\n", $exclude) === false) {
+            if (in_array("\n", $exclude, true) === false) {
                 $content = str_replace("\n", "\033[30;1m\\n\033[0m", $content);
             }
 
-            if (in_array("\t", $exclude) === false) {
+            if (in_array("\t", $exclude, true) === false) {
                 $content = str_replace("\t", "\033[30;1m\\t\033[0m", $content);
             }
 
-            if (in_array(' ', $exclude) === false) {
+            if (in_array(' ', $exclude, true) === false) {
                 $content = str_replace(' ', "\033[30;1m·\033[0m", $content);
             }
         }//end if
@@ -387,9 +384,9 @@ class Common
 
 
     /**
-     * Returns a valid variable type for param/var tag.
+     * Returns a valid variable type for param/var tags.
      *
-     * If type is not one of the standard type, it must be a custom type.
+     * If type is not one of the standard types, it must be a custom type.
      * Returns the correct type name suggestion if type name is invalid.
      *
      * @param string $varType The variable type to process.
@@ -402,7 +399,7 @@ class Common
             return '';
         }
 
-        if (in_array($varType, self::$allowedTypes) === true) {
+        if (in_array($varType, self::$allowedTypes, true) === true) {
             return $varType;
         } else {
             $lowerVarType = strtolower($varType);
@@ -448,7 +445,7 @@ class Common
                 } else {
                     return 'array';
                 }//end if
-            } else if (in_array($lowerVarType, self::$allowedTypes) === true) {
+            } else if (in_array($lowerVarType, self::$allowedTypes, true) === true) {
                 // A valid type, but not lower cased.
                 return $lowerVarType;
             } else {
