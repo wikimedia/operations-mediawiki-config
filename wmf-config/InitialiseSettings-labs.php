@@ -1249,6 +1249,12 @@ function wmfLabsSettings() {
 			'wikidatawiki' => 'https://ssr-termbox.wmflabs.org/termbox',
 		],
 
+		//T232191
+		'wmgWikibaseTaintedReferencesEnabled' => [
+			'default' => false,
+			'wikidatawiki' => true,
+		],
+
 		'wmgWikibaseTmpPropertyTermsMigrationStage' => [
 			'default' => MIGRATION_WRITE_NEW,
 			'wikidatawiki' => MIGRATION_WRITE_NEW // Override production

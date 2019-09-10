@@ -194,6 +194,10 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['ssrServerUrl'] = $wmgWikibaseSSRTermboxServerUrl;
 	}
 
+	if ( isset( $wmgWikibaseTaintedReferencesEnabled ) ) {
+		$wgWBRepoSettings['taintedReferencesEnabled'] = $wmgWikibaseTaintedReferencesEnabled;
+	}
+
 	if ( isset( $wmgWikibaseStringLimits ) ) {
 		$wgWBRepoSettings['string-limits'] = $wmgWikibaseStringLimits;
 	}
