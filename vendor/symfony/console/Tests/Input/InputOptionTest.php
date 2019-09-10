@@ -71,23 +71,12 @@ class InputOptionTest extends TestCase
         $this->assertTrue($option->isValueOptional(), '__construct() can take "InputOption::VALUE_OPTIONAL" as its mode');
     }
 
-    /**
-     * @dataProvider provideInvalidModes
-     */
-    public function testInvalidModes($mode)
+    public function testInvalidModes()
     {
         $this->expectException('InvalidArgumentException');
-        $this->expectExceptionMessage(sprintf('Option mode "%s" is not valid.', $mode));
+        $this->expectExceptionMessage('Option mode "-1" is not valid.');
 
-        new InputOption('foo', 'f', $mode);
-    }
-
-    public function provideInvalidModes()
-    {
-        return [
-            ['ANOTHER_ONE'],
-            [-1],
-        ];
+        new InputOption('foo', 'f', '-1');
     }
 
     public function testEmptyNameIsInvalid()

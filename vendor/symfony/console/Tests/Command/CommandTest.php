@@ -28,7 +28,7 @@ class CommandTest extends TestCase
 {
     protected static $fixturesPath;
 
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
         self::$fixturesPath = __DIR__.'/../Fixtures/';
         require_once self::$fixturesPath.'/TestCommand.php';
@@ -388,13 +388,7 @@ class CommandTest extends TestCase
         $tester = new CommandTester($command);
         $tester->execute([]);
 
-        if (\PHP_VERSION_ID < 70000) {
-            // Cannot bind static closures in PHP 5
-            $this->assertEquals('interact called'.PHP_EOL.'not bound'.PHP_EOL, $tester->getDisplay());
-        } else {
-            // Can bind static closures in PHP 7
-            $this->assertEquals('interact called'.PHP_EOL.'bound'.PHP_EOL, $tester->getDisplay());
-        }
+        $this->assertEquals('interact called'.PHP_EOL.'bound'.PHP_EOL, $tester->getDisplay());
     }
 
     private static function createClosure()

@@ -1,5 +1,9 @@
 # MinusX release history #
 
+## 0.3.2 / 2018-10-02 ##
+* Support using symfony/console ^4 (Kunal Mehta)
+* Use SPDX 3.0 license identifier (Umherirrender)
+
 ## 0.3.1 / 2018-02-17 ##
 * Add .gitattributes with export-ignore (Umherirrender)
 

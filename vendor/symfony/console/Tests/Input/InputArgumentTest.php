@@ -37,23 +37,12 @@ class InputArgumentTest extends TestCase
         $this->assertTrue($argument->isRequired(), '__construct() can take "InputArgument::REQUIRED" as its mode');
     }
 
-    /**
-     * @dataProvider provideInvalidModes
-     */
-    public function testInvalidModes($mode)
+    public function testInvalidModes()
     {
         $this->expectException('InvalidArgumentException');
-        $this->expectExceptionMessage(sprintf('Argument mode "%s" is not valid.', $mode));
+        $this->expectExceptionMessage('Argument mode "-1" is not valid.');
 
-        new InputArgument('foo', $mode);
-    }
-
-    public function provideInvalidModes()
-    {
-        return [
-            ['ANOTHER_ONE'],
-            [-1],
-        ];
+        new InputArgument('foo', '-1');
     }
 
     public function testIsArray()

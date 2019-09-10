@@ -12,22 +12,24 @@
 namespace Symfony\Component\Console\Tests\Helper;
 
 use PHPUnit\Framework\TestCase;
+use Symfony\Component\Console\Formatter\OutputFormatter;
 use Symfony\Component\Console\Helper\Table;
 use Symfony\Component\Console\Helper\TableCell;
 use Symfony\Component\Console\Helper\TableSeparator;
 use Symfony\Component\Console\Helper\TableStyle;
+use Symfony\Component\Console\Output\ConsoleSectionOutput;
 use Symfony\Component\Console\Output\StreamOutput;
 
 class TableTest extends TestCase
 {
     protected $stream;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->stream = fopen('php://memory', 'r+');
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         fclose($this->stream);
         $this->stream = null;
@@ -135,6 +137,45 @@ TABLE
   960-425-059-0   The Lord of the Rings      J. R. R. Tolkien  
   80-902734-1-6   And Then There Were None   Agatha Christie   
  =============== ========================== ================== 
+
+TABLE
+            ],
+            [
+                ['ISBN', 'Title', 'Author'],
+                $books,
+                'box',
+                <<<'TABLE'
+┌───────────────┬──────────────────────────┬──────────────────┐
+│ ISBN          │ Title                    │ Author           │
+├───────────────┼──────────────────────────┼──────────────────┤
+│ 99921-58-10-7 │ Divine Comedy            │ Dante Alighieri  │
+│ 9971-5-0210-0 │ A Tale of Two Cities     │ Charles Dickens  │
+│ 960-425-059-0 │ The Lord of the Rings    │ J. R. R. Tolkien │
+│ 80-902734-1-6 │ And Then There Were None │ Agatha Christie  │
+└───────────────┴──────────────────────────┴──────────────────┘
+
+TABLE
+            ],
+            [
+                ['ISBN', 'Title', 'Author'],
+                [
+                    ['99921-58-10-7', 'Divine Comedy', 'Dante Alighieri'],
+                    ['9971-5-0210-0', 'A Tale of Two Cities', 'Charles Dickens'],
+                    new TableSeparator(),
+                    ['960-425-059-0', 'The Lord of the Rings', 'J. R. R. Tolkien'],
+                    ['80-902734-1-6', 'And Then There Were None', 'Agatha Christie'],
+                ],
+                'box-double',
+                <<<'TABLE'
+╔═══════════════╤══════════════════════════╤══════════════════╗
+║ ISBN          │ Title                    │ Author           ║
+╠═══════════════╪══════════════════════════╪══════════════════╣
+║ 99921-58-10-7 │ Divine Comedy            │ Dante Alighieri  ║
+║ 9971-5-0210-0 │ A Tale of Two Cities     │ Charles Dickens  ║
+╟───────────────┼──────────────────────────┼──────────────────╢
+║ 960-425-059-0 │ The Lord of the Rings    │ J. R. R. Tolkien ║
+║ 80-902734-1-6 │ And Then There Were None │ Agatha Christie  ║
+╚═══════════════╧══════════════════════════╧══════════════════╝
 
 TABLE
             ],
@@ -610,9 +651,9 @@ TABLE;
     {
         $style = new TableStyle();
         $style
-            ->setHorizontalBorderChar('.')
-            ->setVerticalBorderChar('.')
-            ->setCrossingChar('.')
+            ->setHorizontalBorderChars('.')
+            ->setVerticalBorderChars('.')
+            ->setDefaultCrossingChar('.')
         ;
 
         Table::setStyleDefinition('dotfull', $style);
@@ -803,6 +844,113 @@ TABLE;
         $this->assertEquals($expected, $this->getOutputContent($output));
     }
 
+    public function testSectionOutput()
+    {
+        $sections = [];
+        $stream = $this->getOutputStream(true);
+        $output = new ConsoleSectionOutput($stream->getStream(), $sections, $stream->getVerbosity(), $stream->isDecorated(), new OutputFormatter());
+        $table = new Table($output);
+        $table
+            ->setHeaders(['ISBN', 'Title', 'Author', 'Price'])
+            ->setRows([
+                ['99921-58-10-7', 'Divine Comedy', 'Dante Alighieri', '9.95'],
+            ]);
+
+        $table->render();
+
+        $table->appendRow(['9971-5-0210-0', 'A Tale of Two Cities', 'Charles Dickens', '139.25']);
+
+        $expected =
+            <<<TABLE
++---------------+---------------+-----------------+-------+
+|\033[32m ISBN          \033[39m|\033[32m Title         \033[39m|\033[32m Author          \033[39m|\033[32m Price \033[39m|
++---------------+---------------+-----------------+-------+
+| 99921-58-10-7 | Divine Comedy | Dante Alighieri | 9.95  |
++---------------+---------------+-----------------+-------+
+\x1b[5A\x1b[0J+---------------+----------------------+-----------------+--------+
+|\033[32m ISBN          \033[39m|\033[32m Title                \033[39m|\033[32m Author          \033[39m|\033[32m Price  \033[39m|
++---------------+----------------------+-----------------+--------+
+| 99921-58-10-7 | Divine Comedy        | Dante Alighieri | 9.95   |
+| 9971-5-0210-0 | A Tale of Two Cities | Charles Dickens | 139.25 |
++---------------+----------------------+-----------------+--------+
+
+TABLE;
+
+        $this->assertEquals($expected, $this->getOutputContent($output));
+    }
+
+    public function testSectionOutputDoesntClearIfTableIsntRendered()
+    {
+        $sections = [];
+        $stream = $this->getOutputStream(true);
+        $output = new ConsoleSectionOutput($stream->getStream(), $sections, $stream->getVerbosity(), $stream->isDecorated(), new OutputFormatter());
+        $table = new Table($output);
+        $table
+            ->setHeaders(['ISBN', 'Title', 'Author', 'Price'])
+            ->setRows([
+                ['99921-58-10-7', 'Divine Comedy', 'Dante Alighieri', '9.95'],
+            ]);
+
+        $table->appendRow(['9971-5-0210-0', 'A Tale of Two Cities', 'Charles Dickens', '139.25']);
+
+        $expected =
+            <<<TABLE
++---------------+----------------------+-----------------+--------+
+|\033[32m ISBN          \033[39m|\033[32m Title                \033[39m|\033[32m Author          \033[39m|\033[32m Price  \033[39m|
++---------------+----------------------+-----------------+--------+
+| 99921-58-10-7 | Divine Comedy        | Dante Alighieri | 9.95   |
+| 9971-5-0210-0 | A Tale of Two Cities | Charles Dickens | 139.25 |
++---------------+----------------------+-----------------+--------+
+
+TABLE;
+
+        $this->assertEquals($expected, $this->getOutputContent($output));
+    }
+
+    public function testSectionOutputWithoutDecoration()
+    {
+        $sections = [];
+        $stream = $this->getOutputStream();
+        $output = new ConsoleSectionOutput($stream->getStream(), $sections, $stream->getVerbosity(), $stream->isDecorated(), new OutputFormatter());
+        $table = new Table($output);
+        $table
+            ->setHeaders(['ISBN', 'Title', 'Author', 'Price'])
+            ->setRows([
+                ['99921-58-10-7', 'Divine Comedy', 'Dante Alighieri', '9.95'],
+            ]);
+
+        $table->render();
+
+        $table->appendRow(['9971-5-0210-0', 'A Tale of Two Cities', 'Charles Dickens', '139.25']);
+
+        $expected =
+            <<<TABLE
++---------------+---------------+-----------------+-------+
+| ISBN          | Title         | Author          | Price |
++---------------+---------------+-----------------+-------+
+| 99921-58-10-7 | Divine Comedy | Dante Alighieri | 9.95  |
++---------------+---------------+-----------------+-------+
++---------------+----------------------+-----------------+--------+
+| ISBN          | Title                | Author          | Price  |
++---------------+----------------------+-----------------+--------+
+| 99921-58-10-7 | Divine Comedy        | Dante Alighieri | 9.95   |
+| 9971-5-0210-0 | A Tale of Two Cities | Charles Dickens | 139.25 |
++---------------+----------------------+-----------------+--------+
+
+TABLE;
+
+        $this->assertEquals($expected, $this->getOutputContent($output));
+    }
+
+    public function testAppendRowWithoutSectionOutput()
+    {
+        $this->expectException('Symfony\Component\Console\Exception\RuntimeException');
+        $this->expectExceptionMessage('Output should be an instance of "Symfony\Component\Console\Output\ConsoleSectionOutput" when calling "Symfony\Component\Console\Helper\Table::appendRow".');
+        $table = new Table($this->getOutputStream());
+
+        $table->appendRow(['9971-5-0210-0', 'A Tale of Two Cities', 'Charles Dickens', '139.25']);
+    }
+
     public function testIsNotDefinedStyleException()
     {
         $this->expectException('Symfony\Component\Console\Exception\InvalidArgumentException');
@@ -818,13 +966,136 @@ TABLE;
         Table::getStyleDefinition('absent');
     }
 
+    /**
+     * @dataProvider renderSetTitle
+     */
+    public function testSetTitle($headerTitle, $footerTitle, $style, $expected)
+    {
+        (new Table($output = $this->getOutputStream()))
+            ->setHeaderTitle($headerTitle)
+            ->setFooterTitle($footerTitle)
+            ->setHeaders(['ISBN', 'Title', 'Author'])
+            ->setRows([
+                ['99921-58-10-7', 'Divine Comedy', 'Dante Alighieri'],
+                ['9971-5-0210-0', 'A Tale of Two Cities', 'Charles Dickens'],
+                ['960-425-059-0', 'The Lord of the Rings', 'J. R. R. Tolkien'],
+                ['80-902734-1-6', 'And Then There Were None', 'Agatha Christie'],
+            ])
+            ->setStyle($style)
+            ->render()
+        ;
+
+        $this->assertEquals($expected, $this->getOutputContent($output));
+    }
+
+    public function renderSetTitle()
+    {
+        return [
+            [
+                'Books',
+                'Page 1/2',
+                'default',
+                <<<'TABLE'
++---------------+----------- Books --------+------------------+
+| ISBN          | Title                    | Author           |
++---------------+--------------------------+------------------+
+| 99921-58-10-7 | Divine Comedy            | Dante Alighieri  |
+| 9971-5-0210-0 | A Tale of Two Cities     | Charles Dickens  |
+| 960-425-059-0 | The Lord of the Rings    | J. R. R. Tolkien |
+| 80-902734-1-6 | And Then There Were None | Agatha Christie  |
++---------------+--------- Page 1/2 -------+------------------+
+
+TABLE
+            ],
+            [
+                'Books',
+                'Page 1/2',
+                'box',
+                <<<'TABLE'
+┌───────────────┬─────────── Books ────────┬──────────────────┐
+│ ISBN          │ Title                    │ Author           │
+├───────────────┼──────────────────────────┼──────────────────┤
+│ 99921-58-10-7 │ Divine Comedy            │ Dante Alighieri  │
+│ 9971-5-0210-0 │ A Tale of Two Cities     │ Charles Dickens  │
+│ 960-425-059-0 │ The Lord of the Rings    │ J. R. R. Tolkien │
+│ 80-902734-1-6 │ And Then There Were None │ Agatha Christie  │
+└───────────────┴───────── Page 1/2 ───────┴──────────────────┘
+
+TABLE
+            ],
+            [
+                'Boooooooooooooooooooooooooooooooooooooooooooooooooooooooks',
+                'Page 1/999999999999999999999999999999999999999999999999999',
+                'default',
+                <<<'TABLE'
++- Booooooooooooooooooooooooooooooooooooooooooooooooooooo... -+
+| ISBN          | Title                    | Author           |
++---------------+--------------------------+------------------+
+| 99921-58-10-7 | Divine Comedy            | Dante Alighieri  |
+| 9971-5-0210-0 | A Tale of Two Cities     | Charles Dickens  |
+| 960-425-059-0 | The Lord of the Rings    | J. R. R. Tolkien |
+| 80-902734-1-6 | And Then There Were None | Agatha Christie  |
++- Page 1/99999999999999999999999999999999999999999999999... -+
+
+TABLE
+            ],
+        ];
+    }
+
+    public function testColumnMaxWidths()
+    {
+        $table = new Table($output = $this->getOutputStream());
+        $table
+            ->setRows([
+                ['Divine Comedy', 'A Tale of Two Cities', 'The Lord of the Rings', 'And Then There Were None'],
+            ])
+            ->setColumnMaxWidth(1, 5)
+            ->setColumnMaxWidth(2, 10)
+            ->setColumnMaxWidth(3, 15);
+
+        $table->render();
+
+        $expected =
+            <<<TABLE
++---------------+-------+------------+-----------------+
+| Divine Comedy | A Tal | The Lord o | And Then There  |
+|               | e of  | f the Ring | Were None       |
+|               | Two C | s          |                 |
+|               | ities |            |                 |
++---------------+-------+------------+-----------------+
+
+TABLE;
+
+        $this->assertEquals($expected, $this->getOutputContent($output));
+    }
+
+    public function testColumnMaxWidthsWithTrailingBackslash()
+    {
+        (new Table($output = $this->getOutputStream()))
+            ->setColumnMaxWidth(0, 5)
+            ->setRows([['1234\6']])
+            ->render()
+        ;
+
+        $expected =
+            <<<'TABLE'
++-------+
+| 1234\ |
+| 6     |
++-------+
+
+TABLE;
+
+        $this->assertEquals($expected, $this->getOutputContent($output));
+    }
+
     public function testBoxedStyleWithColspan()
     {
         $boxed = new TableStyle();
         $boxed
-            ->setHorizontalBorderChar('─')
-            ->setVerticalBorderChar('│')
-            ->setCrossingChar('┼')
+            ->setHorizontalBorderChars('─')
+            ->setVerticalBorderChars('│')
+            ->setCrossingChars('┼', '┌', '┬', '┐', '┤', '┘', '┴', '└', '├')
         ;
 
         $table = new Table($output = $this->getOutputStream());
@@ -841,13 +1112,13 @@ TABLE;
 
         $expected =
             <<<TABLE
-┼───────────────┼───────────────┼─────────────────┼
+┌───────────────┬───────────────┬─────────────────┐
 │ ISBN          │ Title         │ Author          │
-┼───────────────┼───────────────┼─────────────────┼
+├───────────────┼───────────────┼─────────────────┤
 │ 99921-58-10-7 │ Divine Comedy │ Dante Alighieri │
-┼───────────────┼───────────────┼─────────────────┼
+├───────────────┼───────────────┼─────────────────┤
 │ This value spans 3 columns.                     │
-┼───────────────┼───────────────┼─────────────────┼
+└───────────────┴───────────────┴─────────────────┘
 
 TABLE;
 
@@ -864,5 +1135,57 @@ TABLE;
         rewind($output->getStream());
 
         return str_replace(PHP_EOL, "\n", stream_get_contents($output->getStream()));
+    }
+
+    public function testWithColspanAndMaxWith(): void
+    {
+        $table = new Table($output = $this->getOutputStream());
+
+        $table->setColumnMaxWidth(0, 15);
+        $table->setColumnMaxWidth(1, 15);
+        $table->setColumnMaxWidth(2, 15);
+        $table->setRows([
+                [new TableCell('Lorem ipsum dolor sit amet, <fg=white;bg=green>consectetur</> adipiscing elit, <fg=white;bg=red>sed</> do <fg=white;bg=red>eiusmod</> tempor', ['colspan' => 3])],
+                new TableSeparator(),
+                [new TableCell('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor', ['colspan' => 3])],
+                new TableSeparator(),
+                [new TableCell('Lorem ipsum <fg=white;bg=red>dolor</> sit amet, consectetur ', ['colspan' => 2]), 'hello world'],
+                new TableSeparator(),
+                ['hello <fg=white;bg=green>world</>', new TableCell('Lorem ipsum dolor sit amet, <fg=white;bg=green>consectetur</> adipiscing elit', ['colspan' => 2])],
+                new TableSeparator(),
+                ['hello ', new TableCell('world', ['colspan' => 1]), 'Lorem ipsum dolor sit amet, consectetur'],
+                new TableSeparator(),
+                ['Symfony ', new TableCell('Test', ['colspan' => 1]), 'Lorem <fg=white;bg=green>ipsum</> dolor sit amet, consectetur'],
+            ])
+        ;
+        $table->render();
+
+        $expected =
+            <<<TABLE
++-----------------+-----------------+-----------------+
+| Lorem ipsum dolor sit amet, consectetur adipi       |
+| scing elit, sed do eiusmod tempor                   |
++-----------------+-----------------+-----------------+
+| Lorem ipsum dolor sit amet, consectetur adipi       |
+| scing elit, sed do eiusmod tempor                   |
++-----------------+-----------------+-----------------+
+| Lorem ipsum dolor sit amet, co    | hello world     |
+| nsectetur                         |                 |
++-----------------+-----------------+-----------------+
+| hello world     | Lorem ipsum dolor sit amet, co    |
+|                 | nsectetur adipiscing elit         |
++-----------------+-----------------+-----------------+
+| hello           | world           | Lorem ipsum dol |
+|                 |                 | or sit amet, co |
+|                 |                 | nsectetur       |
++-----------------+-----------------+-----------------+
+| Symfony         | Test            | Lorem ipsum dol |
+|                 |                 | or sit amet, co |
+|                 |                 | nsectetur       |
++-----------------+-----------------+-----------------+
+
+TABLE;
+
+        $this->assertSame($expected, $this->getOutputContent($output));
     }
 }
