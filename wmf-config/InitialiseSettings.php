@@ -23113,8 +23113,7 @@ $wgConf->settings = [
 		'max' => MIGRATION_WRITE_BOTH,
 	],
 	'wikidatawiki' => [
-		2000000 => MIGRATION_WRITE_BOTH,
-		'max' => MIGRATION_OLD,
+		'max' => MIGRATION_WRITE_BOTH,
 	],
 ],
 
