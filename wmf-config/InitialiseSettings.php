@@ -17008,7 +17008,7 @@ $wgConf->settings = [
 ],
 
 'wgMFAmcOutreach' => [
-	'default' => true, // T231206
+	'default' => false, // /T231436
 ],
 
 'wgMFAmcOutreachMinEditCount' => [
