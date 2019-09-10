@@ -11,6 +11,7 @@
 # - multiversion
 # - mediawiki/DefaultSettings.php
 # - wmf-config/InitialiseSettings.php
+#    - wmf-config/VariantSettings.php
 # - wmf-config/CommonSettings.php [THIS FILE]
 #
 # Full load tree:
@@ -25,6 +26,7 @@
 #       |-- wmf-config/etcd.php
 #       |-- wmf-config/wgConf.php
 #       |-- wmf-config/InitialiseSettings.php
+#       |   `-- wmf-config/VariantSettings.php
 #       |-- private/PrivateSettings.php
 #       |-- wmf-config/logging.php
 #       |-- wmf-config/redis.php
@@ -201,7 +203,7 @@ if ( defined( 'HHVM_VERSION' ) ) {
 	$confCacheFileName .= '-hhvm';
 }
 
-$confActualMtime = filemtime( "$wmfConfigDir/InitialiseSettings.php" );
+$confActualMtime = filemtime( "$wmfConfigDir/VariantSettings.php" );
 
 if ( $wgDBname === 'testwiki' ) {
 	$globals = Wikimedia\MWConfig\MWConfigCacheGenerator::readFromStaticCache(

@@ -16,6 +16,7 @@
 # - mediawiki/DefaultSettings.php
 # - wmf-config/*Services.php
 # - wmf-config/InitialiseSettings.php
+#    - wmf-config/VariantSettings.php
 # - wmf-config/InitialiseSettings-labs.php [THIS FILE]
 # - wmf-config/CommonSettings.php
 # - wmf-config/CommonSettings-labs.php
