@@ -8366,6 +8366,11 @@ $wgConf->settings = [
 		],
 	],
 	'+commonswiki' => [ // T132930
+		'move' => [ // T232657
+			'autopatrolled' => [ 32, 60 ],
+			'patroller' => [ 32, 60 ],
+			'image-reviewer' => [ 32, 60 ],
+		],
 		'edit' => [
 			'newbie' => [ 8 * 15, 60 * 15 ], // T225148
 			'user' => [ 900, 60 * 3 ], // T194864
