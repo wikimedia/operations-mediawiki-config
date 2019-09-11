@@ -205,15 +205,9 @@ if ( defined( 'HHVM_VERSION' ) ) {
 
 $confActualMtime = filemtime( "$wmfConfigDir/VariantSettings.php" );
 
-if ( $wgDBname === 'testwiki' ) {
-	$globals = Wikimedia\MWConfig\MWConfigCacheGenerator::readFromStaticCache(
-		$wgCacheDirectory . '/' . $confCacheFileName . '.json', $confActualMtime
-	);
-} else {
-	$globals = Wikimedia\MWConfig\MWConfigCacheGenerator::readFromSerialisedCache(
-		$wgCacheDirectory . '/' . $confCacheFileName, $confActualMtime
-	);
-}
+$globals = Wikimedia\MWConfig\MWConfigCacheGenerator::readFromStaticCache(
+	$wgCacheDirectory . '/' . $confCacheFileName . '.json', $confActualMtime
+);
 
 if ( !$globals ) {
 	# Get configuration from SiteConfiguration object
