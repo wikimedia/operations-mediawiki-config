@@ -9118,7 +9118,6 @@ $wgConf->settings = [
 			'undelete' => true,
 			'extendedconfirmed' => true,
 		], // T71411
-		'OTRS-member' => [ 'read' => true ], // T56368
 		'templateeditor' => [ 'editprotected' => true, 'tboverride' => true, ], // T74146
 		'eliminator' => [
 			'block' => true,
@@ -10857,7 +10856,6 @@ $wgConf->settings = [
 		'bureaucrat' => [
 			'image-reviewer', // T66532
 			'botadmin', // T71411
-			'OTRS-member', // T56368
 			'templateeditor', // T74146
 			'abusefilter', // T74502
 			'eliminator' // T87558
@@ -11650,7 +11648,6 @@ $wgConf->settings = [
 		'bureaucrat' => [
 			'image-reviewer', // T66532
 			'botadmin', // T71411
-			'OTRS-member', // T56368
 			'templateeditor', // T74146
 			'abusefilter', // T74502
 			'eliminator', // T87558
