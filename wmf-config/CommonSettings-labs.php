@@ -27,6 +27,9 @@ $wmgAddWikiNotify = false;
 # Use a different address from the production one - T192686
 $wgPasswordSender = 'wiki@wikimedia.beta.wmflabs.org';
 
+# Enable for all Beta wikis, depends on $wmfAllServices.
+$wgDebugLogFile = "udp://{$wmfUdp2logDest}/wfDebug";
+
 // Password policies; see https://meta.wikimedia.org/wiki/Password_policy
 $wmgPrivilegedPolicy = [
 	'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],

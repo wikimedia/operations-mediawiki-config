@@ -35,7 +35,7 @@ function wmfLabsOverrideSettings() {
 
 	// Override (or add) settings that we need within the labs environment,
 	// but not in production.
-	$betaSettings = wmfLabsSettings();
+	$betaSettings = wmfGetLabsOverrideSettings();
 
 	$wgConf->siteParamsCallback = function ( $conf, $wiki ) {
 		$wikiTags = [];
@@ -67,16 +67,17 @@ function wmfLabsOverrideSettings() {
 }
 
 /**
- * Return settings for wmflabs cluster. This is used by wmfLabsOverride().
- * Keys that start with a hyphen will completely override the regular settings
- * in InitializeSettings.php. Keys that don't start with a hyphen will have
- * their settings combined with the regular settings.
+ * Get overrides for Beta Cluster settings. This is used by wmfLabsOverride().
+ *
+ * Keys that start with a hyphen will completely override the prodution settings
+ * from InitializeSettings.php.
+ *
+ * Keys that don't start with a hyphen will have their settings merged with
+ * the production settings.
  *
  * @return array
  */
-function wmfLabsSettings() {
-	global $wmfUdp2logDest;
-
+function wmfGetLabsOverrideSettings() {
 	return [
 
 		'wgParserCacheType' => [
@@ -149,10 +150,6 @@ function wmfLabsSettings() {
 
 		'-wmgMathPath' => [
 			'default' => 'https://upload.$variant.wmflabs.org/math',
-		],
-
-		'-wgDebugLogFile' => [
-			'default' => "udp://{$wmfUdp2logDest}/wfDebug",
 		],
 
 		'-wmgDefaultMonologHandler' => [
