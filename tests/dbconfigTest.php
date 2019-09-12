@@ -57,6 +57,10 @@ class DbconfigTest extends WgConfTestCase {
 	 * @dataProvider provideRealmDatacenter
 	 */
 	public function testSectionLoadsInHostsbyname( $realm, $datacenter, $masterdatacenter ) {
+		if ( !defined( 'HHVM_VERSION' ) ) {
+			$this->markTestSkipped( 'DB config tests only pass on HHVM, not PHP72.' );
+		}
+
 		$ok = true;
 		$lb = $this->loadDbFile( $realm, $datacenter, $masterdatacenter );
 		foreach ( $lb['sectionLoads'] as $clusterName => $cluster ) {
@@ -80,6 +84,10 @@ class DbconfigTest extends WgConfTestCase {
 	 * @dataProvider provideRealmDatacenter
 	 */
 	public function testDbAssignedToAnExistingCluster( $realm, $datacenter, $masterdatacenter ) {
+		if ( !defined( 'HHVM_VERSION' ) ) {
+			$this->markTestSkipped( 'DB config tests only pass on HHVM, not PHP72.' );
+		}
+
 		$ok = true;
 		$lb = $this->loadDbFile( $realm, $datacenter, $masterdatacenter );
 		foreach ( $lb['sectionsByDB'] as $dbname => $cluster ) {
