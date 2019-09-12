@@ -21,36 +21,25 @@ class WgConfTestCase extends PHPUnit\Framework\TestCase {
 		}
 		$this->globals = [];
 
-		foreach ( $this->globalsToUnset as $key ) {
+		foreach ( $this->globalsToUnset as $key => $_ ) {
 			unset( $GLOBALS[$key] );
 		}
 		$this->globalsToUnset = [];
 	}
 
 	/**
-	 * @param string|array $pairs
-	 * @param null $value
+	 * @param array $pairs
 	 */
-	protected function setGlobals( $pairs, $value = null ) {
-		if ( is_string( $pairs ) ) {
-			$pairs = [ $pairs => $value ];
-		}
+	protected function setGlobals( array $pairs ) {
 		foreach ( $pairs as $key => $value ) {
-			// only set value in $this->globals on first call
+			// only store original value on first call within a test
 			if (
 				!array_key_exists( $key, $this->globals ) &&
 				!array_key_exists( $key, $this->globalsToUnset )
 			) {
 				if ( !array_key_exists( $key, $GLOBALS ) ) {
-					$this->globalsToUnset[$key] = $key;
-					$GLOBALS[$key] = $value;
-					continue;
-				}
-
-				// break any object references
-				try {
-					$this->globals[$key] = unserialize( serialize( $GLOBALS[$key] ) );
-				} catch ( \Exception $e ) {
+					$this->globalsToUnset[$key] = true;
+				} else {
 					$this->globals[$key] = $GLOBALS[$key];
 				}
 			}
@@ -71,8 +60,7 @@ class WgConfTestCase extends PHPUnit\Framework\TestCase {
 	 */
 	public function __destruct() {
 		if ( !empty( $this->globals ) || !empty( $this->globalsToUnset ) ) {
-			// Downgraded from `throw new Execption`. T232691
-			echo(
+			throw new Exception(
 				__CLASS__ . ": setGlobals() used without restoreGlobals().\n" .
 				"Mangled globals:\n" . var_export( $this->globals, true ) .
 				"Created globals:\n" . var_export( $this->globalsToUnset, true )
