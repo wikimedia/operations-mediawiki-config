@@ -71,7 +71,8 @@ class WgConfTestCase extends PHPUnit\Framework\TestCase {
 	 */
 	public function __destruct() {
 		if ( !empty( $this->globals ) || !empty( $this->globalsToUnset ) ) {
-			throw new Exception(
+			// Downgraded from `throw new Execption`. T232691
+			echo(
 				__CLASS__ . ": setGlobals() used without restoreGlobals().\n" .
 				"Mangled globals:\n" . var_export( $this->globals, true ) .
 				"Created globals:\n" . var_export( $this->globalsToUnset, true )
