@@ -24,9 +24,11 @@
 #
 
 /**
- * Main entry point to override production settings. Supports key beginning with
- * a dash to completely override a setting.
- * Settings are fetched through wmfLabsSettings() defined below.
+ * Override $wgConf as needed for Beta Cluster.
+ *
+ * Must be called after InitialiseSettings.php has done the $wgConf->settings
+ * assignment for production, but before CommonSettings.php extracs it
+ * using MWConfigCacheGenerator.
  *
  * @return array
  */
@@ -35,26 +37,7 @@ function wmfLabsOverrideSettings() {
 
 	// Override (or add) settings that we need within the labs environment,
 	// but not in production.
-	$betaSettings = wmfGetLabsOverrideSettings();
-
-	$wgConf->siteParamsCallback = function ( $conf, $wiki ) {
-		$wikiTags = [];
-
-		$betaDblistTags = [ 'flow-labs' ];
-		foreach ( $betaDblistTags as $tag ) {
-			$dblist = MWWikiversions::readDbListFile( $tag );
-			if ( in_array( $wiki, $dblist ) ) {
-				$wikiTags[] = $tag;
-			}
-		}
-
-		return [
-			'params' => [],
-			'tags' => $wikiTags
-		];
-	};
-
-	foreach ( $betaSettings as $key => $value ) {
+	foreach ( wmfGetLabsOverrideSettings() as $key => $value ) {
 		if ( substr( $key, 0, 1 ) == '-' ) {
 			// Settings prefixed with - are completely overriden
 			$wgConf->settings[substr( $key, 1 )] = $value;

@@ -212,7 +212,7 @@ if ( !$globals ) {
 	require "$wmfConfigDir/InitialiseSettings.php";
 
 	$globals = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
-		$wgDBname, $site, $lang, $wgConf
+		$wgDBname, $site, $lang, $wgConf, $wmfRealm
 	);
 
 	$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals ];

@@ -49,6 +49,10 @@ class MWConfigCacheGenerator {
 		'cirrussearch-big-indices',
 	];
 
+	public static $labsDbLists = [
+		'flow-labs',
+	];
+
 	/**
 	 * Create a MultiVersion config object for a wiki
 	 *
@@ -56,13 +60,18 @@ class MWConfigCacheGenerator {
 	 * @param object $site The wiki's site type family, e.g. 'wikipedia' or 'wikisource'
 	 * @param object $lang The wiki's MediaWiki language code, e.g. 'en' or 'zh-min-nan'
 	 * @param object $wgConf The global MultiVersion wgConf object
+	 * @param string $realm Realm, e.g. 'production' or 'labs'
 	 * @return object The wiki's config object
 	 */
-	public static function getMWConfigForCacheing( $wikiDBname, $site, $lang, $wgConf ) {
+	public static function getMWConfigForCacheing( $wikiDBname, $site, $lang, $wgConf, $realm = 'production' ) {
 		# Collect all the dblist tags associated with this wiki
 		$wikiTags = [];
 
-		foreach ( self::$dbLists as $tag ) {
+		$dbLists = self::$dbLists;
+		if ( $realm === 'labs' ) {
+			$dbLists = array_merge( $dbLists, self::$labsDbLists );
+		}
+		foreach ( $dbLists as $tag ) {
 			$dblist = MWWikiversions::readDbListFile( $tag );
 			if ( in_array( $wikiDBname, $dblist ) ) {
 				$wikiTags[] = $tag;
