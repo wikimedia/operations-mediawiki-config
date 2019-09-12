@@ -72,8 +72,9 @@ class WmfClusters {
 			// Mock variable to capture the property assignment
 			global $wgConf;
 			$wgConf = new stdClass();
-			require_once __DIR__ . '/../wmf-config/InitialiseSettings.php';
-			$canonicalServers = $wgConf->settings['wgCanonicalServer'];
+			require_once __DIR__ . '/../wmf-config/VariantSettings.php';
+			$settings = wmfGetVariantSettings();
+			$canonicalServers = $settings['wgCanonicalServer'];
 		}
 		if ( isset( $canonicalServers[$db] ) ) {
 			// If the wiki is special or otherwise has an explicit server name, use it.
