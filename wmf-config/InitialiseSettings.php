@@ -35,7 +35,7 @@ global $wmfUdp2logDest, $wmfDatacenter, $wmfRealm, $wmfConfigDir, $wgConf,
 	$wmfHostnames, $wmfAllServices, $wmfLocalServices, $wmfMasterServices,
 	$wmfMasterDatacenter;
 
-$wgConf->settings = [
+$settings = [
 
 # ############### Basic settings ###############
 
@@ -23137,5 +23137,8 @@ $wgConf->settings = [
 ### WMF Labs override #####
 if ( $wmfRealm == 'labs' ) {
 	require_once "$wmfConfigDir/InitialiseSettings-labs.php";
-	wmfLabsOverrideSettings();
+	$settings = wmfApplyLabsOverrideSettings( $settings );
 }
+
+$wgConf->settings = $settings;
+unset( $settings );

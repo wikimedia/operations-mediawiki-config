@@ -24,29 +24,26 @@
 #
 
 /**
- * Override $wgConf as needed for Beta Cluster.
+ * Override site settings as needed for Beta Cluster.
  *
- * Must be called after InitialiseSettings.php has done the $wgConf->settings
- * assignment for production, but before CommonSettings.php extracs it
- * using MWConfigCacheGenerator.
- *
+ * @param array[] $settings wgConf-style settings array
  * @return array
  */
-function wmfLabsOverrideSettings() {
-	global $wgConf;
-
+function wmfApplyLabsOverrideSettings( array $settings ) : array {
 	// Override (or add) settings that we need within the labs environment,
 	// but not in production.
 	foreach ( wmfGetLabsOverrideSettings() as $key => $value ) {
 		if ( substr( $key, 0, 1 ) == '-' ) {
 			// Settings prefixed with - are completely overriden
-			$wgConf->settings[substr( $key, 1 )] = $value;
-		} elseif ( isset( $wgConf->settings[$key] ) ) {
-			$wgConf->settings[$key] = array_merge( $wgConf->settings[$key], $value );
+			$settings[substr( $key, 1 )] = $value;
+		} elseif ( isset( $settings[$key] ) ) {
+			$settings[$key] = array_merge( $settings[$key], $value );
 		} else {
-			$wgConf->settings[$key] = $value;
+			$settings[$key] = $value;
 		}
 	}
+
+	return $settings;
 }
 
 /**
