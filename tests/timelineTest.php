@@ -29,7 +29,7 @@ class TimelineTest extends PHPUnit\Framework\TestCase {
 		$conf = file_get_contents( __DIR__ . '/../wmf-config/timeline.php' );
 		$tokens = ( token_get_all( $conf ) );
 
-		while ( $token = each( $tokens )[1] ) {
+		foreach ( $tokens as list( $_, $token ) ) {
 			# Skip until we find $wgTimelineFontFile
 			if ( !(
 					is_array( $token )
