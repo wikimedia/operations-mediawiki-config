@@ -77,50 +77,50 @@ function wmfGetLabsOverrideSettings() {
 		],
 
 		'-wgServer' => [
-			'wiktionary'	=> 'https://$lang.wiktionary.$variant.wmflabs.org',
-			'wikipedia'     => 'https://$lang.wikipedia.$variant.wmflabs.org',
-			'wikiversity'	=> 'https://$lang.wikiversity.$variant.wmflabs.org',
-			'wikisource'	=> 'https://$lang.wikisource.$variant.wmflabs.org',
-			'wikiquote'	=> 'https://$lang.wikiquote.$variant.wmflabs.org',
-			'wikinews'	=> 'https://$lang.wikinews.$variant.wmflabs.org',
-			'wikibooks'     => 'https://$lang.wikibooks.$variant.wmflabs.org',
-			'wikivoyage'    => 'https://$lang.wikivoyage.$variant.wmflabs.org',
+			'wiktionary'	=> 'https://$lang.wiktionary.beta.wmflabs.org',
+			'wikipedia'     => 'https://$lang.wikipedia.beta.wmflabs.org',
+			'wikiversity'	=> 'https://$lang.wikiversity.beta.wmflabs.org',
+			'wikisource'	=> 'https://$lang.wikisource.beta.wmflabs.org',
+			'wikiquote'	=> 'https://$lang.wikiquote.beta.wmflabs.org',
+			'wikinews'	=> 'https://$lang.wikinews.beta.wmflabs.org',
+			'wikibooks'     => 'https://$lang.wikibooks.beta.wmflabs.org',
+			'wikivoyage'    => 'https://$lang.wikivoyage.beta.wmflabs.org',
 
-			'commonswiki'   => 'https://commons.wikimedia.$variant.wmflabs.org',
-			'deploymentwiki'      => 'https://deployment.wikimedia.$variant.wmflabs.org',
-			'loginwiki'     => 'https://login.wikimedia.$variant.wmflabs.org',
-			'metawiki'      => 'https://meta.wikimedia.$variant.wmflabs.org',
-			'testwiki'      => 'https://test.wikimedia.$variant.wmflabs.org',
-			'wikidatawiki'  => 'https://wikidata.$variant.wmflabs.org',
-			'en_rtlwiki' => 'https://en-rtl.wikipedia.$variant.wmflabs.org',
+			'commonswiki'   => 'https://commons.wikimedia.beta.wmflabs.org',
+			'deploymentwiki'      => 'https://deployment.wikimedia.beta.wmflabs.org',
+			'loginwiki'     => 'https://login.wikimedia.beta.wmflabs.org',
+			'metawiki'      => 'https://meta.wikimedia.beta.wmflabs.org',
+			'testwiki'      => 'https://test.wikimedia.beta.wmflabs.org',
+			'wikidatawiki'  => 'https://wikidata.beta.wmflabs.org',
+			'en_rtlwiki' => 'https://en-rtl.wikipedia.beta.wmflabs.org',
 		],
 
 		'-wgCanonicalServer' => [
-			'wikipedia'     => 'https://$lang.wikipedia.$variant.wmflabs.org',
-			'wikibooks'     => 'https://$lang.wikibooks.$variant.wmflabs.org',
-			'wikiquote'	=> 'https://$lang.wikiquote.$variant.wmflabs.org',
-			'wikinews'	=> 'https://$lang.wikinews.$variant.wmflabs.org',
-			'wikisource'	=> 'https://$lang.wikisource.$variant.wmflabs.org',
-			'wikiversity'     => 'https://$lang.wikiversity.$variant.wmflabs.org',
-			'wiktionary'     => 'https://$lang.wiktionary.$variant.wmflabs.org',
-			'wikivoyage'    => 'https://$lang.wikivoyage.$variant.wmflabs.org',
+			'wikipedia'     => 'https://$lang.wikipedia.beta.wmflabs.org',
+			'wikibooks'     => 'https://$lang.wikibooks.beta.wmflabs.org',
+			'wikiquote'	=> 'https://$lang.wikiquote.beta.wmflabs.org',
+			'wikinews'	=> 'https://$lang.wikinews.beta.wmflabs.org',
+			'wikisource'	=> 'https://$lang.wikisource.beta.wmflabs.org',
+			'wikiversity'     => 'https://$lang.wikiversity.beta.wmflabs.org',
+			'wiktionary'     => 'https://$lang.wiktionary.beta.wmflabs.org',
+			'wikivoyage'    => 'https://$lang.wikivoyage.beta.wmflabs.org',
 
-			'metawiki'      => 'https://meta.wikimedia.$variant.wmflabs.org',
-			'commonswiki'	=> 'https://commons.wikimedia.$variant.wmflabs.org',
-			'deploymentwiki'      => 'https://deployment.wikimedia.$variant.wmflabs.org',
-			'loginwiki'     => 'https://login.wikimedia.$variant.wmflabs.org',
-			'testwiki'      => 'https://test.wikimedia.$variant.wmflabs.org',
-			'wikidatawiki'  => 'https://wikidata.$variant.wmflabs.org',
-			'en_rtlwiki' => 'https://en-rtl.wikipedia.$variant.wmflabs.org',
+			'metawiki'      => 'https://meta.wikimedia.beta.wmflabs.org',
+			'commonswiki'	=> 'https://commons.wikimedia.beta.wmflabs.org',
+			'deploymentwiki'      => 'https://deployment.wikimedia.beta.wmflabs.org',
+			'loginwiki'     => 'https://login.wikimedia.beta.wmflabs.org',
+			'testwiki'      => 'https://test.wikimedia.beta.wmflabs.org',
+			'wikidatawiki'  => 'https://wikidata.beta.wmflabs.org',
+			'en_rtlwiki' => 'https://en-rtl.wikipedia.beta.wmflabs.org',
 		],
 
 		'-wgUploadPath' => [
-			'default' => 'https://upload.$variant.wmflabs.org/$site/$lang',
+			'default' => 'https://upload.beta.wmflabs.org/$site/$lang',
 			'private' => '/w/img_auth.php',
 		// 'wikimania2005wiki' => 'http://upload..org/wikipedia/wikimania', // back compat
-			'commonswiki' => 'https://upload.$variant.wmflabs.org/wikipedia/commons',
-			'metawiki' => 'https://upload.$variant.wmflabs.org/wikipedia/meta',
-			'testwiki' => 'https://upload.$variant.wmflabs.org/wikipedia/test',
+			'commonswiki' => 'https://upload.beta.wmflabs.org/wikipedia/commons',
+			'metawiki' => 'https://upload.beta.wmflabs.org/wikipedia/meta',
+			'testwiki' => 'https://upload.beta.wmflabs.org/wikipedia/test',
 		],
 
 		'-wgThumbnailBuckets' => [
@@ -132,7 +132,7 @@ function wmfGetLabsOverrideSettings() {
 		],
 
 		'-wmgMathPath' => [
-			'default' => 'https://upload.$variant.wmflabs.org/math',
+			'default' => 'https://upload.beta.wmflabs.org/math',
 		],
 
 		'-wmgDefaultMonologHandler' => [
@@ -270,7 +270,7 @@ function wmfGetLabsOverrideSettings() {
 			]
 		],
 		'wgMFPhotoUploadEndpoint' => [
-			'default' => 'https://commons.wikimedia.$variant.wmflabs.org/w/api.php',
+			'default' => 'https://commons.wikimedia.beta.wmflabs.org/w/api.php',
 		],
 		'wgMFSpecialCaseMainPage' => [
 			// We don't want to support this
