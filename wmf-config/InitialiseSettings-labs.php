@@ -40,7 +40,7 @@ function wmfLabsOverrideSettings() {
 	$wgConf->siteParamsCallback = function ( $conf, $wiki ) {
 		$wikiTags = [];
 
-		$betaDblistTags = [ 'flow_only_labs' ];
+		$betaDblistTags = [ 'flow-labs' ];
 		foreach ( $betaDblistTags as $tag ) {
 			$dblist = MWWikiversions::readDbListFile( $tag );
 			if ( in_array( $wiki, $dblist ) ) {
@@ -370,9 +370,9 @@ function wmfGetLabsOverrideSettings() {
 			'default' => 300,
 		],
 
-		'wmgUseFlow' => [
-			// 'flow-labs' is full set applicable on Beta Cluster.
-			'flow_only_labs' => true,
+		'-wmgUseFlow' => [
+			'default' => false,
+			'flow-labs' => true,
 		],
 		# No separate Flow DB or cluster (yet) for labs.
 		'-wmgFlowDefaultWikiDb' => [
