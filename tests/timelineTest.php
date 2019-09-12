@@ -1,5 +1,4 @@
 <?php
-// phpcs:disable MediaWiki.Usage.ForbiddenFunctions.each
 
 class TimelineTest extends PHPUnit\Framework\TestCase {
 
@@ -27,34 +26,37 @@ class TimelineTest extends PHPUnit\Framework\TestCase {
 	public static function wgTimelineFontFileValues() {
 		$testCases = [];
 		$conf = file_get_contents( __DIR__ . '/../wmf-config/timeline.php' );
-		$tokens = ( token_get_all( $conf ) );
+		$tokens = token_get_all( $conf );
 
-		foreach ( $tokens as list( $_, $token ) ) {
-			# Skip until we find $wgTimelineFontFile
-			if ( !(
-					is_array( $token )
-					&& $token[0] == T_VARIABLE
-					&& $token[1] == '$wgTimelineFontFile'
-			) ) {
+		$foundVariable = false;
+		foreach ( $tokens as $token ) {
+			if ( is_array( $token )
+				&& $token[0] == T_VARIABLE
+				&& $token[1] == '$wgTimelineFontFile'
+			) {
+				$foundVariable = true;
+				continue;
+			}
+			if ( !$foundVariable ) {
+				// Skip until we find $wgTimelineFontFile
 				continue;
 			}
 
-			while ( $next_token = next( $tokens ) ) {
-				# Skip ' = ' to reach the actual value being set
-				if (
-					$next_token == '='
-					|| is_array( $next_token ) && $next_token[0] == T_WHITESPACE ) {
-					continue;
-				}
-				break;
+			// Skip ' = ' to reach the actual value being set
+			if ( $token === '='
+				|| is_array( $token ) && $token[0] == T_WHITESPACE
+			) {
+				continue;
 			}
-			self::assertInternalType( 'array', $next_token );
-			self::assertEquals(
-				T_CONSTANT_ENCAPSED_STRING,
-				$next_token[0],
-				'Test suite expects $wgTimelineFontFile to be set to a string' );
 
-			$testCases[] = [ trim( $next_token[1], '\'' ) ];
+			if ( $token[0] !== T_CONSTANT_ENCAPSED_STRING ) {
+				throw new Exception( 'Unexpected token type assigned to $wgTimelineFontFile: ' . token_name( $token[0] ) );
+			}
+
+			// Found assigned value
+			$testCases[] = [ trim( $token[1], '\'' ) ];
+			// Reset
+			$foundVariable = false;
 		}
 		return $testCases;
 	}
