@@ -37,11 +37,8 @@ function wmfLabsOverrideSettings() {
 	// but not in production.
 	$betaSettings = wmfLabsSettings();
 
-	// Set configuration string placeholder 'variant' to 'beta'.
-	// Add a wikitag of 'beta' that can be used to merge beta specific and
-	// default settings by using `'+beta' => array(...),`
 	$wgConf->siteParamsCallback = function ( $conf, $wiki ) {
-		$wikiTags = [ 'beta' ];
+		$wikiTags = [];
 
 		$betaDblistTags = [ 'flow_only_labs' ];
 		foreach ( $betaDblistTags as $tag ) {
@@ -52,7 +49,7 @@ function wmfLabsOverrideSettings() {
 		}
 
 		return [
-			'params' => [ 'variant' => 'beta' ],
+			'params' => [],
 			'tags' => $wikiTags
 		];
 	};
@@ -173,8 +170,8 @@ function wmfLabsSettings() {
 		],
 
 		// Additional log channels for beta cluster
-		'wmgMonologChannels' => [
-			'+beta' => [
+		'-wmgMonologChannels' => [
+			'default' => [
 				'CentralAuthVerbose' => 'debug',
 				'dnsblacklist' => 'debug',
 				'EventBus' => 'debug',
