@@ -24,7 +24,7 @@ CauseFatalError::go();
  */
 class CauseFatalError {
 	private static $allowedActions = [
-		'noerror', 'exception', 'nomethod', 'oom', 'timeout', 'segfault',
+		'noerror', 'exception', 'nomethod', 'oom', 'timeout', 'segfault', 'coredump',
 	];
 
 	/**
@@ -153,5 +153,13 @@ class CauseFatalError {
 	 */
 	public static function doSegfault() {
 		array_map( __METHOD__, [ 0 ] );
+	}
+
+	/**
+	 * Try to do a core dump
+	 */
+	public static function doCoredump() {
+		posix_setrlimit( POSIX_RLIMIT_CORE, (int)10e9, POSIX_RLIMIT_INFINITY );
+		posix_kill( posix_getpid(), 6 /*SIGABRT*/ );
 	}
 }
