@@ -4003,7 +4003,8 @@ if ( PHP_VERSION_ID >= 70200 ) {
 # LBFactoryMulti.php on php7.2 somehow trigger an impossible case. Enable a
 # core dump 10% of the time for wikidatawiki.
 # https://gerrit.wikimedia.org/r/#/c/mediawiki/core/+/536222/
-if ( PHP_VERSION_ID >= 70200
+if ( false  # we have enough traces for now
+	&& PHP_VERSION_ID >= 70200
 	&& $wgDBname === 'wikidatawiki'
 	&& mt_rand( 0, 10 ) == 4
 ) {
