@@ -3339,6 +3339,12 @@ if ( $wmgUseFileImporter ) {
 	// Broken, see T228851
 	$wgFileImporterSourceWikiDeletion = false;
 	$wgFileImporterSourceWikiTemplating = false;
+
+	// Temporarily enable for testing, see T228851
+	if ( $wgDBname === 'testwiki' ) {
+		$wgFileImporterSourceWikiDeletion = true;
+		$wgFileImporterSourceWikiTemplating = true;
+	}
 }
 
 if ( $wmgUseContentTranslation ) {
