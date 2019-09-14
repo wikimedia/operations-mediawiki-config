@@ -22010,17 +22010,15 @@ function wmfGetVariantSettings() {
 	],
 	'huwiki' => [
 		'damaging' => [
-			// HACK: pegging this to recall because that's the only way to not have overlap with maybebad
-			// Pegging to precision >= 0.998 doesn't do the trick
-			'likelygood' => [ 'min' => 0, 'max' => 'maximum precision @ recall >= 0.9' ],
+			'likelygood' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.999' ],
 			'maybebad' => [ 'min' => 'maximum recall @ precision >= 0.15', 'max' => 1 ],
 			// likelybad and verylikelybad use defaults
 		],
 		'goodfaith' => [
-			// likelygood uses default
-			'maybebad' => false,
-			'likelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.45' ],
-			'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.75' ],
+			'likelygood' => [ 'min' => 'maximum recall @ precision >= 0.999', 'max' => 1 ],
+			'maybebad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.15' ],
+			// likelybad uses default
+			'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.85' ],
 		],
 	],
 	'arwiki' => [
