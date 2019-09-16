@@ -295,11 +295,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true,
 		],
 
-		// Don't use an http/https proxy
-		'-wgCopyUploadProxy' => [
-			'default' => false,
-		],
-
 		///
 		/// ----------- BetaFeatures start ----------
 		///

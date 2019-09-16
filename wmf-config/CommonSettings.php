@@ -906,6 +906,9 @@ if ( $wmgUseTimeline ) {
 # but it is hard know whether there other use cases.
 putenv( "GDFONTPATH=/srv/mediawiki/fonts" );
 
+// TODO: This should be handled by LocalServices, not here.
+$wgCopyUploadProxy = ( $wmfRealm !== 'labs' ) ? $wmfLocalServices['urldownloader'] : false;
+
 if ( $wmgUseWikiHiero ) {
 	wfLoadExtension( 'wikihiero' );
 }

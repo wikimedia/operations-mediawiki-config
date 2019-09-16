@@ -14124,9 +14124,6 @@ function wmfGetVariantSettings() {
 	],
 ],
 
-'wgCopyUploadProxy' => [
-	'default' => $GLOBALS['wmfLocalServices']['urldownloader'],
-],
 'wgAllowCopyUploads' => [
 	'default' => false,
 	'testwiki' => true,
