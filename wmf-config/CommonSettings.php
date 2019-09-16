@@ -162,7 +162,7 @@ require "$wmfConfigDir/wgConf.php";
  */
 function wmfLoadInitialiseSettings( $conf ) {
 	global $wmfConfigDir;
-	require "$wmfConfigDir/InitialiseSettings.php";
+	require_once "$wmfConfigDir/InitialiseSettings.php";
 }
 
 // Do not add wikimedia.org, because of other sites under that domain (such as codereview-proxy.wikimedia.org)
@@ -216,7 +216,7 @@ $globals = Wikimedia\MWConfig\MWConfigCacheGenerator::readFromStaticCache(
 
 if ( !$globals ) {
 	# Get configuration from SiteConfiguration object
-	require "$wmfConfigDir/InitialiseSettings.php";
+	wmfLoadInitialiseSettings();
 
 	$globals = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
 		$wgDBname, $site, $lang, $wgConf, $wmfRealm
