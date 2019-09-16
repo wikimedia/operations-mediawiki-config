@@ -25,10 +25,7 @@
 #
 # Included from: wmf-config/CommonSettings.php.
 
-# Globals set in CommonSettings.php for use in settings values
-global $wmfUdp2logDest, $wmfDatacenter, $wmfRealm, $wmfConfigDir, $wgConf,
-	$wmfHostnames, $wmfAllServices, $wmfLocalServices, $wmfMasterServices,
-	$wmfMasterDatacenter;
+global $wmfRealm, $wmfConfigDir, $wgConf;
 
 require_once __DIR__ . '/VariantSettings.php';
 
