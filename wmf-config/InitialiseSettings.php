@@ -16664,21 +16664,6 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
-'wgMathFileBackend' => [
-	'default' => 'global-multiwrite',
-	'wikitech' => false, // T126338, T126628
-],
-
-'wgMathPath' => [
-	'default' => '//upload.wikimedia.org/math',
-],
-
-'wgMathDirectory' => [
-	'default' => false,
-	'wikitech' => '/srv/math-images', // T126628
-	'labtestwiki' => '/srv/math-images',
-],
-
 'wmgMinervaNeue' => [
 	'default' => true,
 ],

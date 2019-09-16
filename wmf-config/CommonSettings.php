@@ -2667,10 +2667,6 @@ $wgExtendedLoginCookieExpiration = 365 * 86400;
 if ( $wmgUseMath ) {
 	wfLoadExtension( 'Math' );
 
-	$wgTexvc = '/usr/bin/texvc';
-	$wgMathTexvcCheckExecutable = '/usr/bin/texvccheck';
-	$wgMathCheckFiles = false;
-
 	if ( $wmgUseMathML && $wmgUseRestbaseVRS ) {
 		$wgDefaultUserOptions['math'] = 'mathml';
 	}
