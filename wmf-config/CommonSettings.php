@@ -162,7 +162,16 @@ require "$wmfConfigDir/wgConf.php";
  */
 function wmfLoadInitialiseSettings( $conf ) {
 	global $wmfConfigDir;
-	require_once "$wmfConfigDir/InitialiseSettings.php";
+	require_once "$wmfConfigDir/VariantSettings.php";
+	$settings = wmfGetVariantSettings();
+
+	### WMF Labs override #####
+	if ( $wmfRealm == 'labs' ) {
+		require_once "$wmfConfigDir/InitialiseSettings-labs.php";
+		$settings = wmfApplyLabsOverrideSettings( $settings );
+	}
+
+	$conf->settings = $settings;
 }
 
 // Do not add wikimedia.org, because of other sites under that domain (such as codereview-proxy.wikimedia.org)
@@ -216,7 +225,7 @@ $globals = Wikimedia\MWConfig\MWConfigCacheGenerator::readFromStaticCache(
 
 if ( !$globals ) {
 	# Get configuration from SiteConfiguration object
-	wmfLoadInitialiseSettings();
+	wmfLoadInitialiseSettings( $wgConf );
 
 	$globals = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
 		$wgDBname, $site, $lang, $wgConf, $wmfRealm
