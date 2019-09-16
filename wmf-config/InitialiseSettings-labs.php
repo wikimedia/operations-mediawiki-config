@@ -128,10 +128,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => 32,
 		],
 
-		'-wmgMathPath' => [
-			'default' => 'https://upload.beta.wmflabs.org/math',
-		],
-
 		'-wmgDefaultMonologHandler' => [
 			'default' => 'wgDebugLogFile',
 		],

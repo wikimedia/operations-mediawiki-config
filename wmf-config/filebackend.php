@@ -113,9 +113,7 @@ foreach ( $datacenters as $specificDC ) {
 		'swiftUser'          => $wmfSwiftConfig[$specificDC]['user'],
 		'swiftKey'           => $wmfSwiftConfig[$specificDC]['key'],
 		'swiftTempUrlKey'    => $wmfSwiftConfig[$specificDC]['tempUrlKey'],
-		'shardViaHashLevels' => [
-			'math-render'  => [ 'levels' => 2, 'base' => 16, 'repeat' => 0 ],
-		],
+		'shardViaHashLevels' => [],
 		'parallelize'        => 'implicit',
 		'cacheAuthInfo'      => true,
 		// When used by FileBackendMultiWrite, read from this cluster if it's the local one
