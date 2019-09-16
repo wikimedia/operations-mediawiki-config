@@ -147,8 +147,12 @@ wmfEtcdConfig();
 
 $wmfMasterServices = $wmfAllServices[$wmfMasterDatacenter];
 
-# Must be set before InitialiseSettings.php:
 $wmfUdp2logDest = $wmfLocalServices['udp2log'];
+if ( $wgDBname === 'testwiki' || $wgDBname === 'test2wiki' ) {
+	$wgDebugLogFile = "udp://{$wmfUdp2logDest}/testwiki";
+} else {
+	$wgDebugLogFile = '/dev/null';
+}
 
 # Initialise wgConf
 require "$wmfConfigDir/wgConf.php";

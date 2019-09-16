@@ -5394,12 +5394,6 @@ function wmfGetVariantSettings() {
 ],
 # @} end of wgTranslateNumerals
 
-'wgDebugLogFile' => [
-	'default' => '/dev/null',
-	'testwiki' => "udp://{$GLOBALS['wmfUdp2logDest']}/testwiki",
-	'test2wiki' => "udp://{$GLOBALS['wmfUdp2logDest']}/testwiki",
-],
-
 // Statically configured Monolog handler to clone for log channels that are
 // not specifically configured in $wmgMonologChannels.
 // See $wmgMonologConfig['handlers'] in logging.php for valid values.
