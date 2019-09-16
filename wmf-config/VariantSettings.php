@@ -8156,10 +8156,6 @@ function wmfGetVariantSettings() {
 	'private' => false,
 ],
 
-'wmgRC2UDPAddress' => [
-	'default' => $GLOBALS['wmfLocalServices']['irc'],
-],
-
 'wmgRC2UDPPort' => [
 	'default' => 9390,
 ],

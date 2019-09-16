@@ -12,7 +12,7 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 		$GLOBALS['wmfUdp2logDest'] = 'testvalue';
 		$GLOBALS['wmfDatacenter'] = 'testvalue';
 		$GLOBALS['wmfHostnames'] = [ 'upload' => 'testvalue' ];
-		$GLOBALS['wmfLocalServices'] = [ 'irc' => 'testvalue', 'upload' => 'testvalue' ];
+		$GLOBALS['wmfLocalServices'] = [ 'upload' => 'testvalue' ];
 
 		$configDir = __DIR__ . "/../../wmf-config";
 		require_once "{$configDir}/VariantSettings.php";

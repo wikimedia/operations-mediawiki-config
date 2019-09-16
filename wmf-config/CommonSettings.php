@@ -908,6 +908,7 @@ putenv( "GDFONTPATH=/srv/mediawiki/fonts" );
 
 // TODO: This should be handled by LocalServices, not here.
 $wgCopyUploadProxy = ( $wmfRealm !== 'labs' ) ? $wmfLocalServices['urldownloader'] : false;
+$wmgRC2UDPAddress = $wmfLocalServices['irc'];
 
 if ( $wmgUseWikiHiero ) {
 	wfLoadExtension( 'wikihiero' );
