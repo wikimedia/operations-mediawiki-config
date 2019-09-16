@@ -35,9 +35,6 @@
  * @return array The variant settings array of arrays for production
  */
 function wmfGetVariantSettings() {
-	# Globals set in CommonSettings.php for use in settings values
-	global $wmfUdp2logDest, $wmfDatacenter, $wmfHostnames, $wmfLocalServices;
-
 	return [
 
 # ############### Basic settings ###############
@@ -5399,8 +5396,8 @@ function wmfGetVariantSettings() {
 
 'wgDebugLogFile' => [
 	'default' => '/dev/null',
-	'testwiki' => "udp://{$wmfUdp2logDest}/testwiki",
-	'test2wiki' => "udp://{$wmfUdp2logDest}/test2wiki",
+	'testwiki' => "udp://{$GLOBALS['wmfUdp2logDest']}/testwiki",
+	'test2wiki' => "udp://{$GLOBALS['wmfUdp2logDest']}/testwiki",
 ],
 
 // Statically configured Monolog handler to clone for log channels that are
@@ -8160,7 +8157,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wmgRC2UDPAddress' => [
-	'default' => $wmfLocalServices['irc'],
+	'default' => $GLOBALS['wmfLocalServices']['irc'],
 ],
 
 'wmgRC2UDPPort' => [
@@ -14128,7 +14125,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgCopyUploadProxy' => [
-	'default' => $wmfLocalServices['urldownloader'],
+	'default' => $GLOBALS['wmfLocalServices']['urldownloader'],
 ],
 'wgAllowCopyUploads' => [
 	'default' => false,
@@ -20855,7 +20852,7 @@ function wmfGetVariantSettings() {
 // $wgTranslateTranslationDefaultService in CommonSettings.php if you plan to
 // bring down a specific cluster.
 'wgCirrusSearchDefaultCluster' => [
-	'default' => $wmfDatacenter,
+	'default' => $GLOBALS['wmfDatacenter'],
 ],
 // Kept for BC with SRE tools that checks siteinfo (see APIQuerySiteInfoGeneralInfo in CommonSettings.php)
 'wmgCirrusSearchDefaultCluster' => [
@@ -22267,11 +22264,11 @@ function wmfGetVariantSettings() {
 ],
 
 'wgUploadThumbnailRenderHttpCustomHost' => [
-	'default' => $wmfHostnames['upload'],
+	'default' => $GLOBALS['wmfHostnames']['upload'],
 ],
 
 'wgUploadThumbnailRenderHttpCustomDomain' => [
-	'default' => $wmfLocalServices['upload'],
+	'default' => $GLOBALS['wmfLocalServices']['upload'],
 ],
 
 // Virtual media views endpoint used by Media Viewer
