@@ -308,6 +308,9 @@ if ( $wmgUseFileImporter ) {
 		$wgFileImporterWikidataNowCommonsEntity = 'Q531650';
 
 	}
+
+	$wgFileImporterSourceWikiDeletion = true;
+	$wgFileImporterSourceWikiTemplating = true;
 }
 
 $wgMessageCacheType = CACHE_ACCEL;
