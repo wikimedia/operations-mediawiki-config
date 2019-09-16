@@ -25,7 +25,7 @@
 #
 # Included from: wmf-config/CommonSettings.php.
 
-global $wmfRealm, $wmfConfigDir, $wgConf;
+global $wmfRealm, $wgConf;
 
 require_once __DIR__ . '/VariantSettings.php';
 
@@ -33,7 +33,7 @@ $settings = wmfGetVariantSettings();
 
 ### WMF Labs override #####
 if ( $wmfRealm == 'labs' ) {
-	require_once "$wmfConfigDir/InitialiseSettings-labs.php";
+	require_once __DIR__ . '/InitialiseSettings-labs.php';
 	$settings = wmfApplyLabsOverrideSettings( $settings );
 }
 
