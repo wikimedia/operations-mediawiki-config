@@ -22256,14 +22256,6 @@ function wmfGetVariantSettings() {
 	'default' => 'http',
 ],
 
-'wgUploadThumbnailRenderHttpCustomHost' => [
-	'default' => $GLOBALS['wmfHostnames']['upload'],
-],
-
-'wgUploadThumbnailRenderHttpCustomDomain' => [
-	'default' => $GLOBALS['wmfLocalServices']['upload'],
-],
-
 // Virtual media views endpoint used by Media Viewer
 'wgMediaViewerRecordVirtualViewBeaconURI' => [
 	'default' => '/beacon/media',

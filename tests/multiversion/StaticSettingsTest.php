@@ -11,8 +11,6 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 		// HACK: Establish globals still used in VariantSettings
 		$GLOBALS['wmfUdp2logDest'] = 'testvalue';
 		$GLOBALS['wmfDatacenter'] = 'testvalue';
-		$GLOBALS['wmfHostnames'] = [ 'upload' => 'testvalue' ];
-		$GLOBALS['wmfLocalServices'] = [ 'upload' => 'testvalue' ];
 
 		$configDir = __DIR__ . "/../../wmf-config";
 		require_once "{$configDir}/VariantSettings.php";
@@ -23,8 +21,6 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 		// HACK: Unset globals still used in VariantSettings
 		unset( $GLOBALS['wmfUdp2logDest'] );
 		unset( $GLOBALS['wmfDatacenter'] );
-		unset( $GLOBALS['wmfHostnames'] );
-		unset( $GLOBALS['wmfLocalServices'] );
 	}
 
 	public function testConfigIsScalar() {
