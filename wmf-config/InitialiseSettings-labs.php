@@ -1240,6 +1240,11 @@ function wmfGetLabsOverrideSettings() {
 			'default' => 'https://wikidata\.beta\.wmflabs\.org/wiki/(Q[1-9][0-9]*).*#(P[1-9][0-9]*)',
 		],
 
+		// T232582
+		'wmgWikibaseDataBridgeEditTags' => [
+			'default' => [ 'Data Bridge' ],
+		],
+
 		'wmgWikibaseRepoForeignRepositories' => [
 			'default' => [],
 			'commonswiki' => [

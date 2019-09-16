@@ -338,6 +338,9 @@ if ( $wmgUseWikibaseClient ) {
 	if ( isset( $wmgWikibaseUseDataBridge ) && isset( $wmgWikibaseDataBridgeHrefRegExp ) ) {
 		$wgWBClientSettings['dataBridgeEnabled'] = $wmgWikibaseUseDataBridge;
 		$wgWBClientSettings['dataBridgeHrefRegExp'] = $wmgWikibaseDataBridgeHrefRegExp;
+		if ( isset( $wmgWikibaseDataBridgeEditTags ) ) {
+			$wgWBClientSettings['dataBridgeEditTags'] = $wmgWikibaseDataBridgeEditTags;
+		}
 	}
 }
 
