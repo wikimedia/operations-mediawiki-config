@@ -3341,6 +3341,8 @@ if ( $wmgUseFileImporter ) {
 
 	// Temporarily enable for testing, see T228851
 	if ( $wgDBname === 'testwiki' ) {
+		$wgFileImporterWikidataEntityEndpoint = 'https://test.wikidata.org/wiki/Special:EntityData/';
+		$wgFileImporterWikidataNowCommonsEntity = 'Q210317';
 		$wgFileImporterSourceWikiDeletion = true;
 		$wgFileImporterSourceWikiTemplating = true;
 	}
