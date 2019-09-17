@@ -23116,5 +23116,10 @@ function wmfGetVariantSettings() {
 	'default' => false,
 ],
 
+'wgFundraiserLandingPageELSampleRate' => [
+	'default' => 0,
+	'donatewiki' => 1
+]
+
 ];
 }
