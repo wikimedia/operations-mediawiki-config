@@ -3318,7 +3318,7 @@ if ( $wmgUsePerformanceInspector ) {
 
 if ( $wmgUseFileExporter ) {
 	wfLoadExtension( 'FileExporter' );
-	$wgFileExporterBetaFeature = true;
+	$wgFileExporterBetaFeature = $wmgFileExporterBetaFeature;
 
 	if ( $wmgUseFileExporter !== true ) {
 		$wgFileExporterTarget = $wmgUseFileExporter;
