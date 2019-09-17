@@ -14893,6 +14893,15 @@ function wmfGetVariantSettings() {
 	'testcommonswiki' => false,
 ],
 
+'wmgFileExporterBetaFeature' => [
+	'default' => true,
+	'dewiki' => false,
+	'fawiki' => false,
+	'kowiki' => false,
+	'mrwiki' => false,
+	'sourceswiki' => false,
+],
+
 'wmgUseCommonsMetadata' => [
 	'default' => true,
 	'nonbetafeatures' => false,
