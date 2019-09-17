@@ -519,7 +519,7 @@ $wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
 // Password policies; see https://meta.wikimedia.org/wiki/Password_policy
 $wmgPrivilegedPolicy = [
 	'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
-	'MinimumPasswordLengthToLogin' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
+	'MinimumPasswordLengthToLogin' => [ 'value' => 1, 'suggestChangeOnLogin' => true ],
 	'PasswordNotInLargeBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 ];
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
@@ -556,6 +556,13 @@ if ( $wmgUseCentralAuth ) {
 		$privilegedGroups = wmfGetPrivilegedGroups( $user->getName(), $user );
 		if ( $privilegedGroups ) {
 			$effectivePolicy = UserPasswordPolicy::maxOfPolicies( $effectivePolicy, $wmgPrivilegedPolicy );
+
+			if ( in_array( 'staff', $privilegedGroups, true ) ) {
+				$effectivePolicy['MinimumPasswordLengthToLogin'] = [
+					'value' => 10,
+					'suggestChangeOnLogin' => true,
+				];
+			}
 		}
 		return true;
 	};
@@ -1721,6 +1728,10 @@ if ( $wmgUseCentralAuth ) {
 	// See T104371 and [[m:Requests_for_comment/Password_policy_for_users_with_certain_advanced_permissions]]
 	foreach ( $wmgPrivilegedGlobalGroups as $group ) {
 		$wgCentralAuthGlobalPasswordPolicies[$group] = $wmgPrivilegedPolicy;
+		if ( $group === 'staff' ) {
+			// Require 10 byte password for staff.
+			$wgCentralAuthGlobalPasswordPolicies[$group]['MinimumPasswordLengthToLogin'] = 10;
+		}
 	}
 
 	$wgCentralAuthUseSlaves = true;
