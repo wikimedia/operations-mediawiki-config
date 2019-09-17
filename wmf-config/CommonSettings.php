@@ -518,7 +518,7 @@ $wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
 
 // Password policies; see https://meta.wikimedia.org/wiki/Password_policy
 $wmgPrivilegedPolicy = [
-	'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
+	'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true, 'forceChange' => true ],
 	// With MinimumPasswordLengthToLogin, if the length of the password is <= the value
 	// of the policy, the user will be forced to use Special:PasswordReset or similar
 	// to be able to get into their account
@@ -529,6 +529,7 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = [
 		'value' => 10,
 		'suggestChangeOnLogin' => true,
+		'forceChange' => true,
 	];
 } else {
 	foreach ( $wmgPrivilegedGroups as $group ) {
