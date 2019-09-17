@@ -8684,7 +8684,10 @@ function wmfGetVariantSettings() {
 		'rollbacker' => [ 'rollback' => true ], // T30717
 		'reviewer' => [ 'patrol' => true ], // T30717
 		'flood' => [ 'bot' => true ], // T30717
-		'filemover' => [ 'movefile' => true ], // T58103
+		'filemover' => [
+			'movefile' => true, // T58103
+			'suppressredirect' => true, // T233137
+		],
 	],
 	'+bnwikisource' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T199475
