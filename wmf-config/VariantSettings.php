@@ -5528,13 +5528,14 @@ function wmfGetVariantSettings() {
 		'SQLBagOStuff' => 'debug',
 		'StashEdit' => 'debug',
 		'SwiftBackend' => 'debug', // -aaron 5/15/12
-		'T143073' => 'debug', // Translate extension
 		'texvc' => 'debug',
 		'throttler' => 'info',
 		'thumbnail' => 'debug',
 		'thumbnailaccess' => 'debug', // T106323
 		'TitleBlacklist-cache' => 'debug', // For T85428
 		'torblock' => 'debug',
+		'TranslationsNotification.Jobs' => 'debug',
+		'Translate.Jobs' => 'debug',
 		'UpdateRepo' => 'debug',
 		'updateTranstagOnNullRevisions' => 'debug',
 		'upload' => 'debug',
