@@ -161,7 +161,7 @@ require "$wmfConfigDir/wgConf.php";
  * @param SiteConfiguration $conf
  */
 function wmfLoadInitialiseSettings( $conf ) {
-	global $wmfConfigDir;
+	global $wmfConfigDir, $wmfRealm;
 	require_once "$wmfConfigDir/VariantSettings.php";
 	$settings = wmfGetVariantSettings();
 
