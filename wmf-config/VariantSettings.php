@@ -74,7 +74,6 @@ function wmfGetVariantSettings() {
 
 'wmgEnableFundraiserLandingPage' => [
 	'default' => false,
-	'testwiki' => true,
 	'donatewiki' => true,
 ],
 
