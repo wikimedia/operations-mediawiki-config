@@ -3725,6 +3725,8 @@ function wmfGetVariantSettings() {
 	'+etwiki' => [
 		'Portal' => 100,
 		'Portal_talk' => 101,
+		'Draft' => 102, // T223472
+		'Draft_talk' => 103, // T223472
 	],
 	'+etwikisource' => [
 		'Author' => 106,
@@ -4023,6 +4025,10 @@ function wmfGetVariantSettings() {
 		'جوبا' => 102,
 		'جوبا_تالقىلاۋى' => 103,
 	],
+	'+knwiki' => [
+		'Draft' => 118, // T223472
+		'Draft_talk' => 119, // T223472
+	],
 	'+knwikisource' => [ // T39676
 		'Portal' => 100,
 		'Portal_talk' => 101,
@@ -4040,6 +4046,8 @@ function wmfGetVariantSettings() {
 		'들토' => 101,
 		'프' => 102,
 		'프토' => 103,
+		'Draft' => 118, // T223472
+		'Draft_talk' => 119, // T223472
 	],
 	'+kowikinews' => [
 		'뉴' => NS_PROJECT,
@@ -4057,6 +4065,8 @@ function wmfGetVariantSettings() {
 		'Author_talk' => 101,
 		'Portal' => 102, // T71522
 		'Portal_talk' => 103,
+		'Draft' => 118, // T223472
+		'Draft_talk' => 119, // T223472
 	],
 	'+kowikiversity' => [
 		'Wikiversity토론' => NS_PROJECT_TALK, // T46899
@@ -4485,6 +4495,8 @@ function wmfGetVariantSettings() {
 	],
 	'+srwiki' => [
 		'Vikipedija' => NS_PROJECT,
+		'Draft' => 118, // T223472
+		'Draft_talk' => 119, // T223472
 	],
 	'+svwiki' => [
 		'WP' => NS_PROJECT,
@@ -4599,6 +4611,8 @@ function wmfGetVariantSettings() {
 		'ویکیپیڈیا_تبادلۂ_خیال' => NS_PROJECT_TALK,
 		'Portal' => 100, // T21569
 		'Portal_talk' => 101, // T21569
+		'Draft' => 118, // T223472
+		'Draft_talk' => 119, // T223472
 	],
 	'+urwiktionary' => [
 		'ول' => NS_PROJECT, // T186393
@@ -4713,6 +4727,8 @@ function wmfGetVariantSettings() {
 		'P' => 100, // T162547
 		'Portal' => 100, // T162547
 		'Portal_talk' => 101, // T162547
+		'Draft' => 106, // T223472
+		'Draft_talk' => 107, // T223472
 	],
 	'+zhwiki' => [
 		'维基百科' => NS_PROJECT,
