@@ -8,7 +8,7 @@
  * @file
  */
 
-class LoggingTest extends WgConfTestCase {
+class LoggingTest extends PHPUnit\Framework\TestCase {
 
 	public function provideHandlerSetup() {
 		return [
@@ -82,20 +82,38 @@ class LoggingTest extends WgConfTestCase {
 		);
 	}
 
-	public function provideConfiguredChannels() {
-		foreach ( [ 'production', 'labs' ] as $realm ) {
-			$wgConf = $this->loadWgConf( $realm );
-			foreach ( $wgConf->settings['wmgMonologChannels'] as $wiki => $channels ) {
-				foreach ( $channels as $name => $config ) {
-					$tests["\$wmgMonologChannels['$wiki']['$name']"] = [ $config ];
-				}
+	public function provideConfiguredProductionChannels() {
+		$configDir = __DIR__ . "/../wmf-config";
+		require_once "$configDir/VariantSettings.php";
+		$variantSettings = wmfGetVariantSettings();
+
+		foreach ( $variantSettings['wmgMonologChannels'] as $wiki => $channels ) {
+			foreach ( $channels as $name => $config ) {
+				$tests["\$wmgMonologChannels['$wiki']['$name']"] = [ $config ];
+			}
+		}
+		return $tests;
+	}
+
+	public function provideConfiguredBetaClusterChannels() {
+		$configDir = __DIR__ . "/../wmf-config";
+		require_once "$configDir/VariantSettings.php";
+		$variantSettings = wmfGetVariantSettings();
+
+		require_once "$configDir/InitialiseSettings-labs.php";
+		$variantSettings = wmfApplyLabsOverrideSettings( $variantSettings );
+
+		foreach ( $variantSettings['wmgMonologChannels'] as $wiki => $channels ) {
+			foreach ( $channels as $name => $config ) {
+				$tests["\$wmgMonologChannels['$wiki']['$name']"] = [ $config ];
 			}
 		}
 		return $tests;
 	}
 
 	/**
-	 * @dataProvider provideConfiguredChannels
+	 * @dataProvider provideConfiguredProductionChannels
+	 * @dataProvider provideConfiguredBetaClusterChannels
 	 */
 	public function testChannelConfigurationIsValid( $config ) {
 		if ( is_bool( $config ) ) {
