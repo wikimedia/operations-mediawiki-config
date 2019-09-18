@@ -3335,16 +3335,13 @@ if ( $wmgUseFileImporter ) {
 	];
 	$wgFileImporterWikidataEntityEndpoint = 'https://www.wikidata.org/wiki/Special:EntityData/';
 	$wgFileImporterWikidataNowCommonsEntity = 'Q5611625';
-	// Broken, see T228851
-	$wgFileImporterSourceWikiDeletion = false;
-	$wgFileImporterSourceWikiTemplating = false;
+	$wgFileImporterSourceWikiDeletion = true;
+	$wgFileImporterSourceWikiTemplating = true;
 
 	// Temporarily enable for testing, see T228851
 	if ( $wgDBname === 'testwiki' ) {
 		$wgFileImporterWikidataEntityEndpoint = 'https://test.wikidata.org/wiki/Special:EntityData/';
 		$wgFileImporterWikidataNowCommonsEntity = 'Q210317';
-		$wgFileImporterSourceWikiDeletion = true;
-		$wgFileImporterSourceWikiTemplating = true;
 	}
 }
 
