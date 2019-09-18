@@ -5558,7 +5558,7 @@ function wmfGetVariantSettings() {
 		'thumbnailaccess' => 'debug', // T106323
 		'TitleBlacklist-cache' => 'debug', // For T85428
 		'torblock' => 'debug',
-		'TranslationsNotification.Jobs' => 'debug',
+		'TranslationNotifications.Jobs' => 'debug',
 		'Translate.Jobs' => 'debug',
 		'UpdateRepo' => 'debug',
 		'updateTranstagOnNullRevisions' => 'debug',
