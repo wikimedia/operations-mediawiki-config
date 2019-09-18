@@ -21417,7 +21417,22 @@ function wmfGetVariantSettings() {
 ],
 
 'wgCirrusSearchUserTesting' => [
-	'default' => [],
+	'default' => [
+		// T233211
+		'glent_m0' => [
+			'buckets' => [
+				'control' => [
+					'trigger' => 'control',
+				],
+				'glent_m0' => [
+					'trigger' => 'glent_m0',
+					'globals' => [
+						'wgCirrusSearchFallbackProfile' => 'phrase_suggest_glentM0_and_langdetect',
+					],
+				],
+			],
+		],
+	],
 ],
 
 'wgCirrusSearchLanguageDetectors' => [
