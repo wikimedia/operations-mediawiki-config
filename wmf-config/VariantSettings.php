@@ -8150,6 +8150,7 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'enwikinews' => true,
 	'eswikiquote' => true, // T230796
+	'testwiki' => true,
 	'thwiki' => true,
 	'thwiktionary' => true,
 	'thwikiquote' => true,
