@@ -128,4 +128,50 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 			}
 		}
 	}
+
+	public function testCacheableLoad() {
+		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getCachableMWConfig(
+			'enwiki', $this->variantSettings, 'production'
+		);
+
+		$this->assertEquals(
+			'windows-1252', $settings['wgLegacyEncoding'],
+			"Variant settings array must have 'wgLegacyEncoding' set to 'windows-1252' for enwiki."
+		);
+
+		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getCachableMWConfig(
+			'dewiki', $this->variantSettings, 'production'
+		);
+
+		$this->assertEquals(
+			false, $settings['wgLegacyEncoding'],
+			"Variant settings array must have 'wgLegacyEncoding' set to 'windows-1252' for enwiki."
+		);
+	}
+
+	public function testCacheableLoadForLabs() {
+		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getCachableMWConfig(
+			'enwiki', $this->variantSettings, 'production'
+		);
+		$this->assertFalse(
+			$settings['wmgUseFlow'],
+			"Variant settings array must have 'wmgUseFlow' set to 'false' for production enwiki."
+		);
+
+		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getCachableMWConfig(
+			'mediawikiwiki', $this->variantSettings, 'production'
+		);
+		$this->assertTrue(
+			$settings['wmgUseFlow'],
+			"Variant settings array must have 'wmgUseFlow' set to 'true' for production mediawikiwiki."
+		);
+
+		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getCachableMWConfig(
+			'enwiki', $this->variantSettings, 'labs'
+		);
+		$this->assertTrue(
+			$settings['wmgUseFlow'],
+			"Variant settings array must have 'wmgUseFlow' set to 'true' for labs enwiki."
+		);
+	}
 }
