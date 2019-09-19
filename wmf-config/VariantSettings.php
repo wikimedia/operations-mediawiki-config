@@ -8487,6 +8487,11 @@ function wmfGetVariantSettings() {
 	'wikivoyage' => true,
 ],
 
+'wgEnableSpecialMute' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 'wgOriginTrials' => [
 	'default' => [],
 	'ruwiki' => [

@@ -1097,8 +1097,8 @@ function wmfGetLabsOverrideSettings() {
 			'commonswiki' => true,
 		],
 		'wgEnableSpecialMute' => [
-			'default' => false,
-			'enwiki' => true,
+			'default' => true,
+			'eswiki' => false,
 		],
 		'wgPropertySuggesterClassifyingPropertyIds' => [
 			'wikidatawiki' => [ 694 ],
