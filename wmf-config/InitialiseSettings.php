@@ -22829,7 +22829,7 @@ function wmfGetVariantSettings() {
 	'kowiki' => true,
 	'cswiki' => true,
 	'arwiki' => true,
-	'euwiki' => false,
+	'euwiki' => true,
 ],
 
 'wgWelcomeSurveyPrivacyPolicyUrl' => [
@@ -22837,6 +22837,7 @@ function wmfGetVariantSettings() {
 	'cswiki' => 'https://foundation.wikimedia.org/wiki/Uv%C3%ADtac%C3%AD_pr%C5%AFzkum_pro_nov%C3%A9_u%C5%BEivatele_Prohl%C3%A1%C5%A1en%C3%AD_o_ochran%C4%9B_osobn%C3%ADch_%C3%BAdaj%C5%AF',
 	'viwiki' => 'https://foundation.wikimedia.org/wiki/Th%C3%B4ng_b%C3%A1o_v%E1%BB%81_Quy%E1%BB%81n_ri%C3%AAng_t%C6%B0_c%E1%BB%A7a_Cu%E1%BB%99c_kh%E1%BA%A3o_s%C3%A1t_ch%C3%A0o_%C4%91%C3%B3n_ng%C6%B0%E1%BB%9Di_d%C3%B9ng_m%E1%BB%9Bi',
 	'arwiki' => 'https://foundation.wikimedia.org/wiki/%D8%A8%D9%8A%D8%A7%D9%86_%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%A9_%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%AE%D8%AF%D9%85_%D8%A7%D9%84%D8%AC%D8%AF%D9%8A%D8%AF',
+	'euwiki' => 'https://foundation.wikimedia.org/wiki/Iritsi_berrien_ongi_etorri_inkestaren_pribatutasun_adierazpena',
 ],
 
 'wgWelcomeSurveyExperimentalGroups' => [
@@ -22844,6 +22845,7 @@ function wmfGetVariantSettings() {
 	'cswiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-9' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
 	// arwiki is an A/B test, 50% get variation A and 50% get no survey.
 	'arwiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-4' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
+	'euwiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-9' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
 ],
 
 'wgGEHelpPanelEnabled' => [
