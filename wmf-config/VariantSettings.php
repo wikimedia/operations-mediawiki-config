@@ -22806,6 +22806,7 @@ function wmfGetVariantSettings() {
 	'cswiki' => true,
 	'viwiki' => true,
 	'arwiki' => true,
+	'euwiki' => true,
 ],
 
 'wgWelcomeSurveyEnabled' => [
@@ -22814,6 +22815,7 @@ function wmfGetVariantSettings() {
 	'kowiki' => true,
 	'cswiki' => true,
 	'arwiki' => true,
+	'euwiki' => false,
 ],
 
 'wgWelcomeSurveyPrivacyPolicyUrl' => [
@@ -22837,6 +22839,7 @@ function wmfGetVariantSettings() {
 	'cswiki' => true,
 	'viwiki' => true,
 	'arwiki' => true,
+	'euwiki' => false,
 ],
 
 'wgGEHelpPanelSearchEnabled' => [
@@ -23029,6 +23032,7 @@ function wmfGetVariantSettings() {
 	'kowiki' => true,
 	'viwiki' => true,
 	'arwiki' => true,
+	'euwiki' => true,
 ],
 
 'wgGEHomepageLoggingEnabled' => [
@@ -23041,6 +23045,8 @@ function wmfGetVariantSettings() {
 	'kowiki' => 50,
 	'viwiki' => 50,
 	'arwiki' => 50,
+	// euwiki is not an A/B test (T233066)
+	'euwiki' => 100,
 ],
 
 'wgGEHomepageTutorialTitle' => [
@@ -23050,6 +23056,7 @@ function wmfGetVariantSettings() {
 	'kowiki' => '위키백과:빠른 길라잡이',
 	'viwiki' => 'Wikipedia:Sách_hướng_dẫn',
 	'arwiki' => 'ويكيبيديا:دروس',
+	'euwiki' => 'Laguntza:Ikusizko_Editorea',
 ],
 
 'wgGEHomepageMentorsList' => [
@@ -23059,6 +23066,7 @@ function wmfGetVariantSettings() {
 	'kowiki' => '위키백과:새_사용자_경험/새_사용자_멘토',
 	'viwiki' => 'Wikipedia:Phát_triển_cộng_đồng/Danh_sách_thành_viên_mentor',
 	'arwiki' => 'ويكيبيديا:مشروع_فريق_النمو/قائمة_المتطوعين',
+	'euwiki' => 'Laguntza:Mentoreak',
 ],
 
 'wgDisableRollbackConfirmationFeature' => [
