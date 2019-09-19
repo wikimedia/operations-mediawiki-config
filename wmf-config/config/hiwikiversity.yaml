@@ -4,3 +4,9 @@
 
 inheritsFrom:
   - wikiversity
+  - all
+  - categories-rdf
+  - nowikidatadescriptiontaglines
+  - s3
+  - small
+  - wikidataclient

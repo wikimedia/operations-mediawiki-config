@@ -137,7 +137,83 @@ class MWConfigCacheGenerator {
 		// Add a per-language tag as well
 		$wikiTags[] = $instance->get( 'wgLanguageCode', $wikiDBname, $dbSuffix, $confParams, $wikiTags );
 		$settings = $instance->getAll( $wikiDBname, $dbSuffix, $confParams, $wikiTags );
+
+		$expandConfigResults = $instance->expandConfig( $wikiDBname );
+		$settings = array_merge( $expandConfigResults, $settings );
+
+		ksort( $settings );
 		return $settings;
+	}
+
+	private function loadConfig() {
+		$configFileDir = __DIR__ . '/../wmf-config/config/';
+		$configFiles = scandir( $configFileDir );
+
+		foreach ( $configFiles as $key => $filename ) {
+			if ( substr( $filename, -5 ) === '.yaml' ) {
+				$name = substr( $filename, 0, -5 );
+
+				if ( !isset( $this->staticConfigs[ $name ] ) ) {
+					$file = @file_get_contents( $configFileDir . $filename );
+					// If the inheritance object is "blank" (e.g. only comments), fall back.
+					$result = \Symfony\Component\Yaml\Yaml::parse( $file ) ?? [];
+					$this->staticConfigs[ $name ] = $result;
+				}
+			}
+		}
+	}
+
+	private function getInheritanceTree( $name ) {
+		if ( !array_key_exists( $name, $this->staticConfigs ) ) {
+			throw new \Exception( "Couldn't find config file for '$name'." );
+		}
+
+		if ( !isset( $this->staticConfigs[ $name ]['inheritsFrom'] ) ) {
+			return [ $name ];
+		}
+
+		$dependencies = $this->staticConfigs[ $name ]['inheritsFrom'];
+
+		if ( is_string( $dependencies ) ) {
+			return array_merge( [ $name ], $this->getInheritanceTree( $dependencies ) );
+		}
+
+		if ( is_array( $dependencies ) ) {
+
+			$ret = [ $name ];
+
+			for ( $i = count( $dependencies ) - 1; $i > -1; $i-- ) {
+				$ret = array_merge( $ret, $this->getInheritanceTree( $dependencies[$i] ) );
+			}
+
+			return $ret;
+		}
+
+		throw new \Exception( "Bad 'inheritsFrom' value for '$name'." );
+	}
+
+	private function expandConfig( $name ) {
+		$this->loadConfig( $name );
+
+		$inheritanceStack = $this->getInheritanceTree( $name );
+
+		$result = [];
+
+		foreach ( $inheritanceStack as $config ) {
+			$result = array_merge( $this->staticConfigs[ $config ], $result );
+		}
+
+		if ( !array_search( 'all', $inheritanceStack ) ) {
+			throw new \Exception( "The '$name' configuration must inherit from 'all'." );
+		}
+
+		// Over-ride all values to those set by the 'all' config
+		$result = array_merge( $this->staticConfigs[ 'all' ], $result );
+
+		// Don't dirty the config files with inheritance build information.
+		unset( $result['inheritsFrom'] );
+
+		return $result;
 	}
 
 	/**
@@ -154,6 +230,8 @@ class MWConfigCacheGenerator {
 		}
 		return self::$instance;
 	}
+
+	private $staticConfigs = [];
 
 	/**
 	 * Array of suffixes, for self::siteFromDB()

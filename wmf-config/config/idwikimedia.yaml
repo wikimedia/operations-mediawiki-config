@@ -4,3 +4,7 @@
 
 inheritsFrom:
   - wikimedia
+  - all
+  - fishbowl
+  - medium
+  - s3

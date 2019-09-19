@@ -4,3 +4,16 @@
 
 inheritsFrom:
   - wikipedia
+  - all-labs
+  - all
+  - categories-rdf
+  - cirrussearch-big-indices
+  - closed-labs
+  - gettingstarted-with-category-suggestions
+  - large
+  - pp_stage1
+  - s7
+  - securepollglobal
+  - top6-wikipedia
+  - wikidataclient
+  - wikipedia-english

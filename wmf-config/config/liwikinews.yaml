@@ -4,3 +4,9 @@
 
 inheritsFrom:
   - wikinews
+  - all
+  - commonsuploads
+  - nowikidatadescriptiontaglines
+  - s3
+  - small
+  - wikidataclient

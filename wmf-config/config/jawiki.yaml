@@ -4,3 +4,15 @@
 
 inheritsFrom:
   - wikipedia
+  - all-labs
+  - all
+  - categories-rdf
+  - cirrussearch-big-indices
+  - large
+  - mobilemainpagelegacy
+  - pp_stage1
+  - s6
+  - securepollglobal
+  - top6-wikipedia
+  - wikidataclient
+  - wikipedia-english

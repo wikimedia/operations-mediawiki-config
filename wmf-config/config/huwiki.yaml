@@ -4,3 +4,13 @@
 
 inheritsFrom:
   - wikipedia
+  - all
+  - categories-rdf
+  - cirrussearch-big-indices
+  - flaggedrevs
+  - large
+  - pp_stage0
+  - s7
+  - securepollglobal
+  - wikidataclient
+  - wikipedia-e-acute

@@ -4,3 +4,14 @@
 
 inheritsFrom:
   - wiktionary
+  - all
+  - categories-rdf
+  - commonsuploads
+  - mobilemainpagelegacy
+  - nowikidatadescriptiontaglines
+  - rtl
+  - s3
+  - securepollglobal
+  - small
+  - visualeditor-nondefault
+  - wikidataclient

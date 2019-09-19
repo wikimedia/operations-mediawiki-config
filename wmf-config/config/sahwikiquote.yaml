@@ -4,3 +4,9 @@
 
 inheritsFrom:
   - wikiquote
+  - all
+  - commonsuploads
+  - s3
+  - small
+  - visualeditor-nondefault
+  - wikidataclient

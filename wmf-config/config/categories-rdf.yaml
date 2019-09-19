@@ -1,0 +1,6 @@
+# WARNING: This file is publicly viewable on the Web. Do not put private data here.
+# This is the shared trait configuration file for all wikis whose categories are
+# periodically dumped in an RDF export. See T173892.
+# All settings here apply to wikis with this trait, unless over-ridden.
+
+wikiTag: categories-rdf

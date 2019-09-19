@@ -4,3 +4,11 @@
 
 inheritsFrom:
   - wikipedia
+  - all
+  - nowikidatadescriptiontaglines
+  - private
+  - s3
+  - securepollglobal
+  - small
+  - special
+  - visualeditor-nondefault

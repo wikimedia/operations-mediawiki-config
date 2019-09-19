@@ -4,3 +4,15 @@
 
 inheritsFrom:
   - wikipedia
+  - all
+  - categories-rdf
+  - cirrussearch-big-indices
+  - flow
+  - large
+  - mobilemainpagelegacy
+  - pp_stage1
+  - s6
+  - securepollglobal
+  - top6-wikipedia
+  - wikidataclient
+  - wikipedia-e-acute

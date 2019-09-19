@@ -4,3 +4,11 @@
 
 inheritsFrom:
   - wikiquote
+  - all
+  - categories-rdf
+  - cirrussearch-big-indices
+  - medium
+  - s3
+  - securepollglobal
+  - visualeditor-nondefault
+  - wikidataclient

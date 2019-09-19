@@ -4,3 +4,12 @@
 
 inheritsFrom:
   - wikivoyage
+  - all
+  - categories-rdf
+  - cirrussearch-big-indices
+  - commonsuploads
+  - medium
+  - mobilemainpagelegacy
+  - s3
+  - securepollglobal
+  - wikidataclient

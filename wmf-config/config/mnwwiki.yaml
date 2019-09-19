@@ -4,3 +4,10 @@
 
 inheritsFrom:
   - wikipedia
+  - all
+  - small
+  - s3
+  - commonsuploads
+  - securepollglobal
+  - wikidataclient
+  - wikipedia-english

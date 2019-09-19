@@ -5,4 +5,7 @@
 # FIXME: This is Beta-Cluster only and maybe we should define Beta Cluster's needs distinctly?
 
 inheritsFrom:
+  - all-labs
+  - flow_only_labs
+  - flow-labs
   - enwiki

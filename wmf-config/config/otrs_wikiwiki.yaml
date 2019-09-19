@@ -4,3 +4,9 @@
 
 inheritsFrom:
   - special
+  - all
+  - medium
+  - nowikidatadescriptiontaglines
+  - private
+  - s3
+  - securepollglobal

@@ -1,0 +1,28 @@
+# WARNING: This file is publicly viewable on the Web. Do not put private data here.
+# This is the shared trait configuration file for all wikis which have no local uploads.
+# All settings here apply to wikis with this trait, unless over-ridden.
+
+wikiTag: commonsuploads
+
+# Soft-disabling
+wgEnableUploads: true
+
+wgUploadNavigationUrl: '//commons.wikimedia.org/wiki/Special:UploadWizard'
+
+groupOverrides:
+  user:
+    upload: false
+    reupload: false
+    reupload-own: false
+    reupload-shared: false
+  # Not set in core
+  autoconfirmed:
+    upload: false
+    reupload: false
+    reupload-own: false
+    reupload-shared: false
+  sysop:
+    # Implicit, in core defaults: 'upload' => true,
+    reupload: true
+    reupload-own: true
+    reupload-shared: true

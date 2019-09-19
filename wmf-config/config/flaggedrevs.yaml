@@ -1,0 +1,7 @@
+# WARNING: This file is publicly viewable on the Web. Do not put private data here.
+# This is the shared trait configuration file for all wikis with FlaggedRevs.
+# All settings here apply to wikis with this trait, unless over-ridden.
+
+# To be enabled in a later patch.
+# wgFlaggedRevsAutopromote: false
+# wgFlaggedRevsStatsAge: false

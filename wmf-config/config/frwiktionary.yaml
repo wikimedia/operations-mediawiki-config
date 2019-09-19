@@ -4,3 +4,14 @@
 
 inheritsFrom:
   - wiktionary
+  - all
+  - categories-rdf
+  - cirrussearch-big-indices
+  - commonsuploads
+  - flow
+  - large
+  - mobilemainpagelegacy
+  - nowikidatadescriptiontaglines
+  - s7
+  - securepollglobal
+  - wikidataclient

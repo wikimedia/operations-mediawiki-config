@@ -4,3 +4,10 @@
 
 inheritsFrom:
   - wikimedia
+  - all
+  - categories-rdf
+  - flow
+  - s3
+  - securepollglobal
+  - small
+  - visualeditor-nondefault

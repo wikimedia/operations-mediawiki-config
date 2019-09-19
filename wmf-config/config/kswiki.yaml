@@ -4,3 +4,13 @@
 
 inheritsFrom:
   - wikipedia
+  - all
+  - categories-rdf
+  - commonsuploads
+  - pp_stage1
+  - rtl
+  - s3
+  - securepollglobal
+  - small
+  - wikidataclient
+  - wikipedia-english

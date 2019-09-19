@@ -4,3 +4,13 @@
 
 inheritsFrom:
   - wikiquote
+  - all-labs
+  - all
+  - categories-rdf
+  - cirrussearch-big-indices
+  - medium
+  - mobilemainpagelegacy
+  - s2
+  - securepollglobal
+  - visualeditor-nondefault
+  - wikidataclient

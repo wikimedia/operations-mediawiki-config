@@ -1,6 +1,18 @@
 # WARNING: This file is publicly viewable on the Web. Do not put private data here.
-# This is the configuration file for settings specific to Wikimedia Commons.
+# This is the configuration file for settings specific to the Wikimedia Commons.
 # See the inheritance tree to find where most settings are defined.
 
 inheritsFrom:
   - special
+  - all-labs
+  - all
+  - categories-rdf
+  - cirrussearch-big-indices
+  - flow-labs
+  - flow
+  - large
+  - s4
+  - securepollglobal
+  - visualeditor-nondefault
+  - wikibaserepo
+  - wikidataclient

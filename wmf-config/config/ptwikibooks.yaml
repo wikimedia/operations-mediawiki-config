@@ -4,3 +4,14 @@
 
 inheritsFrom:
   - wikibooks
+  - all
+  - categories-rdf
+  - commonsuploads
+  - flaggedrevs
+  - flow
+  - medium
+  - mobilemainpagelegacy
+  - nowikidatadescriptiontaglines
+  - s3
+  - securepollglobal
+  - wikidataclient

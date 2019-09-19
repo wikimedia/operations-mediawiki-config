@@ -1,0 +1,8 @@
+# WARNING: This file is publicly viewable on the Web. Do not put private data here.
+# This is the shared trait configuration file for wikis that have the same horizontal
+# logo for Minerva as the English Wikipedia.
+# All settings here apply to wikis with this trait, unless over-ridden.
+
+# TODO: This probably shouldn't be a trait.
+
+wikiTag: wikipedia-english

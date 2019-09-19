@@ -4,3 +4,10 @@
 
 inheritsFrom:
   - wikiquote
+  - all
+  - categories-rdf
+  - s3
+  - securepollglobal
+  - small
+  - visualeditor-nondefault
+  - wikidataclient

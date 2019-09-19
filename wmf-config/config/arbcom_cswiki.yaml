@@ -4,3 +4,12 @@
 
 inheritsFrom:
   - wikipedia
+  - all
+  - nowikidatadescriptiontaglines
+  - pp_stage1
+  - private
+  - s3
+  - securepollglobal
+  - small
+  - special
+  - wikipedia-english

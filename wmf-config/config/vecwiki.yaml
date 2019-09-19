@@ -4,3 +4,13 @@
 
 inheritsFrom:
   - wikipedia
+  - all
+  - categories-rdf
+  - flaggedrevs
+  - medium
+  - mobilemainpagelegacy
+  - pp_stage1
+  - s3
+  - securepollglobal
+  - wikidataclient
+  - wikipedia-english

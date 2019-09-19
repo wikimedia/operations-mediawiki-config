@@ -4,3 +4,12 @@
 
 inheritsFrom:
   - wikiquote
+  - all
+  - closed
+  - group0
+  - mobilemainpagelegacy
+  - s3
+  - securepollglobal
+  - small
+  - visualeditor-nondefault
+  - wikidataclient

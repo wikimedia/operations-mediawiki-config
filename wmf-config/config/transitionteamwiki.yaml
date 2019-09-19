@@ -3,4 +3,13 @@
 # See the inheritance tree to find where most settings are defined.
 
 inheritsFrom:
-  - wikipedia
+  - special
+  - all
+  - closed
+  - group0
+  - nowikidatadescriptiontaglines
+  - private
+  - s3
+  - securepollglobal
+  - small
+  - visualeditor-nondefault

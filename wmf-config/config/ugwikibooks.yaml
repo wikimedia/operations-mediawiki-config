@@ -4,3 +4,13 @@
 
 inheritsFrom:
   - wikibooks
+  - all
+  - closed
+  - group0
+  - nowikidatadescriptiontaglines
+  - rtl
+  - s3
+  - securepollglobal
+  - small
+  - visualeditor-nondefault
+  - wikidataclient

@@ -4,3 +4,10 @@
 
 inheritsFrom:
   - special
+  - all
+  - closed
+  - nowikidatadescriptiontaglines
+  - s3
+  - securepollglobal
+  - small
+  - wikimania

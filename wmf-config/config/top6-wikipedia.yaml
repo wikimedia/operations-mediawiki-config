@@ -1,0 +1,7 @@
+# WARNING: This file is publicly viewable on the Web. Do not put private data here.
+# This is the shared trait configuration file for the six largest Wikipedias.
+# All settings here apply to wikis with this trait, unless over-ridden.
+
+# TODO: This shouldn't be a trait.
+
+wikiTag: top6-wikipedia

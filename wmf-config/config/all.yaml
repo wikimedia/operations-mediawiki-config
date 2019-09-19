@@ -1,3 +1,14 @@
 # WARNING: This file is publicly viewable on the Web. Do not put private data here.
-# This is the enforced configuration file for all Wikimedia wikis.
+# This is the enforced configuration file for all Wikimedia wikis, private and public.
 # All settings here apply to every wiki, and cannot be over-ridden.
+
+# ######################################################################
+# Revision backend settings
+# ######################################################################
+
+# To be enabled in the next patch.
+# wgCompressRevisions: true
+#
+# wgExternalStores: [ 'DB' ]
+#
+# wgContentHandlerUseDB: true

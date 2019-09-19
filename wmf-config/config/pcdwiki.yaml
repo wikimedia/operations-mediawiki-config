@@ -4,3 +4,12 @@
 
 inheritsFrom:
   - wikipedia
+  - all
+  - categories-rdf
+  - commonsuploads
+  - pp_stage1
+  - s3
+  - securepollglobal
+  - small
+  - wikidataclient
+  - wikipedia-e-acute

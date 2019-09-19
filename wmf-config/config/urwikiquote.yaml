@@ -4,3 +4,13 @@
 
 inheritsFrom:
   - wikiquote
+  - all
+  - categories-rdf
+  - commonsuploads
+  - mobilemainpagelegacy
+  - rtl
+  - s3
+  - securepollglobal
+  - small
+  - visualeditor-nondefault
+  - wikidataclient

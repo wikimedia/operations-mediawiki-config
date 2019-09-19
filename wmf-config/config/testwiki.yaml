@@ -3,4 +3,21 @@
 # See the inheritance tree to find where most settings are defined.
 
 inheritsFrom:
+  - special
+  - all-labs
+  - all
+  - categories-rdf
+  - flow-labs
+  - flow
+  - group0
+  - medium
+  - nowikidatadescriptiontaglines
+  - pageassessments
+  - pp_stage1
+  - s3
+  - securepollglobal
+  - testwikis
+  - wikidataclient-test
+  - wikidataclient
+  - wikipedia-english
   - wikipedia

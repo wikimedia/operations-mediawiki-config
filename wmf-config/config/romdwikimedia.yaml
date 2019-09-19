@@ -4,3 +4,9 @@
 
 inheritsFrom:
   - wikimedia
+  - all
+  - categories-rdf
+  - commonsuploads
+  - fishbowl
+  - s3
+  - small

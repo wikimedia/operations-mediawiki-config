@@ -1,0 +1,5 @@
+# WARNING: This file is publicly viewable on the Web. Do not put private data here.
+# This is the shared trait configuration file for wikis hosted on the s5 databases.
+# All settings here apply to wikis with this trait, unless over-ridden.
+
+wikiTag: s5

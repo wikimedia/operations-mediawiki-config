@@ -4,3 +4,13 @@
 
 inheritsFrom:
   - wikibooks
+  - all
+  - categories-rdf
+  - cirrussearch-big-indices
+  - commonsuploads
+  - medium
+  - mobilemainpagelegacy
+  - nowikidatadescriptiontaglines
+  - s3
+  - securepollglobal
+  - wikidataclient

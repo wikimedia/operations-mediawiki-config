@@ -4,3 +4,10 @@
 
 inheritsFrom:
   - special
+  - all
+  - flow
+  - nowikidatadescriptiontaglines
+  - private
+  - s3
+  - securepollglobal
+  - small

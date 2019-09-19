@@ -4,3 +4,9 @@
 
 inheritsFrom:
   - wikivoyage
+  - all
+  - commonsuploads
+  - s3
+  - small
+  - visualeditor-nondefault
+  - wikidataclient

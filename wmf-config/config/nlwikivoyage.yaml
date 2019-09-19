@@ -4,3 +4,9 @@
 
 inheritsFrom:
   - wikivoyage
+  - all
+  - categories-rdf
+  - medium
+  - s3
+  - securepollglobal
+  - wikidataclient

@@ -4,3 +4,9 @@
 
 inheritsFrom:
   - wikipedia
+  - all
+  - s3
+  - securepollglobal
+  - small
+  - wikidataclient
+  - wikipedia-english

@@ -4,3 +4,9 @@
 
 inheritsFrom:
   - wikimedia
+  - all
+  - categories-rdf
+  - fishbowl
+  - s3
+  - securepollglobal
+  - small

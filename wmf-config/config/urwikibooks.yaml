@@ -4,3 +4,13 @@
 
 inheritsFrom:
   - wikibooks
+  - all
+  - categories-rdf
+  - commonsuploads
+  - nowikidatadescriptiontaglines
+  - rtl
+  - s3
+  - securepollglobal
+  - small
+  - visualeditor-nondefault
+  - wikidataclient

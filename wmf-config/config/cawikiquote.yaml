@@ -4,3 +4,11 @@
 
 inheritsFrom:
   - wikiquote
+  - all
+  - categories-rdf
+  - commonsuploads
+  - flow
+  - medium
+  - s3
+  - securepollglobal
+  - wikidataclient

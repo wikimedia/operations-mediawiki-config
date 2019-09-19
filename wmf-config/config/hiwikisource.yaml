@@ -4,3 +4,10 @@
 
 inheritsFrom:
   - wikisource
+  - all
+  - commonsuploads
+  - nowikidatadescriptiontaglines
+  - s3
+  - securepollglobal
+  - small
+  - wikidataclient

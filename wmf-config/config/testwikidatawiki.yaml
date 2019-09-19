@@ -4,3 +4,15 @@
 
 inheritsFrom:
   - special
+  - all
+  - categories-rdf
+  - group0
+  - medium
+  - nowikidatadescriptiontaglines
+  - s3
+  - securepollglobal
+  - testwikis
+  - wikibaserepo
+  - wikidata
+  - wikidataclient-test
+  - wikidataclient

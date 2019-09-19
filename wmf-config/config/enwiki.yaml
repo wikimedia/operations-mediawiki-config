@@ -4,3 +4,21 @@
 
 inheritsFrom:
   - wikipedia
+  - all-labs
+  - all
+  - categories-rdf
+  - cirrussearch-big-indices
+  - flaggedrevs
+  - flow-labs
+  - flow_only_labs
+  - gettingstarted-with-category-suggestions
+  - large
+  - mobilemainpagelegacy
+  - pageassessments
+  - s1
+  - securepollglobal
+  - top6-wikipedia
+  - wikidataclient
+  - wikipedia-english
+
+wgLogo: /static/images/project-logos/enwiki.png

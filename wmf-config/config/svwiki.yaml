@@ -4,3 +4,15 @@
 
 inheritsFrom:
   - wikipedia
+  - all-labs
+  - all
+  - categories-rdf
+  - cirrussearch-big-indices
+  - flow-labs
+  - flow
+  - large
+  - pp_stage1
+  - s2
+  - securepollglobal
+  - wikidataclient
+  - wikipedia-english

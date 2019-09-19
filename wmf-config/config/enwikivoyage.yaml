@@ -4,3 +4,12 @@
 
 inheritsFrom:
   - wikivoyage
+  - all-labs
+  - all
+  - categories-rdf
+  - cirrussearch-big-indices
+  - medium
+  - pageassessments
+  - s5
+  - securepollglobal
+  - wikidataclient

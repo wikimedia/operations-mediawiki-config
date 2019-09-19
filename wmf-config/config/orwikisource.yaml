@@ -4,3 +4,12 @@
 
 inheritsFrom:
   - wikisource
+  - all
+  - categories-rdf
+  - mobilemainpagelegacy
+  - nowikidatadescriptiontaglines
+  - s3
+  - securepollglobal
+  - small
+  - visualeditor-nondefault
+  - wikidataclient

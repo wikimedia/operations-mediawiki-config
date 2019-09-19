@@ -1,0 +1,53 @@
+# WARNING: This file is publicly viewable on the Web. Do not put private data here.
+# This is the shared trait configuration file for all closed wikis.
+# All settings here apply to wikis with this trait, unless over-ridden.
+
+wikiTag: closed
+
+# Read-only (except stewards)
+groupOverrides:
+  closed:
+    '*':
+      edit: false
+      createaccount: false
+    user:
+      edit: false
+      move: false
+      move-rootuserpages: false
+      move-subpages: false
+      upload: false
+    autoconfirmed:
+      upload: false
+      move: false
+    sysop:
+      block: false
+      delete: false
+      undelete: false
+      import: false
+      move: false
+      move-subpages: false
+      move-rootuserpages: false
+      patrol: false
+      protect: false
+      editprotected: false
+      rollback: false
+      trackback: false
+      upload: false
+      movefile: false
+    steward:
+      edit: true
+      move: true
+      delete: true
+      upload: true
+
+wmgEnableCaptcha: false
+
+# T44436
+wgDisableQueryPages: true
+
+wmgUseGlobalUsage: false
+
+# T158721
+wmgUseWikimediaEvents: false
+
+wmgUseNavigationTiming: false

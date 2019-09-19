@@ -4,3 +4,9 @@
 
 inheritsFrom:
   - wikimedia
+  - all
+  - private
+  - s3
+  - securepollglobal
+  - small
+  - visualeditor-nondefault

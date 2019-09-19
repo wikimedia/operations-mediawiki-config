@@ -3,3 +3,5 @@
 # All settings here apply to every wiki, unless over-ridden.
 
 inheritsFrom: all
+
+wgLogo: '/static/images/project-logos/default.png'

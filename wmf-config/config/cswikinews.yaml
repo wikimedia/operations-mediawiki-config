@@ -4,3 +4,12 @@
 
 inheritsFrom:
   - wikinews
+  - all
+  - categories-rdf
+  - commonsuploads
+  - medium
+  - nowikidatadescriptiontaglines
+  - s3
+  - securepollglobal
+  - visualeditor-nondefault
+  - wikidataclient

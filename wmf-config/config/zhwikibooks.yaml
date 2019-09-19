@@ -4,3 +4,12 @@
 
 inheritsFrom:
   - wikibooks
+  - all
+  - categories-rdf
+  - medium
+  - mobilemainpagelegacy
+  - nowikidatadescriptiontaglines
+  - s3
+  - securepollglobal
+  - visualeditor-nondefault
+  - wikidataclient

@@ -4,3 +4,8 @@
 
 inheritsFrom:
   - special
+  - all
+  - fishbowl
+  - nowikidatadescriptiontaglines
+  - s3
+  - small

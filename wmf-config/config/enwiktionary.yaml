@@ -4,3 +4,15 @@
 
 inheritsFrom:
   - wiktionary
+  - all-labs
+  - all
+  - categories-rdf
+  - cirrussearch-big-indices
+  - commonsuploads
+  - large
+  - mobilemainpagelegacy
+  - nowikidatadescriptiontaglines
+  - s2
+  - securepollglobal
+  - visualeditor-nondefault
+  - wikidataclient

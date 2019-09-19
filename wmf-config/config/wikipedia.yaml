@@ -3,3 +3,5 @@
 # All settings here apply to every Wikipedia, unless over-ridden.
 
 inheritsFrom: base
+
+wgLogo: '/static/images/project-logos/enwiki.png'

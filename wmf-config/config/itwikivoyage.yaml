@@ -4,3 +4,11 @@
 
 inheritsFrom:
   - wikivoyage
+  - all
+  - categories-rdf
+  - commonsuploads
+  - medium
+  - mobilemainpagelegacy
+  - s3
+  - securepollglobal
+  - wikidataclient

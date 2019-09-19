@@ -4,3 +4,10 @@
 
 inheritsFrom:
   - wikipedia
+  - all
+  - categories-rdf
+  - commonsuploads
+  - s3
+  - small
+  - wikidataclient
+  - wikipedia-english

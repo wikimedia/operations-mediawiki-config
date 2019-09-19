@@ -3,4 +3,18 @@
 # See the inheritance tree to find where most settings are defined.
 
 inheritsFrom:
+  - special
+  - all-labs
+  - all
+  - categories-rdf
+  - cirrussearch-big-indices
+  - commonsuploads
+  - gettingstarted-with-category-suggestions
+  - medium
+  - mobilemainpagelegacy
+  - pp_stage1
+  - s3
+  - securepollglobal
+  - wikidataclient
+  - wikipedia-english
   - wikipedia

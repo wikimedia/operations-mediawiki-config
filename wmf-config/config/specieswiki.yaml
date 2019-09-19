@@ -3,4 +3,15 @@
 # See the inheritance tree to find where most settings are defined.
 
 inheritsFrom:
-  - wikipedia
+  - special
+  - all
+  - categories-rdf
+  - cirrussearch-big-indices
+  - flow
+  - large
+  - mobilemainpagelegacy
+  - nowikidatadescriptiontaglines
+  - s3
+  - securepollglobal
+  - visualeditor-nondefault
+  - wikidataclient

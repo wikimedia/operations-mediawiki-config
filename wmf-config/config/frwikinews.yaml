@@ -4,3 +4,13 @@
 
 inheritsFrom:
   - wikinews
+  - all
+  - categories-rdf
+  - cirrussearch-big-indices
+  - flaggedrevs
+  - medium
+  - mobilemainpagelegacy
+  - nowikidatadescriptiontaglines
+  - s3
+  - securepollglobal
+  - wikidataclient

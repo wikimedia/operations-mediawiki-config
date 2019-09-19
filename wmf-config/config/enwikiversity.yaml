@@ -4,3 +4,14 @@
 
 inheritsFrom:
   - wikiversity
+  - all-labs
+  - all
+  - categories-rdf
+  - cirrussearch-big-indices
+  - medium
+  - mobilemainpagelegacy
+  - nowikidatadescriptiontaglines
+  - s3
+  - securepollglobal
+  - visualeditor-nondefault
+  - wikidataclient

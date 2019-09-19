@@ -4,3 +4,10 @@
 
 inheritsFrom:
   - wikisource
+  - all
+  - categories-rdf
+  - commonsuploads
+  - nowikidatadescriptiontaglines
+  - s3
+  - small
+  - wikidataclient

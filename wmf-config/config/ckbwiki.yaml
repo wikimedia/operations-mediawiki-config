@@ -4,3 +4,16 @@
 
 inheritsFrom:
   - wikipedia
+  - all
+  - categories-rdf
+  - cirrussearch-big-indices
+  - commonsuploads
+  - flaggedrevs
+  - medium
+  - mobilemainpagelegacy
+  - pp_stage1
+  - rtl
+  - s3
+  - securepollglobal
+  - wikidataclient
+  - wikipedia-english

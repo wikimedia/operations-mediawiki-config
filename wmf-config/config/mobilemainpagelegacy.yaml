@@ -1,0 +1,8 @@
+# WARNING: This file is publicly viewable on the Web. Do not put private data here.
+# This is the shared trait configuration file for all wikis which have a legacy over-ride for
+# the main page when shown in MobileFrontend.
+# All settings here apply to wikis with this trait, unless over-ridden.
+
+wgMFSpecialCaseMainPage: false
+
+# FIXME: This shouldn't exist

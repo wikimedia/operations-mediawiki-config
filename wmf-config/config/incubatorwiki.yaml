@@ -4,3 +4,13 @@
 
 inheritsFrom:
   - special
+  - all
+  - categories-rdf
+  - cirrussearch-big-indices
+  - commonsuploads
+  - large
+  - nowikidatadescriptiontaglines
+  - s3
+  - securepollglobal
+  - visualeditor-nondefault
+  - wikidataclient

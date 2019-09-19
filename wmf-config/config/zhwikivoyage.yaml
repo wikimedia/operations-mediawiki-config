@@ -4,3 +4,12 @@
 
 inheritsFrom:
   - wikivoyage
+  - all-labs
+  - all
+  - categories-rdf
+  - medium
+  - mobilemainpagelegacy
+  - s3
+  - securepollglobal
+  - visualeditor-nondefault
+  - wikidataclient

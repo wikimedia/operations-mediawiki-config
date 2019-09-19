@@ -4,3 +4,17 @@
 
 inheritsFrom:
   - special
+  - all-labs
+  - all
+  - categories-rdf
+  - cirrussearch-big-indices
+  - flow-labs
+  - flow
+  - large
+  - nowikidatadescriptiontaglines
+  - s8
+  - securepollglobal
+  - visualeditor-nondefault
+  - wikibaserepo
+  - wikidata
+  - wikidataclient
