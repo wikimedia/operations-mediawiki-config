@@ -22839,7 +22839,7 @@ function wmfGetVariantSettings() {
 	'cswiki' => true,
 	'viwiki' => true,
 	'arwiki' => true,
-	'euwiki' => false,
+	'euwiki' => true,
 ],
 
 'wgGEHelpPanelSearchEnabled' => [
@@ -22849,6 +22849,7 @@ function wmfGetVariantSettings() {
 	'cswiki' => true,
 	'viwiki' => true,
 	'arwiki' => true,
+	'euwiki' => true,
 ],
 
 'wgGEHelpPanelLoggingEnabled' => [
@@ -22862,10 +22863,14 @@ function wmfGetVariantSettings() {
 	'cswiki' => 50,
 	'viwiki' => 50,
 	'arwiki' => 50,
+	// euwiki is not an A/B test (T233065#5504495)
+	'euwiki' => 100,
 ],
 
 'wgGEHelpPanelReadingModeNamespaces' => [
-	'default' => [ 2, 4, 12 ]
+	'default' => [ 2, 4, 12 ],
+	// 104 = Txikipedia, requested in T223619
+	'euwiki' => [ 2, 4, 12, 104 ],
 ],
 
 'wgGEHelpPanelHelpDeskTitle' => [
@@ -22875,6 +22880,7 @@ function wmfGetVariantSettings() {
 	'cswiki' => 'Wikipedie:Potřebuji_pomoc',
 	'viwiki' => 'Wikipedia:Giúp_sử_dụng_Wikipedia',
 	'arwiki' => ' ويكيبيديا:فريق_المساعدة/طلبات',
+	'euwiki' => 'Wikipedia:Txokoa',
 ],
 
 'wgGEHelpPanelViewMoreTitle' => [
@@ -22884,6 +22890,7 @@ function wmfGetVariantSettings() {
 	'cswiki' => 'Nápověda:Obsah',
 	'viwiki' => 'Trợ_giúp:Mục_lục',
 	'arwiki' => 'مساعدة:محتويات',
+	'euwiki' => 'Laguntza:Sarrera',
 ],
 
 'wgGEHelpPanelLinks' => [
@@ -23022,6 +23029,33 @@ function wmfGetVariantSettings() {
 			'text' => 'مراسلة مستخدم',
 			'id' => 'discussion',
 		],
+	],
+	'euwiki' => [
+		[
+			'title' => 'Laguntza:Ikusizko_Editorea',
+			'text' => 'Ikusizko Editorea',
+			'id' => 'visual',
+		],
+		[
+			'title' => 'Wikipedia:Estilo_gida',
+			'text' => 'Estilo gida',
+			'id' => 'style',
+		],
+		[
+			'title' => 'Laguntza:Loturak',
+			'text' => 'Loturak',
+			'id' => 'links',
+		],
+		[
+			'title' => 'Laguntza:Erreferentziak',
+			'text' => 'Erreferentziak',
+			'id' => 'references',
+		],
+		[
+			'title' => 'Laguntza:Irudiak',
+			'text' => 'Irudiak',
+			'id' => 'images',
+		]
 	],
 ],
 
