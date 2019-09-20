@@ -834,10 +834,67 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true, // T196400
 		],
 
+		#####################################################
+		# Cirrus-related tweaks specific for the Beta cluster
+		#####################################################
+
 		// Use a constant MLR model for all wikis. It's not ideal, but
 		// no models were trained specifically for data in labs anyways.
 		'-wmgCirrusSearchMLRModel' => [
 			'default' => '20171023_enwiki_v1'
+		],
+
+		'wgCirrusSearchEnableCrossProjectSearch' => [
+			'enwiki' => true,
+		],
+
+		# We don't have enough nodes to support these settings in beta so just turn
+		# them off.
+		'-wgCirrusSearchMaxShardsPerNode' => [
+			'default' => []
+		],
+
+		# Override prod configuration, there is only one cluster in beta
+		'-wgCirrusSearchDefaultCluster' => [
+			'default' => 'eqiad'
+		],
+
+		# Don't specially configure cluster for more like queries in beta
+		'-wgCirrusSearchClusterOverrides' => [
+			'default' => []
+		],
+
+		# write to all configured clusters, there should only be one in labs
+		'-wgCirrusSearchWriteClusters' => [
+			'default' => null
+		],
+
+		'-wgCirrusSearchEnableSearchLogging' => [
+			'default' => true
+		],
+
+		'-wgCirrusSearchLanguageToWikiMap' => [
+			'default' => [
+				'ar' => 'ar',
+				'de' => 'de',
+				'en' => 'en',
+				'es' => 'es',
+				'fa' => 'fa',
+				'he' => 'he',
+				'hi' => 'hi',
+				'ja' => 'ja',
+				'ko' => 'ko',
+				'ru' => 'ru',
+				'sq' => 'sq',
+				'uk' => 'uk',
+				'zh-cn' => 'zh',
+				'zh-tw' => 'zh',
+			]
+		],
+
+		# Force the number of replicas to 1 max for the beta cluster
+		'-wgCirrusSearchReplicas' => [
+			'default' => '0-1'
 		],
 
 		'wgActorTableSchemaMigrationStage' => [
