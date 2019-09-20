@@ -184,7 +184,7 @@ class CirrusTest extends WgConfTestCase {
 
 	public function providePerClusterShardsAndReplicas() {
 		$wgConf = $this->loadWgConf( 'unittest' );
-		$shards = $wgConf->settings['wgCirrusSearchShardCount'];
+		$shards = $wgConf->settings['wmgCirrusSearchShardCount'];
 		$replicas = $wgConf->settings['wgCirrusSearchReplicas'];
 		$maxShardPerNode = $wgConf->settings['wgCirrusSearchMaxShardsPerNode'];
 		$wikis = array_merge( array_keys( $shards ), array_keys( $replicas ), array_keys( $maxShardPerNode ) );
