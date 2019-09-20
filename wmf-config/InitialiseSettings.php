@@ -23432,5 +23432,30 @@ function wmfGetVariantSettings() {
 	'default' => 'https://query.wikidata.org/bigdata/namespace/categories/sparql'
 ],
 
+# Lower the timeouts - the defaults are too high and allow to scan too many
+# pages. 40s shard timeout for regex allowed to deep scan 9million pages for
+# insource:/the/ on commons. Keep client timeout relatively high in comparaison,
+# but not higher than 60sec as it's the max time allowed for GET requests.
+# we really don't want to timeout the client before the shard retrieval (we may
+# release the poolcounter before the end of the query on the backend)
+'wgCirrusSearchSearchShardTimeout' => [
+	'default' => [
+		"comp_suggest" => "5s",
+		"prefix" => "5s",
+		"default" => "10s",
+		"regex" => "15s",
+	],
+],
+
+'wgCirrusSearchClientSideSearchTimeout' => [
+	'default' => [
+		"comp_suggest" => 10,
+		"prefix" => 10,
+		// GET requests timeout at 60s, give some room to treat request timeout (T216860)
+		"default" => 40,
+		"regex" => 50,
+	],
+],
+
 ];
 }

@@ -18,18 +18,6 @@
 #
 # Contact Wikimedia Operations or Wikimedia Search Platform for more details.
 
-# Lower the timeouts - the defaults are too high and allow to scan too many
-# pages. 40s shard timeout for regex allowed to deep scan 9million pages for
-# insource:/the/ on commons. Keep client timeout relatively high in comparaison,
-# but not higher than 60sec as it's the max time allowed for GET requests.
-# we really don't want to timeout the client before the shard retrieval (we may
-# release the poolcounter before the end of the query on the backend)
-$wgCirrusSearchSearchShardTimeout[ 'regex' ] = '15s';
-// GET requests timeout at 60s, give some room to treat request timeout (T216860)
-$wgCirrusSearchClientSideSearchTimeout[ 'regex' ] = 50;
-$wgCirrusSearchSearchShardTimeout[ 'default' ] = '10s';
-$wgCirrusSearchClientSideSearchTimeout[ 'default' ] = 40;
-
 # Set the backoff for Cirrus' job that reacts to template changes - slow and steady
 # will help prevent spikes in Elasticsearch load.
 // $wgJobBackoffThrottling['cirrusSearchLinksUpdate'] = 5;  -- disabled, Ori 3-Dec-2015
