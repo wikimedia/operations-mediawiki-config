@@ -16706,6 +16706,9 @@ function wmfGetVariantSettings() {
 	'arwiki' => true, // T206497
 	'zhwiki' => true, // T206497
 	'hiwiki' => true, // T206497
+	'itwiki' => true, // T206497
+	'nlwiki' => true, // T206497
+	'kowiki' => true, // T206497
 ],
 // Which editor to use as the default on MobileFrontend
 // 'source', 'visual', 'preference' (to use the desktop editor preference), or 'abtest'
