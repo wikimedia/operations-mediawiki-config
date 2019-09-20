@@ -818,6 +818,7 @@ function wmfGetVariantSettings() {
 	'zh_classicalwiki' => '/static/images/project-logos/zh_classicalwiki.png',  // T177165
 	'zh_min_nanwiki' => '/static/images/project-logos/zh_min_nanwiki.png',
 	'zh_yuewiki' => '/static/images/project-logos/zh_yuewiki.png',
+	'zuwiki' => '/static/images/project-logos/zuwiki.png', // T233424
 
 	// Wiktionary
 	'afwiktionary' => '/static/images/project-logos/afwiktionary.png',  // T178824
@@ -1562,6 +1563,7 @@ function wmfGetVariantSettings() {
 	'zh_classicalwiki' => [ '1.5x' => '/static/images/project-logos/zh_classicalwiki-1.5x.png', '2x' => '/static/images/project-logos/zh_classicalwiki-2x.png' ], // T177165
 	'zh_min_nanwiki' => [ '1.5x' => '/static/images/project-logos/zh_min_nanwiki-1.5x.png', '2x' => '/static/images/project-logos/zh_min_nanwiki-2x.png' ], // T150618
 	'zh_yuewiki' => [ '1.5x' => '/static/images/project-logos/zh_yuewiki-1.5x.png', '2x' => '/static/images/project-logos/zh_yuewiki-2x.png' ], // T150618
+	'zuwiki' => [ '1.5x' => '/static/images/project-logos/zuwiki-1.5x.png', '2x' => '/static/images/project-logos/zuwiki-2x.png' ], // T233424
 
 	# Wiktionary
 	'afwiktionary' => [ '1.5x' => '/static/images/project-logos/afwiktionary-1.5x.png', '2x' => '/static/images/project-logos/afwiktionary-2x.png' ], // T178824
