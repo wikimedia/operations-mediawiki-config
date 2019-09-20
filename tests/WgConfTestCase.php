@@ -79,22 +79,24 @@ class WgConfTestCase extends PHPUnit\Framework\TestCase {
 	 * @return SiteConfiguration
 	 */
 	final protected function loadWgConf( $wmfRealm ) {
-		// Variables required for wgConf.php
-		$wmfConfigDir = __DIR__ . "/../wmf-config";
+		// Needed for wgConf.php
+		$this->setGlobals( [
+			'wmfRealm' => $wmfRealm,
+		] );
 
+		$wmfConfigDir = __DIR__ . "/../wmf-config";
 		require "{$wmfConfigDir}/wgConf.php";
 
-		// InitialiseSettings.php explicitly declares these as global, so we must too
+		// Needed for InitialiseSettings.php
 		$this->setGlobals( [
 			'wmfUdp2logDest' => 'localhost',
 			'wmfDatacenter' => 'unittest',
 			'wmfMasterDatacenter' => 'unittest',
-			'wmfRealm' => $wmfRealm,
 			'wmfConfigDir' => $wmfConfigDir,
 			'wgConf' => $wgConf,
 		] );
 
-		// Other InitialiseSettings.php globals that we set in TestServices.php
+		// Needed for TestServices.php
 		$this->setGlobals( [
 			'wmfHostnames' => null,
 			'wmfAllServices' => null,
