@@ -6,7 +6,7 @@ mwconfig_files_txt=(
 	CommonSettings-labs.php
 	CommonSettings.php
 	InitialiseSettings-labs.php
-	VariantSettings.php
+	InitialiseSettings.php
 	ProductionServices.php
 	PoolCounterSettings.php
 	abusefilter.php

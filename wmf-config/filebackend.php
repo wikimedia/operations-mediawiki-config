@@ -12,7 +12,7 @@
 # - mediawiki/DefaultSettings.php
 # - wmf-config/*Services.php
 # - wmf-config/etcd.php
-# - wmf-config/VariantSettings.php
+# - wmf-config/InitialiseSettings.php
 # - wmf-config/logging.php
 # - wmf-config/redis.php
 # - wmf-config/filebackend.php [THIS FILE]

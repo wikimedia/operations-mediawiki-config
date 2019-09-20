@@ -3,14 +3,14 @@
 
 # CommonSettings.php is the main configuration file of the WMF cluster.
 # This file contains settings common to all (or many) WMF wikis.
-# For per-wiki configuration, see VariantSettings.php.
+# For per-wiki configuration, see InitialiseSettings.php.
 #
 # This for PRODUCTION.
 #
 # Effective load order:
 # - multiversion
 # - mediawiki/DefaultSettings.php
-# - wmf-config/VariantSettings.php
+# - wmf-config/InitialiseSettings.php
 # - wmf-config/CommonSettings.php [THIS FILE]
 #
 # Full load tree:
@@ -24,7 +24,7 @@
 #       |-- wmf-config/*Services.php
 #       |-- wmf-config/etcd.php
 #       |-- wmf-config/wgConf.php
-#       |-- wmf-config/VariantSettings.php
+#       |-- wmf-config/InitialiseSettings.php
 #       |-- private/PrivateSettings.php
 #       |-- wmf-config/logging.php
 #       |-- wmf-config/redis.php
@@ -160,7 +160,7 @@ require "$wmfConfigDir/wgConf.php";
  */
 function wmfLoadInitialiseSettings( $conf ) {
 	global $wmfConfigDir, $wmfRealm;
-	require_once "$wmfConfigDir/VariantSettings.php";
+	require_once "$wmfConfigDir/InitialiseSettings.php";
 	$settings = wmfGetVariantSettings();
 
 	### WMF Labs override #####
@@ -215,7 +215,7 @@ if ( defined( 'HHVM_VERSION' ) ) {
 }
 $confCacheFileName .= '.json';
 
-$confActualMtime = filemtime( "$wmfConfigDir/VariantSettings.php" );
+$confActualMtime = filemtime( "$wmfConfigDir/InitialiseSettings.php" );
 
 $globals = Wikimedia\MWConfig\MWConfigCacheGenerator::readFromStaticCache(
 	$wgCacheDirectory . '/' . $confCacheFileName, $confActualMtime
@@ -254,7 +254,7 @@ require "$wmfConfigDir/redis.php";
 require "$wmfConfigDir/filebackend.php";
 
 # Override certain settings in command-line mode
-# This must be after VariantSettings.php is processed (T197475)
+# This must be after InitialiseSettings.php is processed (T197475)
 if ( PHP_SAPI === 'cli' ) {
 	$wgShowExceptionDetails = true;
 	$wgShowDBErrorBacktrace = true;

@@ -8,16 +8,16 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 	protected $variantSettings = [];
 
 	public function setUp() {
-		// HACK: Establish global still used in VariantSettings
+		// HACK: Establish global still used in InitialiseSettings
 		$GLOBALS['wmfDatacenter'] = 'testvalue';
 
 		$configDir = __DIR__ . "/../../wmf-config";
-		require_once "{$configDir}/VariantSettings.php";
+		require_once "{$configDir}/InitialiseSettings.php";
 		$this->variantSettings = wmfGetVariantSettings();
 	}
 
 	public function tearDown() {
-		// HACK: Unset global still used in VariantSettings
+		// HACK: Unset global still used in InitialiseSettings
 		unset( $GLOBALS['wmfDatacenter'] );
 	}
 

@@ -48,7 +48,7 @@ wmf-config/CommonSettings.php
  Generic configuration such as including extensions or calling over piece
  of configuration. This is mostly shared among all wikis.
 
-wmf-config/VariantSettings.php
+wmf-config/InitialiseSettings.php
  Per-wiki configuration.
 
 wmf-config/db-*.php

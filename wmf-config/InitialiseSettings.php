@@ -3,7 +3,7 @@
 
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-# VariantSettings.php contains static wiki-specific configuration for the WMF cluster.
+# InitialiseSettings.php contains static wiki-specific configuration for the WMF cluster.
 # For configuration shared by all wikis, see CommonSettings.php.
 #
 # This for PRODUCTION.
@@ -18,7 +18,7 @@
 # - multiversion
 # - mediawiki/DefaultSettings.php
 # - wmf-config/*Services.php
-# - wmf-config/VariantSettings.php [THIS FILE]
+# - wmf-config/InitialiseSettings.php [THIS FILE]
 # - wmf-config/CommonSettings.php
 #
 # Included from: wmf-config/CommonSettings.php.

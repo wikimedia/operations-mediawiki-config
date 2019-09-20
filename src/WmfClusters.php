@@ -72,7 +72,7 @@ class WmfClusters {
 			// Mock variable to capture the property assignment
 			global $wgConf;
 			$wgConf = new stdClass();
-			require_once __DIR__ . '/../wmf-config/VariantSettings.php';
+			require_once __DIR__ . '/../wmf-config/InitialiseSettings.php';
 			$settings = wmfGetVariantSettings();
 			$canonicalServers = $settings['wgCanonicalServer'];
 		}

@@ -10,7 +10,7 @@
 # - multiversion
 # - mediawiki/DefaultSettings.php
 # - wmf-config/*Services.php
-# - wmf-config/VariantSettings.php
+# - wmf-config/InitialiseSettings.php
 # - wmf-config/InitialiseSettings-labs.php
 # - wmf-config/CommonSettings.php
 # - wmf-config/CommonSettings-labs.php [THIS FILE]
