@@ -16759,7 +16759,10 @@ function wmfGetVariantSettings() {
 // and MobileFrontend won't add a canonical tag
 // If set to "true": Alternate link will be added, MF will add a canonical tag
 'wgMFNoindexPages' => [
-	'default' => false
+	'default' => false,
+	'arwiki' => true, // T206497
+	'zhwiki' => true, // T206497
+	'hiwiki' => true, // T206497
 ],
 // Which editor to use as the default on MobileFrontend
 // 'source', 'visual', 'preference' (to use the desktop editor preference), or 'abtest'
