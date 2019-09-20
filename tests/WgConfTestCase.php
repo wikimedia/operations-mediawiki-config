@@ -69,7 +69,7 @@ class WgConfTestCase extends PHPUnit\Framework\TestCase {
 	}
 
 	/**
-	 * Load $wgConf from InitialiseSettings.php
+	 * Load $wgConf from VariantSettings.php
 	 *
 	 * Example usage:
 	 *
@@ -87,7 +87,7 @@ class WgConfTestCase extends PHPUnit\Framework\TestCase {
 		$wmfConfigDir = __DIR__ . "/../wmf-config";
 		require "{$wmfConfigDir}/wgConf.php";
 
-		// Needed for InitialiseSettings.php
+		// Needed for VariantSettings.php
 		$this->setGlobals( [
 			'wmfUdp2logDest' => 'localhost',
 			'wmfDatacenter' => 'unittest',
@@ -105,13 +105,14 @@ class WgConfTestCase extends PHPUnit\Framework\TestCase {
 		] );
 		require __DIR__ . '/TestServices.php';
 
-		require "{$wmfConfigDir}/InitialiseSettings.php";
+		require_once "{$wmfConfigDir}/VariantSettings.php";
 
-		$ret = $wgConf;
+		$wgConf->settings = wmfGetVariantSettings();
+
 		// Make sure globals are restored, else they will be serialized on each
 		// test run which slow the test run dramatically.
 		$this->restoreGlobals();
-		return $ret;
+		return $wgConf;
 	}
 
 }

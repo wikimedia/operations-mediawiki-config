@@ -18,11 +18,10 @@
 # - multiversion
 # - mediawiki/DefaultSettings.php
 # - wmf-config/*Services.php
-# - wmf-config/InitialiseSettings.php
-#    - wmf-config/VariantSettings.php [THIS FILE]
+# - wmf-config/VariantSettings.php [THIS FILE]
 # - wmf-config/CommonSettings.php
 #
-# Included from: wmf-config/InitialiseSettings.php.
+# Included from: wmf-config/CommonSettings.php.
 #
 
 # ######################################################################

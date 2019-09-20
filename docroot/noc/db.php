@@ -33,7 +33,7 @@ $wgDBpassword = null;
 $wgSecretKey = null;
 $wmfMasterDatacenter = null;
 
-// Mock vars needed by db-*.php and InitialiseSettings.php (normally set by MediaWiki)
+// Mock vars needed by db-*.php (normally set by MediaWiki)
 require_once __DIR__ . '/../../tests/Defines.php';
 
 // Load the actual db vars

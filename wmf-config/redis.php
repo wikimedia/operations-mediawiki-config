@@ -9,8 +9,7 @@
 # - mediawiki/DefaultSettings.php
 # - wmf-config/*Services.php
 # - wmf-config/etcd.php
-# - wmf-config/InitialiseSettings.php
-#    - wmf-config/VariantSettings.php
+# - wmf-config/VariantSettings.php
 # - wmf-config/redis.php [THIS FILE]
 #
 # Included from: wmf-config/CommonSettings.php.

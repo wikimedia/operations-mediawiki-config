@@ -155,7 +155,7 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 	 *
 	 * Assert that any dblist that uses expressions has its name end in "-computed".
 	 * These may be used as-is on the command-line. If they are needed in
-	 * InitialiseSettings or CommonSettings, then the expression must be
+	 * VariantSettings or CommonSettings, then the expression must be
 	 * expanded and saved as its own dblist file.
 	 */
 	public function testNoExpressionListUsedInSettings() {

@@ -10,15 +10,14 @@
 # - mediawiki/DefaultSettings.php
 # - wmf-config/*Services.php
 # - wmf-config/etcd.php
-# - wmf-config/InitialiseSettings.php
-#    - wmf-config/VariantSettings.php
+# - wmf-config/VariantSettings.php
 # - wmf-config/logging.php [THIS FILE]
 #
 # Included from: wmf-config/CommonSettings.php.
 #
 
 #
-# The following globals from InitialiseSettings are used:
+# The following globals from VariantSettings are used:
 #
 # - $wgDebugLogFile: udp2log destination for 'wgDebugLogFile' handler.
 # - $wmgDefaultMonologHandler: default handler for log channels not

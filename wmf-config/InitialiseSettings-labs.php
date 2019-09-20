@@ -8,20 +8,19 @@
 #
 # Usage:
 # - Prefix a setting key with '-' to override all values from
-#   production InitialiseSettings.php.
+#   production VariantSettings.php.
 # - Please wrap your code in functions to avoid tainting the global scope.
 #
 # Effective load order:
 # - multiversion
 # - mediawiki/DefaultSettings.php
 # - wmf-config/*Services.php
-# - wmf-config/InitialiseSettings.php
-#    - wmf-config/VariantSettings.php
+# - wmf-config/VariantSettings.php
 # - wmf-config/InitialiseSettings-labs.php [THIS FILE]
 # - wmf-config/CommonSettings.php
 # - wmf-config/CommonSettings-labs.php
 #
-# Included from: wmf-config/InitialiseSettings.php.
+# Included from: wmf-config/CommonSettings.php.
 #
 
 /**
@@ -138,7 +137,7 @@ function wmfGetLabsOverrideSettings() {
 		],
 
 		// Use eventgate-main as default EventService in beta
-		// This can be removed once this is set in InitialiseSettings.php
+		// This can be removed once this is set in VariantSettings.php
 		'wgEventServiceStreamConfig' => [
 			'default' => [
 				'default' => [
