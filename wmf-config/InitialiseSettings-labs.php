@@ -897,6 +897,11 @@ function wmfGetLabsOverrideSettings() {
 			'default' => '0-1'
 		],
 
+		// Restore to default behaviour, unlike production config
+		'-wgCirrusSearchPrivateClusters' => [
+			'default' => null
+		],
+
 		'wgActorTableSchemaMigrationStage' => [
 			'default' => SCHEMA_COMPAT_NEW,
 		],

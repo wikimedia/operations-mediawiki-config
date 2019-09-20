@@ -14,9 +14,6 @@
 #          `-- wmf-config/CirrusSearch-production.php
 #
 
-// Our cluster often has issues completing master actions
-// within the default 30s timeout.
-$wgCirrusSearchMasterTimeout = '5m';
 
 $cirrusConfigUseHhvmPool = function ( $hosts, $pool ) {
 	if ( !defined( 'HHVM_VERSION' ) ) {
@@ -62,31 +59,10 @@ $wgCirrusSearchClusters = [
 
 unset( $cirrusConfigUseHhvmPool );
 
-// Limit archive indices to our internal search clusters (and not cloudelastic)
-$wgCirrusSearchPrivateClusters = [ 'eqiad', 'codfw' ];
-
-// TODO: Remove once running elastic 6.x
-// ref: https://github.com/elastic/elasticsearch/issues/26833
-$wgCirrusSearchElasticQuirks = [
-	'cross_cluster_single_shard_search' => true
-];
-
-$wgCirrusSearchCrossClusterSearch = true;
-
 // wgCirrusSearchExtraIndexes is set in CirrusSearch-common.php
 if ( isset( $wgCirrusSearchExtraIndexes[NS_FILE] ) ) {
 	$wgCirrusSearchExtraIndexes[NS_FILE] = [ 'chi:commonswiki_file' ];
 }
-
-$wgCirrusSearchSanityCheck = true;
-
-$wgCirrusSearchConnectionAttempts = 3;
-
-if ( $wgDBname == 'enwiki' ) {
-	$wgCirrusSearchPoolCounterKey = '_elasticsearch_enwiki';
-}
-
-$wgCirrusSearchEnableSearchLogging = true;
 
 // The default configuration is a single-cluster configuration, expand
 // that here into the necessary multi-cluster config
@@ -110,9 +86,3 @@ $wgCirrusSearchDropDelayedJobsAfter = [
 	// and can be backfilled as necessary.
 	'cloudelastic' => 900,
 ];
-
-// cache morelike queries to ObjectCache for 24 hours
-$wgCirrusSearchMoreLikeThisTTL = 86400;
-
-// Internal WDQS endpoint
-$wgCirrusSearchCategoryEndpoint = 'http://wdqs-internal.discovery.wmnet/bigdata/namespace/categories/sparql';

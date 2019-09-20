@@ -23432,6 +23432,17 @@ function wmfGetVariantSettings() {
 	'default' => 'https://query.wikidata.org/bigdata/namespace/categories/sparql'
 ],
 
+// Our cluster often has issues completing master actions
+// within the default 30s timeout.
+'wgCirrusSearchMasterTimeout' => [
+	'default' => '5m'
+],
+
+// Limit archive indices to our internal search clusters (and not cloudelastic)
+'wgCirrusSearchPrivateClusters' => [
+	'default' => [ 'eqiad', 'codfw' ]
+],
+
 # Lower the timeouts - the defaults are too high and allow to scan too many
 # pages. 40s shard timeout for regex allowed to deep scan 9million pages for
 # insource:/the/ on commons. Keep client timeout relatively high in comparaison,
@@ -23455,6 +23466,45 @@ function wmfGetVariantSettings() {
 		"default" => 40,
 		"regex" => 50,
 	],
+],
+
+// TODO: Remove once running elastic 6.x
+// ref: https://github.com/elastic/elasticsearch/issues/26833
+'wgCirrusSearchElasticQuirks' => [
+	'default' => [
+		'cross_cluster_single_shard_search' => true
+	]
+],
+
+'wgCirrusSearchCrossClusterSearch' => [
+'default' => true
+],
+
+'wgCirrusSearchSanityCheck' => [
+	'default' => true
+],
+
+'wgCirrusSearchConnectionAttempts' => [
+	'default' => 3
+],
+
+'wgCirrusSearchPoolCounterKey' => [
+	'default' => '_elasticsearch',
+	'enwiki' => '_elasticsearch_enwiki'
+],
+
+'wgCirrusSearchEnableSearchLogging' => [
+	'default' => true
+],
+
+// cache morelike queries to ObjectCache for 24 hours
+'wgCirrusSearchMoreLikeThisTTL' => [
+	'default' => 86400
+],
+
+// Internal WDQS endpoint
+'wgCirrusSearchCategoryEndpoint' => [
+	'default' => 'http://wdqs-internal.discovery.wmnet/bigdata/namespace/categories/sparql'
 ],
 
 ];
