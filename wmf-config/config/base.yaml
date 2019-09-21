@@ -1,0 +1,5 @@
+# WARNING: This file is publicly viewable on the Web. Do not put private data here.
+# This is the base configuration file for all Wikimedia wikis.
+# All settings here apply to every wiki, unless over-ridden.
+
+inheritsFrom: all

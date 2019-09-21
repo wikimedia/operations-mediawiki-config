@@ -1,0 +1,8 @@
+# WARNING: This file is publicly viewable on the Web. Do not put private data here.
+# This is the configuration file for settings specific to the Deployment Wiki.
+# See the inheritance tree to find where most settings are defined.
+
+# FIXME: This is Beta-Cluster only and maybe we should define Beta Cluster's needs distinctly?
+
+inheritsFrom:
+  - special

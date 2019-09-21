@@ -1,0 +1,6 @@
+# WARNING: This file is publicly viewable on the Web. Do not put private data here.
+# This is the shared configuration file for settings specific to all Wikisources.
+# All settings here apply to every Wikisource, unless over-ridden.
+# Note that "old Wikisource" is treated as a "special" wiki, not a Wikisource.
+
+inheritsFrom: base

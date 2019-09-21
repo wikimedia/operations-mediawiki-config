@@ -1,0 +1,6 @@
+# WARNING: This file is publicly viewable on the Web. Do not put private data here.
+# This is the configuration file for settings specific to the Sranan Tongo Wikipedia.
+# See the inheritance tree to find where most settings are defined.
+
+inheritsFrom:
+  - wikipedia

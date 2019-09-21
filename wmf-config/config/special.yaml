@@ -1,0 +1,5 @@
+# WARNING: This file is publicly viewable on the Web. Do not put private data here.
+# This is the shared configuration file for settings specific to all special wikis.
+# All settings here apply to every Wikipedia, unless over-ridden.
+
+inheritsFrom: base
