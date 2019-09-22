@@ -19420,26 +19420,32 @@ function wmfGetVariantSettings() {
 	// Monolingual text statements, it should rather be added to:
 	// Wikibase\Lib\WikibaseContentLanguages::getDefaultMonolingualTextLanguages
 	'wikidata' => [
-		'kea' => 'Kabuverdianu',    // T127435
-		'nod' => 'ᨣᩴᩤᨾᩮᩥᩬᨦ',            // T93880
-		'nys' => 'Noongar',         // T127858
-		'ota' => 'لسان توركى',      // T59342
+		'kea' => 'Kabuverdianu', // T127435
+		'nod' => 'ᨣᩴᩤᨾᩮᩥᩬᨦ', // T93880
+		'ota' => 'لسان توركى', // T59342
 		'rmf' => 'kaalengo tšimb', // T226701
-		'rwr' => 'मारवाड़ी',           // T61905
+		'rwr' => 'मारवाड़ी', // T61905
 		'sjd' => 'Кӣллт са̄мь кӣлл', // T226701
 		'sje' => 'bidumsámegiella', // T146707
 		'sju' => 'ubmejesámiengiälla', // T226701
 		'smj' => 'julevsámegiella', // T146707
-		'smn' => 'anarâškielâ',     // T220118
-		'sms' => 'sääʹmǩiõll',      // T220118
-		'srq' => 'mbia cheë',       // T113408
+		'smn' => 'anarâškielâ', // T220118
+		'sms' => 'sääʹmǩiõll', // T220118
+		'srq' => 'mbia cheë', // T113408
 	],
 	'commonswiki' => [
+		'kea' => 'Kabuverdianu', // T230480
+		'nod' => 'ᨣᩴᩤᨾᩮᩥᩬᨦ', // T230480
+		'ota' => 'لسان توركى', // T230480
 		'rmf' => 'kaalengo tšimb', // T226701
+		'rwr' => 'मारवाड़ी', // T230480
 		'sjd' => 'Кӣллт са̄мь кӣлл', // T226701
+		'sje' => 'bidumsámegiella', // T230480
 		'sju' => 'ubmejesámiengiälla', // T226701
-		'smn' => 'anarâškielâ',	  // T222309
-		'sms' => 'sääʹmǩiõll',	  // T222309
+		'smj' => 'julevsámegiella', // T230480
+		'smn' => 'anarâškielâ',	// T222309
+		'sms' => 'sääʹmǩiõll', // T222309
+		'srq' => 'mbia cheë', // T230480
 	],
 ],
 
