@@ -23117,6 +23117,10 @@ function wmfGetVariantSettings() {
 	'euwiki' => true,
 ],
 
+'wgGEHomepageSuggestedEditsEnabled' => [
+	'default' => false,
+],
+
 'wgGEHomepageLoggingEnabled' => [
 	'default' => true,
 ],
