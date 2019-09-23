@@ -12766,6 +12766,20 @@ function wmfGetVariantSettings() {
 		118 => 'noindex,nofollow', // draft
 		119 => 'noindex,nofollow', // draft talk
 	],
+	'eswiki' => [ // T233562
+		NS_USER => 'noindex,follow',
+		NS_USER_TALK => 'noindex,follow',
+		NS_PROJECT_TALK => 'noindex,follow',
+		NS_FILE_TALK => 'noindex,follow',
+		NS_MEDIAWIKI_TALK => 'noindex,follow',
+		NS_TEMPLATE_TALK => 'noindex,follow',
+		NS_HELP_TALK => 'noindex,follow',
+		NS_CATEGORY_TALK => 'noindex,follow',
+		101 => 'noindex,follow',
+		103 => 'noindex,follow',
+		105 => 'noindex,follow',
+		829 => 'noindex,follow',
+	],
 	'fawiki' => [
 		118 => 'noindex,nofollow', // draft, T92760
 		119 => 'noindex,nofollow', // draft talk, T92760
