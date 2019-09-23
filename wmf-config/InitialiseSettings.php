@@ -17107,8 +17107,8 @@ function wmfGetVariantSettings() {
 	],
 	'szlwiki' => [ // T233104
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-szl.svg',
-		'copyright-width' => 100,
-		'copyright-height' => 19,
+		'copyright-width' => 118,
+		'copyright-height' => 22,
 	],
 	'urwiki' => [
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-ur.svg',
