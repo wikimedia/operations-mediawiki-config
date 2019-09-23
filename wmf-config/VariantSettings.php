@@ -12763,6 +12763,7 @@ function wmfGetVariantSettings() {
 		119 => 'noindex,nofollow', // draft talk
 	],
 	'eswiki' => [ // T233562
+		NS_TALK => 'noindex,follow',
 		NS_USER => 'noindex,follow',
 		NS_USER_TALK => 'noindex,follow',
 		NS_PROJECT_TALK => 'noindex,follow',
