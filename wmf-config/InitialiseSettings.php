@@ -17024,11 +17024,6 @@ function wmfGetVariantSettings() {
 		'copyright-width' => 122,
 		'copyright-height' => 22,
 	],
-	'szlwiki' => [ // T233104
-		'copyright' => 'static/images/mobile/copyright/wikipedia-wordmark-szl.svg',
-		'copyright-width' => 100,
-		'copyright-height' => 18,
-	],
 	'urwiki' => [
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-ur.svg',
 		'copyright-width' => 66,
