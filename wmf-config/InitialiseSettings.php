@@ -19120,6 +19120,12 @@ function wmfGetVariantSettings() {
 	'tlwiki' => false, // T233006
 ],
 
+'wgContentTranslationEnableMT' => [
+	'default' => true,
+	'enwiki' => false,
+	'dewiki' => false,
+],
+
 'wgContentTranslationPublishRequirements' => [
 	'default' => [
 		'userGroups' => [ '*' ]
