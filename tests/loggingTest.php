@@ -139,7 +139,7 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 		$extra = array_diff( array_keys( $config ), $allowed );
 		$this->assertEquals( [], $extra, 'Expect config keys limited to: ' . implode( ', ', $allowed ) );
 		if ( isset( $config['buffer'] ) ) {
-			$this->assertInternalType( 'bool', $config['buffer'], 'Buffer must be boolean' );
+			$this->assertIsBool( $config['buffer'], 'Buffer must be boolean' );
 		}
 		if ( isset( $config['sample'] ) ) {
 			self::assertThat(

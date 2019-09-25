@@ -5,7 +5,7 @@ require_once __DIR__ . '/../../multiversion/MWWikiversions.php';
 
 class MWMultiVersionTest extends PHPUnit\Framework\TestCase {
 
-	protected function tearDown() {
+	protected function tearDown() : void {
 		MWMultiversion::destroySingleton();
 		parent::tearDown();
 	}

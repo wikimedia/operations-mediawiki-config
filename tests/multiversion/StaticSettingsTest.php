@@ -7,7 +7,7 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 
 	protected $variantSettings = [];
 
-	public function setUp() {
+	public function setUp() : void {
 		// HACK: Establish global still used in InitialiseSettings
 		$GLOBALS['wmfDatacenter'] = 'testvalue';
 
@@ -16,7 +16,7 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 		$this->variantSettings = wmfGetVariantSettings();
 	}
 
-	public function tearDown() {
+	public function tearDown() : void {
 		// HACK: Unset global still used in InitialiseSettings
 		unset( $GLOBALS['wmfDatacenter'] );
 	}
@@ -46,7 +46,7 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 			// Test if only 1.5x and 2x keys are used
 			// Only relevant to wgLogoHD, so can stay here
 			$keys = array_keys( $entry );
-			$this->assertEquals( [ '1.5x', '2x' ], $keys, "Unexpected keys for $db", 0.0, 10, true ); // canonicalize
+			$this->assertEqualsCanonicalizing( [ '1.5x', '2x' ], $keys, "Unexpected keys for $db" );
 
 			foreach ( $entry as $size => $logo ) {
 				$logos[$db][$size] = $logo;

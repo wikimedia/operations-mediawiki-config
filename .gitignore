@@ -17,6 +17,7 @@ wikiversions-labs.php
 
 # Test runners
 /logs
+/.phpunit.result.cache
 
 # Operating system stuff
 ## Mac OS X

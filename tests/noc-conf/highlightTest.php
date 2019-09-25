@@ -3,7 +3,7 @@
 class NocConfHighlightTest extends PHPUnit\Framework\TestCase {
 	private $created = [];
 
-	protected function setUp() {
+	protected function setUp() : void {
 		parent::setUp();
 
 		$common = dirname( dirname( __DIR__ ) );
@@ -39,7 +39,7 @@ class NocConfHighlightTest extends PHPUnit\Framework\TestCase {
 		symlink( "$wmfConfigDir/ExampleValid.php", "{$this->nocConfDir}/ExampleValid.php.txt" );
 	}
 
-	protected function tearDown() {
+	protected function tearDown() : void {
 		foreach ( $this->created as $created ) {
 			if ( !is_dir( $created ) ) {
 				unlink( $created );
@@ -62,7 +62,7 @@ class NocConfHighlightTest extends PHPUnit\Framework\TestCase {
 	 * @dataProvider provideValidCases
 	 */
 	public function testValidCases( $q, $expect, $msg ) {
-		$this->assertContains(
+		$this->assertStringContainsString(
 			$expect,
 			$this->runHighlight( $q ),
 			"file=$q should work ($msg)"
@@ -87,7 +87,7 @@ class NocConfHighlightTest extends PHPUnit\Framework\TestCase {
 	 * @dataProvider provideInvalidCases
 	 */
 	public function testInvalidCases( $q, $expect = 'Invalid filename given' ) {
-		$this->assertContains(
+		$this->assertStringContainsString(
 			$expect,
 			$this->runHighlight( $q ),
 			"file=$q should not work"

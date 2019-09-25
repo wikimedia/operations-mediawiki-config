@@ -12,10 +12,8 @@
 
 	beStrictAboutChangesToGlobalState="true"
 	beStrictAboutOutputDuringTests="true"
-	beStrictAboutTestSize="true"
 	beStrictAboutTestsThatDoNotTestAnything="true"
-	checkForUnintentionallyCoveredCode="true"
-	disallowTodoAnnotatedTests="true"
+	beStrictAboutTodoAnnotatedTests="true"
 >
 	<testsuites>
 		<testsuite name="dblists">
