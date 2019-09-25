@@ -1,5 +1,7 @@
 <?php
 
+namespace Wikimedia\MWConfig\Noc;
+
 class WmfClusters {
 	private $clusters;
 
@@ -70,9 +72,9 @@ class WmfClusters {
 		static $canonicalServers;
 		if ( $canonicalServers === null ) {
 			// Mock variable to capture the property assignment
-			global $wgConf;
-			$wgConf = new stdClass();
-			require_once __DIR__ . '/../wmf-config/InitialiseSettings.php';
+			global $wmfDatacenter;
+			$wmfDatacenter = 'bogus';
+			require_once __DIR__ . '/../../wmf-config/InitialiseSettings.php';
 			$settings = wmfGetVariantSettings();
 			$canonicalServers = $settings['wgCanonicalServer'];
 		}

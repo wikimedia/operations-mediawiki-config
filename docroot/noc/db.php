@@ -54,9 +54,9 @@ foreach ( $wmfDbconfigFromEtcd['sectionLoads'] as $section => $sectionLoads ) {
 	$wgLBFactoryConf['sectionLoads'][$section] = array_merge( $sectionLoads[0], $sectionLoads[1] );
 }
 
-require_once __DIR__ . '/../../src/WmfClusters.php';
+require_once __DIR__ . '/../../src/Noc/WmfClusters.php';
 
-$clusters = new WmfClusters();
+$clusters = new Wikimedia\MWConfig\Noc\WmfClusters();
 
 if ( $format === 'json' ) {
 	$data = [];
