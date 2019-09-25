@@ -21178,21 +21178,10 @@ function wmfGetVariantSettings() {
 
 'wgCirrusSearchInstantIndexNew' => [
 	'default' => [],
-	'testwikidatawiki' => [
-		NS_MAIN, 120, // NS_MAN & WB_NS_PROPERTY (T183053),
-		146 // Lexemes (T196896)
-	],
-	'wikidatawiki' => [
-		NS_MAIN, 120, // NS_MAN & WB_NS_PROPERTY (T183053),
-		146 // Lexemes (T196896)
-	],
 ],
 
-// T183053
 'wgCirrusSearchRefreshInterval' => [
 	'default' => 30,
-	'wikidatawiki' => 5,
-	'testwikidatawiki' => 5,
 ],
 
 // Shard each wiki to be under 2gb per shard if possible.  Changing this for a wiki
