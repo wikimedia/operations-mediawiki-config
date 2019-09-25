@@ -8603,32 +8603,6 @@ function wmfGetVariantSettings() {
 			'upload' => true,
 		],
 	],
-	// Editing allowed to sysops per T233322
-	'bgwikinews' => [
-		'*' => [
-			'edit' => false,
-			'createaccount' => false,
-		],
-		'user' => [
-			'edit' => false,
-			'move' => false,
-			'move-rootuserpages' => false,
-			'move-subpages' => false,
-			'upload' => false,
-		],
-		'autoconfirmed' => [
-			'upload' => false,
-			'move' => false,
-		],
-		'sysop' => [
-			'edit' => true,
-			'move' => true,
-		],
-		'steward' => [
-			'edit' => true,
-			'move' => true,
-		],
-	],
 
 	// Account creation required
 	'nlwikimedia' => [ '*' => [
