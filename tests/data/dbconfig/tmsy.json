@@ -1,0 +1,362 @@
+{
+  "groupLoadsBySection": {
+    "DEFAULT": {
+      "contributions": {
+        "dbNOM": 1
+      },
+      "dump": {
+        "dbNOM": 1
+      },
+      "logpager": {
+        "dbNOM": 1
+      },
+      "recentchanges": {
+        "dbNOM": 1
+      },
+      "recentchangeslinked": {
+        "dbNOM": 1
+      },
+      "vslow": {
+        "dbNOM": 1
+      },
+      "watchlist": {
+        "dbNOM": 1
+      }
+    },
+    "s1": {
+      "api": {
+        "dbNOM": 1,
+        "dbNOM": 1,
+        "dbNOM": 1
+      },
+      "contributions": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      },
+      "dump": {
+        "dbNOM": 1
+      },
+      "logpager": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      },
+      "recentchanges": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      },
+      "recentchangeslinked": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      },
+      "vslow": {
+        "dbNOM": 1
+      },
+      "watchlist": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      }
+    },
+    "s2": {
+      "api": {
+        "dbNOM": 1,
+        "dbNOM": 1
+      },
+      "contributions": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      },
+      "dump": {
+        "dbNOM:0": 1
+      },
+      "logpager": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      },
+      "recentchanges": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      },
+      "recentchangeslinked": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      },
+      "vslow": {
+        "dbNOM:0": 1
+      },
+      "watchlist": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      }
+    },
+    "s4": {
+      "api": {
+        "dbNOM": 3,
+        "dbNOM": 1
+      },
+      "contributions": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      },
+      "dump": {
+        "dbNOM": 1
+      },
+      "logpager": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      },
+      "recentchanges": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      },
+      "recentchangeslinked": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      },
+      "vslow": {
+        "dbNOM": 1
+      },
+      "watchlist": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      }
+    },
+    "s5": {
+      "api": {
+        "dbNOM": 1,
+        "dbNOM": 3
+      },
+      "contributions": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      },
+      "dump": {
+        "dbNOM:0": 1
+      },
+      "logpager": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      },
+      "recentchanges": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      },
+      "recentchangeslinked": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      },
+      "vslow": {
+        "dbNOM:0": 1
+      },
+      "watchlist": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      }
+    },
+    "s6": {
+      "api": {
+        "dbNOM": 10,
+        "dbNOM": 1
+      },
+      "contributions": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      },
+      "dump": {
+        "dbNOM:0": 1
+      },
+      "logpager": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      },
+      "recentchanges": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      },
+      "recentchangeslinked": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      },
+      "vslow": {
+        "dbNOM:0": 1
+      },
+      "watchlist": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      }
+    },
+    "s7": {
+      "api": {
+        "dbNOM": 3,
+        "dbNOM": 1
+      },
+      "contributions": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      },
+      "dump": {
+        "dbNOM:0": 1
+      },
+      "logpager": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      },
+      "recentchanges": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      },
+      "recentchangeslinked": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      },
+      "vslow": {
+        "dbNOM:0": 1
+      },
+      "watchlist": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      }
+    },
+    "s8": {
+      "api": {
+        "dbNOM": 3,
+        "dbNOM": 2
+      },
+      "contributions": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      },
+      "dump": {
+        "dbNOM": 1
+      },
+      "logpager": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      },
+      "recentchanges": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      },
+      "recentchangeslinked": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      },
+      "vslow": {
+        "dbNOM": 1
+      },
+      "watchlist": {
+        "dbNOM:0": 1,
+        "dbNOM:0": 1
+      }
+    }
+  },
+  "readOnlyBySection": {},
+  "sectionLoads": {
+    "DEFAULT": [
+      {
+        "dbNOM": 0
+      },
+      {
+        "dbNOM": 500,
+        "dbNOM": 300,
+        "dbNOM": 400
+      }
+    ],
+    "s1": [
+      {
+        "dbNOM": 0
+      },
+      {
+        "dbNOM": 200,
+        "dbNOM": 500,
+        "dbNOM": 500,
+        "dbNOM:0": 50,
+        "dbNOM:0": 50,
+        "dbNOM": 50,
+        "dbNOM": 500,
+        "dbNOM": 200,
+        "dbNOM": 200
+      }
+    ],
+    "s2": [
+      {
+        "dbNOM": 0
+      },
+      {
+        "dbNOM": 50,
+        "dbNOM": 500,
+        "dbNOM:0": 1,
+        "dbNOM:0": 150,
+        "dbNOM:0": 150,
+        "dbNOM": 500
+      }
+    ],
+    "s4": [
+      {
+        "dbNOM": 0
+      },
+      {
+        "dbNOM": 100,
+        "dbNOM": 500,
+        "dbNOM:0": 150,
+        "dbNOM:0": 150,
+        "dbNOM": 1,
+        "dbNOM": 300
+      }
+    ],
+    "s5": [
+      {
+        "dbNOM": 0
+      },
+      {
+        "dbNOM": 200,
+        "dbNOM:0": 100,
+        "dbNOM:0": 100,
+        "dbNOM": 100,
+        "dbNOM": 500,
+        "dbNOM:0": 1,
+        "dbNOM": 500
+      }
+    ],
+    "s6": [
+      {
+        "dbNOM": 0
+      },
+      {
+        "dbNOM": 300,
+        "dbNOM": 500,
+        "dbNOM": 300,
+        "dbNOM:0": 1,
+        "dbNOM:0": 1,
+        "dbNOM:0": 1,
+        "dbNOM": 300
+      }
+    ],
+    "s7": [
+      {
+        "dbNOM": 0
+      },
+      {
+        "dbNOM": 300,
+        "dbNOM": 200,
+        "dbNOM:0": 1,
+        "dbNOM": 500,
+        "dbNOM:0": 150,
+        "dbNOM:0": 150,
+        "dbNOM": 300
+      }
+    ],
+    "s8": [
+      {
+        "dbNOM": 0
+      },
+      {
+        "dbNOM": 1,
+        "dbNOM": 200,
+        "dbNOM:0": 100,
+        "dbNOM:0": 100,
+        "dbNOM": 300,
+        "dbNOM": 500
+      }
+    ]
+  }
+}

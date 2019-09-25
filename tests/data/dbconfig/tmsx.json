@@ -1,0 +1,362 @@
+{
+  "groupLoadsBySection": {
+    "DEFAULT": {
+      "contributions": {
+        "dbNAN": 1
+      },
+      "dump": {
+        "dbNAN": 1
+      },
+      "logpager": {
+        "dbNAN": 1
+      },
+      "recentchanges": {
+        "dbNAN": 1
+      },
+      "recentchangeslinked": {
+        "dbNAN": 1
+      },
+      "vslow": {
+        "dbNAN": 1
+      },
+      "watchlist": {
+        "dbNAN": 1
+      }
+    },
+    "s1": {
+      "api": {
+        "dbNAN": 1,
+        "dbNAN": 1,
+        "dbNAN": 1
+      },
+      "contributions": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      },
+      "dump": {
+        "dbNAN": 1
+      },
+      "logpager": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      },
+      "recentchanges": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      },
+      "recentchangeslinked": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      },
+      "vslow": {
+        "dbNAN": 1
+      },
+      "watchlist": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      }
+    },
+    "s2": {
+      "api": {
+        "dbNAN": 1,
+        "dbNAN": 1
+      },
+      "contributions": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      },
+      "dump": {
+        "dbNAN:0": 1
+      },
+      "logpager": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      },
+      "recentchanges": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      },
+      "recentchangeslinked": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      },
+      "vslow": {
+        "dbNAN:0": 1
+      },
+      "watchlist": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      }
+    },
+    "s4": {
+      "api": {
+        "dbNAN": 3,
+        "dbNAN": 1
+      },
+      "contributions": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      },
+      "dump": {
+        "dbNAN": 1
+      },
+      "logpager": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      },
+      "recentchanges": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      },
+      "recentchangeslinked": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      },
+      "vslow": {
+        "dbNAN": 1
+      },
+      "watchlist": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      }
+    },
+    "s5": {
+      "api": {
+        "dbNAN": 1,
+        "dbNAN": 3
+      },
+      "contributions": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      },
+      "dump": {
+        "dbNAN:0": 1
+      },
+      "logpager": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      },
+      "recentchanges": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      },
+      "recentchangeslinked": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      },
+      "vslow": {
+        "dbNAN:0": 1
+      },
+      "watchlist": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      }
+    },
+    "s6": {
+      "api": {
+        "dbNAN": 10,
+        "dbNAN": 1
+      },
+      "contributions": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      },
+      "dump": {
+        "dbNAN:0": 1
+      },
+      "logpager": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      },
+      "recentchanges": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      },
+      "recentchangeslinked": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      },
+      "vslow": {
+        "dbNAN:0": 1
+      },
+      "watchlist": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      }
+    },
+    "s7": {
+      "api": {
+        "dbNAN": 3,
+        "dbNAN": 1
+      },
+      "contributions": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      },
+      "dump": {
+        "dbNAN:0": 1
+      },
+      "logpager": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      },
+      "recentchanges": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      },
+      "recentchangeslinked": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      },
+      "vslow": {
+        "dbNAN:0": 1
+      },
+      "watchlist": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      }
+    },
+    "s8": {
+      "api": {
+        "dbNAN": 3,
+        "dbNAN": 2
+      },
+      "contributions": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      },
+      "dump": {
+        "dbNAN": 1
+      },
+      "logpager": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      },
+      "recentchanges": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      },
+      "recentchangeslinked": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      },
+      "vslow": {
+        "dbNAN": 1
+      },
+      "watchlist": {
+        "dbNAN:0": 1,
+        "dbNAN:0": 1
+      }
+    }
+  },
+  "readOnlyBySection": {},
+  "sectionLoads": {
+    "DEFAULT": [
+      {
+        "dbNAN": 0
+      },
+      {
+        "dbNAN": 500,
+        "dbNAN": 300,
+        "dbNAN": 400
+      }
+    ],
+    "s1": [
+      {
+        "dbNAN": 0
+      },
+      {
+        "dbNAN": 200,
+        "dbNAN": 500,
+        "dbNAN": 500,
+        "dbNAN:0": 50,
+        "dbNAN:0": 50,
+        "dbNAN": 50,
+        "dbNAN": 500,
+        "dbNAN": 200,
+        "dbNAN": 200
+      }
+    ],
+    "s2": [
+      {
+        "dbNAN": 0
+      },
+      {
+        "dbNAN": 50,
+        "dbNAN": 500,
+        "dbNAN:0": 1,
+        "dbNAN:0": 150,
+        "dbNAN:0": 150,
+        "dbNAN": 500
+      }
+    ],
+    "s4": [
+      {
+        "dbNAN": 0
+      },
+      {
+        "dbNAN": 100,
+        "dbNAN": 500,
+        "dbNAN:0": 150,
+        "dbNAN:0": 150,
+        "dbNAN": 1,
+        "dbNAN": 300
+      }
+    ],
+    "s5": [
+      {
+        "dbNAN": 0
+      },
+      {
+        "dbNAN": 200,
+        "dbNAN:0": 100,
+        "dbNAN:0": 100,
+        "dbNAN": 100,
+        "dbNAN": 500,
+        "dbNAN:0": 1,
+        "dbNAN": 500
+      }
+    ],
+    "s6": [
+      {
+        "dbNAN": 0
+      },
+      {
+        "dbNAN": 300,
+        "dbNAN": 500,
+        "dbNAN": 300,
+        "dbNAN:0": 1,
+        "dbNAN:0": 1,
+        "dbNAN:0": 1,
+        "dbNAN": 300
+      }
+    ],
+    "s7": [
+      {
+        "dbNAN": 0
+      },
+      {
+        "dbNAN": 300,
+        "dbNAN": 200,
+        "dbNAN:0": 1,
+        "dbNAN": 500,
+        "dbNAN:0": 150,
+        "dbNAN:0": 150,
+        "dbNAN": 300
+      }
+    ],
+    "s8": [
+      {
+        "dbNAN": 0
+      },
+      {
+        "dbNAN": 1,
+        "dbNAN": 200,
+        "dbNAN:0": 100,
+        "dbNAN:0": 100,
+        "dbNAN": 300,
+        "dbNAN": 500
+      }
+    ]
+  }
+}
