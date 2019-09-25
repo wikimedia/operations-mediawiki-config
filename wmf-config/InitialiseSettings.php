@@ -3859,6 +3859,8 @@ function wmfGetVariantSettings() {
 		'שפ' => /* Portal talk */ 101,
 		'טי' => /* Draft */ 118,
 		'שטי' => /* Draft talk */ 119,
+		'Draft' => 118, // T223472
+		'Draft_talk' => 119, // T223472
 		'י' => /* Module */ 828,
 		'שי' => /* Module talk */ 829,
 		'נ' => /* Topic (Flow) */ 2600,
@@ -4070,8 +4072,6 @@ function wmfGetVariantSettings() {
 		'Author_talk' => 101,
 		'Portal' => 102, // T71522
 		'Portal_talk' => 103,
-		'Draft' => 118, // T223472
-		'Draft_talk' => 119, // T223472
 	],
 	'+kowikiversity' => [
 		'Wikiversity토론' => NS_PROJECT_TALK, // T46899
@@ -4240,6 +4240,8 @@ function wmfGetVariantSettings() {
 		'T' => NS_TEMPLATE,
 		'विकिपीडिया' => NS_PROJECT, // T184865
 		'विकिपीडिया_वार्ता' => NS_PROJECT_TALK, // T184865
+		'Draft' => 118, // T223472
+		'Draft_talk' => 119, // T223472
 	],
 	'+newikibooks' => [
 		// Per T131754
