@@ -434,6 +434,7 @@ function wmfGetVariantSettings() {
 	'nowiktionary' => 'Europe/Berlin',
 	'nowikinews' => 'Europe/Berlin',
 	'nowikisource' => 'Europe/Berlin',
+	'nqowiki' => 'Africa/Conakry',
 	'nsowiki' => 'Africa/Johannesburg',
 	'olowiki' => 'Europe/Moscow', // T146612
 	'orwiki' => 'Asia/Kolkata', // T122273
@@ -715,6 +716,7 @@ function wmfGetVariantSettings() {
 	'nnwiki' => '/static/images/project-logos/nnwiki.png',
 	'nowiki' => '/static/images/project-logos/nowiki.png',
 	'novwiki' => '/static/images/project-logos/novwiki.png',  // T46974
+	'nqowiki' => '/static/images/project-logos/nqowiki.png',
 	'nrmwiki' => '/static/images/project-logos/nrmwiki.png',  // T51125
 	'nsowiki' => '/static/images/project-logos/nsowiki.png',
 	'nvwiki' => '/static/images/project-logos/nvwiki.png',  // T42285
@@ -1462,6 +1464,7 @@ function wmfGetVariantSettings() {
 	'nnwiki' => [ '1.5x' => '/static/images/project-logos/nnwiki-1.5x.png', '2x' => '/static/images/project-logos/nnwiki-2x.png' ], // T150618
 	'novwiki' => [ '1.5x' => '/static/images/project-logos/novwiki-1.5x.png', '2x' => '/static/images/project-logos/novwiki-2x.png' ], // T150618
 	'nowiki' => [ '1.5x' => '/static/images/project-logos/nowiki-1.5x.png', '2x' => '/static/images/project-logos/nowiki-2x.png' ], // T150618
+	'nqowiki' => [ '1.5x' => '/static/images/project-logos/nqowiki-1.5x.png', '2x' => '/static/images/project-logos/nqowiki-2x.png' ],
 	'nrmwiki' => [ '1.5x' => '/static/images/project-logos/nrmwiki-1.5x.png', '2x' => '/static/images/project-logos/nrmwiki-2x.png' ], // T150618
 	'nvwiki' => [ '1.5x' => '/static/images/project-logos/nvwiki-1.5x.png', '2x' => '/static/images/project-logos/nvwiki-2x.png' ], // T150618
 	'nywiki' => [ '1.5x' => '/static/images/project-logos/nywiki-1.5x.png', '2x' => '/static/images/project-logos/nywiki-2x.png' ], // T211570
@@ -2493,6 +2496,7 @@ function wmfGetVariantSettings() {
 	'nowikimedia' => 'Wikimedia Norge',
 	'nowikinews' => 'Wikinytt',
 	'nowikisource' => 'Wikikilden',
+	'nqowiki' => 'ߥߞߌߔߘߋߞߎ',
 	'nycwikimedia' => 'Wikimedia New York City', // T31273
 	'ocwiki' => 'Wikipèdia', // T9123
 	'ocwikibooks' => 'Wikilibres',
@@ -3003,6 +3007,7 @@ function wmfGetVariantSettings() {
 	'nowikibooks' => 'Wikibøker',
 	'nowikinews' => 'Wikinytt',
 	'nowikisource' => 'Wikikilden',
+	'nqowiki' => 'ߥߞߌߔߘߋߞߎ',
 	'nvwiki' => 'Wikiibíídiiya',
 	'nycwikimedia' => 'Wikimedia', // T31273
 	'ocwiki' => 'Wikipèdia', // T9123
