@@ -8491,46 +8491,22 @@ function wmfGetVariantSettings() {
 
 'wgOriginTrials' => [
 	'default' => [],
-	'ruwiki' => [
-		// T216499 Priority Hints, expires on 2019-09-04
-		'AsgJBEgl1uCVxnFLFy3QQSGjCfnGkvAdwJEMdSuoG+rI8vkW1ErSmxh4zE/rAzLcCp+HW7KswymQ6iItKlfihwEAAABqeyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IlByaW9yaXR5SGludHMiLCJleHBpcnkiOjE1Njc1NTUxOTksImlzU3ViZG9tYWluIjp0cnVlfQ==',
-		// T216598 Element Timing for Images, expires on 2019-09-04
-		'AshJ3chYbVful0vwJ8K3I5UWkQu7KqzD1PZxpgVqCbmWWZz1V3n2jR12Yw+A0Z/GKvsk93s+zgCC7fcN9Q8XDQ0AAABweyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IkVsZW1lbnRUaW1pbmdJbWFnZXMiLCJleHBpcnkiOjE1Njc1NTUxOTksImlzU3ViZG9tYWluIjp0cnVlfQ==',
-		// T216594 Layout Stability, expires on 2019-09-04
-		'AgN+S/0I0APoRAdwjTE11HVRUE4fyP31B11bR7jgVuLPs03/t5OA5dT+EeogSaW4dCpx/m9DILD0BluG4aSjDAoAAABqeyJvcmlnaW4iOiJodHRwczovL3J1Lndpa2lwZWRpYS5vcmc6NDQzIiwiZmVhdHVyZSI6IkxheW91dEphbmtBUEkiLCJleHBpcnkiOjE1Njc1NTUxOTksImlzU3ViZG9tYWluIjp0cnVlfQ==',
-	],
-	'eswiki' => [
-		// T216499 Priority Hints, expires on 2019-09-04
-		'AnemF1H5Xi9L14Sxp5v86UEm8OnRNHiOPhSxOemj4Z7HsU+NuWnfMkjhyY5i7lKDNSiSqSMiCu+doN2YXgBwTw4AAABseyJvcmlnaW4iOiJodHRwczovL2VzLm0ud2lraXBlZGlhLm9yZzo0NDMiLCJmZWF0dXJlIjoiUHJpb3JpdHlIaW50cyIsImV4cGlyeSI6MTU2NzU1NTE5OSwiaXNTdWJkb21haW4iOnRydWV9',
-		// T216598 Element Timing for Images, expires on 2019-09-04
-		'AltZCyBw81RcBZLq+mUL4pWvjFjDca2883K0aQBEI/ytLLVeETxZY9FR+KNygTDRctlKxs78oL9YC96J0xbzHg4AAAByeyJvcmlnaW4iOiJodHRwczovL2VzLm0ud2lraXBlZGlhLm9yZzo0NDMiLCJmZWF0dXJlIjoiRWxlbWVudFRpbWluZ0ltYWdlcyIsImV4cGlyeSI6MTU2NzU1NTE5OSwiaXNTdWJkb21haW4iOnRydWV9',
-		// T216594 Layout Stability, expires on 2019-09-04
-		'AoBEaJAFuzlnIzxQEOMK42BKyTW9OCrou+mnX1+HmuuEMoaWr5ln54z28DQ7dslqGVJSunRmlIDnW6HMztus0A4AAABseyJvcmlnaW4iOiJodHRwczovL2VzLm0ud2lraXBlZGlhLm9yZzo0NDMiLCJmZWF0dXJlIjoiTGF5b3V0SmFua0FQSSIsImV4cGlyeSI6MTU2NzU1NTE5OSwiaXNTdWJkb21haW4iOnRydWV9',
-	],
 ],
 
 'wgPriorityHints' => [
 	'default' => false,
-	'ruwiki' => true,
-	'eswiki' => true,
 ],
 
 'wgPriorityHintsRatio' => [
 	'default' => 1.0,
-	'ruwiki' => 0.5,
-	'eswiki' => 0.5,
 ],
 
 'wgElementTiming' => [
 	'default' => false,
-	'ruwiki' => true,
-	'eswiki' => true,
 ],
 
 'wgFeaturePolicyReportOnly' => [
 	'default' => [],
-	'ruwiki' => [ "sync-xhr 'none'" ],
-	'eswiki' => [ "sync-xhr 'none'" ],
 ],
 
 # groupOverrides @{
