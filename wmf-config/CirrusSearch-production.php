@@ -78,7 +78,7 @@ if ( isset( $wgCirrusSearchExtraIndexes[NS_FILE] ) ) {
 	$wgCirrusSearchExtraIndexes[NS_FILE] = [ 'chi:commonswiki_file' ];
 }
 
-$wgCirrusSearchSanityCheck = false;
+$wgCirrusSearchSanityCheck = true;
 
 $wgCirrusSearchConnectionAttempts = 3;
 
