@@ -22745,6 +22745,10 @@ function wmfGetVariantSettings() {
 	*/
 ],
 
+'wgWMESearchRelevancePages' => [
+	'default' => [],
+],
+
 'wmgWMESearchRelevancePages' => [
 	'default' => [],
 ],
