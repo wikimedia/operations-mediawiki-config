@@ -22749,10 +22749,6 @@ function wmfGetVariantSettings() {
 	'default' => [],
 ],
 
-'wmgWMESearchRelevancePages' => [
-	'default' => [],
-],
-
 'wmgUseDynamicSidebar' => [
 	'default' => false,
 	'labswiki' => true,

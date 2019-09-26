@@ -57,9 +57,6 @@ if ( $wgCirrusSearchDefaultCluster !== $wmfDatacenter ) {
 	}
 }
 
-// Enable the search relevance survey where configured
-$wgWMESearchRelevancePages = $wmgWMESearchRelevancePages;
-
 if ( $wmgCirrusSearchMLRModel ) {
 	if ( !is_array( $wmgCirrusSearchMLRModel ) ) {
 		$wmgCirrusSearchMLRModel = [ 'mlr-1024rs' => $wmgCirrusSearchMLRModel ];
