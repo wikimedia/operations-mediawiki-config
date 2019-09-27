@@ -9879,6 +9879,7 @@ function wmfGetVariantSettings() {
 			'patrol' => true,
 			'upwizcampaigns' => true, // T61242
 			'rollback' => true, // T231099
+			'deleterevision' => true, // T234051
 		],
 		'autopatrolled' => [ 'autopatrol' => true, 'movefile' => true ], // T168192
 		'templateeditor' => [ // T63172
