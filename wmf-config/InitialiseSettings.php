@@ -14110,6 +14110,7 @@ function wmfGetVariantSettings() {
 ],
 'wgAbuseFilterParserClass' => [
 	'default' => 'AbuseFilterParser',
+	'group0' => 'AbuseFilterCachingParser' // T156095
 ],
 # @}
 
