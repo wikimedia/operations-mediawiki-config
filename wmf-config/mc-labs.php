@@ -9,13 +9,14 @@ $wgMemCachedPersistent = false;
 $wgMemCachedTimeout = 0.5 * 1e6;
 
 $wgObjectCaches['mcrouter'] = [
-	'class'                => 'MemcachedPeclBagOStuff',
-	'serializer'           => 'php',
-	'persistent'           => false,
-	'servers'              => [ '127.0.0.1:11213' ],
-	'retry_timeout'        => -1,
-	'loggroup'             => 'memcached',
-	'timeout'              => $wgMemCachedTimeout,
+	'class'                 => 'MemcachedPeclBagOStuff',
+	'serializer'            => 'php',
+	'persistent'            => false,
+	'servers'               => [ '127.0.0.1:11213' ],
+	'retry_timeout'         => -1,
+	'loggroup'              => 'memcached',
+	'timeout'               => $wgMemCachedTimeout,
+	'allow_tcp_nagle_delay' => false
 ];
 
 // Beta Cluster: Make WANObjectCache mcrouter-aware
