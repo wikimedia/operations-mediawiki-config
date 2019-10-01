@@ -17134,9 +17134,24 @@ function wmfGetVariantSettings() {
 		'search' => true, 'nearby' => true, 'watchlist' => true, 'tagline' => false
 	],
 ],
+
+// TODO: Remove it once I877473bbeb8410f4959553076a78f7c51e4b473e goes live
 'wgMFMobileFormatterHeadings' => [
 	'default' => [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ],
 	'wikivoyage' => [ 'h2', 'h3', 'h4', 'h5', 'h6' ], // T110436, T110837
+],
+
+'wgMFMobileFormatterOptions' => [
+	'default' => [
+		'maxImages' => 1000,
+		'maxHeadings' => 4000,
+		'headings' => [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ]
+	],
+	'wikivoyage' => [
+		'maxImages' => 1000,
+		'maxHeadings' => 4000,
+		'headings' => [ 'h2', 'h3', 'h4', 'h5', 'h6' ] //T110436, T110837
+	],
 ],
 
 'wgMFSpecialCaseMainPage' => [
