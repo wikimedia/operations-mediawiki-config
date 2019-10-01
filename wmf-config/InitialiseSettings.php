@@ -5568,6 +5568,7 @@ function wmfGetVariantSettings() {
 		'UpdateRepo' => 'debug',
 		'updateTranstagOnNullRevisions' => 'debug',
 		'upload' => 'debug',
+		'VisualEditor' => 'debug',
 		'wfLogDBError' => 'debug', // Former $wgDBerrorLog
 		'Wikibase' => [ 'udp2log' => 'info', 'logstash' => 'warning', 'sample' => false, ],
 		'Wikibase.NewItemIdFormatter' => 'debug', // WMDE & Addshore T201832
