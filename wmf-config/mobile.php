@@ -10,7 +10,6 @@ if ( $wmgMobileFrontend ) {
 	}
 
 	$wgMFMobileHeader = 'X-Subdomain';
-	$wgMFNoindexPages = false;
 	if ( !$wmgEnableGeoData ) {
 		$wgMFNearby = false;
 	}
