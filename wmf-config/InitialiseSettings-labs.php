@@ -277,9 +277,6 @@ function wmfGetLabsOverrideSettings() {
 				'amc' => true,
 			]
 		],
-		'wgMinervaErrorLogSamplingRate' => [
-			'default' => 1,
-		],
 		'wgMinervaCountErrors' => [
 			'default' => true
 		],
