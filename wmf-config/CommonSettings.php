@@ -3852,19 +3852,6 @@ if ( $wmgUseEUCopyrightCampaign ) {
 	wfLoadSkin( 'EUCopyrightCampaignSkin' );
 }
 
-if ( $wgDBname === 'fixcopyrightwiki' ) {
-	// Super cool hack to have the main page be the domain root
-	// Copied from translatewiki :-)
-	$wgHooks['GetLocalURL'][] = function ( &$title, &$url, $query ) {
-		if ( !$title->isExternal() && $query == '' && $title->isMainPage() ) {
-			$url = '/';
-		}
-	};
-	$wgHooks['TestCanonicalRedirect'][] = function ( $request ) {
-		return $request->getRequestURL() !== '/';
-	};
-}
-
 if ( $wmgUseGrowthExperiments ) {
 	wfLoadExtension( 'GrowthExperiments' );
 }
