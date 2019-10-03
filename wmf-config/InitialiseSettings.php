@@ -14118,6 +14118,7 @@ function wmfGetVariantSettings() {
 	'nlwiki' => 'AbuseFilterCachingParser',
 	'commonswiki' => 'AbuseFilterCachingParser',
 	'hewiki' => 'AbuseFilterCachingParser',
+	'wikidatawiki' => 'AbuseFilterCachingParser',
 ],
 # @}
 
