@@ -19460,6 +19460,11 @@ function wmfGetVariantSettings() {
 	'fixcopyrightwiki' => true,
 ],
 
+'wgMainPageIsDomainRoot' => [
+	'default' => false,
+	'fixcopyrightwiki' => true,
+],
+
 'wmgUseCognate' => [
 	'default' => false,
 	'wiktionary' => 'wiktionary', // T150182
