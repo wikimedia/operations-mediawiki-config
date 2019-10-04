@@ -43,8 +43,11 @@ define( 'WMF_STATIC_24H', 86400 );
 define( 'WMF_STATIC_1Y', 31536000 );
 
 /**
+ * This should always use 404 if there is an issue with the url.
+ * Avoid exposing the reason of it being invalid (T204186).
+ *
  * @param string $message
- * @param int $status
+ * @param int $status HTTP status code (One of 500 or 404)
  */
 function wmfStaticShowError( $message, $status ) {
 	HttpStatus::header( $status );
@@ -66,7 +69,7 @@ function wmfStaticStreamFile( $filePath, $responseType = 'nohash' ) {
 	$ctype = StreamFile::contentTypeFromPath( $filePath, /* safe: not for upload */ false );
 	if ( !$ctype || $ctype === 'unknown/unknown' ) {
 		// Directory, extension-less file or unknown extension
-		wmfStaticShowError( 'Bad request', 400 );
+		wmfStaticShowError( 'Unknown file path', 404 );
 		return;
 	}
 
@@ -120,23 +123,30 @@ function wmfStaticRespond() {
 		return;
 	}
 
-	// Ignore direct request (eg. "/w/static.php" or "/w/static.php/test")
-	// (use strpos instead of equal to ignore pathinfo and query string)
+	// Reject direct requests (eg. "/w/static.php" or "/w/static.php/test")
+	// Use strpos() to tolerate trailing pathinfo or query string
 	if ( strpos( $_SERVER['REQUEST_URI'], $_SERVER['SCRIPT_NAME'] ) === 0 ) {
-		wmfStaticShowError( 'Bad request', 400 );
+		wmfStaticShowError( 'Unknown file path', 404 );
 		return;
 	}
 
 	// Strip query parameters
 	$uriPath = parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH );
 
-	// Strip prefix
 	$urlPrefix = $wgScriptPath;
+	// Reject invalid path prefix
 	if ( strpos( $uriPath, $urlPrefix ) !== 0 ) {
-		wmfStaticShowError( 'Bad request', 400 );
+		wmfStaticShowError( 'Unknown file path', 404 );
 		return;
 	}
+	// Strip prefix
 	$path = substr( $uriPath, strlen( $urlPrefix ) );
+
+	// Reject access to dot files and dot directories
+	if ( strpos( $uriPath, '/.' ) !== false ) {
+		wmfStaticShowError( 'Unknown file path', 404 );
+		return;
+	}
 
 	// Validation hash
 	$urlHash = isset( $_SERVER['QUERY_STRING'] ) ? $_SERVER['QUERY_STRING'] : false;
@@ -174,7 +184,7 @@ function wmfStaticRespond() {
 		}
 
 		if ( strpos( $filePath, $branchDir ) !== 0 ) {
-			wmfStaticShowError( 'Bad request', 400 );
+			wmfStaticShowError( 'Unknown file path', 404 );
 			return;
 		}
 
