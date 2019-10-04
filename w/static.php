@@ -91,9 +91,9 @@ function wmfStaticStreamFile( $filePath, $responseType = 'nohash' ) {
 		);
 	} else {
 		// Versioned and verifable files are considered immutable.
-		// Allow unconditional re-use for a year.
+		// For the CDN, and clients not supporting "immutable", allow re-use for a year.
 		header(
-			sprintf( 'Cache-Control: public, s-maxage=%d, max-age=%d',
+			sprintf( 'Cache-Control: public, s-maxage=%d, max-age=%d, immutable',
 				WMF_STATIC_1Y, WMF_STATIC_1Y
 			)
 		);
