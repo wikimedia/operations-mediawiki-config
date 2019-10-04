@@ -29,6 +29,7 @@ $wmfAllServices['unittest'] = [
 	'eventlogging' => 'localhost',
 	'eventbus' => 'localhost',
 	'sessionstore' => 'localhost',
+	'echostore' => 'localhost',
 ];
 
 ### Logstash

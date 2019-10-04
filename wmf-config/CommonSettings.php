@@ -481,6 +481,34 @@ $wgObjectCaches['kask-transition'] = [
 	'replication' => 'async',
 	'reportDupes' => false,
 ];
+$wgObjectCaches['kask-echoseen'] = [
+	'class' => 'RESTBagOStuff',
+	'url' => "{$wmfLocalServices['echostore']}/echoseen/v1/",
+	'httpParams' => [
+		'writeHeaders' => [
+			'content-type' => 'application/octet-stream',
+		],
+		'writeMethod' => 'POST',
+	],
+	'serialization_type' => 'JSON',
+	'extendedErrorBodyFields' => [ 'type', 'title', 'detail', 'instance' ]
+];
+$wgObjectCaches['kask-echoseen-transition'] = [
+	'class' => 'MultiWriteBagOStuff',
+	'caches' => [
+		0 => [
+			'factory' => [ 'ObjectCache', 'getInstance' ],
+			'args' => [ 'kask-echoseen' ]
+		],
+		1 => [
+			'factory' => [ 'ObjectCache', 'getInstance' ],
+			'args' => [ 'redis_local' ]
+		],
+
+	],
+	'replication' => 'async',
+	'reportDupes' => false,
+];
 
 // T203888: Purge Wikidata Lexeme parser cache for senses deployment - Addshore
 if ( $wgDBname === 'wikidatawiki' ) {
@@ -2972,6 +3000,8 @@ if ( $wmgUseEcho ) {
 
 	// Whether to use job queue to process web and email notifications
 	$wgEchoUseJobQueue = $wmgEchoUseJobQueue;
+
+	$wgEchoSeenTimeCacheType = 'kask-echoseen-transition';
 
 	// CentralAuth is extra check to be absolutely sure we don't enable on non-SUL
 	// wikis.
