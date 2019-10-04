@@ -63,7 +63,7 @@ function wmfStaticStreamFile( $filePath, $responseType = 'nohash' ) {
 	$ctype = StreamFile::contentTypeFromPath( $filePath, /* safe: not for upload */ false );
 	if ( !$ctype || $ctype === 'unknown/unknown' ) {
 		// Directory, extension-less file or unknown extension
-		wmfStaticShowError( 'Invalid file type', 400 );
+		wmfStaticShowError( 'Bad request', 400 );
 		return;
 	}
 
@@ -112,7 +112,7 @@ function wmfStaticRespond() {
 	// Ignore direct request (eg. "/w/static.php" or "/w/static.php/test")
 	// (use strpos instead of equal to ignore pathinfo and query string)
 	if ( strpos( $_SERVER['REQUEST_URI'], $_SERVER['SCRIPT_NAME'] ) === 0 ) {
-		wmfStaticShowError( 'Invalid request', 400 );
+		wmfStaticShowError( 'Bad request', 400 );
 		return;
 	}
 
