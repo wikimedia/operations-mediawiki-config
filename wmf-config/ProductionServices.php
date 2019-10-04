@@ -46,6 +46,7 @@ $common = [
 	'electron' => 'http://pdfrender.discovery.wmnet:5252',
 	'restbase' => 'http://restbase.discovery.wmnet:7231',
 	'sessionstore' => 'https://sessionstore.discovery.wmnet:8081',
+	'echostore' => 'https://echostore.discovery.wmnet:8082',
 
 	// cloudelastic only exists in eqiad. No load balancer is available due to
 	// the part of the network that they live in so each host is enumerated
