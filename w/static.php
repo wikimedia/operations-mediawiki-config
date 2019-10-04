@@ -38,16 +38,19 @@ define( 'MW_NO_SESSION', 1 );
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 require MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
 
+define( 'WMF_STATIC_5MIN', 300 );
+define( 'WMF_STATIC_24H', 86400 );
+define( 'WMF_STATIC_1Y', 31536000 );
+
 /**
  * @param string $message
  * @param int $status
- * @param int $smaxage
  */
-function wmfStaticShowError( $message, $status, $smaxage = 60 ) {
+function wmfStaticShowError( $message, $status ) {
 	HttpStatus::header( $status );
 	header(
 		'Cache-Control: ' .
-		's-maxage=' . (int)$smaxage . ', must-revalidate, max-age=0'
+		's-maxage=' . WMF_STATIC_5MIN . ', must-revalidate, max-age=0'
 	);
 	header( 'Content-Type: text/plain; charset=utf-8' );
 	echo "$message\n";
@@ -69,7 +72,7 @@ function wmfStaticStreamFile( $filePath, $responseType = 'nohash' ) {
 
 	$stat = stat( $filePath );
 	if ( !$stat ) {
-		wmfStaticShowError( 'Unknown file path', 404, 300 );
+		wmfStaticShowError( 'Unknown file path', 404 );
 		return;
 	}
 
@@ -80,12 +83,20 @@ function wmfStaticStreamFile( $filePath, $responseType = 'nohash' ) {
 	header( 'Last-Modified: ' . wfTimestamp( TS_RFC2822, $stat['mtime'] ) );
 	header( "Content-Type: $ctype" );
 	if ( $responseType === 'nohash' ) {
-		// 5 min (5 * 50) on proxy servers and 24 hours (24 * 3600) on clients
-		header( 'Cache-Control: public, s-maxage=300, must-revalidate, max-age=86400' );
+		// Unversioned files must be renewed within 24 hours
+		header(
+			sprintf( 'Cache-Control: public, s-maxage=%d, must-revalidate, max-age=%d',
+				WMF_STATIC_24H, WMF_STATIC_24H
+			)
+		);
 	} else {
-		// Response type "verified" or "unknown"
-		// 1 year (365 * 24 * 3600) on proxy servers and clients
-		header( 'Cache-Control: public, s-maxage=31536000, max-age=31536000' );
+		// Versioned and verifable files are considered immutable.
+		// Allow unconditional re-use for a year.
+		header(
+			sprintf( 'Cache-Control: public, s-maxage=%d, max-age=%d',
+				WMF_STATIC_1Y, WMF_STATIC_1Y
+			)
+		);
 	}
 
 	if ( !empty( $_SERVER['HTTP_IF_MODIFIED_SINCE'] ) ) {
@@ -199,7 +210,7 @@ function wmfStaticRespond() {
 	}
 
 	if ( !$fallback ) {
-		wmfStaticShowError( 'Unknown file path', 404, 300 );
+		wmfStaticShowError( 'Unknown file path', 404 );
 		$stats->increment( 'wmfstatic.notfound' );
 		return;
 	}
