@@ -8478,6 +8478,7 @@ function wmfGetVariantSettings() {
 	'fawiki' => true,
 	'fiwiki' => true, // T228008
 	'frwiki' => true,
+	'nlwiki' => true, // T234685
 	'plwiki' => true,
 	'ptwiki' => true, // T233754
 	'zhwiki' => true,
