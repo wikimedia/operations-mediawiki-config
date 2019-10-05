@@ -13816,6 +13816,8 @@ function wmfGetVariantSettings() {
 	'ruwikiversity' => true,
 	'sawiki' => true, // T99879
 	'strategywiki' => true,
+	'sqwiki' => true, // T234499
+	'sqwikiquote' => true, // T234499
 	'tawiki' => true, // T100431
 	'tcywiki' => true, // T209432
 	'thwiki' => true, // T30689
