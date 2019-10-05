@@ -14114,12 +14114,7 @@ function wmfGetVariantSettings() {
 	],
 ],
 'wgAbuseFilterParserClass' => [
-	'default' => 'AbuseFilterCachingParser',
-	// The below still have filters using invalid syntax
-	// that happened to work with the old parser – T156095
-	'viwiki' => 'AbuseFilterParser', // compat T156096
-	'enwikivoyage' => 'AbuseFilterParser', // compat T156096
-	'plwiki' => 'AbuseFilterParser', // compat T156096
+	'default' => 'AbuseFilterCachingParser', // T156095
 ],
 # @}
 
