@@ -9567,6 +9567,7 @@ function wmfGetVariantSettings() {
 			'reupload-own' => true,
 			'reupload-shared' => true,
 		],
+		'translationadmin' => [ 'autopatrol' => true, ],
 	],
 	'+metawiki' => [
 		'autopatrolled' => [ 'autopatrol' => true, ], // T27160
