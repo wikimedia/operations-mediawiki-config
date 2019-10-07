@@ -1629,5 +1629,9 @@ function wmfGetLabsOverrideSettings() {
 		'wgWBCitoidFullRestbaseURL' => [
 			'wikidatawiki' => 'https://en.wikipedia.beta.wmflabs.org/api/rest_',
 		],
+
+		'wgAllowRequiringEmailForResets' => [
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()
