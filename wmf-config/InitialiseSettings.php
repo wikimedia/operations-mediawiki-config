@@ -13244,23 +13244,23 @@ function wmfGetVariantSettings() {
 # wgDisableQueryPageUpdate @{
 'wgDisableQueryPageUpdate' => [
 	'default' => [
-		'Ancientpages',
-		'Deadendpages',
-		'Fewestrevisions',
-		'Mostlinked',
-		'Mostrevisions',
-		'Wantedpages',
+		'Ancientpages' => 'periodical',
+		'Deadendpages' => 'periodical',
+		'Fewestrevisions' => 'periodical',
+		'Mostlinked' => 'periodical',
+		'Mostrevisions' => 'periodical',
+		'Wantedpages' => 'periodical',
 	],
 	'small' => [],
 
 	// Individual wikis
 	'+enwiki' => [
-		'Lonelypages',
-		'Mostcategories',
-		'Mostlinkedcategories',
-		'Mostlinkedtemplates',
-		'Uncategorizedcategories',
-		'Wantedtemplates',
+		'Lonelypages' => 'periodical',
+		'Mostcategories' => 'periodical',
+		'Mostlinkedcategories' => 'periodical',
+		'Mostlinkedtemplates' => 'periodical',
+		'Uncategorizedcategories' => 'periodical',
+		'Wantedtemplates' => 'periodical',
 	],
 	'+frwiki' => [
 		'Mostcategories',
