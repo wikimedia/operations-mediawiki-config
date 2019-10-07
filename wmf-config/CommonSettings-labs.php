@@ -24,6 +24,20 @@ $wgDebugTimestamps = true;
 
 $wmgAddWikiNotify = false;
 
+// T211539 - relax CSP for certain beta img loads
+$wgCSPReportOnlyHeader['img-src'] = [
+	'*.wikimedia.beta.wmflabs.org',
+	'*.wikipedia.beta.wmflabs.org',
+	'*.wikinews.beta.wmflabs.org',
+	'*.wiktionary.beta.wmflabs.org',
+	'*.wikibooks.beta.wmflabs.org',
+	'*.wikiversity.beta.wmflabs.org',
+	'*.wikisource.beta.wmflabs.org',
+	'*.wikiquote.beta.wmflabs.org',
+	'*.wikidata.beta.wmflabs.org',
+	'*.wikivoyage.beta.wmflabs.org',
+];
+
 # Use a different address from the production one - T192686
 $wgPasswordSender = 'wiki@wikimedia.beta.wmflabs.org';
 
