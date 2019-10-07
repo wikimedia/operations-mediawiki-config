@@ -3859,29 +3859,6 @@ if ( PHP_SAPI === 'cli' ) {
 	wfLoadExtension( 'ActiveAbstract' );
 }
 
-if ( $wmfRealm === 'labs' ) {
-	require "$wmfConfigDir/CommonSettings-labs.php";
-}
-
-foreach ( $wgGroupPermissions as $group => $_ ) {
-	if ( $group !== 'interface-admin' && (
-		!empty( $wgGroupPermissions[$group]['editsitecss'] )
-		|| !empty( $wgGroupPermissions[$group]['editsitejs'] )
-		|| !empty( $wgGroupPermissions[$group]['editusercss'] )
-		|| !empty( $wgGroupPermissions[$group]['edituserjs'] )
-		|| !empty( $wgGroupPermissions[$group]['editmyuserjsredirect'] )
-	) ) {
-		// enforce that interace-admin is the only group that can edit non-own CSS/JS
-		unset(
-			$wgGroupPermissions[$group]['editsitecss'],
-			$wgGroupPermissions[$group]['editsitejs'],
-			$wgGroupPermissions[$group]['editusercss'],
-			$wgGroupPermissions[$group]['edituserjs'],
-			$wgGroupPermissions[$group]['editmyuserjsredirect']
-		);
-	}
-}
-
 if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession ) {
 	// Temporary global whitelist for origins used by trusted
 	// opt-in scripts, until a per-user ability for this exists.
@@ -3945,6 +3922,29 @@ if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession ) {
 			],
 		];
 	};
+}
+
+if ( $wmfRealm === 'labs' ) {
+	require "$wmfConfigDir/CommonSettings-labs.php";
+}
+
+foreach ( $wgGroupPermissions as $group => $_ ) {
+	if ( $group !== 'interface-admin' && (
+		!empty( $wgGroupPermissions[$group]['editsitecss'] )
+		|| !empty( $wgGroupPermissions[$group]['editsitejs'] )
+		|| !empty( $wgGroupPermissions[$group]['editusercss'] )
+		|| !empty( $wgGroupPermissions[$group]['edituserjs'] )
+		|| !empty( $wgGroupPermissions[$group]['editmyuserjsredirect'] )
+	) ) {
+		// enforce that interace-admin is the only group that can edit non-own CSS/JS
+		unset(
+			$wgGroupPermissions[$group]['editsitecss'],
+			$wgGroupPermissions[$group]['editsitejs'],
+			$wgGroupPermissions[$group]['editusercss'],
+			$wgGroupPermissions[$group]['edituserjs'],
+			$wgGroupPermissions[$group]['editmyuserjsredirect']
+		);
+	}
 }
 
 if ( $wmgShowRollbackConfirmationDefaultUserOptions ) {
