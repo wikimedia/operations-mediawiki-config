@@ -1633,5 +1633,9 @@ function wmfGetLabsOverrideSettings() {
 		'wgAllowRequiringEmailForResets' => [
 			'default' => true,
 		],
+
+		'wgLegacyJavaScriptGlobals' => [
+			'default' => false,
+		],
 	];
 } # wmflLabsSettings()
