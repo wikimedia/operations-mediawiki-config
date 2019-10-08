@@ -1640,6 +1640,10 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true,
 		],
 
+		'wmgUseCSPReportOnly' => [
+			'default' => true,
+		],
+
 		'wgLegacyJavaScriptGlobals' => [
 			'default' => false,
 		],
