@@ -15,49 +15,17 @@
 #
 
 
-$cirrusConfigUseHhvmPool = function ( $hosts, $pool ) {
-	if ( !defined( 'HHVM_VERSION' ) ) {
-		return $hosts;
-	}
-	if ( !is_array( $hosts ) ) {
-		return $hosts;
-	}
-	return array_map( function ( $hostConfig ) use ( $pool ) {
-		if ( is_array( $hostConfig ) ) {
-			if ( isset( $hostConfig['transport'] ) && $hostConfig['transport'] === 'Https' ) {
-				$hostConfig['transport'] = 'CirrusSearch\\Elastica\\PooledHttps';
-				$hostConfig['config'] = [
-					'pool' => $pool
-				];
-			}
-			return $hostConfig;
-		}
-		return [
-			'transport' => 'CirrusSearch\\Elastica\\PooledHttps',
-			'port' => '9243',
-			'host' => $hostConfig,
-			'config' => [
-				'pool' => $pool,
-			],
-		];
-	}, $hosts );
-};
-
 $wgCirrusSearchClusters = [
-	'eqiad-chi' => $cirrusConfigUseHhvmPool( $wmfAllServices['eqiad']['search-chi'], 'cirrus-eqiad' ) + [ 'group' => 'chi', 'replica' => 'eqiad' ],
-	'codfw-chi' => $cirrusConfigUseHhvmPool( $wmfAllServices['codfw']['search-chi'], 'cirrus-codfw' ) + [ 'group' => 'chi', 'replica' => 'codfw' ],
-	// cloudelastic servers talk directly, with no connection pool, as only jobrunners ever communicate with them. Additionally cloudelastic
-	// is only available in the 'production' realm, which this file services.
+	'eqiad-chi' => $wmfAllServices['eqiad']['search-chi'] + [ 'group' => 'chi', 'replica' => 'eqiad' ],
+	'codfw-chi' => $wmfAllServices['codfw']['search-chi'] + [ 'group' => 'chi', 'replica' => 'codfw' ],
 	'cloudelastic-chi' => $wmfAllServices['eqiad']['cloudelastic-chi'] + [ 'group' => 'chi', 'replica' => 'cloudelastic' ],
-	'eqiad-psi' => $cirrusConfigUseHhvmPool( $wmfAllServices['eqiad']['search-psi'], 'cirrus-eqiad' ) + [ 'group' => 'psi', 'replica' => 'eqiad' ],
-	'codfw-psi' => $cirrusConfigUseHhvmPool( $wmfAllServices['codfw']['search-psi'], 'cirrus-codfw' ) + [ 'group' => 'psi', 'replica' => 'codfw' ],
+	'eqiad-psi' => $wmfAllServices['eqiad']['search-psi'] + [ 'group' => 'psi', 'replica' => 'eqiad' ],
+	'codfw-psi' => $wmfAllServices['codfw']['search-psi'] + [ 'group' => 'psi', 'replica' => 'codfw' ],
 	'cloudelastic-psi' => $wmfAllServices['eqiad']['cloudelastic-psi'] + [ 'group' => 'psi', 'replica' => 'cloudelastic' ],
-	'eqiad-omega' => $cirrusConfigUseHhvmPool( $wmfAllServices['eqiad']['search-omega'], 'cirrus-eqiad' ) + [ 'group' => 'omega', 'replica' => 'eqiad' ],
-	'codfw-omega' => $cirrusConfigUseHhvmPool( $wmfAllServices['codfw']['search-omega'], 'cirrus-codfw' ) + [ 'group' => 'omega', 'replica' => 'codfw' ],
+	'eqiad-omega' => $wmfAllServices['eqiad']['search-omega'] + [ 'group' => 'omega', 'replica' => 'eqiad' ],
+	'codfw-omega' => $wmfAllServices['codfw']['search-omega'] + [ 'group' => 'omega', 'replica' => 'codfw' ],
 	'cloudelastic-omega' => $wmfAllServices['eqiad']['cloudelastic-omega'] + [ 'group' => 'omega', 'replica' => 'cloudelastic' ],
 ];
-
-unset( $cirrusConfigUseHhvmPool );
 
 // wgCirrusSearchExtraIndexes is set in CirrusSearch-common.php
 if ( isset( $wgCirrusSearchExtraIndexes[NS_FILE] ) ) {
