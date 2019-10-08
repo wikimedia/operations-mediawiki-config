@@ -8413,7 +8413,8 @@ function wmfGetVariantSettings() {
 			'image-reviewer' => [ 32, 60 ],
 		],
 		'edit' => [
-			'newbie' => [ 8 * 15, 60 * 15 ], // T225148
+			'ip' => [ 8 * 15, 60 * 15 ], // T225148
+			'newbie' => [ 8 * 15, 60 * 5 ], // T231463
 			'user' => [ 900, 60 * 3 ], // T194864
 			// Higher rate limit for trusted users
 			'image-reviewer' => [ 10500, 60 * 3 ],
