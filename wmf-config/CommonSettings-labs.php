@@ -28,8 +28,7 @@ $wmgAddWikiNotify = false;
 $wgExtensionFunctions[] = function () {
 	global $wgCSPReportOnlyHeader;
 	$wgCSPReportOnlyHeader['img-src'] = array_unique( array_merge(
-		[],
-		$wgCSPReportOnlyHeader['img-src'],
+		$wgCSPReportOnlyHeader['img-src'] ?? [],
 		[
 			'*.wikimedia.beta.wmflabs.org',
 			'*.wikipedia.beta.wmflabs.org',
