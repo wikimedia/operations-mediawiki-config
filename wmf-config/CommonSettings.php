@@ -3958,15 +3958,26 @@ if ( $wmgUseTheWikipediaLibrary ) {
 }
 
 // This is a temporary hack for hooking up Parsoid/PHP with MediaWiki
-// on scandium and the beta cluster
-if ( wfHostName() === 'scandium' || $wmfRealm === 'labs' ) {
+// on scandium, wtp1025,wtp2001 and the beta cluster
+$hostName = wfHostName();
+if ( $hostName === 'scandium' || $hostName === 'wtp1025' || $hostName === 'wtp2001' || $wmfRealm === 'labs' ) {
 	$parsoidDir = '/srv/deployment/parsoid/deploy/src';
 	if ( file_exists( "$parsoidDir/extension.json" ) ) {
-		wfLoadExtension( 'Parsoid/PHP', "$parsoidDir/extension.json" );
 		$wgEnableRestAPI = true;
-		if ( wfHostName() === 'scandium' &&
-			file_exists( "$parsoidDir/tests/RTTestSettings.php" )
-		) {
+
+		// While we are testing & benchmarking, make production db access read-only
+		$wgReadOnly = $wmfRealm !== 'labs';
+		$wgParsoidSettings = [
+			'useSelser' => true,
+			// Temporarily condition on $wgReadOnly while testing & benchmarking
+			// so we don't try to update lint information in the production dbs.
+			'linting' => (bool)$wgReadOnly
+		];
+
+		wfLoadExtension( 'Parsoid/PHP', "$parsoidDir/extension.json" );
+
+		// Override settings specific to round-trip testing on scandium
+		if ( $hostName === 'scandium' && file_exists( "$parsoidDir/tests/RTTestSettings.php" ) ) {
 			require_once "$parsoidDir/tests/RTTestSettings.php";
 		}
 	}
