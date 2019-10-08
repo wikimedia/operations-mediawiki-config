@@ -3884,43 +3884,37 @@ if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession ) {
 				return;
 			}
 		}
-		$wgCSPReportOnlyHeader = [
-			'useNonces' => false,
-			'includeCORS' => false,
-			'default-src' => [
-				'*.wikimedia.org',
-				'*.wikipedia.org',
-				'*.wikinews.org',
-				'*.wiktionary.org',
-				'*.wikibooks.org',
-				'*.wikiversity.org',
-				'*.wikisource.org',
-				'wikisource.org',
-				'*.wikiquote.org',
-				'*.wikidata.org',
-				'*.wikivoyage.org',
-				'*.mediawiki.org',
+
+		$wgCSPReportOnlyHeader['useNonces'] = false;
+		$wgCSPReportOnlyHeader['includeCORS'] = false;
+
+		// Do not alter this without talking to the Security team first.
+		$approvedContentSecurityPolicyDomains = [
+			// A future refinement might be to not allow wildcard on *.wikimedia.org,
+			// but to explicitly list instead. See $wgCrossSiteAJAXdomains above.
+			'*.wikimedia.org',
+			'*.wikipedia.org',
+			'*.wikinews.org',
+			'*.wiktionary.org',
+			'*.wikibooks.org',
+			'*.wikiversity.org',
+			'*.wikisource.org',
+			'wikisource.org',
+			'*.wikiquote.org',
+			'*.wikidata.org',
+			'*.wikivoyage.org',
+			'*.mediawiki.org',
+		];
+
+		$wgCSPReportOnlyHeader['default-src'] = array_merge(
+			$approvedContentSecurityPolicyDomains,
+			[
 				// Needed for Math. Remove when/if math is fixed.
 				'wikimedia.org',
-			],
-			'script-src' => [
-				// A future refinement might be
-				// to not allow wildcard on *.wikimedia.org
-				// but explicitly list instead
-				'*.wikimedia.org',
-				'*.wikipedia.org',
-				'*.wikinews.org',
-				'*.wiktionary.org',
-				'*.wikibooks.org',
-				'*.wikiversity.org',
-				'*.wikisource.org',
-				'wikisource.org',
-				'*.wikiquote.org',
-				'*.wikidata.org',
-				'*.wikivoyage.org',
-				'*.mediawiki.org',
-			],
-		];
+			]
+		);
+
+		$wgCSPReportOnlyHeader['script-src'] = $approvedContentSecurityPolicyDomains;
 	};
 }
 
