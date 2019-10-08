@@ -278,6 +278,7 @@ function wmfGetVariantSettings() {
 	'arbcom_nlwiki' => 'Europe/Berlin',
 	'aswikisource' => 'Asia/Kolkata', // T45129
 	'atjwiki' => 'America/Montreal', // T167714
+	'banwiki' => 'Asia/Makassar',
 	'barwiki' => 'Europe/Berlin',
 	'bat_smgwiki' => 'Europe/Vilnius',
 	'bawikibooks' => 'Asia/Yekaterinburg', // T173471
@@ -2213,6 +2214,7 @@ function wmfGetVariantSettings() {
 	'azbwiki' => 'ویکی‌پدیا', // T106305
 	'bawiki' => 'Википедия', // T43167
 	'bawikibooks' => 'Викидәреслек', // T173471
+	'banwiki' => 'Wikipédia',
 	'bdwikimedia' => 'উইকিমিডিয়া বাংলাদেশ',
 	'be_x_oldwiki' => 'Вікіпэдыя',
 	'bewiki' => 'Вікіпедыя',
@@ -2731,6 +2733,7 @@ function wmfGetVariantSettings() {
 	'azbwiki' => 'ویکی‌پدیا', // T106305
 	'bawiki' => 'Википедия', // T43167
 	'bawikibooks' => 'Викидәреслек', // T173471
+	'banwiki' => 'Wikipédia',
 	'bat_smgwiki' => 'Vikipedėjė',
 	'bdwikimedia' => 'উইকিমিডিয়া_বাংলাদেশ',
 	'be_x_oldwiki' => 'Вікіпэдыя',
