@@ -17037,8 +17037,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgMFAdvancedMobileContributions' => [
-	'default' => false,
-	'wikipedia' => true, // T228916
+	'default' => true, // T233612
 ],
 
 'wgMFAmcOutreach' => [
