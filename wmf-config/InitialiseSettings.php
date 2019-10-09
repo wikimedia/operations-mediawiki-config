@@ -17042,7 +17042,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgMFAmcOutreach' => [
-	'default' => false, // /T231436
+	'default' => true, // T234026
 ],
 
 'wgMFAmcOutreachMinEditCount' => [
