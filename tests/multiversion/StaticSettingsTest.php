@@ -1,7 +1,6 @@
 <?php
 // Ensure that we're not casting any types
-// TODO: Uncomment once we're not testing in HHVM.
-// declare( strict_types = 1 );
+declare( strict_types = 1 );
 
 class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 
