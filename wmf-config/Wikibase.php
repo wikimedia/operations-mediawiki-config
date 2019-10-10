@@ -224,7 +224,7 @@ if ( $wmgUseWikibaseRepo ) {
 
 	// T235033
 	if ( isset( $wmgWikibaseRepoDataBridgeEnabled ) ) {
-		$wgWBRepoSettings['dataBridgeEnabled'] = $wmgWikibaseRepoDataBridgeEnabledx;
+		$wgWBRepoSettings['dataBridgeEnabled'] = $wmgWikibaseRepoDataBridgeEnabled;
 	}
 
 	$wgWBRepoSettings['enableRefTabs'] = $wmgWikibaseRepoEnableRefTabs;
