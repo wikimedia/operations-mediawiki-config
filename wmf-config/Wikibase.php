@@ -335,11 +335,11 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['tmpItemTermsMigrationStage'] = $wmgWikibaseTmpItemTermsMigrationStage;
 
 	// T226816
-	if ( isset( $wmgWikibaseUseDataBridge ) && isset( $wmgWikibaseDataBridgeHrefRegExp ) ) {
-		$wgWBClientSettings['dataBridgeEnabled'] = $wmgWikibaseUseDataBridge;
-		$wgWBClientSettings['dataBridgeHrefRegExp'] = $wmgWikibaseDataBridgeHrefRegExp;
-		if ( isset( $wmgWikibaseDataBridgeEditTags ) ) {
-			$wgWBClientSettings['dataBridgeEditTags'] = $wmgWikibaseDataBridgeEditTags;
+	if ( isset( $wmgWikibaseClientDataBridgeEnabled ) && isset( $wmgWikibaseClientDataBridgeHrefRegExp ) ) {
+		$wgWBClientSettings['dataBridgeEnabled'] = $wmgWikibaseClientDataBridgeEnabled;
+		$wgWBClientSettings['dataBridgeHrefRegExp'] = $wmgWikibaseClientDataBridgeHrefRegExp;
+		if ( isset( $wmgWikibaseClientDataBridgeEditTags ) ) {
+			$wgWBClientSettings['dataBridgeEditTags'] = $wmgWikibaseClientDataBridgeEditTags;
 		}
 	}
 }
