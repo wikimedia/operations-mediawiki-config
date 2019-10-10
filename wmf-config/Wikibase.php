@@ -60,11 +60,6 @@ define( 'WB_NS_QUERY_TALK', 123 );
 // and wikibase_shared/1_31_0-wmf_2-wikidatawiki for all others.
 $wmgWBSharedCacheKey = 'wikibase_shared/' . str_replace( '.', '_', $wmgVersionNumber ) . '-' . $wmgWikibaseCachePrefix;
 
-if ( defined( 'HHVM_VERSION' ) ) {
-	// Split the cache up for hhvm. T73461
-	$wmgWBSharedCacheKey .= '-hhvm';
-}
-
 // Lock manager config must use the master datacenter
 // Use a TTL of 15 mins, no script will run for longer than this
 $wgLockManagers[] = [
