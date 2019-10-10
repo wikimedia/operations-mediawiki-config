@@ -45,8 +45,6 @@ $wgLDAPLowerCaseUsername = [ 'labs' => false, 'invaliddomain' => false ];
 $wgLDAPLockOnBlock = true;
 $wgLDAPLockPasswordPolicy = 'cn=disabled,ou=ppolicies,dc=wikimedia,dc=org';
 
-$wgLDAPDebug = 5; // Maximally verbose logs for Andrew Bogott, 8-Dec-2015
-
 // Local debug logging for troubleshooting LDAP issues
 // @codingStandardsIgnoreStart
 if ( false ) {
