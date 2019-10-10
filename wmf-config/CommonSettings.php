@@ -209,11 +209,7 @@ list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 
 require_once __DIR__ . '/../multiversion/MWConfigCacheGenerator.php';
 
-$confCacheFileName = "conf2-$wgDBname";
-if ( defined( 'HHVM_VERSION' ) ) {
-	$confCacheFileName .= '-hhvm';
-}
-$confCacheFileName .= '.json';
+$confCacheFileName = "conf2-$wgDBname.json";
 
 $confActualMtime = filemtime( "$wmfConfigDir/InitialiseSettings.php" );
 
