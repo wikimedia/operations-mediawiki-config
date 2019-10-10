@@ -20,7 +20,6 @@ mwconfig_files_txt=(
 	FeaturedFeedsWMF.php
 	filebackend.php
 	flaggedrevs.php
-	HHVMRequestInit.php
 	import.php
 	interwiki.php
 	interwiki-labs.php
