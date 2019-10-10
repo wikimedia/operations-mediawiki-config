@@ -1293,6 +1293,12 @@ function wmfGetLabsOverrideSettings() {
 			'wikidatawiki' => MIGRATION_WRITE_NEW // Override production
 		],
 
+		// T235033
+		'wmgWikibaseRepoDataBridgeEnabled' => [
+			'default' => false,
+			'wikidatawiki' => true,
+		],
+
 		// T226816
 		'wmgWikibaseClientDataBridgeEnabled' => [
 			'default' => true,

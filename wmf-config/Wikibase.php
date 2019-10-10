@@ -222,6 +222,11 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['tmpPropertyTermsMigrationStage'] = $wmgWikibaseTmpPropertyTermsMigrationStage;
 	$wgWBRepoSettings['tmpItemTermsMigrationStages'] = $wmgWikibaseTmpItemTermsMigrationStage;
 
+	// T235033
+	if ( isset( $wmgWikibaseRepoDataBridgeEnabled ) ) {
+		$wgWBRepoSettings['dataBridgeEnabled'] = $wmgWikibaseRepoDataBridgeEnabledx;
+	}
+
 	$wgWBRepoSettings['enableRefTabs'] = $wmgWikibaseRepoEnableRefTabs;
 }
 
