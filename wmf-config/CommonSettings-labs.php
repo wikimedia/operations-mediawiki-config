@@ -356,7 +356,7 @@ $wgAuthManagerAutoConfig['preauth'][GuanacoProvider::class] = [
 	'sort' => 0,
 ];
 class GuanacoProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvider {
-	const EVILUA = 'Bawolff test';
+	private const EVILUA = 'Bawolff test';
 
 	/**
 	 * @param User $user

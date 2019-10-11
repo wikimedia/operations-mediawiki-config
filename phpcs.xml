@@ -12,6 +12,7 @@
 		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment" />
 		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.SingleSpaceBeforeSingleLineComment" />
 		<exclude name="Squiz.PHP.NonExecutableCode.ReturnNotRequired" />
+		<exclude name="MediaWiki.Commenting.FunctionComment.SuperfluousVariadicArgComment" />
 	</rule>
 	<file>.</file>
 	<arg name="bootstrap" value="./vendor/mediawiki/mediawiki-codesniffer/utils/bootstrap-ci.php"/>
