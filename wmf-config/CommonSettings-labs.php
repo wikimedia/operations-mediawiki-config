@@ -120,6 +120,15 @@ $wgDnsBlacklistUrls   = [
 	'proxies.dnsbl.sorbs.net.',
 ];
 
+if ( $wmgUseGlobalPreferences ) {
+	// Allow global preferences for email-blacklist to be auto-set where it is overridden
+	// T231577
+	$wgGlobalPreferencesAutoPrefs = [
+		'email-blacklist',
+		'echo-notifications-blacklist'
+	];
+}
+
 if ( $wmgUseFlow ) {
 	// Override CommonSettings.php, which has:
 	// $wgFlowExternalStore = $wgDefaultExternalStore;
