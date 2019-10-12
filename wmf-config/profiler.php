@@ -313,9 +313,6 @@ function wmfExcimerFlushCallback( $log, $options ) {
 		//   If any socket read takes longer than $timeout, it throws (T206092).
 		//   As of writing, this is rare (a few times per day at most),
 		//   which is considered an acceptable loss in profile samples.
-
-		// Write to log with low severity
-		trigger_error( get_class( $e ) . ': ' . $e->getMessage(), E_USER_NOTICE );
 		$error = 'exception';
 	}
 

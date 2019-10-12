@@ -29,6 +29,7 @@ $wmfServiceConfig = Wikimedia\MWConfig\ServiceConfig::getInstance();
 wmfSetupProfiler( [
 	'redis-host' => $wmfServiceConfig->getLocalService( 'xenon' ),
 	'redis-port' => 6379,
+	// Connection timeout, in seconds.
 	'redis-timeout' => $wmfServiceConfig->getRealm() === 'labs' ? 1 : 0.1,
 	'use-xhgui' => (bool)$wmfServiceConfig->getLocalService( 'xhgui' ),
 	'xhgui-conf' => [
