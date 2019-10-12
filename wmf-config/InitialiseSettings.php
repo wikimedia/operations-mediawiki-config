@@ -18594,9 +18594,6 @@ function wmfGetVariantSettings() {
 		],
 	],
 ],
-'wmgReduceStartupExpiry' => [
-	'default' => false,
-],
 
 'wmgMemoryLimit' => [
 	'default' => 660 * 1024 * 1024, // 660MB
