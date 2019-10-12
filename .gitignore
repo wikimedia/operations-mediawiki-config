@@ -18,12 +18,11 @@ wikiversions-labs.php
 # Test runners
 /logs
 /.phpunit.result.cache
+/vendor
 
 # Operating system stuff
 ## Mac OS X
 .DS_Store
-
-/vendor/**/.git
 
 # python stuff
 *.pyc

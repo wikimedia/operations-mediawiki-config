@@ -279,18 +279,6 @@ class MongoClient
     }
 
     /**
-     * Gets a database
-     *
-     * @param string $dbname - The database name.
-     *
-     * @return MongoDB - Returns a new db object.
-     */
-    public function __get($dbname)
-    {
-        return $this->selectDB($dbname);
-    }
-
-    /**
      * Given a host string, validate and parse it into hostname and port parts
      *
      * @param $host_str string - The host:port string

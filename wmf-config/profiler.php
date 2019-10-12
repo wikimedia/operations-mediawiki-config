@@ -146,7 +146,7 @@ function wmfSetupTideways( $options ) {
 				 * "mongofill", which is a plain PHP implementation originally written to support
 				 * HHVM, but also works fine on PHP7.2.
 				 */
-				require_once __DIR__ . '/../vendor/autoload.php';
+				require_once __DIR__ . '/../lib/profiler-autoload.php';
 
 				$sec  = $_SERVER['REQUEST_TIME'];
 				$usec = $_SERVER['REQUEST_TIME_FLOAT'] - $sec;
@@ -189,13 +189,20 @@ function wmfSetupTideways( $options ) {
 					'SERVER'           => $server,
 					'get'              => $get,
 					'env'              => $env,
-					'simple_url'       => Xhgui_Util::simpleUrl( $url ),
+					'simple_url'       => $url,
 					'request_ts'       => new MongoDate( $sec ),
 					'request_ts_micro' => new MongoDate( $sec, $usec ),
 					'request_date'     => date( 'Y-m-d', $sec ),
 				];
 
-				Xhgui_Saver::factory( $options['xhgui-conf'] )->save( $data );
+				$mongo = new MongoClient(
+					$options['xhgui-conf']['mongodb.host'],
+					$options['xhgui-conf']['mongodb.options']
+				);
+				$collection = $mongo->selectDB( 'xhprof' )->selectCollection( 'results' );
+				$collection->findOne();
+				$saver = new Xhgui_Saver_Mongo( $collection );
+				$saver->save( $data );
 			};
 
 			// Register the callback as a shutdown_function, so that the profile

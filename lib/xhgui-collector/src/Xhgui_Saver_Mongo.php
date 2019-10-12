@@ -1,6 +1,6 @@
 <?php
 
-class Xhgui_Saver_Mongo implements Xhgui_Saver_Interface
+class Xhgui_Saver_Mongo
 {
     /**
      * @var MongoCollection

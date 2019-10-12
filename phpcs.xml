@@ -47,6 +47,8 @@
 
 	<exclude-pattern>\.git/</exclude-pattern>
 	<exclude-pattern>vendor/</exclude-pattern>
+	<exclude-pattern>lib/mongofill/</exclude-pattern>
+	<exclude-pattern>lib/xhgui-collector/</exclude-pattern>
 	<exclude-pattern>*/portals/*</exclude-pattern>
 	<!-- Auto generated files -->
 	<exclude-pattern>wmf-config/interwiki\.php</exclude-pattern>

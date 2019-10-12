@@ -33,10 +33,8 @@ wmfSetupProfiler( [
 	'redis-timeout' => $wmfServiceConfig->getRealm() === 'labs' ? 1 : 0.1,
 	'use-xhgui' => (bool)$wmfServiceConfig->getLocalService( 'xhgui' ),
 	'xhgui-conf' => [
-		'save.handler' => 'mongodb',
-		'db.host'      => $wmfServiceConfig->getLocalService( 'xhgui' ),
-		'db.db'        => 'xhprof',
-		'db.options'   => [],
+		'mongodb.host' => $wmfServiceConfig->getLocalService( 'xhgui' ),
+		'mongodb.options' => [],
 	],
 	'excimer-production-period' => 60,
 	'excimer-single-period' => 0.01,

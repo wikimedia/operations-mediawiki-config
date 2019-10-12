@@ -52,18 +52,6 @@ class MongoDB
     }
 
     /**
-     * Gets a collection
-     *
-     * @param string $name - The name of the collection.
-     *
-     * @return MongoCollection - Returns the collection.
-     */
-    public function __get($name)
-    {
-        return $this->selectCollection($name);
-    }
-
-    /**
      * @return MongoClient
      */
     public function _getClient()
@@ -204,19 +192,6 @@ class MongoDB
     public function getIndexesCollection()
     {
         return $this->selectCollection(self::INDEX_COLLECTION);
-    }
-
-    /**
-     * Fetches toolkit for dealing with files stored in this database
-     *
-     * @param string $prefix - The prefix for the files and chunks
-     *   collections.
-     *
-     * @return MongoGridFS - Returns a new gridfs object for this database.
-     */
-    public function getGridFS($prefix = 'fs')
-    {
-        return new MongoGridFS($this, $prefix);
     }
 
     /**
@@ -450,20 +425,6 @@ class MongoDB
             $this->readPreference = $newPreference;
         }
         return (bool)$newPreference;
-    }
-
-    /**
-     * Change slaveOkay setting for this database
-     *
-     * @param bool $ok - If reads should be sent to secondary members of a
-     *   replica set for all possible queries using this MongoDB instance.
-     *
-     * @return bool - Returns the former value of slaveOkay for this
-     *   instance.
-     */
-    public function setSgetGridFSlaveOkay($ok = true)
-    {
-        throw new Exception('Not Implemented');
     }
 
     /**
