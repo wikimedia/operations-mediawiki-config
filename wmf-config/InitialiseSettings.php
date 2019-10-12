@@ -16935,6 +16935,12 @@ function wmfGetVariantSettings() {
 	// T162010
 	'eswikivoyage' => [],
 	'fawikivoyage' => [],
+	'hewikivoyage' => [ // T234278
+		'copyright' => '/static/images/mobile/copyright/wikivoyage-wordmark-he.svg',
+		'copyright-width' => 96,
+		'copyright-height' => 18,
+	],
+	// T162010
 	'zhwikivoyage' => [],
 	'wiktionary' => [],
 	'commonswiki' => [
