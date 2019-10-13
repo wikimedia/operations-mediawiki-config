@@ -4037,6 +4037,42 @@ $wgExtensionFunctions[] = function () {
 	}
 };
 
+class ClosedWikiProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvider {
+	/**
+	 * @param \MediaWiki\Auth\AuthenticationRequest[] $reqs
+	 * @return \StatusValue
+	 */
+	public function testForAuthentication( array $reqs ) {
+		$username = \MediaWiki\Auth\AuthenticationRequest::getUsernameFromRequests( $reqs );
+		$user = User::newFromName( $username );
+		if ( $user->getId() ) { // User already exists, do not block authentication
+			return \StatusValue::newGood();
+		}
+		$central = CentralAuthUser::getInstance( $user );
+		if (
+			$central->hasGlobalPermission( 'createaccount' ) ||
+			$central->hasGlobalPermission( 'autocreateaccount' )
+		) {
+			// User can autocreate account per global permissions
+			return \StatusValue::newGood();
+		}
+		$logger = \MediaWiki\Logger\LoggerFactory::getInstance( 'authentication' );
+		$logger->error(
+			'Account autocreation denied for non-steward {name}', [
+				'name' => $username
+			]
+		);
+		return \StatusValue::newFatal( 'authmanager-autocreate-noperm' );
+	}
+}
+
+if ( in_array( $wgDBname, MWWikiversions::readDbListFile( 'closed' ) ) ) {
+	$wgAuthManagerAutoConfig['preauth'][\ClosedWikiProvider::class] = [
+		'class' => \ClosedWikiProvider::class,
+		'sort' => 0,
+	];
+}
+
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER

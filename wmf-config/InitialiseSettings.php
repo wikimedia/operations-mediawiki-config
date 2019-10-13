@@ -8584,6 +8584,7 @@ function wmfGetVariantSettings() {
 		'*' => [
 			'edit' => false,
 			'createaccount' => false,
+			'autocreateaccount' => true,
 		],
 		'user' => [
 			'edit' => false,
