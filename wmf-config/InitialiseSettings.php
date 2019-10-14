@@ -551,6 +551,7 @@ function wmfGetVariantSettings() {
 	'azwiki' => '/static/images/project-logos/azwiki.png',  // T50397
 	'azbwiki' => '/static/images/project-logos/azbwiki.png',  // T106305
 	'bawiki' => '/static/images/project-logos/bawiki.png',
+	'banwiki' => '/static/images/project-logos/banwiki.png',
 	'barwiki' => '/static/images/project-logos/barwiki.png',  // T42285
 	'bat_smgwiki' => '/static/images/project-logos/bat_smgwiki.png',  // T48589
 	'bclwiki' => '/static/images/project-logos/bclwiki.png',
@@ -1302,6 +1303,7 @@ function wmfGetVariantSettings() {
 	'aywiki' => [ '1.5x' => '/static/images/project-logos/aywiki-1.5x.png', '2x' => '/static/images/project-logos/aywiki-2x.png' ], // T150618
 	'azbwiki' => [ '1.5x' => '/static/images/project-logos/azbwiki-1.5x.png', '2x' => '/static/images/project-logos/azbwiki-2x.png' ], // T150618
 	'azwiki' => [ '1.5x' => '/static/images/project-logos/azwiki-1.5x.png', '2x' => '/static/images/project-logos/azwiki-2x.png' ], // T150618
+	'banwiki' => [ '1.5x' => '/static/images/project-logos/banwiki-1.5x.png', '2x' => '/static/images/project-logos/banwiki-2x.png' ],
 	'barwiki' => [ '1.5x' => '/static/images/project-logos/barwiki-1.5x.png', '2x' => '/static/images/project-logos/barwiki-2x.png' ], // T150618
 	'bat_smgwiki' => [ '1.5x' => '/static/images/project-logos/bat_smgwiki-1.5x.png', '2x' => '/static/images/project-logos/bat_smgwiki-2x.png' ], // T150618
 	'bawiki' => [ '1.5x' => '/static/images/project-logos/bawiki-1.5x.png', '2x' => '/static/images/project-logos/bawiki-2x.png' ], // T150618
