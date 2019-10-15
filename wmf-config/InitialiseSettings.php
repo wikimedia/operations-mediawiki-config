@@ -13085,8 +13085,16 @@ function wmfGetVariantSettings() {
 	'votewiki' => false,
 ],
 
+'wgScoreFileBackend' => [
+	'default' => 'global-multiwrite'
+],
+
 'wmgScoreFileBackend' => [
 	'default' => 'global-multiwrite'
+],
+
+'wgScorePath' => [
+	'default' => '//upload.wikimedia.org/score'
 ],
 
 'wmgScorePath' => [
