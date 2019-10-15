@@ -13089,15 +13089,7 @@ function wmfGetVariantSettings() {
 	'default' => 'global-multiwrite'
 ],
 
-'wmgScoreFileBackend' => [
-	'default' => 'global-multiwrite'
-],
-
 'wgScorePath' => [
-	'default' => '//upload.wikimedia.org/score'
-],
-
-'wmgScorePath' => [
 	'default' => '//upload.wikimedia.org/score'
 ],
 
