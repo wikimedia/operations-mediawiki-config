@@ -537,7 +537,7 @@ function wmfGetLabsOverrideSettings() {
 			'default' => 'https://eventgate-logging.wmflabs.org/v1/events',
 		],
 
-		'-wmgScorePath' => [
+		'-wgScorePath' => [
 			'default' => "//upload.beta.wmflabs.org/score",
 		],
 
