@@ -53,7 +53,7 @@ $IP/extensions/ExternalGuidance/extension.json
 $IP/extensions/FeaturedFeeds/extension.json
 $IP/extensions/FileExporter/extension.json
 $IP/extensions/FileImporter/extension.json
-$IP/extensions/FlaggedRevs/FlaggedRevs.php
+$IP/extensions/FlaggedRevs/extension.json
 $IP/extensions/Flow/extension.json
 $IP/extensions/FundraiserLandingPage/extension.json
 $IP/extensions/FundraisingTranslateWorkflow/extension.json

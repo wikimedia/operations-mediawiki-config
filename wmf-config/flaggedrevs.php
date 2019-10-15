@@ -14,7 +14,7 @@
 #      `-- wmf-config/flaggedrevs.php
 #
 
-include "$IP/extensions/FlaggedRevs/FlaggedRevs.php";
+wfLoadExtension( 'FlaggedRevs' );
 
 $wgFlaggedRevsAutopromote = false;
 
