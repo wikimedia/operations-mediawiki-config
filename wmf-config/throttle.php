@@ -27,54 +27,6 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[] = [ // T232596
-	'from' => '2019-09-10T0:00 UTC',
-	'to' => '2019-09-30T0:00 UTC',
-	'range' => '194.214.218.20/30',
-	'dbname' => 'frwiki',
-	'value' => 200 // 178 enrolled students
-];
-
-$wmgThrottlingExceptions[] = [ // T232831
-	'from' => '2019-10-02T13:00 +2:00',
-	'to' => '2019-10-02T20:00 +2:00',
-	'range' => [ '195.113.180.192/26', '2001:718:9::/48' ],
-	'dbname' => [ 'cswiki', 'commonswiki', 'wikidatawiki' ],
-	'value' => 30 // 25 expected
-];
-
-$wmgThrottlingException[] = [ // T233199
-	'from' => '2019-10-01T0:00 +2:00',
-	'to' => '2019-10-04T0:00 +2:00',
-	'IP' => [ '88.100.221.84', '90.176.155.12', '80.188.128.54' ],
-	'dbname' => [ 'cswiki', 'commonswiki', 'wikidatawiki' ],
-	'value' => 70 // 50 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T233378
-	'from' => '2019-09-27T17:00 UTC',
-	'to' => '2019-09-27T23:00 UTC',
-	'range' => '200.72.159.0/26',
-	'dbname' => [ 'eswiki', 'enwiki', 'commonswiki', 'wikidatawiki' ],
-	'value' => 70 // 50 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T234024¨
-	'from' => '2019-09-30T0:00 +2:00',
-	'to' => '2019-09-31T0:00 +2:00',
-	'IP' => '89.177.52.35',
-	'dbname' => [ 'cswiki' ],
-	'value' => 10
-];
-
-$wmgThrottlingExceptions[] = [
-	'from' => '2019-10-02T17:00 +2:00',
-	'to' => '2019-10-02T21:00 +2:00',
-	'IP' => '193.179.64.210',
-	'dbname' => [ 'cswiki' ],
-	'value' => 30 // 20 expected
-];
-
 $wmgThrottlingExceptions[] = [ // T235493
 	'from' => '2019-10-15T0:00 +2:00',
 	'to' => '2019-10-18T0:00 +2:00',
