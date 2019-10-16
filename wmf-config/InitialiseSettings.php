@@ -12524,6 +12524,7 @@ function wmfGetVariantSettings() {
 	'srwiktionary' => [ 'w' ],
 	'srwikinews' => [ 'w:sr' ], // T214562
 	'srwikisource' => [ 'w' ],
+	'srwikiquote' => [ 'w' ], // T235419
 	'sswiki' => [ 've', 'st', 'zu', 'xh', 'af', 'en', 'es' ],
 	'sswiktionary' => [ 'w', 'en', 'af' ],
 	'stqwiki' => [ 'incubator' ],
