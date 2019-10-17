@@ -407,6 +407,7 @@ function wmfGetVariantSettings() {
 	'mkwikisource' => 'Europe/Berlin',
 	'mkwiktionary' => 'Europe/Berlin',
 	'minwiki' => 'Asia/Jakarta',
+	'mnwwiki' => 'Asia/Yangon',
 	'mrjwiki' => 'Europe/Moscow',
 	'mrwiki' => 'Asia/Kolkata',
 	'mrwikisource' => 'Asia/Kolkata',
@@ -699,6 +700,7 @@ function wmfGetVariantSettings() {
 	'mkwiki' => '/static/images/project-logos/mkwiki.png',
 	'mlwiki' => '/static/images/project-logos/mlwiki.png',
 	'mnwiki' => '/static/images/project-logos/mnwiki.png',  // T48589
+	'mnwwiki' => '/static/images/project-logos/mnwwiki.png',
 	'mrwiki' => '/static/images/project-logos/mrwiki.png',
 	'mrjwiki' => '/static/images/project-logos/mrjwiki.png',
 	'mswiki' => '/static/images/project-logos/mswiki.png',
@@ -1448,6 +1450,7 @@ function wmfGetVariantSettings() {
 	'mkwiki' => [ '1.5x' => '/static/images/project-logos/mkwiki-1.5x.png', '2x' => '/static/images/project-logos/mkwiki-2x.png' ], // T150618
 	'mlwiki' => [ '1.5x' => '/static/images/project-logos/mlwiki-1.5x.png', '2x' => '/static/images/project-logos/mlwiki-2x.png' ], // T150618
 	'mnwiki' => [ '1.5x' => '/static/images/project-logos/mnwiki-1.5x.png', '2x' => '/static/images/project-logos/mnwiki-2x.png' ], // T150618
+	'mnwwiki' => [ '1.5x' => '/static/images/project-logos/mnwwiki-1.5x.png', '2x' => '/static/images/project-logos/mnwwiki-2x.png' ],
 	'mrjwiki' => [ '1.5x' => '/static/images/project-logos/mrjwiki-1.5x.png', '2x' => '/static/images/project-logos/mrjwiki-2x.png' ], // T150618
 	'mrwiki' => [ '1.5x' => '/static/images/project-logos/mrwiki-1.5x.png', '2x' => '/static/images/project-logos/mrwiki-2x.png' ], // T150618
 	'mswiki' => [ '1.5x' => '/static/images/project-logos/mswiki-1.5x.png', '2x' => '/static/images/project-logos/mswiki-2x.png' ],
@@ -2475,6 +2478,7 @@ function wmfGetVariantSettings() {
 	'mlwikiquote' => 'വിക്കിചൊല്ലുകൾ',
 	'mlwikisource' => 'വിക്കിഗ്രന്ഥശാല',
 	'mlwiktionary' => 'വിക്കിനിഘണ്ടു',
+	'mnwwiki' => 'ဝဳကဳပဳဒဳယာ',
 	'movementroleswiki' => 'Movement Roles',
 	'mnwiki' => 'Википедиа',
 	'mrjwiki' => 'Википеди',
@@ -2991,6 +2995,7 @@ function wmfGetVariantSettings() {
 	'mlwikiquote' => 'വിക്കിചൊല്ലുകൾ',
 	'mlwikisource' => 'വിക്കിഗ്രന്ഥശാല',
 	'mlwiktionary' => 'വിക്കിനിഘണ്ടു',
+	'mnwwiki' => 'ဝဳကဳပဳဒဳယာ',
 	'movementroleswiki' => 'Wikipedia', // This was set up incorrectly.
 	'mrjwiki' => 'Википеди',
 	'mrwiki' => 'विकिपीडिया',
@@ -4195,6 +4200,10 @@ function wmfGetVariantSettings() {
 		'വിക്കി‌‌_നിഘണ്ടു_സംവാദം' => NS_PROJECT_TALK,
 		'ഘ' => 828, // T56951
 		'ഘസം' => 829, // T56951
+	],
+	'+mnwwiki' => [
+		'Portal' => 100,
+		'Portal_talk' => 101,
 	],
 	'+mrwiki' => [
 		'विपी' => NS_PROJECT,
@@ -6214,6 +6223,10 @@ function wmfGetVariantSettings() {
 	'minwiki' => [
 		100 => 'Portal', // Portal
 		101 => 'Diskusi_Portal', // Portal talk
+	],
+	'mnwwiki' => [
+		100 => 'ပါင်မုက်', // Portal
+		101 => 'ပါင်မုက်_ဓရီုကျာ', // Portal talk
 	],
 	'mrwiki' => [
 		100 => 'दालन',
