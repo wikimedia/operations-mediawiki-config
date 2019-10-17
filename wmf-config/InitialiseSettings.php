@@ -11115,7 +11115,7 @@ function wmfGetVariantSettings() {
 	],
 	'+nnwiki' => [
 		'bureaucrat' => [ 'autopatrolled', 'patroller' ],
-		'sysop' => [ 'autopatrolled', 'patroller' ],
+		'sysop' => [ 'autopatrolled', 'patroller', 'transwiki' ], // T231761
 	],
 	'+nlwikivoyage' => [
 		'bureaucrat' => [ 'autopatrolled' ], // T46082
@@ -11919,7 +11919,7 @@ function wmfGetVariantSettings() {
 		'bureaucrat' => [ 'autopatrolled' ], // T46082
 	],
 	'+nnwiki' => [
-		'bureaucrat' => [ 'autopatrolled', 'patroller' ],
+		'bureaucrat' => [ 'autopatrolled', 'patroller', 'transwiki' ], // T231761
 		'sysop' => [ 'autopatrolled' ],
 	],
 	'+nowiki' => [
@@ -12467,6 +12467,7 @@ function wmfGetVariantSettings() {
 	'nlwikibooks' => [ 'w' ],
 	'nlwikisource' => [ 'w', 'wikt', 'q', 'b', 'n', 'nl', 'de', 'en' ],
 	'nlwiktionary' => [ 'w', 'en', 'fr' ], // T12856
+	'nnwiki' => [ 's:no', 'q', 'no', 'da', 'sv', 'nl', 'en', 'de' ], // T231761
 	'nowiki' => [ 's', 'q', 'nn', 'da', 'sv', 'nl', 'en', 'de' ],
 	'nowikibooks' => [ 'sv', 'da', 'en', 'w', 'w:nn', 'w:sv', 'w:da', 'w:en' ],
 	'nowikinews' => [ 'sv' ],
