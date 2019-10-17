@@ -4218,8 +4218,7 @@ function wmfGetVariantSettings() {
 	'+mywiki' => [
 		'WP' => NS_PROJECT, // T119807
 	],
-	'+mywiktionary' =>
-	[
+	'+mywiktionary' => [
 		'WT' => NS_PROJECT, // T140998
 	],
 	'+mznwiki' => [
@@ -6804,7 +6803,7 @@ function wmfGetVariantSettings() {
 		103 => 'लेखकसम्भाषणम्', // T214553 - Author talk
 	],
 	'skwikisource' => [
-		102 => 'Autor',               // T122175
+		102 => 'Autor',             // T122175
 		103 => 'Diskusia_k_autorovi',
 	],
 	'srwikisource' => [
@@ -8700,10 +8699,7 @@ function wmfGetVariantSettings() {
 		],
 		'patroller' => [ 'patrol' => true, ], // T109755
 		'rollbacker' => [ 'rollback' => true, ], // T109755
-		'transwiki' => [ // T109755
-			'import' => true, // T109755
-			'importupload' => true, // T109755
-		],
+		'transwiki' => [ 'importupload' => true, ], // T109755
 	],
 	'+bnwiki' => [
 		'autoconfirmed' => [ 'patrol' => true ],
@@ -9005,9 +9001,7 @@ function wmfGetVariantSettings() {
 			'changetags' => true, // T97013
 			'extendedconfirmed' => true // T126607
 		],
-		'massmessage-sender' => [ // T60962
-			'massmessage' => true,
-		],
+		'massmessage-sender' => [ 'massmessage' => true, ], // T60962
 		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T126607
 		'extendedmover' => [ // T133981
 			'suppressredirect' => true,
@@ -9190,8 +9184,8 @@ function wmfGetVariantSettings() {
 		'rollbacker' => [ 'rollback' => true ], // T85381
 	],
 	'+fawikisource' => [
-		'autopatrolled' => [ 'autopatrol' => true, 'move-categorypages' => true ], // T187662
-		'patroller' => [ 'patrol' => true, 'move-categorypages' => true ], // T187662
+		'autopatrolled' => [ 'autopatrol' => true ], // T187662
+		'patroller' => [ 'patrol' => true ], // T187662
 		'rollbacker' => [ 'rollback' => true ], // T161946
 	],
 	'+fiwiki' => [
@@ -9320,7 +9314,7 @@ function wmfGetVariantSettings() {
 			'autopatrol' => true, // T62305
 			'rollback' => true, // T62305
 			'unwatchedpages' => true, // T73193
-			],
+		],
 		'autopatrolled' => [ 'autopatrol' => true ], // T29918
 	],
 	'+hewikiquote' => [
@@ -9430,8 +9424,8 @@ function wmfGetVariantSettings() {
 		'flood' => [ 'bot' => true, ], // T114930
 	],
 	'itwikibooks' => [
-		'user' => [ 'patrol' => false, 'move' => false ],
-		'autoconfirmed' => [ 'move' => true, 'patrol' => true ],
+		'user' => [ 'patrol' => false ],
+		'autoconfirmed' => [ 'patrol' => true ],
 		'autopatrolled' => [ 'autopatrol' => true, ],
 		'patroller' => [ 'autopatrol' => true, 'rollback' => true, ],
 		'flood' => [ 'bot' => true, ], // T41569
@@ -9708,7 +9702,7 @@ function wmfGetVariantSettings() {
 		'filemover' => [ 'movefile' => true ], // T95103
 		'templateeditor' => [ 'templateeditor' => true, 'editprotected' => true ], // T195557
 		'flood' => [ 'bot' => true ], // T211181
-		'transwiki' => [ 'oathauth-enable' => true, 'import' => true ], // T214036
+		'transwiki' => [ 'oathauth-enable' => true ], // T214036
 	],
 	'+nlwiki' => [
 		'autoconfirmed' => [ 'patrol' => true ],
@@ -9718,12 +9712,15 @@ function wmfGetVariantSettings() {
 		'rollbacker' => [ 'rollback' => true ],
 		'user' => [ 'move-categorypages' => false ], // T161551
 	],
-	'+nlwiktionary' => [ 'user' => [ 'patrol' => true ] ],
+	'+nlwiktionary' => [
+		'user' => [ 'patrol' => true ],
+	],
 	'+nlwikivoyage' => [
 		'autopatrolled' => [ 'autopatrol' => true, 'patrol' => true, ], // T46082
 	],
-	'+nlwikibooks' => [ 'user' => [ 'patrol' => true ] ],
-	// 'nlwikinews' => [ 'user' => [ 'patrol' => true ] ],
+	'+nlwikibooks' => [
+		'user' => [ 'patrol' => true ],
+	],
 	'+nnwiki' => [
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'patroller' => [ 'autopatrol' => true, 'patrol' => true, 'rollback' => true ],
@@ -9738,10 +9735,9 @@ function wmfGetVariantSettings() {
 		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'rollback' => true, 'markbotedits' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ],
 	],
-	'nowikimedia' => [ '*' => [
-		'edit' => false,
-	] ],
-
+	'nowikimedia' => [
+		'*' => [ 'edit' => false, ],
+	],
 	'+officewiki' => [
 		'flood' => [ 'bot' => true ], // T86237
 		'user' => [ 'massmessage' => true, ], // T66978
@@ -9768,12 +9764,10 @@ function wmfGetVariantSettings() {
 	],
 	'+orwiki' => [
 		'rollbacker' => [ 'rollback' => true ],
-		'sysop' => [ 'import' => true ],
 	],
 	'pawiki' => [
 		'patroller' => [ 'patrol' => true ], // T120369
 		'autopatrolled' => [ 'autopatrol' => true ], // T120369
-		'transwiki' => [ 'import' => true ] // T120369
 	],
 	// T8303
 	'+plwiki' => [
@@ -10681,9 +10675,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'rollbacker', ], // T189206
 	],
 	'+azbwiki' => [
-		'bureaucrat' => [
-			'interface-editor', // T109755
-		],
+		'bureaucrat' => [ 'interface-editor', ], // T109755
 		'sysop' => [
 			'abusefilter', // T109755
 			'autopatrolled', // T109755
@@ -11278,9 +11270,7 @@ function wmfGetVariantSettings() {
 		],
 	],
 	'+svwiktionary' => [
-		'sysop' => [
-			'autopatrolled', // T161919
-		],
+		'sysop' => [ 'autopatrolled', ], // T161919
 	],
 	'+tawiki' => [
 		'bureaucrat' => [ 'nocreate' ],
@@ -11338,12 +11328,8 @@ function wmfGetVariantSettings() {
 			'electcomm',
 			'staffsupport'
 		],
-		'staffsupport' => [
-			'electionadmin'
-		],
-		'electcomm' => [
-			'electionadmin'
-		],
+		'staffsupport' => [ 'electionadmin' ],
+		'electcomm' => [ 'electionadmin' ],
 	],
 	'+wikidata' => [
 		'sysop' => [
@@ -11355,9 +11341,7 @@ function wmfGetVariantSettings() {
 			'flood', // T50013
 			'wikidata-staff', // T74459
 		],
-		'wikidata-staff' => [
-			'wikidata-staff', // T74459
-		],
+		'wikidata-staff' => [ 'wikidata-staff', ], // T74459
 	],
 	'+wikimaniawiki' => [
 		'sysop' => [ 'uploader' ], // T225505
@@ -11411,9 +11395,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'autopatrolled', 'confirmed', 'patroller', 'transwiki' ], // T62085, T62328
 	],
 	'+zhwiktionary' => [
-		'sysop' => [
-			'flood', // T187018
-		],
+		'sysop' => [ 'flood', ], // T187018
 	],
 	'+zh_yuewiki' => [
 		'sysop' => [ 'abusefilter', 'rollbacker', 'autoreviewer', 'confirmed' ],
@@ -11802,7 +11784,6 @@ function wmfGetVariantSettings() {
 	],
 	'+id_internalwikimedia' => [
 		'sysop' => [ 'import' ],
-		'bureaucrat' => [ 'bureaucrat', 'sysop' ],
 	],
 	'+incubatorwiki' => [
 		'bureaucrat' => [ 'import', 'test-sysop', 'translator' ],
@@ -12139,9 +12120,7 @@ function wmfGetVariantSettings() {
 		],
 	],
 	'+viwikibooks' => [
-		'bureaucrat' => [
-			'eliminator', // T202207
-		],
+		'bureaucrat' => [ 'eliminator', ], // T202207
 	],
 	'+viwiktionary' => [
 		'sysop' => [ 'rollbacker' ], // T176979
@@ -12180,7 +12159,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'uploader' ],  // T225505
 	],
 	'+wikimaniateamwiki' => [
-		'bureaucrat' => [ 'sysop', 'bureaucrat', 'autopatrolled', 'import' ],
+		'bureaucrat' => [ 'autopatrolled', ],
 	],
 	'wikitech' => [
 		'contentadmin' => [
@@ -13246,7 +13225,6 @@ function wmfGetVariantSettings() {
 # Disable all query pages for closed wikis, allow normal functioning for others
 'wgDisableQueryPages' => [
 	'default' => false,
-
 	'closed' => true, // T44436
 ],
 
@@ -13636,7 +13614,6 @@ function wmfGetVariantSettings() {
 	'+ptwikisource' => [ 'br.wikimedia.org' => 'brwikimedia' ],
 	'+ptwikiversity' => [ 'br.wikimedia.org' => 'brwikimedia' ],
 	'+ptwikivoyage' => [ 'br.wikimedia.org' => 'brwikimedia' ],
-
 ],
 
 // This is also guarded by $wmgUseCentralAuth
@@ -14056,7 +14033,11 @@ function wmfGetVariantSettings() {
 	'zhwikibooks' => [ 'flood' => [ 'flood' ] ], // T185182
 	'zhwikinews' => [ 'flood' => [ 'flood' ] ], // T54546
 	'zhwikiquote' => [ 'flood' => [ 'flood' ] ], // T189289
-	'zhwikiversity' => [ 'flood' => [ 'flood' ], 'patroller' => [ 'patroller' ], 'autopatrolled' => [ 'autopatrolled' ], ], // T202599
+	'zhwikiversity' => [
+		'flood' => [ 'flood' ],
+		'patroller' => [ 'patroller' ],
+		'autopatrolled' => [ 'autopatrolled' ],
+	], // T202599
 	'zhwiktionary' => [ 'flood' => [ 'flood' ] ], // T187018
 ],
 
@@ -14077,52 +14058,24 @@ function wmfGetVariantSettings() {
 
 // emergency disable: shut off filters tagging >5% of posts on a total of at least 25 posts per day
 'wgAbuseFilterEmergencyDisableThreshold' => [
-	'default' => [
-		'default' => 0.05,
-	],
-	'commonswiki' => [ // T87431
-		'default' => 0.30,
-	],
-	'testcommonswiki' => [ // T87431
-		'default' => 0.30,
-	],
-	'eswikibooks' => [
-		'default' => 0.30, // T145765
-	],
-	'metawiki' => [
-		'default' => 0.30,  // T173633
-	],
-	'mediawikiwiki' => [ // T212667
-		'default' => 0.30,
-	],
+	'default' => [ 'default' => 0.05, ],
+	'commonswiki' => [ 'default' => 0.30, ], // T87431
+	'testcommonswiki' => [ 'default' => 0.30, ], // T87431
+	'eswikibooks' => [ 'default' => 0.30, ], // T145765
+	'metawiki' => [ 'default' => 0.30, ], // T173633
+	'mediawikiwiki' => [ 'default' => 0.30, ], // T212667
 ],
 'wgAbuseFilterEmergencyDisableCount' => [
-	'default' => [
-		'default' => 2,
-	],
-	'enwiki' => [
-		'default' => 25,
-	],
-	'eswikibooks' => [
-		'default' => 10, // T145765
-	],
-	'commonswiki' => [ // T87431
-		'default' => 25,
-	],
-	'testcommonswiki' => [ // T87431
-		'default' => 25,
-	],
-	'metawiki' => [
-		'default' => 25, // T173633
-	],
-	'mediawikiwiki' => [ // T212667
-		'default' => 25,
-	],
+	'default' => [ 'default' => 2, ],
+	'enwiki' => [ 'default' => 25, ],
+	'eswikibooks' => [ 'default' => 10, ], // T145765
+	'commonswiki' => [ 'default' => 25, ], // T87431
+	'testcommonswiki' => [ 'default' => 25, ], // T87431
+	'metawiki' => [ 'default' => 25, ], // T173633
+	'mediawikiwiki' => [ 'default' => 25, ], // T212667
 ],
 'wgAbuseFilterEmergencyDisableAge' => [
-	'default' => [
-		'default' => 86400,
-	],
+	'default' => [ 'default' => 86400, ],
 ],
 'wgAbuseFilterParserClass' => [
 	'default' => 'AbuseFilterCachingParser', // T156095
@@ -17193,8 +17146,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgMFExperiments' => [
-	'default' => [
-	],
+	'default' => [],
 ],
 
 'wgExtraGenderNamespaces' => [
@@ -19800,9 +19752,7 @@ function wmfGetVariantSettings() {
 // ---T208755---
 'wmgWikibaseClientPageSchemaNamespaces' => [
 	// All sampled pages in the main namespace will be tested.
-	'default' => [
-		0,
-	]
+	'default' => [ 0, ]
 ],
 
 'wmgUseWikibaseWikimediaBadges' => [
@@ -21124,7 +21074,7 @@ function wmfGetVariantSettings() {
 'wgCirrusSearchLanguageWeight' => [
 	'default' => [
 		'user' => 0.0,
-		'wiki' => 0,0,
+		'wiki' => 0.0,
 	],
 	'mediawikiwiki' => [
 		'user' => 5.0,
@@ -23398,17 +23348,17 @@ function wmfGetVariantSettings() {
 'wgCirrusSearchExtraIndexBoostTemplates' => [
 	'default' => [
 		'commonswiki_file' => [
-				'wiki' => 'commonswiki',
-				'boosts' => [
-					// Copied from https://commons.wikimedia.org/wiki/MediaWiki:Cirrussearch-boost-templates
-					'Template:Assessments/commons/featured' => 2.5,
-					'Template:Picture_of_the_day' => 1.5,
-					'Template:Valued_image' => 1.75,
-					'Template:Assessments' => 1.5,
-					'Template:Quality_image' => 1.75,
-				],
+			'wiki' => 'commonswiki',
+			'boosts' => [
+				// Copied from https://commons.wikimedia.org/wiki/MediaWiki:Cirrussearch-boost-templates
+				'Template:Assessments/commons/featured' => 2.5,
+				'Template:Picture_of_the_day' => 1.5,
+				'Template:Valued_image' => 1.75,
+				'Template:Assessments' => 1.5,
+				'Template:Quality_image' => 1.75,
 			],
 		],
+	],
 	'commonswiki' => [], // Commons is special
 	'officewiki' => [], // T94856 - makes searching difficult for locally uploaded files
 	'foundationwiki' => [], // T76957 - doesn't make sense to have Commons files on foundationwiki search
@@ -23514,7 +23464,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgCirrusSearchCrossClusterSearch' => [
-'default' => true
+	'default' => true
 ],
 
 'wgCirrusSearchSanityCheck' => [
