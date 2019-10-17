@@ -19120,8 +19120,11 @@ function wmfGetVariantSettings() {
 
 'wgContentTranslationAsBetaFeature' => [
 	'default' => true,
-	'bclwiki' => false, //T233007
+	'bclwiki' => false, // T233007
+	'bnwiki' => false, // T233009
 	'jvwiki' => false,
+	'mlwiki' => false, // T233008
+	'mnwiki' => false, // T234317
 	'tlwiki' => false, // T233006
 ],
 
