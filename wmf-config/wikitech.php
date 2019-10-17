@@ -19,7 +19,7 @@ case 'labswiki' :
 	$wgLDAPServerNames = [ 'labs' => 'ldap-labs.eqiad.wikimedia.org' ];
 		break;
 case 'labtestwiki' :
-	$wgLDAPServerNames = [ 'labs' => 'labtestservices2001.wikimedia.org' ];
+	$wgLDAPServerNames = [ 'labs' => 'cloudservices2002-dev.wikimedia.org' ];
 		break;
 }
 // T165795: require exact case matching of username via :caseExactMatch:
@@ -80,11 +80,11 @@ case 'labswiki' :
 	];
 		break;
 case 'labtestwiki' :
-	$wgOpenStackManagerNovaIdentityURI = 'http://labtestcontrol2001.wikimedia.org:35357/v2.0';
-	$wgOpenStackManagerNovaIdentityV3URI = 'http://labtestcontrol2001.wikimedia.org:35357/v3';
+	$wgOpenStackManagerNovaIdentityURI = 'http://openstack.codfw1dev.wikimediacloud.org:35357/v2.0';
+	$wgOpenStackManagerNovaIdentityV3URI = 'http://openstack.codfw1dev.wikimediacloud.org:35357/v3';
 	$wgOpenStackManagerDNSOptions = [
 		'enabled' => true,
-		'servers' => [ 'primary' => 'labtestcontrol2001.wikimedia.org' ],
+		'servers' => [ 'primary' => 'openstack.codfw1dev.wikimediacloud.org' ],
 		'soa'     => [ 'hostmaster' => 'hostmaster.wikimedia.org', 'refresh' => '1800', 'retry' => '3600', 'expiry' => '86400', 'minimum' => '7200' ],
 	];
 		break;
