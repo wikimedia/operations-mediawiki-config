@@ -13631,7 +13631,6 @@ function wmfGetVariantSettings() {
 # CENTRAL AUTH @{
 'wmgUseCentralAuth' => [
 	'default' => true,
-	'testwiki' => true,
 	'private' => false,
 	'fishbowl' => false,
 	'nonglobal' => false,
