@@ -5571,6 +5571,7 @@ function wmfGetVariantSettings() {
 		'torblock' => 'debug',
 		'TranslationNotifications.Jobs' => 'debug',
 		'Translate.Jobs' => 'debug',
+		'Translate' => 'debug',
 		'UpdateRepo' => 'debug',
 		'updateTranstagOnNullRevisions' => 'debug',
 		'upload' => 'debug',
