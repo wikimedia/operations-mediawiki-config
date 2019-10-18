@@ -66,6 +66,6 @@ return [
 		],
 
 		### Kask
-		'kask' => 'https://deployment-sessionstore01.deployment-prep.eqiad.wmflabs:8080',
+		'sessionstore' => 'https://deployment-sessionstore01.deployment-prep.eqiad.wmflabs:8080',
 	],
 ];

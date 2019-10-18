@@ -28,7 +28,7 @@ $wmfAllServices['unittest'] = [
 	'mathoid' => 'localhost',
 	'eventlogging' => 'localhost',
 	'eventbus' => 'localhost',
-	'kask' => 'localhost',
+	'sessionstore' => 'localhost',
 ];
 
 ### Logstash

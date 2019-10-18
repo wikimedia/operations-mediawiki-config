@@ -456,7 +456,7 @@ $wgObjectCaches['mysql-multiwrite'] = [
 ];
 $wgObjectCaches['kask-session'] = [
 	'class' => 'RESTBagOStuff',
-	'url' => "{$wmfLocalServices['kask']}/sessions/v1/",
+	'url' => "{$wmfLocalServices['sessionstore']}/sessions/v1/",
 	'httpParams' => [
 		'writeHeaders' => [
 			'content-type' => 'application/octet-stream',
