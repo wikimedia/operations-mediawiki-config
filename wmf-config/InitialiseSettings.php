@@ -6798,6 +6798,8 @@ function wmfGetVariantSettings() {
 		103 => 'Discuție_Autor',
 	],
 	'sawikisource' => [
+		100 => 'प्रवेशद्वारम्', // T235343 - Portal
+		101 => 'प्रवेशद्वारसम्भाषणम्', // T235343 - Portal talk
 		102 => 'लेखकः', // T214553 - Author
 		103 => 'लेखकसम्भाषणम्', // T214553 - Author talk
 	],
