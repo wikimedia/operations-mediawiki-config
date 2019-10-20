@@ -14411,6 +14411,7 @@ function wmfGetVariantSettings() {
 		'*.spacetelescope.org',             // ESA website - T230083
 		'*.wikimedia.cz',                   // Wikimedia Czech Republic - T231247
 		'*.scielo.br',                      // Brazilian scientific papers - T231402
+		'iip.bu.uni.wroc.pl',               // T235904
 	],
 ],
 
