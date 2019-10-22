@@ -14963,6 +14963,10 @@ function wmfGetVariantSettings() {
 	'group0' => true, // T214905
 	'arwiki' => true, // T218766
 	'dewiki' => true, // T218766
+	'enwikivoyage' => true, // T235083
+	'sewikimedia' => true, // T235083
+	'wikipedia' => true, // T235083
+	'zhwikivoyage' => true, // T235083
 ],
 
 // Whether Compact Links is a Beta feature
