@@ -1140,6 +1140,18 @@ function wmfGetLabsOverrideSettings() {
 		'wgGEConfirmEmailEnabled' => [
 			'default' => true,
 		],
+		'wgGENewcomerTasksRemoteConfigTitle' => [
+			'default' => null,
+			'en' => 'mw:Growth/Personalized_first_day/Newcomer_tasks/Prototype/templates/cs.json',
+			'ko' => 'mw:Growth/Personalized_first_day/Newcomer_tasks/Prototype/templates/ko.json',
+			'ar' => 'mw:Growth/Personalized_first_day/Newcomer_tasks/Prototype/templates/ar.json',
+		],
+		'wgGENewcomerTasksRemoteApiUrl' => [
+			'default' => null,
+			'en' => 'https://cs.wikipedia.org/w/api.php',
+			'ko' => 'https://ko.wikipedia.org/w/api.php',
+			'ar' => 'https://ar.wikipedia.org/w/api.php',
+		],
 		'wgEnablePartialBlocks' => [
 			'default' => false,
 			'enwiki' => true,
