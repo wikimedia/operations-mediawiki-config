@@ -4,7 +4,6 @@
 
 inheritsFrom:
   - wikimedia
-  - all
   - categories-rdf
   - commonsuploads
   - fishbowl

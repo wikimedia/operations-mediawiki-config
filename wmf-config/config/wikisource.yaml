@@ -4,3 +4,5 @@
 # Note that "old Wikisource" is treated as a "special" wiki, not a Wikisource.
 
 inheritsFrom: base
+
+wikiTag: wikisource

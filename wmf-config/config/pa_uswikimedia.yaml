@@ -4,7 +4,6 @@
 
 inheritsFrom:
   - wikimedia
-  - all
   - closed
   - group0
   - s3

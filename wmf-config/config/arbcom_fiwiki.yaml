@@ -4,7 +4,6 @@
 
 inheritsFrom:
   - wikipedia
-  - all
   - nowikidatadescriptiontaglines
   - pp_stage1
   - private

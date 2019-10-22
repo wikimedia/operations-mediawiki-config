@@ -4,7 +4,6 @@
 
 inheritsFrom:
   - wikipedia
-  - all
   - commonsuploads
   - rtl
   - s3

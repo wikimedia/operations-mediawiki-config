@@ -4,7 +4,6 @@
 
 inheritsFrom:
   - wikisource
-  - all
   - closed
   - group0
   - nowikidatadescriptiontaglines

@@ -4,7 +4,6 @@
 
 inheritsFrom:
   - wikisource
-  - all
   - commonsuploads
   - nowikidatadescriptiontaglines
   - s3

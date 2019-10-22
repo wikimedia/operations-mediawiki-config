@@ -5,7 +5,6 @@
 inheritsFrom:
   - wikipedia
   - all-labs
-  - all
   - closed
   - pp_stage1
   - s3

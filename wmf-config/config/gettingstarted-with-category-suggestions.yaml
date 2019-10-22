@@ -3,6 +3,6 @@
 # enabled in their use of the GettingStarted extension.
 # All settings here apply to wikis with this trait, unless over-ridden.
 
-# FIXME: This shouldn't exist
+# FIXME: This is exceptionally specific; does it need to exist?
 
 wikiTag: gettingstarted-with-category-suggestions

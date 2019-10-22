@@ -198,9 +198,25 @@ class MWConfigCacheGenerator {
 		$inheritanceStack = $this->getInheritanceTree( $name );
 
 		$result = [];
+		$tags = [];
 
 		foreach ( $inheritanceStack as $config ) {
 			$result = array_merge( $this->staticConfigs[ $config ], $result );
+
+			$localTags = $this->staticConfigs[ $config ]['wikiTag'] ?? [];
+			if ( isset( $localTags ) ) {
+				if ( is_string( $localTags ) ) {
+					$tags[] = $localTags;
+					continue;
+				}
+				if ( is_array( $localTags ) ) {
+					$tags = array_merge( $localTags, $tags );
+					continue;
+				}
+
+				// Neither a string nor a tag.
+				throw new \Exception( "Bad 'wikiTag' value for '$name'." );
+			}
 		}
 
 		if ( !array_search( 'all', $inheritanceStack ) ) {
@@ -209,6 +225,7 @@ class MWConfigCacheGenerator {
 
 		// Over-ride all values to those set by the 'all' config
 		$result = array_merge( $this->staticConfigs[ 'all' ], $result );
+		$result['wikiTag'] = $tags;
 
 		// Don't dirty the config files with inheritance build information.
 		unset( $result['inheritsFrom'] );

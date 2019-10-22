@@ -3,3 +3,5 @@
 # All settings here apply to every Wikinews, unless over-ridden.
 
 inheritsFrom: base
+
+wikiTag: wikinews

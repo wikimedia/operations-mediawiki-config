@@ -177,36 +177,6 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 	}
 
 	/**
-	 * This test ensures that:
-	 *
-	 * 1. Computed lists use a specific naming convention.
-	 * 2. Computed lists are up to date.
-	 */
-	public function testComputedListsFreshness() {
-		$lists = DBList::getLists();
-		foreach ( $lists as $listname => $dbnames ) {
-			if ( strpos( $listname, 'computed' ) !== false ) {
-				if ( strpos( $listname, 'labs' ) !== false ) {
-					continue;
-				}
-				$suffix = '-computed';
-				$expandedListName = str_replace( $suffix, '', $listname );
-				$this->assertEquals(
-					$suffix,
-					substr( $listname, -strlen( $suffix ) ),
-					"Computed list name '$listname' must end with '$suffix'"
-				);
-				$expandedList = MWWikiversions::readDbListFile( $expandedListName );
-				$this->assertEquals(
-					$expandedList,
-					$dbnames,
-					"Contents of '$expandedListName' must match expansion of '$listname'"
-				);
-			}
-		}
-	}
-
-	/**
 	 * @covers MWWikiversions::evalDbListExpression
 	 */
 	public function testEvalDbListExpression() {

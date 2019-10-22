@@ -4,7 +4,6 @@
 
 inheritsFrom:
   - wiktionary
-  - all
   - categories-rdf
   - cirrussearch-big-indices
   - flaggedrevs

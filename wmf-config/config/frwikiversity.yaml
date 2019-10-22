@@ -4,7 +4,6 @@
 
 inheritsFrom:
   - wikiversity
-  - all
   - categories-rdf
   - cirrussearch-big-indices
   - commonsuploads

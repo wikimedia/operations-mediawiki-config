@@ -4,7 +4,6 @@
 
 inheritsFrom:
   - special
-  - all
   - categories-rdf
   - fishbowl
   - medium

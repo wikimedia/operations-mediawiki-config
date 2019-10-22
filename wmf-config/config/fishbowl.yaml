@@ -1,0 +1,6 @@
+# WARNING: This file is publicly viewable on the Web. Do not put private data here.
+# This is the shared trait configuration file for all fishbowl wikis, whose contents are
+# public but where editing is not generally available.
+# All settings here apply to wiki with this trait, unless over-ridden.
+
+wikiTag: fishbowl

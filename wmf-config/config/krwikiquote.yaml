@@ -4,7 +4,6 @@
 
 inheritsFrom:
   - wikiquote
-  - all
   - closed
   - group0
   - s3

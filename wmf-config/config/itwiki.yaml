@@ -4,7 +4,6 @@
 
 inheritsFrom:
   - wikipedia
-  - all
   - categories-rdf
   - cirrussearch-big-indices
   - large

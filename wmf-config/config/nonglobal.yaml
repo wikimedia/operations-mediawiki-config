@@ -1,0 +1,9 @@
+# WARNING: This file is publicly viewable on the Web. Do not put private data here.
+# This is the shared trait configuration file for all wikis which should not use 'global' features.
+# All settings here apply to wikis with this trait, unless over-ridden.
+
+# Also make sure you list these under wmgUseGlobalAbuseFilters explicitly if you need to
+
+# FIXME: This is a proxy for the wikitech group; just use that?
+
+wikiTag: nonglobal

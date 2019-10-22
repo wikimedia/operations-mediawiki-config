@@ -4,7 +4,6 @@
 
 inheritsFrom:
   - wikinews
-  - all
   - categories-rdf
   - cirrussearch-big-indices
   - flaggedrevs

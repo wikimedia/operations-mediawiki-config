@@ -3,3 +3,5 @@
 # All settings here apply to every Wikivoyage, unless over-ridden.
 
 inheritsFrom: base
+
+wikiTag: wikivoyage

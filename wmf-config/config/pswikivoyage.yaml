@@ -4,7 +4,6 @@
 
 inheritsFrom:
   - wikivoyage
-  - all
   - commonsuploads
   - rtl
   - s3

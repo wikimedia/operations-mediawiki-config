@@ -4,7 +4,6 @@
 
 inheritsFrom:
   - wikinews
-  - all
   - commonsuploads
   - nowikidatadescriptiontaglines
   - s3

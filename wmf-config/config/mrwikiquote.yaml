@@ -4,7 +4,6 @@
 
 inheritsFrom:
   - wikiquote
-  - all
   - categories-rdf
   - commonsuploads
   - s3

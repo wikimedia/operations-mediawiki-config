@@ -4,7 +4,6 @@
 
 inheritsFrom:
   - wikinews
-  - all
   - closed
   - group0
   - nowikidatadescriptiontaglines

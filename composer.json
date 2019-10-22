@@ -23,8 +23,14 @@
 			"composer lint",
 			"phpunit",
 			"composer phpcs",
-			"minus-x check ."
-		]
+			"minus-x check .",
+			"composer build",
+			"composer checkclean"
+		],
+		"build": [
+			"php -e multiversion/buildDBLists.php"
+		],
+		"checkclean": "git diff --exit-code wmf-config/ dblists/"
 	},
 	"config": {
 		"classmap-authoritative": true,

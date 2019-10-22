@@ -4,7 +4,6 @@
 
 inheritsFrom:
   - wikibooks
-  - all
   - closed
   - group0
   - nowikidatadescriptiontaglines

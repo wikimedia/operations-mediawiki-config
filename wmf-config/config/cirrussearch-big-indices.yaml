@@ -1,6 +1,8 @@
 # WARNING: This file is publicly viewable on the Web. Do not put private data here.
-# This is the shared trait configuration file for all wikis which have large indices
-# in CirrusSearch and so need special handling.
+# This is the shared trait configuration file for all wikis which are considered
+# "large" for our production elastic clusters and so need special handling.
+# To get the shard counts roughly even between clusters, this ended up being
+# the top 25% of wikis by combined index size (titlesuggest+content+general).
 # All settings here apply to wikis with this trait, unless over-ridden.
 
 wikiTag: cirrussearch-big-indices

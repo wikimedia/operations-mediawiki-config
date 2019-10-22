@@ -4,7 +4,6 @@
 
 inheritsFrom:
   - special
-  - all
   - nonecho
   - nowikidatadescriptiontaglines
   - private

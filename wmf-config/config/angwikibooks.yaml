@@ -4,7 +4,6 @@
 
 inheritsFrom:
   - wikibooks
-  - all
   - closed
   - commonsuploads
   - group0

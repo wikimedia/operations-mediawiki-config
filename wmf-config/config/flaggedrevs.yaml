@@ -2,6 +2,4 @@
 # This is the shared trait configuration file for all wikis with FlaggedRevs.
 # All settings here apply to wikis with this trait, unless over-ridden.
 
-# To be enabled in a later patch.
-# wgFlaggedRevsAutopromote: false
-# wgFlaggedRevsStatsAge: false
+wikiTag: flaggedrevs

@@ -4,7 +4,6 @@
 
 inheritsFrom:
   - wiktionary
-  - all
   - commonsuploads
   - nowikidatadescriptiontaglines
   - s3

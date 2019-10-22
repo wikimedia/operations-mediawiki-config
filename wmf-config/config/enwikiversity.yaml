@@ -5,7 +5,6 @@
 inheritsFrom:
   - wikiversity
   - all-labs
-  - all
   - categories-rdf
   - cirrussearch-big-indices
   - medium

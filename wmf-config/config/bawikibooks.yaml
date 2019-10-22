@@ -4,7 +4,6 @@
 
 inheritsFrom:
   - wikibooks
-  - all
   - categories-rdf
   - nowikidatadescriptiontaglines
   - s3

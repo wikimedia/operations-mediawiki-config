@@ -6,3 +6,4 @@
 
 inheritsFrom:
   - special
+  - all-labs

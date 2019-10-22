@@ -4,7 +4,6 @@
 
 inheritsFrom:
   - special
-  - all
   - commonsuploads
   - nowikidatadescriptiontaglines
   - s3

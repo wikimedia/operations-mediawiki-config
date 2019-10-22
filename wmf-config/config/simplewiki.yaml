@@ -3,9 +3,8 @@
 # See the inheritance tree to find where most settings are defined.
 
 inheritsFrom:
-  - special
+  - wikipedia
   - all-labs
-  - all
   - categories-rdf
   - cirrussearch-big-indices
   - commonsuploads
@@ -17,4 +16,3 @@ inheritsFrom:
   - securepollglobal
   - wikidataclient
   - wikipedia-english
-  - wikipedia

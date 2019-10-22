@@ -4,4 +4,6 @@
 
 inheritsFrom: base
 
+wikiTag: wikipedia
+
 wgLogo: '/static/images/project-logos/enwiki.png'

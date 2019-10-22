@@ -6,3 +6,5 @@
 wgMFSpecialCaseMainPage: false
 
 # FIXME: This shouldn't exist
+
+wikiTag: mobilemainpagelegacy

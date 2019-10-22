@@ -3,13 +3,11 @@
 # See the inheritance tree to find where most settings are defined.
 
 inheritsFrom:
+  - s11
   - special
-  - all
   - group0
-  - labtestweb2001
   - medium
   - nonglobal
   - nowikidatadescriptiontaglines
   - testwikis
   - wikitech
-wikiTag: labtestwiki2001

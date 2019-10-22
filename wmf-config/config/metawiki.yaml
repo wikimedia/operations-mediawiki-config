@@ -5,7 +5,6 @@
 inheritsFrom:
   - special
   - all-labs
-  - all
   - categories-rdf
   - cirrussearch-big-indices
   - commonsuploads

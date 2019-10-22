@@ -1,0 +1,7 @@
+# WARNING: This file is publicly viewable on the Web. Do not put private data here.
+# This is the shared configuration file for settings specific to all Wikidatas.
+# All settings here apply to Wikidata and the Test Wikidata, unless over-ridden.
+
+inheritsFrom: base
+
+wikiTag: wikidata

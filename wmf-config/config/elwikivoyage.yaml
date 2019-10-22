@@ -4,7 +4,6 @@
 
 inheritsFrom:
   - wikivoyage
-  - all
   - categories-rdf
   - commonsuploads
   - mobilemainpagelegacy
