@@ -14492,6 +14492,7 @@ function wmfGetVariantSettings() {
 	'cswikinews' => 'any', // T45525
 	'enwikibooks' => 'any', // T29256, T188472
 	'fiwikinews' => 'any', // T216333
+	'frwikiquote' => 'any', // T236212
 	'ptwikibooks' => 'any', // T29256, T188472
 	'guwikisource' => 'any', // T42173
 	'napwikisource' => 'any', // T233673
