@@ -159,6 +159,7 @@ function wmfGetVariantSettings() {
 
 	# Local user group wikis (xxwikimedia)
 	'cnwikimedia' => 'zh', // T98676
+	'gewikimedia' => 'ka', // T236389
 	'hiwikimedia' => 'hi', // T188366
 	'punjabiwikimedia' => 'pa', // T230680
 	'romdwikimedia' => 'ro', // T187184
@@ -336,6 +337,7 @@ function wmfGetVariantSettings() {
 	'frwikiquote' => 'Europe/Paris',
 	'fywiki' => 'Europe/Berlin',
 	'gagwiki' => 'Europe/Istanbul',
+	'gewikimedia' => 'Asia/Tbilisi', // T236389
 	'gomwiki' => 'Asia/Kolkata', // T96468
 	'gorwiki' => 'Asia/Makassar', // T189109
 	'guwiki' => 'Asia/Kolkata',
@@ -1212,6 +1214,7 @@ function wmfGetVariantSettings() {
 
 	// Local user group wikis
 	'cnwikimedia' => '/static/images/project-logos/cnwikimedia.png', // T98676
+	'gewikimedia' => '/static/images/project-logos/gewikimedia.png', // T236389
 	'maiwikimedia' => '/static/images/project-logos/maiwikimedia.png',
 	'romdwikimedia' => '/static/images/project-logos/romdwikimedia.png',
 	'punjabiwikimedia' => '/static/images/project-logos/punjabiwikimedia.png',
@@ -1760,6 +1763,7 @@ function wmfGetVariantSettings() {
 	'amwikimedia' => [ '1.5x' => '/static/images/project-logos/amwikimedia-1.5x.png', '2x' => '/static/images/project-logos/amwikimedia-2x.png' ], // T176042
 	'cawikimedia' => [ '1.5x' => '/static/images/project-logos/cawikimedia-1.5x.png', '2x' => '/static/images/project-logos/cawikimedia-2x.png' ],
 	'ecwikimedia' => [ '1.5x' => '/static/images/project-logos/ecwikimedia-1.5x.png', '2x' => '/static/images/project-logos/ecwikimedia-2x.png' ], // T135521
+	'gewikimedia' => [ '1.5x' => '/static/images/project-logos/gewikimedia-1.5x.png', '2x' => '/static/images/project-logos/gewikimedia-2x.png' ], // T236389
 	'hiwikimedia' => [ '1.5x' => '/static/images/project-logos/hiwikimedia-1.5x.png', '2x' => '/static/images/project-logos/hiwikimedia-2x.png' ],
 	'idwikimedia' => [ '1.5x' => '/static/images/project-logos/idwikimedia-1.5x.png', '2x' => '/static/images/project-logos/idwikimedia-2x.png' ], // T192726
 	'id_internalwikimedia' => [ '1.5x' => '/static/images/project-logos/id_internalwikimedia-1.5x.png', '2x' => '/static/images/project-logos/id_internalwikimedia-2x.png' ],
@@ -2014,6 +2018,7 @@ function wmfGetVariantSettings() {
 	'fixcopyrightwiki' => '//fixcopyright.wikimedia.org',
 	'fdcwiki' => '//fdc.wikimedia.org',
 	'foundationwiki' => '//foundation.wikimedia.org',
+	'gewikimedia' => '//ge.wikimedia.org', // T236389
 	'grantswiki' => '//grants.wikimedia.org',
 	'hiwikimedia' => '//hi.wikimedia.org',
 	'iegcomwiki' => '//iegcom.wikimedia.org',
@@ -2110,6 +2115,7 @@ function wmfGetVariantSettings() {
 	'fixcopyrightwiki' => 'https://fixcopyright.wikimedia.org',
 	'fdcwiki' => 'https://fdc.wikimedia.org',
 	'foundationwiki' => 'https://foundation.wikimedia.org',
+	'gewikimedia' => 'https://ge.wikimedia.org', // T236389
 	'grantswiki' => 'https://grants.wikimedia.org',
 	'hiwikimedia' => 'https://hi.wikimedia.org',
 	'iegcomwiki' => 'https://iegcom.wikimedia.org',
@@ -2353,6 +2359,7 @@ function wmfGetVariantSettings() {
 	'gawikiquote' => 'Vicísliocht',
 	'gawiktionary' => 'Vicífhoclóir',
 	'gdwiki' => 'Uicipeid',
+	'gewikimedia' => 'ვიკიმედიის მომხმარებელთა საქართველოს ჯგუფი', // T236389
 	'gnwiki' => 'Vikipetã',
 	'gomwiki' => 'विकिपीडिया', // T96468
 	'gorwiki' => 'Wikipedia', // T189109
@@ -2867,6 +2874,7 @@ function wmfGetVariantSettings() {
 	'gawikiquote' => 'Vicísliocht',
 	'gawiktionary' => 'Vicífhoclóir',
 	'gdwiki' => 'Uicipeid',
+	'gewikimedia' => 'ვიკიმედია', // T236389
 	'gnwiki' => 'Vikipetã',
 	'gomwiki' => 'विकिपीडिया', // T96468
 	'gorwiki' => 'Wikipedia', // T189109
@@ -3200,6 +3208,7 @@ function wmfGetVariantSettings() {
 	'eowikisource' => 'Vikifontaro_diskuto',
 	'fiwikiversity' => 'Keskustelu_Wikiopistosta',
 	'fiwikivoyage' => 'Keskustelu_Wikimatkoista', // T151570
+	'gewikimedia' => 'განხილვა', // T236389
 	'gagwiki' => 'Vikipediyanın_laflanması',
 	'gorwiki' => 'Lo\'iya_Wikipedia', // T189109
 	'guwikiquote' => 'વિકિસૂક્તિની_ચર્ચા', // T121853
@@ -12268,6 +12277,7 @@ function wmfGetVariantSettings() {
 	'ecwikimedia' => [ 'meta' ], // T135521
 	'etwikimedia' => [ 'wikipedia:et', 'meta' ],
 	'fiwikimedia' => [ 'wikipedia:fi', 'meta' ],
+	'gewikimedia' => [ 'meta', 'wikipedia:ka' ], // T236389
 	'hiwikimedia' => [ 'meta', 'wikipedia:hi', 'wiktionary:hi', 'wikiquote:hi', 'wikibooks:hi', 'wikiversity:hi', 'wikivoyage:hi' ],
 	'maiwikimedia' => [ 'meta', 'commons', 'wikipedia:en', 'wikipedia:mai', 'wikipedia:ne', 'wikipedia:hi' ], // T188374
 	'mkwikimedia' => [ 'meta', 'wikipedia:mk' ],
@@ -16387,6 +16397,7 @@ function wmfGetVariantSettings() {
 	'frwikiversity' => 'uca-fr', // T71782
 	'frwiktionary' => 'uca-default', // T169810
 	'gdwiki' => 'uca-default', // T125315
+	'gewikimedia' => 'uca-ka-u-kn', // T236389
 	'glwiki' => 'uca-gl-u-kn', // T149002
 	'hewiki' => 'numeric', // T146675
 	'hewikisource' => 'numeric', // T168321
@@ -18361,6 +18372,7 @@ function wmfGetVariantSettings() {
 	'commonswiki' => true, // T50620
 	'testcommonswiki' => true, // T50620
 	'frwiktionary' => true, // T138972
+	'gewikimedia' => true, // T236389
 	'hiwikimedia' => true,
 	'idwikimedia' => true, // T204292
 	'incubatorwiki' => true, // T36213
@@ -18474,6 +18486,7 @@ function wmfGetVariantSettings() {
 	'commonswiki' => true, // T126901
 	'testcommonswiki' => true, // T126901
 	'frwiktionary' => true, // T138972
+	'gewikimedia' => true, // T236389
 	'incubatorwiki' => true,
 	'mediawikiwiki' => true,
 	'metawiki' => true,

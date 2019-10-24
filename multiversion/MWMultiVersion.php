@@ -47,6 +47,7 @@ class MWMultiVersion {
 		'ec',
 		'et',
 		'fi',
+		'ge',
 		'hi',
 		'id',
 		'id-internal',
