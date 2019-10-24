@@ -22326,7 +22326,8 @@ function wmfGetVariantSettings() {
 ],
 
 'wgQuickSurveysConfig' => [
-	'default' => [
+	'default' => [],
+	'cawiki' => [
 		// T187299
 		[
 			'enabled' => true,
@@ -22364,6 +22365,66 @@ function wmfGetVariantSettings() {
 			],
 		]
 	],
+	'enwikivoyage' => [
+		// T187299
+		[
+			'enabled' => true,
+			'type' => 'internal',
+			'name' => 'perceived-performance-survey',
+			'question' => 'ext-quicksurveys-performance-internal-survey-question',
+			'answers' => [
+				'ext-quicksurveys-example-internal-survey-answer-positive',
+				'ext-quicksurveys-example-internal-survey-answer-neutral',
+				'ext-quicksurveys-example-internal-survey-answer-negative',
+			],
+			'coverage' => 0.0,
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+			],
+			'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
+			'shuffleAnswersDisplay' => true,
+		],
+	],
+	'eswiki' => [
+		// T187299
+		[
+			'enabled' => true,
+			'type' => 'internal',
+			'name' => 'perceived-performance-survey',
+			'question' => 'ext-quicksurveys-performance-internal-survey-question',
+			'answers' => [
+				'ext-quicksurveys-example-internal-survey-answer-positive',
+				'ext-quicksurveys-example-internal-survey-answer-neutral',
+				'ext-quicksurveys-example-internal-survey-answer-negative',
+			],
+			'coverage' => 0.0,
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+			],
+			'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
+			'shuffleAnswersDisplay' => true,
+		],
+	],
+	'frwiki' => [
+		// T187299
+		[
+			'enabled' => true,
+			'type' => 'internal',
+			'name' => 'perceived-performance-survey',
+			'question' => 'ext-quicksurveys-performance-internal-survey-question',
+			'answers' => [
+				'ext-quicksurveys-example-internal-survey-answer-positive',
+				'ext-quicksurveys-example-internal-survey-answer-neutral',
+				'ext-quicksurveys-example-internal-survey-answer-negative',
+			],
+			'coverage' => 0.0,
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+			],
+			'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
+			'shuffleAnswersDisplay' => true,
+		],
+	],
 	'plwiki' => [
 		// T232525
 		[
@@ -22398,7 +22459,25 @@ function wmfGetVariantSettings() {
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
 			],
-		]
+		],
+		// T187299
+		[
+			'enabled' => true,
+			'type' => 'internal',
+			'name' => 'perceived-performance-survey',
+			'question' => 'ext-quicksurveys-performance-internal-survey-question',
+			'answers' => [
+				'ext-quicksurveys-example-internal-survey-answer-positive',
+				'ext-quicksurveys-example-internal-survey-answer-neutral',
+				'ext-quicksurveys-example-internal-survey-answer-negative',
+			],
+			'coverage' => 0.0,
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+			],
+			'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
+			'shuffleAnswersDisplay' => true,
+		],
 	]
 ],
 
