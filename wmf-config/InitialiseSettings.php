@@ -19728,6 +19728,26 @@ function wmfGetVariantSettings() {
 			'prefixMapping' => [],
 		],
 	],
+	'commonswiki' => [
+		'' => [
+			'repoDatabase' => 'wikidatawiki',
+			'baseUri' => 'http://www.wikidata.org/entity/',
+			'entityNamespaces' => [
+				'item' => 0,
+				'property' => 120,
+				'lexeme' => 146,
+			],
+			'prefixMapping' => [
+				'' => '',
+			],
+		],
+		'commons' => [
+			'repoDatabase' => 'commonswiki',
+			'entityNamespaces' => [ 'mediainfo' => '6/mediainfo' ],
+			'baseUri' => 'https://commons.wikimedia.org/wiki/Special:EntityData/',
+			'prefixMapping' => [],
+		],
+	],
 ],
 
 'wmgWikibaseClientChangesDatabase' => [
