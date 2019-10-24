@@ -3546,6 +3546,7 @@ function wmfGetVariantSettings() {
 		'Museum' => 106,
 		'Museum_talk' => 107,
 		'COM' => NS_PROJECT, // T14600
+		'CAT' => NS_CATEGORY, // T236352
 	],
 	'+cswiki' => [
 		'Uživatel' => NS_USER,
