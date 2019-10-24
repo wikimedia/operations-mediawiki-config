@@ -8861,6 +8861,7 @@ function wmfGetVariantSettings() {
 		'user' => [
 			'changetags' => false, // T134196
 			'upload' => true, // exception for T14556
+			'move-rootuserpages' => false, // T236359
 		],
 		'rollbacker' => [ 'rollback' => true ],
 		'patroller' => [ // T214003
@@ -8869,11 +8870,13 @@ function wmfGetVariantSettings() {
 			'abusefilter-log-detail' => true,
 			'upload_by_url' => true,
 			'mass-upload' => true, // T226217
+			'move-rootuserpages' => true, // T236359
 		],
 		'autopatrolled' => [ // T214003
 			'autopatrol' => true,
 			'upload_by_url' => true,
 			'mass-upload' => true, // T226217
+			'move-rootuserpages' => true, // T236359
 		],
 		'filemover' => [ 'movefile' => true ],
 		'image-reviewer' => [
@@ -8881,13 +8884,18 @@ function wmfGetVariantSettings() {
 			'upload_by_url' => true,
 			'patrol' => true, // T183835
 			'mass-upload' => true, // T226217
+			'move-rootuserpages' => true, // T236359
 		],
 		'sysop' => [
 			'changetags' => true, // T134196
 			'upload_by_url' => true,
 			'templateeditor' => true, // T227420
 		],
-		'bot' => [ 'changetags' => true, 'upload_by_url' => true, ], // T134196, T145010
+		'bot' => [
+			'changetags' => true,
+			'upload_by_url' => true,
+			'move-rootuserpages' => true, // T236359
+		], // T134196, T145010
 		'translationadmin' => [ 'noratelimit' => true, ], // T155162
 		'templateeditor' => [ 'templateeditor' => true, 'tboverride' => true, ], // T227420
 	],
