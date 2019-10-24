@@ -179,6 +179,8 @@ $wmgMonologLoggerCalls = [
 	'useMicrosecondTimestamps' => [ false ],
 ];
 
+$phpUname = php_uname( 'n' );
+$isParsoidCluster = substr( $phpUname, 0, 3 ) === 'wtp';
 $wmgMonologConfig = [
 	'loggers' => [
 		// Template for all undefined log channels
@@ -206,7 +208,7 @@ $wmgMonologConfig = [
 		],
 		'cee' => [
 			'class' => '\\MediaWiki\\Logger\\Monolog\\CeeFormatter',
-			'args'  => [ 'mediawiki', php_uname( 'n' ), null, '', 1 ],
+			'args'  => [ $isParsoidCluster ? 'parsoid-php' : 'mediawiki', $phpUname, null, '', 1 ],
 		],
 	],
 ];
