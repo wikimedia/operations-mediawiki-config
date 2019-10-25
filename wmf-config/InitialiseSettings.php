@@ -16146,7 +16146,7 @@ function wmfGetVariantSettings() {
 	'officewiki' => true,
 ],
 
-// Namespaces for VisualEditor to be active in, as well as wgContentNamespaces
+// Namespaces for VisualEditor to be active in, in addition to wgContentNamespaces
 'wmgVisualEditorAvailableNamespaces' => [
 	'default' => [
 		'User' => true,
@@ -16260,7 +16260,7 @@ function wmfGetVariantSettings() {
 
 	// Wikimanias
 	'+wikimaniawiki' => [
-		128 => true, // T218645; reference via ID until T219562 is fixed
+		'2019' => true, // T218645
 	],
 
 	// Wikimedias
@@ -16314,7 +16314,6 @@ function wmfGetVariantSettings() {
 
 	'enwiki' => true,
 	'eswiki' => true,
-
 ],
 
 // Whether VisualEditor should be enabled for a proportion of new accounts on a
@@ -16362,11 +16361,6 @@ function wmfGetVariantSettings() {
 	'wikipedia' => false,
 	'wikibooks' => false,
 	'wikiversity' => false,
-],
-
-// Should 50% of new accounts be opted in to VisualEditor (A/B test)
-'wmgVisualEditorEnableSplitTest' => [
-	'default' => false,
 ],
 
 // ExternalGuidance extension initiated edit tags in VE (T216123)
