@@ -1891,6 +1891,7 @@ function wmfGetVariantSettings() {
 	// NOTE: Use relative paths for same-wiki links so the SSL converter can tweak them correctly
 	'arwiki' => '/wiki/ويكيبيديا:رفع', // T142450
 	'aswiki' => '/wiki/ৱিকিপিডিয়া:ফাইল_আপল’ড_বিশেষজ্ঞ',
+	'azwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=az', // T236307
 	'azbwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=azb', // T106305
 	'bgwiki' => '/wiki/MediaWiki:Uploadtext', // T16836
 	'bnwiki' => '/wiki/উইকিপিডিয়া:আপলোড',
