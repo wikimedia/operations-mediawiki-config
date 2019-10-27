@@ -8625,18 +8625,18 @@ function wmfGetVariantSettings() {
 	],
 
 	// Account creation required
-	'nlwikimedia' => [ '*' => [
-		'edit' => false,
-	] ],
-	'fiwikimedia' => [ '*' => [
-		'edit' => false,
-	] ],
-	'trwikimedia' => [ '*' => [
-		'edit' => false,
-	] ],
-	'sewikimedia' => [ '*' => [
-		'edit' => false,
-	] ],
+	'nlwikimedia' => [
+		'*' => [ 'edit' => false, ]
+	],
+	'fiwikimedia' => [
+		'*' => [ 'edit' => false, ]
+	],
+	'trwikimedia' => [
+		'*' => [ 'edit' => false, ]
+	],
+	'sewikimedia' => [
+		'*' => [ 'edit' => false, ]
+	],
 
 	'+amwikimedia' => [
 		'sysop' => [ 'translationadmin' ],
@@ -9052,8 +9052,6 @@ function wmfGetVariantSettings() {
 		'patroller' => [ 'patrol' => true ], // T149019
 	],
 	'+enwikibooks' => [
-		// 'rollbacker' => [ 'rollback' => true ],
-		// 'patroller' => [ 'patrol' => true, 'autopatrol' => true ],
 		'editor' => [ 'autopatrol' => true ], // T172561
 		'flood' => [ 'bot' => true ],
 		'uploader' => [ 'upload' => true, 'reupload' => true ],
@@ -12116,9 +12114,7 @@ function wmfGetVariantSettings() {
 		],
 	],
 	'+svwiktionary' => [
-		'sysop' => [
-			'autopatrolled', // T161919
-		],
+		'sysop' => [ 'autopatrolled', ], // T161919
 	],
 	'+tawiki' => [
 		'bureaucrat' => [ 'nocreate' ],
@@ -12174,12 +12170,8 @@ function wmfGetVariantSettings() {
 			'electcomm',
 			'staffsupport',
 		],
-		'staffsupport' => [
-			'electionadmin'
-		],
-		'electcomm' => [
-			'electionadmin'
-		],
+		'staffsupport' => [ 'electionadmin' ],
+		'electcomm' => [ 'electionadmin' ],
 	],
 	'+wikidata' => [
 		'sysop' => [
@@ -12191,9 +12183,7 @@ function wmfGetVariantSettings() {
 			'flood', // T50013
 			'wikidata-staff', // T74459
 		],
-		'wikidata-staff' => [
-			'wikidata-staff', // T74459
-		],
+		'wikidata-staff' => [ 'wikidata-staff', ], // T74459
 	],
 	'+wikimaniawiki' => [
 		'sysop' => [ 'uploader' ],  // T225505
@@ -12250,9 +12240,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'autopatrolled', 'confirmed', 'patroller', 'transwiki' ], // T62085, T62328
 	],
 	'+zhwiktionary' => [
-		'sysop' => [
-			'flood', // T187018
-		],
+		'sysop' => [ 'flood', ], // T187018
 	],
 	'+zh_yuewiki' => [
 		'sysop' => [ 'abusefilter', 'rollbacker', 'autoreviewer', 'confirmed' ],
