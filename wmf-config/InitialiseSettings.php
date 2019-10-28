@@ -16697,6 +16697,26 @@ function wmfGetVariantSettings() {
 // 'source', 'visual', 'preference' (to use the desktop editor preference), or 'abtest'
 'wmgMFDefaultEditor' => [
 	'default' => false,
+	'azwiki' => 'abtest', // Azerbaijani
+	'bgwiki' => 'abtest', // Bulgarian
+	'zh_yuewiki' => 'abtest', // Cantonese
+	'cawiki' => 'abtest', // Catalan
+	'hrwiki' => 'abtest', // Croatian
+	'dawiki' => 'abtest', // Danish
+	'etwiki' => 'abtest', // Estonian
+	'fiwiki' => 'abtest', // Finnish
+	'elwiki' => 'abtest', // Greek
+	'huwiki' => 'abtest', // Hungarian
+	'mswiki' => 'abtest', // Malay
+	'mlwiki' => 'abtest', // Malayalam
+	'nowiki' => 'abtest', // Norwegian (Bokmål)
+	'ptwiki' => 'abtest', // Portugese
+	'rowiki' => 'abtest', // Romanian
+	'srwiki' => 'abtest', // Serbian
+	'svwiki' => 'abtest', // Swedish
+	'tawiki' => 'abtest', // Tamil
+	'thwiki' => 'abtest', // Thai
+	'urwiki' => 'abtest' // Urdu
 ],
 // Whether to oversample EditAttemptStep logging on MobileFrontend
 // 'visualeditor' or 'all', currently kept in sync with the above
