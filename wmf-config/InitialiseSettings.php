@@ -22266,11 +22266,6 @@ function wmfGetVariantSettings() {
 	'wikitech' => 'memcached-pecl',
 	'testwiki' => 'kask-session',
 ],
-'wgEchoSeenTimeCacheType' => [
-	'default' => 'redis_local',  // declared in redis.php. This will change to kask-echoseen-transition.
-	'wikitech' => 'memcached-pecl',
-	'testwiki' => 'kask-echoseen-transition',
-],
 'wgCentralAuthSessionCacheType' => [
 	'default' => 'redis_local',  // declared in redis.php
 	'wikitech' => 'memcached-pecl',
