@@ -3990,7 +3990,6 @@ if ( $wmgUseTheWikipediaLibrary ) {
 }
 
 // This is a temporary hack for hooking up Parsoid/PHP with MediaWiki
-$hostName = wfHostName();
 $parsoidDir = '/srv/deployment/parsoid/deploy/src';
 if ( file_exists( "$parsoidDir/extension.json" ) ) {
 	// While we are testing & benchmarking, make production db access read-only
@@ -4006,12 +4005,11 @@ if ( file_exists( "$parsoidDir/extension.json" ) ) {
 	wfLoadExtension( 'Parsoid/PHP', "$parsoidDir/extension.json" );
 
 	// Override settings specific to round-trip testing on scandium
-	if ( $hostName === 'scandium' && file_exists( "$parsoidDir/tests/RTTestSettings.php" ) ) {
+	if ( wfHostName() === 'scandium' && file_exists( "$parsoidDir/tests/RTTestSettings.php" ) ) {
 		require_once "$parsoidDir/tests/RTTestSettings.php";
 	}
 }
 unset( $parsoidDir );
-unset( $hostName );
 // End of temporary hack for hooking up Parsoid/PHP with MediaWiki
 
 # Temporary for the HHVM => PHP7.2 migration. Adds an array of unicode chars
