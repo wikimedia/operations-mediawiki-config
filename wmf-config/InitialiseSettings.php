@@ -22662,7 +22662,6 @@ function wmfGetVariantSettings() {
 	'dewiki' => false,
 	'huwiki' => false,
 	'idwiki' => false,
-	'kawiki' => false,
 	'plwiki' => false,
 	'sqwiki' => false,
 	'trwiki' => false,
