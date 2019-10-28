@@ -155,6 +155,13 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterAnonBlockDuration = '31 hours'; // T96669
 		$wgAbuseFilterNotificationsPrivate = true; // T147744
 		break;
+	case 'eswikinews': // T236730
+		$wgAbuseFilterActions['block'] = true;
+		$wgAbuseFilterAnonBlockDuration = '31 hours';
+		$wgAbuseFilterBlockDuration = '31 hours';
+		$wgAbuseFilterNotificationsPrivate = true;
+		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
+		break;
 	case 'eswikiquote': // T177760, T177761
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 		$wgAbuseFilterActions['block'] = true;
