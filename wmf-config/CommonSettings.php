@@ -3600,6 +3600,10 @@ if ( $wmgUseOATHAuth ) {
 		$wgOATHAuthAccountPrefix = 'Wikimedia';
 		$wgOATHAuthDatabase = 'centralauth';
 	}
+
+	if ( $wmgUseWebAuthn ) {
+		wfLoadExtension( 'WebAuthn' );
+	}
 }
 
 if ( $wmgUseJADE ) {

@@ -22675,6 +22675,10 @@ function wmfGetVariantSettings() {
 	'nonglobal' => false,
 ],
 
+'wmgUseWebAuthn' => [
+	'default' => false,
+],
+
 'wmgWatchlistDefault' => [
 	'default' => false,
 	'arwiki' => true, // T220186

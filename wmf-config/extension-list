@@ -162,6 +162,7 @@ $IP/extensions/UrlShortener/extension.json
 $IP/extensions/UserMerge/extension.json
 $IP/extensions/VipsScaler/extension.json
 $IP/extensions/VisualEditor/extension.json
+$IP/extensions/WebAuthn/extension.json
 $IP/extensions/Wikibase/client/WikibaseClient.php
 $IP/extensions/Wikibase/repo/Wikibase.php
 $IP/extensions/WikibaseCirrusSearch/extension.json

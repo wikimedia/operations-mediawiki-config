@@ -1680,5 +1680,9 @@ function wmfGetLabsOverrideSettings() {
 		'wgLegacyJavaScriptGlobals' => [
 			'default' => false,
 		],
+
+		'wmgUseWebAuthn' => [
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()
