@@ -22926,6 +22926,7 @@ function wmfGetVariantSettings() {
 
 'wgMultiContentRevisionSchemaMigrationStage' => [
 	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
+	'testwiki' => SCHEMA_COMPAT_NEW,
 ],
 'wmgUseReadingLists' => [
 	'default' => true,
