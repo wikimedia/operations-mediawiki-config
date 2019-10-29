@@ -4566,6 +4566,7 @@ function wmfGetVariantSettings() {
 	],
 	'+thwikisource' => [
 		'ผู้ประพันธ์' => 102, // T236640
+		'คุยเรื่องผู้ประพันธ์' => 103, // T236640
 	],
 	'+thwiktionary' => [
 		'คุยเรื่องWiktionary' => NS_PROJECT_TALK,
@@ -6835,8 +6836,8 @@ function wmfGetVariantSettings() {
 	'thwikisource' => [
 		100 => 'สถานีย่อย', // Portal, T216322
 		101 => 'คุยเรื่องสถานีย่อย', // Portal talk, T216322
-		102 => 'ผู้สร้างสรรค์', // Author, T216322
-		103 => 'คุยเรื่องผู้ประพันธ์', // Author talk, T216322
+		102 => 'ผู้สร้างสรรค์', // Author, T216322 and T236640
+		103 => 'คุยเรื่องผู้สร้างสรรค์', // Author talk, T216322 and T236640
 		114 => 'งานแปล', // Translation, T216322
 		115 => 'คุยเรื่องงานแปล', // Translation talk, T216322
 	],
