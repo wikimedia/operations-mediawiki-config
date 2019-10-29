@@ -8502,7 +8502,6 @@ function wmfGetVariantSettings() {
 	'huwiki' => true,
 	'jawiki' => true,
 	'ruwiki' => true, // T231298
-	'kowiki' => true, // T236752
 	'wiktionary' => true,
 	'wikisource' => true,
 	'wikivoyage' => true,
