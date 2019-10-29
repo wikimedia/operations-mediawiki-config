@@ -10,6 +10,7 @@ inheritsFrom:
   - flaggedrevs
   - flow-labs
   - flow
+  - growthexperiments
   - large
   - mobilemainpagelegacy
   - pp_stage1

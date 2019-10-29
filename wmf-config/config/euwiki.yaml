@@ -7,6 +7,7 @@ inheritsFrom:
   - categories-rdf
   - cirrussearch-big-indices
   - flow
+  - growthexperiments
   - medium
   - mobilemainpagelegacy
   - pp_stage1

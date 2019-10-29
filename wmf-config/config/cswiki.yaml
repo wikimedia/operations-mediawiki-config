@@ -9,6 +9,7 @@ inheritsFrom:
   - cirrussearch-big-indices
   - commonsuploads
   - flow
+  - growthexperiments
   - large
   - mobilemainpagelegacy
   - pp_stage1

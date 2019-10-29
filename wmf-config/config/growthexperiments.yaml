@@ -1,0 +1,7 @@
+# WARNING: This file is publicly viewable on the Web. Do not put private data here.
+# This is the shared trait configuration file for all wikis with Growth Experiments.
+# All settings here apply to wikis with this trait, unless over-ridden.
+
+# NOTE: This is a puppet-only dblist, and so cannot be used for config.
+
+wikiTag: growthexperiments

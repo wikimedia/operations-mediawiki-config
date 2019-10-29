@@ -23053,6 +23053,8 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
+// Keep this in sync with the 'growthexperiments' tag
+// in the per-wiki yaml files.
 'wmgUseGrowthExperiments' => [
 	'default' => false,
 	'testwiki' => true,
