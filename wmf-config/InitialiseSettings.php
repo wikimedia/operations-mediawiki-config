@@ -23657,14 +23657,6 @@ function wmfGetVariantSettings() {
 	],
 ],
 
-// TODO: Remove once running elastic 6.x
-// ref: https://github.com/elastic/elasticsearch/issues/26833
-'wgCirrusSearchElasticQuirks' => [
-	'default' => [
-		'cross_cluster_single_shard_search' => true
-	]
-],
-
 'wgCirrusSearchCrossClusterSearch' => [
 	'default' => true
 ],
