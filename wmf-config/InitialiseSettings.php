@@ -16948,6 +16948,11 @@ function wmfGetVariantSettings() {
 		'copyright-width' => 88,
 		'copyright-height' => 21,
 	],
+	'sdwiki' => [ // T200870
+		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-sd.svg',
+		'copyright-width' => 77,
+		'copyright-height' => 22,
+	],
 	'srwiki' => [ // T165896
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-sr.svg',
 		'copyright-width' => 122,
