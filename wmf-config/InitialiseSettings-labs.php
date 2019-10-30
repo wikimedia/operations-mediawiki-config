@@ -1594,6 +1594,9 @@ function wmfGetLabsOverrideSettings() {
 			'default' => 8,
 			'wikidatawiki' => 3,
 		],
+		'wmgUseWikisource' => [
+			'wikisource' => true,
+		],
 		'wmgUseWikimediaEditorTasks' => [
 			'default' => false,
 			'wikidatawiki' => true,

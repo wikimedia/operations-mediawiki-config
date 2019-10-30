@@ -3860,6 +3860,10 @@ if ( $wmgUseSkinPerPage ) {
 	wfLoadExtension( 'SkinPerPage' );
 }
 
+if ( $wmgUseWikisource ) {
+	wfLoadExtension( 'Wikisource' );
+}
+
 if ( $wmgUseEUCopyrightCampaign ) {
 	wfLoadExtension( 'EUCopyrightCampaign' );
 	wfLoadSkin( 'EUCopyrightCampaignSkin' );

@@ -20767,6 +20767,11 @@ function wmfGetVariantSettings() {
 	'wikidatawiki' => true,
 ],
 
+// Enable Wikisource extension
+'wmgUseWikisource' => [
+	'default' => false,
+],
+
 'wgMusicalNotationEnableWikibaseDataType' => [
 	'default' => false,
 	'testwikidatawiki' => true,
