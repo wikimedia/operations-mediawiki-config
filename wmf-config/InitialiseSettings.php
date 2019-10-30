@@ -22417,24 +22417,6 @@ function wmfGetVariantSettings() {
 			'shuffleAnswersDisplay' => true,
 		],
 	],
-	'enwiki' => [
-		// T232525
-		[
-			'enabled' => true,
-			'name' => 'reader-demographics-en',
-			'type' => 'external',
-			'description' => 'Reader-demographics-1-description',
-			'link' => 'Reader-demographics-2-link',
-			'question' => 'Reader-demographics-1-message',
-			'privacyPolicy' => 'Reader-demographics-1-privacy',
-			'coverage' => 0.000833, // 1 out of 1200
-			'instanceTokenParameterName' => 'entry.1791119923',
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-		]
-	],
 	'enwikivoyage' => [
 		// T187299
 		[
@@ -22495,41 +22477,7 @@ function wmfGetVariantSettings() {
 			'shuffleAnswersDisplay' => true,
 		],
 	],
-	'plwiki' => [
-		// T232525
-		[
-			'enabled' => true,
-			'name' => 'reader-demographics-pl',
-			'type' => 'external',
-			'description' => 'Reader-demographics-1-description',
-			'link' => 'Reader-demographics-1-link',
-			'question' => 'Reader-demographics-1-message',
-			'privacyPolicy' => 'Reader-demographics-1-privacy',
-			'coverage' => 0.005, // 1 out of 200
-			'instanceTokenParameterName' => 'entry.1791119923',
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-		]
-	],
 	'ruwiki' => [
-		// T232525
-		[
-			'enabled' => true,
-			'name' => 'reader-demographics-ru',
-			'type' => 'external',
-			'description' => 'Reader-segmentation-1-description',
-			'link' => 'Reader-demographics-2-link',
-			'question' => 'Reader-demographics-1-message',
-			'privacyPolicy' => 'Reader-demographics-1-privacy',
-			'coverage' => 0.00167, // 1 out of 600
-			'instanceTokenParameterName' => 'entry.1791119923',
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-		],
 		// T187299
 		[
 			'enabled' => true,
