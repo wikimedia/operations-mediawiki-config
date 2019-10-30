@@ -179,6 +179,7 @@ $IP/extensions/WikimediaEditorTasks/extension.json
 $IP/extensions/WikimediaEvents/extension.json
 $IP/extensions/WikimediaIncubator/extension.json
 $IP/extensions/WikimediaMessages/extension.json
+$IP/extensions/Wikisource/extension.json
 $IP/extensions/XAnalytics/extension.json
 $IP/skins/CologneBlue/skin.json
 $IP/skins/EUCopyrightCampaignSkin/skin.json
