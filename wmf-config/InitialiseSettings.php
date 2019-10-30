@@ -19087,6 +19087,7 @@ function wmfGetVariantSettings() {
 	'jvwiki' => false,
 	'mlwiki' => false, // T233008
 	'mnwiki' => false, // T234317
+	'sqwiki' => false, // T236064
 	'tlwiki' => false, // T233006
 ],
 
