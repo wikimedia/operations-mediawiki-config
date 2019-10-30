@@ -1608,6 +1608,9 @@ function wmfGetLabsOverrideSettings() {
 		'wgWikimediaEditorTasksUserCountsDatabase' => [
 			'default' => false,
 		],
+		'wgWikimediaEditorTasksEnableEditStreaks' => [
+			'default' => true,
+		],
 		'wmgUseMachineVision' => [
 			'default' => false,
 			'commonswiki' => true,
