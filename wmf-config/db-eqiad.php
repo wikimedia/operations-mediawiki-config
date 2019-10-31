@@ -86,9 +86,9 @@ $wgLBFactoryConf = [
 	# s8: wikidata
 	'wikidatawiki' => 's8',
 
-	# labs-related wikis
-	'labswiki'     => 'wikitech',
-	'labtestwiki'  => 'labtestwiki',
+	# Wikitech and its test wiki
+	'labswiki'     => 's10',
+	'labtestwiki'  => 's11',
 ],
 
 # Load lists
