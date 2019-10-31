@@ -1148,7 +1148,7 @@ function wmfGetLabsOverrideSettings() {
 		],
 		'wgGENewcomerTasksRemoteApiUrl' => [
 			'default' => null,
-			'en' => 'https://cs.wikipedia.org/w/api.php',
+			'en' => 'https://en.wikipedia.beta.wmflabs.org/w/api.php',
 			'ko' => 'https://ko.wikipedia.org/w/api.php',
 			'ar' => 'https://ar.wikipedia.org/w/api.php',
 		],
