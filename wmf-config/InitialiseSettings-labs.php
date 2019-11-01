@@ -742,10 +742,6 @@ function wmfGetLabsOverrideSettings() {
 			],
 		],
 
-		'wgPageViewInfoWikimediaDomain' => [
-			'default' => 'en.wikipedia.org',
-		],
-
 		'wgLinterSubmitterWhitelist' => [
 			'default' => [
 				'172.16.5.63' => true // deployment-parsoid09.deployment-prep.eqiad.wmflabs
