@@ -3972,6 +3972,10 @@ if ( $wmgUseWikimediaEditorTasks ) {
 }
 
 if ( $wmgUseMachineVision ) {
+	if ( $wmfRealm === 'production' ) {
+		$wgMachineVisionHttpProxy = $wmfLocalServices['urldownloader'];
+	}
+
 	wfLoadExtension( 'MachineVision' );
 }
 
