@@ -1249,10 +1249,10 @@ function wmfGetLabsOverrideSettings() {
 		'wmgWikibaseClientPropertyOrderUrl' => [
 			'default' => null,
 		],
-		'wmgWikibaseClientRepoUrl' => [
+		'-wmgWikibaseClientRepoUrl' => [
 			'default' => 'https://wikidata.beta.wmflabs.org',
 		],
-		'wmgWikibaseClientRepoConceptBaseUri' => [
+		'-wmgWikibaseClientRepoConceptBaseUri' => [
 			'default' => 'http://wikidata.beta.wmflabs.org/entity/'
 		],
 		'-wmgWikibaseClientRepositories' => [
@@ -1274,6 +1274,13 @@ function wmfGetLabsOverrideSettings() {
 					'prefixMapping' => [],
 				],
 			],
+		],
+		'-wmgWikibaseClientChangesDatabase' => [
+			'default' => 'wikidatawiki',
+		],
+
+		'-wmgWikibaseClientRepoDatabase' => [
+			'default' => 'wikidatawiki',
 		],
 
 		// T209143
