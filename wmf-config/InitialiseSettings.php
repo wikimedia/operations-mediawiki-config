@@ -23263,6 +23263,25 @@ function wmfGetVariantSettings() {
 	'default' => false,
 ],
 
+'wgGEHomepageSuggestedEditsIntroLinks' => [
+	'arwiki' => [
+		'create' => 'ويكيبيديا:مقالتك الأولى',
+		'image' => 'مساعدة:مقدمة عن رفع الصور/1',
+	],
+	'cswiki' => [
+		'create' => 'Nápověda:Jak vytvořit článek',
+		'image' => 'Nápověda:Obrázky ve Vizuálním editoru',
+	],
+	'kowiki' => [
+		'create' => '위키백과:새 문서 만들기',
+		'image' => '도움말:그림 사용하기',
+	],
+	'viwiki' => [
+		'create' => 'Wikipedia:Bài viết đầu tiên của bạn',
+		'image' => 'Trợ giúp:Hình ảnh',
+	],
+],
+
 'wgGEHomepageLoggingEnabled' => [
 	'default' => true,
 ],
