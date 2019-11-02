@@ -8194,13 +8194,14 @@ function wmfGetVariantSettings() {
 'wgEnableDnsBlacklist' => [
 	'default' => false,
 	'enwikinews' => true,
+	'eswikinews' => true, // T237151
 	'eswikiquote' => true, // T230796
 	'testwiki' => true,
 	'thwiki' => true,
-	'thwiktionary' => true,
-	'thwikiquote' => true,
 	'thwikibooks' => true,
+	'thwikiquote' => true,
 	'thwikisource' => true,
+	'thwiktionary' => true,
 ],
 
 'wgCountCategorizedImagesAsUsed' => [
