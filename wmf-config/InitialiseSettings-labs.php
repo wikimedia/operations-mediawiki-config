@@ -1151,6 +1151,10 @@ function wmfGetLabsOverrideSettings() {
 			'ko' => 'https://ko.wikipedia.org/w/api.php',
 			'ar' => 'https://ar.wikipedia.org/w/api.php',
 		],
+		'wgGEHomepageSuggestedEditsRequiresOptIn' => [
+			'default' => false,
+			'cawiki' => true,
+		],
 		'wgEnablePartialBlocks' => [
 			'default' => false,
 			'enwiki' => true,
