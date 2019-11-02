@@ -23260,12 +23260,20 @@ function wmfGetVariantSettings() {
 ],
 
 'wgGEHomepageSuggestedEditsEnabled' => [
-	'default' => false,
-	'testwiki' => true,
+	'default' => true,
+],
+
+'wgGEHomepageSuggestedEditsRequiresOptIn' => [
+	'default' => true,
+	'testwiki' => false,
 ],
 
 'wgGENewcomerTasksRemoteConfigTitle' => [
 	'default' => null,
+	'arwiki' => 'mw:Growth/Personalized_first_day/Newcomer_tasks/Prototype/templates/ar.json',
+	'cswiki' => 'mw:Growth/Personalized_first_day/Newcomer_tasks/Prototype/templates/cs.json',
+	'kowiki' => 'mw:Growth/Personalized_first_day/Newcomer_tasks/Prototype/templates/ko.json',
+	'viwiki' => 'mw:Growth/Personalized_first_day/Newcomer_tasks/Prototype/templates/vi.json',
 	// Testwiki will use cswiki templates.
 	'testwiki' => 'mw:Growth/Personalized_first_day/Newcomer_tasks/Prototype/templates/cs.json',
 ],

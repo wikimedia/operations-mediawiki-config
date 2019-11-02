@@ -1123,8 +1123,8 @@ function wmfGetLabsOverrideSettings() {
 		'wgGEHomepageEnabled' => [
 			'default' => true,
 		],
-		'wgGEHomepageSuggestedEditsEnabled' => [
-			'default' => true,
+		'wgGEHomepageSuggestedEditsRequiresOptIn' => [
+			'default' => false,
 		],
 		'wgGEHomepageNewAccountEnablePercentage' => [
 			'default' => 50,
