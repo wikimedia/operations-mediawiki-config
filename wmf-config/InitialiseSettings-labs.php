@@ -1069,6 +1069,7 @@ function wmfGetLabsOverrideSettings() {
 		],
 		'wgGEHelpPanelSearchForeignAPI' => [
 			'default' => 'https://en.wikipedia.org/w/api.php',
+			'cswiki' => 'https://cs.wikipedia.org/w/api.php',
 			'cawiki' => 'https://cs.wikipedia.org/w/api.php',
 			'kowiki' => 'https://ko.wikipedia.org/w/api.php',
 			'arwiki' => 'https://ar.wikipedia.org/w/api.php',
@@ -1138,6 +1139,7 @@ function wmfGetLabsOverrideSettings() {
 		],
 		'wgGENewcomerTasksRemoteConfigTitle' => [
 			'default' => null,
+			'cs' => 'mw:Growth/Personalized_first_day/Newcomer_tasks/Prototype/templates/cs.json',
 			'en' => 'mw:Growth/Personalized_first_day/Newcomer_tasks/Prototype/templates/cs.json',
 			'ko' => 'mw:Growth/Personalized_first_day/Newcomer_tasks/Prototype/templates/ko.json',
 			'ar' => 'mw:Growth/Personalized_first_day/Newcomer_tasks/Prototype/templates/ar.json',
@@ -1145,6 +1147,7 @@ function wmfGetLabsOverrideSettings() {
 		'wgGENewcomerTasksRemoteApiUrl' => [
 			'default' => null,
 			'en' => 'https://en.wikipedia.beta.wmflabs.org/w/api.php',
+			'cs' => 'https://cs.wikipedia.beta.wmflabs.org/w/api.php',
 			'ko' => 'https://ko.wikipedia.org/w/api.php',
 			'ar' => 'https://ar.wikipedia.org/w/api.php',
 		],
