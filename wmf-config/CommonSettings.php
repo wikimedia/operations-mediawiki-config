@@ -874,11 +874,12 @@ if (
 // extension is enabled on, for proper display in OAuth pages and such.
 
 // Adding Flaggedrevs rights so that they are available for globalgroups/staff rights - JRA 2013-07-22
+$wgAvailableRights[] = 'autoreview';
 $wgAvailableRights[] = 'autoreviewrestore';
-$wgAvailableRights[] = 'stablesettings';
-$wgAvailableRights[] = 'review';
-$wgAvailableRights[] = 'unreviewedpages';
 $wgAvailableRights[] = 'movestable';
+$wgAvailableRights[] = 'review';
+$wgAvailableRights[] = 'stablesettings';
+$wgAvailableRights[] = 'unreviewedpages';
 $wgAvailableRights[] = 'validate';
 $wgGrantPermissions['editprotected']['movestable'] = true;
 
