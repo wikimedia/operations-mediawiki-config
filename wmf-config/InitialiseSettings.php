@@ -3683,6 +3683,8 @@ function wmfGetVariantSettings() {
 		'ΒΠ' => NS_PROJECT, // T135383
 	],
 	'+elwikisource' => [
+		'Βιβλιο' => 102,
+		'Συζήτηση_βιβλίου' => 103,
 		'Author' => 108, // T157187
 		'Author_talk' => 109, // T157187
 		'Portal' => 110, // T157187
