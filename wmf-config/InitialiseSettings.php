@@ -8524,8 +8524,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgEnableSpecialMute' => [
-	'default' => false,
-	'testwiki' => true,
+	'default' => true,
 ],
 
 'wgOriginTrials' => [
