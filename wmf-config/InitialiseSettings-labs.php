@@ -1617,6 +1617,9 @@ function wmfGetLabsOverrideSettings() {
 		'wgWikimediaEditorTasksEnableEditStreaks' => [
 			'default' => true,
 		],
+		'wgWikimediaEditorTasksEnableRevertCounts' => [
+			'default' => true,
+		],
 		'wmgUseMachineVision' => [
 			'default' => false,
 			'commonswiki' => true,
