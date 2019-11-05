@@ -21738,7 +21738,8 @@ function wmfGetVariantSettings() {
 // Enable phrase suggester (did you mean) on all wikis (except wikidata)
 'wgCirrusSearchEnablePhraseSuggest' => [
 	'default' => true,
-	'wikidatawiki' => false
+	'wikidatawiki' => false,
+	'testwikidatawiki' => false
 ],
 
 // wgCirrusSearchRecycleCompletionSuggesterIndex @{
@@ -21826,23 +21827,30 @@ function wmfGetVariantSettings() {
 	'default' => false,
 ],
 
+// NOTE: When enabling a profile that embarks the phrase suggester
+// make sure to enable it with wgCirrusSearchEnablePhraseSuggest
+// and reindex the wiki
+// Available profiles are in CirrusSearch/profiles/FallbackProfiles.config.php
+// or defined in the config var wgCirrusSearchFallbackProfiles
+'wgCirrusSearchFallbackProfile' => [
+	'default' => 'phrase_suggest',
+	// Nothing for wikidata
+	'wikidatawiki' => 'none',
+	'testwikidatawiki' => 'none',
+	// PhraseSuggest & Language detection
+	'dewiki' => 'phrase_suggest_and_language_detection',
+	'enwiki' => 'phrase_suggest_and_language_detection',
+	'eswiki' => 'phrase_suggest_and_language_detection',
+	'frwiki' => 'phrase_suggest_and_language_detection',
+	'itwiki' => 'phrase_suggest_and_language_detection',
+	'jawiki' => 'phrase_suggest_and_language_detection',
+	'nlwiki' => 'phrase_suggest_and_language_detection',
+	'ptwiki' => 'phrase_suggest_and_language_detection',
+	'ruwiki' => 'phrase_suggest_and_language_detection',
+],
+
 'wgCirrusSearchUserTesting' => [
-	'default' => [
-		// T233211
-		'glent_m0' => [
-			'buckets' => [
-				'control' => [
-					'trigger' => 'control',
-				],
-				'glent_m0' => [
-					'trigger' => 'glent_m0',
-					'globals' => [
-						'wgCirrusSearchFallbackProfile' => 'phrase_suggest_glentM0_and_langdetect',
-					],
-				],
-			],
-		],
-	],
+	'default' => [],
 ],
 
 'wgCirrusSearchLanguageDetectors' => [
@@ -21864,6 +21872,8 @@ function wmfGetVariantSettings() {
 // Note that if language detectors are enabled they will always run, this
 // gates if the result of running is shown to the user (for AB test control
 // bucket reasons).
+// NOTE: be sure to enable a fallback profile that triggers language detection
+//       see wgCirrusSearchFallbackProfile
 'wgCirrusSearchEnableAltLanguage' => [
 	'default' => false,
 	'dewiki' => true,
