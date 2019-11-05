@@ -23330,6 +23330,14 @@ function wmfGetVariantSettings() {
 	],
 ],
 
+'wgWikimediaEditorTasksEnableEditStreaks' => [
+	'default' => true,
+],
+
+'wgWikimediaEditorTasksEnableRevertCounts' => [
+	'default' => true,
+],
+
 'wmgUseMachineVision' => [
 	'default' => false,
 ],
