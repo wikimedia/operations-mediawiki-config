@@ -2047,6 +2047,7 @@ function wmfGetVariantSettings() {
 	'stewardwiki' => '//steward.wikimedia.org',
 	'strategywiki' => '//strategy.wikimedia.org',
 	'techconductwiki' => '//techconduct.wikimedia.org', // T165977
+	'testwiki' => '//test.wikipedia.org',
 	'testwikidatawiki' => '//test.wikidata.org',
 	'transitionteamwiki' => '//transitionteam.wikimedia.org',
 	'usabilitywiki' => '//usability.wikimedia.org',
