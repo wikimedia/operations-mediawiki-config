@@ -1653,6 +1653,9 @@ function wmfGetLabsOverrideSettings() {
 		'wgMachineVisionRequestLabelsOnUploadComplete' => [
 			'default' => false,
 		],
+		'wgMachineVisionTestersOnly' => [
+			'default' => false,
+		],
 		'-wgSpecialSearchFormOptions' => [
 			'wikidatawiki' => [ 'showDescriptions' => true ],
 		],
