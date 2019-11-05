@@ -12953,6 +12953,7 @@ function wmfGetVariantSettings() {
 	'+aswikisource' => [ 102 ], // T45129, T72464
 	'+bgwikisource' => [ 100 ],
 	'+bnwikisource' => [ 100 ],
+	'+bnwikibooks' => [ 104 ], // T236840
 	'+brwikisource' => [ 104 ],
 	'+cawikisource' => [ 106 ],
 	'+cswikiquote' => [ 100 ],
