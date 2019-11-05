@@ -23340,6 +23340,75 @@ function wmfGetVariantSettings() {
 
 'wmgUseMachineVision' => [
 	'default' => false,
+	'testcommonswiki' => true,
+],
+
+'wgMachineVisionTestersOnly' => [
+	'default' => true,
+	'testcommonswiki' => false,
+],
+
+'wgMachineVisionRequestLabelsOnUploadComplete' => [
+	'default' => false,
+],
+
+'wgMachineVisionGCVSendFileContents' => [
+	'default' => false,
+	'testcommonswiki' => true,
+],
+
+'wgMachineVisionGoogleSafeSearchLimits' => [
+	'default' => [
+		'adult' => 3,
+		'medical' => 3,
+		'violent' => 4,
+		'racy' => 4,
+	],
+],
+
+'wgMachineVisionHandlers' => [
+	'default' => [
+		'google' => [
+			'class' => 'MediaWiki\\Extension\\MachineVision\\Handler\\GoogleCloudVisionHandler',
+			'services' => [
+				'MachineVisionFetchGoogleCloudVisionAnnotationsJobFactory',
+				'MachineVisionRepository',
+				'MachineVisionRepoGroup',
+				'MachineVisionDepictsSetter',
+				'MachineVisionLabelResolver',
+			],
+		],
+	],
+],
+
+'wgMachineVisionTemplateBlacklist' => [
+	'default' => [
+		'Template:Art_Photo',
+		'Template:Artwork',
+		'Template:Book',
+		'Template:Map',
+	],
+],
+
+'wgMachineVisionWikidataIdBlacklist' => [
+	'default' => [
+		'Q467',
+		'Q3010',
+		'Q3031',
+		'Q8441',
+	],
+],
+
+'wgMachineVisionLabelRequestBackoffSeconds' => [
+	'default' => 60,
+],
+
+'wgMachineVisionLabelRequestNumRetries' => [
+	'default' => 1,
+],
+
+'wgMachineVisionNewUploadLabelingJobDelay' => [
+	'default' => 172800,
 ],
 
 'wgSpecialSearchFormOptions' => [
