@@ -21838,15 +21838,16 @@ function wmfGetVariantSettings() {
 	'wikidatawiki' => 'none',
 	'testwikidatawiki' => 'none',
 	// PhraseSuggest & Language detection
-	'dewiki' => 'phrase_suggest_and_language_detection',
-	'enwiki' => 'phrase_suggest_and_language_detection',
 	'eswiki' => 'phrase_suggest_and_language_detection',
-	'frwiki' => 'phrase_suggest_and_language_detection',
 	'itwiki' => 'phrase_suggest_and_language_detection',
 	'jawiki' => 'phrase_suggest_and_language_detection',
 	'nlwiki' => 'phrase_suggest_and_language_detection',
 	'ptwiki' => 'phrase_suggest_and_language_detection',
 	'ruwiki' => 'phrase_suggest_and_language_detection',
+	// Glent M0 & PhraseSuggest & Language detection
+	'dewiki' => 'phrase_suggest_glentM0_and_langdetect',
+	'enwiki' => 'phrase_suggest_glentM0_and_langdetect',
+	'frwiki' => 'phrase_suggest_glentM0_and_langdetect',
 ],
 
 'wgCirrusSearchUserTesting' => [
