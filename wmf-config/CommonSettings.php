@@ -346,15 +346,6 @@ $wgEnotifMinorEdits = true;
 
 $wgEnableUserEmailBlacklist = true;
 
-if ( $wmgUseGlobalPreferences ) {
-	// Allow global preferences for email-blacklist and echo-notifications
-	// to be auto-set where it is overridden
-	$wgGlobalPreferencesAutoPrefs = [
-		'email-blacklist',
-		'echo-notifications-blacklist'
-	];
-}
-
 # ######################################################################
 # Legal matters
 # ######################################################################
