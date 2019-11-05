@@ -348,6 +348,7 @@ $wgMessageCacheType = CACHE_ACCEL;
 
 // This will work for most wikis, which is considered good enough.
 $wgPageViewInfoWikimediaDomain = "$lang.$site.org";
+$wgGERestbaseUrl = $wgGERestbaseUrl ?: "https://$lang.$site.org/api/rest_v1";
 
 // Let Beta Cluster Commons do upload-from-URL from production Commons.
 if ( $wgDBname == 'commonswiki' ) {

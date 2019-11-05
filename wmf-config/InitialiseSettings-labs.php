@@ -1151,6 +1151,12 @@ function wmfGetLabsOverrideSettings() {
 			'ko' => 'https://ko.wikipedia.org/w/api.php',
 			'ar' => 'https://ar.wikipedia.org/w/api.php',
 		],
+		'wgGERestbaseUrl' => [
+			'default' => null,
+			// use local RESTBase if we use local search
+			'en' => 'https://en.wikipedia.beta.wmflabs.org/api/rest_v1',
+			'cs' => 'https://cs.wikipedia.beta.wmflabs.org/api/rest_v1',
+		],
 		'wgGEHomepageSuggestedEditsRequiresOptIn' => [
 			'default' => false,
 			'cawiki' => true,
