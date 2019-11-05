@@ -54,6 +54,7 @@ function wmfGetVariantSettings() {
 'wgCapitalLinks' => [
 	'default' => true,
 	'jbowiki' => false,
+	'szywiki' => false, // T237369
 	'wiktionary' => false,
 ],
 
@@ -496,6 +497,7 @@ function wmfGetVariantSettings() {
 	'svwikiversity' => 'Europe/Berlin',
 	'svwikivoyage' => 'Europe/Stockholm', // T43992
 	'szlwiki' => 'Europe/Warsaw',
+	'szywiki' => 'Asia/Taipei',
 	'tcywiki' => 'Asia/Kolkata', // T140898
 	'thwiki' => 'Asia/Bangkok',
 	'thwikibooks' => 'Asia/Bangkok',
@@ -785,6 +787,7 @@ function wmfGetVariantSettings() {
 	'svwiki' => '/static/images/project-logos/svwiki.png',
 	'swwiki' => '/static/images/project-logos/swwiki.png',
 	'szlwiki' => '/static/images/project-logos/szlwiki.png',
+	'szywiki' => '/static/images/project-logos/szywiki.png',
 	'tawiki' => '/static/images/project-logos/tawiki.png',  // T29826
 	'tcywiki' => '/static/images/project-logos/tcywiki.png', // T140898
 	'tewiki' => '/static/images/project-logos/tewiki.png',
@@ -1535,6 +1538,7 @@ function wmfGetVariantSettings() {
 	'svwiki' => [ '1.5x' => '/static/images/project-logos/svwiki-1.5x.png', '2x' => '/static/images/project-logos/svwiki-2x.png' ], // T150618
 	'swwiki' => [ '1.5x' => '/static/images/project-logos/swwiki-1.5x.png', '2x' => '/static/images/project-logos/swwiki-2x.png' ], // T150618
 	'szlwiki' => [ '1.5x' => '/static/images/project-logos/szlwiki-1.5x.png', '2x' => '/static/images/project-logos/szlwiki-2x.png' ], // T150618
+	'szywiki' => [ '1.5x' => '/static/images/project-logos/szywiki-1.5x.png', '2x' => '/static/images/project-logos/szywiki-2x.png' ],
 	'tawiki' => [ '1.5x' => '/static/images/project-logos/tawiki-1.5x.png', '2x' => '/static/images/project-logos/tawiki-2x.png' ],
 	'tcywiki' => [ '1.5x' => '/static/images/project-logos/tcywiki-1.5x.png', '2x' => '/static/images/project-logos/tcywiki-2x.png' ], // T140898
 	'tetwiki' => [ '1.5x' => '/static/images/project-logos/tetwiki-1.5x.png', '2x' => '/static/images/project-logos/tetwiki-2x.png' ], // T150618
@@ -2606,6 +2610,7 @@ function wmfGetVariantSettings() {
 	'srwiktionary' => 'Викиречник', // T121278
 	'strategywiki' => 'Strategic Planning',
 	'stewardwiki' => 'Steward Wiki',
+	'szywiki' => 'Wikipitiya',
 	'tawiki' => 'விக்கிப்பீடியா',
 	'tawikibooks' => 'விக்கிநூல்கள்',
 	'tawikinews' => 'விக்கிசெய்தி',
@@ -3121,6 +3126,7 @@ function wmfGetVariantSettings() {
 	'stewardwiki' => 'Project',
 	'strategywiki' => 'Strategic_Planning',
 	'szlwiki' => 'Wikipedyjo',
+	'szywiki' => 'Wikipitiya',
 	'tawiki' => 'விக்கிப்பீடியா',
 	'tawikibooks' => 'விக்கிநூல்கள்',
 	'tawikinews' => 'விக்கிசெய்தி',
