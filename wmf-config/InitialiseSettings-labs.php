@@ -317,6 +317,11 @@ function wmfGetLabsOverrideSettings() {
 			'default' => 'mobile',
 		],
 
+		'wgVisualEditorRestbaseParsoidVariant' => [
+			'default' => false,
+			'enwiki' => 'php',
+		],
+
 		'wmgUseRSSExtension' => [
 			'dewiki' => true,
 		],
