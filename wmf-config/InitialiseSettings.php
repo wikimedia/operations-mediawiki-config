@@ -23731,5 +23731,9 @@ function wmfGetVariantSettings() {
 	'default' => 'http://wdqs-internal.discovery.wmnet/bigdata/namespace/categories/sparql'
 ],
 
+'wgEnableRestAPI' => [
+	'default' => true,
+],
+
 ];
 }

@@ -3992,8 +3992,6 @@ if ( $wmgUseTheWikipediaLibrary ) {
 $hostName = wfHostName();
 $parsoidDir = '/srv/deployment/parsoid/deploy/src';
 if ( file_exists( "$parsoidDir/extension.json" ) ) {
-	$wgEnableRestAPI = true;
-
 	// While we are testing & benchmarking, make production db access read-only
 	// but honour $wgReadOnly if it's set to true already
 	$wgReadOnly = $wgReadOnly || $wmfRealm !== 'labs';
