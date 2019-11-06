@@ -4064,7 +4064,7 @@ class ClosedWikiProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvid
 			return \StatusValue::newGood();
 		}
 		$logger->error(
-			'Account autocreation denied for non-steward {name}', [
+			'Account autocreation denied for {name} by ClosedWikiProvider', [
 				'name' => $username
 			]
 		);
