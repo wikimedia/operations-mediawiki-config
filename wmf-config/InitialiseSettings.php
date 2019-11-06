@@ -23412,7 +23412,8 @@ function wmfGetVariantSettings() {
 ],
 
 'wgMachineVisionNewUploadLabelingJobDelay' => [
-	'default' => 172800,
+	'default' => 0,
+	'commonswiki' => 172800,
 ],
 
 'wgSpecialSearchFormOptions' => [
