@@ -4053,8 +4053,14 @@ class ClosedWikiProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvid
 	public function testForAuthentication( array $reqs ) {
 		$logger = \MediaWiki\Logger\LoggerFactory::getInstance( 'authentication' );
 		$username = \MediaWiki\Auth\AuthenticationRequest::getUsernameFromRequests( $reqs );
+		$loger->debug( 'Running ClosedWikiProvider for {name}', [
+			'name' => $username
+		] );
 		$user = User::newFromName( $username );
 		if ( $user->getId() ) { // User already exists, do not block authentication
+			$logger->info( 'User {name} passed ClosedWikiProvider check, account already exists', [
+				'name' => $username
+			] );
 			return \StatusValue::newGood();
 		}
 		$central = CentralAuthUser::getInstance( $user );
