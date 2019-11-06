@@ -8902,7 +8902,10 @@ function wmfGetVariantSettings() {
 			'mass-upload' => true, // T226217
 			'move-rootuserpages' => true, // T236359
 		],
-		'filemover' => [ 'movefile' => true ],
+		'filemover' => [
+			'movefile' => true,
+			'suppressredirect' => true, // T236348
+		],
 		'image-reviewer' => [
 			'autopatrol' => true,
 			'upload_by_url' => true,
