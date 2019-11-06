@@ -1639,7 +1639,7 @@ function wmfGetLabsOverrideSettings() {
 				'random' => [
 					'class' => 'MediaWiki\\Extension\\MachineVision\\Handler\\RandomWikidataIdHandler',
 					'services' => [
-						'MachineVisionClient',
+						'MachineVisionRandomWikidataIdClient',
 						'MachineVisionRepository',
 						'MachineVisionDepictsSetter',
 						'MachineVisionLabelResolver',
