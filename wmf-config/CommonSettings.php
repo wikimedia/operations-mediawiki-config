@@ -4043,6 +4043,7 @@ class ClosedWikiProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvid
 	 * @return \StatusValue
 	 */
 	public function testForAuthentication( array $reqs ) {
+		$logger = \MediaWiki\Logger\LoggerFactory::getInstance( 'authentication' );
 		$username = \MediaWiki\Auth\AuthenticationRequest::getUsernameFromRequests( $reqs );
 		$user = User::newFromName( $username );
 		if ( $user->getId() ) { // User already exists, do not block authentication
@@ -4053,10 +4054,15 @@ class ClosedWikiProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvid
 			$central->hasGlobalPermission( 'createaccount' ) ||
 			$central->hasGlobalPermission( 'autocreateaccount' )
 		) {
+			$logger->info(
+				'User {name} passed ClosedWikiProvider check, has permissions',
+				[
+					'name' => $username
+				]
+			);
 			// User can autocreate account per global permissions
 			return \StatusValue::newGood();
 		}
-		$logger = \MediaWiki\Logger\LoggerFactory::getInstance( 'authentication' );
 		$logger->error(
 			'Account autocreation denied for non-steward {name}', [
 				'name' => $username
