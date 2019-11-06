@@ -23345,6 +23345,7 @@ function wmfGetVariantSettings() {
 'wmgUseMachineVision' => [
 	'default' => false,
 	'testcommonswiki' => true,
+	'commonswiki' => true,
 ],
 
 'wgMachineVisionTestersOnly' => [
