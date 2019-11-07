@@ -145,26 +145,26 @@ function wmfGetLabsOverrideSettings() {
 		// Additional log channels for beta cluster
 		'-wmgMonologChannels' => [
 			'default' => [
-				'authentication' => 'info',
-				'CentralAuthVerbose' => 'debug',
-				'dnsblacklist' => 'debug',
-				'EventBus' => 'debug',
 				'api-request' => [
 					'udp2log' => false,
 					'logstash' => false,
 					'eventbus' => 'debug',
 					'buffer' => true,
 				],
+				'authentication' => 'info',
+				'CentralAuthVerbose' => 'debug',
 				'cirrussearch-request' => [
 					'udp2log' => false,
 					'logstash' => false,
 					'eventbus' => 'debug',
 					'buffer' => true,
 				],
+				'dnsblacklist' => 'debug',
+				'EventBus' => 'debug',
 				'JobExecutor' => [ 'logstash' => 'debug' ],
+				'MessageCache' => 'debug',
 				'runJobs' => [ 'logstash' => 'info' ],
 				'squid' => 'debug',
-				'MessageCache' => 'debug',
 			],
 		],
 
