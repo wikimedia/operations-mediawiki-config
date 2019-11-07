@@ -23395,7 +23395,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgMachineVisionRequestLabelsOnUploadComplete' => [
-	'default' => false,
+	'default' => true,
 ],
 
 'wgMachineVisionGCVSendFileContents' => [
