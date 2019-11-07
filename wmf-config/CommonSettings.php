@@ -1471,7 +1471,7 @@ if ( $wmgUseFooterCodeOfConductLink ) {
 // T35186: turn off incomplete feature action=imagerotate
 $wgAPIModules['imagerotate'] = 'ApiDisabled';
 
-if ( $wmgUseDPL ) {
+if ( $wmgUseDynamicPageList ) {
 	wfLoadExtension( 'intersection' );
 }
 
