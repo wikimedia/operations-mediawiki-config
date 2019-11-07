@@ -23276,6 +23276,12 @@ function wmfGetVariantSettings() {
 	'testwiki' => 'https://cs.wikipedia.org/w/api.php',
 ],
 
+'wgGERestbaseUrl' => [
+	'default' => false,
+	// Testwiki will use cswiki restbase
+	'testwiki' => 'https://cs.wikipedia.org/api/rest_v1',
+],
+
 'wgGEHomepageSuggestedEditsIntroLinks' => [
 	'arwiki' => [
 		'create' => 'ويكيبيديا:مقالتك الأولى',
