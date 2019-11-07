@@ -23261,6 +23261,19 @@ function wmfGetVariantSettings() {
 
 'wgGEHomepageSuggestedEditsEnabled' => [
 	'default' => false,
+	'testwiki' => true,
+],
+
+'wgGENewcomerTasksRemoteConfigTitle' => [
+	'default' => null,
+	// Testwiki will use cswiki templates.
+	'testwiki' => 'mw:Growth/Personalized_first_day/Newcomer_tasks/Prototype/templates/cs.json',
+],
+
+'wgGENewcomerTasksRemoteApiUrl' => [
+	'default' => null,
+	// Testwiki will use cswiki API.
+	'testwiki' => 'https://cs.wikipedia.org/w/api.php',
 ],
 
 'wgGEHomepageSuggestedEditsIntroLinks' => [
