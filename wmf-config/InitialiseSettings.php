@@ -23445,11 +23445,6 @@ function wmfGetVariantSettings() {
 	],
 ],
 
-'wgMachineVisionNewUploadLabelingJobDelay' => [
-	'default' => 0,
-	'commonswiki' => 172800,
-],
-
 'wgSpecialSearchFormOptions' => [
 	'testwikidatawiki' => [ 'showDescriptions' => true ],
 	'wikidatawiki' => [ 'showDescriptions' => true ],
