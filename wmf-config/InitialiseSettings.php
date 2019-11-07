@@ -23445,14 +23445,6 @@ function wmfGetVariantSettings() {
 	],
 ],
 
-'wgMachineVisionLabelRequestBackoffSeconds' => [
-	'default' => 60,
-],
-
-'wgMachineVisionLabelRequestNumRetries' => [
-	'default' => 1,
-],
-
 'wgMachineVisionNewUploadLabelingJobDelay' => [
 	'default' => 0,
 	'commonswiki' => 172800,
