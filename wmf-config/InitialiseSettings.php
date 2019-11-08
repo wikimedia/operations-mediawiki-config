@@ -23404,6 +23404,7 @@ function wmfGetVariantSettings() {
 
 'wgMachineVisionTestersOnly' => [
 	'default' => true,
+	'testcommonswiki' => false,
 ],
 
 'wgMachineVisionRequestLabelsOnUploadComplete' => [
