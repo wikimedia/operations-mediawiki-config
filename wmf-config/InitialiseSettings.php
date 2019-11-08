@@ -23280,6 +23280,11 @@ function wmfGetVariantSettings() {
 
 'wgGENewcomerTasksRemoteApiUrl' => [
 	'default' => null,
+	// These shouldn't be needed (T237703)
+	'arwiki' => 'https://ar.wikipedia.org/w/api.php',
+	'cswiki' => 'https://cs.wikipedia.org/w/api.php',
+	'kowiki' => 'https://ko.wikipedia.org/w/api.php',
+	'viwiki' => 'https://vi.wikipedia.org/w/api.php',
 	// Testwiki will use cswiki API.
 	'testwiki' => 'https://cs.wikipedia.org/w/api.php',
 ],
