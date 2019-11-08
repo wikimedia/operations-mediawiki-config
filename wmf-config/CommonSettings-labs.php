@@ -355,6 +355,11 @@ if ( $wgDBname == 'commonswiki' ) {
 	$wgCopyUploadsDomains[] = 'upload.wikimedia.org';
 }
 
+// Turn off exact search match redirects on beta commons
+if ( $wgDBname == 'commonswiki' ) {
+	$wgDefaultUserOptions['search-match-redirect'] = false;
+}
+
 // Test of new import source configuration on labs cluster
 $wgImportSources = false;
 include "$wmfConfigDir/import.php";
