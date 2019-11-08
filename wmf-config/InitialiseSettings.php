@@ -23458,6 +23458,10 @@ function wmfGetVariantSettings() {
 	],
 ],
 
+'wgMachineVisionNewUploadLabelingJobDelay' => [
+	'default' => 300,
+],
+
 'wgSpecialSearchFormOptions' => [
 	'testwikidatawiki' => [ 'showDescriptions' => true ],
 	'wikidatawiki' => [ 'showDescriptions' => true ],
