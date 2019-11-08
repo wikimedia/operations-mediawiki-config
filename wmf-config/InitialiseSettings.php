@@ -196,7 +196,7 @@ function wmfGetVariantSettings() {
 	'tenwiki' => 'en',
 	'transitionteamwiki' => 'en',
 	'usabilitywiki' => 'en',
-	'votewiki' => 'fa', // T132667, T148352, T207560, T230614
+	'votewiki' => 'en', // T132667, T148352, T207560
 	'wikimania' => 'en',
 	'wikimaniateamwiki' => 'en',
 ],
