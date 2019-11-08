@@ -13171,40 +13171,6 @@ function wmfGetVariantSettings() {
 	'zhwikisource' => '', // T194875
 ],
 
-'wmgUseDPL' => [
-	// DynamicPageList extension
-	'default' => false,
-
-	'wikibooks' => true,
-	'wikimania' => true,
-	'wikinews' => true,
-	'wikiquote' => true,
-	'wikisource' => true, // T10563 and T14423
-	'wikiversity' => true,
-
-	'bdwikimedia' => true, // T188109
-	'bswiki' => true, // T10240
-	'dewiktionary' => true,
-	'enwiktionary' => true,
-	'eswiktionary' => true, // T9952
-	'frrwiki' => true, // T40023
-	'incubatorwiki' => true,
-	'iswiktionary' => true, // T9952
-	'legalteamwiki' => true, // T64610
-	'mediawikiwiki' => true, // T71974
-	'metawiki' => true,
-	'nowikimedia' => true, // T127161
-	'officewiki' => true,
-	'otrs_wikiwiki' => true,
-	'outreachwiki' => true, // T58245
-	'ptwiki' => true, // T37308
-	'srwiki' => true,
-	'srwiktionary' => true, // T70346
-	'strategywiki' => true,
-	'viwiktionary' => true, // T10886
-],
-
-// New config variable name for DPL
 'wmgUseDynamicPageList' => [
 	'default' => false,
 
