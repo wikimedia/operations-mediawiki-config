@@ -9848,6 +9848,7 @@ function wmfGetVariantSettings() {
 			'rollback' => true,
 			'unwatchedpages' => true,
 			'block' => true, // T37261
+			'abusefilter-log-private' => true, //T237830
 		], // T29563
 		'user' => [ 'move-rootuserpages' => false, ],
 		'sysop' => [ 'autoreviewer' => true ],
