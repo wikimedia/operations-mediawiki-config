@@ -3,7 +3,7 @@
 
 use MediaWiki\Logger\LoggerFactory;
 
-require_once "$IP/extensions/LdapAuthentication/LdapAuthentication.php";
+wfLoadExtension( 'LdapAuthentication' );
 $wgAuthManagerAutoConfig['primaryauth'] += [
 	LdapPrimaryAuthenticationProvider::class => [
 		'class' => LdapPrimaryAuthenticationProvider::class,
@@ -68,7 +68,7 @@ if ( false ) {
 	] );
 }
 
-require_once "$IP/extensions/OpenStackManager/OpenStackManager.php";
+wfLoadExtension( 'OpenStackManager' );
 
 // Dummy setting for conduit api token to be used by the BlockIpComplete hook
 // that tries to disable Phabricator accounts. Real value should be provided
