@@ -83,7 +83,7 @@ $IP/extensions/JsonConfig/extension.json
 $IP/extensions/Kartographer/extension.json
 $IP/extensions/LabeledSectionTransclusion/extension.json
 $IP/extensions/LandingCheck/extension.json
-$IP/extensions/LdapAuthentication/LdapAuthentication.php
+$IP/extensions/LdapAuthentication/extension.json
 $IP/extensions/Linter/extension.json
 $IP/extensions/LiquidThreads/extension.json
 $IP/extensions/Listings/extension.json
@@ -102,7 +102,7 @@ $IP/extensions/NewUserMessage/extension.json
 $IP/extensions/Nuke/extension.json
 $IP/extensions/OATHAuth/extension.json
 $IP/extensions/OAuth/extension.json
-$IP/extensions/OpenStackManager/OpenStackManager.php
+$IP/extensions/OpenStackManager/extension.json
 $IP/extensions/ORES/extension.json
 $IP/extensions/PageAssessments/extension.json
 $IP/extensions/PagedTiffHandler/extension.json
