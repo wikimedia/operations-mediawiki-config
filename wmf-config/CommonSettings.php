@@ -1484,7 +1484,6 @@ if ( $wmgUseSpecialNuke ) {
 
 if ( $wmgUseTorBlock ) {
 	wfLoadExtension( 'TorBlock' );
-	$wgTorLoadNodes = false;
 	$wgTorIPs = [ '91.198.174.232', '208.80.152.2', '208.80.152.134' ];
 	$wgTorAutoConfirmAge = 90 * 86400;
 	$wgTorAutoConfirmCount = 100;
