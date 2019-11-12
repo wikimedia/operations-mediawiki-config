@@ -3595,6 +3595,7 @@ if ( $wmgUseOATHAuth ) {
 	}
 
 	$wgGroupPermissions['sysop']['oathauth-disable-for-user'] = false;
+	$wgGroupPermissions['sysop']['oathauth-view-log'] = false;
 
 	if ( $wmgUseCentralAuth ) {
 		$wgOATHAuthAccountPrefix = 'Wikimedia';
