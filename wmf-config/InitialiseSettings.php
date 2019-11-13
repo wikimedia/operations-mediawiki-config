@@ -23458,6 +23458,7 @@ function wmfGetVariantSettings() {
 		'Q8441',
 		'Q1301433',
 		'Q1802779',
+		'Q6478447',
 	],
 ],
 
