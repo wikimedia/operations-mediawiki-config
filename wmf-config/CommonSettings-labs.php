@@ -263,6 +263,10 @@ if ( $wmgEnableJsonConfigDataMode && $wgDBname !== 'commonswiki' ) {
 
 if ( $wmgUseMath ) {
 	$wgDefaultUserOptions[ 'math' ] = 'mathml';
+	$wgMathEnableFormulaLinks = true;
+	$wgMathWikibasePropertyIdHasPart = 'P253104';
+	$wgMathWikibasePropertyIdDefiningFormula = 'P253105';
+	$wgMathWikibasePropertyIdQuantitySymbol = 'P253106';
 }
 
 // CORS (cross-domain AJAX, T22814)
