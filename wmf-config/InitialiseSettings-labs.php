@@ -1620,6 +1620,12 @@ function wmfGetLabsOverrideSettings() {
 		'wmgUseWikisource' => [
 			'wikisource' => true,
 		],
+		'wgWikisourceWikibaseEditionProperty' => [
+			'wikisource' => 'P253108'
+		],
+		'wgWikisourceWikibaseEditionOfProperty' => [
+			'wikisource' => 'P253107'
+		],
 		'wmgUseWikimediaEditorTasks' => [
 			'default' => false,
 			'wikidatawiki' => true,
