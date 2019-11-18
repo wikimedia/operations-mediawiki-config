@@ -22919,9 +22919,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgMultiContentRevisionSchemaMigrationStage' => [
-	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
-	'group0' => SCHEMA_COMPAT_NEW,
-	'group1' => SCHEMA_COMPAT_NEW,
+	'default' => SCHEMA_COMPAT_NEW,
 ],
 'wmgUseReadingLists' => [
 	'default' => true,
