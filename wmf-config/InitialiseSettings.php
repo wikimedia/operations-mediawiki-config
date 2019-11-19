@@ -8290,6 +8290,7 @@ function wmfGetVariantSettings() {
 	'+enwikibooks' => [ 4 => 1, 102 => 1, 110 => 1, 112 => 1 ], // T176906
 	'+enwikinews' => [ 14 => 1, ], // T87522
 	'+enwikisource' => [ 100 => 1, 102 => 1, 106 => 1, 114 => 1 ], // T52007, T167511
+	'+eowiktionary' => [ 102 => 1 ], // T237792
 	'+eswiki' => [ 100 => 1, 104 => 1 ],
 	'+eswikisource' => [ 104 => 1 ],
 	'+etwikisource' => [ 104 => 1, 106 => 1 ],
