@@ -409,6 +409,7 @@ function wmfGetVariantSettings() {
 	'mkwikisource' => 'Europe/Berlin',
 	'mkwiktionary' => 'Europe/Berlin',
 	'minwiki' => 'Asia/Jakarta',
+	'minwiktionary' => 'Asia/Jakarta',
 	'mnwwiki' => 'Asia/Yangon',
 	'mrjwiki' => 'Europe/Moscow',
 	'mrwiki' => 'Asia/Kolkata',
@@ -891,6 +892,7 @@ function wmfGetVariantSettings() {
 	'ltwiktionary' => '/static/images/project-logos/ltwiktionary.png',
 	'lvwiktionary' => '/static/images/project-logos/lvwiktionary.png',  // T45240
 	'mgwiktionary' => '/static/images/project-logos/mgwiktionary.png',
+	'minwiktionary' => '/static/images/project-logos/minwiktionary.png',
 	'miwiktionary' => '/static/images/project-logos/miwiktionary.png',  // T45240
 	'mkwiktionary' => '/static/images/project-logos/mkwiktionary.png',  // T140566
 	'mlwiktionary' => '/static/images/project-logos/mlwiktionary.png',  // T43785
@@ -1617,6 +1619,7 @@ function wmfGetVariantSettings() {
 	'kywiktionary' => [ '1.5x' => '/static/images/project-logos/kywiktionary-1.5x.png', '2x' => '/static/images/project-logos/kywiktionary-2x.png' ], // T150618
 	'liwiktionary' => [ '1.5x' => '/static/images/project-logos/liwiktionary-1.5x.png', '2x' => '/static/images/project-logos/liwiktionary-2x.png' ], // T150618
 	'lvwiktionary' => [ '1.5x' => '/static/images/project-logos/lvwiktionary-1.5x.png', '2x' => '/static/images/project-logos/lvwiktionary-2x.png' ], // T150618
+	'minwiktionary' => [ '1.5x' => '/static/images/project-logos/minwiktionary-1.5x.png', '2x' => '/static/images/project-logos/minwiktionary-2x.png' ],
 	'miwiktionary' => [ '1.5x' => '/static/images/project-logos/miwiktionary-1.5x.png', '2x' => '/static/images/project-logos/miwiktionary-2x.png' ], // T150618
 	'mlwiktionary' => [ '1.5x' => '/static/images/project-logos/mlwiktionary-1.5x.png', '2x' => '/static/images/project-logos/mlwiktionary-2x.png' ], // T150618
 	'mnwiktionary' => [ '1.5x' => '/static/images/project-logos/mnwiktionary-1.5x.png', '2x' => '/static/images/project-logos/mnwiktionary-2x.png' ], // T150618
@@ -2478,6 +2481,7 @@ function wmfGetVariantSettings() {
 	'mediawikiwiki' => 'MediaWiki',
 	'metawiki' => 'Meta',
 	'mhrwiki' => 'Википедий',
+	'minwiktionary' => 'Wikikato',
 	'mkwiki' => 'Википедија',
 	'mkwiktionary' => 'Викиречник', // T140566
 	'mkwikimedia' => 'Викимедија Македонија',
@@ -2996,6 +3000,7 @@ function wmfGetVariantSettings() {
 	'mediawikiwiki' => 'Project',
 	'metawiki' => 'Meta',
 	'mhrwiki' => 'Википедий',
+	'minwiktionary' => 'Wikikato',
 	'mkwiki' => 'Википедија',
 	'mkwiktionary' => 'Викиречник', // T140566
 	'mkwikimedia' => 'Викимедија',
