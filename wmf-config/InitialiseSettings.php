@@ -23290,8 +23290,8 @@ function wmfGetVariantSettings() {
 ],
 
 'wgGEHomepageSuggestedEditsRequiresOptIn' => [
-	'default' => true,
-	'testwiki' => false,
+	'default' => false,
+	'euwiki' => true, // Not configured yet
 ],
 
 'wgGENewcomerTasksRemoteConfigTitle' => [
