@@ -475,6 +475,7 @@ function wmfGetVariantSettings() {
 	'scnwiki' => 'Europe/Berlin',
 	'sewikimedia' => 'Europe/Berlin',
 	'shwiki' => 'Europe/Berlin',
+	'shywiktionary' => 'Africa/Algiers',
 	'slwiki' => 'Europe/Ljubljana',
 	'slwikibooks' => 'Europe/Ljubljana', // T142701
 	'slwikiquote' => 'Europe/Ljubljana',
@@ -927,6 +928,7 @@ function wmfGetVariantSettings() {
 	'sdwiktionary' => '/static/images/project-logos/sdwiktionary.png',  // T45240
 	'sgwiktionary' => '/static/images/project-logos/sgwiktionary.png',
 	'shwiktionary' => '/static/images/project-logos/shwiktionary.png',
+	'shywiktionary' => '/static/images/project-logos/shywiktionary.png',
 	'simplewiktionary' => '/static/images/project-logos/simplewiktionary.png',
 	'siwiktionary' => '/static/images/project-logos/siwiktionary.png',
 	'skwiktionary' => '/static/images/project-logos/skwiktionary.png',  // T45240
@@ -1646,6 +1648,7 @@ function wmfGetVariantSettings() {
 	'sawiktionary' => [ '1.5x' => '/static/images/project-logos/sawiktionary-1.5x.png', '2x' => '/static/images/project-logos/sawiktionary-2x.png' ], // T150618
 	'scnwiktionary' => [ '1.5x' => '/static/images/project-logos/scnwiktionary-1.5x.png', '2x' => '/static/images/project-logos/scnwiktionary-2x.png' ], // T150618
 	'sdwiktionary' => [ '1.5x' => '/static/images/project-logos/sdwiktionary-1.5x.png', '2x' => '/static/images/project-logos/sdwiktionary-2x.png' ], // T150618
+	'shywiktionary' => [ '1.5x' => '/static/images/project-logos/shywiktionary-1.5x.png', '2x' => '/static/images/project-logos/shywiktionary-2x.png' ],
 	'siwiktionary' => [ '1.5x' => '/static/images/project-logos/siwiktionary-1.5x.png', '2x' => '/static/images/project-logos/siwiktionary-2x.png' ], // T150618
 	'skwiktionary' => [ '1.5x' => '/static/images/project-logos/skwiktionary-1.5x.png', '2x' => '/static/images/project-logos/skwiktionary-2x.png' ], // T150618
 	'slwiktionary' => [ '1.5x' => '/static/images/project-logos/slwiktionary-1.5x.png', '2x' => '/static/images/project-logos/slwiktionary-2x.png' ], // T150618
@@ -2590,6 +2593,7 @@ function wmfGetVariantSettings() {
 	'sdwiki' => 'وڪيپيڊيا',
 	'searchcomwiki' => 'Search Committee',
 	'shnwiki' => 'ဝီႇၶီႇၽီးတီးယႃး',
+	'shywiktionary' => 'Wikasegzawal',
 	'siwiki' => 'විකිපීඩියා, නිදහස් විශ්වකෝෂය',
 	'skwiki' => 'Wikipédia',
 	'skwikibooks' => 'Wikiknihy',
@@ -3104,6 +3108,7 @@ function wmfGetVariantSettings() {
 	'sdwiki' => 'وڪيپيڊيا', // T186943
 	'searchcomwiki' => 'SearchCom',
 	'shnwiki' => 'ဝီႇၶီႇၽီးတီးယႃး',
+	'shywiktionary' => 'Wikasegzawal',
 	'siwiki' => 'විකිපීඩියා',
 	'siwikibooks' => 'විකිපොත්',
 	'siwiktionary' => 'වික්ෂනරි',
