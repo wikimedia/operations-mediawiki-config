@@ -338,6 +338,7 @@ function wmfGetVariantSettings() {
 	'frwikiquote' => 'Europe/Paris',
 	'fywiki' => 'Europe/Berlin',
 	'gagwiki' => 'Europe/Istanbul',
+	'gcrwiki' => 'America/Cayenne',
 	'gewikimedia' => 'Asia/Tbilisi', // T236389
 	'gomwiki' => 'Asia/Kolkata', // T96468
 	'gorwiki' => 'Asia/Makassar', // T189109
@@ -621,6 +622,7 @@ function wmfGetVariantSettings() {
 	'fywiki' => '/static/images/project-logos/fywiki.png',  // T42285
 	'gawiki' => '/static/images/project-logos/gawiki.png',
 	'gagwiki' => '/static/images/project-logos/gagwiki.png',
+	'gcrwiki' => '/static/images/project-logos/gcrwiki.png',
 	'ganwiki' => '/static/images/project-logos/ganwiki.png',  // T46974
 	'gdwiki' => '/static/images/project-logos/gdwiki.png',
 	'glwiki' => '/static/images/project-logos/glwiki.png',
@@ -1377,6 +1379,7 @@ function wmfGetVariantSettings() {
 	'furwiki' => [ '1.5x' => '/static/images/project-logos/furwiki-1.5x.png', '2x' => '/static/images/project-logos/furwiki-2x.png' ], // T150618
 	'fywiki' => [ '1.5x' => '/static/images/project-logos/fywiki-1.5x.png', '2x' => '/static/images/project-logos/fywiki-2x.png' ], // T150618
 	'gagwiki' => [ '1.5x' => '/static/images/project-logos/gagwiki-1.5x.png', '2x' => '/static/images/project-logos/gagwiki-2x.png' ], // T150618
+	'gcrwiki' => [ '1.5x' => '/static/images/project-logos/gcrwiki-1.5x.png', '2x' => '/static/images/project-logos/gcrwiki-2x.png' ],
 	'gawiki' => [ '1.5x' => '/static/images/project-logos/gawiki-1.5x.png', '2x' => '/static/images/project-logos/gawiki-2x.png' ], // T150618
 	'gdwiki' => [ '1.5x' => '/static/images/project-logos/gdwiki-1.5x.png', '2x' => '/static/images/project-logos/gdwiki-2x.png' ], // T150618
 	'glkwiki' => [ '1.5x' => '/static/images/project-logos/glkwiki-1.5x.png', '2x' => '/static/images/project-logos/glkwiki-2x.png' ], // T150618
@@ -2365,6 +2368,7 @@ function wmfGetVariantSettings() {
 	'gawikibooks' => 'Vicíleabhair',
 	'gawikiquote' => 'Vicísliocht',
 	'gawiktionary' => 'Vicífhoclóir',
+	'gcrwiki' => 'Wikipédja',
 	'gdwiki' => 'Uicipeid',
 	'gewikimedia' => 'ვიკიმედიის მომხმარებელთა საქართველოს ჯგუფი', // T236389
 	'gnwiki' => 'Vikipetã',
@@ -2882,6 +2886,7 @@ function wmfGetVariantSettings() {
 	'gawikibooks' => 'Vicíleabhair',
 	'gawikiquote' => 'Vicísliocht',
 	'gawiktionary' => 'Vicífhoclóir',
+	'gcrwiki' => 'Wikipédja',
 	'gdwiki' => 'Uicipeid',
 	'gewikimedia' => 'ვიკიმედია', // T236389
 	'gnwiki' => 'Vikipetã',
