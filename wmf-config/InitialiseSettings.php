@@ -13368,6 +13368,9 @@ function wmfGetVariantSettings() {
 	'+eswikibooks' => [
 		828 => [ 'autoconfirmed' ], // T202555 - Module:
 	],
+	'+metawiki' => [
+		866 => [ 'autoconfirmed' ], // T238723 - CNBanner:
+	],
 	'+ptwiki' => [
 		NS_FILE => [ 'autoconfirmed' ],
 	],
