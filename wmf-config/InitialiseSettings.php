@@ -23729,5 +23729,9 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
+'wgWikidataOrgQueryServiceMaxLagFactor' => [
+	'default' => 180,
+],
+
 ];
 }
