@@ -865,10 +865,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => [ 'eqiad' ],
 		],
 
-		'-wgCirrusSearchEnableSearchLogging' => [
-			'default' => true
-		],
-
 		'-wgCirrusSearchLanguageToWikiMap' => [
 			'default' => [
 				'ar' => 'ar',
