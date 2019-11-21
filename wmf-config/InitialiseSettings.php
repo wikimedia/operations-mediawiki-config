@@ -114,6 +114,7 @@ function wmfGetVariantSettings() {
 	'nowikibooks' => 'nb',
 	'nowikinews' => 'nb',
 	'nowikisource' => 'nb',
+	'shywiktionary' => 'shy-latn',
 
 	'simplewiki' => 'en',
 	'simplewiktionary' => 'en',
