@@ -39,7 +39,7 @@ $common = [
 
 	// Automatic dc-local discovery
 	'parsoid' => 'http://parsoid.discovery.wmnet:8000',
-	'parsoidphp' => 'http://parsoid-php.discovery.wmnet/w/rest.php',
+	'parsoidphp' => 'https://parsoid-php.discovery.wmnet/w/rest.php',
 	'mathoid' => 'http://mathoid.discovery.wmnet:10042',
 	'eventgate-analytics' => 'http://eventgate-analytics.discovery.wmnet:31192',
 	'eventgate-main' => 'http://eventgate-main.discovery.wmnet:32192',
