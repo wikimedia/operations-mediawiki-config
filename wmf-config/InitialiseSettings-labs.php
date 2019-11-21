@@ -153,6 +153,7 @@ function wmfGetLabsOverrideSettings() {
 				],
 				'authentication' => 'info',
 				'CentralAuthVerbose' => 'debug',
+				'CirrusSearch' => 'info',
 				'cirrussearch-request' => [
 					'udp2log' => false,
 					'logstash' => false,
