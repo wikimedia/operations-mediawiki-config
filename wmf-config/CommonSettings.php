@@ -491,7 +491,8 @@ $wgObjectCaches['kask-echoseen'] = [
 		'writeMethod' => 'POST',
 	],
 	'serialization_type' => 'JSON',
-	'extendedErrorBodyFields' => [ 'type', 'title', 'detail', 'instance' ]
+	'extendedErrorBodyFields' => [ 'type', 'title', 'detail', 'instance' ],
+	'reportDupes' => false,
 ];
 $wgObjectCaches['kask-echoseen-transition'] = [
 	'class' => 'MultiWriteBagOStuff',
