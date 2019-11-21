@@ -12457,7 +12457,6 @@ function wmfGetVariantSettings() {
 	'hrwikibooks' => [ 'w' ], // T176320
 	'hsbwiki' => [ 'w' , 'de', 'dsb', 'en', 'cs', 'pl', 'ru', 'hr', 'sr', 'sh' ], // T152382
 	'hsbwiktionary' => [ 'incubator', 'w' ],
-	'huwikinews' => [ 'incubator' ],
 	'idwiki' => [ 'ms' ], // T18033
 	'idwikibooks' => [ 'w' ],
 	'idwikiquote' => [ 'w' ],
@@ -12555,7 +12554,6 @@ function wmfGetVariantSettings() {
 	'sewiki' => [ 'en', 'fi', 'no', 'nn', 'sv' ], // T45411
 	'simplewiki' => [ 'en', 'wikt', 'b', 'q' ],
 	'simplewiktionary' => [ 'en', 'w', 'b', 'q' ],
-	'simplewikiquote' => [ 'en', 'w', 'wikt', 'b' ],
 	'skwiki' => [ 'b', 'meta', 'q', 's', 'wikt' ],
 	'sourceswiki' => [
 		'ang', 'ar', 'az', 'bg', 'bn', 'bs', 'ca', 'cs', 'cy',
@@ -12605,13 +12603,6 @@ function wmfGetVariantSettings() {
 	'viwikiquote' => [ 'w', 'wikt', 'b', 's' ], // T9854
 	'wikidata' => [ 'meta', 'commons', 'en', 'de', 'fr', 'es' ],
 	'testwikidatawiki' => [ 'meta', 'commons', 'en', 'de', 'fr', 'es' ],
-	'wikimania2012wiki' => [ 'en', 'meta', 'wm2011' ],
-	'wikimania2013wiki' => [ 'en', 'meta', 'wm2011', 'wm2012' ],
-	'wikimania2014wiki' => [ 'en', 'meta', 'wm2011', 'wm2012', 'wm2013' ],
-	'wikimania2015wiki' => [ 'en', 'meta', 'wm2011', 'wm2012', 'wm2013', 'wm2014' ],
-	'wikimania2016wiki' => [ 'en', 'meta', 'wm2011', 'wm2012', 'wm2013', 'wm2014', 'wm2015' ],
-	'wikimania2017wiki' => [ 'en', 'meta', 'wm2011', 'wm2012', 'wm2013', 'wm2014', 'wm2015', 'wm2016' ],
-	'wikimania2018wiki' => [ 'en' , 'meta', 'wm2011', 'wm2012', 'wm2013', 'wm2014', 'wm2015', 'wm2016', 'wm2017' ],
 	'wikimaniawiki' => [ 'en' , 'meta', 'wm2011', 'wm2012', 'wm2013', 'wm2014', 'wm2015', 'wm2016', 'wm2017', 'wm2018' ],
 	'wuuwiki' => [ 'en', 'th', 'fr', 'zh', ], // T19484
 	'xhwiki' => [ 'en' ], // T53327
