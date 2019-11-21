@@ -2489,7 +2489,7 @@ if ( $wmgUseRestbaseVRS ) {
 }
 
 if ( $wmgUseParsoid ) {
-	$wmgParsoidURL = $wmfLocalServices['parsoid'];
+	$wmgParsoidURL = $wmfLocalServices[$wmgParsoidVariant];
 
 	$wgVirtualRestConfig['modules']['parsoid'] = [
 		'url' => $wmgParsoidURL,

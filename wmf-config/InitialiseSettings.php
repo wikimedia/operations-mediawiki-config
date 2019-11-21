@@ -15886,6 +15886,12 @@ function wmfGetVariantSettings() {
 	'votewiki' => false, // T61702
 ],
 
+// which Parsoid variant to use -- T229015
+'wmgParsoidVariant' => [
+  'default' => 'parsoid',
+  'private' => 'parsoidphp',
+],
+
 // Should a users' Cookie: headers be forwarded to Parsoid (for private wikis)
 'wmgParsoidForwardCookies' => [
 	'default' => false,
