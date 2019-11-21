@@ -23756,10 +23756,6 @@ function wmfGetVariantSettings() {
 	'enwiki' => '_elasticsearch_enwiki'
 ],
 
-'wgCirrusSearchEnableSearchLogging' => [
-	'default' => true
-],
-
 // cache morelike queries to ObjectCache for 24 hours
 'wgCirrusSearchMoreLikeThisTTL' => [
 	'default' => 86400
