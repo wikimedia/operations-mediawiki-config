@@ -23306,13 +23306,9 @@ function wmfGetVariantSettings() {
 ],
 
 'wgGENewcomerTasksRemoteConfigTitle' => [
-	'default' => null,
-	'arwiki' => 'mw:Growth/Personalized_first_day/Newcomer_tasks/Prototype/templates/ar.json',
-	'cswiki' => 'mw:Growth/Personalized_first_day/Newcomer_tasks/Prototype/templates/cs.json',
-	'kowiki' => 'mw:Growth/Personalized_first_day/Newcomer_tasks/Prototype/templates/ko.json',
-	'viwiki' => 'mw:Growth/Personalized_first_day/Newcomer_tasks/Prototype/templates/vi.json',
+	'default' => 'MediaWiki:NewcomerTasks.json',
 	// Testwiki will use cswiki templates.
-	'testwiki' => 'mw:Growth/Personalized_first_day/Newcomer_tasks/Prototype/templates/cs.json',
+	'testwiki' => 'cs:MediaWiki:NewcomerTasks.json',
 ],
 
 'wgGENewcomerTasksRemoteApiUrl' => [
