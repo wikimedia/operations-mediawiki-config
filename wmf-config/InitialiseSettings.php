@@ -22970,6 +22970,9 @@ function wmfGetVariantSettings() {
 'wgMultiContentRevisionSchemaMigrationStage' => [
 	'default' => SCHEMA_COMPAT_NEW,
 ],
+'wgXmlDumpSchemaVersion' => [
+	'default' => XML_DUMP_SCHEMA_VERSION_10,
+],
 'wmgUseReadingLists' => [
 	'default' => true,
 	'private' => false,
