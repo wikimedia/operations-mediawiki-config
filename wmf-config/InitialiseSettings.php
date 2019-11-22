@@ -10197,6 +10197,7 @@ function wmfGetVariantSettings() {
 		'bureaucrat' => [ 'userrights' => true ], // T30773
 	],
 	'+svwiki' => [
+		'user' => [ 'move-rootuserpages' => false ], // T238842
 		'autopatrolled' => [ 'autopatrol' => true ], // T161210
 		'autoconfirmed' => [ 'patrol' => true ],
 		'rollbacker' => [ 'rollback' => true, 'autopatrol' => true ],
