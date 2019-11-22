@@ -1266,7 +1266,6 @@ function wmfGetVariantSettings() {
 	'testcommonswiki' => '/static/images/project-logos/commonswiki.png',
 	'donatewiki' => '/static/images/project-logos/donatewiki.png',
 	'execwiki' => '/static/images/project-logos/execwiki.png',
-	'fixcopyrightwiki' => '/static/images/project-logos/fixcopyrightwiki.png',
 	'fdcwiki' => '/static/images/project-logos/fdcwiki.png',  // T50379
 	'foundationwiki' => '/static/images/project-logos/foundationwiki.png',
 	'iegcomwiki' => '/static/images/project-logos/iegcomwiki.png',  // T50379
@@ -1833,7 +1832,6 @@ function wmfGetVariantSettings() {
 	'testcommonswiki' => [ '1.5x' => '/static/images/project-logos/commonswiki-1.5x.png', '2x' => '/static/images/project-logos/commonswiki-2x.png' ], // T203343
 	'chapcomwiki' => [ '1.5x' => '/static/images/project-logos/chapcomwiki-1.5x.png', '2x' => '/static/images/project-logos/chapcomwiki-2x.png' ], // T193024
 	'donatewiki' => [ '1.5x' => '/static/images/project-logos/donatewiki-1.5x.png', '2x' => '/static/images/project-logos/donatewiki-2x.png' ],
-	'fixcopyrightwiki' => [ '1.5x' => '/static/images/project-logos/fixcopyrightwiki-1.5x.png', '2x' => '/static/images/project-logos/fixcopyrightwiki-2x.png' ],
 	'foundationwiki' => [ '1.5x' => '/static/images/project-logos/foundationwiki-1.5x.png', '2x' => '/static/images/project-logos/foundationwiki-2x.png' ],
 	'incubatorwiki' => [ '1.5x' => '/static/images/project-logos/incubatorwiki-1.5x.png', '2x' => '/static/images/project-logos/incubatorwiki-2x.png' ], // T230122
 	'metawiki' => [ '1.5x' => '/static/images/project-logos/metawiki-1.5x.png', '2x' => '/static/images/project-logos/metawiki-2x.png' ],
@@ -2066,7 +2064,6 @@ function wmfGetVariantSettings() {
 	'electcomwiki' => '//electcom.wikimedia.org',
 	'etwikimedia' => '//ee.wikimedia.org',
 	'execwiki' => '//exec.wikimedia.org',
-	'fixcopyrightwiki' => '//fixcopyright.wikimedia.org',
 	'fdcwiki' => '//fdc.wikimedia.org',
 	'foundationwiki' => '//foundation.wikimedia.org',
 	'gewikimedia' => '//ge.wikimedia.org', // T236389
@@ -2164,7 +2161,6 @@ function wmfGetVariantSettings() {
 	'electcomwiki' => 'https://electcom.wikimedia.org',
 	'etwikimedia' => 'https://ee.wikimedia.org',
 	'execwiki' => 'https://exec.wikimedia.org',
-	'fixcopyrightwiki' => 'https://fixcopyright.wikimedia.org',
 	'fdcwiki' => 'https://fdc.wikimedia.org',
 	'foundationwiki' => 'https://foundation.wikimedia.org',
 	'gewikimedia' => 'https://ge.wikimedia.org', // T236389
@@ -2398,7 +2394,6 @@ function wmfGetVariantSettings() {
 	'fiwikiversity' => 'Wikiopisto',
 	'fiwikivoyage' => 'Wikimatkat', // T151570
 	'fiwiktionary' => 'Wikisanakirja',
-	'fixcopyrightwiki' => 'Fix copyright - Wikimedia Foundation',
 	'foundationwiki' => 'Wikimedia Foundation Governance Wiki',
 	'fowikisource' => 'Wikiheimild',
 	'frpwiki' => 'Vouiquipèdia',
@@ -19976,17 +19971,6 @@ function wmfGetVariantSettings() {
 	'ukwikisource' => true, // T220752
 ],
 
-'wgULSLanguageDetection' => [
-	'default' => false,
-	// see T203179
-	'fixcopyrightwiki' => true,
-],
-
-'wgMainPageIsDomainRoot' => [
-	'default' => false,
-	'fixcopyrightwiki' => true,
-],
-
 'wmgUseCognate' => [
 	'default' => false,
 	'wiktionary' => 'wiktionary', // T150182
@@ -23529,16 +23513,6 @@ function wmfGetVariantSettings() {
 
 'wmgUseCongressLookup' => [ // Disabled per T205049
 	'default' => false,
-],
-
-'wmgUseSkinPerPage' => [
-	'default' => false,
-	'fixcopyrightwiki' => true,
-],
-
-'wmgUseEUCopyrightCampaign' => [
-	'default' => false,
-	'fixcopyrightwiki' => true,
 ],
 
 // This is wikis that have it for all users

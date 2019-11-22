@@ -143,7 +143,6 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 			'boardwiki',
 			'commonswiki',
 			'electcomwiki',
-			'fixcopyrightwiki',
 			'foundationwiki',
 			'internalwiki',
 			'labswiki',

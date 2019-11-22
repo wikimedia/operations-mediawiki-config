@@ -990,14 +990,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => false,
 			'enwiki' => true,
 		],
-		'wmgUseSkinPerPage' => [
-			'default' => false,
-			'metawiki' => true,
-		],
-		'wmgUseEUCopyrightCampaign' => [
-			'default' => false,
-			'metawiki' => true,
-		],
 		'wmgWikibaseCachePrefix' => [
 			'commonswiki' => 'commonswiki',
 		],
