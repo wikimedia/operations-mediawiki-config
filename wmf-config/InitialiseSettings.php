@@ -14432,6 +14432,7 @@ function wmfGetVariantSettings() {
 		'*.wikimedia.cz',                   // Wikimedia Czech Republic - T231247
 		'*.scielo.br',                      // Brazilian scientific papers - T231402
 		'iip.bu.uni.wroc.pl',               // T235904
+		'webservices.picturae.com',         // T238955
 	],
 ],
 
