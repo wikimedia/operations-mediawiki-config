@@ -23076,16 +23076,6 @@ function wmfGetVariantSettings() {
 	'euwiki' => true,
 ],
 
-'wgGEHelpPanelSearchEnabled' => [
-	'default' => false,
-	'testwiki' => true,
-	'kowiki' => true,
-	'cswiki' => true,
-	'viwiki' => true,
-	'arwiki' => true,
-	'euwiki' => true,
-],
-
 'wgGEHelpPanelLoggingEnabled' => [
 	'default' => true,
 ],
