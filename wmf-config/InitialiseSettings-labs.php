@@ -1068,9 +1068,6 @@ function wmfGetLabsOverrideSettings() {
 				]
 			],
 		],
-		'wgGEHelpPanelSearchEnabled' => [
-			'default' => true,
-		],
 		'wgGEHelpPanelReadingModeNamespaces' => [
 			'default' => [ 2, 3, 4, 12 ]
 		],
