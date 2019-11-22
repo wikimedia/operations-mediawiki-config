@@ -23767,7 +23767,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgWikidataOrgQueryServiceMaxLagFactor' => [
-	'default' => 120,
+	'default' => 60,
 ],
 
 ];
