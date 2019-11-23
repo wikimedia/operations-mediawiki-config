@@ -14060,6 +14060,7 @@ function wmfGetVariantSettings() {
 	'enwikibooks' => [ 'sysop' => [ 'flood' ] ],
 	'enwikinews' => [ 'sysop' => [ 'flood' ] ],
 	'enwikisource' => [ 'sysop' => [ 'flood' ] ], // T38863
+	'enwikiversity' => [ 'interface-admin' => [ 'interface-admin' ] ], // T238967
 	'eswiki' => [ 'sysop' => [ 'flood' ] ], // T50682
 	'eswikibooks' => [ 'sysop' => [ 'flood' ] ], // T111455
 	'frwikinews' => [ 'sysop' => [ 'flood' ] ],
