@@ -15891,8 +15891,7 @@ function wmfGetVariantSettings() {
 // which Parsoid variant to use -- T229015
 'wmgParsoidVariant' => [
   'default' => 'parsoid',
-  // uncomment the line below once the 412 errors have been resolved on the MW REST API side
-  //'private' => 'parsoidphp',
+  'private' => 'parsoidphp',
 ],
 
 // Should a users' Cookie: headers be forwarded to Parsoid (for private wikis)
