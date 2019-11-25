@@ -18424,6 +18424,7 @@ function wmfGetVariantSettings() {
 	'punjabiwikimedia' => true, // T204477
 	'sourceswiki' => true, // T201814
 	'specieswiki' => true, // T129888
+	'sewikimedia' => true, // T239091
 	'testwiki' => true,
 	'uawikimedia' => true, // T131731
 	'wbwikimedia' => true, // T162510
