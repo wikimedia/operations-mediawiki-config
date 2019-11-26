@@ -23501,6 +23501,11 @@ function wmfGetVariantSettings() {
 	'default' => 300,
 ],
 
+'MachineVisionShowUploadWizardCallToAction' => [
+	'default' => false,
+	'testcommonswiki' => true,
+],
+
 'wgSpecialSearchFormOptions' => [
 	'testwikidatawiki' => [ 'showDescriptions' => true ],
 	'wikidatawiki' => [ 'showDescriptions' => true ],
