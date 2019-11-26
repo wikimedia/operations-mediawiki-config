@@ -23058,8 +23058,7 @@ function wmfGetVariantSettings() {
 'wgWelcomeSurveyExperimentalGroups' => [
 	'kowiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-9' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
 	'cswiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-9' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
-	// arwiki is an A/B test, 50% get variation A and 50% get no survey.
-	'arwiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-4' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
+	'arwiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-9' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
 	'euwiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-9' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
 ],
 
