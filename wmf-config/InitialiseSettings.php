@@ -15896,7 +15896,8 @@ function wmfGetVariantSettings() {
 'wmgParsoidVariant' => [
   'default' => 'parsoid',
   'private' => 'parsoidphp',
-  'mediawikiwiki' => 'parsoidphp',
+  'group0' => 'parsoidphp',
+  'group1' => 'parsoidphp',
 ],
 
 // Should a users' Cookie: headers be forwarded to Parsoid (for private wikis)
