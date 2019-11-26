@@ -1669,6 +1669,9 @@ function wmfGetLabsOverrideSettings() {
 		'wgMachineVisionTestersOnly' => [
 			'default' => false,
 		],
+		'wgMachineVisionShowUploadWizardCallToAction' => [
+			'default' => true,
+		],
 		'-wgSpecialSearchFormOptions' => [
 			'wikidatawiki' => [ 'showDescriptions' => true ],
 		],
