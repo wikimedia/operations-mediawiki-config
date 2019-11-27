@@ -105,9 +105,6 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 					'wiktionary',
 					'wikimedia', # TODO: Rename to "affiliates" or "chapters"?
 					'special',
-				],
-				[
-					'gewikimedia', # wikipedia + special
 				]
 			],
 		];
@@ -116,9 +113,8 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 	/**
 	 * @dataProvider provideAllWikisAreIncluded
 	 * @param string[] $dbLists DBList names that should collectively contain all wikis
-	 * @param string[] $fixme DBList names that violate the rule (until fixed)
 	 */
-	public function testAllWikisAreIncluded( array $dbLists, array $fixme = [] ) {
+	public function testAllWikisAreIncluded( array $dbLists ) {
 		$lists = DBList::getLists();
 
 		$all = array_fill_keys( $lists['all'], [] );
@@ -132,12 +128,6 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 		$all = array_filter( $all, function ( $v ) {
 			return count( $v ) !== 1;
 		} );
-
-		$knownIssues = [];
-		foreach ( $fixme as $name ) {
-			$this->assertTrue( isset( $all[$name] ), "Known problem with $name list" );
-			unset( $all[$name] );
-		}
 
 		$this->assertSame( [], $all,
 			"All names in 'all.dblist' are in exactly one of the lists" );

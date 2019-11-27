@@ -4,7 +4,6 @@
 
 inheritsFrom:
   - fishbowl
-  - special
   - wikimedia
   - nowikidatadescriptiontaglines
   - s3
