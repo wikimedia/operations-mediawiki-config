@@ -23534,8 +23534,7 @@ function wmfGetVariantSettings() {
 'wmgWikibaseTmpItemTermsMigrationStage' => [
 	'default' => [ 'max' => MIGRATION_OLD ],
 	'testwikidatawiki' => [
-		1000 => MIGRATION_WRITE_NEW,
-		'max' => MIGRATION_WRITE_BOTH,
+		'max' => MIGRATION_WRITE_NEW,
 	],
 	'wikidatawiki' => [
 		74000000 => MIGRATION_WRITE_BOTH,
