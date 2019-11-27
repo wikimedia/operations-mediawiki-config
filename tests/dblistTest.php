@@ -107,16 +107,7 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 					'special',
 				],
 				[
-					'arbcom_cswiki', # wikipedia + special
-					'arbcom_dewiki', # wikipedia + special
-					'arbcom_enwiki', # wikipedia + special
-					'arbcom_fiwiki', # wikipedia + special
-					'arbcom_nlwiki', # wikipedia + special
 					'gewikimedia', # wikipedia + special
-					'tenwiki', # wikipedia + special
-					'test2wiki', # wikipedia + special
-					'testwiki', # wikipedia + special
-					'wg_enwiki', # wikipedia + special
 				]
 			],
 		];

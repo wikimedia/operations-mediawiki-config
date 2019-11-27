@@ -3,7 +3,6 @@
 # See the inheritance tree to find where most settings are defined.
 
 inheritsFrom:
-  - special
   - categories-rdf
   - flaggedrevs
   - flow

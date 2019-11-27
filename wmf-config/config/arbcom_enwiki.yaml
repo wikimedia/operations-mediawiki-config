@@ -10,6 +10,5 @@ inheritsFrom:
   - s3
   - securepollglobal
   - small
-  - special
   - visualeditor-nondefault
   - wikipedia-english
