@@ -316,6 +316,7 @@ $wgLBFactoryConf = [
 	'db2129' => '10.192.48.115', # do not remove or comment out
 	'db2130' => '10.192.48.133', # do not remove or comment out
 	'db2131' => '10.192.48.134', # do not remove or comment out
+	'db2135' => '10.192.32.187', # do not remove or comment out
 	'clouddb2001-dev' => '10.192.20.11', # do not remove or comment out
 ],
 
