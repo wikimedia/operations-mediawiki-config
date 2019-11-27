@@ -73,7 +73,7 @@ $wgPoolCounterConf = [
 	'SpecialContributions' => [
 		'class' => 'PoolCounter_Client',
 		'timeout' => 15,
-		'workers' => 10,
+		'workers' => 3,
 		'maxqueue' => 25,
 	],
 	'TranslateFetchTranslators' => [
