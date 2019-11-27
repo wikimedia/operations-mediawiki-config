@@ -118,6 +118,8 @@ function wmfGetVariantSettings() {
 
 	'simplewiki' => 'en',
 	'simplewiktionary' => 'en',
+	'testwiki' => 'en',
+	'test2wiki' => 'en',
 
 	# Wikis at the wrong domain
 	# FIXME: rename these wikis (T21986)
