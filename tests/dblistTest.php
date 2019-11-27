@@ -118,9 +118,6 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 		// Based on DBList::getLists()
 		$files = glob( dirname( __DIR__ ) . '/dblists/*.dblist' );
 
-		// The following are dblists that do use expressions but aren't
-		// named as "-computed" because they're only used on the
-		// command-line and don't need an expanded variant for wmf-config.
 		$cliOnly = [
 			'echo.dblist',
 			'open.dblist',
@@ -129,21 +126,10 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 		];
 		foreach ( $files as $file ) {
 			$name = basename( $file );
-			if ( strpos( $name, 'labs' ) !== false ) {
-				continue;
-			}
-			if ( strpos( file_get_contents( $file ), '%%' ) !== false && !in_array( $name, $cliOnly ) ) {
-				$suffix = '-computed.dblist';
-				$expected = preg_replace( '/(-computed)?\.dblist$/', $suffix, $name );
-				$this->assertEquals(
-					$expected,
-					$name,
-					"Computed list '$name' must end its name with '$suffix'"
-				);
-			} else {
+			if ( !in_array( $name, $cliOnly ) ) {
 				$this->assertFalse(
-					strpos( $name, 'computed' ),
-					"Keyword 'computed' must be absent from non-computed list '$name'"
+					strpos( file_get_contents( $file ), '%' ),
+					'Dblist files used in web requests do not contain lazy expressions'
 				);
 			}
 		}
@@ -152,11 +138,6 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 	/**
 	 * Production code that is web-facing MUST NOT use dblists
 	 * that contain expressions because these have performance cost.
-	 *
-	 * Assert that any dblist that uses expressions has its name end in "-computed".
-	 * These may be used as-is on the command-line. If they are needed in
-	 * InitialiseSettings or CommonSettings, then the expression must be
-	 * expanded and saved as its own dblist file.
 	 */
 	public function testNoExpressionListUsedInSettings() {
 		$dblists = DBList::getDblistsUsedInSettings();
