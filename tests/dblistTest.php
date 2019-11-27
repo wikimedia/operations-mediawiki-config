@@ -88,14 +88,46 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 			'size' => [
 				[ 'small', 'medium', 'large', ],
 			],
+
+			'multiversion' => [
+				[ 'group0', 'group1', 'group2', ],
+			],
+
+			'family' => [
+				[
+					'wikipedia',
+					'wikibooks',
+					'wikinews',
+					'wikiquote',
+					'wikisource',
+					'wikiversity',
+					'wikivoyage',
+					'wiktionary',
+					'wikimedia', # TODO: Rename to "affiliates" or "chapters"?
+					'special',
+				],
+				[
+					'arbcom_cswiki', # wikipedia + special
+					'arbcom_dewiki', # wikipedia + special
+					'arbcom_enwiki', # wikipedia + special
+					'arbcom_fiwiki', # wikipedia + special
+					'arbcom_nlwiki', # wikipedia + special
+					'gewikimedia', # wikipedia + special
+					'tenwiki', # wikipedia + special
+					'test2wiki', # wikipedia + special
+					'testwiki', # wikipedia + special
+					'wg_enwiki', # wikipedia + special
+				]
+			],
 		];
 	}
 
 	/**
 	 * @dataProvider provideAllWikisAreIncluded
 	 * @param string[] $dbLists DBList names that should collectively contain all wikis
+	 * @param string[] $fixme DBList names that violate the rule (until fixed)
 	 */
-	public function testAllWikisAreIncluded( array $dbLists ) {
+	public function testAllWikisAreIncluded( array $dbLists, array $fixme = [] ) {
 		$lists = DBList::getLists();
 
 		$all = array_fill_keys( $lists['all'], [] );
@@ -109,6 +141,12 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 		$all = array_filter( $all, function ( $v ) {
 			return count( $v ) !== 1;
 		} );
+
+		$knownIssues = [];
+		foreach ( $fixme as $name ) {
+			$this->assertTrue( isset( $all[$name] ), "Known problem with $name list" );
+			unset( $all[$name] );
+		}
 
 		$this->assertSame( [], $all,
 			"All names in 'all.dblist' are in exactly one of the lists" );
