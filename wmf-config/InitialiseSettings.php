@@ -23347,12 +23347,20 @@ function wmfGetVariantSettings() {
 
 'wgGEHomepageNewAccountEnablePercentage' => [
 	'default' => 0,
+	'cswiki' => 80,
+	'kowiki' => 80,
+	'viwiki' => 80,
+	'arwiki' => 80,
+	// euwiki is not an A/B test (T233066)
+	'euwiki' => 100,
+],
+
+'wgGEHomepageSuggestedEditsNewAccountInitiatedPercentage' => [
+	'default' => 0,
+	'arwiki' => 50,
 	'cswiki' => 50,
 	'kowiki' => 50,
 	'viwiki' => 50,
-	'arwiki' => 50,
-	// euwiki is not an A/B test (T233066)
-	'euwiki' => 100,
 ],
 
 'wgGEHomepageTutorialTitle' => [
