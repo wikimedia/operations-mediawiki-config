@@ -985,9 +985,6 @@ function wmfGetLabsOverrideSettings() {
 			'cawiki' => true,
 			'arwiki' => true,
 		],
-		'wgGEHelpPanelNewAccountEnableWithHomepage' => [
-			'default' => true,
-		],
 		'wgGEHelpPanelLoggingEnabled' => [
 			'enwiki' => true,
 			'kowiki' => true,

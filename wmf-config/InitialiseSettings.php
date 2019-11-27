@@ -23085,15 +23085,8 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
-'wgGEHelpPanelNewAccountEnablePercentage' => [
-	'default' => 0,
-	'testwiki' => 0,
-	'kowiki' => 50,
-	'cswiki' => 50,
-	'viwiki' => 50,
-	'arwiki' => 50,
-	// euwiki is not an A/B test (T233065#5504495)
-	'euwiki' => 100,
+'wgGEHelpPanelNewAccountEnableWithHomepage' => [
+	'default' => true,
 ],
 
 'wgGEHelpPanelReadingModeNamespaces' => [
