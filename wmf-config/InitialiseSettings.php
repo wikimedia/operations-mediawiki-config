@@ -8540,6 +8540,7 @@ function wmfGetVariantSettings() {
 	'metawiki' => true,
 	'arwiki' => true,
 	'dewiki' => true, // T228150
+	'eswiki' => true, // T239370
 	'fawiki' => true,
 	'fiwiki' => true, // T228008
 	'frwiki' => true,
