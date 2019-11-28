@@ -20800,6 +20800,12 @@ function wmfGetVariantSettings() {
 	],
 ],
 
+// Disable redirects for search inputs to exact matches by default
+'wmgDoNotRedirectOnSearchMatch' => [
+	'default' => false,
+	'testcommonswiki' => true,
+],
+
 // Only enable this conservatively, having this on to many
 // wikis will take *a lot* of Graphite storage space. T191416
 'wmgWikibaseClientTrackLuaFunctionCallsPerWiki' => [

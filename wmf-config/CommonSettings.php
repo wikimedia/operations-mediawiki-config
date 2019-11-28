@@ -3420,6 +3420,12 @@ if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient || $wmgUseWikibaseMediaInfo ) 
 	include "$wmfConfigDir/Wikibase.php";
 }
 
+// Turn off exact search match redirects
+if ( $wmgDoNotRedirectOnSearchMatch ) {
+	$wgSearchMatchRedirectPreference = true;
+	$wgDefaultUserOptions['search-match-redirect'] = false;
+}
+
 // put this here to ensure it is available for localisation cache rebuild
 $wgWBClientSettings['repoSiteName'] = 'wikibase-repo-name';
 
