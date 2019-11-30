@@ -63,7 +63,7 @@ return [
 
 		### Poolcounter
 		'poolcounter' => [
-			'deployment-poolcounter05.deployment-prep.eqiad.wmflabs',
+			'deployment-poolcounter06.deployment-prep.eqiad.wmflabs',
 		],
 
 		### Kask
