@@ -6800,6 +6800,8 @@ function wmfGetVariantSettings() {
 		103 => 'Autore_chiàcchiera', // Author talk
 		108 => 'Opera', // Work
 		109 => 'Opera_chiàcchiera', // Work talk
+		114 => 'Traduzioni', // T239547, Translation
+		115 => 'Traduzioni_chiàcchiera', // Translation talk
 	],
 	'nlwikisource' => [
 		100 => 'Hoofdportaal',
