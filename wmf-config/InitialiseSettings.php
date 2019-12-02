@@ -23537,6 +23537,7 @@ function wmfGetVariantSettings() {
 		'max' => MIGRATION_WRITE_NEW,
 	],
 	'wikidatawiki' => [
+		1000 => MIGRATION_WRITE_NEW,
 		74000000 => MIGRATION_WRITE_BOTH,
 		'max' => MIGRATION_OLD,
 	],
