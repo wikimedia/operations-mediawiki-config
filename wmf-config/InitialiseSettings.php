@@ -23525,7 +23525,10 @@ function wmfGetVariantSettings() {
 	'default' => MIGRATION_WRITE_NEW,
 ],
 'wmgWikibaseTmpItemTermsMigrationStage' => [
-	'default' => [ 'max' => MIGRATION_OLD ],
+	'default' => [
+		1000 => MIGRATION_WRITE_NEW,
+		'max' => MIGRATION_OLD,
+	],
 	'testwikidatawiki' => [
 		'max' => MIGRATION_WRITE_NEW,
 	],
