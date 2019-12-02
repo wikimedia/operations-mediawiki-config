@@ -15893,11 +15893,9 @@ function wmfGetVariantSettings() {
 ],
 
 // which Parsoid variant to use -- T229015
+// TODO: clean this up
 'wmgParsoidVariant' => [
-  'default' => 'parsoid',
-  'private' => 'parsoidphp',
-  'group0' => 'parsoidphp',
-  'group1' => 'parsoidphp',
+  'default' => 'parsoidphp',
 ],
 
 // Should a users' Cookie: headers be forwarded to Parsoid (for private wikis)
