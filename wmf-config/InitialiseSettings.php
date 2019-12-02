@@ -14433,6 +14433,7 @@ function wmfGetVariantSettings() {
 		'*.scielo.br',                      // Brazilian scientific papers - T231402
 		'iip.bu.uni.wroc.pl',               // T235904
 		'webservices.picturae.com',         // T238955
+		'*.archives.go.jp',                 // T238476
 	],
 ],
 
