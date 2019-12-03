@@ -20797,6 +20797,7 @@ function wmfGetVariantSettings() {
 'wmgDoNotRedirectOnSearchMatch' => [
 	'default' => false,
 	'testcommonswiki' => true,
+	'commonswiki' => true,
 ],
 
 // Only enable this conservatively, having this on to many
