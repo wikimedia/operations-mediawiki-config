@@ -20873,6 +20873,7 @@ function wmfGetVariantSettings() {
 // Enable Wikisource extension
 'wmgUseWikisource' => [
 	'default' => false,
+	'frwikisource' => true,
 ],
 
 'wgMusicalNotationEnableWikibaseDataType' => [
