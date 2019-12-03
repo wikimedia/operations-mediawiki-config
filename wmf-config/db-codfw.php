@@ -197,7 +197,6 @@ $wgLBFactoryConf = [
 # Removing a server from this list does not remove the server from rotation,
 # it just breaks the site horribly.
 'hostsByName' => [
-	'db1062' => '10.64.48.15', # do not remove or comment out
 	'db1074' => '10.64.0.204', # do not remove or comment out
 	'db1075' => '10.64.0.205', # do not remove or comment out
 	'db1076' => '10.64.16.190', # do not remove or comment out
