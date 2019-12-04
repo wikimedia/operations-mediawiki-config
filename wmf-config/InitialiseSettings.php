@@ -15873,7 +15873,7 @@ function wmfGetVariantSettings() {
 // in MW Core
 'wmgUseRestbaseVRS' => [
 	'default' => true,
-	'wikitech' => false, // T102178
+	'wikitech' => false,		// T102178
 	'private' => false,
 ],
 
@@ -15883,8 +15883,9 @@ function wmfGetVariantSettings() {
 
 'wmgUseParsoid' => [
 	'default' => true,
-	'loginwiki' => false, // T61702
-	'votewiki' => false, // T61702
+	'wikitech' => false,		# Won't work while Parsoid/PHP is outwith MW
+	'loginwiki' => false,		# T61702
+	'votewiki' => false,		# T61702
 ],
 
 // which Parsoid variant to use -- T229015
@@ -15905,6 +15906,7 @@ function wmfGetVariantSettings() {
 
 'wmgUseVisualEditor' => [
 	'default' => true,
+	'wikitech' => false,		# Won't work while Parsoid/PHP is outwith MW
 	'nonbetafeatures' => false,
 ],
 
