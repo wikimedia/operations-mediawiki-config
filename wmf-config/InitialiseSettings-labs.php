@@ -1644,29 +1644,16 @@ function wmfGetLabsOverrideSettings() {
 			'default' => false,
 			'commonswiki' => true,
 		],
-		'wgMachineVisionHandlers' => [
-			'default' => [
-				'random' => [
-					'class' => 'MediaWiki\\Extension\\MachineVision\\Handler\\RandomWikidataIdHandler',
-					'services' => [
-						'MachineVisionRandomWikidataIdClient',
-						'MachineVisionRepository',
-						'MachineVisionDepictsSetter',
-						'MachineVisionLabelResolver',
-					],
-					'args' => [
-						'https://visionoid.wmflabs.org/labels?target=beta&title=$1', // apiUrlTemplate
-					],
-				],
-			],
-		],
-		'wgMachineVisionRequestLabelsOnUploadComplete' => [
-			'default' => false,
-		],
 		'wgMachineVisionTestersOnly' => [
 			'default' => false,
 		],
 		'wgMachineVisionShowUploadWizardCallToAction' => [
+			'default' => true,
+		],
+		'wgMachineVisionNewUploadLabelingJobDelay' => [
+			'default' => 0,
+		],
+		'wgMachineVisionRequestLabelsFromWikidataPublicApi' => [
 			'default' => true,
 		],
 		'-wgSpecialSearchFormOptions' => [
