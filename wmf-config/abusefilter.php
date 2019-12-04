@@ -411,6 +411,10 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['abusefilter']['abusefilter-log-detail'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // T44012
 		break;
+	case 'testwiki':
+		$wgAbuseFilterActions['block'] = true;
+		$wgAbuseFilterAnonBlockDuration = '24 hours';
+		break;
 	case 'thwiki':
 		// T30502
 		$wgGroupPermissions['*']['abusefilter-view'] = false;
