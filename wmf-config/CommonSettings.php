@@ -293,7 +293,9 @@ $wgMaxUserDBWriteDuration = 3;
 $wgAPIMaxLagThreshold = 3;
 
 # Allow different memory_limit settings for Parsoid/PHP servers (T236833)
-if ( array_key_exists( 'SERVERGROUP', $_SERVER ) && $_SERVER['SERVERGROUP'] === 'parsoid' ) {
+# keep in sync with php7-fatal-error.php in operations/puppet
+# and with wmf-config/logging.php
+if ( ( $_SERVER['SERVERGROUP'] ?? null ) === 'parsoid' ) {
 	ini_set( 'memory_limit', $wmgMemoryLimitParsoid );
 } else {
 	ini_set( 'memory_limit', $wmgMemoryLimit );

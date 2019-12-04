@@ -179,8 +179,9 @@ $wmgMonologLoggerCalls = [
 	'useMicrosecondTimestamps' => [ false ],
 ];
 
-$phpUname = php_uname( 'n' );
-$isParsoidCluster = substr( $phpUname, 0, 3 ) === 'wtp';
+# keep in sync with php7-fatal-error.php in operations/puppet
+# and with wmf-config/CommonSettings.php
+$isParsoidCluster = ( $_SERVER['SERVERGROUP'] ?? null ) === 'parsoid';
 $wmgMonologConfig = [
 	'loggers' => [
 		// Template for all undefined log channels
@@ -208,7 +209,7 @@ $wmgMonologConfig = [
 		],
 		'cee' => [
 			'class' => '\\MediaWiki\\Logger\\Monolog\\CeeFormatter',
-			'args'  => [ $isParsoidCluster ? 'parsoid-php' : 'mediawiki', $phpUname, null, '', 1 ],
+			'args'  => [ $isParsoidCluster ? 'parsoid-php' : 'mediawiki', php_uname( 'n' ), null, '', 1 ],
 		],
 	],
 ];
