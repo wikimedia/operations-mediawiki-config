@@ -470,6 +470,8 @@ $wgObjectCaches['kask-session'] = [
 		],
 		'writeMethod' => 'POST',
 	],
+	'serialization_type' => 'PHP',
+	'hmac_key' => $wmgSessionStoreHMACKey,
 	'extendedErrorBodyFields' => [ 'type', 'title', 'detail', 'instance' ]
 ];
 $wgObjectCaches['kask-transition'] = [
