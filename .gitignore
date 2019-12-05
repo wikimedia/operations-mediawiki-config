@@ -11,6 +11,7 @@
 # Wikimedia private/temporary stuff
 private
 wmf-config/ExtensionMessages-*.php
+wmf-config/config-cache/
 php-*/
 wikiversions.php
 wikiversions-labs.php

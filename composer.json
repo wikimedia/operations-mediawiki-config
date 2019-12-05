@@ -20,11 +20,18 @@
 			"phpunit",
 			"composer phpcs",
 			"minus-x check .",
-			"composer build",
+			"composer buildDBLists",
 			"composer checkclean"
 		],
-		"build": [
-			"php -e multiversion/buildDBLists.php"
+		"buildDBLists": "php -e multiversion/buildDBLists.php",
+		"buildConfigCache": "php -e multiversion/buildConfigCache.php",
+		"diffConfig": [
+			"composer buildConfigCache",
+			"git checkout -q HEAD~1",
+			"git add -f wmf-config/config-cache/",
+			"composer buildConfigCache",
+			"git diff -R wmf-config/config-cache/",
+			"git reset wmf-config/config-cache/"
 		],
 		"checkclean": "git diff --exit-code wmf-config/ dblists/"
 	}
