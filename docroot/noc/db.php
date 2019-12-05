@@ -121,10 +121,13 @@ if ( $format === 'json' ) {
 <body>
 <?php
 
+$clusterNames = $clusters->getNames();
+natsort( $clusterNames ); // natsort for s1 < s2 < s10 rather than s1 < s10 < s2
+
 // Generate navigation links
 print '<nav><ul>';
 $tab = 0;
-foreach ( $clusters->getNames() as $name ) {
+foreach ( $clusterNames as $name ) {
 	$tab++;
 	print '<li><a href="#tabs-' . $tab . '">Cluster ' . htmlspecialchars( $name ) . '</a></li>';
 }
@@ -132,7 +135,7 @@ print '</ul></nav><main>';
 
 // Generate content sections
 $tab = 0;
-foreach ( $clusters->getNames() as $name ) {
+foreach ( $clusterNames as $name ) {
 	$tab++;
 	print "<section id=\"tabs-$tab\"><h2>Cluster <strong>" . htmlspecialchars( $name ) . '</strong></h2>';
 	print $clusters->htmlFor( $name ) . '</section>';
