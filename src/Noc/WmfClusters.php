@@ -115,7 +115,7 @@ class WmfClusters {
 		foreach ( $this->getHosts( $clusterName ) as $host ) {
 			$ret[] = "<code>$host</code>";
 		}
-		$ret[] = '<br><strong>Loads</strong>:<br>';
+		$ret[] = '<br><strong>Loads</strong> (master first; replicas follow):<br>';
 		foreach ( $this->getLoads( $clusterName ) as $host => $load ) {
 			$ret[] = "$host => $load<br>";
 		}
