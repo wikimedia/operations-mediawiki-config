@@ -13807,11 +13807,6 @@ function wmfGetVariantSettings() {
 	'fishbowl' => false, // not needed, private editing...
 ],
 
-'wgSpamBlacklistEventLogging' => [
-	'default' => false,
-	'testwiki' => true,
-],
-
 'wmgUseGlobalTitleBlacklist' => [
 	'default' => true,
 	'private' => false,
