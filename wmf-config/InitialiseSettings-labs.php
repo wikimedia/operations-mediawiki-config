@@ -631,21 +631,6 @@ function wmfGetLabsOverrideSettings() {
 				'depicts' => 'P245962',
 			]
 		],
-		'wgDepictsQualifierProperties' => [
-			'commonswiki' => [
-				'features' => 'P252382',
-				'colour' => 'P252383',
-				'wears' => 'P252385',
-				'appliesToPart' => 'P252386',
-				'quantity' => 'P937',
-				'eyeColour' => 'P252387',
-				'shape' => 'P252388',
-				'relativePosition' => 'P2677',
-			],
-		],
-		'wgMediaInfoEnableOtherStatements' => [
-			'commonswiki' => true
-		],
 
 		'wgMediaInfoExternalEntitySearchBaseUri' => [
 			'commonswiki' => 'https://wikidata.beta.wmflabs.org/w/api.php',

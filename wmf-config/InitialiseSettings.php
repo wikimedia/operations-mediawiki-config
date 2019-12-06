@@ -20775,32 +20775,6 @@ function wmfGetVariantSettings() {
 	],
 ],
 
-'wgDepictsQualifierProperties' => [
-	'commonswiki' => [
-		'features' => 'P1354',
-		'colour' => 'P462',
-		'wears' => 'P3828',
-		'appliesToPart' => 'P518',
-		'quantity' => 'P1114',
-		'eyeColour' => 'P1340',
-		'shape' => 'P1419',
-	],
-	'testcommonswiki' => [
-		'features' => 'P1354',
-		'colour' => 'P462',
-		'wears' => 'P3828',
-		'appliesToPart' => 'P518',
-		'quantity' => 'P1114',
-		'eyeColour' => 'P1340',
-		'shape' => 'P1419',
-	],
-],
-
-'wgMediaInfoEnableOtherStatements' => [
-	'testcommonswiki' => true,
-	'commonswiki' => true,
-],
-
 'wgMediaInfoExternalEntitySearchBaseUri' => [
 	'default' => 'https://www.wikidata.org/w/api.php',
 ],
