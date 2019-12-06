@@ -4218,6 +4218,8 @@ function wmfGetVariantSettings() {
 	],
 	'arwikibooks' => [
 		'1x' => '/static/images/project-logos/arwikibooks.png',
+		'1.5x' => '/static/images/project-logos/arwikibooks-1.5x.png',
+		'2x' => '/static/images/project-logos/arwikibooks-2x.png',
 	],
 	'astwikibooks' => [
 		'1x' => '/static/images/project-logos/astwikibooks.png', // T150618
