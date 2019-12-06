@@ -23382,11 +23382,6 @@ function wmfGetVariantSettings() {
 	'euwiki' => 'Laguntza:Mentoreak',
 ],
 
-'wgDisableRollbackConfirmationFeature' => [
-	'default' => false,
-	'dewiki' => true
-],
-
 'wmgShowRollbackConfirmationDefaultUserOptions' => [
 	'default' => false,
 	'dewiki' => true
