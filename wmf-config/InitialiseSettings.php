@@ -3777,6 +3777,10 @@ function wmfGetVariantSettings() {
 		'CAT' => NS_CATEGORY, // T216143
 		'WL' => NS_PROJECT, // T216143
 	],
+	'+eswikisource' => [
+		'WS' => NS_PROJECT, // T240050
+		'A' => NS_HELP, // T240050
+	],
 	'+eswiktionary' => [
 		'WN' => NS_PROJECT, // T119006
 	],
