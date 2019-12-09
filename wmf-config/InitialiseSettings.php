@@ -19215,6 +19215,7 @@ function wmfGetVariantSettings() {
 		'external-machine-translation' => [
 			'edittag' => 'campaign-external-machine-translation', // T216123
 		],
+		'wiki-for-human-rights' => true, // T239977
 	],
 	'dewiki' => [
 		'article-recommender-1' => true,
@@ -19226,6 +19227,7 @@ function wmfGetVariantSettings() {
 		'external-machine-translation' => [
 			'edittag' => 'campaign-external-machine-translation',
 		],
+		'wiki-for-human-rights' => true,
 	],
 	'enwiki' => [
 		'article-recommender-1' => true,
@@ -19237,6 +19239,7 @@ function wmfGetVariantSettings() {
 		'external-machine-translation' => [
 			'edittag' => 'campaign-external-machine-translation',
 		],
+		'wiki-for-human-rights' => true,
 	],
 	'eswiki' => [
 		'article-recommender-1' => true,
@@ -19249,6 +19252,7 @@ function wmfGetVariantSettings() {
 		'external-machine-translation' => [
 			'edittag' => 'campaign-external-machine-translation',
 		],
+		'wiki-for-human-rights' => true,
 	],
 	'frwiki' => [
 		'article-recommender-1' => true,
@@ -19261,6 +19265,7 @@ function wmfGetVariantSettings() {
 		'external-machine-translation' => [
 			'edittag' => 'campaign-external-machine-translation',
 		],
+		'wiki-for-human-rights' => true,
 	],
 ],
 
