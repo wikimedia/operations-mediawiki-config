@@ -4004,13 +4004,8 @@ if ( $wmgUseTheWikipediaLibrary ) {
 // This is a temporary hack for hooking up Parsoid/PHP with MediaWiki
 $parsoidDir = '/srv/deployment/parsoid/deploy/src';
 if ( file_exists( "$parsoidDir/extension.json" ) ) {
-	// While we are testing & benchmarking, make production db access read-only
-	// but honour $wgReadOnly if it's set to true already
-	$wgReadOnly = $wgReadOnly || $wmfRealm !== 'labs';
 	$wgParsoidSettings = [
 		'useSelser' => true,
-		// we always want linting, but whether we'll write to the DB or not is
-		// controlled by $wgReadOnly set above
 		'linting' => true
 	];
 
