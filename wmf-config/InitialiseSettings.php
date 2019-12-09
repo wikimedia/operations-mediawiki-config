@@ -23325,10 +23325,13 @@ function wmfGetVariantSettings() {
 	'euwiki' => true, // Not configured yet
 ],
 
+'wgGENewcomerTasksConfigTitle' => [
+	'default' => 'MediaWiki:NewcomerTasks.json',
+],
+
+// TODO: Remove after wmf.10, use wgGENewcomerTasksConfigTitle
 'wgGENewcomerTasksRemoteConfigTitle' => [
 	'default' => 'MediaWiki:NewcomerTasks.json',
-	// Testwiki will use cswiki templates.
-	'testwiki' => 'cs:MediaWiki:NewcomerTasks.json',
 ],
 
 'wgGENewcomerTasksRemoteApiUrl' => [
@@ -23338,14 +23341,10 @@ function wmfGetVariantSettings() {
 	'cswiki' => 'https://cs.wikipedia.org/w/api.php',
 	'kowiki' => 'https://ko.wikipedia.org/w/api.php',
 	'viwiki' => 'https://vi.wikipedia.org/w/api.php',
-	// Testwiki will use cswiki API.
-	'testwiki' => 'https://cs.wikipedia.org/w/api.php',
 ],
 
 'wgGERestbaseUrl' => [
 	'default' => false,
-	// Testwiki will use cswiki restbase
-	'testwiki' => 'https://cs.wikipedia.org/api/rest_v1',
 ],
 
 'wgGEHomepageSuggestedEditsIntroLinks' => [
