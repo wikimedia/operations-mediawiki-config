@@ -79,11 +79,28 @@ function wmfEtcdApplyDBConfig() {
 		$wgLBFactoryConf['readOnlyBySection'] = $wmfDbconfigFromEtcd['readOnlyBySection'];
 		$wgLBFactoryConf['groupLoadsBySection'] = $wmfDbconfigFromEtcd['groupLoadsBySection'];
 
-		// Because JSON dictionaries are unordered, but the order of sectionLoads is
+		// Because JSON dictionaries are unordered, but the order of sectionLoads & externalLoads is
 		// rather significant to Mediawiki, dbctl stores the master in a dictionary by itself,
 		// and then the remaining replicas in a second dict.
 		foreach ( $wmfDbconfigFromEtcd['sectionLoads'] as $section => $sectionLoads ) {
 			$wgLBFactoryConf['sectionLoads'][$section] = array_merge( $sectionLoads[0], $sectionLoads[1] );
+		}
+		// Mediawiki has many different names for the same external storage clusters in dbctl.
+		// This translates from dbctl's name for a cluster to a set of Mediawiki names for it.
+		$externalStoreNameMap = [
+			# es1, previously known as $wmgOldExtTemplate
+			'es1' => [ 'rc1', 'cluster3', 'cluster4', 'cluster5', 'cluster6', 'cluster7',
+					   'cluster8', 'cluster9', 'cluster10', 'cluster20', 'cluster21',
+					   'cluster1', 'cluster2', 'cluster22', 'cluster23' ],
+			'es2' => [ 'cluster24' ],
+			'es3' => [ 'cluster25' ],
+			'x1' => [ 'extension1' ],
+		];
+		foreach ( $wmfDbconfigFromEtcd['externalLoads'] as $dbctlName => $dbctlLoads ) {
+			$merged = array_merge( $dbctlLoads[0], $dbctlLoads[1] );
+			foreach ( $externalStoreNameMap[$dbctlName] as $mwLoadName ) {
+				$wgLBFactoryConf['externalLoads'][$mwLoadName] = $merged;
+			}
 		}
 	}
 }
