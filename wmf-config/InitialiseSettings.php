@@ -16638,10 +16638,6 @@ function wmfGetVariantSettings() {
 	'ptwikinews' => false,  // Done via local {{int:Copyrightwarning}}s instead.
 ],
 
-'wmgCheckUserForceSummary' => [
-	'default' => true, // T73457
-],
-
 'wgCheckUserForceSummary' => [
 	'default' => true, // T73457
 ],
