@@ -14643,6 +14643,7 @@ function wmfGetVariantSettings() {
 	'hiwikiversity' => true, // T179252
 	'huwiki' => true,
 	'hywiki' => true,
+	'hywwiki' => true, // T239387
 	'ilowiki' => true,
 	'iswiki' => true,
 	'itwiki' => true, // T103643
