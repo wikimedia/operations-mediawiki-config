@@ -23459,11 +23459,6 @@ function wmfGetVariantSettings() {
 	'commonswiki' => true,
 ],
 
-'wgMachineVisionTestersOnly' => [
-	'default' => true,
-	'testcommonswiki' => false,
-],
-
 'wgMachineVisionRequestLabelsOnUploadComplete' => [
 	'default' => true,
 ],
