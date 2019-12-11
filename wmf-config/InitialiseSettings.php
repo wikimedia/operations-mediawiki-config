@@ -23519,7 +23519,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgMachineVisionNewUploadLabelingJobDelay' => [
-	'default' => 300,
+	'default' => 172800,
 ],
 
 'MachineVisionShowUploadWizardCallToAction' => [
