@@ -1679,5 +1679,9 @@ function wmfGetLabsOverrideSettings() {
 		'wmgUseWebAuthn' => [
 			'default' => true,
 		],
+
+		'wmgUseDiscussionTools' => [
+			'enwiki' => true,
+		],
 	];
 } # wmflLabsSettings()
