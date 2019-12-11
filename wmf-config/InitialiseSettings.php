@@ -16642,6 +16642,15 @@ function wmfGetVariantSettings() {
 	'default' => true, // T73457
 ],
 
+'wgCheckUserForceSummary' => [
+	'default' => true, // T73457
+],
+
+'wgCheckUserEnableSpecialInvestigate' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 'wmgUseIncubator' => [
 	'default' => false,
 	'incubatorwiki' => true,
