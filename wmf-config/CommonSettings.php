@@ -3150,6 +3150,10 @@ if ( $wmgUseDisambiguator ) {
 	wfLoadExtension( 'Disambiguator' );
 }
 
+if ( $wmgUseDiscussionTools ) {
+	wfLoadExtension( 'DiscussionTools' );
+}
+
 if ( $wmgUseCodeEditorForCore || $wmgUseScribunto ) {
 	wfLoadExtension( 'CodeEditor' );
 	$wgCodeEditorEnableCore = $wmgUseCodeEditorForCore;
