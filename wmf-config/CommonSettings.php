@@ -3736,7 +3736,6 @@ $wgExtraLanguageNames = $wmgExtraLanguageNames;
 
 if ( $wmgUseCheckUser ) {
 	wfLoadExtension( 'CheckUser' );
-	$wgCheckUserForceSummary = $wmgCheckUserForceSummary;
 	if ( $wmgUseCentralAuth ) {
 		// T128605
 		// Only for CA wikis - will break stuff otherwise
