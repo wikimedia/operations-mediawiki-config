@@ -19106,10 +19106,15 @@ function wmfGetVariantSettings() {
 	'specieswiki' => true, // T134898
 	'outreachwiki' => true, // T135582
 ],
+
 'wmgUseDisambiguator' => [
 	'default' => true,
 	'loginwiki' => false, // T61702
 	'votewiki' => false, // T61702
+],
+
+'wmgUseDiscussionTools' => [
+	'default' => false,
 ],
 
 'wmgUseCodeEditorForCore' => [
