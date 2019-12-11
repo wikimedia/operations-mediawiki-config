@@ -23523,8 +23523,7 @@ function wmfGetVariantSettings() {
 ],
 
 'MachineVisionShowUploadWizardCallToAction' => [
-	'default' => false,
-	'testcommonswiki' => true,
+	'default' => true,
 ],
 
 'wgSpecialSearchFormOptions' => [
