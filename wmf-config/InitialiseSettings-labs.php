@@ -1147,19 +1147,8 @@ function wmfGetLabsOverrideSettings() {
 		'wgGEConfirmEmailEnabled' => [
 			'default' => true,
 		],
-		'wgGENewcomerTasksRemoteConfigTitle' => [
-			'default' => null,
-			'cs' => 'mw:Growth/Personalized_first_day/Newcomer_tasks/Prototype/templates/cs.json',
-			'en' => 'mw:Growth/Personalized_first_day/Newcomer_tasks/Prototype/templates/cs.json',
-			'ko' => 'mw:Growth/Personalized_first_day/Newcomer_tasks/Prototype/templates/ko.json',
-			'ar' => 'mw:Growth/Personalized_first_day/Newcomer_tasks/Prototype/templates/ar.json',
-		],
-		'wgGENewcomerTasksRemoteApiUrl' => [
-			'default' => null,
-			'en' => 'https://en.wikipedia.beta.wmflabs.org/w/api.php',
-			'cs' => 'https://cs.wikipedia.beta.wmflabs.org/w/api.php',
-			'ko' => 'https://ko.wikipedia.org/w/api.php',
-			'ar' => 'https://ar.wikipedia.org/w/api.php',
+		'wgGENewcomerTasksConfigTitle' => [
+			'default' => 'MediaWiki:NewcomerTasks.json',
 		],
 		'wgGERestbaseUrl' => [
 			'default' => false,
