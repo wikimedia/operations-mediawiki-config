@@ -37,6 +37,7 @@ $IP/extensions/ContributionTracking/extension.json
 $IP/extensions/CreditsSource/extension.json
 $IP/extensions/Dashiki/extension.json
 $IP/extensions/Disambiguator/extension.json
+$IP/extensions/DiscussionTools/extension.json
 $IP/extensions/DismissableSiteNotice/extension.json
 $IP/extensions/DonationInterface/extension.json
 $IP/extensions/DoubleWiki/extension.json
