@@ -11,7 +11,7 @@ return [
 	'eqiad' => [
 		'udp2log' => 'deployment-fluorine02.eqiad.wmflabs:8420',
 		'xenon' => 'deployment-fluorine02.deployment-prep.eqiad.wmflabs',
-		'xhgui' => false, // Not yet available in Beta Cluster, T180761
+		'xhgui' => 'mongodb://deployment-xhgui01.deployment-prep.eqiad.wmflabs:27017',
 		'statsd' => 'labmon1001.eqiad.wmnet',
 		'search-chi' => [
 			// These MUST match the installed SSL certs
