@@ -4846,7 +4846,11 @@ function wmfGetVariantSettings() {
 		'WT' => NS_PROJECT_TALK, // T181374
 		'T' => NS_TEMPLATE, // T181374
 		'H' => NS_HELP, // T181374
-		'CAT' => NS_CATEGORY // T181374
+		'CAT' => NS_CATEGORY, // T181374
+		'U' => NS_USER, // T240428
+		'UT' => NS_USER_TALK, // T240428
+		'F' => NS_FILE, // T240428
+		'FT' => NS_FILE_TALK, // T240428
 	],
 	'+zhwikisource' => [
 		'WS' => NS_PROJECT, // T230548
