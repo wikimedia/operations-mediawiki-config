@@ -23490,7 +23490,7 @@ function wmfGetVariantSettings() {
 	'default' => 172800,
 ],
 
-'MachineVisionShowUploadWizardCallToAction' => [
+'wgMachineVisionShowUploadWizardCallToAction' => [
 	'default' => true,
 ],
 
