@@ -8815,6 +8815,18 @@ function wmfGetVariantSettings() {
 		'rollbacker' => [ 'rollback' => true, ], // T109755
 		'transwiki' => [ 'importupload' => true, ], // T109755
 	],
+	'+betawikiversity' => [
+		'test-sysop' => [ // T240438
+			'block' => true,
+			'blockemail' => true,
+			'delete' => true,
+			'undelete' => true,
+			'deletedhistory' => true,
+			'autopatrol' => true,
+			'suppressredirect' => true,
+			'rollback' => true,
+		],
+	],
 	'+bnwiki' => [
 		'autoconfirmed' => [ 'patrol' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ], // T30717
@@ -10771,7 +10783,7 @@ function wmfGetVariantSettings() {
 		// custom groups used on several wikis
 		'arbcom', 'botadmin', 'eliminator', 'import', 'interface-editor', 'transwiki',
 		// custom groups used on one or a few wikis
-		'abusefilter' /* enwiki */, 'curator' /* enwikiversity */, 'engineer' /* cswiki, ruwiki */, 'facilitator' /* frwikinews */, 'founder' /* enwiki */, 'templateeditor' /* rowiki */, 'test-sysop' /* incubatorwiki */, 'translator' /* incubatorwiki */, 'wikidata-staff',
+		'abusefilter' /* enwiki */, 'curator' /* enwikiversity */, 'engineer' /* cswiki, ruwiki */, 'facilitator' /* frwikinews */, 'founder' /* enwiki */, 'templateeditor' /* rowiki */, 'test-sysop' /* betawikiversity, incubatorwiki */, 'translator' /* incubatorwiki */, 'wikidata-staff',
 		// metawiki local groups with global powers (some also on testwiki)
 		'centralnoticeadmin', 'global-renamer', 'translationadmin', 'wmf-officeit', 'wmf-supportsafety',
 		// wikitech local groups with global powers
@@ -10855,6 +10867,9 @@ function wmfGetVariantSettings() {
 	],
 	'+azwiktionary' => [
 		'sysop' => [ 'autopatrolled', ], // T227208
+	],
+	'+betawikiversity' => [
+		'bureaucrat' => [ 'test-sysop' ], // T240438
 	],
 	'+bewiki' => [
 		'sysop' => [ 'autoeditor' ],
@@ -11636,6 +11651,9 @@ function wmfGetVariantSettings() {
 	],
 	'+bawiki' => [
 		'bureaucrat' => [ 'sysop' ],
+	],
+	'+betawikiversity' => [
+		'bureaucrat' => [ 'test-sysop' ], // T240438
 	],
 	'+bewiki' => [
 		'sysop' => [ 'autoeditor' ],
