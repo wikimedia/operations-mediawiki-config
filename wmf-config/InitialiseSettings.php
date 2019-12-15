@@ -17090,6 +17090,11 @@ function wmfGetVariantSettings() {
 		'copyright-width' => 75,
 		'copyright-height' => 18,
 	],
+	'lawiki' => [ // T240728
+		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-la.svg',
+		'copyright-width' => 117,
+		'copyright-height' => 21,
+	],
 	'mkwiki' => [ // T165896
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-sr.svg',
 		'copyright-width' => 122,
