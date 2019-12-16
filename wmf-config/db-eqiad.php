@@ -14,11 +14,9 @@ $wmgParserCacheDBs = [
 	# 'spare' => '10.64.48.174',  # pc1010, D3 4.4TB 256GB # spare host. Use it to replace any of the above if needed
 ];
 
-$wmgOldExtTemplate = [
-	'10.64.0.7'    => 1, # es1012, A2 11TB 128GB
-	'10.64.32.185' => 1, # es1016, C2 11TB 128GB
-	'10.64.48.115' => 1, # es1018, D1 11TB 128GB
-];
+# LOOKING FOR $wmgOldExtTemplate ?  It no longer lives in the PHP configs.
+# Instead try https://noc.wikimedia.org/dbconfig/eqiad.json (see 'es1')
+# For more info see also https://wikitech.wikimedia.org/wiki/dbctl
 
 $wgLBFactoryConf = [
 
@@ -318,49 +316,10 @@ $wgLBFactoryConf = [
 	'clouddb2001-dev' => '10.192.20.11', # do not remove or comment out
 ],
 
-'externalLoads' => [
-	# Recompressed stores
-	'rc1' => $wmgOldExtTemplate,
-
-	# Former Ubuntu dual-purpose stores
-	'cluster3' => $wmgOldExtTemplate,
-	'cluster4' => $wmgOldExtTemplate,
-	'cluster5' => $wmgOldExtTemplate,
-	'cluster6' => $wmgOldExtTemplate,
-	'cluster7' => $wmgOldExtTemplate,
-	'cluster8' => $wmgOldExtTemplate,
-	'cluster9' => $wmgOldExtTemplate,
-	'cluster10' => $wmgOldExtTemplate,
-	'cluster20' => $wmgOldExtTemplate,
-	'cluster21' => $wmgOldExtTemplate,
-
-	# Clusters required for T24624
-	'cluster1' => $wmgOldExtTemplate,
-	'cluster2' => $wmgOldExtTemplate,
-
-	# Old dedicated clusters
-	'cluster22' => $wmgOldExtTemplate,
-	'cluster23' => $wmgOldExtTemplate,
-
-	# es2
-	'cluster24' => [
-		'10.64.32.184' => 0, # es1015, C2 11TB 128GB, master
-		'10.64.0.6'    => 1, # es1011, A2 11TB 128GB
-		'10.64.16.186' => 1, # es1013, B1 11TB 128GB
-	],
-	# es3
-	'cluster25' => [
-		'10.64.32.65'  => 0, # es1017, C3 11TB 128GB, master
-		'10.64.16.187' => 1, # es1014, B1 11TB 128GB
-		'10.64.48.116' => 1, # es1019, D8 11TB 128GB
-	],
-	# ExtensionStore shard1
-	'extension1' => [
-		'10.64.32.11' => 0, # db1120, C5 3.6TB 512GB # master
-		'10.64.0.97' => 1, # db1127, A3 4.4TB 512GB
-		'10.64.48.111' => 1, # db1137, D5 4.4TB 512GB
-	],
-],
+# LOOKING FOR EXTERNAL LOADS?  They no longer live in the PHP configs.
+# Instead try https://noc.wikimedia.org/dbconfig/eqiad.json (see es1/es2/es3/x1)
+# For more info see also https://wikitech.wikimedia.org/wiki/dbctl
+'externalLoads' => [],
 
 'masterTemplateOverrides' => [],
 
