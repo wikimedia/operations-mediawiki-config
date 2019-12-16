@@ -5392,7 +5392,6 @@ function wmfGetVariantSettings() {
 	'lvwiki' => [ '', 'autoconfirmed', 'autopatrol', 'sysop' ], // T92645
 	'plwiki' => [ '', 'autoconfirmed', 'editor', 'sysop' ], // T48990
 	'ptwiki' => [ '', 'autoconfirmed', 'editautoreviewprotected', 'sysop' ], // T41652
-	'ptwikinews' => [ '', 'autoconfirmed', 'editautoreviewprotected', 'sysop' ], // T221521
 	'rowiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T63172
 	'srwiki' => [ '', 'autoconfirmed', 'autopatrol', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
 	'srwikibooks' => [ '', 'autoconfirmed', 'autopatrol', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
