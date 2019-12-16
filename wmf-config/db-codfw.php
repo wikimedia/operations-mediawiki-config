@@ -14,11 +14,9 @@ $wmgParserCacheDBs = [
 	# 'spare' => '10.192.48.14',  # pc2010, D3 4.4TB 256GB # spare host. Use it to replace any of the above if needed
 ];
 
-$wmgOldExtTemplate = [
-	'10.192.16.171' => 1, # es2011, B1 11TB 128GB
-	'10.192.32.129' => 1, # es2012, C1 11TB 128GB
-	'10.192.48.40'  => 1, # es2013, D1 11TB 128GB
-];
+# LOOKING FOR $wmgOldExtTemplate ?  It no longer lives in the PHP configs.
+# Instead try https://noc.wikimedia.org/dbconfig/codfw.json (see 'es1')
+# For more info see also https://wikitech.wikimedia.org/wiki/dbctl
 
 $wgLBFactoryConf = [
 
@@ -318,49 +316,10 @@ $wgLBFactoryConf = [
 	'clouddb2001-dev' => '10.192.20.11', # do not remove or comment out
 ],
 
-'externalLoads' => [
-	# Recompressed stores
-	'rc1' => $wmgOldExtTemplate,
-
-	# Former Ubuntu dual-purpose stores
-	'cluster3' => $wmgOldExtTemplate,
-	'cluster4' => $wmgOldExtTemplate,
-	'cluster5' => $wmgOldExtTemplate,
-	'cluster6' => $wmgOldExtTemplate,
-	'cluster7' => $wmgOldExtTemplate,
-	'cluster8' => $wmgOldExtTemplate,
-	'cluster9' => $wmgOldExtTemplate,
-	'cluster10' => $wmgOldExtTemplate,
-	'cluster20' => $wmgOldExtTemplate,
-	'cluster21' => $wmgOldExtTemplate,
-
-	# Clusters required for T24624
-	'cluster1' => $wmgOldExtTemplate,
-	'cluster2' => $wmgOldExtTemplate,
-
-	# Old dedicated clusters
-	'cluster22' => $wmgOldExtTemplate,
-	'cluster23' => $wmgOldExtTemplate,
-
-	# es2
-	'cluster24' => [
-		'10.192.48.41'  => 1, # es2016, D1 11TB 128GB, master
-		'10.192.0.141'  => 3, # es2014, A1 11TB 128GB
-		'10.192.32.130' => 3, # es2015, C1 11TB 128GB
-	],
-	# es3
-	'cluster25' => [
-		'10.192.0.142'  => 1, # es2017, A6 11TB 128GB, master
-		'10.192.16.172' => 3, # es2018, B6 11TB 128GB
-		'10.192.48.42'  => 3, # es2019, D6 11TB 128GB
-	],
-	# ExtensionStore shard1
-	'extension1' => [
-		'10.192.16.34' => 0, # db2096, B4 3.5TB 512GB, master
-		'10.192.32.134' => 1, # db2115, C6 5.2TB 512GB
-		'10.192.48.134' => 1, # db2131, D8 5.2TB 512GB
-	],
-],
+# LOOKING FOR EXTERNAL LOADS?  They no longer live in the PHP configs.
+# Instead try https://noc.wikimedia.org/dbconfig/codfw.json (see es1/es2/es3/x1)
+# For more info see also https://wikitech.wikimedia.org/wiki/dbctl
+'externalLoads' => [],
 
 'masterTemplateOverrides' => [],
 
