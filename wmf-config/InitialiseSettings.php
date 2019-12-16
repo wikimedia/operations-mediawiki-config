@@ -12624,7 +12624,7 @@ function wmfGetVariantSettings() {
 	'zhwikivoyage' => [ 'w', 'b', 'q', 's', 'en', 'wikt', 'meta', 'commons' ], // T62248
 	'zhwiktionary' => [ 'w', 'b', 'q', 's', 'meta', 'commons' ],
 	'zhwikibooks' => [ 'w', 'wikt', 'q', 's', 'meta', 'commons' ],
-	'zhwikisource' => [ 'w', 'b', 'q', 'wikt', 'meta', 'commons' ],
+	'zhwikisource' => [ 'w', 'b', 'q', 'wikt', 'meta', 'commons', 'en', 'oldwikisource' ], // T240814
 	'zuwiki' => [ 'en' ], // T53327
 
 	// Special wikis
