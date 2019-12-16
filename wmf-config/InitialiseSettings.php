@@ -19598,6 +19598,12 @@ function wmfGetVariantSettings() {
 	'yiwiki' => [ 'en', 'he', 'de' ],
 ],
 
+'wgInterlanguageLinkCodeMap' => [
+	'wikipedia' => [ 'no' => 'nb' ], // T173602
+	'wiktionary' => [ 'no' => 'nb' ], // T173602
+	'wikiquote' => [ 'no' => 'nb' ], // T173602
+],
+
 'wmgWikibaseDispatchingLockManager' => [
 	'default' => 'wikibaseDispatchRedisLockManager',
 ],
