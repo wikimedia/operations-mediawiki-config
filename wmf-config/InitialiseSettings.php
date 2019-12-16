@@ -8966,11 +8966,17 @@ return [
 ],
 
 'wgInterlanguageLinkCodeMap' => [
-	'wikipedia' => [ 'no' => 'nb' ], // T173602
-	'wikidata' => [ 'no' => 'nb' ], // T322696
-	'commonswiki' => [ 'no' => 'nb' ], // T322696
-	'mediawikiwiki' => [ 'no' => 'nb' ], // T322696
-	'specieswiki' => [ 'no' => 'nb' ], // T322696
+	'default' => [
+		'als' => 'gsw', // T25215
+		'bat-smg' => 'sgs', // T27522
+		'be-x-old' => 'be-tarask', // T11823
+		'fiu-vro' => 'vro', // T31186
+		'no' => 'nb', // T173602, T322696
+		'roa-rup' => 'rup', // T17988
+		'zh-classical' => 'lzh', // T30443
+		'zh-min-nan' => 'nan', // T30442
+		'zh-yue' => 'yue', // T30441
+	],
 ],
 
 'wmgWikibaseCachePrefix' => [
