@@ -310,6 +310,11 @@ function wmfGetLabsOverrideSettings() {
 			'commonswiki' => false,
 		],
 
+		'wgVisualEditorRebaserURL' => [
+			'default' => false,
+			'deploymentwiki' => 'https://visualeditor-realtime.wmflabs.org/',
+		],
+
 		///
 		/// ------------ BetaFeatures end -----------
 		///
