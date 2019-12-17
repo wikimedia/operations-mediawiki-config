@@ -24074,5 +24074,12 @@ function wmfGetVariantSettings() {
 	'default' => 60,
 ],
 
+// Temporary feature flag. T240736.
+'wgAllowRequiringEmailForResets' => [
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+],
+
 ];
 }
