@@ -3995,6 +3995,7 @@ if ( $wmgUseMachineVision ) {
 	}
 
 	wfLoadExtension( 'MachineVision' );
+	$wgNotifyTypeAvailabilityByCategory['machinevision']['email'] = false;
 }
 
 if ( $wmgUseTheWikipediaLibrary ) {
