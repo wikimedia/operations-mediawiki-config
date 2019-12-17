@@ -22730,6 +22730,7 @@ function wmfGetVariantSettings() {
 'wgLegacyJavaScriptGlobals' => [
 	'default' => true,
 	'group0' => false, // T35837
+	'svwiki' => false, // T72470, contact @Nirmos
 ],
 
 'wgRightsPage' => [
