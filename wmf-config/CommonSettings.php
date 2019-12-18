@@ -49,9 +49,6 @@ use Wikimedia\MWConfig\XWikimediaDebug;
 # at least sometimes, but what we're running will send a 200.
 if ( PHP_SAPI !== 'cli' ) {
 	header( "Cache-control: no-cache" );
-} else {
-	# Override for sanity's sake. Log errors to stderr.
-	ini_set( 'display_errors', 'stderr' );
 }
 
 // Clobber any value in $_SERVER['SERVER_SOFTWARE'] other than Apache, so that
