@@ -16845,7 +16845,8 @@ function wmfGetVariantSettings() {
 	],
 ],
 'wgExtractsExtendOpenSearchXml' => [
-	'default' => true,
+	// Performance problem for high-traffic opensearch (T240691).
+	'default' => false,
 ],
 
 'wmgEnableJsonConfigDataMode' => [
