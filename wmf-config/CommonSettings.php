@@ -114,13 +114,10 @@ default:
 	break;
 }
 
-# This must be set *after* the DefaultSettings.php inclusion
 $wgDBname = $multiVersion->getDatabase();
+$wgDBuser = 'wikiuser'; // Don't rely on MW default (T46251)
+$wgSQLMode = null;
 
-# Better have the proper username (T46251)
-$wgDBuser = 'wikiuser';
-
-# wmf-config directory (in common/)
 $wmfConfigDir = "$IP/../wmf-config";
 
 $wmgVersionNumber = $multiVersion->getVersionNumber();
@@ -432,8 +429,6 @@ $wgShowIPinHeader = false;
 $wgRCMaxAge = 30 * 86400;
 
 $wgTmpDirectory = '/tmp';
-
-$wgSQLMode = null;
 
 # Object cache and session settings
 
