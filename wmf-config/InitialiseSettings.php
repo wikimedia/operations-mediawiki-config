@@ -4926,6 +4926,10 @@ function wmfGetVariantSettings() {
 		'附錄' => 100, // T222024
 		'Appendix_talk' => 101, // T222024
 		'附錄討論' => 101, // T222024
+		'韵部' => 106, 	// T241023
+		'韻部' => 106, 	// T241023
+		'韵部讨论' => 107, // T241023
+		'韻部討論' => 107, // T241023
 	],
 	'+zh_yuewiki' => [
 		'WP' => NS_PROJECT,
@@ -7270,6 +7274,8 @@ function wmfGetVariantSettings() {
 		101 => '附录讨论', // T31641 - appendix talk
 		102 => 'Transwiki', // T42474
 		103 => 'Transwiki_talk',
+		106 => 'Rhymes', // T241023
+		107 => 'Rhymes_talk', // T241023
 	],
 	// @} end of Wiktionary
 
