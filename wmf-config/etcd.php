@@ -6,15 +6,13 @@
 #
 # This for PRODUCTION.
 #
-# This is loaded very early. Only two sets of globals may be
-# used here:
+# This is loaded very early. Only one set of globals should be
+# assumed here:
 # - $wmfRealm, $wmfDatacenter (from multiversion/MWRealm)
-# - $wmfLocalServices (from wmf-config/*Services.php)
 #
 # Effective load order:
 # - multiversion
 # - mediawiki/DefaultSettings.php
-# - wmf-config/*Services.php
 # - wmf-config/etcd.php [THIS FILE]
 #
 # Included from: wmf-config/CommonSettings.php.
@@ -26,8 +24,7 @@
  * @param string|null $etcdHost Hostname
  * @return EtcdConfig
  */
-function wmfSetupEtcd( $etcdHost = null ) {
-	global $wmfLocalServices;
+function wmfSetupEtcd( $etcdHost ) {
 	# Create a local cache
 	if ( PHP_SAPI === 'cli' || !function_exists( 'apcu_fetch' ) ) {
 		$localCache = new HashBagOStuff;
@@ -37,7 +34,7 @@ function wmfSetupEtcd( $etcdHost = null ) {
 
 	# Use a single EtcdConfig object for both local and common paths
 	$etcdConfig = new EtcdConfig( [
-		'host' => $etcdHost ?? $wmfLocalServices['etcd'],
+		'host' => $etcdHost,
 		'protocol' => 'https',
 		'directory' => "conftool/v1/mediawiki-config",
 		'cache' => $localCache,
