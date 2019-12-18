@@ -19917,12 +19917,6 @@ function wmfGetVariantSettings() {
 	'commonswiki' => true,
 ],
 
-'wmgWikibaseFeatureFlagWbeditentitySetEmptyAliases' => [
-	'default' => false,
-	'testwikidatawiki' => true,
-	'wikidatawiki' => true,
-],
-
 'wmgWikibaseDispatchInterval' => [
 	'default' => 25,
 ],
