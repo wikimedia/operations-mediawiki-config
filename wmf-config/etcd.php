@@ -1,8 +1,8 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-# etcd.php provides wmfEtcdConfig() which will set certain MediaWiki
-# configuration variables based on values from Etcd.
+# etcd.php provides wmfSetupEtcd() which CommonSettings.php usees
+# to load certain configuration variables from Etcd.
 #
 # This for PRODUCTION.
 #
@@ -43,22 +43,6 @@ function wmfSetupEtcd() {
 	] );
 	$wmfEtcdLastModifiedIndex = $etcdConfig->getModifiedIndex();
 	return $etcdConfig;
-}
-
-function wmfEtcdConfig() {
-	global $wmfDatacenter, $wgReadOnly, $wmfMasterDatacenter, $wmfDbconfigFromEtcd;
-	$etcdConfig = wmfSetupEtcd();
-
-	# Read only mode
-	$wgReadOnly = $etcdConfig->get( "$wmfDatacenter/ReadOnly" );
-
-	# Master datacenter
-	# The datacenter from which we serve traffic.
-	$wmfMasterDatacenter = $etcdConfig->get( 'common/WMFMasterDatacenter' );
-
-	# Database load balancer config (sectionLoads, groupLoadsBySection, etc) from etcd.
-	# See https://wikitech.wikimedia.org/wiki/Dbctl
-	$wmfDbconfigFromEtcd = $etcdConfig->get( "$wmfDatacenter/dbconfig" );
 }
 
 /** In production, read the database loadbalancer config from etcd.

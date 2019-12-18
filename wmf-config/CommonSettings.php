@@ -121,11 +121,21 @@ $wmfAllServices = ServiceConfig::getInstance()->getAllServices();
 # Shorthand when we have no master-slave situation to keep into account
 $wmfLocalServices = $wmfAllServices[$wmfDatacenter];
 
-# Configuration from etcd (sets $wmfMasterDatacenter, $wgReadOnly and wmfEtcdLastModifiedIndex)
 require "$wmfConfigDir/etcd.php";
-wmfEtcdConfig();
+// This function call also magically sets $wmfEtcdLastModifiedIndex
+$etcdConfig = wmfSetupEtcd();
 
+$wgReadOnly = $etcdConfig->get( "$wmfDatacenter/ReadOnly" );
+
+$wmfMasterDatacenter = $etcdConfig->get( 'common/WMFMasterDatacenter' );
 $wmfMasterServices = $wmfAllServices[$wmfMasterDatacenter];
+
+// Database load balancer config (sectionLoads, groupLoadsBySection, …)
+// This is later merged into $wgLBFactoryConf by wmfEtcdApplyDBConfig().
+// See also <https://wikitech.wikimedia.org/wiki/Dbctl>
+$wmfDbconfigFromEtcd = $etcdConfig->get( "$wmfDatacenter/dbconfig" );
+
+unset( $etcdConfig );
 
 $wmfUdp2logDest = $wmfLocalServices['udp2log'];
 if ( $wgDBname === 'testwiki' || $wgDBname === 'test2wiki' ) {
