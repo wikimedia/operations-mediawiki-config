@@ -62,10 +62,6 @@ if ( isset( $_SERVER['SERVER_SOFTWARE'] ) ) {
 	$_SERVER['SERVER_SOFTWARE'] = 'Apache';
 }
 
-if ( isset( $_SERVER['SERVER_ADDR'] ) ) {
-	ini_set( 'error_append_string', ' (' . $_SERVER['SERVER_ADDR'] . ')' );
-}
-
 # ----------------------------------------------------------------------
 # Initialisation
 
