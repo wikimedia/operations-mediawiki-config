@@ -4036,19 +4036,6 @@ if ( PHP_VERSION_ID >= 70200 ) {
 	$wgOverrideUcfirstCharacters = include __DIR__ . '/Php72ToUpper.php';
 }
 
-# Temporary debugging for T232613 on wmf.22
-# LBFactoryMulti.php on php7.2 somehow trigger an impossible case. Enable a
-# core dump 10% of the time for wikidatawiki.
-# https://gerrit.wikimedia.org/r/#/c/mediawiki/core/+/536222/
-if ( false  # we have enough traces for now
-	&& PHP_VERSION_ID >= 70200
-	&& $wgDBname === 'wikidatawiki'
-	&& mt_rand( 0, 10 ) == 4
-) {
-	$wgT232613 = true;
-
-}
-
 # Temporary, until T112147 is done
 # Assign everything assigned to suppressors to oversighters
 # and delete suppress group.
