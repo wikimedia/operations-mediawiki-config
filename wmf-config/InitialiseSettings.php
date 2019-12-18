@@ -16657,6 +16657,12 @@ function wmfGetVariantSettings() {
 	'testwiki' => true,
 ],
 
+'wgWikimediaMessagesPartialBlockBanner' => [
+	'default' => true,
+	'enwiki' => false,
+	'commonswiki' => false,
+],
+
 'wmgUseIncubator' => [
 	'default' => false,
 	'incubatorwiki' => true,
