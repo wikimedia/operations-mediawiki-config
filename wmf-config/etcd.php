@@ -23,11 +23,12 @@
 /**
  * Setup etcd!
  *
+ * @param string|null $etcdHost Hostname
  * @return EtcdConfig
  */
-function wmfSetupEtcd() {
+function wmfSetupEtcd( $etcdHost = null ) {
 	global $wmfLocalServices;
-		# Create a local cache
+	# Create a local cache
 	if ( PHP_SAPI === 'cli' || !function_exists( 'apcu_fetch' ) ) {
 		$localCache = new HashBagOStuff;
 	} else {
@@ -36,7 +37,7 @@ function wmfSetupEtcd() {
 
 	# Use a single EtcdConfig object for both local and common paths
 	$etcdConfig = new EtcdConfig( [
-		'host' => $wmfLocalServices['etcd'],
+		'host' => $etcdHost ?? $wmfLocalServices['etcd'],
 		'protocol' => 'https',
 		'directory' => "conftool/v1/mediawiki-config",
 		'cache' => $localCache,
