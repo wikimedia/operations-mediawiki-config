@@ -278,8 +278,9 @@ if ( $wmfRealm === 'labs' ) {
 wmfEtcdApplyDBConfig();
 
 // labtestwiki is a one-off test server, using a wmcs-managed database.  Cut
-//  etcd out of the loop entirely for this one.
+// etcd out of the loop entirely for this one.
 $wgLBFactoryConf['sectionLoads']['s11'] = [ 'clouddb2001-dev' => 1 ];
+$wgLBFactoryConf['hostsByName']['clouddb2001-dev'] = '10.192.20.11';
 
 // Set $wgProfiler to the value provided by PhpAutoPrepend.php
 if ( isset( $wmgProfiler ) ) {

@@ -78,6 +78,7 @@ function wmfEtcdApplyDBConfig() {
 	if ( $wmfRealm === 'production' ) {
 		$wgLBFactoryConf['readOnlyBySection'] = $wmfDbconfigFromEtcd['readOnlyBySection'];
 		$wgLBFactoryConf['groupLoadsBySection'] = $wmfDbconfigFromEtcd['groupLoadsBySection'];
+		$wgLBFactoryConf['hostsByName'] = $wmfDbconfigFromEtcd['hostsByName'];
 
 		// Because JSON dictionaries are unordered, but the order of sectionLoads & externalLoads is
 		// rather significant to Mediawiki, dbctl stores the master in a dictionary by itself,
