@@ -26,7 +26,7 @@
  * @return EtcdConfig
  */
 function wmfSetupEtcd() {
-	global $wmfLocalServices, $wmfEtcdLastModifiedIndex;
+	global $wmfLocalServices;
 		# Create a local cache
 	if ( PHP_SAPI === 'cli' || !function_exists( 'apcu_fetch' ) ) {
 		$localCache = new HashBagOStuff;
@@ -41,7 +41,6 @@ function wmfSetupEtcd() {
 		'directory' => "conftool/v1/mediawiki-config",
 		'cache' => $localCache,
 	] );
-	$wmfEtcdLastModifiedIndex = $etcdConfig->getModifiedIndex();
 	return $etcdConfig;
 }
 

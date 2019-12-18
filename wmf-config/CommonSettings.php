@@ -122,8 +122,8 @@ $wmfAllServices = ServiceConfig::getInstance()->getAllServices();
 $wmfLocalServices = $wmfAllServices[$wmfDatacenter];
 
 require "$wmfConfigDir/etcd.php";
-// This function call also magically sets $wmfEtcdLastModifiedIndex
 $etcdConfig = wmfSetupEtcd();
+$wmfEtcdLastModifiedIndex = $etcdConfig->getModifiedIndex();
 
 $wgReadOnly = $etcdConfig->get( "$wmfDatacenter/ReadOnly" );
 
