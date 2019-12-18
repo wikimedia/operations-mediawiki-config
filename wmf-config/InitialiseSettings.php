@@ -152,6 +152,7 @@ function wmfGetVariantSettings() {
 	'ilwikimedia' => 'he',
 	'mkwikimedia' => 'mk',
 	'mxwikimedia' => 'es',
+	'ngwikimedia' => 'en', // T240771
 	'nowikimedia' => 'nb',
 	'noboard_chapterswikimedia' => 'nb',
 	'nycwikimedia' => 'en',
@@ -426,6 +427,7 @@ function wmfGetVariantSettings() {
 	'ndswikibooks' => 'Europe/Berlin',
 	'ndswikiquote' => 'Europe/Berlin',
 	'nds_nlwiki' => 'Europe/Berlin',
+	'ngwikimedia' => 'Africa/Lagos', // T240771
 	'nlwiki' => 'Europe/Berlin',
 	'nlwikimedia' => 'Europe/Berlin',
 	'nlwikibooks' => 'Europe/Berlin',
@@ -2079,6 +2081,7 @@ function wmfGetVariantSettings() {
 	'metawiki' => '//meta.wikimedia.org',
 	'movementroleswiki' => '//movementroles.wikimedia.org',
 	'mxwikimedia' => '//mx.wikimedia.org',
+	'ngwikimedia' => '//ng.wikimedia.org', // T240771
 	'nostalgiawiki' => '//nostalgia.wikipedia.org',
 	'noboard_chapterswikimedia' => '//noboard-chapters.wikimedia.org',
 	'nycwikimedia' => '//nyc.wikimedia.org', // T31273
@@ -2176,6 +2179,7 @@ function wmfGetVariantSettings() {
 	'metawiki' => 'https://meta.wikimedia.org',
 	'movementroleswiki' => 'https://movementroles.wikimedia.org',
 	'mxwikimedia' => 'https://mx.wikimedia.org',
+	'ngwikimedia' => 'https://ng.wikimedia.org', // T240771
 	'noboard_chapterswikimedia' => 'https://noboard-chapters.wikimedia.org',
 	'nostalgiawiki' => 'https://nostalgia.wikipedia.org',
 	'nycwikimedia' => 'https://nyc.wikimedia.org', // T31273
@@ -2556,6 +2560,7 @@ function wmfGetVariantSettings() {
 	'napwikisource' => 'Wikisource', // T210752
 	'newiki' => 'विकिपिडिया', // T186952
 	'newikibooks' => 'विकिपुस्तक', // T124881
+	'ngwikimedia' => 'Wikimedia Nigeria', // T240771
 	'nlwiktionary' => 'WikiWoordenboek',
 	'nlwikinews' => 'Wikinieuws', // T172594
 	'noboard_chapterswikimedia' => 'Wikimedia Norway Internal Board',
@@ -3076,6 +3081,7 @@ function wmfGetVariantSettings() {
 	'newikibooks' => 'विकिपुस्तक', // T124881
 	'newwiki' => 'विकिपिडिया',
 	'newiktionary' => 'विक्सनरी', // T129768
+	'ngwikimedia' => 'Project', // T240771
 	'nlwiktionary' => 'WikiWoordenboek',
 	'nlwikinews' => 'Wikinieuws', // T172211
 	'nostalgiawiki' => 'Wikipedia',
@@ -3301,6 +3307,7 @@ function wmfGetVariantSettings() {
 	'mznwiki' => 'ویکی‌پدیا_گپ', // T32752 T85383
 	'newiki' => 'विकिपिडिया_वार्ता', // T184865
 	'newwiki' => 'विकिपिडिया_खँलाबँला',
+	'ngwikimedia' => 'Project_talk', // T240771
 	'noboard_chapterswikimedia' => 'Wikimedia-diskusjon',
 	'nsowiki' => 'Dipolelo_tša_Wikipedia',
 	'olowiki' => 'Wikipedien_paginat', // T146612
@@ -12380,6 +12387,7 @@ function wmfGetVariantSettings() {
 	'maiwikimedia' => [ 'meta', 'commons', 'wikipedia:en', 'wikipedia:mai', 'wikipedia:ne', 'wikipedia:hi' ], // T188374
 	'mkwikimedia' => [ 'meta', 'wikipedia:mk' ],
 	'mxwikimedia' => [ 'meta', 'wikipedia:es', 'wikibooks:es', 'wikiversity:es', 'wikipedia:en', ],
+	'ngwikimedia' => [ 'meta' ], // T240771
 	'nowikimedia' => [ 'meta', 'wikipedia:no', 'wikipedia:nn', 'wikipedia:se' ],
 	'nycwikimedia' => [ 'wikipedia:en', 'meta' ],
 	'plwikimedia' => [ 'b', 'n', 'q', 's', 'voy', 'w', 'wikt', ], // T67908

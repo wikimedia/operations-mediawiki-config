@@ -55,6 +55,7 @@ class MWMultiVersion {
 		'mai',
 		'mk',
 		'mx',
+		'ng',
 		'nl',
 		'noboard-chapters',
 		'no',
