@@ -403,6 +403,14 @@ $wgLocalisationCacheConf['storeClass'] = LCStoreCDB::class;
 $wgLocalisationCacheConf['storeDirectory'] = "$IP/cache/l10n";
 $wgLocalisationCacheConf['manualRecache'] = true;
 
+# Temporary for LC caching store migration
+# T105683
+if ( PHP_SAPI === 'cli' ) {
+	if ( getenv( 'MW_FORCE_LC_CLASS' ) ) {
+		$wgLocalisationCacheConf['storeClass'] = getenv( 'MW_FORCE_LC_CLASS' );
+	}
+}
+
 // Add some useful config data to query=siteinfo
 $wgHooks['APIQuerySiteInfoGeneralInfo'][] = function ( $module, &$data ) {
 	global $wmfMasterDatacenter;
