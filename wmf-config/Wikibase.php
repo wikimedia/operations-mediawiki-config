@@ -21,9 +21,6 @@ if ( !empty( $wmgUseWikibaseRepo ) ) {
 	}
 	if ( !empty( $wmgUseWikibaseCirrusSearch ) ) {
 		wfLoadExtension( 'WikibaseCirrusSearch' );
-		if ( !empty( $wmgNewWikibaseCirrusSearch ) ) {
-			$wgWBRepoSettings['disableCirrus'] = true;
-		}
 	}
 	if ( !empty( $wmgUseWikibaseLexemeCirrusSearch ) ) {
 		wfLoadExtension( 'WikibaseLexemeCirrusSearch' );
@@ -99,31 +96,32 @@ if ( $wmgUseWikibaseRepo ) {
 
 	// Calculate the client Db lists based on our wikiversions db lists
 	if ( $wgDBname === 'testwikidatawiki' ) {
-		$wgWBRepoSettings['clientDbList'] = [ 'testwiki', 'test2wiki', 'testwikidatawiki' ];
+		$wgWBRepoSettings['localClientDatabases'] = [ 'testwiki', 'test2wiki', 'testwikidatawiki' ];
 	} elseif ( $wgDBname === 'wikidatawiki' ) {
-		$wgWBRepoSettings['clientDbList'] = array_diff(
+		$wgWBRepoSettings['localClientDatabases'] = array_diff(
 			MWWikiversions::readDbListFile( 'wikidataclient' ),
 			[ 'testwikidatawiki', 'testwiki', 'test2wiki' ]
 		);
 		// Exclude closed wikis
-		$wgWBRepoSettings['clientDbList'] = array_diff(
-			$wgWBRepoSettings['clientDbList'],
+		$wgWBRepoSettings['localClientDatabases'] = array_diff(
+			$wgWBRepoSettings['localClientDatabases'],
 			MWWikiversions::readDbListFile( $wmfRealm === 'labs' ? 'closed-labs' : 'closed' )
 		);
 		// Exclude non-existent wikis in labs
 		if ( $wmfRealm === 'labs' ) {
-			$wgWBRepoSettings['clientDbList'] = array_intersect(
-				$wgWBRepoSettings['clientDbList'],
-				MWWikiversions::readDbListFile( 'all-labs' )
+			$wgWBRepoSettings['localClientDatabases'] = array_intersect(
+				MWWikiversions::readDbListFile( 'all-labs' ),
+				$wgWBRepoSettings['localClientDatabases']
 			);
 		}
 	} elseif ( $wgDBname === 'commonswiki' || $wgDBname === 'testcommonswiki' ) {
-		$wgWBRepoSettings['clientDbList'] = [];
+		$wgWBRepoSettings['localClientDatabases'] = [];
 	}
 
+	// Reshaping the value, it's needed
 	$wgWBRepoSettings['localClientDatabases'] = array_combine(
-		$wgWBRepoSettings['clientDbList'],
-		$wgWBRepoSettings['clientDbList']
+		$wgWBRepoSettings['localClientDatabases'],
+		$wgWBRepoSettings['localClientDatabases']
 	);
 
 	$wgWBRepoSettings['entityNamespaces'] = $wmgWikibaseRepoEntityNamespaces;
@@ -158,8 +156,6 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( isset( $wmgWBRepoIdGenerator ) ) {
 		$wgWBRepoSettings['idGenerator'] = $wmgWBRepoIdGenerator; // T194299
 	}
-
-	$wgWBRepoSettings['normalizeItemByTitlePageNames'] = true;
 
 	$wgWBRepoSettings['dataRightsText'] = 'Creative Commons CC0 License';
 	$wgWBRepoSettings['dataRightsUrl'] = 'https://creativecommons.org/publicdomain/zero/1.0/';
@@ -209,9 +205,6 @@ if ( $wmgUseWikibaseRepo ) {
 
 	// Temporary, T138104
 	$wgWBRepoSettings['tmpSerializeEmptyListsAsObjects'] = $wmgWikibaseTmpSerializeEmptyListsAsObjects;
-
-	// Temporary, T223300
-	$wgWBRepoSettings['featureFlagWbeditentitySetEmptyAliases'] = $wmgWikibaseFeatureFlagWbeditentitySetEmptyAliases;
 
 	// Migration, T226086
 	$wgWBRepoSettings['tmpPropertyTermsMigrationStage'] = $wmgWikibaseTmpPropertyTermsMigrationStage;
