@@ -23806,10 +23806,6 @@ function wmfGetVariantSettings() {
 	],
 ],
 
-'wgMachineVisionNewUploadLabelingJobDelay' => [
-	'default' => 172800,
-],
-
 'wgMachineVisionShowUploadWizardCallToAction' => [
 	'default' => true,
 	'commonswiki' => false,
