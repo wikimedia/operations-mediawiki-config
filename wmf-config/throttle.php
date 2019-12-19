@@ -35,6 +35,14 @@ $wmgThrottlingExceptions[] = [ // T241705
 	'value' => 30
 ];
 
+$wmgThrottlingExceptions[] = [ // T240845
+	'from' => '2020-01-21T12:00 UTC',
+	'to' => '2020-01-21T16:00 UTC',
+	'IP' => '195.194.178.1',
+	'dbname' => 'enwiki',
+	'value' => 25 // 15 Expected
+];
+
 $wmgThrottlingExceptions[] = [ // T241414
 	'from' => '2020-01-27T12:00 UTC',
 	'to' => '2020-01-27T22:00 UTC',
