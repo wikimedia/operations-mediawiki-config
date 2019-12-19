@@ -14656,6 +14656,7 @@ function wmfGetVariantSettings() {
 	'eswiki' => true,
 	'eswiktionary' => true, // T97135
 	'eswikiversity' => true, // T198335
+	'eswikivoyage' => true, // T241163
 	'euwiki' => true, // T166553
 	'fawiki' => true,
 	'frwiki' => true, // T95604
