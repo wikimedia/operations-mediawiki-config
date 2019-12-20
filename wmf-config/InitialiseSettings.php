@@ -12528,6 +12528,7 @@ function wmfGetVariantSettings() {
 	'lbwiktionary' => [ 'w:fr', 'fr', 'w:en', 'en', 'w', 'meta' ], // T26460
 	'legalteamwiki' => [ 'meta' ], // T66070
 	'lmowiki' => [ 'ca', 'en', 'fr' ], // T10319
+	'ltwiki' => [ 'de', 'en', 'ru', 'b', 'q', 's', 'wikt', 'meta', 'commons', 'betawikiversity', 'incubator' ],
 	'maiwiki' => [ 'commons', 'en', 'hi', 'ne' ], // T99490
 	'mdfwiki' => [ 'incubator' ],
 	'mediawikiwiki' => [ 'meta', 'w:en', 'usability' ], // T28580
