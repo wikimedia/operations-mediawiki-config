@@ -2096,7 +2096,7 @@ function wmfGetVariantSettings() {
 ],
 # @} end of wgServer
 
-// This is the same as wgServer but with a protocol, so if wgServer is //foo.com this must be http://foo.com
+// This is the same as wgServer but with a protocol, so if wgServer is //foo.com this must be https://foo.com
 # wgCanonicalServer @{
 'wgCanonicalServer' => [
 	// Projects
