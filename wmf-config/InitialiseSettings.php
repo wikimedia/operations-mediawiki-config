@@ -2144,6 +2144,7 @@ function wmfGetVariantSettings() {
 	'labtestwiki' => 'https://labtestwikitech.wikimedia.org',
 	'legalteamwiki' => 'https://legalteam.wikimedia.org',
 	'loginwiki' => 'https://login.wikimedia.org',
+	'maiwikimedia' => 'https://mai.wikimedia.org',
 	'mediawikiwiki' => 'https://www.mediawiki.org',
 	'metawiki' => 'https://meta.wikimedia.org',
 	'movementroleswiki' => 'https://movementroles.wikimedia.org',
@@ -2156,6 +2157,7 @@ function wmfGetVariantSettings() {
 	'otrs_wikiwiki' => 'https://otrs-wiki.wikimedia.org',
 	'outreachwiki' => 'https://outreach.wikimedia.org',
 	'pa_uswikimedia' => 'https://pa-us.wikimedia.org',
+	'projectcomwiki' => 'https://projectcom.wikimedia.org',
 	'punjabiwikimedia' => 'https://punjabi.wikimedia.org',
 	'qualitywiki' => 'https://quality.wikimedia.org',
 	'romdwikimedia' => 'https://romd.wikimedia.org', // T187184
@@ -2166,6 +2168,7 @@ function wmfGetVariantSettings() {
 	'stewardwiki' => 'https://steward.wikimedia.org',
 	'strategywiki' => 'https://strategy.wikimedia.org',
 	'techconductwiki' => 'https://techconduct.wikimedia.org', // T165977
+	'testwiki' => 'https://test.wikipedia.org',
 	'testwikidatawiki' => 'https://test.wikidata.org',
 	'transitionteamwiki' => 'https://transitionteam.wikimedia.org',
 	'usabilitywiki' => 'https://usability.wikimedia.org',
