@@ -1663,10 +1663,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => false,
 		],
 
-		'wmgUseWebAuthn' => [
-			'default' => true,
-		],
-
 		'wmgUseDiscussionTools' => [
 			'enwiki' => true,
 		],

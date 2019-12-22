@@ -23061,7 +23061,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wmgUseWebAuthn' => [
-	'default' => false,
+	'default' => true,
 ],
 
 'wmgWatchlistDefault' => [
