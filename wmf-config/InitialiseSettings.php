@@ -5042,6 +5042,7 @@ function wmfGetVariantSettings() {
 	'+execwiki' => [ 0 => 1, 8 => 0 ],
 	'+fdcwiki' => [ 0 => 1 ],
 	'+foundationwiki' => [ 0 => 1, 8 => 0 ],
+	'+gewikimedia' => [ 0 => 1 ],
 	'+grantswiki' => [ 0 => 1, 8 => 0 ],
 	'+incubatorwiki' => [ 0 => 1, 14 => 1 ],
 	'+internalwiki' => [ 0 => 1, 8 => 0 ],
