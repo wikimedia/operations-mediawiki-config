@@ -620,6 +620,7 @@ $wgSharpenParameter = '0x0.8'; # for IM>6.5, T26857
 if ( $wmgUsePagedTiffHandler ) {
 	wfLoadExtension( 'PagedTiffHandler' );
 }
+$wgTiffUseTiffinfo = true;
 $wgTiffMaxMetaSize = 1048576;
 
 $wgMaxImageArea = 10e7; // 100MP
