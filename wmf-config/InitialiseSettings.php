@@ -1010,8 +1010,13 @@ function wmfGetVariantSettings() {
 	'zhwikiquote' => '/static/images/project-logos/zhwikiquote.png',
 
 	// Wikibooks
+	'afwikibooks' => '/static/images/project-logos/afwikibooks.png', // T150618
+	'akwikibooks' => '/static/images/project-logos/akwikibooks.png', // T150618
 	'angwikibooks' => '/static/images/project-logos/angwikibooks.png',
 	'arwikibooks' => '/static/images/project-logos/arwikibooks.png',
+	'aswikibooks' => '/static/images/project-logos/aswikibooks.png', // T150618
+	'astwikibooks' => '/static/images/project-logos/astwikibooks.png', // T150618
+	'aywikibooks' => '/static/images/project-logos/aywikibooks.png', // T150618
 	'azwikibooks' => '/static/images/project-logos/azwikibooks.png', // T54019
 	'bawikibooks' => '/static/images/project-logos/bawikibooks.png',
 	'bewikibooks' => '/static/images/project-logos/bewikibooks.png',
@@ -1035,13 +1040,17 @@ function wmfGetVariantSettings() {
 	'hiwikibooks' => '/static/images/project-logos/hiwikibooks.png', // T157229
 	'hrwikibooks' => '/static/images/project-logos/hrwikibooks.png',
 	'huwikibooks' => '/static/images/project-logos/huwikibooks.png',
+	'iawikibooks' => '/static/images/project-logos/iawikibooks.png', // T150618
 	'idwikibooks' => '/static/images/project-logos/idwikibooks.png',
+	'iewikibooks' => '/static/images/project-logos/iewikibooks.png', // T150618
 	'iswikibooks' => '/static/images/project-logos/iswikibooks.png',
 	'itwikibooks' => '/static/images/project-logos/itwikibooks.png',
 	'kawikibooks' => '/static/images/project-logos/kawikibooks.png',
 	'kowikibooks' => '/static/images/project-logos/kowikibooks.png', // T58760
 	'liwikibooks' => '/static/images/project-logos/liwikibooks.png', // T193680
 	'ltwikibooks' => '/static/images/project-logos/ltwikibooks.png',
+	'mgwikibooks' => '/static/images/project-logos/mgwikibooks.png', // T150618
+	'miwikibooks' => '/static/images/project-logos/miwikibooks.png', // T150618
 	'mkwikibooks' => '/static/images/project-logos/mkwikibooks.png', // T54019
 	'mlwikibooks' => '/static/images/project-logos/mlwikibooks.png', // T45111
 	'mrwikibooks' => '/static/images/project-logos/mrwikibooks.png', // T104132
@@ -1053,6 +1062,7 @@ function wmfGetVariantSettings() {
 	'rowikibooks' => '/static/images/project-logos/rowikibooks.png',
 	'ruwikibooks' => '/static/images/project-logos/ruwikibooks.png',
 	'siwikibooks' => '/static/images/project-logos/siwikibooks.png',
+	'simplewikibooks' => '/static/images/project-logos/simplewikibooks.png', // T150618
 	'skwikibooks' => '/static/images/project-logos/skwikibooks.png',
 	'slwikibooks' => '/static/images/project-logos/slwikibooks.png', // T54019
 	'sqwikibooks' => '/static/images/project-logos/sqwikibooks.png',
@@ -1700,7 +1710,12 @@ function wmfGetVariantSettings() {
 	'zhwikiquote' => [ '1.5x' => '/static/images/project-logos/zhwikiquote-1.5x.png', '2x' => '/static/images/project-logos/zhwikiquote-2x.png' ], // T150618
 
 	# Wikibooks
+	'afwikibooks' => [ '1.5x' => '/static/images/project-logos/afwikibooks-1.5x.png', '2x' => '/static/images/project-logos/afwikibooks-2x.png' ], // T150618
+	'akwikibooks' => [ '1.5x' => '/static/images/project-logos/akwikibooks-1.5x.png', '2x' => '/static/images/project-logos/akwikibooks-2x.png' ], // T150618
 	'angwikibooks' => [ '1.5x' => '/static/images/project-logos/angwikibooks-1.5x.png', '2x' => '/static/images/project-logos/angwikibooks-2x.png' ],
+	'aswikibooks' => [ '1.5x' => '/static/images/project-logos/aswikibooks-1.5x.png', '2x' => '/static/images/project-logos/aswikibooks-2x.png' ], // T150618
+	'astwikibooks' => [ '1.5x' => '/static/images/project-logos/astwikibooks-1.5x.png', '2x' => '/static/images/project-logos/astwikibooks-2x.png' ], // T150618
+	'aywikibooks' => [ '1.5x' => '/static/images/project-logos/aywikibooks-1.5x.png', '2x' => '/static/images/project-logos/aywikibooks-2x.png' ], // T150618
 	'bawikibooks' => [ '1.5x' => '/static/images/project-logos/bawikibooks-1.5x.png', '2x' => '/static/images/project-logos/bawikibooks-2x.png' ], // T227418
 	'bewikibooks' => [ '1.5x' => '/static/images/project-logos/bewikibooks-1.5x.png', '2x' => '/static/images/project-logos/bewikibooks-2x.png' ],
 	'cswikibooks' => [ '1.5x' => '/static/images/project-logos/cswikibooks-1.5x.png', '2x' => '/static/images/project-logos/cswikibooks-2x.png' ], // T177506
@@ -1712,7 +1727,11 @@ function wmfGetVariantSettings() {
 	'fywikibooks' => [ '1.5x' => '/static/images/project-logos/fywikibooks-1.5x.png', '2x' => '/static/images/project-logos/fywikibooks-2x.png' ], // T150618
 	'hewikibooks' => [ '1.5x' => '/static/images/project-logos/hewikibooks-1.5x.png', '2x' => '/static/images/project-logos/hewikibooks-2x.png' ], // T201562
 	'huwikibooks' => [ '1.5x' => '/static/images/project-logos/huwikibooks-1.5x.png', '2x' => '/static/images/project-logos/huwikibooks-2x.png' ], // T177506
+	'iawikibooks' => [ '1.5x' => '/static/images/project-logos/iawikibooks-1.5x.png', '2x' => '/static/images/project-logos/iawikibooks-2x.png' ], // T150618
+	'iewikibooks' => [ '1.5x' => '/static/images/project-logos/iewikibooks-1.5x.png', '2x' => '/static/images/project-logos/iewikibooks-2x.png' ], // T150618
 	'itwikibooks' => [ '1.5x' => '/static/images/project-logos/itwikibooks-1.5x.png', '2x' => '/static/images/project-logos/itwikibooks-2x.png' ], // T177506
+	'mgwikibooks' => [ '1.5x' => '/static/images/project-logos/mgwikibooks-1.5x.png', '2x' => '/static/images/project-logos/mgwikibooks-2x.png' ], // T150618
+	'miwikibooks' => [ '1.5x' => '/static/images/project-logos/miwikibooks-1.5x.png', '2x' => '/static/images/project-logos/miwikibooks-2x.png' ], // T150618
 	'mlwikibooks' => [ '1.5x' => '/static/images/project-logos/mlwikibooks-1.5x.png', '2x' => '/static/images/project-logos/mlwikibooks-2x.png' ], // T150618
 	'ruwikibooks' => [ '1.5x' => '/static/images/project-logos/ruwikibooks-1.5x.png', '2x' => '/static/images/project-logos/ruwikibooks-2x.png' ], // T150618
 	'srwikibooks' => [ '1.5x' => '/static/images/project-logos/srwikibooks-1.5x.png', '2x' => '/static/images/project-logos/srwikibooks-2x.png' ], // T159534
