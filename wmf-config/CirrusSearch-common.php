@@ -70,7 +70,7 @@ if ( $wmgCirrusSearchMLRModel ) {
 			'fallback_profile' => $wmgCirrusSearchMLRModelFallback,
 			'rescore' => [
 				[
-					'window' => 8192,
+					'window' => 1024,
 					'window_size_override' => 'CirrusSearchFunctionRescoreWindowSize',
 					'query_weight' => 1.0,
 					'rescore_query_weight' => 1.0,
@@ -79,7 +79,7 @@ if ( $wmgCirrusSearchMLRModel ) {
 					'function_chain' => 'wsum_inclinks_pv'
 				],
 				[
-					'window' => 8192,
+					'window' => 1024,
 					'window_size_override' => 'CirrusSearchFunctionRescoreWindowSize',
 					'query_weight' => 1.0,
 					'rescore_query_weight' => 1.0,
@@ -88,7 +88,7 @@ if ( $wmgCirrusSearchMLRModel ) {
 					'function_chain' => 'optional_chain'
 				],
 				[
-					'window' => 1024,
+					'window' => 128,
 					'query_weight' => 1.0,
 					'rescore_query_weight' => 10000.0,
 					'score_mode' => 'total',
