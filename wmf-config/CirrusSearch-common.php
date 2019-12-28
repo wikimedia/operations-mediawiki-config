@@ -71,7 +71,6 @@ if ( $wmgCirrusSearchMLRModel ) {
 			'rescore' => [
 				[
 					'window' => 1024,
-					'window_size_override' => 'CirrusSearchFunctionRescoreWindowSize',
 					'query_weight' => 1.0,
 					'rescore_query_weight' => 1.0,
 					'score_mode' => 'total',
@@ -80,7 +79,6 @@ if ( $wmgCirrusSearchMLRModel ) {
 				],
 				[
 					'window' => 1024,
-					'window_size_override' => 'CirrusSearchFunctionRescoreWindowSize',
 					'query_weight' => 1.0,
 					'rescore_query_weight' => 1.0,
 					'score_mode' => 'multiply',
