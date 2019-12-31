@@ -16334,6 +16334,7 @@ function wmfGetVariantSettings() {
 	// Wikis by request
 	'bgwiki' => true, // T162145
 	'cawiki' => true, // T161307
+	'cswiki' => true, // T241304
 	'elwiki' => true, // T163074
 	'enwiki' => true, // T173176
 	'frwiki' => true, // T160609
