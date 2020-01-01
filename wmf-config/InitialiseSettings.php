@@ -4287,6 +4287,10 @@ function wmfGetVariantSettings() {
 	'+nahwiki' => [
 		'Wikipedia_tēixnāmiquiliztli' => NS_PROJECT_TALK,
 	],
+	'+napwikisource' => [
+		'Author' => 102, // T231880
+		'Author_talk' => 103, // T231880
+	],
 	'+ndswiki' => [
 		'WP' => NS_PROJECT,
 	],
