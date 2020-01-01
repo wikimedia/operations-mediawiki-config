@@ -14577,6 +14577,7 @@ function wmfGetVariantSettings() {
 	'plwikisource' => 'any', // T131771
 	'srwikisource' => 'any', // T172974
 	'srwikiquote' => 'any', // T172974
+	'tawiktionary' => 'any', // T241684
 	'wikidatawiki' => 'any', // T144687
 	'zhwikinews' => 'any', // T53604
 	'zhwikiversity' => 'any', // T214946
