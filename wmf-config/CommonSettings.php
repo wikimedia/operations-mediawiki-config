@@ -881,6 +881,12 @@ if (
 // Note these have to be visible on all wikis, not just the ones the
 // extension is enabled on, for proper display in OAuth pages and such.
 
+// Temporary adding AbuseFilter "old" rights renamed in [[gerrit:482650]] so we can remove them
+// from global groups while also switching to the new ones.
+// MarcoAurelio, 2020-01-02; cfr. T241503
+$wgAvailableRights[] = 'abusefilter-private';
+$wgAvailableRights[] = 'abusefilter-private-log';
+
 // Adding Flaggedrevs rights so that they are available for globalgroups/staff rights - JRA 2013-07-22
 $wgAvailableRights[] = 'autoreview';
 $wgAvailableRights[] = 'autoreviewrestore';
