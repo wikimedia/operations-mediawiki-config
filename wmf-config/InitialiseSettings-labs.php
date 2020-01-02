@@ -305,11 +305,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => false,
 		],
 
-		'wmgVisualEditorEnableWikitext' => [
-			'default' => true,
-			'commonswiki' => false,
-		],
-
 		'wgVisualEditorRebaserURL' => [
 			'default' => false,
 			'deploymentwiki' => 'https://visualeditor-realtime.wmflabs.org/',
