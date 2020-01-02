@@ -15277,6 +15277,11 @@ function wmfGetVariantSettings() {
 	'default' => false,
 ],
 
+'wgCollectionDisableSidebarLink' => [ // T241683
+	'default' => false,
+	'enwiki' => true,
+],
+
 'wmgCollectionArticleNamespaces' => [
 	'default' => [
 		NS_MAIN, NS_TALK, NS_USER, NS_USER_TALK, NS_PROJECT, NS_PROJECT_TALK, NS_MEDIAWIKI, NS_MEDIAWIKI_TALK,
