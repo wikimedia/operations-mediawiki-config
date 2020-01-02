@@ -830,6 +830,10 @@ function wmfGetLabsOverrideSettings() {
 			'default' => '20171023_enwiki_v1'
 		],
 
+		'-wgCirrusSearchFallbackProfile' => [
+			'default' => 'phrase_suggest',
+		],
+
 		'wgCirrusSearchEnableCrossProjectSearch' => [
 			'enwiki' => true,
 		],
