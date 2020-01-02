@@ -14574,10 +14574,11 @@ function wmfGetVariantSettings() {
 	'enwikibooks' => 'any', // T29256, T188472
 	'fiwikinews' => 'any', // T216333
 	'frwikiquote' => 'any', // T236212
-	'ptwikibooks' => 'any', // T29256, T188472
 	'guwikisource' => 'any', // T42173
+	'minwiktionary' => 'any', // T241694
 	'napwikisource' => 'any', // T233673
 	'plwikisource' => 'any', // T131771
+	'ptwikibooks' => 'any', // T29256, T188472
 	'srwikisource' => 'any', // T172974
 	'srwikiquote' => 'any', // T172974
 	'tawiktionary' => 'any', // T241684
