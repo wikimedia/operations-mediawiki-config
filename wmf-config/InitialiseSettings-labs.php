@@ -1137,6 +1137,12 @@ function wmfGetLabsOverrideSettings() {
 		'wgGENewcomerTasksConfigTitle' => [
 			'default' => 'MediaWiki:NewcomerTasks.json',
 		],
+		'wgGENewcomerTasksRemoteApiUrl' => [
+			'arwiki' => 'https://ar.wikipedia.org/w/api.php',
+			// cswiki uses local search
+			'kowiki' => 'https://ko.wikipedia.org/w/api.php',
+			'viwiki' => 'https://vi.wikipedia.org/w/api.php',
+		],
 		'wgGERestbaseUrl' => [
 			'default' => false,
 			// use local RESTBase if we use local search
