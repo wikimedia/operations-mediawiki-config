@@ -9201,7 +9201,11 @@ function wmfGetVariantSettings() {
 	'+fawiki' => [
 		'*' => [ 'createpage' => false ], // T29195
 		'user' => [ 'move-categorypages' => false ], // T67728
-		'bot' => [ 'move-categorypages' => true ], // T67728
+		'bot' => [
+			'move-categorypages' => true, // T67728
+			'extendedconfirmed' => true, // T241904
+			'ipblock-exempt' => true, // T241904
+		],
 		'patroller' => [ 'patrol' => true, 'move-categorypages' => true ], // T67728
 		'rollbacker' => [ 'rollback' => true ], // T25233
 		'autopatrolled' => [ 'autopatrol' => true, 'move-categorypages' => true ], // T31007, T67728, T144699
