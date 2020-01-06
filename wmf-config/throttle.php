@@ -35,4 +35,12 @@ $wmgThrottlingExceptions[] = [ // T241705
 	'value' => 30
 ];
 
+$wmgThrottlingExceptions[] = [ // T241414
+	'from' => '2020-01-27T12:00 UTC',
+	'to' => '2020-01-27T22:00 UTC',
+	'IP' => '200.9.3.65',
+	'dbname' => [ 'eswiki', 'enwiki', 'commonswiki', 'wikidatawiki' ],
+	'value' => 30 // expected 20
+];
+
 ## Add throttling definitions above.
