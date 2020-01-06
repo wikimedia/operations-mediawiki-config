@@ -14468,6 +14468,7 @@ function wmfGetVariantSettings() {
 		'iip.bu.uni.wroc.pl',               // T235904
 		'webservices.picturae.com',         // T238955
 		'*.archives.go.jp',                 // T238476
+		'www.digital.archives.go.jp',       // T238476
 	],
 ],
 
