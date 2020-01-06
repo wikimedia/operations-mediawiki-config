@@ -14469,6 +14469,7 @@ function wmfGetVariantSettings() {
 		'webservices.picturae.com',         // T238955
 		'*.archives.go.jp',                 // T238476
 		'www.digital.archives.go.jp',       // T238476
+		'mediaphoto.mnhn.fr',               // T241637
 	],
 ],
 
