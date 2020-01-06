@@ -70,7 +70,7 @@ if ( $wmgCirrusSearchMLRModel ) {
 			'fallback_profile' => $wmgCirrusSearchMLRModelFallback,
 			'rescore' => [
 				[
-					'window' => 1024,
+					'window' => 8192,
 					'query_weight' => 1.0,
 					'rescore_query_weight' => 1.0,
 					'score_mode' => 'total',
@@ -78,7 +78,7 @@ if ( $wmgCirrusSearchMLRModel ) {
 					'function_chain' => 'wsum_inclinks_pv'
 				],
 				[
-					'window' => 1024,
+					'window' => 8192,
 					'query_weight' => 1.0,
 					'rescore_query_weight' => 1.0,
 					'score_mode' => 'multiply',
@@ -86,7 +86,7 @@ if ( $wmgCirrusSearchMLRModel ) {
 					'function_chain' => 'optional_chain'
 				],
 				[
-					'window' => 128,
+					'window' => 1024,
 					'query_weight' => 1.0,
 					'rescore_query_weight' => 10000.0,
 					'score_mode' => 'total',
