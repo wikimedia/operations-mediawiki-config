@@ -20664,7 +20664,7 @@ function wmfGetVariantSettings() {
 
 'wgWBQualityConstraintsPropertiesWithViolatingQualifiers' => [
 	'default' => [],
-	'wikidatawiki' => [ 'P1855', 'P2271', 'P5192', 'P5193', 'P5977' ], // T183267
+	'wikidatawiki' => [ 'P1855', 'P2271', 'P5192', 'P5193', 'P5977', 'P6685' ], // T183267 T227865
 ],
 
 'wgWBQualityConstraintsInstanceOfId' => [
