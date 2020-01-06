@@ -8560,34 +8560,9 @@ function wmfGetVariantSettings() {
 ],
 
 'wgEnablePartialBlocks' => [
-	'default' => false,
-	'testwiki' => true,
-	'testwikidatawiki' => true,
-	'itwiki' => true,
-	'mediawikiwiki' => true,
-	'metawiki' => true,
-	'arwiki' => true,
-	'dewiki' => true, // T228150
-	'eswiki' => true, // T239370
-	'fawiki' => true,
-	'fiwiki' => true, // T228008
-	'frwiki' => true,
-	'nlwiki' => true, // T234685
-	'plwiki' => true,
-	'ptwiki' => true, // T233754
-	'zhwiki' => true,
-	'tewiki' => true,
-	'scowiki' => true, // T239493
-	'srwiki' => true,
-	'hewiki' => true,
-	'bnwiki' => true,
-	'huwiki' => true,
-	'jawiki' => true,
-	'ruwiki' => true, // T231298
-	'kowiki' => true, // T236752
-	'wiktionary' => true,
-	'wikisource' => true,
-	'wikivoyage' => true,
+	'default' => true,
+	'enwiki' => false,
+	'commonswiki' => false,
 ],
 
 'wgEnableSpecialMute' => [
