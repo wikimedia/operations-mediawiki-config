@@ -20471,6 +20471,12 @@ function wmfGetVariantSettings() {
 	'urwiki' => 'all' // Urdu
 ],
 
+// Namespaces where lead paragraph should be moved above infobox on mobile devices.
+'wgMFNamespacesWithLeadParagraphs' => [
+	'default' => [ NS_MAIN ],
+	'nlwiki' => [ NS_MAIN, NS_USER, ] // T242030
+],
+
 'wmgEnableTextExtracts' => [
 	'default' => true,
 ],
