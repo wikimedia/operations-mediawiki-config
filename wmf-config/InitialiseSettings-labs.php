@@ -1206,8 +1206,7 @@ function wmfGetLabsOverrideSettings() {
 			'commonswiki' => null,
 		],
 		'wmgUseEntitySourceBasedFederation' => [
-			'default' => false,
-			'commonswiki' => true,
+			'default' => true,
 		],
 		'wmgWBRepoFormatterUrlProperty' => [
 			'wikidatawiki' => 'P9094',
