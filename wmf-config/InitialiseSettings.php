@@ -2405,6 +2405,7 @@ function wmfGetVariantSettings() {
 	'frwiktionary' => 'Wiktionnaire',
 	'furwiki' => 'Vichipedie',
 	'fywiki' => 'Wikipedy',
+	'fywiktionary' => 'Wikiwurdboek', // T241883
 	'ganwiki' => '維基百科',
 	'gawiki' => 'Vicipéid',
 	'gagwiki' => 'Vikipediya',
