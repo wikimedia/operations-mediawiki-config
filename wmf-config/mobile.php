@@ -43,8 +43,6 @@ if ( $wmgMobileFrontend ) {
 
 	$wgMFNearbyRange = $wgMaxGeoSearchRadius;
 
-	$wgMFEnableBeta = true;
-
 	// Turn on volunteer recruitment
 	$wgMFEnableJSConsoleRecruitment = true;
 
