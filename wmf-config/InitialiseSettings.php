@@ -7060,6 +7060,8 @@ function wmfGetVariantSettings() {
 		109 => 'Discussion_Projet',
 		110 => 'Reconstruction', // T199631
 		111 => 'Discussion_Reconstruction',
+		112 => 'Tutoriel', // T242102
+		113 => 'Discussion_Tutoriel',
 	],
 	'gawiktionary' => [
 		100 => 'Aguisín',
