@@ -21220,6 +21220,11 @@ function wmfGetVariantSettings() {
 	'testwikidatawiki' => 'http://termbox-test.staging.svc.eqiad.wmnet:3031/termbox',
 ],
 
+'wmgWikibaseTaintedReferencesEnabled' => [
+	'default' => false,
+	'testwikidatawiki' => true,
+],
+
 'wmgUseEntitySourceBasedFederation' => [
 	'default' => false,
 	'commonswiki' => true,
