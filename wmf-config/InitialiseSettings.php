@@ -23648,6 +23648,10 @@ function wmfGetVariantSettings() {
 	'default' => 'MediaWiki:NewcomerTasks.json',
 ],
 
+'wgGENewcomerTasksTopicConfigTitle' => [
+	'default' => 'MediaWiki:NewcomerTopics.json',
+],
+
 'wgGENewcomerTasksRemoteApiUrl' => [
 	'default' => null,
 ],

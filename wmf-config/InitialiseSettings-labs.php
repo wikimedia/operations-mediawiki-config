@@ -1133,9 +1133,6 @@ function wmfGetLabsOverrideSettings() {
 		'wgGEConfirmEmailEnabled' => [
 			'default' => true,
 		],
-		'wgGENewcomerTasksConfigTitle' => [
-			'default' => 'MediaWiki:NewcomerTasks.json',
-		],
 		'wgGENewcomerTasksRemoteApiUrl' => [
 			'arwiki' => 'https://ar.wikipedia.org/w/api.php',
 			// cswiki uses local search
