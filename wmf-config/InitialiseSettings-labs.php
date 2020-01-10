@@ -1149,6 +1149,10 @@ function wmfGetLabsOverrideSettings() {
 			'default' => false,
 			'cawiki' => true,
 		],
+		'wgGEHomepageSuggestedEditsEnableTopics' => [
+			'default' => true,
+			'cawiki' => false,
+		],
 		'wgEnablePartialBlocks' => [
 			'default' => false,
 			'enwiki' => true,
