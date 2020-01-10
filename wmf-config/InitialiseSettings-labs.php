@@ -1135,7 +1135,7 @@ function wmfGetLabsOverrideSettings() {
 		],
 		'wgGENewcomerTasksRemoteApiUrl' => [
 			'arwiki' => 'https://ar.wikipedia.org/w/api.php',
-			// cswiki uses local search
+			'cswiki' => 'https://cs.wikipedia.org/w/api.php',
 			'kowiki' => 'https://ko.wikipedia.org/w/api.php',
 			'viwiki' => 'https://vi.wikipedia.org/w/api.php',
 		],
@@ -1143,7 +1143,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => false,
 			// use local RESTBase if we use local search
 			'en' => 'https://en.wikipedia.beta.wmflabs.org/api/rest_v1',
-			'cs' => 'https://cs.wikipedia.beta.wmflabs.org/api/rest_v1',
 		],
 		'wgGEHomepageSuggestedEditsEnableTopics' => [
 			'default' => true,
