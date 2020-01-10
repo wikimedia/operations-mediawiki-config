@@ -1145,10 +1145,6 @@ function wmfGetLabsOverrideSettings() {
 			'en' => 'https://en.wikipedia.beta.wmflabs.org/api/rest_v1',
 			'cs' => 'https://cs.wikipedia.beta.wmflabs.org/api/rest_v1',
 		],
-		'wgGEHomepageSuggestedEditsRequiresOptIn' => [
-			'default' => false,
-			'cawiki' => true,
-		],
 		'wgGEHomepageSuggestedEditsEnableTopics' => [
 			'default' => true,
 			'cawiki' => false,
