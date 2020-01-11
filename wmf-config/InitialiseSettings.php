@@ -8561,7 +8561,6 @@ function wmfGetVariantSettings() {
 
 'wgEnablePartialBlocks' => [
 	'default' => true,
-	'enwiki' => false,
 	'commonswiki' => false,
 ],
 
