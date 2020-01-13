@@ -3049,6 +3049,13 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgGroupPermissions['contentadmin']['massmessage'] = true;
 	$wgGroupPermissions['contentadmin']['spamblacklistlog'] = true;
 
+	// Grant AbuseFilter permissions regular sysops have - T242593
+	$wgGroupPermissions['contentadmin']['abusefilter-log-detail'] = true;
+	$wgGroupPermissions['contentadmin']['abusefilter-log-private'] = true;
+	$wgGroupPermissions['contentadmin']['abusefilter-modify'] = true;
+	$wgGroupPermissions['contentadmin']['abusefilter-modify-restricted'] = true;
+	$wgGroupPermissions['contentadmin']['abusefilter-view-private'] = true;
+
 	$wgMessageCacheType = 'memcached-pecl';
 
 	if ( $wgDBname === 'labswiki' ) {
