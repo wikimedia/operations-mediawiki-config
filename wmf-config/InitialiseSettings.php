@@ -16660,8 +16660,6 @@ function wmfGetVariantSettings() {
 
 'wgWikimediaMessagesPartialBlockBanner' => [
 	'default' => true,
-	'enwiki' => false,
-	'commonswiki' => false,
 	'testwiki' => false,
 	'testwikidatawiki' => false,
 	'itwiki' => false,
