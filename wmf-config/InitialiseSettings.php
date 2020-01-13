@@ -24118,6 +24118,11 @@ function wmfGetVariantSettings() {
 	'testwiki' => true,
 	'test2wiki' => true,
 ],
-
+'wgGlobalRenameBlacklist' => [
+	'default' => 'https://meta.wikimedia.org/w/index.php?title=Global_rename_blacklist&action=raw'
+],
+'wgGlobalRenameBlacklistRegex' => [
+	'default' => true
+]
 ];
 }
