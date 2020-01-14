@@ -23672,8 +23672,12 @@ function wmfGetVariantSettings() {
 ],
 
 'wgGEHomepageSuggestedEditsEnableTopics' => [
-	'default' => false,
-	'testwiki' => true,
+	'default' => true,
+],
+
+'wgGEHomepageSuggestedEditsTopicsRequiresOptIn' => [
+	'default' => true,
+	'testwiki' => false,
 ],
 
 'wgGENewcomerTasksConfigTitle' => [
