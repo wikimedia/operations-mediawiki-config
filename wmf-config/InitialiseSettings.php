@@ -23857,6 +23857,7 @@ function wmfGetVariantSettings() {
 ],
 'wmgWikibaseTmpPropertyTermsMigrationStage' => [
 	'default' => MIGRATION_WRITE_NEW,
+	'testwikidatawiki' => MIGRATION_NEW,
 ],
 'wmgWikibaseTmpItemTermsMigrationStage' => [
 	'default' => [
