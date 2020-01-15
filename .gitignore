@@ -12,9 +12,14 @@
 private
 wmf-config/ExtensionMessages-*.php
 wmf-config/config-cache/
-php-*/
+php-1.*/
 wikiversions.php
 wikiversions-labs.php
+
+# Beta Cluster-specific items
+docroot/wwwportal/portal-master
+php-master/
+portal-master/
 
 # Test runners
 /logs
