@@ -1296,8 +1296,8 @@ function wmfGetLabsOverrideSettings() {
 		],
 
 		'wmgWikibaseTmpPropertyTermsMigrationStage' => [
-			'default' => MIGRATION_WRITE_NEW,
-			'wikidatawiki' => MIGRATION_WRITE_NEW // Override production
+			'default' => MIGRATION_NEW,
+			'wikidatawiki' => MIGRATION_NEW // Override production
 		],
 
 		// T235033
