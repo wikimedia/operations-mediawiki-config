@@ -23646,6 +23646,11 @@ function wmfGetVariantSettings() {
 	'euwiki' => true, // Not configured yet
 ],
 
+'wgGEHomepageSuggestedEditsEnableTopics' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 'wgGENewcomerTasksConfigTitle' => [
 	'default' => 'MediaWiki:NewcomerTasks.json',
 ],
