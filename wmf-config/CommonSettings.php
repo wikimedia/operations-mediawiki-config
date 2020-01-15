@@ -492,22 +492,6 @@ $wgObjectCaches['kask-echoseen'] = [
 	'extendedErrorBodyFields' => [ 'type', 'title', 'detail', 'instance' ],
 	'reportDupes' => false,
 ];
-$wgObjectCaches['kask-echoseen-transition'] = [
-	'class' => 'MultiWriteBagOStuff',
-	'caches' => [
-		0 => [
-			'factory' => [ 'ObjectCache', 'getInstance' ],
-			'args' => [ 'kask-echoseen' ]
-		],
-		1 => [
-			'factory' => [ 'ObjectCache', 'getInstance' ],
-			'args' => [ 'redis_local' ]
-		],
-
-	],
-	'replication' => 'async',
-	'reportDupes' => false,
-];
 
 // T203888: Purge Wikidata Lexeme parser cache for senses deployment - Addshore
 if ( $wgDBname === 'wikidatawiki' ) {

@@ -22727,7 +22727,7 @@ function wmfGetVariantSettings() {
 	'testwiki' => 'kask-session',
 ],
 'wgEchoSeenTimeCacheType' => [
-	'default' => 'kask-echoseen-transition',
+	'default' => 'kask-echoseen',
 	'wikitech' => 'memcached-pecl',
 ],
 'wgCentralAuthSessionCacheType' => [
