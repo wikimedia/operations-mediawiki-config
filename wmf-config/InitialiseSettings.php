@@ -23776,8 +23776,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgMachineVisionRequestLabelsOnUploadComplete' => [
-	'default' => true,
-	'commonswiki' => false,
+	'default' => false,
 ],
 
 'wgMachineVisionGCVSendFileContents' => [
@@ -23831,8 +23830,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgMachineVisionShowUploadWizardCallToAction' => [
-	'default' => true,
-	'commonswiki' => false,
+	'default' => false,
 ],
 
 'wgSpecialSearchFormOptions' => [
