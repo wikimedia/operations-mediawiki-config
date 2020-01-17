@@ -23425,6 +23425,7 @@ function wmfGetVariantSettings() {
 	'euwiki' => true,
 	'ukwiki' => true,
 	'huwiki' => true,
+	'hywiki' => true,
 ],
 
 'wgWelcomeSurveyEnabled' => [
@@ -23461,6 +23462,7 @@ function wmfGetVariantSettings() {
 	'euwiki' => true,
 	'ukwiki' => true,
 	'huwiki' => true,
+	'hywiki' => true,
 ],
 
 'wgGEHelpPanelLoggingEnabled' => [
@@ -23487,6 +23489,7 @@ function wmfGetVariantSettings() {
 	'euwiki' => 'Wikipedia:Txokoa',
 	'ukwiki' => 'Вікіпедія:Кнайпа (допомога)',
 	'huwiki' => 'Wikipédia:Kocsmafal (kezdőknek)',
+	'hywiki' => 'Վիքիպեդիա:Հարցեր',
 ],
 
 'wgGEHelpPanelViewMoreTitle' => [
@@ -23499,6 +23502,7 @@ function wmfGetVariantSettings() {
 	'euwiki' => 'Laguntza:Sarrera',
 	'ukwiki' => 'Вікіпедія:Довідка',
 	'huwiki' => 'Wikipédia:Bevezetés',
+	'hywiki' => 'Օգնություն:Գլխացանկ',
 ],
 
 'wgGEHelpPanelLinks' => [
@@ -23717,6 +23721,33 @@ function wmfGetVariantSettings() {
 			'title' => 'Wikipédia:Hogyan írhatok jó szócikket?',
 			'text' => 'Hogyan írhatok jó szócikket?',
 			'id' => 'goodarticle',
+		]
+	],
+	'hywiki' => [
+		[
+			'title' => 'Օգնություն:Գլխացանկ',
+			'text' => 'Օգնության գլխավոր էջ',
+			'id' => 'contents',
+		],
+		[
+			'title' => 'Օգնություն:Դասընթաց',
+			'text' => 'Ինչպե՞ս խմբագրել Վիքիպեդիայում․ դասընթաց',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'Վիքիպեդիա:Խուսափեք տարածված սխալներից',
+			'text' => 'Տարածված սխալներ և ինչպես խուսափել դրանցից',
+			'id' => 'commonmistakes',
+		],
+		[
+			'title' => 'Վիքիպեդիա:Հեղինակային իրավունքներ',
+			'text' => 'Հեղինակային իրավունքների մասին',
+			'id' => 'copyright'
+		],
+		[
+			'title' => 'Վիքիպեդիա:Գլոսարիում',
+			'text' => 'Վիքիպեդիայի տերմինների բառարան',
+			'id' => 'glossary',
 		]
 	],
 ],
