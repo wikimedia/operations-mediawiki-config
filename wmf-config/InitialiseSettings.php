@@ -23940,7 +23940,11 @@ function wmfGetVariantSettings() {
 ],
 
 'wgMachineVisionRequestLabelsOnUploadComplete' => [
-	'default' => false,
+	'default' => true,
+],
+
+'wgMachineVisionNewUploadLabelingJobDelay' => [
+	'default' => 172800,
 ],
 
 'wgMachineVisionGCVSendFileContents' => [
@@ -23994,7 +23998,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgMachineVisionShowUploadWizardCallToAction' => [
-	'default' => false,
+	'default' => true,
 ],
 
 'wgSpecialSearchFormOptions' => [
