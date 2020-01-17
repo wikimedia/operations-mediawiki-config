@@ -17080,6 +17080,11 @@ function wmfGetVariantSettings() {
 		'copyright-width' => 78,
 		'copyright-height' => 18,
 	],
+	'etwiki' => [
+		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-et.svg',
+		'copyright-width' => 127,
+		'copyright-height' => 19,
+	],
 	'hewiki' => [
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-he.svg',
 		'copyright-width' => 75,
