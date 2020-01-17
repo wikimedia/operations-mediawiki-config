@@ -23760,6 +23760,7 @@ function wmfGetVariantSettings() {
 	'viwiki' => true,
 	'arwiki' => true,
 	'euwiki' => true,
+	'ukwiki' => true,
 ],
 
 'wgGEHomepageSuggestedEditsEnabled' => [
@@ -23769,6 +23770,7 @@ function wmfGetVariantSettings() {
 'wgGEHomepageSuggestedEditsRequiresOptIn' => [
 	'default' => false,
 	'euwiki' => true, // Not configured yet
+	'ukwiki' => true,
 ],
 
 'wgGEHomepageSuggestedEditsEnableTopics' => [
@@ -23825,6 +23827,7 @@ function wmfGetVariantSettings() {
 	'kowiki' => 80,
 	'viwiki' => 80,
 	'arwiki' => 80,
+	'ukwiki' => 80,
 	// euwiki is not an A/B test (T233066)
 	'euwiki' => 100,
 ],
@@ -23835,6 +23838,7 @@ function wmfGetVariantSettings() {
 	'cswiki' => 50,
 	'kowiki' => 50,
 	'viwiki' => 50,
+	'ukwiki' => 50,
 ],
 
 'wgGEHomepageTutorialTitle' => [
@@ -23845,6 +23849,7 @@ function wmfGetVariantSettings() {
 	'viwiki' => 'Wikipedia:Sách_hướng_dẫn',
 	'arwiki' => 'ويكيبيديا:دروس',
 	'euwiki' => 'Laguntza:Ikusizko_Editorea',
+	'ukwiki' => 'Довідка:Ознайомлення',
 ],
 
 'wgGEHomepageMentorsList' => [
@@ -23855,6 +23860,7 @@ function wmfGetVariantSettings() {
 	'viwiki' => 'Wikipedia:Phát_triển_cộng_đồng/Danh_sách_thành_viên_mentor',
 	'arwiki' => 'ويكيبيديا:مشروع_فريق_النمو/قائمة_المتطوعين',
 	'euwiki' => 'Laguntza:Mentoreak',
+	'ukwiki' => 'Вікіпедія:Кнайпа (допомога)/Наставники',
 ],
 
 'wmgShowRollbackConfirmationDefaultUserOptions' => [
