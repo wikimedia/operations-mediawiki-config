@@ -23424,6 +23424,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => true,
 	'euwiki' => true,
 	'ukwiki' => true,
+	'huwiki' => true,
 ],
 
 'wgWelcomeSurveyEnabled' => [
@@ -23459,6 +23460,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => true,
 	'euwiki' => true,
 	'ukwiki' => true,
+	'huwiki' => true,
 ],
 
 'wgGEHelpPanelLoggingEnabled' => [
@@ -23484,6 +23486,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => ' ويكيبيديا:فريق_المساعدة/طلبات',
 	'euwiki' => 'Wikipedia:Txokoa',
 	'ukwiki' => 'Вікіпедія:Кнайпа (допомога)',
+	'huwiki' => 'Wikipédia:Kocsmafal (kezdőknek)',
 ],
 
 'wgGEHelpPanelViewMoreTitle' => [
@@ -23495,6 +23498,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => 'مساعدة:محتويات',
 	'euwiki' => 'Laguntza:Sarrera',
 	'ukwiki' => 'Вікіпедія:Довідка',
+	'huwiki' => 'Wikipédia:Bevezetés',
 ],
 
 'wgGEHelpPanelLinks' => [
@@ -23686,6 +23690,33 @@ function wmfGetVariantSettings() {
 			'title' => 'Вікіпедія:Будьте рішучими',
 			'text' => 'Будьте рішучими!',
 			'id' => 'bebold',
+		]
+	],
+	'huwiki' => [
+		[
+			'title' => 'Wikipédia:A Wikipédia öt pillére',
+			'text' => 'A Wikipédia alapszabályai',
+			'id' => 'rules',
+		],
+		[
+			'title' => 'Wikipédia:Bevezetés az irányelvekbe és útmutatókba/1',
+			'text' => 'A Wikipédia irányelvei és útmutatói',
+			'id' => 'guidelines',
+		],
+		[
+			'title' => 'Wikipédia:Bevezetés a szerkesztésbe VisualEditorral/1',
+			'text' => 'A szerkesztés alapjai',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'Wikipédia:Bevezetés a formai útmutatóba/1',
+			'text' => 'Formai útmutató',
+			'id' => 'style',
+		],
+		[
+			'title' => 'Wikipédia:Hogyan írhatok jó szócikket?',
+			'text' => 'Hogyan írhatok jó szócikket?',
+			'id' => 'goodarticle',
 		]
 	],
 ],
