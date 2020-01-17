@@ -23423,6 +23423,7 @@ function wmfGetVariantSettings() {
 	'viwiki' => true,
 	'arwiki' => true,
 	'euwiki' => true,
+	'ukwiki' => true,
 ],
 
 'wgWelcomeSurveyEnabled' => [
@@ -23457,6 +23458,7 @@ function wmfGetVariantSettings() {
 	'viwiki' => true,
 	'arwiki' => true,
 	'euwiki' => true,
+	'ukwiki' => true,
 ],
 
 'wgGEHelpPanelLoggingEnabled' => [
@@ -23481,6 +23483,7 @@ function wmfGetVariantSettings() {
 	'viwiki' => 'Wikipedia:Giúp_sử_dụng_Wikipedia',
 	'arwiki' => ' ويكيبيديا:فريق_المساعدة/طلبات',
 	'euwiki' => 'Wikipedia:Txokoa',
+	'ukwiki' => 'Вікіпедія:Кнайпа (допомога)',
 ],
 
 'wgGEHelpPanelViewMoreTitle' => [
@@ -23491,6 +23494,7 @@ function wmfGetVariantSettings() {
 	'viwiki' => 'Trợ_giúp:Mục_lục',
 	'arwiki' => 'مساعدة:محتويات',
 	'euwiki' => 'Laguntza:Sarrera',
+	'ukwiki' => 'Вікіпедія:Довідка',
 ],
 
 'wgGEHelpPanelLinks' => [
@@ -23655,6 +23659,33 @@ function wmfGetVariantSettings() {
 			'title' => 'Laguntza:Irudiak',
 			'text' => 'Irudiak',
 			'id' => 'images',
+		]
+	],
+	'ukwiki' => [
+		[
+			'title' => 'Довідка:Ознайомлення',
+			'text' => 'Ознайомтеся з Вікіпедією',
+			'id' => 'intro',
+		],
+		[
+			'title' => 'Довідка:Створення нової статті',
+			'text' => 'Як створити нову статтю',
+			'id' => 'newarticle',
+		],
+		[
+			'title' => 'Вікіпедія:Візуальний редактор/Посібник користувача',
+			'text' => 'Як користуватися візуальним редактором',
+			'id' => 'visual',
+		],
+		[
+			'title' => 'Вікіпедія:Стиль',
+			'text' => 'Яким має бути стиль статті',
+			'id' => 'style',
+		],
+		[
+			'title' => 'Вікіпедія:Будьте рішучими',
+			'text' => 'Будьте рішучими!',
+			'id' => 'bebold',
 		]
 	],
 ],
