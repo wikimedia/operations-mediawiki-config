@@ -23761,6 +23761,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => true,
 	'euwiki' => true,
 	'ukwiki' => true,
+	'huwiki' => true,
 ],
 
 'wgGEHomepageSuggestedEditsEnabled' => [
@@ -23771,6 +23772,7 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'euwiki' => true, // Not configured yet
 	'ukwiki' => true,
+	'huwiki' => true,
 ],
 
 'wgGEHomepageSuggestedEditsEnableTopics' => [
@@ -23828,6 +23830,7 @@ function wmfGetVariantSettings() {
 	'viwiki' => 80,
 	'arwiki' => 80,
 	'ukwiki' => 80,
+	'huwiki' => 80,
 	// euwiki is not an A/B test (T233066)
 	'euwiki' => 100,
 ],
@@ -23839,6 +23842,7 @@ function wmfGetVariantSettings() {
 	'kowiki' => 50,
 	'viwiki' => 50,
 	'ukwiki' => 50,
+	'huwiki' => 50,
 ],
 
 'wgGEHomepageTutorialTitle' => [
@@ -23850,6 +23854,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => 'ويكيبيديا:دروس',
 	'euwiki' => 'Laguntza:Ikusizko_Editorea',
 	'ukwiki' => 'Довідка:Ознайомлення',
+	'huwiki' => 'Wikipédia:Bevezetés',
 ],
 
 'wgGEHomepageMentorsList' => [
@@ -23861,6 +23866,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => 'ويكيبيديا:مشروع_فريق_النمو/قائمة_المتطوعين',
 	'euwiki' => 'Laguntza:Mentoreak',
 	'ukwiki' => 'Вікіпедія:Кнайпа (допомога)/Наставники',
+	'huwiki' => 'Wikipédia:Szerkesztők megtartása/Mentorok',
 ],
 
 'wmgShowRollbackConfirmationDefaultUserOptions' => [
