@@ -23762,6 +23762,7 @@ function wmfGetVariantSettings() {
 	'euwiki' => true,
 	'ukwiki' => true,
 	'huwiki' => true,
+	'hywiki' => true,
 ],
 
 'wgGEHomepageSuggestedEditsEnabled' => [
@@ -23773,6 +23774,7 @@ function wmfGetVariantSettings() {
 	'euwiki' => true, // Not configured yet
 	'ukwiki' => true,
 	'huwiki' => true,
+	'hywiki' => true,
 ],
 
 'wgGEHomepageSuggestedEditsEnableTopics' => [
@@ -23831,6 +23833,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => 80,
 	'ukwiki' => 80,
 	'huwiki' => 80,
+	'hywiki' => 80,
 	// euwiki is not an A/B test (T233066)
 	'euwiki' => 100,
 ],
@@ -23843,6 +23846,7 @@ function wmfGetVariantSettings() {
 	'viwiki' => 50,
 	'ukwiki' => 50,
 	'huwiki' => 50,
+	'hywiki' => 50,
 ],
 
 'wgGEHomepageTutorialTitle' => [
@@ -23855,6 +23859,7 @@ function wmfGetVariantSettings() {
 	'euwiki' => 'Laguntza:Ikusizko_Editorea',
 	'ukwiki' => 'Довідка:Ознайомлення',
 	'huwiki' => 'Wikipédia:Bevezetés',
+	'hywiki' => 'Օգնություն:Դասընթաց',
 ],
 
 'wgGEHomepageMentorsList' => [
@@ -23867,6 +23872,7 @@ function wmfGetVariantSettings() {
 	'euwiki' => 'Laguntza:Mentoreak',
 	'ukwiki' => 'Вікіпедія:Кнайпа (допомога)/Наставники',
 	'huwiki' => 'Wikipédia:Szerkesztők megtartása/Mentorok',
+	'hywiki' => 'Վիքիպեդիա:Օգնություն/Ստորագրություններ',
 ],
 
 'wmgShowRollbackConfirmationDefaultUserOptions' => [
