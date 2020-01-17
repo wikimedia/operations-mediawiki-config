@@ -20011,6 +20011,9 @@ function wmfGetVariantSettings() {
 	'euwiki' => true,
 	'kowiki' => true,
 	'viwiki' => true,
+	'ukwiki' => true,
+	'huwiki' => true,
+	'hywiki' => true,
 ],
 
 'wgWMEUnderstandingFirstDaySensitiveNamespaces' => [
