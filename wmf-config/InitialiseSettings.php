@@ -14501,6 +14501,7 @@ function wmfGetVariantSettings() {
 		'www.digital.archives.go.jp',       // T238476
 		'mediaphoto.mnhn.fr',               // T241637
 		'*.eso.org',                        // T243423 - European Southern Observatory
+		'vzg-easydb.gbv.de',                // T243118
 	],
 ],
 
