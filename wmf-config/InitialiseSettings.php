@@ -18873,6 +18873,9 @@ function wmfGetVariantSettings() {
 	'ptwiki' => true, // T173768
 ],
 
+// arbcom_*wiki and wg_enwiki must remain explicitly false in this array, because the default false
+// will be overriden by 'wikipedia' => true in their cases, since they are both in wikipedia.dblist
+// and special.dblist. (T183549)
 'wmgEnableGeoData' => [
 	'default' => false,
 	'wikipedia' => true,
