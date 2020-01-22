@@ -1370,6 +1370,10 @@ function wmfGetLabsOverrideSettings() {
 			]
 		],
 
+		'wmgUseWikibaseQuality' => [
+			'commonswiki' => true,
+		],
+
 		'wgWBQualityConstraintsEnableConstraintsCheckJobsRatio' => [
 			'default' => 100, // 100% of edits trigger post edit job run constraint checks
 		],
