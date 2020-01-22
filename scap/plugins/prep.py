@@ -138,7 +138,8 @@ class CheckoutMediaWiki(cli.Application):
                                 'submodule.fetchJobs', num_procs]) != 0:
                 self.get_logger().warn('Unable to setup submodule fetch jobs')
 
-        self.get_logger().info('Checkout {} in {}'.format(checkout_version, dest_dir))
+        self.get_logger().info('Checkout {} in {}'.format(
+            checkout_version, dest_dir))
         git.checkout(dest_dir, checkout_version)
 
         if checkout_version == 'master':
