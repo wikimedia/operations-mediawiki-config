@@ -16,6 +16,7 @@ setup(name='mediawiki-config',
       url='https://gerrit.wikimedia.org/r/p/operations/mediawiki-config',
       packages=['scap.plugins'],
       package_dir={'scap.plugins': 'scap/plugins'},
+      # FIXME: there is no python bin/ directory
       scripts=[s for s in glob('bin/*')],
       requires=[line.strip() for line in open('requirements.txt')],
       classifiers=['Operating System :: POSIX :: Linux',
