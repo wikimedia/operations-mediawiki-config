@@ -116,7 +116,7 @@ class Swat(cli.Application):
     def _process_arguments(self, args, extra_args):
         self.arguments = args
         if 'branch' not in args or not args.branch:
-            self.branches = self.active_wikiversions().keys()
+            self.branches = list(self.active_wikiversions())
         elif not isinstance(args.branch, list):
             self.branches = [args.branch]
         else:

@@ -18,7 +18,11 @@ from pygments.formatters import TerminalFormatter
 import json
 import logging
 import re
-import urllib
+try:
+    from urllib.parse import quote
+except ImportError:
+    # Python 2
+    from urllib import quote
 
 
 gerrit_session = None
@@ -72,7 +76,7 @@ class urlencode_map(object):
     def __getitem__(self, key):
         for map in self.base_maps:
             if key in map:
-                return urllib.quote(map[key], safe='')
+                return quote(map[key], safe='')
 
         raise KeyError('Key "%s" not found' % key)
 
@@ -168,7 +172,7 @@ class GerritEndpoint(object):
         _path = self._path
         _path = "/".join((_path, path))
         new_instance = GerritEndpoint(_path)
-        for k in self.__dict__.keys():
+        for k in self.__dict__:
             if k[0] == '_':
                 continue
             new_instance.__dict__[k] = self.__dict__[k]
