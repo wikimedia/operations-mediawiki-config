@@ -241,6 +241,13 @@ function wmfGetLabsOverrideSettings() {
 			'enwiki' => 3  // 33.3% — T213969
 		],
 
+		'wgWMEInukaPageViewEnabled' => [
+			'default' => true
+		],
+		'wgWMEInukaPageViewCookiesDomain' => [
+			'default' => 'wmflabs.org'
+		],
+
 		'wgMFAdvancedMobileContributions' => [
 			'default' => true,
 		],
