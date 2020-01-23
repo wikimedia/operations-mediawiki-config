@@ -19734,6 +19734,10 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
+'wmgUseEventStreamConfig' => [
+	'default' => false,
+],
+
 'wmgUseWikimediaEvents' => [
 	'default' => true,
 	'closed' => false, // T158721
