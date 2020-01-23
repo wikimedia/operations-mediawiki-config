@@ -134,12 +134,19 @@ function wmfGetLabsOverrideSettings() {
 
 		// Use eventgate-main as default EventService in beta
 		// This can be removed once this is set in InitialiseSettings.php
+		// TODO: This will be refactored to use EventStreamConfig extension
+		// once deployed. See: https://phabricator.wikimedia.org/T229863
 		'wgEventServiceStreamConfig' => [
 			'default' => [
 				'default' => [
 					'EventServiceName' => 'eventgate-main',
 				],
 			],
+		],
+
+		'wmgUseEventStreamConfig' => [
+			'default' => true,
+			'login' => false
 		],
 
 		// Additional log channels for beta cluster
