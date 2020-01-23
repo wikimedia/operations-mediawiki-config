@@ -5429,7 +5429,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => [ '', 'autoconfirmed', 'edittrustedprotected', 'templateeditor', 'sysop' ], // T74055, T194568
 	'kowiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T184675
 	'lvwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T92645
-	'plwiki' => [ '', 'autoconfirmed', 'editor', 'sysop' ], // T48990
+	'plwiki' => [ '', 'autoconfirmed', 'editeditorprotected', 'sysop' ], // T48990
 	'ptwiki' => [ '', 'autoconfirmed', 'editautoreviewprotected', 'sysop' ], // T41652
 	'rowiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T63172
 	'srwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
@@ -9896,7 +9896,12 @@ function wmfGetVariantSettings() {
 	],
 	// T8303
 	'+plwiki' => [
-		'editor' => [ 'rollback' => true, 'patrolmarks' => true, 'editor' => true ], // T22154 and T48990
+		'editor' => [
+			'rollback' => true,
+			'patrolmarks' => true,
+			'editor' => true,
+			'editeditorprotected' => true,
+		], // T22154 and T48990
 		'flood' => [ 'bot' => true ], // T22155
 		'sysop' => [ 'editor' => true ], // T48990
 		'bot' => [ 'editor' => true ], // T48990
