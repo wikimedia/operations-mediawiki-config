@@ -14001,6 +14001,7 @@ function wmfGetVariantSettings() {
 	'thwikibooks' => true, // T33600
 	'thwikiquote' => true, // T33600
 	'ukwiki' => true, // T67125
+	'zh_classicalwiki' => true, // T243509
 ],
 
 'wmgNewUserMinorEdit' => [
