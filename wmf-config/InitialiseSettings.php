@@ -16143,6 +16143,7 @@ function wmfGetVariantSettings() {
 // Whether to enable true section editing. false, true or 'mobile'
 'wmgVisualEditorEnableVisualSectionEditing' => [
 	'default' => 'mobile',
+	'officewiki' => true,
 ],
 
 // Namespaces for VisualEditor to be active in, as well as wgContentNamespaces
