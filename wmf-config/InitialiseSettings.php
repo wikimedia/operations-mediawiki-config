@@ -21277,6 +21277,7 @@ function wmfGetVariantSettings() {
 	'testcommonswiki' => true,
 	'testwikidatawiki' => true,
 	'wikidatawiki' => true,
+	'testwiki' => true,
 ],
 
 'wmgUseTemplateSandbox' => [
