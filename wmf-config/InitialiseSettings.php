@@ -11159,8 +11159,8 @@ function wmfGetVariantSettings() {
 		'bureaucrat' => [ 'import', 'test-sysop', 'translator' ],
 	],
 	'+itwiki' => [
-		'bureaucrat' => [ 'rollbacker', 'botadmin' ], // T220915
-		'sysop' => [ 'accountcreator', 'autopatrolled', 'flood', 'mover' ], // T55913, T63109, T102770
+		'bureaucrat' => [ 'rollbacker', 'botadmin', 'mover' ], // T220915, T243503
+		'sysop' => [ 'accountcreator', 'autopatrolled', 'flood' ], // T55913, T63109, T102770
 	],
 	'+itwikibooks' => [
 		'sysop' => [ 'autopatrolled', 'accountcreator', 'confirmed', 'patroller' ], // T206447
