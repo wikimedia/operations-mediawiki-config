@@ -49,6 +49,7 @@ $IP/extensions/EntitySchema/extension.json
 $IP/extensions/EUCopyrightCampaign/extension.json
 $IP/extensions/EventBus/extension.json
 $IP/extensions/EventLogging/extension.json
+$IP/extensions/EventStreamConfig/extension.json
 $IP/extensions/ExtensionDistributor/extension.json
 $IP/extensions/ExternalGuidance/extension.json
 $IP/extensions/FeaturedFeeds/extension.json
