@@ -18790,9 +18790,6 @@ function wmfGetVariantSettings() {
 'wmgMemoryLimitParsoid' => [
 	'default' => 1400 * 1024 * 1024, // 1400MiB
 ],
-'wgMaxGeneratedPPNodeCount' => [
-	'default' => 1500000,
-],
 
 'wmgEnablePageTriage' => [
 	'default' => false,
