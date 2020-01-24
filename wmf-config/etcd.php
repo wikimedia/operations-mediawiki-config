@@ -28,14 +28,10 @@
 function wmfSetupEtcd() {
 	global $wmfLocalServices, $wmfEtcdLastModifiedIndex;
 		# Create a local cache
-	if ( PHP_SAPI === 'cli' ) {
+	if ( PHP_SAPI === 'cli' || !function_exists( 'apcu_fetch' ) ) {
 		$localCache = new HashBagOStuff;
 	} else {
-		if ( function_exists( 'apcu_fetch' ) ) {
-			$localCache = new APCUBagOStuff;
-		} else {
-			$localCache = new APCBagOStuff;
-		}
+		$localCache = new APCUBagOStuff;
 	}
 
 	# Use a single EtcdConfig object for both local and common paths
