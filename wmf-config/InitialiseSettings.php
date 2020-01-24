@@ -16707,7 +16707,6 @@ function wmfGetVariantSettings() {
 
 'wgCheckUserEnableSpecialInvestigate' => [
 	'default' => false,
-	'testwiki' => true,
 ],
 
 'wmgUseIncubator' => [
