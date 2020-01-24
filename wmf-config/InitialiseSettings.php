@@ -16701,6 +16701,14 @@ function wmfGetVariantSettings() {
 	'ptwikinews' => false,  // Done via local {{int:Copyrightwarning}}s instead.
 ],
 
+// ----------- CheckUser start ----------
+// Do not change these settings without Legal, T&S, and Security sign-off first.
+
+// On in all Production, disabled in all Labs; varied for Labs only.
+'wmgUseCheckUser' => [
+	'default' => true,
+],
+
 'wgCheckUserForceSummary' => [
 	'default' => true, // T73457
 ],
@@ -16708,6 +16716,8 @@ function wmfGetVariantSettings() {
 'wgCheckUserEnableSpecialInvestigate' => [
 	'default' => false,
 ],
+
+// ----------- CheckUser end ----------
 
 'wmgUseIncubator' => [
 	'default' => false,
@@ -23006,11 +23016,6 @@ function wmfGetVariantSettings() {
 
 'wgWPBBannerProperty' => [
 	'default' => 'P948',
-],
-
-// Varied for Labs only.
-'wmgUseCheckUser' => [
-	'default' => true,
 ],
 
 // TODO: remove when enabling EventBus on ALL wikis but for jobs only
