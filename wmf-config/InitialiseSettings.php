@@ -13493,11 +13493,9 @@ function wmfGetVariantSettings() {
 ],
 # @} end of wgNamespaceProtection
 
-# Default to Preprocessor_Hash (T219901)
 'wgParserConf' => [
 	'default' => [
 		'class' => Parser::class,
-		'preprocessorClass' => Preprocessor_Hash::class,
 	],
 ],
 
