@@ -9403,6 +9403,7 @@ function wmfGetVariantSettings() {
 		'patroller' => [
 			'patrol' => true,
 			'autopatrol' => true,
+			'editautopatrolprotected' => true,
 			'unwatchedpages' => true,
 			'rollback' => true,
 			'move-rootuserpages' => true,
