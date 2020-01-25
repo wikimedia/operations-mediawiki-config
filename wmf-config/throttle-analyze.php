@@ -5,6 +5,9 @@
  * Helper to easily add a throttling request.
  * See throttle.php for the format of $wmgThrottlingExceptions.
  */
+
+use Wikimedia\IPUtils;
+
 $wgExtensionFunctions[] = function () {
 	global $wmgThrottlingExceptions, $wgDBname, $wgRequest;
 
@@ -33,7 +36,7 @@ $wgExtensionFunctions[] = function () {
 		if ( isset( $throttleIP ) && !in_array( $ip, (array)$throttleIP ) ) {
 			continue;
 		}
-		if ( isset( $options['range'] ) && !IP::isInRanges( $ip, (array)$options['range'] ) ) {
+		if ( isset( $options['range'] ) && !IPUtils::isInRanges( $ip, (array)$options['range'] ) ) {
 			continue;
 		}
 
