@@ -21308,6 +21308,14 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
+'wmgWikibaseEntitySources' => [
+	'default' => [],
+],
+
+'wmgWikibaseLocalEntitySourceName' => [
+	'default' => null,
+],
+
 'wmgUseTemplateSandbox' => [
 	'default' => true,
 	'loginwiki' => false,

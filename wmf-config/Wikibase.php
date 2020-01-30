@@ -141,6 +141,11 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['useEntitySourceBasedFederation'] = $wmgUseEntitySourceBasedFederation;
 	}
 
+	$wgWBRepoSettings['entitySources'] = $wmgWikibaseEntitySources;
+	if ( isset( $wmgWikibaseLocalEntitySourceName ) ) {
+		$wgWBRepoSettings['localEntitySourceName'] = $wmgWikibaseLocalEntitySourceName;
+	}
+
 	// Various settings have null / no setting yet for various sites,
 	// so we need to check they are set before trying to use them to avoid warnings.
 	if ( isset( $wmgWBRepoSettingsSparqlEndpoint ) ) {
@@ -316,6 +321,11 @@ if ( $wmgUseWikibaseClient ) {
 
 	if ( isset( $wmgUseEntitySourceBasedFederation ) ) {
 		$wgWBClientSettings['useEntitySourceBasedFederation'] = $wmgUseEntitySourceBasedFederation;
+	}
+
+	$wgWBClientSettings['entitySources'] = $wmgWikibaseEntitySources;
+	if ( isset( $wmgWikibaseLocalEntitySourceName ) ) {
+		$wgWBClientSettings['localEntitySourceName'] = $wmgWikibaseLocalEntitySourceName;
 	}
 
 	$wgWBClientSettings['addEntityUsagesBatchSize'] = $wmgWikibaseClientAddEntityUsagesBatchSize;
