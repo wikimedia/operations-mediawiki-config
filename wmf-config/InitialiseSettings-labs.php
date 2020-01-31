@@ -1283,7 +1283,7 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true,
 		],
 		'wmgWikibaseEntitySources' => [
-			'wikidatawiki' => [
+			'default' => [
 				'wikidata' => [
 					'entityNamespaces' => [
 						'item' => 0,
@@ -1323,7 +1323,7 @@ function wmfGetLabsOverrideSettings() {
 			],
 		],
 		'wmgWikibaseLocalEntitySourceName' => [
-			'wikidatawiki' => 'wikidata',
+			'default' => 'wikidata',
 			'commonswiki' => 'commons',
 		],
 		'wmgWBRepoFormatterUrlProperty' => [
