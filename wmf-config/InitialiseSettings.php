@@ -12517,6 +12517,7 @@ function wmfGetVariantSettings() {
 	'hewikisource' => [ 'w', 'wikt', 'q', 'b', 'n' ],
 	'hewikivoyage' => [ 'w', 'wikt', 'b', 'n', 'q', 's', 'commons', 'en', 'de', 'el', 'fr', 'it', 'nl', 'pl', 'pt', 'ro', 'ru', 'sv', 'uk', 'vi' ], // T60527, T61601
 	'hiwiki' => [ 'wikt', 'commons', 'meta', 'species', 'de', 'en', 'en:b', 'en:q', 'en:n', 'en:s', 'en:v', 'es', 'fr', 'ml', 'ne', 'nl', 'ro', 'ru', 'pl', 'pt', 'simple', 'ta' ], // T43757
+	'hiwikibooks' => [ 'w', 's', 'w:en', 'b:en', 'b:fr', 'b:de', 'meta', 'commons', 'wikidata' ], // T244022
 	'hiwikiversity' => [ 'en:w', 'betawikiversity', 'en', 'de:v', 'hi:w', 'hi:b' ], // T168765
 	'hiwikiquote' => [ 'w', 'w:en', 'w:sa', 'q:en', 'q:gu', 'q:sa', 'meta', 'mw' ], // T127593
 	'hiwikisource' => [ 'commons', 'meta', 'oldwikisource', 'en', 'w' ], // T234892
