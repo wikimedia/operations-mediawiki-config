@@ -22971,6 +22971,30 @@ function wmfGetVariantSettings() {
 			'interwikiPrefix' => 'd',
 		],
 	],
+	'commonswiki' => [
+		'wikidata' => [
+			'entityNamespaces' => [
+				'item' => 0,
+				'property' => 120,
+				'lexeme' => 146,
+			],
+			'repoDatabase' => 'wikidatawiki',
+			'baseUri' => 'http://www.wikidata.org/entity/',
+			'rdfNodeNamespacePrefix' => 'wd',
+			'rdfPredicateNamespacePrefix' => '',
+			'interwikiPrefix' => 'd',
+		],
+		'commons' => [
+			'entityNamespaces' => [
+				'mediainfo' => '6/mediainfo',
+			],
+			'repoDatabase' => 'commonswiki',
+			'baseUri' => 'https://commons.wikimedia.org/wiki/Special:EntityData/',
+			'rdfNodeNamespacePrefix' => 'sdc',
+			'rdfPredicateNamespacePrefix' => 'sdc',
+			'interwikiPrefix' => 'c',
+		],
+	],
 	'testwikidatawiki' => [
 		'testwikidata' => [
 			'entityNamespaces' => [
@@ -23028,6 +23052,7 @@ function wmfGetVariantSettings() {
 'wmgWikibaseLocalEntitySourceName' => [
 	'default' => null,
 	'wikidatawiki' => 'wikidata',
+	'commonswiki' => 'commons',
 	'testwikidatawiki' => 'testwikidata',
 	'wikidataclient-test' => 'testwikidata',
 	'testcommonswiki' => 'testcommons'
