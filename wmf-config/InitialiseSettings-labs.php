@@ -1353,22 +1353,6 @@ function wmfGetLabsOverrideSettings() {
 		],
 		'-wmgWikibaseClientRepositories' => [
 			'default' => [
-				'' => [
-					'repoDatabase' => 'wikidatawiki',
-					'entityNamespaces' => [
-						'item' => 0,
-						'property' => 120,
-						'lexeme' => 146,
-					],
-					'baseUri' => 'https://wikidata.beta.wmflabs.org/entity/',
-					'prefixMapping' => [ '' => '' ],
-				],
-				'commons' => [
-					'repoDatabase' => 'commonswiki',
-					'entityNamespaces' => [ 'mediainfo' => '6/mediainfo' ],
-					'baseUri' => 'https://commons.wikimedia.beta.wmflabs.org/entity/',
-					'prefixMapping' => [],
-				],
 			],
 		],
 		'-wmgWikibaseClientChangesDatabase' => [
