@@ -3762,8 +3762,6 @@ array_unshift( $wgExtensionFunctions, function () {
 	$wgGroupPermissions['confirmed']['skipcaptcha'] = true;
 } );
 
-$wgImgAuthDetails = true;
-
 $wgDefaultUserOptions['watchlistdays'] = $wmgWatchlistNumberOfDaysShow;
 
 if ( $wmgUseWikidataPageBanner ) {
