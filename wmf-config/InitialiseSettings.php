@@ -21258,6 +21258,7 @@ function wmfGetVariantSettings() {
 'wmgWikibaseTaintedReferencesEnabled' => [
 	'default' => false,
 	'testwikidatawiki' => true,
+	'wikidatawiki' => true,
 ],
 
 'wmgUseEntitySourceBasedFederation' => [
