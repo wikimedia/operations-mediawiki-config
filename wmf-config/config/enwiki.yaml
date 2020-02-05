@@ -20,4 +20,5 @@ inheritsFrom:
   - wikidataclient
   - wikipedia-english
 
-wgLogo: /static/images/project-logos/enwiki.png
+wgLogos:
+  - 1x: '/static/images/project-logos/enwiki.png'

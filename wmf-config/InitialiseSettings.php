@@ -527,1322 +527,3312 @@ function wmfGetVariantSettings() {
 ],
 # @} end of wgLocaltimezone
 
-# wgLogo @{
-'wgLogo' => [
+# wgLogos @{
+'wgLogos' => [
 	// Projects
-	'default' => '/static/images/project-logos/default.png',
-	'wikibooks' => '/static/images/project-logos/wikibooks.png',
-	'wikinews' => '/static/images/project-logos/wikinews.png',
-	'wikipedia' => '/static/images/project-logos/enwiki.png',
-	'wikiquote' => '/static/images/project-logos/wikiquote.png',
-	'wikisource' => '/static/images/project-logos/wikisource.png',
-	'wikiversity' => '/static/images/project-logos/wikiversity.png',
-	'wiktionary' => '/static/images/project-logos/wiktionary.png',
-	'wikivoyage' => '/static/images/project-logos/wikivoyage.png',  // T55653
+	'default' => [
+		'1x' => '/static/images/project-logos/default.png',
+	],
+	'wikibooks' => [
+		'1x' => '/static/images/project-logos/wikibooks.png',
+	],
+	'wikinews' => [
+		'1x' => '/static/images/project-logos/wikinews.png',
+	],
+	'wikipedia' => [
+		'1x' => '/static/images/project-logos/enwiki.png',
+	],
+	'wikiquote' => [
+		'1x' => '/static/images/project-logos/wikiquote.png',
+	],
+	'wikisource' => [
+		'1x' => '/static/images/project-logos/wikisource.png',
+	],
+	'wikiversity' => [
+		'1x' => '/static/images/project-logos/wikiversity.png',
+	],
+	'wiktionary' => [
+		'1x' => '/static/images/project-logos/wiktionary.png',
+	],
+	'wikivoyage' => [
+		'1x' => '/static/images/project-logos/wikivoyage.png', // T55653
+	],
 
 	// NOTE: This list is ordered by *project family* for ease of maintenance.
 	// The order is: Wikipedia, Wiktionary, Wikiquote, Wikibooks, Wikinews, Wikisource,
 	// Wikiversity, Wikivoyage, chapter wikis, and finally special wikis
 
 	// Wikipedia
-	'abwiki' => '/static/images/project-logos/abwiki.png',  // T48589
-	'acewiki' => '/static/images/project-logos/acewiki.png',
-	'adywiki' => '/static/images/project-logos/adywiki.png', // T125501
-	'afwiki' => '/static/images/project-logos/afwiki.png',
-	'akwiki' => '/static/images/project-logos/akwiki.png',  // T48589
-	'alswiki' => '/static/images/project-logos/alswiki.png',
-	'amwiki' => '/static/images/project-logos/amwiki.png',  // T42285
-	'anwiki' => '/static/images/project-logos/anwiki.png',
-	'angwiki' => '/static/images/project-logos/angwiki.png',  // T51125
-	'arwiki' => '/static/images/project-logos/arwiki.png',
-	'arcwiki' => '/static/images/project-logos/arcwiki.png',
-	'arzwiki' => '/static/images/project-logos/arzwiki.png',
-	'aswiki' => '/static/images/project-logos/aswiki.png',
-	'astwiki' => '/static/images/project-logos/astwiki.png',  // T42285, T131247
-	'atjwiki' => '/static/images/project-logos/atjwiki.png', // T167714
-	'avwiki' => '/static/images/project-logos/avwiki.png',  // T48589
-	'aywiki' => '/static/images/project-logos/aywiki.png',
-	'azwiki' => '/static/images/project-logos/azwiki.png',  // T50397
-	'azbwiki' => '/static/images/project-logos/azbwiki.png',  // T106305
-	'bawiki' => '/static/images/project-logos/bawiki.png',
-	'banwiki' => '/static/images/project-logos/banwiki.png',
-	'barwiki' => '/static/images/project-logos/barwiki.png',  // T42285
-	'bat_smgwiki' => '/static/images/project-logos/bat_smgwiki.png',  // T48589
-	'bclwiki' => '/static/images/project-logos/bclwiki.png',
-	'bewiki' => '/static/images/project-logos/bewiki.png',
-	'be_x_oldwiki' => '/static/images/project-logos/be_x_oldwiki.png',
-	'bgwiki' => '/static/images/project-logos/bgwiki.png',
-	'bhwiki' => '/static/images/project-logos/bhwiki.png',  // T50397
-	'biwiki' => '/static/images/project-logos/biwiki.png',  // T51125
-	'bjnwiki' => '/static/images/project-logos/bjnwiki.png',  // T48564
-	'bmwiki' => '/static/images/project-logos/bmwiki.png',  // T42285
-	'bnwiki' => '/static/images/project-logos/bnwiki.png',
-	'bowiki' => '/static/images/project-logos/bowiki.png',  // T50397
-	'bpywiki' => '/static/images/project-logos/bpywiki.png',  // T42285
-	'brwiki' => '/static/images/project-logos/brwiki.png',
-	'bswiki' => '/static/images/project-logos/bswiki.png',
-	'bugwiki' => '/static/images/project-logos/bugwiki.png',
-	'bxrwiki' => '/static/images/project-logos/bxrwiki.png',
-	'cawiki' => '/static/images/project-logos/cawiki.png',
-	'cbk_zamwiki' => '/static/images/project-logos/cbk_zamwiki.png',  // T46974
-	'cdowiki' => '/static/images/project-logos/cdowiki.png',  // T42285
-	'cebwiki' => '/static/images/project-logos/cebwiki.png',  // T42285
-	'cewiki' => '/static/images/project-logos/cewiki.png',
-	'chwiki' => '/static/images/project-logos/chwiki.png',  // T42285
-	'chrwiki' => '/static/images/project-logos/chrwiki.png',  // T39327
-	'chywiki' => '/static/images/project-logos/chywiki.png',  // T48589
-	'ckbwiki' => '/static/images/project-logos/ckbwiki.png',
-	'cowiki' => '/static/images/project-logos/cowiki.png',  // T42285
-	'crhwiki' => '/static/images/project-logos/crhwiki.png',
-	'crwiki' => '/static/images/project-logos/crwiki.png',
-	'csbwiki' => '/static/images/project-logos/csbwiki.png',  // T42285
-	'cswiki' => '/static/images/project-logos/cswiki.png',
-	'cuwiki' => '/static/images/project-logos/cuwiki.png',
-	'cvwiki' => '/static/images/project-logos/cvwiki.png',
-	'cywiki' => '/static/images/project-logos/cywiki.png',
-	'dawiki' => '/static/images/project-logos/dawiki.png',
-	'dewiki' => '/static/images/project-logos/dewiki.png',
-	'dinwiki' => '/static/images/project-logos/dinwiki.png',
-	'diqwiki' => '/static/images/project-logos/diqwiki.png',
-	'dsbwiki' => '/static/images/project-logos/dsbwiki.png',
-	'dtywiki' => '/static/images/project-logos/dtywiki.png', // T161529
-	'dvwiki' => '/static/images/project-logos/dvwiki.png',  // T42285
-	'dzwiki' => '/static/images/project-logos/dzwiki.png',  // T50397
-	'eewiki' => '/static/images/project-logos/eewiki.png',  // T50397
-	'elwiki' => '/static/images/project-logos/elwiki.png',
-	'emlwiki' => '/static/images/project-logos/emlwiki.png', // T100953
-	'enwiki' => '/static/images/project-logos/enwiki.png',
-	'eowiki' => '/static/images/project-logos/eowiki.png',
-	'eswiki' => '/static/images/project-logos/eswiki.png',
-	'etwiki' => '/static/images/project-logos/etwiki.png',
-	'euwiki' => '/static/images/project-logos/euwiki.png',
-	'extwiki' => '/static/images/project-logos/extwiki.png',  // T48589
-	'fawiki' => '/static/images/project-logos/fawiki.png',
-	'ffwiki' => '/static/images/project-logos/ffwiki.png',
-	'fiwiki' => '/static/images/project-logos/fiwiki.png',
-	'fiu_vrowiki' => '/static/images/project-logos/fiu_vrowiki.png',  // T48589
-	'fowiki' => '/static/images/project-logos/fowiki.png',  // T42285
-	'frwiki' => '/static/images/project-logos/frwiki.png',
-	'frpwiki' => '/static/images/project-logos/frpwiki.png',
-	'frrwiki' => '/static/images/project-logos/frrwiki.png',
-	'furwiki' => '/static/images/project-logos/furwiki.png',  // T48589
-	'fywiki' => '/static/images/project-logos/fywiki.png',  // T42285
-	'gawiki' => '/static/images/project-logos/gawiki.png',
-	'gagwiki' => '/static/images/project-logos/gagwiki.png',
-	'gcrwiki' => '/static/images/project-logos/gcrwiki.png',
-	'ganwiki' => '/static/images/project-logos/ganwiki.png',  // T46974
-	'gdwiki' => '/static/images/project-logos/gdwiki.png',
-	'glwiki' => '/static/images/project-logos/glwiki.png',
-	'glkwiki' => '/static/images/project-logos/glkwiki.png',  // T50397
-	'gnwiki' => '/static/images/project-logos/gnwiki.png',  // T51125
-	'gomwiki' => '/static/images/project-logos/gomwiki.png',
-	'gorwiki' => '/static/images/project-logos/gorwiki.png',
-	'gotwiki' => '/static/images/project-logos/gotwiki.png',
-	'guwiki' => '/static/images/project-logos/guwiki.png',
-	'gvwiki' => '/static/images/project-logos/gvwiki.png',  // T48589
-	'hawiki' => '/static/images/project-logos/hawiki.png',  // T48589
-	'hakwiki' => '/static/images/project-logos/hakwiki.png',  // T48589
-	'hawwiki' => '/static/images/project-logos/hawwiki.png',  // T42285
-	'hewiki' => '/static/images/project-logos/hewiki.png',
-	'hiwiki' => '/static/images/project-logos/hiwiki.png',
-	'hifwiki' => '/static/images/project-logos/hifwiki.png',  // T29361
-	'hrwiki' => '/static/images/project-logos/hrwiki.png',
-	'hsbwiki' => '/static/images/project-logos/hsbwiki.png',
-	'htwiki' => '/static/images/project-logos/htwiki.png',  // T42285
-	'huwiki' => '/static/images/project-logos/huwiki.png',
-	'hywiki' => '/static/images/project-logos/hywiki.png',
-	'hywwiki' => '/static/images/project-logos/hywwiki.png', // T212597
-	'iawiki' => '/static/images/project-logos/iawiki.png',
-	'idwiki' => '/static/images/project-logos/idwiki.png',
-	'iewiki' => '/static/images/project-logos/iewiki.png',  // T51125
-	'igwiki' => '/static/images/project-logos/igwiki.png',  // T48589
-	'ikwiki' => '/static/images/project-logos/ikwiki.png',  // T48589
-	'ilowiki' => '/static/images/project-logos/ilowiki.png',  // T42285
-	'inhwiki' => '/static/images/project-logos/inhwiki.png', // T184374
-	'iowiki' => '/static/images/project-logos/iowiki.png',  // T48589
-	'iswiki' => '/static/images/project-logos/iswiki.png',  // T42285
-	'itwiki' => '/static/images/project-logos/itwiki.png',
-	'iuwiki' => '/static/images/project-logos/iuwiki.png',  // T42285
-	'jawiki' => '/static/images/project-logos/jawiki.png',
-	'jamwiki' => '/static/images/project-logos/jamwiki.png', // T134017
-	'jbowiki' => '/static/images/project-logos/jbowiki.png',  // T48589
-	'jvwiki' => '/static/images/project-logos/jvwiki.png',  // T42285
-	'kaawiki' => '/static/images/project-logos/kaawiki.png',  // T48589
-	'kabwiki' => '/static/images/project-logos/kabwiki.png',  // T46974
-	'kawiki' => '/static/images/project-logos/kawiki.png',
-	'kbdwiki' => '/static/images/project-logos/kbdwiki.png',
-	'kbpwiki' => '/static/images/project-logos/kbpwiki.png', // T160868
-	'kgwiki' => '/static/images/project-logos/kgwiki.png',  // T189586
-	'kiwiki' => '/static/images/project-logos/kiwiki.png',  // T50397
-	'kkwiki' => '/static/images/project-logos/kkwiki.png',
-	'klwiki' => '/static/images/project-logos/klwiki.png',
-	'kmwiki' => '/static/images/project-logos/kmwiki.png',
-	'knwiki' => '/static/images/project-logos/knwiki.png',  // T48589,
-	'kowiki' => '/static/images/project-logos/kowiki.png',
-	'koiwiki' => '/static/images/project-logos/koiwiki.png',
-	'krcwiki' => '/static/images/project-logos/krcwiki.png',
-	'kswiki' => '/static/images/project-logos/kswiki.png',
-	'kshwiki' => '/static/images/project-logos/kshwiki.png',
-	'kuwiki' => '/static/images/project-logos/kuwiki.png',
-	'kvwiki' => '/static/images/project-logos/kvwiki.png',  // T42285
-	'kwwiki' => '/static/images/project-logos/kwwiki.png',
-	'kywiki' => '/static/images/project-logos/kywiki.png',  // T48589
-	'lawiki' => '/static/images/project-logos/lawiki.png',
-	'wikitech' => '/static/images/project-logos/wikitech.png',
-	'ladwiki' => '/static/images/project-logos/ladwiki.png',
-	'lbwiki' => '/static/images/project-logos/lbwiki.png',
-	'lbewiki' => '/static/images/project-logos/lbewiki.png',  // T42285
-	'lezwiki' => '/static/images/project-logos/lezwiki.png',
-	'lfnwiki' => '/static/images/project-logos/lfnwiki.png', // T183561
-	'lgwiki' => '/static/images/project-logos/lgwiki.png',  // T46974
-	'lijwiki' => '/static/images/project-logos/lijwiki.png',  // T51125
-	'liwiki' => '/static/images/project-logos/liwiki.png',
-	'lmowiki' => '/static/images/project-logos/lmowiki.png',  // T42285
-	'lnwiki' => '/static/images/project-logos/lnwiki.png',  // T48589
-	'lowiki' => '/static/images/project-logos/lowiki.png',  // T50397
-	'lrcwiki' => '/static/images/project-logos/lrcwiki.png',  // T102026
-	'ltwiki' => '/static/images/project-logos/ltwiki.png',  // T48589
-	'ltgwiki' => '/static/images/project-logos/ltgwiki.png',
-	'lvwiki' => '/static/images/project-logos/lvwiki.png',
-	'maiwiki' => '/static/images/project-logos/maiwiki.png',  // T74346
-	'map_bmswiki' => '/static/images/project-logos/idwiki.png', // T189155
-	'mdfwiki' => '/static/images/project-logos/mdfwiki.png',  // T48589
-	'mgwiki' => '/static/images/project-logos/mgwiki.png',  // T48589
-	'mhrwiki' => '/static/images/project-logos/mhrwiki.png',  // T48589
-	'miwiki' => '/static/images/project-logos/miwiki.png',  // T42285
-	'minwiki' => '/static/images/project-logos/minwiki.png',  // T50397
-	'mkwiki' => '/static/images/project-logos/mkwiki.png',
-	'mlwiki' => '/static/images/project-logos/mlwiki.png',
-	'mnwiki' => '/static/images/project-logos/mnwiki.png',  // T48589
-	'mnwwiki' => '/static/images/project-logos/mnwwiki.png',
-	'mrwiki' => '/static/images/project-logos/mrwiki.png',
-	'mrjwiki' => '/static/images/project-logos/mrjwiki.png',
-	'mswiki' => '/static/images/project-logos/mswiki.png',
-	'mtwiki' => '/static/images/project-logos/mtwiki.png',
-	'mwlwiki' => '/static/images/project-logos/mwlwiki.png',  // T42285
-	'mywiki' => '/static/images/project-logos/mywiki.png',
-	'myvwiki' => '/static/images/project-logos/myvwiki.png',  // T50397
-	'mznwiki' => '/static/images/project-logos/mznwiki.png',
-	'nawiki' => '/static/images/project-logos/nawiki.png',  // T42285
-	'nahwiki' => '/static/images/project-logos/nahwiki.png',
-	'napwiki' => '/static/images/project-logos/napwiki.png',  // T42285
-	'ndswiki' => '/static/images/project-logos/ndswiki.png',  // T51125
-	'nds_nlwiki' => '/static/images/project-logos/nds_nlwiki.png',
-	'newiki' => '/static/images/project-logos/newiki.png',    // T139240
-	'newwiki' => '/static/images/project-logos/newwiki.png',  // T42285
-	'nlwiki' => '/static/images/project-logos/nlwiki.png',
-	'nnwiki' => '/static/images/project-logos/nnwiki.png',
-	'nowiki' => '/static/images/project-logos/nowiki.png',
-	'novwiki' => '/static/images/project-logos/novwiki.png',  // T46974
-	'nqowiki' => '/static/images/project-logos/nqowiki.png',
-	'nrmwiki' => '/static/images/project-logos/nrmwiki.png',  // T51125
-	'nsowiki' => '/static/images/project-logos/nsowiki.png',
-	'nvwiki' => '/static/images/project-logos/nvwiki.png',  // T42285
-	'nywiki' => '/static/images/project-logos/nywiki.png',  // T211570
-	'ocwiki' => '/static/images/project-logos/ocwiki.png',
-	'olowiki' => '/static/images/project-logos/olowiki.png', // T146612
-	'omwiki' => '/static/images/project-logos/omwiki.png',  // T46974
-	'orwiki' => '/static/images/project-logos/orwiki.png',  // T29704
-	'oswiki' => '/static/images/project-logos/oswiki.png',
-	'papwiki' => '/static/images/project-logos/papwiki.png',  // T51125
-	'pawiki' => '/static/images/project-logos/pawiki.png',
-	'pagwiki' => '/static/images/project-logos/pagwiki.png',  // T46974
-	'pamwiki' => '/static/images/project-logos/pamwiki.png',  // T42285
-	'pcdwiki' => '/static/images/project-logos/pcdwiki.png',
-	'pdcwiki' => '/static/images/project-logos/pdcwiki.png',
-	'pflwiki' => '/static/images/project-logos/pflwiki.png',
-	'pihwiki' => '/static/images/project-logos/pihwiki.png',  // T42285
-	'piwiki' => '/static/images/project-logos/piwiki.png',
-	'plwiki' => '/static/images/project-logos/plwiki.png',
-	'pmswiki' => '/static/images/project-logos/pmswiki.png',
-	'pnbwiki' => '/static/images/project-logos/pnbwiki.png',  // T50397
-	'pntwiki' => '/static/images/project-logos/pntwiki.png',  // T51125
-	'pswiki' => '/static/images/project-logos/pswiki.png',  // T50397
-	'pswikivoyage' => '/static/images/project-logos/pswikivoyage.png',
-	'ptwiki' => '/static/images/project-logos/ptwiki.png',
-	'quwiki' => '/static/images/project-logos/quwiki.png',
-	'rmwiki' => '/static/images/project-logos/rmwiki.png',  // T48589
-	'rmywiki' => '/static/images/project-logos/rmywiki.png',  // T48589
-	'roa_rupwiki' => '/static/images/project-logos/roa_rupwiki.png',  // T42285
-	'roa_tarawiki' => '/static/images/project-logos/roa_tarawiki.png',
-	'rowiki' => '/static/images/project-logos/rowiki.png',
-	'ruwiki' => '/static/images/project-logos/ruwiki.png',
-	'ruewiki' => '/static/images/project-logos/ruewiki.png',
-	'sahwiki' => '/static/images/project-logos/sahwiki.png',
-	'satwiki' => '/static/images/project-logos/satwiki.png',
-	'sawiki' => '/static/images/project-logos/sawiki.png',  // T50397
-	'scwiki' => '/static/images/project-logos/scwiki.png',
-	'scnwiki' => '/static/images/project-logos/scnwiki.png',  // T42285
-	'scowiki' => '/static/images/project-logos/scowiki.png',  // T51125
-	'sdwiki' => '/static/images/project-logos/sdwiki.png',  // T50397
-	'sewiki' => '/static/images/project-logos/sewiki.png',
-	'sgwiki' => '/static/images/project-logos/sgwiki.png',  // T51125
-	'shwiki' => '/static/images/project-logos/shwiki.png',  // T51125
-	'shnwiki' => '/static/images/project-logos/shnwiki.png',
-	'siwiki' => '/static/images/project-logos/siwiki.png',
-	'simplewiki' => '/static/images/project-logos/simplewiki.png', // T181448
-	'skwiki' => '/static/images/project-logos/skwiki.png',
-	'slwiki' => '/static/images/project-logos/slwiki.png',
-	'smwiki' => '/static/images/project-logos/smwiki.png',  // T51125
-	'snwiki' => '/static/images/project-logos/snwiki.png',  // T48589
-	'sowiki' => '/static/images/project-logos/sowiki.png',  // T42285
-	'sqwiki' => '/static/images/project-logos/sqwiki.png',
-	'srwiki' => '/static/images/project-logos/srwiki.png',
-	'srnwiki' => '/static/images/project-logos/srnwiki.png',  // T46974
-	'stwiki' => '/static/images/project-logos/stwiki.png',  // T48589
-	'sswiki' => '/static/images/project-logos/sswiki.png',  // T46974
-	'stqwiki' => '/static/images/project-logos/stqwiki.png',  // T42285
-	'suwiki' => '/static/images/project-logos/suwiki.png',  // T42285
-	'svwiki' => '/static/images/project-logos/svwiki.png',
-	'swwiki' => '/static/images/project-logos/swwiki.png',
-	'szlwiki' => '/static/images/project-logos/szlwiki.png',
-	'szywiki' => '/static/images/project-logos/szywiki.png',
-	'tawiki' => '/static/images/project-logos/tawiki.png',  // T29826
-	'tcywiki' => '/static/images/project-logos/tcywiki.png', // T140898
-	'tewiki' => '/static/images/project-logos/tewiki.png',
-	'tetwiki' => '/static/images/project-logos/tetwiki.png',  // T48589
-	'tgwiki' => '/static/images/project-logos/tgwiki.png',  // T48589
-	'thwiki' => '/static/images/project-logos/thwiki.png',
-	'tkwiki' => '/static/images/project-logos/tkwiki.png',  // T48589
-	'tlwiki' => '/static/images/project-logos/tlwiki.png',
-	'tnwiki' => '/static/images/project-logos/tnwiki.png',  // T42285
-	'towiki' => '/static/images/project-logos/towiki.png',  // T51125
-	'tpiwiki' => '/static/images/project-logos/tpiwiki.png',  // T29240
-	'trwiki' => '/static/images/project-logos/trwiki.png',
-	'tswiki' => '/static/images/project-logos/tswiki.png',  // T51125
-	'ttwiki' => '/static/images/project-logos/ttwiki.png',
-	'twwiki' => '/static/images/project-logos/akwiki.png',  // T189578
-	'tywiki' => '/static/images/project-logos/tywiki.png',  // T48589
-	'tyvwiki' => '/static/images/project-logos/tyvwiki.png',  // T51328
-	'udmwiki' => '/static/images/project-logos/udmwiki.png',  // T48589
-	'ugwiki' => '/static/images/project-logos/ugwiki.png',  // T50397
-	'ukwiki' => '/static/images/project-logos/ukwiki.png',
-	'urwiki' => '/static/images/project-logos/urwiki.png',  // T48589
-	'uzwiki' => '/static/images/project-logos/uzwiki.png',  // T39699
-	'vecwiki' => '/static/images/project-logos/vecwiki.png',
-	'vepwiki' => '/static/images/project-logos/vepwiki.png',
-	'viwiki' => '/static/images/project-logos/viwiki.png',
-	'vlswiki' => '/static/images/project-logos/vlswiki.png',  // T42285
-	'vowiki' => '/static/images/project-logos/vowiki.png',  // T51125
-	'wawiki' => '/static/images/project-logos/wawiki.png',  // T42285
-	'warwiki' => '/static/images/project-logos/warwiki.png',  // T42285
-	'wowiki' => '/static/images/project-logos/wowiki.png',  // T42285
-	'wuuwiki' => '/static/images/project-logos/wuuwiki.png',  // T46974
-	'xalwiki' => '/static/images/project-logos/xalwiki.png',  // T46974
-	'xmfwiki' => '/static/images/project-logos/xmfwiki.png',
-	'yiwiki' => '/static/images/project-logos/yiwiki.png',
-	'yowiki' => '/static/images/project-logos/yowiki.png',
-	'zawiki' => '/static/images/project-logos/zawiki.png',  // T50397
-	'zeawiki' => '/static/images/project-logos/zeawiki.png',  // T51125
-	'zhwiki' => '/static/images/project-logos/zhwiki.png',
-	'zh_classicalwiki' => '/static/images/project-logos/zh_classicalwiki.png',  // T177165
-	'zh_min_nanwiki' => '/static/images/project-logos/zh_min_nanwiki.png',
-	'zh_yuewiki' => '/static/images/project-logos/zh_yuewiki.png',
-	'zuwiki' => '/static/images/project-logos/zuwiki.png', // T233424
+	'abwiki' => [
+		'1x' => '/static/images/project-logos/abwiki.png', //  T48589
+		'1.5x' => '/static/images/project-logos/abwiki-1.5x.png', //  T150618
+		'2x' => '/static/images/project-logos/abwiki-2x.png', //  T150618
+	],
+	'acewiki' => [
+		'1x' => '/static/images/project-logos/acewiki.png',
+		'1.5x' => '/static/images/project-logos/acewiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/acewiki-2x.png', // T150618
+	],
+	'adywiki' => [
+		'1x' => '/static/images/project-logos/adywiki.png', // T125501
+		'1.5x' => '/static/images/project-logos/adywiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/adywiki-2x.png', // T150618
+	],
+	'afwiki' => [
+		'1x' => '/static/images/project-logos/afwiki.png',
+		'1.5x' => '/static/images/project-logos/afwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/afwiki-2x.png', // T150618
+	],
+	'akwiki' => [
+		'1x' => '/static/images/project-logos/akwiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/akwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/akwiki-2x.png', // T150618
+	],
+	'alswiki' => [
+		'1x' => '/static/images/project-logos/alswiki.png',
+		'1.5x' => '/static/images/project-logos/alswiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/alswiki-2x.png', // T150618
+	],
+	'amwiki' => [
+		'1x' => '/static/images/project-logos/amwiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/amwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/amwiki-2x.png', // T150618
+	],
+	'angwiki' => [
+		'1x' => '/static/images/project-logos/angwiki.png', // T51125
+		'1.5x' => '/static/images/project-logos/angwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/angwiki-2x.png', // T150618
+	],
+	'anwiki' => [
+		'1x' => '/static/images/project-logos/anwiki.png',
+		'1.5x' => '/static/images/project-logos/anwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/anwiki-2x.png', // T150618
+	],
+	'arcwiki' => [
+		'1x' => '/static/images/project-logos/arcwiki.png',
+	],
+	'arwiki' => [
+		'1x' => '/static/images/project-logos/arwiki.png',
+		'1.5x' => '/static/images/project-logos/arwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/arwiki-2x.png', // T150618
+	],
+	'arzwiki' => [
+		'1x' => '/static/images/project-logos/arzwiki.png',
+		'1.5x' => '/static/images/project-logos/arzwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/arzwiki-2x.png', // T150618
+	],
+	'astwiki' => [
+		'1x' => '/static/images/project-logos/astwiki.png', // T42285, T131247
+		'1.5x' => '/static/images/project-logos/astwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/astwiki-2x.png', // T150618
+	],
+	'aswiki' => [
+		'1x' => '/static/images/project-logos/aswiki.png',
+	],
+	'atjwiki' => [
+		'1x' => '/static/images/project-logos/atjwiki.png', // T167714
+		'1.5x' => '/static/images/project-logos/atjwiki-1.5x.png', // T167714
+		'2x' => '/static/images/project-logos/atjwiki-2x.png', // T167714
+	],
+	'avwiki' => [
+		'1x' => '/static/images/project-logos/avwiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/avwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/avwiki-2x.png', // T150618
+	],
+	'aywiki' => [
+		'1x' => '/static/images/project-logos/aywiki.png',
+		'1.5x' => '/static/images/project-logos/aywiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/aywiki-2x.png', // T150618
+	],
+	'azbwiki' => [
+		'1x' => '/static/images/project-logos/azbwiki.png', // T106305
+		'1.5x' => '/static/images/project-logos/azbwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/azbwiki-2x.png', // T150618
+	],
+	'azwiki' => [
+		'1x' => '/static/images/project-logos/azwiki.png', // T50397
+		'1.5x' => '/static/images/project-logos/azwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/azwiki-2x.png', // T150618
+	],
+	'banwiki' => [
+		'1x' => '/static/images/project-logos/banwiki.png',
+		'1.5x' => '/static/images/project-logos/banwiki-1.5x.png',
+		'2x' => '/static/images/project-logos/banwiki-2x.png',
+	],
+	'barwiki' => [
+		'1x' => '/static/images/project-logos/barwiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/barwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/barwiki-2x.png', // T150618
+	],
+	'bat_smgwiki' => [
+		'1x' => '/static/images/project-logos/bat_smgwiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/bat_smgwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/bat_smgwiki-2x.png', // T150618
+	],
+	'bawiki' => [
+		'1x' => '/static/images/project-logos/bawiki.png',
+		'1.5x' => '/static/images/project-logos/bawiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/bawiki-2x.png', // T150618
+	],
+	'bclwiki' => [
+		'1x' => '/static/images/project-logos/bclwiki.png',
+		'1.5x' => '/static/images/project-logos/bclwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/bclwiki-2x.png', // T150618
+	],
+	'be_x_oldwiki' => [
+		'1x' => '/static/images/project-logos/be_x_oldwiki.png',
+		'1.5x' => '/static/images/project-logos/be_x_oldwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/be_x_oldwiki-2x.png', // T150618
+	],
+	'bewiki' => [
+		'1x' => '/static/images/project-logos/bewiki.png',
+		'1.5x' => '/static/images/project-logos/bewiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/bewiki-2x.png', // T150618
+	],
+	'bgwiki' => [
+		'1x' => '/static/images/project-logos/bgwiki.png',
+		'1.5x' => '/static/images/project-logos/bgwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/bgwiki-2x.png', // T150618
+	],
+	'bhwiki' => [
+		'1x' => '/static/images/project-logos/bhwiki.png', // T50397
+		'1.5x' => '/static/images/project-logos/bhwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/bhwiki-2x.png', // T150618
+	],
+	'biwiki' => [
+		'1x' => '/static/images/project-logos/biwiki.png', // T51125
+		'1.5x' => '/static/images/project-logos/biwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/biwiki-2x.png', // T150618
+	],
+	'bjnwiki' => [
+		'1x' => '/static/images/project-logos/bjnwiki.png', // T48564
+		'1.5x' => '/static/images/project-logos/bjnwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/bjnwiki-2x.png', // T150618
+	],
+	'bmwiki' => [
+		'1x' => '/static/images/project-logos/bmwiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/bmwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/bmwiki-2x.png', // T150618
+	],
+	'bnwiki' => [
+		'1x' => '/static/images/project-logos/bnwiki.png',
+		'1.5x' => '/static/images/project-logos/bnwiki-1.5x.png',
+		'2x' => '/static/images/project-logos/bnwiki-2x.png',
+	],
+	'bowiki' => [
+		'1x' => '/static/images/project-logos/bowiki.png', // T50397
+		'1.5x' => '/static/images/project-logos/bowiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/bowiki-2x.png', // T150618
+	],
+	'bpywiki' => [
+		'1x' => '/static/images/project-logos/bpywiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/bpywiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/bpywiki-2x.png', // T150618
+	],
+	'brwiki' => [
+		'1x' => '/static/images/project-logos/brwiki.png',
+		'1.5x' => '/static/images/project-logos/brwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/brwiki-2x.png', // T150618
+	],
+	'bswiki' => [
+		'1x' => '/static/images/project-logos/bswiki.png',
+		'1.5x' => '/static/images/project-logos/bswiki-1.5x.png', // T158815
+		'2x' => '/static/images/project-logos/bswiki-2x.png', // T158815
+	],
+	'bugwiki' => [
+		'1x' => '/static/images/project-logos/bugwiki.png',
+		'1.5x' => '/static/images/project-logos/bugwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/bugwiki-2x.png', // T150618
+	],
+	'bxrwiki' => [
+		'1x' => '/static/images/project-logos/bxrwiki.png',
+		'1.5x' => '/static/images/project-logos/bxrwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/bxrwiki-2x.png', // T150618
+	],
+	'cawiki' => [
+		'1x' => '/static/images/project-logos/cawiki.png',
+		'1.5x' => '/static/images/project-logos/cawiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/cawiki-2x.png', // T150618
+	],
+	'cbk_zamwiki' => [
+		'1x' => '/static/images/project-logos/cbk_zamwiki.png', // T46974
+		'1.5x' => '/static/images/project-logos/cbk_zamwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/cbk_zamwiki-2x.png', // T150618
+	],
+	'cdowiki' => [
+		'1x' => '/static/images/project-logos/cdowiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/cdowiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/cdowiki-2x.png', // T150618
+	],
+	'cebwiki' => [
+		'1x' => '/static/images/project-logos/cebwiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/cebwiki-1.5x.png', // T150616
+		'2x' => '/static/images/project-logos/cebwiki-2x.png', // T150616
+	],
+	'cewiki' => [
+		'1x' => '/static/images/project-logos/cewiki.png',
+		'1.5x' => '/static/images/project-logos/cewiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/cewiki-2x.png', // T150618
+	],
+	'chrwiki' => [
+		'1x' => '/static/images/project-logos/chrwiki.png', // T39327
+		'1.5x' => '/static/images/project-logos/chrwiki-1.5x.png',
+		'2x' => '/static/images/project-logos/chrwiki-2x.png',
+	],
+	'chwiki' => [
+		'1x' => '/static/images/project-logos/chwiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/chwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/chwiki-2x.png', // T150618
+	],
+	'chywiki' => [
+		'1x' => '/static/images/project-logos/chywiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/chywiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/chywiki-2x.png', // T150618
+	],
+	'ckbwiki' => [
+		'1x' => '/static/images/project-logos/ckbwiki.png',
+		'1.5x' => '/static/images/project-logos/ckbwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/ckbwiki-2x.png', // T150618
+	],
+	'cowiki' => [
+		'1x' => '/static/images/project-logos/cowiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/cowiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/cowiki-2x.png', // T150618
+	],
+	'crhwiki' => [
+		'1x' => '/static/images/project-logos/crhwiki.png',
+		'1.5x' => '/static/images/project-logos/crhwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/crhwiki-2x.png', // T150618
+	],
+	'crwiki' => [
+		'1x' => '/static/images/project-logos/crwiki.png',
+		'1.5x' => '/static/images/project-logos/crwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/crwiki-2x.png', // T150618
+	],
+	'csbwiki' => [
+		'1x' => '/static/images/project-logos/csbwiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/csbwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/csbwiki-2x.png', // T150618
+	],
+	'cswiki' => [
+		'1x' => '/static/images/project-logos/cswiki.png',
+		'1.5x' => '/static/images/project-logos/cswiki-1.5x.png', // T130392
+		'2x' => '/static/images/project-logos/cswiki-2x.png', // T130392
+	],
+	'cuwiki' => [
+		'1x' => '/static/images/project-logos/cuwiki.png',
+		'1.5x' => '/static/images/project-logos/cuwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/cuwiki-2x.png', // T150618
+	],
+	'cvwiki' => [
+		'1x' => '/static/images/project-logos/cvwiki.png',
+		'1.5x' => '/static/images/project-logos/cvwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/cvwiki-2x.png', // T150618
+	],
+	'cywiki' => [
+		'1x' => '/static/images/project-logos/cywiki.png',
+		'1.5x' => '/static/images/project-logos/cywiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/cywiki-2x.png', // T150618
+	],
+	'dawiki' => [
+		'1x' => '/static/images/project-logos/dawiki.png',
+		'1.5x' => '/static/images/project-logos/dawiki-1.5x.png', // T131033
+		'2x' => '/static/images/project-logos/dawiki-2x.png', // T131033
+	],
+	'dewiki' => [
+		'1x' => '/static/images/project-logos/dewiki.png',
+		'1.5x' => '/static/images/project-logos/dewiki-1.5x.png', // T132792
+		'2x' => '/static/images/project-logos/dewiki-2x.png', // T132792
+	],
+	'dinwiki' => [
+		'1x' => '/static/images/project-logos/dinwiki.png',
+		'1.5x' => '/static/images/project-logos/dinwiki-1.5x.png',
+		'2x' => '/static/images/project-logos/dinwiki-2x.png',
+	],
+	'diqwiki' => [
+		'1x' => '/static/images/project-logos/diqwiki.png',
+		'1.5x' => '/static/images/project-logos/diqwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/diqwiki-2x.png', // T150618
+	],
+	'dsbwiki' => [
+		'1x' => '/static/images/project-logos/dsbwiki.png',
+		'1.5x' => '/static/images/project-logos/dsbwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/dsbwiki-2x.png', // T150618
+	],
+	'dtywiki' => [
+		'1x' => '/static/images/project-logos/dtywiki.png', // T161529
+		'1.5x' => '/static/images/project-logos/dtywiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/dtywiki-2x.png', // T150618
+	],
+	'dvwiki' => [
+		'1x' => '/static/images/project-logos/dvwiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/dvwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/dvwiki-2x.png', // T150618
+	],
+	'dzwiki' => [
+		'1x' => '/static/images/project-logos/dzwiki.png', // T50397
+		'1.5x' => '/static/images/project-logos/dzwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/dzwiki-2x.png', // T150618
+	],
+	'eewiki' => [
+		'1x' => '/static/images/project-logos/eewiki.png', // T50397
+		'1.5x' => '/static/images/project-logos/eewiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/eewiki-2x.png', // T150618
+	],
+	'elwiki' => [
+		'1x' => '/static/images/project-logos/elwiki.png',
+		'1.5x' => '/static/images/project-logos/elwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/elwiki-2x.png', // T150618
+	],
+	'emlwiki' => [
+		'1x' => '/static/images/project-logos/emlwiki.png', // T100953
+		'1.5x' => '/static/images/project-logos/emlwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/emlwiki-2x.png', // T150618
+	],
+	'enwiki' => [
+		'1x' => '/static/images/project-logos/enwiki.png',
+		'1.5x' => '/static/images/project-logos/enwiki-1.5x.png',
+		'2x' => '/static/images/project-logos/enwiki-2x.png',
+	],
+	'eowiki' => [
+		'1x' => '/static/images/project-logos/eowiki.png',
+		'1.5x' => '/static/images/project-logos/eowiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/eowiki-2x.png', // T150618
+	],
+	'eswiki' => [
+		'1x' => '/static/images/project-logos/eswiki.png',
+		'1.5x' => '/static/images/project-logos/eswiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/eswiki-2x.png', // T150618
+	],
+	'etwiki' => [
+		'1x' => '/static/images/project-logos/etwiki.png',
+		'1.5x' => '/static/images/project-logos/etwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/etwiki-2x.png', // T150618
+	],
+	'euwiki' => [
+		'1x' => '/static/images/project-logos/euwiki.png',
+		'1.5x' => '/static/images/project-logos/euwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/euwiki-2x.png', // T150618
+	],
+	'extwiki' => [
+		'1x' => '/static/images/project-logos/extwiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/extwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/extwiki-2x.png', // T150618
+	],
+	'fawiki' => [
+		'1x' => '/static/images/project-logos/fawiki.png',
+		'1.5x' => '/static/images/project-logos/fawiki-1.5x.png',
+		'2x' => '/static/images/project-logos/fawiki-2x.png',
+	],
+	'ffwiki' => [
+		'1x' => '/static/images/project-logos/ffwiki.png',
+		'1.5x' => '/static/images/project-logos/ffwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/ffwiki-2x.png', // T150618
+	],
+	'fiu_vrowiki' => [
+		'1x' => '/static/images/project-logos/fiu_vrowiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/fiu_vrowiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/fiu_vrowiki-2x.png', // T150618
+	],
+	'fiwiki' => [
+		'1x' => '/static/images/project-logos/fiwiki.png',
+		'1.5x' => '/static/images/project-logos/fiwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/fiwiki-2x.png', // T150618
+	],
+	'fowiki' => [
+		'1x' => '/static/images/project-logos/fowiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/fowiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/fowiki-2x.png', // T150618
+	],
+	'frpwiki' => [
+		'1x' => '/static/images/project-logos/frpwiki.png',
+		'1.5x' => '/static/images/project-logos/frpwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/frpwiki-2x.png', // T150618
+	],
+	'frrwiki' => [
+		'1x' => '/static/images/project-logos/frrwiki.png',
+		'1.5x' => '/static/images/project-logos/frrwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/frrwiki-2x.png', // T150618
+	],
+	'frwiki' => [
+		'1x' => '/static/images/project-logos/frwiki.png',
+		'1.5x' => '/static/images/project-logos/frwiki-1.5x.png',
+		'2x' => '/static/images/project-logos/frwiki-2x.png',
+	],
+	'furwiki' => [
+		'1x' => '/static/images/project-logos/furwiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/furwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/furwiki-2x.png', // T150618
+	],
+	'fywiki' => [
+		'1x' => '/static/images/project-logos/fywiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/fywiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/fywiki-2x.png', // T150618
+	],
+	'gagwiki' => [
+		'1x' => '/static/images/project-logos/gagwiki.png',
+		'1.5x' => '/static/images/project-logos/gagwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/gagwiki-2x.png', // T150618
+	],
+	'ganwiki' => [
+		'1x' => '/static/images/project-logos/ganwiki.png', // T46974
+	],
+	'gawiki' => [
+		'1x' => '/static/images/project-logos/gawiki.png',
+		'1.5x' => '/static/images/project-logos/gawiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/gawiki-2x.png', // T150618
+	],
+	'gcrwiki' => [
+		'1x' => '/static/images/project-logos/gcrwiki.png',
+		'1.5x' => '/static/images/project-logos/gcrwiki-1.5x.png',
+		'2x' => '/static/images/project-logos/gcrwiki-2x.png',
+	],
+	'gdwiki' => [
+		'1x' => '/static/images/project-logos/gdwiki.png',
+		'1.5x' => '/static/images/project-logos/gdwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/gdwiki-2x.png', // T150618
+	],
+	'glkwiki' => [
+		'1x' => '/static/images/project-logos/glkwiki.png', // T50397
+		'1.5x' => '/static/images/project-logos/glkwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/glkwiki-2x.png', // T150618
+	],
+	'glwiki' => [
+		'1x' => '/static/images/project-logos/glwiki.png',
+		'1.5x' => '/static/images/project-logos/glwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/glwiki-2x.png', // T150618
+	],
+	'gnwiki' => [
+		'1x' => '/static/images/project-logos/gnwiki.png', // T51125
+		'1.5x' => '/static/images/project-logos/gnwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/gnwiki-2x.png', // T150618
+	],
+	'gomwiki' => [
+		'1x' => '/static/images/project-logos/gomwiki.png',
+		'1.5x' => '/static/images/project-logos/gomwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/gomwiki-2x.png', // T150618
+	],
+	'gorwiki' => [
+		'1x' => '/static/images/project-logos/gorwiki.png',
+		'1.5x' => '/static/images/project-logos/gorwiki-1.5x.png',
+		'2x' => '/static/images/project-logos/gorwiki-2x.png',
+	],
+	'gotwiki' => [
+		'1x' => '/static/images/project-logos/gotwiki.png',
+	],
+	'guwiki' => [
+		'1x' => '/static/images/project-logos/guwiki.png',
+		'1.5x' => '/static/images/project-logos/guwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/guwiki-2x.png', // T150618
+	],
+	'gvwiki' => [
+		'1x' => '/static/images/project-logos/gvwiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/gvwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/gvwiki-2x.png', // T150618
+	],
+	'hakwiki' => [
+		'1x' => '/static/images/project-logos/hakwiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/hakwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/hakwiki-2x.png', // T150618
+	],
+	'hawiki' => [
+		'1x' => '/static/images/project-logos/hawiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/hawiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/hawiki-2x.png', // T150618
+	],
+	'hawwiki' => [
+		'1x' => '/static/images/project-logos/hawwiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/hawwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/hawwiki-2x.png', // T150618
+	],
+	'hewiki' => [
+		'1x' => '/static/images/project-logos/hewiki.png',
+		'1.5x' => '/static/images/project-logos/hewiki-1.5x.png', // T145017
+		'2x' => '/static/images/project-logos/hewiki-2x.png', // T145017
+	],
+	'hifwiki' => [
+		'1x' => '/static/images/project-logos/hifwiki.png', // T29361
+		'1.5x' => '/static/images/project-logos/hifwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/hifwiki-2x.png', // T150618
+	],
+	'hiwiki' => [
+		'1x' => '/static/images/project-logos/hiwiki.png',
+		'1.5x' => '/static/images/project-logos/hiwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/hiwiki-2x.png', // T150618
+	],
+	'hrwiki' => [
+		'1x' => '/static/images/project-logos/hrwiki.png',
+		'1.5x' => '/static/images/project-logos/hrwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/hrwiki-2x.png', // T150618
+	],
+	'hsbwiki' => [
+		'1x' => '/static/images/project-logos/hsbwiki.png',
+		'1.5x' => '/static/images/project-logos/hsbwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/hsbwiki-2x.png', // T150618
+	],
+	'htwiki' => [
+		'1x' => '/static/images/project-logos/htwiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/htwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/htwiki-2x.png', // T150618
+	],
+	'huwiki' => [
+		'1x' => '/static/images/project-logos/huwiki.png',
+		'1.5x' => '/static/images/project-logos/huwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/huwiki-2x.png', // T150618
+	],
+	'hywiki' => [
+		'1x' => '/static/images/project-logos/hywiki.png',
+		'1.5x' => '/static/images/project-logos/hywiki-1.5x.png', // T150620
+		'2x' => '/static/images/project-logos/hywiki-2x.png', // T150620
+	],
+	'hywwiki' => [
+		'1x' => '/static/images/project-logos/hywwiki.png', // T212597
+		'1.5x' => '/static/images/project-logos/hywwiki-1.5x.png', // T212597
+		'2x' => '/static/images/project-logos/hywwiki-2x.png', // T212597
+	],
+	'iawiki' => [
+		'1x' => '/static/images/project-logos/iawiki.png',
+		'1.5x' => '/static/images/project-logos/iawiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/iawiki-2x.png', // T150618
+	],
+	'idwiki' => [
+		'1x' => '/static/images/project-logos/idwiki.png',
+		'1.5x' => '/static/images/project-logos/idwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/idwiki-2x.png', // T150618
+	],
+	'iewiki' => [
+		'1x' => '/static/images/project-logos/iewiki.png', // T51125
+		'1.5x' => '/static/images/project-logos/iewiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/iewiki-2x.png', // T150618
+	],
+	'igwiki' => [
+		'1x' => '/static/images/project-logos/igwiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/igwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/igwiki-2x.png', // T150618
+	],
+	'ikwiki' => [
+		'1x' => '/static/images/project-logos/ikwiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/ikwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/ikwiki-2x.png', // T150618
+	],
+	'ilowiki' => [
+		'1x' => '/static/images/project-logos/ilowiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/ilowiki-1.5x.png',
+		'2x' => '/static/images/project-logos/ilowiki-2x.png',
+	],
+	'inhwiki' => [
+		'1x' => '/static/images/project-logos/inhwiki.png', // T184374
+	],
+	'iowiki' => [
+		'1x' => '/static/images/project-logos/iowiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/iowiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/iowiki-2x.png', // T150618
+	],
+	'iswiki' => [
+		'1x' => '/static/images/project-logos/iswiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/iswiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/iswiki-2x.png', // T150618
+	],
+	'itwiki' => [
+		'1x' => '/static/images/project-logos/itwiki.png',
+		'1.5x' => '/static/images/project-logos/itwiki-1.5x.png',
+		'2x' => '/static/images/project-logos/itwiki-2x.png',
+	],
+	'iuwiki' => [
+		'1x' => '/static/images/project-logos/iuwiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/iuwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/iuwiki-2x.png', // T150618
+	],
+	'jamwiki' => [
+		'1x' => '/static/images/project-logos/jamwiki.png', // T134017
+		'1.5x' => '/static/images/project-logos/jamwiki-1.5x.png', // T134017
+		'2x' => '/static/images/project-logos/jamwiki-2x.png', // T134017
+	],
+	'jawiki' => [
+		'1x' => '/static/images/project-logos/jawiki.png',
+		'1.5x' => '/static/images/project-logos/jawiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/jawiki-2x.png', // T150618
+	],
+	'jbowiki' => [
+		'1x' => '/static/images/project-logos/jbowiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/jbowiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/jbowiki-2x.png', // T150618
+	],
+	'jvwiki' => [
+		'1x' => '/static/images/project-logos/jvwiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/jvwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/jvwiki-2x.png', // T150618
+	],
+	'kaawiki' => [
+		'1x' => '/static/images/project-logos/kaawiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/kaawiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/kaawiki-2x.png', // T150618
+	],
+	'kabwiki' => [
+		'1x' => '/static/images/project-logos/kabwiki.png', // T46974
+		'1.5x' => '/static/images/project-logos/kabwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/kabwiki-2x.png', // T150618
+	],
+	'kawiki' => [
+		'1x' => '/static/images/project-logos/kawiki.png',
+		'1.5x' => '/static/images/project-logos/kawiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/kawiki-2x.png', // T150618
+	],
+	'kbdwiki' => [
+		'1x' => '/static/images/project-logos/kbdwiki.png',
+		'1.5x' => '/static/images/project-logos/kbdwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/kbdwiki-2x.png', // T150618
+	],
+	'kbpwiki' => [
+		'1x' => '/static/images/project-logos/kbpwiki.png', // T160868
+		'1.5x' => '/static/images/project-logos/kbpwiki-1.5x.png', // T160868
+		'2x' => '/static/images/project-logos/kbpwiki-2x.png', // T160868
+	],
+	'kgwiki' => [
+		'1x' => '/static/images/project-logos/kgwiki.png', // T189586
+		'1.5x' => '/static/images/project-logos/kgwiki-1.5x.png', // T189586
+		'2x' => '/static/images/project-logos/kgwiki-2x.png', // T189586
+	],
+	'kiwiki' => [
+		'1x' => '/static/images/project-logos/kiwiki.png', // T50397
+		'1.5x' => '/static/images/project-logos/kiwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/kiwiki-2x.png', // T150618
+	],
+	'kkwiki' => [
+		'1x' => '/static/images/project-logos/kkwiki.png',
+		'1.5x' => '/static/images/project-logos/kkwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/kkwiki-2x.png', // T150618
+	],
+	'klwiki' => [
+		'1x' => '/static/images/project-logos/klwiki.png',
+		'1.5x' => '/static/images/project-logos/klwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/klwiki-2x.png', // T150618
+	],
+	'kmwiki' => [
+		'1x' => '/static/images/project-logos/kmwiki.png',
+		'1.5x' => '/static/images/project-logos/kmwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/kmwiki-2x.png', // T150618
+	],
+	'knwiki' => [
+		'1x' => '/static/images/project-logos/knwiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/knwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/knwiki-2x.png', // T150618
+	],
+	'koiwiki' => [
+		'1x' => '/static/images/project-logos/koiwiki.png',
+		'1.5x' => '/static/images/project-logos/koiwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/koiwiki-2x.png', // T150618
+	],
+	'kowiki' => [
+		'1x' => '/static/images/project-logos/kowiki.png',
+		'1.5x' => '/static/images/project-logos/kowiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/kowiki-2x.png', // T150618
+	],
+	'krcwiki' => [
+		'1x' => '/static/images/project-logos/krcwiki.png',
+		'1.5x' => '/static/images/project-logos/krcwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/krcwiki-2x.png', // T150618
+	],
+	'kshwiki' => [
+		'1x' => '/static/images/project-logos/kshwiki.png',
+		'1.5x' => '/static/images/project-logos/kshwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/kshwiki-2x.png', // T150618
+	],
+	'kswiki' => [
+		'1x' => '/static/images/project-logos/kswiki.png',
+		'1.5x' => '/static/images/project-logos/kswiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/kswiki-2x.png', // T150618
+	],
+	'kuwiki' => [
+		'1x' => '/static/images/project-logos/kuwiki.png',
+		'1.5x' => '/static/images/project-logos/kuwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/kuwiki-2x.png', // T150618
+	],
+	'kvwiki' => [
+		'1x' => '/static/images/project-logos/kvwiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/kvwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/kvwiki-2x.png', // T150618
+	],
+	'kwwiki' => [
+		'1x' => '/static/images/project-logos/kwwiki.png',
+		'1.5x' => '/static/images/project-logos/kwwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/kwwiki-2x.png', // T150618
+	],
+	'kywiki' => [
+		'1x' => '/static/images/project-logos/kywiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/kywiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/kywiki-2x.png', // T150618
+	],
+	'ladwiki' => [
+		'1x' => '/static/images/project-logos/ladwiki.png',
+		'1.5x' => '/static/images/project-logos/ladwiki-1.5x.png', // T132120
+		'2x' => '/static/images/project-logos/ladwiki-2x.png', // T132120
+	],
+	'lawiki' => [
+		'1x' => '/static/images/project-logos/lawiki.png',
+		'1.5x' => '/static/images/project-logos/lawiki-1.5x.png',
+		'2x' => '/static/images/project-logos/lawiki-2x.png',
+	],
+	'lbewiki' => [
+		'1x' => '/static/images/project-logos/lbewiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/lbewiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/lbewiki-2x.png', // T150618
+	],
+	'lbwiki' => [
+		'1x' => '/static/images/project-logos/lbwiki.png',
+		'1.5x' => '/static/images/project-logos/lbwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/lbwiki-2x.png', // T150618
+	],
+	'lezwiki' => [
+		'1x' => '/static/images/project-logos/lezwiki.png',
+		'1.5x' => '/static/images/project-logos/lezwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/lezwiki-2x.png', // T150618
+	],
+	'lfnwiki' => [
+		'1x' => '/static/images/project-logos/lfnwiki.png', // T183561
+		'1.5x' => '/static/images/project-logos/lfnwiki-1.5x.png',
+		'2x' => '/static/images/project-logos/lfnwiki-2x.png',
+	],
+	'lgwiki' => [
+		'1x' => '/static/images/project-logos/lgwiki.png', // T46974
+		'1.5x' => '/static/images/project-logos/lgwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/lgwiki-2x.png', // T150618
+	],
+	'lijwiki' => [
+		'1x' => '/static/images/project-logos/lijwiki.png', // T51125
+		'1.5x' => '/static/images/project-logos/lijwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/lijwiki-2x.png', // T150618
+	],
+	'liwiki' => [
+		'1x' => '/static/images/project-logos/liwiki.png',
+		'1.5x' => '/static/images/project-logos/liwiki-1.5x.png', // T189116
+		'2x' => '/static/images/project-logos/liwiki-2x.png', // T189116
+	],
+	'lmowiki' => [
+		'1x' => '/static/images/project-logos/lmowiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/lmowiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/lmowiki-2x.png', // T150618
+	],
+	'lnwiki' => [
+		'1x' => '/static/images/project-logos/lnwiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/lnwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/lnwiki-2x.png', // T150618
+	],
+	'lowiki' => [
+		'1x' => '/static/images/project-logos/lowiki.png', // T50397
+		'1.5x' => '/static/images/project-logos/lowiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/lowiki-2x.png', // T150618
+	],
+	'lrcwiki' => [
+		'1x' => '/static/images/project-logos/lrcwiki.png', // T102026
+		'1.5x' => '/static/images/project-logos/lrcwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/lrcwiki-2x.png', // T150618
+	],
+	'ltgwiki' => [
+		'1x' => '/static/images/project-logos/ltgwiki.png',
+		'1.5x' => '/static/images/project-logos/ltgwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/ltgwiki-2x.png', // T150618
+	],
+	'ltwiki' => [
+		'1x' => '/static/images/project-logos/ltwiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/ltwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/ltwiki-2x.png', // T150618
+	],
+	'lvwiki' => [
+		'1x' => '/static/images/project-logos/lvwiki.png',
+		'1.5x' => '/static/images/project-logos/lvwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/lvwiki-2x.png', // T150618
+	],
+	'maiwiki' => [
+		'1x' => '/static/images/project-logos/maiwiki.png', // T74346
+		'1.5x' => '/static/images/project-logos/maiwiki-1.5x.png', // T149790
+		'2x' => '/static/images/project-logos/maiwiki-2x.png', // T149790
+	],
+	'map_bmswiki' => [
+		'1x' => '/static/images/project-logos/idwiki.png', // T189155
+		'1.5x' => '/static/images/project-logos/idwiki-1.5x.png', // T189155
+		'2x' => '/static/images/project-logos/idwiki-2x.png', // T189155
+	],
+	'mdfwiki' => [
+		'1x' => '/static/images/project-logos/mdfwiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/mdfwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/mdfwiki-2x.png', // T150618
+	],
+	'mgwiki' => [
+		'1x' => '/static/images/project-logos/mgwiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/mgwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/mgwiki-2x.png', // T150618
+	],
+	'mhrwiki' => [
+		'1x' => '/static/images/project-logos/mhrwiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/mhrwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/mhrwiki-2x.png', // T150618
+	],
+	'minwiki' => [
+		'1x' => '/static/images/project-logos/minwiki.png', // T50397
+		'1.5x' => '/static/images/project-logos/minwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/minwiki-2x.png', // T150618
+	],
+	'miwiki' => [
+		'1x' => '/static/images/project-logos/miwiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/miwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/miwiki-2x.png', // T150618
+	],
+	'mkwiki' => [
+		'1x' => '/static/images/project-logos/mkwiki.png',
+		'1.5x' => '/static/images/project-logos/mkwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/mkwiki-2x.png', // T150618
+	],
+	'mlwiki' => [
+		'1x' => '/static/images/project-logos/mlwiki.png',
+		'1.5x' => '/static/images/project-logos/mlwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/mlwiki-2x.png', // T150618
+	],
+	'mnwiki' => [
+		'1x' => '/static/images/project-logos/mnwiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/mnwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/mnwiki-2x.png', // T150618
+	],
+	'mnwwiki' => [
+		'1x' => '/static/images/project-logos/mnwwiki.png',
+		'1.5x' => '/static/images/project-logos/mnwwiki-1.5x.png',
+		'2x' => '/static/images/project-logos/mnwwiki-2x.png',
+	],
+	'mrjwiki' => [
+		'1x' => '/static/images/project-logos/mrjwiki.png',
+		'1.5x' => '/static/images/project-logos/mrjwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/mrjwiki-2x.png', // T150618
+	],
+	'mrwiki' => [
+		'1x' => '/static/images/project-logos/mrwiki.png',
+		'1.5x' => '/static/images/project-logos/mrwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/mrwiki-2x.png', // T150618
+	],
+	'mswiki' => [
+		'1x' => '/static/images/project-logos/mswiki.png',
+		'1.5x' => '/static/images/project-logos/mswiki-1.5x.png',
+		'2x' => '/static/images/project-logos/mswiki-2x.png',
+	],
+	'mtwiki' => [
+		'1x' => '/static/images/project-logos/mtwiki.png',
+		'1.5x' => '/static/images/project-logos/mtwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/mtwiki-2x.png', // T150618
+	],
+	'mwlwiki' => [
+		'1x' => '/static/images/project-logos/mwlwiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/mwlwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/mwlwiki-2x.png', // T150618
+	],
+	'myvwiki' => [
+		'1x' => '/static/images/project-logos/myvwiki.png', // T50397
+		'1.5x' => '/static/images/project-logos/myvwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/myvwiki-2x.png', // T150618
+	],
+	'mywiki' => [
+		'1x' => '/static/images/project-logos/mywiki.png',
+		'1.5x' => '/static/images/project-logos/mywiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/mywiki-2x.png', // T150618
+	],
+	'mznwiki' => [
+		'1x' => '/static/images/project-logos/mznwiki.png',
+		'1.5x' => '/static/images/project-logos/mznwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/mznwiki-2x.png', // T150618
+	],
+	'nahwiki' => [
+		'1x' => '/static/images/project-logos/nahwiki.png',
+		'1.5x' => '/static/images/project-logos/nahwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/nahwiki-2x.png', // T150618
+	],
+	'napwiki' => [
+		'1x' => '/static/images/project-logos/napwiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/napwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/napwiki-2x.png', // T150618
+	],
+	'nawiki' => [
+		'1x' => '/static/images/project-logos/nawiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/nawiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/nawiki-2x.png', // T150618
+	],
+	'nds_nlwiki' => [
+		'1x' => '/static/images/project-logos/nds_nlwiki.png',
+		'1.5x' => '/static/images/project-logos/nds_nlwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/nds_nlwiki-2x.png', // T150618
+	],
+	'ndswiki' => [
+		'1x' => '/static/images/project-logos/ndswiki.png', // T51125
+		'1.5x' => '/static/images/project-logos/ndswiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/ndswiki-2x.png', // T150618
+	],
+	'newiki' => [
+		'1x' => '/static/images/project-logos/newiki.png', // T139240
+		'1.5x' => '/static/images/project-logos/newiki-1.5x.png', // T139240
+		'2x' => '/static/images/project-logos/newiki-2x.png', // T139240
+	],
+	'newwiki' => [
+		'1x' => '/static/images/project-logos/newwiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/newwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/newwiki-2x.png', // T150618
+	],
+	'nlwiki' => [
+		'1x' => '/static/images/project-logos/nlwiki.png',
+		'1.5x' => '/static/images/project-logos/nlwiki-1.5x.png',
+		'2x' => '/static/images/project-logos/nlwiki-2x.png',
+	],
+	'nnwiki' => [
+		'1x' => '/static/images/project-logos/nnwiki.png',
+		'1.5x' => '/static/images/project-logos/nnwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/nnwiki-2x.png', // T150618
+	],
+	'novwiki' => [
+		'1x' => '/static/images/project-logos/novwiki.png', // T46974
+		'1.5x' => '/static/images/project-logos/novwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/novwiki-2x.png', // T150618
+	],
+	'nowiki' => [
+		'1x' => '/static/images/project-logos/nowiki.png',
+		'1.5x' => '/static/images/project-logos/nowiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/nowiki-2x.png', // T150618
+	],
+	'nqowiki' => [
+		'1x' => '/static/images/project-logos/nqowiki.png',
+		'1.5x' => '/static/images/project-logos/nqowiki-1.5x.png',
+		'2x' => '/static/images/project-logos/nqowiki-2x.png',
+	],
+	'nrmwiki' => [
+		'1x' => '/static/images/project-logos/nrmwiki.png', // T51125
+		'1.5x' => '/static/images/project-logos/nrmwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/nrmwiki-2x.png', // T150618
+	],
+	'nsowiki' => [
+		'1x' => '/static/images/project-logos/nsowiki.png',
+	],
+	'nvwiki' => [
+		'1x' => '/static/images/project-logos/nvwiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/nvwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/nvwiki-2x.png', // T150618
+	],
+	'nywiki' => [
+		'1x' => '/static/images/project-logos/nywiki.png', // T211570
+		'1.5x' => '/static/images/project-logos/nywiki-1.5x.png', // T211570
+		'2x' => '/static/images/project-logos/nywiki-2x.png', // T211570
+	],
+	'ocwiki' => [
+		'1x' => '/static/images/project-logos/ocwiki.png',
+		'1.5x' => '/static/images/project-logos/ocwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/ocwiki-2x.png', // T150618
+	],
+	'olowiki' => [
+		'1x' => '/static/images/project-logos/olowiki.png', // T146612
+		'1.5x' => '/static/images/project-logos/olowiki-1.5x.png', // T146745
+		'2x' => '/static/images/project-logos/olowiki-2x.png', // T146745
+	],
+	'omwiki' => [
+		'1x' => '/static/images/project-logos/omwiki.png', // T46974
+		'1.5x' => '/static/images/project-logos/omwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/omwiki-2x.png', // T150618
+	],
+	'orwiki' => [
+		'1x' => '/static/images/project-logos/orwiki.png', // T29704
+		'1.5x' => '/static/images/project-logos/orwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/orwiki-2x.png', // T150618
+	],
+	'oswiki' => [
+		'1x' => '/static/images/project-logos/oswiki.png',
+		'1.5x' => '/static/images/project-logos/oswiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/oswiki-2x.png', // T150618
+	],
+	'pagwiki' => [
+		'1x' => '/static/images/project-logos/pagwiki.png', // T46974
+		'1.5x' => '/static/images/project-logos/pagwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/pagwiki-2x.png', // T150618
+	],
+	'pamwiki' => [
+		'1x' => '/static/images/project-logos/pamwiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/pamwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/pamwiki-2x.png', // T150618
+	],
+	'papwiki' => [
+		'1x' => '/static/images/project-logos/papwiki.png', // T51125
+		'1.5x' => '/static/images/project-logos/papwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/papwiki-2x.png', // T150618
+	],
+	'pawiki' => [
+		'1x' => '/static/images/project-logos/pawiki.png',
+		'1.5x' => '/static/images/project-logos/pawiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/pawiki-2x.png', // T150618
+	],
+	'pcdwiki' => [
+		'1x' => '/static/images/project-logos/pcdwiki.png',
+		'1.5x' => '/static/images/project-logos/pcdwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/pcdwiki-2x.png', // T150618
+	],
+	'pdcwiki' => [
+		'1x' => '/static/images/project-logos/pdcwiki.png',
+		'1.5x' => '/static/images/project-logos/pdcwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/pdcwiki-2x.png', // T150618
+	],
+	'pflwiki' => [
+		'1x' => '/static/images/project-logos/pflwiki.png',
+		'1.5x' => '/static/images/project-logos/pflwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/pflwiki-2x.png', // T150618
+	],
+	'pihwiki' => [
+		'1x' => '/static/images/project-logos/pihwiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/pihwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/pihwiki-2x.png', // T150618
+	],
+	'piwiki' => [
+		'1x' => '/static/images/project-logos/piwiki.png',
+		'1.5x' => '/static/images/project-logos/piwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/piwiki-2x.png', // T150618
+	],
+	'plwiki' => [
+		'1x' => '/static/images/project-logos/plwiki.png',
+		'1.5x' => '/static/images/project-logos/plwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/plwiki-2x.png', // T150618
+	],
+	'pmswiki' => [
+		'1x' => '/static/images/project-logos/pmswiki.png',
+		'1.5x' => '/static/images/project-logos/pmswiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/pmswiki-2x.png', // T150618
+	],
+	'pnbwiki' => [
+		'1x' => '/static/images/project-logos/pnbwiki.png', // T50397
+		'1.5x' => '/static/images/project-logos/pnbwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/pnbwiki-2x.png', // T150618
+	],
+	'pntwiki' => [
+		'1x' => '/static/images/project-logos/pntwiki.png', // T51125
+		'1.5x' => '/static/images/project-logos/pntwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/pntwiki-2x.png', // T150618
+	],
+	'pswiki' => [
+		'1x' => '/static/images/project-logos/pswiki.png', // T50397
+		'1.5x' => '/static/images/project-logos/pswiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/pswiki-2x.png', // T150618
+	],
+	'ptwiki' => [
+		'1x' => '/static/images/project-logos/ptwiki.png',
+		'1.5x' => '/static/images/project-logos/ptwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/ptwiki-2x.png', // T150618
+	],
+	'quwiki' => [
+		'1x' => '/static/images/project-logos/quwiki.png',
+		'1.5x' => '/static/images/project-logos/quwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/quwiki-2x.png', // T150618
+	],
+	'rmwiki' => [
+		'1x' => '/static/images/project-logos/rmwiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/rmwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/rmwiki-2x.png', // T150618
+	],
+	'rmywiki' => [
+		'1x' => '/static/images/project-logos/rmywiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/rmywiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/rmywiki-2x.png', // T150618
+	],
+	'roa_rupwiki' => [
+		'1x' => '/static/images/project-logos/roa_rupwiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/roa_rupwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/roa_rupwiki-2x.png', // T150618
+	],
+	'roa_tarawiki' => [
+		'1x' => '/static/images/project-logos/roa_tarawiki.png',
+		'1.5x' => '/static/images/project-logos/roa_tarawiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/roa_tarawiki-2x.png', // T150618
+	],
+	'rowiki' => [
+		'1x' => '/static/images/project-logos/rowiki.png',
+		'1.5x' => '/static/images/project-logos/rowiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/rowiki-2x.png', // T150618
+	],
+	'ruewiki' => [
+		'1x' => '/static/images/project-logos/ruewiki.png',
+		'1.5x' => '/static/images/project-logos/ruewiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/ruewiki-2x.png', // T150618
+	],
+	'ruwiki' => [
+		'1x' => '/static/images/project-logos/ruwiki.png',
+		'1.5x' => '/static/images/project-logos/ruwiki-1.5x.png',
+		'2x' => '/static/images/project-logos/ruwiki-2x.png',
+	],
+	'sahwiki' => [
+		'1x' => '/static/images/project-logos/sahwiki.png',
+		'1.5x' => '/static/images/project-logos/sahwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/sahwiki-2x.png', // T150618
+	],
+	'satwiki' => [
+		'1x' => '/static/images/project-logos/satwiki.png',
+		'1.5x' => '/static/images/project-logos/satwiki-1.5x.png',
+		'2x' => '/static/images/project-logos/satwiki-2x.png',
+	],
+	'sawiki' => [
+		'1x' => '/static/images/project-logos/sawiki.png', // T50397
+		'1.5x' => '/static/images/project-logos/sawiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/sawiki-2x.png', // T150618
+	],
+	'scnwiki' => [
+		'1x' => '/static/images/project-logos/scnwiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/scnwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/scnwiki-2x.png', // T150618
+	],
+	'scowiki' => [
+		'1x' => '/static/images/project-logos/scowiki.png', // T51125
+		'1.5x' => '/static/images/project-logos/scowiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/scowiki-2x.png', // T150618
+	],
+	'scwiki' => [
+		'1x' => '/static/images/project-logos/scwiki.png',
+		'1.5x' => '/static/images/project-logos/scwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/scwiki-2x.png', // T150618
+	],
+	'sdwiki' => [
+		'1x' => '/static/images/project-logos/sdwiki.png', // T50397
+		'1.5x' => '/static/images/project-logos/sdwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/sdwiki-2x.png', // T150618
+	],
+	'sewiki' => [
+		'1x' => '/static/images/project-logos/sewiki.png',
+		'1.5x' => '/static/images/project-logos/sewiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/sewiki-2x.png', // T150618
+	],
+	'sgwiki' => [
+		'1x' => '/static/images/project-logos/sgwiki.png', // T51125
+		'1.5x' => '/static/images/project-logos/sgwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/sgwiki-2x.png', // T150618
+	],
+	'shnwiki' => [
+		'1x' => '/static/images/project-logos/shnwiki.png',
+		'1.5x' => '/static/images/project-logos/shnwiki-1.5x.png',
+		'2x' => '/static/images/project-logos/shnwiki-2x.png',
+	],
+	'shwiki' => [
+		'1x' => '/static/images/project-logos/shwiki.png', // T51125
+		'1.5x' => '/static/images/project-logos/shwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/shwiki-2x.png', // T150618
+	],
+	'simplewiki' => [
+		'1x' => '/static/images/project-logos/simplewiki.png', // T181448
+		'1.5x' => '/static/images/project-logos/simplewiki-1.5x.png', // T181448
+		'2x' => '/static/images/project-logos/simplewiki-2x.png', // T181448
+	],
+	'siwiki' => [
+		'1x' => '/static/images/project-logos/siwiki.png',
+		'1.5x' => '/static/images/project-logos/siwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/siwiki-2x.png', // T150618
+	],
+	'skwiki' => [
+		'1x' => '/static/images/project-logos/skwiki.png',
+		'1.5x' => '/static/images/project-logos/skwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/skwiki-2x.png', // T150618
+	],
+	'slwiki' => [
+		'1x' => '/static/images/project-logos/slwiki.png',
+		'1.5x' => '/static/images/project-logos/slwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/slwiki-2x.png', // T150618
+	],
+	'smwiki' => [
+		'1x' => '/static/images/project-logos/smwiki.png', // T51125
+		'1.5x' => '/static/images/project-logos/smwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/smwiki-2x.png', // T150618
+	],
+	'snwiki' => [
+		'1x' => '/static/images/project-logos/snwiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/snwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/snwiki-2x.png', // T150618
+	],
+	'sowiki' => [
+		'1x' => '/static/images/project-logos/sowiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/sowiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/sowiki-2x.png', // T150618
+	],
+	'sqwiki' => [
+		'1x' => '/static/images/project-logos/sqwiki.png',
+		'1.5x' => '/static/images/project-logos/sqwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/sqwiki-2x.png', // T150618
+	],
+	'srnwiki' => [
+		'1x' => '/static/images/project-logos/srnwiki.png', // T46974
+		'1.5x' => '/static/images/project-logos/srnwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/srnwiki-2x.png', // T150618
+	],
+	'srwiki' => [
+		'1x' => '/static/images/project-logos/srwiki.png',
+		'1.5x' => '/static/images/project-logos/srwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/srwiki-2x.png', // T150618
+	],
+	'sswiki' => [
+		'1x' => '/static/images/project-logos/sswiki.png', // T46974
+		'1.5x' => '/static/images/project-logos/sswiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/sswiki-2x.png', // T150618
+	],
+	'stqwiki' => [
+		'1x' => '/static/images/project-logos/stqwiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/stqwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/stqwiki-2x.png', // T150618
+	],
+	'stwiki' => [
+		'1x' => '/static/images/project-logos/stwiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/stwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/stwiki-2x.png', // T150618
+	],
+	'suwiki' => [
+		'1x' => '/static/images/project-logos/suwiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/suwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/suwiki-2x.png', // T150618
+	],
+	'svwiki' => [
+		'1x' => '/static/images/project-logos/svwiki.png',
+		'1.5x' => '/static/images/project-logos/svwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/svwiki-2x.png', // T150618
+	],
+	'swwiki' => [
+		'1x' => '/static/images/project-logos/swwiki.png',
+		'1.5x' => '/static/images/project-logos/swwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/swwiki-2x.png', // T150618
+	],
+	'szlwiki' => [
+		'1x' => '/static/images/project-logos/szlwiki.png',
+		'1.5x' => '/static/images/project-logos/szlwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/szlwiki-2x.png', // T150618
+	],
+	'szywiki' => [
+		'1x' => '/static/images/project-logos/szywiki.png',
+		'1.5x' => '/static/images/project-logos/szywiki-1.5x.png',
+		'2x' => '/static/images/project-logos/szywiki-2x.png',
+	],
+	'tawiki' => [
+		'1x' => '/static/images/project-logos/tawiki.png', // T29826
+		'1.5x' => '/static/images/project-logos/tawiki-1.5x.png',
+		'2x' => '/static/images/project-logos/tawiki-2x.png',
+	],
+	'tcywiki' => [
+		'1x' => '/static/images/project-logos/tcywiki.png', // T140898
+		'1.5x' => '/static/images/project-logos/tcywiki-1.5x.png', // T140898
+		'2x' => '/static/images/project-logos/tcywiki-2x.png', // T140898
+	],
+	'tetwiki' => [
+		'1x' => '/static/images/project-logos/tetwiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/tetwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/tetwiki-2x.png', // T150618
+	],
+	'tewiki' => [
+		'1x' => '/static/images/project-logos/tewiki.png',
+		'1.5x' => '/static/images/project-logos/tewiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/tewiki-2x.png', // T150618
+	],
+	'tgwiki' => [
+		'1x' => '/static/images/project-logos/tgwiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/tgwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/tgwiki-2x.png', // T150618
+	],
+	'thwiki' => [
+		'1x' => '/static/images/project-logos/thwiki.png',
+		'1.5x' => '/static/images/project-logos/thwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/thwiki-2x.png', // T150618
+	],
+	'tkwiki' => [
+		'1x' => '/static/images/project-logos/tkwiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/tkwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/tkwiki-2x.png', // T150618
+	],
+	'tlwiki' => [
+		'1x' => '/static/images/project-logos/tlwiki.png',
+		'1.5x' => '/static/images/project-logos/tlwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/tlwiki-2x.png', // T150618
+	],
+	'tnwiki' => [
+		'1x' => '/static/images/project-logos/tnwiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/tnwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/tnwiki-2x.png', // T150618
+	],
+	'towiki' => [
+		'1x' => '/static/images/project-logos/towiki.png', // T51125
+		'1.5x' => '/static/images/project-logos/towiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/towiki-2x.png', // T150618
+	],
+	'tpiwiki' => [
+		'1x' => '/static/images/project-logos/tpiwiki.png', // T29240
+		'1.5x' => '/static/images/project-logos/tpiwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/tpiwiki-2x.png', // T150618
+	],
+	'trwiki' => [
+		'1x' => '/static/images/project-logos/trwiki.png',
+		'1.5x' => '/static/images/project-logos/trwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/trwiki-2x.png', // T150618
+	],
+	'tswiki' => [
+		'1x' => '/static/images/project-logos/tswiki.png', // T51125
+		'1.5x' => '/static/images/project-logos/tswiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/tswiki-2x.png', // T150618
+	],
+	'ttwiki' => [
+		'1x' => '/static/images/project-logos/ttwiki.png',
+		'1.5x' => '/static/images/project-logos/ttwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/ttwiki-2x.png', // T150618
+	],
+	'twwiki' => [
+		'1x' => '/static/images/project-logos/akwiki.png', // T189578
+		'1.5x' => '/static/images/project-logos/akwiki-1.5x.png', // T189578
+		'2x' => '/static/images/project-logos/akwiki-2x.png', // T189578
+	],
+	'tyvwiki' => [
+		'1x' => '/static/images/project-logos/tyvwiki.png', // T51328
+		'1.5x' => '/static/images/project-logos/tyvwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/tyvwiki-2x.png', // T150618
+	],
+	'tywiki' => [
+		'1x' => '/static/images/project-logos/tywiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/tywiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/tywiki-2x.png', // T150618
+	],
+	'udmwiki' => [
+		'1x' => '/static/images/project-logos/udmwiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/udmwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/udmwiki-2x.png', // T150618
+	],
+	'ugwiki' => [
+		'1x' => '/static/images/project-logos/ugwiki.png', // T50397
+		'1.5x' => '/static/images/project-logos/ugwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/ugwiki-2x.png', // T150618
+	],
+	'ukwiki' => [
+		'1x' => '/static/images/project-logos/ukwiki.png',
+		'1.5x' => '/static/images/project-logos/ukwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/ukwiki-2x.png', // T150618
+	],
+	'urwiki' => [
+		'1x' => '/static/images/project-logos/urwiki.png', // T48589
+		'1.5x' => '/static/images/project-logos/urwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/urwiki-2x.png', // T150618
+	],
+	'uzwiki' => [
+		'1x' => '/static/images/project-logos/uzwiki.png', // T39699
+		'1.5x' => '/static/images/project-logos/uzwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/uzwiki-2x.png', // T150618
+	],
+	'vecwiki' => [
+		'1x' => '/static/images/project-logos/vecwiki.png',
+		'1.5x' => '/static/images/project-logos/vecwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/vecwiki-2x.png', // T150618
+	],
+	'vepwiki' => [
+		'1x' => '/static/images/project-logos/vepwiki.png',
+		'1.5x' => '/static/images/project-logos/vepwiki-2x.png', // T150618
+		'2x' => '/static/images/project-logos/vepwiki-2x.png', // T150618
+	],
+	'viwiki' => [
+		'1x' => '/static/images/project-logos/viwiki.png',
+		'1.5x' => '/static/images/project-logos/viwiki-1.5x.png',
+		'2x' => '/static/images/project-logos/viwiki-2x.png',
+	],
+	'vlswiki' => [
+		'1x' => '/static/images/project-logos/vlswiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/vlswiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/vlswiki-2x.png', // T150618
+	],
+	'vowiki' => [
+		'1x' => '/static/images/project-logos/vowiki.png', // T51125
+		'1.5x' => '/static/images/project-logos/vowiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/vowiki-2x.png', // T150618
+	],
+	'warwiki' => [
+		'1x' => '/static/images/project-logos/warwiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/warwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/warwiki-2x.png', // T150618
+	],
+	'wawiki' => [
+		'1x' => '/static/images/project-logos/wawiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/wawiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/wawiki-2x.png', // T150618
+	],
+	'wikitech' => [
+		'1x' => '/static/images/project-logos/wikitech.png',
+	],
+	'wowiki' => [
+		'1x' => '/static/images/project-logos/wowiki.png', // T42285
+		'1.5x' => '/static/images/project-logos/wowiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/wowiki-2x.png', // T150618
+	],
+	'wuuwiki' => [
+		'1x' => '/static/images/project-logos/wuuwiki.png', // T46974
+		'1.5x' => '/static/images/project-logos/wuuwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/wuuwiki-2x.png', // T150618
+	],
+	'xalwiki' => [
+		'1x' => '/static/images/project-logos/xalwiki.png', // T46974
+		'1.5x' => '/static/images/project-logos/xalwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/xalwiki-2x.png', // T150618
+	],
+	'xmfwiki' => [
+		'1x' => '/static/images/project-logos/xmfwiki.png',
+		'1.5x' => '/static/images/project-logos/xmfwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/xmfwiki-2x.png', // T150618
+	],
+	'yiwiki' => [
+		'1x' => '/static/images/project-logos/yiwiki.png',
+		'1.5x' => '/static/images/project-logos/yiwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/yiwiki-2x.png', // T150618
+	],
+	'yowiki' => [
+		'1x' => '/static/images/project-logos/yowiki.png',
+		'1.5x' => '/static/images/project-logos/yowiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/yowiki-2x.png', // T150618
+	],
+	'zawiki' => [
+		'1x' => '/static/images/project-logos/zawiki.png', // T50397
+		'1.5x' => '/static/images/project-logos/zawiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/zawiki-2x.png', // T150618
+	],
+	'zeawiki' => [
+		'1x' => '/static/images/project-logos/zeawiki.png', // T51125
+		'1.5x' => '/static/images/project-logos/zeawiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/zeawiki-2x.png', // T150618
+	],
+	'zh_classicalwiki' => [
+		'1x' => '/static/images/project-logos/zh_classicalwiki.png', // T177165
+		'1.5x' => '/static/images/project-logos/zh_classicalwiki-1.5x.png', // T177165
+		'2x' => '/static/images/project-logos/zh_classicalwiki-2x.png', // T177165
+	],
+	'zh_min_nanwiki' => [
+		'1x' => '/static/images/project-logos/zh_min_nanwiki.png',
+		'1.5x' => '/static/images/project-logos/zh_min_nanwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/zh_min_nanwiki-2x.png', // T150618
+	],
+	'zh_yuewiki' => [
+		'1x' => '/static/images/project-logos/zh_yuewiki.png',
+		'1.5x' => '/static/images/project-logos/zh_yuewiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/zh_yuewiki-2x.png', // T150618
+	],
+	'zhwiki' => [
+		'1x' => '/static/images/project-logos/zhwiki.png',
+		'1.5x' => '/static/images/project-logos/zhwiki-1.5x.png',
+		'2x' => '/static/images/project-logos/zhwiki-2x.png',
+	],
+	'zuwiki' => [
+		'1x' => '/static/images/project-logos/zuwiki.png', // T233424
+		'1.5x' => '/static/images/project-logos/zuwiki-1.5x.png', // T233424
+		'2x' => '/static/images/project-logos/zuwiki-2x.png', // T233424
+	],
 
 	// Wiktionary
-	'afwiktionary' => '/static/images/project-logos/afwiktionary.png',  // T178824
-	'amwiktionary' => '/static/images/project-logos/amwiktionary.png',  // T45240
-	'anwiktionary' => '/static/images/project-logos/anwiktionary.png',
-	'angwiktionary' => '/static/images/project-logos/angwiktionary.png',
-	'arwiktionary' => '/static/images/project-logos/arwiktionary.png',
-	'astwiktionary' => '/static/images/project-logos/astwiktionary.png',
-	'azwiktionary' => '/static/images/project-logos/azwiktionary.png',  // T45240
-	'bewiktionary' => '/static/images/project-logos/bewiktionary.png',  // T45240
-	'bgwiktionary' => '/static/images/project-logos/bgwiktionary.png',
-	'bnwiktionary' => '/static/images/project-logos/bnwiktionary.png',  // T45240
-	'brwiktionary' => '/static/images/project-logos/brwiktionary.png',
-	'bswiktionary' => '/static/images/project-logos/bswiktionary.png',  // T45240
-	'cawiktionary' => '/static/images/project-logos/cawiktionary.png',
-	'cowiktionary' => '/static/images/project-logos/cowiktionary.png',  // T45240
-	'cswiktionary' => '/static/images/project-logos/cswiktionary.png',
-	'csbwiktionary' => '/static/images/project-logos/csbwiktionary.png',  // T45240
-	'cywiktionary' => '/static/images/project-logos/cywiktionary.png',
-	'dawiktionary' => '/static/images/project-logos/dawiktionary.png',  // T45240
-	'dewiktionary' => '/static/images/project-logos/dewiktionary.png',
-	'elwiktionary' => '/static/images/project-logos/elwiktionary.png',
-	'enwiktionary' => '/static/images/project-logos/enwiktionary.png',
-	'eowiktionary' => '/static/images/project-logos/eowiktionary.png',  // T45240
-	'eswiktionary' => '/static/images/project-logos/eswiktionary.png',
-	'etwiktionary' => '/static/images/project-logos/etwiktionary.png',  // T45240
-	'euwiktionary' => '/static/images/project-logos/euwiktionary.png',
-	'fawiktionary' => '/static/images/project-logos/fawiktionary.png',
-	'fiwiktionary' => '/static/images/project-logos/fiwiktionary.png',  // T45240
-	'fowiktionary' => '/static/images/project-logos/fowiktionary.png',  // T45240
-	'frwiktionary' => '/static/images/project-logos/frwiktionary.png',
-	'fywiktionary' => '/static/images/project-logos/fywiktionary.png',  // T45240
-	'gawiktionary' => '/static/images/project-logos/gawiktionary.png',
-	'gdwiktionary' => '/static/images/project-logos/gdwiktionary.png',  // T45240
-	'glwiktionary' => '/static/images/project-logos/glwiktionary.png',
-	'guwiktionary' => '/static/images/project-logos/guwiktionary.png',  // T45240
-	'gvwiktionary' => '/static/images/project-logos/gvwiktionary.png',  // T45240
-	'hewiktionary' => '/static/images/project-logos/hewiktionary.png',
-	'hiwiktionary' => '/static/images/project-logos/hiwiktionary.png',  // T45240
-	'hsbwiktionary' => '/static/images/project-logos/hsbwiktionary.png',  // T45240
-	'huwiktionary' => '/static/images/project-logos/huwiktionary.png',
-	'hywiktionary' => '/static/images/project-logos/hywiktionary.png',  // T45240
-	'iawiktionary' => '/static/images/project-logos/iawiktionary.png',  // T45240
-	'idwiktionary' => '/static/images/project-logos/idwiktionary.png',
-	'iewiktionary' => '/static/images/project-logos/iewiktionary.png',  // T45240
-	'ikwiktionary' => '/static/images/project-logos/ikwiktionary.png',  // T45240
-	'iowiktionary' => '/static/images/project-logos/iowiktionary.png',
-	'iswiktionary' => '/static/images/project-logos/iswiktionary.png',
-	'itwiktionary' => '/static/images/project-logos/itwiktionary.png',
-	'jbowiktionary' => '/static/images/project-logos/jbowiktionary.png',  // T45240
-	'jvwiktionary' => '/static/images/project-logos/jvwiktionary.png',  // T45240
-	'kawiktionary' => '/static/images/project-logos/kawiktionary.png',
-	'kkwiktionary' => '/static/images/project-logos/kkwiktionary.png',
-	'kmwiktionary' => '/static/images/project-logos/kmwiktionary.png',
-	'knwiktionary' => '/static/images/project-logos/knwiktionary.png',  // T31380
-	'kowiktionary' => '/static/images/project-logos/kowiktionary.png',
-	'kuwiktionary' => '/static/images/project-logos/kuwiktionary.png',
-	'kwwiktionary' => '/static/images/project-logos/kwwiktionary.png',  // T45240
-	'kywiktionary' => '/static/images/project-logos/kywiktionary.png',  // T45240
-	'lawiktionary' => '/static/images/project-logos/lawiktionary.png',
-	'lbwiktionary' => '/static/images/project-logos/lbwiktionary.png',
-	'liwiktionary' => '/static/images/project-logos/liwiktionary.png',  // T45240
-	'ltwiktionary' => '/static/images/project-logos/ltwiktionary.png',
-	'lvwiktionary' => '/static/images/project-logos/lvwiktionary.png',  // T45240
-	'mgwiktionary' => '/static/images/project-logos/mgwiktionary.png',
-	'minwiktionary' => '/static/images/project-logos/minwiktionary.png',
-	'miwiktionary' => '/static/images/project-logos/miwiktionary.png',  // T45240
-	'mkwiktionary' => '/static/images/project-logos/mkwiktionary.png',  // T140566
-	'mlwiktionary' => '/static/images/project-logos/mlwiktionary.png',  // T43785
-	'mnwiktionary' => '/static/images/project-logos/mnwiktionary.png',  // T45240
-	'mrwiktionary' => '/static/images/project-logos/mrwiktionary.png',  // T45240
-	'mswiktionary' => '/static/images/project-logos/mswiktionary.png',  // T45240
-	'mtwiktionary' => '/static/images/project-logos/mtwiktionary.png',  // T45240
-	'mywiktionary' => '/static/images/project-logos/mywiktionary.png',  // T45240
-	'ndswiktionary' => '/static/images/project-logos/ndswiktionary.png',
-	'newiktionary' => '/static/images/project-logos/newiktionary.png',  // T45240
-	'nlwiktionary' => '/static/images/project-logos/nlwiktionary.png',
-	'nnwiktionary' => '/static/images/project-logos/nnwiktionary.png',  // T45240
-	'nowiktionary' => '/static/images/project-logos/nowiktionary.png',
-	'ocwiktionary' => '/static/images/project-logos/ocwiktionary.png',  // T54019
-	'orwiktionary' => '/static/images/project-logos/orwiktionary.png',
-	'pawiktionary' => '/static/images/project-logos/pawiktionary.png',  // T45240
-	'plwiktionary' => '/static/images/project-logos/plwiktionary.png',
-	'pnbwiktionary' => '/static/images/project-logos/pnbwiktionary.png',
-	'pswiktionary' => '/static/images/project-logos/pswiktionary.png',  // T45240
-	'ptwiktionary' => '/static/images/project-logos/ptwiktionary.png',  // T55685
-	'quwiktionary' => '/static/images/project-logos/quwiktionary.png',
-	'roa_rupwiktionary' => '/static/images/project-logos/roa_rupwiktionary.png',  // T45240
-	'rowiktionary' => '/static/images/project-logos/rowiktionary.png',
-	'ruwiktionary' => '/static/images/project-logos/ruwiktionary.png',
-	'sawiktionary' => '/static/images/project-logos/sawiktionary.png',  // T45240
-	'scnwiktionary' => '/static/images/project-logos/scnwiktionary.png',  // T45240
-	'sdwiktionary' => '/static/images/project-logos/sdwiktionary.png',  // T45240
-	'sgwiktionary' => '/static/images/project-logos/sgwiktionary.png',
-	'shwiktionary' => '/static/images/project-logos/shwiktionary.png',
-	'shywiktionary' => '/static/images/project-logos/shywiktionary.png',
-	'simplewiktionary' => '/static/images/project-logos/simplewiktionary.png',
-	'siwiktionary' => '/static/images/project-logos/siwiktionary.png',
-	'skwiktionary' => '/static/images/project-logos/skwiktionary.png',  // T45240
-	'slwiktionary' => '/static/images/project-logos/slwiktionary.png',  // T45240
-	'sqwiktionary' => '/static/images/project-logos/sqwiktionary.png',
-	'srwiktionary' => '/static/images/project-logos/srwiktionary.png',
-	'suwiktionary' => '/static/images/project-logos/suwiktionary.png',  // T45240
-	'svwiktionary' => '/static/images/project-logos/svwiktionary.png',
-	'swwiktionary' => '/static/images/project-logos/swwiktionary.png',  // T45240
-	'tawiktionary' => '/static/images/project-logos/tawiktionary.png',
-	'tewiktionary' => '/static/images/project-logos/tewiktionary.png',  // T45240
-	'thwiktionary' => '/static/images/project-logos/thwiktionary.png',
-	'tkwiktionary' => '/static/images/project-logos/tkwiktionary.png',  // T45240
-	'trwiktionary' => '/static/images/project-logos/trwiktionary.png',  // T176008
-	'ttwiktionary' => '/static/images/project-logos/ttwiktionary.png',  // T45240
-	'ugwiktionary' => '/static/images/project-logos/ugwiktionary.png',  // T45240
-	'ukwiktionary' => '/static/images/project-logos/ukwiktionary.png',
-	'urwiktionary' => '/static/images/project-logos/urwiktionary.png',  // T187209
-	'uzwiktionary' => '/static/images/project-logos/uzwiktionary.png',  // T45240
-	'viwiktionary' => '/static/images/project-logos/viwiktionary.png',  // T45240
-	'vowiktionary' => '/static/images/project-logos/vowiktionary.png',
-	'yuewiktionary' => '/static/images/project-logos/yuewiktionary.png',
-	'wawiktionary' => '/static/images/project-logos/wawiktionary.png',  // T45240
-	'wowiktionary' => '/static/images/project-logos/wowiktionary.png',
-	'yiwiktionary' => '/static/images/project-logos/yiwiktionary.png',
-	'zh_min_nanwiktionary' => '/static/images/project-logos/zh_min_nanwiktionary.png',  // T45240
-	'zhwiktionary' => '/static/images/project-logos/zhwiktionary.png',
+	'afwiktionary' => [
+		'1x' => '/static/images/project-logos/afwiktionary.png', // T178824
+		'1.5x' => '/static/images/project-logos/afwiktionary-1.5x.png', // T178824
+		'2x' => '/static/images/project-logos/afwiktionary-2x.png', // T178824
+	],
+	'amwiktionary' => [
+		'1x' => '/static/images/project-logos/amwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/amwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/amwiktionary-2x.png', // T150618
+	],
+	'angwiktionary' => [
+		'1x' => '/static/images/project-logos/angwiktionary.png',
+	],
+	'anwiktionary' => [
+		'1x' => '/static/images/project-logos/anwiktionary.png',
+	],
+	'arwiktionary' => [
+		'1x' => '/static/images/project-logos/arwiktionary.png',
+		'1.5x' => '/static/images/project-logos/arwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/arwiktionary-2x.png', // T150618
+	],
+	'astwiktionary' => [
+		'1x' => '/static/images/project-logos/astwiktionary.png',
+	],
+	'azwiktionary' => [
+		'1x' => '/static/images/project-logos/azwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/azwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/azwiktionary-2x.png', // T150618
+	],
+	'bewiktionary' => [
+		'1x' => '/static/images/project-logos/bewiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/bewiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/bewiktionary-2x.png', // T150618
+	],
+	'bgwiktionary' => [
+		'1x' => '/static/images/project-logos/bgwiktionary.png',
+	],
+	'bnwiktionary' => [
+		'1x' => '/static/images/project-logos/bnwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/bnwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/bnwiktionary-2x.png', // T150618
+	],
+	'brwiktionary' => [
+		'1x' => '/static/images/project-logos/brwiktionary.png',
+	],
+	'bswiktionary' => [
+		'1x' => '/static/images/project-logos/bswiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/bswiktionary-1.5x.png', // T159542
+		'2x' => '/static/images/project-logos/bswiktionary-2x.png', // T159542
+	],
+	'cawiktionary' => [
+		'1x' => '/static/images/project-logos/cawiktionary.png',
+	],
+	'cowiktionary' => [
+		'1x' => '/static/images/project-logos/cowiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/cowiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/cowiktionary-2x.png', // T150618
+	],
+	'csbwiktionary' => [
+		'1x' => '/static/images/project-logos/csbwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/csbwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/csbwiktionary-2x.png', // T150618
+	],
+	'cswiktionary' => [
+		'1x' => '/static/images/project-logos/cswiktionary.png',
+		'1.5x' => '/static/images/project-logos/cswiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/cswiktionary-2x.png', // T150618
+	],
+	'cywiktionary' => [
+		'1x' => '/static/images/project-logos/cywiktionary.png',
+	],
+	'dawiktionary' => [
+		'1x' => '/static/images/project-logos/dawiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/dawiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/dawiktionary-2x.png', // T150618
+	],
+	'dewiktionary' => [
+		'1x' => '/static/images/project-logos/dewiktionary.png',
+	],
+	'elwiktionary' => [
+		'1x' => '/static/images/project-logos/elwiktionary.png',
+	],
+	'enwiktionary' => [
+		'1x' => '/static/images/project-logos/enwiktionary.png',
+		'1.5x' => '/static/images/project-logos/enwiktionary-1.5x.png', // T138801
+		'2x' => '/static/images/project-logos/enwiktionary-2x.png', // T138801
+	],
+	'eowiktionary' => [
+		'1x' => '/static/images/project-logos/eowiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/eowiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/eowiktionary-2x.png', // T150618
+	],
+	'eswiktionary' => [
+		'1x' => '/static/images/project-logos/eswiktionary.png',
+	],
+	'etwiktionary' => [
+		'1x' => '/static/images/project-logos/etwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/etwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/etwiktionary-2x.png', // T150618
+	],
+	'euwiktionary' => [
+		'1x' => '/static/images/project-logos/euwiktionary.png',
+	],
+	'fawiktionary' => [
+		'1x' => '/static/images/project-logos/fawiktionary.png',
+	],
+	'fiwiktionary' => [
+		'1x' => '/static/images/project-logos/fiwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/fiwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/fiwiktionary-2x.png', // T150618
+	],
+	'fowiktionary' => [
+		'1x' => '/static/images/project-logos/fowiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/fowiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/fowiktionary-2x.png', // T150618
+	],
+	'frwiktionary' => [
+		'1x' => '/static/images/project-logos/frwiktionary.png',
+		'1.5x' => '/static/images/project-logos/frwiktionary-1.5x.png', // T144427
+		'2x' => '/static/images/project-logos/frwiktionary-2x.png', // T144427
+	],
+	'fywiktionary' => [
+		'1x' => '/static/images/project-logos/fywiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/fywiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/fywiktionary-2x.png', // T150618
+	],
+	'gawiktionary' => [
+		'1x' => '/static/images/project-logos/gawiktionary.png',
+	],
+	'gdwiktionary' => [
+		'1x' => '/static/images/project-logos/gdwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/gdwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/gdwiktionary-2x.png', // T150618
+	],
+	'glwiktionary' => [
+		'1x' => '/static/images/project-logos/glwiktionary.png',
+	],
+	'guwiktionary' => [
+		'1x' => '/static/images/project-logos/guwiktionary.png', // T45240
+	],
+	'gvwiktionary' => [
+		'1x' => '/static/images/project-logos/gvwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/gvwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/gvwiktionary-2x.png', // T150618
+	],
+	'hewiktionary' => [
+		'1x' => '/static/images/project-logos/hewiktionary.png',
+		'1.5x' => '/static/images/project-logos/hewiktionary-1.5x.png',
+		'2x' => '/static/images/project-logos/hewiktionary-2x.png',
+	],
+	'hiwiktionary' => [
+		'1x' => '/static/images/project-logos/hiwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/hiwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/hiwiktionary-2x.png', // T150618
+	],
+	'hsbwiktionary' => [
+		'1x' => '/static/images/project-logos/hsbwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/hsbwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/hsbwiktionary-2x.png', // T150618
+	],
+	'huwiktionary' => [
+		'1x' => '/static/images/project-logos/huwiktionary.png',
+		'1.5x' => '/static/images/project-logos/huwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/huwiktionary-2x.png', // T150618
+	],
+	'hywiktionary' => [
+		'1x' => '/static/images/project-logos/hywiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/hywiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/hywiktionary-2x.png', // T150618
+	],
+	'iawiktionary' => [
+		'1x' => '/static/images/project-logos/iawiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/iawiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/iawiktionary-2x.png', // T150618
+	],
+	'idwiktionary' => [
+		'1x' => '/static/images/project-logos/idwiktionary.png',
+		'1.5x' => '/static/images/project-logos/idwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/idwiktionary-2x.png', // T150618
+	],
+	'iewiktionary' => [
+		'1x' => '/static/images/project-logos/iewiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/iewiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/iewiktionary-2x.png', // T150618
+	],
+	'ikwiktionary' => [
+		'1x' => '/static/images/project-logos/ikwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/ikwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/ikwiktionary-2x.png', // T150618
+	],
+	'iowiktionary' => [
+		'1x' => '/static/images/project-logos/iowiktionary.png',
+	],
+	'iswiktionary' => [
+		'1x' => '/static/images/project-logos/iswiktionary.png',
+	],
+	'itwiktionary' => [
+		'1x' => '/static/images/project-logos/itwiktionary.png',
+		'1.5x' => '/static/images/project-logos/itwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/itwiktionary-2x.png', // T150618
+	],
+	'jbowiktionary' => [
+		'1x' => '/static/images/project-logos/jbowiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/jbowiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/jbowiktionary-2x.png', // T150618
+	],
+	'jvwiktionary' => [
+		'1x' => '/static/images/project-logos/jvwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/jvwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/jvwiktionary-2x.png', // T150618
+	],
+	'kawiktionary' => [
+		'1x' => '/static/images/project-logos/kawiktionary.png',
+	],
+	'kkwiktionary' => [
+		'1x' => '/static/images/project-logos/kkwiktionary.png',
+		'1.5x' => '/static/images/project-logos/kkwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/kkwiktionary-2x.png', // T150618
+	],
+	'kmwiktionary' => [
+		'1x' => '/static/images/project-logos/kmwiktionary.png',
+		'1.5x' => '/static/images/project-logos/kmwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/kmwiktionary-2x.png', // T150618
+	],
+	'knwiktionary' => [
+		'1x' => '/static/images/project-logos/knwiktionary.png', // T31380
+		'1.5x' => '/static/images/project-logos/knwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/knwiktionary-2x.png', // T150618
+	],
+	'kowiktionary' => [
+		'1x' => '/static/images/project-logos/kowiktionary.png',
+		'1.5x' => '/static/images/project-logos/kowiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/kowiktionary-2x.png', // T150618
+	],
+	'kuwiktionary' => [
+		'1x' => '/static/images/project-logos/kuwiktionary.png',
+	],
+	'kwwiktionary' => [
+		'1x' => '/static/images/project-logos/kwwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/kwwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/kwwiktionary-2x.png', // T150618
+	],
+	'kywiktionary' => [
+		'1x' => '/static/images/project-logos/kywiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/kywiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/kywiktionary-2x.png', // T150618
+	],
+	'lawiktionary' => [
+		'1x' => '/static/images/project-logos/lawiktionary.png',
+	],
+	'lbwiktionary' => [
+		'1x' => '/static/images/project-logos/lbwiktionary.png',
+	],
+	'liwiktionary' => [
+		'1x' => '/static/images/project-logos/liwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/liwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/liwiktionary-2x.png', // T150618
+	],
+	'ltwiktionary' => [
+		'1x' => '/static/images/project-logos/ltwiktionary.png',
+	],
+	'lvwiktionary' => [
+		'1x' => '/static/images/project-logos/lvwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/lvwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/lvwiktionary-2x.png', // T150618
+	],
+	'mgwiktionary' => [
+		'1x' => '/static/images/project-logos/mgwiktionary.png',
+	],
+	'minwiktionary' => [
+		'1x' => '/static/images/project-logos/minwiktionary.png',
+		'1.5x' => '/static/images/project-logos/minwiktionary-1.5x.png',
+		'2x' => '/static/images/project-logos/minwiktionary-2x.png',
+	],
+	'miwiktionary' => [
+		'1x' => '/static/images/project-logos/miwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/miwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/miwiktionary-2x.png', // T150618
+	],
+	'mkwiktionary' => [
+		'1x' => '/static/images/project-logos/mkwiktionary.png', // T140566
+	],
+	'mlwiktionary' => [
+		'1x' => '/static/images/project-logos/mlwiktionary.png', // T43785
+		'1.5x' => '/static/images/project-logos/mlwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/mlwiktionary-2x.png', // T150618
+	],
+	'mnwiktionary' => [
+		'1x' => '/static/images/project-logos/mnwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/mnwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/mnwiktionary-2x.png', // T150618
+	],
+	'mrwiktionary' => [
+		'1x' => '/static/images/project-logos/mrwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/mrwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/mrwiktionary-2x.png', // T150618
+	],
+	'mswiktionary' => [
+		'1x' => '/static/images/project-logos/mswiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/mswiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/mswiktionary-2x.png', // T150618
+	],
+	'mtwiktionary' => [
+		'1x' => '/static/images/project-logos/mtwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/mtwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/mtwiktionary-2x.png', // T150618
+	],
+	'mywiktionary' => [
+		'1x' => '/static/images/project-logos/mywiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/mywiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/mywiktionary-2x.png', // T150618
+	],
+	'ndswiktionary' => [
+		'1x' => '/static/images/project-logos/ndswiktionary.png',
+		'1.5x' => '/static/images/project-logos/ndswiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/ndswiktionary-2x.png', // T150618
+	],
+	'newiktionary' => [
+		'1x' => '/static/images/project-logos/newiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/newiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/newiktionary-2x.png', // T150618
+	],
+	'nlwiktionary' => [
+		'1x' => '/static/images/project-logos/nlwiktionary.png',
+		'1.5x' => '/static/images/project-logos/nlwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/nlwiktionary-2x.png', // T150618
+	],
+	'nnwiktionary' => [
+		'1x' => '/static/images/project-logos/nnwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/nnwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/nnwiktionary-2x.png', // T150618
+	],
+	'nowiktionary' => [
+		'1x' => '/static/images/project-logos/nowiktionary.png',
+	],
+	'ocwiktionary' => [
+		'1x' => '/static/images/project-logos/ocwiktionary.png', // T54019
+		'1.5x' => '/static/images/project-logos/ocwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/ocwiktionary-2x.png', // T150618
+	],
+	'orwiktionary' => [
+		'1x' => '/static/images/project-logos/orwiktionary.png',
+		'1.5x' => '/static/images/project-logos/orwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/orwiktionary-2x.png', // T150618
+	],
+	'pawiktionary' => [
+		'1x' => '/static/images/project-logos/pawiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/pawiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/pawiktionary-2x.png', // T150618
+	],
+	'plwiktionary' => [
+		'1x' => '/static/images/project-logos/plwiktionary.png',
+		'1.5x' => '/static/images/project-logos/plwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/plwiktionary-2x.png', // T150618
+	],
+	'pnbwiktionary' => [
+		'1x' => '/static/images/project-logos/pnbwiktionary.png',
+	],
+	'pswiktionary' => [
+		'1x' => '/static/images/project-logos/pswiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/pswiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/pswiktionary-2x.png', // T150618
+	],
+	'ptwiktionary' => [
+		'1x' => '/static/images/project-logos/ptwiktionary.png', // T55685
+	],
+	'quwiktionary' => [
+		'1x' => '/static/images/project-logos/quwiktionary.png',
+	],
+	'roa_rupwiktionary' => [
+		'1x' => '/static/images/project-logos/roa_rupwiktionary.png', // T45240
+	],
+	'rowiktionary' => [
+		'1x' => '/static/images/project-logos/rowiktionary.png',
+	],
+	'ruwiktionary' => [
+		'1x' => '/static/images/project-logos/ruwiktionary.png',
+	],
+	'sawiktionary' => [
+		'1x' => '/static/images/project-logos/sawiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/sawiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/sawiktionary-2x.png', // T150618
+	],
+	'scnwiktionary' => [
+		'1x' => '/static/images/project-logos/scnwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/scnwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/scnwiktionary-2x.png', // T150618
+	],
+	'sdwiktionary' => [
+		'1x' => '/static/images/project-logos/sdwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/sdwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/sdwiktionary-2x.png', // T150618
+	],
+	'sgwiktionary' => [
+		'1x' => '/static/images/project-logos/sgwiktionary.png',
+	],
+	'shwiktionary' => [
+		'1x' => '/static/images/project-logos/shwiktionary.png',
+	],
+	'shywiktionary' => [
+		'1x' => '/static/images/project-logos/shywiktionary.png',
+		'1.5x' => '/static/images/project-logos/shywiktionary-1.5x.png',
+		'2x' => '/static/images/project-logos/shywiktionary-2x.png',
+	],
+	'simplewiktionary' => [
+		'1x' => '/static/images/project-logos/simplewiktionary.png',
+	],
+	'siwiktionary' => [
+		'1x' => '/static/images/project-logos/siwiktionary.png',
+		'1.5x' => '/static/images/project-logos/siwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/siwiktionary-2x.png', // T150618
+	],
+	'skwiktionary' => [
+		'1x' => '/static/images/project-logos/skwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/skwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/skwiktionary-2x.png', // T150618
+	],
+	'slwiktionary' => [
+		'1x' => '/static/images/project-logos/slwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/slwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/slwiktionary-2x.png', // T150618
+	],
+	'sqwiktionary' => [
+		'1x' => '/static/images/project-logos/sqwiktionary.png',
+	],
+	'srwiktionary' => [
+		'1x' => '/static/images/project-logos/srwiktionary.png',
+		'1.5x' => '/static/images/project-logos/srwiktionary-1.5x.png', // T172245
+		'2x' => '/static/images/project-logos/srwiktionary-2x.png', // T172245
+	],
+	'suwiktionary' => [
+		'1x' => '/static/images/project-logos/suwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/suwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/suwiktionary-2x.png', // T150618
+	],
+	'svwiktionary' => [
+		'1x' => '/static/images/project-logos/svwiktionary.png',
+		'1.5x' => '/static/images/project-logos/svwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/svwiktionary-2x.png', // T150618
+	],
+	'swwiktionary' => [
+		'1x' => '/static/images/project-logos/swwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/swwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/swwiktionary-2x.png', // T150618
+	],
+	'tawiktionary' => [
+		'1x' => '/static/images/project-logos/tawiktionary.png',
+	],
+	'tewiktionary' => [
+		'1x' => '/static/images/project-logos/tewiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/tewiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/tewiktionary-2x.png', // T150618
+	],
+	'thwiktionary' => [
+		'1x' => '/static/images/project-logos/thwiktionary.png',
+	],
+	'tkwiktionary' => [
+		'1x' => '/static/images/project-logos/tkwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/tkwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/tkwiktionary-2x.png', // T150618
+	],
+	'trwiktionary' => [
+		'1x' => '/static/images/project-logos/trwiktionary.png', // T176008
+		'1.5x' => '/static/images/project-logos/trwiktionary-1.5x.png', // T176008
+		'2x' => '/static/images/project-logos/trwiktionary-2x.png', // T176008
+	],
+	'ttwiktionary' => [
+		'1x' => '/static/images/project-logos/ttwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/ttwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/ttwiktionary-2x.png', // T150618
+	],
+	'ugwiktionary' => [
+		'1x' => '/static/images/project-logos/ugwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/ugwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/ugwiktionary-2x.png', // T150618
+	],
+	'ukwiktionary' => [
+		'1x' => '/static/images/project-logos/ukwiktionary.png',
+		'1.5x' => '/static/images/project-logos/ukwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/ukwiktionary-2x.png', // T150618
+	],
+	'urwiktionary' => [
+		'1x' => '/static/images/project-logos/urwiktionary.png', // T187209
+		'1.5x' => '/static/images/project-logos/urwiktionary-1.5x.png', // T187209
+		'2x' => '/static/images/project-logos/urwiktionary-2x.png', // T187209
+	],
+	'uzwiktionary' => [
+		'1x' => '/static/images/project-logos/uzwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/uzwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/uzwiktionary-2x.png', // T150618
+	],
+	'viwiktionary' => [
+		'1x' => '/static/images/project-logos/viwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/viwiktionary-1.5x.png',
+		'2x' => '/static/images/project-logos/viwiktionary-2x.png',
+	],
+	'vowiktionary' => [
+		'1x' => '/static/images/project-logos/vowiktionary.png',
+	],
+	'wawiktionary' => [
+		'1x' => '/static/images/project-logos/wawiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/wawiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/wawiktionary-2x.png', // T150618
+	],
+	'wowiktionary' => [
+		'1x' => '/static/images/project-logos/wowiktionary.png',
+	],
+	'yiwiktionary' => [
+		'1x' => '/static/images/project-logos/yiwiktionary.png',
+	],
+	'yuewiktionary' => [
+		'1x' => '/static/images/project-logos/yuewiktionary.png',
+		'1.5x' => '/static/images/project-logos/yuewiktionary-1.5x.png',
+		'2x' => '/static/images/project-logos/yuewiktionary-2x.png',
+	],
+	'zh_min_nanwiktionary' => [
+		'1x' => '/static/images/project-logos/zh_min_nanwiktionary.png', // T45240
+		'1.5x' => '/static/images/project-logos/zh_min_nanwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/zh_min_nanwiktionary-2x.png', // T150618
+	],
+	'zhwiktionary' => [
+		'1x' => '/static/images/project-logos/zhwiktionary.png',
+		'1.5x' => '/static/images/project-logos/zhwiktionary-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/zhwiktionary-2x.png', // T150618
+	],
 
 	// Wikiquote
-	'angwikiquote' => '/static/images/project-logos/angwikiquote.png',
-	'arwikiquote' => '/static/images/project-logos/arwikiquote.png',
-	'azwikiquote' => '/static/images/project-logos/azwikiquote.png',
-	'bewikiquote' => '/static/images/project-logos/bewikiquote.png', // T196134
-	'bgwikiquote' => '/static/images/project-logos/bgwikiquote.png',
-	'bswikiquote' => '/static/images/project-logos/bswikiquote.png',
-	'cawikiquote' => '/static/images/project-logos/cawikiquote.png',
-	'cswikiquote' => '/static/images/project-logos/cswikiquote.png',
-	'dewikiquote' => '/static/images/project-logos/dewikiquote.png',
-	'elwikiquote' => '/static/images/project-logos/elwikiquote.png',
-	'enwikiquote' => '/static/images/project-logos/enwikiquote.png', // T171810
-	'eswikiquote' => '/static/images/project-logos/eswikiquote.png',
-	'eowikiquote' => '/static/images/project-logos/eowikiquote.png',  // T45879
-	'etwikiquote' => '/static/images/project-logos/etwikiquote.png',
-	'fawikiquote' => '/static/images/project-logos/fawikiquote.png',
-	'guwikiquote' => '/static/images/project-logos/guwikiquote.png', // T121853
-	'hewikiquote' => '/static/images/project-logos/hewikiquote.png',
-	'hiwikiquote' => '/static/images/project-logos/hiwikiquote.png',  // T126185
-	'hrwikiquote' => '/static/images/project-logos/hrwikiquote.png',
-	'huwikiquote' => '/static/images/project-logos/huwikiquote.png',
-	'hywikiquote' => '/static/images/project-logos/hywikiquote.png',
-	'iswikiquote' => '/static/images/project-logos/iswikiquote.png',
-	'kawikiquote' => '/static/images/project-logos/kawikiquote.png',
-	'kowikiquote' => '/static/images/project-logos/kowikiquote.png',  // T29548
-	'knwikiquote' => '/static/images/project-logos/knwikiquote.png',  // T104260
-	'kuwikiquote' => '/static/images/project-logos/kuwikiquote.png',
-	'mlwikiquote' => '/static/images/project-logos/mlwikiquote.png',  // T44771
-	'nlwikiquote' => '/static/images/project-logos/nlwikiquote.png',
-	'nnwikiquote' => '/static/images/project-logos/nnwikiquote.png',  // T29555
-	'plwikiquote' => '/static/images/project-logos/plwikiquote.png',
-	'rowikiquote' => '/static/images/project-logos/rowikiquote.png',
-	'ruwikiquote' => '/static/images/project-logos/ruwikiquote.png',
-	'sahwikiquote' => '/static/images/project-logos/sahwikiquote.png', // T222065
-	'sawikiquote' => '/static/images/project-logos/sawikiquote.png',  // T45812
-	'skwikiquote' => '/static/images/project-logos/skwikiquote.png',
-	'slwikiquote' => '/static/images/project-logos/slwikiquote.png',
-	'sqwikiquote' => '/static/images/project-logos/sqwikiquote.png',
-	'srwikiquote' => '/static/images/project-logos/srwikiquote.png',
-	'tawikiquote' => '/static/images/project-logos/tawikiquote.png',  // T57864
-	'suwikiquote' => '/static/images/project-logos/suwikiquote.png',  // T106784
-	'tewikiquote' => '/static/images/project-logos/tewikiquote.png',
-	'thwikiquote' => '/static/images/project-logos/thwikiquote.png',
-	'trwikiquote' => '/static/images/project-logos/trwikiquote.png',
-	'ukwikiquote' => '/static/images/project-logos/ukwikiquote.png',
-	'urwikiquote' => '/static/images/project-logos/urwikiquote.png',  // T97510
-	'viwikiquote' => '/static/images/project-logos/viwikiquote.png',
-	'zhwikiquote' => '/static/images/project-logos/zhwikiquote.png',
+	'angwikiquote' => [
+		'1x' => '/static/images/project-logos/angwikiquote.png',
+	],
+	'arwikiquote' => [
+		'1x' => '/static/images/project-logos/arwikiquote.png',
+	],
+	'azwikiquote' => [
+		'1x' => '/static/images/project-logos/azwikiquote.png',
+	],
+	'bewikiquote' => [
+		'1x' => '/static/images/project-logos/bewikiquote.png', // T196134
+		'1.5x' => '/static/images/project-logos/bewikiquote-1.5x.png', // T196134
+		'2x' => '/static/images/project-logos/bewikiquote-2x.png', // T196134
+	],
+	'bgwikiquote' => [
+		'1x' => '/static/images/project-logos/bgwikiquote.png',
+	],
+	'bswikiquote' => [
+		'1x' => '/static/images/project-logos/bswikiquote.png',
+	],
+	'cawikiquote' => [
+		'1x' => '/static/images/project-logos/cawikiquote.png',
+		'1.5x' => '/static/images/project-logos/cawikiquote-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/cawikiquote-2x.png', // T150618
+	],
+	'cswikiquote' => [
+		'1x' => '/static/images/project-logos/cswikiquote.png',
+		'1.5x' => '/static/images/project-logos/cswikiquote-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/cswikiquote-2x.png', // T150618
+	],
+	'dewikiquote' => [
+		'1x' => '/static/images/project-logos/dewikiquote.png',
+	],
+	'elwikiquote' => [
+		'1x' => '/static/images/project-logos/elwikiquote.png',
+	],
+	'enwikiquote' => [
+		'1x' => '/static/images/project-logos/enwikiquote.png', // T171810
+		'1.5x' => '/static/images/project-logos/enwikiquote-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/enwikiquote-2x.png', // T150618
+	],
+	'eowikiquote' => [
+		'1x' => '/static/images/project-logos/eowikiquote.png', // T45879
+		'1.5x' => '/static/images/project-logos/eowikiquote-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/eowikiquote-2x.png', // T150618
+	],
+	'eswikiquote' => [
+		'1x' => '/static/images/project-logos/eswikiquote.png',
+		'1.5x' => '/static/images/project-logos/eswikiquote-1.5x.png', // T170604
+		'2x' => '/static/images/project-logos/eswikiquote-2x.png', // T170604
+	],
+	'etwikiquote' => [
+		'1x' => '/static/images/project-logos/etwikiquote.png',
+	],
+	'fawikiquote' => [
+		'1x' => '/static/images/project-logos/fawikiquote.png',
+		'1.5x' => '/static/images/project-logos/fawikiquote-1.5x.png',
+		'2x' => '/static/images/project-logos/fawikiquote-2x.png',
+	],
+	'guwikiquote' => [
+		'1x' => '/static/images/project-logos/guwikiquote.png', // T121853
+		'1.5x' => '/static/images/project-logos/guwikiquote-1.5x.png',
+		'2x' => '/static/images/project-logos/guwikiquote-2x.png',
+	],
+	'hewikiquote' => [
+		'1x' => '/static/images/project-logos/hewikiquote.png',
+		'1.5x' => '/static/images/project-logos/hewikiquote-1.5x.png',
+		'2x' => '/static/images/project-logos/hewikiquote-2x.png',
+	],
+	'hiwikiquote' => [
+		'1x' => '/static/images/project-logos/hiwikiquote.png', // T126185
+	],
+	'hrwikiquote' => [
+		'1x' => '/static/images/project-logos/hrwikiquote.png',
+		'1.5x' => '/static/images/project-logos/hrwikiquote-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/hrwikiquote-2x.png', // T150618
+	],
+	'huwikiquote' => [
+		'1x' => '/static/images/project-logos/huwikiquote.png',
+	],
+	'hywikiquote' => [
+		'1x' => '/static/images/project-logos/hywikiquote.png',
+		'1.5x' => '/static/images/project-logos/hywikiquote-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/hywikiquote-2x.png', // T150618
+	],
+	'iswikiquote' => [
+		'1x' => '/static/images/project-logos/iswikiquote.png',
+	],
+	'kawikiquote' => [
+		'1x' => '/static/images/project-logos/kawikiquote.png',
+	],
+	'knwikiquote' => [
+		'1x' => '/static/images/project-logos/knwikiquote.png', // T104260
+		'1.5x' => '/static/images/project-logos/knwikiquote-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/knwikiquote-2x.png', // T150618
+	],
+	'kowikiquote' => [
+		'1x' => '/static/images/project-logos/kowikiquote.png', // T29548
+	],
+	'kuwikiquote' => [
+		'1x' => '/static/images/project-logos/kuwikiquote.png',
+	],
+	'mlwikiquote' => [
+		'1x' => '/static/images/project-logos/mlwikiquote.png', // T44771
+		'1.5x' => '/static/images/project-logos/mlwikiquote-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/mlwikiquote-2x.png', // T150618
+	],
+	'nlwikiquote' => [
+		'1x' => '/static/images/project-logos/nlwikiquote.png',
+	],
+	'nnwikiquote' => [
+		'1x' => '/static/images/project-logos/nnwikiquote.png', // T29555
+	],
+	'plwikiquote' => [
+		'1x' => '/static/images/project-logos/plwikiquote.png',
+		'1.5x' => '/static/images/project-logos/plwikiquote-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/plwikiquote-2x.png', // T150618
+	],
+	'rowikiquote' => [
+		'1x' => '/static/images/project-logos/rowikiquote.png',
+	],
+	'ruwikiquote' => [
+		'1x' => '/static/images/project-logos/ruwikiquote.png',
+		'1.5x' => '/static/images/project-logos/ruwikiquote-1.5x.png', // T197508
+		'2x' => '/static/images/project-logos/ruwikiquote-2x.png', // T197508
+	],
+	'sahwikiquote' => [
+		'1x' => '/static/images/project-logos/sahwikiquote.png', // T222065
+		'1.5x' => '/static/images/project-logos/sahwikiquote-1.5x.png', // T222065
+		'2x' => '/static/images/project-logos/sahwikiquote-2x.png', // T222065
+	],
+	'sawikiquote' => [
+		'1x' => '/static/images/project-logos/sawikiquote.png', // T45812
+	],
+	'skwikiquote' => [
+		'1x' => '/static/images/project-logos/skwikiquote.png',
+	],
+	'slwikiquote' => [
+		'1x' => '/static/images/project-logos/slwikiquote.png',
+		'1.5x' => '/static/images/project-logos/slwikiquote-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/slwikiquote-2x.png', // T150618
+	],
+	'sqwikiquote' => [
+		'1x' => '/static/images/project-logos/sqwikiquote.png',
+		'1.5x' => '/static/images/project-logos/sqwikiquote-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/sqwikiquote-2x.png', // T150618
+	],
+	'srwikiquote' => [
+		'1x' => '/static/images/project-logos/srwikiquote.png',
+		'1.5x' => '/static/images/project-logos/srwikiquote-1.5x.png', // T150618 and T168444
+		'2x' => '/static/images/project-logos/srwikiquote-2x.png', // T150618 and T168444
+	],
+	'suwikiquote' => [
+		'1x' => '/static/images/project-logos/suwikiquote.png', // T106784
+		'1.5x' => '/static/images/project-logos/suwikiquote-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/suwikiquote-2x.png', // T150618
+	],
+	'tawikiquote' => [
+		'1x' => '/static/images/project-logos/tawikiquote.png', // T57864
+	],
+	'tewikiquote' => [
+		'1x' => '/static/images/project-logos/tewikiquote.png',
+		'1.5x' => '/static/images/project-logos/tewikiquote-1.5x.png',
+		'2x' => '/static/images/project-logos/tewikiquote-2x.png',
+	],
+	'thwikiquote' => [
+		'1x' => '/static/images/project-logos/thwikiquote.png',
+	],
+	'trwikiquote' => [
+		'1x' => '/static/images/project-logos/trwikiquote.png',
+	],
+	'ukwikiquote' => [
+		'1x' => '/static/images/project-logos/ukwikiquote.png',
+	],
+	'urwikiquote' => [
+		'1x' => '/static/images/project-logos/urwikiquote.png', // T97510
+	],
+	'viwikiquote' => [
+		'1x' => '/static/images/project-logos/viwikiquote.png',
+		'1.5x' => '/static/images/project-logos/viwikiquote-1.5x.png',
+		'2x' => '/static/images/project-logos/viwikiquote-2x.png',
+	],
+	'zhwikiquote' => [
+		'1x' => '/static/images/project-logos/zhwikiquote.png',
+		'1.5x' => '/static/images/project-logos/zhwikiquote-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/zhwikiquote-2x.png', // T150618
+	],
 
 	// Wikibooks
-	'afwikibooks' => '/static/images/project-logos/afwikibooks.png', // T150618
-	'akwikibooks' => '/static/images/project-logos/akwikibooks.png', // T150618
-	'angwikibooks' => '/static/images/project-logos/angwikibooks.png',
-	'arwikibooks' => '/static/images/project-logos/arwikibooks.png',
-	'aswikibooks' => '/static/images/project-logos/aswikibooks.png', // T150618
-	'astwikibooks' => '/static/images/project-logos/astwikibooks.png', // T150618
-	'aywikibooks' => '/static/images/project-logos/aywikibooks.png', // T150618
-	'azwikibooks' => '/static/images/project-logos/azwikibooks.png', // T54019
-	'bawikibooks' => '/static/images/project-logos/bawikibooks.png',
-	'bewikibooks' => '/static/images/project-logos/bewikibooks.png',
-	'bgwikibooks' => '/static/images/project-logos/bgwikibooks.png',
-	'bnwikibooks' => '/static/images/project-logos/bnwikibooks.png',
-	'cawikibooks' => '/static/images/project-logos/cawikibooks.png',
-	'cswikibooks' => '/static/images/project-logos/cswikibooks.png',
-	'cywikibooks' => '/static/images/project-logos/cywikibooks.png', // T54019
-	'dewikibooks' => '/static/images/project-logos/dewikibooks.png',
-	'elwikibooks' => '/static/images/project-logos/elwikibooks.png',
-	'enwikibooks' => '/static/images/project-logos/enwikibooks.png',
-	'eowikibooks' => '/static/images/project-logos/eowikibooks.png', // T54019
-	'eswikibooks' => '/static/images/project-logos/eswikibooks.png',
-	'etwikibooks' => '/static/images/project-logos/etwikibooks.png', // T54019
-	'euwikibooks' => '/static/images/project-logos/euwikibooks.png', // T54019
-	'fawikibooks' => '/static/images/project-logos/fawikibooks.png',
-	'fiwikibooks' => '/static/images/project-logos/fiwikibooks.png',
-	'frwikibooks' => '/static/images/project-logos/frwikibooks.png',
-	'fywikibooks' => '/static/images/project-logos/fywikibooks.png',
-	'hewikibooks' => '/static/images/project-logos/hewikibooks.png',
-	'hiwikibooks' => '/static/images/project-logos/hiwikibooks.png', // T157229
-	'hrwikibooks' => '/static/images/project-logos/hrwikibooks.png',
-	'huwikibooks' => '/static/images/project-logos/huwikibooks.png',
-	'iawikibooks' => '/static/images/project-logos/iawikibooks.png', // T150618
-	'idwikibooks' => '/static/images/project-logos/idwikibooks.png',
-	'iewikibooks' => '/static/images/project-logos/iewikibooks.png', // T150618
-	'iswikibooks' => '/static/images/project-logos/iswikibooks.png',
-	'itwikibooks' => '/static/images/project-logos/itwikibooks.png',
-	'kawikibooks' => '/static/images/project-logos/kawikibooks.png',
-	'kowikibooks' => '/static/images/project-logos/kowikibooks.png', // T58760
-	'lawikibooks' => '/static/images/project-logos/lawikibooks.png',
-	'liwikibooks' => '/static/images/project-logos/liwikibooks.png', // T193680
-	'ltwikibooks' => '/static/images/project-logos/ltwikibooks.png',
-	'mgwikibooks' => '/static/images/project-logos/mgwikibooks.png', // T150618
-	'miwikibooks' => '/static/images/project-logos/miwikibooks.png', // T150618
-	'mkwikibooks' => '/static/images/project-logos/mkwikibooks.png', // T54019
-	'mlwikibooks' => '/static/images/project-logos/mlwikibooks.png', // T45111
-	'mrwikibooks' => '/static/images/project-logos/mrwikibooks.png', // T104132
-	'mswikibooks' => '/static/images/project-logos/mswikibooks.png',
-	'newikibooks' => '/static/images/project-logos/newikibooks.png', // T124881
-	'nowikibooks' => '/static/images/project-logos/nowikibooks.png',
-	'ocwikibooks' => '/static/images/project-logos/ocwikibooks.png', // T54019
-	'ptwikibooks' => '/static/images/project-logos/ptwikibooks.png',
-	'rowikibooks' => '/static/images/project-logos/rowikibooks.png',
-	'ruwikibooks' => '/static/images/project-logos/ruwikibooks.png',
-	'siwikibooks' => '/static/images/project-logos/siwikibooks.png',
-	'simplewikibooks' => '/static/images/project-logos/simplewikibooks.png', // T150618
-	'skwikibooks' => '/static/images/project-logos/skwikibooks.png',
-	'slwikibooks' => '/static/images/project-logos/slwikibooks.png', // T54019
-	'sqwikibooks' => '/static/images/project-logos/sqwikibooks.png',
-	'srwikibooks' => '/static/images/project-logos/srwikibooks.png',
-	'tawikibooks' => '/static/images/project-logos/tawikibooks.png', // T33862
-	'thwikibooks' => '/static/images/project-logos/thwikibooks.png',
-	'trwikibooks' => '/static/images/project-logos/trwikibooks.png',
-	'ttwikibooks' => '/static/images/project-logos/ttwikibooks.png',
-	'ukwikibooks' => '/static/images/project-logos/ukwikibooks.png',
-	'urwikibooks' => '/static/images/project-logos/urwikibooks.png', // T185977
-	'viwikibooks' => '/static/images/project-logos/viwikibooks.png', // T39661
-	'zhwikibooks' => '/static/images/project-logos/zhwikibooks.png',
+	'afwikibooks' => [
+		'1x' => '/static/images/project-logos/afwikibooks.png', // T150618
+		'1.5x' => '/static/images/project-logos/afwikibooks-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/afwikibooks-2x.png', // T150618
+	],
+	'akwikibooks' => [
+		'1x' => '/static/images/project-logos/akwikibooks.png', // T150618
+		'1.5x' => '/static/images/project-logos/akwikibooks-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/akwikibooks-2x.png', // T150618
+	],
+	'angwikibooks' => [
+		'1x' => '/static/images/project-logos/angwikibooks.png',
+		'1.5x' => '/static/images/project-logos/angwikibooks-1.5x.png',
+		'2x' => '/static/images/project-logos/angwikibooks-2x.png',
+	],
+	'arwikibooks' => [
+		'1x' => '/static/images/project-logos/arwikibooks.png',
+	],
+	'astwikibooks' => [
+		'1x' => '/static/images/project-logos/astwikibooks.png', // T150618
+		'1.5x' => '/static/images/project-logos/astwikibooks-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/astwikibooks-2x.png', // T150618
+	],
+	'aswikibooks' => [
+		'1x' => '/static/images/project-logos/aswikibooks.png', // T150618
+		'1.5x' => '/static/images/project-logos/aswikibooks-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/aswikibooks-2x.png', // T150618
+	],
+	'aywikibooks' => [
+		'1x' => '/static/images/project-logos/aywikibooks.png', // T150618
+		'1.5x' => '/static/images/project-logos/aywikibooks-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/aywikibooks-2x.png', // T150618
+	],
+	'azwikibooks' => [
+		'1x' => '/static/images/project-logos/azwikibooks.png', // T54019
+	],
+	'bawikibooks' => [
+		'1x' => '/static/images/project-logos/bawikibooks.png',
+		'1.5x' => '/static/images/project-logos/bawikibooks-1.5x.png', // T227418
+		'2x' => '/static/images/project-logos/bawikibooks-2x.png', // T227418
+	],
+	'bewikibooks' => [
+		'1x' => '/static/images/project-logos/bewikibooks.png',
+		'1.5x' => '/static/images/project-logos/bewikibooks-1.5x.png',
+		'2x' => '/static/images/project-logos/bewikibooks-2x.png',
+	],
+	'bgwikibooks' => [
+		'1x' => '/static/images/project-logos/bgwikibooks.png',
+	],
+	'bnwikibooks' => [
+		'1x' => '/static/images/project-logos/bnwikibooks.png',
+	],
+	'cawikibooks' => [
+		'1x' => '/static/images/project-logos/cawikibooks.png',
+	],
+	'cswikibooks' => [
+		'1x' => '/static/images/project-logos/cswikibooks.png',
+		'1.5x' => '/static/images/project-logos/cswikibooks-1.5x.png', // T177506
+		'2x' => '/static/images/project-logos/cswikibooks-2x.png', // T177506
+	],
+	'cywikibooks' => [
+		'1x' => '/static/images/project-logos/cywikibooks.png', // T54019
+	],
+	'dewikibooks' => [
+		'1x' => '/static/images/project-logos/dewikibooks.png',
+		'1.5x' => '/static/images/project-logos/dewikibooks-1.5x.png', // T177506
+		'2x' => '/static/images/project-logos/dewikibooks-2x.png', // T177506
+	],
+	'elwikibooks' => [
+		'1x' => '/static/images/project-logos/elwikibooks.png',
+	],
+	'enwikibooks' => [
+		'1x' => '/static/images/project-logos/enwikibooks.png',
+		'1.5x' => '/static/images/project-logos/enwikibooks-1.5x.png', // T177506
+		'2x' => '/static/images/project-logos/enwikibooks-2x.png', // T177506
+	],
+	'eowikibooks' => [
+		'1x' => '/static/images/project-logos/eowikibooks.png', // T54019
+	],
+	'eswikibooks' => [
+		'1x' => '/static/images/project-logos/eswikibooks.png',
+		'1.5x' => '/static/images/project-logos/eswikibooks-1.5x.png', // T170248
+		'2x' => '/static/images/project-logos/eswikibooks-2x.png', // T170248
+	],
+	'etwikibooks' => [
+		'1x' => '/static/images/project-logos/etwikibooks.png', // T54019
+	],
+	'euwikibooks' => [
+		'1x' => '/static/images/project-logos/euwikibooks.png', // T54019
+	],
+	'fawikibooks' => [
+		'1x' => '/static/images/project-logos/fawikibooks.png',
+	],
+	'fiwikibooks' => [
+		'1x' => '/static/images/project-logos/fiwikibooks.png',
+		'1.5x' => '/static/images/project-logos/fiwikibooks-1.5x.png', // T177506
+		'2x' => '/static/images/project-logos/fiwikibooks-2x.png', // T177506
+	],
+	'frwikibooks' => [
+		'1x' => '/static/images/project-logos/frwikibooks.png',
+		'1.5x' => '/static/images/project-logos/frwikibooks-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/frwikibooks-2x.png', // T150618
+	],
+	'fywikibooks' => [
+		'1x' => '/static/images/project-logos/fywikibooks.png',
+		'1.5x' => '/static/images/project-logos/fywikibooks-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/fywikibooks-2x.png', // T150618
+	],
+	'hewikibooks' => [
+		'1x' => '/static/images/project-logos/hewikibooks.png',
+		'1.5x' => '/static/images/project-logos/hewikibooks-1.5x.png', // T201562
+		'2x' => '/static/images/project-logos/hewikibooks-2x.png', // T201562
+	],
+	'hiwikibooks' => [
+		'1x' => '/static/images/project-logos/hiwikibooks.png', // T157229
+		'1.5x' => '/static/images/project-logos/hiwikibooks-1.5x.png',
+		'2x' => '/static/images/project-logos/hiwikibooks-2x.png',
+	],
+	'hrwikibooks' => [
+		'1x' => '/static/images/project-logos/hrwikibooks.png',
+	],
+	'huwikibooks' => [
+		'1x' => '/static/images/project-logos/huwikibooks.png',
+		'1.5x' => '/static/images/project-logos/huwikibooks-1.5x.png', // T177506
+		'2x' => '/static/images/project-logos/huwikibooks-2x.png', // T177506
+	],
+	'iawikibooks' => [
+		'1x' => '/static/images/project-logos/iawikibooks.png', // T150618
+		'1.5x' => '/static/images/project-logos/iawikibooks-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/iawikibooks-2x.png', // T150618
+	],
+	'idwikibooks' => [
+		'1x' => '/static/images/project-logos/idwikibooks.png',
+	],
+	'iewikibooks' => [
+		'1x' => '/static/images/project-logos/iewikibooks.png', // T150618
+		'1.5x' => '/static/images/project-logos/iewikibooks-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/iewikibooks-2x.png', // T150618
+	],
+	'iswikibooks' => [
+		'1x' => '/static/images/project-logos/iswikibooks.png',
+	],
+	'itwikibooks' => [
+		'1x' => '/static/images/project-logos/itwikibooks.png',
+		'1.5x' => '/static/images/project-logos/itwikibooks-1.5x.png', // T177506
+		'2x' => '/static/images/project-logos/itwikibooks-2x.png', // T177506
+	],
+	'kawikibooks' => [
+		'1x' => '/static/images/project-logos/kawikibooks.png',
+	],
+	'kowikibooks' => [
+		'1x' => '/static/images/project-logos/kowikibooks.png', // T58760
+	],
+	'lawikibooks' => [
+		'1x' => '/static/images/project-logos/lawikibooks.png',
+		'1.5x' => '/static/images/project-logos/lawikibooks-1.5x.png',
+		'2x' => '/static/images/project-logos/lawikibooks-2x.png',
+	],
+	'liwikibooks' => [
+		'1x' => '/static/images/project-logos/liwikibooks.png', // T193680
+	],
+	'ltwikibooks' => [
+		'1x' => '/static/images/project-logos/ltwikibooks.png',
+	],
+	'mgwikibooks' => [
+		'1x' => '/static/images/project-logos/mgwikibooks.png', // T150618
+		'1.5x' => '/static/images/project-logos/mgwikibooks-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/mgwikibooks-2x.png', // T150618
+	],
+	'miwikibooks' => [
+		'1x' => '/static/images/project-logos/miwikibooks.png', // T150618
+		'1.5x' => '/static/images/project-logos/miwikibooks-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/miwikibooks-2x.png', // T150618
+	],
+	'mkwikibooks' => [
+		'1x' => '/static/images/project-logos/mkwikibooks.png', // T54019
+	],
+	'mlwikibooks' => [
+		'1x' => '/static/images/project-logos/mlwikibooks.png', // T45111
+		'1.5x' => '/static/images/project-logos/mlwikibooks-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/mlwikibooks-2x.png', // T150618
+	],
+	'mrwikibooks' => [
+		'1x' => '/static/images/project-logos/mrwikibooks.png', // T104132
+	],
+	'mswikibooks' => [
+		'1x' => '/static/images/project-logos/mswikibooks.png',
+	],
+	'newikibooks' => [
+		'1x' => '/static/images/project-logos/newikibooks.png', // T124881
+	],
+	'nowikibooks' => [
+		'1x' => '/static/images/project-logos/nowikibooks.png',
+		'1.5x' => '/static/images/project-logos/nowikibooks-1.5x.png',
+		'2x' => '/static/images/project-logos/nowikibooks-2x.png',
+	],
+	'ocwikibooks' => [
+		'1x' => '/static/images/project-logos/ocwikibooks.png', // T54019
+	],
+	'ptwikibooks' => [
+		'1x' => '/static/images/project-logos/ptwikibooks.png',
+	],
+	'rowikibooks' => [
+		'1x' => '/static/images/project-logos/rowikibooks.png',
+	],
+	'ruwikibooks' => [
+		'1x' => '/static/images/project-logos/ruwikibooks.png',
+		'1.5x' => '/static/images/project-logos/ruwikibooks-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/ruwikibooks-2x.png', // T150618
+	],
+	'simplewikibooks' => [
+		'1x' => '/static/images/project-logos/simplewikibooks.png', // T150618
+	],
+	'siwikibooks' => [
+		'1x' => '/static/images/project-logos/siwikibooks.png',
+	],
+	'skwikibooks' => [
+		'1x' => '/static/images/project-logos/skwikibooks.png',
+	],
+	'slwikibooks' => [
+		'1x' => '/static/images/project-logos/slwikibooks.png', // T54019
+	],
+	'sqwikibooks' => [
+		'1x' => '/static/images/project-logos/sqwikibooks.png',
+	],
+	'srwikibooks' => [
+		'1x' => '/static/images/project-logos/srwikibooks.png',
+		'1.5x' => '/static/images/project-logos/srwikibooks-1.5x.png', // T159534
+		'2x' => '/static/images/project-logos/srwikibooks-2x.png', // T159534
+	],
+	'tawikibooks' => [
+		'1x' => '/static/images/project-logos/tawikibooks.png', // T33862
+	],
+	'thwikibooks' => [
+		'1x' => '/static/images/project-logos/thwikibooks.png',
+	],
+	'trwikibooks' => [
+		'1x' => '/static/images/project-logos/trwikibooks.png',
+		'1.5x' => '/static/images/project-logos/trwikibooks-1.5x.png', // T177506
+		'2x' => '/static/images/project-logos/trwikibooks-2x.png', // T177506
+	],
+	'ttwikibooks' => [
+		'1x' => '/static/images/project-logos/ttwikibooks.png',
+	],
+	'ukwikibooks' => [
+		'1x' => '/static/images/project-logos/ukwikibooks.png',
+	],
+	'urwikibooks' => [
+		'1x' => '/static/images/project-logos/urwikibooks.png', // T185977
+		'1.5x' => '/static/images/project-logos/urwikibooks-1.5x.png', // T185977
+		'2x' => '/static/images/project-logos/urwikibooks-2x.png', // T185977
+	],
+	'viwikibooks' => [
+		'1x' => '/static/images/project-logos/viwikibooks.png', // T39661
+		'1.5x' => '/static/images/project-logos/viwikibooks-1.5x.png',
+		'2x' => '/static/images/project-logos/viwikibooks-2x.png',
+	],
+	'zhwikibooks' => [
+		'1x' => '/static/images/project-logos/zhwikibooks.png',
+	],
 
 	// Wikinews
-	'arwikinews' => '/static/images/project-logos/arwikinews.png',
-	'bgwikinews' => '/static/images/project-logos/bgwikinews.png',
-	'bswikinews' => '/static/images/project-logos/bswikinews.png',
-	'cawikinews' => '/static/images/project-logos/cawikinews.png',
-	'cswikinews' => '/static/images/project-logos/cswikinews.png',
-	'dewikinews' => '/static/images/project-logos/dewikinews.png',
-	'elwikinews' => '/static/images/project-logos/elwikinews.png',
-	'enwikinews' => '/static/images/project-logos/enwikinews.png',
-	'eowikinews' => '/static/images/project-logos/eowikinews.png',
-	'eswikinews' => '/static/images/project-logos/eswikinews.png',
-	'fawikinews' => '/static/images/project-logos/fawikinews.png',
-	'fiwikinews' => '/static/images/project-logos/fiwikinews.png',
-	'frwikinews' => '/static/images/project-logos/frwikinews.png',
-	'hewikinews' => '/static/images/project-logos/hewikinews.png',
-	'huwikinews' => '/static/images/project-logos/huwikinews.png',
-	'itwikinews' => '/static/images/project-logos/itwikinews.png',
-	'jawikinews' => '/static/images/project-logos/jawikinews.png',
-	'kowikinews' => '/static/images/project-logos/kowikinews.png',
-	'liwikinews' => '/static/images/project-logos/liwikinews.png',
-	'nlwikinews' => '/static/images/project-logos/nlwikinews.png',
-	'nowikinews' => '/static/images/project-logos/nowikinews.png',
-	'plwikinews' => '/static/images/project-logos/plwikinews.png',
-	'ptwikinews' => '/static/images/project-logos/ptwikinews.png',
-	'rowikinews' => '/static/images/project-logos/rowikinews.png',
-	'ruwikinews' => '/static/images/project-logos/ruwikinews.png',
-	'sdwikinews' => '/static/images/project-logos/sdwikinews.png',
-	'sqwikinews' => '/static/images/project-logos/sqwikinews.png', // T30114
-	'srwikinews' => '/static/images/project-logos/srwikinews.png',
-	'svwikinews' => '/static/images/project-logos/svwikinews.png',
-	'tawikinews' => '/static/images/project-logos/tawikinews.png',
-	'thwikinews' => '/static/images/project-logos/thwikinews.png',
-	'trwikinews' => '/static/images/project-logos/trwikinews.png',
-	'ukwikinews' => '/static/images/project-logos/ukwikinews.png', // T124778
-	'zhwikinews' => '/static/images/project-logos/zhwikinews.png',
+	'arwikinews' => [
+		'1x' => '/static/images/project-logos/arwikinews.png',
+	],
+	'bgwikinews' => [
+		'1x' => '/static/images/project-logos/bgwikinews.png',
+	],
+	'bswikinews' => [
+		'1x' => '/static/images/project-logos/bswikinews.png',
+	],
+	'cawikinews' => [
+		'1x' => '/static/images/project-logos/cawikinews.png',
+	],
+	'cswikinews' => [
+		'1x' => '/static/images/project-logos/cswikinews.png',
+	],
+	'dewikinews' => [
+		'1x' => '/static/images/project-logos/dewikinews.png',
+	],
+	'elwikinews' => [
+		'1x' => '/static/images/project-logos/elwikinews.png',
+		'1.5x' => '/static/images/project-logos/elwikinews-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/elwikinews-2x.png', // T150618
+	],
+	'enwikinews' => [
+		'1x' => '/static/images/project-logos/enwikinews.png',
+		'1.5x' => '/static/images/project-logos/enwikinews-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/enwikinews-2x.png', // T150618
+	],
+	'eowikinews' => [
+		'1x' => '/static/images/project-logos/eowikinews.png',
+	],
+	'eswikinews' => [
+		'1x' => '/static/images/project-logos/eswikinews.png',
+	],
+	'fawikinews' => [
+		'1x' => '/static/images/project-logos/fawikinews.png',
+	],
+	'fiwikinews' => [
+		'1x' => '/static/images/project-logos/fiwikinews.png',
+	],
+	'frwikinews' => [
+		'1x' => '/static/images/project-logos/frwikinews.png',
+		'1.5x' => '/static/images/project-logos/frwikinews-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/frwikinews-2x.png', // T150618
+	],
+	'hewikinews' => [
+		'1x' => '/static/images/project-logos/hewikinews.png',
+	],
+	'huwikinews' => [
+		'1x' => '/static/images/project-logos/huwikinews.png',
+	],
+	'itwikinews' => [
+		'1x' => '/static/images/project-logos/itwikinews.png',
+	],
+	'jawikinews' => [
+		'1x' => '/static/images/project-logos/jawikinews.png',
+	],
+	'kowikinews' => [
+		'1x' => '/static/images/project-logos/kowikinews.png',
+	],
+	'liwikinews' => [
+		'1x' => '/static/images/project-logos/liwikinews.png',
+		'1.5x' => '/static/images/project-logos/liwikinews-1.5x.png',
+		'2x' => '/static/images/project-logos/liwikinews-2x.png',
+	],
+	'nlwikinews' => [
+		'1x' => '/static/images/project-logos/nlwikinews.png',
+	],
+	'nowikinews' => [
+		'1x' => '/static/images/project-logos/nowikinews.png',
+	],
+	'plwikinews' => [
+		'1x' => '/static/images/project-logos/plwikinews.png',
+	],
+	'ptwikinews' => [
+		'1x' => '/static/images/project-logos/ptwikinews.png',
+	],
+	'rowikinews' => [
+		'1x' => '/static/images/project-logos/rowikinews.png',
+	],
+	'ruwikinews' => [
+		'1x' => '/static/images/project-logos/ruwikinews.png',
+		'1.5x' => '/static/images/project-logos/ruwikinews-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/ruwikinews-2x.png', // T150618
+	],
+	'sdwikinews' => [
+		'1x' => '/static/images/project-logos/sdwikinews.png',
+	],
+	'sqwikinews' => [
+		'1x' => '/static/images/project-logos/sqwikinews.png', // T30114
+	],
+	'srwikinews' => [
+		'1x' => '/static/images/project-logos/srwikinews.png',
+		'1.5x' => '/static/images/project-logos/srwikinews-1.5x.png', // T172255
+		'2x' => '/static/images/project-logos/srwikinews-2x.png', // T172255
+	],
+	'svwikinews' => [
+		'1x' => '/static/images/project-logos/svwikinews.png',
+	],
+	'tawikinews' => [
+		'1x' => '/static/images/project-logos/tawikinews.png',
+	],
+	'thwikinews' => [
+		'1x' => '/static/images/project-logos/thwikinews.png',
+	],
+	'trwikinews' => [
+		'1x' => '/static/images/project-logos/trwikinews.png',
+		'1.5x' => '/static/images/project-logos/trwikinews-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/trwikinews-2x.png', // T150618
+	],
+	'ukwikinews' => [
+		'1x' => '/static/images/project-logos/ukwikinews.png', // T124778
+	],
+	'zhwikinews' => [
+		'1x' => '/static/images/project-logos/zhwikinews.png',
+		'1.5x' => '/static/images/project-logos/zhwikinews-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/zhwikinews-2x.png', // T150618
+	],
 
 	// Wikisource
-	'sourceswiki' => '/static/images/project-logos/sourceswiki.png',
-	'arwikisource' => '/static/images/project-logos/arwikisource.png',
-	'aswikisource' => '/static/images/project-logos/aswikisource.png',  // T45129
-	'azwikisource' => '/static/images/project-logos/azwikisource.png',  // T54019
-	'bewikisource' => '/static/images/project-logos/bewikisource.png',
-	'bgwikisource' => '/static/images/project-logos/bgwikisource.png',  // T54019
-	'bnwikisource' => '/static/images/project-logos/bnwikisource.png',
-	'brwikisource' => '/static/images/project-logos/brwikisource.png',
-	'bswikisource' => '/static/images/project-logos/bswikisource.png',  // T54019
-	'cawikisource' => '/static/images/project-logos/cawikisource.png',
-	'cswikisource' => '/static/images/project-logos/cswikisource.png',
-	'cywikisource' => '/static/images/project-logos/cywikisource.png',  // T58807
-	'dewikisource' => '/static/images/project-logos/dewikisource.png',
-	'enwikisource' => '/static/images/project-logos/enwikisource.png',
-	'elwikisource' => '/static/images/project-logos/elwikisource.png',
-	'euwikisource' => '/static/images/project-logos/euwikisource.png',
-	'eowikisource' => '/static/images/project-logos/eowikisource.png',
-	'etwikisource' => '/static/images/project-logos/etwikisource.png',
-	'fawikisource' => '/static/images/project-logos/fawikisource.png',
-	'fiwikisource' => '/static/images/project-logos/fiwikisource.png',  // T54019
-	'frwikisource' => '/static/images/project-logos/frwikisource.png',
-	'guwikisource' => '/static/images/project-logos/guwikisource.png',
-	'hewikisource' => '/static/images/project-logos/hewikisource.png',
-	'hiwikisource' => '/static/images/project-logos/hiwikisource.png',
-	'htwikisource' => '/static/images/project-logos/htwikisource.png',  // T54019
-	'huwikisource' => '/static/images/project-logos/huwikisource.png',  // T54019
-	'hywikisource' => '/static/images/project-logos/hywikisource.png',  // T54019
-	'iswikisource' => '/static/images/project-logos/iswikisource.png',  // T54019
-	'knwikisource' => '/static/images/project-logos/knwikisource.png',  // T110806
-	'kowikisource' => '/static/images/project-logos/kowikisource.png',  // T40543
-	'lawikisource' => '/static/images/project-logos/lawikisource.png',  // T54019
-	'liwikisource' => '/static/images/project-logos/liwikisource.png',  // T54019
-	'ltwikisource' => '/static/images/project-logos/ltwikisource.png',  // T54019
-	'mkwikisource' => '/static/images/project-logos/mkwikisource.png',  // T54019
-	'mlwikisource' => '/static/images/project-logos/mlwikisource.png',
-	'mrwikisource' => '/static/images/project-logos/mrwikisource.png',  // T103655
-	'napwikisource' => '/static/images/project-logos/napwikisource.png', // T210752
-	'nowikisource' => '/static/images/project-logos/nowikisource.png',  // T167192
-	'orwikisource' => '/static/images/project-logos/orwikisource.png',  // T73875
-	'pawikisource' => '/static/images/project-logos/pawikisource.png',  // T149522
-	'plwikisource' => '/static/images/project-logos/plwikisource.png',
-	'ruwikisource' => '/static/images/project-logos/ruwikisource.png',
-	'sawikisource' => '/static/images/project-logos/sawikisource.png',
-	'sahwikisource' => '/static/images/project-logos/sahwikisource.png',
-	'skwikisource' => '/static/images/project-logos/skwikisource.png',
-	'slwikisource' => '/static/images/project-logos/slwikisource.png',  // T54019
-	'srwikisource' => '/static/images/project-logos/srwikisource.png',  // T54019
-	'tawikisource' => '/static/images/project-logos/tawikisource.png',
-	'tewikisource' => '/static/images/project-logos/tewikisource.png',  // T46796
-	'thwikisource' => '/static/images/project-logos/thwikisource.png',  // T54019
-	'trwikisource' => '/static/images/project-logos/trwikisource.png',  // T54019
-	'ukwikisource' => '/static/images/project-logos/ukwikisource.png',  // T56491
-	'vecwikisource' => '/static/images/project-logos/vecwikisource.png', // T132157
-	'viwikisource' => '/static/images/project-logos/viwikisource.png',
-	'yiwikisource' => '/static/images/project-logos/yiwikisource.png',
-	'zhwikisource' => '/static/images/project-logos/zhwikisource.png', // T229715
-	'zh_min_nanwikisource' => '/static/images/project-logos/zh_min_nanwikisource.png',
+	'sourceswiki' => [
+		'1x' => '/static/images/project-logos/sourceswiki.png',
+		'1.5x' => '/static/images/project-logos/sourceswiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/sourceswiki-2x.png', // T150618
+	],
+	'arwikisource' => [
+		'1x' => '/static/images/project-logos/arwikisource.png',
+	],
+	'aswikisource' => [
+		'1x' => '/static/images/project-logos/aswikisource.png', // T45129
+	],
+	'azwikisource' => [
+		'1x' => '/static/images/project-logos/azwikisource.png', // T54019
+	],
+	'bewikisource' => [
+		'1x' => '/static/images/project-logos/bewikisource.png',
+		'1.5x' => '/static/images/project-logos/bewikisource-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/bewikisource-2x.png', // T150618
+	],
+	'bgwikisource' => [
+		'1x' => '/static/images/project-logos/bgwikisource.png', // T54019
+	],
+	'bnwikisource' => [
+		'1x' => '/static/images/project-logos/bnwikisource.png',
+	],
+	'brwikisource' => [
+		'1x' => '/static/images/project-logos/brwikisource.png',
+	],
+	'bswikisource' => [
+		'1x' => '/static/images/project-logos/bswikisource.png', // T54019
+	],
+	'cawikisource' => [
+		'1x' => '/static/images/project-logos/cawikisource.png',
+	],
+	'cswikisource' => [
+		'1x' => '/static/images/project-logos/cswikisource.png',
+		'1.5x' => '/static/images/project-logos/cswikisource-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/cswikisource-2x.png', // T150618
+	],
+	'cywikisource' => [
+		'1x' => '/static/images/project-logos/cywikisource.png', // T58807
+	],
+	'dewikisource' => [
+		'1x' => '/static/images/project-logos/dewikisource.png',
+	],
+	'elwikisource' => [
+		'1x' => '/static/images/project-logos/elwikisource.png',
+	],
+	'enwikisource' => [
+		'1x' => '/static/images/project-logos/enwikisource.png',
+		'1.5x' => '/static/images/project-logos/enwikisource-1.5x.png',
+		'2x' => '/static/images/project-logos/enwikisource-2x.png',
+	],
+	'eowikisource' => [
+		'1x' => '/static/images/project-logos/eowikisource.png',
+	],
+	'etwikisource' => [
+		'1x' => '/static/images/project-logos/etwikisource.png',
+	],
+	'euwikisource' => [
+		'1x' => '/static/images/project-logos/euwikisource.png',
+		'1.5x' => '/static/images/project-logos/euwikisource-1.5x.png',
+		'2x' => '/static/images/project-logos/euwikisource-2x.png',
+	],
+	'fawikisource' => [
+		'1x' => '/static/images/project-logos/fawikisource.png',
+	],
+	'fiwikisource' => [
+		'1x' => '/static/images/project-logos/fiwikisource.png', // T54019
+	],
+	'frwikisource' => [
+		'1x' => '/static/images/project-logos/frwikisource.png',
+		'1.5x' => '/static/images/project-logos/frwikisource-1.5x.png',
+		'2x' => '/static/images/project-logos/frwikisource-2x.png',
+	],
+	'guwikisource' => [
+		'1x' => '/static/images/project-logos/guwikisource.png',
+	],
+	'hewikisource' => [
+		'1x' => '/static/images/project-logos/hewikisource.png',
+	],
+	'hiwikisource' => [
+		'1x' => '/static/images/project-logos/hiwikisource.png',
+		'1.5x' => '/static/images/project-logos/hiwikisource-1.5x.png',
+		'2x' => '/static/images/project-logos/hiwikisource-2x.png',
+	],
+	'htwikisource' => [
+		'1x' => '/static/images/project-logos/htwikisource.png', // T54019
+	],
+	'huwikisource' => [
+		'1x' => '/static/images/project-logos/huwikisource.png', // T54019
+	],
+	'hywikisource' => [
+		'1x' => '/static/images/project-logos/hywikisource.png', // T54019
+	],
+	'iswikisource' => [
+		'1x' => '/static/images/project-logos/iswikisource.png', // T54019
+	],
+	'knwikisource' => [
+		'1x' => '/static/images/project-logos/knwikisource.png', // T110806
+	],
+	'kowikisource' => [
+		'1x' => '/static/images/project-logos/kowikisource.png', // T40543
+	],
+	'lawikisource' => [
+		'1x' => '/static/images/project-logos/lawikisource.png', // T54019
+	],
+	'liwikisource' => [
+		'1x' => '/static/images/project-logos/liwikisource.png', // T54019
+	],
+	'ltwikisource' => [
+		'1x' => '/static/images/project-logos/ltwikisource.png', // T54019
+	],
+	'mkwikisource' => [
+		'1x' => '/static/images/project-logos/mkwikisource.png', // T54019
+	],
+	'mlwikisource' => [
+		'1x' => '/static/images/project-logos/mlwikisource.png',
+	],
+	'mrwikisource' => [
+		'1x' => '/static/images/project-logos/mrwikisource.png', // T103655
+	],
+	'napwikisource' => [
+		'1x' => '/static/images/project-logos/napwikisource.png', // T210752
+		'1.5x' => '/static/images/project-logos/napwikisource-1.5x.png', // T210752
+		'2x' => '/static/images/project-logos/napwikisource-2x.png', // T210752
+	],
+	'nowikisource' => [
+		'1x' => '/static/images/project-logos/nowikisource.png', // T167192
+		'1.5x' => '/static/images/project-logos/nowikisource-1.5x.png', // T167192
+		'2x' => '/static/images/project-logos/nowikisource-2x.png', // T167192
+	],
+	'orwikisource' => [
+		'1x' => '/static/images/project-logos/orwikisource.png', // T73875
+	],
+	'pawikisource' => [
+		'1x' => '/static/images/project-logos/pawikisource.png', // T149522
+		'1.5x' => '/static/images/project-logos/pawikisource-1.5x.png', // T149522
+		'2x' => '/static/images/project-logos/pawikisource-2x.png', // T149522
+	],
+	'plwikisource' => [
+		'1x' => '/static/images/project-logos/plwikisource.png',
+	],
+	'ruwikisource' => [
+		'1x' => '/static/images/project-logos/ruwikisource.png',
+		'1.5x' => '/static/images/project-logos/ruwikisource-1.5x.png', // T203343
+		'2x' => '/static/images/project-logos/ruwikisource-2x.png', // T203343
+	],
+	'sahwikisource' => [
+		'1x' => '/static/images/project-logos/sahwikisource.png',
+	],
+	'sawikisource' => [
+		'1x' => '/static/images/project-logos/sawikisource.png',
+	],
+	'skwikisource' => [
+		'1x' => '/static/images/project-logos/skwikisource.png',
+	],
+	'slwikisource' => [
+		'1x' => '/static/images/project-logos/slwikisource.png', // T54019
+	],
+	'srwikisource' => [
+		'1x' => '/static/images/project-logos/srwikisource.png', // T54019
+		'1.5x' => '/static/images/project-logos/srwikisource-1.5x.png', // T172268
+		'2x' => '/static/images/project-logos/srwikisource-2x.png', // T172268
+	],
+	'tawikisource' => [
+		'1x' => '/static/images/project-logos/tawikisource.png',
+	],
+	'tewikisource' => [
+		'1x' => '/static/images/project-logos/tewikisource.png', // T46796
+		'1.5x' => '/static/images/project-logos/tewikisource-1.5x.png',
+		'2x' => '/static/images/project-logos/tewikisource-2x.png',
+	],
+	'thwikisource' => [
+		'1x' => '/static/images/project-logos/thwikisource.png', // T54019
+	],
+	'trwikisource' => [
+		'1x' => '/static/images/project-logos/trwikisource.png', // T54019
+	],
+	'ukwikisource' => [
+		'1x' => '/static/images/project-logos/ukwikisource.png', // T56491
+	],
+	'vecwikisource' => [
+		'1x' => '/static/images/project-logos/vecwikisource.png', // T132157
+	],
+	'viwikisource' => [
+		'1x' => '/static/images/project-logos/viwikisource.png',
+		'1.5x' => '/static/images/project-logos/viwikisource-1.5x.png',
+		'2x' => '/static/images/project-logos/viwikisource-2x.png',
+	],
+	'yiwikisource' => [
+		'1x' => '/static/images/project-logos/yiwikisource.png',
+		'1.5x' => '/static/images/project-logos/yiwikisource-1.5x.png', // T193562
+		'2x' => '/static/images/project-logos/yiwikisource-2x.png', // T193562
+	],
+	'zh_min_nanwikisource' => [
+		'1x' => '/static/images/project-logos/zh_min_nanwikisource.png',
+	],
+	'zhwikisource' => [
+		'1x' => '/static/images/project-logos/zhwikisource.png', // T229715
+		'1.5x' => '/static/images/project-logos/zhwikisource-1.5x.png', // T229715
+		'2x' => '/static/images/project-logos/zhwikisource-2x.png', // T229715
+	],
 
 	// Wikiversity
-	'arwikiversity' => '/static/images/project-logos/arwikiversity.png',
-	'betawikiversity' => '/static/images/project-logos/betawikiversity.png',
-	'cswikiversity' => '/static/images/project-logos/cswikiversity.png',  // T54019
-	'dewikiversity' => '/static/images/project-logos/dewikiversity.png',
-	'elwikiversity' => '/static/images/project-logos/elwikiversity.png',
-	'enwikiversity' => '/static/images/project-logos/enwikiversity.png',
-	'eswikiversity' => '/static/images/project-logos/eswikiversity.png',
-	'fiwikiversity' => '/static/images/project-logos/fiwikiversity.png',
-	'frwikiversity' => '/static/images/project-logos/frwikiversity.png',
-	'hiwikiversity' => '/static/images/project-logos/hiwikiversity.png',
-	'itwikiversity' => '/static/images/project-logos/itwikiversity.png',
-	'jawikiversity' => '/static/images/project-logos/jawikiversity.png',
-	'kowikiversity' => '/static/images/project-logos/kowikiversity.png',
-	'ptwikiversity' => '/static/images/project-logos/ptwikiversity.png',
-	'ruwikiversity' => '/static/images/project-logos/ruwikiversity.png',
-	'slwikiversity' => '/static/images/project-logos/slwikiversity.png',
-	'svwikiversity' => '/static/images/project-logos/svwikiversity.png',
-	'zhwikiversity' => '/static/images/project-logos/zhwikiversity.png',
+	'arwikiversity' => [
+		'1x' => '/static/images/project-logos/arwikiversity.png',
+		'1.5x' => '/static/images/project-logos/arwikiversity-1.5x.png',
+		'2x' => '/static/images/project-logos/arwikiversity-2x.png',
+	],
+	'betawikiversity' => [
+		'1x' => '/static/images/project-logos/betawikiversity.png',
+	],
+	'cswikiversity' => [
+		'1x' => '/static/images/project-logos/cswikiversity.png', // T54019
+		'1.5x' => '/static/images/project-logos/cswikiversity-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/cswikiversity-2x.png', // T150618
+	],
+	'dewikiversity' => [
+		'1x' => '/static/images/project-logos/dewikiversity.png',
+		'1.5x' => '/static/images/project-logos/dewikiversity-1.5x.png',
+		'2x' => '/static/images/project-logos/dewikiversity-2x.png',
+	],
+	'elwikiversity' => [
+		'1x' => '/static/images/project-logos/elwikiversity.png',
+		'1.5x' => '/static/images/project-logos/elwikiversity-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/elwikiversity-2x.png', // T150618
+	],
+	'enwikiversity' => [
+		'1x' => '/static/images/project-logos/enwikiversity.png',
+		'1.5x' => '/static/images/project-logos/enwikiversity-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/enwikiversity-2x.png', // T150618
+	],
+	'eswikiversity' => [
+		'1x' => '/static/images/project-logos/eswikiversity.png',
+		'1.5x' => '/static/images/project-logos/eswikiversity-1.5x.png',
+		'2x' => '/static/images/project-logos/eswikiversity-2x.png',
+	],
+	'fiwikiversity' => [
+		'1x' => '/static/images/project-logos/fiwikiversity.png',
+		'1.5x' => '/static/images/project-logos/fiwikiversity-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/fiwikiversity-2x.png', // T150618
+	],
+	'frwikiversity' => [
+		'1x' => '/static/images/project-logos/frwikiversity.png',
+		'1.5x' => '/static/images/project-logos/frwikiversity-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/frwikiversity-2x.png', // T150618
+	],
+	'hiwikiversity' => [
+		'1x' => '/static/images/project-logos/hiwikiversity.png',
+		'1.5x' => '/static/images/project-logos/hiwikiversity-1.5x.png',
+		'2x' => '/static/images/project-logos/hiwikiversity-2x.png',
+	],
+	'itwikiversity' => [
+		'1x' => '/static/images/project-logos/itwikiversity.png',
+		'1.5x' => '/static/images/project-logos/itwikiversity-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/itwikiversity-2x.png', // T150618
+	],
+	'jawikiversity' => [
+		'1x' => '/static/images/project-logos/jawikiversity.png',
+		'1.5x' => '/static/images/project-logos/jawikiversity-1.5x.png',
+		'2x' => '/static/images/project-logos/jawikiversity-2x.png',
+	],
+	'kowikiversity' => [
+		'1x' => '/static/images/project-logos/kowikiversity.png',
+		'1.5x' => '/static/images/project-logos/kowikiversity-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/kowikiversity-2x.png', // T150618
+	],
+	'ptwikiversity' => [
+		'1x' => '/static/images/project-logos/ptwikiversity.png',
+		'1.5x' => '/static/images/project-logos/ptwikiversity-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/ptwikiversity-2x.png', // T150618
+	],
+	'ruwikiversity' => [
+		'1x' => '/static/images/project-logos/ruwikiversity.png',
+		'1.5x' => '/static/images/project-logos/ruwikiversity-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/ruwikiversity-2x.png', // T150618
+	],
+	'slwikiversity' => [
+		'1x' => '/static/images/project-logos/slwikiversity.png',
+		'1.5x' => '/static/images/project-logos/slwikiversity-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/slwikiversity-2x.png', // T150618
+	],
+	'svwikiversity' => [
+		'1x' => '/static/images/project-logos/svwikiversity.png',
+		'1.5x' => '/static/images/project-logos/svwikiversity-1.5x.png',
+		'2x' => '/static/images/project-logos/svwikiversity-2x.png',
+	],
+	'zhwikiversity' => [
+		'1x' => '/static/images/project-logos/zhwikiversity.png',
+		'1.5x' => '/static/images/project-logos/zhwikiversity-1.5x.png',
+		'2x' => '/static/images/project-logos/zhwikiversity-2x.png',
+	],
 
 	// Wikivoyage
-	'bnwikivoyage' => '/static/images/project-logos/bnwikivoyage.png',
-	'enwikivoyage' => '/static/images/project-logos/enwikivoyage.png',
-	'elwikivoyage' => '/static/images/project-logos/elwikivoyage.png',
-	'eswikivoyage' => '/static/images/project-logos/eswikivoyage.png', // T170604
-	'fawikivoyage' => '/static/images/project-logos/fawikivoyage.png', // T73382
-	'fiwikivoyage' => '/static/images/project-logos/fiwikivoyage.png', // T151570
-	'hewikivoyage' => '/static/images/project-logos/hewikivoyage.png',
-	'hiwikivoyage' => '/static/images/project-logos/hiwikivoyage.png', // T173013
-	'plwikivoyage' => '/static/images/project-logos/plwikivoyage.png',
-	'ruwikivoyage' => '/static/images/project-logos/ruwikivoyage.png',
-	'viwikivoyage' => '/static/images/project-logos/viwikivoyage.png',
-	'ukwikivoyage' => '/static/images/project-logos/ukwikivoyage.png', // T110370
-	'zhwikivoyage' => '/static/images/project-logos/zhwikivoyage.png', // T61077
+	'bnwikivoyage' => [
+		'1x' => '/static/images/project-logos/bnwikivoyage.png',
+		'1.5x' => '/static/images/project-logos/bnwikivoyage-1.5x.png',
+		'2x' => '/static/images/project-logos/bnwikivoyage-2x.png',
+	],
+	'elwikivoyage' => [
+		'1x' => '/static/images/project-logos/elwikivoyage.png',
+	],
+	'enwikivoyage' => [
+		'1x' => '/static/images/project-logos/enwikivoyage.png',
+		'1.5x' => '/static/images/project-logos/enwikivoyage-1.5x.png',
+		'2x' => '/static/images/project-logos/enwikivoyage-2x.png',
+	],
+	'eswikivoyage' => [
+		'1x' => '/static/images/project-logos/eswikivoyage.png', // T170604
+		'1.5x' => '/static/images/project-logos/eswikivoyage-1.5x.png', // T170604
+		'2x' => '/static/images/project-logos/eswikivoyage-2x.png', // T170604
+	],
+	'fawikivoyage' => [
+		'1x' => '/static/images/project-logos/fawikivoyage.png', // T73382
+	],
+	'fiwikivoyage' => [
+		'1x' => '/static/images/project-logos/fiwikivoyage.png', // T151570
+		'1.5x' => '/static/images/project-logos/fiwikivoyage-1.5x.png',
+		'2x' => '/static/images/project-logos/fiwikivoyage-2x.png',
+	],
+	'hewikivoyage' => [
+		'1x' => '/static/images/project-logos/hewikivoyage.png',
+		'1.5x' => '/static/images/project-logos/hewikivoyage-1.5x.png', // T208148
+		'2x' => '/static/images/project-logos/hewikivoyage-2x.png', // T208148
+	],
+	'hiwikivoyage' => [
+		'1x' => '/static/images/project-logos/hiwikivoyage.png', // T173013
+		'1.5x' => '/static/images/project-logos/hiwikivoyage-1.5x.png', // T173013
+		'2x' => '/static/images/project-logos/hiwikivoyage-2x.png', // T173013
+	],
+	'plwikivoyage' => [
+		'1x' => '/static/images/project-logos/plwikivoyage.png',
+	],
+	'pswikivoyage' => [
+		'1x' => '/static/images/project-logos/pswikivoyage.png',
+		'1.5x' => '/static/images/project-logos/pswikivoyage-1.5x.png',
+		'2x' => '/static/images/project-logos/pswikivoyage-2x.png',
+	],
+	'ruwikivoyage' => [
+		'1x' => '/static/images/project-logos/ruwikivoyage.png',
+		'1.5x' => '/static/images/project-logos/ruwikivoyage-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/ruwikivoyage-2x.png', // T150618
+	],
+	'ukwikivoyage' => [
+		'1x' => '/static/images/project-logos/ukwikivoyage.png', // T110370
+	],
+	'viwikivoyage' => [
+		'1x' => '/static/images/project-logos/viwikivoyage.png',
+		'1.5x' => '/static/images/project-logos/viwikivoyage-1.5x.png', // T151570
+		'2x' => '/static/images/project-logos/viwikivoyage-2x.png', // T151570
+	],
+	'zhwikivoyage' => [
+		'1x' => '/static/images/project-logos/zhwikivoyage.png', // T61077
+		'1.5x' => '/static/images/project-logos/zhwikivoyage-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/zhwikivoyage-2x.png', // T150618
+	],
 
-	// Chapter wikis
-	'amwikimedia' => '/static/images/project-logos/amwikimedia.png', // T176042
-	'arwikimedia' => '/static/images/project-logos/arwikimedia.png',
-	'bdwikimedia' => '/static/images/project-logos/bdwikimedia.png',
-	'bewikimedia' => '/static/images/project-logos/bewikimedia.png',
-	'cawikimedia' => '/static/images/project-logos/cawikimedia.png',
-	'cowikimedia' => '/static/images/project-logos/cowikimedia.png',
-	'dkwikimedia' => '/static/images/project-logos/dkwikimedia.png',
-	'ecwikimedia' => '/static/images/project-logos/ecwikimedia.png', // T135521
-	'etwikimedia' => '/static/images/project-logos/etwikimedia.png',
-	'fiwikimedia' => '/static/images/project-logos/fiwikimedia.png',
-	'hiwikimedia' => '/static/images/project-logos/hiwikimedia.png',
-	'idwikimedia' => '/static/images/project-logos/idwikimedia.png', // T192726
-	'id_internalwikimedia' => '/static/images/project-logos/id_internalwikimedia.png',
-	'mkwikimedia' => '/static/images/project-logos/mkwikimedia.png',
-	'mxwikimedia' => '/static/images/project-logos/mxwikimedia.png',
-	'nlwikimedia' => '/static/images/project-logos/nlwikimedia.png',
-	'nowikimedia' => '/static/images/project-logos/nowikimedia.png',
-	'nycwikimedia' => '/static/images/project-logos/nycwikimedia.png',
-	'nzwikimedia' => '/static/images/project-logos/nzwikimedia.png',
-	'pa_uswikimedia' => '/static/images/project-logos/pa_uswikimedia.png',
-	'plwikimedia' => '/static/images/project-logos/plwikimedia.png',
-	'ptwikimedia' => '/static/images/project-logos/ptwikimedia.png', // T126832
-	'rswikimedia' => '/static/images/project-logos/rswikimedia.png',
-	'ruwikimedia' => '/static/images/project-logos/ruwikimedia.png',
-	'sewikimedia' => '/static/images/project-logos/sewikimedia.png',
-	'trwikimedia' => '/static/images/project-logos/trwikimedia.png',
-	'uawikimedia' => '/static/images/project-logos/uawikimedia.png',
-
-	// Local user group wikis
-	'cnwikimedia' => '/static/images/project-logos/cnwikimedia.png', // T98676
-	'gewikimedia' => '/static/images/project-logos/gewikimedia.png', // T236389
-	'maiwikimedia' => '/static/images/project-logos/maiwikimedia.png',
-	'ngwikimedia' => '/static/images/project-logos/ngwikimedia.png', // T242416
-	'romdwikimedia' => '/static/images/project-logos/romdwikimedia.png',
-	'punjabiwikimedia' => '/static/images/project-logos/punjabiwikimedia.png',
-	'wbwikimedia' => '/static/images/project-logos/wbwikimedia.png', // T162510
+	// Chapter and local user group wikis
+	'amwikimedia' => [
+		'1x' => '/static/images/project-logos/amwikimedia.png', // T176042
+		'1.5x' => '/static/images/project-logos/amwikimedia-1.5x.png', // T176042
+		'2x' => '/static/images/project-logos/amwikimedia-2x.png', // T176042
+	],
+	'arwikimedia' => [
+		'1x' => '/static/images/project-logos/arwikimedia.png',
+	],
+	'bdwikimedia' => [
+		'1x' => '/static/images/project-logos/bdwikimedia.png',
+	],
+	'bewikimedia' => [
+		'1x' => '/static/images/project-logos/bewikimedia.png',
+	],
+	'cawikimedia' => [
+		'1x' => '/static/images/project-logos/cawikimedia.png',
+		'1.5x' => '/static/images/project-logos/cawikimedia-1.5x.png',
+		'2x' => '/static/images/project-logos/cawikimedia-2x.png',
+	],
+	'cnwikimedia' => [
+		'1x' => '/static/images/project-logos/cnwikimedia.png', // T98676
+	],
+	'cowikimedia' => [
+		'1x' => '/static/images/project-logos/cowikimedia.png',
+	],
+	'dkwikimedia' => [
+		'1x' => '/static/images/project-logos/dkwikimedia.png',
+	],
+	'ecwikimedia' => [
+		'1x' => '/static/images/project-logos/ecwikimedia.png', // T135521
+		'1.5x' => '/static/images/project-logos/ecwikimedia-1.5x.png', // T135521
+		'2x' => '/static/images/project-logos/ecwikimedia-2x.png', // T135521
+	],
+	'etwikimedia' => [
+		'1x' => '/static/images/project-logos/etwikimedia.png',
+	],
+	'fiwikimedia' => [
+		'1x' => '/static/images/project-logos/fiwikimedia.png',
+	],
+	'gewikimedia' => [
+		'1x' => '/static/images/project-logos/gewikimedia.png', // T236389
+		'1.5x' => '/static/images/project-logos/gewikimedia-1.5x.png', // T236389
+		'2x' => '/static/images/project-logos/gewikimedia-2x.png', // T236389
+	],
+	'hiwikimedia' => [
+		'1x' => '/static/images/project-logos/hiwikimedia.png',
+		'1.5x' => '/static/images/project-logos/hiwikimedia-1.5x.png',
+		'2x' => '/static/images/project-logos/hiwikimedia-2x.png',
+	],
+	'id_internalwikimedia' => [
+		'1x' => '/static/images/project-logos/id_internalwikimedia.png',
+		'1.5x' => '/static/images/project-logos/id_internalwikimedia-1.5x.png',
+		'2x' => '/static/images/project-logos/id_internalwikimedia-2x.png',
+	],
+	'idwikimedia' => [
+		'1x' => '/static/images/project-logos/idwikimedia.png', // T192726
+		'1.5x' => '/static/images/project-logos/idwikimedia-1.5x.png', // T192726
+		'2x' => '/static/images/project-logos/idwikimedia-2x.png', // T192726
+	],
+	'maiwikimedia' => [
+		'1x' => '/static/images/project-logos/maiwikimedia.png',
+		'1.5x' => '/static/images/project-logos/maiwikimedia-1.5x.png',
+		'2x' => '/static/images/project-logos/maiwikimedia-2x.png',
+	],
+	'mkwikimedia' => [
+		'1x' => '/static/images/project-logos/mkwikimedia.png',
+	],
+	'mxwikimedia' => [
+		'1x' => '/static/images/project-logos/mxwikimedia.png',
+	],
+	'ngwikimedia' => [
+		'1x' => '/static/images/project-logos/ngwikimedia.png', // T242416
+		'1.5x' => '/static/images/project-logos/ngwikimedia-1.5x.png', // T242416
+		'2x' => '/static/images/project-logos/ngwikimedia-2x.png', // T242416
+	],
+	'nlwikimedia' => [
+		'1x' => '/static/images/project-logos/nlwikimedia.png',
+	],
+	'nowikimedia' => [
+		'1x' => '/static/images/project-logos/nowikimedia.png',
+	],
+	'nycwikimedia' => [
+		'1x' => '/static/images/project-logos/nycwikimedia.png',
+	],
+	'nzwikimedia' => [
+		'1x' => '/static/images/project-logos/nzwikimedia.png',
+	],
+	'pa_uswikimedia' => [
+		'1x' => '/static/images/project-logos/pa_uswikimedia.png',
+	],
+	'plwikimedia' => [
+		'1x' => '/static/images/project-logos/plwikimedia.png',
+	],
+	'ptwikimedia' => [
+		'1x' => '/static/images/project-logos/ptwikimedia.png', // T126832
+		'1.5x' => '/static/images/project-logos/ptwikimedia-1.5x.png', // T126832
+		'2x' => '/static/images/project-logos/ptwikimedia-2x.png', // T126832
+	],
+	'punjabiwikimedia' => [
+		'1x' => '/static/images/project-logos/punjabiwikimedia.png',
+		'1.5x' => '/static/images/project-logos/punjabiwikimedia-1.5x.png',
+		'2x' => '/static/images/project-logos/punjabiwikimedia-2x.png',
+	],
+	'romdwikimedia' => [
+		'1x' => '/static/images/project-logos/romdwikimedia.png',
+		'1.5x' => '/static/images/project-logos/romdwikimedia-1.5x.png',
+		'2x' => '/static/images/project-logos/romdwikimedia-2x.png',
+	],
+	'rswikimedia' => [
+		'1x' => '/static/images/project-logos/rswikimedia.png',
+	],
+	'ruwikimedia' => [
+		'1x' => '/static/images/project-logos/ruwikimedia.png',
+	],
+	'sewikimedia' => [
+		'1x' => '/static/images/project-logos/sewikimedia.png',
+	],
+	'trwikimedia' => [
+		'1x' => '/static/images/project-logos/trwikimedia.png',
+		'1.5x' => '/static/images/project-logos/trwikimedia-1.5x.png',
+		'2x' => '/static/images/project-logos/trwikimedia-2x.png',
+	],
+	'uawikimedia' => [
+		'1x' => '/static/images/project-logos/uawikimedia.png',
+	],
+	'wbwikimedia' => [
+		'1x' => '/static/images/project-logos/wbwikimedia.png', // T162510
+		'1.5x' => '/static/images/project-logos/wbwikimedia-1.5x.png', // T162510
+		'2x' => '/static/images/project-logos/wbwikimedia-2x.png', // T162510
+	],
 
 	// Special wikis
-	'advisorswiki' => '/static/images/project-logos/advisorswiki.png', // T202844
-	'advisorywiki' => '/static/images/project-logos/advisorywiki.png',
-	'arbcom_dewiki' => '/static/images/project-logos/arbcom_dewiki.png', // T166947
-	'arbcom_cswiki' => '/static/images/project-logos/arbcom_cswiki.png', // T151731
-	'arbcom_enwiki' => '/static/images/project-logos/arbcom_enwiki.png',
-	'arbcom_fiwiki' => '/static/images/project-logos/arbcom_fiwiki.png',
-	'arbcom_nlwiki' => '/static/images/project-logos/arbcom_nlwiki.png',
-	'boardwiki' => '/static/images/project-logos/boardwiki.png',
-	'brwikimedia' => '/static/images/project-logos/brwikimedia.png',
-	'chairwiki' => '/static/images/project-logos/chairwiki.png',
-	'chapcomwiki' => '/static/images/project-logos/chapcomwiki.png',
-	'checkuserwiki' => '/static/images/project-logos/checkuserwiki.png',  // T30785
-	'collabwiki' => '/static/images/project-logos/collabwiki.png',
-	'commonswiki' => '/static/images/project-logos/commonswiki.png',
-	'testcommonswiki' => '/static/images/project-logos/commonswiki.png',
-	'donatewiki' => '/static/images/project-logos/donatewiki.png',
-	'execwiki' => '/static/images/project-logos/execwiki.png',
-	'fdcwiki' => '/static/images/project-logos/fdcwiki.png',  // T50379
-	'foundationwiki' => '/static/images/project-logos/foundationwiki.png',
-	'iegcomwiki' => '/static/images/project-logos/iegcomwiki.png',  // T50379
-	'incubatorwiki' => '/static/images/project-logos/incubatorwiki.png',
-	'internalwiki' => '/static/images/project-logos/internalwiki.png',
-	'legalteamwiki' => '/static/images/project-logos/legalteamwiki.png',
-	'loginwiki' => '/static/images/project-logos/loginwiki.png',  // T50236
-	'mediawikiwiki' => '/static/images/project-logos/mediawikiwiki.png',
-	'metawiki' => '/static/images/project-logos/metawiki.png',
-	'nostalgiawiki' => '/static/images/project-logos/nostalgiawiki.png',
-	'officewiki' => '/static/images/project-logos/officewiki.png',
-	'ombudsmenwiki' => '/static/images/project-logos/ombudsmenwiki.png',  // T50379
-	'otrs_wikiwiki' => '/static/images/project-logos/otrs_wikiwiki.png',
-	'outreachwiki' => '/static/images/project-logos/outreachwiki.png',
-	'qualitywiki' => '/static/images/project-logos/qualitywiki.png',
-	'searchcomwiki' => '/static/images/project-logos/searchcomwiki.png',
-	'spcomwiki' => '/static/images/project-logos/spcomwiki.png',
-	'specieswiki' => '/static/images/project-logos/specieswiki.png',
-	'stewardwiki' => '/static/images/project-logos/stewardwiki.png',  // T39700
-	'strategywiki' => '/static/images/project-logos/strategywiki.png',
-	'tenwiki' => '/static/images/project-logos/tenwiki.png',
-	'testwiki' => '/static/images/project-logos/testwiki.png',
-	'test2wiki' => '/static/images/project-logos/test2wiki.png',
-	'testwikidatawiki' => '/static/images/project-logos/testwikidatawiki.png',
-	'transitionteamwiki' => '/static/images/project-logos/transitionteamwiki.png',  // T50379
-	'usabilitywiki' => '/static/images/project-logos/usabilitywiki.png',
-	'votewiki' => '/static/images/project-logos/votewiki.png',
-	'wg_enwiki' => '/static/images/project-logos/wg_enwiki.png',
-	'wikidatawiki' => '/static/images/project-logos/wikidatawiki.png',
-	'wikimania2005wiki' => '/static/images/project-logos/wikimania2005wiki.png',  // T50382
-	'wikimania2006wiki' => '/static/images/project-logos/wikimania2006wiki.png',  // T50382
-	'wikimania2007wiki' => '/static/images/project-logos/wikimania2007wiki.png',  // T50382
-	'wikimania2008wiki' => '/static/images/project-logos/wikimania2008wiki.png',  // T50382
-	'wikimania2009wiki' => '/static/images/project-logos/wikimania2009wiki.png',  // T50382
-	'wikimania2010wiki' => '/static/images/project-logos/wikimania2010wiki.png',  // T50382
-	'wikimania2011wiki' => '/static/images/project-logos/wikimania2011wiki.png',  // T50382
-	'wikimania2012wiki' => '/static/images/project-logos/wikimania2012wiki.png',  // T50382
-	'wikimania2013wiki' => '/static/images/project-logos/wikimania2013wiki.png',  // T50382
-	'wikimania2014wiki' => '/static/images/project-logos/wikimania2014wiki.png',  // T58398
-	'wikimania2015wiki' => '/static/images/project-logos/wikimania2015wiki.png',  // T50382
-	'wikimania2016wiki' => '/static/images/project-logos/wikimania2016wiki.png',
-	'wikimania2017wiki' => '/static/images/project-logos/wikimania2017wiki.png',  // T122062
-	'wikimania2018wiki' => '/static/images/project-logos/wikimania2018wiki.png',  // T173042
-	'wikimaniawiki' => '/static/images/project-logos/wikimaniawiki.png',
-	'wikimaniateamwiki' => '/static/images/project-logos/wikimaniateamwiki.png',  // T50376
-],
-# @} end of wgLogo
-
-# wgLogos (previously wgLogoHD) @{
-// Alternate logos for high-resolution displays.
-'wgLogos' => [
-	# Wikipedia
-	'abwiki' => [ '1.5x' => '/static/images/project-logos/abwiki-1.5x.png', '2x' => '/static/images/project-logos/abwiki-2x.png' ], // T150618
-	'acewiki' => [ '1.5x' => '/static/images/project-logos/acewiki-1.5x.png', '2x' => '/static/images/project-logos/acewiki-2x.png' ], // T150618
-	'adywiki' => [ '1.5x' => '/static/images/project-logos/adywiki-1.5x.png', '2x' => '/static/images/project-logos/adywiki-2x.png' ], // T150618
-	'afwiki' => [ '1.5x' => '/static/images/project-logos/afwiki-1.5x.png', '2x' => '/static/images/project-logos/afwiki-2x.png' ], // T150618
-	'akwiki' => [ '1.5x' => '/static/images/project-logos/akwiki-1.5x.png', '2x' => '/static/images/project-logos/akwiki-2x.png' ], // T150618
-	'alswiki' => [ '1.5x' => '/static/images/project-logos/alswiki-1.5x.png', '2x' => '/static/images/project-logos/alswiki-2x.png' ], // T150618
-	'amwiki' => [ '1.5x' => '/static/images/project-logos/amwiki-1.5x.png', '2x' => '/static/images/project-logos/amwiki-2x.png' ], // T150618
-	'angwiki' => [ '1.5x' => '/static/images/project-logos/angwiki-1.5x.png', '2x' => '/static/images/project-logos/angwiki-2x.png' ], // T150618
-	'anwiki' => [ '1.5x' => '/static/images/project-logos/anwiki-1.5x.png', '2x' => '/static/images/project-logos/anwiki-2x.png' ], // T150618
-	'arwiki' => [ '1.5x' => '/static/images/project-logos/arwiki-1.5x.png', '2x' => '/static/images/project-logos/arwiki-2x.png' ], // T150618
-	'arzwiki' => [ '1.5x' => '/static/images/project-logos/arzwiki-1.5x.png', '2x' => '/static/images/project-logos/arzwiki-2x.png' ], // T150618
-	'astwiki' => [ '1.5x' => '/static/images/project-logos/astwiki-1.5x.png', '2x' => '/static/images/project-logos/astwiki-2x.png' ], // T150618
-	'atjwiki' => [ '1.5x' => '/static/images/project-logos/atjwiki-1.5x.png', '2x' => '/static/images/project-logos/atjwiki-2x.png' ], // T167714
-	'avwiki' => [ '1.5x' => '/static/images/project-logos/avwiki-1.5x.png', '2x' => '/static/images/project-logos/avwiki-2x.png' ], // T150618
-	'aywiki' => [ '1.5x' => '/static/images/project-logos/aywiki-1.5x.png', '2x' => '/static/images/project-logos/aywiki-2x.png' ], // T150618
-	'azbwiki' => [ '1.5x' => '/static/images/project-logos/azbwiki-1.5x.png', '2x' => '/static/images/project-logos/azbwiki-2x.png' ], // T150618
-	'azwiki' => [ '1.5x' => '/static/images/project-logos/azwiki-1.5x.png', '2x' => '/static/images/project-logos/azwiki-2x.png' ], // T150618
-	'banwiki' => [ '1.5x' => '/static/images/project-logos/banwiki-1.5x.png', '2x' => '/static/images/project-logos/banwiki-2x.png' ],
-	'barwiki' => [ '1.5x' => '/static/images/project-logos/barwiki-1.5x.png', '2x' => '/static/images/project-logos/barwiki-2x.png' ], // T150618
-	'bat_smgwiki' => [ '1.5x' => '/static/images/project-logos/bat_smgwiki-1.5x.png', '2x' => '/static/images/project-logos/bat_smgwiki-2x.png' ], // T150618
-	'bawiki' => [ '1.5x' => '/static/images/project-logos/bawiki-1.5x.png', '2x' => '/static/images/project-logos/bawiki-2x.png' ], // T150618
-	'bclwiki' => [ '1.5x' => '/static/images/project-logos/bclwiki-1.5x.png', '2x' => '/static/images/project-logos/bclwiki-2x.png' ], // T150618
-	'be_x_oldwiki' => [ '1.5x' => '/static/images/project-logos/be_x_oldwiki-1.5x.png', '2x' => '/static/images/project-logos/be_x_oldwiki-2x.png' ], // T150618
-	'bewiki' => [ '1.5x' => '/static/images/project-logos/bewiki-1.5x.png', '2x' => '/static/images/project-logos/bewiki-2x.png' ], // T150618
-	'bgwiki' => [ '1.5x' => '/static/images/project-logos/bgwiki-1.5x.png', '2x' => '/static/images/project-logos/bgwiki-2x.png' ], // T150618
-	'bhwiki' => [ '1.5x' => '/static/images/project-logos/bhwiki-1.5x.png', '2x' => '/static/images/project-logos/bhwiki-2x.png' ], // T150618
-	'biwiki' => [ '1.5x' => '/static/images/project-logos/biwiki-1.5x.png', '2x' => '/static/images/project-logos/biwiki-2x.png' ], // T150618
-	'bjnwiki' => [ '1.5x' => '/static/images/project-logos/bjnwiki-1.5x.png', '2x' => '/static/images/project-logos/bjnwiki-2x.png' ], // T150618
-	'bmwiki' => [ '1.5x' => '/static/images/project-logos/bmwiki-1.5x.png', '2x' => '/static/images/project-logos/bmwiki-2x.png' ], // T150618
-	'bnwiki' => [ '1.5x' => '/static/images/project-logos/bnwiki-1.5x.png', '2x' => '/static/images/project-logos/bnwiki-2x.png' ],
-	'bowiki' => [ '1.5x' => '/static/images/project-logos/bowiki-1.5x.png', '2x' => '/static/images/project-logos/bowiki-2x.png' ], // T150618
-	'bpywiki' => [ '1.5x' => '/static/images/project-logos/bpywiki-1.5x.png', '2x' => '/static/images/project-logos/bpywiki-2x.png' ], // T150618
-	'brwiki' => [ '1.5x' => '/static/images/project-logos/brwiki-1.5x.png', '2x' => '/static/images/project-logos/brwiki-2x.png' ], // T150618
-	'bswiki' => [ '1.5x' => '/static/images/project-logos/bswiki-1.5x.png', '2x' => '/static/images/project-logos/bswiki-2x.png' ], // T158815
-	'bugwiki' => [ '1.5x' => '/static/images/project-logos/bugwiki-1.5x.png', '2x' => '/static/images/project-logos/bugwiki-2x.png' ], // T150618
-	'bxrwiki' => [ '1.5x' => '/static/images/project-logos/bxrwiki-1.5x.png', '2x' => '/static/images/project-logos/bxrwiki-2x.png' ], // T150618
-	'cawiki' => [ '1.5x' => '/static/images/project-logos/cawiki-1.5x.png', '2x' => '/static/images/project-logos/cawiki-2x.png' ], // T150618
-	'cbk_zamwiki' => [ '1.5x' => '/static/images/project-logos/cbk_zamwiki-1.5x.png', '2x' => '/static/images/project-logos/cbk_zamwiki-2x.png' ], // T150618
-	'cdowiki' => [ '1.5x' => '/static/images/project-logos/cdowiki-1.5x.png', '2x' => '/static/images/project-logos/cdowiki-2x.png' ], // T150618
-	'cebwiki' => [ '1.5x' => '/static/images/project-logos/cebwiki-1.5x.png', '2x' => '/static/images/project-logos/cebwiki-2x.png' ], // T150616
-	'cewiki' => [ '1.5x' => '/static/images/project-logos/cewiki-1.5x.png', '2x' => '/static/images/project-logos/cewiki-2x.png' ], // T150618
-	'chwiki' => [ '1.5x' => '/static/images/project-logos/chwiki-1.5x.png', '2x' => '/static/images/project-logos/chwiki-2x.png' ], // T150618
-	'chrwiki' => [ '1.5x' => '/static/images/project-logos/chrwiki-1.5x.png', '2x' => '/static/images/project-logos/chrwiki-2x.png' ],
-	'chywiki' => [ '1.5x' => '/static/images/project-logos/chywiki-1.5x.png', '2x' => '/static/images/project-logos/chywiki-2x.png' ], // T150618
-	'ckbwiki' => [ '1.5x' => '/static/images/project-logos/ckbwiki-1.5x.png', '2x' => '/static/images/project-logos/ckbwiki-2x.png' ], // T150618
-	'cowiki' => [ '1.5x' => '/static/images/project-logos/cowiki-1.5x.png', '2x' => '/static/images/project-logos/cowiki-2x.png' ], // T150618
-	'crhwiki' => [ '1.5x' => '/static/images/project-logos/crhwiki-1.5x.png', '2x' => '/static/images/project-logos/crhwiki-2x.png' ], // T150618
-	'crwiki' => [ '1.5x' => '/static/images/project-logos/crwiki-1.5x.png', '2x' => '/static/images/project-logos/crwiki-2x.png' ], // T150618
-	'csbwiki' => [ '1.5x' => '/static/images/project-logos/csbwiki-1.5x.png', '2x' => '/static/images/project-logos/csbwiki-2x.png' ], // T150618
-	'cswiki' => [ '1.5x' => '/static/images/project-logos/cswiki-1.5x.png', '2x' => '/static/images/project-logos/cswiki-2x.png' ], // T130392
-	'cuwiki' => [ '1.5x' => '/static/images/project-logos/cuwiki-1.5x.png', '2x' => '/static/images/project-logos/cuwiki-2x.png' ], // T150618
-	'cvwiki' => [ '1.5x' => '/static/images/project-logos/cvwiki-1.5x.png', '2x' => '/static/images/project-logos/cvwiki-2x.png' ], // T150618
-	'cywiki' => [ '1.5x' => '/static/images/project-logos/cywiki-1.5x.png', '2x' => '/static/images/project-logos/cywiki-2x.png' ], // T150618
-	'dawiki' => [ '1.5x' => '/static/images/project-logos/dawiki-1.5x.png', '2x' => '/static/images/project-logos/dawiki-2x.png' ], // T131033
-	'dewiki' => [ '1.5x' => '/static/images/project-logos/dewiki-1.5x.png', '2x' => '/static/images/project-logos/dewiki-2x.png' ], // T132792
-	'dinwiki' => [ '1.5x' => '/static/images/project-logos/dinwiki-1.5x.png', '2x' => '/static/images/project-logos/dinwiki-2x.png' ],
-	'diqwiki' => [ '1.5x' => '/static/images/project-logos/diqwiki-1.5x.png', '2x' => '/static/images/project-logos/diqwiki-2x.png' ], // T150618
-	'dsbwiki' => [ '1.5x' => '/static/images/project-logos/dsbwiki-1.5x.png', '2x' => '/static/images/project-logos/dsbwiki-2x.png' ], // T150618
-	'dtywiki' => [ '1.5x' => '/static/images/project-logos/dtywiki-1.5x.png', '2x' => '/static/images/project-logos/dtywiki-2x.png' ], // T150618
-	'dvwiki' => [ '1.5x' => '/static/images/project-logos/dvwiki-1.5x.png', '2x' => '/static/images/project-logos/dvwiki-2x.png' ], // T150618
-	'dzwiki' => [ '1.5x' => '/static/images/project-logos/dzwiki-1.5x.png', '2x' => '/static/images/project-logos/dzwiki-2x.png' ], // T150618
-	'eewiki' => [ '1.5x' => '/static/images/project-logos/eewiki-1.5x.png', '2x' => '/static/images/project-logos/eewiki-2x.png' ], // T150618
-	'elwiki' => [ '1.5x' => '/static/images/project-logos/elwiki-1.5x.png', '2x' => '/static/images/project-logos/elwiki-2x.png' ], // T150618
-	'emlwiki' => [ '1.5x' => '/static/images/project-logos/emlwiki-1.5x.png', '2x' => '/static/images/project-logos/emlwiki-2x.png' ], // T150618
-	'enwiki' => [ '1.5x' => '/static/images/project-logos/enwiki-1.5x.png', '2x' => '/static/images/project-logos/enwiki-2x.png' ],
-	'eowiki' => [ '1.5x' => '/static/images/project-logos/eowiki-1.5x.png', '2x' => '/static/images/project-logos/eowiki-2x.png' ], // T150618
-	'eswiki' => [ '1.5x' => '/static/images/project-logos/eswiki-1.5x.png', '2x' => '/static/images/project-logos/eswiki-2x.png' ], // T150618
-	'etwiki' => [ '1.5x' => '/static/images/project-logos/etwiki-1.5x.png', '2x' => '/static/images/project-logos/etwiki-2x.png' ], // T150618
-	'euwiki' => [ '1.5x' => '/static/images/project-logos/euwiki-1.5x.png', '2x' => '/static/images/project-logos/euwiki-2x.png' ], // T150618
-	'extwiki' => [ '1.5x' => '/static/images/project-logos/extwiki-1.5x.png', '2x' => '/static/images/project-logos/extwiki-2x.png' ], // T150618
-	'fawiki' => [ '1.5x' => '/static/images/project-logos/fawiki-1.5x.png', '2x' => '/static/images/project-logos/fawiki-2x.png' ],
-	'ffwiki' => [ '1.5x' => '/static/images/project-logos/ffwiki-1.5x.png', '2x' => '/static/images/project-logos/ffwiki-2x.png' ], // T150618
-	'fiu_vrowiki' => [ '1.5x' => '/static/images/project-logos/fiu_vrowiki-1.5x.png', '2x' => '/static/images/project-logos/fiu_vrowiki-2x.png' ], // T150618
-	'fiwiki' => [ '1.5x' => '/static/images/project-logos/fiwiki-1.5x.png', '2x' => '/static/images/project-logos/fiwiki-2x.png' ], // T150618
-	'fowiki' => [ '1.5x' => '/static/images/project-logos/fowiki-1.5x.png', '2x' => '/static/images/project-logos/fowiki-2x.png' ], // T150618
-	'frpwiki' => [ '1.5x' => '/static/images/project-logos/frpwiki-1.5x.png', '2x' => '/static/images/project-logos/frpwiki-2x.png' ], // T150618
-	'frrwiki' => [ '1.5x' => '/static/images/project-logos/frrwiki-1.5x.png', '2x' => '/static/images/project-logos/frrwiki-2x.png' ], // T150618
-	'frwiki' => [ '1.5x' => '/static/images/project-logos/frwiki-1.5x.png', '2x' => '/static/images/project-logos/frwiki-2x.png' ],
-	'furwiki' => [ '1.5x' => '/static/images/project-logos/furwiki-1.5x.png', '2x' => '/static/images/project-logos/furwiki-2x.png' ], // T150618
-	'fywiki' => [ '1.5x' => '/static/images/project-logos/fywiki-1.5x.png', '2x' => '/static/images/project-logos/fywiki-2x.png' ], // T150618
-	'gagwiki' => [ '1.5x' => '/static/images/project-logos/gagwiki-1.5x.png', '2x' => '/static/images/project-logos/gagwiki-2x.png' ], // T150618
-	'gcrwiki' => [ '1.5x' => '/static/images/project-logos/gcrwiki-1.5x.png', '2x' => '/static/images/project-logos/gcrwiki-2x.png' ],
-	'gawiki' => [ '1.5x' => '/static/images/project-logos/gawiki-1.5x.png', '2x' => '/static/images/project-logos/gawiki-2x.png' ], // T150618
-	'gdwiki' => [ '1.5x' => '/static/images/project-logos/gdwiki-1.5x.png', '2x' => '/static/images/project-logos/gdwiki-2x.png' ], // T150618
-	'glkwiki' => [ '1.5x' => '/static/images/project-logos/glkwiki-1.5x.png', '2x' => '/static/images/project-logos/glkwiki-2x.png' ], // T150618
-	'glwiki' => [ '1.5x' => '/static/images/project-logos/glwiki-1.5x.png', '2x' => '/static/images/project-logos/glwiki-2x.png' ], // T150618
-	'gnwiki' => [ '1.5x' => '/static/images/project-logos/gnwiki-1.5x.png', '2x' => '/static/images/project-logos/gnwiki-2x.png' ], // T150618
-	'gomwiki' => [ '1.5x' => '/static/images/project-logos/gomwiki-1.5x.png', '2x' => '/static/images/project-logos/gomwiki-2x.png' ], // T150618
-	'gorwiki' => [ '1.5x' => '/static/images/project-logos/gorwiki-1.5x.png', '2x' => '/static/images/project-logos/gorwiki-2x.png' ],
-	'guwiki' => [ '1.5x' => '/static/images/project-logos/guwiki-1.5x.png', '2x' => '/static/images/project-logos/guwiki-2x.png' ], // T150618
-	'gvwiki' => [ '1.5x' => '/static/images/project-logos/gvwiki-1.5x.png', '2x' => '/static/images/project-logos/gvwiki-2x.png' ], // T150618
-	'hakwiki' => [ '1.5x' => '/static/images/project-logos/hakwiki-1.5x.png', '2x' => '/static/images/project-logos/hakwiki-2x.png' ], // T150618
-	'hawiki' => [ '1.5x' => '/static/images/project-logos/hawiki-1.5x.png', '2x' => '/static/images/project-logos/hawiki-2x.png' ], // T150618
-	'hawwiki' => [ '1.5x' => '/static/images/project-logos/hawwiki-1.5x.png', '2x' => '/static/images/project-logos/hawwiki-2x.png' ], // T150618
-	'hewiki' => [ '1.5x' => '/static/images/project-logos/hewiki-1.5x.png', '2x' => '/static/images/project-logos/hewiki-2x.png' ], // T145017
-	'hifwiki' => [ '1.5x' => '/static/images/project-logos/hifwiki-1.5x.png', '2x' => '/static/images/project-logos/hifwiki-2x.png' ], // T150618
-	'hiwiki' => [ '1.5x' => '/static/images/project-logos/hiwiki-1.5x.png', '2x' => '/static/images/project-logos/hiwiki-2x.png' ], // T150618
-	'hrwiki' => [ '1.5x' => '/static/images/project-logos/hrwiki-1.5x.png', '2x' => '/static/images/project-logos/hrwiki-2x.png' ], // T150618
-	'hsbwiki' => [ '1.5x' => '/static/images/project-logos/hsbwiki-1.5x.png', '2x' => '/static/images/project-logos/hsbwiki-2x.png' ], // T150618
-	'htwiki' => [ '1.5x' => '/static/images/project-logos/htwiki-1.5x.png', '2x' => '/static/images/project-logos/htwiki-2x.png' ], // T150618
-	'huwiki' => [ '1.5x' => '/static/images/project-logos/huwiki-1.5x.png', '2x' => '/static/images/project-logos/huwiki-2x.png' ], // T150618
-	'hywiki' => [ '1.5x' => '/static/images/project-logos/hywiki-1.5x.png', '2x' => '/static/images/project-logos/hywiki-2x.png' ], // T150620
-	'hywwiki' => [ '1.5x' => '/static/images/project-logos/hywwiki-1.5x.png', '2x' => '/static/images/project-logos/hywwiki-2x.png' ], // T212597
-	'iawiki' => [ '1.5x' => '/static/images/project-logos/iawiki-1.5x.png', '2x' => '/static/images/project-logos/iawiki-2x.png' ], // T150618
-	'idwiki' => [ '1.5x' => '/static/images/project-logos/idwiki-1.5x.png', '2x' => '/static/images/project-logos/idwiki-2x.png' ], // T150618
-	'iewiki' => [ '1.5x' => '/static/images/project-logos/iewiki-1.5x.png', '2x' => '/static/images/project-logos/iewiki-2x.png' ], // T150618
-	'igwiki' => [ '1.5x' => '/static/images/project-logos/igwiki-1.5x.png', '2x' => '/static/images/project-logos/igwiki-2x.png' ], // T150618
-	'ikwiki' => [ '1.5x' => '/static/images/project-logos/ikwiki-1.5x.png', '2x' => '/static/images/project-logos/ikwiki-2x.png' ], // T150618
-	'ilowiki' => [ '1.5x' => '/static/images/project-logos/ilowiki-1.5x.png', '2x' => '/static/images/project-logos/ilowiki-2x.png' ],
-	'iowiki' => [ '1.5x' => '/static/images/project-logos/iowiki-1.5x.png', '2x' => '/static/images/project-logos/iowiki-2x.png' ], // T150618
-	'iswiki' => [ '1.5x' => '/static/images/project-logos/iswiki-1.5x.png', '2x' => '/static/images/project-logos/iswiki-2x.png' ], // T150618
-	'itwiki' => [ '1.5x' => '/static/images/project-logos/itwiki-1.5x.png', '2x' => '/static/images/project-logos/itwiki-2x.png' ],
-	'iuwiki' => [ '1.5x' => '/static/images/project-logos/iuwiki-1.5x.png', '2x' => '/static/images/project-logos/iuwiki-2x.png' ], // T150618
-	'jamwiki' => [ '1.5x' => '/static/images/project-logos/jamwiki-1.5x.png', '2x' => '/static/images/project-logos/jamwiki-2x.png' ], // T134017
-	'jawiki' => [ '1.5x' => '/static/images/project-logos/jawiki-1.5x.png', '2x' => '/static/images/project-logos/jawiki-2x.png' ], // T150618
-	'jbowiki' => [ '1.5x' => '/static/images/project-logos/jbowiki-1.5x.png', '2x' => '/static/images/project-logos/jbowiki-2x.png' ], // T150618
-	'jvwiki' => [ '1.5x' => '/static/images/project-logos/jvwiki-1.5x.png', '2x' => '/static/images/project-logos/jvwiki-2x.png' ], // T150618
-	'kaawiki' => [ '1.5x' => '/static/images/project-logos/kaawiki-1.5x.png', '2x' => '/static/images/project-logos/kaawiki-2x.png' ], // T150618
-	'kabwiki' => [ '1.5x' => '/static/images/project-logos/kabwiki-1.5x.png', '2x' => '/static/images/project-logos/kabwiki-2x.png' ], // T150618
-	'kawiki' => [ '1.5x' => '/static/images/project-logos/kawiki-1.5x.png', '2x' => '/static/images/project-logos/kawiki-2x.png' ], // T150618
-	'kbdwiki' => [ '1.5x' => '/static/images/project-logos/kbdwiki-1.5x.png', '2x' => '/static/images/project-logos/kbdwiki-2x.png' ], // T150618
-	'kbpwiki' => [ '1.5x' => '/static/images/project-logos/kbpwiki-1.5x.png', '2x' => '/static/images/project-logos/kbpwiki-2x.png' ], // T160868
-	'kgwiki' => [ '1.5x' => '/static/images/project-logos/kgwiki-1.5x.png', '2x' => '/static/images/project-logos/kgwiki-2x.png' ], // T189586
-	'kiwiki' => [ '1.5x' => '/static/images/project-logos/kiwiki-1.5x.png', '2x' => '/static/images/project-logos/kiwiki-2x.png' ], // T150618
-	'kkwiki' => [ '1.5x' => '/static/images/project-logos/kkwiki-1.5x.png', '2x' => '/static/images/project-logos/kkwiki-2x.png' ], // T150618
-	'klwiki' => [ '1.5x' => '/static/images/project-logos/klwiki-1.5x.png', '2x' => '/static/images/project-logos/klwiki-2x.png' ], // T150618
-	'kmwiki' => [ '1.5x' => '/static/images/project-logos/kmwiki-1.5x.png', '2x' => '/static/images/project-logos/kmwiki-2x.png' ], // T150618
-	'knwiki' => [ '1.5x' => '/static/images/project-logos/knwiki-1.5x.png', '2x' => '/static/images/project-logos/knwiki-2x.png' ], // T150618
-	'koiwiki' => [ '1.5x' => '/static/images/project-logos/koiwiki-1.5x.png', '2x' => '/static/images/project-logos/koiwiki-2x.png' ], // T150618
-	'kowiki' => [ '1.5x' => '/static/images/project-logos/kowiki-1.5x.png', '2x' => '/static/images/project-logos/kowiki-2x.png' ], // T150618
-	'krcwiki' => [ '1.5x' => '/static/images/project-logos/krcwiki-1.5x.png', '2x' => '/static/images/project-logos/krcwiki-2x.png' ], // T150618
-	'kshwiki' => [ '1.5x' => '/static/images/project-logos/kshwiki-1.5x.png', '2x' => '/static/images/project-logos/kshwiki-2x.png' ], // T150618
-	'kswiki' => [ '1.5x' => '/static/images/project-logos/kswiki-1.5x.png', '2x' => '/static/images/project-logos/kswiki-2x.png' ], // T150618
-	'kuwiki' => [ '1.5x' => '/static/images/project-logos/kuwiki-1.5x.png', '2x' => '/static/images/project-logos/kuwiki-2x.png' ], // T150618
-	'kvwiki' => [ '1.5x' => '/static/images/project-logos/kvwiki-1.5x.png', '2x' => '/static/images/project-logos/kvwiki-2x.png' ], // T150618
-	'kwwiki' => [ '1.5x' => '/static/images/project-logos/kwwiki-1.5x.png', '2x' => '/static/images/project-logos/kwwiki-2x.png' ], // T150618
-	'kywiki' => [ '1.5x' => '/static/images/project-logos/kywiki-1.5x.png', '2x' => '/static/images/project-logos/kywiki-2x.png' ], // T150618
-	'ladwiki' => [ '1.5x' => '/static/images/project-logos/ladwiki-1.5x.png', '2x' => '/static/images/project-logos/ladwiki-2x.png' ], // T132120
-	'lawiki' => [ '1.5x' => '/static/images/project-logos/lawiki-1.5x.png', '2x' => '/static/images/project-logos/lawiki-2x.png' ],
-	'lbewiki' => [ '1.5x' => '/static/images/project-logos/lbewiki-1.5x.png', '2x' => '/static/images/project-logos/lbewiki-2x.png' ], // T150618
-	'lbwiki' => [ '1.5x' => '/static/images/project-logos/lbwiki-1.5x.png', '2x' => '/static/images/project-logos/lbwiki-2x.png' ], // T150618
-	'lezwiki' => [ '1.5x' => '/static/images/project-logos/lezwiki-1.5x.png', '2x' => '/static/images/project-logos/lezwiki-2x.png' ], // T150618
-	'lfnwiki' => [ '1.5x' => '/static/images/project-logos/lfnwiki-1.5x.png', '2x' => '/static/images/project-logos/lfnwiki-2x.png' ],
-	'lgwiki' => [ '1.5x' => '/static/images/project-logos/lgwiki-1.5x.png', '2x' => '/static/images/project-logos/lgwiki-2x.png' ], // T150618
-	'liwiki' => [ '1.5x' => '/static/images/project-logos/liwiki-1.5x.png', '2x' => '/static/images/project-logos/liwiki-2x.png' ], // T189116
-	'lijwiki' => [ '1.5x' => '/static/images/project-logos/lijwiki-1.5x.png', '2x' => '/static/images/project-logos/lijwiki-2x.png' ], // T150618
-	'lmowiki' => [ '1.5x' => '/static/images/project-logos/lmowiki-1.5x.png', '2x' => '/static/images/project-logos/lmowiki-2x.png' ], // T150618
-	'lnwiki' => [ '1.5x' => '/static/images/project-logos/lnwiki-1.5x.png', '2x' => '/static/images/project-logos/lnwiki-2x.png' ], // T150618
-	'lowiki' => [ '1.5x' => '/static/images/project-logos/lowiki-1.5x.png', '2x' => '/static/images/project-logos/lowiki-2x.png' ], // T150618
-	'lrcwiki' => [ '1.5x' => '/static/images/project-logos/lrcwiki-1.5x.png', '2x' => '/static/images/project-logos/lrcwiki-2x.png' ], // T150618
-	'ltgwiki' => [ '1.5x' => '/static/images/project-logos/ltgwiki-1.5x.png', '2x' => '/static/images/project-logos/ltgwiki-2x.png' ], // T150618
-	'ltwiki' => [ '1.5x' => '/static/images/project-logos/ltwiki-1.5x.png', '2x' => '/static/images/project-logos/ltwiki-2x.png' ], // T150618
-	'lvwiki' => [ '1.5x' => '/static/images/project-logos/lvwiki-1.5x.png', '2x' => '/static/images/project-logos/lvwiki-2x.png' ], // T150618
-	'maiwiki' => [ '1.5x' => '/static/images/project-logos/maiwiki-1.5x.png', '2x' => '/static/images/project-logos/maiwiki-2x.png' ], // T149790
-	'map_bmswiki' => [ '1.5x' => '/static/images/project-logos/idwiki-1.5x.png', '2x' => '/static/images/project-logos/idwiki-2x.png' ], // T189155
-	'mdfwiki' => [ '1.5x' => '/static/images/project-logos/mdfwiki-1.5x.png', '2x' => '/static/images/project-logos/mdfwiki-2x.png' ], // T150618
-	'mgwiki' => [ '1.5x' => '/static/images/project-logos/mgwiki-1.5x.png', '2x' => '/static/images/project-logos/mgwiki-2x.png' ], // T150618
-	'mhrwiki' => [ '1.5x' => '/static/images/project-logos/mhrwiki-1.5x.png', '2x' => '/static/images/project-logos/mhrwiki-2x.png' ], // T150618
-	'minwiki' => [ '1.5x' => '/static/images/project-logos/minwiki-1.5x.png', '2x' => '/static/images/project-logos/minwiki-2x.png' ], // T150618
-	'miwiki' => [ '1.5x' => '/static/images/project-logos/miwiki-1.5x.png', '2x' => '/static/images/project-logos/miwiki-2x.png' ], // T150618
-	'mkwiki' => [ '1.5x' => '/static/images/project-logos/mkwiki-1.5x.png', '2x' => '/static/images/project-logos/mkwiki-2x.png' ], // T150618
-	'mlwiki' => [ '1.5x' => '/static/images/project-logos/mlwiki-1.5x.png', '2x' => '/static/images/project-logos/mlwiki-2x.png' ], // T150618
-	'mnwiki' => [ '1.5x' => '/static/images/project-logos/mnwiki-1.5x.png', '2x' => '/static/images/project-logos/mnwiki-2x.png' ], // T150618
-	'mnwwiki' => [ '1.5x' => '/static/images/project-logos/mnwwiki-1.5x.png', '2x' => '/static/images/project-logos/mnwwiki-2x.png' ],
-	'mrjwiki' => [ '1.5x' => '/static/images/project-logos/mrjwiki-1.5x.png', '2x' => '/static/images/project-logos/mrjwiki-2x.png' ], // T150618
-	'mrwiki' => [ '1.5x' => '/static/images/project-logos/mrwiki-1.5x.png', '2x' => '/static/images/project-logos/mrwiki-2x.png' ], // T150618
-	'mswiki' => [ '1.5x' => '/static/images/project-logos/mswiki-1.5x.png', '2x' => '/static/images/project-logos/mswiki-2x.png' ],
-	'mtwiki' => [ '1.5x' => '/static/images/project-logos/mtwiki-1.5x.png', '2x' => '/static/images/project-logos/mtwiki-2x.png' ], // T150618
-	'mwlwiki' => [ '1.5x' => '/static/images/project-logos/mwlwiki-1.5x.png', '2x' => '/static/images/project-logos/mwlwiki-2x.png' ], // T150618
-	'myvwiki' => [ '1.5x' => '/static/images/project-logos/myvwiki-1.5x.png', '2x' => '/static/images/project-logos/myvwiki-2x.png' ], // T150618
-	'mywiki' => [ '1.5x' => '/static/images/project-logos/mywiki-1.5x.png', '2x' => '/static/images/project-logos/mywiki-2x.png' ], // T150618
-	'mznwiki' => [ '1.5x' => '/static/images/project-logos/mznwiki-1.5x.png', '2x' => '/static/images/project-logos/mznwiki-2x.png' ], // T150618
-	'nahwiki' => [ '1.5x' => '/static/images/project-logos/nahwiki-1.5x.png', '2x' => '/static/images/project-logos/nahwiki-2x.png' ], // T150618
-	'napwiki' => [ '1.5x' => '/static/images/project-logos/napwiki-1.5x.png', '2x' => '/static/images/project-logos/napwiki-2x.png' ], // T150618
-	'nawiki' => [ '1.5x' => '/static/images/project-logos/nawiki-1.5x.png', '2x' => '/static/images/project-logos/nawiki-2x.png' ], // T150618
-	'ndswiki' => [ '1.5x' => '/static/images/project-logos/ndswiki-1.5x.png', '2x' => '/static/images/project-logos/ndswiki-2x.png' ], // T150618
-	'nds_nlwiki' => [ '1.5x' => '/static/images/project-logos/nds_nlwiki-1.5x.png', '2x' => '/static/images/project-logos/nds_nlwiki-2x.png' ], // T150618
-	'newiki' => [ '1.5x' => '/static/images/project-logos/newiki-1.5x.png', '2x' => '/static/images/project-logos/newiki-2x.png' ],    // T139240
-	'newwiki' => [ '1.5x' => '/static/images/project-logos/newwiki-1.5x.png', '2x' => '/static/images/project-logos/newwiki-2x.png' ], // T150618
-	'nlwiki' => [ '1.5x' => '/static/images/project-logos/nlwiki-1.5x.png', '2x' => '/static/images/project-logos/nlwiki-2x.png' ],
-	'nnwiki' => [ '1.5x' => '/static/images/project-logos/nnwiki-1.5x.png', '2x' => '/static/images/project-logos/nnwiki-2x.png' ], // T150618
-	'novwiki' => [ '1.5x' => '/static/images/project-logos/novwiki-1.5x.png', '2x' => '/static/images/project-logos/novwiki-2x.png' ], // T150618
-	'nowiki' => [ '1.5x' => '/static/images/project-logos/nowiki-1.5x.png', '2x' => '/static/images/project-logos/nowiki-2x.png' ], // T150618
-	'nqowiki' => [ '1.5x' => '/static/images/project-logos/nqowiki-1.5x.png', '2x' => '/static/images/project-logos/nqowiki-2x.png' ],
-	'nrmwiki' => [ '1.5x' => '/static/images/project-logos/nrmwiki-1.5x.png', '2x' => '/static/images/project-logos/nrmwiki-2x.png' ], // T150618
-	'nvwiki' => [ '1.5x' => '/static/images/project-logos/nvwiki-1.5x.png', '2x' => '/static/images/project-logos/nvwiki-2x.png' ], // T150618
-	'nywiki' => [ '1.5x' => '/static/images/project-logos/nywiki-1.5x.png', '2x' => '/static/images/project-logos/nywiki-2x.png' ], // T211570
-	'ocwiki' => [ '1.5x' => '/static/images/project-logos/ocwiki-1.5x.png', '2x' => '/static/images/project-logos/ocwiki-2x.png' ], // T150618
-	'olowiki' => [ '1.5x' => '/static/images/project-logos/olowiki-1.5x.png', '2x' => '/static/images/project-logos/olowiki-2x.png' ], // T146745
-	'omwiki' => [ '1.5x' => '/static/images/project-logos/omwiki-1.5x.png', '2x' => '/static/images/project-logos/omwiki-2x.png' ], // T150618
-	'orwiki' => [ '1.5x' => '/static/images/project-logos/orwiki-1.5x.png', '2x' => '/static/images/project-logos/orwiki-2x.png' ], // T150618
-	'oswiki' => [ '1.5x' => '/static/images/project-logos/oswiki-1.5x.png', '2x' => '/static/images/project-logos/oswiki-2x.png' ], // T150618
-	'pagwiki' => [ '1.5x' => '/static/images/project-logos/pagwiki-1.5x.png', '2x' => '/static/images/project-logos/pagwiki-2x.png' ], // T150618
-	'pamwiki' => [ '1.5x' => '/static/images/project-logos/pamwiki-1.5x.png', '2x' => '/static/images/project-logos/pamwiki-2x.png' ], // T150618
-	'papwiki' => [ '1.5x' => '/static/images/project-logos/papwiki-1.5x.png', '2x' => '/static/images/project-logos/papwiki-2x.png' ], // T150618
-	'pawiki' => [ '1.5x' => '/static/images/project-logos/pawiki-1.5x.png', '2x' => '/static/images/project-logos/pawiki-2x.png' ], // T150618
-	'pcdwiki' => [ '1.5x' => '/static/images/project-logos/pcdwiki-1.5x.png', '2x' => '/static/images/project-logos/pcdwiki-2x.png' ], // T150618
-	'pdcwiki' => [ '1.5x' => '/static/images/project-logos/pdcwiki-1.5x.png', '2x' => '/static/images/project-logos/pdcwiki-2x.png' ], // T150618
-	'pflwiki' => [ '1.5x' => '/static/images/project-logos/pflwiki-1.5x.png', '2x' => '/static/images/project-logos/pflwiki-2x.png' ], // T150618
-	'pihwiki' => [ '1.5x' => '/static/images/project-logos/pihwiki-1.5x.png', '2x' => '/static/images/project-logos/pihwiki-2x.png' ], // T150618
-	'piwiki' => [ '1.5x' => '/static/images/project-logos/piwiki-1.5x.png', '2x' => '/static/images/project-logos/piwiki-2x.png' ], // T150618
-	'plwiki' => [ '1.5x' => '/static/images/project-logos/plwiki-1.5x.png', '2x' => '/static/images/project-logos/plwiki-2x.png' ], // T150618
-	'pmswiki' => [ '1.5x' => '/static/images/project-logos/pmswiki-1.5x.png', '2x' => '/static/images/project-logos/pmswiki-2x.png' ], // T150618
-	'pnbwiki' => [ '1.5x' => '/static/images/project-logos/pnbwiki-1.5x.png', '2x' => '/static/images/project-logos/pnbwiki-2x.png' ], // T150618
-	'pntwiki' => [ '1.5x' => '/static/images/project-logos/pntwiki-1.5x.png', '2x' => '/static/images/project-logos/pntwiki-2x.png' ], // T150618
-	'pswiki' => [ '1.5x' => '/static/images/project-logos/pswiki-1.5x.png', '2x' => '/static/images/project-logos/pswiki-2x.png' ], // T150618
-	'ptwiki' => [ '1.5x' => '/static/images/project-logos/ptwiki-1.5x.png', '2x' => '/static/images/project-logos/ptwiki-2x.png' ], // T150618
-	'quwiki' => [ '1.5x' => '/static/images/project-logos/quwiki-1.5x.png', '2x' => '/static/images/project-logos/quwiki-2x.png' ], // T150618
-	'rmwiki' => [ '1.5x' => '/static/images/project-logos/rmwiki-1.5x.png', '2x' => '/static/images/project-logos/rmwiki-2x.png' ], // T150618
-	'rmywiki' => [ '1.5x' => '/static/images/project-logos/rmywiki-1.5x.png', '2x' => '/static/images/project-logos/rmywiki-2x.png' ], // T150618
-	'roa_rupwiki' => [ '1.5x' => '/static/images/project-logos/roa_rupwiki-1.5x.png', '2x' => '/static/images/project-logos/roa_rupwiki-2x.png' ], // T150618
-	'roa_tarawiki' => [ '1.5x' => '/static/images/project-logos/roa_tarawiki-1.5x.png', '2x' => '/static/images/project-logos/roa_tarawiki-2x.png' ], // T150618
-	'rowiki' => [ '1.5x' => '/static/images/project-logos/rowiki-1.5x.png', '2x' => '/static/images/project-logos/rowiki-2x.png' ], // T150618
-	'ruewiki' => [ '1.5x' => '/static/images/project-logos/ruewiki-1.5x.png', '2x' => '/static/images/project-logos/ruewiki-2x.png' ], // T150618
-	'ruwiki' => [ '1.5x' => '/static/images/project-logos/ruwiki-1.5x.png', '2x' => '/static/images/project-logos/ruwiki-2x.png' ],
-	'sahwiki' => [ '1.5x' => '/static/images/project-logos/sahwiki-1.5x.png', '2x' => '/static/images/project-logos/sahwiki-2x.png' ], // T150618
-	'satwiki' => [ '1.5x' => '/static/images/project-logos/satwiki-1.5x.png', '2x' => '/static/images/project-logos/satwiki-2x.png' ],
-	'sawiki' => [ '1.5x' => '/static/images/project-logos/sawiki-1.5x.png', '2x' => '/static/images/project-logos/sawiki-2x.png' ], // T150618
-	'scnwiki' => [ '1.5x' => '/static/images/project-logos/scnwiki-1.5x.png', '2x' => '/static/images/project-logos/scnwiki-2x.png' ], // T150618
-	'scowiki' => [ '1.5x' => '/static/images/project-logos/scowiki-1.5x.png', '2x' => '/static/images/project-logos/scowiki-2x.png' ], // T150618
-	'scwiki' => [ '1.5x' => '/static/images/project-logos/scwiki-1.5x.png', '2x' => '/static/images/project-logos/scwiki-2x.png' ], // T150618
-	'sdwiki' => [ '1.5x' => '/static/images/project-logos/sdwiki-1.5x.png', '2x' => '/static/images/project-logos/sdwiki-2x.png' ], // T150618
-	'sewiki' => [ '1.5x' => '/static/images/project-logos/sewiki-1.5x.png', '2x' => '/static/images/project-logos/sewiki-2x.png' ], // T150618
-	'sgwiki' => [ '1.5x' => '/static/images/project-logos/sgwiki-1.5x.png', '2x' => '/static/images/project-logos/sgwiki-2x.png' ], // T150618
-	'shwiki' => [ '1.5x' => '/static/images/project-logos/shwiki-1.5x.png', '2x' => '/static/images/project-logos/shwiki-2x.png' ], // T150618
-	'shnwiki' => [ '1.5x' => '/static/images/project-logos/shnwiki-1.5x.png', '2x' => '/static/images/project-logos/shnwiki-2x.png' ],
-	'simplewiki' => [ '1.5x' => '/static/images/project-logos/simplewiki-1.5x.png', '2x' => '/static/images/project-logos/simplewiki-2x.png' ], // T181448
-	'siwiki' => [ '1.5x' => '/static/images/project-logos/siwiki-1.5x.png', '2x' => '/static/images/project-logos/siwiki-2x.png' ], // T150618
-	'skwiki' => [ '1.5x' => '/static/images/project-logos/skwiki-1.5x.png', '2x' => '/static/images/project-logos/skwiki-2x.png' ], // T150618
-	'slwiki' => [ '1.5x' => '/static/images/project-logos/slwiki-1.5x.png', '2x' => '/static/images/project-logos/slwiki-2x.png' ], // T150618
-	'smwiki' => [ '1.5x' => '/static/images/project-logos/smwiki-1.5x.png', '2x' => '/static/images/project-logos/smwiki-2x.png' ], // T150618
-	'snwiki' => [ '1.5x' => '/static/images/project-logos/snwiki-1.5x.png', '2x' => '/static/images/project-logos/snwiki-2x.png' ], // T150618
-	'sowiki' => [ '1.5x' => '/static/images/project-logos/sowiki-1.5x.png', '2x' => '/static/images/project-logos/sowiki-2x.png' ], // T150618
-	'sqwiki' => [ '1.5x' => '/static/images/project-logos/sqwiki-1.5x.png', '2x' => '/static/images/project-logos/sqwiki-2x.png' ], // T150618
-	'srnwiki' => [ '1.5x' => '/static/images/project-logos/srnwiki-1.5x.png', '2x' => '/static/images/project-logos/srnwiki-2x.png' ], // T150618
-	'srwiki' => [ '1.5x' => '/static/images/project-logos/srwiki-1.5x.png', '2x' => '/static/images/project-logos/srwiki-2x.png' ], // T150618
-	'sswiki' => [ '1.5x' => '/static/images/project-logos/sswiki-1.5x.png', '2x' => '/static/images/project-logos/sswiki-2x.png' ], // T150618
-	'stqwiki' => [ '1.5x' => '/static/images/project-logos/stqwiki-1.5x.png', '2x' => '/static/images/project-logos/stqwiki-2x.png' ], // T150618
-	'stwiki' => [ '1.5x' => '/static/images/project-logos/stwiki-1.5x.png', '2x' => '/static/images/project-logos/stwiki-2x.png' ], // T150618
-	'suwiki' => [ '1.5x' => '/static/images/project-logos/suwiki-1.5x.png', '2x' => '/static/images/project-logos/suwiki-2x.png' ], // T150618
-	'svwiki' => [ '1.5x' => '/static/images/project-logos/svwiki-1.5x.png', '2x' => '/static/images/project-logos/svwiki-2x.png' ], // T150618
-	'swwiki' => [ '1.5x' => '/static/images/project-logos/swwiki-1.5x.png', '2x' => '/static/images/project-logos/swwiki-2x.png' ], // T150618
-	'szlwiki' => [ '1.5x' => '/static/images/project-logos/szlwiki-1.5x.png', '2x' => '/static/images/project-logos/szlwiki-2x.png' ], // T150618
-	'szywiki' => [ '1.5x' => '/static/images/project-logos/szywiki-1.5x.png', '2x' => '/static/images/project-logos/szywiki-2x.png' ],
-	'tawiki' => [ '1.5x' => '/static/images/project-logos/tawiki-1.5x.png', '2x' => '/static/images/project-logos/tawiki-2x.png' ],
-	'tcywiki' => [ '1.5x' => '/static/images/project-logos/tcywiki-1.5x.png', '2x' => '/static/images/project-logos/tcywiki-2x.png' ], // T140898
-	'tetwiki' => [ '1.5x' => '/static/images/project-logos/tetwiki-1.5x.png', '2x' => '/static/images/project-logos/tetwiki-2x.png' ], // T150618
-	'tewiki' => [ '1.5x' => '/static/images/project-logos/tewiki-1.5x.png', '2x' => '/static/images/project-logos/tewiki-2x.png' ], // T150618
-	'tgwiki' => [ '1.5x' => '/static/images/project-logos/tgwiki-1.5x.png', '2x' => '/static/images/project-logos/tgwiki-2x.png' ], // T150618
-	'thwiki' => [ '1.5x' => '/static/images/project-logos/thwiki-1.5x.png', '2x' => '/static/images/project-logos/thwiki-2x.png' ], // T150618
-	'tkwiki' => [ '1.5x' => '/static/images/project-logos/tkwiki-1.5x.png', '2x' => '/static/images/project-logos/tkwiki-2x.png' ], // T150618
-	'tlwiki' => [ '1.5x' => '/static/images/project-logos/tlwiki-1.5x.png', '2x' => '/static/images/project-logos/tlwiki-2x.png' ], // T150618
-	'tnwiki' => [ '1.5x' => '/static/images/project-logos/tnwiki-1.5x.png', '2x' => '/static/images/project-logos/tnwiki-2x.png' ], // T150618
-	'towiki' => [ '1.5x' => '/static/images/project-logos/towiki-1.5x.png', '2x' => '/static/images/project-logos/towiki-2x.png' ], // T150618
-	'tpiwiki' => [ '1.5x' => '/static/images/project-logos/tpiwiki-1.5x.png', '2x' => '/static/images/project-logos/tpiwiki-2x.png' ], // T150618
-	'trwiki' => [ '1.5x' => '/static/images/project-logos/trwiki-1.5x.png', '2x' => '/static/images/project-logos/trwiki-2x.png' ], // T150618
-	'tswiki' => [ '1.5x' => '/static/images/project-logos/tswiki-1.5x.png', '2x' => '/static/images/project-logos/tswiki-2x.png' ], // T150618
-	'ttwiki' => [ '1.5x' => '/static/images/project-logos/ttwiki-1.5x.png', '2x' => '/static/images/project-logos/ttwiki-2x.png' ], // T150618
-	'twwiki' => [ '1.5x' => '/static/images/project-logos/akwiki-1.5x.png', '2x' => '/static/images/project-logos/akwiki-2x.png' ], // T189578
-	'tyvwiki' => [ '1.5x' => '/static/images/project-logos/tyvwiki-1.5x.png', '2x' => '/static/images/project-logos/tyvwiki-2x.png' ], // T150618
-	'tywiki' => [ '1.5x' => '/static/images/project-logos/tywiki-1.5x.png', '2x' => '/static/images/project-logos/tywiki-2x.png' ], // T150618
-	'udmwiki' => [ '1.5x' => '/static/images/project-logos/udmwiki-1.5x.png', '2x' => '/static/images/project-logos/udmwiki-2x.png' ], // T150618
-	'ugwiki' => [ '1.5x' => '/static/images/project-logos/ugwiki-1.5x.png', '2x' => '/static/images/project-logos/ugwiki-2x.png' ], // T150618
-	'ukwiki' => [ '1.5x' => '/static/images/project-logos/ukwiki-1.5x.png', '2x' => '/static/images/project-logos/ukwiki-2x.png' ], // T150618
-	'urwiki' => [ '1.5x' => '/static/images/project-logos/urwiki-1.5x.png', '2x' => '/static/images/project-logos/urwiki-2x.png' ], // T150618
-	'uzwiki' => [ '1.5x' => '/static/images/project-logos/uzwiki-1.5x.png', '2x' => '/static/images/project-logos/uzwiki-2x.png' ], // T150618
-	'vecwiki' => [ '1.5x' => '/static/images/project-logos/vecwiki-1.5x.png', '2x' => '/static/images/project-logos/vecwiki-2x.png' ], // T150618
-	'vepwiki' => [ '1.5x' => '/static/images/project-logos/vepwiki-2x.png', '2x' => '/static/images/project-logos/vepwiki-2x.png' ], // T150618
-	'viwiki' => [ '1.5x' => '/static/images/project-logos/viwiki-1.5x.png', '2x' => '/static/images/project-logos/viwiki-2x.png' ],
-	'vlswiki' => [ '1.5x' => '/static/images/project-logos/vlswiki-1.5x.png', '2x' => '/static/images/project-logos/vlswiki-2x.png' ], // T150618
-	'vowiki' => [ '1.5x' => '/static/images/project-logos/vowiki-1.5x.png', '2x' => '/static/images/project-logos/vowiki-2x.png' ], // T150618
-	'warwiki' => [ '1.5x' => '/static/images/project-logos/warwiki-1.5x.png', '2x' => '/static/images/project-logos/warwiki-2x.png' ], // T150618
-	'wawiki' => [ '1.5x' => '/static/images/project-logos/wawiki-1.5x.png', '2x' => '/static/images/project-logos/wawiki-2x.png' ], // T150618
-	'wowiki' => [ '1.5x' => '/static/images/project-logos/wowiki-1.5x.png', '2x' => '/static/images/project-logos/wowiki-2x.png' ], // T150618
-	'wuuwiki' => [ '1.5x' => '/static/images/project-logos/wuuwiki-1.5x.png', '2x' => '/static/images/project-logos/wuuwiki-2x.png' ], // T150618
-	'xalwiki' => [ '1.5x' => '/static/images/project-logos/xalwiki-1.5x.png', '2x' => '/static/images/project-logos/xalwiki-2x.png' ], // T150618
-	'xmfwiki' => [ '1.5x' => '/static/images/project-logos/xmfwiki-1.5x.png', '2x' => '/static/images/project-logos/xmfwiki-2x.png' ], // T150618
-	'yiwiki' => [ '1.5x' => '/static/images/project-logos/yiwiki-1.5x.png', '2x' => '/static/images/project-logos/yiwiki-2x.png' ], // T150618
-	'yowiki' => [ '1.5x' => '/static/images/project-logos/yowiki-1.5x.png', '2x' => '/static/images/project-logos/yowiki-2x.png' ], // T150618
-	'zawiki' => [ '1.5x' => '/static/images/project-logos/zawiki-1.5x.png', '2x' => '/static/images/project-logos/zawiki-2x.png' ], // T150618
-	'zeawiki' => [ '1.5x' => '/static/images/project-logos/zeawiki-1.5x.png', '2x' => '/static/images/project-logos/zeawiki-2x.png' ], // T150618
-	'zhwiki' => [ '1.5x' => '/static/images/project-logos/zhwiki-1.5x.png', '2x' => '/static/images/project-logos/zhwiki-2x.png' ],
-	'zh_classicalwiki' => [ '1.5x' => '/static/images/project-logos/zh_classicalwiki-1.5x.png', '2x' => '/static/images/project-logos/zh_classicalwiki-2x.png' ], // T177165
-	'zh_min_nanwiki' => [ '1.5x' => '/static/images/project-logos/zh_min_nanwiki-1.5x.png', '2x' => '/static/images/project-logos/zh_min_nanwiki-2x.png' ], // T150618
-	'zh_yuewiki' => [ '1.5x' => '/static/images/project-logos/zh_yuewiki-1.5x.png', '2x' => '/static/images/project-logos/zh_yuewiki-2x.png' ], // T150618
-	'zuwiki' => [ '1.5x' => '/static/images/project-logos/zuwiki-1.5x.png', '2x' => '/static/images/project-logos/zuwiki-2x.png' ], // T233424
-
-	# Wiktionary
-	'afwiktionary' => [ '1.5x' => '/static/images/project-logos/afwiktionary-1.5x.png', '2x' => '/static/images/project-logos/afwiktionary-2x.png' ], // T178824
-	'amwiktionary' => [ '1.5x' => '/static/images/project-logos/amwiktionary-1.5x.png', '2x' => '/static/images/project-logos/amwiktionary-2x.png' ], // T150618
-	'arwiktionary' => [ '1.5x' => '/static/images/project-logos/arwiktionary-1.5x.png', '2x' => '/static/images/project-logos/arwiktionary-2x.png' ], // T150618
-	'azwiktionary' => [ '1.5x' => '/static/images/project-logos/azwiktionary-1.5x.png', '2x' => '/static/images/project-logos/azwiktionary-2x.png' ], // T150618
-	'bewiktionary' => [ '1.5x' => '/static/images/project-logos/bewiktionary-1.5x.png', '2x' => '/static/images/project-logos/bewiktionary-2x.png' ], // T150618
-	'bnwiktionary' => [ '1.5x' => '/static/images/project-logos/bnwiktionary-1.5x.png', '2x' => '/static/images/project-logos/bnwiktionary-2x.png' ], // T150618
-	'bswiktionary' => [ '1.5x' => '/static/images/project-logos/bswiktionary-1.5x.png', '2x' => '/static/images/project-logos/bswiktionary-2x.png' ], // T159542
-	'cowiktionary' => [ '1.5x' => '/static/images/project-logos/cowiktionary-1.5x.png', '2x' => '/static/images/project-logos/cowiktionary-2x.png' ], // T150618
-	'csbwiktionary' => [ '1.5x' => '/static/images/project-logos/csbwiktionary-1.5x.png', '2x' => '/static/images/project-logos/csbwiktionary-2x.png' ], // T150618
-	'cswiktionary' => [ '1.5x' => '/static/images/project-logos/cswiktionary-1.5x.png', '2x' => '/static/images/project-logos/cswiktionary-2x.png' ], // T150618
-	'dawiktionary' => [ '1.5x' => '/static/images/project-logos/dawiktionary-1.5x.png', '2x' => '/static/images/project-logos/dawiktionary-2x.png' ], // T150618
-	'enwiktionary' => [ '1.5x' => '/static/images/project-logos/enwiktionary-1.5x.png', '2x' => '/static/images/project-logos/enwiktionary-2x.png' ], // T138801
-	'eowiktionary' => [ '1.5x' => '/static/images/project-logos/eowiktionary-1.5x.png', '2x' => '/static/images/project-logos/eowiktionary-2x.png' ], // T150618
-	'etwiktionary' => [ '1.5x' => '/static/images/project-logos/etwiktionary-1.5x.png', '2x' => '/static/images/project-logos/etwiktionary-2x.png' ], // T150618
-	'fiwiktionary' => [ '1.5x' => '/static/images/project-logos/fiwiktionary-1.5x.png', '2x' => '/static/images/project-logos/fiwiktionary-2x.png' ], // T150618
-	'fowiktionary' => [ '1.5x' => '/static/images/project-logos/fowiktionary-1.5x.png', '2x' => '/static/images/project-logos/fowiktionary-2x.png' ], // T150618
-	'frwiktionary' => [ '1.5x' => '/static/images/project-logos/frwiktionary-1.5x.png', '2x' => '/static/images/project-logos/frwiktionary-2x.png' ], // T144427
-	'fywiktionary' => [ '1.5x' => '/static/images/project-logos/fywiktionary-1.5x.png', '2x' => '/static/images/project-logos/fywiktionary-2x.png' ], // T150618
-	'gdwiktionary' => [ '1.5x' => '/static/images/project-logos/gdwiktionary-1.5x.png', '2x' => '/static/images/project-logos/gdwiktionary-2x.png' ], // T150618
-	'gvwiktionary' => [ '1.5x' => '/static/images/project-logos/gvwiktionary-1.5x.png', '2x' => '/static/images/project-logos/gvwiktionary-2x.png' ], // T150618
-	'hewiktionary' => [ '1.5x' => '/static/images/project-logos/hewiktionary-1.5x.png', '2x' => '/static/images/project-logos/hewiktionary-2x.png' ],
-	'hiwiktionary' => [ '1.5x' => '/static/images/project-logos/hiwiktionary-1.5x.png', '2x' => '/static/images/project-logos/hiwiktionary-2x.png' ], // T150618
-	'hsbwiktionary' => [ '1.5x' => '/static/images/project-logos/hsbwiktionary-1.5x.png', '2x' => '/static/images/project-logos/hsbwiktionary-2x.png' ], // T150618
-	'huwiktionary' => [ '1.5x' => '/static/images/project-logos/huwiktionary-1.5x.png', '2x' => '/static/images/project-logos/huwiktionary-2x.png' ], // T150618
-	'hywiktionary' => [ '1.5x' => '/static/images/project-logos/hywiktionary-1.5x.png', '2x' => '/static/images/project-logos/hywiktionary-2x.png' ], // T150618
-	'iawiktionary' => [ '1.5x' => '/static/images/project-logos/iawiktionary-1.5x.png', '2x' => '/static/images/project-logos/iawiktionary-2x.png' ], // T150618
-	'idwiktionary' => [ '1.5x' => '/static/images/project-logos/idwiktionary-1.5x.png', '2x' => '/static/images/project-logos/idwiktionary-2x.png' ], // T150618
-	'iewiktionary' => [ '1.5x' => '/static/images/project-logos/iewiktionary-1.5x.png', '2x' => '/static/images/project-logos/iewiktionary-2x.png' ], // T150618
-	'ikwiktionary' => [ '1.5x' => '/static/images/project-logos/ikwiktionary-1.5x.png', '2x' => '/static/images/project-logos/ikwiktionary-2x.png' ], // T150618
-	'itwiktionary' => [ '1.5x' => '/static/images/project-logos/itwiktionary-1.5x.png', '2x' => '/static/images/project-logos/itwiktionary-2x.png' ], // T150618
-	'jbowiktionary' => [ '1.5x' => '/static/images/project-logos/jbowiktionary-1.5x.png', '2x' => '/static/images/project-logos/jbowiktionary-2x.png' ], // T150618
-	'jvwiktionary' => [ '1.5x' => '/static/images/project-logos/jvwiktionary-1.5x.png', '2x' => '/static/images/project-logos/jvwiktionary-2x.png' ], // T150618
-	'kkwiktionary' => [ '1.5x' => '/static/images/project-logos/kkwiktionary-1.5x.png', '2x' => '/static/images/project-logos/kkwiktionary-2x.png' ], // T150618
-	'kmwiktionary' => [ '1.5x' => '/static/images/project-logos/kmwiktionary-1.5x.png', '2x' => '/static/images/project-logos/kmwiktionary-2x.png' ], // T150618
-	'knwiktionary' => [ '1.5x' => '/static/images/project-logos/knwiktionary-1.5x.png', '2x' => '/static/images/project-logos/knwiktionary-2x.png' ], // T150618
-	'kowiktionary' => [ '1.5x' => '/static/images/project-logos/kowiktionary-1.5x.png', '2x' => '/static/images/project-logos/kowiktionary-2x.png' ], // T150618
-	'kwwiktionary' => [ '1.5x' => '/static/images/project-logos/kwwiktionary-1.5x.png', '2x' => '/static/images/project-logos/kwwiktionary-2x.png' ], // T150618
-	'kywiktionary' => [ '1.5x' => '/static/images/project-logos/kywiktionary-1.5x.png', '2x' => '/static/images/project-logos/kywiktionary-2x.png' ], // T150618
-	'liwiktionary' => [ '1.5x' => '/static/images/project-logos/liwiktionary-1.5x.png', '2x' => '/static/images/project-logos/liwiktionary-2x.png' ], // T150618
-	'lvwiktionary' => [ '1.5x' => '/static/images/project-logos/lvwiktionary-1.5x.png', '2x' => '/static/images/project-logos/lvwiktionary-2x.png' ], // T150618
-	'minwiktionary' => [ '1.5x' => '/static/images/project-logos/minwiktionary-1.5x.png', '2x' => '/static/images/project-logos/minwiktionary-2x.png' ],
-	'miwiktionary' => [ '1.5x' => '/static/images/project-logos/miwiktionary-1.5x.png', '2x' => '/static/images/project-logos/miwiktionary-2x.png' ], // T150618
-	'mlwiktionary' => [ '1.5x' => '/static/images/project-logos/mlwiktionary-1.5x.png', '2x' => '/static/images/project-logos/mlwiktionary-2x.png' ], // T150618
-	'mnwiktionary' => [ '1.5x' => '/static/images/project-logos/mnwiktionary-1.5x.png', '2x' => '/static/images/project-logos/mnwiktionary-2x.png' ], // T150618
-	'mrwiktionary' => [ '1.5x' => '/static/images/project-logos/mrwiktionary-1.5x.png', '2x' => '/static/images/project-logos/mrwiktionary-2x.png' ], // T150618
-	'mswiktionary' => [ '1.5x' => '/static/images/project-logos/mswiktionary-1.5x.png', '2x' => '/static/images/project-logos/mswiktionary-2x.png' ], // T150618
-	'mtwiktionary' => [ '1.5x' => '/static/images/project-logos/mtwiktionary-1.5x.png', '2x' => '/static/images/project-logos/mtwiktionary-2x.png' ], // T150618
-	'mywiktionary' => [ '1.5x' => '/static/images/project-logos/mywiktionary-1.5x.png', '2x' => '/static/images/project-logos/mywiktionary-2x.png' ], // T150618
-	'ndswiktionary' => [ '1.5x' => '/static/images/project-logos/ndswiktionary-1.5x.png', '2x' => '/static/images/project-logos/ndswiktionary-2x.png' ], // T150618
-	'newiktionary' => [ '1.5x' => '/static/images/project-logos/newiktionary-1.5x.png', '2x' => '/static/images/project-logos/newiktionary-2x.png' ], // T150618
-	'nlwiktionary' => [ '1.5x' => '/static/images/project-logos/nlwiktionary-1.5x.png', '2x' => '/static/images/project-logos/nlwiktionary-2x.png' ], // T150618
-	'nnwiktionary' => [ '1.5x' => '/static/images/project-logos/nnwiktionary-1.5x.png', '2x' => '/static/images/project-logos/nnwiktionary-2x.png' ], // T150618
-	'ocwiktionary' => [ '1.5x' => '/static/images/project-logos/ocwiktionary-1.5x.png', '2x' => '/static/images/project-logos/ocwiktionary-2x.png' ], // T150618
-	'orwiktionary' => [ '1.5x' => '/static/images/project-logos/orwiktionary-1.5x.png', '2x' => '/static/images/project-logos/orwiktionary-2x.png' ], // T150618
-	'pawiktionary' => [ '1.5x' => '/static/images/project-logos/pawiktionary-1.5x.png', '2x' => '/static/images/project-logos/pawiktionary-2x.png' ], // T150618
-	'plwiktionary' => [ '1.5x' => '/static/images/project-logos/plwiktionary-1.5x.png', '2x' => '/static/images/project-logos/plwiktionary-2x.png' ], // T150618
-	'pswiktionary' => [ '1.5x' => '/static/images/project-logos/pswiktionary-1.5x.png', '2x' => '/static/images/project-logos/pswiktionary-2x.png' ], // T150618
-	'sawiktionary' => [ '1.5x' => '/static/images/project-logos/sawiktionary-1.5x.png', '2x' => '/static/images/project-logos/sawiktionary-2x.png' ], // T150618
-	'scnwiktionary' => [ '1.5x' => '/static/images/project-logos/scnwiktionary-1.5x.png', '2x' => '/static/images/project-logos/scnwiktionary-2x.png' ], // T150618
-	'sdwiktionary' => [ '1.5x' => '/static/images/project-logos/sdwiktionary-1.5x.png', '2x' => '/static/images/project-logos/sdwiktionary-2x.png' ], // T150618
-	'shywiktionary' => [ '1.5x' => '/static/images/project-logos/shywiktionary-1.5x.png', '2x' => '/static/images/project-logos/shywiktionary-2x.png' ],
-	'siwiktionary' => [ '1.5x' => '/static/images/project-logos/siwiktionary-1.5x.png', '2x' => '/static/images/project-logos/siwiktionary-2x.png' ], // T150618
-	'skwiktionary' => [ '1.5x' => '/static/images/project-logos/skwiktionary-1.5x.png', '2x' => '/static/images/project-logos/skwiktionary-2x.png' ], // T150618
-	'slwiktionary' => [ '1.5x' => '/static/images/project-logos/slwiktionary-1.5x.png', '2x' => '/static/images/project-logos/slwiktionary-2x.png' ], // T150618
-	'srwiktionary' => [ '1.5x' => '/static/images/project-logos/srwiktionary-1.5x.png', '2x' => '/static/images/project-logos/srwiktionary-2x.png' ], // T172245
-	'suwiktionary' => [ '1.5x' => '/static/images/project-logos/suwiktionary-1.5x.png', '2x' => '/static/images/project-logos/suwiktionary-2x.png' ], // T150618
-	'svwiktionary' => [ '1.5x' => '/static/images/project-logos/svwiktionary-1.5x.png', '2x' => '/static/images/project-logos/svwiktionary-2x.png' ], // T150618
-	'swwiktionary' => [ '1.5x' => '/static/images/project-logos/swwiktionary-1.5x.png', '2x' => '/static/images/project-logos/swwiktionary-2x.png' ], // T150618
-	'tewiktionary' => [ '1.5x' => '/static/images/project-logos/tewiktionary-1.5x.png', '2x' => '/static/images/project-logos/tewiktionary-2x.png' ], // T150618
-	'tkwiktionary' => [ '1.5x' => '/static/images/project-logos/tkwiktionary-1.5x.png', '2x' => '/static/images/project-logos/tkwiktionary-2x.png' ], // T150618
-	'trwiktionary' => [ '1.5x' => '/static/images/project-logos/trwiktionary-1.5x.png', '2x' => '/static/images/project-logos/trwiktionary-2x.png' ], // T176008
-	'ttwiktionary' => [ '1.5x' => '/static/images/project-logos/ttwiktionary-1.5x.png', '2x' => '/static/images/project-logos/ttwiktionary-2x.png' ], // T150618
-	'ugwiktionary' => [ '1.5x' => '/static/images/project-logos/ugwiktionary-1.5x.png', '2x' => '/static/images/project-logos/ugwiktionary-2x.png' ], // T150618
-	'ukwiktionary' => [ '1.5x' => '/static/images/project-logos/ukwiktionary-1.5x.png', '2x' => '/static/images/project-logos/ukwiktionary-2x.png' ], // T150618
-	'urwiktionary' => [ '1.5x' => '/static/images/project-logos/urwiktionary-1.5x.png', '2x' => '/static/images/project-logos/urwiktionary-2x.png' ], // T187209
-	'uzwiktionary' => [ '1.5x' => '/static/images/project-logos/uzwiktionary-1.5x.png', '2x' => '/static/images/project-logos/uzwiktionary-2x.png' ], // T150618
-	'viwiktionary' => [ '1.5x' => '/static/images/project-logos/viwiktionary-1.5x.png', '2x' => '/static/images/project-logos/viwiktionary-2x.png' ],
-	'yuewiktionary' => [ '1.5x' => '/static/images/project-logos/yuewiktionary-1.5x.png', '2x' => '/static/images/project-logos/yuewiktionary-2x.png' ],
-	'wawiktionary' => [ '1.5x' => '/static/images/project-logos/wawiktionary-1.5x.png', '2x' => '/static/images/project-logos/wawiktionary-2x.png' ], // T150618
-	'zhwiktionary' => [ '1.5x' => '/static/images/project-logos/zhwiktionary-1.5x.png', '2x' => '/static/images/project-logos/zhwiktionary-2x.png' ], // T150618
-	'zh_min_nanwiktionary' => [ '1.5x' => '/static/images/project-logos/zh_min_nanwiktionary-1.5x.png', '2x' => '/static/images/project-logos/zh_min_nanwiktionary-2x.png' ], // T150618
-
-	# Wikiquote
-	'bewikiquote' => [ '1.5x' => '/static/images/project-logos/bewikiquote-1.5x.png', '2x' => '/static/images/project-logos/bewikiquote-2x.png' ], // T196134
-	'cawikiquote' => [ '1.5x' => '/static/images/project-logos/cawikiquote-1.5x.png', '2x' => '/static/images/project-logos/cawikiquote-2x.png' ], // T150618
-	'cswikiquote' => [ '1.5x' => '/static/images/project-logos/cswikiquote-1.5x.png', '2x' => '/static/images/project-logos/cswikiquote-2x.png' ], // T150618
-	'enwikiquote' => [ '1.5x' => '/static/images/project-logos/enwikiquote-1.5x.png', '2x' => '/static/images/project-logos/enwikiquote-2x.png' ], // T150618
-	'eowikiquote' => [ '1.5x' => '/static/images/project-logos/eowikiquote-1.5x.png', '2x' => '/static/images/project-logos/eowikiquote-2x.png' ], // T150618
-	'eswikiquote' => [ '1.5x' => '/static/images/project-logos/eswikiquote-1.5x.png', '2x' => '/static/images/project-logos/eswikiquote-2x.png' ], // T170604
-	'fawikiquote' => [ '1.5x' => '/static/images/project-logos/fawikiquote-1.5x.png', '2x' => '/static/images/project-logos/fawikiquote-2x.png' ],
-	'guwikiquote' => [ '1.5x' => '/static/images/project-logos/guwikiquote-1.5x.png', '2x' => '/static/images/project-logos/guwikiquote-2x.png' ],
-	'hewikiquote' => [ '1.5x' => '/static/images/project-logos/hewikiquote-1.5x.png', '2x' => '/static/images/project-logos/hewikiquote-2x.png' ],
-	'hrwikiquote' => [ '1.5x' => '/static/images/project-logos/hrwikiquote-1.5x.png', '2x' => '/static/images/project-logos/hrwikiquote-2x.png' ], // T150618
-	'hywikiquote' => [ '1.5x' => '/static/images/project-logos/hywikiquote-1.5x.png', '2x' => '/static/images/project-logos/hywikiquote-2x.png' ], // T150618
-	'knwikiquote' => [ '1.5x' => '/static/images/project-logos/knwikiquote-1.5x.png', '2x' => '/static/images/project-logos/knwikiquote-2x.png' ], // T150618
-	'mlwikiquote' => [ '1.5x' => '/static/images/project-logos/mlwikiquote-1.5x.png', '2x' => '/static/images/project-logos/mlwikiquote-2x.png' ], // T150618
-	'plwikiquote' => [ '1.5x' => '/static/images/project-logos/plwikiquote-1.5x.png', '2x' => '/static/images/project-logos/plwikiquote-2x.png' ], // T150618
-	'ruwikiquote' => [ '1.5x' => '/static/images/project-logos/ruwikiquote-1.5x.png', '2x' => '/static/images/project-logos/ruwikiquote-2x.png' ], // T197508
-	'sahwikiquote' => [ '1.5x' => '/static/images/project-logos/sahwikiquote-1.5x.png', '2x' => '/static/images/project-logos/sahwikiquote-2x.png' ], // T222065
-	'slwikiquote' => [ '1.5x' => '/static/images/project-logos/slwikiquote-1.5x.png', '2x' => '/static/images/project-logos/slwikiquote-2x.png' ], // T150618
-	'sqwikiquote' => [ '1.5x' => '/static/images/project-logos/sqwikiquote-1.5x.png', '2x' => '/static/images/project-logos/sqwikiquote-2x.png' ], // T150618
-	'srwikiquote' => [ '1.5x' => '/static/images/project-logos/srwikiquote-1.5x.png', '2x' => '/static/images/project-logos/srwikiquote-2x.png' ], // T150618 and T168444
-	'suwikiquote' => [ '1.5x' => '/static/images/project-logos/suwikiquote-1.5x.png', '2x' => '/static/images/project-logos/suwikiquote-2x.png' ], // T150618
-	'tewikiquote' => [ '1.5x' => '/static/images/project-logos/tewikiquote-1.5x.png', '2x' => '/static/images/project-logos/tewikiquote-2x.png' ],
-	'viwikiquote' => [ '1.5x' => '/static/images/project-logos/viwikiquote-1.5x.png', '2x' => '/static/images/project-logos/viwikiquote-2x.png' ],
-	'zhwikiquote' => [ '1.5x' => '/static/images/project-logos/zhwikiquote-1.5x.png', '2x' => '/static/images/project-logos/zhwikiquote-2x.png' ], // T150618
-
-	# Wikibooks
-	'afwikibooks' => [ '1.5x' => '/static/images/project-logos/afwikibooks-1.5x.png', '2x' => '/static/images/project-logos/afwikibooks-2x.png' ], // T150618
-	'akwikibooks' => [ '1.5x' => '/static/images/project-logos/akwikibooks-1.5x.png', '2x' => '/static/images/project-logos/akwikibooks-2x.png' ], // T150618
-	'angwikibooks' => [ '1.5x' => '/static/images/project-logos/angwikibooks-1.5x.png', '2x' => '/static/images/project-logos/angwikibooks-2x.png' ],
-	'aswikibooks' => [ '1.5x' => '/static/images/project-logos/aswikibooks-1.5x.png', '2x' => '/static/images/project-logos/aswikibooks-2x.png' ], // T150618
-	'astwikibooks' => [ '1.5x' => '/static/images/project-logos/astwikibooks-1.5x.png', '2x' => '/static/images/project-logos/astwikibooks-2x.png' ], // T150618
-	'aywikibooks' => [ '1.5x' => '/static/images/project-logos/aywikibooks-1.5x.png', '2x' => '/static/images/project-logos/aywikibooks-2x.png' ], // T150618
-	'bawikibooks' => [ '1.5x' => '/static/images/project-logos/bawikibooks-1.5x.png', '2x' => '/static/images/project-logos/bawikibooks-2x.png' ], // T227418
-	'bewikibooks' => [ '1.5x' => '/static/images/project-logos/bewikibooks-1.5x.png', '2x' => '/static/images/project-logos/bewikibooks-2x.png' ],
-	'cswikibooks' => [ '1.5x' => '/static/images/project-logos/cswikibooks-1.5x.png', '2x' => '/static/images/project-logos/cswikibooks-2x.png' ], // T177506
-	'dewikibooks' => [ '1.5x' => '/static/images/project-logos/dewikibooks-1.5x.png', '2x' => '/static/images/project-logos/dewikibooks-2x.png' ], // T177506
-	'enwikibooks' => [ '1.5x' => '/static/images/project-logos/enwikibooks-1.5x.png', '2x' => '/static/images/project-logos/enwikibooks-2x.png' ], // T177506
-	'eswikibooks' => [ '1.5x' => '/static/images/project-logos/eswikibooks-1.5x.png', '2x' => '/static/images/project-logos/eswikibooks-2x.png' ], // T170248
-	'fiwikibooks' => [ '1.5x' => '/static/images/project-logos/fiwikibooks-1.5x.png', '2x' => '/static/images/project-logos/fiwikibooks-2x.png' ], // T177506
-	'frwikibooks' => [ '1.5x' => '/static/images/project-logos/frwikibooks-1.5x.png', '2x' => '/static/images/project-logos/frwikibooks-2x.png' ], // T150618
-	'fywikibooks' => [ '1.5x' => '/static/images/project-logos/fywikibooks-1.5x.png', '2x' => '/static/images/project-logos/fywikibooks-2x.png' ], // T150618
-	'hewikibooks' => [ '1.5x' => '/static/images/project-logos/hewikibooks-1.5x.png', '2x' => '/static/images/project-logos/hewikibooks-2x.png' ], // T201562
-	'hiwikibooks' => [ '1.5x' => '/static/images/project-logos/hiwikibooks-1.5x.png', '2x' => '/static/images/project-logos/hiwikibooks-2x.png' ],
-	'huwikibooks' => [ '1.5x' => '/static/images/project-logos/huwikibooks-1.5x.png', '2x' => '/static/images/project-logos/huwikibooks-2x.png' ], // T177506
-	'iawikibooks' => [ '1.5x' => '/static/images/project-logos/iawikibooks-1.5x.png', '2x' => '/static/images/project-logos/iawikibooks-2x.png' ], // T150618
-	'iewikibooks' => [ '1.5x' => '/static/images/project-logos/iewikibooks-1.5x.png', '2x' => '/static/images/project-logos/iewikibooks-2x.png' ], // T150618
-	'itwikibooks' => [ '1.5x' => '/static/images/project-logos/itwikibooks-1.5x.png', '2x' => '/static/images/project-logos/itwikibooks-2x.png' ], // T177506
-	'lawikibooks' => [ '1.5x' => '/static/images/project-logos/lawikibooks-1.5x.png', '2x' => '/static/images/project-logos/lawikibooks-2x.png' ],
-	'mgwikibooks' => [ '1.5x' => '/static/images/project-logos/mgwikibooks-1.5x.png', '2x' => '/static/images/project-logos/mgwikibooks-2x.png' ], // T150618
-	'miwikibooks' => [ '1.5x' => '/static/images/project-logos/miwikibooks-1.5x.png', '2x' => '/static/images/project-logos/miwikibooks-2x.png' ], // T150618
-	'mlwikibooks' => [ '1.5x' => '/static/images/project-logos/mlwikibooks-1.5x.png', '2x' => '/static/images/project-logos/mlwikibooks-2x.png' ], // T150618
-	'nowikibooks' => [ '1.5x' => '/static/images/project-logos/nowikibooks-1.5x.png', '2x' => '/static/images/project-logos/nowikibooks-2x.png' ],
-	'ruwikibooks' => [ '1.5x' => '/static/images/project-logos/ruwikibooks-1.5x.png', '2x' => '/static/images/project-logos/ruwikibooks-2x.png' ], // T150618
-	'srwikibooks' => [ '1.5x' => '/static/images/project-logos/srwikibooks-1.5x.png', '2x' => '/static/images/project-logos/srwikibooks-2x.png' ], // T159534
-	'trwikibooks' => [ '1.5x' => '/static/images/project-logos/trwikibooks-1.5x.png', '2x' => '/static/images/project-logos/trwikibooks-2x.png' ], // T177506
-	'urwikibooks' => [ '1.5x' => '/static/images/project-logos/urwikibooks-1.5x.png', '2x' => '/static/images/project-logos/urwikibooks-2x.png' ], // T185977
-	'viwikibooks' => [ '1.5x' => '/static/images/project-logos/viwikibooks-1.5x.png', '2x' => '/static/images/project-logos/viwikibooks-2x.png' ],
-
-	# Wikisource
-	'sourceswiki' => [ '1.5x' => '/static/images/project-logos/sourceswiki-1.5x.png', '2x' => '/static/images/project-logos/sourceswiki-2x.png' ], // T150618
-	'bewikisource' => [ '1.5x' => '/static/images/project-logos/bewikisource-1.5x.png', '2x' => '/static/images/project-logos/bewikisource-2x.png' ], // T150618
-	'cswikisource' => [ '1.5x' => '/static/images/project-logos/cswikisource-1.5x.png', '2x' => '/static/images/project-logos/cswikisource-2x.png' ], // T150618
-	'enwikisource' => [ '1.5x' => '/static/images/project-logos/enwikisource-1.5x.png', '2x' => '/static/images/project-logos/enwikisource-2x.png' ],
-	'euwikisource' => [ '1.5x' => '/static/images/project-logos/euwikisource-1.5x.png', '2x' => '/static/images/project-logos/euwikisource-2x.png' ],
-	'frwikisource' => [ '1.5x' => '/static/images/project-logos/frwikisource-1.5x.png', '2x' => '/static/images/project-logos/frwikisource-2x.png' ],
-	'hiwikisource' => [ '1.5x' => '/static/images/project-logos/hiwikisource-1.5x.png', '2x' => '/static/images/project-logos/hiwikisource-2x.png' ],
-	'napwikisource' => [ '1.5x' => '/static/images/project-logos/napwikisource-1.5x.png', '2x' => '/static/images/project-logos/napwikisource-2x.png' ], // T210752
-	'nowikisource' => [ '1.5x' => '/static/images/project-logos/nowikisource-1.5x.png', '2x' => '/static/images/project-logos/nowikisource-2x.png' ], // T167192
-	'pawikisource' => [ '1.5x' => '/static/images/project-logos/pawikisource-1.5x.png', '2x' => '/static/images/project-logos/pawikisource-2x.png' ], // T149522
-	'ruwikisource' => [ '1.5x' => '/static/images/project-logos/ruwikisource-1.5x.png', '2x' => '/static/images/project-logos/ruwikisource-2x.png' ], // T203343
-	'srwikisource' => [ '1.5x' => '/static/images/project-logos/srwikisource-1.5x.png', '2x' => '/static/images/project-logos/srwikisource-2x.png' ], // T172268
-	'tewikisource' => [ '1.5x' => '/static/images/project-logos/tewikisource-1.5x.png', '2x' => '/static/images/project-logos/tewikisource-2x.png' ],
-	'viwikisource' => [ '1.5x' => '/static/images/project-logos/viwikisource-1.5x.png', '2x' => '/static/images/project-logos/viwikisource-2x.png' ],
-	'yiwikisource' => [ '1.5x' => '/static/images/project-logos/yiwikisource-1.5x.png', '2x' => '/static/images/project-logos/yiwikisource-2x.png' ], // T193562
-	'zhwikisource' => [ '1.5x' => '/static/images/project-logos/zhwikisource-1.5x.png', '2x' => '/static/images/project-logos/zhwikisource-2x.png' ], // T229715
-
-	# Wikiversity
-	'arwikiversity' => [ '1.5x' => '/static/images/project-logos/arwikiversity-1.5x.png', '2x' => '/static/images/project-logos/arwikiversity-2x.png' ],
-	'cswikiversity' => [ '1.5x' => '/static/images/project-logos/cswikiversity-1.5x.png', '2x' => '/static/images/project-logos/cswikiversity-2x.png' ], // T150618
-	'dewikiversity' => [ '1.5x' => '/static/images/project-logos/dewikiversity-1.5x.png', '2x' => '/static/images/project-logos/dewikiversity-2x.png' ],
-	'elwikiversity' => [ '1.5x' => '/static/images/project-logos/elwikiversity-1.5x.png', '2x' => '/static/images/project-logos/elwikiversity-2x.png' ], // T150618
-	'enwikiversity' => [ '1.5x' => '/static/images/project-logos/enwikiversity-1.5x.png', '2x' => '/static/images/project-logos/enwikiversity-2x.png' ], // T150618
-	'eswikiversity' => [ '1.5x' => '/static/images/project-logos/eswikiversity-1.5x.png', '2x' => '/static/images/project-logos/eswikiversity-2x.png' ],
-	'fiwikiversity' => [ '1.5x' => '/static/images/project-logos/fiwikiversity-1.5x.png', '2x' => '/static/images/project-logos/fiwikiversity-2x.png' ], // T150618
-	'frwikiversity' => [ '1.5x' => '/static/images/project-logos/frwikiversity-1.5x.png', '2x' => '/static/images/project-logos/frwikiversity-2x.png' ], // T150618
-	'hiwikiversity' => [ '1.5x' => '/static/images/project-logos/hiwikiversity-1.5x.png', '2x' => '/static/images/project-logos/hiwikiversity-2x.png' ],
-	'itwikiversity' => [ '1.5x' => '/static/images/project-logos/itwikiversity-1.5x.png', '2x' => '/static/images/project-logos/itwikiversity-2x.png' ], // T150618
-	'jawikiversity' => [ '1.5x' => '/static/images/project-logos/jawikiversity-1.5x.png', '2x' => '/static/images/project-logos/jawikiversity-2x.png' ],
-	'kowikiversity' => [ '1.5x' => '/static/images/project-logos/kowikiversity-1.5x.png', '2x' => '/static/images/project-logos/kowikiversity-2x.png' ], // T150618
-	'ptwikiversity' => [ '1.5x' => '/static/images/project-logos/ptwikiversity-1.5x.png', '2x' => '/static/images/project-logos/ptwikiversity-2x.png' ], // T150618
-	'ruwikiversity' => [ '1.5x' => '/static/images/project-logos/ruwikiversity-1.5x.png', '2x' => '/static/images/project-logos/ruwikiversity-2x.png' ], // T150618
-	'slwikiversity' => [ '1.5x' => '/static/images/project-logos/slwikiversity-1.5x.png', '2x' => '/static/images/project-logos/slwikiversity-2x.png' ], // T150618
-	'svwikiversity' => [ '1.5x' => '/static/images/project-logos/svwikiversity-1.5x.png', '2x' => '/static/images/project-logos/svwikiversity-2x.png' ],
-	'zhwikiversity' => [ '1.5x' => '/static/images/project-logos/zhwikiversity-1.5x.png', '2x' => '/static/images/project-logos/zhwikiversity-2x.png' ],
-
-	# Wikivoyage
-	'bnwikivoyage' => [ '1.5x' => '/static/images/project-logos/bnwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/bnwikivoyage-2x.png' ],
-	'enwikivoyage' => [ '1.5x' => '/static/images/project-logos/enwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/enwikivoyage-2x.png' ],
-	'eswikivoyage' => [ '1.5x' => '/static/images/project-logos/eswikivoyage-1.5x.png', '2x' => '/static/images/project-logos/eswikivoyage-2x.png' ], // T170604
-	'fiwikivoyage' => [ '1.5x' => '/static/images/project-logos/fiwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/fiwikivoyage-2x.png' ],
-	'hewikivoyage' => [ '1.5x' => '/static/images/project-logos/hewikivoyage-1.5x.png', '2x' => '/static/images/project-logos/hewikivoyage-2x.png' ], // T208148
-	'hiwikivoyage' => [ '1.5x' => '/static/images/project-logos/hiwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/hiwikivoyage-2x.png' ], // T173013
-	'pswikivoyage' => [ '1.5x' => '/static/images/project-logos/pswikivoyage-1.5x.png', '2x' => '/static/images/project-logos/pswikivoyage-2x.png' ],
-	'ruwikivoyage' => [ '1.5x' => '/static/images/project-logos/ruwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/ruwikivoyage-2x.png' ], // T150618
-	'viwikivoyage' => [ '1.5x' => '/static/images/project-logos/viwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/viwikivoyage-2x.png' ], // T151570
-	'zhwikivoyage' => [ '1.5x' => '/static/images/project-logos/zhwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/zhwikivoyage-2x.png' ], // T150618
-
-	# Wikinews
-	'enwikinews' => [ '1.5x' => '/static/images/project-logos/enwikinews-1.5x.png', '2x' => '/static/images/project-logos/enwikinews-2x.png' ], // T150618
-	'elwikinews' => [ '1.5x' => '/static/images/project-logos/elwikinews-1.5x.png', '2x' => '/static/images/project-logos/elwikinews-2x.png' ], // T150618
-	'frwikinews' => [ '1.5x' => '/static/images/project-logos/frwikinews-1.5x.png', '2x' => '/static/images/project-logos/frwikinews-2x.png' ], // T150618
-	'liwikinews' => [ '1.5x' => '/static/images/project-logos/liwikinews-1.5x.png', '2x' => '/static/images/project-logos/liwikinews-2x.png' ],
-	'ruwikinews' => [ '1.5x' => '/static/images/project-logos/ruwikinews-1.5x.png', '2x' => '/static/images/project-logos/ruwikinews-2x.png' ], // T150618
-	'srwikinews' => [ '1.5x' => '/static/images/project-logos/srwikinews-1.5x.png', '2x' => '/static/images/project-logos/srwikinews-2x.png' ], // T172255
-	'zhwikinews' => [ '1.5x' => '/static/images/project-logos/zhwikinews-1.5x.png', '2x' => '/static/images/project-logos/zhwikinews-2x.png' ], // T150618
-	'trwikinews' => [ '1.5x' => '/static/images/project-logos/trwikinews-1.5x.png', '2x' => '/static/images/project-logos/trwikinews-2x.png' ], // T150618
-
-	# Chapter wikis
-	'amwikimedia' => [ '1.5x' => '/static/images/project-logos/amwikimedia-1.5x.png', '2x' => '/static/images/project-logos/amwikimedia-2x.png' ], // T176042
-	'cawikimedia' => [ '1.5x' => '/static/images/project-logos/cawikimedia-1.5x.png', '2x' => '/static/images/project-logos/cawikimedia-2x.png' ],
-	'ecwikimedia' => [ '1.5x' => '/static/images/project-logos/ecwikimedia-1.5x.png', '2x' => '/static/images/project-logos/ecwikimedia-2x.png' ], // T135521
-	'gewikimedia' => [ '1.5x' => '/static/images/project-logos/gewikimedia-1.5x.png', '2x' => '/static/images/project-logos/gewikimedia-2x.png' ], // T236389
-	'hiwikimedia' => [ '1.5x' => '/static/images/project-logos/hiwikimedia-1.5x.png', '2x' => '/static/images/project-logos/hiwikimedia-2x.png' ],
-	'idwikimedia' => [ '1.5x' => '/static/images/project-logos/idwikimedia-1.5x.png', '2x' => '/static/images/project-logos/idwikimedia-2x.png' ], // T192726
-	'id_internalwikimedia' => [ '1.5x' => '/static/images/project-logos/id_internalwikimedia-1.5x.png', '2x' => '/static/images/project-logos/id_internalwikimedia-2x.png' ],
-	'maiwikimedia' => [ '1.5x' => '/static/images/project-logos/maiwikimedia-1.5x.png', '2x' => '/static/images/project-logos/maiwikimedia-2x.png' ],
-	'ngwikimedia' => [ '1.5x' => '/static/images/project-logos/ngwikimedia-1.5x.png', '2x' => '/static/images/project-logos/ngwikimedia-2x.png' ], // T242416
-	'ptwikimedia' => [ '1.5x' => '/static/images/project-logos/ptwikimedia-1.5x.png', '2x' => '/static/images/project-logos/ptwikimedia-2x.png' ], // T126832
-	'punjabiwikimedia' => [ '1.5x' => '/static/images/project-logos/punjabiwikimedia-1.5x.png', '2x' => '/static/images/project-logos/punjabiwikimedia-2x.png' ],
-	'romdwikimedia' => [ '1.5x' => '/static/images/project-logos/romdwikimedia-1.5x.png', '2x' => '/static/images/project-logos/romdwikimedia-2x.png' ],
-	'trwikimedia' => [ '1.5x' => '/static/images/project-logos/trwikimedia-1.5x.png', '2x' => '/static/images/project-logos/trwikimedia-2x.png' ],
-	'wbwikimedia' => [ '1.5x' => '/static/images/project-logos/wbwikimedia-1.5x.png', '2x' => '/static/images/project-logos/wbwikimedia-2x.png' ], // T162510
-
-	# Special wikis
-	'advisorswiki' => [ '1.5x' => '/static/images/project-logos/advisorswiki-1.5x.png', '2x' => '/static/images/project-logos/advisorswiki-2x.png' ], // T202844
-	'arbcom_cswiki' => [ '1.5x' => '/static/images/project-logos/arbcom_cswiki-1.5x.png', '2x' => '/static/images/project-logos/arbcom_cswiki-2x.png' ], // T151731
-	'arbcom_dewiki' => [ '1.5x' => '/static/images/project-logos/arbcom_dewiki-1.5x.png', '2x' => '/static/images/project-logos/arbcom_dewiki-2x.png' ], // T166947
-	'arbcom_enwiki' => [ '1.5x' => '/static/images/project-logos/arbcom_enwiki-1.5x.png', '2x' => '/static/images/project-logos/arbcom_enwiki-2x.png' ], // T150618
-	'arbcom_fiwiki' => [ '1.5x' => '/static/images/project-logos/arbcom_fiwiki-1.5x.png', '2x' => '/static/images/project-logos/arbcom_fiwiki-2x.png' ], // T150618
-	'arbcom_nlwiki' => [ '1.5x' => '/static/images/project-logos/arbcom_nlwiki-1.5x.png', '2x' => '/static/images/project-logos/arbcom_nlwiki-2x.png' ], // T150618
-	'commonswiki' => [ '1.5x' => '/static/images/project-logos/commonswiki-1.5x.png', '2x' => '/static/images/project-logos/commonswiki-2x.png' ], // T203343
-	'testcommonswiki' => [ '1.5x' => '/static/images/project-logos/commonswiki-1.5x.png', '2x' => '/static/images/project-logos/commonswiki-2x.png' ], // T203343
-	'chapcomwiki' => [ '1.5x' => '/static/images/project-logos/chapcomwiki-1.5x.png', '2x' => '/static/images/project-logos/chapcomwiki-2x.png' ], // T193024
-	'donatewiki' => [ '1.5x' => '/static/images/project-logos/donatewiki-1.5x.png', '2x' => '/static/images/project-logos/donatewiki-2x.png' ],
-	'foundationwiki' => [ '1.5x' => '/static/images/project-logos/foundationwiki-1.5x.png', '2x' => '/static/images/project-logos/foundationwiki-2x.png' ],
-	'incubatorwiki' => [ '1.5x' => '/static/images/project-logos/incubatorwiki-1.5x.png', '2x' => '/static/images/project-logos/incubatorwiki-2x.png' ], // T230122
-	'metawiki' => [ '1.5x' => '/static/images/project-logos/metawiki-1.5x.png', '2x' => '/static/images/project-logos/metawiki-2x.png' ],
-	'officewiki' => [ '1.5x' => '/static/images/project-logos/officewiki-1.5x.png', '2x' => '/static/images/project-logos/officewiki-2x.png' ],
-	'specieswiki' => [ '1.5x' => '/static/images/project-logos/specieswiki-1.5x.png', '2x' => '/static/images/project-logos/specieswiki-2x.png' ], // T230113
-	'testwiki' => [ '1.5x' => '/static/images/project-logos/testwiki-1.5x.png', '2x' => '/static/images/project-logos/testwiki-2x.png' ], // T150618
-	'test2wiki' => [ '1.5x' => '/static/images/project-logos/test2wiki-1.5x.png', '2x' => '/static/images/project-logos/test2wiki-2x.png' ],
-	'votewiki' => [ '1.5x' => '/static/images/project-logos/votewiki-1.5x.png', '2x' => '/static/images/project-logos/votewiki-2x.png' ],
-	'wikidatawiki' => [ '1.5x' => '/static/images/project-logos/wikidatawiki-1.5x.png', '2x' => '/static/images/project-logos/wikidatawiki-2x.png' ], // T230120
-	'wikimania2018wiki' => [ '1.5x' => '/static/images/project-logos/wikimania2018wiki-1.5x.png', '2x' => '/static/images/project-logos/wikimania2018wiki-2x.png' ], // T194340
-	'wikimaniawiki' => [ '1.5x' => '/static/images/project-logos/wikimaniawiki-1.5x.png', '2x' => '/static/images/project-logos/wikimaniawiki-2x.png' ], // T194340
+	'advisorswiki' => [
+		'1x' => '/static/images/project-logos/advisorswiki.png', // T202844
+		'1.5x' => '/static/images/project-logos/advisorswiki-1.5x.png', // T202844
+		'2x' => '/static/images/project-logos/advisorswiki-2x.png', // T202844
+	],
+	'advisorywiki' => [
+		'1x' => '/static/images/project-logos/advisorywiki.png',
+	],
+	'arbcom_cswiki' => [
+		'1x' => '/static/images/project-logos/arbcom_cswiki.png', // T151731
+		'1.5x' => '/static/images/project-logos/arbcom_cswiki-1.5x.png', // T151731
+		'2x' => '/static/images/project-logos/arbcom_cswiki-2x.png', // T151731
+	],
+	'arbcom_dewiki' => [
+		'1x' => '/static/images/project-logos/arbcom_dewiki.png', // T166947
+		'1.5x' => '/static/images/project-logos/arbcom_dewiki-1.5x.png', // T166947
+		'2x' => '/static/images/project-logos/arbcom_dewiki-2x.png', // T166947
+	],
+	'arbcom_enwiki' => [
+		'1x' => '/static/images/project-logos/arbcom_enwiki.png',
+		'1.5x' => '/static/images/project-logos/arbcom_enwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/arbcom_enwiki-2x.png', // T150618
+	],
+	'arbcom_fiwiki' => [
+		'1x' => '/static/images/project-logos/arbcom_fiwiki.png',
+		'1.5x' => '/static/images/project-logos/arbcom_fiwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/arbcom_fiwiki-2x.png', // T150618
+	],
+	'arbcom_nlwiki' => [
+		'1x' => '/static/images/project-logos/arbcom_nlwiki.png',
+		'1.5x' => '/static/images/project-logos/arbcom_nlwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/arbcom_nlwiki-2x.png', // T150618
+	],
+	'boardwiki' => [
+		'1x' => '/static/images/project-logos/boardwiki.png',
+	],
+	'brwikimedia' => [
+		'1x' => '/static/images/project-logos/brwikimedia.png',
+	],
+	'chairwiki' => [
+		'1x' => '/static/images/project-logos/chairwiki.png',
+	],
+	'chapcomwiki' => [
+		'1x' => '/static/images/project-logos/chapcomwiki.png',
+		'1.5x' => '/static/images/project-logos/chapcomwiki-1.5x.png', // T193024
+		'2x' => '/static/images/project-logos/chapcomwiki-2x.png', // T193024
+	],
+	'checkuserwiki' => [
+		'1x' => '/static/images/project-logos/checkuserwiki.png', // T30785
+	],
+	'collabwiki' => [
+		'1x' => '/static/images/project-logos/collabwiki.png',
+	],
+	'commonswiki' => [
+		'1x' => '/static/images/project-logos/commonswiki.png',
+		'1.5x' => '/static/images/project-logos/commonswiki-1.5x.png', // T203343
+		'2x' => '/static/images/project-logos/commonswiki-2x.png', // T203343
+	],
+	'donatewiki' => [
+		'1x' => '/static/images/project-logos/donatewiki.png',
+		'1.5x' => '/static/images/project-logos/donatewiki-1.5x.png',
+		'2x' => '/static/images/project-logos/donatewiki-2x.png',
+	],
+	'execwiki' => [
+		'1x' => '/static/images/project-logos/execwiki.png',
+	],
+	'fdcwiki' => [
+		'1x' => '/static/images/project-logos/fdcwiki.png', // T50379
+	],
+	'foundationwiki' => [
+		'1x' => '/static/images/project-logos/foundationwiki.png',
+		'1.5x' => '/static/images/project-logos/foundationwiki-1.5x.png',
+		'2x' => '/static/images/project-logos/foundationwiki-2x.png',
+	],
+	'iegcomwiki' => [
+		'1x' => '/static/images/project-logos/iegcomwiki.png', // T50379
+	],
+	'incubatorwiki' => [
+		'1x' => '/static/images/project-logos/incubatorwiki.png',
+		'1.5x' => '/static/images/project-logos/incubatorwiki-1.5x.png', // T230122
+		'2x' => '/static/images/project-logos/incubatorwiki-2x.png', // T230122
+	],
+	'internalwiki' => [
+		'1x' => '/static/images/project-logos/internalwiki.png',
+	],
+	'legalteamwiki' => [
+		'1x' => '/static/images/project-logos/legalteamwiki.png',
+	],
+	'loginwiki' => [
+		'1x' => '/static/images/project-logos/loginwiki.png', // T50236
+	],
+	'mediawikiwiki' => [
+		'1x' => '/static/images/project-logos/mediawikiwiki.png',
+	],
+	'metawiki' => [
+		'1x' => '/static/images/project-logos/metawiki.png',
+		'1.5x' => '/static/images/project-logos/metawiki-1.5x.png',
+		'2x' => '/static/images/project-logos/metawiki-2x.png',
+	],
+	'nostalgiawiki' => [
+		'1x' => '/static/images/project-logos/nostalgiawiki.png',
+	],
+	'officewiki' => [
+		'1x' => '/static/images/project-logos/officewiki.png',
+		'1.5x' => '/static/images/project-logos/officewiki-1.5x.png',
+		'2x' => '/static/images/project-logos/officewiki-2x.png',
+	],
+	'ombudsmenwiki' => [
+		'1x' => '/static/images/project-logos/ombudsmenwiki.png', // T50379
+	],
+	'otrs_wikiwiki' => [
+		'1x' => '/static/images/project-logos/otrs_wikiwiki.png',
+	],
+	'outreachwiki' => [
+		'1x' => '/static/images/project-logos/outreachwiki.png',
+	],
+	'qualitywiki' => [
+		'1x' => '/static/images/project-logos/qualitywiki.png',
+	],
+	'searchcomwiki' => [
+		'1x' => '/static/images/project-logos/searchcomwiki.png',
+	],
+	'spcomwiki' => [
+		'1x' => '/static/images/project-logos/spcomwiki.png',
+	],
+	'specieswiki' => [
+		'1x' => '/static/images/project-logos/specieswiki.png',
+		'1.5x' => '/static/images/project-logos/specieswiki-1.5x.png', // T230113
+		'2x' => '/static/images/project-logos/specieswiki-2x.png', // T230113
+	],
+	'stewardwiki' => [
+		'1x' => '/static/images/project-logos/stewardwiki.png', // T39700
+	],
+	'strategywiki' => [
+		'1x' => '/static/images/project-logos/strategywiki.png',
+	],
+	'tenwiki' => [
+		'1x' => '/static/images/project-logos/tenwiki.png',
+	],
+	'test2wiki' => [
+		'1x' => '/static/images/project-logos/test2wiki.png',
+		'1.5x' => '/static/images/project-logos/test2wiki-1.5x.png',
+		'2x' => '/static/images/project-logos/test2wiki-2x.png',
+	],
+	'testcommonswiki' => [
+		'1x' => '/static/images/project-logos/commonswiki.png',
+		'1.5x' => '/static/images/project-logos/commonswiki-1.5x.png', // T203343
+		'2x' => '/static/images/project-logos/commonswiki-2x.png', // T203343
+	],
+	'testwiki' => [
+		'1x' => '/static/images/project-logos/testwiki.png',
+		'1.5x' => '/static/images/project-logos/testwiki-1.5x.png', // T150618
+		'2x' => '/static/images/project-logos/testwiki-2x.png', // T150618
+	],
+	'testwikidatawiki' => [
+		'1x' => '/static/images/project-logos/testwikidatawiki.png',
+	],
+	'transitionteamwiki' => [
+		'1x' => '/static/images/project-logos/transitionteamwiki.png', // T50379
+	],
+	'usabilitywiki' => [
+		'1x' => '/static/images/project-logos/usabilitywiki.png',
+	],
+	'votewiki' => [
+		'1x' => '/static/images/project-logos/votewiki.png',
+		'1.5x' => '/static/images/project-logos/votewiki-1.5x.png',
+		'2x' => '/static/images/project-logos/votewiki-2x.png',
+	],
+	'wg_enwiki' => [
+		'1x' => '/static/images/project-logos/wg_enwiki.png',
+	],
+	'wikidatawiki' => [
+		'1x' => '/static/images/project-logos/wikidatawiki.png',
+		'1.5x' => '/static/images/project-logos/wikidatawiki-1.5x.png', // T230120
+		'2x' => '/static/images/project-logos/wikidatawiki-2x.png', // T230120
+	],
+	'wikimania2005wiki' => [
+		'1x' => '/static/images/project-logos/wikimania2005wiki.png', // T50382
+	],
+	'wikimania2006wiki' => [
+		'1x' => '/static/images/project-logos/wikimania2006wiki.png', // T50382
+	],
+	'wikimania2007wiki' => [
+		'1x' => '/static/images/project-logos/wikimania2007wiki.png', // T50382
+	],
+	'wikimania2008wiki' => [
+		'1x' => '/static/images/project-logos/wikimania2008wiki.png', // T50382
+	],
+	'wikimania2009wiki' => [
+		'1x' => '/static/images/project-logos/wikimania2009wiki.png', // T50382
+	],
+	'wikimania2010wiki' => [
+		'1x' => '/static/images/project-logos/wikimania2010wiki.png', // T50382
+	],
+	'wikimania2011wiki' => [
+		'1x' => '/static/images/project-logos/wikimania2011wiki.png', // T50382
+	],
+	'wikimania2012wiki' => [
+		'1x' => '/static/images/project-logos/wikimania2012wiki.png', // T50382
+	],
+	'wikimania2013wiki' => [
+		'1x' => '/static/images/project-logos/wikimania2013wiki.png', // T50382
+	],
+	'wikimania2014wiki' => [
+		'1x' => '/static/images/project-logos/wikimania2014wiki.png', // T58398
+	],
+	'wikimania2015wiki' => [
+		'1x' => '/static/images/project-logos/wikimania2015wiki.png', // T50382
+	],
+	'wikimania2016wiki' => [
+		'1x' => '/static/images/project-logos/wikimania2016wiki.png',
+	],
+	'wikimania2017wiki' => [
+		'1x' => '/static/images/project-logos/wikimania2017wiki.png', // T122062
+	],
+	'wikimania2018wiki' => [
+		'1x' => '/static/images/project-logos/wikimania2018wiki.png', // T173042
+		'1.5x' => '/static/images/project-logos/wikimania2018wiki-1.5x.png', // T194340
+		'2x' => '/static/images/project-logos/wikimania2018wiki-2x.png', // T194340
+	],
+	'wikimaniateamwiki' => [
+		'1x' => '/static/images/project-logos/wikimaniateamwiki.png', // T50376
+	],
+	'wikimaniawiki' => [
+		'1x' => '/static/images/project-logos/wikimaniawiki.png',
+		'1.5x' => '/static/images/project-logos/wikimaniawiki-1.5x.png', // T194340
+		'2x' => '/static/images/project-logos/wikimaniawiki-2x.png', // T194340
+	],
 ],
 # @} end of wgLogos
 

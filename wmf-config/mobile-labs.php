@@ -2,7 +2,7 @@
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
 // T114552
-$wgMobileFrontendLogo = $wgLogo;
+$wgMobileFrontendLogo = $wgLogos['1x'];
 
 // T49647
 $wgHooks['EnterMobileMode'][] = function () {

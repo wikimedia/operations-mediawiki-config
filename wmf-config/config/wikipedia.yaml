@@ -6,4 +6,6 @@ inheritsFrom: base
 
 wikiTag: wikipedia
 
-wgLogo: '/static/images/project-logos/enwiki.png'
+
+wgLogos:
+  - 1x: '/static/images/project-logos/enwiki.png'

@@ -4,4 +4,5 @@
 
 inheritsFrom: all
 
-wgLogo: '/static/images/project-logos/default.png'
+wgLogos:
+  - 1x: '/static/images/project-logos/default.png'

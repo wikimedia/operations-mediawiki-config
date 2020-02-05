@@ -46,29 +46,26 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 		// Build an array of logos to test everything in one cycle
 		$logos = [];
 
-		foreach ( $this->variantSettings['wgLogo'] as $db => $logo ) {
-			$logos[$db]['1x'] = $logo;
-		}
-
 		foreach ( $this->variantSettings['wgLogos'] as $db => $entry ) {
-			// Test if only 1.5x and 2x keys are used
-			// Only relevant to wgLogos, so can stay here
+			// Test that only 1x, 1.5x, 2x, and 'wordmark' keys are used
 			$keys = array_keys( $entry );
-			if ( array_search( $db, $keys ) ) {
-				$this->assertEqualsCanonicalizing( [ '1.5x', '2x', 'wordmark' ], $keys, "Unexpected keys for $db" );
-			} else {
-				$this->assertEqualsCanonicalizing( [ '1.5x', '2x' ], $keys, "Unexpected keys for $db" );
-			}
 
-			foreach ( $entry as $size => $logo ) {
-				$logos[$db][$size] = $logo;
-			}
-		}
+			switch ( count( $keys ) ) {
+				case 4:
+					$this->assertEqualsCanonicalizing( [ '1x', '1.5x', '2x', 'wordmark' ], $keys, "Unexpected keys for '$db'" );
+					break;
 
-		// Really test stuff
-		foreach ( $logos as $db => $entry ) {
-			// 1x must be defined
-			$this->assertArrayHasKey( '1x', $entry, "$db has HD logo defined, but no 1x logo" );
+				case 3:
+					$this->assertEqualsCanonicalizing( [ '1x', '1.5x', '2x' ], $keys, "Unexpected keys for '$db'" );
+					break;
+
+				case 2:
+					$this->assertEqualsCanonicalizing( [ '1x', 'wordmark' ], $keys, "Unexpected keys for '$db'" );
+					break;
+
+				default:
+					$this->assertEqualsCanonicalizing( [ '1x' ], $keys, "Unexpected keys for '$db'" );
+			}
 
 			foreach ( $entry as $size => $logo ) {
 				// Test if all logos exist

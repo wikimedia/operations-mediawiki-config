@@ -869,13 +869,6 @@ if ( $wmgUseCORS ) {
 
 wfLoadSkins( [ 'Vector', 'MonoBook', 'Modern', 'CologneBlue', 'Timeless' ] );
 
-// backwards compatibility (can be removed after 13th February)
-// we need to apply it to all wikis regardless of whether they have a MinervaCustomLogo.
-// needs to be set before adding `wordmark` to wgLogos.
-if ( isset( $wgLogos ) ) {
-	$wgLogoHD = $wgLogos;
-}
-
 // Forwards-compatbility to use the setting of the logo for Minerva in the new $wgLogos world;
 // in the near future, when Minerva reads this from core, we'll set this in wgLogos directly.
 if (
