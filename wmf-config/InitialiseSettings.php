@@ -16205,6 +16205,9 @@ function wmfGetVariantSettings() {
 		'포털' /* Portal */ => true, // T224813
 		'초안' /* Draft */ => true, // T92798
 	],
+	'+nlwiki' => [
+		'Project' => true, // T164435
+	],
 	'+plwiki' => [
 		'Project' => true, // T133980
 		'Portal' => true, // T133980
