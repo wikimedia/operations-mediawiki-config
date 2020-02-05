@@ -50,11 +50,15 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 			$logos[$db]['1x'] = $logo;
 		}
 
-		foreach ( $this->variantSettings['wgLogoHD'] as $db => $entry ) {
+		foreach ( $this->variantSettings['wgLogos'] as $db => $entry ) {
 			// Test if only 1.5x and 2x keys are used
-			// Only relevant to wgLogoHD, so can stay here
+			// Only relevant to wgLogos, so can stay here
 			$keys = array_keys( $entry );
-			$this->assertEqualsCanonicalizing( [ '1.5x', '2x' ], $keys, "Unexpected keys for $db" );
+			if ( array_search( $db, $keys ) ) {
+				$this->assertEqualsCanonicalizing( [ '1.5x', '2x', 'wordmark' ], $keys, "Unexpected keys for $db" );
+			} else {
+				$this->assertEqualsCanonicalizing( [ '1.5x', '2x' ], $keys, "Unexpected keys for $db" );
+			}
 
 			foreach ( $entry as $size => $logo ) {
 				$logos[$db][$size] = $logo;

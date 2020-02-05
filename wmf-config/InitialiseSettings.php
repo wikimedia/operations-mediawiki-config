@@ -1311,9 +1311,9 @@ function wmfGetVariantSettings() {
 ],
 # @} end of wgLogo
 
-# wgLogoHD @{
+# wgLogos (previously wgLogoHD) @{
 // Alternate logos for high-resolution displays.
-'wgLogoHD' => [
+'wgLogos' => [
 	# Wikipedia
 	'abwiki' => [ '1.5x' => '/static/images/project-logos/abwiki-1.5x.png', '2x' => '/static/images/project-logos/abwiki-2x.png' ], // T150618
 	'acewiki' => [ '1.5x' => '/static/images/project-logos/acewiki-1.5x.png', '2x' => '/static/images/project-logos/acewiki-2x.png' ], // T150618
@@ -1841,7 +1841,7 @@ function wmfGetVariantSettings() {
 	'wikimania2018wiki' => [ '1.5x' => '/static/images/project-logos/wikimania2018wiki-1.5x.png', '2x' => '/static/images/project-logos/wikimania2018wiki-2x.png' ], // T194340
 	'wikimaniawiki' => [ '1.5x' => '/static/images/project-logos/wikimaniawiki-1.5x.png', '2x' => '/static/images/project-logos/wikimaniawiki-2x.png' ], // T194340
 ],
-# @} end of wgLogoHD
+# @} end of wgLogos
 
 # wgEnableUploads @{
 // Wikis which have uploading disabled

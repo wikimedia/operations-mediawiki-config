@@ -73,7 +73,7 @@ class WgConfTestCase extends PHPUnit\Framework\TestCase {
 	 *
 	 * Example usage:
 	 *
-	 *     $wgLogoHD = $this->loadWgConf( 'production' )->settings['wgLogoHD'];
+	 *     $wgLogos = $this->loadWgConf( 'production' )->settings['wgLogos'];
 	 *
 	 * @param string $wmfRealm Realm to use for example: 'labs' or 'production'
 	 * @return SiteConfiguration
