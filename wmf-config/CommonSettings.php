@@ -862,6 +862,9 @@ if (
 	];
 }
 
+// Set $wgLogos['1x'] (new style access) to $wgLogo (old style access)
+$wgLogos['1x'] = $wgLogo;
+
 // backwards compatibility (can be removed after 13th February)
 // we need to apply it to all wikis regardless of whether they have a MinervaCustomLogo.
 $wgLogoHD = $wgLogos;
