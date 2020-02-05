@@ -24416,7 +24416,7 @@ function wmfGetVariantSettings() {
 		'the Creative Commons Attribution-ShareAlike License; additional terms may apply.',
 ],
 'wgSessionCacheType' => [
-	'default' => 'redis_local',  // declared in redis.php. This will change to kask-transition.
+	'default' => 'kask-transition',
 	'labswiki' => 'kask-session',
 	'labtestwiki' => 'kask-session',
 	'testwiki' => 'kask-session',
