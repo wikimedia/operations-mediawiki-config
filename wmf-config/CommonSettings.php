@@ -854,7 +854,6 @@ if (
 		'height' => $wgMinervaCustomLogos['copyright-height'],
 		'url' => $wgMinervaCustomLogos['copyright'],
 	];
-	$wgLogoHD = $wgLogos;
 	// See ResourceLoaderSkinModule::getLessVars
 	$wgLogos['wordmark'] = [
 		'width' => $wgMinervaCustomLogos['copyright-width'],
@@ -862,6 +861,10 @@ if (
 		'src' => $wgMinervaCustomLogos['copyright'],
 	];
 }
+
+// backwards compatibility (can be removed after 13th February)
+// we need to apply it to all wikis regardless of whether they have a MinervaCustomLogo.
+$wgLogoHD = $wgLogos;
 
 // Grants and rights
 // Note these have to be visible on all wikis, not just the ones the
