@@ -15983,6 +15983,13 @@ function wmfGetVariantSettings() {
 	'nonbetafeatures' => false,
 ],
 
+// Whether VisualEditor should bypass the MediaWiki layer and contact RESTBase directly for speed
+'wmgVisualEditorAccessRestbaseDirectly' => [
+	'default' => true,		// T100026
+	'wikitech' => false,	# Wikitech doesn't properly work yet in RESTBase
+	'private' => false,		# Private wikis aren't yet supported by RESTBase
+],
+
 // Whether VisualEditor should bypass the MediaWiki layer and contact RESTbase directly for speed
 'wmgVisualEditorAccessRESTbaseDirectly' => [
 	'default' => true,		// T100026
