@@ -839,17 +839,27 @@ if ( $wmgUseCORS ) {
 
 wfLoadSkins( [ 'Vector', 'MonoBook', 'Modern', 'CologneBlue', 'Timeless' ] );
 
-// The Print logo for Vector should use the same wordmark as Minerva
-// This avoids duplicate config entries (T169732)
+// The Print logo for Vector should use the same wordmark as Minerva and be
+// added to the result of ResourceLoaderSkinModule::getAvailableLogos.
+// In future we're consolidate this with wgLogo in one place when $wgMinervaCustomLogos
+// and $wgVectorPrintLogo are no longer supported in production.
 if (
 	isset( $wgMinervaCustomLogos['copyright'] ) &&
 	isset( $wgMinervaCustomLogos['copyright-height'] ) &&
 	isset( $wgMinervaCustomLogos['copyright-width'] )
 ) {
+	// backwards compatibility (can be removed after 13th February)
 	$wgVectorPrintLogo = [
 		'width' => $wgMinervaCustomLogos['copyright-width'],
 		'height' => $wgMinervaCustomLogos['copyright-height'],
 		'url' => $wgMinervaCustomLogos['copyright'],
+	];
+	$wgLogoHD = $wgLogos;
+	// See ResourceLoaderSkinModule::getLessVars
+	$wgLogos['wordmark'] = [
+		'width' => $wgMinervaCustomLogos['copyright-width'],
+		'height' => $wgMinervaCustomLogos['copyright-height'],
+		'src' => $wgMinervaCustomLogos['copyright'],
 	];
 }
 
