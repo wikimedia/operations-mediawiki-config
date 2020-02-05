@@ -22745,8 +22745,8 @@ function wmfGetVariantSettings() {
 	'testwiki' => 'kask-session',
 	'labtestwiki' => 'kask-session',
 	'testwikidatawiki' => 'kask-session',
-	'group0' => 'kask-transition',
-	'group1' => 'kask-transition',
+	'group0' => 'kask-session',
+	'group1' => 'kask-session',
 ],
 'wgEchoSeenTimeCacheType' => [
 	'default' => 'kask-echoseen',
