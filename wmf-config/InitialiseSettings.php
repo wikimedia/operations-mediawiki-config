@@ -23183,6 +23183,15 @@ function wmfGetVariantSettings() {
 	'default' => [],
 ],
 
+'wgWMEInukaPageViewEnabled' => [
+	'default' => false,
+	'wikipedia' => true,
+],
+'wgWMEInukaPageViewCookiesDomain' => [
+	'default' => '',
+	'wikipedia' => 'wikipedia.org'
+],
+
 'wmgUsePageViewInfo' => [
 	'default' => true,
 	'private' => false,
