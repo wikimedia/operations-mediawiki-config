@@ -502,22 +502,6 @@ $wgObjectCaches['kask-session'] = [
 	'hmac_key' => $wmgSessionStoreHMACKey,
 	'extendedErrorBodyFields' => [ 'type', 'title', 'detail', 'instance' ]
 ];
-$wgObjectCaches['kask-transition'] = [
-	'class' => 'MultiWriteBagOStuff',
-	'caches' => [
-		0 => [
-			'factory' => [ 'ObjectCache', 'getInstance' ],
-			'args' => [ 'kask-session' ]
-		],
-		1 => [
-			'factory' => [ 'ObjectCache', 'getInstance' ],
-			'args' => [ 'redis_local' ]
-		],
-
-	],
-	'replication' => 'async',
-	'reportDupes' => false,
-];
 $wgObjectCaches['kask-echoseen'] = [
 	'class' => 'RESTBagOStuff',
 	'url' => "{$wmfLocalServices['echostore']}/echoseen/v1/",

@@ -24421,13 +24421,7 @@ function wmfGetVariantSettings() {
 		'the Creative Commons Attribution-ShareAlike License; additional terms may apply.',
 ],
 'wgSessionCacheType' => [
-	'default' => 'kask-transition',
-	'labswiki' => 'kask-session',
-	'labtestwiki' => 'kask-session',
-	'testwiki' => 'kask-session',
-	'testwikidatawiki' => 'kask-session',
-	'group0' => 'kask-session',
-	'group1' => 'kask-session',
+	'default' => 'kask-session',
 ],
 'wgEchoSeenTimeCacheType' => [
 	'default' => 'kask-echoseen',
