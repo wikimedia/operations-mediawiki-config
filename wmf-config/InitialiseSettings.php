@@ -15989,14 +15989,6 @@ function wmfGetVariantSettings() {
 	'wikitech' => false,	# Wikitech doesn't properly work yet in RESTBase
 	'private' => false,		# Private wikis aren't yet supported by RESTBase
 ],
-
-// Whether VisualEditor should bypass the MediaWiki layer and contact RESTbase directly for speed
-'wmgVisualEditorAccessRESTbaseDirectly' => [
-	'default' => true,		// T100026
-	'wikitech' => false,	# Wikitech doesn't properly work yet in RESTbase
-	'private' => false,		# Private wikis aren't yet supported by RESTbase
-],
-
 // Whether VisualEditor should re-use the edit tab (and section link) or insert its own; "SET"
 'wmgVisualEditorUseSingleEditTab' => [
 	'default' => false,         // Deploying slowly with community advanced notice

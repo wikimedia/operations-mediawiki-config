@@ -2513,8 +2513,8 @@ if ( $wmgUseVisualEditor ) {
 	// Parsoid connection configuration is done by $wmgUseParsoid above.
 	// At least one of these should be set if you want to use Visual Editor.
 
-	// RESTbase connection configuration
-	if ( $wmgVisualEditorAccessRESTbaseDirectly ) {
+	// RESTBase connection configuration
+	if ( $wmgVisualEditorAccessRestbaseDirectly ) {
 		$wgVisualEditorRestbaseURL = "/api/rest_v1/page/html/";
 		$wgVisualEditorFullRestbaseURL = "/api/rest_";
 		// There should be no lossy switching in RESTBase mode, but just in case
