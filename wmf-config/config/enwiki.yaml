@@ -12,8 +12,6 @@ inheritsFrom:
   - flow_only_labs
   - gettingstarted-with-category-suggestions
   - large
-  # To be removed by end of 2020
-  - mobilemainpagelegacy
   - pageassessments
   - s1
   - securepollglobal
