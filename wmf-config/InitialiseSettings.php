@@ -21264,11 +21264,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wmgUseEntitySourceBasedFederation' => [
-	'default' => false,
-	'commonswiki' => true,
-	'testcommonswiki' => true,
-	'wikidatawiki' => true,
-	'group1' => true,
+	'default' => true,
 ],
 
 'wmgUseTemplateSandbox' => [
