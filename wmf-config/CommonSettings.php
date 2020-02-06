@@ -842,7 +842,9 @@ wfLoadSkins( [ 'Vector', 'MonoBook', 'Modern', 'CologneBlue', 'Timeless' ] );
 // backwards compatibility (can be removed after 13th February)
 // we need to apply it to all wikis regardless of whether they have a MinervaCustomLogo.
 // needs to be set before adding `wordmark` to wgLogos.
-$wgLogoHD = $wgLogos;
+if ( isset( $wgLogos ) ) {
+	$wgLogoHD = $wgLogos;
+}
 
 // The Print logo for Vector should use the same wordmark as Minerva and be
 // added to the result of ResourceLoaderSkinModule::getAvailableLogos.
