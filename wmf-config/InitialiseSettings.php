@@ -21896,6 +21896,9 @@ function wmfGetVariantSettings() {
 	'wikisource' => [
 		'author' => 1,
 	],
+	'labswiki' => [
+		12 => 1.0, // Put NS_HELP on equal footing with NS_MAIN
+	],
 ],
 
 // Enable the "Give us feedback" link after search results on enwiki
