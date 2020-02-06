@@ -16172,6 +16172,9 @@ function wmfGetVariantSettings() {
 	'+cswiki' => [
 		'Project' => true, // T136628
 	],
+	'+cswikisource' => [
+		'Edice' => true, // T244133
+	],
 	'+enwiki' => [
 		'Portal' => true, // T58001
 		'Book' => true, // T58001
