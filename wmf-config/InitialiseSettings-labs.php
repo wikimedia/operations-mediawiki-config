@@ -1649,20 +1649,6 @@ function wmfGetLabsOverrideSettings() {
 		'wgMachineVisionRequestLabelsFromWikidataPublicApi' => [
 			'default' => true,
 		],
-		// @todo remove as soon as https://gerrit.wikimedia.org/r/559345 is deployed
-		'wgMachineVisionHandlers' => [
-			'default' => [
-				'google' => [
-					'class' => 'MediaWiki\\Extension\\MachineVision\\Handler\\GoogleCloudVisionHandler',
-					'services' => [
-						'MachineVisionFetchGoogleCloudVisionAnnotationsJobFactory',
-						'MachineVisionRepository',
-						'MachineVisionRepoGroup',
-						'MachineVisionLabelResolver',
-					],
-				]
-			],
-		],
 		'-wgSpecialSearchFormOptions' => [
 			'wikidatawiki' => [ 'showDescriptions' => true ],
 		],
