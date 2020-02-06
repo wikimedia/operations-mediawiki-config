@@ -839,6 +839,11 @@ if ( $wmgUseCORS ) {
 
 wfLoadSkins( [ 'Vector', 'MonoBook', 'Modern', 'CologneBlue', 'Timeless' ] );
 
+// backwards compatibility (can be removed after 13th February)
+// we need to apply it to all wikis regardless of whether they have a MinervaCustomLogo.
+// needs to be set before adding `wordmark` to wgLogos.
+$wgLogoHD = $wgLogos;
+
 // The Print logo for Vector should use the same wordmark as Minerva and be
 // added to the result of ResourceLoaderSkinModule::getAvailableLogos.
 // In future we're consolidate this with wgLogo in one place when $wgMinervaCustomLogos
@@ -861,10 +866,6 @@ if (
 		'src' => $wgMinervaCustomLogos['copyright'],
 	];
 }
-
-// backwards compatibility (can be removed after 13th February)
-// we need to apply it to all wikis regardless of whether they have a MinervaCustomLogo.
-$wgLogoHD = $wgLogos;
 
 // Grants and rights
 // Note these have to be visible on all wikis, not just the ones the
