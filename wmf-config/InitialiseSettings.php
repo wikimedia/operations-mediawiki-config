@@ -23106,6 +23106,7 @@ function wmfGetVariantSettings() {
 	'cawiki' => true, // T114392
 	'euwiki' => true, // T171763
 	'glwiki' => true, // T199713
+	'trwiki' => true, // T244369
 ],
 
 'wgWPBSkinBlacklist' => [
