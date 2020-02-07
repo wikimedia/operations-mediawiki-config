@@ -325,7 +325,7 @@ if ( $wmgUseWikibaseClient ) {
 
 	// Migration, T226086
 	$wgWBClientSettings['tmpPropertyTermsMigrationStage'] = $wmgWikibaseTmpPropertyTermsMigrationStage;
-	$wgWBClientSettings['tmpItemTermsMigrationStage'] = $wmgWikibaseTmpItemTermsMigrationStage;
+	$wgWBClientSettings['tmpItemTermsMigrationStages'] = $wmgWikibaseTmpItemTermsMigrationStage;
 
 	// T226816
 	if ( isset( $wmgWikibaseClientDataBridgeEnabled ) && isset( $wmgWikibaseClientDataBridgeHrefRegExp ) ) {
