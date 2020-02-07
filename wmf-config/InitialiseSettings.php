@@ -23969,6 +23969,7 @@ function wmfGetVariantSettings() {
 				'MachineVisionFetchGoogleCloudVisionAnnotationsJobFactory',
 				'MachineVisionRepository',
 				'MachineVisionRepoGroup',
+				'MachineVisionDepictsSetter',
 				'MachineVisionLabelResolver',
 			],
 		],
