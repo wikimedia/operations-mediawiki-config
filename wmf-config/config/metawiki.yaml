@@ -9,7 +9,6 @@ inheritsFrom:
   - cirrussearch-big-indices
   - commonsuploads
   - large
-  - mobilemainpagelegacy
   - nowikidatadescriptiontaglines
   - s7
   - securepollglobal
