@@ -1383,196 +1383,196 @@ function wmfGetLabsOverrideSettings() {
 		// the custom values are corresponding entities on Beta Wikidata
 		// (most of them were automatically imported from production Wikidata)
 		'wgWBQualityConstraintsInstanceOfId' => [
-			'wikidatawiki' => 'P694',
+			'wikibaserepo' => 'P694',
 		],
 		'wgWBQualityConstraintsSubclassOfId' => [
-			'wikidatawiki' => 'P279',
+			'wikibaserepo' => 'P279',
 		],
 		'wgWBQualityConstraintsPropertyConstraintId' => [
-			'wikidatawiki' => 'P241048',
+			'wikibaserepo' => 'P241048',
 		],
 		'wgWBQualityConstraintsExceptionToConstraintId' => [
-			'wikidatawiki' => 'P241049',
+			'wikibaserepo' => 'P241049',
 		],
 		'wgWBQualityConstraintsConstraintStatusId' => [
-			'wikidatawiki' => 'P241050',
+			'wikibaserepo' => 'P241050',
 		],
 		'wgWBQualityConstraintsMandatoryConstraintId' => [
-			'wikidatawiki' => 'Q505095',
+			'wikibaserepo' => 'Q505095',
 		],
 		'wgWBQualityConstraintsSuggestionConstraintId' => [
-			'wikidatawiki' => 'Q524851',
+			'wikibaserepo' => 'Q524851',
 		],
 		'wgWBQualityConstraintsDistinctValuesConstraintId' => [
-			'wikidatawiki' => 'Q505096',
+			'wikibaserepo' => 'Q505096',
 		],
 		'wgWBQualityConstraintsMultiValueConstraintId' => [
-			'wikidatawiki' => 'Q505097',
+			'wikibaserepo' => 'Q505097',
 		],
 		'wgWBQualityConstraintsUsedAsQualifierConstraintId' => [
-			'wikidatawiki' => 'Q505098',
+			'wikibaserepo' => 'Q505098',
 		],
 		'wgWBQualityConstraintsSingleValueConstraintId' => [
-			'wikidatawiki' => 'Q505099',
+			'wikibaserepo' => 'Q505099',
 		],
 		'wgWBQualityConstraintsSymmetricConstraintId' => [
-			'wikidatawiki' => 'Q505100',
+			'wikibaserepo' => 'Q505100',
 		],
 		'wgWBQualityConstraintsTypeConstraintId' => [
-			'wikidatawiki' => 'Q505101',
+			'wikibaserepo' => 'Q505101',
 		],
 		'wgWBQualityConstraintsValueTypeConstraintId' => [
-			'wikidatawiki' => 'Q505102',
+			'wikibaserepo' => 'Q505102',
 		],
 		'wgWBQualityConstraintsInverseConstraintId' => [
-			'wikidatawiki' => 'Q505103',
+			'wikibaserepo' => 'Q505103',
 		],
 		'wgWBQualityConstraintsItemRequiresClaimConstraintId' => [
-			'wikidatawiki' => 'Q505104',
+			'wikibaserepo' => 'Q505104',
 		],
 		'wgWBQualityConstraintsValueRequiresClaimConstraintId' => [
-			'wikidatawiki' => 'Q505105',
+			'wikibaserepo' => 'Q505105',
 		],
 		'wgWBQualityConstraintsConflictsWithConstraintId' => [
-			'wikidatawiki' => 'Q505106',
+			'wikibaserepo' => 'Q505106',
 		],
 		'wgWBQualityConstraintsOneOfConstraintId' => [
-			'wikidatawiki' => 'Q505107',
+			'wikibaserepo' => 'Q505107',
 		],
 		'wgWBQualityConstraintsMandatoryQualifierConstraintId' => [
-			'wikidatawiki' => 'Q505108',
+			'wikibaserepo' => 'Q505108',
 		],
 		'wgWBQualityConstraintsAllowedQualifiersConstraintId' => [
-			'wikidatawiki' => 'Q505109',
+			'wikibaserepo' => 'Q505109',
 		],
 		'wgWBQualityConstraintsRangeConstraintId' => [
-			'wikidatawiki' => 'Q505110',
+			'wikibaserepo' => 'Q505110',
 		],
 		'wgWBQualityConstraintsDifferenceWithinRangeConstraintId' => [
-			'wikidatawiki' => 'Q505111',
+			'wikibaserepo' => 'Q505111',
 		],
 		'wgWBQualityConstraintsCommonsLinkConstraintId' => [
-			'wikidatawiki' => 'Q505112',
+			'wikibaserepo' => 'Q505112',
 		],
 		'wgWBQualityConstraintsContemporaryConstraintId' => [
-			'wikidatawiki' => 'Q505113',
+			'wikibaserepo' => 'Q505113',
 		],
 		'wgWBQualityConstraintsFormatConstraintId' => [
-			'wikidatawiki' => 'Q505114',
+			'wikibaserepo' => 'Q505114',
 		],
 		'wgWBQualityConstraintsUsedForValuesOnlyConstraintId' => [
-			'wikidatawiki' => 'Q505115',
+			'wikibaserepo' => 'Q505115',
 		],
 		'wgWBQualityConstraintsUsedAsReferenceConstraintId' => [
-			'wikidatawiki' => 'Q505116',
+			'wikibaserepo' => 'Q505116',
 		],
 		'wgWBQualityConstraintsNoBoundsConstraintId' => [
-			'wikidatawiki' => 'Q505117',
+			'wikibaserepo' => 'Q505117',
 		],
 		'wgWBQualityConstraintsAllowedUnitsConstraintId' => [
-			'wikidatawiki' => 'Q505118',
+			'wikibaserepo' => 'Q505118',
 		],
 		'wgWBQualityConstraintsSingleBestValueConstraintId' => [
-			'wikidatawiki' => 'Q505119',
+			'wikibaserepo' => 'Q505119',
 		],
 		'wgWBQualityConstraintsAllowedEntityTypesConstraintId' => [
-			'wikidatawiki' => 'Q505120',
+			'wikibaserepo' => 'Q505120',
 		],
 		'wgWBQualityConstraintsCitationNeededConstraintId' => [
-			'wikidatawiki' => 'Q505121',
+			'wikibaserepo' => 'Q505121',
 		],
 		'wgWBQualityConstraintsPropertyScopeConstraintId' => [
-			'wikidatawiki' => 'Q505122',
+			'wikibaserepo' => 'Q505122',
 		],
 		'wgWBQualityConstraintsClassId' => [
-			'wikidatawiki' => 'P241051',
+			'wikibaserepo' => 'P241051',
 		],
 		'wgWBQualityConstraintsRelationId' => [
-			'wikidatawiki' => 'P241052',
+			'wikibaserepo' => 'P241052',
 		],
 		'wgWBQualityConstraintsInstanceOfRelationId' => [
-			'wikidatawiki' => 'Q505123',
+			'wikibaserepo' => 'Q505123',
 		],
 		'wgWBQualityConstraintsSubclassOfRelationId' => [
-			'wikidatawiki' => 'Q505124',
+			'wikibaserepo' => 'Q505124',
 		],
 		'wgWBQualityConstraintsInstanceOrSubclassOfRelationId' => [
-			'wikidatawiki' => 'Q505125',
+			'wikibaserepo' => 'Q505125',
 		],
 		'wgWBQualityConstraintsPropertyId' => [
-			'wikidatawiki' => 'P694',
+			'wikibaserepo' => 'P694',
 		],
 		'wgWBQualityConstraintsQualifierOfPropertyConstraintId' => [
-			'wikidatawiki' => 'P241054',
+			'wikibaserepo' => 'P241054',
 		],
 		'wgWBQualityConstraintsMinimumQuantityId' => [
-			'wikidatawiki' => 'P241055',
+			'wikibaserepo' => 'P241055',
 		],
 		'wgWBQualityConstraintsMaximumQuantityId' => [
-			'wikidatawiki' => 'P241056',
+			'wikibaserepo' => 'P241056',
 		],
 		'wgWBQualityConstraintsMinimumDateId' => [
-			'wikidatawiki' => 'P241057',
+			'wikibaserepo' => 'P241057',
 		],
 		'wgWBQualityConstraintsMaximumDateId' => [
-			'wikidatawiki' => 'P241058',
+			'wikibaserepo' => 'P241058',
 		],
 		'wgWBQualityConstraintsNamespaceId' => [
-			'wikidatawiki' => 'P241059',
+			'wikibaserepo' => 'P241059',
 		],
 		'wgWBQualityConstraintsFormatAsARegularExpressionId' => [
-			'wikidatawiki' => 'P241060',
+			'wikibaserepo' => 'P241060',
 		],
 		'wgWBQualityConstraintsSyntaxClarificationId' => [
-			'wikidatawiki' => 'P241061',
+			'wikibaserepo' => 'P241061',
 		],
 		'wgWBQualityConstraintsConstraintScopeId' => [
-			'wikidatawiki' => 'P241062',
+			'wikibaserepo' => 'P241062',
 		],
 		'wgWBQualityConstraintsSeparatorId' => [
-			'wikidatawiki' => 'P241063',
+			'wikibaserepo' => 'P241063',
 		],
 		'wgWBQualityConstraintsConstraintCheckedOnMainValueId' => [
-			'wikidatawiki' => 'Q505126',
+			'wikibaserepo' => 'Q505126',
 		],
 		'wgWBQualityConstraintsConstraintCheckedOnQualifiersId' => [
-			'wikidatawiki' => 'Q505127',
+			'wikibaserepo' => 'Q505127',
 		],
 		'wgWBQualityConstraintsConstraintCheckedOnReferencesId' => [
-			'wikidatawiki' => 'Q505128',
+			'wikibaserepo' => 'Q505128',
 		],
 		'wgWBQualityConstraintsNoneOfConstraintId' => [
-			'wikidatawiki' => 'Q505129',
+			'wikibaserepo' => 'Q505129',
 		],
 		'wgWBQualityConstraintsIntegerConstraintId' => [
-			'wikidatawiki' => 'Q505130',
+			'wikibaserepo' => 'Q505130',
 		],
 		'wgWBQualityConstraintsWikibaseItemId' => [
-			'wikidatawiki' => 'Q505131',
+			'wikibaserepo' => 'Q505131',
 		],
 		'wgWBQualityConstraintsWikibasePropertyId' => [
-			'wikidatawiki' => 'Q505132',
+			'wikibaserepo' => 'Q505132',
 		],
 		'wgWBQualityConstraintsWikibaseLexemeId' => [
-			'wikidatawiki' => 'Q505133',
+			'wikibaserepo' => 'Q505133',
 		],
 		'wgWBQualityConstraintsWikibaseFormId' => [
-			'wikidatawiki' => 'Q505134',
+			'wikibaserepo' => 'Q505134',
 		],
 		'wgWBQualityConstraintsWikibaseSenseId' => [
-			'wikidatawiki' => 'Q505135',
+			'wikibaserepo' => 'Q505135',
 		],
 		'wgWBQualityConstraintsPropertyScopeId' => [
-			'wikidatawiki' => 'P241064',
+			'wikibaserepo' => 'P241064',
 		],
 		'wgWBQualityConstraintsAsMainValueId' => [
-			'wikidatawiki' => 'Q505136',
+			'wikibaserepo' => 'Q505136',
 		],
 		'wgWBQualityConstraintsAsQualifiersId' => [
-			'wikidatawiki' => 'Q505137',
+			'wikibaserepo' => 'Q505137',
 		],
 		'wgWBQualityConstraintsAsReferencesId' => [
-			'wikidatawiki' => 'Q505138',
+			'wikibaserepo' => 'Q505138',
 		],
 
 		// T215684: Load WikibaseCirrusSearch on Beta Cluster
