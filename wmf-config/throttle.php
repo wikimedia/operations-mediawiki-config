@@ -26,6 +26,11 @@ $wmgThrottlingExceptions = [];
 # 'value'  => xx
 # ];
 ## Add throttling definitions below.
+#
+## If you are adding a throttle exception with a 'from' time that is less than
+## 72 hours in advance, you will also need to manually clear a cache after
+## deploying your change to this file!
+## https://wikitech.wikimedia.org/wiki/Increasing_account_creation_threshold
 
 $wmgThrottlingExceptions[] = [ // Per Grant and Janeen via IRC
 	'from' => '2020-02-08T15:00 UTC',
