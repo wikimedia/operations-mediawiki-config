@@ -32,36 +32,28 @@ $wmgThrottlingExceptions = [];
 ## deploying your change to this file!
 ## https://wikitech.wikimedia.org/wiki/Increasing_account_creation_threshold
 
-$wmgThrottlingExceptions[] = [ // Per Grant and Janeen via IRC
-	'from' => '2020-02-08T15:00 UTC',
-	'to' => '2020-02-10T1:00 UTC',
-	'IP' => '12.24.27.50',
-	'dbname' => 'enwiki',
-	'value' => 30
-];
-
-$wmgThrottlingExceptions[] = [ // T241705
-	'from' => '2020-01-17T10:00 GMT+1',
-	'to' => '2020-01-17T16:00 GMT+1',
-	'IP' => '81.39.185.6',
+$wmgThrottlingExceptions[] = [ // T244645
+	'from' => '2020-02-18T16:00 GMT+1',
+	'to' => '2020-02-18T18:00 GMT+1',
+	'IP' => '85.192.74.190',
 	'dbname' => 'cawiki',
-	'value' => 30
+	'value' => 20 // expected 10
 ];
 
-$wmgThrottlingExceptions[] = [ // T240845
-	'from' => '2020-01-21T12:00 UTC',
-	'to' => '2020-01-21T16:00 UTC',
-	'IP' => '195.194.178.1',
+$wmgThrottlingExceptions[] = [ // T244608
+	'from' => '2020-02-28T14:00 PST',
+	'to' => '2020-02-28T17:00 PST',
+	'range' => '128.193.8.0/24',
 	'dbname' => 'enwiki',
-	'value' => 25 // 15 Expected
+	'value' => 50
 ];
 
-$wmgThrottlingExceptions[] = [ // T241414
-	'from' => '2020-01-27T12:00 UTC',
-	'to' => '2020-01-27T22:00 UTC',
-	'IP' => '200.9.3.65',
-	'dbname' => [ 'eswiki', 'enwiki', 'commonswiki', 'wikidatawiki' ],
-	'value' => 30 // expected 20
+$wmgThrottlingExceptions[] = [ // T244608
+	'from' => '2020-03-13T14:00 PDT',
+	'to' => '2020-03-13T17:00 PDT',
+	'range' => '128.193.8.0/24',
+	'dbname' => 'enwiki',
+	'value' => 50
 ];
 
 ## Add throttling definitions above.
