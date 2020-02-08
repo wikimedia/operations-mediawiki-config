@@ -27,6 +27,14 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
+$wmgThrottlingExceptions[] = [ // Per Grant and Janeen via IRC
+	'from' => '2020-02-08T15:00 UTC',
+	'to' => '2020-02-10T1:00 UTC',
+	'IP' => '12.24.27.50',
+	'dbname' => 'enwiki',
+	'value' => 30
+];
+
 $wmgThrottlingExceptions[] = [ // T241705
 	'from' => '2020-01-17T10:00 GMT+1',
 	'to' => '2020-01-17T16:00 GMT+1',
