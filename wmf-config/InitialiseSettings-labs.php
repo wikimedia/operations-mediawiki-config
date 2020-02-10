@@ -133,14 +133,38 @@ function wmfGetLabsOverrideSettings() {
 		],
 
 		// Use eventgate-main as default EventService in beta
-		// This can be removed once this is set in InitialiseSettings.php
-		// TODO: This will be refactored to use EventStreamConfig extension
-		// once deployed. See: https://phabricator.wikimedia.org/T229863
+		// TODO: this will be replaced by wgEventStreams once
+		// EventStreamConfig extension is deployed. See:
+		// https://phabricator.wikimedia.org/T233634 and
+		// https://phabricator.wikimedia.org/T229863
 		'wgEventServiceStreamConfig' => [
 			'default' => [
 				'default' => [
 					'EventServiceName' => 'eventgate-main',
 				],
+			],
+		],
+
+		// Event stream configuration. A list of stream configurations.
+		// Each item must have a 'stream' setting of either the specific
+		// stream name or a regex patterns to matching stream names.
+		// Each item must also at minimum include the schema_title of the
+		// JSONSchema that events in the stream must conform to.
+		// This is used by the EventStreamConfig extension
+		// to allow for remote configuration of streams.  It
+		// is used by the EventLogging extension to vary e.g.
+		// sample rate that browsers use when producing events,
+		// as well as the eventgate-analytics-external service
+		// to dynamically add event streams that it should accept
+		// and validate.
+		// See https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/EventStreamConfig/#mediawiki-config
+		'wgEventStreams' => [
+			// test.event stream; used to test that event stream
+			// services are working properly.
+			[
+				'stream' => 'test.event',
+				// https://schema.wikimedia.org/repositories/primary/jsonschema/test/event/current.yaml
+				'schema_title' => 'test/event'
 			],
 		],
 
