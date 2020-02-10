@@ -3361,7 +3361,7 @@ if ( $wmgUseFileImporter ) {
 	}
 }
 
-if ( $wmgEventStreamConfig ) {
+if ( $wmgUseEventStreamConfig ) {
 	wfLoadExtension( 'EventStreamConfig' );
 	// TODO: Configure actual streams here or elsewhere.
 }
