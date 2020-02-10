@@ -427,6 +427,7 @@ function wmfGetVariantSettings() {
 	'ndswikibooks' => 'Europe/Berlin',
 	'ndswikiquote' => 'Europe/Berlin',
 	'nds_nlwiki' => 'Europe/Berlin',
+	'newiki' => 'Asia/Kathmandu', // T244205
 	'ngwikimedia' => 'Africa/Lagos', // T240771
 	'nlwiki' => 'Europe/Berlin',
 	'nlwikimedia' => 'Europe/Berlin',
