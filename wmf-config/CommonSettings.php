@@ -3374,7 +3374,7 @@ if ( $wmgUseFileImporter ) {
 
 if ( $wmgUseEventStreamConfig ) {
 	wfLoadExtension( 'EventStreamConfig' );
-	// TODO: Configure actual streams here or elsewhere.
+	// wgEventStreams is configured per wiki in InitialiseSettings.php
 }
 
 if ( $wmgUseContentTranslation ) {

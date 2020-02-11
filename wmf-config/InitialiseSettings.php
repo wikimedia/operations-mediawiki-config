@@ -19775,7 +19775,41 @@ function wmfGetVariantSettings() {
 ],
 
 'wmgUseEventStreamConfig' => [
+	// Eventually EventStreamConfig should be deployed everywhere,
+	// so streams can be configured via wgEventStreams per wiki.
+	// For now, just enablel on testwiki and metawiki.
+	// testwiki will be used when testing the EventLogging
+	// extension's use of stream config, and metawiki
+	// will be used as the default stream config api endpoint
+	// which eventgate-analytics-external will use to
+	// request dynamic stream config.
 	'default' => false,
+	'testwiki' => true,
+],
+
+// Event stream configuration. A list of stream configurations.
+// Each item must have a 'stream' setting of either the specific
+// stream name or a regex patterns to matching stream names.
+// Each item must also at minimum include the schema_title of the
+// JSONSchema that events in the stream must conform to.
+// This is used by the EventStreamConfig extension
+// to allow for remote configuration of streams.  It
+// is used by the EventLogging extension to vary e.g.
+// sample rate that browsers use when producing events,
+// as well as the eventgate-analytics-external service
+// to dynamically add event streams that it should accept
+// and validate.
+// See https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/EventStreamConfig/#mediawiki-config
+'wgEventStreams' => [
+	'default' => [
+		// test.event stream; used to test that event stream
+		// services are working properly.
+		[
+			'stream' => 'test.event',
+			// https://schema.wikimedia.org/repositories/primary/jsonschema/test/event/current.yaml
+			'schema_title' => 'test/event'
+		],
+	],
 ],
 
 'wmgUseWikimediaEvents' => [

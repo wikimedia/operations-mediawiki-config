@@ -144,9 +144,8 @@ function wmfGetLabsOverrideSettings() {
 				],
 			],
 		],
-
-		// Event stream configuration. A list of stream configurations.
-		// Each item must have a 'stream' setting of either the specific
+		// Event stream configuration is a list of stream configurations.
+		// Each item in the list must have a 'stream' setting of either the specific
 		// stream name or a regex patterns to matching stream names.
 		// Each item must also at minimum include the schema_title of the
 		// JSONSchema that events in the stream must conform to.
