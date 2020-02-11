@@ -159,12 +159,14 @@ function wmfGetLabsOverrideSettings() {
 		// and validate.
 		// See https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/EventStreamConfig/#mediawiki-config
 		'wgEventStreams' => [
-			// test.event stream; used to test that event stream
-			// services are working properly.
-			[
-				'stream' => 'test.event',
-				// https://schema.wikimedia.org/repositories/primary/jsonschema/test/event/current.yaml
-				'schema_title' => 'test/event'
+			'default' => [
+				// test.event stream; used to test that event stream
+				// services are working properly.
+				[
+					'stream' => 'test.event',
+					// https://schema.wikimedia.org/repositories/primary/jsonschema/test/event/current.yaml
+					'schema_title' => 'test/event'
+				],
 			],
 		],
 
