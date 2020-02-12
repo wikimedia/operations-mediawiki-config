@@ -28,7 +28,9 @@ $wgWANObjectCaches['wancache-main-mcrouter'] = [
 	// Specify the route prefix that mcrouter listens for and broadcasts.
 	// The route prefix is configured in Puppet (profile::mediawiki::mcrouter_wancache).
 	'cluster' => 'mw-wan',
-	'mcrouterAware' => true
+	'mcrouterAware' => true,
+	// Reduce connection use by co-locating related keys
+	'coalesceKeys' => true
 ];
 
 // Beta Cluster: Experimentally turn on CacheReaper.
