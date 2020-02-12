@@ -358,7 +358,7 @@ class MWConfigCacheGenerator {
 				}
 				// Do suffix settings
 				$suffix = $params['suffix'];
-				if ( !is_null( $suffix ) ) {
+				if ( $suffix !== null ) {
 					if ( array_key_exists( $suffix, $thisSetting ) ) {
 						if ( is_array( $retval ) && is_array( $thisSetting[$suffix] ) ) {
 							$retval = self::arrayMerge( $retval, $thisSetting[$suffix] );
@@ -388,7 +388,7 @@ class MWConfigCacheGenerator {
 			} while ( false );
 		}
 
-		if ( !is_null( $retval ) && count( $params['params'] ) ) {
+		if ( $retval !== null && count( $params['params'] ) ) {
 			foreach ( $params['params'] as $key => $value ) {
 				$retval = $this->doReplace( '$' . $key, $value, $retval );
 			}
@@ -441,7 +441,7 @@ class MWConfigCacheGenerator {
 			if ( $append && is_array( $value ) && is_array( $GLOBALS[$var] ) ) {
 				$value = self::arrayMerge( $value, $GLOBALS[$var] );
 			}
-			if ( !is_null( $value ) ) {
+			if ( $value !== null ) {
 				$localSettings[$var] = $value;
 			}
 		}
@@ -482,7 +482,7 @@ class MWConfigCacheGenerator {
 		$params = [], $wikiTags = []
 	) {
 		$value = $this->get( $setting, $wiki, $suffix, $params, $wikiTags );
-		if ( !is_null( $value ) ) {
+		if ( $value !== null ) {
 			$var = $value;
 		}
 	}
@@ -509,7 +509,7 @@ class MWConfigCacheGenerator {
 	 */
 	private function extractGlobalSetting( $setting, $wiki, $params ) {
 		$value = $this->getSetting( $setting, $wiki, $params );
-		if ( !is_null( $value ) ) {
+		if ( $value !== null ) {
 			if ( substr( $setting, 0, 1 ) == '+' && is_array( $value ) ) {
 				$setting = substr( $setting, 1 );
 				if ( is_array( $GLOBALS[$setting] ) ) {
@@ -589,7 +589,7 @@ class MWConfigCacheGenerator {
 	private function mergeParams( $wiki, $suffix, array $params, array $wikiTags ) {
 		$ret = $this->getWikiParams( $wiki );
 
-		if ( is_null( $ret['suffix'] ) ) {
+		if ( $ret['suffix'] === null ) {
 			$ret['suffix'] = $suffix;
 		}
 
@@ -598,10 +598,10 @@ class MWConfigCacheGenerator {
 		$ret['params'] += $params;
 
 		// Automatically fill that ones if needed
-		if ( !isset( $ret['params']['lang'] ) && !is_null( $ret['lang'] ) ) {
+		if ( !isset( $ret['params']['lang'] ) && $ret['lang'] !== null ) {
 			$ret['params']['lang'] = $ret['lang'];
 		}
-		if ( !isset( $ret['params']['site'] ) && !is_null( $ret['suffix'] ) ) {
+		if ( !isset( $ret['params']['site'] ) && $ret['suffix'] !== null ) {
 			$ret['params']['site'] = $ret['suffix'];
 		}
 
@@ -617,7 +617,7 @@ class MWConfigCacheGenerator {
 	private function siteFromDB( $wiki ) {
 		// Allow override
 		$def = $this->getWikiParams( $wiki );
-		if ( !is_null( $def['suffix'] ) && !is_null( $def['lang'] ) ) {
+		if ( $def['suffix'] !== null && $def['lang'] !== null ) {
 			return [ $def['suffix'], $def['lang'] ];
 		}
 
@@ -795,7 +795,7 @@ class MWConfigCacheGenerator {
 					if ( rename( $tmpFile, $cacheDir . '/' . $cacheShard ) ) {
 						// Rename succeded; no need to clean up temp file
 						return;
-					};
+					}
 				}
 			}
 			// T136258: Rename failed, write failed, or data wasn't cacheable; clean up temp file

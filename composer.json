@@ -3,9 +3,9 @@
 	"description": "MediaWiki configuration for the Wikimedia farm",
 	"require-dev": {
 		"jakub-onderka/php-parallel-lint": "1.0.0",
-		"mediawiki/mediawiki-codesniffer": "28.0.0",
-		"phpunit/phpunit": "^8.3",
-		"mediawiki/minus-x": "0.3.2",
+		"mediawiki/mediawiki-codesniffer": "29.0.0",
+		"phpunit/phpunit": "^8.5",
+		"mediawiki/minus-x": "1.0.0",
 		"symfony/yaml": "4.3.4"
 	},
 	"scripts": {

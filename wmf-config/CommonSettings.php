@@ -2854,7 +2854,7 @@ if ( $wmgUseTranslate ) {
 			$cc[$id] = $mg;
 			return true;
 		};
-	};
+	}
 
 	$wgSpecialPages['ManageMessageGroups'] = DisabledSpecialPage::getCallback( 'ManageMessageGroups' );
 	$wgSpecialPages['TranslationStats'] = DisabledSpecialPage::getCallback( 'TranslationStats' );

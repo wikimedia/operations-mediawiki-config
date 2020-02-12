@@ -85,9 +85,9 @@ class CauseFatalError {
 	 * Checks parameters for safety and validity.  Specific to this script, and therefore makes some
 	 * assumptions that would not be appropriate in a general-purpose function.
 	 *
-	 * @param $paramVal mixed the value that was received
-	 * @param $paramName string the parameter name (used for constructing error messages)
-	 * @param $allowedValues array all allowed values for this parameter
+	 * @param mixed $paramVal the value that was received
+	 * @param string $paramName the parameter name (used for constructing error messages)
+	 * @param array $allowedValues all allowed values for this parameter
 	 * @return mixed true on success, or an error message suitable for display to the user on error
 	 */
 	private static function checkParam( $paramVal, $paramName, $allowedValues ) {

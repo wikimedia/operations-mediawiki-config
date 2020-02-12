@@ -286,8 +286,8 @@ class MWMultiVersion {
 
 	/**
 	 * Load the DB from the site and lang for this wiki
-	 * @param $site string
-	 * @param $lang string
+	 * @param string $site
+	 * @param string $lang
 	 */
 	private function loadDBFromSite( $site, $lang ) {
 		if ( $site === "wikipedia" ) {

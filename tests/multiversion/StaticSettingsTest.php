@@ -247,8 +247,8 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 			'dewiki', $this->variantSettings, 'production'
 		);
 
-		$this->assertEquals(
-			false, $settings['wgLegacyEncoding'],
+		$this->assertFalse(
+			 $settings['wgLegacyEncoding'],
 			"Variant settings array must have 'wgLegacyEncoding' set to 'windows-1252' for enwiki."
 		);
 	}

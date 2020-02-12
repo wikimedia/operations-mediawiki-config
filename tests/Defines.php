@@ -27,7 +27,7 @@
  * @defgroup Constants MediaWiki constants
  */
 
-/**@{
+/** @{
  * Database related constants
  */
 define( 'DBO_DEBUG', 1 );
@@ -40,24 +40,24 @@ define( 'DBO_SYSDBA', 64 ); // for oracle maintenance
 define( 'DBO_DDLMODE', 128 ); // when using schema files: mostly for Oracle
 define( 'DBO_SSL', 256 );
 define( 'DBO_COMPRESS', 512 );
-/**@}*/
+/** @} */
 
-/**@{
+/** @{
  * Valid database indexes
  * Operation-based indexes
  */
 define( 'DB_REPLICA', -1 );     # Read from a replica (or only server)
 define( 'DB_MASTER', -2 );    # Write to master (or only server)
-/**@}*/
+/** @} */
 
-/**@{
+/** @{
  * Virtual namespaces; don't appear in the page database
  */
 define( 'NS_MEDIA', -2 );
 define( 'NS_SPECIAL', -1 );
-/**@}*/
+/** @} */
 
-/**@{
+/** @{
  * Real namespaces
  *
  * Number 100 and beyond are reserved for custom namespaces;
@@ -81,9 +81,9 @@ define( 'NS_HELP', 12 );
 define( 'NS_HELP_TALK', 13 );
 define( 'NS_CATEGORY', 14 );
 define( 'NS_CATEGORY_TALK', 15 );
-/**@}*/
+/** @} */
 
-/**@{
+/** @{
  * Cache type
  */
 define( 'CACHE_ANYTHING', -1 );  // Use anything, as long as it works
@@ -91,9 +91,9 @@ define( 'CACHE_NONE', 0 );       // Do not cache
 define( 'CACHE_DB', 1 );         // Store cache objects in the DB
 define( 'CACHE_MEMCACHED', 2 );  // MemCached, must specify servers in $wgMemCacheServers
 define( 'CACHE_ACCEL', 3 );      // APC or WinCache
-/**@}*/
+/** @} */
 
-/**@{
+/** @{
  * Media types.
  * This defines constants for the value returned by File::getMediaType()
  */
@@ -118,18 +118,18 @@ define( 'MEDIATYPE_TEXT', 'TEXT' );
 define( 'MEDIATYPE_EXECUTABLE', 'EXECUTABLE' );
 // archive file (zip, tar, etc)
 define( 'MEDIATYPE_ARCHIVE', 'ARCHIVE' );
-/**@}*/
+/** @} */
 
-/**@{
+/** @{
  * Antivirus result codes, for use in $wgAntivirusSetup.
  */
 define( 'AV_NO_VIRUS', 0 );  # scan ok, no virus found
 define( 'AV_VIRUS_FOUND', 1 );  # virus found!
 define( 'AV_SCAN_ABORTED', -1 );  # scan aborted, the file is probably immune
 define( 'AV_SCAN_FAILED', false );  # scan failed (scanner not found or error in scanner)
-/**@}*/
+/** @} */
 
-/**@{
+/** @{
  * Anti-lock flags
  * Was used by $wgAntiLockFlags, which was removed with 1.25
  * Constants kept to not have warnings when used in LocalSettings
@@ -138,9 +138,9 @@ define( 'ALF_PRELOAD_LINKS', 1 ); // unused
 define( 'ALF_PRELOAD_EXISTENCE', 2 ); // unused
 define( 'ALF_NO_LINK_LOCK', 4 ); // unused
 define( 'ALF_NO_BLOCK_LOCK', 8 ); // unused
-/**@}*/
+/** @} */
 
-/**@{
+/** @{
  * Date format selectors; used in user preference storage and by
  * Language::date() and co.
  */
@@ -149,9 +149,9 @@ define( 'MW_DATE_MDY', 'mdy' );
 define( 'MW_DATE_DMY', 'dmy' );
 define( 'MW_DATE_YMD', 'ymd' );
 define( 'MW_DATE_ISO', 'ISO 8601' );
-/**@}*/
+/** @} */
 
-/**@{
+/** @{
  * RecentChange type identifiers
  */
 define( 'RC_EDIT', 0 );
@@ -159,9 +159,9 @@ define( 'RC_NEW', 1 );
 define( 'RC_LOG', 3 );
 define( 'RC_EXTERNAL', 5 );
 define( 'RC_CATEGORIZE', 6 );
-/**@}*/
+/** @} */
 
-/**@{
+/** @{
  * Article edit flags
  */
 define( 'EDIT_NEW', 1 );
@@ -172,9 +172,9 @@ define( 'EDIT_FORCE_BOT', 16 );
 define( 'EDIT_DEFER_UPDATES', 32 ); // Unused since 1.27
 define( 'EDIT_AUTOSUMMARY', 64 );
 define( 'EDIT_INTERNAL', 128 );
-/**@}*/
+/** @} */
 
-/**@{
+/** @{
  * Obsolete IDatabase::makeList() constants
  * These are also available as Database class constants
  */
@@ -183,21 +183,21 @@ define( 'LIST_AND', 1 );
 define( 'LIST_SET', 2 );
 define( 'LIST_NAMES', 3 );
 define( 'LIST_OR', 4 );
-/**@}*/
+/** @} */
 
-/**@{
+/** @{
  * Hook support constants
  */
 define( 'MW_SUPPORTS_PARSERFIRSTCALLINIT', 1 );
 define( 'MW_SUPPORTS_LOCALISATIONCACHE', 1 );
 define( 'MW_SUPPORTS_CONTENTHANDLER', 1 );
 define( 'MW_EDITFILTERMERGED_SUPPORTS_API', 1 );
-/**@}*/
+/** @} */
 
 /** Support for $wgResourceModules */
 define( 'MW_SUPPORTS_RESOURCE_MODULES', 1 );
 
-/**@{
+/** @{
  * Allowed values for Parser::$mOutputType
  * Parameter to Parser::startExternalParse().
  * Use of Parser consts is preferred:
@@ -212,9 +212,9 @@ define( 'OT_WIKI', 2 );
 define( 'OT_PREPROCESS', 3 );
 define( 'OT_MSG', 3 );  // b/c alias for OT_PREPROCESS
 define( 'OT_PLAIN', 4 );
-/**@}*/
+/** @} */
 
-/**@{
+/** @{
  * Flags for Parser::setFunctionHook
  * Use of Parser consts is preferred:
  * - Parser::SFH_NO_HASH
@@ -222,9 +222,9 @@ define( 'OT_PLAIN', 4 );
  */
 define( 'SFH_NO_HASH', 1 );
 define( 'SFH_OBJECT_ARGS', 2 );
-/**@}*/
+/** @} */
 
-/**@{
+/** @{
  * Autopromote conditions (must be here and not in Autopromote.php, so that
  * they're loaded for DefaultSettings.php before AutoLoader.php)
  */
@@ -237,7 +237,7 @@ define( 'APCOND_IPINRANGE', 6 );
 define( 'APCOND_AGE_FROM_EDIT', 7 );
 define( 'APCOND_BLOCKED', 8 );
 define( 'APCOND_ISBOT', 9 );
-/**@}*/
+/** @} */
 
 /** @{
  * Protocol constants for wfExpandUrl()
@@ -248,9 +248,9 @@ define( 'PROTO_RELATIVE', '//' );
 define( 'PROTO_CURRENT', null );
 define( 'PROTO_CANONICAL', 1 );
 define( 'PROTO_INTERNAL', 2 );
-/**@}*/
+/** @} */
 
-/**@{
+/** @{
  * Content model ids, used by Content and ContentHandler.
  * These IDs will be exposed in the API and XML dumps.
  *
@@ -263,9 +263,9 @@ define( 'CONTENT_MODEL_JAVASCRIPT', 'javascript' );
 define( 'CONTENT_MODEL_CSS', 'css' );
 define( 'CONTENT_MODEL_TEXT', 'text' );
 define( 'CONTENT_MODEL_JSON', 'json' );
-/**@}*/
+/** @} */
 
-/**@{
+/** @{
  * Content formats, used by Content and ContentHandler.
  * These should be MIME types, and will be exposed in the API and XML dumps.
  *
@@ -288,15 +288,15 @@ define( 'CONTENT_FORMAT_SERIALIZED', 'application/vnd.php.serialized' );
 define( 'CONTENT_FORMAT_JSON', 'application/json' );
 // for future use with the api, and for use by extensions
 define( 'CONTENT_FORMAT_XML', 'application/xml' );
-/**@}*/
+/** @} */
 
-/**@{
+/** @{
  * Max string length for shell invocations; based on binfmts.h
  */
 define( 'SHELL_MAX_ARG_STRLEN', '100000' );
-/**@}*/
+/** @} */
 
-/**@{
+/** @{
  * Schema compatibility flags.
  *
  * Used as flags in a bit field that indicates whether the old or new schema (or both)
@@ -315,9 +315,9 @@ define( 'SCHEMA_COMPAT_WRITE_BOTH', SCHEMA_COMPAT_WRITE_OLD | SCHEMA_COMPAT_WRIT
 define( 'SCHEMA_COMPAT_READ_BOTH', SCHEMA_COMPAT_READ_OLD | SCHEMA_COMPAT_READ_NEW );
 define( 'SCHEMA_COMPAT_OLD', SCHEMA_COMPAT_WRITE_OLD | SCHEMA_COMPAT_READ_OLD );
 define( 'SCHEMA_COMPAT_NEW', SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW );
-/**@}*/
+/** @} */
 
-/**@{
+/** @{
  * Schema change migration flags.
  *
  * Used as values of a feature flag for an orderly transition from an old
@@ -342,9 +342,9 @@ define( 'MIGRATION_OLD', 0x00000000 | SCHEMA_COMPAT_OLD );
 define( 'MIGRATION_WRITE_BOTH', 0x10000000 | SCHEMA_COMPAT_READ_BOTH | SCHEMA_COMPAT_WRITE_BOTH );
 define( 'MIGRATION_WRITE_NEW', 0x20000000 | SCHEMA_COMPAT_READ_BOTH | SCHEMA_COMPAT_WRITE_NEW );
 define( 'MIGRATION_NEW', 0x30000000 | SCHEMA_COMPAT_NEW );
-/**@}*/
+/** @} */
 
-/**@{
+/** @{
  * XML dump schema versions, for use with XmlDumpWriter.
  * See also the corresponding export-nnnn.xsd files in the docs directory,
  * which are also listed at <https://www.mediawiki.org/xml/>.
@@ -353,4 +353,4 @@ define( 'MIGRATION_NEW', 0x30000000 | SCHEMA_COMPAT_NEW );
  */
 define( 'XML_DUMP_SCHEMA_VERSION_10', '0.10' );
 define( 'XML_DUMP_SCHEMA_VERSION_11', '0.11' );
-/**@}*/
+/** @} */

@@ -1,6 +1,7 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
+// phpcs:disable MediaWiki.Classes.UnsortedUseStatements.UnsortedUse
 use MediaWiki\Logger\LoggerFactory;
 
 wfLoadExtension( 'LdapAuthentication' );
@@ -46,9 +47,8 @@ $wgLDAPLockOnBlock = true;
 $wgLDAPLockPasswordPolicy = 'cn=disabled,ou=ppolicies,dc=wikimedia,dc=org';
 
 // Local debug logging for troubleshooting LDAP issues
-// @codingStandardsIgnoreStart
+// phpcs:disable Generic.CodeAnalysis.UnconditionalIfStatement.Found
 if ( false ) {
-	// @codingStandardsIgnoreEnd
 	$wgLDAPDebug = 5;
 	$monolog = LoggerFactory::getProvider();
 	$monolog->mergeConfig( [
