@@ -3077,6 +3077,8 @@ function wmfGetVariantSettings() {
 	'mtwiktionary' => 'Wikizzjunarju',
 	'mwlwiki' => 'Biquipédia',
 	'myvwiki' => 'Википедиясь',
+	'mywiki' => 'ဝီကီပီးဒီးယား',
+	'mywiktionary' => 'ဝစ်ရှင်နရီ',
 	'mznwiki' => 'ویکی‌پدیا',
 	'nahwiki' => 'Huiquipedia',
 	'newiki' => 'विकिपिडिया', // T184865
