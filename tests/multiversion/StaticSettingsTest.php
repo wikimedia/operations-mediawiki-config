@@ -117,6 +117,90 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 		}
 	}
 
+	public function testMustHaveConfigs() {
+		$dbLists = DBList::getLists();
+		// This list EXCLUDES special. See processing below.
+		$wikiFamilies = [ 'wikipedia', 'wikibooks', 'wikimedia', 'wikinews', 'wikiquote', 'wikisource', 'wikiversity', 'wikivoyage', 'wiktionary' ];
+
+		$mustHaveWikiFamilyConfig = [ 'wgServer', 'wgCanonicalServer' ];
+		foreach ( $mustHaveWikiFamilyConfig as $key => $setting ) {
+			foreach ( $wikiFamilies as $j => $family ) {
+				$this->assertArrayHasKey(
+					$family,
+					$this->variantSettings[ $setting ],
+					"Family '$family' has no default $setting."
+				);
+			}
+		}
+
+		$mustHaveConfigForSpecialWikis = [ 'wgServer', 'wgCanonicalServer' ];
+
+		// TODO: Fix these and fold them into the above.
+		$mustHaveConfigForSpecialWikisButSomeDoNot = [ 'wgLanguageCode' ];
+		$knownFailures = [
+			'advisorswiki',
+			'boardgovcomwiki',
+			'boardwiki',
+			'commonswiki',
+			'electcomwiki',
+			'fixcopyrightwiki',
+			'foundationwiki',
+			'internalwiki',
+			'labswiki',
+			'labtestwiki',
+			'loginwiki',
+			'mediawikiwiki',
+			'metawiki',
+			'movementroleswiki',
+			'nostalgiawiki',
+			'outreachwiki',
+			'sourceswiki',
+			'spcomwiki',
+			'specieswiki',
+			'techconductwiki',
+			'testcommonswiki',
+			'testwikidatawiki',
+			'wikidatawiki',
+			'wikimaniawiki',
+			'wikimania2005wiki',
+			'wikimania2006wiki',
+			'wikimania2007wiki',
+			'wikimania2008wiki',
+			'wikimania2009wiki',
+			'wikimania2010wiki',
+			'wikimania2011wiki',
+			'wikimania2012wiki',
+			'wikimania2013wiki',
+			'wikimania2014wiki',
+			'wikimania2015wiki',
+			'wikimania2016wiki',
+			'wikimania2017wiki',
+			'wikimania2018wiki',
+		];
+
+		foreach ( $dbLists['special'] as $i => $db ) {
+			foreach ( $mustHaveConfigForSpecialWikis as $j => $setting ) {
+				$this->assertArrayHasKey(
+					$db,
+					$this->variantSettings[ $setting ],
+					"Wiki '$db' is in the 'special' family but has no $setting set."
+				);
+			}
+
+			foreach ( $mustHaveConfigForSpecialWikisButSomeDoNot as $j => $setting ) {
+				if ( in_array( $db, $knownFailures ) ) {
+					continue;
+				}
+
+				$this->assertArrayHasKey(
+					$db,
+					$this->variantSettings[ $setting ],
+					"Wiki '$db' is in the 'special' family but has no $setting set."
+				);
+			}
+		}
+	}
+
 	public function testwgServer() {
 		foreach ( $this->variantSettings['wgCanonicalServer'] as $db => $entry ) {
 			// Test if wgCanonicalServer start with https://
