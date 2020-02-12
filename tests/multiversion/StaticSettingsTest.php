@@ -208,10 +208,6 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 		}
 
 		foreach ( $this->variantSettings['wgServer'] as $db => $entry ) {
-			// Wikitech and Test Wikitech don't currently comply.
-			if ( $db === 'labswiki' || $db === 'labtestwiki' ) {
-				continue;
-			}
 			// Test if wgServer start with //
 			$this->assertStringStartsWith( "//", $entry, "wgServer for $db doesn't start with //" );
 		}
