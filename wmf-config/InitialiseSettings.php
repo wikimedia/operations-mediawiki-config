@@ -17126,8 +17126,8 @@ function wmfGetVariantSettings() {
 	],
 	'lawiki' => [ // T240728
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-la.svg',
-		'copyright-width' => 117,
-		'copyright-height' => 21,
+		'copyright-width' => 113,
+		'copyright-height' => 18,
 	],
 	'mkwiki' => [ // T165896
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-sr.svg',
