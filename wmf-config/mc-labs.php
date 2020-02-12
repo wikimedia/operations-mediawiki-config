@@ -25,7 +25,10 @@ $wgWANObjectCaches['wancache-main-mcrouter'] = [
 	'class'   => 'WANObjectCache',
 	'cacheId' => $wgMainCacheType,
 	'channels' => [ 'purge' => 'wancache-main-default-purge' ],
-	// 'mcrouterAware' => true, # wait until *only* mcrouter is used
+	// Specify the route prefix that mcrouter listens for and broadcasts.
+	// The route prefix is configured in Puppet (profile::mediawiki::mcrouter_wancache).
+	'cluster' => 'mw-wan',
+	'mcrouterAware' => true
 ];
 
 // Beta Cluster: Experimentally turn on CacheReaper.
