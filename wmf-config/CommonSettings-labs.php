@@ -333,7 +333,6 @@ $wgLoginNotifyAttemptsNewIP = 1;
 
 if ( $wmgUseKartographer ) {
 	$wgKartographerMapServer = 'https://maps-beta.wmflabs.org';
-	$wgKartographerIconServer = 'https://maps-beta.wmflabs.org';
 }
 
 if ( $wmgUseFileImporter ) {

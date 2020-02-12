@@ -3830,7 +3830,6 @@ if ( $wmgUseCapiunto ) {
 if ( $wmgUseKartographer ) {
 	wfLoadExtension( 'Kartographer' );
 	$wgKartographerMapServer = 'https://maps.wikimedia.org';
-	$wgKartographerIconServer = 'https://maps.wikimedia.org';
 }
 
 if ( $wmgUsePageViewInfo ) {
