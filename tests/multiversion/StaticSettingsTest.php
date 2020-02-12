@@ -117,6 +117,22 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 		}
 	}
 
+	public function testwgServer() {
+		foreach ( $this->variantSettings['wgCanonicalServer'] as $db => $entry ) {
+			// Test if wgCanonicalServer start with https://
+			$this->assertStringStartsWith( "https://", $entry, "wgCanonicalServer for $db doesn't start with https://" );
+		}
+
+		foreach ( $this->variantSettings['wgServer'] as $db => $entry ) {
+			// Wikitech and Test Wikitech don't currently comply.
+			if ( $db === 'labswiki' || $db === 'labtestwiki' ) {
+				continue;
+			}
+			// Test if wgServer start with //
+			$this->assertStringStartsWith( "//", $entry, "wgServer for $db doesn't start with //" );
+		}
+	}
+
 	public function testOnlyExistingWikis() {
 		$dblistNames = array_keys( DBList::getLists() );
 		$langs = file( __DIR__ . "/../../langlist", FILE_IGNORE_NEW_LINES );
