@@ -121,7 +121,7 @@ $wmfAllServices = ServiceConfig::getInstance()->getAllServices();
 # Shorthand when we have no master-slave situation to keep into account
 $wmfLocalServices = $wmfAllServices[$wmfDatacenter];
 
-require "$wmfConfigDir/etcd.php";
+require_once "$wmfConfigDir/etcd.php";
 $etcdConfig = wmfSetupEtcd( $wmfLocalServices['etcd'] );
 $wmfEtcdLastModifiedIndex = $etcdConfig->getModifiedIndex();
 
