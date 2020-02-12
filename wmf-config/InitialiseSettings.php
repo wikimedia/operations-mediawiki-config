@@ -2313,7 +2313,7 @@ function wmfGetVariantSettings() {
 	'bswikiquote' => 'Wikicitati',
 	'bswikisource' => 'Wikizvor',
 	'bswiktionary' => 'Wikirječnik', // T159538
-	'cawiki' => "Viquip\xc3\xa8dia",
+	'cawiki' => "Viquipèdia",
 	'cawikibooks' => 'Viquillibres',
 	'cawikimedia' => 'Wikimedia Canada',
 	'cawikinews' => 'Viquinotícies',
@@ -2842,7 +2842,7 @@ function wmfGetVariantSettings() {
 	'bswikisource' => 'Wikizvor',
 	'bswiktionary' => 'Wikirječnik', // T159538
 	'bxrwiki' => 'Википеэди', // T43877
-	'cawiki' => "Viquip\xc3\xa8dia",
+	'cawiki' => "Viquipèdia",
 	'cawikibooks' => 'Viquillibres',
 	'cawikinews' => 'Viquinotícies',
 	'cawikiquote' => 'Viquidites',
