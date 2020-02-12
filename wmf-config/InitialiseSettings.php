@@ -20395,6 +20395,8 @@ function wmfGetVariantSettings() {
 		'Q20748093' => 'wb-badge-validated',
 		'Q28064618' => 'wb-badge-digitaldocument', // T153186
 		'Q51759403' => 'wb-badge-goodlist', // T190976
+		'Q70893996' => 'wb-badge-redirect-sitelink', // T235420
+		'Q70894304' => 'wb-badge-redirect-intentional-sitelink', // T235420
 	],
 ],
 
