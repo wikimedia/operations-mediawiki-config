@@ -8792,7 +8792,7 @@ function wmfGetVariantSettings() {
 	],
 	'+azwiki' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T196488
-		'patroller' => [ 'patrol' => true ], // T196488
+		'patroller' => [ 'patrol' => true, 'autopatrol' => true ], // T196488, T244338
 		'rollbacker' => [ 'rollback' => true ], // T215200
 	],
 	'+azwikibooks' => [
