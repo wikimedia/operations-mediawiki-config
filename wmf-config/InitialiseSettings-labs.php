@@ -326,6 +326,23 @@ function wmfGetLabsOverrideSettings() {
 			'default' => 0,
 		],
 
+		//
+		// Vector
+		//
+		'wgVectorShowSkinPreferences' => [
+			'default' => true,
+		],
+		// Skin versions are strings not numbers. See skins/Vector/skin.json.
+		'wgVectorDefaultSkinVersion' => [
+			'default' => '2', // Latest Vector
+		],
+		'wgVectorDefaultSkinVersionForExistingAccounts' => [
+			'default' => '2', // Latest Vector
+		],
+		'wgVectorDefaultSkinVersionForNewAccounts' => [
+			'default' => '2', // Latest Vector
+		],
+
 		'wmgULSPosition' => [
 			# Beta-specific
 			'deploymentwiki' => 'personal',

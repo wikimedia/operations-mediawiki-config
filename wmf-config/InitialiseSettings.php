@@ -7860,9 +7860,25 @@ function wmfGetVariantSettings() {
 	'nostalgiawiki' => 'nostalgia',
 ],
 
+//
+// Vector
+//
 'wgVectorResponsive' => [
 	'default' => false,
 	'testwiki' => true,
+],
+'wgVectorShowSkinPreferences' => [
+	'default' => false,
+],
+// Skin versions are strings not numbers. See skins/Vector/skin.json.
+'wgVectorDefaultSkinVersion' => [
+	'default' => '1', // Legacy Vector
+],
+'wgVectorDefaultSkinVersionForExistingAccounts' => [
+	'default' => '1', // Legacy Vector
+],
+'wgVectorDefaultSkinVersionForNewAccounts' => [
+	'default' => '1', // Legacy Vector
 ],
 
 # wgForceUIMsgAsContentMsg @{
