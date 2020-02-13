@@ -3590,8 +3590,8 @@ if ( $wmgUseOAuth ) {
 	if ( $wgMWOAuthCentralWiki === $wgDBname || $wgMWOAuthCentralWiki === false ) {
 		// Management interfaces are available on the central wiki or wikis
 		// that are using local OAuth tables
-		$wgGroupPermissions['autoconfirmed']['mwoauthproposeconsumer'] = true;
-		$wgGroupPermissions['autoconfirmed']['mwoauthupdateownconsumer'] = true;
+		$wgGroupPermissions['user']['mwoauthproposeconsumer'] = true;
+		$wgGroupPermissions['user']['mwoauthupdateownconsumer'] = true;
 		$wgGroupPermissions['oauthadmin']['mwoauthmanageconsumer'] = true;
 		$wgOAuthGroupsToNotify = [ 'oauthadmin' ];
 	}
