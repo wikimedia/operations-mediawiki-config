@@ -24318,7 +24318,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgWikidataOrgQueryServiceMaxLagFactor' => [
-	'default' => 180,
+	'default' => 60,
 ],
 
 // Temporary feature flag. T240736.
