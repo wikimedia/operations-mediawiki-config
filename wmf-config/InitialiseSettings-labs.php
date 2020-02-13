@@ -1708,7 +1708,9 @@ function wmfGetLabsOverrideSettings() {
 		],
 
 		'wmgUseDiscussionTools' => [
+			'arwiki' => true,
 			'enwiki' => true,
+			'nlwiki' => true,
 		],
 	];
 } # wmflLabsSettings()
