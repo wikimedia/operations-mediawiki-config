@@ -889,12 +889,12 @@ $wgAvailableRights[] = 'templateeditor';
 $wgAvailableRights[] = 'editeditorprotected';
 $wgAvailableRights[] = 'editextendedsemiprotected';
 $wgAvailableRights[] = 'extendedconfirmed';
-$wgAvailableRights[] = 'autoreviewprotected';
+$wgAvailableRights[] = 'editautoreviewprotected';
 $wgGrantPermissions['editprotected']['templateeditor'] = true;
 $wgGrantPermissions['editprotected']['editeditorprotected'] = true;
 $wgGrantPermissions['editprotected']['editextendedsemiprotected'] = true;
 $wgGrantPermissions['editprotected']['extendedconfirmed'] = true;
-$wgGrantPermissions['editprotected']['autoreviewprotected'] = true;
+$wgGrantPermissions['editprotected']['editautoreviewprotected'] = true;
 
 // Allow tboverride with editprotected, and tboverride-account with createaccount
 $wgGrantPermissions['editprotected']['tboverride'] = true;
