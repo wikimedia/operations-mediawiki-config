@@ -8550,6 +8550,9 @@ function wmfGetVariantSettings() {
 			'patroller' => [ 999, 1 ],
 			'autopatrolled' => [ 999, 1 ],
 		],
+		'linkpurge' => [
+			'patroller' => [ 3000, 60 * 3 ], // T245214
+		],
 	],
 	'+enwiki' => [
 		'move' => [
