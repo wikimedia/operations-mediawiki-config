@@ -1877,12 +1877,12 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function ( $response, $user, $
 	$logger = LoggerFactory::getInstance( $channel );
 	$verb = $successful ? 'succeeded' : 'failed';
 
-	$logger->info( "Login $verb for {priv} {name} from {ip} - {xff} - {ua} - {geocookie}: {messagestr}", [
+	$logger->info( "Login $verb for {priv} {name} from {clientip} - {xff} - {ua} - {geocookie}: {messagestr}", [
 		'successful' => $successful,
 		'groups' => implode( ', ', $privGroups ),
 		'priv' => ( $privGroups ? 'elevated' : 'normal' ),
 		'name' => $user->getName(),
-		'ip' => $wgRequest->getIP(),
+		'clientip' => $wgRequest->getIP(),
 		'xff' => @$headers['X-Forwarded-For'],
 		'ua' => @$headers['User-Agent'],
 		'guessed' => $guessed,
@@ -1904,12 +1904,12 @@ $wgHooks['ChangeAuthenticationDataAudit'][] = function ( $req, $status ) {
 
 		$privGroups = wmfGetPrivilegedGroups( $req->username, $user );
 		$logger = LoggerFactory::getInstance( 'badpass' );
-		$logger->info( 'Password change in prefs for {priv} {name}: {status} - {ip} - {xff} - {ua} - {geocookie}', [
+		$logger->info( 'Password change in prefs for {priv} {name}: {status} - {clientip} - {xff} - {ua} - {geocookie}', [
 			'name' => $user->getName(),
 			'groups' => implode( ', ', $privGroups ),
 			'priv' => ( $privGroups ? 'elevated' : 'normal' ),
 			'status' => $status->isGood() ? 'ok' : $status->getWikiText( null, null, 'en' ),
-			'ip' => $wgRequest->getIP(),
+			'clientip' => $wgRequest->getIP(),
 			'xff' => @$headers['X-Forwarded-For'],
 			'ua' => @$headers['User-Agent'],
 			'geocookie' => $wgRequest->getCookie( 'GeoIP', '' ),
