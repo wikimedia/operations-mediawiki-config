@@ -21432,7 +21432,8 @@ function wmfGetVariantSettings() {
 ],
 
 'wgCirrusSearchClusterOverrides' => [
-	'default' => [],
+	// T245202: Move more_like traffic to codfw to repopulate query cache
+	'default' => [ 'more_like' => 'codfw' ],
 ],
 
 'wgCirrusSearchWriteClusters' => [
