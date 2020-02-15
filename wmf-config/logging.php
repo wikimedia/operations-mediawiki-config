@@ -214,26 +214,6 @@ $wmgMonologConfig = [
 	],
 ];
 
-if (
-	$wmgLogAuthmanagerMetrics
-	&& $wmgUseWikimediaEvents // T160490
-) {
-	// authmanager is the old name, but it has been repurposed
-	// to be a more generic log channel; authevents is the new name
-	$wmgMonologConfig['loggers']['authmanager'] = [
-		'handlers' => [ 'authmanager-statsd' ],
-		'calls' => $wmgMonologLoggerCalls,
-	];
-	$wmgMonologConfig['loggers']['authevents'] = [
-		'handlers' => [ 'authmanager-statsd' ],
-		'calls' => $wmgMonologLoggerCalls,
-	];
-	$wmgMonologConfig['handlers']['authmanager-statsd'] = [
-		// defined in WikimediaEvents
-		'class' => 'AuthManagerStatsdHandler',
-	];
-}
-
 // Add logging channels defined in $wmgMonologChannels
 foreach ( $wmgMonologChannels as $channel => $opts ) {
 	if ( $opts === false ) {
@@ -383,6 +363,22 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 			'calls' => $wmgMonologLoggerCalls,
 		];
 	}
+}
+
+if (
+	$wmgLogAuthmanagerMetrics
+	&& $wmgUseWikimediaEvents // T160490
+) {
+	// authmanager is the old name, but it has been repurposed
+	// to be a more generic log channel; authevents is the new name
+	$wmgMonologConfig['loggers']['authmanager']['handlers'][] = 'authmanager-statsd';
+	$wmgMonologConfig['loggers']['authmanager']['calls'] = $wmgMonologLoggerCalls;
+	$wmgMonologConfig['loggers']['authevents']['handlers'][] = 'authmanager-statsd';
+	$wmgMonologConfig['loggers']['authevents']['calls'] = $wmgMonologLoggerCalls;
+	$wmgMonologConfig['handlers']['authmanager-statsd'] = [
+		// defined in WikimediaEvents
+		'class' => 'AuthManagerStatsdHandler',
+	];
 }
 
 $wgMWLoggerDefaultSpi = [
