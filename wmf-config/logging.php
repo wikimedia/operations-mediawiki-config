@@ -369,12 +369,10 @@ if (
 	$wmgLogAuthmanagerMetrics
 	&& $wmgUseWikimediaEvents // T160490
 ) {
-	// authmanager is the old name, but it has been repurposed
-	// to be a more generic log channel; authevents is the new name
-	$wmgMonologConfig['loggers']['authmanager']['handlers'][] = 'authmanager-statsd';
-	$wmgMonologConfig['loggers']['authmanager']['calls'] = $wmgMonologLoggerCalls;
 	$wmgMonologConfig['loggers']['authevents']['handlers'][] = 'authmanager-statsd';
 	$wmgMonologConfig['loggers']['authevents']['calls'] = $wmgMonologLoggerCalls;
+	$wmgMonologConfig['loggers']['captcha']['handlers'][] = 'authmanager-statsd';
+	$wmgMonologConfig['loggers']['captcha']['calls'] = $wmgMonologLoggerCalls;
 	$wmgMonologConfig['handlers']['authmanager-statsd'] = [
 		// defined in WikimediaEvents
 		'class' => 'AuthManagerStatsdHandler',
