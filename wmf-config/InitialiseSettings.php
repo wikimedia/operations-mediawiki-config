@@ -5643,7 +5643,7 @@ function wmfGetVariantSettings() {
 		'MessageCacheError' => 'debug',
 		'mobile' => 'debug',
 		'NewUserMessage' => 'debug',
-		'OAuth' => 'debug',
+		'OAuth' => 'info', // T244185
 		'objectcache' => 'warning',
 		'OutputBuffer' => 'debug',
 		'PageTriage' => 'debug',
