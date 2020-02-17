@@ -19239,6 +19239,14 @@ function wmfGetVariantSettings() {
 
 'wmgUseDiscussionTools' => [
 	'default' => false,
+	'arwiki' => true,
+	'frwiki' => true,
+	'huwiki' => true,
+	'nlwiki' => true,
+],
+
+'wgDiscussionToolsEnable' => [
+	'default' => false,
 ],
 
 'wmgUseCodeEditorForCore' => [

@@ -1731,5 +1731,9 @@ function wmfGetLabsOverrideSettings() {
 			'enwiki' => true,
 			'nlwiki' => true,
 		],
+
+		'wgDiscussionToolsEnable' => [
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()
