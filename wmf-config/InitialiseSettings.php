@@ -19777,7 +19777,7 @@ function wmfGetVariantSettings() {
 'wmgUseEventStreamConfig' => [
 	// Eventually EventStreamConfig should be deployed everywhere,
 	// so streams can be configured via wgEventStreams per wiki.
-	// For now, just enablel on testwiki and metawiki.
+	// For now, just enable on testwiki and metawiki.
 	// testwiki will be used when testing the EventLogging
 	// extension's use of stream config, and metawiki
 	// will be used as the default stream config api endpoint
@@ -19785,6 +19785,7 @@ function wmfGetVariantSettings() {
 	// request dynamic stream config.
 	'default' => false,
 	'testwiki' => true,
+	'metawiki' => true,
 ],
 
 // Event stream configuration. A list of stream configurations.
