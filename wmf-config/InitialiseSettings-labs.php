@@ -1282,6 +1282,25 @@ function wmfGetLabsOverrideSettings() {
 		'wmgUseEntitySourceBasedFederation' => [
 			'default' => true,
 		],
+		'wmgWikibaseEntitySources' => [
+			'wikidatawiki' => [
+				'wikidata' => [
+					'entityNamespaces' => [
+						'item' => 0,
+						'property' => 120,
+						'lexeme' => 146,
+					],
+					'repoDatabase' => 'wikidatawiki',
+					'baseUri' => 'https://wikidata.beta.wmflabs.org/entity/',
+					'rdfNodeNamespacePrefix' => 'wd',
+					'rdfPredicateNamespacePrefix' => '',
+					'interwikiPrefix' => 'd',
+				],
+			],
+		],
+		'wmgWikibaseLocalEntitySourceName' => [
+			'wikidatawiki' => 'wikidata',
+		],
 		'wmgWBRepoFormatterUrlProperty' => [
 			'wikidatawiki' => 'P9094',
 		],
