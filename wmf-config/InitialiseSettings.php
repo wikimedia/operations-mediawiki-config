@@ -24222,6 +24222,15 @@ function wmfGetVariantSettings() {
 	]
 ],
 
+# Enable the ores_articletopics field
+'wgCirrusSearchWMFExtraFeatures' => [
+	'default' => [
+		'ores_articletopics' => [
+			'build' => true,
+		]
+	]
+],
+
 # Enable the "experimental" highlighter on all wikis
 'wgCirrusSearchUseExperimentalHighlighter' => [
 	'default' => true
