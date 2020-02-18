@@ -325,6 +325,10 @@ if ( $wmgUseFileImporter ) {
 	}
 }
 
+if ( $wmgUseEventBus ) {
+	$wgEventBusEnableRunJobAPI = true;
+}
+
 $wgMessageCacheType = CACHE_ACCEL;
 
 // This will work for most wikis, which is considered good enough.

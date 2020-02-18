@@ -3814,6 +3814,12 @@ if ( $wmgUseEventBus ) {
 		'formatter' => 'EventBusRCFeedFormatter',
 		'class' => 'EventBusRCFeedEngine',
 	];
+
+	if ( ( $_SERVER['SERVERGROUP'] ?? null ) === 'jobrunner' || ( $_SERVER['SERVERGROUP'] ?? null ) === 'videoscaler' ) {
+		$wgEventBusEnableRunJobAPI = true;
+	} else {
+		$wgEventBusEnableRunJobAPI = false;
+	}
 }
 
 if ( $wmgUseCapiunto ) {
