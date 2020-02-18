@@ -18,5 +18,4 @@ inheritsFrom:
   - testwikis
   - wikidataclient-test
   - wikidataclient
-  - wikipedia-english
   - wikipedia

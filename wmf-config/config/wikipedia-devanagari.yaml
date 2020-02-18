@@ -1,8 +1,0 @@
-# WARNING: This file is publicly viewable on the Web. Do not put private data here.
-# This is the shared trait configuration file for Wikipedias that have the Devanagari
-# horizontal logo for Minerva.
-# All settings here apply to wikis with this trait, unless over-ridden.
-
-# TODO: This probably shouldn't be a trait.
-
-wikiTag: wikipedia-devanagari

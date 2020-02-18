@@ -67,9 +67,20 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 					$this->assertEqualsCanonicalizing( [ '1x' ], $keys, "Unexpected keys for '$db'" );
 			}
 
+			// Test if all logos exist
 			foreach ( $entry as $size => $logo ) {
-				// Test if all logos exist
-				$this->assertFileExists( __DIR__ . '/../..' . $logo, "$db has nonexistent $size logo" );
+				if ( $size === 'wordmark' ) {
+					if ( !count( $logo ) ) {
+						// Wordmark logo over-ridden to unset.
+						continue;
+					}
+					$this->assertArrayHasKey( 'src', $logo, "$db has no path set for its $size logo" );
+					$this->assertFileExists( __DIR__ . '/../..' . $logo['src'], "$db has non-existent $size logo" );
+					$this->assertArrayHasKey( 'width', $logo, "$db has no width set for its $size logo" );
+					$this->assertArrayHasKey( 'height', $logo, "$db has no height set for its $size logo" );
+				} else {
+					$this->assertFileExists( __DIR__ . '/../..' . $logo, "$db has non-existent $size logo" );
+				}
 			}
 		}
 	}
