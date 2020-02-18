@@ -23192,6 +23192,14 @@ function wmfGetVariantSettings() {
 			// https://schema.wikimedia.org/repositories/primary/jsonschema/test/event/current.yaml
 			'schema_title' => 'test/event'
 		],
+		// EventGate instances that use dynamic stream config (just eventgate-analytics-external)
+		// need to be allowed to produce error events to streams named after the eventgate app name.
+		// E.g. 'eventgate-analytics-external.error.validation'
+		[
+			'stream' => '/^eventgate-.+\.error(\..+)?/',
+			// https://schema.wikimedia.org/repositories/primary/jsonschema/error/current.yaml
+			'schema_title' => 'error'
+		],
 	],
 ],
 
