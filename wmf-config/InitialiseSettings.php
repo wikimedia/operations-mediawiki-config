@@ -19311,6 +19311,7 @@ function wmfGetVariantSettings() {
 
 'wmgContentTranslationUnmodifiedMTThresholdForPublish' => [
 	'default' => 99,
+	'aswiki' => 70,
 	'idwiki' => 70,
 ],
 
