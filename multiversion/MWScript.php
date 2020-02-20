@@ -1,6 +1,6 @@
 <?php
-if ( PHP_SAPI !== 'cli' ) {
-	echo "This script can only be run from the command line.\n";
+if ( PHP_SAPI !== 'cli' && PHP_SAPI !== 'phpdbg' ) {
+	echo "This script can only be run from the command line or via phpdbg.\n";
 	exit( 1 );
 }
 
