@@ -12940,6 +12940,10 @@ function wmfGetVariantSettings() {
 		118 => 'noindex,nofollow', // Draft - T92798
 		119 => 'noindex,nofollow', // T92798
 	],
+	'nlwiki' => [
+		NS_USER => 'noindex,follow', // T245787
+		NS_USER_TALK => 'noindex,follow', // T245787
+	],
 	'ptwiki' => [
 		NS_USER => 'noindex,follow', // T185660
 	],
