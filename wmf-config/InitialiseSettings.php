@@ -9707,7 +9707,9 @@ function wmfGetVariantSettings() {
 		'rollbacker' => [ 'rollback' => true ], // T118934
 	],
 	'+mediawikiwiki' => [
+		'*' => [ 'flow-hide' => false, ], // T245780
 		'user' => [ 'flow-create-board' => true, ],
+		'autoconfirmed' => [ 'flow-hide' => true ],  // T245780
 		'autopatrolled' => [ 'autopatrol' => true, ],
 		'uploader' => [ // T217523
 			'upload' => true,
