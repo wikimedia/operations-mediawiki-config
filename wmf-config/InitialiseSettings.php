@@ -16936,7 +16936,7 @@ function wmfGetVariantSettings() {
 ],
 
 # Disable all the query pages that take more than about 15 minutes to update
-# Specifiy a "run mode" when a cron job is set up for the special page and
+# Specify a "run mode" when a cron job is set up for the special page and
 # also create a message for the "run mode" in WikimediaMessages extension with
 # the message key 'querypage-updates-<run mode>'
 # wgDisableQueryPageUpdate @{
@@ -16964,7 +16964,9 @@ function wmfGetVariantSettings() {
 		'Mostcategories',
 	],
 	'+wikidata' => [
-		'Lonelypages ',
+		'Lonelypages',
+		'Mostlinked',
+		'Mostrevisions',
 		'Uncategorizedpages',
 		'Unwatchedpages',
 		'Withoutinterwiki',
