@@ -67,7 +67,7 @@ return [
 		],
 
 		### Kask
-		'sessionstore' => 'https://deployment-sessionstore03.deployment-prep.eqiad.wmflabs:8080',
+		'sessionstore' => 'http://deployment-sessionstore03.deployment-prep.eqiad.wmflabs:8080',
 		'echostore' => 'https://deployment-echostore01.deployment-prep.eqiad.wmflabs:8080',
 	],
 ];
