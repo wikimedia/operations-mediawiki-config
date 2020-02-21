@@ -1,0 +1,3 @@
+*.json eol=lf
+*.php eol=lf
+*.yaml eol=lf
