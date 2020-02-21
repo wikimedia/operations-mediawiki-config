@@ -24436,6 +24436,8 @@ function wmfGetVariantSettings() {
 	'testcommonswiki' => true,
 	'testwiki' => true,
 	'testwikidatawiki' => true,
+	'wikivoyage' => true,
+	'wiktionary' => true,
 ],
 'wgGlobalRenameBlacklist' => [
 	'default' => 'https://meta.wikimedia.org/w/index.php?title=Global_rename_blacklist&action=raw'
