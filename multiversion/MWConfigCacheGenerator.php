@@ -12,9 +12,21 @@ class MWConfigCacheGenerator {
 	# Expand computed dblists with ./multiversion/bin/expanddblist
 
 	public static $dbLists = [
+		// First, the project families:
+		'wikibooks',
+		'wikimedia',
+		'wikinews',
+		'wikipedia',
+		'wikiquote',
+		'wikisource',
+		'wikiversity',
+		'wikivoyage',
+		'wiktionary',
+		'special',
+
+		// Then, the custom lists for configuration:
 		'private',
 		'fishbowl',
-		'special',
 		'closed',
 		'flow',
 		'flaggedrevs',
@@ -32,7 +44,6 @@ class MWConfigCacheGenerator {
 		'group0',
 		'group1',
 		'group2',
-		'wikipedia',
 		'nonglobal',
 		'wikitech',
 		'nonecho',
@@ -133,6 +144,25 @@ class MWConfigCacheGenerator {
 			'docRoot' => $_SERVER['DOCUMENT_ROOT'],
 			'site'    => $site,
 		];
+
+		// Re-write dynamic values for $site and $lang to be static.
+		foreach ( $instance->settings as $setting => $valueArray ) {
+			foreach ( $valueArray as $selector => $value ) {
+				if ( is_string( $value ) ) {
+					if ( $site && strpos( $value, '$site' ) !== false ) {
+						$value = str_replace( '$site', "$site", $value );
+					}
+
+					if ( $lang && strpos( $value, '$lang' ) !== false ) {
+						$value = str_replace( '$lang', "$lang", $value );
+					}
+
+					if ( $value !== $instance->settings[ $setting ][ $selector ] ) {
+						$instance->settings[ $setting ][ $selector ] = $value;
+					}
+				}
+			}
+		}
 
 		// Add a per-language tag as well
 		$wikiTags[] = $instance->get( 'wgLanguageCode', $wikiDBname, $dbSuffix, $confParams, $wikiTags );
@@ -253,7 +283,19 @@ class MWConfigCacheGenerator {
 	/**
 	 * Array of suffixes, for self::siteFromDB()
 	 */
-	private $suffixes = [];
+	private $suffixes = [
+		// 'wikipedia',
+		'wikipedia' => 'wiki',
+		'wiktionary',
+		'wikiquote',
+		'wikibooks',
+		'wikiquote',
+		'wikinews',
+		'wikisource',
+		'wikiversity',
+		'wikimedia',
+		'wikivoyage',
+	];
 
 	/**
 	 * Array of wikis, should be the same as $wgLocalDatabases
