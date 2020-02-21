@@ -10987,7 +10987,6 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'autopatrolled' ],
 	],
 	'+enwiki' => [
-		'bureaucrat' => [ 'flow-bot' ],
 		'eventcoordinator' => [ 'confirmed' ], // T193075
 		'sysop' => [ 'abusefilter', 'abusefilter-helper', 'accountcreator', 'autoreviewer', 'confirmed', 'eventcoordinator', 'filemover', 'reviewer', 'rollbacker', 'templateeditor', 'massmessage-sender', 'extendedconfirmed', 'extendedmover', 'patroller' ], // T126607, T133981, T149019, T175684, T193075
 	],
@@ -11772,7 +11771,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'autopatrolled' ],
 	],
 	'+enwiki' => [
-		'bureaucrat' => [ 'ipblock-exempt', 'sysop', 'flow-bot' ],
+		'bureaucrat' => [ 'ipblock-exempt', 'sysop' ],
 		'sysop' => [ 'rollbacker', 'accountcreator', 'abusefilter', 'abusefilter-helper', 'autoreviewer', 'confirmed', 'reviewer', 'filemover', 'templateeditor', 'massmessage-sender', 'extendedconfirmed', 'extendedmover', 'patroller', 'eventcoordinator' ], // T126607, T133981, T149019, T175684, T193075
 	],
 	'+enwikibooks' => [
