@@ -5,9 +5,6 @@
 #
 # NOTE: Only included for wikis in flaggedrevs.dblist.
 #
-# It's set up this way to allow a cron job on the maintenance script host to
-# easily determine which wikis it needs to run updateStats.php on.
-#
 # Load tree:
 #  |-- wmf-config/CommonSettings.php
 #      |
