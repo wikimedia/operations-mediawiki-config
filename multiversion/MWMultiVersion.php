@@ -63,6 +63,7 @@ class MWMultiVersion {
 		'et',
 		'fi',
 		'ge',
+		'gr',
 		'hi',
 		'id',
 		'id-internal',
