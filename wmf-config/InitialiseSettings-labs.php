@@ -1170,6 +1170,9 @@ function wmfGetLabsOverrideSettings() {
 			'kowiki' => 'https://ko.wikipedia.org/w/api.php',
 			'viwiki' => 'https://vi.wikipedia.org/w/api.php',
 		],
+		'wgGENewcomerTasksGuidanceEnabled' => [
+			'default' => true,
+		],
 		'wgGERestbaseUrl' => [
 			'default' => false,
 			// use local RESTBase if we use local search
