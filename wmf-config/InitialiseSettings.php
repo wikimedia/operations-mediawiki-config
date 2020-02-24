@@ -23935,6 +23935,11 @@ function wmfGetVariantSettings() {
 	'default' => null,
 ],
 
+'wgGENewcomerTasksGuidanceEnabled' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 'wgGERestbaseUrl' => [
 	'default' => false,
 ],
