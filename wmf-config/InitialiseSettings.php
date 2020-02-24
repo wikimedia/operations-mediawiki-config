@@ -24169,7 +24169,7 @@ function wmfGetVariantSettings() {
 ],
 'wmgWikibaseTmpItemTermsMigrationStage' => [
 	'default' => [
-		256000 => MIGRATION_WRITE_NEW, // Reads from new store, still writes to both
+		512000 => MIGRATION_WRITE_NEW, // Reads from new store, still writes to both
 		'max' => MIGRATION_OLD, // Reads from old store, only writes to old store
 	],
 	'testwikidatawiki' => [
