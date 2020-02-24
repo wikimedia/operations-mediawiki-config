@@ -20,8 +20,6 @@
 
 if ( $wmfRealm == 'labs' ) { # safe guard
 
-$wgDebugTimestamps = true;
-
 $wmgAddWikiNotify = false;
 
 // T211539 - relax CSP for certain beta img loads
