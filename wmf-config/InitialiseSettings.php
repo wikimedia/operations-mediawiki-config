@@ -19321,6 +19321,7 @@ function wmfGetVariantSettings() {
 	'default' => 99,
 	'aswiki' => 70,
 	'idwiki' => 70,
+	'tewiki' => 70,
 ],
 
 'wmgContentTranslationTranslateInTarget' => [
