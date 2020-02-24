@@ -1702,6 +1702,24 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true,
 		],
 
+		// Domains that go in script-src and default-src for CSP.
+		'-wmgApprovedContentSecurityPolicyDomains' => [
+			'default' => [
+				'*.wikimedia.beta.wmflabs.org',
+				'*.wikipedia.beta.wmflabs.org',
+				'*.wikinews.beta.wmflabs.org',
+				'*.wiktionary.beta.wmflabs.org',
+				'*.wikibooks.beta.wmflabs.org',
+				'*.wikiversity.beta.wmflabs.org',
+				'*.wikisource.beta.wmflabs.org',
+				// No multilingual wikisource on beta.
+				'*.wikiquote.beta.wmflabs.org',
+				'*.wikidata.beta.wmflabs.org',
+				'*.wikivoyage.beta.wmflabs.org',
+				'*.mediawiki.beta.wmflabs.org',
+			],
+		],
+
 		'wgLegacyJavaScriptGlobals' => [
 			'default' => false,
 		],

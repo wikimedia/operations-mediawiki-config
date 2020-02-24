@@ -23559,6 +23559,28 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
+// Domains that go in script-src and default-src for CSP. Not to be varied by wiki.
+// Note: Special case of wikimedia.org (no *) for math is defined in CommonSettings.php
+// Do not add any domains to this list without talking to Security first.
+'wmgApprovedContentSecurityPolicyDomains' => [
+	'default' => [
+		// A future refinement might be to not allow wildcard on *.wikimedia.org,
+		// but to explicitly list instead. See $wgCrossSiteAJAXdomains above.
+		'*.wikimedia.org',
+		'*.wikipedia.org',
+		'*.wikinews.org',
+		'*.wiktionary.org',
+		'*.wikibooks.org',
+		'*.wikiversity.org',
+		'*.wikisource.org',
+		'wikisource.org',
+		'*.wikiquote.org',
+		'*.wikidata.org',
+		'*.wikivoyage.org',
+		'*.mediawiki.org',
+	],
+],
+
 // Keep this in sync with the 'growthexperiments' tag
 // in the per-wiki yaml files.
 'wmgUseGrowthExperiments' => [
