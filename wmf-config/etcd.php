@@ -72,6 +72,8 @@ function wmfEtcdApplyDBConfig() {
 					   'cluster1', 'cluster2', 'cluster22', 'cluster23' ],
 			'es2' => [ 'cluster24' ],
 			'es3' => [ 'cluster25' ],
+			'es4' => [ 'cluster26' ],
+			'es5' => [ 'cluster27' ],
 			'x1' => [ 'extension1' ],
 		];
 		foreach ( $wmfDbconfigFromEtcd['externalLoads'] as $dbctlName => $dbctlLoads ) {
