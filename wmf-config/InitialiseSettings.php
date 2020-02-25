@@ -26242,6 +26242,7 @@ function wmfGetVariantSettings() {
 	'default' => [
 		'ores_articletopics' => [
 			'build' => true,
+			'use' => true,
 		]
 	]
 ],
