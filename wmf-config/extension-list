@@ -46,7 +46,6 @@ $IP/extensions/Echo/extension.json
 $IP/extensions/Elastica/extension.json
 $IP/extensions/ElectronPdfService/extension.json
 $IP/extensions/EntitySchema/extension.json
-$IP/extensions/EUCopyrightCampaign/extension.json
 $IP/extensions/EventBus/extension.json
 $IP/extensions/EventLogging/extension.json
 $IP/extensions/EventStreamConfig/extension.json
@@ -136,7 +135,6 @@ $IP/extensions/SecurePoll/extension.json
 $IP/extensions/Sentry/extension.json
 $IP/extensions/ShortUrl/extension.json
 $IP/extensions/SiteMatrix/extension.json
-$IP/extensions/SkinPerPage/extension.json
 $IP/extensions/SpamBlacklist/extension.json
 $IP/extensions/SubPageList3/extension.json
 $IP/extensions/SubpageSortkey/extension.json
@@ -185,7 +183,6 @@ $IP/extensions/WikimediaMessages/extension.json
 $IP/extensions/Wikisource/extension.json
 $IP/extensions/XAnalytics/extension.json
 $IP/skins/CologneBlue/skin.json
-$IP/skins/EUCopyrightCampaignSkin/skin.json
 $IP/skins/MinervaNeue/skin.json
 $IP/skins/Modern/skin.json
 $IP/skins/MonoBook/skin.json
