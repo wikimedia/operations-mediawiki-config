@@ -19971,6 +19971,10 @@ function wmfGetVariantSettings() {
 	'ukwikisource' => true, // T220752
 ],
 
+'wgULSLanguageDetection' => [
+	'default' => false,
+],
+
 'wmgUseCognate' => [
 	'default' => false,
 	'wiktionary' => 'wiktionary', // T150182
