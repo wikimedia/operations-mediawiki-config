@@ -321,6 +321,10 @@ $wgQueryCacheLimit = 5000;
 // ParserCache expire time set to 30 days
 $wgParserCacheExpireTime = 86400 * 30;
 
+// This feature would vastly increase the size of the CDN cache, and increase
+// MW appserver load.
+$wgULSLanguageDetection = false;
+
 # ######################################################################
 # Account- and notifications-related settings
 # ######################################################################
