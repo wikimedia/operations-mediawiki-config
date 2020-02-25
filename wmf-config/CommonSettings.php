@@ -3900,16 +3900,6 @@ if ( $wmgUseWikisource ) {
 	wfLoadExtension( 'Wikisource' );
 }
 
-// Being removed!
-if ( 'wmgUseSkinPerPage' === false ) {
-	wfLoadExtension( 'SkinPerPage' );
-}
-
-if ( 'wmgUseEUCopyrightCampaign' === false ) {
-	wfLoadExtension( 'EUCopyrightCampaign' );
-	wfLoadSkin( 'EUCopyrightCampaignSkin' );
-}
-
 if ( $wmgUseGrowthExperiments ) {
 	wfLoadExtension( 'GrowthExperiments' );
 }
