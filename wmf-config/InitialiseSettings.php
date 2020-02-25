@@ -23931,6 +23931,14 @@ function wmfGetVariantSettings() {
 	'default' => 'MediaWiki:NewcomerTopics.json',
 ],
 
+'wgGENewcomerTasksOresTopicConfigTitle' => [
+	'default' => 'mw:MediaWiki:NewcomerTopicsOres.json',
+],
+
+'wgGENewcomerTasksTopicType' => [
+	'default' => 'morelike',
+],
+
 'wgGENewcomerTasksRemoteApiUrl' => [
 	'default' => null,
 ],
