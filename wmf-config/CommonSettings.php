@@ -3896,15 +3896,16 @@ if ( $wmgUseCongressLookup ) {
 	wfLoadExtension( 'CongressLookup' );
 }
 
-if ( $wmgUseSkinPerPage ) {
-	wfLoadExtension( 'SkinPerPage' );
-}
-
 if ( $wmgUseWikisource ) {
 	wfLoadExtension( 'Wikisource' );
 }
 
-if ( $wmgUseEUCopyrightCampaign ) {
+// Being removed!
+if ( 'wmgUseSkinPerPage' === false ) {
+	wfLoadExtension( 'SkinPerPage' );
+}
+
+if ( 'wmgUseEUCopyrightCampaign' === false ) {
 	wfLoadExtension( 'EUCopyrightCampaign' );
 	wfLoadSkin( 'EUCopyrightCampaignSkin' );
 }
