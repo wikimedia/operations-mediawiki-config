@@ -224,6 +224,7 @@ $wgLBFactoryConf = [
 	'cluster23'	=> [ 'blobs table' => 'blobs_cluster23', 'is static' => true ],
 	'cluster24'	=> [ 'blobs table' => 'blobs_cluster24' ],
 	'cluster25'	=> [ 'blobs table' => 'blobs_cluster25' ],
+	'cluster26'	=> [ 'blobs table' => 'blobs_cluster26' ],
 ],
 
 # This key must exist for the master switch script to work, which means comment and uncomment
