@@ -43,7 +43,11 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 		// Specify the route prefix that mcrouter listens for and broadcasts.
 		// The route prefix is configured in Puppet (profile::mediawiki::mcrouter_wancache).
 		'cluster' => 'mw-wan',
-		'mcrouterAware' => true
+		'mcrouterAware' => true,
+		// Reduce connection use by co-locating related keys
+		'coalesceKeys' => ( $wgDBname === 'testwiki' || $wgDBname === 'mediawikiwiki' )
+			? 'non-global'
+			: false
 	];
 }
 
