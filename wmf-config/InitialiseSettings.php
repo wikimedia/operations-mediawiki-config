@@ -12820,10 +12820,6 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
-'wgAllowTitlesInSVG' => [
-	'default' => true,
-],
-
 'wgIgnoreImageErrors' => [
 	'default' => true, // keeps temporary errors from messing the cached output
 ],
