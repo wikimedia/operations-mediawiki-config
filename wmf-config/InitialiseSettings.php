@@ -25199,17 +25199,61 @@ function wmfGetVariantSettings() {
 
 'wgCirrusSearchMaxShardsPerNode' => [
 	'default' => [],
-	'commonswiki' => [ 'file' => 3, 'general' => 2 ],
-	'dewiki' => [ 'content' => 1 ],
-	'wikidatawiki' => [ 'content' => 3 ],
-	'enwiktionary' => [ 'content' => 1, 'general' => 1 ],
-	'enwiki' => [ 'content' => 1, 'general' => 3 ],
-	'eswiki' => [ 'content' => 1 ],
-	'frwiki' => [ 'content' => 1 ],
-	'nlwiki' => [ 'content' => 1 ],
-	'ptwiki' => [ 'content' => 1 ],
-	'ruwiki' => [ 'content' => 1 ],
-	'zhwiki' => [ 'content' => 1 ],
+	'commonswiki' => [
+		'eqiad' => [ 'file' => 3, 'general' => 2 ],
+		'codfw' => [ 'file' => 3, 'general' => 2 ],
+		'cloudelastic' => []
+	],
+	'dewiki' => [
+		'eqiad' => [ 'content' => 1 ],
+		'codfw' => [ 'content' => 1 ],
+		'cloudelastic' => []
+	],
+	'wikidatawiki' => [
+		'eqiad' => [ 'content' => 3 ],
+		'codfw' => [ 'content' => 3 ],
+		'cloudelastic' => []
+	],
+	'enwiktionary' => [
+		'eqiad' => [ 'content' => 1, 'general' => 1 ],
+		'codfw' => [ 'content' => 1, 'general' => 1 ],
+		'cloudelastic' => []
+	],
+	'enwiki' => [
+		'eqiad' => [ 'content' => 1, 'general' => 3 ],
+		'codfw' => [ 'content' => 1, 'general' => 3 ],
+		'cloudelastic' => []
+	],
+	'eswiki' => [
+		'eqiad' => [ 'content' => 1 ],
+		'codfw' => [ 'content' => 1 ],
+		'cloudelastic' => []
+	],
+	'frwiki' => [
+		'eqiad' => [ 'content' => 1 ],
+		'codfw' => [ 'content' => 1 ],
+		'cloudelastic' => []
+	],
+	'nlwiki' => [
+		'eqiad' => [ 'content' => 1 ],
+		'codfw' => [ 'content' => 1 ],
+		'cloudelastic' => []
+	],
+	'ptwiki' => [
+		'eqiad' => [ 'content' => 1 ],
+		'codfw' => [ 'content' => 1 ],
+		'cloudelastic' => []
+	],
+	'ruwiki' => [
+		'eqiad' => [ 'content' => 1 ],
+		'codfw' => [ 'content' => 1 ],
+		'cloudelastic' => []
+	],
+	'zhwiki' => [
+		'eqiad' => [ 'content' => 1 ],
+		'codfw' => [ 'content' => 1 ],
+		'cloudelastic' => []
+	],
 ],
 
 // Setup our custom index settings, only used at index
