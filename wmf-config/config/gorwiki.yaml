@@ -9,3 +9,4 @@ inheritsFrom:
   - s3
   - small
   - wikidataclient
+  - wikipedia-english

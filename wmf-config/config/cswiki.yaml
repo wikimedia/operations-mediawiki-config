@@ -16,3 +16,4 @@ inheritsFrom:
   - s2
   - securepollglobal
   - wikidataclient
+  - wikipedia-english

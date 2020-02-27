@@ -18,6 +18,7 @@ inheritsFrom:
   - securepollglobal
   - top6-wikipedia
   - wikidataclient
+  - wikipedia-english
 
 wgLogos:
   - 1x: '/static/images/project-logos/enwiki.png'
