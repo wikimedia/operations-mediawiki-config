@@ -68,7 +68,7 @@ $wmgThrottlingExceptions[] = [ // T246092
 	'from' => '2020-03-04T0:00 UTC',
 	'to' => '2020-03-06T23:59 UTC',
 	'IP' => '217.23.37.10',
-	'value' => 50,
+	'value' => 400,
 	'dbname' => [ 'arwiki' ]
 ];
 
