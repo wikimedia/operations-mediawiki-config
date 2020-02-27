@@ -869,22 +869,6 @@ if ( $wmgUseCORS ) {
 
 wfLoadSkins( [ 'Vector', 'MonoBook', 'Modern', 'CologneBlue', 'Timeless' ] );
 
-// Forwards-compatbility to use the setting of the logo for Minerva in the new $wgLogos world;
-// in the near future, when Minerva reads this from core, we'll set this in wgLogos directly.
-if (
-	!isset( $wgLogos['wordmark'] ) &&
-	isset( $wgMinervaCustomLogos['copyright'] ) &&
-	isset( $wgMinervaCustomLogos['copyright-height'] ) &&
-	isset( $wgMinervaCustomLogos['copyright-width'] )
-) {
-	// See ResourceLoaderSkinModule::getLessVars
-	$wgLogos['wordmark'] = [
-		'width' => $wgMinervaCustomLogos['copyright-width'],
-		'height' => $wgMinervaCustomLogos['copyright-height'],
-		'src' => $wgMinervaCustomLogos['copyright'],
-	];
-}
-
 // Grants and rights
 // Note these have to be visible on all wikis, not just the ones the
 // extension is enabled on, for proper display in OAuth pages and such.
