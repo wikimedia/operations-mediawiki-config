@@ -872,6 +872,7 @@ wfLoadSkins( [ 'Vector', 'MonoBook', 'Modern', 'CologneBlue', 'Timeless' ] );
 // Forwards-compatbility to use the setting of the logo for Minerva in the new $wgLogos world;
 // in the near future, when Minerva reads this from core, we'll set this in wgLogos directly.
 if (
+	!isset( $wgLogos['wordmark'] ) &&
 	isset( $wgMinervaCustomLogos['copyright'] ) &&
 	isset( $wgMinervaCustomLogos['copyright-height'] ) &&
 	isset( $wgMinervaCustomLogos['copyright-width'] )
