@@ -101,21 +101,21 @@ $services = [
 			[ // forwarded to https://search.svc.eqiad.wmnet:9243/
 				'host' => 'localhost',
 				'transport' => 'Http',
-				'port' => 19243,
+				'port' => 6102,
 			]
 		],
 		'search-psi' => [
 			[ // forwarded to https://search.svc.eqiad.wmnet:9643/
 				'host' => 'localhost',
 				'transport' => 'Http',
-				'port' => 19643,
+				'port' => 6104,
 			]
 		],
 		'search-omega' => [
 			[ // forwarded to https://search.svc.eqiad.wmnet:9443/
 				'host' => 'localhost',
 				'transport' => 'Http',
-				'port' => 19443,
+				'port' => 6103,
 			]
 		],
 	],
@@ -143,21 +143,21 @@ $services = [
 			[ // forwarded to https://search.svc.codfw.wmnet:9243/
 				'host' => 'localhost',
 				'transport' => 'Http',
-				'port' => 14243,
+				'port' => 6202,
 			]
 		],
 		'search-psi' => [
 			[ // forwarded to https://search.svc.codfw.wmnet:9643/
 				'host' => 'localhost',
 				'transport' => 'Http',
-				'port' => 14643,
+				'port' => 6204,
 			]
 		],
 		'search-omega' => [
 			[ // forwarded to https://search.svc.codfw.wmnet:9443/
 				'host' => 'localhost',
 				'transport' => 'Http',
-				'port' => 14443,
+				'port' => 6203,
 			]
 		],
 	],
