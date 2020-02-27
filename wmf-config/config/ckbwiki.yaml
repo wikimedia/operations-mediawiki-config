@@ -9,7 +9,6 @@ inheritsFrom:
   - commonsuploads
   - flaggedrevs
   - medium
-  - mobilemainpagelegacy
   - pp_stage1
   - rtl
   - s3

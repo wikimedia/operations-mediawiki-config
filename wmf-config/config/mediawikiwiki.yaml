@@ -10,7 +10,6 @@ inheritsFrom:
   - flow
   - group0
   - medium
-  - mobilemainpagelegacy
   - nowikidatadescriptiontaglines
   - s3
   - securepollglobal

@@ -11,6 +11,7 @@ inheritsFrom:
   - flow-labs
   - flow
   - medium
+  # To be removed by end of 2020
   - mobilemainpagelegacy
   - pp_stage1
   - s2

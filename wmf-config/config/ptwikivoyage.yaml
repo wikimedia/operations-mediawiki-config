@@ -5,6 +5,7 @@
 inheritsFrom:
   - wikivoyage
   - categories-rdf
+  # To be removed by end of 2020
   - mobilemainpagelegacy
   - s3
   - securepollglobal

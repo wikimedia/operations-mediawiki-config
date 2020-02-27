@@ -8,7 +8,6 @@ inheritsFrom:
   - cirrussearch-big-indices
   - commonsuploads
   - medium
-  - mobilemainpagelegacy
   - pp_stage1
   - rtl
   - s3

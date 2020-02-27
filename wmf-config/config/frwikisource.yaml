@@ -8,7 +8,6 @@ inheritsFrom:
   - cirrussearch-big-indices
   - flow
   - large
-  - mobilemainpagelegacy
   - nowikidatadescriptiontaglines
   - s3
   - securepollglobal

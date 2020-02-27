@@ -7,7 +7,6 @@ inheritsFrom:
   - categories-rdf
   - flaggedrevs
   - medium
-  - mobilemainpagelegacy
   - nowikidatadescriptiontaglines
   - s3
   - securepollglobal

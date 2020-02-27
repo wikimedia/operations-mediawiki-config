@@ -12,6 +12,7 @@ inheritsFrom:
   - flow
   - growthexperiments
   - large
+  # To be removed by end of 2020
   - mobilemainpagelegacy
   - pp_stage1
   - rtl

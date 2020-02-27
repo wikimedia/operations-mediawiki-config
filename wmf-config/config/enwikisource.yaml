@@ -8,6 +8,7 @@ inheritsFrom:
   - categories-rdf
   - cirrussearch-big-indices
   - large
+  # To be removed by end of 2020
   - mobilemainpagelegacy
   - nowikidatadescriptiontaglines
   - s3

@@ -7,7 +7,6 @@ inheritsFrom:
   - categories-rdf
   - commonsuploads
   - medium
-  - mobilemainpagelegacy
   - s3
   - securepollglobal
   - visualeditor-nondefault

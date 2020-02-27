@@ -11,6 +11,7 @@ inheritsFrom:
   - flow-labs
   - flow_only_labs
   - large
+  # To be removed by end of 2020
   - mobilemainpagelegacy
   - s5
   - securepollglobal

@@ -12,6 +12,7 @@ inheritsFrom:
   - gettingstarted-with-category-suggestions
   - group1-wikipedia
   - large
+  # To be removed by end of 2020
   - mobilemainpagelegacy
   - pp_stage0
   - s7

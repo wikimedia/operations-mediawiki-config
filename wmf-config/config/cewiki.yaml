@@ -8,6 +8,7 @@ inheritsFrom:
   - cirrussearch-big-indices
   - flaggedrevs
   - medium
+  # To be removed by end of 2020
   - mobilemainpagelegacy
   - pp_stage1
   - s3

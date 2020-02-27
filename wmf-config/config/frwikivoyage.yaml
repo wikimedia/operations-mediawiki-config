@@ -7,7 +7,6 @@ inheritsFrom:
   - categories-rdf
   - flow
   - medium
-  - mobilemainpagelegacy
   - s3
   - securepollglobal
   - wikidataclient

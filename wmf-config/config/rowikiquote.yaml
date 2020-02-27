@@ -6,7 +6,6 @@ inheritsFrom:
   - wikiquote
   - categories-rdf
   - commonsuploads
-  - mobilemainpagelegacy
   - s3
   - securepollglobal
   - small

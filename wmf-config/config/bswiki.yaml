@@ -9,7 +9,6 @@ inheritsFrom:
   - flaggedrevs
   - flow
   - medium
-  - mobilemainpagelegacy
   - pp_stage1
   - s3
   - securepollglobal

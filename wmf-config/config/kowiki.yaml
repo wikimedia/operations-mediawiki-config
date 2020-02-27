@@ -10,7 +10,6 @@ inheritsFrom:
   - commonsuploads
   - growthexperiments
   - large
-  - mobilemainpagelegacy
   - pp_stage1
   - s7
   - securepollglobal

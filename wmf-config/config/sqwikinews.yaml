@@ -5,7 +5,6 @@
 inheritsFrom:
   - wikinews
   - categories-rdf
-  - mobilemainpagelegacy
   - nowikidatadescriptiontaglines
   - s3
   - securepollglobal

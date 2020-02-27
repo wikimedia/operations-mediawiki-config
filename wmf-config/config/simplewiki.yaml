@@ -10,6 +10,7 @@ inheritsFrom:
   - commonsuploads
   - gettingstarted-with-category-suggestions
   - medium
+  # To be removed by end of 2020
   - mobilemainpagelegacy
   - pp_stage1
   - s3

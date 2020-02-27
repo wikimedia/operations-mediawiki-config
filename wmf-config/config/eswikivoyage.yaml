@@ -5,7 +5,6 @@
 inheritsFrom:
   - wikivoyage
   - categories-rdf
-  - mobilemainpagelegacy
   - s3
   - securepollglobal
   - small
