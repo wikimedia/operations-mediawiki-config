@@ -13,4 +13,3 @@ inheritsFrom:
   - s6
   - securepollglobal
   - wikidataclient
-  - wikipedia-english

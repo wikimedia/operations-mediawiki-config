@@ -18,7 +18,6 @@ inheritsFrom:
   - s1
   - securepollglobal
   - wikidataclient
-  - wikipedia-english
 
 wgLogos:
   - 1x: '/static/images/project-logos/enwiki.png'

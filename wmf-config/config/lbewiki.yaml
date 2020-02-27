@@ -10,4 +10,3 @@ inheritsFrom:
   - s3
   - securepollglobal
   - wikidataclient
-  - wikipedia-cyrillic
