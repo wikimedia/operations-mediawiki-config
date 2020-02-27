@@ -16538,6 +16538,7 @@ function wmfGetVariantSettings() {
 		'mediaphoto.mnhn.fr',               // T241637
 		'*.eso.org',                        // T243423 - European Southern Observatory
 		'vzg-easydb.gbv.de',                // T243118
+		'ids.si.edu',                       // T246330 - Smithsonian
 	],
 ],
 
