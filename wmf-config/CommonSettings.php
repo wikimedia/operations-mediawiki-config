@@ -3989,19 +3989,22 @@ if ( $wmgUseTheWikipediaLibrary ) {
 }
 
 // This is a temporary hack for hooking up Parsoid/PHP with MediaWiki
-$parsoidDir = '/srv/deployment/parsoid/deploy/src';
-if ( file_exists( "$parsoidDir/extension.json" ) ) {
+// This is just the regular check out of parsoid in that week's vendor
+$parsoidDir = "$IP/vendor/wikimedia/parsoid";
+if ( ( $_SERVER['SERVERGROUP'] ?? null ) === 'parsoid' ) {
 	$wgParsoidSettings = [
 		'useSelser' => true,
 		'linting' => true
 	];
 
-	wfLoadExtension( 'Parsoid/PHP', "$parsoidDir/extension.json" );
-
-	// Override settings specific to round-trip testing on scandium
-	if ( wfHostName() === 'scandium' && file_exists( "$parsoidDir/tests/RTTestSettings.php" ) ) {
+	if ( wfHostName() === 'scandium' ) {
+		// Scandium has its own special check out of parsoid for testing.
+		$parsoidDir = __DIR__ . "/../parsoid-testing";
+		// Override settings specific to round-trip testing on scandium
 		require_once "$parsoidDir/tests/RTTestSettings.php";
 	}
+
+	wfLoadExtension( 'Parsoid/PHP', "$parsoidDir/extension.json" );
 }
 unset( $parsoidDir );
 // End of temporary hack for hooking up Parsoid/PHP with MediaWiki
