@@ -1209,6 +1209,11 @@ function wmfGetLabsOverrideSettings() {
 			'kowiki' => 'https://ko.wikipedia.org/w/api.php',
 			'viwiki' => 'https://vi.wikipedia.org/w/api.php',
 		],
+		'wgGENewcomerTasksTopicType' => [
+			'default' => 'morelike',
+			'arwiki' => 'ores',
+			'cswiki' => 'ores',
+		],
 		'wgGENewcomerTasksGuidanceEnabled' => [
 			'default' => true,
 		],
