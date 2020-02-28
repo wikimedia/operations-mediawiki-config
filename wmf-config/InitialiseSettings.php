@@ -13235,7 +13235,6 @@ function wmfGetVariantSettings() {
 		'flood' => [ 'bot' => true ],
 		'oathauth' => [ 'oathauth-api-all' => true ], // T153487
 		'oauthadmin' => [ 'autopatrol' => true ],
-		'shell' => [ 'loginviashell' => true ],
 	],
 	'+legalteamwiki' => [ // T63222
 		'accountcreator' => [ 'noratelimit' => false ],
@@ -15082,7 +15081,6 @@ function wmfGetVariantSettings() {
 			'interface-admin',
 			'oathauth',
 			'oauthadmin',
-			'shell',
 			'sysop',
 			'transwiki',
 		],
@@ -15892,7 +15890,6 @@ function wmfGetVariantSettings() {
 			'interface-admin',
 			'oathauth',
 			'oauthadmin',
-			'shell',
 			'sysop',
 			'transwiki',
 		],
