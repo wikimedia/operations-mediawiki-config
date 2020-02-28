@@ -10203,15 +10203,6 @@ function wmfGetVariantSettings() {
 			'createaccount' => true,
 		],
 		'autopatrolled' => [ 'autopatrol' => true ],
-		'cloudadmin' => [
-			'autopatrol' => true,
-			'listall' => true,
-			'manageproject' => true,
-			'userrights' => true,
-			'managednsdomain' => true,
-			'accessrestrictedregions' => true,
-			'editallhiera' => true,
-		],
 		'flood' => [ 'bot' => true ],
 		'oathauth' => [ 'oathauth-api-all' => true ], // T153487
 		'oauthadmin' => [ 'autopatrol' => true ],
@@ -11571,7 +11562,7 @@ function wmfGetVariantSettings() {
 		// metawiki local groups with global powers (some also on testwiki)
 		'centralnoticeadmin', 'global-renamer', 'translationadmin', 'wmf-officeit', 'wmf-supportsafety',
 		// wikitech local groups with global powers
-		'cloudadmin', 'oathauth',
+		'oathauth',
 	],
 	'+fishbowl' => [ 'user' ],
 	'+private' => [ 'user' ],
