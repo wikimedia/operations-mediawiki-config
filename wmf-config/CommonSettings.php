@@ -221,10 +221,16 @@ if ( !$globals ) {
 
 	$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals ];
 
-	# Save cache
-	Wikimedia\MWConfig\MWConfigCacheGenerator::writeToStaticCache(
-		$wgCacheDirectory, $confCacheFileName, $confCacheObject
-	);
+	# Save cache if the grace period expired.
+	# We define the grace period as the opcache revalidation frequency + 1
+	# in order to ensure we don't incur in race conditions when saving the values.
+	# See T236104
+	$minTime = $confActualMtime + intval( ini_get( 'opcache.revalidate_freq' ) );
+	if ( time() > $minTime ) {
+		Wikimedia\MWConfig\MWConfigCacheGenerator::writeToStaticCache(
+			$wgCacheDirectory, $confCacheFileName, $confCacheObject
+		);
+	}
 }
 unset( $confCacheFileName, $confActualMtime, $confCacheObject );
 
