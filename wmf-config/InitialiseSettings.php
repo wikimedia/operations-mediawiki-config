@@ -1085,7 +1085,7 @@ function wmfGetVariantSettings() {
 		'1.5x' => '/static/images/project-logos/cswiki-1.5x.png', // T130392
 		'2x' => '/static/images/project-logos/cswiki-2x.png', // T130392
 		'wordmark' => [
-			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-en.svg',
+			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-cs.svg',
 			'width' => 116,
 			'height' => 18,
 		],
@@ -1115,7 +1115,7 @@ function wmfGetVariantSettings() {
 		'1.5x' => '/static/images/project-logos/cywiki-1.5x.png', // T150618
 		'2x' => '/static/images/project-logos/cywiki-2x.png', // T150618
 		'wordmark' => [
-			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-en.svg',
+			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-cy.svg',
 			'width' => 116,
 			'height' => 18,
 		],
