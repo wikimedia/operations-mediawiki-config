@@ -72,4 +72,12 @@ $wmgThrottlingExceptions[] = [ // T246092
 	'dbname' => [ 'arwiki' ]
 ];
 
+$wmgThrottlingExceptions[] = [ // T246356
+	'from' => '2020-03-09T12:00 +1:00',
+	'to' => '2020-03-09T20:00 +1:00',
+	'IP' => [ '147.231.202.130', '194.228.196.244' ],
+	'dbname' => [ 'cswiki', 'enwiki', 'skwiki', 'commonswiki' ],
+	'value' => 60 // 50 expected
+];
+
 ## Add throttling definitions above.
