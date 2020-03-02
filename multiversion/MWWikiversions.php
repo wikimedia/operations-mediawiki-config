@@ -72,27 +72,28 @@ class MWWikiversions {
 	 * Get an array of DB names from a .dblist file.
 	 *
 	 * @param string $dblist
-	 * @return Array
+	 * @return string[]
 	 */
 	public static function readDbListFile( $dblist ) {
 		$fileName = dirname( __DIR__ ) . '/dblists/' . basename( $dblist, '.dblist' ) . '.dblist';
 		$lines = @file( $fileName, FILE_IGNORE_NEW_LINES );
 		if ( !$lines ) {
-			throw new Exception( __METHOD__ . "(): unable to read $dblist.\n" );
+			throw new Exception( __METHOD__ . ": unable to read $dblist." );
 		}
 
 		$dbs = [];
 		foreach ( $lines as $line ) {
-			// Strip comments ('#' to end-of-line) and trim whitespace.
-			$line = trim( substr( $line, 0, strcspn( $line, '#' ) ) );
-			if ( substr( $line, 0, 2 ) === '%%' ) {
-				if ( !empty( $dbs ) ) {
-					throw new Exception( __METHOD__ . "(): Encountered dblist expression inside dblist list file.\n" );
+			// Ignore empty lines and lines that are comments
+			if ( $line !== '' && $line[0] !== '#' ) {
+				if ( $line[0] === '%' ) {
+					if ( $dbs !== [] ) {
+						throw new Exception( __METHOD__ . ": Encountered dblist expression in non-empty dblist file." );
+					}
+					$dbs = self::evalDbListExpression( $line );
+					break;
+				} else {
+					$dbs[] = $line;
 				}
-				$dbs = self::evalDbListExpression( $line );
-				break;
-			} elseif ( $line !== '' ) {
-				$dbs[] = $line;
 			}
 		}
 		return $dbs;
