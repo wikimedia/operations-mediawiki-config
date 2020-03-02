@@ -91,9 +91,8 @@ class MWConfigCacheGenerator {
 
 		$dbSuffix = ( $site === 'wikipedia' ) ? 'wiki' : $site;
 		$confParams = [
-			'lang'    => $lang,
-			'docRoot' => $_SERVER['DOCUMENT_ROOT'],
-			'site'    => $site,
+			'lang' => $lang,
+			'site' => $site,
 		];
 
 		// Add a per-language tag as well
@@ -140,9 +139,8 @@ class MWConfigCacheGenerator {
 
 		$dbSuffix = ( $site === 'wikipedia' ) ? 'wiki' : $site;
 		$confParams = [
-			'lang'    => $lang,
-			'docRoot' => $_SERVER['DOCUMENT_ROOT'],
-			'site'    => $site,
+			'lang' => $lang,
+			'site' => $site,
 		];
 
 		// Re-write dynamic values for $site and $lang to be static.

@@ -142,7 +142,6 @@ class CirrusTest extends WgConfTestCase {
 		$dbSuffix = ( $site === 'wikipedia' ) ? 'wiki' : $site;
 		$confParams = [
 			'lang'    => $lang,
-			'docRoot' => $_SERVER['DOCUMENT_ROOT'],
 			'site'    => $site,
 		];
 		// Add a per-language tag as well
@@ -213,7 +212,6 @@ class CirrusTest extends WgConfTestCase {
 			}
 			$config = $wgConf->getAll( $wiki, $suffix, [
 				'lang' => $lang,
-				'docRoot' => '/dev/null',
 				'site' => $site,
 			] );
 			foreach ( $indexTypes as $indexType ) {
