@@ -23203,6 +23203,13 @@ function wmfGetVariantSettings() {
 	],
 ],
 
+// Enable Mediawiki client side (browser) Javascript error logging.
+// This is the publicly accessible endpoint for eventgate-logging-external.
+'wgWMEClientErrorIntakeURL' => [
+	'default' => false,
+	'group0' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true'
+],
+
 'wmgUseWikimediaEvents' => [
 	'default' => true,
 	'closed' => false, // T158721
