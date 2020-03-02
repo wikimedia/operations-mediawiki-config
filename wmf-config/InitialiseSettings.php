@@ -26538,6 +26538,11 @@ function wmfGetVariantSettings() {
 			'EventServiceName' => 'eventgate-main',
 		],
 	],
+	'group1' => [
+		'default' => [
+			'EventServiceName' => 'eventgate-main',
+		],
+	],
 ],
 
 'wmgUseCapiunto' => [
