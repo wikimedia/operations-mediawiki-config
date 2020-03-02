@@ -55,9 +55,9 @@ class MWWikiversions {
 	public static function evalDbListExpression( $expr ) {
 		$expr = trim( strtok( $expr, "#\n" ), "% " );
 		$tokens = preg_split( '/ +([-+]) +/m', $expr, 0, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY );
-		$result = self::readDbListFile( $tokens[0] );
+		$result = self::readDbListFile( basename( $tokens[0], '.dblist' ) );
 		while ( ( $op = next( $tokens ) ) && ( $term = next( $tokens ) ) ) {
-			$dbs = self::readDbListFile( $term );
+			$dbs = self::readDbListFile( basename( $term, '.dblist' ) );
 			if ( $op === '+' ) {
 				$result = array_unique( array_merge( $result, $dbs ) );
 			} elseif ( $op === '-' ) {
@@ -75,7 +75,7 @@ class MWWikiversions {
 	 * @return string[]
 	 */
 	public static function readDbListFile( $dblist ) {
-		$fileName = dirname( __DIR__ ) . '/dblists/' . basename( $dblist, '.dblist' ) . '.dblist';
+		$fileName = dirname( __DIR__ ) . '/dblists/' . $dblist . '.dblist';
 		$lines = @file( $fileName, FILE_IGNORE_NEW_LINES );
 		if ( !$lines ) {
 			throw new Exception( __METHOD__ . ": unable to read $dblist." );

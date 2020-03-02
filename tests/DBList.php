@@ -37,7 +37,7 @@ class DBList {
 			foreach ( $filenames as $filename ) {
 				if ( substr( $filename, -7, 7 ) == '.dblist' ) {
 					$basename = substr( $filename, 0, -7 );
-					$list[$basename] = MWWikiversions::readDbListFile( $filename );
+					$list[$basename] = MWWikiversions::readDbListFile( $basename );
 				}
 			}
 		}
