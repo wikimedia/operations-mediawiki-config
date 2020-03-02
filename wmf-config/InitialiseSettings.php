@@ -26527,6 +26527,14 @@ function wmfGetVariantSettings() {
 'wgEventServiceStreamConfig' => [
 	'default' => [
 		'default' => [
+			# The LVS port for this service has changed.
+			# This is just temporarily for incremental roll-out.
+			# https://phabricator.wikimedia.org/T245203
+			'EventServiceName' => 'eventgate-main-to-delete',
+		],
+	],
+	'group0' => [
+		'default' => [
 			'EventServiceName' => 'eventgate-main',
 		],
 	],
