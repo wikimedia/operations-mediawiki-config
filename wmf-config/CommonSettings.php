@@ -1883,26 +1883,27 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function ( $response, $user, $
 
 // log sysop password changes
 $wgHooks['ChangeAuthenticationDataAudit'][] = function ( $req, $status ) {
+	global $wgRequest;
 	$user = User::newFromName( $req->username );
 	$status = Status::wrap( $status );
-	if ( $req instanceof \MediaWiki\Auth\PasswordAuthenticationRequest
-		&& wmfGetPrivilegedGroups( $req->username, $user )
-	) {
-		global $wgRequest;
-		$headers = function_exists( 'apache_request_headers' ) ? apache_request_headers() : [];
-
+	if ( $req instanceof \MediaWiki\Auth\PasswordAuthenticationRequest ) {
 		$privGroups = wmfGetPrivilegedGroups( $req->username, $user );
-		$logger = LoggerFactory::getInstance( 'badpass' );
-		$logger->info( 'Password change in prefs for {priv} {name}: {status} - {clientip} - {xff} - {ua} - {geocookie}', [
-			'name' => $user->getName(),
-			'groups' => implode( ', ', $privGroups ),
-			'priv' => ( $privGroups ? 'elevated' : 'normal' ),
-			'status' => $status->isGood() ? 'ok' : $status->getWikiText( null, null, 'en' ),
-			'clientip' => $wgRequest->getIP(),
-			'xff' => @$headers['X-Forwarded-For'],
-			'ua' => @$headers['User-Agent'],
-			'geocookie' => $wgRequest->getCookie( 'GeoIP', '' ),
-		] );
+		$priv = ( $privGroups ? 'elevated' : 'normal' );
+		if ( $priv === 'elevated' ) {
+			$headers = function_exists( 'apache_request_headers' ) ? apache_request_headers() : [];
+
+			$logger = LoggerFactory::getInstance( 'badpass' );
+			$logger->info( 'Password change in prefs for {priv} {name}: {status} - {clientip} - {xff} - {ua} - {geocookie}', [
+				'name' => $user->getName(),
+				'groups' => implode( ', ', $privGroups ),
+				'priv' => $priv,
+				'status' => $status->isGood() ? 'ok' : $status->getWikiText( null, null, 'en' ),
+				'clientip' => $wgRequest->getIP(),
+				'xff' => @$headers['X-Forwarded-For'],
+				'ua' => @$headers['User-Agent'],
+				'geocookie' => $wgRequest->getCookie( 'GeoIP', '' ),
+			] );
+		}
 	}
 };
 
