@@ -42,7 +42,6 @@ $common = [
 	'parsoidphp' => 'https://parsoid-php.discovery.wmnet/w/rest.php',
 	'mathoid' => 'http://mathoid.discovery.wmnet:10042',
 	'eventgate-analytics' => 'http://eventgate-analytics.discovery.wmnet:35192',
-	'eventgate-main-to-delete' => 'http://eventgate-main.discovery.wmnet:32192',
 	'eventgate-main' => 'http://eventgate-main.discovery.wmnet:34192',
 	'cxserver' => 'http://cxserver.discovery.wmnet:8080',
 	'electron' => 'http://pdfrender.discovery.wmnet:5252',

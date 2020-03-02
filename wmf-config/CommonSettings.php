@@ -3804,13 +3804,6 @@ if ( $wmgUseEventBus ) {
 			'url' => "{$wmfLocalServices['eventgate-analytics']}/v1/events?hasty=true",
 			'timeout' => 5,
 		],
-		# The LVS port for this service has changed.
-		# This is just temporarily for incremental roll-out.
-		# https://phabricator.wikimedia.org/T245203
-		'eventgate-main-to-delete' => [
-			'url' => "{$wmfLocalServices['eventgate-main-to-delete']}/v1/events",
-			'timeout' => 10,
-		],
 		'eventgate-main' => [
 			'url' => "{$wmfLocalServices['eventgate-main']}/v1/events",
 			'timeout' => 10,
