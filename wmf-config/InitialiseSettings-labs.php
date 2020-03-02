@@ -301,7 +301,11 @@ function wmfGetLabsOverrideSettings() {
 		'wgWMEInukaPageViewCookiesDomain' => [
 			'default' => 'wmflabs.org'
 		],
-
+		// Enable Mediawiki client side (browser) Javascript error logging.
+		// This is the publicly accessible endpoint for eventgate-logging-external.
+		'wgWMEClientErrorIntakeURL' => [
+			'default' => 'http://intake-analytics-beta.wmflabs.org/v1/events?hasty=true'
+		],
 		'wgMFAdvancedMobileContributions' => [
 			'default' => true,
 		],
