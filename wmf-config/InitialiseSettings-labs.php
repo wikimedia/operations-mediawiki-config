@@ -1208,15 +1208,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true,
 			'cawiki' => false,
 		],
-		'wgEnablePartialBlocks' => [
-			'default' => false,
-			'enwiki' => true,
-			'wikidatawiki' => true,
-			'enwiktionary' => true,
-			'enwikibooks' => true,
-			'enwikisource' => true,
-			'commonswiki' => true,
-		],
 		'wgEnableSpecialMute' => [
 			'default' => true,
 			'eswiki' => false,

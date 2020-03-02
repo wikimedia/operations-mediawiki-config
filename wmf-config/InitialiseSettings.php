@@ -9511,10 +9511,6 @@ function wmfGetVariantSettings() {
 	'labswiki' => true, // T218589
 ],
 
-'wgEnablePartialBlocks' => [
-	'default' => true,
-],
-
 'wgEnableSpecialMute' => [
 	'default' => true,
 ],
