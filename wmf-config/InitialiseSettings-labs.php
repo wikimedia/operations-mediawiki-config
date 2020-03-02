@@ -192,6 +192,8 @@ function wmfGetLabsOverrideSettings() {
 					'eventbus' => 'debug',
 					'buffer' => true,
 				],
+				'csp' => 'info',
+				'csp-report-only' => 'info',
 				'dnsblacklist' => 'debug',
 				'EventBus' => 'debug',
 				'JobExecutor' => [ 'logstash' => 'debug' ],
