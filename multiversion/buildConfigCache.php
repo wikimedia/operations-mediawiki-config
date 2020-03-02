@@ -3,9 +3,8 @@
 require_once 'multiversion/MWConfigCacheGenerator.php';
 require_once 'multiversion/MWWikiversions.php';
 
-// TODO: Better alternative than this?
 require_once __DIR__ . '../../vendor/autoload.php';
-require_once __DIR__ . "../../tests/Defines.php";
+require_once __DIR__ . "../../src/defines.php";
 
 $wmfConfigDir = __DIR__ . '/../wmf-config';
 

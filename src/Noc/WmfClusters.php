@@ -74,6 +74,7 @@ class WmfClusters {
 			// Mock variable to capture the property assignment
 			global $wmfDatacenter;
 			$wmfDatacenter = 'bogus';
+			require_once __DIR__ . '/../../src/defines.php';
 			require_once __DIR__ . '/../../wmf-config/InitialiseSettings.php';
 			$settings = wmfGetVariantSettings();
 			$canonicalServers = $settings['wgCanonicalServer'];

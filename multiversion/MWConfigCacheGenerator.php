@@ -118,8 +118,7 @@ class MWConfigCacheGenerator {
 		if ( $realm === 'labs' ) {
 			$dbLists = array_merge( $dbLists, self::$labsDbLists );
 
-			// FIXME: Do we have a nicer way to get these Defines?
-			require_once __DIR__ . "../../tests/Defines.php";
+			require_once __DIR__ . "../../src/defines.php";
 			require_once __DIR__ . "../../wmf-config/InitialiseSettings-labs.php";
 			$config = wmfApplyLabsOverrideSettings( $config );
 		}
