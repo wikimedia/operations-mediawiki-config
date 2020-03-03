@@ -4259,6 +4259,8 @@ function wmfGetVariantSettings() {
 	],
 	'cawikibooks' => [
 		'1x' => '/static/images/project-logos/cawikibooks.png',
+		'1.5x' => '/static/images/project-logos/cawikibooks-1.5x.png',
+		'2x' => '/static/images/project-logos/cawikibooks-2x.png',
 	],
 	'cswikibooks' => [
 		'1x' => '/static/images/project-logos/cswikibooks.png',
