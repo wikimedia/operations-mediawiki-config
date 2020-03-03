@@ -3999,7 +3999,7 @@ if ( ( $_SERVER['SERVERGROUP'] ?? null ) === 'parsoid' ) {
 
 	if ( wfHostName() === 'scandium' ) {
 		// Scandium has its own special check out of parsoid for testing.
-		$parsoidDir = __DIR__ . "/../parsoid-testing";
+		$parsoidDir = __DIR__ . "/../../parsoid-testing";
 		// Override settings specific to round-trip testing on scandium
 		require_once "$parsoidDir/tests/RTTestSettings.php";
 	}
