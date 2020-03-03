@@ -207,7 +207,7 @@ function wmfGetLabsOverrideSettings() {
 			'deploymentwiki' => false
 		],
 
-		'-wgLogos' => [
+		'wgLogos' => [
 			'default' => [
 				'1x' => '/static/images/project-logos/betawiki.png'
 			],
