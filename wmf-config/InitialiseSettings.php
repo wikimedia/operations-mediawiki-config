@@ -4581,6 +4581,8 @@ function wmfGetVariantSettings() {
 	],
 	'ukwikinews' => [
 		'1x' => '/static/images/project-logos/ukwikinews.png', // T124778
+		'1.5x' => '/static/images/project-logos/ukwikinews-1.5x.png',
+		'2x' => '/static/images/project-logos/ukwikinews-2x.png',
 	],
 	'zhwikinews' => [
 		'1x' => '/static/images/project-logos/zhwikinews.png',
