@@ -4956,6 +4956,8 @@ function wmfGetVariantSettings() {
 	],
 	'plwikivoyage' => [
 		'1x' => '/static/images/project-logos/plwikivoyage.png',
+		'1.5x' => '/static/images/project-logos/plwikivoyage-1.5x.png',
+		'2x' => '/static/images/project-logos/plwikivoyage-2x.png',
 		'wordmark' => [
 			'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-en.svg',
 			'width' => 96,
