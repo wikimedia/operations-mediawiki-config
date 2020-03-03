@@ -79,6 +79,7 @@ $wmgThrottlingExceptions[] = [ // T246356
 	'dbname' => [ 'cswiki', 'enwiki', 'skwiki', 'commonswiki' ],
 	'value' => 60 // 50 expected
 ];
+
 $wmgThrottlingExceptions[] = [ // T246813
 	'from' => '2020-03-07T08:59 UTC',
 	'to' => '2020-03-07T16:01 UTC',
@@ -86,4 +87,13 @@ $wmgThrottlingExceptions[] = [ // T246813
 	'dbname' => [ 'enwiki', 'nlwiki', 'commonswiki', 'wikidatawiki' ],
 	'value' => 50
 ];
+
+$wmgThrottlingExceptions[] = [ //T246832
+	'from' => '2020-04-01T15:59 +1:00',
+	'to' => '2020-04-01T21:01 +1:00',
+	'range' => [ '134.155.0.0/16', '2001:7C0:2900::/40' ],
+	'dbname' => [ 'dewiki', 'commonswiki', 'enwiki', 'frwiki' ],
+	'value' => 50
+];
+
 ## Add throttling definitions above.
