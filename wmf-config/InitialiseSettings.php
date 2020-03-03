@@ -4922,6 +4922,8 @@ function wmfGetVariantSettings() {
 	],
 	'fawikivoyage' => [
 		'1x' => '/static/images/project-logos/fawikivoyage.png', // T73382
+		'1.5x' => '/static/images/project-logos/fawikivoyage-1.5x.png', // T73382
+		'2x' => '/static/images/project-logos/fawikivoyage-2x.png', // T73382
 		// Intentionally not setting 'wordmark' and instead falling back to text.
 	],
 	'fiwikivoyage' => [
