@@ -5462,7 +5462,7 @@ function wmfGetVariantSettings() {
 	// Projects
 	'default' => false,
 	'commonsuploads' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=$lang',
-	'wikinews' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
+	'wikinews' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=$lang',
 
 	// These are commonsuploads wikis (not specified below) where $lang does not work
 	'betawikiversity' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
