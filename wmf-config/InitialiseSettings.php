@@ -25511,6 +25511,23 @@ function wmfGetVariantSettings() {
 				],
 			],
 		],
+		# T246947
+		'glent_m0' => [
+			'buckets' => [
+				'control' => [
+					'trigger' => 'control',
+					'globals' => [
+						'wgCirrusSearchFallbackProfile' => 'phrase_suggest_and_language_detection',
+					],
+				],
+				'glent_m0' => [
+					'trigger' => 'glent_m0',
+					'globals' => [
+						'wgCirrusSearchFallbackProfile' => 'phrase_suggest_glentM0_and_langdetect',
+					],
+				],
+			],
+		],
 	],
 ],
 
