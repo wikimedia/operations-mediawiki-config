@@ -11,19 +11,15 @@
 class DbListTest extends PHPUnit\Framework\TestCase {
 
 	public static function provideProjectDbnames() {
-		$cases = [];
-		foreach ( DBList::getLists() as $projectname => $databases ) {
-			if ( !DBlist::isWikiProject( $projectname ) ) {
+		foreach ( DBList::getLists() as $project => $databases ) {
+			if ( !DBlist::isWikiProject( $project ) ) {
 				// Skip files such as s1, private ...
 				continue;
 			}
 			foreach ( $databases as $database ) {
-				$cases[] = [
-					$projectname, $database
-				];
+				yield [ $project, $database ];
 			}
 		}
-		return $cases;
 	}
 
 	/**
@@ -32,11 +28,9 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 	 *
 	 * @dataProvider provideProjectDbnames
 	 */
-	public function testDatabaseNamesUseProjectNameAsSuffix( $projectname, $database ) {
+	public function testDatabaseSuffixMatchProject( $projectname, $database ) {
 		// Override suffix for wikipedia project
-		$dbsuffix = ( $projectname === 'wikipedia' )
-			? 'wiki'
-			: $projectname;
+		$dbsuffix = ( $projectname === 'wikipedia' ) ? 'wiki' : $projectname;
 
 		// Verifiy the databasename suffix
 		$this->assertStringEndsWith( $dbsuffix, $database,
@@ -94,6 +88,22 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 			'multiversion' => [
 				'all',
 				[ 'group0', 'group1', 'group2', ],
+			],
+
+			'family' => [
+				'all',
+				[
+					'special',
+					'wikibooks',
+					'wikimedia',
+					'wikinews',
+					'wikipedia',
+					'wikiquote',
+					'wikisource',
+					'wikiversity',
+					'wikivoyage',
+					'wiktionary',
+				]
 			],
 
 			'wiki-suffix disambiguation' => [
