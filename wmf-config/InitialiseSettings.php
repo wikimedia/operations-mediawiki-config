@@ -25153,8 +25153,8 @@ function wmfGetVariantSettings() {
 	'cebwiki' => [ 'content' => 4, 'general' => 1, 'titlesuggest' => 2, 'archive' => 1 ],
 	// Commons is special and has a 'file' index in addition to the regular ones.
 	// We're sharding 'file' like it is a content index because searching it is
-	// very very common. Increased to 15 because 7 generates giant 70Gb shards
-	'commonswiki' => [ 'content' => 1, 'general' => 8, 'file' => 21, 'titlesuggest' => 1, 'archive' => 1 ],
+	// very very common.
+	'commonswiki' => [ 'content' => 2, 'general' => 8, 'file' => 21, 'titlesuggest' => 1, 'archive' => 1 ],
 	'testcommonswiki' => [ 'content' => 1, 'general' => 8, 'file' => 21, 'titlesuggest' => 1, 'archive' => 1 ],
 	'cswiki' => [ 'content' => 3, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
 	'dawiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
