@@ -77,33 +77,30 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 		}
 	}
 
-	public static function provideAllWikisAreIncluded() {
+	public static function provideWikisAreIncluded() {
 		return [
 			'section' => [
+				'all',
 				// If you're adding a new section, make sure it's widely announced
 				// so all the people who do things per section know about it!
 				[ 's1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's10', 's11', ],
 			],
 
 			'size' => [
+				'all',
 				[ 'small', 'medium', 'large', ],
 			],
 
 			'multiversion' => [
+				'all',
 				[ 'group0', 'group1', 'group2', ],
 			],
 
-			'family' => [
+			'wiki-suffix disambiguation' => [
+				// Based on suffixes as set in wgConf.php
+				'all - wikibooks - wikimedia - wikinews - wikiquote - wikisource - wikiversity - wikivoyage - wiktionary',
 				[
 					'wikipedia',
-					'wikibooks',
-					'wikinews',
-					'wikiquote',
-					'wikisource',
-					'wikiversity',
-					'wikivoyage',
-					'wiktionary',
-					'wikimedia', # TODO: Rename to "affiliates" or "chapters"?
 					'special',
 				]
 			],
@@ -111,13 +108,14 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 	}
 
 	/**
-	 * @dataProvider provideAllWikisAreIncluded
+	 * @dataProvider provideWikisAreIncluded
+	 * @param string $input Which dblist to read for these assertions
 	 * @param string[] $dbLists DBList names that should collectively contain all wikis
 	 */
-	public function testAllWikisAreIncluded( array $dbLists ) {
+	public function testWikisAreIncluded( string $input, array $dbLists ) {
 		$lists = DBList::getLists();
 
-		$all = array_fill_keys( $lists['all'], [] );
+		$all = array_fill_keys( MWWikiversions::evalDbListExpression( $input ), [] );
 
 		foreach ( $dbLists as $list ) {
 			foreach ( $lists[$list] as $name ) {
