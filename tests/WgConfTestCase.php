@@ -8,8 +8,6 @@
  * @file
  */
 
-require_once __DIR__ . '/SiteConfiguration.php';
-
 class WgConfTestCase extends PHPUnit\Framework\TestCase {
 
 	protected $globals = [];
@@ -76,16 +74,10 @@ class WgConfTestCase extends PHPUnit\Framework\TestCase {
 	 *     $wgLogos = $this->loadWgConf( 'production' )->settings['wgLogos'];
 	 *
 	 * @param string $wmfRealm Realm to use for example: 'labs' or 'production'
-	 * @return SiteConfiguration
+	 * @return Wikimedia\MWConfig\StaticSiteConfiguration
 	 */
 	final protected function loadWgConf( $wmfRealm ) {
-		// Needed for wgConf.php
-		$this->setGlobals( [
-			'wmfRealm' => $wmfRealm,
-		] );
-
 		$wmfConfigDir = __DIR__ . "/../wmf-config";
-		require "{$wmfConfigDir}/wgConf.php";
 
 		// Needed for InitialiseSettings.php
 		$this->setGlobals( [
@@ -93,7 +85,6 @@ class WgConfTestCase extends PHPUnit\Framework\TestCase {
 			'wmfDatacenter' => 'unittest',
 			'wmfMasterDatacenter' => 'unittest',
 			'wmfConfigDir' => $wmfConfigDir,
-			'wgConf' => $wgConf,
 		] );
 
 		// Needed for TestServices.php
@@ -107,6 +98,20 @@ class WgConfTestCase extends PHPUnit\Framework\TestCase {
 
 		require_once "{$wmfConfigDir}/InitialiseSettings.php";
 
+		$wgConf = new Wikimedia\MWConfig\StaticSiteConfiguration;
+		$wgConf->suffixes = [
+			'wikipedia' => 'wiki',
+			'wiktionary',
+			'wikiquote',
+			'wikibooks',
+			'wikiquote',
+			'wikinews',
+			'wikisource',
+			'wikiversity',
+			'wikimedia',
+			'wikivoyage',
+		];
+		$wgConf->wikis = MWWikiversions::readDbListFile( $wmfRealm === 'labs' ? 'all-labs' : 'all' );
 		$wgConf->settings = wmfGetVariantSettings();
 
 		// Make sure globals are restored, else they will be serialized on each

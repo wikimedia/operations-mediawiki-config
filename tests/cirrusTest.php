@@ -2,7 +2,6 @@
 
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 require_once __DIR__ . '/../multiversion/MWConfigCacheGenerator.php';
-require_once __DIR__ . '/SiteConfiguration.php';
 
 class CirrusTest extends WgConfTestCase {
 	public function testClusterConfigurationForProdTestwiki() {
