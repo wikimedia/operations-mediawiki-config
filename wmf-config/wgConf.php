@@ -1,7 +1,15 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-# This file is used by commandLine.inc and CommonSettings.php to initialise $wgConf.
+# This for PRODUCTION.
+#
+# Effective load order:
+# - multiversion
+# - mediawiki/DefaultSettings.php
+# - wmf-config/CommonSettings.php
+# - wmf-config/wgConf.php [THIS FILE]
+#
+# Included from: wmf-config/CommonSettings.php.
 
 $wgConf = new SiteConfiguration;
 
