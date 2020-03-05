@@ -24863,17 +24863,19 @@ function wmfGetVariantSettings() {
 ],
 
 'wmgUseGlobalAbuseFilters' => [
-	'default' => false,
-	'small' => true,
-	'medium' => true,
+	// Enabled for all wikis that open, global and small/medium in size
+	'default' => true,
+
+	// Groups
+	// Only use these groups to set false. The default is true, and
+	// overlapping groups may not set different values.
+	'large' => false,
 	'private' => false,
 	'fishbowl' => false,
 	'nonglobal' => false,
 
-	// Effectively repeat nonglobal entry above because both labswiki and labtestwiki are also medium
-	'labswiki' => false,
-	'labtestwiki' => false,
-
+	// Individual wikis
+	// Can set either true or false as-needed to override the default or group setting.
 	'enwikisource' => true, // T78496
 	'frwiki' => true, // T120568
 	'metawiki' => true,
