@@ -4252,6 +4252,8 @@ function wmfGetVariantSettings() {
 	],
 	'bnwikibooks' => [
 		'1x' => '/static/images/project-logos/bnwikibooks.png',
+		'1.5x' => '/static/images/project-logos/bnwikibooks-1.5x.png',
+		'2x' => '/static/images/project-logos/bnwikibooks-2x.png',
 	],
 	'cawikibooks' => [
 		'1x' => '/static/images/project-logos/cawikibooks.png',
