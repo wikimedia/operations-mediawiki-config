@@ -44,13 +44,11 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 		// Content of all.dblist
 		$all = $lists['all'];
 
-		// dblist files that are exceptions
 		$skip = [
-			// No point in checking all includes itself
+			// No point in checking that all includes itself
 			'all',
 
-			// 'all-labs' and 'flow_only_labs' are for beta.wmflabs.org only,
-			// which may have wikis not (yet) in production.
+			// Labs wikis (beta.wmflabs.org) might not (yet) exist in production.
 			'all-labs',
 			'flow-labs',
 			'flow_only_labs',
@@ -66,7 +64,7 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 			$this->assertEquals(
 				[],
 				array_diff( $dbnames, $all ),
-				"'{$dbfile}.dblist' contains names not in 'all.dblist'"
+				"'{$dbfile}.dblist' must not contain names not in 'all.dblist'"
 			);
 		}
 	}
@@ -141,30 +139,9 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 			"All names in 'all.dblist' are in exactly one of the lists" );
 	}
 
-	public function testExpressionListsNaming() {
-		// Based on DBList::getLists()
-		$files = glob( dirname( __DIR__ ) . '/dblists/*.dblist' );
-
-		$cliOnly = [
-			'echo.dblist',
-			'open.dblist',
-			'group1.dblist', // FIXME: Used in wmf-config
-			'group2.dblist', // FIXME: Used in wmf-config
-		];
-		foreach ( $files as $file ) {
-			$name = basename( $file );
-			if ( !in_array( $name, $cliOnly ) ) {
-				$this->assertFalse(
-					strpos( file_get_contents( $file ), '%' ),
-					'Dblist files used in web requests do not contain lazy expressions'
-				);
-			}
-		}
-	}
-
 	/**
 	 * Production code that is web-facing MUST NOT use dblists
-	 * that contain expressions because these have performance cost.
+	 * that contain expressions because these have a significant performance cost.
 	 */
 	public function testNoExpressionListUsedInSettings() {
 		$dblists = DBList::getDblistsUsedInSettings();
@@ -172,16 +149,20 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 		$actual = [];
 		foreach ( $dblists as $file ) {
 			$content = file_get_contents( dirname( __DIR__ ) . "/dblists/$file.dblist" );
-			if ( strpos( $content, '%%' ) !== false ) {
+			if ( strpos( $content, '%' ) !== false ) {
 				$actual[] = $file;
 			}
 		}
 
-		// FIXME
+		// FIXME: These should not be used in wmf-config, or be pre-computed.
 		$grandgathered = [ 'group1', 'group2' ];
 		$actual = array_diff( $actual, $grandgathered );
 
-		$this->assertEquals( [], $actual, 'Unexpanded dblists must not be used in production' );
+		$this->assertEquals(
+			[],
+			$actual,
+			'Dblist files used in web requests must not contain lazy expressions'
+		);
 	}
 
 	/**
