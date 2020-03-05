@@ -64,7 +64,7 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 			$this->assertEquals(
 				[],
 				array_diff( $dbnames, $all ),
-				"'{$dbfile}.dblist' must not contain names not in 'all.dblist'"
+				"'{$dbfile}.dblist' only contains names in 'all.dblist'"
 			);
 		}
 	}
@@ -101,15 +101,6 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 					'wikiversity',
 					'wikivoyage',
 					'wiktionary',
-				]
-			],
-
-			'wiki-suffix disambiguation' => [
-				// Based on suffixes as set in wgConf.php
-				'all - wikibooks - wikimedia - wikinews - wikiquote - wikisource - wikiversity - wikivoyage - wiktionary',
-				[
-					'wikipedia',
-					'special',
 				]
 			],
 		];
