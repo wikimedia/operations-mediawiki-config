@@ -27651,13 +27651,41 @@ function wmfGetVariantSettings() {
 
 'wgMachineVisionWikidataIdBlacklist' => [
 	'default' => [
-		'Q467',
-		'Q3010',
-		'Q3031',
-		'Q8441',
-		'Q1301433',
-		'Q1802779',
-		'Q6478447',
+		// gender
+		'Q467', // woman
+		'Q3010', // boy
+		'Q3031', // girl
+		'Q8441', // man
+
+		// colors
+		'Q1088', // blue
+		'Q23445', // black
+		'Q3142', // red
+		'Q3133', // green
+		'Q943', // yellow
+		'Q39338', // orange
+		'Q428124', // violet
+		'Q3257809', // purple
+		'Q23444', // white
+		'Q42519', // gray
+		'Q47071', // brown
+
+		// adjectives
+		'Q48997611', // vintage
+		'Q10770146', // monochrome
+		'Q6453656', // monochrome
+		'Q838368', // black-and-white
+		'Q296001', // close-up
+
+		// odd nouns
+		'Q1301433', // land vehicle
+		'Q1802779', // land vehicle
+		'Q6478447', // properties of water
+		'Q2083958', // pattern
+		'Q738168', // pattern
+		'Q696160', // psychedelic art
+		'Q7239', // organism
+		'Q638', // music
 	],
 ],
 
