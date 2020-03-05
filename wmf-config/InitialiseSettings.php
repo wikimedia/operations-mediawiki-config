@@ -4609,6 +4609,8 @@ function wmfGetVariantSettings() {
 	],
 	'bnwikisource' => [
 		'1x' => '/static/images/project-logos/bnwikisource.png',
+		'1.5x' => '/static/images/project-logos/bnwikisource-1.5x.png',
+		'2x' => '/static/images/project-logos/bnwikisource-2x.png',
 	],
 	'brwikisource' => [
 		'1x' => '/static/images/project-logos/brwikisource.png',
