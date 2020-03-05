@@ -4980,6 +4980,8 @@ function wmfGetVariantSettings() {
 	],
 	'ukwikivoyage' => [
 		'1x' => '/static/images/project-logos/ukwikivoyage.png', // T110370
+		'1.5x' => '/static/images/project-logos/ukwikivoyage-1.5x.png',
+		'2x' => '/static/images/project-logos/ukwikivoyage-2x.png',
 		'wordmark' => [
 			'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-en.svg',
 			'width' => 96,
