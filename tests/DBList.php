@@ -13,20 +13,6 @@ require_once __DIR__ . '/../multiversion/MWConfigCacheGenerator.php';
 class DBList {
 
 	/**
-	 * List of project names. This array is used to verify that the various
-	 * dblist project files only contains names of databases that belong to them.
-	 */
-	private static $wikiProjects = [
-		'wikibooks',
-		'wikinews',
-		'wikipedia',
-		'wikiquote',
-		'wikisource',
-		'wikiversity',
-		'wiktionary',
-	];
-
-	/**
 	 * @return array
 	 */
 	public static function getLists() {
@@ -45,8 +31,8 @@ class DBList {
 	 * @param string $dbname
 	 * @return bool
 	 */
-	public static function isWikiProject( $dbname ) {
-		return in_array( $dbname, self::$wikiProjects );
+	public static function isWikiFamily( $dbname ) {
+		return isset( MWMultiVersion::SUFFIXES[ $dbname ] );
 	}
 
 	/**

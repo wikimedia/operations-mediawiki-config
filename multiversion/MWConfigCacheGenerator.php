@@ -2,8 +2,11 @@
 
 namespace Wikimedia\MWConfig;
 
+use MWMultiVersion;
 use MWWikiversions;
 
+require_once __DIR__ . '/MWMultiVersion.php';
+require_once __DIR__ . '/MWWikiversions.php';
 require_once __DIR__ . '/../src/StaticSiteConfiguration.php';
 
 /**
@@ -123,19 +126,7 @@ class MWConfigCacheGenerator {
 		}
 
 		$conf = new StaticSiteConfiguration();
-		$conf->suffixes = [
-			// 'wikipedia',
-			'wikipedia' => 'wiki',
-			'wiktionary',
-			'wikiquote',
-			'wikibooks',
-			'wikiquote',
-			'wikinews',
-			'wikisource',
-			'wikiversity',
-			'wikimedia',
-			'wikivoyage',
-		];
+		$conf->suffixes = MWMultiVersion::SUFFIXES;
 		$conf->settings = $config;
 
 		list( $site, $lang ) = $conf->siteFromDB( $wikiDBname );

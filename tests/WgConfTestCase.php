@@ -99,18 +99,7 @@ class WgConfTestCase extends PHPUnit\Framework\TestCase {
 		require_once "{$wmfConfigDir}/InitialiseSettings.php";
 
 		$wgConf = new Wikimedia\MWConfig\StaticSiteConfiguration;
-		$wgConf->suffixes = [
-			'wikipedia' => 'wiki',
-			'wiktionary',
-			'wikiquote',
-			'wikibooks',
-			'wikiquote',
-			'wikinews',
-			'wikisource',
-			'wikiversity',
-			'wikimedia',
-			'wikivoyage',
-		];
+		$wgConf->suffixes = MWMultiVersion::SUFFIXES;
 		$wgConf->wikis = MWWikiversions::readDbListFile( $wmfRealm === 'labs' ? 'all-labs' : 'all' );
 		$wgConf->settings = wmfGetVariantSettings();
 

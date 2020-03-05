@@ -10,6 +10,21 @@ require_once __DIR__ . '/MWWikiversions.php';
  * Avoid setting environmental or globals variables here for OOP.
  */
 class MWMultiVersion {
+
+	public const SUFFIXES = [
+		// For legacy reasons, wikipedias and specials both use the "wiki" suffix,
+		// and for both the internal $site family will map to "wikipedia".
+		'wikipedia' => 'wiki',
+		'wiktionary',
+		'wikiquote',
+		'wikibooks',
+		'wikinews',
+		'wikisource',
+		'wikiversity',
+		'wikimedia',
+		'wikivoyage',
+	];
+
 	/**
 	 * @var MWMultiVersion
 	 */

@@ -15,19 +15,7 @@ $wgConf = new SiteConfiguration;
 
 # Read wiki lists
 
-$wgConf->suffixes = [
-	// 'wikipedia',
-	'wikipedia' => 'wiki',
-	'wiktionary',
-	'wikiquote',
-	'wikibooks',
-	'wikiquote',
-	'wikinews',
-	'wikisource',
-	'wikiversity',
-	'wikimedia',
-	'wikivoyage',
-];
+$wgConf->suffixes = MWMultiVersion::SUFFIXES;
 
 $dbList = $wmfRealm === 'labs' ? 'all-labs' : 'all';
 $wgConf->wikis = MWWikiversions::readDbListFile( $dbList );

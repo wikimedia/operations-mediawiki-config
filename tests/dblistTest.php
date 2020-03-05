@@ -1,6 +1,6 @@
 <?php
 /**
- * Various tests made to test Wikimedia Foundation .dblist files.
+ * Structure test for WMF's dblist files.
  *
  * @license GPL-2.0-or-later
  * @author Antoine Musso <hashar at free dot fr>
@@ -10,31 +10,33 @@
 
 class DbListTest extends PHPUnit\Framework\TestCase {
 
-	public static function provideProjectDbnames() {
-		foreach ( DBList::getLists() as $project => $databases ) {
-			if ( !DBlist::isWikiProject( $project ) ) {
-				// Skip files such as s1, private ...
+	public static function provideFamilyDbnames() {
+		foreach ( DBList::getLists() as $family => $databases ) {
+			if ( !DBlist::isWikiFamily( $family ) ) {
+				// Skip non-family files such as "s1", "private", etc.
 				continue;
 			}
 			foreach ( $databases as $database ) {
-				yield [ $project, $database ];
+				yield [ $family, $database ];
 			}
 		}
 	}
 
 	/**
-	 * Projects dblist should only contains databasenames which
-	 * belongs to them.
+	 * Validate wiki family dblists contents.
 	 *
-	 * @dataProvider provideProjectDbnames
+	 * They must only contain wikis of which the database suffix
+	 * matches the dblist.
+	 *
+	 * @dataProvider provideFamilyDbnames
 	 */
-	public function testDatabaseSuffixMatchProject( $projectname, $database ) {
-		// Override suffix for wikipedia project
-		$dbsuffix = ( $projectname === 'wikipedia' ) ? 'wiki' : $projectname;
+	public function testDatabaseSuffixMatchFamily( $family, $database ) {
+		// Legacy suffix for wikipedia family
+		$dbsuffix = ( $family === 'wikipedia' ) ? 'wiki' : $family;
 
 		// Verifiy the databasename suffix
 		$this->assertStringEndsWith( $dbsuffix, $database,
-			"Database name $database lacks db suffix $dbsuffix of $projectname"
+			"Database name $database lacks db suffix $dbsuffix of $family"
 		);
 	}
 
