@@ -236,6 +236,48 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 		}
 	}
 
+	public function testNoAmbiguouslyTaggedSettings() {
+		$dblists = DBList::getLists();
+		$overlapping = [];
+		foreach ( $dblists as $listA => $wikisA ) {
+			$overlapping[$listA] = [];
+			foreach ( $dblists as $listB => $wikisB ) {
+				if ( $listA !== $listB && array_intersect( $wikisA, $wikisB ) ) {
+					$overlapping[$listA][] = $listB;
+				}
+			}
+		}
+
+		$actualAmbiguous = [];
+		// The expected variable exists here so that the below logic
+		// can add an empty stub for any variables with ambiguity.
+		// Without this, the difference would be two levels deep,
+		// in which case PHPUnit's diff printer would only show which
+		// variable has an ambiguity, instead of also showing
+		// between which dblists the ambiguity exists.
+		$expectedAmbiguous = [];
+
+		foreach ( $this->variantSettings as $configName => $values ) {
+			foreach ( $overlapping as $listA => $lists ) {
+				if ( isset( $values[$listA] ) ) {
+					foreach ( $lists as $listB ) {
+						if ( isset( $values[$listB] ) && $values[$listA] !== $values[$listB] ) {
+							$ambigious[$configName][$listA] = $values[$listA];
+							$ambigious[$configName][$listB] = $values[$listB];
+							$expectedAmbiguous[$configName] = [];
+						}
+					}
+				}
+			}
+		}
+
+		$this->assertEquals(
+			$expectedAmbiguous,
+			$actualAmbiguous,
+			'Overlapping dblist cannot set the same variable to different values'
+		);
+	}
+
 	public function testCacheableLoad() {
 		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getCachableMWConfig(
 			'enwiki', $this->variantSettings, 'production'
