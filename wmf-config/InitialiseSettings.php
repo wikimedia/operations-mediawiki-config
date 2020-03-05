@@ -26362,9 +26362,9 @@ function wmfGetVariantSettings() {
 ],
 'wgSessionCacheType' => [
 	'default' => 'redis_local',  // declared in redis.php. This will change to kask-transition.
-	'wikitech' => 'memcached-pecl',
-	'testwiki' => 'kask-session',
+	'labswiki' => 'kask-session',
 	'labtestwiki' => 'kask-session',
+	'testwiki' => 'kask-session',
 	'testwikidatawiki' => 'kask-session',
 	'group0' => 'kask-session',
 	'group1' => 'kask-session',
