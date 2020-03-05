@@ -23259,7 +23259,8 @@ function wmfGetVariantSettings() {
 // This is the publicly accessible endpoint for eventgate-logging-external.
 'wgWMEClientErrorIntakeURL' => [
 	'default' => false,
-	'group0' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true'
+	'group0' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
+	'hawwiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
 ],
 
 'wmgUseWikimediaEvents' => [
