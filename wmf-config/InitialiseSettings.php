@@ -27687,8 +27687,7 @@ function wmfGetVariantSettings() {
 # and \Wikibase\Repo\WikibaseRepo::getPropertyTermStore
 # and extensions/Wikibase/lib/config/WikibaseLib.default.php
 'wmgWikibaseTmpPropertyTermsMigrationStage' => [
-	'default' => MIGRATION_WRITE_NEW, // Reads from new store, still writes to both
-	'testwikidatawiki' => MIGRATION_NEW, // Reads from new store, only writes to new store
+	'default' => MIGRATION_NEW, // Reads from new store, only writes to new store
 ],
 'wmgWikibaseTmpItemTermsMigrationStage' => [
 	'default' => [
