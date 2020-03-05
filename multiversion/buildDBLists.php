@@ -15,6 +15,8 @@ $wmfDatacenter = 'eqiad';
 require_once __DIR__ . '/../wmf-config/InitialiseSettings.php';
 $config = wmfGetVariantSettings();
 
+$created = [];
+
 foreach ( [ 'production', 'labs' ] as $realm ) {
 	$wikiversionsFile = ( $realm === 'labs' ) ? 'wikiversions-labs.json' : 'wikiversions.json';
 	$wikiversions = MWWikiversions::readWikiVersionsFile( $wikiversionsFile );
@@ -50,6 +52,25 @@ foreach ( [ 'production', 'labs' ] as $realm ) {
 
 	foreach ( $knownDBLists[$realm] as $DBList => $contents ) {
 		writeDBList( $DBList, $contents );
+		$created[$DBList] = true;
+	}
+}
+
+$untracked = [
+	// Naturally contains wikis we don't know about
+	'deleted',
+	// Computed lists
+	'open',
+	'echo',
+	'group1',
+	'group2',
+];
+
+// Don't linger dblists that are no longer backed by the YAML source
+foreach ( glob( __DIR__ . '/../dblists/*.dblist' ) as $filepath ) {
+	$dblist = basename( $filepath, '.dblist' );
+	if ( !isset( $created[ $dblist ] ) && !in_array( $dblist, $untracked ) ) {
+		unlink( $filepath );
 	}
 }
 
