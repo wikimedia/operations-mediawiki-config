@@ -1211,6 +1211,7 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true,
 		],
 		'wgGENewcomerTasksRemoteApiUrl' => [
+			'enwiki' => 'https://en.wikipedia.org/w/api.php',
 			'arwiki' => 'https://ar.wikipedia.org/w/api.php',
 			'cswiki' => 'https://cs.wikipedia.org/w/api.php',
 			'kowiki' => 'https://ko.wikipedia.org/w/api.php',
@@ -1218,6 +1219,7 @@ function wmfGetLabsOverrideSettings() {
 		],
 		'wgGENewcomerTasksTopicType' => [
 			'default' => 'morelike',
+			'enwiki' => 'ores',
 			'arwiki' => 'ores',
 			'cswiki' => 'ores',
 		],
@@ -1226,8 +1228,6 @@ function wmfGetLabsOverrideSettings() {
 		],
 		'wgGERestbaseUrl' => [
 			'default' => false,
-			// use local RESTBase if we use local search
-			'en' => 'https://en.wikipedia.beta.wmflabs.org/api/rest_v1',
 		],
 		'wgGEHomepageSuggestedEditsEnableTopics' => [
 			'default' => true,
