@@ -5387,22 +5387,39 @@ function wmfGetVariantSettings() {
 'wgEnableUploads' => [
 	// Projects
 	'default' => true,
-	'commonsuploads' => true, // Soft-disabling
+	// These wikis have uploads enabled, but only grant the upload right to sysops
+	// (See 'groupOverrides').
+	'commonsuploads' => true,
 	'wikidata' => false,
 
 	// Wikinews
-	'wikinews' => false,
-	'arwikinews' => true,
-	'cswikinews' => true,
-	'dewikinews' => true,
-	'enwikinews' => true,
+	'bgwikinews' => false,
+	'bswikinews' => false,
+	'cawikinews' => false,
+	'elwikinews' => false,
+	'eowikinews' => false,
+	'eswikinews' => false,
 	'fawikinews' => true, // T28565
+	'fiwikinews' => false,
+	'frwikinews' => false,
 	'hewikinews' => true, // T74060
-	'itwikinews' => true,
+	'huwikinews' => false,
+	'jawikinews' => false,
 	'kowikinews' => true, // T26877
-	'nowikinews' => true,
-	'plwikinews' => true,
+	'liwikinews' => false,
+	'nlwikinews' => false,
+	'ptwikinews' => false,
+	'rowikinews' => false,
+	'ruwikinews' => false,
+	'sdwikinews' => false,
+	'sqwikinews' => false,
+	'srwikinews' => false,
+	'svwikinews' => false,
+	'tawikinews' => false,
+	'thwikinews' => false,
 	'trwikinews' => true, // T22215
+	'ukwikinews' => false,
+	'zhwikinews' => false,
 
 	// Other individual wikis
 	'azbwiki' => false, // T106305
