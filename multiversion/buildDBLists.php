@@ -22,12 +22,6 @@ foreach ( [ 'production', 'labs' ] as $realm ) {
 	$fullConfig[$realm] = [];
 	$knownDBLists[$realm] = [];
 
-	// HACK: Splice in the Beta Cluster-only wikis.
-	if ( $realm === 'labs' ) {
-		$wikiversions['deploymentwiki'] = 'VersionDoesNotMatter';
-		$wikiversions['en_rtlwiki'] = 'VersionDoesNotMatter';
-	}
-
 	foreach ( $wikiversions as $wgDBname => $wmgVersionNumber ) {
 		$fullConfig[$wgDBname] = Wikimedia\MWConfig\MWConfigCacheGenerator::getCachableMWConfig(
 			$wgDBname, $config, $realm
