@@ -7,8 +7,6 @@
  * @copyright Copyright © 2012, Antoine Musso <hashar at free dot fr>
  * @file
  */
-require_once __DIR__ . '/../multiversion/MWWikiversions.php';
-require_once __DIR__ . '/../multiversion/MWConfigCacheGenerator.php';
 
 class DBList {
 

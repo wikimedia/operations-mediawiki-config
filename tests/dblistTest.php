@@ -159,19 +159,6 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 	}
 
 	/**
-	 * @covers MWWikiversions::evalDbListExpression
-	 */
-	public function testEvalDbListExpression() {
-		$allDbs = MWWikiversions::readDbListFile( 'all' );
-		$allLabsDbs = MWWikiversions::readDbListFile( 'private' );
-		$exprDbs = MWWikiversions::evalDbListExpression( 'all - private' );
-		$expectedDbs = array_diff( $allDbs, $allLabsDbs );
-		sort( $exprDbs );
-		sort( $expectedDbs );
-		$this->assertEquals( $exprDbs, $expectedDbs );
-	}
-
-	/**
 	 * This test ensures that all dblists are alphasorted
 	 */
 	public function testListsAreSorted() {
