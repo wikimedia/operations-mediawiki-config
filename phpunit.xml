@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <phpunit bootstrap="./tests/bootstrap.php"
 	backupGlobals="true"
 	convertNoticesToExceptions="true"
@@ -18,21 +17,15 @@
 	beStrictAboutTodoAnnotatedTests="true"
 >
 	<testsuites>
-		<testsuite name="dblists">
-			<file>tests/dblistTest.php</file>
-		</testsuite>
-		<testsuite name="wmfconfig">
-			<directory>tests/wmf-config</directory>
-		</testsuite>
-		<testsuite name="main">
-			<directory>tests</directory>
+		<testsuite name="Tests">
+			<directory>./tests</directory>
 		</testsuite>
 	</testsuites>
-
 	<groups>
+		<!-- Keep this even if unused, so that a test can be
+		     easily marked as "@group Broken" -->
 		<exclude>
 			<group>Broken</group>
-			<group>Disabled</group>
 		</exclude>
 	</groups>
 </phpunit>
