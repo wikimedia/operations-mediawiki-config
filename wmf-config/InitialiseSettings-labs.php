@@ -1780,5 +1780,9 @@ function wmfGetLabsOverrideSettings() {
 		'wgDiscussionToolsEnable' => [
 			'default' => true,
 		],
+
+		'wgWatchlistExpiry' => [
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()
