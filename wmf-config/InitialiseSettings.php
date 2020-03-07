@@ -59,6 +59,10 @@ function wmfGetVariantSettings() {
 ],
 
 'wgCapitalLinkOverrides' => [
+	'scowiki' => [ //T247172#5952219
+		102 => true,
+		103 => true,
+	],
 	'zhwiktionary' => [
 		10 => true,
 		828 => true,
@@ -10038,6 +10042,8 @@ function wmfGetVariantSettings() {
 	'scowiki' => [
 		100 => 'Portal', // T68107
 		101 => 'Portal_talk',
+		102 => 'Define', //T247172
+		103 => 'Define_talk',
 	],
 	'sdwiki' => [
 		100 => 'باب', // T186943 - Portal
