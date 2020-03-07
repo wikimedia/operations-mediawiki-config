@@ -32,44 +32,12 @@ $wmgThrottlingExceptions = [];
 ## deploying your change to this file!
 ## https://wikitech.wikimedia.org/wiki/Increasing_account_creation_threshold
 
-$wmgThrottlingExceptions[] = [ // T244608
-	'from' => '2020-02-28T14:00 PST',
-	'to' => '2020-02-28T17:00 PST',
-	'range' => '128.193.8.0/24',
-	'dbname' => 'enwiki',
+$wmgThrottlingExceptions[] = [ // T246813
+	'from' => '2020-03-07T08:59 UTC',
+	'to' => '2020-03-07T16:01 UTC',
+	'IP' => [ '195.35.135.254' ],
+	'dbname' => [ 'enwiki', 'nlwiki', 'commonswiki', 'wikidatawiki' ],
 	'value' => 50
-];
-
-$wmgThrottlingExceptions[] = [ // T245323
-	'from' => '2020-03-03T09:00 UTC-8',
-	'to' => '2020-03-03T13:00 UTC-8',
-	'range' => '209.87.63.0/24',
-	'dbname' => 'enwiki',
-	'value' => 20
-];
-
-$wmgThrottlingExceptions[] = [ // T244488
-	'from' => '2020-03-05T13:00 -5:00',
-	'to' => '2020-03-05T20:00 -5:00',
-	'IP' => '24.137.221.250',
-	'dbname' => [ 'enwiki', 'frwiki' ],
-	'value' => 50
-];
-
-$wmgThrottlingExceptions[] = [ // T244608
-	'from' => '2020-03-13T14:00 PDT',
-	'to' => '2020-03-13T17:00 PDT',
-	'range' => '128.193.8.0/24',
-	'dbname' => 'enwiki',
-	'value' => 50
-];
-
-$wmgThrottlingExceptions[] = [ // T246092
-	'from' => '2020-03-04T0:00 UTC',
-	'to' => '2020-03-06T23:59 UTC',
-	'IP' => '217.23.37.10',
-	'value' => 400,
-	'dbname' => [ 'arwiki' ]
 ];
 
 $wmgThrottlingExceptions[] = [ // T246356
@@ -80,11 +48,11 @@ $wmgThrottlingExceptions[] = [ // T246356
 	'value' => 60 // 50 expected
 ];
 
-$wmgThrottlingExceptions[] = [ // T246813
-	'from' => '2020-03-07T08:59 UTC',
-	'to' => '2020-03-07T16:01 UTC',
-	'IP' => [ '195.35.135.254' ],
-	'dbname' => [ 'enwiki', 'nlwiki', 'commonswiki', 'wikidatawiki' ],
+$wmgThrottlingExceptions[] = [ // T244608
+	'from' => '2020-03-13T14:00 PDT',
+	'to' => '2020-03-13T17:00 PDT',
+	'range' => '128.193.8.0/24',
+	'dbname' => 'enwiki',
 	'value' => 50
 ];
 
@@ -94,14 +62,6 @@ $wmgThrottlingExceptions[] = [ //T246832
 	'range' => [ '134.155.0.0/16', '2001:7C0:2900::/40' ],
 	'dbname' => [ 'dewiki', 'commonswiki', 'enwiki', 'frwiki' ],
 	'value' => 50
-];
-
-$wmgThrottlingExceptions[] = [ // T246888
-	'from' => '2020-03-06T10:00 UTC',
-	'to' => '2020-03-06T18:00 UTC',
-	'range' => [ '130.241.4.0/22', '130.241.8.0/22' ],
-	'dbname' => [ 'enwiki', 'svwiki' ],
-	'value' => 50 // 35 expected
 ];
 
 ## Add throttling definitions above.
