@@ -613,6 +613,11 @@ $wgEnableBotPasswords = $wmgEnableBotPasswords;
 $wgBotPasswordsCluster = $wmgBotPasswordsCluster;
 $wgBotPasswordsDatabase = $wmgBotPasswordsDatabase;
 
+if ( $wmgDisableAccountCreation ) {
+	$wgGroupPermissions['*']['createaccount'] = false;
+	$wgGroupPermissions['*']['autocreateaccount'] = true;
+}
+
 # ######################################################################
 # Server security settings
 # ######################################################################

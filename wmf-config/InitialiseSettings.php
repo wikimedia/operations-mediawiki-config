@@ -28014,6 +28014,13 @@ function wmfGetVariantSettings() {
 ],
 'wgGlobalRenameBlacklistRegex' => [
 	'default' => true
-]
+],
+
+// Disables use of Special:CreateAcount, but allows CentralAuth accounts to still be autocreated
+'wmgDisableAccountCreation' => [
+	'default' => false,
+	'wikimaniawiki' => true,
+],
+
 ];
 }
