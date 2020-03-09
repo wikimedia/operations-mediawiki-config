@@ -1746,7 +1746,10 @@ function wmfGetLabsOverrideSettings() {
 		],
 
 		// Domains that go in script-src and default-src for CSP.
-		'-wmgApprovedContentSecurityPolicyDomains' => [
+		// This also includes the prod domains for the sole purpose
+		// of allowing users to test gadgets at beta.
+		// beta itself should never call prod.
+		'wmgApprovedContentSecurityPolicyDomains' => [
 			'default' => [
 				'*.wikimedia.beta.wmflabs.org',
 				'*.wikipedia.beta.wmflabs.org',
@@ -1757,7 +1760,8 @@ function wmfGetLabsOverrideSettings() {
 				'*.wikisource.beta.wmflabs.org',
 				// No multilingual wikisource on beta.
 				'*.wikiquote.beta.wmflabs.org',
-				'*.wikidata.beta.wmflabs.org',
+				// Unlike production, wikidata does not use www. on beta
+				'wikidata.beta.wmflabs.org',
 				'*.wikivoyage.beta.wmflabs.org',
 				'*.mediawiki.beta.wmflabs.org',
 			],
