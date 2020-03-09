@@ -46,7 +46,7 @@ $common = [
 	'cxserver' => 'http://cxserver.discovery.wmnet:8080',
 	'electron' => 'http://pdfrender.discovery.wmnet:5252',
 	'restbase' => 'http://restbase.discovery.wmnet:7231',
-	'sessionstore' => 'https://sessionstore.discovery.wmnet:8081',
+	'sessionstore' => 'http://localhost:6006',
 	'echostore' => 'https://echostore.discovery.wmnet:8082',
 
 	// cloudelastic only exists in eqiad. No load balancer is available due to
