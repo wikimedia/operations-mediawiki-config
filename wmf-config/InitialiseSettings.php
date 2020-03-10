@@ -24780,7 +24780,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wmgWikibaseSSRTermboxServerUrl' => [
-	'wikidatawiki' => 'http://termbox.discovery.wmnet:3030/termbox',
+	'wikidatawiki' => 'http://localhost:6008/termbox',
 	'testwikidatawiki' => 'http://termbox-test.staging.svc.eqiad.wmnet:3031/termbox',
 ],
 
