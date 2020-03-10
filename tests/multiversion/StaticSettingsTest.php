@@ -75,6 +75,33 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 		}
 	}
 
+	public function testUseFlagsAreBoolean() {
+		$knownToBeBad = [
+			'wgCirrusSearchUseCompletionSuggester',
+			'wgCirrusSearchUseIcuFolding',
+			'wgMFUseDesktopSpecialHistoryPage',
+			'wmgUseCognate',
+			'wmgUseFileExporter',
+			'wmgUseFileImporter',
+		];
+
+		foreach ( $this->variantSettings as $variantSetting => $settingsArray ) {
+			if ( preg_match( '/Use[A-Z]/', $variantSetting ) ) {
+				if ( in_array( $variantSetting, $knownToBeBad ) ) {
+					// Skip for now.
+					continue;
+				}
+
+				foreach ( $settingsArray as $wiki => $value ) {
+					$this->assertTrue(
+						is_bool( $value ),
+						"Use flags should be boolean, but $variantSetting for $wiki is " . ( is_array( $value ) ? "an array" : "'" . (string)$value . "'" ) . "."
+					);
+				}
+			}
+		}
+	}
+
 	public function testLogos() {
 		// Build an array of logos to test everything in one cycle
 		$logos = [];
