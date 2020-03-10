@@ -30,13 +30,46 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 	}
 
 	public function testConfigIsScalar() {
-		foreach ( $this->variantSettings as $variantSettting => $settingsArray ) {
-			$this->assertTrue( is_array( $settingsArray ), "Each variant setting set must be an array, but $variantSettting is not" );
+		foreach ( $this->variantSettings as $variantSetting => $settingsArray ) {
+			$this->assertTrue( is_array( $settingsArray ), "Each variant setting set must be an array, but $variantSetting is not" );
 
 			foreach ( $settingsArray as $wiki => $value ) {
 				$this->assertTrue(
 					is_scalar( $value ) || is_array( $value ) || $value === null,
-					"Each variant setting must be scalar, an array, or null, but $variantSettting is not for $wiki."
+					"Each variant setting must be scalar, an array, or null, but $variantSetting is not for $wiki."
+				);
+			}
+		}
+	}
+
+	public function testVariantUrlsAreLocalhost() {
+		$knownToContainExternalURLs = [
+			// These are user-facing, not in-cluster, and are fine
+			'wgCanonicalServer', 'wgServer', 'wgUploadPath', 'wgRedirectSources', 'wgUploadNavigationUrl', 'wgScorePath', 'wgUploadMissingFileUrl', 'wgRightsUrl', 'wgWelcomeSurveyPrivacyPolicyUrl', 'wgWBCitoidFullRestbaseURL', 'wgGlobalRenameBlacklist',
+			// FIXME: Set in mobile.php?
+			'wgMFPhotoUploadEndpoint',
+			// FIXME: Just… wow. By name, this should be a boolean.
+			'wmgUseFileExporter',
+			// FIXME: Just set in wikibase.php? Most of these are user-facing.
+			'wgEntitySchemaShExSimpleUrl', 'wmgWBRepoSettingsSparqlEndpoint', 'wmgWikibaseClientRepoUrl', 'wmgWikibaseClientRepoConceptBaseUri', 'wmgWikibaseClientPropertyOrderUrl', 'wmgWBRepoConceptBaseUri', 'wgArticlePlaceholderRepoApiUrl', 'wgWBQualityConstraintsSparqlEndpoint', 'wgMediaInfoExternalEntitySearchBaseUri', 'wmgWikibaseSSRTermboxServerUrl',
+			// FIXME: Just set in CirrusSearch-production?
+			'wgWMEClientErrorIntakeURL', 'wgCirrusSearchCategoryEndpoint',
+		];
+
+		foreach ( $this->variantSettings as $variantSetting => $settingsArray ) {
+			if ( in_array( $variantSetting, $knownToContainExternalURLs ) ) {
+				// Skip for now.
+				continue;
+			}
+
+			foreach ( $settingsArray as $wiki => $value ) {
+				if ( !is_string( $value ) ) {
+					continue;
+				}
+
+				$this->assertFalse(
+					strpos( $value, '//' ) !== false && strpos( $value, 'localhost' ) !== false,
+					"Variant URLs must point to localhost, or be defined in CommonSettings, but $variantSetting for $wiki is '$value'."
 				);
 			}
 		}
