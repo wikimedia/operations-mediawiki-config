@@ -20376,6 +20376,7 @@ function wmfGetVariantSettings() {
 	'mkwiki' => true, // T33831
 	'mlwiki' => true, // T32500
 	'newiki' => true, // T89818
+	'nlwiki' => true, // T247286
 	'nowiki' => true, // T32794
 	'officewiki' => true,
 	'outreachwiki' => true, // T106264
