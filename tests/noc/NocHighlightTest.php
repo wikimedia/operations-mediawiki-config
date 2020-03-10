@@ -1,6 +1,6 @@
 <?php
 
-class NocConfHighlightTest extends PHPUnit\Framework\TestCase {
+class NocHighlightTest extends PHPUnit\Framework\TestCase {
 	private $created = [];
 
 	protected function setUp() : void {
@@ -13,10 +13,6 @@ class NocConfHighlightTest extends PHPUnit\Framework\TestCase {
 		// Created various files to test with
 		if ( !file_exists( "$common/private/PrivateSettings.php" ) ) {
 			$this->created[] = "$common/private/PrivateSettings.php";
-			if ( !is_dir( "$common/private" ) ) {
-				mkdir( "$common/private" );
-				$this->created[] = "$common/private";
-			}
 			file_put_contents( "$common/private/PrivateSettings.php", '<?php $forbiddenFruit = "p";' );
 		}
 
@@ -41,11 +37,7 @@ class NocConfHighlightTest extends PHPUnit\Framework\TestCase {
 
 	protected function tearDown() : void {
 		foreach ( $this->created as $created ) {
-			if ( !is_dir( $created ) ) {
-				unlink( $created );
-			} else {
-				rmdir( $created );
-			}
+			unlink( $created );
 		}
 		parent::tearDown();
 	}
