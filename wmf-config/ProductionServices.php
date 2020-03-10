@@ -13,6 +13,10 @@
 #
 # For MediaWiki, this is included from wmf-config/CommonSettings.php.
 #
+# ATTENTION: do NOT add new services below without asking SRE to set up a
+# service proxy for it first. See T244843 for the rationale.
+# All proxies that  are already setup can be found within operations/puppet,
+# file hieradata/common/profile/services_proxy/envoy.yaml
 
 $common = [
 	// Logging is not active-active.
@@ -47,7 +51,7 @@ $common = [
 	'electron' => 'http://pdfrender.discovery.wmnet:5252',
 	'restbase' => 'http://restbase.discovery.wmnet:7231',
 	'sessionstore' => 'http://localhost:6006',
-	'echostore' => 'https://echostore.discovery.wmnet:8082',
+	'echostore' => 'http://localhost:6007',
 
 	// cloudelastic only exists in eqiad. No load balancer is available due to
 	// the part of the network that they live in so each host is enumerated
