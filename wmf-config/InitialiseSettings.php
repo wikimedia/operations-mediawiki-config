@@ -24207,7 +24207,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgWBQualityConstraintsSparqlEndpoint' => [
-	'default' => 'http://wdqs-internal.discovery.wmnet/sparql',
+	'default' => 'http://localhost:6009/sparql',
 ],
 
 'wgWBQualityConstraintsSparqlMaxMillis' => [
@@ -27998,7 +27998,7 @@ function wmfGetVariantSettings() {
 
 // Internal WDQS endpoint
 'wgCirrusSearchCategoryEndpoint' => [
-	'default' => 'http://wdqs-internal.discovery.wmnet/bigdata/namespace/categories/sparql'
+	'default' => 'http://localhost:6009/bigdata/namespace/categories/sparql'
 ],
 
 'wgEnableRestAPI' => [
