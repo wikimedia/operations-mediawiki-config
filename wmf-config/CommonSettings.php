@@ -3639,7 +3639,7 @@ if ( $wmgUseJADE ) {
 
 if ( $wmgUseORES ) {
 	wfLoadExtension( 'ORES' );
-	$wgOresBaseUrl = 'http://ores.discovery.wmnet:8081/';
+	$wgOresBaseUrl = 'http://localhost:6010/';
 	$wgOresFrontendBaseUrl = 'https://ores.wikimedia.org/';
 	$wgDefaultUserOptions['oresDamagingPref'] =
 		$wgDefaultUserOptions['rcOresDamagingPref'] =
