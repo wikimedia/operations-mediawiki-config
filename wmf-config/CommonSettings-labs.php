@@ -313,6 +313,10 @@ if ( $wmgUseKartographer ) {
 	$wgKartographerMapServer = 'https://maps-beta.wmflabs.org';
 }
 
+if ( $wmgUseTwoColConflict ) {
+	$wgTwoColConflictBetaFeature = false;
+}
+
 if ( $wmgUseFileImporter ) {
 	// Beta commons references configuration files hosted locally.
 	// Note that beta testwiki will continue to fetch its configuration from production mw.org .
