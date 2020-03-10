@@ -83,8 +83,6 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 	}
 
 	public function provideConfiguredProductionChannels() {
-		$configDir = __DIR__ . "/../wmf-config";
-		require_once "$configDir/InitialiseSettings.php";
 		$variantSettings = wmfGetVariantSettings();
 
 		foreach ( $variantSettings['wmgMonologChannels'] as $wiki => $channels ) {
@@ -96,11 +94,7 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 	}
 
 	public function provideConfiguredBetaClusterChannels() {
-		$configDir = __DIR__ . "/../wmf-config";
-		require_once "$configDir/InitialiseSettings.php";
 		$variantSettings = wmfGetVariantSettings();
-
-		require_once "$configDir/InitialiseSettings-labs.php";
 		$variantSettings = wmfApplyLabsOverrideSettings( $variantSettings );
 
 		foreach ( $variantSettings['wmgMonologChannels'] as $wiki => $channels ) {

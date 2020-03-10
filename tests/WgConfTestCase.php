@@ -1,6 +1,6 @@
 <?php
 /**
- * PHPUnit testcase for $wgConf testing.
+ * Base class for test cases that need to load $wgConf settings.
  *
  * @license GPL-2.0-or-later
  * @author Erik Bernhardson <ebernhardson@wikimedia.org>
@@ -8,7 +8,7 @@
  * @file
  */
 
-class WgConfTestCase extends PHPUnit\Framework\TestCase {
+abstract class WgConfTestCase extends PHPUnit\Framework\TestCase {
 
 	protected $globals = [];
 	protected $globalsToUnset = [];
@@ -95,8 +95,6 @@ class WgConfTestCase extends PHPUnit\Framework\TestCase {
 			'wmfMasterServices' => null,
 		] );
 		require __DIR__ . '/data/TestServices.php';
-
-		require_once "{$wmfConfigDir}/InitialiseSettings.php";
 
 		$wgConf = new Wikimedia\MWConfig\StaticSiteConfiguration;
 		$wgConf->suffixes = MWMultiVersion::SUFFIXES;

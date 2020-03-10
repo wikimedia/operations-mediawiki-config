@@ -2,8 +2,6 @@
 
 use Wikimedia\MWConfig\XWikimediaDebug;
 
-require_once __DIR__ . '/../../src/XWikimediaDebug.php';
-
 class XWikimediaDebugTest extends PHPUnit\Framework\TestCase {
 
 	public static function provider() {

@@ -1,4 +1,5 @@
 <?php
+
 class ThrottleTest extends PHPUnit\Framework\TestCase {
 
 	/**

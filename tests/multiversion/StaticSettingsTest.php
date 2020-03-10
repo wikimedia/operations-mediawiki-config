@@ -8,25 +8,15 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 	private $originalWmfDC;
 
 	public function setUp() : void {
-		// HACK: Set a global still used in InitialiseSettings
-		$this->originalWmfDC = $GLOBALS['wmfDatacenter'] ?? null;
+		// This global is set by multiversion/MWRealm.php
+		$this->originalWmfDC = $GLOBALS['wmfDatacenter'];
 		$GLOBALS['wmfDatacenter'] = 'testvalue';
 
-		$configDir = __DIR__ . "/../../wmf-config";
-		require_once "{$configDir}/InitialiseSettings.php";
 		$this->variantSettings = wmfGetVariantSettings();
 	}
 
 	public function tearDown() : void {
-		// HACK: This is sometimes set and sometimes not, depending on when
-		// multiversion/MWRealm.php was lazy required by other PHPUnit tests.
-		// Avoid PHPUnit errors about global leak so make sure we restore
-		// to what we encountered.
-		if ( $this->originalWmfDC === null ) {
-			unset( $GLOBALS['wmfDatacenter'] );
-		} else {
-			$GLOBALS['wmfDatacenter'] = $this->originalWmfDC;
-		}
+		$GLOBALS['wmfDatacenter'] = $this->originalWmfDC;
 	}
 
 	public function testConfigIsScalar() {

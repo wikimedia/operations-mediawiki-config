@@ -1,4 +1,5 @@
 <?php
+
 class StaticSettingsGenerationTest extends PHPUnit\Framework\TestCase {
 
 	public function testInheritance() {
