@@ -223,7 +223,7 @@ $wgLBFactoryConf = [
 	'cluster22'	=> [ 'blobs table' => 'blobs_cluster22', 'is static' => true ],
 	'cluster23'	=> [ 'blobs table' => 'blobs_cluster23', 'is static' => true ],
 	'cluster24'	=> [ 'blobs table' => 'blobs_cluster24', 'is static' => true ],
-	'cluster25'	=> [ 'blobs table' => 'blobs_cluster25' ],
+	'cluster25'	=> [ 'blobs table' => 'blobs_cluster25', 'is static' => true ],
 	'cluster26'	=> [ 'blobs table' => 'blobs_cluster26' ],
 	'cluster27'	=> [ 'blobs table' => 'blobs_cluster27' ],
 ],
@@ -247,7 +247,6 @@ $wgLBFactoryConf = [
 ];
 
 $wgDefaultExternalStore = [
-	'DB://cluster25',
 	'DB://cluster26',
 	'DB://cluster27',
 ];
