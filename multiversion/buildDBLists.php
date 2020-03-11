@@ -1,18 +1,15 @@
 <?php
 
-require_once 'multiversion/MWConfigCacheGenerator.php';
-require_once 'multiversion/MWWikiversions.php';
-
-require_once __DIR__ . '../../vendor/autoload.php';
-require_once __DIR__ . "../../src/defines.php";
-
-$dblistsDir = __DIR__ . '/../wmf-config';
+require_once __DIR__ . '/MWWikiversions.php';
+require_once __DIR__ . '/MWConfigCacheGenerator.php';
+require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../src/defines.php';
+require_once __DIR__ . '/../wmf-config/InitialiseSettings.php';
 
 global $wmfRealm, $wmfDatacenter;
 $wmfRealm = 'production';
 $wmfDatacenter = 'eqiad';
 
-require_once __DIR__ . '/../wmf-config/InitialiseSettings.php';
 $config = wmfGetVariantSettings();
 
 $created = [];
@@ -21,27 +18,26 @@ foreach ( [ 'production', 'labs' ] as $realm ) {
 	$wikiversionsFile = ( $realm === 'labs' ) ? 'wikiversions-labs.json' : 'wikiversions.json';
 	$wikiversions = MWWikiversions::readWikiVersionsFile( $wikiversionsFile );
 
-	$fullConfig[$realm] = [];
-	$knownDBLists[$realm] = [];
+	$knownDBLists = [];
 
 	foreach ( $wikiversions as $wgDBname => $wmgVersionNumber ) {
-		$fullConfig[$wgDBname] = Wikimedia\MWConfig\MWConfigCacheGenerator::getCachableMWConfig(
+		$fullConfig = Wikimedia\MWConfig\MWConfigCacheGenerator::getCachableMWConfig(
 			$wgDBname, $config, $realm
 		);
 
-		$localTags = $fullConfig[$wgDBname]['wikiTag'] ?? [];
+		$localTags = $fullConfig['wikiTag'] ?? [];
 
 		if ( $localTags ) {
 			foreach ( $localTags as $tag ) {
-				$knownDBLists[$realm][$tag][] = $wgDBname;
+				$knownDBLists[$tag][] = $wgDBname;
 			}
 		}
 	}
 
 	// HACK: Only write the Beta Cluster-only dblists with the Labs-specific details.
 	if ( $realm === 'labs' ) {
-		$knownDBLists[$realm] = array_filter(
-			$knownDBLists[$realm],
+		$knownDBLists = array_filter(
+			$knownDBLists,
 			function ( $key ) {
 				// HACK: We shouldn't have to hard-code the lists that affect the Beta Cluster like this.
 				return in_array( $key, [ 'all-labs', 'flow_only_labs', 'flow-labs' ] );
@@ -50,7 +46,7 @@ foreach ( [ 'production', 'labs' ] as $realm ) {
 		);
 	}
 
-	foreach ( $knownDBLists[$realm] as $DBList => $contents ) {
+	foreach ( $knownDBLists as $DBList => $contents ) {
 		writeDBList( $DBList, $contents );
 		$created[$DBList] = true;
 	}
