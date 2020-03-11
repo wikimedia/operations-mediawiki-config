@@ -58,7 +58,7 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 				}
 
 				$this->assertFalse(
-					strpos( $value, '//' ) !== false && strpos( $value, 'localhost' ) !== false,
+					strpos( $value, '//' ) !== false && strpos( $value, 'localhost' ) === false,
 					"Variant URLs must point to localhost, or be defined in CommonSettings, but $variantSetting for $wiki is '$value'."
 				);
 			}
