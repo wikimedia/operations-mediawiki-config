@@ -178,8 +178,8 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 			}
 		}
 
-		// FIXME: These should not be used in wmf-config, or be pre-computed.
-		$grandgathered = [ 'group1', 'group2' ];
+		// FIXME: This should not be used in wmf-config, or be pre-computed.
+		$grandgathered = [ 'group1' ];
 		$actual = array_diff( $actual, $grandgathered );
 
 		$this->assertEquals(
