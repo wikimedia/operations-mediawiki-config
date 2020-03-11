@@ -9,8 +9,6 @@
 #
 # ######################################################################
 
-// FIXME: Should these variables be set in WgConfTestCase::loadWgConf??
-$wmfDatacenter = $wmfMasterDatacenter = 'unittest';
 $wmfAllServices = [];
 
 $wmfAllServices['unittest'] = [
