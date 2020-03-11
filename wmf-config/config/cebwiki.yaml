@@ -8,7 +8,6 @@ inheritsFrom:
   - cirrussearch-big-indices
   - commonsuploads
   - large
-  - pp_stage1
   - s5
   - securepollglobal
   - wikidataclient

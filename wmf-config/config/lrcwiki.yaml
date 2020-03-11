@@ -5,7 +5,6 @@
 inheritsFrom:
   - wikipedia
   - categories-rdf
-  - pp_stage1
   - rtl
   - s3
   - securepollglobal

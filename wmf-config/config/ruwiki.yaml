@@ -13,7 +13,6 @@ inheritsFrom:
   - flow
   - gettingstarted-with-category-suggestions
   - large
-  - pp_stage0
   - s6
   - securepollglobal
   - top6-wikipedia

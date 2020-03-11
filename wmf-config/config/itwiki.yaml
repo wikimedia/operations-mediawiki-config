@@ -9,7 +9,6 @@ inheritsFrom:
   - large
   # To be removed by end of 2020
   - mobilemainpagelegacy
-  - pp_stage0
   - s2
   - securepollglobal
   - wikidataclient

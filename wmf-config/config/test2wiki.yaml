@@ -9,7 +9,6 @@ inheritsFrom:
   - group1-wikipedia
   - medium
   - nowikidatadescriptiontaglines
-  - pp_stage1
   - s3
   - securepollglobal
   - wikidataclient-test

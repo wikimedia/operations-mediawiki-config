@@ -8,7 +8,6 @@ inheritsFrom:
   - categories-rdf
   - cirrussearch-big-indices
   - large
-  - pp_stage1
   - s5
   - securepollglobal
   - visualeditor-nondefault

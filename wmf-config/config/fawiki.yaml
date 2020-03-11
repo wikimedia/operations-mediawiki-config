@@ -12,7 +12,6 @@ inheritsFrom:
   - flow
   - gettingstarted-with-category-suggestions
   - large
-  - pp_stage1
   - rtl
   - s7
   - securepollglobal

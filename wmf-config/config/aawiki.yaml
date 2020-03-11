@@ -6,7 +6,6 @@ inheritsFrom:
   - wikipedia
   - all-labs
   - closed
-  - pp_stage1
   - s3
   - securepollglobal
   - small

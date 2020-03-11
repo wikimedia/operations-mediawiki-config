@@ -8,7 +8,6 @@ inheritsFrom:
   - cirrussearch-big-indices
   - flow
   - medium
-  - pp_stage1
   - rtl
   - s3
   - securepollglobal

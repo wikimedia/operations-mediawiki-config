@@ -1,7 +1,0 @@
-# WARNING: This file is publicly viewable on the Web. Do not put private data here.
-# This is the shared trait configuration file for wikis in the zeroth tranche of PagePreviews deployment in 2017.
-# All settings here apply to wikis with this trait, unless over-ridden.
-
-# FIXME: No longer used? Should be deleted.
-
-wikiTag: pp_stage0
