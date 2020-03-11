@@ -123,7 +123,7 @@ class CirrusTest extends WgConfTestCase {
 	private function loadCirrusConfig( $wmfRealm, $wgDBname, $dbSuffix ) {
 		$wmfConfigDir = __DIR__ . "/../wmf-config";
 		require __DIR__ . '/../private/PrivateSettings.php.example';
-		require __DIR__ . '/TestServices.php';
+		require __DIR__ . '/data/TestServices.php';
 		$wgConf = $this->loadWgConf( $wmfRealm );
 
 		list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );

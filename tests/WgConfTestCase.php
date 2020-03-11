@@ -94,7 +94,7 @@ class WgConfTestCase extends PHPUnit\Framework\TestCase {
 			'wmfLocalServices' => null,
 			'wmfMasterServices' => null,
 		] );
-		require __DIR__ . '/TestServices.php';
+		require __DIR__ . '/data/TestServices.php';
 
 		require_once "{$wmfConfigDir}/InitialiseSettings.php";
 
