@@ -133,10 +133,10 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 	}
 
 	/**
-	 * Production code that is web-facing MUST NOT use dblists
-	 * that contain expressions because these have a significant performance cost.
+	 * Production code that is web-facing MUST NOT load unnecessary dblists.
+	 * Loading these from disk on every web request takes time.
 	 */
-	public function testNoExpressionListUsedInSettings() {
+	public function testNoUnusedDblistsLoaded() {
 		$unusedDblists = array_flip( DBList::getDblistsUsedInSettings() );
 
 		$prodSettings = wmfGetVariantSettings();
@@ -164,10 +164,10 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 	}
 
 	/**
-	 * Production code that is web-facing MUST NOT load unnecessary dblists.
-	 * Loading these from disk on every web request takes time.
+	 * Production code that is web-facing MUST NOT use dblists
+	 * that contain expressions because these have a significant performance cost.
 	 */
-	public function testNoUnusedDblistsLoaded() {
+	public function testNoExpressionListUsedInSettings() {
 		$dblists = DBList::getDblistsUsedInSettings();
 
 		$actual = [];
