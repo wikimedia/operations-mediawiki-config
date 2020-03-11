@@ -5,27 +5,25 @@
 
 class WmfConfigServicesTest extends PHPUnit\Framework\TestCase {
 
-	public static function provideServicesFiles() {
-		$wmfConfigDir = dirname( __DIR__ ) . '/wmf-config';
-
-		yield 'ProductionServices' => [
-			"$wmfConfigDir/ProductionServices.php",
-			[ 'eqiad', 'codfw' ],
-		];
-
-		yield 'LabsServices' => [
-			"$wmfConfigDir/LabsServices.php",
-			[ 'eqiad' ],
-		];
-	}
-
 	public static function getServicesFiles() {
 		$wmfConfigDir = dirname( __DIR__ ) . '/wmf-config';
 
 		return [
-			'production' => "$wmfConfigDir/ProductionServices.php",
-			'labs' => "$wmfConfigDir/LabsServices.php",
+			'production' => [
+				'file' => "$wmfConfigDir/ProductionServices.php",
+				'dcs' => [ 'eqiad', 'codfw' ],
+			],
+			'labs' => [
+				'file' => "$wmfConfigDir/LabsServices.php",
+				'dcs' => [ 'eqiad' ],
+			],
 		];
+	}
+
+	public static function provideServicesFiles() {
+		foreach ( self::getServicesFiles() as $label => $info ) {
+			yield $label => [ $info['file'], $info['dcs'] ];
+		}
 	}
 
 	/**
@@ -50,7 +48,7 @@ class WmfConfigServicesTest extends PHPUnit\Framework\TestCase {
 	 *
 	 * @dataProvider provideServicesFiles
 	 */
-	public function testIntraRealmCompatibility( $file ) {
+	public function testCrossDcCompatibility( $file ) {
 		$allSubkeys = [];
 
 		$realm = require $file;
@@ -91,8 +89,8 @@ class WmfConfigServicesTest extends PHPUnit\Framework\TestCase {
 	public function testCrossRealmCompatibility() {
 		$allSubkeys = [];
 		$realms = [];
-		foreach ( self::getServicesFiles() as $label => $file ) {
-			$realm = require $file;
+		foreach ( self::getServicesFiles() as $label => $info ) {
+			$realm = require $info['file'];
 			foreach ( $realm as $dc => $services ) {
 				$allSubkeys = array_merge(
 					$allSubkeys,
