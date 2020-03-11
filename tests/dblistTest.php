@@ -137,6 +137,37 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 	 * that contain expressions because these have a significant performance cost.
 	 */
 	public function testNoExpressionListUsedInSettings() {
+		$unusedDblists = array_flip( DBList::getDblistsUsedInSettings() );
+
+		$prodSettings = wmfGetVariantSettings();
+		$labsSettings = wmfApplyLabsOverrideSettings( $prodSettings );
+
+		foreach ( $prodSettings as $settingName => $settingsArray ) {
+			foreach ( $settingsArray as $wiki => $settingValue ) {
+				if ( $wiki[0] === '+' || $wiki[0] === '-' ) {
+					$wiki = substr( $wiki, 1 );
+				}
+				// If it's a dblist name, unset it if not already unset.
+				// If it's a wiki or 'default', it will have never been set
+				// here but that's fine.
+				unset( $unusedDblists[ $wiki ] );
+			}
+		}
+
+		// The diff will report dblist names that are unused,
+		// and also mention the array offset in MWConfigCacheGenerator::$dbLists.
+		$this->assertEquals(
+			[],
+			$unusedDblists,
+			'Dblist files loaded by all web requests but not used'
+		);
+	}
+
+	/**
+	 * Production code that is web-facing MUST NOT load unnecessary dblists.
+	 * Loading these from disk on every web request takes time.
+	 */
+	public function testNoUnusedDblistsLoaded() {
 		$dblists = DBList::getDblistsUsedInSettings();
 
 		$actual = [];
