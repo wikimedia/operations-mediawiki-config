@@ -12,6 +12,5 @@ inheritsFrom:
   - large
   - s7
   - securepollglobal
-  - top6-wikipedia
   - wikidataclient
   - wikipedia-english

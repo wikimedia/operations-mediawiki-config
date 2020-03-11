@@ -15,6 +15,5 @@ inheritsFrom:
   - large
   - s6
   - securepollglobal
-  - top6-wikipedia
   - wikidataclient
   - wikipedia-cyrillic
