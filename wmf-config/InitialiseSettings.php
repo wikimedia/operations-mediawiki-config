@@ -27598,14 +27598,14 @@ function wmfGetVariantSettings() {
 		[
 			'class' => 'MediaWiki\\Extension\\WikimediaEditorTasks\\WikipediaAppDescriptionEditCounter',
 			'counter_key' => 'app_description_edits',
+			'target_counts' => [ 3, 50 ],
+			'delay' => 86400,
 		],
 		[
 			'class' => 'MediaWiki\\Extension\\WikimediaEditorTasks\\WikipediaAppCaptionEditCounter',
 			'counter_key' => 'app_caption_edits',
-		],
-		[
-			'class' => 'MediaWiki\\Extension\\WikimediaEditorTasks\\WikipediaAppImageDepictsEditCounter',
-			'counter_key' => 'app_depicts_edits',
+			'target_counts' => [ 3, 15 ],
+			'delay' => 0,
 		],
 	],
 ],
