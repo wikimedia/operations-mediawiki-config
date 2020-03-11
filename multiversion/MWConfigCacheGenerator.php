@@ -41,16 +41,11 @@ class MWConfigCacheGenerator {
 		'nonbetafeatures',
 		'group0',
 		'group1',
-		'group2',
 		'nonglobal',
 		'wikitech',
 		'nonecho',
 		'mobilemainpagelegacy',
 		'nowikidatadescriptiontaglines',
-		'top6-wikipedia',
-		'rtl',
-		'pp_stage0',
-		'pp_stage1',
 		'cirrussearch-big-indices',
 	];
 
