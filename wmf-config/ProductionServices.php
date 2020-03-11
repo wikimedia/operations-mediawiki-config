@@ -43,7 +43,6 @@ $common = [
 
 	// Automatic dc-local discovery
 	'parsoid' => 'http://localhost:6002/w/rest.php',
-	'parsoidphp' => 'http://localhost:6002/w/rest.php',
 	'mathoid' => 'http://localhost:6003',
 	'eventgate-analytics' => 'http://localhost:6004',
 	'eventgate-main' => 'http://localhost:6005',

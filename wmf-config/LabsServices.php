@@ -36,7 +36,6 @@ return [
 		'cloudelastic-omega' => null,
 		'urldownloader' => 'http://deployment-urldownloader02.deployment-prep.eqiad.wmflabs:8080',
 		'parsoid' => 'http://deployment-parsoid11.deployment-prep.eqiad.wmflabs/w/rest.php',
-		'parsoidphp' => 'http://deployment-parsoid11.deployment-prep.eqiad.wmflabs/w/rest.php',
 		'mathoid' => 'http://deployment-docker-mathoid01.eqiad.wmflabs:10044',
 		'eventlogging' => 'udp://deployment-eventlogging03.eqiad.wmflabs:8421',
 		'eventgate-analytics' => 'http://deployment-eventgate-3.deployment-prep.eqiad.wmflabs:8192',
