@@ -821,7 +821,7 @@ function wmfGetLabsOverrideSettings() {
 
 		'wgLinterSubmitterWhitelist' => [
 			'default' => [
-				'172.16.5.63' => true // deployment-parsoid09.deployment-prep.eqiad.wmflabs
+				'172.16.1.115' => true, // deployment-parsoid11.deployment-prep.eqiad.wmflabs
 			]
 		],
 		'wgLinterStatsdSampleFactor' => [
