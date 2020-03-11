@@ -42,7 +42,7 @@ $common = [
 	'irc' => '208.80.153.44', # kraz.codfw.wmnet
 
 	// Automatic dc-local discovery
-	'parsoid' => 'http://localhost:6001',
+	'parsoid' => 'http://localhost:6002/w/rest.php',
 	'parsoidphp' => 'http://localhost:6002/w/rest.php',
 	'mathoid' => 'http://localhost:6003',
 	'eventgate-analytics' => 'http://localhost:6004',
