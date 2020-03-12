@@ -85,15 +85,7 @@ class MWWikiversions {
 		foreach ( $lines as $line ) {
 			// Ignore empty lines and lines that are comments
 			if ( $line !== '' && $line[0] !== '#' ) {
-				if ( $line[0] === '%' ) {
-					if ( $dbs !== [] ) {
-						throw new Exception( __METHOD__ . ": Encountered dblist expression in non-empty dblist file." );
-					}
-					$dbs = self::evalDbListExpression( $line );
-					break;
-				} else {
-					$dbs[] = $line;
-				}
+				$dbs[] = $line;
 			}
 		}
 		return $dbs;

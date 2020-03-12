@@ -178,10 +178,6 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 			}
 		}
 
-		// FIXME: This should not be used in wmf-config, or be pre-computed.
-		$grandgathered = [ 'group1' ];
-		$actual = array_diff( $actual, $grandgathered );
-
 		$this->assertEquals(
 			[],
 			$actual,
@@ -195,10 +191,6 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 	public function testListsAreSorted() {
 		$lists = DBList::getLists();
 		foreach ( $lists as $listname => $dbnames ) {
-			if ( strpos( $listname, 'computed' ) !== false ) {
-				continue;
-			}
-
 			$origdbnames = $dbnames;
 			sort( $dbnames );
 
