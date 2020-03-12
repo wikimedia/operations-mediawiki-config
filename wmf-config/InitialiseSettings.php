@@ -27749,7 +27749,8 @@ function wmfGetVariantSettings() {
 	],
 	'wikidatawiki' => [
 		30000000 => MIGRATION_WRITE_NEW, // Reads from new store, still writes to both
-		'max' => MIGRATION_WRITE_BOTH, // Reads from old store, still writes to both
+		87500000 => MIGRATION_WRITE_BOTH, // Reads from old store, still writes to both
+		'max' => MIGRATION_OLD, // Reads from old store, only writes to old store
 	],
 ],
 
