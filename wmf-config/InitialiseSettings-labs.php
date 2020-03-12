@@ -1776,6 +1776,10 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true,
 		],
 
+		'wgDiscussionToolsBeta' => [
+			'default' => true,
+		],
+
 		'wgWatchlistExpiry' => [
 			'default' => true,
 		],
