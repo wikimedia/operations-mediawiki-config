@@ -1843,8 +1843,12 @@ function wmfGetLabsOverrideSettings() {
 			'nlwiki' => true,
 		],
 
-		'wgDiscussionToolsEnable' => [
+		'-wgDiscussionToolsEnable' => [
 			'default' => true,
+		],
+
+		'-wgDiscussionToolsBeta' => [
+			'default' => false,
 		],
 
 		'wgWatchlistExpiry' => [

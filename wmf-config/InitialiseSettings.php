@@ -16249,6 +16249,7 @@ function wmfGetVariantSettings() {
 		'visualeditor-visualdiffpage',       // [Editing] 2019-11-06 – Visual diffs
 		'fileexporter',                      // [WMDE TW] 2018-12-07 – FileExporter
 		'tmh-videojs',                       // [Readers] 2019-12-12 - New video player
+		'discussiontools-betaenable',        // [Editing] 2020-09-12 – Reply tool
 	],
 ],
 
@@ -20341,6 +20342,18 @@ function wmfGetVariantSettings() {
 
 'wgDiscussionToolsEnable' => [
 	'default' => false,
+	'arwiki' => true,
+	'frwiki' => true,
+	'huwiki' => true,
+	'nlwiki' => true,
+],
+
+'wgDiscussionToolsBeta' => [
+	'default' => false,
+	'arwiki' => true,
+	'frwiki' => true,
+	'huwiki' => true,
+	'nlwiki' => true,
 ],
 
 'wmgUseCodeEditorForCore' => [
