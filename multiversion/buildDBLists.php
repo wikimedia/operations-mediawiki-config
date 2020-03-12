@@ -1,5 +1,7 @@
 <?php
 
+use Wikimedia\MWConfig\MWConfigCacheGenerator;
+
 require_once __DIR__ . '/MWWikiversions.php';
 require_once __DIR__ . '/MWConfigCacheGenerator.php';
 require_once __DIR__ . '/../vendor/autoload.php';
@@ -12,43 +14,31 @@ $wmfDatacenter = 'eqiad';
 
 $config = wmfGetVariantSettings();
 
-$created = [];
+$prodWikis = MWWikiversions::readDbListFile( 'all' );
+$labsOnlyWikis = array_diff( MWWikiversions::readDbListFile( 'all-labs' ), $prodWikis );
+$knownDBLists = [];
 
-foreach ( [ 'production', 'labs' ] as $realm ) {
-	$wikiversionsFile = ( $realm === 'labs' ) ? 'wikiversions-labs.json' : 'wikiversions.json';
-	$wikiversions = MWWikiversions::readWikiVersionsFile( $wikiversionsFile );
+foreach ( $prodWikis as $wgDBname ) {
+	$fullConfig = MWConfigCacheGenerator::getCachableMWConfig( $wgDBname, $config, 'production' );
+	foreach ( $fullConfig['wikiTag'] ?? [] as $tag ) {
+		$knownDBLists[$tag][] = $wgDBname;
+	}
+}
 
-	$knownDBLists = [];
-
-	foreach ( $wikiversions as $wgDBname => $wmgVersionNumber ) {
-		$fullConfig = Wikimedia\MWConfig\MWConfigCacheGenerator::getCachableMWConfig(
-			$wgDBname, $config, $realm
-		);
-
-		$localTags = $fullConfig['wikiTag'] ?? [];
-
-		if ( $localTags ) {
-			foreach ( $localTags as $tag ) {
-				$knownDBLists[$tag][] = $wgDBname;
-			}
+// There is only one set of dblists for all realms combined.
+// This means it is important that a labs-only wiki never be included in
+// production dblists like "all", "closed", "fishbowl", "echo", etc.
+//
+// This caveat is validated by DblistTest::testDblistAllContainsEverything().
+//
+$labsOnlyTags = [ 'all-labs', 'flow_only_labs', 'flow-labs' ];
+foreach ( $labsOnlyWikis as $wgDBname ) {
+	$fullConfig = MWConfigCacheGenerator::getCachableMWConfig( $wgDBname, $config, 'labs' );
+	foreach ( $fullConfig['wikiTag'] ?? [] as $tag ) {
+		// HACK: Only write the Beta Cluster-only dblists with the Labs-specific details.
+		if ( in_array( $tag, $labsOnlyTags ) ) {
+			$knownDBLists[$tag][] = $wgDBname;
 		}
-	}
-
-	// HACK: Only write the Beta Cluster-only dblists with the Labs-specific details.
-	if ( $realm === 'labs' ) {
-		$knownDBLists = array_filter(
-			$knownDBLists,
-			function ( $key ) {
-				// HACK: We shouldn't have to hard-code the lists that affect the Beta Cluster like this.
-				return in_array( $key, [ 'all-labs', 'flow_only_labs', 'flow-labs' ] );
-			},
-			ARRAY_FILTER_USE_KEY
-		);
-	}
-
-	foreach ( $knownDBLists as $DBList => $contents ) {
-		writeDBList( $DBList, $contents );
-		$created[$DBList] = true;
 	}
 }
 
@@ -61,13 +51,16 @@ $untracked = [
 	'group1',
 	'group2',
 ];
-
-// Don't linger dblists that are no longer backed by the YAML source
+// Don't let any dblists linger if they are no longer backed by the YAML source
 foreach ( glob( __DIR__ . '/../dblists/*.dblist' ) as $filepath ) {
 	$dblist = basename( $filepath, '.dblist' );
-	if ( !isset( $created[ $dblist ] ) && !in_array( $dblist, $untracked ) ) {
+	if ( !in_array( $dblist, $untracked ) ) {
 		unlink( $filepath );
 	}
+}
+
+foreach ( $knownDBLists as $DBList => $contents ) {
+	writeDBList( $DBList, $contents );
 }
 
 /**
