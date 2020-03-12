@@ -1217,6 +1217,7 @@ function wmfGetLabsOverrideSettings() {
 			'enwiki' => 'ores',
 			'arwiki' => 'ores',
 			'cswiki' => 'ores',
+			'kowiki' => 'ores',
 			'viwiki' => 'ores',
 		],
 		'wgGENewcomerTasksGuidanceEnabled' => [

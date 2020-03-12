@@ -27486,7 +27486,6 @@ function wmfGetVariantSettings() {
 
 'wgGENewcomerTasksTopicType' => [
 	'default' => 'ores',
-	'kowiki' => 'morelike',
 ],
 
 'wgGENewcomerTasksRemoteApiUrl' => [
