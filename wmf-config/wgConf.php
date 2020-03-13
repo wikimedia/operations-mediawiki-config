@@ -20,6 +20,4 @@ $wgConf->suffixes = MWMultiVersion::SUFFIXES;
 $dbList = $wmfRealm === 'labs' ? 'all-labs' : 'all';
 $wgConf->wikis = MWWikiversions::readDbListFile( $dbList );
 
-$wgConf->fullLoadCallback = 'wmfLoadInitialiseSettings';
-
 $wgLocalDatabases =& $wgConf->getLocalDatabases();
