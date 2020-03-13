@@ -22,4 +22,4 @@ $wgConf->wikis = MWWikiversions::readDbListFile( $dbList );
 
 $wgConf->fullLoadCallback = 'wmfLoadInitialiseSettings';
 
-$wgLocalDatabases =& $wgConf->getLocalDatabases();
+$wgLocalDatabases = $wgConf->getLocalDatabases();
