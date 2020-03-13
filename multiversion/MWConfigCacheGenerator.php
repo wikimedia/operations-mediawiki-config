@@ -17,8 +17,8 @@ class MWConfigCacheGenerator {
 	# Expand computed dblists with ./multiversion/bin/expanddblist
 
 	// Note that most wiki families are available as tags for free without
-	// needing a dblist to be maintained and read from disk, because
-	// their dbname suffix (as mapped in wgConf.php) already makes them
+	// needing a dblist to be maintained and read from disk, because their
+	// dbname suffix (as mapped in MWMultiVersion::SUFFIXES) already makes them
 	// available as tag for InitialiseSettings.php.
 	public static $dbLists = [
 		'wikipedia',

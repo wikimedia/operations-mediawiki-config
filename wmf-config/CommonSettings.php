@@ -23,7 +23,6 @@
 #   `-- wmf-config/CommonSettings.php [THIS FILE]
 #       |-- wmf-config/*Services.php
 #       |-- wmf-config/etcd.php
-#       |-- wmf-config/wgConf.php
 #       |-- wmf-config/InitialiseSettings.php
 #       |-- private/PrivateSettings.php
 #       |-- wmf-config/logging.php
@@ -144,8 +143,10 @@ if ( $wgDBname === 'testwiki' || $wgDBname === 'test2wiki' ) {
 	$wgDebugLogFile = '/dev/null';
 }
 
-# Initialise wgConf
-require "$wmfConfigDir/wgConf.php";
+$wgConf = new SiteConfiguration;
+$wgConf->suffixes = MWMultiVersion::SUFFIXES;
+$wgConf->wikis = MWWikiversions::readDbListFile( $wmfRealm === 'labs' ? 'all-labs' : 'all' );
+$wgConf->fullLoadCallback = 'wmfLoadInitialiseSettings';
 
 /**
  * @param SiteConfiguration $conf
