@@ -164,6 +164,8 @@ function wmfLoadInitialiseSettings( $conf ) {
 	$conf->settings = $settings;
 }
 
+$wgLocalDatabases = $wgConf->getLocalDatabases();
+
 // Do not add wikimedia.org, because of other sites under that domain (such as codereview-proxy.wikimedia.org)
 $wgLocalVirtualHosts = [
 	'wikipedia.org',
@@ -182,7 +184,6 @@ $wgLocalVirtualHosts = [
 ];
 
 # Is this database listed in dblist?
-# Note: $wgLocalDatabases set in wgConf.php.
 # Note: must be done before calling $multiVersion functions other than getDatabase().
 if ( array_search( $wgDBname, $wgLocalDatabases ) === false ) {
 	# No? Load missing.php
