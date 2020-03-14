@@ -14000,6 +14000,8 @@ function wmfGetVariantSettings() {
 			'abusefilter-modify' => true, // T40690
 			'apihighlimits' => true, // T40690
 			'editinterface' => true, // T40690
+			'editprotected' => true, // T247672
+			'editsemiprotected' => true, // T247672
 			'editsitejson' => true,
 			'noratelimit' => true, // T40690
 		],
