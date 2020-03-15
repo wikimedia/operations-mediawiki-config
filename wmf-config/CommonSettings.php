@@ -53,16 +53,22 @@ if ( PHP_SAPI !== 'cli' ) {
 # ----------------------------------------------------------------------
 # Initialisation
 
-# Load classes required by configuration files
 require_once __DIR__ . '/../src/XWikimediaDebug.php';
 require_once __DIR__ . '/../src/ServiceConfig.php';
 
-# Get the version object for this Wiki (must be set by now, along with $IP)
-if ( !class_exists( 'MWMultiVersion' ) ) {
+// - This file must be included by MediaWiki via our LocalSettings.php file.
+//   Determined by MediaWiki core having initialised the $IP variable.
+// - MediaWiki must be included via a multiversion-aware entry point
+//   (e.g. WMF's "w/index.php", or MWScript).
+//   That entry point must have initialised the MWMultiVersion singleton and
+//   decided which wiki we are on (based on hostname or --wiki CLI arg).
+//   Note that getInstance does not (and may not) lazy-create this instance,
+//   it returns null if it hasn't been setup yet.
+$multiVersion = class_exists( 'MWMultiVersion' ) ? MWMultiVersion::getInstance() : null;
+if ( !isset( $IP ) || !$multiVersion ) {
 	print "No MWMultiVersion instance initialized! MWScript.php wrapper not used?\n";
 	exit( 1 );
 }
-$multiVersion = MWMultiVersion::getInstance();
 
 $includePaths = [ $IP, '/usr/local/lib/php', '/usr/share/php' ];
 if ( is_readable( "$IP/vendor/composer/include_paths.php" ) ) {
