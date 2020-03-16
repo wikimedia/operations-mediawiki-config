@@ -1764,6 +1764,20 @@ function wmfGetLabsOverrideSettings() {
 				'wikidata.beta.wmflabs.org',
 				'*.wikivoyage.beta.wmflabs.org',
 				'*.mediawiki.beta.wmflabs.org',
+
+				// Prod domains, to allow easier gadget testing
+				'*.wikimedia.org',
+				'*.wikipedia.org',
+				'*.wikinews.org',
+				'*.wiktionary.org',
+				'*.wikibooks.org',
+				'*.wikiversity.org',
+				'*.wikisource.org',
+				'wikisource.org',
+				'*.wikiquote.org',
+				'*.wikidata.org',
+				'*.wikivoyage.org',
+				'*.mediawiki.org',
 			],
 		],
 
