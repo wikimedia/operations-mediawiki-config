@@ -1741,7 +1741,7 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true,
 		],
 
-		'wmgUseCSPReportOnly' => [
+		'wmgUseCSP' => [
 			'default' => true,
 		],
 

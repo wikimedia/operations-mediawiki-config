@@ -3909,7 +3909,7 @@ if ( PHP_SAPI === 'cli' ) {
 	wfLoadExtension( 'ActiveAbstract' );
 }
 
-if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession ) {
+if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession || $wmgUseCSP ) {
 	// Temporary global whitelist for origins used by trusted
 	// opt-in scripts, until a per-user ability for this exists.
 	// T207900#4846582
@@ -3920,8 +3920,8 @@ if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession ) {
 
 	$wgExtensionFunctions[] = function () {
 		global $wgCSPReportOnlyHeader, $wmgUseCSPReportOnly, $wgCommandLineMode,
-			$wmgApprovedContentSecurityPolicyDomains;
-		if ( !$wmgUseCSPReportOnly ) {
+			$wmgApprovedContentSecurityPolicyDomains, $wmgUseCSP, $wgCSPHeader;
+		if ( !$wmgUseCSPReportOnly && !$wmgUseCSP ) {
 			// This means that $wmgUseCSPReportOnlyHasSession
 			// is set, so only logged in users should trigger this.
 			if (
@@ -3936,18 +3936,31 @@ if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession ) {
 			}
 		}
 
-		$wgCSPReportOnlyHeader['useNonces'] = false;
-		$wgCSPReportOnlyHeader['includeCORS'] = false;
+		if ( $wmgUseCSPReportOnly ) {
+			$wgCSPReportOnlyHeader['useNonces'] = false;
+			$wgCSPReportOnlyHeader['includeCORS'] = false;
+			$wgCSPReportOnlyHeader['default-src'] = array_merge(
+				$wmgApprovedContentSecurityPolicyDomains,
+				[
+					// Needed for Math. Remove when/if math is fixed.
+					'wikimedia.org',
+				]
+			);
+			$wgCSPReportOnlyHeader['script-src'] = $wmgApprovedContentSecurityPolicyDomains;
+		}
 
-		$wgCSPReportOnlyHeader['default-src'] = array_merge(
-			$wmgApprovedContentSecurityPolicyDomains,
-			[
-				// Needed for Math. Remove when/if math is fixed.
-				'wikimedia.org',
-			]
-		);
-
-		$wgCSPReportOnlyHeader['script-src'] = $wmgApprovedContentSecurityPolicyDomains;
+		if ( $wmgUseCSP ) {
+			$wgCSPHeader['useNonces'] = false;
+			$wgCSPHeader['includeCORS'] = false;
+			$wgCSPHeader['default-src'] = array_merge(
+				$wmgApprovedContentSecurityPolicyDomains,
+				[
+					// Needed for Math. Remove when/if math is fixed.
+					'wikimedia.org',
+				]
+			);
+			$wgCSPHeader['script-src'] = $wmgApprovedContentSecurityPolicyDomains;
+		}
 	};
 }
 

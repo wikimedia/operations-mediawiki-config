@@ -27077,6 +27077,10 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
+'wmgUseCSP' => [
+	'default' => false,
+],
+
 // Domains that go in script-src and default-src for CSP. Not to be varied by wiki.
 // Note: Special case of wikimedia.org (no *) for math is defined in CommonSettings.php
 // Do not add any domains to this list without talking to Security first.
