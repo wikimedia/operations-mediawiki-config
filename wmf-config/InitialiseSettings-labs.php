@@ -1708,6 +1708,22 @@ function wmfGetLabsOverrideSettings() {
 		'wgWikimediaEditorTasksEnableRevertCounts' => [
 			'default' => true,
 		],
+		'wgWikimediaEditorTasksEnabledCounters' => [
+			'default' => [
+				[
+					'class' => 'MediaWiki\\Extension\\WikimediaEditorTasks\\WikipediaAppDescriptionEditCounter',
+					'counter_key' => 'app_description_edits',
+				],
+				[
+					'class' => 'MediaWiki\\Extension\\WikimediaEditorTasks\\WikipediaAppCaptionEditCounter',
+					'counter_key' => 'app_caption_edits',
+				],
+				[
+					'class' => 'MediaWiki\\Extension\\WikimediaEditorTasks\\WikipediaAppImageDepictsEditCounter',
+					'counter_key' => 'app_depicts_edits',
+				],
+			],
+		],
 		'wmgUseMachineVision' => [
 			'default' => false,
 			'commonswiki' => true,
