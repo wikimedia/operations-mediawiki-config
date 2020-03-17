@@ -344,6 +344,9 @@ if ( $wmgUseWikibaseClient ) {
 		if ( isset( $wmgWikibaseClientDataBridgeEditTags ) ) {
 			$wgWBClientSettings['dataBridgeEditTags'] = $wmgWikibaseClientDataBridgeEditTags;
 		}
+		if ( isset( $wmgWikibaseClientWellKnownReferencePropertyIds ) ) {
+			$wgWBClientSettings['wellKnownReferencePropertyIds'] = $wmgWikibaseClientWellKnownReferencePropertyIds;
+		}
 	}
 }
 

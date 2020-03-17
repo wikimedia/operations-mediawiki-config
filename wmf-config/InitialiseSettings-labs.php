@@ -1395,6 +1395,18 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true,
 		],
 
+		'wmgWikibaseClientWellKnownReferencePropertyIds' => [
+			'default' => [
+				'referenceUrl' => 'P709',
+				'title' => 'P160020',
+				'statedIn' => 'P764',
+				'author' => 'P253075',
+				'publisher' => 'P760',
+				'publicationDate' => 'P766',
+				'retrievedDate' => 'P761',
+			],
+		],
+
 		'wmgWikibaseClientDataBridgeHrefRegExp' => [
 			'default' => 'https://wikidata\.beta\.wmflabs\.org/wiki/((Q[1-9][0-9]*)).*#(P[1-9][0-9]*)',
 		],
