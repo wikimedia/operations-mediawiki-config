@@ -23160,6 +23160,11 @@ function wmfGetVariantSettings() {
 	'default' => [ 'build' => true, 'use' => true ],
 ],
 
+'wgCirrusSearchNearMatchWeight' => [
+	'default' => 2,
+	'commonswiki' => 10, // T245642
+],
+
 'wgCirrusSearchNamespaceWeights' => [
 	'default' => [],
 	'mediawikiwiki' => [ // T155142
