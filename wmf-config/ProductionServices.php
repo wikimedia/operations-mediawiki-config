@@ -45,8 +45,7 @@ $common = [
 	'parsoid' => 'http://localhost:6001',
 	'parsoidphp' => 'http://localhost:6002/w/rest.php',
 	'mathoid' => 'http://localhost:6003',
-	// Temporarily override going through envoy, see T247484
-	//'eventgate-analytics' => 'http://localhost:6004',
+	'eventgate-analytics' => 'http://localhost:6004',
 	'eventgate-main' => 'http://eventgate-main.discovery.wmnet:34192',
 	'cxserver' => 'http://cxserver.discovery.wmnet:8080',
 	'electron' => 'http://pdfrender.discovery.wmnet:5252',
@@ -81,8 +80,6 @@ $common = [
 
 $services = [
 	'eqiad' => $common + [
-		// Temporarily override going through envoy, see T247484
-		'eventgate-analytics' => 'http://eventgate-analytics.discovery.wmnet:35192',
 		// each DC has its own urldownloader for latency reasons
 		'urldownloader' => 'http://url-downloader.eqiad.wikimedia.org:8080',
 
@@ -126,9 +123,6 @@ $services = [
 		],
 	],
 	'codfw' => $common + [
-		// Temporarily override going through envoy, see T247484
-		'eventgate-analytics' => 'http://localhost:6004',
-
 		'urldownloader' => 'http://url-downloader.codfw.wikimedia.org:8080',
 
 		'upload' => 'ms-fe.svc.codfw.wmnet',
