@@ -27748,7 +27748,7 @@ function wmfGetVariantSettings() {
 		'max' => MIGRATION_WRITE_NEW, // Reads from new store, still writes to both
 	],
 	'testwikidatawiki' => [
-		'max' => MIGRATION_WRITE_NEW, // Reads from new store, still writes to both
+		'max' => MIGRATION_NEW, // Reads from new store, writes to new store
 	],
 	'wikidatawiki' => [
 		'max' => MIGRATION_WRITE_NEW, // Reads from new store, still writes to both
