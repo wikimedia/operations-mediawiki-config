@@ -681,8 +681,10 @@ function wmfGetLabsOverrideSettings() {
 
 		'wmgWikibaseTmpItemTermsMigrationStage' => [
 			'default' => [
-				253529 => MIGRATION_WRITE_NEW,
-				'max' => MIGRATION_WRITE_BOTH,
+				'max' => MIGRATION_NEW,
+			],
+			'wikidatawiki' => [
+				'max' => MIGRATION_NEW,
 			],
 		],
 
