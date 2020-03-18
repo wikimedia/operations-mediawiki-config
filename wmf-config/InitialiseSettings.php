@@ -27745,13 +27745,13 @@ function wmfGetVariantSettings() {
 ],
 'wmgWikibaseTmpItemTermsMigrationStage' => [
 	'default' => [
-		'max' => MIGRATION_WRITE_NEW, // Reads from new store, still writes to both
+		'max' => MIGRATION_NEW, // Reads from new store, writes to new store
 	],
 	'testwikidatawiki' => [
 		'max' => MIGRATION_NEW, // Reads from new store, writes to new store
 	],
 	'wikidatawiki' => [
-		'max' => MIGRATION_WRITE_NEW, // Reads from new store, still writes to both
+		'max' => MIGRATION_NEW, // Reads from new store, writes to new store
 	],
 ],
 
