@@ -6,10 +6,10 @@ body {
 	background-image: linear-gradient(#ffffff 2.5em, #f6f6f6 5em);
 
 	/* Vector: Layout */
-	padding-top: 2.5em; /* Like Vector div#mw-page-base */
+	padding-top: 2.5em; /* Like Vector #mw-page-base */
 	padding-right: 0;
 	padding-bottom: 0;
-	padding-left: 10em; /* Like Vector div#content */
+	padding-left: 10em; /* Like Vector .mw-body */
 
 	/* Vector: Larger base size #bodyContent resets */
 	font-size: 100%;
@@ -34,10 +34,10 @@ body {
 	width: 10em;
 	left: 0;
 }
-#panel div.portal {
+#panel .portal {
 	padding-bottom: 1.5em;
 }
-#panel div.portal h5 {
+#panel .portal h5 {
 	font-weight: normal;
 	color: #444444;
 	padding: 0.25em;
@@ -48,7 +48,7 @@ body {
 	border: none;
 	font-size: 0.75em;
 }
-#panel div.portal div.body {
+#panel .portal .body {
 	margin: 0;
 	padding-top: 0.5em;
 	margin-left: 1.25em;
@@ -56,14 +56,14 @@ body {
 	background-repeat: no-repeat;
 	background-position: top left;
 }
-#panel div.portal div.body ul {
+#panel .portal .body ul {
 	list-style: none;
 	list-style-image: none;
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
 }
-#panel div.portal div.body ul li {
+#panel .portal .body ul li {
 	line-height: 1.125em;
 	padding: 0;
 	padding-bottom: 0.5em;
@@ -71,10 +71,10 @@ body {
 	overflow: hidden;
 	font-size: 0.75em;
 }
-#panel div.portal div.body ul li a {
+#panel .portal .body ul li a {
 	color: #0645ad;
 }
-#panel div.portal div.body ul li a:visited {
+#panel .portal .body ul li a:visited {
 	color: #0b0080;
 }
 /* Footer */
