@@ -27998,6 +27998,11 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
+'wgRestAPIAdditionalRouteFiles' => [
+	'default' => [],
+	'testwiki' => [ 'includes/Rest/coreDevelopmentRoutes.json' ],
+],
+
 'wgWikidataOrgQueryServiceMaxLagFactor' => [
 	'default' => 60,
 ],

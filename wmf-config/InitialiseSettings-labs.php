@@ -1767,6 +1767,10 @@ function wmfGetLabsOverrideSettings() {
 			'wikidatawiki' => 'https://en.wikipedia.beta.wmflabs.org/api/rest_',
 		],
 
+		'wgRestAPIAdditionalRouteFiles' => [
+			'default' => [ 'includes/Rest/coreDevelopmentRoutes.json' ],
+		],
+
 		'wgAllowRequiringEmailForResets' => [
 			'default' => true,
 		],
