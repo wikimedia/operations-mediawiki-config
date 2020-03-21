@@ -890,10 +890,6 @@ $wgGrantPermissions['editprotected']['editextendedsemiprotected'] = true;
 $wgGrantPermissions['editprotected']['extendedconfirmed'] = true;
 $wgGrantPermissions['editprotected']['editautoreviewprotected'] = true;
 
-// Allow tboverride with editprotected, and tboverride-account with createaccount
-$wgGrantPermissions['editprotected']['tboverride'] = true;
-$wgGrantPermissions['createaccount']['tboverride-account'] = true;
-
 // Adding Flow's rights so that they are available for global groups/staff rights
 $wgAvailableRights[] = 'flow-create-board';
 $wgAvailableRights[] = 'flow-edit-post';
