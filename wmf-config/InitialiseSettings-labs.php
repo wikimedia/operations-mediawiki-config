@@ -1791,6 +1791,7 @@ function wmfGetLabsOverrideSettings() {
 				'*.wikiquote.beta.wmflabs.org',
 				// Unlike production, wikidata does not use www. on beta
 				'wikidata.beta.wmflabs.org',
+				'm.wikidata.beta.wmflabs.org',
 				'*.wikivoyage.beta.wmflabs.org',
 				'*.mediawiki.beta.wmflabs.org',
 
