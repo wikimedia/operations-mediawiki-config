@@ -3615,6 +3615,7 @@ if ( $wmgUseOATHAuth ) {
 
 	if ( $wmgOATHAuthDisableRight ) {
 		$wgGroupPermissions['*']['oathauth-enable'] = false;
+		$wgGroupPermissions['user']['oathauth-enable'] = false;
 		foreach ( $wmgPrivilegedGroups as $group ) {
 			if ( isset( $wgGroupPermissions[$group] ) ) {
 				$wgGroupPermissions[$group]['oathauth-enable'] = true;
