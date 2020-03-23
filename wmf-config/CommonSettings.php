@@ -890,6 +890,9 @@ $wgAvailableRights[] = 'unreviewedpages';
 $wgAvailableRights[] = 'validate';
 $wgGrantPermissions['editprotected']['movestable'] = true;
 
+// Enable GWToolset's right
+$wgAvailableRights[] = 'gwtoolset';
+
 // So that protection rights can be assigned to global groups
 $wgAvailableRights[] = 'templateeditor';
 $wgAvailableRights[] = 'editeditorprotected';
