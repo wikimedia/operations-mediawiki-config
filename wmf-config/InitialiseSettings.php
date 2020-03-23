@@ -18124,7 +18124,7 @@ function wmfGetVariantSettings() {
 		'*.eso.org',                        // T243423 - European Southern Observatory
 		'vzg-easydb.gbv.de',                // T243118
 		'ids.si.edu',                       // T246330 - Smithsonian
-		'supremecourt.gov'                  // T248146 - United States Supreme Court
+		'*.supremecourt.gov'                // T248146 - United States Supreme Court
 	],
 ],
 
