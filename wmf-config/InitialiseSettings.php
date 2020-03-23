@@ -12382,7 +12382,10 @@ function wmfGetVariantSettings() {
 	],
 	'+azwiki' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T196488
-		'patroller' => [ 'patrol' => true, 'autopatrol' => true ], // T196488, T244338
+		'patroller' => [
+			'patrol' => true,
+			'autopatrol' => true,
+		], // T196488, T244338
 		'rollbacker' => [ 'rollback' => true ], // T215200
 	],
 	'+azwikibooks' => [
@@ -12435,7 +12438,11 @@ function wmfGetVariantSettings() {
 	],
 	'+bgwiki' => [
 		'autopatrolled' => [ 'autopatrol' => true, ],
-		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'rollback' => true, ],
+		'patroller' => [
+			'patrol' => true,
+			'autopatrol' => true,
+			'rollback' => true,
+		],
 		'sysop' => [ 'autopatrol' => false, ],
 	],
 	'+brwikimedia' => [ // T65345
@@ -12443,8 +12450,14 @@ function wmfGetVariantSettings() {
 	],
 	'+bswiki' => [
 		'rollbacker' => [ 'rollback' => true ],
-		'flood' => [ 'bot' => true, 'autopatrol' => false, ], // T52425, T158662
-		'sysop' => [ 'autopatrol' => false, 'patrol' => false, ], // T158662
+		'flood' => [
+			'bot' => true,
+			'autopatrol' => false,
+		], // T52425, T158662
+		'sysop' => [
+			'autopatrol' => false,
+			'patrol' => false,
+		], // T158662
 	],
 	'+cawiki' => [
 		'autoconfirmed' => [ 'patrol' => true ],
@@ -12618,7 +12631,10 @@ function wmfGetVariantSettings() {
 			'move-rootuserpages' => true, // T236359
 		], // T134196, T145010
 		'translationadmin' => [ 'noratelimit' => true, ], // T155162
-		'templateeditor' => [ 'templateeditor' => true, 'tboverride' => true, ], // T227420
+		'templateeditor' => [
+			'templateeditor' => true,
+			'tboverride' => true,
+		], // T227420
 	],
 	'+testcommonswiki' => [
 		'user' => [
@@ -12632,7 +12648,10 @@ function wmfGetVariantSettings() {
 			'abusefilter-log-detail' => true,
 			'upload_by_url' => true,
 		],
-		'autopatrolled' => [ 'autopatrol' => true, 'upload_by_url' => true ], // T214003
+		'autopatrolled' => [
+			'autopatrol' => true,
+			'upload_by_url' => true,
+		], // T214003
 		'filemover' => [ 'movefile' => true ],
 		'image-reviewer' => [
 			'autopatrol' => true,
@@ -12644,11 +12663,18 @@ function wmfGetVariantSettings() {
 			'changetags' => true, // T134196
 			'upload_by_url' => true,
 		],
-		'bot' => [ 'changetags' => true, 'upload_by_url' => true, ], // T134196, T145010
+		'bot' => [
+			'changetags' => true,
+			'upload_by_url' => true,
+		], // T134196, T145010
 		'translationadmin' => [ 'noratelimit' => true, ], // T155162
 	],
 	'+dawiki' => [
-		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'rollback' => true, ],
+		'patroller' => [
+			'patrol' => true,
+			'autopatrol' => true,
+			'rollback' => true,
+		],
 		'autopatrolled' => [ 'autopatrol' => true, ],
 	],
 	'+dawiktionary' => [
@@ -12677,20 +12703,36 @@ function wmfGetVariantSettings() {
 		'autopatrolled' => [ 'autopatrol' => true, ], // T67495
 	],
 	'+dewiktionary' => [
-		'sysop' => [ 'importupload' => true, 'editeditorprotected' => true, 'editautoreviewprotected' => true, ], // T216885
-		'bot' => [ 'editeditorprotected' => true, 'editautoreviewprotected' => true, ], // T216885
-		'editor' => [ 'editeditorprotected' => true, 'editautoreviewprotected' => true, ], // T216885
+		'sysop' => [
+			'importupload' => true,
+			'editeditorprotected' => true,
+			'editautoreviewprotected' => true,
+		], // T216885
+		'bot' => [
+			'editeditorprotected' => true,
+			'editautoreviewprotected' => true,
+		], // T216885
+		'editor' => [
+			'editeditorprotected' => true,
+			'editautoreviewprotected' => true,
+		], // T216885
 		'autoreview' => [ 'editautoreviewprotected' => true, ] // T216885
 	],
 	'+donatewiki' => [
-		'user' => [ 'editinterface' => true, 'editsitejson' => true ],
+		'user' => [
+			'editinterface' => true,
+			'editsitejson' => true,
+		],
 		'flood' => [ 'bot' => true ],
 	],
 	'+dtywiki' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T176709
 	],
 	'+elwiktionary' => [
-		'interface-editor' => [ 'editinterface' => true, 'editsitejson' => true ],
+		'interface-editor' => [
+			'editinterface' => true,
+			'editsitejson' => true,
+		],
 		'autopatrolled' => [ 'autopatrol' => true ], // T30612
 	],
 	'+enwiki' => [
@@ -12714,7 +12756,11 @@ function wmfGetVariantSettings() {
 		],
 		'autoreviewer' => [ 'autopatrol' => true ],
 		'eventcoordinator' => [ 'noratelimit' => true ], // T193075
-		'researcher' => [ 'browsearchive' => true, 'deletedhistory' => true, 'apihighlimits' => true ],
+		'researcher' => [
+			'browsearchive' => true,
+			'deletedhistory' => true,
+			'apihighlimits' => true,
+		],
 		'filemover' => [ 'movefile' => true ], // T29927
 		'bot' => [
 			'ipblock-exempt' => true, // T30914
@@ -12722,10 +12768,27 @@ function wmfGetVariantSettings() {
 			'extendedconfirmed' => true, // T126607
 			'move-categorypages' => true, // T219261
 		],
-		'oversight' => [ 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-view-private' => true ], // T30465, T119446
-		'checkuser' => [ 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-view-private' => true ], // T30465, T119446
-		'bureaucrat' => [ 'move-subpages' => true, 'suppressredirect' => true, 'tboverride' => true, ],
-		'templateeditor' => [ 'templateeditor' => true, 'tboverride' => true, ], // T57432
+		'oversight' => [
+			'browsearchive' => true,
+			'deletedhistory' => true,
+			'deletedtext' => true,
+			'abusefilter-view-private' => true,
+		], // T30465, T119446
+		'checkuser' => [
+			'browsearchive' => true,
+			'deletedhistory' => true,
+			'deletedtext' => true,
+			'abusefilter-view-private' => true,
+		], // T30465, T119446
+		'bureaucrat' => [
+			'move-subpages' => true,
+			'suppressredirect' => true,
+			'tboverride' => true,
+		],
+		'templateeditor' => [
+			'templateeditor' => true,
+			'tboverride' => true,
+		], // T57432
 		'sysop' => [
 			'templateeditor' => true, // T57432
 			'changetags' => true, // T97013
@@ -12745,7 +12808,10 @@ function wmfGetVariantSettings() {
 	'+enwikibooks' => [
 		'editor' => [ 'autopatrol' => true ], // T172561
 		'flood' => [ 'bot' => true ],
-		'uploader' => [ 'upload' => true, 'reupload' => true ],
+		'uploader' => [
+			'upload' => true,
+			'reupload' => true,
+		],
 	],
 	'+enwikinews' => [
 		'flood' => [ 'bot' => true ],
@@ -12777,14 +12843,22 @@ function wmfGetVariantSettings() {
 	],
 	'+enwikivoyage' => [
 		'autopatrolled' => [ 'autopatrol' => true ],
-		'patroller' => [ 'patrol' => true, 'rollback' => true ],
+		'patroller' => [
+			'patrol' => true,
+			'rollback' => true,
+		],
 		'templateeditor' => [ 'templateeditor' => true, ], // T198056
 		'sysop' => [ 'templateeditor' => true ],
 	],
 	// T7033
 	'+enwiktionary' => [
 		'autopatrolled' => [ 'autopatrol' => true ],
-		'extendedmover' => [ 'move' => true, 'move-subpages' => true, 'suppressredirect' => true, 'tboverride' => true ], // T212662
+		'extendedmover' => [
+			'move' => true,
+			'move-subpages' => true,
+			'suppressredirect' => true,
+			'tboverride' => true,
+		], // T212662
 		'flood' => [ 'bot' => true ],
 		'patroller' => [ 'patrol' => true ],
 		'rollbacker' => [ 'rollback' => true ],
@@ -12807,28 +12881,46 @@ function wmfGetVariantSettings() {
 		'flood' => [ 'bot' => true ], // T50682
 	],
 	'+eswikibooks' => [
-		'*' => [ 'createpage' => false, 'createtalk' => false, ],
+		'*' => [
+			'createpage' => false,
+			'createtalk' => false,
+		],
 		'flood' => [ 'bot' => true ],
 		'rollbacker' => [ 'rollback' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ], // T93371
-		'patroller' => [ 'patrol' => true, 'autopatrol' => true, ], // T93371
+		'patroller' => [
+			'patrol' => true,
+			'autopatrol' => true,
+		], // T93371
 	],
 	'+eswikinews' => [
 		'bot' => [ 'editprotected' => true ],
-		'editprotected' => [ 'editprotected' => true, 'editsemiprotected' => true ],
+		'editprotected' => [
+			'editprotected' => true,
+			'editsemiprotected' => true,
+		],
 		'flood' => [ 'bot' => true ],
 	],
 	'+eswikiquote' => [ // T64911
 		'rollbacker' => [ 'rollback' => true, ],
 		'autopatrolled' => [ 'autopatrol' => true, ],
-		'patroller' => [ 'patrol' => true, 'autopatrol' => true, ],
+		'patroller' => [
+			'patrol' => true,
+			'autopatrol' => true,
+		],
 	],
 	'+eswikisource' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T69557
 	],
 	'+eswikivoyage' => [
-		'rollbacker' => [ 'rollback' => true, 'autopatrol' => true, ], // T46285, T49325
-		'patroller' => [ 'patrol' => true, 'autopatrol' => true, ], // T46285, T49325
+		'rollbacker' => [
+			'rollback' => true,
+			'autopatrol' => true,
+		], // T46285, T49325
+		'patroller' => [
+			'patrol' => true,
+			'autopatrol' => true,
+		], // T46285, T49325
 		'autopatrolled' => [ 'autopatrol' => true, ], // T57665
 	],
 	'+eswiktionary' => [
@@ -12837,7 +12929,10 @@ function wmfGetVariantSettings() {
 		'autopatrolled' => [ 'autopatrol' => true ],
 	],
 	'+etwiki' => [
-		'autopatrolled' => [ 'autopatrol' => true, 'editautopatrolprotected' => true ], // T150852
+		'autopatrolled' => [
+			'autopatrol' => true,
+			'editautopatrolprotected' => true,
+		], // T150852
 	],
 	'+euwiki' => [
 		'sysop' => [ 'flow-create-board' => true ], // T190500
@@ -12850,10 +12945,19 @@ function wmfGetVariantSettings() {
 			'extendedconfirmed' => true, // T241904
 			'ipblock-exempt' => true, // T241904
 		],
-		'patroller' => [ 'patrol' => true, 'move-categorypages' => true ], // T67728
+		'patroller' => [
+			'patrol' => true,
+			'move-categorypages' => true,
+		], // T67728
 		'rollbacker' => [ 'rollback' => true ], // T25233
-		'autopatrolled' => [ 'autopatrol' => true, 'move-categorypages' => true ], // T31007, T67728, T144699
-		'image-reviewer' => [ 'movefile' => true, 'delete' => true ], // T66532 and T73229
+		'autopatrolled' => [
+			'autopatrol' => true,
+			'move-categorypages' => true,
+		], // T31007, T67728, T144699
+		'image-reviewer' => [
+			'movefile' => true,
+			'delete' => true,
+		], // T66532 and T73229
 		'botadmin' => [
 			'block' => true,
 			'delete' => true,
@@ -12864,7 +12968,10 @@ function wmfGetVariantSettings() {
 			'undelete' => true,
 			'extendedconfirmed' => true,
 		], // T71411
-		'templateeditor' => [ 'editprotected' => true, 'tboverride' => true, ], // T74146
+		'templateeditor' => [
+			'editprotected' => true,
+			'tboverride' => true,
+		], // T74146
 		'eliminator' => [
 			'block' => true,
 			'delete' => true,
@@ -12924,18 +13031,34 @@ function wmfGetVariantSettings() {
 		'patroller' => [ 'patrol' => true ],
 		'rollbacker' => [ 'rollback' => true ],
 		// T21561:
-		'arbcom' => [ 'deletedhistory' => true, 'deletedtext' => true, 'undelete' => true ],
-		'editor' => [ 'patrol' => true, 'autopatrol' => true ], // T144817
-		'reviewer' => [ 'patrol' => true, 'autopatrol' => true ], // T144817
+		'arbcom' => [
+			'deletedhistory' => true,
+			'deletedtext' => true,
+			'undelete' => true,
+		],
+		'editor' => [
+			'patrol' => true,
+			'autopatrol' => true,
+		], // T144817
+		'reviewer' => [
+			'patrol' => true,
+			'autopatrol' => true,
+		], // T144817
 		'autoreview' => [ 'autopatrol' => true ], // T144817
 	],
 	'+foundationwiki' => [
-		'user' => [ 'editinterface' => true, 'editsitejson' => true ],
+		'user' => [
+			'editinterface' => true,
+			'editsitejson' => true,
+		],
 		'flood' => [ 'bot' => true ],
 	],
 	'+frwiki' => [
 		'user' => [ 'changetags' => false ], // requested by hashar, T98629
-		'bot' => [ 'changetags' => true, 'editextendedsemiprotected' => true ], // T98629, T131109
+		'bot' => [
+			'changetags' => true,
+			'editextendedsemiprotected' => true,
+		], // T98629, T131109
 		'autopatrolled' => [
 			'patrol' => true, // T10904
 			'autopatrol' => true, // T23078
@@ -12944,15 +13067,25 @@ function wmfGetVariantSettings() {
 			'editextendedsemiprotected' => true // T131109
 		],
 		'rollbacker' => [ 'rollback' => true ], // T170780
-		'checkuser' => [ 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true ], // T23044
+		'checkuser' => [
+			'browsearchive' => true,
+			'deletedhistory' => true,
+			'deletedtext' => true,
+		], // T23044
 		'sysop' => [ 'editextendedsemiprotected' => true ], // T131109
 	],
 	'+frwikibooks' => [
-		'patroller' => [ 'patrol' => true, 'autopatrol' => true ],
+		'patroller' => [
+			'patrol' => true,
+			'autopatrol' => true,
+		],
 	],
 	'+frwikinews' => [
 		'flood' => [ 'bot' => true ],
-		'trusteduser' => [ 'autoreview' => true, 'unreviewedpages' => true, ], // T90979
+		'trusteduser' => [
+			'autoreview' => true,
+			'unreviewedpages' => true,
+		], // T90979
 		'facilitator' => [ // T90979
 			'autoreview' => true,
 			'review' => true,
@@ -12962,17 +13095,31 @@ function wmfGetVariantSettings() {
 		],
 	],
 	'frwikisource' => [
-		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'rollback' => true, ],
+		'patroller' => [
+			'patrol' => true,
+			'autopatrol' => true,
+			'rollback' => true,
+		],
 		'autopatrolled' => [ 'autopatrol' => true ],
 	],
 	'+frwikiversity' => [
-		'patroller' => [ 'patrol' => true, 'autopatrol' => true ],
+		'patroller' => [
+			'patrol' => true,
+			'autopatrol' => true,
+		],
 	],
 	'frwikivoyage' => [
-		'patroller' => [ 'patrol' => true, 'autopatrol' => true ],
+		'patroller' => [
+			'patrol' => true,
+			'autopatrol' => true,
+		],
 	],
 	'+frwiktionary' => [
-		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'rollback' => true, ],
+		'patroller' => [
+			'patrol' => true,
+			'autopatrol' => true,
+			'rollback' => true,
+		],
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'botadmin' => [
 			'apihighlimits' => true,
@@ -13011,7 +13158,10 @@ function wmfGetVariantSettings() {
 		'autopatrolled' => [ 'autopatrol' => true ],
 	],
 	'+hewiki' => [
-		'user' => [ 'upload' => true, 'move-rootuserpages' => false, ],
+		'user' => [
+			'upload' => true,
+			'move-rootuserpages' => false,
+		],
 		'sysop' => [ 'templateeditor' => true, ], // T102466
 		'patroller' => [
 			'patrol' => true,
@@ -13062,8 +13212,16 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'importupload' => true ], // T61601
 	],
 	'+hewiktionary' => [
-		'patroller'     => [ 'patrol' => true, 'autopatrol' => true, 'unwatchedpages' => true, 'rollback' => true, ], // T75197
-		'autopatrolled' => [ 'autopatrol' => true, 'unwatchedpages' => true, ], // T75197
+		'patroller' => [
+			'patrol' => true,
+			'autopatrol' => true,
+			'unwatchedpages' => true,
+			'rollback' => true,
+		], // T75197
+		'autopatrolled' => [
+			'autopatrol' => true,
+			'unwatchedpages' => true,
+		], // T75197
 	],
 	'+hewikinews' => [ // T140544
 		'autopatrolled' => [ 'autopatrol' => true ],
@@ -13078,26 +13236,51 @@ function wmfGetVariantSettings() {
 	'+hiwiki' => [
 		'rollbacker' => [ 'rollback' => true ], // T56589
 		'filemover' => [ 'movefile' => true ], // T56589
-		'reviewer' => [ 'patrol' => true, 'autopatrol' => true ],
-		'autopatrolled' => [ 'autopatrol' => true, 'move' => true ], // T164239
+		'reviewer' => [
+			'patrol' => true,
+			'autopatrol' => true,
+		],
+		'autopatrolled' => [
+			'autopatrol' => true,
+			'move' => true,
+		], // T164239
 		'sysop' => [ 'validate' => true ],
-		'templateeditor' => [ 'templateeditor' => true, 'editprotected' => true ], // T120342
+		'templateeditor' => [
+			'templateeditor' => true,
+			'editprotected' => true,
+		], // T120342
 		'autoconfirmed' => [ 'move' => false ] // T164239
 	],
 	'+hiwikiversity' => [
-		'autopatrolled' => [ 'autopatrol' => true, 'patrolmarks' => true ], // T179251, T192427
+		'autopatrolled' => [
+			'autopatrol' => true,
+			'patrolmarks' => true,
+		], // T179251, T192427
 	],
 	'+hrwiki' => [
-		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'rollback' => true ],
+		'patroller' => [
+			'patrol' => true,
+			'autopatrol' => true,
+			'rollback' => true,
+		],
 		'autopatrolled' => [ 'autopatrol' => true ],
 	],
 	'+huwiki' => [
 		'bot' => [ 'edittrustedprotected' => true ], // T194568
 		'trusted' => [ 'edittrustedprotected' => true ], // T194568
-		'editor' => [ 'noratelimit' => true, 'edittrustedprotected' => true ], // T194568
-		'sysop' => [ 'templateeditor' => true, 'edittrustedprotected' => true ], // T74055, T194568
+		'editor' => [
+			'noratelimit' => true,
+			'edittrustedprotected' => true,
+		], // T194568
+		'sysop' => [
+			'templateeditor' => true,
+			'edittrustedprotected' => true,
+		], // T74055, T194568
 		'templateeditor' => [ 'templateeditor' => true ], // T74055
-		'interface-editor' => [ 'editinterface' => true, 'editsitejson' => true ], // T109408
+		'interface-editor' => [
+			'editinterface' => true,
+			'editsitejson' => true,
+		], // T109408
 	],
 	'idwiki' => [
 		'*' => [ 'createpage' => false ],
@@ -13114,14 +13297,20 @@ function wmfGetVariantSettings() {
 			'blockemail' => true,
 			'rollback' => true,
 		],
-		'translator' => [ 'editinterface' => true, 'editsitejson' => true ],
+		'translator' => [
+			'editinterface' => true,
+			'editsitejson' => true,
+		],
 	],
 	// T7836
 	// T13326
 	'+itwiki' => [
 		'autoconfirmed' => [ 'patrol' => true, ],
 		'flood' => [ 'bot' => true, ],
-		'rollbacker' => [ 'rollback' => true, 'autopatrol' => true, ],
+		'rollbacker' => [
+			'rollback' => true,
+			'autopatrol' => true,
+		],
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'mover' => [ // T102770
 			'movefile' => true,
@@ -13157,19 +13346,30 @@ function wmfGetVariantSettings() {
 	'+itwikiversity' => [
 		'autoconfirmed' => [ 'patrol' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ], // T114930
-		'patroller' => [ 'autopatrol' => true, 'rollback' => true, 'suppressredirect' => true, 'markbotedit' => true, ], // T114930 and T207300
+		'patroller' => [
+			'autopatrol' => true,
+			'rollback' => true,
+			'suppressredirect' => true,
+			'markbotedit' => true,
+		], // T114930 and T207300
 		'flood' => [ 'bot' => true, ], // T114930
 	],
 	'itwikibooks' => [
 		'user' => [ 'patrol' => false ],
 		'autoconfirmed' => [ 'patrol' => true ],
 		'autopatrolled' => [ 'autopatrol' => true, ],
-		'patroller' => [ 'autopatrol' => true, 'rollback' => true, ],
+		'patroller' => [
+			'autopatrol' => true,
+			'rollback' => true,
+		],
 		'flood' => [ 'bot' => true, ], // T41569
 	],
 	'+itwikinews' => [
 		'autoconfirmed' => [ 'patrol' => true ],
-		'rollbacker' => [ 'rollback' => true, 'autopatrol' => true, ], // T142571
+		'rollbacker' => [
+			'rollback' => true,
+			'autopatrol' => true,
+		], // T142571
 		'autopatrolled' => [ 'autopatrol' => true ], // T142571
 	],
 	'itwikiquote' => [
@@ -13179,14 +13379,25 @@ function wmfGetVariantSettings() {
 	],
 	'+itwikivoyage' => [
 		'autopatrolled' => [ 'autopatrol' => true, ], // T45327, T45524
-		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'rollback' => true ], // T47638
+		'patroller' => [
+			'patrol' => true,
+			'autopatrol' => true,
+			'rollback' => true,
+		], // T47638
 	],
 	'+itwiktionary' => [
 		'autoconfirmed' => [ 'patrol' => true ],
-		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'rollback' => true ],
+		'patroller' => [
+			'patrol' => true,
+			'autopatrol' => true,
+			'rollback' => true,
+		],
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'import' => [ 'suppressredirect' => true, ],
-		'transwiki' => [ 'suppressredirect' => true, 'mergehistory' => true, ],
+		'transwiki' => [
+			'suppressredirect' => true,
+			'mergehistory' => true,
+		],
 		'flood' => [ 'bot' => true, ], // T41306
 	],
 	'+jawiki' => [
@@ -13224,7 +13435,10 @@ function wmfGetVariantSettings() {
 		],
 	],
 	'+jawiktionary' => [
-		'autopatrolled' => [ 'autopatrol' => true, 'patrol' => true ], // T63366
+		'autopatrolled' => [
+			'autopatrol' => true,
+			'patrol' => true,
+		], // T63366
 	],
 	'+kawiki' => [
 		'editor' => [ 'rollback' => true ],
@@ -13260,7 +13474,10 @@ function wmfGetVariantSettings() {
 		],
 	],
 	'wikitech' => [ // contentadmin is handled in CommonSettings, not here
-		'*' => [ 'edit' => false, 'createaccount' => true, ],
+		'*' => [
+			'edit' => false,
+			'createaccount' => true,
+		],
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'cloudadmin' => [
 			'autopatrol' => true,
@@ -13281,8 +13498,14 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'createaccount' => false ],
 	],
 	'+lvwiki' => [
-		'autopatrolled' => [ 'autopatrol' => true, 'editautopatrolprotected' => true ], // T72441
-		'patroller' => [ 'autopatrol' => true, 'patrol' => true ], // T72441
+		'autopatrolled' => [
+			'autopatrol' => true,
+			'editautopatrolprotected' => true,
+		], // T72441
+		'patroller' => [
+			'autopatrol' => true,
+			'patrol' => true,
+		], // T72441
 		'flood' => [ 'bot' => true ], // T121238
 	],
 	'+maiwiki' => [
@@ -13369,7 +13592,11 @@ function wmfGetVariantSettings() {
 	],
 	'+mkwiki' => [
 		'autopatrolled' => [ 'autopatrol' => true ],
-		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'rollback' => true ],
+		'patroller' => [
+			'patrol' => true,
+			'autopatrol' => true,
+			'rollback' => true,
+		],
 		'autoreviewed' => [ 'autoreview' => true ],
 	],
 	'+mlwiki' => [
@@ -13435,18 +13662,32 @@ function wmfGetVariantSettings() {
 	],
 	'+newiki' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T89816
-		'rollbacker' => [ 'rollback' => true, 'suppressredirect' => true ], // T90888 and T214012
+		'rollbacker' => [
+			'rollback' => true,
+			'suppressredirect' => true,
+		], // T90888 and T214012
 		'reviewer' => [ 'patrol' => true ], // T95101
 		'filemover' => [ 'movefile' => true ], // T95103
-		'templateeditor' => [ 'templateeditor' => true, 'editprotected' => true ], // T195557
+		'templateeditor' => [
+			'templateeditor' => true,
+			'editprotected' => true,
+		], // T195557
 		'flood' => [ 'bot' => true ], // T211181
 		'transwiki' => [ 'oathauth-enable' => true ], // T214036
 	],
 	'+nlwiki' => [
 		'autoconfirmed' => [ 'patrol' => true ],
 		'bot' => [ 'move-categorypages' => true ], // T161551
-		'checkuser' => [ 'deletedhistory' => true, 'deletedtext' => true, 'browsearchive' => true ],
-		'arbcom' => [ 'deletedhistory' => true, 'deletedtext' => true, 'browsearchive' => true ],
+		'checkuser' => [
+			'deletedhistory' => true,
+			'deletedtext' => true,
+			'browsearchive' => true,
+		],
+		'arbcom' => [
+			'deletedhistory' => true,
+			'deletedtext' => true,
+			'browsearchive' => true,
+		],
 		'rollbacker' => [ 'rollback' => true ],
 		'user' => [ 'move-categorypages' => false ], // T161551
 	],
@@ -13454,23 +13695,44 @@ function wmfGetVariantSettings() {
 		'user' => [ 'patrol' => true ],
 	],
 	'+nlwikivoyage' => [
-		'autopatrolled' => [ 'autopatrol' => true, 'patrol' => true, ], // T46082
+		'autopatrolled' => [
+			'autopatrol' => true,
+			'patrol' => true,
+		], // T46082
 	],
 	'+nlwikibooks' => [
 		'user' => [ 'patrol' => true ],
 	],
 	'+nnwiki' => [
 		'autopatrolled' => [ 'autopatrol' => true ],
-		'patroller' => [ 'autopatrol' => true, 'patrol' => true, 'rollback' => true ],
+		'patroller' => [
+			'autopatrol' => true,
+			'patrol' => true,
+			'rollback' => true,
+		],
 	],
 	'nowiki' => [
-		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'rollback' => true, 'unwatchedpages' => true, 'suppressredirect' => true, ],
-		'autopatrolled' => [ 'autopatrol' => true, 'unwatchedpages' => true ],
+		'patroller' => [
+			'patrol' => true,
+			'autopatrol' => true,
+			'rollback' => true,
+			'unwatchedpages' => true,
+			'suppressredirect' => true,
+		],
+		'autopatrolled' => [
+			'autopatrol' => true,
+			'unwatchedpages' => true,
+		],
 	],
 	'+nowikibooks' => [
 		'user' => [ 'patrol' => false ],
 		'autoconfirmed' => [ 'patrol' => false ],
-		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'rollback' => true, 'markbotedits' => true ],
+		'patroller' => [
+			'patrol' => true,
+			'autopatrol' => true,
+			'rollback' => true,
+			'markbotedits' => true,
+		],
 		'autopatrolled' => [ 'autopatrol' => true ],
 	],
 	'nowikimedia' => [
@@ -13483,7 +13745,10 @@ function wmfGetVariantSettings() {
 			'ipblock-exempt' => true, // T231943
 		],
 		'sysop' => [ 'importupload' => true, ], // T101663
-		'securepoll' => [ 'securepoll-create-poll' => true, 'editinterface' => true ],
+		'securepoll' => [
+			'securepoll-create-poll' => true,
+			'editinterface' => true,
+		],
 	],
 	'+sourceswiki' => [
 		'flood' => [ 'bot' => true ], // T193350
@@ -13523,18 +13788,28 @@ function wmfGetVariantSettings() {
 		'bot' => [ 'editor' => true ], // T48990
 	],
 	'+plwikiquote' => [
-		'patroller' => [ 'patrol' => true, 'autopatrol' => true, ], // T30479
+		'patroller' => [
+			'patrol' => true,
+			'autopatrol' => true,
+		], // T30479
 	],
 	'+plwikisource' => [
 		'*' => [ 'pagequality' => true, ], // T212478
-		'editor' => [ 'autopatrol' => true, 'patrol' => true, 'suppressredirect' => true ], // T72459, T212655
+		'editor' => [
+			'autopatrol' => true,
+			'patrol' => true,
+			'suppressredirect' => true,
+		], // T72459, T212655
 	],
 	'+plwiktionary' => [
 		'editor' => [ 'patrolmarks' => true ],
 	],
 	// T11024, T12362
 	'+ptwiki' => [
-		'autoconfirmed' => [ 'patrol' => true, 'abusefilter-log-detail' => true ],
+		'autoconfirmed' => [
+			'patrol' => true,
+			'abusefilter-log-detail' => true,
+		],
 		'bot' => [ 'editautoreviewprotected' => true, ],
 		'autoreviewer' => [
 			'autopatrol' => true,
@@ -13574,7 +13849,10 @@ function wmfGetVariantSettings() {
 		'flood' => [ 'bot' => true, ], // T228521
 	],
 	'+ptwikinews' => [
-		'editprotected' => [ 'editprotected' => true, 'editsemiprotected' => true ], // T162577
+		'editprotected' => [
+			'editprotected' => true,
+			'editsemiprotected' => true,
+		], // T162577
 	],
 	'+ptwikivoyage' => [
 		'autopatrolled' => [ 'autopatrol' => true, ], // T168981
@@ -13590,7 +13868,10 @@ function wmfGetVariantSettings() {
 			'rollback' => true, // T231099
 			'deleterevision' => true, // T234051
 		],
-		'autopatrolled' => [ 'autopatrol' => true, 'movefile' => true ], // T168192
+		'autopatrolled' => [
+			'autopatrol' => true,
+			'movefile' => true,
+		], // T168192
 		'templateeditor' => [ // T63172
 			'templateeditor' => true,
 			'editinterface' => true,
@@ -13672,11 +13953,19 @@ function wmfGetVariantSettings() {
 		'rollbacker' => [ 'rollback' => true ], // T201265
 	],
 	'+ruwikiquote' => [
-		'autoeditor' => [ 'autoreview' => true, 'autoconfirmed' => true, 'editsemiprotected' => true ],
+		'autoeditor' => [
+			'autoreview' => true,
+			'autoconfirmed' => true,
+			'editsemiprotected' => true,
+		],
 		'rollbacker' => [ 'rollback' => true ], // T200201
 	],
 	'+ruwikisource' => [
-		'autoeditor' => [ 'autoreview' => true, 'autoconfirmed' => true, 'editsemiprotected' => true ],
+		'autoeditor' => [
+			'autoreview' => true,
+			'autoconfirmed' => true,
+			'editsemiprotected' => true,
+		],
 		'rollbacker' => [ 'rollback' => true, 'suppressredirect' => true ],
 		'flood' => [ 'bot' => true ],
 	],
@@ -13714,7 +14003,10 @@ function wmfGetVariantSettings() {
 		'flood' => [ 'bot' => true ],
 		'rollbacker' => [ 'rollback' => true, ],
 		// T29875 (see comment 4)
-		'patroller' => [ 'patrol' => true, 'autopatrol' => true ],
+		'patroller' => [
+			'patrol' => true,
+			'autopatrol' => true,
+		],
 		'uploader' => [
 			'upload' => true,
 			'reupload' => true,
@@ -13723,13 +14015,25 @@ function wmfGetVariantSettings() {
 	],
 	'+simplewiktionary' => [
 		'rollbacker' => [ 'rollback' => true, ],
-		'autopatrolled' => [ 'patrol' => true, 'autopatrol' => true ],
+		'autopatrolled' => [
+			'patrol' => true,
+			'autopatrol' => true,
+		],
 	],
 	'shwiki' => [ // T52802
 		'patroller' => [ 'patrol' => true ],
-		'autopatrolled' => [ 'autopatrol' => true, 'patrolmarks' => true, ], // T62818
-		'rollbacker' => [ 'rollback' => true, 'markbotedits' => true, ], // T64462
-		'filemover' => [ 'movefile' => true, 'suppressredirect' => true, ],
+		'autopatrolled' => [
+			'autopatrol' => true,
+			'patrolmarks' => true,
+		], // T62818
+		'rollbacker' => [
+			'rollback' => true,
+			'markbotedits' => true,
+		], // T64462
+		'filemover' => [
+			'movefile' => true,
+			'suppressredirect' => true,
+		],
 		'flood' => [ 'bot' => true ],
 	],
 	'+shwiktionary' => [
@@ -13744,7 +14048,10 @@ function wmfGetVariantSettings() {
 	],
 	'+specieswiki' => [ // T89147
 		'autopatrolled' => [ 'autopatrol' => true ],
-		'patroller' => [ 'patrol' => true, 'autopatrol' => true, ],
+		'patroller' => [
+			'patrol' => true,
+			'autopatrol' => true,
+		],
 	],
 	'+srwiki' => [ // T208633, T210000 and T213050
 		'user' => [ 'move-categorypages' => false ],
@@ -13766,7 +14073,10 @@ function wmfGetVariantSettings() {
 			'suppressredirect' => true,
 			'move-categorypages' => true,
 		],
-		'flood' => [ 'bot' => true, 'move-categorypages' => true ],
+		'flood' => [
+			'bot' => true,
+			'move-categorypages' => true,
+		],
 		'bot' => [ 'move-categorypages' => true ],
 	],
 	'+srwikibooks' => [ // T209250, T213824, T213825, T213826, T213827
@@ -13886,7 +14196,10 @@ function wmfGetVariantSettings() {
 		'user' => [ 'move-rootuserpages' => false ], // T238842
 		'autopatrolled' => [ 'autopatrol' => true ], // T161210
 		'autoconfirmed' => [ 'patrol' => true ],
-		'rollbacker' => [ 'rollback' => true, 'autopatrol' => true ],
+		'rollbacker' => [
+			'rollback' => true,
+			'autopatrol' => true,
+		],
 	],
 	'+svwikisource' => [ // T30614 & 36895
 		'autopatrolled' => [
@@ -13909,11 +14222,18 @@ function wmfGetVariantSettings() {
 	],
 	'+tawiki' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T95180
-		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'abusefilter-log-detail' => true ], // T95180
+		'patroller' => [
+			'patrol' => true,
+			'autopatrol' => true,
+			'abusefilter-log-detail' => true,
+		], // T95180
 		'rollbacker' => [ 'rollback' => true ], // T95180
 	],
 	'testwiki' => [
-		'accountcreator' => [ 'override-antispoof' => true, 'tboverride' => true ],
+		'accountcreator' => [
+			'override-antispoof' => true,
+			'tboverride' => true,
+		],
 		'filemover' => [ 'movefile' => true ], // T32121
 		'user' => [
 			'upload_by_url' => true, // For testing of Flickr uploading via UploadWizard
@@ -13931,7 +14251,11 @@ function wmfGetVariantSettings() {
 			'securepoll-create-poll' => true,
 		],
 		'reviewer' => [ 'stablesettings' => true, ],
-		'researcher' => [ 'browsearchive' => true, 'deletedhistory' => true, 'apihighlimits' => true ],
+		'researcher' => [
+			'browsearchive' => true,
+			'deletedhistory' => true,
+			'apihighlimits' => true,
+		],
 		'rollbacker' => [ 'rollback' => true ],
 		'centralnoticeadmin' => [
 			'banner-protect' => true,
@@ -13994,7 +14318,10 @@ function wmfGetVariantSettings() {
 			'unreviewedpages' => true, // T40690
 			'movefile' => true, // T46587
 		],
-		'sysop' => [ 'review' => true, 'unreviewedpages' => true, ], // T40690
+		'sysop' => [
+			'review' => true,
+			'unreviewedpages' => true,
+		], // T40690
 		'interface-editor' => [ // Renamed from 'technician' per T144638
 			'abusefilter-log-detail' => true, // T40690
 			'abusefilter-modify' => true, // T40690
@@ -14014,17 +14341,29 @@ function wmfGetVariantSettings() {
 			'movefile' => true,
 		],
 		'autoreview' => [ 'autopatrol' => true ], // T122710
-		'checkuser' => [ 'deletedtext' => true, 'deletedhistory' => true, ], // T122710
+		'checkuser' => [
+			'deletedtext' => true,
+			'deletedhistory' => true,
+		], // T122710
 	],
 	'+ukwiki' => [
-		'patroller' => [ 'patrol' => true, 'autopatrol' => true, ],
+		'patroller' => [
+			'patrol' => true,
+			'autopatrol' => true,
+		],
 		'rollbacker' => [ 'rollback' => true ],
-		'filemover' => [ 'movefile' => true, 'suppressredirect' => true ], // T119636
+		'filemover' => [
+			'movefile' => true,
+			'suppressredirect' => true,
+		], // T119636
 	],
 	'+ukwikivoyage' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T56299
 		'rollbacker' => [ 'rollback' => true ],
-		'uploader' => [ 'upload' => true, 'reupload' => true ],
+		'uploader' => [
+			'upload' => true,
+			'reupload' => true,
+		],
 	],
 	'+ukwiktionary' => [
 		'autoeditor' => [ 'autoreview' => true ],
@@ -14040,9 +14379,15 @@ function wmfGetVariantSettings() {
 			'suppressredirect'  => true,
 			'deletedhistory' => true
 		], // T184607
-		'accountcreator' => [ 'tboverride-account' => true, 'override-antispoof' => true ], // T137888
+		'accountcreator' => [
+			'tboverride-account' => true,
+			'override-antispoof' => true,
+		], // T137888
 		'filemover' => [ 'movefile' => true ], // T137888
-		'interface-editor' => [ 'editinterface' => true, 'editsitejson' => true ], // T120348
+		'interface-editor' => [
+			'editinterface' => true,
+			'editsitejson' => true,
+		], // T120348
 		'rollbacker' => [ 'rollback' => true ], // T47642
 		'autopatrolled' => [ 'autopatrol' => true ], // T139302
 		'massmessage-sender' => [ 'massmessage' => true, ], // T144701
@@ -14098,12 +14443,21 @@ function wmfGetVariantSettings() {
 	],
 	// T74589 SecurePoll rights
 	'+votewiki' => [
-		'electcomm' => [ 'securepoll-create-poll' => true, 'editinterface' => true ],
-		'staffsupport' => [ 'securepoll-create-poll' => true, 'editinterface' => true ],
+		'electcomm' => [
+			'securepoll-create-poll' => true,
+			'editinterface' => true,
+		],
+		'staffsupport' => [
+			'securepoll-create-poll' => true,
+			'editinterface' => true,
+		],
 		'electionadmin' => [ 'editinterface' => true ],
 	],
 	'wikidata' => [
-		'autoconfirmed' => [ 'patrol' => true, 'autopatrol' => true, ], // T58203
+		'autoconfirmed' => [
+			'patrol' => true,
+			'autopatrol' => true,
+			], // T58203
 		'rollbacker' => [
 			'rollback' => true, // T47165
 			'autopatrol' => true, // T57495
@@ -14181,7 +14535,11 @@ function wmfGetVariantSettings() {
 		],
 	],
 	'+wuuwiki' => [
-		'rollbacker' => [ 'rollback' => true, 'autopatrol' => true, 'patrol' => true ], // T116270
+		'rollbacker' => [
+			'rollback' => true,
+			'autopatrol' => true,
+			'patrol' => true,
+		], // T116270
 	],
 	// due to mass vandalism complaint, 2006-04-11
 	'+zhwiki' => [
@@ -14199,7 +14557,10 @@ function wmfGetVariantSettings() {
 			'suppressredirect' => true, // T201160
 			'unwatchedpages' => true, // T219285
 		],
-		'autoreviewer' => [ 'autopatrol' => true, 'movefile' => true ], // T195247
+		'autoreviewer' => [
+			'autopatrol' => true,
+			'movefile' => true,
+		], // T195247
 		'flood' => [ 'bot' => true ],
 		'massmessage-sender' => [ 'massmessage' => true ], // T130814
 		'filemover' => [ 'movefile' => true ], // T195247
@@ -14237,7 +14598,11 @@ function wmfGetVariantSettings() {
 	],
 	'+zhwikivoyage' => [ // T62328
 		'autopatrolled' => [ 'autopatrol' => true ],
-		'patroller' => [ 'patrol' => true, 'rollback' => true, 'suppressredirect' => true ], // T212272
+		'patroller' => [
+			'patrol' => true,
+			'rollback' => true,
+			'suppressredirect' => true,
+		], // T212272
 	],
 	'+zhwiktionary' => [ // T7836
 		'bot' => [ 'patrol' => true ],
