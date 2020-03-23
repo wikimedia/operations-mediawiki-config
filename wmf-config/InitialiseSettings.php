@@ -23253,10 +23253,8 @@ function wmfGetVariantSettings() {
 // This is the publicly accessible endpoint for eventgate-logging-external.
 'wgWMEClientErrorIntakeURL' => [
 	'default' => false,
-	// Temporarily disable client side error logging for a deploy:
-	// https://phabricator.wikimedia.org/T226986#5986998
-	// 'group0' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
-	// 'hawwiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
+	'group0' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
+	'hawwiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
 ],
 
 'wmgUseWikimediaEvents' => [
