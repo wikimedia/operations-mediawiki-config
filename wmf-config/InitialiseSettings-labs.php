@@ -1827,5 +1827,14 @@ function wmfGetLabsOverrideSettings() {
 		'wgWatchlistExpiry' => [
 			'default' => true,
 		],
+
+		// Force the videojs player for all users and disable the beta feature
+		'-wmgTmhWebPlayer' => [
+			'default' => 'videojs',
+		],
+		'-wgTmhUseBetaFeatures' => [
+			'default' => false,
+		],
+
 	];
 } # wmflLabsSettings()
