@@ -936,6 +936,10 @@ $wgAvailableRights[] = 'newsletter-delete';
 $wgAvailableRights[] = 'newsletter-manage';
 $wgAvailableRights[] = 'newsletter-restore';
 
+// Extension:CheckUser's investigate right is only conditionally available, needs to be usable
+// by global groups (T247645)
+$wgAvailableRights[] = 'investigate';
+
 // Enable a "viewdeletedfile" userright for [[m:Global deleted image review]] (T16801)
 $wgAvailableRights[] = 'viewdeletedfile';
 $wgHooks['TitleQuickPermissions'][] = function ( Title $title, User $user, $action, &$errors, $doExpensiveQueries, $short ) {
