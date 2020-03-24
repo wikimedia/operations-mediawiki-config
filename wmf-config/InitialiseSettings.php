@@ -25618,25 +25618,26 @@ function wmfGetVariantSettings() {
 // Most wikis are fine with 0-2 replicas for all indexes
 // some of the larger ones will want more replicas for content indexes
 'wgCirrusSearchReplicas' => [
+	// NOTE: cloudelastic is intentionally set to an "unsafe" mode with 1 replica (see T231517)
 	'default' => [
 		'eqiad' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'archive' => '0-2' ],
 		'codfw' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'archive' => '0-2' ],
-		'cloudelastic' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'archive' => '0-2' ],
+		'cloudelastic' => [ 'content' => '0-1', 'general' => '0-1', 'titlesuggest' => '0-1', 'archive' => '0-1' ],
 	],
 	'commonswiki' => [
 		'eqiad' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'file' => '0-2', 'archive' => '0-2' ],
 		'codfw' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'file' => '0-2', 'archive' => '0-2' ],
-		'cloudelastic' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'file' => '0-2', 'archive' => '0-2' ],
+		'cloudelastic' => [ 'content' => '0-1', 'general' => '0-1', 'titlesuggest' => '0-1', 'file' => '0-1', 'archive' => '0-1' ],
 	],
 	'enwiki' => [
 		'eqiad' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-3', 'archive' => '0-2' ],
 		'codfw' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-3', 'archive' => '0-2' ],
-		'cloudelastic' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'archive' => '0-2' ],
+		'cloudelastic' => [ 'content' => '0-1', 'general' => '0-1', 'titlesuggest' => '0-1', 'archive' => '0-1' ],
 	],
 	'dewiki' => [
 		'eqiad' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-2', 'archive' => '0-2' ],
 		'codfw' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'archive' => '0-2' ],
-		'cloudelastic' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'archive' => '0-2' ],
+		'cloudelastic' => [ 'content' => '0-1', 'general' => '0-1', 'titlesuggest' => '0-1', 'archive' => '0-1' ],
 	],
 ],
 
