@@ -3246,6 +3246,7 @@ if ( $wmgUseRevisionSlider ) {
 
 if ( $wmgUseTwoColConflict ) {
 	wfLoadExtension( 'TwoColConflict' );
+	$wgTwoColConflictBetaFeature = $wmgTwoColConflictBetaFeature;
 }
 
 if ( $wmgUseUserMerge ) {
