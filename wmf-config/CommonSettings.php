@@ -3269,22 +3269,21 @@ if ( $wmgUseUserMerge ) {
 if ( $wmgUseEventLogging ) {
 	wfLoadExtension( 'EventLogging' );
 	wfLoadExtension( 'EventStreamConfig' );
-	if ( $wgDBname === 'test2wiki' ) {
-		// test2wiki has its own Schema: NS.
-		$wgEventLoggingDBname = 'test2wiki';
-		$wgEventLoggingSchemaApiUri = 'https://test2.wikipedia.org/w/api.php';
-		$wgEventLoggingBaseUri = "{$wgServer}/beacon/dummy";
-	} else {
-		// All other wikis reference metawiki.
-		$wgEventLoggingBaseUri = $wgCanonicalServer . '/beacon/event';
-		$wgEventLoggingDBname = 'metawiki';
-		$wgEventLoggingSchemaApiUri = 'https://meta.wikimedia.org/w/api.php';
-	}
-	if ( $wgEventLoggingDBname === $wgDBname ) {
+
+	// All wikis reference metawiki.
+	$wgEventLoggingBaseUri = $wgCanonicalServer . '/beacon/event';
+	$wgEventLoggingDBname = 'metawiki';
+	$wgEventLoggingSchemaApiUri = 'https://meta.wikimedia.org/w/api.php';
+
+	// For compat, also register the Schema NS on test2.wikipedia.org,
+	// because this wiki used to be its own EventLogging repo (T196309)
+	if ( $wgDBname === $wgEventLoggingDBname || $wgDBname === 'test2wiki' ) {
 		// T47031
 		$wgExtraNamespaces[470] = 'Schema';
 		$wgExtraNamespaces[471] = 'Schema_talk';
+	}
 
+	if ( $wgDBname === $wgEventLoggingDBname ) {
 		wfLoadExtension( 'CodeEditor' );
 		$wgCodeEditorEnableCore = $wmgUseCodeEditorForCore; // For safety's sake
 	}
