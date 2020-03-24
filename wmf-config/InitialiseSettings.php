@@ -23562,6 +23562,14 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
+'wmgTwoColConflictBetaFeature' => [
+	'default' => true,
+	'group0' => false,
+	'dewiki' => false,
+	'fawiki' => false,
+	'arwiki' => false,
+],
+
 'wmgUseUserMerge' => [
 	'default' => true,
 	'private' => false,
