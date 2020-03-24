@@ -18877,6 +18877,12 @@ function wmfGetVariantSettings() {
 	'test2wiki' => 'videojs',
 ],
 
+// Enable the Beta Feature for trying out the new video player (see also the BF whitelist)
+'wgTmhUseBetaFeatures' => [
+	'default' => true,
+	'test2wiki' => false,
+],
+
 'wmgMinimumVideoPlayerSize' => [
 	'default' => 800,
 ],
