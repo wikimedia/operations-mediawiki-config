@@ -3259,6 +3259,7 @@ if ( $wmgUseUserMerge ) {
 
 if ( $wmgUseEventLogging ) {
 	wfLoadExtension( 'EventLogging' );
+	wfLoadExtension( 'EventStreamConfig' );
 	if ( $wgDBname === 'test2wiki' ) {
 		// test2wiki has its own Schema: NS.
 		$wgEventLoggingDBname = 'test2wiki';
@@ -3367,11 +3368,6 @@ if ( $wmgUseFileImporter ) {
 		$wgFileImporterWikidataEntityEndpoint = 'https://test.wikidata.org/wiki/Special:EntityData/';
 		$wgFileImporterWikidataNowCommonsEntity = 'Q210317';
 	}
-}
-
-if ( $wmgUseEventStreamConfig ) {
-	wfLoadExtension( 'EventStreamConfig' );
-	// wgEventStreams is configured per wiki in InitialiseSettings.php
 }
 
 if ( $wmgUseContentTranslation ) {

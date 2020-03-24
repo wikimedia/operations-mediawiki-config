@@ -169,11 +169,6 @@ function wmfGetLabsOverrideSettings() {
 			],
 		],
 
-		'wmgUseEventStreamConfig' => [
-			'default' => true,
-			'login' => false
-		],
-
 		// Additional log channels for beta cluster
 		'-wmgMonologChannels' => [
 			'default' => [
