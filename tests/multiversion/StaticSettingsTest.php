@@ -93,45 +93,50 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 	}
 
 	public function testLogos() {
-		// Build an array of logos to test everything in one cycle
-		$logos = [];
+		$scalarLogoKeys = [
+			'1x' => 'wmgSiteLogo1x',
+			'1.5x' => 'wmgSiteLogo1_5x',
+			'2x' => 'wmgSiteLogo2x',
+		];
 
-		foreach ( $this->variantSettings['wgLogos'] as $db => $entry ) {
-			// Test that only 1x, 1.5x, 2x, and 'wordmark' keys are used
-			$keys = array_keys( $entry );
+		$pairedSizes = [ '1.5x', '2x' ];
 
-			switch ( count( $keys ) ) {
-				case 4:
-					$this->assertEqualsCanonicalizing( [ '1x', '1.5x', '2x', 'wordmark' ], $keys, "Unexpected keys for '$db'" );
-					break;
+		// Test if all scalar logos exist
+		foreach ( $scalarLogoKeys as $size => $key ) {
+			foreach ( $this->variantSettings[ $key ] as $db => $entry ) {
+				$this->assertFileExists( __DIR__ . '/../..' . $entry, "$db has non-existent $size logo in $key" );
 
-				case 3:
-					$this->assertEqualsCanonicalizing( [ '1x', '1.5x', '2x' ], $keys, "Unexpected keys for '$db'" );
-					break;
+				if ( in_array( $size, $pairedSizes ) ) {
+					$otherSize = array_values( array_diff( $pairedSizes, [ $size ] ) )[ 0 ];
+					$otherKey = $scalarLogoKeys[ $otherSize ];
 
-				case 2:
-					$this->assertEqualsCanonicalizing( [ '1x', 'wordmark' ], $keys, "Unexpected keys for '$db'" );
-					break;
+					$this->assertArrayHasKey(
+						$db,
+						$this->variantSettings[ $otherKey ],
+						"$db has a logo set for $size in $key but not for $otherSize in $otherKey"
+					);
 
-				default:
-					$this->assertEqualsCanonicalizing( [ '1x' ], $keys, "Unexpected keys for '$db'" );
-			}
+					$baseKey = $scalarLogoKeys['1x'];
 
-			// Test if all logos exist
-			foreach ( $entry as $size => $logo ) {
-				if ( $size === 'wordmark' ) {
-					if ( !count( $logo ) ) {
-						// Wordmark logo over-ridden to unset.
-						continue;
-					}
-					$this->assertArrayHasKey( 'src', $logo, "$db has no path set for its $size logo" );
-					$this->assertFileExists( __DIR__ . '/../..' . $logo['src'], "$db has non-existent $size logo" );
-					$this->assertArrayHasKey( 'width', $logo, "$db has no width set for its $size logo" );
-					$this->assertArrayHasKey( 'height', $logo, "$db has no height set for its $size logo" );
-				} else {
-					$this->assertFileExists( __DIR__ . '/../..' . $logo, "$db has non-existent $size logo" );
+					$this->assertArrayHasKey(
+						$db,
+						$this->variantSettings[ $baseKey ],
+						"$db has an over-ride HD logo set for $size in $key but not for regular resoltion in $baseKey"
+					);
 				}
 			}
+		}
+
+		// Test if all wordmark logo values are set and the file exists
+		foreach ( $this->variantSettings[ 'wmgSiteLogoWordmark' ] as $db => $entry ) {
+			if ( !count( $entry ) ) {
+				// Wordmark logo over-ridden to unset.
+				continue;
+			}
+			$this->assertArrayHasKey( 'src', $entry, "$db has no path set for its wordmark logo in wmgSiteLogoWordmark" );
+			$this->assertFileExists( __DIR__ . '/../..' . $entry['src'], "$db has non-existent wordmark logo in wmgSiteLogoWordmark" );
+			$this->assertArrayHasKey( 'width', $entry, "$db has no width set for its wordmark logo in wmgSiteLogoWordmark" );
+			$this->assertArrayHasKey( 'height', $entry, "$db has no height set for its wordmark logo in wmgSiteLogoWordmark" );
 		}
 	}
 

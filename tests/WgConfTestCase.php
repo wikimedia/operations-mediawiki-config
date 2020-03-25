@@ -71,7 +71,7 @@ abstract class WgConfTestCase extends PHPUnit\Framework\TestCase {
 	 *
 	 * Example usage:
 	 *
-	 *     $wgLogos = $this->loadWgConf( 'production' )->settings['wgLogos'];
+	 *     $wgLocaltimezone = $this->loadWgConf( 'production' )->settings['wgLocaltimezone'];
 	 *
 	 * @param string $wmfRealm Realm to use for example: 'labs' or 'production'
 	 * @return Wikimedia\MWConfig\StaticSiteConfiguration

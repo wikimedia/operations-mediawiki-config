@@ -952,6 +952,20 @@ if ( in_array( 'editautopatrolprotected', $wgRestrictionLevels ) ) {
 	$wgGroupPermissions['bot']['editautopatrolprotected'] = true;
 }
 
+# ######################################################################
+# Logo settings
+# ######################################################################
+
+// Pieced together so that wikis can inherit their logo from their project/default
+if ( isset( $wmgSiteLogo1x ) ) {
+	$wgLogos = [
+		'1x' => $wmgSiteLogo1x ?? null,
+		'1.5x' => $wmgSiteLogo1_5x ?? null,
+		'2x' => $wmgSiteLogo2x ?? null,
+		'wordmark' => $wmgSiteLogoWordmark ?? null,
+	];
+}
+
 if ( $wmgUseTimeline ) {
 	include "$wmfConfigDir/timeline.php";
 }

@@ -204,40 +204,18 @@ function wmfGetLabsOverrideSettings() {
 			'deploymentwiki' => false
 		],
 
-		'wgLogos' => [
-			'default' => [
-				'1x' => '/static/images/project-logos/betawiki.png'
-			],
-			'commonswiki' => [
-				'1x' => '/static/images/project-logos/betacommons.png'
-			],
-			'metawiki' => [
-				'1x' => '/static/images/project-logos/betametawiki.png' // T125942
-			],
-			'wikibooks' => [
-				'1x' => '/static/images/project-logos/betacommons.png'
-			],
-			'wikidata' => [
-				'1x' => '/static/images/project-logos/betawikidata.png'
-			],
-			'wikinews' => [
-				'1x' => '/static/images/project-logos/betacommons.png'
-			],
-			'wikiquote' => [
-				'1x' => '/static/images/project-logos/betacommons.png'
-			],
-			'wikisource' => [
-				'1x' => '/static/images/project-logos/betacommons.png'
-			],
-			'wikiversity' => [
-				'1x' => '/static/images/project-logos/betawikiversity.png'
-			],
-			'wikivoyage' => [
-				'1x' => '/static/images/project-logos/betacommons.png'
-			],
-			'wiktionary' => [
-				'1x' => '/static/images/project-logos/betacommons.png'
-			],
+		'wmgSiteLogo1x' => [
+			'default' => '/static/images/project-logos/betawiki.png',
+			'commonswiki' => '/static/images/project-logos/betacommons.png',
+			'metawiki' => '/static/images/project-logos/betametawiki.png', // T125942
+			'wikibooks' => '/static/images/project-logos/betacommons.png',
+			'wikidata' => '/static/images/project-logos/betawikidata.png',
+			'wikinews' => '/static/images/project-logos/betacommons.png',
+			'wikiquote' => '/static/images/project-logos/betacommons.png',
+			'wikisource' => '/static/images/project-logos/betacommons.png',
+			'wikiversity' => '/static/images/project-logos/betawikiversity.png',
+			'wikivoyage' => '/static/images/project-logos/betacommons.png',
+			'wiktionary' => '/static/images/project-logos/betacommons.png',
 		],
 
 		'wgFavicon' => [

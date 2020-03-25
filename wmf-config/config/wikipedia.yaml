@@ -7,9 +7,8 @@ inheritsFrom: base
 wikiTag: wikipedia
 
 
-wgLogos:
-  - 1x: '/static/images/project-logos/enwiki.png'
-  - wordmark:
-    - src: '/static/images/mobile/copyright/wikipedia-wordmark-en.svg'
-    - width: 116
-    - height: 18
+wmgSiteLogo1x: '/static/images/project-logos/enwiki.png'
+wmgSiteLogoWordmark:
+  - src: '/static/images/mobile/copyright/wikipedia-wordmark-en.svg'
+  - width: 116
+  - height: 18
