@@ -310,8 +310,6 @@ $wgCompressRevisions = true;
 
 $wgExternalStores = [ 'DB' ];
 
-$wgContentHandlerUseDB = true;
-
 # ######################################################################
 # Performance settings and restrictions
 # ######################################################################
