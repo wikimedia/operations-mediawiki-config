@@ -2393,6 +2393,26 @@ function wmfGetVariantSettings() {
 	'wikimaniawiki' => '/static/images/project-logos/wikimaniawiki-2x.png', // T194340
 ],
 
+'wmgSiteLogoIcon' => [
+	// Projects
+	'default' => '/static/images/mobile/wikimedia.png',
+	'wikibooks' => '/static/images/mobile/wikibooks.png',
+	'wikidata' => '/static/images/mobile/wikidata.png',
+	'wikinews' => '/static/images/mobile/wikinews.png',
+	'wikipedia' => '/static/images/mobile/W.png',
+	'wikiquote' => '/static/images/mobile/wikiquote.png',
+	'wikisource' => '/static/images/mobile/wikisource.png',
+	'wikiversity' => '/static/images/mobile/wikiversity.png',
+	'wikivoyage' => '/static/images/mobile/wikivoyage.png',
+	'wiktionary' => '/static/images/mobile/wiktionary.png',
+
+	// Special wikis
+	'commonswiki' => '/static/images/mobile/commons.png',
+	'mediawikiwiki' => '/static/images/mobile/mediawiki.png',
+	'metawiki' => '/static/images/mobile/meta.png',
+	'specieswiki' => '/static/images/mobile/wikispecies.png',
+],
+
 'wmgSiteLogoWordmark' => [
 	// Projects
 	'wikipedia' => [
@@ -18255,23 +18275,6 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'commonswiki' => true,
 	'testcommonswiki' => true,
-],
-
-'wgMobileFrontendLogo' => [
-	'default' => '/static/images/mobile/wikimedia.png',
-	'commonswiki' => '/static/images/mobile/commons.png',
-	'mediawikiwiki' => '/static/images/mobile/mediawiki.png',
-	'metawiki' => '/static/images/mobile/meta.png',
-	'specieswiki' => '/static/images/mobile/wikispecies.png',
-	'wikibooks' => '/static/images/mobile/wikibooks.png',
-	'wikidata' => '/static/images/mobile/wikidata.png',
-	'wikinews' => '/static/images/mobile/wikinews.png',
-	'wikipedia' => '/static/images/mobile/W.png',
-	'wikiquote' => '/static/images/mobile/wikiquote.png',
-	'wikisource' => '/static/images/mobile/wikisource.png',
-	'wikiversity' => '/static/images/mobile/wikiversity.png',
-	'wikivoyage' => '/static/images/mobile/wikivoyage.png',
-	'wiktionary' => '/static/images/mobile/wiktionary.png',
 ],
 
 'wgMobileUrlTemplate' => [

@@ -97,6 +97,7 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 			'1x' => 'wmgSiteLogo1x',
 			'1.5x' => 'wmgSiteLogo1_5x',
 			'2x' => 'wmgSiteLogo2x',
+			'icon' => 'wmgSiteLogoIcon',
 		];
 
 		$pairedSizes = [ '1.5x', '2x' ];
