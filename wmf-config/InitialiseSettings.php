@@ -17300,7 +17300,7 @@ function wmfGetVariantSettings() {
 
 'wmgUseParsoid' => [
 	'default' => true,
-	'wikitech' => false,		# Won't work while Parsoid/PHP is outwith MW
+	'wikitech' => false,		# T241961
 	'loginwiki' => false,		# T61702
 	'votewiki' => false,		# T61702
 ],
@@ -17317,7 +17317,7 @@ function wmfGetVariantSettings() {
 
 'wmgUseVisualEditor' => [
 	'default' => true,
-	'wikitech' => false,		# Won't work while Parsoid/PHP is outwith MW
+	'wikitech' => false,		# T241961
 	'nonbetafeatures' => false,
 ],
 
