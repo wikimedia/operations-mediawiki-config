@@ -4054,7 +4054,7 @@ if ( ( $_SERVER['SERVERGROUP'] ?? null ) === 'parsoid' ) {
 		require_once "$parsoidDir/tests/RTTestSettings.php";
 	}
 
-	wfLoadExtension( 'Parsoid/PHP', "$parsoidDir/extension.json" );
+	wfLoadExtension( 'Parsoid', "$parsoidDir/extension.json" );
 }
 unset( $parsoidDir );
 // End of temporary hack for hooking up Parsoid/PHP with MediaWiki
