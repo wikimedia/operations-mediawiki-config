@@ -150,6 +150,9 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthUseSlaves = true;
 }
 
+// Temprorary for confirming fix for T241503
+$wgAvailableRights[] = 'UselessRightForTesting';
+
 if ( $wmgUseCentralNotice ) {
 	// Emit CSP headers on banner previews. This can go away when full CSP
 	// support (T135963) is deployed.
