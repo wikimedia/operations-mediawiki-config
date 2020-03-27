@@ -22515,12 +22515,37 @@ function wmfGetVariantSettings() {
 			'interwikiPrefix' => 'testwikidata',
 		],
 	],
+	'testcommonswiki' => [
+		'testwikidata' => [
+			'entityNamespaces' => [
+				'item' => 0,
+				'property' => 120,
+				'lexeme' => 146,
+			],
+			'repoDatabase' => 'testwikidatawiki',
+			'baseUri' => 'http://test.wikidata.org/entity/',
+			'rdfNodeNamespacePrefix' => 'wd',
+			'rdfPredicateNamespacePrefix' => '',
+			'interwikiPrefix' => 'testwikidata',
+		],
+		'testcommons' => [
+			'entityNamespaces' => [
+				'mediainfo' => '6/mediainfo',
+			],
+			'repoDatabase' => 'testcommonswiki',
+			'baseUri' => 'https://test-commons.wikimedia.org/wiki/Special:EntityData/',
+			'rdfNodeNamespacePrefix' => 'sdc',
+			'rdfPredicateNamespacePrefix' => 'sdc',
+			'interwikiPrefix' => 'testcommons',
+		],
+	],
 ],
 
 'wmgWikibaseLocalEntitySourceName' => [
 	'default' => null,
 	'testwikidatawiki' => 'testwikidata',
 	'wikidataclient-test' => 'testwikidata',
+	'testcommonswiki' => 'testcommons'
 ],
 
 'wmgUseTemplateSandbox' => [
