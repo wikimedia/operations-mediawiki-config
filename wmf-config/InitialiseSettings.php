@@ -21193,11 +21193,11 @@ function wmfGetVariantSettings() {
 	'arwiki' => true,
 	'cswiki' => true,
 	'euwiki' => true,
-	'kowiki' => true,
-	'viwiki' => true,
-	'ukwiki' => true,
 	'huwiki' => true,
 	'hywiki' => true,
+	'kowiki' => true,
+	'ukwiki' => true,
+	'viwiki' => true,
 ],
 
 'wgWMEUnderstandingFirstDaySensitiveNamespaces' => [
@@ -24769,51 +24769,51 @@ function wmfGetVariantSettings() {
 'wmgUseGrowthExperiments' => [
 	'default' => false,
 	'testwiki' => true,
-	'kowiki' => true,
-	'cswiki' => true,
-	'viwiki' => true,
 	'arwiki' => true,
+	'cswiki' => true,
 	'euwiki' => true,
-	'ukwiki' => true,
 	'huwiki' => true,
 	'hywiki' => true,
+	'kowiki' => true,
+	'ukwiki' => true,
+	'viwiki' => true,
 ],
 
 'wgWelcomeSurveyEnabled' => [
 	'default' => false,
 	'testwiki' => true,
-	'kowiki' => true,
-	'cswiki' => true,
 	'arwiki' => true,
+	'cswiki' => true,
 	'euwiki' => true,
+	'kowiki' => true,
 ],
 
 'wgWelcomeSurveyPrivacyPolicyUrl' => [
-	'kowiki' => 'https://foundation.wikimedia.org/wiki/%EC%83%88_%EC%82%AC%EC%9A%A9%EC%9E%90_%ED%99%98%EC%98%81_%EC%84%A4%EB%AC%B8_%EA%B0%9C%EC%9D%B8_%EC%A0%95%EB%B3%B4_%EB%B3%B4%ED%98%B8_%EC%A0%95%EC%B1%85',
-	'cswiki' => 'https://foundation.wikimedia.org/wiki/Uv%C3%ADtac%C3%AD_pr%C5%AFzkum_pro_nov%C3%A9_u%C5%BEivatele_Prohl%C3%A1%C5%A1en%C3%AD_o_ochran%C4%9B_osobn%C3%ADch_%C3%BAdaj%C5%AF',
-	'viwiki' => 'https://foundation.wikimedia.org/wiki/Th%C3%B4ng_b%C3%A1o_v%E1%BB%81_Quy%E1%BB%81n_ri%C3%AAng_t%C6%B0_c%E1%BB%A7a_Cu%E1%BB%99c_kh%E1%BA%A3o_s%C3%A1t_ch%C3%A0o_%C4%91%C3%B3n_ng%C6%B0%E1%BB%9Di_d%C3%B9ng_m%E1%BB%9Bi',
 	'arwiki' => 'https://foundation.wikimedia.org/wiki/%D8%A8%D9%8A%D8%A7%D9%86_%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%A9_%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%AE%D8%AF%D9%85_%D8%A7%D9%84%D8%AC%D8%AF%D9%8A%D8%AF',
+	'cswiki' => 'https://foundation.wikimedia.org/wiki/Uv%C3%ADtac%C3%AD_pr%C5%AFzkum_pro_nov%C3%A9_u%C5%BEivatele_Prohl%C3%A1%C5%A1en%C3%AD_o_ochran%C4%9B_osobn%C3%ADch_%C3%BAdaj%C5%AF',
 	'euwiki' => 'https://foundation.wikimedia.org/wiki/Iritsi_berrien_ongi_etorri_inkestaren_pribatutasun_adierazpena',
+	'kowiki' => 'https://foundation.wikimedia.org/wiki/%EC%83%88_%EC%82%AC%EC%9A%A9%EC%9E%90_%ED%99%98%EC%98%81_%EC%84%A4%EB%AC%B8_%EA%B0%9C%EC%9D%B8_%EC%A0%95%EB%B3%B4_%EB%B3%B4%ED%98%B8_%EC%A0%95%EC%B1%85',
+	'viwiki' => 'https://foundation.wikimedia.org/wiki/Th%C3%B4ng_b%C3%A1o_v%E1%BB%81_Quy%E1%BB%81n_ri%C3%AAng_t%C6%B0_c%E1%BB%A7a_Cu%E1%BB%99c_kh%E1%BA%A3o_s%C3%A1t_ch%C3%A0o_%C4%91%C3%B3n_ng%C6%B0%E1%BB%9Di_d%C3%B9ng_m%E1%BB%9Bi',
 ],
 
 'wgWelcomeSurveyExperimentalGroups' => [
-	'kowiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-9' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
-	'cswiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-9' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
 	'arwiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-9' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
+	'cswiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-9' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
 	'euwiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-9' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
+	'kowiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-9' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
 ],
 
 'wgGEHelpPanelEnabled' => [
 	'default' => false,
 	'testwiki' => true,
-	'kowiki' => true,
-	'cswiki' => true,
-	'viwiki' => true,
 	'arwiki' => true,
+	'cswiki' => true,
 	'euwiki' => true,
-	'ukwiki' => true,
 	'huwiki' => true,
 	'hywiki' => true,
+	'kowiki' => true,
+	'ukwiki' => true,
+	'viwiki' => true,
 ],
 
 'wgGEHelpPanelLoggingEnabled' => [
@@ -24833,27 +24833,27 @@ function wmfGetVariantSettings() {
 'wgGEHelpPanelHelpDeskTitle' => [
 	'default' => '',
 	'testwiki' => 'Wikipedia:Requests/Help_desk',
-	'kowiki' => '위키백과:질문방/{{Y-M|0}}',
-	'cswiki' => 'Wikipedie:Potřebuji_pomoc',
-	'viwiki' => 'Wikipedia:Giúp_sử_dụng_Wikipedia',
 	'arwiki' => ' ويكيبيديا:فريق_المساعدة/طلبات',
+	'cswiki' => 'Wikipedie:Potřebuji_pomoc',
 	'euwiki' => 'Wikipedia:Txokoa',
-	'ukwiki' => 'Вікіпедія:Кнайпа (допомога)',
 	'huwiki' => 'Wikipédia:Kocsmafal (kezdőknek)',
 	'hywiki' => 'Վիքիպեդիա:Հարցեր',
+	'kowiki' => '위키백과:질문방/{{Y-M|0}}',
+	'ukwiki' => 'Вікіпедія:Кнайпа (допомога)',
+	'viwiki' => 'Wikipedia:Giúp_sử_dụng_Wikipedia',
 ],
 
 'wgGEHelpPanelViewMoreTitle' => [
 	'default' => '',
 	'testwiki' => 'Special:MyLanguage/Help:Contents',
-	'kowiki' => '위키백과:도움말',
-	'cswiki' => 'Nápověda:Obsah',
-	'viwiki' => 'Trợ_giúp:Mục_lục',
 	'arwiki' => 'مساعدة:محتويات',
+	'cswiki' => 'Nápověda:Obsah',
 	'euwiki' => 'Laguntza:Sarrera',
-	'ukwiki' => 'Вікіпедія:Довідка',
 	'huwiki' => 'Wikipédia:Bevezetés',
 	'hywiki' => 'Օգնություն:Գլխացանկ',
+	'kowiki' => '위키백과:도움말',
+	'ukwiki' => 'Вікіпедія:Довідка',
+	'viwiki' => 'Trợ_giúp:Mục_lục',
 ],
 
 'wgGEHelpPanelLinks' => [
@@ -24885,32 +24885,32 @@ function wmfGetVariantSettings() {
 			'id' => 'infobox',
 		]
 	],
-	'kowiki' => [
+	'arwiki' => [
 		[
-			'title' => '위키백과:위키문법_요약',
-			'text' => '위키문법 요약',
-			'id' => 'wikitextsyntax',
+			'title' => 'مساعدة:محتويات',
+			'text' => 'إجابات عن الأسئلة الأكثر شيوعاً',
+			'id' => 'contents',
 		],
 		[
-			'title' => '위키백과:빠른_길라잡이',
-			'text' => '빠른 길라잡이',
-			'id' => 'quicktutorial',
+			'title' => 'ويكيبيديا:بوابة_المشاركة/إنشاء_مقالة_جديدة',
+			'text' => 'إنشاء مقالة جديدة',
+			'id' => 'newarticle',
 		],
 		[
-			'title' => 'mw:Help:VisualEditor/User_guide/ko#사진_편집_및_기타_미디어_파일들',
-			'text' => '그림 넣기',
-			'id' => 'image'
+			'title' => 'ويكيبيديا:بوابة_المشاركة/تصحيح_خطأ_في_مقالة',
+			'text' => 'تصحيح خطأ في مقالة',
+			'id' => 'correcting',
 		],
 		[
-			'title' => 'mw:Help:VisualEditor/User_guide/ko#각주_편집하기',
-			'text' => '각주 달기',
-			'id' => 'citation',
+			'title' => 'مساعدة:مقدمة_عن_الوصلات/1',
+			'text' => 'الوصلات',
+			'id' => 'links',
 		],
 		[
-			'title' => '위키백과:문서_등재_기준',
-			'text' => '문서 등재 기준',
-			'id' => 'notability',
-		]
+			'title' => 'ويكيبيديا:بوابة_المشاركة/مراسلة_مستخدم',
+			'text' => 'مراسلة مستخدم',
+			'id' => 'discussion',
+		],
 	],
 	'cswiki' => [
 		[
@@ -24939,60 +24939,6 @@ function wmfGetVariantSettings() {
 			'id' => 'bebold',
 		]
 	],
-	'viwiki' => [
-		[
-			'title' => 'Wikipedia:Bài_viết_đầu_tiên_của_bạn',
-			'text' => 'Bài viết đầu tiên của bạn',
-			'id' => 'firstarticle',
-		],
-		[
-			'title' => 'Trợ_giúp:Sửa_đổi',
-			'text' => 'Sửa đổi',
-			'id' => 'editing',
-		],
-		[
-			'title' => 'Wikipedia:Cẩm_nang_biên_soạn',
-			'text' => 'Cẩm nang biên soạn',
-			'id' => 'style',
-		],
-		[
-			'title' => 'Trợ_giúp:Hình_ảnh',
-			'text' => 'Hình ảnh',
-			'id' => 'image',
-		],
-		[
-			'title' => 'Wikipedia:Câu_thường_hỏi',
-			'text' => 'Câu thường hỏi',
-			'id' => 'faq',
-		],
-	],
-	'arwiki' => [
-		[
-			'title' => 'مساعدة:محتويات',
-			'text' => 'إجابات عن الأسئلة الأكثر شيوعاً',
-			'id' => 'contents',
-		],
-		[
-			'title' => 'ويكيبيديا:بوابة_المشاركة/إنشاء_مقالة_جديدة',
-			'text' => 'إنشاء مقالة جديدة',
-			'id' => 'newarticle',
-		],
-		[
-			'title' => 'ويكيبيديا:بوابة_المشاركة/تصحيح_خطأ_في_مقالة',
-			'text' => 'تصحيح خطأ في مقالة',
-			'id' => 'correcting',
-		],
-		[
-			'title' => 'مساعدة:مقدمة_عن_الوصلات/1',
-			'text' => 'الوصلات',
-			'id' => 'links',
-		],
-		[
-			'title' => 'ويكيبيديا:بوابة_المشاركة/مراسلة_مستخدم',
-			'text' => 'مراسلة مستخدم',
-			'id' => 'discussion',
-		],
-	],
 	'euwiki' => [
 		[
 			'title' => 'Laguntza:Ikusizko_Editorea',
@@ -25018,33 +24964,6 @@ function wmfGetVariantSettings() {
 			'title' => 'Laguntza:Irudiak',
 			'text' => 'Irudiak',
 			'id' => 'images',
-		]
-	],
-	'ukwiki' => [
-		[
-			'title' => 'Довідка:Ознайомлення',
-			'text' => 'Ознайомтеся з Вікіпедією',
-			'id' => 'intro',
-		],
-		[
-			'title' => 'Довідка:Створення нової статті',
-			'text' => 'Як створити нову статтю',
-			'id' => 'newarticle',
-		],
-		[
-			'title' => 'Вікіпедія:Візуальний редактор/Посібник користувача',
-			'text' => 'Як користуватися візуальним редактором',
-			'id' => 'visual',
-		],
-		[
-			'title' => 'Вікіпедія:Стиль',
-			'text' => 'Яким має бути стиль статті',
-			'id' => 'style',
-		],
-		[
-			'title' => 'Вікіпедія:Будьте рішучими',
-			'text' => 'Будьте рішучими!',
-			'id' => 'bebold',
 		]
 	],
 	'huwiki' => [
@@ -25101,19 +25020,100 @@ function wmfGetVariantSettings() {
 			'id' => 'glossary',
 		]
 	],
+	'kowiki' => [
+		[
+			'title' => '위키백과:위키문법_요약',
+			'text' => '위키문법 요약',
+			'id' => 'wikitextsyntax',
+		],
+		[
+			'title' => '위키백과:빠른_길라잡이',
+			'text' => '빠른 길라잡이',
+			'id' => 'quicktutorial',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/ko#사진_편집_및_기타_미디어_파일들',
+			'text' => '그림 넣기',
+			'id' => 'image'
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/ko#각주_편집하기',
+			'text' => '각주 달기',
+			'id' => 'citation',
+		],
+		[
+			'title' => '위키백과:문서_등재_기준',
+			'text' => '문서 등재 기준',
+			'id' => 'notability',
+		]
+	],
+	'ukwiki' => [
+		[
+			'title' => 'Довідка:Ознайомлення',
+			'text' => 'Ознайомтеся з Вікіпедією',
+			'id' => 'intro',
+		],
+		[
+			'title' => 'Довідка:Створення нової статті',
+			'text' => 'Як створити нову статтю',
+			'id' => 'newarticle',
+		],
+		[
+			'title' => 'Вікіпедія:Візуальний редактор/Посібник користувача',
+			'text' => 'Як користуватися візуальним редактором',
+			'id' => 'visual',
+		],
+		[
+			'title' => 'Вікіпедія:Стиль',
+			'text' => 'Яким має бути стиль статті',
+			'id' => 'style',
+		],
+		[
+			'title' => 'Вікіпедія:Будьте рішучими',
+			'text' => 'Будьте рішучими!',
+			'id' => 'bebold',
+		]
+	],
+	'viwiki' => [
+		[
+			'title' => 'Wikipedia:Bài_viết_đầu_tiên_của_bạn',
+			'text' => 'Bài viết đầu tiên của bạn',
+			'id' => 'firstarticle',
+		],
+		[
+			'title' => 'Trợ_giúp:Sửa_đổi',
+			'text' => 'Sửa đổi',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'Wikipedia:Cẩm_nang_biên_soạn',
+			'text' => 'Cẩm nang biên soạn',
+			'id' => 'style',
+		],
+		[
+			'title' => 'Trợ_giúp:Hình_ảnh',
+			'text' => 'Hình ảnh',
+			'id' => 'image',
+		],
+		[
+			'title' => 'Wikipedia:Câu_thường_hỏi',
+			'text' => 'Câu thường hỏi',
+			'id' => 'faq',
+		],
+	],
 ],
 
 'wgGEHomepageEnabled' => [
 	'default' => false,
 	'testwiki' => true,
-	'cswiki' => true,
-	'kowiki' => true,
-	'viwiki' => true,
 	'arwiki' => true,
+	'cswiki' => true,
 	'euwiki' => true,
-	'ukwiki' => true,
 	'huwiki' => true,
 	'hywiki' => true,
+	'kowiki' => true,
+	'ukwiki' => true,
+	'viwiki' => true,
 ],
 
 'wgGEHomepageSuggestedEditsEnabled' => [
@@ -25123,9 +25123,9 @@ function wmfGetVariantSettings() {
 'wgGEHomepageSuggestedEditsRequiresOptIn' => [
 	'default' => false,
 	'euwiki' => true, // Not configured yet
-	'ukwiki' => true,
 	'huwiki' => true,
 	'hywiki' => true,
+	'ukwiki' => true,
 ],
 
 'wgGEHomepageSuggestedEditsEnableTopics' => [
@@ -25191,52 +25191,52 @@ function wmfGetVariantSettings() {
 
 'wgGEHomepageNewAccountEnablePercentage' => [
 	'default' => 0,
-	'cswiki' => 80,
-	'kowiki' => 80,
-	'viwiki' => 80,
 	'arwiki' => 80,
-	'ukwiki' => 80,
-	'huwiki' => 80,
-	'hywiki' => 80,
+	'cswiki' => 80,
 	// euwiki is not an A/B test (T233066)
 	'euwiki' => 100,
+	'huwiki' => 80,
+	'hywiki' => 80,
+	'kowiki' => 80,
+	'ukwiki' => 80,
+	'viwiki' => 80,
 ],
 
 'wgGEHomepageSuggestedEditsNewAccountInitiatedPercentage' => [
 	'default' => 0,
 	'arwiki' => 50,
 	'cswiki' => 50,
-	'kowiki' => 50,
-	'viwiki' => 50,
-	'ukwiki' => 50,
 	'huwiki' => 50,
 	'hywiki' => 50,
+	'kowiki' => 50,
+	'ukwiki' => 50,
+	'viwiki' => 50,
 ],
 
 'wgGEHomepageTutorialTitle' => [
 	'default' => '',
 	'testwiki' => 'Help:Help',
-	'cswiki' => 'Wikipedie:Průvodce',
-	'kowiki' => '위키백과:빠른 길라잡이',
-	'viwiki' => 'Wikipedia:Sách_hướng_dẫn',
 	'arwiki' => 'ويكيبيديا:دروس',
+	'cswiki' => 'Wikipedie:Průvodce',
 	'euwiki' => 'Laguntza:Ikusizko_Editorea',
-	'ukwiki' => 'Довідка:Ознайомлення',
 	'huwiki' => 'Wikipédia:Bevezetés',
 	'hywiki' => 'Օգնություն:Դասընթաց',
+	'kowiki' => '위키백과:빠른 길라잡이',
+	'ukwiki' => 'Довідка:Ознайомлення',
+	'viwiki' => 'Wikipedia:Sách_hướng_dẫn',
 ],
 
 'wgGEHomepageMentorsList' => [
 	'default' => '',
 	'testwiki' => 'Wikipedia:Requests/Help desk/Mentors',
-	'cswiki' => 'Wikipedie:Potřebuji_pomoc/Mentoři',
-	'kowiki' => '위키백과:새_사용자_경험/새_사용자_멘토',
-	'viwiki' => 'Wikipedia:Phát_triển_cộng_đồng/Danh_sách_thành_viên_mentor',
 	'arwiki' => 'ويكيبيديا:مشروع_فريق_النمو/قائمة_المتطوعين',
+	'cswiki' => 'Wikipedie:Potřebuji_pomoc/Mentoři',
 	'euwiki' => 'Laguntza:Mentoreak',
-	'ukwiki' => 'Вікіпедія:Кнайпа (допомога)/Наставники',
 	'huwiki' => 'Wikipédia:Szerkesztők megtartása/Mentorok',
 	'hywiki' => 'Վիքիպեդիա:Օգնություն/Ստորագրություններ',
+	'kowiki' => '위키백과:새_사용자_경험/새_사용자_멘토',
+	'ukwiki' => 'Вікіпедія:Кнайпа (допомога)/Наставники',
+	'viwiki' => 'Wikipedia:Phát_triển_cộng_đồng/Danh_sách_thành_viên_mentor',
 ],
 
 'wmgShowRollbackConfirmationDefaultUserOptions' => [
