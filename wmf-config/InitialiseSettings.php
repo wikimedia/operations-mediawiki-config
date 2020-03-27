@@ -21231,6 +21231,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => true,
 	'hywiki' => true,
 	'kowiki' => true,
+	'srwiki' => true,
 	'ukwiki' => true,
 	'viwiki' => true,
 ],
@@ -24870,6 +24871,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => true,
 	'hywiki' => true,
 	'kowiki' => true,
+	'srwiki' => true,
 	'ukwiki' => true,
 	'viwiki' => true,
 ],
@@ -24907,6 +24909,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => true,
 	'hywiki' => true,
 	'kowiki' => true,
+	'srwiki' => true,
 	'ukwiki' => true,
 	'viwiki' => true,
 ],
@@ -24934,6 +24937,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => 'Wikipédia:Kocsmafal (kezdőknek)',
 	'hywiki' => 'Վիքիպեդիա:Հարցեր',
 	'kowiki' => '위키백과:질문방/{{Y-M|0}}',
+	'srwiki' => 'Википедија:Трг/Помоћ',
 	'ukwiki' => 'Вікіпедія:Кнайпа (допомога)',
 	'viwiki' => 'Wikipedia:Giúp_sử_dụng_Wikipedia',
 ],
@@ -24947,6 +24951,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => 'Wikipédia:Bevezetés',
 	'hywiki' => 'Օգնություն:Գլխացանկ',
 	'kowiki' => '위키백과:도움말',
+	'srwiki' => 'Википедија:Помоћ',
 	'ukwiki' => 'Вікіпедія:Довідка',
 	'viwiki' => 'Trợ_giúp:Mục_lục',
 ],
@@ -25142,6 +25147,33 @@ function wmfGetVariantSettings() {
 			'id' => 'notability',
 		]
 	],
+	'srwiki' => [
+		[
+			'title' => 'Википедија:Добро_дошли',
+			'text' => 'Основне информације о Википедији и начину уређивања',
+			'id' => 'introduction',
+		],
+		[
+			'title' => 'Википедија:Како_започети_нову_страницу',
+			'text' => 'Како започети нову страницу',
+			'id' => 'firstarticle',
+		],
+		[
+			'title' => 'Википедија:Пет_стубова',
+			'text' => 'Пет основних принципа Википедије',
+			'id' => 'rules'
+		],
+		[
+			'title' => 'Википедија:Упутства',
+			'text' => 'Упутства за рад на Википедији',
+			'id' => 'tutorial',
+		],
+		[
+			'title' => 'Википедија:Будите_одважни',
+			'text' => 'Будите одважни!',
+			'id' => 'bebold',
+		]
+	],
 	'ukwiki' => [
 		[
 			'title' => 'Довідка:Ознайомлення',
@@ -25207,6 +25239,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => true,
 	'hywiki' => true,
 	'kowiki' => true,
+	'srwiki' => true,
 	'ukwiki' => true,
 	'viwiki' => true,
 ],
@@ -25274,6 +25307,10 @@ function wmfGetVariantSettings() {
 		'create' => '위키백과:새 문서 만들기',
 		'image' => '도움말:그림 사용하기',
 	],
+	'srwiki' => [
+		'create' => 'Википедија:Креирање чланака',
+		'image' => 'Википедија:Упутства/Слике',
+	],
 	'viwiki' => [
 		'create' => 'Wikipedia:Bài viết đầu tiên của bạn',
 		'image' => 'Trợ giúp:Hình ảnh',
@@ -25293,6 +25330,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => 80,
 	'hywiki' => 80,
 	'kowiki' => 80,
+	'srwiki' => 80,
 	'ukwiki' => 80,
 	'viwiki' => 80,
 ],
@@ -25304,6 +25342,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => 50,
 	'hywiki' => 50,
 	'kowiki' => 50,
+	'srwiki' => 50,
 	'ukwiki' => 50,
 	'viwiki' => 50,
 ],
@@ -25317,6 +25356,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => 'Wikipédia:Bevezetés',
 	'hywiki' => 'Օգնություն:Դասընթաց',
 	'kowiki' => '위키백과:빠른 길라잡이',
+	'srwiki' => 'Помоћ:Уређивање',
 	'ukwiki' => 'Довідка:Ознайомлення',
 	'viwiki' => 'Wikipedia:Sách_hướng_dẫn',
 ],
@@ -25330,6 +25370,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => 'Wikipédia:Szerkesztők megtartása/Mentorok',
 	'hywiki' => 'Վիքիպեդիա:Օգնություն/Ստորագրություններ',
 	'kowiki' => '위키백과:새_사용자_경험/새_사용자_멘토',
+	'srwiki' => 'Википедија:Трг/Помоћ/Ментори',
 	'ukwiki' => 'Вікіпедія:Кнайпа (допомога)/Наставники',
 	'viwiki' => 'Wikipedia:Phát_triển_cộng_đồng/Danh_sách_thành_viên_mentor',
 ],

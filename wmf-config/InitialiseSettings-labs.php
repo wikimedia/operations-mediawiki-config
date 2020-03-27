@@ -1113,6 +1113,7 @@ function wmfGetLabsOverrideSettings() {
 			'cawiki' => 'https://ca.wikipedia.org/w/api.php',
 			'cswiki' => 'https://cs.wikipedia.org/w/api.php',
 			'kowiki' => 'https://ko.wikipedia.org/w/api.php',
+			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
 			'viwiki' => 'https://vi.wikipedia.org/w/api.php',
 		],
 		'wgWelcomeSurveyPrivacyPolicyUrl' => [
@@ -1186,6 +1187,7 @@ function wmfGetLabsOverrideSettings() {
 			'arwiki' => 'https://ar.wikipedia.org/w/api.php',
 			'cswiki' => 'https://cs.wikipedia.org/w/api.php',
 			'kowiki' => 'https://ko.wikipedia.org/w/api.php',
+			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
 			'viwiki' => 'https://vi.wikipedia.org/w/api.php',
 		],
 		'wgGENewcomerTasksTopicType' => [
