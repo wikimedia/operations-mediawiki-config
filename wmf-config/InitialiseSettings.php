@@ -22501,11 +22501,26 @@ function wmfGetVariantSettings() {
 			'interwikiPrefix' => '',
 		],
 	],
+	'wikidataclient-test' => [
+		'testwikidata' => [
+			'entityNamespaces' => [
+				'item' => 0,
+				'property' => 120,
+				'lexeme' => 146,
+			],
+			'repoDatabase' => 'testwikidatawiki',
+			'baseUri' => 'http://test.wikidata.org/entity/',
+			'rdfNodeNamespacePrefix' => 'wd',
+			'rdfPredicateNamespacePrefix' => '',
+			'interwikiPrefix' => '',
+		],
+	],
 ],
 
 'wmgWikibaseLocalEntitySourceName' => [
 	'default' => null,
 	'testwikidatawiki' => 'testwikidata',
+	'wikidataclient-test' => 'testwikidata',
 ],
 
 'wmgUseTemplateSandbox' => [
