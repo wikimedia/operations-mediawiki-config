@@ -10844,6 +10844,12 @@ function wmfGetVariantSettings() {
 	'trwiktionary' => [
 		100 => 'Portal',
 		101 => 'Portal_tartışma',
+		102 => 'YeniKurum', //START T248734 - Reconstruction (Talk)
+		103 => 'YeniKurum_tartışma',
+		104 => 'Ek', //Appendix (Talk)
+		105 => 'Ek_tartışma',
+		106 => 'Alıntılar', //Citations (Talk)
+		107 => 'Alıntılar_tartışma', //END T248734
 	],
 	'ukwiktionary' => [
 		// T15791
