@@ -21228,6 +21228,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => true,
 	'cswiki' => true,
 	'euwiki' => true,
+	'frwiktionary' => true,
 	'huwiki' => true,
 	'hywiki' => true,
 	'kowiki' => true,
@@ -21242,6 +21243,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => [ 0, 1, 6, 7, 100, 101 ],
 	'cswiki' => [ 0, 1, 6, 7, 100, 101 ],
 	'euwiki' => [ 0, 1, 6, 7, 104, 105 ],
+	'frwiktionary' => [ 0, 1, 6, 7, 14, 15, 100, 101, 106, 107, 108, 109, 110, 111 ],
 	'kowiki' => [ 0, 1, 6, 7, 100, 101, 118, 119 ],
 	'viwiki' => [ 0, 1, 6, 7, 100, 101 ],
 ],
@@ -24936,6 +24938,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => true,
 	'cswiki' => true,
 	'euwiki' => true,
+	'frwiktionary' => true,
 	'huwiki' => true,
 	'hywiki' => true,
 	'kowiki' => true,
@@ -24974,6 +24977,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => true,
 	'cswiki' => true,
 	'euwiki' => true,
+	'frwiktionary' => true,
 	'huwiki' => true,
 	'hywiki' => true,
 	'kowiki' => true,
@@ -24994,6 +24998,14 @@ function wmfGetVariantSettings() {
 	'default' => [ 2, 4, 12 ],
 	// 104 = Txikipedia, requested in T223619
 	'euwiki' => [ 2, 4, 12, 104 ],
+	// 100 = Annex, 106 = Thesaurus, 108 = Project (wikiprojects), 110 = Reconstruction
+	'frwiktionary' => [ 2, 4, 100, 106, 108, 110 ],
+],
+
+'wgGEHelpPanelSearchNamespaces' => [
+	'default' => [ 4, 12 ],
+	// 100 = Annex, 108 = Project (wikiprojects), 112 = Tutorial
+	'frwiktionary' => [ 4, 12, 100, 108, 112 ],
 ],
 
 'wgGEHelpPanelHelpDeskTitle' => [
@@ -25002,6 +25014,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => ' ويكيبيديا:فريق_المساعدة/طلبات',
 	'cswiki' => 'Wikipedie:Potřebuji_pomoc',
 	'euwiki' => 'Wikipedia:Txokoa',
+	'frwiktionary' => 'Wiktionnaire:Entraide',
 	'huwiki' => 'Wikipédia:Kocsmafal (kezdőknek)',
 	'hywiki' => 'Վիքիպեդիա:Հարցեր',
 	'kowiki' => '위키백과:질문방/{{Y-M|0}}',
@@ -25016,6 +25029,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => 'مساعدة:محتويات',
 	'cswiki' => 'Nápověda:Obsah',
 	'euwiki' => 'Laguntza:Sarrera',
+	'frwiktionary' => 'Aide:Sommaire',
 	'huwiki' => 'Wikipédia:Bevezetés',
 	'hywiki' => 'Օգնություն:Գլխացանկ',
 	'kowiki' => '위키백과:도움말',
@@ -25132,6 +25146,33 @@ function wmfGetVariantSettings() {
 			'title' => 'Laguntza:Irudiak',
 			'text' => 'Irudiak',
 			'id' => 'images',
+		]
+	],
+	'frwiktionary' => [
+		[
+			'title' => 'Wiktionnaire:Critères d’acceptabilité des entrées',
+			'text' => 'Les critères d’acceptabilité des mots',
+			'id' => 'scope',
+		],
+		[
+			'title' => 'Wiktionnaire:Structure des pages',
+			'text' => 'La structure des pages',
+			'id' => 'structure',
+		],
+		[
+			'title' => 'Aide:Définitions',
+			'text' => 'Écrire une définition',
+			'id' => 'definitions',
+		],
+		[
+			'title' => 'Aide:Prononciation',
+			'text' => 'Ajouter la prononciation',
+			'id' => 'pronunciation',
+		],
+		[
+			'title' => 'Aide:Tutoriels',
+			'text' => 'Découvrir avec des tutoriels interactifs',
+			'id' => 'tutorials',
 		]
 	],
 	'huwiki' => [
@@ -25304,6 +25345,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => true,
 	'cswiki' => true,
 	'euwiki' => true,
+	'frwiktionary' => true,
 	'huwiki' => true,
 	'hywiki' => true,
 	'kowiki' => true,
@@ -25314,6 +25356,7 @@ function wmfGetVariantSettings() {
 
 'wgGEHomepageSuggestedEditsEnabled' => [
 	'default' => true,
+	'frwiktionary' => false,
 ],
 
 'wgGEHomepageSuggestedEditsRequiresOptIn' => [
@@ -25395,6 +25438,7 @@ function wmfGetVariantSettings() {
 	'cswiki' => 80,
 	// euwiki is not an A/B test (T233066)
 	'euwiki' => 100,
+	'frwiktionary' => 80,
 	'huwiki' => 80,
 	'hywiki' => 80,
 	'kowiki' => 80,
@@ -25421,6 +25465,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => 'ويكيبيديا:دروس',
 	'cswiki' => 'Wikipedie:Průvodce',
 	'euwiki' => 'Laguntza:Ikusizko_Editorea',
+	'frwiktionary' => 'Aide:Comment modifier une page',
 	'huwiki' => 'Wikipédia:Bevezetés',
 	'hywiki' => 'Օգնություն:Դասընթաց',
 	'kowiki' => '위키백과:빠른 길라잡이',
@@ -25435,6 +25480,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => 'ويكيبيديا:مشروع_فريق_النمو/قائمة_المتطوعين',
 	'cswiki' => 'Wikipedie:Potřebuji_pomoc/Mentoři',
 	'euwiki' => 'Laguntza:Mentoreak',
+	'frwiktionary' => 'Wiktionnaire:Mentorat',
 	'huwiki' => 'Wikipédia:Szerkesztők megtartása/Mentorok',
 	'hywiki' => 'Վիքիպեդիա:Օգնություն/Ստորագրություններ',
 	'kowiki' => '위키백과:새_사용자_경험/새_사용자_멘토',
