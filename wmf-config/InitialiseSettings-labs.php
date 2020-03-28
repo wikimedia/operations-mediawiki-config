@@ -1012,49 +1012,49 @@ function wmfGetLabsOverrideSettings() {
 		'wgWMEUnderstandingFirstDay' => [
 			'default' => false,
 			'enwiki' => true,
-			'kowiki' => true,
 		],
 		'wgWMEUnderstandingFirstDaySensitiveNamespaces' => [
 			'default' => [ 0, 1, 6, 7 ],
 			'enwiki' => [ 0, 1, 6, 7, 100, 101, 118, 119 ],
-			'kowiki' => [ 0, 1, 6, 7, 100, 101, 118, 119 ],
 		],
 		'wmgUseGrowthExperiments' => [
-			'enwiki' => true,
-			'kowiki' => true,
 			'cawiki' => true,
-			'arwiki' => true,
+			'enwiki' => true,
 		],
 		'wgWelcomeSurveyEnabled' => [
 			'enwiki' => true,
-			'kowiki' => true,
-			'arwiki' => true,
 		],
 		'wgGEHelpPanelEnabled' => [
-			'enwiki' => true,
-			'kowiki' => true,
 			'cawiki' => true,
-			'arwiki' => true,
-		],
-		'wgGEHelpPanelLoggingEnabled' => [
 			'enwiki' => true,
-			'kowiki' => true,
-			'cawiki' => true,
-			'arwiki' => true,
 		],
 		'wgGEHelpPanelHelpDeskTitle' => [
+			'cawiki' => 'Viquipèdia:Potřebuji_pomoc',
 			'enwiki' => 'Wikipedia:Help_desk',
 			'kowiki' => '위키백과:도움말',
-			'cawiki' => 'Viquipèdia:Potřebuji_pomoc',
 			'arwiki' => 'مساعدة',
 		],
 		'wgGEHelpPanelViewMoreTitle' => [
+			'arwiki' => 'مساعدة',
+			'cawiki' => 'Ajuda:Obsah',
 			'enwiki' => 'Help:Contents',
 			'kowiki' => '위키백과:도움말',
-			'cawiki' => 'Ajuda:Obsah',
-			'arwiki' => 'مساعدة',
 		],
 		'wgGEHelpPanelLinks' => [
+			'arwiki' => [
+				[
+					'title' => 'mw:Help:Contents',
+					'text' => 'مساعدة',
+					'id' => 'help',
+				]
+			],
+			'cawiki' => [
+				[
+					'title' => 'mw:Help:Contents',
+					'text' => 'Ajuda',
+					'id' => 'help',
+				]
+			],
 			'enwiki' => [
 				[
 					'title' => 'Help:Contents',
@@ -1087,20 +1087,6 @@ function wmfGetLabsOverrideSettings() {
 					'title' => '위키백과:도움말',
 					'text' => '도움말',
 					'id' => 'example',
-				]
-			],
-			'cawiki' => [
-				[
-					'title' => 'mw:Help:Contents',
-					'text' => 'Ajuda',
-					'id' => 'help',
-				]
-			],
-			'arwiki' => [
-				[
-					'title' => 'mw:Help:Contents',
-					'text' => 'مساعدة',
-					'id' => 'help',
 				]
 			],
 		],
@@ -1170,14 +1156,14 @@ function wmfGetLabsOverrideSettings() {
 		],
 		'wgGEHomepageMentorsList' => [
 			'default' => '',
-			'enwiki' => 'Wikipedia:Mentors',
 			'arwiki' => 'Wikipedia:Mentors',
+			'enwiki' => 'Wikipedia:Mentors',
 			'kowiki' => '위키백과:새_사용자_경험/새_사용자_멘토',
 		],
 		'wgGEHomepageTutorialTitle' => [
 			'default' => '',
-			'enwiki' => 'Help:Getting started',
 			'arwiki' => 'Help:Tutorial',
+			'enwiki' => 'Help:Getting started',
 		],
 		'wgGEConfirmEmailEnabled' => [
 			'default' => true,
