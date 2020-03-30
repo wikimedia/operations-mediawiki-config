@@ -9,6 +9,7 @@ inheritsFrom:
   - cirrussearch-big-indices
   - flaggedrevs
   - gettingstarted-with-category-suggestions
+  - growthexperiments
   - large
   # To be removed by end of 2020
   - mobilemainpagelegacy
