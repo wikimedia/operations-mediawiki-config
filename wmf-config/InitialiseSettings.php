@@ -20563,7 +20563,6 @@ function wmfGetVariantSettings() {
 	"lowiki" => true,
 	"lrcwiki" => true,
 	"ltgwiki" => true,
-	"ltwiki" => true,
 	"maiwiki" => true,
 	"map_bmswiki" => true,
 	"mdfwiki" => true,
