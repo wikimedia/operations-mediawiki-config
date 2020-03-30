@@ -14241,6 +14241,12 @@ function wmfGetVariantSettings() {
 		106 => 'noindex,follow',
 		107 => 'noindex,follow',
 	],
+	'srwiki' => [
+		NS_USER => 'noindex,follow', // T248860
+		NS_USER_TALK => 'noindex,follow', // T248860
+		118 => 'noindex,nofollow', // draft, T248860
+		119 => 'noindex,nofollow', // draft talk, T248860
+	],
 	'thwiki' => [
 		NS_TALK => 'noindex,follow',
 		NS_USER => 'noindex,follow',
