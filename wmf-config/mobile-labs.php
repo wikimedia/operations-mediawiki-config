@@ -1,9 +1,6 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-// T114552 - important that it's different to avoid confusion of login screen with production.
-$wgMobileFrontendLogo = $wmgSiteLogo1x;
-
 // T49647
 $wgHooks['EnterMobileMode'][] = function () {
 	global $wgCentralAuthCookieDomain, $wgHooks;

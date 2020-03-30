@@ -4,11 +4,6 @@
 if ( $wmgMobileFrontend ) {
 	wfLoadExtension( 'MobileFrontend' );
 
-	// Backwards-compatbility ahead of MobileFrontend reading this from core; once that's done, remove.
-	if ( isset( $wgLogos[ 'icon' ] ) ) {
-		$wgMobileFrontendLogo = $wgLogos[ 'icon' ];
-	}
-
 	// Load skin
 	if ( $wmgMinervaNeue ) {
 		wfLoadSkin( 'MinervaNeue' );
