@@ -2672,12 +2672,6 @@ function wmfGetVariantSettings() {
 			'width' => 106,
 			'height' => 21,
 		],
-	'eswikivoyage' => [
-		// Intentionally not setting 'wordmark' and instead falling back to text.
-	],
-	'fawikivoyage' => [
-		// Intentionally not setting 'wordmark' and instead falling back to text.
-	],
 	'hewikivoyage' => [ // T234278
 			'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-he.svg',
 			'width' => 96,
@@ -2688,9 +2682,6 @@ function wmfGetVariantSettings() {
 			'width' => 88,
 			'height' => 21,
 		],
-	'zhwikivoyage' => [
-		// Intentionally not setting 'wordmark' and instead falling back to text.
-	],
 
 	// Chapter and local user group wikis
 
