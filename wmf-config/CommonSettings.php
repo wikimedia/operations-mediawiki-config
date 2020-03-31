@@ -3269,6 +3269,9 @@ if ( $wmgUseRevisionSlider ) {
 if ( $wmgUseTwoColConflict ) {
 	wfLoadExtension( 'TwoColConflict' );
 	$wgTwoColConflictBetaFeature = $wmgTwoColConflictBetaFeature;
+
+	// Disable talk page workflow while until we're ready to release (T230231)
+	$wgTwoColConflictSuggestResolution = false;
 }
 
 if ( $wmgUseUserMerge ) {
