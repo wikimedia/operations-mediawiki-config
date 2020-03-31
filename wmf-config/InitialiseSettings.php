@@ -2750,7 +2750,6 @@ function wmfGetVariantSettings() {
 	'zhwikinews' => false,
 
 	// Other individual wikis
-	'azbwiki' => false, // T106305
 	'enwikiquote' => false, // http://en.wikiquote.org/wiki/Wikiquote_talk:Image_use_policy
 	'eswiki' => false, // T8408
 	'eswikibooks' => false, // T20865
@@ -2828,7 +2827,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => '/wiki/ويكيبيديا:رفع', // T142450
 	'aswiki' => '/wiki/ৱিকিপিডিয়া:ফাইল_আপল’ড_বিশেষজ্ঞ',
 	'azwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=az', // T236307
-	'azbwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=azb', // T106305
+	'azbwiki' => '/wiki/ویکی‌پدیا:یوکله‌مه', // T248971
 	'bgwiki' => '/wiki/MediaWiki:Uploadtext', // T16836
 	'bnwiki' => '/wiki/উইকিপিডিয়া:আপলোড',
 	'bswiki' => '/wiki/Wikipedia:Upload', // T14044
