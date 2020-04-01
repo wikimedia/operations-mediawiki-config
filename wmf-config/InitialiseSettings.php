@@ -21860,7 +21860,6 @@ function wmfGetVariantSettings() {
 'wmgUseWikibaseQuality' => [
 	'default' => false,
 	'wikidata' => true,
-	'commonswiki' => true,
 ],
 
 'wgWBQualityConstraintsEnableConstraintsCheckJobs' => [
@@ -21881,7 +21880,6 @@ function wmfGetVariantSettings() {
 'wgWBQualityConstraintsSparqlMaxMillis' => [
 	'default' => 10000,
 	'wikidatawiki' => 5000, // limit SPARQL queries to just 5 seconds for now
-	'commonswiki' => 5000,
 ],
 
 'wgWBQualityConstraintsSparqlHasWikibaseSupport' => [
@@ -21891,34 +21889,29 @@ function wmfGetVariantSettings() {
 'wgWBQualityConstraintsTypeCheckMaxEntities' => [
 	'default' => 1000,
 	'wikidatawiki' => 150,
-	'commonswiki' => 150,
 ],
 
 'wgWBQualityConstraintsPropertyConstraintId' => [
 	'default' => false,
 	'testwikidatawiki' => 'P51064',
 	'wikidatawiki' => 'P2302',
-	'commonswiki' => 'P2302',
 ],
 
 'wgWBQualityConstraintsFormatConstraintId' => [
 	'default' => false,
 	'testwikidatawiki' => 'Q100086',
 	'wikidatawiki' => 'Q21502404',
-	'commonswiki' => 'Q21502404',
 ],
 
 'wgWBQualityConstraintsFormatAsARegularExpressionId' => [
 	'default' => false,
 	'testwikidatawiki' => 'P51065',
 	'wikidatawiki' => 'P1793',
-	'commonswiki' => 'P1793',
 ],
 
 'wgWBQualityConstraintsPropertiesWithViolatingQualifiers' => [
 	'default' => [],
 	'wikidatawiki' => [ 'P1855', 'P2271', 'P5192', 'P5193', 'P5977', 'P6685' ], // T183267 T227865
-	'commonswiki' => [ 'P1855', 'P2271', 'P5192', 'P5193', 'P5977', 'P6685' ],
 ],
 
 'wgWBQualityConstraintsInstanceOfId' => [
@@ -22230,7 +22223,6 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'testwikidatawiki' => true,
 	'wikidatawiki' => true,
-	'commonswiki' => true,
 ],
 
 'wmgUseWikibaseLexeme' => [
