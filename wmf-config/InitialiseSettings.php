@@ -25682,16 +25682,12 @@ function wmfGetVariantSettings() {
 	'default' => 60,
 ],
 
-// Temporary feature flag. T240736.
+// Temporary feature flag. T242406.
 'wgAllowRequiringEmailForResets' => [
-	'default' => false,
-	'test2wiki' => true,
-	'testcommonswiki' => true,
-	'testwiki' => true,
-	'testwikidatawiki' => true,
-	'wikivoyage' => true,
-	'wiktionary' => true,
+	'default' => true,
+	'wikipedia' => false,
 ],
+
 'wgGlobalRenameBlacklist' => [
 	'default' => 'https://meta.wikimedia.org/w/index.php?title=Global_rename_blacklist&action=raw'
 ],
