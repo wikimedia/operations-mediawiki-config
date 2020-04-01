@@ -25364,10 +25364,6 @@ function wmfGetVariantSettings() {
 
 'wgGEHomepageSuggestedEditsRequiresOptIn' => [
 	'default' => false,
-	'euwiki' => true, // Not configured yet
-	'huwiki' => true,
-	'hywiki' => true,
-	'ukwiki' => true,
 ],
 
 'wgGEHomepageSuggestedEditsEnableTopics' => [
@@ -25376,7 +25372,6 @@ function wmfGetVariantSettings() {
 
 'wgGEHomepageSuggestedEditsTopicsRequiresOptIn' => [
 	'default' => false,
-	'euwiki' => true,
 ],
 
 'wgGENewcomerTasksConfigTitle' => [
@@ -25417,6 +25412,18 @@ function wmfGetVariantSettings() {
 		'create' => 'Nápověda:Jak vytvořit článek',
 		'image' => 'Nápověda:Obrázky ve Vizuálním editoru',
 	],
+	'euwiki' => [
+		'create' => 'Laguntza:Sarrera berriak',
+		'image' => 'Laguntza:Irudiak',
+	],
+	'huwiki' => [
+		'create' => 'Wikipédia:Hogyan lehet új lapot írni?',
+		'image' => 'Wikipédia:Képek használata',
+	],
+	'hywiki' => [
+		'create' => 'Վիքիպեդիա:Հոդվածի ստեղծում',
+		'image' => 'Վիքիպեդիա:Պատկերազարդում',
+	],
 	'kowiki' => [
 		'create' => '위키백과:새 문서 만들기',
 		'image' => '도움말:그림 사용하기',
@@ -25424,6 +25431,10 @@ function wmfGetVariantSettings() {
 	'srwiki' => [
 		'create' => 'Википедија:Креирање чланака',
 		'image' => 'Википедија:Упутства/Слике',
+	],
+	'ukwiki' => [
+		'create' => 'Довідка:Створення нової статті',
+		'image' => 'Довідка:Як працювати із зображеннями у Візуальному редакторі/1',
 	],
 	'viwiki' => [
 		'create' => 'Wikipedia:Bài viết đầu tiên của bạn',
