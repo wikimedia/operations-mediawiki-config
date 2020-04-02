@@ -3509,7 +3509,7 @@ function wmfGetVariantSettings() {
 	'searchcomwiki' => 'Search Committee',
 	'shnwiki' => 'ဝီႇၶီႇၽီးတီးယႃး',
 	'shywiktionary' => 'Wikasegzawal',
-	'siwiki' => 'විකිපීඩියා, නිදහස් විශ්වකෝෂය',
+	'siwiki' => 'විකිපීඩියා',
 	'skwiki' => 'Wikipédia',
 	'skwikibooks' => 'Wikiknihy',
 	'skwikiquote' => 'Wikicitáty',

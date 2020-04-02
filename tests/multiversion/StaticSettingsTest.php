@@ -276,6 +276,13 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 		}
 	}
 
+	public function testwgSitename() {
+		foreach ( $this->variantSettings['wgSitename'] as $db => $entry ) {
+			// Test that the string doesn't contain invalid charcters T249014
+			$this->assertFalse( strpos( $entry, ',' ), "wgSitename for $db contains a ',' which breaks e-mails" );
+		}
+	}
+
 	public function testOnlyExistingWikis() {
 		$dblistNames = array_keys( DBList::getLists() );
 		$langs = file( __DIR__ . "/../../langlist", FILE_IGNORE_NEW_LINES );
