@@ -26148,7 +26148,6 @@ function wmfGetVariantSettings() {
 // Temporary feature flag. T242406.
 'wgAllowRequiringEmailForResets' => [
 	'default' => true,
-	'wikipedia' => false,
 ],
 
 'wgGlobalRenameBlacklist' => [
