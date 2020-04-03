@@ -256,6 +256,7 @@ if ( PHP_SAPI === 'cli' ) {
 if ( XWikimediaDebug::getInstance()->hasOption( 'readonly' ) ) {
 	$wgReadOnly = 'X-Wikimedia-Debug';
 }
+$wgAllowedCorsHeaders[] = 'X-Wikimedia-Debug';
 
 if ( $wmfRealm === 'labs' ) {
 	require "$wmfConfigDir/db-labs.php";
