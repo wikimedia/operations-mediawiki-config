@@ -21061,7 +21061,6 @@ function wmfGetVariantSettings() {
 		'sje' => 'bidumsámegiella', // T146707
 		'sju' => 'ubmejesámiengiälla', // T226701
 		'smj' => 'julevsámegiella', // T146707
-		'smn' => 'anarâškielâ', // T220118
 		'sms' => 'nuõrttsääʹmǩiõll', // T220118, T223544
 		'srq' => 'mbia cheë', // T113408
 	],
@@ -21076,7 +21075,6 @@ function wmfGetVariantSettings() {
 		'sje' => 'bidumsámegiella', // T230480
 		'sju' => 'ubmejesámiengiälla', // T226701
 		'smj' => 'julevsámegiella', // T230480
-		'smn' => 'anarâškielâ',	// T222309
 		'sms' => 'sääʹmǩiõll', // T222309
 		'srq' => 'mbia cheë', // T230480
 	],
