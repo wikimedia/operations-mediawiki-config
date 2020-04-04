@@ -3,6 +3,7 @@
 
 // phpcs:disable MediaWiki.Classes.UnsortedUseStatements.UnsortedUse
 use MediaWiki\Logger\LoggerFactory;
+use MediaWiki\MediaWikiServices;
 
 wfLoadExtension( 'LdapAuthentication' );
 $wgAuthManagerAutoConfig['primaryauth'] += [
@@ -106,7 +107,8 @@ $wgHTCPRouting = [
 $wgHooks['BlockIpComplete'][] = function ( $block, $performer, $priorBlock ) {
 	global $wgBlockDisablesLogin;
 	if ( $wgBlockDisablesLogin && $block->getTarget() instanceof User && $block->getExpiry() === 'infinity' && $block->isSitewide() ) {
-		MediaWiki\Auth\AuthManager::singleton()->revokeAccessForUser( $block->getTarget()->getName() );
+		MediaWikiServices::getInstance()->getAuthManager()
+			->revokeAccessForUser( $block->getTarget()->getName() );
 	}
 };
 
