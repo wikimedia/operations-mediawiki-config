@@ -18145,16 +18145,11 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
-'wmgMinervaNeue' => [
-	'default' => true,
-],
 'wmgUseMobileApp' => [
 	'default' => true,
 	'wikitech' => false,
 ],
-'wmgMobileFrontend' => [
-	'default' => true,
-],
+
 'wgMFQueryPropModules' => [
 	// workaround for T125672
 	'default' => [ 'pageprops' ],
