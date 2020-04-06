@@ -30,7 +30,6 @@ mwconfig_files_txt=(
 	mc.php
 	mc-labs.php
 	missing.php
-	mobile.php
 	redis.php
 	throttle.php
 	throttle-analyze.php
