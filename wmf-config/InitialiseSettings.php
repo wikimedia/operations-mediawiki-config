@@ -11851,6 +11851,10 @@ function wmfGetVariantSettings() {
 			'patrol' => true,
 		], // T116270
 	],
+	'+yowiki' => [
+		'accountcreator' => [ 'noratelimit' => true, ], // T249487
+		'rollbacker' => [ 'rollbacker' => true, ], // T249487
+	],
 	// due to mass vandalism complaint, 2006-04-11
 	'+zhwiki' => [
 		'rollbacker' => [
@@ -12808,6 +12812,9 @@ function wmfGetVariantSettings() {
 	'+wuuwiki' => [
 		'sysop' => [ 'rollbacker' ],
 	],
+	'+yowiki' => [
+		'sysop' => [ 'accountcreator', 'rollbacker', ], // T249487
+	],
 	'+zhwiki' => [
 		'accountcreator' => [ 'eventparticipant' ], // T198167
 		'bureaucrat' => [ 'flood' ],
@@ -13616,6 +13623,9 @@ function wmfGetVariantSettings() {
 	],
 	'+wuuwiki' => [
 		'sysop' => [ 'rollbacker' ],
+	],
+	'+yowiki' => [
+		'sysop' => [ 'accountcreator', 'rollbacker', ], // T249487
 	],
 	'+zhwiki' => [
 		'accountcreator' => [ 'eventparticipant' ], // T198167
