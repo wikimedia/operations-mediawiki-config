@@ -11853,7 +11853,7 @@ function wmfGetVariantSettings() {
 	],
 	'+yowiki' => [
 		'accountcreator' => [ 'noratelimit' => true, ], // T249487
-		'rollbacker' => [ 'rollbacker' => true, ], // T249487
+		'rollbacker' => [ 'rollback' => true, ], // T249487
 	],
 	// due to mass vandalism complaint, 2006-04-11
 	'+zhwiki' => [
