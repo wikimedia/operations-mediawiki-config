@@ -47,7 +47,3 @@ $wgMFStripResponsiveImages = true;
 if ( $wmgMFDefaultEditor ) {
 	$wgMFDefaultEditor = $wmgMFDefaultEditor;
 }
-
-if ( $wmfRealm === 'labs' ) {
-	require_once __DIR__ . '/mobile-labs.php';
-}
