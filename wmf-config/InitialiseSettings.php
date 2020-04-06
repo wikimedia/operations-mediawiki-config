@@ -25436,6 +25436,7 @@ function wmfGetVariantSettings() {
 		'Q3010', // boy
 		'Q3031', // girl
 		'Q8441', // man
+		'Q1378024', //lady
 
 		// colors
 		'Q1088', // blue
@@ -25449,6 +25450,8 @@ function wmfGetVariantSettings() {
 		'Q23444', // white
 		'Q42519', // gray
 		'Q47071', // brown
+		'Q843607', //beige
+		'Q10296772', //carmine
 
 		// adjectives
 		'Q48997611', // vintage
@@ -25466,6 +25469,37 @@ function wmfGetVariantSettings() {
 		'Q696160', // psychedelic art
 		'Q7239', // organism
 		'Q638', // music
+		'Q11634', // art of sculpture
+		'Q11629', // art of painting
+		'Q16502', // world
+		'Q1792644', // art style
+		'Q1190554', // occurrence
+		'Q295469', // ecoregion
+		'Q1049799', // water resource
+		'Q334166', // mode of transport
+		'Q42889', // vehicle
+		'Q82821', // tradition
+		'Q7242', // beauty
+		'Q3248864', // Terrestrial animal
+		'Q53875', // parallelism
+		'Q37073', // pop music
+		'Q205398', // social work
+		'Q101998', // biome
+		'Q255274', // white collar worker
+		'Q2262382', // masai lion
+		'Q721221', // serpent
+		'Q1634416', // stock photography
+		'Q1395149', // demonstration
+		'Q327968', // facial expression
+		'Q12554', // Middle Ages
+		'Q41055', // forehead
+		'Q83180', // roof
+		'Q167510', // bitumen
+		'Q2472587', // people
+		'Q43619', // natural environment
+		'Q309', // history
+		'Q11016', // technology
+		'Q1172903', // loch
 	],
 ],
 
