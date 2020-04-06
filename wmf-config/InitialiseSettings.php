@@ -21482,15 +21482,6 @@ function wmfGetVariantSettings() {
 			'entityNamespaces' => [ 'item' => 0, 'property' => 120 ]
 		],
 	],
-	'testcommonswiki' => [
-		'd' => [
-			'repoDatabase' => 'wikidatawiki',
-			'baseUri' => 'http://www.wikidata.org/entity/',
-			'supportedEntityTypes' => [ 'item', 'property' ],
-			'prefixMapping' => [],
-			'entityNamespaces' => [ 'item' => 0, 'property' => 120 ]
-		],
-	],
 ],
 
 'wmgWikibaseRepoEnableRefTabs' => [
@@ -21519,40 +21510,6 @@ function wmfGetVariantSettings() {
 			'prefixMapping' => [
 				'' => '',
 			],
-		],
-	],
-	'wikidataclient-test' => [
-		'' => [
-			'repoDatabase' => 'testwikidatawiki',
-			'baseUri' => 'http://test.wikidata.org/entity/',
-			'entityNamespaces' => [
-				'item' => 0,
-				'property' => 120,
-				'lexeme' => 146,
-			],
-			'prefixMapping' => [
-				'' => '',
-			],
-		],
-	],
-	'testcommonswiki' => [
-		'' => [
-			'repoDatabase' => 'testwikidatawiki',
-			'baseUri' => 'http://test.wikidata.org/entity/',
-			'entityNamespaces' => [
-				'item' => 0,
-				'property' => 120,
-				'lexeme' => 146,
-			],
-			'prefixMapping' => [
-				'' => '',
-			],
-		],
-		'commons' => [
-			'repoDatabase' => 'testcommonswiki',
-			'entityNamespaces' => [ 'mediainfo' => '6/mediainfo' ],
-			'baseUri' => 'https://test-commons.wikimedia.org/wiki/Special:EntityData/',
-			'prefixMapping' => [],
 		],
 	],
 	'commonswiki' => [
