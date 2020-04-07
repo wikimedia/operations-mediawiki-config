@@ -326,8 +326,12 @@ $wgExtensionFunctions[] = function () {
 		$wgGroupPermissions['sysop']['validate'] = true;
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
 
-		# Remove all user groups (editor, reviewer, autoreview)
-		unset( $wgGroupPermissions['editor'], $wgGroupPermissions['reviewer'], $wgGroupPermissions['autoreview'] );
+		# Use 'reviewer' group (T249643)
+		$wgAddGroups['sysop'][] = 'reviewer';
+		$wgRemoveGroups['sysop'][] = 'reviewer';
+
+		# Remove editor and autoreview user groups (T249643)
+		unset( $wgGroupPermissions['editor'], $wgGroupPermissions['autoreview'] );
 	} elseif ( $wgDBname == 'fawikinews' ) {
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 		$wgFlaggedRevsNamespaces[] = 100;
