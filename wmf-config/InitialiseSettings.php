@@ -22493,7 +22493,7 @@ function wmfGetVariantSettings() {
 				'property' => 120,
 				'lexeme' => 146,
 			],
-			'repoDatabase' => 'testwikidata',
+			'repoDatabase' => 'testwikidatawiki',
 			'baseUri' => 'http://test.wikidata.org/entity/',
 			'rdfNodeNamespacePrefix' => 'wd',
 			'rdfPredicateNamespacePrefix' => '',
