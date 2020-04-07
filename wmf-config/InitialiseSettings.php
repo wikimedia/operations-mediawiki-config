@@ -20671,7 +20671,6 @@ function wmfGetVariantSettings() {
 	"simplewiki" => true,
 	"siwiki" => true,
 	"skwiki" => true,
-	"slwiki" => true,
 	"smwiki" => true,
 	"snwiki" => true,
 	"sowiki" => true,
