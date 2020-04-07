@@ -169,7 +169,7 @@ function wmfGetLabsOverrideSettings() {
 			],
 		],
 
-		// Additional log channels for beta cluster
+		// Log channels for beta cluster
 		'-wmgMonologChannels' => [
 			'default' => [
 				'api-request' => [
@@ -192,6 +192,7 @@ function wmfGetLabsOverrideSettings() {
 				'dnsblacklist' => 'debug',
 				'EventBus' => 'debug',
 				'JobExecutor' => [ 'logstash' => 'debug' ],
+				'MassMessage' => 'debug',
 				'MessageCache' => 'debug',
 				'runJobs' => [ 'logstash' => 'info' ],
 				'squid' => 'debug',
