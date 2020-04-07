@@ -3455,7 +3455,7 @@ if ( $wmgUseWikibaseClient ) {
 	$wgHooks['RejectParserCacheValue'][] = function ( $value, WikiPage $wikiPage, $popts ) {
 		$cachedTime = $value->getCacheTime();
 		$incidentStartTime = '20200406230000';
-		$windowRestrictionTime = '20200407090000'; // Window size of 10 hours
+		$windowRestrictionTime = '20200407110000'; // Window size of 12 hours
 		$incidentFullRestoreTime = '20200407133000';
 		if (
 			$wikiPage->getContentModel() === CONTENT_MODEL_WIKITEXT &&
