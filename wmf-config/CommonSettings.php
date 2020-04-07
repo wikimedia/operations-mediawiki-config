@@ -3448,6 +3448,30 @@ if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient || $wmgUseWikibaseMediaInfo ) 
 	include "$wmfConfigDir/Wikibase.php";
 }
 
+// T249565 & T249595 Reject parser cache for entries during the wb_items_per_site drop incident.
+// Run on all wikis that have WikibaseClient enabled
+// This does restrict to wikitext content pages as these should be the only concern.
+// This does restrict to namespaces that are not excluded from WikibaseClient functionality
+// This needs to be included below Wikibase.php to use $wgWBClientSettings
+if ( $wmgUseWikibaseClient ) {
+	$wgHooks['RejectParserCacheValue'][] = function ( $value, WikiPage $wikiPage, $popts ) {
+		$cachedTime = $value->getCacheTime();
+		$incidentStartTime = '20200406230000';
+		$windowRestrictionTime = '20200407000000'; // Window size of 1 hour
+		$incidentFullRestoreTime = '20200407133000';
+		if (
+			$wikiPage->getContentModel() === CONTENT_MODEL_WIKITEXT &&
+			$cachedTime > $incidentStartTime &&
+			$cachedTime < $incidentFullRestoreTime &&
+			$cachedTime < $windowRestrictionTime &&
+			!in_array( $wikiPage->getTitle()->getNamespace(), $wgWBClientSettings['excludeNamespaces']() )
+		) {
+			return false;
+		}
+		return true;
+	};
+}
+
 // Turn off exact search match redirects
 if ( $wmgDoNotRedirectOnSearchMatch ) {
 	$wgSearchMatchRedirectPreference = true;
