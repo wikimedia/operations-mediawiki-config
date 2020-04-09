@@ -18332,13 +18332,6 @@ function wmfGetVariantSettings() {
 	],
 ],
 
-'wgMFPhotoUploadEndpoint' => [
-	'default' => '//commons.m.wikimedia.org/w/api.php',
-	'commonswiki' => '', // T47256
-	'test2wiki' => '',
-	'private' => '',
-	'fishbowl' => '',
-],
 // T169001
 'wgMFLogWrappedInfoboxes' => [
 	'default' => false,
@@ -18346,18 +18339,6 @@ function wmfGetVariantSettings() {
 ],
 'wgMFNearby' => [
 	'default' => true, // Does not gets enabled on wikis w/o GeoData anyway
-],
-
-// T190101
-'wgMFMobileMainPageCss' => [
-	'default' => false,
-	'hiwiki' => true,
-	'ruwiki' => true, // T195905
-],
-
-'wgMFPhotoUploadWiki' => [
-	'default' => 'commonswiki',
-	'test2wiki' => '',
 ],
 
 // Enable X-Analytics logging
