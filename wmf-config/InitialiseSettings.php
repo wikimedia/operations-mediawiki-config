@@ -6319,6 +6319,7 @@ function wmfGetVariantSettings() {
 	'frwiki' => [ '', 'autoconfirmed', 'editextendedsemiprotected', 'sysop' ], // T131109
 	'hewiki' => [ '', 'autoconfirmed', 'editautopatrolprotected',  'templateeditor' /* T102466 */, 'sysop' ], // T60207
 	'huwiki' => [ '', 'autoconfirmed', 'edittrustedprotected', 'templateeditor', 'sysop' ], // T74055, T194568
+	'jawiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T249820
 	'kowiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T184675
 	'lvwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T92645
 	'plwiki' => [ '', 'autoconfirmed', 'editeditorprotected', 'sysop' ], // T48990
@@ -6345,6 +6346,7 @@ function wmfGetVariantSettings() {
 	'+enwiki' => [ 'extendedconfirmed' ], // T126607
 	'+fawiki' => [ 'extendedconfirmed' ], // T140839
 	'+frwiki' => [ 'editextendedsemiprotected' ], // T132248
+	'+jawiki' => [ 'extendedconfirmed' ], // T249820
 	'+kowiki' => [ 'extendedconfirmed' ], // T184675
 	'+viwiki' => [ 'extendedconfirmed' ], // T215493
 ],
@@ -10750,7 +10752,11 @@ function wmfGetVariantSettings() {
 			'editsemiprotected' => true,
 			'ipblock-exempt' => true,
 			'suppressredirect' => true,
+			'extendedconfirmed' => true, // T249820
 		],
+		'sysop' => [ 'extendedconfirmed' => true ], // T249820
+		'bot' => [ 'extendedconfirmed' => true ], // T249820
+		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T249820
 	],
 	'+jawiktionary' => [
 		'autopatrolled' => [
@@ -12477,7 +12483,10 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'autopatrolled', 'patroller', 'flood', 'accountcreator' ], // T114930, T158062
 	],
 	'+jawiki' => [
-		'sysop' => [ 'abusefilter' ],
+		'sysop' => [
+			'abusefilter',
+			'extendedconfirmed' // T249820
+		],
 		'bureaucrat' => [ 'rollbacker', 'eliminator' ],
 	],
 	'+jawiktionary' => [
@@ -13271,7 +13280,10 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'autopatrolled', 'patroller', 'flood', 'accountcreator' ], // T114930, T158062
 	],
 	'+jawiki' => [
-		'sysop' => [ 'abusefilter' ],
+		'sysop' => [
+			'abusefilter',
+			'extendedconfirmed' // T249820
+		],
 		'bureaucrat' => [ 'rollbacker', 'eliminator' ],
 	],
 	'+jawiktionary' => [
@@ -14896,6 +14908,15 @@ function wmfGetVariantSettings() {
 			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
 			[ '!', [ APCOND_INGROUPS, 'eliminator' ] ],
 		], // T140839
+	],
+	'jawiki' => [
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 120 * 86400 ], // 120 days * seconds in a day
+			[ '!', [ APCOND_INGROUPS, 'interface-admin' ] ],
+			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+		], // T249820
 	],
 	'kowiki' => [
 		'extendedconfirmed' => [ '&',
