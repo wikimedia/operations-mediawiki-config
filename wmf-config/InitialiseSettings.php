@@ -25618,8 +25618,22 @@ function wmfGetVariantSettings() {
 		'Q23444', // white
 		'Q42519', // gray
 		'Q47071', // brown
-		'Q843607', //beige
-		'Q10296772', //carmine
+		'Q843607', // beige
+		'Q10296772', // carmine
+		'Q373058', // Azure
+		'Q317802', // silver
+		'Q1670336', // tan
+		'Q2778382', // bronze
+		'Q208045', // gold
+		'Q1078214', // teal
+		'Q906936', // lime
+		'Q543923', // rust
+		'Q2015138', // salmon
+		'Q2268159', // scarlet
+		'Q767608', // sepia
+		'Q3518540', // terra cotta
+		'Q5960345', // turquoise
+		'Q3014419', // wine
 
 		// adjectives
 		'Q48997611', // vintage
@@ -25662,6 +25676,14 @@ function wmfGetVariantSettings() {
 		'Q309', // history
 		'Q11016', // technology
 		'Q1172903', // loch
+		'Q165848', // wind wave
+
+		// time oriented terms
+		'Q1187312', // yesterday
+		'Q988377', // day before yesterday
+		'Q1036448', // day after tomorrow
+		'Q1209716', // tomorrow
+		'Q3151690', // today
 	],
 ],
 
