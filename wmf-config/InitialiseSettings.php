@@ -25606,13 +25606,6 @@ function wmfGetVariantSettings() {
 
 'wgMachineVisionWikidataIdBlacklist' => [
 	'default' => [
-		// gender
-		'Q467', // woman
-		'Q3010', // boy
-		'Q3031', // girl
-		'Q8441', // man
-		'Q1378024', //lady
-
 		// colors
 		'Q1088', // blue
 		'Q23445', // black
@@ -25654,27 +25647,70 @@ function wmfGetVariantSettings() {
 		'Q334166', // mode of transport
 		'Q42889', // vehicle
 		'Q82821', // tradition
-		'Q7242', // beauty
 		'Q3248864', // Terrestrial animal
 		'Q53875', // parallelism
 		'Q37073', // pop music
-		'Q205398', // social work
 		'Q101998', // biome
-		'Q255274', // white collar worker
 		'Q2262382', // masai lion
 		'Q721221', // serpent
 		'Q1634416', // stock photography
 		'Q1395149', // demonstration
-		'Q327968', // facial expression
 		'Q12554', // Middle Ages
-		'Q41055', // forehead
 		'Q83180', // roof
 		'Q167510', // bitumen
-		'Q2472587', // people
 		'Q43619', // natural environment
 		'Q309', // history
 		'Q11016', // technology
 		'Q1172903', // loch
+	],
+],
+
+'wgMachineVisionWithholdImageList' => [
+	'default' => [
+		'Q467', // woman
+		'Q3010', // boy
+		'Q3031', // girl
+		'Q8441', // man
+		'Q1378024', // lady
+		'Q255274', // white collar worker
+		'Q327968', // facial expression
+		'Q41055', // forehead
+		'Q2472587', // people
+		'Q1155908', // elder
+		'Q15173', // lip
+		'Q82714', // chin
+		'Q1886338', // makeover
+		'Q3080415', // Jheri curl
+		'Q170579', // laughter
+		'Q28472', // hair
+		'Q327496', // hairstyle
+		'Q371174', // gesture
+		'Q82714', // chin
+		'Q9633', // neck
+		'Q1886338', // Makeover
+		'Q1922956', // black hair
+		'Q1255864', // fun
+		'Q14130', // long hair
+		'Q202466', // blond hair
+		'Q327496', // hairstyle
+		'Q37017', // face
+		'Q43748', // eyebrow
+		'Q1190554', // occurrence
+		'Q82821', // tradition
+		'Q182832', // concert
+		'Q132241', // festival
+		'Q349', // sport
+		'Q2755547', // individual sport
+		'Q874405', // social group
+		'Q327245', // team
+		'Q12068677', // selfie
+		'Q23640', // head
+		'Q83360', // thumb
+		'Q36864', // nail
+		'Q33767', // hand
+		'Q319604', // passenger
+		'Q205398', // social work
+		'Q7242', // beauty
 	],
 ],
 

@@ -1745,44 +1745,6 @@ function wmfGetLabsOverrideSettings() {
 		'wgMachineVisionRequestLabelsFromWikidataPublicApi' => [
 			'default' => true,
 		],
-		'wgMachineVisionWithholdImageList' => [
-			'default' => [
-				'Q467', // woman
-				'Q3010', // boy
-				'Q3031', // girl
-				'Q8441', // man
-				'Q1378024', // lady
-				'Q255274', // white collar worker
-				'Q327968', // facial expression
-				'Q41055', // forehead
-				'Q2472587', // people
-				'Q1155908', // elder
-				'Q15173', // lip
-				'Q82714', // chin
-				'Q1886338', // makeover
-				'Q3080415', // Jheri curl
-				'Q170579', // laughter
-				'Q28472', // hair
-				'Q327496', // hairstyle
-				'Q371174', // gesture
-				'Q82714', // chin
-				'Q9633', // neck
-				'Q1886338', // Makeover
-				'Q1922956', // black hair
-				'Q1255864', // fun
-				'Q14130', // long hair
-				'Q202466', // blond hair
-				'Q327496', // hairstyle
-				'Q37017', // face
-				'Q43748', // eyebrow
-				'Q1190554', // occurrence
-				'Q82821', // tradition
-				'Q182832', // concert
-				'Q132241', // festival
-				'Q349', //sport
-				'Q2755547', //individual sport
-			],
-		],
 		'-wgSpecialSearchFormOptions' => [
 			'wikidatawiki' => [ 'showDescriptions' => true ],
 		],
