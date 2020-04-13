@@ -25733,6 +25733,16 @@ function wmfGetVariantSettings() {
 		'Q319604', // passenger
 		'Q205398', // social work
 		'Q7242', // beauty
+		'Q12684', // fashion
+		'Q749212', // gentleman
+		'Q639669', // musician
+		'Q184485', // performing arts
+		'Q855091', // guitarist
+		'Q159992', // surfing
+		'Q2021379', // wakesurfing
+		'Q911069', // boardsport
+		'Q8037570', // wrangler
+		'Q273283', // beggar
 	],
 ],
 
