@@ -12,7 +12,7 @@
 # on UDP port 4827.
 
 $wgCdnServersNoPurge = [ '127.0.0.1',
-	'172.16.4.21',  # deployment-cache-text04
+	'172.16.1.181',  # deployment-cache-text06
 	'172.16.5.14',  # deployment-cache-upload04
 ];
 
@@ -25,7 +25,7 @@ $wgHTCPRouting = [
 	# Fallback  (text)
 	'' => [
 		[
-			'host' => '172.16.4.21',  # deployment-cache-text04
+			'host' => '172.16.1.181',  # deployment-cache-text06
 			'port' => 4827,
 		],
 	],
