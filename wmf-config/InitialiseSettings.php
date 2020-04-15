@@ -25018,7 +25018,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => ' ويكيبيديا:فريق_المساعدة/طلبات',
 	'cswiki' => 'Wikipedie:Potřebuji_pomoc',
 	'euwiki' => 'Wikipedia:Txokoa',
-	'frwiktionary' => 'Wiktionnaire:Entraide',
+	'frwiktionary' => 'Wiktionnaire:Entraide/{{#time:F Y}}',
 	'huwiki' => 'Wikipédia:Kocsmafal (kezdőknek)',
 	'hywiki' => 'Վիքիպեդիա:Հարցեր',
 	'kowiki' => '위키백과:질문방/{{Y-M|0}}',
