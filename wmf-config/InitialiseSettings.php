@@ -22566,7 +22566,7 @@ function wmfGetVariantSettings() {
 				'property' => 120,
 				'lexeme' => 146,
 			],
-			'repoDatabase' => 'testwikidatawiki',
+			'repoDatabase' => false,
 			'baseUri' => 'http://test.wikidata.org/entity/',
 			'rdfNodeNamespacePrefix' => 'wd',
 			'rdfPredicateNamespacePrefix' => '',
@@ -22604,7 +22604,7 @@ function wmfGetVariantSettings() {
 			'entityNamespaces' => [
 				'mediainfo' => '6/mediainfo',
 			],
-			'repoDatabase' => 'testcommonswiki',
+			'repoDatabase' => false,
 			'baseUri' => 'https://test-commons.wikimedia.org/wiki/Special:EntityData/',
 			'rdfNodeNamespacePrefix' => 'sdc',
 			'rdfPredicateNamespacePrefix' => 'sdc',
