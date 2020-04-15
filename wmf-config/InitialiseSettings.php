@@ -21908,6 +21908,7 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'wikidata' => true,
 	'testcommonswiki' => true,
+	'commonswiki' => true,
 ],
 
 'wgWBQualityConstraintsEnableConstraintsCheckJobs' => [
@@ -21929,6 +21930,7 @@ function wmfGetVariantSettings() {
 	'default' => 10000,
 	'wikidatawiki' => 5000, // limit SPARQL queries to just 5 seconds for now
 	'testcommonswiki' => 5000,
+	'commonswiki' => 5000,
 ],
 
 'wgWBQualityConstraintsSparqlHasWikibaseSupport' => [
@@ -21939,6 +21941,7 @@ function wmfGetVariantSettings() {
 	'default' => 1000,
 	'wikidatawiki' => 150,
 	'testcommonswiki' => 150,
+	'commonswiki' => 150,
 ],
 
 'wgWBQualityConstraintsPropertyConstraintId' => [
@@ -21946,6 +21949,7 @@ function wmfGetVariantSettings() {
 	'testwikidatawiki' => 'P51064',
 	'testcommonswiki' => 'P51064',
 	'wikidatawiki' => 'P2302',
+	'commonswiki' => 'P2302',
 ],
 
 'wgWBQualityConstraintsFormatConstraintId' => [
@@ -21953,6 +21957,7 @@ function wmfGetVariantSettings() {
 	'testwikidatawiki' => 'Q100086',
 	'testcommonswiki' => 'Q100086',
 	'wikidatawiki' => 'Q21502404',
+	'commonswiki' => 'Q21502404',
 ],
 
 'wgWBQualityConstraintsFormatAsARegularExpressionId' => [
@@ -21960,6 +21965,7 @@ function wmfGetVariantSettings() {
 	'testwikidatawiki' => 'P51065',
 	'testcommonswiki' => 'P51065',
 	'wikidatawiki' => 'P1793',
+	'commonswiki' => 'P1793',
 ],
 
 'wgWBQualityConstraintsPropertiesWithViolatingQualifiers' => [
@@ -22037,6 +22043,8 @@ function wmfGetVariantSettings() {
 	'default' => 'Q21503250',
 	'testwikidatawiki' => 'Q187933',
 	'testcommonswiki' => 'Q187933',
+	'commonswiki' => 'Q999999999', // set to non-existent id so type constraints will not be
+		// checked on commons
 ],
 
 'wgWBQualityConstraintsValueTypeConstraintId' => [
