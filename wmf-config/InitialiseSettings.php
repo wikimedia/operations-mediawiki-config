@@ -9621,9 +9621,6 @@ function wmfGetVariantSettings() {
 		'*' => [ 'edit' => false, ]
 	],
 
-	'+amwikimedia' => [
-		'sysop' => [ 'translationadmin' ],
-	],
 	'+arwiki' => [
 		'autoconfirmed' => [ 'patrol' => true ],
 		'editor' => [
@@ -12883,9 +12880,6 @@ function wmfGetVariantSettings() {
 		'bureaucrat' => [ 'flow-bot', 'sysop' ], // T131037
 	],
 	// ******************************************************************
-	'+amwikimedia' => [ // T180879
-		'sysop' => [ 'translationadmin' ],
-	],
 	'+arwiki' => [
 		'bureaucrat' => [ 'import', 'reviewer', 'abusefilter' ], // T143844
 		'sysop' => [ 'uploader', 'reviewer', 'confirmed', 'rollbacker', 'abusefilter', 'patroller', 'autopatrolled', ],
