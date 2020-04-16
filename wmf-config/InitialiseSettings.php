@@ -26053,6 +26053,7 @@ function wmfGetVariantSettings() {
 'wmgDisableAccountCreation' => [
 	'default' => false,
 	'wikimaniawiki' => true,
+	'testwikidatawiki' => true,
 ],
 
 ];
