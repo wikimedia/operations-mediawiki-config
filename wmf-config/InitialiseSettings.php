@@ -20372,6 +20372,14 @@ function wmfGetVariantSettings() {
 	'nlwiki' => true,
 ],
 
+'wgDTSchemaEditAttemptStepSamplingRate' => [
+	'default' => false,
+	'arwiki' => 0.2,
+	'frwiki' => 0.2,
+	'huwiki' => 0.2,
+	'nlwiki' => 0.2,
+],
+
 'wmgUseCodeEditorForCore' => [
 	'default' => true,
 ],
