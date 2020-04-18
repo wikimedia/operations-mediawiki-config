@@ -58,7 +58,7 @@ return [
 		],
 
 		### Restbase
-		'restbase' => 'http://deployment-restbase02.deployment-prep.eqiad.wmflabs:7231',
+		'restbase' => 'http://deployment-restbase03.deployment-prep.eqiad.wmflabs:7231',
 
 		### Poolcounter
 		'poolcounter' => [
