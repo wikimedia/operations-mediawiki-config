@@ -1395,10 +1395,6 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgUseInstantCommons = true;
 }
 
-if ( $wmgUseClusterJobqueue ) {
-	$wgJobTypeConf['default'] = [ 'class' => 'JobQueueEventBus', 'readOnlyReason' => false ];
-}
-
 if ( $wgDBname === 'nostalgiawiki' ) {
 	# Link back to current version from the archive funhouse
 	if ( ( isset( $_REQUEST['title'] ) && ( $title = $_REQUEST['title'] ) )
@@ -3849,9 +3845,16 @@ if ( $wmgUseEventBus ) {
 	];
 
 	$wgRCFeeds['eventbus'] = [
-		'formatter' => 'EventBusRCFeedFormatter',
-		'class' => 'EventBusRCFeedEngine',
+		'formatter' => '\\MediaWiki\\Extension\\EventBus\\Adapters\\RCFeed\\EventBusRCFeedFormatter',
+		'class' => '\\MediaWiki\\Extension\\EventBus\\Adapters\\RCFeed\\EventBusRCFeedEngine',
 	];
+
+	if ( $wmgUseClusterJobqueue ) {
+		$wgJobTypeConf['default'] = [
+			'class' => '\\MediaWiki\\Extension\\EventBus\\Adapters\\JobQueue\\JobQueueEventBus',
+			'readOnlyReason' => false
+		];
+	}
 
 	if ( ( $_SERVER['SERVERGROUP'] ?? null ) === 'jobrunner' || ( $_SERVER['SERVERGROUP'] ?? null ) === 'videoscaler' ) {
 		$wgEventBusEnableRunJobAPI = true;

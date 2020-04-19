@@ -269,7 +269,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 		if ( !isset( $wmgMonologConfig['handlers'][$eventBusHandler] ) ) {
 			// Register handler that will only pass events of the given log level
 			$wmgMonologConfig['handlers'][$eventBusHandler] = [
-				'class' => 'EventBusMonologHandler',
+				'class' => '\\MediaWiki\\Extension\\EventBus\\Adapters\\Monolog\\EventBusMonologHandler',
 				'args' => [
 					'eventgate-analytics' // EventServiceName
 				]

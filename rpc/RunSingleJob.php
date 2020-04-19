@@ -60,7 +60,7 @@ $lbFactory = MediaWiki\MediaWikiServices::getInstance()->getDBLoadBalancerFactor
 $lbFactory->disableChronologyProtection();
 
 // check that JobExecutor has been loaded
-if ( !class_exists( 'JobExecutor' ) ) {
+if ( !class_exists( '\\MediaWiki\\Extension\\EventBus\\JobExecutor' ) ) {
 	$wgCommandLineMode = true;
 	http_response_code( 500 );
 	MWExceptionHandler::handleException(
@@ -71,7 +71,7 @@ if ( !class_exists( 'JobExecutor' ) ) {
 
 try {
 	$mediawiki = new MediaWiki();
-	$executor = new JobExecutor();
+	$executor = new MediaWiki\Extension\EventBus\JobExecutor();
 	// execute the job
 	$response = $executor->execute( $event );
 	if ( $response['status'] === true ) {
