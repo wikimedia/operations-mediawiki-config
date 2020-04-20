@@ -1814,5 +1814,10 @@ function wmfGetLabsOverrideSettings() {
 			'default' => false,
 		],
 
+		// T242855 Undeploying graphoid
+		'-wgGraphImgServiceUrl' => [
+			'default' => false,
+		],
+
 	];
 } # wmflLabsSettings()
