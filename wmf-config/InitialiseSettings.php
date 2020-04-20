@@ -16223,12 +16223,14 @@ function wmfGetVariantSettings() {
 
 'wmgTmhWebPlayer' => [
 	'default' => 'mwembed',
+	'testwiki' => 'videojs',
 	'test2wiki' => 'videojs',
 ],
 
 // Enable the Beta Feature for trying out the new video player (see also the BF whitelist)
 'wgTmhUseBetaFeatures' => [
 	'default' => true,
+	'testwiki' => false,
 	'test2wiki' => false,
 ],
 
