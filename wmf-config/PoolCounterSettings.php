@@ -51,13 +51,11 @@ $wgPoolCounterConf = [
 	// These are very expensive and incredibly common at more than 5M per hour
 	// before varnish caching. If the somehow the cache hit rate drops this
 	// protects the cluster
-	// NOTE: While traffic is redirected to the codfw cluster the morelike
-	// pool counter is dramatically increased
 	'CirrusSearch-MoreLike' => [
 		'class' => 'PoolCounter_Client',
 		'timeout' => 5,
-		'workers' => 150,
-		'maxqueue' => 400,
+		'workers' => 50,
+		'maxqueue' => 200,
 	],
 	'FileRender' => [
 		'class' => 'PoolCounter_Client',
