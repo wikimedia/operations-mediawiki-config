@@ -16359,7 +16359,6 @@ function wmfGetVariantSettings() {
 	'fawiki' => false,
 	'fiwiki' => false,
 	'hiwiki' => false,
-	'huwiki' => false,
 	'iawiki' => false,
 	'iswiktionary' => false,
 	'ptwiki' => false,
