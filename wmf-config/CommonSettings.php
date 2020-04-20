@@ -3255,6 +3255,9 @@ if ( $wmgUseTwoColConflict ) {
 
 	// Disable talk page workflow while until we're ready to release (T230231)
 	$wgTwoColConflictSuggestResolution = false;
+
+	// Enable oversampled event tracking during limited study period (T249616)
+	$wgTwoColConflictTrackingOversample = true;
 }
 
 if ( $wmgUseUserMerge ) {
