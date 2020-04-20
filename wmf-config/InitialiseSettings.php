@@ -2734,6 +2734,42 @@ function wmfGetVariantSettings() {
 			'height' => 18,
 		],
 ],
+'wmgSiteLogoTagline' => [
+	'default' => false,
+	// Wikipedia
+	'enwiki' => [
+			'src' => '/static/images/mobile/copyright/wikipedia-tagline-en.svg',
+			'width' => 117,
+			'height' => 13,
+		],
+	'euwiki' => [
+			'src' => '/static/images/mobile/copyright/wikipedia-tagline-eu.svg',
+			'width' => 115,
+			'height' => 13,
+		],
+	'fawiki' => [
+			'src' => '/static/images/mobile/copyright/wikipedia-tagline-fa.svg',
+			'width' => 61,
+			'height' => 15,
+		],
+	'frwiki' => [
+			'src' => '/static/images/mobile/copyright/wikipedia-tagline-fr.svg',
+			'width' => 113,
+			'height' => 13,
+		],
+	'hewiki' => [
+			'src' => '/static/images/mobile/copyright/wikipedia-tagline-he.svg',
+			'width' => 111,
+			'height' => 11,
+		],
+
+	// Wiktionary
+	'frwiktionary' => [
+			'src' => '/static/images/mobile/copyright/wiktionary-tagline-fr.svg',
+			'width' => 107,
+			'height' => 10,
+		],
+],
 # @} end of wgLogos
 
 # wgEnableUploads @{
