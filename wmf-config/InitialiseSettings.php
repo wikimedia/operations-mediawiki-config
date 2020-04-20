@@ -15838,6 +15838,7 @@ function wmfGetVariantSettings() {
 		'ids.si.edu',                       // T246330 - Smithsonian
 		'*.supremecourt.gov',               // T248146 - United States Supreme Court
 		'collections.nmnh.si.edu',          // T248659 - National Museum of Natural History
+		'media.api.aucklandmuseum.com',     // T250646 - Auckland Museum
 	],
 ],
 
