@@ -351,6 +351,7 @@ function wmfGetVariantSettings() {
 	'gcrwiki' => 'America/Cayenne',
 	'gewikimedia' => 'Asia/Tbilisi', // T236389
 	'gomwiki' => 'Asia/Kolkata', // T96468
+	'gomwiktionary' => 'Asia/Kolkata', // T249506
 	'gorwiki' => 'Asia/Makassar', // T189109
 	'grwikimedia' => 'Europe/Athens', // T245911
 	'guwiki' => 'Asia/Kolkata',
@@ -881,6 +882,7 @@ function wmfGetVariantSettings() {
 	'gawiktionary' => '/static/images/project-logos/gawiktionary.png',
 	'gdwiktionary' => '/static/images/project-logos/gdwiktionary.png', // T45240
 	'glwiktionary' => '/static/images/project-logos/glwiktionary.png',
+	'gomwiktionary' => '/static/images/project-logos/gomwiktionary.png',
 	'guwiktionary' => '/static/images/project-logos/guwiktionary.png', // T45240
 	'gvwiktionary' => '/static/images/project-logos/gvwiktionary.png', // T45240
 	'hewiktionary' => '/static/images/project-logos/hewiktionary.png',
@@ -1635,6 +1637,7 @@ function wmfGetVariantSettings() {
 	'frwiktionary' => '/static/images/project-logos/frwiktionary-1.5x.png', // T144427
 	'fywiktionary' => '/static/images/project-logos/fywiktionary-1.5x.png', // T150618
 	'gdwiktionary' => '/static/images/project-logos/gdwiktionary-1.5x.png', // T150618
+	'gomwiktionary' => '/static/images/project-logos/gomwiktionary-1.5x.png',
 	'gvwiktionary' => '/static/images/project-logos/gvwiktionary-1.5x.png', // T150618
 	'hewiktionary' => '/static/images/project-logos/hewiktionary-1.5x.png',
 	'hiwiktionary' => '/static/images/project-logos/hiwiktionary-1.5x.png', // T150618
@@ -2178,6 +2181,7 @@ function wmfGetVariantSettings() {
 	'frwiktionary' => '/static/images/project-logos/frwiktionary-2x.png', // T144427
 	'fywiktionary' => '/static/images/project-logos/fywiktionary-2x.png', // T150618
 	'gdwiktionary' => '/static/images/project-logos/gdwiktionary-2x.png', // T150618
+	'gomwiktionary' => '/static/images/project-logos/gomwiktionary-2x.png',
 	'gvwiktionary' => '/static/images/project-logos/gvwiktionary-2x.png', // T150618
 	'hewiktionary' => '/static/images/project-logos/hewiktionary-2x.png',
 	'hiwiktionary' => '/static/images/project-logos/hiwiktionary-2x.png', // T150618
@@ -3893,6 +3897,7 @@ function wmfGetVariantSettings() {
 	'gewikimedia' => 'ვიკიმედია', // T236389
 	'gnwiki' => 'Vikipetã',
 	'gomwiki' => 'विकिपीडिया', // T96468
+	'gomwiktionary' => 'विक्शनरी', // T249506
 	'gorwiki' => 'Wikipedia', // T189109
 	'grantswiki' => 'Project',
 	'guwiki' => 'વિકિપીડિયા',
