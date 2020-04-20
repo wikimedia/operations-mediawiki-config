@@ -2400,16 +2400,16 @@ function wmfGetVariantSettings() {
 
 'wmgSiteLogoIcon' => [
 	// Projects
-	'default' => '/static/images/mobile/wikimedia.png',
+	'default' => '/static/images/mobile/copyright/wikimedia.svg',
 	'wikibooks' => '/static/images/mobile/wikibooks.png',
 	'wikidata' => '/static/images/mobile/wikidata.png',
 	'wikinews' => '/static/images/mobile/wikinews.png',
-	'wikipedia' => '/static/images/mobile/W.png',
+	'wikipedia' => '/static/images/mobile/copyright/wikipedia.png',
 	'wikiquote' => '/static/images/mobile/wikiquote.png',
 	'wikisource' => '/static/images/mobile/wikisource.png',
-	'wikiversity' => '/static/images/mobile/wikiversity.png',
+	'wikiversity' => '/static/images/mobile/copyright/wikiversity.svg',
 	'wikivoyage' => '/static/images/mobile/wikivoyage.png',
-	'wiktionary' => '/static/images/mobile/wiktionary.png',
+	'wiktionary' => '/static/images/mobile/copyright/wikitionary.svg',
 
 	// Special wikis
 	'commonswiki' => '/static/images/mobile/commons.png',
@@ -2422,7 +2422,7 @@ function wmfGetVariantSettings() {
 	// Projects
 	'wikipedia' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-en.svg',
-			'width' => 116,
+			'width' => 119,
 			'height' => 18,
 		],
 	'wikivoyage' => [
@@ -2487,9 +2487,14 @@ function wmfGetVariantSettings() {
 			'width' => 127,
 			'height' => 19,
 		],
+	'fawiki' => [
+			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fa.svg',
+			'width' => 103,
+			'height' => 35,
+		],
 	'frwiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
-			'width' => 116,
+			'width' => 119,
 			'height' => 18,
 		],
 	'gomwiki' => [
@@ -2499,8 +2504,8 @@ function wmfGetVariantSettings() {
 		],
 	'hewiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-he.svg',
-			'width' => 75,
-			'height' => 18,
+			'width' => 108,
+			'height' => 25,
 		],
 	'hiwiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-hi.svg',
@@ -2509,12 +2514,12 @@ function wmfGetVariantSettings() {
 		],
 	'huwiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
-			'width' => 116,
+			'width' => 119,
 			'height' => 18,
 		],
 	'ilowiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-en.svg',
-			'width' => 116,
+			'width' => 119,
 			'height' => 18,
 		],
 	'jawiki' => [
@@ -2524,7 +2529,7 @@ function wmfGetVariantSettings() {
 		],
 	'jvwiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
-			'width' => 116,
+			'width' => 119,
 			'height' => 18,
 		],
 	'koiwiki' => [
@@ -2569,12 +2574,12 @@ function wmfGetVariantSettings() {
 		],
 	'papwiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
-			'width' => 116,
+			'width' => 119,
 			'height' => 18,
 		],
 	'pcdwiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
-			'width' => 116,
+			'width' => 119,
 			'height' => 18,
 		],
 	'piwiki' => [
@@ -2589,7 +2594,7 @@ function wmfGetVariantSettings() {
 		],
 	'ptwiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
-			'width' => 116,
+			'width' => 119,
 			'height' => 18,
 		],
 	'ruwiki' => [
@@ -2609,7 +2614,7 @@ function wmfGetVariantSettings() {
 		],
 	'skwiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
-			'width' => 116,
+			'width' => 119,
 			'height' => 18,
 		],
 	'srwiki' => [ // T165896
@@ -2619,7 +2624,7 @@ function wmfGetVariantSettings() {
 		],
 	'suwiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
-			'width' => 116,
+			'width' => 119,
 			'height' => 18,
 		],
 	'szlwiki' => [ // T233104
@@ -2629,7 +2634,7 @@ function wmfGetVariantSettings() {
 		],
 	'tetwiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
-			'width' => 116,
+			'width' => 119,
 			'height' => 18,
 		],
 	'tyvwiki' => [
@@ -2660,6 +2665,11 @@ function wmfGetVariantSettings() {
 		],
 
 	// Wiktionary
+	'frwiktionary' => [
+			'src' => '/static/images/mobile/copyright/wiktionary-wordmark-fr.svg',
+			'width' => 114,
+			'height' => 15,
+		],
 
 	// Wikiquote
 
@@ -2670,6 +2680,11 @@ function wmfGetVariantSettings() {
 	// Wikisource
 
 	// Wikiversity
+	'ptwikiversity' => [
+			'src' => '/static/images/mobile/copyright/wikiversity-wordmark-pt.svg',
+			'width' => 140,
+			'height' => 12,
+		],
 
 	// Wikivoyage
 	'bnwikivoyage' => [ // T196680
@@ -2689,8 +2704,14 @@ function wmfGetVariantSettings() {
 		],
 
 	// Chapter and local user group wikis
+	'officewiki' => [
+			'src' => '/static/images/mobile/copyright/office-wordmark.svg',
+			'width' => 140,
+			'height' => 34,
+		],
 
 	// Special wikis
+
 	'commonswiki' => [
 			'src' => '/static/images/mobile/copyright/commons-wordmark-en.svg',
 			'width' => 105,
@@ -2698,12 +2719,12 @@ function wmfGetVariantSettings() {
 		],
 	'test2wiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-en.svg',
-			'width' => 116,
+			'width' => 119,
 			'height' => 18,
 		],
 	'testwiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-en.svg',
-			'width' => 116,
+			'width' => 119,
 			'height' => 18,
 		],
 ],
