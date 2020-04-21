@@ -27450,5 +27450,11 @@ function wmfGetVariantSettings() {
 	'default' => [ 'data-bridge' ],
 ],
 
+// T123582
+'wgImagePreconnect' => [
+	'default' => false,
+	'group0' => true,
+],
+
 ];
 }

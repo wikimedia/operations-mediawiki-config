@@ -2090,5 +2090,10 @@ function wmfGetLabsOverrideSettings() {
 		'wgCirrusSearchUserTesting' => [
 			'default' => [],
 		],
+
+		// T123582
+		'wgImagePreconnect' => [
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()
