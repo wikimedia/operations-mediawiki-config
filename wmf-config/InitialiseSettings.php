@@ -17734,6 +17734,11 @@ function wmfGetVariantSettings() {
 	'enwiki' => true,
 ],
 
+'wmgVisualEditorAllowExternalLinkPaste' => [
+	'default' => false,
+	'officewiki' => true,
+],
+
 // Whether VisualEditor's feedback page should be consolidated down to just the
 // single Flow board on MediaWiki.org
 'wmgVisualEditorConsolidateFeedback' => [

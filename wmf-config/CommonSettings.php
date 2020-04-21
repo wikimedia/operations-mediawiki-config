@@ -2582,6 +2582,9 @@ if ( $wmgUseVisualEditor ) {
 	if ( $wmgVisualEditorTransitionDefault ) {
 		$wgVisualEditorTransitionDefault = true;
 	}
+	if ( $wmgVisualEditorAllowExternalLinkPaste ) {
+		$wgVisualEditorAllowExternalLinkPaste = true;
+	}
 	// T52000 - to remove once roll-out is complete.
 	if ( $wmgVisualEditorDisableForAnons ) {
 		$wgVisualEditorDisableForAnons = true;
