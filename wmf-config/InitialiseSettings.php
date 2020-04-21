@@ -25854,6 +25854,7 @@ function wmfGetVariantSettings() {
 		'Q911069', // boardsport
 		'Q8037570', // wrangler
 		'Q273283', // beggar
+		'Q134307', // portrait
 	],
 ],
 
