@@ -22,14 +22,12 @@ $selectedFileViewRawUrl = false;
 
 $hlHtml = "";
 
-foreach ( $selectableFilepaths as $filePath ) {
-	$fileName = str_replace( __DIR__ . '/', '', $filePath );
-	// Map .txt links to the original filename
-	if ( substr( $fileName, -4 ) === '.txt' ) {
-		$fileName = substr( $fileName, 0, -4 );
-	}
-	if ( $fileName === $selectedFileName ) {
-		$selectedFilePath = $filePath;
+foreach ( $selectableFilepaths as $selectableFilePath ) {
+	$relativePath = str_replace( __DIR__ . '/', '', $selectableFilePath );
+	$selectableName = preg_replace( '/\.txt$/', '', $relativePath );
+	if ( $selectableName === $selectedFileName ) {
+		$selectedFilePath = $selectableFilePath;
+		$selectedFileViewRawUrl = $relativePath;
 		break;
 	}
 }
@@ -55,7 +53,6 @@ if ( !$selectedFilePath ) {
 		$hlHtml = "Whitelist contains nonexistent entry: $selectedFilePath :(";
 		$selectedFilePath = false;
 	} else {
-		$selectedFileViewRawUrl = './' . $fileName;
 		// Resolve symlink
 		// Don't use readlink since that will return a path relative to where the symlink is.
 		// Which is a problem if our PWD is not the same dir (such as in unit tests).
@@ -98,7 +95,7 @@ if ( $selectedFilePath !== false ) {
 <p>(
 <a href="https://gerrit.wikimedia.org/g/operations/mediawiki-config/+log/master/<?php echo $selectedFileRepoPath; ?>">version control</a> &bull;
 <a href="https://gerrit.wikimedia.org/g/operations/mediawiki-config/+blame/master/<?php echo $selectedFileRepoPath; ?>?blame=1">blame</a> &bull;
-<a href="<?php echo $selectedFileViewRawUrlEsc; ?>.txt">raw text</a>
+<a href="<?php echo $selectedFileViewRawUrlEsc; ?>">raw text</a>
 )</p>
 <?php
 }
