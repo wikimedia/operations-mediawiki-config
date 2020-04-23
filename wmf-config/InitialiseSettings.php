@@ -15860,6 +15860,8 @@ function wmfGetVariantSettings() {
 		'*.supremecourt.gov',               // T248146 - United States Supreme Court
 		'collections.nmnh.si.edu',          // T248659 - National Museum of Natural History
 		'media.api.aucklandmuseum.com',     // T250646 - Auckland Museum
+		'www.iau.org',                      // T250903 - International Astronomical Union
+		'www.kari.re.kr',                   // T250904 - Korea Aerospace Research Institute
 	],
 ],
 
