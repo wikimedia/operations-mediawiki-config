@@ -17676,6 +17676,11 @@ function wmfGetVariantSettings() {
 		'Project' => true, // T144688
 		'Portal' => true, // T144688
 	],
+	'+vecwiki' => [
+		'Project' => true, // T250419
+		'Projeto' /* WikiProject */ => true, // T250419
+		'Portałe' /* Portal */ => true, // T250419
+	],
 	'+zhwiki' => [
 		'Draft' => true, // T91223
 	],
