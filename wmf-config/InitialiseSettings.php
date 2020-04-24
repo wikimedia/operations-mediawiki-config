@@ -11913,6 +11913,7 @@ function wmfGetVariantSettings() {
 			'reupload' => true, // T198167
 			'skipcaptcha' => true, // T198167
 		],
+		'transwiki' => [ 'suppressredirect' => true, ], // T250972
 	],
 	'+zh_classicalwiki' => [
 		'editor' => [ 'rollback' => true ], // T188064
@@ -12850,7 +12851,16 @@ function wmfGetVariantSettings() {
 	'+zhwiki' => [
 		'accountcreator' => [ 'eventparticipant' ], // T198167
 		'bureaucrat' => [ 'flood' ],
-		'sysop' => [ 'patroller', 'rollbacker', 'autoreviewer', 'confirmed', 'massmessage-sender', 'filemover', 'eventparticipant' ], // T130814, T195247 and T198167
+		'sysop' => [
+			'patroller',
+			'rollbacker',
+			'autoreviewer',
+			'confirmed',
+			'massmessage-sender', // T130814
+			'filemover', // T195247
+			'eventparticipant', // T198167
+			'transwiki', // T250972
+		],
 	],
 	'+zhwikibooks' => [
 		'sysop' => [ 'flood' ], // T185182
@@ -13662,7 +13672,17 @@ function wmfGetVariantSettings() {
 	'+zhwiki' => [
 		'accountcreator' => [ 'eventparticipant' ], // T198167
 		'bureaucrat' => [ 'flood' ],
-		'sysop' => [ 'patroller', 'rollbacker', 'autoreviewer', 'confirmed', 'flood', 'massmessage-sender', 'filemover', 'eventparticipant' ], // T130814, T195247 and T198167
+		'sysop' => [
+			'patroller',
+			'rollbacker',
+			'autoreviewer',
+			'confirmed',
+			'flood',
+			'massmessage-sender', // T130814
+			'filemover', // T195247
+			'eventparticipant', //T198167
+			'transwiki', // T250972
+		],
 	],
 	'+zhwikibooks' => [
 		'sysop' => [ 'flood' ], // T185182
@@ -14013,6 +14033,11 @@ function wmfGetVariantSettings() {
 	'wikimaniawiki' => [ 'en' , 'meta', 'wm2011', 'wm2012', 'wm2013', 'wm2014', 'wm2015', 'wm2016', 'wm2017', 'wm2018' ],
 	'wuuwiki' => [ 'en', 'th', 'fr', 'zh', ], // T19484
 	'xhwiki' => [ 'en' ], // T53327
+	'zhwiki' => [
+		'q', 'wikt', 'voy', 'v', 's', 'n', 'b',
+		'lzh', 'wuu', 'zh-yue', 'gan', 'hak', 'cdo', 'zh-min-nan',
+		'en', 'ja', 'm', 'mw', 'c'
+	], // T250972
 	'zhwikiquote' => [ 'w', 'b', 'wikt', 's', 'meta', 'commons' ],
 	'zhwikiversity' => [ 'w', 'b', 'q', 's', 'en', 'voy', 'wikt', 'meta', 'commons', 'betawikiversity', 'incubator', 'w:en' ], // T212919
 	'zhwikivoyage' => [ 'w', 'b', 'q', 's', 'en', 'wikt', 'meta', 'commons' ], // T62248
@@ -15512,6 +15537,7 @@ function wmfGetVariantSettings() {
 		'flood' => [ 'flood' ], // T171379
 		'accountcreator' => [ 'accountcreator' ], // T194871
 		'filemover' => [ 'filemover' ], // T195247
+		'transwiki' => [ 'transwiki' ], // T250972
 	],
 	'zhwikibooks' => [ 'flood' => [ 'flood' ] ], // T185182
 	'zhwikinews' => [ 'flood' => [ 'flood' ] ], // T54546
