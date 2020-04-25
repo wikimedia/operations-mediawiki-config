@@ -11,5 +11,4 @@ inheritsFrom:
   - large
   - s5
   - securepollglobal
-  - visualeditor-nondefault
   - wikidataclient
