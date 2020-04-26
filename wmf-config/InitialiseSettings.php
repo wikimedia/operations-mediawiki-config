@@ -807,6 +807,7 @@ function wmfGetVariantSettings() {
 	'tewiki' => '/static/images/project-logos/tewiki.png',
 	'tgwiki' => '/static/images/project-logos/tgwiki.png', // T48589
 	'thwiki' => '/static/images/project-logos/thwiki.png',
+	'tiwiki' => '/static/images/project-logos/tiwiki.png', // T249451
 	'tkwiki' => '/static/images/project-logos/tkwiki.png', // T48589
 	'tlwiki' => '/static/images/project-logos/tlwiki.png',
 	'tnwiki' => '/static/images/project-logos/tnwiki.png', // T42285
@@ -951,6 +952,7 @@ function wmfGetVariantSettings() {
 	'tawiktionary' => '/static/images/project-logos/tawiktionary.png',
 	'tewiktionary' => '/static/images/project-logos/tewiktionary.png', // T45240
 	'thwiktionary' => '/static/images/project-logos/thwiktionary.png',
+	'tiwiktionary' => '/static/images/project-logos/tiwiktionary.png', // T249451
 	'tkwiktionary' => '/static/images/project-logos/tkwiktionary.png', // T45240
 	'trwiktionary' => '/static/images/project-logos/trwiktionary.png', // T176008
 	'ttwiktionary' => '/static/images/project-logos/ttwiktionary.png', // T45240
@@ -1572,6 +1574,7 @@ function wmfGetVariantSettings() {
 	'tewiki' => '/static/images/project-logos/tewiki-1.5x.png', // T150618
 	'tgwiki' => '/static/images/project-logos/tgwiki-1.5x.png', // T150618
 	'thwiki' => '/static/images/project-logos/thwiki-1.5x.png', // T150618
+	'tiwiki' => '/static/images/project-logos/tiwiki-1.5x.png', // T249451
 	'tkwiki' => '/static/images/project-logos/tkwiki-1.5x.png', // T150618
 	'tlwiki' => '/static/images/project-logos/tlwiki-1.5x.png', // T150618
 	'tnwiki' => '/static/images/project-logos/tnwiki-1.5x.png', // T150618
@@ -1679,6 +1682,7 @@ function wmfGetVariantSettings() {
 	'svwiktionary' => '/static/images/project-logos/svwiktionary-1.5x.png', // T150618
 	'swwiktionary' => '/static/images/project-logos/swwiktionary-1.5x.png', // T150618
 	'tewiktionary' => '/static/images/project-logos/tewiktionary-1.5x.png', // T150618
+	'tiwiktionary' => '/static/images/project-logos/tiwiktionary-1.5x.png', // T249451
 	'tkwiktionary' => '/static/images/project-logos/tkwiktionary-1.5x.png', // T150618
 	'trwiktionary' => '/static/images/project-logos/trwiktionary-1.5x.png', // T176008
 	'ttwiktionary' => '/static/images/project-logos/ttwiktionary-1.5x.png', // T150618
@@ -2112,6 +2116,7 @@ function wmfGetVariantSettings() {
 	'tewiki' => '/static/images/project-logos/tewiki-2x.png', // T150618
 	'tgwiki' => '/static/images/project-logos/tgwiki-2x.png', // T150618
 	'thwiki' => '/static/images/project-logos/thwiki-2x.png', // T150618
+	'tiwiki' => '/static/images/project-logos/tiwiki-2x.png', // T249451
 	'tkwiki' => '/static/images/project-logos/tkwiki-2x.png', // T150618
 	'tlwiki' => '/static/images/project-logos/tlwiki-2x.png', // T150618
 	'tnwiki' => '/static/images/project-logos/tnwiki-2x.png', // T150618
@@ -2219,6 +2224,7 @@ function wmfGetVariantSettings() {
 	'svwiktionary' => '/static/images/project-logos/svwiktionary-2x.png', // T150618
 	'swwiktionary' => '/static/images/project-logos/swwiktionary-2x.png', // T150618
 	'tewiktionary' => '/static/images/project-logos/tewiktionary-2x.png', // T150618
+	'tiwiktionary' => '/static/images/project-logos/tiwiktionary-2x.png', // T249451
 	'tkwiktionary' => '/static/images/project-logos/tkwiktionary-2x.png', // T150618
 	'trwiktionary' => '/static/images/project-logos/trwiktionary-2x.png', // T176008
 	'ttwiktionary' => '/static/images/project-logos/ttwiktionary-2x.png', // T150618
