@@ -22963,6 +22963,8 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	// Activated on all wikipedias
 	'wikipedia' => true,
+
+	'frwiktionary' => true, // T250724
 	// italian wikis used to have the old sidebar on all sisterwikis
 	// use the one there too.
 	'itwiktionary' => true,
