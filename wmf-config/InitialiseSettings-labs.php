@@ -157,8 +157,11 @@ function wmfGetLabsOverrideSettings() {
 		// to dynamically add event streams that it should accept
 		// and validate.
 		// See https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/EventStreamConfig/#mediawiki-config
+		// NOTE: we prefer to merge (via the + prefix) stream config  rom production so we only
+		//       have to configure streams that are being tested (or overridden) in beta here,
+		//       and centralize the configuration in InitialiseSettings.php otherwise.
 		'wgEventStreams' => [
-			'default' => [
+			'+default' => [
 				// test.event stream; used to test that event stream
 				// services are working properly.
 				[
