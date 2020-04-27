@@ -20013,7 +20013,7 @@ function wmfGetVariantSettings() {
 	],
 ],
 'wmgMemoryLimit' => [
-	'default' => 660 * 1024 * 1024, // 660MiB
+	'default' => 666 * 1024 * 1024, // 666MiB
 ],
 'wmgMemoryLimitParsoid' => [
 	'default' => 1400 * 1024 * 1024, // 1400MiB
