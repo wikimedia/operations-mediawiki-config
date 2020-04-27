@@ -5565,8 +5565,16 @@ function wmfGetVariantSettings() {
 	], // T70108
 	'+thwikibooks' => [
 		'คุยเรื่องWikibooks' => NS_PROJECT_TALK,
+		'Cookbook' => 104, // T251118
+		'COOK' => 104, // T251118
+		'CAT' => NS_CATEGORY, // T251118
+		'H' => NS_HELP,  // T251118
+		'SUB' => 102, // T251118
 		'Subject' => 102, // T48153
 		'Subject_talk' => 103, // T48153
+		'WB' => NS_PROJECT,
+		'Wikijunior' => 106, // T251118
+		'WJ' => 106, // T251118
 	],
 	'+thwikisource' => [
 		'ผู้ประพันธ์' => 102, // T236640
