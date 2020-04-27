@@ -20470,6 +20470,7 @@ function wmfGetVariantSettings() {
 'wmgUseDiscussionTools' => [
 	'default' => false,
 	'arwiki' => true,
+	'enwiki' => true, // T249376
 	'frwiki' => true,
 	'huwiki' => true,
 	'nlwiki' => true,
@@ -20485,10 +20486,10 @@ function wmfGetVariantSettings() {
 
 'wgDiscussionToolsBeta' => [
 	'default' => false,
-	'arwiki' => true,
-	'frwiki' => true,
-	'huwiki' => true,
-	'nlwiki' => true,
+	'arwiki' => true, // T245794
+	'frwiki' => true, // T245794
+	'huwiki' => true, // T245794
+	'nlwiki' => true, // T245794
 ],
 
 'wgDTSchemaEditAttemptStepSamplingRate' => [
