@@ -15256,12 +15256,6 @@ function wmfGetVariantSettings() {
 	'wikitech' => '*',
 ],
 
-'wgAllowImageMoving' => [
-	'default' => true, // brion 2009-09-21
-	'testwiki' => true,
-	'usabilitywiki' => true,
-],
-
 'wmgUseNewUserMessage' => [
 	'default' => false,
 	'arwiki' => true,
