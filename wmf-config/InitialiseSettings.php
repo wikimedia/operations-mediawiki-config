@@ -20985,8 +20985,11 @@ function wmfGetVariantSettings() {
 // See https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/EventStreamConfig/#mediawiki-config
 'wgEventStreams' => [
 	'default' => [
+		//
+		// EventLogging 'Legacy' streams.  https://phabricator.wikimedia.org/T238230
+		//
 		[
-			'stream' => 'SearchSatisfaction',
+			'stream' => 'eventlogging_SearchSatisfaction',
 			// https://schema.wikimedia.org/#!/secondary/jsonschema/analytics/legacy/searchsatisfaction
 			'schema_title' => 'analytics/legacy/searchsatisfaction'
 		],
