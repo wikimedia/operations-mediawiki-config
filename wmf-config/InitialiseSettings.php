@@ -24451,6 +24451,23 @@ function wmfGetVariantSettings() {
 			'shuffleAnswersDisplay' => true,
 		],
 	],
+	'enwiki' => [
+		// T248421
+		[
+			'enabled' => true,
+			'type' => 'external',
+			'name' => 'growth-study-screener-survey',
+			'question' => 'ext-quicksurveys-growth-external-survey-question',
+			'description' => 'ext-quicksurveys-growth-external-survey-description',
+			'link' => 'ext-quicksurveys-growth-external-survey-link',
+			'coverage' => 0,
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'privacyPolicy' => 'ext-quicksurveys-growth-external-survey-privacy-policy',
+		],
+	],
 	'enwikivoyage' => [
 		// T187299
 		[
