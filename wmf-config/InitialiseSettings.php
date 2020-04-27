@@ -5565,6 +5565,13 @@ function wmfGetVariantSettings() {
 	'+thwikisource' => [
 		'ผู้ประพันธ์' => 102, // T236640
 		'คุยเรื่องผู้ประพันธ์' => 103, // T236640
+		'WS' => NS_PROJECT, // T251134
+		'H' => NS_HELP, // T251134
+		'CAT' => NS_CATEGORY, // T251134
+		'Portal' => 100, // T251134
+		'P' => 100, // T251134
+		'Author' => 102, // T251134
+		'Translation' => 114, // T251134
 	],
 	'+thwiktionary' => [
 		'คุยเรื่องWiktionary' => NS_PROJECT_TALK,
