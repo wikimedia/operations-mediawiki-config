@@ -20979,6 +20979,12 @@ function wmfGetVariantSettings() {
 // See https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/EventStreamConfig/#mediawiki-config
 'wgEventStreams' => [
 	'default' => [
+		[
+			'stream' => 'SearchSatisfaction',
+			// https://schema.wikimedia.org/#!/secondary/jsonschema/analytics/legacy/searchsatisfaction
+			'schema_title' => 'analytics/legacy/searchsatisfaction'
+		],
+
 		// test.event stream; used to test that event stream
 		// services are working properly.
 		[

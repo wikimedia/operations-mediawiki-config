@@ -162,13 +162,10 @@ function wmfGetLabsOverrideSettings() {
 		//       and centralize the configuration in InitialiseSettings.php otherwise.
 		'wgEventStreams' => [
 			'+default' => [
-				// test.event stream; used to test that event stream
-				// services are working properly.
-				[
-					'stream' => 'test.event',
-					// https://schema.wikimedia.org/repositories/primary/jsonschema/test/event/current.yaml
-					'schema_title' => 'test/event'
-				],
+				// Add beta only stream configs here.  Production
+				// stream configs are merged in, so if your settings for
+				// production and beta are the same, you can omit also adding your
+				// stream configs here for beta.
 			],
 		],
 
