@@ -1419,7 +1419,7 @@ $wgFooterIcons['copyright']['copyright'] = '<a href="https://wikimediafoundation
 			'/static/images/wikimedia-button-1.5x.png 1.5x, ' .
 			'/static/images/wikimedia-button-2x.png 2x' .
 		'" ' .
-		'width="88" height="31" alt="Wikimedia Foundation"/></a>';
+		'width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a>';
 
 # :SEARCH:
 
