@@ -25202,9 +25202,9 @@ function wmfGetVariantSettings() {
 			'id' => 'photo',
 		],
 		[
-			'title' => 'Wikipedie:Vzhled_a_styl',
-			'text' => 'Jak má vypadat článek pro Wikipedii',
-			'id' => 'style',
+			'title' => 'Wikipedie:Pět_pilířů',
+			'text' => 'Pět pilířů Wikipedie',
+			'id' => 'pillars',
 		],
 		[
 			'title' => 'Nápověda:Jak_editovat_stránku',
