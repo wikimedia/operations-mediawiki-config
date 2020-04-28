@@ -426,9 +426,8 @@ $wgLocalisationCacheConf['manualRecache'] = true;
 // - There MUST have first been a full Scap deploy.
 // - There MUST have been a full Scap deploy on ALL current wiki versions.
 // - Always VERIFY via mwdebug on a wiki in every group, and try multiple ?uselang.
-if ( wfHostname() === 'mw1407' || $wmfRealm === 'labs' ) {
-	// Enable on Beta — James F. 2019.05.07
-	// Enable on depooled mw1407 for benchmarking - Krinkle 2020-04-17
+if ( $wmfRealm === 'labs' ) {
+	// Test LCStoreStaticArray on Beta — James F. 2019.05.07
 	$wgLocalisationCacheConf['storeClass'] = LCStoreStaticArray::class;
 }
 
