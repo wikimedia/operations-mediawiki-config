@@ -12985,6 +12985,9 @@ function wmfGetVariantSettings() {
 	'+bawiki' => [
 		'bureaucrat' => [ 'sysop' ],
 	],
+	'+bdwikimedia' => [
+		'bureaucrat' => [ 'sysop' ], // T251078
+	],
 	'+betawikiversity' => [
 		'bureaucrat' => [ 'test-sysop' ], // T240438
 	],
