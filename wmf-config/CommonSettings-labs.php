@@ -290,12 +290,23 @@ $wgEchoNotifications['thank-you-edit']['notify-type-availability']['web'] = true
 $wgAllowArticleReminderNotification = true;
 
 if ( $wmgUseGraph ) {
-	// **** THIS LIST MUST MATCH puppet/hieradata/labs/deployment-prep/common.yaml ****
+	// **** THIS LIST MUST MATCH puppet/blob/production/hieradata/cloud/eqiad1/deployment-prep/common.yaml ****
 	// See https://www.mediawiki.org/wiki/Extension:Graph#External_data
-	$wgGraphAllowedDomains['http'] = [ 'wmflabs.org' ];
-	$wgGraphAllowedDomains['https'][] = 'beta.wmflabs.org';
-	$wgGraphAllowedDomains['wikirawupload'][] = 'upload.beta.wmflabs.org';
-	$wgGraphAllowedDomains['wikidatasparql'][] = 'wdqs-test.wmflabs.org';
+	$wgGraphAllowedDomains = [
+		'http' => [
+			'wmflabs.org',
+		],
+		'https' => [
+			'beta.wmflabs.org',
+		],
+		'wikirawupload' => [
+			'upload.beta.wmflabs.org',
+			'upload.wikimedia.org',
+		],
+		'wikidatasparql' => [
+			'wdqs-test.wmflabs.org',
+		],
+	];
 }
 
 if ( $wmgUseORES ) {
