@@ -21767,6 +21767,11 @@ function wmfGetVariantSettings() {
 	'wikidatawiki' => [
 		// Photos
 		'P18',
+		'P2716',
+		'P7420',
+		'P5775',
+		'P3451',
+		'P5252',
 		// Complex graphics
 		'P41',
 		'P94',
