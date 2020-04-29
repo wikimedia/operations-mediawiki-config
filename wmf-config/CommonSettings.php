@@ -2222,11 +2222,6 @@ if ( $wmgUseLivePreview ) {
 	$wgDefaultUserOptions['uselivepreview'] = 1;
 }
 
-if ( $wmgUseSentry ) {
-	wfLoadExtension( 'Sentry' );
-	$wgSentryLogPhpErrors = false;
-}
-
 wfLoadExtension( 'TemplateStyles' );
 // allow protocol-relative URLs per T188760
 $wgTemplateStylesAllowedUrls = [
