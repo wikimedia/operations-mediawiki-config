@@ -16399,11 +16399,6 @@ return [
 	'zhwiktionary' => [ 'flood' => [ 'flood' ] ], // T187018
 ],
 
-'wmgUseCodeReview' => [
-	'default' => false,
-	'mediawikiwiki' => true,
-],
-
 'wgCdnMaxAge' => [
 	'default' => 14 * 24 * 3600, // 14 days (T124954)
 	'foundationwiki' => 3600, // 1 hour; template links may be funky
