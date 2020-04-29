@@ -24559,16 +24559,6 @@ function wmfGetVariantSettings() {
 	]
 ],
 
-'wmgUseSentry' => [
-	'default' => false,
-],
-'wgSentryDsn' => [
-	'default' => '',
-],
-'wgSentryEventGateUri' => [
-	'default' => '',
-],
-
 // WikidataPageBanner extension (T98029)
 'wmgUseWikidataPageBanner' => [
 	'default' => false,
