@@ -2309,24 +2309,6 @@ if ( $wmgUseNewUserMessage ) {
 	$wgNewUserMessageOnAutoCreate = $wmgNewUserMessageOnAutoCreate;
 }
 
-if ( $wmgUseCodeReview ) {
-	wfLoadExtension( 'CodeReview' );
-
-	$wgGroupPermissions['user']['codereview-add-tag'] = false;
-	$wgGroupPermissions['user']['codereview-remove-tag'] = false;
-	$wgGroupPermissions['user']['codereview-post-comment'] = false;
-	$wgGroupPermissions['user']['codereview-set-status'] = false;
-	$wgGroupPermissions['user']['codereview-link-user'] = false;
-	$wgGroupPermissions['user']['codereview-signoff'] = false;
-	$wgGroupPermissions['user']['codereview-associate'] = false;
-
-	$wgCodeReviewRepoStatsCacheTime = 24 * 60 * 60;
-	$wgCodeReviewMaxDiffPaths = 100;
-
-	// Delist the deprecated special page.
-	$wgCodeReviewListSpecialPage = false;
-}
-
 # AbuseFilter
 wfLoadExtension( 'AbuseFilter' );
 include __DIR__ . '/abusefilter.php';
