@@ -10921,6 +10921,7 @@ function wmfGetVariantSettings() {
 			'globalblock' => true, // T208035
 			'urlshortener-manage-url' => true, // T133109
 			'urlshortener-view-log' => true, // T221073
+			'oathauth-verify-user' => true, // T251447
 		],
 		'translationadmin' => [
 			'autopatrol' => true, // T142123
