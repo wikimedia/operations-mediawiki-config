@@ -24,7 +24,6 @@ $IP/extensions/Citoid/extension.json
 $IP/extensions/cldr/extension.json
 $IP/extensions/CodeEditor/extension.json
 $IP/extensions/CodeMirror/extension.json
-$IP/extensions/CodeReview/extension.json
 $IP/extensions/Cognate/extension.json
 $IP/extensions/Collection/extension.json
 $IP/extensions/CommonsMetadata/extension.json
