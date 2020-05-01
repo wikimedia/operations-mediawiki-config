@@ -375,7 +375,7 @@ if (
 	$wmgMonologConfig['loggers']['captcha']['calls'] = $wmgMonologLoggerCalls;
 	$wmgMonologConfig['handlers']['authmanager-statsd'] = [
 		// defined in WikimediaEvents
-		'class' => 'AuthManagerStatsdHandler',
+		'class' => WikimediaEvents\AuthManagerStatsdHandler::class,
 	];
 }
 
