@@ -32,7 +32,8 @@
 #           'logstash'=>level,
 #           'eventbus'=>level,
 #           'sample'=>rate,
-#           'buffer'=>buffer ]`
+#           'buffer'=>buffer
+#     ]`
 # - $wmgUseEventBus: Whether EventBus extension is enabled on the wiki
 #
 #   Default for all channels for fields not otherwise specified:
@@ -85,13 +86,13 @@ if ( getenv( 'MW_DEBUG_LOCAL' ) ) {
 // processor needs to be listed *after* the psr processor to work as expected.
 $wmgMonologProcessors = [
 	'wiki' => [
-		'class' => '\\MediaWiki\\Logger\\Monolog\\WikiProcessor',
+		'class' => \MediaWiki\Logger\Monolog\WikiProcessor::class,
 	],
 	'psr' => [
-		'class' => '\\Monolog\\Processor\\PsrLogMessageProcessor',
+		'class' => \Monolog\Processor\PsrLogMessageProcessor::class,
 	],
 	'web' => [
-		'class' => '\\Monolog\\Processor\\WebProcessor',
+		'class' => \Monolog\Processor\WebProcessor::class,
 	],
 	'php' => [
 		'factory' => function () {
@@ -147,10 +148,10 @@ $wmgMonologProcessors = [
 
 $wmgMonologHandlers = [
 	'blackhole' => [
-		'class' => '\\Monolog\\Handler\\NullHandler',
+		'class' => \Monolog\Handler\NullHandler::class,
 	],
 	'wgDebugLogFile' => [
-		'class'     => '\\MediaWiki\\Logger\\Monolog\\LegacyHandler',
+		'class'     => \MediaWiki\Logger\Monolog\LegacyHandler::class,
 		'args'      => [ $wgDebugLogFile ],
 		'formatter' => 'line',
 	],
@@ -160,7 +161,7 @@ if ( $wmgLogstashServers ) {
 	shuffle( $wmgLogstashServers );
 	foreach ( [ 'debug', 'info', 'warning', 'error' ] as $logLevel ) {
 		$wmgMonologHandlers[ "logstash-$logLevel" ] = [
-			'class'     => '\\MediaWiki\\Logger\\Monolog\\SyslogHandler',
+			'class'     => \MediaWiki\Logger\Monolog\SyslogHandler::class,
 			'formatter' => 'cee',
 			'args'      => [
 				'mediawiki',             // tag
@@ -198,7 +199,7 @@ $wmgMonologConfig = [
 
 	'formatters' => [
 		'line' => [
-			'class' => '\\MediaWiki\\Logger\\Monolog\\LineFormatter',
+			'class' => \MediaWiki\Logger\Monolog\LineFormatter::class,
 			'args' => [
 				"%datetime% [%extra.reqId%] %extra.host% %extra.wiki% %extra.mwversion% %channel% %level_name%: %message% %context% %exception%\n",
 				'Y-m-d H:i:s',
@@ -208,7 +209,7 @@ $wmgMonologConfig = [
 			],
 		],
 		'cee' => [
-			'class' => '\\MediaWiki\\Logger\\Monolog\\CeeFormatter',
+			'class' => \MediaWiki\Logger\Monolog\CeeFormatter::class,
 			'args'  => [ $isParsoidCluster ? 'parsoid-php' : 'mediawiki', php_uname( 'n' ), null, '', 1 ],
 		],
 	],
@@ -250,7 +251,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 			// Register handler that will only pass events of the given
 			// log level
 			$wmgMonologConfig['handlers'][$udp2logHandler] = [
-				'class' => '\\MediaWiki\\Logger\\Monolog\\LegacyHandler',
+				'class' => \MediaWiki\Logger\Monolog\LegacyHandler::class,
 				'args' => [
 					"udp://{$wmfUdp2logDest}/{channel}", false, $opts['udp2log']
 				],
@@ -269,7 +270,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 		if ( !isset( $wmgMonologConfig['handlers'][$eventBusHandler] ) ) {
 			// Register handler that will only pass events of the given log level
 			$wmgMonologConfig['handlers'][$eventBusHandler] = [
-				'class' => '\\MediaWiki\\Extension\\EventBus\\Adapters\\Monolog\\EventBusMonologHandler',
+				'class' => \MediaWiki\Extension\EventBus\Adapters\Monolog\EventBusMonologHandler::class,
 				'args' => [
 					'eventgate-analytics' // EventServiceName
 				]
@@ -295,7 +296,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 				// Register a handler that will sample the event stream and
 				// pass events on to $handlerName for storage
 				$wmgMonologConfig['handlers'][$sampledHandler] = [
-					'class' => '\\Monolog\\Handler\\SamplingHandler',
+					'class' => \Monolog\Handler\SamplingHandler::class,
 					'args' => [
 						function () use ( $handlerName ) {
 							return LoggerFactory::getProvider()->getHandler(
@@ -317,7 +318,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 				// Register a handler that will buffer the event stream and
 				// pass events to the nested handler after closing the request
 				$wmgMonologConfig['handlers'][$bufferedHandler] = [
-					'class' => '\\MediaWiki\\Logger\\Monolog\\BufferHandler',
+					'class' => \MediaWiki\Logger\Monolog\BufferHandler::class,
 					'args' => [
 						function () use ( $handlerName ) {
 							return LoggerFactory::getProvider()->getHandler(
@@ -337,7 +338,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 		$failureGroupHandler = 'failuregroup|' . implode( '|', $handlers );
 		if ( !isset( $wmgMonologConfig['handlers'][$failureGroupHandler] ) ) {
 			$wmgMonologConfig['handlers'][$failureGroupHandler] = [
-				'class' => '\\Monolog\\Handler\\WhatFailureGroupHandler',
+				'class' => \Monolog\Handler\WhatFailureGroupHandler::class,
 				'args' => [
 					function () use ( $handlers ) {
 						$provider = LoggerFactory::getProvider();
@@ -380,12 +381,12 @@ if (
 }
 
 $wgMWLoggerDefaultSpi = [
-	'class' => '\\MediaWiki\\Logger\\MonologSpi',
+	'class' => \MediaWiki\Logger\MonologSpi::class,
 	'args' => [ $wmgMonologConfig ],
 ];
 
 // Bug: T99581 - force logger timezone to UTC
 // Guard condition needed for Jenkins; class from mediawiki/vendor
-if ( method_exists( '\\Monolog\\Logger', 'setTimezone' ) ) {
+if ( method_exists( \Monolog\Logger::class, 'setTimezone' ) ) {
 	\Monolog\Logger::setTimezone( new DateTimeZone( 'UTC' ) );
 }
