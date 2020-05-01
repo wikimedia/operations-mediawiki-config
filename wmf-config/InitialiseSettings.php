@@ -289,6 +289,7 @@ function wmfGetVariantSettings() {
 	'arbcom_nlwiki' => 'Europe/Berlin',
 	'aswikisource' => 'Asia/Kolkata', // T45129
 	'atjwiki' => 'America/Montreal', // T167714
+	'awawiki' => 'Asia/Kolkata', // T251371
 	'banwiki' => 'Asia/Makassar',
 	'barwiki' => 'Europe/Berlin',
 	'bat_smgwiki' => 'Europe/Vilnius',
@@ -567,6 +568,7 @@ function wmfGetVariantSettings() {
 	'aswiki' => '/static/images/project-logos/aswiki.png',
 	'atjwiki' => '/static/images/project-logos/atjwiki.png', // T167714
 	'avwiki' => '/static/images/project-logos/avwiki.png', // T48589
+	'awawiki' => '/static/images/project-logos/awawiki.png', // T251371
 	'aywiki' => '/static/images/project-logos/aywiki.png',
 	'azbwiki' => '/static/images/project-logos/azbwiki.png', // T106305
 	'azwiki' => '/static/images/project-logos/azwiki.png', // T50397
@@ -1338,6 +1340,7 @@ function wmfGetVariantSettings() {
 	'astwiki' => '/static/images/project-logos/astwiki-1.5x.png', // T150618
 	'atjwiki' => '/static/images/project-logos/atjwiki-1.5x.png', // T167714
 	'avwiki' => '/static/images/project-logos/avwiki-1.5x.png', // T150618
+	'awawiki' => '/static/images/project-logos/awawiki-1.5x.png', // T251371
 	'aywiki' => '/static/images/project-logos/aywiki-1.5x.png', // T150618
 	'azbwiki' => '/static/images/project-logos/azbwiki-1.5x.png', // T150618
 	'azwiki' => '/static/images/project-logos/azwiki-1.5x.png', // T150618
@@ -1880,6 +1883,7 @@ function wmfGetVariantSettings() {
 	'astwiki' => '/static/images/project-logos/astwiki-2x.png', // T150618
 	'atjwiki' => '/static/images/project-logos/atjwiki-2x.png', // T167714
 	'avwiki' => '/static/images/project-logos/avwiki-2x.png', // T150618
+	'awawiki' => '/static/images/project-logos/awawiki-2x.png', // T251371
 	'aywiki' => '/static/images/project-logos/aywiki-2x.png', // T150618
 	'azbwiki' => '/static/images/project-logos/azbwiki-2x.png', // T150618
 	'azwiki' => '/static/images/project-logos/azwiki-2x.png', // T150618
@@ -3221,6 +3225,7 @@ function wmfGetVariantSettings() {
 	'atjwiki' => 'Wikipetcia', // T167714
 	'aswikisource' => 'ৱিকিউৎস', // T45129
 	'auditcomwiki' => 'Audit Committee',
+	'awawiki' => 'विकिपीडिया', // T251371
 	'azwiki' => 'Vikipediya',
 	'azwikibooks' => 'Vikikitab', // T33068
 	'azwikiquote' => 'Vikisitat',
@@ -3748,6 +3753,7 @@ function wmfGetVariantSettings() {
 	'atjwiki' => 'Wikipetcia', // T167714
 	'auditcomwiki' => 'Project',
 	'avwiki' => 'Википедия', // T155321
+	'awawiki' => 'विकिपीडिया', // T251371
 	'aywiki' => 'Wikipidiya',
 	'azwiki' => 'Vikipediya',
 	'azwikibooks' => 'Vikikitab', // T33068
