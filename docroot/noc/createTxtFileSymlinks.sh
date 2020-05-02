@@ -23,26 +23,20 @@ mwconfig_files_txt=(
 	import.php
 	interwiki.php
 	interwiki-labs.php
-	jobqueue.php
-	jobqueue-labs.php
 	MetaContactPages.php
 	LabsServices.php
 	liquidthreads.php
 	logging.php
-	logging-labs.php
 	mc.php
 	mc-labs.php
 	missing.php
 	mobile-labs.php
 	mobile.php
-	proofreadpage.php
 	redis.php
 	throttle.php
 	throttle-analyze.php
 	reverse-proxy.php
 	reverse-proxy-staging.php
-	session.php
-	session-labs.php
 	timeline.php
 	trusted-xff.php
 	Wikibase.php
