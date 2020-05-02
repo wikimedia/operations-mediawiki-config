@@ -1186,7 +1186,7 @@ function wmfGetVariantSettings() {
 	'betawikiversity' => '/static/images/project-logos/betawikiversity.png',
 	'cswikiversity' => '/static/images/project-logos/cswikiversity.png', // T54019
 	'dewikiversity' => '/static/images/project-logos/dewikiversity.png',
-	'elwikiversity' => '/static/images/project-logos/elwikiversity.png',
+	'elwikiversity' => '/static/images/project-logos/elwikiversity.png', // T248391
 	'enwikiversity' => '/static/images/project-logos/enwikiversity.png',
 	'eswikiversity' => '/static/images/project-logos/eswikiversity.png',
 	'fiwikiversity' => '/static/images/project-logos/fiwikiversity.png',
@@ -1791,7 +1791,7 @@ function wmfGetVariantSettings() {
 	'arwikiversity' => '/static/images/project-logos/arwikiversity-1.5x.png',
 	'cswikiversity' => '/static/images/project-logos/cswikiversity-1.5x.png', // T150618
 	'dewikiversity' => '/static/images/project-logos/dewikiversity-1.5x.png',
-	'elwikiversity' => '/static/images/project-logos/elwikiversity-1.5x.png', // T150618
+	'elwikiversity' => '/static/images/project-logos/elwikiversity-1.5x.png', // T248391
 	'enwikiversity' => '/static/images/project-logos/enwikiversity-1.5x.png', // T150618
 	'eswikiversity' => '/static/images/project-logos/eswikiversity-1.5x.png',
 	'fiwikiversity' => '/static/images/project-logos/fiwikiversity-1.5x.png', // T150618
@@ -2333,7 +2333,7 @@ function wmfGetVariantSettings() {
 	'arwikiversity' => '/static/images/project-logos/arwikiversity-2x.png',
 	'cswikiversity' => '/static/images/project-logos/cswikiversity-2x.png', // T150618
 	'dewikiversity' => '/static/images/project-logos/dewikiversity-2x.png',
-	'elwikiversity' => '/static/images/project-logos/elwikiversity-2x.png', // T150618
+	'elwikiversity' => '/static/images/project-logos/elwikiversity-2x.png', // T248391
 	'enwikiversity' => '/static/images/project-logos/enwikiversity-2x.png', // T150618
 	'eswikiversity' => '/static/images/project-logos/eswikiversity-2x.png',
 	'fiwikiversity' => '/static/images/project-logos/fiwikiversity-2x.png', // T150618
