@@ -23042,9 +23042,9 @@ function wmfGetVariantSettings() {
 // Enable crossprocess search (side bar)
 'wgCirrusSearchEnableCrossProjectSearch' => [
 	'default' => false,
-	// Activated on all wikipedias
-	'wikipedia' => true,
+	'wikipedia' => true, // Activated on all wikipedias
 
+	'frwikibooks' => true, // T251683
 	'frwiktionary' => true, // T250724
 	// italian wikis used to have the old sidebar on all sisterwikis
 	// use the one there too.
