@@ -326,6 +326,7 @@ if ( $wmgUseKartographer ) {
 
 if ( $wmgUseTwoColConflict ) {
 	$wgTwoColConflictBetaFeature = false;
+	$wgTwoColConflictSuggestResolution = true;
 }
 
 if ( $wmgUseFileImporter ) {
