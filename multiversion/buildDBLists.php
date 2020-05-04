@@ -14,8 +14,8 @@ $wmfDatacenter = 'eqiad';
 
 $config = wmfGetVariantSettings();
 
-$prodWikis = MWWikiversions::readDbListFile( 'all' );
-$labsOnlyWikis = array_diff( MWWikiversions::readDbListFile( 'all-labs' ), $prodWikis );
+$prodWikis = array_keys( MWWikiversions::readWikiVersionsFile( 'wikiversions.json' ) );
+$labsOnlyWikis = array_keys( MWWikiversions::readWikiVersionsFile( 'wikiversions-labs.json' ) );
 $knownDBLists = [];
 
 foreach ( $prodWikis as $wgDBname ) {
