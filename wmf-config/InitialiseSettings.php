@@ -25505,7 +25505,6 @@ function wmfGetVariantSettings() {
 
 'wgGENewcomerTasksGuidanceEnabled' => [
 	'default' => false,
-	'testwiki' => true,
 ],
 
 'wgGERestbaseUrl' => [
