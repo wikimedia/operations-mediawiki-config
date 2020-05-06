@@ -20668,7 +20668,6 @@ function wmfGetVariantSettings() {
 	"hsbwiki" => true,
 	"htwiki" => true,
 	"huwiki" => true,
-	"hywiki" => true,
 	"hywwiki" => true,
 	"hzwiki" => true,
 	"iawiki" => true,
