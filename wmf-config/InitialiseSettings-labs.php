@@ -169,6 +169,17 @@ function wmfGetLabsOverrideSettings() {
 			],
 		],
 
+		// List of streams to register for use with the EventLogging extension.
+		// EventLogging will request the stream config defined in wgEventStreams
+		// above for each of the stream names listed here.
+		'wgEventLoggingStreamNames' => [
+			'+default' => [
+				// Add beta only stream names here.  Production
+				// stream names are merged in, so if your stream is registered
+				// to be used by EventLogging in production you can omit it here.
+			]
+		],
+
 		// Log channels for beta cluster
 		'-wmgMonologChannels' => [
 			'default' => [

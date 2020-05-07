@@ -21077,6 +21077,17 @@ function wmfGetVariantSettings() {
 	],
 ],
 
+// List of streams to register for use with the EventLogging extension.
+// EventLogging will request the stream config defined in wgEventStreams
+// above for each of the stream names listed here.
+'wgEventLoggingStreamNames' => [
+	'default' => [
+		'eventlogging_SearchSatisfaction',
+		'eventlogging_Test',
+		'test.event',
+	]
+],
+
 // Enable Mediawiki client side (browser) Javascript error logging.
 // This is the publicly accessible endpoint for eventgate-logging-external.
 'wgWMEClientErrorIntakeURL' => [
