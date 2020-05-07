@@ -11627,6 +11627,9 @@ function wmfGetVariantSettings() {
 			'override-antispoof' => true,
 			'tboverride' => true,
 		],
+		'checkuser' => [
+			'investigate' => true, // T251932
+		],
 		'filemover' => [ 'movefile' => true ], // T32121
 		'user' => [
 			'upload_by_url' => true, // For testing of Flickr uploading via UploadWizard
