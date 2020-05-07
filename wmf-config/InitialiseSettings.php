@@ -21047,11 +21047,16 @@ function wmfGetVariantSettings() {
 	'default' => [
 		//
 		// EventLogging 'Legacy' streams.  https://phabricator.wikimedia.org/T238230
+		// These schemas have been migrated from metawiki to the schemas/event/secondary repository at
+		// https://schema.wikimedia.org/#!/secondary/jsonschema/analytics/legacy
 		//
 		[
 			'stream' => 'eventlogging_SearchSatisfaction',
-			// https://schema.wikimedia.org/#!/secondary/jsonschema/analytics/legacy/searchsatisfaction
 			'schema_title' => 'analytics/legacy/searchsatisfaction'
+		],
+		[
+			'stream' => 'eventlogging_Test',
+			'schema_title' => 'analytics/legacy/test'
 		],
 
 		// test.event stream; used to test that event stream
