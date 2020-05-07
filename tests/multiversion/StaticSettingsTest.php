@@ -35,15 +35,13 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 	public function testVariantUrlsAreLocalhost() {
 		$knownToContainExternalURLs = [
 			// These are user-facing, not in-cluster, and are fine
-			'wgCanonicalServer', 'wgServer', 'wgUploadPath', 'wgRedirectSources', 'wgUploadNavigationUrl', 'wgScorePath', 'wgUploadMissingFileUrl', 'wgRightsUrl', 'wgWelcomeSurveyPrivacyPolicyUrl', 'wgWBCitoidFullRestbaseURL', 'wgGlobalRenameBlacklist',
+			'wgCanonicalServer', 'wgServer', 'wgUploadPath', 'wgRedirectSources', 'wgUploadNavigationUrl', 'wgScorePath', 'wgUploadMissingFileUrl', 'wgRightsUrl', 'wgWelcomeSurveyPrivacyPolicyUrl', 'wgWBCitoidFullRestbaseURL', 'wgGlobalRenameBlacklist', 'wgWMEClientErrorIntakeURL', 'wgEventLoggingServiceUri',
 			// FIXME: Set in mobile.php?
 			'wgMFPhotoUploadEndpoint',
 			// FIXME: Just… wow. By name, this should be a boolean.
 			'wmgUseFileExporter',
 			// FIXME: Just set in wikibase.php? Most of these are user-facing.
 			'wgEntitySchemaShExSimpleUrl', 'wmgWBRepoSettingsSparqlEndpoint', 'wmgWikibaseClientRepoUrl', 'wmgWikibaseClientRepoConceptBaseUri', 'wmgWikibaseClientPropertyOrderUrl', 'wmgWBRepoConceptBaseUri', 'wgArticlePlaceholderRepoApiUrl', 'wgMediaInfoExternalEntitySearchBaseUri', 'wmgWikibaseSSRTermboxServerUrl',
-			// FIXME: Just set in CirrusSearch-production?
-			'wgWMEClientErrorIntakeURL',
 		];
 
 		foreach ( $this->variantSettings as $variantSetting => $settingsArray ) {

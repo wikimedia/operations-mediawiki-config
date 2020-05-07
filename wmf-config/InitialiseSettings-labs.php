@@ -180,6 +180,12 @@ function wmfGetLabsOverrideSettings() {
 			]
 		],
 
+		// EventLogging will POST events to this URI.
+		'wgEventLoggingServiceUri' => [
+			// Configured as a Cloud VPS webproxy in Horizon in the deployment-prep project.
+			'default' => 'https://intake-analytics-beta.wmflabs.org/v1/events?hasty=true',
+		],
+
 		// Log channels for beta cluster
 		'-wmgMonologChannels' => [
 			'default' => [

@@ -21088,6 +21088,12 @@ function wmfGetVariantSettings() {
 	]
 ],
 
+// EventLogging will POST events to this URI.
+'wgEventLoggingServiceUri' => [
+	'default' => false,
+	'group0' => 'https://intake-analytics.wikimedia.org/v1/events?hasty=true',
+],
+
 // Enable Mediawiki client side (browser) Javascript error logging.
 // This is the publicly accessible endpoint for eventgate-logging-external.
 'wgWMEClientErrorIntakeURL' => [
