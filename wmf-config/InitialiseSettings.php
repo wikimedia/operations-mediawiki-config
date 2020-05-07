@@ -2414,7 +2414,8 @@ function wmfGetVariantSettings() {
 	'wikiquote' => '/static/images/mobile/copyright/wikiquote.svg',
 	'wikisource' => '/static/images/mobile/copyright/wikisource.svg',
 	'wikiversity' => '/static/images/mobile/copyright/wikiversity.svg',
-	'wikivoyage' => '/static/images/mobile/copyright/wikivoyage.svg',
+	// https://phabricator.wikimedia.org/T252701
+	'wikivoyage' => false,
 	'wiktionary' => '/static/images/mobile/copyright/wiktionary.svg',
 
 	// Special wikis
@@ -2427,9 +2428,14 @@ function wmfGetVariantSettings() {
 	// Projects
 	'wikipedia' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-en.svg',
-			'width' => 119,
+			'width' => 105,
 			'height' => 18,
 		],
+	'wiktionary' => [
+		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-en.svg',
+		'width' => 107,
+		'height' => 19,
+	],
 	'wikivoyage' => [
 			'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-en.svg',
 			'width' => 96,
@@ -2439,8 +2445,8 @@ function wmfGetVariantSettings() {
 	// Wikipedia
 	'arwiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ar.svg',
-			'width' => 79,
-			'height' => 22,
+			'width' => 106,
+			'height' => 30,
 		],
 	'arzwiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ar.svg',
@@ -2449,7 +2455,7 @@ function wmfGetVariantSettings() {
 		],
 	'atjwiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-atj.svg',
-			'width' => 133,
+			'width' => 129,
 			'height' => 18,
 		],
 	'bawiki' => [
@@ -2464,8 +2470,8 @@ function wmfGetVariantSettings() {
 		],
 	'bnwiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-bn.svg',
-			'width' => 92,
-			'height' => 21,
+			'width' => 106,
+			'height' => 25,
 		],
 	'bpywiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-bn.svg',
@@ -2474,23 +2480,23 @@ function wmfGetVariantSettings() {
 		],
 	'cawiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ca.svg',
-			'width' => 95,
-			'height' => 18,
+			'width' => 120,
+			'height' => 23,
 		],
 	'cswiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-cs.svg',
-			'width' => 116,
+			'width' => 119,
 			'height' => 18,
 		],
 	'cywiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-cy.svg',
-			'width' => 116,
-			'height' => 18,
+			'width' => 119,
+			'height' => 17,
 		],
 	'etwiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-et.svg',
-			'width' => 127,
-			'height' => 19,
+			'width' => 120,
+			'height' => 18,
 		],
 	'fawiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fa.svg',
@@ -2514,8 +2520,8 @@ function wmfGetVariantSettings() {
 		],
 	'hiwiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-hi.svg',
-			'width' => 78,
-			'height' => 18,
+			'width' => 106,
+			'height' => 24,
 		],
 	'huwiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
@@ -2529,8 +2535,8 @@ function wmfGetVariantSettings() {
 		],
 	'jawiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ja.svg',
-			'width' => 116,
-			'height' => 18,
+			'width' => 119,
+			'height' => 20,
 		],
 	'jvwiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
@@ -2549,7 +2555,7 @@ function wmfGetVariantSettings() {
 		],
 	'lawiki' => [ // T240728
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-la.svg',
-			'width' => 113,
+			'width' => 112,
 			'height' => 18,
 		],
 	'lbewiki' => [
@@ -2594,8 +2600,8 @@ function wmfGetVariantSettings() {
 		],
 	'pswiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ps.svg',
-			'width' => 66,
-			'height' => 26,
+			'width' => 73,
+			'height' => 27,
 		],
 	'ptwiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
@@ -2604,8 +2610,8 @@ function wmfGetVariantSettings() {
 		],
 	'ruwiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ru.svg',
-			'width' => 126,
-			'height' => 20,
+			'width' => 129,
+			'height' => 21,
 		],
 	'sawiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-hi.svg',
@@ -2614,8 +2620,8 @@ function wmfGetVariantSettings() {
 		],
 	'sdwiki' => [ // T200870
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-sd.svg',
-			'width' => 77,
-			'height' => 22,
+			'width' => 109,
+			'height' => 28,
 		],
 	'skwiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
@@ -2624,7 +2630,7 @@ function wmfGetVariantSettings() {
 		],
 	'srwiki' => [ // T165896
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-sr.svg',
-			'width' => 122,
+			'width' => 125,
 			'height' => 22,
 		],
 	'suwiki' => [
@@ -2634,8 +2640,8 @@ function wmfGetVariantSettings() {
 		],
 	'szlwiki' => [ // T233104
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-szl.svg',
-			'width' => 118,
-			'height' => 22,
+			'width' => 120,
+			'height' => 21,
 		],
 	'tetwiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
@@ -2654,19 +2660,19 @@ function wmfGetVariantSettings() {
 		],
 	'urwiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ur.svg',
-			'width' => 66,
-			'height' => 26,
+			'width' => 73,
+			'height' => 27,
 		],
 	'uzwiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-uz.svg',
-			'width' => 116,
-			'height' => 18,
+			'width' => 120,
+			'height' => 17,
 		],
 
 	'zh_classicalwiki' => [ // T173408
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-zh-c.svg',
-			'width' => 80,
-			'height' => 18,
+			'width' => 91,
+			'height' => 21,
 		],
 
 	// Wiktionary
@@ -2719,8 +2725,8 @@ function wmfGetVariantSettings() {
 
 	'commonswiki' => [
 			'src' => '/static/images/mobile/copyright/commons-wordmark-en.svg',
-			'width' => 105,
-			'height' => 18,
+			'width' => 115,
+			'height' => 32,
 		],
 	'test2wiki' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-en.svg',
