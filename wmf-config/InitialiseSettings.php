@@ -25062,13 +25062,10 @@ function wmfGetVariantSettings() {
 		'mlr-1024rs' => '20180316-mrmr_viwiki_v1',
 	],
 	'zhwiki' => [
-		'mlr-1024rs' => 'zhwiki-20200122-20180215-query_explorer',
+		'mlr-1024rs' => 'zhwiki-20200429-20180215-query_explorer',
 	],
 	'kowiki' => [
-		'mlr-1024rs' => 'kowiki-20200122-20180215-query_explorer',
-	],
-	'jawiki' => [
-		'mlr-1024rs' => 'jawiki-20200122-20180215-query_explorer',
+		'mlr-1024rs' => 'kowiki-20200429-20180215-query_explorer',
 	],
 	/* TODO: re-enable once we have a model trained with BM25 features (T219534)
 	'zhwiki' => [
