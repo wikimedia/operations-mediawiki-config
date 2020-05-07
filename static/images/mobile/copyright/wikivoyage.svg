@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+	<title>
+		wikivoyage-logo
+	</title>
+	<g id="wikivoyage-logo" fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+		<path id="Path" fill="#900" fill-rule="nonzero" d="M39.3700787,20.4724409 L49.6062992,0 L29.1338583,10.2362205 C34.1294476,11.574791 38.0314292,15.4768516 39.3700787,20.4724409 Z"/>
+		<path id="Path" fill="#396" fill-rule="nonzero" d="M23.6220472,30.5807855 L36.4052287,50 L37.7952756,26.7716535 C34.0885905,30.4895376 28.6856981,31.9417441 23.6220472,30.5807855 L23.6220472,30.5807855 Z"/>
+		<path id="Path" fill="#069" fill-rule="nonzero" d="M23.2283465,11.8110236 L0,13.2010705 L19.4192145,25.984252 C18.0583362,20.9207078 19.5103794,15.5178154 23.2283465,11.8110236 L23.2283465,11.8110236 Z"/>
+	</g>
+</svg>

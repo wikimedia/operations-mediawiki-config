@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+	<title>
+		commons-logo
+	</title>
+	<defs>
+		<circle id="path-1" cx="18.242" cy="18.242" r="18.242"/>
+	</defs>
+	<g id="commons-logo" fill="none" fill-rule="evenodd" stroke="none" stroke-width="1" transform="translate(2)">
+		<circle id="Oval" cx="23.062" cy="31.525" r="6.121" fill="#970000" fill-rule="nonzero"/>
+		<g id="Clipped" transform="translate(4.82 13.284)">
+			<mask id="mask-2" fill="#fff">
+				<use xlink:href="#path-1"/>
+			</mask>
+			<g id="Group" mask="url(#mask-2)">
+				<g transform="translate(-.547 3.023)">
+					<g id="arrow" transform="translate(16.156 21.952)">
+						<line id="Path" x1="2.669" x2="2.669" y1="11.631" y2="4.285" fill="#006499" fill-rule="nonzero" stroke="#006499" stroke-width="1.347"/>
+						<polygon id="Path" fill="#006499" fill-rule="nonzero" points="0 4.591 2.632 0 5.264 4.591"/>
+					</g>
+					<g id="three_arrows_lhs">
+						<g id="arrow-link" fill="#006499" fill-rule="nonzero" transform="rotate(45 -15.297 22.551)">
+							<g id="arrow" transform="translate(.988 -.002)">
+								<line id="Path" x1="2.669" x2="2.669" y1="11.631" y2="4.285" stroke="#006499" stroke-width="1.347"/>
+								<polygon id="Path" points="0 4.591 2.632 0 5.264 4.591"/>
+							</g>
+						</g>
+						<g id="arrow-link" fill="#006499" fill-rule="nonzero" transform="rotate(90 -.266 12.32)">
+							<g id="arrow">
+								<line id="Path" x1="2.669" x2="2.669" y1="11.631" y2="4.285" stroke="#006499" stroke-width="1.347"/>
+								<polygon id="Path" points="0 4.591 2.632 0 5.264 4.591"/>
+							</g>
+						</g>
+						<g id="arrow-link" fill="#006499" fill-rule="nonzero" transform="rotate(135 6.164 7.589)">
+							<g id="arrow">
+								<line id="Path" x1="2.669" x2="2.669" y1="11.631" y2="4.285" stroke="#006499" stroke-width="1.347"/>
+								<polygon id="Path" points="0 4.591 2.632 0 5.264 4.591"/>
+							</g>
+						</g>
+					</g>
+					<g id="three_arrows_lhs-link" transform="matrix(-1 0 0 1 37.577 0)">
+						<g id="three_arrows_lhs" fill="#006499" fill-rule="nonzero">
+							<g id="arrow-link" transform="rotate(45 -15.297 22.551)">
+								<g id="arrow" transform="translate(.988 -.002)">
+									<line id="Path" x1="2.669" x2="2.669" y1="11.631" y2="4.285" stroke="#006499" stroke-width="1.347"/>
+									<polygon id="Path" points="0 4.591 2.632 0 5.264 4.591"/>
+								</g>
+							</g>
+							<g id="arrow-link" transform="rotate(90 -.266 12.32)">
+								<g id="arrow">
+									<line id="Path" x1="2.669" x2="2.669" y1="11.631" y2="4.285" stroke="#006499" stroke-width="1.347"/>
+									<polygon id="Path" points="0 4.591 2.632 0 5.264 4.591"/>
+								</g>
+							</g>
+							<g id="arrow-link" transform="rotate(135 6.164 7.589)">
+								<g id="arrow">
+									<line id="Path" x1="2.669" x2="2.669" y1="11.631" y2="4.285" stroke="#006499" stroke-width="1.347"/>
+									<polygon id="Path" points="0 4.591 2.632 0 5.264 4.591"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+		<path id="blue_path" stroke="#006499" stroke-width="5.142" d="M22.6512875,16.0248372 C13.996507,16.0248372 6.98042121,23.040923 6.98042121,31.6957034 C6.98042121,40.3504839 13.996507,47.3665697 22.6512875,47.3665697 C31.3060679,47.3665697 38.3221537,40.3504839 38.3221537,31.6957034 C38.3221537,25.5742713 32.1395073,22.5135552 37.9548678,14.8617651" transform="rotate(-45 22.651 31.114)"/>
+		<path id="arrow_top" fill="#006499" fill-rule="nonzero" d="M21.6545662,0 C21.6545662,0 19.4508506,8.26393338 16.7574205,11.3246494 C14.0639903,14.3853655 23.8582817,7.52936152 27.1638551,11.0185778 C30.4694284,14.5077941 21.6545662,0 21.6545662,0 Z"/>
+	</g>
+</svg>
