@@ -15941,6 +15941,7 @@ function wmfGetVariantSettings() {
 		'media.api.aucklandmuseum.com',     // T250646 - Auckland Museum
 		'www.iau.org',                      // T250903 - International Astronomical Union
 		'www.kari.re.kr',                   // T250904 - Korea Aerospace Research Institute
+		'tw-photomedia.de',                 // T252141
 	],
 ],
 
