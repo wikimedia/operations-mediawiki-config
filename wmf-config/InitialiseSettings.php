@@ -15901,6 +15901,7 @@ function wmfGetVariantSettings() {
 		'*.karbobala.com',                  // T201236
 		'yphc.ir',                          // Iranian website for amateur photographers - T201237
 		'*.bollywoodhungama.com',           // Indian television and bollywood related images - T203363
+		'*.bollywoodhungama.in',            // Indian television and bollywood related images - T235415
 		'radlines.org',                     // Radiologists wiki - T203219
 		'*.nasimonline.ir',                 // Iranian news agency - T203371
 		'idb.ub.uni-tuebingen.de',          // University Library Tübingen - T211466
