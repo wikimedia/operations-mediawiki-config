@@ -26975,5 +26975,48 @@ function wmfGetVariantSettings() {
 	'default' => false,
 ],
 
+// Wikidata Bridge configuration
+
+'wmgWikibaseRepoDataBridgeEnabled' => [
+	'default' => false,
+	'testwikidatawiki' => true,
+],
+
+'wmgWikibaseClientDataBridgeEnabled' => [
+	'default' => false,
+	'wikidataclient-test' => true,
+	'testwikidatawiki' => false,
+],
+
+'wmgWikibaseClientWellKnownReferencePropertyIds' => [
+	'default' => [
+		'referenceUrl' => 'P854',
+		'title' => 'P1476',
+		'statedIn' => 'P248',
+		'author' => 'P50',
+		'publisher' => 'P123',
+		'publicationDate' => 'P577',
+		'retrievedDate' => 'P813',
+	],
+	'wikidataclient-test' => [
+		'referenceUrl' => 'P93',
+		'title' => 'P77107',
+		'statedIn' => 'P149',
+		'author' => 'P242',
+		'publisher' => 'P145',
+		'publicationDate' => 'P761',
+		'retrievedDate' => 'P388',
+	],
+],
+
+'wmgWikibaseClientDataBridgeHrefRegExp' => [
+	'default' => '^https://www\.wikidata\.org/wiki/((Q[1-9][0-9]*)).*#(P[1-9][0-9]*)$',
+	'wikidataclient-test' => '^https://test\.wikidata\.org/wiki/((Q[1-9][0-9]*)).*#(P[1-9][0-9]*)$',
+],
+
+'wmgWikibaseClientDataBridgeEditTags' => [
+	'default' => [ 'data-bridge' ],
+],
+
 ];
 }

@@ -39,7 +39,7 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 			// FIXME: Just… wow. By name, this should be a boolean.
 			'wmgUseFileExporter',
 			// FIXME: Just set in wikibase.php? Most of these are user-facing.
-			'wgEntitySchemaShExSimpleUrl', 'wmgWBRepoSettingsSparqlEndpoint', 'wmgWikibaseClientRepoUrl', 'wmgWikibaseClientRepoConceptBaseUri', 'wmgWikibaseClientPropertyOrderUrl', 'wmgWBRepoConceptBaseUri', 'wgArticlePlaceholderRepoApiUrl', 'wgMediaInfoExternalEntitySearchBaseUri', 'wmgWikibaseSSRTermboxServerUrl',
+			'wgEntitySchemaShExSimpleUrl', 'wmgWBRepoSettingsSparqlEndpoint', 'wmgWikibaseClientRepoUrl', 'wmgWikibaseClientRepoConceptBaseUri', 'wmgWikibaseClientPropertyOrderUrl', 'wmgWBRepoConceptBaseUri', 'wgArticlePlaceholderRepoApiUrl', 'wgMediaInfoExternalEntitySearchBaseUri', 'wmgWikibaseSSRTermboxServerUrl', 'wmgWikibaseClientDataBridgeHrefRegExp',
 		];
 
 		foreach ( $this->variantSettings as $variantSetting => $settingsArray ) {
