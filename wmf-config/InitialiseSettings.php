@@ -27401,13 +27401,14 @@ function wmfGetVariantSettings() {
 
 'wmgWikibaseRepoDataBridgeEnabled' => [
 	'default' => false,
-	'testwikidatawiki' => true,
+	'wikidata' => true,
 ],
 
 'wmgWikibaseClientDataBridgeEnabled' => [
 	'default' => false,
 	'wikidataclient-test' => true,
 	'testwikidatawiki' => false,
+	'cawiki' => true,
 ],
 
 'wmgWikibaseClientWellKnownReferencePropertyIds' => [
