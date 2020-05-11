@@ -183,7 +183,7 @@ function wmfGetLabsOverrideSettings() {
 		// EventLogging will POST events to this URI.
 		'wgEventLoggingServiceUri' => [
 			// Configured as a Cloud VPS webproxy in Horizon in the deployment-prep project.
-			'default' => 'https://intake-analytics-beta.wmflabs.org/v1/events?hasty=true',
+			'default' => 'https://intake-analytics.wikimedia.beta.wmflabs.org/v1/events?hasty=true',
 		],
 
 		// Log channels for beta cluster
@@ -297,7 +297,7 @@ function wmfGetLabsOverrideSettings() {
 		// Enable Mediawiki client side (browser) Javascript error logging.
 		// This is the publicly accessible endpoint for eventgate-logging-external.
 		'wgWMEClientErrorIntakeURL' => [
-			'default' => 'https://eventgate-logging.wmflabs.org/v1/events?hasty=true'
+			'default' => 'https://intake-logging.wikimedia.beta.wmflabs.org/v1/events?hasty=true'
 		],
 		'wgMFAdvancedMobileContributions' => [
 			'default' => true,
