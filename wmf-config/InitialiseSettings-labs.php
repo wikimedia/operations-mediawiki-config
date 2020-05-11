@@ -157,11 +157,11 @@ function wmfGetLabsOverrideSettings() {
 		// to dynamically add event streams that it should accept
 		// and validate.
 		// See https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/EventStreamConfig/#mediawiki-config
-		// NOTE: we prefer to merge (via the + prefix) stream config  rom production so we only
+		// NOTE: we prefer to merge (via the + prefix) stream config from production so we only
 		//       have to configure streams that are being tested (or overridden) in beta here,
 		//       and centralize the configuration in InitialiseSettings.php otherwise.
 		'wgEventStreams' => [
-			'+default' => [
+			'default' => [
 				// Add beta only stream configs here.  Production
 				// stream configs are merged in, so if your settings for
 				// production and beta are the same, you can omit also adding your
@@ -184,6 +184,26 @@ function wmfGetLabsOverrideSettings() {
 		'wgEventLoggingServiceUri' => [
 			// Configured as a Cloud VPS webproxy in Horizon in the deployment-prep project.
 			'default' => 'https://intake-analytics.wikimedia.beta.wmflabs.org/v1/events?hasty=true',
+		],
+
+		// Historically, EventLogging would register Schemas and revisions it used
+		// via the EventLoggingSchemas extension attribute like in
+		// https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/WikimediaEvents/+/master/extension.json#51
+		// It also overrides these with the $wgEventLoggingSchemas global.
+		// While in the process of migrating legacy EventLogging events to event platform,
+		// use the wgEventLoggingSchemas to override the extension attribute for an incremental rollout.
+		// This will be removed from mediawiki-config once all schemas have been successfully migrated
+		// and the EventLoggingSchemas extension attributes are all set to Event Platform schema URIs.
+		// ONLY Legacy EventLogging schemas need to go here.  This is the switch that tells
+		// EventLogging to POST to EventGate rather than GET to EventLogging beacon.
+		// https://phabricator.wikimedia.org/T238230
+		'wgEventLoggingSchemas' => [
+			'+deploymentwiki' => [
+				// Add beta only migrated wgEventLoggingSchemas configs here.  Production
+				// wgEventLoggingSchemas are merged in, so if your settings for
+				// production and beta are the same, you can omit also adding an entry here.
+				'SearchSatisfaction' => '/analytics/legacy/searchsatisfaction/1.0.0'
+			],
 		],
 
 		// Log channels for beta cluster

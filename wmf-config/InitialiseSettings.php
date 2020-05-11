@@ -21106,6 +21106,26 @@ function wmfGetVariantSettings() {
 	'group0' => 'https://intake-analytics.wikimedia.org/v1/events?hasty=true',
 ],
 
+// Historically, EventLogging would register Schemas and revisions it used
+// via the EventLoggingSchemas extension attribute like in
+// https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/WikimediaEvents/+/master/extension.json#51
+// It also overrides these with the $wgEventLoggingSchemas global.
+// While in the process of migrating legacy EventLogging events to event platform,
+// use the wgEventLoggingSchemas to override the extension attribute for an incremental rollout.
+// This will be removed from mediawiki-config once all schemas have been successfully migrated
+// and the EventLoggingSchemas extension attributes are all set to Event Platform schema URIs.
+// ONLY Legacy EventLogging schemas need to go here.  This is the switch that tells
+// EventLogging to POST to EventGate rather than GET to EventLogging beacon.
+// https://phabricator.wikimedia.org/T238230
+'wgEventLoggingSchemas' => [
+	'default' => [
+		'Test' => '/analytics/legacy/test/1.0.0'
+	],
+	'+testwiki' => [
+		'SearchSatisfaction' => '/analytics/test/searchsatisfaction/1.0.0'
+	],
+],
+
 // Enable Mediawiki client side (browser) Javascript error logging.
 // This is the publicly accessible endpoint for eventgate-logging-external.
 'wgWMEClientErrorIntakeURL' => [
