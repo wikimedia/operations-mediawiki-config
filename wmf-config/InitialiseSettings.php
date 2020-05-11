@@ -15953,6 +15953,7 @@ function wmfGetVariantSettings() {
 		'www.iau.org',                      // T250903 - International Astronomical Union
 		'www.kari.re.kr',                   // T250904 - Korea Aerospace Research Institute
 		'tw-photomedia.de',                 // T252141
+		'*.britishmuseum.org',              // British museum - T235415
 	],
 ],
 
