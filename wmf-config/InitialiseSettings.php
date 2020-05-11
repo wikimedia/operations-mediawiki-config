@@ -8840,16 +8840,21 @@ function wmfGetVariantSettings() {
 ],
 'wgVectorShowSkinPreferences' => [
 	'default' => false,
+	'officewiki' => true, // T251285
+	'testwiki' => true, // T251285
 ],
 // Skin versions are strings not numbers. See skins/Vector/skin.json.
 'wgVectorDefaultSkinVersion' => [
 	'default' => '1', // Legacy Vector
+	'officewiki' => '2', // Modern Vector (office wiki is logged in only, T251285)
 ],
 'wgVectorDefaultSkinVersionForExistingAccounts' => [
 	'default' => '1', // Legacy Vector
+	'officewiki' => '2', // Modern Vector (office wiki is logged in only, T251285)
 ],
 'wgVectorDefaultSkinVersionForNewAccounts' => [
 	'default' => '1', // Legacy Vector
+	'officewiki' => '2', // Modern Vector (office wiki is logged in only, T251285)
 ],
 
 # wgForceUIMsgAsContentMsg @{
