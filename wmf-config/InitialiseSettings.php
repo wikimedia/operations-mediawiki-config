@@ -7204,6 +7204,10 @@ function wmfGetVariantSettings() {
 		100 => 'Puotal', // T135479
 		101 => 'Puotal_diskoshan',
 	],
+	'jvwiki' => [
+		100 => 'Gapura', // T252343 - Portal (Talk)
+		101 => 'Parembugan_Gapura',
+	],
 	'kawiki' => [
 		100 => 'პორტალი',
 		101 => 'პორტალი_განხილვა',
