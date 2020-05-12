@@ -3627,6 +3627,8 @@ function wmfGetVariantSettings() {
 	'thwikibooks' => 'วิกิตำรา', // T48153
 	'thwikiquote' => 'วิกิคำคม',
 	'thwikisource' => 'วิกิซอร์ซ',
+	'tiwiki' => 'ዊኪፔዲያ',
+	'tiwiktionary' => 'ዊኪ-መዝገበ-ቃላት',
 	'tkwiki' => 'Wikipediýa',
 	'tkwiktionary' => 'Wikisözlük',
 	'transitionteamwiki' => 'Transition Team Wiki',
@@ -4148,6 +4150,8 @@ function wmfGetVariantSettings() {
 	'thwikinews' => 'วิกิข่าว',
 	'thwikiquote' => 'วิกิคำคม',
 	'thwikisource' => 'วิกิซอร์ซ',
+	'tiwiki' => 'ዊኪፔዲያ',
+	'tiwiktionary' => 'ዊኪ-መዝገበ-ቃላት',
 	'tkwiki' => 'Wikipediýa',
 	'tkwiktionary' => 'Wikisözlük',
 	'transitionteamwiki' => 'Project',
@@ -4296,6 +4300,8 @@ function wmfGetVariantSettings() {
 	'tewikiquote' => 'వికీవ్యాఖ్య_చర్చ', // T89332
 	'thwikibooks' => 'คุยเรื่องวิกิตำรา', // T42717
 	'thwikiquote' => 'คุยเรื่องวิกิคำคม',
+	'tiwiki' => 'ዊኪፔዲያ_ምይይጥ',
+	'tiwiktionary' => 'ዊኪ-መዝገበ-ቃላት_ምይይጥ',
 	'thwiktionary' => 'คุยเรื่องวิกิพจนานุกรม', // T42717
 	'tyvwiki' => 'Википедия_дугайында_сүмелел', // T51328
 	'uawikimedia' => 'Обговорення_Вікімедіа',
