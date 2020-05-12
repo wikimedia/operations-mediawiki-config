@@ -15954,6 +15954,7 @@ function wmfGetVariantSettings() {
 		'www.kari.re.kr',                   // T250904 - Korea Aerospace Research Institute
 		'tw-photomedia.de',                 // T252141
 		'*.britishmuseum.org',              // British museum - T235415
+		'*.deutsche-digitale-bibliothek.de', // german-digital-library - T251287
 	],
 ],
 
