@@ -3632,8 +3632,6 @@ if ( $wmgUseJosa ) {
 	wfLoadExtension( 'Josa' );
 }
 
-wfLoadExtension( 'ParsoidBatchAPI' );
-
 if ( $wmgUseOATHAuth ) {
 	wfLoadExtension( 'OATHAuth' );
 
