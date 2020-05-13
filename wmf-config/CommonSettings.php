@@ -1447,21 +1447,21 @@ if ( $wgDBname === 'enwiki' ) {
 }
 
 if ( $wmgUseFooterContactLink ) {
-	$wgHooks['SkinTemplateOutputPageBeforeExec'][] = function ( $sk, &$tpl ) {
-		$contactLink = Html::element( 'a', [ 'href' => $sk->msg( 'contact-url' )->escaped() ],
-			$sk->msg( 'contact' )->text() );
-		$tpl->set( 'contact', $contactLink );
-		$tpl->data['footerlinks']['places'][] = 'contact';
-		return true;
+	$wgHooks['SkinAddFooterLinks'][] = function ( $sk, $key, &$footerlinks ) {
+		if ( $key === 'places' ) {
+			$footerlinks['contact'] = Html::element( 'a', [ 'href' => $sk->msg( 'contact-url' )->escaped() ],
+				$sk->msg( 'contact' )->text()
+			);
+		}
 	};
 }
 if ( $wmgUseFooterCodeOfConductLink ) {
-	$wgHooks['SkinTemplateOutputPageBeforeExec'][] = function ( $sk, &$tpl ) {
-		$contactLink = Html::element( 'a', [ 'href' => $sk->msg( 'wm-codeofconduct-url' )->escaped() ],
-			$sk->msg( 'wm-codeofconduct' )->text() );
-		$tpl->set( 'wm-codeofconduct', $contactLink );
-		$tpl->data['footerlinks']['places'][] = 'wm-codeofconduct';
-		return true;
+	$wgHooks['SkinAddFooterLinks'][] = function ( $sk, $key, &$footerlinks ) {
+		if ( $key === 'places' ) {
+			$footerlinks['wm-codeofconduct'] = Html::element( 'a', [ 'href' => $sk->msg( 'wm-codeofconduct-url' )->escaped() ],
+				$sk->msg( 'wm-codeofconduct' )->text()
+			);
+		}
 	};
 }
 
