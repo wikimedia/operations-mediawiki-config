@@ -24335,6 +24335,8 @@ function wmfGetVariantSettings() {
 	'default' => true,
 	'group0' => false, // T35837
 	'svwiki' => false, // T72470, contact @Nirmos
+	'fawiki' => false,
+	'wikidatawiki' => false,
 ],
 
 'wgRightsPage' => [
