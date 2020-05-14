@@ -15962,6 +15962,8 @@ function wmfGetVariantSettings() {
 		'tw-photomedia.de',                 // T252141
 		'*.britishmuseum.org',              // British museum - T235415
 		'*.deutsche-digitale-bibliothek.de', // german-digital-library - T251287
+		'*.ub.uni-heidelberg.de', // Heidelberg University Digital Libary - T252600
+		'hq.eso.org', //European Organisation for Astronomical Research in the Southern Hemisphere - T252726
 	],
 ],
 
