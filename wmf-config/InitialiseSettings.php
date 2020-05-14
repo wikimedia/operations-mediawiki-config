@@ -18414,6 +18414,7 @@ function wmfGetVariantSettings() {
 'wgGraphImgServiceUrl' => [
 	'default' => "/api/rest_v1/page/graph/png/%2\$s/0/%4\$s.png",
 	'testwiki' => false,
+	'mediawikiwiki' => false,
 	'private' => false,
 ],
 

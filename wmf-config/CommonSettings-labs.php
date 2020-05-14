@@ -305,6 +305,10 @@ if ( $wmgUseGraph ) {
 		],
 		'wikidatasparql' => [
 			'wdqs-test.wmflabs.org',
+			'query.wikidata.org',
+		],
+		'geoshape' => [
+			'maps.wikimedia.org',
 		],
 	];
 }
