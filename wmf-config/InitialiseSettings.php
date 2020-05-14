@@ -14670,6 +14670,7 @@ function wmfGetVariantSettings() {
 'wgProofreadPagePageSeparator' => [
 	'default' => '&#32;',
 	'jawikisource' => '', // T195873
+	'thwikisource' => '', // T252610
 	'zhwikisource' => '', // T194875
 ],
 
