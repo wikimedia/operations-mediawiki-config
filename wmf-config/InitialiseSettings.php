@@ -6104,6 +6104,7 @@ function wmfGetVariantSettings() {
 	// Wikisource @{
 	'+wikisource' => [ 0 => 1, 8 => 0 ],
 	'+cswikisource' => [ 14 => 1 ],
+	'+napwikisource' => [ 250 => 1, 251 => 1 ], // T252755
 	'+plwikisource' => [ 124 => 1, 125 => 1 ], // T154711
 	// @}
 
