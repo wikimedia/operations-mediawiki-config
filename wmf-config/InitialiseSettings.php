@@ -14087,8 +14087,8 @@ function wmfGetVariantSettings() {
 	'tewiki' => [ 'en', 'commons' ], // T43880
 	'tewikisource' => [ 'w', 'b', 'en' ], // T94531
 	'tewikiquote' => [ 'w', 'en' ], // T91635
-	'testwiki' => [ 'de', 'en', 'es', 'fr', 'ja', 'commons', 'meta', 'incubator', 'strategy', 'wikinews:en', 'wikinews:es' ], // T154879
-	'test2wiki' => [ 'en', 'cs', 'n', 'n:es', 'n:fr' ], // T155906
+	'testwiki' => [ 'de', 'en', 'es', 'fr', 'ja', 'commons', 'meta', 'incubator', 'strategy', 'wikinews:en', 'wikinews:es', 'mediawikiwiki' ], // T154879
+	'test2wiki' => [ 'en', 'cs', 'n', 'n:es', 'n:fr', 'mediawikiwiki' ], // T155906
 	'tetwiki' => [ 'en', 'de', 'pt' ],
 	'tnwiki' => [ 'en' ], // T53327
 	'tpiwiki' => [ 'en', 'simple', 'wikt:en', 'commons' ], // T26769
