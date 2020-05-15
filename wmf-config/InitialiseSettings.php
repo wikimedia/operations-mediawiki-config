@@ -15147,6 +15147,13 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
+// Store RL deps in main stash instead of the master database (T113916)
+'wgResourceLoaderUseObjectCacheForDeps' => [
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+],
+
 # CENTRAL AUTH @{
 'wmgUseCentralAuth' => [
 	'default' => true,
