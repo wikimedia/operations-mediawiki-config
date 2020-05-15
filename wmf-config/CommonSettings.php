@@ -3752,9 +3752,9 @@ if ( $wmgAllowLabsAnonEdits ) {
 }
 
 // On Special:Version, link to useful release notes
-$wgHooks['SpecialVersionVersionUrl'][] = function ( $wgVersion, &$versionUrl ) {
+$wgHooks['SpecialVersionVersionUrl'][] = function ( $version, &$versionUrl ) {
 	$matches = [];
-	preg_match( "/^(\d+\.\d+)(?:\.0-)?wmf\.?(\d+)?$/", $wgVersion, $matches );
+	preg_match( "/^(\d+\.\d+)(?:\.0-)?wmf\.?(\d+)?$/", $version, $matches );
 	if ( $matches ) {
 		$versionUrl = "//www.mediawiki.org/wiki/MediaWiki_{$matches[1]}";
 		if ( isset( $matches[2] ) ) {
