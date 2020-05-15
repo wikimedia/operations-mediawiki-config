@@ -351,6 +351,9 @@ if ( $wmgUseEventBus ) {
 
 $wgMessageCacheType = CACHE_ACCEL;
 
+// T113916
+$wgResourceLoaderUseObjectCacheForDeps = true;
+
 // This will work for most wikis, which is considered good enough.
 $wgPageViewInfoWikimediaDomain = "$lang.$site.org";
 $wgGERestbaseUrl = $wgGERestbaseUrl ?: "https://$lang.$site.org/api/rest_v1";
