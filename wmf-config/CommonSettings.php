@@ -407,11 +407,6 @@ $wgResourceLoaderMaxQueryLength = 5000;
 // - Bumped to fix broken SVG embedding being cached (T176884)
 $wgResourceLoaderStorageVersion .= '-3';
 
-// Store RL deps in main stash (Redis) instead of the master database (T113916)
-if ( $wgDBname === 'testwiki' || $wgDBname === 'test2wiki' ) {
-	$wgResourceLoaderUseObjectCacheForDeps = true;
-}
-
 $wgGitInfoCacheDirectory = "$IP/cache/gitinfo";
 
 // @var string|bool: E-mail address to send notifications to, or false to disable notifications.
