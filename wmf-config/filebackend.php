@@ -72,7 +72,9 @@ foreach ( $datacenters as $specificDC ) {
 		'readUsers'           => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
 		'writeUsers'          => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
 		'secureReadUsers'     => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ],
-		'secureWriteUsers'    => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ]
+		'secureWriteUsers'    => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ],
+		'connTimeout'         => 10,
+		'reqTimeout'          => 900, // T226979
 	];
 	$wgFileBackends[] = [ // backend config for wiki's access to shared repo
 		'class'              => 'SwiftFileBackend',
@@ -101,7 +103,9 @@ foreach ( $datacenters as $specificDC ) {
 		'readUsers'           => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
 		'writeUsers'          => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
 		'secureReadUsers'     => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ],
-		'secureWriteUsers'    => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ]
+		'secureWriteUsers'    => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ],
+		'connTimeout'         => 10,
+		'reqTimeout'          => 900, // T226979
 	];
 	$wgFileBackends[] = [ // backend config for wiki's access to shared files
 		'class'              => 'SwiftFileBackend',
@@ -121,7 +125,9 @@ foreach ( $datacenters as $specificDC ) {
 		'readUsers'           => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
 		'writeUsers'          => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
 		'secureReadUsers'     => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ],
-		'secureWriteUsers'    => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ]
+		'secureWriteUsers'    => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ],
+		'connTimeout'         => 10,
+		'reqTimeout'          => 900, // T226979
 	];
 	$wgFileBackends[] = [ // backend config for wiki's access to shared test repo
 		'class'              => 'SwiftFileBackend',
@@ -140,7 +146,9 @@ foreach ( $datacenters as $specificDC ) {
 		'readUsers'           => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
 		'writeUsers'          => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
 		'secureReadUsers'     => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ],
-		'secureWriteUsers'    => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ]
+		'secureWriteUsers'    => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ],
+		'connTimeout'         => 10,
+		'reqTimeout'          => 900, // T226979
 	];
 }
 /* end DC-specific Swift backend config */
