@@ -17,7 +17,7 @@
  *   way if a hexidecimal query string was set. (E.g. verifiable hash.)
  *   Therefore static.php MUST respond in a deterministic way for those requests
  *   regardless of which wiki made the request. (Compliance is enforced via VCL by
- *   hardcoding 'en.wikipedia.org' for these requesrs, per static_host config.)
+ *   hardcoding 'en.wikipedia.org' for these requests, per static_host config.)
  *
  * In addition to the above, this file also looks in older MediaWiki branch
  * directories in order to support references from our static HTML cache for 30 days.
