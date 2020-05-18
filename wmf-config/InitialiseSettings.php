@@ -14603,6 +14603,7 @@ function wmfGetVariantSettings() {
 	'enwiki' => [ 118, 119 ], // draft and draft talk
 	'hewiki' => [ 118, 119 ], // draft and draft talk - T86329
 	'kowiki' => [ 118, 119 ], // draft and draft talk - T92798
+	'thwiki' => [ 118, 119 ], // draft and draft talk - T252959
 	'zhwiki' => [ 118, 119 ], // draft and draft talk - T91223
 ],
 
@@ -17726,6 +17727,9 @@ function wmfGetVariantSettings() {
 	'+svwiki' => [
 		'Project' => true, // T144688
 		'Portal' => true, // T144688
+	],
+	'+thwiki' => [
+		'ฉบับร่าง' /* Draft */ => true, //T252959
 	],
 	'+vecwiki' => [
 		'Project' => true, // T250419
