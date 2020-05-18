@@ -25689,7 +25689,7 @@ function wmfGetVariantSettings() {
 	'kowiki' => '위키백과:새_사용자_경험/새_사용자_멘토',
 	'srwiki' => 'Википедија:Трг/Помоћ/Ментори',
 	'ukwiki' => 'Вікіпедія:Кнайпа (допомога)/Наставники',
-	'viwiki' => 'Wikipedia:Phát_triển_cộng_đồng/Danh_sách_thành_viên_mentor',
+	'viwiki' => 'Wikipedia:Dự án Phát triển cộng đồng/Danh sách thành viên cố vấn',
 ],
 
 'wmgShowRollbackConfirmationDefaultUserOptions' => [
