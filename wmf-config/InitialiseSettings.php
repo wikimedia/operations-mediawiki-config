@@ -2428,7 +2428,7 @@ function wmfGetVariantSettings() {
 	// Projects
 	'wikipedia' => [
 			'src' => '/static/images/mobile/copyright/wikipedia-wordmark-en.svg',
-			'width' => 105,
+			'width' => 119,
 			'height' => 18,
 		],
 	'wiktionary' => [
