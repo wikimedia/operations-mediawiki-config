@@ -10189,6 +10189,7 @@ function wmfGetVariantSettings() {
 		'templateeditor' => [
 			'templateeditor' => true,
 			'tboverride' => true,
+			'editcontentmodel' => true, // T253081
 		], // T57432
 		'sysop' => [
 			'templateeditor' => true, // T57432
