@@ -25722,7 +25722,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => 'ويكيبيديا:مشروع_فريق_النمو/قائمة_المتطوعين',
 	'cswiki' => 'Wikipedie:Potřebuji_pomoc/Mentoři',
 	'euwiki' => 'Laguntza:Mentoreak',
-	'frwiki' => 'Projet:Aide et accueil/Signatures',
+	'frwiki' => 'Projet:Aide et accueil/Volontaires',
 	'frwiktionary' => 'Wiktionnaire:Mentorat',
 	'huwiki' => 'Wikipédia:Szerkesztők megtartása/Mentorok',
 	'hywiki' => 'Վիքիպեդիա:Օգնություն/Ստորագրություններ',
