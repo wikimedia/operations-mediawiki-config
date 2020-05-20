@@ -29,6 +29,7 @@ if ( $wmfRealm == 'labs' ) { # safe guard
 			'type'		  => 'mysql',
 			'flags'		  => DBO_DEFAULT,
 			'max lag'	  => 300, // 5 minutes
+			'useGTIDs'    => true,
 		],
 
 		'hostsByName' => [
