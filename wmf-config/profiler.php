@@ -19,7 +19,6 @@ require_once __DIR__ . '/../src/XWikimediaDebug.php';
  *   - redis-timeout: The redis socket timeout
  *   - use-xhgui: True to use XHGui saver
  *   - xhgui-conf: The configuration array to pass to Xhgui_Saver::factory
- *   - excimer-production-period: The sampling period for production profiling
  */
 function wmfSetupProfiler( $options ) {
 	global $wmgProfiler;
@@ -215,21 +214,37 @@ function wmfSetupTideways( $options ) {
  * @param array $options
  */
 function wmfSetupExcimer( $options ) {
-	// Use a static variable to keep the object in scope until the end
+	// Use static variables to keep the objects in scope until the end
 	// of the request
-	static $prodProf;
+	static $cpuProf;
+	static $realProf;
 
-	$prodProf = new ExcimerProfiler;
-	$prodProf->setEventType( EXCIMER_CPU );
-	$prodProf->setPeriod( $options['excimer-production-period'] );
-	// T176916
-	$prodProf->setMaxDepth( 250 );
-	$prodProf->setFlushCallback(
+	$cpuProf = new ExcimerProfiler;
+	$cpuProf->setEventType( EXCIMER_CPU );
+
+	$realProf = new ExcimerProfiler;
+	$realProf->setEventType( EXCIMER_REAL );
+
+	$cpuProf->setPeriod( 60 );
+	$realProf->setPeriod( 60 );
+
+	// Limit the depth of stack traces to 250 (T176916)
+	$cpuProf->setMaxDepth( 250 );
+	$realProf->setMaxDepth( 250 );
+
+	$cpuProf->setFlushCallback(
 		function ( $log ) use ( $options ) {
-			wmfExcimerFlushCallback( $log, $options );
+			wmfExcimerFlushCallback( $log, $options, /* redisChannel = */ 'excimer' );
 		},
-		1 );
-	$prodProf->start();
+		/* $maxSamples = */ 1 );
+	$realProf->setFlushCallback(
+		function ( $log ) use ( $options ) {
+			wmfExcimerFlushCallback( $log, $options, /* redisChannel = */ 'excimer-wall' );
+		},
+		/* $maxSamples = */ 1 );
+
+	$cpuProf->start();
+	$realProf->start();
 }
 
 /**
@@ -239,8 +254,9 @@ function wmfSetupExcimer( $options ) {
  *
  * @param string $log
  * @param array $options
+ * @param string $redisChannel
  */
-function wmfExcimerFlushCallback( $log, $options ) {
+function wmfExcimerFlushCallback( $log, $options, $redisChannel ) {
 	$error = null;
 	$toobig = 0;
 	try {
@@ -276,7 +292,7 @@ function wmfExcimerFlushCallback( $log, $options ) {
 				if ( substr( $line, 0, strlen( $firstFrame ) ) !== $firstFrame ) {
 					$line = $firstFrame . $line;
 				}
-				$redis->publish( 'excimer', $line );
+				$redis->publish( $redisChannel, $line );
 			}
 		}
 	} catch ( Exception $e ) {
