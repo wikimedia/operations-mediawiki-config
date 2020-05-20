@@ -21010,6 +21010,7 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'wikivoyage' => true,
 	'dewikivoyage' => false, // T206102
+	'itwikivoyage' => false, // T253096
 ],
 
 'wmgUseTocTree' => [
@@ -21020,6 +21021,7 @@ function wmfGetVariantSettings() {
 'wmgUseInsider' => [
 	'default' => false,
 	'wikivoyage' => true,
+	'itwikivoyage' => false, // T253096
 ],
 
 'wmgUseRelatedArticles' => [
