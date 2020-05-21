@@ -24,7 +24,6 @@ $wgMainWANCache = 'wancache-main-mcrouter';
 $wgWANObjectCaches['wancache-main-mcrouter'] = [
 	'class'   => 'WANObjectCache',
 	'cacheId' => $wgMainCacheType,
-	'channels' => [ 'purge' => 'wancache-main-default-purge' ],
 	// Specify the route prefix that mcrouter listens for and broadcasts.
 	// The route prefix is configured in Puppet (profile::mediawiki::mcrouter_wancache).
 	'cluster' => 'mw-wan',
