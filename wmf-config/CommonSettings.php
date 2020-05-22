@@ -55,6 +55,8 @@ if ( PHP_SAPI !== 'cli' ) {
 
 require_once __DIR__ . '/../src/XWikimediaDebug.php';
 require_once __DIR__ . '/../src/ServiceConfig.php';
+require_once __DIR__ . '/etcd.php';
+require_once __DIR__ . '/../multiversion/MWConfigCacheGenerator.php';
 
 // - This file must be included by MediaWiki via our LocalSettings.php file.
 //   Determined by MediaWiki core having initialised the $IP variable.
@@ -126,7 +128,6 @@ $wmfAllServices = ServiceConfig::getInstance()->getAllServices();
 # Shorthand when we have no master-slave situation to keep into account
 $wmfLocalServices = $wmfAllServices[$wmfDatacenter];
 
-require_once "$wmfConfigDir/etcd.php";
 $etcdConfig = wmfSetupEtcd( $wmfLocalServices['etcd'] );
 $wmfEtcdLastModifiedIndex = $etcdConfig->getModifiedIndex();
 
@@ -206,13 +207,8 @@ if ( array_search( $wgDBname, $wgLocalDatabases ) === false ) {
 list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 
 # Try configuration cache
-
-require_once __DIR__ . '/../multiversion/MWConfigCacheGenerator.php';
-
 $confCacheFileName = "conf2-$wgDBname.json";
-
 $confActualMtime = filemtime( "$wmfConfigDir/InitialiseSettings.php" );
-
 $globals = Wikimedia\MWConfig\MWConfigCacheGenerator::readFromStaticCache(
 	$wgCacheDirectory . '/' . $confCacheFileName, $confActualMtime
 );
