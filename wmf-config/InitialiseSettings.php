@@ -10654,7 +10654,10 @@ function wmfGetVariantSettings() {
 		],
 	],
 	'+hiwiki' => [
-		'rollbacker' => [ 'rollback' => true ], // T56589
+		'rollbacker' => [
+			'rollback' => true, // T56589
+			'autoreviewrestore' => true, // T252986
+		],
 		'filemover' => [ 'movefile' => true ], // T56589
 		'reviewer' => [
 			'patrol' => true,
