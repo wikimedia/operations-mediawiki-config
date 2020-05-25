@@ -18028,6 +18028,7 @@ function wmfGetVariantSettings() {
 	'mkwiki' => 'uca-mk-u-kn', // T26953
 	'napwikisource' => 'uca-it-u-kn', // T210752
 	'nlwiki' => 'uca-nl', // T125774
+	'nnwiki' => 'uca-nn-u-kn', // T253559
 	'nowiki' => 'uca-nb-u-kn', // T146675, T148488
 	'nowikimedia' => 'uca-nb-u-kn', // T185630
 	'olowiki' => 'uca-fi-u-kn', // T147064
