@@ -154,7 +154,8 @@ function wmfSetupTideways( $options ) {
 				// Fake the URL to have a prefix of the request ID, that way it can
 				// be easily found through XHGui through a predictable search URL
 				// that looks for the request ID.
-				$reqId = $_SERVER['UNIQUE_ID'] ?? '';
+				// Matches mediawiki/core: WebRequest::getRequestId (T253674).
+				$reqId = $_SERVER['HTTP_X_REQUEST_ID'] ?? $_SERVER['UNIQUE_ID'] ?? null;
 				// Create a simplified url with just script name and 'action' query param
 				$qs = isset( $_GET['action'] ) ? ( '?action=' . $_GET['action'] ) : '';
 				$url = '//' . $reqId . $_SERVER['SCRIPT_NAME'] . $qs;
