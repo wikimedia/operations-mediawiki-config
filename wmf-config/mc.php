@@ -48,8 +48,8 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 		// The route prefix is configured in Puppet (profile::mediawiki::mcrouter_wancache).
 		'cluster' => 'mw-wan',
 		'mcrouterAware' => true,
-		// Reduce connection use by co-locating related keys
-		'coalesceKeys' => 'non-global'
+		// Reduce connection use by co-locating related keys (T252564)
+		'coalesceKeys' => true
 	];
 }
 
