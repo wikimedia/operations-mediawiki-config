@@ -10178,6 +10178,7 @@ function wmfGetVariantSettings() {
 			'browsearchive' => true,
 			'deletedhistory' => true,
 			'apihighlimits' => true,
+			'deletedtext' => true, // T253420
 		],
 		'filemover' => [ 'movefile' => true ], // T29927
 		'bot' => [
