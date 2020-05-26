@@ -15169,6 +15169,8 @@ function wmfGetVariantSettings() {
 // EXPERIMENTAL: Store RL deps in main stash instead of core database (T113916)
 'wgResourceLoaderUseObjectCacheForDeps' => [
 	'default' => false,
+	'testwiki' => true,
+	'mediawikiwiki' => true
 ],
 
 # CENTRAL AUTH @{
