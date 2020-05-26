@@ -47,7 +47,7 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 		// Reduce connection use by co-locating related keys
 		'coalesceKeys' => in_array(
 			$wgDBname,
-			[ 'testwiki', 'test2wiki', 'mediawikiwiki', 'commonswiki' ]
+			[ 'testwiki', 'test2wiki', 'mediawikiwiki', 'commonswiki', 'wikidatawiki' ]
 		)
 			? 'non-global'
 			: false
