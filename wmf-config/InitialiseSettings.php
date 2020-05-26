@@ -20709,7 +20709,6 @@ function wmfGetVariantSettings() {
 	"gawiki" => true,
 	"gdwiki" => true,
 	"glkwiki" => true,
-	"glwiki" => true,
 	"gnwiki" => true,
 	"gomwiki" => true,
 	"gorwiki" => true,
