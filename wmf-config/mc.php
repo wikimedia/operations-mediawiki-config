@@ -45,9 +45,7 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 		'cluster' => 'mw-wan',
 		'mcrouterAware' => true,
 		// Reduce connection use by co-locating related keys
-		'coalesceKeys' => ( $wgDBname !== 'enwiki' )
-			? 'non-global'
-			: false
+		'coalesceKeys' => 'non-global'
 	];
 }
 
