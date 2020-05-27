@@ -4100,12 +4100,10 @@ if ( ( $_SERVER['SERVERGROUP'] ?? null ) === 'parsoid' ) {
 unset( $parsoidDir );
 // End of temporary hack for hooking up Parsoid/PHP with MediaWiki
 
-# Temporary for the HHVM => PHP7.2 migration. Adds an array of unicode chars
+# Part of the HHVM => PHP7.2 migration. Adds an array of unicode chars
 # that have broken uppercasing in HHVM. In this phase, we want php7 to behave
 # like HHVM. See T219279 for details.
-if ( PHP_VERSION_ID >= 70200 ) {
-	$wgOverrideUcfirstCharacters = include __DIR__ . '/Php72ToUpper.php';
-}
+$wgOverrideUcfirstCharacters = include __DIR__ . '/Php72ToUpper.php';
 
 # Temporary, until T112147 is done
 # Assign everything assigned to suppressors to oversighters
