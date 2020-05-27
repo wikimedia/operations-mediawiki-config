@@ -112,7 +112,6 @@ $IP/extensions/PageTriage/extension.json
 $IP/extensions/PageViewInfo/extension.json
 $IP/extensions/ParserFunctions/extension.json
 $IP/extensions/PdfHandler/extension.json
-$IP/extensions/PerformanceInspector/extension.json
 $IP/extensions/Poem/extension.json
 $IP/extensions/PoolCounter/extension.json
 $IP/extensions/Popups/extension.json
