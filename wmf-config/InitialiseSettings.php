@@ -14391,8 +14391,11 @@ function wmfGetVariantSettings() {
 		NS_TEMPLATE_TALK => 'noindex,follow',
 		NS_HELP_TALK => 'noindex,follow',
 		NS_CATEGORY_TALK => 'noindex,follow',
-		100 => 'noindex,follow',
 		101 => 'noindex,follow',
+		109 => 'noindex,nofollow', // T253574
+		118 => 'noindex,nofollow', // T253574
+		119 => 'noindex,nofollow', // T253574
+		829 => 'noindex,nofollow', // T253574
 	],
 	'thwikibooks' => [
 		NS_TALK => 'noindex,follow',
