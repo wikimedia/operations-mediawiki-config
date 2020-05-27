@@ -9,8 +9,6 @@ inheritsFrom:
   - flaggedrevs
   - flow
   - large
-  # To be removed by end of 2020
-  - mobilemainpagelegacy
   - s2
   - securepollglobal
   - wikidataclient
