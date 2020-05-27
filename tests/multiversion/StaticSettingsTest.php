@@ -324,6 +324,8 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 	}
 
 	public function testNoAmbiguouslyTaggedSettings() {
+		self::expectNotToPerformAssertions();
+
 		$dblists = DBList::getLists();
 		$overlapping = [];
 		foreach ( $dblists as $listA => $wikisA ) {
@@ -335,34 +337,43 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 			}
 		}
 
-		$actualAmbiguous = [];
-		// The expected variable exists here so that the below logic
-		// can add an empty stub for any variables with ambiguity.
-		// Without this, the difference would be two levels deep,
-		// in which case PHPUnit's diff printer would only show which
-		// variable has an ambiguity, instead of also showing
-		// between which dblists the ambiguity exists.
-		$expectedAmbiguous = [];
+		$ambiguous = [];
 
 		foreach ( $this->variantSettings as $configName => $values ) {
 			foreach ( $overlapping as $listA => $lists ) {
 				if ( isset( $values[$listA] ) ) {
 					foreach ( $lists as $listB ) {
-						if ( isset( $values[$listB] ) && $values[$listA] !== $values[$listB] ) {
-							$ambigious[$configName][$listA] = $values[$listA];
-							$ambigious[$configName][$listB] = $values[$listB];
-							$expectedAmbiguous[$configName] = [];
+						if (
+							isset( $values[$listB] )
+							&& $values[$listA] !== $values[$listB]
+						) {
+							$ambiguous[$configName][] = [
+								$listA => $values[$listA],
+								$listB => $values[$listB]
+							];
 						}
 					}
 				}
 			}
 		}
 
-		$this->assertEquals(
-			$expectedAmbiguous,
-			$actualAmbiguous,
-			'Overlapping dblist cannot set the same variable to different values'
-		);
+		if ( count( $ambiguous ) ) {
+			$detailsString = "";
+			foreach ( $ambiguous as $ambiguouslySetVariable => $errorEntries ) {
+				$detailsString .= "\nThe variable $ambiguouslySetVariable is set differently in some dblists which overlap:\n";
+				foreach ( $errorEntries as $index => $entry ) {
+					foreach ( $entry as $listname => $value ) {
+						if ( is_scalar( $value ) ) {
+							$detailsString .= "\t " . $listname . ' sets it to `' . $value . "`\n";
+						} else {
+							$detailsString .= "\t " . $listname . ' sets it to `' . json_encode( $value ) . "` (JSON encoded for readability)\n";
+						}
+					}
+				}
+			}
+
+			$this->fail( "Overlapping dblists are setting the same variable to different values. This is banned as it would rely on runtime sequence of dblists being read, which is not guaranteed.\n" . $detailsString );
+		}
 	}
 
 	public function testCacheableLoad() {
