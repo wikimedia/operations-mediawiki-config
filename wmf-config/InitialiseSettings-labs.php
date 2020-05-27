@@ -756,11 +756,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true,
 		],
 
-		// Test PerformanceInspector
-		'wmgUsePerformanceInspector' => [
-			'default' => true,
-		],
-
 		// The LOWER the value, the MORE requests will be logged.
 		// 100 = 1 of every 100 (1%), 1 = 1 of every 1 (100%).
 		'wgNavigationTimingSamplingFactor' => [

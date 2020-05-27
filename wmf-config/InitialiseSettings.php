@@ -25086,10 +25086,6 @@ function wmfGetVariantSettings() {
 	'default' => 'centralauth',
 ],
 
-'wmgUsePerformanceInspector' => [
-	'default' => false,
-],
-
 'wgPropagateErrors' => [
 	'default' => false,
 ],
