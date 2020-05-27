@@ -20535,6 +20535,7 @@ function wmfGetVariantSettings() {
 	'frwiki' => true,
 	'huwiki' => true,
 	'nlwiki' => true,
+	'mediawikiwiki' => true,
 ],
 
 'wgDiscussionToolsBeta' => [
@@ -20543,6 +20544,7 @@ function wmfGetVariantSettings() {
 	'frwiki' => true, // T245794
 	'huwiki' => true, // T245794
 	'nlwiki' => true, // T245794
+	'mediawikiwiki' => true, // T251208
 ],
 
 'wgDTSchemaEditAttemptStepSamplingRate' => [
@@ -20551,6 +20553,7 @@ function wmfGetVariantSettings() {
 	'frwiki' => 0.2,
 	'huwiki' => 0.2,
 	'nlwiki' => 0.2,
+	'mediawikiwiki' => 0.2,
 ],
 
 'wmgUseCodeEditorForCore' => [
