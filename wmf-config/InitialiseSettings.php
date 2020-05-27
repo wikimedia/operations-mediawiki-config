@@ -20527,6 +20527,7 @@ function wmfGetVariantSettings() {
 	'frwiki' => true,
 	'huwiki' => true,
 	'nlwiki' => true,
+	'mediawikiwiki' => true,
 ],
 
 'wgDiscussionToolsEnable' => [
