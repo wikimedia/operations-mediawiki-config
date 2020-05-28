@@ -25886,6 +25886,30 @@ function wmfGetVariantSettings() {
 		'Q3518540', // terra cotta
 		'Q5960345', // turquoise
 		'Q3014419', // wine
+		'Q454847', //amaranth
+		'Q679355', //amber
+		'Q1324818', //apricot
+		'Q372973', //aquamarine
+		'Q797446', //burgundy
+		'Q5043987', //carnelian
+		'Q2541418', //celadon
+		'Q313120', //cerulean
+		'Q3309916', //chocolate
+		'Q2936397', //cinnamon
+		'Q2411228', //coral
+		'Q2730433', //cream
+		'Q303826', //crimson
+		'Q180778', //cyan
+		'Q5005364', //fuchsia
+		'Q5967009', //indigo
+		'Q650770', //khaki
+		'Q2720565', //lemon
+		'Q2294993', //lilac
+		'Q3276756', //magenta
+		'Q25203611', //Mango
+		'Q25393814', //maroon
+		'Q864152', //olive
+		'Q533047', //rose
 
 		// adjectives
 		'Q48997611', // vintage
@@ -25929,6 +25953,11 @@ function wmfGetVariantSettings() {
 		'Q11016', // technology
 		'Q1172903', // loch
 		'Q165848', // wind wave
+		'Q211778', //Lake District
+		'Q43238',  //Poaceae
+		'Q5135744', //religious institute
+		'Q486972', //human settlement
+		'Q826939', //canard
 
 		// time oriented terms
 		'Q1187312', // yesterday
