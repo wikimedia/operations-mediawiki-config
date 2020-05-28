@@ -24873,6 +24873,10 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
+'wmgUseMediaModeration' => [
+	'default' => false,
+],
+
 'wmgUseOATHAuth' => [
 	'default' => true,
 ],
