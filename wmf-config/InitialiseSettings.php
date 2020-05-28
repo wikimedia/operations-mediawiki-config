@@ -24742,6 +24742,15 @@ function wmfGetVariantSettings() {
 	],
 ],
 
+'wgEventRelayerConfig' => [
+	'group0' => [
+		'cdn-url-purges' => [
+			'class' => \MediaWiki\Extension\EventBus\Adapters\EventRelayer\CdnPurgeEventRelayer::class,
+			'stream' => 'resource-purge',
+		],
+	],
+],
+
 'wmgUseCapiunto' => [
 	'default' => false,
 	'wikidataclient-test' => true,
