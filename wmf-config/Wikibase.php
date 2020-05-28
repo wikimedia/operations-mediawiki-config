@@ -213,6 +213,8 @@ if ( $wmgUseWikibaseRepo ) {
 	}
 
 	$wgWBRepoSettings['enableRefTabs'] = $wmgWikibaseRepoEnableRefTabs;
+
+	$wgWBRepoSettings['propagateChangeVisibility'] = $wmgWikibaseRepoPropagateChangeVisibility;
 }
 
 if ( $wmgUseWikibaseClient ) {
