@@ -92,6 +92,7 @@ $IP/extensions/MachineVision/extension.json
 $IP/extensions/MapSources/extension.json
 $IP/extensions/MassMessage/extension.json
 $IP/extensions/Math/extension.json
+$IP/extensions/MediaModeration/extension.json
 $IP/extensions/MobileApp/extension.json
 $IP/extensions/MobileFrontend/extension.json
 $IP/extensions/MultimediaViewer/extension.json
