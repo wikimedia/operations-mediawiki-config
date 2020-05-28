@@ -342,9 +342,6 @@ function wmfGetLabsOverrideSettings() {
 				'beta' => true
 			]
 		],
-		'wgMFPhotoUploadEndpoint' => [
-			'default' => 'https://commons.wikimedia.beta.wmflabs.org/w/api.php',
-		],
 		'wgMFSpecialCaseMainPage' => [
 			// We don't want to support this
 			// See https://www.mediawiki.org/wiki/Recommendations_for_mobile_friendly_articles_on_Wikimedia_wikis#Make_sure_your_main_page_is_mobile_friendly
