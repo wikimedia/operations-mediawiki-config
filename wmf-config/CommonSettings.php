@@ -3684,6 +3684,14 @@ if ( $wmgUseOATHAuth ) {
 	}
 }
 
+if ( $wmgUseMediaModeration ) {
+	wfLoadExtension( 'MediaModeration' );
+	// This relies on configuration in PrivateSettings.php:
+	// - $wgMediaModerationPhotoDNASubscriptionKey
+	// - $wgMediaModerationRecipientList
+	$wgMediaModerationFrom = 'no-reply@wikimedia.org';
+}
+
 if ( $wmgUseJADE ) {
 	wfLoadExtension( 'Jade' );
 }

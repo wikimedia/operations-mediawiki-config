@@ -175,3 +175,11 @@ $wmgSessionStoreHMACKey = null;
  */
 $wmgXhguiDBuser = null;
 $wmgXhguiDBpassword = null;
+
+/**
+ * MediaModeration extension private API configuration details
+ *
+ * @see mediawiki/extensions/MediaModeration
+ */
+$wgMediaModerationPhotoDNASubscriptionKey = 'subscription-key';
+$wgMediaModerationRecipientList = [];
