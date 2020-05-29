@@ -17786,6 +17786,9 @@ function wmfGetVariantSettings() {
 	// Wikiquotes
 
 	// Wikibookses
+	'+bnwikibooks' => [
+		'উইকিশৈশব' => true, //T241893
+	],
 
 	// Wikisources
 
