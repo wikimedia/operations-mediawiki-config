@@ -3233,6 +3233,7 @@ function wmfGetVariantSettings() {
 	'bdwikimedia' => 'উইকিমিডিয়া বাংলাদেশ',
 	'be_x_oldwiki' => 'Вікіпэдыя',
 	'bewiki' => 'Вікіпедыя',
+	'bewikibooks' => 'Вікікнігі', // T253962
 	'bewikimedia' => 'Wikimedia Belgium',
 	'bewikisource' => 'Вікікрыніцы',
 	'bewiktionary' => 'Вікіслоўнік',
