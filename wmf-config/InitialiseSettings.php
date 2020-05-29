@@ -18782,6 +18782,16 @@ function wmfGetVariantSettings() {
 	'frwiki' => true,
 ],
 
+'wgCheckUserLogLogins' => [
+	'default' => false,
+	'cswiki' => true, // T253802
+	'fawiki' => true, // T253802
+],
+
+'wgCheckUserLogSuccessfulBotLogins' => [
+	'default' => false, // T253802
+],
+
 // ----------- CheckUser end ----------
 
 'wmgUseIncubator' => [
