@@ -14405,6 +14405,10 @@ function wmfGetVariantSettings() {
 		NS_TEMPLATE_TALK => 'noindex,follow',
 		NS_HELP_TALK => 'noindex,follow',
 		NS_CATEGORY_TALK => 'noindex,follow',
+		103 => 'noindex, follow',
+		105 => 'noindex, follow',
+		107 => 'noindex, follow',
+		829 => 'noindex, follow',
 	],
 	'thwiktionary' => [
 		NS_TALK => 'noindex,follow',
@@ -14417,6 +14421,10 @@ function wmfGetVariantSettings() {
 		NS_TEMPLATE_TALK => 'noindex,follow',
 		NS_HELP_TALK => 'noindex,follow',
 		NS_CATEGORY_TALK => 'noindex,follow',
+		101 => 'noindex, follow',
+		103 => 'noindex, follow',
+		105 => 'noindex, follow',
+		829 => 'noindex, follow',
 	],
 	'thwikiquote' => [
 		NS_TALK => 'noindex,follow',
@@ -14429,6 +14437,7 @@ function wmfGetVariantSettings() {
 		NS_TEMPLATE_TALK => 'noindex,follow',
 		NS_HELP_TALK => 'noindex,follow',
 		NS_CATEGORY_TALK => 'noindex,follow',
+		829 => 'noindex, follow',
 	],
 	'thwikisource' => [
 		NS_TALK => 'noindex,follow',
@@ -14441,6 +14450,12 @@ function wmfGetVariantSettings() {
 		NS_TEMPLATE_TALK => 'noindex,follow',
 		NS_HELP_TALK => 'noindex,follow',
 		NS_CATEGORY_TALK => 'noindex,follow',
+		101 => 'noindex, follow',
+		103 => 'noindex, follow',
+		115 => 'noindex, follow',
+		251 => 'noindex, follow',
+		253 => 'noindex, follow',
+		829 => 'noindex, follow',
 	],
 	'uawikimedia' => [
 		NS_USER => 'noindex,follow', // T122732
