@@ -1039,22 +1039,27 @@ function wmfGetLabsOverrideSettings() {
 		'wmgUseGrowthExperiments' => [
 			'cawiki' => true,
 			'enwiki' => true,
+			'fawiki' => true,
 		],
 		'wgWelcomeSurveyEnabled' => [
 			'enwiki' => true,
+			'fawiki' => true,
 		],
 		'wgGEHelpPanelEnabled' => [
 			'cawiki' => true,
 			'enwiki' => true,
+			'fawiki' => true,
 		],
 		'wgGEHelpPanelHelpDeskTitle' => [
 			'cawiki' => 'Viquipèdia:Potřebuji_pomoc',
 			'enwiki' => 'Wikipedia:Help_desk',
 			'kowiki' => '위키백과:도움말',
 			'arwiki' => 'مساعدة',
+			'fawiki' => 'ویکی‌پدیا:درخواست راهنمایی',
 		],
 		'wgGEHelpPanelViewMoreTitle' => [
 			'arwiki' => 'مساعدة',
+			'fawiki' => 'راهنما:فهرست',
 			'cawiki' => 'Ajuda:Obsah',
 			'enwiki' => 'Help:Contents',
 			'kowiki' => '위키백과:도움말',
@@ -1101,6 +1106,13 @@ function wmfGetLabsOverrideSettings() {
 					'id' => 'file-upload-wizard',
 				]
 			],
+			'fawiki' => [
+				[
+					'title' => 'ویکی‌پدیا:خودآموز',
+					'text' => 'راهنما',
+					'id' => 'example',
+				]
+			],
 			'kowiki' => [
 				[
 					'title' => '위키백과:도움말',
@@ -1123,6 +1135,7 @@ function wmfGetLabsOverrideSettings() {
 		],
 		'wgWelcomeSurveyPrivacyPolicyUrl' => [
 			'kowiki' => 'https://foundation.wikimedia.org/wiki/%EC%83%88_%EC%82%AC%EC%9A%A9%EC%9E%90_%ED%99%98%EC%98%81_%EC%84%A4%EB%AC%B8_%EA%B0%9C%EC%9D%B8_%EC%A0%95%EB%B3%B4_%EB%B3%B4%ED%98%B8_%EC%A0%95%EC%B1%85',
+			'fawiki' => 'https://foundation.wikimedia.org/wiki/%D8%A8%DB%8C%D8%A7%D9%86%DB%8C%D9%87_%D9%85%D8%AD%D8%B1%D9%85%D8%A7%D9%86%DA%AF%DB%8C_%D9%BE%D8%B1%D8%B3%D8%B4%D9%86%D8%A7%D9%85%D9%87_%DA%A9%D9%85%DA%A9_%D8%A8%D9%87_%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%D8%A7%D9%86_%D8%AC%D8%AF%DB%8C%D8%AF'
 		],
 		'wgWelcomeSurveyExperimentalGroups' => [
 			'kowiki' => [
@@ -1177,12 +1190,14 @@ function wmfGetLabsOverrideSettings() {
 			'default' => '',
 			'arwiki' => 'Wikipedia:Mentors',
 			'enwiki' => 'Wikipedia:Mentors',
+			'fawiki' => 'ویکی‌پدیا:مربیان',
 			'kowiki' => '위키백과:새_사용자_경험/새_사용자_멘토',
 		],
 		'wgGEHomepageTutorialTitle' => [
 			'default' => '',
 			'arwiki' => 'Help:Tutorial',
 			'enwiki' => 'Help:Getting started',
+			'fawiki' => 'ویکی‌پدیا:خودآموز',
 		],
 		'wgGEConfirmEmailEnabled' => [
 			'default' => true,
@@ -1191,6 +1206,7 @@ function wmfGetLabsOverrideSettings() {
 			'enwiki' => 'https://en.wikipedia.org/w/api.php',
 			'arwiki' => 'https://ar.wikipedia.org/w/api.php',
 			'cswiki' => 'https://cs.wikipedia.org/w/api.php',
+			'fawiki' => 'https://fa.wikipedia.org/w/api.php',
 			'kowiki' => 'https://ko.wikipedia.org/w/api.php',
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
 			'viwiki' => 'https://vi.wikipedia.org/w/api.php',
