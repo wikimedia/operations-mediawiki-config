@@ -7091,11 +7091,11 @@ function wmfGetVariantSettings() {
 	],
 	'eswiki' => [
 		100 => 'Portal',
-		101 => 'Portal_Discusión',
+		101 => 'Portal_discusión',
 		102 => 'Wikiproyecto',
-		103 => 'Wikiproyecto_Discusión',
+		103 => 'Wikiproyecto_discusión',
 		104 => 'Anexo', // T11304
-		105 => 'Anexo_Discusión',
+		105 => 'Anexo_discusión',
 	],
 	'etwiki' => [
 		100 => 'Portaal',
