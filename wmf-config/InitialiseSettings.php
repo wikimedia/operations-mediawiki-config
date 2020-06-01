@@ -25701,7 +25701,12 @@ function wmfGetVariantSettings() {
 ],
 
 'wgGENewcomerTasksGuidanceEnabled' => [
-	'default' => false,
+	'default' => true,
+],
+
+'wgGENewcomerTasksGuidanceRequiresOptIn' => [
+	'default' => true,
+	'testwiki' => false,
 ],
 
 'wgGERestbaseUrl' => [
