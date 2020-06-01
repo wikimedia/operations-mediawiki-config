@@ -20942,6 +20942,7 @@ function wmfGetVariantSettings() {
 		],
 		'wiki-for-human-rights' => true, // T239977
 		'WikiGapFinder' => true, // T246335
+		'mskf-the-solution' => true, // T253305
 	],
 	'dewiki' => [
 		'article-recommender-1' => true,
@@ -20955,6 +20956,7 @@ function wmfGetVariantSettings() {
 		],
 		'wiki-for-human-rights' => true,
 		'WikiGapFinder' => true,
+		'mskf-the-solution' => true,
 	],
 	'enwiki' => [
 		'article-recommender-1' => true,
@@ -20968,6 +20970,7 @@ function wmfGetVariantSettings() {
 		],
 		'wiki-for-human-rights' => true,
 		'WikiGapFinder' => true,
+		'mskf-the-solution' => true,
 	],
 	'eswiki' => [
 		'article-recommender-1' => true,
@@ -20982,6 +20985,7 @@ function wmfGetVariantSettings() {
 		],
 		'wiki-for-human-rights' => true,
 		'WikiGapFinder' => true,
+		'mskf-the-solution' => true,
 	],
 	'frwiki' => [
 		'article-recommender-1' => true,
@@ -20996,6 +21000,7 @@ function wmfGetVariantSettings() {
 		],
 		'wiki-for-human-rights' => true,
 		'WikiGapFinder' => true,
+		'mskf-the-solution' => true,
 	],
 ],
 
