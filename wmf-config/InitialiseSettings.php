@@ -21177,7 +21177,7 @@ function wmfGetVariantSettings() {
 		'Test' => '/analytics/legacy/test/1.0.0'
 	],
 	'+testwiki' => [
-		'SearchSatisfaction' => '/analytics/test/searchsatisfaction/1.0.0'
+		'SearchSatisfaction' => '/analytics/legacy/searchsatisfaction/1.0.0'
 	],
 ],
 
