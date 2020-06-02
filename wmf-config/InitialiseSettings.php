@@ -24575,7 +24575,7 @@ function wmfGetVariantSettings() {
 			'question' => 'ext-quicksurveys-growth-external-survey-question',
 			'description' => 'ext-quicksurveys-growth-external-survey-description',
 			'link' => 'ext-quicksurveys-growth-external-survey-link',
-			'coverage' => 0.001,
+			'coverage' => 0,
 			'audience' => [
 				'anons' => true,
 			],
