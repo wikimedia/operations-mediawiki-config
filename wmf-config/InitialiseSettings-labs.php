@@ -69,6 +69,7 @@ function wmfGetLabsOverrideSettings() {
 		],
 
 		'wgSitename' => [
+			'apiportalwiki'  => 'Wikimedia API Portal',
 			'deploymentwiki' => 'Deployment',
 			'wikivoyage'     => 'Wikivoyage',
 		],
@@ -83,6 +84,7 @@ function wmfGetLabsOverrideSettings() {
 			'wikibooks'     => 'https://$lang.wikibooks.beta.wmflabs.org',
 			'wikivoyage'    => 'https://$lang.wikivoyage.beta.wmflabs.org',
 
+			'apiportalwiki'       => 'https://api.wikimedia.beta.wmflabs.org',
 			'commonswiki'   => 'https://commons.wikimedia.beta.wmflabs.org',
 			'deploymentwiki'      => 'https://deployment.wikimedia.beta.wmflabs.org',
 			'loginwiki'     => 'https://login.wikimedia.beta.wmflabs.org',
@@ -102,6 +104,7 @@ function wmfGetLabsOverrideSettings() {
 			'wiktionary'     => 'https://$lang.wiktionary.beta.wmflabs.org',
 			'wikivoyage'    => 'https://$lang.wikivoyage.beta.wmflabs.org',
 
+			'apiportalwiki'       => 'https://api.wikimedia.beta.wmflabs.org',
 			'metawiki'      => 'https://meta.wikimedia.beta.wmflabs.org',
 			'commonswiki'	=> 'https://commons.wikimedia.beta.wmflabs.org',
 			'deploymentwiki'      => 'https://deployment.wikimedia.beta.wmflabs.org',
@@ -111,10 +114,21 @@ function wmfGetLabsOverrideSettings() {
 			'en_rtlwiki' => 'https://en-rtl.wikipedia.beta.wmflabs.org',
 		],
 
+		'wgMetaNamespace' => [
+			'apiportalwiki' => 'API_Portal',
+		],
+
+		'wgMetaNamespaceTalk' => [
+			'apiportalwiki' => 'Discuss_API_Portal',
+		],
+
+		'wgEnableUploads' => [
+			'apiportalwiki' => false,
+		],
+
 		'-wgUploadPath' => [
 			'default' => 'https://upload.beta.wmflabs.org/$site/$lang',
 			'private' => '/w/img_auth.php',
-		// 'wikimania2005wiki' => 'http://upload..org/wikipedia/wikimania', // back compat
 			'commonswiki' => 'https://upload.beta.wmflabs.org/wikipedia/commons',
 			'metawiki' => 'https://upload.beta.wmflabs.org/wikipedia/meta',
 			'testwiki' => 'https://upload.beta.wmflabs.org/wikipedia/test',
