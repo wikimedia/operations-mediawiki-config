@@ -91,12 +91,22 @@ $wmgMonologProcessors = [
 	'psr' => [
 		'class' => \Monolog\Processor\PsrLogMessageProcessor::class,
 	],
-	'web' => [
-		'class' => \Monolog\Processor\WebProcessor::class,
-	],
 	'wmfconfig' => [
 		'factory' => function () {
 			return function ( array $record ) {
+				// T253677: Like Monolog\Processor\WebProcessor, but without unique_id
+				// Ref <https://github.com/Seldaek/monolog/issues/1470>.
+				// Ref <https://github.com/Seldaek/monolog/blob/1.5.0/src/Monolog/Processor/WebProcessor.php>
+				if ( isset( $_SERVER['REQUEST_URI'] ) ) {
+					$record['extra'] += [
+						'url' => $_SERVER['REQUEST_URI'] ?? null,
+						'ip' => $_SERVER['REMOTE_ADDR'] ?? null,
+						'http_method' => $_SERVER['REQUEST_METHOD'] ?? null,
+						'server' => $_SERVER['SERVER_NAME'] ?? null,
+						'referrer' => $_SERVER['HTTP_REFERER'] ?? null,
+					];
+				}
+
 				// T215350: add PHP version information
 				$record['extra']['phpversion'] = phpversion();
 
