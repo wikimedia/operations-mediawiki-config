@@ -210,7 +210,8 @@ function wmfGetLabsOverrideSettings() {
 
 		// EventLogging will POST events to this URI.
 		'wgEventLoggingServiceUri' => [
-			// Configured as a Cloud VPS webproxy in Horizon in the deployment-prep project.
+			// Configured in profile::trafficserver::backend::mapping_rules
+			// in Horizon hiera prefixpuppet for deployment-cache-text.
 			'default' => 'https://intake-analytics.wikimedia.beta.wmflabs.org/v1/events?hasty=true',
 		],
 
@@ -225,14 +226,13 @@ function wmfGetLabsOverrideSettings() {
 		// ONLY Legacy EventLogging schemas need to go here.  This is the switch that tells
 		// EventLogging to POST to EventGate rather than GET to EventLogging beacon.
 		// https://phabricator.wikimedia.org/T238230
-		'wgEventLoggingSchemas' => [
-			'+deploymentwiki' => [
-				// Add beta only migrated wgEventLoggingSchemas configs here.  Production
-				// wgEventLoggingSchemas are merged in, so if your settings for
-				// production and beta are the same, you can omit also adding an entry here.
-				'SearchSatisfaction' => '/analytics/legacy/searchsatisfaction/1.0.0'
-			],
-		],
+		// 'wgEventLoggingSchemas' => [
+		// 	'+deploymentwiki' => [
+		// 		// Add beta only migrated wgEventLoggingSchemas configs here.  Production
+		// 		// wgEventLoggingSchemas are merged in, so if your settings for
+		// 		// production and beta are the same, you can omit also adding an entry here.
+		// 	],
+		// ],
 
 		// Log channels for beta cluster
 		'-wmgMonologChannels' => [
