@@ -94,28 +94,22 @@ $wmgMonologProcessors = [
 	'web' => [
 		'class' => \Monolog\Processor\WebProcessor::class,
 	],
-	'php' => [
+	'wmfconfig' => [
 		'factory' => function () {
-			/** T215350: add PHP version information during the rollout of PHP7 */
 			return function ( array $record ) {
+				// T215350: add PHP version information
 				$record['extra']['phpversion'] = phpversion();
-				return $record;
-			};
-		},
-	],
-	'normalized_message' => [
-		'factory' => function () {
-			/**
-			 * Add a "normalized_message" field to log records.
-			 *
-			 * Field is the first 255 chars of 'message' after stripping out
-			 * anchor tags which are sometimes inserted in error and warning
-			 * messages by PHP. If applied before PsrLogMessageProcessor,
-			 * placeholders in the message will be left unexpanded which can
-			 * reduce variance of messages that expand to include per-request
-			 * details such as session ids.
-			 */
-			return function ( array $record ) {
+
+				/**
+				 * Add a "normalized_message" field to log records.
+				 *
+				 * Field is the first 255 chars of 'message' after stripping out
+				 * anchor tags which are sometimes inserted in error and warning
+				 * messages by PHP. If applied before PsrLogMessageProcessor,
+				 * placeholders in the message will be left unexpanded which can
+				 * reduce variance of messages that expand to include per-request
+				 * details such as session ids.
+				 */
 				$nm = $record['message'];
 				if ( strpos( $nm, '<a href=' ) !== false ) {
 					// Remove documentation anchor tags
@@ -127,19 +121,11 @@ $wmgMonologProcessors = [
 				}
 				// Trim to <= 255 chars
 				$record['extra']['normalized_message'] = substr( $nm, 0, 255 );
-				return $record;
-			};
-		},
-	],
-	'shard' => [
-		'factory' => function () {
-			/** Adds the database shard name (e.g. s1, s2, ...) */
-			return function ( array $record ) {
-				global $wgLBFactoryConf, $wgDBname;
 
-				$record['extra']['shard'] = isset( $wgLBFactoryConf['sectionsByDB'][$wgDBname] )
-					? $wgLBFactoryConf['sectionsByDB'][$wgDBname]
-					: 's3';
+				// Adds the database shard name (e.g. s1, s2, ...)
+				global $wgLBFactoryConf, $wgDBname;
+				$record['extra']['shard'] = $wgLBFactoryConf['sectionsByDB'][$wgDBname] ?? 's3';
+
 				return $record;
 			};
 		},
