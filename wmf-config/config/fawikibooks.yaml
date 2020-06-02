@@ -6,8 +6,6 @@ inheritsFrom:
   - wikibooks
   - categories-rdf
   - medium
-  # To be removed by end of 2020
-  - mobilemainpagelegacy
   - nowikidatadescriptiontaglines
   - rtl
   - s3

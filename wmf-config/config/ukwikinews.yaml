@@ -5,8 +5,6 @@
 inheritsFrom:
   - wikinews
   - categories-rdf
-  # To be removed by end of 2020
-  - mobilemainpagelegacy
   - nowikidatadescriptiontaglines
   - s3
   - securepollglobal
