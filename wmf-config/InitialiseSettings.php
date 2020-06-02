@@ -18502,6 +18502,21 @@ function wmfGetVariantSettings() {
 	],
 ],
 
+'wgMinervaTalkAtTop' => [
+	// Blocked on T54165
+	'default' => [
+		'base' => false,
+		'beta' => false,
+		'loggedin' => true,
+	],
+	// T253985
+	'svwiki' => [
+		'base' => true,
+		'beta' => true,
+		'loggedin' => true,
+	],
+],
+
 // T169001
 'wgMFLogWrappedInfoboxes' => [
 	'default' => false,
