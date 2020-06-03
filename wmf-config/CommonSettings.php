@@ -3638,13 +3638,6 @@ if ( $wmgUseOAuth ) {
 		$wgGroupPermissions['oauthadmin']['mwoauthmanageconsumer'] = true;
 		$wgOAuthGroupsToNotify = [ 'oauthadmin' ];
 	}
-
-	$wgHooks['OAuthReplaceMessage'][] = function ( &$msgKey ) {
-		if ( $msgKey === 'mwoauth-form-privacypolicy-link' ) {
-			$msgKey = 'wikimedia-oauth-privacy-link';
-		}
-		return true;
-	};
 }
 
 // T15712
