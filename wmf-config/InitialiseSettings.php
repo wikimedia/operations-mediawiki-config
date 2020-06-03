@@ -25124,10 +25124,6 @@ function wmfGetVariantSettings() {
 	'default' => SCHEMA_COMPAT_NEW,
 ],
 
-'wgCommentTableSchemaMigrationStage' => [
-	'default' => MIGRATION_NEW,
-],
-
 'wgChangeTagsSchemaMigrationStage' => [
 	'default' => MIGRATION_NEW,
 ],

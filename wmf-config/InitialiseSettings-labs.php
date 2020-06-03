@@ -1050,10 +1050,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => SCHEMA_COMPAT_NEW,
 		],
 
-		'wgCommentTableSchemaMigrationStage' => [
-			'default' => MIGRATION_NEW,
-		],
-
 		'wgChangeTagsSchemaMigrationStage' => [
 			'default' => MIGRATION_WRITE_BOTH,
 		],
