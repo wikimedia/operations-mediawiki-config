@@ -89,6 +89,7 @@ $wgLocalVirtualHosts = [
 	'wikivoyage.beta.wmflabs.org',
 	'meta.wikimedia.beta.wmflabs.org',
 	'commons.wikimedia.beta.wmflabs.org',
+	'api.wikimedia.beta.wmflabs.org',
 ];
 
 // T49647
