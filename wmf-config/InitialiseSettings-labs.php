@@ -312,9 +312,13 @@ function wmfGetLabsOverrideSettings() {
 			'simplewiki' => true,
 		],
 
+		'wmgUseKartographer' => [
+			'apiportalwiki' => false,
+		],
 		'-wgKartographerEnableMapFrame' => [
 			'default'	=> true,
 		],
+
 		'wgWMECitationUsagePopulationSize' => [
 			'enwiki' => 1  // 100% — T213969
 		],
@@ -886,6 +890,7 @@ function wmfGetLabsOverrideSettings() {
 
 		'wmgEnableDashikiData' => [
 			'default' => true,
+			'apiportalwiki' => false,
 		],
 
 		'wgCognateReadOnly' => [
