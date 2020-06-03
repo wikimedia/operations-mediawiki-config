@@ -25124,10 +25124,6 @@ function wmfGetVariantSettings() {
 	'default' => SCHEMA_COMPAT_NEW,
 ],
 
-'wgChangeTagsSchemaMigrationStage' => [
-	'default' => MIGRATION_NEW,
-],
-
 'wgTagStatisticsNewTable' => [
 	'default' => true,
 ],
