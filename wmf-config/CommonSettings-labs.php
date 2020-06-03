@@ -443,4 +443,40 @@ class GuanacoProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvider 
 	}
 }
 
+if ( $wgDBname == 'apiportalwiki' ) {
+	// Needs integrating properly, but this works for now as
+	// IS-labs doesn't have groupOverrides etc
+
+	$wgGroupPermissions['user']['move'] = false;
+	$wgGroupPermissions['user']['move-subpages'] = false;
+	$wgGroupPermissions['user']['edit'] = false;
+	$wgGroupPermissions['user']['createpage'] = false;
+
+	$wgGroupPermissions['docseditor']['docseditor'] = true;
+	$wgGroupPermissions['docseditor']['move'] = true;
+	$wgGroupPermissions['docseditor']['move-subpages'] = true;
+	$wgGroupPermissions['docseditor']['edit'] = true;
+	$wgGroupPermissions['docseditor']['createpage'] = true;
+
+	$wgGroupPermissions['sysop']['docseditor'] = true;
+	$wgGroupPermissions['sysop']['move'] = true;
+	$wgGroupPermissions['sysop']['move-subpages'] = true;
+	$wgGroupPermissions['sysop']['edit'] = true;
+	$wgGroupPermissions['sysop']['createpage'] = true;
+
+	$wgGroupPermissions['bureaucrat']['docseditor'] = true;
+	$wgGroupPermissions['bureaucrat']['move'] = true;
+	$wgGroupPermissions['bureaucrat']['move-subpages'] = true;
+	$wgGroupPermissions['bureaucrat']['edit'] = true;
+	$wgGroupPermissions['bureaucrat']['createpage'] = true;
+
+	$wgNamespaceProtection[NS_MAIN] = [ 'docseditor' ];
+	$wgNamespaceProtection[NS_PROJECT] = [ 'docseditor' ];
+	// Local uploads are disabled...
+	$wgNamespaceProtection[NS_FILE] = [ 'docseditor' ];
+	$wgNamespaceProtection[NS_TEMPLATE] = [ 'docseditor' ];
+	$wgNamespaceProtection[NS_HELP] = [ 'docseditor' ];
+	$wgNamespaceProtection[NS_CATEGORY] = [ 'docseditor' ];
+}
+
 } # end safeguard

@@ -993,6 +993,7 @@ function wmfGetLabsOverrideSettings() {
 
 		'wmgUseJADE' => [
 			'default' => true,
+			'apiportalwiki' => false,
 		],
 
 		'wgOresUiEnabled' => [
@@ -1865,6 +1866,10 @@ function wmfGetLabsOverrideSettings() {
 		],
 		'-wgTmhUseBetaFeatures' => [
 			'default' => false,
+		],
+
+		'wmgUseGraph' => [
+			'apiportalwiki' => false,
 		],
 
 		// T242855 Undeploying graphoid
