@@ -10,8 +10,8 @@ if ( !defined( 'DBO_DEFAULT' ) ) {
 $wmgParserCacheDBs = [
 	'pc1' => '10.192.0.104',  # pc2007, A1 4.4TB 256GB # pc1
 	'pc2' => '10.192.16.35',  # pc2008, B3 4.4TB 256GB # pc2
-	'pc3' => '10.192.32.10',  # pc2009, C1 4.4TB 256GB # pc3
-	# 'spare' => '10.192.48.14',  # pc2010, D3 4.4TB 256GB # spare host. Use it to replace any of the above if needed
+	'pc3' => '10.192.48.14',  # pc2010, D3 4.4TB 256GB # pc3
+	# 'spare' => '10.192.32.10',  # pc2009, C1 4.4TB 256GB # spare host. Use it to replace any of the above if needed
 ];
 
 # LOOKING FOR $wmgOldExtTemplate ?  It no longer lives in the PHP configs.
