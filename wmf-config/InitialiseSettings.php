@@ -18575,6 +18575,16 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'arwiki' => true,
 	'kowiki' => true, // T172630
+	// WikidataPageBanner extensions must enable for Minerva support.
+	// (T254391)
+	'testwiki' => true,
+	'test2wiki' => true,
+	'wikivoyage' => true,
+	'ruwikimedia' => true,
+	'cawiki' => true,
+	'euwiki' => true,
+	'glwiki' => true,
+	'trwiki' => true,
 ],
 
 'wgMinervaABSamplingRate' => [
@@ -24704,6 +24714,7 @@ function wmfGetVariantSettings() {
 ],
 
 // WikidataPageBanner extension (T98029)
+// Please be sure to update wgMinervaEnableSiteNotice when changing.
 'wmgUseWikidataPageBanner' => [
 	'default' => false,
 	'testwiki' => true, // T173388
