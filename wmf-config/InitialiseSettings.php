@@ -11000,9 +11000,10 @@ function wmfGetVariantSettings() {
 			'reupload' => true,
 			'reupload-own' => true,
 		],
-		'wmf-officeit' => [ // T106724, T142123
+		'wmf-officeit' => [ // T106724, T142123, T254372
 			'autopatrol' => true,
 			'centralauth-lock' => true,
+			'centralauth-rename' => true,
 			'createaccount' => true,
 			'noratelimit' => true,
 			'tboverride' => true,
