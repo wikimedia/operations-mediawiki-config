@@ -357,6 +357,7 @@ function wmfGetVariantSettings() {
 	'guwiki' => 'Asia/Kolkata',
 	'guwikiquote' => 'Asia/Kolkata', // T121853
 	'guwikisource' => 'Asia/Kolkata',
+	'guwiktionary' => 'Asia/Kolkata', // T253827
 	'hewiki' => 'Asia/Tel_Aviv',
 	'hewikibooks' => 'Asia/Tel_Aviv',
 	'hewikiquote' => 'Asia/Tel_Aviv',
