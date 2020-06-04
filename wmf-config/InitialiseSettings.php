@@ -17845,7 +17845,6 @@ function wmfGetVariantSettings() {
 'wmgVisualEditorDisableForAnons' => [
 	'default' => false,
 
-	'enwiki' => true,
 	'eswiki' => true,
 ],
 
