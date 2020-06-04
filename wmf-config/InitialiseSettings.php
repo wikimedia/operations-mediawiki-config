@@ -6434,7 +6434,7 @@ function wmfGetVariantSettings() {
 	'lvwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T92645
 	'plwiki' => [ '', 'autoconfirmed', 'editeditorprotected', 'sysop' ], // T48990
 	'ptwiki' => [ '', 'autoconfirmed', 'editautoreviewprotected', 'sysop' ], // T41652
-	'rowiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T63172
+	'rowiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T63172, T254471
 	'srwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
 	'srwikibooks' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
 	'srwikinews' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
@@ -6459,6 +6459,7 @@ function wmfGetVariantSettings() {
 	'+jawiki' => [ 'extendedconfirmed' ], // T249820
 	'+kowiki' => [ 'extendedconfirmed' ], // T184675
 	'+viwiki' => [ 'extendedconfirmed' ], // T215493
+	'+rowiki' => [ 'extendedconfirmed' ], // T254471
 ],
 
 'wgSiteNotice' => [
@@ -11305,7 +11306,10 @@ function wmfGetVariantSettings() {
 		'rollbacker' => [ 'rollback' => true ],
 	],
 	'rowiki' => [
-		'sysop' => [ 'templateeditor' => true, ], // T63172
+		'sysop' => [
+			'extendedconfirmed' => true, // T254471
+			'templateeditor' => true, // T63172
+		],
 		'patroller' => [
 			'patrol' => true,
 			'upwizcampaigns' => true, // T61242
@@ -11320,6 +11324,9 @@ function wmfGetVariantSettings() {
 			'templateeditor' => true,
 			'editinterface' => true,
 			'editsitejson' => true,
+		],
+		'extendedconfirmed' => [ // T254471
+			'extendedconfirmed' => true
 		],
 	],
 	'+ruwiki' => [
@@ -12743,7 +12750,12 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'rollbacker' ],
 	],
 	'+rowiki' => [
-		'sysop' => [ 'autopatrolled', 'templateeditor', 'patroller' ], // T63172, T231099
+		'sysop' => [ // T63172, T231099, T254471
+			'autopatrolled',
+			'extendedconfirmed',
+			'templateeditor',
+			'patroller',
+		],
 		'bureaucrat' => [ 'abusefilter' ], // T28634
 	],
 	'+rswikimedia' => [ // T109613
@@ -13563,7 +13575,12 @@ function wmfGetVariantSettings() {
 	],
 	'+rowiki' => [
 		'bureaucrat' => [ 'abusefilter' ], // T28634
-		'sysop' => [ 'autopatrolled', 'templateeditor', 'patroller' ], // T63172, T231099
+		'sysop' => [ // T63172, T231099, T63172
+			'autopatrolled',
+			'extendedconfirmed',
+			'templateeditor',
+			'patroller',
+		],
 	],
 	'+ruwiki' => [
 		'bureaucrat' => [ 'arbcom', 'engineer', 'sysop' ], // T51334, T144599
@@ -15159,6 +15176,14 @@ function wmfGetVariantSettings() {
 			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
 			[ '!', [ APCOND_INGROUPS, 'eliminator' ] ],
 		], // T215493
+	],
+	'rowiki' => [
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 30 * 86400 ],
+			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+		], // T254471
 	],
 ],
 
