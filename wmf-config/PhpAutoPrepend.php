@@ -31,10 +31,14 @@ wmfSetupProfiler( [
 	'redis-port' => 6379,
 	// Connection timeout, in seconds.
 	'redis-timeout' => $wmfServiceConfig->getRealm() === 'labs' ? 1 : 0.1,
-	'use-xhgui' => (bool)$wmfServiceConfig->getLocalService( 'xhgui' ),
+	'use-xhgui' => ( $wmfServiceConfig->getLocalService( 'xhgui' ) || $wmfServiceConfig->getLocalService( 'xhgui-pdo' ) ),
 	'xhgui-conf' => [
 		'mongodb.host' => $wmfServiceConfig->getLocalService( 'xhgui' ),
 		'mongodb.options' => [],
+		'pdo.connect' => $wmfServiceConfig->getLocalService( 'xhgui-pdo' ),
+		'pdo.user' => $wmgXhguiDBuser,
+		'pdo.password' => $wmgXhguiDBpassword,
+		'pdo.table' => 'xhgui',
 	],
 	'excimer-production-period' => 60,
 	'excimer-single-period' => 0.01,

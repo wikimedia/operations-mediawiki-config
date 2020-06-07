@@ -32,4 +32,6 @@ require_once __DIR__ . '/mongofill/src/MongoTimestamp.php';
 
 require_once __DIR__ . '/mongofill/src/functions.php';
 
+require_once __DIR__ . '/xhgui-collector/src/Xhgui_Util.php';
 require_once __DIR__ . '/xhgui-collector/src/Xhgui_Saver_Mongo.php';
+require_once __DIR__ . '/xhgui-collector/src/Xhgui_Saver_Pdo.php';

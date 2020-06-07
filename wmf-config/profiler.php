@@ -17,7 +17,7 @@ require_once __DIR__ . '/../src/XWikimediaDebug.php';
  *   - redis-host: The host used for Xenon events
  *   - redis-port: The port used for Xenon events
  *   - redis-timeout: The redis socket timeout
- *   - use-xhgui: True to use XHGui saver via MongoDB
+ *   - use-xhgui: True to use XHGui saver via MongoDB and PDO
  *   - xhgui-conf: The configuration array to pass to Xhgui_Saver::factory
  *   - excimer-production-period: The sampling period for production profiling
  *   - excimer-single-period: The sampling period for Excimer forceprofile
@@ -107,7 +107,7 @@ function wmfSetupTideways( $options ) {
 		 * One-off profile to XHGui.
 		 *
 		 * Set X-Wikimedia-Debug header with 'profile' attribute to instrument a web request
-		 * with XHProf and save the profile to XHGui's MongoDB.
+		 * with XHProf and save the profile to XHGui's MongoDB and/or MariaDB.
 		 *
 		 * To find the profile in XHGui, either browse "Recent", or use wgRequestId value
 		 * from the mw.config data in the HTML web response, e.g. by running the
@@ -125,7 +125,7 @@ function wmfSetupTideways( $options ) {
 
 				/**
 				 * The following classes from composer packages are needed to submit
-				 * profiles to XHGui:
+				 * profiles to MongoDB-backed XHGui:
 				 *
 				 * - MongoDate
 				 * - Xhgui_Util
@@ -145,6 +145,9 @@ function wmfSetupTideways( $options ) {
 				 * WMF servers have neither of the PHP extensions installed. Instead we use
 				 * "mongofill", which is a plain PHP implementation originally written to support
 				 * HHVM, but also works fine on PHP7.2.
+				 *
+				 * We are transitioning to storing XHGui profiles in MariaDB instead, using
+				 * Xhgui_Saver_Pdo, see T180761.
 				 */
 				require_once __DIR__ . '/../lib/profiler-autoload.php';
 
@@ -196,14 +199,25 @@ function wmfSetupTideways( $options ) {
 					'request_date'     => date( 'Y-m-d', $sec ),
 				];
 
-				$mongo = new MongoClient(
-					$options['xhgui-conf']['mongodb.host'],
-					$options['xhgui-conf']['mongodb.options']
-				);
-				$collection = $mongo->selectDB( 'xhprof' )->selectCollection( 'results' );
-				$collection->findOne();
-				$saver = new Xhgui_Saver_Mongo( $collection );
-				$saver->save( $data );
+				if ( !empty( $options['xhgui-conf']['mongodb.host'] ) ) {
+					$mongo = new MongoClient(
+						$options['xhgui-conf']['mongodb.host'],
+						$options['xhgui-conf']['mongodb.options']
+					);
+					$collection = $mongo->selectDB( 'xhprof' )->selectCollection( 'results' );
+					$collection->findOne();
+					$saver = new Xhgui_Saver_Mongo( $collection );
+					$saver->save( $data );
+				}
+				if ( !empty( $options['xhgui-conf']['pdo.connect'] ) ) {
+					$pdo = new PDO(
+						$options['xhgui-conf']['pdo.connect'],
+						$options['xhgui-conf']['pdo.user'],
+						$options['xhgui-conf']['pdo.password']
+					);
+					$saver = new Xhgui_Saver_Pdo( $pdo, $options['xhgui-conf']['pdo.table'] );
+					$saver->save( $data );
+				}
 			};
 
 			// Register the callback as a shutdown_function, so that the profile

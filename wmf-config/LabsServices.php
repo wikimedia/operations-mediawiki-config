@@ -12,6 +12,7 @@ return [
 		'udp2log' => 'deployment-fluorine02.eqiad.wmflabs:8420',
 		'xenon' => 'deployment-fluorine02.deployment-prep.eqiad.wmflabs',
 		'xhgui' => 'mongodb://deployment-xhgui01.deployment-prep.eqiad.wmflabs:27017',
+		'xhgui-pdo' => 'mysql:host=deployment-mdb01.deployment-prep.eqiad.wmflabs;dbname=xhgui',
 		'statsd' => 'labmon1001.eqiad.wmnet',
 		'search-chi' => [
 			// These MUST match the installed SSL certs
