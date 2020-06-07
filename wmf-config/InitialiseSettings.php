@@ -22584,14 +22584,6 @@ function wmfGetVariantSettings() {
 	'wikidatawiki' => 'P218',
 ],
 
-'wmgWikibaseIdBlacklist' => [
-	'default' => [
-		'wikibase-lexeme' => [
-			1, 5, 8, 18, 42, 55, 99, 117, 123, 221, 314, 666, 777, 1887, 12345, 24601, 171081
-		],
-	],
-],
-
 'wmgWikibaseDisabledDataTypes' => [
 	'default' => [
 		'entity-schema' // T229904 :'(
