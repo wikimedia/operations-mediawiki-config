@@ -24802,6 +24802,8 @@ function wmfGetVariantSettings() {
 ],
 
 'wgEventRelayerConfig' => [
+	'labswiki' => [],
+	'labtestwiki' => [],
 	'group0' => [
 		'cdn-url-purges' => [
 			'class' => \MediaWiki\Extension\EventBus\Adapters\EventRelayer\CdnPurgeEventRelayer::class,
@@ -24812,6 +24814,11 @@ function wmfGetVariantSettings() {
 
 // Temporary config to selectively disable HTCP purges per wiki
 'wmgDisableHTCP' => [
+	'labswiki' => false,
+	'labtestwiki' => false,
+	'private' => false,
+	'loginwiki' => false,
+	'votewiki' => false,
 	'testwiki' => true,
 	'default' => false,
 ],

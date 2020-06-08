@@ -710,15 +710,14 @@ $wgStatsdServer = $wmfLocalServices['statsd'];
 $wgUseCdn = true;
 if ( $wmfRealm === 'production' ) {
 	require "$wmfConfigDir/reverse-proxy.php";
+	// Temporary config to disable HTCP per-wiki.
+	// Remove once transition to kafka purges completes.
+	if ( $wmgDisableHTCP ) {
+		$wgHTCPRouting = [];
+	}
 } elseif ( $wmfRealm === 'labs' ) {
 	$wgStatsdMetricPrefix = 'BetaMediaWiki';
 	require "$wmfConfigDir/reverse-proxy-staging.php";
-}
-
-// Temporary config to disable HTCP per-wiki.
-// Remove once transition to kafka purges completes.
-if ( $wmgDisableHTCP ) {
-	$wgHTCPRouting = [];
 }
 
 // CORS (cross-domain AJAX, T22814)
