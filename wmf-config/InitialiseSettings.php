@@ -24804,7 +24804,7 @@ function wmfGetVariantSettings() {
 'wgEventRelayerConfig' => [
 	'labswiki' => [],
 	'labtestwiki' => [],
-	'group0' => [
+	'default' => [
 		'cdn-url-purges' => [
 			'class' => \MediaWiki\Extension\EventBus\Adapters\EventRelayer\CdnPurgeEventRelayer::class,
 			'stream' => 'resource-purge',
