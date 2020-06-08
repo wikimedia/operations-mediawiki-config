@@ -25776,15 +25776,6 @@ function wmfGetVariantSettings() {
 
 'wgGEHomepageSuggestedEditsNewAccountInitiatedPercentage' => [
 	'default' => 0,
-	'arwiki' => 50,
-	'cswiki' => 50,
-	'frwiki' => 50,
-	'huwiki' => 50,
-	'hywiki' => 50,
-	'kowiki' => 50,
-	'srwiki' => 50,
-	'ukwiki' => 50,
-	'viwiki' => 50,
 ],
 
 'wgGEHomepageTutorialTitle' => [
