@@ -18309,6 +18309,7 @@ function wmfGetVariantSettings() {
 	'sawiki' => true, // T192212
 	'sewikimedia' => true, // T32491
 	'siwiki' => true, // T35485
+	'slwiki' => true, // T254706
 	'sqwiki' => true, // T227970
 	'sqwikiquote' => true, // T230390
 	'srwiki' => true, // T37913
