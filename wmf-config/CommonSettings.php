@@ -715,6 +715,12 @@ if ( $wmfRealm === 'production' ) {
 	require "$wmfConfigDir/reverse-proxy-staging.php";
 }
 
+// Temporary config to disable HTCP per-wiki.
+// Remove once transition to kafka purges completes.
+if ( $wmgDisableHTCP ) {
+	$wgHTCPRouting = [];
+}
+
 // CORS (cross-domain AJAX, T22814)
 // This lists the domains that are accepted as *origins* of CORS requests
 // DO NOT add domains here that aren't WMF wikis unless you really know what you're doing
