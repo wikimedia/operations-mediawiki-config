@@ -3914,6 +3914,7 @@ function wmfGetVariantSettings() {
 	'hewiktionary' => 'ויקימילון',
 	'hifwiktionary' => 'Sabdkosh', // T173643
 	'hiwiki' => 'विकिपीडिया',
+	'hiwikibooks' => 'विकिपुस्तक', //T254012
 	'hiwikimedia' => 'विकिमीडिया', // T188366
 	'hiwikisource' => 'विकिस्रोत',
 	'hiwikiversity' => 'विकिविश्वविद्यालय',
@@ -4245,6 +4246,7 @@ function wmfGetVariantSettings() {
 	'guwikiquote' => 'વિકિસૂક્તિની_ચર્ચા', // T121853
 	'guwikisource' => 'વિકિસ્રોત_ચર્ચા',
 	'hifwiktionary' => 'Sabdkosh_ke_baat', // T173643
+	'hiwikibooks' => 'विकिपुस्तक_वार्ता', // T254012
 	'hiwikimedia' => 'विकिमीडिया_वार्ता', // T188366
 	'hiwikivoyage' => 'विकियात्रा_वार्ता', // T173013
 	'hrwikisource' => 'Razgovor_o_Wikizvoru',
@@ -4960,6 +4962,11 @@ function wmfGetVariantSettings() {
 		'प्रवा' => 101,
 		'Portal' => 100, // T187286
 		'Portal_talk' => 101,
+	],
+	'+hiwikibooks' => [ // T254012
+		'वि' => NS_PROJECT,
+		'विपु' => NS_PROJECT,
+		'WB' => NS_PROJECT,
 	],
 	'+hiwikiversity' => [
 		'Portal' => 100, // T172977
