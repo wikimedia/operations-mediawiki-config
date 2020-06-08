@@ -146,6 +146,20 @@ function wmfGetLabsOverrideSettings() {
 			'default' => 'wgDebugLogFile',
 		],
 
+		// TODO: Temporary. Once we switch production to kafka purges,
+		// this override will no longer be needed.
+		'wgEventRelayerConfig' => [
+			'default' => [
+				'cdn-url-purges' => [
+					'class' => \MediaWiki\Extension\EventBus\Adapters\EventRelayer\CdnPurgeEventRelayer::class,
+					'stream' => 'resource-purge',
+				],
+				'default' => [
+					'class' => EventRelayerNull::class,
+				],
+			],
+		],
+
 		// Use eventgate-main as default EventService in beta
 		// TODO: this will be replaced by wgEventStreams once
 		// EventStreamConfig extension is deployed. See:
