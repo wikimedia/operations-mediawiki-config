@@ -24819,8 +24819,7 @@ function wmfGetVariantSettings() {
 	'private' => false,
 	'loginwiki' => false,
 	'votewiki' => false,
-	'testwiki' => true,
-	'default' => false,
+	'default' => true,
 ],
 
 'wmgUseCapiunto' => [
