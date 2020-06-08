@@ -1243,6 +1243,9 @@ function wmfGetLabsOverrideSettings() {
 		'wgGENewcomerTasksGuidanceEnabled' => [
 			'default' => true,
 		],
+		'wgGENewcomerTasksGuidanceRequiresOptIn' => [
+			'default' => false
+		],
 		'wgGERestbaseUrl' => [
 			'default' => false,
 		],
