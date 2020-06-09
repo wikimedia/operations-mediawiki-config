@@ -9975,6 +9975,10 @@ function wmfGetVariantSettings() {
 		'suppressredirect' => [ 'suppressredirect' => true ], // T69278
 	],
 	'+cswiki' => [
+		'accountcreator' => [ // T254927
+			'tboverride-account' => true,
+			'override-antispoof' => true,
+		],
 		'autopatrolled' => [ 'autopatrol' => true, ],
 		'bot' => [ 'ipblock-exempt' => true, ], // T44720
 		'arbcom' => [ // T63418
