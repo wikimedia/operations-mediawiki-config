@@ -287,6 +287,14 @@ function wmfGetLabsOverrideSettings() {
 			'cawiki' => 60,
 		],
 
+		'wgEchoEnablePush' => [
+			'default' => true,
+		],
+
+		'wgEchoPushServiceBaseUrl' => [
+			'default' => 'http://deployment-push-notifications01.deployment-prep.eqiad1.wikimedia.cloud:8900/v1/message',
+		],
+
 		# FIXME: make that settings to be applied
 		'-wgShowExceptionDetails' => [
 			'default' => true,
