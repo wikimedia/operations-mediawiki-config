@@ -294,6 +294,13 @@ if ( $wmgUseQuickSurveys ) {
 	$wgQuickSurveysRequireHttps = false;
 }
 
+if ( $wmgUseEcho ) {
+	$wgEchoNotifiers['push'] = [ 'EchoPush\\PushNotifier', 'notifyWithPush' ];
+	$wgDefaultNotifyTypeAvailability['push'] = true;
+	$wgNotifyTypeAvailabilityByCategory['system']['push'] = false;
+	$wgNotifyTypeAvailabilityByCategory['system-noemail']['push'] = false;
+}
+
 if ( $wmgUseEcho && $wmgUseCentralAuth ) {
 	$wgEchoSharedTrackingDB = 'wikishared';
 	// Set cluster back to false, to override CommonSettings.php setting it to 'extension1'
