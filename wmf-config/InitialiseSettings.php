@@ -25077,7 +25077,6 @@ function wmfGetVariantSettings() {
 
 'wmgUseCollaborationKit' => [
 	'default' => false,
-	'testwiki' => true,
 ],
 
 'wgShortPagesNamespaceBlacklist' => [
