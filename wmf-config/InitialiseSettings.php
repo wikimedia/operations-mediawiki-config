@@ -5163,6 +5163,8 @@ function wmfGetVariantSettings() {
 	],
 	'+kowikiquote' => [
 		'인' => NS_PROJECT,
+		'사' => NS_USER, // T255031
+		'사토' => NS_USER_TALK, //T255031
 	],
 	'+kowikisource' => [
 		'문' => NS_PROJECT, // T182487
