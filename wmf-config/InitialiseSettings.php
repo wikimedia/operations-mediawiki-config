@@ -25075,10 +25075,6 @@ function wmfGetVariantSettings() {
 	'labtestwiki' => true,
 ],
 
-'wmgUseCollaborationKit' => [
-	'default' => false,
-],
-
 'wgShortPagesNamespaceBlacklist' => [
 	'default' => [],
 	// T170687
