@@ -1843,6 +1843,9 @@ function wmfGetLabsOverrideSettings() {
 				'*.wikidata.org',
 				'*.wikivoyage.org',
 				'*.mediawiki.org',
+
+				// Special entry for VE-RealTime until it can be done properly
+				'visualeditor-realtime.wmflabs.org',
 			],
 		],
 
