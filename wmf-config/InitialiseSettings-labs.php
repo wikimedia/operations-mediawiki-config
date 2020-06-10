@@ -891,11 +891,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true,
 		],
 
-		'wmgUseCollaborationKit' => [
-			'default' => false,
-			'enwiki' => true,
-		],
-
 		'wmgEnableDashikiData' => [
 			'default' => true,
 			'apiportalwiki' => false,
