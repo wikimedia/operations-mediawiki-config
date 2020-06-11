@@ -32,7 +32,6 @@ $IP/extensions/ConfirmEdit/FancyCaptcha/extension.json
 $IP/extensions/CongressLookup/extension.json
 $IP/extensions/ContactPage/extension.json
 $IP/extensions/ContentTranslation/extension.json
-$IP/extensions/ContributionTracking/extension.json
 $IP/extensions/CreditsSource/extension.json
 $IP/extensions/Dashiki/extension.json
 $IP/extensions/Disambiguator/extension.json

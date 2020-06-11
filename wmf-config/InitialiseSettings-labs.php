@@ -314,10 +314,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true,
 		],
 
-		'-wgUseContributionTracking' => [
-			'default' => false,
-		],
-
 		# To help fight spam, makes rules maintained on deploymentwiki
 		# to be available on all beta wikis.
 		'-wmgAbuseFilterCentralDB' => [

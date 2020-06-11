@@ -16176,13 +16176,6 @@ function wmfGetVariantSettings() {
 	'zhwikiversity' => 'any', // T214946
 ],
 
-'wgUseContributionTracking' => [
-	'default' => false,
-	'donatewiki' => true,
-	'foundationwiki' => true,
-	'testwiki' => true,
-],
-
 'wmgUseMassMessage' => [
 	'default' => true,
 	'loginwiki' => false,

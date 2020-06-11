@@ -2283,14 +2283,6 @@ if ( $wmgShowWikidataInWatchlist ) {
 } else {
 	$wgDefaultUserOptions['wlshowwikibase'] = 0;
 }
-// ContributionTracking for handling PayPal redirects
-if ( $wgUseContributionTracking ) {
-	wfLoadExtension( 'ContributionTracking' );
-
-	// the following variables will disable all donation forms and send users to a maintenance page
-	$wgContributionTrackingFundraiserMaintenance = false;
-	$wgContributionTrackingFundraiserMaintenanceUnsched = false;
-}
 
 if ( $wmgUseMassMessage ) {
 	wfLoadExtension( 'MassMessage' );
