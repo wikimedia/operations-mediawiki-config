@@ -13994,6 +13994,7 @@ function wmfGetVariantSettings() {
 	'glwikiquote' => [ 'w', 'wikt', 's', 'b' ],
 	'glwiki' => [ 'wikt', 's', 'q', 'b' ],
 	'gomwiki' => [ 'commons', 'meta', 'species', 'en', 'en:b', 'en:q', 'en:n', 'en:s', 'en:v', 'hi', 'mr', 'incubator' ], // T104563
+	'gomwiktionary' => [ 'w', 'incubator', 'en:w', 'en', 'pt', 'fr' ], // T255098
 	'guwiki' => [ 'en', 'commons', 'meta', 'species', 'gu:s', 'bh', 'en', 'en:b', 'en:q', 'en:n', 'en:s', 'en:v', 'hi', 'ml', 'ne', 'pa', 'simple', 'te', 'ta', 'ur', 'sa' ], // T39511, T120346
 	'guwikiquote' => [ 'w', 's', 'hi', 'hi:w', 'en', 'en:w', 'sa', 'meta' ], // T122635
 	'hakwiki' => [ 'incubator' ],
