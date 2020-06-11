@@ -348,10 +348,6 @@ if ( $wmgUseUniversalLanguageSelector ) {
 $wgLoginNotifyAttemptsKnownIP = 10;
 $wgLoginNotifyAttemptsNewIP = 1;
 
-if ( $wmgUseKartographer ) {
-	$wgKartographerMapServer = 'https://maps-beta.wmflabs.org';
-}
-
 if ( $wmgUseTwoColConflict ) {
 	$wgTwoColConflictBetaFeature = false;
 	$wgTwoColConflictSuggestResolution = true;
