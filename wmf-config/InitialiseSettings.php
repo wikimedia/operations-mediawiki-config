@@ -21088,6 +21088,7 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'wikivoyage' => true,
 	'dewikivoyage' => false, // T206102
+	'enwikivoyage' => false, // T254820
 	'itwikivoyage' => false, // T253096
 ],
 
