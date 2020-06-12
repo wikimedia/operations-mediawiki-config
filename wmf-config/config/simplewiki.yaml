@@ -10,8 +10,6 @@ inheritsFrom:
   - commonsuploads
   - gettingstarted-with-category-suggestions
   - medium
-  # To be removed by end of 2020
-  - mobilemainpagelegacy
   - s3
   - securepollglobal
   - wikidataclient
