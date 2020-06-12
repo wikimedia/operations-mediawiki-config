@@ -290,10 +290,6 @@ if ( $wmgUsePageImages ) {
 	];
 }
 
-if ( $wmgUseQuickSurveys ) {
-	$wgQuickSurveysRequireHttps = false;
-}
-
 if ( $wmgUseEcho ) {
 	$wgEchoNotifiers['push'] = [ 'EchoPush\\PushNotifier', 'notifyWithPush' ];
 	$wgDefaultNotifyTypeAvailability['push'] = true;
