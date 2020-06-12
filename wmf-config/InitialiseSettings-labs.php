@@ -565,6 +565,30 @@ function wmfGetLabsOverrideSettings() {
 					],
 				],
 			],
+			'dewiki' => [
+				// T254322 T255130
+				[
+					'enabled' => true,
+					'type' => 'internal',
+					'layout' => 'multiselect',
+					'embedElementId' => 'survey-inject-2',
+					// Only display on [[w:de:Benutzer:Adamw/Leichter_mit_Vorlagen_arbeiten]]
+					'audience' => [ 'pageIds' => [ 4997 ] ],
+					'name' => 'wmde-tw-template-survey-prototype-2',
+					'question' => 'wmde-tw-template-survey-prototype2-question',
+					'description' => 'wmde-tw-template-survey-prototype2-description-message',
+					'answers' => [
+						'wmde-tw-template-survey-prototype1-answer-2a',
+						'wmde-tw-template-survey-prototype1-answer-2b',
+						'wmde-tw-template-survey-prototype1-answer-2c',
+					],
+					'coverage' => 1.0,
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+					],
+					'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
+				],
+			],
 			'enwiki' => [
 				// T209882
 				[
