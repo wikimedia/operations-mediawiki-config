@@ -25727,8 +25727,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgGENewcomerTasksGuidanceRequiresOptIn' => [
-	'default' => true,
-	'testwiki' => false,
+	'default' => false,
 ],
 
 'wgGERestbaseUrl' => [
