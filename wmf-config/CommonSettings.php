@@ -1572,6 +1572,10 @@ if ( is_array( $wmgExtraImplicitGroups ) ) {
 if ( $wmfRealm == 'labs' ) {
 	$wgHTTPTimeout = 10;
 }
+if ( !empty( $wmgTimeLimit ) ) {
+	// Set the maximum HTTP client timeout equal to the current request timeout (T245170)
+	$wgHTTPMaxTimeout = $wgHTTPMaxConnectTimeout = $wmgTimeLimit;
+}
 
 $wgHiddenPrefs[] = 'prefershttps'; // T91352, T102245
 
