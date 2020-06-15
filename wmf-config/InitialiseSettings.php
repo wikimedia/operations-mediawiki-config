@@ -22942,7 +22942,7 @@ function wmfGetVariantSettings() {
 			'entityNamespaces' => [
 				'mediainfo' => '6/mediainfo',
 			],
-			'repoDatabase' => false,
+			'repoDatabase' => 'testcommonswiki',
 			'baseUri' => 'https://test-commons.wikimedia.org/wiki/Special:EntityData/',
 			'rdfNodeNamespacePrefix' => 'sdc',
 			'rdfPredicateNamespacePrefix' => 'sdc',
