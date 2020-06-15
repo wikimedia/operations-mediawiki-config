@@ -90,3 +90,8 @@ $wgPoolCountClientConf = [
 	'timeout' => 0.5,
 	'connect_timeout' => 0.01
 ];
+
+// Test of T250248
+if ( $wgDBname === 'testwiki' ) {
+	$wgPoolCounterConf['ArticleView']['fastStale'] = true;
+}
