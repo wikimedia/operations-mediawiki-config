@@ -570,7 +570,7 @@ function wmfGetLabsOverrideSettings() {
 				[
 					'enabled' => true,
 					'type' => 'internal',
-					'layout' => 'multiselect',
+					'layout' => 'multiple-answer',
 					'embedElementId' => 'survey-inject-2',
 					// Only display on [[w:de:Benutzer:Adamw/Leichter_mit_Vorlagen_arbeiten]]
 					'audience' => [ 'pageIds' => [ 4997 ] ],
