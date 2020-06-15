@@ -582,6 +582,7 @@ function wmfGetLabsOverrideSettings() {
 						'wmde-tw-template-survey-prototype1-answer-2b',
 						'wmde-tw-template-survey-prototype1-answer-2c',
 					],
+					'shuffleAnswersDisplay' => false,
 					'coverage' => 1.0,
 					'platforms' => [
 						'desktop' => [ 'stable' ],
