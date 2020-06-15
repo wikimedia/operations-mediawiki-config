@@ -5,7 +5,6 @@
 inheritsFrom:
   - wikisource
   - categories-rdf
-  - commonsuploads
   - medium
   - nowikidatadescriptiontaglines
   - s3
