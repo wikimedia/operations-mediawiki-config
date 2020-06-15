@@ -121,6 +121,12 @@ function wmfSetupTideways( $options ) {
 		if ( $profileToXhgui ) {
 			// XHGui save callback
 			$saveCallback = function () use ( $options ) {
+				// These globals are set by private/PrivateSettings.php and may only be
+				// read by wmf-config after MediaWiki is initialised.
+				// The profiler is set up much earlier via PhpAutoPrepend, as such,
+				// only materialise these globals during the save callback, not sooner.
+				global $wmgXhguiDBuser, $wmgXhguiDBpassword;
+
 				$data = [ 'profile' => tideways_xhprof_disable() ];
 
 				/**
@@ -209,11 +215,15 @@ function wmfSetupTideways( $options ) {
 					$saver = new Xhgui_Saver_Mongo( $collection );
 					$saver->save( $data );
 				}
-				if ( !empty( $options['xhgui-conf']['pdo.connect'] ) ) {
+
+				if ( !empty( $options['xhgui-conf']['pdo.connect'] )
+					&& $wmgXhguiDBuser
+					&& $wmgXhguiDBpassword
+				) {
 					$pdo = new PDO(
 						$options['xhgui-conf']['pdo.connect'],
-						$options['xhgui-conf']['pdo.user'],
-						$options['xhgui-conf']['pdo.password']
+						$wmgXhguiDBuser,
+						$wmgXhguiDBpassword
 					);
 					$saver = new Xhgui_Saver_Pdo( $pdo, $options['xhgui-conf']['pdo.table'] );
 					$saver->save( $data );

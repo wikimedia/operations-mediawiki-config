@@ -4,14 +4,20 @@
 /**
  * Initialisation code for all PHP processes.
  *
- * PHP is configured to execute this file before the main script, through
- * the `auto_prepend_file` setting. This can apply both to web request
- * and CLI processes.
+ * This for PRODUCTION.
+ *
+ * PHP is configured to execute this file before the main script. This uses the
+ * `auto_prepend_file` setting. This is currently enabled on web requests
+ * only, not on Maintenance/CLI processes.
  *
  * This is executed in the same run-time as the main script, which means
  * it CAN expose state, such as variables and constants.
  *
- * @see https://secure.php.net/manual/en/ini.core.php#ini.auto-prepend-file
+ * However, as it runs literally before anything else, it cannot use
+ * any MediaWiki state and no wmf-config or private configuration
+ * variables.
+ *
+ * @see https://www.php.net/manual/en/ini.core.php#ini.auto-prepend-file
  */
 
 // Open logs and set the syslog.ident to a sensible value on php-fpm
@@ -36,8 +42,6 @@ wmfSetupProfiler( [
 		'mongodb.host' => $wmfServiceConfig->getLocalService( 'xhgui' ),
 		'mongodb.options' => [],
 		'pdo.connect' => $wmfServiceConfig->getLocalService( 'xhgui-pdo' ),
-		'pdo.user' => $wmgXhguiDBuser,
-		'pdo.password' => $wmgXhguiDBpassword,
 		'pdo.table' => 'xhgui',
 	],
 	'excimer-production-period' => 60,
