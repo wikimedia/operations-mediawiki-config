@@ -25120,10 +25120,6 @@ function wmfGetVariantSettings() {
 	'default' => false,
 ],
 
-'wgActorTableSchemaMigrationStage' => [
-	'default' => SCHEMA_COMPAT_NEW,
-],
-
 'wgMultiContentRevisionSchemaMigrationStage' => [
 	'default' => SCHEMA_COMPAT_NEW,
 ],
