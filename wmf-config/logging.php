@@ -110,6 +110,15 @@ $wmgMonologProcessors = [
 				// T215350: add PHP version information
 				$record['extra']['phpversion'] = phpversion();
 
+				// T255627: add label for the server group the current server belongs to.
+				// This is exposed by Apache configuration. Its value is that of the Hiera
+				// 'cluster' key in Puppet (e.g. "appserver", "parsoid", etc).
+				//
+				// This is not set on CLI (e.g. deploy, maint, snapshot).
+				//
+				// Ref <https://wikitech.wikimedia.org/wiki/MediaWiki_at_WMF#App_servers>
+				$record['extra']['servergroup'] = $_SERVER['SERVERGROUP'] ?? '';
+
 				/**
 				 * Add a "normalized_message" field to log records.
 				 *
@@ -176,9 +185,6 @@ $wmgMonologLoggerCalls = [
 	'useMicrosecondTimestamps' => [ false ],
 ];
 
-# keep in sync with php7-fatal-error.php in operations/puppet
-# and with wmf-config/CommonSettings.php
-$isParsoidCluster = ( $_SERVER['SERVERGROUP'] ?? null ) === 'parsoid';
 $wmgMonologConfig = [
 	'loggers' => [
 		// Template for all undefined log channels
@@ -206,7 +212,7 @@ $wmgMonologConfig = [
 		],
 		'cee' => [
 			'class' => \MediaWiki\Logger\Monolog\CeeFormatter::class,
-			'args'  => [ $isParsoidCluster ? 'parsoid-php' : 'mediawiki', php_uname( 'n' ), null, '', 1 ],
+			'args'  => [ 'mediawiki', php_uname( 'n' ), null, '', 1 ],
 		],
 	],
 ];
