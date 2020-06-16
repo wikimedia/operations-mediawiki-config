@@ -78,19 +78,19 @@ foreach ( $wmfDbconfigFromEtcd['sectionLoads'] as $section => $sectionLoads ) {
 	$wgLBFactoryConf['sectionLoads'][$section] = array_merge( $sectionLoads[0], $sectionLoads[1] );
 }
 
-require_once __DIR__ . '/../../src/Noc/WmfClusters.php';
+require_once __DIR__ . '/../../src/Noc/DbConfig.php';
 
-$clusters = new Wikimedia\MWConfig\Noc\WmfClusters();
+$dbConf = new Wikimedia\MWConfig\Noc\DbConfig();
 
 if ( $format === 'json' ) {
 	$data = [];
-	foreach ( $clusters->getNames() as $name ) {
+	foreach ( $dbConf->getNames() as $name ) {
 		$data[$name] = [
-			'hosts' => $clusters->getHosts( $name ),
-			'loads' => $clusters->getLoads( $name ),
-			'groupLoads' => $clusters->getGroupLoads( $name ),
-			'dbs' => $clusters->getDBs( $name ),
-			'readOnly' => $clusters->getReadOnly( $name ),
+			'hosts' => $dbConf->getHosts( $name ),
+			'loads' => $dbConf->getLoads( $name ),
+			'groupLoads' => $dbConf->getGroupLoads( $name ),
+			'dbs' => $dbConf->getDBs( $name ),
+			'readOnly' => $dbConf->getReadOnly( $name ),
 		];
 	}
 	header( 'Content-Type: application/json; charset=utf-8' );
@@ -118,24 +118,24 @@ if ( $format === 'json' ) {
 <body>
 <?php
 
-$clusterNames = $clusters->getNames();
-natsort( $clusterNames ); // natsort for s1 < s2 < s10 rather than s1 < s10 < s2
+$sectionNames = $dbConf->getNames();
+natsort( $sectionNames ); // natsort for s1 < s2 < s10 rather than s1 < s10 < s2
 
 // Generate navigation links
 print '<nav><ul>';
 $tab = 0;
-foreach ( $clusterNames as $name ) {
+foreach ( $sectionNames as $name ) {
 	$tab++;
-	print '<li><a href="#tabs-' . $tab . '">Cluster ' . htmlspecialchars( $name ) . '</a></li>';
+	print '<li><a href="#tabs-' . $tab . '">Section ' . htmlspecialchars( $name ) . '</a></li>';
 }
 print '</ul></nav><main>';
 
 // Generate content sections
 $tab = 0;
-foreach ( $clusterNames as $name ) {
+foreach ( $sectionNames as $name ) {
 	$tab++;
-	print "<section id=\"tabs-$tab\"><h2>Cluster <strong>" . htmlspecialchars( $name ) . '</strong></h2>';
-	print $clusters->htmlFor( $name ) . '</section>';
+	print "<section id=\"tabs-$tab\"><h2>Section <strong>" . htmlspecialchars( $name ) . '</strong></h2>';
+	print $dbConf->htmlFor( $name ) . '</section>';
 }
 print '</main>';
 print '<footer>Automatically generated based on <a href="./conf/highlight.php?file=' . htmlspecialchars( $dbConfigFileName ) . '">';

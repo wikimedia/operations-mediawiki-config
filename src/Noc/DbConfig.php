@@ -2,9 +2,7 @@
 
 namespace Wikimedia\MWConfig\Noc;
 
-class WmfClusters {
-	private $clusters;
-
+class DbConfig {
 	/**
 	 * @return array
 	 */
@@ -14,50 +12,50 @@ class WmfClusters {
 	}
 
 	/**
-	 * @param string $clusterName
+	 * @param string $sectionName
 	 * @return array
 	 */
-	public function getReadOnly( $clusterName ) {
+	public function getReadOnly( $sectionName ) {
 		global $wgLBFactoryConf;
-		return $wgLBFactoryConf['readOnlyBySection'][$clusterName] ?? false;
+		return $wgLBFactoryConf['readOnlyBySection'][$sectionName] ?? false;
 	}
 
 	/**
-	 * @param string $clusterName
+	 * @param string $sectionName
 	 * @return array
 	 */
-	public function getHosts( $clusterName ) {
+	public function getHosts( $sectionName ) {
 		global $wgLBFactoryConf;
-		return array_keys( $wgLBFactoryConf['sectionLoads'][$clusterName] );
+		return array_keys( $wgLBFactoryConf['sectionLoads'][$sectionName] );
 	}
 
 	/**
-	 * @param string $clusterName
+	 * @param string $sectionName
 	 * @return string
 	 */
-	public function getLoads( $clusterName ) {
+	public function getLoads( $sectionName ) {
 		global $wgLBFactoryConf;
-		return $wgLBFactoryConf['sectionLoads'][$clusterName];
+		return $wgLBFactoryConf['sectionLoads'][$sectionName];
 	}
 
 	/**
-	 * @param string $clusterName
+	 * @param string $sectionName
 	 * @return string
 	 */
-	public function getGroupLoads( $clusterName ) {
+	public function getGroupLoads( $sectionName ) {
 		global $wgLBFactoryConf;
-		return $wgLBFactoryConf['groupLoadsBySection'][$clusterName];
+		return $wgLBFactoryConf['groupLoadsBySection'][$sectionName];
 	}
 
 	/**
-	 * @param string $clusterName
+	 * @param string $sectionName
 	 * @return array
 	 */
-	public function getDBs( $clusterName ) {
+	public function getDBs( $sectionName ) {
 		global $wgLBFactoryConf;
 		$ret = [];
-		foreach ( $wgLBFactoryConf['sectionsByDB'] as $db => $cluster ) {
-			if ( $cluster == $clusterName ) {
+		foreach ( $wgLBFactoryConf['sectionsByDB'] as $db => $section ) {
+			if ( $section == $sectionName ) {
 				$ret[] = $db;
 			}
 		}
@@ -108,23 +106,23 @@ class WmfClusters {
 	}
 
 	/**
-	 * @param string $clusterName
+	 * @param string $sectionName
 	 * @return string HTML
 	 */
-	public function htmlFor( $clusterName ) {
+	public function htmlFor( $sectionName ) {
 		$ret = [ "<strong>Hosts</strong><br>" ];
-		foreach ( $this->getHosts( $clusterName ) as $host ) {
+		foreach ( $this->getHosts( $sectionName ) as $host ) {
 			$ret[] = "<code>$host</code>";
 		}
 		$ret[] = '<br><strong>Loads</strong> (master first; replicas follow):<br>';
-		foreach ( $this->getLoads( $clusterName ) as $host => $load ) {
+		foreach ( $this->getLoads( $sectionName ) as $host => $load ) {
 			$ret[] = "$host => $load<br>";
 		}
 		$ret[] = '<br><strong>Databases</strong>:<br>';
-		if ( $clusterName == 'DEFAULT' ) {
-			$ret[] = 'Any wiki not hosted on the other clusters.<br>';
+		if ( $sectionName == 'DEFAULT' ) {
+			$ret[] = 'Any wiki not hosted on the other sections.<br>';
 		} else {
-			foreach ( $this->getDBs( $clusterName ) as $i => $db ) {
+			foreach ( $this->getDBs( $sectionName ) as $i => $db ) {
 				$ret[] = $db;
 				// labtestweb seems unresponsive, avoid crawlers hitting it
 				if ( $i === 0 && $db !== 'labtestwiki' ) {

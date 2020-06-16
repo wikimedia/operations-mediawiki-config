@@ -1,8 +1,8 @@
 operations/mediawiki-config.git
 -------------------------------
 
-Files in this repository are almost a mirror of the Wikimedia Foundation
-cluster configuration. Omitted files include passwords and security measures.
+Files in this repository are almost a mirror of Wikimedia Foundation's
+production configuration of MediaWiki. Omitted files include passwords and security measures.
 
 dblists/
  List of wiki databases.
@@ -58,4 +58,4 @@ wmf-config/mc.php
  Memcached configuration.
 
 wmf-config/*-labs.php
- Files used by the beta cluster to override production settings.
+ Files used by the Beta Cluster to override production settings.
