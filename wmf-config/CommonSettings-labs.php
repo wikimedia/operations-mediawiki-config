@@ -50,11 +50,6 @@ $wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = [
 	'suggestChangeOnLogin' => false,
 ];
 
-$wgPasswordPolicy['policies']['default']['PasswordCannotBePopular'] = [
-	'value' => 100,
-	'suggestChangeOnLogin' => true,
-];
-
 // Enforce password policy when users login on other wikis; also for sensitive global groups
 // FIXME does this just duplicate the the global policy checks down in the main $wmgUseCentralAuth block?
 if ( $wmgUseCentralAuth ) {
@@ -62,11 +57,6 @@ if ( $wmgUseCentralAuth ) {
 		$privilegedGroups = wmfGetPrivilegedGroups( $user->getName(), $user );
 		if ( $privilegedGroups ) {
 			$effectivePolicy = UserPasswordPolicy::maxOfPolicies( $effectivePolicy, $wmgPrivilegedPolicy );
-			// hack; PasswordNotInLargeBlacklist obsoletes PasswordCannotBePopular but maxOfPolicies can't handle that
-			if ( $effectivePolicy['PasswordNotInLargeBlacklist'] ?? false ) {
-				$effectivePolicy['PasswordCannotBePopular'] = 0;
-			}
-
 			if ( in_array( 'staff', $privilegedGroups, true ) ) {
 				$effectivePolicy['MinimumPasswordLengthToLogin'] = [
 					'value' => 10,
