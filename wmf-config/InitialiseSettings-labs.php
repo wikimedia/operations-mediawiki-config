@@ -1905,9 +1905,7 @@ function wmfGetLabsOverrideSettings() {
 		],
 
 		'wmgUseDiscussionTools' => [
-			'arwiki' => true,
-			'enwiki' => true,
-			'nlwiki' => true,
+			'default' => true,
 		],
 
 		'-wgDiscussionToolsEnable' => [
