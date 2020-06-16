@@ -1054,10 +1054,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => SCHEMA_COMPAT_NEW,
 		],
 
-		'wgTagStatisticsNewTable' => [
-			'default' => true,
-		],
-
 		'wmgUseJADE' => [
 			'default' => true,
 			'apiportalwiki' => false,
