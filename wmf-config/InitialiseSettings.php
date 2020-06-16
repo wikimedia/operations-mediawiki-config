@@ -20640,6 +20640,10 @@ function wmfGetVariantSettings() {
 	'mediawikiwiki' => true, // T251208
 ],
 
+'wgDiscussionToolsEnableVisual' => [
+	'default' => true, // T251654
+],
+
 'wgDTSchemaEditAttemptStepSamplingRate' => [
 	'default' => false,
 	'arwiki' => 0.2,
