@@ -4916,6 +4916,13 @@ function wmfGetVariantSettings() {
 	'+glwiki' => [
 		'Portal_talk' => 101, // T43213 (old namespace name)
 	],
+	'+guwiki' => [ // T255358
+		'WP' => NS_PROJECT,
+		'વિ' => NS_PROJECT,
+		'સ' => NS_USER,
+		'શ્રે' => NS_CATEGORY,
+		'CAT' => NS_CATEGORY,
+	],
 	'+guwiktionary' => [
 		'વિક્શનરી' => NS_PROJECT // T42776 (old namespace name)
 	],
