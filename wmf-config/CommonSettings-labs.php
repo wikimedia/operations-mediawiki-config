@@ -32,7 +32,7 @@ $wgDebugLogFile = "udp://{$wmfUdp2logDest}/wfDebug";
 $wmgPrivilegedPolicy = [
 	'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
 	'MinimumPasswordLengthToLogin' => [ 'value' => 1, 'suggestChangeOnLogin' => true ],
-	'PasswordNotInLargeBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+	'PasswordNotInCommonBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 ];
 foreach ( $wmgPrivilegedGroups as $group ) {
 	// On non-SUL wikis this is the effective password policy. On SUL wikis, it will be overridden

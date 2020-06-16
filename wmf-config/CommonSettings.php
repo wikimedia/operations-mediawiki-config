@@ -538,7 +538,7 @@ $wmgPrivilegedPolicy = [
 	// of the policy, the user will be forced to use Special:PasswordReset or similar
 	// to be able to get into their account
 	'MinimumPasswordLengthToLogin' => [ 'value' => 1 ],
-	'PasswordNotInLargeBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+	'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 ];
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = [
@@ -563,7 +563,7 @@ $wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = [
 	'suggestChangeOnLogin' => false,
 ];
 
-$wgPasswordPolicy['policies']['default']['PasswordNotInLargeBlacklist'] = [
+$wgPasswordPolicy['policies']['default']['PasswordNotInCommonList'] = [
 	'value' => true,
 	'suggestChangeOnLogin' => true,
 ];
