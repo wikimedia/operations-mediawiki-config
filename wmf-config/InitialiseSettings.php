@@ -15924,7 +15924,7 @@ function wmfGetVariantSettings() {
 		'*.commonists.org',                 // Commonists - T75724
 		'*.bnf.fr',                         // Bibliothèque nationale de France - T86699
 		'www.doria.fi',                     // Doria - T87104
-		'cdm16062.contentdm.oclc.org',      // North Carolina Digital Collections - T76867
+		'*.contentdm.oclc.org',             // North Carolina Digital Collections - T76867, T255386
 		'pool.publicdomainproject.org',     // Public Domain Project - T91927
 		'*.nordiskamuseet.se',              // Nordiska museet - T93104
 		'mapserver.library.wur.nl',         // Wageningen University library map server - T91630
@@ -16105,7 +16105,10 @@ function wmfGetVariantSettings() {
 		'*.britishmuseum.org',              // British museum - T235415
 		'*.deutsche-digitale-bibliothek.de', // german-digital-library - T251287
 		'*.ub.uni-heidelberg.de', // Heidelberg University Digital Libary - T252600
-		'hq.eso.org', //European Organisation for Astronomical Research in the Southern Hemisphere - T252726
+		'hq.eso.org', // European Organisation for Astronomical Research in the Southern Hemisphere - T252726
+		'pashaei.studio', // Personal site of User:Amirpashaei - T255336
+		'parliamentdiagram.toolforge.org', // Parliment Diagram - T255363
+		'ww2db.com', // World War II DataBase - T255313
 	],
 ],
 
