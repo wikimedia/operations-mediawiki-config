@@ -372,6 +372,7 @@ function wmfGetVariantSettings() {
 	'hiwikiversity' => 'Asia/Kolkata', // T168765
 	'hiwikivoyage' => 'Asia/Kolkata', // T173013
 	'hiwikimedia' => 'Asia/Kolkata',
+	'hiwiktionary' => 'Asia/Kolkata', // T255531
 	'hrwiki' => 'Europe/Berlin',
 	'hrwikibooks' => 'Europe/Zagreb',
 	'hrwikiquote' => 'Europe/Berlin',
