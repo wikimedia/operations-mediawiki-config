@@ -20613,11 +20613,13 @@ function wmfGetVariantSettings() {
 ],
 
 'wmgUseDiscussionTools' => [
-	'default' => true, // T252264
-	// Can't be enabled on wikis where wmgUseLinter or wmgUseVisualEditor is disabled:
-	'votewiki' => false,
-	'loginwiki' => false,
-	'wikitech' => false,
+	'default' => false,
+	'arwiki' => true,
+	'enwiki' => true, // T249376
+	'frwiki' => true,
+	'huwiki' => true,
+	'nlwiki' => true,
+	'mediawikiwiki' => true,
 ],
 
 'wgDiscussionToolsEnable' => [
