@@ -10208,6 +10208,10 @@ function wmfGetVariantSettings() {
 			'editsitejson' => true,
 		],
 		'autopatrolled' => [ 'autopatrol' => true ], // T30612
+		'rollbacker' => [ // T255569
+			'rollback' => true,
+			'suppressredirect' => true,
+		],
 	],
 	'+enwiki' => [
 		'*' => [
@@ -12435,7 +12439,7 @@ function wmfGetVariantSettings() {
 	],
 	'+elwiktionary' => [
 		'bureaucrat' => [ 'interface-editor' ],
-		'sysop' => [ 'autopatrolled' ],
+		'sysop' => [ 'autopatrolled', 'rollbacker' ], // rollbacker added in T255569
 	],
 	'+enwiki' => [
 		'eventcoordinator' => [ 'confirmed' ], // T193075
@@ -13238,7 +13242,7 @@ function wmfGetVariantSettings() {
 	],
 	'+elwiktionary' => [
 		'bureaucrat' => [ 'interface-editor' ],
-		'sysop' => [ 'autopatrolled' ],
+		'sysop' => [ 'autopatrolled', 'rollbacker' ], // rollbacker added in T255569
 	],
 	'+enwiki' => [
 		'bureaucrat' => [ 'ipblock-exempt', 'sysop' ],
