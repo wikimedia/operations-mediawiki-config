@@ -1942,5 +1942,10 @@ function wmfGetLabsOverrideSettings() {
 			'default' => false,
 		],
 
+		// T247943 Temporary whilst deploying MediaModeration
+		'wmgUseMediaModeration' => [
+			'default' => true,
+		],
+
 	];
 } # wmflLabsSettings()
