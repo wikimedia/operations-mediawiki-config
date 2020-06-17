@@ -6523,12 +6523,11 @@ function wmfGetVariantSettings() {
 	'default' => true,
 	'advisorywiki' => false, // Per T27519
 	'fishbowl' => false, // Per T19718 Disable CentralNotice on private/fishbowl wikis
-	'loginwiki' => false, // T61702
+	'lockeddown' => false, // T61702
 	'nonglobal' => false,
 	'fiwikimedia' => false, // T19718
 	'private' => false, // :D
 	'qualitywiki' => false,
-	'votewiki' => false, // T61702
 ],
 
 'wgCentralNoticeLoader' => [
@@ -14761,8 +14760,7 @@ function wmfGetVariantSettings() {
 # EXTENSIONS @{
 'wmgUseCategoryTree' => [
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 ],
 
 // CT_MODE_CATEGORIES = 0
@@ -14788,8 +14786,7 @@ function wmfGetVariantSettings() {
 'wmgUseScore' => [
 	'default' => true,
 	'wikitech' => false,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 ],
 
 'wgScoreFileBackend' => [
@@ -14880,14 +14877,12 @@ function wmfGetVariantSettings() {
 
 'wmgUseSpecialNuke' => [
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 ],
 
 'wmgUseLabeledSectionTransclusion' => [
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 ],
 
 'wmgUseQuiz' => [
@@ -14921,8 +14916,7 @@ function wmfGetVariantSettings() {
 
 'wmgUseGadgets' => [
 	'default' => true, // set 2007-12-17 by brion
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 ],
 'wgSpecialGadgetUsageActiveUsers' => [
 	'default' => true,
@@ -16155,8 +16149,7 @@ function wmfGetVariantSettings() {
 
 'wmgUsePdfHandler' => [
 	'default' => true, // brion -- 2009-08-25
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 ],
 
 'wmgUseFooterContactLink' => [
@@ -16286,8 +16279,7 @@ function wmfGetVariantSettings() {
 
 'wmgUseMassMessage' => [
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 ],
 
 'wgNamespacesToPostIn' => [
@@ -16505,8 +16497,7 @@ function wmfGetVariantSettings() {
 'wmgUseTimedMediaHandler' => [
 	'default' => true,
 	'wikitech' => false,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 ],
 
 'wmgEnableLocalTimedText' => [
@@ -16546,8 +16537,7 @@ function wmfGetVariantSettings() {
 'wmgUseUrlShortener' => [
 	'default' => true,
 	'private' => false,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 ],
 
 'wgUrlShortenerReadOnly' => [
@@ -16766,8 +16756,7 @@ function wmfGetVariantSettings() {
 // -------------- Media Viewer configs --------------
 'wmgUseMultimediaViewer' => [
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 	'private' => false,
 	'officewiki' => true, // T160420
 ],
@@ -17501,8 +17490,7 @@ function wmfGetVariantSettings() {
 
 'wmgUseLinter' => [
 	'default' => true,
-	'votewiki' => false,
-	'loginwiki' => false,
+	'lockeddown' => false,
 ],
 
 'wgLinterStatsdSampleFactor' => [
@@ -17602,8 +17590,7 @@ function wmfGetVariantSettings() {
 'wmgUseParsoid' => [
 	'default' => true,
 	'wikitech' => false,		# T241961
-	'loginwiki' => false,		# T61702
-	'votewiki' => false,		# T61702
+	'lockeddown' => false,		# T61702
 ],
 
 // Should a users' Cookie: headers be forwarded to Parsoid (for private wikis)
@@ -18011,8 +17998,7 @@ function wmfGetVariantSettings() {
 	'enwikiversity' => false,   // No local Flow install, so won't work
 	'jawikiversity' => false,   // No local Flow install, so won't work
 	'private' => false,         // No local Flow install, so won't work; also risk of private data release
-	'loginwiki' => false,       // No local Flow install, so won't work; also no editing on this wiki
-	'votewiki' => false,        // No local Flow install, so won't work; also no editing on this wiki
+	'lockeddown' => false,      // No local Flow install, so won't work; also no editing on these wikis
 ],
 
 // Should the citation button be moved from the primary toolbar into the "other" group
@@ -18444,8 +18430,7 @@ function wmfGetVariantSettings() {
 // whether to use the Math extension
 'wmgUseMath' => [
 	'default' => true, // moved from MW core
-	'loginwiki' => false,
-	'votewiki' => false, // T61702
+	'lockeddown' => false, // T61702
 ],
 
 // whether MathML rendering is enabled by default - T131177
@@ -18863,8 +18848,7 @@ function wmfGetVariantSettings() {
 
 'wmgUseBabel' => [
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 ],
 'wmgBabelCategoryNames' => [
 	'default' => [
@@ -20135,8 +20119,7 @@ function wmfGetVariantSettings() {
 'wmgUseVips' => [
 	'default' => true,
 	'wikitech' => false,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 ],
 
 // NO FURTHER DEPLOYMENTS OF THIS EXTENSION.
@@ -20177,8 +20160,7 @@ function wmfGetVariantSettings() {
 
 'wmgUseFeaturedFeeds' => [
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 	'wikitech' => false,
 ],
 'wmgFeaturedFeedsDefaults' => [
@@ -20366,8 +20348,7 @@ function wmfGetVariantSettings() {
 ],
 'wmgUseGuidedTour' => [
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 ],
 'wmgUseEducationProgram' => [
 	'default' => false,
@@ -20501,8 +20482,7 @@ function wmfGetVariantSettings() {
 'wmgUseThanks' => [
 	'default' => true,
 	'legalteamwiki' => false,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 ],
 
 'wmgUseEntitySchema' => [
@@ -20690,15 +20670,13 @@ function wmfGetVariantSettings() {
 
 'wmgUseDisambiguator' => [
 	'default' => true,
-	'loginwiki' => false, // T61702
-	'votewiki' => false, // T61702
+	'lockeddown' => false, // T61702
 ],
 
 'wmgUseDiscussionTools' => [
 	'default' => true, // T252264
 	// Can't be enabled on wikis where wmgUseLinter or wmgUseVisualEditor is disabled:
-	'votewiki' => false,
-	'loginwiki' => false,
+	'lockeddown' => false,
 	'wikitech' => false,
 ],
 
@@ -20739,8 +20717,7 @@ function wmfGetVariantSettings() {
 
 'wmgUseScribunto' => [
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 ],
 
 'wmgUseSubpageSortkey' => [
@@ -21495,8 +21472,7 @@ function wmfGetVariantSettings() {
 
 'wmgUseUniversalLanguageSelector' => [
 	'default' => true,
-	'loginwiki' => false, // T61702
-	'votewiki' => false, // T61702
+	'lockeddown' => false, // T61702
 ],
 
 'wmgULSPosition' => [
@@ -22995,8 +22971,7 @@ function wmfGetVariantSettings() {
 
 'wmgUseTemplateSandbox' => [
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 ],
 
 'wmgUsePageAssessments' => [
@@ -23024,8 +22999,7 @@ function wmfGetVariantSettings() {
 	'wikibooks' => false, // T68455
 	'wikisource' => false, // T68455
 	'wikitech' => false,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 ],
 'wgPageImagesLeadSectionOnly' => [
 	// T166251 & T166493
@@ -23933,51 +23907,43 @@ function wmfGetVariantSettings() {
 
 'wmgUseCite' => [
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 ],
 
 'wmgUseCiteThisPage' => [
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 ],
 
 'wmgUsePoem' => [
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 	'wikitech' => false,
 ],
 
 'wmgUseInputBox' => [
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 ],
 
 'wmgUseImageMap' => [
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 ],
 
 'wmgUseGeSHi' => [
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 ],
 
 'wmgUseTimeline' => [
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 ],
 
 'wmgUseWikiHiero' => [
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 ],
 
 'wmgUseGlobalBlocking' => [
@@ -24009,8 +23975,7 @@ function wmfGetVariantSettings() {
 
 'wmgUsePagedTiffHandler' => [
 	'default' => true,
-	'loginwiki' => false, // T61702
-	'votewiki' => false, // T61702
+	'lockeddown' => false, // T61702
 ],
 
 'wmgUseParserFunctions' => [
@@ -24020,8 +23985,7 @@ function wmfGetVariantSettings() {
 
 'wmgUseTemplateData' => [
 	'default' => true,
-	'loginwiki' => false, // T61702
-	'votewiki' => false, // T61702
+	'lockeddown' => false, // T61702
 ],
 'wmgUseCharInsert' => [
 	'default' => true,
@@ -24535,26 +24499,22 @@ function wmfGetVariantSettings() {
 
 'wgAllowUserJs' => [
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 ],
 
 'wgAllowUserCss' => [
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 ],
 
 'wgUseSiteJs' => [
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 ],
 
 'wgUseSiteCss' => [
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 ],
 
 'wgLegacyJavaScriptGlobals' => [
@@ -24992,8 +24952,7 @@ function wmfGetVariantSettings() {
 	'labswiki' => false,
 	'labtestwiki' => false,
 	'private' => false,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'lockeddown' => false,
 	'default' => true,
 ],
 
