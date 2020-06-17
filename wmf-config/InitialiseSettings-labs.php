@@ -1907,6 +1907,7 @@ function wmfGetLabsOverrideSettings() {
 
 		'wmgUseDiscussionTools' => [
 			'default' => true,
+			'commonswiki' => false,
 			'loginwiki' => false,
 		],
 
