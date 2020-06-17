@@ -257,6 +257,7 @@ function wmfGetLabsOverrideSettings() {
 				'dnsblacklist' => 'debug',
 				'EventBus' => 'debug',
 				'JobExecutor' => [ 'logstash' => 'debug' ],
+				'mediamoderation' => 'debug', // temporary during deployment T247943
 				'MassMessage' => 'debug',
 				'MessageCache' => 'debug',
 				'runJobs' => [ 'logstash' => 'info' ],

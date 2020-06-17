@@ -6632,6 +6632,7 @@ function wmfGetVariantSettings() {
 		'LoginNotify' => 'debug',
 		'MassMessage' => 'debug', // for 59464 -legoktm 2013/12/15
 		'Math' => 'info',  // mobrovac for T121445
+		'mediamoderation' => 'debug', // temporary during deployment T247943
 		'memcached' => 'error', // -aaron 2012/10/24
 		'message-format' => [ 'logstash' => 'warning' ],
 		'MessageCacheError' => 'debug',
