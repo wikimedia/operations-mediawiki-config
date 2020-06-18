@@ -14492,6 +14492,10 @@ function wmfGetVariantSettings() {
 		253 => 'noindex, follow',
 		829 => 'noindex, follow',
 	],
+	'trwiki' => [
+		NS_USER => 'noindex,follow', // T255538
+		NS_USER_TALK => 'noindex,follow', // T255538
+	],
 	'uawikimedia' => [
 		NS_USER => 'noindex,follow', // T122732
 	],
