@@ -92,7 +92,9 @@ function wmfGetVariantSettings() {
 	'private' => false,
 	'fishbowl' => false,
 	'nonglobal' => false,
-	'foundationwiki' => true, # T205368
+	'foundationwiki' => true, // T205368
+	'officewiki' => true, // T254925
+	'otrs_wikiwiki' => true, // T246489
 ],
 'wmgBotPasswordsCluster' => [
 	'default' => false,
