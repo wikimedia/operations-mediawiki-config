@@ -372,7 +372,7 @@ if ( $wgDBname == 'commonswiki' ) {
 }
 
 // Test of new import source configuration on labs cluster
-$wgImportSources = false;
+$wgImportSources = [];
 include "$wmfConfigDir/import.php";
 $wgHooks['ImportSources'][] = 'wmfImportSources';
 
