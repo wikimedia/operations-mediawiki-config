@@ -235,5 +235,5 @@ $wgLBFactoryConf = [
 
 $wgDefaultExternalStore = [
 	'DB://cluster26',
-	'DB://cluster27',
+	# 'DB://cluster27',
 ];
