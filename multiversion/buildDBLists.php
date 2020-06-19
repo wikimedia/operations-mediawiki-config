@@ -31,7 +31,7 @@ foreach ( $prodWikis as $wgDBname ) {
 //
 // This caveat is validated by DblistTest::testDblistAllContainsEverything().
 //
-$labsOnlyTags = [ 'all-labs', 'flow_only_labs', 'flow-labs' ];
+$labsOnlyTags = [ 'all-labs', 'closed-labs', 'flow_only_labs', 'flow-labs' ];
 foreach ( $labsOnlyWikis as $wgDBname ) {
 	$fullConfig = MWConfigCacheGenerator::getCachableMWConfig( $wgDBname, $config, 'labs' );
 	foreach ( $fullConfig['wikiTag'] ?? [] as $tag ) {

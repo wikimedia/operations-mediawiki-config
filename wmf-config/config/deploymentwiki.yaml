@@ -7,3 +7,4 @@
 inheritsFrom:
   - special
   - all-labs
+  - closed-labs

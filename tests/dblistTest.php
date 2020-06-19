@@ -52,6 +52,7 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 
 			// Labs wikis (beta.wmflabs.org) might not (yet) exist in production.
 			'all-labs',
+			'closed-labs',
 			'flow-labs',
 			'flow_only_labs',
 
