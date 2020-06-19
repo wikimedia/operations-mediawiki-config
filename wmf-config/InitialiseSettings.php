@@ -21244,8 +21244,7 @@ function wmfGetVariantSettings() {
 'wgEventLoggingStreamNames' => [
 	'default' => [
 		'eventlogging_SearchSatisfaction',
-		'eventlogging_Test',
-		'test.event',
+		'eventlogging_Test'
 	]
 ],
 
@@ -21268,7 +21267,7 @@ function wmfGetVariantSettings() {
 // https://phabricator.wikimedia.org/T238230
 'wgEventLoggingSchemas' => [
 	'default' => [
-		'Test' => '/analytics/legacy/test/1.0.0'
+		'Test' => '/analytics/legacy/test/1.1.0'
 	],
 	'+group0' => [
 		'SearchSatisfaction' => '/analytics/legacy/searchsatisfaction/1.1.0'
