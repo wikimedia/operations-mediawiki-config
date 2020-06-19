@@ -265,12 +265,6 @@ function wmfGetLabsOverrideSettings() {
 			],
 		],
 
-		'wmgApplyGlobalBlocks' => [ // T123936
-			'default' => true,
-			'metawiki' => true,
-			'deploymentwiki' => false
-		],
-
 		'wmgSiteLogo1x' => [
 			'default' => '/static/images/project-logos/betawiki.png',
 			'commonswiki' => '/static/images/project-logos/betacommons.png',
