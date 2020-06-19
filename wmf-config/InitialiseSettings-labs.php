@@ -1091,7 +1091,8 @@ function wmfGetLabsOverrideSettings() {
 			'default' => false,
 			'enwiki' => true,
 		],
-		'wmgWikibaseCachePrefix' => [
+		'-wmgWikibaseCachePrefix' => [
+			'default' => 'wikidatawiki',
 			'commonswiki' => 'commonswiki',
 		],
 		'wgWMEUnderstandingFirstDay' => [
@@ -1345,7 +1346,7 @@ function wmfGetLabsOverrideSettings() {
 		'wmgUseEntitySourceBasedFederation' => [
 			'default' => true,
 		],
-		'wmgWikibaseEntitySources' => [
+		'-wmgWikibaseEntitySources' => [
 			'default' => [
 				'wikidata' => [
 					'entityNamespaces' => [
@@ -1385,9 +1386,19 @@ function wmfGetLabsOverrideSettings() {
 				],
 			],
 		],
-		'wmgWikibaseLocalEntitySourceName' => [
+		'-wmgWikibaseLocalEntitySourceName' => [
 			'default' => 'wikidata',
 			'commonswiki' => 'commons',
+		],
+		'-wmgWikibaseClientSpecialSiteLinkGroups' => [
+			'default' => [
+				'commons',
+				'mediawiki',
+				'meta',
+				'species',
+				'wikidata',
+				'wikimania',
+			],
 		],
 		'wmgWBRepoFormatterUrlProperty' => [
 			'wikidatawiki' => 'P9094',
@@ -1411,7 +1422,7 @@ function wmfGetLabsOverrideSettings() {
 			'commonswiki' => 'https://commons.wikimedia.beta.wmflabs.org/entity/',
 			'wikidatawiki' => 'https://wikidata.beta.wmflabs.org/entity/',
 		],
-		'wgArticlePlaceholderImageProperty' => [
+		'-wgArticlePlaceholderImageProperty' => [
 			'default' => 'P964',
 		],
 		'wmgWikibaseRepoEnableRefTabs' => [
@@ -1434,7 +1445,7 @@ function wmfGetLabsOverrideSettings() {
 			'default' => 'https://wikidata.beta.wmflabs.org',
 		],
 		'-wmgWikibaseClientRepoConceptBaseUri' => [
-			'default' => 'http://wikidata.beta.wmflabs.org/entity/'
+			'default' => 'http://wikidata.beta.wmflabs.org/entity/',
 		],
 		'-wmgWikibaseClientRepositories' => [
 			'default' => [
