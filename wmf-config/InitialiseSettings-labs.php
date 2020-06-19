@@ -315,11 +315,8 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true,
 		],
 
-		# To help fight spam, makes rules maintained on deploymentwiki
+		# To help fight spam, makes rules maintained on metawiki
 		# to be available on all beta wikis.
-		'-wmgAbuseFilterCentralDB' => [
-			'default' => 'deploymentwiki',
-		],
 		'-wmgUseGlobalAbuseFilters' => [
 			'default' => true,
 		],
