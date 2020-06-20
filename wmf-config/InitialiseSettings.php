@@ -5862,6 +5862,10 @@ function wmfGetVariantSettings() {
 		'主題討論' => 101, // T184866
 		'话题' => 2600, // T187546
 		'話題' => 2600, // T187546
+		'模块' => 828, // T165593
+		'模块讨论' => 829, // T165593
+		'模組' => 828, // T165593
+		'模組討論' => 829, // T165593
 	],
 	'+zhwikibooks' => [
 		'维基教科书' => NS_PROJECT,
@@ -5874,6 +5878,10 @@ function wmfGetVariantSettings() {
 		'書架' => 112, // T46308
 		'书架' => 112, // T46308
 		'SB' => 112, // T46308, Subject
+		'模块' => 828, // T165593
+		'模块讨论' => 829, // T165593
+		'模組' => 828, // T165593
+		'模組討論' => 829, // T165593
 	],
 	'+zhwikiquote' => [
 		'WQ' => NS_PROJECT, // T181374
@@ -5885,6 +5893,10 @@ function wmfGetVariantSettings() {
 		'UT' => NS_USER_TALK, // T240428
 		'F' => NS_FILE, // T240428
 		'FT' => NS_FILE_TALK, // T240428
+		'模块' => 828, // T165593
+		'模块讨论' => 829, // T165593
+		'模組' => 828, // T165593
+		'模組討論' => 829, // T165593
 	],
 	'+zhwikisource' => [
 		'WS' => NS_PROJECT, // T230548
@@ -5896,6 +5908,10 @@ function wmfGetVariantSettings() {
 		'翻译' => 114, // T66127
 		'翻譯討論' => 115, // T66127
 		'翻译讨论' => 115, // T66127
+		'模块' => 828, // T165593
+		'模块讨论' => 829, // T165593
+		'模組' => 828, // T165593
+		'模組討論' => 829, // T165593
 	],
 	'+zhwikiversity' => [
 		'T' => NS_TEMPLATE, // T202821
@@ -5939,6 +5955,10 @@ function wmfGetVariantSettings() {
 		'帮助' => NS_HELP, // T212919
 		'帮助讨论' => NS_HELP_TALK, // T212919
 		'幫助討論' => NS_HELP_TALK, // T212919
+		'模块' => 828, // T165593
+		'模块讨论' => 829, // T165593
+		'模組' => 828, // T165593
+		'模組討論' => 829, // T165593
 	],
 	'+zhwikivoyage' => [
 		'维基导游' => NS_PROJECT, // T62122
@@ -5951,6 +5971,10 @@ function wmfGetVariantSettings() {
 		'H' => NS_HELP, // T198007
 		'F' => NS_FILE, // T198007
 		'FT' => NS_FILE_TALK, // T198007
+		'模块' => 828, // T165593
+		'模块讨论' => 829, // T165593
+		'模組' => 828, // T165593
+		'模組討論' => 829, // T165593
 	],
 	'+zhwiktionary' => [
 		'Appendix' => 100, // T222024
@@ -5961,6 +5985,10 @@ function wmfGetVariantSettings() {
 		'韻部' => 106, 	// T241023
 		'韵部讨论' => 107, // T241023
 		'韻部討論' => 107, // T241023
+		'模块' => 828, // T165593
+		'模块讨论' => 829, // T165593
+		'模組' => 828, // T165593
+		'模組討論' => 829, // T165593
 	],
 	'+zh_yuewiki' => [
 		'WP' => NS_PROJECT,
@@ -7606,18 +7634,8 @@ function wmfGetVariantSettings() {
 		101 => 'Portal_talk',
 		118 => 'Draft', // T91223
 		119 => 'Draft_talk', // T91223
-	],
-	'zhwikiversity' => [
-		100 => 'Portal', // T201675
-		101 => 'Portal_talk', // T201675
-		102 => 'School', // T201675
-		103 => 'School_talk', // T201675
-		104 => 'Subject', // T201675
-		105 => 'Subject_talk', // T201675
-		106 => 'Experiment', // T212919
-		107 => 'Experiment_talk', // T212919
-		108 => 'Lesson', // T212919
-		109 => 'Lesson_talk', // T212919
+		828 => 'Module', // T165593
+		829 => 'Module_talk', // T165593
 	],
 	'zh_classicalwiki' => [
 		100 => '門',
@@ -7986,6 +8004,8 @@ function wmfGetVariantSettings() {
 		109 => 'Transwiki_talk',
 		114 => 'Translation', // T66127
 		115 => 'Translation_talk', // T66127
+		828 => 'Module', // T165593
+		829 => 'Module_talk', // T165593
 	],
 	# @} end of wikisource wikis
 
@@ -8329,6 +8349,8 @@ function wmfGetVariantSettings() {
 		103 => 'Transwiki_talk',
 		106 => 'Rhymes', // T241023
 		107 => 'Rhymes_talk', // T241023
+		828 => 'Module', // T165593
+		829 => 'Module_talk', // T165593
 	],
 	// @} end of Wiktionary
 
@@ -8528,6 +8550,8 @@ function wmfGetVariantSettings() {
 		111 => 'Wikijunior_talk', // T46308
 		112 => 'Subject', // T46308
 		113 => 'Subject_talk', // T46308
+		828 => 'Module', // T165593
+		829 => 'Module_talk', // T165593
 	],
 	// @} end of Wikibooks
 
@@ -8665,7 +8689,9 @@ function wmfGetVariantSettings() {
 	],
 	'zhwikinews' => [
 		100 => '频道',
-		101 => '频道_talk'
+		101 => '频道_talk',
+		828 => 'Module', // T165593
+		829 => 'Module_talk', // T165593
 	],
 	// @} end of Wikinews
 
@@ -8713,6 +8739,8 @@ function wmfGetVariantSettings() {
 	'zhwikiquote' => [ // T42474
 		100 => 'Transwiki',
 		101 => 'Transwiki_talk',
+		828 => 'Module', // T165593
+		829 => 'Module_talk', // T165593
 	],
 	// @} end of Wikiquote
 
@@ -8808,6 +8836,20 @@ function wmfGetVariantSettings() {
 		100 => 'Portal',
 		101 => 'Portaldiskussion',
 	],
+	'zhwikiversity' => [
+		100 => 'Portal', // T201675
+		101 => 'Portal_talk', // T201675
+		102 => 'School', // T201675
+		103 => 'School_talk', // T201675
+		104 => 'Subject', // T201675
+		105 => 'Subject_talk', // T201675
+		106 => 'Experiment', // T212919
+		107 => 'Experiment_talk', // T212919
+		108 => 'Lesson', // T212919
+		109 => 'Lesson_talk', // T212919
+		828 => 'Module', // T165593
+		829 => 'Module_talk', // T165593
+	],
 	// @} end of Wikiversity
 
 	// Wikivoyage @{
@@ -8847,6 +8889,10 @@ function wmfGetVariantSettings() {
 	'ukwikivoyage' => [
 		100 => 'Портал', // Portal
 		101 => 'Обговорення_порталу', // Portal talk
+	],
+	'zhwikivoyage' => [
+		828 => 'Module', // T165593
+		829 => 'Module_talk', // T165593
 	],
 	// @} end of Wikivoyage
 
