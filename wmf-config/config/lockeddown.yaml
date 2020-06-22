@@ -1,0 +1,6 @@
+# WARNING: This file is publicly viewable on the Web. Do not put private data here.
+# This is the shared trait configuration file for wikis that are widely
+# locked down, and should not have most user-facing features.
+# All settings here apply to wikis with this trait, unless over-ridden.
+
+wikiTag: lockeddown

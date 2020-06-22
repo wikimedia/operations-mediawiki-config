@@ -7,6 +7,7 @@ inheritsFrom:
   - all-labs
   - categories-rdf
   - nonbetafeatures
+  - lockeddown
   - nowikidatadescriptiontaglines
   - s3
   - small
