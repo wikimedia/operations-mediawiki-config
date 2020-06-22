@@ -16565,7 +16565,7 @@ function wmfGetVariantSettings() {
 
 'wmgUseBetaFeatures' => [
 	'default' => true,
-	'nonbetafeatures' => false,
+	'lockeddown' => false,
 	'wikitech' => false,
 ],
 
@@ -16617,7 +16617,7 @@ function wmfGetVariantSettings() {
 
 'wmgUseCommonsMetadata' => [
 	'default' => true,
-	'nonbetafeatures' => false,
+	'lockeddown' => false,
 	'wikitech' => false,
 ],
 
@@ -17619,7 +17619,7 @@ function wmfGetVariantSettings() {
 'wmgUseVisualEditor' => [
 	'default' => true,
 	'wikitech' => false,		# T241961
-	'nonbetafeatures' => false,
+	'lockeddown' => false,
 ],
 
 // Whether VisualEditor should bypass the MediaWiki layer and contact RESTBase directly for speed

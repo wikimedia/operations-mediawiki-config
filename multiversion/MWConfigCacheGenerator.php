@@ -38,7 +38,7 @@ class MWConfigCacheGenerator {
 		'wikidataclient-test',
 		'visualeditor-nondefault',
 		'commonsuploads',
-		'nonbetafeatures',
+		'lockeddown',
 		'group0',
 		'group1',
 		'nonglobal',
