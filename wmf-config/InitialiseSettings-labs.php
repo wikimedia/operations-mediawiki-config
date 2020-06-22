@@ -329,6 +329,10 @@ function wmfGetLabsOverrideSettings() {
 			'default'	=> true,
 		],
 
+		'wgWMEDesktopWebUIActionsTracking' => [
+			'default' => 1,
+		],
+
 		'wgWMECitationUsagePopulationSize' => [
 			'enwiki' => 1  // 100% — T213969
 		],

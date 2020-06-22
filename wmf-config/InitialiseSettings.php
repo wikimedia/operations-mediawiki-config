@@ -25034,6 +25034,10 @@ function wmfGetVariantSettings() {
 	'default' => 0 // T208454
 ],
 
+'wgWMEDesktopWebUIActionsTracking' => [
+	'default' => 0,
+],
+
 'wgWMEMobileWebUIActionsTracking' => [
 	'default' => 0.1, // T220016
 ],
