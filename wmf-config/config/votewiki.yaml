@@ -6,7 +6,6 @@ inheritsFrom:
   - special
   - categories-rdf
   - fishbowl
-  - nonbetafeatures
   - lockeddown
   - nonecho
   - nowikidatadescriptiontaglines

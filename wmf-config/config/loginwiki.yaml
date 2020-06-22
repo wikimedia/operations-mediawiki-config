@@ -6,7 +6,6 @@ inheritsFrom:
   - special
   - all-labs
   - categories-rdf
-  - nonbetafeatures
   - lockeddown
   - nowikidatadescriptiontaglines
   - s3
