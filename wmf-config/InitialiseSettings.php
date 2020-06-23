@@ -24965,6 +24965,7 @@ function wmfGetVariantSettings() {
 
 'wmgUseMediaModeration' => [
 	'default' => false,
+	'group0' => true,
 ],
 
 'wmgUseOATHAuth' => [
