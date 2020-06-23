@@ -24862,15 +24862,14 @@ function wmfGetVariantSettings() {
 // TODO: remove when enabling EventBus on ALL wikis but for jobs only
 'wmgUseEventBus' => [
 	'default' => true,
-	'wikitech' => false,
 ],
 
 'wgEnableEventBus' => [
 	'default' => 'TYPE_ALL',
-	'wikitech' => 'TYPE_NONE', // T192361
+	'wikitech' => 'TYPE_PURGE', // T192361
 	'private' => 'TYPE_JOB',
-	'loginwiki' => 'TYPE_JOB',
-	'votewiki' => 'TYPE_JOB',
+	'loginwiki' => 'TYPE_JOB|TYPE_PURGE',
+	'votewiki' => 'TYPE_JOB|TYPE_PURGE',
 ],
 
 // TODO: this will be replaced by wgEventStreams once
