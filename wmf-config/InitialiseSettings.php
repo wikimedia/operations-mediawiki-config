@@ -123,6 +123,8 @@ function wmfGetVariantSettings() {
 	'shywiktionary' => 'shy-latn',
 
 	'simplewiki' => 'en',
+	'simplewikibooks' => 'en',
+	'simplewikiquote' => 'en',
 	'simplewiktionary' => 'en',
 	'testwiki' => 'en',
 	'test2wiki' => 'en',
@@ -133,6 +135,7 @@ function wmfGetVariantSettings() {
 	'bat_smgwiki' => 'sgs',
 	'bhwiki' => 'bho',
 	'bhwiktionary' => 'bho',
+	'cbk_zamwiki' => 'cbk',
 	'fiu_vrowiki' => 'vro',
 	'roa_rupwiki' => 'rup',
 	'roa_rupwiktionary' => 'rup',
@@ -141,6 +144,7 @@ function wmfGetVariantSettings() {
 	'zh_min_nanwiktionary' => 'nan',
 	'zh_min_nanwikibooks' => 'nan',
 	'zh_min_nanwikiquote' => 'nan',
+	'zh_min_nanwikisource' => 'nan',
 	'zh_yuewiki' => 'yue',
 
 	# Chapter wikis (xxwikimedia)
@@ -210,6 +214,7 @@ function wmfGetVariantSettings() {
 	'transitionteamwiki' => 'en',
 	'usabilitywiki' => 'en',
 	'votewiki' => 'en', // T132667, T148352, T207560
+	'wg_enwiki' => 'en',
 	'wikimania' => 'en',
 	'wikimaniateamwiki' => 'en',
 ],
