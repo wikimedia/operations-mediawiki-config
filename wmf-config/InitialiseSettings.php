@@ -4477,6 +4477,9 @@ function wmfGetVariantSettings() {
 	'+bawiki' => [
 		'Wikipedia_буйынса_фекерләшеү' => NS_PROJECT_TALK,
 	],
+	'+banwiki' => [
+		'WP' => NS_PROJECT, // T255941
+	],
 	'+barwiki' => [
 		'Portal_Diskussion' => 101, // T43962 - now "Portal Dischkrian"
 	],
