@@ -25160,15 +25160,6 @@ function wmfGetVariantSettings() {
 	],
 ],
 
-// Temporary config to selectively disable HTCP purges per wiki
-'wmgDisableHTCP' => [
-	'labswiki' => false,
-	'labtestwiki' => false,
-	'private' => false,
-	'lockeddown' => false,
-	'default' => true,
-],
-
 'wmgUseCapiunto' => [
 	'default' => false,
 	'wikidataclient-test' => true,
