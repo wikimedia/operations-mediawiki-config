@@ -2811,10 +2811,13 @@ function wmfGetVariantSettings() {
 	'elwikinews' => false,
 	'eowikinews' => false,
 	'eswikinews' => false,
+	'fawikinews' => true, // T28565
 	'fiwikinews' => false,
 	'frwikinews' => false,
+	'hewikinews' => true, // T74060
 	'huwikinews' => false,
 	'jawikinews' => false,
+	'kowikinews' => true, // T26877
 	'liwikinews' => false,
 	'nlwikinews' => false,
 	'ptwikinews' => false,
@@ -2826,6 +2829,7 @@ function wmfGetVariantSettings() {
 	'svwikinews' => false,
 	'tawikinews' => false,
 	'thwikinews' => false,
+	'trwikinews' => true, // T22215
 	'ukwikinews' => false,
 	'zhwikinews' => false,
 
@@ -2914,6 +2918,7 @@ function wmfGetVariantSettings() {
 	'dawiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=da&campaign=dk', // T39662
 	'dewikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=de',
 	'enwiki' => '/wiki/Wikipedia:File_Upload_Wizard', // T44263
+	'enwikinews' => false,
 	'enwikiquote' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 	'enwikivoyage' => '//en.wikivoyage.org/wiki/Wikivoyage:Upload_file',
 	'eowiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=eo', // T71055
@@ -2926,8 +2931,11 @@ function wmfGetVariantSettings() {
 	'fawikivoyage' => '/wiki/%D9%88%DB%8C%DA%A9%DB%8C%E2%80%8C%D8%B3%D9%81%D8%B1:%D8%A8%D8%A7%D8%B1%DA%AF%D8%B0%D8%A7%D8%B1%DB%8C', // T102714
 	'frwiki' => '/wiki/Aide:Importer_un_fichier',
 	'gomwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=gom', // T96468
+	'guwiki' => false,
+	'hewikinews' => false,
 	'hiwiki' => '/wiki/विकिपीडिया:अपलोड',
 	'hrwiki' => '/wiki/Wikipedija:Upload',
+	'huwikibooks' => false, // T74231
 	'incubatorwiki' => '/wiki/Special:MyLanguage/Incubator:Upload',
 	'iswiki' => '/wiki/Wikipedia:Hlaða_inn_skrá', // T95089
 	'iswiktionary' => '/wiki/Wikior%C3%B0ab%C3%B3k:Hla%C3%B0a_inn_skr%C3%A1', // T13187
@@ -2936,6 +2944,7 @@ function wmfGetVariantSettings() {
 	'jawikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja',
 	'kowiki' => '/wiki/위키백과:파일_올리기', // T54076
 	'lrcwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=lrc', // T102026
+	'metawiki' => false, // T52287
 	'mlwiki' => '/wiki/വിക്കിപീഡിയ:അപ്‌ലോഡ്',
 	'mswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ms', // T126944
 	'ndswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nds',
@@ -2944,13 +2953,18 @@ function wmfGetVariantSettings() {
 	'nlwikivoyage' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nl', // T73403
 	'nlwiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nl',
 	'plwiki' => '//pl.wikipedia.org/wiki/Wikipedia:Prześlij_plik', // T44579
+	'plwikinews' => false,
 	'plwikiquote' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pl',
 	'plwikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pl', // T70191
 	'ptwiki' => '/wiki/Wikipedia:Carregar_ficheiro',
 	'ptwikivoyage' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pt', // T44934
 	'rowiki' => '/wiki/Wikipedia:Trimite_fi%C8%99ier', // T85665
+	'ruwiki' => false, // T14334
 	'ruwikinews' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ru',
+	'sewikimedia' => false, // T63947
 	'srwiki' => '/wiki/Википедија:Водич_за_отпремање', // T165901
+	'svwikisource' => false,
+	'svwiktionary' => false,
 	'specieswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 	'tawiki' => '/wiki/விக்கிப்பீடியா:File_Upload_Wizard', // T85697
 	'tewiki' => '/wiki/వికీపీడియా:ఫైల్_ఎక్కింపు_విజర్డు', // T59042
