@@ -1423,25 +1423,27 @@ $wgInvalidateCacheOnLocalSettingsChange = false;
 $wgEnableUserEmail = true;
 $wgNoFollowLinks = true; // In case the MediaWiki default changed, T44594
 
-# XFF log for vandal tracking
+# XFF log for incident response
 $wgExtensionFunctions[] = function () {
-	global $wmfUdp2logDest, $wgRequest;
+	global $wmfUdp2logDest;
 	if (
 		isset( $_SERVER['REQUEST_METHOD'] )
 		&& $_SERVER['REQUEST_METHOD'] === 'POST'
-		&& $wgRequest->getIP() !== '127.0.0.1'  # T129982
+		// T129982
+		&& $_SERVER['HTTP_HOST'] !== 'jobrunner.discovery.wmnet'
 	) {
 		$uri = ( ( isset( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] ) ? 'https://' : 'http://' ) .
 			$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-		$xff = isset( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : '';
+
 		$logger = LoggerFactory::getInstance( 'xff' );
-		// TODO: it would be nice to log this as actual structured data
-		// instead of this ad-hoc tab delimited format
-		$logger->info(
-			gmdate( 'r' ) . "\t" .
-			"$uri\t" .
-			"$xff, {$_SERVER['REMOTE_ADDR']}\t" .
-			( ( isset( $_REQUEST['wpSave'] ) && $_REQUEST['wpSave'] ) ? 'save' : '' )
+		$logger->info( "{date}\t{uri}\t{xff}, {remoteaddr}\t{wpSave}",
+			[
+				'date' => gmdate( 'r' ),
+				'uri' => $uri,
+				'xff' => $_SERVER['HTTP_X_FORWARDED_FOR'] ?? '',
+				'remoteaddr' => $_SERVER['REMOTE_ADDR'],
+				'wpSave' => ( isset( $_REQUEST['wpSave'] ) && $_REQUEST['wpSave'] ) ? 'save' : '',
+			]
 		);
 	}
 };
