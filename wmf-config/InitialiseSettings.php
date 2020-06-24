@@ -25022,20 +25022,13 @@ function wmfGetVariantSettings() {
 ],
 
 'wgEventRelayerConfig' => [
-	'labswiki' => [
-		'cdn-url-purges' => [
-			'class' => EventRelayerNull::class,
-		],
-	],
-	'labtestwiki' => [
-		'cdn-url-purges' => [
-			'class' => EventRelayerNull::class,
-		],
-	],
 	'default' => [
 		'cdn-url-purges' => [
 			'class' => \MediaWiki\Extension\EventBus\Adapters\EventRelayer\CdnPurgeEventRelayer::class,
 			'stream' => 'resource-purge',
+		],
+		'default' => [
+			'class' => EventRelayerNull::class,
 		],
 	],
 ],
