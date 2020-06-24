@@ -8069,6 +8069,8 @@ function wmfGetVariantSettings() {
 		107 => 'Reim_Diskussion',
 		108 => 'Flexion', // T76357
 		109 => 'Flexion_Diskussion',
+		110 => 'Rekonstruktion', // T256242
+		111 => 'Rekonstruktion_Diskussion', // T256242
 	],
 	'dvwiktionary' => [
 		NS_PROJECT_TALK => 'ވިކިރަދީފު_ޚިޔާލު', // T48846
