@@ -2907,9 +2907,6 @@ if ( $wmgUseTranslate ) {
 
 if ( $wmgUseTranslationNotifications ) {
 	wfLoadExtension( 'TranslationNotifications' );
-	$wgNotificationUsername = 'Translation Notification Bot@Translation_Notification_Bot';
-	$wgNotificationUserPassword = $wmgTranslationNotificationUserPassword;
-
 	$wgTranslationNotificationsContactMethods['talkpage-elsewhere'] = true;
 }
 
