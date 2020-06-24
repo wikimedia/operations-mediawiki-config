@@ -110,13 +110,6 @@ $wmfSwiftConfig['codfw'] = [
 ];
 
 /**
- * @see wmf-config/CommonSettings.php, $wgNotificationUserPassword
- * @see mediawiki/extensions/Translate
- */
-// TODO: Why not set $wgNotificationUserPassword directly?
-$wmgTranslationNotificationUserPassword = null;
-
-/**
  * Credentials for RedisBagOStuff and RedisLockManager backends.
  *
  * @see wmf-config/redis.php, $wgObjectCaches
