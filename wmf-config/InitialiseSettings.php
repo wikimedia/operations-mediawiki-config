@@ -21357,9 +21357,6 @@ function wmfGetVariantSettings() {
 	'+group0' => [
 		'SearchSatisfaction' => '/analytics/legacy/searchsatisfaction/1.1.0',
 	],
-	'+group1' => [
-		'SearchSatisfaction' => '/analytics/legacy/searchsatisfaction/1.1.0',
-	],
 ],
 
 // Enable Mediawiki client side (browser) Javascript error logging.
