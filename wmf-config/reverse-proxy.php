@@ -1,15 +1,6 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-# HTCP multicast CDN purging
-$wgHTCPRouting = [
-	'' => [
-		'host' => '239.128.0.112',
-		'port' => 4827
-	]
-];
-$wgHTCPMulticastTTL = 8;
-
 # Accept XFF from these proxies
 $wgCdnServersNoPurge = [
 	# Note: the general idea here is to cover infrastructure space

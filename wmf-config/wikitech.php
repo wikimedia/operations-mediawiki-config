@@ -92,17 +92,6 @@ if ( file_exists( '/etc/mediawiki/WikitechPrivateSettings.php' ) ) {
 # since we aren't using the shared jobqueue, we don't support delays
 $wgCdnReboundPurgeDelay = 0;
 
-# Wikitech on labweb is behind the misc-web varnishes so we need a different
-# multicast IP for cache invalidation.  This file is loaded
-# after the standard MW equivalent (in reverse-proxy.php)
-# so we can just override it here.
-$wgHTCPRouting = [
-	'' => [
-		'host' => '239.128.0.115',
-		'port' => 4827
-	]
-];
-
 // T218654
 $wgHooks['BlockIpComplete'][] = function ( $block, $performer, $priorBlock ) {
 	global $wgBlockDisablesLogin;
