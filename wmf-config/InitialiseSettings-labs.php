@@ -585,6 +585,7 @@ function wmfGetLabsOverrideSettings() {
 					'coverage' => 1.0,
 					'platforms' => [
 						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ],
 					],
 					'privacyPolicy' => 'wmde-tw-template-survey-privacy-policy',
 				],
@@ -614,6 +615,7 @@ function wmfGetLabsOverrideSettings() {
 					'coverage' => 1.0,
 					'platforms' => [
 						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ],
 					],
 					'privacyPolicy' => 'wmde-tw-template-survey-privacy-policy',
 				],
