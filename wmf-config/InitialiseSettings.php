@@ -24701,6 +24701,7 @@ function wmfGetVariantSettings() {
 	'frwiki' => true,
 	'hewiki' => true,
 	'huwiki' => true,
+	'metawiki' => true,
 	'nowiki' => true,
 	'plwiki' => true,
 	'rowiki' => true,
