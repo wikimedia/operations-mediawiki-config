@@ -117,7 +117,7 @@ $wmgMonologProcessors = [
 				// This is not set on CLI (e.g. deploy, maint, snapshot).
 				//
 				// Ref <https://wikitech.wikimedia.org/wiki/MediaWiki_at_WMF#App_servers>
-				$record['extra']['servergroup'] = $_SERVER['SERVERGROUP'] ?? '';
+				$record['extra']['servergroup'] = $_SERVER['SERVERGROUP'] ?? 'other';
 
 				/**
 				 * Add a "normalized_message" field to log records.
