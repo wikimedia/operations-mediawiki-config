@@ -24811,6 +24811,65 @@ function wmfGetVariantSettings() {
 			'shuffleAnswersDisplay' => true,
 		],
 	],
+	'metawiki' => [
+		// T254322 T255130
+		[
+			'enabled' => true,
+			'type' => 'internal',
+			'layout' => 'multiple-answer',
+			'embedElementId' => 'survey-inject-2',
+			// Only display on [[meta:WMDE Technical Wishes/Templates]]
+			'audience' => [ 'pageIds' => [ 10846877 ] ],
+			'name' => 'wmde-tw-template-survey-prototype-2',
+			'question' => 'wmde-tw-template-survey-prototype2-question',
+			'description' => 'wmde-tw-template-survey-prototype2-description-message',
+			'answers' => [
+				'wmde-tw-template-survey-prototype2-answer-2a',
+				'wmde-tw-template-survey-prototype2-answer-2b',
+				'wmde-tw-template-survey-prototype2-answer-2c',
+				'wmde-tw-template-survey-prototype2-answer-2d',
+				'wmde-tw-template-survey-prototype2-answer-2e',
+				'wmde-tw-template-survey-prototype2-answer-none',
+			],
+			'shuffleAnswersDisplay' => false,
+			'coverage' => 1.0,
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ],
+			],
+			'privacyPolicy' => 'wmde-tw-template-survey-privacy-policy',
+		],
+		[
+			'enabled' => true,
+			'type' => 'internal',
+			'layout' => 'multiple-answer',
+			'embedElementId' => 'survey-inject-3',
+			// Only display on [[meta:WMDE Technical Wishes/Templates]]
+			'audience' => [ 'pageIds' => [ 10846877 ] ],
+			'name' => 'wmde-tw-template-survey-prototype-3',
+			'question' => 'wmde-tw-template-survey-prototype3-question',
+			'description' => 'wmde-tw-template-survey-prototype3-description-message',
+			'answers' => [
+				'wmde-tw-template-survey-prototype3-answer-1',
+				'wmde-tw-template-survey-prototype3-answer-2',
+				'wmde-tw-template-survey-prototype3-answer-3',
+				'wmde-tw-template-survey-prototype3-answer-4',
+				'wmde-tw-template-survey-prototype3-answer-5',
+				'wmde-tw-template-survey-prototype3-answer-6',
+				'wmde-tw-template-survey-prototype3-answer-7',
+				'wmde-tw-template-survey-prototype3-answer-8a',
+				'wmde-tw-template-survey-prototype3-answer-8b',
+				'wmde-tw-template-survey-prototype3-answer-none',
+			],
+			'shuffleAnswersDisplay' => false,
+			'coverage' => 1.0,
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ],
+			],
+			'privacyPolicy' => 'wmde-tw-template-survey-privacy-policy',
+		],
+	],
 	'ruwiki' => [
 		// T187299
 		[
