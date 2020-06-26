@@ -6624,6 +6624,7 @@ function wmfGetVariantSettings() {
 		'BlockManager' => 'info',
 		'BounceHandler' => 'debug',
 		'Bug58676' => 'debug', // Invalid message parameter
+		'cache-cookies' => 'debug',
 		'captcha' => 'debug',
 		'CentralAuth' => 'debug',
 		'CentralAuthRename' => 'debug', // -legoktm 2014-07-14 for T69875
