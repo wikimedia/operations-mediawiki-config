@@ -3673,6 +3673,10 @@ if ( $wmgUseOATHAuth ) {
 }
 
 if ( $wmgUseMediaModeration ) {
+	if ( $wmfRealm === 'production' ) {
+		$wgMediaModerationHttpProxy = $wmfLocalServices['urldownloader'];
+	}
+
 	wfLoadExtension( 'MediaModeration' );
 	// This relies on configuration in PrivateSettings.php:
 	// - $wgMediaModerationPhotoDNASubscriptionKey
