@@ -9246,7 +9246,25 @@ function wmfGetVariantSettings() {
 	'zhwiki' => [
 		'pagetitle-view-mainpage',
 	],
+	'zhwikibooks' => [ // T256521
+		'pagetitle-view-mainpage',
+	],
+	'zhwikinews' => [ // T256521
+		'pagetitle-view-mainpage',
+	],
+	'zhwikiquote' => [ // T256521
+		'pagetitle-view-mainpage',
+	],
+	'zhwikisource' => [ // T256521
+		'pagetitle-view-mainpage',
+	],
+	'zhwikiversity' => [ // T256521
+		'pagetitle-view-mainpage',
+	],
 	'zhwikivoyage' => [ // T66816
+		'pagetitle-view-mainpage',
+	],
+	'zhwiktionary' => [ // T256521
 		'pagetitle-view-mainpage',
 	],
 ],
