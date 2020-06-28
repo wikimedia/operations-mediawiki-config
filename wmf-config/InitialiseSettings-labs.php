@@ -429,7 +429,7 @@ function wmfGetLabsOverrideSettings() {
 
 		'wgVisualEditorRebaserURL' => [
 			'default' => false,
-			'deploymentwiki' => 'https://visualeditor-realtime.wmflabs.org/',
+			'metawiki' => 'https://visualeditor-realtime.wmflabs.org/',
 		],
 
 		///
