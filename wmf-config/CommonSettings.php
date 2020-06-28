@@ -93,7 +93,7 @@ $wmfHostnames = [];
 switch ( $wmfRealm ) {
 case 'labs':
 	$wmfHostnames['meta']     = 'meta.wikimedia.beta.wmflabs.org';
-	$wmfHostnames['test']     = 'test.wikimedia.beta.wmflabs.org';
+	$wmfHostnames['test']     = 'test.wikipedia.beta.wmflabs.org';
 	$wmfHostnames['upload']   = 'upload.beta.wmflabs.org';
 	$wmfHostnames['wikidata'] = 'wikidata.beta.wmflabs.org';
 	break;
@@ -1681,7 +1681,6 @@ if ( $wmgUseCentralAuth ) {
 			'.wiktionary.beta.wmflabs.org' => 'enwiktionary',
 			'meta.wikimedia.beta.wmflabs.org' => 'metawiki',
 			'deployment.wikimedia.beta.wmflabs.org' => 'deploymentwiki',
-			'test.wikimedia.beta.wmflabs.org' => 'testwiki',
 			'commons.wikimedia.beta.wmflabs.org' => 'commonswiki',
 			$wmfHostnames['wikidata'] => 'wikidatawiki',
 		];
