@@ -11013,6 +11013,18 @@ function wmfGetVariantSettings() {
 		'bureaucrat' => [ 'createaccount' => true ],
 		'sysop' => [ 'createaccount' => false ],
 	],
+	'+lijwiki' => [
+		'rollbacker' => [ // T256109
+			'rollback' => true,
+			'autopatrol' => true,
+			'patrol' => true,
+		],
+		'mover' => [ // T256109
+			'suppressredirect' => true,
+			'movefile' => true,
+			'move-subpages' => true,
+		],
+	],
 	'+lvwiki' => [
 		'autopatrolled' => [
 			'autopatrol' => true,
@@ -12712,6 +12724,9 @@ function wmfGetVariantSettings() {
 	'+legalteamwiki' => [ // T63222
 		'bureaucrat' => [ 'ipblock-exempt' ],
 	],
+	'+lijwiki' => [ // T256109
+		'sysop' => [ 'mover', 'rollbacker' ],
+	],
 	'+ltwiki' => [
 		'sysop' => [ 'abusefilter' ],
 	],
@@ -13522,6 +13537,9 @@ function wmfGetVariantSettings() {
 	],
 	'+legalteamwiki' => [ // T63222
 		'bureaucrat' => [ 'ipblock-exempt' ],
+	],
+	'+lijwiki' => [ // T256109
+		'sysop' => [ 'mover', 'rollbacker' ],
 	],
 	'+ltwiki' => [
 		'sysop' => [ 'abusefilter' ],
