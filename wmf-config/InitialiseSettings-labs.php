@@ -414,11 +414,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => '2', // Latest Vector
 		],
 
-		'wmgULSPosition' => [
-			# Beta-specific
-			'deploymentwiki' => 'personal',
-		],
-
 		'wmgCommonsMetadataForceRecalculate' => [
 			'default' => true,
 		],
