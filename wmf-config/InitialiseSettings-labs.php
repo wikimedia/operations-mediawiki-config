@@ -858,7 +858,6 @@ function wmfGetLabsOverrideSettings() {
 		'wmgUseFileExporter' => [
 			'default' => false,
 			'metawiki' => true,
-			'deploymentwiki' => true,
 			'wikipedia' => true,
 		],
 		'wgMFContentProviderClass' => [
