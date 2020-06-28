@@ -467,10 +467,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => 300,
 		],
 
-		'-wmgUseFlow' => [
-			'default' => false,
-			'flow-labs' => true,
-		],
 		# No separate Flow DB or cluster (yet) for labs.
 		'-wmgFlowDefaultWikiDb' => [
 			'default' => false,

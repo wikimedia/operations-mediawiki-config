@@ -49,8 +49,9 @@ class MWConfigCacheGenerator {
 		'cirrussearch-big-indices',
 	];
 
-	public static $labsDbLists = [
-		'flow-labs',
+	private static $labsDbLists = [
+		'closed' => 'closed-labs',
+		'flow' => 'flow-labs',
 	];
 
 	/**
@@ -67,12 +68,13 @@ class MWConfigCacheGenerator {
 		# Collect all the dblist tags associated with this wiki
 		$wikiTags = [];
 
-		$dbLists = self::$dbLists;
+		$dbLists = array_combine( self::$dbLists, self::$dbLists );
 		if ( $realm === 'labs' ) {
+			// Replace some lists with labs-specific versions
 			$dbLists = array_merge( $dbLists, self::$labsDbLists );
 		}
-		foreach ( $dbLists as $tag ) {
-			$dblist = MWWikiversions::readDbListFile( $tag );
+		foreach ( $dbLists as $tag => $fileName ) {
+			$dblist = MWWikiversions::readDbListFile( $fileName );
 			if ( in_array( $wikiDBname, $dblist ) ) {
 				$wikiTags[] = $tag;
 			}
@@ -103,8 +105,9 @@ class MWConfigCacheGenerator {
 		# Collect all the dblist tags associated with this wiki
 		$wikiTags = [];
 
-		$dbLists = self::$dbLists;
+		$dbLists = array_combine( self::$dbLists, self::$dbLists );
 		if ( $realm === 'labs' ) {
+			// Replace some lists with labs-specific versions
 			$dbLists = array_merge( $dbLists, self::$labsDbLists );
 
 			require_once __DIR__ . "../../src/defines.php";
@@ -112,8 +115,8 @@ class MWConfigCacheGenerator {
 			$config = wmfApplyLabsOverrideSettings( $config );
 		}
 
-		foreach ( $dbLists as $tag ) {
-			$dblist = MWWikiversions::readDbListFile( $tag );
+		foreach ( $dbLists as $tag => $fileName ) {
+			$dblist = MWWikiversions::readDbListFile( $fileName );
 
 			if ( in_array( $wikiDBname, $dblist ) ) {
 				$wikiTags[] = $tag;
