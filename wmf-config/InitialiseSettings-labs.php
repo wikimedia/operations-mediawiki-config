@@ -1187,10 +1187,6 @@ function wmfGetLabsOverrideSettings() {
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
 			'viwiki' => 'https://vi.wikipedia.org/w/api.php',
 		],
-		'wgWelcomeSurveyPrivacyPolicyUrl' => [
-			'kowiki' => 'https://foundation.wikimedia.org/wiki/%EC%83%88_%EC%82%AC%EC%9A%A9%EC%9E%90_%ED%99%98%EC%98%81_%EC%84%A4%EB%AC%B8_%EA%B0%9C%EC%9D%B8_%EC%A0%95%EB%B3%B4_%EB%B3%B4%ED%98%B8_%EC%A0%95%EC%B1%85',
-			'fawiki' => 'https://foundation.wikimedia.org/wiki/%D8%A8%DB%8C%D8%A7%D9%86%DB%8C%D9%87_%D9%85%D8%AD%D8%B1%D9%85%D8%A7%D9%86%DA%AF%DB%8C_%D9%BE%D8%B1%D8%B3%D8%B4%D9%86%D8%A7%D9%85%D9%87_%DA%A9%D9%85%DA%A9_%D8%A8%D9%87_%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%D8%A7%D9%86_%D8%AC%D8%AF%DB%8C%D8%AF'
-		],
 		'wgWelcomeSurveyExperimentalGroups' => [
 			'kowiki' => [
 				'beta_no_survey' => [
