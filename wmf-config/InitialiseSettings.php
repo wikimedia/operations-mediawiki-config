@@ -5779,6 +5779,7 @@ function wmfGetVariantSettings() {
 		'WT' => NS_PROJECT_TALK,
 		'P' => 120, // T47079
 		'L' => 146, // T195493
+		'E' => 640, // T245529
 	],
 	'+yiwiki' => [
 		'וויקיפעדיע' => NS_PROJECT,
