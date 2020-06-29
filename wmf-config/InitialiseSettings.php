@@ -11335,6 +11335,14 @@ function wmfGetVariantSettings() {
 		'flood' => [ 'bot' => true ], // T22155
 		'sysop' => [ 'editor' => true ], // T48990
 		'bot' => [ 'editor' => true ], // T48990
+		'arbcom' => [ // T256572
+			'abusefilter-log-detail' => true,
+			'abusefilter-view-private' => true,
+			'abusefilter-log-private' => true,
+			'browsearchive' => true,
+			'deletedhistory' => true,
+			'deletedtext' => true,
+		],
 	],
 	'+plwikiquote' => [
 		'patroller' => [
@@ -12835,7 +12843,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'patroller', 'autopatrolled', 'transwiki' ], // T120369
 	],
 	'+plwiki' => [
-		'bureaucrat' => [ 'abusefilter', 'flood' ],
+		'bureaucrat' => [ 'abusefilter', 'flood', 'arbcom' ], // T256572
 	],
 	'+plwikiquote' => [
 		'sysop' => [ 'patroller' ], // T30479
@@ -13662,7 +13670,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'patroller', 'autopatrolled', 'transwiki' ], // T120369
 	],
 	'+plwiki' => [
-		'bureaucrat' => [ 'abusefilter', 'flood' ],
+		'bureaucrat' => [ 'abusefilter', 'flood', 'arbcom' ], // T256572
 	],
 	'+plwikiquote' => [
 		'sysop' => [ 'patroller' ], // T30479
