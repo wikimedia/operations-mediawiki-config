@@ -14800,6 +14800,10 @@ function wmfGetVariantSettings() {
 	'test2wiki' => true,
 ],
 
+'wgSignatureValidation' => [
+	'default' => 'new', // T248632
+],
+
 # below seems to be for extensions
 
 # EXTENSIONS @{
