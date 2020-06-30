@@ -310,6 +310,10 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true,
 		],
 
+		'wgSignatureValidation' => [
+			'default' => 'new', // T248632
+		],
+
 		# To help fight spam, makes rules maintained on metawiki
 		# to be available on all beta wikis.
 		'-wmgUseGlobalAbuseFilters' => [
