@@ -21530,7 +21530,6 @@ function wmfGetVariantSettings() {
 'wmgUseInterwikiSorting' => [
 	'default' => false,
 	'wikidataclient' => true, // T150183, T162253
-	'wikidataclient-test' => true, // T150183, T162253
 ],
 
 'wgInterwikiSortingSort' => [
@@ -21687,21 +21686,11 @@ function wmfGetVariantSettings() {
 		'property' => 120,
 		'lexeme' => 146,
 	],
-	'wikidataclient-test' => [
-		'item' => 0,
-		'property' => 120,
-		'lexeme' => 146,
-	],
 ],
 
 'wmgWikibaseClientRepoNamespaces' => [
 	'default' => [],
 	'wikidataclient' => [
-		'item' => '',
-		'property' => 'Property',
-		// TODO Lexeme should be here once removed from wmgWikibaseDisabledAccessEntityTypes
-	],
-	'wikidataclient-test' => [
 		'item' => '',
 		'property' => 'Property',
 		// TODO Lexeme should be here once removed from wmgWikibaseDisabledAccessEntityTypes
@@ -21785,7 +21774,6 @@ function wmfGetVariantSettings() {
 'wmgUseWikibaseClient' => [
 	'default' => false,
 	'wikidataclient' => true,
-	'wikidataclient-test' => true,
 ],
 
 // Current default setting extracted by running the following in production on enwiki:
@@ -21829,17 +21817,17 @@ function wmfGetVariantSettings() {
 ],
 
 'wmgWikibaseClientChangesDatabase' => [
-	'wikidataclient' => 'wikidatawiki',
+	'default' => 'wikidatawiki',
 	'wikidataclient-test' => 'testwikidatawiki',
 ],
 
 'wmgWikibaseClientRepoDatabase' => [
-	'wikidataclient' => 'wikidatawiki',
+	'default' => 'wikidatawiki',
 	'wikidataclient-test' => 'testwikidatawiki',
 ],
 
 'wmgWikibaseClientRepoUrl' => [
-	'wikidataclient' => 'https://www.wikidata.org',
+	'default' => 'https://www.wikidata.org',
 	'wikidataclient-test' => 'https://test.wikidata.org',
 ],
 
@@ -21851,7 +21839,7 @@ function wmfGetVariantSettings() {
 
 	// In practice, thanks to HSTS and HSTS preloading, most user agents should load these over HTTPS
 	// anyways (i.e., when the URI is used as a URL).
-	'wikidataclient' => 'http://www.wikidata.org/entity/',
+	'default' => 'http://www.wikidata.org/entity/',
 	'wikidataclient-test' => 'http://test.wikidata.org/entity/',
 ],
 
@@ -21876,7 +21864,6 @@ function wmfGetVariantSettings() {
 'wmgUseWikibaseWikimediaBadges' => [
 	'default' => false,
 	'wikidataclient' => true,
-	'wikidataclient-test' => true,
 ],
 
 'wmgWikibaseRepoBadgeItems' => [
@@ -21997,7 +21984,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wmgWikibaseClientSpecialSiteLinkGroups' => [
-	'wikidataclient' => [
+	'default' => [
 		'commons',
 		'mediawiki',
 		'meta',
@@ -22143,7 +22130,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgArticlePlaceholderImageProperty' => [
-	'wikidataclient' => 'P18',
+	'default' => 'P18',
 	'wikidataclient-test' => 'P47',
 ],
 
@@ -22713,7 +22700,6 @@ function wmfGetVariantSettings() {
 	'testwikidatawiki' => true,
 	'wikidatawiki' => true,
 	'wikidataclient' => true,
-	'wikidataclient-test' => true,
 ],
 
 'wgLexemeLanguageCodePropertyId' => [
@@ -22955,20 +22941,6 @@ function wmfGetVariantSettings() {
 			'interwikiPrefix' => 'd',
 		],
 	],
-	'wikidataclient' => [
-		'wikidata' => [
-			'entityNamespaces' => [
-				'item' => 0,
-				'property' => 120,
-				'lexeme' => 146,
-			],
-			'repoDatabase' => 'wikidatawiki',
-			'baseUri' => 'http://www.wikidata.org/entity/',
-			'rdfNodeNamespacePrefix' => 'wd',
-			'rdfPredicateNamespacePrefix' => '',
-			'interwikiPrefix' => 'd',
-		],
-	],
 	'testwikidatawiki' => [
 		'testwikidata' => [
 			'entityNamespaces' => [
@@ -23026,7 +22998,6 @@ function wmfGetVariantSettings() {
 'wmgWikibaseLocalEntitySourceName' => [
 	'default' => null,
 	'wikidatawiki' => 'wikidata',
-	'wikidataclient' => 'wikidata',
 	'testwikidatawiki' => 'testwikidata',
 	'wikidataclient-test' => 'testwikidata',
 	'testcommonswiki' => 'testcommons'
