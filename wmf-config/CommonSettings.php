@@ -3466,25 +3466,20 @@ if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient || $wmgUseWikibaseMediaInfo ) 
 	include "$wmfConfigDir/Wikibase.php";
 }
 
-// T249565 & T249595 Reject parser cache for entries during the wb_items_per_site drop incident.
-// This is a window of 14.5 hours worth of parser cache entries for all wikidata clients
-// Run on all wikis that have WikibaseClient enabled
-// This does restrict to wikitext content pages as these should be the only concern.
-if ( $wmgUseWikibaseClient ) {
-	$wgHooks['RejectParserCacheValue'][] = function ( $value, WikiPage $wikiPage, $popts ) {
-		$cachedTime = $value->getCacheTime();
-		$incidentStartTime = '20200406230000';
-		$incidentFullRestoreTime = '20200407133000';
-		if (
-			$wikiPage->getContentModel() === CONTENT_MODEL_WIKITEXT &&
-			$cachedTime > $incidentStartTime &&
-			$cachedTime < $incidentFullRestoreTime
-		) {
-			return false;
-		}
-		return true;
-	};
-}
+$wgHooks['RejectParserCacheValue'][] = function ( $value, WikiPage $wikiPage, $popts ) {
+	$cachedTime = $value->getCacheTime();
+	// T256922: Reject parser output from 19:10 UTC to 22:40 UTC.
+	$incidentStartTime = '20200701191000';
+	$incidentFullRestoreTime = '20200701224000';
+	if (
+		$wikiPage->getContentModel() === CONTENT_MODEL_WIKITEXT &&
+		$cachedTime > $incidentStartTime &&
+		$cachedTime < $incidentFullRestoreTime
+	) {
+		return false;
+	}
+	return true;
+};
 
 // Turn off exact search match redirects
 if ( $wmgDoNotRedirectOnSearchMatch ) {
