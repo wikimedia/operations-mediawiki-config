@@ -16474,6 +16474,7 @@ function wmfGetVariantSettings() {
 	'thwikisource' => true,
 	'thwiktionary' => true,
 	'tlwiki' => true,
+	'trwiki' => true, // T256782
 	'ukwiki' => true,
 	'urwiki' => true,
 	'zhwiki' => true,
