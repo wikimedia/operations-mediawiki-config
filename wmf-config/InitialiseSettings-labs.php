@@ -1214,43 +1214,6 @@ function wmfGetLabsOverrideSettings() {
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
 			'viwiki' => 'https://vi.wikipedia.org/w/api.php',
 		],
-		'wgWelcomeSurveyExperimentalGroups' => [
-			'kowiki' => [
-				'beta_no_survey' => [
-					'range' => '0-3',
-					'questions' => [],
-				],
-				'beta_specialpage' => [
-					'format' => 'specialpage',
-					'range' => '4-6',
-					'questions' => [
-						'reason',
-						'reason-other',
-						'edited',
-						'topics',
-						'topics-other-nojs',
-						'topics-other-js',
-						'email',
-						'mentor-info',
-						'mentor',
-					],
-				],
-				'beta_popup' => [
-					'format' => 'popup',
-					'range' => '7-9',
-					'nojs-fallback' => 'beta_specialpage',
-					'questions' => [
-						'reason',
-						'edited',
-						'topics',
-						'topics-other-js',
-						'email',
-						'mentor-info',
-						'mentor',
-					]
-				]
-			]
-		],
 		'wgGEHomepageEnabled' => [
 			'default' => true,
 		],
