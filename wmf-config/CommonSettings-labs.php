@@ -336,7 +336,6 @@ $wgLoginNotifyAttemptsNewIP = 1;
 
 if ( $wmgUseTwoColConflict ) {
 	$wgTwoColConflictBetaFeature = false;
-	$wgTwoColConflictSuggestResolution = true;
 }
 
 if ( $wmgUseFileImporter ) {
