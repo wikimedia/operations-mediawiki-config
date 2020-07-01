@@ -16,5 +16,4 @@ inheritsFrom:
   - securepollglobal
   - testwikis
   - wikidataclient-test
-  - wikidataclient
   - wikipedia
