@@ -14,4 +14,3 @@ inheritsFrom:
   - wikibaserepo
   - wikidata
   - wikidataclient-test
-  - wikidataclient
