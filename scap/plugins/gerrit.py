@@ -1,7 +1,7 @@
 """
     scap.plugins.gerrit
     ~~~~~~~~~~~~~~~~~~~
-    Provides Gerrit REST api support for the `scap swat` plugin
+    Provides Gerrit REST api support for plugins
 """
 
 from __future__ import print_function, unicode_literals
