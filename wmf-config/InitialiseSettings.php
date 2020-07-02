@@ -16740,29 +16740,6 @@ function wmfGetVariantSettings() {
 	'zhwikivoyage' => true, // T230624
 ],
 
-'wgPopupsPageBlacklist' => [
-	'default' => [
-		'Special:CreateAccount',
-		'Special:GlobalRenameRequest',
-		'Special:Userlogin',
-		'Special:MergeAccount',
-		'Special:ChangeCredentials',
-		'Special:OAuthListConsumers',
-		'Special:GlobalUserRights',
-		'Special:Notifications',
-		'Special:UserRights',
-		'Special:Upload',
-		'Special:VipsTest',
-		'Special:ApiFeatureUsage',
-		'Special:ExpandTemplates',
-		'Special:GadgetUsage',
-		'Special:GraphSandbox',
-		'Special:TemplateSandbox',
-		'Special:MostLinkedFiles',
-		'Special:Book',
-	],
-],
-
 'wgPopupsVirtualPageViews' => [
 	'default' => false,
 	'wikipedia' => true,
