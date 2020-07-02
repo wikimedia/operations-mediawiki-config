@@ -1967,5 +1967,15 @@ function wmfGetLabsOverrideSettings() {
 			],
 		],
 
+		'wmgUseWikimediaApiPortal' => [
+			'apiportalwiki' => true,
+			'default' => false,
+		],
+
+		'wmgUseWikimediaApiPortalOAuth' => [
+			'apiportalwiki' => true,
+			'default' => false,
+		],
+
 	];
 } # wmflLabsSettings()
