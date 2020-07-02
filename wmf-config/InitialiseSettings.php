@@ -26884,5 +26884,13 @@ function wmfGetVariantSettings() {
 	],
 ],
 
+'wmgUseWikimediaApiPortal' => [
+	'default' => false,
+],
+
+'wmgUseWikimediaApiPortalOAuth' => [
+	'default' => false,
+],
+
 ];
 }
