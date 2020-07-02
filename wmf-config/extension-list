@@ -171,6 +171,7 @@ $IP/extensions/WikidataPageBanner/extension.json
 $IP/extensions/WikiEditor/extension.json
 $IP/extensions/wikihiero/extension.json
 $IP/extensions/WikiLove/extension.json
+$IP/extensions/WikimediaApiPortalOAuth/extension.json
 $IP/extensions/WikimediaBadges/extension.json
 $IP/extensions/WikimediaEditorTasks/extension.json
 $IP/extensions/WikimediaEvents/extension.json
@@ -185,3 +186,4 @@ $IP/skins/MonoBook/skin.json
 $IP/skins/Nostalgia/skin.json
 $IP/skins/Timeless/skin.json
 $IP/skins/Vector/skin.json
+$IP/skins/WikimediaApiPortal/skin.json
