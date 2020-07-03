@@ -123,18 +123,16 @@ natsort( $sectionNames ); // natsort for s1 < s2 < s10 rather than s1 < s10 < s2
 
 // Generate navigation links
 print '<nav><ul>';
-$tab = 0;
 foreach ( $sectionNames as $name ) {
-	$tab++;
-	print '<li><a href="#tabs-' . $tab . '">Section ' . htmlspecialchars( $name ) . '</a></li>';
+	$id = urlencode( 'tabs-' . $name );
+	print '<li><a href="#' . htmlspecialchars( $id ) . '">Section ' . htmlspecialchars( $name ) . '</a></li>';
 }
 print '</ul></nav><main>';
 
 // Generate content sections
-$tab = 0;
 foreach ( $sectionNames as $name ) {
-	$tab++;
-	print "<section id=\"tabs-$tab\"><h2>Section <strong>" . htmlspecialchars( $name ) . '</strong></h2>';
+	$id = urlencode( 'tabs-' . $name );
+	print "<section id=\"" . htmlspecialchars( $id ) . "\"><h2>Section <strong>" . htmlspecialchars( $name ) . '</strong></h2>';
 	print $dbConf->htmlFor( $name ) . '</section>';
 }
 print '</main>';
