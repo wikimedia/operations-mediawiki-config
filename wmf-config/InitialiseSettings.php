@@ -25228,10 +25228,6 @@ function wmfGetVariantSettings() {
 	'trwiki' => true, // T244369
 ],
 
-'wgWPBSkinBlacklist' => [
-	'default' => [],
-],
-
 'wgWPBEnablePageImagesBanners' => [
 	'default' => false,
 ],
