@@ -601,7 +601,7 @@ if ( $wmgDisableAccountCreation ) {
 # Server security settings
 # ######################################################################
 
-$wgRestrictionMethod = 'firejail';
+$wgShellRestrictionMethod = 'firejail';
 
 $wgUseImageMagick               = true;
 $wgImageMagickConvertCommand    = '/usr/local/bin/mediawiki-firejail-convert';
