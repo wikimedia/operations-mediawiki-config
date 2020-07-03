@@ -1370,6 +1370,9 @@ if ( $wmgUseSecureLinkFixer ) {
 if ( $wmgUseScore ) {
 	wfLoadExtension( 'Score' );
 	$wgScoreSafeMode = false;
+
+	# T257062 --krinkle
+	$wgScoreLilyPond = '/dev/null';
 }
 
 $wgHiddenPrefs[] = 'realname';
