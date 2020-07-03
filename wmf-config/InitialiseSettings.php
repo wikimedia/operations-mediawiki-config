@@ -15491,9 +15491,10 @@ function wmfGetVariantSettings() {
 	'default' => false,
 ],
 
-'wgCollectionDisableSidebarLink' => [ // T241683
+'wgCollectionDisableSidebarLink' => [
 	'default' => false,
-	'enwiki' => true,
+	'enwiki' => true, // T241683
+	'fiwiki' => true, // T257073
 ],
 
 'wmgCollectionArticleNamespaces' => [
