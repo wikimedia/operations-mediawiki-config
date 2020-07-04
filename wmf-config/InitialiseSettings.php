@@ -210,6 +210,7 @@ function wmfGetVariantSettings() {
 	'searchcomwiki' => 'en',
 	'stewardwiki' => 'en',
 	'strategywiki' => 'en',
+	'sysop_itwiki' => 'it', // T256545
 	'tenwiki' => 'en',
 	'transitionteamwiki' => 'en',
 	'usabilitywiki' => 'en',
@@ -524,6 +525,7 @@ function wmfGetVariantSettings() {
 	'svwikinews' => 'Europe/Berlin',
 	'svwikiversity' => 'Europe/Berlin',
 	'svwikivoyage' => 'Europe/Stockholm', // T43992
+	'sysop_itwiki' => 'Europe/Rome', // T256545
 	'szlwiki' => 'Europe/Warsaw',
 	'szywiki' => 'Asia/Taipei',
 	'tcywiki' => 'Asia/Kolkata', // T140898
@@ -1308,6 +1310,7 @@ function wmfGetVariantSettings() {
 	'spcomwiki' => '/static/images/project-logos/spcomwiki.png',
 	'specieswiki' => '/static/images/project-logos/specieswiki.png',
 	'stewardwiki' => '/static/images/project-logos/stewardwiki.png', // T39700
+	'sysop_itwiki' => '/static/images/project-logos/sysop_itwiki.png', // T256545
 	'strategywiki' => '/static/images/project-logos/strategywiki.png',
 	'tenwiki' => '/static/images/project-logos/tenwiki.png',
 	'test2wiki' => '/static/images/project-logos/test2wiki.png',
@@ -1876,6 +1879,7 @@ function wmfGetVariantSettings() {
 	'metawiki' => '/static/images/project-logos/metawiki-1.5x.png',
 	'officewiki' => '/static/images/project-logos/officewiki-1.5x.png',
 	'specieswiki' => '/static/images/project-logos/specieswiki-1.5x.png', // T230113
+	'sysop_itwiki' => '/static/images/project-logos/sysop_itwiki-1.5x.png', // T256545
 	'test2wiki' => '/static/images/project-logos/test2wiki-1.5x.png',
 	'testcommonswiki' => '/static/images/project-logos/commonswiki-1.5x.png', // T203343
 	'testwiki' => '/static/images/project-logos/testwiki-1.5x.png', // T150618
@@ -2423,6 +2427,7 @@ function wmfGetVariantSettings() {
 	'metawiki' => '/static/images/project-logos/metawiki-2x.png',
 	'officewiki' => '/static/images/project-logos/officewiki-2x.png',
 	'specieswiki' => '/static/images/project-logos/specieswiki-2x.png', // T230113
+	'sysop_itwiki' => '/static/images/project-logos/sysop_itwiki-2x.png', // T256545
 	'test2wiki' => '/static/images/project-logos/test2wiki-2x.png',
 	'testcommonswiki' => '/static/images/project-logos/commonswiki-2x.png', // T203343
 	'testwiki' => '/static/images/project-logos/testwiki-2x.png', // T150618
@@ -3642,6 +3647,7 @@ function wmfGetVariantSettings() {
 	'srwiktionary' => 'Викиречник', // T121278
 	'strategywiki' => 'Strategic Planning',
 	'stewardwiki' => 'Steward Wiki',
+	'sysop_itwiki' => 'Italian Wikipedia sysops wiki',
 	'szywiki' => 'Wikipitiya',
 	'tawiki' => 'விக்கிப்பீடியா',
 	'tawikibooks' => 'விக்கிநூல்கள்',
@@ -6166,6 +6172,7 @@ function wmfGetVariantSettings() {
 	'+sewikimedia' => [ 0 => 1 ],
 	'+stewardwiki' => [ 0 => 1, 6 => 1, 14 => 1 ],
 	'+strategywiki' => [ 0 => 1 ],
+	'+sysop_itwiki' => [ 0 => 1 ],
 	'+uawikimedia' => [ 0 => 1 ], // T91185
 	'+usabilitywiki' => [ 0 => 1 ],
 	'+wikidata' => [ 121 => 1 ], // T146271
@@ -20502,7 +20509,7 @@ function wmfGetVariantSettings() {
 	'ptwiki' => true, // T173768
 ],
 
-// arbcom_*wiki and wg_enwiki must remain explicitly false in this array, because the default false
+// arbcom_*wiki, sysop_*wiki and wg_enwiki must remain explicitly false in this array, because the default false
 // will be overriden by 'wikipedia' => true in their cases, since they are both in wikipedia.dblist
 // and special.dblist. (T183549)
 'wmgEnableGeoData' => [
@@ -20518,6 +20525,7 @@ function wmfGetVariantSettings() {
 	'arbcom_enwiki' => false,
 	'arbcom_fiwiki' => false,
 	'arbcom_nlwiki' => false,
+	'sysop_itwiki' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
 	'wg_enwiki' => false,
@@ -20889,6 +20897,7 @@ function wmfGetVariantSettings() {
 	'arbcom_enwiki' => false,
 	'arbcom_fiwiki' => false,
 	'arbcom_nlwiki' => false,
+	'sysop_itwiki' => false,
 	'testwiki' => true,
 	'test2wiki' => false,
 	'wg_enwiki' => false,
