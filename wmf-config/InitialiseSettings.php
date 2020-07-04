@@ -5904,6 +5904,12 @@ function wmfGetVariantSettings() {
 		'模組' => 828, // T165593
 		'模組討論' => 829, // T165593
 	],
+	'+zhwikinews' => [
+		'频道' => 100, // T257101
+		'頻道' => 100, // T257101
+		'频道_讨论' => 101, // T257101
+		'頻道_讨论' => 101, // T257101
+	],
 	'+zhwikiquote' => [
 		'WQ' => NS_PROJECT, // T181374
 		'WT' => NS_PROJECT_TALK, // T181374
@@ -5998,9 +6004,9 @@ function wmfGetVariantSettings() {
 		'模組討論' => 829, // T165593
 	],
 	'+zhwiktionary' => [
-		'Appendix' => 100, // T222024
+		'附录' => 100, // T257101
 		'附錄' => 100, // T222024
-		'Appendix_talk' => 101, // T222024
+		'附录讨论' => 101, // T257101
 		'附錄討論' => 101, // T222024
 		'韵部' => 106, 	// T241023
 		'韻部' => 106, 	// T241023
@@ -8366,8 +8372,8 @@ function wmfGetVariantSettings() {
 		103 => '附錄討論', // Appendix talk
 	],
 	'zhwiktionary' => [
-		100 => '附录', // T31641 - appendix
-		101 => '附录讨论', // T31641 - appendix talk
+		100 => 'Appendix', // T31641 - appendix
+		101 => 'Appendix_talk', // T31641 - appendix talk
 		102 => 'Transwiki', // T42474
 		103 => 'Transwiki_talk',
 		106 => 'Rhymes', // T241023
@@ -8711,8 +8717,8 @@ function wmfGetVariantSettings() {
 		105 => 'Обговорення_інкубатора',
 	],
 	'zhwikinews' => [
-		100 => '频道',
-		101 => '频道_talk',
+		100 => 'Portal', // T257101
+		101 => 'Portal_talk', // T257101
 		828 => 'Module', // T165593
 		829 => 'Module_talk', // T165593
 	],
