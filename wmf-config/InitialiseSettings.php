@@ -14496,6 +14496,10 @@ function wmfGetVariantSettings() {
 		116 => 'noindex,nofollow',    // מקור
 		117 => 'noindex,nofollow',    // שיחת_מקור
 	],
+	'hywiki' => [
+		NS_USER => 'noindex,follow', // T257112
+		NS_USER_TALK => 'noindex,follow', // T257112
+	],
 	'iswiki' => [ // T231179
 		NS_TALK => 'noindex',
 		NS_USER => 'noindex',
