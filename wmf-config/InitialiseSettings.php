@@ -24760,6 +24760,7 @@ function wmfGetVariantSettings() {
 	'eswiki' => true,
 	'fawiki' => true,
 	'frwiki' => true,
+	'frwiktionary' => true,
 	'hewiki' => true,
 	'huwiki' => true,
 	'metawiki' => true,
@@ -24898,6 +24899,20 @@ function wmfGetVariantSettings() {
 			],
 			'privacyPolicy' => 'ext-quicksurveys-growth-external-survey-privacy-policy',
 		],
+		// T246977
+		[
+			'enabled' => true,
+			'type' => 'external',
+			'name' => 'affinity-survey',
+			'question' => 'ext-quicksurveys-affinity-survey-question',
+			'description' => 'ext-quicksurveys-affinity-survey-description',
+			'link' => 'https://wikimedia.qualtrics.com/jfe/form/SV_8Cv5UtY6Lby8j9H',
+			'privacyPolicy' => 'ext-quicksurveys-affinity-survey-privacy-policy',
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+			],
+			'coverage' => 0.025,
+		],
 	],
 	'enwikivoyage' => [
 		// T187299
@@ -24939,6 +24954,22 @@ function wmfGetVariantSettings() {
 			'shuffleAnswersDisplay' => true,
 		],
 	],
+	'fawiki' => [
+		// T246977
+		[
+			'enabled' => true,
+			'type' => 'external',
+			'name' => 'affinity-survey',
+			'question' => 'ext-quicksurveys-affinity-survey-question',
+			'description' => 'ext-quicksurveys-affinity-survey-description',
+			'privacyPolicy' => 'ext-quicksurveys-affinity-survey-privacy-policy',
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+			],
+			'link' => 'https://wikimedia.qualtrics.com/jfe/form/SV_eVZTLonaER8ow5f',
+			'coverage' => 0.171,
+		],
+	],
 	'frwiki' => [
 		// T187299
 		[
@@ -24957,6 +24988,52 @@ function wmfGetVariantSettings() {
 			],
 			'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
 			'shuffleAnswersDisplay' => true,
+		],
+		// T246977
+		[
+			'enabled' => true,
+			'type' => 'external',
+			'name' => 'affinity-survey',
+			'question' => 'ext-quicksurveys-affinity-survey-question',
+			'description' => 'ext-quicksurveys-affinity-survey-description',
+			'privacyPolicy' => 'ext-quicksurveys-affinity-survey-privacy-policy',
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+			],
+			'link' => 'https://wikimedia.qualtrics.com/jfe/form/SV_3Q9rDpB7bXvASP3',
+			'coverage' => 0.0167,
+		],
+	],
+	'frwiktionary' => [
+		// T246977
+		[
+			'enabled' => true,
+			'type' => 'external',
+			'name' => 'affinity-survey',
+			'question' => 'ext-quicksurveys-affinity-survey-question',
+			'description' => 'ext-quicksurveys-affinity-survey-description',
+			'privacyPolicy' => 'ext-quicksurveys-affinity-survey-privacy-policy',
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+			],
+			'link' => 'https://wikimedia.qualtrics.com/jfe/form/SV_3Q9rDpB7bXvASP3',
+			'coverage' => 0.2,
+		],
+	],
+	'hewiki' => [
+		// T246977
+		[
+			'enabled' => true,
+			'type' => 'external',
+			'name' => 'affinity-survey',
+			'question' => 'ext-quicksurveys-affinity-survey-question',
+			'description' => 'ext-quicksurveys-affinity-survey-description',
+			'privacyPolicy' => 'ext-quicksurveys-affinity-survey-privacy-policy',
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+			],
+			'link' => 'https://wikimedia.qualtrics.com/jfe/form/SV_6FLhsBtrCRNfFdz',
+			'coverage' => 0.33,
 		],
 	],
 	'metawiki' => [
