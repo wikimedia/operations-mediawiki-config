@@ -21370,11 +21370,6 @@ function wmfGetVariantSettings() {
 	'default' => [
 		'TemplateWizard' => '/analytics/legacy/templatewizard/1.0.0',
 		'Test' => '/analytics/legacy/test/1.1.0',
-	],
-	'+group0' => [
-		'SearchSatisfaction' => '/analytics/legacy/searchsatisfaction/1.1.0',
-	],
-	'+group1' => [
 		'SearchSatisfaction' => '/analytics/legacy/searchsatisfaction/1.1.0',
 	],
 ],
