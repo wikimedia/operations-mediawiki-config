@@ -25254,6 +25254,7 @@ function wmfGetVariantSettings() {
 
 'wgWMEDesktopWebUIActionsTracking' => [
 	'default' => 0,
+	'testwiki' => 1, // T256992
 ],
 
 'wgWMEMobileWebUIActionsTracking' => [
