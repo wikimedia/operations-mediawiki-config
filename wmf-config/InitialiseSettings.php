@@ -16175,6 +16175,7 @@ function wmfGetVariantSettings() {
 		'pashaei.studio', // Personal site of User:Amirpashaei - T255336
 		'parliamentdiagram.toolforge.org', // Parliment Diagram - T255363
 		'ww2db.com', // World War II DataBase - T255313
+		'arxiv.org' // Cornell University arXiv - T257036
 	],
 ],
 
