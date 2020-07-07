@@ -1326,6 +1326,9 @@ function wmfGetLabsOverrideSettings() {
 			'default' => 'P725',
 			'commonswiki' => null,
 		],
+		'wmgUseEntitySourceBasedFederation' => [
+			'default' => true,
+		],
 		'-wmgWikibaseEntitySources' => [
 			'default' => [
 				'wikidata' => [
