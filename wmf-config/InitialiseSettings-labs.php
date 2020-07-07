@@ -549,6 +549,33 @@ function wmfGetLabsOverrideSettings() {
 					'enabled' => true,
 					'type' => 'internal',
 					'layout' => 'multiple-answer',
+					'embedElementId' => 'survey-inject-1',
+					// Only display on [[w:de:Leichter_mit_Vorlagen_arbeiten]]
+					'audience' => [ 'pageIds' => [ 4997 ] ],
+					'name' => 'wmde-tw-template-survey-prototype-1',
+					'question' => 'wmde-tw-template-survey-prototype1-question',
+					'description' => 'wmde-tw-template-survey-prototype1-description-message',
+					'answers' => [
+						'wmde-tw-template-survey-prototype1-answer-1a',
+						'wmde-tw-template-survey-prototype1-answer-1b',
+						'wmde-tw-template-survey-prototype1-answer-1c',
+						'wmde-tw-template-survey-prototype1-answer-1d',
+						'wmde-tw-template-survey-prototype1-answer-1e',
+						'wmde-tw-template-survey-prototype1-answer-1f',
+						'wmde-tw-template-survey-prototype1-answer-none',
+					],
+					'shuffleAnswersDisplay' => false,
+					'coverage' => 1.0,
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ],
+					],
+					'privacyPolicy' => 'wmde-tw-template-survey-privacy-policy',
+				],
+				[
+					'enabled' => true,
+					'type' => 'internal',
+					'layout' => 'multiple-answer',
 					'embedElementId' => 'survey-inject-2',
 					// Only display on [[w:de:Leichter_mit_Vorlagen_arbeiten]]
 					'audience' => [ 'pageIds' => [ 4997 ] ],
