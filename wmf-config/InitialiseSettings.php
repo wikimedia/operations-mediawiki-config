@@ -22961,10 +22961,6 @@ function wmfGetVariantSettings() {
 	'wikidatawiki' => true,
 ],
 
-'wmgUseEntitySourceBasedFederation' => [
-	'default' => true,
-],
-
 'wmgWikibaseEntitySources' => [
 	'default' => [],
 	'wikidatawiki' => [
