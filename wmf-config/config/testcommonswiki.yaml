@@ -10,4 +10,5 @@ inheritsFrom:
   - small
   - visualeditor-nondefault
   - wikibaserepo
+  - wikidataclient-test
   - wikidataclient
