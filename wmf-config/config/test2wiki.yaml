@@ -12,5 +12,4 @@ inheritsFrom:
   - s3
   - securepollglobal
   - wikidataclient-test
-  - wikidataclient
   - wikipedia

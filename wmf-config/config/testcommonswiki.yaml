@@ -11,4 +11,3 @@ inheritsFrom:
   - visualeditor-nondefault
   - wikibaserepo
   - wikidataclient-test
-  - wikidataclient
