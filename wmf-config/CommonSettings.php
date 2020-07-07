@@ -1577,6 +1577,8 @@ if ( !empty( $wmgTimeLimit ) ) {
 	$wgHTTPMaxTimeout = $wgHTTPMaxConnectTimeout = $wmgTimeLimit;
 }
 
+// TODO: This is a no-op with $wgForceHTTPS enabled
+// Remove once enabled everywhere. – T256095
 $wgHiddenPrefs[] = 'prefershttps'; // T91352, T102245
 
 if ( isset( $_REQUEST['captchabypass'] ) && $_REQUEST['captchabypass'] == $wmgCaptchaPassword ) {
@@ -1639,6 +1641,12 @@ $wgHTTPImportTimeout = 50; // T155209
 // CentralAuth
 if ( $wmgUseCentralAuth ) {
 	wfLoadExtension( 'CentralAuth' );
+
+	// Enable cross-origin session cookies (T252236).
+	if ( $wmgEnableCrossOriginSessions ) {
+		$wgCookieSameSite = 'None';
+		$wgUseSameSiteLegacyCookies = true;
+	}
 
 	$wgCentralAuthDryRun = false;
 	$wgCentralAuthCookies = true;

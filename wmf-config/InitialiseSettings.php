@@ -15453,6 +15453,18 @@ function wmfGetVariantSettings() {
 	'foundationwiki' => true, // T170301
 ],
 
+// This is also guarded by $wmgUseCentralAuth
+// See T252236
+'wmgEnableCrossOriginSessions' => [
+	'default' => false,
+],
+
+// Enabling will disable use of insecure 'forceHttps' cookies.
+// See T256095
+'wgForceHTTPS' => [
+	'default' => false,
+],
+
 # @}
 
 'wgEnableMWSuggest' => [

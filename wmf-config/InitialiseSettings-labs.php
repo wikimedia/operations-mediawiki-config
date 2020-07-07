@@ -1837,6 +1837,14 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true,
 		],
 
+		'-wmgEnableCrossOriginSessions' => [
+			'default' => true,
+		],
+
+		'-wgForceHTTPS' => [
+			'default' => true,
+		],
+
 		// Domains that go in script-src and default-src for CSP.
 		// This also includes the prod domains for the sole purpose
 		// of allowing users to test gadgets at beta.
