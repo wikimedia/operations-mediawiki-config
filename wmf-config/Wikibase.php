@@ -136,6 +136,10 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['preferredPageImagesProperties'] = $wmgWBRepoPreferredPageImagesProperties;
 	$wgWBRepoSettings['conceptBaseUri'] = $wmgWBRepoConceptBaseUri;
 
+	if ( isset( $wmgUseEntitySourceBasedFederation ) ) {
+		$wgWBRepoSettings['useEntitySourceBasedFederation'] = $wmgUseEntitySourceBasedFederation;
+	}
+
 	$wgWBRepoSettings['entitySources'] = $wmgWikibaseEntitySources;
 	if ( isset( $wmgWikibaseLocalEntitySourceName ) ) {
 		$wgWBRepoSettings['localEntitySourceName'] = $wmgWikibaseLocalEntitySourceName;
@@ -312,6 +316,10 @@ if ( $wmgUseWikibaseClient ) {
 	// T208763
 	if ( isset( $wmgWikibaseClientPageSchemaNamespaces ) ) {
 		$wgWBClientSettings['pageSchemaNamespaces'] = $wmgWikibaseClientPageSchemaNamespaces;
+	}
+
+	if ( isset( $wmgUseEntitySourceBasedFederation ) ) {
+		$wgWBClientSettings['useEntitySourceBasedFederation'] = $wmgUseEntitySourceBasedFederation;
 	}
 
 	$wgWBClientSettings['entitySources'] = $wmgWikibaseEntitySources;
