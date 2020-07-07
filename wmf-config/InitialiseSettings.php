@@ -25720,6 +25720,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => true,
 	'cswiki' => true,
 	'euwiki' => true,
+	'fawiki' => true,
 	'frwiki' => true,
 	'frwiktionary' => true,
 	'huwiki' => true,
@@ -25736,6 +25737,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => true,
 	'cswiki' => true,
 	'euwiki' => true,
+	'fawiki' => true,
 	'frwiki' => true,
 	'frwiktionary' => true,
 	'huwiki' => true,
@@ -25755,6 +25757,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => true,
 	'cswiki' => true,
 	'euwiki' => true,
+	'fawiki' => true,
 	'frwiki' => true,
 	'frwiktionary' => true,
 	'huwiki' => true,
@@ -25793,6 +25796,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => ' ويكيبيديا:فريق_المساعدة/طلبات',
 	'cswiki' => 'Wikipedie:Potřebuji_pomoc',
 	'euwiki' => 'Wikipedia:Txokoa',
+	'fawiki' => 'ویکی‌پدیا:پرسش‌ها',
 	'frwiki' => 'Wikipédia:Forum des nouveaux',
 	'frwiktionary' => 'Wiktionnaire:Entraide/{{#time:F Y}}',
 	'huwiki' => 'Wikipédia:Kocsmafal (kezdőknek)',
@@ -25809,6 +25813,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => 'مساعدة:محتويات',
 	'cswiki' => 'Nápověda:Obsah',
 	'euwiki' => 'Laguntza:Sarrera',
+	'fawiki' => 'راهنما:فهرست',
 	'frwiki' => 'Aide:Accueil',
 	'frwiktionary' => 'Aide:Sommaire',
 	'huwiki' => 'Wikipédia:Bevezetés',
@@ -25927,6 +25932,33 @@ function wmfGetVariantSettings() {
 			'title' => 'Laguntza:Irudiak',
 			'text' => 'Irudiak',
 			'id' => 'images',
+		]
+	],
+	'fawiki' => [
+		[
+			'title' => 'ویکی‌پدیا:شیوه‌نامه',
+			'text' => 'شیوه‌نامه',
+			'id' => 'style',
+		],
+		[
+			'title' => 'ویکی‌پدیا:راهنمای_ویرایش_صفحه‌ها',
+			'text' => 'راهنمای ویرایش صفحه‌ها',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'راهنما:مقدمه‌ای_بر_تصویرها_در_ویرایشگر_دیداری/۱',
+			'text' => 'مقدمه‌ای بر تصویرها در ویرایشگر دیداری',
+			'id' => 'images',
+		],
+		[
+			'title' => 'راهنما:مقدمه‌ای_بر_ارجاع‌دادن_در_ویرایشگر_دیداری/۱',
+			'text' => 'مقدمه‌ای بر ارجاع‌دادن در ویرایشگر دیداری',
+			'id' => 'references',
+		],
+		[
+			'title' => 'ویکی‌پدیا:ایجاد_مقاله',
+			'text' => 'ایجاد مقاله',
+			'id' => 'newarticle',
 		]
 	],
 	'frwiki' => [
@@ -26153,6 +26185,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => true,
 	'cswiki' => true,
 	'euwiki' => true,
+	'fawiki' => true,
 	'frwiki' => true,
 	'frwiktionary' => true,
 	'huwiki' => true,
@@ -26225,6 +26258,10 @@ function wmfGetVariantSettings() {
 		'create' => 'Laguntza:Sarrera berriak',
 		'image' => 'Laguntza:Irudiak',
 	],
+	'fawiki' => [
+		'create' => 'راهنما:ساخت_صفحه_جدید',
+		'image' => 'راهنما:مقدمه‌ای_بر_تصویرها_در_ویرایشگر_دیداری/۱',
+	],
 	'frwiki' => [
 		'create' => 'Aide:Comment créer un article',
 		'image' => 'Aide:Insérer une image (Éditeur visuel)',
@@ -26265,6 +26302,7 @@ function wmfGetVariantSettings() {
 	'cswiki' => 80,
 	// euwiki is not an A/B test (T233066)
 	'euwiki' => 100,
+	'fawiki' => 80,
 	'frwiki' => 80,
 	'frwiktionary' => 80,
 	'huwiki' => 80,
@@ -26281,6 +26319,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => 'ويكيبيديا:دروس',
 	'cswiki' => 'Wikipedie:Průvodce',
 	'euwiki' => 'Laguntza:Ikusizko_Editorea',
+	'fawiki' => 'ویکی‌پدیا:خودآموز',
 	'frwiki' => 'Aide:Débuter',
 	'frwiktionary' => 'Aide:Comment modifier une page',
 	'huwiki' => 'Wikipédia:Bevezetés',
@@ -26297,6 +26336,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => 'ويكيبيديا:مشروع_فريق_النمو/قائمة_المتطوعين',
 	'cswiki' => 'Wikipedie:Potřebuji_pomoc/Mentoři',
 	'euwiki' => 'Laguntza:Mentoreak',
+	'fawiki' => 'مدیاویکی:Newusermessage-signatures',
 	'frwiki' => 'Projet:Aide et accueil/Volontaires',
 	'frwiktionary' => 'Wiktionnaire:Mentorat',
 	'huwiki' => 'Wikipédia:Szerkesztők megtartása/Mentorok',
