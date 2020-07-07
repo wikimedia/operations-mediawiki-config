@@ -2559,6 +2559,7 @@ if ( $wmgUseVisualEditor ) {
 		$wgDefaultUserOptions['visualeditor-enable'] = 1;
 		$wgHiddenPrefs[] = 'visualeditor-enable'; // T50666
 	} else {
+		$wgDefaultUserOptions['visualeditor-enable'] = 0;
 		// Only show the beta-disable preference if the wiki is in 'beta'.
 		$wgHiddenPrefs[] = 'visualeditor-betatempdisable';
 	}
