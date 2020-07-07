@@ -25127,16 +25127,25 @@ function wmfGetVariantSettings() {
 	'votewiki' => 'TYPE_JOB|TYPE_PURGE',
 ],
 
-// TODO: this will be replaced by wgEventStreams once
-// EventStreamConfig extension is deployed. See:
-// https://phabricator.wikimedia.org/T233634 and
-// https://phabricator.wikimedia.org/T229863
+// TODO: remove this after
+// https://gerrit.wikimedia.org/r/c/mediawiki/extensions/EventBus/+/594505
+// is deployed.
+// See: https://phabricator.wikimedia.org/T229863
 'wgEventServiceStreamConfig' => [
 	'default' => [
 		'default' => [
 			'EventServiceName' => 'eventgate-main',
 		],
 	],
+],
+
+// Used to look up the event service URL in ProductionServices to which
+// the EventBus (and possibly other) extension will produce an event
+// stream to by default.  (If the event stream has an stream config in
+// wgEventStreams with the 'destination_event_service' setting, EventBus
+// will used that as the destination event service for the event stream instead.)
+'wgEventServiceDefault' => [
+	'default' => 'eventgate-main'
 ],
 
 'wgEventRelayerConfig' => [
