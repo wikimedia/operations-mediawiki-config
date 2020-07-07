@@ -22020,6 +22020,7 @@ function wmfGetVariantSettings() {
 		'test',
 		'test2',
 		'testwikidata',
+		'testcommons',
 	],
 ],
 
@@ -22040,6 +22041,7 @@ function wmfGetVariantSettings() {
 		'test',
 		'test2',
 		'testwikidata',
+		'testcommons',
 	],
 ],
 
