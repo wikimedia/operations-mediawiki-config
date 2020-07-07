@@ -9836,6 +9836,7 @@ function wmfGetVariantSettings() {
 	],
 
 	'+arwiki' => [
+		'*' => [ 'patrolmarks' => true ], // T257106
 		'autoconfirmed' => [ 'patrol' => true ],
 		'editor' => [
 			'movefile' => true, // T131249
