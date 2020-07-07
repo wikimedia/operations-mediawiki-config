@@ -15457,12 +15457,18 @@ function wmfGetVariantSettings() {
 // See T252236
 'wmgEnableCrossOriginSessions' => [
 	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'mediawikiwiki' => true,
 ],
 
 // Enabling will disable use of insecure 'forceHttps' cookies.
 // See T256095
 'wgForceHTTPS' => [
 	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'mediawikiwiki' => true,
 ],
 
 # @}
