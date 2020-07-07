@@ -3398,6 +3398,7 @@ function wmfGetVariantSettings() {
 	'hewiktionary' => 'ויקימילון',
 	'hifwiktionary' => 'Sabdkosh', // T173643
 	'hiwiki' => 'विकिपीडिया',
+	'hiwikibooks' => 'विकिपुस्तक', // T256587
 	'hiwikisource' => 'विकिस्रोत',
 	'hiwikimedia' => 'Hindi Wikimedians User Group', // T188366
 	'hiwikiversity' => 'विकिविश्वविद्यालय', // T168765
