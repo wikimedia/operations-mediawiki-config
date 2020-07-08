@@ -16202,6 +16202,7 @@ function wmfGetVariantSettings() {
 		'arxiv.org', // Cornell University arXiv - T257036
 		'www.nature.com', // Nature - T254342
 		'scan-bugs.org', // T256569
+		'*.nga.gov', // National Gallery of Art - T256518
 	],
 ],
 
