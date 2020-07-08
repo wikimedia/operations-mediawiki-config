@@ -401,6 +401,10 @@ function wmfGetLabsOverrideSettings() {
 		'wgVectorDefaultSkinVersionForNewAccounts' => [
 			'default' => '2', // Latest Vector
 		],
+		// T246420: Enable limited-width layout in "Latest Vector"
+		'wgVectorLayoutMaxWidth' => [
+			'default' => true,
+		],
 
 		'wmgCommonsMetadataForceRecalculate' => [
 			'default' => true,
