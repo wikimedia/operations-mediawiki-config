@@ -16201,6 +16201,7 @@ function wmfGetVariantSettings() {
 		'ww2db.com', // World War II DataBase - T255313
 		'arxiv.org', // Cornell University arXiv - T257036
 		'www.nature.com', // Nature - T254342
+		'scan-bugs.org', // T256569
 	],
 ],
 
