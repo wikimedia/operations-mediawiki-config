@@ -16203,6 +16203,7 @@ function wmfGetVariantSettings() {
 		'www.nature.com', // Nature - T254342
 		'scan-bugs.org', // T256569
 		'*.nga.gov', // National Gallery of Art - T256518
+		'*.oireachtas.ie', // The Oireachtas - T256543
 	],
 ],
 
