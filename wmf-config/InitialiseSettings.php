@@ -421,6 +421,7 @@ function wmfGetVariantSettings() {
 	'lezwiki' => 'Europe/Moscow',
 	'liwiki' => 'Europe/Berlin',
 	'liwikinews' => 'Europe/Amsterdam',
+	'lijwikisource' => 'Europe/Rome',
 	'ltgwiki' => 'Europe/Riga',
 	'ltwiki' => 'Europe/Vilnius',
 	'lmowiki' => 'Europe/Rome',
@@ -3498,6 +3499,7 @@ function wmfGetVariantSettings() {
 	'liwikibooks' => 'Wikibeuk',
 	'liwikinews' => 'Wikinuujs',
 	'liwikisource' => 'Wikibrónne',
+	'lijwikisource' => 'Wikivivàgna',
 	'loginwiki' => 'Wikimedia Login Wiki',
 	'lowiki' => 'ວິກິພີເດຍ',
 	'lrcwiki' => 'ڤیکیپئدیا', // T102026
@@ -4028,6 +4030,7 @@ function wmfGetVariantSettings() {
 	'liwikibooks' => 'Wikibeuk',
 	'liwikinews' => 'Wikinuujs',
 	'liwikisource' => 'Wikibrónne',
+	'lijwikisource' => 'Wikivivàgna',
 	'loginwiki' => 'Project',
 	'lowiki' => 'ວິກິພີເດຍ',
 	'lrcwiki' => 'ڤیکیپئدیا', // T102026
@@ -7902,6 +7905,12 @@ function wmfGetVariantSettings() {
 	'lawikisource' => [
 		102 => 'Scriptor',
 		103 => 'Disputatio_Scriptoris',
+	],
+	'lijwikisource' => [
+		102 => 'Aotô',
+		103 => 'Discuscion_aotô',
+		104 => 'Œuvia',
+		105 => 'Discuscion_œuvia',
 	],
 	'mkwikisource' => [
 		102 => 'Автор',

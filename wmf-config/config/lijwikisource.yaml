@@ -1,0 +1,12 @@
+# WARNING: This file is publicly viewable on the Web. Do not put private data here.
+# This is the configuration file for settings specific to the Wikisource Ligurian.
+# See the inheritance tree to find where most settings are defined.
+
+inheritsFrom:
+  - wikisource
+  - s3
+  - securepollglobal
+  - small
+  - visualeditor-nondefault
+  - wikidataclient
+  - commonsuploads
