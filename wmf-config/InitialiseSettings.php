@@ -294,6 +294,7 @@ function wmfGetVariantSettings() {
 	'arbcom_dewiki' => 'Europe/Berlin',
 	'arbcom_fiwiki' => 'Europe/Helsinki',
 	'arbcom_nlwiki' => 'Europe/Berlin',
+	'arywiki' => 'Africa/Casablanca',
 	'aswikisource' => 'Asia/Kolkata', // T45129
 	'atjwiki' => 'America/Montreal', // T167714
 	'awawiki' => 'Asia/Kolkata', // T251371
@@ -574,6 +575,7 @@ function wmfGetVariantSettings() {
 	'anwiki' => '/static/images/project-logos/anwiki.png',
 	'arcwiki' => '/static/images/project-logos/arcwiki.png',
 	'arwiki' => '/static/images/project-logos/arwiki.png',
+	'arywiki' => '/static/images/project-logos/arywiki.png',
 	'arzwiki' => '/static/images/project-logos/arzwiki.png',
 	'astwiki' => '/static/images/project-logos/astwiki.png', // T42285, T131247
 	'aswiki' => '/static/images/project-logos/aswiki.png',
@@ -1349,6 +1351,7 @@ function wmfGetVariantSettings() {
 	'angwiki' => '/static/images/project-logos/angwiki-1.5x.png', // T150618
 	'anwiki' => '/static/images/project-logos/anwiki-1.5x.png', // T150618
 	'arwiki' => '/static/images/project-logos/arwiki-1.5x.png', // T150618
+	'arywiki' => '/static/images/project-logos/arywiki-1.5x.png',
 	'arzwiki' => '/static/images/project-logos/arzwiki-1.5x.png', // T150618
 	'astwiki' => '/static/images/project-logos/astwiki-1.5x.png', // T150618
 	'atjwiki' => '/static/images/project-logos/atjwiki-1.5x.png', // T167714
@@ -1895,6 +1898,7 @@ function wmfGetVariantSettings() {
 	'angwiki' => '/static/images/project-logos/angwiki-2x.png', // T150618
 	'anwiki' => '/static/images/project-logos/anwiki-2x.png', // T150618
 	'arwiki' => '/static/images/project-logos/arwiki-2x.png', // T150618
+	'arywiki' => '/static/images/project-logos/arywiki-2x.png',
 	'arzwiki' => '/static/images/project-logos/arzwiki-2x.png', // T150618
 	'astwiki' => '/static/images/project-logos/astwiki-2x.png', // T150618
 	'atjwiki' => '/static/images/project-logos/atjwiki-2x.png', // T167714
@@ -3238,6 +3242,7 @@ function wmfGetVariantSettings() {
 	'arwikisource' => 'ويكي_مصدر',
 	'arwikiversity' => 'ويكي الجامعة',
 	'arwiktionary' => 'ويكاموس',
+	'arywiki' => 'ويكيپيديا',
 	'arzwiki' => 'ويكيبيديا',
 	'astwiktionary' => 'Wikcionariu', // T99315
 	'aswiki' => 'অসমীয়া ৱিকিপিডিয়া',
@@ -3768,6 +3773,7 @@ function wmfGetVariantSettings() {
 	'arwikisource' => 'ويكي_مصدر',
 	'arwikiversity' => 'ويكي_الجامعة',
 	'arwiktionary' => 'ويكاموس',
+	'arywiki' => 'ويكيپيديا',
 	'arzwiki' => 'ويكيبيديا',
 	'astwiktionary' => 'Wikcionariu', // T99315
 	'aswiki' => 'ৱিকিপিডিয়া',
