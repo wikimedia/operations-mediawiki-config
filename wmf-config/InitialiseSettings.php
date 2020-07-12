@@ -10262,6 +10262,12 @@ function wmfGetVariantSettings() {
 	'+dtywiki' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T176709
 	],
+	'+elwiki' => [
+		'rollbacker' => [ // T257745
+			'rollback' => true,
+			'suppressredirect' => true,
+		],
+	],
 	'+elwiktionary' => [
 		'interface-editor' => [
 			'editinterface' => true,
@@ -12517,6 +12523,9 @@ function wmfGetVariantSettings() {
 	'+dtywiki' => [
 		'sysop' => [ 'autopatrolled', 'transwiki' ], // T174226, T176709
 	],
+	'+elwiki' => [
+		'sysop' => [ 'rollbacker' ], // T257745
+	],
 	'+elwiktionary' => [
 		'bureaucrat' => [ 'interface-editor' ],
 		'sysop' => [ 'autopatrolled', 'rollbacker' ], // rollbacker added in T255569
@@ -13322,6 +13331,9 @@ function wmfGetVariantSettings() {
 	],
 	'+dtywiki' => [
 		'sysop' => [ 'autopatrolled', 'transwiki' ], // T174226, T176709
+	],
+	'+elwiki' => [
+		'sysop' => [ 'rollbacker' ], // T257745
 	],
 	'+elwiktionary' => [
 		'bureaucrat' => [ 'interface-editor' ],
