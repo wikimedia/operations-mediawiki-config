@@ -15477,6 +15477,7 @@ function wmfGetVariantSettings() {
 	'loginwiki' => false,
 
 	'group0' => true,
+	'group1' => true,
 	'nlwiki' => true,
 ],
 
@@ -15487,6 +15488,7 @@ function wmfGetVariantSettings() {
 	'loginwiki' => false,
 
 	'group0' => true,
+	'group1' => true,
 	'nlwiki' => true,
 ],
 
