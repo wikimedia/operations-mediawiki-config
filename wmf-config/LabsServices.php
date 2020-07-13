@@ -13,7 +13,7 @@ return [
 		'xenon' => 'deployment-fluorine02.deployment-prep.eqiad.wmflabs',
 		'xhgui' => 'mongodb://deployment-xhgui01.deployment-prep.eqiad.wmflabs:27017',
 		'xhgui-pdo' => 'mysql:host=deployment-mdb01.deployment-prep.eqiad.wmflabs;dbname=xhgui',
-		'statsd' => 'labmon1001.eqiad.wmnet',
+		'statsd' => 'cloudmetrics1001.eqiad.wmnet',
 		'search-chi' => [
 			// These MUST match the installed SSL certs
 			'deployment-elastic05.deployment-prep.eqiad.wmflabs',
