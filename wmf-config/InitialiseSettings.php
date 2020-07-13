@@ -17093,15 +17093,15 @@ function wmfGetVariantSettings() {
 'wmgTmhWebPlayer' => [
 	'default' => 'mwembed',
 	'group0' => 'videojs',
+	'group1' => 'videojs',
 	'desktop-improvements' => 'videojs',
-	'wiktionary' => 'videojs',
-	'commonswiki' => 'videojs',
 ],
 
 // Enable the Beta Feature for trying out the new video player (see also the BF whitelist)
 'wgTmhUseBetaFeatures' => [
 	'default' => true,
 	'group0' => false,
+	'desktop-improvements' => false,
 ],
 
 'wmgMinimumVideoPlayerSize' => [
