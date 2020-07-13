@@ -1902,10 +1902,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => false,
 		],
 
-		'-wgDiscussionToolsEnableVisual' => [
-			'default' => true,
-		],
-
 		'wgWatchlistExpiry' => [
 			'default' => true,
 		],
