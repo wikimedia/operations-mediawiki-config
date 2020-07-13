@@ -23464,14 +23464,33 @@ function wmfGetVariantSettings() {
 	'default' => 30,
 ],
 
-// Shard each wiki to be under 2gb per shard if possible.  Changing this for a wiki
+// Changing this for a wiki
 // requires an in place reindex.  Last full review 2014-07-01.  See
 // https://wikitech.wikimedia.org/wiki/Search/New#Estimating_the_number_of_shards_required
-// for estimation of new wikis.  At this point I'm declaring we should have no more than
-// 5 shards per content index and 10 per general index.  5 because that assigns one
-// replica to most nodes and should be the most efficient for querying.  10 is somewhat
-// arbitrary but reflects that we care less about search performance for the general
-// index then we do for the content indexes.
+// for estimation of new wikis.
+
+// Optimal shard count requires making a tradeoff between a few competing factors.
+
+// Each Elasticsearch shard is actually a Lucene index,
+//  which requires some amount of file descriptors/disk usage, compute, and RAM.
+// So, a higher shard count causes more overhead, due to resource contention as well as "fixed costs".
+
+// Since Elasticsearch is designed to be shardable and robust,
+// if a node drops out of the cluster, shards must rebalance across the remaining nodes
+// (likewise for changes in instance count, etc).
+// Shard rebalancing is rate-limited by network throughput,
+// and thus excessively large shards can cause the cluster to be stuck
+// "recovering" (rebalancing) for an unacceptable amount of time.
+
+// Thus the optimal shard size is a balancing act between overhead (which is optimized via having larger shards),
+// and rebalancing time (which is optimized via smaller, more numerous shards).
+// Additionally, due to the problem of fragmentation,
+// we also don't want a given shard to be too large a % of the available disk capacity.
+
+// Currently (01/07/2020 DD/MM/YY), in most cases we don't want shards to exceed 50GB,
+// and ideally they wouldn't be smaller than 10GB
+// (but note that for small indices this is unavoidable).
+// Once our Elasticsearch cluster has 10G networking, we can increase our desired shard size.
 'wmgCirrusSearchShardCount' => [
 	// Most wikis are too small to be worth sharding
 	'default' => [ 'content' => 1, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
@@ -23483,15 +23502,16 @@ function wmfGetVariantSettings() {
 	// Commons is special and has a 'file' index in addition to the regular ones.
 	// We're sharding 'file' like it is a content index because searching it is
 	// very very common.
-	'commonswiki' => [ 'content' => 2, 'general' => 8, 'file' => 21, 'titlesuggest' => 1, 'archive' => 1 ],
+	'commonswiki' => [ 'content' => 2, 'general' => 8, 'file' => 32, 'titlesuggest' => 1, 'archive' => 1 ],
 	'testcommonswiki' => [ 'content' => 1, 'general' => 8, 'file' => 21, 'titlesuggest' => 1, 'archive' => 1 ],
 	'cswiki' => [ 'content' => 3, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
 	'dawiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	'dewiki' => [ 'content' => 7, 'general' => 8, 'titlesuggest' => 3, 'archive' => 1 ],
+	'dewiki' => [ 'content' => 9, 'general' => 8, 'titlesuggest' => 3, 'archive' => 1 ],
 	'dewikisource' => [ 'content' => 3, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
 	'elwiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	// These shards are also significantly larger than the target 2GB.
-	'enwiki' => [ 'content' => 7, 'general' => 21, 'titlesuggest' => 4, 'archive' => 1 ],
+	// These shards tend to be closer to our threshold of 50GB.
+	// We shard enwiki more so that most servers have 2 enwiki shards.
+	'enwiki' => [ 'content' => 16, 'general' => 21, 'titlesuggest' => 4, 'archive' => 1 ],
 	'enwikinews' => [ 'content' => 1, 'general' => 4, 'titlesuggest' => 1, 'archive' => 1 ],
 	'enwikisource' => [ 'content' => 7, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
 	'enwiktionary' => [ 'content' => 5, 'general' => 2, 'titlesuggest' => 2, 'archive' => 1 ],
@@ -23532,7 +23552,7 @@ function wmfGetVariantSettings() {
 	'thwiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
 	'trwiki' => [ 'content' => 2, 'general' => 2, 'titlesuggest' => 1, 'archive' => 1 ],
 	'ukwiki' => [ 'content' => 7, 'general' => 2, 'titlesuggest' => 1, 'archive' => 1 ],
-	'viwiki' => [ 'content' => 6, 'general' => 4, 'titlesuggest' => 1, 'archive' => 1 ],
+	'viwiki' => [ 'content' => 6, 'general' => 5, 'titlesuggest' => 1, 'archive' => 1 ],
 	'wikidatawiki' => [ 'content' => 21, 'general' => 1, 'archive' => 1 ],
 	'warwiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
 	'zhwiki' => [ 'content' => 7, 'general' => 5, 'titlesuggest' => 2, 'archive' => 1 ],
@@ -23555,12 +23575,12 @@ function wmfGetVariantSettings() {
 	],
 	'enwiki' => [
 		'eqiad' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-3', 'archive' => '0-2' ],
-		'codfw' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-3', 'archive' => '0-2' ],
+		'codfw' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-3', 'archive' => '0-2' ],
 		'cloudelastic' => [ 'content' => '0-1', 'general' => '0-1', 'titlesuggest' => '0-1', 'archive' => '0-1' ],
 	],
 	'dewiki' => [
 		'eqiad' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-2', 'archive' => '0-2' ],
-		'codfw' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'archive' => '0-2' ],
+		'codfw' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-2', 'archive' => '0-2' ],
 		'cloudelastic' => [ 'content' => '0-1', 'general' => '0-1', 'titlesuggest' => '0-1', 'archive' => '0-1' ],
 	],
 ],
@@ -23568,8 +23588,8 @@ function wmfGetVariantSettings() {
 'wgCirrusSearchMaxShardsPerNode' => [
 	'default' => [],
 	'commonswiki' => [
-		'eqiad' => [ 'file' => 3, 'general' => 2 ],
-		'codfw' => [ 'file' => 3, 'general' => 2 ],
+		'eqiad' => [ 'file' => 4, 'general' => 2 ],
+		'codfw' => [ 'file' => 4, 'general' => 2 ],
 		'cloudelastic' => []
 	],
 	'dewiki' => [
@@ -23588,8 +23608,8 @@ function wmfGetVariantSettings() {
 		'cloudelastic' => []
 	],
 	'enwiki' => [
-		'eqiad' => [ 'content' => 1, 'general' => 3 ],
-		'codfw' => [ 'content' => 1, 'general' => 3 ],
+		'eqiad' => [ 'content' => 2, 'general' => 3 ],
+		'codfw' => [ 'content' => 2, 'general' => 3 ],
 		'cloudelastic' => []
 	],
 	'eswiki' => [

@@ -190,7 +190,7 @@ class CirrusTest extends WgConfTestCase {
 		}
 		$wikis = array_unique( $wikis );
 		$indexTypes = [ 'content', 'general', 'titlesuggest', 'file' ];
-		$clusters = [ 'eqiad' => 31, 'codfw' => 24 ];
+		$clusters = [ 'eqiad' => 36, 'codfw' => 36 ];
 
 		// restrict wgConf to only the settings we care about
 		$wgConf->settings = [
