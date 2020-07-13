@@ -2320,14 +2320,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		// Force the videojs player for all users and disable the beta feature
-		'-wmgTmhWebPlayer' => [
-			'default' => 'videojs',
-		],
-		'-wgTmhUseBetaFeatures' => [
-			'default' => false,
-		],
-
 		'wgAbuseFilterEmergencyDisableThreshold' => [
 			'default' => [ 'default' => 0.05 ],
 			'zhwiki' => [ 'default' => 0.25 ], // T230305

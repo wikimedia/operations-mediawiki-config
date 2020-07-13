@@ -17192,15 +17192,6 @@ return [
 	'foundationwiki' => true,
 ],
 
-'wmgTmhWebPlayer' => [
-	'default' => 'videojs',
-],
-
-// Enable the Beta Feature for trying out the new video player (see also the BF whitelist)
-'wgTmhUseBetaFeatures' => [
-	'default' => false,
-],
-
 'wmgMinimumVideoPlayerSize' => [
 	'default' => 800,
 ],
