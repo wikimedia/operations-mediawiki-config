@@ -15473,23 +15473,23 @@ function wmfGetVariantSettings() {
 // This is also guarded by $wmgUseCentralAuth
 // See T252236
 'wmgEnableCrossOriginSessions' => [
-	'default' => false,
-	'loginwiki' => false,
-
+	'default' => true,
 	'group0' => true,
 	'group1' => true,
-	'nlwiki' => true,
+	'group2' => true,
+
+	'loginwiki' => true,
 ],
 
 // Enabling will disable use of insecure 'forceHttps' cookies.
 // See T256095
 'wgForceHTTPS' => [
-	'default' => false,
-	'loginwiki' => false,
-
+	'default' => true,
 	'group0' => true,
 	'group1' => true,
-	'nlwiki' => true,
+	'group2' => true,
+
+	'loginwiki' => true,
 ],
 
 # @}
