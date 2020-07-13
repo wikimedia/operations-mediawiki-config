@@ -1314,7 +1314,7 @@ if ( $wmgUseTimedMediaHandler ) {
 	$wgTmhSoundfontLocation = '/usr/share/sounds/sf2/FluidR3_GM.sf2';
 
 	// The type of HTML5 player to use
-	$wgTmhWebPlayer = $wmgTmhWebPlayer;
+	$wgTmhWebPlayer = 'videojs';
 }
 
 if ( $wmgUseUploadsLink ) {
