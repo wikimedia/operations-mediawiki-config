@@ -18902,11 +18902,6 @@ function wmfGetVariantSettings() {
 	],
 ],
 
-'wgMFSpecialCaseMainPage' => [
-	'default' => false,
-	'mobilemainpagelegacy' => true,
-],
-
 'wgMFRemovableClasses' => [
 	'default' => [
 		'base' => [ '.navbox', '.nomobile', '.mbox-image' ],

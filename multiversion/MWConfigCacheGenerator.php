@@ -44,7 +44,6 @@ class MWConfigCacheGenerator {
 		'nonglobal',
 		'wikitech',
 		'nonecho',
-		'mobilemainpagelegacy',
 		'nowikidatadescriptiontaglines',
 		'cirrussearch-big-indices',
 	];

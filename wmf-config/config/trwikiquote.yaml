@@ -7,8 +7,6 @@ inheritsFrom:
   - categories-rdf
   - flaggedrevs
   - medium
-  # To be removed by end of 2020
-  - mobilemainpagelegacy
   - s3
   - securepollglobal
   - visualeditor-nondefault

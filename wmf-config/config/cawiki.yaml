@@ -12,8 +12,6 @@ inheritsFrom:
   - gettingstarted-with-category-suggestions
   - group1-wikipedia
   - large
-  # To be removed by end of 2020
-  - mobilemainpagelegacy
   - s7
   - securepollglobal
   - wikidataclient

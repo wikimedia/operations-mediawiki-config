@@ -11,8 +11,6 @@ inheritsFrom:
   - gettingstarted-with-category-suggestions
   - growthexperiments
   - large
-  # To be removed by end of 2020
-  - mobilemainpagelegacy
   - s7
   - securepollglobal
   - wikidataclient
