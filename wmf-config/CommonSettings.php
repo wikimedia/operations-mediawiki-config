@@ -2514,6 +2514,7 @@ if ( $wmgUseVisualEditor ) {
 	// RESTBase connection configuration is done by $wmfUseRestbaseVRS above.
 	// Parsoid connection configuration is done by $wmgUseParsoid above.
 	// At least one of these should be set if you want to use Visual Editor.
+	$wgVisualEditorParsoidAutoConfig = false;
 
 	// RESTBase connection configuration
 	if ( $wmgVisualEditorAccessRestbaseDirectly ) {
