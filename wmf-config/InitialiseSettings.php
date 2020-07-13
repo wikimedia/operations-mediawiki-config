@@ -17251,7 +17251,6 @@ return [
 		'cx',                                // [LangEng] 2019-11-07 - ContentTranslation
 		'twocolconflict',                    // [WMDE TW] 2019-10-30 – New edit conflict view
 		'visualeditor-visualdiffpage',       // [Editing] 2019-11-06 – Visual diffs
-		'tmh-videojs',                       // [Readers] 2019-12-12 - New video player
 		'discussiontools-betaenable',        // [Editing] 2020-09-12 – Reply tool
 		'ipinfo-beta-feature-enable',        // [AHT] 2022-10-01 – IP Info
 		'wikieditor-realtime-preview',       // [CommTech] 2022-04-18 – Realtime Preview
