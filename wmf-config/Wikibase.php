@@ -144,6 +144,9 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( isset( $wmgWikibaseLocalEntitySourceName ) ) {
 		$wgWBRepoSettings['localEntitySourceName'] = $wmgWikibaseLocalEntitySourceName;
 	}
+	if ( isset( $wmgWikibaseRepoLocalEntitySourceName ) ) {
+		$wgWBRepoSettings['localEntitySourceName'] = $wmgWikibaseRepoLocalEntitySourceName;
+	}
 
 	// Various settings have null / no setting yet for various sites,
 	// so we need to check they are set before trying to use them to avoid warnings.
@@ -321,6 +324,9 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['entitySources'] = $wmgWikibaseEntitySources;
 	if ( isset( $wmgWikibaseLocalEntitySourceName ) ) {
 		$wgWBClientSettings['localEntitySourceName'] = $wmgWikibaseLocalEntitySourceName;
+	}
+	if ( isset( $wmgWikibaseClientLocalEntitySourceName ) ) {
+		$wgWBClientSettings['localEntitySourceName'] = $wmgWikibaseClientLocalEntitySourceName;
 	}
 
 	$wgWBClientSettings['addEntityUsagesBatchSize'] = $wmgWikibaseClientAddEntityUsagesBatchSize;
