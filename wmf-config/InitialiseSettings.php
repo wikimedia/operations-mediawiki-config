@@ -23076,6 +23076,20 @@ function wmfGetVariantSettings() {
 			'interwikiPrefix' => 'c',
 		],
 	],
+	'wikidataclient' => [
+		'wikidata' => [
+			'entityNamespaces' => [
+				'item' => 0,
+				'property' => 120,
+				'lexeme' => 146,
+			],
+			'repoDatabase' => 'wikidatawiki',
+			'baseUri' => 'http://www.wikidata.org/entity/',
+			'rdfNodeNamespacePrefix' => 'wd',
+			'rdfPredicateNamespacePrefix' => '',
+			'interwikiPrefix' => 'd',
+		],
+	],
 	'testwikidatawiki' => [
 		'testwikidata' => [
 			'entityNamespaces' => [
@@ -23140,8 +23154,7 @@ function wmfGetVariantSettings() {
 
 'wmgWikibaseClientLocalEntitySourceName' => [
 	'default' => null,
-	'wikidatawiki' => 'wikidata',
-	'commonswiki' => 'wikidata',
+	'wikidataclient' => 'wikidata',
 	'wikidataclient-test' => 'testwikidata',
 ],
 
