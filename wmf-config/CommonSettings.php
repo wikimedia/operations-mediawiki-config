@@ -1264,6 +1264,7 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 	// Available snapshots
 	$wgExtDistSnapshotRefs = [
 		'master',
+		'REL1_35',
 		'REL1_34',
 		'REL1_31',
 	];
