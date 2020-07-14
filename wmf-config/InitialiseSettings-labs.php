@@ -1360,9 +1360,12 @@ function wmfGetLabsOverrideSettings() {
 				],
 			],
 		],
-		'-wmgWikibaseLocalEntitySourceName' => [
+		'-wmgWikibaseRepoLocalEntitySourceName' => [
 			'default' => 'wikidata',
 			'commonswiki' => 'commons',
+		],
+		'-wmgWikibaseClientLocalEntitySourceName' => [
+			'default' => 'wikidata',
 		],
 		'-wmgWikibaseClientSpecialSiteLinkGroups' => [
 			'default' => [
