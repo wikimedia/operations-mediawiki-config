@@ -23488,11 +23488,11 @@ function wmfGetVariantSettings() {
 	'enwiki' => 'wmf_enwiki', // T171803: 'wikt' always first, 'b' always last, others ordered by recall
 ],
 
-// Define list of projects to blacklist from CrossProject search
+// Define list of projects to block from CrossProject search
 // (only effective if SiteMatrix implementation is being used)
-'wgCirrusSearchCrossProjectSearchBlackList' => [
+'wgCirrusSearchCrossProjectSearchBlockList' => [
 	'default' => [],
-	// Blacklist wikinews and wikiversity T163463
+	// Block wikinews and wikiversity T163463
 	'enwiki' => [ 'n', 'v' ],
 ],
 
