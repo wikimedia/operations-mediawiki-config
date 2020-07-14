@@ -1235,6 +1235,7 @@ function wmfGetVariantSettings() {
 	// Chapter and local user group wikis
 	'amwikimedia' => '/static/images/project-logos/amwikimedia.png', // T176042
 	'arwikimedia' => '/static/images/project-logos/arwikimedia.png',
+	'brwikimedia' => '/static/images/project-logos/brwikimedia.png', // T257925
 	'bdwikimedia' => '/static/images/project-logos/bdwikimedia.png',
 	'bewikimedia' => '/static/images/project-logos/bewikimedia.png',
 	'cawikimedia' => '/static/images/project-logos/cawikimedia.png',
@@ -1278,7 +1279,6 @@ function wmfGetVariantSettings() {
 	'arbcom_fiwiki' => '/static/images/project-logos/arbcom_fiwiki.png',
 	'arbcom_nlwiki' => '/static/images/project-logos/arbcom_nlwiki.png',
 	'boardwiki' => '/static/images/project-logos/boardwiki.png',
-	'brwikimedia' => '/static/images/project-logos/brwikimedia.png',
 	'chairwiki' => '/static/images/project-logos/chairwiki.png',
 	'chapcomwiki' => '/static/images/project-logos/chapcomwiki.png',
 	'checkuserwiki' => '/static/images/project-logos/checkuserwiki.png', // T30785
@@ -1841,6 +1841,7 @@ function wmfGetVariantSettings() {
 
 	// Chapter and local user group wikis
 	'amwikimedia' => '/static/images/project-logos/amwikimedia-1.5x.png', // T176042
+	'brwikimedia' => '/static/images/project-logos/brwikimedia-1.5x.png', // T257925
 	'cawikimedia' => '/static/images/project-logos/cawikimedia-1.5x.png',
 	'ecwikimedia' => '/static/images/project-logos/ecwikimedia-1.5x.png', // T135521
 	'gewikimedia' => '/static/images/project-logos/gewikimedia-1.5x.png', // T236389
@@ -2386,6 +2387,7 @@ function wmfGetVariantSettings() {
 
 	// Chapter and local user group wikis
 	'amwikimedia' => '/static/images/project-logos/amwikimedia-2x.png', // T176042
+	'brwikimedia' => '/static/images/project-logos/brwikimedia-2x.png', // T257925
 	'cawikimedia' => '/static/images/project-logos/cawikimedia-2x.png',
 	'ecwikimedia' => '/static/images/project-logos/ecwikimedia-2x.png', // T135521
 	'gewikimedia' => '/static/images/project-logos/gewikimedia-2x.png', // T236389
