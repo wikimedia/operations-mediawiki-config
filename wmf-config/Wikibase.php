@@ -141,9 +141,6 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['conceptBaseUri'] = $wmgWBRepoConceptBaseUri;
 
 	$wgWBRepoSettings['entitySources'] = $wmgWikibaseEntitySources;
-	if ( isset( $wmgWikibaseLocalEntitySourceName ) ) {
-		$wgWBRepoSettings['localEntitySourceName'] = $wmgWikibaseLocalEntitySourceName;
-	}
 	if ( isset( $wmgWikibaseRepoLocalEntitySourceName ) ) {
 		$wgWBRepoSettings['localEntitySourceName'] = $wmgWikibaseRepoLocalEntitySourceName;
 	}
@@ -322,9 +319,6 @@ if ( $wmgUseWikibaseClient ) {
 	}
 
 	$wgWBClientSettings['entitySources'] = $wmgWikibaseEntitySources;
-	if ( isset( $wmgWikibaseLocalEntitySourceName ) ) {
-		$wgWBClientSettings['localEntitySourceName'] = $wmgWikibaseLocalEntitySourceName;
-	}
 	if ( isset( $wmgWikibaseClientLocalEntitySourceName ) ) {
 		$wgWBClientSettings['localEntitySourceName'] = $wmgWikibaseClientLocalEntitySourceName;
 	}
