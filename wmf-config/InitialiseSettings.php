@@ -23107,12 +23107,17 @@ function wmfGetVariantSettings() {
 	],
 ],
 
-'wmgWikibaseLocalEntitySourceName' => [
+'wmgWikibaseRepoLocalEntitySourceName' => [
 	'default' => null,
 	'wikidatawiki' => 'wikidata',
 	'testwikidatawiki' => 'testwikidata',
-	'wikidataclient-test' => 'testwikidata',
 	'testcommonswiki' => 'testcommons'
+],
+
+'wmgWikibaseClientLocalEntitySourceName' => [
+	'default' => null,
+	'wikidatawiki' => 'wikidata',
+	'wikidataclient-test' => 'testwikidata',
 ],
 
 'wmgUseTemplateSandbox' => [
