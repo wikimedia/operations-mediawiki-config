@@ -2524,6 +2524,11 @@ if ( $wmgUseVisualEditor ) {
 		// There should be no lossy switching in RESTBase mode, but just in case
 		$wgVisualEditorAllowLossySwitching = false;
 	} else {
+		if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
+			// (T241961) Just for wikitech, fall back to bundled behaviour
+			$wgVisualEditorParsoidAutoConfig = true;
+			// Note that wgVirtualRestConfig['modules']['parsoid'] isn't set as wmgUseParsoid is false
+		}
 		// Prefer lossy switching (dirty diffs) to not being able to switch editors
 		$wgVisualEditorAllowLossySwitching = true;
 	}

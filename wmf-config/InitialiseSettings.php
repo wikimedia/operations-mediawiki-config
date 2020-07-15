@@ -17712,14 +17712,13 @@ function wmfGetVariantSettings() {
 
 'wmgUseVisualEditor' => [
 	'default' => true,
-	'wikitech' => false,		# T241961
 	'lockeddown' => false,
 ],
 
 // Whether VisualEditor should bypass the MediaWiki layer and contact RESTBase directly for speed
 'wmgVisualEditorAccessRestbaseDirectly' => [
 	'default' => true,		// T100026
-	'wikitech' => false,	# Wikitech doesn't properly work yet in RESTBase
+	'wikitech' => false,	# Wikitech uses local Parsoid operation
 	'private' => false,		# Private wikis aren't yet supported by RESTBase
 ],
 // Whether VisualEditor should re-use the edit tab (and section link) or insert its own; "SET"
