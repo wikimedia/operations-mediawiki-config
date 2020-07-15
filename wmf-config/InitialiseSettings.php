@@ -25008,20 +25008,6 @@ function wmfGetVariantSettings() {
 			],
 			'privacyPolicy' => 'ext-quicksurveys-growth-external-survey-privacy-policy',
 		],
-		// T246977
-		[
-			'enabled' => true,
-			'type' => 'external',
-			'name' => 'affinity-survey',
-			'question' => 'ext-quicksurveys-affinity-survey-question',
-			'description' => 'reader-demographics-1-description',
-			'link' => 'ext-quicksurvey-affinity-survey-link',
-			'privacyPolicy' => 'ext-quicksurveys-affinity-survey-privacy-policy',
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-			],
-			'coverage' => 0.025,
-		],
 	],
 	'enwikivoyage' => [
 		// T187299
@@ -25063,22 +25049,6 @@ function wmfGetVariantSettings() {
 			'shuffleAnswersDisplay' => true,
 		],
 	],
-	'fawiki' => [
-		// T246977
-		[
-			'enabled' => true,
-			'type' => 'external',
-			'name' => 'affinity-survey',
-			'question' => 'ext-quicksurveys-affinity-survey-question',
-			'description' => 'reader-demographics-1-description',
-			'privacyPolicy' => 'ext-quicksurveys-affinity-survey-privacy-policy',
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-			],
-			'link' => 'ext-quicksurvey-affinity-survey-link',
-			'coverage' => 0.171,
-		],
-	],
 	'frwiki' => [
 		// T187299
 		[
@@ -25097,52 +25067,6 @@ function wmfGetVariantSettings() {
 			],
 			'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
 			'shuffleAnswersDisplay' => true,
-		],
-		// T246977
-		[
-			'enabled' => true,
-			'type' => 'external',
-			'name' => 'affinity-survey',
-			'question' => 'ext-quicksurveys-affinity-survey-question',
-			'description' => 'reader-demographics-1-description',
-			'privacyPolicy' => 'ext-quicksurveys-affinity-survey-privacy-policy',
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-			],
-			'link' => 'ext-quicksurvey-affinity-survey-link',
-			'coverage' => 0.0167,
-		],
-	],
-	'frwiktionary' => [
-		// T246977
-		[
-			'enabled' => true,
-			'type' => 'external',
-			'name' => 'affinity-survey',
-			'question' => 'ext-quicksurveys-affinity-survey-question',
-			'description' => 'reader-demographics-1-description',
-			'privacyPolicy' => 'ext-quicksurveys-affinity-survey-privacy-policy',
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-			],
-			'link' => 'ext-quicksurvey-affinity-survey-link',
-			'coverage' => 0.2,
-		],
-	],
-	'hewiki' => [
-		// T246977
-		[
-			'enabled' => true,
-			'type' => 'external',
-			'name' => 'affinity-survey',
-			'question' => 'ext-quicksurveys-affinity-survey-question',
-			'description' => 'reader-demographics-1-description',
-			'privacyPolicy' => 'ext-quicksurveys-affinity-survey-privacy-policy',
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-			],
-			'link' => 'ext-quicksurvey-affinity-survey-link',
-			'coverage' => 0.33,
 		],
 	],
 	'metawiki' => [
