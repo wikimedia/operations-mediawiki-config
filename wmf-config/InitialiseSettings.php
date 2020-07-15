@@ -10924,6 +10924,7 @@ function wmfGetVariantSettings() {
 			'autopatrol' => true,
 		], // T142571
 		'autopatrolled' => [ 'autopatrol' => true ], // T142571
+		'closer' => [ 'protect' => true, 'editprotected' => true ], // T257927
 	],
 	'itwikiquote' => [
 		'autoconfirmed' => [ 'patrol' => true ],
@@ -12737,6 +12738,7 @@ function wmfGetVariantSettings() {
 	],
 	'+itwikinews' => [
 		'sysop' => [ 'autopatrolled', 'rollbacker' ], // T142571
+		'bureaucrat' => [ 'closer' ], // T257927
 	],
 	'+itwikiquote' => [
 		'sysop' => [ 'autopatrolled' ], // T64200
@@ -13551,6 +13553,7 @@ function wmfGetVariantSettings() {
 	],
 	'+itwikinews' => [
 		'sysop' => [ 'autopatrolled', 'rollbacker' ], // T142571
+		'bureaucrat' => [ 'closer' ], // T257927
 	],
 	'+itwikiquote' => [
 		'bureaucrat' => [ 'autopatrolled' ], // T64200
