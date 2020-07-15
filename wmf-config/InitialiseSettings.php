@@ -586,6 +586,7 @@ function wmfGetVariantSettings() {
 	'aswiki' => '/static/images/project-logos/aswiki.png',
 	'atjwiki' => '/static/images/project-logos/atjwiki.png', // T167714
 	'avwiki' => '/static/images/project-logos/avwiki.png', // T48589
+	'avkwiki' => '/static/images/project-logos/avkwiki.png', // T257943
 	'awawiki' => '/static/images/project-logos/awawiki.png', // T251371
 	'aywiki' => '/static/images/project-logos/aywiki.png',
 	'azbwiki' => '/static/images/project-logos/azbwiki.png', // T106305
@@ -1362,6 +1363,7 @@ function wmfGetVariantSettings() {
 	'astwiki' => '/static/images/project-logos/astwiki-1.5x.png', // T150618
 	'atjwiki' => '/static/images/project-logos/atjwiki-1.5x.png', // T167714
 	'avwiki' => '/static/images/project-logos/avwiki-1.5x.png', // T150618
+	'avkwiki' => '/static/images/project-logos/avkwiki-1.5x.png', // T257943
 	'awawiki' => '/static/images/project-logos/awawiki-1.5x.png', // T251371
 	'aywiki' => '/static/images/project-logos/aywiki-1.5x.png', // T150618
 	'azbwiki' => '/static/images/project-logos/azbwiki-1.5x.png', // T150618
@@ -1910,6 +1912,7 @@ function wmfGetVariantSettings() {
 	'astwiki' => '/static/images/project-logos/astwiki-2x.png', // T150618
 	'atjwiki' => '/static/images/project-logos/atjwiki-2x.png', // T167714
 	'avwiki' => '/static/images/project-logos/avwiki-2x.png', // T150618
+	'avkwiki' => '/static/images/project-logos/avkwiki-2x.png', // T257943
 	'awawiki' => '/static/images/project-logos/awawiki-2x.png', // T251371
 	'aywiki' => '/static/images/project-logos/aywiki-2x.png', // T150618
 	'azbwiki' => '/static/images/project-logos/azbwiki-2x.png', // T150618
