@@ -21383,10 +21383,10 @@ function wmfGetVariantSettings() {
 		 * Deprecated properties
 		 * @see https://www.wikidata.org/wiki/Special:WhatLinksHere/Q18644427?namespace=120
 		 */
-		134, // has dialect (DEPRECATED)
-		558, // unit symbol (DEPRECATED)
+		598,  // commander of (DEPRECATED)
 		2315, // comment (DEPRECATED)
-		5130, // island of location (DEPRECATED)
+		3231, // Media Art Database author ID (former scheme)
+		7478, // iFixit repairability score (DEPRECATED)
 		/**
 		 * @see https://www.wikidata.org/w/index.php?oldid=335040857
 		 */
@@ -21411,6 +21411,7 @@ function wmfGetVariantSettings() {
 		5188, // wikibase-lexeme
 		5189, // wikibase-form
 		5979, // wikibase-sense
+		6604, // musical-notation
 	],
 ],
 
@@ -21906,7 +21907,6 @@ function wmfGetVariantSettings() {
 		'P304', // page(s)
 		'P433', // issue
 		'P478', // volume
-		'P558', // unit symbol (DEPRECATED)
 		'P3903', // column
 		'P3921', // Wikidata SPARQL query equivalent
 		'P4316', // kinship equivalent in SPARQL at Wikidata
