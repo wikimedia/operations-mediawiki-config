@@ -207,9 +207,6 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBRepoSettings['entityTypesWithoutRdfOutput'] = $wmgWikibaseEntityTypesWithoutRdfOutput;
 
-	// Temporary, T138104
-	$wgWBRepoSettings['tmpSerializeEmptyListsAsObjects'] = $wmgWikibaseTmpSerializeEmptyListsAsObjects;
-
 	// Migration, T226086
 	$wgWBRepoSettings['tmpPropertyTermsMigrationStage'] = $wmgWikibaseTmpPropertyTermsMigrationStage;
 	$wgWBRepoSettings['tmpItemTermsMigrationStages'] = $wmgWikibaseTmpItemTermsMigrationStage;
