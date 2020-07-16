@@ -1217,6 +1217,10 @@ if ( $wmgUseUrlShortener ) {
 		'(.*\.)?wikidata\.org',
 		'(.*\.)?mediawiki\.org',
 	];
+
+	// Temporarily map to the old variable.
+	$wgUrlShortenerAllowedDomains = $wgUrlShortenerDomainsWhitelist;
+
 	$wgUrlShortenerApprovedDomains = [
 		'*.wikipedia.org',
 		'*.wiktionary.org',
