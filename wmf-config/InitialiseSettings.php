@@ -8976,6 +8976,10 @@ function wmfGetVariantSettings() {
 	'default' => '1', // Legacy Vector
 	'officewiki' => '2', // Modern Vector (office wiki is logged in only, T251285)
 ],
+// T246420: Enable limited-width layout in "Latest Vector".
+'wgVectorLayoutMaxWidth' => [
+	'default' => true, // Enable Max-Width layout when Modern Vector is enabled
+],
 
 # wgForceUIMsgAsContentMsg @{
 'wgForceUIMsgAsContentMsg' => [
