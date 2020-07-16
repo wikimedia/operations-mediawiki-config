@@ -21697,14 +21697,6 @@ function wmfGetVariantSettings() {
 	'default' => 'wikibaseDispatchRedisLockManager',
 ],
 
-'wmgWikibaseTmpSerializeEmptyListsAsObjects' => [
-	'default' => false,
-	'testwikidatawiki' => true,
-	'testcommonswiki' => true,
-	'wikidatawiki' => true,
-	'commonswiki' => true,
-],
-
 'wmgWikibaseDispatchInterval' => [
 	'default' => 25,
 ],
