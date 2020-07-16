@@ -22951,12 +22951,6 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
-'wmgWikibaseRepoIdGeneratorSeparateDbConnection' => [
-	'default' => false,
-	'testwikidatawiki' => true,
-	'wikidatawiki' => true,
-],
-
 'wmgWikibaseClientAddEntityUsagesBatchSize' => [
 	'default' => 100,
 ],

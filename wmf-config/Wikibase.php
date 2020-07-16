@@ -203,7 +203,7 @@ if ( $wmgUseWikibaseRepo ) {
 	// Temporary, see T184933
 	$wgWBRepoSettings['useKartographerGlobeCoordinateFormatter'] = true;
 
-	$wgWBRepoSettings['idGeneratorSeparateDbConnection'] = $wmgWikibaseRepoIdGeneratorSeparateDbConnection;
+	$wgWBRepoSettings['idGeneratorSeparateDbConnection'] = true;
 
 	$wgWBRepoSettings['entityTypesWithoutRdfOutput'] = $wmgWikibaseEntityTypesWithoutRdfOutput;
 
