@@ -29,11 +29,7 @@ if ( !empty( $wmgUseWikibaseRepo ) ) {
 
 // Load the Client, and Client extensions
 if ( !empty( $wmgUseWikibaseClient ) ) {
-	if ( $wmfRealm == 'labs' ) {
-		wfLoadExtension( 'WikibaseClient', "$IP/extensions/Wikibase/extension-client.json" );
-	} else {
-		include_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
-	}
+	wfLoadExtension( 'WikibaseClient', "$IP/extensions/Wikibase/extension-client.json" );
 	if ( !empty( $wmgUseWikibaseWikimediaBadges ) ) {
 		wfLoadExtension( 'WikimediaBadges' );
 	}
