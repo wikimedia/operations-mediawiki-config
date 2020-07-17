@@ -9945,6 +9945,9 @@ function wmfGetVariantSettings() {
 	'+arwikinews' => [
 		'rollbacker' => [ 'rollback' => true ], // T189206
 	],
+	'+arzwiki' => [
+		'rollbacker' => [ 'rollback' => true ], // T258100
+	],
 	'+azwiki' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T196488
 		'patroller' => [
@@ -12415,6 +12418,9 @@ function wmfGetVariantSettings() {
 	'+arwikinews' => [
 		'sysop' => [ 'rollbacker', ], // T189206
 	],
+	'+arzwiki' => [
+		'sysop' => [ 'rollbacker', ], // T258100
+	],
 	'+azbwiki' => [
 		'bureaucrat' => [ 'interface-editor', ], // T109755
 		'sysop' => [
@@ -13216,6 +13222,9 @@ function wmfGetVariantSettings() {
 	],
 	'+arwikinews' => [
 		'sysop' => [ 'rollbacker', ], // T189206
+	],
+	'+arzwiki' => [
+		'sysop' => [ 'rollbacker', ], // T258100
 	],
 	'+azbwiki' => [
 		'bureaucrat' => [
