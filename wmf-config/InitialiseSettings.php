@@ -23669,8 +23669,8 @@ function wmfGetVariantSettings() {
 		'cloudelastic' => []
 	],
 	'dewiki' => [
-		'eqiad' => [ 'content' => 1 ],
-		'codfw' => [ 'content' => 1 ],
+		'eqiad' => [ 'content' => 2 ],
+		'codfw' => [ 'content' => 2 ],
 		'cloudelastic' => []
 	],
 	'wikidatawiki' => [

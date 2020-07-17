@@ -250,8 +250,13 @@ class CirrusTest extends WgConfTestCase {
 		$this->assertGreaterThanOrEqual( 2, $numReplicas );
 		$this->assertLessThanOrEqual( 3, $numReplicas );
 
+		# Check that the index's total (primary+replica) shards fit based off perNode shard limit
+		# Note that we arbitrarily subtract 2 as a hacky way to account for row awareness
+		# and other possible factors that might cause shards to not schedule
+		# Passing this test is not a guarantee shards will be assigned,
+		# But failing it (ignoring the arbitrary -2 we added) is a guarantee they won't
 		if ( array_key_exists( $indexType, $totalShardPernode ) ) {
-			$this->assertLessThanOrEqual( $numServers * $totalShardPernode[$indexType], $totalShards );
+			$this->assertLessThanOrEqual( ( $numServers * $totalShardPernode[$indexType] ) - 2, $totalShards );
 		}
 
 		// For our busiest wikis we want to make sure we are using most of the
