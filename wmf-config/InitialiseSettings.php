@@ -10983,14 +10983,7 @@ function wmfGetVariantSettings() {
 	],
 	'+jawiki' => [
 		'autoconfirmed' => [ 'patrol' => true ], // T15055
-		'rollbacker' => [
-			'autopatrol' => true,
-			'ipblock-exempt' => true,
-			'markbotedits' => true,
-			'noratelimit' => true,
-			'rollback' => true,
-			'unwatchedpages' => true,
-		],
+		'rollbacker' => [ 'rollback' => true ], // T258339
 		'eliminator' => [
 			'browsearchive' => true,
 			'delete' => true,
@@ -12782,9 +12775,10 @@ function wmfGetVariantSettings() {
 	'+jawiki' => [
 		'sysop' => [
 			'abusefilter',
-			'extendedconfirmed' // T249820
+			'extendedconfirmed', // T249820
+			'rollbacker' // T258339
 		],
-		'bureaucrat' => [ 'rollbacker', 'eliminator' ],
+		'bureaucrat' => [ 'eliminator' ], // T258339
 	],
 	'+jawiktionary' => [
 		'sysop' => [ 'autopatrolled' ], // T63366
@@ -13600,9 +13594,10 @@ function wmfGetVariantSettings() {
 	'+jawiki' => [
 		'sysop' => [
 			'abusefilter',
-			'extendedconfirmed' // T249820
+			'extendedconfirmed', // T249820
+			'rollbacker' // T258339
 		],
-		'bureaucrat' => [ 'rollbacker', 'eliminator' ],
+		'bureaucrat' => [ 'eliminator' ], // T258339
 	],
 	'+jawiktionary' => [
 		'sysop' => [ 'autopatrolled' ], // T63366
@@ -15883,6 +15878,7 @@ function wmfGetVariantSettings() {
 	'frwikinews' => [ 'sysop' => [ 'flood' ] ],
 	'frwiktionary' => [ 'botadmin' => [ 'botadmin' ] ],
 	'itwikisource' => [ 'sysop' => [ 'flood' ] ], // T38600
+	'jawiki' => [ 'rollbacker' => [ 'rollbacker' ] ], // T258339
 	'ladwiki' => [ 'flood' => [ 'flood' ] ], // T131527
 	'lvwiki' => [ 'flood' => [ 'flood' ] ], // T121238
 	'mlwiki' => [ 'botadmin' => [ 'botadmin' ] ],
