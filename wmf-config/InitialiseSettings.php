@@ -6175,6 +6175,7 @@ function wmfGetVariantSettings() {
 	'+cswikisource' => [ 14 => 1 ],
 	'+napwikisource' => [ 250 => 1, 251 => 1 ], // T252755
 	'+plwikisource' => [ 124 => 1, 125 => 1 ], // T154711
+	'+ukwikisource' => [ 250 => 1, 251 => 1 ], // T255930
 	// @}
 
 	// Wikiversity @{
