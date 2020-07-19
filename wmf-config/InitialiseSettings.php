@@ -16183,6 +16183,7 @@ function wmfGetVariantSettings() {
 		'*.nic.in',                         // India government website - T197944
 		'*.gov.in',                         // India government website - T197944
 		'media.farsnews.com',               // Fars News Agency - T200872
+		'media.farsnews.ir',                // Fars News Agency - T253800
 		'*.aucklandmuseum.com',             // Auckland Museum - T202680
 		'*.karbobala.com',                  // T201236
 		'yphc.ir',                          // Iranian website for amateur photographers - T201237
