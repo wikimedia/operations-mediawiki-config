@@ -5222,6 +5222,12 @@ function wmfGetVariantSettings() {
 	'+lbwiktionary' => [
 		'Wiktionary_Diskussioun' => NS_PROJECT_TALK,
 	],
+	'+lijwikisource' => [
+		'Author' => 102, // T257672
+		'Author_talk' => 103, // T257672
+		'Work' => 104, // T257672
+		'Work_talk' => 105, // T257672
+	],
 	'+ltwiki' => [
 		'Wikipedia_aptarimas' => NS_PROJECT_TALK,
 	],
@@ -7914,10 +7920,10 @@ function wmfGetVariantSettings() {
 		103 => 'Disputatio_Scriptoris',
 	],
 	'lijwikisource' => [
-		102 => 'Aotô',
-		103 => 'Discuscion_aotô',
-		104 => 'Œuvia',
-		105 => 'Discuscion_œuvia',
+		102 => 'Aotô', // T257672
+		103 => 'Discuscion_aotô', // T257672
+		104 => 'Œuvia', // T257672
+		105 => 'Discuscion_œuvia', // T257672
 	],
 	'mkwikisource' => [
 		102 => 'Автор',
