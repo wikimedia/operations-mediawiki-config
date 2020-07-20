@@ -1204,7 +1204,7 @@ if ( $wmgUseUrlShortener ) {
 	$wgUrlShortenerServer = 'https://w.wiki';
 	$wgUrlShortenerDBCluster = 'extension1';
 	$wgUrlShortenerDBName = 'wikishared';
-	$wgUrlShortenerDomainsWhitelist = [
+	$wgUrlShortenerAllowedDomains = [
 		'(.*\.)?wikipedia\.org',
 		'(.*\.)?wiktionary\.org',
 		'(.*\.)?wikibooks\.org',
@@ -1217,10 +1217,6 @@ if ( $wmgUseUrlShortener ) {
 		'(.*\.)?wikidata\.org',
 		'(.*\.)?mediawiki\.org',
 	];
-
-	// Temporarily map to the old variable.
-	$wgUrlShortenerAllowedDomains = $wgUrlShortenerDomainsWhitelist;
-
 	$wgUrlShortenerApprovedDomains = [
 		'*.wikipedia.org',
 		'*.wiktionary.org',
