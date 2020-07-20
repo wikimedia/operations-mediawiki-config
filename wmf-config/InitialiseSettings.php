@@ -9001,15 +9001,30 @@ function wmfGetVariantSettings() {
 // Skin versions are strings not numbers. See skins/Vector/skin.json.
 'wgVectorDefaultSkinVersion' => [
 	'default' => '1', // Legacy Vector
-	'officewiki' => '2', // Modern Vector (office wiki is logged in only, T251285)
+	// T254227
+	'desktop-improvements' => '2',
+	// T254227 (round 1) following wikis disabled
+	'fawiki' => '1',
+	'frwiki' => '1',
+	'hewiki' => '1',
 ],
 'wgVectorDefaultSkinVersionForExistingAccounts' => [
 	'default' => '1', // Legacy Vector
-	'officewiki' => '2', // Modern Vector (office wiki is logged in only, T251285)
+	// T254227
+	'desktop-improvements' => '2',
+	// T254227 (round 1) following wikis disabled
+	'fawiki' => '1',
+	'frwiki' => '1',
+	'hewiki' => '1',
 ],
 'wgVectorDefaultSkinVersionForNewAccounts' => [
 	'default' => '1', // Legacy Vector
-	'officewiki' => '2', // Modern Vector (office wiki is logged in only, T251285)
+	// T254227
+	'desktop-improvements' => '2',
+	// T254227 (round 1) following wikis disabled
+	'fawiki' => '1',
+	'frwiki' => '1',
+	'hewiki' => '1',
 ],
 // T246420: Enable limited-width layout in "Latest Vector".
 'wgVectorLayoutMaxWidth' => [
