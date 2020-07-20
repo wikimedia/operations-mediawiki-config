@@ -1,0 +1,7 @@
+# WARNING: This file is publicly viewable on the Web. Do not put private data here.
+# This is the shared trait configuration file for all wikis that have opted into the
+# desktop improvements test group.
+# https://www.mediawiki.org/wiki/Reading/Web/Desktop_Improvements
+
+wikiTag: desktop-improvements
+

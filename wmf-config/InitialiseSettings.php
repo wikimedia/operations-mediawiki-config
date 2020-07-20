@@ -25407,6 +25407,12 @@ function wmfGetVariantSettings() {
 
 'wgWMEDesktopWebUIActionsTracking' => [
 	'default' => 0,
+	'desktop-improvements' => 0.2, // T258058
+	// T258058 Part 1, exclude the following wikis.
+	'frwiki' => 0,
+	'hewiki' => 0,
+	'fawiki' => 0,
+	'officewiki' => 0,
 	'testwiki' => 1, // T256992
 ],
 

@@ -4,6 +4,7 @@
 
 inheritsFrom:
   - special
+  - desktop-improvements
   - flow
   - group0
   - medium

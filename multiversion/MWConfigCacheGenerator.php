@@ -26,6 +26,7 @@ class MWConfigCacheGenerator {
 		'private',
 		'fishbowl',
 		'closed',
+		'desktop-improvements',
 		'flow',
 		'flaggedrevs',
 		'small',
