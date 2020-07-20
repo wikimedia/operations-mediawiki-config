@@ -9034,22 +9034,16 @@ function wmfGetVariantSettings() {
 	'default' => '1', // Legacy Vector
 	// T254227
 	'desktop-improvements' => '2',
-	// T254227 (round 2) following wikis disabled
-	'frwiki' => '1', // T254227
 ],
 'wgVectorDefaultSkinVersionForExistingAccounts' => [
 	'default' => '1', // Legacy Vector
 	// T254227
 	'desktop-improvements' => '2',
-	// T254227 (round 2) following wikis disabled
-	'frwiki' => '1',
 ],
 'wgVectorDefaultSkinVersionForNewAccounts' => [
 	'default' => '1', // Legacy Vector
 	// T254227
 	'desktop-improvements' => '2',
-	// T254227 (round 2) following wikis disabled
-	'frwiki' => '1',
 ],
 // T246420: Enable limited-width layout in "Latest Vector".
 'wgVectorLayoutMaxWidth' => [
