@@ -125,7 +125,7 @@ $wgCacheDirectory = '/tmp/mw-cache-' . $wmgVersionNumber;
 # Get all the service definitions
 $wmfAllServices = ServiceConfig::getInstance()->getAllServices();
 
-# Shorthand when we have no master-slave situation to keep into account
+# Shorthand when we have no master-replica situation to keep into account
 $wmfLocalServices = $wmfAllServices[$wmfDatacenter];
 
 $etcdConfig = wmfSetupEtcd( $wmfLocalServices['etcd'] );
