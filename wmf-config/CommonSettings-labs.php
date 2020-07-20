@@ -183,7 +183,7 @@ if ( $wmgUseUrlShortener ) {
 	$wgUrlShortenerServer = 'w-beta.wmflabs.org';
 	$wgUrlShortenerDBCluster = false;
 	$wgUrlShortenerDBName = 'wikishared';
-	$wgUrlShortenerDomainsWhitelist = [
+	$wgUrlShortenerAllowedDomains = [
 		'(.*\.)?wikipedia\.beta\.wmflabs\.org',
 		'(.*\.)?wiktionary\.beta\.wmflabs\.org',
 		'(.*\.)?wikibooks\.beta\.wmflabs\.org',
@@ -195,7 +195,6 @@ if ( $wmgUseUrlShortener ) {
 		'(.*\.)?wikimedia\.beta\.wmflabs\.org',
 		'(.*\.)?wikidata\.beta\.wmflabs\.org',
 	];
-	$wgUrlShortenerAllowedDomains = $wgUrlShortenerDomainsWhitelist;
 	$wgUrlShortenerApprovedDomains = [
 		'*.wikipedia.beta.wmflabs.org',
 		'*.wiktionary.beta.wmflabs.org',
