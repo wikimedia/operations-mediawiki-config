@@ -8991,10 +8991,10 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'testwiki' => true,
 ],
+
 'wgVectorShowSkinPreferences' => [
-	'default' => false,
-	'officewiki' => true, // T251285
-	'testwiki' => true, // T251285
+	// T254228
+	'default' => true,
 ],
 // Skin versions are strings not numbers. See skins/Vector/skin.json.
 'wgVectorDefaultSkinVersion' => [
