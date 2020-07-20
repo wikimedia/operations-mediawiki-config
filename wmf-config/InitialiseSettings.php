@@ -9003,32 +9003,30 @@ function wmfGetVariantSettings() {
 	'default' => '1', // Legacy Vector
 	// T254227
 	'desktop-improvements' => '2',
-	// T254227 (round 1) following wikis disabled
-	'fawiki' => '1',
-	'frwiki' => '1',
-	'hewiki' => '1',
+	// T254227 (round 2) following wikis disabled
+	'frwiki' => '1', // T254227
 ],
 'wgVectorDefaultSkinVersionForExistingAccounts' => [
 	'default' => '1', // Legacy Vector
 	// T254227
 	'desktop-improvements' => '2',
-	// T254227 (round 1) following wikis disabled
-	'fawiki' => '1',
+	// T254227 (round 2) following wikis disabled
 	'frwiki' => '1',
-	'hewiki' => '1',
 ],
 'wgVectorDefaultSkinVersionForNewAccounts' => [
 	'default' => '1', // Legacy Vector
 	// T254227
 	'desktop-improvements' => '2',
-	// T254227 (round 1) following wikis disabled
-	'fawiki' => '1',
+	// T254227 (round 2) following wikis disabled
 	'frwiki' => '1',
-	'hewiki' => '1',
 ],
 // T246420: Enable limited-width layout in "Latest Vector".
 'wgVectorLayoutMaxWidth' => [
 	'default' => true, // Enable Max-Width layout when Modern Vector is enabled
+],
+// T258588: Sidebar expanded for anons on modern Vector
+'wgVectorDefaultSidebarVisibleForAnonymousUser' => [
+	'desktop-improvements' => true,
 ],
 
 # wgForceUIMsgAsContentMsg @{
