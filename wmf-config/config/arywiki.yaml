@@ -7,3 +7,4 @@ inheritsFrom:
   - small
   - s3
   - wikidataclient
+  - rtl
