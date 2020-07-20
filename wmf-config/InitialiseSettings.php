@@ -26851,5 +26851,10 @@ function wmfGetVariantSettings() {
 	'testwikidatawiki' => true,
 ],
 
+'wgWatchlistExpiry' => [
+	'default' => false,
+	'testwiki' => true, // T257506
+],
+
 ];
 }
