@@ -1224,8 +1224,10 @@ function wmfGetLabsOverrideSettings() {
 		'wgGEHomepageNewAccountEnablePercentage' => [
 			'default' => 80,
 		],
-		'wgGEHomepageSuggestedEditsNewAccountInitiatedPercentage' => [
-			'default' => 50,
+		'wgGEHomepageNewAccountVariants' => [
+			'A' => 0,
+			'C' => 50,
+			'D' => 50,
 		],
 		'wgGEHomepageMentorsList' => [
 			'default' => '',
