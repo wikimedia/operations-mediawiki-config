@@ -25474,72 +25474,72 @@ function wmfGetVariantSettings() {
 'wmgCirrusSearchMLRModel' => [
 	'default' => false,
 	'enwiki' => [
-		'mlr-1024rs' => '20180316-mrmr_enwiki_v1',
+		'mlr-1024rs' => 'enwiki-20200708-20180215-query_explorer',
 	],
 	'arwiki' => [
-		'mlr-1024rs' => '20180316-mrmr_arwiki_v1',
+		'mlr-1024rs' => 'arwiki-20200708-20180215-query_explorer',
 	],
 	'fawiki' => [
-		'mlr-1024rs' => '20180316-mrmr_fawiki_v1',
+		'mlr-1024rs' => 'fawiki-20200708-20180215-query_explorer',
 	],
 	/* TODO: re-enable once we have a model trained with BM25 features (T219534)
 	'jawiki' => [
-		'mlr-1024rs' => 'NEWMODEL-mrmr_jawiki_v1',
+		'mlr-1024rs' => 'jawiki-20200708-20180215-query_explorer',
 	],
 	*/
 	'svwiki' => [
-		'mlr-1024rs' => '20180316-mrmr_svwiki_v1',
+		'mlr-1024rs' => 'svwiki-20200708-20180215-query_explorer',
 	],
 	'frwiki' => [
-		'mlr-1024rs' => '20180316-mrmr_frwiki_v1',
+		'mlr-1024rs' => 'frwiki-20200708-20180215-query_explorer',
 	],
 	'itwiki' => [
-		'mlr-1024rs' => '20180316-mrmr_itwiki_v1',
+		'mlr-1024rs' => 'itwiki-20200708-20180215-query_explorer',
 	],
 	'ptwiki' => [
-		'mlr-1024rs' => '20180316-mrmr_ptwiki_v1',
+		'mlr-1024rs' => 'ptwiki-20200708-20180215-query_explorer',
 	],
 	'ruwiki' => [
-		'mlr-1024rs' => '20180316-mrmr_ruwiki_v1',
+		'mlr-1024rs' => 'ruwiki-20200708-20180215-query_explorer',
 	],
 	'dewiki' => [
-		'mlr-1024rs' => '20180316-mrmr_dewiki_v1',
+		'mlr-1024rs' => 'dewiki-20200708-20180215-query_explorer',
 	],
 	'fiwiki' => [
-		'mlr-1024rs' => '20180316-mrmr_fiwiki_v1',
+		'mlr-1024rs' => 'fiwiki-20200708-20180215-query_explorer',
 	],
 	'hewiki' => [
-		'mlr-1024rs' => '20180316-mrmr_hewiki_v1',
+		'mlr-1024rs' => 'hewiki-20200708-20180215-query_explorer',
 	],
 	'idwiki' => [
-		'mlr-1024rs' => '20180316-mrmr_idwiki_v1',
+		'mlr-1024rs' => 'idwiki-20200708-20180215-query_explorer',
 	],
 	/* TODO: re-enable once we have a model trained with the nori analyzer (T219534)
 	'kowiki' => [
-		'mlr-1024rs' => 'NEWMODEL-mrmr_kowiki_v1',
+		'mlr-1024rs' => 'kowiki-20200708-20180215-query_explorer',
 	],
 	*/
 	'nlwiki' => [
-		'mlr-1024rs' => '20180316-mrmr_nlwiki_v1',
+		'mlr-1024rs' => 'nlwiki-20200708-20180215-query_explorer',
 	],
 	'nowiki' => [
-		'mlr-1024rs' => '20180316-mrmr_nowiki_v1',
+		'mlr-1024rs' => 'nowiki-20200708-20180215-query_explorer',
 	],
 	'plwiki' => [
-		'mlr-1024rs' => '20180316-mrmr_plwiki_v1',
+		'mlr-1024rs' => 'plwiki-20200708-20180215-query_explorer',
 	],
 	'viwiki' => [
-		'mlr-1024rs' => '20180316-mrmr_viwiki_v1',
+		'mlr-1024rs' => 'viwiki-20200708-20180215-query_explorer',
 	],
 	'zhwiki' => [
-		'mlr-1024rs' => 'zhwiki-20200429-20180215-query_explorer',
+		'mlr-1024rs' => 'zhwiki-20200708-20180215-query_explorer',
 	],
 	'kowiki' => [
-		'mlr-1024rs' => 'kowiki-20200429-20180215-query_explorer',
+		'mlr-1024rs' => 'kowiki-20200708-20180215-query_explorer',
 	],
 	/* TODO: re-enable once we have a model trained with BM25 features (T219534)
 	'zhwiki' => [
-		'mlr-1024rs' => 'NEWMODEL-mrmr_zhwiki_v1',
+		'mlr-1024rs' => 'zhwiki-20200708-20180215-query_explorer',
 	],
 	*/
 ],
