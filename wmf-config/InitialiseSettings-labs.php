@@ -1206,6 +1206,10 @@ function wmfGetLabsOverrideSettings() {
 		'wgGEHelpPanelReadingModeNamespaces' => [
 			'default' => [ 2, 3, 4, 12 ]
 		],
+		'wgGEHelpPanelAskMentor' => [
+			'default' => false,
+			'cswiki' => true,
+		],
 		'wgGEHelpPanelSearchForeignAPI' => [
 			'default' => 'https://en.wikipedia.org/w/api.php',
 			'arwiki' => 'https://ar.wikipedia.org/w/api.php',
