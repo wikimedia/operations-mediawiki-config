@@ -1225,9 +1225,11 @@ function wmfGetLabsOverrideSettings() {
 			'default' => 80,
 		],
 		'wgGEHomepageNewAccountVariants' => [
-			'A' => 0,
-			'C' => 50,
-			'D' => 50,
+			'default' => [
+				'A' => 0,
+				'C' => 50,
+				'D' => 50,
+			]
 		],
 		'wgGEHomepageMentorsList' => [
 			'default' => '',
