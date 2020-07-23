@@ -4114,19 +4114,19 @@ $wgExtensionFunctions[] = function () {
 
 class ClosedWikiProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvider {
 	/**
-	 * @param \MediaWiki\Auth\AuthenticationRequest[] $reqs
+	 * @param User $user
+	 * @param bool $autocreate
+	 * @param array $options
 	 * @return \StatusValue
 	 */
-	public function testForAuthentication( array $reqs ) {
+	public function testUserForCreation( $user, $autocreate, array $options = [] ) {
 		$logger = \MediaWiki\Logger\LoggerFactory::getInstance( 'authentication' );
-		$username = \MediaWiki\Auth\AuthenticationRequest::getUsernameFromRequests( $reqs );
 		$logger->info( 'Running ClosedWikiProvider for {name}', [
-			'name' => $username
+			'name' => $user->getName()
 		] );
-		$user = User::newFromName( $username );
 		if ( $user->getId() ) { // User already exists, do not block authentication
 			$logger->info( 'User {name} passed ClosedWikiProvider check, account already exists', [
-				'name' => $username
+				'name' => $user->getName()
 			] );
 			return \StatusValue::newGood();
 		}
@@ -4138,7 +4138,7 @@ class ClosedWikiProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvid
 			$logger->info(
 				'User {name} passed ClosedWikiProvider check, has permissions',
 				[
-					'name' => $username
+					'name' => $user->getName()
 				]
 			);
 			// User can autocreate account per global permissions
@@ -4146,7 +4146,7 @@ class ClosedWikiProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvid
 		}
 		$logger->error(
 			'Account autocreation denied for {name} by ClosedWikiProvider', [
-				'name' => $username
+				'name' => $user->getName()
 			]
 		);
 		return \StatusValue::newFatal( 'authmanager-autocreate-noperm' );
