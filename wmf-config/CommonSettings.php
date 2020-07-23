@@ -4115,7 +4115,7 @@ class ClosedWikiProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvid
 	public function testForAuthentication( array $reqs ) {
 		$logger = \MediaWiki\Logger\LoggerFactory::getInstance( 'authentication' );
 		$username = \MediaWiki\Auth\AuthenticationRequest::getUsernameFromRequests( $reqs );
-		$logger->debug( 'Running ClosedWikiProvider for {name}', [
+		$logger->info( 'Running ClosedWikiProvider for {name}', [
 			'name' => $username
 		] );
 		$user = User::newFromName( $username );
