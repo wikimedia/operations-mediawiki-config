@@ -1906,7 +1906,7 @@ function wmfGetLabsOverrideSettings() {
 				'*.mediawiki.org',
 
 				// Special entry for VE-RealTime until it can be done properly
-				'visualeditor-realtime.wmflabs.org',
+				'ws://visualeditor-realtime.wmflabs.org',
 			],
 		],
 
