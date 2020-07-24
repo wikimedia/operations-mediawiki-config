@@ -1935,6 +1935,20 @@ function wmfGetLabsOverrideSettings() {
 		'wmgUseMediaModeration' => [
 			'default' => true,
 		],
+		'wgAbuseFilterEmergencyDisableThreshold' => [
+			'default' => 0.05,
+			'zhwiki' => 0.25, // T230305
+		],
+		'wgAbuseFilterEmergencyDisableCount' => [
+			'default' => [
+				'default' => 2,
+				'flow' => 50,
+			],
+			'zhwiki' => [
+				'default' => 25,
+				'flow' => 50,
+			],
+		],
 
 	];
 } # wmflLabsSettings()
