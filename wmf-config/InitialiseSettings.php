@@ -26869,5 +26869,21 @@ function wmfGetVariantSettings() {
 	'testwiki' => true, // T257506
 ],
 
+'wmgPoweredByMediaWikiIcon' => [
+	'default' => [
+		'1x' => '/static/images/poweredby_mediawiki_88x31.png',
+		'1.5x' => '/static/images/poweredby_mediawiki_132x47.png',
+		'2x' => '/static/images/poweredby_mediawiki_176x62.png'
+	]
+],
+
+'wmgWikimediaIcon' => [
+	'default' => [
+		'1x' => '/static/images/wikimedia-button.png',
+		'1.5x' => '/static/images/wikimedia-button-1.5x.png',
+		'2x' => '/static/images/wikimedia-button-2x.png'
+	]
+],
+
 ];
 }

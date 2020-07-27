@@ -1403,10 +1403,10 @@ if ( $wgDBname === 'nostalgiawiki' ) {
 }
 
 $wgFooterIcons['copyright']['copyright'] = '<a href="https://wikimediafoundation.org/">' .
-	'<img src="/static/images/wikimedia-button.png" ' .
+	'<img src="' . $wmgWikimediaIcon['1x'] . '" ' .
 		'srcset="' .
-			'/static/images/wikimedia-button-1.5x.png 1.5x, ' .
-			'/static/images/wikimedia-button-2x.png 2x' .
+			$wmgWikimediaIcon['1.5x'] . ' 1.5x, ' .
+			$wmgWikimediaIcon['2x'] . ' 2x' .
 		'" ' .
 		'width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a>';
 
@@ -2714,10 +2714,10 @@ if ( $wmgUseSubPageList3 ) {
 // Serve 'Powered by MediaWiki' badge from /static/images instead of
 // $wgResourceBasePath so we can set far-future expires.
 $wgFooterIcons['poweredby']['mediawiki']['src'] =
-	   '/static/images/poweredby_mediawiki_88x31.png';
+	   $wmgPoweredByMediaWikiIcon['1x'];
 $wgFooterIcons['poweredby']['mediawiki']['srcset'] =
-	   '/static/images/poweredby_mediawiki_132x47.png 1.5x, ' .
-	   '/static/images/poweredby_mediawiki_176x62.png 2x';
+	   $wmgPoweredByMediaWikiIcon['1.5x'] . ' 1.5x, ' .
+	   $wmgPoweredByMediaWikiIcon['2x'] . ' 2x';
 
 if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ) {
 	$wgCookieSecure = true;
