@@ -1081,6 +1081,12 @@ function wmfGetLabsOverrideSettings() {
 				'articlequality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'cleanParent' => true ],
 				'draftquality' => [ 'enabled' => true, 'namespaces' => [ 0, 118 ], 'types' => [ 1 ], 'excludeBots' => true, 'cleanParent' => true ],
 			],
+			'wikidatawiki' => [
+				'damaging' => [ 'enabled' => true ],
+				'goodfaith' => [ 'enabled' => true ],
+				'reverted' => [ 'enabled' => false ],
+				'itemquality' => [ 'enabled' => true, 'namespaces' => [ 0 ], 'cleanParent' => true ],
+			],
 		],
 		'wgOresExcludeBots' => [
 			'default' => true,
