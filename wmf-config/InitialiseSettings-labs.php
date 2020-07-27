@@ -1092,6 +1092,17 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true,
 			'enwiki' => false,
 		],
+		'wgOresModelClasses' => [
+			'wikidatawiki' => [
+				'itemquality' => [
+					'A' => 5,
+					'B' => 4,
+					'C' => 3,
+					'D' => 2,
+					'E' => 1
+				],
+			],
+		],
 		// T184668
 		'wmgUseGlobalPreferences' => [
 			// Explicitly disabled on non-CentralAuth wikis in CommonSettings.php
