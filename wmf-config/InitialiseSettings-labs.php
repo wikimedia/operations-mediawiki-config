@@ -144,18 +144,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => 'wgDebugLogFile',
 		],
 
-		// Use eventgate-main as default EventService in beta
-		// TODO: this will be replaced by wgEventStreams once
-		// EventStreamConfig extension is deployed. See:
-		// https://phabricator.wikimedia.org/T233634 and
-		// https://phabricator.wikimedia.org/T229863
-		'wgEventServiceStreamConfig' => [
-			'default' => [
-				'default' => [
-					'EventServiceName' => 'eventgate-main',
-				],
-			],
-		],
 		// Event stream configuration is a list of stream configurations.
 		// Each item in the list must have a 'stream' setting of either the specific
 		// stream name or a regex patterns to matching stream names.
