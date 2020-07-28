@@ -1967,5 +1967,9 @@ function wmfGetLabsOverrideSettings() {
 			],
 		],
 
+		'wgReadOnly' => [
+			'cswiki' => 'T259004 testing'
+		]
+
 	];
 } # wmflLabsSettings()
