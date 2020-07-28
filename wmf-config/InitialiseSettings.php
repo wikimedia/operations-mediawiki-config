@@ -26863,7 +26863,12 @@ function wmfGetVariantSettings() {
 		'1x' => '/static/images/footer/poweredby_mediawiki_88x31.png',
 		'1.5x' => '/static/images/footer/poweredby_mediawiki_132x47.png',
 		'2x' => '/static/images/footer/poweredby_mediawiki_176x62.png'
-	]
+	],
+	'trwiki' => [
+		'1x' => '/static/images/footer/poweredby_mediawiki_tr_88x31.png',
+		'1.5x' => '/static/images/footer/poweredby_mediawiki_tr_132x47.png',
+		'2x' => '/static/images/footer/poweredby_mediawiki_tr_176x62.png'
+	],
 ],
 
 'wmgWikimediaIcon' => [
@@ -26871,7 +26876,12 @@ function wmfGetVariantSettings() {
 		'1x' => '/static/images/footer/wikimedia-button.png',
 		'1.5x' => '/static/images/footer/wikimedia-button-1.5x.png',
 		'2x' => '/static/images/footer/wikimedia-button-2x.png'
-	]
+	],
+	'trwiki' => [
+		'1x' => '/static/images/footer/wikimedia-button-tr.png',
+		'1.5x' => '/static/images/footer/wikimedia-button-tr-1.5x.png',
+		'2x' => '/static/images/footer/wikimedia-button-tr-2x.png'
+	],
 ],
 
 ];
