@@ -1977,5 +1977,9 @@ function wmfGetLabsOverrideSettings() {
 			'default' => false,
 		],
 
+		// T253271 Dont deploy Cirrus AB tests to beta
+		'wgCirrusSearchUserTesting' => [
+			'default' => [],
+		],
 	];
 } # wmflLabsSettings()
