@@ -26236,10 +26236,6 @@ function wmfGetVariantSettings() {
 	'viwiki' => 80,
 ],
 
-'wgGEHomepageSuggestedEditsNewAccountInitiatedPercentage' => [
-	'default' => 0,
-],
-
 'wgGEHomepageTutorialTitle' => [
 	'default' => '',
 	'testwiki' => 'Help:Help',
