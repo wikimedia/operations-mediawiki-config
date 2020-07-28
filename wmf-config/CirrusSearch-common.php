@@ -58,9 +58,6 @@ if ( $wgCirrusSearchDefaultCluster !== $wmfDatacenter ) {
 }
 
 if ( $wmgCirrusSearchMLRModel ) {
-	if ( !is_array( $wmgCirrusSearchMLRModel ) ) {
-		$wmgCirrusSearchMLRModel = [ 'mlr-1024rs' => $wmgCirrusSearchMLRModel ];
-	}
 	foreach ( $wmgCirrusSearchMLRModel as $name => $mlrModel ) {
 		// LTR Rescore profile
 		$wgCirrusSearchRescoreProfiles[$name] = [
@@ -86,12 +83,12 @@ if ( $wmgCirrusSearchMLRModel ) {
 					'function_chain' => 'optional_chain'
 				],
 				[
-					'window' => 1024,
+					'window' => $mlrModel['window'] ?? 1024,
 					'query_weight' => 1.0,
 					'rescore_query_weight' => 10000.0,
 					'score_mode' => 'total',
 					'type' => 'ltr',
-					'model' => $mlrModel
+					'model' => $mlrModel['model']
 				],
 			],
 		];
