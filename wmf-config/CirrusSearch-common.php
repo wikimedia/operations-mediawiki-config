@@ -88,7 +88,8 @@ if ( $wmgCirrusSearchMLRModel ) {
 					'rescore_query_weight' => 10000.0,
 					'score_mode' => 'total',
 					'type' => 'ltr',
-					'model' => $mlrModel['model']
+					// assumes mlrModel is a string if not defined
+					'model' => $mlrModel['model'] ?? $mlrModel,
 				],
 			],
 		];
