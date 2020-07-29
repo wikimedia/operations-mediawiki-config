@@ -8283,6 +8283,24 @@ function wmfGetVariantSettings() {
 		104 => 'सूची',
 		105 => 'सूची_चर्चा',
 	],
+	'mswiktionary' => [
+		100 => 'Lampiran', // Appendix - T255391
+		101 => 'Perbincangan_lampiran', // Appendix talk - T255391
+		102 => 'Rima', // Rhymes - T255391
+		103 => 'Perbincangan_rima', // Rhymes talk - T255391
+		104 => 'Tesaurus', // Thesaurus - T255391
+		105 => 'Perbincangan_tesaurus', // Thesaurus talk - T255391
+		106 => 'Indeks', // Index - T255391
+		107 => 'Perbincangan_indeks', // Index talk - T255391
+		108 => 'Petikan', // Citation - T255391
+		109 => 'Perbincangan_petikan', // Citation talk - T255391
+		110 => 'Rekonstruksi', // Reconstruction - T255391
+		111 => 'Perbincangan_rekonstruksi', // Reconstruction talk - T255391
+		112 => 'Padanan_isyarat', // Sign gloss - T255391
+		113 => 'Perbincangan_padanan_isyarat', // Sign gloss talk - T255391
+		114 => 'Konkordans', // Concordance - T255391
+		115 => 'Perbincangan_konkordans', // Concordance talk - T255391
+	],
 	'ndswiktionary' => [ // T85122
 		100 => 'Anhang',
 		101 => 'Anhang_Diskuschoon',
