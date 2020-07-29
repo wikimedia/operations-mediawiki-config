@@ -20153,6 +20153,7 @@ function wmfGetVariantSettings() {
 	'nowikimedia' => true, // T152490
 	'otrs_wikiwiki' => true, // T63297
 	'outreachwiki' => true,
+	'plwikimedia' => true, // T259087
 	'ruwikimedia' => true, // T121766
 	'punjabiwikimedia' => true, // T204477
 	'sourceswiki' => true, // T201814
