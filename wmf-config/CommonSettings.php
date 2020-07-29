@@ -1364,11 +1364,7 @@ if ( $wmgUseSecureLinkFixer ) {
 
 if ( $wmgUseScore ) {
 	wfLoadExtension( 'Score' );
-	$wgScoreSafeMode = false;
-
-	# T257062 --krinkle
-	$wgScoreLilyPond = '/dev/null';
-	$wgScoreDisableExec = true;
+	$wgScoreSafeMode = true;
 	$wgScoreLilyPondFakeVersion = '2.18.2';
 }
 
