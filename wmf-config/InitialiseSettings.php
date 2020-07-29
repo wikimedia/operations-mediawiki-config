@@ -2683,6 +2683,11 @@ function wmfGetVariantSettings() {
 		'width' => 119,
 		'height' => 18,
 	],
+	'trwiki' => [
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-tr.svg',
+		'width' => 120,
+		'height' => 21,
+	],
 	'tyvwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ru.svg',
 		'width' => 126,
