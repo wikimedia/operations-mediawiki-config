@@ -26901,5 +26901,9 @@ function wmfGetVariantSettings() {
 	'default' => false,
 ],
 
+'wgReadOnly' => [
+	'muswiki' => 'T259004 testing',
+],
+
 ];
 }
