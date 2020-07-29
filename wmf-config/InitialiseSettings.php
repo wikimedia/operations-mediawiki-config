@@ -9594,7 +9594,15 @@ function wmfGetVariantSettings() {
 	'+aswikisource' => [ 104 => 1, 106 => 1 ], // T45129
 	'+bgwiki' => [ 100 => 1 ],
 	'+bgwikisource' => [ 100 => 1 ],
-	'+bnwikisource' => [ 100 => 1, 106 => 1, 108 => 1, 114 => 1 ], // T178041 - portal, author, translation and T199028 - Publisher
+	'+bnwikisource' => [
+		// T178041 - portal, author, translation and T199028 - Publisher
+		100 => 1,
+		106 => 1,
+		108 => 1,
+		114 => 1,
+
+		110 => 1, // T258982 - Work
+	],
 	'+brwikisource' => [ 100 => 1, 104 => 1 ],
 	'+cawikisource' => [ 104 => 1, 106 => 1 ],
 	'+cswiki' => [ 100 => 1, 101 => 0, 102 => 1 ],
