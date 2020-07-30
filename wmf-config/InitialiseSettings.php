@@ -14393,6 +14393,7 @@ function wmfGetVariantSettings() {
 	'wikimaniawiki' => [ 'en' , 'meta', 'wm2011', 'wm2012', 'wm2013', 'wm2014', 'wm2015', 'wm2016', 'wm2017', 'wm2018' ],
 	'wuuwiki' => [ 'en', 'th', 'fr', 'zh', ], // T19484
 	'xhwiki' => [ 'en' ], // T53327
+	'yuewiktionary' => [ 'w', 'wikt', 'incubator' ], // T258913
 	'zhwiki' => [
 		'q', 'wikt', 'voy', 'v', 's', 'n', 'b',
 		'lzh', 'wuu', 'zh-yue', 'gan', 'hak', 'cdo', 'zh-min-nan',
