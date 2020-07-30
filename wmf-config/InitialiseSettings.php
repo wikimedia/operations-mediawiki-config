@@ -6455,6 +6455,7 @@ function wmfGetVariantSettings() {
 # wgWhitelistRead @{
 'wgWhitelistRead' => [
 	'private' => [ 'Main Page', 'Special:UserLogin', 'Special:UserLogout' ],
+	'+sysop_itwiki' => [ 'Pagina principale', 'Wikipedia:Bacheca_pubblica' ],
 ],
 # @} end of wgWhitelistRead
 
