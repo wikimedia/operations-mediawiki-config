@@ -4152,7 +4152,10 @@ class ClosedWikiProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvid
 	}
 }
 
-if ( in_array( $wgDBname, MWWikiversions::readDbListFile( 'closed' ) ) ) {
+if (
+	in_array( $wgDBname, MWWikiversions::readDbListFile( 'closed' ) ) &&
+	$wmgUseCentralAuth
+) {
 	$wgAuthManagerAutoConfig['preauth'][\ClosedWikiProvider::class] = [
 		'class' => \ClosedWikiProvider::class,
 		'sort' => 0,
