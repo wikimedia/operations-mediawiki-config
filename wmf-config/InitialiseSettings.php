@@ -5666,6 +5666,9 @@ function wmfGetVariantSettings() {
 		'Portal' => 100,
 		'Portal_talk' => 101,
 	],
+	'+sysop_itwiki' => [
+		'WP' => NS_PROJECT, // T259243
+	],
 	'+tawiki' => [
 		'WP' => NS_PROJECT, // T126604
 		'WT' => NS_PROJECT_TALK, // T126604
