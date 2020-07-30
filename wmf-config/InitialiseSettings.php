@@ -15290,7 +15290,6 @@ function wmfGetVariantSettings() {
 	'specieswiki' => '/static/favicon/wikispecies.ico',
 	'stewardwiki' => '/static/favicon/community.ico',
 	'strategywiki' => '/static/favicon/community.ico',
-	'sysop_itwiki' => '/static/favicon/wmf-blue.ico',
 	'techconductwiki' => '/static/favicon/community.ico',
 	'testwiki' => '/static/favicon/black-globe.ico',
 	'test2wiki' => '/static/favicon/black-globe.ico',
