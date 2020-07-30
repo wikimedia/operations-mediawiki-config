@@ -14409,6 +14409,7 @@ function wmfGetVariantSettings() {
 	// Special wikis
 	'arbcom_cswiki' => [ 'w:cs' ], // T154799
 	'projectcomwiki' => [ 'wikipedia:en', 'meta' ], // T143138
+	'sysop_itwiki' => [ 'b', 'q', 's', 'wikt', 'n', 'v', 'de', 'es', 'en', 'fr', 'meta', 'it' ], // T259243
 ],
 # @} end of wgImportSources
 
