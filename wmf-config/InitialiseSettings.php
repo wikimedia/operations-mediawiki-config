@@ -425,6 +425,7 @@ function wmfGetVariantSettings() {
 	'liwiki' => 'Europe/Berlin',
 	'liwikinews' => 'Europe/Amsterdam',
 	'lijwikisource' => 'Europe/Rome',
+	'lldwiki' => 'Europe/Rome', // T259432
 	'ltgwiki' => 'Europe/Riga',
 	'ltwiki' => 'Europe/Vilnius',
 	'lmowiki' => 'Europe/Rome',
