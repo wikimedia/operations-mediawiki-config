@@ -27178,5 +27178,11 @@ function wmfGetVariantSettings() {
 	'default' => [ 'data-bridge' ],
 ],
 
+'wgReadOnly' => [
+	'default' => null,
+	'muswiki' => 'Maintenance: T259004: moving the wiki to a different database server',
+	'mhwiktionary' => 'Maintenance: T259004: moving the wiki to a different database server',
+],
+
 ];
 }
