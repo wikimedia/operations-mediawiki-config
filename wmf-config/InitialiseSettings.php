@@ -16336,6 +16336,7 @@ function wmfGetVariantSettings() {
 		'scan-bugs.org', // T256569
 		'*.nga.gov', // National Gallery of Art - T256518
 		'*.oireachtas.ie', // The Oireachtas - T256543
+		'gpophotoeng.gov.il', // National Photo Collection, Israel - T258857
 	],
 ],
 
