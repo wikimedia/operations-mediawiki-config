@@ -4079,7 +4079,8 @@ $parsoidDir = "$IP/vendor/wikimedia/parsoid";
 if ( ( $_SERVER['SERVERGROUP'] ?? null ) === 'parsoid' ) {
 	$wgParsoidSettings = [
 		'useSelser' => true,
-		'linting' => true
+		'linting' => true,
+		'nativeGalleryEnabled' => false,  // T214649
 	];
 
 	if ( wfHostName() === 'scandium' ) {
