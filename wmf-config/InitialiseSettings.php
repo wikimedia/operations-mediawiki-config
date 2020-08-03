@@ -8440,6 +8440,8 @@ function wmfGetVariantSettings() {
 		101 => '索引討論', // Index talk
 		102 => '附錄', // Appendix
 		103 => '附錄討論', // Appendix talk
+		104 => '重構', // Reconstruction - T258913
+		105 => '重構傾偈', // Reconstruction talk - T258913
 	],
 	'zhwiktionary' => [
 		100 => 'Appendix', // T31641 - appendix
