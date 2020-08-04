@@ -21435,6 +21435,16 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
+// Stream config default settings.
+// The EventStreamConfig extension will add these
+// settings to each entry in wgEventStreams if
+// the entry does not already have the setting.
+'wgEventStreamsDefaultSettings' => [
+	'default' => [
+		'topic_prefixes' => [ 'eqiad.', 'codfw.' ],
+	],
+],
+
 // Event stream configuration. A list of stream configurations.
 // Each item must have a 'stream' setting of either the specific
 // stream name or a regex patterns to matching stream names.
@@ -21455,17 +21465,24 @@ function wmfGetVariantSettings() {
 		// These schemas have been migrated from metawiki to the schemas/event/secondary repository at
 		// https://schema.wikimedia.org/#!/secondary/jsonschema/analytics/legacy
 		//
+		// We've configured default topic_prefixes, but legacy eventlogging_* topics
+		// do not use topic prefixes.  Explicitly set topic_prefixes to null to disable
+		// implicit topic prefixing by the EventStreamConfig extension.
+		//
 		[
 			'stream' => 'eventlogging_SearchSatisfaction',
-			'schema_title' => 'analytics/legacy/searchsatisfaction'
+			'schema_title' => 'analytics/legacy/searchsatisfaction',
+			'topic_prefixes' => null,
 		],
 		[
 			'stream' => 'eventlogging_TemplateWizard',
-			'schema_title' => 'analytics/legacy/templatewizard'
+			'schema_title' => 'analytics/legacy/templatewizard',
+			'topic_prefixes' => null,
 		],
 		[
 			'stream' => 'eventlogging_Test',
-			'schema_title' => 'analytics/legacy/test'
+			'schema_title' => 'analytics/legacy/test',
+			'topic_prefixes' => null,
 		],
 
 		// test.event stream; used to test that event stream
