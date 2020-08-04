@@ -21450,8 +21450,13 @@ function wmfGetVariantSettings() {
 // See https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/EventStreamConfig/#mediawiki-config
 'wgEventStreams' => [
 	'default' => [
+
+		// == eventgate-analytics-external streams ==
+		// These are produced by EventLogging
+		// as well as other instrumentation sources.
 		//
-		// EventLogging 'Legacy' streams.  https://phabricator.wikimedia.org/T238230
+		// EventLogging 'legacy' streams start with eventlogging_.
+		// https://phabricator.wikimedia.org/T238230
 		// These schemas have been migrated from metawiki to the schemas/event/secondary repository at
 		// https://schema.wikimedia.org/#!/secondary/jsonschema/analytics/legacy
 		//
@@ -21463,32 +21468,75 @@ function wmfGetVariantSettings() {
 			'stream' => 'eventlogging_SearchSatisfaction',
 			'schema_title' => 'analytics/legacy/searchsatisfaction',
 			'topic_prefixes' => null,
+			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
 			'stream' => 'eventlogging_TemplateWizard',
 			'schema_title' => 'analytics/legacy/templatewizard',
 			'topic_prefixes' => null,
+			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
 			'stream' => 'eventlogging_Test',
 			'schema_title' => 'analytics/legacy/test',
 			'topic_prefixes' => null,
+			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		// TODO: new Event Platform instrumentation streams go here:
+
+		// == eventgate-logging-external streams ==
+		// These are produced to the Kafka logging clusters for ingestion into logstash.
+		[
+			'stream' => 'mediawiki.client.error',
+			'schema_title' => 'mediawiki/client/error',
+			'destination_event_service' => 'eventgate-logging-external',
+		],
+		[
+			'stream' => 'kaios_app.error',
+			'schema_title' => 'mediawiki/client/error',
+			'destination_event_service' => 'eventgate-logging-external',
+		],
+
+		// == eventgate-analytics streams ==
+		// These streams are produced to Kafka jumbo-eqiad from internal producers.
+		// ...TODO
+
+		// == eventgate-main streams ==
+		// These streams are produced to Kafka main-eqiad and main-codfw.
 
 		// test.event stream; used to test that event stream
 		// services are working properly.
 		[
 			'stream' => 'test.event',
 			// https://schema.wikimedia.org/repositories/primary/jsonschema/test/event/current.yaml
-			'schema_title' => 'test/event'
+			'schema_title' => 'test/event',
+			'destination_event_service' => 'eventgate-main',
 		],
-		// EventGate instances that use dynamic stream config (just eventgate-analytics-external)
-		// need to be allowed to produce error events to streams named after the eventgate app name.
-		// E.g. 'eventgate-analytics-external.error.validation'
+
+		// EventGate instances need to be allowed to produce error events to their configured
+		// error_stream.  They default to using streams named after their service/app name,
+		// e.g. 'eventgate-analytics-external.error.validation'
+		// https://gerrit.wikimedia.org/r/plugins/gitiles/operations/deployment-charts/+/refs/heads/master/charts/eventgate/templates/_config.yaml#51
+		// error schema: https://schema.wikimedia.org/repositories/primary/jsonschema/error/current.yaml
 		[
-			'stream' => '/^eventgate-.+\.error(\..+)?/',
-			// https://schema.wikimedia.org/repositories/primary/jsonschema/error/current.yaml
-			'schema_title' => 'error'
+			'stream' => 'eventgate-logging-external.error.validation',
+			'schema_title' => 'error',
+			'destination_event_service' => 'eventgate-logging-external',
+		],
+		[
+			'stream' => 'eventgate-analyics-external.error.validation',
+			'schema_title' => 'error',
+			'destination_event_service' => 'eventgate-analyics-external',
+		],
+		[
+			'stream' => 'eventgate-analytics.error.validation',
+			'schema_title' => 'error',
+			'destination_event_service' => 'eventgate-analytics',
+		],
+		[
+			'stream' => 'eventgate-main.error.validation',
+			'schema_title' => 'error',
+			'destination_event_service' => 'eventgate-main',
 		],
 	],
 ],
