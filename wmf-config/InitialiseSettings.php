@@ -25098,7 +25098,7 @@ function wmfGetVariantSettings() {
 		],
 	],
 	'enwiki' => [
-		// T248421
+		// T257015
 		[
 			'enabled' => true,
 			'type' => 'external',
@@ -25106,7 +25106,7 @@ function wmfGetVariantSettings() {
 			'question' => 'ext-quicksurveys-growth-external-survey-question',
 			'description' => 'ext-quicksurveys-growth-external-survey-description',
 			'link' => 'ext-quicksurveys-growth-external-survey-link',
-			'coverage' => 0,
+			'coverage' => 0.001,
 			'audience' => [
 				'anons' => true,
 			],
