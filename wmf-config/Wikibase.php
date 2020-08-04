@@ -2,11 +2,7 @@
 
 // Load the Repo, and Repo extensions
 if ( !empty( $wmgUseWikibaseRepo ) ) {
-	if ( $wmfRealm == 'labs' ) {
-		wfLoadExtension( 'WikibaseRepository', "$IP/extensions/Wikibase/extension-repo.json" );
-	} else {
-		include_once "$IP/extensions/Wikibase/repo/Wikibase.php";
-	}
+	wfLoadExtension( 'WikibaseRepository', "$IP/extensions/Wikibase/extension-repo.json" );
 	if ( !empty( $wmgUseWikibaseWikidataOrg ) ) {
 		wfLoadExtension( 'Wikidata.org' );
 	}
