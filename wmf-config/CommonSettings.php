@@ -2346,7 +2346,7 @@ if ( $wmgUseUploadWizard ) {
 						'subhead' => 'mwe-upwiz-license-public-domain-usa-subhead',
 						'licenses' => [
 							'pd-us',
-							'pd-old-70-1923',
+							'pd-old-70-expired',
 							'pd-art',
 						]
 					],
