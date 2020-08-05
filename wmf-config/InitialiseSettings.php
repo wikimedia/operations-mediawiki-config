@@ -15714,11 +15714,6 @@ function wmfGetVariantSettings() {
 	'testcommonswiki' => false,
 ],
 
-'wmgFileExporterBetaFeature' => [
-	// Remove deprecated setting: T232542
-	'default' => false,
-],
-
 'wmgUseCommonsMetadata' => [
 	'default' => true,
 	'lockeddown' => false,

@@ -135,8 +135,6 @@ if ( $wmgUseFlow ) {
 }
 
 if ( $wmgUseFileExporter ) {
-	// On Beta don't bother enabling beta feature mode.
-	$wgFileExporterBetaFeature = false;
 	$wgFileExporterTarget = 'https://commons.wikimedia.beta.wmflabs.org/wiki/Special:ImportFile';
 }
 
