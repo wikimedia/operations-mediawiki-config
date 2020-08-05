@@ -21435,35 +21435,38 @@ function wmfGetVariantSettings() {
 	],
 ],
 
-// Event stream configuration. A list of stream configurations.
-// Each item must have a 'stream' setting of either the specific
-// stream name or a regex patterns to matching stream names.
-// Each item must also at minimum include the schema_title of the
-// JSONSchema that events in the stream must conform to.
-// This is used by the EventStreamConfig extension
-// to allow for remote configuration of streams.  It
-// is used by the EventLogging extension to vary e.g.
-// sample rate that browsers use when producing events,
-// as well as the eventgate-analytics-external service
-// to dynamically add event streams that it should accept
-// and validate.
-// See https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/EventStreamConfig/#mediawiki-config
+/*
+ * Event stream configuration. A list of stream configurations.
+ * Each item must have a 'stream' setting of either the specific
+ * stream name or a regex patterns to matching stream names.
+ * Each item must also at minimum include the schema_title of the
+ * JSONSchema that events in the stream must conform to.
+ * This is used by the EventStreamConfig extension
+ * to allow for remote configuration of streams.  It
+ * is used by the EventLogging extension to vary e.g.
+ * sample rate that browsers use when producing events,
+ * as well as the eventgate-analytics-external service
+ * to dynamically add event streams that it should accept
+ * and validate.
+ * See https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/EventStreamConfig/#mediawiki-config
+ */
 'wgEventStreams' => [
 	'default' => [
 
-		// == eventgate-analytics-external streams ==
-		// These are produced by EventLogging
-		// as well as other instrumentation sources.
-		//
-		// EventLogging 'legacy' streams start with eventlogging_.
-		// https://phabricator.wikimedia.org/T238230
-		// These schemas have been migrated from metawiki to the schemas/event/secondary repository at
-		// https://schema.wikimedia.org/#!/secondary/jsonschema/analytics/legacy
-		//
-		// We've configured default topic_prefixes, but legacy eventlogging_* topics
-		// do not use topic prefixes.  Explicitly set topic_prefixes to null to disable
-		// implicit topic prefixing by the EventStreamConfig extension.
-		//
+		/**
+		 * == eventgate-analytics-external streams ==
+		 * These are produced by EventLogging
+		 * as well as other instrumentation sources.
+		 *
+		 * EventLogging 'legacy' streams start with eventlogging_.
+		 * https://phabricator.wikimedia.org/T238230
+		 * These schemas have been migrated from metawiki to the schemas/event/secondary repository at
+		 * https://schema.wikimedia.org/#!/secondary/jsonschema/analytics/legacy
+		 *
+		 * We've configured default topic_prefixes, but legacy eventlogging_* topics
+		 * do not use topic prefixes.  Explicitly set topic_prefixes to null to disable
+		 * implicit topic prefixing by the EventStreamConfig extension.
+		 */
 		[
 			'stream' => 'eventlogging_SearchSatisfaction',
 			'schema_title' => 'analytics/legacy/searchsatisfaction',
@@ -21484,8 +21487,10 @@ function wmfGetVariantSettings() {
 		],
 		// TODO: new Event Platform instrumentation streams go here:
 
-		// == eventgate-logging-external streams ==
-		// These are produced to the Kafka logging clusters for ingestion into logstash.
+		/*
+		 * == eventgate-logging-external streams ==
+		 * These are produced to the Kafka logging clusters for ingestion into logstash.
+		 */
 		[
 			'stream' => 'mediawiki.client.error',
 			'schema_title' => 'mediawiki/client/error',
@@ -21497,27 +21502,69 @@ function wmfGetVariantSettings() {
 			'destination_event_service' => 'eventgate-logging-external',
 		],
 
-		// == eventgate-analytics streams ==
-		// These streams are produced to Kafka jumbo-eqiad from internal producers.
-		// ...TODO
+		/*
+		 * == eventgate-analytics streams ==
+		 * These streams are produced to Kafka jumbo-eqiad from internal producers.
+		 */
+		// TODO
 
-		// == eventgate-main streams ==
-		// These streams are produced to Kafka main-eqiad and main-codfw.
+		/*
+		 * == eventgate-main streams ==
+		 * These streams are produced to Kafka main-eqiad and main-codfw.
+		 */
+		// TODO
 
 		// test.event stream; used to test that event stream
 		// services are working properly.
+		// TODO: This stream is being replaced by eventgate instnace specific test.event streams
+		// below.  It will be removed once all eventgate instances are using their own test.event
+		// streams.
 		[
 			'stream' => 'test.event',
 			// https://schema.wikimedia.org/repositories/primary/jsonschema/test/event/current.yaml
 			'schema_title' => 'test/event',
-			'destination_event_service' => 'eventgate-main',
 		],
 
-		// EventGate instances need to be allowed to produce error events to their configured
-		// error_stream.  They default to using streams named after their service/app name,
-		// e.g. 'eventgate-analytics-external.error.validation'
-		// https://gerrit.wikimedia.org/r/plugins/gitiles/operations/deployment-charts/+/refs/heads/master/charts/eventgate/templates/_config.yaml#51
-		// error schema: https://schema.wikimedia.org/repositories/primary/jsonschema/error/current.yaml
+		/*
+		 * == Streams needed for eventgate functionality ==
+		 * EventGate instances some streams defined for error logging and monitoring:
+		 *
+		 * - <event_service_name>.test.event
+		 * 		Used for the k8s readinessProbe. An eventgate instance will not be considered
+		 * 		ready until it accepts a POST of a test/event.
+		 * 		See: https://gerrit.wikimedia.org/r/plugins/gitiles/operations/deployment-charts/+/refs/heads/ * master/charts/eventgate/templates/deployment.yaml#60
+		 * 		test/event schema: https://schema.wikimedia.org/repositories//primary/jsonschema/test/event/latest
+		 *
+		 * - <event_service_name>.error.valiidation
+		 * 		EventGate produce error events to their configured error_stream.
+		 * 		They default to using streams named after their service/app name,
+		 * 		e.g. 'eventgate-analytics-external.error.validation'
+		 * 		See: https://gerrit.wikimedia.org/r/plugins/gitiles/operations/deployment-charts/+/refs/heads/ * master/charts/eventgate/templates/_config.yaml#51
+		 *   	error schema: https://schema.wikimedia.org/repositories/primary/jsonschema/error/latest
+		 */
+
+		// eventgate test.event streams
+		[
+			'stream' => 'eventgate-logging-external.test.event',
+			'schema_title' => 'test/event',
+			'destination_event_service' => 'eventgate-logging-external',
+		],
+		[
+			'stream' => 'eventgate-analyics-external.test.event',
+			'schema_title' => 'test/event',
+			'destination_event_service' => 'eventgate-analyics-external',
+		],
+		[
+			'stream' => 'eventgate-analytics.test.event',
+			'schema_title' => 'test/event',
+			'destination_event_service' => 'eventgate-analytics',
+		],
+		[
+			'stream' => 'eventgate-main.test.event',
+			'schema_title' => 'test/event',
+			'destination_event_service' => 'eventgate-main',
+		],
+		// eventgate error.validation streams
 		[
 			'stream' => 'eventgate-logging-external.error.validation',
 			'schema_title' => 'error',
