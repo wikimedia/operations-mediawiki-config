@@ -16778,7 +16778,6 @@ function wmfGetVariantSettings() {
 		'cx',                                // [LangEng] 2019-11-07 - ContentTranslation
 		'twocolconflict',                    // [WMDE TW] 2019-10-30 – New edit conflict view
 		'visualeditor-visualdiffpage',       // [Editing] 2019-11-06 – Visual diffs
-		'fileexporter',                      // [WMDE TW] 2018-12-07 – FileExporter
 		'tmh-videojs',                       // [Readers] 2019-12-12 - New video player
 		'discussiontools-betaenable',        // [Editing] 2020-09-12 – Reply tool
 	],
@@ -16799,12 +16798,8 @@ function wmfGetVariantSettings() {
 ],
 
 'wmgFileExporterBetaFeature' => [
-	'default' => true,
-	'dewiki' => false,
-	'fawiki' => false,
-	'kowiki' => false,
-	'mrwiki' => false,
-	'sourceswiki' => false,
+	// Remove deprecated setting: T232542
+	'default' => false,
 ],
 
 'wmgUseCommonsMetadata' => [

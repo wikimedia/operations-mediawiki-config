@@ -3375,7 +3375,6 @@ if ( $wmgUseUniversalLanguageSelector ) {
 
 if ( $wmgUseFileExporter ) {
 	wfLoadExtension( 'FileExporter' );
-	$wgFileExporterBetaFeature = $wmgFileExporterBetaFeature;
 
 	if ( $wmgUseFileExporter !== true ) {
 		$wgFileExporterTarget = $wmgUseFileExporter;
