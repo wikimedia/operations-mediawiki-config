@@ -11,7 +11,8 @@ $wgPoolCounterConf = [
 		'class' => 'PoolCounter_Client',
 		'timeout' => 15,
 		'workers' => 2,
-		'maxqueue' => 100
+		'maxqueue' => 100,
+		'fastStale' => true, // T250248
 	],
 	'CirrusSearch-Search' => [
 		'class' => 'PoolCounter_Client',
@@ -90,8 +91,3 @@ $wgPoolCountClientConf = [
 	'timeout' => 0.5,
 	'connect_timeout' => 0.01
 ];
-
-// Test of T250248
-if ( $wgDBname === 'testwiki' ) {
-	$wgPoolCounterConf['ArticleView']['fastStale'] = true;
-}
