@@ -26444,7 +26444,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => 'ويكيبيديا:مشروع_فريق_النمو/قائمة_المتطوعين',
 	'cswiki' => 'Wikipedie:Potřebuji_pomoc/Mentoři',
 	'euwiki' => 'Laguntza:Mentoreak',
-	'fawiki' => 'مدیاویکی:Newusermessage-signatures',
+	'fawiki' => 'ویکی‌پدیا:فهرست مربیان',
 	'frwiki' => 'Projet:Aide et accueil/Volontaires',
 	'frwiktionary' => 'Wiktionnaire:Mentorat',
 	'huwiki' => 'Wikipédia:Szerkesztők megtartása/Mentorok',
