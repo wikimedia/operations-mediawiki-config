@@ -18555,6 +18555,7 @@ function wmfGetVariantSettings() {
 'wgCheckUserEnableSpecialInvestigate' => [
 	'default' => false,
 	'testwiki' => true,
+	'frwiki' => true,
 ],
 
 // ----------- CheckUser end ----------
