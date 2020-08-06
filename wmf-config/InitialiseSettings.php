@@ -26341,6 +26341,11 @@ function wmfGetVariantSettings() {
 	],
 ],
 
+'wgGEHelpPanelAskMentor' => [
+	'default' => false,
+	'cswiki' => true,
+],
+
 'wgGEHomepageEnabled' => [
 	'default' => false,
 	'testwiki' => true,
