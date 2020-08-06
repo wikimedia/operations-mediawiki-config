@@ -21567,7 +21567,7 @@ function wmfGetVariantSettings() {
 		[
 			'stream' => 'eventgate-analytics-external.test.event',
 			'schema_title' => 'test/event',
-			'destination_event_service' => 'eventgate-analyics-external',
+			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
 			'stream' => 'eventgate-analytics.test.event',
@@ -21588,7 +21588,7 @@ function wmfGetVariantSettings() {
 		[
 			'stream' => 'eventgate-analytics-external.error.validation',
 			'schema_title' => 'error',
-			'destination_event_service' => 'eventgate-analyics-external',
+			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
 			'stream' => 'eventgate-analytics.error.validation',
