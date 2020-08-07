@@ -24099,8 +24099,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgCirrusSearchNearMatchWeight' => [
-	'default' => 2,
-	'commonswiki' => 10, // T245642
+	'default' => 10, //T257922
 ],
 
 'wgCirrusSearchNamespaceWeights' => [
