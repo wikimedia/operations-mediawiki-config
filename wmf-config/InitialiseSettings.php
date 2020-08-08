@@ -6475,6 +6475,7 @@ function wmfGetVariantSettings() {
 	'zhwiki' => 7 * 3600 * 24, // T16624
 	'zh_classicalwiki' => 5 * 86400, // T228141
 	'zhwikibooks' => 7 * 3600 * 24, // T185182
+	'zhwikinews' => 7 * 3600 * 24, // T259869
 	'zhwikiquote' => 7 * 86400, // T189289
 	'zhwiktionary' => 7 * 86400, // T187018
 ],
@@ -6504,6 +6505,7 @@ function wmfGetVariantSettings() {
 	'zhwiki' => 50, // T16624
 	'zh_classicalwiki' => 25, // T228141
 	'zhwikibooks' => 10, // T185182
+	'zhwikinews' => 20, // T259869
 	'zhwikiquote' => 10, // T189289
 	'zhwikiversity' => 10, // T202599
 	'zhwikivoyage' => 10, // T198006
