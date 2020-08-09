@@ -5485,6 +5485,9 @@ function wmfGetVariantSettings() {
 	'+ptwikibooks' => [
 		'Wikibooks_Discussão' => NS_PROJECT_TALK,
 	],
+	'+ptwikinews' => [
+		'WN' => NS_PROJECT, // T259959
+	],
 	'+ptwikisource' => [
 		'Author' => 102,
 		'Author_talk' => 103,
