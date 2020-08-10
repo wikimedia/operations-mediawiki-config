@@ -435,28 +435,34 @@ if ( $wgDBname == 'apiportalwiki' ) {
 	// Needs integrating properly, but this works for now as
 	// IS-labs doesn't have groupOverrides etc
 
-	$wgGroupPermissions['user']['move'] = false;
-	$wgGroupPermissions['user']['move-subpages'] = false;
-	$wgGroupPermissions['user']['edit'] = false;
-	$wgGroupPermissions['user']['createpage'] = false;
+	// T259661
+	$wgDefaultSkin = 'wikimediaapiportal';
+	$wgSkipSkins = [ 'vector', 'monobook', 'modern', 'cologneblue', 'timeless', 'minerva' ];
+
+	// T259569
+	$wgAddGroups['bureaucrat'][] = 'docseditor';
+	$wgRemoveGroups['bureaucrat'][] = 'docseditor';
+
+	// T259657
+	$wgGroupPermissions['*']['docseditor'] = false;
+	$wgGroupPermissions['*']['move'] = false;
+	$wgGroupPermissions['*']['move-subpages'] = false;
+	$wgGroupPermissions['*']['createpage'] = false;
+	$wgGroupPermissions['*']['edit'] = false;
+	$wgGroupPermissions['*']['createtalk'] = false;
+
+	$wgGroupPermissions['user']['edit'] = true; // limited by $wgNamespaceProtection
+	$wgGroupPermissions['user']['createtalk'] = true;
 
 	$wgGroupPermissions['docseditor']['docseditor'] = true;
 	$wgGroupPermissions['docseditor']['move'] = true;
 	$wgGroupPermissions['docseditor']['move-subpages'] = true;
-	$wgGroupPermissions['docseditor']['edit'] = true;
 	$wgGroupPermissions['docseditor']['createpage'] = true;
 
 	$wgGroupPermissions['sysop']['docseditor'] = true;
 	$wgGroupPermissions['sysop']['move'] = true;
 	$wgGroupPermissions['sysop']['move-subpages'] = true;
-	$wgGroupPermissions['sysop']['edit'] = true;
 	$wgGroupPermissions['sysop']['createpage'] = true;
-
-	$wgGroupPermissions['bureaucrat']['docseditor'] = true;
-	$wgGroupPermissions['bureaucrat']['move'] = true;
-	$wgGroupPermissions['bureaucrat']['move-subpages'] = true;
-	$wgGroupPermissions['bureaucrat']['edit'] = true;
-	$wgGroupPermissions['bureaucrat']['createpage'] = true;
 
 	$wgNamespaceProtection[NS_MAIN] = [ 'docseditor' ];
 	$wgNamespaceProtection[NS_PROJECT] = [ 'docseditor' ];
@@ -465,6 +471,11 @@ if ( $wgDBname == 'apiportalwiki' ) {
 	$wgNamespaceProtection[NS_TEMPLATE] = [ 'docseditor' ];
 	$wgNamespaceProtection[NS_HELP] = [ 'docseditor' ];
 	$wgNamespaceProtection[NS_CATEGORY] = [ 'docseditor' ];
+	$wgNamespaceProtection[NS_USER] = [ 'docseditor' ]; // T259568
+
+	// to enable subpage navigation
+	$wgNamespacesWithSubpages[NS_MAIN] = true;
+
 }
 
 } # end safeguard
