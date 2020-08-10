@@ -21227,7 +21227,6 @@ function wmfGetVariantSettings() {
 	"sswiki" => true,
 	"stqwiki" => true,
 	"stwiki" => true,
-	"suwiki" => true,
 	"svwiki" => true,
 	"szlwiki" => true,
 	"szywiki" => true,
