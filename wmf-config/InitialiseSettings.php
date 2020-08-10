@@ -21547,7 +21547,41 @@ function wmfGetVariantSettings() {
 		 * == eventgate-analytics streams ==
 		 * These streams are produced to Kafka jumbo-eqiad from internal producers.
 		 */
-		// TODO
+		[
+			'stream' => 'mediawiki.api-request',
+			'schema_title' => 'mediawiki/api/request',
+			'destination_event_service' => 'eventgate-analytics',
+		],
+		[
+			'stream' => 'mediawiki.cirrussearch-request',
+			'schema_title' => 'mediawiki/cirrussearch/request',
+			'destination_event_service' => 'eventgate-analytics',
+		],
+		[
+			'stream' => 'mediawiki.api-request',
+			'schema_title' => 'mediawiki/api/request',
+			'destination_event_service' => 'eventgate-analytics',
+		],
+		[
+			'stream' => 'wdqs-internal.sparql-query',
+			'schema_title' => 'sparql/query',
+			'destination_event_service' => 'eventgate-analytics',
+		],
+		[
+			'stream' => 'wdqs-external.sparql-query',
+			'schema_title' => 'sparql/query',
+			'destination_event_service' => 'eventgate-analytics',
+		],
+		[
+			'stream' => 'cqs-external.sparql-query',
+			'schema_title' => 'sparql/query',
+			'destination_event_service' => 'eventgate-analytics',
+		],
+		[
+			'stream' => '/^swift\.(.+\.)?upload-complete$/',
+			'schema_title' => 'swift/upload/complete',
+			'destination_event_service' => 'eventgate-analytics',
+		],
 
 		/*
 		 * == eventgate-main streams ==
