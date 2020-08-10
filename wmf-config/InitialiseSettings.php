@@ -6547,6 +6547,7 @@ function wmfGetVariantSettings() {
 	'srwiktionary' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
 	'testwiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T61084
 	'viwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T215493
+	'zhwiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T260012
 ],
 # @} end of wgRestrictionLevels
 
@@ -12236,6 +12237,8 @@ function wmfGetVariantSettings() {
 			'skipcaptcha' => true, // T198167
 		],
 		'transwiki' => [ 'suppressredirect' => true, ], // T250972
+		'templateeditor' => [ 'templateeditor' => true, ], // T260012
+		'sysop' => [ 'templateeditor' => true ], // T260012
 	],
 	'+zh_classicalwiki' => [
 		'editor' => [ 'rollback' => true ], // T188064
@@ -13198,6 +13201,7 @@ function wmfGetVariantSettings() {
 			'filemover', // T195247
 			'eventparticipant', // T198167
 			'transwiki', // T250972
+			'templateeditor', // T260012
 		],
 	],
 	'+zhwikibooks' => [
@@ -14039,6 +14043,7 @@ function wmfGetVariantSettings() {
 			'filemover', // T195247
 			'eventparticipant', //T198167
 			'transwiki', // T250972
+			'templateeditor', // T260012
 		],
 	],
 	'+zhwikibooks' => [
