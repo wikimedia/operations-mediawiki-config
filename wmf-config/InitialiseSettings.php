@@ -7639,6 +7639,10 @@ function wmfGetVariantSettings() {
 		118 => 'ฉบับร่าง', // T216322, Draft
 		119 => 'คุยเรื่องฉบับร่าง', // Draft talk
 	],
+	'tiwiki' => [
+		100 => 'ማዕጾ', // T259295 Portal
+		101 => 'ማዕጾ_ምይይጥ', // T259295 Portal talk
+	],
 	'tlwiki' => [
 		100 => 'Portada', // Portal
 		101 => 'Usapang_Portada', // Portal talk
