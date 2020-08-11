@@ -1827,9 +1827,6 @@ function wmfGetLabsOverrideSettings() {
 		'-wgSpecialSearchFormOptions' => [
 			'wikidatawiki' => [ 'showDescriptions' => true ],
 		],
-		'wmgUseTheWikipediaLibrary' => [
-			'default' => true,
-		],
 		'wgTwlEditCount' => [
 			'default' => 100,
 		],
