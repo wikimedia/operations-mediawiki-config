@@ -10718,6 +10718,7 @@ function wmfGetVariantSettings() {
 			'browsearchive' => true,
 			'deletedhistory' => true,
 			'deletedtext' => true,
+			'investigate' => true, // T260171
 		], // T23044
 		'sysop' => [ 'editextendedsemiprotected' => true ], // T131109
 	],
