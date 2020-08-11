@@ -21583,7 +21583,111 @@ function wmfGetVariantSettings() {
 		 * == eventgate-main streams ==
 		 * These streams are produced to Kafka main-eqiad and main-codfw.
 		 */
-		// TODO
+		[
+			'stream' => '/^mediawiki\\.job\\..+/' ,
+			'schema_title' => 'mediawiki/job',
+			'destination_event_service' => 'eventgate-main',
+		],
+		[
+			'stream' => 'mediawiki.centralnotice.campaign-change',
+			'schema_title' => 'mediawiki/centralnotice/campaign/change',
+			'destination_event_service' => 'eventgate-main',
+		],
+		[
+			'stream' => 'mediawiki.centralnotice.campaign-create',
+			'schema_title' => 'mediawiki/centralnotice/campaign/create',
+			'destination_event_service' => 'eventgate-main',
+		],
+		[
+			'stream' => 'mediawiki.centralnotice.campaign-delete',
+			'schema_title' => 'mediawiki/centralnotice/campaign/delete',
+			'destination_event_service' => 'eventgate-main',
+		],
+		[
+			'stream' => 'mediawiki.page-create',
+			'schema_title' => 'mediawiki/revision/create',
+			'destination_event_service' => 'eventgate-main',
+		],
+		[
+			'stream' => 'mediawiki.page-delete',
+			'schema_title' => 'mediawiki/page/delete',
+			'destination_event_service' => 'eventgate-main',
+		],
+		[
+			'stream' => 'mediawiki.page-links-change',
+			'schema_title' => 'mediawiki/page/links-change',
+			'destination_event_service' => 'eventgate-main',
+		],
+		[
+			'stream' => 'mediawiki.page-move',
+			'schema_title' => 'mediawiki/page/move',
+			'destination_event_service' => 'eventgate-main',
+		],
+		[
+			'stream' => 'mediawiki.page-properties-change',
+			'schema_title' => 'mediawiki/page/properties-change',
+			'destination_event_service' => 'eventgate-main',
+		],
+		[
+			'stream' => 'mediawiki.page-restrictions-change',
+			'schema_title' => 'mediawiki/page/restrictions-change',
+			'destination_event_service' => 'eventgate-main',
+		],
+		[
+			'stream' => 'mediawiki.page-suppress',
+			'schema_title' => 'mediawiki/page/delete',
+			'destination_event_service' => 'eventgate-main',
+		],
+		[
+			'stream' => 'mediawiki.page-undelete',
+			'schema_title' => 'mediawiki/page/undelete',
+			'destination_event_service' => 'eventgate-main',
+		],
+		[
+			'stream' => 'mediawiki.recentchange',
+			'schema_title' => 'mediawiki/recentchange',
+			'destination_event_service' => 'eventgate-main',
+		],
+		[
+			'stream' => 'mediawiki.revision-create',
+			'schema_title' => 'mediawiki/revision/create',
+			'destination_event_service' => 'eventgate-main',
+		],
+		[
+			'stream' => 'mediawiki.revision-score',
+			'schema_title' => 'mediawiki/revision/score',
+			'destination_event_service' => 'eventgate-main',
+		],
+		[
+			'stream' => 'mediawiki.revision-tags-change',
+			'schema_title' => 'mediawiki/revision/tags-change',
+			'destination_event_service' => 'eventgate-main',
+		],
+		[
+			'stream' => 'mediawiki.revision-visibility-change',
+			'schema_title' => 'mediawiki/revision/visibility-change',
+			'destination_event_service' => 'eventgate-main',
+		],
+		[
+			'stream' => 'mediawiki.user-blocks-change',
+			'schema_title' => 'mediawiki/user/blocks-change',
+			'destination_event_service' => 'eventgate-main',
+		],
+		[
+			'stream' => 'resource_change',
+			'schema_title' => 'resource_change',
+			'destination_event_service' => 'eventgate-main',
+		],
+		[
+			'stream' => 'resource-purge',
+			'schema_title' => 'resource_change',
+			'destination_event_service' => 'eventgate-main',
+		],
+		[
+			'stream' => 'change-prop.transcludes.resource-change',
+			'schema_title' => 'resource_change',
+			'destination_event_service' => 'eventgate-main',
+		],
 
 		// test.event stream; used to test that event stream
 		// services are working properly.
