@@ -18983,8 +18983,18 @@ function wmfGetVariantSettings() {
 
 'wgMFRemovableClasses' => [
 	'default' => [
-		'base' => [ '.navbox', '.nomobile', '.mbox-image' ],
-		'beta' => [ '.navbox', '.nomobile', '.mbox-image' ],
+		'base' => [
+			'.navbox',
+			'.nomobile',
+			'.mbox-image',
+			'.vertical-navbox'
+		],
+		'beta' => [
+			'.navbox',
+			'.nomobile',
+			'.mbox-image',
+			'.vertical-navbox'
+		],
 		'HTML' => [],
 	],
 ],
