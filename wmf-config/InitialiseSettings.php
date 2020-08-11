@@ -14587,6 +14587,7 @@ function wmfGetVariantSettings() {
 	'tawiktionary' => [ 'en', 'bn', 'w:en', 'w:ta', 'commons' ], // T196445
 	'tcywiki' => [ 'en', 'kn', 'te', 'c', 'meta' ], // T143397
 	'tewiki' => [ 'en', 'commons' ], // T43880
+	'tewikibooks' => [ 'w:te' ], // T260107
 	'tewikisource' => [ 'w', 'b', 'en' ], // T94531
 	'tewikiquote' => [ 'w', 'en' ], // T91635
 	'testwiki' => [ 'de', 'en', 'es', 'fr', 'ja', 'commons', 'meta', 'incubator', 'strategy', 'wikinews:en', 'wikinews:es', 'mediawikiwiki' ], // T154879
