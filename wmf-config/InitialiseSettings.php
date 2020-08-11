@@ -21558,11 +21558,6 @@ function wmfGetVariantSettings() {
 			'destination_event_service' => 'eventgate-analytics',
 		],
 		[
-			'stream' => 'mediawiki.api-request',
-			'schema_title' => 'mediawiki/api/request',
-			'destination_event_service' => 'eventgate-analytics',
-		],
-		[
 			'stream' => 'wdqs-internal.sparql-query',
 			'schema_title' => 'sparql/query',
 			'destination_event_service' => 'eventgate-analytics',
