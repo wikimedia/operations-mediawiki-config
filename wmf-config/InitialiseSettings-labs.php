@@ -389,6 +389,10 @@ function wmfGetLabsOverrideSettings() {
 		'wgVectorLayoutMaxWidth' => [
 			'default' => true,
 		],
+		// T249363: Enable search in header mode
+		'wgVectorIsSearchInHeader' => [
+			'default' => true,
+		],
 
 		'wmgCommonsMetadataForceRecalculate' => [
 			'default' => true,
