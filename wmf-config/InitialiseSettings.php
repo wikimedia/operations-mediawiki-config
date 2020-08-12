@@ -73,6 +73,7 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'donatewiki' => true,
 	'testwiki' => true,
+	'thankyouwiki' => true,
 	'foundationwiki' => true,
 ],
 
@@ -214,6 +215,7 @@ function wmfGetVariantSettings() {
 	'strategywiki' => 'en',
 	'sysop_itwiki' => 'it', // T256545
 	'tenwiki' => 'en',
+	'thankyouwiki' => 'en',
 	'transitionteamwiki' => 'en',
 	'usabilitywiki' => 'en',
 	'votewiki' => 'en', // T132667, T148352, T207560
@@ -1322,6 +1324,7 @@ function wmfGetVariantSettings() {
 	'testwiki' => '/static/images/project-logos/testwiki.png',
 	'testwikidatawiki' => '/static/images/project-logos/testwikidatawiki.png',
 	'transitionteamwiki' => '/static/images/project-logos/transitionteamwiki.png', // T50379
+	'thankyouwiki' => '/static/images/project-logos/donatewiki.png', // always same as donatewiki, see T259002
 	'usabilitywiki' => '/static/images/project-logos/usabilitywiki.png',
 	'votewiki' => '/static/images/project-logos/votewiki.png',
 	'wg_enwiki' => '/static/images/project-logos/wg_enwiki.png',
@@ -1888,6 +1891,7 @@ function wmfGetVariantSettings() {
 	'test2wiki' => '/static/images/project-logos/test2wiki-1.5x.png',
 	'testcommonswiki' => '/static/images/project-logos/commonswiki-1.5x.png', // T203343
 	'testwiki' => '/static/images/project-logos/testwiki-1.5x.png', // T150618
+	'thankyouwiki' => '/static/images/project-logos/donatewiki-1.5x.png',
 	'votewiki' => '/static/images/project-logos/votewiki-1.5x.png',
 	'wikidatawiki' => '/static/images/project-logos/wikidatawiki-1.5x.png', // T230120
 	'wikimania2018wiki' => '/static/images/project-logos/wikimania2018wiki-1.5x.png', // T194340
@@ -2437,6 +2441,7 @@ function wmfGetVariantSettings() {
 	'test2wiki' => '/static/images/project-logos/test2wiki-2x.png',
 	'testcommonswiki' => '/static/images/project-logos/commonswiki-2x.png', // T203343
 	'testwiki' => '/static/images/project-logos/testwiki-2x.png', // T150618
+	'thankyouwiki' => '/static/images/project-logos/donatewiki-2x.png', // always same as donatewiki, see T259002
 	'votewiki' => '/static/images/project-logos/votewiki-2x.png',
 	'wikidatawiki' => '/static/images/project-logos/wikidatawiki-2x.png', // T230120
 	'wikimania2018wiki' => '/static/images/project-logos/wikimania2018wiki-2x.png', // T194340
@@ -3099,6 +3104,7 @@ function wmfGetVariantSettings() {
 	'techconductwiki' => '//techconduct.wikimedia.org', // T165977
 	'testwiki' => '//test.wikipedia.org',
 	'testwikidatawiki' => '//test.wikidata.org',
+	'thankyouwiki' => '//thankyou.wikipedia.org',
 	'transitionteamwiki' => '//transitionteam.wikimedia.org',
 	'usabilitywiki' => '//usability.wikimedia.org',
 	'votewiki' => '//vote.wikimedia.org',
@@ -3197,6 +3203,7 @@ function wmfGetVariantSettings() {
 	'techconductwiki' => 'https://techconduct.wikimedia.org', // T165977
 	'testwiki' => 'https://test.wikipedia.org',
 	'testwikidatawiki' => 'https://test.wikidata.org',
+	'thankyouwiki' => 'https://thankyou.wikipedia.org',
 	'transitionteamwiki' => 'https://transitionteam.wikimedia.org',
 	'usabilitywiki' => 'https://usability.wikimedia.org',
 	'votewiki' => 'https://vote.wikimedia.org',
@@ -3678,6 +3685,7 @@ function wmfGetVariantSettings() {
 	'tewiktionary' => 'విక్షనరీ',
 	'tenwiki' => 'Wikipedia 10',
 	'tgwiki' => 'Википедиа',
+	'thankyouwiki' => 'Thank You',
 	'thwiki' => 'วิกิพีเดีย',
 	'thwikibooks' => 'วิกิตำรา', // T48153
 	'thwikiquote' => 'วิกิคำคม',
@@ -6458,6 +6466,7 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'donatewiki' => true,
 	'internalwiki' => true,
+	'thankyouwiki' => true,
 	'collabwiki' => true, // T31269
 ],
 
@@ -14819,6 +14828,7 @@ function wmfGetVariantSettings() {
 	'foundationwiki' => false,
 	'pflwiki' => false, // T205055
 	'rmwiki' => false,
+	'thankyouwiki' => false,
 	'zhwiki' => false,
 ],
 
@@ -14828,6 +14838,7 @@ function wmfGetVariantSettings() {
 	'donatewiki' => true, // whee restricted site
 	'foundationwiki' => true, // whee restricted site
 	'sewikimedia' => true, // chapter site, only sysops can upload, T63947
+	'thankyouwiki' => true,
 ],
 
 // Note that changing this for wikis with CirrusSearch will remove pages in the
@@ -15330,6 +15341,7 @@ function wmfGetVariantSettings() {
 	'test2wiki' => '/static/favicon/black-globe.ico',
 	'testwikidatawiki' => '/static/favicon/testwikidata.ico',
 	'transitionteamwiki' => '/static/favicon/wmf.ico',
+	'thankyouwiki' => '/static/favicon/wmf.ico',
 	'usabilitywiki' => '/static/favicon/usability.ico',
 	'votewiki' => '/static/favicon/wmf.ico',
 	'wikidatawiki' => '/static/favicon/wikidata.ico',

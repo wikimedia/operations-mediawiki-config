@@ -64,6 +64,7 @@ $wgLBFactoryConf = [
 	'muswiki'      => 's5',
 	'shwiki'       => 's5',
 	'srwiki'       => 's5',
+	'thankyouwiki' => 's5',
 
 	# s6: large wikis
 	'frwiki'       => 's6',
