@@ -896,10 +896,6 @@ $wgGrantPermissions['checkuser']['checkuser-log'] = true;
 // Corresponding messages are mwoauth-grant-* in WikimediaMessages.
 $wgGrantPermissionGroups['checkuser'] = 'administration';
 
-// Extension:CheckUser's investigate right is only conditionally available, needs to be usable
-// by global groups (T247645)
-$wgAvailableRights[] = 'investigate';
-
 // Rights needed to interact with wikibase
 $wgGrantPermissions['createeditmovepage']['property-create'] = true;
 $wgGrantPermissions['editpage']['item-term'] = true;
