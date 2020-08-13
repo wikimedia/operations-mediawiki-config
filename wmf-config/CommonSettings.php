@@ -2376,12 +2376,6 @@ if ( $wmgUseUploadWizard ) {
 				],
 			],
 		],
-		'licenses' => [
-			'pd-old-70-1923' => [
-				'msg' => 'mwe-upwiz-license-pd-old-70-1923',
-				'templates' => [ 'PD-old-70-expired' ],
-			],
-		],
 	];
 
 	$wgUploadWizardConfig['enableChunked'] = 'opt-in';
