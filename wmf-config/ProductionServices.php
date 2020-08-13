@@ -23,13 +23,13 @@ $common = [
 	'udp2log' => 'mwlog1001.eqiad.wmnet:8420',
 	'xenon' => 'mwlog1001.eqiad.wmnet',
 
-	// MongoDB XHGui backend is being phased out (T180761); its MariaDB
-	// replacement isn't quite ready yet (T254795).  If both services are
-	// specified, we'll write to both.  The MariaDB username and password
-	// are set in PrivateSettings.php, as $wmgXhguiDBuser and
-	// $wmgXhguiDBpassword, respectively.
+	// This refers to the old, MongoDB-based backend.  It is being
+	// replaced by xhgui-pdo (T180761); for a brief period, we will send
+	// profiles to both destinations, then it will be removed.
 	'xhgui' => 'mongodb://tungsten.eqiad.wmnet:27017',
-	'xhgui-pdo' => null,
+
+	// Database username and password for XHGui are set in PrivateSettings.php
+	'xhgui-pdo' => 'mysql:host=m2-master.eqiad.wmnet;dbname=xhgui',
 
 	// Statsd is not active-active.
 	'statsd' => 'statsd.eqiad.wmnet',

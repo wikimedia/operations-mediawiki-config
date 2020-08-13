@@ -11,7 +11,7 @@ return [
 	'eqiad' => [
 		'udp2log' => 'deployment-fluorine02.eqiad.wmflabs:8420',
 		'xenon' => 'deployment-fluorine02.deployment-prep.eqiad.wmflabs',
-		'xhgui' => 'mongodb://deployment-xhgui01.deployment-prep.eqiad.wmflabs:27017',
+		'xhgui' => null,
 		'xhgui-pdo' => 'mysql:host=deployment-mdb01.deployment-prep.eqiad.wmflabs;dbname=xhgui',
 		'statsd' => 'cloudmetrics1001.eqiad.wmnet',
 		'search-chi' => [
