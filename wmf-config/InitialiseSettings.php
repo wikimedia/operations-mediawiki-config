@@ -21826,7 +21826,6 @@ function wmfGetVariantSettings() {
 	'default' => [
 		'TemplateWizard' => '/analytics/legacy/templatewizard/1.0.0',
 		'Test' => '/analytics/legacy/test/1.1.0',
-		'SearchSatisfaction' => '/analytics/legacy/searchsatisfaction/1.1.0',
 		// Temporary override for https://phabricator.wikimedia.org/T254606.
 		// Analytics Eng is having to do a lot of manual work to import
 		// this data properly into Hive because of this bug.
