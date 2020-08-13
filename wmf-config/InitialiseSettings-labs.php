@@ -65,6 +65,7 @@ function wmfGetLabsOverrideSettings() {
 		],
 
 		'wgLanguageCode' => [
+			'apiportalwiki' => 'en',
 			'deploymentwiki' => 'en',
 		],
 
