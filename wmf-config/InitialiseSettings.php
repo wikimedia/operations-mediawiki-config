@@ -10974,7 +10974,6 @@ function wmfGetVariantSettings() {
 			'browsearchive' => true,
 			'deletedhistory' => true,
 			'deletedtext' => true,
-			'investigate' => true, // T260171
 		], // T23044
 		'sysop' => [ 'editextendedsemiprotected' => true ], // T131109
 	],
@@ -12170,9 +12169,6 @@ function wmfGetVariantSettings() {
 		'accountcreator' => [
 			'override-antispoof' => true,
 			'tboverride' => true,
-		],
-		'checkuser' => [
-			'investigate' => true, // T251932
 		],
 		'filemover' => [ 'movefile' => true ], // T32121
 		'user' => [
