@@ -465,10 +465,6 @@ function wmfGetLabsOverrideSettings() {
 		'wmgExtraLanguageNames' => [
 			'default' => [ 'en-rtl' => 'English (rtl)' ],
 			'wikidata' => [],
-			'commonswiki' => [
-				'smn' => 'anarâškielâ',	  // T222309
-				'sms' => 'sääʹmǩiõll',	  // T222309
-			],
 		],
 
 		'wmgUseQuickSurveys' => [
