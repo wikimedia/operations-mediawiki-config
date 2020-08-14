@@ -23,10 +23,9 @@ $common = [
 	'udp2log' => 'mwlog1001.eqiad.wmnet:8420',
 	'xenon' => 'mwlog1001.eqiad.wmnet',
 
-	// This refers to the old, MongoDB-based backend.  It is being
-	// replaced by xhgui-pdo (T180761); for a brief period, we will send
-	// profiles to both destinations, then it will be removed.
-	'xhgui' => 'mongodb://tungsten.eqiad.wmnet:27017',
+	// This refers to the old, MongoDB-based backend, which has been
+	// replaced by xhgui-pdo (T180761).
+	'xhgui' => null,
 
 	// Database username and password for XHGui are set in PrivateSettings.php
 	'xhgui-pdo' => 'mysql:host=m2-master.eqiad.wmnet;dbname=xhgui',
