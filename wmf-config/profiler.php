@@ -172,27 +172,25 @@ function wmfSetupTideways( $options ) {
 				// Create sanitized copies of $_SERVER, $_ENV, and $_GET that are
 				// appropiate for exposing publicly to the web.
 				// This intentionally omits 'REQUEST_URI' (added later)
-				$keyWhitelist = array_flip( [
+				$serverKeys = array_flip( [
+					'HTTP_X_REQUEST_ID', 'UNIQUE_ID',
 					'HTTP_HOST', 'HTTP_X_WIKIMEDIA_DEBUG', 'REQUEST_METHOD',
 					'REQUEST_START_TIME', 'REQUEST_TIME', 'REQUEST_TIME_FLOAT',
-					'SERVER_ADDR', 'SERVER_NAME', 'THREAD_TYPE', 'action'
+					'SERVER_NAME'
 				] );
-				$server = array_intersect_key( $_SERVER, $keyWhitelist );
-				$env = array_intersect_key( $_ENV, $keyWhitelist );
-				$get = array_intersect_key( $_GET, $keyWhitelist );
+				$getKeys = array_flip( [ 'action' ] );
+				$server = array_intersect_key( $_SERVER, $serverKeys );
+				$get = array_intersect_key( $_GET, $getKeys );
+				$env = [];
 
-				// Add unique ID
-				$server['UNIQUE_ID'] = $reqId;
-				$env['UNIQUE_ID'] = $reqId;
-
-				// Add hostname as web server name
-				// (SERVER_NAME is e.g. wikipedia.org, SERVER_ADDR is the LVS service name,
-				// e.g. appservers.svc)
-				$env['HOSTNAME'] = posix_uname()['nodename'];
+				// Add hostname of current web server.
+				// - Not SERVER_NAME which is usually identical to HTTP_HOST, e.g. wikipedia.org.
+				// - Not SERVER_ADDR which the local IP address, e.g. 10.xx.xx.xx.
+				// Get what we're looking for from uname.
+				$server['HOSTNAME'] = php_uname()['n'];
 
 				// Re-insert scrubbed URL as REQUEST_URL:
 				$server['REQUEST_URI'] = $url;
-				$env['REQUEST_URI'] = $url;
 
 				$data['meta'] = [
 					'url'              => $url,
