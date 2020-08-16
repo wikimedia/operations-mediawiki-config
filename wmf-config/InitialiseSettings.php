@@ -2718,6 +2718,11 @@ function wmfGetVariantSettings() {
 	],
 
 	// Wiktionary
+	'eswiktionary' => [
+		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-es.svg',
+		'width' => 125,
+		'height' => 17,
+	],
 	'frwiktionary' => [
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-fr.svg',
 		'width' => 114,
