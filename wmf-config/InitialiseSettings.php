@@ -21584,6 +21584,11 @@ function wmfGetVariantSettings() {
 		 * These streams are produced to Kafka jumbo-eqiad from internal producers.
 		 */
 		[
+			'stream' => 'api-gateway.request',
+			'schema_title' => 'api-gateway/request',
+			'destination_event_service' => 'eventgate-analytics',
+		],
+		[
 			'stream' => 'mediawiki.api-request',
 			'schema_title' => 'mediawiki/api/request',
 			'destination_event_service' => 'eventgate-analytics',
