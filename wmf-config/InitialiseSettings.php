@@ -23394,7 +23394,7 @@ function wmfGetVariantSettings() {
 	'wikidatawiki' => [ 'P31', 'P279' ], // instance of, subclass of
 	'testwikidatawiki' => [ 'P7', 'P700' ], // test only: Item and ExternalId
 	'commonswiki' => [ 'P180' ], // depicts
-	'testcommonswiki' => [ 'P180' ], // depicts
+	'testcommonswiki' => [ 'P292' ], // depicts
 ],
 
 'wmgWikibaseSearchIndexPropertiesExclude' => [
@@ -23453,7 +23453,7 @@ function wmfGetVariantSettings() {
 		'depicts' => 'P180',
 	],
 	'testcommonswiki' => [
-		'depicts' => 'P180',
+		'depicts' => 'P292',
 	],
 ],
 
@@ -23467,7 +23467,7 @@ function wmfGetVariantSettings() {
 		'P180' => 'https://commons.wikimedia.org/wiki/Special:MyLanguage/Commons:Depicts',
 	],
 	'testcommonswiki' => [
-		'P180' => 'https://commons.wikimedia.org/wiki/Special:MyLanguage/Commons:Depicts',
+		'P292' => 'https://commons.wikimedia.org/wiki/Special:MyLanguage/Commons:Depicts',
 	],
 ],
 
