@@ -7131,6 +7131,10 @@ function wmfGetVariantSettings() {
 		100 => 'Портал',
 		101 => 'Портал_беседа',
 	],
+	'bjnwiki' => [
+		100 => 'Lawang', // T259429 Portal
+		101 => 'Pamandiran_Lawang', // T259429 Portal talk
+	],
 	'bnwiki' => [
 		100 => 'প্রবেশদ্বার',
 		101 => 'প্রবেশদ্বার_আলোচনা',
