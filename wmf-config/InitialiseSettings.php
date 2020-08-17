@@ -21828,6 +21828,15 @@ function wmfGetVariantSettings() {
 		'Test' => '/analytics/legacy/test/1.1.0',
 		'SearchSatisfaction' => '/analytics/legacy/searchsatisfaction/1.1.0',
 	],
+	'+group0' => [
+		// Temporary override for https://phabricator.wikimedia.org/T254606.
+		// Analytics Eng is having to do a lot of manual work to import
+		// this data properly into Hive because of this bug.
+		// Until the owners change the schema revision in their code
+		// and get it deployed, override it here.
+		'NavigationTiming' => 20373802,
+		'ResourceTiming' => 20373861,
+	],
 ],
 
 // Enable Mediawiki client side (browser) Javascript error logging.
