@@ -279,6 +279,10 @@ function wmfGetLabsOverrideSettings() {
 			'default' => 'http://deployment-push-notifications01.deployment-prep.eqiad1.wikimedia.cloud:8900/v1/message',
 		],
 
+		'wgEchoPushMaxSubscriptionsPerUser' => [
+			'default' => 10,
+		],
+
 		# FIXME: make that settings to be applied
 		'-wgShowExceptionDetails' => [
 			'default' => true,
