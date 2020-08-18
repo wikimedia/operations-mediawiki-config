@@ -18335,7 +18335,8 @@ function wmfGetVariantSettings() {
 	],
 ],
 
-// Should VisualEditor be enabled for all users by default ('beta' mode)
+// Should VisualEditor be enabled for all users by default.
+// When false, VE will be a 'Beta feature' instead.
 'wmgVisualEditorDefault' => [
 	'default' => true,
 	'visualeditor-nondefault' => false,
