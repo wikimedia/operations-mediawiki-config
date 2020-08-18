@@ -177,6 +177,47 @@ class CirrusTest extends WgConfTestCase {
 		return $config;
 	}
 
+	public function provideUserTestingBuckets() {
+		// No need to check multiple wikis, or even a real wiki.
+		// When this was written convention is to use same config
+		// for all wikis, per-wiki usage is controlled by frontend.
+		$wgConf = $this->loadWgConf( 'unittest' );
+		$conf = $wgConf->settings['wgCirrusSearchUserTesting']['default'];
+		$tests = [];
+		foreach ( $conf as $name => $testConfig ) {
+			$tests[$name] = [ $testConfig ];
+		}
+		return $tests;
+	}
+
+	private function assertArrayKeys( $required, $optional, $array ) {
+		$this->assertIsArray( $array );
+
+		$found = array_keys( $array );
+		$missingRequired = array_diff( $required, $found );
+		$this->assertEquals( [], $missingRequired );
+
+		$allowed = array_merge( $required, $optional );
+		$extraKeys = array_diff( $found, $allowed );
+		$this->assertEquals( [], $extraKeys );
+	}
+
+	/**
+	 * @dataProvider provideUserTestingBuckets
+	 */
+	public function testUserTestingBucketConfiguration( $config ) {
+		// Sanity check that they are formatted correctly.
+		$this->assertArrayKeys( [ 'buckets' ], [ 'globals' ], $config );
+
+		$triggers = [];
+		foreach ( $config['buckets'] as $name => $bucketConf ) {
+			$this->assertArrayKeys( [ 'trigger' ], [ 'globals' ], $bucketConf );
+			$this->assertIsString( $bucketConf['trigger'] );
+			$triggers[] = $bucketConf['trigger'];
+		}
+		$this->assertEquals( count( $triggers ), count( array_unique( $triggers ) ) );
+	}
+
 	public function providePerClusterShardsAndReplicas() {
 		$wgConf = $this->loadWgConf( 'unittest' );
 		$shards = $wgConf->settings['wmgCirrusSearchShardCount'];

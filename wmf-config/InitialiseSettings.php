@@ -24494,28 +24494,30 @@ function wmfGetVariantSettings() {
 			],
 		],
 		'mediasearch_commons' => [ // T254388: perfield_builder+classic_noboostlinks vs mediainfo_fulltext+classic_noboostlinks
-			'control' => [
-				'trigger' => 'control',
-				'globals' => [
-					// 'wgCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
-					// 'wgCirrusSearchRescoreProfile' => 'classic_noboostlinks',
-				]
-			],
-			'mediasearch_commons' => [
-				'trigger' => 'mediasearch_commons',
-				'globals' => [
-					'wgCirrusSearchFullTextQueryBuilderProfile' => 'mediainfo_fulltext',
-					'wgCirrusSearchRescoreProfile' => 'classic_noboostlinks',
-				]
-			],
-			'mediasearch_commons_int' => [
-				'trigger' => 'mediasearch_commons_int',
-				'globals' => [
-					'wgCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
-					'wgCirrusSearchRescoreProfile' => 'classic_noboostlinks',
-					'wgCirrusSearchInterleaveConfig' => [
-						'CirrusSearchFullTextQueryBuilderProfile' => 'mediainfo_fulltext',
-						'CirrusSearchRescoreProfile' => 'classic_noboostlinks',
+			'buckets' => [
+				'control' => [
+					'trigger' => 'control',
+					'globals' => [
+						// 'wgCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
+						// 'wgCirrusSearchRescoreProfile' => 'classic_noboostlinks',
+					]
+				],
+				'mediasearch_commons' => [
+					'trigger' => 'mediasearch_commons',
+					'globals' => [
+						'wgCirrusSearchFullTextQueryBuilderProfile' => 'mediainfo_fulltext',
+						'wgCirrusSearchRescoreProfile' => 'classic_noboostlinks',
+					]
+				],
+				'mediasearch_commons_int' => [
+					'trigger' => 'mediasearch_commons_int',
+					'globals' => [
+						'wgCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
+						'wgCirrusSearchRescoreProfile' => 'classic_noboostlinks',
+						'wgCirrusSearchInterleaveConfig' => [
+							'CirrusSearchFullTextQueryBuilderProfile' => 'mediainfo_fulltext',
+							'CirrusSearchRescoreProfile' => 'classic_noboostlinks',
+						]
 					]
 				]
 			]
