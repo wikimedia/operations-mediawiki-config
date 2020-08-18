@@ -2573,8 +2573,6 @@ if ( $wmgUseVisualEditor ) {
 	// User access configuration
 	if ( $wmgVisualEditorDefault ) {
 		$wgDefaultUserOptions['visualeditor-enable'] = 1;
-		// TODO: Remove this after $wgVisualEditorEnableBetaFeature is deployed
-		$wgHiddenPrefs[] = 'visualeditor-enable'; // T50666
 	} else {
 		$wgDefaultUserOptions['visualeditor-enable'] = 0;
 		$wgVisualEditorEnableBetaFeature = true;
