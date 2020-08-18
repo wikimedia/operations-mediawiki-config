@@ -25690,7 +25690,7 @@ function wmfGetVariantSettings() {
 'wgKartographerStaticMapframe' => [
 	'default' => false,
 	'wikipedia' => true,
-	'test2wiki' => false,
+	'testwiki' => false,
 	'bgwiki' => false,
 	'mediawikiwiki' => true,
 	'uawikimedia' => true, // T164574
