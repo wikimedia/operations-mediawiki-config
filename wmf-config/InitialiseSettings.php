@@ -2745,6 +2745,11 @@ function wmfGetVariantSettings() {
 	// Wikinews
 
 	// Wikisource
+	'trwikisource' => [ // T260658
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-tr.svg',
+		'width' => 120,
+		'height' => 21,
+	],
 
 	// Wikiversity
 	'ptwikiversity' => [
