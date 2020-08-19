@@ -16548,6 +16548,7 @@ function wmfGetVariantSettings() {
 		'*.nga.gov', // National Gallery of Art - T256518
 		'*.oireachtas.ie', // The Oireachtas - T256543
 		'gpophotoeng.gov.il', // National Photo Collection, Israel - T258857
+		'clinton.presidentiallibraries.us', // T259927 - US Government works
 	],
 ],
 
