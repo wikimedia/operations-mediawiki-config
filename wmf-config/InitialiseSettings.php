@@ -10197,6 +10197,7 @@ function wmfGetVariantSettings() {
 	],
 	'+arzwiki' => [
 		'rollbacker' => [ 'rollback' => true ], // T258100
+		'autopatrolled' => [ 'autopatrol' => true ], // T260761
 	],
 	'+azwiki' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T196488
@@ -12672,7 +12673,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'rollbacker', ], // T189206
 	],
 	'+arzwiki' => [
-		'sysop' => [ 'rollbacker', ], // T258100
+		'sysop' => [ 'rollbacker', 'autopatrolled', ], // T258100
 	],
 	'+azbwiki' => [
 		'bureaucrat' => [ 'interface-editor', ], // T109755
@@ -13478,7 +13479,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'rollbacker', ], // T189206
 	],
 	'+arzwiki' => [
-		'sysop' => [ 'rollbacker', ], // T258100
+		'sysop' => [ 'rollbacker', 'autopatrolled', ], // T258100
 	],
 	'+azbwiki' => [
 		'bureaucrat' => [
