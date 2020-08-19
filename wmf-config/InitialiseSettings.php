@@ -23591,6 +23591,10 @@ function wmfGetVariantSettings() {
 	'wikitech' => false,
 	'lockeddown' => false,
 ],
+'wgPageImagesNamespaces' => [
+	'default' => [ NS_MAIN ],
+	'commonswiki' => [ NS_MAIN, NS_CATEGORY ],
+],
 'wgPageImagesLeadSectionOnly' => [
 	// T166251 & T166493
 	'default' => false,
@@ -23603,9 +23607,6 @@ function wmfGetVariantSettings() {
 'wgPageImagesAPIDefaultLicense' => [
 	'default' => 'free',
 	'wikidata' => 'any', // T159678
-],
-'wmgPageImagesExtraNamespaces' => [
-	'default' => false,
 ],
 
 'wmgUseTorBlock' => [
