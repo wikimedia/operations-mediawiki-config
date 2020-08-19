@@ -14814,6 +14814,8 @@ function wmfGetVariantSettings() {
 	'hywiki' => [
 		NS_USER => 'noindex,follow', // T257112
 		NS_USER_TALK => 'noindex,follow', // T257112
+		118 => 'noindex,follow', // T260804
+		119 => 'noindex,follow', // T260804
 	],
 	'iswiki' => [ // T231179
 		NS_TALK => 'noindex',
