@@ -18210,6 +18210,10 @@ function wmfGetVariantSettings() {
 	'+htwiki' => [
 		'Project' => true, // T130177
 	],
+	'+hywiki' => [
+		'Սևագիր' => true, //Draft, T260825
+		'Վիքինախագիծ' => true, //Wikiproject, T260825
+	],
 	'+jawiki' => [
 		'Portal' => true, // T97313
 	],
