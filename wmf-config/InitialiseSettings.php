@@ -26252,6 +26252,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => true,
 	'hywiki' => true,
 	'kowiki' => true,
+	'ruwiki' => true,
 	'srwiki' => true,
 	'ukwiki' => true,
 	'viwiki' => true,
@@ -26270,12 +26271,15 @@ function wmfGetVariantSettings() {
 	'huwiki' => true,
 	'hywiki' => true,
 	'kowiki' => true,
+	'ruwiki' => true,
 	'srwiki' => true,
 	'ukwiki' => true,
 ],
 
 'wgWelcomeSurveyExperimentalGroups' => [
 	'default' => [ 'exp2_target_specialpage' => [ 'range' => '0-9' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
+	// 80/20 A/B test on ruwiki; consider removing this some time in October 2020, see T259768
+	'ruwiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-7' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
 ],
 
 'wgGEHelpPanelEnabled' => [
@@ -26291,6 +26295,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => true,
 	'hywiki' => true,
 	'kowiki' => true,
+	'ruwiki' => true,
 	'srwiki' => true,
 	'ukwiki' => true,
 	'viwiki' => true,
@@ -26331,6 +26336,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => 'Wikipédia:Kocsmafal (kezdőknek)',
 	'hywiki' => 'Վիքիպեդիա:Հարցեր',
 	'kowiki' => '위키백과:질문방/{{Y-M|0}}',
+	'ruwiki' => 'Википедия:Форум/Помощь начинающим',
 	'srwiki' => 'Википедија:Трг/Помоћ',
 	'ukwiki' => 'Вікіпедія:Кнайпа (допомога)',
 	'viwiki' => 'Wikipedia:Giúp_sử_dụng_Wikipedia',
@@ -26349,6 +26355,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => 'Wikipédia:Bevezetés',
 	'hywiki' => 'Օգնություն:Գլխացանկ',
 	'kowiki' => '위키백과:도움말',
+	'ruwiki' => 'Википедия:Справка',
 	'srwiki' => 'Википедија:Помоћ',
 	'ukwiki' => 'Вікіпедія:Довідка',
 	'viwiki' => 'Trợ_giúp:Mục_lục',
@@ -26648,6 +26655,33 @@ function wmfGetVariantSettings() {
 			'id' => 'notability',
 		]
 	],
+	'ruwiki' => [
+		[
+			'title' => 'Википедия:Оформление статей',
+			'text' => 'Оформление статей',
+			'id' => 'style',
+		],
+		[
+			'title' => 'Википедия:Как править статьи',
+			'text' => 'Как править статьи',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'Справка:Введение в изображения с Визуальным редактором/1',
+			'text' => 'Как добавить изображение',
+			'id' => 'images',
+		],
+		[
+			'title' => 'Справка:Введение в сноски с Визуальным редактором/1',
+			'text' => 'Как добавить ссылку на источник',
+			'id' => 'references',
+		],
+		[
+			'title' => 'Википедия:Мастер статей',
+			'text' => 'Как создать новую статью',
+			'id' => 'articlewizard',
+		],
+	],
 	'srwiki' => [
 		[
 			'title' => 'Википедија:Добро_дошли',
@@ -26750,6 +26784,7 @@ function wmfGetVariantSettings() {
 	'hywiki' => true,
 	'kowiki' => true,
 	'srwiki' => true,
+	'trwiki' => true,
 	'ukwiki' => true,
 	'viwiki' => true,
 ],
@@ -26840,6 +26875,10 @@ function wmfGetVariantSettings() {
 		'create' => '위키백과:새 문서 만들기',
 		'image' => '도움말:그림 사용하기',
 	],
+	'ruwiki' => [
+		'create' => 'Википедия:Как создать статью',
+		'image' => 'Википедия:Иллюстрирование',
+	],
 	'srwiki' => [
 		'create' => 'Википедија:Креирање чланака',
 		'image' => 'Википедија:Упутства/Слике',
@@ -26871,6 +26910,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => 80,
 	'hywiki' => 80,
 	'kowiki' => 80,
+	'ruwiki' => 80,
 	'srwiki' => 80,
 	'ukwiki' => 80,
 	'viwiki' => 80,
@@ -26889,6 +26929,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => 'Wikipédia:Bevezetés',
 	'hywiki' => 'Օգնություն:Դասընթաց',
 	'kowiki' => '위키백과:빠른 길라잡이',
+	'ruwiki' => 'Справка:Введение',
 	'srwiki' => 'Помоћ:Уређивање',
 	'ukwiki' => 'Довідка:Ознайомлення',
 	'viwiki' => 'Wikipedia:Sách_hướng_dẫn',
@@ -26907,6 +26948,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => 'Wikipédia:Szerkesztők megtartása/Mentorok',
 	'hywiki' => 'Վիքիպեդիա:Օգնություն/Ստորագրություններ',
 	'kowiki' => '위키백과:새_사용자_경험/새_사용자_멘토',
+	'ruwiki' => 'Проект:Помощь начинающим/Наставники',
 	'srwiki' => 'Википедија:Трг/Помоћ/Ментори',
 	'ukwiki' => 'Вікіпедія:Кнайпа (допомога)/Наставники',
 	'viwiki' => 'Wikipedia:Dự án Phát triển cộng đồng/Danh sách thành viên cố vấn',
