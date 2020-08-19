@@ -187,7 +187,7 @@ function wmfSetupTideways( $options ) {
 				// - Not SERVER_NAME which is usually identical to HTTP_HOST, e.g. wikipedia.org.
 				// - Not SERVER_ADDR which the local IP address, e.g. 10.xx.xx.xx.
 				// Get what we're looking for from uname.
-				$server['HOSTNAME'] = php_uname()['n'];
+				$server['HOSTNAME'] = php_uname( 'n' );
 
 				// Re-insert scrubbed URL as REQUEST_URL:
 				$server['REQUEST_URI'] = $url;
