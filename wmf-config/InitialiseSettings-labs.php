@@ -357,11 +357,6 @@ function wmfGetLabsOverrideSettings() {
 				'beta' => true
 			]
 		],
-		'wgMFSpecialCaseMainPage' => [
-			// We don't want to support this
-			// See https://www.mediawiki.org/wiki/Recommendations_for_mobile_friendly_articles_on_Wikimedia_wikis#Make_sure_your_main_page_is_mobile_friendly
-			'default' => false,
-		],
 		'wgMFUseDesktopSpecialWatchlistPage' => [
 			'default' => [
 				'base' => false,
