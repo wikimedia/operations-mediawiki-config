@@ -11,7 +11,7 @@
 #
 # This for PRODUCTION.
 #
-# For MediaWiki, this is included from wmf-config/CommonSettings.php.
+# For MediaWiki, this is included from ../src/ServiceConfig.php
 #
 # ATTENTION: do NOT add new services below without asking SRE to set up a
 # service proxy for it first. See T244843 for the rationale.

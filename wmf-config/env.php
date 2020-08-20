@@ -10,7 +10,7 @@
 #
 # This both for PRODUCTION and for Beta Cluster.
 #
-# For MediaWiki, this is included in multiversion/MWRealm.php.
+# For MediaWiki, this is included in ../src/ServiceConfig.php
 #
 
 @$cluster = trim( file_get_contents( '/etc/wikimedia-cluster' ) ?: 'no-cluster-configured!' );

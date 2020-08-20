@@ -4,7 +4,7 @@
 # LabsServices.php statically defines all service hostnames/ips
 # for any service used by MediaWiki in the Beta Cluster.
 #
-# Included from: wmf-config/CommonSettings.php.
+# Included from: ../src/ServiceConfig.php
 #
 
 return [
