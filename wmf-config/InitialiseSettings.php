@@ -2740,10 +2740,10 @@ function wmfGetVariantSettings() {
 		'width' => 120,
 		'height' => 18,
 	],
-	'zh' => [ // T258552
-		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-zh-c.svg',
-		'width' => 91,
-		'height' => 21,
+	'zhwiki' => [ // T258552, T260908
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-zh.svg',
+		'width' => 105,
+		'height' => 22,
 	],
 	'zh_classicalwiki' => [ // T173408
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-zh-c.svg',
@@ -2973,10 +2973,10 @@ function wmfGetVariantSettings() {
 		'width' => 117,
 		'height' => 10,
 	],
-	'zhwiki' => [
-		'src' => '/static/images/mobile/copyright/wikipedia-tagline-zh-c.svg',
-		'width' => 95,
-		'height' => 10,
+	'zhwiki' => [ // T258552, T260908
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-zh.svg',
+		'width' => 102,
+		'height' => 13,
 	],
 	'zh_classicalwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-zh-c.svg',
