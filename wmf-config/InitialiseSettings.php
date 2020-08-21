@@ -24437,6 +24437,11 @@ function wmfGetVariantSettings() {
 	'labswiki' => [
 		12 => 1.0, // Put NS_HELP on equal footing with NS_MAIN
 	],
+	'metawiki' => [
+		// T260569
+		200 => 0.6, // grants
+		202 => 0.6, // research
+	],
 ],
 
 // Enable the "Give us feedback" link after search results on enwiki
