@@ -14503,6 +14503,7 @@ function wmfGetVariantSettings() {
 	'mlwikibooks' => [ 'w', 'en' ], // T52156
 	'mlwikisource' => [ 'w', 'en', 'w:en', ],
 	'mlwikiquote' => [ 'en', 'w:en', 'w' ],
+	'mlwiktionary' => [ 'w:en', 'w:ml', 'wikt:en' ], // T260716
 	'mrwiki' => [ 'meta', 'commons', 'en', 'hi' ], // T96807
 	'mrwikisource' => [ 'w', 'b', 'en', 'sa', 'oldwikisource', 'w:en', 'c' ], // T105116
 	'mswiki' => [ 'id' ], // T18033
