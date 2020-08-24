@@ -2747,8 +2747,8 @@ function wmfGetVariantSettings() {
 	],
 	'zh_classicalwiki' => [ // T173408
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-zh-c.svg',
-		'width' => 91,
-		'height' => 21,
+		'width' => 111,
+		'height' => 23,
 	],
 
 	// Wiktionary
@@ -2985,8 +2985,8 @@ function wmfGetVariantSettings() {
 	],
 	'zh_classicalwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-zh-c.svg',
-		'width' => 95,
-		'height' => 10,
+		'width' => 109,
+		'height' => 13,
 	],
 
 	// Wiktionary
