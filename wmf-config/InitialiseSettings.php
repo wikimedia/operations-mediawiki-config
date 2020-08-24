@@ -25864,13 +25864,13 @@ function wmfGetVariantSettings() {
 'wgKartographerEnableMapFrame' => [
 	'default' => true,
 	// Disable for FlaggedRevs wikis with $wgFlaggedRevsOverride=true (T191585)
+	// Elaboration on this issue is at T229726#5419327
 	'bswiki' => false,
 	'dewiki' => false,
 	'huwiki' => false,
 	'idwiki' => false,
 	'plwiki' => false,
 	'sqwiki' => false,
-	'trwiki' => false,
 	'zh_classicalwiki' => false,
 ],
 
