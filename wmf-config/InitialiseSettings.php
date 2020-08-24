@@ -16555,6 +16555,7 @@ function wmfGetVariantSettings() {
 		'*.oireachtas.ie', // The Oireachtas - T256543
 		'gpophotoeng.gov.il', // National Photo Collection, Israel - T258857
 		'clinton.presidentiallibraries.us', // T259927 - US Government works
+		'retrobibliothek.de', // T261012
 	],
 ],
 
