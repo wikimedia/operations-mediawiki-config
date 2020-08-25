@@ -27099,6 +27099,7 @@ function wmfGetVariantSettings() {
 		'Q5135744', //religious institute
 		'Q486972', //human settlement
 		'Q826939', //canard
+		'Q1286', //Alps
 
 		// time oriented terms
 		'Q1187312', // yesterday
@@ -27117,6 +27118,7 @@ function wmfGetVariantSettings() {
 		'Q8441', // man
 		'Q1378024', // lady
 		'Q255274', // white collar worker
+		'Q368758', // white collar worker redirect
 		'Q327968', // facial expression
 		'Q41055', // forehead
 		'Q2472587', // people
