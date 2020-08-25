@@ -370,8 +370,12 @@ class MWMultiVersion {
 
 		$wikiversions = include $phpFilename;
 
-		if ( !is_array( $wikiversions ) ) {
+		if ( $wikiversions === false ) {
 			self::error( "Unable to open $phpFilename.\n" );
+		}
+
+		if ( !is_array( $wikiversions ) ) {
+			self::error( "$phpFilename did not return an array as expected.\n" );
 		}
 
 		$version = isset( $wikiversions[$this->db] ) ? $wikiversions[$this->db] : false;
