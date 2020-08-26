@@ -2907,6 +2907,7 @@ if ( $wmgUseTranslate ) {
 	];
 
 	if ( $wgDBname === 'commonswiki' ) {
+		$wgTranslateMessageNamespaces[] = NS_MEDIAWIKI;
 		$wgHooks['TranslatePostInitGroups'][] = function ( &$cc ) {
 			$id = 'wiki-translatable';
 			$mg = new WikiMessageGroup( $id, 'translatable-messages' );
