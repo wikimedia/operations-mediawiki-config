@@ -21736,7 +21736,27 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		// TODO: new Event Platform instrumentation streams go here:
+		/*
+		 * == Streams for testing Event Platform-based instruments ==
+		 */
+		[
+			'stream' => 'test.instrumentation',
+			'schema_title' => 'analytics/test',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		// For verifying sampling:
+		[
+			'stream' => 'test.instrumentation.sampled',
+			'schema_title' => 'analytics/test',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'sampling' => [
+				'rate' => 0.5,
+			],
+		],
+		/*
+		 * == Streams for Event Platform-based analytics instruments ==
+		 */
+		// TODO: new Event Platform instrumentation streams go here
 
 		/*
 		 * == eventgate-logging-external streams ==
@@ -21984,7 +22004,9 @@ function wmfGetVariantSettings() {
 	'default' => [
 		'eventlogging_SearchSatisfaction',
 		'eventlogging_TemplateWizard',
-		'eventlogging_Test'
+		'eventlogging_Test',
+		'test.instrumentation',
+		'test.instrumentation.sampled',
 	]
 ],
 
