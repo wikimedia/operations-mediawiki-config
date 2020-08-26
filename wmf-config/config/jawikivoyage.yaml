@@ -1,0 +1,10 @@
+# WARNING: This file is publicly viewable on the Web. Do not put private data here.
+# This is the configuration file for settings specific to the Japanese Wikivoyage.
+# See the inheritance tree to find where most settings are defined.
+
+inheritsFrom:
+  - wikivoyage
+  - small
+  - s5
+  - commonsuploads
+  - wikidataclient

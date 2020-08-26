@@ -3654,6 +3654,7 @@ function wmfGetVariantSettings() {
 	'jamwiki' => 'Wikipidia',
 	'jawikinews' => 'ウィキニュース',
 	'jawikiversity' => 'ウィキバーシティ',
+	'jawikivoyage' => 'ウィキボヤージュ',
 	'kawiki' => 'ვიკიპედია',
 	'kawikibooks' => 'ვიკიწიგნები',
 	'kawikiquote' => 'ვიკიციტატა',
