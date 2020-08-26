@@ -2860,7 +2860,7 @@ function wmfGetVariantSettings() {
 	],
 	'elwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-el.svg',
-		'width' => 125,
+		'width' => 126,
 		'height' => 11,
 	],
 	'eswiki' => [
@@ -2960,8 +2960,8 @@ function wmfGetVariantSettings() {
 	],
 	'thwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-th.svg',
-		'width' => 117,
-		'height' => 13,
+		'width' => 96,
+		'height' => 18,
 	],
 	'trwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-tr.svg',
