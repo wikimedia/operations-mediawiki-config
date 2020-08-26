@@ -23865,6 +23865,12 @@ function wmfGetVariantSettings() {
 	'wikidataclient-test' => 'testwikidata',
 ],
 
+'wmgWikibaseClientItemAndPropertySourceName' => [
+	'default' => null,
+	'wikidataclient' => 'wikidata',
+	'wikidataclient-test' => 'testwikidata',
+],
+
 'wmgUseTemplateSandbox' => [
 	'default' => true,
 	'lockeddown' => false,
