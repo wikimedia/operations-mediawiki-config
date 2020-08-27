@@ -26783,6 +26783,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => true,
 	'hywiki' => true,
 	'kowiki' => true,
+	'ruwiki' => true,
 	'srwiki' => true,
 	'trwiki' => true,
 	'ukwiki' => true,
