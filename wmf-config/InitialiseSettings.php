@@ -15789,6 +15789,10 @@ function wmfGetVariantSettings() {
 	'foundationwiki' => true, // T170301
 ],
 
+'wmgUseOAuthRateLimiter' => [
+	'default' => false,
+],
+
 // This is also guarded by $wmgUseCentralAuth
 // See T252236
 'wmgEnableCrossOriginSessions' => [
