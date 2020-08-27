@@ -187,6 +187,7 @@ function wmfGetVariantSettings() {
 	# Special wikis
 	'special' => 'en', # default - overridden below by some wikis
 	'advisorywiki' => 'en',
+	'apiportalwiki' => 'en',
 	'arbcom_cswiki' => 'cs', // T151731
 	'arbcom_dewiki' => 'de',
 	'arbcom_enwiki' => 'en',
@@ -3215,6 +3216,7 @@ function wmfGetVariantSettings() {
 	'advisorswiki' => '//advisors.wikimedia.org',
 	'advisorywiki' => '//advisory.wikimedia.org',
 	'amwikimedia' => '//am.wikimedia.org',
+	'apiportalwiki' => '//api.wikimedia.org',
 	'arwikimedia' => '//ar.wikimedia.org',
 	'auditcomwiki' => '//auditcom.wikimedia.org',
 	'be_x_oldwiki' => '//be-tarask.wikipedia.org',
@@ -3314,6 +3316,7 @@ function wmfGetVariantSettings() {
 	'advisorswiki' => 'https://advisors.wikimedia.org',
 	'advisorywiki' => 'https://advisory.wikimedia.org',
 	'amwikimedia' => 'https://am.wikimedia.org',
+	'apiportalwiki' => 'https://api.wikimedia.org',
 	'arwikimedia' => 'https://ar.wikimedia.org',
 	'auditcomwiki' => 'https://auditcom.wikimedia.org',
 	'be_x_oldwiki' => 'https://be-tarask.wikipedia.org',

@@ -7,3 +7,7 @@
 inheritsFrom:
   - special
   - all-labs
+  - nowikidatadescriptiontaglines
+  - s5
+  - small
+  - group0

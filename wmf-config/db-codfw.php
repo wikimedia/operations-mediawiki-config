@@ -54,6 +54,7 @@ $wgLBFactoryConf = [
 	'testcommonswiki' => 's4',
 
 	# s5: dewiki and some other wikis
+	'apiportalwiki' => 's5',
 	'avkwiki'      => 's5',
 	'cebwiki'      => 's5',
 	'dewiki'       => 's5',
