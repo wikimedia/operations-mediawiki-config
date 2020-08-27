@@ -3661,6 +3661,32 @@ if ( $wmgUseOAuth ) {
 	}
 }
 
+if ( $wmgUseOAuthRateLimiter ) {
+	wfLoadExtension( 'OAuthRateLimiter' );
+	$wgOAuthRateLimiterDefaultClientTier = 'default';
+	// As defined in T246271
+	$wgOAuthRateLimiterTierConfig = [
+		'default' => [
+			'ratelimit' => [
+				'request_per_unit' => 5000,
+				'unit'  => 'HOUR'
+			],
+		],
+		'preferred' => [
+			'ratelimit' => [
+				'request_per_unit' => 25000,
+				'unit'  => 'HOUR'
+			],
+		],
+		'internal' => [
+			'ratelimit' => [
+				'request_per_unit' => 100000,
+				'unit'  => 'HOUR'
+			],
+		],
+	];
+}
+
 // T15712
 if ( $wmgUseJosa ) {
 	wfLoadExtension( 'Josa' );
