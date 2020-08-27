@@ -26917,6 +26917,14 @@ function wmfGetVariantSettings() {
 	'viwiki' => 80,
 ],
 
+'wgGEHomepageNewAccountVariants' => [
+	'default' => [
+		'A' => 100,
+		'C' => 0,
+		'D' => 0,
+	],
+],
+
 'wgGEHomepageTutorialTitle' => [
 	'default' => '',
 	'testwiki' => 'Help:Help',
