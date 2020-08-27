@@ -102,6 +102,7 @@ $IP/extensions/NewUserMessage/extension.json
 $IP/extensions/Nuke/extension.json
 $IP/extensions/OATHAuth/extension.json
 $IP/extensions/OAuth/extension.json
+$IP/extensions/OAuthRateLimiter/extension.json
 $IP/extensions/OpenStackManager/extension.json
 $IP/extensions/ORES/extension.json
 $IP/extensions/PageAssessments/extension.json
