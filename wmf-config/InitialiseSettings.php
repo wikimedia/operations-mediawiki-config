@@ -22020,6 +22020,7 @@ function wmfGetVariantSettings() {
 	'group0' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
 	'hawwiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
 	'cawiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
+	'hewiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
 ],
 
 'wmgUseWikimediaEvents' => [
