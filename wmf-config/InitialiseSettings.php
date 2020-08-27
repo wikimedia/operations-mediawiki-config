@@ -21762,6 +21762,7 @@ function wmfGetVariantSettings() {
 			'stream' => 'eventlogging_Test',
 			'schema_title' => 'analytics/legacy/test',
 			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		/*
@@ -21955,17 +21956,6 @@ function wmfGetVariantSettings() {
 			'destination_event_service' => 'eventgate-main',
 		],
 
-		// test.event stream; used to test that event stream
-		// services are working properly.
-		// TODO: This stream is being replaced by eventgate instnace specific test.event streams
-		// below.  It will be removed once all eventgate instances are using their own test.event
-		// streams.
-		[
-			'stream' => 'test.event',
-			// https://schema.wikimedia.org/repositories/primary/jsonschema/test/event/current.yaml
-			'schema_title' => 'test/event',
-		],
-
 		/*
 		 * == Streams needed for eventgate functionality ==
 		 * EventGate instances some streams defined for error logging and monitoring:
@@ -21988,21 +21978,25 @@ function wmfGetVariantSettings() {
 		[
 			'stream' => 'eventgate-logging-external.test.event',
 			'schema_title' => 'test/event',
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-logging-external',
 		],
 		[
 			'stream' => 'eventgate-analytics-external.test.event',
 			'schema_title' => 'test/event',
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
 			'stream' => 'eventgate-analytics.test.event',
 			'schema_title' => 'test/event',
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics',
 		],
 		[
 			'stream' => 'eventgate-main.test.event',
 			'schema_title' => 'test/event',
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-main',
 		],
 		// eventgate error.validation streams
