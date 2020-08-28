@@ -23859,12 +23859,6 @@ function wmfGetVariantSettings() {
 	'testcommonswiki' => 'testcommons'
 ],
 
-'wmgWikibaseClientLocalEntitySourceName' => [
-	'default' => null,
-	'wikidataclient' => 'wikidata',
-	'wikidataclient-test' => 'testwikidata',
-],
-
 'wmgWikibaseClientItemAndPropertySourceName' => [
 	'default' => null,
 	'wikidataclient' => 'wikidata',
