@@ -19090,6 +19090,7 @@ function wmfGetVariantSettings() {
 
 'wgMinervaEnableSiteNotice' => [
 	'default' => false,
+	'closed' => true, // T261357
 	'arwiki' => true,
 	'kowiki' => true, // T172630
 	// WikidataPageBanner extensions must enable for Minerva support.
