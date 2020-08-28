@@ -314,8 +314,8 @@ if ( $wmgUseWikibaseClient ) {
 	}
 
 	$wgWBClientSettings['entitySources'] = $wmgWikibaseEntitySources;
-	if ( isset( $wmgWikibaseClientLocalEntitySourceName ) ) {
-		$wgWBClientSettings['localEntitySourceName'] = $wmgWikibaseClientLocalEntitySourceName;
+	if ( isset( $wmgWikibaseClientItemAndPropertySourceName ) ) {
+		$wgWBClientSettings['itemAndPropertySourceName'] = $wmgWikibaseClientItemAndPropertySourceName;
 	}
 
 	$wgWBClientSettings['addEntityUsagesBatchSize'] = $wmgWikibaseClientAddEntityUsagesBatchSize;
