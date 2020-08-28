@@ -21758,7 +21758,11 @@ function wmfGetVariantSettings() {
 		/*
 		 * == Streams for Event Platform-based analytics instruments ==
 		 */
-		// TODO: new Event Platform instrumentation streams go here
+		[
+			'stream' => 'ios.edit_history_compare',
+			'schema_title' => 'analytics/mobile_apps/ios_edit_history_compare',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 
 		/*
 		 * == eventgate-logging-external streams ==
