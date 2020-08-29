@@ -13753,6 +13753,7 @@ function wmfGetVariantSettings() {
 		'bureaucrat' => [
 			'gwtoolset', // T65124
 			'ipblock-exempt',
+			'sysop', // T261481
 		],
 		'checkuser' => [ 'ipblock-exempt' ],
 		'sysop' => [
