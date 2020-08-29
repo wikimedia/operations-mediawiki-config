@@ -15095,6 +15095,7 @@ function wmfGetVariantSettings() {
 	'+dewikivoyage' => [ 102 ], // T119420
 	'+fiwiki' => [ 106 ], // T224215
 	'+frwiki' => [ 102 ], // T127688 - Projet
+	'+hywiki' => [ 102 ], // T261550 - WikiProject
 	'+itwiki' => [ 102 ],
 	'+nowikimedia' => [ 100 ], // T181625 - Prosjekt
 	'+plwiki' => [ NS_USER, 100, 102 ], // T133978; 100 -> Portal, 102 -> Wikiproject
