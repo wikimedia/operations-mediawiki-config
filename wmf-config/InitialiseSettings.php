@@ -11149,13 +11149,16 @@ function wmfGetVariantSettings() {
 	// T7836
 	// T13326
 	'+itwiki' => [
-		'autoconfirmed' => [ 'patrol' => true, ],
 		'flood' => [ 'bot' => true, ],
 		'rollbacker' => [
 			'rollback' => true,
 			'autopatrol' => true,
+			'patrol' => true, // T261587
 		],
-		'autopatrolled' => [ 'autopatrol' => true ],
+		'autopatrolled' => [
+			'autopatrol' => true,
+			'patrol' => true, // T261587
+		],
 		'mover' => [ // T102770
 			'movefile' => true,
 			'move-subpages' => true,
