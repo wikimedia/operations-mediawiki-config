@@ -3090,7 +3090,7 @@ if ( $wmgUseEcho ) {
 	}
 	// Limit the 'push-subscription-manager' group to Meta-Wiki only (T261625)
 	$wgExtensionFunctions[] = function () {
-		global $wgGroupPermissions;
+		global $wgGroupPermissions, $wgDBname;
 		if ( $wgDBname !== 'metawiki' ) {
 			unset( $wgGroupPermissions['push-subscription-manager'] );
 		}
