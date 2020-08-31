@@ -3088,6 +3088,13 @@ if ( $wmgUseEcho ) {
 			$wgDefaultUserOptions[$option] = $value;
 		}
 	}
+	// Limit the 'push-subscription-manager' group to Meta-Wiki only (T261625)
+	$wgExtensionFunctions[] = function () {
+		global $wgGroupPermissions;
+		if ( $wgDBname !== 'metawiki' ) {
+			unset( $wgGroupPermissions['push-subscription-manager'] );
+		}
+	};
 }
 
 // Wikitech specific settings
