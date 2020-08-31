@@ -16566,6 +16566,8 @@ function wmfGetVariantSettings() {
 		'gpophotoeng.gov.il', // National Photo Collection, Israel - T258857
 		'clinton.presidentiallibraries.us', // T259927 - US Government works
 		'retrobibliothek.de', // T261012
+		'storage.idigbio.org', // T261575
+		'serv.biokic.asu.edu', // T261562
 	],
 ],
 
