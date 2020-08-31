@@ -3427,6 +3427,7 @@ function wmfGetVariantSettings() {
 	'angwikisource' => 'Wicifruma',
 	'angwiktionary' => 'Wikiwordbōc', // T58634
 	'amwiki' => 'ውክፔዲያ',
+	'apiportalwiki' => 'API Portal',
 	'arbcom_cswiki' => 'Arbitrážní výbor', // T151731
 	'arbcom_dewiki' => 'Arbitration Committee',
 	'arbcom_enwiki' => 'Arbitration Committee',
