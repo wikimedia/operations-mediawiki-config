@@ -22059,8 +22059,6 @@ function wmfGetVariantSettings() {
 	'hawwiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
 	'cawiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
 	'hewiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
-	'metawiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
-	'commonswiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
 ],
 
 'wmgUseWikimediaEvents' => [
