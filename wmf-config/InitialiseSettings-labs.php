@@ -1840,7 +1840,10 @@ function wmfGetLabsOverrideSettings() {
 		],
 
 		'wgRestAPIAdditionalRouteFiles' => [
-			'default' => [ 'includes/Rest/coreDevelopmentRoutes.json' ],
+			'default' => [
+				'extensions/OAuth/experimentalRoutes.json',
+				'includes/Rest/coreDevelopmentRoutes.json',
+			],
 		],
 
 		'wgAllowRequiringEmailForResets' => [
