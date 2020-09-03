@@ -9190,6 +9190,11 @@ function wmfGetVariantSettings() {
 		105 => 'Discussioni_tematica',
 		// 106 and 107 (Notizie) deleted per T47636
 	],
+	'jawikivoyage' => [
+		// 102 and 103 used because they're the same as in jawiki
+		102 => 'プロジェクト',
+		103 => 'プロジェクト‐ノート',
+	],
 	'plwikivoyage' => [
 		NS_PROJECT_TALK => 'Dyskusja_Wikipodróży',
 	],
