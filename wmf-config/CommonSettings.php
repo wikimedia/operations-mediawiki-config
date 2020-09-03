@@ -128,6 +128,12 @@ $wmfAllServices = ServiceConfig::getInstance()->getAllServices();
 # Shorthand when we have no master-replica situation to keep into account
 $wmfLocalServices = $wmfAllServices[$wmfDatacenter];
 
+$wmfDatacenters = ServiceConfig::getInstance()->getDatacenters();
+
+if ( $wmfRealm === 'dev' ) {
+	putenv( 'MW_DEBUG_LOCAL=1' );
+}
+
 $etcdConfig = wmfSetupEtcd( $wmfLocalServices['etcd'] );
 $wmfEtcdLastModifiedIndex = $etcdConfig->getModifiedIndex();
 
@@ -1665,15 +1671,7 @@ if ( $wmgUseCentralAuth ) {
 		];
 	}
 
-	switch ( $wmfRealm ) {
-	case 'production':
-		// Production cluster
-		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\./';
-		$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
-		$wgCentralAuthLoginWiki = 'loginwiki';
-		break;
-
-	case 'labs':
+	if ( $wmfRealm == 'labs' ) {
 		// wmflabs beta cluster
 		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\.\w+\.\w+\./';
 		$wgCentralAuthAutoLoginWikis = [
@@ -1691,7 +1689,11 @@ if ( $wmgUseCentralAuth ) {
 			$wmfHostnames['wikidata'] => 'wikidatawiki',
 		];
 		$wgCentralAuthLoginWiki = 'loginwiki';
-		break;
+	} else {
+		// Production cluster (and dev, or anything else)
+		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\./';
+		$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
+		$wgCentralAuthLoginWiki = 'loginwiki';
 	}
 
 	if ( preg_match( $wmgSecondLevelDomainRegex, strrev( $wgServer ), $m ) ) {

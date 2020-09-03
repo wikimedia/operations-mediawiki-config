@@ -30,19 +30,17 @@ $wmfSwiftShardLocal = in_array( $wgDBname, $wmfSwiftBigWikis ) ? 2 : 0; // shard
 $wmfSwiftShardCommon = in_array( 'commonswiki', $wmfSwiftBigWikis ) ? 2 : 0; // shard levels
 
 if ( $wmfRealm === 'labs' ) {
-	$datacenters = [ 'eqiad' ];
 	$redisLockServers = [ 'rdb1', 'rdb2' ];
 	$commonsUrl = "https://commons.wikimedia.beta.wmflabs.org";
 	$uploadUrl = "//upload.beta.wmflabs.org";
 } else {
-	$datacenters = [ 'eqiad', 'codfw' ];
 	$redisLockServers = [ 'rdb1', 'rdb2', 'rdb3' ];
 	$commonsUrl = "https://commons.wikimedia.org";
 	$uploadUrl = "//upload.wikimedia.org";
 }
 
 /* DC-specific Swift backend config */
-foreach ( $datacenters as $specificDC ) {
+foreach ( $wmfDatacenters as $specificDC ) {
 	$wgFileBackends[] = [ // backend config for wiki's local repo
 		'class'              => 'SwiftFileBackend',
 		'name'               => "local-swift-{$specificDC}",
@@ -161,7 +159,7 @@ $localMultiWriteFileBackend = [
 	'lockManager' => 'redisLockManager',
 	# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 	'backends'    => [
-		[ 'template' => 'local-swift-eqiad', 'isMultiMaster' => true ],
+		[ 'template' => "local-swift-$wmfMasterDatacenter", 'isMultiMaster' => true ],
 	],
 	'replication' => 'sync', // read-after-update for assets
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
@@ -174,7 +172,7 @@ $sharedMultiwriteFileBackend = [
 	'lockManager' => 'redisLockManager',
 	# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 	'backends'    => [
-		[ 'template' => 'shared-swift-eqiad', 'isMultiMaster' => true ],
+		[ 'template' => "shared-swift-$wmfMasterDatacenter", 'isMultiMaster' => true ],
 	],
 	'replication' => 'sync', // read-after-update for assets
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
@@ -186,7 +184,7 @@ $globalMultiWriteFileBackend = [
 	'lockManager' => 'redisLockManager',
 	# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 	'backends'    => [
-		[ 'template' => 'global-swift-eqiad', 'isMultiMaster' => true ],
+		[ 'template' => "global-swift-$wmfMasterDatacenter", 'isMultiMaster' => true ],
 	],
 	'replication' => 'sync', // read-after-update for assets
 	'syncChecks'  => ( 1 | 4 ) // (size & sha1)
@@ -198,13 +196,13 @@ $sharedTestwikiMultiWriteFileBackend = [
 	'lockManager' => 'redisLockManager',
 	# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 	'backends'    => [
-		[ 'template' => 'shared-testwiki-swift-eqiad', 'isMultiMaster' => true ],
+		[ 'template' => "shared-testwiki-swift-$wmfMasterDatacenter", 'isMultiMaster' => true ],
 	],
 	'replication' => 'sync', // read-after-update for assets
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 ];
 
-if ( in_array( 'codfw', $datacenters ) ) {
+if ( in_array( 'codfw', $wmfDatacenters ) ) {
 	$localMultiWriteFileBackend['backends'][] = [ 'template' => 'local-swift-codfw' ];
 	$sharedMultiwriteFileBackend['backends'][] = [ 'template' => 'shared-swift-codfw' ];
 	$globalMultiWriteFileBackend['backends'][] = [ 'template' => 'global-swift-codfw' ];

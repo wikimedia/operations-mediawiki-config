@@ -15,7 +15,7 @@
 # Included from: wmf-config/CommonSettings.php.
 #
 
-foreach ( [ 'eqiad', 'codfw' ] as $dc ) {
+foreach ( $wmfDatacenters as $dc ) {
 	$wgObjectCaches["redis_{$dc}"] = [
 		'class'       => 'RedisBagOStuff',
 		'servers'     => [ "/var/run/nutcracker/redis_{$dc}.sock" ],

@@ -8,7 +8,7 @@
 #   is initialised. For example, fatal-error.php and profiler.php.
 # - This file MUST NOT use any predefined state, only plain PHP.
 #
-# This both for PRODUCTION and for Beta Cluster.
+# This for PRODUCTION, Beta Cluster, dev, and all future realms.
 #
 # For MediaWiki, this is included in ../src/ServiceConfig.php
 #
@@ -18,10 +18,19 @@ if ( $cluster === 'labs' ) {
 	return [
 		'realm' => 'labs',
 		'dc' => 'eqiad',
+		'dcs' => [ 'eqiad' ],
+	];
+}
+if ( $cluster === 'dev' ) {
+	return [
+		'realm' => 'dev',
+		'dc' => 'dev',
+		'dcs' => [ 'dev' ],
 	];
 }
 
 return [
 	'realm' => 'production',
 	'dc' => $cluster,
+	'dcs' => [ 'eqiad', 'codfw' ],
 ];
