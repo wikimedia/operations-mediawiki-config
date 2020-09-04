@@ -6340,6 +6340,7 @@ function wmfGetVariantSettings() {
 	// @}
 
 	// Specials wiki @{
+	'+apiportalwiki' => [ NS_MAIN => true ], // to enable subpage navigation
 	'+arbcom_cswiki' => [ 0 => 1 ],
 	'+arbcom_enwiki' => [ 0 => 1, 8 => 0 ],
 	'+arbcom_nlwiki' => [ 0 => 1 ], // T147186
@@ -9226,6 +9227,7 @@ function wmfGetVariantSettings() {
 'wgDefaultSkin' => [
 	'default' => 'vector',
 	'nostalgiawiki' => 'nostalgia',
+	'apiportalwiki' => 'wikimediaapiportal', // T259661
 ],
 
 //
@@ -10137,6 +10139,35 @@ function wmfGetVariantSettings() {
 		'*' => [ 'edit' => false, ]
 	],
 
+	'+apiportalwiki' => [
+		'*' => [ // T259657
+			'docseditor' => false,
+			'move' => false,
+			'move-subpages' => false,
+			'createpage' => false,
+			'edit' => false,
+			'createtalk' => false,
+			'read' => false, // private launch - T260309
+		],
+		'user' => [
+			'edit' => true, // limited by $wgNamespaceProtection
+			'read' => false,  // private launch - T260309
+		],
+		'docseditor' => [
+			'read' => true,  // private launch - T260309
+			'docseditor' => true,
+			'move' => true,
+			'move-subpages' => true,
+			'createpage' => true,
+			'createtalk' => true,
+		],
+		'sysop' => [
+			'docseditor' => true,
+			'move' => true,
+			'move-subpages' => true,
+			'createpage' => true,
+		],
+	],
 	'+arwiki' => [
 		'*' => [ 'patrolmarks' => true ], // T257106
 		'autoconfirmed' => [ 'patrol' => true ],
@@ -12668,6 +12699,9 @@ function wmfGetVariantSettings() {
 		'qa_automation' => [ 'qa_automation' ], // For browser tests, T60375
 	],
 	// ******************************************************************
+	'+apiportalwiki' => [ // T259569
+		'bureaucrat' => [ 'docseditor' ],
+	],
 	'+arwiki' => [
 		'bureaucrat' => [ 'import', 'reviewer', 'abusefilter' ], // T143844
 		'sysop' => [ 'uploader', 'reviewer', 'confirmed', 'rollbacker', 'abusefilter', ],
@@ -13474,6 +13508,9 @@ function wmfGetVariantSettings() {
 		'bureaucrat' => [ 'flow-bot', 'sysop' ], // T131037
 	],
 	// ******************************************************************
+	'+apiportalwiki' => [ // T259569
+		'bureaucrat' => [ 'docseditor' ],
+	],
 	'+arwiki' => [
 		'bureaucrat' => [ 'import', 'reviewer', 'abusefilter' ], // T143844
 		'sysop' => [ 'uploader', 'reviewer', 'confirmed', 'rollbacker', 'abusefilter', 'patroller', 'autopatrolled', ],
@@ -15401,6 +15438,16 @@ function wmfGetVariantSettings() {
 	'default' => [
 		NS_MEDIAWIKI => [ 'editinterface' ],
 	],
+	'+apiportalwiki' => [
+		NS_MAIN	  => [ 'docseditor' ],
+		NS_PROJECT   => [ 'docseditor' ],
+		// Local uploads are disabled...
+		NS_FILE	  => [ 'docseditor' ],
+		NS_TEMPLATE  => [ 'docseditor' ],
+		NS_HELP	  => [ 'docseditor' ],
+		NS_CATEGORY  => [ 'docseditor' ],
+		NS_USER	  => [ 'docseditor' ], // T259568
+	],
 	'+cswiki' => [
 		NS_FILE      => [ 'editinterface' ],
 		NS_FILE_TALK => [ 'editinterface' ],
@@ -15840,6 +15887,7 @@ function wmfGetVariantSettings() {
 'wmgUseCollection' => [
 	// PDF generation / [[:mw:OCG]] stuff
 	'default' => true,
+	'apiportalwiki' => false, // T260309
 	'ganwiki' => false,
 	'iuwiki' => false,
 	'iuwiktionary' => false,
@@ -21668,6 +21716,7 @@ function wmfGetVariantSettings() {
 // T223824
 'wgSkipSkins' => [
 	'default' => [ 'cologneblue' ],
+	'apiportalwiki' => [ 'vector', 'monobook', 'modern', 'cologneblue', 'timeless', 'minerva' ],
 ],
 
 'wmgRelatedArticlesFooterWhitelistedSkins' => [
@@ -27682,6 +27731,7 @@ function wmfGetVariantSettings() {
 
 'wmgUseWikimediaApiPortal' => [
 	'default' => false,
+	'apiportalwiki' => true,
 ],
 
 'wmgUseWikimediaApiPortalOAuth' => [
