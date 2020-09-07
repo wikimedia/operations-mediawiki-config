@@ -12857,7 +12857,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'curator' ], // T113109
 	],
 	'+eswiki' => [
-		'bureaucrat' => [ 'rollbacker' ],
+		'bureaucrat' => [ 'abusefilter', 'rollbacker' ], // T262174
 		'sysop' => [ 'rollbacker', 'autopatrolled', 'patroller' ],
 	],
 	'+eswikibooks' => [
@@ -13676,7 +13676,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'abusefilter', 'autopatrolled', ],
 	],
 	'+eswiki' => [
-		'bureaucrat' => [ 'rollbacker' ],
+		'bureaucrat' => [ 'abusefilter', 'rollbacker' ], // T262174
 		'sysop' => [ 'rollbacker', 'autopatrolled', 'patroller' ],
 	],
 	'+eswikibooks' => [

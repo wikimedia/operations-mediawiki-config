@@ -147,6 +147,11 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // T44012
 		$wgGroupPermissions['user']['abusefilter-log'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
+		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true; // T262174
+		$wgGroupPermissions['abusefilter']['abusefilter-log-detail'] = true; // T262174
+		$wgGroupPermissions['abusefilter']['abusefilter-log-private'] = true; // T262174
+		$wgGroupPermissions['abusefilter']['abusefilter-view-private'] = true; // T262174
+		$wgGroupPermissions['abusefilter']['oathauth-enable'] = true; // T262174
 		break;
 	case 'eswikibooks':
 		$wgGroupPermissions['*']['abusefilter-view'] = false;
