@@ -26479,6 +26479,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => true,
 	'hywiki' => true,
 	'kowiki' => true,
+	'plwiki' => true,
 	'ruwiki' => true,
 	'srwiki' => true,
 	'ukwiki' => true,
@@ -26498,6 +26499,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => true,
 	'hywiki' => true,
 	'kowiki' => true,
+	'plwiki' => true,
 	'ruwiki' => true,
 	'srwiki' => true,
 	'ukwiki' => true,
@@ -26522,6 +26524,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => true,
 	'hywiki' => true,
 	'kowiki' => true,
+	'plwiki' => true,
 	'ruwiki' => true,
 	'srwiki' => true,
 	'ukwiki' => true,
@@ -26563,6 +26566,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => 'Wikipédia:Kocsmafal (kezdőknek)',
 	'hywiki' => 'Վիքիպեդիա:Հարցեր',
 	'kowiki' => '위키백과:질문방/{{Y-M|0}}',
+	'plwiki' => 'Pomoc:Pytania nowicjuszy',
 	'ruwiki' => 'Википедия:Форум/Помощь начинающим',
 	'srwiki' => 'Википедија:Трг/Помоћ',
 	'ukwiki' => 'Вікіпедія:Кнайпа (допомога)',
@@ -26582,6 +26586,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => 'Wikipédia:Bevezetés',
 	'hywiki' => 'Օգնություն:Գլխացանկ',
 	'kowiki' => '위키백과:도움말',
+	'plwiki' => 'Pomoc:Spis treści',
 	'ruwiki' => 'Википедия:Справка',
 	'srwiki' => 'Википедија:Помоћ',
 	'ukwiki' => 'Вікіпедія:Довідка',
@@ -26882,6 +26887,33 @@ function wmfGetVariantSettings() {
 			'id' => 'notability',
 		]
 	],
+	'plwiki' => [
+		[
+			'title' => 'Pomoc:Styl – poradnik dla autorów',
+			'text' => 'Poradnik dla autorów',
+			'id' => 'style',
+		],
+		[
+			'title' => 'Pomoc:Edytowanie',
+			'text' => 'Edytowanie',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'Pomoc:VisualEditor#Tworzenie_nowego_przypisu',
+			'text' => 'Jak dodać przypis',
+			'id' => 'citation',
+		],
+		[
+			'title' => 'Pomoc:Jak napisać nowy artykuł',
+			'text' => 'Jak napisać nowy artykuł',
+			'id' => 'newarticle',
+		],
+		[
+			'title' => 'Pomoc:Ilustrowanie',
+			'text' => 'Ilustrowanie artykułów',
+			'id' => 'image'
+		],
+	],
 	'ruwiki' => [
 		[
 			'title' => 'Википедия:Оформление статей',
@@ -27010,6 +27042,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => true,
 	'hywiki' => true,
 	'kowiki' => true,
+	'plwiki' => true,
 	'ruwiki' => true,
 	'srwiki' => true,
 	'trwiki' => true,
@@ -27103,6 +27136,10 @@ function wmfGetVariantSettings() {
 		'create' => '위키백과:새 문서 만들기',
 		'image' => '도움말:그림 사용하기',
 	],
+	'plwiki' => [
+		'create' => 'Pomoc:Jak napisać nowy artykuł',
+		'image' => 'Pomoc:Ilustrowanie',
+	],
 	'ruwiki' => [
 		'create' => 'Википедия:Как создать статью',
 		'image' => 'Википедия:Иллюстрирование',
@@ -27138,6 +27175,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => 80,
 	'hywiki' => 80,
 	'kowiki' => 80,
+	'plwiki' => 80,
 	'ruwiki' => 80,
 	'srwiki' => 80,
 	'ukwiki' => 80,
@@ -27165,6 +27203,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => 'Wikipédia:Bevezetés',
 	'hywiki' => 'Օգնություն:Դասընթաց',
 	'kowiki' => '위키백과:빠른 길라잡이',
+	'plwiki' => 'Wikipedia:Pięć filarów',
 	'ruwiki' => 'Справка:Введение',
 	'srwiki' => 'Помоћ:Уређивање',
 	'ukwiki' => 'Довідка:Ознайомлення',
@@ -27184,6 +27223,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => 'Wikipédia:Szerkesztők megtartása/Mentorok',
 	'hywiki' => 'Վիքիպեդիա:Օգնություն/Ստորագրություններ',
 	'kowiki' => '위키백과:새_사용자_경험/새_사용자_멘토',
+	'plwiki' => 'Pomoc:Przewodnicy/Przewodnicy',
 	'ruwiki' => 'Проект:Помощь начинающим/Наставники',
 	'srwiki' => 'Википедија:Трг/Помоћ/Ментори',
 	'ukwiki' => 'Вікіпедія:Кнайпа (допомога)/Наставники',

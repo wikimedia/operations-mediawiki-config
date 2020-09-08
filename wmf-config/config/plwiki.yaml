@@ -8,6 +8,7 @@ inheritsFrom:
   - cirrussearch-big-indices
   - flaggedrevs
   - flow
+  - growthexperiments
   - large
   - s2
   - securepollglobal
