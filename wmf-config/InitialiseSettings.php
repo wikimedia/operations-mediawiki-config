@@ -15853,6 +15853,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wmgUseOAuthRateLimiter' => [
+	'metawiki' => true,
 	'default' => false,
 ],
 

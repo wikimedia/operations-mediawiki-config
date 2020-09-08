@@ -1962,11 +1962,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => false,
 		],
 
-		'wmgUseOAuthRateLimiter' => [
-			'metawiki' => true,
-			'default' => false
-		],
-
 		// T253271 Dont deploy Cirrus AB tests to beta
 		'wgCirrusSearchUserTesting' => [
 			'default' => [],
