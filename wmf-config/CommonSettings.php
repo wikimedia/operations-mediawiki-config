@@ -1477,6 +1477,7 @@ $wgAPIModules['imagerotate'] = 'ApiDisabled';
 
 if ( $wmgUseDynamicPageList ) {
 	wfLoadExtension( 'intersection' );
+	$wgDLPMaxCacheTime = 604800;
 }
 
 wfLoadExtension( 'Renameuser' );
