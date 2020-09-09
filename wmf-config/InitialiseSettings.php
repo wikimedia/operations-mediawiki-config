@@ -15242,6 +15242,8 @@ function wmfGetVariantSettings() {
 	'wikisource' => true, // T10563 and T14423
 	'wikiversity' => true,
 
+	'ruwikinews' => false, // Emergency disabled per T262240
+
 	'bdwikimedia' => true, // T188109
 	'bswiki' => true, // T10240
 	'dewiktionary' => true,
