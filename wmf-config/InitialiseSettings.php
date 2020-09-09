@@ -10146,7 +10146,7 @@ function wmfGetVariantSettings() {
 
 	'+apiportalwiki' => [
 		'*' => [ // T259657
-			'docseditor' => false,
+			'edit-docs' => false,
 			'move' => false,
 			'move-subpages' => false,
 			'createpage' => false,
@@ -10160,17 +10160,21 @@ function wmfGetVariantSettings() {
 		],
 		'docseditor' => [
 			'read' => true,  // private launch - T260309
-			'docseditor' => true,
+			'edit-docs' => true,
 			'move' => true,
 			'move-subpages' => true,
 			'createpage' => true,
 			'createtalk' => true,
 		],
 		'sysop' => [
-			'docseditor' => true,
+			'read' => true,  // private launch - T260309
+			'edit-docs' => true,
 			'move' => true,
 			'move-subpages' => true,
 			'createpage' => true,
+		],
+		'bureaucrat' => [
+			'read' => true,  // private launch - T260309
 		],
 	],
 	'+arwiki' => [
@@ -15444,14 +15448,14 @@ function wmfGetVariantSettings() {
 		NS_MEDIAWIKI => [ 'editinterface' ],
 	],
 	'+apiportalwiki' => [
-		NS_MAIN	  => [ 'docseditor' ],
-		NS_PROJECT   => [ 'docseditor' ],
+		NS_MAIN	  => [ 'edit-docs' ],
+		NS_PROJECT   => [ 'edit-docs' ],
 		// Local uploads are disabled...
-		NS_FILE	  => [ 'docseditor' ],
-		NS_TEMPLATE  => [ 'docseditor' ],
-		NS_HELP	  => [ 'docseditor' ],
-		NS_CATEGORY  => [ 'docseditor' ],
-		NS_USER	  => [ 'docseditor' ], // T259568
+		NS_FILE	  => [ 'edit-docs' ],
+		NS_TEMPLATE  => [ 'edit-docs' ],
+		NS_HELP	  => [ 'edit-docs' ],
+		NS_CATEGORY  => [ 'edit-docs' ],
+		NS_USER	  => [ 'edit-docs' ], // T259568
 	],
 	'+cswiki' => [
 		NS_FILE      => [ 'editinterface' ],
