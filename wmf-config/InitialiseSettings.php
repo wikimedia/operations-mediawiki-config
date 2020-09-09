@@ -3181,6 +3181,11 @@ function wmfGetVariantSettings() {
 ],
 # @} end of wgUploadNavigationUrl
 
+// T262425 Allow cross-origin requests to all wikis.
+'wgAllowCrossOrigin' => [
+	'default' => true,
+],
+
 // Allow the `X-Request-Id` header to be honoured if set
 // this is safe to do because Varnish removes the header
 // from all external incoming requests
