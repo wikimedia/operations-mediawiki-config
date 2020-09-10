@@ -18706,6 +18706,7 @@ function wmfGetVariantSettings() {
 	'thwikisource' => 'uca-default', // T50097
 	'thwiktionary' => 'uca-default', // T50097
 	'trwiki' => 'uca-tr', // T184943
+	'trwiktionary' => 'uca-tr', // T262163
 	'uawikimedia' => 'uca-uk', // T47776
 	'ukwiki' => 'uca-uk-u-kn', // T47444, T148682
 	'ukwikibooks' => 'uca-uk', // T47776
