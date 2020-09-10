@@ -8415,6 +8415,8 @@ function wmfGetVariantSettings() {
 		111 => 'Discussion_Reconstruction',
 		112 => 'Tutoriel', // T242102
 		113 => 'Discussion_Tutoriel',
+		114 => 'Rime', // T262398
+		115 => 'Discussion_Rime', // T262398
 	],
 	'gawiktionary' => [
 		100 => 'Aguisín',
