@@ -2581,6 +2581,11 @@ function wmfGetVariantSettings() {
 		'width' => 119,
 		'height' => 18,
 	],
+	'hywiki' => [
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-hy.svg',
+		'width' => 160,
+		'height' => 25,
+	],
 	'ilowiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-en.svg',
 		'width' => 119,
@@ -2901,6 +2906,11 @@ function wmfGetVariantSettings() {
 	],
 	'huwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-hu.svg',
+		'width' => 115,
+		'height' => 13,
+	],
+	'hywiki' => [
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-hy.svg',
 		'width' => 115,
 		'height' => 13,
 	],
