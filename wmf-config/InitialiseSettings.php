@@ -18059,6 +18059,26 @@ function wmfGetVariantSettings() {
 		'10.192.32.33' => true, # wtp2018.codfw.wmnet
 		'10.192.32.34' => true, # wtp2019.codfw.wmnet
 		'10.192.32.35' => true, # wtp2020.codfw.wmnet
+		'10.192.0.182' => true, # parse2001.codfw.wmnet
+		'10.192.0.183' => true, # parse2002.codfw.wmnet
+		'10.192.0.184' => true, # parse2003.codfw.wmnet
+		'10.192.0.185' => true, # parse2004.codfw.wmnet
+		'10.192.0.186' => true, # parse2005.codfw.wmnet
+		'10.192.16.21' => true, # parse2006.codfw.wmnet
+		'10.192.16.22' => true, # parse2007.codfw.wmnet
+		'10.192.16.24' => true, # parse2008.codfw.wmnet
+		'10.192.16.25' => true, # parse2009.codfw.wmnet
+		'10.192.16.206' => true, # parse2010.codfw.wmnet
+		'10.192.32.195' => true, # parse2011.codfw.wmnet
+		'10.192.32.196' => true, # parse2012.codfw.wmnet
+		'10.192.32.197' => true, # parse2013.codfw.wmnet
+		'10.192.32.198' => true, # parse2014.codfw.wmnet
+		'10.192.32.199' => true, # parse2015.codfw.wmnet
+		'10.192.48.149' => true, # parse2016.codfw.wmnet
+		'10.192.48.150' => true, # parse2017.codfw.wmnet
+		'10.192.48.151' => true, # parse2018.codfw.wmnet
+		'10.192.48.152' => true, # parse2019.codfw.wmnet
+		'10.192.48.153' => true, # parse2020.codfw.wmnet
 	],
 ],
 
