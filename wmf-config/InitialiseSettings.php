@@ -6664,6 +6664,7 @@ function wmfGetVariantSettings() {
 	# http://de.wikibooks.org/wiki/Wikibooks:Meinungsbilder/_Verschiebefunktion_f%C3%BCr_neue_Nutzer
 	# TS 2007-02-06
 	'dewikibooks' => 7 * 86400,
+	'itwiki' => 7 * 86400, // T262738
 	'nowiki' => 7 * 86400, // T71302
 	'tenwiki' => 0, // T28554
 	'wuuwiki' => 7 * 86400, // T122476
@@ -6685,7 +6686,7 @@ function wmfGetVariantSettings() {
 	'eswikivoyage' => 25, // T46285
 	'fawiki' => 10, // T45630
 	'fawikivoyage' => 10, // T73709
-	'itwiki' => 10, // T72128
+	'itwiki' => 50, // T72128, T262738
 	'itwiktionary' => 10, // T24274
 	'jawiki' => 10, // T42270
 	'kowiki' => 10,// T46894
