@@ -5136,6 +5136,7 @@ function wmfGetVariantSettings() {
 	],
 	'+frwiktionary' => [
 		'WT' => NS_PROJECT,
+		'conj' => 116, // T262298
 	],
 	'+glwiki' => [
 		'Portal_talk' => 101, // T43213 (old namespace name)
