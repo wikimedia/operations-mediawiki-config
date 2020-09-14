@@ -40,7 +40,6 @@ call_user_func( function () {
 	if ( $wgDBname == 'test2wiki' ) {
 		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 		$wgFlaggedRevsAutopromote['edits'] = 300;
-		$wgFlaggedRevsAutopromote['recentContentEdits'] = 5;
 		$wgFlaggedRevsAutopromote['editComments'] = 30;
 
 		$wgFlaggedRevsAutoconfirm = [
@@ -61,7 +60,6 @@ call_user_func( function () {
 	} elseif ( $wgDBname == 'dewiki' ) {
 		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 		$wgFlaggedRevsAutopromote['edits'] = 300;
-		$wgFlaggedRevsAutopromote['recentContentEdits'] = 5;
 		$wgFlaggedRevsAutopromote['editComments'] = 30;
 
 		$wgFlaggedRevsAutoconfirm = [
@@ -101,7 +99,6 @@ call_user_func( function () {
 			'edits' => 100,
 			'spacing' => 2,
 			'benchmarks' => 8,
-			'recentContentEdits' => 5,
 			'totalContentEdits' => 50,
 			'uniqueContentPages' => 10,
 			'editComments' => 50,
@@ -120,7 +117,6 @@ call_user_func( function () {
 		$wgFlaggedRevsAutopromote['edits'] = 500;
 		$wgFlaggedRevsAutopromote['spacing'] = 3;
 		$wgFlaggedRevsAutopromote['benchmarks'] = 15;
-		$wgFlaggedRevsAutopromote['recentContentEdits'] = 5;
 		$wgFlaggedRevsAutopromote['totalContentEdits'] = 500;
 		$wgFlaggedRevsAutopromote['uniqueContentPages'] = 10;
 		$wgFlaggedRevsAutopromote['editComments'] = 30;
@@ -130,16 +126,12 @@ call_user_func( function () {
 		$wgFlaggedRevsAutopromote = [
 			'days' => 30, # days since registration
 			'edits' => 100, # total edit count
-			'excludeDeleted' => true, # exclude deleted edits from 'edits' count above?
 			'spacing' => 2, # spacing of edit intervals
 			'benchmarks' => 8, # how many edit intervals are needed?
-			'recentContentEdits' => 5, # $wgContentNamespaces edits in recent changes
 			'totalContentEdits' => 50, # $wgContentNamespaces edits
 			'uniqueContentPages' => 10, # $wgContentNamespaces unique pages edited
 			'editComments' => 50, # how many edit comments used?
 			'email' => true, # user must be emailconfirmed?
-			'userpage' => false, # user must have a userpage?
-			'uniqueIPAddress' => false, # If $wgPutIPinRC is true, users sharing IPs won't be promoted
 			'neverBlocked' => true, # Can users that were blocked be promoted?
 		] + $wmfStandardAutoPromote;
 
@@ -166,10 +158,8 @@ call_user_func( function () {
 		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 		$wgFlaggedRevsAutopromote['days'] = 60; # days since registration
 		$wgFlaggedRevsAutopromote['edits'] = 300; # total edit count
-		$wgFlaggedRevsAutopromote['excludeDeleted'] = true; # exclude deleted edits from 'edits' count above?
 		$wgFlaggedRevsAutopromote['spacing'] = 3; # spacing of edit intervals
 		$wgFlaggedRevsAutopromote['benchmarks'] = 15; # how many edit intervals are needed?
-		$wgFlaggedRevsAutopromote['recentContentEdits'] = 10; # $wgContentNamespaces edits in recent changes
 		$wgFlaggedRevsAutopromote['uniqueContentPages'] = 10; # $wgContentNamespaces unique pages edited
 		$wgFlaggedRevsAutopromote['neverBlocked'] = false; # user must be emailconfirmed?
 
