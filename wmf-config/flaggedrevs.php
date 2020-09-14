@@ -17,9 +17,190 @@ $wgFlaggedRevsAutopromote = false;
 
 $wgFlaggedRevsStatsAge = false;
 
+// Configs that must be set before FlaggedRevsHooks::onExtensionFunctions
+call_user_func( function () {
+	global $wgDBname,
+		$wgFlaggedRevsAutopromote, $wgFlaggedRevsAutoconfirm;
+
+	$wmfStandardAutoPromote = [
+		'days'                  => 60, # days since registration
+		'edits'                 => 250, # total edit count
+		'excludeLastDays'       => 1, # exclude the last X days of edits from below edit counts
+		'benchmarks'            => 15, # number of "spread out" edits
+		'spacing'               => 3, # number of days between these edits (the "spread")
+		'totalContentEdits'     => 300, # edits to pages in $wgContentNamespaces
+		'totalCheckedEdits'     => 200, # edits before the stable version of pages
+		'uniqueContentPages'    => 14, # unique pages in $wgContentNamespaces edited
+		'editComments'          => 50, # number of manual edit summaries used
+		'userpageBytes'         => 0, # size of userpage (use 0 to not require a userpage)
+		'neverBlocked'          => true, # username was never blocked before?
+		'maxRevertedEditRatio'  => 0.03, # max fraction of edits reverted via "rollback"/"undo"
+	];
+
+	if ( $wgDBname == 'test2wiki' ) {
+		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+		$wgFlaggedRevsAutopromote['edits'] = 300;
+		$wgFlaggedRevsAutopromote['recentContentEdits'] = 5;
+		$wgFlaggedRevsAutopromote['editComments'] = 30;
+
+		$wgFlaggedRevsAutoconfirm = [
+			'days'                => 30, # days since registration
+			'edits'               => 50, # total edit count
+			'spacing'             => 3, # spacing of edit intervals
+			'benchmarks'          => 7, # how many edit intervals are needed?
+			'excludeLastDays'     => 2, # exclude the last X days of edits from edit counts
+			// Either totalContentEdits reqs OR totalCheckedEdits requirements needed
+			'totalContentEdits'   => 150, # $wgContentNamespaces edits OR...
+			'totalCheckedEdits'   => 50, # ...Edits before the stable version of pages
+			'uniqueContentPages'  => 8, # $wgContentNamespaces unique pages edited
+			'editComments'        => 20, # how many edit comments used?
+			'email'               => false, # user must be emailconfirmed?
+			'neverBlocked'        => true, # Can users that were blocked be promoted?
+		];
+
+	} elseif ( $wgDBname == 'dewiki' ) {
+		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+		$wgFlaggedRevsAutopromote['edits'] = 300;
+		$wgFlaggedRevsAutopromote['recentContentEdits'] = 5;
+		$wgFlaggedRevsAutopromote['editComments'] = 30;
+
+		$wgFlaggedRevsAutoconfirm = [
+			'days'                => 30, # days since registration
+			'edits'               => 50, # total edit count
+			'spacing'             => 3, # spacing of edit intervals
+			'benchmarks'          => 7, # how many edit intervals are needed?
+			'excludeLastDays'     => 2, # exclude the last X days of edits from edit counts
+			// Either totalContentEdits reqs OR totalCheckedEdits requirements needed
+			'totalContentEdits'   => 150, # $wgContentNamespaces edits OR...
+			'totalCheckedEdits'   => 50, # ...Edits before the stable version of pages
+			'uniqueContentPages'  => 8, # $wgContentNamespaces unique pages edited
+			'editComments'        => 20, # how many edit comments used?
+			'email'               => false, # user must be emailconfirmed?
+			'neverBlocked'        => true, # Can users that were blocked be promoted?
+		];
+
+	} elseif ( $wgDBname == 'dewiktionary' ) {
+		// T67316, T76657
+		$wgFlaggedRevsAutoconfirm = [ // T46103
+			'days'                => 60,
+			'totalContentEdits'   => 250,
+			'totalCheckedEdits'   => 50,
+			'excludeLastDays'     => 2,
+			'uniqueContentPages'  => 50,
+			'neverBlocked'        => true,
+			'edits' => 1,
+			'editComments' => 1,
+			'spacing' => 1,
+			'benchmarks' => 1,
+			'email' => false
+		];
+
+	} elseif ( $wgDBname == 'enwikibooks' ) {
+		$wgFlaggedRevsAutopromote = [
+			'days' => 30,
+			'edits' => 100,
+			'spacing' => 2,
+			'benchmarks' => 8,
+			'recentContentEdits' => 5,
+			'totalContentEdits' => 50,
+			'uniqueContentPages' => 10,
+			'editComments' => 50,
+		] + $wmfStandardAutoPromote;
+
+	} elseif ( $wgDBname == 'frwikinews' ) {
+		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+
+	} elseif ( $wgDBname == 'hewikisource' ) {
+		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+
+	} elseif ( $wgDBname == 'plwiki' ) {
+		// T45617, T50043
+		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+		$wgFlaggedRevsAutopromote['days'] = 90;
+		$wgFlaggedRevsAutopromote['edits'] = 500;
+		$wgFlaggedRevsAutopromote['spacing'] = 3;
+		$wgFlaggedRevsAutopromote['benchmarks'] = 15;
+		$wgFlaggedRevsAutopromote['recentContentEdits'] = 5;
+		$wgFlaggedRevsAutopromote['totalContentEdits'] = 500;
+		$wgFlaggedRevsAutopromote['uniqueContentPages'] = 10;
+		$wgFlaggedRevsAutopromote['editComments'] = 30;
+		$wgFlaggedRevsAutopromote['userpageBytes'] = 100;
+
+	} elseif ( $wgDBname == 'ptwikibooks' ) {
+		$wgFlaggedRevsAutopromote = [
+			'days' => 30, # days since registration
+			'edits' => 100, # total edit count
+			'excludeDeleted' => true, # exclude deleted edits from 'edits' count above?
+			'spacing' => 2, # spacing of edit intervals
+			'benchmarks' => 8, # how many edit intervals are needed?
+			'recentContentEdits' => 5, # $wgContentNamespaces edits in recent changes
+			'totalContentEdits' => 50, # $wgContentNamespaces edits
+			'uniqueContentPages' => 10, # $wgContentNamespaces unique pages edited
+			'editComments' => 50, # how many edit comments used?
+			'email' => true, # user must be emailconfirmed?
+			'userpage' => false, # user must have a userpage?
+			'uniqueIPAddress' => false, # If $wgPutIPinRC is true, users sharing IPs won't be promoted
+			'neverBlocked' => true, # Can users that were blocked be promoted?
+		] + $wmfStandardAutoPromote;
+
+	} elseif ( $wgDBname == 'ptwikinews' ) {
+		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+		$wgFlaggedRevsAutopromote['days'] = 30;
+
+	} elseif ( $wgDBname == 'ptwikisource' ) {
+		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+
+	} elseif ( $wgDBname == 'ruwikisource' ) {
+		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+
+	} elseif ( $wgDBname == 'sqwiki' ) {
+		// T44782
+		//
+		// - Auto-promotion for registered users. When they reach 300 edits in 10 or more
+		// unique articles with a maximum of 5% reverted edits in 60 days or more since
+		// registration they must be auto-promoted to reviewer group.
+		// - Auto-promotion for registered users. When they reach 100 edits in 10 or more
+		// unique pages with a maximum of 5% reverted edits in 30 days or more since
+		// registration they must be auto-promoted to autoreviewer (or autopatrolled)
+		// group.
+		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+		$wgFlaggedRevsAutopromote['days'] = 60; # days since registration
+		$wgFlaggedRevsAutopromote['edits'] = 300; # total edit count
+		$wgFlaggedRevsAutopromote['excludeDeleted'] = true; # exclude deleted edits from 'edits' count above?
+		$wgFlaggedRevsAutopromote['spacing'] = 3; # spacing of edit intervals
+		$wgFlaggedRevsAutopromote['benchmarks'] = 15; # how many edit intervals are needed?
+		$wgFlaggedRevsAutopromote['recentContentEdits'] = 10; # $wgContentNamespaces edits in recent changes
+		$wgFlaggedRevsAutopromote['uniqueContentPages'] = 10; # $wgContentNamespaces unique pages edited
+		$wgFlaggedRevsAutopromote['neverBlocked'] = false; # user must be emailconfirmed?
+
+		$wgFlaggedRevsAutoconfirm = [
+			'days'                => 30, # days since registration
+			'edits'               => 100, # total edit count
+			'spacing'             => 3, # spacing of edit intervals
+			'benchmarks'          => 7, # how many edit intervals are needed?
+			'excludeLastDays'     => 2, # exclude the last X days of edits from edit counts
+			// Either totalContentEdits reqs OR totalCheckedEdits requirements needed
+			'totalContentEdits'   => 150, # $wgContentNamespaces edits OR...
+			'totalCheckedEdits'   => 50, # ...Edits before the stable version of pages
+			'uniqueContentPages'  => 8, # $wgContentNamespaces unique pages edited
+			'editComments'        => 20, # how many edit comments used?
+			'email'               => false, # user must be emailconfirmed?
+			'neverBlocked'        => true, # Can users that were blocked be promoted?
+		];
+
+	} elseif ( $wgDBname == 'plwikisource' ) {
+		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+		$wgFlaggedRevsAutopromote['edits'] = 100;
+		$wgFlaggedRevsAutopromote['totalContentEdits'] = 100;
+		$wgFlaggedRevsAutopromote['days'] = 14;
+
+	}
+} );
+
+// Configs that must be set after FlaggedRevsHooks::onExtensionFunctions for some reason???
 $wgExtensionFunctions[] = function () {
-	global $wgAddGroups, $wgDBname, $wgDefaultUserOptions, $wgFlaggedRevsAutoconfirm,
-		$wgFlaggedRevsAutopromote, $wgFlaggedRevsNamespaces, $wgFlaggedRevsRestrictionLevels,
+	global $wgAddGroups, $wgDBname, $wgDefaultUserOptions,
+		$wgFlaggedRevsNamespaces, $wgFlaggedRevsRestrictionLevels,
 		$wgFlaggedRevsStatsAge, $wgFlaggedRevsTags, $wgFlaggedRevsTagsRestrictions,
 		$wgFlaggedRevsWhitelist, $wgGroupPermissions, $wgRemoveGroups;
 
@@ -36,21 +217,6 @@ $wgExtensionFunctions[] = function () {
 		'accuracy' => [ 'review' => 1, 'autoreview' => 1 ],
 	];
 	$wgGroupPermissions['autoconfirmed']['movestable'] = true; // T16166
-
-	$wmfStandardAutoPromote = [
-		'days'                  => 60, # days since registration
-		'edits'                 => 250, # total edit count
-		'excludeLastDays'       => 1, # exclude the last X days of edits from below edit counts
-		'benchmarks'            => 15, # number of "spread out" edits
-		'spacing'               => 3, # number of days between these edits (the "spread")
-		'totalContentEdits'     => 300, # edits to pages in $wgContentNamespaces
-		'totalCheckedEdits'     => 200, # edits before the stable version of pages
-		'uniqueContentPages'    => 14, # unique pages in $wgContentNamespaces edited
-		'editComments'          => 50, # number of manual edit summaries used
-		'userpageBytes'         => 0, # size of userpage (use 0 to not require a userpage)
-		'neverBlocked'          => true, # username was never blocked before?
-		'maxRevertedEditRatio'  => 0.03, # max fraction of edits reverted via "rollback"/"undo"
-	];
 
 	$wgGroupPermissions['sysop']['stablesettings'] = false; // -aaron 3/20/10
 
@@ -150,26 +316,6 @@ $wgExtensionFunctions[] = function () {
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 
-		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
-		$wgFlaggedRevsAutopromote['edits'] = 300;
-		$wgFlaggedRevsAutopromote['recentContentEdits'] = 5;
-		$wgFlaggedRevsAutopromote['editComments'] = 30;
-
-		$wgFlaggedRevsAutoconfirm = [
-			'days'                => 30, # days since registration
-			'edits'               => 50, # total edit count
-			'spacing'             => 3, # spacing of edit intervals
-			'benchmarks'          => 7, # how many edit intervals are needed?
-			'excludeLastDays'     => 2, # exclude the last X days of edits from edit counts
-			// Either totalContentEdits reqs OR totalCheckedEdits requirements needed
-			'totalContentEdits'   => 150, # $wgContentNamespaces edits OR...
-			'totalCheckedEdits'   => 50, # ...Edits before the stable version of pages
-			'uniqueContentPages'  => 8, # $wgContentNamespaces unique pages edited
-			'editComments'        => 20, # how many edit comments used?
-			'email'               => false, # user must be emailconfirmed?
-			'neverBlocked'        => true, # Can users that were blocked be promoted?
-		];
-
 		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 	} elseif ( $wgDBname == 'cawikinews' ) {
 		$wgFlaggedRevsNamespaces[] = 102; // T36135
@@ -191,26 +337,6 @@ $wgExtensionFunctions[] = function () {
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 
-		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
-		$wgFlaggedRevsAutopromote['edits'] = 300;
-		$wgFlaggedRevsAutopromote['recentContentEdits'] = 5;
-		$wgFlaggedRevsAutopromote['editComments'] = 30;
-
-		$wgFlaggedRevsAutoconfirm = [
-			'days'                => 30, # days since registration
-			'edits'               => 50, # total edit count
-			'spacing'             => 3, # spacing of edit intervals
-			'benchmarks'          => 7, # how many edit intervals are needed?
-			'excludeLastDays'     => 2, # exclude the last X days of edits from edit counts
-			// Either totalContentEdits reqs OR totalCheckedEdits requirements needed
-			'totalContentEdits'   => 150, # $wgContentNamespaces edits OR...
-			'totalCheckedEdits'   => 50, # ...Edits before the stable version of pages
-			'uniqueContentPages'  => 8, # $wgContentNamespaces unique pages edited
-			'editComments'        => 20, # how many edit comments used?
-			'email'               => false, # user must be emailconfirmed?
-			'neverBlocked'        => true, # Can users that were blocked be promoted?
-		];
-
 		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 	} elseif ( $wgDBname == 'dewiktionary' ) {
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
@@ -220,19 +346,6 @@ $wgExtensionFunctions[] = function () {
 		$wgFlaggedRevsNamespaces[] = 106;
 		$wgFlaggedRevsNamespaces[] = 108;
 
-		$wgFlaggedRevsAutoconfirm = [ // T46103
-			'days'                => 60,
-			'totalContentEdits'   => 250,
-			'totalCheckedEdits'   => 50,
-			'excludeLastDays'     => 2,
-			'uniqueContentPages'  => 50,
-			'neverBlocked'        => true,
-			'edits' => 1,
-			'editComments' => 1,
-			'spacing' => 1,
-			'benchmarks' => 1,
-			'email' => false
-		];
 	} elseif ( $wgDBname == 'enwiki' ) {
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_PROJECT ];
 		# We have only one tag with one level
@@ -263,17 +376,6 @@ $wgExtensionFunctions[] = function () {
 		$wgFlaggedRevsTags = [
 			'value' => [ 'levels' => 3, 'quality' => 2, 'pristine' => 3 ]
 		];
-
-		$wgFlaggedRevsAutopromote = [
-			'days' => 30,
-			'edits' => 100,
-			'spacing' => 2,
-			'benchmarks' => 8,
-			'recentContentEdits' => 5,
-			'totalContentEdits' => 50,
-			'uniqueContentPages' => 10,
-			'editComments' => 50,
-		] + $wmfStandardAutoPromote;
 
 		$wgGroupPermissions['editor']['rollback'] = true;
 		$wgGroupPermissions['sysop']['review'] = true;
@@ -356,7 +458,6 @@ $wgExtensionFunctions[] = function () {
 	} elseif ( $wgDBname == 'frwikinews' ) {
 		$wgFlaggedRevsNamespaces[] = 104;
 		$wgFlaggedRevsNamespaces[] = 106;
-		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
 
 		// Removed legacy groups, per T90979
@@ -382,7 +483,6 @@ $wgExtensionFunctions[] = function () {
 			'accuracy'     => [ 'review' => 3, 'autoreview' => 3 ],
 			'formatting'   => [ 'review' => 3, 'autoreview' => 3 ],
 		];
-		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 	} elseif ( $wgDBname == 'hiwiki' ) {
 		// # namespaces
@@ -453,16 +553,6 @@ $wgExtensionFunctions[] = function () {
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_TEMPLATE, NS_CATEGORY, NS_HELP, 100, 828 ];
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 
-		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
-		$wgFlaggedRevsAutopromote['days'] = 90;
-		$wgFlaggedRevsAutopromote['edits'] = 500;
-		$wgFlaggedRevsAutopromote['spacing'] = 3;
-		$wgFlaggedRevsAutopromote['benchmarks'] = 15;
-		$wgFlaggedRevsAutopromote['recentContentEdits'] = 5;
-		$wgFlaggedRevsAutopromote['totalContentEdits'] = 500;
-		$wgFlaggedRevsAutopromote['uniqueContentPages'] = 10;
-		$wgFlaggedRevsAutopromote['editComments'] = 30;
-		$wgFlaggedRevsAutopromote['userpageBytes'] = 100;
 	} elseif ( $wgDBname == 'plwiktionary' ) {
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_FILE, NS_TEMPLATE, 100, 102, 828 ]; // T55373
 	} elseif ( $wgDBname == 'ptwiki' ) { // T56828
@@ -497,29 +587,11 @@ $wgExtensionFunctions[] = function () {
 	} elseif ( $wgDBname == 'ptwikibooks' ) {
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_TEMPLATE, NS_HELP, NS_PROJECT, 828 ];
 
-		$wgFlaggedRevsAutopromote = [
-			'days' => 30, # days since registration
-			'edits' => 100, # total edit count
-			'excludeDeleted' => true, # exclude deleted edits from 'edits' count above?
-			'spacing' => 2, # spacing of edit intervals
-			'benchmarks' => 8, # how many edit intervals are needed?
-			'recentContentEdits' => 5, # $wgContentNamespaces edits in recent changes
-			'totalContentEdits' => 50, # $wgContentNamespaces edits
-			'uniqueContentPages' => 10, # $wgContentNamespaces unique pages edited
-			'editComments' => 50, # how many edit comments used?
-			'email' => true, # user must be emailconfirmed?
-			'userpage' => false, # user must have a userpage?
-			'uniqueIPAddress' => false, # If $wgPutIPinRC is true, users sharing IPs won't be promoted
-			'neverBlocked' => true, # Can users that were blocked be promoted?
-		] + $wmfStandardAutoPromote;
-
 		$wgGroupPermissions['editor']['rollback'] = true;
 		$wgGroupPermissions['sysop']['review'] = true;
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
 		$wgGroupPermissions['sysop']['validate'] = true;
 	} elseif ( $wgDBname == 'ptwikinews' ) {
-		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
-		$wgFlaggedRevsAutopromote['days'] = 30;
 		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 	} elseif ( $wgDBname == 'ptwikisource' ) {
 		$wgFlaggedRevsNamespaces[] = 102;
@@ -528,7 +600,6 @@ $wgExtensionFunctions[] = function () {
 		$wgFlaggedRevsNamespaces[] = 108;
 		$wgFlaggedRevsNamespaces[] = 110;
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
-		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 	} elseif ( $wgDBname == 'ruwiki' ) {
 		// T39675, T49337
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 100, 828 ];
@@ -557,7 +628,6 @@ $wgExtensionFunctions[] = function () {
 		$wgFlaggedRevsNamespaces[] = NS_HELP;
 		$wgFlaggedRevsNamespaces[] = 104;
 		$wgFlaggedRevsNamespaces[] = 106;
-		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 
 		unset(
 			$wgGroupPermissions['autoreview'], // T202139
@@ -566,40 +636,6 @@ $wgExtensionFunctions[] = function () {
 
 		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 	} elseif ( $wgDBname == 'sqwiki' ) {
-		// T44782
-		//
-		// - Auto-promotion for registered users. When they reach 300 edits in 10 or more
-		// unique articles with a maximum of 5% reverted edits in 60 days or more since
-		// registration they must be auto-promoted to reviewer group.
-		// - Auto-promotion for registered users. When they reach 100 edits in 10 or more
-		// unique pages with a maximum of 5% reverted edits in 30 days or more since
-		// registration they must be auto-promoted to autoreviewer (or autopatrolled)
-		// group.
-		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
-		$wgFlaggedRevsAutopromote['days'] = 60; # days since registration
-		$wgFlaggedRevsAutopromote['edits'] = 300; # total edit count
-		$wgFlaggedRevsAutopromote['excludeDeleted'] = true; # exclude deleted edits from 'edits' count above?
-		$wgFlaggedRevsAutopromote['spacing'] = 3; # spacing of edit intervals
-		$wgFlaggedRevsAutopromote['benchmarks'] = 15; # how many edit intervals are needed?
-		$wgFlaggedRevsAutopromote['recentContentEdits'] = 10; # $wgContentNamespaces edits in recent changes
-		$wgFlaggedRevsAutopromote['uniqueContentPages'] = 10; # $wgContentNamespaces unique pages edited
-		$wgFlaggedRevsAutopromote['neverBlocked'] = false; # user must be emailconfirmed?
-
-		$wgFlaggedRevsAutoconfirm = [
-			'days'                => 30, # days since registration
-			'edits'               => 100, # total edit count
-			'spacing'             => 3, # spacing of edit intervals
-			'benchmarks'          => 7, # how many edit intervals are needed?
-			'excludeLastDays'     => 2, # exclude the last X days of edits from edit counts
-			// Either totalContentEdits reqs OR totalCheckedEdits requirements needed
-			'totalContentEdits'   => 150, # $wgContentNamespaces edits OR...
-			'totalCheckedEdits'   => 50, # ...Edits before the stable version of pages
-			'uniqueContentPages'  => 8, # $wgContentNamespaces unique pages edited
-			'editComments'        => 20, # how many edit comments used?
-			'email'               => false, # user must be emailconfirmed?
-			'neverBlocked'        => true, # Can users that were blocked be promoted?
-		];
-
 		$wgGroupPermissions['sysop']['review'] = true;
 		$wgGroupPermissions['sysop']['validate'] = true;
 	} elseif ( $wgDBname == 'trwiki' ) {
@@ -621,11 +657,6 @@ $wgExtensionFunctions[] = function () {
 		$wgFlaggedRevsNamespaces[] = 100;
 		$wgFlaggedRevsNamespaces[] = 102;
 		$wgFlaggedRevsNamespaces[] = 104;
-
-		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
-		$wgFlaggedRevsAutopromote['edits'] = 100;
-		$wgFlaggedRevsAutopromote['totalContentEdits'] = 100;
-		$wgFlaggedRevsAutopromote['days'] = 14;
 
 		$wgGroupPermissions['editor']['rollback'] = true;
 	} elseif ( $wgDBname == 'vecwiki' ) {
