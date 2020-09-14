@@ -21901,6 +21901,11 @@ function wmfGetVariantSettings() {
 			'schema_title' => 'mediawiki/client/error',
 			'destination_event_service' => 'eventgate-logging-external',
 		],
+		[
+			'stream' => 'w3c.reportingapi.network_error',
+			'schema_title' => 'w3c/reportingapi/network_error',
+			'destination_event_service' => 'eventgate-logging-external',
+		],
 
 		/*
 		 * == eventgate-analytics streams ==
