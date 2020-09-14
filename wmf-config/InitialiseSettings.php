@@ -21244,17 +21244,17 @@ function wmfGetVariantSettings() {
 'wgDiscussionToolsBeta' => [
 	'default' => false,
 	'arwiki' => true, // T245794
-	'cawiki' => true, // T259574
-	'ckbwiki' => true, // T259574
-	'cswiki' => true, // T259574
+	'cawiki' => true, // T251197
+	'ckbwiki' => true, // T251197
+	'cswiki' => true, // T251197
 	'frwiki' => true, // T245794
 	'huwiki' => true, // T245794
-	'kawiki' => true, // T259574
-	'kowiki' => true, // T259574
+	'kawiki' => true, // T251197
+	'kowiki' => true, // T251197
 	'nlwiki' => true, // T245794
-	'srwiki' => true, // T259574
-	'svwiki' => true, // T259574
-	'zhwiki' => true, // T259574
+	'srwiki' => true, // T251197
+	'svwiki' => true, // T251197
+	'zhwiki' => true, // T251075
 	'mediawikiwiki' => true, // T251208
 ],
 
