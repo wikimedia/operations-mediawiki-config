@@ -26480,6 +26480,7 @@ function wmfGetVariantSettings() {
 	'hywiki' => true,
 	'kowiki' => true,
 	'plwiki' => true,
+	'ptwiki' => true,
 	'ruwiki' => true,
 	'srwiki' => true,
 	'ukwiki' => true,
@@ -26500,6 +26501,7 @@ function wmfGetVariantSettings() {
 	'hywiki' => true,
 	'kowiki' => true,
 	'plwiki' => true,
+	'ptwiki' => true,
 	'ruwiki' => true,
 	'srwiki' => true,
 	'ukwiki' => true,
@@ -26507,6 +26509,8 @@ function wmfGetVariantSettings() {
 
 'wgWelcomeSurveyExperimentalGroups' => [
 	'default' => [ 'exp2_target_specialpage' => [ 'range' => '0-9' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
+	// ptwiki is opt-in only for now, so run the WelcomeSurvey at 0% (T255027)
+	'ptwiki' => [ 'exp2_target_specialpage' => [ 'range' => 'x' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
 	// 80/20 A/B test on ruwiki; consider removing this some time in October 2020, see T259768
 	'ruwiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-7' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
 ],
@@ -26525,6 +26529,7 @@ function wmfGetVariantSettings() {
 	'hywiki' => true,
 	'kowiki' => true,
 	'plwiki' => true,
+	'ptwiki' => true,
 	'ruwiki' => true,
 	'srwiki' => true,
 	'ukwiki' => true,
@@ -26567,6 +26572,7 @@ function wmfGetVariantSettings() {
 	'hywiki' => 'Վիքիպեդիա:Հարցեր',
 	'kowiki' => '위키백과:질문방/{{Y-M|0}}',
 	'plwiki' => 'Pomoc:Pytania nowicjuszy',
+	'ptwiki' => 'Wikipédia:Tire suas dúvidas',
 	'ruwiki' => 'Википедия:Форум/Помощь начинающим',
 	'srwiki' => 'Википедија:Трг/Помоћ',
 	'ukwiki' => 'Вікіпедія:Кнайпа (допомога)',
@@ -26587,6 +26593,7 @@ function wmfGetVariantSettings() {
 	'hywiki' => 'Օգնություն:Գլխացանկ',
 	'kowiki' => '위키백과:도움말',
 	'plwiki' => 'Pomoc:Spis treści',
+	'ptwiki' => 'Wikipédia:Guia de criação de artigos',
 	'ruwiki' => 'Википедия:Справка',
 	'srwiki' => 'Википедија:Помоћ',
 	'ukwiki' => 'Вікіпедія:Довідка',
@@ -26914,6 +26921,33 @@ function wmfGetVariantSettings() {
 			'id' => 'image'
 		],
 	],
+	'ptwiki' => [
+		[
+			'title' => 'Wikipédia:Livro de estilo',
+			'text' => 'Livro de estilo',
+			'id' => 'style',
+		],
+		[
+			'title' => 'Ajuda:Editor Visual/Manual do Utilizador',
+			'text' => 'Editar',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/pt#Editar_imagens_e_outros_ficheiro_multimédia',
+			'text' => 'Editar imagens e outros ficheiro multimédia',
+			'id' => 'image',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/pt#Editar_referências',
+			'text' => 'Editar referências',
+			'id' => 'citation',
+		],
+		[
+			'title' => 'Wikipédia:Guia de criação de artigos',
+			'text' => 'Guia de criação de artigos',
+			'id' => 'articlewizard',
+		],
+	],
 	'ruwiki' => [
 		[
 			'title' => 'Википедия:Оформление статей',
@@ -27043,6 +27077,7 @@ function wmfGetVariantSettings() {
 	'hywiki' => true,
 	'kowiki' => true,
 	'plwiki' => true,
+	'ptwiki' => true,
 	'ruwiki' => true,
 	'srwiki' => true,
 	'trwiki' => true,
@@ -27140,6 +27175,10 @@ function wmfGetVariantSettings() {
 		'create' => 'Pomoc:Jak napisać nowy artykuł',
 		'image' => 'Pomoc:Ilustrowanie',
 	],
+	'ptwiki' => [
+		'create' => 'Ajuda:Guia de edição/Como começar uma página',
+		'image' => 'mw:Help:VisualEditor/User_guide/pt#Editar_imagens_e_outros_ficheiro_multimédia',
+	],
 	'ruwiki' => [
 		'create' => 'Википедия:Как создать статью',
 		'image' => 'Википедия:Иллюстрирование',
@@ -27176,6 +27215,8 @@ function wmfGetVariantSettings() {
 	'hywiki' => 80,
 	'kowiki' => 80,
 	'plwiki' => 80,
+	// ptwiki is opt-in only at first, for testing (T255027)
+	'ptwiki' => 0,
 	'ruwiki' => 80,
 	'srwiki' => 80,
 	'ukwiki' => 80,
@@ -27204,6 +27245,7 @@ function wmfGetVariantSettings() {
 	'hywiki' => 'Օգնություն:Դասընթաց',
 	'kowiki' => '위키백과:빠른 길라잡이',
 	'plwiki' => 'Wikipedia:Pięć filarów',
+	'ptwiki' => 'Ajuda:Tutorial',
 	'ruwiki' => 'Справка:Введение',
 	'srwiki' => 'Помоћ:Уређивање',
 	'ukwiki' => 'Довідка:Ознайомлення',
@@ -27224,6 +27266,7 @@ function wmfGetVariantSettings() {
 	'hywiki' => 'Վիքիպեդիա:Օգնություն/Ստորագրություններ',
 	'kowiki' => '위키백과:새_사용자_경험/새_사용자_멘토',
 	'plwiki' => 'Pomoc:Przewodnicy/Przewodnicy',
+	'ptwiki' => 'Wikipédia:Tutoria/Tutores',
 	'ruwiki' => 'Проект:Помощь начинающим/Наставники',
 	'srwiki' => 'Википедија:Трг/Помоћ/Ментори',
 	'ukwiki' => 'Вікіпедія:Кнайпа (допомога)/Наставники',
