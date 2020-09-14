@@ -21232,11 +21232,13 @@ function wmfGetVariantSettings() {
 	'cswiki' => true,
 	'frwiki' => true,
 	'huwiki' => true,
+	'jawiki' => true,
 	'kawiki' => true,
 	'kowiki' => true,
 	'nlwiki' => true,
 	'srwiki' => true,
 	'svwiki' => true,
+	'viwiki' => true,
 	'zhwiki' => true,
 	'mediawikiwiki' => true,
 ],
@@ -21249,11 +21251,13 @@ function wmfGetVariantSettings() {
 	'cswiki' => true, // T251197
 	'frwiki' => true, // T245794
 	'huwiki' => true, // T245794
+	'jawiki' => true, // T261654
 	'kawiki' => true, // T251197
 	'kowiki' => true, // T251197
 	'nlwiki' => true, // T245794
 	'srwiki' => true, // T251197
 	'svwiki' => true, // T251197
+	'viwiki' => true, // T262109
 	'zhwiki' => true, // T251075
 	'mediawikiwiki' => true, // T251208
 ],
