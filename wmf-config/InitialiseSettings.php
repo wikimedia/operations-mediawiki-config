@@ -27833,11 +27833,5 @@ function wmfGetVariantSettings() {
 	'default' => [ 'data-bridge' ],
 ],
 
-// Temporarily disable the reverted tag for all wikis except testwiki
-'wgRevertedTagMaxDepth' => [
-	'default' => 0,
-	'testwiki' => 15
-]
-
 ];
 }
