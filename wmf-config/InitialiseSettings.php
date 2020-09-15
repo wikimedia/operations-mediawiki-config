@@ -21850,6 +21850,7 @@ function wmfGetVariantSettings() {
 			'stream' => 'eventlogging_TemplateWizard',
 			'schema_title' => 'analytics/legacy/templatewizard',
 			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
