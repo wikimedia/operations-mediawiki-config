@@ -18948,6 +18948,8 @@ function wmfGetVariantSettings() {
 	'testwiki' => true,
 	'frwiki' => true,
 	'eswiki' => true,
+	'itwiki' => true,
+	'svwiki' => true,
 ],
 
 'wgCheckUserLogLogins' => [
