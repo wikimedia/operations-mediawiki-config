@@ -46,6 +46,11 @@ $wgAbuseFilterSlowFilterRuntimeLimit = 800;
 // Also, several wikis assign this right although no reversible actions are enabled.
 $wgGroupPermissions['sysop']['abusefilter-revert'] = false;
 
+// T255506 - Add abusefilter-view permissions to the CU log user, by default
+if ( $wmgUseCheckUser ) {
+	$wgCheckUserLogAdditionalRights[] = 'abusefilter-view';
+}
+
 // Custom permissions
 switch ( $wgDBname ) {
 	case 'arwiki':
