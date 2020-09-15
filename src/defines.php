@@ -160,7 +160,8 @@ if ( !defined( 'NS_MEDIAWIKI' ) ) {
 	/** @} */
 
 	/** @{
-	 * Autopromote conditions
+	 * Autopromote conditions (must be here and not in Autopromote.php, so that
+	 * they're loaded for DefaultSettings.php before AutoLoader.php)
 	 */
 	define( 'APCOND_EDITCOUNT', 1 );
 	define( 'APCOND_AGE', 2 );
@@ -171,21 +172,6 @@ if ( !defined( 'NS_MEDIAWIKI' ) ) {
 	define( 'APCOND_AGE_FROM_EDIT', 7 );
 	define( 'APCOND_BLOCKED', 8 );
 	define( 'APCOND_ISBOT', 9 );
-	/** @} */
-
-	/** @{
-	 * Autopromote conditions defined by FlaggedRevs
-	 */
-	define( 'APCOND_FR_EDITSUMMARYCOUNT', 70821 );
-	define( 'APCOND_FR_NEVERBLOCKED', 70822 );
-	define( 'APCOND_FR_UNIQUEPAGECOUNT', 70823 );
-	define( 'APCOND_FR_CONTENTEDITCOUNT', 70824 );
-	define( 'APCOND_FR_USERPAGEBYTES', 70825 );
-	define( 'APCOND_FR_EDITCOUNT', 70826 );
-	define( 'APCOND_FR_EDITSPACING', 70827 );
-	define( 'APCOND_FR_CHECKEDEDITCOUNT', 70828 );
-	define( 'APCOND_FR_MAXREVERTEDEDITRATIO', 70829 );
-	define( 'APCOND_FR_NEVERDEMOTED', 70830 );
 	/** @} */
 
 	/** @{
