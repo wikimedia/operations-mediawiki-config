@@ -26479,6 +26479,7 @@ function wmfGetVariantSettings() {
 	'ptwiki' => true,
 	'ruwiki' => true,
 	'srwiki' => true,
+	'svwiki' => true,
 	'ukwiki' => true,
 	'viwiki' => true,
 ],
@@ -26500,6 +26501,7 @@ function wmfGetVariantSettings() {
 	'ptwiki' => true,
 	'ruwiki' => true,
 	'srwiki' => true,
+	'svwiki' => true,
 	'ukwiki' => true,
 ],
 
@@ -26526,6 +26528,7 @@ function wmfGetVariantSettings() {
 	'ptwiki' => true,
 	'ruwiki' => true,
 	'srwiki' => true,
+	'svwiki' => true,
 	'ukwiki' => true,
 	'viwiki' => true,
 ],
@@ -26569,6 +26572,7 @@ function wmfGetVariantSettings() {
 	'ptwiki' => 'Wikipédia:Tire suas dúvidas',
 	'ruwiki' => 'Википедия:Форум/Помощь начинающим',
 	'srwiki' => 'Википедија:Трг/Помоћ',
+	'svwiki' => 'Wikipedia:Fikarummet/Frågor',
 	'ukwiki' => 'Вікіпедія:Кнайпа (допомога)',
 	'viwiki' => 'Wikipedia:Giúp_sử_dụng_Wikipedia',
 ],
@@ -26590,6 +26594,7 @@ function wmfGetVariantSettings() {
 	'ptwiki' => 'Wikipédia:Guia de criação de artigos',
 	'ruwiki' => 'Википедия:Справка',
 	'srwiki' => 'Википедија:Помоћ',
+	'svwiki' => 'Wikipedia:Hjälp',
 	'ukwiki' => 'Вікіпедія:Довідка',
 	'viwiki' => 'Trợ_giúp:Mục_lục',
 ],
@@ -26996,6 +27001,28 @@ function wmfGetVariantSettings() {
 			'id' => 'bebold',
 		]
 	],
+	'svwiki' => [
+		[
+			'title' => 'Wikipedia:Stilguide',
+			'text' => 'Stilguide',
+			'id' => 'style',
+		],
+		[
+			'title' => 'Wikipedia:Redigering',
+			'text' => 'Att redigera',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'Wikipedia:Introduktion till illustrationer',
+			'text' => 'Lägg till bild',
+			'id' => 'image',
+		],
+		[
+			'title' => 'Wikipedia:Introduktion till källhänvisningar',
+			'text' => 'Lägg till källa',
+			'id' => 'citation',
+		],
+	],
 	'ukwiki' => [
 		[
 			'title' => 'Довідка:Ознайомлення',
@@ -27074,6 +27101,7 @@ function wmfGetVariantSettings() {
 	'ptwiki' => true,
 	'ruwiki' => true,
 	'srwiki' => true,
+	'svwiki' => true,
 	'trwiki' => true,
 	'ukwiki' => true,
 	'viwiki' => true,
@@ -27181,6 +27209,10 @@ function wmfGetVariantSettings() {
 		'create' => 'Википедија:Креирање чланака',
 		'image' => 'Википедија:Упутства/Слике',
 	],
+	'svwiki' => [
+		'create' => 'Wikipedia:Att skapa en ny artikel',
+		'image' => 'Wikipedia:Introduktion till illustrationer',
+	],
 	'ukwiki' => [
 		'create' => 'Довідка:Створення нової статті',
 		'image' => 'Довідка:Як працювати із зображеннями у Візуальному редакторі/1',
@@ -27212,6 +27244,7 @@ function wmfGetVariantSettings() {
 	'ptwiki' => 80,
 	'ruwiki' => 80,
 	'srwiki' => 80,
+	'svwiki' => 80,
 	'ukwiki' => 80,
 	'viwiki' => 80,
 ],
@@ -27241,6 +27274,7 @@ function wmfGetVariantSettings() {
 	'ptwiki' => 'Ajuda:Tutorial',
 	'ruwiki' => 'Справка:Введение',
 	'srwiki' => 'Помоћ:Уређивање',
+	'svwiki' => 'Wikipedia:Introduktion',
 	'ukwiki' => 'Довідка:Ознайомлення',
 	'viwiki' => 'Wikipedia:Sách_hướng_dẫn',
 ],
@@ -27262,6 +27296,7 @@ function wmfGetVariantSettings() {
 	'ptwiki' => 'Wikipédia:Tutoria/Tutores',
 	'ruwiki' => 'Проект:Помощь начинающим/Наставники',
 	'srwiki' => 'Википедија:Трг/Помоћ/Ментори',
+	'svwiki' => 'Wikipedia:Faddrar/Lista',
 	'ukwiki' => 'Вікіпедія:Кнайпа (допомога)/Наставники',
 	'viwiki' => 'Wikipedia:Dự án Phát triển cộng đồng/Danh sách thành viên cố vấn',
 ],
