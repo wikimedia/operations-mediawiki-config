@@ -23,15 +23,13 @@ class ServiceConfig {
 	}
 
 	private function __construct() {
-		// Use include instead of require to reduce the risk of a recursive fatal
-		// error in hhvm-fatal-error.php
-		$env = include __DIR__ . '/../wmf-config/env.php';
+		$env = require __DIR__ . '/../wmf-config/env.php';
 		$this->realm = $env['realm'];
 		$this->datacenter = $env['dc'];
 		if ( $this->realm === 'labs' ) {
-			$this->services = include __DIR__ . '/../wmf-config/LabsServices.php';
+			$this->services = require __DIR__ . '/../wmf-config/LabsServices.php';
 		} else {
-			$this->services = include __DIR__ . '/../wmf-config/ProductionServices.php';
+			$this->services = require __DIR__ . '/../wmf-config/ProductionServices.php';
 		}
 	}
 
