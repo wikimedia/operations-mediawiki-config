@@ -9288,6 +9288,12 @@ function wmfGetVariantSettings() {
 'wgVectorDefaultSidebarVisibleForAnonymousUser' => [
 	'desktop-improvements' => true,
 ],
+'wgVectorIsSearchInHeader' => [
+	'default' => false,
+	// T262207
+	'testwiki' => true,
+	'officewiki' => true,
+],
 
 # wgForceUIMsgAsContentMsg @{
 'wgForceUIMsgAsContentMsg' => [
