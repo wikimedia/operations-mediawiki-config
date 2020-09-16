@@ -1371,7 +1371,7 @@ function wmfGetLabsOverrideSettings() {
 			'default' => 'wikidata',
 			'commonswiki' => 'commons',
 		],
-		'-wmgWikibaseClientLocalEntitySourceName' => [
+		'-wmgWikibaseClientItemAndPropertySourceName' => [
 			'default' => 'wikidata',
 		],
 		'-wmgWikibaseClientSpecialSiteLinkGroups' => [
