@@ -22176,6 +22176,7 @@ function wmfGetVariantSettings() {
 	'hewiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
 	'metawiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
 	'commonswiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
+	'frwiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
 ],
 
 'wmgUseWikimediaEvents' => [
