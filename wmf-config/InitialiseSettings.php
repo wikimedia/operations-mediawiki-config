@@ -21862,7 +21862,7 @@ function wmfGetVariantSettings() {
 
 // T223824
 'wgSkipSkins' => [
-	'default' => [ 'cologneblue' ],
+	'default' => [ 'cologneblue', 'contenttranslation' ], // T263093
 	'apiportalwiki' => [ 'vector', 'monobook', 'modern', 'cologneblue', 'timeless', 'minerva' ],
 ],
 
