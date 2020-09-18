@@ -22748,6 +22748,11 @@ function wmfGetVariantSettings() {
 	'default' => [ 'url' => '/static/images/wikibase/echoIcon.svg' ],
 ],
 
+'wmgEchoEnablePush' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 // ---T208755---
 'wmgWikibaseClientPageSchemaNamespaces' => [
 	// All sampled pages in the main namespace will be tested.
