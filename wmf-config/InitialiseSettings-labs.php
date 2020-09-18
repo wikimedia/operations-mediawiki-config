@@ -1449,6 +1449,12 @@ function wmfGetLabsOverrideSettings() {
 			'wikidatawiki' => true,
 		],
 
+		// T261488
+		'wmgWikibaseUseSSRTermboxDesktop' => [
+			'default' => false,
+			'wikidatawiki' => true,
+		],
+
 		'wmgWikibaseSSRTermboxServerUrl' => [
 			'default' => '',
 			'wikidatawiki' => 'https://ssr-termbox.wmflabs.org/termbox',

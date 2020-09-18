@@ -185,6 +185,10 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['ssrServerUrl'] = $wmgWikibaseSSRTermboxServerUrl;
 	}
 
+	if ( isset( $wmgWikibaseUseSSRTermboxDesktop ) ) {
+		$wgWBRepoSettings['termboxDesktopEnabled'] = $wmgWikibaseUseSSRTermboxDesktop;
+	}
+
 	if ( isset( $wmgWikibaseTaintedReferencesEnabled ) ) {
 		$wgWBRepoSettings['taintedReferencesEnabled'] = $wmgWikibaseTaintedReferencesEnabled;
 	}
