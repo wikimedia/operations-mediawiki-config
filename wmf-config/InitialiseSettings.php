@@ -22751,7 +22751,7 @@ function wmfGetVariantSettings() {
 
 'wmgEchoEnablePush' => [
 	'default' => false,
-	'testwiki' => true,
+	'wikipedia' => true, // Enabled on all Wikipedias
 ],
 
 // ---T208755---
