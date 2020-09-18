@@ -3086,6 +3086,22 @@ if ( $wmgUseEcho ) {
 			$wgDefaultUserOptions[$option] = $value;
 		}
 	}
+
+	// Push notifications
+	$wgEchoEnablePush = $wmgEchoEnablePush ?? false;
+	$wgEchoPushServiceBaseUrl = "{$wmfLocalServices['push-notifications']}/v1/message";
+	$wgEchoPushMaxSubscriptionsPerUser = 10;
+
+	// Set up the push notifier type if push is enabled.
+	// If/when this is promoted to all wikis, this config can be moved directly into extension.json
+	// along with the original notifier types ('web' and 'email').
+	if ( $wgEchoEnablePush ) {
+		$wgEchoNotifiers['push'] = [ 'EchoPush\\PushNotifier', 'notifyWithPush' ];
+		$wgDefaultNotifyTypeAvailability['push'] = true;
+		$wgNotifyTypeAvailabilityByCategory['system']['push'] = false;
+		$wgNotifyTypeAvailabilityByCategory['system-noemail']['push'] = false;
+	}
+
 	// Limit the 'push-subscription-manager' group to Meta-Wiki only (T261625)
 	$wgExtensionFunctions[] = function () {
 		global $wgGroupPermissions, $wgDBname;
