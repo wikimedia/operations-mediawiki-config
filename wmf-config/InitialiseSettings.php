@@ -345,6 +345,7 @@ function wmfGetVariantSettings() {
 	'ecwikimedia' => 'America/Guayaquil', // T135521
 	'elwikinews' => 'Europe/Athens',
 	'elwikivoyage' => 'Europe/Athens',
+	'emlwiki' => 'Europe/Rome', // T263123
 	'etwiki' => 'Europe/Tallinn',
 	'etwikibooks' => 'Europe/Tallinn',
 	'etwikimedia' => 'Europe/Tallinn',
@@ -360,6 +361,7 @@ function wmfGetVariantSettings() {
 	'frwiki' => 'Europe/Paris',
 	'frwikibooks' => 'Europe/Paris',
 	'frwikiquote' => 'Europe/Paris',
+	'furwiki' => 'Europe/Rome', // T263123
 	'fywiki' => 'Europe/Berlin',
 	'gagwiki' => 'Europe/Istanbul',
 	'gcrwiki' => 'America/Cayenne',
@@ -427,6 +429,7 @@ function wmfGetVariantSettings() {
 	'lezwiki' => 'Europe/Moscow',
 	'liwiki' => 'Europe/Berlin',
 	'liwikinews' => 'Europe/Amsterdam',
+	'lijwiki' => 'Europe/Rome', // T263123
 	'lijwikisource' => 'Europe/Rome',
 	'lldwiki' => 'Europe/Rome', // T259432
 	'ltgwiki' => 'Europe/Riga',
@@ -489,11 +492,13 @@ function wmfGetVariantSettings() {
 	'plwikinews' => 'Europe/Warsaw',
 	'plwikimedia' => 'Europe/Warsaw',
 	'plwikivoyage' => 'Europe/Warsaw',
+	'pmswiki' => 'Europe/Rome', // T263123
 	'pmswikisource' => 'Europe/Rome', // T196763
 	'pnbwiki' => 'Asia/Karachi',
 	'pnbwiktionary' => 'Asia/Karachi',
 	'punjabiwikimedia' => 'Asia/Kolkata',
 	'rmwiki' => 'Europe/Berlin',
+	'roa_tarawiki' => 'Europe/Rome', // T263123
 	'romdwikimedia' => 'Europe/Chisinau',
 	'rowiki' => 'Europe/Chisinau',
 	'rowikisource' => 'Europe/Chisinau',
