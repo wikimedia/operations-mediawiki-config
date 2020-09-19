@@ -12597,6 +12597,7 @@ function wmfGetVariantSettings() {
 		],
 		'steward' => [
 			'noratelimit' => true,
+			'bigdelete' => true,
 			'centralauth-lock' => false, // T208035
 			'centralauth-oversight' => false, // T208035
 			'centralauth-unmerge' => false, // T208035
