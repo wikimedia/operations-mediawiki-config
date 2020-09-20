@@ -5997,7 +5997,8 @@ function wmfGetVariantSettings() {
 		'Author' => 100,
 		'Author_talk' => 101,
 		'VikiKaynak' => NS_PROJECT, // T44721
-		'Oluşturuluyor VikiKaynak tartışma' => NS_PROJECT_TALK,
+		'VikiKaynak_tartışma' => NS_PROJECT_TALK,
+		'Portal_talk' => 201
 	],
 	'+ttwiki' => [
 		'WP' => NS_PROJECT,
@@ -8342,6 +8343,8 @@ function wmfGetVariantSettings() {
 	'trwikisource' => [
 		100 => 'Kişi',
 		101 => 'Kişi_tartışma',
+		200 => 'Portal',
+		201 => 'Portal_tartışma',
 	],
 	'ukwikisource' => [ // T50308
 		NS_PROJECT_TALK => 'Обговорення_Вікіджерел',
