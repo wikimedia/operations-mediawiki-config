@@ -16655,6 +16655,7 @@ function wmfGetVariantSettings() {
 		'retrobibliothek.de', // T261012
 		'storage.idigbio.org', // T261575
 		'serv.biokic.asu.edu', // T261562
+		'*.70yearsindonesiaaustralia.com' // 70 years Indonesia-Australia - T262238
 	],
 ],
 
