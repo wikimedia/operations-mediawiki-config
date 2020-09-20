@@ -5828,6 +5828,9 @@ function wmfGetVariantSettings() {
 		'WP' => NS_PROJECT,
 		'WT' => NS_PROJECT_TALK, // T210699
 	],
+	'+shnwiktionary' => [
+		'WT' => NS_PROJECT, // T256348
+	],
 	'+simplewiki' => [
 		'WP' => NS_PROJECT,
 	],
