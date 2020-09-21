@@ -55,6 +55,7 @@ $common = [
 	'restbase' => 'http://restbase.discovery.wmnet:7231',
 	'sessionstore' => 'http://localhost:6006',
 	'echostore' => 'http://localhost:6007',
+	'push-notifications' => 'http://localhost:6012',
 
 	// cloudelastic only exists in eqiad. No load balancer is available due to
 	// the part of the network that they live in so each host is enumerated
