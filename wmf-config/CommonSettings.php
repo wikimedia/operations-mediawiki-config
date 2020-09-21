@@ -934,6 +934,7 @@ if ( isset( $wmgSiteLogo1x ) ) {
 		'icon' => $wmgSiteLogoIcon ?? null,
 		'wordmark' => $wmgSiteLogoWordmark ?? null,
 		'tagline' => $wmgSiteLogoTagline ?? null,
+		'variants' => $wmgSiteLogoVariants ?? null,
 	];
 }
 

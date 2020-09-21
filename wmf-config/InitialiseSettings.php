@@ -2472,6 +2472,59 @@ function wmfGetVariantSettings() {
 	'specieswiki' => '/static/images/mobile/copyright/wikispecies.svg',
 ],
 
+'wmgSiteLogoVariants' => [
+	'zhwiki' => [
+		'zh-hans' => [
+			'wordmark' => [
+				'src' => '/static/images/mobile/copyright/wikipedia-wordmark-zh-hans.svg',
+				'width' => 105,
+				'height' => 23,
+			],
+			'tagline' => [
+				'src' => '/static/images/mobile/copyright/wikipedia-tagline-zh-hans.svg',
+				'width' => 103,
+				'height' => 15,
+			],
+		],
+		'zh-cn' => [
+			'wordmark' => [
+				'src' => '/static/images/mobile/copyright/wikipedia-wordmark-zh-hans.svg',
+				'width' => 105,
+				'height' => 23,
+			],
+			'tagline' => [
+				'src' => '/static/images/mobile/copyright/wikipedia-tagline-zh-hans.svg',
+				'width' => 103,
+				'height' => 15,
+			],
+		],
+		'zh-my' => [
+			'wordmark' => [
+				'src' => '/static/images/mobile/copyright/wikipedia-wordmark-zh-hans.svg',
+				'width' => 105,
+				'height' => 23,
+			],
+			'tagline' => [
+				'src' => '/static/images/mobile/copyright/wikipedia-tagline-zh-hans.svg',
+				'width' => 103,
+				'height' => 15,
+			],
+		],
+		'zh-sg' => [
+			'wordmark' => [
+				'src' => '/static/images/mobile/copyright/wikipedia-wordmark-zh-hans.svg',
+				'width' => 105,
+				'height' => 23,
+			],
+			'tagline' => [
+				'src' => '/static/images/mobile/copyright/wikipedia-tagline-zh-hans.svg',
+				'width' => 103,
+				'height' => 15,
+			],
+		],
+	]
+],
+
 'wmgSiteLogoWordmark' => [
 	// Projects
 	'wikipedia' => [
