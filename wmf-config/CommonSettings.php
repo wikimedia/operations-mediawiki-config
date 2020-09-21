@@ -2792,7 +2792,6 @@ if ( $wmgUseTranslate ) {
 	$wgGroupsRemoveFromSelf['sysop'][] = 'translationadmin'; // T178793
 
 	$wgTranslateDocumentationLanguageCode = 'qqq';
-	$wgExtraLanguageNames['qqq'] = 'Message documentation'; # No linguistic content. Used for documenting messages
 
 	$wgPageLanguageUseDB = true; // T153209
 
