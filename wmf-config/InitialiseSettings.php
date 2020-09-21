@@ -27876,6 +27876,8 @@ function wmfGetVariantSettings() {
 'wgWatchlistExpiry' => [
 	'default' => false,
 	'testwiki' => true, // T257506
+	'mediawikiwiki' => true,
+	'officewiki' => true,
 ],
 
 'wmgPoweredByMediaWikiIcon' => [
