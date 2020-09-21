@@ -27829,6 +27829,11 @@ function wmfGetVariantSettings() {
 	'default' => 'http://localhost:6009/bigdata/namespace/categories/sparql'
 ],
 
+'wgCirrusSearchCompletionBannedPageIds' => [
+	'default' => [],
+	'enwiktionary' => [ 1821 ],
+],
+
 'wgEnableRestAPI' => [
 	'default' => true,
 ],
