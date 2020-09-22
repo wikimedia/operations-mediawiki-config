@@ -18996,9 +18996,15 @@ function wmfGetVariantSettings() {
 ],
 
 'wgCheckUserLogLogins' => [
-	'default' => false,
-	'cswiki' => true, // T253802
-	'fawiki' => true, // T253802
+	// T253802 - enabled everywhere but few large wikis
+	'default' => true,
+	'arwiki' => false,
+	'bnwiki' => false,
+	'commonswiki' => false,
+	'dewiki' => false,
+	'enwiki' => false,
+	'frwiki' => false,
+	'wikidatawiki' => false,
 ],
 
 'wgCheckUserLogSuccessfulBotLogins' => [
