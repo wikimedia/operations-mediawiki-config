@@ -219,6 +219,17 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['enableRefTabs'] = $wmgWikibaseRepoEnableRefTabs;
 
 	$wgWBRepoSettings['propagateChangeVisibility'] = $wmgWikibaseRepoPropagateChangeVisibility;
+
+	// entity data for URLs matching these patterns will be cached in Varnish and purged if needed;
+	// all other entity data URLs will receive no caching
+	$wgWBRepoSettings['entityDataCachePaths'] = [
+		// // JSON from entity page JS, compare wikibase.entityPage.entityLoaded.js
+		'/wiki/Special:EntityData/{entity_id}.json?revision={revision_id}',
+		// Turtle from Query Service updater, compare WikibaseRepository.java
+		'/wiki/Special:EntityData/{entity_id}.ttl?flavor=dump&revision={revision_id}',
+		// third pattern with high volume of requests in Hive, source unknown
+		'/wiki/Special:EntityData?id={entity_id}&revision={revision_id}&format=json',
+	];
 }
 
 if ( $wmgUseWikibaseClient ) {
