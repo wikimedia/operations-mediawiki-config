@@ -59,25 +59,27 @@ $common = [
 
 	// cloudelastic only exists in eqiad. No load balancer is available due to
 	// the part of the network that they live in so each host is enumerated
+
+	// WARNING: psi and omega have their ports "mixed up", see https://phabricator.wikimedia.org/T262630
 	'cloudelastic-chi' => [
-		[
-			'host' => 'cloudelastic.wikimedia.org',
-			'transport' => 'Https',
-			'port' => 9243,
+		[ // forwarded to https://cloudelastic.wikimedia.org:9243/
+			'host' => 'localhost',
+			'transport' => 'Http',
+			'port' => 6105,
 		],
 	],
 	'cloudelastic-psi' => [
-		[
-			'host' => 'cloudelastic.wikimedia.org',
-			'transport' => 'Https',
-			'port' => 9443,
+		[ // forwarded to https://cloudelastic.wikimedia.org:9443/
+			'host' => 'localhost',
+			'transport' => 'Http',
+			'port' => 6107,
 		],
 	],
 	'cloudelastic-omega' => [
-		[
-			'host' => 'cloudelastic.wikimedia.org',
-			'transport' => 'Https',
-			'port' => 9643,
+		[ // forwarded to https://cloudelastic.wikimedia.org:9643/
+			'host' => 'localhost',
+			'transport' => 'Http',
+			'port' => 6106,
 		],
 	]
 ];
