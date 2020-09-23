@@ -21294,25 +21294,6 @@ function wmfGetVariantSettings() {
 
 'wgDiscussionToolsEnable' => [
 	'default' => false,
-	'arwiki' => true,
-	'cawiki' => true,
-	'ckbwiki' => true,
-	'cswiki' => true,
-	'frwiki' => true,
-	'huwiki' => true,
-	'jawiki' => true,
-	'kawiki' => true,
-	'kowiki' => true,
-	'nlwiki' => true,
-	'srwiki' => true,
-	'svwiki' => true,
-	'viwiki' => true,
-	'zhwiki' => true,
-	'mediawikiwiki' => true,
-],
-
-'wgDiscussionToolsBeta' => [
-	'default' => false,
 	'arwiki' => true, // T245794
 	'cawiki' => true, // T251197
 	'ckbwiki' => true, // T251197
@@ -21328,6 +21309,10 @@ function wmfGetVariantSettings() {
 	'viwiki' => true, // T262109
 	'zhwiki' => true, // T251075
 	'mediawikiwiki' => true, // T251208
+],
+
+'wgDiscussionToolsBeta' => [
+	'default' => true,
 ],
 
 'wgDTSchemaEditAttemptStepSamplingRate' => [
