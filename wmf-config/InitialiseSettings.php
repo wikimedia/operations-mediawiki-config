@@ -21313,6 +21313,9 @@ function wmfGetVariantSettings() {
 
 'wgDiscussionToolsBeta' => [
 	'default' => true,
+	'arwiki' => false, // T249394
+	'cswiki' => false, // T249394
+	'huwiki' => false, // T249394
 ],
 
 'wgDTSchemaEditAttemptStepSamplingRate' => [
