@@ -8496,6 +8496,8 @@ function wmfGetVariantSettings() {
 		115 => 'Discussion_Rime', // T262398
 		116 => 'Conjugaison', // T262298
 		117 => 'Discussion_Conjugaison', // T262298
+		118 => 'Racine', // T263525
+		119 => 'Discussion_Racine', // T263525
 	],
 	'gawiktionary' => [
 		100 => 'Aguisín',
