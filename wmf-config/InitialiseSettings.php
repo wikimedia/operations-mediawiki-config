@@ -21381,7 +21381,6 @@ function wmfGetVariantSettings() {
 
 'wmgContentTranslationCluster' => [
 	'default' => 'extension1',
-	'testwiki' => false, //T263417
 ],
 
 'wmgUseContentTranslation' => [
