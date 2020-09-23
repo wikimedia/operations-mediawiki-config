@@ -3462,8 +3462,6 @@ if ( $wmgUseContentTranslation ) {
 		$wgContentTranslationCluster = $wmgContentTranslationCluster;
 	}
 
-	$wgContentTranslationDatabase = 'wikishared';
-
 	$wgContentTranslationCampaigns = $wmgContentTranslationCampaigns;
 
 	$wgContentTranslationCXServerAuth = [

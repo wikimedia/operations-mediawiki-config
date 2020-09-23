@@ -21377,6 +21377,12 @@ function wmfGetVariantSettings() {
 
 'wmgContentTranslationCluster' => [
 	'default' => 'extension1',
+	'testwiki' => false,
+],
+
+'wmgContentTranslationDatabase' => [
+	'default' => 'wikishared',
+	'testwiki' => 'testwiki',
 ],
 
 'wmgUseContentTranslation' => [
