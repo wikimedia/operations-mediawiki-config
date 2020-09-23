@@ -21638,6 +21638,7 @@ function wmfGetVariantSettings() {
 	"szlwiki" => true,
 	"szywiki" => true,
 	"tcywiki" => true,
+	"test2wiki" => true,
 	"tetwiki" => true,
 	"tgwiki" => true,
 	"thwiki" => true,
