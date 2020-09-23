@@ -3460,9 +3460,8 @@ if ( $wmgUseContentTranslation ) {
 
 	if ( $wmgContentTranslationCluster ) {
 		$wgContentTranslationCluster = $wmgContentTranslationCluster;
+		$wgContentTranslationDatabase = 'wikishared';
 	}
-
-	$wgContentTranslationDatabase = 'wikishared';
 
 	$wgContentTranslationCampaigns = $wmgContentTranslationCampaigns;
 
