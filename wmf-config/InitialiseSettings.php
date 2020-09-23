@@ -18110,7 +18110,6 @@ function wmfGetVariantSettings() {
 		'10.192.16.44' => true, # wtp2002.codfw.wmnet
 		'10.192.16.45' => true, # wtp2003.codfw.wmnet
 		'10.192.16.46' => true, # wtp2004.codfw.wmnet
-		'10.192.16.47' => true, # wtp2005.codfw.wmnet
 		'10.192.16.48' => true, # wtp2006.codfw.wmnet
 		'10.192.16.49' => true, # wtp2007.codfw.wmnet
 		'10.192.16.50' => true, # wtp2008.codfw.wmnet
