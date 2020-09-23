@@ -22253,6 +22253,13 @@ function wmfGetVariantSettings() {
 	'metawiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
 	'commonswiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
 	'frwiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
+	'jawiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
+	'eswiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
+	'dewiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
+	'ruwiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
+	'itwiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
+	'zhwiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
+	'ptwiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
 ],
 
 'wmgUseWikimediaEvents' => [
