@@ -22536,11 +22536,6 @@ function wmfGetVariantSettings() {
 	// WikibaseMediaInfo entity namespace and slot is hard-coded in the extension
 ],
 
-'wmgWikibaseRepoPropagateChangeVisibility' => [
-	'default' => false,
-	'testwikidatawiki' => true,
-],
-
 'wmgWikibaseClientEntityNamespaces' => [
 	'default' => [],
 	'wikidataclient' => [

@@ -218,7 +218,7 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBRepoSettings['enableRefTabs'] = $wmgWikibaseRepoEnableRefTabs;
 
-	$wgWBRepoSettings['propagateChangeVisibility'] = $wmgWikibaseRepoPropagateChangeVisibility;
+	$wgWBRepoSettings['propagateChangeVisibility'] = true;
 
 	// entity data for URLs matching these patterns will be cached in Varnish and purged if needed;
 	// all other entity data URLs will receive no caching
