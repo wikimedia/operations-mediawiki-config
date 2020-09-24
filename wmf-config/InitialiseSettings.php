@@ -9363,9 +9363,8 @@ function wmfGetVariantSettings() {
 ],
 'wgVectorIsSearchInHeader' => [
 	'default' => false,
-	// T262207
-	'testwiki' => true,
-	'officewiki' => true,
+	// T262207, T263032
+	'desktop-improvements' => true,
 ],
 
 'wgVectorIsSearchInHeaderABTest' => [
