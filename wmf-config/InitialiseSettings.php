@@ -9368,6 +9368,12 @@ function wmfGetVariantSettings() {
 	'officewiki' => true,
 ],
 
+'wgVectorIsSearchInHeaderABTest' => [
+	'default' => false,
+	'desktop-improvements' => true,
+	'officewiki' => false,
+],
+
 # wgForceUIMsgAsContentMsg @{
 'wgForceUIMsgAsContentMsg' => [
 	'default' => [],
