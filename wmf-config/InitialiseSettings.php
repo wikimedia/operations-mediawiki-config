@@ -19265,6 +19265,10 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
+'wgMFTrackBlockNotices' => [
+	'default' => true,
+],
+
 'wgMFAdvancedMobileContributions' => [
 	'default' => true, // T233612
 ],
