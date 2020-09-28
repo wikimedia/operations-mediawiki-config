@@ -27879,6 +27879,10 @@ function wmfGetVariantSettings() {
 	'mediawikiwiki' => true,
 	'metawiki' => true,
 	'officewiki' => true,
+	'dewikisource' => true,
+	'enwikisource' => true,
+	'eswikisource' => true,
+	'hewikisource' => true,
 ],
 
 'wmgPoweredByMediaWikiIcon' => [
