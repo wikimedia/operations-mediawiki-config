@@ -28005,3 +28005,25 @@ function wmfGetVariantSettings() {
 
 ];
 }
+
+/**
+ * Override site settings as needed for non-production realms.
+ *
+ * @param array[] $settings wgConf-style settings array
+ * @return array
+ */
+function wmfApplyOverrideSettings( array $settings ) : array {
+	// Override (or add) settings that we need for non-production realms.
+	foreach ( wmfGetOverrideSettings() as $key => $value ) {
+		if ( substr( $key, 0, 1 ) == '-' ) {
+			// Settings prefixed with - are completely overriden
+			$settings[substr( $key, 1 )] = $value;
+		} elseif ( isset( $settings[$key] ) ) {
+			$settings[$key] = array_merge( $settings[$key], $value );
+		} else {
+			$settings[$key] = $value;
+		}
+	}
+
+	return $settings;
+}

@@ -169,10 +169,10 @@ function wmfLoadInitialiseSettings( $conf ) {
 	require_once "$wmfConfigDir/InitialiseSettings.php";
 	$settings = wmfGetVariantSettings();
 
-	### WMF Labs override #####
-	if ( $wmfRealm == 'labs' ) {
-		require_once "$wmfConfigDir/InitialiseSettings-labs.php";
-		$settings = wmfApplyLabsOverrideSettings( $settings );
+	### Realm overrides #####
+	if ( $wmfRealm !== 'production' ) {
+		require_once "$wmfConfigDir/InitialiseSettings-$wmfRealm.php";
+		$settings = wmfApplyOverrideSettings( $settings );
 	}
 
 	$conf->settings = $settings;

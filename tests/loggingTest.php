@@ -95,7 +95,7 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 
 	public function provideConfiguredBetaClusterChannels() {
 		$variantSettings = wmfGetVariantSettings();
-		$variantSettings = wmfApplyLabsOverrideSettings( $variantSettings );
+		$variantSettings = wmfApplyOverrideSettings( $variantSettings );
 
 		foreach ( $variantSettings['wmgMonologChannels'] as $wiki => $channels ) {
 			foreach ( $channels as $name => $config ) {

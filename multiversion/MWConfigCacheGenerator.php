@@ -112,7 +112,7 @@ class MWConfigCacheGenerator {
 
 			require_once __DIR__ . "../../src/defines.php";
 			require_once __DIR__ . "../../wmf-config/InitialiseSettings-labs.php";
-			$config = wmfApplyLabsOverrideSettings( $config );
+			$config = wmfApplyOverrideSettings( $config );
 		}
 
 		foreach ( $dbLists as $tag => $fileName ) {

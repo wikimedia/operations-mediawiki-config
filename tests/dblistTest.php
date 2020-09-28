@@ -141,7 +141,7 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 		$unusedDblists = array_flip( DBList::getDblistsUsedInSettings() );
 
 		$prodSettings = wmfGetVariantSettings();
-		$labsSettings = wmfApplyLabsOverrideSettings( $prodSettings );
+		$labsSettings = wmfApplyOverrideSettings( $prodSettings );
 
 		foreach ( $prodSettings as $settingName => $settingsArray ) {
 			foreach ( $settingsArray as $wiki => $settingValue ) {

@@ -24,30 +24,8 @@
 #
 
 /**
- * Override site settings as needed for Beta Cluster.
- *
- * @param array[] $settings wgConf-style settings array
- * @return array
- */
-function wmfApplyLabsOverrideSettings( array $settings ) : array {
-	// Override (or add) settings that we need within the labs environment,
-	// but not in production.
-	foreach ( wmfGetLabsOverrideSettings() as $key => $value ) {
-		if ( substr( $key, 0, 1 ) == '-' ) {
-			// Settings prefixed with - are completely overriden
-			$settings[substr( $key, 1 )] = $value;
-		} elseif ( isset( $settings[$key] ) ) {
-			$settings[$key] = array_merge( $settings[$key], $value );
-		} else {
-			$settings[$key] = $value;
-		}
-	}
-
-	return $settings;
-}
-
-/**
- * Get overrides for Beta Cluster settings. This is used by wmfLabsOverride().
+ * Get overrides for Beta Cluster settings. This is used by
+ * wmfLoadInitialiseSettings() in CommonSettings.php.
  *
  * Keys that start with a hyphen will completely override the prodution settings
  * from InitializeSettings.php.
@@ -57,7 +35,7 @@ function wmfApplyLabsOverrideSettings( array $settings ) : array {
  *
  * @return array
  */
-function wmfGetLabsOverrideSettings() {
+function wmfGetOverrideSettings() {
 	return [
 
 		'wgParserCacheType' => [
@@ -1969,4 +1947,4 @@ function wmfGetLabsOverrideSettings() {
 			'default' => [],
 		],
 	];
-} # wmflLabsSettings()
+} # wmfGetOverrideSettings()

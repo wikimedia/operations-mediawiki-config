@@ -17,7 +17,7 @@ require_once "{$wmfConfigDir}/InitialiseSettings.php";
 $settings['production'] = wmfGetVariantSettings();
 
 require_once "{$wmfConfigDir}/InitialiseSettings-labs.php";
-$settings['labs'] = wmfApplyLabsOverrideSettings( $settings['production'] );
+$settings['labs'] = wmfApplyOverrideSettings( $settings['production'] );
 
 foreach ( [ 'production', 'labs' ] as $realm ) {
 	$config = $settings[$realm];
