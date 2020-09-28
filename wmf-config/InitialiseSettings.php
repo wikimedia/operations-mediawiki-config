@@ -27870,7 +27870,14 @@ function wmfGetVariantSettings() {
 'wgWatchlistExpiry' => [
 	'default' => false,
 	'testwiki' => true, // T257506
+	'enwikivoyage' => true,
+	'enwikiversity' => true,
+	'eswiktionary' => true,
+	'eswikivoyage' => true,
+	'hewiki' => true,
+	'hewiktionary' => true,
 	'mediawikiwiki' => true,
+	'metawiki' => true,
 	'officewiki' => true,
 ],
 
