@@ -21380,7 +21380,7 @@ function wmfGetVariantSettings() {
 	'testwiki' => false,
 ],
 
-'wmgContentTranslationDatabase' => [
+'wgContentTranslationDatabase' => [
 	'default' => 'wikishared',
 	'testwiki' => 'testwiki',
 ],
