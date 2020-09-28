@@ -24267,7 +24267,7 @@ function wmfGetVariantSettings() {
 // Show/Hide multimedia content in the crossproject
 // search results sidebar
 'wgCirrusSearchCrossProjectShowMultimedia' => [
-	'default' => true,
+	'default' => false,  // T264053 Reducing queries against largest indices
 	'enwiki' => false, // T163463, requested during RfC
 	// Disable multimedia on italian non-wikipedias
 	'itwiktionary' => false,
