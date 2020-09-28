@@ -1418,8 +1418,10 @@ $wgFooterIcons['copyright']['copyright'] = '<a href="https://wikimediafoundation
 # All wikis are special and get Cirrus :)
 # Must come *AFTER* PoolCounterSettings.php
 wfLoadExtension( 'Elastica' );
-wfLoadExtension( 'CirrusSearch' );
-include "$wmfConfigDir/CirrusSearch-common.php";
+if ( $wmfRealm !== 'dev' ) { // dancy
+ wfLoadExtension( 'CirrusSearch' );
+ include "$wmfConfigDir/CirrusSearch-common.php";
+}
 
 $wgInvalidateCacheOnLocalSettingsChange = false;
 
