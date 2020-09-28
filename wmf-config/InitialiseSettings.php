@@ -193,7 +193,6 @@ function wmfGetVariantSettings() {
 	'arbcom_enwiki' => 'en',
 	'arbcom_fiwiki' => 'fi',
 	'arbcom_nlwiki' => 'nl',
-	'arbcom_ruwiki' => 'ru', // T262812
 	'auditcomwiki' => 'en',
 	'betawikiversity' => 'en',
 	'chairwiki' => 'en',
@@ -1297,7 +1296,6 @@ function wmfGetVariantSettings() {
 	'arbcom_enwiki' => '/static/images/project-logos/arbcom_enwiki.png',
 	'arbcom_fiwiki' => '/static/images/project-logos/arbcom_fiwiki.png',
 	'arbcom_nlwiki' => '/static/images/project-logos/arbcom_nlwiki.png',
-	'arbcom_ruwiki' => '/static/images/project-logos/arbcom_ruwiki.png', // T262812
 	'boardwiki' => '/static/images/project-logos/boardwiki.png',
 	'chairwiki' => '/static/images/project-logos/chairwiki.png',
 	'chapcomwiki' => '/static/images/project-logos/chapcomwiki.png',
@@ -1889,7 +1887,6 @@ function wmfGetVariantSettings() {
 	'arbcom_enwiki' => '/static/images/project-logos/arbcom_enwiki-1.5x.png', // T150618
 	'arbcom_fiwiki' => '/static/images/project-logos/arbcom_fiwiki-1.5x.png', // T150618
 	'arbcom_nlwiki' => '/static/images/project-logos/arbcom_nlwiki-1.5x.png', // T150618
-	'arbcom_ruwiki' => '/static/images/project-logos/arbcom_ruwiki-1.5x.png', // T262812
 	'chapcomwiki' => '/static/images/project-logos/chapcomwiki-1.5x.png', // T193024
 	'commonswiki' => '/static/images/project-logos/commonswiki-1.5x.png', // T203343
 	'donatewiki' => '/static/images/project-logos/donatewiki-1.5x.png',
@@ -2441,7 +2438,6 @@ function wmfGetVariantSettings() {
 	'arbcom_enwiki' => '/static/images/project-logos/arbcom_enwiki-2x.png', // T150618
 	'arbcom_fiwiki' => '/static/images/project-logos/arbcom_fiwiki-2x.png', // T150618
 	'arbcom_nlwiki' => '/static/images/project-logos/arbcom_nlwiki-2x.png', // T150618
-	'arbcom_ruwiki' => '/static/images/project-logos/arbcom_ruwiki-2x.png', // T262812
 	'chapcomwiki' => '/static/images/project-logos/chapcomwiki-2x.png', // T193024
 	'commonswiki' => '/static/images/project-logos/commonswiki-2x.png', // T203343
 	'donatewiki' => '/static/images/project-logos/donatewiki-2x.png',
@@ -3510,7 +3506,6 @@ function wmfGetVariantSettings() {
 	'arbcom_enwiki' => 'Arbitration Committee',
 	'arbcom_fiwiki' => 'Arbitration Committee',
 	'arbcom_nlwiki' => 'Arbitration Committee',
-	'arbcom_ruwiki' => 'Арбитражный комитет русской Википедии', // T262812
 	'arcwiki' => 'ܘܝܩܝܦܕܝܐ',
 	'arwiki' => 'ويكيبيديا',
 	'arwikibooks' => 'ويكي_الكتب',
@@ -4047,7 +4042,6 @@ function wmfGetVariantSettings() {
 	'arbcom_enwiki' => 'Project',
 	'arbcom_fiwiki' => 'Project',
 	'arbcom_nlwiki' => 'Project',
-	'arbcom_ruwiki' => 'Арбитраж', // T262812
 	'arcwiki' => 'ܘܝܩܝܦܕܝܐ',
 	'arwiki' => 'ويكيبيديا', // T6672
 	'arwikibooks' => 'ويكي_الكتب',
@@ -4527,7 +4521,6 @@ function wmfGetVariantSettings() {
 	'angwiki' => 'Wikipǣdiamōtung', // T58634
 	'angwiktionary' => 'Wikiwordbōcmōtung', // T58634
 	'arbcom_cswiki' => 'Diskuse_k_projektu', // T151731
-	'arbcom_ruwiki' => 'Обсуждение_арбитража', // T262812
 	'aswiki' => 'ৱিকিপিডিয়া_বাৰ্তা',
 	'aswikisource' => 'ৱিকিউৎস_বাৰ্তা', // T45129, T226027
 	'aywiki' => 'Wikipidiyan_Aruskipäwi',
@@ -21026,7 +21019,6 @@ function wmfGetVariantSettings() {
 	'arbcom_enwiki' => false,
 	'arbcom_fiwiki' => false,
 	'arbcom_nlwiki' => false,
-	'arbcom_ruwiki' => false, // T262812
 	'sysop_itwiki' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
@@ -21413,7 +21405,6 @@ function wmfGetVariantSettings() {
 	'arbcom_enwiki' => false,
 	'arbcom_fiwiki' => false,
 	'arbcom_nlwiki' => false,
-	'arbcom_ruwiki' => false, // T262812
 	'sysop_itwiki' => false,
 	'testwiki' => true,
 	'test2wiki' => false,
