@@ -33,6 +33,7 @@
     "arbcom_enwiki": "php-1.36.0-wmf.10",
     "arbcom_fiwiki": "php-1.36.0-wmf.10",
     "arbcom_nlwiki": "php-1.36.0-wmf.10",
+    "arbcom_ruwiki": "php-1.36.0-wmf.10",
     "arcwiki": "php-1.36.0-wmf.10",
     "arwiki": "php-1.36.0-wmf.10",
     "arwikibooks": "php-1.36.0-wmf.10",
