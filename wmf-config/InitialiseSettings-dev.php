@@ -14,13 +14,20 @@
  */
 function wmfGetOverrideSettings() {
 	return [
-		// This can be removed once I figure out how to prepare the centralauth db.
 		'-wmgUseCentralAuth' => [
 			'default' => false,
 		],
-		// Keep things simple
 		'-wgParserCacheType' => [
 			'default' => 'memcached-pecl',
+		],
+		'-wmgUseMediaModeration' => [
+			'default' => false,
+		],
+		'-wmgUseThanks' => [
+			'default' => false,
+		],
+		'-wmgUseEcho' => [
+			'default' => false,
 		],
 		'-wmgUseGlobalBlocking' => [
 			'default' => false,
@@ -35,7 +42,6 @@ function wmfGetOverrideSettings() {
 		'-wmgFlowDefaultWikiDb' => [
 			'default' => false,
 		],
-		// Don't wanna deal with wikibase shiz
 		'-wmgUseWikibaseRepo' => [
 			'default' => false,
 		],
