@@ -26505,8 +26505,6 @@ function wmfGetVariantSettings() {
 
 'wgWelcomeSurveyExperimentalGroups' => [
 	'default' => [ 'exp2_target_specialpage' => [ 'range' => '0-9' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
-	// ptwiki is opt-in only for now, so run the WelcomeSurvey at 0% (T255027)
-	'ptwiki' => [ 'exp2_target_specialpage' => [ 'range' => 'x' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
 	// 80/20 A/B test on ruwiki; consider removing this some time in October 2020, see T259768
 	'ruwiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-7' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
 ],
@@ -27211,8 +27209,7 @@ function wmfGetVariantSettings() {
 	'hywiki' => 80,
 	'kowiki' => 80,
 	'plwiki' => 80,
-	// ptwiki is opt-in only at first, for testing (T255027)
-	'ptwiki' => 0,
+	'ptwiki' => 80,
 	'ruwiki' => 80,
 	'srwiki' => 80,
 	'ukwiki' => 80,
