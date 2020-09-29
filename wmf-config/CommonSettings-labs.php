@@ -370,6 +370,15 @@ if ( $wgDBname == 'commonswiki' ) {
 	$wgDefaultUserOptions['search-match-redirect'] = false;
 }
 
+// For API Portal wiki: T261358
+// Move to prod after beta testing
+if ( $wgDBname === 'metawiki' ) {
+	$wgRestAllowCrossOriginCookieAuth = true;
+}
+if ( $wmgUseWikimediaApiPortalOAuth ) {
+	$wgWikimediaApiPortalOAuthMetaRestURL = 'https://meta.wikimedia.beta.wmflabs.org/w/rest.php';
+}
+
 // Test of new import source configuration on labs cluster
 $wgImportSources = [];
 include "$wmfConfigDir/import.php";
