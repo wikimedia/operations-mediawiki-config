@@ -35,7 +35,6 @@ function wmfGetOverrideSettings() {
 		'-wmgUseFlow' => [
 			'default' => false,
 		],
-		// FIXME: Not sure if these other flow settings are necessary given wmfUseFlow being false. Test.
 		'-wmgFlowCluster' => [
 			'default' => false,
 		],
