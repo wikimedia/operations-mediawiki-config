@@ -25885,6 +25885,7 @@ function wmfGetVariantSettings() {
 	'ruwiki' => true,
 	'srwiki' => true,
 	'svwiki' => true,
+	'trwiki' => true,
 	'ukwiki' => true,
 	'viwiki' => true,
 ],
@@ -25907,6 +25908,7 @@ function wmfGetVariantSettings() {
 	'ruwiki' => true,
 	'srwiki' => true,
 	'svwiki' => true,
+	'trwiki' => true,
 	'ukwiki' => true,
 ],
 
@@ -25934,6 +25936,7 @@ function wmfGetVariantSettings() {
 	'ruwiki' => true,
 	'srwiki' => true,
 	'svwiki' => true,
+	'trwiki' => true,
 	'ukwiki' => true,
 	'viwiki' => true,
 ],
@@ -25978,6 +25981,7 @@ function wmfGetVariantSettings() {
 	'ruwiki' => 'Википедия:Форум/Помощь начинающим',
 	'srwiki' => 'Википедија:Трг/Помоћ',
 	'svwiki' => 'Wikipedia:Fikarummet/Frågor',
+	'trwiki' => 'Vikipedi:Danışma masası',
 	'ukwiki' => 'Вікіпедія:Кнайпа (допомога)',
 	'viwiki' => 'Wikipedia:Giúp_sử_dụng_Wikipedia',
 ],
@@ -26000,6 +26004,7 @@ function wmfGetVariantSettings() {
 	'ruwiki' => 'Википедия:Справка',
 	'srwiki' => 'Википедија:Помоћ',
 	'svwiki' => 'Wikipedia:Hjälp',
+	'trwiki' => 'Yardım:İçindekiler',
 	'ukwiki' => 'Вікіпедія:Довідка',
 	'viwiki' => 'Trợ_giúp:Mục_lục',
 ],
@@ -26426,6 +26431,33 @@ function wmfGetVariantSettings() {
 			'title' => 'Wikipedia:Introduktion till källhänvisningar',
 			'text' => 'Lägg till källa',
 			'id' => 'citation',
+		]
+	],
+	'trwiki' => [
+		[
+			'title' => 'Vikipedi:Biçem el kitabı',
+			'text' => 'Biçem el kitabı',
+			'id' => 'style',
+		],
+		[
+			'title' => 'Yardım:Sayfa değiştirme',
+			'text' => 'Sayfa değiştirme',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'Yardım:Sayfa nasıl yazılır?',
+			'text' => 'Sayfa nasıl yazılır?',
+			'id' => 'newarticle',
+		],
+		[
+			'title' => 'Yardım:İçindekiler',
+			'text' => 'İçindekiler',
+			'id' => 'contents',
+		],
+		[
+			'title' => 'Vikipedi:Sıkça Sorulan Sorular',
+			'text' => 'Sıkça Sorulan Sorular',
+			'id' => 'faq',
 		],
 	],
 	'ukwiki' => [
@@ -26618,6 +26650,10 @@ function wmfGetVariantSettings() {
 		'create' => 'Wikipedia:Att skapa en ny artikel',
 		'image' => 'Wikipedia:Introduktion till illustrationer',
 	],
+	'trwiki' => [
+		'create' => 'Vikipedi:İlk maddeniz',
+		'image' => 'Yardım:Resim ekleme',
+	],
 	'ukwiki' => [
 		'create' => 'Довідка:Створення нової статті',
 		'image' => 'Довідка:Як працювати із зображеннями у Візуальному редакторі/1',
@@ -26650,6 +26686,7 @@ function wmfGetVariantSettings() {
 	'ruwiki' => 80,
 	'srwiki' => 80,
 	'svwiki' => 80,
+	'trwiki' => 80,
 	'ukwiki' => 80,
 	'viwiki' => 80,
 ],
@@ -26680,6 +26717,7 @@ function wmfGetVariantSettings() {
 	'ruwiki' => 'Справка:Введение',
 	'srwiki' => 'Помоћ:Уређивање',
 	'svwiki' => 'Wikipedia:Introduktion',
+	'trwiki' => 'Yardım:Sayfa değiştirme',
 	'ukwiki' => 'Довідка:Ознайомлення',
 	'viwiki' => 'Wikipedia:Sách_hướng_dẫn',
 ],
@@ -26702,6 +26740,7 @@ function wmfGetVariantSettings() {
 	'ruwiki' => 'Проект:Помощь начинающим/Наставники',
 	'srwiki' => 'Википедија:Трг/Помоћ/Ментори',
 	'svwiki' => 'Wikipedia:Faddrar/Lista',
+	'trwiki' => 'Vikipedi:Eğitmen listesi',
 	'ukwiki' => 'Вікіпедія:Кнайпа (допомога)/Наставники',
 	'viwiki' => 'Wikipedia:Dự án Phát triển cộng đồng/Danh sách thành viên cố vấn',
 ],
