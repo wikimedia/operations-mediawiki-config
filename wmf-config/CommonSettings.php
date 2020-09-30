@@ -3504,11 +3504,15 @@ if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient || $wmgUseWikibaseMediaInfo ) 
 
 $wgHooks['RejectParserCacheValue'][] = function ( $value, WikiPage $wikiPage, $popts ) {
 	$cachedTime = $value->getCacheTime();
-	// T256922: Reject parser output from 19:10 UTC to 22:40 UTC.
-	$incidentStartTime = '20200701191000';
-	$incidentFullRestoreTime = '20200701224000';
+	// Reject parser output from 19:00 UTC to 21:05 UTC
+	// due to incompatible CacheTime objects.
+	// https://phabricator.wikimedia.org/T263851
+	$incidentStartTime = '20201001190000';
+	$incidentFullRestoreTime = '20201001210500';
+	// Consider using this condition if it is limited to
+	// e.g. wikitext articles only, or wikidata entities only, etc.
+	// $wikiPage->getContentModel() === CONTENT_MODEL_WIKITEXT
 	if (
-		$wikiPage->getContentModel() === CONTENT_MODEL_WIKITEXT &&
 		$cachedTime > $incidentStartTime &&
 		$cachedTime < $incidentFullRestoreTime
 	) {
