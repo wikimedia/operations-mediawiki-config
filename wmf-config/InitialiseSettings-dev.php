@@ -50,5 +50,11 @@ function wmfGetOverrideSettings() {
 		'-wmgUseWikibaseMediaInfo' => [
 			'default' => false,
 		],
+		'-wmgUseTranslate' => [
+			'default' => false,
+		],
+		'-wmgUseTranslationNotifications' => [
+			'default' => false,
+		],
 	];
 }
