@@ -9362,9 +9362,8 @@ function wmfGetVariantSettings() {
 	'desktop-improvements' => true,
 ],
 'wgVectorIsSearchInHeader' => [
-	'default' => false,
 	// T262207, T263032
-	'desktop-improvements' => true,
+	'default' => true,
 ],
 
 'wgVectorIsSearchInHeaderABTest' => [
