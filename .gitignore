@@ -30,5 +30,11 @@ portal-master/
 ## Mac OS X
 .DS_Store
 
+# python stuff
+*.pyc
+/.tox
+mediawiki_config.egg-info
+__pycache__
+
 # scap stuff
 scap/log
