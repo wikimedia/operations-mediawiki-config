@@ -8566,6 +8566,8 @@ function wmfGetVariantSettings() {
 		105 => 'Gotûbêja_portalê', // T39524
 		106 => 'Tewandin', // T224327
 		107 => 'Gotûbêja_tewandinê',
+		108 => 'Jinûvesazî', // T262046 - Reconstruction
+		109 => 'Gotûbêja_jinûvesaziyê', // T262046 - Reconstruction talk
 	],
 	'lbwiktionary' => [
 		100 => 'Annexen',
