@@ -27283,24 +27283,6 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'arwiki' => true, // T220186
 ],
-# The names of migration constants here may appear confusing.
-# see \Wikibase\Repo\WikibaseRepo::getItemTermStore
-# and \Wikibase\Repo\WikibaseRepo::getPropertyTermStore
-# and extensions/Wikibase/lib/config/WikibaseLib.default.php
-'wmgWikibaseTmpPropertyTermsMigrationStage' => [
-	'default' => MIGRATION_NEW, // Reads from new store, only writes to new store
-],
-'wmgWikibaseTmpItemTermsMigrationStage' => [
-	'default' => [
-		'max' => MIGRATION_NEW, // Reads from new store, writes to new store
-	],
-	'testwikidatawiki' => [
-		'max' => MIGRATION_NEW, // Reads from new store, writes to new store
-	],
-	'wikidatawiki' => [
-		'max' => MIGRATION_NEW, // Reads from new store, writes to new store
-	],
-],
 
 'wmgUseTheWikipediaLibrary' => [
 	'default' => false,

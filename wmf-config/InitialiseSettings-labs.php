@@ -1583,11 +1583,6 @@ function wmfGetLabsOverrideSettings() {
 			'wikidatawiki' => true,
 		],
 
-		'wmgWikibaseTmpPropertyTermsMigrationStage' => [
-			'default' => MIGRATION_NEW,
-			'wikidatawiki' => MIGRATION_NEW // Override production
-		],
-
 		// T235033
 		'wmgWikibaseRepoDataBridgeEnabled' => [
 			'default' => false,
