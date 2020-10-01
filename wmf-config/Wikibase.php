@@ -203,10 +203,6 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBRepoSettings['entityTypesWithoutRdfOutput'] = $wmgWikibaseEntityTypesWithoutRdfOutput;
 
-	// Migration, T226086
-	$wgWBRepoSettings['tmpPropertyTermsMigrationStage'] = $wmgWikibaseTmpPropertyTermsMigrationStage;
-	$wgWBRepoSettings['tmpItemTermsMigrationStages'] = $wmgWikibaseTmpItemTermsMigrationStage;
-
 	// T235033
 	if ( isset( $wmgWikibaseRepoDataBridgeEnabled ) ) {
 		$wgWBRepoSettings['dataBridgeEnabled'] = $wmgWikibaseRepoDataBridgeEnabled;
@@ -334,10 +330,6 @@ if ( $wmgUseWikibaseClient ) {
 
 	// Temporary, see T210926
 	$wgWBClientSettings['useKartographerMaplinkInWikitext'] = true;
-
-	// Migration, T226086
-	$wgWBClientSettings['tmpPropertyTermsMigrationStage'] = $wmgWikibaseTmpPropertyTermsMigrationStage;
-	$wgWBClientSettings['tmpItemTermsMigrationStages'] = $wmgWikibaseTmpItemTermsMigrationStage;
 
 	// T226816
 	if ( isset( $wmgWikibaseClientDataBridgeEnabled ) && isset( $wmgWikibaseClientDataBridgeHrefRegExp ) ) {
