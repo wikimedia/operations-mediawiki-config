@@ -22565,6 +22565,11 @@ function wmfGetVariantSettings() {
 	'enwiki' => true,
 ],
 
+'wmgWikibaseForceLocalShortDesc' => [
+	'default' => false,
+	'enwiki' => true,
+],
+
 'wmgWikibaseEnableData' => [
 	'default' => true,
 ],
