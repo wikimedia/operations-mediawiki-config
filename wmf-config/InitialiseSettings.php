@@ -15631,6 +15631,7 @@ function wmfGetVariantSettings() {
 		106 => [ 'autoconfirmed' ],
 	],
 	'+wikidatawiki' => [
+		120 => [ 'autoconfirmed' ],  // Property namespace per T254280
 		122 => [ 'query-update' ],  // Query namespace per T51001
 	],
 ],
