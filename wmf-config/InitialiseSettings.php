@@ -11523,8 +11523,8 @@ function wmfGetVariantSettings() {
 	],
 	'+mediawikiwiki' => [
 		'*' => [ 'flow-hide' => false, ], // T245780
-		'user' => [ 'flow-create-board' => true, ],
 		'autoconfirmed' => [ 'flow-hide' => true ],  // T245780
+		'user' => [ 'flow-create-board' => true, ],
 		'autopatrolled' => [ 'autopatrol' => true, ],
 		'uploader' => [ // T217523
 			'upload' => true,
@@ -12572,6 +12572,8 @@ function wmfGetVariantSettings() {
 	],
 	// due to mass vandalism complaint, 2006-04-11
 	'+zhwiki' => [
+		'*' => [ 'flow-hide' => false, ], // T264489, to revise on 2020-10-12
+		'autoconfirmed' => [ 'flow-hide' => true ],  // T264489, to revise on 2020-10-12
 		'rollbacker' => [
 			'rollback' => true, // T18988
 			'abusefilter-log-private' => true, // T39679
