@@ -12343,7 +12343,11 @@ function wmfGetVariantSettings() {
 			'unreviewedpages' => true, // T40690
 			'movefile' => true, // T46587
 		],
+		'user' => [
+			'changetags' => false, // T264508
+		],
 		'sysop' => [
+			'changetags' => true, // T264508
 			'review' => true,
 			'unreviewedpages' => true,
 		], // T40690
