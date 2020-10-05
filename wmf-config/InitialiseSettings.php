@@ -15954,6 +15954,7 @@ function wmfGetVariantSettings() {
 		'species.wikimedia.org' => 'specieswiki',
 		'incubator.wikimedia.org' => 'incubatorwiki',
 		'.wikivoyage.org' => 'enwikivoyage',
+		'api.wikimedia.org' => 'apiportalwiki',
 	],
 	'+ptwiki' => [ 'br.wikimedia.org' => 'brwikimedia' ],
 	'+ptwikibooks' => [ 'br.wikimedia.org' => 'brwikimedia' ],
