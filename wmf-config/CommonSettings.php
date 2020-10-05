@@ -1689,6 +1689,7 @@ if ( $wmgUseCentralAuth ) {
 			'deployment.wikimedia.beta.wmflabs.org' => 'deploymentwiki',
 			'commons.wikimedia.beta.wmflabs.org' => 'commonswiki',
 			$wmfHostnames['wikidata'] => 'wikidatawiki',
+			'api.wikimedia.beta.wmflabs.org' => 'apiportalwiki',
 		];
 		$wgCentralAuthLoginWiki = 'loginwiki';
 		break;
