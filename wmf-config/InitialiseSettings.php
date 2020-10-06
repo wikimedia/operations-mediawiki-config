@@ -6741,6 +6741,13 @@ function wmfGetVariantSettings() {
 ],
 # @} end of wgWhitelistRead
 
+// Temporary until public launch T262480
+# wgWhitelistReadRegexp @{
+'wgWhitelistReadRegexp' => [
+	'apiportalwiki' => [ '/^Special:CentralAutoLogin/' ], // private launch - T262480
+],
+# @} end of wgWhitelistReadRegexp
+
 'wgAutoConfirmAge' => [
 	'default' => 4 * 3600 * 24, // 4 days to pass isNewbie()
 	'fishbowl' => 0, // No need
