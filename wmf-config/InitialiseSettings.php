@@ -4718,6 +4718,9 @@ function wmfGetVariantSettings() {
 		'Aeteaca' => 100,
 		'Aeteacmotung' => 101,
 	],
+	'+arbcom_ruwiki' => [
+		'АК' => NS_PROJECT, // T264430
+	],
 	'+arwiki' => [
 		'وب' => NS_PROJECT,
 		'نو' => NS_PROJECT_TALK,
