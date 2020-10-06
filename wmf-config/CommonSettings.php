@@ -3682,6 +3682,13 @@ if ( $wmgUseOAuthRateLimiter ) {
 	$wgOAuthRateLimiterDefaultClientTier = 'default';
 	// As defined in T246271
 	$wgOAuthRateLimiterTierConfig = [
+		// demo added for demoing/testing purposes
+		'demo' => [
+			'ratelimit' => [
+				'request_per_unit' => 10,
+				'unit'  => 'HOUR'
+			],
+		],
 		'default' => [
 			'ratelimit' => [
 				'request_per_unit' => 5000,
