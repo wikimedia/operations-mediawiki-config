@@ -11903,6 +11903,9 @@ function wmfGetVariantSettings() {
 			'extendedconfirmed' => true
 		],
 	],
+	'+ruewiki' => [
+		'rollbacker' => [ 'rollback' => true ], // T264147
+	],
 	'+ruwiki' => [
 		'arbcom' => [ // T51334
 			'abusefilter-log-detail' => true,
@@ -13359,6 +13362,9 @@ function wmfGetVariantSettings() {
 	'+rswikimedia' => [ // T109613
 		'sysop' => [ 'import' ],
 	],
+	'+ruewiki' => [
+		'sysop' => [ 'rollbacker' ], // T264147
+	],
 	'+ruwiki' => [
 		'sysop' => [ 'rollbacker', 'autoeditor', 'uploader', 'closer', 'filemover', 'suppressredirect' ],
 		'bureaucrat' => [ 'arbcom', 'engineer' ], // T51334, T144599
@@ -14199,6 +14205,9 @@ function wmfGetVariantSettings() {
 			'templateeditor',
 			'patroller',
 		],
+	],
+	'+ruewiki' => [
+		'sysop' => [ 'rollbacker' ], // T264147
 	],
 	'+ruwiki' => [
 		'bureaucrat' => [ 'arbcom', 'engineer', 'sysop' ], // T51334, T144599
