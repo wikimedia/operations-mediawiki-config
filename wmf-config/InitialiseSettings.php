@@ -16108,7 +16108,8 @@ function wmfGetVariantSettings() {
 ],
 
 'wmgUseElectronPdfService' => [
-	'default' => true  // T165954
+	'default' => true,  // T165954
+	'apiportalwiki' => false, // T264043
 ],
 
 'wmgUseSpamBlacklist' => [
