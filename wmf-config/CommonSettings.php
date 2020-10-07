@@ -1586,9 +1586,11 @@ if ( $wgDBname === 'loginwiki' ) {
 	];
 	$wgGroupPermissions['user'] = [
 		'read' => true,
+		'writeapi' => true,
 	];
 	$wgGroupPermissions['autoconfirmed'] = [
 		'read' => true,
+		'writeapi' => true,
 	];
 
 	unset( $wgGroupPermissions['import'] );
