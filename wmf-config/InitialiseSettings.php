@@ -7084,6 +7084,7 @@ function wmfGetVariantSettings() {
 	],
 	'+group1' => [
 		'authorization' => [ 'udp2log' => 'info', 'logstash' => false ],
+		'session' => [ 'udp2log' => false, 'logstash' => 'info' ],
 	],
 	'+group0' => [
 		'authorization' => [ 'udp2log' => 'info', 'logstash' => false ],
