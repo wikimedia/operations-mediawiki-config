@@ -27986,6 +27986,10 @@ function wmfGetVariantSettings() {
 	'enwikisource' => true,
 	'eswikisource' => true,
 	'hewikisource' => true,
+	'frwiki' => true, //T264780
+	'fawiki' => true,
+	'dewiki' => true,
+	'cswiki' => true,
 ],
 
 'wmgPoweredByMediaWikiIcon' => [
