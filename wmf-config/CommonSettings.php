@@ -3685,25 +3685,25 @@ if ( $wmgUseOAuthRateLimiter ) {
 		// demo added for demoing/testing purposes
 		'demo' => [
 			'ratelimit' => [
-				'request_per_unit' => 10,
+				'requests_per_unit' => 10,
 				'unit'  => 'HOUR'
 			],
 		],
 		'default' => [
 			'ratelimit' => [
-				'request_per_unit' => 5000,
+				'requests_per_unit' => 5000,
 				'unit'  => 'HOUR'
 			],
 		],
 		'preferred' => [
 			'ratelimit' => [
-				'request_per_unit' => 25000,
+				'requests_per_unit' => 25000,
 				'unit'  => 'HOUR'
 			],
 		],
 		'internal' => [
 			'ratelimit' => [
-				'request_per_unit' => 100000,
+				'requests_per_unit' => 100000,
 				'unit'  => 'HOUR'
 			],
 		],
