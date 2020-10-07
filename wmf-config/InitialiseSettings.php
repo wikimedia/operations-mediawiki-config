@@ -7045,7 +7045,7 @@ function wmfGetVariantSettings() {
 		'runJobs' => [ 'logstash' => 'warning' ], // - bd808, T113571
 		'SaveParse' => 'debug',
 		'security' => 'debug',
-		'session' => [ 'udp2log' => false, 'logstash' => 'warning' ],
+		'session' => [ 'udp2log' => false, 'logstash' => 'info' ],
 		'session-ip' => [ 'udp2log' => false, 'logstash' => 'info' ],
 		'SimpleAntiSpam' => 'debug',
 		'slow-parse' => 'debug',
@@ -7084,11 +7084,9 @@ function wmfGetVariantSettings() {
 	],
 	'+group1' => [
 		'authorization' => [ 'udp2log' => 'info', 'logstash' => false ],
-		'session' => [ 'udp2log' => false, 'logstash' => 'info' ],
 	],
 	'+group0' => [
 		'authorization' => [ 'udp2log' => 'info', 'logstash' => false ],
-		'session' => [ 'udp2log' => false, 'logstash' => 'info' ],
 	],
 	'+arwiki' => [
 		'authorization' => [ 'udp2log' => 'info', 'logstash' => false ],
