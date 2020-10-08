@@ -18993,12 +18993,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgCheckUserEnableSpecialInvestigate' => [
-	'default' => false,
-	'testwiki' => true,
-	'frwiki' => true,
-	'eswiki' => true,
-	'itwiki' => true,
-	'svwiki' => true,
+	'default' => true, // T264357
 ],
 
 'wgCheckUserLogLogins' => [
