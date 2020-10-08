@@ -210,36 +210,6 @@ function wmfGetLabsOverrideSettings() {
 			],
 		],
 
-		// Log channels for beta cluster
-		'-wmgMonologChannels' => [
-			'default' => [
-				'api-request' => [
-					'udp2log' => false,
-					'logstash' => false,
-					'eventbus' => 'debug',
-					'buffer' => true,
-				],
-				'authentication' => 'info',
-				'CentralAuthVerbose' => 'debug',
-				'CirrusSearch' => 'info',
-				'cirrussearch-request' => [
-					'udp2log' => false,
-					'logstash' => false,
-					'eventbus' => 'debug',
-					'buffer' => true,
-				],
-				'csp' => 'info',
-				'csp-report-only' => 'info',
-				'dnsblacklist' => 'debug',
-				'EventBus' => 'debug',
-				'JobExecutor' => [ 'logstash' => 'debug' ],
-				'MassMessage' => 'debug',
-				'MessageCache' => 'debug',
-				'runJobs' => [ 'logstash' => 'info' ],
-				'squid' => 'debug',
-			],
-		],
-
 		'wmgSiteLogo1x' => [
 			'default' => '/static/images/project-logos/betawiki.png',
 			'commonswiki' => '/static/images/project-logos/betacommons.png',
