@@ -26519,6 +26519,9 @@ function wmfGetVariantSettings() {
 'wgSuspiciousIpExpiry' => [
 	'default' => false,
 	'group0' => 600,
+	'group1' => 600,
+	'commonswiki' => false,
+	'wikidatawiki' => false,
 ],
 
 // Keep this in sync with the 'growthexperiments' tag
