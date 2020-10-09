@@ -26520,7 +26520,6 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'group0' => 600,
 	'group1' => 600,
-	'wikidatawiki' => false,
 ],
 
 // Keep this in sync with the 'growthexperiments' tag
