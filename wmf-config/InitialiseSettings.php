@@ -12815,11 +12815,11 @@ function wmfGetVariantSettings() {
 		'bureaucrat' => [ 'import', 'transwiki' ],
 	],
 	'+testwiki' => [
-		'bureaucrat' => [ 'researcher', 'centralnoticeadmin', 'flow-bot' ],
+		'bureaucrat' => [ 'researcher', 'centralnoticeadmin', 'flow-bot', 'import', 'transwiki' ],
 		'sysop' => [ 'filemover', 'rollbacker', 'accountcreator', 'confirmed', 'templateeditor' ],
 	],
 	'+test2wiki' => [
-		'bureaucrat' => [ 'flow-bot' ],
+		'bureaucrat' => [ 'flow-bot', 'import', 'transwiki' ],
 		'qa_automation' => [ 'qa_automation' ], // For browser tests, T60375
 	],
 	// ******************************************************************
@@ -13632,11 +13632,11 @@ function wmfGetVariantSettings() {
 		'bureaucrat' => [ 'sysop', 'bureaucrat', 'import', 'transwiki' ],
 	],
 	'+testwiki' => [
-		'bureaucrat' => [ 'sysop', 'researcher', 'centralnoticeadmin', 'flow-bot' ],
+		'bureaucrat' => [ 'sysop', 'researcher', 'centralnoticeadmin', 'flow-bot', 'import', 'transwiki' ],
 		'sysop' => [ 'filemover', 'rollbacker', 'accountcreator', 'confirmed', 'templateeditor' ],
 	],
 	'+test2wiki' => [
-		'bureaucrat' => [ 'flow-bot', 'sysop' ], // T131037
+		'bureaucrat' => [ 'flow-bot', 'sysop', 'import', 'transwiki' ], // T131037
 	],
 	// ******************************************************************
 	'+apiportalwiki' => [ // T259569
