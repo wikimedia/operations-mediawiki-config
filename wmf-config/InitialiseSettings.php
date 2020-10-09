@@ -10418,7 +10418,10 @@ function wmfGetVariantSettings() {
 		'autoconfirmed' => [ 'patrol' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ], // T30717
 		'rollbacker' => [ 'rollback' => true ], // T30717
-		'reviewer' => [ 'patrol' => true ], // T30717
+		'reviewer' => [
+			'patrol' => true, // T30717
+			'suppressredirect' => true, // T265169
+		],
 		'flood' => [ 'bot' => true ], // T30717
 		'filemover' => [
 			'movefile' => true, // T58103
