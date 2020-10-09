@@ -26520,7 +26520,6 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'group0' => 600,
 	'group1' => 600,
-	'commonswiki' => false,
 	'wikidatawiki' => false,
 ],
 
