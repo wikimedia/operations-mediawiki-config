@@ -26520,6 +26520,7 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'group0' => 600,
 	'group1' => 600,
+	'eswiki' => 600,
 ],
 
 // Keep this in sync with the 'growthexperiments' tag
