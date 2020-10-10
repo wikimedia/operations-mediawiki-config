@@ -26517,10 +26517,8 @@ function wmfGetVariantSettings() {
 ],
 
 'wgSuspiciousIpExpiry' => [
-	'default' => false,
-	'group0' => 600,
-	'group1' => 600,
-	'eswiki' => 600,
+	'default' => 600,
+	'enwiki' => false,
 ],
 
 // Keep this in sync with the 'growthexperiments' tag
