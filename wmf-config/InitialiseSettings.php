@@ -26518,7 +26518,6 @@ function wmfGetVariantSettings() {
 
 'wgSuspiciousIpExpiry' => [
 	'default' => 600,
-	'enwiki' => false,
 ],
 
 // Keep this in sync with the 'growthexperiments' tag
