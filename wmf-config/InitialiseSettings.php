@@ -5990,6 +5990,17 @@ function wmfGetVariantSettings() {
 	'+thwiktionary' => [
 		'คุยเรื่องWiktionary' => NS_PROJECT_TALK,
 	],
+	'+trwiki' => [
+		'T' => NS_TALK, // T265336
+		'K' => NS_USER, // T265336
+		'VP' => NS_PROJECT, // T265336
+		'WP' => NS_PROJECT, // T265336
+		'Ş' => NS_TEMPLATE, // T265336
+		'Y' => NS_HELP, // T265336
+		'KAT' => NS_CATEGORY, // T265336
+		'P' => 100, // T265336
+		'VPR' => 102, // T265336
+	],
 	'+trwikibooks' => [
 		'VK' => NS_PROJECT,
 		'VÇ' => 110,
