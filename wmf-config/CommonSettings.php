@@ -889,6 +889,9 @@ $wgAvailableRights[] = 'flow-suppress';
 $wgAvailableRights[] = 'flow-hide';
 $wgAvailableRights[] = 'flow-delete';
 
+// Adding GrowthExperiments's rights
+$wgAvailableRights[] = 'setmentor';
+
 // Checkuser
 $wgGrantPermissions['checkuser']['checkuser'] = true;
 $wgGrantPermissions['checkuser']['checkuser-log'] = true;
