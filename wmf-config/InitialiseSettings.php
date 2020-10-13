@@ -6949,12 +6949,14 @@ function wmfGetVariantSettings() {
 // channel => false  == ignore all log events on this channel
 // channel => level  == record all events of this level or higher to udp2log and logstash (except:
 //    logstash won't go below info level, use explicit logstash=>debug field for that)
-// channel => [ 'udp2log'=>level, 'logstash'=>level, sample'=>rate, 'buffer'=>buffer, 'eventbus' => 'debug' ]
+// channel => [ 'udp2log'=>level, 'logstash'=>level, 'sample'=>rate, 'buffer'=>buffer, 'eventbus' => 'debug' ]
 // Defaults: [ 'udp2log'=>'debug', 'logstash'=>'info', 'sample'=>false, 'buffer'=>false, 'eventbus' => 'debug' ]
 // Valid levels: 'debug', 'info', 'warning', 'error', false
 // Note: sampled logs will not be sent to Logstash
 // Note: Udp2log events are sent to udp://{$wmfUdp2logDest}/{$channel}
 'wmgMonologChannels' => [
+	// When changing the default, please also update the -labs settings to ensure that the
+	// logging on the beta cluster includes at least the same data that production includes
 	'default' => [
 		'404' => 'debug',
 		'AbuseFilter' => 'debug',

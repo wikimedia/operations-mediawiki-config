@@ -210,6 +210,160 @@ function wmfGetLabsOverrideSettings() {
 			],
 		],
 
+		// Log channels for beta cluster
+		'wmgMonologChannels' => [
+			'default' => [
+				// Copied from default production
+				// For channels where there is production configuration that labs
+				// overrides, the relevant line from the production config is commented out
+				// rather than removed, so that it is clear what has changed
+				'404' => 'debug',
+				'AbuseFilter' => 'debug',
+				'AdHocDebug' => 'debug', // for temp live debugging
+				'antispoof' => 'debug',
+				'api' => [ 'logstash' => false ],
+				'api-feature-usage' => 'debug',
+				'api-readonly' => 'debug',
+				'api-request' => [ 'udp2log' => false, 'logstash' => false, 'eventbus' => 'debug', 'buffer' => true ],
+				'api-warning' => 'debug',
+				'authentication' => 'info',
+				'authevents' => 'info',
+				'autoloader' => 'debug',  // ori, for T166759 (2017-06-02)
+				'badpass' => 'debug',
+				'badpass-priv' => 'debug',
+				'BlockManager' => 'info',
+				'BounceHandler' => 'debug',
+				'Bug58676' => 'debug', // Invalid message parameter
+				'cache-cookies' => 'debug',
+				'captcha' => 'debug',
+				'CentralAuth' => 'debug',
+				'CentralAuthRename' => 'debug', // -legoktm 2014-07-14 for T69875
+				'CentralAuthUserMerge' => 'debug',
+				'CentralNotice' => 'debug',
+				// 'CirrusSearch' => 'debug',
+				'cirrussearch-request' => [ 'udp2log' => false, 'logstash' => false, 'eventbus' => 'debug', 'buffer' => true, ],
+				'CirrusSearchChangeFailed' => 'debug',
+				'CirrusSearchSlowRequests' => 'debug',
+				'cite' => 'debug',
+				'Cognate' => 'debug', // WMDE & Addshore
+				'collection' => 'debug', // -cscott for T73675
+				// 'csp' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
+				// 'csp-report-only' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
+				'DBConnection' => 'error',
+				'DBPerformance' => [ 'logstash' => 'debug', 'udp2log' => 'warning' ],
+				'DBQuery' => 'warning',
+				'DBReplication' => 'warning',
+				'DBTransaction' => 'debug',
+				'DeferredUpdates' => 'error',
+				'deprecated' => 'debug',
+				'diff' => 'debug',
+				'Echo' => 'debug',
+				'Elastica' => 'info',
+				'error' => 'debug',
+				// 'EventBus' => [ 'logstash' => 'error' ],
+				'EventLogging' => 'debug',
+				'exception' => 'debug',
+				'exception-json' => [ 'logstash' => false ],
+				'exec' => 'debug',
+				'export' => 'debug',
+				'ExtensionDistributor' => 'error', // T225243
+				'ExternalStore' => 'debug',
+				'fatal' => 'debug',
+				'FileImporter' => 'debug',
+				'FileOperation' => 'debug',
+				'Flow' => 'debug', // -erikb 2014/03/08
+				'FSFileBackend' => 'debug', // - gilles for T75229
+				'generated-pp-node-count' => 'debug',
+				'GettingStarted' => 'debug',
+				'GlobalTitleFail' => [ 'sample' => 10000 ], // chad hates $wgTitle
+				'goodpass' => 'debug',
+				'goodpass-priv' => 'debug',
+				'GrowthExperiments' => 'info',
+				'headers-sent' => 'debug',
+				'HttpError' => 'error', // Only log http errors with a 500+ code T85795
+				// 'JobExecutor' => [ 'logstash' => 'warning' ],
+				'ldap' => 'warning',
+				'Linter' => 'debug',
+				'LocalFile' => 'debug',
+				'localhost' => [ 'logstash' => false ],
+				'LockManager' => 'warning',
+				'logging' => 'debug',
+				'LoginNotify' => 'debug',
+				'MassMessage' => 'debug', // for 59464 -legoktm 2013/12/15
+				'Math' => 'info',  // mobrovac for T121445
+				'memcached' => 'error', // -aaron 2012/10/24
+				'message-format' => [ 'logstash' => 'warning' ],
+				'MessageCacheError' => 'debug',
+				'mobile' => 'debug',
+				'NewUserMessage' => 'debug',
+				'OAuth' => 'info', // T244185
+				'objectcache' => 'warning',
+				'OutputBuffer' => 'debug',
+				'PageTriage' => 'debug',
+				'PageViewInfo' => 'info',
+				'poolcounter' => 'debug',
+				'preferences' => 'info',
+				'purge' => 'debug',
+				'query' => 'debug',
+				'ratelimit' => 'debug',
+				'readinglists' => 'warning',
+				'recursion-guard' => 'debug',
+				'RecursiveLinkPurge' => 'debug',
+				'redis' => 'info', // -asher 2012/10/12
+				'Renameuser' => 'debug',
+				'resourceloader' => 'info',
+				'ResourceLoaderImage' => 'debug', // - demon, matmarex
+				'RevisionStore' => 'info',
+				// 'runJobs' => [ 'logstash' => 'warning' ], // - bd808, T113571
+				'SaveParse' => 'debug',
+				'security' => 'debug',
+				'session' => [ 'udp2log' => false, 'logstash' => 'info' ],
+				'session-ip' => [ 'udp2log' => false, 'logstash' => 'info' ],
+				'SimpleAntiSpam' => 'debug',
+				'slow-parse' => 'debug',
+				'SpamBlacklistHit' => 'debug',
+				'SpamRegex' => 'debug',
+				'SQLBagOStuff' => 'debug',
+				'StashEdit' => 'debug',
+				'SwiftBackend' => 'debug', // -aaron 5/15/12
+				'texvc' => 'debug',
+				'throttler' => 'info',
+				'thumbnail' => 'debug',
+				'thumbnailaccess' => 'debug', // T106323
+				'TitleBlacklist-cache' => 'debug', // For T85428
+				'torblock' => 'debug',
+				'TranslationNotifications.Jobs' => 'debug',
+				'Translate.Jobs' => 'debug',
+				'Translate' => 'debug',
+				'UpdateRepo' => 'debug',
+				'updateTranstagOnNullRevisions' => 'debug',
+				'upload' => 'debug',
+				'VisualEditor' => 'debug',
+				'wfLogDBError' => 'debug', // Former $wgDBerrorLog
+				'Wikibase' => [ 'udp2log' => 'info', 'logstash' => 'warning', 'sample' => false, ],
+				'Wikibase.NewItemIdFormatter' => 'debug', // WMDE & Addshore T201832
+				'WikibaseQualityConstraints' => 'debug',
+				'WikimediaEvents' => 'error', // For T205754 & T208233
+				'WikitechGerritBan' => 'debug',
+				'WikitechPhabBan' => 'debug',
+				'WMDE' => 'debug', // WMDE & Addshore T174948 & T191500
+				'xff' => [ 'logstash' => false ],
+				'XMP' => 'warning', // T89532
+
+				// Additional logging for labs
+				'CentralAuthVerbose' => 'debug',
+				'CirrusSearch' => 'info',
+				'csp' => 'info',
+				'csp-report-only' => 'info',
+				'dnsblacklist' => 'debug',
+				'EventBus' => 'debug',
+				'JobExecutor' => [ 'logstash' => 'debug' ],
+				'MessageCache' => 'debug',
+				'runJobs' => [ 'logstash' => 'info' ],
+				'squid' => 'debug',
+			],
+		],
+
 		'wmgSiteLogo1x' => [
 			'default' => '/static/images/project-logos/betawiki.png',
 			'commonswiki' => '/static/images/project-logos/betacommons.png',
