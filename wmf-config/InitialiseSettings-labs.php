@@ -1236,10 +1236,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => 'wikidatawiki',
 			'commonswiki' => 'commonswiki',
 		],
-		'wgWMEUnderstandingFirstDay' => [
-			'default' => false,
-			'enwiki' => true,
-		],
 		'wgWMEUnderstandingFirstDaySensitiveNamespaces' => [
 			'default' => [ 0, 1, 6, 7 ],
 			'enwiki' => [ 0, 1, 6, 7, 100, 101, 118, 119 ],
