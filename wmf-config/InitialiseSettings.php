@@ -26656,9 +26656,9 @@ function wmfGetVariantSettings() {
 
 'wgGEHomepageNewAccountVariants' => [
 	'default' => [
-		'A' => 100,
-		'C' => 0,
-		'D' => 0,
+		'A' => 0,
+		'C' => 50,
+		'D' => 50,
 	],
 ],
 
