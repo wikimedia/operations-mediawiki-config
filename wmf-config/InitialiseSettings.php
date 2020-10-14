@@ -21915,17 +21915,6 @@ function wmfGetVariantSettings() {
 
 'wgWMEUnderstandingFirstDay' => [
 	'default' => false,
-	'testwiki' => true,
-	'arwiki' => true,
-	'cswiki' => true,
-	'euwiki' => true,
-	'frwiktionary' => true,
-	'huwiki' => true,
-	'hywiki' => true,
-	'kowiki' => true,
-	'srwiki' => true,
-	'ukwiki' => true,
-	'viwiki' => true,
 ],
 
 'wgWMEUnderstandingFirstDaySensitiveNamespaces' => [
