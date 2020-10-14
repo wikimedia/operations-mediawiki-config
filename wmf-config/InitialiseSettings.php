@@ -23103,6 +23103,18 @@ function wmfGetVariantSettings() {
 	],
 ],
 
+// Structured Data on Commons: wikibase properties that will be editable by default
+'wgMediaInfoMediaSearchProperties' => [
+	'commonswiki' => [
+		[
+			// depicts
+			'P180' => 1,
+			// digital representation of
+			'P6243' => 1.1,
+		],
+	],
+],
+
 'wgMediaInfoExternalEntitySearchBaseUri' => [
 	'default' => 'https://www.wikidata.org/w/api.php',
 	'testcommonswiki' => 'https://test.wikidata.org/w/api.php',
