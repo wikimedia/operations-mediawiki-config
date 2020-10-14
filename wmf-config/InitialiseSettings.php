@@ -20712,6 +20712,7 @@ function wmfGetVariantSettings() {
 	'enwikiversity' => true, // T264693
 	'mediawikiwiki' => true, // T251208
 	'metawiki' => true, // T264693
+	'apiportalwiki' => true, // T260624
 ],
 
 'wgDiscussionToolsBeta' => [
@@ -20719,6 +20720,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => false, // T249394
 	'cswiki' => false, // T249394
 	'huwiki' => false, // T249394
+	'apiportalwiki' => false, // T260624
 ],
 
 'wgDTSchemaEditAttemptStepSamplingRate' => [
