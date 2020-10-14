@@ -27252,9 +27252,9 @@ function wmfGetVariantSettings() {
 	'enwiki' => '_elasticsearch_enwiki'
 ],
 
-// cache morelike queries to ObjectCache for three days
+// cache morelike queries to ObjectCache for 24 hours
 'wgCirrusSearchMoreLikeThisTTL' => [
-	'default' => 3 * 86400,
+	'default' => 86400
 ],
 
 // Internal WDQS endpoint
