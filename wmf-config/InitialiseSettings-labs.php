@@ -2062,8 +2062,8 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true,
 		],
 		'wgAbuseFilterEmergencyDisableThreshold' => [
-			'default' => 0.05,
-			'zhwiki' => 0.25, // T230305
+			'default' => [ 'default' => 0.05 ],
+			'zhwiki' => [ 'default' => 0.25 ], // T230305
 		],
 		'wgAbuseFilterEmergencyDisableCount' => [
 			'default' => [
