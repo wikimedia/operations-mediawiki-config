@@ -2077,20 +2077,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => false,
 		],
 
-		'wgWMAPIPExtraUserMenuSpecialPages' => [
-			// no default
-			'apiportalwiki' => [ 'AppManagement' ],
-		],
-
-		'wgWMAPIPSidebarSpecialPages' => [
-			// no default
-			'apiportalwiki' => [
-				'AppManagement',
-				'Notifications',
-				'Preferences'
-			],
-		],
-
 		'wmgUseWikimediaApiPortalOAuth' => [
 			'apiportalwiki' => true,
 			'default' => false,

@@ -27397,6 +27397,22 @@ function wmfGetVariantSettings() {
 	'apiportalwiki' => true,
 ],
 
+'wgWMAPIPExtraUserMenuSpecialPages' => [
+	// no default, fallback on extension default if extension is
+	// installed, unnecessary otherwise
+	'apiportalwiki' => [ 'AppManagement' ],
+],
+
+'wgWMAPIPSidebarSpecialPages' => [
+	// no default, fallback on extension default if extension is
+	// installed, unnecessary otherwise
+	'apiportalwiki' => [
+		'AppManagement',
+		'Notifications',
+		'Preferences'
+	],
+],
+
 'wmgUseWikimediaApiPortalOAuth' => [
 	'default' => false,
 ],
