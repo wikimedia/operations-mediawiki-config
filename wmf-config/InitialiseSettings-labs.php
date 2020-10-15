@@ -554,16 +554,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => [ 'newarticle' ],
 		],
 
-		// Whether Compact Links is enabled for new accounts *by default*
-		'wmgULSCompactLinksForNewAccounts' => [
-			'default' => true,
-		],
-
-		// Whether Compact Links is enabled for anonymous users *by default*
-		'wmgULSCompactLinksEnableAnon' => [
-			'default' => true,
-		],
-
 		'wgSearchSuggestCacheExpiry' => [
 			'default' => 300,
 		],
