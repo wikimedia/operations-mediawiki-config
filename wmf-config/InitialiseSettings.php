@@ -21351,6 +21351,13 @@ function wmfGetVariantSettings() {
 		 * implicit topic prefixing by the EventStreamConfig extension.
 		 */
 		[
+			'stream' => 'eventlogging_ContentTranslationAbuseFilter',
+			'schema_title' => 'analytics/legacy/contenttranslationabusefilter',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
 			'stream' => 'eventlogging_SearchSatisfaction',
 			'schema_title' => 'analytics/legacy/searchsatisfaction',
 			'topic_prefixes' => null,
@@ -21645,6 +21652,7 @@ function wmfGetVariantSettings() {
 // above for each of the stream names listed here.
 'wgEventLoggingStreamNames' => [
 	'default' => [
+		'eventlogging_ContentTranslationAbuseFilter',
 		'eventlogging_SearchSatisfaction',
 		'eventlogging_TemplateWizard',
 		'eventlogging_Test',
@@ -21670,6 +21678,9 @@ function wmfGetVariantSettings() {
 // EventLogging to POST to EventGate rather than GET to EventLogging beacon.
 // https://phabricator.wikimedia.org/T238230
 'wgEventLoggingSchemas' => [
+	'testwiki' => [
+		'ContentTranslationAbuseFilter' => '/analytics/legacy/contenttranslationabusefilter/1.0.0',
+	],
 	'default' => [
 		'TemplateWizard' => '/analytics/legacy/templatewizard/1.0.0',
 		'Test' => '/analytics/legacy/test/1.1.0',
