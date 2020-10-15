@@ -10,6 +10,7 @@ class ServiceConfig {
 	private static $instance;
 	private $realm;
 	private $datacenter;
+	private $datacenters;
 	private $services;
 
 	/**
@@ -22,15 +23,20 @@ class ServiceConfig {
 		return self::$instance;
 	}
 
+	/**
+	 * This is for test code. Do not use in production
+	 */
+	public static function reset() {
+		self::$instance = null;
+	}
+
 	private function __construct() {
 		$env = require __DIR__ . '/../wmf-config/env.php';
 		$this->realm = $env['realm'];
 		$this->datacenter = $env['dc'];
-		if ( $this->realm === 'labs' ) {
-			$this->services = require __DIR__ . '/../wmf-config/LabsServices.php';
-		} else {
-			$this->services = require __DIR__ . '/../wmf-config/ProductionServices.php';
-		}
+		$this->datacenters = $env['dcs'];
+		// e.g. ../wmf-config/ProductionServices.php
+		$this->services = require $env['servicesFile'];
 	}
 
 	/**
@@ -73,7 +79,7 @@ class ServiceConfig {
 	}
 
 	/**
-	 * Get the current realm, may be "production" or "labs"
+	 * Get the current realm, may be "production", "labs", or "dev"
 	 *
 	 * @return string
 	 */
@@ -82,11 +88,20 @@ class ServiceConfig {
 	}
 
 	/**
-	 * Get the current datacenter, may be "eqiad" or "codfw"
+	 * Get the current datacenter. For production, may be "eqiad" or "codfw"
 	 *
 	 * @return string
 	 */
 	public function getDatacenter() {
 		return $this->datacenter;
+	}
+
+	/**
+	 * Get the list of all datacenters for the current realm
+	 *
+	 * @return array
+	 */
+	public function getDatacenters() {
+		return $this->datacenters;
 	}
 }
