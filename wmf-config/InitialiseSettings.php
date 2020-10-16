@@ -12449,7 +12449,7 @@ function wmfGetVariantSettings() {
 			'tboverride' => true
 		], // T211978
 	],
-	'uzwiki' => [
+	'+uzwiki' => [
 		'rollbacker' => [ 'rollback' => true ], // T265509
 	],
 	'+vecwiki' => [
@@ -13519,7 +13519,7 @@ function wmfGetVariantSettings() {
 		'bureaucrat' => [ 'import', 'abusefilter', 'rollbacker', 'massmessage-sender', 'interface-editor', 'eliminator' ],
 		'sysop' => [ 'confirmed', 'abusefilter', 'rollbacker', 'accountcreator', 'filemover', 'autopatrolled', 'massmessage-sender', 'extendedmover', 'transwiki' ],
 	],
-	'uzwiki' => [
+	'+uzwiki' => [
 		'sysop' => [ 'rollbacker' ], // T265509
 	],
 	'+viwiki' => [
@@ -14373,7 +14373,7 @@ function wmfGetVariantSettings() {
 		'bureaucrat' => [ 'import', 'abusefilter', 'rollbacker', 'massmessage-sender', 'interface-editor', 'eliminator' ],
 		'sysop' => [ 'confirmed', 'accountcreator', 'filemover', 'autopatrolled', 'massmessage-sender', 'extendedmover', 'transwiki' ],
 	],
-	'uzwiki' => [
+	'+uzwiki' => [
 		'sysop' => [ 'rollbacker' ], // T265509
 	],
 	'+viwiki' => [
