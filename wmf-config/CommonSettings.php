@@ -128,6 +128,9 @@ $wmfAllServices = ServiceConfig::getInstance()->getAllServices();
 # Shorthand when we have no master-replica situation to keep into account
 $wmfLocalServices = $wmfAllServices[$wmfDatacenter];
 
+# The list of datacenters known to this realm
+$wmfDatacenters = ServiceConfig::getInstance()->getDatacenters();
+
 $etcdConfig = wmfSetupEtcd( $wmfLocalServices['etcd'] );
 $wmfEtcdLastModifiedIndex = $etcdConfig->getModifiedIndex();
 
