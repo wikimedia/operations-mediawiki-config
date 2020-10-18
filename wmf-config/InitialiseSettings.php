@@ -514,6 +514,7 @@ function wmfGetVariantSettings() {
 	'slwikisource' => 'Europe/Ljubljana', // T142701
 	'slwikiversity' => 'Europe/Ljubljana',
 	'slwiktionary' => 'Europe/Ljubljana', // T142701
+	'smnwiki' => 'Europe/Helsinki',
 	'sqwiki' => 'Europe/Berlin',
 	'sqwikinews' => 'Europe/Berlin',
 	'sqwikiquote' => 'Europe/Berlin',
@@ -813,6 +814,7 @@ function wmfGetVariantSettings() {
 	'skwiki' => '/static/images/project-logos/skwiki.png',
 	'slwiki' => '/static/images/project-logos/slwiki.png',
 	'smwiki' => '/static/images/project-logos/smwiki.png', // T51125
+	'smnwiki' => '/static/images/project-logos/smnwiki.png',
 	'snwiki' => '/static/images/project-logos/snwiki.png', // T48589
 	'sowiki' => '/static/images/project-logos/sowiki.png', // T42285
 	'sqwiki' => '/static/images/project-logos/sqwiki.png',
@@ -1589,6 +1591,7 @@ function wmfGetVariantSettings() {
 	'skwiki' => '/static/images/project-logos/skwiki-1.5x.png', // T150618
 	'slwiki' => '/static/images/project-logos/slwiki-1.5x.png', // T150618
 	'smwiki' => '/static/images/project-logos/smwiki-1.5x.png', // T150618
+	'smnwiki' => '/static/images/project-logos/smnwiki-1.5x.png',
 	'snwiki' => '/static/images/project-logos/snwiki-1.5x.png', // T150618
 	'sowiki' => '/static/images/project-logos/sowiki-1.5x.png', // T150618
 	'sqwiki' => '/static/images/project-logos/sqwiki-1.5x.png', // T150618
@@ -2141,6 +2144,7 @@ function wmfGetVariantSettings() {
 	'skwiki' => '/static/images/project-logos/skwiki-2x.png', // T150618
 	'slwiki' => '/static/images/project-logos/slwiki-2x.png', // T150618
 	'smwiki' => '/static/images/project-logos/smwiki-2x.png', // T150618
+	'smnwiki' => '/static/images/project-logos/smnwiki-2x.png',
 	'snwiki' => '/static/images/project-logos/snwiki-2x.png', // T150618
 	'sowiki' => '/static/images/project-logos/sowiki-2x.png', // T150618
 	'sqwiki' => '/static/images/project-logos/sqwiki-2x.png', // T150618
