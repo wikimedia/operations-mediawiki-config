@@ -3443,14 +3443,6 @@ if ( $wmgUseContentTranslation ) {
 
 	$wgContentTranslationSiteTemplates['cookieDomain'] = '.wikipedia.org';
 
-	$wgContentTranslationRESTBase = [
-		'url' => $wmfLocalServices['restbase'],
-		'domain' => $wgCanonicalServer,
-		'forwardCookies' => false,
-		'timeout' => 10000,
-		'HTTPProxy' => false,
-	];
-
 	$wgContentTranslationTranslateInTarget = $wmgContentTranslationTranslateInTarget;
 
 	$wgContentTranslationUnmodifiedMTThresholdForPublish = $wmgContentTranslationUnmodifiedMTThresholdForPublish;
