@@ -12516,6 +12516,9 @@ function wmfGetVariantSettings() {
 			'patrol' => true,
 			'autopatrol' => true,
 			], // T58203
+		'bot' => [
+			'noratelimit' => false, // T258354
+		],
 		'rollbacker' => [
 			'rollback' => true, // T47165
 			'autopatrol' => true, // T57495
