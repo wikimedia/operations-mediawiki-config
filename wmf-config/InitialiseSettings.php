@@ -7046,6 +7046,7 @@ function wmfGetVariantSettings() {
 		'OutputBuffer' => 'debug',
 		'PageTriage' => 'debug',
 		'PageViewInfo' => 'info',
+		'ParserCache' => 'warning',
 		'poolcounter' => 'debug',
 		'preferences' => 'info',
 		'purge' => 'debug',
