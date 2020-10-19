@@ -738,6 +738,7 @@ if ( $wmgUseCORS ) {
 		'advisory.wikimedia.org',
 		'advisory.m.wikimedia.org',
 		'affcom.wikimedia.org',
+		'api.wikimedia.org',
 		'auditcom.wikimedia.org',
 		'boardgovcom.wikimedia.org',
 		'board.wikimedia.org',
