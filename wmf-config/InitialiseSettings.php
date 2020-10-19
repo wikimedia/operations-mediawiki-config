@@ -18708,7 +18708,6 @@ function wmfGetVariantSettings() {
 'wgMFCollapseSectionsByDefault' => [
 	'default' => true,
 	'wiktionary' => false,
-	'wikidata' => false,
 ],
 'wgMFUseWikibase' => [
 	'default' => true,
