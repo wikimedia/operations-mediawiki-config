@@ -26699,6 +26699,11 @@ function wmfGetVariantSettings() {
 	],
 ],
 
+'wgGEHomepageDefaultVariant' => [
+	'default' => 'A',
+	'trwiki' => 'D',
+],
+
 'wgGEHomepageTutorialTitle' => [
 	'default' => '',
 	'testwiki' => 'Help:Help',
