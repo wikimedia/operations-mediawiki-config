@@ -66,7 +66,6 @@ $common = [
 	'eventgate-analytics-external' => 'http://localhost:6013',
 	'eventgate-main' => 'http://localhost:6005',
 	'cxserver' => 'http://localhost:6015',
-	'electron' => 'http://pdfrender.discovery.wmnet:5252',
 	'restbase' => 'http://localhost:6011',
 	'sessionstore' => 'http://localhost:6006',
 	'echostore' => 'http://localhost:6007',

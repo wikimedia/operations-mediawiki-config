@@ -148,13 +148,6 @@ $wmgContentTranslationCXServerAuthKey = null;
 $wmgContributionTrackingDBpassword = null;
 
 /**
- * @see wmf-config/CommonSettings.php, $wgVirtualRestConfig
- * @see wmf-config/ProductionServices.php, 'electron'
- * @see mediawiki/extensions/Collection
- */
-$wmgElectronSecret = null;
-
-/**
  * The 'hmac_key' option of the RESTBagOStuff for Kask.
  *
  * @see wmf-config/CommonSettings.php, $wgObjectCaches['kask-session']

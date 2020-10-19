@@ -2645,15 +2645,6 @@ if ( $wmgUseParsoid ) {
 	];
 }
 
-if ( $wmgUseCollection ) {
-	$wgVirtualRestConfig['modules']['electron'] = [
-		'url' => $wmgLocalServices['electron'],
-		'options' => [
-			'accessKey' => $wmgElectronSecret, // set in private repo
-		],
-	];
-}
-
 if ( $wmgUseVisualEditor ) {
 	wfLoadExtension( 'VisualEditor' );
 
