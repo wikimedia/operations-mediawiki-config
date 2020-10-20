@@ -2920,6 +2920,7 @@ if ( $wmgUseTranslate ) {
 	}
 
 	$wgSpecialPages['ManageMessageGroups'] = DisabledSpecialPage::getCallback( 'ManageMessageGroups' );
+	$wgTranslateStatsProviders['registrations'] = null;
 
 	$wgTranslateTranslationServices['Apertium'] = [
 		'type' => 'cxserver',
