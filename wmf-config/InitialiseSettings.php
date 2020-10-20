@@ -24380,6 +24380,23 @@ function wmfGetVariantSettings() {
 				],
 			],
 		],
+		// T266027
+		'T266027_perfield_builder' => [
+			'buckets' => [
+				'control' => [
+					'trigger' => 'control',
+					// wgCirrusSearchFullTextQueryBuilderProfile = 'default'
+					// wgCirrusSearchRescoreProfile => 'classic'
+				],
+				'perfield' => [
+					'trigger' => 'perfield',
+					'globals' => [
+						'wgCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
+						'wgCirrusSearchRescoreProfile' => 'wsum_inclinks'
+					]
+				]
+			]
+		],
 		# T246947
 		'glent_m0' => [
 			'buckets' => [
