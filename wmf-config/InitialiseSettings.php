@@ -18256,6 +18256,11 @@ function wmfGetVariantSettings() {
 	'wikitech' => 'memcached-pecl',
 ],
 
+'wgParserCacheUseJson' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 'wgLanguageConverterCacheType' => [
 	'default' => CACHE_ACCEL,
 ],
