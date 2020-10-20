@@ -384,4 +384,8 @@ $wgImportSources = [];
 include "$wmfConfigDir/import.php";
 $wgHooks['ImportSources'][] = 'wmfImportSources';
 
+// Test ParserCache JSON serialization format.
+// Remove when enabled in production.
+$wgParserCacheUseJson = true;
+
 } # end safeguard
