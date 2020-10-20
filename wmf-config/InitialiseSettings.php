@@ -26913,10 +26913,6 @@ function wmfGetVariantSettings() {
 	],
 ],
 
-'wgGEHomepageDefaultVariant' => [
-	'default' => 'D',
-],
-
 'wgGEHomepageTutorialTitle' => [
 	'default' => '',
 	'testwiki' => 'Help:Help',
