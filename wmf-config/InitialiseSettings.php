@@ -26923,8 +26923,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgGEHomepageDefaultVariant' => [
-	'default' => 'A',
-	'trwiki' => 'D',
+	'default' => 'D',
 ],
 
 'wgGEHomepageTutorialTitle' => [
