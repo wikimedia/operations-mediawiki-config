@@ -23125,7 +23125,7 @@ function wmfGetVariantSettings() {
 					// instance of art movement
 					'property' => 'P31',
 					'item' => 'Q968159',
-				],
+				] ],
 				'result' => [ '?item wdt:P135 ?entity' ],
 			],
 			[
@@ -23307,7 +23307,7 @@ function wmfGetVariantSettings() {
 				]
 			],
 		],
-	] ] ],
+	] ],
 ],
 
 'wgMediaInfoMediaSearchEntitiesSparqlEndpointUri' => [
