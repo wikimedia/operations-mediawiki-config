@@ -21345,7 +21345,7 @@ function wmfGetVariantSettings() {
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		/*
-		 * == Streams for testing Event Platform-based instruments ==
+		 * === Streams for testing Event Platform-based instruments ===
 		 */
 		[
 			'stream' => 'test.instrumentation',
@@ -21362,7 +21362,7 @@ function wmfGetVariantSettings() {
 			],
 		],
 		/*
-		 * == Streams for Event Platform-based analytics instruments ==
+		 * === Streams for Event Platform-based analytics instruments ===
 		 */
 		[
 			'stream' => 'ios.edit_history_compare',
@@ -21397,16 +21397,19 @@ function wmfGetVariantSettings() {
 		[
 			'stream' => 'api-gateway.request',
 			'schema_title' => 'api-gateway/request',
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics',
 		],
 		[
 			'stream' => 'mediawiki.api-request',
 			'schema_title' => 'mediawiki/api/request',
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics',
 		],
 		[
 			'stream' => 'mediawiki.cirrussearch-request',
 			'schema_title' => 'mediawiki/cirrussearch/request',
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics',
 		],
 		[
