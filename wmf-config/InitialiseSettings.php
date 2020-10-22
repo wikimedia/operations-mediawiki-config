@@ -23540,6 +23540,11 @@ function wmfGetVariantSettings() {
 	'wikidataclient-test' => 'testwikidata',
 ],
 
+'wmgWikibaseRepoPropagatePageDeletion' => [
+	'default' => false,
+	'testwikidatawiki' => true,
+],
+
 'wmgUseTemplateSandbox' => [
 	'default' => true,
 	'lockeddown' => false,
