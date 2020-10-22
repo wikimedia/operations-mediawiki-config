@@ -21328,6 +21328,7 @@ function wmfGetVariantSettings() {
 			'stream' => 'eventlogging_SearchSatisfaction',
 			'schema_title' => 'analytics/legacy/searchsatisfaction',
 			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
@@ -21350,12 +21351,14 @@ function wmfGetVariantSettings() {
 		[
 			'stream' => 'test.instrumentation',
 			'schema_title' => 'analytics/test',
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		// For verifying sampling:
 		[
 			'stream' => 'test.instrumentation.sampled',
 			'schema_title' => 'analytics/test',
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
 			'sampling' => [
 				'rate' => 0.5,
@@ -21367,6 +21370,7 @@ function wmfGetVariantSettings() {
 		[
 			'stream' => 'ios.edit_history_compare',
 			'schema_title' => 'analytics/mobile_apps/ios_edit_history_compare',
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 
