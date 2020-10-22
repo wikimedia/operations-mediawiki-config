@@ -18324,6 +18324,11 @@ function wmfGetVariantSettings() {
 'wgCheckUserLogLogins' => [
 	// T253802 - enabled everywhere but few large wikis
 	'default' => true,
+
+	// Do not log logins at loginwiki
+	'loginwiki' => false,
+
+	// Exempted big wikis
 	'arwiki' => false,
 	'bnwiki' => false,
 	'commonswiki' => false,
