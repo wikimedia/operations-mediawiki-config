@@ -31,6 +31,10 @@ $wgObjectCaches['mcrouter'] = [
 	'timeout'               => $wgMemCachedTimeout,
 	'allow_tcp_nagle_delay' => false
 ];
+$wgObjectCaches['mcrouter-with-onhost-tier'] = array_merge(
+	$wgObjectCaches['mcrouter'],
+	[ 'routingPrefix' => "/$wmfMasterDatacenter/mw-with-onhost-tier/" ]
+);
 
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgMainCacheType = 'memcached-pecl'; // nutcracker only; no mcrouter present
