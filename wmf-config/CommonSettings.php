@@ -1246,7 +1246,6 @@ if ( $wmgPFEnableStringFunctions ) {
 
 if ( $wgDBname === 'mediawikiwiki' ) {
 	wfLoadExtension( 'ExtensionDistributor' );
-	$wgExtDistListFile = 'https://gerrit.wikimedia.org/mediawiki-extensions.txt';
 	$wgExtDistAPIConfig = [
 		'class' => 'GerritExtDistProvider',
 		'apiUrl' => 'https://gerrit.wikimedia.org/r/projects/mediawiki%2F$TYPE%2F$EXT/branches',
