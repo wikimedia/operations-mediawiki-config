@@ -475,7 +475,7 @@ $wgObjectCaches['mysql-multiwrite'] = [
 	'caches' => [
 		0 => [
 			'factory' => [ 'ObjectCache', 'getInstance' ],
-			'args' => [ 'mcrouter' ]
+			'args' => [ 'mcrouter-with-onhost-tier' ]
 		],
 		1 => [
 			'class' => 'SqlBagOStuff',
