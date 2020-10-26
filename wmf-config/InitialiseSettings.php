@@ -16804,7 +16804,8 @@ function wmfGetVariantSettings() {
 		'storage.idigbio.org', // T261575
 		'serv.biokic.asu.edu', // T261562
 		'*.70yearsindonesiaaustralia.com', // 70 years Indonesia-Australia - T262238
-		'archive.wul.waseda.ac.jp' // T261037
+		'archive.wul.waseda.ac.jp', // T261037
+		'foto.digitalarkivet.no', // Digital archive of Norway - T266390
 	],
 ],
 
