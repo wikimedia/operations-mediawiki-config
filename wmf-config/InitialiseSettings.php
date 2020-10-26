@@ -23571,6 +23571,7 @@ function wmfGetVariantSettings() {
 'wmgWikibaseRepoPropagatePageDeletion' => [
 	'default' => false,
 	'testwikidatawiki' => true,
+	'wikidatawiki' => true,
 ],
 
 'wmgUseTemplateSandbox' => [
