@@ -396,7 +396,7 @@ function wmfGetLabsOverrideSettings() {
 			'cawiki' => 60,
 		],
 
-		'wgEchoEnablePush' => [
+		'wmgEchoEnablePush' => [
 			'default' => true,
 		],
 
