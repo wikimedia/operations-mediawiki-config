@@ -7002,6 +7002,7 @@ function wmfGetVariantSettings() {
 		'DeferredUpdates' => 'error',
 		'deprecated' => 'debug',
 		'diff' => 'debug',
+		'editpage' => 'warning', // T251023
 		'Echo' => 'debug',
 		'Elastica' => 'info',
 		'error' => 'debug',
