@@ -26976,6 +26976,11 @@ function wmfGetVariantSettings() {
 	'viwiki' => 'Wikipedia:Dự án Phát triển cộng đồng/Danh sách thành viên cố vấn',
 ],
 
+'wgGEHomepageManualAssignmentMentorsList' => [
+	'default' => null,
+	'cswiki' => 'Wikipedie:Potřebuji pomoc/Mentoři/Manuální',
+],
+
 'wmgShowRollbackConfirmationDefaultUserOptions' => [
 	'default' => false,
 	'dewiki' => true
