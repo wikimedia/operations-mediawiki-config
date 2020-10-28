@@ -23677,7 +23677,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgCirrusSearchClusterOverrides' => [
-	'default' => [ 'more_like' => 'codfw' ],
+	'default' => [],
 ],
 
 'wgCirrusSearchWriteClusters' => [
