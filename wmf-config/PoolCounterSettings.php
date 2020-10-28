@@ -55,8 +55,8 @@ $wgPoolCounterConf = [
 	'CirrusSearch-MoreLike' => [
 		'class' => 'PoolCounter_Client',
 		'timeout' => 5,
-		'workers' => 60,
-		'maxqueue' => 240,
+		'workers' => 50,
+		'maxqueue' => 200,
 	],
 	'FileRender' => [
 		'class' => 'PoolCounter_Client',
