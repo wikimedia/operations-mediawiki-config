@@ -21380,6 +21380,12 @@ function wmfGetVariantSettings() {
 		 * === Streams for Event Platform-based analytics instruments ===
 		 */
 		[
+			'stream' => 'mw_session_tick',
+			'schema_title' => 'analytics/session_tick',
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
 			'stream' => 'ios.edit_history_compare',
 			'schema_title' => 'analytics/mobile_apps/ios_edit_history_compare',
 			'canary_events_enabled' => true,
@@ -21644,9 +21650,16 @@ function wmfGetVariantSettings() {
 		'eventlogging_SearchSatisfaction',
 		'eventlogging_TemplateWizard',
 		'eventlogging_Test',
+		'mw_session_tick',
 		'test.instrumentation',
 		'test.instrumentation.sampled',
 	]
+],
+
+// Enable sessionTick on these wikis
+'wgWMESessionTick' => [
+	'default' => false,
+	'officewiki' => true,
 ],
 
 // EventLogging will POST events to this URI.
