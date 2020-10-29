@@ -6023,7 +6023,17 @@ function wmfGetVariantSettings() {
 		'Author_talk' => 101,
 		'VikiKaynak' => NS_PROJECT, // T44721
 		'VikiKaynak_tartışma' => NS_PROJECT_TALK,
-		'Portal_talk' => 201
+		'Portal_talk' => 201,
+
+		// T266606
+		'T' => NS_TALK,
+		'K' => NS_USER,
+		'VK' => NS_PROJECT,
+		'WS' => NS_PROJECT,
+		'Ş' => NS_TEMPLATE,
+		'Y' => NS_HELP,
+		'KAT' => NS_CATEGORY,
+		'P' => 200,
 	],
 	'+trwiktionary' => [ // T266609
 		'T' => NS_TALK,
