@@ -6035,6 +6035,15 @@ function wmfGetVariantSettings() {
 		'KAT' => NS_CATEGORY,
 		'P' => 200,
 	],
+	'+trwikiquote' => [ // T266605
+		'T' => NS_TALK,
+		'K' => NS_USER,
+		'VS' => NS_PROJECT,
+		'WQ' => NS_PROJECT,
+		'Ş' => NS_TEMPLATE,
+		'Y' => NS_HELP,
+		'KAT' => NS_CATEGORY,
+	],
 	'+trwiktionary' => [ // T266609
 		'T' => NS_TALK,
 		'K' => NS_USER,
