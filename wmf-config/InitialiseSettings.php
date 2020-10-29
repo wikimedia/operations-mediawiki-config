@@ -15474,6 +15474,10 @@ function wmfGetVariantSettings() {
 	'viwiktionary' => true, // T10886
 ],
 
+'wgDLPQueryCacheTime' => [
+	'default' => 120, // T263220
+],
+
 'wmgUseFloatedToc' => [
 	'default' => true,
 	'dewikivoyage' => false, // T87534
