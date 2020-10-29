@@ -6010,6 +6010,13 @@ function wmfGetVariantSettings() {
 		'VÇ' => 110,
 		'KAT' => NS_CATEGORY,
 		'KİT' => 112,
+
+		// T266608
+		'T' => NS_TALK,
+		'K' => NS_USER,
+		'WB' => NS_PROJECT,
+		'Ş' => NS_TEMPLATE,
+		'Y' => NS_HELP,
 	],
 	'+trwikisource' => [
 		'Author' => 100,
