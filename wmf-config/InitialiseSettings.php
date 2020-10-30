@@ -20231,7 +20231,6 @@ function wmfGetVariantSettings() {
 	'frwiki' => [ // T167617
 		'raw' => [
 			'frequency' => 'daily',
-			'limit' => 60,
 		],
 		'wikimag' => [
 			'frequency' => 'weekly',
