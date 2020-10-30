@@ -923,6 +923,16 @@ function wmfGetLabsOverrideSettings() {
 			]
 		],
 
+		// Structured Data on Commons: wikibase properties that will be editable by default
+		'wgMediaInfoMediaSearchProperties' => [
+			'commonswiki' => [
+				// depicts
+				'P245962' => 1,
+				// digital representation of
+				'P248141' => 1.1,
+			],
+		],
+
 		'wgMediaInfoExternalEntitySearchBaseUri' => [
 			'commonswiki' => 'https://wikidata.beta.wmflabs.org/w/api.php',
 		],

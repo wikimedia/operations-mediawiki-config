@@ -23147,12 +23147,10 @@ function wmfGetVariantSettings() {
 // Structured Data on Commons: wikibase properties that will be editable by default
 'wgMediaInfoMediaSearchProperties' => [
 	'commonswiki' => [
-		[
-			// depicts
-			'P180' => 1,
-			// digital representation of
-			'P6243' => 1.1,
-		],
+		// depicts
+		'P180' => 1,
+		// digital representation of
+		'P6243' => 1.1,
 	],
 ],
 
