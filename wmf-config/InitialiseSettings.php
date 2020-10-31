@@ -10019,6 +10019,7 @@ function wmfGetVariantSettings() {
 	'+nlwikivoyage' => [ 6 => 1, 14 => 1, 100 => 1, 104 => 1, 106 => 1 ],
 	'+nowikimedia' => [ 100 => 1 ], // T181625
 	'+nowikisource' => [ 102 => 1, 106 => 1 ],
+	'+otrs_wikiwiki' => [ 100 => 1 ], // T266917
 	'+plwiktionary' => [ 100 => 1, 102 => 1 ],
 	'+plwikisource' => [ 102 => 1, 104 => 1, 124 => 1, ], // T154711
 	'+ptwikisource' => [ 102 => 1, 104 => 1 ],
