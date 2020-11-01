@@ -6275,6 +6275,12 @@ function wmfGetVariantSettings() {
 		'頻道' => 100, // T257101
 		'频道_讨论' => 101, // T257101
 		'頻道_讨论' => 101, // T257101
+		'WN' => NS_PROJECT, // T266925
+		'U' => NS_USER, // T266925
+		'UT' => NS_USER_TALK, // T266925
+		'T' => NS_TEMPLATE, // T266925
+		'CAT' => NS_CATEGORY, // T266925
+		'H' => NS_HELP, // T266925
 	],
 	'+zhwikiquote' => [
 		'WQ' => NS_PROJECT, // T181374
