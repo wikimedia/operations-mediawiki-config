@@ -14926,6 +14926,7 @@ function wmfGetVariantSettings() {
 	'zhwiktionary' => [ 'w', 'b', 'q', 's', 'meta', 'commons' ],
 	'zhwikibooks' => [ 'w', 'wikt', 'q', 's', 'meta', 'commons' ],
 	'zhwikisource' => [ 'w', 'b', 'q', 'wikt', 'meta', 'commons', 'en', 'oldwikisource' ], // T240814
+	'zhwikinews' => [ 'de', 'en', 'es', 'fr', 'it', 'ja', 'ko', 'pt', 'ru' ], // T266388
 	'zuwiki' => [ 'en' ], // T53327
 
 	// Special wikis
