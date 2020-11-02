@@ -37,6 +37,9 @@ $wgAbuseFilterActions = [
 // T66255 - Enable logging to irc.wikimedia.org by default
 $wgAbuseFilterNotifications = "udp";
 
+// Enable wgAbuseFilterNotificationsPrivate by default for WMF wikis - T266298
+$wgAbuseFilterNotificationsPrivate = true;
+
 // T113164 Change default AbuseFilter IP block duration to not indefinite
 $wgAbuseFilterAnonBlockDuration = '1 week';
 
@@ -99,16 +102,6 @@ switch ( $wgDBname ) {
 		break;
 	case 'commonswiki':
 		$wgAbuseFilterConditionLimit = 2000; // T132048
-		$wgAbuseFilterNotificationsPrivate = true; // T218527
-		break;
-	case 'cswiktionary':
-		$wgAbuseFilterNotificationsPrivate = true;
-		break;
-	case 'cswikinews':
-		$wgAbuseFilterNotificationsPrivate = true;
-		break;
-	case 'cswikisource':
-		$wgAbuseFilterNotificationsPrivate = true;
 		break;
 	case 'elwiki':
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
@@ -122,7 +115,6 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 		$wgGroupPermissions['abusefilter-helper']['abusefilter-view-private'] = true; // T175684
-		$wgAbuseFilterNotificationsPrivate = true; // T46045
 		break;
 	case 'enwikibooks':
 		$wgGroupPermissions['*']['abusefilter-view'] = false;
@@ -163,13 +155,11 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterActions['block'] = true;
 		$wgAbuseFilterBlockDuration = 'indefinite'; // T96669
 		$wgAbuseFilterAnonBlockDuration = '31 hours'; // T96669
-		$wgAbuseFilterNotificationsPrivate = true; // T147744
 		break;
 	case 'eswikinews': // T236730
 		$wgAbuseFilterActions['block'] = true;
 		$wgAbuseFilterAnonBlockDuration = '31 hours';
 		$wgAbuseFilterBlockDuration = '31 hours';
-		$wgAbuseFilterNotificationsPrivate = true;
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 		break;
 	case 'eswikiquote': // T177760, T177761
@@ -177,7 +167,6 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterActions['block'] = true;
 		$wgAbuseFilterBlockDuration = '1 day';
 		$wgAbuseFilterAnonBlockDuration = '1 day';
-		$wgAbuseFilterNotificationsPrivate = true;
 		break;
 	case 'eswiktionary':
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
@@ -352,7 +341,6 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['steward']['abusefilter-privatedetails'] = true; // T160357
 		$wgAbuseFilterActions['block'] = true; // T54681
 		$wgAbuseFilterAnonBlockDuration = '31 hours'; // T76270
-		$wgAbuseFilterNotificationsPrivate = true; // T154358
 		break;
 	case 'mrwiki':
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = true; // T42611
@@ -455,7 +443,6 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true; // T47643
 		break;
 	case 'wikidatawiki':
-		$wgAbuseFilterNotificationsPrivate = true; // T47083
 		$wgAbuseFilterActions['block'] = true; // T59681
 		$wgAbuseFilterBlockDuration = 'indefinite'; // T59681
 		$wgAbuseFilterAnonBlockDuration = '3 months'; // T59681
