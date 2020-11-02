@@ -3394,8 +3394,6 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	$wgULSCompactLanguageLinksBetaFeature = $wmgULSCompactLanguageLinksBetaFeature;
 
 	// … as a stable feature
-	$wgULSCompactLinksEnableAnon = $wmgULSCompactLinksEnableAnon;
-	$wgULSCompactLinksForNewAccounts = $wmgULSCompactLinksForNewAccounts;
 	$wgDefaultUserOptions['compact-language-links'] = 1;
 }
 
