@@ -27732,11 +27732,9 @@ function wmfGetVariantSettings() {
 	'default' => [ 'data-bridge' ],
 ],
 
-// T123582
+// T123582: enables <link rel="preconnect" href="//upload.wikimedia.org">
 'wgImagePreconnect' => [
-	'default' => false,
-	'group0' => true,
-	'group1' => true,
+	'default' => true,
 ],
 
 ];
