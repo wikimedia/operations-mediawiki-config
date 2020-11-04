@@ -9427,12 +9427,6 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
-'wgVectorIsSearchInHeaderABTest' => [
-	'default' => false,
-	'desktop-improvements' => true,
-	'officewiki' => false,
-],
-
 # wgForceUIMsgAsContentMsg @{
 'wgForceUIMsgAsContentMsg' => [
 	'default' => [],
