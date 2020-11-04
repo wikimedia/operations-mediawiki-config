@@ -21385,6 +21385,12 @@ function wmfGetVariantSettings() {
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		[
+			'stream' => 'android.user_contribution_screen',
+			'schema_title' => 'analytics/mobile_apps/android_user_contribution_screen',
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 
 		/*
 		 * == eventgate-logging-external streams ==
