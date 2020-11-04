@@ -16850,6 +16850,7 @@ function wmfGetVariantSettings() {
 		'archive.wul.waseda.ac.jp', // T261037
 		'foto.digitalarkivet.no', // Digital archive of Norway - T266390
 		'*.legislation.gov.uk', // UK legislation - T265690
+		'*.irishstatutebook.ie', // Irish legislation - T267193
 	],
 ],
 
