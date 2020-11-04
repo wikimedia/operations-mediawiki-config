@@ -18344,15 +18344,6 @@ function wmfGetVariantSettings() {
 
 	// Do not log logins at loginwiki
 	'loginwiki' => false,
-
-	// Exempted big wikis
-	'arwiki' => false,
-	'bnwiki' => false,
-	'commonswiki' => false,
-	'dewiki' => false,
-	'enwiki' => false,
-	'frwiki' => false,
-	'wikidatawiki' => false,
 ],
 
 'wgCheckUserLogSuccessfulBotLogins' => [
