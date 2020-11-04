@@ -21678,10 +21678,8 @@ function wmfGetVariantSettings() {
 // EventLogging to POST to EventGate rather than GET to EventLogging beacon.
 // https://phabricator.wikimedia.org/T238230
 'wgEventLoggingSchemas' => [
-	'testwiki' => [
-		'ContentTranslationAbuseFilter' => '/analytics/legacy/contenttranslationabusefilter/1.0.0',
-	],
 	'default' => [
+		'ContentTranslationAbuseFilter' => '/analytics/legacy/contenttranslationabusefilter/1.0.0',
 		'TemplateWizard' => '/analytics/legacy/templatewizard/1.0.0',
 		'Test' => '/analytics/legacy/test/1.1.0',
 		// Temporary override for https://phabricator.wikimedia.org/T254606.
