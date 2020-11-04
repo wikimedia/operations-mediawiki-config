@@ -21318,6 +21318,13 @@ function wmfGetVariantSettings() {
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
+			'stream' => 'eventlogging_NewcomerTask',
+			'schema_title' => 'analytics/legacy/newcomertask',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
 			'stream' => 'eventlogging_SearchSatisfaction',
 			'schema_title' => 'analytics/legacy/searchsatisfaction',
 			'topic_prefixes' => null,
@@ -21613,6 +21620,7 @@ function wmfGetVariantSettings() {
 'wgEventLoggingStreamNames' => [
 	'default' => [
 		'eventlogging_ContentTranslationAbuseFilter',
+		'eventlogging_NewcomerTask',
 		'eventlogging_SearchSatisfaction',
 		'eventlogging_TemplateWizard',
 		'eventlogging_Test',
@@ -21649,6 +21657,9 @@ function wmfGetVariantSettings() {
 		// and get it deployed, override it here.
 		'NavigationTiming' => 20373802,
 		'ResourceTiming' => 20373861,
+	],
+	'testwiki' => [
+		'NewcomerTask' => '/analytics/legacy/newcomertask/1.0.0',
 	],
 ],
 
