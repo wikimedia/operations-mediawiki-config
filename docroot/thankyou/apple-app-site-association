@@ -1,0 +1,17 @@
+{
+    "applinks": {
+        "details": [{
+            "appIDs": [
+                "AKK7J2GV64.org.wikimedia.wikipedia.developer",
+                "AKK7J2GV64.org.wikimedia.wikipedia.tfalpha",
+                "AKK7J2GV64.org.wikimedia.wikipedia.tfbeta",
+                "AKK7J2GV64.org.wikimedia.wikipedia.adhoc",
+                "AKK7J2GV64.org.wikimedia.wikipedia"
+            ],
+            "components": [{
+                "/": "/wiki/*",
+                "exclude": true
+            }]
+        }]
+    }
+}
