@@ -21639,14 +21639,7 @@ function wmfGetVariantSettings() {
 	'default' => [
 		'ContentTranslationAbuseFilter' => '/analytics/legacy/contenttranslationabusefilter/1.0.0',
 		'TemplateWizard' => '/analytics/legacy/templatewizard/1.0.0',
-		'Test' => '/analytics/legacy/test/1.1.0',
-		// Temporary override for https://phabricator.wikimedia.org/T254606.
-		// Analytics Eng is having to do a lot of manual work to import
-		// this data properly into Hive because of this bug.
-		// Until the owners change the schema revision in their code
-		// and get it deployed, override it here.
-		'NavigationTiming' => 20373802,
-		'ResourceTiming' => 20373861,
+		'Test' => '/analytics/legacy/test/1.2.0',
 	],
 	'testwiki' => [
 		'NewcomerTask' => '/analytics/legacy/newcomertask/1.0.0',
