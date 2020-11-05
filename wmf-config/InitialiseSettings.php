@@ -20700,7 +20700,7 @@ function wmfGetVariantSettings() {
 	'kkwiki' => false,
 	'kuwiki' => false,
 	'ruwiki' => false,
-	'thwiki' => false,
+	'tgwiki' => false,
 	'uzwiki' => false,
 	'enwikiversity' => true, // T264693
 	'mediawikiwiki' => true, // T251208
