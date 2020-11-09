@@ -17973,6 +17973,7 @@ function wmfGetVariantSettings() {
 // Should the citation button be moved from the primary toolbar into the "other" group
 'wmgCiteVisualEditorOtherGroup' => [
 	'default' => true,
+	'enwiktionary' => false, // T267504
 	'wikipedia' => false,
 	'wikibooks' => false,
 	'wikiversity' => false,
