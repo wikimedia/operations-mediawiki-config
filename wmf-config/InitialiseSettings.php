@@ -7061,6 +7061,7 @@ function wmfGetVariantSettings() {
 		'FileImporter' => 'debug',
 		'FileOperation' => 'debug',
 		'Flow' => 'debug', // -erikb 2014/03/08
+		'formatnum' => 'info', // - cscott 2020/11/09 for T267587/T267370
 		'FSFileBackend' => 'debug', // - gilles for T75229
 		'generated-pp-node-count' => 'debug',
 		'GettingStarted' => 'debug',
