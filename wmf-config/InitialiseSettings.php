@@ -20693,7 +20693,6 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'wikipedia' => true, // T266303
 	'enwiki' => false,
-	'fiwiki' => false,
 	'ganwiki' => false,
 	'dewiki' => false,
 	'iuwiki' => false,
