@@ -214,8 +214,6 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBRepoSettings['enableRefTabs'] = $wmgWikibaseRepoEnableRefTabs;
 
-	$wgWBRepoSettings['propagateChangeVisibility'] = true;
-
 	$wgWBRepoSettings['propagatePageDeletion'] = $wmgWikibaseRepoPropagatePageDeletion;
 
 	// entity data for URLs matching these patterns will be cached in Varnish and purged if needed;
