@@ -27581,6 +27581,8 @@ function wmfGetVariantSettings() {
 	'fawiki' => true,
 	'dewiki' => true,
 	'cswiki' => true,
+	'commonswiki' => true, // T266874
+	'wikidatawiki' => true,
 ],
 
 'wmgPoweredByMediaWikiIcon' => [
