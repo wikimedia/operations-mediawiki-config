@@ -145,6 +145,17 @@ function wmfGetLabsOverrideSettings() {
 			'default' => 'wgDebugLogFile',
 		],
 
+		// Stream config default settings.
+		// The EventStreamConfig extension will add these
+		// settings to each entry in wgEventStreams if
+		// the entry does not already have the setting.
+		// Beta only has eqiad. prefixed topics.
+		'wgEventStreamsDefaultSettings' => [
+			'default' => [
+				'topic_prefixes' => [ 'eqiad.' ],
+			],
+		],
+
 		// Event stream configuration is a list of stream configurations.
 		// Each item in the list must have a 'stream' setting of either the specific
 		// stream name or a regex patterns to matching stream names.
