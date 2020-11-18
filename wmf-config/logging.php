@@ -181,6 +181,8 @@ if ( $wmgLogstashServers ) {
 
 // Post construction calls to make for new Logger instances
 $wmgMonologLoggerCalls = [
+	// Bug: T99581 - force logger timezone to UTC
+	'setTimezone' => [ new DateTimeZone( 'UTC' ) ],
 	// T116550 - Requires Monolog > 1.17.2
 	'useMicrosecondTimestamps' => [ false ],
 ];
@@ -386,9 +388,3 @@ $wgMWLoggerDefaultSpi = [
 	'class' => \MediaWiki\Logger\MonologSpi::class,
 	'args' => [ $wmgMonologConfig ],
 ];
-
-// Bug: T99581 - force logger timezone to UTC
-// Guard condition needed for Jenkins; class from mediawiki/vendor
-if ( method_exists( \Monolog\Logger::class, 'setTimezone' ) ) {
-	\Monolog\Logger::setTimezone( new DateTimeZone( 'UTC' ) );
-}
