@@ -214,7 +214,7 @@ $wmgMonologConfig = [
 		],
 		'cee' => [
 			'class' => \MediaWiki\Logger\Monolog\CeeFormatter::class,
-			'args'  => [ 'mediawiki', php_uname( 'n' ), null, '', 1 ],
+			'args'  => [ 'mediawiki', php_uname( 'n' ), '', '', 1 ],
 		],
 	],
 ];
