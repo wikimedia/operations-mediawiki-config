@@ -25776,6 +25776,19 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
+// GlobalWatchlist extension
+// DO NOT ENABLE on production wikis yet, see T260862
+// This is only here so that InitialiseSettings-labs can override the config
+'wmgUseGlobalWatchlist' => [
+	'default' => false,
+],
+'wgGlobalWatchlistDevMode' => [
+	'default' => false,
+],
+'wgGlobalWatchlistWikibaseSite' => [
+	'default' => 'www.wikidata.org',
+],
+
 'wmgWatchlistDefault' => [
 	'default' => false,
 	'arwiki' => true, // T220186
