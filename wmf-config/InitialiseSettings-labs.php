@@ -289,6 +289,7 @@ function wmfGetLabsOverrideSettings() {
 				'generated-pp-node-count' => 'debug',
 				'GettingStarted' => 'debug',
 				'GlobalTitleFail' => [ 'sample' => 10000 ], // chad hates $wgTitle
+				'GlobalWatchlist' => [ 'logstash' => 'debug', 'udp2log' => 'debug' ], // T268181
 				'goodpass' => 'debug',
 				'goodpass-priv' => 'debug',
 				'GrowthExperiments' => 'info',
@@ -2094,6 +2095,18 @@ function wmfGetLabsOverrideSettings() {
 		'wmgUseWikimediaApiPortalOAuth' => [
 			'apiportalwiki' => true,
 			'default' => false,
+		],
+
+		// Deploy GlobalWatchlist to the beta cluster - T268181
+		'wmgUseGlobalWatchlist' => [
+			'default' => false,
+			'metawiki' => true,
+		],
+		'wgGlobalWatchlistDevMode' => [
+			'default' => true,
+		],
+		'wgGlobalWatchlistWikibaseSite' => [
+			'default' => 'wikidata.beta.wmflabs.org',
 		],
 
 		// T253271 Dont deploy Cirrus AB tests to beta
