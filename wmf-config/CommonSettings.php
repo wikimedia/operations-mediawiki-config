@@ -4136,6 +4136,10 @@ if ( $wmgUseWikimediaApiPortalOAuth ) {
 	wfLoadExtension( 'WikimediaApiPortalOAuth' );
 }
 
+if ( $wmgUseGlobalWatchlist ) {
+	wfLoadExtension( 'GlobalWatchlist' );
+}
+
 // This is a temporary hack for hooking up Parsoid/PHP with MediaWiki
 // This is just the regular check out of parsoid in that week's vendor
 $parsoidDir = "$IP/vendor/wikimedia/parsoid";
