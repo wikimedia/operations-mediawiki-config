@@ -9421,17 +9421,9 @@ function wmfGetVariantSettings() {
 	// T254227
 	'desktop-improvements' => '2',
 ],
-// T246420: Enable limited-width layout in "Latest Vector".
-'wgVectorLayoutMaxWidth' => [
-	'default' => true, // Enable Max-Width layout when Modern Vector is enabled
-],
 // T258588: Sidebar expanded for anons on modern Vector
 'wgVectorDefaultSidebarVisibleForAnonymousUser' => [
 	'desktop-improvements' => true,
-],
-'wgVectorIsSearchInHeader' => [
-	// T262207, T263032
-	'default' => true,
 ],
 
 # wgForceUIMsgAsContentMsg @{

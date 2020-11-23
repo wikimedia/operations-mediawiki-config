@@ -517,14 +517,6 @@ function wmfGetLabsOverrideSettings() {
 		'wgVectorDefaultSkinVersionForNewAccounts' => [
 			'default' => '2', // Latest Vector
 		],
-		// T246420: Enable limited-width layout in "Latest Vector"
-		'wgVectorLayoutMaxWidth' => [
-			'default' => true,
-		],
-		// T249363: Enable search in header mode
-		'wgVectorIsSearchInHeader' => [
-			'default' => true,
-		],
 
 		'wmgCommonsMetadataForceRecalculate' => [
 			'default' => true,
