@@ -18279,7 +18279,6 @@ function wmfGetVariantSettings() {
 'wgParserCacheUseJson' => [
 	'default' => false,
 	'group0' => true,
-	'group1' => true,
 ],
 
 'wgLanguageConverterCacheType' => [
