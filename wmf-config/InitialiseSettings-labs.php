@@ -1347,11 +1347,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => false,
 			'cswiki' => true,
 		],
-		'wgGEHelpPanelHelpDeskPostOnTop' => [
-			'default' => false,
-			'ruwiki' => true,
-			'svwiki' => true,
-		],
 		'wgGEHelpPanelSearchForeignAPI' => [
 			'default' => 'https://en.wikipedia.org/w/api.php',
 			'arwiki' => 'https://ar.wikipedia.org/w/api.php',

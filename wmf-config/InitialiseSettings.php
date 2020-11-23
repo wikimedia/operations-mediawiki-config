@@ -26235,6 +26235,12 @@ function wmfGetVariantSettings() {
 	'viwiki' => 'Wikipedia:Giúp_sử_dụng_Wikipedia',
 ],
 
+'wgGEHelpPanelHelpDeskPostOnTop' => [
+	'default' => false,
+	'ruwiki' => true,
+	'svwiki' => true,
+],
+
 'wgGEHelpPanelViewMoreTitle' => [
 	'default' => '',
 	'testwiki' => 'Special:MyLanguage/Help:Contents',
