@@ -21570,6 +21570,11 @@ function wmfGetVariantSettings() {
 			'schema_title' => 'resource_change',
 			'destination_event_service' => 'eventgate-main',
 		],
+		[
+			'stream' => 'mediawiki.revision-recommendation-create',
+			'schema_title' => 'mediawiki/revision/recommendation-create',
+			'destination_event_service' => 'eventgate-main',
+		],
 
 		/*
 		 * == Streams needed for eventgate functionality ==
