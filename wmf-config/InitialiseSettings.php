@@ -27607,27 +27607,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgWatchlistExpiry' => [
-	'default' => false,
-	'testwiki' => true, // T257506
-	'enwikivoyage' => true,
-	'enwikiversity' => true,
-	'eswiktionary' => true,
-	'eswikivoyage' => true,
-	'hewiki' => true,
-	'hewiktionary' => true,
-	'mediawikiwiki' => true,
-	'metawiki' => true,
-	'officewiki' => true,
-	'dewikisource' => true,
-	'enwikisource' => true,
-	'eswikisource' => true,
-	'hewikisource' => true,
-	'frwiki' => true, //T264780
-	'fawiki' => true,
-	'dewiki' => true,
-	'cswiki' => true,
-	'commonswiki' => true, // T266874
-	'wikidatawiki' => true,
+	'default' => true,
 ],
 
 'wmgPoweredByMediaWikiIcon' => [
