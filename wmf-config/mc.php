@@ -33,7 +33,7 @@ $wgObjectCaches['mcrouter'] = [
 ];
 $wgObjectCaches['mcrouter-with-onhost-tier'] = array_merge(
 	$wgObjectCaches['mcrouter'],
-	[ 'routingPrefix' => "/$wmfMasterDatacenter/mw-with-onhost-tier/" ]
+	[ 'routingPrefix' => "/$wmfDatacenter/mw-with-onhost-tier/" ]
 );
 
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
