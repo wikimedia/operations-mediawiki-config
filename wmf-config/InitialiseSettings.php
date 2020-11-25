@@ -506,6 +506,7 @@ function wmfGetVariantSettings() {
 	'scwiki' => 'Europe/Berlin',
 	'scnwiki' => 'Europe/Berlin',
 	'sewikimedia' => 'Europe/Berlin',
+	'skrwiki' => 'Asia/Islamabad',
 	'shwiki' => 'Europe/Berlin',
 	'shnwiktionary' => 'Asia/Yangon',
 	'shywiktionary' => 'Africa/Algiers',
@@ -813,6 +814,7 @@ function wmfGetVariantSettings() {
 	'simplewiki' => '/static/images/project-logos/simplewiki.png', // T181448
 	'siwiki' => '/static/images/project-logos/siwiki.png',
 	'skwiki' => '/static/images/project-logos/skwiki.png',
+	'skrwiki' => '/static/images/project-logos/skrwiki.png', // T268410
 	'slwiki' => '/static/images/project-logos/slwiki.png',
 	'smwiki' => '/static/images/project-logos/smwiki.png', // T51125
 	'smnwiki' => '/static/images/project-logos/smnwiki.png',
@@ -1592,6 +1594,7 @@ function wmfGetVariantSettings() {
 	'simplewiki' => '/static/images/project-logos/simplewiki-1.5x.png', // T181448
 	'siwiki' => '/static/images/project-logos/siwiki-1.5x.png', // T150618
 	'skwiki' => '/static/images/project-logos/skwiki-1.5x.png', // T150618
+	'skrwiki' => '/static/images/project-logos/skrwiki-1.5x.png', // T268410
 	'slwiki' => '/static/images/project-logos/slwiki-1.5x.png', // T150618
 	'smwiki' => '/static/images/project-logos/smwiki-1.5x.png', // T150618
 	'smnwiki' => '/static/images/project-logos/smnwiki-1.5x.png',
@@ -2147,6 +2150,7 @@ function wmfGetVariantSettings() {
 	'simplewiki' => '/static/images/project-logos/simplewiki-2x.png', // T181448
 	'siwiki' => '/static/images/project-logos/siwiki-2x.png', // T150618
 	'skwiki' => '/static/images/project-logos/skwiki-2x.png', // T150618
+	'skrwiki' => '/static/images/project-logos/skrwiki-2x.png', // T268410
 	'slwiki' => '/static/images/project-logos/slwiki-2x.png', // T150618
 	'smwiki' => '/static/images/project-logos/smwiki-2x.png', // T150618
 	'smnwiki' => '/static/images/project-logos/smnwiki-2x.png',
@@ -3917,6 +3921,7 @@ function wmfGetVariantSettings() {
 	'skwikiquote' => 'Wikicitáty',
 	'skwikisource' => 'Wikizdroje',
 	'skwiktionary' => 'Wikislovník',
+	'skrwiki' => 'وکیپیڈیا',
 	'slwiki' => 'Wikipedija',
 	'slwikibooks' => 'Wikiknjige',
 	'slwikiquote' => 'Wikinavedek',
@@ -4450,6 +4455,7 @@ function wmfGetVariantSettings() {
 	'skwikiquote' => 'Wikicitáty',
 	'skwikisource' => 'Wikizdroje',
 	'skwiktionary' => 'Wikislovník',
+	'skrwiki' => 'وکیپیڈیا',
 	'slwiki' => 'Wikipedija',
 	'slwikibooks' => 'Wikiknjige',
 	'slwikiquote' => 'Wikinavedek',
