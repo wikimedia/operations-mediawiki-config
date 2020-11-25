@@ -11356,6 +11356,7 @@ function wmfGetVariantSettings() {
 	// T7836
 	// T13326
 	'+itwiki' => [
+		'autoconfirmed' => [ 'patrolmarks' => true ], // T268734
 		'flood' => [ 'bot' => true, ],
 		'rollbacker' => [
 			'rollback' => true,
