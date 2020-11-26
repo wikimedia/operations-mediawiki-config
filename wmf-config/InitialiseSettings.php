@@ -10144,6 +10144,11 @@ function wmfGetVariantSettings() {
 			'extendedmover' => [ 16, 60 ], // T138703
 		],
 	],
+	'+enwikibooks' => [
+		'move' => [
+			'reviewer' => [ 100, 60 ], // T268849
+		],
+	],
 	'+plwiki' => [
 		// Limit to 3 per day for new users (T169268)
 		'thanks-notification' => [
@@ -10859,6 +10864,9 @@ function wmfGetVariantSettings() {
 		'uploader' => [
 			'upload' => true,
 			'reupload' => true,
+		],
+		'reviewer' => [
+			'suppressredirect' => true, // T268849
 		],
 	],
 	'+enwikinews' => [
