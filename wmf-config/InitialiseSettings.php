@@ -23638,12 +23638,6 @@ function wmfGetVariantSettings() {
 	'wikidataclient-test' => 'testwikidata',
 ],
 
-'wmgWikibaseRepoPropagatePageDeletion' => [
-	'default' => false,
-	'testwikidatawiki' => true,
-	'wikidatawiki' => true,
-],
-
 'wmgWikibaseRepoIdGeneratorLogging' => [
 	'default' => false,
 	'testwikidatawiki' => true,
