@@ -18280,10 +18280,6 @@ function wmfGetVariantSettings() {
 	'wikitech' => 'memcached-pecl',
 ],
 
-'wgParserCacheUseJson' => [
-	'default' => true,
-],
-
 'wgOldRevisionParserCacheExpireTime' => [
 	'group0' => 3600,
 	'default' => 0,
