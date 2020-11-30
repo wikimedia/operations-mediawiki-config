@@ -2079,11 +2079,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => false,
 		],
 
-		'wmgUseWikimediaApiPortalOAuth' => [
-			'apiportalwiki' => true,
-			'default' => false,
-		],
-
 		// Deploy GlobalWatchlist to the beta cluster - T268181
 		'wmgUseGlobalWatchlist' => [
 			'default' => false,

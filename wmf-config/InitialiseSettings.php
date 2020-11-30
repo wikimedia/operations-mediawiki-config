@@ -27728,6 +27728,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wmgUseWikimediaApiPortalOAuth' => [
+	'apiportalwiki' => true,
 	'default' => false,
 ],
 
