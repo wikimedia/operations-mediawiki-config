@@ -10146,7 +10146,7 @@ function wmfGetVariantSettings() {
 	],
 	'+enwikibooks' => [
 		'move' => [
-			'reviewer' => [ 100, 60 ], // T268849
+			'editor' => [ 100, 60 ], // T268849
 		],
 	],
 	'+plwiki' => [
@@ -10859,14 +10859,14 @@ function wmfGetVariantSettings() {
 		'patroller' => [ 'patrol' => true ], // T149019
 	],
 	'+enwikibooks' => [
-		'editor' => [ 'autopatrol' => true ], // T172561
+		'editor' => [
+			'autopatrol' => true, // T172561
+			'suppressredirect' => true, // T268849
+		],
 		'flood' => [ 'bot' => true ],
 		'uploader' => [
 			'upload' => true,
 			'reupload' => true,
-		],
-		'reviewer' => [
-			'suppressredirect' => true, // T268849
 		],
 	],
 	'+enwikinews' => [
