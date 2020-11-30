@@ -3654,7 +3654,7 @@ if ( $wmgUseOAuth ) {
 		$wgMWOAuthSharedUserSource = 'CentralAuth';
 	}
 	$wgMWOAuthSecureTokenTransfer = true;
-	$wgOAuth2GrantExpirationInterval = 'infinity';
+	$wgOAuth2GrantExpirationInterval = 'PT4H';
 
 	if ( $wgMWOAuthCentralWiki === $wgDBname || $wgMWOAuthCentralWiki === false ) {
 		// Management interfaces are available on the central wiki or wikis
