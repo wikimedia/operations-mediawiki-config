@@ -674,6 +674,14 @@ function wmfGetLabsOverrideSettings() {
 			'default' => false,
 		],
 
+		'wmgUseIPInfo' => [
+			'default' => true,
+			'loginwiki' => false,
+		],
+		'wgIPInfoGeoIP2Path' => [
+			'default' => '/usr/share/GeoIP/GeoLite2-',
+		],
+
 		'wgMediaViewerNetworkPerformanceSamplingFactor' => [
 			'default' => 1,
 		],
