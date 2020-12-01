@@ -23626,6 +23626,11 @@ function wmfGetVariantSettings() {
 	'wikidatawiki' => true,
 ],
 
+'wmgWikibaseRepoIdGeneratorLogging' => [
+	'default' => false,
+	'testwikidatawiki' => true,
+],
+
 'wmgUseTemplateSandbox' => [
 	'default' => true,
 	'lockeddown' => false,

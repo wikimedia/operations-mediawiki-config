@@ -212,6 +212,8 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBRepoSettings['propagatePageDeletion'] = $wmgWikibaseRepoPropagatePageDeletion;
 
+	$wgWBRepoSettings['idGeneratorLogging'] = $wmgWikibaseRepoIdGeneratorLogging;
+
 	// entity data for URLs matching these patterns will be cached in Varnish and purged if needed;
 	// all other entity data URLs will receive no caching
 	$wgWBRepoSettings['entityDataCachePaths'] = [
