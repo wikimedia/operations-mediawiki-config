@@ -3875,6 +3875,10 @@ if ( $wmgUseCheckUser ) {
 	$wgCheckUserLogAdditionalRights[] = 'spamblacklistlog';
 }
 
+if ( $wmgUseIPInfo ) {
+	wfLoadExtension( 'IPInfo' );
+}
+
 // T39211
 $wgUseCombinedLoginLink = false;
 
