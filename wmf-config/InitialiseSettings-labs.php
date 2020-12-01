@@ -458,6 +458,9 @@ function wmfGetLabsOverrideSettings() {
 		'wgWMEInukaPageViewEnabled' => [
 			'default' => true
 		],
+		'wgWMESessionTick' => [
+			'default' => true,
+		],
 		'wgWMEInukaPageViewCookiesDomain' => [
 			'default' => 'wmflabs.org'
 		],
