@@ -1696,7 +1696,6 @@ function wmfGetLabsOverrideSettings() {
 
 		'wgRestAPIAdditionalRouteFiles' => [
 			'default' => [
-				'extensions/OAuth/experimentalRoutes.json',
 				'includes/Rest/coreDevelopmentRoutes.json',
 			],
 		],
