@@ -16853,7 +16853,7 @@ function wmfGetVariantSettings() {
 		'foto.digitalarkivet.no', // Digital archive of Norway - T266390
 		'*.legislation.gov.uk', // UK legislation - T265690
 		'*.irishstatutebook.ie', // Irish legislation - T267193
-		'artsdatabanken.no', // Norwegian knowledge base for biodiversity - T267784
+		'*.artsdatabanken.no', // Norwegian knowledge base for biodiversity - T267784
 	],
 ],
 
