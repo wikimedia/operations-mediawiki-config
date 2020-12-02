@@ -21380,7 +21380,7 @@ function wmfGetVariantSettings() {
 		 * === Streams for Event Platform-based analytics instruments ===
 		 */
 		[
-			'stream' => 'mw_session_tick',
+			'stream' => 'mediawiki.client.session_tick',
 			'schema_title' => 'analytics/session_tick',
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -21650,7 +21650,7 @@ function wmfGetVariantSettings() {
 		'eventlogging_SearchSatisfaction',
 		'eventlogging_TemplateWizard',
 		'eventlogging_Test',
-		'mw_session_tick',
+		'mediawiki.client.session_tick',
 		'test.instrumentation',
 		'test.instrumentation.sampled',
 	]
