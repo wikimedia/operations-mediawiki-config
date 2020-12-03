@@ -5481,6 +5481,7 @@ function wmfGetVariantSettings() {
 		'Pêvek_nîqas' => 101, // T39524 (old namespace name)
 		'Nimînok_nîqas' => 103, // T39524 (old namespace name)
 		'Portal_nîqas' => 105, // T39524 (old namespace name)
+		'WF' => NS_PROJECT, // T269319
 	],
 	'+kuwiki' => [
 		'WP' => NS_PROJECT, // T152815
