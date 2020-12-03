@@ -234,4 +234,4 @@ wfResetOutputBuffers();
 wmfStaticRespond();
 
 $mediawiki = new MediaWiki();
-$mediawiki->doPostOutputShutdown( 'fast' );
+$mediawiki->doPostOutputShutdown();
