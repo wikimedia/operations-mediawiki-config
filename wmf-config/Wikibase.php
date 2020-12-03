@@ -342,6 +342,9 @@ if ( $wmgUseWikibaseClient ) {
 			$wgWBClientSettings['wellKnownReferencePropertyIds'] = $wmgWikibaseClientWellKnownReferencePropertyIds;
 		}
 	}
+
+	// T267745 – effectively subscribes client wikis to descriptions of linked items even if not explicitly used during parse
+	$wgWBClientSettings['enableImplicitDescriptionUsage'] = true;
 }
 
 unset( $wmgWBSharedCacheKey );
