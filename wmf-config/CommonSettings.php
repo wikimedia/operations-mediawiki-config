@@ -3653,6 +3653,7 @@ if ( $wmgUseOAuth ) {
 	}
 	$wgMWOAuthSecureTokenTransfer = true;
 	$wgOAuth2GrantExpirationInterval = 'PT4H';
+	$wgOAuth2RefreshTokenTTL = 'P365D';
 
 	if ( $wgMWOAuthCentralWiki === $wgDBname || $wgMWOAuthCentralWiki === false ) {
 		// Management interfaces are available on the central wiki or wikis
