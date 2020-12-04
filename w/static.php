@@ -21,7 +21,7 @@
  *
  * In addition to the above, this file also looks in older MediaWiki branch
  * directories in order to support references from our static HTML cache for 30 days.
- * While responses from static may also be cached, they are not linked or guruanteed.
+ * While responses from static may also be cached, they are not linked or guaranteed.
  * As such, this file must be able to respond to requests for older resources as well.
  *
  * StatD metrics:
