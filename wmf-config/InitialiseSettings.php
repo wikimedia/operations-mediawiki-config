@@ -25450,26 +25450,6 @@ function wmfGetVariantSettings() {
 			'privacyPolicy' => 'wmde-tw-template-survey-privacy-policy',
 		],
 	],
-	'enwiki' => [
-		// T257015
-		[
-			'enabled' => true,
-			'type' => 'external',
-			'name' => 'growth-study-screener-survey',
-			'question' => 'ext-quicksurveys-growth-external-survey-question',
-			'description' => 'ext-quicksurveys-growth-external-survey-description',
-			'link' => 'ext-quicksurveys-growth-external-survey-link',
-			'coverage' => 0.001,
-			'audience' => [
-				'anons' => true,
-			],
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-			'privacyPolicy' => 'ext-quicksurveys-growth-external-survey-privacy-policy',
-		],
-	],
 	'enwikivoyage' => [
 		// T187299
 		[
