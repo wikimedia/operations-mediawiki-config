@@ -1237,6 +1237,7 @@ if ( $wmgUseUrlShortener ) {
 	$wgUrlShortenerEnableSidebar = false;
 	$wgGroupPermissions['sysop']['urlshortener-manage-url'] = false;
 	$wgGroupPermissions['sysop']['urlshortener-view-log'] = false;
+	$wgGroupPermissions['*']['urlshortener-create-url'] = false;
 
 	// Never ever change this config
 	// Changing it would change target of all short urls
