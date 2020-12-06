@@ -84,6 +84,14 @@ $wgPoolCounterConf = [
 		'slots' => 16,
 		'maxqueue' => 20,
 	],
+	// Note, this uses nowait:. Timeout must be 0, worker should equal maxqueue
+	// In the event DPL is causing DB problems, decrease to 2.
+	'DPL' => [
+		'class' => PoolCounter_Client::class,
+		'timeout' => 0,
+		'workers' => 25,
+		'maxqueue' => 25,
+	],
 ];
 
 $wgPoolCountClientConf = [
