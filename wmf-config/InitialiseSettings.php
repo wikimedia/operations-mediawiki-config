@@ -1236,6 +1236,7 @@ function wmfGetVariantSettings() {
 	'bnwikivoyage' => '/static/images/project-logos/bnwikivoyage.png',
 	'elwikivoyage' => '/static/images/project-logos/elwikivoyage.png',
 	'enwikivoyage' => '/static/images/project-logos/enwikivoyage.png',
+	'eowikivoyage' => '/static/images/project-logos/eowikivoyage.png',
 	'eswikivoyage' => '/static/images/project-logos/eswikivoyage.png', // T170604
 	'fawikivoyage' => '/static/images/project-logos/fawikivoyage.png', // T73382
 	'fiwikivoyage' => '/static/images/project-logos/fiwikivoyage.png', // T151570
@@ -1851,6 +1852,7 @@ function wmfGetVariantSettings() {
 	// Wikivoyage
 	'bnwikivoyage' => '/static/images/project-logos/bnwikivoyage-1.5x.png',
 	'enwikivoyage' => '/static/images/project-logos/enwikivoyage-1.5x.png',
+	'eowikivoyage' => '/static/images/project-logos/eowikivoyage-1.5x.png',
 	'eswikivoyage' => '/static/images/project-logos/eswikivoyage-1.5x.png', // T170604
 	'fawikivoyage' => '/static/images/project-logos/fawikivoyage-1.5x.png', // T73382
 	'fiwikivoyage' => '/static/images/project-logos/fiwikivoyage-1.5x.png',
@@ -2405,6 +2407,7 @@ function wmfGetVariantSettings() {
 	// Wikivoyage
 	'bnwikivoyage' => '/static/images/project-logos/bnwikivoyage-2x.png',
 	'enwikivoyage' => '/static/images/project-logos/enwikivoyage-2x.png',
+	'eowikivoyage' => '/static/images/project-logos/eowikivoyage-2x.png',
 	'eswikivoyage' => '/static/images/project-logos/eswikivoyage-2x.png', // T170604
 	'fawikivoyage' => '/static/images/project-logos/fawikivoyage-2x.png', // T73382
 	'fiwikivoyage' => '/static/images/project-logos/fiwikivoyage-2x.png',
@@ -3631,6 +3634,7 @@ function wmfGetVariantSettings() {
 	'eowikinews' => 'Vikinovaĵoj',
 	'eowikiquote' => 'Vikicitaro',
 	'eowikisource' => 'Vikifontaro',
+	'eowikivoyage' => 'Vikivojaĝo',
 	'eowiktionary' => 'Vikivortaro',
 	'eswikibooks' => 'Wikilibros',
 	'eswikinews' => 'Wikinoticias',
@@ -4166,6 +4170,7 @@ function wmfGetVariantSettings() {
 	'eowikinews' => 'Vikinovaĵoj',
 	'eowikiquote' => 'Vikicitaro',
 	'eowikisource' => 'Vikifontaro',
+	'eowikivoyage' => 'Vikivojaĝo',
 	'eowiktionary' => 'Vikivortaro',
 	'eswikibooks' => 'Wikilibros',
 	'eswikinews' => 'Wikinoticias',
