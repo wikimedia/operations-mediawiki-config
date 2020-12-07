@@ -22474,6 +22474,7 @@ function wmfGetVariantSettings() {
 	'napwiki' => true,
 	'nnwiki' => true,
 	'orwiki' => true,
+	'papwiki' => true, // T223693
 	'sewiki' => true,
 	'sqwiki' => true,
 	'testwiki' => true,
