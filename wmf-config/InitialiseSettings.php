@@ -22020,6 +22020,10 @@ function wmfGetVariantSettings() {
 	'commonswiki' => 'http://localhost:6009/sparql',
 ],
 
+'wgMediaInfoMediaSearchHasLtrPlugin' => [
+	'commonswiki' => true,
+],
+
 // Disable redirects for search inputs to exact matches by default
 'wmgDoNotRedirectOnSearchMatch' => [
 	'default' => false,
