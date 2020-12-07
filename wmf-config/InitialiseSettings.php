@@ -6789,16 +6789,8 @@ function wmfGetVariantSettings() {
 'wgWhitelistRead' => [
 	'private' => [ 'Main Page', 'Special:UserLogin', 'Special:UserLogout' ],
 	'+sysop_itwiki' => [ 'Pagina principale', 'Wikipedia:Bacheca_pubblica' ],
-	'+apiportalwiki' => [ 'Main Page' ], // private launch - T262480
 ],
 # @} end of wgWhitelistRead
-
-// Temporary until public launch T262480
-# wgWhitelistReadRegexp @{
-'wgWhitelistReadRegexp' => [
-	'apiportalwiki' => [ '/^Special:CentralAutoLogin/' ], // private launch - T262480
-],
-# @} end of wgWhitelistReadRegexp
 
 'wgAutoConfirmAge' => [
 	'default' => 4 * 3600 * 24, // 4 days to pass isNewbie()
@@ -10315,14 +10307,11 @@ function wmfGetVariantSettings() {
 			'createpage' => false,
 			'edit' => false,
 			'createtalk' => false,
-			'read' => false, // private launch - T260309
 		],
 		'user' => [
 			'edit' => true, // limited by $wgNamespaceProtection
-			'read' => false,  // private launch - T260309
 		],
 		'docseditor' => [
-			'read' => true,  // private launch - T260309
 			'edit-docs' => true,
 			'move' => true,
 			'move-subpages' => true,
@@ -10330,14 +10319,10 @@ function wmfGetVariantSettings() {
 			'createtalk' => true,
 		],
 		'sysop' => [
-			'read' => true,  // private launch - T260309
 			'edit-docs' => true,
 			'move' => true,
 			'move-subpages' => true,
 			'createpage' => true,
-		],
-		'bureaucrat' => [
-			'read' => true,  // private launch - T260309
 		],
 	],
 	'+arwiki' => [
