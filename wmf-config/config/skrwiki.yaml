@@ -9,3 +9,4 @@ inheritsFrom:
     - commonsuploads
     - wikidataclient
     - small
+    - rtl
