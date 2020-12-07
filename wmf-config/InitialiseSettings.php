@@ -18284,6 +18284,11 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
+'wgOldRevisionParserCacheExpireTime' => [
+	'group0' => 3600,
+	'default' => 0,
+],
+
 'wgLanguageConverterCacheType' => [
 	'default' => CACHE_ACCEL,
 ],

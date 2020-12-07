@@ -64,6 +64,10 @@ function wmfGetLabsOverrideSettings() {
 			'default' => CACHE_MEMCACHED,
 		],
 
+		'wgOldRevisionParserCacheExpireTime' => [
+			'default' => 3600,
+		],
+
 		'wgLanguageCode' => [
 			'apiportalwiki' => 'en',
 			'deploymentwiki' => 'en',
