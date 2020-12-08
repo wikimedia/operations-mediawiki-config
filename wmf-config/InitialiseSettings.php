@@ -21659,7 +21659,7 @@ function wmfGetVariantSettings() {
 // Enable sessionTick on these wikis
 'wgWMESessionTick' => [
 	'default' => false,
-	'officewiki' => true,
+	'group0' => true,
 ],
 
 // EventLogging will POST events to this URI.
