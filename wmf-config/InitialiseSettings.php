@@ -6862,6 +6862,7 @@ function wmfGetVariantSettings() {
 		'sysop',
 	],
 	'arwiki' => [ '', 'autoconfirmed', 'editautoreviewprotected', 'review', 'sysop' ], // T54109, T146575, T225896
+	'bgwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T269709
 	'ckbwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T54533
 	'commonswiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T227420
 	'dewiki' => [ '', 'autoconfirmed', 'editeditorprotected', 'sysop' ], // T94368
@@ -6900,6 +6901,7 @@ function wmfGetVariantSettings() {
 'wgSemiprotectedRestrictionLevels' => [
 	'default' => [ 'autoconfirmed' ],
 	'+enwiki' => [ 'extendedconfirmed' ], // T126607
+	'+bgwiki' => [ 'extendedconfirmed' ], // T269709
 	'+fawiki' => [ 'extendedconfirmed' ], // T140839
 	'+frwiki' => [ 'editextendedsemiprotected' ], // T132248
 	'+jawiki' => [ 'extendedconfirmed' ], // T249820
@@ -10485,7 +10487,8 @@ function wmfGetVariantSettings() {
 			'autopatrol' => true,
 			'rollback' => true,
 		],
-		'sysop' => [ 'autopatrol' => false, ],
+		'sysop' => [ 'autopatrol' => false, 'extendedconfirmed' => true ],
+		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T269709
 	],
 	'+brwikimedia' => [ // T65345
 		'autopatrolled' => [ 'autopatrol' => true, ],
@@ -12962,7 +12965,7 @@ function wmfGetVariantSettings() {
 	],
 	'+bgwiki' => [
 		'bureaucrat' => [ 'patroller' ],
-		'sysop' => [ 'autopatrolled' ],
+		'sysop' => [ 'autopatrolled', 'extendedconfirmed' ], // T269709
 	],
 	'+bnwiki' => [
 		'sysop' => [ 'autopatrolled', 'filemover', 'flood', 'rollbacker' ],
@@ -15927,6 +15930,14 @@ function wmfGetVariantSettings() {
 			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
 			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
 		], // T254471
+	],
+	'bgwiki' => [
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 120 * 86400 ], // 120 days
+			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+		], // T269709
 	],
 ],
 
