@@ -27551,6 +27551,12 @@ function wmfGetVariantSettings() {
 	'testwiki' => [ 'includes/Rest/coreDevelopmentRoutes.json' ],
 ],
 
+'wgRestAllowCrossOriginCookieAuth' => [
+	// WikimediaApiPortalOAuth makes cross-origin cookie-authenticated requests to meta
+	'metawiki' => true,
+	'default' => false,
+],
+
 'wgWikidataOrgQueryServiceMaxLagFactor' => [
 	'default' => 60,
 ],

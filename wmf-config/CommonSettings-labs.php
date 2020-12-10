@@ -370,11 +370,6 @@ if ( $wgDBname == 'commonswiki' ) {
 	$wgDefaultUserOptions['search-match-redirect'] = false;
 }
 
-// For API Portal wiki: T261358
-// Move to prod after beta testing
-if ( $wgDBname === 'metawiki' ) {
-	$wgRestAllowCrossOriginCookieAuth = true;
-}
 if ( $wmgUseWikimediaApiPortalOAuth ) {
 	$wgWikimediaApiPortalOAuthMetaApiURL = 'https://meta.wikimedia.beta.wmflabs.org/w/api.php';
 	$wgWikimediaApiPortalOAuthMetaRestURL = 'https://meta.wikimedia.beta.wmflabs.org/w/rest.php';
