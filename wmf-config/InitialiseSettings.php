@@ -21705,7 +21705,6 @@ function wmfGetVariantSettings() {
 	'default' => [
 		'ContentTranslationAbuseFilter' => '/analytics/legacy/contenttranslationabusefilter/1.0.0',
 		'SpecialInvestigate' => '/analytics/legacy/specialinvestigate/1.0.0',
-		'SpecialMuteSubmit' => '/analytics/legacy/specialmutesubmit/1.0.0',
 		'TemplateWizard' => '/analytics/legacy/templatewizard/1.0.0',
 		'Test' => '/analytics/legacy/test/1.2.0',
 	],
