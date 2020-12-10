@@ -21310,6 +21310,27 @@ function wmfGetVariantSettings() {
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
+			'stream' => 'eventlogging_HelpPanel',
+			'schema_title' => 'analytics/legacy/helppanel',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
+			'stream' => 'eventlogging_HomepageModule',
+			'schema_title' => 'analytics/legacy/homepagemodule',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
+			'stream' => 'eventlogging_HomepageVisit',
+			'schema_title' => 'analytics/legacy/homepagevisit',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
 			'stream' => 'eventlogging_NewcomerTask',
 			'schema_title' => 'analytics/legacy/newcomertask',
 			'topic_prefixes' => null,
@@ -21643,6 +21664,9 @@ function wmfGetVariantSettings() {
 'wgEventLoggingStreamNames' => [
 	'default' => [
 		'eventlogging_ContentTranslationAbuseFilter',
+		'eventlogging_HelpPanel',
+		'eventlogging_HomepageModule',
+		'eventlogging_HomepageVisit',
 		'eventlogging_NewcomerTask',
 		'eventlogging_SpecialInvestigate',
 		'eventlogging_SpecialMuteSubmit',
@@ -21686,6 +21710,9 @@ function wmfGetVariantSettings() {
 		'Test' => '/analytics/legacy/test/1.2.0',
 	],
 	'testwiki' => [
+		'HelpPanel' => '/analytics/legacy/helppanel/1.0.0',
+		'HomepageModule' => '/analytics/legacy/homepagemodule/1.0.0',
+		'HomepageVisit' => '/analytics/legacy/homepagevisit/1.0.0',
 		'NewcomerTask' => '/analytics/legacy/newcomertask/1.0.0',
 	],
 ],
