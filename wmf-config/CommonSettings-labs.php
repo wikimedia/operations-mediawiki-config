@@ -376,6 +376,7 @@ if ( $wgDBname === 'metawiki' ) {
 	$wgRestAllowCrossOriginCookieAuth = true;
 }
 if ( $wmgUseWikimediaApiPortalOAuth ) {
+	$wgWikimediaApiPortalOAuthMetaApiURL = 'https://meta.wikimedia.beta.wmflabs.org/w/api.php';
 	$wgWikimediaApiPortalOAuthMetaRestURL = 'https://meta.wikimedia.beta.wmflabs.org/w/rest.php';
 }
 
