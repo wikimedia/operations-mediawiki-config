@@ -21706,7 +21706,6 @@ function wmfGetVariantSettings() {
 		'ContentTranslationAbuseFilter' => '/analytics/legacy/contenttranslationabusefilter/1.0.0',
 		'HelpPanel' => '/analytics/legacy/helppanel/1.0.0',
 		'HomepageModule' => '/analytics/legacy/homepagemodule/1.0.0',
-		'HomepageVisit' => '/analytics/legacy/homepagevisit/1.0.0',
 		'NewcomerTask' => '/analytics/legacy/newcomertask/1.0.0',
 		'SpecialInvestigate' => '/analytics/legacy/specialinvestigate/1.0.0',
 		'TemplateWizard' => '/analytics/legacy/templatewizard/1.0.0',
