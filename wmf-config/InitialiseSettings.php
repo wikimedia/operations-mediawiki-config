@@ -25368,6 +25368,7 @@ function wmfGetVariantSettings() {
 	'ruwiki' => true,
 	'ukwiki' => true,
 	'zhwiki' => true,
+	'commonswiki' => true,
 ],
 
 'wgQuickSurveysConfig' => [
@@ -25669,6 +25670,7 @@ function wmfGetVariantSettings() {
 			'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
 		],
 	],
+	// Note: make sure the wiki also has wmgUseQuickSurveys => true
 ],
 
 // WikidataPageBanner extension (T98029)
