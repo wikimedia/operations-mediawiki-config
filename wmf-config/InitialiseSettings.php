@@ -21413,6 +21413,12 @@ function wmfGetVariantSettings() {
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		[
+			'stream' => 'mediawiki.mediasearch_interaction',
+			'schema_title' => 'analytics/mediawiki/mediasearch_interaction',
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 
 		/*
 		 * == eventgate-logging-external streams ==
@@ -21675,6 +21681,7 @@ function wmfGetVariantSettings() {
 		'eventlogging_TemplateWizard',
 		'eventlogging_Test',
 		'mediawiki.client.session_tick',
+		'mediawiki.mediasearch_interaction',
 		'test.instrumentation',
 		'test.instrumentation.sampled',
 	]
