@@ -18282,6 +18282,7 @@ function wmfGetVariantSettings() {
 
 'wgOldRevisionParserCacheExpireTime' => [
 	'group0' => 3600,
+	'group1' => 3600,
 	'default' => 0,
 ],
 
