@@ -12684,6 +12684,7 @@ function wmfGetVariantSettings() {
 		'flood' => [ 'bot' => true ], // T185182
 	],
 	'+zhwikinews' => [
+		'autoconfirmed' => [ 'suppressredirect' => true, ], // T270023
 		'rollbacker' => [ 'rollback' => true ], // T29268
 		'flood' => [ 'bot' => true ], // T54546
 	],
