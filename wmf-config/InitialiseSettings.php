@@ -7630,7 +7630,9 @@ function wmfGetVariantSettings() {
 		100 => 'Portal',
 		101 => 'Razgovor_o_portalu',
 		102 => 'Dodatak',
-		103 => 'Razgovor_o_dodatku'
+		103 => 'Razgovor_o_dodatku',
+		118 => 'Nacrt', // T268740 - Draft
+		119 => 'Razgovor_o_nacrtu', // T268740 - Draft_talk
 	],
 	'huwiki' => [
 		100 => 'Portál',
