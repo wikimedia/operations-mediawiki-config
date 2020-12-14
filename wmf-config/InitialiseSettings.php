@@ -18730,11 +18730,6 @@ function wmfGetVariantSettings() {
 	'default' => 0,
 ],
 
-// Enable client side error counting
-'wgMinervaCountErrors' => [
-	'default' => false,
-	'wikipedia' => true, // T206702
-],
 'wgMinervaApplyKnownTemplateHacks' => [
 	'default' => true,
 ],

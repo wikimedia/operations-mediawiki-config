@@ -500,9 +500,6 @@ function wmfGetLabsOverrideSettings() {
 				'amc' => true,
 			]
 		],
-		'wgMinervaCountErrors' => [
-			'default' => true
-		],
 		# Do not run any A/B tests on beta cluster (T206179)
 		'-wgMinervaABSamplingRate' => [
 			'default' => 0,
