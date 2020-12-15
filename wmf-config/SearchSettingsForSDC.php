@@ -169,3 +169,7 @@ $wgWBCSLicenseMapping = [
 		'P6216=Q19652', // copyright status = public domain
 	],
 ];
+
+if ( $wmfRealm === 'labs' ) {
+	$wgWBCSLicenseMapping = [];
+}
