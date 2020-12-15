@@ -21715,6 +21715,7 @@ function wmfGetVariantSettings() {
 'wgWMESessionTick' => [
 	'default' => false,
 	'group0' => true,
+	'group1' => true,
 ],
 
 // EventLogging will POST events to this URI.
