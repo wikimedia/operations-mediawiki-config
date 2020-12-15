@@ -62,6 +62,7 @@ $wgLBFactoryConf = [
 	'enwikivoyage' => 's5',
 	'jawikivoyage' => 's5',
 	'lldwiki'      => 's5',
+	'madwiki'      => 's5',
 	'mgwiktionary' => 's5',
 	'mhwiktionary' => 's5',
 	'muswiki'      => 's5',
