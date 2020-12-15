@@ -9810,6 +9810,7 @@ function wmfGetVariantSettings() {
 	'nnwiki' => true,
 	'nowiki' => true, // T7549
 	'nowikibooks' => true, // T12486
+	'papwiki' => true, // T268924
 	'plwikiquote' => true, // T6697
 	'ptwiki' => true, // T6500
 	'ptwikibooks' => true, // T32136
