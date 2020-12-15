@@ -1073,48 +1073,16 @@ function wmfGetLabsOverrideSettings() {
 			'enwiki' => [ 0, 1, 6, 7, 100, 101, 118, 119 ],
 		],
 		'wmgUseGrowthExperiments' => [
-			'cawiki' => true,
 			'enwiki' => true,
-			'fawiki' => true,
-		],
-		'wgWelcomeSurveyEnabled' => [
-			'enwiki' => true,
-			'fawiki' => true,
-		],
-		'wgGEHelpPanelEnabled' => [
-			'cawiki' => true,
-			'enwiki' => true,
-			'fawiki' => true,
+			'bnwiki' => true,
 		],
 		'wgGEHelpPanelHelpDeskTitle' => [
-			'cawiki' => 'Viquipèdia:Potřebuji_pomoc',
 			'enwiki' => 'Wikipedia:Help_desk',
-			'kowiki' => '위키백과:도움말',
-			'arwiki' => 'مساعدة',
-			'fawiki' => 'ویکی‌پدیا:درخواست راهنمایی',
 		],
 		'wgGEHelpPanelViewMoreTitle' => [
-			'arwiki' => 'مساعدة',
-			'fawiki' => 'راهنما:فهرست',
-			'cawiki' => 'Ajuda:Obsah',
 			'enwiki' => 'Help:Contents',
-			'kowiki' => '위키백과:도움말',
 		],
 		'wgGEHelpPanelLinks' => [
-			'arwiki' => [
-				[
-					'title' => 'mw:Help:Contents',
-					'text' => 'مساعدة',
-					'id' => 'help',
-				]
-			],
-			'cawiki' => [
-				[
-					'title' => 'mw:Help:Contents',
-					'text' => 'Ajuda',
-					'id' => 'help',
-				]
-			],
 			'enwiki' => [
 				[
 					'title' => 'Help:Contents',
@@ -1140,74 +1108,36 @@ function wmfGetLabsOverrideSettings() {
 					'title' => 'Wikipedia:File_Upload_Wizard',
 					'text' => 'File upload wizard',
 					'id' => 'file-upload-wizard',
-				]
-			],
-			'fawiki' => [
-				[
-					'title' => 'ویکی‌پدیا:خودآموز',
-					'text' => 'راهنما',
-					'id' => 'example',
-				]
-			],
-			'kowiki' => [
-				[
-					'title' => '위키백과:도움말',
-					'text' => '도움말',
-					'id' => 'example',
-				]
+				],
 			],
 		],
 		'wgGEHelpPanelReadingModeNamespaces' => [
 			'default' => [ 2, 3, 4, 12 ]
 		],
-		'wgGEHelpPanelAskMentor' => [
-			'default' => false,
-			'cswiki' => true,
-		],
 		'wgGEHelpPanelSearchForeignAPI' => [
 			'default' => 'https://en.wikipedia.org/w/api.php',
 			'arwiki' => 'https://ar.wikipedia.org/w/api.php',
+			'bnwiki' => 'https://bn.wikipedia.org/w/api.php',
 			'cawiki' => 'https://ca.wikipedia.org/w/api.php',
 			'cswiki' => 'https://cs.wikipedia.org/w/api.php',
 			'kowiki' => 'https://ko.wikipedia.org/w/api.php',
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
 			'viwiki' => 'https://vi.wikipedia.org/w/api.php',
 		],
-		'wgGEHomepageEnabled' => [
-			'default' => true,
-		],
-		'wgGEHomepageSuggestedEditsRequiresOptIn' => [
-			'default' => false,
-		],
-		'wgGEHomepageNewAccountEnablePercentage' => [
-			'default' => 80,
-		],
-		'wgGEHomepageNewAccountVariants' => [
-			'default' => [
-				'A' => 0,
-				'C' => 50,
-				'D' => 50,
-			]
-		],
 		'wgGEHomepageMentorsList' => [
 			'default' => '',
 			'arwiki' => 'Wikipedia:Mentors',
 			'enwiki' => 'Wikipedia:Mentors',
-			'fawiki' => 'ویکی‌پدیا:مربیان',
-			'kowiki' => '위키백과:새_사용자_경험/새_사용자_멘토',
 		],
 		'wgGEHomepageTutorialTitle' => [
 			'default' => '',
 			'arwiki' => 'Help:Tutorial',
 			'enwiki' => 'Help:Getting started',
-			'fawiki' => 'ویکی‌پدیا:خودآموز',
-		],
-		'wgGEConfirmEmailEnabled' => [
-			'default' => true,
 		],
 		'wgGENewcomerTasksRemoteApiUrl' => [
 			'enwiki' => 'https://en.wikipedia.org/w/api.php',
 			'arwiki' => 'https://ar.wikipedia.org/w/api.php',
+			'bnwiki' => 'https://bn.wikipedia.org/w/api.php',
 			'cswiki' => 'https://cs.wikipedia.org/w/api.php',
 			'fawiki' => 'https://fa.wikipedia.org/w/api.php',
 			'kowiki' => 'https://ko.wikipedia.org/w/api.php',
@@ -1222,15 +1152,6 @@ function wmfGetLabsOverrideSettings() {
 			'kowiki' => 'ores',
 			'viwiki' => 'ores',
 			'fawiki' => 'ores',
-		],
-		'wgGENewcomerTasksGuidanceEnabled' => [
-			'default' => true,
-		],
-		'wgGENewcomerTasksGuidanceRequiresOptIn' => [
-			'default' => false
-		],
-		'wgGERestbaseUrl' => [
-			'default' => false,
 		],
 		'wgGEHomepageSuggestedEditsEnableTopics' => [
 			'default' => true,

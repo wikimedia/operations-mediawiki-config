@@ -26226,25 +26226,8 @@ function wmfGetVariantSettings() {
 ],
 
 'wgWelcomeSurveyEnabled' => [
-	'default' => false,
-	'testwiki' => true,
-	'arwiki' => true,
-	'cswiki' => true,
-	'euwiki' => true,
-	'fawiki' => true,
-	'frwiki' => true,
-	'frwiktionary' => true,
-	'hewiki' => true,
-	'huwiki' => true,
-	'hywiki' => true,
-	'kowiki' => true,
-	'plwiki' => true,
-	'ptwiki' => true,
-	'ruwiki' => true,
-	'srwiki' => true,
-	'svwiki' => true,
-	'trwiki' => true,
-	'ukwiki' => true,
+	'default' => true,
+	'viwiki' => false,
 ],
 
 'wgWelcomeSurveyExperimentalGroups' => [
@@ -26253,27 +26236,13 @@ function wmfGetVariantSettings() {
 	'ruwiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-7' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
 ],
 
+'wgGEHomepageImpactModuleEnabled' => [
+	'default' => true,
+	'bnwiki' => false,
+],
+
 'wgGEHelpPanelEnabled' => [
-	'default' => false,
-	'testwiki' => true,
-	'arwiki' => true,
-	'cswiki' => true,
-	'euwiki' => true,
-	'fawiki' => true,
-	'frwiki' => true,
-	'frwiktionary' => true,
-	'hewiki' => true,
-	'huwiki' => true,
-	'hywiki' => true,
-	'kowiki' => true,
-	'plwiki' => true,
-	'ptwiki' => true,
-	'ruwiki' => true,
-	'srwiki' => true,
-	'svwiki' => true,
-	'trwiki' => true,
-	'ukwiki' => true,
-	'viwiki' => true,
+	'default' => true,
 ],
 
 'wgGEHelpPanelLoggingEnabled' => [
@@ -26302,6 +26271,7 @@ function wmfGetVariantSettings() {
 	'default' => '',
 	'testwiki' => 'Wikipedia:Requests/Help_desk',
 	'arwiki' => ' ويكيبيديا:فريق_المساعدة/طلبات',
+	'bnwiki' => 'উইকিপিডিয়া:সাহায্যকেন্দ্র',
 	'cswiki' => 'Wikipedie:Potřebuji_pomoc',
 	'euwiki' => 'Wikipedia:Txokoa',
 	'fawiki' => 'ویکی‌پدیا:پرسش‌ها',
@@ -26331,6 +26301,7 @@ function wmfGetVariantSettings() {
 	'default' => '',
 	'testwiki' => 'Special:MyLanguage/Help:Contents',
 	'arwiki' => 'مساعدة:محتويات',
+	'bnwiki' => 'সাহায্য:সূচী',
 	'cswiki' => 'Nápověda:Obsah',
 	'euwiki' => 'Laguntza:Sarrera',
 	'fawiki' => 'راهنما:فهرست',
@@ -26404,6 +26375,33 @@ function wmfGetVariantSettings() {
 			'title' => 'ويكيبيديا:بوابة_المشاركة/مراسلة_مستخدم',
 			'text' => 'مراسلة مستخدم',
 			'id' => 'discussion',
+		],
+	],
+	'bnwiki' => [
+		[
+			'title' => 'উইকিপিডিয়া:রচনাশৈলী নির্দেশনা',
+			'text' => 'রচনাশৈলী নির্দেশনা',
+			'id' => 'style',
+		],
+		[
+			'title' => 'সাহায্য:সম্পাদনা',
+			'text' => 'সম্পাদনা',
+			'id' => 'contents',
+		],
+		[
+			'title' => 'সাহায্য:চিত্রের সাথে পরিচয় (দৃশ্যমান সম্পাদনা)/১',
+			'text' => 'চিত্রের সাথে পরিচয় (দৃশ্যমান সম্পাদনা)',
+			'id' => 'images',
+		],
+		[
+			'title' => 'সাহায্য:তথ্যসূত্রের সাথে পরিচয় (দৃশ্যমান সম্পাদনা)/১',
+			'text' => 'তথ্যসূত্রের_সাথে_পরিচয়_(দৃশ্যমান_সম্পাদনা)',
+			'id' => 'references',
+		],
+		[
+			'title' => 'উইকিপিডিয়া:নিবন্ধ উইজার্ড',
+			'text' => 'নিবন্ধ উইজার্ড',
+			'id' => 'articlewizard',
 		],
 	],
 	'cswiki' => [
@@ -26863,26 +26861,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgGEHomepageEnabled' => [
-	'default' => false,
-	'testwiki' => true,
-	'arwiki' => true,
-	'cswiki' => true,
-	'euwiki' => true,
-	'fawiki' => true,
-	'frwiki' => true,
-	'frwiktionary' => true,
-	'hewiki' => true,
-	'huwiki' => true,
-	'hywiki' => true,
-	'kowiki' => true,
-	'plwiki' => true,
-	'ptwiki' => true,
-	'ruwiki' => true,
-	'srwiki' => true,
-	'svwiki' => true,
-	'trwiki' => true,
-	'ukwiki' => true,
-	'viwiki' => true,
+	'default' => true,
 ],
 
 'wgGEHomepageSuggestedEditsEnabled' => [
@@ -26938,6 +26917,10 @@ function wmfGetVariantSettings() {
 	'arwiki' => [
 		'create' => 'ويكيبيديا:مقالتك الأولى',
 		'image' => 'مساعدة:مقدمة عن رفع الصور/1',
+	],
+	'bnwiki' => [
+		'create' => 'উইকিপিডিয়া:নতুন নিবন্ধ শুরুকরণ',
+		'image' => 'সাহায্য:চিত্রের সাথে পরিচয় (দৃশ্যমান সম্পাদনা)',
 	],
 	'cswiki' => [
 		'create' => 'Nápověda:Jak vytvořit článek',
@@ -27010,26 +26993,10 @@ function wmfGetVariantSettings() {
 ],
 
 'wgGEHomepageNewAccountEnablePercentage' => [
-	'default' => 0,
-	'arwiki' => 80,
-	'cswiki' => 80,
+	'default' => 80,
+	'testwiki' => 0,
 	// euwiki is not an A/B test (T233066)
 	'euwiki' => 100,
-	'fawiki' => 80,
-	'frwiki' => 80,
-	'frwiktionary' => 80,
-	'hewiki' => 80,
-	'huwiki' => 80,
-	'hywiki' => 80,
-	'kowiki' => 80,
-	'plwiki' => 80,
-	'ptwiki' => 80,
-	'ruwiki' => 80,
-	'srwiki' => 80,
-	'svwiki' => 80,
-	'trwiki' => 80,
-	'ukwiki' => 80,
-	'viwiki' => 80,
 ],
 
 'wgGEHomepageNewAccountVariants' => [
@@ -27044,6 +27011,7 @@ function wmfGetVariantSettings() {
 	'default' => '',
 	'testwiki' => 'Help:Help',
 	'arwiki' => 'ويكيبيديا:دروس',
+	'bnwiki' => 'সাহায্য:ভূমিকা',
 	'cswiki' => 'Wikipedie:Průvodce',
 	'euwiki' => 'Laguntza:Ikusizko_Editorea',
 	'fawiki' => 'ویکی‌پدیا:خودآموز',
@@ -27067,6 +27035,7 @@ function wmfGetVariantSettings() {
 	'default' => '',
 	'testwiki' => 'Wikipedia:Requests/Help desk/Mentors',
 	'arwiki' => 'ويكيبيديا:مشروع_فريق_النمو/قائمة_المتطوعين',
+	'bnwiki' => 'উইকিপিডিয়া:স্বাগতম,_নবাগত/স্বাক্ষর',
 	'cswiki' => 'Wikipedie:Potřebuji_pomoc/Mentoři',
 	'euwiki' => 'Laguntza:Mentoreak',
 	'fawiki' => 'ویکی‌پدیا:فهرست مربیان',
