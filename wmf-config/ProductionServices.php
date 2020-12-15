@@ -104,7 +104,7 @@ $services = [
 		'redis_lock' => [
 			'rdb1' => '10.64.0.80', # mc1019
 			'rdb2' => '10.64.16.107', # mc1024
-			'rdb3' => '10.64.48.155', # mc1033
+			'rdb3' => '10.64.48.156', #mc1034
 		],
 		'search-chi' => [
 			[ // forwarded to https://search.svc.eqiad.wmnet:9243/
