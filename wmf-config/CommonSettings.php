@@ -1891,7 +1891,6 @@ if ( $wmgUseCentralAuth ) {
 			'.wikivoyage.beta.wmflabs.org' => 'enwikivoyage',
 			'.wiktionary.beta.wmflabs.org' => 'enwiktionary',
 			'meta.wikimedia.beta.wmflabs.org' => 'metawiki',
-			'deployment.wikimedia.beta.wmflabs.org' => 'deploymentwiki',
 			'commons.wikimedia.beta.wmflabs.org' => 'commonswiki',
 			$wmgHostnames['wikidata'] => 'wikidatawiki',
 			'api.wikimedia.beta.wmflabs.org' => 'apiportalwiki',

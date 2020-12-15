@@ -57,13 +57,11 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgLanguageCode' => [
-			'deploymentwiki' => 'en',
 			'votewiki' => 'en', // T295242
 			'wikifunctionswiki' => 'en', // Temporary until wikifunctions.org is a real wiki and so in special.dblist
 		],
 
 		'wgSitename' => [
-			'deploymentwiki' => 'Deployment',
 			'wikivoyage'     => 'Wikivoyage',
 			'wikifunctionswiki' => 'Wikifunctions',
 		],
@@ -84,7 +82,6 @@ function wmfGetOverrideSettings() {
 
 			'apiportalwiki'       => 'https://api.wikimedia.beta.wmflabs.org',
 			'commonswiki'   => 'https://commons.wikimedia.beta.wmflabs.org',
-			'deploymentwiki'      => 'https://deployment.wikimedia.beta.wmflabs.org',
 			'foundationwiki' => 'https://foundation.wikimedia.beta.wmflabs.org',
 			'incubatorwiki' => 'https://incubator.wikimedia.beta.wmflabs.org',
 			'loginwiki'     => 'https://login.wikimedia.beta.wmflabs.org',
@@ -108,7 +105,6 @@ function wmfGetOverrideSettings() {
 			'apiportalwiki'       => 'https://api.wikimedia.beta.wmflabs.org',
 			'metawiki'      => 'https://meta.wikimedia.beta.wmflabs.org',
 			'commonswiki'	=> 'https://commons.wikimedia.beta.wmflabs.org',
-			'deploymentwiki'      => 'https://deployment.wikimedia.beta.wmflabs.org',
 			'foundationwiki' => 'https://foundation.wikimedia.beta.wmflabs.org',
 			'loginwiki'     => 'https://login.wikimedia.beta.wmflabs.org',
 			'votewiki'      => 'https://vote.wikimedia.beta.wmflabs.org',
