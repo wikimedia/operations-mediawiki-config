@@ -4,6 +4,7 @@
 
 inheritsFrom:
   - wikipedia
+  - all-labs
   - categories-rdf
   - cirrussearch-big-indices
   - flaggedrevs
