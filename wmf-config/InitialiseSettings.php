@@ -8463,6 +8463,10 @@ function wmfGetVariantSettings() {
 		102 => 'Tác_gia',
 		103 => 'Thảo_luận_Tác_gia',
 	],
+	'wawikisource' => [
+		100 => 'Oteur', // T269431 - Author
+		101 => 'Oteur_copene', // T269431 - Author talk
+	],
 	'zhwikisource' => [ // Added on 2009-03-19 per T17722
 		100 => 'Portal', // T230294
 		101 => 'Portal_talk', // T230294
