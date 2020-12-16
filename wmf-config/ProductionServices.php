@@ -103,7 +103,7 @@ $services = [
 		// LockManager Redis
 		'redis_lock' => [
 			'rdb1' => '10.64.32.211', # mc1031 C4
-			'rdb2' => '10.64.16.107', # mc1024 B6
+			'rdb2' => '10.64.0.83',   # mc1022 A6
 			'rdb3' => '10.64.48.156', # mc1034 D4
 		],
 		'search-chi' => [
@@ -143,9 +143,9 @@ $services = [
 		],
 
 		'redis_lock' => [
-			'rdb1' => '10.192.0.83', # mc2019 A1
-			'rdb2' => '10.192.0.84', # mc2020 A5
-			'rdb3' => '10.192.0.85', # mc2021 A8
+			'rdb1' => '10.192.32.163', # mc2031 C5
+			'rdb2' => '10.192.0.86',   # mc2022 A8
+			'rdb3' => '10.192.48.78',  # mc2034 D4
 		],
 		'search-chi' => [
 			[ // forwarded to https://search.svc.codfw.wmnet:9243/
