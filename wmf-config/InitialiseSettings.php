@@ -14792,7 +14792,7 @@ function wmfGetVariantSettings() {
 	'ltwiki' => [ 'de', 'en', 'ru', 'b', 'q', 's', 'wikt', 'meta', 'commons', 'betawikiversity', 'incubator' ],
 	'maiwiki' => [ 'commons', 'en', 'hi', 'ne' ], // T99490
 	'mdfwiki' => [ 'incubator' ],
-	'mediawikiwiki' => [ 'meta', 'w:en', 'usability' ], // T28580
+	'mediawikiwiki' => [ 'meta', 'w:en', 'usability', 'wikitech' ], // T28580
 	'metawiki' => [ 'commons', 'foundation', 'w', 'cs', 'fr', 'zh', 'strategy', 'outreach' ], // T134788
 	'mgwiktionary' => [ 'fr', 'io', 'en', 'w', ], // T24694
 	'mlwiki' => [ 'en' ], // T15734
