@@ -168,43 +168,6 @@ $wgContactConfig['requestlicense'] = [
 	]
 ];
 
-$wgContactConfig['licenseabuse'] = [
-	'RecipientUser' => 'WMF Trademark Abuse',
-	'SenderEmail' => $wmgNotificationSender, // TODO: Replace with details submitted on form
-	'SenderName' => 'Contact Page',
-	'RequireDetails' => true,
-	'IncludeIP' => false,
-	'AdditionalFields' => [
-		'Description' => [
-			'label-message' => 'contactpage-license-abuse-description',
-			'type' => 'textarea',
-			'rows' => 5,
-			'required' => true,
-		],
-		'Location' => [
-			'label-message' => 'contactpage-license-abuse-location',
-			'type' => 'textarea',
-			'rows' => 5,
-			'required' => true,
-		],
-		'TheirContact' => [
-			'label-message' => 'contactpage-license-abuse-theircontact',
-			'type' => 'textarea',
-			'rows' => 5,
-			'required' => true,
-		],
-		'YourContact' => [
-			'label-message' => 'contactpage-license-abuse-yourcontact',
-			'type' => 'textarea',
-			'rows' => 5,
-			'required' => true,
-		],
-		'TradeMark' => [
-			'label-message' => 'contactpage-license-abuse-selectmark',
-		] + $trademark,
-	]
-];
-
 unset( $trademark );
 
 /**
