@@ -2069,6 +2069,7 @@ return [
 // For CentralNotice project pickers
 'wgNoticeProject' => [
 	'advisorywiki' => 'wikimedia',
+	'apiportalwiki' => 'wikimedia',
 	'default' => '$site',
 	'commonswiki' => 'commons',
 	'testcommonswiki' => 'commons',
