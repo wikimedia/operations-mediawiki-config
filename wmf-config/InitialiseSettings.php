@@ -6169,6 +6169,10 @@ function wmfGetVariantSettings() {
 		'Author' => 100,
 		'Author_talk' => 101,
 	],
+	'+wawikisource' => [
+		'Author' => 100, // T269431
+		'Author_talk' => 101, // T269431
+	],
 	'+wikidata' => [
 		'Item' => NS_MAIN,
 		'Item_talk' => NS_TALK,
