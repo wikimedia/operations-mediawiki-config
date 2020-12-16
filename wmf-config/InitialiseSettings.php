@@ -4536,6 +4536,7 @@ function wmfGetVariantSettings() {
 	'vowikibooks' => 'Vükibuks',
 	'vowiktionary' => 'Vükivödabuk',
 	'wawiktionary' => 'Wiccionaire', // T181782
+	'wawikisource' => 'Wikisourd', // T269431
 	'wikimaniateamwiki' => 'WikimaniaTeam',
 	'xmfwiki' => 'ვიკიპედია',
 	'yiwiki' => 'װיקיפּעדיע',
