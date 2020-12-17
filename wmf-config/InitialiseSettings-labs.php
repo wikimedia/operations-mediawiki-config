@@ -1126,7 +1126,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => 'https://en.wikipedia.org/w/api.php',
 			'arwiki' => 'https://ar.wikipedia.org/w/api.php',
 			'bnwiki' => 'https://bn.wikipedia.org/w/api.php',
-			'cawiki' => 'https://ca.wikipedia.org/w/api.php',
 			'cswiki' => 'https://cs.wikipedia.org/w/api.php',
 			'kowiki' => 'https://ko.wikipedia.org/w/api.php',
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
@@ -1151,19 +1150,6 @@ function wmfGetLabsOverrideSettings() {
 			'kowiki' => 'https://ko.wikipedia.org/w/api.php',
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
 			'viwiki' => 'https://vi.wikipedia.org/w/api.php',
-		],
-		'wgGENewcomerTasksTopicType' => [
-			'default' => 'morelike',
-			'enwiki' => 'ores',
-			'arwiki' => 'ores',
-			'cswiki' => 'ores',
-			'kowiki' => 'ores',
-			'viwiki' => 'ores',
-			'fawiki' => 'ores',
-		],
-		'wgGEHomepageSuggestedEditsEnableTopics' => [
-			'default' => true,
-			'cawiki' => false,
 		],
 		'wgEnableSpecialMute' => [
 			'default' => true,
