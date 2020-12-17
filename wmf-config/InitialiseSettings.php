@@ -24577,6 +24577,7 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'testwiki' => true,
 	'arwiki' => true,
+	'bnwiki' => true,
 	'cswiki' => true,
 	'dawiki' => true,
 	'euwiki' => true,

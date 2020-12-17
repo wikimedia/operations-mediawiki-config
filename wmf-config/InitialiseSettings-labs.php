@@ -1069,7 +1069,6 @@ function wmfGetLabsOverrideSettings() {
 		],
 		'wmgUseGrowthExperiments' => [
 			'enwiki' => true,
-			'bnwiki' => true,
 		],
 		'wgGENewcomerTasksLinkRecommendationsEnabled' => [
 			'default' => true,
