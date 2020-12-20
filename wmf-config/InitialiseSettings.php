@@ -11668,6 +11668,7 @@ function wmfGetVariantSettings() {
 			'urlshortener-manage-url' => true, // T133109
 			'urlshortener-view-log' => true, // T221073
 			'oathauth-verify-user' => true, // T251447
+			'oathauth-view-log' => true,
 		],
 		'translationadmin' => [
 			'autopatrol' => true, // T142123
