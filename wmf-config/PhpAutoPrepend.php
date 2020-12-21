@@ -45,7 +45,6 @@ wmfSetupProfiler( [
 		'pdo.table' => 'xhgui',
 	],
 	'excimer-production-period' => 60,
-	'excimer-single-period' => 0.01,
 ] );
 
 require __DIR__ . '/set-time-limit.php';

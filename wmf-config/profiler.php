@@ -20,7 +20,6 @@ require_once __DIR__ . '/../src/XWikimediaDebug.php';
  *   - use-xhgui: True to use XHGui saver via MongoDB and PDO
  *   - xhgui-conf: The configuration array to pass to Xhgui_Saver::factory
  *   - excimer-production-period: The sampling period for production profiling
- *   - excimer-single-period: The sampling period for Excimer forceprofile
  */
 function wmfSetupProfiler( $options ) {
 	global $wmgProfiler;
@@ -260,31 +259,6 @@ function wmfSetupExcimer( $options ) {
 		},
 		1 );
 	$prodProf->start();
-
-	if ( !extension_loaded( 'tideways_xhprof' )
-		&& XWikimediaDebug::getInstance()->hasOption( 'forceprofile' )
-	) {
-		global $wmgProfiler;
-
-		$cpuProf = new ExcimerProfiler;
-		$cpuProf->setEventType( EXCIMER_CPU );
-		$cpuProf->setPeriod( $options['excimer-single-period'] );
-		$cpuProf->setMaxDepth( 100 );
-		$cpuProf->start();
-
-		$realProf = new ExcimerProfiler;
-		$realProf->setEventType( EXCIMER_REAL );
-		$realProf->setPeriod( $options['excimer-single-period'] );
-		$realProf->setMaxDepth( 100 );
-		$realProf->start();
-
-		$wmgProfiler = [
-			'class' => 'ProfilerExcimer',
-			'cpu-profiler' => $cpuProf,
-			'real-profiler' => $realProf,
-			'output' => 'text',
-		];
-	}
 }
 
 /**
