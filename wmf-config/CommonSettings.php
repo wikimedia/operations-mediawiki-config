@@ -421,21 +421,6 @@ $wgLocalisationCacheConf['storeClass'] = LCStoreCDB::class;
 $wgLocalisationCacheConf['storeDirectory'] = "$IP/cache/l10n";
 $wgLocalisationCacheConf['manualRecache'] = true;
 
-// Gradual roll-out of LCStoreStaticArray (T99740).
-//
-// This configuration is for reading LC at run-time, not for generating.
-// Generation is controlled via Scap and rebuildLocalisationCache.php's --store-class param.
-//
-// NOTE: Before enabling anywhere:
-// - Scap MUST first be configured to (also) use this format.
-// - There MUST have first been a full Scap deploy.
-// - There MUST have been a full Scap deploy on ALL current wiki versions.
-// - Always VERIFY via mwdebug on a wiki in every group, and try multiple ?uselang.
-if ( $wmfRealm === 'labs' ) {
-	// Test LCStoreStaticArray on Beta — James F. 2019.05.07
-	$wgLocalisationCacheConf['storeClass'] = LCStoreStaticArray::class;
-}
-
 // Add some useful config data to query=siteinfo
 $wgHooks['APIQuerySiteInfoGeneralInfo'][] = function ( $module, &$data ) {
 	global $wmfMasterDatacenter;
