@@ -23719,6 +23719,12 @@ function wmfGetVariantSettings() {
 'wgPageImagesNamespaces' => [
 	'default' => [ NS_MAIN ],
 	'commonswiki' => [ NS_MAIN, NS_CATEGORY ],
+	'mediawikiwiki' => [
+		NS_MAIN,
+		NS_CATEGORY,
+		102, /* Extension */
+		106 /*Skin:*/
+	]
 ],
 'wgPageImagesLeadSectionOnly' => [
 	// T166251 & T166493
