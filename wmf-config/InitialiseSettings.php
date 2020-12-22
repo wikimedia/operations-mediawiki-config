@@ -738,6 +738,7 @@ function wmfGetVariantSettings() {
 	'ltgwiki' => '/static/images/project-logos/ltgwiki.png',
 	'ltwiki' => '/static/images/project-logos/ltwiki.png', // T48589
 	'lvwiki' => '/static/images/project-logos/lvwiki.png',
+	'madwiki' => '/static/images/project-logos/madwiki.png', // T270693
 	'maiwiki' => '/static/images/project-logos/maiwiki.png', // T74346
 	'map_bmswiki' => '/static/images/project-logos/idwiki.png', // T189155
 	'mdfwiki' => '/static/images/project-logos/mdfwiki.png', // T48589
@@ -1519,6 +1520,7 @@ function wmfGetVariantSettings() {
 	'ltgwiki' => '/static/images/project-logos/ltgwiki-1.5x.png', // T150618
 	'ltwiki' => '/static/images/project-logos/ltwiki-1.5x.png', // T150618
 	'lvwiki' => '/static/images/project-logos/lvwiki-1.5x.png', // T150618
+	'madwiki' => '/static/images/project-logos/madwiki-1.5x.png', // T270693
 	'maiwiki' => '/static/images/project-logos/maiwiki-1.5x.png', // T149790
 	'map_bmswiki' => '/static/images/project-logos/idwiki-1.5x.png', // T189155
 	'mdfwiki' => '/static/images/project-logos/mdfwiki-1.5x.png', // T150618
@@ -2075,6 +2077,7 @@ function wmfGetVariantSettings() {
 	'ltgwiki' => '/static/images/project-logos/ltgwiki-2x.png', // T150618
 	'ltwiki' => '/static/images/project-logos/ltwiki-2x.png', // T150618
 	'lvwiki' => '/static/images/project-logos/lvwiki-2x.png', // T150618
+	'madwiki' => '/static/images/project-logos/madwiki-2x.png', // T270693
 	'maiwiki' => '/static/images/project-logos/maiwiki-2x.png', // T149790
 	'map_bmswiki' => '/static/images/project-logos/idwiki-2x.png', // T189155
 	'mdfwiki' => '/static/images/project-logos/mdfwiki-2x.png', // T150618
