@@ -11076,7 +11076,7 @@ function wmfGetVariantSettings() {
 			'upload' => true,
 			'reupload' => true,
 			'reupload-own' => true,
-			'autoerview' => true,
+			'autoreview' => true,
 			'autoreviewrestore' => true,
 			'validate' => true,
 			'review' => true,
