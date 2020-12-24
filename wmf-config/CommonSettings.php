@@ -2080,6 +2080,7 @@ if ( $wgDBname === 'enwiki' || $wgDBname === 'fawiki' ) {
 
 if ( $wmgUseCollection ) {
 	// PediaPress / PDF generation
+	// Intentionally loaded *before* the Wikisource extension below.
 	wfLoadExtension( 'Collection' );
 	// Use pediapress server for POD function (T73675)
 	$wgCollectionCommandToServeURL = [
@@ -3998,6 +3999,7 @@ if ( $wmgUseCongressLookup ) {
 }
 
 if ( $wmgUseWikisource ) {
+	// Intentionally loaded *after* the Collection extension above.
 	wfLoadExtension( 'Wikisource' );
 }
 
