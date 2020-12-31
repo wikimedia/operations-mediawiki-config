@@ -654,7 +654,7 @@ function wmfGetVariantSettings() {
 	'fawiki' => '/static/images/project-logos/fawiki.png',
 	'ffwiki' => '/static/images/project-logos/ffwiki.png',
 	'fiu_vrowiki' => '/static/images/project-logos/fiu_vrowiki.png', // T48589
-	'fiwiki' => '/static/images/project-logos/fiwiki.png',
+	'fiwiki' => '/static/images/project-logos/fiwiki-500k.png', // 500k per T270974
 	'fowiki' => '/static/images/project-logos/fowiki.png', // T42285
 	'frpwiki' => '/static/images/project-logos/frpwiki.png',
 	'frrwiki' => '/static/images/project-logos/frrwiki.png',
@@ -1438,7 +1438,7 @@ function wmfGetVariantSettings() {
 	'fawiki' => '/static/images/project-logos/fawiki-1.5x.png',
 	'ffwiki' => '/static/images/project-logos/ffwiki-1.5x.png', // T150618
 	'fiu_vrowiki' => '/static/images/project-logos/fiu_vrowiki-1.5x.png', // T150618
-	'fiwiki' => '/static/images/project-logos/fiwiki-1.5x.png', // T150618
+	'fiwiki' => '/static/images/project-logos/fiwiki-500k-1.5x.png', // T150618 // 500k per T270974
 	'fowiki' => '/static/images/project-logos/fowiki-1.5x.png', // T150618
 	'frpwiki' => '/static/images/project-logos/frpwiki-1.5x.png', // T150618
 	'frrwiki' => '/static/images/project-logos/frrwiki-1.5x.png', // T150618
@@ -1994,7 +1994,7 @@ function wmfGetVariantSettings() {
 	'fawiki' => '/static/images/project-logos/fawiki-2x.png',
 	'ffwiki' => '/static/images/project-logos/ffwiki-2x.png', // T150618
 	'fiu_vrowiki' => '/static/images/project-logos/fiu_vrowiki-2x.png', // T150618
-	'fiwiki' => '/static/images/project-logos/fiwiki-2x.png', // T150618
+	'fiwiki' => '/static/images/project-logos/fiwiki-500k-2x.png', // T150618 // 500k per T270974
 	'fowiki' => '/static/images/project-logos/fowiki-2x.png', // T150618
 	'frpwiki' => '/static/images/project-logos/frpwiki-2x.png', // T150618
 	'frrwiki' => '/static/images/project-logos/frrwiki-2x.png', // T150618
