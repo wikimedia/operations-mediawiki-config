@@ -268,6 +268,11 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-log-private'] = false;
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
 		break;
+	case 'hrwiki':
+		$wgAbuseFilterActions['block'] = true; // T270997
+		$wgAbuseFilterBlockDuration = 'indefinite'; // T270997
+		$wgAbuseFilterAnonBlockDuration = '2 days'; // T270997
+		break;
 	case 'itwiki':
 		$wgGroupPermissions['*']['abusefilter-view'] = false;
 		$wgGroupPermissions['*']['abusefilter-log'] = false;
