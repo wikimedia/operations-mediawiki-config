@@ -458,6 +458,9 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterAnonBlockDuration = '24 hours'; // T210364
 		break;
 	case 'zh_yuewiki':
+		$wgAbuseFilterActions['block'] = true; // T270567
+		$wgAbuseFilterBlockDuration = '31 hours'; // T270567
+		$wgAbuseFilterAnonBlockDuration = '31 hours'; // T270567
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
