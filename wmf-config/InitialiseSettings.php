@@ -11352,6 +11352,15 @@ function wmfGetVariantSettings() {
 			'rollback' => true,
 		],
 		'autopatrolled' => [ 'autopatrol' => true ],
+		'user' => [
+			'changetags' => false, // T270996
+		],
+		'bot' => [
+			'changetags' => true, // T270996
+		],
+		'sysop' => [
+			'changetags' => true, // T270996
+		],
 	],
 	'+huwiki' => [
 		'bot' => [ 'edittrustedprotected' => true ], // T194568
