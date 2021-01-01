@@ -6116,8 +6116,6 @@ function wmfGetVariantSettings() {
 		'Обговорення_Wikisource' => NS_PROJECT_TALK, // T50308
 		'Author' => 102, // T50308
 		'Author_talk' => 103,
-		'Translation' => 114, // T52561
-		'Translation_talk' => 115,
 	],
 	'+ukwikivoyage' => [
 		'Portal' => 100,
@@ -8455,8 +8453,6 @@ function wmfGetVariantSettings() {
 		NS_PROJECT_TALK => 'Обговорення_Вікіджерел',
 		102 => 'Автор', // Author
 		103 => 'Обговорення_автора',
-		114 => 'Переклад', // T52561
-		115 => 'Обговорення_перекладу', // T52561
 		116 => 'Архів', // T270627 - Archive
 		117 => 'Обговорення_архіву', // T270627 - Archive talk
 	],
