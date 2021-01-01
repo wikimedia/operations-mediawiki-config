@@ -15338,7 +15338,10 @@ function wmfGetVariantSettings() {
 	'+frrwiki' => [ 106 ], // T40023
 	'+frwikisource' => [ 102 ],
 	'+frwikiversity' => [ 104 ], // T125948
-	'+frwiktionary' => [ 106 ], // T97228
+	'+frwiktionary' => [
+		106, // T97228
+		100, 110, 114, 116, 118, // T270821
+	],
 	'+hewikisource' => [ 100, 106, 108, 110 ], // T98709
 	'+hrwiki' => [ 102 ], // T42732
 	'+hrwikisource' => [ 100 ],
