@@ -17839,6 +17839,9 @@ function wmfGetVariantSettings() {
 	'+hewiki' => [
 		'טיוטה' /* Draft */ => true, // T87027
 	],
+	'+hrwiki' => [
+		'Nacrt' /* Draft */ => true, // T270688
+	],
 	'+htwiki' => [
 		'Project' => true, // T130177
 	],
