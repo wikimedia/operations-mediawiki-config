@@ -10064,7 +10064,7 @@ function wmfGetVariantSettings() {
 	'+tlwikibooks' => [ 100 => 1 ],
 	'+trwikisource' => [ 100 => 1 ],
 	'+ukwikinews' => [ 14 => 1 ], // T51335
-	'+ukwikisource' => [ 102 => 1, 114 => 1, 252 => 1 ], // T52561, T53684
+	'+ukwikisource' => [ 102 => 1, 114 => 1, 116 => 1, 252 => 1 ], // T52561, T53684, T270627
 	'+vecwikisource' => [ 100 => 1, 104 => 1 ],
 	'+viwikibooks' => [ 102 => 1, 104 => 1, 106 => 1 ],
 	'+viwikisource' => [ 102 => 1, 106 => 1 ],
