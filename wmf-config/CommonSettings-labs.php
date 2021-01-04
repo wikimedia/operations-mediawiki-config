@@ -390,4 +390,6 @@ $wgHooks['ImportSources'][] = 'wmfImportSources';
 // Remove when enabled in production.
 $wgParserCacheUseJson = true;
 
+wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
+
 } # end safeguard
