@@ -1795,10 +1795,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => false,
 		],
 
-		// T247943 Temporary whilst deploying MediaModeration
-		'wmgUseMediaModeration' => [
-			'default' => true,
-		],
 		'wgAbuseFilterEmergencyDisableThreshold' => [
 			'default' => [ 'default' => 0.05 ],
 			'zhwiki' => [ 'default' => 0.25 ], // T230305
