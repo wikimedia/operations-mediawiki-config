@@ -11772,6 +11772,9 @@ function wmfGetVariantSettings() {
 		'patroller' => [ 'patrol' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ],
 	],
+	'+mrwiki' => [
+		'rollbacker' => [ 'rollback' => true ], // T270864
+	],
 	'+mznwiki' => [
 		// Uploads are restricted to a uploader group - T187187
 		'user' => [ 'reupload-own' => false, ],
@@ -13394,6 +13397,9 @@ function wmfGetVariantSettings() {
 	'+mlwikisource' => [
 		'sysop' => [ 'patroller', 'autopatrolled' ],
 	],
+	'+mrwiki' => [
+		'sysop' => [ 'rollbacker' ],      // T270864
+	],
 	'+mznwiki' => [
 		'sysop' => [ 'uploader' ],
 	],
@@ -14230,6 +14236,9 @@ function wmfGetVariantSettings() {
 	],
 	'+mlwikisource' => [
 		'sysop' => [ 'patroller', 'autopatrolled' ],
+	],
+	'+mrwiki' => [
+		'sysop' => [ 'rollbacker' ],      // T270864
 	],
 	'+mznwiki' => [
 		'sysop' => [ 'uploader' ]
