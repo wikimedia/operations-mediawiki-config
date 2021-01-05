@@ -20798,6 +20798,10 @@ function wmfGetVariantSettings() {
 	'apiportalwiki' => false, // T260624
 ],
 
+'wgDiscussionTools_newtopictool' => [
+	'default' => 'unavailable',
+],
+
 'wgDTSchemaEditAttemptStepSamplingRate' => [
 	'default' => false,
 	'arwiki' => 0.2,
