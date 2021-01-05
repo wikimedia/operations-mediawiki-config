@@ -21766,13 +21766,10 @@ function wmfGetVariantSettings() {
 // https://phabricator.wikimedia.org/T238230
 'wgEventLoggingSchemas' => [
 	'default' => [
-		'ContentTranslationAbuseFilter' => '/analytics/legacy/contenttranslationabusefilter/1.0.0',
+		'TemplateWizard' => '/analytics/legacy/templatewizard/1.0.0',
 		'HelpPanel' => '/analytics/legacy/helppanel/1.0.0',
 		'HomepageModule' => '/analytics/legacy/homepagemodule/1.0.0',
 		'NewcomerTask' => '/analytics/legacy/newcomertask/1.0.0',
-		'SpecialInvestigate' => '/analytics/legacy/specialinvestigate/1.0.0',
-		'TemplateWizard' => '/analytics/legacy/templatewizard/1.0.0',
-		'Test' => '/analytics/legacy/test/1.2.0',
 	],
 ],
 
