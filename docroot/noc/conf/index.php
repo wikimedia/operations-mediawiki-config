@@ -47,7 +47,10 @@
 
 <hr>
 <p>Currently active MediaWiki versions: <?php
-	echo str_replace( ' ', ', ', exec( '/usr/bin/scap wikiversions-inuse' ) );
+	$wikiversions = json_decode( file_get_contents( '/srv/mediawiki/wikiversions.json' ), true );
+	$inuse = array_unique( array_values( $wikiversions ) );
+	sort( $inuse );
+	echo implode( ', ', $inuse );
 ?></p>
 <hr>
 

@@ -63,7 +63,7 @@ if ( $wmgCirrusSearchMLRModel ) {
 		$wgCirrusSearchRescoreProfiles[$name] = [
 			'i18n_msg' => 'cirrussearch-qi-profile-wsum-inclinks-pv',
 			'supported_namespaces' => 'content',
-			'unsupported_syntax' => [ 'full_text_querystring', 'query_string', 'filter_only' ],
+			'supported_syntax' => [ 'simple_bag_of_words' ],
 			'fallback_profile' => $wmgCirrusSearchMLRModelFallback,
 			'rescore' => [
 				[

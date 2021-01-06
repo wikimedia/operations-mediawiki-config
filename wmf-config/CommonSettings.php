@@ -336,6 +336,9 @@ $wgQueryCacheLimit = 5000;
 // ParserCache expire time set to 30 days
 $wgParserCacheExpireTime = 86400 * 30;
 
+// Old revision parser cache expire in 1 hour
+$wgOldRevisionParserCacheExpireTime = 3600;
+
 // This feature would vastly increase the size of the CDN cache, and increase
 // MW appserver load.
 $wgULSLanguageDetection = false;
@@ -424,21 +427,6 @@ $wgLocalisationCacheConf['storeClass'] = LCStoreCDB::class;
 $wgLocalisationCacheConf['storeDirectory'] = "$IP/cache/l10n";
 $wgLocalisationCacheConf['manualRecache'] = true;
 
-// Gradual roll-out of LCStoreStaticArray (T99740).
-//
-// This configuration is for reading LC at run-time, not for generating.
-// Generation is controlled via Scap and rebuildLocalisationCache.php's --store-class param.
-//
-// NOTE: Before enabling anywhere:
-// - Scap MUST first be configured to (also) use this format.
-// - There MUST have first been a full Scap deploy.
-// - There MUST have been a full Scap deploy on ALL current wiki versions.
-// - Always VERIFY via mwdebug on a wiki in every group, and try multiple ?uselang.
-if ( $wmfRealm === 'labs' ) {
-	// Test LCStoreStaticArray on Beta — James F. 2019.05.07
-	$wgLocalisationCacheConf['storeClass'] = LCStoreStaticArray::class;
-}
-
 // Add some useful config data to query=siteinfo
 $wgHooks['APIQuerySiteInfoGeneralInfo'][] = function ( $module, &$data ) {
 	global $wmfMasterDatacenter;
@@ -481,7 +469,7 @@ $wgObjectCaches['mysql-multiwrite'] = [
 	'caches' => [
 		0 => [
 			'factory' => [ 'ObjectCache', 'getInstance' ],
-			'args' => [ 'mcrouter' ]
+			'args' => [ 'mcrouter-with-onhost-tier' ]
 		],
 		1 => [
 			'class' => 'SqlBagOStuff',
@@ -744,6 +732,7 @@ if ( $wmgUseCORS ) {
 		'advisory.wikimedia.org',
 		'advisory.m.wikimedia.org',
 		'affcom.wikimedia.org',
+		'api.wikimedia.org',
 		'auditcom.wikimedia.org',
 		'boardgovcom.wikimedia.org',
 		'board.wikimedia.org',
@@ -894,6 +883,9 @@ $wgAvailableRights[] = 'flow-edit-post';
 $wgAvailableRights[] = 'flow-suppress';
 $wgAvailableRights[] = 'flow-hide';
 $wgAvailableRights[] = 'flow-delete';
+
+// Adding GrowthExperiments's rights
+$wgAvailableRights[] = 'setmentor';
 
 // Checkuser
 $wgGrantPermissions['checkuser']['checkuser'] = true;
@@ -1236,6 +1228,8 @@ if ( $wmgUseUrlShortener ) {
 	$wgUrlShortenerEnableSidebar = false;
 	$wgGroupPermissions['sysop']['urlshortener-manage-url'] = false;
 	$wgGroupPermissions['sysop']['urlshortener-view-log'] = false;
+	$wgGroupPermissions['*']['urlshortener-create-url'] = false;
+	$wgGroupPermissions['sysop']['urlshortener-create-url'] = false;
 
 	// Never ever change this config
 	// Changing it would change target of all short urls
@@ -1248,7 +1242,6 @@ if ( $wmgPFEnableStringFunctions ) {
 
 if ( $wgDBname === 'mediawikiwiki' ) {
 	wfLoadExtension( 'ExtensionDistributor' );
-	$wgExtDistListFile = 'https://gerrit.wikimedia.org/mediawiki-extensions.txt';
 	$wgExtDistAPIConfig = [
 		'class' => 'GerritExtDistProvider',
 		'apiUrl' => 'https://gerrit.wikimedia.org/r/projects/mediawiki%2F$TYPE%2F$EXT/branches',
@@ -1268,7 +1261,6 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 	$wgExtDistSnapshotRefs = [
 		'master',
 		'REL1_35',
-		'REL1_34',
 		'REL1_31',
 	];
 
@@ -1689,6 +1681,7 @@ if ( $wmgUseCentralAuth ) {
 			'deployment.wikimedia.beta.wmflabs.org' => 'deploymentwiki',
 			'commons.wikimedia.beta.wmflabs.org' => 'commonswiki',
 			$wmfHostnames['wikidata'] => 'wikidatawiki',
+			'api.wikimedia.beta.wmflabs.org' => 'apiportalwiki',
 		];
 		$wgCentralAuthLoginWiki = 'loginwiki';
 	} else {
@@ -2375,12 +2368,6 @@ if ( $wmgUseUploadWizard ) {
 				],
 			],
 		],
-		'licenses' => [
-			'pd-old-70-1923' => [
-				'msg' => 'mwe-upwiz-license-pd-old-70-1923',
-				'templates' => [ 'PD-old-70-expired' ],
-			],
-		],
 	];
 
 	$wgUploadWizardConfig['enableChunked'] = 'opt-in';
@@ -2572,8 +2559,6 @@ if ( $wmgUseVisualEditor ) {
 	// User access configuration
 	if ( $wmgVisualEditorDefault ) {
 		$wgDefaultUserOptions['visualeditor-enable'] = 1;
-		// TODO: Remove this after $wgVisualEditorEnableBetaFeature is deployed
-		$wgHiddenPrefs[] = 'visualeditor-enable'; // T50666
 	} else {
 		$wgDefaultUserOptions['visualeditor-enable'] = 0;
 		$wgVisualEditorEnableBetaFeature = true;
@@ -2921,7 +2906,7 @@ if ( $wmgUseTranslate ) {
 	}
 
 	$wgSpecialPages['ManageMessageGroups'] = DisabledSpecialPage::getCallback( 'ManageMessageGroups' );
-	$wgSpecialPages['TranslationStats'] = DisabledSpecialPage::getCallback( 'TranslationStats' );
+	$wgTranslateStatsProviders['registrations'] = null;
 
 	$wgTranslateTranslationServices['Apertium'] = [
 		'type' => 'cxserver',
@@ -3401,8 +3386,6 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	$wgULSCompactLanguageLinksBetaFeature = $wmgULSCompactLanguageLinksBetaFeature;
 
 	// … as a stable feature
-	$wgULSCompactLinksEnableAnon = $wmgULSCompactLinksEnableAnon;
-	$wgULSCompactLinksForNewAccounts = $wmgULSCompactLinksForNewAccounts;
 	$wgDefaultUserOptions['compact-language-links'] = 1;
 }
 
@@ -3449,14 +3432,6 @@ if ( $wmgUseContentTranslation ) {
 	$wgContentTranslationSiteTemplates['cx'] = '//cxserver.wikimedia.org/v1';
 
 	$wgContentTranslationSiteTemplates['cookieDomain'] = '.wikipedia.org';
-
-	$wgContentTranslationRESTBase = [
-		'url' => $wmfLocalServices['restbase'],
-		'domain' => $wgCanonicalServer,
-		'forwardCookies' => false,
-		'timeout' => 10000,
-		'HTTPProxy' => false,
-	];
 
 	$wgContentTranslationTranslateInTarget = $wmgContentTranslationTranslateInTarget;
 
@@ -3509,11 +3484,15 @@ if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient || $wmgUseWikibaseMediaInfo ) 
 
 $wgHooks['RejectParserCacheValue'][] = function ( $value, WikiPage $wikiPage, $popts ) {
 	$cachedTime = $value->getCacheTime();
-	// T256922: Reject parser output from 19:10 UTC to 22:40 UTC.
-	$incidentStartTime = '20200701191000';
-	$incidentFullRestoreTime = '20200701224000';
+	// Reject parser output from 19:00 UTC to 21:05 UTC
+	// due to incompatible CacheTime objects.
+	// https://phabricator.wikimedia.org/T263851
+	$incidentStartTime = '20200930190000';
+	$incidentFullRestoreTime = '20200930210500';
+	// Consider using this condition if it is limited to
+	// e.g. wikitext articles only, or wikidata entities only, etc.
+	// $wikiPage->getContentModel() === CONTENT_MODEL_WIKITEXT
 	if (
-		$wikiPage->getContentModel() === CONTENT_MODEL_WIKITEXT &&
 		$cachedTime > $incidentStartTime &&
 		$cachedTime < $incidentFullRestoreTime
 	) {
@@ -3665,7 +3644,8 @@ if ( $wmgUseOAuth ) {
 		$wgMWOAuthSharedUserSource = 'CentralAuth';
 	}
 	$wgMWOAuthSecureTokenTransfer = true;
-	$wgOAuth2GrantExpirationInterval = 'infinity';
+	$wgOAuth2GrantExpirationInterval = 'PT4H';
+	$wgOAuth2RefreshTokenTTL = 'P365D';
 
 	if ( $wgMWOAuthCentralWiki === $wgDBname || $wgMWOAuthCentralWiki === false ) {
 		// Management interfaces are available on the central wiki or wikis
@@ -3682,21 +3662,28 @@ if ( $wmgUseOAuthRateLimiter ) {
 	$wgOAuthRateLimiterDefaultClientTier = 'default';
 	// As defined in T246271
 	$wgOAuthRateLimiterTierConfig = [
+		// demo added for demoing/testing purposes
+		'demo' => [
+			'ratelimit' => [
+				'requests_per_unit' => 10,
+				'unit'  => 'HOUR'
+			],
+		],
 		'default' => [
 			'ratelimit' => [
-				'request_per_unit' => 5000,
+				'requests_per_unit' => 5000,
 				'unit'  => 'HOUR'
 			],
 		],
 		'preferred' => [
 			'ratelimit' => [
-				'request_per_unit' => 25000,
+				'requests_per_unit' => 25000,
 				'unit'  => 'HOUR'
 			],
 		],
 		'internal' => [
 			'ratelimit' => [
-				'request_per_unit' => 100000,
+				'requests_per_unit' => 100000,
 				'unit'  => 'HOUR'
 			],
 		],
@@ -3873,6 +3860,12 @@ if ( $wmgUseCheckUser ) {
 			'groups' => [ 'steward' ]
 		];
 	}
+	// T239288 - CheckUser logs pertaining to spam blacklist logged actions appear redacted
+	$wgCheckUserLogAdditionalRights[] = 'spamblacklistlog';
+}
+
+if ( $wmgUseIPInfo ) {
+	wfLoadExtension( 'IPInfo' );
 }
 
 // T39211
@@ -4130,16 +4123,19 @@ if ( $wmgUseWikimediaApiPortalOAuth ) {
 	wfLoadExtension( 'WikimediaApiPortalOAuth' );
 }
 
+if ( $wmgUseGlobalWatchlist ) {
+	wfLoadExtension( 'GlobalWatchlist' );
+}
+
 // This is a temporary hack for hooking up Parsoid/PHP with MediaWiki
 // This is just the regular check out of parsoid in that week's vendor
 $parsoidDir = "$IP/vendor/wikimedia/parsoid";
+$wgParsoidSettings = [
+	'useSelser' => true,
+	'linting' => true,
+	'nativeGalleryEnabled' => false,  // T214649
+];
 if ( ( $_SERVER['SERVERGROUP'] ?? null ) === 'parsoid' ) {
-	$wgParsoidSettings = [
-		'useSelser' => true,
-		'linting' => true,
-		'nativeGalleryEnabled' => false,  // T214649
-	];
-
 	if ( wfHostName() === 'scandium' ) {
 		// Scandium has its own special check out of parsoid for testing.
 		$parsoidDir = __DIR__ . "/../../parsoid-testing";
@@ -4147,6 +4143,12 @@ if ( ( $_SERVER['SERVERGROUP'] ?? null ) === 'parsoid' ) {
 		require_once "$parsoidDir/tests/RTTestSettings.php";
 	}
 
+	wfLoadExtension( 'Parsoid', "$parsoidDir/extension.json" );
+} elseif ( ( $_SERVER['SERVERGROUP'] ?? null ) === 'api_appserver' ) {
+	// Parsoid extension needed by core REST /html handler
+	// until T265518 is resolved, but we do not want to expose
+	// Parsoid REST API.
+	$wgParsoidEnableREST = false;
 	wfLoadExtension( 'Parsoid', "$parsoidDir/extension.json" );
 }
 unset( $parsoidDir );

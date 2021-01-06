@@ -177,6 +177,7 @@ $wgHooks['BlockIpComplete'][] = function ( $block, $user, $prior ) use ( $wmfGer
 		$ch = curl_init(
 			"{$gerritUrl}/r/a/accounts/" . urlencode( $username ) . '/active'
 		);
+		curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
 		curl_setopt( $ch, CURLOPT_CUSTOMREQUEST, 'DELETE' );
 		curl_setopt(
 			$ch, CURLOPT_USERPWD,

@@ -65,6 +65,7 @@ $IP/extensions/GlobalCssJs/extension.json
 $IP/extensions/GlobalPreferences/extension.json
 $IP/extensions/GlobalUsage/extension.json
 $IP/extensions/GlobalUserPage/extension.json
+$IP/extensions/GlobalWatchlist/extension.json
 $IP/extensions/GoogleNewsSitemap/extension.json
 $IP/extensions/Graph/extension.json
 $IP/extensions/GrowthExperiments/extension.json
@@ -76,6 +77,7 @@ $IP/extensions/Insider/extension.json
 $IP/extensions/intersection/extension.json
 $IP/extensions/Interwiki/extension.json
 $IP/extensions/InterwikiSorting/extension.json
+$IP/extensions/IPInfo/extension.json
 $IP/extensions/Jade/extension.json
 $IP/extensions/Josa/extension.json
 $IP/extensions/JsonConfig/extension.json

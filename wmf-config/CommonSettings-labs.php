@@ -146,6 +146,12 @@ if ( $wmgUseContentTranslation ) {
 	$wgContentTranslationTranslateInTarget = false;
 }
 
+if ( $wmgUseIPInfo ) {
+	// This allows admins on beta to test the feature.
+	// Remove this before deployment to production: T270347
+	$wgGroupPermissions['sysop']['ipinfo'] = true;
+}
+
 if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthUseSlaves = true;
 }
@@ -370,65 +376,16 @@ if ( $wgDBname == 'commonswiki' ) {
 	$wgDefaultUserOptions['search-match-redirect'] = false;
 }
 
+if ( $wmgUseWikimediaApiPortalOAuth ) {
+	$wgWikimediaApiPortalOAuthMetaApiURL = 'https://meta.wikimedia.beta.wmflabs.org/w/api.php';
+	$wgWikimediaApiPortalOAuthMetaRestURL = 'https://meta.wikimedia.beta.wmflabs.org/w/rest.php';
+}
+
 // Test of new import source configuration on labs cluster
 $wgImportSources = [];
 include "$wmfConfigDir/import.php";
 $wgHooks['ImportSources'][] = 'wmfImportSources';
 
-$wgAuthManagerAutoConfig['preauth'][GuanacoProvider::class] = [
-	'class' => GuanacoProvider::class,
-	'sort' => 0,
-];
-class GuanacoProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvider {
-	private const EVILUA = 'Bawolff test';
-
-	/**
-	 * @param User $user
-	 * @param array $autocreate
-	 * @param array $options
-	 * @return Status
-	 */
-	public function testUserForCreation( $user, $autocreate, array $options = [] ) {
-		return $this->testUser( $user );
-	}
-
-	/**
-	 * @param User $user
-	 * @param User $creator
-	 * @param array $reqs
-	 * @return Status
-	 */
-	public function testForAccountCreation( $user, $creator, array $reqs ) {
-		return $this->testUser( $user );
-	}
-
-	/**
-	 * @param User $user
-	 * @return Status
-	 */
-	public function testUser( $user ) {
-		$ua = $this->manager->getRequest()->getHeader( 'User-agent' );
-		$logger = \MediaWiki\Logger\LoggerFactory::getInstance( 'badpass' );
-		if ( $ua === self::EVILUA ) {
-			$logger->info( 'Account creation prevented due to UA {name}', [
-				'successful' => false,
-				'name' => $user->getName(),
-				'ua' => $ua,
-			] );
-			// To be misleading, claim its a throttle hit.
-			// hopefully this will confuse attacker.
-			$msg = wfMessage( 'acct_creation_throttle_hit' )->params( 6 )
-				->durationParams( 86400 );
-			return \StatusValue::newFatal( $msg );
-		}
-
-		$logger->info( 'Account creation allowed due to UA {name}', [
-			'successful' => true,
-			'name' => $user->getName(),
-			'ua' => $ua,
-		] );
-		return \StatusValue::newGood();
-	}
-}
+wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
 
 } # end safeguard

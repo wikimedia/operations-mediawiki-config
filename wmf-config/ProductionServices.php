@@ -50,7 +50,7 @@ $common = [
 	'mathoid' => 'http://localhost:6003',
 	'eventgate-analytics' => 'http://localhost:6004',
 	'eventgate-main' => 'http://localhost:6005',
-	'cxserver' => 'http://cxserver.discovery.wmnet:8080',
+	'cxserver' => 'http://localhost:6015',
 	'electron' => 'http://pdfrender.discovery.wmnet:5252',
 	'restbase' => 'http://restbase.discovery.wmnet:7231',
 	'sessionstore' => 'http://localhost:6006',
@@ -59,25 +59,27 @@ $common = [
 
 	// cloudelastic only exists in eqiad. No load balancer is available due to
 	// the part of the network that they live in so each host is enumerated
+
+	// WARNING: psi and omega have their ports "mixed up", see https://phabricator.wikimedia.org/T262630
 	'cloudelastic-chi' => [
-		[
-			'host' => 'cloudelastic.wikimedia.org',
-			'transport' => 'Https',
-			'port' => 9243,
+		[ // forwarded to https://cloudelastic.wikimedia.org:9243/
+			'host' => 'localhost',
+			'transport' => 'Http',
+			'port' => 6105,
 		],
 	],
 	'cloudelastic-psi' => [
-		[
-			'host' => 'cloudelastic.wikimedia.org',
-			'transport' => 'Https',
-			'port' => 9443,
+		[ // forwarded to https://cloudelastic.wikimedia.org:9443/
+			'host' => 'localhost',
+			'transport' => 'Http',
+			'port' => 6107,
 		],
 	],
 	'cloudelastic-omega' => [
-		[
-			'host' => 'cloudelastic.wikimedia.org',
-			'transport' => 'Https',
-			'port' => 9643,
+		[ // forwarded to https://cloudelastic.wikimedia.org:9643/
+			'host' => 'localhost',
+			'transport' => 'Http',
+			'port' => 6106,
 		],
 	]
 ];
@@ -100,9 +102,9 @@ $services = [
 
 		// LockManager Redis
 		'redis_lock' => [
-			'rdb1' => '10.64.0.80',
-			'rdb2' => '10.64.16.107',
-			'rdb3' => '10.64.48.155',
+			'rdb1' => '10.64.32.211', # mc1031 C4
+			'rdb2' => '10.64.0.83',   # mc1022 A6
+			'rdb3' => '10.64.48.156', # mc1034 D4
 		],
 		'search-chi' => [
 			[ // forwarded to https://search.svc.eqiad.wmnet:9243/
@@ -141,9 +143,9 @@ $services = [
 		],
 
 		'redis_lock' => [
-			'rdb1' => '10.192.0.83',
-			'rdb2' => '10.192.0.84',
-			'rdb3' => '10.192.0.85',
+			'rdb1' => '10.192.32.163', # mc2031 C5
+			'rdb2' => '10.192.0.86',   # mc2022 A8
+			'rdb3' => '10.192.48.78',  # mc2034 D4
 		],
 		'search-chi' => [
 			[ // forwarded to https://search.svc.codfw.wmnet:9243/

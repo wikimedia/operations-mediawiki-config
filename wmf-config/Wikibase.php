@@ -185,10 +185,6 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['ssrServerUrl'] = $wmgWikibaseSSRTermboxServerUrl;
 	}
 
-	if ( isset( $wmgWikibaseUseSSRTermboxDesktop ) ) {
-		$wgWBRepoSettings['termboxDesktopEnabled'] = $wmgWikibaseUseSSRTermboxDesktop;
-	}
-
 	if ( isset( $wmgWikibaseTaintedReferencesEnabled ) ) {
 		$wgWBRepoSettings['taintedReferencesEnabled'] = $wmgWikibaseTaintedReferencesEnabled;
 	}
@@ -207,10 +203,6 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBRepoSettings['entityTypesWithoutRdfOutput'] = $wmgWikibaseEntityTypesWithoutRdfOutput;
 
-	// Migration, T226086
-	$wgWBRepoSettings['tmpPropertyTermsMigrationStage'] = $wmgWikibaseTmpPropertyTermsMigrationStage;
-	$wgWBRepoSettings['tmpItemTermsMigrationStages'] = $wmgWikibaseTmpItemTermsMigrationStage;
-
 	// T235033
 	if ( isset( $wmgWikibaseRepoDataBridgeEnabled ) ) {
 		$wgWBRepoSettings['dataBridgeEnabled'] = $wmgWikibaseRepoDataBridgeEnabled;
@@ -218,7 +210,7 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBRepoSettings['enableRefTabs'] = $wmgWikibaseRepoEnableRefTabs;
 
-	$wgWBRepoSettings['propagateChangeVisibility'] = true;
+	$wgWBRepoSettings['idGeneratorLogging'] = $wmgWikibaseRepoIdGeneratorLogging;
 
 	// entity data for URLs matching these patterns will be cached in Varnish and purged if needed;
 	// all other entity data URLs will receive no caching
@@ -301,6 +293,7 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['badgeClassNames'] = $wmgWikibaseClientBadgeClassNames;
 
 	$wgWBClientSettings['allowLocalShortDesc'] = $wmgWikibaseAllowLocalShortDesc;
+	$wgWBClientSettings['forceLocalShortDesc'] = $wmgWikibaseForceLocalShortDesc;
 	$wgWBClientSettings['allowDataTransclusion'] = $wmgWikibaseEnableData;
 	$wgWBClientSettings['allowDataAccessInUserLanguage'] = $wmgWikibaseAllowDataAccessInUserLanguage;
 	$wgWBClientSettings['entityAccessLimit'] = $wmgWikibaseEntityAccessLimit;
@@ -338,10 +331,6 @@ if ( $wmgUseWikibaseClient ) {
 	// Temporary, see T210926
 	$wgWBClientSettings['useKartographerMaplinkInWikitext'] = true;
 
-	// Migration, T226086
-	$wgWBClientSettings['tmpPropertyTermsMigrationStage'] = $wmgWikibaseTmpPropertyTermsMigrationStage;
-	$wgWBClientSettings['tmpItemTermsMigrationStages'] = $wmgWikibaseTmpItemTermsMigrationStage;
-
 	// T226816
 	if ( isset( $wmgWikibaseClientDataBridgeEnabled ) && isset( $wmgWikibaseClientDataBridgeHrefRegExp ) ) {
 		$wgWBClientSettings['dataBridgeEnabled'] = $wmgWikibaseClientDataBridgeEnabled;
@@ -353,6 +342,9 @@ if ( $wmgUseWikibaseClient ) {
 			$wgWBClientSettings['wellKnownReferencePropertyIds'] = $wmgWikibaseClientWellKnownReferencePropertyIds;
 		}
 	}
+
+	// T267745 – effectively subscribes client wikis to descriptions of linked items even if not explicitly used during parse
+	$wgWBClientSettings['enableImplicitDescriptionUsage'] = true;
 }
 
 unset( $wmgWBSharedCacheKey );

@@ -123,6 +123,17 @@ function wmfGetOverrideSettings() {
 			'default' => 'wgDebugLogFile',
 		],
 
+		// Stream config default settings.
+		// The EventStreamConfig extension will add these
+		// settings to each entry in wgEventStreams if
+		// the entry does not already have the setting.
+		// Beta only has eqiad. prefixed topics.
+		'wgEventStreamsDefaultSettings' => [
+			'default' => [
+				'topic_prefixes' => [ 'eqiad.' ],
+			],
+		],
+
 		// Event stream configuration is a list of stream configurations.
 		// Each item in the list must have a 'stream' setting of either the specific
 		// stream name or a regex patterns to matching stream names.
@@ -189,29 +200,158 @@ function wmfGetOverrideSettings() {
 		],
 
 		// Log channels for beta cluster
-		'-wmgMonologChannels' => [
+		'wmgMonologChannels' => [
 			'default' => [
-				'api-request' => [
-					'udp2log' => false,
-					'logstash' => false,
-					'eventbus' => 'debug',
-					'buffer' => true,
-				],
+				// Copied from default production
+				// For channels where there is production configuration that labs
+				// overrides, the relevant line from the production config is commented out
+				// rather than removed, so that it is clear what has changed
+				'404' => 'debug',
+				'AbuseFilter' => 'debug',
+				'AdHocDebug' => 'debug', // for temp live debugging
+				'antispoof' => 'debug',
+				'api' => [ 'logstash' => false ],
+				'api-feature-usage' => 'debug',
+				'api-readonly' => 'debug',
+				'api-request' => [ 'udp2log' => false, 'logstash' => false, 'eventbus' => 'debug', 'buffer' => true ],
+				'api-warning' => 'debug',
 				'authentication' => 'info',
+				'authevents' => 'info',
+				'autoloader' => 'debug',  // ori, for T166759 (2017-06-02)
+				'badpass' => 'debug',
+				'badpass-priv' => 'debug',
+				'BlockManager' => 'info',
+				'BounceHandler' => 'debug',
+				'Bug58676' => 'debug', // Invalid message parameter
+				'cache-cookies' => 'debug',
+				'captcha' => 'debug',
+				'CentralAuth' => 'debug',
+				'CentralAuthRename' => 'debug', // -legoktm 2014-07-14 for T69875
+				'CentralAuthUserMerge' => 'debug',
+				'CentralNotice' => 'debug',
+				// 'CirrusSearch' => 'debug',
+				'cirrussearch-request' => [ 'udp2log' => false, 'logstash' => false, 'eventbus' => 'debug', 'buffer' => true, ],
+				'CirrusSearchChangeFailed' => 'debug',
+				'CirrusSearchSlowRequests' => 'debug',
+				'cite' => 'debug',
+				'Cognate' => 'debug', // WMDE & Addshore
+				'collection' => 'debug', // -cscott for T73675
+				// 'csp' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
+				// 'csp-report-only' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
+				'DBConnection' => 'error',
+				'DBPerformance' => [ 'logstash' => 'debug', 'udp2log' => 'warning' ],
+				'DBQuery' => 'warning',
+				'DBReplication' => 'warning',
+				'DBTransaction' => 'debug',
+				'DeferredUpdates' => 'error',
+				'deprecated' => 'debug',
+				'diff' => 'debug',
+				'editpage' => 'warning', // T251023
+				'Echo' => 'debug',
+				'Elastica' => 'info',
+				'error' => 'debug',
+				// 'EventBus' => [ 'logstash' => 'error' ],
+				'EventLogging' => 'debug',
+				'exception' => 'debug',
+				'exception-json' => [ 'logstash' => false ],
+				'exec' => 'debug',
+				'export' => 'debug',
+				'ExtensionDistributor' => 'error', // T225243
+				'ExternalStore' => 'debug',
+				'fatal' => 'debug',
+				'FileImporter' => 'debug',
+				'FileOperation' => 'debug',
+				'Flow' => 'debug', // -erikb 2014/03/08
+				'formatnum' => 'info', // - cscott 2020/11/09 for T267587/T267370
+				'FSFileBackend' => 'debug', // - gilles for T75229
+				'generated-pp-node-count' => 'debug',
+				'GettingStarted' => 'debug',
+				'GlobalTitleFail' => [ 'sample' => 10000 ], // chad hates $wgTitle
+				'GlobalWatchlist' => [ 'logstash' => 'debug', 'udp2log' => 'debug' ], // T268181
+				'goodpass' => 'debug',
+				'goodpass-priv' => 'debug',
+				'GrowthExperiments' => 'info',
+				'headers-sent' => 'debug',
+				'HttpError' => 'error', // Only log http errors with a 500+ code T85795
+				// 'JobExecutor' => [ 'logstash' => 'warning' ],
+				'ldap' => 'warning',
+				'Linter' => 'debug',
+				'LocalFile' => 'debug',
+				'localhost' => [ 'logstash' => false ],
+				'LockManager' => 'warning',
+				'logging' => 'debug',
+				'LoginNotify' => 'debug',
+				'MassMessage' => 'debug', // for 59464 -legoktm 2013/12/15
+				'Math' => 'info',  // mobrovac for T121445
+				'memcached' => 'error', // -aaron 2012/10/24
+				'message-format' => [ 'logstash' => 'warning' ],
+				'MessageCacheError' => 'debug',
+				'mobile' => 'debug',
+				'NewUserMessage' => 'debug',
+				'OAuth' => 'info', // T244185
+				'objectcache' => 'warning',
+				'OutputBuffer' => 'debug',
+				'PageTriage' => 'debug',
+				'PageViewInfo' => 'info',
+				'ParserCache' => 'warning',
+				'poolcounter' => 'debug',
+				'preferences' => 'info',
+				'purge' => 'debug',
+				'query' => 'debug',
+				'ratelimit' => 'debug',
+				'readinglists' => 'warning',
+				'recursion-guard' => 'debug',
+				'RecursiveLinkPurge' => 'debug',
+				'redis' => 'info', // -asher 2012/10/12
+				'Renameuser' => 'debug',
+				'resourceloader' => 'info',
+				'ResourceLoaderImage' => 'debug', // - demon, matmarex
+				'RevisionStore' => 'info',
+				// 'runJobs' => [ 'logstash' => 'warning' ], // - bd808, T113571
+				'SaveParse' => 'debug',
+				'security' => 'debug',
+				'session' => [ 'udp2log' => false, 'logstash' => 'info' ],
+				'session-ip' => [ 'udp2log' => false, 'logstash' => 'info' ],
+				'SimpleAntiSpam' => 'debug',
+				'slow-parse' => 'debug',
+				'SpamBlacklistHit' => 'debug',
+				'SpamRegex' => 'debug',
+				'SQLBagOStuff' => 'debug',
+				'StashEdit' => 'debug',
+				'SwiftBackend' => 'debug', // -aaron 5/15/12
+				'texvc' => 'debug',
+				'throttler' => 'info',
+				'thumbnail' => 'debug',
+				'thumbnailaccess' => 'debug', // T106323
+				'TitleBlacklist-cache' => 'debug', // For T85428
+				'torblock' => 'debug',
+				'TranslationNotifications.Jobs' => 'debug',
+				'Translate.Jobs' => 'debug',
+				'Translate' => 'debug',
+				'UpdateRepo' => 'debug',
+				'updateTranstagOnNullRevisions' => 'debug',
+				'upload' => 'debug',
+				'VisualEditor' => 'debug',
+				'wfLogDBError' => 'debug', // Former $wgDBerrorLog
+				'Wikibase' => [ 'udp2log' => 'info', 'logstash' => 'warning', 'sample' => false, ],
+				'Wikibase.IdGenerator' => 'debug', // WMDE & Lucas Werkmeister T268625
+				'Wikibase.NewItemIdFormatter' => 'debug', // WMDE & Addshore T201832
+				'WikibaseQualityConstraints' => 'debug',
+				'WikimediaEvents' => 'error', // For T205754 & T208233
+				'WikitechGerritBan' => 'debug',
+				'WikitechPhabBan' => 'debug',
+				'WMDE' => 'debug', // WMDE & Addshore T174948 & T191500
+				'xff' => [ 'logstash' => false ],
+				'XMP' => 'warning', // T89532
+
+				// Additional logging for labs
 				'CentralAuthVerbose' => 'debug',
 				'CirrusSearch' => 'info',
-				'cirrussearch-request' => [
-					'udp2log' => false,
-					'logstash' => false,
-					'eventbus' => 'debug',
-					'buffer' => true,
-				],
 				'csp' => 'info',
 				'csp-report-only' => 'info',
 				'dnsblacklist' => 'debug',
 				'EventBus' => 'debug',
 				'JobExecutor' => [ 'logstash' => 'debug' ],
-				'MassMessage' => 'debug',
 				'MessageCache' => 'debug',
 				'runJobs' => [ 'logstash' => 'info' ],
 				'squid' => 'debug',
@@ -249,7 +389,7 @@ function wmfGetOverrideSettings() {
 			'cawiki' => 60,
 		],
 
-		'wgEchoEnablePush' => [
+		'wmgEchoEnablePush' => [
 			'default' => true,
 		],
 
@@ -297,6 +437,9 @@ function wmfGetOverrideSettings() {
 		'wgWMEInukaPageViewEnabled' => [
 			'default' => true
 		],
+		'wgWMESessionTick' => [
+			'default' => true,
+		],
 		'wgWMEInukaPageViewCookiesDomain' => [
 			'default' => 'wmflabs.org'
 		],
@@ -335,9 +478,6 @@ function wmfGetOverrideSettings() {
 				'amc' => true,
 			]
 		],
-		'wgMinervaCountErrors' => [
-			'default' => true
-		],
 		# Do not run any A/B tests on beta cluster (T206179)
 		'-wgMinervaABSamplingRate' => [
 			'default' => 0,
@@ -355,14 +495,6 @@ function wmfGetOverrideSettings() {
 		],
 		'wgVectorDefaultSkinVersionForNewAccounts' => [
 			'default' => '2', // Latest Vector
-		],
-		// T246420: Enable limited-width layout in "Latest Vector"
-		'wgVectorLayoutMaxWidth' => [
-			'default' => true,
-		],
-		// T249363: Enable search in header mode
-		'wgVectorIsSearchInHeader' => [
-			'default' => true,
 		],
 
 		'wmgCommonsMetadataForceRecalculate' => [
@@ -406,16 +538,6 @@ function wmfGetOverrideSettings() {
 			'default' => [ 'newarticle' ],
 		],
 
-		// Whether Compact Links is enabled for new accounts *by default*
-		'wmgULSCompactLinksForNewAccounts' => [
-			'default' => true,
-		],
-
-		// Whether Compact Links is enabled for anonymous users *by default*
-		'wmgULSCompactLinksEnableAnon' => [
-			'default' => true,
-		],
-
 		'wgSearchSuggestCacheExpiry' => [
 			'default' => 300,
 		],
@@ -443,6 +565,10 @@ function wmfGetOverrideSettings() {
 		'wmgExtraLanguageNames' => [
 			'default' => [ 'en-rtl' => 'English (rtl)' ],
 			'wikidata' => [],
+			'commonswiki' => [
+				'smn' => 'anarâškielâ',	  // T222309
+				'sms' => 'sääʹmǩiõll',	  // T222309
+			],
 		],
 
 		'wmgUseQuickSurveys' => [
@@ -503,182 +629,6 @@ function wmfGetOverrideSettings() {
 					],
 				],
 			],
-			'dewiki' => [
-				// T254322 T255130
-				[
-					'enabled' => true,
-					'type' => 'internal',
-					'layout' => 'multiple-answer',
-					'embedElementId' => 'survey-inject-1',
-					// Only display on [[w:de:Leichter_mit_Vorlagen_arbeiten]]
-					'audience' => [ 'pageIds' => [ 4997 ] ],
-					'name' => 'wmde-tw-template-survey-prototype-1',
-					'question' => 'wmde-tw-template-survey-prototype1-question',
-					'description' => 'wmde-tw-template-survey-prototype1-description-message',
-					'answers' => [
-						'wmde-tw-template-survey-prototype1-answer-1a',
-						'wmde-tw-template-survey-prototype1-answer-1b',
-						'wmde-tw-template-survey-prototype1-answer-1c',
-						'wmde-tw-template-survey-prototype1-answer-1d',
-						'wmde-tw-template-survey-prototype1-answer-1e',
-						'wmde-tw-template-survey-prototype1-answer-1f',
-						'wmde-tw-template-survey-prototype1-answer-none',
-					],
-					'shuffleAnswersDisplay' => false,
-					'coverage' => 1.0,
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable' ],
-					],
-					'privacyPolicy' => 'wmde-tw-template-survey-privacy-policy',
-				],
-				[
-					'enabled' => true,
-					'type' => 'internal',
-					'layout' => 'multiple-answer',
-					'embedElementId' => 'survey-inject-2',
-					// Only display on [[w:de:Leichter_mit_Vorlagen_arbeiten]]
-					'audience' => [ 'pageIds' => [ 4997 ] ],
-					'name' => 'wmde-tw-template-survey-prototype-2',
-					'question' => 'wmde-tw-template-survey-prototype2-question',
-					'description' => 'wmde-tw-template-survey-prototype2-description-message',
-					'answers' => [
-						'wmde-tw-template-survey-prototype2-answer-2a',
-						'wmde-tw-template-survey-prototype2-answer-2b',
-						'wmde-tw-template-survey-prototype2-answer-2c',
-						'wmde-tw-template-survey-prototype2-answer-2d',
-						'wmde-tw-template-survey-prototype2-answer-2e',
-						'wmde-tw-template-survey-prototype2-answer-none',
-					],
-					'shuffleAnswersDisplay' => false,
-					'coverage' => 1.0,
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable' ],
-					],
-					'privacyPolicy' => 'wmde-tw-template-survey-privacy-policy',
-				],
-				[
-					'enabled' => true,
-					'type' => 'internal',
-					'layout' => 'multiple-answer',
-					'embedElementId' => 'survey-inject-3',
-					// Only display on [[w:de:Leichter_mit_Vorlagen_arbeiten]]
-					'audience' => [ 'pageIds' => [ 4997 ] ],
-					'name' => 'wmde-tw-template-survey-prototype-3',
-					'question' => 'wmde-tw-template-survey-prototype3-question',
-					'description' => 'wmde-tw-template-survey-prototype3-description-message',
-					'answers' => [
-						'wmde-tw-template-survey-prototype3-answer-1',
-						'wmde-tw-template-survey-prototype3-answer-2',
-						'wmde-tw-template-survey-prototype3-answer-3',
-						'wmde-tw-template-survey-prototype3-answer-4',
-						'wmde-tw-template-survey-prototype3-answer-5',
-						'wmde-tw-template-survey-prototype3-answer-6',
-						'wmde-tw-template-survey-prototype3-answer-7',
-						'wmde-tw-template-survey-prototype3-answer-8a',
-						'wmde-tw-template-survey-prototype3-answer-8b',
-						'wmde-tw-template-survey-prototype3-answer-none',
-					],
-					'shuffleAnswersDisplay' => false,
-					'coverage' => 1.0,
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable' ],
-					],
-					'privacyPolicy' => 'wmde-tw-template-survey-privacy-policy',
-				],
-			],
-			'enwiki' => [
-				// T209882
-				[
-					'enabled' => true,
-					'type' => 'external',
-					'name' => 'Reader-trust-survey-en-v1',
-					'description' => 'Reader-trust-1-description',
-					'link' => 'Reader-trust-1-link',
-					'instanceTokenParameterName' => 'token',
-					'question' => 'Reader-trust-1-message',
-					'privacyPolicy' => 'Reader-trust-1-privacy',
-					'coverage' => 1,  // 1 out of 1
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable' ],
-					],
-				],
-				// T217171
-				[
-					'enabled' => true,
-					'name' => 'reader-demographics-en-pilot',
-					'type' => 'external',
-					'description' => 'Reader-demographics-1-description',
-					'link' => 'Reader-demographics-1-link',
-					'question' => 'Reader-demographics-1-message',
-					'privacyPolicy' => 'Reader-demographics-1-privacy',
-					'coverage' => 1, // 1 out of 1
-					'instanceTokenParameterName' => 'entry.1791119923',
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable' ]
-					],
-				],
-				// T225819
-				[
-					'enabled' => true,
-					"name" => "reader-demographics-en",
-					"type" => "external",
-					"description" => "Reader-demographics-1-description",
-					"link" => "Reader-demographics-1-link",
-					"question" => "Reader-demographics-1-message",
-					"privacyPolicy" => "Reader-demographics-1-privacy",
-					"coverage" => 1,
-					"instanceTokenParameterName" => "entry.1791119923",
-					"platforms" => [
-						"desktop" => [ "stable" ],
-						"mobile" => [ "stable" ]
-					],
-				],
-				// T225042
-				[
-					"enabled" => true,
-					"type" => "internal",
-					"name" => "editor-gender-1-en",
-					"question" => "Editor-gender-1-message",
-					"description" => "Editor-gender-1-description",
-					"answers" => [
-						"Editor-gender-1-answer-man",
-						"Editor-gender-1-answer-woman",
-					],
-					"freeformTextLabel" => "Editor-gender-1-free-form-text-label",
-					"privacyPolicy" => "Editor-gender-1-privacy",
-					"coverage" => 1,
-					"audience" => [
-						"anons" => false,
-					],
-					"platforms" => [
-						"desktop" => [ "stable" ],
-						"mobile" => [ "stable" ]
-					],
-				]
-			],
-			'hewiki' => [
-				// T225819
-				[
-					'enabled' => true,
-					"name" => "reader-demographics-he",
-					"type" => "external",
-					"description" => "Reader-demographics-1-description",
-					"link" => "Reader-demographics-1-link",
-					"question" => "Reader-demographics-1-message",
-					"privacyPolicy" => "Reader-demographics-1-privacy",
-					"coverage" => 1,
-					"instanceTokenParameterName" => "entry.1791119923",
-					"platforms" => [
-						"desktop" => [ "stable" ],
-						"mobile" => [ "stable" ]
-					],
-				]
-			]
 		],
 
 		'-wgScorePath' => [
@@ -700,6 +650,14 @@ function wmfGetOverrideSettings() {
 
 		'wmgUseCheckUser' => [
 			'default' => false,
+		],
+
+		'wmgUseIPInfo' => [
+			'default' => true,
+			'loginwiki' => false,
+		],
+		'wgIPInfoGeoIP2Path' => [
+			'default' => '/usr/share/GeoIP/GeoLite2-',
 		],
 
 		'wgMediaViewerNetworkPerformanceSamplingFactor' => [
@@ -769,6 +727,16 @@ function wmfGetOverrideSettings() {
 			'commonswiki' => [
 				'depicts' => 'P245962',
 			]
+		],
+
+		// Structured Data on Commons: wikibase properties that will be editable by default
+		'wgMediaInfoMediaSearchProperties' => [
+			'commonswiki' => [
+				// depicts
+				'P245962' => 1,
+				// digital representation of
+				'P248141' => 1.1,
+			],
 		],
 
 		'wgMediaInfoExternalEntitySearchBaseUri' => [
@@ -1086,57 +1054,21 @@ function wmfGetOverrideSettings() {
 			'default' => 'wikidatawiki',
 			'commonswiki' => 'commonswiki',
 		],
-		'wgWMEUnderstandingFirstDay' => [
-			'default' => false,
-			'enwiki' => true,
-		],
 		'wgWMEUnderstandingFirstDaySensitiveNamespaces' => [
 			'default' => [ 0, 1, 6, 7 ],
 			'enwiki' => [ 0, 1, 6, 7, 100, 101, 118, 119 ],
 		],
 		'wmgUseGrowthExperiments' => [
-			'cawiki' => true,
 			'enwiki' => true,
-			'fawiki' => true,
-		],
-		'wgWelcomeSurveyEnabled' => [
-			'enwiki' => true,
-			'fawiki' => true,
-		],
-		'wgGEHelpPanelEnabled' => [
-			'cawiki' => true,
-			'enwiki' => true,
-			'fawiki' => true,
+			'bnwiki' => true,
 		],
 		'wgGEHelpPanelHelpDeskTitle' => [
-			'cawiki' => 'Viquipèdia:Potřebuji_pomoc',
 			'enwiki' => 'Wikipedia:Help_desk',
-			'kowiki' => '위키백과:도움말',
-			'arwiki' => 'مساعدة',
-			'fawiki' => 'ویکی‌پدیا:درخواست راهنمایی',
 		],
 		'wgGEHelpPanelViewMoreTitle' => [
-			'arwiki' => 'مساعدة',
-			'fawiki' => 'راهنما:فهرست',
-			'cawiki' => 'Ajuda:Obsah',
 			'enwiki' => 'Help:Contents',
-			'kowiki' => '위키백과:도움말',
 		],
 		'wgGEHelpPanelLinks' => [
-			'arwiki' => [
-				[
-					'title' => 'mw:Help:Contents',
-					'text' => 'مساعدة',
-					'id' => 'help',
-				]
-			],
-			'cawiki' => [
-				[
-					'title' => 'mw:Help:Contents',
-					'text' => 'Ajuda',
-					'id' => 'help',
-				]
-			],
 			'enwiki' => [
 				[
 					'title' => 'Help:Contents',
@@ -1162,101 +1094,40 @@ function wmfGetOverrideSettings() {
 					'title' => 'Wikipedia:File_Upload_Wizard',
 					'text' => 'File upload wizard',
 					'id' => 'file-upload-wizard',
-				]
-			],
-			'fawiki' => [
-				[
-					'title' => 'ویکی‌پدیا:خودآموز',
-					'text' => 'راهنما',
-					'id' => 'example',
-				]
-			],
-			'kowiki' => [
-				[
-					'title' => '위키백과:도움말',
-					'text' => '도움말',
-					'id' => 'example',
-				]
+				],
 			],
 		],
 		'wgGEHelpPanelReadingModeNamespaces' => [
 			'default' => [ 2, 3, 4, 12 ]
 		],
-		'wgGEHelpPanelAskMentor' => [
-			'default' => false,
-			'cswiki' => true,
-		],
 		'wgGEHelpPanelSearchForeignAPI' => [
 			'default' => 'https://en.wikipedia.org/w/api.php',
 			'arwiki' => 'https://ar.wikipedia.org/w/api.php',
-			'cawiki' => 'https://ca.wikipedia.org/w/api.php',
+			'bnwiki' => 'https://bn.wikipedia.org/w/api.php',
 			'cswiki' => 'https://cs.wikipedia.org/w/api.php',
 			'kowiki' => 'https://ko.wikipedia.org/w/api.php',
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
 			'viwiki' => 'https://vi.wikipedia.org/w/api.php',
-		],
-		'wgGEHomepageEnabled' => [
-			'default' => true,
-		],
-		'wgGEHomepageSuggestedEditsRequiresOptIn' => [
-			'default' => false,
-		],
-		'wgGEHomepageNewAccountEnablePercentage' => [
-			'default' => 80,
-		],
-		'wgGEHomepageNewAccountVariants' => [
-			'default' => [
-				'A' => 0,
-				'C' => 50,
-				'D' => 50,
-			]
 		],
 		'wgGEHomepageMentorsList' => [
 			'default' => '',
 			'arwiki' => 'Wikipedia:Mentors',
 			'enwiki' => 'Wikipedia:Mentors',
-			'fawiki' => 'ویکی‌پدیا:مربیان',
-			'kowiki' => '위키백과:새_사용자_경험/새_사용자_멘토',
 		],
 		'wgGEHomepageTutorialTitle' => [
 			'default' => '',
 			'arwiki' => 'Help:Tutorial',
 			'enwiki' => 'Help:Getting started',
-			'fawiki' => 'ویکی‌پدیا:خودآموز',
-		],
-		'wgGEConfirmEmailEnabled' => [
-			'default' => true,
 		],
 		'wgGENewcomerTasksRemoteApiUrl' => [
 			'enwiki' => 'https://en.wikipedia.org/w/api.php',
 			'arwiki' => 'https://ar.wikipedia.org/w/api.php',
+			'bnwiki' => 'https://bn.wikipedia.org/w/api.php',
 			'cswiki' => 'https://cs.wikipedia.org/w/api.php',
 			'fawiki' => 'https://fa.wikipedia.org/w/api.php',
 			'kowiki' => 'https://ko.wikipedia.org/w/api.php',
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
 			'viwiki' => 'https://vi.wikipedia.org/w/api.php',
-		],
-		'wgGENewcomerTasksTopicType' => [
-			'default' => 'morelike',
-			'enwiki' => 'ores',
-			'arwiki' => 'ores',
-			'cswiki' => 'ores',
-			'kowiki' => 'ores',
-			'viwiki' => 'ores',
-			'fawiki' => 'ores',
-		],
-		'wgGENewcomerTasksGuidanceEnabled' => [
-			'default' => true,
-		],
-		'wgGENewcomerTasksGuidanceRequiresOptIn' => [
-			'default' => false
-		],
-		'wgGERestbaseUrl' => [
-			'default' => false,
-		],
-		'wgGEHomepageSuggestedEditsEnableTopics' => [
-			'default' => true,
-			'cawiki' => false,
 		],
 		'wgEnableSpecialMute' => [
 			'default' => true,
@@ -1423,12 +1294,6 @@ function wmfGetOverrideSettings() {
 			'wikidatawiki' => true,
 		],
 
-		// T261488
-		'wmgWikibaseUseSSRTermboxDesktop' => [
-			'default' => false,
-			'wikidatawiki' => true,
-		],
-
 		'wmgWikibaseSSRTermboxServerUrl' => [
 			'default' => '',
 			'wikidatawiki' => 'https://ssr-termbox.wmflabs.org/termbox',
@@ -1438,11 +1303,6 @@ function wmfGetOverrideSettings() {
 		'wmgWikibaseTaintedReferencesEnabled' => [
 			'default' => false,
 			'wikidatawiki' => true,
-		],
-
-		'wmgWikibaseTmpPropertyTermsMigrationStage' => [
-			'default' => MIGRATION_NEW,
-			'wikidatawiki' => MIGRATION_NEW // Override production
 		],
 
 		// T235033
@@ -1814,7 +1674,6 @@ function wmfGetOverrideSettings() {
 
 		'wgRestAPIAdditionalRouteFiles' => [
 			'default' => [
-				'extensions/OAuth/experimentalRoutes.json',
 				'includes/Rest/coreDevelopmentRoutes.json',
 			],
 		],
@@ -1913,13 +1772,9 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 		],
 
-		// T247943 Temporary whilst deploying MediaModeration
-		'wmgUseMediaModeration' => [
-			'default' => true,
-		],
 		'wgAbuseFilterEmergencyDisableThreshold' => [
-			'default' => 0.05,
-			'zhwiki' => 0.25, // T230305
+			'default' => [ 'default' => 0.05 ],
+			'zhwiki' => [ 'default' => 0.25 ], // T230305
 		],
 		'wgAbuseFilterEmergencyDisableCount' => [
 			'default' => [
@@ -1937,14 +1792,31 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 		],
 
-		'wmgUseWikimediaApiPortalOAuth' => [
-			'apiportalwiki' => true,
+		// Deploy GlobalWatchlist to the beta cluster - T268181
+		'wmgUseGlobalWatchlist' => [
 			'default' => false,
+			'metawiki' => true,
+		],
+		'wgGlobalWatchlistDevMode' => [
+			'default' => true,
+		],
+		'wgGlobalWatchlistWikibaseSite' => [
+			'default' => 'wikidata.beta.wmflabs.org',
 		],
 
 		// T253271 Dont deploy Cirrus AB tests to beta
 		'wgCirrusSearchUserTesting' => [
 			'default' => [],
 		],
+
+		// T123582
+		'wgImagePreconnect' => [
+			'default' => true,
+		],
+
+		'wgAbuseFilterAflFilterMigrationStage' => [
+			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD
+		],
+
 	];
 } # wmfGetOverrideSettings()

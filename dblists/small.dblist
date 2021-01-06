@@ -122,6 +122,7 @@ eowikibooks
 eowikinews
 eowikiquote
 eowikisource
+eowikivoyage
 eswikivoyage
 etwikibooks
 etwikimedia
@@ -274,6 +275,7 @@ ltwikibooks
 ltwikiquote
 ltwikisource
 lvwikibooks
+madwiki
 maiwikimedia
 mdfwiki
 mgwikibooks
@@ -394,12 +396,15 @@ simplewikibooks
 simplewikiquote
 siwikibooks
 siwiktionary
+skrwiki
+skrwiktionary
 skwikibooks
 skwikiquote
 skwikisource
 slwikibooks
 slwikiquote
 slwikiversity
+smnwiki
 smwiki
 smwiktionary
 snwiktionary
@@ -485,6 +490,7 @@ votewiki
 vowikibooks
 vowikiquote
 wawikibooks
+wawikisource
 wbwikimedia
 wg_enwiki
 wikimania2005wiki

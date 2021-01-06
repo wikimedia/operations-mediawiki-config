@@ -22,3 +22,6 @@ $wgCirrusSearchClusters = [
 		];
 	}, $wmfAllServices['eqiad']['search-chi'] ),
 ];
+
+// wgCirrusSearchShardCount is still handled through wmg vars for no good reasons
+$wgCirrusSearchShardCount = $wmgCirrusSearchShardCount;
