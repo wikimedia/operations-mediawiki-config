@@ -12384,7 +12384,7 @@ function wmfGetVariantSettings() {
 		],
 		'templateeditor' => [
 			'templateeditor' => true, // T61084
-			'tboverride' => false, // T270988
+			'tboverride' => true,
 			'editcontentmodel' => true, // T217499
 		],
 		'sysop' => [
