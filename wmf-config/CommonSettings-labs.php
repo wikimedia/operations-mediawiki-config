@@ -388,4 +388,7 @@ $wgHooks['ImportSources'][] = 'wmfImportSources';
 
 wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
 
+// Temporary feature flag for the CodeMirror bracket matching see T261857
+$wgCodeMirrorEnableBracketMatching = true;
+
 } # end safeguard
