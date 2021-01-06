@@ -24849,6 +24849,7 @@ function wmfGetVariantSettings() {
 	'testwiki' => true, // T199913
 	'test2wiki' => true, // T200412
 	'trwiki' => true, // T139992
+	'ukwiki' => true, // T256887
 	'wikidatawiki' => true, // T130212
 	'zhwiki' => true, // T225562
 ],
@@ -24887,6 +24888,7 @@ function wmfGetVariantSettings() {
 	'testwiki' => true, // T199913
 	'test2wiki' => true, // T200412
 	'trwiki' => true, // T139992
+	'ukwiki' => true, // T256887
 	'wikidatawiki' => true, // T130212
 	'zhwiki' => true, // T225562
 ],
@@ -25276,6 +25278,20 @@ function wmfGetVariantSettings() {
 			// likelygood, maybebad use defaults
 			'likelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.45' ],
 			'verylikelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.75' ],
+		],
+	],
+	'ukwiki' => [
+		'damaging' => [
+			'likelygood' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.997' ],
+			// maybebad uses default
+			'likelybad' => [ 'min' => 'maximum recall @ precision >= 0.45', 'max' => 1 ],
+			'verylikelybad' => false,
+		],
+		'goodfaith' => [
+			'likelygood' => [ 'min' => 'maximum recall @ precision >= 0.998', 'max' => 1 ],
+			'maybebad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.15' ],
+			'likelybad' => [ 'min' => 0, 'max' => 'maximum recall @ precision >= 0.45' ],
+			// verylikelybad uses default
 		],
 	],
 	'wikidatawiki' => [
