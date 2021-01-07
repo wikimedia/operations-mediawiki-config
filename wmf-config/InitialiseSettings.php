@@ -18643,7 +18643,6 @@ function wmfGetVariantSettings() {
 // %4\$s = hash
 'wgGraphImgServiceUrl' => [
 	'default' => false,
-	'enwiki' => "/api/rest_v1/page/graph/png/%2\$s/0/%4\$s.png",
 	'testwiki' => false,
 	'test2wiki' => "/api/rest_v1/page/graph/png/%2\$s/0/%4\$s.png",
 ],
