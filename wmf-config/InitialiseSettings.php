@@ -21094,7 +21094,6 @@ function wmfGetVariantSettings() {
 	"towiki" => true,
 	"tpiwiki" => true,
 	"trwiki" => true,
-	"tswiki" => true,
 	"ttwiki" => true,
 	"tumwiki" => true,
 	"twwiki" => true,
