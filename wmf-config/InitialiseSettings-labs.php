@@ -1816,11 +1816,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => false,
 		],
 
-		// T242855 Undeploying graphoid
-		'-wgGraphImgServiceUrl' => [
-			'default' => false,
-		],
-
 		'wgAbuseFilterEmergencyDisableThreshold' => [
 			'default' => [ 'default' => 0.05 ],
 			'zhwiki' => [ 'default' => 0.25 ], // T230305

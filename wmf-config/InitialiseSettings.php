@@ -16978,17 +16978,6 @@ function wmfGetVariantSettings() {
 	'default' => 2,
 ],
 
-// restbase format: /api/rest_v1/page/graph/png/{title}/{revid}/{hash}.png
-// %1\$s = domain
-// %2\$s = title
-// %3\$s = revid
-// %4\$s = hash
-'wgGraphImgServiceUrl' => [
-	'default' => false,
-	'testwiki' => false,
-	'test2wiki' => "/api/rest_v1/page/graph/png/%2\$s/0/%4\$s.png",
-],
-
 'wmgUseGraphWithJsonNamespace' => [
 	'default' => false,
 
