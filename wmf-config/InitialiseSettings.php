@@ -14743,6 +14743,7 @@ function wmfGetVariantSettings() {
 	'frwikisource' => [
 		'meta', 'commons', 'species', 'q', 'b', 'af', 'ak', 'ar', 'ang', 'ast', 'gn', 'id', 'zhminnan', 'bg', 'br', 'ca', 'cs', 'co', 'da', 'de', 'et', 'el', 'en', 'es', 'eo', 'fa', 'fy', 'ga', 'gl', 'gu', 'hy', 'hi',
 		'he', 'hsb', 'hr', 'io', 'ia', 'ie', 'is', 'it', 'kk', 'csb', 'sw', 'ko', 'ku', 'la', 'lt', 'li', 'lo', 'hu', 'ml', 'nl', 'ja', 'no', 'oc', 'nds', 'pl', 'pt', 'ro', 'ru', 'scn', 'simple', 'sk', 'sl', 'sq',
+
 		'st', 'sr', 'fi', 'sv', 'ta', 'te', 'vi', 'th', 'tt', 'tr', 'uk', 'ur', 'vo', 'zh', 'w', 'n', 's', 'wikt', 'v',
 	], // T30024 and T24663 --pdhanda
 	'frwikibooks' => [
@@ -14841,6 +14842,7 @@ function wmfGetVariantSettings() {
 	'mlwikiquote' => [ 'en', 'w:en', 'w' ],
 	'mlwiktionary' => [ 'w:en', 'w:ml', 'wikt:en' ], // T260716
 	'mrwiki' => [ 'meta', 'commons', 'en', 'hi' ], // T96807
+	'mrwikibooks' => [ 'c', 'en', 's', 'w' ], // T270402
 	'mrwikisource' => [ 'w', 'b', 'en', 'sa', 'oldwikisource', 'w:en', 'c' ], // T105116
 	'mswiki' => [ 'id' ], // T18033
 	'mswiktionary' => [ 'w' ],
