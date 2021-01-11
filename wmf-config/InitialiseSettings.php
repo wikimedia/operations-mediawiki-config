@@ -332,6 +332,7 @@ function wmfGetVariantSettings() {
 	'dewikivoyage' => 'Europe/Berlin', // T43992
 	'dewikiversity' => 'Europe/Berlin',
 	'dinwiki' => 'Africa/Juba',
+	'diqwiktionary' => 'Europe/Istanbul',
 	'dsbwiki' => 'Europe/Berlin',
 	'dtywiki' => 'Asia/Kathmandu', // T161529
 	'dvwiki' => 'Indian/Maldives', // T48351
@@ -3633,6 +3634,7 @@ function wmfGetVariantSettings() {
 	'dkwikimedia' => 'Wikimedia Danmark',
 	'donatewiki' => 'Donate',
 	'dsbwiki' => 'Wikipedija',
+	'diqwiktionary' => 'Wikiqısebend',
 	'dtywiki' => 'विकिपिडिया', // T161529
 	'dvwiki' => 'ވިކިޕީޑިއާ', // T50075
 	'dvwiktionary' => 'ވިކިރަދީފު',
@@ -4172,6 +4174,7 @@ function wmfGetVariantSettings() {
 	'cywiktionary' => 'Wiciadur',
 	'donatewiki' => 'Donate',
 	'dsbwiki' => 'Wikipedija',
+	'diqwiktionary' => 'Wikiqısebend',
 	'dtywiki' => 'विकिपिडिया', // T161529
 	'dvwiki' => 'ވިކިޕީޑިއާ', // T50075
 	'dvwiktionary' => 'ވިކިރަދީފު', // T48846
