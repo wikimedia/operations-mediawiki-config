@@ -21777,6 +21777,7 @@ function wmfGetVariantSettings() {
 		'HelpPanel' => '/analytics/legacy/helppanel/1.0.0',
 		'HomepageModule' => '/analytics/legacy/homepagemodule/1.0.0',
 		'NewcomerTask' => '/analytics/legacy/newcomertask/1.0.0',
+		'SpecialMuteSubmit' => '/analytics/legacy/specialmutesubmit/1.0.0',
 	],
 ],
 
