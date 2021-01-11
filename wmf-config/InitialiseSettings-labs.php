@@ -340,6 +340,7 @@ function wmfGetLabsOverrideSettings() {
 				'SpamRegex' => 'debug',
 				'SQLBagOStuff' => 'debug',
 				'StashEdit' => 'debug',
+				'StopForumSpam' => 'debug',
 				'SwiftBackend' => 'debug', // -aaron 5/15/12
 				'texvc' => 'debug',
 				'throttler' => 'info',
