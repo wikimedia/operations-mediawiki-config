@@ -454,6 +454,7 @@ function wmfGetVariantSettings() {
 	'newiki' => 'Asia/Kathmandu', // T244205
 	'ngwikimedia' => 'Africa/Lagos', // T240771
 	'niawiki' => 'Asia/Jakarta',
+	'niawiktionary' => 'Asia/Jakarta',
 	'nlwiki' => 'Europe/Berlin',
 	'nlwikimedia' => 'Europe/Berlin',
 	'nlwikibooks' => 'Europe/Berlin',
@@ -943,6 +944,7 @@ function wmfGetVariantSettings() {
 	'liwiktionary' => '/static/images/project-logos/liwiktionary.png', // T45240
 	'ltwiktionary' => '/static/images/project-logos/ltwiktionary.png',
 	'lvwiktionary' => '/static/images/project-logos/lvwiktionary.png', // T45240
+	'niawiktionary' => '/static/images/project-logos/niawiktionary.png',
 	'mgwiktionary' => '/static/images/project-logos/mgwiktionary.png',
 	'minwiktionary' => '/static/images/project-logos/minwiktionary.png',
 	'miwiktionary' => '/static/images/project-logos/miwiktionary.png', // T45240
@@ -1703,6 +1705,7 @@ function wmfGetVariantSettings() {
 	'kywiktionary' => '/static/images/project-logos/kywiktionary-1.5x.png', // T150618
 	'liwiktionary' => '/static/images/project-logos/liwiktionary-1.5x.png', // T150618
 	'lvwiktionary' => '/static/images/project-logos/lvwiktionary-1.5x.png', // T150618
+	'niawiktionary' => '/static/images/project-logos/niawiktionary-1.5x.png',
 	'minwiktionary' => '/static/images/project-logos/minwiktionary-1.5x.png',
 	'miwiktionary' => '/static/images/project-logos/miwiktionary-1.5x.png', // T150618
 	'mlwiktionary' => '/static/images/project-logos/mlwiktionary-1.5x.png', // T150618
@@ -2261,6 +2264,7 @@ function wmfGetVariantSettings() {
 	'kywiktionary' => '/static/images/project-logos/kywiktionary-2x.png', // T150618
 	'liwiktionary' => '/static/images/project-logos/liwiktionary-2x.png', // T150618
 	'lvwiktionary' => '/static/images/project-logos/lvwiktionary-2x.png', // T150618
+	'niawiktionary' => '/static/images/project-logos/niawiktionary-2x.png',
 	'minwiktionary' => '/static/images/project-logos/minwiktionary-2x.png',
 	'miwiktionary' => '/static/images/project-logos/miwiktionary-2x.png', // T150618
 	'mlwiktionary' => '/static/images/project-logos/mlwiktionary-2x.png', // T150618
