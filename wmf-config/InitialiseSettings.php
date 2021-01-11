@@ -20934,6 +20934,7 @@ function wmfGetVariantSettings() {
 		'species',
 		'wikidata',
 		'wikimania',
+		'sources',
 	],
 	'commonswiki' => [
 		'commons',
@@ -20942,6 +20943,7 @@ function wmfGetVariantSettings() {
 		'species',
 		'wikidata',
 		'wikimania',
+		'sources',
 	],
 	'testwikidatawiki' => [
 		'commons',
@@ -20952,6 +20954,7 @@ function wmfGetVariantSettings() {
 		'test2',
 		'testwikidata',
 		'testcommons',
+		'sources',
 	],
 ],
 
@@ -20963,6 +20966,7 @@ function wmfGetVariantSettings() {
 		'species',
 		'wikidata',
 		'wikimania',
+		'sources',
 	],
 	'wikidataclient-test' => [
 		'commons',
@@ -20973,6 +20977,7 @@ function wmfGetVariantSettings() {
 		'test2',
 		'testwikidata',
 		'testcommons',
+		'sources',
 	],
 ],
 
