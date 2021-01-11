@@ -27674,8 +27674,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgCirrusSearchSanityCheck' => [
-	'default' => true,
-	'wikidatawiki' => false, // Temp. T239931
+	'default' => true
 ],
 
 'wgCirrusSearchConnectionAttempts' => [
