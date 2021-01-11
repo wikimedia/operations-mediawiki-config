@@ -453,6 +453,7 @@ function wmfGetVariantSettings() {
 	'nds_nlwiki' => 'Europe/Berlin',
 	'newiki' => 'Asia/Kathmandu', // T244205
 	'ngwikimedia' => 'Africa/Lagos', // T240771
+	'niawiki' => 'Asia/Jakarta',
 	'nlwiki' => 'Europe/Berlin',
 	'nlwikimedia' => 'Europe/Berlin',
 	'nlwikibooks' => 'Europe/Berlin',
@@ -765,6 +766,7 @@ function wmfGetVariantSettings() {
 	'ndswiki' => '/static/images/project-logos/ndswiki.png', // T51125
 	'newiki' => '/static/images/project-logos/newiki.png', // T139240
 	'newwiki' => '/static/images/project-logos/newwiki.png', // T42285
+	'niawiki' => '/static/images/project-logos/niawiki.png',
 	'nlwiki' => '/static/images/project-logos/nlwiki.png',
 	'nnwiki' => '/static/images/project-logos/nnwiki.png',
 	'novwiki' => '/static/images/project-logos/novwiki.png', // T46974
@@ -1547,6 +1549,7 @@ function wmfGetVariantSettings() {
 	'ndswiki' => '/static/images/project-logos/ndswiki-1.5x.png', // T150618
 	'newiki' => '/static/images/project-logos/newiki-1.5x.png', // T139240
 	'newwiki' => '/static/images/project-logos/newwiki-1.5x.png', // T150618
+	'niawiki' => '/static/images/project-logos/niawiki-1.5x.png',
 	'nlwiki' => '/static/images/project-logos/nlwiki-1.5x.png',
 	'nnwiki' => '/static/images/project-logos/nnwiki-1.5x.png', // T150618
 	'novwiki' => '/static/images/project-logos/novwiki-1.5x.png', // T150618
@@ -2104,6 +2107,7 @@ function wmfGetVariantSettings() {
 	'ndswiki' => '/static/images/project-logos/ndswiki-2x.png', // T150618
 	'newiki' => '/static/images/project-logos/newiki-2x.png', // T139240
 	'newwiki' => '/static/images/project-logos/newwiki-2x.png', // T150618
+	'niawiki' => '/static/images/project-logos/niawiki-2x.png',
 	'nlwiki' => '/static/images/project-logos/nlwiki-2x.png',
 	'nnwiki' => '/static/images/project-logos/nnwiki-2x.png', // T150618
 	'novwiki' => '/static/images/project-logos/novwiki-2x.png', // T150618
