@@ -21451,6 +21451,13 @@ function wmfGetVariantSettings() {
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		[
+			'stream' => 'eventlogging_UniversalLanguageSelector',
+			'schema_title' => 'analytics/legacy/universallanguageselector',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		/*
 		 * === Streams for testing Event Platform-based instruments ===
 		 */
@@ -21758,6 +21765,7 @@ function wmfGetVariantSettings() {
 		'eventlogging_SearchSatisfaction',
 		'eventlogging_TemplateWizard',
 		'eventlogging_Test',
+		'eventlogging_UniversalLanguageSelector',
 		'mediawiki.client.session_tick',
 		'mediawiki.mediasearch_interaction',
 		'test.instrumentation',
@@ -21795,6 +21803,7 @@ function wmfGetVariantSettings() {
 		'HomepageModule' => '/analytics/legacy/homepagemodule/1.0.0',
 		'NewcomerTask' => '/analytics/legacy/newcomertask/1.0.0',
 		'SpecialMuteSubmit' => '/analytics/legacy/specialmutesubmit/1.0.0',
+		'UniversalLanguageSelector' => '/analytics/legacy/universallanguageselector/1.0.0',
 	],
 ],
 
