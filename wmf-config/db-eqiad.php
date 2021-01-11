@@ -57,6 +57,7 @@ $wgLBFactoryConf = [
 	'apiportalwiki' => 's5',
 	'arbcom_ruwiki' => 's5',
 	'avkwiki'      => 's5',
+	'bclwiktionary' => 's5',
 	'cebwiki'      => 's5',
 	'dewiki'       => 's5',
 	'diqwiktionary' => 's5',

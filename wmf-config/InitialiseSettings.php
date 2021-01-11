@@ -302,6 +302,7 @@ function wmfGetVariantSettings() {
 	'barwiki' => 'Europe/Berlin',
 	'bat_smgwiki' => 'Europe/Vilnius',
 	'bawikibooks' => 'Asia/Yekaterinburg', // T173471
+	'bclwiktionary' => 'Asia/Manila',
 	'bdwikimedia' => 'Asia/Dhaka', // T150252
 	'be_x_oldwiki' => 'Europe/Minsk',
 	'bewiki' => 'Europe/Minsk',
@@ -889,6 +890,7 @@ function wmfGetVariantSettings() {
 	'arwiktionary' => '/static/images/project-logos/arwiktionary.png',
 	'astwiktionary' => '/static/images/project-logos/astwiktionary.png',
 	'azwiktionary' => '/static/images/project-logos/azwiktionary.png', // T45240
+	'bclwiktionary' => '/static/images/project-logos/bclwiktionary.png',
 	'bewiktionary' => '/static/images/project-logos/bewiktionary.png', // T45240
 	'bgwiktionary' => '/static/images/project-logos/bgwiktionary.png',
 	'bnwiktionary' => '/static/images/project-logos/bnwiktionary.png', // T45240
@@ -1669,6 +1671,7 @@ function wmfGetVariantSettings() {
 	'amwiktionary' => '/static/images/project-logos/amwiktionary-1.5x.png', // T150618
 	'arwiktionary' => '/static/images/project-logos/arwiktionary-1.5x.png', // T150618
 	'azwiktionary' => '/static/images/project-logos/azwiktionary-1.5x.png', // T150618
+	'bclwiktionary' => '/static/images/project-logos/bclwiktionary-1.5x.png',
 	'bewiktionary' => '/static/images/project-logos/bewiktionary-1.5x.png', // T150618
 	'bnwiktionary' => '/static/images/project-logos/bnwiktionary-1.5x.png', // T150618
 	'bswiktionary' => '/static/images/project-logos/bswiktionary-1.5x.png', // T159542
@@ -2228,6 +2231,7 @@ function wmfGetVariantSettings() {
 	'amwiktionary' => '/static/images/project-logos/amwiktionary-2x.png', // T150618
 	'arwiktionary' => '/static/images/project-logos/arwiktionary-2x.png', // T150618
 	'azwiktionary' => '/static/images/project-logos/azwiktionary-2x.png', // T150618
+	'bclwiktionary' => '/static/images/project-logos/bclwiktionary-2x.png',
 	'bewiktionary' => '/static/images/project-logos/bewiktionary-2x.png', // T150618
 	'bnwiktionary' => '/static/images/project-logos/bnwiktionary-2x.png', // T150618
 	'bswiktionary' => '/static/images/project-logos/bswiktionary-2x.png', // T159542
@@ -3567,6 +3571,7 @@ function wmfGetVariantSettings() {
 	'bawiki' => 'Википедия', // T43167
 	'bawikibooks' => 'Викидәреслек', // T173471
 	'banwiki' => 'Wikipédia',
+	'bclwiktionary' => 'Wiksyunaryo',
 	'bdwikimedia' => 'উইকিমিডিয়া বাংলাদেশ',
 	'be_x_oldwiki' => 'Вікіпэдыя',
 	'bewiki' => 'Вікіпедыя',
@@ -4111,6 +4116,7 @@ function wmfGetVariantSettings() {
 	'bawikibooks' => 'Викидәреслек', // T173471
 	'banwiki' => 'Wikipédia',
 	'bat_smgwiki' => 'Vikipedėjė',
+	'bclwiktionary' => 'Wiksyunaryo',
 	'bdwikimedia' => 'উইকিমিডিয়া_বাংলাদেশ',
 	'be_x_oldwiki' => 'Вікіпэдыя',
 	'bewiki' => 'Вікіпедыя',
