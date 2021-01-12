@@ -21442,6 +21442,13 @@ function wmfGetVariantSettings() {
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
+			'stream' => 'eventlogging_SuggestedTagsAction',
+			'schema_title' => 'analytics/legacy/suggestedtagsaction',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
 			'stream' => 'eventlogging_TemplateWizard',
 			'schema_title' => 'analytics/legacy/templatewizard',
 			'topic_prefixes' => null,
@@ -21767,6 +21774,7 @@ function wmfGetVariantSettings() {
 		'eventlogging_SpecialInvestigate',
 		'eventlogging_SpecialMuteSubmit',
 		'eventlogging_SearchSatisfaction',
+		'eventlogging_SuggestedTagsAction',
 		'eventlogging_TemplateWizard',
 		'eventlogging_Test',
 		'eventlogging_UniversalLanguageSelector',
@@ -21808,6 +21816,9 @@ function wmfGetVariantSettings() {
 		'NewcomerTask' => '/analytics/legacy/newcomertask/1.0.0',
 		'SpecialMuteSubmit' => '/analytics/legacy/specialmutesubmit/1.0.0',
 		'UniversalLanguageSelector' => '/analytics/legacy/universallanguageselector/1.0.0',
+	],
+	'testwiki' => [
+		'SuggestedTagsAction' => '/analytics/legacy/suggestedtagsaction/1.0.0',
 	],
 ],
 
