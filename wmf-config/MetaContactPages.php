@@ -227,3 +227,64 @@ $wgContactConfig['movecomsignup'] = [
 		]
 	]
 ];
+
+/**
+ * Configuration for contact form for [[:meta:Ombuds commission]]
+ *
+ * @see T271828
+ */
+
+$wgContactConfig['ombudscommission'] = [
+	'RecipientUser' => 'Ombuds commission',
+	'SenderEmail' => $wmgNotificationSender,
+	'RequireDetails' => true,
+	'IncludeIP' => false,
+	'AdditionalFields' => [
+		'CaseExplanation' => [
+			'label-message' => 'contactpage-ombudscommission-case-explanation',
+			'type' => 'textarea',
+			'rows' => 10,
+			'required' => true
+		],
+		'RelevantLinks' => [
+			'label-message' => 'contactpage-ombudscommission-relevant-links',
+			'type' => 'textarea',
+			'rows' => 10,
+			'required' => false
+		],
+		'ViolationType' => [
+			'label-message' => 'contactpage-ombudscommission-violation-type',
+			'type' => 'textarea',
+			'rows' => 10,
+			'required' => true
+		],
+		'InvolvedUsers' => [
+			'label-message' => 'contactpage-ombudscommission-involved-users',
+			'type' => 'textarea',
+			'rows' => 5,
+			'required' => false
+		],
+		'AffectedAccounts' => [
+			'label-message' => 'contactpage-ombudscommission-affected-accounts',
+			'type' => 'textarea',
+			'rows' => 5,
+			'required' => false
+		],
+		'ProposedSolution' => [
+			'label-message' => 'contactpage-ombudscommission-proposed-solution',
+			'type' => 'textarea',
+			'rows' => 10,
+			'required' => false
+		],
+		'AdditionalInformation' => [
+			'label-message' => 'contactpage-ombudscommission-additional-information',
+			'type' => 'textarea',
+			'rows' => 10,
+			'required' => false
+		],
+		'Disclaimer' => [
+			'label-message' => 'contactpage-ombudscommission-disclaimer-label',
+			'type' => 'info'
+		]
+	]
+];
