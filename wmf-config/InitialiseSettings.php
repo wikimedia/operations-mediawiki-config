@@ -5242,6 +5242,7 @@ function wmfGetVariantSettings() {
 		'generated-pp-node-count' => 'debug',
 		'GettingStarted' => 'debug',
 		'GlobalTitleFail' => [ 'sample' => 10000 ], // chad hates $wgTitle
+		'GlobalWatchlist' => 'info', // T260862
 		'goodpass' => 'debug',
 		'goodpass-priv' => 'debug',
 		'GrowthExperiments' => 'info',
@@ -24228,11 +24229,10 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
-// GlobalWatchlist extension
-// DO NOT ENABLE on production wikis yet, see T260862
-// This is only here so that InitialiseSettings-labs can override the config
+// GlobalWatchlist extension, see T260862
 'wmgUseGlobalWatchlist' => [
 	'default' => false,
+	'testwiki' => true,
 ],
 'wgGlobalWatchlistDevMode' => [
 	'default' => false,
