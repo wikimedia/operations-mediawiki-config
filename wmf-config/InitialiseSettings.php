@@ -26823,6 +26823,10 @@ function wmfGetVariantSettings() {
 	'default' => false,
 ],
 
+'wgGENewcomerTasksLinkRecommendationsEnabled' => [
+	'default' => false,
+],
+
 'wgGENewcomerTasksConfigTitle' => [
 	'default' => 'MediaWiki:NewcomerTasks.json',
 ],
