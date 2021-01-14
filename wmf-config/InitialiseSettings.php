@@ -649,7 +649,7 @@ function wmfGetVariantSettings() {
 	'eewiki' => '/static/images/project-logos/eewiki.png', // T50397
 	'elwiki' => '/static/images/project-logos/elwiki.png',
 	'emlwiki' => '/static/images/project-logos/emlwiki.png', // T100953
-	'enwiki' => '/static/images/project-logos/enwiki.png',
+	'enwiki' => '/static/images/project-logos/enwiki20.png', // T272094
 	'eowiki' => '/static/images/project-logos/eowiki.png',
 	'eswiki' => '/static/images/project-logos/eswiki.png',
 	'etwiki' => '/static/images/project-logos/etwiki.png',
