@@ -21830,7 +21830,7 @@ function wmfGetVariantSettings() {
 	'default' => [
 		'TemplateWizard' => '/analytics/legacy/templatewizard/1.0.0',
 		'HelpPanel' => '/analytics/legacy/helppanel/1.0.0',
-		'HomepageModule' => '/analytics/legacy/homepagemodule/1.0.0',
+		'HomepageModule' => '/analytics/legacy/homepagemodule/1.1.0',
 		'NewcomerTask' => '/analytics/legacy/newcomertask/1.0.0',
 		'UniversalLanguageSelector' => '/analytics/legacy/universallanguageselector/1.0.0',
 	],
