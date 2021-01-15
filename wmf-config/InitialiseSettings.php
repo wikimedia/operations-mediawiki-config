@@ -2987,7 +2987,7 @@ function wmfGetVariantSettings() {
 	'frwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-fr-20.svg',
 		'width' => 100,
-		'height' => 23,
+		'height' => 24,
 	],
 	'hewiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-he.svg',
