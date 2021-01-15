@@ -2504,6 +2504,9 @@ function wmfGetVariantSettings() {
 	'commonswiki' => '/static/images/mobile/copyright/commons.svg',
 	'mediawikiwiki' => '/static/images/mobile/copyright/mediawiki.svg',
 	'specieswiki' => '/static/images/mobile/copyright/wikispecies.svg',
+
+	// Anniversary overrides
+	'frwiki' => '/static/images/mobile/copyright/wikipedia-fr-20.svg', // T272075
 ],
 
 'wmgSiteLogoVariants' => [
@@ -2982,9 +2985,9 @@ function wmfGetVariantSettings() {
 		'height' => 13,
 	],
 	'frwiki' => [
-		'src' => '/static/images/mobile/copyright/wikipedia-tagline-fr.svg',
-		'width' => 113,
-		'height' => 13,
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-fr-20.svg',
+		'width' => 100,
+		'height' => 23,
 	],
 	'hewiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-he.svg',
