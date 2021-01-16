@@ -1839,6 +1839,10 @@ function wmfGetLabsOverrideSettings() {
 			'default' => 'available',
 		],
 
+		'-wgDiscussionTools_newtopictool' => [
+			'default' => 'available',
+		],
+
 		'-wgDiscussionTools_sourcemodetoolbar' => [
 			'default' => 'default',
 		],
