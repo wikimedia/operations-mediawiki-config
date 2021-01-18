@@ -4773,6 +4773,15 @@ function wmfGetVariantSettings() {
 	],
 	'+arbcom_ruwiki' => [
 		'АК' => NS_PROJECT, // T264430
+		'A' => NS_PROJECT, // T272292
+		'AT' => NS_PROJECT_TALK, // T272292
+		'ОА' => NS_PROJECT_TALK, // T272292
+		'T' => NS_TEMPLATE, // T272292
+		'Ш' => NS_TEMPLATE, // T272292
+		'U' => NS_USER, // T272292
+		'У' => NS_USER, // T272292
+		'UT' => NS_USER_TALK, // T272292
+		'ОУ' => NS_USER_TALK, // T272292
 	],
 	'+arwiki' => [
 		'وب' => NS_PROJECT,
