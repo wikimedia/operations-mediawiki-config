@@ -548,6 +548,7 @@ function wmfGetVariantSettings() {
 	'thwiktionary' => 'Asia/Bangkok',
 	'thwikiquote' => 'Asia/Bangkok',
 	'trwikimedia' => 'Europe/Istanbul',
+	'trwikivoyage' => 'Europe/Istanbul',
 	'tyvwiki' => 'Asia/Krasnoyarsk',
 	'ukwikivoyage' => 'Europe/Kiev',
 	'vecwiki' => 'Europe/Berlin',
@@ -1257,6 +1258,7 @@ function wmfGetVariantSettings() {
 	'pswikivoyage' => '/static/images/project-logos/pswikivoyage.png',
 	'ruwikivoyage' => '/static/images/project-logos/ruwikivoyage.png',
 	'ukwikivoyage' => '/static/images/project-logos/ukwikivoyage.png', // T110370
+	'trwikivoyage' => '/static/images/project-logos/trwikivoyage.png',
 	'viwikivoyage' => '/static/images/project-logos/viwikivoyage.png',
 	'zhwikivoyage' => '/static/images/project-logos/zhwikivoyage.png', // T61077
 
@@ -1878,6 +1880,7 @@ function wmfGetVariantSettings() {
 	'pswikivoyage' => '/static/images/project-logos/pswikivoyage-1.5x.png',
 	'ruwikivoyage' => '/static/images/project-logos/ruwikivoyage-1.5x.png', // T150618
 	'ukwikivoyage' => '/static/images/project-logos/ukwikivoyage-1.5x.png',
+	'trwikivoyage' => '/static/images/project-logos/trwikivoyage-1.5x.png',
 	'viwikivoyage' => '/static/images/project-logos/viwikivoyage-1.5x.png', // T151570
 	'zhwikivoyage' => '/static/images/project-logos/zhwikivoyage-1.5x.png', // T150618
 
@@ -2438,6 +2441,7 @@ function wmfGetVariantSettings() {
 	'pswikivoyage' => '/static/images/project-logos/pswikivoyage-2x.png',
 	'ruwikivoyage' => '/static/images/project-logos/ruwikivoyage-2x.png', // T150618
 	'ukwikivoyage' => '/static/images/project-logos/ukwikivoyage-2x.png',
+	'trwikivoyage' => '/static/images/project-logos/trwikivoyage-2x.png',
 	'viwikivoyage' => '/static/images/project-logos/viwikivoyage-2x.png', // T151570
 	'zhwikivoyage' => '/static/images/project-logos/zhwikivoyage-2x.png', // T150618
 
@@ -4530,6 +4534,7 @@ function wmfGetVariantSettings() {
 	'trwikinews' => 'Vikihaber',
 	'trwikiquote' => 'Vikisöz',
 	'trwikisource' => 'Vikikaynak', // T44721
+	'trwikivoyage' => 'Vikigezgin',
 	'trwiktionary' => 'Vikisözlük',
 	'ttwiki' => 'Википедия',
 	'ttwiktionary' => 'Викисүзлек', // T211312
