@@ -25624,31 +25624,6 @@ function wmfGetVariantSettings() {
 			'shuffleAnswersDisplay' => true,
 		],
 	],
-	'commonswiki' => [
-		// T258419
-		[
-			'name' => 'media-search-survey',
-			'type' => 'internal',
-			'layout' => 'single-answer',
-			'question' => 'wikibasemediainfo-survey-improvement-question',
-			'answers' => [
-				'wikibasemediainfo-survey-improvement-answer-positive',
-				'wikibasemediainfo-survey-improvement-answer-negative',
-				'wikibasemediainfo-survey-improvement-answer-neutral',
-			],
-			'freeformTextLabel' => 'wikibasemediainfo-survey-improvement-answer-other',
-			'shuffleAnswersDisplay' => false,
-			'enabled' => true,
-			'coverage' => 1.0,
-			'audience' => [ 'pageIds' => [ 90736687 ] ],
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-			'embedElementId' => 'mediasearch-survey',
-			'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
-		],
-	],
 	// Note: make sure the wiki also has wmgUseQuickSurveys => true
 ],
 
