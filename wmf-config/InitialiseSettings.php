@@ -10605,7 +10605,6 @@ function wmfGetVariantSettings() {
 	],
 	'+thwiki' => [
 		'autoconfirmed' => [
-			'patrol' => true, // T48154
 			'upload' => false, // T216615
 			'reupload' => false, // T216615
 		],
@@ -10615,6 +10614,10 @@ function wmfGetVariantSettings() {
 			'reupload-shared' => true,
 			'reupload-own' => true,
 			'movefile' => true,
+		],
+		'patroller' => [ // T272149
+			'patrol' => true,
+			'autopatrol' => true,
 		],
 		'user' => [ 'reupload-own' => false, ], // T216615
 		'sysop' => [ 'reupload-own' => true, ],
@@ -11787,7 +11790,7 @@ function wmfGetVariantSettings() {
 		'bureaucrat' => [ 'interface-editor' ], // T41690
 	],
 	'+thwiki' => [
-		'sysop' => [ 'uploader' ], // T216615
+		'sysop' => [ 'uploader', 'patroller' ], // T216615, T272149
 	],
 	'+ukwiki' => [
 		'sysop' => [ 'patroller', 'rollbacker', 'accountcreator', 'filemover' ], // T104034, T119636
@@ -12644,7 +12647,7 @@ function wmfGetVariantSettings() {
 		'bureaucrat' => [ 'interface-editor' ], // T41690
 	],
 	'+thwiki' => [
-		'sysop' => [ 'uploader' ], // T216615
+		'sysop' => [ 'uploader', 'patroller' ], // T216615, T272149
 	],
 	'+ukwiki' => [
 		'sysop' => [ 'patroller', 'rollbacker', 'accountcreator', 'filemover' ], // T104034, T119636
