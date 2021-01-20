@@ -1085,6 +1085,12 @@ function wmfGetLabsOverrideSettings() {
 			'enwiki' => true,
 			'bnwiki' => true,
 		],
+		'wgGENewcomerTasksLinkRecommendationsEnabled' => [
+			'default' => true,
+		],
+		'wgGELinkRecommendationsFrontendEnabled' => [
+			'default' => true,
+		],
 		'wgGEHelpPanelHelpDeskTitle' => [
 			'enwiki' => 'Wikipedia:Help_desk',
 		],
