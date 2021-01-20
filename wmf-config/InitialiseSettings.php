@@ -23609,6 +23609,7 @@ function wmfGetVariantSettings() {
 'wmgUseWikisource' => [
 	'default' => false,
 	'wikisource' => true,
+	'sourceswiki' => true,
 ],
 
 'wgMusicalNotationEnableWikibaseDataType' => [
