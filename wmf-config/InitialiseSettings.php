@@ -21403,6 +21403,13 @@ function wmfGetVariantSettings() {
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
+			'stream' => 'eventlogging_DesktopWebUIActionsTracking',
+			'schema_title' => 'analytics/legacy/desktopwebuiactionstracking',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
 			'stream' => 'eventlogging_HelpPanel',
 			'schema_title' => 'analytics/legacy/helppanel',
 			'topic_prefixes' => null,
@@ -21419,6 +21426,13 @@ function wmfGetVariantSettings() {
 		[
 			'stream' => 'eventlogging_HomepageVisit',
 			'schema_title' => 'analytics/legacy/homepagevisit',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
+			'stream' => 'eventlogging_MobileWebUIActionsTracking',
+			'schema_title' => 'analytics/legacy/mobilewebuiactionstracking',
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -21798,9 +21812,11 @@ function wmfGetVariantSettings() {
 'wgEventLoggingStreamNames' => [
 	'default' => [
 		'eventlogging_ContentTranslationAbuseFilter',
+		'eventlogging_DesktopWebUIActionsTracking',
 		'eventlogging_HelpPanel',
 		'eventlogging_HomepageModule',
 		'eventlogging_HomepageVisit',
+		'eventlogging_MobileWebUIActionsTracking',
 		'eventlogging_NewcomerTask',
 		'eventlogging_QuickSurveyInitiation',
 		'eventlogging_QuickSurveysResponses',
@@ -21854,7 +21870,9 @@ function wmfGetVariantSettings() {
 		'UniversalLanguageSelector' => '/analytics/legacy/universallanguageselector/1.0.0',
 	],
 	'testwiki' => [
+		'DesktopWebUIActionsTracking' => '/analytics/legacy/desktopwebuiactionstracking/1.0.0',
 		'HomepageVisit' => '/analytics/legacy/homepagevisit/1.0.0',
+		'MobileWebUIActionsTracking' => '/analytics/legacy/mobilewebuiactionstracking/1.0.0',
 		'ServerSideAccountCreation' => '/analytics/legacy/serversideaccountcreation/1.0.0',
 		'SpecialMuteSubmit' => '/analytics/legacy/specialmutesubmit/1.0.0',
 	],
