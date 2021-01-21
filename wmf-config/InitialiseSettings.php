@@ -14768,7 +14768,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgAbuseFilterAflFilterMigrationStage' => [
-	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD
+	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW
 ],
 
 // emergency disable: shut off filters tagging >5% of posts on a total of at least 25 posts per day
