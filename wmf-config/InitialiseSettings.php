@@ -16612,6 +16612,7 @@ function wmfGetVariantSettings() {
 	'eswikibooks' => [ 'default' => 0.30, ], // T145765
 	'metawiki' => [ 'default' => 0.30, ], // T173633
 	'mediawikiwiki' => [ 'default' => 0.30, ], // T212667
+	'ukwiki' => [ 'default' => 0.40, ], // Temporary
 ],
 'wgAbuseFilterEmergencyDisableCount' => [
 	'default' => [ 'default' => 2, ],
@@ -16621,9 +16622,11 @@ function wmfGetVariantSettings() {
 	'testcommonswiki' => [ 'default' => 25, ], // T87431
 	'metawiki' => [ 'default' => 25, ], // T173633
 	'mediawikiwiki' => [ 'default' => 25, ], // T212667
+	'ukwiki' => [ 'default' => 75, ], // Temporary
 ],
 'wgAbuseFilterEmergencyDisableAge' => [
 	'default' => [ 'default' => 86400, ],
+	'ukwiki' => [ 'default' => 180, ], // Temporary
 ],
 'wgAbuseFilterParserClass' => [
 	'default' => 'AbuseFilterCachingParser', // T156095
