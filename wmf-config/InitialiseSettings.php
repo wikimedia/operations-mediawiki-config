@@ -21878,14 +21878,12 @@ function wmfGetVariantSettings() {
 // https://phabricator.wikimedia.org/T238230
 'wgEventLoggingSchemas' => [
 	'default' => [
-		'TemplateWizard' => '/analytics/legacy/templatewizard/1.0.0',
 		'HelpPanel' => '/analytics/legacy/helppanel/1.0.0',
 		'HomepageModule' => '/analytics/legacy/homepagemodule/1.1.0',
 		'NewcomerTask' => '/analytics/legacy/newcomertask/1.0.0',
 		'QuickSurveyInitiation' => '/analytics/legacy/quicksurveyinitiation/1.0.0',
 		'QuickSurveysResponses' => '/analytics/legacy/quicksurveysresponses/1.0.0',
 		'SuggestedTagsAction' => '/analytics/legacy/suggestedtagsaction/1.0.0',
-		'UniversalLanguageSelector' => '/analytics/legacy/universallanguageselector/1.0.0',
 	],
 	'testwiki' => [
 		'DesktopWebUIActionsTracking' => '/analytics/legacy/desktopwebuiactionstracking/1.0.0',
