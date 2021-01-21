@@ -20811,6 +20811,11 @@ function wmfGetVariantSettings() {
 	'apiportalwiki' => false, // T260624
 ],
 
+'wgDiscussionToolsABTest' => [
+	'default' => false,
+	'idwiki' => 'replytool',
+],
+
 'wgDiscussionTools_newtopictool' => [
 	'default' => 'unavailable',
 ],
