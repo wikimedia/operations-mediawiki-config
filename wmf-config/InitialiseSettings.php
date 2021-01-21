@@ -15018,10 +15018,6 @@ function wmfGetVariantSettings() {
 	'default' => 'metawiki',
 ],
 
-'wgAbuseFilterAflFilterMigrationStage' => [
-	'default' => SCHEMA_COMPAT_NEW
-],
-
 // emergency disable: shut off filters tagging >5% of posts on a total of at least 25 posts per day
 'wgAbuseFilterEmergencyDisableThreshold' => [
 	'default' => [ 'default' => 0.05, ],

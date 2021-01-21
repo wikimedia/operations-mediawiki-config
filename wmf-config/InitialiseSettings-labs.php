@@ -1882,11 +1882,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true,
 		],
 
-		// T269712
-		'wgAbuseFilterAflFilterMigrationStage' => [
-			'default' => SCHEMA_COMPAT_NEW
-		],
-
 		'wmgUseStopForumSpam' => [
 			'default' => true,
 		],
