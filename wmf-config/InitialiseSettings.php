@@ -17205,6 +17205,7 @@ function wmfGetVariantSettings() {
 	'thwiktionary' => true,
 	'tlwiki' => true,
 	'trwiki' => true, // T256782
+	'trwikivoyage' => true, // T272780
 	'ukwiki' => true,
 	'urwiki' => true,
 	'zhwiki' => true,
