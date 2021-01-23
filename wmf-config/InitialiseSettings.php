@@ -989,6 +989,11 @@ function wmfGetVariantSettings() {
 		'width' => 88,
 		'height' => 21,
 	],
+	'trwikivoyage' => [ // T272776
+		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-tr.svg',
+		'width' => 90,
+		'height' => 18,
+	],
 
 	// Chapter and local user group wikis
 	'officewiki' => [
