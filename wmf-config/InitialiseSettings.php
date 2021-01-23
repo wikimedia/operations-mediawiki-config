@@ -4204,6 +4204,15 @@ function wmfGetVariantSettings() {
 		'P' => 100,
 		'A' => 106,
 	],
+	'+trwikivoyage' => [
+		'T' => NS_TALK, // T272782
+		'K' => NS_USER, // T272782
+		'VG' => NS_PROJECT, // T272782
+		'WV' => NS_PROJECT, // T272782
+		'Ş' => NS_TEMPLATE, // T272782
+		'Y' => NS_HELP, // T272782
+		'KAT' => NS_CATEGORY, // T272782
+	],
 	'+ttwiki' => [
 		'WP' => NS_PROJECT,
 		'ВП' => NS_PROJECT,
