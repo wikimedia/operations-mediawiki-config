@@ -3996,6 +3996,7 @@ function wmfGetVariantSettings() {
 	'trwikinews' => 'Vikihaber',
 	'trwikiquote' => 'Vikisöz',
 	'trwikisource' => 'Vikikaynak', // T44721
+	'trwikivoyage' => 'Vikigezgin', // T272779
 	'trwiktionary' => 'Vikisözlük',
 	'tyvwiki' => 'Википедия', // T51328
 	'uawikimedia' => 'Вікімедіа Україна',
