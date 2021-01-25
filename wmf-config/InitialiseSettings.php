@@ -15855,6 +15855,7 @@ function wmfGetVariantSettings() {
 	# Special wikis
 	'advisorywiki' => '/static/favicon/wmf.ico',
 	'arbcom_dewiki' => '/static/favicon/arbcom_dewiki.ico', // T166947
+	'arbcom_enwiki' => '/static/favicon/arbcom_enwiki.ico', // T272920
 	'arbcom_ruwiki' => '/static/favicon/arbcom_ruwiki.ico', // T264430
 	'chapcomwiki' => '/static/favicon/wmf.ico', // T41482
 	'checkuserwiki' => '/static/favicon/community.ico',
