@@ -3,6 +3,7 @@
 # See the inheritance tree to find where most settings are defined.
 
 inheritsFrom:
+  - all-labs
   - special
   - categories-rdf
   - fishbowl
