@@ -346,7 +346,6 @@ function wmfGetLabsOverrideSettings() {
 				'wfLogDBError' => 'debug', // Former $wgDBerrorLog
 				'Wikibase' => [ 'udp2log' => 'info', 'logstash' => 'warning', 'sample' => false, ],
 				'Wikibase.IdGenerator' => 'debug', // WMDE & Lucas Werkmeister T268625
-				'Wikibase.NewItemIdFormatter' => 'debug', // WMDE & Addshore T201832
 				'WikibaseQualityConstraints' => 'debug',
 				'WikimediaEvents' => 'error', // For T205754 & T208233
 				'WikitechGerritBan' => 'debug',
