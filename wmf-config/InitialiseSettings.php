@@ -16956,6 +16956,7 @@ function wmfGetVariantSettings() {
 		'*.legislation.gov.uk', // UK legislation - T265690
 		'*.irishstatutebook.ie', // Irish legislation - T267193
 		'*.artsdatabanken.no', // Norwegian knowledge base for biodiversity - T267784
+		'bidgee.id.au', // User:Bidgee's personal site - T272202
 	],
 ],
 
