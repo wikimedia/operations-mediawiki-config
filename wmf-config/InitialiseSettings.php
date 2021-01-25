@@ -20044,8 +20044,10 @@ function wmfGetVariantSettings() {
 // https://phabricator.wikimedia.org/T238230
 'wgEventLoggingSchemas' => [
 	'default' => [
+		'DesktopWebUIActionsTracking' => '/analytics/legacy/desktopwebuiactionstracking/1.0.0',
 		'HelpPanel' => '/analytics/legacy/helppanel/1.0.0',
 		'HomepageModule' => '/analytics/legacy/homepagemodule/1.1.0',
+		'MobileWebUIActionsTracking' => '/analytics/legacy/mobilewebuiactionstracking/1.0.0',
 		'NewcomerTask' => '/analytics/legacy/newcomertask/1.0.0',
 		'QuickSurveyInitiation' => '/analytics/legacy/quicksurveyinitiation/1.0.0',
 		'QuickSurveysResponses' => '/analytics/legacy/quicksurveysresponses/1.0.0',
@@ -20068,9 +20070,7 @@ function wmfGetVariantSettings() {
 		'CpuBenchmark' => '/analytics/legacy/cpubenchmark/1.0.0',
 	],
 	'testwiki' => [
-		'DesktopWebUIActionsTracking' => '/analytics/legacy/desktopwebuiactionstracking/1.0.0',
 		'HomepageVisit' => '/analytics/legacy/homepagevisit/1.0.0',
-		'MobileWebUIActionsTracking' => '/analytics/legacy/mobilewebuiactionstracking/1.0.0',
 		'ServerSideAccountCreation' => '/analytics/legacy/serversideaccountcreation/1.0.0',
 		'SpecialMuteSubmit' => '/analytics/legacy/specialmutesubmit/1.0.0',
 		// NavigationTiming extension migration: https://phabricator.wikimedia.org/T259163
