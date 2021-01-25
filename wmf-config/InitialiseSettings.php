@@ -21883,6 +21883,7 @@ function wmfGetVariantSettings() {
 		'NewcomerTask' => '/analytics/legacy/newcomertask/1.0.0',
 		'QuickSurveyInitiation' => '/analytics/legacy/quicksurveyinitiation/1.0.0',
 		'QuickSurveysResponses' => '/analytics/legacy/quicksurveysresponses/1.0.0',
+		'SpecialMuteSubmit' => '/analytics/legacy/specialmutesubmit/1.0.0',
 		'SuggestedTagsAction' => '/analytics/legacy/suggestedtagsaction/1.0.0',
 	],
 	'testwiki' => [
@@ -21890,7 +21891,6 @@ function wmfGetVariantSettings() {
 		'HomepageVisit' => '/analytics/legacy/homepagevisit/1.0.0',
 		'MobileWebUIActionsTracking' => '/analytics/legacy/mobilewebuiactionstracking/1.0.0',
 		'ServerSideAccountCreation' => '/analytics/legacy/serversideaccountcreation/1.0.0',
-		'SpecialMuteSubmit' => '/analytics/legacy/specialmutesubmit/1.0.0',
 	],
 ],
 
