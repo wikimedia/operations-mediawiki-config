@@ -22643,6 +22643,12 @@ function wmfGetVariantSettings() {
 	],
 ],
 
+// Maximum length allowed to be sent to the index from the content of media files
+'wgCirrusSearchMaxFileTextLength' => [
+	'default' => -1, // no limits by default
+	'commonswiki' => 51200, // 50kb for commons T271493
+],
+
 // Enable completion suggester on all wikis (except wikidata)
 'wgCirrusSearchUseCompletionSuggester' => [
 	'default' => 'yes',
