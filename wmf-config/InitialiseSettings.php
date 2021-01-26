@@ -21903,7 +21903,6 @@ function wmfGetVariantSettings() {
 	'commonswiki' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
 	'wikidata' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
 	'wikipedia' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
-	'enwiki' => false,
 ],
 
 'wmgUseWikimediaEvents' => [
