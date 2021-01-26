@@ -1070,8 +1070,8 @@ function wmfGetVariantSettings() {
 	],
 	'frwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-fr.svg',
-		'width' => 100,
-		'height' => 24,
+		'width' => 113,
+		'height' => 13,
 	],
 	'hewiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-he.svg',
