@@ -21656,6 +21656,168 @@ function wmfGetVariantSettings() {
 	],
 ],
 
+'wgMediaInfoMediaSearchConceptChipsSimpleHeuristics' => [
+	'commonswiki' => [ [
+		'must not' => [ [
+			// instance of Wikipedia disambiguation pages
+			'property' => 'P31',
+			'item' => 'Q4167410',
+		] ],
+		'conditions' => [
+			[
+				'should' => [
+					[
+						// instance of tourist attraction
+						'property' => 'P31',
+						'item' => 'Q570116',
+					], [
+						// instance of landmark
+						'property' => 'P31',
+						'item' => 'Q2319498',
+					], [
+						// instance of mountain range
+						'property' => 'P31',
+						'item' => 'Q46831',
+					]
+				],
+				'result' => [ 'P276', 'P131', 'P17' ],
+			],
+			[
+				'must' => [ [
+					// owned by
+					'property' => 'P127',
+				] ],
+				'result' => [ 'P127' ],
+			],
+			[
+				'must' => [ [
+					// notable work
+					'property' => 'P800',
+				] ],
+				'result' => [ 'P800' ],
+			],
+			[
+				'must' => [ [
+					// creator
+					'property' => 'P170',
+				] ],
+				'result' => [ 'P170' ],
+			],
+			[
+				'must' => [ [
+					// has effect
+					'property' => 'P1542',
+				] ],
+				'result' => [ 'P1542' ],
+			],
+			[
+				'should' => [
+					[
+						// instance of fictional character
+						'property' => 'P31',
+						'item' => 'Q95074',
+					], [
+						// instance of literary character
+						'property' => 'P31',
+						'item' => 'Q3658341',
+					], [
+						// instance of film character
+						'property' => 'P31',
+						'item' => 'Q15773347',
+					], [
+						// instance of television character
+						'property' => 'P31',
+						'item' => 'Q15773317',
+					], [
+						// instance of animated character
+						'property' => 'P31',
+						'item' => 'Q15711870',
+					], [
+						// instance of theatrical character
+						'property' => 'P31',
+						'item' => 'Q3375722',
+					]
+				],
+				'result' => [
+					// performer
+					'P175',
+					// voice actor
+					'P725',
+					// present in work
+					'P1441',
+				],
+			],
+			[
+				'must' => [ [
+					// parent astronomical body
+					'property' => 'P397',
+				] ],
+				'result' => [ 'P397' ],
+			],
+			[
+				'must' => [ [
+					// said to be the same as
+					'property' => 'P460',
+				] ],
+				'result' => [ 'P460' ],
+			],
+			[
+				'must' => [ [
+					// member of sports team
+					'property' => 'P54',
+				] ],
+				'result' => [ 'P54' ],
+			],
+			[
+				'must' => [ [
+					// member of
+					'property' => 'P463',
+				] ],
+				'result' => [ 'P463' ],
+			],
+			[
+				'must' => [ [
+					// part of
+					'property' => 'P361',
+				] ],
+				'result' => [ 'P361' ],
+			],
+			[
+				'must' => [ [
+					// has part
+					'property' => 'P527',
+				] ],
+				'must not' => [
+					[
+						// not instance of rapid transit ('has part' has line letters & numbers...)
+						'property' => 'P31',
+						'item' => 'Q5503',
+					], [
+						// not instance of urbain rail transit
+						'property' => 'P31',
+						'item' => 'Q3491904',
+					], [
+						// not instance of railway network
+						'property' => 'P31',
+						'item' => 'Q2678338',
+					], [
+						// not instance of public transport network
+						'property' => 'P31',
+						'item' => 'Q18325841',
+					],
+				],
+				'result' => [ 'P527' ],
+			],
+			[
+				'result' => [
+					// subclass of entities
+					'P279',
+				]
+			],
+		] ],
+	],
+],
+
 'wgMediaInfoMediaSearchConceptChipsHeuristics' => [
 	'commonswiki' => [ [
 		'must not' => [ [
