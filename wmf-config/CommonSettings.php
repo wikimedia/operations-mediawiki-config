@@ -208,7 +208,10 @@ list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 
 # Try configuration cache
 $confCacheFileName = "conf2-$wgDBname.json";
-$confActualMtime = filemtime( "$wmfConfigDir/InitialiseSettings.php" );
+$confActualMtime = max(
+	filemtime( "$wmfConfigDir/InitialiseSettings.php" ),
+	filemtime( "$wmfConfigDir/logos.php" )
+);
 $globals = Wikimedia\MWConfig\MWConfigCacheGenerator::readFromStaticCache(
 	$wgCacheDirectory . '/' . $confCacheFileName, $confActualMtime
 );
