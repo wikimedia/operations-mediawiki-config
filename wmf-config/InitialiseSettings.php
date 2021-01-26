@@ -19530,10 +19530,28 @@ function wmfGetVariantSettings() {
 		 * implicit topic prefixing by the EventStreamConfig extension.
 		 */
 		[
+			'stream' => 'eventlogging_CentralNoticeTiming',
+			'schema_title' => 'analytics/legacy/centralnoticetiming',
+			'topic_prefixes' => null,
+			// TODO: should canary events be enabled?
+			// https://phabricator.wikimedia.org/T271208#6778241
+			'canary_events_enabled' => false,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
 			'stream' => 'eventlogging_ContentTranslationAbuseFilter',
 			'schema_title' => 'analytics/legacy/contenttranslationabusefilter',
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
+			'stream' => 'eventlogging_CpuBenchmark',
+			'schema_title' => 'analytics/legacy/cpubenchmark',
+			'topic_prefixes' => null,
+			// TODO: should canary events be enabled?
+			// https://phabricator.wikimedia.org/T271208#6778241
+			'canary_events_enabled' => false,
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
@@ -19572,6 +19590,15 @@ function wmfGetVariantSettings() {
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
+			'stream' => 'eventlogging_NavigationTiming',
+			'schema_title' => 'analytics/legacy/navigationtiming',
+			'topic_prefixes' => null,
+			// TODO: should canary events be enabled?
+			// https://phabricator.wikimedia.org/T271208#6778241
+			'canary_events_enabled' => false,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
 			'stream' => 'eventlogging_NewcomerTask',
 			'schema_title' => 'analytics/legacy/newcomertask',
 			'topic_prefixes' => null,
@@ -19590,6 +19617,24 @@ function wmfGetVariantSettings() {
 			'schema_title' => 'analytics/legacy/quicksurveysresponses',
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
+			'stream' => 'eventlogging_ResourceTiming',
+			'schema_title' => 'analytics/legacy/resourcetiming',
+			'topic_prefixes' => null,
+			// TODO: should canary events be enabled?
+			// https://phabricator.wikimedia.org/T271208#6778241
+			'canary_events_enabled' => false,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
+			'stream' => 'eventlogging_SaveTiming',
+			'schema_title' => 'analytics/legacy/savetiming',
+			'topic_prefixes' => null,
+			// TODO: should canary events be enabled?
+			// https://phabricator.wikimedia.org/T271208#6778241
+			'canary_events_enabled' => false,
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
@@ -19945,15 +19990,20 @@ function wmfGetVariantSettings() {
 // above for each of the stream names listed here.
 'wgEventLoggingStreamNames' => [
 	'default' => [
+		'eventlogging_CentralNoticeTiming',
 		'eventlogging_ContentTranslationAbuseFilter',
+		'eventlogging_CpuBenchmark',
 		'eventlogging_DesktopWebUIActionsTracking',
 		'eventlogging_HelpPanel',
 		'eventlogging_HomepageModule',
 		'eventlogging_HomepageVisit',
 		'eventlogging_MobileWebUIActionsTracking',
+		'eventlogging_NavigationTiming',
 		'eventlogging_NewcomerTask',
 		'eventlogging_QuickSurveyInitiation',
 		'eventlogging_QuickSurveysResponses',
+		'eventlogging_ResourceTiming',
+		'eventlogging_SaveTiming',
 		'eventlogging_ServerSideAccountCreation',
 		'eventlogging_SpecialInvestigate',
 		'eventlogging_SpecialMuteSubmit',
@@ -20007,6 +20057,12 @@ function wmfGetVariantSettings() {
 		'MobileWebUIActionsTracking' => '/analytics/legacy/mobilewebuiactionstracking/1.0.0',
 		'ServerSideAccountCreation' => '/analytics/legacy/serversideaccountcreation/1.0.0',
 		'SpecialMuteSubmit' => '/analytics/legacy/specialmutesubmit/1.0.0',
+		// NavigationTiming extension migration: https://phabricator.wikimedia.org/T259163
+		'NavigationTiming' => '/analytics/legacy/navigationtiming/1.0.0',
+		'ResourceTiming' => '/analytics/legacy/resourcetiming/1.0.0',
+		'SaveTiming' => '/analytics/legacy/savetiming/1.0.0',
+		'CentralNoticeTiming' => '/analytics/legacy/centralnoticetiming/1.0.0',
+		'CpuBenchmark' => '/analytics/legacy/cpubenchmark/1.0.0',
 	],
 ],
 
