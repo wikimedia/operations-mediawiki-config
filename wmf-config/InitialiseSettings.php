@@ -19562,6 +19562,33 @@ function wmfGetVariantSettings() {
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
+			'stream' => 'eventlogging_ElementTiming',
+			'schema_title' => 'analytics/legacy/elementtiming',
+			'topic_prefixes' => null,
+			// TODO: should canary events be enabled?
+			// https://phabricator.wikimedia.org/T271208#6778241
+			'canary_events_enabled' => false,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
+			'stream' => 'eventlogging_FeaturePolicyViolation',
+			'schema_title' => 'analytics/legacy/featurepolicyviolation',
+			'topic_prefixes' => null,
+			// TODO: should canary events be enabled?
+			// https://phabricator.wikimedia.org/T271208#6778241
+			'canary_events_enabled' => false,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
+			'stream' => 'eventlogging_FirstInputTiming',
+			'schema_title' => 'analytics/legacy/firstinputtiming',
+			'topic_prefixes' => null,
+			// TODO: should canary events be enabled?
+			// https://phabricator.wikimedia.org/T271208#6778241
+			'canary_events_enabled' => false,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
 			'stream' => 'eventlogging_HelpPanel',
 			'schema_title' => 'analytics/legacy/helppanel',
 			'topic_prefixes' => null,
@@ -19580,6 +19607,15 @@ function wmfGetVariantSettings() {
 			'schema_title' => 'analytics/legacy/homepagevisit',
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
+			'stream' => 'eventlogging_LayoutShift',
+			'schema_title' => 'analytics/legacy/layoutshift',
+			'topic_prefixes' => null,
+			// TODO: should canary events be enabled?
+			// https://phabricator.wikimedia.org/T271208#6778241
+			'canary_events_enabled' => false,
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
@@ -19606,6 +19642,15 @@ function wmfGetVariantSettings() {
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
+			'stream' => 'eventlogging_PaintTiming',
+			'schema_title' => 'analytics/legacy/painttiming',
+			'topic_prefixes' => null,
+			// TODO: should canary events be enabled?
+			// https://phabricator.wikimedia.org/T271208#6778241
+			'canary_events_enabled' => false,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
 			'stream' => 'eventlogging_QuickSurveyInitiation',
 			'schema_title' => 'analytics/legacy/quicksurveyinitiation',
 			'topic_prefixes' => null,
@@ -19622,6 +19667,15 @@ function wmfGetVariantSettings() {
 		[
 			'stream' => 'eventlogging_ResourceTiming',
 			'schema_title' => 'analytics/legacy/resourcetiming',
+			'topic_prefixes' => null,
+			// TODO: should canary events be enabled?
+			// https://phabricator.wikimedia.org/T271208#6778241
+			'canary_events_enabled' => false,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
+			'stream' => 'eventlogging_RUMSpeedIndex',
+			'schema_title' => 'analytics/legacy/rumspeedindex',
 			'topic_prefixes' => null,
 			// TODO: should canary events be enabled?
 			// https://phabricator.wikimedia.org/T271208#6778241
@@ -19994,15 +20048,21 @@ function wmfGetVariantSettings() {
 		'eventlogging_ContentTranslationAbuseFilter',
 		'eventlogging_CpuBenchmark',
 		'eventlogging_DesktopWebUIActionsTracking',
+		'eventlogging_ElementTiming',
+		'eventlogging_FeaturePolicyViolation',
+		'eventlogging_FirstInputTiming',
 		'eventlogging_HelpPanel',
 		'eventlogging_HomepageModule',
 		'eventlogging_HomepageVisit',
+		'eventlogging_LayoutShift',
 		'eventlogging_MobileWebUIActionsTracking',
 		'eventlogging_NavigationTiming',
 		'eventlogging_NewcomerTask',
+		'eventlogging_PaintTiming',
 		'eventlogging_QuickSurveyInitiation',
 		'eventlogging_QuickSurveysResponses',
 		'eventlogging_ResourceTiming',
+		'eventlogging_RUMSpeedIndex',
 		'eventlogging_SaveTiming',
 		'eventlogging_ServerSideAccountCreation',
 		'eventlogging_SpecialInvestigate',
@@ -20079,6 +20139,12 @@ function wmfGetVariantSettings() {
 		'SaveTiming' => '/analytics/legacy/savetiming/1.0.0',
 		'CentralNoticeTiming' => '/analytics/legacy/centralnoticetiming/1.0.0',
 		'CpuBenchmark' => '/analytics/legacy/cpubenchmark/1.0.0',
+		'RUMSpeedIndex' => '/analytics/legacy/rumspeedindex/1.0.0',
+		'PaintTiming' => '/analytics/legacy/painttiming/1.0.0',
+		'ElementTiming' => '/analytics/legacy/elementtiming/1.0.0',
+		'LayoutShift' => '/analytics/legacy/layoutshift/1.0.0',
+		'FeaturePolicyViolation' => '/analytics/legacy/featurepolicyviolation/1.0.0',
+		'FirstInputTiming' => '/analytics/legacy/firstinputtiming/1.0.0',
 	],
 ],
 
