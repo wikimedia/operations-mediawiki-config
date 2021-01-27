@@ -275,7 +275,8 @@ Wikipedia:
         comment_2x:  T150618
 
     cswiki:
-        variant: cswiki-birthday
+        commons: File:Wikipedia-logo-v2-cs.svg
+        variant: cswiki
         comment_1_5x:  T130392
         comment_2x:  T130392
 
