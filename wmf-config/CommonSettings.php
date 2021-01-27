@@ -845,6 +845,12 @@ if ( $wmgUseCORS ) {
 
 wfLoadSkins( [ 'Vector', 'MonoBook', 'Modern', 'CologneBlue', 'Timeless' ] );
 
+// Skin Configuration
+// Vector.
+if ( $wgVectorMaxWidthOptions && isset( $wmgVectorMaxWidthOptionsNamespaces ) ) {
+	$wgVectorMaxWidthOptions['exclude']['namespaces'] = $wmgVectorMaxWidthOptionsNamespaces;
+}
+
 // Grants and rights
 // Note these have to be visible on all wikis, not just the ones the
 // extension is enabled on, for proper display in OAuth pages and such.
