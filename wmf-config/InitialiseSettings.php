@@ -20051,6 +20051,22 @@ function wmfGetVariantSettings() {
 		'QuickSurveysResponses' => '/analytics/legacy/quicksurveysresponses/1.0.0',
 		'SuggestedTagsAction' => '/analytics/legacy/suggestedtagsaction/1.0.0',
 	],
+	'+group0' => [
+		// NavigationTiming extension migration: https://phabricator.wikimedia.org/T259163
+		'NavigationTiming' => '/analytics/legacy/navigationtiming/1.0.0',
+		'ResourceTiming' => '/analytics/legacy/resourcetiming/1.0.0',
+		'SaveTiming' => '/analytics/legacy/savetiming/1.0.0',
+		'CentralNoticeTiming' => '/analytics/legacy/centralnoticetiming/1.0.0',
+		'CpuBenchmark' => '/analytics/legacy/cpubenchmark/1.0.0',
+	],
+	'+group1' => [
+		// NavigationTiming extension migration: https://phabricator.wikimedia.org/T259163
+		'NavigationTiming' => '/analytics/legacy/navigationtiming/1.0.0',
+		'ResourceTiming' => '/analytics/legacy/resourcetiming/1.0.0',
+		'SaveTiming' => '/analytics/legacy/savetiming/1.0.0',
+		'CentralNoticeTiming' => '/analytics/legacy/centralnoticetiming/1.0.0',
+		'CpuBenchmark' => '/analytics/legacy/cpubenchmark/1.0.0',
+	],
 	'testwiki' => [
 		'DesktopWebUIActionsTracking' => '/analytics/legacy/desktopwebuiactionstracking/1.0.0',
 		'HomepageVisit' => '/analytics/legacy/homepagevisit/1.0.0',
