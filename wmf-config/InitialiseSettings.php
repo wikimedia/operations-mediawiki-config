@@ -25288,6 +25288,7 @@ function wmfGetVariantSettings() {
 
 'wgGEHomepageManualAssignmentMentorsList' => [
 	'default' => null,
+	'arwiki' => 'ويكيبيديا:مشروع فريق النمو/قائمة مشروع المعرفة', // T273060
 	'cswiki' => 'Wikipedie:Potřebuji pomoc/Mentoři/Manuální',
 ],
 
