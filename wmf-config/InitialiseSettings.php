@@ -7585,6 +7585,42 @@ function wmfGetVariantSettings() {
 	'testwiki' => true,
 ],
 
+'wgVectorMaxWidthOptionsNamespaces' => [
+	'default' => [
+		"exclude" => [
+			"mainpage" => false,
+			"querystring" => [
+				"action" => "history",
+				"diff" => "*",
+			],
+			"namespaces" => [
+				NS_SPECIAL,
+				NS_CATEGORY,
+			],
+		],
+		"include" => [
+			"Special:Preferences",
+		],
+	],
+	// T260091
+	'wikisource' => [
+		"exclude" => [
+			"mainpage" => false,
+			"querystring" => [
+				"action" => "history",
+				"diff" => "*",
+			],
+			"namespaces" => [
+				NS_SPECIAL,
+				NS_CATEGORY,
+				104
+			],
+		],
+		"include" => [
+			"Special:Preferences"
+		],
+	],
+],
 'wgVectorShowSkinPreferences' => [
 	// T254228
 	'default' => true,
