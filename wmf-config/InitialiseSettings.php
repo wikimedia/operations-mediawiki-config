@@ -22329,58 +22329,11 @@ function wmfGetVariantSettings() {
 	'ruwiki' => 'mlr-1024rs',
 	'svwiki' => 'mlr-1024rs',
 	'viwiki' => 'mlr-1024rs',
-	'zhwiki' => 'classic', // TODO: Switch back to 'mlr-1024rs',
-	// TODO: remove the followings once we have BM25 enabled everywhere
-	// Uses the lang tag, list of spaceless languages
-	// (see https://www.mediawiki.org/wiki/User:TJones_(WMF)/Notes/Spaceless_Writing_Systems_and_Wiki-Projects)
-	"bo" => "classic",
-	"dz" => "classic",
-	"gan" => "classic",
-	"ja" => "classic",
-	"km" => "classic",
-	"lo" => "classic",
-	"my" => "classic",
-	"th" => "classic",
-	"wuu" => "classic",
-	"zh-classical" => "classic", // should be deprecated in favor of lzh
-	"lzh" => "classic", // zh-classical
-	"zh-yue" => "classic", // should be deprecated in favor of yue
-	"yue" => "classic", // zh_yue
-	// This list below are languages that may use use mixed scripts
-	"bug" => "classic",
-	"cdo" => "classic",
-	"cr" => "classic",
-	"hak" => "classic",
-	"jv" => "classic",
-	"zh-min-nan" => "classic", // needs to support deprecated language code (e.g. zh_min_nanwikisource)
-	"nan" => "classic", // e.g. zh_min_nan
+	'zhwiki' => 'wsum_inclinks', // TODO: Switch back to 'mlr-1024rs',
 ],
 
 'wgCirrusSearchFullTextQueryBuilderProfile' => [
 	'default' => 'perfield_builder',
-	// Uses the lang tag, list of spaceless languages
-	// (see https://www.mediawiki.org/wiki/User:TJones_(WMF)/Notes/Spaceless_Writing_Systems_and_Wiki-Projects)
-	"bo" => "default",
-	"dz" => "default",
-	"gan" => "default",
-	"ja" => "default",
-	"km" => "default",
-	"lo" => "default",
-	"my" => "default",
-	"th" => "default",
-	"wuu" => "default",
-	"zh-classical" => "default", // should be deprecated in favor of lzh
-	"lzh" => "default", // zh-classical
-	"zh-yue" => "default", // should be deprecated in favor of yue
-	"yue" => "default", // zh_yue
-	// This list below are languages that may use use mixed scripts
-	"bug" => "default",
-	"cdo" => "default",
-	"cr" => "default",
-	"hak" => "default",
-	"jv" => "default",
-	"zh-min-nan" => "default", // needs to support deprecated language code (e.g. zh_min_nanwikisource)
-	"nan" => "default", // e.g. zh_min_nan
 ],
 
 // Enable crossprocess search (side bar)
@@ -22885,23 +22838,6 @@ function wmfGetVariantSettings() {
 					],
 				],
 			],
-		],
-		// T266027
-		'T266027_perfield_builder' => [
-			'buckets' => [
-				'control' => [
-					'trigger' => 'control',
-					// wgCirrusSearchFullTextQueryBuilderProfile = 'default'
-					// wgCirrusSearchRescoreProfile => 'classic'
-				],
-				'perfield' => [
-					'trigger' => 'perfield',
-					'globals' => [
-						'wgCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
-						'wgCirrusSearchRescoreProfile' => 'wsum_inclinks'
-					]
-				]
-			]
 		],
 		# T246947
 		'glent_m0' => [
