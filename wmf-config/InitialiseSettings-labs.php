@@ -519,6 +519,9 @@ function wmfGetLabsOverrideSettings() {
 		'wgVectorDefaultSkinVersionForNewAccounts' => [
 			'default' => '2', // Latest Vector
 		],
+		'wgVectorLanguageInHeader' => [
+			'default' => true,
+		],
 
 		'wmgCommonsMetadataForceRecalculate' => [
 			'default' => true,
