@@ -1860,7 +1860,7 @@ function wmfGetLabsOverrideSettings() {
 		],
 
 		'wmgUseStopForumSpam' => [
-			'default' => false,
+			'default' => true,
 		],
 	];
 } # wmflLabsSettings()
