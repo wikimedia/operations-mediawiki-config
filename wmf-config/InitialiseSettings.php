@@ -13236,6 +13236,10 @@ function wmfGetVariantSettings() {
 ],
 
 # ROBOT @{
+'wgDefaultRobotPolicy' => [
+	'cawikimedia' => 'noindex,nofollow', // T272871
+],
+
 'wgNamespaceRobotPolicies' => [
 	'ckbwiki' => [
 		NS_TALK => 'noindex,follow',
