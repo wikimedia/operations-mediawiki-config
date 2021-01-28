@@ -3359,6 +3359,7 @@ function wmfGetVariantSettings() {
 		'WN' => NS_PROJECT,
 	],
 	'+frwikisource' => [
+		'WS' => NS_PROJECT, // T271939
 		'Author' => 102,
 		'Author_talk' => 103,
 	],
