@@ -132,6 +132,11 @@ function wmfSetupTideways( $options ) {
 				global $wmgXhguiDBuser, $wmgXhguiDBpassword;
 
 				$data = [ 'profile' => tideways_xhprof_disable() ];
+				if ( !isset( $data['profile']['main()'] ) ) {
+					// There isn't valid profile data to save (T271865).
+					return;
+				}
+
 				$sec  = $_SERVER['REQUEST_TIME'];
 				$usec = $_SERVER['REQUEST_TIME_FLOAT'] - $sec;
 
