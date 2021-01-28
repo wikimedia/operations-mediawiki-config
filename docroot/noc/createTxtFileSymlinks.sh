@@ -27,6 +27,7 @@ mwconfig_files_txt=(
 	LabsServices.php
 	liquidthreads.php
 	logging.php
+	logos.php
 	mc.php
 	mc-labs.php
 	missing.php
