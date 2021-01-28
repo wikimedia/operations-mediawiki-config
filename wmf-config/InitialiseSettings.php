@@ -20122,7 +20122,7 @@ function wmfGetVariantSettings() {
 	'group1' => true,
 ],
 
-// EventLogging will POST events to this URI.
+// EventLogging JavaScript client code will POST events to this URI.
 'wgEventLoggingServiceUri' => [
 	'default' => 'https://intake-analytics.wikimedia.org/v1/events?hasty=true',
 ],
@@ -20148,39 +20148,24 @@ function wmfGetVariantSettings() {
 		'QuickSurveyInitiation' => '/analytics/legacy/quicksurveyinitiation/1.0.0',
 		'QuickSurveysResponses' => '/analytics/legacy/quicksurveysresponses/1.0.0',
 		'SuggestedTagsAction' => '/analytics/legacy/suggestedtagsaction/1.0.0',
-	],
-	'+group0' => [
-		// NavigationTiming extension migration: https://phabricator.wikimedia.org/T259163
-		'NavigationTiming' => '/analytics/legacy/navigationtiming/1.0.0',
-		'ResourceTiming' => '/analytics/legacy/resourcetiming/1.0.0',
-		'SaveTiming' => '/analytics/legacy/savetiming/1.0.0',
+
+		// NavigationTiming extension legacy schemas
 		'CentralNoticeTiming' => '/analytics/legacy/centralnoticetiming/1.0.0',
 		'CpuBenchmark' => '/analytics/legacy/cpubenchmark/1.0.0',
-	],
-	'+group1' => [
-		// NavigationTiming extension migration: https://phabricator.wikimedia.org/T259163
+		'ElementTiming' => '/analytics/legacy/elementtiming/1.0.0',
+		'FeaturePolicyViolation' => '/analytics/legacy/featurepolicyviolation/1.0.0',
+		'FirstInputTiming' => '/analytics/legacy/firstinputtiming/1.0.0',
+		'LayoutShift' => '/analytics/legacy/layoutshift/1.0.0',
 		'NavigationTiming' => '/analytics/legacy/navigationtiming/1.0.0',
+		'PaintTiming' => '/analytics/legacy/painttiming/1.0.0',
 		'ResourceTiming' => '/analytics/legacy/resourcetiming/1.0.0',
+		'RUMSpeedIndex' => '/analytics/legacy/rumspeedindex/1.0.0',
 		'SaveTiming' => '/analytics/legacy/savetiming/1.0.0',
-		'CentralNoticeTiming' => '/analytics/legacy/centralnoticetiming/1.0.0',
-		'CpuBenchmark' => '/analytics/legacy/cpubenchmark/1.0.0',
 	],
 	'testwiki' => [
 		'HomepageVisit' => '/analytics/legacy/homepagevisit/1.0.0',
 		'ServerSideAccountCreation' => '/analytics/legacy/serversideaccountcreation/1.0.0',
 		'SpecialMuteSubmit' => '/analytics/legacy/specialmutesubmit/1.0.0',
-		// NavigationTiming extension migration: https://phabricator.wikimedia.org/T259163
-		'NavigationTiming' => '/analytics/legacy/navigationtiming/1.0.0',
-		'ResourceTiming' => '/analytics/legacy/resourcetiming/1.0.0',
-		'SaveTiming' => '/analytics/legacy/savetiming/1.0.0',
-		'CentralNoticeTiming' => '/analytics/legacy/centralnoticetiming/1.0.0',
-		'CpuBenchmark' => '/analytics/legacy/cpubenchmark/1.0.0',
-		'RUMSpeedIndex' => '/analytics/legacy/rumspeedindex/1.0.0',
-		'PaintTiming' => '/analytics/legacy/painttiming/1.0.0',
-		'ElementTiming' => '/analytics/legacy/elementtiming/1.0.0',
-		'LayoutShift' => '/analytics/legacy/layoutshift/1.0.0',
-		'FeaturePolicyViolation' => '/analytics/legacy/featurepolicyviolation/1.0.0',
-		'FirstInputTiming' => '/analytics/legacy/firstinputtiming/1.0.0',
 	],
 ],
 
