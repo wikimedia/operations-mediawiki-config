@@ -7585,18 +7585,6 @@ function wmfGetVariantSettings() {
 	'testwiki' => true,
 ],
 
-'wmgVectorMaxWidthOptionsNamespaces' => [
-	'default' => [
-		NS_SPECIAL,
-		NS_CATEGORY
-	],
-	// T260091
-	'wikisource' => [
-		NS_SPECIAL,
-		NS_CATEGORY,
-		104
-	]
-],
 'wgVectorShowSkinPreferences' => [
 	// T254228
 	'default' => true,
