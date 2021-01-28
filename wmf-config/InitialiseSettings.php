@@ -20005,6 +20005,7 @@ function wmfGetVariantSettings() {
 		[
 			'stream' => 'mediawiki.revision-recommendation-create',
 			'schema_title' => 'mediawiki/revision/recommendation-create',
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-main',
 		],
 
