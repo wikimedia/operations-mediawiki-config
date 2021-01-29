@@ -219,8 +219,8 @@ def main():
         validate(data)
         generate(data)
     elif args.action == "update":
-        validate(data)
         update(data, args.wiki)
+        validate(data)
     elif args.action == "validate":
         validate(data)
 
