@@ -1966,7 +1966,7 @@ function wmfGetVariantSettings() {
 	'ocwiktionary' => 'Wikiccionari',
 	'officewiki' => 'Wikimedia Office',
 	'olowiki' => 'Wikipedii', // T146612
-	'ombudsmenwiki' => 'Ombudsmen Wiki',
+	'ombudsmenwiki' => 'Ombuds Wiki',
 	'orwiki' => 'ଉଇକିପିଡ଼ିଆ',
 	'orwikisource' => 'ଉଇକିପାଠାଗାର', // T73875
 	'orwiktionary' => 'ଉଇକିଅଭିଧାନ', // T94142
