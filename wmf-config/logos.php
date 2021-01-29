@@ -1361,6 +1361,7 @@ return [
 	'incubatorwiki' => '/static/images/project-logos/incubatorwiki-1.5x.png', // T230122
 	'metawiki' => '/static/images/project-logos/metawiki-1.5x.png',
 	'officewiki' => '/static/images/project-logos/officewiki-1.5x.png',
+	'ombudsmenwiki' => '/static/images/project-logos/ombudsmenwiki-1.5x.png',
 	'specieswiki' => '/static/images/project-logos/specieswiki-1.5x.png', // T230113
 	'sysop_itwiki' => '/static/images/project-logos/sysop_itwiki-1.5x.png', // T256545
 	'test2wiki' => '/static/images/project-logos/test2wiki-1.5x.png',
@@ -1923,6 +1924,7 @@ return [
 	'incubatorwiki' => '/static/images/project-logos/incubatorwiki-2x.png', // T230122
 	'metawiki' => '/static/images/project-logos/metawiki-2x.png',
 	'officewiki' => '/static/images/project-logos/officewiki-2x.png',
+	'ombudsmenwiki' => '/static/images/project-logos/ombudsmenwiki-2x.png',
 	'specieswiki' => '/static/images/project-logos/specieswiki-2x.png', // T230113
 	'sysop_itwiki' => '/static/images/project-logos/sysop_itwiki-2x.png', // T256545
 	'test2wiki' => '/static/images/project-logos/test2wiki-2x.png',

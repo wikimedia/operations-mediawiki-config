@@ -3117,9 +3117,8 @@ Wikivoyage:
     officewiki:
 
     ombudsmenwiki:
+        commons: File:Wikimedia Ombuds logo.svg
         comment:  T50379
-        no_1_5x: true
-        no_2x: true
 
     otrs_wikiwiki:
         no_1_5x: true
