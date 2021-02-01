@@ -18960,14 +18960,8 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'wikipedia' => true, // T266303
 	'enwiki' => false,
-	'ganwiki' => false,
 	'dewiki' => false,
-	'iuwiki' => false,
-	'kkwiki' => false,
-	'kuwiki' => false,
 	'ruwiki' => false,
-	'tgwiki' => false,
-	'uzwiki' => false,
 	'enwikiversity' => true, // T264693
 	'mediawikiwiki' => true, // T251208
 	'metawiki' => true, // T264693
