@@ -21101,7 +21101,7 @@ function wmfGetVariantSettings() {
 'wgWBQualityConstraintsEnableConstraintsCheckJobsRatio' => [
 	'default' => 0, // 0% of edits trigger post edit job run constraint checks
 	'testwikidatawiki' => 100,
-	'wikidatawiki' => 25,
+	'wikidatawiki' => 40,
 ],
 
 'wgWBQualityConstraintsSparqlEndpoint' => [
