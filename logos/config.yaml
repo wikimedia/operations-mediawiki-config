@@ -12,7 +12,7 @@ Projects:
         no_2x: true
 
     wikipedia:
-        variant: enwiki
+        selected: enwiki
         no_1_5x: true
         no_2x: true
 
@@ -276,7 +276,6 @@ Wikipedia:
 
     cswiki:
         commons: File:Wikipedia-logo-v2-cs.svg
-        variant: cswiki
         comment_1_5x:  T130392
         comment_2x:  T130392
 
@@ -341,9 +340,10 @@ Wikipedia:
         comment_2x:  T150618
 
     enwiki:
-        commons: File:WP20 EnWiki20 SimplifiedLogo BillionEdits fixed.svg
-        variant: enwiki20a
+        selected: enwiki20a
         comment:  T272094
+        variants:
+            enwiki20a: File:WP20 EnWiki20 SimplifiedLogo BillionEdits fixed.svg
 
     eowiki:
         comment_1_5x:  T150618
@@ -756,7 +756,7 @@ Wikipedia:
         comment_2x:  T149790
 
     map_bmswiki:
-        variant: idwiki
+        selected: idwiki
         comment:  T189155
         comment_1_5x:  T189155
         comment_2x:  T189155
@@ -1233,7 +1233,7 @@ Wikipedia:
         comment_2x:  T150618
 
     twwiki:
-        variant: akwiki
+        selected: akwiki
         comment:  T189578
         comment_1_5x:  T189578
         comment_2x:  T189578
@@ -3170,7 +3170,7 @@ Wikivoyage:
     test2wiki:
 
     testcommonswiki:
-        variant: commonswiki
+        selected: commonswiki
         comment_1_5x:  T203343
         comment_2x:  T203343
 
@@ -3188,7 +3188,7 @@ Wikivoyage:
         no_2x: true
 
     thankyouwiki:
-        variant: donatewiki
+        selected: donatewiki
         comment:  always same as donatewiki, see T259002
         comment_2x:  always same as donatewiki, see T259002
 

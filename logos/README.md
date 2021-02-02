@@ -12,14 +12,32 @@ You need to install:
 ### Adding a new logo
 Add or update the existing section in config.yaml for that wiki. Ensure a
 `commons` setting is present that points to the SVG on Wikimedia Commons. The
-thumbnails will be downloaded from there.
-
-If this is a special logo, set the `variant` setting to save the files
-under a different name. Then run:
+thumbnails will be downloaded from there. Run:
 
 `tox -e logos -- update {wikiname}`
 
-This will also update logos.php.
+This will download new PNGs from Commons, compress them and update logos.php.
+
+### Logo variants (usually temporary)
+Sometimes a wiki wants to use a temporary logo for a celebration or needs an
+alternative logo for language converter purposes.
+
+Add a `variants` block:
+
+```yaml
+xxwiki:
+  commons: File:Normal_logo.svg
+  selected: xxwiki-birthday
+  variants:
+    xxwiki-birthday: File:Birthday_logo.svg
+```
+
+Then run:
+
+`tox -e logos -- update xxwiki --variant xxwiki-birthday`
+
+The `selected` key controls which logo will be used in logos.php. If you merely
+want a variant available on the server it can be omitted.
 
 ### Updating logos.php
 
@@ -37,6 +55,9 @@ By default the name of the logos are expected to follow the format of:
 * `{name}-1.5x.png`
 * `{name}-2x.png`
 
-For special ocassions, a different name can be specified with the `variant` key.
-
 If no 1.5x or 2x versions are available, set the `no_1_5x` and `no_2x` keys.
+
+For special occasions, a different logo can be specified with the `selected` key.
+
+For logo variants, the key is the name of the variant (must start with the
+wiki's name) and the value is the Commons filename.

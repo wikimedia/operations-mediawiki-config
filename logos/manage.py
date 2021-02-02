@@ -23,6 +23,7 @@ import sys
 import textwrap
 
 from pathlib import Path
+from typing import Optional
 
 import requests
 import yaml
@@ -33,6 +34,13 @@ if sys.version_info < (3, 7):
 
 DIR = Path(__file__).parent
 project_logos = DIR.parent / "static/images/project-logos"
+
+
+def validate_commons(name: str, value: str):
+    if not value.startswith("File:"):
+        raise RuntimeError(f"{name}: 'commons:' must start with File:")
+    if not value.endswith(".svg"):
+        raise RuntimeError(f"{name}: 'commons:' must be a SVG file")
 
 
 def validate(data: dict):
@@ -47,10 +55,13 @@ def validate(data: dict):
                 # default values
                 info = {}
             if "commons" in info:
-                if not info["commons"].startswith("File:"):
-                    raise RuntimeError(f"{site}: 'commons:' must start with File:")
-                if not info["commons"].endswith(".svg"):
-                    raise RuntimeError(f"{site}: 'commons:' must be a SVG file")
+                validate_commons(site, info["commons"])
+            if "variants" in info:
+                for variant_name, variant_commons in info["variants"].items():
+                    if not variant_name.startswith(site):
+                        # Variant name must start with site name
+                        raise RuntimeError(f"{site}: variant {variant_name} must start with {site}")
+                    validate_commons(f"{site} (variant: {variant_name})", variant_commons)
             for size in ["1x", "1_5x", "2x"]:
                 if size != "1x" and info.get(f"no_{size}"):
                     # Skip, doesn't have this size
@@ -59,13 +70,13 @@ def validate(data: dict):
                     path_size = ""
                 else:
                     path_size = "-" + size.replace("_", ".")
-                variant = info.get("variant", site)
-                filename = f"{variant}{path_size}.png"
+                selected = info.get("selected", site)
+                filename = f"{selected}{path_size}.png"
                 if not (project_logos / filename).exists():
                     raise RuntimeError(f"{site}: {filename} doesn't exist!")
 
 
-def download(commons: str, variant: str):
+def download(commons: str, name: str):
     # Check dependencies first
     for dep in ["pngquant", "zopflipng"]:
         try:
@@ -92,9 +103,9 @@ def download(commons: str, variant: str):
     req.raise_for_status()
     info = req.json()["query"]["pages"][0]["imageinfo"][0]
     urls = {
-        f"{variant}.png": info["thumburl"],
-        f"{variant}-1.5x.png": info["responsiveUrls"]["1.5"].replace("203px", "202px"),
-        f"{variant}-2x.png": info["responsiveUrls"]["2"],
+        f"{name}.png": info["thumburl"],
+        f"{name}-1.5x.png": info["responsiveUrls"]["1.5"].replace("203px", "202px"),
+        f"{name}-2x.png": info["responsiveUrls"]["2"],
     }
     for filename, url in urls.items():
         req = requests.get(url)
@@ -140,8 +151,8 @@ def make_block(size: str, data: dict):
                 # Skip, doesn't have this size
                 continue
             # Default to site name
-            variant = info.get("variant", site)
-            filename = f"{variant}{path_size}.png"
+            selected = info.get("selected", site)
+            filename = f"{selected}{path_size}.png"
             if not (project_logos / filename).exists():
                 raise RuntimeError(f"Error: {filename} doesn't exist!")
             url = f"/static/images/project-logos/{filename}"
@@ -179,7 +190,7 @@ def generate(data: dict):
     print("Updated logos.php")
 
 
-def update(data: dict, wiki: str):
+def update(data: dict, wiki: str, variant: Optional[str]):
     info = None
     for group, sites in data.items():
         if wiki in sites:
@@ -190,12 +201,20 @@ def update(data: dict, wiki: str):
 
     if info is None:
         raise RuntimeError(f"I can't find any configuration for {wiki}")
-    variant = info.get("variant", wiki)
-    if "commons" not in info:
-        raise RuntimeError(
-            "The update function can only be used if a 'commons' SVG is present in config.yaml"
-        )
-    download(info["commons"], variant)
+    if variant:
+        try:
+            commons = info["variants"][variant]
+            name = variant
+        except KeyError:
+            raise RuntimeError(f"Cannot find variant {variant} for site {wiki}")
+    else:
+        if "commons" not in info:
+            raise RuntimeError(
+                "The update function can only be used if a 'commons' SVG is present in config.yaml"
+            )
+        commons = info["commons"]
+        name = wiki
+    download(commons, name)
 
     # Regenerate
     generate(data)
@@ -210,6 +229,7 @@ def main():
     subparsers.add_parser("validate", help="Validate config.yaml")
     update_parser = subparsers.add_parser("update", help="Update a wiki's logos")
     update_parser.add_argument("wiki", help="Wiki to update")
+    update_parser.add_argument("--variant", required=False, help="Variant to update")
     args = parser.parse_args()
 
     data = yaml.safe_load((DIR / "config.yaml").read_text())
@@ -218,7 +238,7 @@ def main():
         validate(data)
         generate(data)
     elif args.action == "update":
-        update(data, args.wiki)
+        update(data, args.wiki, args.variant)
         validate(data)
     elif args.action == "validate":
         validate(data)
