@@ -72,4 +72,7 @@ do
 	ln -s ../../../$i "./$(basename $i)"
 done
 
+# Use a different public name because "config.yaml" is very generic
+ln -s ../../../logos/config.yaml logos-config.yaml
+
 ln -s ../../../dblists dblists
