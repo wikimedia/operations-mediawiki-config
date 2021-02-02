@@ -25794,6 +25794,10 @@ function wmfGetVariantSettings() {
 		'ores_articletopics' => [
 			'build' => true,
 			'use' => true,
+		],
+		'weighted_tags' => [
+			'build' => true,
+			'use' => true,
 		]
 	]
 ],
