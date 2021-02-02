@@ -120,7 +120,6 @@ def download(commons: str, variant: str):
             ["zopflipng", "--lossy_transparent", "-m", "-y", filename, filename],
             cwd=project_logos,
         )
-        # TODO: pngout step
 
 
 def make_block(size: str, data: dict):
