@@ -18987,6 +18987,7 @@ function wmfGetVariantSettings() {
 
 'wgDiscussionTools_newtopictool' => [
 	'default' => 'unavailable',
+	'testwiki' => 'default',
 ],
 
 'wgDTSchemaEditAttemptStepSamplingRate' => [
