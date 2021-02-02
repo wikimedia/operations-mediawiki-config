@@ -427,7 +427,10 @@ $wgGitInfoCacheDirectory = "$IP/cache/gitinfo";
 $wmgAddWikiNotify = "newprojects@lists.wikimedia.org";
 
 $wgLocalisationCacheConf['storeClass'] = LCStoreCDB::class;
-$wgLocalisationCacheConf['storeDirectory'] = "$IP/cache/l10n";
+#$wgLocalisationCacheConf['storeDirectory'] = "$IP/cache/l10n";
+# dancy
+$wgLocalisationCacheConf['storeDirectory'] = "/tmp/l10n-cache/$wmgVersionNumber";
+    
 $wgLocalisationCacheConf['manualRecache'] = true;
 
 // Add some useful config data to query=siteinfo
@@ -4231,3 +4234,7 @@ if (
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
 
 require "$wmfConfigDir/ExtensionMessages-$wmgVersionNumber.php";
+
+# dancy, while testing
+$wgShowExceptionDetails = true;
+$wgShowDBErrorBacktrace = true;

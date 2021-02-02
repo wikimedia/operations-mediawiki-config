@@ -12,10 +12,10 @@
 return [ 'dev' => [
 				   'udp2log' => '',
 				   'redis_lock' => '',
-				   'etcd' => 'db:2379',
+				   'etcd' => 'mw-etcd:2379',
 				   'mediaSwiftAuth' => '',
 				   'mediaSwiftStore' => '',
-				   'sessionstore' => '',
+				   'sessionstore' => 'SESSIONSTOREHOST',
 				   'echostore' => '',
 				   'statsd' => '',
 				   'irc' => '',

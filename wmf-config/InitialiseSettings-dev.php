@@ -56,5 +56,13 @@ function wmfGetOverrideSettings() {
 		'-wmgUseTranslationNotifications' => [
 			'default' => false,
 		],
+        '-wgForceHTTPS' => [
+            'default' => false,
+        ],
+        /* Captcha uses the Swift backend which I haven't set up yet 
+           FIXME: This doesn't seem to be helping anymore.. hmmm. */
+		'-wmgEnableCaptcha' => [ 
+			'default' => false, 
+		],
 	];
 }
