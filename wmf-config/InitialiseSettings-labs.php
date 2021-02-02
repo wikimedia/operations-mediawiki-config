@@ -65,12 +65,10 @@ function wmfGetLabsOverrideSettings() {
 		],
 
 		'wgLanguageCode' => [
-			'apiportalwiki' => 'en',
 			'deploymentwiki' => 'en',
 		],
 
 		'wgSitename' => [
-			'apiportalwiki'  => 'Wikimedia API Portal',
 			'deploymentwiki' => 'Deployment',
 			'wikivoyage'     => 'Wikivoyage',
 		],
@@ -113,18 +111,6 @@ function wmfGetLabsOverrideSettings() {
 			'votewiki'      => 'https://vote.wikimedia.beta.wmflabs.org',
 			'wikidatawiki'  => 'https://wikidata.beta.wmflabs.org',
 			'en_rtlwiki' => 'https://en-rtl.wikipedia.beta.wmflabs.org',
-		],
-
-		'wgMetaNamespace' => [
-			'apiportalwiki' => 'API_Portal',
-		],
-
-		'wgMetaNamespaceTalk' => [
-			'apiportalwiki' => 'Discuss_API_Portal',
-		],
-
-		'wgEnableUploads' => [
-			'apiportalwiki' => false,
 		],
 
 		'-wgUploadPath' => [
@@ -448,9 +434,6 @@ function wmfGetLabsOverrideSettings() {
 			'simplewiki' => true,
 		],
 
-		'wmgUseKartographer' => [
-			'apiportalwiki' => false,
-		],
 		'-wgKartographerEnableMapFrame' => [
 			'default'	=> true,
 		],
@@ -922,7 +905,6 @@ function wmfGetLabsOverrideSettings() {
 
 		'wmgEnableDashikiData' => [
 			'default' => true,
-			'apiportalwiki' => false,
 		],
 
 		'wgCognateReadOnly' => [
@@ -1014,7 +996,6 @@ function wmfGetLabsOverrideSettings() {
 
 		'wmgUseJADE' => [
 			'default' => true,
-			'apiportalwiki' => false,
 		],
 
 		'wgOresUiEnabled' => [
@@ -1805,10 +1786,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => false,
 		],
 
-		'wmgUseGraph' => [
-			'apiportalwiki' => false,
-		],
-
 		// T242855 Undeploying graphoid
 		'-wgGraphImgServiceUrl' => [
 			'default' => false,
@@ -1827,11 +1804,6 @@ function wmfGetLabsOverrideSettings() {
 				'default' => 25,
 				'flow' => 50,
 			],
-		],
-
-		'wmgUseWikimediaApiPortal' => [
-			'apiportalwiki' => true,
-			'default' => false,
 		],
 
 		// Deploy GlobalWatchlist to the beta cluster - T268181
