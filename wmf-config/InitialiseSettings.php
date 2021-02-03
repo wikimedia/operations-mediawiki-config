@@ -19001,7 +19001,28 @@ function wmfGetVariantSettings() {
 
 'wgDiscussionToolsABTest' => [
 	'default' => false,
+	'afwiki' => 'replytool',
+	'amwiki' => 'replytool',
+	'arzwiki' => 'replytool',
+	'bnwiki' => 'replytool',
+	'eswiki' => 'replytool',
+	'fawiki' => 'replytool',
+	'frwiki' => 'replytool',
+	'hewiki' => 'replytool',
+	'hiwiki' => 'replytool',
 	'idwiki' => 'replytool',
+	'itwiki' => 'replytool',
+	'jawiki' => 'replytool',
+	'kowiki' => 'replytool',
+	'nlwiki' => 'replytool',
+	'omwiki' => 'replytool',
+	'plwiki' => 'replytool',
+	'ptwiki' => 'replytool',
+	'swwiki' => 'replytool',
+	'thwiki' => 'replytool',
+	'ukwiki' => 'replytool',
+	'viwiki' => 'replytool',
+	'zhwiki' => 'replytool',
 ],
 
 'wgDiscussionTools_newtopictool' => [
