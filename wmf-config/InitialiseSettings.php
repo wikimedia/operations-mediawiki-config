@@ -24577,6 +24577,7 @@ function wmfGetVariantSettings() {
 	'testwiki' => true,
 	'arwiki' => true,
 	'cswiki' => true,
+	'dawiki' => true,
 	'euwiki' => true,
 	'fawiki' => true,
 	'frwiki' => true,
@@ -24602,6 +24603,7 @@ function wmfGetVariantSettings() {
 
 'wgWelcomeSurveyExperimentalGroups' => [
 	'default' => [ 'exp2_target_specialpage' => [ 'range' => '0-9' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
+	'dawiki' => [ 'exp2_target_specialpage' => [ 'range' => 'x' ], 'exp2_target_popup' => [ 'range' => 'x' ] ], // No welcome survey to newcomers - T256126
 ],
 
 'wgGEHomepageImpactModuleEnabled' => [
@@ -24641,6 +24643,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => ' ويكيبيديا:فريق_المساعدة/طلبات',
 	'bnwiki' => 'উইকিপিডিয়া:সাহায্যকেন্দ্র',
 	'cswiki' => 'Wikipedie:Potřebuji_pomoc',
+	'dawiki' => 'Hjælp:Nybegynderforum',
 	'euwiki' => 'Wikipedia:Txokoa',
 	'fawiki' => 'ویکی‌پدیا:پرسش‌ها',
 	'frwiki' => 'Wikipédia:Forum des nouveaux',
@@ -24671,6 +24674,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => 'مساعدة:محتويات',
 	'bnwiki' => 'সাহায্য:সূচী',
 	'cswiki' => 'Nápověda:Obsah',
+	'dawiki' => 'Hjælp:Forside',
 	'euwiki' => 'Laguntza:Sarrera',
 	'fawiki' => 'راهنما:فهرست',
 	'frwiki' => 'Aide:Accueil',
@@ -24797,6 +24801,33 @@ function wmfGetVariantSettings() {
 			'title' => 'Wikipedie:Editujte_s_odvahou',
 			'text' => 'Editujte s odvahou',
 			'id' => 'bebold',
+		]
+	],
+	'dawiki' => [
+		[
+			'title' => 'Wikipedia:Stilmanual',
+			'text' => 'Hvordan man skriver gode sider',
+			'id' => 'mos'
+		],
+		[
+			'title' => 'Hjælp:Redigering',
+			'text' => 'Hvordan redigerer jeg en side',
+			'id' => 'editpage',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/da#Editing_images_and_other_media_files',
+			'text' => 'Tilføj billede',
+			'id' => 'photo',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/da#Redigering_af_henvisninger',
+			'text' => 'Redigering af henvisninger',
+			'id' => 'references',
+		],
+		[
+			'title' => 'Hjælp:Guide (skriv en artikel)',
+			'text' => 'Skriv en artikel',
+			'id' => 'tutorial',
 		]
 	],
 	'euwiki' => [
@@ -25302,6 +25333,10 @@ function wmfGetVariantSettings() {
 		'create' => 'Nápověda:Jak vytvořit článek',
 		'image' => 'Nápověda:Obrázky ve Vizuálním editoru',
 	],
+	'dawiki' => [
+		'create' => 'Hjælp:Starte_en_side',
+		'image' => 'Hjælp:Billeder',
+	],
 	'euwiki' => [
 		'create' => 'Laguntza:Sarrera berriak',
 		'image' => 'Laguntza:Irudiak',
@@ -25371,6 +25406,7 @@ function wmfGetVariantSettings() {
 'wgGEHomepageNewAccountEnablePercentage' => [
 	'default' => 80,
 	'testwiki' => 0,
+	'dawiki' => 0, // No automated deployment per T256126#6801307
 	// euwiki is not an A/B test (T233066)
 	'euwiki' => 100,
 ],
@@ -25389,6 +25425,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => 'ويكيبيديا:دروس',
 	'bnwiki' => 'সাহায্য:ভূমিকা',
 	'cswiki' => 'Wikipedie:Průvodce',
+	'dawiki' => 'Hjælp:Guide',
 	'euwiki' => 'Laguntza:Ikusizko_Editorea',
 	'fawiki' => 'ویکی‌پدیا:خودآموز',
 	'frwiki' => 'Aide:Débuter',
