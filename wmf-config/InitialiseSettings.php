@@ -24639,7 +24639,7 @@ function wmfGetVariantSettings() {
 	'hewiki' => 'ויקיפדיה:חממה',
 	'huwiki' => 'Wikipédia:Kocsmafal (kezdőknek)',
 	'hywiki' => 'Վիքիպեդիա:Հարցեր',
-	'kowiki' => '위키백과:질문방/{{#time:o}}년 제{{#time:W}}주',
+	'kowiki' => '위키백과:질문방/{{#time:o}}년 제{{CURRENTWEEK}}주',
 	'plwiki' => 'Pomoc:Pytania nowicjuszy',
 	'ptwiki' => 'Ajuda:Tire suas dúvidas',
 	'ruwiki' => 'Википедия:Форум/Помощь начинающим',
