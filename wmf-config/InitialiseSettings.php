@@ -19693,6 +19693,13 @@ function wmfGetVariantSettings() {
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
+			'stream' => 'eventlogging_PrefUpdate',
+			'schema_title' => 'analytics/legacy/prefupdate',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
 			'stream' => 'eventlogging_QuickSurveyInitiation',
 			'schema_title' => 'analytics/legacy/quicksurveyinitiation',
 			'topic_prefixes' => null,
@@ -20102,6 +20109,7 @@ function wmfGetVariantSettings() {
 		'eventlogging_NavigationTiming',
 		'eventlogging_NewcomerTask',
 		'eventlogging_PaintTiming',
+		'eventlogging_PrefUpdate',
 		'eventlogging_QuickSurveyInitiation',
 		'eventlogging_QuickSurveysResponses',
 		'eventlogging_ResourceTiming',
@@ -20171,6 +20179,7 @@ function wmfGetVariantSettings() {
 	],
 	'testwiki' => [
 		'HomepageVisit' => '/analytics/legacy/homepagevisit/1.0.0',
+		'PrefUpdate' => '/analytics/legacy/prefupdate/1.0.0',
 		'ServerSideAccountCreation' => '/analytics/legacy/serversideaccountcreation/1.0.0',
 		'SpecialMuteSubmit' => '/analytics/legacy/specialmutesubmit/1.0.0',
 	],
