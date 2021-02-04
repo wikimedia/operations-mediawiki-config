@@ -15601,6 +15601,7 @@ function wmfGetVariantSettings() {
 'wmgUsePopups' => [
 	'default' => false,
 	'sewikimedia' => true, // T68374
+	'sysop_itwiki' => false, // T259480
 	'wikipedia' => true,
 	'enwikivoyage' => true, // T203981
 	'hewikivoyage' => true, // T222017
