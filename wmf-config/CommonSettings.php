@@ -134,20 +134,45 @@ if ( $wmfRealm === 'dev' ) {
 	putenv( 'MW_DEBUG_LOCAL=1' );
 }
 
-$etcdConfig = wmfSetupEtcd( $wmfLocalServices['etcd'] );
-$wmfEtcdLastModifiedIndex = $etcdConfig->getModifiedIndex();
+if ( getenv( 'MW_NO_ETCD' )) {
+    echo("MW_NO_ETCD detected\n");
 
-$wgReadOnly = $etcdConfig->get( "$wmfDatacenter/ReadOnly" );
+    $wmfEtcdLastModifiedIndex = "wmfEtcdLastModifiedIndex uninitialized due to MW_NO_ETCD";
+    $wgReadOnly = true;
+    $wmfMasterDatacenter = "wmfMasterDatacenter uninitialized due to MW_NO_ETCD";
+    $wmfMasterServices = [];
+    $wmfDbconfigFromEtcd = [];
 
-$wmfMasterDatacenter = $etcdConfig->get( 'common/WMFMasterDatacenter' );
-$wmfMasterServices = $wmfAllServices[$wmfMasterDatacenter];
+/* PHP Notice:  Undefined variable: wmgRedisPassword in /srv/mediawiki/wmf-config/redis.php on line 22 */
+/* PHP Notice:  Undefined index: redis_wmfMasterDatacenter uninitialized due to MW_NO_ETCD in /srv/mediawiki/wmf-config/redis.php on line 28 */
+/* PHP Notice:  Undefined index: redis_lock in /srv/mediawiki/wmf-config/filebackend.php on line 222 */
+/* PHP Notice:  Undefined variable: wmgRedisPassword in /srv/mediawiki/wmf-config/filebackend.php on line 229 */
+/* PHP Notice:  Undefined variable: wmgSessionStoreHMACKey in /srv/mediawiki/wmf-config/CommonSettings.php on line 515 */
+/* PHP Warning:  session_name(): Cannot change session name when headers already sent in /srv/mediawiki/wmf-config/CommonSettings.php on line 532 */
+/* PHP Notice:  Undefined variable: wmgElectronSecret in /srv/mediawiki/wmf-config/CommonSettings.php on line 2518 */
+/* PHP Notice:  Undefined variable: wmgVERPsecret in /srv/mediawiki/wmf-config/CommonSettings.php on line 2787 */
+/* PHP Notice:  Undefined variable: wmgContentTranslationCXServerAuthKey in /srv/mediawiki/wmf-config/CommonSettings.php on line 3469 */
 
-// Database load balancer config (sectionLoads, groupLoadsBySection, …)
-// This is later merged into $wgLBFactoryConf by wmfEtcdApplyDBConfig().
-// See also <https://wikitech.wikimedia.org/wiki/Dbctl>
-$wmfDbconfigFromEtcd = $etcdConfig->get( "$wmfDatacenter/dbconfig" );
 
-unset( $etcdConfig );
+} else {
+    $etcdConfig = wmfSetupEtcd( $wmfLocalServices['etcd'] );
+    $wmfEtcdLastModifiedIndex = $etcdConfig->getModifiedIndex();
+
+    $wgReadOnly = $etcdConfig->get( "$wmfDatacenter/ReadOnly" );
+
+    $wmfMasterDatacenter = $etcdConfig->get( 'common/WMFMasterDatacenter' );
+    $wmfMasterServices = $wmfAllServices[$wmfMasterDatacenter];
+
+    // Database load balancer config (sectionLoads, groupLoadsBySection, …)
+    // This is later merged into $wgLBFactoryConf by wmfEtcdApplyDBConfig().
+    // See also <https://wikitech.wikimedia.org/wiki/Dbctl>
+    $wmfDbconfigFromEtcd = $etcdConfig->get( "$wmfDatacenter/dbconfig" );
+
+    unset( $etcdConfig );
+}
+
+
+
 
 $wmfUdp2logDest = $wmfLocalServices['udp2log'];
 if ( $wgDBname === 'testwiki' || $wgDBname === 'test2wiki' ) {
