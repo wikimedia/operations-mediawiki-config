@@ -24600,8 +24600,6 @@ function wmfGetVariantSettings() {
 
 'wgWelcomeSurveyExperimentalGroups' => [
 	'default' => [ 'exp2_target_specialpage' => [ 'range' => '0-9' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
-	// 80/20 A/B test on ruwiki; consider removing this some time in October 2020, see T259768
-	'ruwiki' => [ 'exp2_target_specialpage' => [ 'range' => '0-7' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
 ],
 
 'wgGEHomepageImpactModuleEnabled' => [
