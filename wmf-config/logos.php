@@ -93,7 +93,7 @@ return [
 	'eewiki' => '/static/images/project-logos/eewiki.png', // T50397
 	'elwiki' => '/static/images/project-logos/elwiki.png',
 	'emlwiki' => '/static/images/project-logos/emlwiki.png', // T100953
-	'enwiki' => '/static/images/project-logos/enwiki20a.png', // T272094
+	'enwiki' => '/static/images/project-logos/enwiki.png', // T272094
 	'eowiki' => '/static/images/project-logos/eowiki.png',
 	'eswiki' => '/static/images/project-logos/eswiki.png',
 	'etwiki' => '/static/images/project-logos/etwiki.png',
@@ -883,7 +883,7 @@ return [
 	'eewiki' => '/static/images/project-logos/eewiki-1.5x.png', // T150618
 	'elwiki' => '/static/images/project-logos/elwiki-1.5x.png', // T150618
 	'emlwiki' => '/static/images/project-logos/emlwiki-1.5x.png', // T150618
-	'enwiki' => '/static/images/project-logos/enwiki20a-1.5x.png',
+	'enwiki' => '/static/images/project-logos/enwiki-1.5x.png',
 	'eowiki' => '/static/images/project-logos/eowiki-1.5x.png', // T150618
 	'eswiki' => '/static/images/project-logos/eswiki-1.5x.png', // T150618
 	'etwiki' => '/static/images/project-logos/etwiki-1.5x.png', // T150618
@@ -1446,7 +1446,7 @@ return [
 	'eewiki' => '/static/images/project-logos/eewiki-2x.png', // T150618
 	'elwiki' => '/static/images/project-logos/elwiki-2x.png', // T150618
 	'emlwiki' => '/static/images/project-logos/emlwiki-2x.png', // T150618
-	'enwiki' => '/static/images/project-logos/enwiki20a-2x.png',
+	'enwiki' => '/static/images/project-logos/enwiki-2x.png',
 	'eowiki' => '/static/images/project-logos/eowiki-2x.png', // T150618
 	'eswiki' => '/static/images/project-logos/eswiki-2x.png', // T150618
 	'etwiki' => '/static/images/project-logos/etwiki-2x.png', // T150618
