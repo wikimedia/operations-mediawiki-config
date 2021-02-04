@@ -20,8 +20,8 @@
 
 $common = [
 	// Logging is not active-active.
-	'udp2log' => 'mwlog1001.eqiad.wmnet:8420',
-	'xenon' => 'mwlog1001.eqiad.wmnet',
+	'udp2log' => '10.64.32.175:8420', # mwlog1001
+	'xenon' => '10.64.32.175', # mwlog1001
 
 	// This refers to the old, MongoDB-based backend, which has been
 	// replaced by xhgui-pdo (T180761).
@@ -31,7 +31,7 @@ $common = [
 	'xhgui-pdo' => 'mysql:host=m2-master.eqiad.wmnet;dbname=xhgui',
 
 	// Statsd is not active-active.
-	'statsd' => 'statsd.eqiad.wmnet',
+	'statsd' => '10.64.16.149', # statsd.eqiad.wmnet, now resolving to graphite1004.eqiad.wmnet
 
 	// EventLogging is not active-active.
 	'eventlogging' => 'udp://10.64.32.167:8421', # eventlog1001.eqiad.wmnet
