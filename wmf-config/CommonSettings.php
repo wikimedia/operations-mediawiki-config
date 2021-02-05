@@ -214,7 +214,10 @@ list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 
 # Try configuration cache
 $confCacheFileName = "conf2-$wgDBname.json";
-$confActualMtime = filemtime( "$wmfConfigDir/InitialiseSettings.php" );
+$confActualMtime = max(
+	filemtime( "$wmfConfigDir/InitialiseSettings.php" ),
+	filemtime( "$wmfConfigDir/logos.php" )
+);
 $globals = Wikimedia\MWConfig\MWConfigCacheGenerator::readFromStaticCache(
 	$wgCacheDirectory . '/' . $confCacheFileName, $confActualMtime
 );
@@ -2084,6 +2087,7 @@ if ( $wgDBname === 'enwiki' || $wgDBname === 'fawiki' ) {
 
 if ( $wmgUseCollection ) {
 	// PediaPress / PDF generation
+	// Intentionally loaded *before* the Wikisource extension below.
 	wfLoadExtension( 'Collection' );
 	// Use pediapress server for POD function (T73675)
 	$wgCollectionCommandToServeURL = [
@@ -4002,6 +4006,7 @@ if ( $wmgUseCongressLookup ) {
 }
 
 if ( $wmgUseWikisource ) {
+	// Intentionally loaded *after* the Collection extension above.
 	wfLoadExtension( 'Wikisource' );
 }
 

@@ -5,6 +5,7 @@
 inheritsFrom:
   - wikipedia
   - categories-rdf
+  - closed
   - rtl
   - s3
   - securepollglobal

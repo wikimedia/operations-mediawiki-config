@@ -27,6 +27,7 @@ mwconfig_files_txt=(
 	LabsServices.php
 	liquidthreads.php
 	logging.php
+	logos.php
 	mc.php
 	mc-labs.php
 	missing.php
@@ -70,5 +71,8 @@ for i in "${mwconfig_files[@]}"
 do
 	ln -s ../../../$i "./$(basename $i)"
 done
+
+# Use a different public name because "config.yaml" is very generic
+ln -s ../../../logos/config.yaml logos-config.yaml
 
 ln -s ../../../dblists dblists

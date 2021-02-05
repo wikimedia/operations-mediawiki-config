@@ -1,0 +1,3305 @@
+Projects:
+    default:
+        no_1_5x: true
+        no_2x: true
+
+    wikibooks:
+        no_1_5x: true
+        no_2x: true
+
+    wikinews:
+        no_1_5x: true
+        no_2x: true
+
+    wikipedia:
+        selected: enwiki
+        no_1_5x: true
+        no_2x: true
+
+    wikiquote:
+        no_1_5x: true
+        no_2x: true
+
+    wikisource:
+        no_1_5x: true
+        no_2x: true
+
+    wikiversity:
+        no_1_5x: true
+        no_2x: true
+
+    wiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    wikivoyage:
+        comment:  T55653
+        no_1_5x: true
+        no_2x: true
+
+Wikipedia:
+    abwiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    acewiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    adywiki:
+        comment:  T125501
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    afwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    akwiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    alswiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    amwiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    angwiki:
+        comment:  T51125
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    anwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    arcwiki:
+        no_1_5x: true
+        no_2x: true
+
+    arwiki:
+        commons: File:Wikipedia-logo-v2-ar.svg
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    arywiki:
+
+    arzwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    astwiki:
+        comment:  T42285, T131247
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    aswiki:
+        no_1_5x: true
+        no_2x: true
+
+    atjwiki:
+        comment:  T167714
+        comment_1_5x:  T167714
+        comment_2x:  T167714
+
+    avwiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    avkwiki:
+        comment:  T257943
+        comment_1_5x:  T257943
+        comment_2x:  T257943
+
+    awawiki:
+        comment:  T251371
+        comment_1_5x:  T251371
+        comment_2x:  T251371
+
+    aywiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    azbwiki:
+        comment:  T106305
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    azwiki:
+        comment:  T50397
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    banwiki:
+
+    barwiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    bat_smgwiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    bawiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    bclwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    be_x_oldwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    bewiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    bgwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    bhwiki:
+        comment:  T50397
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    biwiki:
+        comment:  T51125
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    bjnwiki:
+        comment:  T48564
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    bmwiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    bnwiki:
+
+    bowiki:
+        comment:  T50397
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    bpywiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    brwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    bswiki:
+        comment_1_5x:  T158815
+        comment_2x:  T158815
+
+    bugwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    bxrwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    cawiki:
+        commons: File:Wikipedia-logo-v2-ca.svg
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    cbk_zamwiki:
+        comment:  T46974
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    cdowiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    cebwiki:
+        comment:  T42285
+        comment_1_5x:  T150616
+        comment_2x:  T150616
+
+    cewiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    chrwiki:
+        comment:  T39327
+
+    chwiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    chywiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    ckbwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    cowiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    crhwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    crwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    csbwiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    cswiki:
+        commons: File:Wikipedia-logo-v2-cs.svg
+        comment_1_5x:  T130392
+        comment_2x:  T130392
+
+    cuwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    cvwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    cywiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    dawiki:
+        commons: File:Wikipedia-logo-v2-da.svg
+        comment_1_5x:  T131033
+        comment_2x:  T131033
+
+    dewiki:
+        commons: File:Wikipedia-logo-v2-de.svg
+        comment_1_5x:  T132792
+        comment_2x:  T132792
+
+    dinwiki:
+
+    diqwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    dsbwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    dtywiki:
+        comment:  T161529
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    dvwiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    dzwiki:
+        comment:  T50397
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    eewiki:
+        comment:  T50397
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    elwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    emlwiki:
+        comment:  T100953
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    enwiki:
+        commons: File:Wikipedia-logo-v2-en.svg
+        comment:  T272094
+        variants:
+            enwiki20a: File:WP20 EnWiki20 SimplifiedLogo BillionEdits fixed.svg
+
+    eowiki:
+        commons: File:Wikipedia-logo-v2-eo.svg
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    eswiki:
+        commons: File:Wikipedia-logo-v2-es.svg
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    etwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    euwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    extwiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    fawiki:
+
+    ffwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    fiu_vrowiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    fiwiki:
+        commons: File:Wikipedia-logo-v2-fi.svg
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    fowiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    frpwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    frrwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    frwiki:
+        commons: File:Wikipedia-logo-v2-fr.svg
+
+    furwiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    fywiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    gagwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    ganwiki:
+        comment:  T46974
+        no_1_5x: true
+        no_2x: true
+
+    gawiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    gcrwiki:
+
+    gdwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    glkwiki:
+        comment:  T50397
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    glwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    gnwiki:
+        comment:  T51125
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    gomwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    gorwiki:
+
+    gotwiki:
+        no_1_5x: true
+        no_2x: true
+
+    guwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    gvwiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    hakwiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    hawiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    hawwiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    hewiki:
+        comment_1_5x:  T145017
+        comment_2x:  T145017
+
+    hifwiki:
+        comment:  T29361
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    hiwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    hrwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    hsbwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    htwiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    huwiki:
+        commons: File:Wikipedia-logo-v2-hu.svg
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    hywiki:
+        comment_1_5x:  T150620
+        comment_2x:  T150620
+
+    hywwiki:
+        comment:  T212597
+        comment_1_5x:  T212597
+        comment_2x:  T212597
+
+    iawiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    idwiki:
+        commons: File:Wikipedia-logo-v2-id.svg
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    iewiki:
+        comment:  T51125
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    igwiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    ikwiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    ilowiki:
+        comment:  T42285
+
+    inhwiki:
+        comment:  T184374
+        no_1_5x: true
+        no_2x: true
+
+    iowiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    iswiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    itwiki:
+        commons: File:Wikipedia-logo-v2-it.svg
+
+    iuwiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    jamwiki:
+        comment:  T134017
+        comment_1_5x:  T134017
+        comment_2x:  T134017
+
+    jawiki:
+        commons: File:Wikipedia-logo-v2-ja.svg
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    jbowiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    jvwiki:
+        comment:  T251050
+        comment_1_5x:  T251050
+        comment_2x:  T251050
+
+    kaawiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    kabwiki:
+        comment:  T46974
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    kawiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    kbdwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    kbpwiki:
+        comment:  T160868
+        comment_1_5x:  T160868
+        comment_2x:  T160868
+
+    kgwiki:
+        comment:  T189586
+        comment_1_5x:  T189586
+        comment_2x:  T189586
+
+    kiwiki:
+        comment:  T50397
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    kkwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    klwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    kmwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    knwiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    koiwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    kowiki:
+        commons: File:Wikipedia-logo-v2-ko.svg
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    krcwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    kshwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    kswiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    kuwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    kvwiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    kwwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    kywiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    ladwiki:
+        comment_1_5x:  T132120
+        comment_2x:  T132120
+
+    lawiki:
+
+    lbewiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    lbwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    lezwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    lfnwiki:
+        comment:  T183561
+
+    lgwiki:
+        comment:  T46974
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    lijwiki:
+        comment:  T51125
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    liwiki:
+        comment_1_5x:  T189116
+        comment_2x:  T189116
+
+    lldwiki:
+        comment:  T259432
+        comment_1_5x:  T259432
+        comment_2x:  T189116
+
+    lmowiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    lnwiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    lowiki:
+        comment:  T50397
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    lrcwiki:
+        comment:  T102026
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    ltgwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    ltwiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    lvwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    madwiki:
+        comment:  T270693
+        comment_1_5x:  T270693
+        comment_2x:  T270693
+
+    maiwiki:
+        comment:  T74346
+        comment_1_5x:  T149790
+        comment_2x:  T149790
+
+    map_bmswiki:
+        selected: idwiki
+        comment:  T189155
+        comment_1_5x:  T189155
+        comment_2x:  T189155
+
+    mdfwiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    mgwiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    mhrwiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    minwiki:
+        comment:  T50397
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    miwiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    mkwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    mlwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    mnwiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    mnwwiki:
+
+    mrjwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    mrwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    mswiki:
+
+    mtwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    mwlwiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    myvwiki:
+        comment:  T50397
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    mywiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    mznwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    nahwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    napwiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    nawiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    nds_nlwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    ndswiki:
+        comment:  T51125
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    newiki:
+        comment:  T139240
+        comment_1_5x:  T139240
+        comment_2x:  T139240
+
+    newwiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    niawiki:
+
+    nlwiki:
+        commons: File:Wikipedia-logo-v2-nl.svg
+
+    nnwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    novwiki:
+        comment:  T46974
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    nowiki:
+        commons: File:Wikipedia-logo-v2-no.svg
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    nqowiki:
+
+    nrmwiki:
+        comment:  T51125
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    nsowiki:
+        no_1_5x: true
+        no_2x: true
+
+    nvwiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    nywiki:
+        comment:  T211570
+        comment_1_5x:  T211570
+        comment_2x:  T211570
+
+    ocwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    olowiki:
+        comment:  T146612
+        comment_1_5x:  T146745
+        comment_2x:  T146745
+
+    omwiki:
+        comment:  T46974
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    orwiki:
+        comment:  T29704
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    oswiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    pagwiki:
+        comment:  T46974
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    pamwiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    papwiki:
+        comment:  T51125
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    pawiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    pcdwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    pdcwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    pflwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    pihwiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    piwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    plwiki:
+        commons: File:Wikipedia-logo-v2-pl.svg
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    pmswiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    pnbwiki:
+        comment:  T50397
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    pntwiki:
+        comment:  T51125
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    pswiki:
+        comment:  T50397
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    ptwiki:
+        commons: File:Wikipedia-logo-v2-pt.svg
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    quwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    rmwiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    rmywiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    roa_rupwiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    roa_tarawiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    rowiki:
+        commons: File:Wikipedia-logo-v2-ro.svg
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    ruewiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    ruwiki:
+        commons: File:Wikipedia-logo-v2-ru.svg
+
+    sahwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    satwiki:
+
+    sawiki:
+        comment:  T50397
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    scnwiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    scowiki:
+        comment:  T51125
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    scwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    sdwiki:
+        comment:  T50397
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    sewiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    sgwiki:
+        comment:  T51125
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    shnwiki:
+
+    shwiki:
+        comment:  T51125
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    simplewiki:
+        comment:  T181448
+        comment_1_5x:  T181448
+        comment_2x:  T181448
+
+    siwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    skwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    skrwiki:
+        comment:  T268410
+        comment_1_5x:  T268410
+        comment_2x:  T268410
+
+    slwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    smwiki:
+        comment:  T51125
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    smnwiki:
+
+    snwiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    sowiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    sqwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    srnwiki:
+        comment:  T46974
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    srwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    sswiki:
+        comment:  T46974
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    stqwiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    stwiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    suwiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    svwiki:
+        commons: File:Wikipedia-logo-v2-sv.svg
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    swwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    szlwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    szywiki:
+
+    tawiki:
+        comment:  T29826
+
+    tcywiki:
+        comment:  T140898
+        comment_1_5x:  T140898
+        comment_2x:  T140898
+
+    tetwiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    tewiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    tgwiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    thwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    tiwiki:
+        comment:  T249451
+        comment_1_5x:  T249451
+        comment_2x:  T249451
+
+    tkwiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    tlwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    tnwiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    towiki:
+        comment:  T51125
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    tpiwiki:
+        comment:  T29240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    trwiki:
+        commons: File:Wikipedia-logo-v2-tr.svg
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    tswiki:
+        comment:  T51125
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    ttwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    twwiki:
+        selected: akwiki
+        comment:  T189578
+        comment_1_5x:  T189578
+        comment_2x:  T189578
+
+    tyvwiki:
+        comment:  T51328
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    tywiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    udmwiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    ugwiki:
+        comment:  T50397
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    ukwiki:
+        commons: File:Wikipedia-logo-v2-uk.svg
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    urwiki:
+        comment:  T48589
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    uzwiki:
+        comment:  T39699
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    vecwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    vepwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    viwiki:
+
+    vlswiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    vowiki:
+        commons: File:Wikipedia-logo-v2-vo.svg
+        comment:  T51125
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    warwiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    wawiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    wowiki:
+        comment:  T42285
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    wuuwiki:
+        comment:  T46974
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    xalwiki:
+        comment:  T46974
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    xmfwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    yiwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    yowiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    zawiki:
+        comment:  T50397
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    zeawiki:
+        comment:  T51125
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    zh_classicalwiki:
+        comment:  T177165
+        comment_1_5x:  T177165
+        comment_2x:  T177165
+
+    zh_min_nanwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    zh_yuewiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    zhwiki:
+        commons: File:Wikipedia-logo-v2-zh.svg
+        variants:
+            zhwiki-hans: File:Wikipedia-logo-v2-zh-hans.svg
+
+    zuwiki:
+        comment:  T233424
+        comment_1_5x:  T233424
+        comment_2x:  T233424
+
+Wiktionary:
+    afwiktionary:
+        comment:  T178824
+        comment_1_5x:  T178824
+        comment_2x:  T178824
+
+    amwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    angwiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    anwiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    arwiktionary:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    astwiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    azwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    bclwiktionary:
+
+    bewiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    bgwiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    bnwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    brwiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    bswiktionary:
+        comment:  T45240
+        comment_1_5x:  T159542
+        comment_2x:  T159542
+
+    cawiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    cowiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    csbwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    cswiktionary:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    cywiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    dawiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    dewiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    elwiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    enwiktionary:
+        comment_1_5x:  T138801
+        comment_2x:  T138801
+
+    eowiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    eswiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    etwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    euwiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    fawiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    fiwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    fowiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    frwiktionary:
+        comment_1_5x:  T144427
+        comment_2x:  T144427
+
+    fywiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    gawiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    gdwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    glwiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    gomwiktionary:
+
+    guwiktionary:
+        comment:  T45240
+        no_1_5x: true
+        no_2x: true
+
+    gvwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    hewiktionary:
+
+    hiwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    hsbwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    huwiktionary:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    hywiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    iawiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    idwiktionary:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    iewiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    ikwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    iowiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    iswiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    itwiktionary:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    jbowiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    jvwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    kawiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    kkwiktionary:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    kmwiktionary:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    knwiktionary:
+        comment:  T31380
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    kowiktionary:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    kuwiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    kwwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    kywiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    lawiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    lbwiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    liwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    ltwiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    lvwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    niawiktionary:
+
+    mgwiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    minwiktionary:
+
+    miwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    mkwiktionary:
+        comment:  T140566
+        no_1_5x: true
+        no_2x: true
+
+    mlwiktionary:
+        comment:  T43785
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    mnwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    mrwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    mswiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    mtwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    mywiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    ndswiktionary:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    newiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    nlwiktionary:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    nnwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    nowiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    ocwiktionary:
+        comment:  T54019
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    orwiktionary:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    pawiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    plwiktionary:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    pnbwiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    pswiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    ptwiktionary:
+        comment:  T55685
+        no_1_5x: true
+        no_2x: true
+
+    quwiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    roa_rupwiktionary:
+        comment:  T45240
+        no_1_5x: true
+        no_2x: true
+
+    rowiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    ruwiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    sawiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    scnwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    sdwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    sgwiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    shwiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    shnwiktionary:
+
+    shywiktionary:
+
+    simplewiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    siwiktionary:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    skwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    slwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    sqwiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    srwiktionary:
+        comment_1_5x:  T172245
+        comment_2x:  T172245
+
+    suwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    svwiktionary:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    swwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    tawiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    tewiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    thwiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    tiwiktionary:
+        comment:  T249451
+        comment_1_5x:  T249451
+        comment_2x:  T249451
+
+    tkwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    trwiktionary:
+        comment:  T176008
+        comment_1_5x:  T176008
+        comment_2x:  T176008
+
+    ttwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    ugwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    ukwiktionary:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    urwiktionary:
+        comment:  T187209
+        comment_1_5x:  T187209
+        comment_2x:  T187209
+
+    uzwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    viwiktionary:
+        comment:  T45240
+
+    vowiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    wawiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    wowiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    yiwiktionary:
+        no_1_5x: true
+        no_2x: true
+
+    yuewiktionary:
+
+    zh_min_nanwiktionary:
+        comment:  T45240
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    zhwiktionary:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+Wikiquote:
+    angwikiquote:
+        no_1_5x: true
+        no_2x: true
+
+    arwikiquote:
+        no_1_5x: true
+        no_2x: true
+
+    azwikiquote:
+        no_1_5x: true
+        no_2x: true
+
+    bewikiquote:
+        comment:  T196134
+        comment_1_5x:  T196134
+        comment_2x:  T196134
+
+    bgwikiquote:
+        no_1_5x: true
+        no_2x: true
+
+    bswikiquote:
+        no_1_5x: true
+        no_2x: true
+
+    cawikiquote:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    cswikiquote:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    dewikiquote:
+        no_1_5x: true
+        no_2x: true
+
+    elwikiquote:
+        no_1_5x: true
+        no_2x: true
+
+    enwikiquote:
+        comment:  T171810
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    eowikiquote:
+        comment:  T45879
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    eswikiquote:
+        comment_1_5x:  T170604
+        comment_2x:  T170604
+
+    etwikiquote:
+        no_1_5x: true
+        no_2x: true
+
+    fawikiquote:
+
+    guwikiquote:
+        comment:  T121853
+
+    hewikiquote:
+
+    hiwikiquote:
+        comment:  T126185
+        no_1_5x: true
+        no_2x: true
+
+    hrwikiquote:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    huwikiquote:
+        no_1_5x: true
+        no_2x: true
+
+    hywikiquote:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    iswikiquote:
+        no_1_5x: true
+        no_2x: true
+
+    kawikiquote:
+        no_1_5x: true
+        no_2x: true
+
+    knwikiquote:
+        comment:  T104260
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    kowikiquote:
+        comment:  T29548
+        no_1_5x: true
+        no_2x: true
+
+    kuwikiquote:
+        no_1_5x: true
+        no_2x: true
+
+    mlwikiquote:
+        comment:  T44771
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    nlwikiquote:
+        no_1_5x: true
+        no_2x: true
+
+    nnwikiquote:
+        comment:  T29555
+        no_1_5x: true
+        no_2x: true
+
+    plwikiquote:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    rowikiquote:
+        no_1_5x: true
+        no_2x: true
+
+    ruwikiquote:
+        comment_1_5x:  T197508
+        comment_2x:  T197508
+
+    sahwikiquote:
+        comment:  T222065
+        comment_1_5x:  T222065
+        comment_2x:  T222065
+
+    sawikiquote:
+        comment:  T45812
+        no_1_5x: true
+        no_2x: true
+
+    skwikiquote:
+        no_1_5x: true
+        no_2x: true
+
+    slwikiquote:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    sqwikiquote:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    srwikiquote:
+        comment_1_5x:  T150618 and T168444
+        comment_2x:  T150618 and T168444
+
+    suwikiquote:
+        comment:  T106784
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    tawikiquote:
+        comment:  T57864
+        no_1_5x: true
+        no_2x: true
+
+    tewikiquote:
+
+    thwikiquote:
+        no_1_5x: true
+        no_2x: true
+
+    trwikiquote:
+        no_1_5x: true
+        no_2x: true
+
+    ukwikiquote:
+        no_1_5x: true
+        no_2x: true
+
+    urwikiquote:
+        comment:  T97510
+        no_1_5x: true
+        no_2x: true
+
+    viwikiquote:
+
+    zhwikiquote:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+Wikibooks:
+    afwikibooks:
+        comment:  T150618
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    akwikibooks:
+        comment:  T150618
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    angwikibooks:
+
+    arwikibooks:
+
+    astwikibooks:
+        comment:  T150618
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    aswikibooks:
+        comment:  T150618
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    aywikibooks:
+        comment:  T150618
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    azwikibooks:
+        comment:  T54019
+        no_1_5x: true
+        no_2x: true
+
+    bawikibooks:
+        comment_1_5x:  T227418
+        comment_2x:  T227418
+
+    bewikibooks:
+
+    bgwikibooks:
+        no_1_5x: true
+        no_2x: true
+
+    bnwikibooks:
+
+    cawikibooks:
+
+    cswikibooks:
+        comment_1_5x:  T177506
+        comment_2x:  T177506
+
+    cywikibooks:
+        comment:  T54019
+        no_1_5x: true
+        no_2x: true
+
+    dewikibooks:
+        comment_1_5x:  T177506
+        comment_2x:  T177506
+
+    elwikibooks:
+        no_1_5x: true
+        no_2x: true
+
+    enwikibooks:
+        comment_1_5x:  T177506
+        comment_2x:  T177506
+
+    eowikibooks:
+        comment:  T54019
+        no_1_5x: true
+        no_2x: true
+
+    eswikibooks:
+        comment_1_5x:  T170248
+        comment_2x:  T170248
+
+    etwikibooks:
+        comment:  T54019
+        no_1_5x: true
+        no_2x: true
+
+    euwikibooks:
+        comment:  T54019
+        no_1_5x: true
+        no_2x: true
+
+    fawikibooks:
+        no_1_5x: true
+        no_2x: true
+
+    fiwikibooks:
+        comment_1_5x:  T177506
+        comment_2x:  T177506
+
+    frwikibooks:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    fywikibooks:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    hewikibooks:
+        comment_1_5x:  T201562
+        comment_2x:  T201562
+
+    hiwikibooks:
+        comment:  T157229
+
+    hrwikibooks:
+        no_1_5x: true
+        no_2x: true
+
+    huwikibooks:
+        comment_1_5x:  T177506
+        comment_2x:  T177506
+
+    iawikibooks:
+        comment:  T150618
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    idwikibooks:
+        no_1_5x: true
+        no_2x: true
+
+    iewikibooks:
+        comment:  T150618
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    iswikibooks:
+        no_1_5x: true
+        no_2x: true
+
+    itwikibooks:
+        comment_1_5x:  T177506
+        comment_2x:  T177506
+
+    kawikibooks:
+        no_1_5x: true
+        no_2x: true
+
+    kowikibooks:
+        comment:  T58760
+        no_1_5x: true
+        no_2x: true
+
+    lawikibooks:
+
+    liwikibooks:
+        comment:  T193680
+        no_1_5x: true
+        no_2x: true
+
+    ltwikibooks:
+        no_1_5x: true
+        no_2x: true
+
+    mgwikibooks:
+        comment:  T150618
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    miwikibooks:
+        comment:  T150618
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    mkwikibooks:
+        comment:  T54019
+        no_1_5x: true
+        no_2x: true
+
+    mlwikibooks:
+        comment:  T45111
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    mrwikibooks:
+        comment:  T104132
+        no_1_5x: true
+        no_2x: true
+
+    mswikibooks:
+        no_1_5x: true
+        no_2x: true
+
+    newikibooks:
+        comment:  T124881
+        no_1_5x: true
+        no_2x: true
+
+    nowikibooks:
+
+    ocwikibooks:
+        comment:  T54019
+        no_1_5x: true
+        no_2x: true
+
+    ptwikibooks:
+        no_1_5x: true
+        no_2x: true
+
+    rowikibooks:
+        no_1_5x: true
+        no_2x: true
+
+    ruwikibooks:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    simplewikibooks:
+        comment:  T150618
+        no_1_5x: true
+        no_2x: true
+
+    siwikibooks:
+        no_1_5x: true
+        no_2x: true
+
+    skwikibooks:
+        no_1_5x: true
+        no_2x: true
+
+    slwikibooks:
+        comment:  T54019
+        no_1_5x: true
+        no_2x: true
+
+    sqwikibooks:
+        no_1_5x: true
+        no_2x: true
+
+    srwikibooks:
+        comment_1_5x:  T159534
+        comment_2x:  T159534
+
+    tawikibooks:
+        comment:  T33862
+        no_1_5x: true
+        no_2x: true
+
+    thwikibooks:
+        no_1_5x: true
+        no_2x: true
+
+    trwikibooks:
+        comment_1_5x:  T177506
+        comment_2x:  T177506
+
+    ttwikibooks:
+        no_1_5x: true
+        no_2x: true
+
+    ukwikibooks:
+        no_1_5x: true
+        no_2x: true
+
+    urwikibooks:
+        comment:  T185977
+        comment_1_5x:  T185977
+        comment_2x:  T185977
+
+    viwikibooks:
+        comment:  T39661
+
+    zhwikibooks:
+        no_1_5x: true
+        no_2x: true
+
+Wikinews:
+    arwikinews:
+        no_1_5x: true
+        no_2x: true
+
+    bgwikinews:
+        no_1_5x: true
+        no_2x: true
+
+    bswikinews:
+        no_1_5x: true
+        no_2x: true
+
+    cawikinews:
+        no_1_5x: true
+        no_2x: true
+
+    cswikinews:
+        no_1_5x: true
+        no_2x: true
+
+    dewikinews:
+        no_1_5x: true
+        no_2x: true
+
+    elwikinews:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    enwikinews:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    eowikinews:
+        no_1_5x: true
+        no_2x: true
+
+    eswikinews:
+        no_1_5x: true
+        no_2x: true
+
+    fawikinews:
+        no_1_5x: true
+        no_2x: true
+
+    fiwikinews:
+        no_1_5x: true
+        no_2x: true
+
+    frwikinews:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    hewikinews:
+        no_1_5x: true
+        no_2x: true
+
+    huwikinews:
+        no_1_5x: true
+        no_2x: true
+
+    itwikinews:
+        no_1_5x: true
+        no_2x: true
+
+    jawikinews:
+        no_1_5x: true
+        no_2x: true
+
+    kowikinews:
+        no_1_5x: true
+        no_2x: true
+
+    liwikinews:
+
+    nlwikinews:
+        no_1_5x: true
+        no_2x: true
+
+    nowikinews:
+        no_1_5x: true
+        no_2x: true
+
+    plwikinews:
+        no_1_5x: true
+        no_2x: true
+
+    ptwikinews:
+        no_1_5x: true
+        no_2x: true
+
+    rowikinews:
+        no_1_5x: true
+        no_2x: true
+
+    ruwikinews:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    sdwikinews:
+        no_1_5x: true
+        no_2x: true
+
+    sqwikinews:
+        comment:  T30114
+        no_1_5x: true
+        no_2x: true
+
+    srwikinews:
+        comment_1_5x:  T172255
+        comment_2x:  T172255
+
+    svwikinews:
+        no_1_5x: true
+        no_2x: true
+
+    tawikinews:
+        no_1_5x: true
+        no_2x: true
+
+    thwikinews:
+        no_1_5x: true
+        no_2x: true
+
+    trwikinews:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    ukwikinews:
+        comment:  T124778
+
+    zhwikinews:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+Wikisource:
+    arwikisource:
+        no_1_5x: true
+        no_2x: true
+
+    aswikisource:
+        comment:  T45129
+        no_1_5x: true
+        no_2x: true
+
+    azwikisource:
+        comment:  T54019
+        no_1_5x: true
+        no_2x: true
+
+    bewikisource:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    bgwikisource:
+        comment:  T54019
+        no_1_5x: true
+        no_2x: true
+
+    bnwikisource:
+
+    brwikisource:
+        no_1_5x: true
+        no_2x: true
+
+    bswikisource:
+        comment:  T54019
+        no_1_5x: true
+        no_2x: true
+
+    cawikisource:
+        no_1_5x: true
+        no_2x: true
+
+    cswikisource:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    cywikisource:
+        comment:  T58807
+        no_1_5x: true
+        no_2x: true
+
+    dewikisource:
+        no_1_5x: true
+        no_2x: true
+
+    elwikisource:
+        no_1_5x: true
+        no_2x: true
+
+    enwikisource:
+
+    eowikisource:
+        no_1_5x: true
+        no_2x: true
+
+    etwikisource:
+        no_1_5x: true
+        no_2x: true
+
+    euwikisource:
+
+    fawikisource:
+        no_1_5x: true
+        no_2x: true
+
+    fiwikisource:
+        comment:  T54019
+        no_1_5x: true
+        no_2x: true
+
+    frwikisource:
+
+    guwikisource:
+        no_1_5x: true
+        no_2x: true
+
+    hewikisource:
+        no_1_5x: true
+        no_2x: true
+
+    hiwikisource:
+
+    htwikisource:
+        comment:  T54019
+        no_1_5x: true
+        no_2x: true
+
+    huwikisource:
+        comment:  T54019
+        no_1_5x: true
+        no_2x: true
+
+    hywikisource:
+        comment:  T54019
+        no_1_5x: true
+        no_2x: true
+
+    iswikisource:
+        comment:  T54019
+        no_1_5x: true
+        no_2x: true
+
+    knwikisource:
+        comment:  T110806
+        no_1_5x: true
+        no_2x: true
+
+    kowikisource:
+        comment:  T40543
+        no_1_5x: true
+        no_2x: true
+
+    lawikisource:
+        comment:  T54019
+        no_1_5x: true
+        no_2x: true
+
+    liwikisource:
+        comment:  T54019
+        no_1_5x: true
+        no_2x: true
+
+    ltwikisource:
+        comment:  T54019
+        no_1_5x: true
+        no_2x: true
+
+    mkwikisource:
+        comment:  T54019
+        no_1_5x: true
+        no_2x: true
+
+    mlwikisource:
+        no_1_5x: true
+        no_2x: true
+
+    mrwikisource:
+        comment:  T103655
+        no_1_5x: true
+        no_2x: true
+
+    napwikisource:
+        comment:  T210752
+        comment_1_5x:  T210752
+        comment_2x:  T210752
+
+    nowikisource:
+        comment:  T167192
+        comment_1_5x:  T167192
+        comment_2x:  T167192
+
+    orwikisource:
+        comment:  T73875
+        no_1_5x: true
+        no_2x: true
+
+    pawikisource:
+        comment:  T149522
+        comment_1_5x:  T149522
+        comment_2x:  T149522
+
+    plwikisource:
+        no_1_5x: true
+        no_2x: true
+
+    ruwikisource:
+        comment_1_5x:  T203343
+        comment_2x:  T203343
+
+    sahwikisource:
+        no_1_5x: true
+        no_2x: true
+
+    sawikisource:
+        no_1_5x: true
+        no_2x: true
+
+    skwikisource:
+        no_1_5x: true
+        no_2x: true
+
+    slwikisource:
+        comment:  T54019
+        no_1_5x: true
+        no_2x: true
+
+    sourceswiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    srwikisource:
+        comment:  T54019
+        comment_1_5x:  T172268
+        comment_2x:  T172268
+
+    tawikisource:
+        no_1_5x: true
+        no_2x: true
+
+    tewikisource:
+        comment:  T46796
+
+    thwikisource:
+        comment:  T54019
+        no_1_5x: true
+        no_2x: true
+
+    trwikisource:
+        comment:  T54019
+        no_1_5x: true
+        no_2x: true
+
+    ukwikisource:
+        comment:  T56491
+        no_1_5x: true
+        no_2x: true
+
+    vecwikisource:
+        comment:  T132157
+        no_1_5x: true
+        no_2x: true
+
+    viwikisource:
+
+    wawikisource:
+
+    yiwikisource:
+        comment_1_5x:  T193562
+        comment_2x:  T193562
+
+    zh_min_nanwikisource:
+        no_1_5x: true
+        no_2x: true
+
+    zhwikisource:
+        comment:  T229715
+        comment_1_5x:  T229715
+        comment_2x:  T229715
+
+Wikiversity:
+    arwikiversity:
+
+    betawikiversity:
+        no_1_5x: true
+        no_2x: true
+
+    cswikiversity:
+        comment:  T54019
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    dewikiversity:
+
+    elwikiversity:
+        comment:  T248391
+        comment_1_5x:  T248391
+        comment_2x:  T248391
+
+    enwikiversity:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    eswikiversity:
+
+    fiwikiversity:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    frwikiversity:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    hiwikiversity:
+
+    itwikiversity:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    jawikiversity:
+
+    kowikiversity:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    ptwikiversity:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    ruwikiversity:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    slwikiversity:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    svwikiversity:
+
+    zhwikiversity:
+
+Wikivoyage:
+    bnwikivoyage:
+
+    elwikivoyage:
+        no_1_5x: true
+        no_2x: true
+
+    enwikivoyage:
+
+    eowikivoyage:
+
+    eswikivoyage:
+        comment:  T170604
+        comment_1_5x:  T170604
+        comment_2x:  T170604
+
+    fawikivoyage:
+        comment:  T73382
+        comment_1_5x:  T73382
+        comment_2x:  T73382
+
+    fiwikivoyage:
+        comment:  T151570
+
+    hewikivoyage:
+        comment_1_5x:  T208148
+        comment_2x:  T208148
+
+    hiwikivoyage:
+        comment:  T173013
+        comment_1_5x:  T173013
+        comment_2x:  T173013
+
+    plwikivoyage:
+
+    pswikivoyage:
+
+    ruwikivoyage:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    ukwikivoyage:
+        comment:  T110370
+
+    trwikivoyage:
+
+    viwikivoyage:
+        comment_1_5x:  T151570
+        comment_2x:  T151570
+
+    zhwikivoyage:
+        comment:  T61077
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+"Chapter and local user group wikis":
+    amwikimedia:
+        comment:  T176042
+        comment_1_5x:  T176042
+        comment_2x:  T176042
+
+    arwikimedia:
+        no_1_5x: true
+        no_2x: true
+
+    brwikimedia:
+        comment:  T257925
+        comment_1_5x:  T257925
+        comment_2x:  T257925
+
+    bdwikimedia:
+        no_1_5x: true
+        no_2x: true
+
+    bewikimedia:
+        no_1_5x: true
+        no_2x: true
+
+    cawikimedia:
+
+    cnwikimedia:
+        comment:  T98676
+        no_1_5x: true
+        no_2x: true
+
+    cowikimedia:
+        no_1_5x: true
+        no_2x: true
+
+    dkwikimedia:
+        no_1_5x: true
+        no_2x: true
+
+    ecwikimedia:
+        comment:  T135521
+        comment_1_5x:  T135521
+        comment_2x:  T135521
+
+    etwikimedia:
+        no_1_5x: true
+        no_2x: true
+
+    fiwikimedia:
+        no_1_5x: true
+        no_2x: true
+
+    gewikimedia:
+        comment:  T236389
+        comment_1_5x:  T236389
+        comment_2x:  T236389
+
+    grwikimedia:
+        comment:  T245911
+
+    hiwikimedia:
+
+    id_internalwikimedia:
+
+    idwikimedia:
+        comment:  T192726
+        comment_1_5x:  T192726
+        comment_2x:  T192726
+
+    maiwikimedia:
+
+    mkwikimedia:
+        no_1_5x: true
+        no_2x: true
+
+    mxwikimedia:
+        no_1_5x: true
+        no_2x: true
+
+    ngwikimedia:
+        comment:  T242416
+        comment_1_5x:  T242416
+        comment_2x:  T242416
+
+    nlwikimedia:
+        no_1_5x: true
+        no_2x: true
+
+    nowikimedia:
+        no_1_5x: true
+        no_2x: true
+
+    nycwikimedia:
+        no_1_5x: true
+        no_2x: true
+
+    nzwikimedia:
+        no_1_5x: true
+        no_2x: true
+
+    pa_uswikimedia:
+        no_1_5x: true
+        no_2x: true
+
+    plwikimedia:
+        no_1_5x: true
+        no_2x: true
+
+    ptwikimedia:
+        comment:  T126832
+        comment_1_5x:  T126832
+        comment_2x:  T126832
+
+    punjabiwikimedia:
+
+    romdwikimedia:
+
+    rswikimedia:
+        no_1_5x: true
+        no_2x: true
+
+    ruwikimedia:
+        no_1_5x: true
+        no_2x: true
+
+    sewikimedia:
+        no_1_5x: true
+        no_2x: true
+
+    trwikimedia:
+
+    uawikimedia:
+        no_1_5x: true
+        no_2x: true
+
+    wbwikimedia:
+        comment:  T162510
+        comment_1_5x:  T162510
+        comment_2x:  T162510
+
+"Special wikis":
+    advisorswiki:
+        comment:  T202844
+        comment_1_5x:  T202844
+        comment_2x:  T202844
+
+    advisorywiki:
+        no_1_5x: true
+        no_2x: true
+
+    arbcom_cswiki:
+        comment:  T151731
+        comment_1_5x:  T151731
+        comment_2x:  T151731
+
+    arbcom_dewiki:
+        comment:  T166947
+        comment_1_5x:  T166947
+        comment_2x:  T166947
+
+    arbcom_enwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    arbcom_fiwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    arbcom_nlwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    arbcom_ruwiki:
+        comment:  T262812
+        comment_1_5x:  T262812
+        comment_2x:  T262812
+
+    boardwiki:
+        no_1_5x: true
+        no_2x: true
+
+    chairwiki:
+        no_1_5x: true
+        no_2x: true
+
+    chapcomwiki:
+        comment_1_5x:  T193024
+        comment_2x:  T193024
+
+    checkuserwiki:
+        comment:  T30785
+        no_1_5x: true
+        no_2x: true
+
+    collabwiki:
+        no_1_5x: true
+        no_2x: true
+
+    commonswiki:
+        comment_1_5x:  T203343
+        comment_2x:  T203343
+
+    donatewiki:
+
+    execwiki:
+        no_1_5x: true
+        no_2x: true
+
+    fdcwiki:
+        comment:  T50379
+        no_1_5x: true
+        no_2x: true
+
+    foundationwiki:
+
+    iegcomwiki:
+        comment:  T50379
+        no_1_5x: true
+        no_2x: true
+
+    incubatorwiki:
+        comment_1_5x:  T230122
+        comment_2x:  T230122
+
+    internalwiki:
+        no_1_5x: true
+        no_2x: true
+
+    legalteamwiki:
+        no_1_5x: true
+        no_2x: true
+
+    loginwiki:
+        comment:  T50236
+        no_1_5x: true
+        no_2x: true
+
+    mediawikiwiki:
+        no_1_5x: true
+        no_2x: true
+
+    metawiki:
+
+    nostalgiawiki:
+        no_1_5x: true
+        no_2x: true
+
+    officewiki:
+
+    ombudsmenwiki:
+        commons: File:Wikimedia Ombuds logo.svg
+        comment:  T50379
+
+    otrs_wikiwiki:
+        no_1_5x: true
+        no_2x: true
+
+    outreachwiki:
+        no_1_5x: true
+        no_2x: true
+
+    qualitywiki:
+        no_1_5x: true
+        no_2x: true
+
+    searchcomwiki:
+        no_1_5x: true
+        no_2x: true
+
+    spcomwiki:
+        no_1_5x: true
+        no_2x: true
+
+    specieswiki:
+        comment_1_5x:  T230113
+        comment_2x:  T230113
+
+    stewardwiki:
+        comment:  T39700
+        no_1_5x: true
+        no_2x: true
+
+    sysop_itwiki:
+        comment:  T256545
+        comment_1_5x:  T256545
+        comment_2x:  T256545
+
+    strategywiki:
+        no_1_5x: true
+        no_2x: true
+
+    tenwiki:
+        no_1_5x: true
+        no_2x: true
+
+    test2wiki:
+
+    testcommonswiki:
+        selected: commonswiki
+        comment_1_5x:  T203343
+        comment_2x:  T203343
+
+    testwiki:
+        comment_1_5x:  T150618
+        comment_2x:  T150618
+
+    testwikidatawiki:
+        no_1_5x: true
+        no_2x: true
+
+    transitionteamwiki:
+        comment:  T50379
+        no_1_5x: true
+        no_2x: true
+
+    thankyouwiki:
+        selected: donatewiki
+        comment:  always same as donatewiki, see T259002
+        comment_2x:  always same as donatewiki, see T259002
+
+    usabilitywiki:
+        no_1_5x: true
+        no_2x: true
+
+    votewiki:
+
+    wg_enwiki:
+        no_1_5x: true
+        no_2x: true
+
+    wikidatawiki:
+        comment_1_5x:  T230120
+        comment_2x:  T230120
+
+    wikimania2005wiki:
+        comment:  T50382
+        no_1_5x: true
+        no_2x: true
+
+    wikimania2006wiki:
+        comment:  T50382
+        no_1_5x: true
+        no_2x: true
+
+    wikimania2007wiki:
+        comment:  T50382
+        no_1_5x: true
+        no_2x: true
+
+    wikimania2008wiki:
+        comment:  T50382
+        no_1_5x: true
+        no_2x: true
+
+    wikimania2009wiki:
+        comment:  T50382
+        no_1_5x: true
+        no_2x: true
+
+    wikimania2010wiki:
+        comment:  T50382
+        no_1_5x: true
+        no_2x: true
+
+    wikimania2011wiki:
+        comment:  T50382
+        no_1_5x: true
+        no_2x: true
+
+    wikimania2012wiki:
+        comment:  T50382
+        no_1_5x: true
+        no_2x: true
+
+    wikimania2013wiki:
+        comment:  T50382
+        no_1_5x: true
+        no_2x: true
+
+    wikimania2014wiki:
+        comment:  T58398
+        no_1_5x: true
+        no_2x: true
+
+    wikimania2015wiki:
+        comment:  T50382
+        no_1_5x: true
+        no_2x: true
+
+    wikimania2016wiki:
+        no_1_5x: true
+        no_2x: true
+
+    wikimania2017wiki:
+        comment:  T122062
+        no_1_5x: true
+        no_2x: true
+
+    wikimania2018wiki:
+        comment:  T173042
+        comment_1_5x:  T194340
+        comment_2x:  T194340
+
+    wikimaniateamwiki:
+        comment:  T50376
+        no_1_5x: true
+        no_2x: true
+
+    wikimaniawiki:
+        comment_1_5x:  T194340
+        comment_2x:  T194340
+
+    wikitech:
+        no_1_5x: true
+        no_2x: true

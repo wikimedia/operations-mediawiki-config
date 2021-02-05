@@ -75,6 +75,7 @@ function wmfEtcdApplyDBConfig() {
 			'es4' => [ 'cluster26' ],
 			'es5' => [ 'cluster27' ],
 			'x1' => [ 'extension1' ],
+			'x2' => [ 'extension2' ],
 		];
 		foreach ( $wmfDbconfigFromEtcd['externalLoads'] as $dbctlName => $dbctlLoads ) {
 			$merged = array_merge( $dbctlLoads[0], $dbctlLoads[1] );

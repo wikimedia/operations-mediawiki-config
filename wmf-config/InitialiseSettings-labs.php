@@ -43,12 +43,10 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgLanguageCode' => [
-			'apiportalwiki' => 'en',
 			'deploymentwiki' => 'en',
 		],
 
 		'wgSitename' => [
-			'apiportalwiki'  => 'Wikimedia API Portal',
 			'deploymentwiki' => 'Deployment',
 			'wikivoyage'     => 'Wikivoyage',
 		],
@@ -68,6 +66,7 @@ function wmfGetOverrideSettings() {
 			'deploymentwiki'      => 'https://deployment.wikimedia.beta.wmflabs.org',
 			'loginwiki'     => 'https://login.wikimedia.beta.wmflabs.org',
 			'metawiki'      => 'https://meta.wikimedia.beta.wmflabs.org',
+			'votewiki'      => 'https://vote.wikimedia.beta.wmflabs.org',
 			'wikidatawiki'  => 'https://wikidata.beta.wmflabs.org',
 			'en_rtlwiki' => 'https://en-rtl.wikipedia.beta.wmflabs.org',
 		],
@@ -87,20 +86,9 @@ function wmfGetOverrideSettings() {
 			'commonswiki'	=> 'https://commons.wikimedia.beta.wmflabs.org',
 			'deploymentwiki'      => 'https://deployment.wikimedia.beta.wmflabs.org',
 			'loginwiki'     => 'https://login.wikimedia.beta.wmflabs.org',
+			'votewiki'      => 'https://vote.wikimedia.beta.wmflabs.org',
 			'wikidatawiki'  => 'https://wikidata.beta.wmflabs.org',
 			'en_rtlwiki' => 'https://en-rtl.wikipedia.beta.wmflabs.org',
-		],
-
-		'wgMetaNamespace' => [
-			'apiportalwiki' => 'API_Portal',
-		],
-
-		'wgMetaNamespaceTalk' => [
-			'apiportalwiki' => 'Discuss_API_Portal',
-		],
-
-		'wgEnableUploads' => [
-			'apiportalwiki' => false,
 		],
 
 		'-wgUploadPath' => [
@@ -318,6 +306,7 @@ function wmfGetOverrideSettings() {
 				'SpamRegex' => 'debug',
 				'SQLBagOStuff' => 'debug',
 				'StashEdit' => 'debug',
+				'StopForumSpam' => 'debug',
 				'SwiftBackend' => 'debug', // -aaron 5/15/12
 				'texvc' => 'debug',
 				'throttler' => 'info',
@@ -423,9 +412,6 @@ function wmfGetOverrideSettings() {
 			'simplewiki' => true,
 		],
 
-		'wmgUseKartographer' => [
-			'apiportalwiki' => false,
-		],
 		'-wgKartographerEnableMapFrame' => [
 			'default'	=> true,
 		],
@@ -495,6 +481,9 @@ function wmfGetOverrideSettings() {
 		],
 		'wgVectorDefaultSkinVersionForNewAccounts' => [
 			'default' => '2', // Latest Vector
+		],
+		'wgVectorLanguageInHeader' => [
+			'default' => true,
 		],
 
 		'wmgCommonsMetadataForceRecalculate' => [
@@ -894,7 +883,6 @@ function wmfGetOverrideSettings() {
 
 		'wmgEnableDashikiData' => [
 			'default' => true,
-			'apiportalwiki' => false,
 		],
 
 		'wgCognateReadOnly' => [
@@ -986,7 +974,6 @@ function wmfGetOverrideSettings() {
 
 		'wmgUseJADE' => [
 			'default' => true,
-			'apiportalwiki' => false,
 		],
 
 		'wgOresUiEnabled' => [
@@ -1061,6 +1048,12 @@ function wmfGetOverrideSettings() {
 		'wmgUseGrowthExperiments' => [
 			'enwiki' => true,
 			'bnwiki' => true,
+		],
+		'wgGENewcomerTasksLinkRecommendationsEnabled' => [
+			'default' => true,
+		],
+		'wgGELinkRecommendationsFrontendEnabled' => [
+			'default' => true,
 		],
 		'wgGEHelpPanelHelpDeskTitle' => [
 			'enwiki' => 'Wikipedia:Help_desk',
@@ -1748,7 +1741,15 @@ function wmfGetOverrideSettings() {
 		],
 
 		'-wgDiscussionToolsBeta' => [
-			'default' => false,
+			'default' => true,
+		],
+
+		'-wgDiscussionTools_replytool' => [
+			'default' => 'available',
+		],
+
+		'-wgDiscussionTools_newtopictool' => [
+			'default' => 'default',
 		],
 
 		'wgWatchlistExpiry' => [
@@ -1761,10 +1762,6 @@ function wmfGetOverrideSettings() {
 		],
 		'-wgTmhUseBetaFeatures' => [
 			'default' => false,
-		],
-
-		'wmgUseGraph' => [
-			'apiportalwiki' => false,
 		],
 
 		// T242855 Undeploying graphoid
@@ -1785,11 +1782,6 @@ function wmfGetOverrideSettings() {
 				'default' => 25,
 				'flow' => 50,
 			],
-		],
-
-		'wmgUseWikimediaApiPortal' => [
-			'apiportalwiki' => true,
-			'default' => false,
 		],
 
 		// Deploy GlobalWatchlist to the beta cluster - T268181
@@ -1814,9 +1806,13 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
+		// T269712
 		'wgAbuseFilterAflFilterMigrationStage' => [
-			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD
+			'default' => SCHEMA_COMPAT_NEW
 		],
 
+		'wmgUseStopForumSpam' => [
+			'default' => true,
+		],
 	];
 } # wmfGetOverrideSettings()
