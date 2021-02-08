@@ -49,6 +49,7 @@ $common = [
 	'parsoid' => 'http://localhost:6002/w/rest.php',
 	'mathoid' => 'http://localhost:6003',
 	'eventgate-analytics' => 'http://localhost:6004',
+	'eventgate-analytics-external' => 'http://localhost:6013',
 	'eventgate-main' => 'http://localhost:6005',
 	'cxserver' => 'http://localhost:6015',
 	'electron' => 'http://pdfrender.discovery.wmnet:5252',
