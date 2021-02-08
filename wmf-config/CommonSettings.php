@@ -3916,6 +3916,10 @@ if ( $wmgUseEventBus ) {
 			'url' => "{$wmfLocalServices['eventgate-analytics']}/v1/events?hasty=true",
 			'timeout' => 11,
 		],
+		'eventgate-analytics-external' => [
+			'url' => "{$wmfLocalServices['eventgate-analytics-external']}/v1/events?hasty=true",
+			'timeout' => 11,
+		],
 		'eventgate-main' => [
 			'url' => "{$wmfLocalServices['eventgate-main']}/v1/events",
 			'timeout' => 26,
