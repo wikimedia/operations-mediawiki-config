@@ -19813,8 +19813,9 @@ function wmfGetVariantSettings() {
 			'schema_title' => 'analytics/test',
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
-			'sampling' => [
+			'sample' => [
 				'rate' => 0.5,
+				'unit' => 'session',
 			],
 		],
 		/*
