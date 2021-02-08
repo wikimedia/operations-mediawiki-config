@@ -22050,6 +22050,11 @@ function wmfGetVariantSettings() {
 	'commonswiki' => true,
 ],
 
+'wgMediaSearchExternalEntitySearchBaseUri' => [
+	'default' => 'https://www.wikidata.org/w/api.php',
+	'testcommonswiki' => 'https://test.wikidata.org/w/api.php',
+],
+
 // Disable redirects for search inputs to exact matches by default
 'wmgDoNotRedirectOnSearchMatch' => [
 	'default' => false,

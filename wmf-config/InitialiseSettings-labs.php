@@ -753,6 +753,10 @@ function wmfGetLabsOverrideSettings() {
 			'commonswiki' => 'https://wikidata.beta.wmflabs.org/w/api.php',
 		],
 
+		'wgMediaSearchExternalEntitySearchBaseUri' => [
+			'commonswiki' => 'https://wikidata.beta.wmflabs.org/w/api.php',
+		],
+
 		'wgMediaInfoHelpUrls' => [
 			'commonswiki' => [
 				'P245962' => 'https://commons.wikimedia.org/wiki/Special:MyLanguage/Commons:Depicts',
