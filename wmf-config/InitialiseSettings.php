@@ -19867,6 +19867,10 @@ function wmfGetVariantSettings() {
 			'schema_title' => 'analytics/session_tick',
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'sample' => [
+				'unit' => 'session',
+				'rate' => 0.01,
+			],
 		],
 		[
 			'stream' => 'ios.edit_history_compare',
