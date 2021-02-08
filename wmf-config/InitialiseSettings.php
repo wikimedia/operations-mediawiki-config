@@ -17950,7 +17950,7 @@ function wmfGetVariantSettings() {
 	'frwikiquote' => 'Utilisateur %code%', // T41472
 	'frwikisource' => 'Utilisateurs %code%',
 	'frwikiversity' => 'Utilisateurs %code%', // T146213
-	'frwiktionary' => 'Utilisateurs %code%',
+	'frwiktionary' => 'Personnes ayant un intérêt ou parlant %wikiname%', // T274137
 	'furwiki' => 'Utent %code%',
 	'fywiki' => 'Meidogger/Taal %code%',
 	'gawiki' => 'Úsáideoir %code%',
