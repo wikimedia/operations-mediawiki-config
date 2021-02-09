@@ -61,3 +61,8 @@ For special occasions, a different logo can be specified with the `selected` key
 
 For logo variants, the key is the name of the variant (must start with the
 wiki's name) and the value is the Commons filename.
+
+### Labs overrides
+When changing these logos, please ensure that all labs overrides in
+InitialiseSettings-labs.php work correctly to comply with the instructions at
+[VPS Terms of Use](https://wikitech.wikimedia.org/wiki/Wikitech:Cloud_Services_Terms_of_use).

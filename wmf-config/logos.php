@@ -10,6 +10,12 @@
 #      `-- wmf-config/logos.php
 #
 
+# ⚠️ IMPORTANT!!!! ⚠️
+# When updating these logos, please note that official Wikimedia logos should not be
+# used on labs instances.
+# Please check that any overrides in InitialiseSettings-labs.php work per instructions
+# at https://wikitech.wikimedia.org/wiki/Wikitech:Cloud_Services_Terms_of_use
+
 return [
 'wmgSiteLogo1x' => [
 	// Projects
