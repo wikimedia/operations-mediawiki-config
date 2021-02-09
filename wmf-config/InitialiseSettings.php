@@ -24303,6 +24303,7 @@ function wmfGetVariantSettings() {
 'wmgUseGlobalWatchlist' => [
 	'default' => false,
 	'testwiki' => true,
+	'metawiki' => true,
 ],
 'wgGlobalWatchlistDevMode' => [
 	'default' => false,
