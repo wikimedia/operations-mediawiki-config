@@ -368,7 +368,7 @@ function wmfGetLabsOverrideSettings() {
 			],
 		],
 
-		'wmgSiteLogo1x' => [
+		'-wmgSiteLogo1x' => [
 			'default' => '/static/images/project-logos/betawiki.png',
 			'commonswiki' => '/static/images/project-logos/betacommons.png',
 			'metawiki' => '/static/images/project-logos/betametawiki.png', // T125942
@@ -380,6 +380,27 @@ function wmfGetLabsOverrideSettings() {
 			'wikiversity' => '/static/images/project-logos/betawikiversity.png',
 			'wikivoyage' => '/static/images/project-logos/betacommons.png',
 			'wiktionary' => '/static/images/project-logos/betacommons.png',
+		],
+		'-wmgSiteLogo1_5x' => [
+			'default' => false,
+		],
+		'-wmgSiteLogo1_5x' => [
+			'default' => false,
+		],
+		'-wmgSiteLogo2x' => [
+			'default' => false,
+		],
+		'-wmgSiteLogoIcon' => [
+			'default' => false,
+		],
+		'-wmgSiteLogoVariants' => [
+			'default' => false,
+		],
+		'-wmgSiteLogoWordmark' => [
+			'default' => false,
+		],
+		'-wmgSiteLogoTagline' => [
+			'default' => false,
 		],
 
 		'wgFavicon' => [
