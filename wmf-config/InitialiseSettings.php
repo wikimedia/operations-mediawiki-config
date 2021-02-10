@@ -20088,21 +20088,20 @@ function wmfGetVariantSettings() {
 			'schema_title' => 'error',
 			'destination_event_service' => 'eventgate-main',
 		],
-		// Flink output streams
+		// Flink output streams.
+		// Note that Flink does not produce these through eventgate,
+		// it produces them directly to Kafka.
 		[
 			'stream' => 'rdf-streaming-updater.lapsed-action',
 			'schema_title' => 'rdf_streaming_updater/lapsed_action',
-			'canary_events_enabled' => true,
 		],
 		[
 			'stream' => 'rdf-streaming-updater.state-inconsistency',
 			'schema_title' => 'rdf_streaming_updater/state_inconsistency',
-			'canary_events_enabled' => true,
 		],
 		[
 			'stream' => 'rdf-streaming-updater.fetch-failure',
 			'schema_title' => 'rdf_streaming_updater/fetch_failure',
-			'canary_events_enabled' => true,
 		],
 	],
 ],
