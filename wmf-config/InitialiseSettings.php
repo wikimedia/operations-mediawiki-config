@@ -15797,6 +15797,30 @@ function wmfGetVariantSettings() {
 	'zhwikivoyage' => true, // T235083
 ],
 
+'wgPopupsConflictingRefTooltipsGadgetName' => [
+	'default' => 'ReferenceTooltips',
+	'arwiki' => 'CiteTooltip',
+	'azwiki' => 'referenceTooltips',
+	'bawiki' => 'referenceTooltips',
+	'cewiki' => 'referenceTooltips',
+	'cswikisource' => 'ReferencePopups',
+	'cswiktionary' => 'ReferencePopups',
+	'frwiki' => 'tooltipRef',
+	'hewiki' => 'CiteTooltip',
+	'hewikibooks' => 'RefTooltip',
+	'hewikinews' => 'RefTooltip',
+	'hewikisource' => 'CiteTooltip',
+	'itwikivoyage' => 'ReferenceTooltip',
+	'lezwiki' => 'referenceTooltips',
+	'myvwiki' => 'referenceTooltips',
+	'ruwiki' => 'referenceTooltips',
+	'ruwikibooks' => 'referenceTooltips',
+	'ruwikinews' => 'referenceTooltips',
+	'ruwikisource' => 'referenceTooltips',
+	'tgwiki' => 'referenceTooltips',
+	'udmwiki' => 'referenceTooltips',
+],
+
 // Whether Compact Links is a Beta feature
 'wmgULSCompactLanguageLinksBetaFeature' => [
 	'default' => false,
