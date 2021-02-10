@@ -277,10 +277,6 @@ function wmfExcimerFlushCallback( $log, $options ) {
 					$line = $firstFrame . $line;
 				}
 				$redis->publish( 'excimer', $line );
-				// Also send to excimer-buster pipeline (T273312)
-				if ( strpos( PHP_VERSION, 'buster' ) !== false ) {
-					$redis->publish( 'excimer-buster', $line );
-				}
 			}
 		}
 	} catch ( Exception $e ) {
