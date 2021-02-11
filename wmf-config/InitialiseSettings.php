@@ -3527,6 +3527,9 @@ function wmfGetVariantSettings() {
 		'Shelf_talk' => 103,
 		'WB' => NS_PROJECT,
 	],
+	'+itwikiquote' => [
+		'WQ' => NS_PROJECT, // T273362
+	],
 	'+itwikisource' => [
 		'Author' => 102,
 		'Author_talk' => 103,
