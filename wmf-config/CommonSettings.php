@@ -2583,16 +2583,6 @@ if ( $wmgUseVisualEditor ) {
 		$wgVisualEditorSourceFeedbackTitle = '2017 wikitext editor/Feedback';
 	}
 
-	// Enable for auto-created accounts
-	if ( $wmgVisualEditorAutoAccountEnable ) {
-		$wgVisualEditorAutoAccountEnable = true;
-	}
-
-	// Enable for a proportion of new accounts
-	if ( $wmgVisualEditorNewAccountEnableProportion ) {
-		$wgVisualEditorNewAccountEnableProportion = $wmgVisualEditorNewAccountEnableProportion;
-	}
-
 	// Citoid
 	wfLoadExtension( 'Citoid' );
 
