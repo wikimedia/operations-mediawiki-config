@@ -15347,6 +15347,7 @@ function wmfGetVariantSettings() {
 	'knwiki' => true,
 	'kowiki' => true,
 	'ladwiki' => true, // T121524
+	'ltwiki' => true, // T273957
 	'lvwiki' => true,
 	'maiwiki' => true,
 	'minwiki' => true,
