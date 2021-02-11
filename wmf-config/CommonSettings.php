@@ -2562,8 +2562,6 @@ if ( $wmgUseVisualEditor ) {
 	} else {
 		$wgDefaultUserOptions['visualeditor-enable'] = 0;
 		$wgVisualEditorEnableBetaFeature = true;
-		// Only show the beta-disable preference if the wiki is in 'beta'.
-		$wgHiddenPrefs[] = 'visualeditor-betatempdisable';
 	}
 	if ( $wmgVisualEditorTransitionDefault ) {
 		$wgVisualEditorTransitionDefault = true;
