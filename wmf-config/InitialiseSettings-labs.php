@@ -527,6 +527,9 @@ function wmfGetLabsOverrideSettings() {
 		'wgVectorLanguageInHeader' => [
 			'default' => true,
 		],
+		'wgVectorUseWvuiSearch' => [
+			'default' => true
+		],
 
 		'wmgCommonsMetadataForceRecalculate' => [
 			'default' => true,
