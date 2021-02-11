@@ -19010,11 +19010,10 @@ function wmfGetVariantSettings() {
 
 'wgDTSchemaEditAttemptStepSamplingRate' => [
 	'default' => false,
-	'arwiki' => 0.2,
-	'frwiki' => 0.2,
-	'huwiki' => 0.2,
-	'nlwiki' => 0.2,
-	'mediawikiwiki' => 0.2,
+],
+
+'wgDTSchemaEditAttemptStepOversample' => [
+	'default' => true,
 ],
 
 'wmgUseCodeEditorForCore' => [
