@@ -3840,6 +3840,10 @@ function wmfGetVariantSettings() {
 	'+nowiki' => [
 		'WP' => NS_PROJECT, // T43467
 	],
+	'+nowikibooks' => [
+		'Cookbook' => 102,
+		'Cookbook_talk' => 103,
+	],
 	'+nowikimedia' => [
 		'Brukar' => NS_USER,
 		'Brukardiskusjon' => NS_USER_TALK,
@@ -7129,6 +7133,10 @@ function wmfGetVariantSettings() {
 		103 => 'Overleg_transwiki',
 		104 => 'Wikijunior',
 		105 => 'Overleg_Wikijunior',
+	],
+	'nowikibooks' => [
+		102 => 'Kokebok', // Cookbook, T274265
+		103 => 'Kokebok-diskusjon',  // Cookbook talk, T274265
 	],
 	'plwikibooks' => [
 		NS_PROJECT_TALK => 'Dyskusja_Wikibooks',
@@ -13574,6 +13582,7 @@ function wmfGetVariantSettings() {
 	'+mlwikisource' => [ 100 ],
 	'+nlwikisource' => [ 102 ],
 	'+nowikisource' => [ 102 ],
+	'+nowikibooks' => [ 102 ], // T274265
 	'+plwikisource' => [ 104, 124 ], // T154711
 	'+ptwikisource' => [ 102 ],
 	'+rowikisource' => [ 102 ], // Follow-up for T31190
