@@ -15398,6 +15398,7 @@ function wmfGetVariantSettings() {
 	'trwikivoyage' => true, // T272780
 	'ukwiki' => true,
 	'urwiki' => true,
+	'viwiki' => true, // T272796
 	'zhwiki' => true,
 	'zhwikiversity' => true,
 	'zuwiki' => true,
