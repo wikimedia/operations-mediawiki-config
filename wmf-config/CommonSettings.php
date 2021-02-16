@@ -1007,9 +1007,6 @@ if ( isset( $wmgSiteLogo1x ) ) {
 if ( $wmgUseTimeline ) {
 	include "$wmfConfigDir/timeline.php";
 }
-# Most probably only used by EasyTimeline which is conditionally included above
-# but it is hard know whether there other use cases.
-putenv( "GDFONTPATH=/srv/mediawiki/fonts" );
 
 // TODO: This should be handled by LocalServices, not here.
 $wgCopyUploadProxy = ( $wmfRealm !== 'labs' ) ? $wmfLocalServices['urldownloader'] : false;
