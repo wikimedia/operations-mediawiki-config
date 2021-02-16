@@ -22330,6 +22330,11 @@ function wmfGetVariantSettings() {
 	'wikidatawiki' => true,
 ],
 
+'wmgWikibaseRepoIdGeneratorRateLimiting' => [
+	'default' => false,
+	'testwikidatawiki' => true,
+],
+
 'wmgUseTemplateSandbox' => [
 	'default' => true,
 	'lockeddown' => false,
