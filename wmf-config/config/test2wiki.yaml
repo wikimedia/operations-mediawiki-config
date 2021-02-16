@@ -13,3 +13,4 @@ inheritsFrom:
   - securepollglobal
   - wikidataclient-test
   - wikipedia
+  - desktop-improvements

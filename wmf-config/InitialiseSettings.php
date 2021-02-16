@@ -7662,6 +7662,11 @@ function wmfGetVariantSettings() {
 'wgVectorDefaultSidebarVisibleForAnonymousUser' => [
 	'desktop-improvements' => true,
 ],
+'wgVectorUseWvuiSearch' => [
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+],
 
 # wgForceUIMsgAsContentMsg @{
 'wgForceUIMsgAsContentMsg' => [
