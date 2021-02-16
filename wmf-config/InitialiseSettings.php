@@ -22347,6 +22347,7 @@ function wmfGetVariantSettings() {
 'wmgWikibaseRepoIdGeneratorRateLimiting' => [
 	'default' => false,
 	'testwikidatawiki' => true,
+	'wikidatawiki' => true,
 ],
 
 'wmgUseTemplateSandbox' => [
