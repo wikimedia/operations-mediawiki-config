@@ -19029,9 +19029,6 @@ function wmfGetVariantSettings() {
 
 'wgDiscussionToolsBeta' => [
 	'default' => true,
-	'arwiki' => false, // T249394
-	'cswiki' => false, // T249394
-	'huwiki' => false, // T249394
 	'apiportalwiki' => false, // T260624
 ],
 
@@ -19061,8 +19058,18 @@ function wmfGetVariantSettings() {
 	'zhwiki' => 'replytool',
 ],
 
+'wgDiscussionTools_replytool' => [
+	'default' => 'default',
+	'arwiki' => 'available', // T249394
+	'cswiki' => 'available', // T249394
+	'huwiki' => 'available', // T249394
+],
+
 'wgDiscussionTools_newtopictool' => [
 	'default' => 'unavailable',
+	'arwiki' => 'default', // T273145
+	'cswiki' => 'default', // T273145
+	'huwiki' => 'default', // T273145
 	'testwiki' => 'default',
 ],
 
