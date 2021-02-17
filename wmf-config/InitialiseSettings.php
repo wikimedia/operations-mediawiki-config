@@ -11515,6 +11515,9 @@ function wmfGetVariantSettings() {
 	'+hewikinews' => [
 		'sysop' => [ 'patroller', 'autopatrolled' ], // T140544
 	],
+	'+hewikisource' => [
+		'bureaucrat' => [ 'import', 'transwiki' ], // T274796
+	],
 	'+hiwiki' => [
 		'sysop' => [ 'abusefilter', 'autopatrolled', 'reviewer', 'rollbacker', 'filemover', 'templateeditor' ], // T37355, T56589, T120342
 	],
@@ -12353,6 +12356,9 @@ function wmfGetVariantSettings() {
 	],
 	'+hewikinews' => [
 		'sysop' => [ 'patroller', 'autopatrolled' ], // T140544
+	],
+	'+hewikisource' => [
+		'bureaucrat' => [ 'import', 'transwiki' ], // T274796
 	],
 	'+hiwiki' => [
 		'sysop' => [ 'abusefilter', 'autopatrolled', 'reviewer', 'rollbacker', 'filemover', 'templateeditor' ], // T37355, T56589, T120342
