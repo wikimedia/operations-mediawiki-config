@@ -7195,6 +7195,8 @@ function wmfGetVariantSettings() {
 	'tlwikibooks' => [
 		100 => 'Pagluluto',
 		101 => 'Usapang_pagluluto',
+		102 => 'Wikijunior', // Wikijunior - T274976
+		103 => 'Usapang_Wikijunior', // Wikijunior talk - T274976
 	],
 	'trwikibooks' => [
 		100 => 'Yemek',
