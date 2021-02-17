@@ -9521,6 +9521,9 @@ function wmfGetVariantSettings() {
 		],
 		'autopatrolled' => [ 'autopatrol' => true ], // T29918
 	],
+	'+hewikisource' => [
+		'reviewer' => [ 'rollback' => true, ], // T274796
+	],
 	'+hewikiquote' => [
 		'autopatrolled' => [ 'autopatrol' => true ],
 	],
