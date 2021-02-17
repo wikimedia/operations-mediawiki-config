@@ -19514,6 +19514,17 @@ function wmfGetVariantSettings() {
 	],
 ],
 
+// SectionTranslation configuration
+'wgContentTranslationEnableSectionTranslation' => [
+	'default' => false,
+	'bnwiki' => true, // T271397
+],
+
+'wgSectionTranslationTargetLanguage' => [
+	'default' => null,
+	'bnwiki' => 'bn',
+],
+
 'wmgUseExternalGuidance' => [
 	'default' => false,
 	'wikipedia' => true,
