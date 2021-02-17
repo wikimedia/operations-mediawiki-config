@@ -19029,6 +19029,7 @@ function wmfGetVariantSettings() {
 
 'wgDiscussionToolsBeta' => [
 	'default' => true,
+	'gomwiktionary' => false, // T258554
 	'apiportalwiki' => false, // T260624
 ],
 
