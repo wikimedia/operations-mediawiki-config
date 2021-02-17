@@ -7667,6 +7667,11 @@ function wmfGetVariantSettings() {
 	'testwiki' => true,
 	'test2wiki' => true,
 ],
+'wgVectorSearchTreatmentABTest' => [
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+],
 
 # wgForceUIMsgAsContentMsg @{
 'wgForceUIMsgAsContentMsg' => [
