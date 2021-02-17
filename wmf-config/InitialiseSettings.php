@@ -8583,6 +8583,20 @@ function wmfGetVariantSettings() {
 			'createpage' => true,
 		],
 	],
+	'+arbcom_ruwiki' => [
+		'arbcom' => [ // T274844
+			'block' => true,
+			'createaccount' => true,
+			'delete' => true,
+			'move-categorypages' => true,
+			'move-subpages' => true,
+			'move-rootuserpages' => true,
+			'suppressredirect' => true,
+			'tboverride' => true,
+			'skipcaptcha' => true,
+			'rollback' => true,
+		],
+	],
 	'+arwiki' => [
 		'*' => [ 'patrolmarks' => true ], // T257106
 		'autoconfirmed' => [ 'patrol' => true ],
@@ -11162,6 +11176,9 @@ function wmfGetVariantSettings() {
 	'+apiportalwiki' => [ // T259569
 		'bureaucrat' => [ 'docseditor' ],
 	],
+	'+arbcom_ruwiki' => [
+		'bureaucrat' => [ 'arbcom' ]
+	],
 	'+arwiki' => [
 		'bureaucrat' => [ 'import', 'reviewer', 'abusefilter' ], // T143844
 		'sysop' => [ 'uploader', 'reviewer', 'confirmed', 'rollbacker', 'abusefilter', ],
@@ -11983,6 +12000,9 @@ function wmfGetVariantSettings() {
 	// ******************************************************************
 	'+apiportalwiki' => [ // T259569
 		'bureaucrat' => [ 'docseditor' ],
+	],
+	'+arbcom_ruwiki' => [
+		'bureaucrat' => [ 'arbcom' ]
 	],
 	'+arwiki' => [
 		'bureaucrat' => [ 'import', 'reviewer', 'abusefilter' ], // T143844
