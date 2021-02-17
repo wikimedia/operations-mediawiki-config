@@ -4161,6 +4161,9 @@ function wmfGetVariantSettings() {
 	'+thwiktionary' => [
 		'คุยเรื่องWiktionary' => NS_PROJECT_TALK,
 	],
+	'+tlwikibooks' => [
+		'WB' => NS_PROJECT,
+	],
 	'+trwiki' => [
 		'T' => NS_TALK, // T265336
 		'K' => NS_USER, // T265336
