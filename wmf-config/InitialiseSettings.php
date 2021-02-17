@@ -24732,6 +24732,7 @@ function wmfGetVariantSettings() {
 	'ruwiki' => true,
 	'srwiki' => true,
 	'svwiki' => true,
+	'thwiki' => true,
 	'trwiki' => true,
 	'ukwiki' => true,
 	'viwiki' => true,
@@ -24745,6 +24746,7 @@ function wmfGetVariantSettings() {
 'wgWelcomeSurveyExperimentalGroups' => [
 	'default' => [ 'exp2_target_specialpage' => [ 'range' => '0-9' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
 	'dawiki' => [ 'exp2_target_specialpage' => [ 'range' => 'x' ], 'exp2_target_popup' => [ 'range' => 'x' ] ], // No welcome survey to newcomers - T256126
+	'thwiki' => [ 'exp2_target_specialpage' => [ 'range' => 'x' ], 'exp2_target_popup' => [ 'range' => 'x' ] ], // No welcome survey to newcomers - T274646
 ],
 
 'wgGEHomepageImpactModuleEnabled' => [
@@ -24798,6 +24800,7 @@ function wmfGetVariantSettings() {
 	'ruwiki' => 'Википедия:Форум/Помощь начинающим',
 	'srwiki' => 'Википедија:Трг/Помоћ',
 	'svwiki' => 'Wikipedia:Fikarummet/Frågor',
+	'thwiki' => 'วิกิพีเดีย:แผนกช่วยเหลือ',
 	'trwiki' => 'Vikipedi:Danışma masası',
 	'ukwiki' => 'Вікіпедія:Кнайпа (допомога)',
 	'viwiki' => 'Wikipedia:Giúp_sử_dụng_Wikipedia',
@@ -24829,6 +24832,7 @@ function wmfGetVariantSettings() {
 	'ruwiki' => 'Википедия:Справка',
 	'srwiki' => 'Википедија:Помоћ',
 	'svwiki' => 'Wikipedia:Hjälp',
+	'thwiki' => 'วิธีใช้:สารบัญ',
 	'trwiki' => 'Yardım:İçindekiler',
 	'ukwiki' => 'Вікіпедія:Довідка',
 	'viwiki' => 'Trợ_giúp:Mục_lục',
@@ -25312,6 +25316,33 @@ function wmfGetVariantSettings() {
 			'id' => 'citation',
 		]
 	],
+	'thwiki' => [
+		[
+			'title' => 'วิกิพีเดีย:คู่มือการเขียน',
+			'text' => 'คู่มือการเขียน',
+			'id' => 'style',
+		],
+		[
+			'title' => 'วิธีใช้:การแก้ไข',
+			'text' => 'การแก้ไข',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/th#การแก้ไขภาพและไฟล์สื่ออื่น',
+			'text' => 'การแก้ไขภาพและไฟล์สื่ออื่น',
+			'id' => 'image',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/th#การแก้ไขแหล่งอ้างอิง',
+			'text' => 'การแก้ไขแหล่งอ้างอิง',
+			'id' => 'references',
+		],
+		[
+			'title' => 'วิกิพีเดีย:วิซาร์ดบทความ',
+			'text' => 'วิซาร์ดบทความวิกิพีเดีย',
+			'id' => 'tutorial',
+		],
+	],
 	'trwiki' => [
 		[
 			'title' => 'Vikipedi:Biçem el kitabı',
@@ -25554,6 +25585,7 @@ function wmfGetVariantSettings() {
 	'dawiki' => 0, // No automated deployment per T256126#6801307
 	// euwiki is not an A/B test (T233066)
 	'euwiki' => 100,
+	'thwiki' => 0, // No automated deployment per T274646#6831312
 ],
 
 'wgGEHomepageNewAccountVariants' => [
@@ -25584,6 +25616,7 @@ function wmfGetVariantSettings() {
 	'ruwiki' => 'Справка:Введение',
 	'srwiki' => 'Помоћ:Уређивање',
 	'svwiki' => 'Wikipedia:Introduktion',
+	'thwiki' => 'วิกิพีเดีย:สอนการใช้งาน',
 	'trwiki' => 'Yardım:Sayfa değiştirme',
 	'ukwiki' => 'Довідка:Ознайомлення',
 	'viwiki' => 'Wikipedia:Sách_hướng_dẫn',
