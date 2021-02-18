@@ -15190,6 +15190,7 @@ function wmfGetVariantSettings() {
 		'bidgee.id.au', // User:Bidgee's personal site - T272202
 		'image.laji.fi', // Finnish Biodiversity Information Facility - T270587
 		'*.president.az', // President of the Republic of Azerbaijan - T274789
+		'seer.ufrgs.br', // T270962
 	],
 ],
 
