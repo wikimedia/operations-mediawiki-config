@@ -381,17 +381,10 @@ function wmfGetLabsOverrideSettings() {
 			'wikivoyage' => '/static/images/project-logos/betacommons.png',
 			'wiktionary' => '/static/images/project-logos/betacommons.png',
 		],
-		'-wmgSiteLogo1_5x' => [
-			'default' => false,
-		],
-		'-wmgSiteLogo1_5x' => [
-			'default' => false,
-		],
-		'-wmgSiteLogo2x' => [
-			'default' => false,
-		],
+		'-wmgSiteLogo1_5x' => [],
+		'-wmgSiteLogo2x' => [],
 		'-wmgSiteLogoIcon' => [
-			'default' => false,
+			'default' => '/static/images/project-logos/wikimedia-cloud-services.svg'
 		],
 		'-wmgSiteLogoVariants' => [
 			'default' => false,
