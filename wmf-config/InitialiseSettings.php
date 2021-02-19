@@ -19155,7 +19155,7 @@ function wmfGetVariantSettings() {
 	'aswiki' => 70,
 	'idwiki' => 70,
 	'tewiki' => 70,
-	'viwiki' => 95, // T264161
+	'viwiki' => 90, // T275121
 	'zhwiki' => 95, // T252786
 ],
 
