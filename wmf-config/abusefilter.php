@@ -445,6 +445,9 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterAnonBlockDuration = '2 hours';
 		$wgAbuseFilterNotifications = false;
 		break;
+	case 'ukwikivoyage':
+		$wgAbuseFilterActions['block'] = true; // T275271
+		break;
 	case 'urwiki':
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true; // T47643
 		break;
