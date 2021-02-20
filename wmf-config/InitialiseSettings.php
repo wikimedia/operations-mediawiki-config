@@ -9358,9 +9358,10 @@ function wmfGetVariantSettings() {
 			'autopatrol' => true,
 		], // T144817
 		'reviewer' => [
-			'patrol' => true,
-			'autopatrol' => true,
-		], // T144817
+			'patrol' => true, // T144817
+			'autopatrol' => true, // T144817
+			'stablesettings' => true, // T149987
+		],
 		'autoreview' => [ 'autopatrol' => true ], // T144817
 	],
 	'+foundationwiki' => [
