@@ -10,3 +10,4 @@ inheritsFrom:
   - s7
   - securepollglobal
   - wikidataclient
+  - growthexperiments

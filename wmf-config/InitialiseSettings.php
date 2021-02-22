@@ -24730,6 +24730,7 @@ function wmfGetVariantSettings() {
 	'plwiki' => true,
 	'ptwiki' => true,
 	'ruwiki' => true,
+	'rowiki' => true,
 	'srwiki' => true,
 	'svwiki' => true,
 	'thwiki' => true,
@@ -24746,6 +24747,7 @@ function wmfGetVariantSettings() {
 'wgWelcomeSurveyExperimentalGroups' => [
 	'default' => [ 'exp2_target_specialpage' => [ 'range' => '0-9' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
 	'dawiki' => [ 'exp2_target_specialpage' => [ 'range' => 'x' ], 'exp2_target_popup' => [ 'range' => 'x' ] ], // No welcome survey to newcomers - T256126
+	'rowiki' => [ 'exp2_target_specialpage' => [ 'range' => 'x' ], 'exp2_target_popup' => [ 'range' => 'x' ] ], // No welcome survey to newcomers - T275130
 	'thwiki' => [ 'exp2_target_specialpage' => [ 'range' => 'x' ], 'exp2_target_popup' => [ 'range' => 'x' ] ], // No welcome survey to newcomers - T274646
 ],
 
@@ -24798,6 +24800,7 @@ function wmfGetVariantSettings() {
 	'plwiki' => 'Pomoc:Pytania nowicjuszy',
 	'ptwiki' => 'Ajuda:Tire suas dúvidas',
 	'ruwiki' => 'Википедия:Форум/Помощь начинающим',
+	'rowiki' => 'Wikipedia:Cafenea',
 	'srwiki' => 'Википедија:Трг/Помоћ',
 	'svwiki' => 'Wikipedia:Fikarummet/Frågor',
 	'thwiki' => 'วิกิพีเดีย:แผนกช่วยเหลือ',
@@ -24830,6 +24833,7 @@ function wmfGetVariantSettings() {
 	'plwiki' => 'Pomoc:Spis treści',
 	'ptwiki' => 'Wikipédia:Guia de criação de artigos',
 	'ruwiki' => 'Википедия:Справка',
+	'rowiki' => 'Ajutor:Cuprins',
 	'srwiki' => 'Википедија:Помоћ',
 	'svwiki' => 'Wikipedia:Hjälp',
 	'thwiki' => 'วิธีใช้:สารบัญ',
@@ -25267,6 +25271,33 @@ function wmfGetVariantSettings() {
 			'id' => 'articlewizard',
 		],
 	],
+	'rowiki' => [
+		[
+			'title' => 'Ajutor:Bun venit',
+			'text' => 'Bun venit',
+			'id' => 'introduction',
+		],
+		[
+			'title' => 'Wikipedia:Ghid',
+			'text' => 'Ghid',
+			'id' => 'tutorial',
+		],
+		[
+			'title' => 'Ajutor:Cum modific o pagină',
+			'text' => 'Cum modific o pagină',
+			'id' => 'formatting',
+		],
+		[
+			'title' => 'Ajutor:Wikizare',
+			'text' => 'Wikizare',
+			'id' => 'wikitextoverview',
+		],
+		[
+			'title' => 'Wikipedia:Asistent pentru a crea articole',
+			'text' => 'Asistent pentru a crea articole',
+			'id' => 'articlewizzard',
+		],
+	],
 	'srwiki' => [
 		[
 			'title' => 'Википедија:Добро_дошли',
@@ -25553,6 +25584,10 @@ function wmfGetVariantSettings() {
 		'create' => 'Википедия:Как создать статью',
 		'image' => 'Википедия:Иллюстрирование',
 	],
+	'rowiki' => [
+		'create' => 'Ajutor:Cum scriu un articol',
+		'image' => 'mw:Help:VisualEditor/User_guide/ro#Modificarea_imaginilor_și_a_altor_fișiere_media',
+	],
 	'srwiki' => [
 		'create' => 'Википедија:Креирање чланака',
 		'image' => 'Википедија:Упутства/Слике',
@@ -25585,6 +25620,7 @@ function wmfGetVariantSettings() {
 	'dawiki' => 0, // No automated deployment per T256126#6801307
 	// euwiki is not an A/B test (T233066)
 	'euwiki' => 100,
+	'rowiki' => 0, // No automated deployment
 	'thwiki' => 0, // No automated deployment per T274646#6831312
 ],
 
@@ -25614,6 +25650,7 @@ function wmfGetVariantSettings() {
 	'plwiki' => 'Wikipedia:Pięć filarów',
 	'ptwiki' => 'Ajuda:Tutorial',
 	'ruwiki' => 'Справка:Введение',
+	'rowiki' => 'Wikipedia:Ghid',
 	'srwiki' => 'Помоћ:Уређивање',
 	'svwiki' => 'Wikipedia:Introduktion',
 	'thwiki' => 'วิกิพีเดีย:สอนการใช้งาน',
@@ -25639,6 +25676,7 @@ function wmfGetVariantSettings() {
 	'plwiki' => 'Pomoc:Przewodnicy/Przewodnicy',
 	'ptwiki' => 'Wikipédia:Tutoria/Tutores',
 	'ruwiki' => 'Проект:Помощь начинающим/Наставники',
+	'rowiki' => 'Wikipedia:Listă mentori',
 	'srwiki' => 'Википедија:Трг/Помоћ/Ментори',
 	'svwiki' => 'Wikipedia:Faddrar/Lista',
 	'trwiki' => 'Vikipedi:Eğitmen listesi',
