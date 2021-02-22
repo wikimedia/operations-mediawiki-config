@@ -20285,9 +20285,7 @@ function wmfGetVariantSettings() {
 
 // Enable sessionTick on these wikis
 'wgWMESessionTick' => [
-	'default' => false,
-	'group0' => true,
-	'group1' => true,
+	'default' => true,
 ],
 
 // EventLogging JavaScript client code will POST events to this URI.
