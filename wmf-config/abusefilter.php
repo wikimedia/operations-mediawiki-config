@@ -123,6 +123,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // T44012
+		$wgAbuseFilterActions['block'] = true; // T273864
 		break;
 	case 'enwikinews':
 		$wgAbuseFilterActions['block'] = true; // T57868
@@ -443,6 +444,9 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterBlockDuration = '2 hours';    // T89379
 		$wgAbuseFilterAnonBlockDuration = '2 hours';
 		$wgAbuseFilterNotifications = false;
+		break;
+	case 'ukwikivoyage':
+		$wgAbuseFilterActions['block'] = true; // T275271
 		break;
 	case 'urwiki':
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true; // T47643

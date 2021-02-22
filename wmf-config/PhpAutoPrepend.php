@@ -39,13 +39,9 @@ wmfSetupProfiler( [
 	'redis-timeout' => $wmfServiceConfig->getRealm() === 'labs' ? 1 : 0.1,
 	'use-xhgui' => ( $wmfServiceConfig->getLocalService( 'xhgui' ) || $wmfServiceConfig->getLocalService( 'xhgui-pdo' ) ),
 	'xhgui-conf' => [
-		'mongodb.host' => $wmfServiceConfig->getLocalService( 'xhgui' ),
-		'mongodb.options' => [],
 		'pdo.connect' => $wmfServiceConfig->getLocalService( 'xhgui-pdo' ),
 		'pdo.table' => 'xhgui',
 	],
-	'excimer-production-period' => 60,
-	'excimer-single-period' => 0.01,
 ] );
 
 require __DIR__ . '/set-time-limit.php';

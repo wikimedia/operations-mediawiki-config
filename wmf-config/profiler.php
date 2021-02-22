@@ -17,10 +17,8 @@ require_once __DIR__ . '/../src/XWikimediaDebug.php';
  *   - redis-host: The host used for Xenon events
  *   - redis-port: The port used for Xenon events
  *   - redis-timeout: The redis socket timeout
- *   - use-xhgui: True to use XHGui saver via MongoDB and PDO
+ *   - use-xhgui: True to use XHGui saver
  *   - xhgui-conf: The configuration array to pass to Xhgui_Saver::factory
- *   - excimer-production-period: The sampling period for production profiling
- *   - excimer-single-period: The sampling period for Excimer forceprofile
  */
 function wmfSetupProfiler( $options ) {
 	global $wmgProfiler;
@@ -107,7 +105,7 @@ function wmfSetupTideways( $options ) {
 		 * One-off profile to XHGui.
 		 *
 		 * Set X-Wikimedia-Debug header with 'profile' attribute to instrument a web request
-		 * with XHProf and save the profile to XHGui's MongoDB and/or MariaDB.
+		 * with XHProf and save the profile to XHGui.
 		 *
 		 * To find the profile in XHGui, either browse "Recent", or use wgRequestId value
 		 * from the mw.config data in the HTML web response, e.g. by running the
@@ -121,6 +119,11 @@ function wmfSetupTideways( $options ) {
 		if ( $profileToXhgui ) {
 			// XHGui save callback
 			$saveCallback = function () use ( $options ) {
+				// XHGui used to use MongoDB.  Even though we're now using MariaDB,
+				// the MongoDate class from mongofill remains.  Despite its name,
+				// there is no MongoDB-specific functionality in it.
+				require_once __DIR__ . '/../lib/profiler-autoload.php';
+
 				// These globals are set by private/PrivateSettings.php and may only be
 				// read by wmf-config after MediaWiki is initialised.
 				// The profiler is set up much earlier via PhpAutoPrepend, as such,
@@ -128,34 +131,10 @@ function wmfSetupTideways( $options ) {
 				global $wmgXhguiDBuser, $wmgXhguiDBpassword;
 
 				$data = [ 'profile' => tideways_xhprof_disable() ];
-
-				/**
-				 * The following classes from composer packages are needed to submit
-				 * profiles to MongoDB-backed XHGui:
-				 *
-				 * - MongoDate
-				 * - Xhgui_Util
-				 * - Xhgui_Saver::factory
-				 *   - MongoClient
-				 *   - MongoCollection
-				 *   - Xhgui_Saver_Mongo
-				 * - Xhgui_Saver_Mongo::save
-				 *     - Xhgui_Saver_Mongo::getLastProfilingId
-				 *       - MongoId
-				 *     - MongoCollection::insert
-				 *
-				 * Upstream XHGui recommends using alcaeus/mongo-php-adapter, which is a library
-				 * that provides an interface compatible with PHP5's ext-mongo on top of either
-				 * ext-mongo itself (PHP5.3+) or ext-mongodb (PHP5.5+ and PHP7).
-				 *
-				 * WMF servers have neither of the PHP extensions installed. Instead we use
-				 * "mongofill", which is a plain PHP implementation originally written to support
-				 * HHVM, but also works fine on PHP7.2.
-				 *
-				 * We are transitioning to storing XHGui profiles in MariaDB instead, using
-				 * Xhgui_Saver_Pdo, see T180761.
-				 */
-				require_once __DIR__ . '/../lib/profiler-autoload.php';
+				if ( !isset( $data['profile']['main()'] ) ) {
+					// There isn't valid profile data to save (T271865).
+					return;
+				}
 
 				$sec  = $_SERVER['REQUEST_TIME'];
 				$usec = $_SERVER['REQUEST_TIME_FLOAT'] - $sec;
@@ -165,6 +144,7 @@ function wmfSetupTideways( $options ) {
 				// that looks for the request ID.
 				// Matches mediawiki/core: WebRequest::getRequestId (T253674).
 				$reqId = $_SERVER['HTTP_X_REQUEST_ID'] ?? $_SERVER['UNIQUE_ID'] ?? null;
+
 				// Create a simplified url with just script name and 'action' query param
 				$qs = isset( $_GET['action'] ) ? ( '?action=' . $_GET['action'] ) : '';
 				$url = '//' . $reqId . $_SERVER['SCRIPT_NAME'] . $qs;
@@ -203,17 +183,6 @@ function wmfSetupTideways( $options ) {
 					'request_date'     => date( 'Y-m-d', $sec ),
 				];
 
-				if ( !empty( $options['xhgui-conf']['mongodb.host'] ) ) {
-					$mongo = new MongoClient(
-						$options['xhgui-conf']['mongodb.host'],
-						$options['xhgui-conf']['mongodb.options']
-					);
-					$collection = $mongo->selectDB( 'xhprof' )->selectCollection( 'results' );
-					$collection->findOne();
-					$saver = new Xhgui_Saver_Mongo( $collection );
-					$saver->save( $data );
-				}
-
 				if ( !empty( $options['xhgui-conf']['pdo.connect'] )
 					&& $wmgXhguiDBuser
 					&& $wmgXhguiDBpassword
@@ -245,46 +214,37 @@ function wmfSetupTideways( $options ) {
  * @param array $options
  */
 function wmfSetupExcimer( $options ) {
-	// Use a static variable to keep the object in scope until the end
+	// Use static variables to keep the objects in scope until the end
 	// of the request
-	static $prodProf;
+	static $cpuProf;
+	static $realProf;
 
-	$prodProf = new ExcimerProfiler;
-	$prodProf->setEventType( EXCIMER_CPU );
-	$prodProf->setPeriod( $options['excimer-production-period'] );
-	// T176916
-	$prodProf->setMaxDepth( 250 );
-	$prodProf->setFlushCallback(
+	$cpuProf = new ExcimerProfiler;
+	$cpuProf->setEventType( EXCIMER_CPU );
+
+	$realProf = new ExcimerProfiler;
+	$realProf->setEventType( EXCIMER_REAL );
+
+	$cpuProf->setPeriod( 60 );
+	$realProf->setPeriod( 60 );
+
+	// Limit the depth of stack traces to 250 (T176916)
+	$cpuProf->setMaxDepth( 250 );
+	$realProf->setMaxDepth( 250 );
+
+	$cpuProf->setFlushCallback(
 		function ( $log ) use ( $options ) {
-			wmfExcimerFlushCallback( $log, $options );
+			wmfExcimerFlushCallback( $log, $options, /* redisChannel = */ 'excimer' );
 		},
-		1 );
-	$prodProf->start();
+		/* $maxSamples = */ 1 );
+	$realProf->setFlushCallback(
+		function ( $log ) use ( $options ) {
+			wmfExcimerFlushCallback( $log, $options, /* redisChannel = */ 'excimer-wall' );
+		},
+		/* $maxSamples = */ 1 );
 
-	if ( !extension_loaded( 'tideways_xhprof' )
-		&& XWikimediaDebug::getInstance()->hasOption( 'forceprofile' )
-	) {
-		global $wmgProfiler;
-
-		$cpuProf = new ExcimerProfiler;
-		$cpuProf->setEventType( EXCIMER_CPU );
-		$cpuProf->setPeriod( $options['excimer-single-period'] );
-		$cpuProf->setMaxDepth( 100 );
-		$cpuProf->start();
-
-		$realProf = new ExcimerProfiler;
-		$realProf->setEventType( EXCIMER_REAL );
-		$realProf->setPeriod( $options['excimer-single-period'] );
-		$realProf->setMaxDepth( 100 );
-		$realProf->start();
-
-		$wmgProfiler = [
-			'class' => 'ProfilerExcimer',
-			'cpu-profiler' => $cpuProf,
-			'real-profiler' => $realProf,
-			'output' => 'text',
-		];
-	}
+	$cpuProf->start();
+	$realProf->start();
 }
 
 /**
@@ -294,8 +254,9 @@ function wmfSetupExcimer( $options ) {
  *
  * @param string $log
  * @param array $options
+ * @param string $redisChannel
  */
-function wmfExcimerFlushCallback( $log, $options ) {
+function wmfExcimerFlushCallback( $log, $options, $redisChannel ) {
 	$error = null;
 	$toobig = 0;
 	try {
@@ -331,7 +292,7 @@ function wmfExcimerFlushCallback( $log, $options ) {
 				if ( substr( $line, 0, strlen( $firstFrame ) ) !== $firstFrame ) {
 					$line = $firstFrame . $line;
 				}
-				$redis->publish( 'excimer', $line );
+				$redis->publish( $redisChannel, $line );
 			}
 		}
 	} catch ( Exception $e ) {

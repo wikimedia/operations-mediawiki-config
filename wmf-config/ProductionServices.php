@@ -20,8 +20,8 @@
 
 $common = [
 	// Logging is not active-active.
-	'udp2log' => 'mwlog1001.eqiad.wmnet:8420',
-	'xenon' => 'mwlog1001.eqiad.wmnet',
+	'udp2log' => '10.64.32.175:8420', # mwlog1001
+	'xenon' => '10.64.32.175', # mwlog1001
 
 	// This refers to the old, MongoDB-based backend, which has been
 	// replaced by xhgui-pdo (T180761).
@@ -31,7 +31,7 @@ $common = [
 	'xhgui-pdo' => 'mysql:host=m2-master.eqiad.wmnet;dbname=xhgui',
 
 	// Statsd is not active-active.
-	'statsd' => 'statsd.eqiad.wmnet',
+	'statsd' => '10.64.16.149', # statsd.eqiad.wmnet, now resolving to graphite1004.eqiad.wmnet
 
 	// EventLogging is not active-active.
 	'eventlogging' => 'udp://10.64.32.167:8421', # eventlog1001.eqiad.wmnet
@@ -49,10 +49,11 @@ $common = [
 	'parsoid' => 'http://localhost:6002/w/rest.php',
 	'mathoid' => 'http://localhost:6003',
 	'eventgate-analytics' => 'http://localhost:6004',
+	'eventgate-analytics-external' => 'http://localhost:6013',
 	'eventgate-main' => 'http://localhost:6005',
 	'cxserver' => 'http://localhost:6015',
 	'electron' => 'http://pdfrender.discovery.wmnet:5252',
-	'restbase' => 'http://restbase.discovery.wmnet:7231',
+	'restbase' => 'http://localhost:6011',
 	'sessionstore' => 'http://localhost:6006',
 	'echostore' => 'http://localhost:6007',
 	'push-notifications' => 'http://localhost:6012',

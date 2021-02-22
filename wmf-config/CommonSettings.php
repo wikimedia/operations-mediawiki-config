@@ -128,11 +128,12 @@ $wmfAllServices = ServiceConfig::getInstance()->getAllServices();
 # Shorthand when we have no master-replica situation to keep into account
 $wmfLocalServices = $wmfAllServices[$wmfDatacenter];
 
-$wmfDatacenters = ServiceConfig::getInstance()->getDatacenters();
-
 if ( $wmfRealm === 'dev' ) {
 	putenv( 'MW_DEBUG_LOCAL=1' );
 }
+
+# The list of datacenters known to this realm
+$wmfDatacenters = ServiceConfig::getInstance()->getDatacenters();
 
 $etcdConfig = wmfSetupEtcd( $wmfLocalServices['etcd'] );
 $wmfEtcdLastModifiedIndex = $etcdConfig->getModifiedIndex();
@@ -214,7 +215,10 @@ list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 
 # Try configuration cache
 $confCacheFileName = "conf2-$wgDBname.json";
-$confActualMtime = filemtime( "$wmfConfigDir/InitialiseSettings.php" );
+$confActualMtime = max(
+	filemtime( "$wmfConfigDir/InitialiseSettings.php" ),
+	filemtime( "$wmfConfigDir/logos.php" )
+);
 $globals = Wikimedia\MWConfig\MWConfigCacheGenerator::readFromStaticCache(
 	$wgCacheDirectory . '/' . $confCacheFileName, $confActualMtime
 );
@@ -2039,9 +2043,6 @@ if ( $wmgUseCentralNotice ) {
 	// support (T135963) is deployed.
 	// www.pages04.net is used by Wikimedia Fundraising to enable 'remind me later' banner functionality, which submits email addresses to our email campaign vendor
 	$wgCentralNoticeContentSecurityPolicy = "script-src 'unsafe-eval' blob: 'self' meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org 'unsafe-inline'; default-src 'self' data: blob: upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net; style-src 'self' data: blob: upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org wikimedia.org 'unsafe-inline';";
-
-	// Turn on EventLogging data globally at a low level
-	$wgCentralNoticeImpressionEventSampleRate = 0.01;
 }
 
 // Load our site-specific l10n extension
@@ -2084,6 +2085,7 @@ if ( $wgDBname === 'enwiki' || $wgDBname === 'fawiki' ) {
 
 if ( $wmgUseCollection ) {
 	// PediaPress / PDF generation
+	// Intentionally loaded *before* the Wikisource extension below.
 	wfLoadExtension( 'Collection' );
 	// Use pediapress server for POD function (T73675)
 	$wgCollectionCommandToServeURL = [
@@ -2581,16 +2583,6 @@ if ( $wmgUseVisualEditor ) {
 		$wgVisualEditorFeedbackAPIURL = 'https://www.mediawiki.org/w/api.php';
 		$wgVisualEditorFeedbackTitle = 'VisualEditor/Feedback';
 		$wgVisualEditorSourceFeedbackTitle = '2017 wikitext editor/Feedback';
-	}
-
-	// Enable for auto-created accounts
-	if ( $wmgVisualEditorAutoAccountEnable ) {
-		$wgVisualEditorAutoAccountEnable = true;
-	}
-
-	// Enable for a proportion of new accounts
-	if ( $wmgVisualEditorNewAccountEnableProportion ) {
-		$wgVisualEditorNewAccountEnableProportion = $wmgVisualEditorNewAccountEnableProportion;
 	}
 
 	// Citoid
@@ -3916,6 +3908,10 @@ if ( $wmgUseEventBus ) {
 			'url' => "{$wmfLocalServices['eventgate-analytics']}/v1/events?hasty=true",
 			'timeout' => 11,
 		],
+		'eventgate-analytics-external' => [
+			'url' => "{$wmfLocalServices['eventgate-analytics-external']}/v1/events?hasty=true",
+			'timeout' => 11,
+		],
 		'eventgate-main' => [
 			'url' => "{$wmfLocalServices['eventgate-main']}/v1/events",
 			'timeout' => 26,
@@ -4002,6 +3998,7 @@ if ( $wmgUseCongressLookup ) {
 }
 
 if ( $wmgUseWikisource ) {
+	// Intentionally loaded *after* the Collection extension above.
 	wfLoadExtension( 'Wikisource' );
 }
 

@@ -54,15 +54,22 @@ $wgLBFactoryConf = [
 	'testcommonswiki' => 's4',
 
 	# s5: dewiki and some other wikis
+	'altwiki'       => 's5',
 	'apiportalwiki' => 's5',
 	'arbcom_ruwiki' => 's5',
 	'avkwiki'      => 's5',
+	'bclwiktionary' => 's5',
 	'cebwiki'      => 's5',
 	'dewiki'       => 's5',
+	'diqwiktionary' => 's5',
 	'enwikivoyage' => 's5',
 	'eowikivoyage' => 's5',
 	'jawikivoyage' => 's5',
 	'lldwiki'      => 's5',
+	'mniwiki'      => 's5',
+	'mniwiktionary' => 's5',
+	'niawiki'      => 's5',
+	'niawiktionary' => 's5',
 	'madwiki'      => 's5',
 	'mgwiktionary' => 's5',
 	'mhwiktionary' => 's5',
@@ -73,6 +80,7 @@ $wgLBFactoryConf = [
 	'smnwiki'      => 's5',
 	'srwiki'       => 's5',
 	'thankyouwiki' => 's5',
+	'trwikivoyaage' => 's5',
 	'wawikisource' => 's5',
 
 	# s6: large wikis

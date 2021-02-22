@@ -3,6 +3,7 @@
 
 wfLoadExtension( 'timeline' );
 $wgTimelineEpochTimestamp = '20130601000000';
+$wgTimelineFontDirectory = '/srv/mediawiki/fonts';
 
 if ( $wgDBname === 'testwiki' || $wgDBname === 'mlwiki' ) {
 	// FreeSansWMF has been generated from FreeSans and FreeSerif by using this script with fontforge:

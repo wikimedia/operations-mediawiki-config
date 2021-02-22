@@ -8,6 +8,7 @@ inheritsFrom:
   - categories-rdf
   - cirrussearch-big-indices
   - flaggedrevs
+  - growthexperiments
   - medium
   - s3
   - securepollglobal

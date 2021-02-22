@@ -40,6 +40,7 @@ return [
 		'mathoid' => 'http://deployment-docker-mathoid01.eqiad.wmflabs:10044',
 		'eventlogging' => 'udp://deployment-eventlogging03.eqiad.wmflabs:8421',
 		'eventgate-analytics' => 'http://deployment-eventgate-3.deployment-prep.eqiad.wmflabs:8192',
+		'eventgate-analytics-external' => 'http://deployment-eventgate-3.deployment-prep.eqiad.wmflabs:8492',
 		'eventgate-main' => 'http://deployment-eventgate-3.deployment-prep.eqiad.wmflabs:8292',
 		'upload' => 'deployment-ms-fe03.deployment-prep.eqiad.wmflabs',
 		'cxserver' => 'http://deployment-docker-cxserver01.eqiad.wmflabs:8080',

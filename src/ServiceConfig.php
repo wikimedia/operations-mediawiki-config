@@ -23,14 +23,20 @@ class ServiceConfig {
 		return self::$instance;
 	}
 
+	/**
+	 * This is for test code. Do not use in production
+	 */
+	public static function reset() {
+		self::$instance = null;
+	}
+
 	private function __construct() {
 		$env = require __DIR__ . '/../wmf-config/env.php';
 		$this->realm = $env['realm'];
 		$this->datacenter = $env['dc'];
 		$this->datacenters = $env['dcs'];
-		// e.g. ProductionServices.php, LabsServices.php, DevServices.php
-		$servicesFile = ucfirst( $this->realm ) . 'Services.php';
-		$this->services = include __DIR__ . '/../wmf-config/' . $servicesFile;
+		// e.g. ../wmf-config/ProductionServices.php
+		$this->services = require $env['servicesFile'];
 	}
 
 	/**

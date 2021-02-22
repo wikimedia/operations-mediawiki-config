@@ -114,6 +114,46 @@ class WmfConfigServicesTest extends PHPUnit\Framework\TestCase {
 		}
 	}
 
+	/* Verify that ServiceConfig methods operate as expected */
+	public function testServiceConfig() {
+		$expectations = [
+			'eqiad' => [
+				'expected_realm' => 'production',
+				'expected_dc' => 'eqiad',
+				'expected_dcs' => [ "eqiad", "codfw" ],
+				'expected_statsd' => "10.64.16.149",
+			],
+			'labs' => [
+				'expected_realm' => 'labs',
+				'expected_dc' => 'eqiad',
+				'expected_dcs' => [ "eqiad" ],
+				'expected_statsd' => 'cloudmetrics1001.eqiad.wmnet',
+			],
+		];
+
+		foreach ( $expectations as $cluster => $expectations ) {
+			try {
+				$GLOBALS['mockWmgClusterFile'] = tempnam( "/tmp", "testServiceConfig-wikimedia-cluster" );
+				$handle = fopen( $GLOBALS['mockWmgClusterFile'], "w" );
+				fwrite( $handle, $cluster );
+				fclose( $handle );
+
+				Wikimedia\MWConfig\ServiceConfig::reset();
+				$sc = Wikimedia\MWConfig\ServiceConfig::getInstance();
+
+				$this->assertSame( $expectations['expected_realm'], $sc->getRealm(), "cluster: $cluster, checking getRealm()" );
+				$this->assertSame( $expectations['expected_dc'], $sc->getDatacenter(), "cluster: $cluster, checking getDatacenter()" );
+				$this->assertSame( $expectations['expected_dcs'], $sc->getDatacenters(), "cluster: $cluster, checking getDatacenters()" );
+				$this->assertSame( $expectations['expected_statsd'], $sc->getLocalService( "statsd" ), "cluster: $cluster, checking getLocalService('statsd')" );
+			} finally {
+				// Cleanup
+				unlink( $GLOBALS['mockWmgClusterFile'] );
+				Wikimedia\MWConfig\ServiceConfig::reset();
+				unset( $GLOBALS['mockWmgClusterFile'] );
+			}
+		}
+	}
+
 	protected function assertSameValues( array $expected, array $actual, $message ) {
 		// Normalize
 		sort( $expected );

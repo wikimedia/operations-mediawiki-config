@@ -436,7 +436,6 @@ $wgExtensionFunctions[] = function () {
 	} elseif ( $wgDBname == 'fiwiki' ) {
 		$wgGroupPermissions['sysop']['review'] = true;
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
-		$wgGroupPermissions['reviewer']['stablesettings'] = true; // T149987
 		$wgGroupPermissions['sysop']['unreviewedpages'] = true;
 
 		$wgFlaggedRevsTags = [
