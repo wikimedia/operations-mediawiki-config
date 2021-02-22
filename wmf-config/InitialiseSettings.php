@@ -22587,6 +22587,13 @@ function wmfGetVariantSettings() {
 	'officewiki' => true,
 ],
 
+// Enable SecurePoll logging
+'wgSecurePollUseLogging' => [
+	'default' => false,
+	'testwiki' => true,
+	'votewiki' => true,
+],
+
 'wmgUseGlobalAbuseFilters' => [
 	// Enabled for all wikis that open, global and small/medium in size
 	'default' => true,
