@@ -679,6 +679,10 @@ function wmfGetLabsOverrideSettings() {
 			'default' => false,
 		],
 
+		'wgSecurePollUseLogging' => [
+			'default' => true,
+		],
+
 		'wmgUseIPInfo' => [
 			'default' => true,
 			'loginwiki' => false,
