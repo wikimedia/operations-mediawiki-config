@@ -291,6 +291,7 @@ function wmfGetVariantSettings() {
 	'acewiki' => 'Asia/Jakarta', // T205693
 	'alswiki' => 'Europe/Berlin',
 	'amwikimedia' => 'Asia/Yerevan', // T176042
+	'altwiki' => 'Asia/Barnaul',
 	'arbcom_cswiki' => 'Europe/Prague', // T151731
 	'arbcom_dewiki' => 'Europe/Berlin',
 	'arbcom_fiwiki' => 'Europe/Helsinki',
@@ -1636,6 +1637,7 @@ function wmfGetVariantSettings() {
 	'angwikisource' => 'Wicifruma',
 	'angwiktionary' => 'Wikiwordbōc', // T58634
 	'amwiki' => 'ውክፔዲያ',
+	'altwiki' => 'Википедия',
 	'apiportalwiki' => 'API Portal',
 	'arbcom_cswiki' => 'Arbitrážní výbor', // T151731
 	'arbcom_dewiki' => 'Arbitration Committee',
@@ -2176,6 +2178,7 @@ function wmfGetVariantSettings() {
 	'advisorywiki' => 'Project',
 	'adywiki' => 'Википедие', // T125501
 	'amwiki' => 'ውክፔዲያ',
+	'altwiki' => 'Википедия',
 	'anwiktionary' => 'Biquizionario', // T130599
 	'angwiki' => 'Wikipǣdia', // T58634
 	'angwikisource' => 'Wicifruma',
@@ -2672,6 +2675,7 @@ function wmfGetVariantSettings() {
 	'adywiki' => 'Википедием_и_тегущыӀэн', // T125501
 	'angwiki' => 'Wikipǣdiamōtung', // T58634
 	'angwiktionary' => 'Wikiwordbōcmōtung', // T58634
+	'altwiki' => 'Википедияти_шӱӱжери',
 	'arbcom_cswiki' => 'Diskuse_k_projektu', // T151731
 	'arbcom_ruwiki' => 'Обсуждение_арбитража', // T262812
 	'aswiki' => 'ৱিকিপিডিয়া_বাৰ্তা',
