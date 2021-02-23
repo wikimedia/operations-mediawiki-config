@@ -1,0 +1,44 @@
+pipelines:
+  wmf-publish:
+    stages:
+      - name: wikiversions
+        build: list-wikiversions
+        run:
+          tail: 10
+      - name: production
+        build:
+          variant: production
+          excludes:
+            - .git
+        publish:
+          image:
+            name: mediawiki-multiversion
+            # this tag is meant to distinguish the image from a "secprod" image that will have
+            # security patches applied
+            tags: ["protoprod"]
+        blubberfile:
+          version: v4
+          variants:
+            production:
+              base: docker-registry.wikimedia.org/php7.2-fpm
+              apt:
+                packages:
+                  - firejail
+              lives:
+                in: /srv/mediawiki
+              runs:
+                # match base image www-data uid/gid
+                uid: 33
+                gid: 33
+              builder:
+                requirements:
+                  $merge:
+                    $each: version
+                    $in: "${wikiversions.output}"
+                    $yield:
+                      from: "docker-registry.wikimedia.org/wikimedia/mediawiki:wmf-${.version}"
+                      source: /srv/mediawiki
+                      destination: "/srv/mediawiki/php-${.version}"
+                  $with:
+                    - .
+                command: [./.pipeline/wmf-publish/build]

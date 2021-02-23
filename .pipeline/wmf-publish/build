@@ -1,0 +1,33 @@
+#!/bin/bash
+
+set -xeu -o pipefail
+
+export WMF_MAINTENANCE_OFFLINE=1
+export WMF_DATACENTER=eqiad
+
+function php_with_errors {
+  php -d display_errors=on -d error_reporting=E_ALL "$@"
+}
+
+function mwscript {
+  php_with_errors multiversion/MWScript.php "$@"
+}
+
+php_with_errors multiversion/bin/generate-php-wikiversions.php
+php_with_errors multiversion/bin/update-all-localsettings.php
+
+# stub PrivateSettings.php
+cp private/readme.php private/PrivateSettings.php
+
+multiversion/bin/list-versions.php | while read wikidb version; do
+  mwscript mergeMessageFileList.php \
+    --wiki="$wikidb" \
+    --list-file=wmf-config/extension-list \
+    --output=wmf-config/ExtensionMessages-$version.php
+
+  mwscript rebuildLocalisationCache.php \
+    --wiki="$wikidb" \
+    --store-class=LCStoreCDB \
+    --threads=$(nproc) \
+    --offline
+done
