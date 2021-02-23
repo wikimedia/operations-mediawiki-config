@@ -20292,22 +20292,7 @@ function wmfGetVariantSettings() {
 		'HomepageModule' => '/analytics/legacy/homepagemodule/1.1.0',
 		'MobileWebUIActionsTracking' => '/analytics/legacy/mobilewebuiactionstracking/1.0.0',
 		'NewcomerTask' => '/analytics/legacy/newcomertask/1.0.0',
-		'QuickSurveyInitiation' => '/analytics/legacy/quicksurveyinitiation/1.0.0',
-		'QuickSurveysResponses' => '/analytics/legacy/quicksurveysresponses/1.0.0',
 		'SuggestedTagsAction' => '/analytics/legacy/suggestedtagsaction/1.0.0',
-
-		// NavigationTiming extension legacy schemas
-		'CentralNoticeTiming' => '/analytics/legacy/centralnoticetiming/1.0.0',
-		'CpuBenchmark' => '/analytics/legacy/cpubenchmark/1.0.0',
-		'ElementTiming' => '/analytics/legacy/elementtiming/1.0.0',
-		'FeaturePolicyViolation' => '/analytics/legacy/featurepolicyviolation/1.0.0',
-		'FirstInputTiming' => '/analytics/legacy/firstinputtiming/1.0.0',
-		'LayoutShift' => '/analytics/legacy/layoutshift/1.0.0',
-		'NavigationTiming' => '/analytics/legacy/navigationtiming/1.0.0',
-		'PaintTiming' => '/analytics/legacy/painttiming/1.0.0',
-		'ResourceTiming' => '/analytics/legacy/resourcetiming/1.0.0',
-		'RUMSpeedIndex' => '/analytics/legacy/rumspeedindex/1.0.0',
-		'SaveTiming' => '/analytics/legacy/savetiming/1.0.0',
 	],
 	'testwiki' => [
 		'HomepageVisit' => '/analytics/legacy/homepagevisit/1.0.0',
