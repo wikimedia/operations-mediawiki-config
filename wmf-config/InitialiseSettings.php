@@ -19902,6 +19902,27 @@ function wmfGetVariantSettings() {
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
+			'stream' => 'eventlogging_TranslationRecommendationUserAction',
+			'schema_title' => 'analytics/legacy/translationrecommendationuseraction',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
+			'stream' => 'eventlogging_TranslationRecommendationUIRequests',
+			'schema_title' => 'analytics/legacy/translationrecommendationuirequests',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
+			'stream' => 'eventlogging_TranslationRecommendationAPIRequests',
+			'schema_title' => 'analytics/legacy/translationrecommendationapirequests',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
 			'stream' => 'eventlogging_UniversalLanguageSelector',
 			'schema_title' => 'analytics/legacy/universallanguageselector',
 			'topic_prefixes' => null,
