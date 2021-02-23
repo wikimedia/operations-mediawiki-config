@@ -2725,6 +2725,9 @@ if ( $wmgUseMath ) {
 	// Increase the number of concurrent connections made to RESTBase
 	$wgMathConcurrentReqs = 150;
 
+	// Temporary setting for conversion off RESTBase to pure Mathoid. See T274436
+	$wgMathUseRestBase = true;
+
 	// Set up $wgMathFullRestbaseURL - similar to VE RESTBase config above
 	// HACK: $wgServerName is not available yet at this point, it's set by Setup.php
 	// so use a hook
