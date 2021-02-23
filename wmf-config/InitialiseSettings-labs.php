@@ -1109,6 +1109,9 @@ function wmfGetLabsOverrideSettings() {
 		'wgGELinkRecommendationServiceUrl' => [
 			'default' => 'https://addlink-simple.toolforge.org',
 		],
+		'wgGELinkRecommendationsUseEventGate' => [
+			'default' => false,
+		],
 		'wgGEHelpPanelHelpDeskTitle' => [
 			'enwiki' => 'Wikipedia:Help_desk',
 		],

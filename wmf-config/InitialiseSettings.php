@@ -25594,6 +25594,10 @@ function wmfGetVariantSettings() {
 	'default' => false,
 ],
 
+'wgGELinkRecommendationsUseEventGate' => [
+	'default' => true,
+],
+
 'wgGENewcomerTasksConfigTitle' => [
 	'default' => 'MediaWiki:NewcomerTasks.json',
 ],
