@@ -19987,7 +19987,7 @@ function wmfGetVariantSettings() {
 		],
 		[
 			'stream' => 'eventlogging_VisualEditorTemplateDialogUse',
-			'schema_title' => 'analytics/legacy/visualeditortemplatedialogueuse',
+			'schema_title' => 'analytics/legacy/visualeditortemplatedialoguse',
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20397,7 +20397,7 @@ function wmfGetVariantSettings() {
 		'TemplateDataEditor' => '/analytics/legacy/templateeditor/1.0.0',
 		'TwoColConflictConflict' => '/analytics/legacy/TwoColConflictConflict/1.0.0',
 		'TwoColConflictExit' => '/analytics/legacy/twocolconflictexit/1.0.0',
-		'VisualEditorTemplateDialogUse' => '/analytics/legacy/visualeditortemplatedialogueuse/1.0.0',
+		'VisualEditorTemplateDialogUse' => '/analytics/legacy/visualeditortemplatedialoguse/1.0.0',
 	],
 ],
 
