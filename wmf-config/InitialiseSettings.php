@@ -2830,6 +2830,9 @@ function wmfGetVariantSettings() {
 		'Wikivoyage_talk' => NS_PROJECT_TALK,
 		'WV' => NS_PROJECT,
 	],
+	'+altwiki' => [
+		'ВП' => NS_PROJECT,
+	],
 	'+angwiki' => [ // T58634, T60711
 		'Wikipaedia' => NS_PROJECT,
 		'Wikipædiamotung' => NS_PROJECT_TALK,
