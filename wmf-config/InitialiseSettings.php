@@ -20308,13 +20308,11 @@ function wmfGetVariantSettings() {
 		'ResourceTiming' => '/analytics/legacy/resourcetiming/1.0.0',
 		'RUMSpeedIndex' => '/analytics/legacy/rumspeedindex/1.0.0',
 		'SaveTiming' => '/analytics/legacy/savetiming/1.0.0',
-		'SpecialMuteSubmit' => 19265572,
 	],
 	'testwiki' => [
 		'HomepageVisit' => '/analytics/legacy/homepagevisit/1.0.0',
 		'PrefUpdate' => '/analytics/legacy/prefupdate/1.0.0',
 		'ServerSideAccountCreation' => '/analytics/legacy/serversideaccountcreation/1.0.0',
-		'SpecialMuteSubmit' => '/analytics/legacy/specialmutesubmit/1.0.0',
 	],
 ],
 
