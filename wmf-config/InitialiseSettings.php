@@ -13659,6 +13659,7 @@ function wmfGetVariantSettings() {
 	'+srwikisource' => [ 100 ],
 	'+svwikisource' => [ 106 ],
 	'+tewikisource' => [ 102 ],
+	'+thwikisource' => [ 102, 114 ], // T275282
 	'+trwikibooks' => [ 100, 110, ],
 	'+trwikisource' => [ 100 ],
 	'+ukwikisource' => [ 102, 116 ], // T52561, T53684
