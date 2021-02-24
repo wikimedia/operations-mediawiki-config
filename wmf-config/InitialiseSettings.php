@@ -25382,14 +25382,14 @@ function wmfGetVariantSettings() {
 			'id' => 'tutorial',
 		],
 		[
-			'title' => 'Ajutor:Cum modific o pagină',
+			'title' => 'mw:Help:VisualEditor/User_guide/ro',
 			'text' => 'Cum modific o pagină',
-			'id' => 'formatting',
+			'id' => 'editing',
 		],
 		[
-			'title' => 'Ajutor:Wikizare',
-			'text' => 'Wikizare',
-			'id' => 'wikitextoverview',
+			'title' => 'Wikipedia:Imagini',
+			'text' => 'Încărcarea imaginilor',
+			'id' => 'images',
 		],
 		[
 			'title' => 'Wikipedia:Asistent pentru a crea articole',
