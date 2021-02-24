@@ -20386,9 +20386,6 @@ function wmfGetVariantSettings() {
 		'NewcomerTask' => '/analytics/legacy/newcomertask/1.0.0',
 		'ServerSideAccountCreation' => '/analytics/legacy/serversideaccountcreation/1.0.0',
 		'SuggestedTagsAction' => '/analytics/legacy/suggestedtagsaction/1.0.0',
-	],
-	'testwiki' => [
-		'PrefUpdate' => '/analytics/legacy/prefupdate/1.0.0',
 		'CodeMirrorUsage' => '/analytics/legacy/codemirrorusage/1.0.0',
 		'ReferencePreviewsBaseline' => '/analytics/legacy/referencepreviewsbaseline/1.0.0',
 		'ReferencePreviewsCite' => '/analytics/legacy/referencepreviewscite/1.0.0',
@@ -20398,6 +20395,9 @@ function wmfGetVariantSettings() {
 		'TwoColConflictConflict' => '/analytics/legacy/twocolconflictconflict/1.0.0',
 		'TwoColConflictExit' => '/analytics/legacy/twocolconflictexit/1.0.0',
 		'VisualEditorTemplateDialogUse' => '/analytics/legacy/visualeditortemplatedialoguse/1.0.0',
+	],
+	'testwiki' => [
+		'PrefUpdate' => '/analytics/legacy/prefupdate/1.0.0',
 	],
 ],
 
