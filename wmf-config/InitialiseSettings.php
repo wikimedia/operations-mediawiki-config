@@ -19554,6 +19554,7 @@ function wmfGetVariantSettings() {
 // SectionTranslation configuration
 'wgContentTranslationEnableSectionTranslation' => [
 	'default' => false,
+	'testwiki' => true,
 	'bnwiki' => true, // T271397
 ],
 
