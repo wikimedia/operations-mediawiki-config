@@ -14153,6 +14153,13 @@ function wmfGetVariantSettings() {
 ],
 # @} end of wgFavicon
 
+'wgSkinMetaTags' => [
+	// T157145
+	'default' => [ 'og:title', 'og:type' ],
+	// wikidata provides its own handling for sharing tags (T157145)
+	'wikidata' => [],
+],
+
 # wmgAutopromoteExtraGroups @{
 'wmgAutopromoteExtraGroups' => [
 	'default' => false,

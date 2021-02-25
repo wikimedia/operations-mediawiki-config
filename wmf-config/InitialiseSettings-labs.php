@@ -400,12 +400,6 @@ function wmfGetLabsOverrideSettings() {
 			'dewiki' => 'https://upload.wikimedia.org/wikipedia/commons/1/14/Favicon-beta-wikipedia.png',
 		],
 
-		'wgSkinMetaTags' => [
-			'wikipedia' => [ 'og:title', 'og:type' ],
-			'eswiki' => [ 'og:title', 'og:type', 'twitter:card' ],
-			'dewiki' => [ 'og:title' ],
-		],
-
 		'-wmgEnableCaptcha' => [
 			'default' => true,
 		],
