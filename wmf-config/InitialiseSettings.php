@@ -20398,7 +20398,7 @@ function wmfGetVariantSettings() {
 		'DesktopWebUIActionsTracking' => '/analytics/legacy/desktopwebuiactionstracking/1.0.0',
 		'HelpPanel' => '/analytics/legacy/helppanel/1.0.0',
 		'HomepageModule' => '/analytics/legacy/homepagemodule/1.1.0',
-		'HomepageVisit' => '/analytics/legacy/homepagevisit/1.0.0',
+		'HomepageVisit' => '/analytics/legacy/homepagevisit/1.1.0',
 		'MobileWebUIActionsTracking' => '/analytics/legacy/mobilewebuiactionstracking/1.0.0',
 		'NewcomerTask' => '/analytics/legacy/newcomertask/1.0.0',
 		'ServerSideAccountCreation' => '/analytics/legacy/serversideaccountcreation/1.0.0',
