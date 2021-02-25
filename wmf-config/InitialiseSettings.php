@@ -103,19 +103,6 @@ function wmfGetVariantSettings() {
 	'fishbowl' => false,
 	'nonglobal' => false,
 ],
-'wmgEnableBotPasswords' => [
-	'default' => true,
-	'nonglobal' => false,
-],
-'wmgBotPasswordsCluster' => [
-	'default' => false,
-],
-'wmgBotPasswordsDatabase' => [
-	'default' => 'metawiki',
-	'private' => false,
-	'fishbowl' => false,
-	'nonglobal' => false,
-],
 
 # wgLanguageCode @{
 'wgLanguageCode' => [
