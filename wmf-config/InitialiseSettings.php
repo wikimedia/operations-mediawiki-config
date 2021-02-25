@@ -90,6 +90,19 @@ function wmfGetVariantSettings() {
 	'wikimedia' => false,
 ],
 
+'wgEnableBotPasswords' => [
+	'default' => true,
+	'nonglobal' => false,
+],
+'wgBotPasswordsCluster' => [
+	'default' => false,
+],
+'wgBotPasswordsDatabase' => [
+	'default' => 'metawiki',
+	'private' => false,
+	'fishbowl' => false,
+	'nonglobal' => false,
+],
 'wmgEnableBotPasswords' => [
 	'default' => true,
 	'nonglobal' => false,
