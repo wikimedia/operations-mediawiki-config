@@ -1167,10 +1167,10 @@ function wmfGetLabsOverrideSettings() {
 			'enwiki' => 'Help:Getting started',
 		],
 		'wgGENewcomerTasksRemoteApiUrl' => [
-			'enwiki' => 'https://en.wikipedia.org/w/api.php',
+			'enwiki' => null,
 			'arwiki' => 'https://ar.wikipedia.org/w/api.php',
 			'bnwiki' => 'https://bn.wikipedia.org/w/api.php',
-			'cswiki' => 'https://cs.wikipedia.org/w/api.php',
+			'cswiki' => null,
 			'fawiki' => 'https://fa.wikipedia.org/w/api.php',
 			'kowiki' => 'https://ko.wikipedia.org/w/api.php',
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
