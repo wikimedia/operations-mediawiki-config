@@ -551,6 +551,8 @@ $wgPasswordConfig['pbkdf2'] = [
 $wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
 
 // Password policies; see https://meta.wikimedia.org/wiki/Password_policy
+//
+// For global policies, see $wgCentralAuthGlobalPasswordPolicies below
 $wmgPrivilegedPolicy = [
 	'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true, 'forceChange' => true ],
 	// With MinimumPasswordLengthToLogin, if the length of the password is <= the value
@@ -604,12 +606,6 @@ if ( $wmgUseCentralAuth ) {
 		return true;
 	};
 }
-
-// For global policies, see $wgCentralAuthGlobalPasswordPolicies below
-
-$wgEnableBotPasswords = $wmgEnableBotPasswords;
-$wgBotPasswordsCluster = $wmgBotPasswordsCluster;
-$wgBotPasswordsDatabase = $wmgBotPasswordsDatabase;
 
 if ( $wmgDisableAccountCreation ) {
 	$wgGroupPermissions['*']['createaccount'] = false;
