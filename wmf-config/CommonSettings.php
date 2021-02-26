@@ -131,20 +131,45 @@ $wmfLocalServices = $wmfAllServices[$wmfDatacenter];
 # The list of datacenters known to this realm
 $wmfDatacenters = ServiceConfig::getInstance()->getDatacenters();
 
-$etcdConfig = wmfSetupEtcd( $wmfLocalServices['etcd'] );
-$wmfEtcdLastModifiedIndex = $etcdConfig->getModifiedIndex();
+if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
+	// Prepare just enough configuration to allow
+	// rebuildLocalisationCache.php and mergeMessageFileList.php to
+	// run to completion without complaints.
 
-$wgReadOnly = $etcdConfig->get( "$wmfDatacenter/ReadOnly" );
+	$wmfEtcdLastModifiedIndex = "wmfEtcdLastModifiedIndex uninitialized due to WMF_MAINTENANCE_OFFLINE";
+	$wgReadOnly = "In read-only mode because WMF_MAINTENANCE_OFFLINE is set";
+	$wmfMasterDatacenter = ServiceConfig::getInstance()->getDatacenter();
+	$wmfMasterServices = $wmfAllServices[$wmfMasterDatacenter];
+	$wmfDbconfigFromEtcd = [
+		'readOnlyBySection' => null,
+		'groupLoadsBySection' => [
+			'DEFAULT' => [
+				'' => [
+				   'WMF_MAINTENANCE_OFFLINE_placeholder' => 0
+				],
+			],
+		],
+		'hostsByName' => null,
+		'sectionLoads' => [],
+		'externalLoads' => [],
+	];
 
-$wmfMasterDatacenter = $etcdConfig->get( 'common/WMFMasterDatacenter' );
-$wmfMasterServices = $wmfAllServices[$wmfMasterDatacenter];
+} else {
+	$etcdConfig = wmfSetupEtcd( $wmfLocalServices['etcd'] );
+	$wmfEtcdLastModifiedIndex = $etcdConfig->getModifiedIndex();
 
-// Database load balancer config (sectionLoads, groupLoadsBySection, …)
-// This is later merged into $wgLBFactoryConf by wmfEtcdApplyDBConfig().
-// See also <https://wikitech.wikimedia.org/wiki/Dbctl>
-$wmfDbconfigFromEtcd = $etcdConfig->get( "$wmfDatacenter/dbconfig" );
+	$wgReadOnly = $etcdConfig->get( "$wmfDatacenter/ReadOnly" );
 
-unset( $etcdConfig );
+	$wmfMasterDatacenter = $etcdConfig->get( 'common/WMFMasterDatacenter' );
+	$wmfMasterServices = $wmfAllServices[$wmfMasterDatacenter];
+
+	// Database load balancer config (sectionLoads, groupLoadsBySection, …)
+	// This is later merged into $wgLBFactoryConf by wmfEtcdApplyDBConfig().
+	// See also <https://wikitech.wikimedia.org/wiki/Dbctl>
+	$wmfDbconfigFromEtcd = $etcdConfig->get( "$wmfDatacenter/dbconfig" );
+
+	unset( $etcdConfig );
+}
 
 $wmfUdp2logDest = $wmfLocalServices['udp2log'];
 if ( $wgDBname === 'testwiki' || $wgDBname === 'test2wiki' ) {
