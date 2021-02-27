@@ -552,7 +552,6 @@ function wmfGetVariantSettings() {
 	'thwiktionary' => 'Asia/Bangkok',
 	'thwikiquote' => 'Asia/Bangkok',
 	'trwikimedia' => 'Europe/Istanbul',
-	'trwikivoyage' => 'Europe/Istanbul',
 	'tyvwiki' => 'Asia/Krasnoyarsk',
 	'ukwikivoyage' => 'Europe/Kiev',
 	'vecwiki' => 'Europe/Berlin',
