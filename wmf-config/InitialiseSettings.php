@@ -14102,6 +14102,11 @@ function wmfGetVariantSettings() {
 		'PMID' => true,
 		'RFC' => true,
 	],
+	'enwiki' => [ // T275951
+		'ISBN' => false,
+		'PMID' => false,
+		'RFC' => false,
+	],
 ],
 
 # wgFavicon @{
