@@ -7620,7 +7620,7 @@ function wmfGetVariantSettings() {
 	'testwiki' => true,
 ],
 
-'wgVectorMaxWidthOptionsNamespaces' => [
+'wgVectorMaxWidthOptions' => [
 	'default' => [
 		"exclude" => [
 			"mainpage" => false,
