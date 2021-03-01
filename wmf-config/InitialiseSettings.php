@@ -24840,6 +24840,7 @@ function wmfGetVariantSettings() {
 	'frwiki' => true,
 	'frwiktionary' => true,
 	'hewiki' => true,
+	'hrwiki' => true,
 	'huwiki' => true,
 	'hywiki' => true,
 	'kowiki' => true,
@@ -24858,6 +24859,7 @@ function wmfGetVariantSettings() {
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
 	'dawiki' => false,
+	'hrwiki' => false,
 	'rowiki' => false,
 	'thwiki' => false,
 ],
@@ -24914,6 +24916,7 @@ function wmfGetVariantSettings() {
 	'frwiki' => 'Wikipédia:Forum des nouveaux',
 	'frwiktionary' => 'Wiktionnaire:Entraide/{{#time:F Y}}',
 	'hewiki' => 'ויקיפדיה:חממה',
+	'hrwiki' => 'Wikipedija:Kafić',
 	'huwiki' => 'Wikipédia:Kocsmafal (kezdőknek)',
 	'hywiki' => 'Վիքիպեդիա:Հարցեր',
 	'kowiki' => '위키백과:질문방/{{#time:o}}년 제{{CURRENTWEEK}}주',
@@ -24947,6 +24950,7 @@ function wmfGetVariantSettings() {
 	'frwiki' => 'Aide:Accueil',
 	'frwiktionary' => 'Aide:Sommaire',
 	'hewiki' => 'עזרה:תפריט ראשי',
+	'hrwiki' => 'Pomoć:Sadržaj',
 	'huwiki' => 'Wikipédia:Bevezetés',
 	'hywiki' => 'Օգնություն:Գլխացանկ',
 	'kowiki' => '위키백과:도움말',
@@ -25227,6 +25231,33 @@ function wmfGetVariantSettings() {
 			'title' => 'עזרה:עריכת קוד מקור',
 			'text' => 'עריכת קוד מקור',
 			'id' => 'editing',
+		],
+	],
+	'hrwiki' => [
+		[
+			'title' => 'Wikipedija:Stil',
+			'text' => 'Stil',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/hr',
+			'text' => 'Kako uređivati stranicu',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide#Images',
+			'text' => 'Slike',
+			'id' => 'images',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/sq#Editing_references',
+			'text' => 'Wikipoveznice',
+			'id' => 'references',
+		],
+		[
+			'title' => 'Wikipedija:Kako_stvoriti_novu_stranicu',
+			'text' => 'Kako stvoriti novu stranicu',
+			'id' => 'articlewizard',
 		],
 	],
 	'huwiki' => [
@@ -25683,6 +25714,9 @@ function wmfGetVariantSettings() {
 	'hewiki' => [
 		'create' => 'ויקיפדיה:איך ליצור דף חדש',
 		'image' => 'עזרה:עיצוב תמונות',
+	],
+	'hrwiki' => [
+		'create' => 'Wikipedija:Kako_stvoriti_novu_stranicu',
 	],
 	'huwiki' => [
 		'create' => 'Wikipédia:Hogyan lehet új lapot írni?',
