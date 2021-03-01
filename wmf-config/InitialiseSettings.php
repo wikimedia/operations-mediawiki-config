@@ -24859,6 +24859,7 @@ function wmfGetVariantSettings() {
 	'hrwiki' => true,
 	'huwiki' => true,
 	'hywiki' => true,
+	'idwiki' => true,
 	'kowiki' => true,
 	'plwiki' => true,
 	'ptwiki' => true,
@@ -24876,6 +24877,7 @@ function wmfGetVariantSettings() {
 	'default' => true,
 	'dawiki' => false,
 	'hrwiki' => false,
+	'idwiki' => false,
 	'rowiki' => false,
 	'thwiki' => false,
 ],
@@ -24935,6 +24937,7 @@ function wmfGetVariantSettings() {
 	'hrwiki' => 'Wikipedija:Kafić',
 	'huwiki' => 'Wikipédia:Kocsmafal (kezdőknek)',
 	'hywiki' => 'Վիքիպեդիա:Հարցեր',
+	'idwiki' => 'Warung_Kopi_(Bantuan)',
 	'kowiki' => '위키백과:질문방/{{#time:o}}년 제{{CURRENTWEEK}}주',
 	'plwiki' => 'Pomoc:Pytania nowicjuszy',
 	'ptwiki' => 'Ajuda:Tire suas dúvidas',
@@ -24969,6 +24972,7 @@ function wmfGetVariantSettings() {
 	'hrwiki' => 'Pomoć:Sadržaj',
 	'huwiki' => 'Wikipédia:Bevezetés',
 	'hywiki' => 'Օգնություն:Գլխացանկ',
+	'idwiki' => 'Bantuan:Isi',
 	'kowiki' => '위키백과:도움말',
 	'plwiki' => 'Pomoc:Spis treści',
 	'ptwiki' => 'Wikipédia:Guia de criação de artigos',
@@ -25329,6 +25333,33 @@ function wmfGetVariantSettings() {
 			'text' => 'Վիքիպեդիայի տերմինների բառարան',
 			'id' => 'glossary',
 		]
+	],
+	'idwiki' => [
+		[
+			'title' => 'Wikipedia:Pedoman_gaya',
+			'text' => 'Pedoman gaya',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'Wikipedia:Menyunting_sebuah_halaman',
+			'text' => 'Menyunting sebuah halaman',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'Wikipedia:VisualEditor/Panduan#Menyunting_gambar_dan_berkas_media_lainnya',
+			'text' => 'Menyunting gambar dan berkas media lainnya',
+			'id' => 'images',
+		],
+		[
+			'title' => 'Wikipedia:VisualEditor/Panduan#Menyunting_referensi',
+			'text' => 'Menyunting referensi',
+			'id' => 'references',
+		],
+		[
+			'title' => 'Wikipedia:Pemandu_pembuatan_artikel',
+			'text' => 'Pemandu pembuatan artikel',
+			'id' => 'wizzard',
+		],
 	],
 	'kowiki' => [
 		[
@@ -25742,6 +25773,10 @@ function wmfGetVariantSettings() {
 		'create' => 'Վիքիպեդիա:Հոդվածի ստեղծում',
 		'image' => 'Վիքիպեդիա:Պատկերազարդում',
 	],
+	'idwiki' => [
+		'create' => 'Wikipedia:Memulai_halaman_baru',
+		'image' => 'Bantuan:Pengantar_gambar_dengan_VisualEditor/1',
+	],
 	'kowiki' => [
 		'create' => '위키백과:새 문서 만들기',
 		'image' => '도움말:그림 사용하기',
@@ -25816,6 +25851,7 @@ function wmfGetVariantSettings() {
 	'frwiktionary' => 'Aide:Comment modifier une page',
 	'hewiki' => 'ויקיפדיה:ויקיפדיה צעד אחר צעד',
 	'huwiki' => 'Wikipédia:Bevezetés',
+	'idwiki' => 'Wikipedia:Tutorial',
 	'hywiki' => 'Օգնություն:Դասընթաց',
 	'kowiki' => '위키백과:빠른 길라잡이',
 	'plwiki' => 'Wikipedia:Pięć filarów',
