@@ -7689,23 +7689,6 @@ function wmfGetVariantSettings() {
 'wgVectorSearchTreatmentABTest' => [
 	'default' => true,
 	'desktop-improvements' => false,
-	'frwiktionary' => true,
-	'hewiki' => true,
-	'ptwikiversity' => true,
-	'officewiki' => true,
-],
-'wgVectorWvuiSearchOptions' => [
-	'default' => [
-		'showThumbnail' => true,
-		'showDescription' => true,
-	],
-	'+frwiktionary' => [
-		'showDescription' => false,
-	],
-	'officewiki' => [
-		'showThumbnail' => false,
-		'showDescription' => false,
-	],
 ],
 
 # wgForceUIMsgAsContentMsg @{
