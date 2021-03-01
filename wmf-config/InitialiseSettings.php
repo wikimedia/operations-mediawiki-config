@@ -24852,9 +24852,6 @@ function wmfGetVariantSettings() {
 
 'wgWelcomeSurveyExperimentalGroups' => [
 	'default' => [ 'exp2_target_specialpage' => [ 'range' => '0-9' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
-	'dawiki' => [ 'exp2_target_specialpage' => [ 'range' => 'x' ], 'exp2_target_popup' => [ 'range' => 'x' ] ], // No welcome survey to newcomers - T256126
-	'rowiki' => [ 'exp2_target_specialpage' => [ 'range' => 'x' ], 'exp2_target_popup' => [ 'range' => 'x' ] ], // No welcome survey to newcomers - T275130
-	'thwiki' => [ 'exp2_target_specialpage' => [ 'range' => 'x' ], 'exp2_target_popup' => [ 'range' => 'x' ] ], // No welcome survey to newcomers - T274646
 ],
 
 'wgGEHomepageImpactModuleEnabled' => [
@@ -25727,11 +25724,8 @@ function wmfGetVariantSettings() {
 'wgGEHomepageNewAccountEnablePercentage' => [
 	'default' => 80,
 	'testwiki' => 0,
-	'dawiki' => 0, // No automated deployment per T256126#6801307
 	// euwiki is not an A/B test (T233066)
 	'euwiki' => 100,
-	'rowiki' => 0, // No automated deployment
-	'thwiki' => 0, // No automated deployment per T274646#6831312
 ],
 
 'wgGEHomepageNewAccountVariants' => [
