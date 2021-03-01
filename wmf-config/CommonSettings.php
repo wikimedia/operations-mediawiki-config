@@ -4003,6 +4003,13 @@ if ( $wmgUseWikisource ) {
 
 if ( $wmgUseGrowthExperiments ) {
 	wfLoadExtension( 'GrowthExperiments' );
+
+	if ( !$wmgGEFeaturesMayBeAvailableToNewcomers ) {
+		// Disable welcome survey
+		$wgWelcomeSurveyExperimentalGroups = [ 'exp2_target_specialpage' => [ 'range' => 'x' ], 'exp2_target_popup' => [ 'range' => 'x' ] ];
+		// Disable all other Growth features
+		$wgGEHomepageNewAccountEnablePercentage = 0;
+	}
 }
 
 if ( PHP_SAPI === 'cli' ) {
