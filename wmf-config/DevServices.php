@@ -28,6 +28,7 @@ return [ 'dev' => [
 				   'electron' => '',
 				   'mathoid' => '',
 				   'eventgate-analytics' => '',
+				   'eventgate-analytics-external' => '',
 				   'eventgate-main' => '',
 				  ]
 	   ];
