@@ -25725,12 +25725,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgGEHelpPanelAskMentor' => [
-	'default' => false,
-	'arwiki' => true, // T272753
-	'bnwiki' => true, // T272753
-	'cswiki' => true,
-	'frwiki' => true, // T272753
-	'viwiki' => true, // T272753
+	'default' => true,
 ],
 
 'wgGEHomepageEnabled' => [
