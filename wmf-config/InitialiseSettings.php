@@ -24883,6 +24883,7 @@ function wmfGetVariantSettings() {
 	'bnwiki' => true,
 	'cswiki' => true,
 	'dawiki' => true,
+	'eowiki' => true,
 	'euwiki' => true,
 	'fawiki' => true,
 	'frwiki' => true,
@@ -24910,6 +24911,7 @@ function wmfGetVariantSettings() {
 
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
+	'eowiki' => false,
 	'hiwiki' => false,
 	'hrwiki' => false,
 	'idwiki' => false,
@@ -24966,6 +24968,7 @@ function wmfGetVariantSettings() {
 	'cswiki' => 'Wikipedie:Potřebuji_pomoc',
 	'dawiki' => 'Hjælp:Nybegynderforum',
 	'euwiki' => 'Wikipedia:Txokoa',
+	'eowiki' => 'Vikipedio:Diskutejo',
 	'fawiki' => 'ویکی‌پدیا:پرسش‌ها',
 	'frwiki' => 'Wikipédia:Forum des nouveaux',
 	'frwiktionary' => 'Wiktionnaire:Entraide/{{#time:F Y}}',
@@ -25001,6 +25004,7 @@ function wmfGetVariantSettings() {
 	'bnwiki' => 'সাহায্য:সূচী',
 	'cswiki' => 'Nápověda:Obsah',
 	'dawiki' => 'Hjælp:Forside',
+	'eowiki' => 'Helpo:Enhavo',
 	'euwiki' => 'Laguntza:Sarrera',
 	'fawiki' => 'راهنما:فهرست',
 	'frwiki' => 'Aide:Accueil',
@@ -25162,6 +25166,33 @@ function wmfGetVariantSettings() {
 			'text' => 'Skriv en artikel',
 			'id' => 'tutorial',
 		]
+	],
+	'eowiki' => [
+		[
+			'title' => 'Vikipedio:Stilogvido',
+			'text' => 'Stilogvido',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/eo',
+			'text' => 'Kiel redakti artikolon',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/eo#Images',
+			'text' => 'Kiel enmeti bildojn',
+			'id' => 'images',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/eo#Editing_references',
+			'text' => 'Kiel enmeti referencojn',
+			'id' => 'references',
+		],
+		[
+			'title' => 'Helpo:Kiel krei paĝon',
+			'text' => 'Kiel krei paĝon',
+			'id' => 'articlewizard',
+		],
 	],
 	'euwiki' => [
 		[
@@ -25860,6 +25891,10 @@ function wmfGetVariantSettings() {
 	'euwiki' => [
 		'create' => 'Laguntza:Sarrera berriak',
 		'image' => 'Laguntza:Irudiak',
+	],
+	'eowiki' => [
+		'create' => 'Helpo:Kiel_krei_paĝon',
+		'image' => 'mw:Help:VisualEditor/User_guide/eo#Images',
 	],
 	'fawiki' => [
 		'create' => 'راهنما:ساخت_صفحه_جدید',
