@@ -24838,6 +24838,13 @@ function wmfGetVariantSettings() {
 	'viwiki' => true,
 ],
 
+'wmgGEFeaturesMayBeAvailableToNewcomers' => [
+	'default' => true,
+	'dawiki' => false,
+	'rowiki' => false,
+	'thwiki' => false,
+],
+
 'wgWelcomeSurveyEnabled' => [
 	'default' => true,
 	'viwiki' => false,
