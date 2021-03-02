@@ -61,7 +61,7 @@ function wmfGetLabsOverrideSettings() {
 	return [
 
 		'wgParserCacheType' => [
-			'default' => CACHE_MEMCACHED,
+			'default' => 'mcrouter',
 		],
 
 		'wgLanguageCode' => [
