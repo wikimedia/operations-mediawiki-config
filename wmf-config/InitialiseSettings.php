@@ -7681,17 +7681,13 @@ function wmfGetVariantSettings() {
 ],
 'wgVectorUseWvuiSearch' => [
 	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
+	'desktop-improvements' => true,
+	'commonswiki' => false,
 ],
 // T249297
 'wgVectorSearchTreatmentABTest' => [
-	'default' => true,
-	'desktop-improvements' => false,
-	'frwiktionary' => true,
-	'hewiki' => true,
-	'ptwikiversity' => true,
-	'officewiki' => true,
+	'default' => false,
+	'desktop-improvements' => true,
 ],
 'wgVectorWvuiSearchOptions' => [
 	'default' => [
