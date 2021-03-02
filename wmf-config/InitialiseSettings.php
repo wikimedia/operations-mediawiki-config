@@ -16647,6 +16647,11 @@ function wmfGetVariantSettings() {
 	'default' => CACHE_ACCEL,
 ],
 
+'wgChronologyProtectorStash' => [
+	'default' => 'redis_local',
+	'wikitech' => 'memcached-pecl'
+],
+
 // General cache epochs
 'wgCacheEpoch' => [
 	'default' => '20130601000000',
