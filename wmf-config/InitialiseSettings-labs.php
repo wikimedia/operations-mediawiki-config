@@ -401,7 +401,8 @@ function wmfGetLabsOverrideSettings() {
 		],
 
 		'-wmgEnableCaptcha' => [
-			'default' => true,
+			// T276176 disable captchas while they are broken
+			'default' => false,
 		],
 
 		'-wmgEchoCluster' => [
