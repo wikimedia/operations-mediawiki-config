@@ -15806,7 +15806,7 @@ function wmfGetVariantSettings() {
 	'cswikisource' => 'ReferencePopups',
 	'cswiktionary' => 'ReferencePopups',
 	'frwiki' => 'tooltipRef',
-	'hewiki' => 'CiteTooltip',
+//	'hewiki' => 'CiteTooltip', // check disabled T276330
 	'hewikibooks' => 'RefTooltip',
 	'hewikinews' => 'RefTooltip',
 	'hewikisource' => 'CiteTooltip',
