@@ -15659,7 +15659,6 @@ function wmfGetVariantSettings() {
 'wmgUseBetaFeatures' => [
 	'default' => true,
 	'lockeddown' => false,
-	'wikitech' => false,
 ],
 
 // Whitelist enablement of individual Beta Features for production; per-wiki
