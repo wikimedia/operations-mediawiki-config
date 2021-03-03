@@ -24905,7 +24905,6 @@ function wmfGetVariantSettings() {
 
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
-	'dawiki' => false,
 	'hrwiki' => false,
 	'idwiki' => false,
 	'thwiki' => false,
