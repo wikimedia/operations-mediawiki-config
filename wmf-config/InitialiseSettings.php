@@ -19915,6 +19915,20 @@ function wmfGetVariantSettings() {
 'wgEventStreamsDefaultSettings' => [
 	'default' => [
 		'topic_prefixes' => [ 'eqiad.', 'codfw.' ],
+		# By default, all events should be imported into Hadoop.
+		# The analytics hadoop ingestion consumer (Gobblin) will
+		# look for streams to ingest using these settings.
+		# Each stream in a job should have similar volumes to allow
+		# the job to scale properly and not cause stream ingestion starvation.
+		# The default job_name is be event_default.
+		# Override this if the stream should be imported by a different job,
+		# or disabled altogether.
+		'consumers' => [
+			'analytics_hadoop_ingestion' => [
+				'job_name' => 'event_default',
+				'enabled' => true,
+			],
+		],
 	],
 ],
 
@@ -19956,6 +19970,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_CentralNoticeImpression',
@@ -19963,6 +19983,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_CentralNoticeTiming',
@@ -19970,6 +19996,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_CodeMirrorUsage',
@@ -19977,6 +20009,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_ContentTranslationAbuseFilter',
@@ -19984,6 +20022,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_CpuBenchmark',
@@ -19991,6 +20035,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_DesktopWebUIActionsTracking',
@@ -19998,6 +20048,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_ElementTiming',
@@ -20005,6 +20061,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_EditAttemptStep',
@@ -20012,6 +20074,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_FeaturePolicyViolation',
@@ -20019,6 +20087,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_FirstInputTiming',
@@ -20026,6 +20100,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_HelpPanel',
@@ -20033,6 +20113,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_HomepageModule',
@@ -20040,6 +20126,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_HomepageVisit',
@@ -20047,6 +20139,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_InukaPageView',
@@ -20054,6 +20152,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_KaiOSAppFirstRun',
@@ -20061,6 +20165,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_KaiOSAppFeedback',
@@ -20068,6 +20178,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_LandingPageImpression',
@@ -20075,6 +20191,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_LayoutShift',
@@ -20082,6 +20204,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_MobileWebUIActionsTracking',
@@ -20089,6 +20217,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_NavigationTiming',
@@ -20096,6 +20230,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_NewcomerTask',
@@ -20103,6 +20243,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_PaintTiming',
@@ -20110,6 +20256,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_PrefUpdate',
@@ -20117,6 +20269,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_QuickSurveyInitiation',
@@ -20124,6 +20282,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_QuickSurveysResponses',
@@ -20131,6 +20295,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_ReferencePreviewsBaseline',
@@ -20138,6 +20308,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_ReferencePreviewsCite',
@@ -20145,6 +20321,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_ReferencePreviewsPopups',
@@ -20152,6 +20334,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_ResourceTiming',
@@ -20159,6 +20347,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_RUMSpeedIndex',
@@ -20166,6 +20360,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_SaveTiming',
@@ -20173,6 +20373,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_SearchSatisfaction',
@@ -20180,6 +20386,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_ServerSideAccountCreation',
@@ -20187,6 +20399,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_SpecialInvestigate',
@@ -20194,6 +20412,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_SpecialMuteSubmit',
@@ -20201,6 +20425,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_SuggestedTagsAction',
@@ -20208,6 +20438,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_TemplateDataApi',
@@ -20215,6 +20451,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_TemplateDataEditor',
@@ -20222,6 +20464,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_TemplateWizard',
@@ -20229,6 +20477,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_Test',
@@ -20236,6 +20490,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_TranslationRecommendationUserAction',
@@ -20243,6 +20503,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_TranslationRecommendationUIRequests',
@@ -20250,6 +20516,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_TranslationRecommendationAPIRequests',
@@ -20257,6 +20529,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_TwoColConflictConflict',
@@ -20264,6 +20542,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_TwoColConflictExit',
@@ -20271,6 +20555,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_UniversalLanguageSelector',
@@ -20278,6 +20568,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_VirtualPageView',
@@ -20285,6 +20581,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_VisualEditorFeatureUse',
@@ -20292,6 +20594,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_VisualEditorTemplateDialogUse',
@@ -20299,6 +20607,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_WikidataCompletionSearchClicks',
@@ -20306,6 +20620,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_WMDEBannerEvents',
@@ -20313,6 +20633,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_WMDEBannerInteractions',
@@ -20320,6 +20646,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_WMDEBannerSizeIssue',
@@ -20327,6 +20659,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		/*
 		 * === Streams for testing Event Platform-based instruments ===
@@ -20472,6 +20810,13 @@ function wmfGetVariantSettings() {
 			'stream' => '/^mediawiki\\.job\\..+/' ,
 			'schema_title' => 'mediawiki/job',
 			'destination_event_service' => 'eventgate-main',
+			'consumers' => [
+				// Don't ingest mediawiki.job events into Hadoop.
+				// They are not well schemead and not very useful
+				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 		[
 			'stream' => 'mediawiki.centralnotice.campaign-change',
