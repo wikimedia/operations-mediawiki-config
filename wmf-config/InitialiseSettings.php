@@ -24908,7 +24908,6 @@ function wmfGetVariantSettings() {
 	'dawiki' => false,
 	'hrwiki' => false,
 	'idwiki' => false,
-	'rowiki' => false,
 	'thwiki' => false,
 ],
 
