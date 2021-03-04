@@ -24895,6 +24895,7 @@ function wmfGetVariantSettings() {
 	'ptwiki' => true,
 	'ruwiki' => true,
 	'rowiki' => true,
+	'sqwiki' => true,
 	'srwiki' => true,
 	'svwiki' => true,
 	'thwiki' => true,
@@ -24970,6 +24971,7 @@ function wmfGetVariantSettings() {
 	'plwiki' => 'Pomoc:Pytania nowicjuszy',
 	'ptwiki' => 'Ajuda:Tire suas dúvidas',
 	'ruwiki' => 'Википедия:Форум/Помощь начинающим',
+	'sqwiki' => 'Wikipedia:Oda_e_Fillestarëve',
 	'rowiki' => 'Wikipedia:Cafenea',
 	'srwiki' => 'Википедија:Трг/Помоћ',
 	'svwiki' => 'Wikipedia:Fikarummet/Frågor',
@@ -25006,6 +25008,7 @@ function wmfGetVariantSettings() {
 	'ptwiki' => 'Wikipédia:Guia de criação de artigos',
 	'ruwiki' => 'Википедия:Справка',
 	'rowiki' => 'Ajutor:Cuprins',
+	'sqwiki' => 'Ndihmë:Përmbajtja',
 	'srwiki' => 'Википедија:Помоћ',
 	'svwiki' => 'Wikipedia:Hjälp',
 	'thwiki' => 'วิธีใช้:สารบัญ',
@@ -25522,6 +25525,28 @@ function wmfGetVariantSettings() {
 			'title' => 'Wikipedia:Asistent pentru a crea articole',
 			'text' => 'Asistent pentru a crea articole',
 			'id' => 'articlewizzard',
+		],
+	],
+	'sqwiki' => [
+		[
+			'title' => 'Ndihmë:Redaktimi i faqeve',
+			'text' => 'Si të redaktoni një faqe',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/sq#Images',
+			'text' => 'Si të futni imazhe',
+			'id' => 'images',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide#Editing_references',
+			'text' => 'Si të futni referencat',
+			'id' => 'references',
+		],
+		[
+			'title' => 'Krijoni një artikull',
+			'text' => 'Wikipedia:Kujdestari i artikujve',
+			'id' => 'articlewizard',
 		],
 	],
 	'srwiki' => [
