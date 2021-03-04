@@ -24886,6 +24886,7 @@ function wmfGetVariantSettings() {
 	'frwiki' => true,
 	'frwiktionary' => true,
 	'hewiki' => true,
+	'hiwiki' => true,
 	'hrwiki' => true,
 	'huwiki' => true,
 	'hywiki' => true,
@@ -24906,6 +24907,7 @@ function wmfGetVariantSettings() {
 
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
+	'hiwiki' => false,
 	'hrwiki' => false,
 	'idwiki' => false,
 	'thwiki' => false,
@@ -24999,6 +25001,7 @@ function wmfGetVariantSettings() {
 	'frwiki' => 'Aide:Accueil',
 	'frwiktionary' => 'Aide:Sommaire',
 	'hewiki' => 'עזרה:תפריט ראשי',
+	'hiwiki' => 'विकिपीडिया:सहायता',
 	'hrwiki' => 'Pomoć:Sadržaj',
 	'huwiki' => 'Wikipédia:Bevezetés',
 	'hywiki' => 'Օգնություն:Գլխացանկ',
@@ -25282,6 +25285,33 @@ function wmfGetVariantSettings() {
 			'title' => 'עזרה:עריכת קוד מקור',
 			'text' => 'עריכת קוד מקור',
 			'id' => 'editing',
+		],
+	],
+	'hiwiki' => [
+		[
+			'title' => 'विकिपीडिया:शैली मार्गदर्शक',
+			'text' => 'शैली मार्गदर्शक',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/hi',
+			'text' => 'लेख को कैसे बदलें?',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/hi#Images',
+			'text' => '',
+			'id' => 'images',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/hi#Editing_references',
+			'text' => '',
+			'id' => 'references',
+		],
+		[
+			'title' => 'विकिपीडिया:Article_wizard',
+			'text' => 'कैसे एक लेख बनाने के लिए',
+			'id' => 'articlewizard',
 		],
 	],
 	'hrwiki' => [
