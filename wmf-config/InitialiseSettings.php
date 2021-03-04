@@ -20106,7 +20106,7 @@ function wmfGetVariantSettings() {
 			'destination_event_service' => 'eventgate-analytics-external',
 			'sample' => [
 				'unit' => 'session',
-				'rate' => 0.01,
+				'rate' => 0.1,
 			],
 		],
 		[
