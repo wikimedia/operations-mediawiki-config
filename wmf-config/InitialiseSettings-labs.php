@@ -1102,7 +1102,8 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true,
 		],
 		'wgGELinkRecommendationServiceUrl' => [
-			'default' => 'https://addlink-simple.toolforge.org',
+			// API token is stored in the private config repo on the deploy host
+			'default' => 'https://api.wikimedia.org/service/linkrecommendation',
 		],
 		'wgGELinkRecommendationsUseEventGate' => [
 			'default' => false,
