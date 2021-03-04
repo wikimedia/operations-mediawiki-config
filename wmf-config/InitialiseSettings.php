@@ -1021,6 +1021,11 @@ function wmfGetVariantSettings() {
 		'width' => 115,
 		'height' => 32,
 	],
+	'mediawikiwiki' => [
+		'src' => '/static/images/mobile/copyright/mediawiki-wordmark-en.svg',
+		'width' => 120,
+		'height' => 18,
+	],
 	'test2wiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-en.svg',
 		'width' => 119,
