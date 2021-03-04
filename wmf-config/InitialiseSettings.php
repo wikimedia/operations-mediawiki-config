@@ -12340,4 +12340,12 @@ return [
 	],
 ],
 
+// T61245
+'wmgUsePageNotice' => [
+	'default' => false,
+],
+'wgPageNoticeDisablePerPageNotices' => [
+	'default' => true,
+],
+
 ];

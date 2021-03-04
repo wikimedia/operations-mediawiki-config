@@ -2526,5 +2526,10 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 			'enwiki' => true,
 		],
+
+		// T61245
+		'wmgUsePageNotice' => [
+			'enwiktionary' => true,
+		],
 	];
 } # wmfGetOverrideSettings()
