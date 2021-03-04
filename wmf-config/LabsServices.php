@@ -9,8 +9,8 @@
 
 return [
 	'eqiad' => [
-		'udp2log' => 'deployment-fluorine02.eqiad.wmflabs:8420',
-		'xenon' => 'deployment-fluorine02.deployment-prep.eqiad.wmflabs',
+		'udp2log' => 'deployment-mwlog01.deployment-prep.eqiad1.wikimedia.cloud:8420',
+		'xenon' => 'deployment-mwlog01.deployment-prep.eqiad1.wikimedia.cloud',
 		'xhgui' => null,
 		'xhgui-pdo' => 'mysql:host=deployment-mdb01.deployment-prep.eqiad.wmflabs;dbname=xhgui',
 		'statsd' => 'cloudmetrics1001.eqiad.wmnet',
