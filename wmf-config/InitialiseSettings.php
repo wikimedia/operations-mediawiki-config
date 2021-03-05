@@ -9621,6 +9621,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [
 			'changetags' => true, // T270996
 		],
+		'flood' => [ 'bot' => true ], // T276560
 	],
 	'+huwiki' => [
 		'bot' => [ 'edittrustedprotected' => true ], // T194568
@@ -11555,7 +11556,7 @@ function wmfGetVariantSettings() {
 	],
 	'+hrwiki' => [
 		'bureaucrat' => [ 'patroller', 'autopatrolled' ],
-		'sysop' => [ 'patroller', 'autopatrolled' ],
+		'sysop' => [ 'patroller', 'autopatrolled', 'flood' ], // T276560
 	],
 	'+huwiki' => [
 		'bureaucrat' => [ 'templateeditor', 'interface-editor' ], // T74055, T109408
@@ -12396,9 +12397,9 @@ function wmfGetVariantSettings() {
 	'+hiwikiversity' => [
 		'sysop' => [ 'autopatrolled' ], // T179251
 	],
-	'+hrwiki' => [
-		'bureaucrat' => [ 'patroller', 'autopatrolled' ],
-		'sysop' => [ 'patroller', 'autopatrolled' ],
+	'+hrwiki' => [ // T276560
+		'bureaucrat' => [ 'patroller', 'autopatrolled', 'flood' ],
+		'sysop' => [ 'patroller', 'autopatrolled', 'flood' ],
 	],
 	'+huwiki' => [
 		'bureaucrat' => [ 'sysop', 'bureaucrat', 'templateeditor', 'interface-editor' ], // T74055, T109408
@@ -14805,6 +14806,7 @@ function wmfGetVariantSettings() {
 	'eswikibooks' => [ 'sysop' => [ 'flood' ] ], // T111455
 	'frwikinews' => [ 'sysop' => [ 'flood' ] ],
 	'frwiktionary' => [ 'botadmin' => [ 'botadmin' ] ],
+	'hrwiki' => [ 'flood' => [ 'flood' ] ], // T276560
 	'itwikisource' => [ 'sysop' => [ 'flood' ] ], // T38600
 	'jawiki' => [ 'rollbacker' => [ 'rollbacker' ] ], // T258339
 	'ladwiki' => [ 'flood' => [ 'flood' ] ], // T131527
