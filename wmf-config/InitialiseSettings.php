@@ -20443,10 +20443,8 @@ function wmfGetVariantSettings() {
 	'default' => [
 		'DesktopWebUIActionsTracking' => '/analytics/legacy/desktopwebuiactionstracking/1.0.0',
 		'MobileWebUIActionsTracking' => '/analytics/legacy/mobilewebuiactionstracking/1.0.0',
-		'SuggestedTagsAction' => '/analytics/legacy/suggestedtagsaction/1.0.0',
-	],
-	'testwiki' => [
 		'PrefUpdate' => '/analytics/legacy/prefupdate/1.0.0',
+		'SuggestedTagsAction' => '/analytics/legacy/suggestedtagsaction/1.0.0',
 	],
 ],
 
