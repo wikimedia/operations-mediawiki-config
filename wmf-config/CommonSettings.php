@@ -3370,6 +3370,9 @@ if ( $wmgUseEventLogging ) {
 	if ( $wmgUseWikimediaEvents ) {
 		wfLoadExtension( 'WikimediaEvents' );
 		$wgWMEStatsdBaseUri = '/beacon/statsv';
+		if ( $wgDBname === 'testwiki' ) {
+			$wgGroupPermissions['data-qa']['perform-data-qa'] = true; // T276515
+		}
 	}
 
 	// Depends on EventLogging
