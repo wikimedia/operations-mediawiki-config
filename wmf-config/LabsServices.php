@@ -46,8 +46,8 @@ return [
 		'cxserver' => 'http://deployment-docker-cxserver01.eqiad.wmflabs:8080',
 		'irc' => 'irc.beta.wmflabs.org', // deployment-ircd
 		'redis_lock' => [
-			'rdb1' => 'deployment-memc04.deployment-prep.eqiad.wmflabs',
-			'rdb2' => 'deployment-memc05.deployment-prep.eqiad.wmflabs',
+			'rdb1' => 'deployment-memc09.deployment-prep.eqiad1.wikimedia.cloud',
+			'rdb2' => 'deployment-memc10.deployment-prep.eqiad1.wikimedia.cloud',
 		],
 		'etcd' => 'deployment-etcd02.deployment-prep.eqiad1.wikimedia.cloud:2379',
 		'mediaSwiftAuth' => 'http://deployment-ms-fe03.deployment-prep.eqiad.wmflabs/auth',
