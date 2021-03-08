@@ -1108,6 +1108,9 @@ function wmfGetLabsOverrideSettings() {
 			// API token is stored in the private config repo on the deploy host
 			'default' => 'https://api.wikimedia.org/service/linkrecommendation',
 		],
+		'wgGELinkRecommendationServiceTimeout' => [
+			'default' => 30,
+		],
 		'wgGELinkRecommendationsUseEventGate' => [
 			'default' => false,
 		],
