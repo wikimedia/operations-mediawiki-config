@@ -25284,12 +25284,12 @@ function wmfGetVariantSettings() {
 		],
 		[
 			'title' => 'mw:Help:VisualEditor/User_guide/hi#Images',
-			'text' => '',
+			'text' => 'छवियाँ कैसे डालें',
 			'id' => 'images',
 		],
 		[
 			'title' => 'mw:Help:VisualEditor/User_guide/hi#Editing_references',
-			'text' => '',
+			'text' => 'संदर्भ कैसे डालें',
 			'id' => 'references',
 		],
 		[
