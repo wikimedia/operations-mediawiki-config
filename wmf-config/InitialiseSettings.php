@@ -19105,6 +19105,7 @@ function wmfGetVariantSettings() {
 	'dewiki' => false,
 	'ruwiki' => false,
 	'enwikiversity' => true, // T264693
+	'frwiktionary' => true, // T276189
 	'gomwiktionary' => true, // T258554
 	'jawikivoyage' => true, // T265829
 	'kuwiktionary' => true, // T273192
