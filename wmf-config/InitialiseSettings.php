@@ -24878,7 +24878,6 @@ function wmfGetVariantSettings() {
 	'hywiki' => true,
 	'idwiki' => true,
 	'kowiki' => true,
-	'nowiki' => true,
 	'plwiki' => true,
 	'ptwiki' => true,
 	'ruwiki' => true,
@@ -24897,7 +24896,6 @@ function wmfGetVariantSettings() {
 	'hiwiki' => false,
 	'hrwiki' => false,
 	'idwiki' => false,
-	'nowiki' => false,
 	'thwiki' => false,
 ],
 
@@ -25436,33 +25434,6 @@ function wmfGetVariantSettings() {
 			'text' => '문서 등재 기준',
 			'id' => 'notability',
 		]
-	],
-	'nowiki' => [
-		[
-			'title' => 'Wikipedia:Stilmanual',
-			'text' => 'Hvordan skrive en god artikkel',
-			'id' => 'mos',
-		],
-		[
-			'title' => 'mw:Help:VisualEditor/User_guide/nb',
-			'text' => 'Hvordan redigere en side',
-			'id' => 'editing',
-		],
-		[
-			'title' => 'mw:Help:VisualEditor/User_guide/nb#Images',
-			'text' => 'Hvordan sette inn bilder',
-			'id' => 'images',
-		],
-		[
-			'title' => 'mw:Help:VisualEditor/User_guide/nb#Editing_references',
-			'text' => 'Hvordan sette inn referanser',
-			'id' => 'references',
-		],
-		[
-			'title' => 'Wikipedia:Artikkelveiviser',
-			'text' => 'Hvordan lage en artikkel',
-			'id' => 'articlewizard',
-		],
 	],
 	'plwiki' => [
 		[
