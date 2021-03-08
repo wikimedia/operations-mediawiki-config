@@ -1095,6 +1095,9 @@ function wmfGetLabsOverrideSettings() {
 		'wmgUseGrowthExperiments' => [
 			'enwiki' => true,
 		],
+		'wgGEDeveloperSetup' => [
+			'default' => true,
+		],
 		'wgGENewcomerTasksLinkRecommendationsEnabled' => [
 			'default' => true,
 		],
