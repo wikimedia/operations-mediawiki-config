@@ -13,5 +13,4 @@ inheritsFrom:
   - nowikidatadescriptiontaglines
   - s3
   - securepollglobal
-  - visualeditor-nondefault
   - wikidataclient
