@@ -13,3 +13,4 @@ inheritsFrom:
   - s2
   - securepollglobal
   - wikidataclient
+  - desktop-improvements
