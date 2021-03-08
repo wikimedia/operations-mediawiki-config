@@ -19791,6 +19791,13 @@ function wmfGetVariantSettings() {
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
+			'stream' => 'eventlogging_EditAttemptStep',
+			'schema_title' => 'analytics/legacy/editattemptstep',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
 			'stream' => 'eventlogging_FeaturePolicyViolation',
 			'schema_title' => 'analytics/legacy/featurepolicyviolation',
 			'topic_prefixes' => null,
@@ -20040,6 +20047,13 @@ function wmfGetVariantSettings() {
 		[
 			'stream' => 'eventlogging_UniversalLanguageSelector',
 			'schema_title' => 'analytics/legacy/universallanguageselector',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
+			'stream' => 'eventlogging_VisualEditorFeatureUse',
+			'schema_title' => 'analytics/legacy/visualeditorfeatureuse',
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20380,6 +20394,7 @@ function wmfGetVariantSettings() {
 		'eventlogging_CodeMirrorUsage',
 		'eventlogging_CpuBenchmark',
 		'eventlogging_DesktopWebUIActionsTracking',
+		'eventlogging_EditAttemptStep',
 		'eventlogging_ElementTiming',
 		'eventlogging_FeaturePolicyViolation',
 		'eventlogging_FirstInputTiming',
@@ -20412,6 +20427,7 @@ function wmfGetVariantSettings() {
 		'eventlogging_TwoColConflictConflict',
 		'eventlogging_TwoColConflictExit',
 		'eventlogging_UniversalLanguageSelector',
+		'eventlogging_VisualEditorFeatureUse',
 		'eventlogging_VisualEditorTemplateDialogUse',
 		'mediawiki.client.session_tick',
 		'mediawiki.mediasearch_interaction',
@@ -20448,6 +20464,10 @@ function wmfGetVariantSettings() {
 		'PrefUpdate' => '/analytics/legacy/prefupdate/1.0.0',
 		'SuggestedTagsAction' => '/analytics/legacy/suggestedtagsaction/1.0.0',
 	],
+	'testwiki' => [
+		'EditAttemptStep' => '/analytics/legacy/editattemptstep/1.0.0',
+		'VisualEditorFeatureUse' => '/analytics/legacy/visualeditorfeatureuse/1.0.0',
+	]
 ],
 
 // Enable Mediawiki client side (browser) Javascript error logging.
