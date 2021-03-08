@@ -10,5 +10,6 @@ inheritsFrom:
   - large
   - nowikidatadescriptiontaglines
   - s3
+  - desktop-improvements
   - securepollglobal
   - wikidataclient
