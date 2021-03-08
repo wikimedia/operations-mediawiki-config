@@ -25558,8 +25558,8 @@ function wmfGetVariantSettings() {
 			'id' => 'references',
 		],
 		[
-			'title' => 'Krijoni një artikull',
-			'text' => 'Wikipedia:Kujdestari i artikujve',
+			'title' => 'Wikipedia:Kujdestari i artikujve',
+			'text' => 'Krijoni një artikull',
 			'id' => 'articlewizard',
 		],
 	],
