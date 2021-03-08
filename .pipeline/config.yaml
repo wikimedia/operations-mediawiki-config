@@ -42,3 +42,28 @@ pipelines:
                   $with:
                     - .
                 command: [./.pipeline/wmf-publish/build]
+      - name: webserver
+        build:
+          variant: production
+          excludes:
+            - .git
+            - wmf-config
+            - tests
+            - php
+            - src
+            - multiversion
+        publish:
+          image:
+            name: mediawiki-webserver
+            tags: ["production"]
+        blubberfile:
+          version: v4
+          runs:
+            uid: 33
+            gid: 33
+          variants:
+            production:
+              base: docker-registry.wikimedia.org/mediawiki-httpd
+              copies: [local]
+              lives:
+                in: /srv/mediawiki
