@@ -19103,6 +19103,7 @@ function wmfGetVariantSettings() {
 	'enwiki' => false,
 	'dewiki' => false,
 	'ruwiki' => false,
+	'enwikibooks' => true, // T276851
 	'enwikiversity' => true, // T264693
 	'frwiktionary' => true, // T276189
 	'gomwiktionary' => true, // T258554
@@ -19128,6 +19129,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => 'available', // T249394
 	'apiportalwiki' => 'available', // T260624
 	'gomwiktionary' => 'available', // T258554
+	'enwikibooks' => 'available', // T276851
 ],
 
 'wgDiscussionTools_newtopictool' => [
