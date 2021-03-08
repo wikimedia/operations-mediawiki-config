@@ -19115,8 +19115,6 @@ function wmfGetVariantSettings() {
 
 'wgDiscussionToolsBeta' => [
 	'default' => true,
-	'gomwiktionary' => false, // T258554
-	'apiportalwiki' => false, // T260624
 ],
 
 'wgDiscussionToolsABTest' => [
@@ -19128,14 +19126,12 @@ function wmfGetVariantSettings() {
 	'arwiki' => 'available', // T249394
 	'cswiki' => 'available', // T249394
 	'huwiki' => 'available', // T249394
+	'apiportalwiki' => 'available', // T260624
+	'gomwiktionary' => 'available', // T258554
 ],
 
 'wgDiscussionTools_newtopictool' => [
-	'default' => 'unavailable',
-	'arwiki' => 'default', // T273145
-	'cswiki' => 'default', // T273145
-	'huwiki' => 'default', // T273145
-	'testwiki' => 'default',
+	'default' => 'default', // T275827
 ],
 
 'wgDTSchemaEditAttemptStepSamplingRate' => [
