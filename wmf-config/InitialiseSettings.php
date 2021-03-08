@@ -20463,11 +20463,9 @@ function wmfGetVariantSettings() {
 		'MobileWebUIActionsTracking' => '/analytics/legacy/mobilewebuiactionstracking/1.0.0',
 		'PrefUpdate' => '/analytics/legacy/prefupdate/1.0.0',
 		'SuggestedTagsAction' => '/analytics/legacy/suggestedtagsaction/1.0.0',
-	],
-	'testwiki' => [
 		'EditAttemptStep' => '/analytics/legacy/editattemptstep/1.0.0',
 		'VisualEditorFeatureUse' => '/analytics/legacy/visualeditorfeatureuse/1.0.0',
-	]
+	],
 ],
 
 // Enable Mediawiki client side (browser) Javascript error logging.
