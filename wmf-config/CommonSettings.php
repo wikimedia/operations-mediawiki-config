@@ -4253,4 +4253,6 @@ if (
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
 
-require "$wmfConfigDir/ExtensionMessages-$wmgVersionNumber.php";
+if ( !defined( 'MW_NO_EXTENSION_MESSAGES' ) ) {
+	require "$wmfConfigDir/ExtensionMessages-$wmgVersionNumber.php";
+}
