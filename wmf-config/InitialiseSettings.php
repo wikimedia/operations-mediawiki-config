@@ -595,6 +595,7 @@ function wmfGetVariantSettings() {
 
 	// Special wikis
 	'commonswiki' => '/static/images/mobile/copyright/commons.svg',
+	'incubatorwiki' => '/static/images/mobile/copyright/incubator.svg',
 	'mediawikiwiki' => '/static/images/mobile/copyright/mediawiki.svg',
 	'specieswiki' => '/static/images/mobile/copyright/wikispecies.svg',
 ],
@@ -698,13 +699,13 @@ function wmfGetVariantSettings() {
 	],
 	'bnwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-bn.svg',
-		'width' => 106,
+		'width' => 113,
 		'height' => 25,
 	],
 	'bpywiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-bn.svg',
-		'width' => 92,
-		'height' => 21,
+		'width' => 113,
+		'height' => 25,
 	],
 	'cawiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ca.svg',
@@ -982,7 +983,7 @@ function wmfGetVariantSettings() {
 	// Wikivoyage
 	'bnwikivoyage' => [ // T196680
 		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-bn.svg',
-		'width' => 111,
+		'width' => 113,
 		'height' => 29,
 	],
 	'hewikivoyage' => [ // T234278
@@ -997,8 +998,8 @@ function wmfGetVariantSettings() {
 	],
 	'trwikivoyage' => [ // T272776
 		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-tr.svg',
-		'width' => 116,
-		'height' => 25,
+		'width' => 114,
+		'height' => 26,
 	],
 
 	// Chapter and local user group wikis
@@ -1033,6 +1034,11 @@ function wmfGetVariantSettings() {
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ar.svg',
 		'width' => 66,
 		'height' => 11,
+	],
+	'bnwiki' => [
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-bn.svg',
+		'width' => 108,
+		'height' => 15,
 	],
 	'cawiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ca.svg',
@@ -1183,6 +1189,11 @@ function wmfGetVariantSettings() {
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-vi.svg',
 		'width' => 117,
 		'height' => 10,
+	],
+	'vecwiki' => [
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-vec.svg',
+		'width' => 119,
+		'height' => 14,
 	],
 	'zhwiki' => [ // T258552, T260908
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-zh.svg',
