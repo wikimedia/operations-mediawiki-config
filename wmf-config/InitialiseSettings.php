@@ -25943,6 +25943,7 @@ function wmfGetVariantSettings() {
 	'hewiki' => 'ויקיפדיה:ותיקים למען חדשים/מתנדבים',
 	'huwiki' => 'Wikipédia:Szerkesztők megtartása/Mentorok',
 	'hywiki' => 'Վիքիպեդիա:Օգնություն/Ստորագրություններ',
+	'idwiki' => 'Wikipedia:Program pembelajaran/Area Mentor/mentor',
 	'kowiki' => '위키백과:새_사용자_경험/새_사용자_멘토',
 	'plwiki' => 'Pomoc:Przewodnicy/Przewodnicy',
 	'ptwiki' => 'Wikipédia:Tutoria/Tutores',
