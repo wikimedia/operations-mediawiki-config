@@ -24946,6 +24946,7 @@ function wmfGetVariantSettings() {
 	'hiwiki' => false,
 	'hrwiki' => false,
 	'idwiki' => false,
+	'sqwiki' => false,
 	'thwiki' => false,
 ],
 
