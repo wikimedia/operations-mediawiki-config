@@ -16746,10 +16746,8 @@ function wmfGetVariantSettings() {
 ],
 
 'wgCheckUserLogLogins' => [
-	// T253802 - enabled everywhere but few large wikis
+	// T253802 - enabled everywhere but loginwiki
 	'default' => true,
-
-	// Do not log logins at loginwiki
 	'loginwiki' => false,
 ],
 
