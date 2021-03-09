@@ -107,6 +107,9 @@ $wmfSwiftConfig['codfw'] = [
 	'thumborPrivateUser' => null,
 	'thumborUrl' => null,
 	'thumborSecret' => null,
+	'user' => null,
+	'key' => null,
+	'tempUrlKey' => null,
 ];
 
 /**

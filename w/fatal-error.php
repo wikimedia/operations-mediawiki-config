@@ -26,6 +26,9 @@ class CauseFatalError {
 	private static $allowedActions = [
 		'noerror', 'exception', 'nomethod', 'oom', 'timeout', 'segfault', 'coredump',
 	];
+	private static $allowedFrom = [
+		'main', 'postsend', 'shutdown', 'destruct',
+	];
 
 	/**
 	 * Checks request parameters and (if possible) performs the requested action
@@ -35,7 +38,7 @@ class CauseFatalError {
 		$request = RequestContext::getMain()->getRequest();
 
 		global $fatalErrorPassword;
-		$password = $request->getVal( 'password', '' );
+		$password = $request->getRawVal( 'password', '' );
 		if ( !isset( $fatalErrorPassword ) ) {
 			echo "Error: password not found in file FatalErrorSettings.php.";
 			return;
@@ -45,8 +48,8 @@ class CauseFatalError {
 			return;
 		}
 
-		$action = $request->getVal( 'action', 'noerror' );
-		$postSend = $request->getVal( 'postsend', 'no' );
+		$action = $request->getRawVal( 'action', 'noerror' );
+		$from = $request->getRawVal( 'from', 'main' );
 
 		$paramsOkay = true;
 		$checkActionResult = static::checkParam( $action, 'action', self::$allowedActions );
@@ -55,9 +58,9 @@ class CauseFatalError {
 			$paramsOkay = false;
 		}
 
-		$checkPostSendResult = static::checkParam( $postSend, 'postsend', [ 'yes', 'no' ] );
-		if ( $checkPostSendResult !== true ) {
-			echo "{$checkPostSendResult}";
+		$checkFromResult = static::checkParam( $from, 'from', self::$allowedFrom );
+		if ( $checkFromResult !== true ) {
+			echo "{$checkFromResult}";
 			$paramsOkay = false;
 		}
 
@@ -73,9 +76,25 @@ class CauseFatalError {
 			return;
 		}
 
-		if ( $postSend === 'yes' ) {
+		// Lifetime of PHP engine execution (as of Jan 2021, for PHP 7.2)
+		// 1. entry point.
+		//    This starts from e.g. index.php or this script, and ends
+		//    with MW-specific "postsend" behaviour which re-orders stuff
+		//    within MW and instructs php-fpm to flush the response, but doesn't
+		//    really affect the execution or call stack.
+		//    Once all natural code execution has finished, the stack unwinds.
+		// 2. shutdown callback(s), new stack for each.
+		// 3. destructor callbacks(), new stack for each.
+
+		if ( $from === 'postsend' ) {
 			DeferredUpdates::addCallableUpdate( $actionMethod );
 			$mediawiki->doPostOutputShutdown( 'normal' );
+		} elseif ( $from === 'shutdown' ) {
+			register_shutdown_function( $actionMethod );
+		} elseif ( $from === 'destruct' ) {
+			$obj = new CauseFatalErrorFromLateDestruct( function () use ( $actionMethod ) {
+				$actionMethod();
+			} );
 		} else {
 			$actionMethod();
 		}
@@ -161,5 +180,29 @@ class CauseFatalError {
 	public static function doCoredump() {
 		posix_setrlimit( POSIX_RLIMIT_CORE, (int)10e9, POSIX_RLIMIT_INFINITY );
 		posix_kill( posix_getpid(), 6 /*SIGABRT*/ );
+	}
+}
+
+// phpcs:ignore Generic.Files.OneObjectStructurePerFile.MultipleFound
+class CauseFatalErrorFromLateDestruct {
+	// Keep self-reference to singleton so that destructor does not run during the
+	// main or postsend stages, but later, as part of the shutdown.
+	// Without this, the destructor would run implicitly at the end of CauseFatalError::go(),
+	// which would behave no different than from=main.
+	public static $instance;
+
+	private $fn;
+
+	/**
+	 * @param callable $fn
+	 */
+	public function __construct( callable $fn ) {
+		$this->fn = $fn;
+
+		self::$instance = $this;
+	}
+
+	public function __destruct() {
+		( $this->fn )();
 	}
 }

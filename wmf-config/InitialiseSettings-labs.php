@@ -39,7 +39,7 @@ function wmfGetOverrideSettings() {
 	return [
 
 		'wgParserCacheType' => [
-			'default' => CACHE_MEMCACHED,
+			'default' => 'mcrouter',
 		],
 
 		'wgLanguageCode' => [
@@ -379,7 +379,8 @@ function wmfGetOverrideSettings() {
 		],
 
 		'-wmgEnableCaptcha' => [
-			'default' => true,
+			// T276176 disable captchas while they are broken
+			'default' => false,
 		],
 
 		'-wmgEchoCluster' => [
@@ -655,6 +656,10 @@ function wmfGetOverrideSettings() {
 
 		'wmgUseCheckUser' => [
 			'default' => false,
+		],
+
+		'wgSecurePollUseLogging' => [
+			'default' => true,
 		],
 
 		'wmgUseIPInfo' => [
@@ -1068,11 +1073,24 @@ function wmfGetOverrideSettings() {
 		'wmgUseGrowthExperiments' => [
 			'enwiki' => true,
 		],
+		'wgGEDeveloperSetup' => [
+			'default' => true,
+		],
 		'wgGENewcomerTasksLinkRecommendationsEnabled' => [
 			'default' => true,
 		],
 		'wgGELinkRecommendationsFrontendEnabled' => [
 			'default' => true,
+		],
+		'wgGELinkRecommendationServiceUrl' => [
+			// API token is stored in the private config repo on the deploy host
+			'default' => 'https://api.wikimedia.org/service/linkrecommendation',
+		],
+		'wgGELinkRecommendationServiceTimeout' => [
+			'default' => 30,
+		],
+		'wgGELinkRecommendationsUseEventGate' => [
+			'default' => false,
 		],
 		'wgGEHelpPanelHelpDeskTitle' => [
 			'enwiki' => 'Wikipedia:Help_desk',
@@ -1132,10 +1150,10 @@ function wmfGetOverrideSettings() {
 			'enwiki' => 'Help:Getting started',
 		],
 		'wgGENewcomerTasksRemoteApiUrl' => [
-			'enwiki' => 'https://en.wikipedia.org/w/api.php',
+			'enwiki' => null,
 			'arwiki' => 'https://ar.wikipedia.org/w/api.php',
 			'bnwiki' => 'https://bn.wikipedia.org/w/api.php',
-			'cswiki' => 'https://cs.wikipedia.org/w/api.php',
+			'cswiki' => null,
 			'fawiki' => 'https://fa.wikipedia.org/w/api.php',
 			'kowiki' => 'https://ko.wikipedia.org/w/api.php',
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',

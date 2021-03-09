@@ -9,8 +9,8 @@
 
 return [
 	'eqiad' => [
-		'udp2log' => 'deployment-fluorine02.eqiad.wmflabs:8420',
-		'xenon' => 'deployment-fluorine02.deployment-prep.eqiad.wmflabs',
+		'udp2log' => 'deployment-mwlog01.deployment-prep.eqiad1.wikimedia.cloud:8420',
+		'xenon' => 'deployment-mwlog01.deployment-prep.eqiad1.wikimedia.cloud',
 		'xhgui' => null,
 		'xhgui-pdo' => 'mysql:host=deployment-mdb01.deployment-prep.eqiad.wmflabs;dbname=xhgui',
 		'statsd' => 'cloudmetrics1001.eqiad.wmnet',
@@ -46,10 +46,10 @@ return [
 		'cxserver' => 'http://deployment-docker-cxserver01.eqiad.wmflabs:8080',
 		'irc' => 'irc.beta.wmflabs.org', // deployment-ircd
 		'redis_lock' => [
-			'rdb1' => 'deployment-memc04.deployment-prep.eqiad.wmflabs',
-			'rdb2' => 'deployment-memc05.deployment-prep.eqiad.wmflabs',
+			'rdb1' => 'deployment-memc09.deployment-prep.eqiad1.wikimedia.cloud',
+			'rdb2' => 'deployment-memc10.deployment-prep.eqiad1.wikimedia.cloud',
 		],
-		'etcd' => 'deployment-etcd-01.deployment-prep.eqiad.wmflabs:2379',
+		'etcd' => 'deployment-etcd02.deployment-prep.eqiad1.wikimedia.cloud:2379',
 		'mediaSwiftAuth' => 'http://deployment-ms-fe03.deployment-prep.eqiad.wmflabs/auth',
 		'mediaSwiftStore' => 'http://deployment-ms-fe03.deployment-prep.eqiad.wmflabs/v1/AUTH_mw',
 		'electron' => 'http://deployment-pdfrender02.deployment-prep.eqiad.wmflabs:5252',

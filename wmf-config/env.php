@@ -20,10 +20,16 @@
 // In PRODUCTION, /etc/wikimedia-cluster contains the name
 // of the local datacenter (e.g. eqiad, codfw, etc).  For any other
 // realms (e.g., labs), /etc/wikimedia-cluster contains the name of the realm.
-$mockWmgClusterFile = $GLOBALS['mockWmgClusterFile'] ?? '/etc/wikimedia-cluster';
 
-@$cluster = trim( file_get_contents( $mockWmgClusterFile ) ?: 'no-cluster-configured!' );
-if ( $cluster === 'labs' ) {
+// For mediawiki container image builds, WMF_DATACENTER will be set to
+// 'eqiad' by the image building script.
+$dc = getenv( 'WMF_DATACENTER' );
+if ( !$dc ) {
+	$dcFile = $GLOBALS['mockWmgClusterFile'] ?? '/etc/wikimedia-cluster';
+	@$dc = trim( file_get_contents( $dcFile ) ?: 'no-cluster-configured!' );
+}
+
+if ( $dc === 'labs' ) {
 	return [
 		'realm' => 'labs',
 		'dc' => 'eqiad',
@@ -31,7 +37,7 @@ if ( $cluster === 'labs' ) {
 		'servicesFile' => __DIR__ . '/LabsServices.php',
 	];
 }
-if ( $cluster === 'dev' ) {
+if ( $dc === 'dev' ) {
 	return [
 		'realm' => 'dev',
 		'dc' => 'dev',
@@ -42,7 +48,7 @@ if ( $cluster === 'dev' ) {
 
 return [
 	'realm' => 'production',
-	'dc' => $cluster,
+	'dc' => $dc,
 	'dcs' => [ 'eqiad', 'codfw' ],
 	'servicesFile' => __DIR__ . '/ProductionServices.php',
 ];

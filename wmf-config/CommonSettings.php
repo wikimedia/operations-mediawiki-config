@@ -135,20 +135,45 @@ if ( $wmfRealm === 'dev' ) {
 # The list of datacenters known to this realm
 $wmfDatacenters = ServiceConfig::getInstance()->getDatacenters();
 
-$etcdConfig = wmfSetupEtcd( $wmfLocalServices['etcd'] );
-$wmfEtcdLastModifiedIndex = $etcdConfig->getModifiedIndex();
+if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
+	// Prepare just enough configuration to allow
+	// rebuildLocalisationCache.php and mergeMessageFileList.php to
+	// run to completion without complaints.
 
-$wgReadOnly = $etcdConfig->get( "$wmfDatacenter/ReadOnly" );
+	$wmfEtcdLastModifiedIndex = "wmfEtcdLastModifiedIndex uninitialized due to WMF_MAINTENANCE_OFFLINE";
+	$wgReadOnly = "In read-only mode because WMF_MAINTENANCE_OFFLINE is set";
+	$wmfMasterDatacenter = ServiceConfig::getInstance()->getDatacenter();
+	$wmfMasterServices = $wmfAllServices[$wmfMasterDatacenter];
+	$wmfDbconfigFromEtcd = [
+		'readOnlyBySection' => null,
+		'groupLoadsBySection' => [
+			'DEFAULT' => [
+				'' => [
+				   'WMF_MAINTENANCE_OFFLINE_placeholder' => 0
+				],
+			],
+		],
+		'hostsByName' => null,
+		'sectionLoads' => [],
+		'externalLoads' => [],
+	];
 
-$wmfMasterDatacenter = $etcdConfig->get( 'common/WMFMasterDatacenter' );
-$wmfMasterServices = $wmfAllServices[$wmfMasterDatacenter];
+} else {
+	$etcdConfig = wmfSetupEtcd( $wmfLocalServices['etcd'] );
+	$wmfEtcdLastModifiedIndex = $etcdConfig->getModifiedIndex();
 
-// Database load balancer config (sectionLoads, groupLoadsBySection, …)
-// This is later merged into $wgLBFactoryConf by wmfEtcdApplyDBConfig().
-// See also <https://wikitech.wikimedia.org/wiki/Dbctl>
-$wmfDbconfigFromEtcd = $etcdConfig->get( "$wmfDatacenter/dbconfig" );
+	$wgReadOnly = $etcdConfig->get( "$wmfDatacenter/ReadOnly" );
 
-unset( $etcdConfig );
+	$wmfMasterDatacenter = $etcdConfig->get( 'common/WMFMasterDatacenter' );
+	$wmfMasterServices = $wmfAllServices[$wmfMasterDatacenter];
+
+	// Database load balancer config (sectionLoads, groupLoadsBySection, …)
+	// This is later merged into $wgLBFactoryConf by wmfEtcdApplyDBConfig().
+	// See also <https://wikitech.wikimedia.org/wiki/Dbctl>
+	$wmfDbconfigFromEtcd = $etcdConfig->get( "$wmfDatacenter/dbconfig" );
+
+	unset( $etcdConfig );
+}
 
 $wmfUdp2logDest = $wmfLocalServices['udp2log'];
 if ( $wgDBname === 'testwiki' || $wgDBname === 'test2wiki' ) {
@@ -2564,8 +2589,6 @@ if ( $wmgUseVisualEditor ) {
 	} else {
 		$wgDefaultUserOptions['visualeditor-enable'] = 0;
 		$wgVisualEditorEnableBetaFeature = true;
-		// Only show the beta-disable preference if the wiki is in 'beta'.
-		$wgHiddenPrefs[] = 'visualeditor-betatempdisable';
 	}
 	if ( $wmgVisualEditorTransitionDefault ) {
 		$wgVisualEditorTransitionDefault = true;
@@ -2726,6 +2749,9 @@ if ( $wmgUseMath ) {
 	$wgMathMathMLUrl = $wmfLocalServices['mathoid'];
 	// Increase the number of concurrent connections made to RESTBase
 	$wgMathConcurrentReqs = 150;
+
+	// Temporary setting for conversion off RESTBase to pure Mathoid. See T274436
+	$wgMathUseRestBase = true;
 
 	// Set up $wgMathFullRestbaseURL - similar to VE RESTBase config above
 	// HACK: $wgServerName is not available yet at this point, it's set by Setup.php
@@ -3346,6 +3372,9 @@ if ( $wmgUseEventLogging ) {
 	if ( $wmgUseWikimediaEvents ) {
 		wfLoadExtension( 'WikimediaEvents' );
 		$wgWMEStatsdBaseUri = '/beacon/statsv';
+		if ( $wgDBname === 'testwiki' ) {
+			$wgGroupPermissions['data-qa']['perform-data-qa'] = true; // T276515
+		}
 	}
 
 	// Depends on EventLogging
@@ -4004,6 +4033,13 @@ if ( $wmgUseWikisource ) {
 
 if ( $wmgUseGrowthExperiments ) {
 	wfLoadExtension( 'GrowthExperiments' );
+
+	if ( !$wmgGEFeaturesMayBeAvailableToNewcomers ) {
+		// Disable welcome survey
+		$wgWelcomeSurveyExperimentalGroups = [ 'exp2_target_specialpage' => [ 'range' => 'x' ], 'exp2_target_popup' => [ 'range' => 'x' ] ];
+		// Disable all other Growth features
+		$wgGEHomepageNewAccountEnablePercentage = 0;
+	}
 }
 
 if ( PHP_SAPI === 'cli' ) {
@@ -4222,4 +4258,6 @@ if (
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
 
-require "$wmfConfigDir/ExtensionMessages-$wmgVersionNumber.php";
+if ( !defined( 'MW_NO_EXTENSION_MESSAGES' ) ) {
+	require "$wmfConfigDir/ExtensionMessages-$wmgVersionNumber.php";
+}
