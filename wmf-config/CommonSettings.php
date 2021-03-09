@@ -3582,8 +3582,6 @@ if ( $wmgUseUniversalLanguageSelector ) {
 		$wgTranslatePageTranslationULS = true;
 	}
 
-	$wgULSEventLogging = true;
-
 	// Compact Language Links …
 
 	// … as a beta feature (see T136677 for beta to stable)
