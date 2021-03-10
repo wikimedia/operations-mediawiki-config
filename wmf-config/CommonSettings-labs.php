@@ -404,7 +404,4 @@ $wgCodeMirrorEnableBracketMatching = true;
 // Temporary feature flag for the CodeMirror accessibility color schema see T271895
 $wgCodeMirrorAccessibilityColors = true;
 
-// Temporary read only mode
-$wgReadOnly = 'Database maintenance ongoing. Writes are disabled. --Urbanecm, Majavah';
-
 } # end safeguard
