@@ -24917,7 +24917,6 @@ function wmfGetVariantSettings() {
 	'idwiki' => false,
 	'nowiki' => false,
 	'sqwiki' => false,
-	'thwiki' => false,
 ],
 
 'wgWelcomeSurveyEnabled' => [
