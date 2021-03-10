@@ -25045,6 +25045,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => 'Wikipédia:Bevezetés',
 	'hywiki' => 'Օգնություն:Գլխացանկ',
 	'idwiki' => 'Bantuan:Isi',
+	'nowiki' => 'Hjelp:Portal',
 	'kowiki' => '위키백과:도움말',
 	'plwiki' => 'Pomoc:Spis treści',
 	'ptwiki' => 'Wikipédia:Guia de criação de artigos',
