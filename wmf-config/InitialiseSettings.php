@@ -19891,6 +19891,7 @@ function wmfGetVariantSettings() {
 	'eswikinews' => true, // T230660
 	'ptwikinews' => true, // T268945
 	'frwikinews' => true, // T143480
+	'zhwikinews' => true, // T266933
 ],
 
 'wgRelatedArticlesCardLimit' => [
