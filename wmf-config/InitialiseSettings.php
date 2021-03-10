@@ -24894,6 +24894,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => true,
 	'hywiki' => true,
 	'idwiki' => true,
+	'jawiki' => true,
 	'kowiki' => true,
 	'nowiki' => true,
 	'plwiki' => true,
@@ -24915,6 +24916,7 @@ function wmfGetVariantSettings() {
 	'hiwiki' => false,
 	'hrwiki' => false,
 	'idwiki' => false,
+	'jawiki' => false,
 	'nowiki' => false,
 	'sqwiki' => false,
 ],
@@ -25014,6 +25016,7 @@ function wmfGetVariantSettings() {
 	'huwiki' => 'Wikipédia:Bevezetés',
 	'hywiki' => 'Օգնություն:Գլխացանկ',
 	'idwiki' => 'Bantuan:Isi',
+	'jawiki' => 'Help:目次',
 	'nowiki' => 'Hjelp:Portal',
 	'kowiki' => '위키백과:도움말',
 	'plwiki' => 'Pomoc:Spis treści',
@@ -25921,6 +25924,10 @@ function wmfGetVariantSettings() {
 	'idwiki' => [
 		'create' => 'Wikipedia:Memulai_halaman_baru',
 		'image' => 'Bantuan:Pengantar_gambar_dengan_VisualEditor/1',
+	],
+	'jawiki' => [
+		'create' => 'Wikipedia:独立記事作成の目安',
+		'image' => 'Help:VisualEditor/User_guide/ja#Images',
 	],
 	'nowiki' => [
 		'create' => 'Wikipedia:Artikkelveiviser',
