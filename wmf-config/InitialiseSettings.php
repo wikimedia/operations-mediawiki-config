@@ -25461,6 +25461,33 @@ function wmfGetVariantSettings() {
 			'id' => 'wizzard',
 		],
 	],
+	'jawiki' => [
+		[
+			'title' => 'Wikipedia:スタイルマニュアル',
+			'text' => 'スタイルマニュアル',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/ja',
+			'text' => 'ページを編集する方法',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/ja#Images',
+			'text' => '画像の挿入方法',
+			'id' => 'images',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/ja#Editing_references',
+			'text' => '参照を挿入する方法',
+			'id' => 'references',
+		],
+		[
+			'title' => 'Wikipedia:独立記事作成の目安',
+			'text' => '独立記事作成の目安',
+			'id' => 'articlewizard',
+		],
+	],
 	'kowiki' => [
 		[
 			'title' => '위키백과:위키문법_요약',
