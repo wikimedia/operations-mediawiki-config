@@ -17,8 +17,7 @@ if ( $wmfRealm == 'labs' ) { # safe guard
 
 		'sectionLoads' => [
 			'DEFAULT' => [
-				'deployment-db06' => 0,
-				'deployment-db07' => 400,
+				'deployment-db07' => 0,
 				'deployment-db08' => 400,
 			],
 		],
@@ -34,27 +33,23 @@ if ( $wmfRealm == 'labs' ) { # safe guard
 		],
 
 		'hostsByName' => [
-			'deployment-db06' => '172.16.4.147:3306', # deployment-db06.eqiad.wmflabs, master
-			'deployment-db07' => '172.16.3.206:3306', # deployment-db07.deployment-prep.eqiad1.wikimedia.cloud
+			'deployment-db07' => '172.16.3.206:3306', # deployment-db07.deployment-prep.eqiad1.wikimedia.cloud, master
 			'deployment-db08' => '172.16.6.39:3306',  # deployment-db08.deployment-prep.eqiad1.wikimedia.cloud
 		],
 
 		'externalLoads' => [
 			'cluster1' => [
-				'172.16.4.147:3306' => 1 , # deployment-db06.eqiad.wmflabs, master
-				'172.16.3.206:3306' => 3 , # deployment-db07.deployment-prep.eqiad1.wikimedia.cloud
+				'172.16.3.206:3306' => 1 , # deployment-db07.deployment-prep.eqiad1.wikimedia.cloud, master
 				'172.16.6.39:3306'  => 3 , # deployment-db08.deployment-prep.eqiad1.wikimedia.cloud
 			],
 
 			'flow_cluster1' => [
-				'172.16.4.147:3306' => 1 , # deployment-db06.eqiad.wmflabs, master
-				'172.16.3.206:3306' => 3 , # deployment-db07.deployment-prep.eqiad1.wikimedia.cloud
+				'172.16.3.206:3306' => 1 , # deployment-db07.deployment-prep.eqiad1.wikimedia.cloud, master
 				'172.16.6.39:3306'  => 3 , # deployment-db08.deployment-prep.eqiad1.wikimedia.cloud
 			],
 
 			'extension1' => [
-				'172.16.4.147:3306' => 1 , # deployment-db06.eqiad.wmflabs, master
-				'172.16.3.206:3306' => 3 , # deployment-db07.deployment-prep.eqiad1.wikimedia.cloud
+				'172.16.3.206:3306' => 1 , # deployment-db07.deployment-prep.eqiad1.wikimedia.cloud, master
 				'172.16.6.39:3306'  => 3 , # deployment-db08.deployment-prep.eqiad1.wikimedia.cloud
 			],
 		],
