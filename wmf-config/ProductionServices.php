@@ -43,7 +43,9 @@ $common = [
 
 	// IRC (broadcast RCFeed for irc.wikimedia.org)
 	// Not active-active.
-	'irc' => '208.80.153.44', # kraz.codfw.wmnet
+	'irc' => [
+		'208.80.153.44', # kraz.codfw.wmnet
+	],
 
 	// Automatic dc-local discovery
 	'parsoid' => 'http://localhost:6002/w/rest.php',
