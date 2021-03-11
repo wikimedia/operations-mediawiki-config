@@ -24907,6 +24907,10 @@ function wmfGetVariantSettings() {
 	'viwiki' => true,
 ],
 
+'wgGEDatabaseCluster' => [
+	'default' => 'extension1',
+],
+
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
 	'eowiki' => false,
@@ -25863,6 +25867,11 @@ function wmfGetVariantSettings() {
 
 'wgGELinkRecommendationsUseEventGate' => [
 	'default' => true,
+],
+
+'wgGELinkRecommendationServiceWikiIdMasquerade' => [
+	'default' => null,
+	'testwiki' => 'simplewiki',
 ],
 
 'wgGENewcomerTasksConfigTitle' => [

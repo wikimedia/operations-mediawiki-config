@@ -4038,6 +4038,8 @@ if ( $wmgUseGrowthExperiments ) {
 		// Disable all other Growth features
 		$wgGEHomepageNewAccountEnablePercentage = 0;
 	}
+
+	$wgGELinkRecommendationServiceUrl = $wmfLocalServices['linkrecommendation'];
 }
 
 if ( PHP_SAPI === 'cli' ) {
