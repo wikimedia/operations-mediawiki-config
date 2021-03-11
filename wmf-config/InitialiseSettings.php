@@ -25859,10 +25859,17 @@ function wmfGetVariantSettings() {
 
 'wgGENewcomerTasksLinkRecommendationsEnabled' => [
 	'default' => false,
+	'testwiki' => true,
 ],
 
 'wgGELinkRecommendationsFrontendEnabled' => [
 	'default' => false,
+	'testwiki' => true,
+],
+
+'wgGEDeveloperSetup' => [
+	'default' => false,
+	'testwiki' => true,
 ],
 
 'wgGELinkRecommendationsUseEventGate' => [
