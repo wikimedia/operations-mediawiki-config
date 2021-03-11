@@ -970,9 +970,13 @@ putenv( "GDFONTPATH=/srv/mediawiki/fonts" );
 
 // TODO: This should be handled by LocalServices, not here.
 $wgCopyUploadProxy = ( $wmfRealm !== 'labs' ) ? $wmfLocalServices['urldownloader'] : false;
-$wmgRC2UDPAddress = $wmfLocalServices['irc'];
 $wgUploadThumbnailRenderHttpCustomHost = $wmfHostnames['upload'];
 $wgUploadThumbnailRenderHttpCustomDomain = $wmfLocalServices['upload'];
+
+// Back-compat
+if ( is_string( $wmfLocalServices['irc'] ) ) {
+	$wmfLocalServices['irc'] = [ $wmfLocalServices['irc'] ];
+}
 
 if ( $wmgUseWikiHiero ) {
 	wfLoadExtension( 'wikihiero' );
@@ -1682,10 +1686,12 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthCookiesP3P = "CP=\"See $wgCanonicalServer/wiki/Special:CentralAutoLogin/P3P for more info.\"";
 
 	if ( $wmfRealm == 'production' ) {
-		$wgCentralAuthRC[] = [
-			'formatter' => 'IRCColourfulCARCFeedFormatter',
-			'uri' => "udp://$wmgRC2UDPAddress:$wmgRC2UDPPort/#central\t",
-		];
+		foreach ( $wmfLocalServices['irc'] as $address ) {
+			$wgCentralAuthRC[] = [
+				'formatter' => 'IRCColourfulCARCFeedFormatter',
+				'uri' => "udp://$address:$wmgRC2UDPPort/#central\t",
+			];
+		}
 	}
 
 	switch ( $wmfRealm ) {
@@ -3898,12 +3904,14 @@ if ( $wmgUseRC2UDP ) {
 		}
 	}
 
-	$wgRCFeeds['default'] = [
-		'formatter' => 'IRCColourfulRCFeedFormatter',
-		'uri' => "udp://$wmgRC2UDPAddress:$wmgRC2UDPPort/$wmgRC2UDPPrefix",
-		'add_interwiki_prefix' => false,
-		'omit_bots' => false,
-	];
+	foreach ( $wmfLocalServices['irc'] as $i => $address ) {
+		$wgRCFeeds["irc$i"] = [
+			'formatter' => 'IRCColourfulRCFeedFormatter',
+			'uri' => "udp://$address:$wmgRC2UDPPort/$wmgRC2UDPPrefix",
+			'add_interwiki_prefix' => false,
+			'omit_bots' => false,
+		];
+	}
 }
 
 // Confirmed can do anything autoconfirmed can.
