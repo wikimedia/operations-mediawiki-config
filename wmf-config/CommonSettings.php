@@ -973,11 +973,6 @@ $wgCopyUploadProxy = ( $wmfRealm !== 'labs' ) ? $wmfLocalServices['urldownloader
 $wgUploadThumbnailRenderHttpCustomHost = $wmfHostnames['upload'];
 $wgUploadThumbnailRenderHttpCustomDomain = $wmfLocalServices['upload'];
 
-// Back-compat
-if ( is_string( $wmfLocalServices['irc'] ) ) {
-	$wmfLocalServices['irc'] = [ $wmfLocalServices['irc'] ];
-}
-
 if ( $wmgUseWikiHiero ) {
 	wfLoadExtension( 'wikihiero' );
 }
