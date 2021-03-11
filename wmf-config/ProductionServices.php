@@ -57,6 +57,7 @@ $common = [
 	'sessionstore' => 'http://localhost:6006',
 	'echostore' => 'http://localhost:6007',
 	'push-notifications' => 'http://localhost:6012',
+	'linkrecommendation' => 'https://linkrecommendation.discovery.wmnet:4005',
 
 	// cloudelastic only exists in eqiad. No load balancer is available due to
 	// the part of the network that they live in so each host is enumerated
