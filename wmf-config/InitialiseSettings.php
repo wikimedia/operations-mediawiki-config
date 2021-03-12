@@ -26812,10 +26812,6 @@ function wmfGetVariantSettings() {
 	'enwiktionary' => [ 1821 ],
 ],
 
-'wgEnableRestAPI' => [
-	'default' => true,
-],
-
 'wgRestAPIAdditionalRouteFiles' => [
 	'default' => [],
 	'testwiki' => [ 'includes/Rest/coreDevelopmentRoutes.json' ],
