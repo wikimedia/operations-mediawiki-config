@@ -12114,6 +12114,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [
 			'rollbacker',
 			'flood', // T54546
+			'transwiki', // T273405
 		],
 	],
 	'+zhwikiquote' => [
@@ -12981,6 +12982,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [
 			'rollbacker',
 			'flood', // T54546
+			'transwiki', // T273405
 		],
 	],
 	'+zhwikiquote' => [
