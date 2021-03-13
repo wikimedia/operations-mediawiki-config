@@ -9319,7 +9319,8 @@ function wmfGetVariantSettings() {
 			'protect' => true,
 			'undelete' => true,
 			'extendedconfirmed' => true,
-		], // T71411
+			'deleterevision' => true,
+		], // T71411 and T277358
 		'templateeditor' => [
 			'editprotected' => true,
 			'tboverride' => true,
