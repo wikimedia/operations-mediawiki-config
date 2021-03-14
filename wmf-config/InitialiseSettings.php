@@ -8314,6 +8314,7 @@ function wmfGetVariantSettings() {
 	'+svwikivoyage' => [ 6 => 1, 14 => 1, 100 => 1, 104 => 1, 106 => 1 ],
 	'+strategywiki' => [ 106 => 1, 107 => 1 ], // T22514
 	'+tewikisource' => [ 102 => 1, 106 => 1 ],
+	'+thwikisource' => [ 100 => 1, 102 => 1, 114 => 1, 252 => 1 ], // T275280
 	'+tlwikibooks' => [ 100 => 1 ],
 	'+trwikisource' => [ 100 => 1 ],
 	'+ukwikinews' => [ 14 => 1 ], // T51335
