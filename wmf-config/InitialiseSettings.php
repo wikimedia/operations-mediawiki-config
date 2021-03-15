@@ -554,6 +554,7 @@ function wmfGetVariantSettings() {
 	'thwiktionary' => 'Asia/Bangkok',
 	'thwikiquote' => 'Asia/Bangkok',
 	'trwikimedia' => 'Europe/Istanbul',
+	'trvwiki' => 'Asia/Taipei',
 	'tyvwiki' => 'Asia/Krasnoyarsk',
 	'ukwikivoyage' => 'Europe/Kiev',
 	'vecwiki' => 'Europe/Berlin',
@@ -2109,6 +2110,7 @@ function wmfGetVariantSettings() {
 	'trwikisource' => 'Vikikaynak', // T44721
 	'trwikivoyage' => 'Vikigezgin', // T272779
 	'trwiktionary' => 'Vikisözlük',
+	'trvwiki' => 'Wikipidiya',
 	'tyvwiki' => 'Википедия', // T51328
 	'uawikimedia' => 'Вікімедіа Україна',
 	'udmwiki' => 'Википедия', // T49820
@@ -2649,6 +2651,7 @@ function wmfGetVariantSettings() {
 	'trwikisource' => 'Vikikaynak', // T44721
 	'trwikivoyage' => 'Vikigezgin',
 	'trwiktionary' => 'Vikisözlük',
+	'trvwiki' => 'Wikipidiya',
 	'ttwiki' => 'Википедия',
 	'ttwiktionary' => 'Викисүзлек', // T211312
 	'tyvwiki' => 'Википедия', // T51328
