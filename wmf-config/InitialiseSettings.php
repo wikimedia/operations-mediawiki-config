@@ -19098,7 +19098,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgDiscussionToolsEnable' => [
-	'default' => false,
+	'default' => true, // T276498
 	'wikipedia' => true, // T266303
 	'enwiki' => true, // T273146
 	'dewiki' => false,
