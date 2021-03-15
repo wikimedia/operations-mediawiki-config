@@ -19112,6 +19112,7 @@ function wmfGetVariantSettings() {
 	'mediawikiwiki' => true, // T251208
 	'metawiki' => true, // T264693
 	'apiportalwiki' => true, // T260624
+	'officewiki' => true, // T277103
 ],
 
 'wgDiscussionToolsBeta' => [
@@ -19130,6 +19131,7 @@ function wmfGetVariantSettings() {
 	'apiportalwiki' => 'available', // T260624
 	'gomwiktionary' => 'available', // T258554
 	'enwikibooks' => 'available', // T276851
+	'officewiki' => 'available', // T277103
 ],
 
 'wgDiscussionTools_newtopictool' => [
