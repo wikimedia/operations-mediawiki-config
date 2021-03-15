@@ -24553,6 +24553,9 @@ function wmfGetVariantSettings() {
 'wgGlobalWatchlistWikibaseSite' => [
 	'default' => 'www.wikidata.org',
 ],
+'wgGlobalWatchlistSiteLimit' => [
+	'default' => 50, // T276195
+],
 
 'wmgWatchlistDefault' => [
 	'default' => false,
