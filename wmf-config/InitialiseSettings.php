@@ -19100,7 +19100,7 @@ function wmfGetVariantSettings() {
 'wgDiscussionToolsEnable' => [
 	'default' => false,
 	'wikipedia' => true, // T266303
-	'enwiki' => false,
+	'enwiki' => true, // T273146
 	'dewiki' => false,
 	'ruwiki' => false,
 	'enwikibooks' => true, // T276851
