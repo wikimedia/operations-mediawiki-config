@@ -290,6 +290,7 @@ return [
 	'szlwiki' => '/static/images/project-logos/szlwiki.png',
 	'szywiki' => '/static/images/project-logos/szywiki.png',
 	'tawiki' => '/static/images/project-logos/tawiki.png', // T29826
+	'taywiki' => '/static/images/project-logos/taywiki.png',
 	'tcywiki' => '/static/images/project-logos/tcywiki.png', // T140898
 	'tetwiki' => '/static/images/project-logos/tetwiki.png', // T48589
 	'tewiki' => '/static/images/project-logos/tewiki.png',
@@ -1077,6 +1078,7 @@ return [
 	'szlwiki' => '/static/images/project-logos/szlwiki-1.5x.png', // T150618
 	'szywiki' => '/static/images/project-logos/szywiki-1.5x.png',
 	'tawiki' => '/static/images/project-logos/tawiki-1.5x.png',
+	'taywiki' => '/static/images/project-logos/taywiki-1.5x.png',
 	'tcywiki' => '/static/images/project-logos/tcywiki-1.5x.png', // T140898
 	'tetwiki' => '/static/images/project-logos/tetwiki-1.5x.png', // T150618
 	'tewiki' => '/static/images/project-logos/tewiki-1.5x.png', // T150618
@@ -1641,6 +1643,7 @@ return [
 	'szlwiki' => '/static/images/project-logos/szlwiki-2x.png', // T150618
 	'szywiki' => '/static/images/project-logos/szywiki-2x.png',
 	'tawiki' => '/static/images/project-logos/tawiki-2x.png',
+	'taywiki' => '/static/images/project-logos/taywiki-2x.png',
 	'tcywiki' => '/static/images/project-logos/tcywiki-2x.png', // T140898
 	'tetwiki' => '/static/images/project-logos/tetwiki-2x.png', // T150618
 	'tewiki' => '/static/images/project-logos/tewiki-2x.png', // T150618

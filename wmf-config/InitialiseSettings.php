@@ -56,6 +56,7 @@ function wmfGetVariantSettings() {
 	'default' => true,
 	'jbowiki' => false,
 	'szywiki' => false, // T237369
+	'taywiki' => false, // T275803
 	'wiktionary' => false,
 ],
 
@@ -545,6 +546,7 @@ function wmfGetVariantSettings() {
 	'sysop_itwiki' => 'Europe/Rome', // T256545
 	'szlwiki' => 'Europe/Warsaw',
 	'szywiki' => 'Asia/Taipei',
+	'taywiki' => 'Asia/Taipei',
 	'tcywiki' => 'Asia/Kolkata', // T140898
 	'thwiki' => 'Asia/Bangkok',
 	'thwikibooks' => 'Asia/Bangkok',
@@ -2080,6 +2082,7 @@ function wmfGetVariantSettings() {
 	'tawiktionary' => 'விக்சனரி',
 	'tawikiquote' => 'விக்கிமேற்கோள்',
 	'tawikisource' => 'விக்கிமூலம்',
+	'taywiki' => 'Wikipidia',
 	'tcywiki' => 'ವಿಕಿಪೀಡಿಯ', // T140898
 	'techconductwiki' => 'CoC committee', // T165977
 	'tewiki' => 'వికీపీడియా',
@@ -2621,6 +2624,7 @@ function wmfGetVariantSettings() {
 	'tawikisource' => 'விக்கிமூலம்',
 	'tawiktionary' => 'விக்சனரி',
 	'tawikiquote' => 'விக்கிமேற்கோள்',
+	'taywiki' => 'Wikibitia',
 	'tcywiki' => 'ವಿಕಿಪೀಡಿಯ', // T140898
 	'tewiki' => 'వికీపీడియా',
 	'tewikiquote' => 'వికీవ్యాఖ్య', // T89332
