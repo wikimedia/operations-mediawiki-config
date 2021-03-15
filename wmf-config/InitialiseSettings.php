@@ -19627,6 +19627,21 @@ function wmfGetVariantSettings() {
 		'mskf-the-solution' => true,
 		'Wikidocumentaries' => true,
 	],
+	'fiwiki' => [
+		'article-recommender-1' => true,
+		'cx2outreach' => true,
+		'cxstats' => true,
+		'newarticle' => false, // T277473
+		'specialcx' => true,
+		'staff-recommender' => true,
+		'external-machine-translation' => [
+			'edittag' => 'campaign-external-machine-translation',
+		],
+		'wiki-for-human-rights' => true,
+		'WikiGapFinder' => true,
+		'mskf-the-solution' => true,
+		'Wikidocumentaries' => true,
+	],
 	'frwiki' => [
 		'article-recommender-1' => true,
 		'cx2outreach' => true,
