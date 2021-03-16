@@ -211,8 +211,6 @@ $wgExtensionFunctions[] = function () {
 	$wgGroupPermissions['sysop']['stablesettings'] = false; // -aaron 3/20/10
 
 	$allowSysopsAssignEditor = true;
-	$allowSysopsAssignAutoreview = true;
-	$allowBureaucratsAssignReviewer = true;
 
 	///////////////////////////////////////
 	// Wiki-specific configurations
@@ -662,7 +660,7 @@ $wgExtensionFunctions[] = function () {
 	# All wikis...
 
 	# Rights for Bureaucrats (b/c)
-	if ( isset( $wgGroupPermissions['reviewer'] ) && $allowBureaucratsAssignReviewer ) {
+	if ( isset( $wgGroupPermissions['reviewer'] ) ) {
 		if ( !in_array( 'reviewer', $wgAddGroups['bureaucrat'] ) ) {
 			$wgAddGroups['bureaucrat'][] = 'reviewer'; // promote to full reviewers
 		}
@@ -681,7 +679,7 @@ $wgExtensionFunctions[] = function () {
 		}
 	}
 
-	if ( isset( $wgGroupPermissions['autoreview'] ) && $allowSysopsAssignAutoreview ) {
+	if ( isset( $wgGroupPermissions['autoreview'] ) ) {
 		if ( !in_array( 'autoreview', $wgAddGroups['sysop'] ) ) {
 			$wgAddGroups['sysop'][] = 'autoreview'; // promote to basic auto-reviewer (semi-trusted users)
 		}
