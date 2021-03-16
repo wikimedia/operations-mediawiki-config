@@ -43,5 +43,3 @@ wmfSetupProfiler( [
 		'pdo.table' => 'xhgui',
 	],
 ] );
-
-require __DIR__ . '/set-time-limit.php';

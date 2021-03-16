@@ -368,6 +368,38 @@ $wgOldRevisionParserCacheExpireTime = 3600;
 // MW appserver load.
 $wgULSLanguageDetection = false;
 
+/**
+ * Configure PHP request timeouts. These should be slightly less than the Apache
+ * timeouts, so that the slightly more informative PHP error message is
+ * delivered to the user, and so that we can verify that PHP timeouts actually
+ * exist (T97192).
+ */
+if ( PHP_SAPI === 'cli' ) {
+	// Should always be unlimited, this is probably redundant
+	$wgRequestTimeLimit = 0;
+} else {
+	switch ( $_SERVER['HTTP_HOST'] ?? '' ) {
+		case 'videoscaler.svc.eqiad.wmnet':
+		case 'videoscaler.svc.codfw.wmnet':
+		case 'videoscaler.discovery.wmnet':
+			$wgRequestTimeLimit = 86400;
+			break;
+
+		case 'jobrunner.svc.eqiad.wmnet':
+		case 'jobrunner.svc.codfw.wmnet':
+		case 'jobrunner.discovery.wmnet':
+			$wgRequestTimeLimit = 1200;
+			break;
+
+		default:
+			if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
+				$wgRequestTimeLimit = 200;
+			} else {
+				$wgRequestTimeLimit = 60;
+			}
+	}
+}
+
 # ######################################################################
 # Account- and notifications-related settings
 # ######################################################################
@@ -1590,9 +1622,9 @@ if ( is_array( $wmgExtraImplicitGroups ) ) {
 if ( $wmfRealm == 'labs' ) {
 	$wgHTTPTimeout = 10;
 }
-if ( !empty( $wmgTimeLimit ) ) {
+if ( $wgRequestTimeLimit ) {
 	// Set the maximum HTTP client timeout equal to the current request timeout (T245170)
-	$wgHTTPMaxTimeout = $wgHTTPMaxConnectTimeout = $wmgTimeLimit;
+	$wgHTTPMaxTimeout = $wgHTTPMaxConnectTimeout = $wgRequestTimeLimit;
 }
 
 // TODO: This is a no-op with $wgForceHTTPS enabled
