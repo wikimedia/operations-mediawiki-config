@@ -205,6 +205,7 @@ return [
 	'mnwiki' => '/static/images/project-logos/mnwiki.png', // T48589
 	'mniwiki' => '/static/images/project-logos/mniwiki.png',
 	'mnwwiki' => '/static/images/project-logos/mnwwiki.png',
+	'mnwwiktionary' => '/static/images/project-logos/mnwwiktionary.png',
 	'mrjwiki' => '/static/images/project-logos/mrjwiki.png',
 	'mrwiki' => '/static/images/project-logos/mrwiki.png',
 	'mswiki' => '/static/images/project-logos/mswiki.png',
@@ -994,6 +995,7 @@ return [
 	'mnwiki' => '/static/images/project-logos/mnwiki-1.5x.png', // T150618
 	'mniwiki' => '/static/images/project-logos/mniwiki-1.5x.png',
 	'mnwwiki' => '/static/images/project-logos/mnwwiki-1.5x.png',
+	'mnwwiktionary' => '/static/images/project-logos/mnwwiktionary-1.5x.png',
 	'mrjwiki' => '/static/images/project-logos/mrjwiki-1.5x.png', // T150618
 	'mrwiki' => '/static/images/project-logos/mrwiki-1.5x.png', // T150618
 	'mswiki' => '/static/images/project-logos/mswiki-1.5x.png',
@@ -1559,6 +1561,7 @@ return [
 	'mnwiki' => '/static/images/project-logos/mnwiki-2x.png', // T150618
 	'mniwiki' => '/static/images/project-logos/mniwiki-2x.png',
 	'mnwwiki' => '/static/images/project-logos/mnwwiki-2x.png',
+	'mnwwiktionary' => '/static/images/project-logos/mnwwiktionary-2x.png',
 	'mrjwiki' => '/static/images/project-logos/mrjwiki-2x.png', // T150618
 	'mrwiki' => '/static/images/project-logos/mrwiki-2x.png', // T150618
 	'mswiki' => '/static/images/project-logos/mswiki-2x.png',

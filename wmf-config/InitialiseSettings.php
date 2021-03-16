@@ -448,6 +448,7 @@ function wmfGetVariantSettings() {
 	'mniwiki' => 'Asia/Kolkata',
 	'mniwiktionary' => 'Asia/Kolkata',
 	'mnwwiki' => 'Asia/Yangon',
+	'mnwwiktionary' => 'Asia/Yangon',
 	'mrjwiki' => 'Europe/Moscow',
 	'mrwiki' => 'Asia/Kolkata',
 	'mrwikisource' => 'Asia/Kolkata',
@@ -1955,6 +1956,7 @@ function wmfGetVariantSettings() {
 	'mniwiki' => 'ꯋꯤꯀꯤꯄꯦꯗꯤꯌꯥ',
 	'mniwiktionary' => 'ꯋꯤꯛꯁꯟꯅꯔꯤ',
 	'mnwwiki' => 'ဝဳကဳပဳဒဳယာ',
+	'mnwwiktionary' => 'ဝိက်ရှေန်နရဳ',
 	'movementroleswiki' => 'Movement Roles',
 	'mnwiki' => 'Википедиа',
 	'mrjwiki' => 'Википеди',
@@ -2501,6 +2503,7 @@ function wmfGetVariantSettings() {
 	'mniwiki' => 'ꯋꯤꯀꯤꯄꯦꯗꯤꯌꯥ',
 	'mniwiktionary' => 'ꯋꯤꯛꯁꯟꯅꯔꯤ',
 	'mnwwiki' => 'ဝဳကဳပဳဒဳယာ',
+	'mnwwiktionary' => 'ဝိက်ရှေန်နရဳ',
 	'movementroleswiki' => 'Wikipedia', // This was set up incorrectly.
 	'mrjwiki' => 'Википеди',
 	'mrwiki' => 'विकिपीडिया',
