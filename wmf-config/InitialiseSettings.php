@@ -20466,12 +20466,7 @@ function wmfGetVariantSettings() {
 // https://phabricator.wikimedia.org/T238230
 'wgEventLoggingSchemas' => [
 	'default' => [
-		'DesktopWebUIActionsTracking' => '/analytics/legacy/desktopwebuiactionstracking/1.0.0',
-		'MobileWebUIActionsTracking' => '/analytics/legacy/mobilewebuiactionstracking/1.0.0',
-		'PrefUpdate' => '/analytics/legacy/prefupdate/1.0.0',
-		'SuggestedTagsAction' => '/analytics/legacy/suggestedtagsaction/1.0.0',
-		'EditAttemptStep' => '/analytics/legacy/editattemptstep/1.0.0',
-		'VisualEditorFeatureUse' => '/analytics/legacy/visualeditorfeatureuse/1.0.0',
+		// Only in progress schema migrations go here, once migration finished, they are removed.
 	],
 ],
 
