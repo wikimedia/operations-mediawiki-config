@@ -6056,6 +6056,10 @@ function wmfGetVariantSettings() {
 		100 => 'दबू',
 		101 => 'दबू_खँलाबँला',
 	],
+	'niawiki' => [ // T277671
+		100 => 'Portal',
+		101 => 'Huhuo_portal',
+	],
 	'nlwiki' => [
 		100 => 'Portaal',
 		101 => 'Overleg_portaal'
