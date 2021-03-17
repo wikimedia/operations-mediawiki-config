@@ -24993,7 +24993,6 @@ function wmfGetVariantSettings() {
 	'eowiki' => false,
 	'hiwiki' => false,
 	'hrwiki' => false,
-	'idwiki' => false,
 	'jawiki' => false,
 	'nowiki' => false,
 	'sqwiki' => false,
