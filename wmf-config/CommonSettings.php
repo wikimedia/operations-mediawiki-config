@@ -3906,14 +3906,15 @@ if ( $wmgUseRC2UDP ) {
 }
 
 // Confirmed can do anything autoconfirmed can.
-// T213003: this should happen after all the extensions had been loaded, but
-// before their extension functions in case they're relying on permissions.
-array_unshift( $wgExtensionFunctions, function () {
+// T277704, T275334: Extension function would be a more nature place to put this code to,
+// but doing so is not reliable as of 2021-03-18. If you are here to put this into an extension
+// function, see also T213003.
+$wgHooks['MediaWikiServices'][] = function () {
 	global $wgGroupPermissions;
 
 	$wgGroupPermissions['confirmed'] = $wgGroupPermissions['autoconfirmed'];
 	$wgGroupPermissions['confirmed']['skipcaptcha'] = true;
-} );
+};
 
 $wgDefaultUserOptions['watchlistdays'] = $wmgWatchlistNumberOfDaysShow;
 
