@@ -1676,13 +1676,11 @@ if ( $wmgUseCentralAuth ) {
 	// See https://phabricator.wikimedia.org/T189966#5436482
 	$wgCentralAuthCookiesP3P = "CP=\"See $wgCanonicalServer/wiki/Special:CentralAutoLogin/P3P for more info.\"";
 
-	if ( $wmfRealm == 'production' ) {
-		foreach ( $wmfLocalServices['irc'] as $address ) {
-			$wgCentralAuthRC[] = [
-				'formatter' => 'IRCColourfulCARCFeedFormatter',
-				'uri' => "udp://$address:$wmgRC2UDPPort/#central\t",
-			];
-		}
+	foreach ( $wmfLocalServices['irc'] as $address ) {
+		$wgCentralAuthRC[] = [
+			'formatter' => 'IRCColourfulCARCFeedFormatter',
+			'uri' => "udp://$address:$wmgRC2UDPPort/#central\t",
+		];
 	}
 
 	switch ( $wmfRealm ) {
