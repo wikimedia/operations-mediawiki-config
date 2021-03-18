@@ -586,7 +586,7 @@ function wmfGetVariantSettings() {
 
 'wmgSiteLogoIcon' => [
 	// Projects
-	'default' => '/static/images/mobile/copyright/wikimedia.svg',
+	'default' => null, // See T244486
 	'wikibooks' => '/static/images/mobile/copyright/wikibooks.svg',
 	'wikidata' => '/static/images/mobile/copyright/wikidata.svg',
 	'wikinews' => '/static/images/mobile/copyright/wikinews.svg',
@@ -601,6 +601,7 @@ function wmfGetVariantSettings() {
 	'commonswiki' => '/static/images/mobile/copyright/commons.svg',
 	'incubatorwiki' => '/static/images/mobile/copyright/incubator.svg',
 	'mediawikiwiki' => '/static/images/mobile/copyright/mediawiki.svg',
+	'officewiki' => '/static/images/mobile/copyright/wikimedia.svg',
 	'specieswiki' => '/static/images/mobile/copyright/wikispecies.svg',
 ],
 
