@@ -26998,6 +26998,8 @@ function wmfGetVariantSettings() {
 	'cawiki' => true, // T270238
 	'dewiki' => true, // T270238
 	'trwiki' => true, // T270238
+	'group0' => true, // T273591
+	'wikitech' => true, // T273591
 ],
 
 ];
