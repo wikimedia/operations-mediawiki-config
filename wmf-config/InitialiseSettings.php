@@ -24979,6 +24979,7 @@ function wmfGetVariantSettings() {
 	'sqwiki' => true,
 	'srwiki' => true,
 	'svwiki' => true,
+	'tewiki' => true,
 	'thwiki' => true,
 	'trwiki' => true,
 	'ukwiki' => true,
@@ -24998,6 +24999,7 @@ function wmfGetVariantSettings() {
 	'nowiki' => false,
 	'simplewiki' => false,
 	'sqwiki' => false,
+	'tewiki' => false,
 ],
 
 'wgWelcomeSurveyEnabled' => [
@@ -25107,6 +25109,7 @@ function wmfGetVariantSettings() {
 	'srwiki' => 'Википедија:Помоћ',
 	'svwiki' => 'Wikipedia:Hjälp',
 	'thwiki' => 'วิธีใช้:สารบัญ',
+	'tewiki' => 'సహాయం:సూచిక',
 	'trwiki' => 'Yardım:İçindekiler',
 	'ukwiki' => 'Вікіпедія:Довідка',
 	'viwiki' => 'Trợ_giúp:Mục_lục',
@@ -25828,6 +25831,33 @@ function wmfGetVariantSettings() {
 			'id' => 'citation',
 		]
 	],
+	'tewiki' => [
+		[
+			'title' => 'వికీపీడియా:శైలి',
+			'text' => 'మంచి వ్యాసం రాయడం ఎలా',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'వికీపీడియా:దిద్దుబాట్లు ఎలా చెయ్యాలి',
+			'text' => 'దిద్దుబాట్లు చెయ్యడం ఎలా',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'సహాయం:విజువల్ ఎడిటరుతో బొమ్మల పరిచయం/1',
+			'text' => 'బొమ్మలను చేర్చడం ఎలా',
+			'id' => 'images',
+		],
+		[
+			'title' => 'సహాయం:విజువల్ ఎడిటరుతో మూలాలివ్వడం గురించి పరిచయం/1',
+			'text' => 'మూలాలను చేర్చడం ఎలా',
+			'id' => 'references',
+		],
+		[
+			'title' => 'వికీపీడియా:వ్యాససృష్టికి మార్గసూచీ',
+			'text' => 'వ్యాసాన్ని సృష్టించడం ఎలా',
+			'id' => 'articlewizard',
+		],
+	],
 	'thwiki' => [
 		[
 			'title' => 'วิกิพีเดีย:คู่มือการเขียน',
@@ -26111,6 +26141,10 @@ function wmfGetVariantSettings() {
 		'create' => 'Wikipedia:Att skapa en ny artikel',
 		'image' => 'Wikipedia:Introduktion till illustrationer',
 	],
+	'tewiki' => [
+		'create' => 'వికీపీడియా:వ్యాససృష్టికి మార్గసూచీ',
+		'image' => 'సహాయం:విజువల్ ఎడిటరుతో బొమ్మల పరిచయం/1',
+	],
 	'trwiki' => [
 		'create' => 'Vikipedi:İlk maddeniz',
 		'image' => 'Yardım:Resim ekleme',
@@ -26191,6 +26225,7 @@ function wmfGetVariantSettings() {
 	'rowiki' => 'Wikipedia:Listă mentori',
 	'srwiki' => 'Википедија:Трг/Помоћ/Ментори',
 	'svwiki' => 'Wikipedia:Faddrar/Lista',
+	'tewiki' => 'వికీపీడియా:వికీప్రాజెక్టు/గ్రోత్ ప్రాజెక్టు/గురువుల జాబితా',
 	'trwiki' => 'Vikipedi:Eğitmen listesi',
 	'ukwiki' => 'Вікіпедія:Кнайпа (допомога)/Наставники',
 	'viwiki' => 'Wikipedia:Dự án Phát triển cộng đồng/Danh sách thành viên cố vấn',
