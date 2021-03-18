@@ -193,7 +193,7 @@ $wgHooks['MediaWikiServices'][] = function () {
 	global $wgAddGroups, $wgDBname, $wgDefaultUserOptions,
 		$wgFlaggedRevsNamespaces, $wgFlaggedRevsRestrictionLevels,
 		$wgFlaggedRevsStatsAge, $wgFlaggedRevsTags, $wgFlaggedRevsTagsRestrictions,
-		$wgFlaggedRevsWhitelist, $wgGroupPermissions, $wgRemoveGroups;
+		$wgGroupPermissions, $wgRemoveGroups;
 
 	///////////////////////////////////////
 	// Common configuration
@@ -220,7 +220,6 @@ $wgHooks['MediaWikiServices'][] = function () {
 	if ( $wgDBname == 'alswiki' ) {
 		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 	} elseif ( $wgDBname == 'arwiki' ) {
-		$wgFlaggedRevsWhitelist = [ 'الصفحة_الرئيسية' ];
 		$wgFlaggedRevsNamespaces[] = 100; // T21332 and T217507
 
 		// Change default user options
@@ -455,7 +454,6 @@ $wgHooks['MediaWikiServices'][] = function () {
 			$wgGroupPermissions['reviewer']
 		);
 	} elseif ( $wgDBname == 'hewikisource' ) {
-		$wgFlaggedRevsWhitelist = [ 'עמוד_ראשי' ]; // T227000
 		$wgFlaggedRevsNamespaces[] = 100;
 		$wgFlaggedRevsNamespaces[] = 106;
 		$wgFlaggedRevsNamespaces[] = 108;
@@ -594,7 +592,6 @@ $wgHooks['MediaWikiServices'][] = function () {
 		$wgGroupPermissions['sysop']['review'] = false; // T275811
 	} elseif ( $wgDBname == 'ruwikinews' ) {
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_CATEGORY, NS_TEMPLATE ];
-		$wgFlaggedRevsWhitelist = [ 'Main_Page' ];
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
 		$wgGroupPermissions['sysop']['review'] = true;
 		unset( $wgGroupPermissions['reviewer'] );
