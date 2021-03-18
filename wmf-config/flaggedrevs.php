@@ -461,14 +461,10 @@ $wgExtensionFunctions[] = function () {
 		$wgFlaggedRevsNamespaces[] = 110;
 		$wgFlaggedRevsNamespaces[] = 112;
 		$wgFlaggedRevsTags = [
-			'completeness' => [ 'levels' => 4, 'quality' => 3, 'pristine' => 5 ],
 			'accuracy' => [ 'levels' => 4, 'quality' => 3, 'pristine' => 5 ],
-			'formatting' => [ 'levels' => 4, 'quality' => 3, 'pristine' => 5 ],
 		];
 		$wgFlaggedRevsTagsRestrictions = [
-			'completeness' => [ 'review' => 3, 'autoreview' => 3 ],
 			'accuracy'     => [ 'review' => 3, 'autoreview' => 3 ],
-			'formatting'   => [ 'review' => 3, 'autoreview' => 3 ],
 		];
 		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 	} elseif ( $wgDBname == 'hiwiki' ) {
