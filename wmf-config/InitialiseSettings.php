@@ -24975,6 +24975,7 @@ function wmfGetVariantSettings() {
 	'ptwiki' => true,
 	'ruwiki' => true,
 	'rowiki' => true,
+	'simplewiki' => true,
 	'sqwiki' => true,
 	'srwiki' => true,
 	'svwiki' => true,
@@ -24995,6 +24996,7 @@ function wmfGetVariantSettings() {
 	'hrwiki' => false,
 	'jawiki' => false,
 	'nowiki' => false,
+	'simplewiki' => false,
 	'sqwiki' => false,
 ],
 
@@ -25100,6 +25102,7 @@ function wmfGetVariantSettings() {
 	'ptwiki' => 'Wikipédia:Guia de criação de artigos',
 	'ruwiki' => 'Википедия:Справка',
 	'rowiki' => 'Ajutor:Cuprins',
+	'simplewiki' => 'Help:Contents',
 	'sqwiki' => 'Ndihmë:Përmbajtja',
 	'srwiki' => 'Википедија:Помоћ',
 	'svwiki' => 'Wikipedia:Hjälp',
@@ -25727,6 +25730,33 @@ function wmfGetVariantSettings() {
 			'id' => 'articlewizzard',
 		],
 	],
+	'simplewiki' => [
+		[
+			'title' => 'Wikipedia:Manual_of_Style',
+			'text' => 'How to write a good article',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide',
+			'text' => 'How to edit a page',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide#Images',
+			'text' => 'How to insert images',
+			'id' => 'images',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide#Editing_references',
+			'text' => 'How to insert references',
+			'id' => 'references',
+		],
+		[
+			'title' => 'Wikipedia:Article_wizard',
+			'text' => 'How to create an article',
+			'id' => 'articlewizard',
+		],
+	],
 	'sqwiki' => [
 		[
 			'title' => 'Ndihmë:Redaktimi i faqeve',
@@ -26068,6 +26098,10 @@ function wmfGetVariantSettings() {
 	'rowiki' => [
 		'create' => 'Ajutor:Cum scriu un articol',
 		'image' => 'mw:Help:VisualEditor/User_guide/ro#Modificarea_imaginilor_și_a_altor_fișiere_media',
+	],
+	'simplewiki' => [
+		'create' => 'Wikipedia:Article_wizard',
+		'image' => 'Help:VisualEditor/User_guide#Images',
 	],
 	'srwiki' => [
 		'create' => 'Википедија:Креирање чланака',
