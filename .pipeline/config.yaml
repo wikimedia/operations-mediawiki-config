@@ -22,6 +22,7 @@ pipelines:
             production:
               base: docker-registry.wikimedia.org/php7.2-fpm
               apt:
+                proxies: ['${setup.httpProxy}']
                 packages:
                   - firejail
               lives:
