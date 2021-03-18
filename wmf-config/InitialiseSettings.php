@@ -24970,6 +24970,7 @@ function wmfGetVariantSettings() {
 	'idwiki' => true,
 	'jawiki' => true,
 	'kowiki' => true,
+	'mswiki' => true,
 	'nowiki' => true,
 	'plwiki' => true,
 	'ptwiki' => true,
@@ -24996,6 +24997,7 @@ function wmfGetVariantSettings() {
 	'hiwiki' => false,
 	'hrwiki' => false,
 	'jawiki' => false,
+	'mswiki' => false,
 	'nowiki' => false,
 	'simplewiki' => false,
 	'sqwiki' => false,
@@ -25098,6 +25100,7 @@ function wmfGetVariantSettings() {
 	'hywiki' => 'Օգնություն:Գլխացանկ',
 	'idwiki' => 'Bantuan:Isi',
 	'jawiki' => 'Help:目次',
+	'mswiki' => 'Bantuan:Kandungan',
 	'nowiki' => 'Hjelp:Portal',
 	'kowiki' => '위키백과:도움말',
 	'plwiki' => 'Pomoc:Spis treści',
@@ -25597,6 +25600,33 @@ function wmfGetVariantSettings() {
 			'text' => '문서 등재 기준',
 			'id' => 'notability',
 		]
+	],
+	'mswiki' => [
+		[
+			'title' => 'Wikipedia:Manual_gaya_penulisan',
+			'text' => 'Cara menulis artikel yang baik',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'Cara mengedit halaman',
+			'text' => 'mw:Help:VisualEditor/User_guide/ms',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/ms#Images',
+			'text' => 'Cara memasukkan gambar',
+			'id' => 'images',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/ms#Editing_references',
+			'text' => 'Cara memasukkan rujukan',
+			'id' => 'references',
+		],
+		[
+			'title' => 'Wikipedia:Penciptaan_rencana_bestari',
+			'text' => 'Cara membuat artikel',
+			'id' => 'articlewizard',
+		],
 	],
 	'nowiki' => [
 		[
@@ -26104,6 +26134,10 @@ function wmfGetVariantSettings() {
 	'jawiki' => [
 		'create' => 'Wikipedia:独立記事作成の目安',
 		'image' => 'Help:VisualEditor/User_guide/ja#Images',
+	],
+	'mswiki' => [
+		'create' => 'Wikipedia:Penciptaan_rencana_bestari',
+		'image' => 'mw:Help:VisualEditor/User_guide/ms#Images',
 	],
 	'nowiki' => [
 		'create' => 'Wikipedia:Artikkelveiviser',
