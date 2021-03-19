@@ -200,6 +200,7 @@ if ( $wmgUseUrlShortener ) {
 		'(.*\.)?wikivoyage\.beta\.wmflabs\.org',
 		'(.*\.)?wikimedia\.beta\.wmflabs\.org',
 		'(.*\.)?wikidata\.beta\.wmflabs\.org',
+		'query-builder-test\.toolforge\.org',  # Temp T273162
 	];
 	$wgUrlShortenerApprovedDomains = [
 		'*.wikipedia.beta.wmflabs.org',
@@ -212,6 +213,7 @@ if ( $wmgUseUrlShortener ) {
 		'*.wikivoyage.beta.wmflabs.org',
 		'*.wikimedia.beta.wmflabs.org',
 		'*.wikidata.beta.wmflabs.org',
+		'query-builder-test.toolforge.org',
 	];
 }
 
