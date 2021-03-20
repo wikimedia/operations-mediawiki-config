@@ -6,7 +6,6 @@ inheritsFrom:
   - wikipedia
   - categories-rdf
   - cirrussearch-big-indices
-  - commonsuploads
   - medium
   - s3
   - securepollglobal
