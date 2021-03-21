@@ -26234,6 +26234,7 @@ function wmfGetVariantSettings() {
 	'frwiki' => 'Projet:Aide et accueil/Volontaires',
 	'frwiktionary' => 'Wiktionnaire:Mentorat',
 	'hewiki' => 'ויקיפדיה:ותיקים למען חדשים/מתנדבים',
+	'hrwiki' => 'Pomoć:Sadržaj/Mentori',
 	'huwiki' => 'Wikipédia:Szerkesztők megtartása/Mentorok',
 	'hywiki' => 'Վիքիպեդիա:Օգնություն/Ստորագրություններ',
 	'idwiki' => 'Wikipedia:Program pembelajaran/Area Mentor/mentor',
