@@ -5,6 +5,30 @@ pipelines:
         build: list-wikiversions
         run:
           tail: 10
+        blubberfile: &blubberfile
+          version: v4
+          apt:
+            proxies: ['${setup.httpProxy}']
+          variants:
+            list-wikiversions:
+              base: docker-registry.wikimedia.org/php7.2-cli
+              builder:
+                requirements: [wikiversions.json, multiversion/]
+                command: [bash, -c, 'multiversion/bin/list-versions.php | cut -f 2 > versions']
+              entrypoint: [cat, versions]
+            rsync:
+              base: docker-registry.wikimedia.org/wikimedia-buster
+              apt:
+                packages: [rsync]
+              entrypoint: [rsync]
+      - name: fetch-patches
+        build: rsync
+        run:
+          arguments: [-a, 'deployment.eqiad.wmnet::srv-patches-releases-primary/', /tmp/patches/]
+        copy:
+          - source: /tmp/patches
+            destination: patches
+        blubberfile: *blubberfile
       - name: production
         build:
           variant: production
@@ -13,18 +37,18 @@ pipelines:
         publish:
           image:
             name: mediawiki-multiversion
-            # this tag is meant to distinguish the image from a "secprod" image that will have
-            # security patches applied
-            tags: ["protoprod"]
+            tags: [production]
         blubberfile:
           version: v4
+          apt:
+            proxies: ['${setup.httpProxy}']
           variants:
             production:
               base: docker-registry.wikimedia.org/php7.2-fpm
               apt:
-                proxies: ['${setup.httpProxy}']
                 packages:
                   - firejail
+                  - patch
               lives:
                 in: /srv/mediawiki
               runs:

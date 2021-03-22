@@ -1,8 +1,0 @@
-version: v4
-variants:
-  list-wikiversions:
-    base: docker-registry.wikimedia.org/php7.2-cli
-    builder:
-      requirements: [wikiversions.json, multiversion/]
-      command: [bash, -c, 'multiversion/bin/list-versions.php | cut -f 2 > versions']
-    entrypoint: [cat, versions]
