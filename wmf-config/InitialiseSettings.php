@@ -9167,6 +9167,7 @@ function wmfGetVariantSettings() {
 			'move' => true,
 			'tboverride' => true, // T209753
 			'move-categorypages' => true, // T219261
+			'delete-redirect' => true, // T278131
 		],
 		'patroller' => [ 'patrol' => true ], // T149019
 	],
