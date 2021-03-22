@@ -19101,7 +19101,7 @@ function wmfGetVariantSettings() {
 	'default' => true, // T276498
 	'wikipedia' => true, // T266303
 	'enwiki' => true, // T273146
-	'dewiki' => false,
+	'dewiki' => true, // T276494
 	'ruwiki' => true, // T276493
 	'enwikibooks' => true, // T276851
 	'enwikiversity' => true, // T264693
