@@ -19319,21 +19319,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgDiscussionToolsEnable' => [
-	'default' => true, // T276498
-	'wikipedia' => true, // T266303
-	'enwiki' => true, // T273146
-	'dewiki' => true, // T276494
-	'ruwiki' => true, // T276493
-	'enwikibooks' => true, // T276851
-	'enwikiversity' => true, // T264693
-	'frwiktionary' => true, // T276189
-	'gomwiktionary' => true, // T258554
-	'jawikivoyage' => true, // T265829
-	'kuwiktionary' => true, // T273192
-	'mediawikiwiki' => true, // T251208
-	'metawiki' => true, // T264693
-	'apiportalwiki' => true, // T260624
-	'officewiki' => true, // T277103
+	'default' => true, // T276497
 ],
 
 'wgDiscussionToolsBeta' => [
