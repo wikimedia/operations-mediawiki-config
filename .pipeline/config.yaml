@@ -21,6 +21,14 @@ pipelines:
               apt:
                 packages: [rsync]
               entrypoint: [rsync]
+      - name: fetch-private
+        build: rsync
+        run:
+          arguments: [-a, 'deployment.eqiad.wmnet::srv-mediawiki-private-primary/', /tmp/private/]
+        copy:
+          - source: /tmp/private/
+            destination: private
+        blubberfile: *blubberfile
       - name: fetch-patches
         build: rsync
         run:
