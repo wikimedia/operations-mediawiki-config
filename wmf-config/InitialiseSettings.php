@@ -24959,6 +24959,7 @@ function wmfGetVariantSettings() {
 	'ptwiki' => true,
 	'ruwiki' => true,
 	'rowiki' => true,
+	'shwiki' => true,
 	'simplewiki' => true,
 	'sqwiki' => true,
 	'srwiki' => true,
@@ -24978,6 +24979,7 @@ function wmfGetVariantSettings() {
 	'default' => true,
 	'eswiki' => false,
 	'mswiki' => false,
+	'shwiki' => false,
 	'simplewiki' => false,
 ],
 
@@ -25085,6 +25087,7 @@ function wmfGetVariantSettings() {
 	'ptwiki' => 'Wikipédia:Guia de criação de artigos',
 	'ruwiki' => 'Википедия:Справка',
 	'rowiki' => 'Ajutor:Cuprins',
+	'shwiki' => 'Pomoć:Sadržaj',
 	'simplewiki' => 'Help:Contents',
 	'sqwiki' => 'Ndihmë:Përmbajtja',
 	'srwiki' => 'Википедија:Помоћ',
@@ -25768,6 +25771,33 @@ function wmfGetVariantSettings() {
 			'id' => 'articlewizzard',
 		],
 	],
+	'shwiki' => [
+		[
+			'title' => 'Wikipedia:Stil',
+			'text' => 'Kako pisati članke',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/sh',
+			'text' => 'Kako uređivati stranicu',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/sh#Images',
+			'text' => 'Ubaciti i neku sliku u članak',
+			'id' => 'images',
+		],
+		[
+			'title' => 'Help:VisualEditor/User_guide/sh#Editing_references',
+			'text' => 'Kako u člancima navoditi izvore podataka',
+			'id' => 'references',
+		],
+		[
+			'title' => 'Pomoć:Kako stvoriti novu stranicu',
+			'text' => 'Kako stvoriti novu stranicu',
+			'id' => 'articlewizard',
+		],
+	],
 	'simplewiki' => [
 		[
 			'title' => 'Wikipedia:Manual_of_Style',
@@ -26171,6 +26201,10 @@ function wmfGetVariantSettings() {
 	'rowiki' => [
 		'create' => 'Ajutor:Cum scriu un articol',
 		'image' => 'mw:Help:VisualEditor/User_guide/ro#Modificarea_imaginilor_și_a_altor_fișiere_media',
+	],
+	'shwiki' => [
+		'create' => 'Pomoć:Kako stvoriti novu stranicu',
+		'image' => 'Help:VisualEditor/User_guide/sh#Images',
 	],
 	'simplewiki' => [
 		'create' => 'Wikipedia:Article_wizard',

@@ -10,3 +10,4 @@ inheritsFrom:
   - s5
   - securepollglobal
   - wikidataclient
+  - growthexperiments
