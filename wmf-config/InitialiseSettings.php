@@ -24940,6 +24940,7 @@ function wmfGetVariantSettings() {
 	'cswiki' => true,
 	'dawiki' => true,
 	'eowiki' => true,
+	'eswiki' => true,
 	'euwiki' => true,
 	'fawiki' => true,
 	'frwiki' => true,
@@ -24975,6 +24976,7 @@ function wmfGetVariantSettings() {
 
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
+	'eswiki' => false,
 	'mswiki' => false,
 	'simplewiki' => false,
 ],
@@ -25064,6 +25066,7 @@ function wmfGetVariantSettings() {
 	'cswiki' => 'Nápověda:Obsah',
 	'dawiki' => 'Hjælp:Forside',
 	'eowiki' => 'Helpo:Enhavo',
+	'eswiki' => 'Ayuda:Contenidos',
 	'euwiki' => 'Laguntza:Sarrera',
 	'fawiki' => 'راهنما:فهرست',
 	'frwiki' => 'Aide:Accueil',
@@ -25254,6 +25257,33 @@ function wmfGetVariantSettings() {
 		[
 			'title' => 'Helpo:Kiel krei paĝon',
 			'text' => 'Kiel krei paĝon',
+			'id' => 'articlewizard',
+		],
+	],
+	'eswiki' => [
+		[
+			'title' => 'Wikipedia:Manual de estilo',
+			'text' => 'Cómo escribir un buen artículo',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/es',
+			'text' => 'Cómo editar una página',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/es#Images',
+			'text' => 'Cómo agregar imágenes',
+			'id' => 'images',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/es#Editing_references',
+			'text' => 'Cómo insertar una referencia',
+			'id' => 'references',
+		],
+		[
+			'title' => 'Wikipedia:Asistente para la creación de artículos',
+			'text' => 'Cómo crear un artículo',
 			'id' => 'articlewizard',
 		],
 	],
@@ -26074,6 +26104,10 @@ function wmfGetVariantSettings() {
 	'euwiki' => [
 		'create' => 'Laguntza:Sarrera berriak',
 		'image' => 'Laguntza:Irudiak',
+	],
+	'eswiki' => [
+		'create' => 'Wikipedia:Asistente para la creación de artículos',
+		'image' => 'mw:Help:VisualEditor/User_guide/es#Images',
 	],
 	'eowiki' => [
 		'create' => 'Helpo:Kiel_krei_paĝon',
