@@ -9172,6 +9172,7 @@ function wmfGetVariantSettings() {
 		'patroller' => [ 'patrol' => true ], // T149019
 	],
 	'+enwikibooks' => [
+		'autoreview' => [ 'autopatrol' => true ], // T278300
 		'editor' => [
 			'autopatrol' => true, // T172561
 			'suppressredirect' => true, // T268849
