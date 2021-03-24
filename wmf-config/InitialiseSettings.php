@@ -24975,14 +24975,8 @@ function wmfGetVariantSettings() {
 
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
-	'eowiki' => false,
-	'hiwiki' => false,
-	'jawiki' => false,
 	'mswiki' => false,
-	'nowiki' => false,
 	'simplewiki' => false,
-	'sqwiki' => false,
-	'tewiki' => false,
 ],
 
 'wgWelcomeSurveyEnabled' => [
