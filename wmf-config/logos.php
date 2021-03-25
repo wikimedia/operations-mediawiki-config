@@ -36,6 +36,7 @@ return [
 	'afwiki' => '/static/images/project-logos/afwiki.png',
 	'akwiki' => '/static/images/project-logos/akwiki.png', // T48589
 	'alswiki' => '/static/images/project-logos/alswiki.png',
+	'altwiki' => '/static/images/project-logos/altwiki.png',
 	'amwiki' => '/static/images/project-logos/amwiki.png', // T42285
 	'angwiki' => '/static/images/project-logos/angwiki.png', // T51125
 	'anwiki' => '/static/images/project-logos/anwiki.png',
@@ -832,6 +833,7 @@ return [
 	'afwiki' => '/static/images/project-logos/afwiki-1.5x.png', // T150618
 	'akwiki' => '/static/images/project-logos/akwiki-1.5x.png', // T150618
 	'alswiki' => '/static/images/project-logos/alswiki-1.5x.png', // T150618
+	'altwiki' => '/static/images/project-logos/altwiki-1.5x.png',
 	'amwiki' => '/static/images/project-logos/amwiki-1.5x.png', // T150618
 	'angwiki' => '/static/images/project-logos/angwiki-1.5x.png', // T150618
 	'anwiki' => '/static/images/project-logos/anwiki-1.5x.png', // T150618
@@ -1399,6 +1401,7 @@ return [
 	'afwiki' => '/static/images/project-logos/afwiki-2x.png', // T150618
 	'akwiki' => '/static/images/project-logos/akwiki-2x.png', // T150618
 	'alswiki' => '/static/images/project-logos/alswiki-2x.png', // T150618
+	'altwiki' => '/static/images/project-logos/altwiki-2x.png',
 	'amwiki' => '/static/images/project-logos/amwiki-2x.png', // T150618
 	'angwiki' => '/static/images/project-logos/angwiki-2x.png', // T150618
 	'anwiki' => '/static/images/project-logos/anwiki-2x.png', // T150618
