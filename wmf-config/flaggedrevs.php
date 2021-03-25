@@ -589,10 +589,6 @@ $wgExtensionFunctions[] = function () {
 
 		$wgFlaggedRevsTags['accuracy']['levels'] = 3;
 
-		// T17478
-		$wgGroupPermissions['autoeditor']['autoreview'] = true;
-		$wgGroupPermissions['autoeditor']['autoconfirmed'] = true;
-
 		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 		$wgGroupPermissions['sysop']['review'] = false; // T275811
 	} elseif ( $wgDBname == 'ruwikinews' ) {
