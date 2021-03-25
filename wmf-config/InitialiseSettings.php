@@ -11788,7 +11788,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'rollbacker' ], // T264147
 	],
 	'+ruwiki' => [
-		'sysop' => [ 'rollbacker', 'autoeditor', 'uploader', 'closer', 'filemover', 'suppressredirect' ],
+		'sysop' => [ 'rollbacker', 'uploader', 'closer', 'filemover', 'suppressredirect' ],
 		'bureaucrat' => [ 'arbcom', 'engineer' ], // T51334, T144599
 	],
 	'+ruwikinews' => [
@@ -12646,7 +12646,7 @@ function wmfGetVariantSettings() {
 	],
 	'+ruwiki' => [
 		'bureaucrat' => [ 'arbcom', 'engineer', 'sysop' ], // T51334, T144599
-		'sysop' => [ 'rollbacker', 'autoeditor', 'uploader', 'closer', 'filemover', 'suppressredirect' ],
+		'sysop' => [ 'rollbacker', 'uploader', 'closer', 'filemover', 'suppressredirect' ],
 	],
 	'+ruwikinews' => [
 		'sysop' => [ 'rollbacker' ], // T201265
