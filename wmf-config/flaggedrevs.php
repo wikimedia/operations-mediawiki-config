@@ -594,6 +594,7 @@ $wgExtensionFunctions[] = function () {
 		$wgGroupPermissions['autoeditor']['autoconfirmed'] = true;
 
 		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
+		$wgGroupPermissions['sysop']['review'] = false; // T275811
 		unset( $wgGroupPermissions['autoreview'] ); // T229596
 	} elseif ( $wgDBname == 'ruwikinews' ) {
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_CATEGORY, NS_TEMPLATE ];
