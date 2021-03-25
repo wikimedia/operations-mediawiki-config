@@ -24964,6 +24964,7 @@ function wmfGetVariantSettings() {
 	'sqwiki' => true,
 	'srwiki' => true,
 	'svwiki' => true,
+	'tawiki' => true,
 	'tewiki' => true,
 	'thwiki' => true,
 	'trwiki' => true,
@@ -24981,6 +24982,7 @@ function wmfGetVariantSettings() {
 	'mswiki' => false,
 	'shwiki' => false,
 	'simplewiki' => false,
+	'tawiki' => false,
 ],
 
 'wgWelcomeSurveyEnabled' => [
@@ -25092,6 +25094,7 @@ function wmfGetVariantSettings() {
 	'sqwiki' => 'Ndihmë:Përmbajtja',
 	'srwiki' => 'Википедија:Помоћ',
 	'svwiki' => 'Wikipedia:Hjälp',
+	'tawiki' => 'விக்கிப்பீடியா:உதவி',
 	'thwiki' => 'วิธีใช้:สารบัญ',
 	'tewiki' => 'సహాయం:సూచిక',
 	'trwiki' => 'Yardım:İçindekiler',
@@ -25896,6 +25899,33 @@ function wmfGetVariantSettings() {
 			'id' => 'citation',
 		]
 	],
+	'tawiki' => [
+		[
+			'title' => 'விக்கிப்பீடியா:நடைக் கையேடு',
+			'text' => 'ஒரு நல்ல கட்டுரை எழுதுவது எப்படி',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/ta',
+			'text' => 'ஒரு பக்கத்தை எவ்வாறு திருத்துவது',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/ta#Images',
+			'text' => 'படங்களை எவ்வாறு சேர்ப்பது',
+			'id' => 'images',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/ta#Editing_references',
+			'text' => 'குறிப்புகளை எவ்வாறு சேர்ப்பதுs',
+			'id' => 'references',
+		],
+		[
+			'title' => 'விக்கிப்பீடியா:கட்டுரை உருவாக்கல் வழிகாட்டி',
+			'text' => 'ஒரு கட்டுரையை எவ்வாறு உருவாக்குவது',
+			'id' => 'articlewizard',
+		],
+	],
 	'tewiki' => [
 		[
 			'title' => 'వికీపీడియా:శైలి',
@@ -26217,6 +26247,10 @@ function wmfGetVariantSettings() {
 	'svwiki' => [
 		'create' => 'Wikipedia:Att skapa en ny artikel',
 		'image' => 'Wikipedia:Introduktion till illustrationer',
+	],
+	'tawiki' => [
+		'create' => 'விக்கிப்பீடியா:கட்டுரை உருவாக்கல் வழிகாட்டி',
+		'image' => 'mw:Help:VisualEditor/User_guide/ta#Images',
 	],
 	'tewiki' => [
 		'create' => 'వికీపీడియా:వ్యాససృష్టికి మార్గసూచీ',
