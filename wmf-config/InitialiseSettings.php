@@ -24191,6 +24191,7 @@ function wmfGetVariantSettings() {
 	'svwiki' => false, // T72470, contact @Nirmos
 	'fawiki' => false,
 	'wikidatawiki' => false,
+	'fawikiquote' => false,
 ],
 
 'wgRightsPage' => [
