@@ -15488,6 +15488,7 @@ function wmfGetVariantSettings() {
 	'plwiktionary' => true,
 	'pswiki' => true,
 	'ptwiki' => true,
+	'ptwikinews' => true, // T278634
 	'rowiki' => true, // T219855
 	'ruwiki' => true, // T153855
 	'sawiki' => true,
