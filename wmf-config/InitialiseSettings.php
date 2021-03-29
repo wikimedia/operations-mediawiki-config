@@ -7705,14 +7705,9 @@ function wmfGetVariantSettings() {
 	'desktop-improvements' => true,
 ],
 'wgVectorUseWvuiSearch' => [
-	'default' => false,
-	'desktop-improvements' => true,
+	'default' => true,
 	'commonswiki' => false,
-],
-// T249297
-'wgVectorSearchTreatmentABTest' => [
-	'default' => false,
-	'desktop-improvements' => true,
+	'wikidatawiki' => false,
 ],
 'wgVectorWvuiSearchOptions' => [
 	'default' => [
