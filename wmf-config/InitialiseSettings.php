@@ -24197,6 +24197,7 @@ function wmfGetVariantSettings() {
 	'fawiki' => false,
 	'wikidatawiki' => false,
 	'fawikiquote' => false,
+	'group1' => false,
 ],
 
 'wgRightsPage' => [
