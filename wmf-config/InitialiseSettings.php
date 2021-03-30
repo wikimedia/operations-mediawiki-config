@@ -25003,7 +25003,6 @@ function wmfGetVariantSettings() {
 
 'wgGEHomepageImpactModuleEnabled' => [
 	'default' => true,
-	'bnwiki' => false,
 ],
 
 'wgGEHelpPanelEnabled' => [
