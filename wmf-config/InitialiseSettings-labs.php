@@ -1167,13 +1167,13 @@ function wmfGetLabsOverrideSettings() {
 		],
 		'wgGENewcomerTasksRemoteApiUrl' => [
 			'enwiki' => null,
-			'arwiki' => 'https://ar.wikipedia.org/w/api.php',
-			'bnwiki' => 'https://bn.wikipedia.org/w/api.php',
+			'arwiki' => null,
+			'bnwiki' => null,
 			'cswiki' => null,
 			'fawiki' => 'https://fa.wikipedia.org/w/api.php',
 			'kowiki' => 'https://ko.wikipedia.org/w/api.php',
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
-			'viwiki' => 'https://vi.wikipedia.org/w/api.php',
+			'viwiki' => null,
 		],
 		'wgEnableSpecialMute' => [
 			'default' => true,
