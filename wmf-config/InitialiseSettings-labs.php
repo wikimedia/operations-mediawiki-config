@@ -923,6 +923,10 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true,
 		],
 
+		'wgPopupsReferencePreviewsBetaFeature' => [
+			'default' => false,
+		],
+
 		'wmgEnableDashikiData' => [
 			'default' => true,
 		],
