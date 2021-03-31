@@ -19658,6 +19658,7 @@ function wmfGetVariantSettings() {
 
 'wmgRelatedArticlesFooterWhitelistedSkins' => [
 	'default' => [ 'minerva', 'timeless' ], // T144812, T181242
+	'dewiki' => [ 'minerva' ], // T278611
 	'eswikinews' => [], // T230660
 	'htwiki' => [ 'minerva', 'vector', 'timeless' ], // T126826
 	'hewiki' => [ 'minerva', 'vector', 'timeless' ], // T191573
