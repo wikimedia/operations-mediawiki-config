@@ -25271,12 +25271,12 @@ function wmfGetVariantSettings() {
 			'id' => 'editing',
 		],
 		[
-			'title' => 'mw:Help:VisualEditor/User_guide#Images',
+			'title' => 'mw:Help:VisualEditor/User_guide/hr#Images',
 			'text' => 'Slike',
 			'id' => 'images',
 		],
 		[
-			'title' => 'mw:Help:VisualEditor/User_guide/sq#Editing_references',
+			'title' => 'mw:Help:VisualEditor/User_guide/hr#Editing_references',
 			'text' => 'Wikipoveznice',
 			'id' => 'references',
 		],
