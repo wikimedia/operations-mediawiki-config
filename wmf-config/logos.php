@@ -1375,6 +1375,7 @@ return [
 	'donatewiki' => '/static/images/project-logos/donatewiki-1.5x.png',
 	'foundationwiki' => '/static/images/project-logos/foundationwiki-1.5x.png',
 	'incubatorwiki' => '/static/images/project-logos/incubatorwiki-1.5x.png', // T230122
+	'mediawikiwiki' => '/static/images/project-logos/mediawikiwiki-1.5x.png',
 	'metawiki' => '/static/images/project-logos/metawiki-1.5x.png',
 	'officewiki' => '/static/images/project-logos/officewiki-1.5x.png',
 	'ombudsmenwiki' => '/static/images/project-logos/ombudsmenwiki-1.5x.png',
@@ -1943,6 +1944,7 @@ return [
 	'donatewiki' => '/static/images/project-logos/donatewiki-2x.png',
 	'foundationwiki' => '/static/images/project-logos/foundationwiki-2x.png',
 	'incubatorwiki' => '/static/images/project-logos/incubatorwiki-2x.png', // T230122
+	'mediawikiwiki' => '/static/images/project-logos/mediawikiwiki-2x.png',
 	'metawiki' => '/static/images/project-logos/metawiki-2x.png',
 	'officewiki' => '/static/images/project-logos/officewiki-2x.png',
 	'ombudsmenwiki' => '/static/images/project-logos/ombudsmenwiki-2x.png',
