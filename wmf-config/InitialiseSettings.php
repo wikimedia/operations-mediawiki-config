@@ -12931,8 +12931,12 @@ function wmfGetVariantSettings() {
 
 	// Note: When adding a specific wiki you have to duplicate these generic sources
 	// otherwise they would be overwritten by the specific wiki entry
-	'wikisource' => [ 'meta', 'commons' ],
+	'wikipedia' => [ 'en', 'ar', 'es', 'fr', 'ru', 'zh', 'de', 'id', 'commons', 'meta', 'incubator' ],
+	'wiktionary' => [ 'w', 'w:en', 'en', 'ar', 'es', 'fr', 'ru', 'zh', 'de', 'id', 'commons', 'meta', 'incubator' ],
+	'wikiquote' => [ 'w', 'w:en', 'en', 'fr', 'es', 'ru', 'id', 'commons', 'meta', 'incubator' ],
+	'wikisource' => [ 'w', 'en', 'meta', 'commons' ],
 	'wikiversity' => [ 'meta', 'b', 'incubator' ],
+	'wikivoyage' => [ 'w', 'w:en', 'en', 'fr', 'es', 'ru', 'id', 'commons', 'meta', 'incubator' ],
 	'wikidata' => [ 'meta', 'commons', 'en', 'de', 'fr', 'es' ],
 
 	// Specific wikis
