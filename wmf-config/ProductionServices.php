@@ -19,10 +19,6 @@
 # file hieradata/common/profile/services_proxy/envoy.yaml
 
 $common = [
-	// Logging is not active-active.
-	'udp2log' => '10.64.32.175:8420', # mwlog1001
-	'xenon' => '10.64.32.175', # mwlog1001
-
 	// This refers to the old, MongoDB-based backend, which has been
 	// replaced by xhgui-pdo (T180761).
 	'xhgui' => null,
@@ -94,6 +90,10 @@ $services = [
 		// each DC has its own urldownloader for latency reasons
 		'urldownloader' => 'http://url-downloader.eqiad.wikimedia.org:8080',
 
+		// logs are mirrored from eqiad -> codfw by mwlog hosts
+		'udp2log' => '10.64.32.141:8420', # mwlog1002.eqiad.wmnet
+		'xenon' => '10.64.32.141', # mwlog1002.eqiad.wmnet
+
 		'upload' => 'ms-fe.svc.eqiad.wmnet',
 		'mediaSwiftAuth' => 'https://ms-fe.svc.eqiad.wmnet/auth',
 		'mediaSwiftStore' => 'https://ms-fe.svc.eqiad.wmnet/v1/AUTH_mw',
@@ -135,6 +135,10 @@ $services = [
 	],
 	'codfw' => $common + [
 		'urldownloader' => 'http://url-downloader.codfw.wikimedia.org:8080',
+
+		// logs are mirrored from codfw -> eqiad by mwlog hosts
+		'udp2log' => '10.192.32.9:8420', # mwlog2002.codfw.wmnet
+		'xenon' => '10.192.32.9', # mwlog2002.codfw.wmn
 
 		'upload' => 'ms-fe.svc.codfw.wmnet',
 		'mediaSwiftAuth' => 'https://ms-fe.svc.codfw.wmnet/auth',
