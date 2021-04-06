@@ -19145,6 +19145,14 @@ function wmfGetVariantSettings() {
 	'default' => 'default', // T275827
 ],
 
+'wgDiscussionTools_sourcemodetoolbar' => [
+	'default' => 'unavailable',
+],
+
+'wgDiscussionTools_topicsubscription' => [
+	'default' => 'unavailable',
+],
+
 'wgDTSchemaEditAttemptStepSamplingRate' => [
 	'default' => false,
 ],
