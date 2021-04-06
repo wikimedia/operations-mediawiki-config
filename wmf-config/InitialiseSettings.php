@@ -24001,13 +24001,13 @@ function wmfGetVariantSettings() {
 ],
 
 'wgLegacyJavaScriptGlobals' => [
-	'default' => true,
-	'group0' => false, // T35837
-	'svwiki' => false, // T72470, contact @Nirmos
-	'fawiki' => false,
-	'wikidatawiki' => false,
-	'fawikiquote' => false,
-	'group1' => false,
+	'default' => false,
+	'enwiki' => true,
+	'frwiki' => true,
+	'dewiki' => true,
+	'ruwiki' => true,
+	'zhwiki' => true,
+	'jawiki' => true,
 ],
 
 'wgRightsPage' => [
