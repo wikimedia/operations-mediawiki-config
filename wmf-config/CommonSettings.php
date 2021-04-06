@@ -2379,16 +2379,6 @@ if ( $wmgUsePdfHandler ) {
 wfLoadExtension( 'WikiEditor' );
 $wgDefaultUserOptions['usebetatoolbar'] = 1;
 
-# LocalisationUpdate
-# wfLoadExtension( 'LocalisationUpdate' );
-$wgLocalisationUpdateDirectory = "/var/lib/l10nupdate/caches/cache-$wmgVersionNumber";
-$wgLocalisationUpdateRepository = 'local';
-$wgLocalisationUpdateRepositories['local'] = [
-	'mediawiki' => '/var/lib/l10nupdate/mediawiki/core/%PATH%',
-	'extension' => '/var/lib/l10nupdate/mediawiki/extensions/%NAME%/%PATH%',
-	'skin' => '/var/lib/l10nupdate/mediawiki/skins/%NAME%/%PATH%',
-];
-
 if ( $wmgEnableLandingCheck ) {
 	wfLoadExtension( 'LandingCheck' );
 
