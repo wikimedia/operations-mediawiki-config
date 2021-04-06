@@ -2238,9 +2238,7 @@ wfLoadExtension( 'WikiEditor' );
 $wgDefaultUserOptions['usebetatoolbar'] = 1;
 
 # LocalisationUpdate
-if ( $wmfRealm !== 'labs' ) {
-	wfLoadExtension( 'LocalisationUpdate' );
-}
+# wfLoadExtension( 'LocalisationUpdate' );
 $wgLocalisationUpdateDirectory = "/var/lib/l10nupdate/caches/cache-$wmgVersionNumber";
 $wgLocalisationUpdateRepository = 'local';
 $wgLocalisationUpdateRepositories['local'] = [
