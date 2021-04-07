@@ -210,8 +210,6 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBRepoSettings['enableRefTabs'] = $wmgWikibaseRepoEnableRefTabs;
 
-	$wgWBRepoSettings['idGeneratorLogging'] = $wmgWikibaseRepoIdGeneratorLogging;
-
 	$wgWBRepoSettings['idGeneratorRateLimiting'] = $wmgWikibaseRepoIdGeneratorRateLimiting;
 
 	// entity data for URLs matching these patterns will be cached in Varnish and purged if needed;
