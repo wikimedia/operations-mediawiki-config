@@ -44,8 +44,8 @@ $common = [
 	// IRC (broadcast RCFeed for irc.wikimedia.org)
 	// Not active-active.
 	'irc' => [
-		'208.80.153.44', # kraz.wikimedia.org
-		'208.80.153.62', # irc2001.wikimedia.org
+		'208.80.155.105', # irc1001.wikimedia.org
+		'208.80.153.62',  # irc2001.wikimedia.org
 	],
 
 	// Automatic dc-local discovery
