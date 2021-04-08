@@ -14,10 +14,4 @@ $wgObjectCaches['mcrouter']['timeout'] = 0.5 * 1e6;
 // Beta Cluster: Experimentally enable the on-host tier for WAN cache
 $wgWANObjectCaches['wancache-main-mcrouter']['onHostRoutingPrefix'] = "/$wmfDatacenter/mw-with-onhost-tier/";
 
-// Beta Cluster: Experimentally turn on CacheReaper.
-// This ensures page-related cache purges are performed,
-// even if they got lost somehow, by scanning the recent changes
-// table from a job.
-$wgEnableWANCacheReaper = true;
-
 } # end safe guard
