@@ -5362,7 +5362,6 @@ function wmfGetVariantSettings() {
 		'VisualEditor' => 'debug',
 		'wfLogDBError' => 'debug', // Former $wgDBerrorLog
 		'Wikibase' => [ 'udp2log' => 'info', 'logstash' => 'warning', 'sample' => false, ],
-		'Wikibase.IdGenerator' => 'debug', // WMDE & Lucas Werkmeister T268625
 		'WikibaseQualityConstraints' => 'debug',
 		'WikimediaEvents' => 'error', // For T205754 & T208233
 		'WikitechGerritBan' => 'debug',
@@ -22377,12 +22376,6 @@ function wmfGetVariantSettings() {
 	'default' => null,
 	'wikidataclient' => 'wikidata',
 	'wikidataclient-test' => 'testwikidata',
-],
-
-'wmgWikibaseRepoIdGeneratorLogging' => [
-	'default' => false,
-	'testwikidatawiki' => true,
-	'wikidatawiki' => true,
 ],
 
 'wmgWikibaseRepoIdGeneratorRateLimiting' => [
