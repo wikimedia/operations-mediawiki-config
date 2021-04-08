@@ -26,9 +26,14 @@ $wgWANObjectCaches['wancache-main-mcrouter'] = [
 	'cacheId' => $wgMainCacheType,
 	// Specify the route prefix that mcrouter listens for and broadcasts.
 	// The route prefix is configured in Puppet (profile::mediawiki::mcrouter_wancache).
+	'broadcastRoutingPrefix' => '/*/mw-wan/',
+
+	// TODO: Remove these after I219ea67416c6d121 rolls out.
 	'cluster' => 'mw-wan',
 	'mcrouterAware' => true,
-	// Reduce connection use by co-locating related keys
+
+	// Reduce connection use by co-locating related keys (T252564)
+	// TODO: Can be removed after 74ebf0ec rolls out (1.36.0-wmf.38)
 	'coalesceKeys' => true
 ];
 
