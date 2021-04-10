@@ -11207,6 +11207,7 @@ function wmfGetVariantSettings() {
 'wmgPrivilegedGlobalGroups' => [
 	'default' => [
 		'abusefilter-helper',
+		'abusefilter-maintainer',
 		'founder',
 		'global-deleter',
 		'global-interface-editor',
