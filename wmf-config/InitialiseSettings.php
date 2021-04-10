@@ -5113,6 +5113,7 @@ function wmfGetVariantSettings() {
 	'srwikisource' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
 	'srwikiquote' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
 	'srwiktionary' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
+	'svwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T279836
 	'testwiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T61084
 	'viwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T215493
 	'zhwiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T260012
@@ -5134,6 +5135,7 @@ function wmfGetVariantSettings() {
 	'+kowiki' => [ 'extendedconfirmed' ], // T184675
 	'+viwiki' => [ 'extendedconfirmed' ], // T215493
 	'+rowiki' => [ 'extendedconfirmed' ], // T254471
+	'+svwiki' => [ 'extendedconfirmed' ], // T279836
 ],
 
 'wgSiteNotice' => [
@@ -10629,6 +10631,9 @@ function wmfGetVariantSettings() {
 			'rollback' => true,
 			'autopatrol' => true,
 		],
+		'bot' => [ 'extendedconfirmed' => true ], // T279836
+		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T279836
+		'sysop' => [ 'extendedconfirmed' => true ], // T279836
 	],
 	'+svwikisource' => [ // T30614 & 36895
 		'autopatrolled' => [
@@ -11890,7 +11895,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'rollbacker' ],
 	],
 	'+svwiki' => [
-		'sysop' => [ 'rollbacker', 'autopatrolled' ], // T161210
+		'sysop' => [ 'rollbacker', 'autopatrolled', 'extendedconfirmed' ], // T161210, T279836
 	],
 	'+svwikisource' => [
 		'sysop' => [ 'autopatrolled', ],
@@ -12754,7 +12759,7 @@ function wmfGetVariantSettings() {
 		'bureaucrat' => [ 'flood' ],
 	],
 	'+svwiki' => [
-		'sysop' => [ 'rollbacker', 'autopatrolled' ], // T161210
+		'sysop' => [ 'rollbacker', 'autopatrolled', 'extendedconfirmed' ], // T161210, T279836
 	],
 	'+svwikisource' => [
 		'sysop' => [ 'autopatrolled', ],
@@ -14333,6 +14338,14 @@ function wmfGetVariantSettings() {
 			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
 			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
 		], // T269709
+	],
+	'svwiki' => [
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 30 * 86400 ], // 30 days
+			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+		], // T279836
 	],
 ],
 
