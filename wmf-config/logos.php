@@ -1389,6 +1389,7 @@ return [
 	'wikidatawiki' => '/static/images/project-logos/wikidatawiki-1.5x.png', // T230120
 	'wikimania2018wiki' => '/static/images/project-logos/wikimania2018wiki-1.5x.png', // T194340
 	'wikimaniawiki' => '/static/images/project-logos/wikimaniawiki-1.5x.png', // T194340
+	'wikitech' => '/static/images/project-logos/wikitech-1.5x.png',
 
 ],
 
@@ -1958,6 +1959,7 @@ return [
 	'wikidatawiki' => '/static/images/project-logos/wikidatawiki-2x.png', // T230120
 	'wikimania2018wiki' => '/static/images/project-logos/wikimania2018wiki-2x.png', // T194340
 	'wikimaniawiki' => '/static/images/project-logos/wikimaniawiki-2x.png', // T194340
+	'wikitech' => '/static/images/project-logos/wikitech-2x.png',
 
 ],
 
