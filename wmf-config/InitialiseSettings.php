@@ -11205,7 +11205,19 @@ function wmfGetVariantSettings() {
 ],
 
 'wmgPrivilegedGlobalGroups' => [
-	'default' => [ 'abusefilter-helper', 'founder', 'global-deleter', 'global-interface-editor', 'global-sysop', 'new-wikis-importer', 'ombudsman', 'staff', 'steward', 'sysadmin', 'wmf-researcher' ],
+	'default' => [
+		'abusefilter-helper',
+		'founder',
+		'global-deleter',
+		'global-interface-editor',
+		'global-sysop',
+		'new-wikis-importer',
+		'ombuds',
+		'staff',
+		'steward',
+		'sysadmin',
+		'wmf-researcher'
+	],
 ],
 
 # wgAddGroups @{
