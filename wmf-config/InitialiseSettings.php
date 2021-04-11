@@ -24795,6 +24795,10 @@ function wmfGetVariantSettings() {
 	'default' => 'extension1',
 ],
 
+'wgGEMentorshipMigrationStage' => [
+	'default' => SCHEMA_COMPAT_WRITE_OLD | SCHEMA_COMPAT_READ_OLD,
+],
+
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
 	'eswiki' => false,
