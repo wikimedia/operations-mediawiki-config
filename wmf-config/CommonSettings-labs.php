@@ -404,4 +404,7 @@ $wgCodeMirrorEnableBracketMatching = true;
 // Temporary feature flag for the CodeMirror accessibility color schema see T271895
 $wgCodeMirrorAccessibilityColors = true;
 
+// Temporarily enable line numbering on beta, see T267911.
+$wgCodeMirrorLineNumberingNamespaces = null;
+
 } # end safeguard
