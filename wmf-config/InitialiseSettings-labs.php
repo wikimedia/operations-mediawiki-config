@@ -1097,7 +1097,7 @@ function wmfGetLabsOverrideSettings() {
 			'default' => false,
 		],
 		'wgGEMentorshipMigrationStage' => [
-			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
 		],
 		'wgGEDeveloperSetup' => [
 			'default' => true,
