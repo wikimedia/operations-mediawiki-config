@@ -18820,7 +18820,6 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
-	'ptwiki' => true, // T173768
 ],
 
 // arbcom_*wiki, sysop_*wiki and wg_enwiki must remain explicitly false in this array, because the default false
