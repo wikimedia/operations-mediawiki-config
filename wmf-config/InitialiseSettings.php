@@ -24009,7 +24009,6 @@ function wmfGetVariantSettings() {
 	'dewiki' => true,
 	'ruwiki' => true,
 	'zhwiki' => true,
-	'jawiki' => true,
 ],
 
 'wgRightsPage' => [
