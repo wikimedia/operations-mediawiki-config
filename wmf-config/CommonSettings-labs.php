@@ -406,4 +406,8 @@ $wgCodeMirrorAccessibilityColors = true;
 // Temporarily enable line numbering on beta, see T267911.
 $wgCodeMirrorLineNumberingNamespaces = null;
 
+// Temporary feature flags for the suggested values feature, see T271825
+$wgTemplateDataSuggestedValuesEditor = true;
+$wgVisualEditorTransclusionDialogSuggestedValues = true;
+
 } # end safeguard
