@@ -18,18 +18,33 @@ function mwscript {
 
 function apply_patch {
     local version="$1"
-    # patchfile is expected to look like: ./core/01-TXXXXXX.patch or ./extensions/AbuseFilter/01-TXXXXXX.patch
+    # patchfile is expected to look like one of:
+    # - ./core/01-TXXXXXX.patch
+    # - ./extensions/SomeExtension/01-TXXXXXX.patch
+    # - ./skins/SomeSkin/01-TXXXXXX.patch
+    # - ./vendor/01-TXXXXXX.patch
     local patchfile="$2"
 
     local type=$(echo $patchfile | cut -d/ -f2)
 
     local targetdir
-    if [ "$type" = "core" ]; then
-        targetdir=$base_dir/php-$version
-    else
-        local module=$(echo $patchfile | cut -d/ -f3)
-        targetdir=$base_dir/php-$version/$type/$module
-    fi
+
+    case "$type" in
+        core)
+            targetdir=$base_dir/php-$version
+            ;;
+        vendor)
+            targetdir=$base_dir/php-$version/vendor
+            ;;
+        extensions|skins)
+            local module=$(echo $patchfile | cut -d/ -f3)
+            targetdir=$base_dir/php-$version/$type/$module
+            ;;
+        *)
+            echo Unexpected patch type: $type
+            exit 1
+            ;;
+    esac
 
     patchfile=$patches_dir/$version/$patchfile
     echo Applying $patchfile in $targetdir
