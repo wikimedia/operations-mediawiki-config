@@ -49,8 +49,10 @@ function apply_patch {
     patchfile=$patches_dir/$version/$patchfile
     echo Applying $patchfile in $targetdir
 
-    # FIXME: Send email to the security team if a patch fails to apply
-    patch --forward -d $targetdir -p1 < $patchfile
+    if ! patch --forward -d $targetdir -p1 < $patchfile; then
+        echo Failed to apply $patchfile in $targetdir
+        exit 1
+    fi
 }
 
 function apply_patches {
@@ -67,27 +69,50 @@ function apply_patches {
     fi
 }
 
-php_with_errors multiversion/bin/generate-php-wikiversions.php
-php_with_errors multiversion/bin/update-all-localsettings.php
+function prepare_mw_versions {
+    php_with_errors multiversion/bin/generate-php-wikiversions.php
+    php_with_errors multiversion/bin/update-all-localsettings.php
 
-# stub PrivateSettings.php
-cp private/readme.php private/PrivateSettings.php
+    # stub PrivateSettings.php
+    cp private/readme.php private/PrivateSettings.php
+}
 
-multiversion/bin/list-versions.php | while read wikidb version; do
+function apply_security_patches {
+    multiversion/bin/list-versions.php | while read wikidb version; do
+        apply_patches "$version"
+    done
 
-  apply_patches "$version"
+    # Cleanup
+    rm -fr $patches_dir
+}
 
-  mwscript mergeMessageFileList.php \
-    --wiki="$wikidb" \
-    --list-file=wmf-config/extension-list \
-    --output=wmf-config/ExtensionMessages-$version.php
-
-  mwscript rebuildLocalisationCache.php \
-    --wiki="$wikidb" \
-    --store-class=LCStoreCDB \
-    --threads=$(nproc) \
-    --skip-message-purge
-done
-
-# Cleanup
-rm -fr $patches_dir
+function setup_l10n {
+    multiversion/bin/list-versions.php | while read wikidb version; do
+        mwscript mergeMessageFileList.php \
+                 --wiki="$wikidb" \
+                 --list-file=wmf-config/extension-list \
+                 --output=wmf-config/ExtensionMessages-$version.php
+        
+        mwscript rebuildLocalisationCache.php \
+                 --wiki="$wikidb" \
+                 --store-class=LCStoreCDB \
+                 --threads=$(nproc) \
+                 --skip-message-purge
+    done
+}
+        
+case "$1" in
+    prepare-mw-versions)
+        prepare_mw_versions
+        ;;
+    apply-security-patches)
+        apply_security_patches
+        ;;
+    setup-l10n)
+        setup_l10n
+        ;;
+    *)
+        echo $0: Unknown command $1
+        exit 1
+        ;;
+esac
