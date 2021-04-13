@@ -25463,8 +25463,8 @@ function wmfGetVariantSettings() {
 			'id' => 'mos',
 		],
 		[
-			'title' => 'Cara mengedit halaman',
-			'text' => 'mw:Help:VisualEditor/User_guide/ms',
+			'title' => 'mw:Help:VisualEditor/User_guide/ms',
+			'text' => 'Cara mengedit halaman',
 			'id' => 'editing',
 		],
 		[
