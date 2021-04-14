@@ -66,6 +66,7 @@ EOT
 	# other maintenance scripts we don't care what wiki DB is used...
 	$wikiless = [
 		'maintenance/purgeList.php',
+		'maintenance/purgeMessageBlobStore.php',
 		'extensions/WikimediaMaintenance/addWiki.php',
 		'extensions/WikimediaMaintenance/dumpInterwiki.php',
 		'extensions/WikimediaMaintenance/getJobQueueLengths.php',
