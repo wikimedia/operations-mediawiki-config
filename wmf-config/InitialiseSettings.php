@@ -24033,7 +24033,6 @@ function wmfGetVariantSettings() {
 	'enwiki' => true,
 	'frwiki' => true,
 	'dewiki' => true,
-	'ruwiki' => true,
 ],
 
 'wgRightsPage' => [
