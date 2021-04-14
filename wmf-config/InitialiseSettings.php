@@ -21448,10 +21448,10 @@ function wmfGetVariantSettings() {
 
 'wmgWBRepoConceptBaseUri' => [
 	'default' => null,
-	// note: this intentionally uses HTTP, not HTTPS;
+	// note: Wikidata is intentionally HTTP, Commons is intentionally HTTPS;
 	// see also the comment on wmgWikibaseClientRepoConceptBaseUri
-	'commonswiki' => 'http://commons.wikimedia.org/entity/',
-	'testcommonswiki' => 'http://test-commons.wikimedia.org/entity/',
+	'commonswiki' => 'https://commons.wikimedia.org/entity/',
+	'testcommonswiki' => 'https://test-commons.wikimedia.org/entity/',
 	'testwikidatawiki' => 'http://test.wikidata.org/entity/',
 	'wikidatawiki' => 'http://www.wikidata.org/entity/',
 ],
