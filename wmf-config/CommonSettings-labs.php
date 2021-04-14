@@ -258,7 +258,6 @@ if ( $wmgUseMath ) {
 	$wgMathWikibasePropertyIdHasPart = 'P253104';
 	$wgMathWikibasePropertyIdDefiningFormula = 'P253105';
 	$wgMathWikibasePropertyIdQuantitySymbol = 'P253106';
-	$wgMathUseRestBase = true;
 	// Temporary setting for conversion off RESTBase to pure Mathoid. See T274436
 	$wgMathUseRestBase = false;
 }

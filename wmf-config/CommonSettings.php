@@ -2779,7 +2779,7 @@ if ( $wmgUseMath ) {
 	$wgMathConcurrentReqs = 150;
 
 	// Temporary setting for conversion off RESTBase to pure Mathoid. See T274436
-	$wgMathUseRestBase = true;
+	$wgMathUseRestBase = false;
 
 	// Set up $wgMathFullRestbaseURL - similar to VE RESTBase config above
 	// HACK: $wgServerName is not available yet at this point, it's set by Setup.php
