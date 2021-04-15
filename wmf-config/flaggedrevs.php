@@ -17,7 +17,7 @@ $wgFlaggedRevsAutopromote = false;
 
 $wgFlaggedRevsStatsAge = false;
 
-// Configs that must be set before FlaggedRevsHooks::onExtensionFunctions
+// Configuration fields that must be set before other configuration has been loaded
 call_user_func( function () {
 	global $wgDBname,
 		$wgFlaggedRevsAutopromote, $wgFlaggedRevsAutoconfirm;
@@ -187,8 +187,9 @@ call_user_func( function () {
 	}
 } );
 
-// Configs that must be set after FlaggedRevsHooks::onExtensionFunctions for some reason???
-$wgExtensionFunctions[] = function () {
+// Configuration fields that must be set after all other configuration has been loaded
+// (probably to make sure it comes after FlaggedRevsSetup::doSetup)
+$wgHooks['MediaWikiServices'][] = function () {
 	global $wgAddGroups, $wgDBname, $wgDefaultUserOptions,
 		$wgFlaggedRevsNamespaces, $wgFlaggedRevsRestrictionLevels,
 		$wgFlaggedRevsStatsAge, $wgFlaggedRevsTags, $wgFlaggedRevsTagsRestrictions,
