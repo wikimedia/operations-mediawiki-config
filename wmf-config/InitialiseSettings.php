@@ -5900,6 +5900,8 @@ function wmfGetVariantSettings() {
 		101 => 'Discussioni_portale',
 		102 => 'Progetto',
 		103 => 'Discussioni_progetto',
+		118 => 'Bozza', // T280289
+		119 => 'Discussioni_bozza' // T280289
 	],
 	'jawiki' => [
 		NS_TALK => "ノート",
@@ -13489,6 +13491,8 @@ function wmfGetVariantSettings() {
 	],
 	'itwiki' => [
 		NS_USER => 'noindex,follow', // T107992
+		118 => 'noindex,nofollow', // T280289
+		119 => 'noindex,nofollow', // T280289
 	],
 	'kowiki' => [
 		NS_USER => 'noindex,follow', // T121301
@@ -13772,6 +13776,7 @@ function wmfGetVariantSettings() {
 	'default' => [],
 	'enwiki' => [ 118, 119 ], // draft and draft talk
 	'hewiki' => [ 118, 119 ], // draft and draft talk - T86329
+	'itwiki' => [ 118, 119 ], // draft and draft talk - T280289
 	'kowiki' => [ 118, 119 ], // draft and draft talk - T92798
 	'thwiki' => [ 118, 119 ], // draft and draft talk - T252959
 	'zhwiki' => [ 118, 119 ], // draft and draft talk - T91223
@@ -16257,6 +16262,10 @@ function wmfGetVariantSettings() {
 	'+hywiki' => [
 		'Սևագիր' => true, //Draft, T260825
 		'Վիքինախագիծ' => true, //Wikiproject, T260825
+	],
+	'+itwiki' => [
+		'Bozza' => true, // Draft - T280289
+		'Discussioni_bozza' => true // Draft talk - T280289
 	],
 	'+jawiki' => [
 		'Portal' => true, // T97313
