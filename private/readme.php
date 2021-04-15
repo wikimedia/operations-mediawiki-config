@@ -179,3 +179,9 @@ $wmgXhguiDBpassword = null;
  */
 $wgMediaModerationPhotoDNASubscriptionKey = 'subscription-key';
 $wgMediaModerationRecipientList = [];
+
+/**
+ * Used as a salt in VectorPrefDiffInstrumentation to hash the user id.
+ * @see mediawiki/extensions/WikimediaEvents
+ */
+$wgWMEVectorPrefDiffSalt = null;
