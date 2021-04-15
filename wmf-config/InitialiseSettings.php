@@ -15289,6 +15289,7 @@ function wmfGetVariantSettings() {
 		'*.president.az', // President of the Republic of Azerbaijan - T274789
 		'seer.ufrgs.br', // T270962
 		'inaturalist-open-data.s3.amazonaws.com', // iNaturalist - T275318
+		'*.jfklibrary.org', // JFK library - T279506
 	],
 ],
 
