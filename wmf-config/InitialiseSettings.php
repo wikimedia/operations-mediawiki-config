@@ -16300,6 +16300,7 @@ function wmfGetVariantSettings() {
 // Whether to enable true section editing. false, true or 'mobile'
 'wmgVisualEditorEnableVisualSectionEditing' => [
 	'default' => 'mobile',
+	'wikitech' => true,
 	'officewiki' => true,
 ],
 
