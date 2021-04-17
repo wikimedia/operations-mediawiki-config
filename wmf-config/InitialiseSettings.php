@@ -15604,9 +15604,6 @@ function wmfGetVariantSettings() {
 	'default' => [ 'default' => 86400, ],
 	'ukwiki' => [ 'default' => 180, ], // Temporary
 ],
-'wgAbuseFilterParserClass' => [
-	'default' => 'AbuseFilterCachingParser', // T156095
-],
 # @}
 
 'wgThumbLimits' => [
