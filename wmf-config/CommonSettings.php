@@ -3966,7 +3966,7 @@ if ( $wmgUseEventBus ) {
 		],
 		'eventgate-main' => [
 			'url' => "{$wmfLocalServices['eventgate-main']}/v1/events",
-			'timeout' => 26,
+			'timeout' => 62, // envoy overall req timeout + 1
 		]
 	];
 
