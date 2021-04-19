@@ -19720,7 +19720,7 @@ function wmfGetVariantSettings() {
 	'apiportalwiki' => [ 'vector', 'monobook', 'modern', 'cologneblue', 'timeless', 'minerva' ],
 ],
 
-'wgRelatedArticlesFooterWhitelistedSkins' => [
+'wgRelatedArticlesFooterAllowedSkins' => [
 	'default' => [ 'minerva', 'timeless' ], // T144812, T181242
 	'dewiki' => [ 'minerva' ], // T278611
 	'eswikinews' => [], // T230660
