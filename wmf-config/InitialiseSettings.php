@@ -24834,6 +24834,7 @@ function wmfGetVariantSettings() {
 'wgGEMentorshipMigrationStage' => [
 	'default' => SCHEMA_COMPAT_WRITE_OLD | SCHEMA_COMPAT_READ_OLD,
 	'testwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	'cswiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 ],
 
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
