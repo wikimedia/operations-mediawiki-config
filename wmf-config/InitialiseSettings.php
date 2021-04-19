@@ -24047,9 +24047,6 @@ function wmfGetVariantSettings() {
 
 'wgLegacyJavaScriptGlobals' => [
 	'default' => false,
-	'enwiki' => true,
-	'frwiki' => true,
-	'dewiki' => true,
 ],
 
 'wgRightsPage' => [
