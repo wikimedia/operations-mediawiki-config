@@ -19690,7 +19690,7 @@ function wmfGetVariantSettings() {
 	'wikivoyage' => 9,
 ],
 
-'wmgRelatedArticlesUseCirrusSearch' => [
+'wgRelatedArticlesUseCirrusSearch' => [
 	'default' => true,
 	'wikivoyage' => false, // T164391
 ],
@@ -19701,7 +19701,7 @@ function wmfGetVariantSettings() {
 	'apiportalwiki' => [ 'vector', 'monobook', 'modern', 'cologneblue', 'timeless', 'minerva' ],
 ],
 
-'wmgRelatedArticlesFooterWhitelistedSkins' => [
+'wgRelatedArticlesFooterWhitelistedSkins' => [
 	'default' => [ 'minerva', 'timeless' ], // T144812, T181242
 	'dewiki' => [ 'minerva' ], // T278611
 	'eswikinews' => [], // T230660

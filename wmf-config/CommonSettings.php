@@ -3339,17 +3339,9 @@ if ( $wmgUseRelatedArticles ) {
 	wfLoadExtension( 'RelatedArticles' );
 
 	$wgRelatedArticlesLoggingBucketSize = 0;
-	$wgRelatedArticlesUseCirrusSearch = $wmgRelatedArticlesUseCirrusSearch;
 	$wgRelatedArticlesOnlyUseCirrusSearch = false;
 	$wgRelatedArticlesDescriptionSource = 'wikidata';
 }
-
-// Workaround for T142663 - override flat arrays
-$wgExtensionFunctions[] = function () {
-	global $wmgRelatedArticlesFooterWhitelistedSkins, $wgRelatedArticlesFooterWhitelistedSkins;
-
-	$wgRelatedArticlesFooterWhitelistedSkins = $wmgRelatedArticlesFooterWhitelistedSkins;
-};
 
 if ( $wmgUseRevisionSlider ) {
 	wfLoadExtension( 'RevisionSlider' );
