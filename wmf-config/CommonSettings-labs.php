@@ -410,4 +410,7 @@ $wgCodeMirrorLineNumberingNamespaces = null;
 $wgTemplateDataSuggestedValuesEditor = true;
 $wgVisualEditorTransclusionDialogSuggestedValues = true;
 
+// Temporary feature flags for changes to the descriptions in the transclusion dialog, see T271800
+$wgVisualEditorTransclusionDialogInlineDescriptions = true;
+
 } # end safeguard
