@@ -26246,7 +26246,7 @@ function wmfGetVariantSettings() {
 
 'wgGEHomepageNewAccountVariants' => [
 	'default' => [
-		'D' => 100,
+		'null' => 100,
 	],
 ],
 
