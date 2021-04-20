@@ -24799,6 +24799,7 @@ function wmfGetVariantSettings() {
 	'testwiki' => true,
 	'arwiki' => true,
 	'bnwiki' => true,
+	'cawiki' => true,
 	'cswiki' => true,
 	'dawiki' => true,
 	'eowiki' => true,
@@ -24845,6 +24846,7 @@ function wmfGetVariantSettings() {
 
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
+	'cawiki' => false,
 	'eswiki' => false,
 	'shwiki' => false,
 ],
@@ -24930,6 +24932,7 @@ function wmfGetVariantSettings() {
 	'testwiki' => 'Special:MyLanguage/Help:Contents',
 	'arwiki' => 'مساعدة:محتويات',
 	'bnwiki' => 'সাহায্য:সূচী',
+	'cawiki' => 'Viquipèdia:Ajuda',
 	'cswiki' => 'Nápověda:Obsah',
 	'dawiki' => 'Hjælp:Forside',
 	'eowiki' => 'Helpo:Enhavo',
@@ -25045,6 +25048,33 @@ function wmfGetVariantSettings() {
 		[
 			'title' => 'উইকিপিডিয়া:নিবন্ধ উইজার্ড',
 			'text' => 'নিবন্ধ উইজার্ড',
+			'id' => 'articlewizard',
+		],
+	],
+	'cawiki' => [
+		[
+			'title' => 'Com escriure un bon article',
+			'text' => 'Viquipèdia:Llibre d\'estil',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/ca',
+			'text' => 'Com editar una pàgina',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/ca#Images',
+			'text' => 'Com inserir imatges',
+			'id' => 'images',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/ca#Editing_references',
+			'text' => 'Com inserir referències',
+			'id' => 'references',
+		],
+		[
+			'title' => 'Ajuda:Com iniciar una pàgina',
+			'text' => 'Com es crea un article',
 			'id' => 'articlewizard',
 		],
 	],
@@ -26015,6 +26045,10 @@ function wmfGetVariantSettings() {
 	'bnwiki' => [
 		'create' => 'উইকিপিডিয়া:নতুন নিবন্ধ শুরুকরণ',
 		'image' => 'সাহায্য:চিত্রের সাথে পরিচয় (দৃশ্যমান সম্পাদনা)',
+	],
+	'cawiki' => [
+		'create' => 'Ajuda:Com iniciar una pàgina',
+		'image' => 'mw:Help:VisualEditor/User_guide/ca#Images',
 	],
 	'cswiki' => [
 		'create' => 'Nápověda:Jak vytvořit článek',
