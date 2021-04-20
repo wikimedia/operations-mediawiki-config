@@ -512,7 +512,10 @@ function wmfGetLabsOverrideSettings() {
 			'default' => '2', // Latest Vector
 		],
 		'wgVectorLanguageInHeader' => [
-			'default' => true,
+			'default' => [
+				'logged_in' => true,
+				'logged_out' => true
+			],
 		],
 		'wgVectorUseWvuiSearch' => [
 			'default' => true
