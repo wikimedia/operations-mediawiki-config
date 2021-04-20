@@ -24833,6 +24833,7 @@ function wmfGetVariantSettings() {
 	'thwiki' => true,
 	'trwiki' => true,
 	'ukwiki' => true,
+	'urwiki' => true,
 	'viwiki' => true,
 ],
 
@@ -24851,6 +24852,7 @@ function wmfGetVariantSettings() {
 	'elwiki' => false,
 	'eswiki' => false,
 	'shwiki' => false,
+	'urwiki' => false,
 ],
 
 'wgWelcomeSurveyEnabled' => [
@@ -24968,6 +24970,7 @@ function wmfGetVariantSettings() {
 	'tewiki' => 'సహాయం:సూచిక',
 	'trwiki' => 'Yardım:İçindekiler',
 	'ukwiki' => 'Вікіпедія:Довідка',
+	'urwiki' => 'معاونت:مندرجات',
 	'viwiki' => 'Trợ_giúp:Mục_lục',
 ],
 
@@ -25957,6 +25960,33 @@ function wmfGetVariantSettings() {
 			'id' => 'bebold',
 		]
 	],
+	'urwiki' => [
+		[
+			'title' => 'ویکیپیڈیا:اسلوب نامہ',
+			'text' => 'اچھا مضمون کیسے لکھیں؟',
+			'id' => 'mos'
+		],
+		[
+			'title' => 'معاونت:ترمیم',
+			'text' => 'کسی صفحے میں ترمیم کرنے کا طریقہ',
+			'id' => 'editing'
+		],
+		[
+			'title' => 'mw:Special:MyLanguage/Help:VisualEditor/User_guide#Images',
+			'text' => 'تصاویر داخل کرنے کا طریقہ',
+			'id' => 'images'
+		],
+		[
+			'title' => 'mw:Special:MyLanguage/Help:VisualEditor/User_guide#Editing_references',
+			'text' => 'حوالہ جات داخل کرنے کا طریقہ',
+			'id' => 'references'
+		],
+		[
+			'title' => 'ویکیپیڈیا:ساحر تخلیق مضمون',
+			'text' => 'مضمون کیسے بنایا جائے',
+			'id' => 'articlewizard'
+		],
+	],
 	'viwiki' => [
 		[
 			'title' => 'Wikipedia:Bài_viết_đầu_tiên_của_bạn',
@@ -26194,6 +26224,10 @@ function wmfGetVariantSettings() {
 	'ukwiki' => [
 		'create' => 'Довідка:Створення нової статті',
 		'image' => 'Довідка:Як працювати із зображеннями у Візуальному редакторі/1',
+	],
+	'urwiki' => [
+		'create' => 'ویکیپیڈیا:ساحر تخلیق مضمون',
+		'image' => 'mw:Special:MyLanguage/Help:VisualEditor/User_guide#Images',
 	],
 	'viwiki' => [
 		'create' => 'Wikipedia:Bài viết đầu tiên của bạn',
