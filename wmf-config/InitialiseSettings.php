@@ -2960,6 +2960,9 @@ function wmfGetVariantSettings() {
 		'Uiccionariu' => NS_PROJECT, // T99315
 		'Uiccionariu_alderique' => NS_PROJECT_TALK,
 	],
+	'+azwiki' => [
+		'VP' => NS_PROJECT, // T280577
+	],
 	'+azwikibooks' => [
 		'Wikibooks_müzakirəsi' => NS_PROJECT_TALK, // T33068
 	],
