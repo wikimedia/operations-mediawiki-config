@@ -24803,6 +24803,7 @@ function wmfGetVariantSettings() {
 	'cswiki' => true,
 	'dawiki' => true,
 	'eowiki' => true,
+	'elwiki' => true,
 	'eswiki' => true,
 	'euwiki' => true,
 	'fawiki' => true,
@@ -24847,6 +24848,7 @@ function wmfGetVariantSettings() {
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
 	'cawiki' => false,
+	'elwiki' => false,
 	'eswiki' => false,
 	'shwiki' => false,
 ],
@@ -24936,6 +24938,7 @@ function wmfGetVariantSettings() {
 	'cswiki' => 'Nápověda:Obsah',
 	'dawiki' => 'Hjælp:Forside',
 	'eowiki' => 'Helpo:Enhavo',
+	'elwiki' => 'Βικιπαίδεια:Βοήθεια',
 	'eswiki' => 'Ayuda:Contenidos',
 	'euwiki' => 'Laguntza:Sarrera',
 	'fawiki' => 'راهنما:فهرست',
@@ -25156,6 +25159,33 @@ function wmfGetVariantSettings() {
 		[
 			'title' => 'Helpo:Kiel krei paĝon',
 			'text' => 'Kiel krei paĝon',
+			'id' => 'articlewizard',
+		],
+	],
+	'elwiki' => [
+		[
+			'title' => 'Βικιπαίδεια:Εγχειρίδιο μορφής',
+			'text' => 'Πώς να γράψετε ένα καλό λήμμα',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/el',
+			'text' => 'Πώς να επεξεργαστείτε μια σελίδα',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/el#Images',
+			'text' => 'Πώς να εισαγάγετε εικόνες',
+			'id' => 'images',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/el#Editing_references',
+			'text' => 'Πώς να εισαγάγετε αναφορές',
+			'id' => 'references',
+		],
+		[
+			'title' => 'Βικιπαίδεια:Οδηγός λήμματος',
+			'text' => 'Οδηγό Δημιουργίας Λήμματος στη Βικιπαίδεια',
 			'id' => 'articlewizard',
 		],
 	],
@@ -26061,6 +26091,10 @@ function wmfGetVariantSettings() {
 	'euwiki' => [
 		'create' => 'Laguntza:Sarrera berriak',
 		'image' => 'Laguntza:Irudiak',
+	],
+	'elwiki' => [
+		'create' => 'Βικιπαίδεια:Οδηγός λήμματος',
+		'image' => 'mw:Help:VisualEditor/User_guide/el#Images',
 	],
 	'eswiki' => [
 		'create' => 'Wikipedia:Asistente para la creación de artículos',
