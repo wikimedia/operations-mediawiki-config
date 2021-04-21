@@ -24850,7 +24850,6 @@ function wmfGetVariantSettings() {
 	'default' => true,
 	'cawiki' => false,
 	'elwiki' => false,
-	'eswiki' => false,
 	'shwiki' => false,
 	'urwiki' => false,
 ],
