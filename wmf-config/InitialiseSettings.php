@@ -15334,6 +15334,13 @@ function wmfGetVariantSettings() {
 	'labtestwiki' => true,
 ],
 
+'wmgUseFooterTechCodeOfConductLink' => [
+	'default' => false,
+	'mediawikiwiki' => true,
+	'labswiki' => true,
+	'labtestwiki' => true,
+],
+
 'wgMaxMsgCacheEntrySize' => [
 	'default' => 1024,
 ],

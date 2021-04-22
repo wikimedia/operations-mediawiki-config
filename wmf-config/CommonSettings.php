@@ -1510,7 +1510,7 @@ if ( $wmgUseFooterContactLink ) {
 		}
 	};
 }
-if ( $wmgUseFooterCodeOfConductLink ) {
+if ( $wmgUseFooterTechCodeOfConductLink ) {
 	$wgHooks['SkinAddFooterLinks'][] = function ( $sk, $key, &$footerlinks ) {
 		if ( $key === 'places' ) {
 			$footerlinks['wm-codeofconduct'] = Html::element( 'a', [ 'href' => $sk->msg( 'wm-codeofconduct-url' )->escaped() ],
