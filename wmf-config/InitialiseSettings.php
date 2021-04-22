@@ -15327,11 +15327,12 @@ function wmfGetVariantSettings() {
 	'frwiki' => true, // T202014
 ],
 
+// Temporarily unused, see T280886
 'wmgUseFooterCodeOfConductLink' => [
-	'default' => false,
-	'mediawikiwiki' => true,
-	'labswiki' => true,
-	'labtestwiki' => true,
+	'default' => true,
+	'mediawikiwiki' => false,
+	'labswiki' => false,
+	'labtestwiki' => false,
 ],
 
 'wmgUseFooterTechCodeOfConductLink' => [
