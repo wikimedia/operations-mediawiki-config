@@ -25833,14 +25833,6 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
-'wgWMEPrintEnabled' => [
-	'default' => true  // T176341
-],
-
-'wgWMEPrintSamplingRate' => [
-	'default' => 0 // T208454
-],
-
 'wgWMEDesktopWebUIActionsTracking' => [
 	'default' => 0,
 	'desktop-improvements' => 0.2, // T258058
