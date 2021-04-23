@@ -22339,6 +22339,7 @@ function wmfGetVariantSettings() {
 // Extension for Special:MediaSearch
 'wmgUseMediaSearch' => [
 	'default' => false,
+	'testcommonswiki' => true,
 ],
 
 'wgMediaSearchExternalEntitySearchBaseUri' => [
