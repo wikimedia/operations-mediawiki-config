@@ -22333,6 +22333,8 @@ function wmfGetVariantSettings() {
 ],
 
 'wgMediaInfoMediaSearchDefaultForAnon' => [
+	// NOTE: keep in sync with wgMediaSearchDefaultForAnon (until
+	// this is removed)
 	'commonswiki' => true,
 ],
 
@@ -22340,6 +22342,13 @@ function wmfGetVariantSettings() {
 'wmgUseMediaSearch' => [
 	'default' => false,
 	'testcommonswiki' => true,
+	'commonswiki' => true,
+],
+
+'wgMediaSearchDefaultForAnon' => [
+	// NOTE: keep in sync with wgMediaInfoMediaSearchDefaultForAnon (until
+	// that is removed)
+	'commonswiki' => true,
 ],
 
 'wgMediaSearchExternalEntitySearchBaseUri' => [
