@@ -1813,7 +1813,7 @@ function wmfGetLabsOverrideSettings() {
 			'default' => 'available',
 		],
 
-		'-wgDiscussionTools_newtopictool' => [
+		'-wgDiscussionTools_sourcemodetoolbar' => [
 			'default' => 'default',
 		],
 
