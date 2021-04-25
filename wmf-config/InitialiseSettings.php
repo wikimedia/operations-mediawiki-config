@@ -24845,6 +24845,10 @@ function wmfGetVariantSettings() {
 	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
 ],
 
+'wgGEWikiConfigEnabled' => [
+	'default' => false,
+],
+
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
 	'cawiki' => false,
