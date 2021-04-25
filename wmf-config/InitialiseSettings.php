@@ -5290,7 +5290,7 @@ function wmfGetVariantSettings() {
 		'exec' => 'debug',
 		'export' => 'debug',
 		'ExtensionDistributor' => 'error', // T225243
-		'ExternalStore' => 'debug',
+		'ExternalStore' => 'warning', // T281048
 		'fatal' => 'debug',
 		'FileImporter' => 'debug',
 		'FileOperation' => 'debug',
