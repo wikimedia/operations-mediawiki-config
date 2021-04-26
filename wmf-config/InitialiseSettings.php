@@ -24847,6 +24847,7 @@ function wmfGetVariantSettings() {
 
 'wgGEWikiConfigEnabled' => [
 	'default' => false,
+	'testwiki' => true,
 ],
 
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
