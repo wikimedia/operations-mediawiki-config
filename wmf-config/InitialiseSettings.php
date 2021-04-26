@@ -7715,6 +7715,20 @@ function wmfGetVariantSettings() {
 'wgVectorDefaultSidebarVisibleForAnonymousUser' => [
 	'desktop-improvements' => true,
 ],
+'wgVectorLanguageInHeader' => [
+	'default' => [
+		'logged_in' => false,
+		'logged_out' => false,
+	],
+	'testwiki' => [
+		'logged_in' => true,
+		'logged_out' => true,
+	],
+	'officewiki' => [
+		'logged_in' => true,
+		'logged_out' => true,
+	],
+],
 'wgVectorUseWvuiSearch' => [
 	'default' => true,
 	'commonswiki' => false,
