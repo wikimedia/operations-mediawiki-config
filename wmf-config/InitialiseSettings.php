@@ -7716,18 +7716,10 @@ function wmfGetVariantSettings() {
 	'desktop-improvements' => true,
 ],
 'wgVectorLanguageInHeader' => [
-	'default' => [
-		'logged_in' => false,
-		'logged_out' => false,
-	],
-	'testwiki' => [
-		'logged_in' => true,
-		'logged_out' => true,
-	],
-	'officewiki' => [
-		'logged_in' => true,
-		'logged_out' => true,
-	],
+	// Use booleans rather than arrays until 1.37.0-wmf.3 is everywhere with no risk of rollback.
+	'default' => false,
+	'testwiki' => true,
+	'officewiki' => true,
 ],
 'wgVectorUseWvuiSearch' => [
 	'default' => true,
