@@ -8514,6 +8514,11 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
+'wgEnablePartialActionBlocks' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 'wgOriginTrials' => [
 	'default' => [],
 ],
