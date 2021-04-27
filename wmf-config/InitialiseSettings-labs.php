@@ -1191,6 +1191,10 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true,
 			'eswiki' => false,
 		],
+		'wgEnablePartialActionBlocks' => [
+			'default' => true,
+			'eswiki' => false,
+		],
 		'wgPropertySuggesterClassifyingPropertyIds' => [
 			'wikidatawiki' => [ 694 ],
 		],
