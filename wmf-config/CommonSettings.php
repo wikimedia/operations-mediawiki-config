@@ -2261,7 +2261,7 @@ if ( $wmgUseLiquidThreads || $wmgLiquidThreadsFrozen ) {
 }
 
 if ( $wmgUseGlobalUsage ) {
-	//wfLoadExtension( 'GlobalUsage' );
+	wfLoadExtension( 'GlobalUsage' );
 	$wgGlobalUsageDatabase = 'commonswiki';
 	$wgGlobalUsageSharedRepoWiki = 'commonswiki';
 	$wgGlobalUsagePurgeBacklinks = true;
