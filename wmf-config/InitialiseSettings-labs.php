@@ -1020,10 +1020,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => SCHEMA_COMPAT_NEW,
 		],
 
-		'wmgUseJADE' => [
-			'default' => true,
-		],
-
 		'wgOresUiEnabled' => [
 			'default' => true,
 			'wikidatawiki' => false,

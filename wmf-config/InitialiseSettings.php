@@ -23523,9 +23523,7 @@ function wmfGetVariantSettings() {
 	'default' => true,
 	'loginwiki' => false, // T61702
 ],
-'wmgUseJADE' => [
-	'default' => false,
-],
+
 'wmgUseORES' => [
 	'default' => false,
 	'arwiki' => true, // T192498
