@@ -25707,7 +25707,7 @@ return [
 	'wikitech' => 'memcached-pecl',
 ],
 'wgCentralAuthTokenCacheType' => [
-	'default' => 'mcrouter', // declared in mc.php
+	'default' => 'mcrouter-primary-dc', // declared in mc.php
 	'wikitech' => 'memcached-pecl',
 ],
 'wgStatsCacheType' => [
