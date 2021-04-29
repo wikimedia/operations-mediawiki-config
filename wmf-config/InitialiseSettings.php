@@ -25628,6 +25628,10 @@ return [
 	'default' => 'db-mainstash',
 	'wikitech' => 'memcached-pecl',
 ],
+'wgCentralAuthTokenCacheType' => [
+	'default' => 'mcrouter', // declared in mc.php
+	'wikitech' => 'memcached-pecl',
+],
 
 'wgAbuseFilterProfilerCache' => [
 	'default' => 'redis_local', // not using mainstash due to high traffic
