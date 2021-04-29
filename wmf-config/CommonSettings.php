@@ -3782,10 +3782,6 @@ if ( $wmgUseMediaModeration ) {
 	$wgMediaModerationFrom = 'no-reply@wikimedia.org';
 }
 
-if ( $wmgUseJADE ) {
-	wfLoadExtension( 'Jade' );
-}
-
 if ( $wmgUseORES ) {
 	wfLoadExtension( 'ORES' );
 	$wgOresBaseUrl = 'http://localhost:6010/';
