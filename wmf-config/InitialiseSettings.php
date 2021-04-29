@@ -17227,11 +17227,13 @@ function wmfGetVariantSettings() {
 
 'wgMFMobileFormatterOptions' => [
 	'default' => [
+		'excludeNamespaces' => [ 10, -1 ],
 		'maxImages' => 1000,
 		'maxHeadings' => 4000,
 		'headings' => [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ]
 	],
 	'wikivoyage' => [
+		'excludeNamespaces' => [ 10, -1 ],
 		'maxImages' => 1000,
 		'maxHeadings' => 4000,
 		'headings' => [ 'h2', 'h3', 'h4', 'h5', 'h6' ] //T110436, T110837
