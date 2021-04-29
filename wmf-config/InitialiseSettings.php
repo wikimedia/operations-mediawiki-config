@@ -16469,6 +16469,10 @@ function wmfGetVariantSettings() {
 	'default' => [ 'external-machine-translation' ],
 ],
 
+'wmgVisualEditorSuggestedValues' => [
+	'default' => true,
+],
+
 // --------------- VisualEditor end ---------------
 
 'wgCiteResponsiveReferences' => [
@@ -23510,6 +23514,11 @@ function wmfGetVariantSettings() {
 	'default' => true,
 	'lockeddown' => false, // T61702
 ],
+
+'wmgTemplateDataSuggestedValues' => [
+	'default' => true,
+],
+
 'wmgUseCharInsert' => [
 	'default' => true,
 	'loginwiki' => false, // T61702
