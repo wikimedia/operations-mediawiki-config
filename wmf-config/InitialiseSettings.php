@@ -26058,6 +26058,7 @@ function wmfGetVariantSettings() {
 'wgGENewcomerTasksLinkRecommendationsEnabled' => [
 	'default' => false,
 	'testwiki' => true,
+	'cswiki' => true,
 ],
 
 'wgGELinkRecommendationsFrontendEnabled' => [
