@@ -19291,7 +19291,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgDiscussionTools_sourcemodetoolbar' => [
-	'default' => 'unavailable',
+	'default' => 'default', // T279124
 ],
 
 'wgDiscussionTools_topicsubscription' => [
