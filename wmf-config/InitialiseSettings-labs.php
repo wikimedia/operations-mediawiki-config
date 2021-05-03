@@ -1107,6 +1107,14 @@ function wmfGetLabsOverrideSettings() {
 		'wgGELinkRecommendationsFrontendEnabled' => [
 			'default' => true,
 		],
+		'wgGEHomepageDefaultVariant' => [
+			'default' => 'linkrecommendation',
+		],
+		'wgGEHomepageNewAccountVariants' => [
+			'default' => [
+				'linkrecommendation' => 100,
+			],
+		],
 		'wgGELinkRecommendationServiceTimeout' => [
 			'default' => 30,
 		],
