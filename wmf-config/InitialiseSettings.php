@@ -26262,6 +26262,10 @@ function wmfGetVariantSettings() {
 	'euwiki' => 100,
 ],
 
+'wgGEHomepageDefaultVariant' => [
+	'default' => 'null',
+],
+
 'wgGEHomepageNewAccountVariants' => [
 	'default' => [
 		'null' => 100,
