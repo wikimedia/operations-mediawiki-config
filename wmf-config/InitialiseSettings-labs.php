@@ -114,11 +114,11 @@ function wmfGetLabsOverrideSettings() {
 		],
 
 		'-wgUploadPath' => [
-			'default' => 'https://upload.beta.wmflabs.org/$site/$lang',
+			'default' => 'https://upload.wikimedia.beta.wmflabs.org/$site/$lang',
 			'private' => '/w/img_auth.php',
-			'commonswiki' => 'https://upload.beta.wmflabs.org/wikipedia/commons',
-			'metawiki' => 'https://upload.beta.wmflabs.org/wikipedia/meta',
-			'testwiki' => 'https://upload.beta.wmflabs.org/wikipedia/test',
+			'commonswiki' => 'https://upload.wikimedia.beta.wmflabs.org/wikipedia/commons',
+			'metawiki' => 'https://upload.wikimedia.beta.wmflabs.org/wikipedia/meta',
+			'testwiki' => 'https://upload.wikimedia.beta.wmflabs.org/wikipedia/test',
 		],
 
 		'-wgThumbnailBuckets' => [
@@ -656,7 +656,7 @@ function wmfGetLabsOverrideSettings() {
 		],
 
 		'-wgScorePath' => [
-			'default' => "//upload.beta.wmflabs.org/score",
+			'default' => "//upload.wikimedia.beta.wmflabs.org/score",
 		],
 
 		'wgRateLimitsExcludedIPs' => [

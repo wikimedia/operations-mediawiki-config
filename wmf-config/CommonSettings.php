@@ -94,7 +94,7 @@ switch ( $wmfRealm ) {
 case 'labs':
 	$wmfHostnames['meta']     = 'meta.wikimedia.beta.wmflabs.org';
 	$wmfHostnames['test']     = 'test.wikipedia.beta.wmflabs.org';
-	$wmfHostnames['upload']   = 'upload.beta.wmflabs.org';
+	$wmfHostnames['upload']   = 'upload.wikimedia.beta.wmflabs.org';
 	$wmfHostnames['wikidata'] = 'wikidata.beta.wmflabs.org';
 	break;
 case 'production':
