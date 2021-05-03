@@ -26064,6 +26064,7 @@ function wmfGetVariantSettings() {
 'wgGELinkRecommendationsFrontendEnabled' => [
 	'default' => false,
 	'testwiki' => true,
+	'cswiki' => true,
 ],
 
 'wgGEDeveloperSetup' => [
