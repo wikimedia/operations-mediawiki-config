@@ -36,6 +36,7 @@
 
 use MediaWiki\Auth\AuthenticationResponse;
 use MediaWiki\Logger\LoggerFactory;
+use MediaWiki\MediaWikiServices;
 use Wikimedia\MWConfig\ServiceConfig;
 use Wikimedia\MWConfig\XWikimediaDebug;
 
@@ -1896,11 +1897,21 @@ function wmfGetPrivilegedGroups( $username, $user ) {
 		} catch ( Exception $e ) {
 			// Don't block login if we can't query attached (T119736)
 			MWExceptionHandler::logException( $e );
-			$groups = array_merge( $user->getGroups(), $centralUser->getGlobalGroups() );
+			$groups = array_merge(
+				MediaWikiServices::getInstance()
+					->getUserGroupManager()
+					->getUserGroups( $user ),
+				$centralUser->getGlobalGroups()
+			);
 		}
 	} else {
 		// use effective groups, as we set 'user' as privileged for private/fishbowl wikis
-		$groups = array_intersect( $wmgPrivilegedGroups, $user->getEffectiveGroups() );
+		$groups = array_intersect(
+			$wmgPrivilegedGroups,
+			MediaWikiServices::getInstance()
+				->getUserGroupManager()
+				->getUserEffectiveGroups( $user )
+			);
 	}
 	return $groups;
 }
