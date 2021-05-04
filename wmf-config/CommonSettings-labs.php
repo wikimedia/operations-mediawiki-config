@@ -420,4 +420,9 @@ $wgVisualEditorTemplateSearchImprovements = true;
 // Use ReferencePreviews as full default feature on the beta cluster
 $wgPopupsReferencePreviewsBetaFeature = false;
 
+// Enable ChessBrowser extension, see T244075
+if ( $wmgUseChessBrowser ) {
+	wfLoadExtension( 'ChessBrowser' );
+}
+
 } # end safeguard

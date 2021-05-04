@@ -16,6 +16,7 @@ $IP/extensions/CentralAuth/extension.json
 $IP/extensions/CentralNotice/extension.json
 $IP/extensions/CharInsert/extension.json
 $IP/extensions/CheckUser/extension.json
+$IP/extensions/ChessBrowser/extension.json
 $IP/extensions/CirrusSearch/extension.json
 $IP/extensions/Cite/extension.json
 $IP/extensions/CiteThisPage/extension.json

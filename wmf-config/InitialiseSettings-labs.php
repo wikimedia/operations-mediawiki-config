@@ -1891,5 +1891,8 @@ function wmfGetLabsOverrideSettings() {
 		'wmgWikibaseTmpSerializeEmptyListsAsObjects' => [
 			'default' => true,
 		],
+		'wmgUseChessBrowser' => [
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()
