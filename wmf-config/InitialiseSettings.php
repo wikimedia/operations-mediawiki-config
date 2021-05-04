@@ -25290,27 +25290,27 @@ function wmfGetVariantSettings() {
 	'enwiki' => [
 		[
 			'title' => 'Wikipedia:Manual of Style',
-			'text' => '',
+			'text' => 'How to write a good article',
 			'id' => 'mos',
 		],
 		[
 			'title' => 'Help:Introduction to editing with VisualEditor/1',
-			'text' => '',
+			'text' => 'How to edit a page',
 			'id' => 'editing',
 		],
 		[
 			'title' => 'Help:Introduction to images with VisualEditor/1',
-			'text' => '',
+			'text' => 'How to add an image',
 			'id' => 'images',
 		],
 		[
 			'title' => 'Help:Introduction to referencing with VisualEditor/1',
-			'text' => '',
+			'text' => 'How to edit a citation',
 			'id' => 'references',
 		],
 		[
 			'title' => 'Wikipedia:Article wizard/version1',
-			'text' => 'Article Wizard',
+			'text' => 'How to create a new article',
 			'id' => 'articlewizard',
 		],
 	],
