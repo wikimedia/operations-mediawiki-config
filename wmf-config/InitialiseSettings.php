@@ -24864,6 +24864,7 @@ function wmfGetVariantSettings() {
 	'dawiki' => true,
 	'eowiki' => true,
 	'elwiki' => true,
+	'enwiki' => true,
 	'eswiki' => true,
 	'euwiki' => true,
 	'fawiki' => true,
@@ -24915,6 +24916,7 @@ function wmfGetVariantSettings() {
 	'bgwiki' => false,
 	'cawiki' => false,
 	'elwiki' => false,
+	'enwiki' => false,
 	'shwiki' => false,
 	'urwiki' => false,
 ],
@@ -25006,6 +25008,7 @@ function wmfGetVariantSettings() {
 	'dawiki' => 'Hjælp:Forside',
 	'eowiki' => 'Helpo:Enhavo',
 	'elwiki' => 'Βικιπαίδεια:Βοήθεια',
+	'enwiki' => 'Help:Contents',
 	'eswiki' => 'Ayuda:Contenidos',
 	'euwiki' => 'Laguntza:Sarrera',
 	'fawiki' => 'راهنما:فهرست',
@@ -25281,6 +25284,33 @@ function wmfGetVariantSettings() {
 		[
 			'title' => 'Βικιπαίδεια:Οδηγός λήμματος',
 			'text' => 'Οδηγός δημιουργίας λήμματος στη Βικιπαίδεια',
+			'id' => 'articlewizard',
+		],
+	],
+	'enwiki' => [
+		[
+			'title' => 'Wikipedia:Manual of Style',
+			'text' => '',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'Help:Introduction to editing with VisualEditor/1',
+			'text' => '',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'Help:Introduction to images with VisualEditor/1',
+			'text' => '',
+			'id' => 'images',
+		],
+		[
+			'title' => 'Help:Introduction to referencing with VisualEditor/1',
+			'text' => '',
+			'id' => 'references',
+		],
+		[
+			'title' => 'Wikipedia:Article wizard/version1',
+			'text' => 'Article Wizard',
 			'id' => 'articlewizard',
 		],
 	],
