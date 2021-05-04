@@ -5091,6 +5091,7 @@ function wmfGetVariantSettings() {
 		'sysop',
 	],
 	'arwiki' => [ '', 'autoconfirmed', 'editautoreviewprotected', 'review', 'sysop' ], // T54109, T146575, T225896
+	'azwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T281860
 	'bgwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T269709
 	'ckbwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T54533
 	'commonswiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T227420
@@ -5139,6 +5140,7 @@ function wmfGetVariantSettings() {
 	'+viwiki' => [ 'extendedconfirmed' ], // T215493
 	'+rowiki' => [ 'extendedconfirmed' ], // T254471
 	'+svwiki' => [ 'extendedconfirmed' ], // T279836
+	'+azwiki' => [ 'extendedconfirmed' ], // T281860
 ],
 
 'wgSiteNotice' => [
@@ -8753,6 +8755,9 @@ function wmfGetVariantSettings() {
 			'autopatrol' => true,
 		], // T196488, T244338
 		'rollbacker' => [ 'rollback' => true ], // T215200
+		'bot' => [ 'extendedconfirmed' => true ], // T281860
+		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T281860
+		'sysop' => [ 'extendedconfirmed' => true ], // T281860
 	],
 	'+azwikibooks' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T231493
@@ -11316,6 +11321,7 @@ function wmfGetVariantSettings() {
 			'autopatrolled', // T196488
 			'patroller', // T196488
 			'rollbacker', // T215200
+			'extendedconfirmed', // T281860
 		],
 	],
 	'+azwikibooks' => [
@@ -12147,6 +12153,7 @@ function wmfGetVariantSettings() {
 			'autopatrolled', // T196488
 			'patroller', // T196488
 			'rollbacker', // T215200
+			'extendedconfirmed', // T281860
 		],
 	],
 	'+azwikibooks' => [
@@ -14370,6 +14377,14 @@ function wmfGetVariantSettings() {
 			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
 			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
 		], // T279836
+	],
+	'azwiki' => [
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 30 * 86400 ], // 30 days
+			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+		], // T281860
 	],
 ],
 
