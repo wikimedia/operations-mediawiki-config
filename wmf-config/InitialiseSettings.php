@@ -26286,12 +26286,12 @@ function wmfGetVariantSettings() {
 ],
 
 'wgGEHomepageDefaultVariant' => [
-	'default' => 'null',
+	'default' => 'control',
 ],
 
 'wgGEHomepageNewAccountVariants' => [
 	'default' => [
-		'null' => 100,
+		'control' => 100,
 	],
 ],
 
