@@ -24857,6 +24857,7 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'testwiki' => true,
 	'arwiki' => true,
+	'bgwiki' => true,
 	'bnwiki' => true,
 	'cawiki' => true,
 	'cswiki' => true,
@@ -24911,6 +24912,7 @@ function wmfGetVariantSettings() {
 
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
+	'bgwiki' => false,
 	'cawiki' => false,
 	'elwiki' => false,
 	'shwiki' => false,
@@ -24997,6 +24999,7 @@ function wmfGetVariantSettings() {
 	'default' => '',
 	'testwiki' => 'Special:MyLanguage/Help:Contents',
 	'arwiki' => 'مساعدة:محتويات',
+	'bgwiki' => 'Уикипедия:Първи стъпки',
 	'bnwiki' => 'সাহায্য:সূচী',
 	'cawiki' => 'Viquipèdia:Ajuda',
 	'cswiki' => 'Nápověda:Obsah',
@@ -25090,6 +25093,33 @@ function wmfGetVariantSettings() {
 			'title' => 'ويكيبيديا:بوابة_المشاركة/مراسلة_مستخدم',
 			'text' => 'مراسلة مستخدم',
 			'id' => 'discussion',
+		],
+	],
+	'bgwiki' => [
+		[
+			'title' => 'Уикипедия:Стил',
+			'text' => 'Как да напиша добра статия',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/bg',
+			'text' => 'Как да редактирате страница',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/bg#Images',
+			'text' => 'Как да добавяте изображения',
+			'id' => 'images',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/bg#Editing_references',
+			'text' => 'Как да добавяте референции',
+			'id' => 'references',
+		],
+		[
+			'title' => 'Уикипедия:Вълшебник',
+			'text' => 'Как да създадете статия',
+			'id' => 'articlewizard',
 		],
 	],
 	'bnwiki' => [
@@ -26171,6 +26201,10 @@ function wmfGetVariantSettings() {
 	'arwiki' => [
 		'create' => 'ويكيبيديا:مقالتك الأولى',
 		'image' => 'مساعدة:مقدمة عن رفع الصور/1',
+	],
+	'bgwiki' => [
+		'create' => 'mw:Help:VisualEditor/User_guide/bg',
+		'image' => 'mw:Help:VisualEditor/User_guide/bg#Images',
 	],
 	'bnwiki' => [
 		'create' => 'উইকিপিডিয়া:নতুন নিবন্ধ শুরুকরণ',
