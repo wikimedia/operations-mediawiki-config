@@ -26075,13 +26075,19 @@ function wmfGetVariantSettings() {
 'wgGENewcomerTasksLinkRecommendationsEnabled' => [
 	'default' => false,
 	'testwiki' => true,
+	'arwiki' => true,
+	'bnwiki' => true,
 	'cswiki' => true,
+	'viwiki' => true,
 ],
 
 'wgGELinkRecommendationsFrontendEnabled' => [
 	'default' => false,
 	'testwiki' => true,
+	'arwiki' => true,
+	'bnwiki' => true,
 	'cswiki' => true,
+	'viwiki' => true,
 ],
 
 'wgGEDeveloperSetup' => [
