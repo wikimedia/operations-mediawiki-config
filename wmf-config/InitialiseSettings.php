@@ -26292,6 +26292,7 @@ function wmfGetVariantSettings() {
 'wgGEHomepageNewAccountVariants' => [
 	'default' => [
 		'control' => 100,
+		'linkrecommendation' => 0,
 	],
 ],
 
