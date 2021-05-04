@@ -26426,6 +26426,7 @@ function wmfGetVariantSettings() {
 	'bnwiki' => 'উইকিপিডিয়া:স্বাগতম,_নবাগত/স্বাক্ষর',
 	'cswiki' => 'Wikipedie:Potřebuji_pomoc/Mentoři',
 	'elwiki' => 'Βικιπαίδεια:Καθοδήγηση/Εκπαιδευτές',
+	'enwiki' => 'Wikipedia:Growth Team features/Mentor list',
 	'euwiki' => 'Laguntza:Mentoreak',
 	'fawiki' => 'ویکی‌پدیا:فهرست مربیان',
 	'frwiki' => 'Projet:Aide et accueil/Volontaires',
