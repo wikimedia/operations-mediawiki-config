@@ -5109,7 +5109,7 @@ function wmfGetVariantSettings() {
 	'kowiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T184675
 	'lvwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T92645
 	'plwiki' => [ '', 'autoconfirmed', 'editeditorprotected', 'sysop' ], // T48990
-	'ptwiki' => [ '', 'autoconfirmed', 'editautoreviewprotected', 'sysop' ], // T41652
+	'ptwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'editautoreviewprotected', 'sysop' ], // T41652, T281926
 	'rowiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T63172, T254471
 	'srwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
 	'srwikibooks' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
@@ -5131,16 +5131,17 @@ function wmfGetVariantSettings() {
 
 'wgSemiprotectedRestrictionLevels' => [
 	'default' => [ 'autoconfirmed' ],
-	'+enwiki' => [ 'extendedconfirmed' ], // T126607
+	'+azwiki' => [ 'extendedconfirmed' ], // T281860
 	'+bgwiki' => [ 'extendedconfirmed' ], // T269709
+	'+enwiki' => [ 'extendedconfirmed' ], // T126607
 	'+fawiki' => [ 'extendedconfirmed' ], // T140839
 	'+frwiki' => [ 'editextendedsemiprotected' ], // T132248
 	'+jawiki' => [ 'extendedconfirmed' ], // T249820
 	'+kowiki' => [ 'extendedconfirmed' ], // T184675
-	'+viwiki' => [ 'extendedconfirmed' ], // T215493
+	'+ptwiki' => [ 'extendedconfirmed' ], // T281926
 	'+rowiki' => [ 'extendedconfirmed' ], // T254471
 	'+svwiki' => [ 'extendedconfirmed' ], // T279836
-	'+azwiki' => [ 'extendedconfirmed' ], // T281860
+	'+viwiki' => [ 'extendedconfirmed' ], // T215493
 ],
 
 'wgSiteNotice' => [
@@ -10254,7 +10255,10 @@ function wmfGetVariantSettings() {
 			'patrol' => true,
 			'abusefilter-log-detail' => true,
 		],
-		'bot' => [ 'editautoreviewprotected' => true, ],
+		'bot' => [
+			'editautoreviewprotected' => true,
+			'extendedconfirmed' => true, // T281926
+		],
 		'autoreviewer' => [
 			'autopatrol' => true,
 			'editautoreviewprotected' => true,
@@ -10280,7 +10284,10 @@ function wmfGetVariantSettings() {
 			'abusefilter-log-private' => true, //T237830
 		], // T29563
 		'user' => [ 'move-rootuserpages' => false, ],
-		'sysop' => [ 'editautoreviewprotected' => true ],
+		'sysop' => [
+			'editautoreviewprotected' => true,
+			'extendedconfirmed' => true, // T281926
+		],
 		'bureaucrat' => [
 			'move-rootuserpages' => true,
 			'autopatrol' => true,
@@ -10291,6 +10298,7 @@ function wmfGetVariantSettings() {
 			'editsitejson' => true,
 		],
 		'flood' => [ 'bot' => true, ], // T228521
+		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T281860
 	],
 	'+ptwikinews' => [
 		'editprotected' => [
@@ -11807,7 +11815,7 @@ function wmfGetVariantSettings() {
 	],
 	'+ptwiki' => [
 		'bureaucrat' => [ 'rollbacker', 'eliminator', 'autoreviewer', 'interface-editor', 'flood' ], // T41905, T65750, T212735, T228521
-		'sysop' => [ 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator', 'flood' ], // T65750, T228521
+		'sysop' => [ 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator', 'flood', 'extendedconfirmed' ], // T65750, T228521, T281926
 	],
 	'+quwiki' => [
 		'sysop' => [ 'rollbacker' ],
@@ -12662,7 +12670,7 @@ function wmfGetVariantSettings() {
 	],
 	'+ptwiki' => [
 		'bureaucrat' => [ 'rollbacker', 'eliminator', 'autoreviewer', 'interface-editor', 'bureaucrat', 'sysop', 'flood' ], // T41905, T65750, T107661, T212735, T228521
-		'sysop' => [ 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator', 'flood' ], // T65750, T228521
+		'sysop' => [ 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator', 'flood', 'extendedconfirmed' ], // T65750, T228521, T281926
 	],
 	'+ptwikinews' => [
 		'sysop' => [ 'reviewer', 'editprotected' ], // T162577
@@ -14258,6 +14266,22 @@ function wmfGetVariantSettings() {
 
 'wmgAutopromoteOnceonEdit' => [
 	'default' => [],
+	'azwiki' => [
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 30 * 86400 ], // 30 days
+			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+		], // T281860
+	],
+	'bgwiki' => [
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 120 * 86400 ], // 120 days
+			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+		], // T269709
+	],
 	'dewikivoyage' => [
 		'autopatrolled' => [
 			'&',
@@ -14306,6 +14330,36 @@ function wmfGetVariantSettings() {
 			[ '!', [ APCOND_INGROUPS, 'bureaucrat' ] ],
 		], // T187187
 	],
+	'ptwiki' => [
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 30 * 86400 ], // 30 days
+			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+		], // T281926
+	],
+	'rowiki' => [
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 30 * 86400 ],
+			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+		], // T254471
+	],
+	'ruwiki' => [
+		'uploader' => [ '&',
+			[ APCOND_AGE, 14 * 86400 ],
+			[ APCOND_EDITCOUNT, 20 ],
+		],
+	],
+	'svwiki' => [
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 30 * 86400 ], // 30 days
+			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+		], // T279836
+	],
 	'trwiki' => [
 		'autoreview' => [
 			'&', // AND
@@ -14339,12 +14393,6 @@ function wmfGetVariantSettings() {
 			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
 		],
 	],
-	'ruwiki' => [
-		'uploader' => [ '&',
-			[ APCOND_AGE, 14 * 86400 ],
-			[ APCOND_EDITCOUNT, 20 ],
-		],
-	],
 	'viwiki' => [
 		'extendedconfirmed' => [ '&',
 			[ APCOND_EDITCOUNT, 500 ],
@@ -14353,38 +14401,6 @@ function wmfGetVariantSettings() {
 			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
 			[ '!', [ APCOND_INGROUPS, 'eliminator' ] ],
 		], // T215493
-	],
-	'rowiki' => [
-		'extendedconfirmed' => [ '&',
-			[ APCOND_EDITCOUNT, 500 ],
-			[ APCOND_AGE, 30 * 86400 ],
-			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
-			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
-		], // T254471
-	],
-	'bgwiki' => [
-		'extendedconfirmed' => [ '&',
-			[ APCOND_EDITCOUNT, 500 ],
-			[ APCOND_AGE, 120 * 86400 ], // 120 days
-			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
-			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
-		], // T269709
-	],
-	'svwiki' => [
-		'extendedconfirmed' => [ '&',
-			[ APCOND_EDITCOUNT, 500 ],
-			[ APCOND_AGE, 30 * 86400 ], // 30 days
-			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
-			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
-		], // T279836
-	],
-	'azwiki' => [
-		'extendedconfirmed' => [ '&',
-			[ APCOND_EDITCOUNT, 500 ],
-			[ APCOND_AGE, 30 * 86400 ], // 30 days
-			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
-			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
-		], // T281860
 	],
 ],
 
