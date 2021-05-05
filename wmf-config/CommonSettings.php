@@ -359,8 +359,8 @@ $wgMiserMode = true;
 
 $wgQueryCacheLimit = 5000;
 
-// ParserCache expire time set to 30 days
-$wgParserCacheExpireTime = 86400 * 30;
+// ParserCache expire time temporarily reduced to 21 days (T280605)
+$wgParserCacheExpireTime = 86400 * 21;
 
 // Old revision parser cache expire in 1 hour
 $wgOldRevisionParserCacheExpireTime = 3600;
