@@ -15923,24 +15923,23 @@ function wmfGetVariantSettings() {
 	'yiwiki' => 'NavigationPopups',
 ],
 
+// Enable Reference Previews as a beta feature.
 'wgPopupsReferencePreviews' => [
 	'default' => false,
-	'group0' => true, // T214905
-	'arwiki' => true, // T218766
-	'dewiki' => true, // T218766
 	'enwikivoyage' => true, // T235083
 	'sewikimedia' => true, // T235083
 	'wikipedia' => true, // T235083
 	'zhwikivoyage' => true, // T235083
 ],
 
+// Enable Reference Previews as a full default feature.
 'wmgPopupsReferencePreviews' => [
 	'default' => false,
 	'group0' => true,
 	'arwiki' => true,
 	'dewiki' => true,
-	'euwiki' => true,
 	'etwiki' => true,
+	'euwiki' => true,
 	'fiwiki' => true,
 	'guwiki' => true,
 	'hewiki' => true,
