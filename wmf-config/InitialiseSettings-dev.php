@@ -56,5 +56,8 @@ function wmfGetOverrideSettings() {
 		'-wmgUseTranslationNotifications' => [
 			'default' => false,
 		],
+	   '-wgGEDatabaseCluster' => [
+			'default' => false,
+		],
 	];
 }
