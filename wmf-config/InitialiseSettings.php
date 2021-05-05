@@ -15934,6 +15934,18 @@ function wmfGetVariantSettings() {
 	'zhwikivoyage' => true, // T235083
 ],
 
+'wmgPopupsReferencePreviews' => [
+	'group0' => true,
+	'arwiki' => true,
+	'dewiki' => true,
+	'euwiki' => true,
+	'etwiki' => true,
+	'fiwiki' => true,
+	'guwiki' => true,
+	'hewiki' => true,
+	'rowiki' => true,
+],
+
 'wgPopupsConflictingRefTooltipsGadgetName' => [
 	'default' => 'ReferenceTooltips',
 	'arwiki' => 'CiteTooltip',
