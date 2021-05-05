@@ -15935,6 +15935,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wmgPopupsReferencePreviews' => [
+	'default' => false,
 	'group0' => true,
 	'arwiki' => true,
 	'dewiki' => true,
