@@ -18,7 +18,7 @@ return [ 'dev' => [
 				   'sessionstore' => '',
 				   'echostore' => '',
 				   'statsd' => '',
-				   'irc' => '',
+				   'irc' => [],
 				   'upload' => '',
 				   'poolcounter' => '',
 				   'urldownloader' => '',
@@ -30,5 +30,6 @@ return [ 'dev' => [
 				   'eventgate-analytics' => '',
 				   'eventgate-analytics-external' => '',
 				   'eventgate-main' => '',
+				   'linkrecommendation' => '',
 				  ]
 	   ];
