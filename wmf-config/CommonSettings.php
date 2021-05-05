@@ -2518,11 +2518,6 @@ if ( $wmgUseMultimediaViewer ) {
 
 if ( $wmgUsePopups ) {
 	wfLoadExtension( 'Popups' );
-
-	if ( $wmgPopupsReferencePreviews ) {
-		$wgPopupsReferencePreviews = true;
-		$wgPopupsReferencePreviewsBetaFeature = false;
-	}
 }
 
 if ( $wmgUseLinter ) {
