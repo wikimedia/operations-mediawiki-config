@@ -36,6 +36,7 @@
 
 use MediaWiki\Auth\AuthenticationResponse;
 use MediaWiki\Logger\LoggerFactory;
+use MediaWiki\MediaWikiServices;
 use Wikimedia\MWConfig\ServiceConfig;
 use Wikimedia\MWConfig\XWikimediaDebug;
 
@@ -94,7 +95,7 @@ switch ( $wmfRealm ) {
 case 'labs':
 	$wmfHostnames['meta']     = 'meta.wikimedia.beta.wmflabs.org';
 	$wmfHostnames['test']     = 'test.wikipedia.beta.wmflabs.org';
-	$wmfHostnames['upload']   = 'upload.beta.wmflabs.org';
+	$wmfHostnames['upload']   = 'upload.wikimedia.beta.wmflabs.org';
 	$wmfHostnames['wikidata'] = 'wikidata.beta.wmflabs.org';
 	break;
 case 'production':
@@ -372,6 +373,38 @@ $wgOldRevisionParserCacheExpireTime = 3600;
 // MW appserver load.
 $wgULSLanguageDetection = false;
 
+/**
+ * Configure PHP request timeouts. These should be slightly less than the Apache
+ * timeouts, so that the slightly more informative PHP error message is
+ * delivered to the user, and so that we can verify that PHP timeouts actually
+ * exist (T97192).
+ */
+if ( PHP_SAPI === 'cli' ) {
+	// Should always be unlimited, this is probably redundant
+	$wgRequestTimeLimit = 0;
+} else {
+	switch ( $_SERVER['HTTP_HOST'] ?? '' ) {
+		case 'videoscaler.svc.eqiad.wmnet':
+		case 'videoscaler.svc.codfw.wmnet':
+		case 'videoscaler.discovery.wmnet':
+			$wgRequestTimeLimit = 86400;
+			break;
+
+		case 'jobrunner.svc.eqiad.wmnet':
+		case 'jobrunner.svc.codfw.wmnet':
+		case 'jobrunner.discovery.wmnet':
+			$wgRequestTimeLimit = 1200;
+			break;
+
+		default:
+			if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
+				$wgRequestTimeLimit = 200;
+			} else {
+				$wgRequestTimeLimit = 60;
+			}
+	}
+}
+
 # ######################################################################
 # Account- and notifications-related settings
 # ######################################################################
@@ -555,6 +588,8 @@ $wgPasswordConfig['pbkdf2'] = [
 $wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
 
 // Password policies; see https://meta.wikimedia.org/wiki/Password_policy
+//
+// For global policies, see $wgCentralAuthGlobalPasswordPolicies below
 $wmgPrivilegedPolicy = [
 	'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true, 'forceChange' => true ],
 	// With MinimumPasswordLengthToLogin, if the length of the password is <= the value
@@ -608,12 +643,6 @@ if ( $wmgUseCentralAuth ) {
 		return true;
 	};
 }
-
-// For global policies, see $wgCentralAuthGlobalPasswordPolicies below
-
-$wgEnableBotPasswords = $wmgEnableBotPasswords;
-$wgBotPasswordsCluster = $wmgBotPasswordsCluster;
-$wgBotPasswordsDatabase = $wmgBotPasswordsDatabase;
 
 if ( $wmgDisableAccountCreation ) {
 	$wgGroupPermissions['*']['createaccount'] = false;
@@ -974,7 +1003,6 @@ putenv( "GDFONTPATH=/srv/mediawiki/fonts" );
 
 // TODO: This should be handled by LocalServices, not here.
 $wgCopyUploadProxy = ( $wmfRealm !== 'labs' ) ? $wmfLocalServices['urldownloader'] : false;
-$wmgRC2UDPAddress = $wmfLocalServices['irc'];
 $wgUploadThumbnailRenderHttpCustomHost = $wmfHostnames['upload'];
 $wgUploadThumbnailRenderHttpCustomDomain = $wmfLocalServices['upload'];
 
@@ -1284,11 +1312,12 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 	$wgExtDistDefaultSnapshot = 'REL1_35';
 
 	// Current development snapshot
-	// $wgExtDistCandidateSnapshot = 'REL1_35';
+	$wgExtDistCandidateSnapshot = 'REL1_36';
 
 	// Available snapshots
 	$wgExtDistSnapshotRefs = [
 		'master',
+		'REL1_36',
 		'REL1_35',
 		'REL1_31',
 	];
@@ -1488,7 +1517,7 @@ if ( $wmgUseFooterContactLink ) {
 		}
 	};
 }
-if ( $wmgUseFooterCodeOfConductLink ) {
+if ( $wmgUseFooterTechCodeOfConductLink ) {
 	$wgHooks['SkinAddFooterLinks'][] = function ( $sk, $key, &$footerlinks ) {
 		if ( $key === 'places' ) {
 			$footerlinks['wm-codeofconduct'] = Html::element( 'a', [ 'href' => $sk->msg( 'wm-codeofconduct-url' )->escaped() ],
@@ -1601,9 +1630,9 @@ if ( is_array( $wmgExtraImplicitGroups ) ) {
 if ( $wmfRealm == 'labs' ) {
 	$wgHTTPTimeout = 10;
 }
-if ( !empty( $wmgTimeLimit ) ) {
+if ( $wgRequestTimeLimit ) {
 	// Set the maximum HTTP client timeout equal to the current request timeout (T245170)
-	$wgHTTPMaxTimeout = $wgHTTPMaxConnectTimeout = $wmgTimeLimit;
+	$wgHTTPMaxTimeout = $wgHTTPMaxConnectTimeout = $wgRequestTimeLimit;
 }
 
 // TODO: This is a no-op with $wgForceHTTPS enabled
@@ -1687,10 +1716,10 @@ if ( $wmgUseCentralAuth ) {
 	// See https://phabricator.wikimedia.org/T189966#5436482
 	$wgCentralAuthCookiesP3P = "CP=\"See $wgCanonicalServer/wiki/Special:CentralAutoLogin/P3P for more info.\"";
 
-	if ( $wmfRealm == 'production' ) {
+	foreach ( $wmfLocalServices['irc'] as $address ) {
 		$wgCentralAuthRC[] = [
 			'formatter' => 'IRCColourfulCARCFeedFormatter',
-			'uri' => "udp://$wmgRC2UDPAddress:$wmgRC2UDPPort/#central\t",
+			'uri' => "udp://$address:$wmgRC2UDPPort/#central\t",
 		];
 	}
 
@@ -1870,11 +1899,21 @@ function wmfGetPrivilegedGroups( $username, $user ) {
 		} catch ( Exception $e ) {
 			// Don't block login if we can't query attached (T119736)
 			MWExceptionHandler::logException( $e );
-			$groups = array_merge( $user->getGroups(), $centralUser->getGlobalGroups() );
+			$groups = array_merge(
+				MediaWikiServices::getInstance()
+					->getUserGroupManager()
+					->getUserGroups( $user ),
+				$centralUser->getGlobalGroups()
+			);
 		}
 	} else {
 		// use effective groups, as we set 'user' as privileged for private/fishbowl wikis
-		$groups = array_intersect( $wmgPrivilegedGroups, $user->getEffectiveGroups() );
+		$groups = array_intersect(
+			$wmgPrivilegedGroups,
+			MediaWikiServices::getInstance()
+				->getUserGroupManager()
+				->getUserEffectiveGroups( $user )
+			);
 	}
 	return $groups;
 }
@@ -2201,7 +2240,9 @@ wfLoadExtension( 'WikiEditor' );
 $wgDefaultUserOptions['usebetatoolbar'] = 1;
 
 # LocalisationUpdate
-wfLoadExtension( 'LocalisationUpdate' );
+if ( $wmfRealm !== 'labs' ) {
+	wfLoadExtension( 'LocalisationUpdate' );
+}
 $wgLocalisationUpdateDirectory = "/var/lib/l10nupdate/caches/cache-$wmgVersionNumber";
 $wgLocalisationUpdateRepository = 'local';
 $wgLocalisationUpdateRepositories['local'] = [
@@ -2621,6 +2662,10 @@ if ( $wmgUseVisualEditor ) {
 
 	// Enable the diff page visual diff Beta Feature for opt-in
 	$wgVisualEditorEnableDiffPageBetaFeature = true;
+
+	if ( $wmgVisualEditorSuggestedValues ) {
+		$wgVisualEditorTransclusionDialogSuggestedValues = true;
+	}
 }
 
 if ( $wmgUseTemplateData ) { // T61702 - 2015-07-20
@@ -2631,6 +2676,10 @@ if ( $wmgUseTemplateData ) { // T61702 - 2015-07-20
 
 	// TemplateWizard enabled for all TemplateData wikis – T202545
 	wfLoadExtension( 'TemplateWizard' );
+
+	if ( $wmgTemplateDataSuggestedValues ) {
+		$wgTemplateDataSuggestedValuesEditor = true;
+	}
 }
 
 if ( $wmgUseGoogleNewsSitemap ) {
@@ -2751,7 +2800,7 @@ if ( $wmgUseMath ) {
 	$wgMathConcurrentReqs = 150;
 
 	// Temporary setting for conversion off RESTBase to pure Mathoid. See T274436
-	$wgMathUseRestBase = true;
+	$wgMathUseRestBase = false;
 
 	// Set up $wgMathFullRestbaseURL - similar to VE RESTBase config above
 	// HACK: $wgServerName is not available yet at this point, it's set by Setup.php
@@ -3311,17 +3360,9 @@ if ( $wmgUseRelatedArticles ) {
 	wfLoadExtension( 'RelatedArticles' );
 
 	$wgRelatedArticlesLoggingBucketSize = 0;
-	$wgRelatedArticlesUseCirrusSearch = $wmgRelatedArticlesUseCirrusSearch;
 	$wgRelatedArticlesOnlyUseCirrusSearch = false;
 	$wgRelatedArticlesDescriptionSource = 'wikidata';
 }
-
-// Workaround for T142663 - override flat arrays
-$wgExtensionFunctions[] = function () {
-	global $wmgRelatedArticlesFooterWhitelistedSkins, $wgRelatedArticlesFooterWhitelistedSkins;
-
-	$wgRelatedArticlesFooterWhitelistedSkins = $wmgRelatedArticlesFooterWhitelistedSkins;
-};
 
 if ( $wmgUseRevisionSlider ) {
 	wfLoadExtension( 'RevisionSlider' );
@@ -3754,10 +3795,6 @@ if ( $wmgUseMediaModeration ) {
 	$wgMediaModerationFrom = 'no-reply@wikimedia.org';
 }
 
-if ( $wmgUseJADE ) {
-	wfLoadExtension( 'Jade' );
-}
-
 if ( $wmgUseORES ) {
 	wfLoadExtension( 'ORES' );
 	$wgOresBaseUrl = 'http://localhost:6010/';
@@ -3900,23 +3937,26 @@ if ( $wmgUseRC2UDP ) {
 		}
 	}
 
-	$wgRCFeeds['default'] = [
-		'formatter' => 'IRCColourfulRCFeedFormatter',
-		'uri' => "udp://$wmgRC2UDPAddress:$wmgRC2UDPPort/$wmgRC2UDPPrefix",
-		'add_interwiki_prefix' => false,
-		'omit_bots' => false,
-	];
+	foreach ( $wmfLocalServices['irc'] as $i => $address ) {
+		$wgRCFeeds["irc$i"] = [
+			'formatter' => 'IRCColourfulRCFeedFormatter',
+			'uri' => "udp://$address:$wmgRC2UDPPort/$wmgRC2UDPPrefix",
+			'add_interwiki_prefix' => false,
+			'omit_bots' => false,
+		];
+	}
 }
 
 // Confirmed can do anything autoconfirmed can.
-// T213003: this should happen after all the extensions had been loaded, but
-// before their extension functions in case they're relying on permissions.
-array_unshift( $wgExtensionFunctions, function () {
+// T277704, T275334: Extension function would be a more nature place to put this code to,
+// but doing so is not reliable as of 2021-03-18. If you are here to put this into an extension
+// function, see also T213003.
+$wgHooks['MediaWikiServices'][] = function () {
 	global $wgGroupPermissions;
 
 	$wgGroupPermissions['confirmed'] = $wgGroupPermissions['autoconfirmed'];
 	$wgGroupPermissions['confirmed']['skipcaptcha'] = true;
-} );
+};
 
 $wgDefaultUserOptions['watchlistdays'] = $wmgWatchlistNumberOfDaysShow;
 
@@ -3943,7 +3983,7 @@ if ( $wmgUseEventBus ) {
 		],
 		'eventgate-main' => [
 			'url' => "{$wmfLocalServices['eventgate-main']}/v1/events",
-			'timeout' => 26,
+			'timeout' => 62, // envoy overall req timeout + 1
 		]
 	];
 
@@ -4040,6 +4080,8 @@ if ( $wmgUseGrowthExperiments ) {
 		// Disable all other Growth features
 		$wgGEHomepageNewAccountEnablePercentage = 0;
 	}
+
+	$wgGELinkRecommendationServiceUrl = $wmfLocalServices['linkrecommendation'];
 }
 
 if ( PHP_SAPI === 'cli' ) {

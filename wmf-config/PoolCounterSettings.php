@@ -4,32 +4,34 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	exit( 1 );
 }
 
+use MediaWiki\Extension\PoolCounter\Client;
+
 wfLoadExtension( 'PoolCounter' );
 
 $wgPoolCounterConf = [
 	'ArticleView' => [
-		'class' => PoolCounter_Client::class,
+		'class' => Client::class,
 		'timeout' => 15,
 		'workers' => 2,
 		'maxqueue' => 100,
 		'fastStale' => true, // T250248
 	],
 	'CirrusSearch-Search' => [
-		'class' => PoolCounter_Client::class,
+		'class' => Client::class,
 		'timeout' => 15,
 		'workers' => 200,
 		'maxqueue' => 600,
 	],
 	// Super common and mostly fast
 	'CirrusSearch-Prefix' => [
-		'class' => PoolCounter_Client::class,
+		'class' => Client::class,
 		'timeout' => 15,
 		'workers' => 32,
 		'maxqueue' => 60,
 	],
 	// Super common and mostly fast, replaces Prefix (eventually)
 	'CirrusSearch-Completion' => [
-		'class' => PoolCounter_Client::class,
+		'class' => Client::class,
 		'timeout' => 15,
 		'workers' => 432,
 		'maxqueue' => 600,
@@ -37,14 +39,14 @@ $wgPoolCounterConf = [
 	// Regex searches are much heavier then regular searches so we limit the
 	// concurrent number.
 	'CirrusSearch-Regex' => [
-		'class' => PoolCounter_Client::class,
+		'class' => Client::class,
 		'timeout' => 60,
 		'workers' => 10,
 		'maxqueue' => 20,
 	],
 	// These should be very very fast
 	'CirrusSearch-NamespaceLookup' => [
-		'class' => PoolCounter_Client::class,
+		'class' => Client::class,
 		'timeout' => 5,
 		'workers' => 100,
 		'maxqueue' => 200,
@@ -53,32 +55,32 @@ $wgPoolCounterConf = [
 	// before varnish caching. If the somehow the cache hit rate drops this
 	// protects the cluster
 	'CirrusSearch-MoreLike' => [
-		'class' => PoolCounter_Client::class,
+		'class' => Client::class,
 		'timeout' => 5,
 		'workers' => 60,
 		'maxqueue' => 240,
 	],
 	'FileRender' => [
-		'class' => PoolCounter_Client::class,
+		'class' => Client::class,
 		'timeout' => 8,
 		'workers' => 2,
 		'maxqueue' => 100
 	],
 	'FileRenderExpensive' => [
-		'class' => PoolCounter_Client::class,
+		'class' => Client::class,
 		'timeout' => 8,
 		'workers' => 2,
 		'slots' => 8,
 		'maxqueue' => 100
 	],
 	'SpecialContributions' => [
-		'class' => PoolCounter_Client::class,
+		'class' => Client::class,
 		'timeout' => 15,
 		'workers' => 2,
 		'maxqueue' => 25,
 	],
 	'TranslateFetchTranslators' => [
-		'class' => PoolCounter_Client::class,
+		'class' => Client::class,
 		'timeout' => 8,
 		'workers' => 1,
 		'slots' => 16,

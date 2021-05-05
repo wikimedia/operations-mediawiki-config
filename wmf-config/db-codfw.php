@@ -68,6 +68,7 @@ $wgLBFactoryConf = [
 	'lldwiki'      => 's5',
 	'mniwiki'      => 's5',
 	'mniwiktionary' => 's5',
+	'mnwwiktionary' => 's5',
 	'niawiki'      => 's5',
 	'niawiktionary' => 's5',
 	'madwiki'      => 's5',
@@ -79,8 +80,10 @@ $wgLBFactoryConf = [
 	'shwiki'       => 's5',
 	'smnwiki'      => 's5',
 	'srwiki'       => 's5',
+	'taywiki'      => 's5',
 	'thankyouwiki' => 's5',
 	'trwikivoyaage' => 's5',
+	'trvwiki'      => 's5',
 	'wawikisource' => 's5',
 
 	# s6: large wikis

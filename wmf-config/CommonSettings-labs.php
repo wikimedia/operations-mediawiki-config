@@ -135,8 +135,6 @@ if ( $wmgUseFlow ) {
 }
 
 if ( $wmgUseFileExporter ) {
-	// On Beta don't bother enabling beta feature mode.
-	$wgFileExporterBetaFeature = false;
 	$wgFileExporterTarget = 'https://commons.wikimedia.beta.wmflabs.org/wiki/Special:ImportFile';
 }
 
@@ -160,7 +158,7 @@ if ( $wmgUseCentralNotice ) {
 	// Emit CSP headers on banner previews. This can go away when full CSP
 	// support (T135963) is deployed.
 	// www.pages04.net is used by Wikimedia Fundraising to enable 'remind me later' banner functionality, which submits email addresses to our email campaign vendor
-	$wgCentralNoticeContentSecurityPolicy = "script-src 'unsafe-eval' blob: 'self' meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org 'unsafe-inline'; default-src 'self' data: blob: https://upload.beta.wmflabs.org upload.beta.wmflabs.org https://commons.wikimedia.beta.wmflabs.org https://upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net; style-src 'self' data: blob: https://upload.beta.wmflabs.org upload.beta.wmflabs.org https://commons.wikimedia.beta.wmflabs.org https://upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org wikimedia.org 'unsafe-inline';";
+	$wgCentralNoticeContentSecurityPolicy = "script-src 'unsafe-eval' blob: 'self' meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org 'unsafe-inline'; default-src 'self' data: blob: https://upload.beta.wmflabs.org upload.beta.wmflabs.org https://upload.wikimedia.beta.wmflabs.org upload.wikimedia.beta.wmflabs.org https://commons.wikimedia.beta.wmflabs.org https://upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net; style-src 'self' data: blob: https://upload.beta.wmflabs.org upload.beta.wmflabs.org https://upload.wikimedia.beta.wmflabs.org upload.wikimedia.beta.wmflabs.org https://commons.wikimedia.beta.wmflabs.org https://upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org wikimedia.org 'unsafe-inline';";
 }
 
 if ( $wmgUseCite ) {
@@ -200,6 +198,7 @@ if ( $wmgUseUrlShortener ) {
 		'(.*\.)?wikivoyage\.beta\.wmflabs\.org',
 		'(.*\.)?wikimedia\.beta\.wmflabs\.org',
 		'(.*\.)?wikidata\.beta\.wmflabs\.org',
+		'query-builder-test\.toolforge\.org',  # Temp T273162
 	];
 	$wgUrlShortenerApprovedDomains = [
 		'*.wikipedia.beta.wmflabs.org',
@@ -212,6 +211,7 @@ if ( $wmgUseUrlShortener ) {
 		'*.wikivoyage.beta.wmflabs.org',
 		'*.wikimedia.beta.wmflabs.org',
 		'*.wikidata.beta.wmflabs.org',
+		'query-builder-test.toolforge.org',
 	];
 }
 
@@ -258,7 +258,6 @@ if ( $wmgUseMath ) {
 	$wgMathWikibasePropertyIdHasPart = 'P253104';
 	$wgMathWikibasePropertyIdDefiningFormula = 'P253105';
 	$wgMathWikibasePropertyIdQuantitySymbol = 'P253106';
-	$wgMathUseRestBase = true;
 	// Temporary setting for conversion off RESTBase to pure Mathoid. See T274436
 	$wgMathUseRestBase = false;
 }
@@ -320,6 +319,7 @@ if ( $wmgUseGraph ) {
 		],
 		'wikirawupload' => [
 			'upload.beta.wmflabs.org',
+			'upload.wikimedia.beta.wmflabs.org',
 			'upload.wikimedia.org',
 		],
 		'wikidatasparql' => [
@@ -400,5 +400,24 @@ wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
 
 // Temporary feature flag for the CodeMirror bracket matching see T261857
 $wgCodeMirrorEnableBracketMatching = true;
+
+// Temporary feature flag for the CodeMirror accessibility color schema see T271895
+$wgCodeMirrorAccessibilityColors = true;
+
+// Temporarily enable line numbering on beta, see T267911.
+$wgCodeMirrorLineNumberingNamespaces = null;
+
+// Temporary feature flags for the suggested values feature, see T271825
+$wgTemplateDataSuggestedValuesEditor = true;
+$wgVisualEditorTransclusionDialogSuggestedValues = true;
+
+// Temporary feature flags for changes to the descriptions in the transclusion dialog, see T271800
+$wgVisualEditorTransclusionDialogInlineDescriptions = true;
+
+// Temporary feature flags for the improved search features in the template dialog, see T271802
+$wgVisualEditorCirrusSearchLookup = true;
+
+// Don't use beta feature mode on labs
+$wgPopupsReferencePreviewsBetaFeature = false;
 
 } # end safeguard

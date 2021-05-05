@@ -210,8 +210,6 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBRepoSettings['enableRefTabs'] = $wmgWikibaseRepoEnableRefTabs;
 
-	$wgWBRepoSettings['idGeneratorLogging'] = $wmgWikibaseRepoIdGeneratorLogging;
-
 	$wgWBRepoSettings['idGeneratorRateLimiting'] = $wmgWikibaseRepoIdGeneratorRateLimiting;
 
 	// entity data for URLs matching these patterns will be cached in Varnish and purged if needed;
@@ -307,6 +305,9 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['trackLuaFunctionCallsPerSiteGroup'] = $wmgWikibaseClientTrackLuaFunctionCallsPerSiteGroup;
 	$wgWBClientSettings['trackLuaFunctionCallsPerWiki'] = $wmgWikibaseClientTrackLuaFunctionCallsPerWiki;
+
+	// Sample function call counters at 1:100 (T277817)
+	$wgWBClientSettings['trackLuaFunctionCallsSampleRate'] = 0.01;
 
 	// T142103
 	$wgWBClientSettings['sendEchoNotification'] = true;

@@ -35,8 +35,8 @@ return [
 		'cloudelastic-chi' => null,
 		'cloudelastic-psi' => null,
 		'cloudelastic-omega' => null,
-		'urldownloader' => 'http://deployment-urldownloader02.deployment-prep.eqiad.wmflabs:8080',
-		'parsoid' => 'http://deployment-parsoid11.deployment-prep.eqiad.wmflabs/w/rest.php',
+		'urldownloader' => 'http://deployment-urldownloader03.deployment-prep.eqiad1.wikimedia.cloud:8080',
+		'parsoid' => 'http://deployment-parsoid12.deployment-prep.eqiad1.wikimedia.cloud/w/rest.php',
 		'mathoid' => 'http://deployment-docker-mathoid01.eqiad.wmflabs:10044',
 		'eventlogging' => 'udp://deployment-eventlogging03.eqiad.wmflabs:8421',
 		'eventgate-analytics' => 'http://deployment-eventgate-3.deployment-prep.eqiad.wmflabs:8192',
@@ -44,7 +44,9 @@ return [
 		'eventgate-main' => 'http://deployment-eventgate-3.deployment-prep.eqiad.wmflabs:8292',
 		'upload' => 'deployment-ms-fe03.deployment-prep.eqiad.wmflabs',
 		'cxserver' => 'http://deployment-docker-cxserver01.eqiad.wmflabs:8080',
-		'irc' => 'irc.beta.wmflabs.org', // deployment-ircd
+		'irc' => [
+			'irc.beta.wmflabs.org', // deployment-ircd02
+		],
 		'redis_lock' => [
 			'rdb1' => 'deployment-memc09.deployment-prep.eqiad1.wikimedia.cloud',
 			'rdb2' => 'deployment-memc10.deployment-prep.eqiad1.wikimedia.cloud',
@@ -54,6 +56,7 @@ return [
 		'mediaSwiftStore' => 'http://deployment-ms-fe03.deployment-prep.eqiad.wmflabs/v1/AUTH_mw',
 		'electron' => 'http://deployment-pdfrender02.deployment-prep.eqiad.wmflabs:5252',
 		'push-notifications' => 'http://deployment-push-notifications01.deployment-prep.eqiad1.wikimedia.cloud:8900',
+		'linkrecommendation' => 'https://api.wikimedia.org/service/linkrecommendation',
 
 		### Logstash
 		'logstash' => [
@@ -69,7 +72,7 @@ return [
 		],
 
 		### Kask
-		'sessionstore' => 'http://deployment-sessionstore03.deployment-prep.eqiad.wmflabs:8080',
+		'sessionstore' => 'http://deployment-sessionstore04.deployment-prep.eqiad1.wikimedia.cloud:8080',
 		'echostore' => 'http://deployment-echostore01.deployment-prep.eqiad.wmflabs:8080',
 	],
 ];

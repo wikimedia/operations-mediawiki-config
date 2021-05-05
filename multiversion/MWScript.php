@@ -4,6 +4,21 @@ if ( PHP_SAPI !== 'cli' && PHP_SAPI !== 'phpdbg' ) {
 	exit( 1 );
 }
 
+function usage() {
+	global $argv;
+	fwrite( STDERR, <<<EOT
+Usage: php $argv[0] SCRIPT --wiki=WIKI <script args>
+
+SCRIPT must be the relative (to MediaWiki) script file path.
+If only a filename is given, it will be assumed to reside in /maintenance.
+
+The --wiki option is required for most maintenance scripts.
+
+EOT
+	);
+	exit( 1 );
+}
+
 /**
  * Run a MediaWiki script based on the parameters (like --wiki) given to CLI.
  *
@@ -21,8 +36,7 @@ if ( PHP_SAPI !== 'cli' && PHP_SAPI !== 'phpdbg' ) {
 function getMWScriptWithArgs() {
 	global $argv;
 	if ( count( $argv ) < 2 ) {
-		fwrite( STDERR, "This script can only be run from the command line.\n" );
-		exit( 1 );
+		usage();
 	}
 
 	# Security check -- don't allow scripts to run as privileged users
@@ -66,6 +80,7 @@ EOT
 	# other maintenance scripts we don't care what wiki DB is used...
 	$wikiless = [
 		'maintenance/purgeList.php',
+		'maintenance/purgeMessageBlobStore.php',
 		'extensions/WikimediaMaintenance/addWiki.php',
 		'extensions/WikimediaMaintenance/dumpInterwiki.php',
 		'extensions/WikimediaMaintenance/getJobQueueLengths.php',

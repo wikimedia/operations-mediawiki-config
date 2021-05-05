@@ -201,7 +201,7 @@ $wgExtensionFunctions[] = function () {
 
 	$wgFlaggedRevsNamespaces[] = 828; // NS_MODULE
 	$wgFlaggedRevsTags = [
-		'accuracy' => [ 'levels' => 2, 'quality' => 2, 'pristine' => 4 ],
+		'accuracy' => [ 'levels' => 2, 'quality' => 20, 'pristine' => 21 ],
 	];
 	$wgFlaggedRevsTagsRestrictions = [
 		'accuracy' => [ 'review' => 1, 'autoreview' => 1 ],
@@ -211,8 +211,6 @@ $wgExtensionFunctions[] = function () {
 	$wgGroupPermissions['sysop']['stablesettings'] = false; // -aaron 3/20/10
 
 	$allowSysopsAssignEditor = true;
-	$allowSysopsAssignAutoreview = true;
-	$allowBureaucratsAssignReviewer = true;
 
 	///////////////////////////////////////
 	// Wiki-specific configurations
@@ -238,7 +236,7 @@ $wgExtensionFunctions[] = function () {
 
 		# We have only one tag with one level
 		$wgFlaggedRevsTags = [
-			'status' => [ 'levels' => 1, 'quality' => 2, 'pristine' => 3 ],
+			'status' => [ 'levels' => 1, 'quality' => 20, 'pristine' => 21 ],
 		];
 		# Restrict autoconfirmed to flagging semi-protected
 		$wgFlaggedRevsTagsRestrictions = [
@@ -260,7 +258,7 @@ $wgExtensionFunctions[] = function () {
 		unset( $wgGroupPermissions['editor'] );
 	} elseif ( $wgDBname == 'bswiki' ) { // T158662
 		$wgFlaggedRevsTags = [
-			'status' => [ 'levels' => 1, 'quality' => 2, 'pristine' => 3 ],
+			'status' => [ 'levels' => 1, 'quality' => 20, 'pristine' => 21 ],
 		];
 
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
@@ -281,7 +279,7 @@ $wgExtensionFunctions[] = function () {
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_PROJECT, NS_HELP, NS_TEMPLATE, NS_CATEGORY, NS_FILE, 100, 102, 828 ];
 		# We have only one tag with one level
 		$wgFlaggedRevsTags = [
-			'status' => [ 'levels' => 1, 'quality' => 2, 'pristine' => 3 ],
+			'status' => [ 'levels' => 1, 'quality' => 20, 'pristine' => 21 ],
 		];
 		# Restrict autoconfirmed to flagging semi-protected
 		$wgFlaggedRevsTagsRestrictions = [
@@ -340,7 +338,7 @@ $wgExtensionFunctions[] = function () {
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_PROJECT ];
 		# We have only one tag with one level
 		$wgFlaggedRevsTags = [
-			'status' => [ 'levels' => 1, 'quality' => 2, 'pristine' => 3 ],
+			'status' => [ 'levels' => 1, 'quality' => 20, 'pristine' => 21 ],
 		];
 		# Restrict autoconfirmed to flagging semi-protected
 		$wgFlaggedRevsTagsRestrictions = [
@@ -364,7 +362,7 @@ $wgExtensionFunctions[] = function () {
 		$wgFlaggedRevsNamespaces[] = 102;
 		$wgFlaggedRevsNamespaces[] = 110;
 		$wgFlaggedRevsTags = [
-			'value' => [ 'levels' => 3, 'quality' => 2, 'pristine' => 3 ]
+			'value' => [ 'levels' => 3, 'quality' => 20, 'pristine' => 21 ]
 		];
 
 		$wgGroupPermissions['editor']['rollback'] = true;
@@ -399,7 +397,7 @@ $wgExtensionFunctions[] = function () {
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_PROJECT, NS_HELP, NS_TEMPLATE, NS_CATEGORY, NS_FILE, 100, 102, 828 ];
 		# We have only one tag with one level
 		$wgFlaggedRevsTags = [
-			'status' => [ 'levels' => 1, 'quality' => 2, 'pristine' => 3 ],
+			'status' => [ 'levels' => 1, 'quality' => 20, 'pristine' => 21 ],
 		];
 		# Restrict autoconfirmed to flagging semi-protected
 		$wgFlaggedRevsTagsRestrictions = [
@@ -439,7 +437,7 @@ $wgExtensionFunctions[] = function () {
 		$wgGroupPermissions['sysop']['unreviewedpages'] = true;
 
 		$wgFlaggedRevsTags = [
-			'accuracy' => [ 'levels' => 3, 'quality' => 3, 'pristine' => 4 ],
+			'accuracy' => [ 'levels' => 3, 'quality' => 20, 'pristine' => 21 ],
 		];
 		$wgFlaggedRevsTagsRestrictions = [
 			'accuracy' => [ 'review' => 3, 'autoreview' => 2 ],
@@ -463,14 +461,10 @@ $wgExtensionFunctions[] = function () {
 		$wgFlaggedRevsNamespaces[] = 110;
 		$wgFlaggedRevsNamespaces[] = 112;
 		$wgFlaggedRevsTags = [
-			'completeness' => [ 'levels' => 4, 'quality' => 3, 'pristine' => 5 ],
-			'accuracy' => [ 'levels' => 4, 'quality' => 3, 'pristine' => 5 ],
-			'formatting' => [ 'levels' => 4, 'quality' => 3, 'pristine' => 5 ],
+			'accuracy' => [ 'levels' => 4, 'quality' => 20, 'pristine' => 21 ],
 		];
 		$wgFlaggedRevsTagsRestrictions = [
-			'completeness' => [ 'review' => 3, 'autoreview' => 3 ],
 			'accuracy'     => [ 'review' => 3, 'autoreview' => 3 ],
-			'formatting'   => [ 'review' => 3, 'autoreview' => 3 ],
 		];
 		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 	} elseif ( $wgDBname == 'hiwiki' ) {
@@ -480,7 +474,7 @@ $wgExtensionFunctions[] = function () {
 		$wgFlaggedRevsNamespaces[] = 100;
 		# We have only one tag with one level
 		$wgFlaggedRevsTags = [
-			'status' => [ 'levels' => 1, 'quality' => 2, 'pristine' => 3 ],
+			'status' => [ 'levels' => 1, 'quality' => 20, 'pristine' => 21 ],
 		];
 		# Restrict autoconfirmed to flagging semi-protected
 		$wgFlaggedRevsTagsRestrictions = [
@@ -548,7 +542,7 @@ $wgExtensionFunctions[] = function () {
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_TEMPLATE, 102, 828 ];
 		# We have only one tag with one level
 		$wgFlaggedRevsTags = [
-			'status' => [ 'levels' => 1, 'quality' => 2, 'pristine' => 3 ],
+			'status' => [ 'levels' => 1, 'quality' => 20, 'pristine' => 21 ],
 		];
 		# Restrict autoconfirmed to flagging semi-protected
 		$wgFlaggedRevsTagsRestrictions = [
@@ -595,12 +589,8 @@ $wgExtensionFunctions[] = function () {
 
 		$wgFlaggedRevsTags['accuracy']['levels'] = 3;
 
-		// T17478
-		$wgGroupPermissions['autoeditor']['autoreview'] = true;
-		$wgGroupPermissions['autoeditor']['autoconfirmed'] = true;
-
 		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
-		unset( $wgGroupPermissions['autoreview'] ); // T229596
+		$wgGroupPermissions['sysop']['review'] = false; // T275811
 	} elseif ( $wgDBname == 'ruwikinews' ) {
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_CATEGORY, NS_TEMPLATE ];
 		$wgFlaggedRevsWhitelist = [ 'Main_Page' ];
@@ -662,7 +652,7 @@ $wgExtensionFunctions[] = function () {
 	# All wikis...
 
 	# Rights for Bureaucrats (b/c)
-	if ( isset( $wgGroupPermissions['reviewer'] ) && $allowBureaucratsAssignReviewer ) {
+	if ( isset( $wgGroupPermissions['reviewer'] ) ) {
 		if ( !in_array( 'reviewer', $wgAddGroups['bureaucrat'] ) ) {
 			$wgAddGroups['bureaucrat'][] = 'reviewer'; // promote to full reviewers
 		}
@@ -681,7 +671,7 @@ $wgExtensionFunctions[] = function () {
 		}
 	}
 
-	if ( isset( $wgGroupPermissions['autoreview'] ) && $allowSysopsAssignAutoreview ) {
+	if ( isset( $wgGroupPermissions['autoreview'] ) ) {
 		if ( !in_array( 'autoreview', $wgAddGroups['sysop'] ) ) {
 			$wgAddGroups['sysop'][] = 'autoreview'; // promote to basic auto-reviewer (semi-trusted users)
 		}

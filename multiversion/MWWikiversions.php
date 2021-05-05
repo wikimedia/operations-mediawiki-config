@@ -24,6 +24,19 @@ class MWWikiversions {
 	}
 
 	/**
+	 * @param string $path Path to wikiversions.php
+	 * @param array $wikis Array of wikis [ dbname => version ]
+	 */
+	public static function writePHPWikiVersionsFile( $path, $wikis ) {
+		$php = "<?php\nreturn " . var_export( $wikis, true ) . ";\n";
+
+		if ( !file_put_contents( $path, $php, LOCK_EX ) ) {
+			print "Unable to write to $path.\n";
+			exit( 1 );
+		}
+	}
+
+	/**
 	 * @param string $path Path to wikiversions.json
 	 * @param array $wikis Array of wikis [ dbname => version ]
 	 */

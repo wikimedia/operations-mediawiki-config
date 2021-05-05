@@ -43,7 +43,10 @@ $common = [
 
 	// IRC (broadcast RCFeed for irc.wikimedia.org)
 	// Not active-active.
-	'irc' => '208.80.153.44', # kraz.codfw.wmnet
+	'irc' => [
+		'208.80.155.105', # irc1001.wikimedia.org
+		'208.80.153.62',  # irc2001.wikimedia.org
+	],
 
 	// Automatic dc-local discovery
 	'parsoid' => 'http://localhost:6002/w/rest.php',
@@ -57,6 +60,7 @@ $common = [
 	'sessionstore' => 'http://localhost:6006',
 	'echostore' => 'http://localhost:6007',
 	'push-notifications' => 'http://localhost:6012',
+	'linkrecommendation' => 'https://linkrecommendation.discovery.wmnet:4005',
 
 	// cloudelastic only exists in eqiad. No load balancer is available due to
 	// the part of the network that they live in so each host is enumerated

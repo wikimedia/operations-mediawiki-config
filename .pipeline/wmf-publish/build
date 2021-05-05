@@ -1,0 +1,93 @@
+#!/bin/bash
+
+set -xeu -o pipefail
+
+export WMF_MAINTENANCE_OFFLINE=1
+export WMF_DATACENTER=eqiad
+
+patches_dir=/srv/mediawiki/patches
+base_dir=/srv/mediawiki
+
+function php_with_errors {
+  php -d display_errors=on -d error_reporting=E_ALL "$@"
+}
+
+function mwscript {
+  php_with_errors multiversion/MWScript.php "$@"
+}
+
+function apply_patch {
+    local version="$1"
+    # patchfile is expected to look like one of:
+    # - ./core/01-TXXXXXX.patch
+    # - ./extensions/SomeExtension/01-TXXXXXX.patch
+    # - ./skins/SomeSkin/01-TXXXXXX.patch
+    # - ./vendor/01-TXXXXXX.patch
+    local patchfile="$2"
+
+    local type=$(echo $patchfile | cut -d/ -f2)
+
+    local targetdir
+
+    case "$type" in
+        core)
+            targetdir=$base_dir/php-$version
+            ;;
+        vendor)
+            targetdir=$base_dir/php-$version/vendor
+            ;;
+        extensions|skins)
+            local module=$(echo $patchfile | cut -d/ -f3)
+            targetdir=$base_dir/php-$version/$type/$module
+            ;;
+        *)
+            echo Unexpected patch type: $type
+            exit 1
+            ;;
+    esac
+
+    patchfile=$patches_dir/$version/$patchfile
+    echo Applying $patchfile in $targetdir
+
+    # FIXME: Send email to the security team if a patch fails to apply
+    patch --forward -d $targetdir -p1 < $patchfile
+}
+
+function apply_patches {
+    local version="$1"
+
+    local patch_dir="$patches_dir/$version"
+
+    if [ -d "$patch_dir" ]; then
+        for patch in $(cd "$patch_dir" && find . -name "*.patch" | sort -n); do
+            apply_patch $version $patch
+        done
+    else
+        echo No patches for $version
+    fi
+}
+
+php_with_errors multiversion/bin/generate-php-wikiversions.php
+php_with_errors multiversion/bin/update-all-localsettings.php
+
+# stub PrivateSettings.php
+cp private/readme.php private/PrivateSettings.php
+
+multiversion/bin/list-versions.php | while read wikidb version; do
+
+  apply_patches "$version"
+
+  mwscript mergeMessageFileList.php \
+    --wiki="$wikidb" \
+    --list-file=wmf-config/extension-list \
+    --output=wmf-config/ExtensionMessages-$version.php
+
+  mwscript rebuildLocalisationCache.php \
+    --wiki="$wikidb" \
+    --store-class=LCStoreCDB \
+    --threads=$(nproc) \
+    --offline
+done
+
+# Cleanup
+rm -fr $patches_dir

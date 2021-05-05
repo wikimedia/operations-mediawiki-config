@@ -32,7 +32,7 @@ $wmfSwiftShardCommon = in_array( 'commonswiki', $wmfSwiftBigWikis ) ? 2 : 0; // 
 if ( $wmfRealm === 'labs' ) {
 	$redisLockServers = [ 'rdb1', 'rdb2' ];
 	$commonsUrl = "https://commons.wikimedia.beta.wmflabs.org";
-	$uploadUrl = "//upload.beta.wmflabs.org";
+	$uploadUrl = "//upload.wikimedia.beta.wmflabs.org";
 } else {
 	$redisLockServers = [ 'rdb1', 'rdb2', 'rdb3' ];
 	$commonsUrl = "https://commons.wikimedia.org";

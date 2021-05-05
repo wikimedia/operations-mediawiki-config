@@ -92,11 +92,11 @@ function wmfGetOverrideSettings() {
 		],
 
 		'-wgUploadPath' => [
-			'default' => 'https://upload.beta.wmflabs.org/$site/$lang',
+			'default' => 'https://upload.wikimedia.beta.wmflabs.org/$site/$lang',
 			'private' => '/w/img_auth.php',
-			'commonswiki' => 'https://upload.beta.wmflabs.org/wikipedia/commons',
-			'metawiki' => 'https://upload.beta.wmflabs.org/wikipedia/meta',
-			'testwiki' => 'https://upload.beta.wmflabs.org/wikipedia/test',
+			'commonswiki' => 'https://upload.wikimedia.beta.wmflabs.org/wikipedia/commons',
+			'metawiki' => 'https://upload.wikimedia.beta.wmflabs.org/wikipedia/meta',
+			'testwiki' => 'https://upload.wikimedia.beta.wmflabs.org/wikipedia/test',
 		],
 
 		'-wgThumbnailBuckets' => [
@@ -323,7 +323,6 @@ function wmfGetOverrideSettings() {
 				'VisualEditor' => 'debug',
 				'wfLogDBError' => 'debug', // Former $wgDBerrorLog
 				'Wikibase' => [ 'udp2log' => 'info', 'logstash' => 'warning', 'sample' => false, ],
-				'Wikibase.IdGenerator' => 'debug', // WMDE & Lucas Werkmeister T268625
 				'WikibaseQualityConstraints' => 'debug',
 				'WikimediaEvents' => 'error', // For T205754 & T208233
 				'WikitechGerritBan' => 'debug',
@@ -379,8 +378,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'-wmgEnableCaptcha' => [
-			// T276176 disable captchas while they are broken
-			'default' => false,
+			'default' => true,
 		],
 
 		'-wmgEchoCluster' => [
@@ -434,15 +432,10 @@ function wmfGetOverrideSettings() {
 			'default' => 1,
 		],
 
-		'wgWMEInukaPageViewEnabled' => [
-			'default' => true
-		],
 		'wgWMESessionTick' => [
 			'default' => true,
 		],
-		'wgWMEInukaPageViewCookiesDomain' => [
-			'default' => 'wmflabs.org'
-		],
+
 		// Enable Mediawiki client side (browser) Javascript error logging.
 		// This is the publicly accessible endpoint for eventgate-logging-external.
 		'wgWMEClientErrorIntakeURL' => [
@@ -497,7 +490,10 @@ function wmfGetOverrideSettings() {
 			'default' => '2', // Latest Vector
 		],
 		'wgVectorLanguageInHeader' => [
-			'default' => true,
+			'default' => [
+				'logged_in' => true,
+				'logged_out' => true
+			],
 		],
 		'wgVectorUseWvuiSearch' => [
 			'default' => true
@@ -638,7 +634,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'-wgScorePath' => [
-			'default' => "//upload.beta.wmflabs.org/score",
+			'default' => "//upload.wikimedia.beta.wmflabs.org/score",
 		],
 
 		'wgRateLimitsExcludedIPs' => [
@@ -856,6 +852,7 @@ function wmfGetOverrideSettings() {
 		'wgLinterSubmitterWhitelist' => [
 			'default' => [
 				'172.16.1.115' => true, // deployment-parsoid11.deployment-prep.eqiad.wmflabs
+				'172.16.4.125' => true, // deployment-parsoid12.deployment-prep.eqiad1.wikimedia.cloud
 			]
 		],
 		'wgLinterStatsdSampleFactor' => [
@@ -904,6 +901,10 @@ function wmfGetOverrideSettings() {
 
 		'wgPopupsReferencePreviews' => [
 			'default' => true,
+		],
+
+		'wgPopupsReferencePreviewsBetaFeature' => [
+			'default' => false,
 		],
 
 		'wmgEnableDashikiData' => [
@@ -997,10 +998,6 @@ function wmfGetOverrideSettings() {
 			'default' => SCHEMA_COMPAT_NEW,
 		],
 
-		'wmgUseJADE' => [
-			'default' => true,
-		],
-
 		'wgOresUiEnabled' => [
 			'default' => true,
 			'wikidatawiki' => false,
@@ -1073,6 +1070,12 @@ function wmfGetOverrideSettings() {
 		'wmgUseGrowthExperiments' => [
 			'enwiki' => true,
 		],
+		'-wgGEDatabaseCluster' => [
+			'default' => false,
+		],
+		'wgGEWikiConfigEnabled' => [
+			'default' => true,
+		],
 		'wgGEDeveloperSetup' => [
 			'default' => true,
 		],
@@ -1082,9 +1085,13 @@ function wmfGetOverrideSettings() {
 		'wgGELinkRecommendationsFrontendEnabled' => [
 			'default' => true,
 		],
-		'wgGELinkRecommendationServiceUrl' => [
-			// API token is stored in the private config repo on the deploy host
-			'default' => 'https://api.wikimedia.org/service/linkrecommendation',
+		'wgGEHomepageDefaultVariant' => [
+			'default' => 'linkrecommendation',
+		],
+		'wgGEHomepageNewAccountVariants' => [
+			'default' => [
+				'linkrecommendation' => 100,
+			],
 		],
 		'wgGELinkRecommendationServiceTimeout' => [
 			'default' => 30,
@@ -1151,15 +1158,19 @@ function wmfGetOverrideSettings() {
 		],
 		'wgGENewcomerTasksRemoteApiUrl' => [
 			'enwiki' => null,
-			'arwiki' => 'https://ar.wikipedia.org/w/api.php',
-			'bnwiki' => 'https://bn.wikipedia.org/w/api.php',
+			'arwiki' => null,
+			'bnwiki' => null,
 			'cswiki' => null,
 			'fawiki' => 'https://fa.wikipedia.org/w/api.php',
 			'kowiki' => 'https://ko.wikipedia.org/w/api.php',
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
-			'viwiki' => 'https://vi.wikipedia.org/w/api.php',
+			'viwiki' => null,
 		],
 		'wgEnableSpecialMute' => [
+			'default' => true,
+			'eswiki' => false,
+		],
+		'wgEnablePartialActionBlocks' => [
 			'default' => true,
 			'eswiki' => false,
 		],
@@ -1785,7 +1796,7 @@ function wmfGetOverrideSettings() {
 			'default' => 'available',
 		],
 
-		'-wgDiscussionTools_newtopictool' => [
+		'-wgDiscussionTools_sourcemodetoolbar' => [
 			'default' => 'default',
 		],
 
@@ -1798,11 +1809,6 @@ function wmfGetOverrideSettings() {
 			'default' => 'videojs',
 		],
 		'-wgTmhUseBetaFeatures' => [
-			'default' => false,
-		],
-
-		// T242855 Undeploying graphoid
-		'-wgGraphImgServiceUrl' => [
 			'default' => false,
 		],
 
@@ -1850,6 +1856,9 @@ function wmfGetOverrideSettings() {
 
 		'wmgUseStopForumSpam' => [
 			'default' => true,
+		],
+		'wmgWikibaseAllowLocalShortDesc' => [
+			'dewiki' => true, // T279829
 		],
 	];
 } # wmfGetOverrideSettings()

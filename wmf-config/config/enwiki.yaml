@@ -16,5 +16,6 @@ inheritsFrom:
   - s1
   - securepollglobal
   - wikidataclient
+  - growthexperiments
 
 wmgSiteLogo1x: '/static/images/project-logos/enwiki.png'

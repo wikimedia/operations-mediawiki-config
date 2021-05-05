@@ -56,6 +56,7 @@ function wmfGetVariantSettings() {
 	'default' => true,
 	'jbowiki' => false,
 	'szywiki' => false, // T237369
+	'taywiki' => false, // T275803
 	'wiktionary' => false,
 ],
 
@@ -89,14 +90,14 @@ function wmfGetVariantSettings() {
 	'wikimedia' => false,
 ],
 
-'wmgEnableBotPasswords' => [
+'wgEnableBotPasswords' => [
 	'default' => true,
 	'nonglobal' => false,
 ],
-'wmgBotPasswordsCluster' => [
+'wgBotPasswordsCluster' => [
 	'default' => false,
 ],
-'wmgBotPasswordsDatabase' => [
+'wgBotPasswordsDatabase' => [
 	'default' => 'metawiki',
 	'private' => false,
 	'fishbowl' => false,
@@ -447,6 +448,7 @@ function wmfGetVariantSettings() {
 	'mniwiki' => 'Asia/Kolkata',
 	'mniwiktionary' => 'Asia/Kolkata',
 	'mnwwiki' => 'Asia/Yangon',
+	'mnwwiktionary' => 'Asia/Yangon',
 	'mrjwiki' => 'Europe/Moscow',
 	'mrwiki' => 'Asia/Kolkata',
 	'mrwikisource' => 'Asia/Kolkata',
@@ -545,6 +547,7 @@ function wmfGetVariantSettings() {
 	'sysop_itwiki' => 'Europe/Rome', // T256545
 	'szlwiki' => 'Europe/Warsaw',
 	'szywiki' => 'Asia/Taipei',
+	'taywiki' => 'Asia/Taipei',
 	'tcywiki' => 'Asia/Kolkata', // T140898
 	'thwiki' => 'Asia/Bangkok',
 	'thwikibooks' => 'Asia/Bangkok',
@@ -552,6 +555,7 @@ function wmfGetVariantSettings() {
 	'thwiktionary' => 'Asia/Bangkok',
 	'thwikiquote' => 'Asia/Bangkok',
 	'trwikimedia' => 'Europe/Istanbul',
+	'trvwiki' => 'Asia/Taipei',
 	'tyvwiki' => 'Asia/Krasnoyarsk',
 	'ukwikivoyage' => 'Europe/Kiev',
 	'vecwiki' => 'Europe/Berlin',
@@ -582,7 +586,7 @@ function wmfGetVariantSettings() {
 
 'wmgSiteLogoIcon' => [
 	// Projects
-	'default' => '/static/images/mobile/copyright/wikimedia.svg',
+	'default' => null, // See T244486
 	'wikibooks' => '/static/images/mobile/copyright/wikibooks.svg',
 	'wikidata' => '/static/images/mobile/copyright/wikidata.svg',
 	'wikinews' => '/static/images/mobile/copyright/wikinews.svg',
@@ -597,6 +601,7 @@ function wmfGetVariantSettings() {
 	'commonswiki' => '/static/images/mobile/copyright/commons.svg',
 	'incubatorwiki' => '/static/images/mobile/copyright/incubator.svg',
 	'mediawikiwiki' => '/static/images/mobile/copyright/mediawiki.svg',
+	'officewiki' => '/static/images/mobile/copyright/wikimedia.svg',
 	'specieswiki' => '/static/images/mobile/copyright/wikispecies.svg',
 ],
 
@@ -1015,6 +1020,11 @@ function wmfGetVariantSettings() {
 		'src' => '/static/images/mobile/copyright/commons-wordmark-en.svg',
 		'width' => 115,
 		'height' => 32,
+	],
+	'mediawikiwiki' => [
+		'src' => '/static/images/mobile/copyright/mediawiki-wordmark-en.svg',
+		'width' => 120,
+		'height' => 18,
 	],
 	'test2wiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-en.svg',
@@ -1952,6 +1962,7 @@ function wmfGetVariantSettings() {
 	'mniwiki' => 'ꯋꯤꯀꯤꯄꯦꯗꯤꯌꯥ',
 	'mniwiktionary' => 'ꯋꯤꯛꯁꯟꯅꯔꯤ',
 	'mnwwiki' => 'ဝဳကဳပဳဒဳယာ',
+	'mnwwiktionary' => 'ဝိက်ရှေန်နရဳ',
 	'movementroleswiki' => 'Movement Roles',
 	'mnwiki' => 'Википедиа',
 	'mrjwiki' => 'Википеди',
@@ -2080,6 +2091,7 @@ function wmfGetVariantSettings() {
 	'tawiktionary' => 'விக்சனரி',
 	'tawikiquote' => 'விக்கிமேற்கோள்',
 	'tawikisource' => 'விக்கிமூலம்',
+	'taywiki' => 'Wikipidia',
 	'tcywiki' => 'ವಿಕಿಪೀಡಿಯ', // T140898
 	'techconductwiki' => 'CoC committee', // T165977
 	'tewiki' => 'వికీపీడియా',
@@ -2106,6 +2118,7 @@ function wmfGetVariantSettings() {
 	'trwikisource' => 'Vikikaynak', // T44721
 	'trwikivoyage' => 'Vikigezgin', // T272779
 	'trwiktionary' => 'Vikisözlük',
+	'trvwiki' => 'Wikipidiya',
 	'tyvwiki' => 'Википедия', // T51328
 	'uawikimedia' => 'Вікімедіа Україна',
 	'udmwiki' => 'Википедия', // T49820
@@ -2496,6 +2509,7 @@ function wmfGetVariantSettings() {
 	'mniwiki' => 'ꯋꯤꯀꯤꯄꯦꯗꯤꯌꯥ',
 	'mniwiktionary' => 'ꯋꯤꯛꯁꯟꯅꯔꯤ',
 	'mnwwiki' => 'ဝဳကဳပဳဒဳယာ',
+	'mnwwiktionary' => 'ဝိက်ရှေန်နရဳ',
 	'movementroleswiki' => 'Wikipedia', // This was set up incorrectly.
 	'mrjwiki' => 'Википеди',
 	'mrwiki' => 'विकिपीडिया',
@@ -2621,6 +2635,7 @@ function wmfGetVariantSettings() {
 	'tawikisource' => 'விக்கிமூலம்',
 	'tawiktionary' => 'விக்சனரி',
 	'tawikiquote' => 'விக்கிமேற்கோள்',
+	'taywiki' => 'Wikibitia',
 	'tcywiki' => 'ವಿಕಿಪೀಡಿಯ', // T140898
 	'tewiki' => 'వికీపీడియా',
 	'tewikiquote' => 'వికీవ్యాఖ్య', // T89332
@@ -2645,6 +2660,7 @@ function wmfGetVariantSettings() {
 	'trwikisource' => 'Vikikaynak', // T44721
 	'trwikivoyage' => 'Vikigezgin',
 	'trwiktionary' => 'Vikisözlük',
+	'trvwiki' => 'Wikipidiya',
 	'ttwiki' => 'Википедия',
 	'ttwiktionary' => 'Викисүзлек', // T211312
 	'tyvwiki' => 'Википедия', // T51328
@@ -2943,6 +2959,9 @@ function wmfGetVariantSettings() {
 	'+astwiktionary' => [
 		'Uiccionariu' => NS_PROJECT, // T99315
 		'Uiccionariu_alderique' => NS_PROJECT_TALK,
+	],
+	'+azwiki' => [
+		'VP' => NS_PROJECT, // T280577
 	],
 	'+azwikibooks' => [
 		'Wikibooks_müzakirəsi' => NS_PROJECT_TALK, // T33068
@@ -5072,6 +5091,7 @@ function wmfGetVariantSettings() {
 		'sysop',
 	],
 	'arwiki' => [ '', 'autoconfirmed', 'editautoreviewprotected', 'review', 'sysop' ], // T54109, T146575, T225896
+	'azwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T281860
 	'bgwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T269709
 	'ckbwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T54533
 	'commonswiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T227420
@@ -5089,7 +5109,7 @@ function wmfGetVariantSettings() {
 	'kowiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T184675
 	'lvwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T92645
 	'plwiki' => [ '', 'autoconfirmed', 'editeditorprotected', 'sysop' ], // T48990
-	'ptwiki' => [ '', 'autoconfirmed', 'editautoreviewprotected', 'sysop' ], // T41652
+	'ptwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'editautoreviewprotected', 'sysop' ], // T41652, T281926
 	'rowiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T63172, T254471
 	'srwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
 	'srwikibooks' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
@@ -5097,6 +5117,7 @@ function wmfGetVariantSettings() {
 	'srwikisource' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
 	'srwikiquote' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
 	'srwiktionary' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
+	'svwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T279836
 	'testwiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T61084
 	'viwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T215493
 	'zhwiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T260012
@@ -5110,14 +5131,17 @@ function wmfGetVariantSettings() {
 
 'wgSemiprotectedRestrictionLevels' => [
 	'default' => [ 'autoconfirmed' ],
-	'+enwiki' => [ 'extendedconfirmed' ], // T126607
+	'+azwiki' => [ 'extendedconfirmed' ], // T281860
 	'+bgwiki' => [ 'extendedconfirmed' ], // T269709
+	'+enwiki' => [ 'extendedconfirmed' ], // T126607
 	'+fawiki' => [ 'extendedconfirmed' ], // T140839
 	'+frwiki' => [ 'editextendedsemiprotected' ], // T132248
 	'+jawiki' => [ 'extendedconfirmed' ], // T249820
 	'+kowiki' => [ 'extendedconfirmed' ], // T184675
-	'+viwiki' => [ 'extendedconfirmed' ], // T215493
+	'+ptwiki' => [ 'extendedconfirmed' ], // T281926
 	'+rowiki' => [ 'extendedconfirmed' ], // T254471
+	'+svwiki' => [ 'extendedconfirmed' ], // T279836
+	'+viwiki' => [ 'extendedconfirmed' ], // T215493
 ],
 
 'wgSiteNotice' => [
@@ -5269,7 +5293,7 @@ function wmfGetVariantSettings() {
 		'exec' => 'debug',
 		'export' => 'debug',
 		'ExtensionDistributor' => 'error', // T225243
-		'ExternalStore' => 'debug',
+		'ExternalStore' => 'warning', // T281048
 		'fatal' => 'debug',
 		'FileImporter' => 'debug',
 		'FileOperation' => 'debug',
@@ -5346,7 +5370,6 @@ function wmfGetVariantSettings() {
 		'VisualEditor' => 'debug',
 		'wfLogDBError' => 'debug', // Former $wgDBerrorLog
 		'Wikibase' => [ 'udp2log' => 'info', 'logstash' => 'warning', 'sample' => false, ],
-		'Wikibase.IdGenerator' => 'debug', // WMDE & Lucas Werkmeister T268625
 		'WikibaseQualityConstraints' => 'debug',
 		'WikimediaEvents' => 'error', // For T205754 & T208233
 		'WikitechGerritBan' => 'debug',
@@ -5883,6 +5906,8 @@ function wmfGetVariantSettings() {
 		101 => 'Discussioni_portale',
 		102 => 'Progetto',
 		103 => 'Discussioni_progetto',
+		118 => 'Bozza', // T280289
+		119 => 'Discussioni_bozza' // T280289
 	],
 	'jawiki' => [
 		NS_TALK => "ノート",
@@ -6045,6 +6070,10 @@ function wmfGetVariantSettings() {
 	'newwiki' => [
 		100 => 'दबू',
 		101 => 'दबू_खँलाबँला',
+	],
+	'niawiki' => [ // T277671
+		100 => 'Portal',
+		101 => 'Huhuo_portal',
 	],
 	'nlwiki' => [
 		100 => 'Portaal',
@@ -7689,15 +7718,31 @@ function wmfGetVariantSettings() {
 'wgVectorDefaultSidebarVisibleForAnonymousUser' => [
 	'desktop-improvements' => true,
 ],
-'wgVectorUseWvuiSearch' => [
-	'default' => false,
-	'desktop-improvements' => true,
-	'commonswiki' => false,
+'wgVectorLanguageInHeader' => [
+	'default' => [
+		'logged_in' => true,
+		'logged_out' => false,
+	],
+	// Temporary: See T280526.
+	'desktop-improvements' => [
+		'logged_in' => false,
+		'logged_out' => false,
+	],
+	// Test wiki and Office Wiki are part of the `desktop-improvements` group,
+	// but have special treatment.
+	'testwiki' => [
+		'logged_in' => true,
+		'logged_out' => true,
+	],
+	'officewiki' => [
+		'logged_in' => true,
+		'logged_out' => true,
+	],
 ],
-// T249297
-'wgVectorSearchTreatmentABTest' => [
-	'default' => false,
-	'desktop-improvements' => true,
+'wgVectorUseWvuiSearch' => [
+	'default' => true,
+	'commonswiki' => false,
+	'wikidatawiki' => false,
 ],
 'wgVectorWvuiSearchOptions' => [
 	'default' => [
@@ -8314,6 +8359,7 @@ function wmfGetVariantSettings() {
 	'+svwikivoyage' => [ 6 => 1, 14 => 1, 100 => 1, 104 => 1, 106 => 1 ],
 	'+strategywiki' => [ 106 => 1, 107 => 1 ], // T22514
 	'+tewikisource' => [ 102 => 1, 106 => 1 ],
+	'+thwikisource' => [ 100 => 1, 102 => 1, 114 => 1, 252 => 1 ], // T275280
 	'+tlwikibooks' => [ 100 => 1 ],
 	'+trwikisource' => [ 100 => 1 ],
 	'+ukwikinews' => [ 14 => 1 ], // T51335
@@ -8484,6 +8530,11 @@ function wmfGetVariantSettings() {
 
 'wgEnableSpecialMute' => [
 	'default' => true,
+],
+
+'wgEnablePartialActionBlocks' => [
+	'default' => false,
+	'testwiki' => true,
 ],
 
 'wgOriginTrials' => [
@@ -8720,6 +8771,9 @@ function wmfGetVariantSettings() {
 			'autopatrol' => true,
 		], // T196488, T244338
 		'rollbacker' => [ 'rollback' => true ], // T215200
+		'bot' => [ 'extendedconfirmed' => true ], // T281860
+		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T281860
+		'sysop' => [ 'extendedconfirmed' => true ], // T281860
 	],
 	'+azwikibooks' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T231493
@@ -9151,15 +9205,18 @@ function wmfGetVariantSettings() {
 			'move' => true,
 			'tboverride' => true, // T209753
 			'move-categorypages' => true, // T219261
+			'delete-redirect' => true, // T278131
 		],
 		'patroller' => [ 'patrol' => true ], // T149019
 	],
 	'+enwikibooks' => [
+		'autoreview' => [ 'autopatrol' => true ], // T278300
 		'editor' => [
 			'autopatrol' => true, // T172561
 			'suppressredirect' => true, // T268849
 		],
 		'flood' => [ 'bot' => true ],
+		'sysop' => [ 'importupload' => true ], // T278683
 		'uploader' => [
 			'upload' => true,
 			'reupload' => true,
@@ -9319,7 +9376,8 @@ function wmfGetVariantSettings() {
 			'protect' => true,
 			'undelete' => true,
 			'extendedconfirmed' => true,
-		], // T71411
+			'deleterevision' => true,
+		], // T71411 and T277358
 		'templateeditor' => [
 			'editprotected' => true,
 			'tboverride' => true,
@@ -10212,7 +10270,10 @@ function wmfGetVariantSettings() {
 			'patrol' => true,
 			'abusefilter-log-detail' => true,
 		],
-		'bot' => [ 'editautoreviewprotected' => true, ],
+		'bot' => [
+			'editautoreviewprotected' => true,
+			'extendedconfirmed' => true, // T281926
+		],
 		'autoreviewer' => [
 			'autopatrol' => true,
 			'editautoreviewprotected' => true,
@@ -10238,7 +10299,10 @@ function wmfGetVariantSettings() {
 			'abusefilter-log-private' => true, //T237830
 		], // T29563
 		'user' => [ 'move-rootuserpages' => false, ],
-		'sysop' => [ 'editautoreviewprotected' => true ],
+		'sysop' => [
+			'editautoreviewprotected' => true,
+			'extendedconfirmed' => true, // T281926
+		],
 		'bureaucrat' => [
 			'move-rootuserpages' => true,
 			'autopatrol' => true,
@@ -10249,6 +10313,7 @@ function wmfGetVariantSettings() {
 			'editsitejson' => true,
 		],
 		'flood' => [ 'bot' => true, ], // T228521
+		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T281860
 	],
 	'+ptwikinews' => [
 		'editprotected' => [
@@ -10611,6 +10676,9 @@ function wmfGetVariantSettings() {
 			'rollback' => true,
 			'autopatrol' => true,
 		],
+		'bot' => [ 'extendedconfirmed' => true ], // T279836
+		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T279836
+		'sysop' => [ 'extendedconfirmed' => true ], // T279836
 	],
 	'+svwikisource' => [ // T30614 & 36895
 		'autopatrolled' => [
@@ -11187,7 +11255,20 @@ function wmfGetVariantSettings() {
 ],
 
 'wmgPrivilegedGlobalGroups' => [
-	'default' => [ 'abusefilter-helper', 'founder', 'global-deleter', 'global-interface-editor', 'global-sysop', 'new-wikis-importer', 'ombudsman', 'staff', 'steward', 'sysadmin', 'wmf-researcher' ],
+	'default' => [
+		'abusefilter-helper',
+		'abusefilter-maintainer',
+		'founder',
+		'global-deleter',
+		'global-interface-editor',
+		'global-sysop',
+		'new-wikis-importer',
+		'ombuds',
+		'staff',
+		'steward',
+		'sysadmin',
+		'wmf-researcher'
+	],
 ],
 
 # wgAddGroups @{
@@ -11263,6 +11344,7 @@ function wmfGetVariantSettings() {
 			'autopatrolled', // T196488
 			'patroller', // T196488
 			'rollbacker', // T215200
+			'extendedconfirmed', // T281860
 		],
 	],
 	'+azwikibooks' => [
@@ -11393,7 +11475,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'abusefilter', 'abusefilter-helper', 'accountcreator', 'autoreviewer', 'confirmed', 'eventcoordinator', 'filemover', 'reviewer', 'rollbacker', 'templateeditor', 'massmessage-sender', 'extendedconfirmed', 'extendedmover', 'patroller' ], // T126607, T133981, T149019, T175684, T193075
 	],
 	'+enwikibooks' => [
-		'sysop' => [ 'transwiki', 'uploader' ],
+		'sysop' => [ 'import', 'transwiki', 'uploader' ], // T278683
 		'bureaucrat' => [ 'flood' ],
 	],
 	'+enwikinews' => [
@@ -11748,7 +11830,7 @@ function wmfGetVariantSettings() {
 	],
 	'+ptwiki' => [
 		'bureaucrat' => [ 'rollbacker', 'eliminator', 'autoreviewer', 'interface-editor', 'flood' ], // T41905, T65750, T212735, T228521
-		'sysop' => [ 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator', 'flood' ], // T65750, T228521
+		'sysop' => [ 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator', 'flood', 'extendedconfirmed' ], // T65750, T228521, T281926
 	],
 	'+quwiki' => [
 		'sysop' => [ 'rollbacker' ],
@@ -11769,7 +11851,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'rollbacker' ], // T264147
 	],
 	'+ruwiki' => [
-		'sysop' => [ 'rollbacker', 'autoeditor', 'uploader', 'closer', 'filemover', 'suppressredirect' ],
+		'sysop' => [ 'rollbacker', 'uploader', 'closer', 'filemover', 'suppressredirect' ],
 		'bureaucrat' => [ 'arbcom', 'engineer' ], // T51334, T144599
 	],
 	'+ruwikinews' => [
@@ -11859,7 +11941,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'rollbacker' ],
 	],
 	'+svwiki' => [
-		'sysop' => [ 'rollbacker', 'autopatrolled' ], // T161210
+		'sysop' => [ 'rollbacker', 'autopatrolled', 'extendedconfirmed' ], // T161210, T279836
 	],
 	'+svwikisource' => [
 		'sysop' => [ 'autopatrolled', ],
@@ -12094,6 +12176,7 @@ function wmfGetVariantSettings() {
 			'autopatrolled', // T196488
 			'patroller', // T196488
 			'rollbacker', // T215200
+			'extendedconfirmed', // T281860
 		],
 	],
 	'+azwikibooks' => [
@@ -12232,7 +12315,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'rollbacker', 'accountcreator', 'abusefilter', 'abusefilter-helper', 'autoreviewer', 'confirmed', 'reviewer', 'filemover', 'templateeditor', 'massmessage-sender', 'extendedconfirmed', 'extendedmover', 'patroller', 'eventcoordinator' ], // T126607, T133981, T149019, T175684, T193075
 	],
 	'+enwikibooks' => [
-		'sysop' => [ 'transwiki', 'uploader', ],
+		'sysop' => [ 'import', 'transwiki', 'uploader', ], // T278683
 		'bureaucrat' => [ 'flood' ],
 	],
 	'+enwikinews' => [
@@ -12602,7 +12685,7 @@ function wmfGetVariantSettings() {
 	],
 	'+ptwiki' => [
 		'bureaucrat' => [ 'rollbacker', 'eliminator', 'autoreviewer', 'interface-editor', 'bureaucrat', 'sysop', 'flood' ], // T41905, T65750, T107661, T212735, T228521
-		'sysop' => [ 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator', 'flood' ], // T65750, T228521
+		'sysop' => [ 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator', 'flood', 'extendedconfirmed' ], // T65750, T228521, T281926
 	],
 	'+ptwikinews' => [
 		'sysop' => [ 'reviewer', 'editprotected' ], // T162577
@@ -12627,7 +12710,7 @@ function wmfGetVariantSettings() {
 	],
 	'+ruwiki' => [
 		'bureaucrat' => [ 'arbcom', 'engineer', 'sysop' ], // T51334, T144599
-		'sysop' => [ 'rollbacker', 'autoeditor', 'uploader', 'closer', 'filemover', 'suppressredirect' ],
+		'sysop' => [ 'rollbacker', 'uploader', 'closer', 'filemover', 'suppressredirect' ],
 	],
 	'+ruwikinews' => [
 		'sysop' => [ 'rollbacker' ], // T201265
@@ -12723,7 +12806,7 @@ function wmfGetVariantSettings() {
 		'bureaucrat' => [ 'flood' ],
 	],
 	'+svwiki' => [
-		'sysop' => [ 'rollbacker', 'autopatrolled' ], // T161210
+		'sysop' => [ 'rollbacker', 'autopatrolled', 'extendedconfirmed' ], // T161210, T279836
 	],
 	'+svwikisource' => [
 		'sysop' => [ 'autopatrolled', ],
@@ -12892,8 +12975,12 @@ function wmfGetVariantSettings() {
 
 	// Note: When adding a specific wiki you have to duplicate these generic sources
 	// otherwise they would be overwritten by the specific wiki entry
-	'wikisource' => [ 'meta', 'commons' ],
+	'wikipedia' => [ 'en', 'ar', 'es', 'fr', 'ru', 'zh', 'de', 'id', 'commons', 'meta', 'incubator' ],
+	'wiktionary' => [ 'w', 'w:en', 'en', 'ar', 'es', 'fr', 'ru', 'zh', 'de', 'id', 'commons', 'meta', 'incubator' ],
+	'wikiquote' => [ 'w', 'w:en', 'en', 'fr', 'es', 'ru', 'id', 'commons', 'meta', 'incubator' ],
+	'wikisource' => [ 'w', 'en', 'meta', 'commons' ],
 	'wikiversity' => [ 'meta', 'b', 'incubator' ],
+	'wikivoyage' => [ 'w', 'w:en', 'en', 'fr', 'es', 'ru', 'id', 'commons', 'meta', 'incubator' ],
 	'wikidata' => [ 'meta', 'commons', 'en', 'de', 'fr', 'es' ],
 
 	// Specific wikis
@@ -13201,6 +13288,7 @@ function wmfGetVariantSettings() {
 	'testwiki' => [ 'de', 'en', 'es', 'fr', 'ja', 'commons', 'meta', 'incubator', 'strategy', 'wikinews:en', 'wikinews:es', 'mediawikiwiki' ], // T154879
 	'test2wiki' => [ 'en', 'cs', 'n', 'n:es', 'n:fr', 'mediawikiwiki' ], // T155906
 	'tetwiki' => [ 'en', 'de', 'pt' ],
+	'thwikisource' => [ 'oldwikisouce', 'b', 'q', 'w', 'wikt' ], // T275281
 	'tnwiki' => [ 'en' ], // T53327
 	'tpiwiki' => [ 'en', 'simple', 'wikt:en', 'commons' ], // T26769
 	'urwiki' => [ 'ar', 'en', 'fa', 'fr', 'he' ], // T212612
@@ -13451,6 +13539,8 @@ function wmfGetVariantSettings() {
 	],
 	'itwiki' => [
 		NS_USER => 'noindex,follow', // T107992
+		118 => 'noindex,nofollow', // T280289
+		119 => 'noindex,nofollow', // T280289
 	],
 	'kowiki' => [
 		NS_USER => 'noindex,follow', // T121301
@@ -13734,6 +13824,7 @@ function wmfGetVariantSettings() {
 	'default' => [],
 	'enwiki' => [ 118, 119 ], // draft and draft talk
 	'hewiki' => [ 118, 119 ], // draft and draft talk - T86329
+	'itwiki' => [ 118, 119 ], // draft and draft talk - T280289
 	'kowiki' => [ 118, 119 ], // draft and draft talk - T92798
 	'thwiki' => [ 118, 119 ], // draft and draft talk - T252959
 	'zhwiki' => [ 118, 119 ], // draft and draft talk - T91223
@@ -14083,6 +14174,11 @@ function wmfGetVariantSettings() {
 		'PMID' => true,
 		'RFC' => true,
 	],
+	'enwiki' => [ // T275951
+		'ISBN' => false,
+		'PMID' => false,
+		'RFC' => false,
+	],
 ],
 
 # wgFavicon @{
@@ -14185,6 +14281,22 @@ function wmfGetVariantSettings() {
 
 'wmgAutopromoteOnceonEdit' => [
 	'default' => [],
+	'azwiki' => [
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 30 * 86400 ], // 30 days
+			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+		], // T281860
+	],
+	'bgwiki' => [
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 120 * 86400 ], // 120 days
+			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+		], // T269709
+	],
 	'dewikivoyage' => [
 		'autopatrolled' => [
 			'&',
@@ -14233,6 +14345,36 @@ function wmfGetVariantSettings() {
 			[ '!', [ APCOND_INGROUPS, 'bureaucrat' ] ],
 		], // T187187
 	],
+	'ptwiki' => [
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 30 * 86400 ], // 30 days
+			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+		], // T281926
+	],
+	'rowiki' => [
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 30 * 86400 ],
+			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+		], // T254471
+	],
+	'ruwiki' => [
+		'uploader' => [ '&',
+			[ APCOND_AGE, 14 * 86400 ],
+			[ APCOND_EDITCOUNT, 20 ],
+		],
+	],
+	'svwiki' => [
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 30 * 86400 ], // 30 days
+			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+		], // T279836
+	],
 	'trwiki' => [
 		'autoreview' => [
 			'&', // AND
@@ -14266,12 +14408,6 @@ function wmfGetVariantSettings() {
 			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
 		],
 	],
-	'ruwiki' => [
-		'uploader' => [ '&',
-			[ APCOND_AGE, 14 * 86400 ],
-			[ APCOND_EDITCOUNT, 20 ],
-		],
-	],
 	'viwiki' => [
 		'extendedconfirmed' => [ '&',
 			[ APCOND_EDITCOUNT, 500 ],
@@ -14280,22 +14416,6 @@ function wmfGetVariantSettings() {
 			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
 			[ '!', [ APCOND_INGROUPS, 'eliminator' ] ],
 		], // T215493
-	],
-	'rowiki' => [
-		'extendedconfirmed' => [ '&',
-			[ APCOND_EDITCOUNT, 500 ],
-			[ APCOND_AGE, 30 * 86400 ],
-			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
-			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
-		], // T254471
-	],
-	'bgwiki' => [
-		'extendedconfirmed' => [ '&',
-			[ APCOND_EDITCOUNT, 500 ],
-			[ APCOND_AGE, 120 * 86400 ], // 120 days
-			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
-			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
-		], // T269709
 	],
 ],
 
@@ -14878,7 +14998,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgAbuseFilterAflFilterMigrationStage' => [
-	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW
+	'default' => SCHEMA_COMPAT_NEW
 ],
 
 // emergency disable: shut off filters tagging >5% of posts on a total of at least 25 posts per day
@@ -15238,6 +15358,7 @@ function wmfGetVariantSettings() {
 		'*.president.az', // President of the Republic of Azerbaijan - T274789
 		'seer.ufrgs.br', // T270962
 		'inaturalist-open-data.s3.amazonaws.com', // iNaturalist - T275318
+		'*.jfklibrary.org', // JFK library - T279506
 	],
 ],
 
@@ -15263,7 +15384,15 @@ function wmfGetVariantSettings() {
 	'frwiki' => true, // T202014
 ],
 
+// Temporarily unused, see T280886
 'wmgUseFooterCodeOfConductLink' => [
+	'default' => true,
+	'mediawikiwiki' => false,
+	'labswiki' => false,
+	'labtestwiki' => false,
+],
+
+'wmgUseFooterTechCodeOfConductLink' => [
 	'default' => false,
 	'mediawikiwiki' => true,
 	'labswiki' => true,
@@ -15464,6 +15593,7 @@ function wmfGetVariantSettings() {
 	'plwiktionary' => true,
 	'pswiki' => true,
 	'ptwiki' => true,
+	'ptwikinews' => true, // T278634
 	'rowiki' => true, // T219855
 	'ruwiki' => true, // T153855
 	'sawiki' => true,
@@ -15659,7 +15789,6 @@ function wmfGetVariantSettings() {
 'wmgUseBetaFeatures' => [
 	'default' => true,
 	'lockeddown' => false,
-	'wikitech' => false,
 ],
 
 // Whitelist enablement of individual Beta Features for production; per-wiki
@@ -15696,11 +15825,6 @@ function wmfGetVariantSettings() {
 	'test2wiki' => 'https://test.wikipedia.org/wiki/Special:ImportFile',
 	'commonswiki' => false,
 	'testcommonswiki' => false,
-],
-
-'wmgFileExporterBetaFeature' => [
-	// Remove deprecated setting: T232542
-	'default' => false,
 ],
 
 'wmgUseCommonsMetadata' => [
@@ -15808,6 +15932,19 @@ function wmfGetVariantSettings() {
 	'sewikimedia' => true, // T235083
 	'wikipedia' => true, // T235083
 	'zhwikivoyage' => true, // T235083
+],
+
+'wmgPopupsReferencePreviews' => [
+	'default' => false,
+	'group0' => true,
+	'arwiki' => true,
+	'dewiki' => true,
+	'euwiki' => true,
+	'etwiki' => true,
+	'fiwiki' => true,
+	'guwiki' => true,
+	'hewiki' => true,
+	'rowiki' => true,
 ],
 
 'wgPopupsConflictingRefTooltipsGadgetName' => [
@@ -16211,6 +16348,10 @@ function wmfGetVariantSettings() {
 		'Սևագիր' => true, //Draft, T260825
 		'Վիքինախագիծ' => true, //Wikiproject, T260825
 	],
+	'+itwiki' => [
+		'Bozza' => true, // Draft - T280289
+		'Discussioni_bozza' => true // Draft talk - T280289
+	],
 	'+jawiki' => [
 		'Portal' => true, // T97313
 	],
@@ -16385,6 +16526,10 @@ function wmfGetVariantSettings() {
 // ExternalGuidance extension initiated edit tags in VE (T216123)
 'wgWMEEditCampaigns' => [
 	'default' => [ 'external-machine-translation' ],
+],
+
+'wmgVisualEditorSuggestedValues' => [
+	'default' => true,
 ],
 
 // --------------- VisualEditor end ---------------
@@ -16746,10 +16891,8 @@ function wmfGetVariantSettings() {
 ],
 
 'wgCheckUserLogLogins' => [
-	// T253802 - enabled everywhere but few large wikis
+	// T253802 - enabled everywhere but loginwiki
 	'default' => true,
-
-	// Do not log logins at loginwiki
 	'loginwiki' => false,
 ],
 
@@ -16969,17 +17112,6 @@ function wmfGetVariantSettings() {
 	'default' => 2,
 ],
 
-// restbase format: /api/rest_v1/page/graph/png/{title}/{revid}/{hash}.png
-// %1\$s = domain
-// %2\$s = title
-// %3\$s = revid
-// %4\$s = hash
-'wgGraphImgServiceUrl' => [
-	'default' => false,
-	'testwiki' => false,
-	'test2wiki' => "/api/rest_v1/page/graph/png/%2\$s/0/%4\$s.png",
-],
-
 'wmgUseGraphWithJsonNamespace' => [
 	'default' => false,
 
@@ -17154,11 +17286,13 @@ function wmfGetVariantSettings() {
 
 'wgMFMobileFormatterOptions' => [
 	'default' => [
+		'excludeNamespaces' => [ 10, -1 ],
 		'maxImages' => 1000,
 		'maxHeadings' => 4000,
 		'headings' => [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ]
 	],
 	'wikivoyage' => [
+		'excludeNamespaces' => [ 10, -1 ],
 		'maxImages' => 1000,
 		'maxHeadings' => 4000,
 		'headings' => [ 'h2', 'h3', 'h4', 'h5', 'h6' ] //T110436, T110837
@@ -18787,7 +18921,6 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
-	'ptwiki' => true, // T173768
 ],
 
 // arbcom_*wiki, sysop_*wiki and wg_enwiki must remain explicitly false in this array, because the default false
@@ -19099,50 +19232,29 @@ function wmfGetVariantSettings() {
 ],
 
 'wgDiscussionToolsEnable' => [
-	'default' => false,
+	'default' => true, // T276498
 	'wikipedia' => true, // T266303
-	'enwiki' => false,
-	'dewiki' => false,
-	'ruwiki' => false,
+	'enwiki' => true, // T273146
+	'dewiki' => true, // T276494
+	'ruwiki' => true, // T276493
+	'enwikibooks' => true, // T276851
 	'enwikiversity' => true, // T264693
+	'frwiktionary' => true, // T276189
 	'gomwiktionary' => true, // T258554
 	'jawikivoyage' => true, // T265829
 	'kuwiktionary' => true, // T273192
 	'mediawikiwiki' => true, // T251208
 	'metawiki' => true, // T264693
 	'apiportalwiki' => true, // T260624
+	'officewiki' => true, // T277103
 ],
 
 'wgDiscussionToolsBeta' => [
 	'default' => true,
-	'gomwiktionary' => false, // T258554
-	'apiportalwiki' => false, // T260624
 ],
 
 'wgDiscussionToolsABTest' => [
 	'default' => false,
-	'afwiki' => 'replytool',
-	'amwiki' => 'replytool',
-	'arzwiki' => 'replytool',
-	'bnwiki' => 'replytool',
-	'eswiki' => 'replytool',
-	'fawiki' => 'replytool',
-	'frwiki' => 'replytool',
-	'hewiki' => 'replytool',
-	'hiwiki' => 'replytool',
-	'idwiki' => 'replytool',
-	'itwiki' => 'replytool',
-	'jawiki' => 'replytool',
-	'kowiki' => 'replytool',
-	'nlwiki' => 'replytool',
-	'omwiki' => 'replytool',
-	'plwiki' => 'replytool',
-	'ptwiki' => 'replytool',
-	'swwiki' => 'replytool',
-	'thwiki' => 'replytool',
-	'ukwiki' => 'replytool',
-	'viwiki' => 'replytool',
-	'zhwiki' => 'replytool',
 ],
 
 'wgDiscussionTools_replytool' => [
@@ -19150,14 +19262,22 @@ function wmfGetVariantSettings() {
 	'arwiki' => 'available', // T249394
 	'cswiki' => 'available', // T249394
 	'huwiki' => 'available', // T249394
+	'apiportalwiki' => 'available', // T260624
+	'gomwiktionary' => 'available', // T258554
+	'enwikibooks' => 'available', // T276851
+	'officewiki' => 'available', // T277103
 ],
 
 'wgDiscussionTools_newtopictool' => [
+	'default' => 'default', // T275827
+],
+
+'wgDiscussionTools_sourcemodetoolbar' => [
 	'default' => 'unavailable',
-	'arwiki' => 'default', // T273145
-	'cswiki' => 'default', // T273145
-	'huwiki' => 'default', // T273145
-	'testwiki' => 'default',
+],
+
+'wgDiscussionTools_topicsubscription' => [
+	'default' => 'unavailable',
 ],
 
 'wgDTSchemaEditAttemptStepSamplingRate' => [
@@ -19256,7 +19376,6 @@ function wmfGetVariantSettings() {
 	"adywiki" => true,
 	"akwiki" => true,
 	"alswiki" => true,
-	"amwiki" => true,
 	"angwiki" => true,
 	"anwiki" => true,
 	"arcwiki" => true,
@@ -19287,13 +19406,11 @@ function wmfGetVariantSettings() {
 	"chwiki" => true,
 	"chywiki" => true,
 	"ckbwiki" => true,
-	"cowiki" => true,
 	"crhwiki" => true,
 	"crwiki" => true,
 	"csbwiki" => true,
 	"cswiki" => true,
 	"cuwiki" => true,
-	"cvwiki" => true,
 	"dawiki" => true,
 	"dewiki" => true,
 	"dinwiki" => true,
@@ -19329,7 +19446,6 @@ function wmfGetVariantSettings() {
 	"gotwiki" => true,
 	"gvwiki" => true,
 	"hakwiki" => true,
-	"hawiki" => true,
 	"hawwiki" => true,
 	"hewiki" => true,
 	"hifwiki" => true,
@@ -19368,11 +19484,9 @@ function wmfGetVariantSettings() {
 	"kuwiki" => true,
 	"kvwiki" => true,
 	"kwwiki" => true,
-	"kywiki" => true,
 	"ladwiki" => true,
 	"lawiki" => true,
 	"lbewiki" => true,
-	"lbwiki" => true,
 	"lezwiki" => true,
 	"lfnwiki" => true,
 	"lgwiki" => true,
@@ -19380,7 +19494,6 @@ function wmfGetVariantSettings() {
 	"liwiki" => true,
 	"lmowiki" => true,
 	"lnwiki" => true,
-	"lowiki" => true,
 	"lrcwiki" => true,
 	"ltgwiki" => true,
 	"maiwiki" => true,
@@ -19391,7 +19504,6 @@ function wmfGetVariantSettings() {
 	"miwiki" => true,
 	"mnwwiki" => true,
 	"mrjwiki" => true,
-	"mtwiki" => true,
 	"mwlwiki" => true,
 	"myvwiki" => true,
 	"mznwiki" => true,
@@ -19402,7 +19514,6 @@ function wmfGetVariantSettings() {
 	"ndswiki" => true,
 	"newwiki" => true,
 	"nlwiki" => true,
-	"nnwiki" => true,
 	"novwiki" => true,
 	"nowiki" => true,
 	"nqowiki" => true,
@@ -19437,14 +19548,12 @@ function wmfGetVariantSettings() {
 	"rowiki" => true,
 	"ruewiki" => true,
 	"ruwiki" => true,
-	"rwwiki" => true,
 	"sahwiki" => true,
 	"satwiki" => true,
 	"sawiki" => true,
 	"scnwiki" => true,
 	"scowiki" => true,
 	"scwiki" => true,
-	"sdwiki" => true,
 	"sewiki" => true,
 	"sgwiki" => true,
 	"shnwiki" => true,
@@ -19465,7 +19574,6 @@ function wmfGetVariantSettings() {
 	"tetwiki" => true,
 	"thwiki" => true,
 	"tiwiki" => true,
-	"tkwiki" => true,
 	"tnwiki" => true,
 	"towiki" => true,
 	"tpiwiki" => true,
@@ -19478,7 +19586,6 @@ function wmfGetVariantSettings() {
 	"udmwiki" => true,
 	"ugwiki" => true,
 	"ukwiki" => true,
-	"uzwiki" => true,
 	"vecwiki" => true,
 	"vepwiki" => true,
 	"vewiki" => true,
@@ -19492,7 +19599,6 @@ function wmfGetVariantSettings() {
 	"xalwiki" => true,
 	"xhwiki" => true,
 	"xmfwiki" => true,
-	"yowiki" => true,
 	"zawiki" => true,
 	"zeawiki" => true,
 	"zh_classicalwiki" => true,
@@ -19570,6 +19676,21 @@ function wmfGetVariantSettings() {
 		'cxstats' => true,
 		'eswiki-recommender' => true,
 		'newarticle' => true,
+		'specialcx' => true,
+		'staff-recommender' => true,
+		'external-machine-translation' => [
+			'edittag' => 'campaign-external-machine-translation',
+		],
+		'wiki-for-human-rights' => true,
+		'WikiGapFinder' => true,
+		'mskf-the-solution' => true,
+		'Wikidocumentaries' => true,
+	],
+	'fiwiki' => [
+		'article-recommender-1' => true,
+		'cx2outreach' => true,
+		'cxstats' => true,
+		'newarticle' => false, // T277473
 		'specialcx' => true,
 		'staff-recommender' => true,
 		'external-machine-translation' => [
@@ -19664,7 +19785,7 @@ function wmfGetVariantSettings() {
 	'wikivoyage' => 9,
 ],
 
-'wmgRelatedArticlesUseCirrusSearch' => [
+'wgRelatedArticlesUseCirrusSearch' => [
 	'default' => true,
 	'wikivoyage' => false, // T164391
 ],
@@ -19675,8 +19796,9 @@ function wmfGetVariantSettings() {
 	'apiportalwiki' => [ 'vector', 'monobook', 'modern', 'cologneblue', 'timeless', 'minerva' ],
 ],
 
-'wmgRelatedArticlesFooterWhitelistedSkins' => [
+'wgRelatedArticlesFooterAllowedSkins' => [
 	'default' => [ 'minerva', 'timeless' ], // T144812, T181242
+	'dewiki' => [ 'minerva' ], // T278611
 	'eswikinews' => [], // T230660
 	'htwiki' => [ 'minerva', 'vector', 'timeless' ], // T126826
 	'hewiki' => [ 'minerva', 'vector', 'timeless' ], // T191573
@@ -20143,8 +20265,20 @@ function wmfGetVariantSettings() {
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
+			'stream' => 'android.image_recommendation_interaction',
+			'schema_title' => 'analytics/mobile_apps/android_image_recommendation_interaction',
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
 			'stream' => 'mediawiki.mediasearch_interaction',
 			'schema_title' => 'analytics/mediawiki/mediasearch_interaction',
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
+			'stream' => 'mediawiki.pref_diff',
+			'schema_title' => 'analytics/pref_diff',
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
@@ -20463,6 +20597,7 @@ function wmfGetVariantSettings() {
 		'eventlogging_VisualEditorTemplateDialogUse',
 		'mediawiki.client.session_tick',
 		'mediawiki.mediasearch_interaction',
+		'mediawiki.pref_diff',
 		'test.instrumentation',
 		'test.instrumentation.sampled',
 	]
@@ -20491,12 +20626,7 @@ function wmfGetVariantSettings() {
 // https://phabricator.wikimedia.org/T238230
 'wgEventLoggingSchemas' => [
 	'default' => [
-		'DesktopWebUIActionsTracking' => '/analytics/legacy/desktopwebuiactionstracking/1.0.0',
-		'MobileWebUIActionsTracking' => '/analytics/legacy/mobilewebuiactionstracking/1.0.0',
-		'PrefUpdate' => '/analytics/legacy/prefupdate/1.0.0',
-		'SuggestedTagsAction' => '/analytics/legacy/suggestedtagsaction/1.0.0',
-		'EditAttemptStep' => '/analytics/legacy/editattemptstep/1.0.0',
-		'VisualEditorFeatureUse' => '/analytics/legacy/visualeditorfeatureuse/1.0.0',
+		// Only in progress schema migrations go here, once migration finished, they are removed.
 	],
 ],
 
@@ -21383,10 +21513,10 @@ function wmfGetVariantSettings() {
 		 * Deprecated properties
 		 * @see https://www.wikidata.org/wiki/Special:WhatLinksHere/Q18644427?namespace=120
 		 */
-		134, // has dialect (DEPRECATED)
-		558, // unit symbol (DEPRECATED)
+		598,  // commander of (DEPRECATED)
 		2315, // comment (DEPRECATED)
-		5130, // island of location (DEPRECATED)
+		3231, // Media Art Database author ID (former scheme)
+		7478, // iFixit repairability score (DEPRECATED)
 		/**
 		 * @see https://www.wikidata.org/w/index.php?oldid=335040857
 		 */
@@ -21411,6 +21541,7 @@ function wmfGetVariantSettings() {
 		5188, // wikibase-lexeme
 		5189, // wikibase-form
 		5979, // wikibase-sense
+		6604, // musical-notation
 	],
 ],
 
@@ -21429,7 +21560,7 @@ function wmfGetVariantSettings() {
 'wgWBQualityConstraintsEnableConstraintsCheckJobsRatio' => [
 	'default' => 0, // 0% of edits trigger post edit job run constraint checks
 	'testwikidatawiki' => 100,
-	'wikidatawiki' => 50,
+	'wikidatawiki' => 70,
 ],
 
 'wgWBQualityConstraintsSparqlEndpoint' => [
@@ -21906,7 +22037,6 @@ function wmfGetVariantSettings() {
 		'P304', // page(s)
 		'P433', // issue
 		'P478', // volume
-		'P558', // unit symbol (DEPRECATED)
 		'P3903', // column
 		'P3921', // Wikidata SPARQL query equivalent
 		'P4316', // kinship equivalent in SPARQL at Wikidata
@@ -22146,209 +22276,11 @@ function wmfGetVariantSettings() {
 	],
 ],
 
-'wgMediaInfoMediaSearchConceptChipsHeuristics' => [
-	'commonswiki' => [ [
-		'must not' => [ [
-			// instance of Wikipedia disambiguation pages
-			'property' => 'P31',
-			'item' => 'Q4167410',
-		] ],
-		'conditions' => [
-			[
-				'must' => [ [
-					// instance of art movement
-					'property' => 'P31',
-					'item' => 'Q968159',
-				] ],
-				'result' => [ '?item wdt:P135 ?entity' ],
-			],
-			[
-				'should' => [
-					[
-						// instance of tourist attraction
-						'property' => 'P31',
-						'item' => 'Q570116',
-					], [
-						// instance of landmark
-						'property' => 'P31',
-						'item' => 'Q2319498',
-					], [
-						// instance of mountain range
-						'property' => 'P31',
-						'item' => 'Q46831',
-					]
-				],
-				'result' => [ '?entity wdt:P276|wdt:P131|wdt:P17 ?item' ],
-			],
-			[
-				'must' => [ [
-					// owned by
-					'property' => 'P127',
-				] ],
-				'result' => [ '?entity wdt:P127 ?item' ],
-			],
-			[
-				'must' => [ [
-					// notable work
-					'property' => 'P800',
-				] ],
-				'result' => [ '?entity wdt:P800 ?item' ],
-			],
-			[
-				'must' => [ [
-					// creator
-					'property' => 'P170',
-				] ],
-				'result' => [ '?entity wdt:P170 ?item' ],
-			],
-			[
-				'must' => [ [
-					// has effect
-					'property' => 'P1542',
-				] ],
-				'result' => [ '?entity wdt:P1542 ?item' ],
-			],
-			[
-				'should' => [
-					[
-						// instance of fictional character
-						'property' => 'P31',
-						'item' => 'Q95074',
-					], [
-						// instance of literary character
-						'property' => 'P31',
-						'item' => 'Q3658341',
-					], [
-						// instance of film character
-						'property' => 'P31',
-						'item' => 'Q15773347',
-					], [
-						// instance of television character
-						'property' => 'P31',
-						'item' => 'Q15773317',
-					], [
-						// instance of animated character
-						'property' => 'P31',
-						'item' => 'Q15711870',
-					], [
-						// instance of theatrical character
-						'property' => 'P31',
-						'item' => 'Q3375722',
-					]
-				],
-				'result' => [
-					// performer
-					'?entity wdt:P175 ?item',
-					// voice actor
-					'?entity wdt:P725 ?item',
-					// present in work
-					'?entity wdt:P1441 ?item',
-				],
-			],
-			[
-				'should' => [
-					[
-						// occupation actor
-						'property' => 'P106',
-						'item' => 'Q33999',
-					], [
-						// occupation television actor
-						'property' => 'P106',
-						'item' => 'Q10798782',
-					], [
-						// occupation film actor
-						'property' => 'P106',
-						'item' => 'Q10800557',
-					], [
-						// occupation voice actor
-						'property' => 'P106',
-						'item' => 'Q2405480',
-					]
-				],
-				'result' => [
-					'?item wdt:P175 ?entity .
-					?item wdt:P31 ?character .
-					?character wdt:P279 wd:Q95074'
-				],
-			],
-			[
-				'must' => [ [
-					// parent astronomical body
-					'property' => 'P397',
-				] ],
-				'result' => [ '?entity wdt:P397 ?item' ],
-			],
-			[
-				'must' => [ [
-					// said to be the same as
-					'property' => 'P460',
-				] ],
-				'result' => [ '?entity wdt:P460 ?item' ],
-			],
-			[
-				'must' => [ [
-					// member of sports team
-					'property' => 'P54',
-				] ],
-				'result' => [ '?entity wdt:P54 ?item' ],
-			],
-			[
-				'must' => [ [
-					// member of
-					'property' => 'P463',
-				] ],
-				'result' => [ '?entity wdt:P463 ?item' ],
-			],
-			[
-				'must' => [ [
-					// part of
-					'property' => 'P361',
-				] ],
-				'result' => [ '?entity wdt:P361 ?item' ],
-			],
-			[
-				'must' => [ [
-					// has part
-					'property' => 'P527',
-				] ],
-				'must not' => [
-					[
-						// not instance of rapid transit ('has part' has line letters & numbers...)
-						'property' => 'P31',
-						'item' => 'Q5503',
-					], [
-						// not instance of urbain rail transit
-						'property' => 'P31',
-						'item' => 'Q3491904',
-					], [
-						// not instance of railway network
-						'property' => 'P31',
-						'item' => 'Q2678338',
-					], [
-						// not instance of public transport network
-						'property' => 'P31',
-						'item' => 'Q18325841',
-					],
-				],
-				'result' => [ '?entity wdt:P527 ?item' ],
-			],
-			[
-				'result' => [
-					// subclass of entities
-					'?item wdt:P279 ?entity',
-					// parent entities where entity is subclass of
-					'?entity wdt:P279 ?item',
-				]
-			],
-		],
-	] ],
-],
-
-'wgMediaInfoMediaSearchEntitiesSparqlEndpointUri' => [
-	'commonswiki' => 'http://localhost:6009/sparql',
-],
-
 'wgMediaInfoMediaSearchHasLtrPlugin' => [
+	'commonswiki' => true,
+],
+
+'wgMediaInfoMediaSearchDefaultForAnon' => [
 	'commonswiki' => true,
 ],
 
@@ -22584,12 +22516,6 @@ function wmfGetVariantSettings() {
 	'wikidataclient-test' => 'testwikidata',
 ],
 
-'wmgWikibaseRepoIdGeneratorLogging' => [
-	'default' => false,
-	'testwikidatawiki' => true,
-	'wikidatawiki' => true,
-],
-
 'wmgWikibaseRepoIdGeneratorRateLimiting' => [
 	'default' => false,
 	'testwikidatawiki' => true,
@@ -22646,10 +22572,6 @@ function wmfGetVariantSettings() {
 ],
 'wgPageImagesExpandOpenSearchXml' => [
 	'default' => true,
-],
-'wgPageImagesAPIDefaultLicense' => [
-	'default' => 'free',
-	'wikidata' => 'any', // T159678
 ],
 
 'wmgUseTorBlock' => [
@@ -23295,9 +23217,6 @@ function wmfGetVariantSettings() {
 	'commonswiki' => [
 		6 => 1.0,
 	],
-	'wikisource' => [
-		'author' => 1,
-	],
 	'labswiki' => [
 		12 => 1.0, // Put NS_HELP on equal footing with NS_MAIN
 	],
@@ -23306,6 +23225,50 @@ function wmfGetVariantSettings() {
 		200 => 0.6, // grants
 		202 => 0.6, // research
 	],
+	// Author namespace on wikisource should match NS_MAIN weight
+	'arwikisource' => [ 102 => 1.0 ],
+	'aswikisource' => [ 102 => 1.0 ],
+	'bewikisource' => [ 102 => 1.0 ],
+	'bgwikisource' => [ 100 => 1.0 ],
+	'bnwikisource' => [ 100 => 1.0 ],
+	'brwikisource' => [ 104 => 1.0 ],
+	'cawikisource' => [ 106 => 1.0 ],
+	'cswikisource' => [ 100 => 1.0 ],
+	'dawikisource' => [ 102 => 1.0 ],
+	'elwikisource' => [ 108 => 1.0 ],
+	'enwikisource' => [ 102 => 1.0 ],
+	'etwikisource' => [ 106 => 1.0 ],
+	'euwikisource' => [ 106 => 1.0 ],
+	'fawikisource' => [ 102 => 1.0 ],
+	'frwikisource' => [ 102 => 1.0 ],
+	'hewikisource' => [ 108 => 1.0 ],
+	'hrwikisource' => [ 100 => 1.0 ],
+	'huwikisource' => [ 100 => 1.0 ],
+	'hywikisource' => [ 100 => 1.0 ],
+	'idwikisource' => [ 100 => 1.0 ],
+	'iswikisource' => [ 102 => 1.0 ],
+	'itwikisource' => [ 102 => 1.0 ],
+	'knwikisource' => [ 102 => 1.0 ],
+	'kowikisource' => [ 100 => 1.0 ],
+	'lawikisource' => [ 102 => 1.0 ],
+	'lijwikisource' => [ 102 => 1.0 ],
+	'mlwikisource' => [ 100 => 1.0 ],
+	'mrwikisource' => [ 102 => 1.0 ],
+	'napwikisource' => [ 102 => 1.0 ],
+	'nlwikisource' => [ 102 => 1.0 ],
+	'nowikisource' => [ 102 => 1.0 ],
+	'plwikisource' => [ 104 => 1.0 ],
+	'ptwikisource' => [ 102 => 1.0 ],
+	'rowikisource' => [ 102 => 1.0 ],
+	'svwikisource' => [ 106 => 1.0 ],
+	'tewikisource' => [ 102 => 1.0 ],
+	'thwikisource' => [ 102 => 1.0 ],
+	'trwikisource' => [ 100 => 1.0 ],
+	'ukwikisource' => [ 102 => 1.0 ],
+	'vecwikisource' => [ 100 => 1.0 ],
+	'viwikisource' => [ 102 => 1.0 ],
+	'wawikisource' => [ 100 => 1.0 ],
+	'zhwikisource' => [ 102 => 1.0 ],
 ],
 
 // Enable the "Give us feedback" link after search results on enwiki
@@ -23365,6 +23328,22 @@ function wmfGetVariantSettings() {
 					'trigger' => 'glent_m0',
 					'globals' => [
 						'wgCirrusSearchFallbackProfile' => 'phrase_suggest_glentM0_and_langdetect',
+					],
+				],
+			],
+		],
+		'T262612_glent_m01' => [
+			'buckets' => [
+				'control' => [
+					'trigger' => 'control',
+					'globals' => [
+						// 'wgCirrusSearchFallbackProfile' => 'phrase_suggest_and_language_detection',
+					],
+				],
+				'glent_m01' => [
+					'trigger' => 'glent_m01',
+					'globals' => [
+						'wgCirrusSearchFallbackProfile' => 'phrase_suggest_glentM01_and_langdetect',
 					],
 				],
 			],
@@ -23611,13 +23590,16 @@ function wmfGetVariantSettings() {
 	'default' => true,
 	'lockeddown' => false, // T61702
 ],
+
+'wmgTemplateDataSuggestedValues' => [
+	'default' => true,
+],
+
 'wmgUseCharInsert' => [
 	'default' => true,
 	'loginwiki' => false, // T61702
 ],
-'wmgUseJADE' => [
-	'default' => false,
-],
+
 'wmgUseORES' => [
 	'default' => false,
 	'arwiki' => true, // T192498
@@ -24158,11 +24140,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgLegacyJavaScriptGlobals' => [
-	'default' => true,
-	'group0' => false, // T35837
-	'svwiki' => false, // T72470, contact @Nirmos
-	'fawiki' => false,
-	'wikidatawiki' => false,
+	'default' => false,
 ],
 
 'wgRightsPage' => [
@@ -24533,7 +24511,6 @@ function wmfGetVariantSettings() {
 	'default' => true,
 	// Disable for FlaggedRevs wikis with $wgFlaggedRevsOverride=true (T191585)
 	// Elaboration on this issue is at T229726#5419327
-	'bswiki' => false,
 	'dewiki' => false,
 	'huwiki' => false,
 	'idwiki' => false,
@@ -24576,6 +24553,9 @@ function wmfGetVariantSettings() {
 ],
 'wgGlobalWatchlistWikibaseSite' => [
 	'default' => 'www.wikidata.org',
+],
+'wgGlobalWatchlistSiteLimit' => [
+	'default' => 50, // T276195
 ],
 
 'wmgWatchlistDefault' => [
@@ -24643,15 +24623,6 @@ function wmfGetVariantSettings() {
 
 'wgWMEWikidataCompletionSearchClicks' => [
 	'default' => [],
-],
-
-'wgWMEInukaPageViewEnabled' => [
-	'default' => false,
-	'wikipedia' => true,
-],
-'wgWMEInukaPageViewCookiesDomain' => [
-	'default' => '',
-	'wikipedia' => 'wikipedia.org'
 ],
 
 'wmgUsePageViewInfo' => [
@@ -24914,9 +24885,15 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'testwiki' => true,
 	'arwiki' => true,
+	'bgwiki' => true,
 	'bnwiki' => true,
+	'cawiki' => true,
 	'cswiki' => true,
 	'dawiki' => true,
+	'eowiki' => true,
+	'elwiki' => true,
+	'enwiki' => true,
+	'eswiki' => true,
 	'euwiki' => true,
 	'fawiki' => true,
 	'frwiki' => true,
@@ -24927,27 +24904,49 @@ function wmfGetVariantSettings() {
 	'huwiki' => true,
 	'hywiki' => true,
 	'idwiki' => true,
+	'jawiki' => true,
 	'kowiki' => true,
+	'mswiki' => true,
+	'nowiki' => true,
 	'plwiki' => true,
 	'ptwiki' => true,
 	'ruwiki' => true,
 	'rowiki' => true,
+	'shwiki' => true,
+	'simplewiki' => true,
 	'sqwiki' => true,
 	'srwiki' => true,
 	'svwiki' => true,
+	'tawiki' => true,
+	'tewiki' => true,
 	'thwiki' => true,
 	'trwiki' => true,
 	'ukwiki' => true,
+	'urwiki' => true,
 	'viwiki' => true,
+],
+
+'wgGEDatabaseCluster' => [
+	'default' => 'extension1',
+],
+
+'wgGEMentorshipMigrationStage' => [
+	'default' => SCHEMA_COMPAT_NEW,
+],
+
+'wgGEWikiConfigEnabled' => [
+	'default' => false,
+	'testwiki' => true,
 ],
 
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
-	'hiwiki' => false,
-	'hrwiki' => false,
-	'idwiki' => false,
-	'sqwiki' => false,
-	'thwiki' => false,
+	'bgwiki' => false,
+	'cawiki' => false,
+	'elwiki' => false,
+	'enwiki' => false,
+	'shwiki' => false,
+	'urwiki' => false,
 ],
 
 'wgWelcomeSurveyEnabled' => [
@@ -24961,7 +24960,6 @@ function wmfGetVariantSettings() {
 
 'wgGEHomepageImpactModuleEnabled' => [
 	'default' => true,
-	'bnwiki' => false,
 ],
 
 'wgGEHelpPanelEnabled' => [
@@ -24998,6 +24996,7 @@ function wmfGetVariantSettings() {
 	'cswiki' => 'Wikipedie:Potřebuji_pomoc',
 	'dawiki' => 'Hjælp:Nybegynderforum',
 	'euwiki' => 'Wikipedia:Txokoa',
+	'eowiki' => 'Vikipedio:Diskutejo',
 	'fawiki' => 'ویکی‌پدیا:پرسش‌ها',
 	'frwiki' => 'Wikipédia:Forum des nouveaux',
 	'frwiktionary' => 'Wiktionnaire:Entraide/{{#time:F Y}}',
@@ -25030,9 +25029,15 @@ function wmfGetVariantSettings() {
 	'default' => '',
 	'testwiki' => 'Special:MyLanguage/Help:Contents',
 	'arwiki' => 'مساعدة:محتويات',
+	'bgwiki' => 'Уикипедия:Първи стъпки',
 	'bnwiki' => 'সাহায্য:সূচী',
+	'cawiki' => 'Viquipèdia:Ajuda',
 	'cswiki' => 'Nápověda:Obsah',
 	'dawiki' => 'Hjælp:Forside',
+	'eowiki' => 'Helpo:Enhavo',
+	'elwiki' => 'Βικιπαίδεια:Βοήθεια',
+	'enwiki' => 'Help:Contents',
+	'eswiki' => 'Ayuda:Contenidos',
 	'euwiki' => 'Laguntza:Sarrera',
 	'fawiki' => 'راهنما:فهرست',
 	'frwiki' => 'Aide:Accueil',
@@ -25043,17 +25048,25 @@ function wmfGetVariantSettings() {
 	'huwiki' => 'Wikipédia:Bevezetés',
 	'hywiki' => 'Օգնություն:Գլխացանկ',
 	'idwiki' => 'Bantuan:Isi',
+	'jawiki' => 'Help:目次',
+	'mswiki' => 'Bantuan:Kandungan',
+	'nowiki' => 'Hjelp:Portal',
 	'kowiki' => '위키백과:도움말',
 	'plwiki' => 'Pomoc:Spis treści',
 	'ptwiki' => 'Wikipédia:Guia de criação de artigos',
 	'ruwiki' => 'Википедия:Справка',
 	'rowiki' => 'Ajutor:Cuprins',
+	'shwiki' => 'Pomoć:Sadržaj',
+	'simplewiki' => 'Help:Contents',
 	'sqwiki' => 'Ndihmë:Përmbajtja',
 	'srwiki' => 'Википедија:Помоћ',
 	'svwiki' => 'Wikipedia:Hjälp',
+	'tawiki' => 'விக்கிப்பீடியா:உதவி',
 	'thwiki' => 'วิธีใช้:สารบัญ',
+	'tewiki' => 'సహాయం:సూచిక',
 	'trwiki' => 'Yardım:İçindekiler',
 	'ukwiki' => 'Вікіпедія:Довідка',
+	'urwiki' => 'معاونت:مندرجات',
 	'viwiki' => 'Trợ_giúp:Mục_lục',
 ],
 
@@ -25113,6 +25126,33 @@ function wmfGetVariantSettings() {
 			'id' => 'discussion',
 		],
 	],
+	'bgwiki' => [
+		[
+			'title' => 'Уикипедия:Стил',
+			'text' => 'Как да напиша добра статия',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/bg',
+			'text' => 'Как да редактирате страница',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/bg#Images',
+			'text' => 'Как да добавяте изображения',
+			'id' => 'images',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/bg#Editing_references',
+			'text' => 'Как да добавяте референции',
+			'id' => 'references',
+		],
+		[
+			'title' => 'Уикипедия:Вълшебник',
+			'text' => 'Как да създадете статия',
+			'id' => 'articlewizard',
+		],
+	],
 	'bnwiki' => [
 		[
 			'title' => 'উইকিপিডিয়া:রচনাশৈলী নির্দেশনা',
@@ -25137,6 +25177,33 @@ function wmfGetVariantSettings() {
 		[
 			'title' => 'উইকিপিডিয়া:নিবন্ধ উইজার্ড',
 			'text' => 'নিবন্ধ উইজার্ড',
+			'id' => 'articlewizard',
+		],
+	],
+	'cawiki' => [
+		[
+			'title' => 'Com escriure un bon article',
+			'text' => 'Viquipèdia:Llibre d\'estil',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/ca',
+			'text' => 'Com editar una pàgina',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/ca#Images',
+			'text' => 'Com inserir imatges',
+			'id' => 'images',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/ca#Editing_references',
+			'text' => 'Com inserir referències',
+			'id' => 'references',
+		],
+		[
+			'title' => 'Ajuda:Com iniciar una pàgina',
+			'text' => 'Com es crea un article',
 			'id' => 'articlewizard',
 		],
 	],
@@ -25193,6 +25260,114 @@ function wmfGetVariantSettings() {
 			'text' => 'Skriv en artikel',
 			'id' => 'tutorial',
 		]
+	],
+	'eowiki' => [
+		[
+			'title' => 'Vikipedio:Stilogvido',
+			'text' => 'Stilogvido',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/eo',
+			'text' => 'Kiel redakti artikolon',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/eo#Images',
+			'text' => 'Kiel enmeti bildojn',
+			'id' => 'images',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/eo#Editing_references',
+			'text' => 'Kiel enmeti referencojn',
+			'id' => 'references',
+		],
+		[
+			'title' => 'Helpo:Kiel krei paĝon',
+			'text' => 'Kiel krei paĝon',
+			'id' => 'articlewizard',
+		],
+	],
+	'elwiki' => [
+		[
+			'title' => 'Βικιπαίδεια:Εγχειρίδιο μορφής',
+			'text' => 'Πώς να γράψετε ένα καλό λήμμα',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'Βοήθεια:Εισαγωγή στην επεξεργασία με VisualEditor/1',
+			'text' => 'Πώς να επεξεργαστείτε μια σελίδα',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'Βοήθεια:Εισαγωγή στις εικόνες με τον VisualEditor/1',
+			'text' => 'Πώς να εισαγάγετε εικόνες',
+			'id' => 'images',
+		],
+		[
+			'title' => 'Βοήθεια:Προσθήκη παραπομπών με τον VisualEditor/1',
+			'text' => 'Πώς να εισαγάγετε αναφορές',
+			'id' => 'references',
+		],
+		[
+			'title' => 'Βικιπαίδεια:Οδηγός λήμματος',
+			'text' => 'Οδηγός δημιουργίας λήμματος στη Βικιπαίδεια',
+			'id' => 'articlewizard',
+		],
+	],
+	'enwiki' => [
+		[
+			'title' => 'Wikipedia:Manual of Style',
+			'text' => 'How to write a good article',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'Help:Introduction to editing with VisualEditor/1',
+			'text' => 'How to edit a page',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'Help:Introduction to images with VisualEditor/1',
+			'text' => 'How to add an image',
+			'id' => 'images',
+		],
+		[
+			'title' => 'Help:Introduction to referencing with VisualEditor/1',
+			'text' => 'How to edit a citation',
+			'id' => 'references',
+		],
+		[
+			'title' => 'Wikipedia:Article wizard/version1',
+			'text' => 'How to create a new article',
+			'id' => 'articlewizard',
+		],
+	],
+	'eswiki' => [
+		[
+			'title' => 'Wikipedia:Manual de estilo',
+			'text' => 'Cómo escribir un buen artículo',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/es',
+			'text' => 'Cómo editar una página',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/es#Images',
+			'text' => 'Cómo agregar imágenes',
+			'id' => 'images',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/es#Editing_references',
+			'text' => 'Cómo insertar una referencia',
+			'id' => 'references',
+		],
+		[
+			'title' => 'Wikipedia:Asistente para la creación de artículos',
+			'text' => 'Cómo crear un artículo',
+			'id' => 'articlewizard',
+		],
 	],
 	'euwiki' => [
 		[
@@ -25363,12 +25538,12 @@ function wmfGetVariantSettings() {
 			'id' => 'editing',
 		],
 		[
-			'title' => 'mw:Help:VisualEditor/User_guide#Images',
+			'title' => 'mw:Help:VisualEditor/User_guide/hr#Images',
 			'text' => 'Slike',
 			'id' => 'images',
 		],
 		[
-			'title' => 'mw:Help:VisualEditor/User_guide/sq#Editing_references',
+			'title' => 'mw:Help:VisualEditor/User_guide/hr#Editing_references',
 			'text' => 'Wikipoveznice',
 			'id' => 'references',
 		],
@@ -25459,6 +25634,33 @@ function wmfGetVariantSettings() {
 			'id' => 'wizzard',
 		],
 	],
+	'jawiki' => [
+		[
+			'title' => 'Wikipedia:スタイルマニュアル',
+			'text' => 'スタイルマニュアル',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/ja',
+			'text' => 'ページを編集する方法',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/ja#Images',
+			'text' => '画像の挿入方法',
+			'id' => 'images',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/ja#Editing_references',
+			'text' => '参照を挿入する方法',
+			'id' => 'references',
+		],
+		[
+			'title' => 'Wikipedia:独立記事作成の目安',
+			'text' => '独立記事作成の目安',
+			'id' => 'articlewizard',
+		],
+	],
 	'kowiki' => [
 		[
 			'title' => '위키백과:위키문법_요약',
@@ -25485,6 +25687,60 @@ function wmfGetVariantSettings() {
 			'text' => '문서 등재 기준',
 			'id' => 'notability',
 		]
+	],
+	'mswiki' => [
+		[
+			'title' => 'Wikipedia:Manual_gaya_penulisan',
+			'text' => 'Cara menulis artikel yang baik',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/ms',
+			'text' => 'Cara mengedit halaman',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/ms#Images',
+			'text' => 'Cara memasukkan gambar',
+			'id' => 'images',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/ms#Editing_references',
+			'text' => 'Cara memasukkan rujukan',
+			'id' => 'references',
+		],
+		[
+			'title' => 'Wikipedia:Penciptaan_rencana_bestari',
+			'text' => 'Cara membuat artikel',
+			'id' => 'articlewizard',
+		],
+	],
+	'nowiki' => [
+		[
+			'title' => 'Wikipedia:Stilmanual',
+			'text' => 'Hvordan skrive en god artikkel',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/nb',
+			'text' => 'Hvordan redigere en side',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/nb#Images',
+			'text' => 'Hvordan sette inn bilder',
+			'id' => 'images',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/nb#Editing_references',
+			'text' => 'Hvordan sette inn referanser',
+			'id' => 'references',
+		],
+		[
+			'title' => 'Wikipedia:Artikkelveiviser',
+			'text' => 'Hvordan lage en artikkel',
+			'id' => 'articlewizard',
+		],
 	],
 	'plwiki' => [
 		[
@@ -25594,6 +25850,60 @@ function wmfGetVariantSettings() {
 			'id' => 'articlewizzard',
 		],
 	],
+	'shwiki' => [
+		[
+			'title' => 'Wikipedia:Stil',
+			'text' => 'Kako pisati članke',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/sh',
+			'text' => 'Kako uređivati stranicu',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/sh#Images',
+			'text' => 'Ubaciti i neku sliku u članak',
+			'id' => 'images',
+		],
+		[
+			'title' => 'Help:VisualEditor/User_guide/sh#Editing_references',
+			'text' => 'Kako u člancima navoditi izvore podataka',
+			'id' => 'references',
+		],
+		[
+			'title' => 'Pomoć:Kako stvoriti novu stranicu',
+			'text' => 'Kako stvoriti novu stranicu',
+			'id' => 'articlewizard',
+		],
+	],
+	'simplewiki' => [
+		[
+			'title' => 'Wikipedia:Manual_of_Style',
+			'text' => 'How to write a good article',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide',
+			'text' => 'How to edit a page',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide#Images',
+			'text' => 'How to insert images',
+			'id' => 'images',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide#Editing_references',
+			'text' => 'How to insert references',
+			'id' => 'references',
+		],
+		[
+			'title' => 'Wikipedia:Article_wizard',
+			'text' => 'How to create an article',
+			'id' => 'articlewizard',
+		],
+	],
 	'sqwiki' => [
 		[
 			'title' => 'Ndihmë:Redaktimi i faqeve',
@@ -25664,6 +25974,60 @@ function wmfGetVariantSettings() {
 			'text' => 'Lägg till källa',
 			'id' => 'citation',
 		]
+	],
+	'tawiki' => [
+		[
+			'title' => 'விக்கிப்பீடியா:நடைக் கையேடு',
+			'text' => 'ஒரு நல்ல கட்டுரை எழுதுவது எப்படி',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/ta',
+			'text' => 'ஒரு பக்கத்தை எவ்வாறு திருத்துவது',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/ta#Images',
+			'text' => 'படங்களை எவ்வாறு சேர்ப்பது',
+			'id' => 'images',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User_guide/ta#Editing_references',
+			'text' => 'குறிப்புகளை எவ்வாறு சேர்ப்பதுs',
+			'id' => 'references',
+		],
+		[
+			'title' => 'விக்கிப்பீடியா:கட்டுரை உருவாக்கல் வழிகாட்டி',
+			'text' => 'ஒரு கட்டுரையை எவ்வாறு உருவாக்குவது',
+			'id' => 'articlewizard',
+		],
+	],
+	'tewiki' => [
+		[
+			'title' => 'వికీపీడియా:శైలి',
+			'text' => 'మంచి వ్యాసం రాయడం ఎలా',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'వికీపీడియా:దిద్దుబాట్లు ఎలా చెయ్యాలి',
+			'text' => 'దిద్దుబాట్లు చెయ్యడం ఎలా',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'సహాయం:విజువల్ ఎడిటరుతో బొమ్మల పరిచయం/1',
+			'text' => 'బొమ్మలను చేర్చడం ఎలా',
+			'id' => 'images',
+		],
+		[
+			'title' => 'సహాయం:విజువల్ ఎడిటరుతో మూలాలివ్వడం గురించి పరిచయం/1',
+			'text' => 'మూలాలను చేర్చడం ఎలా',
+			'id' => 'references',
+		],
+		[
+			'title' => 'వికీపీడియా:వ్యాససృష్టికి మార్గసూచీ',
+			'text' => 'వ్యాసాన్ని సృష్టించడం ఎలా',
+			'id' => 'articlewizard',
+		],
 	],
 	'thwiki' => [
 		[
@@ -25746,6 +26110,33 @@ function wmfGetVariantSettings() {
 			'id' => 'bebold',
 		]
 	],
+	'urwiki' => [
+		[
+			'title' => 'ویکیپیڈیا:اسلوب نامہ',
+			'text' => 'اچھا مضمون کیسے لکھیں؟',
+			'id' => 'mos'
+		],
+		[
+			'title' => 'معاونت:ترمیم',
+			'text' => 'کسی صفحے میں ترمیم کرنے کا طریقہ',
+			'id' => 'editing'
+		],
+		[
+			'title' => 'mw:Special:MyLanguage/Help:VisualEditor/User_guide#Images',
+			'text' => 'تصاویر داخل کرنے کا طریقہ',
+			'id' => 'images'
+		],
+		[
+			'title' => 'mw:Special:MyLanguage/Help:VisualEditor/User_guide#Editing_references',
+			'text' => 'حوالہ جات داخل کرنے کا طریقہ',
+			'id' => 'references'
+		],
+		[
+			'title' => 'ویکیپیڈیا:ساحر تخلیق مضمون',
+			'text' => 'مضمون کیسے بنایا جائے',
+			'id' => 'articlewizard'
+		],
+	],
 	'viwiki' => [
 		[
 			'title' => 'Wikipedia:Bài_viết_đầu_tiên_của_bạn',
@@ -25802,14 +26193,34 @@ function wmfGetVariantSettings() {
 
 'wgGENewcomerTasksLinkRecommendationsEnabled' => [
 	'default' => false,
+	'testwiki' => true,
+	'arwiki' => true,
+	'bnwiki' => true,
+	'cswiki' => true,
+	'viwiki' => true,
 ],
 
 'wgGELinkRecommendationsFrontendEnabled' => [
 	'default' => false,
+	'testwiki' => true,
+	'arwiki' => true,
+	'bnwiki' => true,
+	'cswiki' => true,
+	'viwiki' => true,
+],
+
+'wgGEDeveloperSetup' => [
+	'default' => false,
+	'testwiki' => true,
 ],
 
 'wgGELinkRecommendationsUseEventGate' => [
 	'default' => true,
+],
+
+'wgGELinkRecommendationServiceWikiIdMasquerade' => [
+	'default' => null,
+	'testwiki' => 'simplewiki',
 ],
 
 'wgGENewcomerTasksConfigTitle' => [
@@ -25849,9 +26260,17 @@ function wmfGetVariantSettings() {
 		'create' => 'ويكيبيديا:مقالتك الأولى',
 		'image' => 'مساعدة:مقدمة عن رفع الصور/1',
 	],
+	'bgwiki' => [
+		'create' => 'mw:Help:VisualEditor/User_guide/bg',
+		'image' => 'mw:Help:VisualEditor/User_guide/bg#Images',
+	],
 	'bnwiki' => [
 		'create' => 'উইকিপিডিয়া:নতুন নিবন্ধ শুরুকরণ',
 		'image' => 'সাহায্য:চিত্রের সাথে পরিচয় (দৃশ্যমান সম্পাদনা)',
+	],
+	'cawiki' => [
+		'create' => 'Ajuda:Com iniciar una pàgina',
+		'image' => 'mw:Help:VisualEditor/User_guide/ca#Images',
 	],
 	'cswiki' => [
 		'create' => 'Nápověda:Jak vytvořit článek',
@@ -25864,6 +26283,18 @@ function wmfGetVariantSettings() {
 	'euwiki' => [
 		'create' => 'Laguntza:Sarrera berriak',
 		'image' => 'Laguntza:Irudiak',
+	],
+	'elwiki' => [
+		'create' => 'Βικιπαίδεια:Οδηγός λήμματος',
+		'image' => 'mw:Help:VisualEditor/User_guide/el#Images',
+	],
+	'eswiki' => [
+		'create' => 'Wikipedia:Asistente para la creación de artículos',
+		'image' => 'mw:Help:VisualEditor/User_guide/es#Images',
+	],
+	'eowiki' => [
+		'create' => 'Helpo:Kiel_krei_paĝon',
+		'image' => 'mw:Help:VisualEditor/User_guide/eo#Images',
 	],
 	'fawiki' => [
 		'create' => 'راهنما:ساخت_صفحه_جدید',
@@ -25892,6 +26323,18 @@ function wmfGetVariantSettings() {
 		'create' => 'Wikipedia:Memulai_halaman_baru',
 		'image' => 'Bantuan:Pengantar_gambar_dengan_VisualEditor/1',
 	],
+	'jawiki' => [
+		'create' => 'Wikipedia:独立記事作成の目安',
+		'image' => 'Help:VisualEditor/User_guide/ja#Images',
+	],
+	'mswiki' => [
+		'create' => 'Wikipedia:Penciptaan_rencana_bestari',
+		'image' => 'mw:Help:VisualEditor/User_guide/ms#Images',
+	],
+	'nowiki' => [
+		'create' => 'Wikipedia:Artikkelveiviser',
+		'image' => 'mw:Help:VisualEditor/User_guide/nb#Images',
+	],
 	'kowiki' => [
 		'create' => '위키백과:새 문서 만들기',
 		'image' => '도움말:그림 사용하기',
@@ -25912,6 +26355,14 @@ function wmfGetVariantSettings() {
 		'create' => 'Ajutor:Cum scriu un articol',
 		'image' => 'mw:Help:VisualEditor/User_guide/ro#Modificarea_imaginilor_și_a_altor_fișiere_media',
 	],
+	'shwiki' => [
+		'create' => 'Pomoć:Kako stvoriti novu stranicu',
+		'image' => 'Help:VisualEditor/User_guide/sh#Images',
+	],
+	'simplewiki' => [
+		'create' => 'Wikipedia:Article_wizard',
+		'image' => 'Help:VisualEditor/User_guide#Images',
+	],
 	'srwiki' => [
 		'create' => 'Википедија:Креирање чланака',
 		'image' => 'Википедија:Упутства/Слике',
@@ -25920,6 +26371,14 @@ function wmfGetVariantSettings() {
 		'create' => 'Wikipedia:Att skapa en ny artikel',
 		'image' => 'Wikipedia:Introduktion till illustrationer',
 	],
+	'tawiki' => [
+		'create' => 'விக்கிப்பீடியா:கட்டுரை உருவாக்கல் வழிகாட்டி',
+		'image' => 'mw:Help:VisualEditor/User_guide/ta#Images',
+	],
+	'tewiki' => [
+		'create' => 'వికీపీడియా:వ్యాససృష్టికి మార్గసూచీ',
+		'image' => 'సహాయం:విజువల్ ఎడిటరుతో బొమ్మల పరిచయం/1',
+	],
 	'trwiki' => [
 		'create' => 'Vikipedi:İlk maddeniz',
 		'image' => 'Yardım:Resim ekleme',
@@ -25927,6 +26386,10 @@ function wmfGetVariantSettings() {
 	'ukwiki' => [
 		'create' => 'Довідка:Створення нової статті',
 		'image' => 'Довідка:Як працювати із зображеннями у Візуальному редакторі/1',
+	],
+	'urwiki' => [
+		'create' => 'ویکیپیڈیا:ساحر تخلیق مضمون',
+		'image' => 'mw:Special:MyLanguage/Help:VisualEditor/User_guide#Images',
 	],
 	'viwiki' => [
 		'create' => 'Wikipedia:Bài viết đầu tiên của bạn',
@@ -25945,11 +26408,14 @@ function wmfGetVariantSettings() {
 	'euwiki' => 100,
 ],
 
+'wgGEHomepageDefaultVariant' => [
+	'default' => 'control',
+],
+
 'wgGEHomepageNewAccountVariants' => [
 	'default' => [
-		'A' => 0,
-		'C' => 50,
-		'D' => 50,
+		'control' => 100,
+		'linkrecommendation' => 0,
 	],
 ],
 
@@ -25987,11 +26453,14 @@ function wmfGetVariantSettings() {
 	'arwiki' => 'ويكيبيديا:مشروع_فريق_النمو/قائمة_المتطوعين',
 	'bnwiki' => 'উইকিপিডিয়া:স্বাগতম,_নবাগত/স্বাক্ষর',
 	'cswiki' => 'Wikipedie:Potřebuji_pomoc/Mentoři',
+	'elwiki' => 'Βικιπαίδεια:Καθοδήγηση/Εκπαιδευτές',
+	'enwiki' => 'Wikipedia:Growth Team features/Mentor list',
 	'euwiki' => 'Laguntza:Mentoreak',
 	'fawiki' => 'ویکی‌پدیا:فهرست مربیان',
 	'frwiki' => 'Projet:Aide et accueil/Volontaires',
 	'frwiktionary' => 'Wiktionnaire:Mentorat',
 	'hewiki' => 'ויקיפדיה:ותיקים למען חדשים/מתנדבים',
+	'hrwiki' => 'Pomoć:Sadržaj/Mentori',
 	'huwiki' => 'Wikipédia:Szerkesztők megtartása/Mentorok',
 	'hywiki' => 'Վիքիպեդիա:Օգնություն/Ստորագրություններ',
 	'idwiki' => 'Wikipedia:Program pembelajaran/Area Mentor/mentor',
@@ -26002,6 +26471,7 @@ function wmfGetVariantSettings() {
 	'rowiki' => 'Wikipedia:Listă mentori',
 	'srwiki' => 'Википедија:Трг/Помоћ/Ментори',
 	'svwiki' => 'Wikipedia:Faddrar/Lista',
+	'tewiki' => 'వికీపీడియా:వికీప్రాజెక్టు/గ్రోత్ ప్రాజెక్టు/గురువుల జాబితా',
 	'trwiki' => 'Vikipedi:Eğitmen listesi',
 	'ukwiki' => 'Вікіпедія:Кнайпа (допомога)/Наставники',
 	'viwiki' => 'Wikipedia:Dự án Phát triển cộng đồng/Danh sách thành viên cố vấn',
@@ -26554,10 +27024,6 @@ function wmfGetVariantSettings() {
 	'enwiktionary' => [ 1821 ],
 ],
 
-'wgEnableRestAPI' => [
-	'default' => true,
-],
-
 'wgRestAPIAdditionalRouteFiles' => [
 	'default' => [],
 	'testwiki' => [ 'includes/Rest/coreDevelopmentRoutes.json' ],
@@ -26763,6 +27229,18 @@ function wmfGetVariantSettings() {
 	'cawiki' => true, // T270238
 	'dewiki' => true, // T270238
 	'trwiki' => true, // T270238
+	'group0' => true, // T273591
+	'wikitech' => true, // T273591
+],
+
+// Temporary feature flag for the CodeMirror accessibility colors see T271895
+'wgCodeMirrorAccessibilityColors' => [
+	'default' => false,
+	'cawiki' => true, // T276346
+	'dewiki' => true, // T276346
+	'trwiki' => true, // T276346
+	'group0' => true, // T276346
+	'wikitech' => true, // T276346
 ],
 
 ];

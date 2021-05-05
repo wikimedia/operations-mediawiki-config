@@ -65,6 +65,9 @@ Wikipedia:
         comment_1_5x:  T150618
         comment_2x:  T150618
 
+    altwiki:
+        commons: File:Wikipedia-logo-v2-alt.svg
+
     amwiki:
         comment:  T42285
         comment_1_5x:  T150618
@@ -357,6 +360,9 @@ Wikipedia:
         commons: File:Wikipedia-logo-v2-es.svg
         comment_1_5x:  T150618
         comment_2x:  T150618
+        selected: eswiki20a # T280908
+        variants:
+            eswiki20a: File:WikiEsp20-final.svg
 
     etwiki:
         comment_1_5x:  T150618
@@ -812,6 +818,9 @@ Wikipedia:
 
     mnwwiki:
 
+    mnwwiktionary:
+        commons: File:Wiktionary-logo-mnw.svg
+
     mrjwiki:
         comment_1_5x:  T150618
         comment_2x:  T150618
@@ -1180,6 +1189,9 @@ Wikipedia:
     tawiki:
         comment:  T29826
 
+    taywiki:
+        commons: File:Wikipedia-logo-v2-tay.svg
+
     tcywiki:
         comment:  T140898
         comment_1_5x:  T140898
@@ -1231,6 +1243,9 @@ Wikipedia:
         comment:  T29240
         comment_1_5x:  T150618
         comment_2x:  T150618
+
+    trvwiki:
+        commons: File:Wikipedia-logo-v2-trv.svg
 
     trwiki:
         commons: File:Wikipedia-logo-v2-tr.svg
@@ -3129,8 +3144,7 @@ Wikivoyage:
         no_2x: true
 
     mediawikiwiki:
-        no_1_5x: true
-        no_2x: true
+        commons: File:MediaWiki-2020-logo.svg
 
     metawiki:
 
@@ -3304,5 +3318,4 @@ Wikivoyage:
         comment_2x:  T194340
 
     wikitech:
-        no_1_5x: true
-        no_2x: true
+        commons: File:Wikitech-2021-logo-blue.svg

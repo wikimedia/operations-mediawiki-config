@@ -8,6 +8,7 @@ inheritsFrom:
   - cirrussearch-big-indices
   - desktop-improvements
   - flow
+  - growthexperiments
   - large
   - s6
   - securepollglobal

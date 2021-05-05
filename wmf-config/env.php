@@ -26,7 +26,7 @@
 $dc = getenv( 'WMF_DATACENTER' );
 if ( !$dc ) {
 	$dcFile = $GLOBALS['mockWmgClusterFile'] ?? '/etc/wikimedia-cluster';
-	@$dc = trim( file_get_contents( $dcFile ) ?: 'no-cluster-configured!' );
+	$dc = trim( @file_get_contents( $dcFile ) ?: 'no-cluster-configured!' );
 }
 
 if ( $dc === 'labs' ) {
