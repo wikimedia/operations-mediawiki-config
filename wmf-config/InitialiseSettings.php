@@ -27232,6 +27232,10 @@ function wmfGetVariantSettings() {
 	'default' => [ 'data-bridge' ],
 ],
 
+'wmgWikibaseTmpSerializeEmptyListsAsObjects' => [
+	'default' => false,
+],
+
 // T123582: enables <link rel="preconnect" href="//upload.wikimedia.org">
 'wgImagePreconnect' => [
 	'default' => true,
