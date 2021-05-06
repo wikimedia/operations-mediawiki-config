@@ -15943,6 +15943,7 @@ function wmfGetVariantSettings() {
 	'fiwiki' => true,
 	'guwiki' => true,
 	'hewiki' => true,
+	'mrwiki' => true, // T282147
 	'rowiki' => true,
 ],
 
