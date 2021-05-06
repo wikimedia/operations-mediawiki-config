@@ -20224,6 +20224,13 @@ function wmfGetVariantSettings() {
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
+			'stream' => 'eventlogging_VirtualPageView',
+			'schema_title' => 'analytics/legacy/virtualpageview',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
 			'stream' => 'eventlogging_VisualEditorFeatureUse',
 			'schema_title' => 'analytics/legacy/visualeditorfeatureuse',
 			'topic_prefixes' => null,
@@ -20618,6 +20625,7 @@ function wmfGetVariantSettings() {
 		'eventlogging_TwoColConflictConflict',
 		'eventlogging_TwoColConflictExit',
 		'eventlogging_UniversalLanguageSelector',
+		'eventlogging_VirtualPageView',
 		'eventlogging_VisualEditorFeatureUse',
 		'eventlogging_VisualEditorTemplateDialogUse',
 		'eventlogging_WikidataCompletionSearchClicks',
@@ -20654,6 +20662,9 @@ function wmfGetVariantSettings() {
 	'default' => [
 		// Only in progress schema migrations go here, once migration finished, they are removed.
 		'WikidataCompletionSearchClicks' => '/analytics/legacy/wikidatacompletionsearchclicks/1.0.0',
+	],
+	'testwiki' => [
+		'VirtualPageView' => '/analytics/legacy/virtualpageview/1.0.0',
 	],
 ],
 
