@@ -7728,8 +7728,8 @@ function wmfGetVariantSettings() {
 		'logged_in' => false,
 		'logged_out' => false,
 	],
-	// Test wiki and Office Wiki are part of the `desktop-improvements` group,
-	// but have special treatment.
+	// Some of the following wikis are part of the `desktop-improvements` group,
+	// but have special treatment due to their wiki-specific language handling.
 	'testwiki' => [
 		'logged_in' => true,
 		'logged_out' => true,
@@ -7737,6 +7737,22 @@ function wmfGetVariantSettings() {
 	'officewiki' => [
 		'logged_in' => true,
 		'logged_out' => true,
+	],
+	'commonswiki' => [
+		'logged_in' => false,
+		'logged_out' => false
+	],
+	'wikidatawiki' => [
+		'logged_in' => false,
+		'logged_out' => false
+	],
+	'mediawikiwiki' => [
+		'logged_in' => false,
+		'logged_out' => false
+	],
+	'specieswiki' => [
+		'logged_in' => false,
+		'logged_out' => false
 	],
 ],
 'wgVectorUseWvuiSearch' => [
