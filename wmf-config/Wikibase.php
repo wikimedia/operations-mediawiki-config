@@ -96,7 +96,7 @@ if ( $wmgUseWikibaseRepo ) {
 
 	// Calculate the client Db lists based on our wikiversions db lists
 	if ( $wgDBname === 'testwikidatawiki' ) {
-		$wgWBRepoSettings['localClientDatabases'] = [ 'testwiki', 'test2wiki', 'testwikidatawiki' ];
+		$wgWBRepoSettings['localClientDatabases'] = MWWikiversions::readDbListFile( 'wikidataclient-test' );
 	} elseif ( $wgDBname === 'wikidatawiki' ) {
 		$wgWBRepoSettings['localClientDatabases'] = MWWikiversions::readDbListFile( 'wikidataclient' );
 		// Exclude closed wikis
