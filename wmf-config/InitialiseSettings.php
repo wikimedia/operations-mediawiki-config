@@ -20634,8 +20634,6 @@ function wmfGetVariantSettings() {
 'wgEventLoggingSchemas' => [
 	'default' => [
 		// Only in progress schema migrations go here, once migration finished, they are removed.
-	],
-	'testwiki' => [
 		'WikidataCompletionSearchClicks' => '/analytics/legacy/wikidatacompletionsearchclicks/1.0.0',
 	],
 ],
