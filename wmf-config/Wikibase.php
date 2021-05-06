@@ -98,10 +98,7 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		$wgWBRepoSettings['localClientDatabases'] = [ 'testwiki', 'test2wiki', 'testwikidatawiki' ];
 	} elseif ( $wgDBname === 'wikidatawiki' ) {
-		$wgWBRepoSettings['localClientDatabases'] = array_diff(
-			MWWikiversions::readDbListFile( 'wikidataclient' ),
-			[ 'testwikidatawiki', 'testwiki', 'test2wiki' ]
-		);
+		$wgWBRepoSettings['localClientDatabases'] = MWWikiversions::readDbListFile( 'wikidataclient' );
 		// Exclude closed wikis
 		$wgWBRepoSettings['localClientDatabases'] = array_diff(
 			$wgWBRepoSettings['localClientDatabases'],
