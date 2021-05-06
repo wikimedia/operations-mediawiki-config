@@ -18934,7 +18934,6 @@ function wmfGetVariantSettings() {
 	'itwikiversity' => true, // T162692
 	'lvwiki' => true, // T89898
 	'ptwiki' => true, // T54870
-	'ruwiki' => true, // T89588
 	'svwiki' => true, // T51009
 	'ukwiki' => true, // T66143
 ],
