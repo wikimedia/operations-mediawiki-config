@@ -1681,6 +1681,12 @@ function wmfGetLabsOverrideSettings() {
 		'wgWikisourceWikibaseEditionOfProperty' => [
 			'wikisource' => 'P253107'
 		],
+		'wgWikisourceEnableOcr' => [
+			'wikisource' => true,
+		],
+		'wgWikisourceOcrUrl' => [
+			'wikisource' => 'https://ocr-test.wmcloud.org',
+		],
 		'wmgUseWikimediaEditorTasks' => [
 			'default' => false,
 			'wikidatawiki' => true,
