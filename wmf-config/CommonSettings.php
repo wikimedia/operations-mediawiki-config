@@ -2457,6 +2457,10 @@ if ( $wmgUseUploadWizard ) {
 	}
 }
 
+if ( $wmgUseMediaSearch ) {
+	wfLoadExtension( 'MediaSearch' );
+}
+
 if ( $wmgCustomUploadDialog ) {
 	$wgUploadDialog = [
 		'fields' => [

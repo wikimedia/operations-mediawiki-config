@@ -22283,6 +22283,11 @@ function wmfGetVariantSettings() {
 	'commonswiki' => true,
 ],
 
+// Extension for Special:MediaSearch
+'wmgUseMediaSearch' => [
+	'default' => false,
+],
+
 'wgMediaSearchExternalEntitySearchBaseUri' => [
 	'default' => 'https://www.wikidata.org/w/api.php',
 	'testcommonswiki' => 'https://test.wikidata.org/w/api.php',

@@ -771,6 +771,11 @@ function wmfGetLabsOverrideSettings() {
 			'commonswiki' => 'https://wikidata.beta.wmflabs.org/w/api.php',
 		],
 
+		// Extension for Special:MediaSearch
+		'wmgUseMediaSearch' => [
+			'commonswiki' => true,
+		],
+
 		'wgMediaSearchExternalEntitySearchBaseUri' => [
 			'commonswiki' => 'https://wikidata.beta.wmflabs.org/w/api.php',
 		],
