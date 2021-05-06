@@ -86,7 +86,7 @@ multiversion/bin/list-versions.php | while read wikidb version; do
     --wiki="$wikidb" \
     --store-class=LCStoreCDB \
     --threads=$(nproc) \
-    --offline
+    --skip-message-purge
 done
 
 # Cleanup
