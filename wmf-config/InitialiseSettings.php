@@ -20218,6 +20218,13 @@ function wmfGetVariantSettings() {
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		[
+			'stream' => 'eventlogging_WikidataCompletionSearchClicks',
+			'schema_title' => 'analytics/legacy/wikidatacompletionsearchclicks',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		/*
 		 * === Streams for testing Event Platform-based instruments ===
 		 */
@@ -20594,6 +20601,7 @@ function wmfGetVariantSettings() {
 		'eventlogging_UniversalLanguageSelector',
 		'eventlogging_VisualEditorFeatureUse',
 		'eventlogging_VisualEditorTemplateDialogUse',
+		'eventlogging_WikidataCompletionSearchClicks',
 		'mediawiki.client.session_tick',
 		'mediawiki.mediasearch_interaction',
 		'mediawiki.pref_diff',
@@ -20626,6 +20634,9 @@ function wmfGetVariantSettings() {
 'wgEventLoggingSchemas' => [
 	'default' => [
 		// Only in progress schema migrations go here, once migration finished, they are removed.
+	],
+	'testwiki' => [
+		'WikidataCompletionSearchClicks' => '/analytics/legacy/wikidatacompletionsearchclicks/1.0.0',
 	],
 ],
 
