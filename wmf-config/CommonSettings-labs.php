@@ -280,14 +280,6 @@ if ( $wmgUseCollection ) {
 	$wgCollectionCommandToServeURL[ 'zip_post' ] = 'https://pediapress.com/wmfup/';
 }
 
-if ( $wmgUsePageImages ) {
-	$wgPageImagesBlacklist[] = [
-		'type' => 'db',
-		'page' => 'MediaWiki:Pageimages-blacklist',
-		'db' => 'commonswiki',
-	];
-}
-
 if ( $wmgUseEcho ) {
 	$wgEchoNotifiers['push'] = [ 'EchoPush\\PushNotifier', 'notifyWithPush' ];
 	$wgDefaultNotifyTypeAvailability['push'] = true;
