@@ -16992,6 +16992,7 @@ function wmfGetVariantSettings() {
 	'srwiki' => true, // T37913
 	'svwiki' => true, // T32756
 	'svwikinews' => true, // T33754
+	'tawiki' => true, //T280326
 	'testwiki' => true,
 	'trwiki' => true, // T40227
 	'ukwiki' => true, // T91530
