@@ -3818,6 +3818,10 @@ function wmfGetVariantSettings() {
 	],
 	'+mswiki' => [
 		'Portal_talk' => 101,
+		'Perbualan_Portal' => 101,
+	],
+	'+mswikibooks' => [
+		'Perbualan_Resipi' => 101,
 	],
 	'+mwlwiki' => [
 		'Wikipedia_cumbersa' => NS_PROJECT_TALK,
@@ -6050,7 +6054,7 @@ function wmfGetVariantSettings() {
 	],
 	'mswiki' => [
 		100 => 'Portal',
-		101 => 'Perbualan_Portal',
+		101 => 'Perbincangan_portal',
 	],
 	'mwlwiki' => [
 		100 => 'Portal', // T180052
@@ -7204,7 +7208,7 @@ function wmfGetVariantSettings() {
 	],
 	'mswikibooks' => [
 		100 => 'Resipi',
-		101 => 'Perbualan_Resipi',
+		101 => 'Perbincangan_resipi',
 	],
 	'nlwikibooks' => [
 		102 => 'Transwiki',
