@@ -15237,6 +15237,7 @@ function wmfGetVariantSettings() {
 		'www.defenceimagery.mod.uk',        // UK Ministry of Defence - T166271
 		'media.static.onlinesammlung.thenetexperts.info',  // Bayerische Staatsgemäldesammlungen - T166437
 		'*.geograph.org.uk',                // Geograph Britain and Ireland - T174152
+		'*.geograph.ie',                    // Geograph Ireland - T282007
 		'*.geograph.org.gg',                // Geograph Channel Islands - T174152
 		'geo.hlipp.de',                     // Geograph Deutschland - T174152
 		'geo-en.hlipp.de',                  // Geograph Deutschland - T174152
