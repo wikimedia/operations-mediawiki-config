@@ -19,12 +19,21 @@
 # file hieradata/common/profile/services_proxy/envoy.yaml
 
 $common = [
-	// This refers to the old, MongoDB-based backend, which has been
-	// replaced by xhgui-pdo (T180761).
+	// XHGui is the on-demand profiler, backed by MariaDB.  The
+	// username and password are set in PrivateSettings.php.
+	'xhgui-pdo' => 'mysql:host=m2-master.eqiad.wmnet;dbname=xhgui',
+
+	// This refers to the old, MongoDB-based XHGui backend, which
+	// has been replaced by xhgui-pdo (T180761).
 	'xhgui' => null,
 
-	// Database username and password for XHGui are set in PrivateSettings.php
-	'xhgui-pdo' => 'mysql:host=m2-master.eqiad.wmnet;dbname=xhgui',
+	// ArcLamp (formerly known as Xenon) is the sampling profiler
+	// pipeline.  Frames from the Excimer extension will be sent to
+	// Redis on this host.
+	//
+	// Profile collection is not active-active (but is consumed by
+	// pipelines in both data centers).
+	'xenon' => '10.64.32.141', # mwlog1002.eqiad.wmnet
 
 	// Statsd is not active-active.
 	'statsd' => '10.64.16.149', # statsd.eqiad.wmnet, now resolving to graphite1004.eqiad.wmnet
@@ -92,7 +101,6 @@ $services = [
 
 		// logs are mirrored from eqiad -> codfw by mwlog hosts
 		'udp2log' => '10.64.32.141:8420', # mwlog1002.eqiad.wmnet
-		'xenon' => '10.64.32.141', # mwlog1002.eqiad.wmnet
 
 		'upload' => 'ms-fe.svc.eqiad.wmnet',
 		'mediaSwiftAuth' => 'https://ms-fe.svc.eqiad.wmnet/auth',
@@ -138,7 +146,6 @@ $services = [
 
 		// logs are mirrored from codfw -> eqiad by mwlog hosts
 		'udp2log' => '10.192.32.9:8420', # mwlog2002.codfw.wmnet
-		'xenon' => '10.192.32.9', # mwlog2002.codfw.wmn
 
 		'upload' => 'ms-fe.svc.codfw.wmnet',
 		'mediaSwiftAuth' => 'https://ms-fe.svc.codfw.wmnet/auth',
