@@ -417,7 +417,7 @@ $wgVisualEditorTransclusionDialogInlineDescriptions = true;
 // Temporary feature flags for the improved search features in the template dialog, see T271802
 $wgVisualEditorTemplateSearchImprovements = true;
 
-// Don't use beta feature mode on labs
+// Use ReferencePreviews as full default feature on the beta cluster
 $wgPopupsReferencePreviewsBetaFeature = false;
 
 } # end safeguard
