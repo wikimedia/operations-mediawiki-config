@@ -219,6 +219,9 @@ if ( $wmgUseWikibaseRepo ) {
 		// third pattern with high volume of requests in Hive, source unknown
 		'/wiki/Special:EntityData?id={entity_id}&revision={revision_id}&format=json',
 	];
+
+	// Temporary, T241422
+	$wgWBRepoSettings['tmpSerializeEmptyListsAsObjects'] = $wmgWikibaseTmpSerializeEmptyListsAsObjects;
 }
 
 if ( $wmgUseWikibaseClient ) {
