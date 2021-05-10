@@ -21547,7 +21547,9 @@ function wmfGetVariantSettings() {
 		/**
 		 * @see https://www.wikidata.org/w/index.php?oldid=335040857
 		 */
-		646, // Freebase ID
+		646,  // Freebase ID
+		2671, // Google Knowledge Graph ID (T280779)
+		4839, // Wolfram Language Entity Code (T280779)
 		/**
 		 * Sandbox properties
 		 * @see https://www.wikidata.org/wiki/Special:WhatLinksHere/Q18720640?namespace=120
