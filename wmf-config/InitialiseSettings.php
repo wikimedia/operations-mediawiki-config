@@ -25351,7 +25351,7 @@ function wmfGetVariantSettings() {
 	],
 	'enwiki' => [
 		[
-			'title' => 'Wikipedia:Manual of Style',
+			'title' => 'Help:Introduction to the Manual of Style/1',
 			'text' => 'How to write a good article',
 			'id' => 'mos',
 		],
