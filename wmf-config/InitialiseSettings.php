@@ -15441,7 +15441,6 @@ function wmfGetVariantSettings() {
 	'frwiki' => true, // T202014
 ],
 
-// Temporarily unused, see T280886
 'wmgUseFooterCodeOfConductLink' => [
 	'default' => true,
 	'mediawikiwiki' => false,

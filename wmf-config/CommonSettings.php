@@ -1502,25 +1502,34 @@ if ( $wgDBname === 'enwiki' ) {
 	$wgHiddenPrefs[] = 'minordefault';
 }
 
-if ( $wmgUseFooterContactLink ) {
-	$wgHooks['SkinAddFooterLinks'][] = function ( $sk, $key, &$footerlinks ) {
-		if ( $key === 'places' ) {
-			$footerlinks['contact'] = Html::element( 'a', [ 'href' => $sk->msg( 'contact-url' )->escaped() ],
-				$sk->msg( 'contact' )->text()
-			);
-		}
-	};
-}
-if ( $wmgUseFooterTechCodeOfConductLink ) {
-	$wgHooks['SkinAddFooterLinks'][] = function ( $sk, $key, &$footerlinks ) {
-		if ( $key === 'places' ) {
-			$footerlinks['wm-codeofconduct'] = Html::element( 'a',
-				[ 'href' => $sk->msg( 'wm-techcodeofconduct-url' )->escaped() ],
-				$sk->msg( 'wm-techcodeofconduct' )->text()
-			);
-		}
-	};
-}
+$wgHooks['SkinAddFooterLinks'][] = function ( $sk, $key, &$footerlinks )
+	use ( $wmgUseFooterContactLink, $wmgUseFooterCodeOfConductLink, $wmgUseFooterTechCodeOfConductLink )
+{
+	if ( $key !== 'places' ) {
+		return;
+	}
+
+	if ( $wmgUseFooterContactLink ) {
+		$footerlinks['contact'] = Html::element(
+			'a',
+			[ 'href' => $sk->msg( 'contact-url' )->escaped() ],
+			$sk->msg( 'contact' )->text()
+		);
+	}
+
+	if ( $wmgUseFooterCodeOfConductLink ) {
+		$urlKey = 'wm-codeofconduct-url';
+		$msgKey = 'wm-codeofconduct';
+	} elseif ( $wmgUseFooterTechCodeOfConductLink ) {
+		$urlKey = 'wm-techcodeofconduct-url';
+		$msgKey = 'wm-techcodeofconduct';
+	}
+	$footerlinks['wm-codeofconduct'] = Html::element(
+		'a',
+		[ 'href' => $sk->msg( $urlKey )->escaped() ],
+		$sk->msg( $msgKey )->text()
+	);
+};
 
 // T35186: turn off incomplete feature action=imagerotate
 $wgAPIModules['imagerotate'] = 'ApiDisabled';
