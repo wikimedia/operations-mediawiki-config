@@ -2651,7 +2651,7 @@ function wmfGetVariantSettings() {
 	'thwikinews' => 'วิกิข่าว',
 	'thwikiquote' => 'วิกิคำคม',
 	'thwikisource' => 'วิกิซอร์ซ',
-	'tiwiki' => 'ዊኪፔዲያ',
+	'tiwiki' => 'ዊኪፐድያ', // T263840
 	'tiwiktionary' => 'ዊኪ-መዝገበ-ቃላት',
 	'tkwiki' => 'Wikipediýa',
 	'tkwiktionary' => 'Wikisözlük',
@@ -2808,8 +2808,8 @@ function wmfGetVariantSettings() {
 	'tewikiquote' => 'వికీవ్యాఖ్య_చర్చ', // T89332
 	'thwikibooks' => 'คุยเรื่องวิกิตำรา', // T42717
 	'thwikiquote' => 'คุยเรื่องวิกิคำคม',
-	'tiwiki' => 'ዊኪፔዲያ_ምይይጥ',
-	'tiwiktionary' => 'ዊኪ-መዝገበ-ቃላት_ምይይጥ',
+	'tiwiki' => 'ምይይጥ_ዊኪፐድያ', // T263840
+	'tiwiktionary' => 'ምይይጥ_ዊኪ-መዝገበ-ቃላት', // T263840
 	'thwiktionary' => 'คุยเรื่องวิกิพจนานุกรม', // T42717
 	'tyvwiki' => 'Википедия_дугайында_сүмелел', // T51328
 	'uawikimedia' => 'Обговорення_Вікімедіа',
@@ -4209,6 +4209,14 @@ function wmfGetVariantSettings() {
 	],
 	'+thwiktionary' => [
 		'คุยเรื่องWiktionary' => NS_PROJECT_TALK,
+	],
+	'+tiwiki' => [ // T263840
+		'ዊኪፔዲያ' => NS_PROJECT,
+		'ዊኪፔዲያ_ምይይጥ' => NS_PROJECT_TALK,
+		'ማዕጾ_ምይይጥ' => 101,
+	],
+	'+tiwiktionary' => [ // T263840
+		'ዊኪ-መዝገበ-ቃላት_ምይይጥ' => NS_PROJECT_TALK,
 	],
 	'+tlwikibooks' => [
 		'WB' => NS_PROJECT,
@@ -6241,7 +6249,7 @@ function wmfGetVariantSettings() {
 	],
 	'tiwiki' => [
 		100 => 'ማዕጾ', // T259295 Portal
-		101 => 'ማዕጾ_ምይይጥ', // T259295 Portal talk
+		101 => 'ምይይጥ_ማዕጾ', // T259295, T263840 Portal talk
 	],
 	'tlwiki' => [
 		100 => 'Portada', // Portal
