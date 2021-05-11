@@ -1745,6 +1745,9 @@ function wmfGetLabsOverrideSettings() {
 		'wgTwlEditCount' => [
 			'default' => 100,
 		],
+		'wgTwlRegistrationDays' => [
+			'default' => 1,
+		],
 		'wgWBCitoidFullRestbaseURL' => [
 			'wikidatawiki' => 'https://en.wikipedia.beta.wmflabs.org/api/rest_',
 		],
