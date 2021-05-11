@@ -603,6 +603,9 @@ function wmfGetVariantSettings() {
 	'mediawikiwiki' => '/static/images/mobile/copyright/mediawiki.svg',
 	'officewiki' => '/static/images/mobile/copyright/wikimedia.svg',
 	'specieswiki' => '/static/images/mobile/copyright/wikispecies.svg',
+
+	// Individual projects
+	'ptwiki' => '/static/images/mobile/copyright/wikipedia-pt-20.png',
 ],
 
 'wmgSiteLogoVariants' => [
@@ -858,9 +861,9 @@ function wmfGetVariantSettings() {
 		'height' => 33,
 	],
 	'ptwiki' => [
-		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-pt-20.svg',
 		'width' => 119,
-		'height' => 18,
+		'height' => 30,
 	],
 	'ruwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ru.svg',
