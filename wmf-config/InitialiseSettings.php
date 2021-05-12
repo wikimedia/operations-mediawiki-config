@@ -793,7 +793,7 @@ function wmfGetVariantSettings() {
 	'kawiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ka.svg',
 		'width' => 119,
-		'height' => 18,
+		'height' => 24,
 	],
 	'kowiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ko.svg',
@@ -1145,8 +1145,8 @@ function wmfGetVariantSettings() {
 	],
 	'kawiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ka.svg',
-		'width' => 111,
-		'height' => 11,
+		'width' => 119,
+		'height' => 10,
 	],
 	'kowiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ko.svg',
