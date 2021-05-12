@@ -25395,7 +25395,7 @@ function wmfGetVariantSettings() {
 			'id' => 'references',
 		],
 		[
-			'title' => 'Wikipedia:Article wizard/version1',
+			'title' => 'Wikipedia:Article wizard',
 			'text' => 'How to create a new article',
 			'id' => 'articlewizard',
 		],
