@@ -25016,8 +25016,6 @@ function wmfGetVariantSettings() {
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
 	'bgwiki' => false,
-	'cawiki' => false,
-	'elwiki' => false,
 	'enwiki' => false,
 	'shwiki' => false,
 	'urwiki' => false,
