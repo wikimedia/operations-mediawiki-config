@@ -214,6 +214,7 @@ class MWMultiVersion {
 			'affcom.wikimedia.org' => 'chapcom',
 			'be-tarask.wikipedia.org' => 'be_x_old',
 			'ee.wikimedia.org' => 'et',
+			'vrt-wiki.wikimedia.org' => 'otrs_wiki',
 
 			// Labs
 			'api.wikimedia.beta.wmflabs.org' => 'apiportal',

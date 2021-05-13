@@ -64,6 +64,7 @@ class MWMultiVersionTest extends PHPUnit\Framework\TestCase {
 			[ 'officewiki', 'office.wikimedia.org' ],
 			[ 'ombudsmenwiki', 'ombudsmen.wikimedia.org' ],
 			[ 'otrs_wikiwiki', 'otrs-wiki.wikimedia.org' ],
+			[ 'otrs_wikiwiki', 'vrt-wiki.wikimedia.org' ],
 			[ 'outreachwiki', 'outreach.wikimedia.org' ],
 			[ 'pa_uswikimedia', 'pa-us.wikimedia.org' ],
 			[ 'qualitywiki', 'quality.wikimedia.org' ],
