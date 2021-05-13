@@ -20328,6 +20328,12 @@ function wmfGetVariantSettings() {
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
+			'stream' => 'mediawiki.link_suggestion_interaction',
+			'schema_title' => 'analytics/mediawiki/structured_task/article/link_suggestion_interaction',
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
 			'stream' => 'mediawiki.pref_diff',
 			'schema_title' => 'analytics/pref_diff',
 			'canary_events_enabled' => true,
@@ -20650,6 +20656,7 @@ function wmfGetVariantSettings() {
 		'eventlogging_WikidataCompletionSearchClicks',
 		'mediawiki.client.session_tick',
 		'mediawiki.mediasearch_interaction',
+		'mediawiki.link_suggestion_interaction',
 		'mediawiki.pref_diff',
 		'test.instrumentation',
 		'test.instrumentation.sampled',
