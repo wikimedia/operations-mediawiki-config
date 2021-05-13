@@ -4254,6 +4254,9 @@ $wgExtensionFunctions[] = function () {
 	}
 };
 
+// To enable media tags at only some of the wikis, see T266067
+$wgSoftwareTags = array_merge( $wgSoftwareTags, $wmgAdditionalSoftwareTags );
+
 class ClosedWikiProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvider {
 	/**
 	 * @param User $user
