@@ -3,7 +3,6 @@
 
 if ( $wmfRealm == 'labs' ) {  # safe guard
 
-$wgMainCacheType = 'mcrouter';
 $wgMemCachedPersistent = false;
 // Beta Cluster: Increase timeout to 500ms (in microseconds)
 $wgMemCachedTimeout = 0.5 * 1e6;
@@ -16,10 +15,14 @@ $wgObjectCaches['mcrouter'] = [
 	'retry_timeout'         => -1,
 	'loggroup'              => 'memcached',
 	'timeout'               => $wgMemCachedTimeout,
-	'allow_tcp_nagle_delay' => false
+	'allow_tcp_nagle_delay' => false,
 ];
+$wgObjectCaches['mcrouter-with-onhost-tier'] = array_merge(
+	$wgObjectCaches['mcrouter'],
+	[ 'routingPrefix' => "/$wmfDatacenter/mw-with-onhost-tier/" ]
+);
 
-// Beta Cluster: Make WANObjectCache mcrouter-aware
+$wgMainCacheType = 'mcrouter';
 $wgMainWANCache = 'wancache-main-mcrouter';
 $wgWANObjectCaches['wancache-main-mcrouter'] = [
 	'class'   => 'WANObjectCache',

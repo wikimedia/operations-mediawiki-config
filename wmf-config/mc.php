@@ -29,7 +29,7 @@ $wgObjectCaches['mcrouter'] = [
 	'retry_timeout'         => -1,
 	'loggroup'              => 'memcached',
 	'timeout'               => $wgMemCachedTimeout,
-	'allow_tcp_nagle_delay' => false
+	'allow_tcp_nagle_delay' => false,
 ];
 $wgObjectCaches['mcrouter-with-onhost-tier'] = array_merge(
 	$wgObjectCaches['mcrouter'],
