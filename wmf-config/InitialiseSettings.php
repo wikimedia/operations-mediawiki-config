@@ -15561,6 +15561,7 @@ function wmfGetVariantSettings() {
 	'testwiki' => true,
 	'arwiki' => true,
 	'atjwiki' => true, // T182798
+	'azwiki' => true, // T282954
 	'bhwiki' => true,
 	'bnwiki' => true,
 	'bnwikibooks' => true,
