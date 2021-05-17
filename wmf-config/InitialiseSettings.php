@@ -10894,6 +10894,7 @@ function wmfGetVariantSettings() {
 			'deleterevision' => true,
 			'mergehistory' => true,
 			'protect' => true,
+			'editprotected' => true, // T281274
 			'suppressredirect'  => true,
 			'deletedhistory' => true
 		], // T184607
