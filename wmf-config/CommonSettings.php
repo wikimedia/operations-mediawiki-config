@@ -4194,7 +4194,8 @@ if ( $wmgUseMachineVision ) {
 	$wgNotifyTypeAvailabilityByCategory['machinevision']['email'] = false;
 }
 
-if ( $wmgUseTheWikipediaLibrary ) {
+// T283003: TheWikipediaLibrary requires GlobalPreferences and CentralAuth to be installed
+if ( $wmgUseTheWikipediaLibrary && $wmgUseGlobalPreferences && $wmgUseCentralAuth ) {
 	wfLoadExtension( 'TheWikipediaLibrary' );
 }
 
