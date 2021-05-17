@@ -1492,7 +1492,7 @@ function wmfGetVariantSettings() {
 	'nycwikimedia' => '//nyc.wikimedia.org', // T31273
 	'officewiki' => '//office.wikimedia.org',
 	'ombudsmenwiki' => '//ombudsmen.wikimedia.org',
-	'otrs_wikiwiki' => '//otrs-wiki.wikimedia.org',
+	'otrs_wikiwiki' => '//vrt-wiki.wikimedia.org',
 	'outreachwiki' => '//outreach.wikimedia.org',
 	'pa_uswikimedia' => '//pa-us.wikimedia.org',
 	'projectcomwiki' => '//projectcom.wikimedia.org', // T143138
@@ -1592,7 +1592,7 @@ function wmfGetVariantSettings() {
 	'nycwikimedia' => 'https://nyc.wikimedia.org', // T31273
 	'officewiki' => 'https://office.wikimedia.org',
 	'ombudsmenwiki' => 'https://ombudsmen.wikimedia.org',
-	'otrs_wikiwiki' => 'https://otrs-wiki.wikimedia.org',
+	'otrs_wikiwiki' => 'https://vrt-wiki.wikimedia.org',
 	'outreachwiki' => 'https://outreach.wikimedia.org',
 	'pa_uswikimedia' => 'https://pa-us.wikimedia.org',
 	'projectcomwiki' => 'https://projectcom.wikimedia.org',
@@ -2005,7 +2005,7 @@ function wmfGetVariantSettings() {
 	'orwikisource' => 'ଉଇକିପାଠାଗାର', // T73875
 	'orwiktionary' => 'ଉଇକିଅଭିଧାନ', // T94142
 	'oswiki' => 'Википеди',
-	'otrs_wikiwiki' => 'OTRS Wiki',
+	'otrs_wikiwiki' => 'VRT Wiki',
 	'outreachwiki' => 'Outreach Wiki',
 	'pa_uswikimedia' => 'Wikimedia Pennsylvania',
 	'pawiki' => 'ਵਿਕੀਪੀਡੀਆ',
