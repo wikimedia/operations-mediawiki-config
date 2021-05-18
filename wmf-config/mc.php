@@ -49,18 +49,21 @@ $wgObjectCaches['mcrouter-with-onhost-tier'] = array_merge(
 	[ 'routingPrefix' => "/$wmfDatacenter/mw-with-onhost-tier/" ]
 );
 
+$wgWANObjectCaches['wancache-main-mcrouter'] = [
+	'class'   => 'WANObjectCache',
+	'cacheId' => 'mcrouter',
+	// Specify the route prefix that mcrouter listens for and broadcasts.
+	// The route prefix is configured in Puppet (profile::mediawiki::mcrouter_wancache).
+	'broadcastRoutingPrefix' => '/*/mw-wan/',
+];
+
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
-	$wgMainCacheType = 'memcached-pecl'; // nutcracker only; no mcrouter present
+	// nutcracker only; no mcrouter present
+	$wgMainCacheType = 'memcached-pecl';
+	// Wikitech will use the default $wgMainWANCache from MediaWiki's Setup.php.
 } else {
 	$wgMainCacheType = 'mcrouter';
 	$wgMainWANCache = 'wancache-main-mcrouter';
-	$wgWANObjectCaches['wancache-main-mcrouter'] = [
-		'class'   => 'WANObjectCache',
-		'cacheId' => $wgMainCacheType,
-		// Specify the route prefix that mcrouter listens for and broadcasts.
-		// The route prefix is configured in Puppet (profile::mediawiki::mcrouter_wancache).
-		'broadcastRoutingPrefix' => '/*/mw-wan/',
-	];
 }
 
 # vim: set sts=4 sw=4 et :
