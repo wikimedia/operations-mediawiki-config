@@ -299,10 +299,14 @@ if ( XWikimediaDebug::getInstance()->hasOption( 'readonly' ) ) {
 $wgAllowedCorsHeaders[] = 'X-Wikimedia-Debug';
 
 if ( $wmfRealm === 'labs' ) {
-	require "$wmfConfigDir/db-labs.php";
 	require "$wmfConfigDir/mc-labs.php";
 } else {
 	require "$wmfConfigDir/mc.php";
+}
+
+if ( $wmfRealm === 'labs' ) {
+	require "$wmfConfigDir/db-labs.php";
+} else {
 	require "$wmfConfigDir/db-{$wmfDatacenter}.php";
 }
 
