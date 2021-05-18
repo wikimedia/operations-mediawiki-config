@@ -22,7 +22,8 @@ header( 'Cache-Control: s-maxage=3600, must-revalidate, max-age=0' );
 $dontIndex = "User-agent: *\nDisallow: /\n";
 
 if ( $page->exists() ) {
-	$extratext = ContentHandler::getContentText( $page->getContent() ) ?: '';
+	$content = $page->getContent();
+	$extratext = ( $content instanceof TextContent ) ? $content->getText() : '';
 	// Take last modified timestamp of page into account
 	$mtime = max( $mtime, wfTimestamp( TS_UNIX, $page->getTouched() ) );
 } elseif ( $wmfRealm == 'labs' ) {
