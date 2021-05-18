@@ -13,10 +13,11 @@
 # Included from: wmf-config/CommonSettings.php.
 #
 
-// Explicitly disable the global, just in case.
+// Explicitly disable the globals, just in case.
 // This is for CACHE_MEMCACHED, and for Memcached-related entries in
-// $wgObjectCaches that lack a 'persistent' key.
+// $wgObjectCaches that lack a 'servers' or 'persistent' key.
 // Neither of which WMF uses.
+$wgMemCachedServers = [];
 $wgMemCachedPersistent = false;
 
 $wgObjectCaches['memcached-pecl'] = [
