@@ -5,7 +5,7 @@
 # This file contains settings common to all (or many) WMF wikis.
 # For per-wiki configuration, see InitialiseSettings.php.
 #
-# This for PRODUCTION.
+# This is for PRODUCTION.
 #
 # Effective load order:
 # - multiversion
@@ -192,8 +192,8 @@ function wmfLoadInitialiseSettings( $conf ) {
 	require_once "$wmfConfigDir/InitialiseSettings.php";
 	$settings = wmfGetVariantSettings();
 
-	### WMF Labs override #####
 	if ( $wmfRealm == 'labs' ) {
+		// Beta Cluster overrides
 		require_once "$wmfConfigDir/InitialiseSettings-labs.php";
 		$settings = wmfApplyLabsOverrideSettings( $settings );
 	}
@@ -298,10 +298,10 @@ if ( XWikimediaDebug::getInstance()->hasOption( 'readonly' ) ) {
 }
 $wgAllowedCorsHeaders[] = 'X-Wikimedia-Debug';
 
+require "$wmfConfigDir/mc.php";
 if ( $wmfRealm === 'labs' ) {
+	// Beta Cluster overrides
 	require "$wmfConfigDir/mc-labs.php";
-} else {
-	require "$wmfConfigDir/mc.php";
 }
 
 if ( $wmfRealm === 'labs' ) {

@@ -1,9 +1,24 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
+#
+# This is for PRODUCTION.
+#
+# Effective load order:
+# - multiversion
+# - mediawiki/DefaultSettings.php
+# - wmf-config/*Services.php
+# - wmf-config/InitialiseSettings.php
+# - wmf-config/mc.php [THIS FILE]
+#
+# Included from: wmf-config/CommonSettings.php.
+#
 
-// Disabled here for sanity (although matches MediaWiki default,
-// and isn't used given we set 'persistent' explicitly).
+// Explicitly disable the global, just in case.
+// This is for CACHE_MEMCACHED, and for Memcached-related entries in
+// $wgObjectCaches that lack a 'persistent' key.
+// Neither of which WMF uses.
 $wgMemCachedPersistent = false;
+
 // Set timeout to 250ms (in microseconds)
 $wgMemCachedTimeout = 0.25 * 1e6;
 
@@ -17,7 +32,7 @@ $wgObjectCaches['memcached-pecl'] = [
 	// Effectively disable the retry timeout
 	'retry_timeout'        => -1,
 	'loggroup'             => 'memcached',
-	'timeout'              => $wgMemCachedTimeout,
+	'timeout'              => 0.25 * 1e6, // 250ms, in microseconds
 ];
 
 $wgObjectCaches['mcrouter'] = [
@@ -28,7 +43,7 @@ $wgObjectCaches['mcrouter'] = [
 	'server_failure_limit'  => 1e9,
 	'retry_timeout'         => -1,
 	'loggroup'              => 'memcached',
-	'timeout'               => $wgMemCachedTimeout,
+	'timeout'               => 0.25 * 1e6, // 250ms, in microseconds
 	'allow_tcp_nagle_delay' => false,
 ];
 $wgObjectCaches['mcrouter-with-onhost-tier'] = array_merge(
