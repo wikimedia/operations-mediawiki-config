@@ -280,6 +280,16 @@ require "$wmfConfigDir/../private/PrivateSettings.php";
 require "$wmfConfigDir/logging.php";
 require "$wmfConfigDir/redis.php";
 require "$wmfConfigDir/filebackend.php";
+require "$wmfConfigDir/mc.php";
+if ( $wmfRealm === 'labs' ) {
+	// Beta Cluster overrides
+	require "$wmfConfigDir/mc-labs.php";
+}
+if ( $wmfRealm === 'labs' ) {
+	require "$wmfConfigDir/db-labs.php";
+} else {
+	require "$wmfConfigDir/db-{$wmfDatacenter}.php";
+}
 
 # Override certain settings in command-line mode
 # This must be after InitialiseSettings.php is processed (T197475)
@@ -295,18 +305,6 @@ if ( XWikimediaDebug::getInstance()->hasOption( 'readonly' ) ) {
 	$wgReadOnly = 'X-Wikimedia-Debug';
 }
 $wgAllowedCorsHeaders[] = 'X-Wikimedia-Debug';
-
-require "$wmfConfigDir/mc.php";
-if ( $wmfRealm === 'labs' ) {
-	// Beta Cluster overrides
-	require "$wmfConfigDir/mc-labs.php";
-}
-
-if ( $wmfRealm === 'labs' ) {
-	require "$wmfConfigDir/db-labs.php";
-} else {
-	require "$wmfConfigDir/db-{$wmfDatacenter}.php";
-}
 
 // In production, read the database loadbalancer config from etcd.
 // See https://wikitech.wikimedia.org/wiki/Dbctl
