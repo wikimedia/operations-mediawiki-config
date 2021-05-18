@@ -8534,8 +8534,8 @@ function wmfGetVariantSettings() {
 	// note that account creation is not the only bottleneck
 	'default' => [],
 	'+enwiki' => [
-		'45.56.98.206',  // Wiki Education Foundation dashboard T126541
-		'2600:3c03::f03c:91ff:fe08:7973', // idem, T151823
+		'45.79.101.112', // Wiki Education Foundation dashboard T283096
+		'2600:3c01::f03c:92ff:fe44:4b6d', // T283096
 	],
 	'+testwikidatawiki' => [
 		// Browser tests run by Jenkins on WMCS instances - T167432
