@@ -20688,11 +20688,6 @@ function wmfGetVariantSettings() {
 'wgEventLoggingSchemas' => [
 	'default' => [
 		// Only in progress schema migrations go here, once migration finished, they are removed.
-	],
-	'group0' => [
-		'VirtualPageView' => '/analytics/legacy/virtualpageview/1.0.0',
-	],
-	'group1' => [
 		'VirtualPageView' => '/analytics/legacy/virtualpageview/1.0.0',
 	],
 ],
