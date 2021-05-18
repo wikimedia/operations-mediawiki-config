@@ -277,8 +277,6 @@ extract( $globals );
 # Needs to be before db.php
 require "$wmfConfigDir/../private/PrivateSettings.php";
 
-$wgMemCachedServers = [];
-
 require "$wmfConfigDir/logging.php";
 require "$wmfConfigDir/redis.php";
 require "$wmfConfigDir/filebackend.php";
