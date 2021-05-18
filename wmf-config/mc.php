@@ -19,9 +19,6 @@
 // Neither of which WMF uses.
 $wgMemCachedPersistent = false;
 
-// Set timeout to 250ms (in microseconds)
-$wgMemCachedTimeout = 0.25 * 1e6;
-
 $wgObjectCaches['memcached-pecl'] = [
 	'class'                => 'MemcachedPeclBagOStuff',
 	'serializer'           => 'php',
