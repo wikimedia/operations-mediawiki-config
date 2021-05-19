@@ -71,8 +71,8 @@ pipelines:
         notify:
           email:
             to:
-              - security-team@wikimedia.org
-              - releng@wikimedia.org
+              - security-admin-feed@lists.wikimedia.org
+              - releng@lists.wikimedia.org
             subject: Security patch application failed
         build:
           variant: patched
