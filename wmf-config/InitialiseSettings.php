@@ -10327,6 +10327,7 @@ function wmfGetVariantSettings() {
 			'editautoreviewprotected' => true,
 			'movefile' => true, // T161532
 			'move-rootuserpages' => true, // T205595
+			'flow-delete' => true, // T283266
 		],
 		'rollbacker' => [
 			'rollback' => true,
