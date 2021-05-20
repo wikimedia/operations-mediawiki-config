@@ -406,6 +406,9 @@ $wgVisualEditorTransclusionDialogSuggestedValues = true;
 // Temporary feature flags for changes to the descriptions in the transclusion dialog, see T271800
 $wgVisualEditorTransclusionDialogInlineDescriptions = true;
 
+// Temporary flag to enable the back button in the transclusion dialog, see T272354
+$wgVisualEditorTransclusionDialogBackButton = true;
+
 // Temporary feature flags for the improved search features in the template dialog, see T271802
 $wgVisualEditorTemplateSearchImprovements = true;
 
