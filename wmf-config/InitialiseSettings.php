@@ -25019,10 +25019,6 @@ function wmfGetVariantSettings() {
 	'default' => 'extension1',
 ],
 
-'wgGEMentorshipMigrationStage' => [
-	'default' => SCHEMA_COMPAT_NEW,
-],
-
 'wgGEWikiConfigEnabled' => [
 	'default' => false,
 	'testwiki' => true,
