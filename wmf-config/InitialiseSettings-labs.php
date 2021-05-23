@@ -1893,9 +1893,6 @@ function wmfGetLabsOverrideSettings() {
 		'wmgUseStopForumSpam' => [
 			'default' => true,
 		],
-		'wmgWikibaseAllowLocalShortDesc' => [
-			'dewiki' => true, // T279829
-		],
 		'wmgWikibaseTmpSerializeEmptyListsAsObjects' => [
 			'default' => true,
 		],
