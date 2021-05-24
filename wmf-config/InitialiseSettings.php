@@ -25030,10 +25030,8 @@ function wmfGetVariantSettings() {
 
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
-	'bgwiki' => false,
 	'enwiki' => false,
 	'shwiki' => false,
-	'urwiki' => false,
 ],
 
 'wgWelcomeSurveyEnabled' => [
