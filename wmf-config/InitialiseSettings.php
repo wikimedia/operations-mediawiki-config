@@ -18957,7 +18957,6 @@ function wmfGetVariantSettings() {
 	'enwiki' => true,
 	'eswiki' => true, // T56826
 	'fawiki' => true,
-	'hewiki' => true, // T50848
 	'itwikiversity' => true, // T162692
 	'lvwiki' => true, // T89898
 	'ptwiki' => true, // T54870
