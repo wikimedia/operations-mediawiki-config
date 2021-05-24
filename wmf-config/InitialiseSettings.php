@@ -22378,6 +22378,22 @@ function wmfGetVariantSettings() {
 	'testcommonswiki' => 'https://test.wikidata.org/w/api.php',
 ],
 
+// Enable Commons community assessment filters in Special:MediaSearch
+'wgMediaSearchAssessmentFilters' => [
+	'commonswiki' => [
+		'featured-image' => 'P6731=Q63348049',
+		'quality-image' => 'P6731=Q63348069',
+		'valued-image' => 'P6731=Q63348040',
+		'picture-of-the-day' => 'P6731=Q6998859',
+	],
+	'testcommonswiki' => [
+		'featured-image' => 'P6731=Q63348049',
+		'quality-image' => 'P6731=Q63348069',
+		'valued-image' => 'P6731=Q63348040',
+		'picture-of-the-day' => 'P6731=Q6998859',
+	],
+],
+
 // Disable redirects for search inputs to exact matches by default
 'wmgDoNotRedirectOnSearchMatch' => [
 	'default' => false,
