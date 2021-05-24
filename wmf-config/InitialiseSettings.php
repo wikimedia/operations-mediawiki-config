@@ -19275,7 +19275,6 @@ function wmfGetVariantSettings() {
 	'default' => true, // T252264
 	// Can't be enabled on wikis where wmgUseLinter or wmgUseVisualEditor is disabled:
 	'lockeddown' => false,
-	'wikitech' => false,
 ],
 
 'wgDiscussionToolsEnable' => [
