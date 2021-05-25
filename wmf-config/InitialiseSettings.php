@@ -21882,6 +21882,7 @@ function wmfGetVariantSettings() {
 	'mywiki' => true,       // T196219
 	'ruwikisource' => true, // T220752
 	'sourceswiki' => true,  // T220752
+	'trwikisource' => true, // T283626
 	'ukwikisource' => true, // T220752
 ],
 
