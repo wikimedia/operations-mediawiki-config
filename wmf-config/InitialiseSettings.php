@@ -10014,6 +10014,7 @@ function wmfGetVariantSettings() {
 	'+metawiki' => [
 		'*' => [ 'urlshortener-create-url' => true, ], // T229633
 		'autopatrolled' => [ 'autopatrol' => true, ], // T27160
+		'bot' => [ 'changetags' => true ], // T283625
 		'centralnoticeadmin' => [ // gerrit:50196, T142123
 			'autopatrol' => true,
 			'banner-protect' => true,
@@ -10051,6 +10052,7 @@ function wmfGetVariantSettings() {
 			'oathauth-verify-user' => true, // T251447
 			'oathauth-view-log' => true,
 		],
+		'sysop' => [ 'changetags' => true ], // T283625
 		'translationadmin' => [
 			'autopatrol' => true, // T142123
 			'banner-protect' => true,
@@ -10060,6 +10062,7 @@ function wmfGetVariantSettings() {
 			'reupload' => true,
 			'reupload-own' => true,
 		],
+		'user' => [ 'changetags' => false ], // T283625
 		'wmf-officeit' => [ // T106724, T142123, T254372
 			'autopatrol' => true,
 			'centralauth-lock' => true,
