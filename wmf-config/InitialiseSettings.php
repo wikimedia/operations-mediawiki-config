@@ -16608,6 +16608,7 @@ function wmfGetVariantSettings() {
 	'nowiki' => true, // T160362
 	'ptwiki' => true, // T189658
 	'rowiki' => true, // T187997
+	'svwiki' => true, // T281622
 
 	// Wiki families
 	'wiktionary' => true, // T159895 overall, T160933 for enwikt
