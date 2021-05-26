@@ -26499,12 +26499,32 @@ function wmfGetVariantSettings() {
 
 'wgGEHomepageDefaultVariant' => [
 	'default' => 'control',
+	'arwiki' => 'linkrecommendation',
+	'bnwiki' => 'linkrecommendation',
+	'cswiki' => 'linkrecommendation',
+	'viwiki' => 'linkrecommendation',
 ],
 
 'wgGEHomepageNewAccountVariants' => [
 	'default' => [
 		'control' => 100,
 		'linkrecommendation' => 0,
+	],
+	'arwiki' => [
+		'control' => 50,
+		'linkrecommendation' => 50,
+	],
+	'bnwiki' => [
+		'control' => 50,
+		'linkrecommendation' => 50,
+	],
+	'cswiki' => [
+		'control' => 50,
+		'linkrecommendation' => 50,
+	],
+	'viwiki' => [
+		'control' => 50,
+		'linkrecommendation' => 50,
 	],
 ],
 
