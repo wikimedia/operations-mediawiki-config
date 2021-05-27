@@ -25020,7 +25020,15 @@ function wmfGetVariantSettings() {
 
 'wgGEWikiConfigEnabled' => [
 	'default' => false,
+
+	// testing wiki
 	'testwiki' => true,
+
+	// pilot wikis (T283809)
+	'arwiki' => true,
+	'bnwiki' => true,
+	'cswiki' => true,
+	'viwiki' => true,
 ],
 
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
