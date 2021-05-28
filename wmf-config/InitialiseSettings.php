@@ -16649,6 +16649,7 @@ function wmfGetVariantSettings() {
 	],
 	'metawiki' => [
 		'https://tagteam.harvard.edu/hubs/wmde-policy/items.rss', // WM DE political RSS feed - T165285
+		'https://diff.wikimedia.org/feed/' // Diff - T283380
 	],
 ],
 
