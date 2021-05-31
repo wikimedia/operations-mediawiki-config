@@ -15051,7 +15051,6 @@ function wmfGetVariantSettings() {
 	'default' => [ 'default' => 0.05, ],
 	'commonswiki' => [ 'default' => 0.30, ], // T87431
 	'testcommonswiki' => [ 'default' => 0.30, ], // T87431
-	'enwiktionary' => [ 'default' => 0.30 ], // emergency measure - T283460
 	'eswikibooks' => [ 'default' => 0.30, ], // T145765
 	'metawiki' => [ 'default' => 0.30, ], // T173633
 	'mediawikiwiki' => [ 'default' => 0.30, ], // T212667
@@ -15060,7 +15059,6 @@ function wmfGetVariantSettings() {
 'wgAbuseFilterEmergencyDisableCount' => [
 	'default' => [ 'default' => 2, ],
 	'enwiki' => [ 'default' => 25, ],
-	'enwiktionary' => [ 'default' => 25, ], // emergency measure - T283460
 	'eswikibooks' => [ 'default' => 10, ], // T145765
 	'commonswiki' => [ 'default' => 25, ], // T87431
 	'testcommonswiki' => [ 'default' => 25, ], // T87431
