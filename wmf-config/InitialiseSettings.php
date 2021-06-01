@@ -25288,8 +25288,8 @@ function wmfGetVariantSettings() {
 	],
 	'cawiki' => [
 		[
-			'title' => 'Com escriure un bon article',
-			'text' => 'Viquipèdia:Llibre d\'estil',
+			'title' => 'Viquipèdia:Llibre d\'estil',
+			'text' => 'Com escriure un bon article',
 			'id' => 'mos',
 		],
 		[
