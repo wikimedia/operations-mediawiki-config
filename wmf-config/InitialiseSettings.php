@@ -17044,7 +17044,7 @@ function wmfGetVariantSettings() {
 'wgMFQueryPropModules' => [
 	// workaround for T125672
 	'default' => [ 'pageprops' ],
-	'wikidata' => [ 'pageterms' ],
+	'wikidata' => [ 'entityterms' ],
 ],
 'wgMFSearchAPIParams' => [
 	// workaround for T125672, though also fixes T120197
@@ -17052,7 +17052,7 @@ function wmfGetVariantSettings() {
 		'ppprop' => 'displaytitle'
 	],
 	'wikidata' => [
-		'wbptterms' => 'label'
+		'wbetterms' => 'label'
 	]
 ],
 'wgMFSearchGenerator' => [
