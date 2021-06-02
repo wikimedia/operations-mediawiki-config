@@ -22365,6 +22365,7 @@ function wmfGetVariantSettings() {
 'wmgUseMediaSearch' => [
 	'default' => false,
 	'testcommonswiki' => true,
+	'testwiki' => true,
 	'commonswiki' => true,
 ],
 
