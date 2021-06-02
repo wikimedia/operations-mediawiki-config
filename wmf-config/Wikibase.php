@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 // Load the Repo, and Repo extensions
 if ( !empty( $wmgUseWikibaseRepo ) ) {
 	wfLoadExtension( 'WikibaseRepository', "$IP/extensions/Wikibase/extension-repo.json" );
@@ -256,11 +258,13 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['excludeNamespaces'] = function () {
 		global $wgDBname, $wgProofreadPageNamespaceIds;
 
+		$namespaceInfo = MediaWikiServices::getInstance()->getNamespaceInfo();
+
 		// @fixme 102 is LiquidThread comments on wikinews and elsewhere?
 		// but is the Extension: namespace on mediawiki.org, so we need
 		// to allow wiki-specific settings here.
 		$excludeNamespaces = array_merge(
-			MWNamespace::getTalkNamespaces(),
+			$namespaceInfo->getTalkNamespaces(),
 			// 90 => LiquidThread threads
 			// 92 => LiquidThread summary
 			// 118 => Draft
