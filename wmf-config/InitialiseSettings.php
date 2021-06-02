@@ -19315,6 +19315,7 @@ function wmfGetVariantSettings() {
 	'gomwiktionary' => 'available', // T258554
 	'enwikibooks' => 'available', // T276851
 	'officewiki' => 'available', // T277103
+	'wikitech' => 'available', // T283119
 ],
 
 'wgDiscussionTools_newtopictool' => [
