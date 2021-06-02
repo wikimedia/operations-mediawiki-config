@@ -7738,6 +7738,14 @@ function wmfGetVariantSettings() {
 'wgVectorDefaultSidebarVisibleForAnonymousUser' => [
 	'desktop-improvements' => true,
 ],
+
+'wgVectorConsolidateUserLinks' => [
+	'default' => [
+		'logged_in' => false,
+		'logged_out' => false,
+	],
+],
+
 'wgVectorLanguageInHeader' => [
 	'default' => [
 		'logged_in' => true,

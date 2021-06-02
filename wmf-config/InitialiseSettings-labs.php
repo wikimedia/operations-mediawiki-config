@@ -519,6 +519,12 @@ function wmfGetLabsOverrideSettings() {
 				'logged_out' => true
 			],
 		],
+		'wgVectorConsolidateUserLinks' => [
+			'default' => [
+				'logged_in' => true,
+				'logged_out' => true
+			],
+		],
 		'wgVectorUseWvuiSearch' => [
 			'default' => true
 		],
