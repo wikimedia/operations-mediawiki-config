@@ -14379,7 +14379,7 @@ function wmfGetVariantSettings() {
 	'jawiki' => [
 		'extendedconfirmed' => [ '&',
 			[ APCOND_EDITCOUNT, 500 ],
-			[ APCOND_AGE, 120 * 86400 ], // 120 days * seconds in a day
+			[ APCOND_AGE_FROM_EDIT, 120 * 86400 ], // 120 days * seconds in a day
 			[ '!', [ APCOND_INGROUPS, 'interface-admin' ] ],
 			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
 			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
