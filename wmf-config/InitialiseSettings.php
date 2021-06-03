@@ -25024,6 +25024,7 @@ function wmfGetVariantSettings() {
 	'idwiki' => true,
 	'jawiki' => true,
 	'kowiki' => true,
+	'lvwiki' => true,
 	'mswiki' => true,
 	'nowiki' => true,
 	'plwiki' => true,
@@ -25067,6 +25068,7 @@ function wmfGetVariantSettings() {
 
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
+	'lvwiki' => false,
 	'shwiki' => false,
 	'skwiki' => false,
 ],
@@ -25179,6 +25181,7 @@ function wmfGetVariantSettings() {
 	'mswiki' => 'Bantuan:Kandungan',
 	'nowiki' => 'Hjelp:Portal',
 	'kowiki' => '위키백과:도움말',
+	'lvwiki' => 'Palīdzība:Saturs',
 	'plwiki' => 'Pomoc:Spis treści',
 	'ptwiki' => 'Wikipédia:Guia de criação de artigos',
 	'ruwiki' => 'Википедия:Справка',
@@ -25814,6 +25817,33 @@ function wmfGetVariantSettings() {
 			'text' => '문서 등재 기준',
 			'id' => 'notability',
 		]
+	],
+	'lvwiki' => [
+		[
+			'title' => 'Palīdzība:Stila rokasgrāmata',
+			'text' => 'Kā uzrakstīt labu rakstu',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'Palīdzība:Kā labot lapu',
+			'text' => 'Kā labot lapu',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User guide/lv#Images',
+			'text' => 'Kā ievietot attēlus',
+			'id' => 'images',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User guide/lv#Editing references',
+			'text' => 'Kā ievietot atsauces',
+			'id' => 'references',
+		],
+		[
+			'title' => 'Vikipēdija:Rakstu vednis',
+			'text' => 'Kā izveidot rakstu',
+			'id' => 'articlewizard',
+		],
 	],
 	'mswiki' => [
 		[
@@ -26465,6 +26495,10 @@ function wmfGetVariantSettings() {
 	'kowiki' => [
 		'create' => '위키백과:새 문서 만들기',
 		'image' => '도움말:그림 사용하기',
+	],
+	'lvwiki' => [
+		'create' => 'Vikipēdija:Rakstu vednis',
+		'image' => 'mw:Help:VisualEditor/User_guide/lv#Images',
 	],
 	'plwiki' => [
 		'create' => 'Pomoc:Jak napisać nowy artykuł',
