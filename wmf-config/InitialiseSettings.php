@@ -5494,6 +5494,8 @@ function wmfGetVariantSettings() {
 		129 => '2019_talk',
 		130 => '2020',
 		131 => '2020_talk',
+		132 => '2021',
+		133 => '2021_talk',
 	],
 	# @}
 
