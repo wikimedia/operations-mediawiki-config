@@ -361,6 +361,8 @@ $wgQueryCacheLimit = 5000;
 
 // ParserCache expire time temporarily reduced to 21 days (T280605)
 $wgParserCacheExpireTime = 86400 * 21;
+// Override talk pages to have 10 days only (T280605)
+$wgDiscussionToolsTalkPageParserCacheExpiry = 86400 * 10;
 
 // Old revision parser cache expire in 1 hour
 $wgOldRevisionParserCacheExpireTime = 3600;
