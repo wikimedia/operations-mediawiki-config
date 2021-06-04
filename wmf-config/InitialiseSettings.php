@@ -13533,6 +13533,8 @@ function wmfGetVariantSettings() {
 	'enwiki' => [
 		NS_USER => 'noindex,follow', // T104797
 		NS_USER_TALK => 'noindex,follow',
+		108 => 'noindex,nofollow', // T283522, Book
+		109 => 'noindex,nofollow', // T283522, Book talk
 		118 => 'noindex,nofollow', // draft
 		119 => 'noindex,nofollow', // draft talk
 	],
