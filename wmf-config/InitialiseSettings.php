@@ -9261,6 +9261,7 @@ function wmfGetVariantSettings() {
 			'delete-redirect' => true, // T278131
 		],
 		'patroller' => [ 'patrol' => true ], // T149019
+		'autoconfirmed' => [ 'collectionsaveascommunitypage' => false ], // T283523
 	],
 	'+enwikibooks' => [
 		'autoreview' => [ 'autopatrol' => true ], // T278300
