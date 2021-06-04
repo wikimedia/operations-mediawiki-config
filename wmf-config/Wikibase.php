@@ -232,6 +232,10 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings['languageLinkSiteGroup'] = 'wikipedia';
 	}
 
+	if ( $wgDBname === 'sourceswiki' ) {
+		$wgWBClientSettings['languageLinkAllowedSiteGroups'] = [ 'wikisource', 'sources' ];
+	}
+
 	$wgWBClientSettings['siteGroup'] = $wbSiteGroup;
 
 	if ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) {
