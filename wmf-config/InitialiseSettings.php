@@ -21338,6 +21338,12 @@ function wmfGetVariantSettings() {
 	],
 ],
 
+'wmgWikibaseRepoSandboxEntityIds' => [
+	'wikidatawiki' => [
+		'mainItem' => 'Q4115189',
+	],
+],
+
 // Overwrite or add commons links in the "other projects sidebar" with the
 // "commons category" (P373), per T126960
 'wgWikimediaBadgesCommonsCategoryProperty' => [

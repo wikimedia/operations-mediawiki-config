@@ -132,6 +132,9 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['preferredGeoDataProperties'] = $wmgWBRepoPreferredGeoDataProperties;
 	$wgWBRepoSettings['preferredPageImagesProperties'] = $wmgWBRepoPreferredPageImagesProperties;
 	$wgWBRepoSettings['conceptBaseUri'] = $wmgWBRepoConceptBaseUri;
+	if ( isset( $wmgWikibaseRepoSandboxEntityIds ) ) {
+		$wgWBRepoSettings['sandboxEntityIds'] = $wmgWikibaseRepoSandboxEntityIds;
+	}
 
 	$wgWBRepoSettings['entitySources'] = $wmgWikibaseEntitySources;
 	if ( isset( $wmgWikibaseRepoLocalEntitySourceName ) ) {
