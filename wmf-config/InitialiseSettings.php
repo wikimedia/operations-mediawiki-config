@@ -25067,7 +25067,6 @@ function wmfGetVariantSettings() {
 
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
-	'enwiki' => false,
 	'shwiki' => false,
 	'skwiki' => false,
 ],
@@ -26532,6 +26531,7 @@ function wmfGetVariantSettings() {
 'wgGEHomepageNewAccountEnablePercentage' => [
 	'default' => 80,
 	'testwiki' => 0,
+	'enwiki' => 2, // enwiki has special treatment - T281896
 	// euwiki is not an A/B test (T233066)
 	'euwiki' => 100,
 ],
