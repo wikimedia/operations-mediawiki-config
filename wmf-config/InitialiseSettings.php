@@ -25072,6 +25072,11 @@ function wmfGetVariantSettings() {
 	'viwiki' => false,
 ],
 
+'wgWelcomeSurveyEnableWithHomepage' => [
+	'default' => false,
+	'enwiki' => true, // T281896
+],
+
 'wgWelcomeSurveyExperimentalGroups' => [
 	'default' => [ 'exp2_target_specialpage' => [ 'range' => '0-9' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
 ],
