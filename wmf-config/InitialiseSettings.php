@@ -25032,6 +25032,7 @@ function wmfGetVariantSettings() {
 	'rowiki' => true,
 	'shwiki' => true,
 	'simplewiki' => true,
+	'skwiki' => true,
 	'sqwiki' => true,
 	'srwiki' => true,
 	'svwiki' => true,
@@ -25059,12 +25060,16 @@ function wmfGetVariantSettings() {
 	'bnwiki' => true,
 	'cswiki' => true,
 	'viwiki' => true,
+
+	// newly deployed wikis (after 2021-06-07)
+	'skwiki' => true,
 ],
 
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
 	'enwiki' => false,
 	'shwiki' => false,
+	'skwiki' => false,
 ],
 
 'wgWelcomeSurveyEnabled' => [
