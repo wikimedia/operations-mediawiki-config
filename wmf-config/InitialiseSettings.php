@@ -22480,6 +22480,13 @@ function wmfGetVariantSettings() {
 	'wikisource' => true,
 	'sourceswiki' => true,
 ],
+'wgWikisourceEnableOcr' => [
+	'default' => false,
+	'bnwikisource' => true,
+	'hiwikisource' => true,
+	'sourceswiki' => true,
+	'tawikisource' => true,
+],
 
 'wgMusicalNotationEnableWikibaseDataType' => [
 	'default' => false,
