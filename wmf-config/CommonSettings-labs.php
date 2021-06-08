@@ -409,8 +409,11 @@ $wgVisualEditorTransclusionDialogInlineDescriptions = true;
 // Temporary flag to enable the back button in the transclusion dialog, see T272354
 $wgVisualEditorTransclusionDialogBackButton = true;
 
-// Temporary feature flags for the improved search features in the template dialog, see T271802
+// Temporary feature flag for the improved search features in the VE template dialog, see T271802
 $wgVisualEditorTemplateSearchImprovements = true;
+
+// Temporary feature flag for the improved search features in the TemplateWizard dialog, see T271802
+$wgTemplateWizardTemplateSearchImprovements = true;
 
 // Use ReferencePreviews as full default feature on the beta cluster
 $wgPopupsReferencePreviewsBetaFeature = false;
