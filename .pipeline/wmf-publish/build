@@ -72,9 +72,6 @@ function apply_patches {
 function prepare_mw_versions {
     php_with_errors multiversion/bin/generate-php-wikiversions.php
     php_with_errors multiversion/bin/update-all-localsettings.php
-
-    # stub PrivateSettings.php
-    cp private/readme.php private/PrivateSettings.php
 }
 
 function apply_security_patches {
