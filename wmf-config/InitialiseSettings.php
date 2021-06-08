@@ -20296,6 +20296,27 @@ function wmfGetVariantSettings() {
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		[
+			'stream' => 'eventlogging_WMDEBannerEvents',
+			'schema_title' => 'analytics/legacy/wmdebannerevents',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
+			'stream' => 'eventlogging_WMDEBannerInteractions',
+			'schema_title' => 'analytics/legacy/wmdebannerinteractions',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
+			'stream' => 'eventlogging_WMDEBannerSizeIssue',
+			'schema_title' => 'analytics/legacy/wmdebannersizeissue',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		/*
 		 * === Streams for testing Event Platform-based instruments ===
 		 */
@@ -20680,6 +20701,9 @@ function wmfGetVariantSettings() {
 		'eventlogging_VisualEditorFeatureUse',
 		'eventlogging_VisualEditorTemplateDialogUse',
 		'eventlogging_WikidataCompletionSearchClicks',
+		'eventlogging_WMDEBannerEvents',
+		'eventlogging_WMDEBannerInteractions',
+		'eventlogging_WMDEBannerSizeIssue',
 		'mediawiki.client.session_tick',
 		'mediawiki.mediasearch_interaction',
 		'mediawiki.structured_task.article.link_suggestion_interaction',
@@ -20714,6 +20738,11 @@ function wmfGetVariantSettings() {
 	'default' => [
 		// Only in progress schema migrations go here, once migration finished, they are removed.
 		'VirtualPageView' => '/analytics/legacy/virtualpageview/1.0.0',
+	],
+	'testwiki' => [
+		'WMDEBannerEvents' => '/analytics/legacy/wmdebannerevents/1.0.0',
+		'WMDEBannerInteractions' => '/analytics/legacy/wmdebannerinteractions/1.0.0',
+		'WMDEBannerSizeIssue' => '/analytics/legacy/wmdebannersizeissue/1.0.0',
 	],
 ],
 
