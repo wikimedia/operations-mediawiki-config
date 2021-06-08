@@ -22706,12 +22706,6 @@ function wmfGetVariantSettings() {
 	'wikidataclient-test' => 'testwikidata',
 ],
 
-'wmgWikibaseRepoIdGeneratorRateLimiting' => [
-	'default' => false,
-	'testwikidatawiki' => true,
-	'wikidatawiki' => true,
-],
-
 'wmgUseTemplateSandbox' => [
 	'default' => true,
 	'lockeddown' => false,
