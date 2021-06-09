@@ -25094,7 +25094,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgWelcomeSurveyExperimentalGroups' => [
-	'default' => [ 'exp2_target_specialpage' => [ 'percentage' => 100 ], 'exp2_target_popup' => [ 'percentage' => 0 ] ],
+	'default' => [ 'exp2_target_specialpage' => [ 'percentage' => 100 ], 'exp2_target_popup' => [ 'percentage' => 0 ], 'exp1_group2' => [ 'percentage' => 0 ] ],
 ],
 
 'wgGEHomepageImpactModuleEnabled' => [
