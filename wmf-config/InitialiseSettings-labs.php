@@ -640,7 +640,6 @@ function wmfGetLabsOverrideSettings() {
 					'schema' => 'QuickSurveysResponses',
 					'enabled' => true,
 					'coverage' => 0,
-					'description' => 'ext-quicksurveys-example-internal-survey-description',
 					'platforms' => [
 						'desktop' => [ 'stable' ],
 						'mobile' => [ 'stable', 'beta' ],
