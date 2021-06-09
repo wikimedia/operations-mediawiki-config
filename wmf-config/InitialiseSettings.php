@@ -20054,6 +20054,13 @@ function wmfGetVariantSettings() {
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
+			'stream' => 'eventlogging_LandingPageImpression',
+			'schema_title' => 'analytics/legacy/landingpageimpression',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
 			'stream' => 'eventlogging_LayoutShift',
 			'schema_title' => 'analytics/legacy/layoutshift',
 			'topic_prefixes' => null,
@@ -20671,6 +20678,7 @@ function wmfGetVariantSettings() {
 		'eventlogging_HelpPanel',
 		'eventlogging_HomepageModule',
 		'eventlogging_HomepageVisit',
+		'eventlogging_LandingPageImpression',
 		'eventlogging_LayoutShift',
 		'eventlogging_MobileWebUIActionsTracking',
 		'eventlogging_NavigationTiming',
@@ -20738,6 +20746,7 @@ function wmfGetVariantSettings() {
 	'default' => [
 		// Only in progress schema migrations go here, once migration finished, they are removed.
 		'VirtualPageView' => '/analytics/legacy/virtualpageview/1.0.0',
+		'LandingPageImpression' => '/analytics/legacy/landingpageimpression/1.0.0',
 	],
 	'testwiki' => [
 		'WMDEBannerEvents' => '/analytics/legacy/wmdebannerevents/1.0.0',
