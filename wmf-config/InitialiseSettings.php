@@ -20746,9 +20746,9 @@ function wmfGetVariantSettings() {
 	'default' => [
 		// Only in progress schema migrations go here, once migration finished, they are removed.
 		'VirtualPageView' => '/analytics/legacy/virtualpageview/1.0.0',
+		'LandingPageImpression' => '/analytics/legacy/landingpageimpression/1.0.0',
 	],
 	'testwiki' => [
-		'LandingPageImpression' => '/analytics/legacy/landingpageimpression/1.0.0',
 		'WMDEBannerEvents' => '/analytics/legacy/wmdebannerevents/1.0.0',
 		'WMDEBannerInteractions' => '/analytics/legacy/wmdebannerinteractions/1.0.0',
 		'WMDEBannerSizeIssue' => '/analytics/legacy/wmdebannersizeissue/1.0.0',
