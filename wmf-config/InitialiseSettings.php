@@ -5074,6 +5074,7 @@ function wmfGetVariantSettings() {
 	'ckbwiki' => 10, // T53537
 	'cswiki' => 10, // T163207
 	'enwiki' => 10, // T16191
+	'enwikisource' => 10, // T284627
 	'eswiki' => 50, // T15261
 	'eswikivoyage' => 25, // T46285
 	'fawiki' => 10, // T45630
