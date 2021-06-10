@@ -4103,7 +4103,11 @@ if ( $wmgUseGrowthExperiments ) {
 
 	if ( !$wmgGEFeaturesMayBeAvailableToNewcomers ) {
 		// Disable welcome survey
-		$wgWelcomeSurveyExperimentalGroups = [ 'exp2_target_specialpage' => [ 'range' => 'x' ], 'exp2_target_popup' => [ 'range' => 'x' ] ];
+		$wgWelcomeSurveyExperimentalGroups = [
+			'exp2_target_specialpage' => [ 'percentage' => 0 ],
+			'exp2_target_popup' => [ 'percentage' => 0 ],
+			'exp1_group2' => [ 'percentage' => 0 ],
+		];
 		// Disable all other Growth features
 		$wgGEHomepageNewAccountEnablePercentage = 0;
 	}
