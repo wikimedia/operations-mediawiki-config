@@ -19,8 +19,17 @@ $wgPoolCounterConf = [
 	'CirrusSearch-Search' => [
 		'class' => Client::class,
 		'timeout' => 15,
-		'workers' => 200,
-		'maxqueue' => 600,
+		'workers' => 180,
+		'maxqueue' => 540,
+	],
+	// Software tries to recognize sources of external automation, such as GAE,
+	// AWS, browser automation, etc. and give them a separate pool so they
+	// can cap out without interfering with interactive users.
+	'CirrusSearch-Automated' => [
+		'class' => PoolCounter_Client::class,
+		'timeout' => 15,
+		'workers' => 30,
+		'maxqueue' => 90,
 	],
 	// Super common and mostly fast
 	'CirrusSearch-Prefix' => [
