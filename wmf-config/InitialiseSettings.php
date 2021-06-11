@@ -8430,7 +8430,7 @@ function wmfGetVariantSettings() {
 	'+viwikisource' => [ 102 => 1, 106 => 1 ],
 	'+testwikidatawiki' => [ 120 => 1 ], // Search properties by default
 	'+wikidatawiki' => [ 120 => 1 ], // Search properties by default
-	'+wikimaniawiki' => [ 128 => 1 /* 2019 content */ ],
+	'+wikimaniawiki' => [ 132 => 1 /* 2021 content */ ],
 	'+zhwikisource' => [ 102 => 1, 106 => 1, 114 => 1 ], // T66127
 ],
 # @} end of wgNamespacesToBeSearchedDefault
