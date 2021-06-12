@@ -17009,6 +17009,7 @@ function wmfGetVariantSettings() {
 	'fawiktionary' => true, // T35541
 	'hewiki' => true,
 	'hewikiquote' => true, // T266744
+	'hewikisource' => true, // T284864
 	'hewiktionary' => true, // T262181
 	'hiwiki' => true,
 	'huwiki' => true, // T32417
