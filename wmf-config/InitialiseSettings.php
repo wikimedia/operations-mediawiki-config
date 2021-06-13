@@ -20887,7 +20887,6 @@ function wmfGetVariantSettings() {
 	// Monolingual text statements, it should rather be added to:
 	// Wikibase\Lib\WikibaseContentLanguages::getDefaultMonolingualTextLanguages
 	'wikidata' => [
-		'dag' => 'Dagbanli', // T260037, T272242
 		'fkv' => 'kvääni', // T167259
 		'kea' => 'Kabuverdianu', // T127435
 		'nod' => 'ᨣᩴᩤᨾᩮᩥᩬᨦ', // T93880
@@ -20902,7 +20901,6 @@ function wmfGetVariantSettings() {
 		'srq' => 'mbia cheë', // T113408
 	],
 	'commonswiki' => [
-		'dag' => 'Dagbanli', // T260037, T272242
 		'fkv' => 'kvääni', // T167259
 		'kea' => 'Kabuverdianu', // T230480
 		'nod' => 'ᨣᩴᩤᨾᩮᩥᩬᨦ', // T230480
