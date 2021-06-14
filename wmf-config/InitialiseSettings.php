@@ -19939,6 +19939,20 @@ function wmfGetVariantSettings() {
 		 * implicit topic prefixing by the EventStreamConfig extension.
 		 */
 		[
+			'stream' => 'eventlogging_CentralNoticeBannerHistory',
+			'schema_title' => 'analytics/legacy/centralnoticebannerhistory',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
+			'stream' => 'eventlogging_CentralNoticeImpression',
+			'schema_title' => 'analytics/legacy/centralnoticeimpression',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
 			'stream' => 'eventlogging_CentralNoticeTiming',
 			'schema_title' => 'analytics/legacy/centralnoticetiming',
 			'topic_prefixes' => null,
@@ -20666,6 +20680,8 @@ function wmfGetVariantSettings() {
 // above for each of the stream names listed here.
 'wgEventLoggingStreamNames' => [
 	'default' => [
+		'eventlogging_CentralNoticeBannerHistory',
+		'eventlogging_CentralNoticeImpression',
 		'eventlogging_CentralNoticeTiming',
 		'eventlogging_ContentTranslationAbuseFilter',
 		'eventlogging_CodeMirrorUsage',
@@ -20750,6 +20766,10 @@ function wmfGetVariantSettings() {
 		'WMDEBannerEvents' => '/analytics/legacy/wmdebannerevents/1.0.0',
 		'WMDEBannerInteractions' => '/analytics/legacy/wmdebannerinteractions/1.0.0',
 		'WMDEBannerSizeIssue' => '/analytics/legacy/wmdebannersizeissue/1.0.0',
+	],
+	'testwiki' => [
+		'CentralNoticeBannerHistory' => '/analytics/legacy/centralnoticebannerhistory/1.0.0',
+		'CentralNoticeImpression' => '/analytics/legacy/centralnoticeimpression/1.0.0',
 	],
 ],
 
