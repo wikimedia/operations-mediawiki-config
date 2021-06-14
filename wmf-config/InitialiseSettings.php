@@ -21779,13 +21779,11 @@ function wmfGetVariantSettings() {
 	// Wikibase\Lib\WikibaseContentLanguages::getDefaultMonolingualTextLanguages
 	'wikidata' => [
 		'fkv' => 'kvääni', // T167259
-		'kea' => 'Kabuverdianu', // T127435
+		'kea' => 'kabuverdianu', // T127435
 		'nod' => 'ᨣᩴᩤᨾᩮᩥᩬᨦ', // T93880
-		'ota' => 'لسان توركى', // T59342
+		'ota' => 'لسان عثمانى', // T59342
 		'rmf' => 'kaalengo tšimb', // T226701
 		'rwr' => 'मारवाड़ी', // T61905
-		'sjd' => 'Кӣллт са̄мь кӣлл', // T226701
-		'sje' => 'bidumsámegiella', // T146707
 		'sju' => 'ubmejesámiengiälla', // T226701
 		'smj' => 'julevsámegiella', // T146707
 		'sms' => 'nuõrttsääʹmǩiõll', // T220118, T223544
@@ -21793,13 +21791,11 @@ function wmfGetVariantSettings() {
 	],
 	'commonswiki' => [
 		'fkv' => 'kvääni', // T167259
-		'kea' => 'Kabuverdianu', // T230480
+		'kea' => 'kabuverdianu', // T230480
 		'nod' => 'ᨣᩴᩤᨾᩮᩥᩬᨦ', // T230480
-		'ota' => 'لسان توركى', // T230480
+		'ota' => 'لسان عثمانى', // T230480
 		'rmf' => 'kaalengo tšimb', // T226701
 		'rwr' => 'मारवाड़ी', // T230480
-		'sjd' => 'Кӣллт са̄мь кӣлл', // T226701
-		'sje' => 'bidumsámegiella', // T230480
 		'sju' => 'ubmejesámiengiälla', // T226701
 		'smj' => 'julevsámegiella', // T230480
 		'sms' => 'sääʹmǩiõll', // T222309
