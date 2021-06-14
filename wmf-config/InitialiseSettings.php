@@ -22805,6 +22805,11 @@ function wmfGetVariantSettings() {
 	'votewiki' => true,
 ],
 
+'wgSecurePollSingleTransferableVoteEnabled' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 'wmgUseGlobalAbuseFilters' => [
 	// Enabled for all wikis that open, global and small/medium in size
 	'default' => true,
