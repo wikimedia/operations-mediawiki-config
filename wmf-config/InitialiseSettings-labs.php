@@ -686,10 +686,7 @@ function wmfGetLabsOverrideSettings() {
 		'wgSecurePollUseLogging' => [
 			'default' => true,
 		],
-		'wgSecurePollSingleTransferableVoteEnabled' => [
-			'default' => true,
-			'eswiki' => false,
-		],
+
 		'wmgUseIPInfo' => [
 			'default' => true,
 			'loginwiki' => false,
