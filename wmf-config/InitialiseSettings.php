@@ -19982,9 +19982,7 @@ function wmfGetVariantSettings() {
 			'stream' => 'eventlogging_CentralNoticeTiming',
 			'schema_title' => 'analytics/legacy/centralnoticetiming',
 			'topic_prefixes' => null,
-			// TODO: should canary events be enabled?
-			// https://phabricator.wikimedia.org/T271208#6778241
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
@@ -20005,9 +20003,7 @@ function wmfGetVariantSettings() {
 			'stream' => 'eventlogging_CpuBenchmark',
 			'schema_title' => 'analytics/legacy/cpubenchmark',
 			'topic_prefixes' => null,
-			// TODO: should canary events be enabled?
-			// https://phabricator.wikimedia.org/T271208#6778241
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
@@ -20021,9 +20017,7 @@ function wmfGetVariantSettings() {
 			'stream' => 'eventlogging_ElementTiming',
 			'schema_title' => 'analytics/legacy/elementtiming',
 			'topic_prefixes' => null,
-			// TODO: should canary events be enabled?
-			// https://phabricator.wikimedia.org/T271208#6778241
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
@@ -20037,18 +20031,14 @@ function wmfGetVariantSettings() {
 			'stream' => 'eventlogging_FeaturePolicyViolation',
 			'schema_title' => 'analytics/legacy/featurepolicyviolation',
 			'topic_prefixes' => null,
-			// TODO: should canary events be enabled?
-			// https://phabricator.wikimedia.org/T271208#6778241
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
 			'stream' => 'eventlogging_FirstInputTiming',
 			'schema_title' => 'analytics/legacy/firstinputtiming',
 			'topic_prefixes' => null,
-			// TODO: should canary events be enabled?
-			// https://phabricator.wikimedia.org/T271208#6778241
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
@@ -20104,9 +20094,7 @@ function wmfGetVariantSettings() {
 			'stream' => 'eventlogging_LayoutShift',
 			'schema_title' => 'analytics/legacy/layoutshift',
 			'topic_prefixes' => null,
-			// TODO: should canary events be enabled?
-			// https://phabricator.wikimedia.org/T271208#6778241
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
@@ -20120,9 +20108,7 @@ function wmfGetVariantSettings() {
 			'stream' => 'eventlogging_NavigationTiming',
 			'schema_title' => 'analytics/legacy/navigationtiming',
 			'topic_prefixes' => null,
-			// TODO: should canary events be enabled?
-			// https://phabricator.wikimedia.org/T271208#6778241
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
@@ -20136,9 +20122,7 @@ function wmfGetVariantSettings() {
 			'stream' => 'eventlogging_PaintTiming',
 			'schema_title' => 'analytics/legacy/painttiming',
 			'topic_prefixes' => null,
-			// TODO: should canary events be enabled?
-			// https://phabricator.wikimedia.org/T271208#6778241
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
@@ -20187,27 +20171,21 @@ function wmfGetVariantSettings() {
 			'stream' => 'eventlogging_ResourceTiming',
 			'schema_title' => 'analytics/legacy/resourcetiming',
 			'topic_prefixes' => null,
-			// TODO: should canary events be enabled?
-			// https://phabricator.wikimedia.org/T271208#6778241
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
 			'stream' => 'eventlogging_RUMSpeedIndex',
 			'schema_title' => 'analytics/legacy/rumspeedindex',
 			'topic_prefixes' => null,
-			// TODO: should canary events be enabled?
-			// https://phabricator.wikimedia.org/T271208#6778241
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
 			'stream' => 'eventlogging_SaveTiming',
 			'schema_title' => 'analytics/legacy/savetiming',
 			'topic_prefixes' => null,
-			// TODO: should canary events be enabled?
-			// https://phabricator.wikimedia.org/T271208#6778241
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
