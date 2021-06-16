@@ -4411,6 +4411,10 @@ function wmfGetVariantSettings() {
 		'WP' => NS_PROJECT,
 		'Immagine' => NS_FILE,
 	],
+	'+viwiki' => [
+		'Chủ_đề' => 100,
+		'Thảo_luận_Chủ_đề' => 101,
+	],
 	'+viwikibooks' => [
 		'Subject' => 102,
 		'Subject_talk' => 103,
@@ -6296,7 +6300,10 @@ function wmfGetVariantSettings() {
 		102 => 'Projeto',
 		103 => 'Discussion_projeto',
 	],
-	'viwiki' => [ 100 => 'Chủ_đề', 101 => 'Thảo_luận_Chủ_đề' ],
+	'viwiki' => [
+		100 => 'Cổng_thông_tin',
+		101 => 'Thảo_luận_Cổng_thông_tin'
+	],
 	'wuuwiki' => [
 		// Override MediaWiki default namespace names for "wuu",
 		// same than for "yue", see T124389.
