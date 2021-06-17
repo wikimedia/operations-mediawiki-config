@@ -3910,6 +3910,8 @@ if ( $wmgAllowLabsAnonEdits ) {
 	// can block anonymous edits from the whole private ranges.
 	$wgSoftBlockRanges[] = '10.0.0.0/8';
 	$wgSoftBlockRanges[] = '172.16.0.0/12';
+	// Cloud VPS VMs with floating/public addresses
+	$wgSoftBlockRanges[] = '185.15.56.0/24';
 }
 
 // On Special:Version, link to useful release notes
