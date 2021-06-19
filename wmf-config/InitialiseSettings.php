@@ -7393,10 +7393,9 @@ function wmfGetVariantSettings() {
 		101 => 'Dyskusja_portalu'
 	],
 	'ptwikinews' => [
+		// ID 102 and 103 were used before (T285163), do not re-use
 		100 => 'Portal',
 		101 => 'Portal_Discussão',
-		102 => 'Efeméride',
-		103 => 'Efeméride_Discussão',
 		104 => 'Transwiki',
 		105 => 'Transwiki_Discussão',
 		110 => 'Colaboração', // T94894
