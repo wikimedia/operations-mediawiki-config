@@ -2778,6 +2778,7 @@ Wikisource:
         no_2x: true
 
     viwikisource:
+       selected: enwikisource # T284612
 
     wawikisource:
 
