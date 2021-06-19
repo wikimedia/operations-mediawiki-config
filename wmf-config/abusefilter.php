@@ -145,6 +145,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['abusefilter']['abusefilter-log-private'] = true; // T262174
 		$wgGroupPermissions['abusefilter']['abusefilter-revert'] = true; // T284797
 		$wgGroupPermissions['abusefilter']['abusefilter-view-private'] = true; // T262174
+		$wgGroupPermissions['abusefilter']['managechangetags'] = true; // T285167
 		$wgGroupPermissions['abusefilter']['oathauth-enable'] = true; // T262174
 		$wgAbuseFilterActions['block'] = true; // T284797
 		$wgAbuseFilterBlockDuration = '24 hours'; // T284797
