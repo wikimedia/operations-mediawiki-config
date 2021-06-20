@@ -18977,7 +18977,6 @@ function wmfGetVariantSettings() {
 'wmgUseEducationProgram' => [
 	'default' => false,
 	'elwiki' => true, // T58771
-	'enwiki' => true,
 	'eswiki' => true, // T56826
 	'fawiki' => true,
 	'itwikiversity' => true, // T162692
