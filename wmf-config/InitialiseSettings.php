@@ -7760,10 +7760,9 @@ function wmfGetVariantSettings() {
 		'logged_in' => true,
 		'logged_out' => false,
 	],
-	// Temporary: See T280526.
 	'desktop-improvements' => [
 		'logged_in' => false,
-		'logged_out' => false,
+		'logged_out' => true,
 	],
 	// Some of the following wikis are part of the `desktop-improvements` group,
 	// but have special treatment due to their wiki-specific language handling.
@@ -7790,6 +7789,24 @@ function wmfGetVariantSettings() {
 	'specieswiki' => [
 		'logged_in' => false,
 		'logged_out' => false
+	],
+	'fawiki' => [
+		'logged_in' => false,
+		'logged_out' => false,
+	],
+],
+'VectorLanguageInHeaderTreatmentABTest' => [
+	'default' => [
+		'logged_in' => false,
+		'logged_out' => false,
+	],
+	'desktop-improvements' => [
+		'logged_in' => true,
+		'logged_out' => false,
+	],
+	'fawiki' => [
+		'logged_in' => false,
+		'logged_out' => false,
 	],
 ],
 'wgVectorUseWvuiSearch' => [
