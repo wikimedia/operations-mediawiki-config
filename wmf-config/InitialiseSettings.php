@@ -19886,6 +19886,7 @@ function wmfGetVariantSettings() {
 	'apiportalwiki' => 'available', // T260624
 	'gomwiktionary' => 'available', // T258554
 	'enwikibooks' => 'available', // T276851
+	'wikimaniawiki' => 'available', // T284339
 	'officewiki' => 'available', // T277103
 	'wikitech' => 'available', // T283119
 ],
@@ -19930,6 +19931,7 @@ function wmfGetVariantSettings() {
 	'apiportalwiki' => 'available',
 	'gomwiktionary' => 'available',
 	'enwikibooks' => 'available',
+	'wikimaniawiki' => 'available',
 	'officewiki' => 'available',
 	'wikitech' => 'available',
 ],
