@@ -9539,7 +9539,10 @@ function wmfGetVariantSettings() {
 			'changetags' => true, // T98629
 			'editextendedsemiprotected' => true // T131109
 		],
-		'rollbacker' => [ 'rollback' => true ], // T170780
+		'rollbacker' => [
+			'rollback' => true, // T170780
+			'unwatchedpages' => true // T285334
+		],
 		'checkuser' => [
 			'browsearchive' => true,
 			'deletedhistory' => true,
