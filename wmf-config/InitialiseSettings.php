@@ -25113,6 +25113,7 @@ function wmfGetVariantSettings() {
 	'kowiki' => true,
 	'lvwiki' => true,
 	'mswiki' => true,
+	'nlwiki' => true,
 	'nowiki' => true,
 	'plwiki' => true,
 	'ptwiki' => true,
@@ -25150,12 +25151,14 @@ function wmfGetVariantSettings() {
 	'viwiki' => true,
 
 	// newly deployed wikis (after 2021-06-07)
+	'nlwiki' => true,
 	'skwiki' => true,
 ],
 
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
 	'lvwiki' => false,
+	'nlwiki' => false,
 	'shwiki' => false,
 	'skwiki' => false,
 ],
