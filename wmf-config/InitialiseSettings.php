@@ -20479,16 +20479,19 @@ function wmfGetVariantSettings() {
 		[
 			'stream' => 'wdqs-internal.sparql-query',
 			'schema_title' => 'sparql/query',
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics',
 		],
 		[
 			'stream' => 'wdqs-external.sparql-query',
 			'schema_title' => 'sparql/query',
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics',
 		],
 		[
 			'stream' => 'cqs-external.sparql-query',
 			'schema_title' => 'sparql/query',
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics',
 		],
 		[
@@ -20574,6 +20577,7 @@ function wmfGetVariantSettings() {
 		[
 			'stream' => 'mediawiki.revision-score',
 			'schema_title' => 'mediawiki/revision/score',
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-main',
 		],
 		[
