@@ -7795,19 +7795,10 @@ function wmfGetVariantSettings() {
 		'logged_out' => false,
 	],
 ],
-'VectorLanguageInHeaderTreatmentABTest' => [
-	'default' => [
-		'logged_in' => false,
-		'logged_out' => false,
-	],
-	'desktop-improvements' => [
-		'logged_in' => true,
-		'logged_out' => false,
-	],
-	'fawiki' => [
-		'logged_in' => false,
-		'logged_out' => false,
-	],
+'wgVectorLanguageInHeaderTreatmentABTest' => [
+	'default' => false,
+	'desktop-improvements' => true,
+	'fawiki' => false,
 ],
 'wgVectorUseWvuiSearch' => [
 	'default' => true,
