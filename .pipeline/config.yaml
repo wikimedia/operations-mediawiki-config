@@ -146,6 +146,9 @@ pipelines:
                 packages:
                   # Install the WMF internal CAs (T284417)
                   - wmf-certificates
+                  # And the php extensions (T285309)
+                  - php-luasandbox
+                  - php-wikidiff2
               builder:
                 # Clean up some cruft (T284581)
                 command: [bash, -c, "rm -fr /tmp/mw-cache-*"]
