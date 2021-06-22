@@ -586,7 +586,7 @@ $wgHooks['MediaWikiServices'][] = function () {
 		// T39675, T49337
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 100, 828 ];
 
-		$wgFlaggedRevsTags['accuracy']['levels'] = 3;
+		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 
 		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 		$wgGroupPermissions['sysop']['review'] = false; // T275811
