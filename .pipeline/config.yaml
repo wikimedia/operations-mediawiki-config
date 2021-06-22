@@ -142,6 +142,10 @@ pipelines:
                 # match base image www-data uid/gid
                 uid: 33
                 gid: 33
+              apt:
+                packages:
+                  # Install the WMF internal CAs (T284417)
+                  - wmf-certificates
               builder:
                 # Clean up some cruft (T284581)
                 command: [bash, -c, "rm -fr /tmp/mw-cache-*"]
