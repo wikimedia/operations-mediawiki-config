@@ -26743,6 +26743,13 @@ function wmfGetVariantSettings() {
 	'cswiki' => 'Wikipedie:Potřebuji pomoc/Mentoři/Manuální',
 ],
 
+'wgGECampaignPattern' => [
+	'default' => null,
+	'testwiki' => '/^growth-test-/',
+	'eswiki' => '/^growth-test-/',
+	'ptwiki' => '/^growth-test-/',
+],
+
 'wmgShowRollbackConfirmationDefaultUserOptions' => [
 	'default' => false,
 	'dewiki' => true
