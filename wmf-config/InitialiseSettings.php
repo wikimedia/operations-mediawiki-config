@@ -11662,9 +11662,6 @@ return [
 	'wikisource' => true,
 	'sourceswiki' => true,
 ],
-'wgWikisourceEnableOcr' => [
-	'default' => true,
-],
 'wgWikisourceEnableBulkOcr' => [
 	'default' => false,
 	'pawikisource' => true, // T434648
