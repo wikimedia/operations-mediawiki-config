@@ -8281,6 +8281,7 @@ function wmfGetVariantSettings() {
 		'wikivoyage.org',
 		'wikidata.org',
 		'tools.wmflabs.org',
+		'toolforge.org',
 		'etherpad.wmflabs.org',
 	],
 ],
