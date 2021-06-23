@@ -4140,6 +4140,7 @@ if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession || $wmgUseCSP ) {
 	$wgCSPFalsePositiveUrls = array_merge( $wgCSPFalsePositiveUrls, [
 		'https://cvn.wmflabs.org' => true,
 		'https://tools.wmflabs.org/intuition/' => true,
+		'https://intuition.toolforge.org/' => true,
 	] );
 
 	$wgExtensionFunctions[] = function () {
