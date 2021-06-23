@@ -19183,7 +19183,7 @@ function wmfGetVariantSettings() {
 
 'wgEntitySchemaShExSimpleUrl' => [
 	'default' => null,
-	'wikidatawiki' => 'https://tools.wmflabs.org/shex-simple/wikidata/packages/shex-webapp/doc/shex-simple.html?data=Endpoint:%20https://query.wikidata.org/sparql&hideData&manifest=[]&textMapIsSparqlQuery'
+	'wikidatawiki' => 'https://shex-simple.toolforge.org/wikidata/packages/shex-webapp/doc/shex-simple.html?data=Endpoint:%20https://query.wikidata.org/sparql&hideData&manifest=[]&textMapIsSparqlQuery'
 ],
 
 'wgEntitySchemaSkippedIDs' => [
