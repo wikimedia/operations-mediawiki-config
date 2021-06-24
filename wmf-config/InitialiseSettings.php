@@ -22544,11 +22544,7 @@ function wmfGetVariantSettings() {
 	'sourceswiki' => true,
 ],
 'wgWikisourceEnableOcr' => [
-	'default' => false,
-	'bnwikisource' => true,
-	'hiwikisource' => true,
-	'sourceswiki' => true,
-	'tawikisource' => true,
+	'default' => true,
 ],
 
 'wgMusicalNotationEnableWikibaseDataType' => [
