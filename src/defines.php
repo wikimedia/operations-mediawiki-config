@@ -76,17 +76,6 @@ if ( !defined( 'NS_MEDIAWIKI' ) ) {
 	/** @} */
 
 	/** @{
-	 * Anti-lock flags
-	 * Was used by $wgAntiLockFlags, which was removed with 1.25
-	 * Constants kept to not have warnings when used in LocalSettings
-	 */
-	define( 'ALF_PRELOAD_LINKS', 1 ); // unused
-	define( 'ALF_PRELOAD_EXISTENCE', 2 ); // unused
-	define( 'ALF_NO_LINK_LOCK', 4 ); // unused
-	define( 'ALF_NO_BLOCK_LOCK', 8 ); // unused
-	/** @} */
-
-	/** @{
 	 * Date format selectors; used in user preference storage and by
 	 * Language::date() and co.
 	 */
@@ -160,8 +149,8 @@ if ( !defined( 'NS_MEDIAWIKI' ) ) {
 	/** @} */
 
 	/** @{
-	 * Autopromote conditions (must be here and not in Autopromote.php, so that
-	 * they're loaded for DefaultSettings.php before AutoLoader.php)
+	 * Autopromote conditions (must be here, so that they're loaded for
+	 * DefaultSettings.php before AutoLoader.php)
 	 */
 	define( 'APCOND_EDITCOUNT', 1 );
 	define( 'APCOND_AGE', 2 );
@@ -198,6 +187,7 @@ if ( !defined( 'NS_MEDIAWIKI' ) ) {
 	define( 'CONTENT_MODEL_CSS', 'css' );
 	define( 'CONTENT_MODEL_TEXT', 'text' );
 	define( 'CONTENT_MODEL_JSON', 'json' );
+	define( 'CONTENT_MODEL_UNKNOWN', 'unknown' );
 	/** @} */
 
 	/** @{
@@ -207,21 +197,21 @@ if ( !defined( 'NS_MEDIAWIKI' ) ) {
 	 * Extensions are free to use the below formats, or define their own.
 	 * It is recommended to stick with the conventions for MIME types.
 	 */
-	// wikitext
+	/** Wikitext */
 	define( 'CONTENT_FORMAT_WIKITEXT', 'text/x-wiki' );
-	// for js pages
+	/** For JS pages */
 	define( 'CONTENT_FORMAT_JAVASCRIPT', 'text/javascript' );
-	// for css pages
+	/** For CSS pages */
 	define( 'CONTENT_FORMAT_CSS', 'text/css' );
-	// for future use, e.g. with some plain-html messages.
+	/** For future use, e.g. with some plain HTML messages. */
 	define( 'CONTENT_FORMAT_TEXT', 'text/plain' );
-	// for future use, e.g. with some plain-html messages.
+	/** For future use, e.g. with some plain HTML messages. */
 	define( 'CONTENT_FORMAT_HTML', 'text/html' );
-	// for future use with the api and for extensions
+	/** For future use with the API and for extensions */
 	define( 'CONTENT_FORMAT_SERIALIZED', 'application/vnd.php.serialized' );
-	// for future use with the api, and for use by extensions
+	/** For future use with the API, and for use by extensions */
 	define( 'CONTENT_FORMAT_JSON', 'application/json' );
-	// for future use with the api, and for use by extensions
+	/** For future use with the API, and for use by extensions */
 	define( 'CONTENT_FORMAT_XML', 'application/xml' );
 	/** @} */
 
@@ -239,16 +229,29 @@ if ( !defined( 'NS_MEDIAWIKI' ) ) {
 	 *
 	 * - SCHEMA_COMPAT_WRITE_OLD: Whether information is written to the old schema.
 	 * - SCHEMA_COMPAT_READ_OLD: Whether information stored in the old schema is read.
-	 * - SCHEMA_COMPAT_WRITE_NEW: Whether information is written to the new schema.
-	 * - SCHEMA_COMPAT_READ_NEW: Whether information stored in the new schema is read.
+	 * - SCHEMA_COMPAT_WRITE_TEMP: Whether information is written to a temporary
+	 *   intermediate schema.
+	 * - SCHEMA_COMPAT_READ_TEMP: Whether information is read from the temporary
+	 *   intermediate schema.
+	 * - SCHEMA_COMPAT_WRITE_NEW: Whether information is written to the new schema
+	 * - SCHEMA_COMPAT_READ_NEW: Whether information is read from the new schema
 	 */
 	define( 'SCHEMA_COMPAT_WRITE_OLD', 0x01 );
 	define( 'SCHEMA_COMPAT_READ_OLD', 0x02 );
-	define( 'SCHEMA_COMPAT_WRITE_NEW', 0x10 );
-	define( 'SCHEMA_COMPAT_READ_NEW', 0x20 );
+	define( 'SCHEMA_COMPAT_WRITE_TEMP', 0x10 );
+	define( 'SCHEMA_COMPAT_READ_TEMP', 0x20 );
+	define( 'SCHEMA_COMPAT_WRITE_NEW', 0x100 );
+	define( 'SCHEMA_COMPAT_READ_NEW', 0x200 );
+	define( 'SCHEMA_COMPAT_WRITE_MASK',
+		SCHEMA_COMPAT_WRITE_OLD | SCHEMA_COMPAT_WRITE_TEMP | SCHEMA_COMPAT_WRITE_NEW );
+	define( 'SCHEMA_COMPAT_READ_MASK',
+		SCHEMA_COMPAT_READ_OLD | SCHEMA_COMPAT_READ_TEMP | SCHEMA_COMPAT_READ_NEW );
 	define( 'SCHEMA_COMPAT_WRITE_BOTH', SCHEMA_COMPAT_WRITE_OLD | SCHEMA_COMPAT_WRITE_NEW );
+	define( 'SCHEMA_COMPAT_WRITE_OLD_AND_TEMP', SCHEMA_COMPAT_WRITE_OLD | SCHEMA_COMPAT_WRITE_TEMP );
+	define( 'SCHEMA_COMPAT_WRITE_TEMP_AND_NEW', SCHEMA_COMPAT_WRITE_TEMP | SCHEMA_COMPAT_WRITE_NEW );
 	define( 'SCHEMA_COMPAT_READ_BOTH', SCHEMA_COMPAT_READ_OLD | SCHEMA_COMPAT_READ_NEW );
 	define( 'SCHEMA_COMPAT_OLD', SCHEMA_COMPAT_WRITE_OLD | SCHEMA_COMPAT_READ_OLD );
+	define( 'SCHEMA_COMPAT_TEMP', SCHEMA_COMPAT_WRITE_TEMP | SCHEMA_COMPAT_READ_TEMP );
 	define( 'SCHEMA_COMPAT_NEW', SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW );
 	/** @} */
 
@@ -289,4 +292,5 @@ if ( !defined( 'NS_MEDIAWIKI' ) ) {
 	define( 'XML_DUMP_SCHEMA_VERSION_10', '0.10' );
 	define( 'XML_DUMP_SCHEMA_VERSION_11', '0.11' );
 	/** @} */
+
 }
