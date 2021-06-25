@@ -25099,20 +25099,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgGEWikiConfigEnabled' => [
-	'default' => false,
-
-	// testing wiki
-	'testwiki' => true,
-
-	// pilot wikis (T283809)
-	'arwiki' => true,
-	'bnwiki' => true,
-	'cswiki' => true,
-	'viwiki' => true,
-
-	// newly deployed wikis (after 2021-06-07)
-	'nlwiki' => true,
-	'skwiki' => true,
+	'default' => true,
 ],
 
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
