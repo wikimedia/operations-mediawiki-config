@@ -21218,18 +21218,6 @@ function wmfGetVariantSettings() {
 	'wikidataclient-test' => 'https://test.wikidata.org',
 ],
 
-'wmgWikibaseClientRepoConceptBaseUri' => [
-	// Note: these are base resource *identifiers*, not *locators*. While HTTPS would in principle be
-	// preferable over HTTP here, changing it now would be a potentially very disruptive change,
-	// breaking the stable nature of all our entity identifiers - see T153563 for some previous
-	// discussion on this (ultimately declined).
-
-	// In practice, thanks to HSTS and HSTS preloading, most user agents should load these over HTTPS
-	// anyways (i.e., when the URI is used as a URL).
-	'wikidataclient' => 'http://www.wikidata.org/entity/',
-	'wikidataclient-test' => 'http://test.wikidata.org/entity/',
-],
-
 'wmgWikibaseClientUseTermsTableSearchFields' => [
 	'default' => false,
 ],
@@ -21492,8 +21480,13 @@ function wmfGetVariantSettings() {
 
 'wmgWBRepoConceptBaseUri' => [
 	'default' => null,
-	// note: Wikidata is intentionally HTTP, Commons is intentionally HTTPS;
-	// see also the comment on wmgWikibaseClientRepoConceptBaseUri
+	// Note: Wikidata is intentionally HTTP, Commons is intentionally HTTPS.
+	// These are base resource *identifiers*, not *locators*. While HTTPS would in principle be
+	// preferable over HTTP for all wikis, changing it now for Wikidata would be a potentially
+	// very disruptive change, breaking the stable nature of all our entity identifiers - see
+	// T153563 for some previous discussion on this (ultimately declined).
+	// In practice, thanks to HSTS and HSTS preloading, most user agents should load all of
+	// these over HTTPS anyways (i.e., when the URI is used as a URL).
 	'commonswiki' => 'https://commons.wikimedia.org/entity/',
 	'testcommonswiki' => 'https://test-commons.wikimedia.org/entity/',
 	'testwikidatawiki' => 'http://test.wikidata.org/entity/',
