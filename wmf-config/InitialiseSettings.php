@@ -21171,20 +21171,6 @@ function wmfGetVariantSettings() {
 	],
 ],
 
-// NOTE: The key should be the interwiki prefix for the target foreign repo wiki.
-'wmgWikibaseRepoForeignRepositories' => [
-	'default' => [],
-	'commonswiki' => [
-		'd' => [
-			'repoDatabase' => 'wikidatawiki',
-			'baseUri' => 'http://www.wikidata.org/entity/',
-			'supportedEntityTypes' => [ 'item', 'property' ],
-			'prefixMapping' => [],
-			'entityNamespaces' => [ 'item' => 0, 'property' => 120 ]
-		],
-	],
-],
-
 'wmgWikibaseRepoEnableRefTabs' => [
 	'default' => false,
 	'testwikidatawiki' => true, // T228412

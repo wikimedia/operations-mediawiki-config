@@ -1412,9 +1412,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => [ 'Data Bridge' ],
 		],
 
-		'wmgWikibaseRepoForeignRepositories' => [
-			'default' => [],
-		],
 		'wmgWikibaseEntityDataFormats' => [
 			'default' => [
 				'json',
