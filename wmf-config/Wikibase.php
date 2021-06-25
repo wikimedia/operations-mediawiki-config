@@ -287,7 +287,6 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings['propertyOrderUrl'] = $wmgWikibaseClientPropertyOrderUrl;
 	}
 
-	$wgWBClientSettings['changesDatabase'] = $wmgWikibaseClientChangesDatabase;
 	$wgWBClientSettings['repoDatabase'] = $wmgWikibaseClientRepoDatabase;
 	$wgWBClientSettings['repoUrl'] = $wmgWikibaseClientRepoUrl;
 	$wgWBClientSettings['repoConceptBaseUri'] = $wmgWikibaseClientRepoConceptBaseUri;
