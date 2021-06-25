@@ -286,7 +286,6 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['repoDatabase'] = $wmgWikibaseClientRepoDatabase;
 	$wgWBClientSettings['repoUrl'] = $wmgWikibaseClientRepoUrl;
-	$wgWBClientSettings['repoConceptBaseUri'] = $wmgWikibaseClientRepoConceptBaseUri;
 	$wgWBClientSettings['repositories'] = $wmgWikibaseClientRepositories;
 	$wgWBClientSettings['wikiPageUpdaterDbBatchSize'] = 20;
 
