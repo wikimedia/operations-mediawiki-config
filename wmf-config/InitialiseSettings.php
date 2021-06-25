@@ -27480,5 +27480,11 @@ function wmfGetVariantSettings() {
 	'wikitech' => true, // T276346
 ],
 
+'wgParserEnableLegacyMediaDOM' => [
+	'default' => true,
+	'testwiki' => false,
+	'test2wiki' => false,
+],
+
 ];
 }
