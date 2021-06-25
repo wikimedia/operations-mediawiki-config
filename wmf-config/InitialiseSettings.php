@@ -21246,11 +21246,6 @@ function wmfGetVariantSettings() {
 	],
 ],
 
-'wmgWikibaseClientChangesDatabase' => [
-	'wikidataclient' => 'wikidatawiki',
-	'wikidataclient-test' => 'testwikidatawiki',
-],
-
 'wmgWikibaseClientRepoDatabase' => [
 	'wikidataclient' => 'wikidatawiki',
 	'wikidataclient-test' => 'testwikidatawiki',

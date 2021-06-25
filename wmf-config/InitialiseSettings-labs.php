@@ -1358,9 +1358,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => [
 			],
 		],
-		'-wmgWikibaseClientChangesDatabase' => [
-			'default' => 'wikidatawiki',
-		],
 
 		'-wmgWikibaseClientRepoDatabase' => [
 			'default' => 'wikidatawiki',
