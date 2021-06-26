@@ -251,6 +251,13 @@ $wgLocalFileRepo = [
 		: [],
 ];
 
+// T275268
+// It will be migrated to production soon.
+if ( $wmfRealm === 'labs' ) {
+	$wgLocalFileRepo['useJsonMetadata'] = true;
+	$wgLocalFileRepo['useSplitMetadata'] = true;
+}
+
 // test2wiki uses testwiki as foreign file repo (e.g. local => testwiki => commons)
 // Does not exist in labs.
 if ( $wgDBname === 'test2wiki' ) {
