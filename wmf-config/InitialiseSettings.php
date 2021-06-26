@@ -11540,8 +11540,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'abusefilter', 'abusefilter-helper', 'accountcreator', 'autoreviewer', 'confirmed', 'eventcoordinator', 'filemover', 'reviewer', 'rollbacker', 'templateeditor', 'massmessage-sender', 'extendedconfirmed', 'extendedmover', 'patroller' ], // T126607, T133981, T149019, T175684, T193075
 	],
 	'+enwikibooks' => [
-		'sysop' => [ 'import', 'transwiki', 'uploader' ], // T278683
-		'bureaucrat' => [ 'flood' ],
+		'sysop' => [ 'import', 'transwiki', 'uploader', 'flood' ], // T278683, T285594
 	],
 	'+enwikinews' => [
 		'bureaucrat' => [ 'flood' ],
@@ -12381,8 +12380,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'rollbacker', 'accountcreator', 'abusefilter', 'abusefilter-helper', 'autoreviewer', 'confirmed', 'reviewer', 'filemover', 'templateeditor', 'massmessage-sender', 'extendedconfirmed', 'extendedmover', 'patroller', 'eventcoordinator' ], // T126607, T133981, T149019, T175684, T193075
 	],
 	'+enwikibooks' => [
-		'sysop' => [ 'import', 'transwiki', 'uploader', ], // T278683
-		'bureaucrat' => [ 'flood' ],
+		'sysop' => [ 'import', 'transwiki', 'uploader', 'flood' ], // T278683, T285594
 	],
 	'+enwikinews' => [
 		'bureaucrat' => [ 'flood', 'sysop' ],
@@ -15013,7 +15011,7 @@ function wmfGetVariantSettings() {
 		'flood' => [ 'flood' ], // T53803
 		'botadmin' => [ 'botadmin' ], // T53803
 	],
-	'enwikibooks' => [ 'sysop' => [ 'flood' ] ],
+	'enwikibooks' => [ 'flood' => [ 'flood' ] ], // T285594
 	'enwikinews' => [ 'sysop' => [ 'flood' ] ],
 	'enwikisource' => [ 'sysop' => [ 'flood' ] ], // T38863
 	'enwikiversity' => [ 'interface-admin' => [ 'interface-admin' ] ], // T238967
