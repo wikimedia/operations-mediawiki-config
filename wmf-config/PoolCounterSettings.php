@@ -63,11 +63,13 @@ $wgPoolCounterConf = [
 	// These are very expensive and incredibly common at more than 5M per hour
 	// before varnish caching. If the somehow the cache hit rate drops this
 	// protects the cluster
+	// NOTE: This is an increase from typical sizing to handle the expected
+	// empty more_like cache on switchover from eqiad->codfw.
 	'CirrusSearch-MoreLike' => [
 		'class' => Client::class,
 		'timeout' => 5,
-		'workers' => 60,
-		'maxqueue' => 240,
+		'workers' => 150,
+		'maxqueue' => 400,
 	],
 	'FileRender' => [
 		'class' => Client::class,

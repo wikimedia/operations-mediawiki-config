@@ -22817,7 +22817,9 @@ function wmfGetVariantSettings() {
 ],
 
 'wgCirrusSearchClusterOverrides' => [
-	'default' => [],
+	# Force more_like to stay in eqiad when general traffic switches
+	# to codfw to handle the ~900 qps expected on an empty cache.
+	'default' => [ 'more_like' => 'eqiad' ],
 ],
 
 'wgCirrusSearchWriteClusters' => [
