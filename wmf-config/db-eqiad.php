@@ -143,7 +143,7 @@ $wgLBFactoryConf = [
 	'user'               => $wgDBuser,
 	'password'           => $wgDBpassword,
 	'type'               => 'mysql',
-	'flags'              => DBO_DEFAULT,
+	'flags'              => DBO_DEFAULT | ( $wgDebugDumpSql ? DBO_DEBUG : 0 ),
 	'max lag'            => 6, // should be safely less than $wgCdnReboundPurgeDelay
 	'useGTIDs'           => true,
 	'lagDetectionMethod' => 'pt-heartbeat',
@@ -214,7 +214,7 @@ $wgLBFactoryConf = [
 'masterTemplateOverrides' => [],
 
 'externalTemplateOverrides' => [
-	'flags' => 0, // No transactions
+	'flags' => $wgDebugDumpSql ? DBO_DEBUG : 0, // No transactions
 	'lagDetectionMethod' => 'Seconds_Behind_Master', // no pt-heartbeat
 ],
 

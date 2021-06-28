@@ -285,6 +285,7 @@ if ( $wmfRealm === 'labs' ) {
 	// Beta Cluster overrides
 	require "$wmfConfigDir/mc-labs.php";
 }
+# db-*.php needs $wgDebugDumpSql so should be loaded after logging.php
 if ( $wmfRealm === 'labs' ) {
 	require "$wmfConfigDir/db-labs.php";
 } else {

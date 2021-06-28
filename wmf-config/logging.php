@@ -77,6 +77,7 @@ if ( getenv( 'MW_DEBUG_LOCAL' ) ) {
 		$wmgDefaultMonologHandler[] = 'logstash-debug';
 	}
 	$wmgMonologChannels = [];
+	$wgDebugDumpSql = true;
 }
 
 // Monolog logging configuration
