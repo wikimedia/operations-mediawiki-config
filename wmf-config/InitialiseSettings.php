@@ -26744,9 +26744,9 @@ function wmfGetVariantSettings() {
 
 'wgGECampaignPattern' => [
 	'default' => null,
-	'testwiki' => '/^growth-test-/',
-	'eswiki' => '/^growth-test-/',
-	'ptwiki' => '/^growth-test-/',
+	'testwiki' => '/^growth-advancement-test-2021$/',
+	'eswiki' => '/^growth-advancement-spanish-2021$/',
+	'ptwiki' => '/^growth-advancement-brazil-2021$/'
 ],
 
 'wmgShowRollbackConfirmationDefaultUserOptions' => [
