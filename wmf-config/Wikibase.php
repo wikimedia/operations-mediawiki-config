@@ -157,6 +157,10 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['idGenerator'] = $wmgWBRepoIdGenerator; // T194299
 	}
 
+	if ( isset( $wmgWBRepoIdGeneratorInErrorPingLimiter ) ) {
+		$wgWBRepoSettings['idGeneratorInErrorPingLimiter'] = $wmgWBRepoIdGeneratorInErrorPingLimiter;
+	}
+
 	$wgWBRepoSettings['dataRightsText'] = 'Creative Commons CC0 License';
 	$wgWBRepoSettings['dataRightsUrl'] = 'https://creativecommons.org/publicdomain/zero/1.0/';
 

@@ -21158,6 +21158,11 @@ function wmfGetVariantSettings() {
 	'default' => 'mysql-upsert',
 ],
 
+'wmgWBRepoIdGeneratorInErrorPingLimiter' => [
+	'default' => 0,
+	'wikidatawiki' => 9,
+],
+
 'wmgWikibaseStringLimits' => [
 	'default' => null,
 	'wikibaserepo' => [
