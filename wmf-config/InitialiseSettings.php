@@ -7798,7 +7798,6 @@ function wmfGetVariantSettings() {
 'wgVectorLanguageInHeaderTreatmentABTest' => [
 	'default' => false,
 	'desktop-improvements' => true,
-	'fawiki' => false,
 ],
 'wgVectorUseWvuiSearch' => [
 	'default' => true,
