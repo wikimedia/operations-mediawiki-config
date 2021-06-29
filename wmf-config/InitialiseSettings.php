@@ -14981,7 +14981,6 @@ function wmfGetVariantSettings() {
 	'metawiki' => [ 'sysop' => [ 'flood' ] ], // T39198
 	'officewiki' => [ 'sysop' => [ 'flood' ] ], // T86237
 	'sourceswiki' => [ 'sysop' => [ 'flood' ] ], // T193350
-	'enwikibooks' => [ 'sysop' => [ 'flood' ] ],
 	'eswikibooks' => [ 'sysop' => [ 'flood' ] ], // T111455
 	'enwikinews' => [ 'sysop' => [ 'flood' ] ],
 	'enwikisource' => [ 'sysop' => [ 'flood' ] ], // T38863
