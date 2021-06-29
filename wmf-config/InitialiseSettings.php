@@ -7790,10 +7790,6 @@ function wmfGetVariantSettings() {
 		'logged_in' => false,
 		'logged_out' => false
 	],
-	'fawiki' => [
-		'logged_in' => false,
-		'logged_out' => false,
-	],
 ],
 'wgVectorLanguageInHeaderTreatmentABTest' => [
 	'default' => false,
