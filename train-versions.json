@@ -4,5 +4,6 @@
   "1.37.0-wmf.4": "53",
   "aaaa": "bbbb",
   "wmf/1.36.0-wmf.25": "computed_image_Tag",
-  "wmf/1.37.0-wmf.8": "computed_image_Tag"
+  "wmf/1.37.0-wmf.8": "computed_image_Tag",
+  "1.37.0-wmf.12": "2021-06-29-194607-publish"
 }
