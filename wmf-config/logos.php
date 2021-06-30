@@ -90,6 +90,7 @@ return [
 	'cvwiki' => '/static/images/project-logos/cvwiki.png',
 	'cywiki' => '/static/images/project-logos/cywiki.png',
 	'dawiki' => '/static/images/project-logos/dawiki.png',
+	'dagwiki' => '/static/images/project-logos/dagwiki.png',
 	'dewiki' => '/static/images/project-logos/dewiki.png',
 	'dinwiki' => '/static/images/project-logos/dinwiki.png',
 	'diqwiki' => '/static/images/project-logos/diqwiki.png',
@@ -885,6 +886,7 @@ return [
 	'cvwiki' => '/static/images/project-logos/cvwiki-1.5x.png', // T150618
 	'cywiki' => '/static/images/project-logos/cywiki-1.5x.png', // T150618
 	'dawiki' => '/static/images/project-logos/dawiki-1.5x.png', // T131033
+	'dagwiki' => '/static/images/project-logos/dagwiki-1.5x.png',
 	'dewiki' => '/static/images/project-logos/dewiki-1.5x.png', // T132792
 	'dinwiki' => '/static/images/project-logos/dinwiki-1.5x.png',
 	'diqwiki' => '/static/images/project-logos/diqwiki-1.5x.png', // T150618
@@ -1455,6 +1457,7 @@ return [
 	'cvwiki' => '/static/images/project-logos/cvwiki-2x.png', // T150618
 	'cywiki' => '/static/images/project-logos/cywiki-2x.png', // T150618
 	'dawiki' => '/static/images/project-logos/dawiki-2x.png', // T131033
+	'dagwiki' => '/static/images/project-logos/dagwiki-2x.png',
 	'dewiki' => '/static/images/project-logos/dewiki-2x.png', // T132792
 	'dinwiki' => '/static/images/project-logos/dinwiki-2x.png',
 	'diqwiki' => '/static/images/project-logos/diqwiki-2x.png', // T150618
