@@ -302,6 +302,7 @@ function wmfGetVariantSettings() {
 	'atjwiki' => 'America/Montreal', // T167714
 	'awawiki' => 'Asia/Kolkata', // T251371
 	'banwiki' => 'Asia/Makassar',
+	'banwikisource' => 'Asia/Makassar',
 	'barwiki' => 'Europe/Berlin',
 	'bat_smgwiki' => 'Europe/Vilnius',
 	'bawikibooks' => 'Asia/Yekaterinburg', // T173471
@@ -6403,6 +6404,10 @@ function wmfGetVariantSettings() {
 	'aswikisource' => [
 		102 => 'লেখক', // T72464 - Author
 		103 => 'লেখক_আলোচনা',
+	],
+	'banwikisource' => [
+		102 => 'Pangawi', // T284389 - Author
+		103 => 'Pabligbagan_Pangawi', // T284389 - Author talk
 	],
 	'bewikisource' => [
 		102 => 'Аўтар', // Author
