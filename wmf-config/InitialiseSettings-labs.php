@@ -306,7 +306,6 @@ function wmfGetLabsOverrideSettings() {
 				'PageTriage' => 'debug',
 				'PageViewInfo' => 'info',
 				'ParserCache' => 'warning',
-				'Parsoid' => 'info',
 				'poolcounter' => 'debug',
 				'preferences' => 'info',
 				'purge' => 'debug',
