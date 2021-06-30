@@ -272,6 +272,7 @@ return [
 	'sgwiki' => '/static/images/project-logos/sgwiki.png', // T51125
 	'shnwiki' => '/static/images/project-logos/shnwiki.png',
 	'shwiki' => '/static/images/project-logos/shwiki.png', // T51125
+	'shiwiki' => '/static/images/project-logos/shiwiki.png',
 	'simplewiki' => '/static/images/project-logos/simplewiki.png', // T181448
 	'siwiki' => '/static/images/project-logos/siwiki.png',
 	'skwiki' => '/static/images/project-logos/skwiki.png',
@@ -1064,6 +1065,7 @@ return [
 	'sgwiki' => '/static/images/project-logos/sgwiki-1.5x.png', // T150618
 	'shnwiki' => '/static/images/project-logos/shnwiki-1.5x.png',
 	'shwiki' => '/static/images/project-logos/shwiki-1.5x.png', // T150618
+	'shiwiki' => '/static/images/project-logos/shiwiki-1.5x.png',
 	'simplewiki' => '/static/images/project-logos/simplewiki-1.5x.png', // T181448
 	'siwiki' => '/static/images/project-logos/siwiki-1.5x.png', // T150618
 	'skwiki' => '/static/images/project-logos/skwiki-1.5x.png', // T150618
@@ -1635,6 +1637,7 @@ return [
 	'sgwiki' => '/static/images/project-logos/sgwiki-2x.png', // T150618
 	'shnwiki' => '/static/images/project-logos/shnwiki-2x.png',
 	'shwiki' => '/static/images/project-logos/shwiki-2x.png', // T150618
+	'shiwiki' => '/static/images/project-logos/shiwiki-2x.png',
 	'simplewiki' => '/static/images/project-logos/simplewiki-2x.png', // T181448
 	'siwiki' => '/static/images/project-logos/siwiki-2x.png', // T150618
 	'skwiki' => '/static/images/project-logos/skwiki-2x.png', // T150618

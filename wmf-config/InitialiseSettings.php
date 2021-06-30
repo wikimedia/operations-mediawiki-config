@@ -520,6 +520,7 @@ function wmfGetVariantSettings() {
 	'skrwiki' => 'Asia/Karachi',
 	'skrwiktionary' => 'Asia/Karachi',
 	'shwiki' => 'Europe/Berlin',
+	'shiwiki' => 'Africa/Casablanca',
 	'shnwiktionary' => 'Asia/Yangon',
 	'shywiktionary' => 'Africa/Algiers',
 	'slwiki' => 'Europe/Ljubljana',
@@ -2601,6 +2602,7 @@ function wmfGetVariantSettings() {
 	'scnwiktionary' => 'Wikizziunariu',
 	'sdwiki' => 'وڪيپيڊيا', // T186943
 	'searchcomwiki' => 'SearchCom',
+	'shiwiki' => 'Wikipidya',
 	'shnwiki' => 'ဝီႇၶီႇၽီးတီးယႃး',
 	'shnwiktionary' => 'ဝိၵ်ႇသျိၼ်ႇၼရီႇ',
 	'shywiktionary' => 'Wikasegzawal',
