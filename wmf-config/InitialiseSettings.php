@@ -5360,6 +5360,7 @@ function wmfGetVariantSettings() {
 		'PageTriage' => 'debug',
 		'PageViewInfo' => 'info',
 		'ParserCache' => 'warning',
+		'Parsoid' => 'warning',
 		'poolcounter' => 'debug',
 		'preferences' => 'info',
 		'purge' => 'debug',
