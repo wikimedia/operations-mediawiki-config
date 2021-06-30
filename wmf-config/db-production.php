@@ -9,8 +9,11 @@ if ( !defined( 'DBO_DEFAULT' ) ) {
 
 # LOOKING FOR $wmgOldExtTemplate ?  It no longer lives in the PHP configs.
 # Instead try https://noc.wikimedia.org/dbconfig/eqiad.json (see 'es1')
+# and https://noc.wikimedia.org/dbconfig/codfw.json
 # For more info see also https://wikitech.wikimedia.org/wiki/dbctl
 
+# If a wiki's section is different across datacenters, use a ternary to vary:
+# 'xxwiki' => $wmfDatacenter === 'codfw' ? 's1': 's2',
 $wgLBFactoryConf = [
 
 'class' => 'LBFactoryMulti',
@@ -134,8 +137,10 @@ $wgLBFactoryConf = [
 # function (the master is not included, as by definition has lag 0).
 #
 # LOOKING FOR THE LOAD LISTS?  They no longer live in the PHP configs.
-# Instead try https://noc.wikimedia.org/db.php?dc=eqiad and
+# Instead try https://noc.wikimedia.org/db.php?dc=eqiad,
+# https://noc.wikimedia.org/db.php?dc=codfw,
 # https://noc.wikimedia.org/dbconfig/eqiad.json
+# https://noc.wikimedia.org/dbconfig/codfw.json
 # For more info see also https://wikitech.wikimedia.org/wiki/dbctl
 
 'serverTemplate' => [
@@ -197,17 +202,20 @@ $wgLBFactoryConf = [
 
 # LOOKING FOR GROUP LOADS?  They no longer live in the PHP configs.
 # Instead try https://noc.wikimedia.org/dbconfig/eqiad.json
+# and https://noc.wikimedia.org/dbconfig/codfw.json
 # For more info see also https://wikitech.wikimedia.org/wiki/dbctl
 
 'groupLoadsByDB' => [],
 
 # LOOKING FOR HOSTS BY NAME?  They no longer live in the PHP configs.
 # Instead try https://noc.wikimedia.org/dbconfig/eqiad.json
+# and https://noc.wikimedia.org/dbconfig/codfw.json
 # For more info see also https://wikitech.wikimedia.org/wiki/dbctl
 'hostsByName' => [],
 
 # LOOKING FOR EXTERNAL LOADS?  They no longer live in the PHP configs.
 # Instead try https://noc.wikimedia.org/dbconfig/eqiad.json (see es1/es2/es3/x1)
+# and https://noc.wikimedia.org/dbconfig/codfw.json
 # For more info see also https://wikitech.wikimedia.org/wiki/dbctl
 'externalLoads' => [],
 
@@ -253,6 +261,7 @@ $wgLBFactoryConf = [
 'readOnlyBySection' => [
 # LOOKING FOR READONLY SECTIONS?  They no longer live in the PHP configs.
 # Instead try https://noc.wikimedia.org/dbconfig/eqiad.json
+# and https://noc.wikimedia.org/dbconfig/codfw.json
 # For more info see also https://wikitech.wikimedia.org/wiki/dbctl
 ],
 

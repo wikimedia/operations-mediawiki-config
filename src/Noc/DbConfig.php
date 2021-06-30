@@ -69,9 +69,6 @@ class DbConfig {
 	public function getServer( $db ) {
 		static $canonicalServers;
 		if ( $canonicalServers === null ) {
-			// Mock variable to capture the property assignment
-			global $wmfDatacenter;
-			$wmfDatacenter = 'bogus';
 			require_once __DIR__ . '/../../src/defines.php';
 			require_once __DIR__ . '/../../wmf-config/InitialiseSettings.php';
 			$settings = wmfGetVariantSettings();

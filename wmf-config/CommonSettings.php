@@ -337,7 +337,7 @@ if ( $wmfRealm === 'labs' ) {
 if ( $wmfRealm === 'labs' ) {
 	require "$wmfConfigDir/db-labs.php";
 } else {
-	require "$wmfConfigDir/db-{$wmfDatacenter}.php";
+	require "$wmfConfigDir/db-production.php";
 }
 
 # Override certain settings in command-line mode
