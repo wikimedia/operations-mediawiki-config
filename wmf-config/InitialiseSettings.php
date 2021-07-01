@@ -5134,6 +5134,7 @@ function wmfGetVariantSettings() {
 	'fawiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T140839
 	'frwiki' => [ '', 'autoconfirmed', 'editextendedsemiprotected', 'sysop' ], // T131109
 	'hewiki' => [ '', 'autoconfirmed', 'editautopatrolprotected',  'templateeditor' /* T102466 */, 'sysop' ], // T60207
+	'hewikisource' => [ '', 'autoconfirmed', 'editautoreviewprotected', 'sysop' ], // T275076
 	'huwiki' => [ '', 'autoconfirmed', 'edittrustedprotected', 'templateeditor', 'sysop' ], // T74055, T194568
 	'jawiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T249820
 	'kowiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T184675
@@ -9685,8 +9686,11 @@ function wmfGetVariantSettings() {
 		],
 		'autopatrolled' => [ 'autopatrol' => true ], // T29918
 	],
-	'+hewikisource' => [
-		'reviewer' => [ 'rollback' => true, ], // T274796
+	'+hewikisource' => [ // T275076
+		'autoreview' => [ 'editautoreviewprotected' => true ],
+		'reviewer' => [ 'rollback' => true, 'editautoreviewprotected' => true ], // T274796
+		'editor' => [ 'editautoreviewprotected' => true ],
+		'sysop' => [ 'editautoreviewprotected' => true ],
 	],
 	'+hewikiquote' => [
 		'autopatrolled' => [ 'autopatrol' => true ],
