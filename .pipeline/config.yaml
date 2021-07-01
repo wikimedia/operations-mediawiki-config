@@ -68,12 +68,12 @@ pipelines:
                 command: [.pipeline/wmf-publish/build, prepare-mw-versions]
 
       - name: apply-security-patches
-        notify:
-          email:
-            to:
-              - security-admin-feed@lists.wikimedia.org
-              - releng@lists.wikimedia.org
-            subject: Security patch application failed
+        # notify:
+        #   email:
+        #     to:
+        #       - security-admin-feed@lists.wikimedia.org
+        #       - releng@lists.wikimedia.org
+        #     subject: Security patch application failed
         build:
           variant: patched
           excludes:
