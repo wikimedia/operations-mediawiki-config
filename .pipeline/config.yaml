@@ -12,15 +12,18 @@ pipelines:
           variants:
             list-wikiversions:
               base: docker-registry.wikimedia.org/php7.2-cli
+              apt:
+                packages: [curl, wmf-certificates, jq]
               builder:
-                requirements: [wikiversions.json, multiversion/]
-                command: [bash, -c, 'multiversion/bin/list-versions.php | cut -f 2 > versions']
+                requirements: [wikiversions.json, .pipeline/wmf-publish/build, multiversion/]
+                command: [bash, -c, 'env https_proxy=${setup.httpProxy} .pipeline/wmf-publish/build images-and-tags > versions']
               entrypoint: [cat, versions]
             rsync:
               base: docker-registry.wikimedia.org/wikimedia-buster
               apt:
                 packages: [rsync]
               entrypoint: [rsync]
+
       - name: fetch-private
         build: rsync
         run:
@@ -57,10 +60,10 @@ pipelines:
               builder:
                 requirements:
                   $merge:
-                    $each: version
+                    $each: [ version, tag ]
                     $in: "${wikiversions.output}"
                     $yield:
-                      from: "docker-registry.wikimedia.org/wikimedia/mediawiki:wmf-${.version}"
+                      from: "docker-registry.wikimedia.org/wikimedia/mediawiki:${.tag}"
                       source: /srv/mediawiki
                       destination: "/srv/mediawiki/php-${.version}"
                   $with:

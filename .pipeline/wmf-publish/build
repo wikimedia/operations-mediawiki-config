@@ -97,7 +97,34 @@ function setup_l10n {
                  --skip-message-purge
     done
 }
+
+function version_to_tag {
+    local version="$1"
+    local train_versions_file="$2"
+
+    jq -r .\"${version}\" $train_versions_file
+}
+
+function images_and_tags {
+    local train_versions_file=$(mktemp -t train-versions.XXXXXX.json)
+
+    # Get latest mapping of train version to image tag.
+    curl -sf 'https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/tools/release/+/refs/heads/master/state/train-versions.json?format=TEXT' | base64 -d > $train_versions_file
+
+    multiversion/bin/list-versions.php | while read wikidb version; do
+        local tag=$(version_to_tag "$version" "$train_versions_file")
+
+        if [ -z "$tag" ] || [ "$tag" == "null" ]; then
+            echo "Could not determine the container image tag for $version"
+            exit 1
+        fi
         
+        echo "$version" "$tag"
+    done
+
+    rm "$train_versions_file"
+}
+
 case "$1" in
     prepare-mw-versions)
         prepare_mw_versions
@@ -107,6 +134,9 @@ case "$1" in
         ;;
     setup-l10n)
         setup_l10n
+        ;;
+    images-and-tags)
+        images_and_tags
         ;;
     *)
         echo $0: Unknown command $1
