@@ -1221,6 +1221,12 @@ function wmfGetLabsOverrideSettings() {
 		'wgPropertySuggesterDeprecatedIds' => [
 			'wikidatawiki' => [ 107 ],
 		],
+		'wgPropertySuggesterSchemaTreeUrl' => [
+			'wikidatawiki' => 'https://recommender.wmcloud.org/recommender',
+		],
+		'wgPropertySuggesterABTestingState' => [
+			'wikidatawiki' => true,
+		],
 		'wmgWikibaseRepoBadgeItems' => [
 			'wikidatawiki' => [
 				'Q49444' => 'wb-badge-goodarticle',
