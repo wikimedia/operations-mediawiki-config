@@ -18420,7 +18420,7 @@ function wmfGetVariantSettings() {
 	'jawikisource' => 'User %code%',
 	'jawikiversity' => 'User %code%',
 	'jbowiki' => 'pilno %code%',
-	'jvwiki' => 'Panganggo %code%',
+	'jvwiki' => 'Naraguna %code%',
 	'kabwiki' => 'User %code%',
 	'kawiki' => 'მომხმარებელი %code%',
 	'kawikibooks' => 'მომხმარებელი %code%',
