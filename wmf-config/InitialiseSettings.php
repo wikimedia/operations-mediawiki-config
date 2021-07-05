@@ -27028,6 +27028,12 @@ function wmfGetVariantSettings() {
 	'arwiki' => 'linkrecommendation',
 	'bnwiki' => 'linkrecommendation',
 	'cswiki' => 'linkrecommendation',
+	'fawiki' => 'linkrecommendation',
+	'frwiki' => 'linkrecommendation',
+	'huwiki' => 'linkrecommendation',
+	'plwiki' => 'linkrecommendation',
+	'rowiki' => 'linkrecommendation',
+	'ruwiki' => 'linkrecommendation',
 	'viwiki' => 'linkrecommendation',
 ],
 
@@ -27045,6 +27051,30 @@ function wmfGetVariantSettings() {
 		'linkrecommendation' => 50,
 	],
 	'cswiki' => [
+		'control' => 50,
+		'linkrecommendation' => 50,
+	],
+	'fawiki' => [
+		'control' => 50,
+		'linkrecommendation' => 50,
+	],
+	'frwiki' => [
+		'control' => 50,
+		'linkrecommendation' => 50,
+	],
+	'huwiki' => [
+		'control' => 50,
+		'linkrecommendation' => 50,
+	],
+	'plwiki' => [
+		'control' => 50,
+		'linkrecommendation' => 50,
+	],
+	'rowiki' => [
+		'control' => 50,
+		'linkrecommendation' => 50,
+	],
+	'ruwiki' => [
 		'control' => 50,
 		'linkrecommendation' => 50,
 	],
