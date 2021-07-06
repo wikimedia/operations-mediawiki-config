@@ -25785,6 +25785,10 @@ function wmfGetVariantSettings() {
 'wgMultiContentRevisionSchemaMigrationStage' => [
 	'default' => SCHEMA_COMPAT_NEW,
 ],
+'wgIncludejQueryMigrate' => [
+	'default' => true,
+	'group0' => false,
+],
 'wgXmlDumpSchemaVersion' => [
 	'default' => XML_DUMP_SCHEMA_VERSION_10,
 ],
