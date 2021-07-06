@@ -5160,6 +5160,7 @@ function wmfGetVariantSettings() {
 	'testwiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T61084
 	'viwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T215493
 	'zhwiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T260012
+	'zhwiktionary' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T286101
 ],
 # @} end of wgRestrictionLevels
 
@@ -11199,6 +11200,8 @@ function wmfGetVariantSettings() {
 		'bot' => [ 'patrol' => true ],
 		'flood' => [ 'bot' => true ], // T187018
 		'autoconfirmed' => [ 'suppressredirect' => true ], // T187018
+		'templateeditor' => [ 'templateeditor' => true, ], // T286101
+		'sysop' => [ 'templateeditor' => true ], // T286101
 	],
 	'+zh_yuewiki' => [
 		'autoconfirmed' => [ 'patrol' => true ],
@@ -12183,7 +12186,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'autopatrolled', 'confirmed', 'patroller', 'transwiki' ], // T62085, T62328
 	],
 	'+zhwiktionary' => [
-		'sysop' => [ 'flood', ], // T187018
+		'sysop' => [ 'flood', 'templateeditor', ], // T187018, T286101
 	],
 	'+zh_yuewiki' => [
 		'sysop' => [ 'abusefilter', 'rollbacker', 'autoreviewer', 'confirmed' ],
@@ -13050,7 +13053,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'autopatrolled', 'confirmed', 'patroller', 'transwiki' ], // T62085, T62328
 	],
 	'+zhwiktionary' => [
-		'sysop' => [ 'flood', ], // T187018
+		'sysop' => [ 'flood', 'templateeditor', ], // T187018, T286101
 	],
 	'+zh_yuewiki' => [
 		'sysop' => [ 'abusefilter', 'rollbacker', 'autoreviewer', 'confirmed' ],
