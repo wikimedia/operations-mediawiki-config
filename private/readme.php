@@ -185,3 +185,8 @@ $wgMediaModerationRecipientList = [];
  * @see mediawiki/extensions/WikimediaEvents
  */
 $wgWMEVectorPrefDiffSalt = null;
+
+/**
+ * Shellbox secret key, also set in private puppet
+ */
+$wgShellboxSecretKey = null;
