@@ -13976,6 +13976,10 @@ function wmfGetVariantSettings() {
 	'lockeddown' => false,
 ],
 
+'wmgUseScoreShellbox' => [
+	'default' => false,
+],
+
 'wgScoreFileBackend' => [
 	'default' => 'global-multiwrite'
 ],

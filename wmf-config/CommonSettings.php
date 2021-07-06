@@ -1418,10 +1418,17 @@ if ( $wmgUseScore ) {
 	wfLoadExtension( 'Score' );
 	$wgScoreSafeMode = false;
 
-	# T257062 --krinkle
-	$wgScoreLilyPond = '/dev/null';
-	$wgScoreDisableExec = true;
-	$wgScoreLilyPondFakeVersion = '2.18.2';
+	if ( $wmgUseScoreShellbox && $wmfLocalServices['shellbox'] ) {
+		$wgShellboxUrls['default'] = $wmfLocalServices['shellbox'];
+		// $wgShellboxSecretKey set in PrivateSettings.php
+		$wgScoreImageMagickConvert = '/usr/bin/convert';
+	} else {
+		# T257062 --krinkle
+		$wgScoreLilyPond = '/dev/null';
+		$wgScoreDisableExec = true;
+		$wgScoreLilyPondFakeVersion = '2.18.2';
+	}
+
 }
 
 $wgHiddenPrefs[] = 'realname';
