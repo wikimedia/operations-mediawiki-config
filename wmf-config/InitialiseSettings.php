@@ -7109,6 +7109,8 @@ function wmfGetVariantSettings() {
 		103 => 'Transwiki_talk',
 		106 => 'Rhymes', // T241023
 		107 => 'Rhymes_talk', // T241023
+		118 => 'Reconstruction', // T286101
+		119 => 'Reconstruction_talk', // T286101
 		828 => 'Module', // T165593
 		829 => 'Module_talk', // T165593
 	],
