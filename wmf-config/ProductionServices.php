@@ -115,6 +115,14 @@ $services = [
 			'10.64.32.236', # poolcounter1005.eqiad.wmnet
 		],
 
+		'parsercache-dbs' => [
+			'pc1' => '10.64.0.180',  # pc1007.eqiad.wmnet, A6 4.4TB 256GB # pc1
+			'pc2' => '10.64.16.20',  # pc1008.eqiad.wmnet, B8 4.4TB 256GB # pc2
+			'pc3' => '10.64.32.29',  # pc1009.eqiad.wmnet, C3 4.4TB 256GB # pc3
+			# spare: '10.64.48.174', # pc1010.eqiad.wmnet, D3 4.4TB 256GB
+			# Use spare to replace any of the above if needed
+		],
+
 		// LockManager Redis
 		'redis_lock' => [
 			'rdb1' => '10.64.32.211', # mc1031 C4
@@ -158,6 +166,14 @@ $services = [
 		'poolcounter' => [
 			'10.192.0.132', # poolcounter2003.codfw.wmnet
 			'10.192.16.129', # poolcounter2004.codfw.wmnet
+		],
+
+		'parsercache-dbs' => [
+			'pc1' => '10.192.0.104',  # pc2007.codfw.wmnet, A1 4.4TB 256GB # pc1
+			'pc2' => '10.192.16.35',  # pc2008.codfw.wmnet, B3 4.4TB 256GB # pc2
+			'pc3' => '10.192.32.10',  # pc2009.codfw.wmnet, C1 4.4TB 256GB # pc3
+			# spare: '10.192.48.14',  # pc2010.codfw.wmnet, D3 4.4TB 256GB
+			# Use spare to replace any of the above if needed
 		],
 
 		'redis_lock' => [

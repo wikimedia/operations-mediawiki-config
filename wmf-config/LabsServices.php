@@ -35,6 +35,8 @@ return [
 		'cloudelastic-chi' => null,
 		'cloudelastic-psi' => null,
 		'cloudelastic-omega' => null,
+		// No parser cache DBs in beta yet
+		'parsercache-dbs' => [],
 		'urldownloader' => 'http://deployment-urldownloader03.deployment-prep.eqiad1.wikimedia.cloud:8080',
 		'parsoid' => 'http://deployment-parsoid12.deployment-prep.eqiad1.wikimedia.cloud/w/rest.php',
 		'mathoid' => 'http://deployment-docker-mathoid01.eqiad.wmflabs:10044',
