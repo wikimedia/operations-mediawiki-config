@@ -24117,6 +24117,22 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
+'wmgTemplateSearchImprovements' => [
+	'default' => false,
+	'group0' => true, // T284553
+	'dewiki' => true, // T284553
+	'elwiki' => true, // T284553
+	'enwikivoyage' => true, // T284553
+	'fiwiki' => true, // T284553
+	'frwiki' => true, // T284553
+	'hewiki' => true, // T284553
+	'huwiki' => true, // T284553
+	'mswiki' => true, // T284553
+	'nawiktionary' => true, // T284553
+	'trwiki' => true, // T284553
+	'twwiki' => true, // T284553
+],
+
 'wmgUseCharInsert' => [
 	'default' => true,
 	'loginwiki' => false, // T61702
