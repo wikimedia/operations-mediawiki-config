@@ -2713,6 +2713,11 @@ if ( $wmgUseTemplateData ) { // T61702 - 2015-07-20
 	}
 }
 
+if ( $wmgTemplateSearchImprovements ) {
+	$wgVisualEditorTemplateSearchImprovements = true;
+	$wgTemplateWizardTemplateSearchImprovements = true;
+}
+
 if ( $wmgUseGoogleNewsSitemap ) {
 	wfLoadExtension( 'GoogleNewsSitemap' );
 	$wgGNSMfallbackCategory = $wmgGNSMfallbackCategory;
