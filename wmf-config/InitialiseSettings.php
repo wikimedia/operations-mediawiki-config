@@ -5823,8 +5823,7 @@ function wmfGetVariantSettings() {
 		101 => 'Portal_talk',
 		# 106 => 'Table',
 		# 107 => 'Table_talk',
-		108 => 'Book',
-		109 => 'Book_talk',
+		// 108, 109 were used for Book namespace, deleted as part of T285766
 		118 => 'Draft', // T59569
 		119 => 'Draft_talk',
 	],
