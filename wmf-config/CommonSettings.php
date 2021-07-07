@@ -513,16 +513,16 @@ $wgTmpDirectory = '/tmp';
 
 $wgSessionName = $wgDBname . 'Session';
 
-$pcTemplate = [ 'type' => 'mysql',
-	'dbname' => 'parsercache',
-	'user' => $wgDBuser,
-	'password' => $wgDBpassword,
-	'flags' => 0,
-];
-
 $pcServers = [];
-foreach ( $wmgParserCacheDBs as $tag => $host ) {
-	$pcServers[$tag] = [ 'host' => $host ] + $pcTemplate;
+foreach ( $wmfLocalServices['parsercache-dbs'] as $tag => $host ) {
+	$pcServers[$tag] = [
+		'type' => 'mysql',
+		'host' => $host,
+		'dbname' => 'parsercache',
+		'user' => $wgDBuser,
+		'password' => $wgDBpassword,
+		'flags' => 0,
+	];
 }
 
 $wgObjectCaches['mysql-multiwrite'] = [
