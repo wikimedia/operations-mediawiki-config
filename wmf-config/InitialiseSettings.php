@@ -13979,6 +13979,7 @@ function wmfGetVariantSettings() {
 
 'wmgUseScoreShellbox' => [
 	'default' => false,
+	'testwiki' => true,
 ],
 
 'wgScoreFileBackend' => [
