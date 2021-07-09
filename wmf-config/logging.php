@@ -112,8 +112,11 @@ $wmgMonologProcessors = [
 				$record['extra']['phpversion'] = phpversion();
 
 				// T255627: add label for the server group the current server belongs to.
-				// This is exposed by Apache configuration. Its value is that of the Hiera
-				// 'cluster' key in Puppet (e.g. "appserver", "parsoid", etc).
+				// This is exposed by Apache configuration defined in Puppet profile::mediawiki::httpd.
+				// Its value is that of the Hiera 'cluster' key in Puppet (e.g. "appserver", "parsoid", etc).
+				// For pods running on Kubernetes, the servergroup is determined by the value of
+				// the php.servergroup Helm setting and will be prefixed by "kube-" (e.g.
+				// operations/deployment-charts:helmfile.d/services/mwdebug/values.yaml).
 				//
 				// This is not set on CLI (e.g. deploy, maint, snapshot).
 				//
