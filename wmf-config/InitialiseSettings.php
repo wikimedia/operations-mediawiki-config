@@ -13536,6 +13536,10 @@ function wmfGetVariantSettings() {
 ],
 
 'wgNamespaceRobotPolicies' => [
+	'bnwiki' => [
+		NS_USER => 'noindex,follow', // T286152
+		NS_USER_TALK => 'noindex,follow',
+	],
 	'ckbwiki' => [
 		NS_TALK => 'noindex,follow',
 		NS_USER => 'noindex,follow',
