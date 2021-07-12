@@ -4139,6 +4139,9 @@ function wmfGetVariantSettings() {
 		'WL' => NS_PROJECT,
 	],
 	'+srwiki' => [
+		'WP' => NS_PROJECT, // T286396
+		'VP' => NS_PROJECT, // T286396
+		'ВП' => NS_PROJECT, // T286396
 		'Vikipedija' => NS_PROJECT,
 		'Draft' => 118, // T223472
 		'Draft_talk' => 119, // T223472
