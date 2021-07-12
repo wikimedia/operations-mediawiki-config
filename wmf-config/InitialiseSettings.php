@@ -13997,12 +13997,16 @@ function wmfGetVariantSettings() {
 'wmgUseScore' => [
 	'default' => true,
 	'wikitech' => false,
+	'private' => false,
 	'lockeddown' => false,
 ],
 
 'wmgUseScoreShellbox' => [
 	'default' => false,
 	'testwiki' => true,
+	# Do not enable on higher-security wikis
+	'private' => false,
+	'lockeddown' => false,
 ],
 
 'wgScoreFileBackend' => [
