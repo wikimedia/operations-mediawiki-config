@@ -253,7 +253,7 @@ $wgLocalFileRepo = [
 
 // T275268
 // It will be migrated to production soon.
-if ( $wmfRealm === 'labs' ) {
+if ( $wmfRealm === 'labs' || $wgDBname === 'testcommonswiki' ) {
 	$wgLocalFileRepo['useJsonMetadata'] = true;
 	$wgLocalFileRepo['useSplitMetadata'] = true;
 }
