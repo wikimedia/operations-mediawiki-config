@@ -239,6 +239,8 @@ $wgLocalFileRepo = [
 	'hashLevels'        => 2,
 	'thumbScriptUrl'    => $wgThumbnailScriptPath,
 	'transformVia404'   => true,
+	'useJsonMetadata'   => true,
+	'useSplitMetadata'  => true,
 	'initialCapital'    => $wgCapitalLinks,
 	'deletedHashLevels' => 3,
 	'abbrvThreshold'    => 160,
@@ -250,13 +252,6 @@ $wgLocalFileRepo = [
 			'thumb' => [ 'url' => "$wgScriptPath/thumb_handler.php" ] ]
 		: [],
 ];
-
-// T275268
-// It will be migrated to production soon.
-if ( $wmfRealm === 'labs' || $wgDBname === 'testcommonswiki' ) {
-	$wgLocalFileRepo['useJsonMetadata'] = true;
-	$wgLocalFileRepo['useSplitMetadata'] = true;
-}
 
 // test2wiki uses testwiki as foreign file repo (e.g. local => testwiki => commons)
 // Does not exist in labs.
