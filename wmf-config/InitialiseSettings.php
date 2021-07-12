@@ -9699,6 +9699,7 @@ function wmfGetVariantSettings() {
 	],
 	'+hewikisource' => [ // T275076
 		'autoreview' => [ 'editautoreviewprotected' => true ],
+		'bot' => [ 'editautoreviewprotected' => true ],
 		'reviewer' => [ 'rollback' => true, 'editautoreviewprotected' => true ], // T274796
 		'editor' => [ 'editautoreviewprotected' => true ],
 		'sysop' => [ 'editautoreviewprotected' => true ],
