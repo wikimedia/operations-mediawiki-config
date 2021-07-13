@@ -975,6 +975,11 @@ function wmfGetVariantSettings() {
 	],
 
 	// Wikiquote
+	'trwikiquote' => [ // T286133
+		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-tr.svg',
+		'width' => 119,
+		'height' => 45,
+	],
 
 	// Wikibooks
 
