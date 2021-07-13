@@ -1415,7 +1415,7 @@ if ( $wmgUseSecureLinkFixer ) {
 
 if ( $wmgUseScore ) {
 	wfLoadExtension( 'Score' );
-	$wgScoreSafeMode = false;
+	$wgScoreSafeMode = true;
 
 	if ( $wmgUseScoreShellbox && $wmfLocalServices['shellbox'] ) {
 		$wgShellboxUrls['default'] = $wmfLocalServices['shellbox'];
