@@ -23595,9 +23595,9 @@ function wmfGetVariantSettings() {
 ],
 
 'wgCirrusSearchClusterOverrides' => [
-	# Split more_like between eqiad and codfw to warmup cirrus cache for enwiki
-	'default' => [ 'more_like' => 'eqiad' ],
-	'enwiki' => [ 'more_like' => 'codfw' ],
+	# serve more_like explicitely from codfw in preparation of the switch back to eqiad
+	# so that the traffic is split by type between the two DCs
+	'default' => [ 'more_like' => 'codfw' ],
 ],
 
 'wgCirrusSearchWriteClusters' => [
