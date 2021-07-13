@@ -691,6 +691,11 @@ function wmfGetVariantSettings() {
 		'width' => 79,
 		'height' => 22,
 	],
+	'azwiki' => [ // T284877
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-az.svg',
+		'width' => 119,
+		'height' => 18,
+	],
 	'atjwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-atj.svg',
 		'width' => 129,
