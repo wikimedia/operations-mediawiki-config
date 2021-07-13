@@ -23595,9 +23595,9 @@ function wmfGetVariantSettings() {
 ],
 
 'wgCirrusSearchClusterOverrides' => [
-	# Force more_like to stay in eqiad when general traffic switches
-	# to codfw to handle the ~900 qps expected on an empty cache.
+	# Split more_like between eqiad and codfw to warmup cirrus cache for enwiki
 	'default' => [ 'more_like' => 'eqiad' ],
+	'enwiki' => [ 'more_like' => 'codfw' ],
 ],
 
 'wgCirrusSearchWriteClusters' => [
