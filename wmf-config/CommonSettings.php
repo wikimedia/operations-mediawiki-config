@@ -296,7 +296,6 @@ if ( $wmfRealm === 'labs' ) {
 # This must be after InitialiseSettings.php is processed (T197475)
 if ( PHP_SAPI === 'cli' ) {
 	$wgShowExceptionDetails = true;
-	$wgShowDBErrorBacktrace = true;
 
 	# APC not available in CLI mode
 	$wgLanguageConverterCacheType = CACHE_NONE;
