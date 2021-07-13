@@ -968,6 +968,11 @@ function wmfGetVariantSettings() {
 	// Wikibooks
 
 	// Wikinews
+	'ptwikinews' => [ // T281591
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-pt.svg',
+		'width' => 121,
+		'height' => 25,
+	],
 
 	// Wikisource
 	'trwikisource' => [ // T260658
