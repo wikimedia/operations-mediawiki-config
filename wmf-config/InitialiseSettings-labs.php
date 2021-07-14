@@ -1689,6 +1689,9 @@ function wmfGetLabsOverrideSettings() {
 		'wgWikisourceOcrUrl' => [
 			'wikisource' => 'https://ocr-test.wmcloud.org',
 		],
+		'wgProofreadPageUseStatusChangeTags' => [
+			'wikisource' => true,
+		],
 		'wmgUseWikimediaEditorTasks' => [
 			'default' => false,
 			'wikidatawiki' => true,
