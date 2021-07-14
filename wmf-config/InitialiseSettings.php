@@ -14975,6 +14975,7 @@ function wmfGetVariantSettings() {
 	'fawiki' => true,
 	'hiwiki' => true,
 	'ptwiki' => true,
+	'idwiki' => true,
 ],
 
 'wgSimpleFlaggedRevsUI' => [
