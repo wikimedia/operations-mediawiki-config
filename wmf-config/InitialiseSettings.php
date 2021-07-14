@@ -20810,7 +20810,12 @@ function wmfGetVariantSettings() {
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-
+		[
+			'stream' => 'mediawiki.content_translation_event',
+			'schema_title' => 'analytics/mediawiki/content_translation_event',
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		/*
 		 * == eventgate-logging-external streams ==
 		 * These are produced to the Kafka logging clusters for ingestion into logstash.
@@ -21143,6 +21148,7 @@ function wmfGetVariantSettings() {
 		'eventlogging_WMDEBannerInteractions',
 		'eventlogging_WMDEBannerSizeIssue',
 		'mediawiki.client.session_tick',
+		'mediawiki.content_translation_event',
 		'mediawiki.mediasearch_interaction',
 		'mediawiki.structured_task.article.link_suggestion_interaction',
 		'mediawiki.pref_diff',
