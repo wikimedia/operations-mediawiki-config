@@ -590,6 +590,8 @@ $wgHooks['MediaWikiServices'][] = function () {
 
 		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 		$wgGroupPermissions['sysop']['review'] = false; // T275811
+		# Remove reviewer group
+		unset( $wgGroupPermissions['reviewer'] );
 	} elseif ( $wgDBname == 'ruwikinews' ) {
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_CATEGORY, NS_TEMPLATE ];
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
