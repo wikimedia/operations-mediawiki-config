@@ -525,7 +525,8 @@ $wgHooks['MediaWikiServices'][] = function () {
 		unset( $wgGroupPermissions['autoreview'] );
 	} elseif ( $wgDBname == 'iawiki' ) {
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
-	} elseif ( $wgDBname == 'iswiktionary' ) {
+	} elseif ( $wgDBname == 'idwiki' ) {
+		$wgGroupPermissions['sysop']['stablesettings'] = true;
 	} elseif ( $wgDBname == 'kawiki' ) {
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
