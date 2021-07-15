@@ -7785,7 +7785,7 @@ function wmfGetVariantSettings() {
 		'logged_out' => false,
 	],
 	'desktop-improvements' => [
-		'logged_in' => false,
+		'logged_in' => true,
 		'logged_out' => true,
 	],
 	// Some of the following wikis are part of the `desktop-improvements` group,
@@ -7814,10 +7814,6 @@ function wmfGetVariantSettings() {
 		'logged_in' => false,
 		'logged_out' => false
 	],
-],
-'wgVectorLanguageInHeaderTreatmentABTest' => [
-	'default' => false,
-	'desktop-improvements' => true,
 ],
 'wgVectorUseWvuiSearch' => [
 	'default' => true,
