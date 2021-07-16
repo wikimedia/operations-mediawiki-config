@@ -84,7 +84,12 @@ def download(commons: str, name: str):
         except subprocess.CalledProcessError:
             raise RuntimeError(f"Error: {dep} not installed")
 
-    req = requests.get(
+    s = requests.Session()
+    s.headers.update({
+        "User-Agent": "logos-manage (https://gerrit.wikimedia.org/g/operations/mediawiki-config/+/HEAD/logos/manage.py)"
+    })
+
+    req = s.get(
         "https://commons.wikimedia.org/w/api.php",
         params={
             "action": "query",
@@ -95,9 +100,6 @@ def download(commons: str, name: str):
             "iiurlwidth": "135",
             "format": "json",
             "formatversion": "2",
-        },
-        headers={
-            "User-Agent": "logos-manage (https://gerrit.wikimedia.org/g/operations/mediawiki-config/+/HEAD/logos/manage.py)"
         }
     )
     req.raise_for_status()
@@ -108,7 +110,7 @@ def download(commons: str, name: str):
         f"{name}-2x.png": info["responsiveUrls"]["2"],
     }
     for filename, url in urls.items():
-        req = requests.get(url)
+        req = s.get(url)
         req.raise_for_status()
         (project_logos / filename).write_bytes(req.content)
         print(f"Saved {filename}")
