@@ -626,7 +626,7 @@ $wgPasswordPolicy['policies']['default']['PasswordNotInCommonList'] = [
 ];
 
 // Enforce password policy when users login on other wikis; also for sensitive global groups
-// FIXME does this just duplicate the the global policy checks down in the main $wmgUseCentralAuth block?
+// FIXME does this just duplicate the global policy checks down in the main $wmgUseCentralAuth block?
 if ( $wmgUseCentralAuth ) {
 	$wgHooks['PasswordPoliciesForUser'][] = function ( User $user, array &$effectivePolicy ) use ( $wmgPrivilegedPolicy ) {
 		$privilegedGroups = wmfGetPrivilegedGroups( $user->getName(), $user );
