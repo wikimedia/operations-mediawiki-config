@@ -119,7 +119,12 @@ pipelines:
                 uid: 33
                 gid: 33
               builder:
-                command: [.pipeline/wmf-publish/build, setup-l10n]
+                command:
+                  - sh
+                  - -c
+                  - >-
+                    .pipeline/wmf-publish/build merge-message-file-list &&
+                    .pipeline/wmf-publish/build rebuild-l10n-cache
 
       - name: publish
         build:

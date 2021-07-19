@@ -83,13 +83,17 @@ function apply_security_patches {
     rm -fr $patches_dir
 }
 
-function setup_l10n {
+function merge_message_file_list {
     multiversion/bin/list-versions.php | while read wikidb version; do
         mwscript mergeMessageFileList.php \
                  --wiki="$wikidb" \
                  --list-file=wmf-config/extension-list \
                  --output=wmf-config/ExtensionMessages-$version.php
-        
+    done
+}
+
+function rebuild_l10n_cache {
+    multiversion/bin/list-versions.php | while read wikidb version; do
         mwscript rebuildLocalisationCache.php \
                  --wiki="$wikidb" \
                  --store-class=LCStoreCDB \
@@ -132,8 +136,11 @@ case "$1" in
     apply-security-patches)
         apply_security_patches
         ;;
-    setup-l10n)
-        setup_l10n
+    rebuild-l10n-cache)
+        rebuild_l10n_cache
+        ;;
+    merge-message-file-list)
+        merge_message_file_list
         ;;
     images-and-tags)
         images_and_tags
