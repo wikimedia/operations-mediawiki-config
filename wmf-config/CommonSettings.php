@@ -629,7 +629,7 @@ $wgPasswordPolicy['policies']['default']['PasswordNotInCommonList'] = [
 // FIXME does this just duplicate the global policy checks down in the main $wmgUseCentralAuth block?
 if ( $wmgUseCentralAuth ) {
 	$wgHooks['PasswordPoliciesForUser'][] = function ( User $user, array &$effectivePolicy ) use ( $wmgPrivilegedPolicy ) {
-		$privilegedGroups = wmfGetPrivilegedGroups( $user->getName(), $user );
+		$privilegedGroups = wmfGetPrivilegedGroups( $user );
 		if ( $privilegedGroups ) {
 			$effectivePolicy = UserPasswordPolicy::maxOfPolicies( $effectivePolicy, $wmgPrivilegedPolicy );
 
@@ -1906,15 +1906,14 @@ $wgMajorSiteNoticeID = '2';
 /**
  * Get an array of groups (in $wmgPrivilegedGroups) that $username is part of
  *
- * @param string $username
- * @param User $user
+ * @param UserIdentity $user
  * @return array Any elevated/privileged groups the user is a member of
  */
-function wmfGetPrivilegedGroups( $username, $user ) {
+function wmfGetPrivilegedGroups( $user ) {
 	global $wmgUseCentralAuth, $wmgPrivilegedGroups, $wmgPrivilegedGlobalGroups;
 
-	if ( $wmgUseCentralAuth && CentralAuthUser::getInstanceByName( $username )->exists() ) {
-		$centralUser = CentralAuthUser::getInstanceByName( $username );
+	if ( $wmgUseCentralAuth && CentralAuthUser::getInstanceByName( $user->getName() )->exists() ) {
+		$centralUser = CentralAuthUser::getInstanceByName( $user->getName() );
 		try {
 			$groups = array_intersect(
 				array_merge( $wmgPrivilegedGroups, $wmgPrivilegedGlobalGroups ),
@@ -1946,7 +1945,9 @@ function wmfGetPrivilegedGroups( $username, $user ) {
 $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function ( $response, $user, $username ) {
 	$guessed = false;
 	if ( !$user && $username ) {
-		$user = User::newFromName( $username );
+		$user = MediaWikiServices::getInstance()
+			->getUserIdentityLookup()
+			->getUserIdentityByName( $username );
 		$guessed = true;
 	}
 	if ( !$user || !in_array( $response->status,
@@ -1958,7 +1959,7 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function ( $response, $user, $
 	global $wgRequest;
 	$headers = function_exists( 'apache_request_headers' ) ? apache_request_headers() : [];
 	$successful = $response->status === AuthenticationResponse::PASS;
-	$privGroups = wmfGetPrivilegedGroups( $username, $user );
+	$privGroups = wmfGetPrivilegedGroups( $user );
 
 	$channel = $successful ? 'goodpass' : 'badpass';
 	if ( $privGroups ) {
@@ -1985,10 +1986,12 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function ( $response, $user, $
 // log sysop password changes
 $wgHooks['ChangeAuthenticationDataAudit'][] = function ( $req, $status ) {
 	global $wgRequest;
-	$user = User::newFromName( $req->username );
+	$user = MediaWikiServices::getInstance()
+		->getUserIdentityLookup()
+		->getUserIdentityByName( $req->username );
 	$status = Status::wrap( $status );
 	if ( $req instanceof \MediaWiki\Auth\PasswordAuthenticationRequest ) {
-		$privGroups = wmfGetPrivilegedGroups( $req->username, $user );
+		$privGroups = wmfGetPrivilegedGroups( $user );
 		$priv = ( $privGroups ? 'elevated' : 'normal' );
 		if ( $priv === 'elevated' ) {
 			$headers = function_exists( 'apache_request_headers' ) ? apache_request_headers() : [];

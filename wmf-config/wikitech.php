@@ -4,6 +4,7 @@
 // phpcs:disable MediaWiki.Classes.UnsortedUseStatements.UnsortedUse
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Session\SessionManager;
 
 wfLoadExtension( 'LdapAuthentication' );
 $wgAuthManagerAutoConfig['primaryauth'] += [
@@ -221,6 +222,8 @@ $wgHooks['BlockIpComplete'][] = function ( $block, $user, $prior ) {
 	if ( !$block->getTargetUserIdentity() ) {
 		return;
 	}
-	MediaWiki\Session\SessionManager::singleton()
-		->invalidateSessionsForUser( User::newFromIdentity( $block->getTargetUserIdentity() ) );
+	$userObj = MediaWikiServices::getInstance()
+		->getUserFactory()
+		->newFromUserIdentity( $block->getTargetUserIdentity() );
+	SessionManager::singleton()->invalidateSessionsForUser( $userObj );
 };

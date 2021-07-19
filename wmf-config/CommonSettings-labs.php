@@ -54,7 +54,7 @@ $wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = [
 // FIXME does this just duplicate the global policy checks down in the main $wmgUseCentralAuth block?
 if ( $wmgUseCentralAuth ) {
 	$wgHooks['PasswordPoliciesForUser'][] = function ( User $user, array &$effectivePolicy ) use ( $wmgPrivilegedPolicy ) {
-		$privilegedGroups = wmfGetPrivilegedGroups( $user->getName(), $user );
+		$privilegedGroups = wmfGetPrivilegedGroups( $user );
 		if ( $privilegedGroups ) {
 			$effectivePolicy = UserPasswordPolicy::maxOfPolicies( $effectivePolicy, $wmgPrivilegedPolicy );
 			if ( in_array( 'staff', $privilegedGroups, true ) ) {
