@@ -9010,6 +9010,7 @@ function wmfGetVariantSettings() {
 			'rollback' => true, // T67348
 		], // T54578
 		'suppressredirect' => [ 'suppressredirect' => true ], // T69278
+		'patroller' => [ 'patrol' => true ], // T285221
 	],
 	'+cswiki' => [
 		'accountcreator' => [ // T254927
@@ -11492,6 +11493,7 @@ function wmfGetVariantSettings() {
 			'confirmed', // T53715
 			'flood', // T53803
 			'suppressredirect', // T69278
+			'patroller', // T285221
 		],
 		'bureaucrat' => [
 			'botadmin', // T54578
@@ -12331,6 +12333,7 @@ function wmfGetVariantSettings() {
 			'confirmed', // T53715
 			'flood', // T53803
 			'suppressredirect', // T69278
+			'patroller', // T285221
 		],
 		'bureaucrat' => [
 			'botadmin', // T54578
