@@ -3,7 +3,11 @@ define( 'MW_NO_SESSION', 1 );
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 require MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
 
-$page = WikiPage::factory( Title::newFromText( 'Mediawiki:robots.txt' ) );
+use MediaWiki\MediaWikiServices;
+
+$page = MediaWikiServices::getInstance()
+	->getWikiPageFactory()
+	->newFromTitle( Title::newFromText( 'Mediawiki:robots.txt' ) );
 
 header( 'Content-Type: text/plain; charset=utf-8' );
 header( 'X-Article-ID: ' . $page->getId() );
