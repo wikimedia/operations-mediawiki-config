@@ -3,6 +3,8 @@ define( 'MW_NO_SESSION', 1 );
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 require MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
 
+use MediaWiki\MediaWikiServices;
+
 /**
  * @param string $text
  */
@@ -33,7 +35,9 @@ function streamFavicon() {
 	}
 
 	$url = wfExpandUrl( $wgFavicon, PROTO_CANONICAL );
-	$client = MWHttpRequest::factory( $url );
+	$client = MediaWikiServices::getInstance()
+		->getHttpRequestFactory()
+		->create( $url );
 	$client->setHeader( 'X-Favicon-Loop', '1' );
 
 	$status = $client->execute();
