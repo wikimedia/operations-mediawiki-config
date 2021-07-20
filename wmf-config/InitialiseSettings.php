@@ -27118,6 +27118,22 @@ function wmfGetVariantSettings() {
 	'cswiki' => 'Wikipedie:Potřebuji pomoc/Mentoři/Manuální',
 ],
 
+'wgGEMentorDashboardBackendEnabled' => [
+	// check extensions/GrowthExperiments/updateMenteeData.php finishes
+	// reasonably quickly before enabling (especially on wikis with many newcomers,
+	// like enwiki).
+	'default' => false,
+
+	// Growth's pilot wikis
+	'arwiki' => true,
+	'bnwiki' => true,
+	'cswiki' => true,
+	'viwiki' => true,
+
+	// test wikis
+	'testwiki' => true,
+],
+
 'wgGECampaignPattern' => [
 	'default' => null,
 	'testwiki' => '/^growth-advancement-test-2021$/',
