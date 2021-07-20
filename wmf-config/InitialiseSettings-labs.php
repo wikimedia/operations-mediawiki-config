@@ -1189,6 +1189,9 @@ function wmfGetLabsOverrideSettings() {
 			'arwiki' => 'Wikipedia:Mentors',
 			'enwiki' => 'Wikipedia:Mentors',
 		],
+		'wgGEMentorDashboardBackendEnabled' => [
+			'default' => true,
+		],
 		'wgGEHomepageTutorialTitle' => [
 			'default' => '',
 			'arwiki' => 'Help:Tutorial',
