@@ -14003,6 +14003,8 @@ function wmfGetVariantSettings() {
 
 'wmgUseScoreShellbox' => [
 	'default' => false,
+	'enwikisource' => true,
+	'plwikisource' => true,
 	'testwiki' => true,
 	# Do not enable on higher-security wikis
 	'private' => false,
