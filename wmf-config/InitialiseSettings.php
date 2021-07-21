@@ -21952,20 +21952,6 @@ function wmfGetVariantSettings() {
 	],
 ],
 
-'wmgWikibaseClientRepoNamespaces' => [
-	'default' => [],
-	'wikidataclient' => [
-		'item' => '',
-		'property' => 'Property',
-		// TODO Lexeme should be here once removed from wmgWikibaseDisabledAccessEntityTypes
-	],
-	'wikidataclient-test' => [
-		'item' => '',
-		'property' => 'Property',
-		// TODO Lexeme should be here once removed from wmgWikibaseDisabledAccessEntityTypes
-	],
-],
-
 'wmgWikibaseClientNamespacesWithRepoAccess' => [
 	'default' => [], // default [] includes all namespaces
 	'wikidatawiki' => [
@@ -22960,7 +22946,6 @@ function wmfGetVariantSettings() {
 ],
 
 'wmgWikibaseDisabledAccessEntityTypes' => [
-	// Note: When lexeme is removed from here it needs to be added to wmgWikibaseClientRepoNamespaces
 	'default' => [ 'lexeme', 'form', 'sense' ],
 ],
 
