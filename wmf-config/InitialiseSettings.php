@@ -12432,7 +12432,7 @@ function wmfGetVariantSettings() {
 	],
 	'+enwikisource' => [
 		'bureaucrat' => [ 'autopatrolled', 'flood' ], // T38863
-		'sysop' => [ 'abusefilter', 'autopatrolled', 'reupload-shared', ],
+		'sysop' => [ 'abusefilter', 'autopatrolled', 'upload-shared', ],
 	],
 	'+eswiki' => [
 		'bureaucrat' => [ 'abusefilter', 'rollbacker' ], // T262174
