@@ -3465,6 +3465,21 @@ function wmfGetVariantSettings() {
 		'Author_talk' => 109,
 		'באור' => 106,
 		'שיחת_באור' => 107,
+
+		// T286500
+		'מי' => NS_SPECIAL,
+		'ש' => NS_TALK,
+		'מש' => NS_USER,
+		'U' => NS_USER,
+		'שמש' => NS_USER_TALK,
+		'קו' => NS_FILE,
+		'שקו' => NS_FILE_TALK,
+		'מו' => NS_MEDIAWIKI,
+		'שמו' => NS_MEDIAWIKI_TALK,
+		'תב' => NS_TEMPLATE,
+		'שתב' => NS_TEMPLATE_TALK,
+		'קט' => NS_CATEGORY,
+		'שקט' => NS_CATEGORY_TALK,
 	],
 	'+hiwiki' => [
 		'वि' => NS_PROJECT,
