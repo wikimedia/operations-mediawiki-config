@@ -27154,6 +27154,11 @@ function wmfGetVariantSettings() {
 	'cswiki' => 'Wikipedie:Potřebuji pomoc/Mentoři/Manuální',
 ],
 
+'wgGEMentorDashboardEnabled' => [
+	// not ready for deployment yet
+	'default' => false,
+],
+
 'wgGEMentorDashboardBackendEnabled' => [
 	// check extensions/GrowthExperiments/updateMenteeData.php finishes
 	// reasonably quickly before enabling (especially on wikis with many newcomers,
