@@ -9300,6 +9300,9 @@ function wmfGetVariantSettings() {
 			'upload' => true,
 			'reupload' => true,
 		],
+		'upload-shared' => [ // T285130
+			'reupload-shared' => true,
+		],
 	],
 	'+enwikinews' => [
 		'flood' => [ 'bot' => true ],
@@ -11611,7 +11614,7 @@ function wmfGetVariantSettings() {
 	],
 	'+enwikisource' => [
 		'bureaucrat' => [ 'autopatrolled', 'flood' ], // T38863
-		'sysop' => [ 'abusefilter', 'autopatrolled' ],
+		'sysop' => [ 'abusefilter', 'autopatrolled', 'upload-shared' ],
 	],
 	'+enwiktionary' => [
 		'sysop' => [ 'autopatrolled', 'flood', 'patroller', 'rollbacker', 'templateeditor', 'extendedmover' ], // T148007, T212662
@@ -12429,7 +12432,7 @@ function wmfGetVariantSettings() {
 	],
 	'+enwikisource' => [
 		'bureaucrat' => [ 'autopatrolled', 'flood' ], // T38863
-		'sysop' => [ 'abusefilter', 'autopatrolled', ],
+		'sysop' => [ 'abusefilter', 'autopatrolled', 'reupload-shared', ],
 	],
 	'+eswiki' => [
 		'bureaucrat' => [ 'abusefilter', 'rollbacker' ], // T262174
