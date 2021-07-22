@@ -15486,6 +15486,7 @@ function wmfGetVariantSettings() {
 		'inaturalist-open-data.s3.amazonaws.com', // iNaturalist - T275318
 		'*.jfklibrary.org', // JFK library - T279506
 		'*.sayahna.org', // Sayahna Foundation - T286163
+		'digital.ub.umu.se', // Umeå University - T287204
 	],
 ],
 
