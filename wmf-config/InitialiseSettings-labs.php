@@ -1336,10 +1336,6 @@ function wmfGetLabsOverrideSettings() {
 		'-wmgWikibaseClientRepoUrl' => [
 			'default' => 'https://wikidata.beta.wmflabs.org',
 		],
-		'-wmgWikibaseClientRepositories' => [
-			'default' => [
-			],
-		],
 
 		'-wmgWikibaseClientRepoDatabase' => [
 			'default' => 'wikidatawiki',

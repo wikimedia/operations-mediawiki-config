@@ -22037,46 +22037,6 @@ function wmfGetVariantSettings() {
 	'wikidataclient-test' => true,
 ],
 
-// Current default setting extracted by running the following in production on enwiki:
-// var_dump($wgWBClientSettings['repositories'](\Wikibase\WikibaseSettings::getClientSettings()));
-// The repoDatabase element was set as it was previously null / false
-'wmgWikibaseClientRepositories' => [
-	'default' => [
-		'' => [
-			'repoDatabase' => 'wikidatawiki',
-			'baseUri' => 'http://www.wikidata.org/entity/',
-			'entityNamespaces' => [
-				'item' => 0,
-				'property' => 120,
-				'lexeme' => 146,
-			],
-			'prefixMapping' => [
-				'' => '',
-			],
-		],
-	],
-	'commonswiki' => [
-		'' => [
-			'repoDatabase' => 'wikidatawiki',
-			'baseUri' => 'http://www.wikidata.org/entity/',
-			'entityNamespaces' => [
-				'item' => 0,
-				'property' => 120,
-				'lexeme' => 146,
-			],
-			'prefixMapping' => [
-				'' => '',
-			],
-		],
-		'commons' => [
-			'repoDatabase' => 'commonswiki',
-			'entityNamespaces' => [ 'mediainfo' => '6/mediainfo' ],
-			'baseUri' => 'https://commons.wikimedia.org/entity/',
-			'prefixMapping' => [],
-		],
-	],
-],
-
 'wmgWikibaseClientRepoDatabase' => [
 	'wikidataclient' => 'wikidatawiki',
 	'wikidataclient-test' => 'testwikidatawiki',
