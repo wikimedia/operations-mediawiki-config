@@ -7792,6 +7792,14 @@ function wmfGetVariantSettings() {
 		'logged_in' => false,
 		'logged_out' => false,
 	],
+	'officewiki' => [
+		'logged_in' => true,
+		'logged_out' => true,
+	],
+	'testwiki' => [
+		'logged_in' => true,
+		'logged_out' => true,
+	],
 ],
 
 'wgVectorLanguageInHeader' => [
