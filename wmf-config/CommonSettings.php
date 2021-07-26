@@ -5,7 +5,7 @@
 # This file contains settings common to all (or many) WMF wikis.
 # For per-wiki configuration, see InitialiseSettings.php.
 #
-# This for PRODUCTION.
+# This is for PRODUCTION.
 #
 # Effective load order:
 # - multiversion
@@ -243,7 +243,8 @@ list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 $confCacheFileName = "conf2-$wgDBname.json";
 $confActualMtime = max(
 	filemtime( "$wmfConfigDir/InitialiseSettings.php" ),
-	filemtime( "$wmfConfigDir/logos.php" )
+	filemtime( "$wmfConfigDir/logos.php" ),
+	filemtime( "$IP/includes/Defines.php" )
 );
 $globals = Wikimedia\MWConfig\MWConfigCacheGenerator::readFromStaticCache(
 	$wgCacheDirectory . '/' . $confCacheFileName, $confActualMtime
@@ -281,17 +282,25 @@ extract( $globals );
 # Needs to be before db.php
 require "$wmfConfigDir/../private/PrivateSettings.php";
 
-$wgMemCachedServers = [];
-
 require "$wmfConfigDir/logging.php";
 require "$wmfConfigDir/redis.php";
 require "$wmfConfigDir/filebackend.php";
+require "$wmfConfigDir/mc.php";
+if ( $wmfRealm === 'labs' ) {
+	// Beta Cluster overrides
+	require "$wmfConfigDir/mc-labs.php";
+}
+# db-*.php needs $wgDebugDumpSql so should be loaded after logging.php
+if ( $wmfRealm === 'labs' ) {
+	require "$wmfConfigDir/db-labs.php";
+} else {
+	require "$wmfConfigDir/db-{$wmfDatacenter}.php";
+}
 
 # Override certain settings in command-line mode
 # This must be after InitialiseSettings.php is processed (T197475)
 if ( PHP_SAPI === 'cli' ) {
 	$wgShowExceptionDetails = true;
-	$wgShowDBErrorBacktrace = true;
 
 	# APC not available in CLI mode
 	$wgLanguageConverterCacheType = CACHE_NONE;
@@ -301,14 +310,6 @@ if ( XWikimediaDebug::getInstance()->hasOption( 'readonly' ) ) {
 	$wgReadOnly = 'X-Wikimedia-Debug';
 }
 $wgAllowedCorsHeaders[] = 'X-Wikimedia-Debug';
-
-if ( $wmfRealm === 'labs' ) {
-	require "$wmfConfigDir/db-labs.php";
-	require "$wmfConfigDir/mc-labs.php";
-} else {
-	require "$wmfConfigDir/mc.php";
-	require "$wmfConfigDir/db-{$wmfDatacenter}.php";
-}
 
 // In production, read the database loadbalancer config from etcd.
 // See https://wikitech.wikimedia.org/wiki/Dbctl
@@ -363,8 +364,10 @@ $wgMiserMode = true;
 
 $wgQueryCacheLimit = 5000;
 
-// ParserCache expire time set to 30 days
-$wgParserCacheExpireTime = 86400 * 30;
+// ParserCache expire time temporarily reduced to 21 days (T280605)
+$wgParserCacheExpireTime = 86400 * 21;
+// Override talk pages to have 10 days only (T280605)
+$wgDiscussionToolsTalkPageParserCacheExpiry = 86400 * 10;
 
 // Old revision parser cache expire in 1 hour
 $wgOldRevisionParserCacheExpireTime = 3600;
@@ -627,10 +630,10 @@ $wgPasswordPolicy['policies']['default']['PasswordNotInCommonList'] = [
 ];
 
 // Enforce password policy when users login on other wikis; also for sensitive global groups
-// FIXME does this just duplicate the the global policy checks down in the main $wmgUseCentralAuth block?
+// FIXME does this just duplicate the global policy checks down in the main $wmgUseCentralAuth block?
 if ( $wmgUseCentralAuth ) {
 	$wgHooks['PasswordPoliciesForUser'][] = function ( User $user, array &$effectivePolicy ) use ( $wmgPrivilegedPolicy ) {
-		$privilegedGroups = wmfGetPrivilegedGroups( $user->getName(), $user );
+		$privilegedGroups = wmfGetPrivilegedGroups( $user );
 		if ( $privilegedGroups ) {
 			$effectivePolicy = UserPasswordPolicy::maxOfPolicies( $effectivePolicy, $wmgPrivilegedPolicy );
 
@@ -814,8 +817,6 @@ if ( $wmgUseCORS ) {
 		'movementroles.wikimedia.org',
 		'office.wikimedia.org',
 		'office.m.wikimedia.org',
-		'otrs-wiki.wikimedia.org',
-		'otrs-wiki.m.wikimedia.org',
 		'outreach.wikimedia.org',
 		'outreach.m.wikimedia.org',
 		'quality.wikimedia.org',
@@ -830,6 +831,8 @@ if ( $wmgUseCORS ) {
 		'strategy.m.wikimedia.org',
 		'usability.wikimedia.org',
 		'usability.m.wikimedia.org',
+		'vrt-wiki.wikimedia.org',
+		'vrt-wiki.m.wikimedia.org',
 		'wikimania.wikimedia.org',
 		'wikimania.m.wikimedia.org',
 		'wikimania????.wikimedia.org',
@@ -1309,10 +1312,10 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 	];
 
 	// Current stable release
-	$wgExtDistDefaultSnapshot = 'REL1_35';
+	$wgExtDistDefaultSnapshot = 'REL1_36';
 
 	// Current development snapshot
-	$wgExtDistCandidateSnapshot = 'REL1_36';
+	// $wgExtDistCandidateSnapshot = 'REL1_36';
 
 	// Available snapshots
 	$wgExtDistSnapshotRefs = [
@@ -1417,12 +1420,19 @@ if ( $wmgUseSecureLinkFixer ) {
 
 if ( $wmgUseScore ) {
 	wfLoadExtension( 'Score' );
-	$wgScoreSafeMode = false;
+	$wgScoreSafeMode = true;
 
-	# T257062 --krinkle
-	$wgScoreLilyPond = '/dev/null';
-	$wgScoreDisableExec = true;
-	$wgScoreLilyPondFakeVersion = '2.18.2';
+	if ( $wmgUseScoreShellbox && $wmfLocalServices['shellbox'] ) {
+		$wgShellboxUrls['default'] = $wmfLocalServices['shellbox'];
+		// $wgShellboxSecretKey set in PrivateSettings.php
+		$wgScoreImageMagickConvert = '/usr/bin/convert';
+	} else {
+		# T257062 --krinkle
+		$wgScoreLilyPond = '/dev/null';
+		$wgScoreDisableExec = true;
+		$wgScoreLilyPondFakeVersion = '2.18.2';
+	}
+
 }
 
 $wgHiddenPrefs[] = 'realname';
@@ -1508,24 +1518,38 @@ if ( $wgDBname === 'enwiki' ) {
 	$wgHiddenPrefs[] = 'minordefault';
 }
 
-if ( $wmgUseFooterContactLink ) {
-	$wgHooks['SkinAddFooterLinks'][] = function ( $sk, $key, &$footerlinks ) {
-		if ( $key === 'places' ) {
-			$footerlinks['contact'] = Html::element( 'a', [ 'href' => $sk->msg( 'contact-url' )->escaped() ],
-				$sk->msg( 'contact' )->text()
-			);
-		}
-	};
-}
-if ( $wmgUseFooterTechCodeOfConductLink ) {
-	$wgHooks['SkinAddFooterLinks'][] = function ( $sk, $key, &$footerlinks ) {
-		if ( $key === 'places' ) {
-			$footerlinks['wm-codeofconduct'] = Html::element( 'a', [ 'href' => $sk->msg( 'wm-codeofconduct-url' )->escaped() ],
-				$sk->msg( 'wm-codeofconduct' )->text()
-			);
-		}
-	};
-}
+$wgHooks['SkinAddFooterLinks'][] = function ( $sk, $key, &$footerlinks )
+	use ( $wmgUseFooterContactLink, $wmgUseFooterCodeOfConductLink, $wmgUseFooterTechCodeOfConductLink )
+{
+	if ( $key !== 'places' ) {
+		return;
+	}
+
+	if ( $wmgUseFooterContactLink ) {
+		$footerlinks['contact'] = Html::element(
+			'a',
+			[ 'href' => $sk->msg( 'contact-url' )->escaped() ],
+			$sk->msg( 'contact' )->text()
+		);
+	}
+
+	if ( $wmgUseFooterCodeOfConductLink ) {
+		// T280886 wm-codeofconduct-url doesn't currently point
+		// to the actual policy text at
+		// https://meta.wikimedia.org/wiki/Special:MyLanguage/Universal_Code_of_Conduct/Policy_text
+		return;
+		// $urlKey = 'wm-codeofconduct-url';
+		// $msgKey = 'wm-codeofconduct';
+	} elseif ( $wmgUseFooterTechCodeOfConductLink ) {
+		$urlKey = 'wm-techcodeofconduct-url';
+		$msgKey = 'wm-techcodeofconduct';
+	}
+	$footerlinks['wm-codeofconduct'] = Html::element(
+		'a',
+		[ 'href' => $sk->msg( $urlKey )->escaped() ],
+		$sk->msg( $msgKey )->text()
+	);
+};
 
 // T35186: turn off incomplete feature action=imagerotate
 $wgAPIModules['imagerotate'] = 'ApiDisabled';
@@ -1592,9 +1616,11 @@ if ( $wgDBname === 'loginwiki' ) {
 	];
 	$wgGroupPermissions['user'] = [
 		'read' => true,
+		'writeapi' => true,
 	];
 	$wgGroupPermissions['autoconfirmed'] = [
 		'read' => true,
+		'writeapi' => true,
 	];
 
 	unset( $wgGroupPermissions['import'] );
@@ -1882,15 +1908,14 @@ $wgMajorSiteNoticeID = '2';
 /**
  * Get an array of groups (in $wmgPrivilegedGroups) that $username is part of
  *
- * @param string $username
- * @param User $user
+ * @param UserIdentity $user
  * @return array Any elevated/privileged groups the user is a member of
  */
-function wmfGetPrivilegedGroups( $username, $user ) {
+function wmfGetPrivilegedGroups( $user ) {
 	global $wmgUseCentralAuth, $wmgPrivilegedGroups, $wmgPrivilegedGlobalGroups;
 
-	if ( $wmgUseCentralAuth && CentralAuthUser::getInstanceByName( $username )->exists() ) {
-		$centralUser = CentralAuthUser::getInstanceByName( $username );
+	if ( $wmgUseCentralAuth && CentralAuthUser::getInstanceByName( $user->getName() )->exists() ) {
+		$centralUser = CentralAuthUser::getInstanceByName( $user->getName() );
 		try {
 			$groups = array_intersect(
 				array_merge( $wmgPrivilegedGroups, $wmgPrivilegedGlobalGroups ),
@@ -1922,7 +1947,9 @@ function wmfGetPrivilegedGroups( $username, $user ) {
 $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function ( $response, $user, $username ) {
 	$guessed = false;
 	if ( !$user && $username ) {
-		$user = User::newFromName( $username );
+		$user = MediaWikiServices::getInstance()
+			->getUserIdentityLookup()
+			->getUserIdentityByName( $username );
 		$guessed = true;
 	}
 	if ( !$user || !in_array( $response->status,
@@ -1934,7 +1961,7 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function ( $response, $user, $
 	global $wgRequest;
 	$headers = function_exists( 'apache_request_headers' ) ? apache_request_headers() : [];
 	$successful = $response->status === AuthenticationResponse::PASS;
-	$privGroups = wmfGetPrivilegedGroups( $username, $user );
+	$privGroups = wmfGetPrivilegedGroups( $user );
 
 	$channel = $successful ? 'goodpass' : 'badpass';
 	if ( $privGroups ) {
@@ -1961,10 +1988,12 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function ( $response, $user, $
 // log sysop password changes
 $wgHooks['ChangeAuthenticationDataAudit'][] = function ( $req, $status ) {
 	global $wgRequest;
-	$user = User::newFromName( $req->username );
+	$user = MediaWikiServices::getInstance()
+		->getUserIdentityLookup()
+		->getUserIdentityByName( $req->username );
 	$status = Status::wrap( $status );
 	if ( $req instanceof \MediaWiki\Auth\PasswordAuthenticationRequest ) {
-		$privGroups = wmfGetPrivilegedGroups( $req->username, $user );
+		$privGroups = wmfGetPrivilegedGroups( $user );
 		$priv = ( $privGroups ? 'elevated' : 'normal' );
 		if ( $priv === 'elevated' ) {
 			$headers = function_exists( 'apache_request_headers' ) ? apache_request_headers() : [];
@@ -2240,9 +2269,7 @@ wfLoadExtension( 'WikiEditor' );
 $wgDefaultUserOptions['usebetatoolbar'] = 1;
 
 # LocalisationUpdate
-if ( $wmfRealm !== 'labs' ) {
-	wfLoadExtension( 'LocalisationUpdate' );
-}
+# wfLoadExtension( 'LocalisationUpdate' );
 $wgLocalisationUpdateDirectory = "/var/lib/l10nupdate/caches/cache-$wmgVersionNumber";
 $wgLocalisationUpdateRepository = 'local';
 $wgLocalisationUpdateRepositories['local'] = [
@@ -2459,6 +2486,10 @@ if ( $wmgUseUploadWizard ) {
 	}
 }
 
+if ( $wmgUseMediaSearch ) {
+	wfLoadExtension( 'MediaSearch' );
+}
+
 if ( $wmgCustomUploadDialog ) {
 	$wgUploadDialog = [
 		'fields' => [
@@ -2520,6 +2551,11 @@ if ( $wmgUseMultimediaViewer ) {
 
 if ( $wmgUsePopups ) {
 	wfLoadExtension( 'Popups' );
+
+	if ( $wmgPopupsReferencePreviews ) {
+		$wgPopupsReferencePreviews = true;
+		$wgPopupsReferencePreviewsBetaFeature = false;
+	}
 }
 
 if ( $wmgUseLinter ) {
@@ -2680,6 +2716,11 @@ if ( $wmgUseTemplateData ) { // T61702 - 2015-07-20
 	if ( $wmgTemplateDataSuggestedValues ) {
 		$wgTemplateDataSuggestedValuesEditor = true;
 	}
+}
+
+if ( $wmgTemplateSearchImprovements ) {
+	$wgVisualEditorTemplateSearchImprovements = true;
+	$wgTemplateWizardTemplateSearchImprovements = true;
 }
 
 if ( $wmgUseGoogleNewsSitemap ) {
@@ -3883,6 +3924,8 @@ if ( $wmgAllowLabsAnonEdits ) {
 	// can block anonymous edits from the whole private ranges.
 	$wgSoftBlockRanges[] = '10.0.0.0/8';
 	$wgSoftBlockRanges[] = '172.16.0.0/12';
+	// Cloud VPS VMs with floating/public addresses
+	$wgSoftBlockRanges[] = '185.15.56.0/24';
 }
 
 // On Special:Version, link to useful release notes
@@ -4076,7 +4119,11 @@ if ( $wmgUseGrowthExperiments ) {
 
 	if ( !$wmgGEFeaturesMayBeAvailableToNewcomers ) {
 		// Disable welcome survey
-		$wgWelcomeSurveyExperimentalGroups = [ 'exp2_target_specialpage' => [ 'range' => 'x' ], 'exp2_target_popup' => [ 'range' => 'x' ] ];
+		$wgWelcomeSurveyExperimentalGroups = [
+			'exp2_target_specialpage' => [ 'percentage' => 0 ],
+			'exp2_target_popup' => [ 'percentage' => 0 ],
+			'exp1_group2' => [ 'percentage' => 0 ],
+		];
 		// Disable all other Growth features
 		$wgGEHomepageNewAccountEnablePercentage = 0;
 	}
@@ -4098,6 +4145,7 @@ if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession || $wmgUseCSP ) {
 	$wgCSPFalsePositiveUrls = array_merge( $wgCSPFalsePositiveUrls, [
 		'https://cvn.wmflabs.org' => true,
 		'https://tools.wmflabs.org/intuition/' => true,
+		'https://intuition.toolforge.org/' => true,
 	] );
 
 	$wgExtensionFunctions[] = function () {
@@ -4186,7 +4234,8 @@ if ( $wmgUseMachineVision ) {
 	$wgNotifyTypeAvailabilityByCategory['machinevision']['email'] = false;
 }
 
-if ( $wmgUseTheWikipediaLibrary ) {
+// T283003: TheWikipediaLibrary requires GlobalPreferences and CentralAuth to be installed
+if ( $wmgUseTheWikipediaLibrary && $wmgUseGlobalPreferences && $wmgUseCentralAuth ) {
 	wfLoadExtension( 'TheWikipediaLibrary' );
 }
 
@@ -4244,6 +4293,9 @@ $wgExtensionFunctions[] = function () {
 		unset( $wgGroupPermissions['suppress'] );
 	}
 };
+
+// To enable media tags at only some of the wikis, see T266067
+$wgSoftwareTags = array_merge( $wgSoftwareTags, $wmgAdditionalSoftwareTags );
 
 class ClosedWikiProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvider {
 	/**

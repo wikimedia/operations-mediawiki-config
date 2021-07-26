@@ -19,16 +19,21 @@
 # file hieradata/common/profile/services_proxy/envoy.yaml
 
 $common = [
-	// Logging is not active-active.
-	'udp2log' => '10.64.32.175:8420', # mwlog1001
-	'xenon' => '10.64.32.175', # mwlog1001
+	// XHGui is the on-demand profiler, backed by MariaDB.  The
+	// username and password are set in PrivateSettings.php.
+	'xhgui-pdo' => 'mysql:host=m2-master.eqiad.wmnet;dbname=xhgui',
 
-	// This refers to the old, MongoDB-based backend, which has been
-	// replaced by xhgui-pdo (T180761).
+	// This refers to the old, MongoDB-based XHGui backend, which
+	// has been replaced by xhgui-pdo (T180761).
 	'xhgui' => null,
 
-	// Database username and password for XHGui are set in PrivateSettings.php
-	'xhgui-pdo' => 'mysql:host=m2-master.eqiad.wmnet;dbname=xhgui',
+	// ArcLamp (formerly known as Xenon) is the sampling profiler
+	// pipeline.  Frames from the Excimer extension will be sent to
+	// Redis on this host.
+	//
+	// Profile collection is not active-active (but is consumed by
+	// pipelines in both data centers).
+	'xenon' => '10.64.32.141', # mwlog1002.eqiad.wmnet
 
 	// Statsd is not active-active.
 	'statsd' => '10.64.16.149', # statsd.eqiad.wmnet, now resolving to graphite1004.eqiad.wmnet
@@ -61,6 +66,7 @@ $common = [
 	'echostore' => 'http://localhost:6007',
 	'push-notifications' => 'http://localhost:6012',
 	'linkrecommendation' => 'https://linkrecommendation.discovery.wmnet:4005',
+	'shellbox' => 'http://localhost:6024',
 
 	// cloudelastic only exists in eqiad. No load balancer is available due to
 	// the part of the network that they live in so each host is enumerated
@@ -93,6 +99,9 @@ $services = [
 	'eqiad' => $common + [
 		// each DC has its own urldownloader for latency reasons
 		'urldownloader' => 'http://url-downloader.eqiad.wikimedia.org:8080',
+
+		// logs are mirrored from eqiad -> codfw by mwlog hosts
+		'udp2log' => '10.64.32.141:8420', # mwlog1002.eqiad.wmnet
 
 		'upload' => 'ms-fe.svc.eqiad.wmnet',
 		'mediaSwiftAuth' => 'https://ms-fe.svc.eqiad.wmnet/auth',
@@ -135,6 +144,9 @@ $services = [
 	],
 	'codfw' => $common + [
 		'urldownloader' => 'http://url-downloader.codfw.wikimedia.org:8080',
+
+		// logs are mirrored from codfw -> eqiad by mwlog hosts
+		'udp2log' => '10.192.32.9:8420', # mwlog2002.codfw.wmnet
 
 		'upload' => 'ms-fe.svc.codfw.wmnet',
 		'mediaSwiftAuth' => 'https://ms-fe.svc.codfw.wmnet/auth',

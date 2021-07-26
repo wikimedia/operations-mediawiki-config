@@ -4,6 +4,7 @@
 // phpcs:disable MediaWiki.Classes.UnsortedUseStatements.UnsortedUse
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Session\SessionManager;
 
 wfLoadExtension( 'LdapAuthentication' );
 $wgAuthManagerAutoConfig['primaryauth'] += [
@@ -95,9 +96,9 @@ $wgCdnReboundPurgeDelay = 0;
 // T218654
 $wgHooks['BlockIpComplete'][] = function ( $block, $performer, $priorBlock ) {
 	global $wgBlockDisablesLogin;
-	if ( $wgBlockDisablesLogin && $block->getTarget() instanceof User && $block->getExpiry() === 'infinity' && $block->isSitewide() ) {
+	if ( $wgBlockDisablesLogin && $block->getTargetUserIdentity() && $block->getExpiry() === 'infinity' && $block->isSitewide() ) {
 		MediaWikiServices::getInstance()->getAuthManager()
-			->revokeAccessForUser( $block->getTarget()->getName() );
+			->revokeAccessForUser( $block->getTargetName() );
 	}
 };
 
@@ -140,7 +141,7 @@ $wgHooks['BlockIpComplete'][] = function ( $block, $user, $prior ) use ( $wmfPha
 			return false;
 		};
 
-		$username = $block->getTarget()->getName();
+		$username = $block->getTargetName();
 		$resp = $phabClient( 'user.ldapquery', [
 			'ldapnames' => [ $username ],
 			'offset' => 0,
@@ -173,7 +174,7 @@ $wgHooks['BlockIpComplete'][] = function ( $block, $user, $prior ) use ( $wmfGer
 	try {
 		// Disable gerrit user tied to developer account
 		$gerritUrl = 'https://gerrit.wikimedia.org';
-		$username = strtolower( $block->getTarget()->getName() );
+		$username = strtolower( $block->getTargetName() );
 		$ch = curl_init(
 			"{$gerritUrl}/r/a/accounts/" . urlencode( $username ) . '/active'
 		);
@@ -218,9 +219,11 @@ $wgHooks['BlockIpComplete'][] = function ( $block, $user, $prior ) {
 		// a site-wide indefinite block of a named user.
 		return;
 	}
-	$blockedUser = $block->getTarget();
-	if ( !( $blockedUser instanceof User ) ) {
+	if ( !$block->getTargetUserIdentity() ) {
 		return;
 	}
-	MediaWiki\Session\SessionManager::singleton()->invalidateSessionsForUser( $blockedUser );
+	$userObj = MediaWikiServices::getInstance()
+		->getUserFactory()
+		->newFromUserIdentity( $block->getTargetUserIdentity() );
+	SessionManager::singleton()->invalidateSessionsForUser( $userObj );
 };

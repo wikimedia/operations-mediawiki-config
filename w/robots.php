@@ -3,7 +3,11 @@ define( 'MW_NO_SESSION', 1 );
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 require MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
 
-$page = WikiPage::factory( Title::newFromText( 'Mediawiki:robots.txt' ) );
+use MediaWiki\MediaWikiServices;
+
+$page = MediaWikiServices::getInstance()
+	->getWikiPageFactory()
+	->newFromTitle( Title::newFromText( 'Mediawiki:robots.txt' ) );
 
 header( 'Content-Type: text/plain; charset=utf-8' );
 header( 'X-Article-ID: ' . $page->getId() );
@@ -22,7 +26,8 @@ header( 'Cache-Control: s-maxage=3600, must-revalidate, max-age=0' );
 $dontIndex = "User-agent: *\nDisallow: /\n";
 
 if ( $page->exists() ) {
-	$extratext = ContentHandler::getContentText( $page->getContent() ) ?: '';
+	$content = $page->getContent();
+	$extratext = ( $content instanceof TextContent ) ? $content->getText() : '';
 	// Take last modified timestamp of page into account
 	$mtime = max( $mtime, wfTimestamp( TS_UNIX, $page->getTouched() ) );
 } elseif ( $wmfRealm == 'labs' ) {

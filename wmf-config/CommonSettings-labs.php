@@ -51,10 +51,10 @@ $wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = [
 ];
 
 // Enforce password policy when users login on other wikis; also for sensitive global groups
-// FIXME does this just duplicate the the global policy checks down in the main $wmgUseCentralAuth block?
+// FIXME does this just duplicate the global policy checks down in the main $wmgUseCentralAuth block?
 if ( $wmgUseCentralAuth ) {
 	$wgHooks['PasswordPoliciesForUser'][] = function ( User $user, array &$effectivePolicy ) use ( $wmgPrivilegedPolicy ) {
-		$privilegedGroups = wmfGetPrivilegedGroups( $user->getName(), $user );
+		$privilegedGroups = wmfGetPrivilegedGroups( $user );
 		if ( $privilegedGroups ) {
 			$effectivePolicy = UserPasswordPolicy::maxOfPolicies( $effectivePolicy, $wmgPrivilegedPolicy );
 			if ( in_array( 'staff', $privilegedGroups, true ) ) {
@@ -280,14 +280,6 @@ if ( $wmgUseCollection ) {
 	$wgCollectionCommandToServeURL[ 'zip_post' ] = 'https://pediapress.com/wmfup/';
 }
 
-if ( $wmgUsePageImages ) {
-	$wgPageImagesBlacklist[] = [
-		'type' => 'db',
-		'page' => 'MediaWiki:Pageimages-blacklist',
-		'db' => 'commonswiki',
-	];
-}
-
 if ( $wmgUseEcho ) {
 	$wgEchoNotifiers['push'] = [ 'EchoPush\\PushNotifier', 'notifyWithPush' ];
 	$wgDefaultNotifyTypeAvailability['push'] = true;
@@ -414,10 +406,21 @@ $wgVisualEditorTransclusionDialogSuggestedValues = true;
 // Temporary feature flags for changes to the descriptions in the transclusion dialog, see T271800
 $wgVisualEditorTransclusionDialogInlineDescriptions = true;
 
-// Temporary feature flags for the improved search features in the template dialog, see T271802
-$wgVisualEditorCirrusSearchLookup = true;
+// Temporary flag to enable the back button in the transclusion dialog, see T272354
+$wgVisualEditorTransclusionDialogBackButton = true;
 
-// Don't use beta feature mode on labs
+// Temporary feature flag for the improved search features in the VE template dialog, see T271802
+$wgVisualEditorTemplateSearchImprovements = true;
+
+// Temporary feature flag for the improved search features in the TemplateWizard dialog, see T271802
+$wgTemplateWizardTemplateSearchImprovements = true;
+
+// Use ReferencePreviews as full default feature on the beta cluster
 $wgPopupsReferencePreviewsBetaFeature = false;
+
+// Enable ChessBrowser extension, see T244075
+if ( $wmgUseChessBrowser ) {
+	wfLoadExtension( 'ChessBrowser' );
+}
 
 } # end safeguard

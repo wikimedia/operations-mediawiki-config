@@ -56,7 +56,10 @@ function wmfGetOverrideSettings() {
 		'-wmgUseTranslationNotifications' => [
 			'default' => false,
 		],
-	   '-wgGEDatabaseCluster' => [
+		'-wgGEDatabaseCluster' => [
+			'default' => false,
+		],
+		'-wmgUseMediaSearch' => [
 			'default' => false,
 		],
 	];

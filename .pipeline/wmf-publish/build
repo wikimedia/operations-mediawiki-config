@@ -49,8 +49,10 @@ function apply_patch {
     patchfile=$patches_dir/$version/$patchfile
     echo Applying $patchfile in $targetdir
 
-    # FIXME: Send email to the security team if a patch fails to apply
-    patch --forward -d $targetdir -p1 < $patchfile
+    if ! patch --forward -d $targetdir -p1 < $patchfile; then
+        echo Failed to apply $patchfile in $targetdir
+        exit 1
+    fi
 }
 
 function apply_patches {
@@ -67,27 +69,84 @@ function apply_patches {
     fi
 }
 
-php_with_errors multiversion/bin/generate-php-wikiversions.php
-php_with_errors multiversion/bin/update-all-localsettings.php
+function prepare_mw_versions {
+    php_with_errors multiversion/bin/generate-php-wikiversions.php
+    php_with_errors multiversion/bin/update-all-localsettings.php
+}
 
-# stub PrivateSettings.php
-cp private/readme.php private/PrivateSettings.php
+function apply_security_patches {
+    multiversion/bin/list-versions.php | while read wikidb version; do
+        apply_patches "$version"
+    done
 
-multiversion/bin/list-versions.php | while read wikidb version; do
+    # Cleanup
+    rm -fr $patches_dir
+}
 
-  apply_patches "$version"
+function merge_message_file_list {
+    multiversion/bin/list-versions.php | while read wikidb version; do
+        mwscript mergeMessageFileList.php \
+                 --wiki="$wikidb" \
+                 --list-file=wmf-config/extension-list \
+                 --output=wmf-config/ExtensionMessages-$version.php
+    done
+}
 
-  mwscript mergeMessageFileList.php \
-    --wiki="$wikidb" \
-    --list-file=wmf-config/extension-list \
-    --output=wmf-config/ExtensionMessages-$version.php
+function rebuild_l10n_cache {
+    multiversion/bin/list-versions.php | while read wikidb version; do
+        mwscript rebuildLocalisationCache.php \
+                 --wiki="$wikidb" \
+                 --store-class=LCStoreCDB \
+                 --threads=$(nproc) \
+                 --skip-message-purge
+    done
+}
 
-  mwscript rebuildLocalisationCache.php \
-    --wiki="$wikidb" \
-    --store-class=LCStoreCDB \
-    --threads=$(nproc) \
-    --offline
-done
+function version_to_tag {
+    local version="$1"
+    local train_versions_file="$2"
 
-# Cleanup
-rm -fr $patches_dir
+    jq -r .\"${version}\" $train_versions_file
+}
+
+function images_and_tags {
+    local train_versions_file=$(mktemp -t train-versions.XXXXXX.json)
+
+    # Get latest mapping of train version to image tag.
+    curl -sf 'https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/tools/release/+/refs/heads/master/state/train-versions.json?format=TEXT' | base64 -d > $train_versions_file
+
+    multiversion/bin/list-versions.php | while read wikidb version; do
+        local tag=$(version_to_tag "$version" "$train_versions_file")
+
+        if [ -z "$tag" ] || [ "$tag" == "null" ]; then
+            echo "Could not determine the container image tag for $version"
+            exit 1
+        fi
+        
+        echo "$version" "$tag"
+    done
+
+    rm "$train_versions_file"
+}
+
+case "$1" in
+    prepare-mw-versions)
+        prepare_mw_versions
+        ;;
+    apply-security-patches)
+        apply_security_patches
+        ;;
+    rebuild-l10n-cache)
+        rebuild_l10n_cache
+        ;;
+    merge-message-file-list)
+        merge_message_file_list
+        ;;
+    images-and-tags)
+        images_and_tags
+        ;;
+    *)
+        echo $0: Unknown command $1
+        exit 1
+        ;;
+esac

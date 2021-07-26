@@ -17,7 +17,7 @@ $wgFlaggedRevsAutopromote = false;
 
 $wgFlaggedRevsStatsAge = false;
 
-// Configs that must be set before FlaggedRevsHooks::onExtensionFunctions
+// Configuration fields that must be set before other configuration has been loaded
 call_user_func( function () {
 	global $wgDBname,
 		$wgFlaggedRevsAutopromote, $wgFlaggedRevsAutoconfirm;
@@ -187,12 +187,13 @@ call_user_func( function () {
 	}
 } );
 
-// Configs that must be set after FlaggedRevsHooks::onExtensionFunctions for some reason???
-$wgExtensionFunctions[] = function () {
+// Configuration fields that must be set after all other configuration has been loaded
+// (probably to make sure it comes after FlaggedRevsSetup::doSetup)
+$wgHooks['MediaWikiServices'][] = function () {
 	global $wgAddGroups, $wgDBname, $wgDefaultUserOptions,
 		$wgFlaggedRevsNamespaces, $wgFlaggedRevsRestrictionLevels,
 		$wgFlaggedRevsStatsAge, $wgFlaggedRevsTags, $wgFlaggedRevsTagsRestrictions,
-		$wgFlaggedRevsWhitelist, $wgGroupPermissions, $wgRemoveGroups;
+		$wgGroupPermissions, $wgRemoveGroups;
 
 	///////////////////////////////////////
 	// Common configuration
@@ -219,7 +220,6 @@ $wgExtensionFunctions[] = function () {
 	if ( $wgDBname == 'alswiki' ) {
 		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 	} elseif ( $wgDBname == 'arwiki' ) {
-		$wgFlaggedRevsWhitelist = [ 'الصفحة_الرئيسية' ];
 		$wgFlaggedRevsNamespaces[] = 100; // T21332 and T217507
 
 		// Change default user options
@@ -454,7 +454,6 @@ $wgExtensionFunctions[] = function () {
 			$wgGroupPermissions['reviewer']
 		);
 	} elseif ( $wgDBname == 'hewikisource' ) {
-		$wgFlaggedRevsWhitelist = [ 'עמוד_ראשי' ]; // T227000
 		$wgFlaggedRevsNamespaces[] = 100;
 		$wgFlaggedRevsNamespaces[] = 106;
 		$wgFlaggedRevsNamespaces[] = 108;
@@ -526,7 +525,8 @@ $wgExtensionFunctions[] = function () {
 		unset( $wgGroupPermissions['autoreview'] );
 	} elseif ( $wgDBname == 'iawiki' ) {
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
-	} elseif ( $wgDBname == 'iswiktionary' ) {
+	} elseif ( $wgDBname == 'idwiki' ) {
+		$wgGroupPermissions['sysop']['stablesettings'] = true;
 	} elseif ( $wgDBname == 'kawiki' ) {
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
@@ -587,13 +587,14 @@ $wgExtensionFunctions[] = function () {
 		// T39675, T49337
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 100, 828 ];
 
-		$wgFlaggedRevsTags['accuracy']['levels'] = 3;
+		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 
 		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 		$wgGroupPermissions['sysop']['review'] = false; // T275811
+		# Remove reviewer group
+		unset( $wgGroupPermissions['reviewer'] );
 	} elseif ( $wgDBname == 'ruwikinews' ) {
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_CATEGORY, NS_TEMPLATE ];
-		$wgFlaggedRevsWhitelist = [ 'Main_Page' ];
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
 		$wgGroupPermissions['sysop']['review'] = true;
 		unset( $wgGroupPermissions['reviewer'] );

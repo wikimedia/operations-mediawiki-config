@@ -19,8 +19,17 @@ $wgPoolCounterConf = [
 	'CirrusSearch-Search' => [
 		'class' => Client::class,
 		'timeout' => 15,
-		'workers' => 200,
-		'maxqueue' => 600,
+		'workers' => 180,
+		'maxqueue' => 540,
+	],
+	// Software tries to recognize sources of external automation, such as GAE,
+	// AWS, browser automation, etc. and give them a separate pool so they
+	// can cap out without interfering with interactive users.
+	'CirrusSearch-Automated' => [
+		'class' => Client::class,
+		'timeout' => 15,
+		'workers' => 30,
+		'maxqueue' => 90,
 	],
 	// Super common and mostly fast
 	'CirrusSearch-Prefix' => [
@@ -54,11 +63,13 @@ $wgPoolCounterConf = [
 	// These are very expensive and incredibly common at more than 5M per hour
 	// before varnish caching. If the somehow the cache hit rate drops this
 	// protects the cluster
+	// NOTE: This is an increase from typical sizing to handle the expected
+	// empty more_like cache on switchover from eqiad->codfw.
 	'CirrusSearch-MoreLike' => [
 		'class' => Client::class,
 		'timeout' => 5,
-		'workers' => 60,
-		'maxqueue' => 240,
+		'workers' => 150,
+		'maxqueue' => 400,
 	],
 	'FileRender' => [
 		'class' => Client::class,
@@ -80,11 +91,19 @@ $wgPoolCounterConf = [
 		'maxqueue' => 25,
 	],
 	'TranslateFetchTranslators' => [
-		'class' => Client::class,
+		'class' => PoolCounter_Client::class,
 		'timeout' => 8,
 		'workers' => 1,
 		'slots' => 16,
 		'maxqueue' => 20,
+	],
+	// Note, this uses nowait:. Timeout must be 0, worker should equal maxqueue
+	// In the event DPL is causing DB problems, decrease to 2.
+	'DPL' => [
+		'class' => Client::class,
+		'timeout' => 0,
+		'workers' => 25,
+		'maxqueue' => 25,
 	],
 ];
 

@@ -59,6 +59,7 @@ $dbConfigEtcdJsonFilename = ( isset( $_GET['dc'] ) && isset( $dbctlJsonByDC[$_GE
 $wgDBname = null;
 $wgDBuser = null;
 $wgDBpassword = null;
+$wgDebugDumpSql = false;
 $wgSecretKey = null;
 $wmfMasterDatacenter = null;
 

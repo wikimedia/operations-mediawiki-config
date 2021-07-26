@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 // Load the Repo, and Repo extensions
 if ( !empty( $wmgUseWikibaseRepo ) ) {
 	wfLoadExtension( 'WikibaseRepository', "$IP/extensions/Wikibase/extension-repo.json" );
@@ -96,12 +98,9 @@ if ( $wmgUseWikibaseRepo ) {
 
 	// Calculate the client Db lists based on our wikiversions db lists
 	if ( $wgDBname === 'testwikidatawiki' ) {
-		$wgWBRepoSettings['localClientDatabases'] = [ 'testwiki', 'test2wiki', 'testwikidatawiki' ];
+		$wgWBRepoSettings['localClientDatabases'] = MWWikiversions::readDbListFile( 'wikidataclient-test' );
 	} elseif ( $wgDBname === 'wikidatawiki' ) {
-		$wgWBRepoSettings['localClientDatabases'] = array_diff(
-			MWWikiversions::readDbListFile( 'wikidataclient' ),
-			[ 'testwikidatawiki', 'testwiki', 'test2wiki' ]
-		);
+		$wgWBRepoSettings['localClientDatabases'] = MWWikiversions::readDbListFile( 'wikidataclient' );
 		// Exclude closed wikis
 		$wgWBRepoSettings['localClientDatabases'] = array_diff(
 			$wgWBRepoSettings['localClientDatabases'],
@@ -135,6 +134,9 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['preferredGeoDataProperties'] = $wmgWBRepoPreferredGeoDataProperties;
 	$wgWBRepoSettings['preferredPageImagesProperties'] = $wmgWBRepoPreferredPageImagesProperties;
 	$wgWBRepoSettings['conceptBaseUri'] = $wmgWBRepoConceptBaseUri;
+	if ( isset( $wmgWikibaseRepoSandboxEntityIds ) ) {
+		$wgWBRepoSettings['sandboxEntityIds'] = $wmgWikibaseRepoSandboxEntityIds;
+	}
 
 	$wgWBRepoSettings['entitySources'] = $wmgWikibaseEntitySources;
 	if ( isset( $wmgWikibaseRepoLocalEntitySourceName ) ) {
@@ -155,6 +157,10 @@ if ( $wmgUseWikibaseRepo ) {
 
 	if ( isset( $wmgWBRepoIdGenerator ) ) {
 		$wgWBRepoSettings['idGenerator'] = $wmgWBRepoIdGenerator; // T194299
+	}
+
+	if ( isset( $wmgWBRepoIdGeneratorInErrorPingLimiter ) ) {
+		$wgWBRepoSettings['idGeneratorInErrorPingLimiter'] = $wmgWBRepoIdGeneratorInErrorPingLimiter;
 	}
 
 	$wgWBRepoSettings['dataRightsText'] = 'Creative Commons CC0 License';
@@ -193,9 +199,6 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['string-limits'] = $wmgWikibaseStringLimits;
 	}
 
-	// Federation temporarily commented out, see T211237 & T204748
-	$wgWBRepoSettings['foreignRepositories'] = $wmgWikibaseRepoForeignRepositories;
-
 	// Temporary, see T184933
 	$wgWBRepoSettings['useKartographerGlobeCoordinateFormatter'] = true;
 
@@ -210,8 +213,6 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBRepoSettings['enableRefTabs'] = $wmgWikibaseRepoEnableRefTabs;
 
-	$wgWBRepoSettings['idGeneratorRateLimiting'] = $wmgWikibaseRepoIdGeneratorRateLimiting;
-
 	// entity data for URLs matching these patterns will be cached in Varnish and purged if needed;
 	// all other entity data URLs will receive no caching
 	$wgWBRepoSettings['entityDataCachePaths'] = [
@@ -222,6 +223,9 @@ if ( $wmgUseWikibaseRepo ) {
 		// third pattern with high volume of requests in Hive, source unknown
 		'/wiki/Special:EntityData?id={entity_id}&revision={revision_id}&format=json',
 	];
+
+	// Temporary, T241422
+	$wgWBRepoSettings['tmpSerializeEmptyListsAsObjects'] = $wmgWikibaseTmpSerializeEmptyListsAsObjects;
 }
 
 if ( $wmgUseWikibaseClient ) {
@@ -230,6 +234,10 @@ if ( $wmgUseWikibaseClient ) {
 
 	if ( in_array( $wgDBname, [ 'commonswiki', 'mediawikiwiki', 'metawiki', 'specieswiki', 'wikimaniawiki' ] ) ) {
 		$wgWBClientSettings['languageLinkSiteGroup'] = 'wikipedia';
+	}
+
+	if ( $wgDBname === 'sourceswiki' ) {
+		$wgWBClientSettings['languageLinkAllowedSiteGroups'] = [ 'wikisource', 'sources' ];
 	}
 
 	$wgWBClientSettings['siteGroup'] = $wbSiteGroup;
@@ -250,11 +258,13 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['excludeNamespaces'] = function () {
 		global $wgDBname, $wgProofreadPageNamespaceIds;
 
+		$namespaceInfo = MediaWikiServices::getInstance()->getNamespaceInfo();
+
 		// @fixme 102 is LiquidThread comments on wikinews and elsewhere?
 		// but is the Extension: namespace on mediawiki.org, so we need
 		// to allow wiki-specific settings here.
 		$excludeNamespaces = array_merge(
-			MWNamespace::getTalkNamespaces(),
+			$namespaceInfo->getTalkNamespaces(),
 			// 90 => LiquidThread threads
 			// 92 => LiquidThread summary
 			// 118 => Draft
@@ -278,10 +288,8 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings['propertyOrderUrl'] = $wmgWikibaseClientPropertyOrderUrl;
 	}
 
-	$wgWBClientSettings['changesDatabase'] = $wmgWikibaseClientChangesDatabase;
 	$wgWBClientSettings['repoDatabase'] = $wmgWikibaseClientRepoDatabase;
 	$wgWBClientSettings['repoUrl'] = $wmgWikibaseClientRepoUrl;
-	$wgWBClientSettings['repoConceptBaseUri'] = $wmgWikibaseClientRepoConceptBaseUri;
 	$wgWBClientSettings['repositories'] = $wmgWikibaseClientRepositories;
 	$wgWBClientSettings['wikiPageUpdaterDbBatchSize'] = 20;
 

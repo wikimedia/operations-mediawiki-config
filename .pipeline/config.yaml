@@ -12,15 +12,18 @@ pipelines:
           variants:
             list-wikiversions:
               base: docker-registry.wikimedia.org/php7.2-cli
+              apt:
+                packages: [curl, wmf-certificates, jq]
               builder:
-                requirements: [wikiversions.json, multiversion/]
-                command: [bash, -c, 'multiversion/bin/list-versions.php | cut -f 2 > versions']
+                requirements: [wikiversions.json, .pipeline/wmf-publish/build, multiversion/]
+                command: [bash, -c, 'env https_proxy=${setup.httpProxy} .pipeline/wmf-publish/build images-and-tags > versions']
               entrypoint: [cat, versions]
             rsync:
               base: docker-registry.wikimedia.org/wikimedia-buster
               apt:
                 packages: [rsync]
               entrypoint: [rsync]
+
       - name: fetch-private
         build: rsync
         run:
@@ -37,26 +40,17 @@ pipelines:
           - source: /tmp/patches
             destination: patches
         blubberfile: *blubberfile
-      - name: production
+
+      - name: prepare-mw-versions
         build:
-          variant: production
+          variant: multiversion
           excludes:
             - .git
-        publish:
-          image:
-            name: mediawiki-multiversion
-            tags: [production]
-        blubberfile:
+        blubberfile: 
           version: v4
-          apt:
-            proxies: ['${setup.httpProxy}']
           variants:
-            production:
+            multiversion:
               base: docker-registry.wikimedia.org/php7.2-fpm
-              apt:
-                packages:
-                  - firejail
-                  - patch
               lives:
                 in: /srv/mediawiki
               runs:
@@ -66,15 +60,107 @@ pipelines:
               builder:
                 requirements:
                   $merge:
-                    $each: version
+                    $each: [ version, tag ]
                     $in: "${wikiversions.output}"
                     $yield:
-                      from: "docker-registry.wikimedia.org/wikimedia/mediawiki:wmf-${.version}"
+                      from: "docker-registry.wikimedia.org/wikimedia/mediawiki:${.tag}"
                       source: /srv/mediawiki
                       destination: "/srv/mediawiki/php-${.version}"
                   $with:
                     - .
-                command: [./.pipeline/wmf-publish/build]
+                command: [.pipeline/wmf-publish/build, prepare-mw-versions]
+
+      - name: apply-security-patches
+        # notify:
+        #   email:
+        #     to:
+        #       - security-admin-feed@lists.wikimedia.org
+        #       - releng@lists.wikimedia.org
+        #     subject: Security patch application failed
+        build:
+          variant: patched
+          excludes:
+            - .git
+          imagePullPolicy: never
+        blubberfile:
+          version: v4
+          apt:
+            proxies: ['${setup.httpProxy}']
+          variants:
+            patched:
+              base: '${prepare-mw-versions.imageLocalName}'
+              apt:
+                packages:
+                  - patch
+              lives:
+                in: /srv/mediawiki
+              runs:
+                # match base image www-data uid/gid
+                uid: 33
+                gid: 33
+              builder:
+                command: [.pipeline/wmf-publish/build, apply-security-patches]
+
+      - name: setup-l10n
+        build:
+          variant: l10n
+          excludes:
+            - .git
+          imagePullPolicy: never
+        blubberfile:
+          version: v4
+          variants:
+            l10n:
+              base: '${apply-security-patches.imageLocalName}'
+              lives:
+                in: /srv/mediawiki
+              runs:
+                # match base image www-data uid/gid
+                uid: 33
+                gid: 33
+              builder:
+                command:
+                  - sh
+                  - -c
+                  - >-
+                    .pipeline/wmf-publish/build merge-message-file-list &&
+                    .pipeline/wmf-publish/build rebuild-l10n-cache
+
+      - name: publish
+        build:
+          variant: prod
+          excludes:
+            - .git
+          imagePullPolicy: never
+        publish:
+          image:
+            name: mediawiki-multiversion
+            tags: [production]
+        blubberfile:
+          version: v4
+          variants:
+            # Using 'prod' instead of 'production' to get around the policy rules that are
+            # applied when the variant==production.  Specifically the
+            # one that constrains the base image to starts with "docker-registry.wikimedia.org"
+            prod:
+              base: '${setup-l10n.imageLocalName}'
+              lives:
+                in: /srv/mediawiki
+              runs:
+                # match base image www-data uid/gid
+                uid: 33
+                gid: 33
+              apt:
+                packages:
+                  # Install the WMF internal CAs (T284417)
+                  - wmf-certificates
+                  # And the php extensions (T285309)
+                  - php-luasandbox
+                  - php-wikidiff2
+              builder:
+                # Clean up some cruft (T284581)
+                command: [bash, -c, "rm -fr /tmp/mw-cache-*"]
+
       - name: webserver
         build:
           variant: production

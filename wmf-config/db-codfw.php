@@ -58,8 +58,10 @@ $wgLBFactoryConf = [
 	'apiportalwiki' => 's5',
 	'arbcom_ruwiki' => 's5',
 	'avkwiki'      => 's5',
+	'banwikisource' => 's5',
 	'bclwiktionary' => 's5',
 	'cebwiki'      => 's5',
+	'dagwiki'      => 's5',
 	'dewiki'       => 's5',
 	'diqwiktionary' => 's5',
 	'enwikivoyage' => 's5',
@@ -78,11 +80,12 @@ $wgLBFactoryConf = [
 	'skrwiki'      => 's5',
 	'skrwiktionary' => 's5',
 	'shwiki'       => 's5',
+	'shiwiki'      => 's5',
 	'smnwiki'      => 's5',
 	'srwiki'       => 's5',
 	'taywiki'      => 's5',
 	'thankyouwiki' => 's5',
-	'trwikivoyaage' => 's5',
+	'trwikivoyage' => 's5',
 	'trvwiki'      => 's5',
 	'wawikisource' => 's5',
 
@@ -143,7 +146,7 @@ $wgLBFactoryConf = [
 	'user'               => $wgDBuser,
 	'password'           => $wgDBpassword,
 	'type'               => 'mysql',
-	'flags'              => DBO_DEFAULT,
+	'flags'              => DBO_DEFAULT | ( $wgDebugDumpSql ? DBO_DEBUG : 0 ),
 	'max lag'            => 6, // should be safely less than $wgCdnReboundPurgeDelay
 	'useGTIDs'           => true,
 	'lagDetectionMethod' => 'pt-heartbeat',
@@ -214,7 +217,7 @@ $wgLBFactoryConf = [
 'masterTemplateOverrides' => [],
 
 'externalTemplateOverrides' => [
-	'flags' => 0, // No transactions
+	'flags' => $wgDebugDumpSql ? DBO_DEBUG : 0, // No transactions
 	'lagDetectionMethod' => 'Seconds_Behind_Master', // no pt-heartbeat
 ],
 

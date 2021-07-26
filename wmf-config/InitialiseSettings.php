@@ -302,6 +302,7 @@ function wmfGetVariantSettings() {
 	'atjwiki' => 'America/Montreal', // T167714
 	'awawiki' => 'Asia/Kolkata', // T251371
 	'banwiki' => 'Asia/Makassar',
+	'banwikisource' => 'Asia/Makassar',
 	'barwiki' => 'Europe/Berlin',
 	'bat_smgwiki' => 'Europe/Vilnius',
 	'bawikibooks' => 'Asia/Yekaterinburg', // T173471
@@ -327,6 +328,7 @@ function wmfGetVariantSettings() {
 	'csbwiktionary' => 'Europe/Warsaw',
 	'dawiki' => 'Europe/Berlin',
 	'dawikibooks' => 'Europe/Berlin',
+	'dagwiki' => 'Africa/Accra',
 	'dewiki' => 'Europe/Berlin',
 	'dewikinews' => 'Europe/Berlin',
 	'dewiktionary' => 'Europe/Berlin',
@@ -519,6 +521,7 @@ function wmfGetVariantSettings() {
 	'skrwiki' => 'Asia/Karachi',
 	'skrwiktionary' => 'Asia/Karachi',
 	'shwiki' => 'Europe/Berlin',
+	'shiwiki' => 'Africa/Casablanca',
 	'shnwiktionary' => 'Asia/Yangon',
 	'shywiktionary' => 'Africa/Algiers',
 	'slwiki' => 'Europe/Ljubljana',
@@ -790,7 +793,7 @@ function wmfGetVariantSettings() {
 	'kawiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ka.svg',
 		'width' => 119,
-		'height' => 18,
+		'height' => 24,
 	],
 	'kowiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ko.svg',
@@ -1142,8 +1145,8 @@ function wmfGetVariantSettings() {
 	],
 	'kawiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ka.svg',
-		'width' => 111,
-		'height' => 11,
+		'width' => 119,
+		'height' => 10,
 	],
 	'kowiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ko.svg',
@@ -1489,7 +1492,7 @@ function wmfGetVariantSettings() {
 	'nycwikimedia' => '//nyc.wikimedia.org', // T31273
 	'officewiki' => '//office.wikimedia.org',
 	'ombudsmenwiki' => '//ombudsmen.wikimedia.org',
-	'otrs_wikiwiki' => '//otrs-wiki.wikimedia.org',
+	'otrs_wikiwiki' => '//vrt-wiki.wikimedia.org',
 	'outreachwiki' => '//outreach.wikimedia.org',
 	'pa_uswikimedia' => '//pa-us.wikimedia.org',
 	'projectcomwiki' => '//projectcom.wikimedia.org', // T143138
@@ -1589,7 +1592,7 @@ function wmfGetVariantSettings() {
 	'nycwikimedia' => 'https://nyc.wikimedia.org', // T31273
 	'officewiki' => 'https://office.wikimedia.org',
 	'ombudsmenwiki' => 'https://ombudsmen.wikimedia.org',
-	'otrs_wikiwiki' => 'https://otrs-wiki.wikimedia.org',
+	'otrs_wikiwiki' => 'https://vrt-wiki.wikimedia.org',
 	'outreachwiki' => 'https://outreach.wikimedia.org',
 	'pa_uswikimedia' => 'https://pa-us.wikimedia.org',
 	'projectcomwiki' => 'https://projectcom.wikimedia.org',
@@ -1756,6 +1759,7 @@ function wmfGetVariantSettings() {
 	'cywikibooks' => 'Wicilyfrau',
 	'cywikisource' => 'Wicidestun',
 	'cywiktionary' => 'Wiciadur',
+	'dagwiki' => 'Dagbani Wikipedia',
 	'dkwikimedia' => 'Wikimedia Danmark',
 	'donatewiki' => 'Donate',
 	'dsbwiki' => 'Wikipedija',
@@ -2002,7 +2006,7 @@ function wmfGetVariantSettings() {
 	'orwikisource' => 'ଉଇକିପାଠାଗାର', // T73875
 	'orwiktionary' => 'ଉଇକିଅଭିଧାନ', // T94142
 	'oswiki' => 'Википеди',
-	'otrs_wikiwiki' => 'OTRS Wiki',
+	'otrs_wikiwiki' => 'VRT Wiki',
 	'outreachwiki' => 'Outreach Wiki',
 	'pa_uswikimedia' => 'Wikimedia Pennsylvania',
 	'pawiki' => 'ਵਿਕੀਪੀਡੀਆ',
@@ -2596,6 +2600,7 @@ function wmfGetVariantSettings() {
 	'scnwiktionary' => 'Wikizziunariu',
 	'sdwiki' => 'وڪيپيڊيا', // T186943
 	'searchcomwiki' => 'SearchCom',
+	'shiwiki' => 'Wikipidya',
 	'shnwiki' => 'ဝီႇၶီႇၽီးတီးယႃး',
 	'shnwiktionary' => 'ဝိၵ်ႇသျိၼ်ႇၼရီႇ',
 	'shywiktionary' => 'Wikasegzawal',
@@ -2648,7 +2653,7 @@ function wmfGetVariantSettings() {
 	'thwikinews' => 'วิกิข่าว',
 	'thwikiquote' => 'วิกิคำคม',
 	'thwikisource' => 'วิกิซอร์ซ',
-	'tiwiki' => 'ዊኪፔዲያ',
+	'tiwiki' => 'ዊኪፐድያ', // T263840
 	'tiwiktionary' => 'ዊኪ-መዝገበ-ቃላት',
 	'tkwiki' => 'Wikipediýa',
 	'tkwiktionary' => 'Wikisözlük',
@@ -2805,8 +2810,8 @@ function wmfGetVariantSettings() {
 	'tewikiquote' => 'వికీవ్యాఖ్య_చర్చ', // T89332
 	'thwikibooks' => 'คุยเรื่องวิกิตำรา', // T42717
 	'thwikiquote' => 'คุยเรื่องวิกิคำคม',
-	'tiwiki' => 'ዊኪፔዲያ_ምይይጥ',
-	'tiwiktionary' => 'ዊኪ-መዝገበ-ቃላት_ምይይጥ',
+	'tiwiki' => 'ምይይጥ_ዊኪፐድያ', // T263840
+	'tiwiktionary' => 'ምይይጥ_ዊኪ-መዝገበ-ቃላት', // T263840
 	'thwiktionary' => 'คุยเรื่องวิกิพจนานุกรม', // T42717
 	'tyvwiki' => 'Википедия_дугайында_сүмелел', // T51328
 	'uawikimedia' => 'Обговорення_Вікімедіа',
@@ -3460,6 +3465,21 @@ function wmfGetVariantSettings() {
 		'Author_talk' => 109,
 		'באור' => 106,
 		'שיחת_באור' => 107,
+
+		// T286500
+		'מי' => NS_SPECIAL,
+		'ש' => NS_TALK,
+		'מש' => NS_USER,
+		'U' => NS_USER,
+		'שמש' => NS_USER_TALK,
+		'קו' => NS_FILE,
+		'שקו' => NS_FILE_TALK,
+		'מו' => NS_MEDIAWIKI,
+		'שמו' => NS_MEDIAWIKI_TALK,
+		'תב' => NS_TEMPLATE,
+		'שתב' => NS_TEMPLATE_TALK,
+		'קט' => NS_CATEGORY,
+		'שקט' => NS_CATEGORY_TALK,
 	],
 	'+hiwiki' => [
 		'वि' => NS_PROJECT,
@@ -3620,6 +3640,11 @@ function wmfGetVariantSettings() {
 	],
 	'+jawikinews' => [
 		"ポータル‐ノート" => 101,
+	],
+	'+jawikivoyage' => [ // T262155
+		'WikiProject' => 102,
+		'WikiProject talk' => 103,
+		'プロジェクト‐ノート' => 103,
 	],
 	'+kawikiquote' => [
 		'Wikiquote_განხილვა' => NS_PROJECT_TALK,
@@ -3810,6 +3835,10 @@ function wmfGetVariantSettings() {
 	],
 	'+mswiki' => [
 		'Portal_talk' => 101,
+		'Perbualan_Portal' => 101,
+	],
+	'+mswikibooks' => [
+		'Perbualan_Resipi' => 101,
 	],
 	'+mwlwiki' => [
 		'Wikipedia_cumbersa' => NS_PROJECT_TALK,
@@ -4125,6 +4154,9 @@ function wmfGetVariantSettings() {
 		'WL' => NS_PROJECT,
 	],
 	'+srwiki' => [
+		'WP' => NS_PROJECT, // T286396
+		'VP' => NS_PROJECT, // T286396
+		'ВП' => NS_PROJECT, // T286396
 		'Vikipedija' => NS_PROJECT,
 		'Draft' => 118, // T223472
 		'Draft_talk' => 119, // T223472
@@ -4201,6 +4233,14 @@ function wmfGetVariantSettings() {
 	],
 	'+thwiktionary' => [
 		'คุยเรื่องWiktionary' => NS_PROJECT_TALK,
+	],
+	'+tiwiki' => [ // T263840
+		'ዊኪፔዲያ' => NS_PROJECT,
+		'ዊኪፔዲያ_ምይይጥ' => NS_PROJECT_TALK,
+		'ማዕጾ_ምይይጥ' => 101,
+	],
+	'+tiwiktionary' => [ // T263840
+		'ዊኪ-መዝገበ-ቃላት_ምይይጥ' => NS_PROJECT_TALK,
 	],
 	'+tlwikibooks' => [
 		'WB' => NS_PROJECT,
@@ -4390,6 +4430,10 @@ function wmfGetVariantSettings() {
 	'+vecwiki' => [
 		'WP' => NS_PROJECT,
 		'Immagine' => NS_FILE,
+	],
+	'+viwiki' => [
+		'Chủ_đề' => 100,
+		'Thảo_luận_Chủ_đề' => 101,
 	],
 	'+viwikibooks' => [
 		'Subject' => 102,
@@ -4626,6 +4670,17 @@ function wmfGetVariantSettings() {
 		'模块讨论' => 829, // T165593
 		'模組' => 828, // T165593
 		'模組討論' => 829, // T165593
+		'CAT' => NS_CATEGORY, // T286101
+		'T' => NS_TEMPLATE, // T286101
+		'WT' => NS_PROJECT, // T286101
+		'重建' => 118, // T286101
+		'重構' => 118, // T286101
+		'重构' => 118, // T286101
+		'RC' => 118, // T286101
+		'重建讨论' => 119, // T286101
+		'重構討論' => 119, // T286101
+		'重构讨论' => 119, // T286101
+		'重建討論' => 119, // T286101
 	],
 	'+zh_yuewiki' => [
 		'WP' => NS_PROJECT,
@@ -5054,6 +5109,7 @@ function wmfGetVariantSettings() {
 	'ckbwiki' => 10, // T53537
 	'cswiki' => 10, // T163207
 	'enwiki' => 10, // T16191
+	'enwikisource' => 10, // T284627
 	'eswiki' => 50, // T15261
 	'eswikivoyage' => 25, // T46285
 	'fawiki' => 10, // T45630
@@ -5104,6 +5160,7 @@ function wmfGetVariantSettings() {
 	'fawiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T140839
 	'frwiki' => [ '', 'autoconfirmed', 'editextendedsemiprotected', 'sysop' ], // T131109
 	'hewiki' => [ '', 'autoconfirmed', 'editautopatrolprotected',  'templateeditor' /* T102466 */, 'sysop' ], // T60207
+	'hewikisource' => [ '', 'autoconfirmed', 'editautoreviewprotected', 'sysop' ], // T275076
 	'huwiki' => [ '', 'autoconfirmed', 'edittrustedprotected', 'templateeditor', 'sysop' ], // T74055, T194568
 	'jawiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T249820
 	'kowiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T184675
@@ -5121,6 +5178,7 @@ function wmfGetVariantSettings() {
 	'testwiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T61084
 	'viwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T215493
 	'zhwiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T260012
+	'zhwiktionary' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T286101
 ],
 # @} end of wgRestrictionLevels
 
@@ -5330,6 +5388,7 @@ function wmfGetVariantSettings() {
 		'PageTriage' => 'debug',
 		'PageViewInfo' => 'info',
 		'ParserCache' => 'warning',
+		'Parsoid' => 'warning',
 		'poolcounter' => 'debug',
 		'preferences' => 'info',
 		'purge' => 'debug',
@@ -5474,6 +5533,8 @@ function wmfGetVariantSettings() {
 		129 => '2019_talk',
 		130 => '2020',
 		131 => '2020_talk',
+		132 => '2021',
+		133 => '2021_talk',
 	],
 	# @}
 
@@ -5780,8 +5841,7 @@ function wmfGetVariantSettings() {
 		101 => 'Portal_talk',
 		# 106 => 'Table',
 		# 107 => 'Table_talk',
-		108 => 'Book',
-		109 => 'Book_talk',
+		// 108, 109 were used for Book namespace, deleted as part of T285766
 		118 => 'Draft', // T59569
 		119 => 'Draft_talk',
 	],
@@ -6034,7 +6094,7 @@ function wmfGetVariantSettings() {
 	],
 	'mswiki' => [
 		100 => 'Portal',
-		101 => 'Perbualan_Portal',
+		101 => 'Perbincangan_portal',
 	],
 	'mwlwiki' => [
 		100 => 'Portal', // T180052
@@ -6233,7 +6293,7 @@ function wmfGetVariantSettings() {
 	],
 	'tiwiki' => [
 		100 => 'ማዕጾ', // T259295 Portal
-		101 => 'ማዕጾ_ምይይጥ', // T259295 Portal talk
+		101 => 'ምይይጥ_ማዕጾ', // T259295, T263840 Portal talk
 	],
 	'tlwiki' => [
 		100 => 'Portada', // Portal
@@ -6273,7 +6333,10 @@ function wmfGetVariantSettings() {
 		102 => 'Projeto',
 		103 => 'Discussion_projeto',
 	],
-	'viwiki' => [ 100 => 'Chủ_đề', 101 => 'Thảo_luận_Chủ_đề' ],
+	'viwiki' => [
+		100 => 'Cổng_thông_tin',
+		101 => 'Thảo_luận_Cổng_thông_tin'
+	],
 	'wuuwiki' => [
 		// Override MediaWiki default namespace names for "wuu",
 		// same than for "yue", see T124389.
@@ -6369,6 +6432,10 @@ function wmfGetVariantSettings() {
 	'aswikisource' => [
 		102 => 'লেখক', // T72464 - Author
 		103 => 'লেখক_আলোচনা',
+	],
+	'banwikisource' => [
+		102 => 'Pangawi', // T284389 - Author
+		103 => 'Pabligbagan_Pangawi', // T284389 - Author talk
 	],
 	'bewikisource' => [
 		102 => 'Аўтар', // Author
@@ -7071,6 +7138,8 @@ function wmfGetVariantSettings() {
 		103 => 'Transwiki_talk',
 		106 => 'Rhymes', // T241023
 		107 => 'Rhymes_talk', // T241023
+		118 => 'Reconstruction', // T286101
+		119 => 'Reconstruction_talk', // T286101
 		828 => 'Module', // T165593
 		829 => 'Module_talk', // T165593
 	],
@@ -7188,7 +7257,7 @@ function wmfGetVariantSettings() {
 	],
 	'mswikibooks' => [
 		100 => 'Resipi',
-		101 => 'Perbualan_Resipi',
+		101 => 'Perbincangan_resipi',
 	],
 	'nlwikibooks' => [
 		102 => 'Transwiki',
@@ -7370,10 +7439,9 @@ function wmfGetVariantSettings() {
 		101 => 'Dyskusja_portalu'
 	],
 	'ptwikinews' => [
+		// ID 102 and 103 were used before (T285163), do not re-use
 		100 => 'Portal',
 		101 => 'Portal_Discussão',
-		102 => 'Efeméride',
-		103 => 'Efeméride_Discussão',
 		104 => 'Transwiki',
 		105 => 'Transwiki_Discussão',
 		110 => 'Colaboração', // T94894
@@ -7614,7 +7682,7 @@ function wmfGetVariantSettings() {
 	'jawikivoyage' => [
 		// 102 and 103 used because they're the same as in jawiki
 		102 => 'プロジェクト',
-		103 => 'プロジェクト‐ノート',
+		103 => 'プロジェクト・ノート', // T262155
 	],
 	'plwikivoyage' => [
 		NS_PROJECT_TALK => 'Dyskusja_Wikipodróży',
@@ -7718,18 +7786,25 @@ function wmfGetVariantSettings() {
 'wgVectorDefaultSidebarVisibleForAnonymousUser' => [
 	'desktop-improvements' => true,
 ],
+
+'wgVectorConsolidateUserLinks' => [
+	'default' => [
+		'logged_in' => false,
+		'logged_out' => false,
+	],
+],
+
 'wgVectorLanguageInHeader' => [
 	'default' => [
 		'logged_in' => true,
 		'logged_out' => false,
 	],
-	// Temporary: See T280526.
 	'desktop-improvements' => [
-		'logged_in' => false,
-		'logged_out' => false,
+		'logged_in' => true,
+		'logged_out' => true,
 	],
-	// Test wiki and Office Wiki are part of the `desktop-improvements` group,
-	// but have special treatment.
+	// Some of the following wikis are part of the `desktop-improvements` group,
+	// but have special treatment due to their wiki-specific language handling.
 	'testwiki' => [
 		'logged_in' => true,
 		'logged_out' => true,
@@ -7737,6 +7812,22 @@ function wmfGetVariantSettings() {
 	'officewiki' => [
 		'logged_in' => true,
 		'logged_out' => true,
+	],
+	'commonswiki' => [
+		'logged_in' => false,
+		'logged_out' => false
+	],
+	'wikidatawiki' => [
+		'logged_in' => false,
+		'logged_out' => false
+	],
+	'mediawikiwiki' => [
+		'logged_in' => false,
+		'logged_out' => false
+	],
+	'specieswiki' => [
+		'logged_in' => false,
+		'logged_out' => false
 	],
 ],
 'wgVectorUseWvuiSearch' => [
@@ -8201,6 +8292,7 @@ function wmfGetVariantSettings() {
 		'wikivoyage.org',
 		'wikidata.org',
 		'tools.wmflabs.org',
+		'toolforge.org',
 		'etherpad.wmflabs.org',
 	],
 ],
@@ -8369,7 +8461,7 @@ function wmfGetVariantSettings() {
 	'+viwikisource' => [ 102 => 1, 106 => 1 ],
 	'+testwikidatawiki' => [ 120 => 1 ], // Search properties by default
 	'+wikidatawiki' => [ 120 => 1 ], // Search properties by default
-	'+wikimaniawiki' => [ 128 => 1 /* 2019 content */ ],
+	'+wikimaniawiki' => [ 132 => 1 /* 2021 content */ ],
 	'+zhwikisource' => [ 102 => 1, 106 => 1, 114 => 1 ], // T66127
 ],
 # @} end of wgNamespacesToBeSearchedDefault
@@ -8498,8 +8590,8 @@ function wmfGetVariantSettings() {
 	// note that account creation is not the only bottleneck
 	'default' => [],
 	'+enwiki' => [
-		'45.56.98.206',  // Wiki Education Foundation dashboard T126541
-		'2600:3c03::f03c:91ff:fe08:7973', // idem, T151823
+		'45.79.101.112', // Wiki Education Foundation dashboard T283096
+		'2600:3c01::f03c:92ff:fe44:4b6d', // T283096
 	],
 	'+testwikidatawiki' => [
 		// Browser tests run by Jenkins on WMCS instances - T167432
@@ -8933,6 +9025,7 @@ function wmfGetVariantSettings() {
 			'rollback' => true, // T67348
 		], // T54578
 		'suppressredirect' => [ 'suppressredirect' => true ], // T69278
+		'patroller' => [ 'patrol' => true ], // T285221
 	],
 	'+cswiki' => [
 		'accountcreator' => [ // T254927
@@ -9208,6 +9301,7 @@ function wmfGetVariantSettings() {
 			'delete-redirect' => true, // T278131
 		],
 		'patroller' => [ 'patrol' => true ], // T149019
+		'autoconfirmed' => [ 'collectionsaveascommunitypage' => false ], // T283523
 	],
 	'+enwikibooks' => [
 		'autoreview' => [ 'autopatrol' => true ], // T278300
@@ -9229,6 +9323,9 @@ function wmfGetVariantSettings() {
 		'autoconfirmed' => [ 'patrol' => true ], // T14355
 		'autopatrolled' => [ 'autopatrol' => true ], // T20307
 		'flood' => [ 'bot' => true ], // T38863
+		'upload-shared' => [ // T285130
+			'reupload-shared' => true,
+		],
 	],
 	'+enwikiversity' => [
 		'sysop' => [ 'nuke' => false ], // T113109
@@ -9477,7 +9574,10 @@ function wmfGetVariantSettings() {
 			'changetags' => true, // T98629
 			'editextendedsemiprotected' => true // T131109
 		],
-		'rollbacker' => [ 'rollback' => true ], // T170780
+		'rollbacker' => [
+			'rollback' => true, // T170780
+			'unwatchedpages' => true // T285334
+		],
 		'checkuser' => [
 			'browsearchive' => true,
 			'deletedhistory' => true,
@@ -9615,8 +9715,12 @@ function wmfGetVariantSettings() {
 		],
 		'autopatrolled' => [ 'autopatrol' => true ], // T29918
 	],
-	'+hewikisource' => [
-		'reviewer' => [ 'rollback' => true, ], // T274796
+	'+hewikisource' => [ // T275076
+		'autoreview' => [ 'editautoreviewprotected' => true ],
+		'bot' => [ 'editautoreviewprotected' => true ],
+		'reviewer' => [ 'rollback' => true, 'editautoreviewprotected' => true ], // T274796
+		'editor' => [ 'editautoreviewprotected' => true ],
+		'sysop' => [ 'editautoreviewprotected' => true ],
 	],
 	'+hewikiquote' => [
 		'autopatrolled' => [ 'autopatrol' => true ],
@@ -9970,6 +10074,7 @@ function wmfGetVariantSettings() {
 	'+metawiki' => [
 		'*' => [ 'urlshortener-create-url' => true, ], // T229633
 		'autopatrolled' => [ 'autopatrol' => true, ], // T27160
+		'bot' => [ 'changetags' => true ], // T283625
 		'centralnoticeadmin' => [ // gerrit:50196, T142123
 			'autopatrol' => true,
 			'banner-protect' => true,
@@ -10007,6 +10112,7 @@ function wmfGetVariantSettings() {
 			'oathauth-verify-user' => true, // T251447
 			'oathauth-view-log' => true,
 		],
+		'sysop' => [ 'changetags' => true ], // T283625
 		'translationadmin' => [
 			'autopatrol' => true, // T142123
 			'banner-protect' => true,
@@ -10016,6 +10122,7 @@ function wmfGetVariantSettings() {
 			'reupload' => true,
 			'reupload-own' => true,
 		],
+		'user' => [ 'changetags' => false ], // T283625
 		'wmf-officeit' => [ // T106724, T142123, T254372
 			'autopatrol' => true,
 			'centralauth-lock' => true,
@@ -10291,6 +10398,7 @@ function wmfGetVariantSettings() {
 			'editautoreviewprotected' => true,
 			'movefile' => true, // T161532
 			'move-rootuserpages' => true, // T205595
+			'flow-delete' => true, // T283266
 		],
 		'rollbacker' => [
 			'rollback' => true,
@@ -10862,6 +10970,7 @@ function wmfGetVariantSettings() {
 			'deleterevision' => true,
 			'mergehistory' => true,
 			'protect' => true,
+			'editprotected' => true, // T281274
 			'suppressredirect'  => true,
 			'deletedhistory' => true
 		], // T184607
@@ -11110,6 +11219,8 @@ function wmfGetVariantSettings() {
 		'bot' => [ 'patrol' => true ],
 		'flood' => [ 'bot' => true ], // T187018
 		'autoconfirmed' => [ 'suppressredirect' => true ], // T187018
+		'templateeditor' => [ 'templateeditor' => true, ], // T286101
+		'sysop' => [ 'templateeditor' => true ], // T286101
 	],
 	'+zh_yuewiki' => [
 		'autoconfirmed' => [ 'patrol' => true ],
@@ -11400,6 +11511,7 @@ function wmfGetVariantSettings() {
 			'confirmed', // T53715
 			'flood', // T53803
 			'suppressredirect', // T69278
+			'patroller', // T285221
 		],
 		'bureaucrat' => [
 			'botadmin', // T54578
@@ -11475,8 +11587,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'abusefilter', 'abusefilter-helper', 'accountcreator', 'autoreviewer', 'confirmed', 'eventcoordinator', 'filemover', 'reviewer', 'rollbacker', 'templateeditor', 'massmessage-sender', 'extendedconfirmed', 'extendedmover', 'patroller' ], // T126607, T133981, T149019, T175684, T193075
 	],
 	'+enwikibooks' => [
-		'sysop' => [ 'import', 'transwiki', 'uploader' ], // T278683
-		'bureaucrat' => [ 'flood' ],
+		'sysop' => [ 'import', 'transwiki', 'uploader', 'flood' ], // T278683, T285594
 	],
 	'+enwikinews' => [
 		'bureaucrat' => [ 'flood' ],
@@ -11518,7 +11629,7 @@ function wmfGetVariantSettings() {
 	],
 	'+enwikisource' => [
 		'bureaucrat' => [ 'autopatrolled', 'flood' ], // T38863
-		'sysop' => [ 'abusefilter', 'autopatrolled' ],
+		'sysop' => [ 'abusefilter', 'autopatrolled', 'upload-shared' ],
 	],
 	'+enwiktionary' => [
 		'sysop' => [ 'autopatrolled', 'flood', 'patroller', 'rollbacker', 'templateeditor', 'extendedmover' ], // T148007, T212662
@@ -12082,6 +12193,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [
 			'rollbacker',
 			'flood', // T54546
+			'transwiki', // T273405
 		],
 	],
 	'+zhwikiquote' => [
@@ -12094,7 +12206,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'autopatrolled', 'confirmed', 'patroller', 'transwiki' ], // T62085, T62328
 	],
 	'+zhwiktionary' => [
-		'sysop' => [ 'flood', ], // T187018
+		'sysop' => [ 'flood', 'templateeditor', ], // T187018, T286101
 	],
 	'+zh_yuewiki' => [
 		'sysop' => [ 'abusefilter', 'rollbacker', 'autoreviewer', 'confirmed' ],
@@ -12239,6 +12351,7 @@ function wmfGetVariantSettings() {
 			'confirmed', // T53715
 			'flood', // T53803
 			'suppressredirect', // T69278
+			'patroller', // T285221
 		],
 		'bureaucrat' => [
 			'botadmin', // T54578
@@ -12315,8 +12428,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'rollbacker', 'accountcreator', 'abusefilter', 'abusefilter-helper', 'autoreviewer', 'confirmed', 'reviewer', 'filemover', 'templateeditor', 'massmessage-sender', 'extendedconfirmed', 'extendedmover', 'patroller', 'eventcoordinator' ], // T126607, T133981, T149019, T175684, T193075
 	],
 	'+enwikibooks' => [
-		'sysop' => [ 'import', 'transwiki', 'uploader', ], // T278683
-		'bureaucrat' => [ 'flood' ],
+		'sysop' => [ 'import', 'transwiki', 'uploader', 'flood' ], // T278683, T285594
 	],
 	'+enwikinews' => [
 		'bureaucrat' => [ 'flood', 'sysop' ],
@@ -12335,7 +12447,7 @@ function wmfGetVariantSettings() {
 	],
 	'+enwikisource' => [
 		'bureaucrat' => [ 'autopatrolled', 'flood' ], // T38863
-		'sysop' => [ 'abusefilter', 'autopatrolled', ],
+		'sysop' => [ 'abusefilter', 'autopatrolled', 'upload-shared', ],
 	],
 	'+eswiki' => [
 		'bureaucrat' => [ 'abusefilter', 'rollbacker' ], // T262174
@@ -12949,6 +13061,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [
 			'rollbacker',
 			'flood', // T54546
+			'transwiki', // T273405
 		],
 	],
 	'+zhwikiquote' => [
@@ -12961,7 +13074,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'autopatrolled', 'confirmed', 'patroller', 'transwiki' ], // T62085, T62328
 	],
 	'+zhwiktionary' => [
-		'sysop' => [ 'flood', ], // T187018
+		'sysop' => [ 'flood', 'templateeditor', ], // T187018, T286101
 	],
 	'+zh_yuewiki' => [
 		'sysop' => [ 'abusefilter', 'rollbacker', 'autoreviewer', 'confirmed' ],
@@ -13423,6 +13536,14 @@ function wmfGetVariantSettings() {
 	'default' => false,
 ],
 
+'wmgAdditionalSoftwareTags' => [
+	'default' => [],
+	'wikipedia' => [
+		'mw-add-media' => true,
+		'mw-remove-media' => true,
+	],
+],
+
 'wgUnwatchedPageThreshold' => [
 	'default' => 30, // Default value of https://toolserver.org/~mzmcbride/watcher/
 ],
@@ -13433,6 +13554,10 @@ function wmfGetVariantSettings() {
 ],
 
 'wgNamespaceRobotPolicies' => [
+	'bnwiki' => [
+		NS_USER => 'noindex,follow', // T286152
+		NS_USER_TALK => 'noindex,follow',
+	],
 	'ckbwiki' => [
 		NS_TALK => 'noindex,follow',
 		NS_USER => 'noindex,follow',
@@ -13472,6 +13597,8 @@ function wmfGetVariantSettings() {
 	'enwiki' => [
 		NS_USER => 'noindex,follow', // T104797
 		NS_USER_TALK => 'noindex,follow',
+		108 => 'noindex,nofollow', // T283522, Book
+		109 => 'noindex,nofollow', // T283522, Book talk
 		118 => 'noindex,nofollow', // draft
 		119 => 'noindex,nofollow', // draft talk
 	],
@@ -13519,6 +13646,12 @@ function wmfGetVariantSettings() {
 		113 => 'noindex,nofollow',    // שיחת_מפתח
 		116 => 'noindex,nofollow',    // מקור
 		117 => 'noindex,nofollow',    // שיחת_מקור
+	],
+	'hrwiki' => [
+		NS_USER => 'noindex,follow', // T284384
+		NS_USER_TALK => 'noindex,follow', // T284384
+		118 => 'noindex,nofollow', // draft, T284384
+		119 => 'noindex,nofollow', // draft talk, T284384
 	],
 	'hywiki' => [
 		NS_USER => 'noindex,follow', // T257112
@@ -13882,6 +14015,17 @@ function wmfGetVariantSettings() {
 'wmgUseScore' => [
 	'default' => true,
 	'wikitech' => false,
+	'private' => false,
+	'lockeddown' => false,
+],
+
+'wmgUseScoreShellbox' => [
+	'default' => false,
+	'enwikisource' => true,
+	'plwikisource' => true,
+	'testwiki' => true,
+	# Do not enable on higher-security wikis
+	'private' => false,
 	'lockeddown' => false,
 ],
 
@@ -13958,6 +14102,7 @@ function wmfGetVariantSettings() {
 	'srwiktionary' => true, // T70346
 	'strategywiki' => true,
 	'viwiktionary' => true, // T10886
+	'ruwikinews' => false,
 ],
 
 'wgDLPQueryCacheTime' => [
@@ -14323,7 +14468,7 @@ function wmfGetVariantSettings() {
 	'jawiki' => [
 		'extendedconfirmed' => [ '&',
 			[ APCOND_EDITCOUNT, 500 ],
-			[ APCOND_AGE, 120 * 86400 ], // 120 days * seconds in a day
+			[ APCOND_AGE_FROM_EDIT, 120 * 86400 ], // 120 days * seconds in a day
 			[ '!', [ APCOND_INGROUPS, 'interface-admin' ] ],
 			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
 			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
@@ -14734,6 +14879,7 @@ function wmfGetVariantSettings() {
 	'plwiki' => true, // T138169
 	'pswiki' => true, // T121132
 	'ptwiki' => true, // T269290
+	'ptwikinews' => true, // T282845
 	'ptwiktionary' => true, // T46412
 	'rowiki' => true,
 	'rowikinews' => true,
@@ -14854,6 +15000,7 @@ function wmfGetVariantSettings() {
 	'fawiki' => true,
 	'hiwiki' => true,
 	'ptwiki' => true,
+	'idwiki' => true,
 ],
 
 'wgSimpleFlaggedRevsUI' => [
@@ -14899,7 +15046,6 @@ function wmfGetVariantSettings() {
 	'metawiki' => [ 'sysop' => [ 'flood' ] ], // T39198
 	'officewiki' => [ 'sysop' => [ 'flood' ] ], // T86237
 	'sourceswiki' => [ 'sysop' => [ 'flood' ] ], // T193350
-	'enwikibooks' => [ 'sysop' => [ 'flood' ] ],
 	'eswikibooks' => [ 'sysop' => [ 'flood' ] ], // T111455
 	'enwikinews' => [ 'sysop' => [ 'flood' ] ],
 	'enwikisource' => [ 'sysop' => [ 'flood' ] ], // T38863
@@ -14929,7 +15075,7 @@ function wmfGetVariantSettings() {
 		'flood' => [ 'flood' ], // T53803
 		'botadmin' => [ 'botadmin' ], // T53803
 	],
-	'enwikibooks' => [ 'sysop' => [ 'flood' ] ],
+	'enwikibooks' => [ 'flood' => [ 'flood' ] ], // T285594
 	'enwikinews' => [ 'sysop' => [ 'flood' ] ],
 	'enwikisource' => [ 'sysop' => [ 'flood' ] ], // T38863
 	'enwikiversity' => [ 'interface-admin' => [ 'interface-admin' ] ], // T238967
@@ -14997,10 +15143,6 @@ function wmfGetVariantSettings() {
 	'default' => 'metawiki',
 ],
 
-'wgAbuseFilterAflFilterMigrationStage' => [
-	'default' => SCHEMA_COMPAT_NEW
-],
-
 // emergency disable: shut off filters tagging >5% of posts on a total of at least 25 posts per day
 'wgAbuseFilterEmergencyDisableThreshold' => [
 	'default' => [ 'default' => 0.05, ],
@@ -15009,6 +15151,7 @@ function wmfGetVariantSettings() {
 	'eswikibooks' => [ 'default' => 0.30, ], // T145765
 	'metawiki' => [ 'default' => 0.30, ], // T173633
 	'mediawikiwiki' => [ 'default' => 0.30, ], // T212667
+	'eswiki' => [ 'default' => 0.1, ], // T284797
 	'ukwiki' => [ 'default' => 0.40, ], // Temporary
 ],
 'wgAbuseFilterEmergencyDisableCount' => [
@@ -15019,6 +15162,7 @@ function wmfGetVariantSettings() {
 	'testcommonswiki' => [ 'default' => 25, ], // T87431
 	'metawiki' => [ 'default' => 25, ], // T173633
 	'mediawikiwiki' => [ 'default' => 25, ], // T212667
+	'eswiki' => [ 'default' => 3, ], // T284797
 	'ukwiki' => [ 'default' => 75, ], // Temporary
 ],
 'wgAbuseFilterEmergencyDisableAge' => [
@@ -15216,6 +15360,7 @@ function wmfGetVariantSettings() {
 		'www.defenceimagery.mod.uk',        // UK Ministry of Defence - T166271
 		'media.static.onlinesammlung.thenetexperts.info',  // Bayerische Staatsgemäldesammlungen - T166437
 		'*.geograph.org.uk',                // Geograph Britain and Ireland - T174152
+		'*.geograph.ie',                    // Geograph Ireland - T282007
 		'*.geograph.org.gg',                // Geograph Channel Islands - T174152
 		'geo.hlipp.de',                     // Geograph Deutschland - T174152
 		'geo-en.hlipp.de',                  // Geograph Deutschland - T174152
@@ -15359,6 +15504,8 @@ function wmfGetVariantSettings() {
 		'seer.ufrgs.br', // T270962
 		'inaturalist-open-data.s3.amazonaws.com', // iNaturalist - T275318
 		'*.jfklibrary.org', // JFK library - T279506
+		'*.sayahna.org', // Sayahna Foundation - T286163
+		'digital.ub.umu.se', // Umeå University - T287204
 	],
 ],
 
@@ -15384,7 +15531,6 @@ function wmfGetVariantSettings() {
 	'frwiki' => true, // T202014
 ],
 
-// Temporarily unused, see T280886
 'wmgUseFooterCodeOfConductLink' => [
 	'default' => true,
 	'mediawikiwiki' => false,
@@ -15528,6 +15674,7 @@ function wmfGetVariantSettings() {
 	'testwiki' => true,
 	'arwiki' => true,
 	'atjwiki' => true, // T182798
+	'azwiki' => true, // T282954
 	'bhwiki' => true,
 	'bnwiki' => true,
 	'bnwikibooks' => true,
@@ -15923,27 +16070,27 @@ function wmfGetVariantSettings() {
 	'yiwiki' => 'NavigationPopups',
 ],
 
+// Enable Reference Previews as a beta feature.
 'wgPopupsReferencePreviews' => [
 	'default' => false,
-	'group0' => true, // T214905
-	'arwiki' => true, // T218766
-	'dewiki' => true, // T218766
 	'enwikivoyage' => true, // T235083
 	'sewikimedia' => true, // T235083
 	'wikipedia' => true, // T235083
 	'zhwikivoyage' => true, // T235083
 ],
 
+// Enable Reference Previews as a full default feature.
 'wmgPopupsReferencePreviews' => [
 	'default' => false,
 	'group0' => true,
 	'arwiki' => true,
 	'dewiki' => true,
-	'euwiki' => true,
 	'etwiki' => true,
+	'euwiki' => true,
 	'fiwiki' => true,
 	'guwiki' => true,
 	'hewiki' => true,
+	'mrwiki' => true, // T282147
 	'rowiki' => true,
 ],
 
@@ -16282,6 +16429,7 @@ function wmfGetVariantSettings() {
 // Whether to enable true section editing. false, true or 'mobile'
 'wmgVisualEditorEnableVisualSectionEditing' => [
 	'default' => 'mobile',
+	'wikitech' => true,
 	'officewiki' => true,
 ],
 
@@ -16428,6 +16576,7 @@ function wmfGetVariantSettings() {
 	// Wikimanias
 	'+wikimaniawiki' => [
 		'2019' => true, // T218645
+		'2021' => true, // T287197
 	],
 
 	// Wikimedias
@@ -16532,6 +16681,22 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
+'wgVisualEditorTransclusionDialogBackButton' => [
+	'default' => false,
+	'group0' => true, // T284553
+	'dewiki' => true, // T284553
+	'elwiki' => true, // T284553
+	'enwikivoyage' => true, // T284553
+	'fiwiki' => true, // T284553
+	'frwiki' => true, // T284553
+	'hewiki' => true, // T284553
+	'huwiki' => true, // T284553
+	'mswiki' => true, // T284553
+	'nawiktionary' => true, // T284553
+	'trwiki' => true, // T284553
+	'twwiki' => true, // T284553
+],
+
 // --------------- VisualEditor end ---------------
 
 'wgCiteResponsiveReferences' => [
@@ -16559,6 +16724,7 @@ function wmfGetVariantSettings() {
 	'nowiki' => true, // T160362
 	'ptwiki' => true, // T189658
 	'rowiki' => true, // T187997
+	'svwiki' => true, // T281622
 
 	// Wiki families
 	'wiktionary' => true, // T159895 overall, T160933 for enwikt
@@ -16598,6 +16764,7 @@ function wmfGetVariantSettings() {
 	],
 	'metawiki' => [
 		'https://tagteam.harvard.edu/hubs/wmde-policy/items.rss', // WM DE political RSS feed - T165285
+		'https://diff.wikimedia.org/feed/' // Diff - T283380
 	],
 ],
 
@@ -16930,6 +17097,7 @@ function wmfGetVariantSettings() {
 	'fawiktionary' => true, // T35541
 	'hewiki' => true,
 	'hewikiquote' => true, // T266744
+	'hewikisource' => true, // T284864
 	'hewiktionary' => true, // T262181
 	'hiwiki' => true,
 	'huwiki' => true, // T32417
@@ -16960,6 +17128,7 @@ function wmfGetVariantSettings() {
 	'srwiki' => true, // T37913
 	'svwiki' => true, // T32756
 	'svwikinews' => true, // T33754
+	'tawiki' => true, //T280326
 	'testwiki' => true,
 	'trwiki' => true, // T40227
 	'ukwiki' => true, // T91530
@@ -16991,7 +17160,7 @@ function wmfGetVariantSettings() {
 'wgMFQueryPropModules' => [
 	// workaround for T125672
 	'default' => [ 'pageprops' ],
-	'wikidata' => [ 'pageterms' ],
+	'wikidata' => [ 'entityterms' ],
 ],
 'wgMFSearchAPIParams' => [
 	// workaround for T125672, though also fixes T120197
@@ -16999,7 +17168,7 @@ function wmfGetVariantSettings() {
 		'ppprop' => 'displaytitle'
 	],
 	'wikidata' => [
-		'wbptterms' => 'label'
+		'wbetterms' => 'label'
 	]
 ],
 'wgMFSearchGenerator' => [
@@ -18283,7 +18452,7 @@ function wmfGetVariantSettings() {
 	'jawikisource' => 'User %code%',
 	'jawikiversity' => 'User %code%',
 	'jbowiki' => 'pilno %code%',
-	'jvwiki' => 'Panganggo %code%',
+	'jvwiki' => 'Naraguna %code%',
 	'kabwiki' => 'User %code%',
 	'kawiki' => 'მომხმარებელი %code%',
 	'kawikibooks' => 'მომხმარებელი %code%',
@@ -18903,16 +19072,12 @@ function wmfGetVariantSettings() {
 ],
 'wmgUseEducationProgram' => [
 	'default' => false,
-	'cswiki' => true, // T56223
 	'elwiki' => true, // T58771
-	'enwiki' => true,
 	'eswiki' => true, // T56826
 	'fawiki' => true,
-	'hewiki' => true, // T50848
 	'itwikiversity' => true, // T162692
 	'lvwiki' => true, // T89898
 	'ptwiki' => true, // T54870
-	'ruwiki' => true, // T89588
 	'svwiki' => true, // T51009
 	'ukwiki' => true, // T66143
 ],
@@ -19044,7 +19209,7 @@ function wmfGetVariantSettings() {
 
 'wgEntitySchemaShExSimpleUrl' => [
 	'default' => null,
-	'wikidatawiki' => 'https://tools.wmflabs.org/shex-simple/wikidata/packages/shex-webapp/doc/shex-simple.html?data=Endpoint:%20https://query.wikidata.org/sparql&hideData&manifest=[]&textMapIsSparqlQuery'
+	'wikidatawiki' => 'https://shex-simple.toolforge.org/wikidata/packages/shex-webapp/doc/shex-simple.html?data=Endpoint:%20https://query.wikidata.org/sparql&hideData&manifest=[]&textMapIsSparqlQuery'
 ],
 
 'wgEntitySchemaSkippedIDs' => [
@@ -19228,25 +19393,10 @@ function wmfGetVariantSettings() {
 	'default' => true, // T252264
 	// Can't be enabled on wikis where wmgUseLinter or wmgUseVisualEditor is disabled:
 	'lockeddown' => false,
-	'wikitech' => false,
 ],
 
 'wgDiscussionToolsEnable' => [
-	'default' => true, // T276498
-	'wikipedia' => true, // T266303
-	'enwiki' => true, // T273146
-	'dewiki' => true, // T276494
-	'ruwiki' => true, // T276493
-	'enwikibooks' => true, // T276851
-	'enwikiversity' => true, // T264693
-	'frwiktionary' => true, // T276189
-	'gomwiktionary' => true, // T258554
-	'jawikivoyage' => true, // T265829
-	'kuwiktionary' => true, // T273192
-	'mediawikiwiki' => true, // T251208
-	'metawiki' => true, // T264693
-	'apiportalwiki' => true, // T260624
-	'officewiki' => true, // T277103
+	'default' => true, // T276497
 ],
 
 'wgDiscussionToolsBeta' => [
@@ -19266,6 +19416,7 @@ function wmfGetVariantSettings() {
 	'gomwiktionary' => 'available', // T258554
 	'enwikibooks' => 'available', // T276851
 	'officewiki' => 'available', // T277103
+	'wikitech' => 'available', // T283119
 ],
 
 'wgDiscussionTools_newtopictool' => [
@@ -19273,11 +19424,18 @@ function wmfGetVariantSettings() {
 ],
 
 'wgDiscussionTools_sourcemodetoolbar' => [
-	'default' => 'unavailable',
+	'default' => 'default', // T279124
 ],
 
 'wgDiscussionTools_topicsubscription' => [
 	'default' => 'unavailable',
+	'arwiki' => 'default', // T274280
+	'cswiki' => 'default', // T274280
+	'frwiki' => 'default', // T274280
+	'huwiki' => 'default', // T274280
+	'nlwiki' => 'default', // T274280
+	'metawiki' => 'default', // T274280
+	'mediawikiwiki' => 'default', // T274280
 ],
 
 'wgDTSchemaEditAttemptStepSamplingRate' => [
@@ -19386,7 +19544,6 @@ function wmfGetVariantSettings() {
 	"aywiki" => true,
 	"azbwiki" => true,
 	"banwiki" => true,
-	"barwiki" => true,
 	"bat_smgwiki" => true,
 	"be_x_oldwiki" => true,
 	"bgwiki" => true,
@@ -19405,7 +19562,6 @@ function wmfGetVariantSettings() {
 	"chrwiki" => true,
 	"chwiki" => true,
 	"chywiki" => true,
-	"ckbwiki" => true,
 	"crhwiki" => true,
 	"crwiki" => true,
 	"csbwiki" => true,
@@ -19452,7 +19608,6 @@ function wmfGetVariantSettings() {
 	"hiwiki" => true,
 	"hrwiki" => true,
 	"hsbwiki" => true,
-	"htwiki" => true,
 	"huwiki" => true,
 	"hywwiki" => true,
 	"hzwiki" => true,
@@ -19521,9 +19676,7 @@ function wmfGetVariantSettings() {
 	"nsowiki" => true,
 	"nvwiki" => true,
 	"nywiki" => true,
-	"ocwiki" => true,
 	"olowiki" => true,
-	"omwiki" => true,
 	"oswiki" => true,
 	"pagwiki" => true,
 	"pamwiki" => true,
@@ -19548,11 +19701,9 @@ function wmfGetVariantSettings() {
 	"rowiki" => true,
 	"ruewiki" => true,
 	"ruwiki" => true,
-	"sahwiki" => true,
 	"satwiki" => true,
 	"sawiki" => true,
 	"scnwiki" => true,
-	"scowiki" => true,
 	"scwiki" => true,
 	"sewiki" => true,
 	"sgwiki" => true,
@@ -19572,7 +19723,6 @@ function wmfGetVariantSettings() {
 	"szywiki" => true,
 	"tcywiki" => true,
 	"tetwiki" => true,
-	"thwiki" => true,
 	"tiwiki" => true,
 	"tnwiki" => true,
 	"towiki" => true,
@@ -19592,7 +19742,6 @@ function wmfGetVariantSettings() {
 	"viwiki" => true,
 	"vlswiki" => true,
 	"vowiki" => true,
-	"warwiki" => true,
 	"wawiki" => true,
 	"wowiki" => true,
 	"wuuwiki" => true,
@@ -19778,6 +19927,7 @@ function wmfGetVariantSettings() {
 	'eswikinews' => true, // T230660
 	'ptwikinews' => true, // T268945
 	'frwikinews' => true, // T143480
+	'zhwikinews' => true, // T266933
 ],
 
 'wgRelatedArticlesCardLimit' => [
@@ -19840,6 +19990,20 @@ function wmfGetVariantSettings() {
 'wgEventStreamsDefaultSettings' => [
 	'default' => [
 		'topic_prefixes' => [ 'eqiad.', 'codfw.' ],
+		# By default, all events should be imported into Hadoop.
+		# The analytics hadoop ingestion consumer (Gobblin) will
+		# look for streams to ingest using these settings.
+		# Each stream in a job should have similar volumes to allow
+		# the job to scale properly and not cause stream ingestion starvation.
+		# The default job_name is be event_default.
+		# Override this if the stream should be imported by a different job,
+		# or disabled altogether.
+		'consumers' => [
+			'analytics_hadoop_ingestion' => [
+				'job_name' => 'event_default',
+				'enabled' => true,
+			],
+		],
 	],
 ],
 
@@ -19876,13 +20040,43 @@ function wmfGetVariantSettings() {
 		 * implicit topic prefixing by the EventStreamConfig extension.
 		 */
 		[
+			'stream' => 'eventlogging_CentralNoticeBannerHistory',
+			'schema_title' => 'analytics/legacy/centralnoticebannerhistory',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
+		],
+		[
+			'stream' => 'eventlogging_CentralNoticeImpression',
+			'schema_title' => 'analytics/legacy/centralnoticeimpression',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
+		],
+		[
 			'stream' => 'eventlogging_CentralNoticeTiming',
 			'schema_title' => 'analytics/legacy/centralnoticetiming',
 			'topic_prefixes' => null,
-			// TODO: should canary events be enabled?
-			// https://phabricator.wikimedia.org/T271208#6778241
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_CodeMirrorUsage',
@@ -19890,6 +20084,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_ContentTranslationAbuseFilter',
@@ -19897,15 +20097,25 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_CpuBenchmark',
 			'schema_title' => 'analytics/legacy/cpubenchmark',
 			'topic_prefixes' => null,
-			// TODO: should canary events be enabled?
-			// https://phabricator.wikimedia.org/T271208#6778241
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_DesktopWebUIActionsTracking',
@@ -19913,15 +20123,25 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_ElementTiming',
 			'schema_title' => 'analytics/legacy/elementtiming',
 			'topic_prefixes' => null,
-			// TODO: should canary events be enabled?
-			// https://phabricator.wikimedia.org/T271208#6778241
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_EditAttemptStep',
@@ -19929,24 +20149,38 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_FeaturePolicyViolation',
 			'schema_title' => 'analytics/legacy/featurepolicyviolation',
 			'topic_prefixes' => null,
-			// TODO: should canary events be enabled?
-			// https://phabricator.wikimedia.org/T271208#6778241
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_FirstInputTiming',
 			'schema_title' => 'analytics/legacy/firstinputtiming',
 			'topic_prefixes' => null,
-			// TODO: should canary events be enabled?
-			// https://phabricator.wikimedia.org/T271208#6778241
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_HelpPanel',
@@ -19954,6 +20188,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_HomepageModule',
@@ -19961,6 +20201,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_HomepageVisit',
@@ -19968,6 +20214,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_InukaPageView',
@@ -19975,6 +20227,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_KaiOSAppFirstRun',
@@ -19982,6 +20240,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_KaiOSAppFeedback',
@@ -19989,15 +20253,38 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
+		],
+		[
+			'stream' => 'eventlogging_LandingPageImpression',
+			'schema_title' => 'analytics/legacy/landingpageimpression',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_LayoutShift',
 			'schema_title' => 'analytics/legacy/layoutshift',
 			'topic_prefixes' => null,
-			// TODO: should canary events be enabled?
-			// https://phabricator.wikimedia.org/T271208#6778241
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_MobileWebUIActionsTracking',
@@ -20005,15 +20292,25 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_NavigationTiming',
 			'schema_title' => 'analytics/legacy/navigationtiming',
 			'topic_prefixes' => null,
-			// TODO: should canary events be enabled?
-			// https://phabricator.wikimedia.org/T271208#6778241
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_NewcomerTask',
@@ -20021,15 +20318,25 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_PaintTiming',
 			'schema_title' => 'analytics/legacy/painttiming',
 			'topic_prefixes' => null,
-			// TODO: should canary events be enabled?
-			// https://phabricator.wikimedia.org/T271208#6778241
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_PrefUpdate',
@@ -20037,6 +20344,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_QuickSurveyInitiation',
@@ -20044,6 +20357,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_QuickSurveysResponses',
@@ -20051,6 +20370,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_ReferencePreviewsBaseline',
@@ -20058,6 +20383,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_ReferencePreviewsCite',
@@ -20065,6 +20396,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_ReferencePreviewsPopups',
@@ -20072,33 +20409,51 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_ResourceTiming',
 			'schema_title' => 'analytics/legacy/resourcetiming',
 			'topic_prefixes' => null,
-			// TODO: should canary events be enabled?
-			// https://phabricator.wikimedia.org/T271208#6778241
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_RUMSpeedIndex',
 			'schema_title' => 'analytics/legacy/rumspeedindex',
 			'topic_prefixes' => null,
-			// TODO: should canary events be enabled?
-			// https://phabricator.wikimedia.org/T271208#6778241
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_SaveTiming',
 			'schema_title' => 'analytics/legacy/savetiming',
 			'topic_prefixes' => null,
-			// TODO: should canary events be enabled?
-			// https://phabricator.wikimedia.org/T271208#6778241
-			'canary_events_enabled' => false,
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_SearchSatisfaction',
@@ -20106,6 +20461,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_ServerSideAccountCreation',
@@ -20113,6 +20474,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_SpecialInvestigate',
@@ -20120,6 +20487,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_SpecialMuteSubmit',
@@ -20127,6 +20500,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_SuggestedTagsAction',
@@ -20134,6 +20513,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_TemplateDataApi',
@@ -20141,6 +20526,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_TemplateDataEditor',
@@ -20148,6 +20539,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_TemplateWizard',
@@ -20155,6 +20552,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_Test',
@@ -20162,6 +20565,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_TranslationRecommendationUserAction',
@@ -20169,6 +20578,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_TranslationRecommendationUIRequests',
@@ -20176,6 +20591,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_TranslationRecommendationAPIRequests',
@@ -20183,6 +20604,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_TwoColConflictConflict',
@@ -20190,6 +20617,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_TwoColConflictExit',
@@ -20197,6 +20630,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_UniversalLanguageSelector',
@@ -20204,6 +20643,25 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
+		],
+		[
+			'stream' => 'eventlogging_VirtualPageView',
+			'schema_title' => 'analytics/legacy/virtualpageview',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_VisualEditorFeatureUse',
@@ -20211,6 +20669,12 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		[
 			'stream' => 'eventlogging_VisualEditorTemplateDialogUse',
@@ -20218,6 +20682,64 @@ function wmfGetVariantSettings() {
 			'topic_prefixes' => null,
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
+		],
+		[
+			'stream' => 'eventlogging_WikidataCompletionSearchClicks',
+			'schema_title' => 'analytics/legacy/wikidatacompletionsearchclicks',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
+		],
+		[
+			'stream' => 'eventlogging_WMDEBannerEvents',
+			'schema_title' => 'analytics/legacy/wmdebannerevents',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
+		],
+		[
+			'stream' => 'eventlogging_WMDEBannerInteractions',
+			'schema_title' => 'analytics/legacy/wmdebannerinteractions',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
+		],
+		[
+			'stream' => 'eventlogging_WMDEBannerSizeIssue',
+			'schema_title' => 'analytics/legacy/wmdebannersizeissue',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
 		],
 		/*
 		 * === Streams for testing Event Platform-based instruments ===
@@ -20277,6 +20799,12 @@ function wmfGetVariantSettings() {
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
+			'stream' => 'mediawiki.structured_task.article.link_suggestion_interaction',
+			'schema_title' => 'analytics/mediawiki/structured_task/article/link_suggestion_interaction',
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
 			'stream' => 'mediawiki.pref_diff',
 			'schema_title' => 'analytics/pref_diff',
 			'canary_events_enabled' => true,
@@ -20328,16 +20856,19 @@ function wmfGetVariantSettings() {
 		[
 			'stream' => 'wdqs-internal.sparql-query',
 			'schema_title' => 'sparql/query',
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics',
 		],
 		[
 			'stream' => 'wdqs-external.sparql-query',
 			'schema_title' => 'sparql/query',
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics',
 		],
 		[
 			'stream' => 'cqs-external.sparql-query',
 			'schema_title' => 'sparql/query',
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics',
 		],
 		[
@@ -20354,6 +20885,13 @@ function wmfGetVariantSettings() {
 			'stream' => '/^mediawiki\\.job\\..+/' ,
 			'schema_title' => 'mediawiki/job',
 			'destination_event_service' => 'eventgate-main',
+			'consumers' => [
+				// Don't ingest mediawiki.job events into Hadoop.
+				// They are not well schemead and not very useful
+				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 		[
 			'stream' => 'mediawiki.centralnotice.campaign-change',
@@ -20423,6 +20961,7 @@ function wmfGetVariantSettings() {
 		[
 			'stream' => 'mediawiki.revision-score',
 			'schema_title' => 'mediawiki/revision/score',
+			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-main',
 		],
 		[
@@ -20555,6 +21094,8 @@ function wmfGetVariantSettings() {
 // above for each of the stream names listed here.
 'wgEventLoggingStreamNames' => [
 	'default' => [
+		'eventlogging_CentralNoticeBannerHistory',
+		'eventlogging_CentralNoticeImpression',
 		'eventlogging_CentralNoticeTiming',
 		'eventlogging_ContentTranslationAbuseFilter',
 		'eventlogging_CodeMirrorUsage',
@@ -20567,6 +21108,7 @@ function wmfGetVariantSettings() {
 		'eventlogging_HelpPanel',
 		'eventlogging_HomepageModule',
 		'eventlogging_HomepageVisit',
+		'eventlogging_LandingPageImpression',
 		'eventlogging_LayoutShift',
 		'eventlogging_MobileWebUIActionsTracking',
 		'eventlogging_NavigationTiming',
@@ -20593,10 +21135,16 @@ function wmfGetVariantSettings() {
 		'eventlogging_TwoColConflictConflict',
 		'eventlogging_TwoColConflictExit',
 		'eventlogging_UniversalLanguageSelector',
+		'eventlogging_VirtualPageView',
 		'eventlogging_VisualEditorFeatureUse',
 		'eventlogging_VisualEditorTemplateDialogUse',
+		'eventlogging_WikidataCompletionSearchClicks',
+		'eventlogging_WMDEBannerEvents',
+		'eventlogging_WMDEBannerInteractions',
+		'eventlogging_WMDEBannerSizeIssue',
 		'mediawiki.client.session_tick',
 		'mediawiki.mediasearch_interaction',
+		'mediawiki.structured_task.article.link_suggestion_interaction',
 		'mediawiki.pref_diff',
 		'test.instrumentation',
 		'test.instrumentation.sampled',
@@ -20738,7 +21286,6 @@ function wmfGetVariantSettings() {
 	// Monolingual text statements, it should rather be added to:
 	// Wikibase\Lib\WikibaseContentLanguages::getDefaultMonolingualTextLanguages
 	'wikidata' => [
-		'dag' => 'Dagbanli', // T260037, T272242
 		'fkv' => 'kvääni', // T167259
 		'kea' => 'Kabuverdianu', // T127435
 		'nod' => 'ᨣᩴᩤᨾᩮᩥᩬᨦ', // T93880
@@ -20753,7 +21300,6 @@ function wmfGetVariantSettings() {
 		'srq' => 'mbia cheë', // T113408
 	],
 	'commonswiki' => [
-		'dag' => 'Dagbanli', // T260037, T272242
 		'fkv' => 'kvääni', // T167259
 		'kea' => 'Kabuverdianu', // T230480
 		'nod' => 'ᨣᩴᩤᨾᩮᩥᩬᨦ', // T230480
@@ -21011,6 +21557,11 @@ function wmfGetVariantSettings() {
 	'default' => 'mysql-upsert',
 ],
 
+'wmgWBRepoIdGeneratorInErrorPingLimiter' => [
+	'default' => 0,
+	'wikidatawiki' => 9,
+],
+
 'wmgWikibaseStringLimits' => [
 	'default' => null,
 	'wikibaserepo' => [
@@ -21025,20 +21576,6 @@ function wmfGetVariantSettings() {
 		],
 		'PT:url' => [
 			'length' => 1500,
-		],
-	],
-],
-
-// NOTE: The key should be the interwiki prefix for the target foreign repo wiki.
-'wmgWikibaseRepoForeignRepositories' => [
-	'default' => [],
-	'commonswiki' => [
-		'd' => [
-			'repoDatabase' => 'wikidatawiki',
-			'baseUri' => 'http://www.wikidata.org/entity/',
-			'supportedEntityTypes' => [ 'item', 'property' ],
-			'prefixMapping' => [],
-			'entityNamespaces' => [ 'item' => 0, 'property' => 120 ]
 		],
 	],
 ],
@@ -21094,11 +21631,6 @@ function wmfGetVariantSettings() {
 	],
 ],
 
-'wmgWikibaseClientChangesDatabase' => [
-	'wikidataclient' => 'wikidatawiki',
-	'wikidataclient-test' => 'testwikidatawiki',
-],
-
 'wmgWikibaseClientRepoDatabase' => [
 	'wikidataclient' => 'wikidatawiki',
 	'wikidataclient-test' => 'testwikidatawiki',
@@ -21107,18 +21639,6 @@ function wmfGetVariantSettings() {
 'wmgWikibaseClientRepoUrl' => [
 	'wikidataclient' => 'https://www.wikidata.org',
 	'wikidataclient-test' => 'https://test.wikidata.org',
-],
-
-'wmgWikibaseClientRepoConceptBaseUri' => [
-	// Note: these are base resource *identifiers*, not *locators*. While HTTPS would in principle be
-	// preferable over HTTP here, changing it now would be a potentially very disruptive change,
-	// breaking the stable nature of all our entity identifiers - see T153563 for some previous
-	// discussion on this (ultimately declined).
-
-	// In practice, thanks to HSTS and HSTS preloading, most user agents should load these over HTTPS
-	// anyways (i.e., when the URI is used as a URL).
-	'wikidataclient' => 'http://www.wikidata.org/entity/',
-	'wikidataclient-test' => 'http://test.wikidata.org/entity/',
 ],
 
 'wmgWikibaseClientUseTermsTableSearchFields' => [
@@ -21186,6 +21706,12 @@ function wmfGetVariantSettings() {
 		'Q20748093' => 'badge-validated',
 		'Q28064618' => 'badge-digitaldocument', // T153186
 		'Q51759403' => 'badge-goodlist', // T190976
+	],
+],
+
+'wmgWikibaseRepoSandboxEntityIds' => [
+	'wikidatawiki' => [
+		'mainItem' => 'Q4115189',
 	],
 ],
 
@@ -21377,10 +21903,15 @@ function wmfGetVariantSettings() {
 
 'wmgWBRepoConceptBaseUri' => [
 	'default' => null,
-	// note: this intentionally uses HTTP, not HTTPS;
-	// see also the comment on wmgWikibaseClientRepoConceptBaseUri
-	'commonswiki' => 'http://commons.wikimedia.org/entity/',
-	'testcommonswiki' => 'http://test-commons.wikimedia.org/entity/',
+	// Note: Wikidata is intentionally HTTP, Commons is intentionally HTTPS.
+	// These are base resource *identifiers*, not *locators*. While HTTPS would in principle be
+	// preferable over HTTP for all wikis, changing it now for Wikidata would be a potentially
+	// very disruptive change, breaking the stable nature of all our entity identifiers - see
+	// T153563 for some previous discussion on this (ultimately declined).
+	// In practice, thanks to HSTS and HSTS preloading, most user agents should load all of
+	// these over HTTPS anyways (i.e., when the URI is used as a URL).
+	'commonswiki' => 'https://commons.wikimedia.org/entity/',
+	'testcommonswiki' => 'https://test-commons.wikimedia.org/entity/',
 	'testwikidatawiki' => 'http://test.wikidata.org/entity/',
 	'wikidatawiki' => 'http://www.wikidata.org/entity/',
 ],
@@ -21520,7 +22051,9 @@ function wmfGetVariantSettings() {
 		/**
 		 * @see https://www.wikidata.org/w/index.php?oldid=335040857
 		 */
-		646, // Freebase ID
+		646,  // Freebase ID
+		2671, // Google Knowledge Graph ID (T280779)
+		4839, // Wolfram Language Entity Code (T280779)
 		/**
 		 * Sandbox properties
 		 * @see https://www.wikidata.org/wiki/Special:WhatLinksHere/Q18720640?namespace=120
@@ -22281,12 +22814,44 @@ function wmfGetVariantSettings() {
 ],
 
 'wgMediaInfoMediaSearchDefaultForAnon' => [
+	// NOTE: keep in sync with wgMediaSearchDefaultForAnon (until
+	// this is removed)
+	'commonswiki' => true,
+],
+
+// Extension for Special:MediaSearch
+'wmgUseMediaSearch' => [
+	'default' => false,
+	'testcommonswiki' => true,
+	'testwiki' => true,
+	'commonswiki' => true,
+],
+
+'wgMediaSearchDefaultForAnon' => [
+	// NOTE: keep in sync with wgMediaInfoMediaSearchDefaultForAnon (until
+	// that is removed)
 	'commonswiki' => true,
 ],
 
 'wgMediaSearchExternalEntitySearchBaseUri' => [
 	'default' => 'https://www.wikidata.org/w/api.php',
 	'testcommonswiki' => 'https://test.wikidata.org/w/api.php',
+],
+
+// Enable Commons community assessment filters in Special:MediaSearch
+'wgMediaSearchAssessmentFilters' => [
+	'commonswiki' => [
+		'featured-image' => 'P6731=Q63348049',
+		'quality-image' => 'P6731=Q63348069',
+		'valued-image' => 'P6731=Q63348040',
+		'picture-of-the-day' => 'P6731=Q6998859',
+	],
+	'testcommonswiki' => [
+		'featured-image' => 'P6731=Q63348049',
+		'quality-image' => 'P6731=Q63348069',
+		'valued-image' => 'P6731=Q63348040',
+		'picture-of-the-day' => 'P6731=Q6998859',
+	],
 ],
 
 // Disable redirects for search inputs to exact matches by default
@@ -22359,6 +22924,9 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'wikisource' => true,
 	'sourceswiki' => true,
+],
+'wgWikisourceEnableOcr' => [
+	'default' => true,
 ],
 
 'wgMusicalNotationEnableWikibaseDataType' => [
@@ -22516,12 +23084,6 @@ function wmfGetVariantSettings() {
 	'wikidataclient-test' => 'testwikidata',
 ],
 
-'wmgWikibaseRepoIdGeneratorRateLimiting' => [
-	'default' => false,
-	'testwikidatawiki' => true,
-	'wikidatawiki' => true,
-],
-
 'wmgUseTemplateSandbox' => [
 	'default' => true,
 	'lockeddown' => false,
@@ -22615,6 +23177,11 @@ function wmfGetVariantSettings() {
 	'votewiki' => true,
 ],
 
+'wgSecurePollSingleTransferableVoteEnabled' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 'wmgUseGlobalAbuseFilters' => [
 	// Enabled for all wikis that open, global and small/medium in size
 	'default' => true,
@@ -22659,7 +23226,9 @@ function wmfGetVariantSettings() {
 ],
 
 'wgCirrusSearchClusterOverrides' => [
-	'default' => [],
+	# Force more_like to stay in eqiad when general traffic switches
+	# to codfw to handle the ~900 qps expected on an empty cache.
+	'default' => [ 'more_like' => 'eqiad' ],
 ],
 
 'wgCirrusSearchWriteClusters' => [
@@ -23595,6 +24164,22 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
+'wmgTemplateSearchImprovements' => [
+	'default' => false,
+	'group0' => true, // T284553
+	'dewiki' => true, // T284553
+	'elwiki' => true, // T284553
+	'enwikivoyage' => true, // T284553
+	'fiwiki' => true, // T284553
+	'frwiki' => true, // T284553
+	'hewiki' => true, // T284553
+	'huwiki' => true, // T284553
+	'mswiki' => true, // T284553
+	'nawiktionary' => true, // T284553
+	'trwiki' => true, // T284553
+	'twwiki' => true, // T284553
+],
+
 'wmgUseCharInsert' => [
 	'default' => true,
 	'loginwiki' => false, // T61702
@@ -24291,6 +24876,10 @@ function wmfGetVariantSettings() {
 	'commonswiki' => true,
 ],
 
+'wgQuickSurveysUseVue' => [
+	'default' => true,
+],
+
 'wgQuickSurveysConfig' => [
 	'default' => [],
 	'cawiki' => [
@@ -24906,7 +25495,9 @@ function wmfGetVariantSettings() {
 	'idwiki' => true,
 	'jawiki' => true,
 	'kowiki' => true,
+	'lvwiki' => true,
 	'mswiki' => true,
+	'nlwiki' => true,
 	'nowiki' => true,
 	'plwiki' => true,
 	'ptwiki' => true,
@@ -24914,6 +25505,7 @@ function wmfGetVariantSettings() {
 	'rowiki' => true,
 	'shwiki' => true,
 	'simplewiki' => true,
+	'skwiki' => true,
 	'sqwiki' => true,
 	'srwiki' => true,
 	'svwiki' => true,
@@ -24930,23 +25522,14 @@ function wmfGetVariantSettings() {
 	'default' => 'extension1',
 ],
 
-'wgGEMentorshipMigrationStage' => [
-	'default' => SCHEMA_COMPAT_NEW,
-],
-
 'wgGEWikiConfigEnabled' => [
-	'default' => false,
-	'testwiki' => true,
+	'default' => true,
 ],
 
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
-	'bgwiki' => false,
-	'cawiki' => false,
-	'elwiki' => false,
-	'enwiki' => false,
+	'nlwiki' => false,
 	'shwiki' => false,
-	'urwiki' => false,
 ],
 
 'wgWelcomeSurveyEnabled' => [
@@ -24954,8 +25537,13 @@ function wmfGetVariantSettings() {
 	'viwiki' => false,
 ],
 
+'wgWelcomeSurveyEnableWithHomepage' => [
+	'default' => false,
+	'enwiki' => true, // T281896
+],
+
 'wgWelcomeSurveyExperimentalGroups' => [
-	'default' => [ 'exp2_target_specialpage' => [ 'range' => '0-9' ], 'exp2_target_popup' => [ 'range' => 'x' ] ],
+	'default' => [ 'exp2_target_specialpage' => [ 'percentage' => 100 ], 'exp2_target_popup' => [ 'percentage' => 0 ], 'exp1_group2' => [ 'percentage' => 0 ] ],
 ],
 
 'wgGEHomepageImpactModuleEnabled' => [
@@ -25052,6 +25640,7 @@ function wmfGetVariantSettings() {
 	'mswiki' => 'Bantuan:Kandungan',
 	'nowiki' => 'Hjelp:Portal',
 	'kowiki' => '위키백과:도움말',
+	'lvwiki' => 'Palīdzība:Saturs',
 	'plwiki' => 'Pomoc:Spis treści',
 	'ptwiki' => 'Wikipédia:Guia de criação de artigos',
 	'ruwiki' => 'Википедия:Справка',
@@ -25182,8 +25771,8 @@ function wmfGetVariantSettings() {
 	],
 	'cawiki' => [
 		[
-			'title' => 'Com escriure un bon article',
-			'text' => 'Viquipèdia:Llibre d\'estil',
+			'title' => 'Viquipèdia:Llibre d\'estil',
+			'text' => 'Com escriure un bon article',
 			'id' => 'mos',
 		],
 		[
@@ -25317,7 +25906,7 @@ function wmfGetVariantSettings() {
 	],
 	'enwiki' => [
 		[
-			'title' => 'Wikipedia:Manual of Style',
+			'title' => 'Help:Introduction to the Manual of Style/1',
 			'text' => 'How to write a good article',
 			'id' => 'mos',
 		],
@@ -25337,7 +25926,7 @@ function wmfGetVariantSettings() {
 			'id' => 'references',
 		],
 		[
-			'title' => 'Wikipedia:Article wizard/version1',
+			'title' => 'Wikipedia:Article wizard',
 			'text' => 'How to create a new article',
 			'id' => 'articlewizard',
 		],
@@ -25687,6 +26276,33 @@ function wmfGetVariantSettings() {
 			'text' => '문서 등재 기준',
 			'id' => 'notability',
 		]
+	],
+	'lvwiki' => [
+		[
+			'title' => 'Palīdzība:Stila rokasgrāmata',
+			'text' => 'Kā uzrakstīt labu rakstu',
+			'id' => 'mos',
+		],
+		[
+			'title' => 'Palīdzība:Kā labot lapu',
+			'text' => 'Kā labot lapu',
+			'id' => 'editing',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User guide/lv#Images',
+			'text' => 'Kā ievietot attēlus',
+			'id' => 'images',
+		],
+		[
+			'title' => 'mw:Help:VisualEditor/User guide/lv#Editing references',
+			'text' => 'Kā ievietot atsauces',
+			'id' => 'references',
+		],
+		[
+			'title' => 'Vikipēdija:Rakstu vednis',
+			'text' => 'Kā izveidot rakstu',
+			'id' => 'articlewizard',
+		],
 	],
 	'mswiki' => [
 		[
@@ -26197,6 +26813,13 @@ function wmfGetVariantSettings() {
 	'arwiki' => true,
 	'bnwiki' => true,
 	'cswiki' => true,
+	'eswiki' => true,
+	'fawiki' => true,
+	'frwiki' => true,
+	'huwiki' => true,
+	'plwiki' => true,
+	'rowiki' => true,
+	'ruwiki' => true,
 	'viwiki' => true,
 ],
 
@@ -26206,6 +26829,13 @@ function wmfGetVariantSettings() {
 	'arwiki' => true,
 	'bnwiki' => true,
 	'cswiki' => true,
+	'eswiki' => true,
+	'fawiki' => true,
+	'frwiki' => true,
+	'huwiki' => true,
+	'plwiki' => true,
+	'rowiki' => true,
+	'ruwiki' => true,
 	'viwiki' => true,
 ],
 
@@ -26339,6 +26969,10 @@ function wmfGetVariantSettings() {
 		'create' => '위키백과:새 문서 만들기',
 		'image' => '도움말:그림 사용하기',
 	],
+	'lvwiki' => [
+		'create' => 'Vikipēdija:Rakstu vednis',
+		'image' => 'mw:Help:VisualEditor/User_guide/lv#Images',
+	],
 	'plwiki' => [
 		'create' => 'Pomoc:Jak napisać nowy artykuł',
 		'image' => 'Pomoc:Ilustrowanie',
@@ -26404,18 +27038,69 @@ function wmfGetVariantSettings() {
 'wgGEHomepageNewAccountEnablePercentage' => [
 	'default' => 80,
 	'testwiki' => 0,
+	'enwiki' => 2, // enwiki has special treatment - T281896
 	// euwiki is not an A/B test (T233066)
 	'euwiki' => 100,
 ],
 
 'wgGEHomepageDefaultVariant' => [
 	'default' => 'control',
+	'arwiki' => 'linkrecommendation',
+	'bnwiki' => 'linkrecommendation',
+	'cswiki' => 'linkrecommendation',
+	'fawiki' => 'linkrecommendation',
+	'frwiki' => 'linkrecommendation',
+	'huwiki' => 'linkrecommendation',
+	'plwiki' => 'linkrecommendation',
+	'rowiki' => 'linkrecommendation',
+	'ruwiki' => 'linkrecommendation',
+	'viwiki' => 'linkrecommendation',
 ],
 
 'wgGEHomepageNewAccountVariants' => [
 	'default' => [
 		'control' => 100,
 		'linkrecommendation' => 0,
+	],
+	'arwiki' => [
+		'control' => 50,
+		'linkrecommendation' => 50,
+	],
+	'bnwiki' => [
+		'control' => 50,
+		'linkrecommendation' => 50,
+	],
+	'cswiki' => [
+		'control' => 50,
+		'linkrecommendation' => 50,
+	],
+	'fawiki' => [
+		'control' => 50,
+		'linkrecommendation' => 50,
+	],
+	'frwiki' => [
+		'control' => 50,
+		'linkrecommendation' => 50,
+	],
+	'huwiki' => [
+		'control' => 50,
+		'linkrecommendation' => 50,
+	],
+	'plwiki' => [
+		'control' => 50,
+		'linkrecommendation' => 50,
+	],
+	'rowiki' => [
+		'control' => 50,
+		'linkrecommendation' => 50,
+	],
+	'ruwiki' => [
+		'control' => 50,
+		'linkrecommendation' => 50,
+	],
+	'viwiki' => [
+		'control' => 50,
+		'linkrecommendation' => 50,
 	],
 ],
 
@@ -26481,6 +27166,34 @@ function wmfGetVariantSettings() {
 	'default' => null,
 	'arwiki' => 'ويكيبيديا:مشروع فريق النمو/قائمة مشروع المعرفة', // T273060
 	'cswiki' => 'Wikipedie:Potřebuji pomoc/Mentoři/Manuální',
+],
+
+'wgGEMentorDashboardEnabled' => [
+	// not ready for deployment yet
+	'default' => false,
+],
+
+'wgGEMentorDashboardBackendEnabled' => [
+	// check extensions/GrowthExperiments/updateMenteeData.php finishes
+	// reasonably quickly before enabling (especially on wikis with many newcomers,
+	// like enwiki).
+	'default' => false,
+
+	// Growth's pilot wikis
+	'arwiki' => true,
+	'bnwiki' => true,
+	'cswiki' => true,
+	'viwiki' => true,
+
+	// test wikis
+	'testwiki' => true,
+],
+
+'wgGECampaignPattern' => [
+	'default' => null,
+	'testwiki' => '/^growth-advancement-test-2021$/',
+	'eswiki' => '/^growth-advancement-spanish-2021$/',
+	'ptwiki' => '/^growth-advancement-brazil-2021$/'
 ],
 
 'wmgShowRollbackConfirmationDefaultUserOptions' => [
@@ -27218,6 +27931,10 @@ function wmfGetVariantSettings() {
 	'default' => [ 'data-bridge' ],
 ],
 
+'wmgWikibaseTmpSerializeEmptyListsAsObjects' => [
+	'default' => true,
+],
+
 // T123582: enables <link rel="preconnect" href="//upload.wikimedia.org">
 'wgImagePreconnect' => [
 	'default' => true,
@@ -27241,6 +27958,12 @@ function wmfGetVariantSettings() {
 	'trwiki' => true, // T276346
 	'group0' => true, // T276346
 	'wikitech' => true, // T276346
+],
+
+'wgParserEnableLegacyMediaDOM' => [
+	'default' => true,
+	'testwiki' => false,
+	'test2wiki' => false,
 ],
 
 ];

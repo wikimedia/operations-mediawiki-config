@@ -57,6 +57,8 @@ return [
 		'electron' => 'http://deployment-pdfrender02.deployment-prep.eqiad.wmflabs:5252',
 		'push-notifications' => 'http://deployment-push-notifications01.deployment-prep.eqiad1.wikimedia.cloud:8900',
 		'linkrecommendation' => 'https://api.wikimedia.org/service/linkrecommendation',
+		// No Shellbox/k8s in beta cluster (T286298)
+		'shellbox' => false,
 
 		### Logstash
 		'logstash' => [

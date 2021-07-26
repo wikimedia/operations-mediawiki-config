@@ -27,7 +27,7 @@ if ( $wmfRealm == 'labs' ) { # safe guard
 			'user'		  => $wgDBuser,
 			'password'	  => $wgDBpassword,
 			'type'		  => 'mysql',
-			'flags'		  => DBO_DEFAULT,
+			'flags'		  => DBO_DEFAULT | ( $wgDebugDumpSql ? DBO_DEBUG : 0 ),
 			'max lag'	  => 300, // 5 minutes
 			'useGTIDs'    => true,
 		],
