@@ -14102,6 +14102,7 @@ function wmfGetVariantSettings() {
 	'srwiktionary' => true, // T70346
 	'strategywiki' => true,
 	'viwiktionary' => true, // T10886
+	'ruwikinews' => false,
 ],
 
 'wgDLPQueryCacheTime' => [
