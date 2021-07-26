@@ -161,30 +161,28 @@ pipelines:
                 # Clean up some cruft (T284581)
                 command: [bash, -c, "rm -fr /tmp/mw-cache-*"]
 
-      # I don't know what the story is on this one so leaving it commented
-      # out for now. --dancy
-      # - name: webserver
-      #   build:
-      #     variant: production
-      #     excludes:
-      #       - .git
-      #       - wmf-config
-      #       - tests
-      #       - php
-      #       - src
-      #       - multiversion
-      #   publish:
-      #     image:
-      #       name: mediawiki-webserver
-      #       tags: ["production"]
-      #   blubberfile:
-      #     version: v4
-      #     runs:
-      #       uid: 33
-      #       gid: 33
-      #     variants:
-      #       production:
-      #         base: docker-registry.wikimedia.org/mediawiki-httpd
-      #         copies: [local]
-      #         lives:
-      #           in: /srv/mediawiki
+      - name: webserver
+        build:
+          variant: production
+          excludes:
+            - .git
+            - wmf-config
+            - tests
+            - php
+            - src
+            - multiversion
+        publish:
+          image:
+            name: mediawiki-webserver
+            tags: ["production"]
+        blubberfile:
+          version: v4
+          runs:
+            uid: 33
+            gid: 33
+          variants:
+            production:
+              base: docker-registry.wikimedia.org/mediawiki-httpd
+              copies: [local]
+              lives:
+                in: /srv/mediawiki
