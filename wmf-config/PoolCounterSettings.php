@@ -26,7 +26,7 @@ $wgPoolCounterConf = [
 	// AWS, browser automation, etc. and give them a separate pool so they
 	// can cap out without interfering with interactive users.
 	'CirrusSearch-Automated' => [
-		'class' => PoolCounter_Client::class,
+		'class' => Client::class,
 		'timeout' => 15,
 		'workers' => 30,
 		'maxqueue' => 90,
@@ -91,7 +91,7 @@ $wgPoolCounterConf = [
 		'maxqueue' => 25,
 	],
 	'TranslateFetchTranslators' => [
-		'class' => Client::class,
+		'class' => PoolCounter_Client::class,
 		'timeout' => 8,
 		'workers' => 1,
 		'slots' => 16,
@@ -100,7 +100,7 @@ $wgPoolCounterConf = [
 	// Note, this uses nowait:. Timeout must be 0, worker should equal maxqueue
 	// In the event DPL is causing DB problems, decrease to 2.
 	'DPL' => [
-		'class' => PoolCounter_Client::class,
+		'class' => Client::class,
 		'timeout' => 0,
 		'workers' => 25,
 		'maxqueue' => 25,
