@@ -65,7 +65,9 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 		$knownToBeBad = [
 			'wgCirrusSearchUseCompletionSuggester',
 			'wgCirrusSearchUseIcuFolding',
+			"wgMFUseDesktopContributionsPage",
 			'wgMFUseDesktopSpecialHistoryPage',
+			"wgMFUseDesktopSpecialWatchlistPage",
 			'wmgUseCognate',
 			'wmgUseFileExporter',
 			'wmgUseFileImporter',
