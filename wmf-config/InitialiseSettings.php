@@ -7879,7 +7879,6 @@ function wmfGetVariantSettings() {
 ],
 'wgVectorUseWvuiSearch' => [
 	'default' => true,
-	'commonswiki' => false,
 	'wikidatawiki' => false,
 ],
 'wgVectorWvuiSearchOptions' => [
@@ -7891,6 +7890,10 @@ function wmfGetVariantSettings() {
 		'showDescription' => false,
 	],
 	'officewiki' => [
+		'showThumbnail' => false,
+		'showDescription' => false,
+	],
+	'commonswiki' => [
 		'showThumbnail' => false,
 		'showDescription' => false,
 	],
