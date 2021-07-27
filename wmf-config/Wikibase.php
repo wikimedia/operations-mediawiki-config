@@ -226,6 +226,11 @@ if ( $wmgUseWikibaseRepo ) {
 
 	// Temporary, T241422
 	$wgWBRepoSettings['tmpSerializeEmptyListsAsObjects'] = $wmgWikibaseTmpSerializeEmptyListsAsObjects;
+
+	// Temporary, T285795
+	if ( isset( $wmgWikibaseTmpUseRequestLanguagesForRdfOutput ) ) {
+		$wgWBRepoSettings['tmpUseRequestLanguagesForRdfOutput'] = $wmgWikibaseTmpUseRequestLanguagesForRdfOutput;
+	}
 }
 
 if ( $wmgUseWikibaseClient ) {
