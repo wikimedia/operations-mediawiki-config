@@ -62,5 +62,8 @@ function wmfGetOverrideSettings() {
 		'-wmgUseMediaSearch' => [
 			'default' => false,
 		],
+		'-wmgUseScore' => [
+			'default' => false,
+		],
 	];
 }
