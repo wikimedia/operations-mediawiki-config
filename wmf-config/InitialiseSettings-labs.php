@@ -1337,10 +1337,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => 'https://wikidata.beta.wmflabs.org',
 		],
 
-		'-wmgWikibaseClientRepoDatabase' => [
-			'default' => 'wikidatawiki',
-		],
-
 		// T209143
 		'wmgWikibaseUseSSRTermbox' => [
 			'default' => false,

@@ -22023,11 +22023,6 @@ function wmfGetVariantSettings() {
 	'wikidataclient-test' => true,
 ],
 
-'wmgWikibaseClientRepoDatabase' => [
-	'wikidataclient' => 'wikidatawiki',
-	'wikidataclient-test' => 'testwikidatawiki',
-],
-
 'wmgWikibaseClientRepoUrl' => [
 	'wikidataclient' => 'https://www.wikidata.org',
 	'wikidataclient-test' => 'https://test.wikidata.org',
