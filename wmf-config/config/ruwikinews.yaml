@@ -7,7 +7,7 @@ inheritsFrom:
   - categories-rdf
   - cirrussearch-big-indices
   - flaggedrevs
-  - medium
+  - large
   - nowikidatadescriptiontaglines
   - s3
   - securepollglobal

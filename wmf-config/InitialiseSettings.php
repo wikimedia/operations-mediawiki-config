@@ -23319,6 +23319,7 @@ function wmfGetVariantSettings() {
 	'wikidatawiki' => true,
 	'ptwiki' => true, // T140395
 	'warwiki' => true, // T230304
+	'ruwikinews' => true, // Needs explicit enable after moving to large wiki
 ],
 
 'wmgUseCampaigns' => [
