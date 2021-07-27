@@ -20144,6 +20144,32 @@ function wmfGetVariantSettings() {
 			]
 		],
 		[
+			'stream' => 'eventlogging_EchoInteraction',
+			'schema_title' => 'analytics/legacy/echointeraction',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
+		],
+		[
+			'stream' => 'eventlogging_EchoMail',
+			'schema_title' => 'analytics/legacy/echomail',
+			'topic_prefixes' => null,
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
+		],
+		[
 			'stream' => 'eventlogging_EditAttemptStep',
 			'schema_title' => 'analytics/legacy/editattemptstep',
 			'topic_prefixes' => null,
@@ -21106,6 +21132,8 @@ function wmfGetVariantSettings() {
 		'eventlogging_CodeMirrorUsage',
 		'eventlogging_CpuBenchmark',
 		'eventlogging_DesktopWebUIActionsTracking',
+		'eventlogging_EchoInteraction',
+		'eventlogging_EchoMail',
 		'eventlogging_EditAttemptStep',
 		'eventlogging_ElementTiming',
 		'eventlogging_FeaturePolicyViolation',
@@ -21180,6 +21208,8 @@ function wmfGetVariantSettings() {
 // https://phabricator.wikimedia.org/T238230
 'wgEventLoggingSchemas' => [
 	'default' => [
+		'EchoInteraction' => '/analytics/legacy/echointeraction/1.0.0',
+		'EchoMail' => '/analytics/legacy/echomail/1.0.0',
 		// Only in progress schema migrations go here, once migration finished, they are removed.
 	],
 ],
