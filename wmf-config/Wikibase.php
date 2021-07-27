@@ -296,7 +296,6 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings['propertyOrderUrl'] = $wmgWikibaseClientPropertyOrderUrl;
 	}
 
-	$wgWBClientSettings['repoDatabase'] = $wmgWikibaseClientRepoDatabase;
 	$wgWBClientSettings['repoUrl'] = $wmgWikibaseClientRepoUrl;
 	$wgWBClientSettings['wikiPageUpdaterDbBatchSize'] = 20;
 
