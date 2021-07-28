@@ -171,6 +171,24 @@ function wmfGetLabsOverrideSettings() {
 				// production and beta are the same, you can omit also adding your
 				// stream configs here for beta.
 			],
+			'+wikidatawiki' => [
+				/*
+				* Logging of events from the wikidata PropertySuggester
+				*/
+				[
+					'stream' => 'wd_propertysuggester.client_side_property_request',
+					'schema_title' => 'analytics/mediawiki/wd_propertysuggester/client_side_property_request',
+					'canary_events_enabled' => true,
+					'destination_event_service' => 'eventgate-analytics-external',
+				],
+				[
+					'stream' => 'wd_propertysuggester.server_side_property_request',
+					'schema_title' => 'analytics/mediawiki/wd_propertysuggester/server_side_property_request',
+					'canary_events_enabled' => true,
+					'destination_event_service' => 'eventgate-analytics-external',
+				],
+
+			],
 		],
 
 		// List of streams to register for use with the EventLogging extension.
@@ -181,7 +199,11 @@ function wmfGetLabsOverrideSettings() {
 				// Add beta only stream names here.  Production
 				// stream names are merged in, so if your stream is registered
 				// to be used by EventLogging in production you can omit it here.
-			]
+			],
+			'+wikidatawiki' => [
+				'wd_propertysuggester.client_side_property_request',
+				'wd_propertysuggester.server_side_property_request',
+			],
 		],
 
 		// EventLogging will POST events to this URI.
