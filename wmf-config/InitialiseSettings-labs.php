@@ -466,6 +466,11 @@ function wmfGetLabsOverrideSettings() {
 		'wgWMEClientErrorIntakeURL' => [
 			'default' => 'https://intake-logging.wikimedia.beta.wmflabs.org/v1/events?hasty=true'
 		],
+
+		'wgWMEIPAddressCopyActionEnabled' => [
+			'default' => true,
+		],
+
 		'wgMFAdvancedMobileContributions' => [
 			'default' => true,
 		],
