@@ -19977,7 +19977,7 @@ function wmfGetVariantSettings() {
 
 // T223824
 'wgSkipSkins' => [
-	'default' => [ 'cologneblue', 'contenttranslation' ], // T263093
+	'default' => [ 'cologneblue', 'contenttranslation', 'modern' ], // T263093, T287616
 	'apiportalwiki' => [ 'vector', 'monobook', 'modern', 'cologneblue', 'timeless', 'minerva' ],
 ],
 
