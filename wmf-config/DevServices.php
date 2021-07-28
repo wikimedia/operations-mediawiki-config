@@ -31,5 +31,6 @@ return [ 'dev' => [
 				   'eventgate-analytics-external' => '',
 				   'eventgate-main' => '',
 				   'linkrecommendation' => '',
+				   'push-notifications' => '',
 				  ]
 	   ];
