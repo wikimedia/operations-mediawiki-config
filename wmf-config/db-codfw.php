@@ -83,9 +83,10 @@ $wgLBFactoryConf = [
 	'trvwiki'      => 's5',
 	'wawikisource' => 's5',
 
-	# s6: large wikis
+	# s6: large wikis + wikitech
 	'frwiki'       => 's6',
 	'jawiki'       => 's6',
+	'labswiki'     => 's6',
 	'ruwiki'       => 's6',
 
 	# s7: large wikis, centralauth
@@ -106,8 +107,7 @@ $wgLBFactoryConf = [
 	# s8: wikidata
 	'wikidatawiki' => 's8',
 
-	# Wikitech and its test wiki
-	'labswiki'     => 's10',
+	# Wikitech test wiki
 	'labtestwiki'  => 's11',
 ],
 
