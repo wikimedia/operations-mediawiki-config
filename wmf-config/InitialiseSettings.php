@@ -10857,6 +10857,11 @@ function wmfGetVariantSettings() {
 			'centralnotice-admin' => true,
 			'editinterface' => true, // adding to allow CN access without local sysop JRA 2013-02-21
 		],
+		'electcomm' => [
+			'securepoll-create-poll' => true,
+			'editinterface' => true,
+		],
+		'electionadmin' => [ 'editinterface' => true ],
 	],
 	'test2wiki' => [
 		'*' => [ 'createpagemainns' => false ],
@@ -12079,6 +12084,10 @@ function wmfGetVariantSettings() {
 		'bureaucrat' => [ 'nocreate' ],
 		'sysop' => [ 'patroller', 'rollbacker', 'autopatrolled' ], // T95180
 	],
+	'+testwiki' => [
+		'sysop' => [ 'electcomm' ],
+		'electcomm' => [ 'electionadmin' ],
+	],
 	'+trwiki' => [
 		'sysop' => [ 'patroller', 'massmessage-sender' ], // bureaucrat -> sysop, T40690, T147740
 		'bureaucrat' => [ 'interface-editor' ], // T41690
@@ -12944,6 +12953,10 @@ function wmfGetVariantSettings() {
 	'+tawiki' => [
 		'bureaucrat' => [ 'nocreate' ],
 		'sysop' => [ 'patroller', 'rollbacker', 'autopatrolled' ], // T95180
+	],
+	'+testwiki' => [
+		'sysop' => [ 'electcomm' ],
+		'electcomm' => [ 'electionadmin' ],
 	],
 	'+trwiki' => [
 		'sysop' => [ 'patroller', 'massmessage-sender' ], // bureaucrat -> sysop, T40690, T147740
