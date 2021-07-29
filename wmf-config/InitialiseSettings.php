@@ -20867,6 +20867,12 @@ function wmfGetVariantSettings() {
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
+			'stream' => 'android.notification_interaction',
+			'schema_title' => 'analytics/mobile_apps/android_notification_interaction',
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
 			'stream' => 'android.image_recommendation_interaction',
 			'schema_title' => 'analytics/mobile_apps/android_image_recommendation_interaction',
 			'canary_events_enabled' => true,
