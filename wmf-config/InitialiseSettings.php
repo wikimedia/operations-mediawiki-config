@@ -11411,7 +11411,8 @@ function wmfGetVariantSettings() {
 	],
 	'+testwiki' => [
 		'bureaucrat' => [ 'researcher', 'centralnoticeadmin', 'flow-bot', 'import', 'transwiki' ],
-		'sysop' => [ 'filemover', 'rollbacker', 'accountcreator', 'confirmed', 'templateeditor' ],
+		'sysop' => [ 'filemover', 'rollbacker', 'accountcreator', 'confirmed', 'templateeditor', 'electcomm' ],
+		'electcomm' => [ 'electionadmin' ],
 	],
 	'+test2wiki' => [
 		'bureaucrat' => [ 'flow-bot', 'import', 'transwiki' ],
@@ -12084,10 +12085,6 @@ function wmfGetVariantSettings() {
 		'bureaucrat' => [ 'nocreate' ],
 		'sysop' => [ 'patroller', 'rollbacker', 'autopatrolled' ], // T95180
 	],
-	'+testwiki' => [
-		'sysop' => [ 'electcomm' ],
-		'electcomm' => [ 'electionadmin' ],
-	],
 	'+trwiki' => [
 		'sysop' => [ 'patroller', 'massmessage-sender' ], // bureaucrat -> sysop, T40690, T147740
 		'bureaucrat' => [ 'interface-editor' ], // T41690
@@ -12247,7 +12244,8 @@ function wmfGetVariantSettings() {
 	],
 	'+testwiki' => [
 		'bureaucrat' => [ 'sysop', 'researcher', 'centralnoticeadmin', 'flow-bot', 'import', 'transwiki' ],
-		'sysop' => [ 'filemover', 'rollbacker', 'accountcreator', 'confirmed', 'templateeditor' ],
+		'sysop' => [ 'filemover', 'rollbacker', 'accountcreator', 'confirmed', 'templateeditor', 'electcomm' ],
+		'electcomm' => [ 'electionadmin' ],
 	],
 	'+test2wiki' => [
 		'bureaucrat' => [ 'flow-bot', 'sysop', 'import', 'transwiki' ], // T131037
@@ -12953,10 +12951,6 @@ function wmfGetVariantSettings() {
 	'+tawiki' => [
 		'bureaucrat' => [ 'nocreate' ],
 		'sysop' => [ 'patroller', 'rollbacker', 'autopatrolled' ], // T95180
-	],
-	'+testwiki' => [
-		'sysop' => [ 'electcomm' ],
-		'electcomm' => [ 'electionadmin' ],
 	],
 	'+trwiki' => [
 		'sysop' => [ 'patroller', 'massmessage-sender' ], // bureaucrat -> sysop, T40690, T147740
