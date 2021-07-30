@@ -165,13 +165,11 @@ function wmfGetLabsOverrideSettings() {
 		//       have to configure streams that are being tested (or overridden) in beta here,
 		//       and centralize the configuration in InitialiseSettings.php otherwise.
 		'wgEventStreams' => [
-			'+enwiki' => [
+			'+default' => [
 				// Add beta only stream configs here.  Production
 				// stream configs are merged in, so if your settings for
 				// production and beta are the same, you can omit also adding your
 				// stream configs here for beta.
-			],
-			'+wikidatawiki' => [
 				/*
 				* Logging of events from the wikidata PropertySuggester
 				*/
@@ -187,7 +185,6 @@ function wmfGetLabsOverrideSettings() {
 					'canary_events_enabled' => true,
 					'destination_event_service' => 'eventgate-analytics-external',
 				],
-
 			],
 		],
 
@@ -195,12 +192,10 @@ function wmfGetLabsOverrideSettings() {
 		// EventLogging will request the stream config defined in wgEventStreams
 		// above for each of the stream names listed here.
 		'wgEventLoggingStreamNames' => [
-			'+enwiki' => [
+			'+default' => [
 				// Add beta only stream names here.  Production
 				// stream names are merged in, so if your stream is registered
 				// to be used by EventLogging in production you can omit it here.
-			],
-			'+wikidatawiki' => [
 				'wd_propertysuggester.client_side_property_request',
 				'wd_propertysuggester.server_side_property_request',
 			],
