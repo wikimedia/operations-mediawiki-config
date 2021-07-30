@@ -135,71 +135,9 @@ function wmfGetLabsOverrideSettings() {
 			'default' => 'wgDebugLogFile',
 		],
 
-		// Stream config default settings.
-		// The EventStreamConfig extension will add these
-		// settings to each entry in wgEventStreams if
-		// the entry does not already have the setting.
-		// Beta only has eqiad. prefixed topics.
-		'wgEventStreamsDefaultSettings' => [
-			'default' => [
-				'topic_prefixes' => [ 'eqiad.' ],
-			],
-		],
-
-		// Event stream configuration is a list of stream configurations.
-		// Each item in the list must have a 'stream' setting of either the specific
-		// stream name or a regex patterns to matching stream names.
-		// Each item must also at minimum include the schema_title of the
-		// JSONSchema that events in the stream must conform to.
-		// This is used by the EventStreamConfig extension
-		// to allow for remote configuration of streams.  It
-		// is used by the EventLogging extension to vary e.g.
-		// sample rate that browsers use when producing events,
-		// as well as the eventgate-analytics-external service
-		// to dynamically add event streams that it should accept
-		// and validate.
-		//
-		// See https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/EventStreamConfig/#mediawiki-config
-		//
-		// NOTE: we prefer to merge (via the + prefix) stream config from production so we only
-		//       have to configure streams that are being tested (or overridden) in beta here,
-		//       and centralize the configuration in InitialiseSettings.php otherwise.
-		'wgEventStreams' => [
-			'+default' => [
-				// Add beta only stream configs here.  Production
-				// stream configs are merged in, so if your settings for
-				// production and beta are the same, you can omit also adding your
-				// stream configs here for beta.
-				/*
-				* Logging of events from the wikidata PropertySuggester
-				*/
-				[
-					'stream' => 'wd_propertysuggester.client_side_property_request',
-					'schema_title' => 'analytics/mediawiki/wd_propertysuggester/client_side_property_request',
-					'canary_events_enabled' => true,
-					'destination_event_service' => 'eventgate-analytics-external',
-				],
-				[
-					'stream' => 'wd_propertysuggester.server_side_property_request',
-					'schema_title' => 'analytics/mediawiki/wd_propertysuggester/server_side_property_request',
-					'canary_events_enabled' => true,
-					'destination_event_service' => 'eventgate-analytics-external',
-				],
-			],
-		],
-
-		// List of streams to register for use with the EventLogging extension.
-		// EventLogging will request the stream config defined in wgEventStreams
-		// above for each of the stream names listed here.
-		'wgEventLoggingStreamNames' => [
-			'+default' => [
-				// Add beta only stream names here.  Production
-				// stream names are merged in, so if your stream is registered
-				// to be used by EventLogging in production you can omit it here.
-				'wd_propertysuggester.client_side_property_request',
-				'wd_propertysuggester.server_side_property_request',
-			],
-		],
+		// NOTE: There is currently no good way to set wgEventStreams
+		// overrides for beta.  See https://phabricator.wikimedia.org/T277193.
+		// For now, EventStreamConfig settings always need to be set in InitialiseSettings.php.
 
 		// EventLogging will POST events to this URI.
 		'wgEventLoggingServiceUri' => [

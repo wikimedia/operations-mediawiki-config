@@ -20884,6 +20884,19 @@ function wmfGetVariantSettings() {
 			'canary_events_enabled' => true,
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		[
+			'stream' => 'wd_propertysuggester.client_side_property_request',
+			'schema_title' => 'analytics/mediawiki/wd_propertysuggester/client_side_property_request',
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
+			'stream' => 'wd_propertysuggester.server_side_property_request',
+			'schema_title' => 'analytics/mediawiki/wd_propertysuggester/server_side_property_request',
+			'canary_events_enabled' => true,
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+
 		/*
 		 * == eventgate-logging-external streams ==
 		 * These are produced to the Kafka logging clusters for ingestion into logstash.
@@ -21224,6 +21237,8 @@ function wmfGetVariantSettings() {
 		'mediawiki.pref_diff',
 		'test.instrumentation',
 		'test.instrumentation.sampled',
+		'wd_propertysuggester.client_side_property_request',
+		'wd_propertysuggester.server_side_property_request',
 	]
 ],
 
