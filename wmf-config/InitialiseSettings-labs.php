@@ -139,6 +139,17 @@ function wmfGetLabsOverrideSettings() {
 		// overrides for beta.  See https://phabricator.wikimedia.org/T277193.
 		// For now, EventStreamConfig settings always need to be set in InitialiseSettings.php.
 
+		// Stream config default settings.
+		// The EventStreamConfig extension will add these
+		// settings to each entry in wgEventStreams if
+		// the entry does not already have the setting.
+		// Beta only has eqiad. prefixed topics.
+		'wgEventStreamsDefaultSettings' => [
+			'default' => [
+				'topic_prefixes' => [ 'eqiad.' ],
+			],
+		],
+
 		// EventLogging will POST events to this URI.
 		'wgEventLoggingServiceUri' => [
 			// Configured in profile::trafficserver::backend::mapping_rules
