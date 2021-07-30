@@ -56,6 +56,9 @@ function wmfGetOverrideSettings() {
 		'-wmgUseTranslationNotifications' => [
 			'default' => false,
 		],
+		'-wmgUseFundraisingTranslateWorkflow' => [
+			'default' => false,
+		],
 		'-wgGEDatabaseCluster' => [
 			'default' => false,
 		],
