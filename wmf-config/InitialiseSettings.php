@@ -14679,6 +14679,7 @@ function wmfGetVariantSettings() {
 		'incubator.wikimedia.org' => 'incubatorwiki',
 		'.wikivoyage.org' => 'enwikivoyage',
 		'api.wikimedia.org' => 'apiportalwiki',
+		'wikimania.wikimedia.org' => 'wikimaniawiki',
 	],
 	'+ptwiki' => [ 'br.wikimedia.org' => 'brwikimedia' ],
 	'+ptwikibooks' => [ 'br.wikimedia.org' => 'brwikimedia' ],
