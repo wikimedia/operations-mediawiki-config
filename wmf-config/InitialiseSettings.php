@@ -10003,6 +10003,9 @@ function wmfGetVariantSettings() {
 		'extendedconfirmed' => [ 'extendedconfirmed' => true, ], // T184675
 		'sysop' => [ 'extendedconfirmed' => true, ], // T184675
 	],
+	'+kswiki' => [
+		'rollbacker' => [ 'rollback' => true ], // T286789
+	],
 	'+labswiki' => [
 		'bureaucrat' => [ 'usermerge' => true ],
 	],
@@ -11837,6 +11840,9 @@ function wmfGetVariantSettings() {
 	'+kowiki' => [
 		'sysop' => [ 'rollbacker', 'confirmed', 'uploader', 'autopatrolled', 'extendedconfirmed' ], // T85621, T130808, T184675
 	],
+	'+kswiki' => [
+		'sysop' => [ 'rollbacker' ], // T286789
+	],
 	'+ladwiki' => [
 		'sysop' => [ 'flood' ], // T131527
 		'bureaucrat' => [ 'flood' ], // T131527
@@ -12686,6 +12692,9 @@ function wmfGetVariantSettings() {
 	],
 	'+kowiki' => [
 		'sysop' => [ 'rollbacker', 'confirmed', 'uploader', 'autopatrolled', 'extendedconfirmed' ], // T85621, T130808, T184675
+	],
+	'+kswiki' => [
+		'sysop' => [ 'rollbacker' ], // T286789
 	],
 	'+ladwiki' => [
 		'sysop' => [ 'flood' ], // T131527
