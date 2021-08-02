@@ -133,7 +133,6 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['badgeItems'] = $wmgWikibaseRepoBadgeItems;
 	$wgWBRepoSettings['preferredGeoDataProperties'] = $wmgWBRepoPreferredGeoDataProperties;
 	$wgWBRepoSettings['preferredPageImagesProperties'] = $wmgWBRepoPreferredPageImagesProperties;
-	$wgWBRepoSettings['conceptBaseUri'] = $wmgWBRepoConceptBaseUri;
 	if ( isset( $wmgWikibaseRepoSandboxEntityIds ) ) {
 		$wgWBRepoSettings['sandboxEntityIds'] = $wmgWikibaseRepoSandboxEntityIds;
 	}
