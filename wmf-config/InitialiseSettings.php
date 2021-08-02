@@ -23495,31 +23495,28 @@ function wmfGetVariantSettings() {
 ],
 
 'wmgUseGlobalAbuseFilters' => [
-	// Enabled for all wikis that open, global and small/medium in size
+	// Enabled by default on all SUL small/medium wikis. Large wikis may
+	// opt-in, there is no performance issue in doing so.
 	'default' => true,
-
-	// Groups
-	// Only use these groups to set false. The default is true, and
-	// overlapping groups may not set different values.
-	'large' => false,
-	'private' => false,
 	'fishbowl' => false,
+	'large' => false,
 	'nonglobal' => false,
+	'private' => false,
 
 	// Individual wikis
 	// Can set either true or false as-needed to override the default or group setting.
 	'enwikisource' => true, // T78496
 	'frwiki' => true, // T120568
-	'metawiki' => true,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'mediawikiwiki' => true,
-	'specieswiki' => true,
 	'incubatorwiki' => true,
-	'wikidatawiki' => true,
+	'mediawikiwiki' => true,
+	'metawiki' => true,
 	'ptwiki' => true, // T140395
-	'warwiki' => true, // T230304
 	'ruwikinews' => true, // Needs explicit enable after moving to large wiki
+	'specieswiki' => true,
+	'test2wiki' => true,
+	'testwiki' => true,
+	'warwiki' => true, // T230304
+	'wikidatawiki' => true,
 ],
 
 'wmgUseCampaigns' => [
