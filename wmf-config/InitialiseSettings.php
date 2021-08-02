@@ -25580,6 +25580,7 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'testwiki' => true,
 	'arwiki' => true,
+	'azwiki' => true,
 	'bgwiki' => true,
 	'bnwiki' => true,
 	'cawiki' => true,
@@ -25591,6 +25592,7 @@ function wmfGetVariantSettings() {
 	'eswiki' => true,
 	'euwiki' => true,
 	'fawiki' => true,
+	'fiwiki' => true,
 	'frwiki' => true,
 	'frwiktionary' => true,
 	'hewiki' => true,
@@ -25600,8 +25602,12 @@ function wmfGetVariantSettings() {
 	'hywiki' => true,
 	'idwiki' => true,
 	'jawiki' => true,
+	'kawiki' => true,
+	'kkwiki' => true,
 	'kowiki' => true,
 	'lvwiki' => true,
+	'mlwiki' => true,
+	'mrwiki' => true,
 	'mswiki' => true,
 	'nlwiki' => true,
 	'nowiki' => true,
@@ -25612,6 +25618,7 @@ function wmfGetVariantSettings() {
 	'shwiki' => true,
 	'simplewiki' => true,
 	'skwiki' => true,
+	'slwiki' => true,
 	'sqwiki' => true,
 	'srwiki' => true,
 	'svwiki' => true,
@@ -25634,8 +25641,20 @@ function wmfGetVariantSettings() {
 
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
+
+	// to enable in September
 	'nlwiki' => false,
+	// pending templates for easy tasks or T278825
 	'shwiki' => false,
+
+	// large batch of new wikis (August 2021)
+	'azwiki' => false,
+	'fiwiki' => false,
+	'kawiki' => false,
+	'kkwiki' => false,
+	'mlwiki' => false,
+	'mrwiki' => false,
+	'slwiki' => false,
 ],
 
 'wgWelcomeSurveyEnabled' => [
