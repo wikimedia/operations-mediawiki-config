@@ -1310,10 +1310,6 @@ function wmfGetLabsOverrideSettings() {
 				'P964',
 			],
 		],
-		'-wmgWBRepoConceptBaseUri' => [
-			'commonswiki' => 'https://commons.wikimedia.beta.wmflabs.org/entity/',
-			'wikidatawiki' => 'https://wikidata.beta.wmflabs.org/entity/',
-		],
 		'-wgArticlePlaceholderImageProperty' => [
 			'default' => 'P964',
 		],
