@@ -23274,6 +23274,7 @@ function wmfGetVariantSettings() {
 'wgSecurePollSingleTransferableVoteEnabled' => [
 	'default' => false,
 	'testwiki' => true,
+	'votewiki' => true,
 ],
 
 'wmgUseGlobalAbuseFilters' => [
