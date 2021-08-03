@@ -2659,6 +2659,9 @@ Wikisource:
         no_1_5x: true
         no_2x: true
 
+    jvwikisource:
+        commons: File:Wikisource-logo-jv.svg
+
     knwikisource:
         comment:  T110806
         no_1_5x: true

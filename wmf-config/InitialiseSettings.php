@@ -1899,6 +1899,7 @@ function wmfGetVariantSettings() {
 	'jawikinews' => 'ウィキニュース',
 	'jawikiversity' => 'ウィキバーシティ',
 	'jawikivoyage' => 'ウィキボヤージュ',
+	'jvwikisource' => 'Wikisumber',
 	'kawiki' => 'ვიკიპედია',
 	'kawikibooks' => 'ვიკიწიგნები',
 	'kawikiquote' => 'ვიკიციტატა',
@@ -2443,6 +2444,7 @@ function wmfGetVariantSettings() {
 	'jamwiki' => 'Wikipidia',
 	'jawikinews' => 'ウィキニュース',
 	'jbowiki' => 'uikipedi\'as', // T118067
+	'jvwikisource' => 'Wikisumber',
 	'kawiki' => 'ვიკიპედია',
 	'kawikibooks' => 'ვიკიწიგნები',
 	'kawikiquote' => 'ვიკიციტატა',
