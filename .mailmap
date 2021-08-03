@@ -1,0 +1,16 @@
+# Cannonical commit name mappings
+#
+# Mappings use one of two forms. The first maps an email address to the
+# cannonical proper name:
+#   Proper Name <commit@email.xx>
+#
+# The second maps any Proper Name <email> value to a cannonical Proper Name
+# <email> value based on the email used by the commit:
+#   Proper Name <proper@email.xx> <commit@email.xx>
+#
+# Some users have multiple mappings to deal with a variety of emails and/or
+# proper names associated with their commit history.
+#
+# See https://www.kernel.org/pub/software/scm/git/docs/git-shortlog.html
+Stevie Beth Mhaol <sbmhaol@wikimedia.org>
+Stevie Beth Mhaol <sbmhaol@wikimedia.org> <sshirley@wikimedia.org>
