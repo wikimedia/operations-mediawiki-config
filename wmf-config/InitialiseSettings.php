@@ -22521,6 +22521,11 @@ function wmfGetVariantSettings() {
 	'wikidatawiki' => 70,
 ],
 
+'wgWBQualityConstraintsFormatCheckerShellboxRatio' => [
+	'default' => 0,
+	'testwikidatawiki' => 0.5,
+],
+
 'wgWBQualityConstraintsSparqlEndpoint' => [
 	'default' => 'http://localhost:6009/sparql',
 ],

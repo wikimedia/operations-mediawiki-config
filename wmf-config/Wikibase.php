@@ -211,6 +211,10 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['dataBridgeEnabled'] = $wmgWikibaseRepoDataBridgeEnabled;
 	}
 
+	if ( $wgWBQualityConstraintsFormatCheckerShellboxRatio ) {
+		$wgShellboxUrls['constraint-regex-checker'] = $wmfLocalServices['shellbox-constraints'];
+	}
+
 	$wgWBRepoSettings['enableRefTabs'] = $wmgWikibaseRepoEnableRefTabs;
 
 	// entity data for URLs matching these patterns will be cached in Varnish and purged if needed;
