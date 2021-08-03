@@ -14126,6 +14126,7 @@ function wmfGetVariantSettings() {
 	'srwiktionary' => true, // T70346
 	'strategywiki' => true,
 	'viwiktionary' => true, // T10886
+	'wikimania2016wiki' => true,
 
 	// Wikis where it was previously enabled by default by virtue
 	// of being in a wiki family
@@ -14252,22 +14253,6 @@ function wmfGetVariantSettings() {
 	'zhwikibooks' => true,
 	'zuwikibooks' => true,
 
-	// Wikimania
-	'wikimania2005wiki' => true,
-	'wikimania2006wiki' => true,
-	'wikimania2007wiki' => true,
-	'wikimania2008wiki' => true,
-	'wikimania2009wiki' => true,
-	'wikimania2010wiki' => true,
-	'wikimania2011wiki' => true,
-	'wikimania2012wiki' => true,
-	'wikimania2013wiki' => true,
-	'wikimania2014wiki' => true,
-	'wikimania2015wiki' => true,
-	'wikimania2016wiki' => true,
-	'wikimania2017wiki' => true,
-	'wikimania2018wiki' => true,
-	'wikimaniawiki' => true,
 	// Wikinews
 	'arwikinews' => true,
 	'bgwikinews' => true,
