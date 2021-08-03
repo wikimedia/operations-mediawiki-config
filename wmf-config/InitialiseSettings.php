@@ -6591,6 +6591,10 @@ function wmfGetVariantSettings() {
 		102 => '作者', // T126914 - Author
 		103 => '作者・トーク',
 	],
+	'jvwikisource' => [
+		102 => 'Panganggit', // T286241 - Author
+		103 => 'Parembugan_Panganggit', // T286241 - Author talk
+	],
 	'knwikisource' => [ // T39676
 		100 => 'ಸಂಪುಟ',         // Portal
 		101 => 'ಸಂಪುಟ_ಚರ್ಚೆ',
