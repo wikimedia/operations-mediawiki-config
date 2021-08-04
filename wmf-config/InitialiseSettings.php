@@ -19825,7 +19825,19 @@ function wmfGetVariantSettings() {
 ],
 
 'wgDiscussionTools_sourcemodetoolbar' => [
-	'default' => 'default', // T279124
+	// Intended to be available everywhere (T287927).
+	// However, it must be marked as 'available' only on wikis where 'wgDiscussionTools_replytool'
+	// or 'wgDiscussionTools_newtopictool' is 'available'. Otherwise it will cause the reply tool
+	// to be always loaded, even when it's not supposed to be available.
+	'default' => 'default',
+	'arwiki' => 'available',
+	'cswiki' => 'available',
+	'huwiki' => 'available',
+	'apiportalwiki' => 'available',
+	'gomwiktionary' => 'available',
+	'enwikibooks' => 'available',
+	'officewiki' => 'available',
+	'wikitech' => 'available',
 ],
 
 'wgDiscussionTools_topicsubscription' => [
