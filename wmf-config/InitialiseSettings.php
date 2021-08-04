@@ -19893,6 +19893,8 @@ function wmfGetVariantSettings() {
 'wgDiscussionTools_newtopictool' => [
 	// Keep in sync with wgDiscussionTools_sourcemodetoolbar below
 	'default' => 'default', // T275827
+	'arwiki' => 'available', // T285724
+	'cswiki' => 'available', // T285724
 ],
 
 'wgDiscussionTools_sourcemodetoolbar' => [
