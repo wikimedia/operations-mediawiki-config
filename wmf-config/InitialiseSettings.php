@@ -21614,6 +21614,13 @@ function wmfGetVariantSettings() {
 	'wikipedia' => 'https://intake-logging.wikimedia.org/v1/events?hasty=true',
 ],
 
+// Enable the IP address copy action instrument on all wikis.
+//
+// See https://phabricator.wikimedia.org/T273021 and associated tasks for further detail.
+'wgWMEIPAddressCopyActionEnabled' => [
+	'default' => true,
+],
+
 'wmgUseWikimediaEvents' => [
 	'default' => true,
 	'closed' => false, // T158721
