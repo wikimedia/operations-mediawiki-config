@@ -19498,6 +19498,7 @@ function wmfGetVariantSettings() {
 	'wikipedia' => true,
 	'cawikibooks' => true, // T93637
 	'ruwikinews' => true, // T239000
+	'zhwikinews' => true, // T287807
 	'wikivoyage' => true,
 	'commonswiki' => true,
 	'testcommonswiki' => true,
