@@ -1,4 +1,11 @@
 <?php
+/**
+ * To test the script locally, run:
+ *
+ *     cd docroot/noc$ php -S localhost:9412
+ *
+ * Then view <http://localhost:9412/conf/>.
+ */
 
 	/**
 	 * @param array $viewFilenames
@@ -47,7 +54,7 @@
 
 <hr>
 <p>Currently active MediaWiki versions: <?php
-	$wikiversions = json_decode( file_get_contents( '/srv/mediawiki/wikiversions.json' ), true );
+	$wikiversions = json_decode( file_get_contents( __DIR__ . '/../../../wikiversions.json' ), true );
 	$inuse = array_unique( array_values( $wikiversions ) );
 	sort( $inuse );
 	echo implode( ', ', $inuse );
