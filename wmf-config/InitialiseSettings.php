@@ -7796,8 +7796,12 @@ function wmfGetVariantSettings() {
 
 'wgVectorConsolidateUserLinks' => [
 	'default' => [
-		'logged_in' => false,
+		'logged_in' => true,
 		'logged_out' => false,
+	],
+	'desktop-improvements' => [
+		'logged_in' => true,
+		'logged_out' => true,
 	],
 	'officewiki' => [
 		'logged_in' => true,
