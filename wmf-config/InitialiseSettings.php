@@ -21872,8 +21872,8 @@ function wmfGetVariantSettings() {
 
 'wmgWikibaseDispatchMaxTime' => [
 	'default' => 30,
-	'wikidatawiki' => 540, // Cron every 3 mins, length 9 mins, 3 dispatching threads
-	'testwikidatawiki' => 900, // Cron every 15 mins, length 15 mins, 1 dispatching thread
+	'wikidatawiki' => 530, // Cron every 3 mins, length almost 9 mins, ~3 dispatching threads
+	'testwikidatawiki' => 890, // Cron every 15 mins, length almost 15 mins, ~1 dispatching thread
 ],
 
 'wmgWikibaseDispatchDefaultBatchSize' => [
