@@ -25937,6 +25937,7 @@ function wmfGetVariantSettings() {
 	'cswiki' => true,
 	'etwiki' => true,
 	'dawiki' => true,
+	'dewiki' => true,
 	'eowiki' => true,
 	'elwiki' => true,
 	'enwiki' => true,
@@ -25994,6 +25995,8 @@ function wmfGetVariantSettings() {
 
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
+
+	'dewiki' => false, // T288420
 
 	// to enable in September
 	'nlwiki' => false,
