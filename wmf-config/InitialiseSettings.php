@@ -1925,7 +1925,9 @@ function wmfGetVariantSettings() {
 	'jawikinews' => 'ウィキニュース',
 	'jawikiversity' => 'ウィキバーシティ',
 	'jawikivoyage' => 'ウィキボヤージュ',
+	'jvwiki' => 'Wikipédia', // T287437
 	'jvwikisource' => 'Wikisumber',
+	'jvwiktionary' => 'Wikisastra', // T287437
 	'kawiki' => 'ვიკიპედია',
 	'kawikibooks' => 'ვიკიწიგნები',
 	'kawikiquote' => 'ვიკიციტატა',
@@ -2472,7 +2474,9 @@ function wmfGetVariantSettings() {
 	'jamwiki' => 'Wikipidia',
 	'jawikinews' => 'ウィキニュース',
 	'jbowiki' => 'uikipedi\'as', // T118067
+	'jvwiki' => 'Wikipédia', // T287437
 	'jvwikisource' => 'Wikisumber',
+	'jvwiktionary' => 'Wikisastra', // T287437
 	'kawiki' => 'ვიკიპედია',
 	'kawikibooks' => 'ვიკიწიგნები',
 	'kawikiquote' => 'ვიკიციტატა',
