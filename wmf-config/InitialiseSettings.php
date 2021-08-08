@@ -3519,6 +3519,33 @@ function wmfGetVariantSettings() {
 		'Draft' => 118, // T187535
 		'Draft_talk' => 119, // T187535
 	],
+	'+hrwiki' => [
+		'WP' => NS_PROJECT,  // T287024
+		'WT' => NS_PROJECT_TALK,  // T287024
+		'RWP' => NS_PROJECT_TALK,  // T287024
+		'KT' => NS_CATEGORY,  // T287024
+		'CT' => NS_CATEGORY,  // T287024
+		'RKT' => NS_CATEGORY_TALK,  // T287024
+		'RCT' => NS_CATEGORY_TALK,  // T287024
+		'SUR' => NS_USER,  // T287024
+		'U' => NS_USER,  // T287024
+		'RSUR' => NS_USER_TALK,  // T287024
+		'RSS' => NS_USER_TALK,  // T287024
+		'DT' => NS_FILE,  // T287024
+		'F' => NS_FILE,  // T287024
+		'RDT' => NS_FILE_TALK,  // T287024
+		'RF' => NS_FILE_TALK,  // T287024
+		'ME' => NS_MEDIAWIKI,  // T287024
+		'RME' => NS_MEDIAWIKI_TALK,  // T287024
+		'PM' => NS_HELP,  // T287024
+		'H' => NS_HELP,  // T287024
+		'RPM' => NS_HELP_TALK,  // T287024
+		'RH' => NS_HELP_TALK,  // T287024
+		'MD' => 828,  // T287024
+		'MOD' => 828,  // T287024
+		'RMD' => 829,  // T287024
+		'RMOD' => 829,  // T287024
+	],
 	'+hrwikisource' => [
 		'Author' => 100,
 		'Author_talk' => 101,
