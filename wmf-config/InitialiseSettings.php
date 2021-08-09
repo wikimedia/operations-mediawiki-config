@@ -22543,7 +22543,7 @@ function wmfGetVariantSettings() {
 'wgWBQualityConstraintsFormatCheckerShellboxRatio' => [
 	'default' => 0,
 	'testwikidatawiki' => 1,
-	'wikidatawiki' => 0.42,
+	'wikidatawiki' => 1,
 ],
 
 'wgWBQualityConstraintsSparqlEndpoint' => [
