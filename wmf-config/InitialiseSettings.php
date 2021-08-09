@@ -22544,6 +22544,8 @@ function wmfGetVariantSettings() {
 	'default' => 0,
 	'testwikidatawiki' => 1,
 	'wikidatawiki' => 1,
+	'commonswiki' => 1,
+	'testcommonswiki' => 1,
 ],
 
 'wgWBQualityConstraintsSparqlEndpoint' => [
