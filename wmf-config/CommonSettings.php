@@ -1528,9 +1528,10 @@ $wgHooks['SkinAddFooterLinks'][] = function ( $sk, $key, &$footerlinks )
 	}
 
 	if ( $wmgUseFooterCodeOfConductLink ) {
-		// T280886 wm-codeofconduct-url doesn't currently point
-		// to the actual policy text at
-		// https://meta.wikimedia.org/wiki/Special:MyLanguage/Universal_Code_of_Conduct/Policy_text
+		// T280886 wm-codeofconduct-url currently points to
+		// https://meta.wikimedia.org/wiki/Special:MyLanguage/Universal_Code_of_Conduct
+		// but may need updating to point to
+		// https://foundation.wikimedia.org/wiki/Special:MyLanguage/Universal_Code_of_Conduct
 		return;
 		// $urlKey = 'wm-codeofconduct-url';
 		// $msgKey = 'wm-codeofconduct';
