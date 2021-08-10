@@ -123,6 +123,13 @@ $wmgVersionNumber = $multiVersion->getVersionNumber();
 # be shared between wikis (e.g. does not need to vary by wgDBname).
 $wgCacheDirectory = '/tmp/mw-cache-' . $wmgVersionNumber;
 
+# Whether MediaWiki is running on Kubernetes, intended for config
+# that needs to differ during the migration. On dedicated servers,
+# SERVERGROUP is set by Puppet in profile::mediawiki::httpd, in
+# Kubernetes pods, it's set by configuring the php.servergroup
+# Helm value.
+$wmfUsingKubernetes = strpos( ( $_SERVER['SERVERGROUP'] ?? null ), 'kube-' ) === 0;
+
 # Get all the service definitions
 $wmfAllServices = ServiceConfig::getInstance()->getAllServices();
 
