@@ -123,7 +123,6 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['localClientDatabases']
 	);
 
-	$wgWBRepoSettings['entityNamespaces'] = $wmgWikibaseRepoEntityNamespaces;
 	$wgWBRepoSettings['disabledDataTypes'] = $wmgWikibaseDisabledDataTypes;
 	$wgWBRepoSettings['entityDataFormats'] = $wmgWikibaseEntityDataFormats;
 	$wgWBRepoSettings['maxSerializedEntitySize'] = $wmgWikibaseMaxSerializedEntitySize;
