@@ -258,7 +258,6 @@ if ( $wmgUseWikibaseClient ) {
 	// to be safe, keeping this here although $wgDBname is default setting
 	$wgWBClientSettings['siteGlobalID'] = $wgDBname;
 
-	$wgWBClientSettings['entityNamespaces'] = $wmgWikibaseClientEntityNamespaces;
 	$wgWBClientSettings['namespaces'] = $wmgWikibaseClientNamespacesWithRepoAccess;
 
 	$wgWBClientSettings['excludeNamespaces'] = function () {
