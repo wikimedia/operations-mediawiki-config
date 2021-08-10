@@ -21933,20 +21933,6 @@ function wmfGetVariantSettings() {
 	'wikidata' => true,
 ],
 
-'wmgWikibaseClientEntityNamespaces' => [
-	'default' => [],
-	'wikidataclient' => [
-		'item' => 0,
-		'property' => 120,
-		'lexeme' => 146,
-	],
-	'wikidataclient-test' => [
-		'item' => 0,
-		'property' => 120,
-		'lexeme' => 146,
-	],
-],
-
 'wmgWikibaseClientNamespacesWithRepoAccess' => [
 	'default' => [], // default [] includes all namespaces
 	'wikidatawiki' => [
