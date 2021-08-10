@@ -21933,16 +21933,6 @@ function wmfGetVariantSettings() {
 	'wikidata' => true,
 ],
 
-'wmgWikibaseRepoEntityNamespaces' => [
-	'default' => [],
-	'wikidata' => [
-		'item' => 0,
-		'property' => 120,
-		'lexeme' => 146,
-	],
-	// WikibaseMediaInfo entity namespace and slot is hard-coded in the extension
-],
-
 'wmgWikibaseClientEntityNamespaces' => [
 	'default' => [],
 	'wikidataclient' => [
