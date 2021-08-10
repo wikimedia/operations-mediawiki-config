@@ -4,19 +4,24 @@
 # ProductionServices.php statically defines all service hostnames/ips
 # for any service used by MediaWiki, divided by datacenter.
 #
-# May be included on app servers in contexts where MediaWiki is not (yet)
-# initialised (for example, fatal-error.php and profiler.php).
+# This can be included on app servers even in contexts where MediaWiki is not
+# initialised (for example, PhpAutoPrepend.php and /etc/php7/fatal-error.php).
 #
-# MUST NOT use any predefined state, only primitive values in plain PHP.
+# This MUST NOT assume any global variables or constants from MediaWiki, nor
+# multiversion. Only plain PHP built-ins may be used.
 #
 # This for PRODUCTION.
 #
-# For MediaWiki, this is included from ../src/ServiceConfig.php
+# Effective load order:
+# - *nothing*
+# - wmf-config/ProductionServices.php [THIS FILE]
 #
-# ATTENTION: do NOT add new services below without asking SRE to set up a
-# service proxy for it first. See T244843 for the rationale.
-# All proxies that  are already setup can be found within operations/puppet,
-# file hieradata/common/profile/services_proxy/envoy.yaml
+# Included from: ../src/ServiceConfig.php
+#
+# DO NOT ADD new services below without asking SRE to set up a service proxy for it first.
+# See T244843 for the rationale. All proxies that are setup can be found at:
+# operations/puppet.git:/hieradata/common/profile/services_proxy/envoy.yaml
+#
 
 $common = [
 	// XHGui is the on-demand profiler, backed by MariaDB.  The
