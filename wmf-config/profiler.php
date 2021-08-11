@@ -232,14 +232,23 @@ function wmfSetupExcimer( $options ) {
 	$cpuProf->setMaxDepth( 250 );
 	$realProf->setMaxDepth( 250 );
 
+	// The excimer-k8s definitions are temporary, to assist with migration
+	// (T288165).  We unfortunately have to duplicate the logic for
+	// $wmfUsingKubernetes from CommonSettings.php, since this file is loaded
+	// before that one.
+	$redisChannel = 'excimer';
+	if ( strpos( ( $_SERVER['SERVERGROUP'] ?? null ), 'kube-' ) === 0 ) {
+		$redisChannel .= '-k8s';
+	}
+
 	$cpuProf->setFlushCallback(
 		function ( $log ) use ( $options ) {
-			wmfExcimerFlushCallback( $log, $options, /* redisChannel = */ 'excimer' );
+			wmfExcimerFlushCallback( $log, $options, $redisChannel );
 		},
 		/* $maxSamples = */ 1 );
 	$realProf->setFlushCallback(
 		function ( $log ) use ( $options ) {
-			wmfExcimerFlushCallback( $log, $options, /* redisChannel = */ 'excimer-wall' );
+			wmfExcimerFlushCallback( $log, $options, $redisChannel . '-wall' );
 		},
 		/* $maxSamples = */ 1 );
 
