@@ -15168,6 +15168,7 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'enwiki' => true, // T241683
 	'fiwiki' => true, // T257073
+	'enwikisource' => true, // T288021
 ],
 
 'wmgCollectionArticleNamespaces' => [
