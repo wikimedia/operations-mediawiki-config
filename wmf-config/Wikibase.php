@@ -331,7 +331,6 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['echoIcon'] = $wmgWikibaseClientEchoIcon;
 
 	$wgWBClientSettings['disabledUsageAspects'] = $wmgWikibaseDisabledUsageAspects;
-	$wgWBClientSettings['fineGrainedLuaTracking'] = $wmgWikibaseFineGrainedLuaTracking;
 	$wgWBClientSettings['entityUsageModifierLimits'] = [ 'D' => 10, 'L' => 10, 'C' => 33 ];
 
 	// T208763
