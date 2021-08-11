@@ -22392,11 +22392,6 @@ function wmfGetVariantSettings() {
 	'hywiki' => [ 'C' => 'O' ],
 ],
 
-// T172914
-'wmgWikibaseFineGrainedLuaTracking' => [
-	'default' => true,
-],
-
 'wmgUseWikibaseWikidataOrg' => [
 	'default' => false,
 	'wikidata' => true,
