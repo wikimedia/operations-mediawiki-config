@@ -169,9 +169,6 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['sharedCacheKeyGroup'] = $wmgWikibaseCachePrefix;
 	$wgWBRepoSettings['sharedCacheKeyPrefix'] = $wmgWBSharedCacheKey;
 
-	// T189776, T189777
-	$wgWBRepoSettings['useTermsTableSearchFields'] = false;
-
 	// These settings can be overridden by the cron parameters in operations/puppet
 	$wgWBRepoSettings['dispatchingLockManager'] = $wmgWikibaseDispatchingLockManager;
 	$wgWBRepoSettings['dispatchDefaultDispatchInterval'] = $wmgWikibaseDispatchInterval;
@@ -332,8 +329,6 @@ if ( $wmgUseWikibaseClient ) {
 	// T142103
 	$wgWBClientSettings['sendEchoNotification'] = true;
 	$wgWBClientSettings['echoIcon'] = $wmgWikibaseClientEchoIcon;
-
-	$wgWBClientSettings['useTermsTableSearchFields'] = $wmgWikibaseClientUseTermsTableSearchFields;
 
 	$wgWBClientSettings['disabledUsageAspects'] = $wmgWikibaseDisabledUsageAspects;
 	$wgWBClientSettings['fineGrainedLuaTracking'] = $wmgWikibaseFineGrainedLuaTracking;
