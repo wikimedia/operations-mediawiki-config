@@ -22051,10 +22051,6 @@ function wmfGetVariantSettings() {
 	'wikidataclient-test' => 'https://test.wikidata.org',
 ],
 
-'wmgWikibaseClientUseTermsTableSearchFields' => [
-	'default' => false,
-],
-
 'wmgWikibaseClientPropertyOrderUrl' => [
 	'default' => 'https://www.wikidata.org/w/index.php?title=MediaWiki:Wikibase-SortedProperties&action=raw&sp_ver=1',
 ],
