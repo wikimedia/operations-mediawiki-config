@@ -126,13 +126,13 @@ $services = [
 			'pc2' => '10.64.16.20',  # pc1008, B8 4.4TB 256GB # pc2
 			'pc3' => '10.64.32.29',  # pc1009, C3 4.4TB 256GB # pc3
 			# spare: '10.64.48.174', # pc1010, D3 4.4TB 256GB
-			# Use spare to replace any of the above if needed
+			# Use spare(s) to replace any of the above if needed
 
 			// new pc hosts (T284825), to be slowly made primary
-			# '10.64.0.57',   # pc1011, A1 8.8T 512GB
-			# '10.64.16.65',  # pc1012, B1 8.8T 512GB
-			# '10.64.32.163', # pc1013, C5 8.8T 512GB
-			# '10.64.48.89',  # pc1014, D6 8.8T 512GB
+			# '10.64.0.57',   # pc1011, A1 8.8TB 512GB
+			# '10.64.16.65',  # pc1012, B1 8.8TB 512GB
+			# '10.64.32.163', # pc1013, C5 8.8TB 512GB
+			# '10.64.48.89',  # pc1014, D6 8.8TB 512GB
 		],
 
 		// LockManager Redis
@@ -186,13 +186,13 @@ $services = [
 			'pc2' => '10.192.16.35',  # pc2008, B3 4.4TB 256GB # pc2
 			'pc3' => '10.192.32.10',  # pc2009, C1 4.4TB 256GB # pc3
 			# spare: '10.192.48.14',  # pc2010, D3 4.4TB 256GB
-			# Use spare to replace any of the above if needed
+			# Use spare(s) to replace any of the above if needed
 
 			// new pc hosts (T284825), to be slowly made primary
-			# '10.192.0.72',  # pc2011, A5 8.8T 512GB
-			# '10.192.16.55', # pc2012, B5 8.8T 512GB
-			# '10.192.32.57', # pc2013, C1 8.8T 512GB
-			# '10.192.48.52', # pc2014, D1 8.8T 512GB
+			# '10.192.0.72',  # pc2011, A5 8.8TB 512GB
+			# '10.192.16.55', # pc2012, B5 8.8TB 512GB
+			# '10.192.32.57', # pc2013, C1 8.8TB 512GB
+			# '10.192.48.52', # pc2014, D1 8.8TB 512GB
 		],
 
 		'redis_lock' => [
