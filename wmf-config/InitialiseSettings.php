@@ -13656,6 +13656,10 @@ function wmfGetVariantSettings() {
 		118 => 'noindex,nofollow', // draft, T92760
 		119 => 'noindex,nofollow', // draft talk, T92760
 	],
+	'foundationwiki' => [ // T288763
+		112 => 'noindex,follow', // archives
+		113 => 'noindex,follow', // archives talk
+	],
 	'frwiki' => [
 		NS_USER => 'noindex,follow',
 		NS_USER_TALK => 'noindex,follow',
