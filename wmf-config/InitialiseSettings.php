@@ -5206,7 +5206,7 @@ function wmfGetVariantSettings() {
 	'svwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T279836
 	'testwiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T61084
 	'viwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T215493
-	'zhwiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T260012
+	'zhwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T260012, T287322
 	'zhwiktionary' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T286101
 ],
 # @} end of wgRestrictionLevels
@@ -5229,6 +5229,7 @@ function wmfGetVariantSettings() {
 	'+rowiki' => [ 'extendedconfirmed' ], // T254471
 	'+svwiki' => [ 'extendedconfirmed' ], // T279836
 	'+viwiki' => [ 'extendedconfirmed' ], // T215493
+	'+zhwiki' => [ 'extendedconfirmed' ], // T287322
 ],
 
 'wgSiteNotice' => [
@@ -11204,6 +11205,7 @@ function wmfGetVariantSettings() {
 	'+zhwiki' => [
 		'*' => [ 'flow-hide' => false, ], // T264489, to revise on 2020-10-12
 		'autoconfirmed' => [ 'flow-hide' => true ],  // T264489, to revise on 2020-10-12
+		'bot' => [ 'extendedconfirmed' ], // T287322
 		'rollbacker' => [
 			'rollback' => true, // T18988
 			'abusefilter-log-private' => true, // T39679
@@ -11222,6 +11224,7 @@ function wmfGetVariantSettings() {
 			'autopatrol' => true,
 			'movefile' => true,
 		], // T195247
+		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T287322
 		'flood' => [ 'bot' => true ],
 		'massmessage-sender' => [ 'massmessage' => true ], // T130814
 		'filemover' => [ 'movefile' => true ], // T195247
@@ -11233,7 +11236,7 @@ function wmfGetVariantSettings() {
 		],
 		'transwiki' => [ 'suppressredirect' => true, ], // T250972
 		'templateeditor' => [ 'templateeditor' => true, ], // T260012
-		'sysop' => [ 'templateeditor' => true ], // T260012
+		'sysop' => [ 'templateeditor' => true, 'extendedconfirmed' => true ], // T260012, T287322
 	],
 	'+zh_classicalwiki' => [
 		'editor' => [ 'rollback' => true ], // T188064
@@ -14968,6 +14971,14 @@ function wmfGetVariantSettings() {
 			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
 			[ '!', [ APCOND_INGROUPS, 'eliminator' ] ],
 		], // T215493
+	],
+	'zhwiki' => [
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 90 * 86400 ], // 90 days * seconds in a day
+			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+		], // T287322
 	],
 ],
 
