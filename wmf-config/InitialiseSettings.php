@@ -16415,11 +16415,11 @@ function wmfGetVariantSettings() {
 	'enwikivoyage' => true, // T203981
 	'hewikivoyage' => true, // T222017
 	'zhwikivoyage' => true, // T230624
+	'dewikivoyage' => true, // T264305
 ],
 
 'wgPopupsVirtualPageViews' => [
-	'default' => false,
-	'wikipedia' => true,
+	'default' => true,
 ],
 
 'wgPopupsStatsvSamplingRate' => [
@@ -16433,13 +16433,8 @@ function wmfGetVariantSettings() {
 ],
 
 'wgPopupsGateway' => [
-	'default' => 'mwApiPlain',
-
-	// Make Page Previews use RESTBase HTML for enwikivoyage
-	'enwikivoyage' => 'restbaseHTML',
-
-	// Make Page Previews use RESTBase HTML for all wikipedias
-	'wikipedia' => 'restbaseHTML',
+	// mwApiPlain should never be used in a production setting as it is not cached.
+	'default' => 'restbaseHTML',
 ],
 
 // T197719 Enable PagePreviews for all newly created accounts
@@ -16450,6 +16445,7 @@ function wmfGetVariantSettings() {
 'wgPopupsOptInDefaultState' => [
 	'default' => '0',
 	'enwikivoyage' => '1',
+	'dewikivoyage' => '1',
 	'hewikivoyage' => '1',
 ],
 
@@ -16491,6 +16487,7 @@ function wmfGetVariantSettings() {
 	'tgwiki' => 'popups',
 	'vecwiki' => 'Popup',
 	'yiwiki' => 'NavigationPopups',
+	'dewikivoyage' => 'navigation-popups',
 ],
 
 // Enable Reference Previews as a beta feature.
@@ -16515,6 +16512,7 @@ function wmfGetVariantSettings() {
 	'hewiki' => true,
 	'mrwiki' => true, // T282147
 	'rowiki' => true,
+	'dewikivoyage' => true, // T264305
 ],
 
 'wgPopupsConflictingRefTooltipsGadgetName' => [
@@ -16539,6 +16537,7 @@ function wmfGetVariantSettings() {
 	'ruwikisource' => 'referenceTooltips',
 	'tgwiki' => 'referenceTooltips',
 	'udmwiki' => 'referenceTooltips',
+	'dewikivoyage' => 'ReferenceTooltips',
 ],
 
 // Whether Compact Links is a Beta feature
