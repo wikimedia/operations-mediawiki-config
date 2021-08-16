@@ -239,7 +239,8 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['updateRepoTags'] = [ 'client-automatic-update' ];
 		$wgWBRepoSettings['viewUiTags'] = [ 'wikidata-ui' ];
 		$wgWBRepoSettings['specialPageTags'] = [ 'wikidata-ui' ];
-		$wgWBRepoSettings['termboxTags'] = [ 'wikidata-ui', 'termbox' ];
+		// Buggy: T236893#7284480
+		// $wgWBRepoSettings['termboxTags'] = [ 'wikidata-ui', 'termbox' ];
 	}
 }
 
