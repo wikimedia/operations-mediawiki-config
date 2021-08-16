@@ -1164,6 +1164,9 @@ function wmfGetLabsOverrideSettings() {
 		'wgGEMentorDashboardEnabled' => [
 			'default' => true,
 		],
+		'wgGEMentorDashboardBetaMode' => [
+			'default' => true,
+		],
 		'wgGEMentorDashboardBackendEnabled' => [
 			'default' => true,
 		],
