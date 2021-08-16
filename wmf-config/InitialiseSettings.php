@@ -11205,7 +11205,7 @@ function wmfGetVariantSettings() {
 	'+zhwiki' => [
 		'*' => [ 'flow-hide' => false, ], // T264489, to revise on 2020-10-12
 		'autoconfirmed' => [ 'flow-hide' => true ],  // T264489, to revise on 2020-10-12
-		'bot' => [ 'extendedconfirmed' ], // T287322
+		'bot' => [ 'extendedconfirmed' => true ], // T287322
 		'rollbacker' => [
 			'rollback' => true, // T18988
 			'abusefilter-log-private' => true, // T39679
