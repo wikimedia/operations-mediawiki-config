@@ -233,6 +233,14 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( isset( $wmgWikibaseTmpUseRequestLanguagesForRdfOutput ) ) {
 		$wgWBRepoSettings['tmpUseRequestLanguagesForRdfOutput'] = $wmgWikibaseTmpUseRequestLanguagesForRdfOutput;
 	}
+
+	// Tag Wikidata edits based on origin: T236893
+	if ( $wgDBname === 'wikidatawiki' ) {
+		$wgWBRepoSettings['updateRepoTags'] = [ 'client-automatic-update' ];
+		$wgWBRepoSettings['viewUiTags'] = [ 'wikidata-ui' ];
+		$wgWBRepoSettings['specialPageTags'] = [ 'wikidata-ui' ];
+		$wgWBRepoSettings['termboxTags'] = [ 'wikidata-ui', 'termbox' ];
+	}
 }
 
 if ( $wmgUseWikibaseClient ) {
@@ -359,6 +367,8 @@ if ( $wmgUseWikibaseClient ) {
 
 	// T267745 – effectively subscribes client wikis to descriptions of linked items even if not explicitly used during parse
 	$wgWBClientSettings['enableImplicitDescriptionUsage'] = true;
+
+	$wgWBClientSettings['linkItemTags'] = [ 'client-linkitem-change' ];
 }
 
 unset( $wmgWBSharedCacheKey );
