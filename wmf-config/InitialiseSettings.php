@@ -15281,6 +15281,7 @@ function wmfGetVariantSettings() {
 	'hiwiki' => true,
 	'hiwikiversity' => true, // T177188
 	'hiwikiquote' => true, // T133775
+	'hiwiktionary' => true, // T287091
 	'hifwiki' => true, // T99824
 	'incubatorwiki' => true,
 	'kkwiki' => true, // T149563
