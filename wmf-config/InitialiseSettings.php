@@ -19899,6 +19899,8 @@ function wmfGetVariantSettings() {
 	'nlwiki' => 'default', // T274280
 	'metawiki' => 'default', // T274280
 	'mediawikiwiki' => 'default', // T274280
+	'commonswiki' => 'default', // T287800
+	'wikidatawiki' => 'default', // T287800
 ],
 
 'wgDTSchemaEditAttemptStepSamplingRate' => [
