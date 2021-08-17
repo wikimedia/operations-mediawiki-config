@@ -1068,10 +1068,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => 'wikidatawiki',
 			'commonswiki' => 'commonswiki',
 		],
-		'wgWMEUnderstandingFirstDaySensitiveNamespaces' => [
-			'default' => [ 0, 1, 6, 7 ],
-			'enwiki' => [ 0, 1, 6, 7, 100, 101, 118, 119 ],
-		],
 		'wmgUseGrowthExperiments' => [
 			'enwiki' => true,
 		],

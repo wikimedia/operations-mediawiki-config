@@ -22002,21 +22002,6 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
-'wgWMEUnderstandingFirstDay' => [
-	'default' => false,
-],
-
-'wgWMEUnderstandingFirstDaySensitiveNamespaces' => [
-	'default' => [ 0, 1, 6, 7 ],
-	'testwiki' => [ 0, 1, 6, 7, 118, 119 ],
-	'arwiki' => [ 0, 1, 6, 7, 100, 101 ],
-	'cswiki' => [ 0, 1, 6, 7, 100, 101 ],
-	'euwiki' => [ 0, 1, 6, 7, 104, 105 ],
-	'frwiktionary' => [ 0, 1, 6, 7, 14, 15, 100, 101, 106, 107, 108, 109, 110, 111 ],
-	'kowiki' => [ 0, 1, 6, 7, 100, 101, 118, 119 ],
-	'viwiki' => [ 0, 1, 6, 7, 100, 101 ],
-],
-
 'wmgWikibaseEntityAccessLimit' => [
 	'default' => 400,
 	'wikidatawiki' => 500,
