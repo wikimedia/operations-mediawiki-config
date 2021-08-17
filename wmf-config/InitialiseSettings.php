@@ -27602,6 +27602,7 @@ function wmfGetVariantSettings() {
 'wgGEMentorDashboardEnabled' => [
 	// not ready for deployment yet
 	'default' => false,
+	'testwiki' => true,
 ],
 
 'wgGEMentorDashboardBackendEnabled' => [
