@@ -25585,6 +25585,23 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
+// NearbyPages extension
+// T246493
+'wmgUseNearbyPages' => [
+	'default' => false,
+],
+'wgNearbyPagesUrl' => [
+	'default' => '/w/api.php',
+],
+'wgNearbyPagesWikidataCompatibility' => [
+	'default' => false,
+	'testwikidatawiki' => true,
+	'wikidatawiki' => true,
+],
+'wgNearbyRandomButton' => [
+	'default' => false,
+],
+
 // GlobalWatchlist extension, see T260862
 'wmgUseGlobalWatchlist' => [
 	'default' => false,

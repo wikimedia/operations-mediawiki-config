@@ -1860,6 +1860,15 @@ function wmfGetLabsOverrideSettings() {
 			],
 		],
 
+		// T246493
+		'wmgUseNearbyPages' => [
+			'default' => true,
+		],
+		'wgNearbyPagesUrl' => [
+			'default' => 'https://en.wikipedia.org/w/api.php',
+			'testwikidatawiki' => 'https://www.wikidata.org/w/api.php',
+		],
+
 		// Deploy GlobalWatchlist to the beta cluster - T268181
 		'wmgUseGlobalWatchlist' => [
 			'default' => false,
