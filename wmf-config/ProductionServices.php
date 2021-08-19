@@ -113,7 +113,10 @@ $services = [
 		'mediaSwiftAuth' => 'https://ms-fe.svc.eqiad.wmnet/auth',
 		'mediaSwiftStore' => 'https://ms-fe.svc.eqiad.wmnet/v1/AUTH_mw',
 
-		'etcd' => '_etcd._tcp.eqiad.wmnet',
+		'etcd' => [
+			'host' => '_etcd._tcp.eqiad.wmnet',
+			'protocol' => 'https'
+		],
 
 		'poolcounter' => [
 			'10.64.0.151', # poolcounter1004.eqiad.wmnet
@@ -173,7 +176,10 @@ $services = [
 		'mediaSwiftAuth' => 'https://ms-fe.svc.codfw.wmnet/auth',
 		'mediaSwiftStore' => 'https://ms-fe.svc.codfw.wmnet/v1/AUTH_mw',
 
-		'etcd' => '_etcd._tcp.codfw.wmnet',
+		'etcd' => [
+			'host' => '_etcd._tcp.codfw.wmnet',
+			'protocol' => 'https'
+		],
 
 		'poolcounter' => [
 			'10.192.0.132', # poolcounter2003.codfw.wmnet

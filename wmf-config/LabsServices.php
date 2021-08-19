@@ -53,7 +53,10 @@ return [
 			'rdb1' => 'deployment-memc09.deployment-prep.eqiad1.wikimedia.cloud',
 			'rdb2' => 'deployment-memc10.deployment-prep.eqiad1.wikimedia.cloud',
 		],
-		'etcd' => 'deployment-etcd02.deployment-prep.eqiad1.wikimedia.cloud:2379',
+		'etcd' => [
+			'host' => 'deployment-etcd02.deployment-prep.eqiad1.wikimedia.cloud:2379',
+			'protocol' => 'https'
+		],
 		'mediaSwiftAuth' => 'http://deployment-ms-fe03.deployment-prep.eqiad.wmflabs/auth',
 		'mediaSwiftStore' => 'http://deployment-ms-fe03.deployment-prep.eqiad.wmflabs/v1/AUTH_mw',
 		'electron' => 'http://deployment-pdfrender02.deployment-prep.eqiad.wmflabs:5252',
