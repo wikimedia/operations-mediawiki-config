@@ -60,7 +60,7 @@ return [
 		'push-notifications' => 'http://deployment-push-notifications01.deployment-prep.eqiad1.wikimedia.cloud:8900',
 		'linkrecommendation' => 'https://api.wikimedia.org/service/linkrecommendation',
 		// No Shellbox/k8s in beta cluster (T286298)
-		'shellbox' => false,
+		'shellbox' => null,
 		'shellbox-constraints' => 'https://shellbox.svc.deployment-prep.eqiad1.wikimedia.cloud',
 
 		### Logstash
