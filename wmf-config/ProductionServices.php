@@ -124,15 +124,15 @@ $services = [
 		'parsercache-dbs' => [
 			'pc1' => '10.64.0.57',   # pc1011, A1 8.8TB 512GB # pc1
 			'pc2' => '10.64.16.65',  # pc1012, B1 8.8TB 512GB # pc2
-			'pc3' => '10.64.32.29',  # pc1009, C3 4.4TB 256GB # pc3
-			# spare: '10.64.48.174', # pc1010, D3 4.4TB 256GB
-			# spare: '10.64.0.180',  # pc1007, A6 4.4TB 256GB
-			# spare: '10.64.16.20',  # pc1008, B8 4.4TB 256GB
+			'pc3' => '10.64.32.163', # pc1013, C5 8.8TB 512GB # pc3
+			# spare: '10.64.48.89',  # pc1014, D6 8.8TB 512GB
 			# Use spare(s) to replace any of the above if needed
 
-			// new pc hosts (T284825), to be slowly made primary
-			# '10.64.32.163', # pc1013, C5 8.8TB 512GB
-			# '10.64.48.89',  # pc1014, D6 8.8TB 512GB
+			// Old pc hosts, to be decommed:
+			# '10.64.48.174', # pc1010, D3 4.4TB 256GB
+			# '10.64.0.180',  # pc1007, A6 4.4TB 256GB
+			# '10.64.16.20',  # pc1008, B8 4.4TB 256GB
+			# '10.64.32.29',  # pc1009, C3 4.4TB 256GB
 		],
 
 		// LockManager Redis
@@ -189,10 +189,10 @@ $services = [
 			# Use spare(s) to replace any of the above if needed
 
 			// Old pc hosts, to be decommed:
-			# spare: '10.192.48.14',  # pc2010, D3 4.4TB 256GB
-			# spare: '10.192.0.104',  # pc2007, A1 4.4TB 256GB
-			# spare: '10.192.16.35',  # pc2008, B3 4.4TB 256GB
-			# spare: '10.192.32.10',  # pc2009, C1 4.4TB 256GB
+			# '10.192.48.14',  # pc2010, D3 4.4TB 256GB
+			# '10.192.0.104',  # pc2007, A1 4.4TB 256GB
+			# '10.192.16.35',  # pc2008, B3 4.4TB 256GB
+			# '10.192.32.10',  # pc2009, C1 4.4TB 256GB
 		],
 
 		'redis_lock' => [
