@@ -21,7 +21,7 @@
 /**
  * Setup etcd!
  *
- * @param string|array $etcdHost Hostname or [ 'host' => 'hostname', 'protocol' => 'http|https' ]
+ * @param array $etcdHost [ 'host' => 'hostname', 'protocol' => 'http|https' ]
  * @return EtcdConfig
  */
 function wmfSetupEtcd( $etcdHost ) {
@@ -32,14 +32,8 @@ function wmfSetupEtcd( $etcdHost ) {
 		$localCache = new APCUBagOStuff;
 	}
 
-	# Type checking during the transition period.
-	if ( is_array( $etcdHost ) ) {
-		$host = $etcdHost['host'];
-		$protocol = $etcdHost['protocol'];
-	} else {
-		$host = $etcdHost;
-		$protocol = 'https';
-	}
+	$host = $etcdHost['host'];
+	$protocol = $etcdHost['protocol'];
 
 	# Use a single EtcdConfig object for both local and common paths
 	$etcdConfig = new EtcdConfig( [
