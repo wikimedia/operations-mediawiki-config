@@ -137,9 +137,9 @@ $services = [
 
 		// LockManager Redis
 		'redis_lock' => [
-			'rdb1' => '10.64.32.210', # mc1030 C4
-			'rdb2' => '10.64.0.83',   # mc1022 A6
-			'rdb3' => '10.64.48.156', # mc1034 D4
+			'rdb1' => '10.64.0.65',   # mc1040 A2
+			'rdb2' => '10.64.32.153', # mc1048 C2
+			'rdb3' => '10.64.48.91',  # mc1052 D4
 		],
 		'search-chi' => [
 			[ // forwarded to https://search.svc.eqiad.wmnet:9243/
