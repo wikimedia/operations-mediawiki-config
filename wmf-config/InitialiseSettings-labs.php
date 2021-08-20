@@ -1150,6 +1150,13 @@ function wmfGetLabsOverrideSettings() {
 			'arwiki' => 'Wikipedia:Mentors',
 			'enwiki' => 'Wikipedia:Mentors',
 		],
+		'wgGEHomepageNewAccountEnablePercentage' => [
+			'enwiki' => 25,
+		],
+		'wgGEMentorshipNewAccountEnablePercentage' => [
+			'default' => 100,
+			'enwiki' => 8, // T287903
+		],
 		'wgGEMentorDashboardEnabled' => [
 			'default' => true,
 		],
