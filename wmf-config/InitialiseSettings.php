@@ -15925,6 +15925,7 @@ function wmfGetVariantSettings() {
 		'digital.ub.umu.se', // Umeå University - T287204
 		'media.defense.gov', // U.S. Department of Defense - T287264
 		'*.happysrv.de', // T288039
+		'*.wikimedia.es', // Wikimedia Spain - T289446
 	],
 ],
 
