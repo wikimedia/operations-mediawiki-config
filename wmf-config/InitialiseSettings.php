@@ -25941,25 +25941,18 @@ function wmfGetVariantSettings() {
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
 
+	// pending community consensus to enable
 	'dewiki' => false, // T288420
-
 	// to enable in September
 	'nlwiki' => false,
 	// pending templates for easy tasks or T278825
 	'shwiki' => false,
 
-	// large batch of new wikis (August 2021)
-	'azwiki' => false,
-	'ckbwiki' => false,
-	'etwiki' => false,
-	'fiwiki' => false,
-	'kawiki' => false,
+	// pending visual editor (see T287878#7267554)
 	'kkwiki' => false,
-	'kuwiki' => false,
-	'ltwiki' => false,
-	'mlwiki' => false,
-	'mrwiki' => false,
-	'slwiki' => false,
+
+	// large batch of new wikis (August 2021)
+	'ckbwiki' => false,
 ],
 
 'wgWelcomeSurveyEnabled' => [
