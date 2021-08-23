@@ -231,6 +231,11 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['tmpUseRequestLanguagesForRdfOutput'] = $wmgWikibaseTmpUseRequestLanguagesForRdfOutput;
 	}
 
+	// Temporary, T251480
+	if ( isset( $wmgWikibaseTmpNormalizeDataValues ) ) {
+		$wgWBRepoSettings['tmpNormalizeDataValues'] = $wmgWikibaseTmpNormalizeDataValues;
+	}
+
 	// Tag Wikidata edits based on origin: T236893
 	if ( $wgDBname === 'wikidatawiki' ) {
 		$wgWBRepoSettings['updateRepoTags'] = [ 'client-automatic-update' ];

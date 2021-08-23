@@ -28368,6 +28368,12 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
+'wmgWikibaseTmpNormalizeDataValues' => [
+	'default' => false,
+	'testwikidatawiki' => true,
+	'testcommonswiki' => true,
+],
+
 // T123582: enables <link rel="preconnect" href="//upload.wikimedia.org">
 'wgImagePreconnect' => [
 	'default' => true,
