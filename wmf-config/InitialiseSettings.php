@@ -25878,6 +25878,7 @@ function wmfGetVariantSettings() {
 	'bgwiki' => true,
 	'bnwiki' => true,
 	'cawiki' => true,
+	'ckbwiki' => true,
 	'cswiki' => true,
 	'etwiki' => true,
 	'dawiki' => true,
@@ -25949,6 +25950,7 @@ function wmfGetVariantSettings() {
 
 	// large batch of new wikis (August 2021)
 	'azwiki' => false,
+	'ckbwiki' => false,
 	'etwiki' => false,
 	'fiwiki' => false,
 	'kawiki' => false,
