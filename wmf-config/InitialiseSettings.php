@@ -28587,9 +28587,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wmgWikibaseTmpNormalizeDataValues' => [
-	'default' => false,
-	'testwikidatawiki' => true,
-	'testcommonswiki' => true,
+	'default' => true,
 ],
 
 // T123582: enables <link rel="preconnect" href="//upload.wikimedia.org">
