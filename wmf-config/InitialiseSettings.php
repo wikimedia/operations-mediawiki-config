@@ -28487,6 +28487,8 @@ function wmfGetVariantSettings() {
 	'default' => true,
 	'testwiki' => false,
 	'test2wiki' => false,
+	'officewiki' => false,
+	'mediawikiwiki' => false,
 ],
 
 ];
