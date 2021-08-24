@@ -1082,6 +1082,9 @@ function wmfGetLabsOverrideSettings() {
 		'wgGEDeveloperSetup' => [
 			'default' => true,
 		],
+		'wgGENewcomerTasksImageRecommendationsEnabled' => [
+			'default' => true,
+		],
 		'wgGENewcomerTasksLinkRecommendationsEnabled' => [
 			'default' => true,
 		],
