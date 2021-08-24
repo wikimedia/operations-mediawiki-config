@@ -27323,6 +27323,10 @@ function wmfGetVariantSettings() {
 	'default' => false,
 ],
 
+'wgGENewcomerTasksImageRecommendationsEnabled' => [
+	'default' => false,
+],
+
 'wgGENewcomerTasksLinkRecommendationsEnabled' => [
 	'default' => false,
 	'testwiki' => true,
