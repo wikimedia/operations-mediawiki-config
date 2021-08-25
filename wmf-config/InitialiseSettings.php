@@ -15345,7 +15345,6 @@ function wmfGetVariantSettings() {
 	'hifwiki' => true, // T99824
 	'incubatorwiki' => true,
 	'kkwiki' => true, // T149563
-	'knwiki' => true, // T172894
 	'knwikisource' => true, // T204405
 	'lvwiki' => true,
 	'maiwiki' => true, // T99488
