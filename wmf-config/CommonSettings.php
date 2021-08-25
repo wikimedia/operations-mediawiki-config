@@ -2970,7 +2970,7 @@ if ( $wmgUseTranslate ) {
 	$wgTranslateDelayedMessageIndexRebuild = true;
 
 	// Deprecated language codes
-	$wgTranslateBlacklist = [
+	$wgTranslateDisabledTargetLanguages = [
 		'*' => [
 			'gan-hans' => 'Translate in gan please.',
 			'gan-hant' => 'Translate in gan please.',
