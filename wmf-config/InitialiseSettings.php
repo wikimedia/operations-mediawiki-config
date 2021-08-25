@@ -14550,6 +14550,7 @@ function wmfGetVariantSettings() {
 	'enwikibooks' => true,
 	'enwikinews' => true,
 	'eswikibooks' => true, // T157513
+	'fawikibooks' => true, // T289381
 	'frwikibooks' => true, // T103263
 	'frwiktionary' => true,
 	'hiwiki' => true,
