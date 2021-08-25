@@ -14556,6 +14556,7 @@ function wmfGetVariantSettings() {
 	'hiwiki' => true,
 	'iswikibooks' => true,
 	'itwikibooks' => true,
+	'jawikibooks' => true, // T289383
 	'nlwikibooks' => true,
 	'plwikibooks' => true,
 	'ptwikibooks' => true,
