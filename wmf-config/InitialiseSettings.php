@@ -19887,11 +19887,8 @@ function wmfGetVariantSettings() {
 
 'wgDiscussionTools_topicsubscription' => [
 	'default' => 'unavailable',
-	'arwiki' => 'default', // T274280
-	'cswiki' => 'default', // T274280
-	'frwiki' => 'default', // T274280
-	'huwiki' => 'default', // T274280
-	'nlwiki' => 'default', // T274280
+	'wikipedia' => 'default', // T287801
+	'enwiki' => 'unavailable', // T287801
 	'metawiki' => 'default', // T274280
 	'mediawikiwiki' => 'default', // T274280
 	'commonswiki' => 'default', // T287800
