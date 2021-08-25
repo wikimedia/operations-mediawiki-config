@@ -21658,8 +21658,6 @@ function wmfGetVariantSettings() {
 // https://phabricator.wikimedia.org/T238230
 'wgEventLoggingSchemas' => [
 	'default' => [
-		'EchoInteraction' => '/analytics/legacy/echointeraction/1.0.0',
-		'EchoMail' => '/analytics/legacy/echomail/1.0.0',
 		// Only in progress schema migrations go here, once migration finished, they are removed.
 	],
 ],
