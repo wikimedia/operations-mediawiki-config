@@ -19895,6 +19895,10 @@ function wmfGetVariantSettings() {
 	'wikidatawiki' => 'default', // T287800
 ],
 
+'wgDiscussionTools_autotopicsub' => [
+	'default' => 'unavailable',
+],
+
 'wgDTSchemaEditAttemptStepSamplingRate' => [
 	'default' => false,
 ],

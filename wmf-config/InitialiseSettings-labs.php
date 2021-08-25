@@ -1817,6 +1817,10 @@ function wmfGetLabsOverrideSettings() {
 			'default' => 'default',
 		],
 
+		'-wgDiscussionTools_autotopicsub' => [
+			'default' => 'default',
+		],
+
 		'wgWatchlistExpiry' => [
 			'default' => true,
 		],
