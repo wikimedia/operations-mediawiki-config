@@ -21547,6 +21547,11 @@ function wmfGetVariantSettings() {
 			// This stream is new enough that consumers are aware of canary events.
 			'canary_events_enabled' => true,
 		],
+		[
+			'stream' => 'maps.tile_change',
+			'schema_title' => 'maps/tile_change',
+			'destination_event_service' => 'eventgate-main',
+		],
 
 		/*
 		 * == WDQS Streaming Updater (Flink) output streams ==
