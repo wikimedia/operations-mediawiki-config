@@ -1471,10 +1471,10 @@ if ( $wmgUseScore ) {
 		// $wgShellboxSecretKey set in PrivateSettings.php
 		$wgScoreImageMagickConvert = '/usr/bin/convert';
 	} else {
-		# T257062 --krinkle
+		# Emergency mode in which Score is disabled
 		$wgScoreLilyPond = '/dev/null';
 		$wgScoreDisableExec = true;
-		$wgScoreLilyPondFakeVersion = '2.18.2';
+		$wgScoreLilyPondFakeVersion = '2.22.0';
 	}
 
 }
