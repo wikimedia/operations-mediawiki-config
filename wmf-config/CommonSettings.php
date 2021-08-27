@@ -1430,7 +1430,11 @@ if ( $wmgUseScore ) {
 	$wgScoreSafeMode = true;
 
 	if ( $wmgUseScoreShellbox && $wmfLocalServices['shellbox'] ) {
-		$wgShellboxUrls['default'] = $wmfLocalServices['shellbox'];
+		// Route both score-lilypond and score-fluidsynth to
+		// the shellbox named "shellbox".
+		$wgShellboxUrls['score-lilypond'] =
+			$wgShellboxUrls['score-fluidsynth'] =
+			$wmfLocalServices['shellbox'];
 		// $wgShellboxSecretKey set in PrivateSettings.php
 		$wgScoreImageMagickConvert = '/usr/bin/convert';
 	} else {
