@@ -187,6 +187,7 @@ if ( $wmgUseUrlShortener ) {
 	$wgUrlShortenerServer = 'w-beta.wmflabs.org';
 	$wgUrlShortenerDBCluster = false;
 	$wgUrlShortenerDBName = 'wikishared';
+	$wgUrlShortenerEnableSidebar = true;
 	$wgUrlShortenerAllowedDomains = [
 		'(.*\.)?wikipedia\.beta\.wmflabs\.org',
 		'(.*\.)?wiktionary\.beta\.wmflabs\.org',
@@ -198,7 +199,6 @@ if ( $wmgUseUrlShortener ) {
 		'(.*\.)?wikivoyage\.beta\.wmflabs\.org',
 		'(.*\.)?wikimedia\.beta\.wmflabs\.org',
 		'(.*\.)?wikidata\.beta\.wmflabs\.org',
-		'query-builder-test\.toolforge\.org',  # Temp T273162
 	];
 	$wgUrlShortenerApprovedDomains = [
 		'*.wikipedia.beta.wmflabs.org',
@@ -211,7 +211,6 @@ if ( $wmgUseUrlShortener ) {
 		'*.wikivoyage.beta.wmflabs.org',
 		'*.wikimedia.beta.wmflabs.org',
 		'*.wikidata.beta.wmflabs.org',
-		'query-builder-test.toolforge.org',
 	];
 }
 
