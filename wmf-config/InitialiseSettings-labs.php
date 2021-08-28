@@ -997,6 +997,10 @@ function wmfGetLabsOverrideSettings() {
 			'default' => SCHEMA_COMPAT_NEW,
 		],
 
+		'-wgIncludejQueryMigrate' => [
+			'default' => false,
+		],
+
 		'wgOresUiEnabled' => [
 			'default' => true,
 			'wikidatawiki' => false,
