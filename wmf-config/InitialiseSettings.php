@@ -10140,7 +10140,6 @@ function wmfGetVariantSettings() {
 		'translationadmin' => [ 'autopatrol' => true, ],
 	],
 	'+metawiki' => [
-		'*' => [ 'urlshortener-create-url' => true, ], // T229633
 		'autopatrolled' => [ 'autopatrol' => true, ], // T27160
 		'bot' => [ 'changetags' => true ], // T283625
 		'centralnoticeadmin' => [ // gerrit:50196, T142123
