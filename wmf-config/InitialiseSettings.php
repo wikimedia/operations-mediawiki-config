@@ -21264,6 +21264,11 @@ function wmfGetVariantSettings() {
 			'schema_title' => 'analytics/mediawiki/wd_propertysuggester/server_side_property_request',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		[
+			'stream' => [ 'mediawiki.mentor_dashboard.visit' ],
+			'schema_title' => '/analytics/mediawiki/mentor_dashboard/visit',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 
 		/*
 		 * == eventgate-logging-external streams ==
@@ -21633,6 +21638,7 @@ function wmfGetVariantSettings() {
 		'test.instrumentation.sampled',
 		'wd_propertysuggester.client_side_property_request',
 		'wd_propertysuggester.server_side_property_request',
+		'mediawiki.mentor_dashboard.visit',
 	]
 ],
 
