@@ -4,6 +4,7 @@
 
 inheritsFrom:
   - wikipedia
+  - group1-wikipedia
   - categories-rdf
   - cirrussearch-big-indices
   - large
