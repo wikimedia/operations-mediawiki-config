@@ -21266,7 +21266,7 @@ function wmfGetVariantSettings() {
 		],
 		[
 			'stream' => 'mediawiki.mentor_dashboard.visit',
-			'schema_title' => '/analytics/mediawiki/mentor_dashboard/visit',
+			'schema_title' => 'analytics/mediawiki/mentor_dashboard/visit',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 
