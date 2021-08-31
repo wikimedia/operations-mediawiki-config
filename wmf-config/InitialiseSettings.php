@@ -19856,6 +19856,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgDiscussionTools_replytool' => [
+	// Keep in sync with wgDiscussionTools_sourcemodetoolbar below
 	'default' => 'default',
 	'afwiki' => 'available', // T288483
 	'amwiki' => 'available', // T288483
@@ -19889,6 +19890,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgDiscussionTools_newtopictool' => [
+	// Keep in sync with wgDiscussionTools_sourcemodetoolbar below
 	'default' => 'default', // T275827
 ],
 
@@ -19898,9 +19900,30 @@ function wmfGetVariantSettings() {
 	// or 'wgDiscussionTools_newtopictool' is 'available'. Otherwise it will cause the reply tool
 	// to be always loaded, even when it's not supposed to be available.
 	'default' => 'default',
+	'afwiki' => 'available',
+	'amwiki' => 'available',
 	'arwiki' => 'available',
+	'arzwiki' => 'available',
+	'bnwiki' => 'available',
 	'cswiki' => 'available',
+	'eswiki' => 'available',
+	'fawiki' => 'available',
+	'hewiki' => 'available',
+	'hiwiki' => 'available',
 	'huwiki' => 'available',
+	'idwiki' => 'available',
+	'itwiki' => 'available',
+	'jawiki' => 'available',
+	'kowiki' => 'available',
+	'nlwiki' => 'available',
+	'omwiki' => 'available',
+	'plwiki' => 'available',
+	'ptwiki' => 'available',
+	'swwiki' => 'available',
+	'thwiki' => 'available',
+	'ukwiki' => 'available',
+	'viwiki' => 'available',
+	'zhwiki' => 'available',
 	'apiportalwiki' => 'available',
 	'gomwiktionary' => 'available',
 	'enwikibooks' => 'available',
