@@ -1866,6 +1866,7 @@ function wmfGetLabsOverrideSettings() {
 		],
 		'wgNearbyPagesUrl' => [
 			'default' => 'https://en.wikipedia.org/w/api.php',
+			'wikidatawiki'  => 'https://www.wikidata.org/w/api.php',
 			'testwikidatawiki' => 'https://www.wikidata.org/w/api.php',
 		],
 
