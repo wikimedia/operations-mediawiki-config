@@ -27610,9 +27610,30 @@ function wmfGetVariantSettings() {
 	'default' => 80,
 	'testwiki' => 0,
 	'enwiki' => 2, // enwiki has special treatment - T281896
-	// euwiki is not an A/B test (T233066)
-	'euwiki' => 100,
 	'nlwiki' => 50,
+
+	// wikis with less than 500 registrations per month (T289786)
+	'bgwiki' => 100,
+	'dawiki' => 100,
+	'eowiki' => 100,
+	'etwiki' => 100,
+	'euwiki' => 100, // special request, T233066
+	'hrwiki' => 100,
+	'hywiki' => 100,
+	'kawiki' => 100,
+	'kkwiki' => 100,
+	'ltwiki' => 100,
+	'lvwiki' => 100,
+	'mlwiki' => 100,
+	'mrwiki' => 100,
+	'mswiki' => 100,
+	'skwiki' => 100,
+	'slwiki' => 100,
+	'sqwiki' => 100,
+	'srwiki' => 100,
+	'tawiki' => 100,
+	'tewiki' => 100,
+	'urwiki' => 100,
 ],
 
 'wgGEHomepageDefaultVariant' => [
