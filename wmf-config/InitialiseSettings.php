@@ -5192,6 +5192,7 @@ function wmfGetVariantSettings() {
 	'enwikivoyage' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T198056
 	'etwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T153465
 	'fawiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T140839
+	'foundationwiki' => [ '', 'autoconfirmed', 'edit-legal', 'sysop' ], // T205352
 	'frwiki' => [ '', 'autoconfirmed', 'editextendedsemiprotected', 'sysop' ], // T131109
 	'hewiki' => [ '', 'autoconfirmed', 'editautopatrolprotected',  'templateeditor' /* T102466 */, 'sysop' ], // T60207
 	'hewikisource' => [ '', 'autoconfirmed', 'editautoreviewprotected', 'sysop' ], // T275076
@@ -9614,6 +9615,15 @@ function wmfGetVariantSettings() {
 			'editinterface' => true,
 			'editsitejson' => true,
 		],
+		'editor' => [
+			'edit-legal' => true,
+			'edit' => true,
+			'autoconfirmed' => true,
+			'editsemiprotected' => true,
+			'skipcaptcha' => true,
+			'editinterface' => true,
+			'editsitejson' => true,
+		],
 		'flood' => [ 'bot' => true ],
 	],
 	'+frwiki' => [
@@ -11761,7 +11771,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'rollbacker', 'accountcreator' ], // T149986
 	],
 	'+foundationwiki' => [
-		'sysop' => [ 'inactive', 'flood' ],
+		'sysop' => [ 'inactive', 'flood', 'editor' ],
 		'bureaucrat' => [ 'inactive', 'oauthadmin' ],
 	],
 	'+frwiki' => [
@@ -12610,7 +12620,7 @@ function wmfGetVariantSettings() {
 		'bureaucrat' => [ 'sysop', 'bureaucrat' ],
 	],
 	'+foundationwiki' => [
-		'sysop' => [ 'inactive', 'confirmed', 'flood' ],
+		'sysop' => [ 'inactive', 'confirmed', 'flood', 'editor' ],
 		'bureaucrat' => [ 'inactive', 'confirmed', 'oauthadmin' ],
 	],
 	'+frwiki' => [
