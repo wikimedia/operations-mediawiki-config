@@ -26060,8 +26060,6 @@ function wmfGetVariantSettings() {
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
 
-	// pending community consensus to enable
-	'dewiki' => false, // T288420
 	// pending templates for easy tasks or T278825
 	'shwiki' => false,
 
@@ -27629,6 +27627,7 @@ function wmfGetVariantSettings() {
 'wgGEHomepageNewAccountEnablePercentage' => [
 	'default' => 80,
 	'testwiki' => 0,
+	'dewiki' => 30,
 	'enwiki' => 2, // enwiki has special treatment - T281896
 	'nlwiki' => 50,
 
@@ -27661,6 +27660,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => 'linkrecommendation',
 	'bnwiki' => 'linkrecommendation',
 	'cswiki' => 'linkrecommendation',
+	'dewiki' => 'linkrecommendation',
 	'fawiki' => 'linkrecommendation',
 	'frwiki' => 'linkrecommendation',
 	'huwiki' => 'linkrecommendation',
@@ -27687,6 +27687,10 @@ function wmfGetVariantSettings() {
 	'cswiki' => [
 		'control' => 50,
 		'linkrecommendation' => 50,
+	],
+	'dewiki' => [
+		'control' => 0,
+		'linkrecommendation' => 100,
 	],
 	'fawiki' => [
 		'control' => 50,
