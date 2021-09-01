@@ -26042,8 +26042,6 @@ function wmfGetVariantSettings() {
 
 	// pending community consensus to enable
 	'dewiki' => false, // T288420
-	// to enable in September
-	'nlwiki' => false,
 	// pending templates for easy tasks or T278825
 	'shwiki' => false,
 
@@ -26065,7 +26063,6 @@ function wmfGetVariantSettings() {
 	'brwiki' => false,
 	'bswiki' => false,
 	'cebwiki' => false,
-	'ckbwiki' => false,
 	'cywiki' => false,
 	'gawiki' => false,
 	'glwiki' => false,
@@ -27615,6 +27612,7 @@ function wmfGetVariantSettings() {
 	'enwiki' => 2, // enwiki has special treatment - T281896
 	// euwiki is not an A/B test (T233066)
 	'euwiki' => 100,
+	'nlwiki' => 50,
 ],
 
 'wgGEHomepageDefaultVariant' => [
