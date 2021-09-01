@@ -27623,6 +27623,7 @@ function wmfGetVariantSettings() {
 	'fawiki' => 'linkrecommendation',
 	'frwiki' => 'linkrecommendation',
 	'huwiki' => 'linkrecommendation',
+	'nlwiki' => 'linkrecommendation',
 	'plwiki' => 'linkrecommendation',
 	'rowiki' => 'linkrecommendation',
 	'ruwiki' => 'linkrecommendation',
@@ -27657,6 +27658,10 @@ function wmfGetVariantSettings() {
 	'huwiki' => [
 		'control' => 50,
 		'linkrecommendation' => 50,
+	],
+	'nlwiki' => [
+		'control' => 0,
+		'linkrecommendation' => 100,
 	],
 	'plwiki' => [
 		'control' => 50,
