@@ -27805,6 +27805,12 @@ function wmfGetVariantSettings() {
 	'default' => false,
 ],
 
+'wgGEMentorDashboardDiscoveryEnabled' => [
+	// not ready for deployment yet
+	'default' => false,
+	'testwiki' => true,
+],
+
 'wgGEMentorDashboardBackendEnabled' => [
 	// check extensions/GrowthExperiments/updateMenteeData.php finishes
 	// reasonably quickly before enabling (especially on wikis with many newcomers,
