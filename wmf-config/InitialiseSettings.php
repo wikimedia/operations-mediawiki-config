@@ -9642,6 +9642,16 @@ function wmfGetVariantSettings() {
 		'user' => [
 			'editinterface' => true,
 			'editsitejson' => true,
+			'upload' => false,
+			'reupload' => false,
+			'reupload-own' => false,
+			'reupload-shared' => false,
+		],
+		'autoconfirmed' => [
+			'upload' => false,
+			'reupload' => false,
+			'reupload-own' => false,
+			'reupload-shared' => false,
 		],
 		'editor' => [
 			'edit-legal' => true,
@@ -9651,6 +9661,9 @@ function wmfGetVariantSettings() {
 			'skipcaptcha' => true,
 			'editinterface' => true,
 			'editsitejson' => true,
+			'upload' => true,
+			'reupload' => true,
+			'reupload-own' => true,
 		],
 		'flood' => [ 'bot' => true ],
 	],
