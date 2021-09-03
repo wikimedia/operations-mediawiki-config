@@ -20505,7 +20505,7 @@ function wmfGetVariantSettings() {
 		 * do not use topic prefixes.  Explicitly set topic_prefixes to null to disable
 		 * implicit topic prefixing by the EventStreamConfig extension.
 		 */
-		[
+		'eventlogging_CentralNoticeBannerHistory' => [
 			'stream' => 'eventlogging_CentralNoticeBannerHistory',
 			'schema_title' => 'analytics/legacy/centralnoticebannerhistory',
 			'topic_prefixes' => null,
@@ -20517,7 +20517,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_CentralNoticeImpression' => [
 			'stream' => 'eventlogging_CentralNoticeImpression',
 			'schema_title' => 'analytics/legacy/centralnoticeimpression',
 			'topic_prefixes' => null,
@@ -20529,7 +20529,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_CentralNoticeTiming' => [
 			'stream' => 'eventlogging_CentralNoticeTiming',
 			'schema_title' => 'analytics/legacy/centralnoticetiming',
 			'topic_prefixes' => null,
@@ -20541,7 +20541,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_CodeMirrorUsage' => [
 			'stream' => 'eventlogging_CodeMirrorUsage',
 			'schema_title' => 'analytics/legacy/codemirrorusage',
 			'topic_prefixes' => null,
@@ -20553,7 +20553,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_ContentTranslationAbuseFilter' => [
 			'stream' => 'eventlogging_ContentTranslationAbuseFilter',
 			'schema_title' => 'analytics/legacy/contenttranslationabusefilter',
 			'topic_prefixes' => null,
@@ -20565,7 +20565,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_CpuBenchmark' => [
 			'stream' => 'eventlogging_CpuBenchmark',
 			'schema_title' => 'analytics/legacy/cpubenchmark',
 			'topic_prefixes' => null,
@@ -20577,7 +20577,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_DesktopWebUIActionsTracking' => [
 			'stream' => 'eventlogging_DesktopWebUIActionsTracking',
 			'schema_title' => 'analytics/legacy/desktopwebuiactionstracking',
 			'topic_prefixes' => null,
@@ -20589,7 +20589,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_ElementTiming' => [
 			'stream' => 'eventlogging_ElementTiming',
 			'schema_title' => 'analytics/legacy/elementtiming',
 			'topic_prefixes' => null,
@@ -20601,7 +20601,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_EchoInteraction' => [
 			'stream' => 'eventlogging_EchoInteraction',
 			'schema_title' => 'analytics/legacy/echointeraction',
 			'topic_prefixes' => null,
@@ -20613,7 +20613,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_EchoMail' => [
 			'stream' => 'eventlogging_EchoMail',
 			'schema_title' => 'analytics/legacy/echomail',
 			'topic_prefixes' => null,
@@ -20625,7 +20625,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_EditAttemptStep' => [
 			'stream' => 'eventlogging_EditAttemptStep',
 			'schema_title' => 'analytics/legacy/editattemptstep',
 			'topic_prefixes' => null,
@@ -20637,7 +20637,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_FeaturePolicyViolation' => [
 			'stream' => 'eventlogging_FeaturePolicyViolation',
 			'schema_title' => 'analytics/legacy/featurepolicyviolation',
 			'topic_prefixes' => null,
@@ -20649,7 +20649,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_FirstInputTiming' => [
 			'stream' => 'eventlogging_FirstInputTiming',
 			'schema_title' => 'analytics/legacy/firstinputtiming',
 			'topic_prefixes' => null,
@@ -20661,7 +20661,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_HelpPanel' => [
 			'stream' => 'eventlogging_HelpPanel',
 			'schema_title' => 'analytics/legacy/helppanel',
 			'topic_prefixes' => null,
@@ -20673,7 +20673,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_HomepageModule' => [
 			'stream' => 'eventlogging_HomepageModule',
 			'schema_title' => 'analytics/legacy/homepagemodule',
 			'topic_prefixes' => null,
@@ -20685,7 +20685,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_HomepageVisit' => [
 			'stream' => 'eventlogging_HomepageVisit',
 			'schema_title' => 'analytics/legacy/homepagevisit',
 			'topic_prefixes' => null,
@@ -20697,7 +20697,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_InukaPageView' => [
 			'stream' => 'eventlogging_InukaPageView',
 			'schema_title' => 'analytics/legacy/inukapageview',
 			'topic_prefixes' => null,
@@ -20709,7 +20709,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_KaiOSAppFirstRun' => [
 			'stream' => 'eventlogging_KaiOSAppFirstRun',
 			'schema_title' => 'analytics/legacy/kaiosappfirstrun',
 			'topic_prefixes' => null,
@@ -20721,7 +20721,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_KaiOSAppFeedback' => [
 			'stream' => 'eventlogging_KaiOSAppFeedback',
 			'schema_title' => 'analytics/legacy/kaiosappfeedback',
 			'topic_prefixes' => null,
@@ -20733,7 +20733,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_LandingPageImpression' => [
 			'stream' => 'eventlogging_LandingPageImpression',
 			'schema_title' => 'analytics/legacy/landingpageimpression',
 			'topic_prefixes' => null,
@@ -20745,7 +20745,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_LayoutShift' => [
 			'stream' => 'eventlogging_LayoutShift',
 			'schema_title' => 'analytics/legacy/layoutshift',
 			'topic_prefixes' => null,
@@ -20757,7 +20757,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_MobileWebUIActionsTracking' => [
 			'stream' => 'eventlogging_MobileWebUIActionsTracking',
 			'schema_title' => 'analytics/legacy/mobilewebuiactionstracking',
 			'topic_prefixes' => null,
@@ -20769,7 +20769,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_NavigationTiming' => [
 			'stream' => 'eventlogging_NavigationTiming',
 			'schema_title' => 'analytics/legacy/navigationtiming',
 			'topic_prefixes' => null,
@@ -20781,7 +20781,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_NewcomerTask' => [
 			'stream' => 'eventlogging_NewcomerTask',
 			'schema_title' => 'analytics/legacy/newcomertask',
 			'topic_prefixes' => null,
@@ -20793,7 +20793,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_PaintTiming' => [
 			'stream' => 'eventlogging_PaintTiming',
 			'schema_title' => 'analytics/legacy/painttiming',
 			'topic_prefixes' => null,
@@ -20805,7 +20805,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_PrefUpdate' => [
 			'stream' => 'eventlogging_PrefUpdate',
 			'schema_title' => 'analytics/legacy/prefupdate',
 			'topic_prefixes' => null,
@@ -20817,7 +20817,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_QuickSurveyInitiation' => [
 			'stream' => 'eventlogging_QuickSurveyInitiation',
 			'schema_title' => 'analytics/legacy/quicksurveyinitiation',
 			'topic_prefixes' => null,
@@ -20829,7 +20829,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_QuickSurveysResponses' => [
 			'stream' => 'eventlogging_QuickSurveysResponses',
 			'schema_title' => 'analytics/legacy/quicksurveysresponses',
 			'topic_prefixes' => null,
@@ -20841,7 +20841,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_ReferencePreviewsBaseline' => [
 			'stream' => 'eventlogging_ReferencePreviewsBaseline',
 			'schema_title' => 'analytics/legacy/referencepreviewsbaseline',
 			'topic_prefixes' => null,
@@ -20853,7 +20853,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_ReferencePreviewsCite' => [
 			'stream' => 'eventlogging_ReferencePreviewsCite',
 			'schema_title' => 'analytics/legacy/referencepreviewscite',
 			'topic_prefixes' => null,
@@ -20865,7 +20865,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_ReferencePreviewsPopups' => [
 			'stream' => 'eventlogging_ReferencePreviewsPopups',
 			'schema_title' => 'analytics/legacy/referencepreviewspopups',
 			'topic_prefixes' => null,
@@ -20877,7 +20877,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_ResourceTiming' => [
 			'stream' => 'eventlogging_ResourceTiming',
 			'schema_title' => 'analytics/legacy/resourcetiming',
 			'topic_prefixes' => null,
@@ -20889,7 +20889,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_RUMSpeedIndex' => [
 			'stream' => 'eventlogging_RUMSpeedIndex',
 			'schema_title' => 'analytics/legacy/rumspeedindex',
 			'topic_prefixes' => null,
@@ -20901,7 +20901,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_SaveTiming' => [
 			'stream' => 'eventlogging_SaveTiming',
 			'schema_title' => 'analytics/legacy/savetiming',
 			'topic_prefixes' => null,
@@ -20913,7 +20913,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_SearchSatisfaction' => [
 			'stream' => 'eventlogging_SearchSatisfaction',
 			'schema_title' => 'analytics/legacy/searchsatisfaction',
 			'topic_prefixes' => null,
@@ -20925,7 +20925,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_ServerSideAccountCreation' => [
 			'stream' => 'eventlogging_ServerSideAccountCreation',
 			'schema_title' => 'analytics/legacy/serversideaccountcreation',
 			'topic_prefixes' => null,
@@ -20937,7 +20937,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_SpecialInvestigate' => [
 			'stream' => 'eventlogging_SpecialInvestigate',
 			'schema_title' => 'analytics/legacy/specialinvestigate',
 			'topic_prefixes' => null,
@@ -20949,7 +20949,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_SpecialMuteSubmit' => [
 			'stream' => 'eventlogging_SpecialMuteSubmit',
 			'schema_title' => 'analytics/legacy/specialmutesubmit',
 			'topic_prefixes' => null,
@@ -20961,7 +20961,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_SuggestedTagsAction' => [
 			'stream' => 'eventlogging_SuggestedTagsAction',
 			'schema_title' => 'analytics/legacy/suggestedtagsaction',
 			'topic_prefixes' => null,
@@ -20973,7 +20973,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_TemplateDataApi' => [
 			'stream' => 'eventlogging_TemplateDataApi',
 			'schema_title' => 'analytics/legacy/templatedataapi',
 			'topic_prefixes' => null,
@@ -20985,7 +20985,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_TemplateDataEditor' => [
 			'stream' => 'eventlogging_TemplateDataEditor',
 			'schema_title' => 'analytics/legacy/templatedataeditor',
 			'topic_prefixes' => null,
@@ -20997,7 +20997,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_TemplateWizard' => [
 			'stream' => 'eventlogging_TemplateWizard',
 			'schema_title' => 'analytics/legacy/templatewizard',
 			'topic_prefixes' => null,
@@ -21009,7 +21009,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_Test' => [
 			'stream' => 'eventlogging_Test',
 			'schema_title' => 'analytics/legacy/test',
 			'topic_prefixes' => null,
@@ -21021,7 +21021,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_TranslationRecommendationUserAction' => [
 			'stream' => 'eventlogging_TranslationRecommendationUserAction',
 			'schema_title' => 'analytics/legacy/translationrecommendationuseraction',
 			'topic_prefixes' => null,
@@ -21033,7 +21033,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_TranslationRecommendationUIRequests' => [
 			'stream' => 'eventlogging_TranslationRecommendationUIRequests',
 			'schema_title' => 'analytics/legacy/translationrecommendationuirequests',
 			'topic_prefixes' => null,
@@ -21045,7 +21045,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_TranslationRecommendationAPIRequests' => [
 			'stream' => 'eventlogging_TranslationRecommendationAPIRequests',
 			'schema_title' => 'analytics/legacy/translationrecommendationapirequests',
 			'topic_prefixes' => null,
@@ -21057,7 +21057,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_TwoColConflictConflict' => [
 			'stream' => 'eventlogging_TwoColConflictConflict',
 			'schema_title' => 'analytics/legacy/twocolconflictconflict',
 			'topic_prefixes' => null,
@@ -21069,7 +21069,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_TwoColConflictExit' => [
 			'stream' => 'eventlogging_TwoColConflictExit',
 			'schema_title' => 'analytics/legacy/twocolconflictexit',
 			'topic_prefixes' => null,
@@ -21081,7 +21081,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_UniversalLanguageSelector' => [
 			'stream' => 'eventlogging_UniversalLanguageSelector',
 			'schema_title' => 'analytics/legacy/universallanguageselector',
 			'topic_prefixes' => null,
@@ -21093,7 +21093,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_VirtualPageView' => [
 			'stream' => 'eventlogging_VirtualPageView',
 			'schema_title' => 'analytics/legacy/virtualpageview',
 			'topic_prefixes' => null,
@@ -21105,7 +21105,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_VisualEditorFeatureUse' => [
 			'stream' => 'eventlogging_VisualEditorFeatureUse',
 			'schema_title' => 'analytics/legacy/visualeditorfeatureuse',
 			'topic_prefixes' => null,
@@ -21117,7 +21117,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_VisualEditorTemplateDialogUse' => [
 			'stream' => 'eventlogging_VisualEditorTemplateDialogUse',
 			'schema_title' => 'analytics/legacy/visualeditortemplatedialoguse',
 			'topic_prefixes' => null,
@@ -21129,7 +21129,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_WikidataCompletionSearchClicks' => [
 			'stream' => 'eventlogging_WikidataCompletionSearchClicks',
 			'schema_title' => 'analytics/legacy/wikidatacompletionsearchclicks',
 			'topic_prefixes' => null,
@@ -21141,7 +21141,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_WMDEBannerEvents' => [
 			'stream' => 'eventlogging_WMDEBannerEvents',
 			'schema_title' => 'analytics/legacy/wmdebannerevents',
 			'topic_prefixes' => null,
@@ -21153,7 +21153,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_WMDEBannerInteractions' => [
 			'stream' => 'eventlogging_WMDEBannerInteractions',
 			'schema_title' => 'analytics/legacy/wmdebannerinteractions',
 			'topic_prefixes' => null,
@@ -21165,7 +21165,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
+		'eventlogging_WMDEBannerSizeIssue' => [
 			'stream' => 'eventlogging_WMDEBannerSizeIssue',
 			'schema_title' => 'analytics/legacy/wmdebannersizeissue',
 			'topic_prefixes' => null,
@@ -21180,13 +21180,13 @@ function wmfGetVariantSettings() {
 		/*
 		 * === Streams for testing Event Platform-based instruments ===
 		 */
-		[
+		'test.instrumentation' => [
 			'stream' => 'test.instrumentation',
 			'schema_title' => 'analytics/test',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		// For verifying sampling:
-		[
+		'test.instrumentation.sampled' => [
 			'stream' => 'test.instrumentation.sampled',
 			'schema_title' => 'analytics/test',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -21198,7 +21198,7 @@ function wmfGetVariantSettings() {
 		/*
 		 * === Streams for Event Platform-based analytics instruments ===
 		 */
-		[
+		'mediawiki.client.session_tick' => [
 			'stream' => 'mediawiki.client.session_tick',
 			'schema_title' => 'analytics/session_tick',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -21207,72 +21207,72 @@ function wmfGetVariantSettings() {
 				'rate' => 0.1,
 			],
 		],
-		[
+		'ios.edit_history_compare' => [
 			'stream' => 'ios.edit_history_compare',
 			'schema_title' => 'analytics/mobile_apps/ios_edit_history_compare',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		[
+		'android.user_contribution_screen' => [
 			'stream' => 'android.user_contribution_screen',
 			'schema_title' => 'analytics/mobile_apps/android_user_contribution_screen',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		[
+		'android.notification_interaction' => [
 			'stream' => 'android.notification_interaction',
 			'schema_title' => 'analytics/mobile_apps/android_notification_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		[
+		'android.image_recommendation_interaction' => [
 			'stream' => 'android.image_recommendation_interaction',
 			'schema_title' => 'analytics/mobile_apps/android_image_recommendation_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		[
+		'android.daily_stats' => [
 			'stream' => 'android.daily_stats',
 			'schema_title' => 'analytics/mobile_apps/android_daily_stats',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		[
+		'mediawiki.mediasearch_interaction' => [
 			'stream' => 'mediawiki.mediasearch_interaction',
 			'schema_title' => 'analytics/mediawiki/mediasearch_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		[
+		'mediawiki.structured_task.article.link_suggestion_interaction' => [
 			'stream' => 'mediawiki.structured_task.article.link_suggestion_interaction',
 			'schema_title' => 'analytics/mediawiki/structured_task/article/link_suggestion_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		[
+		'mediawiki.structured_task.article.image_suggestion_interaction' => [
 			'stream' => 'mediawiki.structured_task.article.image_suggestion_interaction',
 			'schema_title' => 'analytics/mediawiki/structured_task/article/image_suggestion_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		[
+		'mediawiki.pref_diff' => [
 			'stream' => 'mediawiki.pref_diff',
 			'schema_title' => 'analytics/pref_diff',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		[
+		'mediawiki.skin_diff' => [
 			'stream' => 'mediawiki.skin_diff',
 			'schema_title' => 'analytics/pref_diff',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		[
+		'mediawiki.content_translation_event' => [
 			'stream' => 'mediawiki.content_translation_event',
 			'schema_title' => 'analytics/mediawiki/content_translation_event',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		[
+		'wd_propertysuggester.client_side_property_request' => [
 			'stream' => 'wd_propertysuggester.client_side_property_request',
 			'schema_title' => 'analytics/mediawiki/wd_propertysuggester/client_side_property_request',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		[
+		'wd_propertysuggester.server_side_property_request' => [
 			'stream' => 'wd_propertysuggester.server_side_property_request',
 			'schema_title' => 'analytics/mediawiki/wd_propertysuggester/server_side_property_request',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		[
+		'mediawiki.mentor_dashboard.visit' => [
 			'stream' => 'mediawiki.mentor_dashboard.visit',
 			'schema_title' => 'analytics/mediawiki/mentor_dashboard/visit',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -21284,19 +21284,19 @@ function wmfGetVariantSettings() {
 		 * These streams disable canary event production.
 		 * See: https://phabricator.wikimedia.org/T287789
 		 */
-		[
+		'mediawiki.client.error' => [
 			'stream' => 'mediawiki.client.error',
 			'schema_title' => 'mediawiki/client/error',
 			'destination_event_service' => 'eventgate-logging-external',
 			'canary_events_enabled' => false,
 		],
-		[
+		'kaios_app.error' => [
 			'stream' => 'kaios_app.error',
 			'schema_title' => 'mediawiki/client/error',
 			'destination_event_service' => 'eventgate-logging-external',
 			'canary_events_enabled' => false,
 		],
-		[
+		'w3c.reportingapi.network_error' => [
 			'stream' => 'w3c.reportingapi.network_error',
 			'schema_title' => 'w3c/reportingapi/network_error',
 			'destination_event_service' => 'eventgate-logging-external',
@@ -21307,37 +21307,37 @@ function wmfGetVariantSettings() {
 		 * == eventgate-analytics streams ==
 		 * These streams are produced to Kafka jumbo-eqiad from internal producers.
 		 */
-		[
+		'api-gateway.request' => [
 			'stream' => 'api-gateway.request',
 			'schema_title' => 'api-gateway/request',
 			'destination_event_service' => 'eventgate-analytics',
 		],
-		[
+		'mediawiki.api-request' => [
 			'stream' => 'mediawiki.api-request',
 			'schema_title' => 'mediawiki/api/request',
 			'destination_event_service' => 'eventgate-analytics',
 		],
-		[
+		'mediawiki.cirrussearch-request' => [
 			'stream' => 'mediawiki.cirrussearch-request',
 			'schema_title' => 'mediawiki/cirrussearch/request',
 			'destination_event_service' => 'eventgate-analytics',
 		],
-		[
+		'wdqs-internal.sparql-query' => [
 			'stream' => 'wdqs-internal.sparql-query',
 			'schema_title' => 'sparql/query',
 			'destination_event_service' => 'eventgate-analytics',
 		],
-		[
+		'wdqs-external.sparql-query' => [
 			'stream' => 'wdqs-external.sparql-query',
 			'schema_title' => 'sparql/query',
 			'destination_event_service' => 'eventgate-analytics',
 		],
-		[
+		'cqs-external.sparql-query' => [
 			'stream' => 'cqs-external.sparql-query',
 			'schema_title' => 'sparql/query',
 			'destination_event_service' => 'eventgate-analytics',
 		],
-		[
+		'/^swift\.(.+\.)?upload-complete$/' => [
 			'stream' => '/^swift\.(.+\.)?upload-complete$/',
 			'schema_title' => 'swift/upload/complete',
 			'destination_event_service' => 'eventgate-analytics',
@@ -21351,8 +21351,8 @@ function wmfGetVariantSettings() {
 		 * These streams disable canary event production.
 		 * See: https://phabricator.wikimedia.org/T287789
 		 */
-		[
-			'stream' => '/^mediawiki\\.job\\..+/' ,
+		'/^mediawiki\\.job\\..+/' => [
+			'stream' => '/^mediawiki\\.job\\..+/',
 			'schema_title' => 'mediawiki/job',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
@@ -21364,85 +21364,85 @@ function wmfGetVariantSettings() {
 				],
 			],
 		],
-		[
+		'mediawiki.centralnotice.campaign-change' => [
 			'stream' => 'mediawiki.centralnotice.campaign-change',
 			'schema_title' => 'mediawiki/centralnotice/campaign/change',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
+		'mediawiki.centralnotice.campaign-create' => [
 			'stream' => 'mediawiki.centralnotice.campaign-create',
 			'schema_title' => 'mediawiki/centralnotice/campaign/create',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
+		'mediawiki.centralnotice.campaign-delete' => [
 			'stream' => 'mediawiki.centralnotice.campaign-delete',
 			'schema_title' => 'mediawiki/centralnotice/campaign/delete',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
+		'mediawiki.page-create' => [
 			'stream' => 'mediawiki.page-create',
 			'schema_title' => 'mediawiki/revision/create',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
+		'mediawiki.page-delete' => [
 			'stream' => 'mediawiki.page-delete',
 			'schema_title' => 'mediawiki/page/delete',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
+		'mediawiki.page-links-change' => [
 			'stream' => 'mediawiki.page-links-change',
 			'schema_title' => 'mediawiki/page/links-change',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
+		'mediawiki.page-move' => [
 			'stream' => 'mediawiki.page-move',
 			'schema_title' => 'mediawiki/page/move',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
+		'mediawiki.page-properties-change' => [
 			'stream' => 'mediawiki.page-properties-change',
 			'schema_title' => 'mediawiki/page/properties-change',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
+		'mediawiki.page-restrictions-change' => [
 			'stream' => 'mediawiki.page-restrictions-change',
 			'schema_title' => 'mediawiki/page/restrictions-change',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
+		'mediawiki.page-suppress' => [
 			'stream' => 'mediawiki.page-suppress',
 			'schema_title' => 'mediawiki/page/delete',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
+		'mediawiki.page-undelete' => [
 			'stream' => 'mediawiki.page-undelete',
 			'schema_title' => 'mediawiki/page/undelete',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
+		'mediawiki.recentchange' => [
 			'stream' => 'mediawiki.recentchange',
 			'schema_title' => 'mediawiki/recentchange',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
+		'mediawiki.revision-create' => [
 			'stream' => 'mediawiki.revision-create',
 			'schema_title' => 'mediawiki/revision/create',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
+		'mediawiki.revision-score' => [
 			'stream' => 'mediawiki.revision-score',
 			'schema_title' => 'mediawiki/revision/score',
 			'destination_event_service' => 'eventgate-main',
@@ -21450,43 +21450,43 @@ function wmfGetVariantSettings() {
 			// and Hadoop is the main consumer.  Emit canary events.
 			'canary_events_enabled' => true,
 		],
-		[
+		'mediawiki.revision-tags-change' => [
 			'stream' => 'mediawiki.revision-tags-change',
 			'schema_title' => 'mediawiki/revision/tags-change',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
+		'mediawiki.revision-visibility-change' => [
 			'stream' => 'mediawiki.revision-visibility-change',
 			'schema_title' => 'mediawiki/revision/visibility-change',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
+		'mediawiki.user-blocks-change' => [
 			'stream' => 'mediawiki.user-blocks-change',
 			'schema_title' => 'mediawiki/user/blocks-change',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
+		'resource_change' => [
 			'stream' => 'resource_change',
 			'schema_title' => 'resource_change',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
+		'resource-purge' => [
 			'stream' => 'resource-purge',
 			'schema_title' => 'resource_change',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
+		'change-prop.transcludes.resource-change' => [
 			'stream' => 'change-prop.transcludes.resource-change',
 			'schema_title' => 'resource_change',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
+		'mediawiki.revision-recommendation-create' => [
 			'stream' => 'mediawiki.revision-recommendation-create',
 			'schema_title' => 'mediawiki/revision/recommendation-create',
 			'destination_event_service' => 'eventgate-main',
@@ -21504,17 +21504,17 @@ function wmfGetVariantSettings() {
 		 * Note that Flink does not produce these through eventgate,
 		 * it produces them directly to Kafka.
 		 */
-		[
+		'rdf-streaming-updater.lapsed-action' => [
 			'stream' => 'rdf-streaming-updater.lapsed-action',
 			'schema_title' => 'rdf_streaming_updater/lapsed_action',
 			'destination_event_service' => 'eventgate-main',
 		],
-		[
+		'rdf-streaming-updater.state-inconsistency' => [
 			'stream' => 'rdf-streaming-updater.state-inconsistency',
 			'schema_title' => 'rdf_streaming_updater/state_inconsistency',
 			'destination_event_service' => 'eventgate-main',
 		],
-		[
+		'rdf-streaming-updater.fetch-failure' => [
 			'stream' => 'rdf-streaming-updater.fetch-failure',
 			'schema_title' => 'rdf_streaming_updater/fetch_failure',
 			'destination_event_service' => 'eventgate-main',
@@ -21539,46 +21539,46 @@ function wmfGetVariantSettings() {
 		 */
 
 		// eventgate test.event streams
-		[
+		'eventgate-logging-external.test.event' => [
 			'stream' => 'eventgate-logging-external.test.event',
 			'schema_title' => 'test/event',
 			'destination_event_service' => 'eventgate-logging-external',
 		],
-		[
+		'eventgate-analytics-external.test.event' => [
 			'stream' => 'eventgate-analytics-external.test.event',
 			'schema_title' => 'test/event',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		[
+		'eventgate-analytics.test.event' => [
 			'stream' => 'eventgate-analytics.test.event',
 			'schema_title' => 'test/event',
 			'destination_event_service' => 'eventgate-analytics',
 		],
-		[
+		'eventgate-main.test.event' => [
 			'stream' => 'eventgate-main.test.event',
 			'schema_title' => 'test/event',
 			'destination_event_service' => 'eventgate-main',
 		],
 		// eventgate error.validation streams
-		[
+		'eventgate-logging-external.error.validation' => [
 			'stream' => 'eventgate-logging-external.error.validation',
 			'schema_title' => 'error',
 			'destination_event_service' => 'eventgate-logging-external',
 			'canary_events_enabled' => false,
 		],
-		[
+		'eventgate-analytics-external.error.validation' => [
 			'stream' => 'eventgate-analytics-external.error.validation',
 			'schema_title' => 'error',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'canary_events_enabled' => false,
 		],
-		[
+		'eventgate-analytics.error.validation' => [
 			'stream' => 'eventgate-analytics.error.validation',
 			'schema_title' => 'error',
 			'destination_event_service' => 'eventgate-analytics',
 			'canary_events_enabled' => false,
 		],
-		[
+		'eventgate-main.error.validation' => [
 			'stream' => 'eventgate-main.error.validation',
 			'schema_title' => 'error',
 			'destination_event_service' => 'eventgate-main',
