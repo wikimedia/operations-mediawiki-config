@@ -5,7 +5,6 @@
 inheritsFrom:
   - special
   - categories-rdf
-  - fishbowl
   - nowikidatadescriptiontaglines
   - s3
   - securepollglobal

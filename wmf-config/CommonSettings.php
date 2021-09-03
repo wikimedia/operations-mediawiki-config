@@ -1899,6 +1899,19 @@ if ( $wmgUseCentralAuth ) {
 
 	// Check global rename log on meta for new accounts
 	$wgCentralAuthOldNameAntiSpoofWiki = 'metawiki';
+
+	if ( $wgDBname === 'foundationwiki' ) {
+		// Temporary foundationwiki overrides for SUL migration. This will allow both local _and_ SUL users to log in.
+		// Once migration is finished by attaching accounts as needed (either by an administrator or by account holders),
+		// this should be removed.
+		// See T205347 for details.
+
+		$wgCentralAuthStrict = false;
+		$wgCentralAuthAutoMigrateNonGlobalAccounts = false;
+		$wgCentralAuthCreateOnView = false;
+		$wgCentralAuthCookies = false;
+		$wgCentralAuthPreventUnattached = false;
+	}
 }
 
 // Config for GlobalCssJs
