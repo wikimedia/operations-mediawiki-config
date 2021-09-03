@@ -1911,5 +1911,15 @@ function wmfGetLabsOverrideSettings() {
 		'wmgUseChessBrowser' => [
 			'default' => true,
 		],
+
+		// temporary for testing foundationwiki SUL migration (T205347)
+		'wmgUseCentralAuth' => [
+			'default' => true,
+			'private' => false,
+			'fishbowl' => false,
+			'nonglobal' => false,
+
+			'foundationwiki' => true,
+		],
 	];
 } # wmflLabsSettings()
