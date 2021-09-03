@@ -28617,6 +28617,10 @@ function wmfGetVariantSettings() {
 	'wikitech' => true, // T276346
 ],
 
+'wgCodeMirrorLineNumberingNamespaces' => [
+	'default' => [ NS_TEMPLATE ],
+],
+
 'wgParserEnableLegacyMediaDOM' => [
 	'default' => true,
 	'testwiki' => false,
