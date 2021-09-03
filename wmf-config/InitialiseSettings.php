@@ -14766,6 +14766,16 @@ function wmfGetVariantSettings() {
 	'+eswikibooks' => [
 		828 => [ 'autoconfirmed' ], // T202555 - Module:
 	],
+	'+foundationwiki' => [
+		NS_MAIN => [ 'edit-legal' ],
+		NS_FILE => [ 'edit-legal' ],
+		NS_TEMPLATE => [ 'edit-legal' ],
+		100 => [ 'edit-legal' ], // Resolution
+		102 => [ 'edit-legal' ], // Legal
+		104 => [ 'edit-legal' ], // Minutes
+		106 => [ 'edit-legal' ], // Policy
+
+	],
 	'+metawiki' => [
 		866 => [ 'autoconfirmed' ], // T238723 - CNBanner:
 	],
