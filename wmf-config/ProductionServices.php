@@ -138,7 +138,7 @@ $services = [
 			# '10.64.32.29',  # pc1009, C3 4.4TB 256GB
 		],
 
-		// LockManager Redis
+		// LockManager Redis eqiad
 		'redis_lock' => [
 			'rdb1' => '10.64.0.65',   # mc1040 A2
 			'rdb2' => '10.64.32.153', # mc1048 C2
@@ -199,7 +199,7 @@ $services = [
 			# '10.192.16.35',  # pc2008, B3 4.4TB 256GB
 			# '10.192.32.10',  # pc2009, C1 4.4TB 256GB
 		],
-
+		// LockManager Redis codfw
 		'redis_lock' => [
 			'rdb1' => '10.192.32.162', # mc2030 C5
 			'rdb2' => '10.192.0.86',   # mc2022 A8
