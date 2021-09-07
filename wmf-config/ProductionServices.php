@@ -130,12 +130,6 @@ $services = [
 			'pc3' => '10.64.32.163', # pc1013, C5 8.8TB 512GB # pc3
 			# spare: '10.64.48.89',  # pc1014, D6 8.8TB 512GB
 			# Use spare(s) to replace any of the above if needed
-
-			// Old pc hosts, to be decommed:
-			# '10.64.48.174', # pc1010, D3 4.4TB 256GB
-			# '10.64.0.180',  # pc1007, A6 4.4TB 256GB
-			# '10.64.16.20',  # pc1008, B8 4.4TB 256GB
-			# '10.64.32.29',  # pc1009, C3 4.4TB 256GB
 		],
 
 		// LockManager Redis eqiad
@@ -193,11 +187,6 @@ $services = [
 			'pc3' => '10.192.32.57',  # pc2013, C1 8.8TB 512GB # pc3
 			# spare: '10.192.48.52',  # pc2014, D1 8.8TB 512GB
 			# Use spare(s) to replace any of the above if needed
-
-			// Old pc hosts, to be decommed:
-			# '10.192.48.14',  # pc2010, D3 4.4TB 256GB
-			# '10.192.16.35',  # pc2008, B3 4.4TB 256GB
-			# '10.192.32.10',  # pc2009, C1 4.4TB 256GB
 		],
 		// LockManager Redis codfw
 		'redis_lock' => [
