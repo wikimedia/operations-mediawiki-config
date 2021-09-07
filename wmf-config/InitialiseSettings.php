@@ -16359,8 +16359,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgUrlShortenerReadOnly' => [
-	'default' => true,
-	'metawiki' => false,
+	'default' => false,
 ],
 
 'wgAllowMicrodataAttributes' => [
