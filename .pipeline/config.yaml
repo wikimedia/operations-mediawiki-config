@@ -46,7 +46,7 @@ pipelines:
           variant: multiversion
           excludes:
             - .git
-        blubberfile: 
+        blubberfile:
           version: v4
           variants:
             multiversion:
@@ -137,6 +137,8 @@ pipelines:
             name: mediawiki-multiversion
             tags: [production]
         blubberfile:
+          # OBSOLETE! You probably want to edit this file instead:
+          # https://gerrit.wikimedia.org/r/plugins/gitiles/operations/docker-images/production-images/+/refs/heads/master/images/php/7.2/fpm-multiversion-base/Dockerfile.template
           version: v4
           variants:
             # Using 'prod' instead of 'production' to get around the policy rules that are
