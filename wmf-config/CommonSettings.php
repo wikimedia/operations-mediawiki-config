@@ -1004,9 +1004,13 @@ if ( isset( $wmgSiteLogo1x ) ) {
 		'1.5x' => $wmgSiteLogo1_5x ?? null,
 		'2x' => $wmgSiteLogo2x ?? null,
 		'icon' => $wmgSiteLogoIcon ?? null,
-		'wordmark' => $wmgSiteLogoWordmark ?? null,
-		'tagline' => $wmgSiteLogoTagline ?? null,
-		'variants' => $wmgSiteLogoVariants ?? null,
+		// If $wmgSiteLogoWordmark is set to false, the tagline ,variants and wordmark
+		// value shoulds be null to ensure that isset calls inside ResourceLoaderSkinModule
+		// return false and these values are not defined when not present.
+		// Skin/ResourceLoader code expects these to be arrays if defined, not booleans.
+		'wordmark' => $wmgSiteLogoWordmark ?: null,
+		'tagline' => $wmgSiteLogoTagline ?: null,
+		'variants' => $wmgSiteLogoVariants ?: null,
 	];
 }
 
