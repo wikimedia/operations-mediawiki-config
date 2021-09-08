@@ -25870,6 +25870,7 @@ function wmfGetVariantSettings() {
 'wgIncludejQueryMigrate' => [
 	'default' => true,
 	'group0' => false,
+	'wikisource' => false,
 ],
 'wgXmlDumpSchemaVersion' => [
 	'default' => XML_DUMP_SCHEMA_VERSION_10,
