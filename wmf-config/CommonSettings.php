@@ -1425,7 +1425,8 @@ if ( $wmgUseScore ) {
 	$wgScoreSafeMode = true;
 
 	if ( $wmgUseScoreShellbox && $wmfLocalServices['shellbox'] ) {
-		$wgShellboxUrls['default'] = $wmfLocalServices['shellbox'];
+		// Route score to the Shellbox named "shellbox".
+		$wgShellboxUrls['score'] = $wmfLocalServices['shellbox'];
 		// $wgShellboxSecretKey set in PrivateSettings.php
 		$wgScoreImageMagickConvert = '/usr/bin/convert';
 	} else {
