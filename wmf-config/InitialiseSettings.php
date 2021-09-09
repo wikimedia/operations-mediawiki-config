@@ -15929,6 +15929,7 @@ function wmfGetVariantSettings() {
 		'*.happysrv.de', // T288039
 		'*.wikimedia.es', // Wikimedia Spain - T289446
 		'portrattarkiv.se', // Swedish Portrait Archive - T290581
+		'ia-upload.wmcloud.org', // T287241 - IA-Upload tool
 	],
 ],
 
