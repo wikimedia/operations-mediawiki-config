@@ -8,3 +8,4 @@ inheritsFrom:
   - s3
   - small
   - wikidataclient
+  - growthexperiments

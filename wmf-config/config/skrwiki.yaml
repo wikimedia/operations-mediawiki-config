@@ -10,3 +10,4 @@ inheritsFrom:
   - wikidataclient
   - small
   - rtl
+  - growthexperiments
