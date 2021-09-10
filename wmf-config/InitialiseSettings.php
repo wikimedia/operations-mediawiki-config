@@ -19290,9 +19290,6 @@ function wmfGetVariantSettings() {
 	'wikimania2018wiki' => true,
 	'wikimaniawiki' => true,
 ],
-'wmgUseVips' => [
-	'default' => false,
-],
 
 // NO FURTHER DEPLOYMENTS OF THIS EXTENSION.
 'wmgUseShortUrl' => [
