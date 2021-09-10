@@ -3038,27 +3038,6 @@ if ( $wmgUseFundraisingTranslateWorkflow ) {
 	wfLoadExtension( 'FundraisingTranslateWorkflow' );
 }
 
-if ( $wmgUseVips ) {
-	wfLoadExtension( 'VipsScaler' );
-	$wgVipsOptions = [
-		[
-			'conditions' => [
-				'mimeType' => 'image/png',
-				'minArea' => 2e7,
-			],
-		],
-		[
-			'conditions' => [
-				'mimeType' => 'image/tiff',
-				'minShrinkFactor' => 1.2,
-				'minArea' => 5e7,
-			],
-			'sharpen' => [ 'sigma' => 0.8 ],
-		],
-	];
-
-}
-
 if ( $wmgUseShortUrl ) {
 	wfLoadExtension( 'ShortUrl' );
 	$wgShortUrlTemplate = "/s/$1";
