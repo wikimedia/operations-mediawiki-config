@@ -5315,12 +5315,6 @@ function wmfGetVariantSettings() {
 	'test2wiki' => 'wgDebugLogFile',
 ],
 
-// Logstash servers running syslog endpoint to collect log events.
-// Use false to disable all Logstash logging
-'wmgLogstashServers' => [
-	'default' => [ '127.0.0.1' ],
-],
-
 # wmgMonologChannels @{
 // Configure Monolog logging to udp2log (logfiles), Logstash, EventBus extension, etc.
 // See logging.php for more detailed information
