@@ -35,7 +35,7 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 	public function testVariantUrlsAreLocalhost() {
 		$knownToContainExternalURLs = [
 			// These are user-facing, not in-cluster, and are fine
-			'wgCanonicalServer', 'wgServer', 'wgUploadPath', 'wgRedirectSources', 'wgUploadNavigationUrl', 'wgScorePath', 'wgUploadMissingFileUrl', 'wgRightsUrl', 'wgWelcomeSurveyPrivacyPolicyUrl', 'wgWBCitoidFullRestbaseURL', 'wgGlobalRenameBlacklist', 'wgGlobalRenameDenylist', 'wgWMEClientErrorIntakeURL', 'wgEventLoggingServiceUri',
+			'wgCanonicalServer', 'wgServer', 'wgUploadPath', 'wgRedirectSources', 'wgUploadNavigationUrl', 'wgScorePath', 'wgUploadMissingFileUrl', 'wgRightsUrl', 'wgWelcomeSurveyPrivacyPolicyUrl', 'wgWBCitoidFullRestbaseURL', 'wgGlobalRenameDenylist', 'wgWMEClientErrorIntakeURL', 'wgEventLoggingServiceUri',
 			// FIXME: Just… wow. By name, this should be a boolean.
 			'wmgUseFileExporter',
 			// FIXME: Just set in wikibase.php? Most of these are user-facing.

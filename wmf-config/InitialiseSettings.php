@@ -27211,15 +27211,6 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
-// Legacy name, being removed – JDF, 2021-09-10
-'wgGlobalRenameBlacklist' => [
-	'default' => 'https://meta.wikimedia.org/w/index.php?title=Global_rename_blacklist&action=raw'
-],
-// Legacy name, being removed – JDF, 2021-09-10
-'wgGlobalRenameBlacklistRegex' => [
-	'default' => true
-],
-
 'wgGlobalRenameDenylist' => [
 	'default' => 'https://meta.wikimedia.org/w/index.php?title=Global_rename_blacklist&action=raw'
 ],
