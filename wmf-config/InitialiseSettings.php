@@ -1950,6 +1950,8 @@ function wmfGetVariantSettings() {
 	'kowikiversity' => '위키배움터',
 	'kowiktionary' => '위키낱말사전',
 	'krcwiki' => 'Википедия',
+	'kswiki' => 'وِکیٖپیٖڈیا', //T289752
+	'kswiktionary' => 'وِکیٖلۄغَتھ', //T289767
 	'kuwiki' => 'Wîkîpediya',
 	'kuwiktionary' => 'Wîkîferheng', // T29878
 	'wikitech' => 'Wikitech',
@@ -2493,6 +2495,8 @@ function wmfGetVariantSettings() {
 	'kowiktionary' => '위키낱말사전',
 	'kowikiversity' => '위키배움터', // T46899
 	'krcwiki' => 'Википедия',
+	'kswiki' => 'وِکیٖپیٖڈیا', //T289752
+	'kswiktionary' => 'وِکیٖلۄغَتھ', //T289767
 	'kuwiki' => 'Wîkîpediya',
 	'kuwikibooks' => 'Wîkîpirtûk',
 	'kuwikiquote' => 'Wîkîgotin',
