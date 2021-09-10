@@ -19291,9 +19291,7 @@ function wmfGetVariantSettings() {
 	'wikimaniawiki' => true,
 ],
 'wmgUseVips' => [
-	'default' => true,
-	'wikitech' => false,
-	'lockeddown' => false,
+	'default' => false,
 ],
 
 // NO FURTHER DEPLOYMENTS OF THIS EXTENSION.
