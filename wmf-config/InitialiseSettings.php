@@ -11467,8 +11467,7 @@ function wmfGetVariantSettings() {
 	],
 	'+testwiki' => [
 		'bureaucrat' => [ 'researcher', 'centralnoticeadmin', 'flow-bot', 'import', 'transwiki' ],
-		'sysop' => [ 'filemover', 'rollbacker', 'accountcreator', 'confirmed', 'templateeditor', 'electcomm' ],
-		'electcomm' => [ 'electionadmin' ],
+		'sysop' => [ 'filemover', 'rollbacker', 'accountcreator', 'confirmed', 'templateeditor' ],
 	],
 	'+test2wiki' => [
 		'bureaucrat' => [ 'flow-bot', 'import', 'transwiki' ],
@@ -12303,8 +12302,7 @@ function wmfGetVariantSettings() {
 	],
 	'+testwiki' => [
 		'bureaucrat' => [ 'sysop', 'researcher', 'centralnoticeadmin', 'flow-bot', 'import', 'transwiki' ],
-		'sysop' => [ 'filemover', 'rollbacker', 'accountcreator', 'confirmed', 'templateeditor', 'electcomm' ],
-		'electcomm' => [ 'electionadmin' ],
+		'sysop' => [ 'filemover', 'rollbacker', 'accountcreator', 'confirmed', 'templateeditor' ],
 	],
 	'+test2wiki' => [
 		'bureaucrat' => [ 'flow-bot', 'sysop', 'import', 'transwiki' ], // T131037
