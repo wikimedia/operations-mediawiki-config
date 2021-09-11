@@ -10916,11 +10916,6 @@ function wmfGetVariantSettings() {
 			'centralnotice-admin' => true,
 			'editinterface' => true, // adding to allow CN access without local sysop JRA 2013-02-21
 		],
-		'electcomm' => [
-			'securepoll-create-poll' => true,
-			'editinterface' => true,
-		],
-		'electionadmin' => [ 'editinterface' => true ],
 	],
 	'test2wiki' => [
 		'*' => [ 'createpagemainns' => false ],
