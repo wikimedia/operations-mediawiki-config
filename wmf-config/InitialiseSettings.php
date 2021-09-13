@@ -26687,7 +26687,7 @@ function wmfGetVariantSettings() {
 	'default' => 80,
 	'testwiki' => 0,
 	'dewiki' => 30,
-	'enwiki' => 2, // enwiki has special treatment - T281896
+	'enwiki' => 25, // enwiki has special treatment - T281896, bumped to 25 per T290927
 	'nlwiki' => 50,
 
 	// wikis with less than 500 registrations per month (T289786)
@@ -26712,6 +26712,11 @@ function wmfGetVariantSettings() {
 	'tawiki' => 100,
 	'tewiki' => 100,
 	'urwiki' => 100,
+],
+
+'wgGEMentorshipNewAccountEnablePercentage' => [
+	'default' => 100,
+	'enwiki' => 20, // T290927
 ],
 
 'wgGEHomepageDefaultVariant' => [
