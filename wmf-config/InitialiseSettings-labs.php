@@ -1386,6 +1386,17 @@ function wmfGetLabsOverrideSettings() {
 			'default' => [ 'Data Bridge' ],
 		],
 
+		// T290985
+		'wmgWikibaseDispatchViaJobsEnabled' => [
+			'default' => false,
+			'wikidatawiki' => true,
+		],
+
+		'wmgWikibaseDispatchViaJobsAllowedClients' => [
+			'default' => [],
+			'wikidatawiki' => [ 'wikidatawiki', 'enwiki' ],
+		],
+
 		'wmgWikibaseEntityDataFormats' => [
 			'default' => [
 				'json',
