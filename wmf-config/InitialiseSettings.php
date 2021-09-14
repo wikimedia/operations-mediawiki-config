@@ -25296,6 +25296,18 @@ function wmfGetVariantSettings() {
 	],
 ],
 
+'wmgProhibitedFileExtensions' => [
+	'default' => [
+		'txt',
+		'mht',
+	],
+	'+enwikivoyage' => [
+		// Some of these are allowed by MediaWiki core or extensions and it is not sufficient
+		// to remove them from 'wmgFileExtensions'
+		'webp', 'xcf', 'pdf', 'mid', 'ogg', 'ogv', 'djvu', 'oga', 'flac', 'opus', 'wav', 'webm',
+	],
+],
+
 'wgRedirectSources' => [
 	'default' => false,
 	'donatewiki' => '!^https?://donate\.wikimedia\.org/!',
