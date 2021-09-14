@@ -20398,11 +20398,19 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'testwiki' => true,
 	'bnwiki' => true, // T271397
+	'thwiki' => true, // T290175
 ],
 
+// ToDo: Remove this later (T290302)
 'wgSectionTranslationTargetLanguage' => [
 	'default' => null,
 	'bnwiki' => 'bn',
+	'thwiki' => 'th',
+],
+
+'wgSectionTranslationTargetLanguages' => [
+	'default' => null,
+	'wikipedia' => [ 'bn', 'th' ],
 ],
 
 'wmgUseExternalGuidance' => [
