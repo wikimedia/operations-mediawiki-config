@@ -729,8 +729,8 @@ if ( $wmgPrivateWikiUploads ) {
 	$wgFileExtensions[] = 'woff2';
 
 	// To allow OpenOffice doc formats we need to not blacklist zip files
-	$wgMimeTypeBlacklist = array_diff(
-		$wgMimeTypeBlacklist,
+	$wgMimeTypeExclusions = array_diff(
+		$wgMimeTypeExclusions,
 		[ 'application/zip' ] );
 }
 
