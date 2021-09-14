@@ -14148,6 +14148,11 @@ function wmfGetVariantSettings() {
 	'zhwikisource' => '__PAGEJOIN__', // T205826
 ],
 
+'wgProofreadPageUseStatusChangeTags' => [
+	'default' => false,
+	'sourceswiki' => true, // T289140
+],
+
 'wmgUseDynamicPageList' => [
 	'default' => false,
 
