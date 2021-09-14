@@ -675,11 +675,7 @@ $wgMaxImageArea = 10e7; // 100MP
 $wgMaxAnimatedGifArea = 10e7; // 100MP
 
 $wgFileExtensions = array_merge( $wgFileExtensions, $wmgFileExtensions );
-if ( !isset( $wgFileBlacklist ) ) {
-	// TODO: set $wgProhibitedFileExtensions once wmf.23 fully rolls out (T290640)
-	$wgFileBlacklist = [];
-}
-$wgFileBlacklist = array_merge( $wgFileBlacklist, $wmgFileBlacklist );
+$wgProhibitedFileExtensions = array_merge( $wgProhibitedFileExtensions, $wmgFileBlacklist );
 
 if ( isset( $wmgUploadStashMaxAge ) ) {
 	$wgUploadStashMaxAge = $wmgUploadStashMaxAge;
