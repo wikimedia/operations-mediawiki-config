@@ -22114,6 +22114,16 @@ function wmfGetVariantSettings() {
 'wmgEchoEnablePush' => [
 	'default' => false,
 	'wikipedia' => true, // Enabled on all Wikipedias
+
+	// exclude arbcom wikis, see T291128
+	'arbcom_cswiki' => false,
+	'arbcom_dewiki' => false,
+	'arbcom_enwiki' => false,
+	'arbcom_fiwiki' => false,
+	'arbcom_nlwiki' => false,
+	'arbcom_ruwiki' => false,
+	'sysop_itwiki' => false,
+	'wg_enwiki' => false,
 ],
 
 // ---T208755---
