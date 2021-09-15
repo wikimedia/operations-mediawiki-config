@@ -1241,6 +1241,14 @@ function wmfGetLabsOverrideSettings() {
 				'Q98651' => 'badge-validated'
 			],
 		],
+		'wgWikimediaBadgesTopicsMainCategoryProperty' => [
+			'default' => 'P750',
+			'commonswiki' => null,
+		],
+		'wgWikimediaBadgesCategoryRelatedToListProperty' => [
+			'default' => 'P253133',
+			'commonswiki' => null,
+		],
 		'wgWikimediaBadgesCommonsCategoryProperty' => [
 			'default' => 'P725',
 			'commonswiki' => null,

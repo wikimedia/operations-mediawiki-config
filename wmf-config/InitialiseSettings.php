@@ -22183,8 +22183,21 @@ function wmfGetVariantSettings() {
 	],
 ],
 
-// Overwrite or add commons links in the "other projects sidebar" with the
-// "commons category" (P373), per T126960
+// Overwrite or add commons links in the "other projects sidebar" with
+// statements from Wikidata, per T126960 and T232927
+
+'wgWikimediaBadgesTopicsMainCategoryProperty' => [
+	'default' => 'P910',
+	'commonswiki' => null,
+	'testcommonswiki' => null,
+],
+
+'wgWikimediaBadgesCategoryRelatedToListProperty' => [
+	'default' => 'P1754',
+	'commonswiki' => null,
+	'testcommonswiki' => null,
+],
+
 'wgWikimediaBadgesCommonsCategoryProperty' => [
 	'default' => 'P373',
 	'commonswiki' => null,
