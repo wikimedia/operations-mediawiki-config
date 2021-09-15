@@ -14802,7 +14802,9 @@ function wmfGetVariantSettings() {
 		102 => [ 'edit-legal' ], // Legal
 		104 => [ 'edit-legal' ], // Minutes
 		106 => [ 'edit-legal' ], // Policy
-
+	],
+	'+fawiki' => [
+		NS_MAIN => [ 'minoredit' ], // T291018
 	],
 	'+metawiki' => [
 		866 => [ 'autoconfirmed' ], // T238723 - CNBanner:
