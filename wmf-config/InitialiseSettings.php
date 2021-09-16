@@ -25895,6 +25895,8 @@ function wmfGetVariantSettings() {
 	'group0' => false,
 	'wikisource' => false,
 	'nlwiki' => false,
+	'wikibooks' => false,
+	'commonswiki' => false,
 ],
 'wgXmlDumpSchemaVersion' => [
 	'default' => XML_DUMP_SCHEMA_VERSION_10,
