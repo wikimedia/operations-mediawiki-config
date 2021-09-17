@@ -13914,6 +13914,7 @@ function wmfGetVariantSettings() {
 	'pflwiki' => false, // T205055
 	'rmwiki' => false,
 	'thankyouwiki' => false,
+	'viwikibooks' => false, // T289837
 	'zhwiki' => false,
 ],
 
