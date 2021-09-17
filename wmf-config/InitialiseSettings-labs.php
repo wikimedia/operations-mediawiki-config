@@ -927,6 +927,10 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true, // T196400
 		],
 
+		'wgDisambiguatorNotifications' => [
+			'default' => true, // T291303
+		],
+
 		#####################################################
 		# Cirrus-related tweaks specific for the Beta cluster
 		#####################################################
