@@ -26829,6 +26829,7 @@ function wmfGetVariantSettings() {
 
 'wgGEMentorDashboardBetaMode' => [
 	'default' => false,
+	'testwiki' => true,
 ],
 
 'wgGEMentorDashboardDiscoveryEnabled' => [
