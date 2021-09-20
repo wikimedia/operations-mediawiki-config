@@ -27514,6 +27514,11 @@ function wmfGetVariantSettings() {
 
 'wgCodeMirrorLineNumberingNamespaces' => [
 	'default' => [ NS_TEMPLATE ],
+	// T280027: Enable line numbering on all namespaces, for pilot wikis.
+	'cawiki' => null, // T280027
+	'dewiki' => null, // T280027
+	'group0' => null, // T280027
+	'wikitech' => null, // T280027
 ],
 
 'wgParserEnableLegacyMediaDOM' => [
