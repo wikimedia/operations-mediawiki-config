@@ -2785,7 +2785,7 @@ if ( $wmgUseWikiLove ) {
 	$wgDefaultUserOptions['wikilove-enabled'] = 1;
 }
 
-if ( $wmgUseGuidedTour || $wmgUseGettingStarted ) {
+if ( $wmgUseGuidedTour ) {
 	wfLoadExtension( 'GuidedTour' );
 }
 
@@ -3401,12 +3401,6 @@ if ( $wmgUseScribunto ) {
 if ( $wmgUseSubpageSortkey ) {
 	wfLoadExtension( 'SubpageSortkey' );
 	$wgSubpageSortkeyByNamespace = $wmgSubpageSortkeyByNamespace;
-}
-
-if ( $wmgUseGettingStarted ) {
-	wfLoadExtension( 'GettingStarted' );
-	$wgGettingStartedRedis = $wgObjectCaches['redis_master']['servers'][0];
-	$wgGettingStartedRedisOptions['password'] = $wmgRedisPassword;
 }
 
 if ( $wmgUseGeoCrumbs ) {
