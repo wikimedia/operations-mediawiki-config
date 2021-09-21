@@ -19438,10 +19438,6 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
-'wmgUseGettingStarted' => [
-	'default' => false,
-],
-
 'wmgUseGuidedTour' => [
 	'default' => true,
 	'lockeddown' => false,
