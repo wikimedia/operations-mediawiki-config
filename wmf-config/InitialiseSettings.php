@@ -5396,7 +5396,6 @@ function wmfGetVariantSettings() {
 		'formatnum' => 'info', // - cscott 2020/11/09 for T267587/T267370
 		'FSFileBackend' => 'debug', // - gilles for T75229
 		'generated-pp-node-count' => 'debug',
-		'GettingStarted' => 'debug',
 		'GlobalTitleFail' => [ 'sample' => 10000 ], // chad hates $wgTitle
 		'GlobalWatchlist' => 'info', // T260862
 		'goodpass' => 'debug',

@@ -245,7 +245,6 @@ function wmfGetLabsOverrideSettings() {
 				'formatnum' => 'info', // - cscott 2020/11/09 for T267587/T267370
 				'FSFileBackend' => 'debug', // - gilles for T75229
 				'generated-pp-node-count' => 'debug',
-				'GettingStarted' => 'debug',
 				'GlobalTitleFail' => [ 'sample' => 10000 ], // chad hates $wgTitle
 				'GlobalWatchlist' => [ 'logstash' => 'debug', 'udp2log' => 'debug' ], // T268181
 				'goodpass' => 'debug',
