@@ -21185,6 +21185,11 @@ function wmfGetVariantSettings() {
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
+			'stream' => 'android.daily_stats',
+			'schema_title' => 'analytics/mobile_apps/android_daily_stats',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
 			'stream' => 'mediawiki.mediasearch_interaction',
 			'schema_title' => 'analytics/mediawiki/mediasearch_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
