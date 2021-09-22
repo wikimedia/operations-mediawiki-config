@@ -26755,8 +26755,8 @@ function wmfGetVariantSettings() {
 		'linkrecommendation' => 50,
 	],
 	'dewiki' => [
-		'control' => 0,
-		'linkrecommendation' => 100,
+		'control' => 100,
+		'linkrecommendation' => 0,
 	],
 	'fawiki' => [
 		'control' => 50,
