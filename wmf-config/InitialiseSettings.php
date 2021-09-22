@@ -25897,12 +25897,8 @@ function wmfGetVariantSettings() {
 ],
 // T280944
 'wgIncludejQueryMigrate' => [
-	'default' => true,
-	'group0' => false,
-	'wikisource' => false,
-	'nlwiki' => false,
-	'wikibooks' => false,
-	'commonswiki' => false,
+	'default' => false,
+	'metawiki' => true,
 ],
 'wgXmlDumpSchemaVersion' => [
 	'default' => XML_DUMP_SCHEMA_VERSION_10,
