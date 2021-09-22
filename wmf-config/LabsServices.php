@@ -65,6 +65,9 @@ return [
 		// No Shellbox/k8s in beta cluster (T286298)
 		'shellbox' => null,
 		'shellbox-constraints' => 'https://shellbox.svc.deployment-prep.eqiad1.wikimedia.cloud',
+		'shellbox-media' => null,
+		'shellbox-syntaxhighlight' => null,
+		'shellbox-timeline' => null,
 
 		### Logstash
 		'logstash' => [

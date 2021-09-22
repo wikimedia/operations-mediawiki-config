@@ -73,6 +73,9 @@ $common = [
 	'linkrecommendation' => 'https://linkrecommendation.discovery.wmnet:4005',
 	'shellbox' => 'http://localhost:6024',
 	'shellbox-constraints' => 'http://localhost:6025',
+	'shellbox-media' => 'http://localhost:6026',
+	'shellbox-syntaxhighlight' => 'http://localhost:6027',
+	'shellbox-timeline' => 'http://localhost:6028',
 
 	// cloudelastic only exists in eqiad. No load balancer is available due to
 	// the part of the network that they live in so each host is enumerated
