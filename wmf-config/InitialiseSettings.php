@@ -25859,7 +25859,7 @@ function wmfGetVariantSettings() {
 	'labtestwiki' => true,
 ],
 
-'wgShortPagesNamespaceBlacklist' => [
+'wgShortPagesNamespaceExclusions' => [
 	'default' => [],
 	// T170687
 	'commonswiki' => [ NS_FILE ],

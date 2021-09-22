@@ -434,7 +434,7 @@ $wgEnotifMinorEdits = true;
 # Anti-abuse settings
 # ######################################################################
 
-$wgEnableUserEmailBlacklist = true;
+$wgEnableUserEmailMuteList = true;
 
 if ( $wmgUseGlobalPreferences ) {
 	// Allow global preferences for email-blacklist and echo-notifications
@@ -728,10 +728,11 @@ if ( $wmgPrivateWikiUploads ) {
 	$wgFileExtensions[] = 'woff';
 	$wgFileExtensions[] = 'woff2';
 
-	// To allow OpenOffice doc formats we need to not blacklist zip files
+	// To allow OpenOffice doc formats we need to not exclude zip files
 	$wgMimeTypeExclusions = array_diff(
 		$wgMimeTypeExclusions,
-		[ 'application/zip' ] );
+		[ 'application/zip' ]
+	);
 }
 
 # ######################################################################
