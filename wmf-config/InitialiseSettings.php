@@ -5376,7 +5376,7 @@ function wmfGetVariantSettings() {
 		'DeferredUpdates' => 'error',
 		'deprecated' => 'debug',
 		'diff' => 'debug',
-		'DuplicateParse' => 'debug',
+		'DuplicateParse' => [ 'logstash' => 'debug', 'udp2log' => 'debug' ],
 		'editpage' => 'warning', // T251023
 		'Echo' => 'debug',
 		'Elastica' => 'info',
