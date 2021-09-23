@@ -24603,6 +24603,11 @@ function wmfGetVariantSettings() {
 	'lockeddown' => false,
 ],
 
+'wmgUseSyntaxHighlight' => [
+	'default' => true,
+	'lockeddown' => false,
+],
+
 'wmgUseTimeline' => [
 	'default' => true,
 	'lockeddown' => false,
