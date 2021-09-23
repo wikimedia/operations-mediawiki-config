@@ -2295,8 +2295,14 @@ if ( $wmgUseGlobalAbuseFilters ) {
 # PdfHandler
 if ( $wmgUsePdfHandler ) {
 	wfLoadExtension( 'PdfHandler' );
-	$wgPdfProcessor = '/usr/local/bin/mediawiki-firejail-ghostscript';
-	$wgPdfPostProcessor = '/usr/local/bin/mediawiki-firejail-convert';
+	if ( $wmgUsePdfHandlerShellbox && $wmfLocalServices['shellbox-media'] ) {
+		// Route pdfhandler to the Shellbox named "shellbox-media".
+		$wgShellboxUrls['pdfhandler'] = $wmfLocalServices['shellbox-media'];
+		// $wgShellboxSecretKey set in PrivateSettings.php
+	} else {
+		$wgPdfProcessor = '/usr/local/bin/mediawiki-firejail-ghostscript';
+		$wgPdfPostProcessor = '/usr/local/bin/mediawiki-firejail-convert';
+	}
 }
 
 # WikiEditor

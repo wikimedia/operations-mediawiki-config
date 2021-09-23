@@ -15950,6 +15950,11 @@ function wmfGetVariantSettings() {
 	'lockeddown' => false,
 ],
 
+'wmgUsePdfHandlerShellbox' => [
+	'default' => false,
+	'group0' => true,
+],
+
 'wmgUseFooterContactLink' => [
 	// Make sure 'MediaWiki:Contact' and 'MediaWiki:Contact-url' are defined.
 	'default' => false,
