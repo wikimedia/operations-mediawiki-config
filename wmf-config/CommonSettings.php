@@ -1096,7 +1096,7 @@ if ( $wmgUseImageMap ) {
 	wfLoadExtension( 'ImageMap' );
 }
 
-if ( $wmgUseGeSHi ) {
+if ( $wmgUseSyntaxHighlight ) {
 	wfLoadExtension( 'SyntaxHighlight_GeSHi' );
 }
 
