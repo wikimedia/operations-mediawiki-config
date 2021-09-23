@@ -24598,11 +24598,6 @@ function wmfGetVariantSettings() {
 	'lockeddown' => false,
 ],
 
-'wmgUseGeSHi' => [
-	'default' => true,
-	'lockeddown' => false,
-],
-
 'wmgUseSyntaxHighlight' => [
 	'default' => true,
 	'lockeddown' => false,
