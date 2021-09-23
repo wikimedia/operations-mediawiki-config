@@ -24603,6 +24603,11 @@ function wmfGetVariantSettings() {
 	'lockeddown' => false,
 ],
 
+'wmgUseSyntaxHighlightShellbox' => [
+	'default' => false,
+	'group0' => true,
+],
+
 'wmgUseTimeline' => [
 	'default' => true,
 	'lockeddown' => false,

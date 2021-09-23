@@ -1098,6 +1098,12 @@ if ( $wmgUseImageMap ) {
 
 if ( $wmgUseSyntaxHighlight ) {
 	wfLoadExtension( 'SyntaxHighlight_GeSHi' );
+	if ( $wmgUseSyntaxHighlightShellbox && $wmfLocalServices['shellbox-syntaxhighlight'] ) {
+		// Route syntaxhighlight to the Shellbox named "shellbox-syntaxhighlight".
+		$wgShellboxUrls['syntaxhighlight'] = $wmfLocalServices['shellbox-syntaxhighlight'];
+		// $wgShellboxSecretKey set in PrivateSettings.php
+		$wgPygmentizePath = '/usr/bin/pygmentize';
+	}
 }
 
 if ( $wmgUseDoubleWiki ) {
