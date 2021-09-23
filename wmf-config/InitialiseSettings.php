@@ -24692,6 +24692,11 @@ function wmfGetVariantSettings() {
 	'lockeddown' => false, // T61702
 ],
 
+'wmgUsePagedTiffHandlerShellbox' => [
+	'default' => false,
+	'group0' => true,
+],
+
 'wmgUseParserFunctions' => [
 	'default' => true,
 	'loginwiki' => false, // T61702

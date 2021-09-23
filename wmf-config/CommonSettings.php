@@ -667,9 +667,14 @@ $wgSharpenParameter = '0x0.8'; # for IM>6.5, T26857
 
 if ( $wmgUsePagedTiffHandler ) {
 	wfLoadExtension( 'PagedTiffHandler' );
+	$wgTiffUseTiffinfo = true;
+	$wgTiffMaxMetaSize = 1048576;
+	if ( $wmgUsePagedTiffHandlerShellbox && $wmfLocalServices['shellbox-media'] ) {
+		// Route pagedtiffhandler to the Shellbox named "shellbox-media".
+		$wgShellboxUrls['pagedtiffhandler'] = $wmfLocalServices['shellbox-media'];
+		// $wgShellboxSecretKey set in PrivateSettings.php
+	}
 }
-$wgTiffUseTiffinfo = true;
-$wgTiffMaxMetaSize = 1048576;
 
 $wgMaxImageArea = 10e7; // 100MP
 $wgMaxAnimatedGifArea = 10e7; // 100MP
