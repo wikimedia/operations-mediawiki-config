@@ -21999,6 +21999,17 @@ function wmfGetVariantSettings() {
 	'default' => 420,
 ],
 
+// T291610
+'wmgWikibaseDispatchViaJobsEnabled' => [
+	'default' => false,
+	'testwikidatawiki' => true,
+],
+
+'wmgWikibaseDispatchViaJobsAllowedClients' => [
+	'default' => [],
+	'testwikidatawiki' => [ 'testwikidatawiki', 'testwiki' ],
+],
+
 'wmgWikibaseCachePrefix' => [
 	'default' => 'wikidatawiki',
 	'wikidataclient-test' => 'testwikidatawiki0',
