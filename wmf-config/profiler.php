@@ -95,8 +95,9 @@ function wmfSetupTideways( $options ) {
 		if ( $profileToStdout || PHP_SAPI === 'cli' ) {
 			global $wmgProfiler;
 			$wmgProfiler = [
-				'class'  => 'ProfilerXhprof',
-				'flags'  => $xhprofFlags,
+				'class' => 'ProfilerXhprof',
+				'flags' => $xhprofFlags,
+				'running' => true, // T247332
 				'output' => 'text',
 			];
 		}
