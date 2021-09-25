@@ -10518,58 +10518,6 @@ return [
 	'testwiki' => true,
 ],
 
-'wgTimelineEpochTimestamp' => [
-	'default' => '20130601000000',
-	'mlwiki' => '20161201000000',
-	'testwiki' => '20161201000000',
-	// All zh language wikis
-	'cnwikimedia' => '20161201000000',
-	'zhwiki' => '20161201000000',
-	'zhwikibooks' => '20161201000000',
-	'zhwikinews' => '20161201000000',
-	'zhwikiquote' => '20161201000000',
-	'zhwikisource' => '20161201000000',
-	'zhwikiversity' => '20161201000000',
-	'zhwikivoyage' => '20161201000000',
-	'zhwiktionary' => '20161201000000',
-	// End of all zh language wikis
-	// "Greater zh" language wikis, T188997
-	'cdowiki' => '20161201000000',
-	'ganwiki' => '20161201000000',
-	'hakwiki' => '20161201000000',
-	'wuuwiki' => '20161201000000',
-	'yuewiktionary' => '20161201000000',
-	'zh_classicalwiki' => '20161201000000',
-	'zh_yuewiki' => '20161201000000',
-	// End of "Greater zh" language wikis
-],
-
-'wgTimelineFontFile' => [
-	'default' => 'FreeSans',
-	'mlwiki' => 'FreeSansWMF',
-	'testwiki' => 'FreeSansWMF',
-	// All zh language wikis
-	'cnwikimedia' => 'unifont-5.1.20080907',
-	'zhwiki' => 'unifont-5.1.20080907',
-	'zhwikibooks' => 'unifont-5.1.20080907',
-	'zhwikinews' => 'unifont-5.1.20080907',
-	'zhwikiquote' => 'unifont-5.1.20080907',
-	'zhwikisource' => 'unifont-5.1.20080907',
-	'zhwikiversity' => 'unifont-5.1.20080907',
-	'zhwikivoyage' => 'unifont-5.1.20080907',
-	'zhwiktionary' => 'unifont-5.1.20080907',
-	// End of all zh language wikis
-	// "Greater zh" language wikis, T188997
-	'cdowiki' => 'unifont-5.1.20080907',
-	'ganwiki' => 'unifont-5.1.20080907',
-	'hakwiki' => 'unifont-5.1.20080907',
-	'wuuwiki' => 'unifont-5.1.20080907',
-	'yuewiktionary' => 'unifont-5.1.20080907',
-	'zh_classicalwiki' => 'unifont-5.1.20080907',
-	'zh_yuewiki' => 'unifont-5.1.20080907',
-	// End of "Greater zh" language wikis
-],
-
 'wmgTimelineDefaultFont' => [
 	'default' => 'freesans',
 	'mlwiki' => 'freesanswmf',

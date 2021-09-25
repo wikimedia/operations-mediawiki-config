@@ -1084,7 +1084,6 @@ $wgVectorMaxWidthOptions['exclude']['namespaces'] = $wmgVectorMaxWidthOptionsNam
 
 if ( $wmgUseTimeline ) {
 	wfLoadExtension( 'timeline' );
-	$wgTimelineFontDirectory = '/srv/mediawiki/fonts';
 	$wgTimelineFileBackend = 'local-multiwrite';
 	// Filenames in Shellbox container with no .ttf suffix
 	$wgTimelineFonts = [
