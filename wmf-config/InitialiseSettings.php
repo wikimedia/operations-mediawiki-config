@@ -24607,6 +24607,43 @@ function wmfGetVariantSettings() {
 	'lockeddown' => false,
 ],
 
+'wgTimelineEpochTimestamp' => [
+	'default' => '20130601000000',
+	'mlwiki' => '20161201000000',
+	'testwiki' => '20161201000000',
+	// All zh language wikis
+	'cnwikimedia' => '20161201000000',
+	'zhwiki' => '20161201000000',
+	'zhwikibooks' => '20161201000000',
+	'zhwikinews' => '20161201000000',
+	'zhwikiquote' => '20161201000000',
+	'zhwikisource' => '20161201000000',
+	'zhwikiversity' => '20161201000000',
+	'zhwikivoyage' => '20161201000000',
+	'zhwiktionary' => '20161201000000',
+],
+
+'wgTimelineFontFile' => [
+	'default' => 'FreeSans',
+	// FreeSansWMF has been generated from FreeSans and FreeSerif by using this script with fontforge:
+	// Open("FreeSans.ttf");
+	// MergeFonts("FreeSerif.ttf");
+	// SetFontNames("FreeSans-WMF", "FreeSans WMF", "FreeSans WMF Regular", "Regular", "");
+	// Generate("FreeSansWMF.ttf", "", 4 );
+	'mlwiki' => 'FreeSansWMF',
+	'testwiki' => 'FreeSansWMF',
+	// All zh language wikis
+	'cnwikimedia' => 'unifont-5.1.20080907',
+	'zhwiki' => 'unifont-5.1.20080907',
+	'zhwikibooks' => 'unifont-5.1.20080907',
+	'zhwikinews' => 'unifont-5.1.20080907',
+	'zhwikiquote' => 'unifont-5.1.20080907',
+	'zhwikisource' => 'unifont-5.1.20080907',
+	'zhwikiversity' => 'unifont-5.1.20080907',
+	'zhwikivoyage' => 'unifont-5.1.20080907',
+	'zhwiktionary' => 'unifont-5.1.20080907',
+],
+
 'wmgUseWikiHiero' => [
 	'default' => true,
 	'lockeddown' => false,
