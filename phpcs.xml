@@ -31,7 +31,6 @@
 	<rule ref="MediaWiki.ControlStructures.AssignmentInControlStructures.AssignmentInControlStructures">
 		<exclude-pattern>multiversion/MWWikiversions\.php</exclude-pattern>
 		<exclude-pattern>tests/cirrusTest\.php</exclude-pattern>
-		<exclude-pattern>tests/timelineTest\.php</exclude-pattern>
 		<exclude-pattern>wmf-config/CommonSettings\.php</exclude-pattern>
 	</rule>
 	<rule ref="MediaWiki.Usage.ForbiddenFunctions.extract">
