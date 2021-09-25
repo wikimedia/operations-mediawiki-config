@@ -24625,11 +24625,6 @@ function wmfGetVariantSettings() {
 
 'wgTimelineFontFile' => [
 	'default' => 'FreeSans',
-	// FreeSansWMF has been generated from FreeSans and FreeSerif by using this script with fontforge:
-	// Open("FreeSans.ttf");
-	// MergeFonts("FreeSerif.ttf");
-	// SetFontNames("FreeSans-WMF", "FreeSans WMF", "FreeSans WMF Regular", "Regular", "");
-	// Generate("FreeSansWMF.ttf", "", 4 );
 	'mlwiki' => 'FreeSansWMF',
 	'testwiki' => 'FreeSansWMF',
 	// All zh language wikis
@@ -24642,6 +24637,22 @@ function wmfGetVariantSettings() {
 	'zhwikiversity' => 'unifont-5.1.20080907',
 	'zhwikivoyage' => 'unifont-5.1.20080907',
 	'zhwiktionary' => 'unifont-5.1.20080907',
+],
+
+'wmgTimelineDefaultFont' => [
+	'default' => 'freesans',
+	'mlwiki' => 'freesanswmf',
+	'testwiki' => 'freesanswmf',
+	// All zh language wikis
+	'cnwikimedia' => 'unifont',
+	'zhwiki' => 'unifont',
+	'zhwikibooks' => 'unifont',
+	'zhwikinews' => 'unifont',
+	'zhwikiquote' => 'unifont',
+	'zhwikisource' => 'unifont',
+	'zhwikiversity' => 'unifont',
+	'zhwikivoyage' => 'unifont',
+	'zhwiktionary' => 'unifont',
 ],
 
 'wmgUseWikiHiero' => [

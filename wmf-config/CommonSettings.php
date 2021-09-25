@@ -1009,6 +1009,21 @@ if ( $wmgUseTimeline ) {
 	wfLoadExtension( 'timeline' );
 	$wgTimelineFontDirectory = '/srv/mediawiki/fonts';
 	$wgTimelineFileBackend = 'local-multiwrite';
+	// Filenames in Shellbox container with no .ttf suffix
+	$wgTimelineFonts = [
+		'freesans' => '/srv/app/fonts/FreeSans',
+		// FreeSansWMF has been generated from FreeSans and FreeSerif by using this script with fontforge:
+		// Open("FreeSans.ttf");
+		// MergeFonts("FreeSerif.ttf");
+		// SetFontNames("FreeSans-WMF", "FreeSans WMF", "FreeSans WMF Regular", "Regular", "");
+		// Generate("FreeSansWMF.ttf", "", 4 );
+		'freesanswmf' => '/srv/app/fonts/FreeSansWMF',
+		'unifont' => '/srv/app/fonts/unifont-5.1.20080907'
+		// TODO: add noto fonts
+	];
+	$wgTimelineFonts['default'] = $wgTimelineFonts[$wmgTimelineDefaultFont];
+	// Route easytimeline to the Shellbox named "shellbox-timeline".
+	$wgShellboxUrls['easytimeline'] = $wmfLocalServices['shellbox-timeline'];
 }
 
 // TODO: This should be handled by LocalServices, not here.
