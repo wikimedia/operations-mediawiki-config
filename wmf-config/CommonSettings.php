@@ -1006,7 +1006,9 @@ if ( isset( $wmgSiteLogo1x ) ) {
 }
 
 if ( $wmgUseTimeline ) {
-	include "$wmfConfigDir/timeline.php";
+	wfLoadExtension( 'timeline' );
+	$wgTimelineFontDirectory = '/srv/mediawiki/fonts';
+	$wgTimelineFileBackend = 'local-multiwrite';
 }
 
 // TODO: This should be handled by LocalServices, not here.
