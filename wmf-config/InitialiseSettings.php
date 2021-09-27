@@ -26529,34 +26529,46 @@ function wmfGetVariantSettings() {
 ],
 
 'wgGEHomepageNewAccountEnablePercentage' => [
-	'default' => 80,
+	'default' => 100,
 	'testwiki' => 0,
+
+	// special treatment wikis
 	'dewiki' => 30,
-	'enwiki' => 25, // enwiki has special treatment - T281896, bumped to 25 per T290927
+	'enwiki' => 25, // T281896, T290927
 	'nlwiki' => 50,
 
-	// wikis with less than 500 registrations per month (T289786)
-	'bgwiki' => 100,
-	'dawiki' => 100,
-	'eowiki' => 100,
-	'etwiki' => 100,
-	'euwiki' => 100, // special request, T233066
-	'hrwiki' => 100,
-	'hywiki' => 100,
-	'kawiki' => 100,
-	'kkwiki' => 100,
-	'ltwiki' => 100,
-	'lvwiki' => 100,
-	'mlwiki' => 100,
-	'mrwiki' => 100,
-	'mswiki' => 100,
-	'skwiki' => 100,
-	'slwiki' => 100,
-	'sqwiki' => 100,
-	'srwiki' => 100,
-	'tawiki' => 100,
-	'tewiki' => 100,
-	'urwiki' => 100,
+	// large wikis with more than 500 registrations per months (T289786)
+	'arwiki' => 80,
+	'azwiki' => 80,
+	'bnwiki' => 80,
+	'cswiki' => 80,
+	// 'dewiki' => 80, // special treatment wiki
+	'elwiki' => 80,
+	// 'enwiki' => 80, // special treatment wiki
+	'eswiki' => 80,
+	'fawiki' => 80,
+	'fiwiki' => 80,
+	'frwiki' => 80,
+	'hewiki' => 80,
+	'hiwiki' => 80,
+	'huwiki' => 80,
+	'idwiki' => 80,
+	'itwiki' => 80,
+	'jawiki' => 80,
+	'kowiki' => 80,
+	// 'nlwiki' => 80, // special treatment wiki
+	'nowiki' => 80,
+	'plwiki' => 80,
+	'ptwiki' => 80,
+	'rowiki' => 80,
+	'ruwiki' => 80,
+	'simplewiki' => 80,
+	'svwiki' => 80,
+	'thwiki' => 80,
+	'trwiki' => 80,
+	'ukwiki' => 80,
+	'viwiki' => 80,
+	'zhwiki' => 80,
 ],
 
 'wgGEMentorshipNewAccountEnablePercentage' => [
