@@ -4027,15 +4027,19 @@ if ( $wmgUseQuickSurveys ) {
 if ( $wmgUseEventBus ) {
 	wfLoadExtension( 'EventBus' );
 
-	// Define production event service endpoints.
+	// For analytics purposes, we forward the X-Client-IP header to eventgate.
+	// eventgate will use this to set a default http.client_ip in event data when relevant.
+	// https://phabricator.wikimedia.org/T288853
 	$wgEventServices = [
 		'eventgate-analytics' => [
 			'url' => "{$wmfLocalServices['eventgate-analytics']}/v1/events?hasty=true",
 			'timeout' => 11,
+			'x_client_ip_forwarding_enabled' => true,
 		],
 		'eventgate-analytics-external' => [
 			'url' => "{$wmfLocalServices['eventgate-analytics-external']}/v1/events?hasty=true",
 			'timeout' => 11,
+			'x_client_ip_forwarding_enabled' => true,
 		],
 		'eventgate-main' => [
 			'url' => "{$wmfLocalServices['eventgate-main']}/v1/events",
