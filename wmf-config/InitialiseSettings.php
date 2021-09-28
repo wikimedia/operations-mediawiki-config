@@ -20398,19 +20398,25 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'testwiki' => true,
 	'bnwiki' => true, // T271397
+	'hawiki' => true, // T290175
+	'igwiki' => true, // T290175
 	'thwiki' => true, // T290175
+	'yowiki' => true, // T290175
 ],
 
 // ToDo: Remove this later (T290302)
 'wgSectionTranslationTargetLanguage' => [
 	'default' => null,
 	'bnwiki' => 'bn',
+	'hawiki' => 'ha',
+	'igwiki' => 'ig',
 	'thwiki' => 'th',
+	'yowiki' => 'yo',
 ],
 
 'wgSectionTranslationTargetLanguages' => [
 	'default' => null,
-	'wikipedia' => [ 'bn', 'th' ],
+	'wikipedia' => [ 'bn', 'ha', 'ig', 'th', 'yo' ],
 ],
 
 'wmgUseExternalGuidance' => [
