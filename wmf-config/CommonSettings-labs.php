@@ -361,28 +361,6 @@ if ( $wmgUseFileImporter ) {
 
 if ( $wmgUseEventBus ) {
 	$wgEventBusEnableRunJobAPI = true;
-
-	// TEMPORARILY OVERRIDE CommonSettings.php to test x_client_ip_forwarding_enabled in beta.
-	// https://phabricator.wikimedia.org/T288853
-	// For analytics purposes, we forward the X-Client-IP header to eventgate.
-	// eventgate will use this to set a default http.client_ip in event data when relevant.
-	// https://phabricator.wikimedia.org/T288853
-	$wgEventServices = [
-		'eventgate-analytics' => [
-			'url' => "{$wmfLocalServices['eventgate-analytics']}/v1/events?hasty=true",
-			'timeout' => 11,
-			'x_client_ip_forwarding_enabled' => true,
-		],
-		'eventgate-analytics-external' => [
-			'url' => "{$wmfLocalServices['eventgate-analytics-external']}/v1/events?hasty=true",
-			'timeout' => 11,
-			'x_client_ip_forwarding_enabled' => true,
-		],
-		'eventgate-main' => [
-			'url' => "{$wmfLocalServices['eventgate-main']}/v1/events",
-			'timeout' => 62, // envoy overall req timeout + 1
-		]
-	];
 }
 
 if ( $wmgUseStopForumSpam ) {
