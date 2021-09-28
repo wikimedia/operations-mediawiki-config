@@ -494,10 +494,10 @@ function wmfGetLabsOverrideSettings() {
 				'logged_out' => true
 			],
 		],
-		'wgVectorConsolidateUserLinks' => [
+		'wgVectorStickyHeader' => [
 			'default' => [
 				'logged_in' => true,
-				'logged_out' => true
+				'logged_out' => false,
 			],
 		],
 		'wgVectorUseWvuiSearch' => [

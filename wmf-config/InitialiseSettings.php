@@ -7823,22 +7823,10 @@ function wmfGetVariantSettings() {
 	'desktop-improvements' => true,
 ],
 
-'wgVectorConsolidateUserLinks' => [
+'wgVectorStickyHeader' => [
 	'default' => [
-		'logged_in' => true,
+		'logged_in' => false,
 		'logged_out' => false,
-	],
-	'desktop-improvements' => [
-		'logged_in' => true,
-		'logged_out' => true,
-	],
-	'officewiki' => [
-		'logged_in' => true,
-		'logged_out' => true,
-	],
-	'testwiki' => [
-		'logged_in' => true,
-		'logged_out' => true,
 	],
 ],
 
