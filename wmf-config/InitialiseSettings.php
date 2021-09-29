@@ -22011,11 +22011,13 @@ function wmfGetVariantSettings() {
 'wmgWikibaseDispatchViaJobsEnabled' => [
 	'default' => false,
 	'testwikidatawiki' => true,
+	'wikidatawiki' => true,
 ],
 
 'wmgWikibaseDispatchViaJobsAllowedClients' => [
 	'default' => [],
 	'testwikidatawiki' => [ 'testwikidatawiki', 'testwiki' ],
+	'wikidatawiki' => [ 'mediawikiwiki' ],
 ],
 
 'wmgWikibaseCachePrefix' => [
