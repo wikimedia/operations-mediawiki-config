@@ -66,6 +66,7 @@ function wmfGetOverrideSettings() {
 			'apiportalwiki'       => 'https://api.wikimedia.beta.wmflabs.org',
 			'commonswiki'   => 'https://commons.wikimedia.beta.wmflabs.org',
 			'deploymentwiki'      => 'https://deployment.wikimedia.beta.wmflabs.org',
+			'foundationwiki' => 'https://foundation.wikimedia.beta.wmflabs.org',
 			'loginwiki'     => 'https://login.wikimedia.beta.wmflabs.org',
 			'metawiki'      => 'https://meta.wikimedia.beta.wmflabs.org',
 			'votewiki'      => 'https://vote.wikimedia.beta.wmflabs.org',
@@ -87,6 +88,7 @@ function wmfGetOverrideSettings() {
 			'metawiki'      => 'https://meta.wikimedia.beta.wmflabs.org',
 			'commonswiki'	=> 'https://commons.wikimedia.beta.wmflabs.org',
 			'deploymentwiki'      => 'https://deployment.wikimedia.beta.wmflabs.org',
+			'foundationwiki' => 'https://foundation.wikimedia.beta.wmflabs.org',
 			'loginwiki'     => 'https://login.wikimedia.beta.wmflabs.org',
 			'votewiki'      => 'https://vote.wikimedia.beta.wmflabs.org',
 			'wikidatawiki'  => 'https://wikidata.beta.wmflabs.org',
@@ -113,6 +115,10 @@ function wmfGetOverrideSettings() {
 			'default' => 'wgDebugLogFile',
 		],
 
+		// NOTE: There is currently no good way to set wgEventStreams
+		// overrides for beta.  See https://phabricator.wikimedia.org/T277193.
+		// For now, EventStreamConfig settings always need to be set in InitialiseSettings.php.
+
 		// Stream config default settings.
 		// The EventStreamConfig extension will add these
 		// settings to each entry in wgEventStreams if
@@ -122,44 +128,6 @@ function wmfGetOverrideSettings() {
 			'default' => [
 				'topic_prefixes' => [ 'eqiad.' ],
 			],
-		],
-
-		// Event stream configuration is a list of stream configurations.
-		// Each item in the list must have a 'stream' setting of either the specific
-		// stream name or a regex patterns to matching stream names.
-		// Each item must also at minimum include the schema_title of the
-		// JSONSchema that events in the stream must conform to.
-		// This is used by the EventStreamConfig extension
-		// to allow for remote configuration of streams.  It
-		// is used by the EventLogging extension to vary e.g.
-		// sample rate that browsers use when producing events,
-		// as well as the eventgate-analytics-external service
-		// to dynamically add event streams that it should accept
-		// and validate.
-		//
-		// See https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/EventStreamConfig/#mediawiki-config
-		//
-		// NOTE: we prefer to merge (via the + prefix) stream config from production so we only
-		//       have to configure streams that are being tested (or overridden) in beta here,
-		//       and centralize the configuration in InitialiseSettings.php otherwise.
-		'wgEventStreams' => [
-			'+enwiki' => [
-				// Add beta only stream configs here.  Production
-				// stream configs are merged in, so if your settings for
-				// production and beta are the same, you can omit also adding your
-				// stream configs here for beta.
-			],
-		],
-
-		// List of streams to register for use with the EventLogging extension.
-		// EventLogging will request the stream config defined in wgEventStreams
-		// above for each of the stream names listed here.
-		'wgEventLoggingStreamNames' => [
-			'+enwiki' => [
-				// Add beta only stream names here.  Production
-				// stream names are merged in, so if your stream is registered
-				// to be used by EventLogging in production you can omit it here.
-			]
 		],
 
 		// EventLogging will POST events to this URI.
@@ -273,6 +241,7 @@ function wmfGetOverrideSettings() {
 				'LoginNotify' => 'debug',
 				'MassMessage' => 'debug', // for 59464 -legoktm 2013/12/15
 				'Math' => 'info',  // mobrovac for T121445
+				'mediamoderation' => 'warning', // for T287511
 				'memcached' => 'error', // -aaron 2012/10/24
 				'message-format' => [ 'logstash' => 'warning' ],
 				'MessageCacheError' => 'debug',
@@ -444,6 +413,11 @@ function wmfGetOverrideSettings() {
 		'wgWMEClientErrorIntakeURL' => [
 			'default' => 'https://intake-logging.wikimedia.beta.wmflabs.org/v1/events?hasty=true'
 		],
+
+		'wgWMEIPAddressCopyActionEnabled' => [
+			'default' => true,
+		],
+
 		'wgMFAdvancedMobileContributions' => [
 			'default' => true,
 		],
@@ -825,17 +799,6 @@ function wmfGetOverrideSettings() {
 			'metawiki' => true,
 			'wikipedia' => true,
 		],
-		'wgMFContentProviderClass' => [
-			'default' => 'MobileFrontend\ContentProviders\DefaultContentProvider',
-			// T207508
-			'enwiki' => 'MobileFrontend\ContentProviders\MwApiContentProvider',
-			// For testing T216961
-			'dewiki' => 'MobileFrontend\ContentProviders\MwApiContentProvider',
-		],
-		'wgMFMwApiContentProviderBaseUri' => [
-			'default' => 'https://en.wikipedia.org/w/api.php',
-			'dewiki' => 'https://de.wikipedia.org/w/api.php',
-		],
 
 		// Test numeric sorting. See T8948.
 		'wgCategoryCollation' => [
@@ -942,6 +905,10 @@ function wmfGetOverrideSettings() {
 			'default' => true, // T196400
 		],
 
+		'wgDisambiguatorNotifications' => [
+			'default' => true, // T291303
+		],
+
 		#####################################################
 		# Cirrus-related tweaks specific for the Beta cluster
 		#####################################################
@@ -1014,6 +981,10 @@ function wmfGetOverrideSettings() {
 			'default' => SCHEMA_COMPAT_NEW,
 		],
 
+		'-wgIncludejQueryMigrate' => [
+			'default' => false,
+		],
+
 		'wgOresUiEnabled' => [
 			'default' => true,
 			'wikidatawiki' => false,
@@ -1079,10 +1050,6 @@ function wmfGetOverrideSettings() {
 			'default' => 'wikidatawiki',
 			'commonswiki' => 'commonswiki',
 		],
-		'wgWMEUnderstandingFirstDaySensitiveNamespaces' => [
-			'default' => [ 0, 1, 6, 7 ],
-			'enwiki' => [ 0, 1, 6, 7, 100, 101, 118, 119 ],
-		],
 		'wmgUseGrowthExperiments' => [
 			'enwiki' => true,
 		],
@@ -1094,6 +1061,12 @@ function wmfGetOverrideSettings() {
 		],
 		'wgGEDeveloperSetup' => [
 			'default' => true,
+		],
+		'wgGENewcomerTasksImageRecommendationsEnabled' => [
+			'default' => true,
+		],
+		'wgGEImageRecommendationServiceUrl' => [
+			'default' => 'https://image-suggestion-api.wmcloud.org',
 		],
 		'wgGENewcomerTasksLinkRecommendationsEnabled' => [
 			'default' => true,
@@ -1167,7 +1140,20 @@ function wmfGetOverrideSettings() {
 			'arwiki' => 'Wikipedia:Mentors',
 			'enwiki' => 'Wikipedia:Mentors',
 		],
+		'wgGEHomepageNewAccountEnablePercentage' => [
+			'enwiki' => 25,
+		],
+		'wgGEMentorshipNewAccountEnablePercentage' => [
+			'default' => 100,
+			'enwiki' => 8, // T287903
+		],
 		'wgGEMentorDashboardEnabled' => [
+			'default' => true,
+		],
+		'wgGEMentorDashboardBetaMode' => [
+			'default' => true,
+		],
+		'wgGEMentorDashboardDiscoveryEnabled' => [
 			'default' => true,
 		],
 		'wgGEMentorDashboardBackendEnabled' => [
@@ -1236,6 +1222,14 @@ function wmfGetOverrideSettings() {
 				'Q98658' => 'badge-proofread',
 				'Q98651' => 'badge-validated'
 			],
+		],
+		'wgWikimediaBadgesTopicsMainCategoryProperty' => [
+			'default' => 'P750',
+			'commonswiki' => null,
+		],
+		'wgWikimediaBadgesCategoryRelatedToListProperty' => [
+			'default' => 'P253133',
+			'commonswiki' => null,
 		],
 		'wgWikimediaBadgesCommonsCategoryProperty' => [
 			'default' => 'P725',
@@ -1316,10 +1310,6 @@ function wmfGetOverrideSettings() {
 				'P964',
 			],
 		],
-		'-wmgWBRepoConceptBaseUri' => [
-			'commonswiki' => 'https://commons.wikimedia.beta.wmflabs.org/entity/',
-			'wikidatawiki' => 'https://wikidata.beta.wmflabs.org/entity/',
-		],
 		'-wgArticlePlaceholderImageProperty' => [
 			'default' => 'P964',
 		],
@@ -1333,22 +1323,11 @@ function wmfGetOverrideSettings() {
 			'default' => null,
 			'wikidata' => 'P174944',
 		],
-		'wmgWikibaseClientUseTermsTableSearchFields' => [
-			'default' => true,
-		],
 		'wmgWikibaseClientPropertyOrderUrl' => [
 			'default' => null,
 		],
 		'-wmgWikibaseClientRepoUrl' => [
 			'default' => 'https://wikidata.beta.wmflabs.org',
-		],
-		'-wmgWikibaseClientRepositories' => [
-			'default' => [
-			],
-		],
-
-		'-wmgWikibaseClientRepoDatabase' => [
-			'default' => 'wikidatawiki',
 		],
 
 		// T209143
@@ -1398,6 +1377,17 @@ function wmfGetOverrideSettings() {
 		// T232582
 		'wmgWikibaseClientDataBridgeEditTags' => [
 			'default' => [ 'Data Bridge' ],
+		],
+
+		// T290985
+		'wmgWikibaseDispatchViaJobsEnabled' => [
+			'default' => false,
+			'wikidatawiki' => true,
+		],
+
+		'wmgWikibaseDispatchViaJobsAllowedClients' => [
+			'default' => [],
+			'wikidatawiki' => [ 'wikidatawiki', 'enwiki' ],
 		],
 
 		'wmgWikibaseEntityDataFormats' => [
@@ -1842,6 +1832,10 @@ function wmfGetOverrideSettings() {
 			'default' => 'default',
 		],
 
+		'-wgDiscussionTools_autotopicsub' => [
+			'default' => 'default',
+		],
+
 		'wgWatchlistExpiry' => [
 			'default' => true,
 		],
@@ -1867,6 +1861,16 @@ function wmfGetOverrideSettings() {
 				'default' => 25,
 				'flow' => 50,
 			],
+		],
+
+		// T246493
+		'wmgUseNearbyPages' => [
+			'default' => true,
+		],
+		'wgNearbyPagesUrl' => [
+			'default' => 'https://en.wikipedia.org/w/api.php',
+			'wikidatawiki'  => 'https://www.wikidata.org/w/api.php',
+			'testwikidatawiki' => 'https://www.wikidata.org/w/api.php',
 		],
 
 		// Deploy GlobalWatchlist to the beta cluster - T268181
@@ -1899,6 +1903,16 @@ function wmfGetOverrideSettings() {
 		],
 		'wmgUseChessBrowser' => [
 			'default' => true,
+		],
+
+		// temporary for testing foundationwiki SUL migration (T205347)
+		'wmgUseCentralAuth' => [
+			'default' => true,
+			'private' => false,
+			'fishbowl' => false,
+			'nonglobal' => false,
+
+			'foundationwiki' => true,
 		],
 	];
 } # wmfGetOverrideSettings()

@@ -39,7 +39,7 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 			// FIXME: Just… wow. By name, this should be a boolean.
 			'wmgUseFileExporter',
 			// FIXME: Just set in wikibase.php? Most of these are user-facing.
-			'wgEntitySchemaShExSimpleUrl', 'wmgWBRepoSettingsSparqlEndpoint', 'wmgWikibaseClientRepoUrl', 'wmgWikibaseClientPropertyOrderUrl', 'wmgWBRepoConceptBaseUri', 'wgArticlePlaceholderRepoApiUrl', 'wgMediaInfoExternalEntitySearchBaseUri', 'wgMediaSearchExternalEntitySearchBaseUri', 'wmgWikibaseSSRTermboxServerUrl', 'wmgWikibaseClientDataBridgeHrefRegExp',
+			'wgEntitySchemaShExSimpleUrl', 'wmgWBRepoSettingsSparqlEndpoint', 'wmgWikibaseClientRepoUrl', 'wmgWikibaseClientPropertyOrderUrl', 'wgArticlePlaceholderRepoApiUrl', 'wgMediaInfoExternalEntitySearchBaseUri', 'wgMediaSearchExternalEntitySearchBaseUri', 'wmgWikibaseSSRTermboxServerUrl', 'wmgWikibaseClientDataBridgeHrefRegExp',
 		];
 
 		foreach ( $this->variantSettings as $variantSetting => $settingsArray ) {
@@ -65,7 +65,9 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 		$knownToBeBad = [
 			'wgCirrusSearchUseCompletionSuggester',
 			'wgCirrusSearchUseIcuFolding',
+			"wgMFUseDesktopContributionsPage",
 			'wgMFUseDesktopSpecialHistoryPage',
+			"wgMFUseDesktopSpecialWatchlistPage",
 			'wmgUseCognate',
 			'wmgUseFileExporter',
 			'wmgUseFileImporter',

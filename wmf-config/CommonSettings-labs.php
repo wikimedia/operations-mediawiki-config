@@ -152,6 +152,15 @@ if ( $wmgUseIPInfo ) {
 
 if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthUseSlaves = true;
+
+	// temporary for testing foundationwiki SUL migration (T205347)
+	if ( $wgDBname === 'foundationwiki' ) {
+		$wgCentralAuthStrict = false;
+		$wgCentralAuthAutoMigrateNonGlobalAccounts = false;
+		$wgCentralAuthCreateOnView = false;
+		$wgCentralAuthCookies = false;
+		$wgCentralAuthPreventUnattached = false;
+	}
 }
 
 if ( $wmgUseCentralNotice ) {
@@ -187,6 +196,7 @@ if ( $wmgUseUrlShortener ) {
 	$wgUrlShortenerServer = 'w-beta.wmflabs.org';
 	$wgUrlShortenerDBCluster = false;
 	$wgUrlShortenerDBName = 'wikishared';
+	$wgUrlShortenerEnableSidebar = true;
 	$wgUrlShortenerAllowedDomains = [
 		'(.*\.)?wikipedia\.beta\.wmflabs\.org',
 		'(.*\.)?wiktionary\.beta\.wmflabs\.org',
@@ -198,7 +208,6 @@ if ( $wmgUseUrlShortener ) {
 		'(.*\.)?wikivoyage\.beta\.wmflabs\.org',
 		'(.*\.)?wikimedia\.beta\.wmflabs\.org',
 		'(.*\.)?wikidata\.beta\.wmflabs\.org',
-		'query-builder-test\.toolforge\.org',  # Temp T273162
 	];
 	$wgUrlShortenerApprovedDomains = [
 		'*.wikipedia.beta.wmflabs.org',
@@ -211,7 +220,6 @@ if ( $wmgUseUrlShortener ) {
 		'*.wikivoyage.beta.wmflabs.org',
 		'*.wikimedia.beta.wmflabs.org',
 		'*.wikidata.beta.wmflabs.org',
-		'query-builder-test.toolforge.org',
 	];
 }
 
@@ -353,6 +361,28 @@ if ( $wmgUseFileImporter ) {
 
 if ( $wmgUseEventBus ) {
 	$wgEventBusEnableRunJobAPI = true;
+
+	// TEMPORARILY OVERRIDE CommonSettings.php to test x_client_ip_forwarding_enabled in beta.
+	// https://phabricator.wikimedia.org/T288853
+	// For analytics purposes, we forward the X-Client-IP header to eventgate.
+	// eventgate will use this to set a default http.client_ip in event data when relevant.
+	// https://phabricator.wikimedia.org/T288853
+	$wgEventServices = [
+		'eventgate-analytics' => [
+			'url' => "{$wmfLocalServices['eventgate-analytics']}/v1/events?hasty=true",
+			'timeout' => 11,
+			'x_client_ip_forwarding_enabled' => true,
+		],
+		'eventgate-analytics-external' => [
+			'url' => "{$wmfLocalServices['eventgate-analytics-external']}/v1/events?hasty=true",
+			'timeout' => 11,
+			'x_client_ip_forwarding_enabled' => true,
+		],
+		'eventgate-main' => [
+			'url' => "{$wmfLocalServices['eventgate-main']}/v1/events",
+			'timeout' => 62, // envoy overall req timeout + 1
+		]
+	];
 }
 
 if ( $wmgUseStopForumSpam ) {
@@ -408,6 +438,9 @@ $wgVisualEditorTransclusionDialogInlineDescriptions = true;
 
 // Temporary flag to enable the back button in the transclusion dialog, see T272354
 $wgVisualEditorTransclusionDialogBackButton = true;
+
+// Temporary feature flag for the new template dialog sidebar design, see T286765
+$wgVisualEditorTransclusionDialogNewSidebar = true;
 
 // Temporary feature flag for the improved search features in the VE template dialog, see T271802
 $wgVisualEditorTemplateSearchImprovements = true;

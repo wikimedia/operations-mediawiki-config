@@ -22,7 +22,6 @@
 # - $wgDebugLogFile: udp2log destination for 'wgDebugLogFile' handler.
 # - $wmgDefaultMonologHandler: default handler for log channels not
 #   explicitly configured in $wmgMonologChannels.
-# - $wmgLogstashServers: Logstash syslog servers.
 # - $wmgMonologChannels: per-channel logging config
 #   - `channel => false`: ignore all log events on this channel.
 #   - `channel => level`: record all events of this level or higher to udp2log and logstash.
@@ -61,21 +60,22 @@
 use MediaWiki\Logger\LoggerFactory;
 use Wikimedia\MWConfig\XWikimediaDebug;
 
+// Logstash servers running syslog endpoint to collect log events.
+// Use false to disable all Logstash logging
+$wmgEnableLogstash = true;
+
 if ( getenv( 'MW_DEBUG_LOCAL' ) ) {
 	// Route all log messages to a local file
 	$wgDebugLogFile = '/tmp/wiki.log';
 	$wmgDefaultMonologHandler = 'wgDebugLogFile';
-	$wmgLogstashServers = false;
+	$wmgEnableLogstash = false;
 	$wmgMonologChannels = [];
 	$wgDebugDumpSql = true;
 } elseif ( XWikimediaDebug::getInstance()->hasOption( 'log' ) ) {
 	// Forward all log messages to logstash for debugging.
 	// See <https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug>.
 	$wgDebugLogFile = "udp://{$wmfUdp2logDest}/XWikimediaDebug";
-	$wmgDefaultMonologHandler = [ 'wgDebugLogFile' ];
-	if ( $wmgLogstashServers ) {
-		$wmgDefaultMonologHandler[] = 'logstash-debug';
-	}
+	$wmgDefaultMonologHandler = [ 'wgDebugLogFile', 'logstash-debug' ];
 	$wmgMonologChannels = [];
 	$wgDebugDumpSql = true;
 }
@@ -112,8 +112,11 @@ $wmgMonologProcessors = [
 				$record['extra']['phpversion'] = phpversion();
 
 				// T255627: add label for the server group the current server belongs to.
-				// This is exposed by Apache configuration. Its value is that of the Hiera
-				// 'cluster' key in Puppet (e.g. "appserver", "parsoid", etc).
+				// This is exposed by Apache configuration defined in Puppet profile::mediawiki::httpd.
+				// Its value is that of the Hiera 'cluster' key in Puppet (e.g. "appserver", "parsoid", etc).
+				// For pods running on Kubernetes, the servergroup is determined by the value of
+				// the php.servergroup Helm setting and will be prefixed by "kube-" (e.g.
+				// operations/deployment-charts:helmfile.d/services/mwdebug/values.yaml).
 				//
 				// This is not set on CLI (e.g. deploy, maint, snapshot).
 				//
@@ -163,15 +166,14 @@ $wmgMonologHandlers = [
 	],
 ];
 
-if ( $wmgLogstashServers ) {
-	shuffle( $wmgLogstashServers );
+if ( $wmgEnableLogstash ) {
 	foreach ( [ 'debug', 'info', 'warning', 'error' ] as $logLevel ) {
 		$wmgMonologHandlers[ "logstash-$logLevel" ] = [
 			'class'     => \MediaWiki\Logger\Monolog\SyslogHandler::class,
 			'formatter' => 'cee',
 			'args'      => [
 				'mediawiki',             // tag
-				$wmgLogstashServers[0],  // host
+				'127.0.0.1',             // host
 				10514,                   // port
 				LOG_USER,                // facility
 				$logLevel,               // log level threshold
@@ -232,17 +234,19 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 	}
 
 	$opts = is_array( $opts ) ? $opts : [ 'udp2log' => $opts ];
-	$opts = array_merge(
-		[
-			'udp2log' => 'debug',
-			'logstash' => ( isset( $opts['udp2log'] ) && $opts['udp2log'] !== 'debug' ) ? $opts['udp2log'] : 'info',
-			'eventbus' => false,
-			'sample' => false,
-			'buffer' => false,
-		],
-		$opts
-	);
-	// Note: sampled logs are never passed to logstash
+
+	// Defaults
+	$opts += [
+		'udp2log' => 'debug',
+		'eventbus' => false,
+		'sample' => false,
+		'buffer' => false,
+	];
+	$opts += [
+		'logstash' => ( $opts['udp2log'] !== 'debug' ) ? $opts['udp2log'] : 'info',
+	];
+
+	// Sampled logs are never passed to logstash
 	if ( $opts['sample'] !== false ) {
 		$opts['logstash'] = false;
 	}
@@ -258,14 +262,19 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 			$wmgMonologConfig['handlers'][$udp2logHandler] = [
 				'class' => \MediaWiki\Logger\Monolog\LegacyHandler::class,
 				'args' => [
-					"udp://{$wmfUdp2logDest}/{channel}", false, $opts['udp2log']
+					"udp://{$wmfUdp2logDest}/{channel}",
+					false,
+					$opts['udp2log']
 				],
 				'formatter' => 'line',
 			];
 		}
 		$handlers[] = $udp2logHandler;
 		if ( $wmgDefaultMonologHandler === 'wgDebugLogFile' ) {
-			// T117019: Send events to default handler location as well
+			// T117019: Send messages to default handler location as well
+			// This is for messages from regular traffic to testwikis (WikimediaDebug is off).
+			// When WikimediaDebug is used, $wmgMonologChannels is cleared and this code
+			// is never reached.
 			$handlers[] = $wmgDefaultMonologHandler;
 		}
 	}
@@ -285,7 +294,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 	}
 
 	// Configure Logstash handler
-	if ( $opts['logstash'] && $wmgLogstashServers ) {
+	if ( $opts['logstash'] && $wmgEnableLogstash ) {
 		$level = $opts['logstash'];
 		$logstashHandler = "logstash-{$level}";
 		if ( isset( $wmgMonologHandlers[ $logstashHandler ] ) ) {

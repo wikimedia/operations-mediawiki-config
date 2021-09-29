@@ -66,7 +66,7 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 		$wgDebugLogFile = false;
 		$wmgLogAuthmanagerMetrics = false;
 		$wmfUdp2logDest = 'localhost';
-		$wmgLogstashServers = [ 'localhost' ];
+		$wmgEnableLogstash = true;
 		$wmgUseEventBus = true;
 		$wmgMonologChannels = [ 'test' => $channelConfig ];
 		$wmfRealm = 'production';

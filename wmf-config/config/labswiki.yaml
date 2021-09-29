@@ -3,7 +3,7 @@
 # See the inheritance tree to find where most settings are defined.
 
 inheritsFrom:
-  - s10
+  - s6
   - special
   - medium
   - nonglobal

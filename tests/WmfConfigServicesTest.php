@@ -44,72 +44,53 @@ class WmfConfigServicesTest extends PHPUnit\Framework\TestCase {
 	}
 
 	/**
-	 * Verify that each DC key contains the same set of services.
-	 *
-	 * @dataProvider provideServicesFiles
-	 */
-	public function testCrossDcCompatibility( $file ) {
-		$allSubkeys = [];
-
-		$realm = require $file;
-		foreach ( $realm as $dc => $dcServices ) {
-			$allSubkeys = array_merge(
-				$allSubkeys,
-				array_keys( $dcServices )
-			);
-		}
-
-		// Normalize
-		$allSubkeys = array_values( array_unique( $allSubkeys ) );
-
-		foreach ( $realm as $dc => $dcServices ) {
-			$this->assertSameValues(
-				$allSubkeys,
-				array_keys( $dcServices ),
-				"service keys for $dc"
-			);
-		}
-	}
-
-	/**
-	 * Verify that each realm contains the same set of services.
+	 * Verify that each DC in each realm contains the same set of services.
 	 *
 	 * Regression tests for T211526.
 	 *
 	 * If you run into a failure from this test and are absolutely
 	 * sure that the service is only conditionally referenced in wmf-config
-	 * when in the same realm and not elsewhere, then:
+	 * when in the same realm/dc and not elsewhere, then:
 	 *
-	 * 1. Add a comment over any and all code that uses the config to point
-	 *    out that this key is only available in realm X.
+	 * 1. Add a comment above the consuming code that uses the config to point
+	 *    out that this key is only available in realm/dc X.
 	 *
 	 * 2. Add the missing key to other realm(s) with null as the
 	 *    placeholder value, to satisfy this unit test.
 	 */
-	public function testCrossRealmCompatibility() {
-		$allSubkeys = [];
-		$realms = [];
-		foreach ( self::getServicesFiles() as $label => $info ) {
+	public function testCrossDcCompatibility() {
+		$refServices = [];
+		foreach ( self::getServicesFiles() as $realmName => $info ) {
 			$realm = require $info['file'];
-			foreach ( $realm as $dc => $services ) {
-				$allSubkeys = array_merge(
-					$allSubkeys,
-					array_keys( $services )
-				);
+			foreach ( $realm as $dc => $dcServices ) {
+				foreach ( $dcServices as $serviceKey => $serviceVal ) {
+					// Ensure the key is set (for asserting service keys),
+					// but preserve a previously seen non-null value (for asserting value types).
+					$refServices[$serviceKey] = $refServices[$serviceKey] ?? $serviceVal;
+				}
 			}
-			$realms[$label] = $realm;
 		}
 
-		// Normalize
-		$allSubkeys = array_values( array_unique( $allSubkeys ) );
-
-		foreach ( $realms as $label => $realm ) {
+		foreach ( self::getServicesFiles() as $realmName => $info ) {
+			$realm = require $info['file'];
 			foreach ( $realm as $dc => $dcServices ) {
+				$label = "$realmName/$dc";
+
 				$this->assertSameValues(
-					$allSubkeys,
+					array_keys( $refServices ),
 					array_keys( $dcServices ),
-					"service keys for $label/$dc"
+					"service keys for $label"
 				);
+
+				foreach ( $dcServices as $serviceKey => $serviceVal ) {
+					if ( $serviceVal !== null ) {
+						$this->assertEquals(
+							gettype( $refServices[$serviceKey] ?? null ),
+							gettype( $serviceVal ),
+							"value type of '$serviceKey' service for $label"
+						);
+					}
+				}
 			}
 		}
 	}

@@ -7,7 +7,8 @@
 # will be stripped; purge requests should get to it
 # on the address in the CdnServers list
 
-$wgCdnServersNoPurge = [ '127.0.0.1',
+$wgCdnServersNoPurge = [
+	'127.0.0.1',
 	'172.16.1.181',  # deployment-cache-text06
-	'172.16.5.14',  # deployment-cache-upload04
+	'172.16.1.160',  # deployment-cache-upload06
 ];

@@ -21,7 +21,7 @@
 /**
  * Setup etcd!
  *
- * @param string|null $etcdHost Hostname
+ * @param array $etcdHost [ 'host' => 'hostname', 'protocol' => 'http|https' ]
  * @return EtcdConfig
  */
 function wmfSetupEtcd( $etcdHost ) {
@@ -32,10 +32,13 @@ function wmfSetupEtcd( $etcdHost ) {
 		$localCache = new APCUBagOStuff;
 	}
 
+	$host = $etcdHost['host'];
+	$protocol = $etcdHost['protocol'];
+
 	# Use a single EtcdConfig object for both local and common paths
 	$etcdConfig = new EtcdConfig( [
-		'host' => $etcdHost,
-		'protocol' => 'https',
+		'host' => $host,
+		'protocol' => $protocol,
 		'directory' => "conftool/v1/mediawiki-config",
 		'cache' => $localCache,
 	] );

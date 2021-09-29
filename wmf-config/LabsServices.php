@@ -35,6 +35,8 @@ return [
 		'cloudelastic-chi' => null,
 		'cloudelastic-psi' => null,
 		'cloudelastic-omega' => null,
+		// No parser cache DBs in beta yet
+		'parsercache-dbs' => [],
 		'urldownloader' => 'http://deployment-urldownloader03.deployment-prep.eqiad1.wikimedia.cloud:8080',
 		'parsoid' => 'http://deployment-parsoid12.deployment-prep.eqiad1.wikimedia.cloud/w/rest.php',
 		'mathoid' => 'http://deployment-docker-mathoid01.eqiad.wmflabs:10044',
@@ -51,14 +53,21 @@ return [
 			'rdb1' => 'deployment-memc09.deployment-prep.eqiad1.wikimedia.cloud',
 			'rdb2' => 'deployment-memc10.deployment-prep.eqiad1.wikimedia.cloud',
 		],
-		'etcd' => 'deployment-etcd02.deployment-prep.eqiad1.wikimedia.cloud:2379',
+		'etcd' => [
+			'host' => 'deployment-etcd02.deployment-prep.eqiad1.wikimedia.cloud:2379',
+			'protocol' => 'https'
+		],
 		'mediaSwiftAuth' => 'http://deployment-ms-fe03.deployment-prep.eqiad.wmflabs/auth',
 		'mediaSwiftStore' => 'http://deployment-ms-fe03.deployment-prep.eqiad.wmflabs/v1/AUTH_mw',
 		'electron' => 'http://deployment-pdfrender02.deployment-prep.eqiad.wmflabs:5252',
 		'push-notifications' => 'http://deployment-push-notifications01.deployment-prep.eqiad1.wikimedia.cloud:8900',
 		'linkrecommendation' => 'https://api.wikimedia.org/service/linkrecommendation',
 		// No Shellbox/k8s in beta cluster (T286298)
-		'shellbox' => false,
+		'shellbox' => null,
+		'shellbox-constraints' => 'https://shellbox.svc.deployment-prep.eqiad1.wikimedia.cloud',
+		'shellbox-media' => null,
+		'shellbox-syntaxhighlight' => null,
+		'shellbox-timeline' => null,
 
 		### Logstash
 		'logstash' => [

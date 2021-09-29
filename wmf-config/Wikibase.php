@@ -123,7 +123,6 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['localClientDatabases']
 	);
 
-	$wgWBRepoSettings['entityNamespaces'] = $wmgWikibaseRepoEntityNamespaces;
 	$wgWBRepoSettings['disabledDataTypes'] = $wmgWikibaseDisabledDataTypes;
 	$wgWBRepoSettings['entityDataFormats'] = $wmgWikibaseEntityDataFormats;
 	$wgWBRepoSettings['maxSerializedEntitySize'] = $wmgWikibaseMaxSerializedEntitySize;
@@ -133,7 +132,6 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['badgeItems'] = $wmgWikibaseRepoBadgeItems;
 	$wgWBRepoSettings['preferredGeoDataProperties'] = $wmgWBRepoPreferredGeoDataProperties;
 	$wgWBRepoSettings['preferredPageImagesProperties'] = $wmgWBRepoPreferredPageImagesProperties;
-	$wgWBRepoSettings['conceptBaseUri'] = $wmgWBRepoConceptBaseUri;
 	if ( isset( $wmgWikibaseRepoSandboxEntityIds ) ) {
 		$wgWBRepoSettings['sandboxEntityIds'] = $wmgWikibaseRepoSandboxEntityIds;
 	}
@@ -171,15 +169,22 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['sharedCacheKeyGroup'] = $wmgWikibaseCachePrefix;
 	$wgWBRepoSettings['sharedCacheKeyPrefix'] = $wmgWBSharedCacheKey;
 
-	// T189776, T189777
-	$wgWBRepoSettings['useTermsTableSearchFields'] = false;
-
 	// These settings can be overridden by the cron parameters in operations/puppet
 	$wgWBRepoSettings['dispatchingLockManager'] = $wmgWikibaseDispatchingLockManager;
 	$wgWBRepoSettings['dispatchDefaultDispatchInterval'] = $wmgWikibaseDispatchInterval;
 	$wgWBRepoSettings['dispatchMaxTime'] = $wmgWikibaseDispatchMaxTime;
 	$wgWBRepoSettings['dispatchDefaultBatchSize'] = $wmgWikibaseDispatchDefaultBatchSize;
 	$wgWBRepoSettings['dispatchLagToMaxLagFactor'] = 60;
+
+	if ( isset( $wmgWikibaseDispatchViaJobsEnabled ) && isset( $wmgWikibaseDispatchViaJobsAllowedClients ) ) {
+		$wgWBRepoSettings['dispatchViaJobsEnabled'] = $wmgWikibaseDispatchViaJobsEnabled;
+		$wgWBRepoSettings['dispatchViaJobsAllowedClients'] = $wmgWikibaseDispatchViaJobsAllowedClients;
+
+		if ( isset( $wmgWikibaseDispatchViaJobsPruneChangesTableInJobEnabled ) ) {
+			$wgWBRepoSettings['dispatchViaJobsPruneChangesTableInJobEnabled'] =
+				$wmgWikibaseDispatchViaJobsPruneChangesTableInJobEnabled;
+		}
+	}
 
 	$wgWBRepoSettings['unitStorage'] = [
 		'class' => '\\Wikibase\\Lib\\Units\\JsonUnitStorage',
@@ -211,6 +216,10 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['dataBridgeEnabled'] = $wmgWikibaseRepoDataBridgeEnabled;
 	}
 
+	if ( $wgWBQualityConstraintsFormatCheckerShellboxRatio ) {
+		$wgShellboxUrls['constraint-regex-checker'] = $wmfLocalServices['shellbox-constraints'];
+	}
+
 	$wgWBRepoSettings['enableRefTabs'] = $wmgWikibaseRepoEnableRefTabs;
 
 	// entity data for URLs matching these patterns will be cached in Varnish and purged if needed;
@@ -226,6 +235,24 @@ if ( $wmgUseWikibaseRepo ) {
 
 	// Temporary, T241422
 	$wgWBRepoSettings['tmpSerializeEmptyListsAsObjects'] = $wmgWikibaseTmpSerializeEmptyListsAsObjects;
+
+	// Temporary, T285795
+	if ( isset( $wmgWikibaseTmpUseRequestLanguagesForRdfOutput ) ) {
+		$wgWBRepoSettings['tmpUseRequestLanguagesForRdfOutput'] = $wmgWikibaseTmpUseRequestLanguagesForRdfOutput;
+	}
+
+	// Temporary, T251480
+	if ( isset( $wmgWikibaseTmpNormalizeDataValues ) ) {
+		$wgWBRepoSettings['tmpNormalizeDataValues'] = $wmgWikibaseTmpNormalizeDataValues;
+	}
+
+	// Tag Wikidata edits based on origin: T236893
+	if ( $wgDBname === 'wikidatawiki' ) {
+		$wgWBRepoSettings['updateRepoTags'] = [ 'client-automatic-update' ];
+		$wgWBRepoSettings['viewUiTags'] = [ 'wikidata-ui' ];
+		$wgWBRepoSettings['specialPageTags'] = [ 'wikidata-ui' ];
+		$wgWBRepoSettings['termboxTags'] = [ 'wikidata-ui', 'termbox' ];
+	}
 }
 
 if ( $wmgUseWikibaseClient ) {
@@ -251,8 +278,6 @@ if ( $wmgUseWikibaseClient ) {
 	// to be safe, keeping this here although $wgDBname is default setting
 	$wgWBClientSettings['siteGlobalID'] = $wgDBname;
 
-	$wgWBClientSettings['entityNamespaces'] = $wmgWikibaseClientEntityNamespaces;
-	$wgWBClientSettings['repoNamespaces'] = $wmgWikibaseClientRepoNamespaces;
 	$wgWBClientSettings['namespaces'] = $wmgWikibaseClientNamespacesWithRepoAccess;
 
 	$wgWBClientSettings['excludeNamespaces'] = function () {
@@ -288,9 +313,7 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings['propertyOrderUrl'] = $wmgWikibaseClientPropertyOrderUrl;
 	}
 
-	$wgWBClientSettings['repoDatabase'] = $wmgWikibaseClientRepoDatabase;
 	$wgWBClientSettings['repoUrl'] = $wmgWikibaseClientRepoUrl;
-	$wgWBClientSettings['repositories'] = $wmgWikibaseClientRepositories;
 	$wgWBClientSettings['wikiPageUpdaterDbBatchSize'] = 20;
 
 	$wgWBClientSettings['disabledAccessEntityTypes'] = $wmgWikibaseDisabledAccessEntityTypes;
@@ -321,10 +344,7 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['sendEchoNotification'] = true;
 	$wgWBClientSettings['echoIcon'] = $wmgWikibaseClientEchoIcon;
 
-	$wgWBClientSettings['useTermsTableSearchFields'] = $wmgWikibaseClientUseTermsTableSearchFields;
-
 	$wgWBClientSettings['disabledUsageAspects'] = $wmgWikibaseDisabledUsageAspects;
-	$wgWBClientSettings['fineGrainedLuaTracking'] = $wmgWikibaseFineGrainedLuaTracking;
 	$wgWBClientSettings['entityUsageModifierLimits'] = [ 'D' => 10, 'L' => 10, 'C' => 33 ];
 
 	// T208763
@@ -356,6 +376,8 @@ if ( $wmgUseWikibaseClient ) {
 
 	// T267745 – effectively subscribes client wikis to descriptions of linked items even if not explicitly used during parse
 	$wgWBClientSettings['enableImplicitDescriptionUsage'] = true;
+
+	$wgWBClientSettings['linkItemTags'] = [ 'client-linkitem-change' ];
 }
 
 unset( $wmgWBSharedCacheKey );

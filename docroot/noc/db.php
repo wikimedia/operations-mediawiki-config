@@ -1,9 +1,5 @@
 <?php
 /**
- * This file generates the Database info page at <https://noc.wikimedia.org/db.php>
- *
- * In production, noc.wikimedia.org is served from mwwmaint* hosts.
- *
  * To test the script locally, run:
  *
  *     cd docroot/noc$ php -S localhost:9412

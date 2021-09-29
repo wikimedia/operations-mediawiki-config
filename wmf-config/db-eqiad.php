@@ -7,13 +7,6 @@ if ( !defined( 'DBO_DEFAULT' ) ) {
 
 # $wgReadOnly = "Wikimedia Sites are currently read-only during maintenance, please try again soon.";
 
-$wmgParserCacheDBs = [
-	'pc1' => '10.64.0.180',  # pc1007, A6 4.4TB 256GB # pc1
-	'pc2' => '10.64.16.20',  # pc1008, B8 4.4TB 256GB # pc2
-	'pc3' => '10.64.32.29',  # pc1009, C3 4.4TB 256GB # pc3
-	# 'spare' => '10.64.48.174',  # pc1010, D3 4.4TB 256GB # spare host. Use it to replace any of the above if needed
-];
-
 # LOOKING FOR $wmgOldExtTemplate ?  It no longer lives in the PHP configs.
 # Instead try https://noc.wikimedia.org/dbconfig/eqiad.json (see 'es1')
 # For more info see also https://wikitech.wikimedia.org/wiki/dbctl
@@ -67,6 +60,7 @@ $wgLBFactoryConf = [
 	'enwikivoyage' => 's5',
 	'eowikivoyage' => 's5',
 	'jawikivoyage' => 's5',
+	'jvwikisource' => 's5',
 	'lldwiki'      => 's5',
 	'mniwiki'      => 's5',
 	'mniwiktionary' => 's5',
@@ -89,9 +83,10 @@ $wgLBFactoryConf = [
 	'trvwiki'      => 's5',
 	'wawikisource' => 's5',
 
-	# s6: large wikis
+	# s6: large wikis + wikitech
 	'frwiki'       => 's6',
 	'jawiki'       => 's6',
+	'labswiki'     => 's6',
 	'ruwiki'       => 's6',
 
 	# s7: large wikis, centralauth
@@ -112,8 +107,7 @@ $wgLBFactoryConf = [
 	# s8: wikidata
 	'wikidatawiki' => 's8',
 
-	# Wikitech and its test wiki
-	'labswiki'     => 's10',
+	# Wikitech test wiki
 	'labtestwiki'  => 's11',
 ],
 

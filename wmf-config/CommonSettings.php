@@ -123,6 +123,13 @@ $wmgVersionNumber = $multiVersion->getVersionNumber();
 # be shared between wikis (e.g. does not need to vary by wgDBname).
 $wgCacheDirectory = '/tmp/mw-cache-' . $wmgVersionNumber;
 
+# Whether MediaWiki is running on Kubernetes, intended for config
+# that needs to differ during the migration. On dedicated servers,
+# SERVERGROUP is set by Puppet in profile::mediawiki::httpd, in
+# Kubernetes pods, it's set by configuring the php.servergroup
+# Helm value.
+$wmfUsingKubernetes = strpos( ( $_SERVER['SERVERGROUP'] ?? null ), 'kube-' ) === 0;
+
 # Get all the service definitions
 $wmfAllServices = ServiceConfig::getInstance()->getAllServices();
 
@@ -431,7 +438,7 @@ $wgEnotifMinorEdits = true;
 # Anti-abuse settings
 # ######################################################################
 
-$wgEnableUserEmailBlacklist = true;
+$wgEnableUserEmailMuteList = true;
 
 if ( $wmgUseGlobalPreferences ) {
 	// Allow global preferences for email-blacklist and echo-notifications
@@ -517,16 +524,16 @@ $wgTmpDirectory = '/tmp';
 
 $wgSessionName = $wgDBname . 'Session';
 
-$pcTemplate = [ 'type' => 'mysql',
-	'dbname' => 'parsercache',
-	'user' => $wgDBuser,
-	'password' => $wgDBpassword,
-	'flags' => 0,
-];
-
 $pcServers = [];
-foreach ( $wmgParserCacheDBs as $tag => $host ) {
-	$pcServers[$tag] = [ 'host' => $host ] + $pcTemplate;
+foreach ( $wmfLocalServices['parsercache-dbs'] as $tag => $host ) {
+	$pcServers[$tag] = [
+		'type' => 'mysql',
+		'host' => $host,
+		'dbname' => 'parsercache',
+		'user' => $wgDBuser,
+		'password' => $wgDBpassword,
+		'flags' => 0,
+	];
 }
 
 $wgObjectCaches['mysql-multiwrite'] = [
@@ -664,15 +671,20 @@ $wgSharpenParameter = '0x0.8'; # for IM>6.5, T26857
 
 if ( $wmgUsePagedTiffHandler ) {
 	wfLoadExtension( 'PagedTiffHandler' );
+	$wgTiffUseTiffinfo = true;
+	$wgTiffMaxMetaSize = 1048576;
+	if ( $wmgUsePagedTiffHandlerShellbox && $wmfLocalServices['shellbox-media'] ) {
+		// Route pagedtiffhandler to the Shellbox named "shellbox-media".
+		$wgShellboxUrls['pagedtiffhandler'] = $wmfLocalServices['shellbox-media'];
+		// $wgShellboxSecretKey set in PrivateSettings.php
+	}
 }
-$wgTiffUseTiffinfo = true;
-$wgTiffMaxMetaSize = 1048576;
 
 $wgMaxImageArea = 10e7; // 100MP
 $wgMaxAnimatedGifArea = 10e7; // 100MP
 
 $wgFileExtensions = array_merge( $wgFileExtensions, $wmgFileExtensions );
-$wgFileBlacklist = array_merge( $wgFileBlacklist, $wmgFileBlacklist );
+$wgProhibitedFileExtensions = array_merge( $wgProhibitedFileExtensions, $wmgProhibitedFileExtensions );
 
 if ( isset( $wmgUploadStashMaxAge ) ) {
 	$wgUploadStashMaxAge = $wmgUploadStashMaxAge;
@@ -725,10 +737,11 @@ if ( $wmgPrivateWikiUploads ) {
 	$wgFileExtensions[] = 'woff';
 	$wgFileExtensions[] = 'woff2';
 
-	// To allow OpenOffice doc formats we need to not blacklist zip files
-	$wgMimeTypeBlacklist = array_diff(
-		$wgMimeTypeBlacklist,
-		[ 'application/zip' ] );
+	// To allow OpenOffice doc formats we need to not exclude zip files
+	$wgMimeTypeExclusions = array_diff(
+		$wgMimeTypeExclusions,
+		[ 'application/zip' ]
+	);
 }
 
 # ######################################################################
@@ -932,11 +945,15 @@ $wgAvailableRights[] = 'editeditorprotected';
 $wgAvailableRights[] = 'editextendedsemiprotected';
 $wgAvailableRights[] = 'extendedconfirmed';
 $wgAvailableRights[] = 'editautoreviewprotected';
+$wgAvailableRights[] = 'editautopatrolprotected';
+$wgAvailableRights[] = 'edittrustedprotected';
 $wgGrantPermissions['editprotected']['templateeditor'] = true;
 $wgGrantPermissions['editprotected']['editeditorprotected'] = true;
 $wgGrantPermissions['editprotected']['editextendedsemiprotected'] = true;
 $wgGrantPermissions['editprotected']['extendedconfirmed'] = true;
 $wgGrantPermissions['editprotected']['editautoreviewprotected'] = true;
+$wgGrantPermissions['editprotected']['editautopatrolprotected'] = true;
+$wgGrantPermissions['editprotected']['edittrustedprotected'] = true;
 
 // Adding Flow's rights so that they are available for global groups/staff rights
 $wgAvailableRights[] = 'flow-create-board';
@@ -998,11 +1015,25 @@ if ( isset( $wmgSiteLogo1x ) ) {
 }
 
 if ( $wmgUseTimeline ) {
-	include "$wmfConfigDir/timeline.php";
+	wfLoadExtension( 'timeline' );
+	$wgTimelineFontDirectory = '/srv/mediawiki/fonts';
+	$wgTimelineFileBackend = 'local-multiwrite';
+	// Filenames in Shellbox container with no .ttf suffix
+	$wgTimelineFonts = [
+		'freesans' => '/srv/app/fonts/FreeSans',
+		// FreeSansWMF has been generated from FreeSans and FreeSerif by using this script with fontforge:
+		// Open("FreeSans.ttf");
+		// MergeFonts("FreeSerif.ttf");
+		// SetFontNames("FreeSans-WMF", "FreeSans WMF", "FreeSans WMF Regular", "Regular", "");
+		// Generate("FreeSansWMF.ttf", "", 4 );
+		'freesanswmf' => '/srv/app/fonts/FreeSansWMF',
+		'unifont' => '/srv/app/fonts/unifont-5.1.20080907'
+		// TODO: add noto fonts
+	];
+	$wgTimelineFonts['default'] = $wgTimelineFonts[$wmgTimelineDefaultFont];
+	// Route easytimeline to the Shellbox named "shellbox-timeline".
+	$wgShellboxUrls['easytimeline'] = $wmfLocalServices['shellbox-timeline'];
 }
-# Most probably only used by EasyTimeline which is conditionally included above
-# but it is hard know whether there other use cases.
-putenv( "GDFONTPATH=/srv/mediawiki/fonts" );
 
 // TODO: This should be handled by LocalServices, not here.
 $wgCopyUploadProxy = ( $wmfRealm !== 'labs' ) ? $wmfLocalServices['urldownloader'] : false;
@@ -1091,8 +1122,14 @@ if ( $wmgUseImageMap ) {
 	wfLoadExtension( 'ImageMap' );
 }
 
-if ( $wmgUseGeSHi ) {
+if ( $wmgUseSyntaxHighlight ) {
 	wfLoadExtension( 'SyntaxHighlight_GeSHi' );
+	if ( $wmgUseSyntaxHighlightShellbox && $wmfLocalServices['shellbox-syntaxhighlight'] ) {
+		// Route syntaxhighlight to the Shellbox named "shellbox-syntaxhighlight".
+		$wgShellboxUrls['syntaxhighlight'] = $wmfLocalServices['shellbox-syntaxhighlight'];
+		// $wgShellboxSecretKey set in PrivateSettings.php
+		$wgPygmentizePath = '/usr/bin/pygmentize';
+	}
 }
 
 if ( $wmgUseDoubleWiki ) {
@@ -1288,8 +1325,6 @@ if ( $wmgUseUrlShortener ) {
 	$wgUrlShortenerEnableSidebar = false;
 	$wgGroupPermissions['sysop']['urlshortener-manage-url'] = false;
 	$wgGroupPermissions['sysop']['urlshortener-view-log'] = false;
-	$wgGroupPermissions['*']['urlshortener-create-url'] = false;
-	$wgGroupPermissions['sysop']['urlshortener-create-url'] = false;
 
 	// Never ever change this config
 	// Changing it would change target of all short urls
@@ -1423,7 +1458,8 @@ if ( $wmgUseScore ) {
 	$wgScoreSafeMode = true;
 
 	if ( $wmgUseScoreShellbox && $wmfLocalServices['shellbox'] ) {
-		$wgShellboxUrls['default'] = $wmfLocalServices['shellbox'];
+		// Route score to the Shellbox named "shellbox".
+		$wgShellboxUrls['score'] = $wmfLocalServices['shellbox'];
 		// $wgShellboxSecretKey set in PrivateSettings.php
 		$wgScoreImageMagickConvert = '/usr/bin/convert';
 	} else {
@@ -1534,9 +1570,10 @@ $wgHooks['SkinAddFooterLinks'][] = function ( $sk, $key, &$footerlinks )
 	}
 
 	if ( $wmgUseFooterCodeOfConductLink ) {
-		// T280886 wm-codeofconduct-url doesn't currently point
-		// to the actual policy text at
-		// https://meta.wikimedia.org/wiki/Special:MyLanguage/Universal_Code_of_Conduct/Policy_text
+		// T280886 wm-codeofconduct-url currently points to
+		// https://meta.wikimedia.org/wiki/Special:MyLanguage/Universal_Code_of_Conduct
+		// but may need updating to point to
+		// https://foundation.wikimedia.org/wiki/Special:MyLanguage/Universal_Code_of_Conduct
 		return;
 		// $urlKey = 'wm-codeofconduct-url';
 		// $msgKey = 'wm-codeofconduct';
@@ -2260,8 +2297,14 @@ if ( $wmgUseGlobalAbuseFilters ) {
 # PdfHandler
 if ( $wmgUsePdfHandler ) {
 	wfLoadExtension( 'PdfHandler' );
-	$wgPdfProcessor = '/usr/local/bin/mediawiki-firejail-ghostscript';
-	$wgPdfPostProcessor = '/usr/local/bin/mediawiki-firejail-convert';
+	if ( $wmgUsePdfHandlerShellbox && $wmfLocalServices['shellbox-media'] ) {
+		// Route pdfhandler to the Shellbox named "shellbox-media".
+		$wgShellboxUrls['pdfhandler'] = $wmfLocalServices['shellbox-media'];
+		// $wgShellboxSecretKey set in PrivateSettings.php
+	} else {
+		$wgPdfProcessor = '/usr/local/bin/mediawiki-firejail-ghostscript';
+		$wgPdfPostProcessor = '/usr/local/bin/mediawiki-firejail-convert';
+	}
 }
 
 # WikiEditor
@@ -2964,7 +3007,7 @@ if ( $wmgUseTranslate ) {
 	$wgTranslateDelayedMessageIndexRebuild = true;
 
 	// Deprecated language codes
-	$wgTranslateBlacklist = [
+	$wgTranslateDisabledTargetLanguages = [
 		'*' => [
 			'gan-hans' => 'Translate in gan please.',
 			'gan-hant' => 'Translate in gan please.',
@@ -4249,6 +4292,10 @@ if ( $wmgUseWikimediaApiPortalOAuth ) {
 
 if ( $wmgUseGlobalWatchlist ) {
 	wfLoadExtension( 'GlobalWatchlist' );
+}
+
+if ( $wmgUseNearbyPages ) {
+	wfLoadExtension( 'NearbyPages' );
 }
 
 // This is a temporary hack for hooking up Parsoid/PHP with MediaWiki

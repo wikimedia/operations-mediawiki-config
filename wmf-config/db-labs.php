@@ -64,7 +64,4 @@ if ( $wmfRealm == 'labs' ) { # safe guard
 		'DB://cluster1',
 	];
 
-	# No parser cache in beta yet
-	$wmgParserCacheDBs = [];
-
 } # end safe guard

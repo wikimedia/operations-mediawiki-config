@@ -4,19 +4,24 @@
 # ProductionServices.php statically defines all service hostnames/ips
 # for any service used by MediaWiki, divided by datacenter.
 #
-# May be included on app servers in contexts where MediaWiki is not (yet)
-# initialised (for example, fatal-error.php and profiler.php).
+# This can be included on app servers even in contexts where MediaWiki is not
+# initialised (for example, PhpAutoPrepend.php and /etc/php7/fatal-error.php).
 #
-# MUST NOT use any predefined state, only primitive values in plain PHP.
+# This MUST NOT assume any global variables or constants from MediaWiki, nor
+# multiversion. Only plain PHP built-ins may be used.
 #
 # This for PRODUCTION.
 #
-# For MediaWiki, this is included from ../src/ServiceConfig.php
+# Effective load order:
+# - *nothing*
+# - wmf-config/ProductionServices.php [THIS FILE]
 #
-# ATTENTION: do NOT add new services below without asking SRE to set up a
-# service proxy for it first. See T244843 for the rationale.
-# All proxies that  are already setup can be found within operations/puppet,
-# file hieradata/common/profile/services_proxy/envoy.yaml
+# Included from: ../src/ServiceConfig.php
+#
+# DO NOT ADD new services below without asking SRE to set up a service proxy for it first.
+# See T244843 for the rationale. All proxies that are setup can be found at:
+# operations/puppet.git:/hieradata/common/profile/services_proxy/envoy.yaml
+#
 
 $common = [
 	// XHGui is the on-demand profiler, backed by MariaDB.  The
@@ -67,6 +72,10 @@ $common = [
 	'push-notifications' => 'http://localhost:6012',
 	'linkrecommendation' => 'https://linkrecommendation.discovery.wmnet:4005',
 	'shellbox' => 'http://localhost:6024',
+	'shellbox-constraints' => 'http://localhost:6025',
+	'shellbox-media' => 'http://localhost:6026',
+	'shellbox-syntaxhighlight' => 'http://localhost:6027',
+	'shellbox-timeline' => 'http://localhost:6028',
 
 	// cloudelastic only exists in eqiad. No load balancer is available due to
 	// the part of the network that they live in so each host is enumerated
@@ -107,18 +116,30 @@ $services = [
 		'mediaSwiftAuth' => 'https://ms-fe.svc.eqiad.wmnet/auth',
 		'mediaSwiftStore' => 'https://ms-fe.svc.eqiad.wmnet/v1/AUTH_mw',
 
-		'etcd' => '_etcd._tcp.eqiad.wmnet',
+		'etcd' => [
+			'host' => '_etcd._tcp.eqiad.wmnet',
+			'protocol' => 'https'
+		],
 
 		'poolcounter' => [
 			'10.64.0.151', # poolcounter1004.eqiad.wmnet
 			'10.64.32.236', # poolcounter1005.eqiad.wmnet
 		],
 
-		// LockManager Redis
+		// eqiad parsercache
+		'parsercache-dbs' => [
+			'pc1' => '10.64.0.57',   # pc1011, A1 8.8TB 512GB # pc1
+			'pc2' => '10.64.16.65',  # pc1012, B1 8.8TB 512GB # pc2
+			'pc3' => '10.64.32.163', # pc1013, C5 8.8TB 512GB # pc3
+			# spare: '10.64.48.89',  # pc1014, D6 8.8TB 512GB
+			# Use spare(s) to replace any of the above if needed
+		],
+
+		// LockManager Redis eqiad
 		'redis_lock' => [
-			'rdb1' => '10.64.32.211', # mc1031 C4
-			'rdb2' => '10.64.0.83',   # mc1022 A6
-			'rdb3' => '10.64.48.156', # mc1034 D4
+			'rdb1' => '10.64.0.65',   # mc1040 A2
+			'rdb2' => '10.64.32.153', # mc1048 C2
+			'rdb3' => '10.64.48.91',  # mc1052 D4
 		],
 		'search-chi' => [
 			[ // forwarded to https://search.svc.eqiad.wmnet:9243/
@@ -152,15 +173,27 @@ $services = [
 		'mediaSwiftAuth' => 'https://ms-fe.svc.codfw.wmnet/auth',
 		'mediaSwiftStore' => 'https://ms-fe.svc.codfw.wmnet/v1/AUTH_mw',
 
-		'etcd' => '_etcd._tcp.codfw.wmnet',
+		'etcd' => [
+			'host' => '_etcd._tcp.codfw.wmnet',
+			'protocol' => 'https'
+		],
 
 		'poolcounter' => [
 			'10.192.0.132', # poolcounter2003.codfw.wmnet
 			'10.192.16.129', # poolcounter2004.codfw.wmnet
 		],
 
+		// codfw parsercache
+		'parsercache-dbs' => [
+			'pc1' => '10.192.0.72',   # pc2011, A5 8.8TB 512GB # pc1
+			'pc2' => '10.192.16.55',  # pc2012, B5 8.8TB 512GB # pc2
+			'pc3' => '10.192.32.57',  # pc2013, C1 8.8TB 512GB # pc3
+			# spare: '10.192.48.52',  # pc2014, D1 8.8TB 512GB
+			# Use spare(s) to replace any of the above if needed
+		],
+		// LockManager Redis codfw
 		'redis_lock' => [
-			'rdb1' => '10.192.32.163', # mc2031 C5
+			'rdb1' => '10.192.32.162', # mc2030 C5
 			'rdb2' => '10.192.0.86',   # mc2022 A8
 			'rdb3' => '10.192.48.78',  # mc2034 D4
 		],
