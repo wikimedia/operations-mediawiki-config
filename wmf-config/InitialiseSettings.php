@@ -19869,38 +19869,17 @@ function wmfGetVariantSettings() {
 
 'wgDiscussionTools_replytool' => [
 	// Keep in sync with wgDiscussionTools_sourcemodetoolbar below
-	'default' => 'default',
-	'afwiki' => 'available', // T288483
-	'amwiki' => 'available', // T288483
-	'arwiki' => 'available', // T249394
-	'arzwiki' => 'available', // T288483
-	'bnwiki' => 'available', // T288483
-	'cswiki' => 'available', // T249394
-	'eswiki' => 'available', // T288483
-	'fawiki' => 'available', // T288483
-	'hewiki' => 'available', // T288483
-	'hiwiki' => 'available', // T288483
-	'huwiki' => 'available', // T249394
-	'idwiki' => 'available', // T288483
-	'itwiki' => 'available', // T288483
-	'jawiki' => 'available', // T288483
-	'kowiki' => 'available', // T288483
-	'nlwiki' => 'available', // T288483
-	'omwiki' => 'available', // T288483
-	'plwiki' => 'available', // T288483
-	'ptwiki' => 'available', // T288483
-	'swwiki' => 'available', // T288483
-	'thwiki' => 'available', // T288483
-	'ukwiki' => 'available', // T288483
-	'viwiki' => 'available', // T288483
-	'zhwiki' => 'available', // T288483
-	'apiportalwiki' => 'available', // T260624
-	'gomwiktionary' => 'available', // T258554
-	'enwikibooks' => 'available', // T276851
-	'ptwikinews' => 'available', // T285162
-	'wikimaniawiki' => 'available', // T284339
-	'officewiki' => 'available', // T277103
-	'wikitech' => 'available', // T283119
+	// T288485
+	'default' => 'available',
+	'commonswiki' => 'default',
+	'metawiki' => 'default',
+	'mediawikiwiki' => 'default',
+	'specieswiki' => 'default',
+	'enwiki' => 'default',
+	'fiwiki' => 'default',
+	'frwiki' => 'default',
+	'ruwiki' => 'default',
+	'dewiki' => 'default',
 ],
 
 'wgDiscussionTools_newtopictool' => [
@@ -19915,38 +19894,16 @@ function wmfGetVariantSettings() {
 	// However, it must be marked as 'available' only on wikis where 'wgDiscussionTools_replytool'
 	// or 'wgDiscussionTools_newtopictool' is 'available'. Otherwise it will cause the reply tool
 	// to be always loaded, even when it's not supposed to be available.
-	'default' => 'default',
-	'afwiki' => 'available',
-	'amwiki' => 'available',
-	'arwiki' => 'available',
-	'arzwiki' => 'available',
-	'bnwiki' => 'available',
-	'cswiki' => 'available',
-	'eswiki' => 'available',
-	'fawiki' => 'available',
-	'hewiki' => 'available',
-	'hiwiki' => 'available',
-	'huwiki' => 'available',
-	'idwiki' => 'available',
-	'itwiki' => 'available',
-	'jawiki' => 'available',
-	'kowiki' => 'available',
-	'nlwiki' => 'available',
-	'omwiki' => 'available',
-	'plwiki' => 'available',
-	'ptwiki' => 'available',
-	'swwiki' => 'available',
-	'thwiki' => 'available',
-	'ukwiki' => 'available',
-	'viwiki' => 'available',
-	'zhwiki' => 'available',
-	'apiportalwiki' => 'available',
-	'gomwiktionary' => 'available',
-	'enwikibooks' => 'available',
-	'ptwikinews' => 'available',
-	'wikimaniawiki' => 'available',
-	'officewiki' => 'available',
-	'wikitech' => 'available',
+	'default' => 'available',
+	'commonswiki' => 'default',
+	'metawiki' => 'default',
+	'mediawikiwiki' => 'default',
+	'specieswiki' => 'default',
+	'enwiki' => 'default',
+	'fiwiki' => 'default',
+	'frwiki' => 'default',
+	'ruwiki' => 'default',
+	'dewiki' => 'default',
 ],
 
 'wgDiscussionTools_topicsubscription' => [
