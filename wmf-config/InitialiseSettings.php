@@ -22014,9 +22014,14 @@ function wmfGetVariantSettings() {
 	'wikidatawiki' => true,
 ],
 
+'wmgWikibaseDispatchViaJobsPruneChangesTableInJobEnabled' => [
+	'default' => false,
+	'testwikidatawiki' => true,
+],
+
 'wmgWikibaseDispatchViaJobsAllowedClients' => [
 	'default' => [],
-	'testwikidatawiki' => [ 'testwikidatawiki', 'testwiki' ],
+	'testwikidatawiki' => [ 'testwikidatawiki', 'testwiki', 'test2wiki', 'testcommonswiki' ],
 	'wikidatawiki' => [ 'mediawikiwiki' ],
 ],
 

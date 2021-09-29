@@ -179,6 +179,11 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( isset( $wmgWikibaseDispatchViaJobsEnabled ) && isset( $wmgWikibaseDispatchViaJobsAllowedClients ) ) {
 		$wgWBRepoSettings['dispatchViaJobsEnabled'] = $wmgWikibaseDispatchViaJobsEnabled;
 		$wgWBRepoSettings['dispatchViaJobsAllowedClients'] = $wmgWikibaseDispatchViaJobsAllowedClients;
+
+		if ( isset( $wmgWikibaseDispatchViaJobsPruneChangesTableInJobEnabled ) ) {
+			$wgWBRepoSettings['dispatchViaJobsPruneChangesTableInJobEnabled'] =
+				$wmgWikibaseDispatchViaJobsPruneChangesTableInJobEnabled;
+		}
 	}
 
 	$wgWBRepoSettings['unitStorage'] = [
