@@ -15951,8 +15951,8 @@ function wmfGetVariantSettings() {
 ],
 
 'wmgUsePdfHandlerShellbox' => [
-	'default' => false,
-	'group0' => true,
+	'default' => true,
+	'commonswiki' => false,
 ],
 
 'wmgUseFooterContactLink' => [
@@ -24716,8 +24716,8 @@ function wmfGetVariantSettings() {
 ],
 
 'wmgUsePagedTiffHandlerShellbox' => [
-	'default' => false,
-	'group0' => true,
+	'default' => true,
+	'commonswiki' => false,
 ],
 
 'wmgUseParserFunctions' => [
