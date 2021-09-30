@@ -689,7 +689,9 @@ if ( $wmgUsePagedTiffHandler ) {
 	}
 }
 
-$wgMaxImageArea = 10e7; // 100MP
+// Disable $wgMaxImageArea checks, Thumbor uses a timeout instead
+// of a size limit (T291014#7367570)
+$wgMaxImageArea = false;
 $wgMaxAnimatedGifArea = 10e7; // 100MP
 
 $wgFileExtensions = array_merge( $wgFileExtensions, $wmgFileExtensions );
