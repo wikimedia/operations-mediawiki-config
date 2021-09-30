@@ -25954,7 +25954,6 @@ function wmfGetVariantSettings() {
 // T280944
 'wgIncludejQueryMigrate' => [
 	'default' => false,
-	'metawiki' => true,
 ],
 'wgXmlDumpSchemaVersion' => [
 	'default' => XML_DUMP_SCHEMA_VERSION_10,
