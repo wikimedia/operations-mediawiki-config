@@ -25281,9 +25281,9 @@ function wmfGetVariantSettings() {
 ],
 
 'wgRightsUrl' => [
-	'default' => '//creativecommons.org/licenses/by-sa/3.0/',
-	'huwikinews' => '//creativecommons.org/licenses/by/3.0/',
-	'wikinews' => '//creativecommons.org/licenses/by/2.5/',
+	'default' => 'https://creativecommons.org/licenses/by-sa/3.0/',
+	'huwikinews' => 'https://creativecommons.org/licenses/by/3.0/',
+	'wikinews' => 'https://creativecommons.org/licenses/by/2.5/',
 ],
 'wgRightsText' => [
 	'default' => 'Creative Commons Attribution-Share Alike 3.0',
