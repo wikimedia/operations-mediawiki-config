@@ -21234,6 +21234,11 @@ function wmfGetVariantSettings() {
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
+			'stream' => 'mediawiki.skin_diff',
+			'schema_title' => 'analytics/pref_diff',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
 			'stream' => 'mediawiki.content_translation_event',
 			'schema_title' => 'analytics/mediawiki/content_translation_event',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -21624,6 +21629,7 @@ function wmfGetVariantSettings() {
 		'mediawiki.structured_task.article.link_suggestion_interaction',
 		'mediawiki.structured_task.article.image_suggestion_interaction',
 		'mediawiki.pref_diff',
+		'mediawiki.skin_diff',
 		'test.instrumentation',
 		'test.instrumentation.sampled',
 		'wd_propertysuggester.client_side_property_request',
