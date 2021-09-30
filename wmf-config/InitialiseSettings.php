@@ -20357,16 +20357,6 @@ function wmfGetVariantSettings() {
 	'yowiki' => true, // T290175
 ],
 
-// ToDo: Remove this later (T290302)
-'wgSectionTranslationTargetLanguage' => [
-	'default' => null,
-	'bnwiki' => 'bn',
-	'hawiki' => 'ha',
-	'igwiki' => 'ig',
-	'thwiki' => 'th',
-	'yowiki' => 'yo',
-],
-
 'wgSectionTranslationTargetLanguages' => [
 	'default' => null,
 	'wikipedia' => [ 'bn', 'ha', 'ig', 'th', 'yo' ],
