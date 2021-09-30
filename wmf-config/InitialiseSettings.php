@@ -27503,10 +27503,10 @@ function wmfGetVariantSettings() {
 
 'wgParserEnableLegacyMediaDOM' => [
 	'default' => true,
-	'testwiki' => false,
+	'group0' => false,
 	'test2wiki' => false,
-	'officewiki' => false,
-	'mediawikiwiki' => false,
+	'wikitech' => false,
+	'metawiki' => false,
 ],
 
 ];
