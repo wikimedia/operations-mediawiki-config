@@ -21985,7 +21985,18 @@ function wmfGetVariantSettings() {
 'wmgWikibaseDispatchViaJobsAllowedClients' => [
 	'default' => [],
 	'testwikidatawiki' => [ 'testwikidatawiki', 'testwiki', 'test2wiki', 'testcommonswiki' ],
-	'wikidatawiki' => [ 'mediawikiwiki' ],
+	'wikidatawiki' => [
+		'mediawikiwiki',
+		'itwiki',
+		'cawiki',
+		'hewiki',
+		'viwiki',
+		'frwikisource',
+		'enwikivoyage',
+		'enwikibooks',
+		'enwiktionary',
+		'enwikinews',
+	],
 ],
 
 'wmgWikibaseCachePrefix' => [
