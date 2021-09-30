@@ -14011,8 +14011,17 @@ function wmfGetVariantSettings() {
 	// Namespaces not listed in $wgContentNamespaces are not necessary here
 	// for core, but reinforcing default config doesn't harm.
 	'default' => [ NS_PROJECT, NS_HELP ],
+
+	// Wikis primarily used for discussion and coordination.
+	// They often have discussions, including their "village pump" equivalent, in the main namespace.
+	'+incubatorwiki' => [ NS_MAIN ],
+	'+labswiki' => [ NS_MAIN ],
+	'+labtestwiki' => [ NS_MAIN ],
+	'+metawiki' => [ NS_MAIN ],
+	'+outreachwiki' => [ NS_MAIN ],
+	'+wikimania' => [ NS_MAIN ],
 	'+wikimedia' => [ NS_MAIN ],
-	'+special' => [ NS_MAIN ],
+	'+private' => [ NS_MAIN ],
 
 	'+dewiki' => [ 100 ], // T145619 - Portal
 	'+dewikivoyage' => [ 102 ], // T119420
