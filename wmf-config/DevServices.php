@@ -9,28 +9,29 @@
 
 # Returns an array mapping datacenter names to a mapping of services
 # for a given datacenter.
-return [ 'dev' => [
-				   'udp2log' => '',
-				   'redis_lock' => '',
-				   'etcd' => 'db:2379',
-				   'mediaSwiftAuth' => '',
-				   'mediaSwiftStore' => '',
-				   'sessionstore' => '',
-				   'echostore' => '',
-				   'statsd' => '',
-				   'irc' => [],
-				   'upload' => '',
-				   'poolcounter' => '',
-				   'urldownloader' => '',
-				   'search-chi' => '',
-				   'restbase' => '',
-				   'parsoid' => '',
-				   'electron' => '',
-				   'mathoid' => '',
-				   'eventgate-analytics' => '',
-				   'eventgate-analytics-external' => '',
-				   'eventgate-main' => '',
-				   'linkrecommendation' => '',
-				   'push-notifications' => '',
-				  ]
-	   ];
+return [
+	'dev' => [
+		'udp2log' => '',
+		'redis_lock' => '',
+		'etcd' => 'db:2379',
+		'mediaSwiftAuth' => '',
+		'mediaSwiftStore' => '',
+		'sessionstore' => '',
+		'echostore' => '',
+		'statsd' => '',
+		'irc' => [],
+		'upload' => '',
+		'poolcounter' => '',
+		'urldownloader' => '',
+		'search-chi' => '',
+		'restbase' => '',
+		'parsoid' => '',
+		'electron' => '',
+		'mathoid' => '',
+		'eventgate-analytics' => '',
+		'eventgate-analytics-external' => '',
+		'eventgate-main' => '',
+		'linkrecommendation' => '',
+		'push-notifications' => '',
+	]
+];
