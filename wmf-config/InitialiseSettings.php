@@ -4002,6 +4002,9 @@ function wmfGetVariantSettings() {
 		'Dyskusja_wikipedystki' => NS_USER_TALK,
 		'WB' => NS_PROJECT,
 	],
+	'+plwikinews' => [
+		'WN' => NS_PROJECT, // T291344
+	],
 	'+plwikisource' => [
 		'WS' => NS_PROJECT,
 		'Author' => 104,
