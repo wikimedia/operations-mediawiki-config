@@ -2295,10 +2295,7 @@ if ( $wmgUseGlobalAbuseFilters ) {
 # PdfHandler
 if ( $wmgUsePdfHandler ) {
 	wfLoadExtension( 'PdfHandler' );
-	if ( $wmfLocalServices['shellbox-media']
-		&& ( $wmgUsePdfHandlerShellbox
-			|| ( $wgDBname == 'commonswiki' && mt_rand( 0, 9 ) == 0 ) )
-	) {
+	if ( $wmgUsePdfHandlerShellbox && $wmfLocalServices['shellbox-media'] ) {
 		// Route pdfhandler to the Shellbox named "shellbox-media".
 		$wgShellboxUrls['pdfhandler'] = $wmfLocalServices['shellbox-media'];
 		// $wgShellboxSecretKey set in PrivateSettings.php
