@@ -13,7 +13,10 @@ return [
 	'dev' => [
 		'udp2log' => '',
 		'redis_lock' => '',
-		'etcd' => 'db:2379',
+		'etcd' => [
+			'host' => 'db:2379',
+			'protocol' => 'https'
+		],
 		'mediaSwiftAuth' => '',
 		'mediaSwiftStore' => '',
 		'sessionstore' => '',
