@@ -28,6 +28,7 @@ return [
 		'urldownloader' => '',
 		'search-chi' => '',
 		'restbase' => '',
+		'parsercache-dbs' => [],
 		'parsoid' => '',
 		'electron' => '',
 		'mathoid' => '',
@@ -36,5 +37,9 @@ return [
 		'eventgate-main' => '',
 		'linkrecommendation' => '',
 		'push-notifications' => '',
+		'shellbox' => null,
+		'shellbox-media' => null,
+		'shellbox-syntaxhighlight' => null,
+		'shellbox-timeline' => null,
 	]
 ];
