@@ -188,6 +188,8 @@ if ( $wmgUseWikibaseRepo ) {
 	// Explicitly set wikidata to null, since setting null in IS.php just removes it
 	if ( $wgDBname === 'wikidatawiki' ) {
 		$wgWBRepoSettings['dispatchViaJobsAllowedClients'] = null;
+		$wgWBRepoSettings['dispatchViaJobsEnabled'] = true;
+		$wgWBRepoSettings['dispatchViaJobsPruneChangesTableInJobEnabled'] = true;
 	}
 
 	$wgWBRepoSettings['unitStorage'] = [
