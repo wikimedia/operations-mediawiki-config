@@ -20045,7 +20045,6 @@ function wmfGetVariantSettings() {
 	"krcwiki" => true,
 	"kshwiki" => true,
 	"kswiki" => true,
-	"kuwiki" => true,
 	"kvwiki" => true,
 	"kwwiki" => true,
 	"ladwiki" => true,
@@ -20284,13 +20283,14 @@ function wmfGetVariantSettings() {
 	'bnwiki' => true, // T271397
 	'hawiki' => true, // T290175
 	'igwiki' => true, // T290175
+	'kuwiki' => true, // T290238
 	'thwiki' => true, // T290175
 	'yowiki' => true, // T290175
 ],
 
 'wgSectionTranslationTargetLanguages' => [
 	'default' => null,
-	'wikipedia' => [ 'bn', 'ha', 'ig', 'th', 'yo' ],
+	'wikipedia' => [ 'bn', 'ha', 'ig', 'ku', 'th', 'yo' ],
 ],
 
 'wmgUseExternalGuidance' => [
