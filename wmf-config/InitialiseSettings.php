@@ -26432,16 +26432,14 @@ function wmfGetVariantSettings() {
 	'testwiki' => 0,
 
 	// special treatment wikis
-	'dewiki' => 30,
 	'enwiki' => 25, // T281896, T290927
-	'nlwiki' => 50,
 
 	// large wikis with more than 500 registrations per months (T289786)
 	'arwiki' => 80,
 	'azwiki' => 80,
 	'bnwiki' => 80,
 	'cswiki' => 80,
-	// 'dewiki' => 80, // special treatment wiki
+	'dewiki' => 80,
 	'elwiki' => 80,
 	// 'enwiki' => 80, // special treatment wiki
 	'eswiki' => 80,
@@ -26455,7 +26453,7 @@ function wmfGetVariantSettings() {
 	'itwiki' => 80,
 	'jawiki' => 80,
 	'kowiki' => 80,
-	// 'nlwiki' => 80, // special treatment wiki
+	'nlwiki' => 80,
 	'nowiki' => 80,
 	'plwiki' => 80,
 	'ptwiki' => 80,
