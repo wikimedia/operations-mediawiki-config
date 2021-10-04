@@ -21898,6 +21898,8 @@ function wmfGetVariantSettings() {
 		'enwikibooks',
 		'enwiktionary',
 		'enwikinews',
+		'wikidatawiki',
+		'commonswiki',
 	],
 ],
 
