@@ -25170,13 +25170,20 @@ function wmfGetVariantSettings() {
 	'default' => false,
 ],
 
+// Which licensing/copyright message overrides to use in the WikimediaMessages extension
+'wgWikimediaMessagesLicensing' => [
+	'default' => 'standard',
+	'wikinews' => 'wikinews',
+	'wikidata' => 'wikidata',
+	'commonswiki' => 'commons',
+	'testcommonswiki' => 'commons',
+],
 'wgRightsPage' => [
 	// Default: Use wgRightsUrl
 	'default' => null,
 	// Wikidata footer, T112606
 	'wikidata' => 'Wikidata:Copyright',
 ],
-
 'wgRightsUrl' => [
 	'default' => 'https://creativecommons.org/licenses/by-sa/3.0/',
 	'huwikinews' => 'https://creativecommons.org/licenses/by/3.0/',
@@ -25191,6 +25198,7 @@ function wmfGetVariantSettings() {
 		'the Creative Commons CC0 License; text in the other namespaces is available under ' .
 		'the Creative Commons Attribution-ShareAlike License; additional terms may apply.',
 ],
+
 'wgSessionCacheType' => [
 	'default' => 'kask-session',
 ],
