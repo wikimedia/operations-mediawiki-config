@@ -20,10 +20,10 @@ if ( $wmfUsingKubernetes ) {
 	$nutcrackerServersByDc = [ 'eqiad' => '127.0.0.1:12000', 'codfw' => '127.0.0.1:12001' ];
 } else {
 	$nutcrackerServersByDc = array_map(
-		$wmfDatacenters,
 		function ( $dc ) {
 			return "/var/run/nutcracker/redis_{$dc}.sock";
-		}
+		},
+		$wmfDatacenters
 	);
 }
 foreach ( $wmfDatacenters as $dc ) {
