@@ -726,6 +726,11 @@ function wmfGetVariantSettings() {
 		'width' => 120,
 		'height' => 23,
 	],
+	'ckbwiki' => [ // T288368
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ckb.svg',
+		'width' => 110,
+		'height' => 30,
+	],
 	'cswiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-cs.svg',
 		'width' => 119,
