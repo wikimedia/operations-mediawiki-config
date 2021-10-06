@@ -8,7 +8,6 @@ inheritsFrom:
   - categories-rdf
   - cirrussearch-big-indices
   - commonsuploads
-  - gettingstarted-with-category-suggestions
   - medium
   - s3
   - securepollglobal
