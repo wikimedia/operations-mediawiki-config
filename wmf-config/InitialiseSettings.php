@@ -23228,14 +23228,17 @@ function wmfGetVariantSettings() {
 ],
 
 // Enable Commons community assessment filters in Special:MediaSearch
+// when adding further assessment filters, also add them to any-assessment at the top
 'wgMediaSearchAssessmentFilters' => [
 	'commonswiki' => [
+		'any-assessment' => 'P6731=Q63348049|P6731=Q63348069|P6731=Q63348040|P6731=Q6998859', // T285349
 		'featured-image' => 'P6731=Q63348049',
 		'quality-image' => 'P6731=Q63348069',
 		'valued-image' => 'P6731=Q63348040',
 		'picture-of-the-day' => 'P6731=Q6998859',
 	],
 	'testcommonswiki' => [
+		'any-assessment' => 'P6731=Q63348049|P6731=Q63348069|P6731=Q63348040|P6731=Q6998859', // T285349
 		'featured-image' => 'P6731=Q63348049',
 		'quality-image' => 'P6731=Q63348069',
 		'valued-image' => 'P6731=Q63348040',
