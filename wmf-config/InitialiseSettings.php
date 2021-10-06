@@ -26290,9 +26290,6 @@ function wmfGetVariantSettings() {
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
 
-	// pending templates for easy tasks or T278825
-	'shwiki' => false,
-
 	// pending visual editor (see T287878#7267554)
 	'kkwiki' => false,
 ],
