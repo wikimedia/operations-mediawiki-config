@@ -20896,17 +20896,6 @@ return [
 				],
 			]
 		],
-		'eventlogging_RUMSpeedIndex' => [
-			'schema_title' => 'analytics/legacy/rumspeedindex',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
 		'eventlogging_SaveTiming' => [
 			'schema_title' => 'analytics/legacy/savetiming',
 			'topic_prefixes' => null,
@@ -21852,7 +21841,6 @@ return [
 		'eventlogging_ReferencePreviewsCite',
 		'eventlogging_ReferencePreviewsPopups',
 		'eventlogging_ResourceTiming',
-		'eventlogging_RUMSpeedIndex',
 		'eventlogging_SaveTiming',
 		'eventlogging_ServerSideAccountCreation',
 		'eventlogging_SpecialInvestigate',
