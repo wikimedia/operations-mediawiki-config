@@ -26603,20 +26603,24 @@ function wmfGetVariantSettings() {
 ],
 
 'wgGEMentorDashboardEnabled' => [
-	// not ready for deployment yet
+	// deployment requires Growth team approval
 	'default' => false,
 	'testwiki' => true,
+
+	// Growth pilot wikis
+	'arwiki' => true,
+	'bnwiki' => true,
+	'cswiki' => true,
 ],
 
 'wgGEMentorDashboardBetaMode' => [
+	// do not enable outside of testwikis
 	'default' => false,
 	'testwiki' => true,
 ],
 
 'wgGEMentorDashboardDiscoveryEnabled' => [
-	// not ready for deployment yet
-	'default' => false,
-	'testwiki' => true,
+	'default' => true,
 ],
 
 'wgGEMentorDashboardBackendEnabled' => [
