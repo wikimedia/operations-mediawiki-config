@@ -25557,7 +25557,6 @@ function wmfGetVariantSettings() {
 	'wikipedia' => true,
 	'testwiki' => false,
 	'bgwiki' => false,
-	'eswiki' => false, // T291736
 	'mediawikiwiki' => true,
 	'uawikimedia' => true, // T164574
 ],
