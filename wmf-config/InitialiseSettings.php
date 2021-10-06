@@ -25970,6 +25970,7 @@ function wmfGetVariantSettings() {
 'wmgUseGrowthExperiments' => [
 	'default' => false,
 	'testwiki' => true,
+	'test2wiki' => true,
 	'abwiki' => true,
 	'acewiki' => true,
 	'adywiki' => true,
@@ -26450,6 +26451,7 @@ function wmfGetVariantSettings() {
 'wgGEHomepageNewAccountEnablePercentage' => [
 	'default' => 100,
 	'testwiki' => 0,
+	'test2wiki' => 0,
 
 	// special treatment wikis
 	'enwiki' => 25, // T281896, T290927
