@@ -4300,22 +4300,14 @@ $wgParsoidSettings = [
 	'linting' => true,
 	'nativeGalleryEnabled' => false,  // T214649
 ];
-if ( $wmgServerGroup === 'parsoid' ) {
-	if ( wfHostName() === 'scandium' ) {
-		// Scandium has its own special check out of parsoid for testing.
-		$parsoidDir = __DIR__ . "/../../parsoid-testing";
-		// Override settings specific to round-trip testing on scandium
-		require_once "$parsoidDir/tests/RTTestSettings.php";
-	}
-
-	wfLoadExtension( 'Parsoid', "$parsoidDir/extension.json" );
-} elseif ( $wmgServerGroup === 'api_appserver' ) {
-	// Parsoid extension needed by core REST /html handler
-	// until T265518 is resolved, but we do not want to expose
-	// Parsoid REST API.
-	$wgParsoidEnableREST = false;
-	wfLoadExtension( 'Parsoid', "$parsoidDir/extension.json" );
+if ( $wmgServerGroup === 'parsoid' && wfHostName() === 'scandium' ) {
+	// Scandium has its own special check out of parsoid for testing.
+	$parsoidDir = __DIR__ . "/../../parsoid-testing";
+	// Override settings specific to round-trip testing on scandium
+	require_once "$parsoidDir/tests/RTTestSettings.php";
 }
+
+wfLoadExtension( 'Parsoid', "$parsoidDir/extension.json" );
 unset( $parsoidDir );
 // End of temporary hack for hooking up Parsoid/PHP with MediaWiki
 
