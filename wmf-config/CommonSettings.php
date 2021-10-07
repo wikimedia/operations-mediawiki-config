@@ -123,12 +123,14 @@ $wmgVersionNumber = $multiVersion->getVersionNumber();
 # be shared between wikis (e.g. does not need to vary by wgDBname).
 $wgCacheDirectory = '/tmp/mw-cache-' . $wmgVersionNumber;
 
+$wmgServerGroup = $_SERVER['SERVERGROUP'] ?? '';
+
 # Whether MediaWiki is running on Kubernetes, intended for config
 # that needs to differ during the migration. On dedicated servers,
 # SERVERGROUP is set by Puppet in profile::mediawiki::httpd, in
 # Kubernetes pods, it's set by configuring the php.servergroup
 # Helm value.
-$wmfUsingKubernetes = strpos( ( $_SERVER['SERVERGROUP'] ?? null ), 'kube-' ) === 0;
+$wmfUsingKubernetes = strpos( $wmgServerGroup, 'kube-' ) === 0;
 
 # Get all the service definitions
 $wmfAllServices = ServiceConfig::getInstance()->getAllServices();
@@ -339,7 +341,7 @@ $wgAPIMaxLagThreshold = 3;
 # Allow different memory_limit settings for Parsoid/PHP servers (T236833)
 # keep in sync with php7-fatal-error.php in operations/puppet
 # and with wmf-config/logging.php
-if ( ( $_SERVER['SERVERGROUP'] ?? null ) === 'parsoid' ) {
+if ( $wmgServerGroup === 'parsoid' ) {
 	ini_set( 'memory_limit', $wmgMemoryLimitParsoid );
 } else {
 	ini_set( 'memory_limit', $wmgMemoryLimit );
@@ -4077,7 +4079,7 @@ if ( $wmgUseEventBus ) {
 		];
 	}
 
-	if ( ( $_SERVER['SERVERGROUP'] ?? null ) === 'jobrunner' || ( $_SERVER['SERVERGROUP'] ?? null ) === 'videoscaler' ) {
+	if ( $wmgServerGroup === 'jobrunner' || $wmgServerGroup === 'videoscaler' ) {
 		$wgEventBusEnableRunJobAPI = true;
 	} else {
 		$wgEventBusEnableRunJobAPI = false;
@@ -4298,7 +4300,7 @@ $wgParsoidSettings = [
 	'linting' => true,
 	'nativeGalleryEnabled' => false,  // T214649
 ];
-if ( ( $_SERVER['SERVERGROUP'] ?? null ) === 'parsoid' ) {
+if ( $wmgServerGroup === 'parsoid' ) {
 	if ( wfHostName() === 'scandium' ) {
 		// Scandium has its own special check out of parsoid for testing.
 		$parsoidDir = __DIR__ . "/../../parsoid-testing";
@@ -4307,7 +4309,7 @@ if ( ( $_SERVER['SERVERGROUP'] ?? null ) === 'parsoid' ) {
 	}
 
 	wfLoadExtension( 'Parsoid', "$parsoidDir/extension.json" );
-} elseif ( ( $_SERVER['SERVERGROUP'] ?? null ) === 'api_appserver' ) {
+} elseif ( $wmgServerGroup === 'api_appserver' ) {
 	// Parsoid extension needed by core REST /html handler
 	// until T265518 is resolved, but we do not want to expose
 	// Parsoid REST API.
