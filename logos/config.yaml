@@ -99,8 +99,8 @@ Wikipedia:
 
     astwiki:
         comment:  T42285, T131247
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        comment_1_5x:  T150618, T292742
+        comment_2x:  T150618, T292742
 
     aswiki:
         no_1_5x: true
