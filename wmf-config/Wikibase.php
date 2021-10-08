@@ -174,7 +174,7 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['dispatchDefaultDispatchInterval'] = $wmgWikibaseDispatchInterval;
 	$wgWBRepoSettings['dispatchMaxTime'] = $wmgWikibaseDispatchMaxTime;
 	$wgWBRepoSettings['dispatchDefaultBatchSize'] = $wmgWikibaseDispatchDefaultBatchSize;
-	$wgWBRepoSettings['dispatchLagToMaxLagFactor'] = 60;
+	$wgWBRepoSettings['dispatchLagToMaxLagFactor'] = 0;
 
 	if ( isset( $wmgWikibaseDispatchViaJobsEnabled ) && isset( $wmgWikibaseDispatchViaJobsAllowedClients ) ) {
 		$wgWBRepoSettings['dispatchViaJobsEnabled'] = $wmgWikibaseDispatchViaJobsEnabled;
@@ -184,6 +184,12 @@ if ( $wmgUseWikibaseRepo ) {
 			$wgWBRepoSettings['dispatchViaJobsPruneChangesTableInJobEnabled'] =
 				$wmgWikibaseDispatchViaJobsPruneChangesTableInJobEnabled;
 		}
+	}
+	// Explicitly set wikidata to null, since setting null in IS.php just removes it
+	if ( $wgDBname === 'wikidatawiki' ) {
+		$wgWBRepoSettings['dispatchViaJobsAllowedClients'] = null;
+		$wgWBRepoSettings['dispatchViaJobsEnabled'] = true;
+		$wgWBRepoSettings['dispatchViaJobsPruneChangesTableInJobEnabled'] = true;
 	}
 
 	$wgWBRepoSettings['unitStorage'] = [

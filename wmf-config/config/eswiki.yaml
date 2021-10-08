@@ -8,7 +8,6 @@ inheritsFrom:
   - categories-rdf
   - cirrussearch-big-indices
   - closed-labs
-  - gettingstarted-with-category-suggestions
   - large
   - s7
   - securepollglobal

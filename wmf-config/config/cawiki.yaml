@@ -9,7 +9,6 @@ inheritsFrom:
   - cirrussearch-big-indices
   - flow-labs
   - flow
-  - gettingstarted-with-category-suggestions
   - group1-wikipedia
   - large
   - s7

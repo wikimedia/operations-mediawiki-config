@@ -8,7 +8,6 @@ inheritsFrom:
   - categories-rdf
   - cirrussearch-big-indices
   - flaggedrevs
-  - gettingstarted-with-category-suggestions
   - growthexperiments
   - large
   - s7

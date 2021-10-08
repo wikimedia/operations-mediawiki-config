@@ -67,7 +67,7 @@ class MWWikiversions {
 	 */
 	public static function evalDbListExpression( $expr ) {
 		$expr = trim( strtok( $expr, "#\n" ), "% " );
-		$tokens = preg_split( '/ +([-+]) +/m', $expr, 0, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY );
+		$tokens = preg_split( '/ +([-+&]) +/m', $expr, 0, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY );
 		$result = self::readDbListFile( basename( $tokens[0], '.dblist' ) );
 		while ( ( $op = next( $tokens ) ) && ( $term = next( $tokens ) ) ) {
 			$dbs = self::readDbListFile( basename( $term, '.dblist' ) );
@@ -75,6 +75,8 @@ class MWWikiversions {
 				$result = array_unique( array_merge( $result, $dbs ) );
 			} elseif ( $op === '-' ) {
 				$result = array_diff( $result, $dbs );
+			} elseif ( $op === '&' ) {
+				$result = array_intersect( $result, $dbs );
 			}
 		}
 		sort( $result );

@@ -10,7 +10,6 @@ inheritsFrom:
   - flaggedrevs
   - flow-labs
   - flow_only_labs
-  - gettingstarted-with-category-suggestions
   - large
   - pageassessments
   - s1

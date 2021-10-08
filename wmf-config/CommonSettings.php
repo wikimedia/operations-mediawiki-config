@@ -123,12 +123,14 @@ $wmgVersionNumber = $multiVersion->getVersionNumber();
 # be shared between wikis (e.g. does not need to vary by wgDBname).
 $wgCacheDirectory = '/tmp/mw-cache-' . $wmgVersionNumber;
 
+$wmgServerGroup = $_SERVER['SERVERGROUP'] ?? '';
+
 # Whether MediaWiki is running on Kubernetes, intended for config
 # that needs to differ during the migration. On dedicated servers,
 # SERVERGROUP is set by Puppet in profile::mediawiki::httpd, in
 # Kubernetes pods, it's set by configuring the php.servergroup
 # Helm value.
-$wmfUsingKubernetes = strpos( ( $_SERVER['SERVERGROUP'] ?? null ), 'kube-' ) === 0;
+$wmfUsingKubernetes = strpos( $wmgServerGroup, 'kube-' ) === 0;
 
 # Get all the service definitions
 $wmfAllServices = ServiceConfig::getInstance()->getAllServices();
@@ -343,7 +345,7 @@ $wgAPIMaxLagThreshold = 3;
 # Allow different memory_limit settings for Parsoid/PHP servers (T236833)
 # keep in sync with php7-fatal-error.php in operations/puppet
 # and with wmf-config/logging.php
-if ( ( $_SERVER['SERVERGROUP'] ?? null ) === 'parsoid' ) {
+if ( $wmgServerGroup === 'parsoid' ) {
 	ini_set( 'memory_limit', $wmgMemoryLimitParsoid );
 } else {
 	ini_set( 'memory_limit', $wmgMemoryLimit );
@@ -1350,14 +1352,14 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 	$wgExtDistDefaultSnapshot = 'REL1_36';
 
 	// Current development snapshot
-	// $wgExtDistCandidateSnapshot = 'REL1_36';
+	$wgExtDistCandidateSnapshot = 'REL1_37';
 
 	// Available snapshots
 	$wgExtDistSnapshotRefs = [
 		'master',
+		'REL1_37',
 		'REL1_36',
 		'REL1_35',
-		'REL1_31',
 	];
 
 	// Use Graphite for popular list
@@ -2787,7 +2789,7 @@ if ( $wmgUseWikiLove ) {
 	$wgDefaultUserOptions['wikilove-enabled'] = 1;
 }
 
-if ( $wmgUseGuidedTour || $wmgUseGettingStarted ) {
+if ( $wmgUseGuidedTour ) {
 	wfLoadExtension( 'GuidedTour' );
 }
 
@@ -3403,12 +3405,6 @@ if ( $wmgUseScribunto ) {
 if ( $wmgUseSubpageSortkey ) {
 	wfLoadExtension( 'SubpageSortkey' );
 	$wgSubpageSortkeyByNamespace = $wmgSubpageSortkeyByNamespace;
-}
-
-if ( $wmgUseGettingStarted ) {
-	wfLoadExtension( 'GettingStarted' );
-	$wgGettingStartedRedis = $wgObjectCaches['redis_master']['servers'][0];
-	$wgGettingStartedRedisOptions['password'] = $wmgRedisPassword;
 }
 
 if ( $wmgUseGeoCrumbs ) {
@@ -4085,7 +4081,7 @@ if ( $wmgUseEventBus ) {
 		];
 	}
 
-	if ( ( $_SERVER['SERVERGROUP'] ?? null ) === 'jobrunner' || ( $_SERVER['SERVERGROUP'] ?? null ) === 'videoscaler' ) {
+	if ( $wmgServerGroup === 'jobrunner' || $wmgServerGroup === 'videoscaler' ) {
 		$wgEventBusEnableRunJobAPI = true;
 	} else {
 		$wgEventBusEnableRunJobAPI = false;
@@ -4306,29 +4302,16 @@ $wgParsoidSettings = [
 	'linting' => true,
 	'nativeGalleryEnabled' => false,  // T214649
 ];
-if ( ( $_SERVER['SERVERGROUP'] ?? null ) === 'parsoid' ) {
-	if ( wfHostName() === 'scandium' ) {
-		// Scandium has its own special check out of parsoid for testing.
-		$parsoidDir = __DIR__ . "/../../parsoid-testing";
-		// Override settings specific to round-trip testing on scandium
-		require_once "$parsoidDir/tests/RTTestSettings.php";
-	}
-
-	wfLoadExtension( 'Parsoid', "$parsoidDir/extension.json" );
-} elseif ( ( $_SERVER['SERVERGROUP'] ?? null ) === 'api_appserver' ) {
-	// Parsoid extension needed by core REST /html handler
-	// until T265518 is resolved, but we do not want to expose
-	// Parsoid REST API.
-	$wgParsoidEnableREST = false;
-	wfLoadExtension( 'Parsoid', "$parsoidDir/extension.json" );
+if ( $wmgServerGroup === 'parsoid' && wfHostName() === 'scandium' ) {
+	// Scandium has its own special check out of parsoid for testing.
+	$parsoidDir = __DIR__ . "/../../parsoid-testing";
+	// Override settings specific to round-trip testing on scandium
+	require_once "$parsoidDir/tests/RTTestSettings.php";
 }
+
+wfLoadExtension( 'Parsoid', "$parsoidDir/extension.json" );
 unset( $parsoidDir );
 // End of temporary hack for hooking up Parsoid/PHP with MediaWiki
-
-# Part of the HHVM => PHP7.2 migration. Adds an array of unicode chars
-# that have broken uppercasing in HHVM. In this phase, we want php7 to behave
-# like HHVM. See T219279 for details.
-$wgOverrideUcfirstCharacters = include __DIR__ . '/Php72ToUpper.php';
 
 # Temporary, until T112147 is done
 # Assign everything assigned to suppressors to oversighters

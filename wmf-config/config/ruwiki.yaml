@@ -10,7 +10,6 @@ inheritsFrom:
   - commonsuploads
   - flaggedrevs
   - flow-labs
-  - gettingstarted-with-category-suggestions
   - growthexperiments
   - large
   - s6

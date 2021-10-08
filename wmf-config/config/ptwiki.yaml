@@ -7,7 +7,6 @@ inheritsFrom:
   - categories-rdf
   - cirrussearch-big-indices
   - flow
-  - gettingstarted-with-category-suggestions
   - growthexperiments
   - large
   - s2

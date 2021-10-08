@@ -606,6 +606,7 @@ function wmfGetVariantSettings() {
 	'mediawikiwiki' => '/static/images/mobile/copyright/mediawiki.svg',
 	'officewiki' => '/static/images/mobile/copyright/wikimedia.svg',
 	'specieswiki' => '/static/images/mobile/copyright/wikispecies.svg',
+	'wikimaniawiki' => '/static/images/mobile/copyright/wikimania.svg',
 ],
 
 'wmgSiteLogoVariants' => [
@@ -690,6 +691,11 @@ function wmfGetVariantSettings() {
 		'width' => 79,
 		'height' => 22,
 	],
+	'azwiki' => [ // T284877
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-az.svg',
+		'width' => 119,
+		'height' => 18,
+	],
 	'atjwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-atj.svg',
 		'width' => 129,
@@ -719,6 +725,11 @@ function wmfGetVariantSettings() {
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ca.svg',
 		'width' => 120,
 		'height' => 23,
+	],
+	'ckbwiki' => [ // T288368
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ckb.svg',
+		'width' => 110,
+		'height' => 30,
 	],
 	'cswiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-cs.svg',
@@ -964,6 +975,11 @@ function wmfGetVariantSettings() {
 	],
 
 	// Wikiquote
+	'trwikiquote' => [ // T286133
+		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-tr.svg',
+		'width' => 119,
+		'height' => 45,
+	],
 
 	// Wikibooks
 
@@ -1041,6 +1057,11 @@ function wmfGetVariantSettings() {
 	],
 	'testwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-en.svg',
+		'width' => 119,
+		'height' => 18,
+	],
+	'wikimaniawiki' => [
+		'src' => '/static/images/mobile/copyright/wikimania-wordmark.svg',
 		'width' => 119,
 		'height' => 18,
 	],
@@ -3991,6 +4012,9 @@ function wmfGetVariantSettings() {
 		'Dyskusja_wikipedystki' => NS_USER_TALK,
 		'WB' => NS_PROJECT,
 	],
+	'+plwikinews' => [
+		'WN' => NS_PROJECT, // T291344
+	],
 	'+plwikisource' => [
 		'WS' => NS_PROJECT,
 		'Author' => 104,
@@ -5390,7 +5414,6 @@ function wmfGetVariantSettings() {
 		'formatnum' => 'info', // - cscott 2020/11/09 for T267587/T267370
 		'FSFileBackend' => 'debug', // - gilles for T75229
 		'generated-pp-node-count' => 'debug',
-		'GettingStarted' => 'debug',
 		'GlobalTitleFail' => [ 'sample' => 10000 ], // chad hates $wgTitle
 		'GlobalWatchlist' => 'info', // T260862
 		'goodpass' => 'debug',
@@ -7823,22 +7846,10 @@ function wmfGetVariantSettings() {
 	'desktop-improvements' => true,
 ],
 
-'wgVectorConsolidateUserLinks' => [
+'wgVectorStickyHeader' => [
 	'default' => [
-		'logged_in' => true,
+		'logged_in' => false,
 		'logged_out' => false,
-	],
-	'desktop-improvements' => [
-		'logged_in' => true,
-		'logged_out' => true,
-	],
-	'officewiki' => [
-		'logged_in' => true,
-		'logged_out' => true,
-	],
-	'testwiki' => [
-		'logged_in' => true,
-		'logged_out' => true,
 	],
 ],
 
@@ -13913,6 +13924,7 @@ function wmfGetVariantSettings() {
 	'pflwiki' => false, // T205055
 	'rmwiki' => false,
 	'thankyouwiki' => false,
+	'viwikibooks' => false, // T289837
 	'zhwiki' => false,
 ],
 
@@ -15309,6 +15321,7 @@ function wmfGetVariantSettings() {
 	'pswiki' => true, // T121132
 	'ptwiki' => true, // T269290
 	'ptwikinews' => true, // T282845
+	'ptwikivoyage' => true, // T290820
 	'ptwiktionary' => true, // T46412
 	'rowiki' => true,
 	'rowikinews' => true,
@@ -15935,6 +15948,8 @@ function wmfGetVariantSettings() {
 		'*.happysrv.de', // T288039
 		'*.wikimedia.es', // Wikimedia Spain - T289446
 		'portrattarkiv.se', // Swedish Portrait Archive - T290581
+		'ia-upload.wmcloud.org', // T287241 - IA-Upload tool
+		'wikisource-bot.toolforge.org', // Wikisource-bot tool - T292213
 	],
 ],
 
@@ -19442,89 +19457,6 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
-'wmgUseGettingStarted' => [
-	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'astwiki' => true,
-	'bswiki' => true,
-	'cawiki' => true,
-	'dawiki' => true,
-	'dewiki' => true,
-	'elwiki' => true,
-	'enwiki' => true,
-	'eswiki' => true,
-	'fawiki' => true,
-	'frwiki' => true,
-	'fowiki' => true,
-	'glwiki' => true,
-	'hewiki' => true,
-	'huwiki' => true,
-	'iswiki' => true,
-	'itwiki' => true,
-	'jawiki' => true,
-	'kowiki' => true,
-	'lbwiki' => true,
-	'mkwiki' => true,
-	'mlwiki' => true,
-	'nlwiki' => true,
-	'plwiki' => true,
-	'ptwiki' => true,
-	'ruwiki' => true,
-	'simplewiki' => true,
-	'svwiki' => true,
-	'viwiki' => true,
-	'ukwiki' => true,
-	'zhwiki' => true,
-],
-'wgGettingStartedCategoriesForTaskTypes' => [
-	'default' => [],
-	'cawiki' => [
-		'copyedit' => 'Categoria:Articles amb ortografia per millorar',
-	],
-	'enwiki' => [
-		'copyedit' => 'Category:All articles needing copy edit',
-	],
-	'eswiki' => [
-		'copyedit' => 'Categoría:Wikipedia:Copyedit',
-	],
-	'ptwiki' => [
-		'copyedit' => 'Categoria:!Páginas a corrigir',
-	],
-	'simplewiki' => [
-		'copyedit' => 'Category:Pages in need of copyedit',
-	],
-	'svwiki' => [
-		'copyedit' => 'Kategori:Wikipedia:Språkvård-samtliga',
-	],
-	'ukwiki' => [
-		'copyedit' => 'Категорія:Статті, що потребують вичитки',
-	],
-	'zhwiki' => [
-		'copyedit' => 'Category:需要校對的頁面',
-	],
-],
-'wgGettingStartedExcludedCategories' => [
-	'default' => [],
-	'astwiki' => [ 'Categoría:Persones vives' ],
-	'bswiki' => [ 'Kategorija:Živi ljudi' ],
-	'cawiki' => [ 'Categoria:Persones vives' ],
-	'dawiki' => [ 'Kategori:Levende personer' ],
-	'enwiki' => [ 'Category:Living people' ],
-	'eswiki' => [ 'Categoría:Personas vivas' ],
-	'fawiki' => [ 'رده:افراد زنده' ],
-	'itwiki' => [ 'Categoria:Persone viventi' ],
-	'kowiki' => [ '분류:살아있는 사람' ],
-	'mkwiki' => [ 'Категорија:Живи луѓе' ],
-	'mlwiki' => [ 'വർഗ്ഗം:ജീവിച്ചിരിക്കുന്ന പ്രമുഖർ' ],
-	'ptwiki' => [ 'Categoria:Pessoas vivas' ],
-	'ruwiki' => [ 'Категория:Ныне живущие' ],
-	'simplewiki' => [ 'Category:Living people' ],
-	'svwiki' => [ 'Kategori:Levande personer' ],
-	'ukwiki' => [ 'Категорія:Нині живуть' ],
-	'viwiki' => [ 'Thể loại:Nhân vật còn sống' ],
-	'zhwiki' => [ 'Category:在世人物' ],
-],
 'wmgUseGuidedTour' => [
 	'default' => true,
 	'lockeddown' => false,
@@ -19869,38 +19801,17 @@ function wmfGetVariantSettings() {
 
 'wgDiscussionTools_replytool' => [
 	// Keep in sync with wgDiscussionTools_sourcemodetoolbar below
-	'default' => 'default',
-	'afwiki' => 'available', // T288483
-	'amwiki' => 'available', // T288483
-	'arwiki' => 'available', // T249394
-	'arzwiki' => 'available', // T288483
-	'bnwiki' => 'available', // T288483
-	'cswiki' => 'available', // T249394
-	'eswiki' => 'available', // T288483
-	'fawiki' => 'available', // T288483
-	'hewiki' => 'available', // T288483
-	'hiwiki' => 'available', // T288483
-	'huwiki' => 'available', // T249394
-	'idwiki' => 'available', // T288483
-	'itwiki' => 'available', // T288483
-	'jawiki' => 'available', // T288483
-	'kowiki' => 'available', // T288483
-	'nlwiki' => 'available', // T288483
-	'omwiki' => 'available', // T288483
-	'plwiki' => 'available', // T288483
-	'ptwiki' => 'available', // T288483
-	'swwiki' => 'available', // T288483
-	'thwiki' => 'available', // T288483
-	'ukwiki' => 'available', // T288483
-	'viwiki' => 'available', // T288483
-	'zhwiki' => 'available', // T288483
-	'apiportalwiki' => 'available', // T260624
-	'gomwiktionary' => 'available', // T258554
-	'enwikibooks' => 'available', // T276851
-	'ptwikinews' => 'available', // T285162
-	'wikimaniawiki' => 'available', // T284339
-	'officewiki' => 'available', // T277103
-	'wikitech' => 'available', // T283119
+	// T288485
+	'default' => 'available',
+	'commonswiki' => 'default',
+	'metawiki' => 'default',
+	'mediawikiwiki' => 'default',
+	'specieswiki' => 'default',
+	'enwiki' => 'default',
+	'fiwiki' => 'default',
+	'frwiki' => 'default',
+	'ruwiki' => 'default',
+	'dewiki' => 'default',
 ],
 
 'wgDiscussionTools_newtopictool' => [
@@ -19915,38 +19826,16 @@ function wmfGetVariantSettings() {
 	// However, it must be marked as 'available' only on wikis where 'wgDiscussionTools_replytool'
 	// or 'wgDiscussionTools_newtopictool' is 'available'. Otherwise it will cause the reply tool
 	// to be always loaded, even when it's not supposed to be available.
-	'default' => 'default',
-	'afwiki' => 'available',
-	'amwiki' => 'available',
-	'arwiki' => 'available',
-	'arzwiki' => 'available',
-	'bnwiki' => 'available',
-	'cswiki' => 'available',
-	'eswiki' => 'available',
-	'fawiki' => 'available',
-	'hewiki' => 'available',
-	'hiwiki' => 'available',
-	'huwiki' => 'available',
-	'idwiki' => 'available',
-	'itwiki' => 'available',
-	'jawiki' => 'available',
-	'kowiki' => 'available',
-	'nlwiki' => 'available',
-	'omwiki' => 'available',
-	'plwiki' => 'available',
-	'ptwiki' => 'available',
-	'swwiki' => 'available',
-	'thwiki' => 'available',
-	'ukwiki' => 'available',
-	'viwiki' => 'available',
-	'zhwiki' => 'available',
-	'apiportalwiki' => 'available',
-	'gomwiktionary' => 'available',
-	'enwikibooks' => 'available',
-	'ptwikinews' => 'available',
-	'wikimaniawiki' => 'available',
-	'officewiki' => 'available',
-	'wikitech' => 'available',
+	'default' => 'available',
+	'commonswiki' => 'default',
+	'metawiki' => 'default',
+	'mediawikiwiki' => 'default',
+	'specieswiki' => 'default',
+	'enwiki' => 'default',
+	'fiwiki' => 'default',
+	'frwiki' => 'default',
+	'ruwiki' => 'default',
+	'dewiki' => 'default',
 ],
 
 'wgDiscussionTools_topicsubscription' => [
@@ -20161,7 +20050,6 @@ function wmfGetVariantSettings() {
 	"krcwiki" => true,
 	"kshwiki" => true,
 	"kswiki" => true,
-	"kuwiki" => true,
 	"kvwiki" => true,
 	"kwwiki" => true,
 	"ladwiki" => true,
@@ -20398,19 +20286,16 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'testwiki' => true,
 	'bnwiki' => true, // T271397
+	'hawiki' => true, // T290175
+	'igwiki' => true, // T290175
+	'kuwiki' => true, // T290238
 	'thwiki' => true, // T290175
-],
-
-// ToDo: Remove this later (T290302)
-'wgSectionTranslationTargetLanguage' => [
-	'default' => null,
-	'bnwiki' => 'bn',
-	'thwiki' => 'th',
+	'yowiki' => true, // T290175
 ],
 
 'wgSectionTranslationTargetLanguages' => [
 	'default' => null,
-	'wikipedia' => [ 'bn', 'th' ],
+	'wikipedia' => [ 'bn', 'ha', 'ig', 'ku', 'th', 'yo' ],
 ],
 
 'wmgUseExternalGuidance' => [
@@ -21305,6 +21190,11 @@ function wmfGetVariantSettings() {
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
+			'stream' => 'android.daily_stats',
+			'schema_title' => 'analytics/mobile_apps/android_daily_stats',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
 			'stream' => 'mediawiki.mediasearch_interaction',
 			'schema_title' => 'analytics/mediawiki/mediasearch_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -21312,6 +21202,11 @@ function wmfGetVariantSettings() {
 		[
 			'stream' => 'mediawiki.structured_task.article.link_suggestion_interaction',
 			'schema_title' => 'analytics/mediawiki/structured_task/article/link_suggestion_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		[
+			'stream' => 'mediawiki.structured_task.article.image_suggestion_interaction',
+			'schema_title' => 'analytics/mediawiki/structured_task/article/image_suggestion_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		[
@@ -21708,6 +21603,7 @@ function wmfGetVariantSettings() {
 		'mediawiki.content_translation_event',
 		'mediawiki.mediasearch_interaction',
 		'mediawiki.structured_task.article.link_suggestion_interaction',
+		'mediawiki.structured_task.article.image_suggestion_interaction',
 		'mediawiki.pref_diff',
 		'test.instrumentation',
 		'test.instrumentation.sampled',
@@ -22022,7 +21918,7 @@ function wmfGetVariantSettings() {
 'wmgWikibaseDispatchViaJobsAllowedClients' => [
 	'default' => [],
 	'testwikidatawiki' => [ 'testwikidatawiki', 'testwiki', 'test2wiki', 'testcommonswiki' ],
-	'wikidatawiki' => [ 'mediawikiwiki' ],
+	'wikidatawiki' => null,
 ],
 
 'wmgWikibaseCachePrefix' => [
@@ -25305,17 +25201,24 @@ function wmfGetVariantSettings() {
 	'default' => false,
 ],
 
+// Which licensing/copyright message overrides to use in the WikimediaMessages extension
+'wgWikimediaMessagesLicensing' => [
+	'default' => 'standard',
+	'wikinews' => 'wikinews',
+	'wikidata' => 'wikidata',
+	'commonswiki' => 'commons',
+	'testcommonswiki' => 'commons',
+],
 'wgRightsPage' => [
 	// Default: Use wgRightsUrl
 	'default' => null,
 	// Wikidata footer, T112606
 	'wikidata' => 'Wikidata:Copyright',
 ],
-
 'wgRightsUrl' => [
-	'default' => '//creativecommons.org/licenses/by-sa/3.0/',
-	'huwikinews' => '//creativecommons.org/licenses/by/3.0/',
-	'wikinews' => '//creativecommons.org/licenses/by/2.5/',
+	'default' => 'https://creativecommons.org/licenses/by-sa/3.0/',
+	'huwikinews' => 'https://creativecommons.org/licenses/by/3.0/',
+	'wikinews' => 'https://creativecommons.org/licenses/by/2.5/',
 ],
 'wgRightsText' => [
 	'default' => 'Creative Commons Attribution-Share Alike 3.0',
@@ -25326,6 +25229,7 @@ function wmfGetVariantSettings() {
 		'the Creative Commons CC0 License; text in the other namespaces is available under ' .
 		'the Creative Commons Attribution-ShareAlike License; additional terms may apply.',
 ],
+
 'wgSessionCacheType' => [
 	'default' => 'kask-session',
 ],
@@ -25980,7 +25884,6 @@ function wmfGetVariantSettings() {
 // T280944
 'wgIncludejQueryMigrate' => [
 	'default' => false,
-	'metawiki' => true,
 ],
 'wgXmlDumpSchemaVersion' => [
 	'default' => XML_DUMP_SCHEMA_VERSION_10,
@@ -26072,6 +25975,7 @@ function wmfGetVariantSettings() {
 'wmgUseGrowthExperiments' => [
 	'default' => false,
 	'testwiki' => true,
+	'test2wiki' => true,
 	'abwiki' => true,
 	'acewiki' => true,
 	'adywiki' => true,
@@ -26392,9 +26296,6 @@ function wmfGetVariantSettings() {
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
 
-	// pending templates for easy tasks or T278825
-	'shwiki' => false,
-
 	// pending visual editor (see T287878#7267554)
 	'kkwiki' => false,
 ],
@@ -26555,18 +26456,17 @@ function wmfGetVariantSettings() {
 'wgGEHomepageNewAccountEnablePercentage' => [
 	'default' => 100,
 	'testwiki' => 0,
+	'test2wiki' => 0,
 
 	// special treatment wikis
-	'dewiki' => 30,
 	'enwiki' => 25, // T281896, T290927
-	'nlwiki' => 50,
 
 	// large wikis with more than 500 registrations per months (T289786)
 	'arwiki' => 80,
 	'azwiki' => 80,
 	'bnwiki' => 80,
 	'cswiki' => 80,
-	// 'dewiki' => 80, // special treatment wiki
+	'dewiki' => 80,
 	'elwiki' => 80,
 	// 'enwiki' => 80, // special treatment wiki
 	'eswiki' => 80,
@@ -26580,7 +26480,7 @@ function wmfGetVariantSettings() {
 	'itwiki' => 80,
 	'jawiki' => 80,
 	'kowiki' => 80,
-	// 'nlwiki' => 80, // special treatment wiki
+	'nlwiki' => 80,
 	'nowiki' => 80,
 	'plwiki' => 80,
 	'ptwiki' => 80,
@@ -26708,20 +26608,24 @@ function wmfGetVariantSettings() {
 ],
 
 'wgGEMentorDashboardEnabled' => [
-	// not ready for deployment yet
+	// deployment requires Growth team approval
 	'default' => false,
 	'testwiki' => true,
+
+	// Growth pilot wikis
+	'arwiki' => true,
+	'bnwiki' => true,
+	'cswiki' => true,
 ],
 
 'wgGEMentorDashboardBetaMode' => [
+	// do not enable outside of testwikis
 	'default' => false,
 	'testwiki' => true,
 ],
 
 'wgGEMentorDashboardDiscoveryEnabled' => [
-	// not ready for deployment yet
-	'default' => false,
-	'testwiki' => true,
+	'default' => true,
 ],
 
 'wgGEMentorDashboardBackendEnabled' => [
@@ -26734,7 +26638,6 @@ function wmfGetVariantSettings() {
 	'arwiki' => true,
 	'bnwiki' => true,
 	'cswiki' => true,
-	'viwiki' => true,
 
 	// test wikis
 	'testwiki' => true,
@@ -27530,10 +27433,21 @@ function wmfGetVariantSettings() {
 
 'wgParserEnableLegacyMediaDOM' => [
 	'default' => true,
-	'testwiki' => false,
+	'group0' => false,
 	'test2wiki' => false,
-	'officewiki' => false,
-	'mediawikiwiki' => false,
+	'wikitech' => false,
+	// Careful with these, since they can partake in cross-wiki inclusion.
+	// See T51097#7401266
+	'metawiki' => true,
+	'commonswiki' => true,
+],
+
+'wgUseContentMediaStyles' => [
+	'default' => false,
+	// Continue to serve these styles on metawiki since we've previsouly
+	// disabled $wgParserEnableLegacyMediaDOM there and cached content may
+	// still need styling.
+	'metawiki' => true,
 ],
 
 ];
