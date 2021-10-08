@@ -119,7 +119,7 @@ function wmfStaticRespond() {
 	global $wgScriptPath, $IP;
 
 	if ( !isset( $_SERVER['REQUEST_URI'] ) || !isset( $_SERVER['SCRIPT_NAME'] ) ) {
-		wmfStaticShowError( 'Invalid request', 500 );
+		wmfStaticShowError( 'Bad request', 400 );
 		return;
 	}
 
