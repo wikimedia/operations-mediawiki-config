@@ -584,40 +584,78 @@ function wmfGetLabsOverrideSettings() {
 		'wgQuickSurveysConfig' => [
 			'default' => [
 				[
-					'name' => 'drink-survey',
-					'type' => 'internal',
-					'question' => 'anne-survey-question',
-					'answers' => [
-						'anne-survey-answer-one',
-						'anne-survey-answer-two',
-						'anne-survey-answer-three',
-						'anne-survey-answer-four'
-					],
-					'schema' => 'QuickSurveysResponses',
-					'enabled' => true,
-					'coverage' => 0,
-					'description' => 'anne-survey-description',
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable', 'beta' ],
-					],
-				],
-				[
 					'name' => 'internal example survey',
 					'type' => 'internal',
+					'layout' => 'single-answer',
 					'question' => 'ext-quicksurveys-example-internal-survey-question',
 					'answers' => [
 						'ext-quicksurveys-example-internal-survey-answer-positive',
 						'ext-quicksurveys-example-internal-survey-answer-neutral',
 						'ext-quicksurveys-example-internal-survey-answer-negative',
 					],
-					'schema' => 'QuickSurveysResponses',
 					'enabled' => true,
 					'coverage' => 0,
 					'platforms' => [
 						'desktop' => [ 'stable' ],
 						'mobile' => [ 'stable', 'beta' ],
 					],
+				],
+				[
+					'name' => 'internal example survey with description and freeform text',
+					'type' => 'internal',
+					'layout' => 'single-answer',
+					'question' => 'ext-quicksurveys-example-internal-survey-question',
+					'answers' => [
+						'ext-quicksurveys-example-internal-survey-answer-positive',
+						'ext-quicksurveys-example-internal-survey-answer-neutral',
+						'ext-quicksurveys-example-internal-survey-answer-negative',
+					],
+					'description' => 'ext-quicksurveys-example-internal-survey-description',
+					'freeformTextLabel' => 'ext-quicksurveys-example-internal-survey-freeform-text-label',
+					'enabled' => true,
+					'coverage' => 0,
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable', 'beta' ],
+					],
+				],
+				[
+					'name' => 'internal multiple answer example survey',
+					'type' => 'internal',
+					'layout' => 'multiple-answer',
+					'question' => 'ext-quicksurveys-example-internal-survey-question',
+					'answers' => [
+						'ext-quicksurveys-example-internal-survey-answer-positive',
+						'ext-quicksurveys-example-internal-survey-answer-neutral',
+						'ext-quicksurveys-example-internal-survey-answer-negative',
+					],
+					'enabled' => true,
+					'coverage' => 0,
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable', 'beta' ],
+					],
+					'shuffleAnswersDisplay' => true,
+				],
+				[
+					'name' => 'internal multiple answer example survey with description and freeform text',
+					'type' => 'internal',
+					'layout' => 'multiple-answer',
+					'question' => 'ext-quicksurveys-example-internal-survey-question',
+					'answers' => [
+						'ext-quicksurveys-example-internal-survey-answer-positive',
+						'ext-quicksurveys-example-internal-survey-answer-neutral',
+						'ext-quicksurveys-example-internal-survey-answer-negative',
+					],
+					'description' => 'ext-quicksurveys-example-internal-survey-description',
+					'freeformTextLabel' => 'ext-quicksurveys-example-internal-survey-freeform-text-label',
+					'enabled' => true,
+					'coverage' => 0,
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable', 'beta' ],
+					],
+					'shuffleAnswersDisplay' => true,
 				],
 				[
 					'name' => 'external example survey',
