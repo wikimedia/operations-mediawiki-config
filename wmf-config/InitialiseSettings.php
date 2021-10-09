@@ -10458,6 +10458,7 @@ function wmfGetVariantSettings() {
 			'autopatrol' => true,
 			'editautoreviewprotected' => true,
 			'movefile' => true, // T161532
+			'extendedconfirmed' => true, // T292912
 		],
 		'eliminator' => [
 			'browsearchive' => true,
