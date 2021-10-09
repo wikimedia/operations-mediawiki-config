@@ -10495,6 +10495,7 @@ function wmfGetVariantSettings() {
 		],
 		'flood' => [ 'bot' => true, ], // T228521
 		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T281860
+		'autoextendedconfirmed' => [ 'extendedconfirmed' => true ], // T292915
 	],
 	'+ptwikinews' => [
 		'editprotected' => [
@@ -14857,6 +14858,12 @@ function wmfGetVariantSettings() {
 			[ APCOND_AGE, 90 * 86400 ],
 		],
 	],
+	'ptwiki' => [
+		'autoextendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 30 * 86400 ], // 30 days
+		],
+	], // T292915
 	'ruwikiversity' => [
 		'patroller' => [ '&',
 			[ APCOND_EDITCOUNT, 1000 ],
@@ -14930,14 +14937,6 @@ function wmfGetVariantSettings() {
 			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
 			[ '!', [ APCOND_INGROUPS, 'bureaucrat' ] ],
 		], // T187187
-	],
-	'ptwiki' => [
-		'extendedconfirmed' => [ '&',
-			[ APCOND_EDITCOUNT, 500 ],
-			[ APCOND_AGE, 30 * 86400 ], // 30 days
-			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
-			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
-		], // T281926
 	],
 	'rowiki' => [
 		'extendedconfirmed' => [ '&',
@@ -15022,6 +15021,7 @@ function wmfGetVariantSettings() {
 'wmgExtraImplicitGroups' => [
 	'default' => false,
 	'frwiki' => [ 'autopatrolled' ],
+	'ptwiki' => [ 'autoextendedconfirmed' ], // T292915
 ],
 
 'wgDeleteRevisionsLimit' => [
