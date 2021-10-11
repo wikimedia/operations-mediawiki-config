@@ -2,7 +2,7 @@
 
 class MWMultiVersionTest extends PHPUnit\Framework\TestCase {
 
-	protected function tearDown() : void {
+	protected function tearDown(): void {
 		MWMultiversion::destroySingleton();
 		parent::tearDown();
 	}

@@ -92,7 +92,7 @@ class CauseFatalError {
 		} elseif ( $from === 'shutdown' ) {
 			register_shutdown_function( $actionMethod );
 		} elseif ( $from === 'destruct' ) {
-			$obj = new CauseFatalErrorFromLateDestruct( function () use ( $actionMethod ) {
+			$obj = new CauseFatalErrorFromLateDestruct( static function () use ( $actionMethod ) {
 				$actionMethod();
 			} );
 		} else {

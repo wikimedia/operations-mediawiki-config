@@ -119,7 +119,7 @@ function wmfSetupTideways( $options ) {
 		 */
 		if ( $profileToXhgui ) {
 			// XHGui save callback
-			$saveCallback = function () use ( $options ) {
+			$saveCallback = static function () use ( $options ) {
 				// XHGui used to use MongoDB.  Even though we're now using MariaDB,
 				// the MongoDate class from mongofill remains.  Despite its name,
 				// there is no MongoDB-specific functionality in it.
@@ -244,12 +244,12 @@ function wmfSetupExcimer( $options ) {
 	}
 
 	$cpuProf->setFlushCallback(
-		function ( $log ) use ( $options, $redisChannel ) {
+		static function ( $log ) use ( $options, $redisChannel ) {
 			wmfExcimerFlushCallback( $log, $options, $redisChannel );
 		},
 		/* $maxSamples = */ 1 );
 	$realProf->setFlushCallback(
-		function ( $log ) use ( $options, $redisChannel ) {
+		static function ( $log ) use ( $options, $redisChannel ) {
 			wmfExcimerFlushCallback( $log, $options, $redisChannel . '-wall' );
 		},
 		/* $maxSamples = */ 1 );

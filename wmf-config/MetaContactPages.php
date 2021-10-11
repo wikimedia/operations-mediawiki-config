@@ -5,7 +5,7 @@
  * @see T95789
  */
 
-$wgHooks['ContactForm'][] = function (
+$wgHooks['ContactForm'][] = static function (
 	&$to, $reply, &$subject, &$text, $par, $data
 ) {
 	if ( $par === 'affcomusergroup' ) {
@@ -71,7 +71,7 @@ $wgContactConfig['affcomusergroup'] = [
 			'contactpage-email-label' => 'Terms',
 			'type' => 'check',
 			'required' => true,
-			'validation-callback' => function ( $value ) {
+			'validation-callback' => static function ( $value ) {
 				return (bool)$value;
 			}
 		]
@@ -221,7 +221,7 @@ $wgContactConfig['movecomsignup'] = [
 			'label-message' => 'contactpage-movecom-signup-terms-label',
 			'type' => 'check',
 			'required' => true,
-			'validation-callback' => function ( $value ) {
+			'validation-callback' => static function ( $value ) {
 				return (bool)$value;
 			}
 		]

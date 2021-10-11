@@ -3,7 +3,7 @@
 class NocHighlightTest extends PHPUnit\Framework\TestCase {
 	private $created = [];
 
-	protected function setUp() : void {
+	protected function setUp(): void {
 		parent::setUp();
 
 		$common = dirname( dirname( __DIR__ ) );
@@ -35,7 +35,7 @@ class NocHighlightTest extends PHPUnit\Framework\TestCase {
 		symlink( "$wmfConfigDir/ExampleValid.php", "{$this->nocConfDir}/ExampleValid.php.txt" );
 	}
 
-	protected function tearDown() : void {
+	protected function tearDown(): void {
 		foreach ( $this->created as $created ) {
 			unlink( $created );
 		}

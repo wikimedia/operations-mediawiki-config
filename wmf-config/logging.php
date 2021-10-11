@@ -93,8 +93,8 @@ $wmgMonologProcessors = [
 		'class' => \Monolog\Processor\PsrLogMessageProcessor::class,
 	],
 	'wmfconfig' => [
-		'factory' => function () {
-			return function ( array $record ) {
+		'factory' => static function () {
+			return static function ( array $record ) {
 				// T253677: Like Monolog\Processor\WebProcessor, but without unique_id
 				// Ref <https://github.com/Seldaek/monolog/issues/1470>.
 				// Ref <https://github.com/Seldaek/monolog/blob/1.5.0/src/Monolog/Processor/WebProcessor.php>
@@ -312,7 +312,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 				$wmgMonologConfig['handlers'][$sampledHandler] = [
 					'class' => \Monolog\Handler\SamplingHandler::class,
 					'args' => [
-						function () use ( $handlerName ) {
+						static function () use ( $handlerName ) {
 							return LoggerFactory::getProvider()->getHandler(
 								$handlerName
 							);
@@ -334,7 +334,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 				$wmgMonologConfig['handlers'][$bufferedHandler] = [
 					'class' => \MediaWiki\Logger\Monolog\BufferHandler::class,
 					'args' => [
-						function () use ( $handlerName ) {
+						static function () use ( $handlerName ) {
 							return LoggerFactory::getProvider()->getHandler(
 								$handlerName
 							);
@@ -354,7 +354,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 			$wmgMonologConfig['handlers'][$failureGroupHandler] = [
 				'class' => \Monolog\Handler\WhatFailureGroupHandler::class,
 				'args' => [
-					function () use ( $handlers ) {
+					static function () use ( $handlers ) {
 						$provider = LoggerFactory::getProvider();
 						return array_map(
 							[ $provider, 'getHandler' ],

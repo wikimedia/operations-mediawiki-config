@@ -8,7 +8,6 @@
 # The real file is stored in a private Git repository on the
 # deployment host that overlaps this directory.
 
-
 /************************************************************************
  * @name Settings for MediaWiki core and extension (wg-)
  * @{

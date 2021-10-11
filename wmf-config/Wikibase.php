@@ -274,7 +274,7 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['namespaces'] = $wmgWikibaseClientNamespacesWithRepoAccess;
 
-	$wgWBClientSettings['excludeNamespaces'] = function () {
+	$wgWBClientSettings['excludeNamespaces'] = static function () {
 		global $wgDBname, $wgProofreadPageNamespaceIds;
 
 		$namespaceInfo = MediaWikiServices::getInstance()->getNamespaceInfo();

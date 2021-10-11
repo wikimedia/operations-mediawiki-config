@@ -14,7 +14,7 @@
 #
 
 $wgCirrusSearchClusters = [
-	'eqiad' => array_map( function ( $host ) {
+	'eqiad' => array_map( static function ( $host ) {
 		return [
 			'transport' => 'Https',
 			'port' => '9243',

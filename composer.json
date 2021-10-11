@@ -2,11 +2,12 @@
 	"name": "wikimedia/mediawiki-config",
 	"description": "MediaWiki configuration for the Wikimedia farm",
 	"require-dev": {
-		"jakub-onderka/php-parallel-lint": "1.0.0",
-		"mediawiki/mediawiki-codesniffer": "29.0.0",
+		"php-parallel-lint/php-parallel-lint": "1.3.1",
+		"mediawiki/mediawiki-codesniffer": "37.0.0",
+		"phpunit/php-token-stream": "^3.1",
 		"phpunit/phpunit": "^8.5",
-		"mediawiki/minus-x": "1.0.0",
-		"symfony/yaml": "4.3.4"
+		"mediawiki/minus-x": "1.1.1",
+		"symfony/yaml": "5.3.6"
 	},
 	"scripts": {
 		"lint": "parallel-lint --exclude vendor --exclude multiversion/vendor --ignore-fails .",

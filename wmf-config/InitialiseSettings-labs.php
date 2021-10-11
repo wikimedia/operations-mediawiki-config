@@ -29,7 +29,7 @@
  * @param array[] $settings wgConf-style settings array
  * @return array
  */
-function wmfApplyLabsOverrideSettings( array $settings ) : array {
+function wmfApplyLabsOverrideSettings( array $settings ): array {
 	// Override (or add) settings that we need within the labs environment,
 	// but not in production.
 	foreach ( wmfGetLabsOverrideSettings() as $key => $value ) {

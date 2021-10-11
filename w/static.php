@@ -197,7 +197,7 @@ function wmfStaticRespond() {
 
 	// Get branch dirs and sort with newest first
 	$branchDirs = MWWikiversions::getAvailableBranchDirs();
-	usort( $branchDirs, function ( $a, $b ) {
+	usort( $branchDirs, static function ( $a, $b ) {
 		return version_compare( $b, $a );
 	} );
 

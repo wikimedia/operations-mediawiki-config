@@ -498,7 +498,7 @@ $wgLocalisationCacheConf['storeDirectory'] = "$IP/cache/l10n";
 $wgLocalisationCacheConf['manualRecache'] = true;
 
 // Add some useful config data to query=siteinfo
-$wgHooks['APIQuerySiteInfoGeneralInfo'][] = function ( $module, &$data ) {
+$wgHooks['APIQuerySiteInfoGeneralInfo'][] = static function ( $module, &$data ) {
 	global $wmfMasterDatacenter;
 	global $wmfEtcdLastModifiedIndex;
 	global $wmgCirrusSearchDefaultCluster;
@@ -637,7 +637,7 @@ $wgPasswordPolicy['policies']['default']['PasswordNotInCommonList'] = [
 // Enforce password policy when users login on other wikis; also for sensitive global groups
 // FIXME does this just duplicate the global policy checks down in the main $wmgUseCentralAuth block?
 if ( $wmgUseCentralAuth ) {
-	$wgHooks['PasswordPoliciesForUser'][] = function ( User $user, array &$effectivePolicy ) use ( $wmgPrivilegedPolicy ) {
+	$wgHooks['PasswordPoliciesForUser'][] = static function ( User $user, array &$effectivePolicy ) use ( $wmgPrivilegedPolicy ) {
 		$privilegedGroups = wmfGetPrivilegedGroups( $user );
 		if ( $privilegedGroups ) {
 			$effectivePolicy = UserPasswordPolicy::maxOfPolicies( $effectivePolicy, $wmgPrivilegedPolicy );
@@ -985,7 +985,7 @@ $wgAvailableRights[] = 'newsletter-restore';
 
 // Enable a "viewdeletedfile" userright for [[m:Global deleted image review]] (T16801)
 $wgAvailableRights[] = 'viewdeletedfile';
-$wgHooks['TitleQuickPermissions'][] = function ( Title $title, User $user, $action, &$errors, $doExpensiveQueries, $short ) {
+$wgHooks['TitleQuickPermissions'][] = static function ( Title $title, User $user, $action, &$errors, $doExpensiveQueries, $short ) {
 	return ( !in_array( $action, [ 'deletedhistory', 'deletedtext' ] ) || !$title->inNamespaces( NS_FILE, NS_FILE_TALK ) || !$user->isAllowed( 'viewdeletedfile' ) );
 };
 
@@ -1427,7 +1427,7 @@ if ( $wmgUseSecurePoll ) {
 
 	$wgSecurePollUseNamespace = $wmgSecurePollUseNamespace;
 	$wgSecurePollScript = 'auth-api.php';
-	$wgHooks['SecurePoll_JumpUrl'][] = function ( $page, &$url ) {
+	$wgHooks['SecurePoll_JumpUrl'][] = static function ( $page, &$url ) {
 		global $site, $lang;
 
 		$url = wfAppendQuery( $url, [ 'site' => $site, 'lang' => $lang ] );
@@ -1524,7 +1524,7 @@ $wgEnableUserEmail = true;
 $wgNoFollowLinks = true; // In case the MediaWiki default changed, T44594
 
 # XFF log for incident response
-$wgExtensionFunctions[] = function () {
+$wgExtensionFunctions[] = static function () {
 	global $wmfUdp2logDest;
 	if (
 		isset( $_SERVER['REQUEST_METHOD'] )
@@ -1553,7 +1553,7 @@ if ( $wgDBname === 'enwiki' ) {
 	$wgHiddenPrefs[] = 'minordefault';
 }
 
-$wgHooks['SkinAddFooterLinks'][] = function ( $sk, $key, &$footerlinks )
+$wgHooks['SkinAddFooterLinks'][] = static function ( $sk, $key, &$footerlinks )
 	use ( $wmgUseFooterContactLink, $wmgUseFooterCodeOfConductLink, $wmgUseFooterTechCodeOfConductLink )
 {
 	if ( $key !== 'places' ) {
@@ -1983,7 +1983,7 @@ function wmfGetPrivilegedGroups( $user ) {
 }
 
 // log suspicious or sensitive login attempts
-$wgHooks['AuthManagerLoginAuthenticateAudit'][] = function ( $response, $user, $username ) {
+$wgHooks['AuthManagerLoginAuthenticateAudit'][] = static function ( $response, $user, $username ) {
 	$guessed = false;
 	if ( !$user && $username ) {
 		$user = MediaWikiServices::getInstance()
@@ -2025,7 +2025,7 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function ( $response, $user, $
 };
 
 // log sysop password changes
-$wgHooks['ChangeAuthenticationDataAudit'][] = function ( $req, $status ) {
+$wgHooks['ChangeAuthenticationDataAudit'][] = static function ( $req, $status ) {
 	global $wgRequest;
 	$user = MediaWikiServices::getInstance()
 		->getUserIdentityLookup()
@@ -2065,7 +2065,7 @@ $wgMaxShellTime = 50;  // seconds
 $wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
 
 switch ( $wmfRealm ) {
-case 'production'  :
+case 'production':
 	$wgImageMagickTempDir = '/tmp/magick-tmp';
 	break;
 case 'labs':
@@ -2184,7 +2184,7 @@ if ( $wgDBname === 'enwiki' ) {
 	// Please don't interfere with our hundreds of wikis ability to manage themselves.
 	// Only use this shitty hack for enwiki. Thanks.
 	// -- brion 2008-04-10
-	$wgHooks['getUserPermissionsErrorsExpensive'][] = function ( &$title, &$user, $action, &$result ) {
+	$wgHooks['getUserPermissionsErrorsExpensive'][] = static function ( &$title, &$user, $action, &$result ) {
 		if ( $action !== 'delete' && $action !== 'move' ) {
 			return true;
 		}
@@ -2212,7 +2212,7 @@ if ( $wgDBname === 'enwiki' ) {
 	// This used to apply to Persian Wikipedia as well but that was disabled in T291018
 	//
 	// Returning true tells it to proceed as normal in other cases.
-	$wgHooks['TitleQuickPermissions'][] = function ( Title $title, User $user, $action, &$errors, $doExpensiveQueries, $short ) {
+	$wgHooks['TitleQuickPermissions'][] = static function ( Title $title, User $user, $action, &$errors, $doExpensiveQueries, $short ) {
 		return ( $action !== 'create' || $title->getNamespace() !== 118 || !$user->isAnon() );
 	};
 }
@@ -2808,7 +2808,7 @@ if ( !$wmgEnableGeoData ) {
 	$wgMFNearby = false;
 }
 
-$wgHooks['EnterMobileMode'][] = function () {
+$wgHooks['EnterMobileMode'][] = static function () {
 	global $wgCentralAuthCookieDomain, $wgHooks, $wgIncludeLegacyJavaScript;
 
 	// Disable loading of legacy wikibits in the mobile web experience
@@ -2822,7 +2822,7 @@ $wgHooks['EnterMobileMode'][] = function () {
 	}
 
 	// Better hack for T49647
-	$wgHooks['WebResponseSetCookie'][] = function ( &$name, &$value, &$expire, &$options ) {
+	$wgHooks['WebResponseSetCookie'][] = static function ( &$name, &$value, &$expire, &$options ) {
 		if ( isset( $options['domain'] ) ) {
 			if ( $options['domain'] == 'commons.wikimedia.org' ) {
 				$options['domain'] = 'commons.m.wikimedia.org';
@@ -2893,7 +2893,7 @@ if ( $wmgUseMath ) {
 	// Set up $wgMathFullRestbaseURL - similar to VE RESTBase config above
 	// HACK: $wgServerName is not available yet at this point, it's set by Setup.php
 	// so use a hook
-	$wgExtensionFunctions[] = function () {
+	$wgExtensionFunctions[] = static function () {
 		global $wgServerName, $wgMathFullRestbaseURL, $wmfRealm;
 
 		$wgMathFullRestbaseURL = $wmfRealm === 'production'
@@ -2983,7 +2983,7 @@ if ( $wmgUseTranslate ) {
 				'cutoff' => 0.65,
 				'use_wikimedia_extra' => true,
 				'config' => [
-					'servers' => array_map( function ( $hostConfig ) {
+					'servers' => array_map( static function ( $hostConfig ) {
 						if ( is_array( $hostConfig ) ) {
 							return $hostConfig;
 						}
@@ -3050,7 +3050,7 @@ if ( $wmgUseTranslate ) {
 
 	if ( $wgDBname === 'commonswiki' ) {
 		$wgTranslateMessageNamespaces[] = NS_MEDIAWIKI;
-		$wgHooks['TranslatePostInitGroups'][] = function ( &$cc ) {
+		$wgHooks['TranslatePostInitGroups'][] = static function ( &$cc ) {
 			$id = 'wiki-translatable';
 			$mg = new WikiMessageGroup( $id, 'translatable-messages' );
 			$mg->setLabel( 'Interface' );
@@ -3152,7 +3152,7 @@ if ( $wmgUseWikimediaShopLink ) {
 	 * @param array $sidebar
 	 * @return bool
 	 */
-	$wgHooks['SkinBuildSidebar'][] = function ( $skin, &$sidebar ) {
+	$wgHooks['SkinBuildSidebar'][] = static function ( $skin, &$sidebar ) {
 		$sidebar['navigation'][] = [
 			'text'  => $skin->msg( 'wikimediashoplink-linktext' )->text(),
 			'href'  => '//shop.wikimedia.org',
@@ -3247,7 +3247,7 @@ if ( $wmgUseEcho ) {
 	}
 
 	// Limit the 'push-subscription-manager' group to Meta-Wiki only (T261625)
-	$wgExtensionFunctions[] = function () {
+	$wgExtensionFunctions[] = static function () {
 		global $wgGroupPermissions, $wgDBname;
 		if ( $wgDBname !== 'metawiki' ) {
 			unset( $wgGroupPermissions['push-subscription-manager'] );
@@ -3381,7 +3381,7 @@ if ( $wmgUseCodeEditorForCore || $wmgUseScribunto ) {
 	wfLoadExtension( 'CodeEditor' );
 	$wgCodeEditorEnableCore = $wmgUseCodeEditorForCore;
 	if ( $wgDBname === 'metawiki' ) {
-		$wgHooks['CodeEditorGetPageLanguage'][] = function ( Title $title, &$lang ) {
+		$wgHooks['CodeEditorGetPageLanguage'][] = static function ( Title $title, &$lang ) {
 			if ( preg_match(
 				'/^(API listing|Www\.wik(imedia|ipedia|inews|tionary|iquote|iversity|ibooks|ivoyage)\.org) template(\/temp)?$/',
 				$title->getPrefixedText()
@@ -3626,7 +3626,7 @@ if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient || $wmgUseWikibaseMediaInfo ) 
 	include "$wmfConfigDir/Wikibase.php";
 }
 
-$wgHooks['RejectParserCacheValue'][] = function ( $value, WikiPage $wikiPage, $popts ) {
+$wgHooks['RejectParserCacheValue'][] = static function ( $value, WikiPage $wikiPage, $popts ) {
 	$cachedTime = $value->getCacheTime();
 	// Reject parser output from 19:00 UTC to 21:05 UTC
 	// due to incompatible CacheTime objects.
@@ -3970,7 +3970,7 @@ if ( $wmgAllowLabsAnonEdits ) {
 }
 
 // On Special:Version, link to useful release notes
-$wgHooks['SpecialVersionVersionUrl'][] = function ( $version, &$versionUrl ) {
+$wgHooks['SpecialVersionVersionUrl'][] = static function ( $version, &$versionUrl ) {
 	$matches = [];
 	preg_match( "/^(\d+\.\d+)(?:\.0-)?wmf\.?(\d+)?$/", $version, $matches );
 	if ( $matches ) {
@@ -4035,7 +4035,7 @@ if ( $wmgUseRC2UDP ) {
 // T277704, T275334: Extension function would be a more nature place to put this code to,
 // but doing so is not reliable as of 2021-03-18. If you are here to put this into an extension
 // function, see also T213003.
-$wgHooks['MediaWikiServices'][] = function () {
+$wgHooks['MediaWikiServices'][] = static function () {
 	global $wgGroupPermissions;
 
 	$wgGroupPermissions['confirmed'] = $wgGroupPermissions['autoconfirmed'];
@@ -4113,7 +4113,7 @@ if ( $wgDBname === 'foundationwiki' ) {
 	// Note, we need all WMF domains in here due to Special:HideBanners
 	// being loaded as an image from various domains on donation thank you
 	// pages.
-	$wgHooks['BeforePageDisplay'][] = function ( $out, $skin ) {
+	$wgHooks['BeforePageDisplay'][] = static function ( $out, $skin ) {
 		$resp = $out->getRequest()->response();
 		$cspHeader = "default-src *.wikimedia.org *.wikipedia.org *.wiktionary.org *.wikisource.org *.wikibooks.org *.wikiversity.org *.wikiquote.org *.wikinews.org www.mediawiki.org www.wikidata.org *.wikivoyage.org data: blob: 'self'; script-src *.wikimedia.org 'unsafe-inline' 'unsafe-eval' 'self'; style-src  *.wikimedia.org data: 'unsafe-inline' 'self'; report-uri /w/api.php?action=cspreport&format=none&reportonly=1&source=wmfwiki&";
 		$resp->header( "X-Webkit-CSP-Report-Only: $cspHeader" );
@@ -4193,7 +4193,7 @@ if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession || $wmgUseCSP ) {
 		'https://intuition.toolforge.org/' => true,
 	] );
 
-	$wgExtensionFunctions[] = function () {
+	$wgExtensionFunctions[] = static function () {
 		global $wgCSPReportOnlyHeader, $wmgUseCSPReportOnly, $wgCommandLineMode,
 			$wmgApprovedContentSecurityPolicyDomains, $wmgUseCSP, $wgCSPHeader;
 		if ( !$wmgUseCSPReportOnly && !$wmgUseCSP ) {
@@ -4322,7 +4322,7 @@ unset( $parsoidDir );
 # Temporary, until T112147 is done
 # Assign everything assigned to suppressors to oversighters
 # and delete suppress group.
-$wgExtensionFunctions[] = function () {
+$wgExtensionFunctions[] = static function () {
 	global $wgGroupPermissions;
 	if ( isset( $wgGroupPermissions['suppress'] ) ) {
 		$wgGroupPermissions['oversight'] += $wgGroupPermissions['suppress'];

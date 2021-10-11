@@ -18,12 +18,12 @@ $wgAuthManagerAutoConfig['primaryauth'] += [
 ];
 $wgLDAPDomainNames = [ 'labs' ];
 switch ( $wgDBname ) {
-case 'labswiki' :
+case 'labswiki':
 	$wgLDAPServerNames = [ 'labs' => 'ldap-labs.eqiad.wikimedia.org' ];
-		break;
-case 'labtestwiki' :
+	break;
+case 'labtestwiki':
 	$wgLDAPServerNames = [ 'labs' => 'cloudservices2002-dev.wikimedia.org' ];
-		break;
+	break;
 }
 // T165795: require exact case matching of username via :caseExactMatch:
 $wgLDAPSearchAttributes = [ 'labs' => 'cn:caseExactMatch:' ];
@@ -94,7 +94,7 @@ if ( file_exists( '/etc/mediawiki/WikitechPrivateSettings.php' ) ) {
 $wgCdnReboundPurgeDelay = 0;
 
 // T218654
-$wgHooks['BlockIpComplete'][] = function ( $block, $performer, $priorBlock ) {
+$wgHooks['BlockIpComplete'][] = static function ( $block, $performer, $priorBlock ) {
 	global $wgBlockDisablesLogin;
 	if ( $wgBlockDisablesLogin && $block->getTargetUserIdentity() && $block->getExpiry() === 'infinity' && $block->isSitewide() ) {
 		MediaWikiServices::getInstance()->getAuthManager()
@@ -104,7 +104,7 @@ $wgHooks['BlockIpComplete'][] = function ( $block, $performer, $priorBlock ) {
 
 // Attempt to disable related accounts when a developer account is
 // permablocked.
-$wgHooks['BlockIpComplete'][] = function ( $block, $user, $prior ) use ( $wmfPhabricatorApiToken ) {
+$wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( $wmfPhabricatorApiToken ) {
 	if ( !$wmfPhabricatorApiToken
 		|| $block->getType() !== /* Block::TYPE_USER */ 1
 		|| $block->getExpiry() !== 'infinity'
@@ -116,7 +116,7 @@ $wgHooks['BlockIpComplete'][] = function ( $block, $user, $prior ) use ( $wmfPha
 	}
 	try {
 		// Lookup and block phab user tied to developer account
-		$phabClient = function ( $path, $query ) use ( $wmfPhabricatorApiToken ) {
+		$phabClient = static function ( $path, $query ) use ( $wmfPhabricatorApiToken ) {
 			$query['__conduit__'] = [ 'token' => $wmfPhabricatorApiToken ];
 			$post = [
 				'params' => json_encode( $query ),
@@ -160,7 +160,7 @@ $wgHooks['BlockIpComplete'][] = function ( $block, $user, $prior ) use ( $wmfPha
 		);
 	}
 };
-$wgHooks['BlockIpComplete'][] = function ( $block, $user, $prior ) use ( $wmfGerritApiUser, $wmfGerritApiPassword ) {
+$wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( $wmfGerritApiUser, $wmfGerritApiPassword ) {
 	if ( !$wmfGerritApiUser
 		|| !$wmfGerritApiPassword
 		|| $block->getType() !== /* Block::TYPE_USER */ 1
@@ -210,7 +210,7 @@ $wgHooks['BlockIpComplete'][] = function ( $block, $user, $prior ) use ( $wmfGer
 /**
  * Invalidates sessions of a blocked user and therefore logs them out.
  */
-$wgHooks['BlockIpComplete'][] = function ( $block, $user, $prior ) {
+$wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) {
 	if ( $block->getType() !== /* Block::TYPE_USER */ 1
 		|| $block->getExpiry() !== 'infinity'
 		|| !$block->isSitewide()

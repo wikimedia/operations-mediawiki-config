@@ -1,5 +1,5 @@
 <?php
-call_user_func( function () {
+call_user_func( static function () {
 	$user = posix_getpwuid( posix_geteuid() );
 	if ( PHP_SAPI !== 'cli' || $user['name'] !== getenv( 'MEDIAWIKI_WEB_USER' ) ) {
 		fprintf( STDERR, "Bad user or SAPI.\n" );

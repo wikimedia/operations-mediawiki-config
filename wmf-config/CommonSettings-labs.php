@@ -53,7 +53,7 @@ $wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = [
 // Enforce password policy when users login on other wikis; also for sensitive global groups
 // FIXME does this just duplicate the global policy checks down in the main $wmgUseCentralAuth block?
 if ( $wmgUseCentralAuth ) {
-	$wgHooks['PasswordPoliciesForUser'][] = function ( User $user, array &$effectivePolicy ) use ( $wmgPrivilegedPolicy ) {
+	$wgHooks['PasswordPoliciesForUser'][] = static function ( User $user, array &$effectivePolicy ) use ( $wmgPrivilegedPolicy ) {
 		$privilegedGroups = wmfGetPrivilegedGroups( $user );
 		if ( $privilegedGroups ) {
 			$effectivePolicy = UserPasswordPolicy::maxOfPolicies( $effectivePolicy, $wmgPrivilegedPolicy );
@@ -83,7 +83,7 @@ $wgLocalVirtualHosts = [
 ];
 
 // T49647
-$wgHooks['EnterMobileMode'][] = function () {
+$wgHooks['EnterMobileMode'][] = static function () {
 	global $wgCentralAuthCookieDomain, $wgHooks;
 	$domainRegexp = '/(?<!\.m)\.wikimedia\.beta\.wmflabs\.org$/';
 	$mobileDomain = '.m.wikimedia.beta.wmflabs.org';
@@ -91,7 +91,7 @@ $wgHooks['EnterMobileMode'][] = function () {
 	if ( preg_match( $domainRegexp, $wgCentralAuthCookieDomain ) ) {
 		$wgCentralAuthCookieDomain = preg_replace( $domainRegexp, $mobileDomain, $wgCentralAuthCookieDomain );
 	}
-	$wgHooks['WebResponseSetCookie'][] = function ( &$name, &$value, &$expire, &$options ) use ( $domainRegexp, $mobileDomain ) {
+	$wgHooks['WebResponseSetCookie'][] = static function ( &$name, &$value, &$expire, &$options ) use ( $domainRegexp, $mobileDomain ) {
 		if ( isset( $options['domain'] ) && preg_match( $domainRegexp, $options['domain'] ) ) {
 			$options['domain'] = preg_replace( $domainRegexp, $mobileDomain, $options['domain'] );
 		}
