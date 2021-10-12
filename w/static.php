@@ -2,9 +2,6 @@
 /**
  * Serve static files in a multiversion-friendly way.
  *
- * See https://wikitech.wikimedia.org/wiki/MediaWiki_at_WMF#Static_files for
- * usage documentation.
- *
  * See https://phabricator.wikimedia.org/T99096 for design requirements.
  *
  * Overview:
@@ -45,9 +42,6 @@ define( 'WMF_STATIC_5MIN', 300 );
 define( 'WMF_STATIC_24H', 86400 );
 define( 'WMF_STATIC_1Y', 31536000 );
 
-// Requests for /static/current/ are also rewritten to /w/static.php (T285232)
-define( 'WMF_STATIC_PREFIX_CURRENT', '/static/current' );
-
 /**
  * This should always use 404 if there is an issue with the url.
  * Avoid exposing the reason of it being invalid (T204186).
@@ -66,16 +60,10 @@ function wmfStaticShowError( $message, $status ) {
 }
 
 /**
- * Stream file from disk to web response.
- *
- * Based on MediaWiki's StreamFile::stream().
- *
+ * Stream file from disk to web response
+ * Based on StreamFile::stream()
  * @param string $filePath File to stream
- * @param string $responseType Cache control
- *  - "nohash" Short cache
- *  - "current" 1 year cache
- *  - "verified" Immutable
- *  - "unknown" Immutable (e.g. for garbage URLs)
+ * @param string $responseType Cache control for successful repsonse (one of 'short' or 'long')
  */
 function wmfStaticStreamFile( $filePath, $responseType = 'nohash' ) {
 	$ctype = StreamFile::contentTypeFromPath( $filePath, /* safe: not for upload */ false );
@@ -104,13 +92,6 @@ function wmfStaticStreamFile( $filePath, $responseType = 'nohash' ) {
 				WMF_STATIC_24H, WMF_STATIC_24H
 			)
 		);
-	} elseif ( $responseType == 'current' ) {
-		// Requests for /static/current will be cached unconditionally for 1 year (T285232).
-		header(
-			sprintf( 'Cache-Control: public, s-maxage=%d, max-age=%d',
-				WMF_STATIC_1Y, WMF_STATIC_1Y
-			)
-		);
 	} else {
 		// Versioned and verifable files are considered immutable.
 		// For the CDN, and clients not supporting "immutable", allow re-use for a year.
@@ -134,35 +115,8 @@ function wmfStaticStreamFile( $filePath, $responseType = 'nohash' ) {
 	readfile( $filePath );
 }
 
-/**
- * Extract the path and its prefix from a given url.
- *
- * @param string $uri Full Request URI
- * @return array|false Prefix and path, or false if no prefix found.
- */
-function wmfStaticParsePath( $uri ) {
-	global $wgScriptPath;
-
-	// Strip query parameters
-	$uriPath = parse_url( $uri, PHP_URL_PATH );
-
-	if ( strpos( $uriPath, $wgScriptPath ) === 0 ) {
-		$urlPrefix = $wgScriptPath;
-	} elseif ( strpos( $uriPath, WMF_STATIC_PREFIX_CURRENT ) === 0 ) {
-		$urlPrefix = WMF_STATIC_PREFIX_CURRENT;
-	} else {
-		// No valid prefix found.
-		return false;
-	}
-	return [
-		'prefix' => $urlPrefix,
-		// Request path, stripped of the prefix
-		'path' => substr( $uriPath, strlen( $urlPrefix ) ),
-	];
-}
-
 function wmfStaticRespond() {
-	global $IP;
+	global $wgScriptPath, $IP;
 
 	if ( !isset( $_SERVER['REQUEST_URI'] ) || !isset( $_SERVER['SCRIPT_NAME'] ) ) {
 		wmfStaticShowError( 'Bad request', 400 );
@@ -176,14 +130,18 @@ function wmfStaticRespond() {
 		return;
 	}
 
-	// Strip query parameters and the prefix
-	$pathData = wmfStaticParsePath( $_SERVER['REQUEST_URI'] );
-	if ( !$pathData ) {
+	// Strip query parameters
+	$uriPath = parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH );
+
+	$urlPrefix = $wgScriptPath;
+	// Reject invalid path prefix
+	if ( strpos( $uriPath, $urlPrefix ) !== 0 ) {
 		wmfStaticShowError( 'Unknown file path', 404 );
 		return;
 	}
-	$uriPath = $pathData['path'];
-	$uriPrefix = $pathData['prefix'];
+	// Strip prefix
+	$path = substr( $uriPath, strlen( $urlPrefix ) );
+
 	// Reject access to dot files and dot directories
 	if ( strpos( $uriPath, '/.' ) !== false ) {
 		wmfStaticShowError( 'Unknown file path', 404 );
@@ -205,14 +163,7 @@ function wmfStaticRespond() {
 	// Note we can't do this for a matching verification hash because varnish will
 	// have already sent us to the static host instead of the individual wiki.
 	$validHash = $urlHash ? preg_match( '/^[a-fA-F0-9]+$/', $urlHash ) : false;
-
-	if ( $pathPrefix === WMF_STATIC_PREFIX_CURRENT ) {
-		// "Current" always points to the newest branch and ignores any validation hash
-		$branchDirs = array_slice( $branchDirs, 0, 1 );
-		$urlHash = false;
-		$validHash = false;
-		$responseType = 'current';
-	} elseif ( !$validHash ) {
+	if ( !$validHash ) {
 		array_unshift( $branchDirs, $IP );
 	}
 
