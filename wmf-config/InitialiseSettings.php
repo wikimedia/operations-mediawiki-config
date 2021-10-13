@@ -15746,12 +15746,14 @@ function wmfGetVariantSettings() {
 	'test2wiki' => true,
 	'commonswiki' => true,
 	'testcommonswiki' => true,
+	'wikisource' => true, // T293205
 ],
 'wgCopyUploadsFromSpecialUpload' => [
 	'default' => false,
 	'testwiki' => true, // T73897
 	'commonswiki' => true, // T73897
 	'testcommonswiki' => true, // T73897
+	'wikisource' => true, // T293205
 ],
 'wgCopyUploadTimeout' => [
 	// This is set to a high value because there is no working mechanism for
@@ -16042,6 +16044,12 @@ function wmfGetVariantSettings() {
 		'ia-upload.wmcloud.org', // T287241 - IA-Upload tool
 		'wikisource-bot.toolforge.org', // Wikisource-bot tool - T292213
 		'americanantiquarian.org', // American antiquarian society - T292918
+	],
+	'+wikisource' => [
+		'archive.org', '*.archive.org',
+		'*.*.archive.org',                  // Internet Archive - T106293, T207581
+		'ia-upload.wmcloud.org',            // T287241 - IA-Upload tool
+		'wikisource-bot.toolforge.org',     // Wikisource-bot tool - T292213
 	],
 ],
 
