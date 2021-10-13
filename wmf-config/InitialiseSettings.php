@@ -4506,6 +4506,8 @@ function wmfGetVariantSettings() {
 		'Portal_talk' => 101,
 		'Author' => 102,
 		'Author_talk' => 103,
+		'Translation' => 114, // T290691
+		'Translation_talk' => 115,
 	],
 	'+yuewiktionary' => [ // T212678
 		'Index' => 100,
@@ -6808,6 +6810,8 @@ function wmfGetVariantSettings() {
 		101 => 'Thảo_luận_Chủ_đề',
 		102 => 'Tác_gia',
 		103 => 'Thảo_luận_Tác_gia',
+		114 => 'Biên_dịch', // T290691 - Translate
+		115 => 'Thảo_luận_Biên_dịch',
 	],
 	'wawikisource' => [
 		100 => 'Oteur', // T269431 - Author
