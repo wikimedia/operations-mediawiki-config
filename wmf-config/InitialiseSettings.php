@@ -26107,6 +26107,7 @@ function wmfGetVariantSettings() {
 	'inhwiki' => true,
 	'iowiki' => true,
 	'iswiki' => true,
+	'itwiki' => true,
 	'jamwiki' => true,
 	'jawiki' => true,
 	'jbowiki' => true,
@@ -26307,6 +26308,8 @@ function wmfGetVariantSettings() {
 
 	// pending visual editor (see T287878#7267554)
 	'kkwiki' => false,
+
+	'itwiki' => false,
 ],
 
 'wgWelcomeSurveyEnabled' => [
