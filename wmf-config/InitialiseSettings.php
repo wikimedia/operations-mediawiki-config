@@ -14017,6 +14017,7 @@ function wmfGetVariantSettings() {
 	'+incubatorwiki' => [ NS_MAIN ],
 	'+labswiki' => [ NS_MAIN ],
 	'+labtestwiki' => [ NS_MAIN ],
+	'+mediawikiwiki' => [ NS_MAIN ],
 	'+metawiki' => [ NS_MAIN ],
 	'+outreachwiki' => [ NS_MAIN ],
 	'+wikimania' => [ NS_MAIN ],
