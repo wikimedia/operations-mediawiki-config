@@ -3759,6 +3759,10 @@ function wmfGetVariantSettings() {
 	'+kowiktionary' => [
 		'낱' => NS_PROJECT, // T58761
 	],
+	'+kswiki' => [
+		'وپ' => NS_PROJECT, // T291740
+		'وب' => NS_PROJECT_TALK,
+	],
 	'+kuwiktionary' => [
 		'Wîkîferheng_gotûbêj' => NS_PROJECT_TALK, // T39524 (old namespace name)
 		'Pêvek_nîqas' => 101, // T39524 (old namespace name)
