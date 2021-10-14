@@ -26086,6 +26086,7 @@ function wmfGetVariantSettings() {
 	'furwiki' => true,
 	'fywiki' => true,
 	'gagwiki' => true,
+	'ganwiki' => true,
 	'gawiki' => true,
 	'gcrwiki' => true,
 	'gdwiki' => true,
@@ -26119,6 +26120,7 @@ function wmfGetVariantSettings() {
 	'iowiki' => true,
 	'iswiki' => true,
 	'itwiki' => true,
+	'iuwiki' => true,
 	'jamwiki' => true,
 	'jawiki' => true,
 	'jbowiki' => true,
@@ -26264,6 +26266,7 @@ function wmfGetVariantSettings() {
 	'tcywiki' => true,
 	'tetwiki' => true,
 	'tewiki' => true,
+	'tgwiki' => true,
 	'thwiki' => true,
 	'tiwiki' => true,
 	'tkwiki' => true,
@@ -26320,7 +26323,10 @@ function wmfGetVariantSettings() {
 	// pending visual editor (see T287878#7267554)
 	'kkwiki' => false,
 
+	'ganwiki' => false,
 	'itwiki' => false,
+	'iuwiki' => false,
+	'tgwiki' => false,
 ],
 
 'wgWelcomeSurveyEnabled' => [
