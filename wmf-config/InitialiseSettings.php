@@ -21428,8 +21428,14 @@ function wmfGetVariantSettings() {
 			'destination_event_service' => 'eventgate-main',
 			// This stream is new enough that consumers are aware of canary events.
 		],
+		// Stream exists for compatibility reasons. It's going to be decomissioned when
+		// batched version (maps.tiles_change) is used in production (T293366)
 		'maps.tile_change' => [
 			'schema_title' => 'maps/tile_change',
+			'destination_event_service' => 'eventgate-main',
+		],
+		'maps.tiles_change' => [
+			'schema_title' => 'maps/tiles_change',
 			'destination_event_service' => 'eventgate-main',
 		],
 
