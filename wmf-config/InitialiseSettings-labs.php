@@ -1215,9 +1215,6 @@ function wmfGetLabsOverrideSettings() {
 		'wgGEMentorDashboardDiscoveryEnabled' => [
 			'default' => true,
 		],
-		'wgGEMentorDashboardBackendEnabled' => [
-			'default' => true,
-		],
 		'wgGEHomepageTutorialTitle' => [
 			'default' => '',
 			'arwiki' => 'Help:Tutorial',

@@ -26664,18 +26664,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgGEMentorDashboardBackendEnabled' => [
-	// check extensions/GrowthExperiments/updateMenteeData.php finishes
-	// reasonably quickly before enabling (especially on wikis with many newcomers,
-	// like enwiki).
-	'default' => false,
-
-	// Growth's pilot wikis
-	'arwiki' => true,
-	'bnwiki' => true,
-	'cswiki' => true,
-
-	// test wikis
-	'testwiki' => true,
+	'default' => true,
 ],
 
 'wgGECampaignPattern' => [
