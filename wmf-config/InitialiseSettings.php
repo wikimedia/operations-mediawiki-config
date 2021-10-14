@@ -21932,6 +21932,7 @@ function wmfGetVariantSettings() {
 'wmgWikibaseDispatchViaJobsPruneChangesTableInJobEnabled' => [
 	'default' => false,
 	'testwikidatawiki' => true,
+	'wikidatawiki' => true,
 ],
 
 'wmgWikibaseDispatchViaJobsAllowedClients' => [
