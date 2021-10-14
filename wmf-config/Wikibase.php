@@ -179,17 +179,12 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( isset( $wmgWikibaseDispatchViaJobsEnabled ) ) {
 		$wgWBRepoSettings['dispatchViaJobsEnabled'] = $wmgWikibaseDispatchViaJobsEnabled;
 	}
-	if ( isset( $wmgWikibaseDispatchViaJobsAllowedClients ) ) {
-		$wgWBRepoSettings['dispatchViaJobsAllowedClients'] = $wmgWikibaseDispatchViaJobsAllowedClients;
-	}
 	if ( isset( $wmgWikibaseDispatchViaJobsPruneChangesTableInJobEnabled ) ) {
 		$wgWBRepoSettings['dispatchViaJobsPruneChangesTableInJobEnabled'] =
 			$wmgWikibaseDispatchViaJobsPruneChangesTableInJobEnabled;
 	}
-	// Explicitly set wikidata to null, since setting null in IS.php just removes it
-	if ( $wgDBname === 'wikidatawiki' ) {
-		$wgWBRepoSettings['dispatchViaJobsAllowedClients'] = null;
-	}
+	// Explicitly set to null, since setting null in IS.php just removes it
+	$wgWBRepoSettings['dispatchViaJobsAllowedClients'] = null;
 
 	$wgWBRepoSettings['unitStorage'] = [
 		'class' => '\\Wikibase\\Lib\\Units\\JsonUnitStorage',
