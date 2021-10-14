@@ -15977,6 +15977,7 @@ function wmfGetVariantSettings() {
 		'portrattarkiv.se', // Swedish Portrait Archive - T290581
 		'ia-upload.wmcloud.org', // T287241 - IA-Upload tool
 		'wikisource-bot.toolforge.org', // Wikisource-bot tool - T292213
+		'americanantiquarian.org', // American antiquarian society - T292918
 	],
 ],
 
