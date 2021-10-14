@@ -663,8 +663,10 @@ Wikipedia:
         comment_2x:  T150618
 
     kswiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        commons: File:Wikipedia-logo-v2-ks-1.svg
+        comment:  T293342
+        comment_1_5x:  T150618, T293342
+        comment_2x:  T150618, T293342
 
     kuwiki:
         comment_1_5x:  T150618
