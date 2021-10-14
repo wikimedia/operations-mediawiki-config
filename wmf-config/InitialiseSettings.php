@@ -12033,7 +12033,12 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'reviewer', 'editprotected' ], // T162577
 	],
 	'+ptwikivoyage' => [
-		'sysop' => [ 'autopatrolled' ], // T168981
+		'sysop' => [
+			'accountcreator',
+			'autopatrolled', // T168981
+			'confirmed',
+			'transwiki'
+		], // T292806
 	],
 	'+ptwiki' => [
 		'bureaucrat' => [ 'rollbacker', 'eliminator', 'autoreviewer', 'interface-editor', 'flood' ], // T41905, T65750, T212735, T228521
@@ -12902,7 +12907,12 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'reviewer', 'editprotected' ], // T162577
 	],
 	'+ptwikivoyage' => [
-		'sysop' => [ 'autopatrolled' ], // T168981
+		'sysop' => [
+			'accountcreator',
+			'autopatrolled', // T168981
+			'confirmed',
+			'transwiki'
+		], // T292806
 	],
 	'+quwiki' => [
 		'sysop' => [ 'rollbacker' ],
