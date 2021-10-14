@@ -5884,6 +5884,10 @@ function wmfGetVariantSettings() {
 		102 => 'Artikeldata',
 		103 => 'Artikeldatadiskussion'
 	],
+	'+dagwiki' => [
+		104 => 'Salima', // T289911
+		105 => 'Salima_yɛltɔɣa',
+	],
 	'dewiki' => [
 		100 => 'Portal',
 		101 => 'Portal_Diskussion'
