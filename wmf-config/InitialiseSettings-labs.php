@@ -1441,11 +1441,6 @@ function wmfGetLabsOverrideSettings() {
 			'wikidatawiki' => true,
 		],
 
-		'wmgWikibaseDispatchViaJobsAllowedClients' => [
-			'default' => [],
-			'wikidatawiki' => [ 'wikidatawiki', 'enwiki' ],
-		],
-
 		'wmgWikibaseEntityDataFormats' => [
 			'default' => [
 				'json',
