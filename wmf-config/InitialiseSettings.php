@@ -3575,6 +3575,8 @@ function wmfGetVariantSettings() {
 		'MOD' => 828,  // T287024
 		'RMD' => 829,  // T287024
 		'RMOD' => 829,  // T287024
+		'Draft' => 118, // T291755
+		'Draft_talk' => 119, // T291755
 	],
 	'+hrwikisource' => [
 		'Author' => 100,
