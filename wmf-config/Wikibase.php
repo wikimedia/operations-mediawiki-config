@@ -176,14 +176,8 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['dispatchDefaultBatchSize'] = $wmgWikibaseDispatchDefaultBatchSize;
 	$wgWBRepoSettings['dispatchLagToMaxLagFactor'] = 0;
 
-	if ( isset( $wmgWikibaseDispatchViaJobsEnabled ) ) {
-		$wgWBRepoSettings['dispatchViaJobsEnabled'] = $wmgWikibaseDispatchViaJobsEnabled;
-	}
-	if ( isset( $wmgWikibaseDispatchViaJobsPruneChangesTableInJobEnabled ) ) {
-		$wgWBRepoSettings['dispatchViaJobsPruneChangesTableInJobEnabled'] =
-			$wmgWikibaseDispatchViaJobsPruneChangesTableInJobEnabled;
-	}
-	// Explicitly set to null, since setting null in IS.php just removes it
+	$wgWBRepoSettings['dispatchViaJobsEnabled'] = true;
+	$wgWBRepoSettings['dispatchViaJobsPruneChangesTableInJobEnabled'] = true;
 	$wgWBRepoSettings['dispatchViaJobsAllowedClients'] = null;
 
 	$wgWBRepoSettings['unitStorage'] = [
