@@ -4299,6 +4299,8 @@ function wmfGetVariantSettings() {
 	],
 	'+thwiktionary' => [
 		'คุยเรื่องWiktionary' => NS_PROJECT_TALK,
+		'Rhymes' => 104,
+		'Rhymes_talk' => 105,
 	],
 	'+tiwiki' => [ // T263840
 		'ዊኪፔዲያ' => NS_PROJECT,
@@ -7150,6 +7152,8 @@ function wmfGetVariantSettings() {
 		101 => 'คุยเรื่องภาคผนวก', // Appendix talk
 		102 => 'ดัชนี', // Index - T114458
 		103 => 'คุยเรื่องดัชนี', // Index Talk
+		104 => 'สัมผัส', // Rhymes - T291761
+		105 => 'คุยเรื่องสัมผัส', // Rhymes_talk - T291761
 		110 => 'อรรถาภิธาน', // Thesaurus - T198585
 		111 => 'คุยเรื่องอรรถาภิธาน', // Thesaurus_talk
 	],
