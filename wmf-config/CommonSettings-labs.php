@@ -151,8 +151,6 @@ if ( $wmgUseIPInfo ) {
 }
 
 if ( $wmgUseCentralAuth ) {
-	$wgCentralAuthUseSlaves = true;
-
 	// temporary for testing foundationwiki SUL migration (T205347)
 	if ( $wgDBname === 'foundationwiki' ) {
 		$wgCentralAuthStrict = false;
