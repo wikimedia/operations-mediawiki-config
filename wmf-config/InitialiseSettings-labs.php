@@ -154,11 +154,8 @@ function wmfGetLabsOverrideSettings() {
 		// You must specify the +wiki or +tag (e.g. wiki group) you
 		// want to overide and merge stream configs for.
 		'wgEventStreams' => [
-			'+enwiki' => [
-				'eventgate-analytics-external.test.event' => [
-					'test_beta_override_setting' => true,
-					'canary_events_enabled' => false,
-				],
+			'+group2' => [
+
 			],
 		],
 
@@ -182,7 +179,7 @@ function wmfGetLabsOverrideSettings() {
 		// EventLogging to POST to EventGate rather than GET to EventLogging beacon.
 		// https://phabricator.wikimedia.org/T238230
 		'wgEventLoggingSchemas' => [
-			'+enwiki' => [
+			'+group2' => [
 				// Add beta only migrated wgEventLoggingSchemas configs here.  Production
 				// wgEventLoggingSchemas are merged in, so if your settings for
 				// production and beta are the same, you can omit also adding an entry here.
