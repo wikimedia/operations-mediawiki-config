@@ -706,7 +706,7 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true,
 			'loginwiki' => false,
 		],
-		'wgIPInfoGeoIP2Path' => [
+		'wgIPInfoGeoIP2Prefix' => [
 			'default' => '/usr/share/GeoIP/GeoLite2-',
 		],
 
