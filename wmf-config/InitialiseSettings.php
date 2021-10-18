@@ -21282,6 +21282,11 @@ function wmfGetVariantSettings() {
 			'schema_title' => 'analytics/mediawiki/mentor_dashboard/visit',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		[
+			'stream' => 'mediawiki.talk_page_edit',
+			'schema_title' => 'analytics/mediawiki/talk_page_edit',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 
 		/*
 		 * == eventgate-logging-external streams ==
@@ -21610,6 +21615,7 @@ function wmfGetVariantSettings() {
 		'eventlogging_WMDEBannerSizeIssue',
 		'mediawiki.client.session_tick',
 		'mediawiki.content_translation_event',
+		'mediawiki.talk_page_edit',
 		'mediawiki.mediasearch_interaction',
 		'mediawiki.structured_task.article.link_suggestion_interaction',
 		'mediawiki.structured_task.article.image_suggestion_interaction',
