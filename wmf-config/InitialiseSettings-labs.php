@@ -137,10 +137,6 @@ function wmfGetLabsOverrideSettings() {
 			'default' => 'wgDebugLogFile',
 		],
 
-		// NOTE: There is currently no good way to set wgEventStreams
-		// overrides for beta.  See https://phabricator.wikimedia.org/T277193.
-		// For now, EventStreamConfig settings always need to be set in InitialiseSettings.php.
-
 		// Stream config default settings.
 		// The EventStreamConfig extension will add these
 		// settings to each entry in wgEventStreams if
@@ -149,6 +145,20 @@ function wmfGetLabsOverrideSettings() {
 		'wgEventStreamsDefaultSettings' => [
 			'default' => [
 				'topic_prefixes' => [ 'eqiad.' ],
+			],
+		],
+
+		// EventStreamConfig overrides for beta sites.
+		// NOTE: StaticSiteConfiguration
+		// config merging with '+' does not support merging for 'default'.
+		// You must specify the +wiki or +tag (e.g. wiki group) you
+		// want to overide and merge stream configs for.
+		'wgEventStreams' => [
+			'+enwiki' => [
+				'eventgate-analytics-external.test.event' => [
+					'test_beta_override_setting' => true,
+					'canary_events_enabled' => false,
+				],
 			],
 		],
 
