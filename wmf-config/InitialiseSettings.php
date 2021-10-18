@@ -19884,13 +19884,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgDiscussionTools_topicsubscription' => [
-	'default' => 'unavailable',
-	'wikipedia' => 'default', // T287801
-	'enwiki' => 'unavailable', // T287801
-	'metawiki' => 'default', // T274280
-	'mediawikiwiki' => 'default', // T274280
-	'commonswiki' => 'default', // T287800
-	'wikidatawiki' => 'default', // T287800
+	'default' => 'default', // T287802
 ],
 
 'wgDiscussionTools_autotopicsub' => [
