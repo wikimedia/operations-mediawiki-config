@@ -41,5 +41,8 @@ return [
 		'shellbox-media' => null,
 		'shellbox-syntaxhighlight' => null,
 		'shellbox-timeline' => null,
+		'xenon' => null,
+		'xhgui' => null,
+		'xhgui-pdo' => null,
 	]
 ];
