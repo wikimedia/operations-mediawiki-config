@@ -27398,6 +27398,7 @@ function wmfGetVariantSettings() {
 // Temporary setting to stage the rollout of $wgLocalHTTPProxy (T288848)
 'wmgUseLocalHTTPProxy' => [
 	'default' => false,
+	'group0' => true,
 ],
 
 ];
