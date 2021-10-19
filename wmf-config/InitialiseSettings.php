@@ -4194,6 +4194,10 @@ function wmfGetVariantSettings() {
 		'Портал' => 100, // NS_PORTAL
 		'Разговор_о_порталу' => 101, // NS_PORTAL_TALK
 	],
+	'+shiwiki' => [
+		'Portal' => 100, // T288909
+		'Portal_talk' => 101,
+	],
 	'+shnwiki' => [
 		'WP' => NS_PROJECT,
 		'WT' => NS_PROJECT_TALK, // T210699
@@ -6319,6 +6323,10 @@ function wmfGetVariantSettings() {
 		101 => 'Portálaságastallan', // T41206
 	],
 	'shwiki' => [ 100 => 'Portal', 101 => 'Razgovor_o_portalu' ], // T32928
+	'shiwiki' => [
+		100 => 'Aggur', // T288909 - Portal
+		101 => 'Amsawal_n_waggur', // T288909 - Portal_talk
+	],
 	'shnwiki' => [ 100 => 'ၵိူၼ်ႇတူ', 101 => 'တွၼ်ႈဢုပ်ႇ_ၵိူၼ်ႇတူ' ], // T212992
 	'siwiki' => [ 100 => 'ද්වාරය', 101 => 'ද්වාරය_සාකච්ඡාව' ], // T8435, T26936
 	'skwiki' => [
