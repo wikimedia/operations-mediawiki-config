@@ -5742,6 +5742,8 @@ function wmfGetVariantSettings() {
 		101 => 'Test_namespace_1_talk',
 		102 => 'Test_namespace_2',
 		103 => 'Test_namespace_2_talk',
+		118 => 'Draft', // T198143
+		119 => 'Draft_talk',
 	],
 	'test2wiki' => [
 		100 => 'Portal',
@@ -6181,15 +6183,10 @@ function wmfGetVariantSettings() {
 		100 => 'Portal', // T180052
 		101 => 'Cumbersa_portal', // T180052
 	],
-	'mywiktionary' => [
-		100 => 'နောက်ဆက်တွဲ', // T178545, Appendix
-		101 => 'နောက်ဆက်တွဲ_ဆွေးနွေးချက်',
-	],
 	'mznwiki' => [
 		100 => 'پورتال', # Portal
 		101 => 'پورتال_گپ', # Portal talk
 	],
-
 	'ndswiki' => [
 		100 => 'Portal',
 		101 => 'Portal_Diskuschoon'
@@ -6199,14 +6196,6 @@ function wmfGetVariantSettings() {
 		101 => 'पोर्टल_वार्ता',
 		118 => 'मस्यौदा', // T184157
 		119 => 'मस्यौदा_वार्ता',
-	],
-	'newikibooks' => [
-		102 => 'पाकपुस्तक', // T131754, Cookbook
-		103 => 'पाकपुस्तक_वार्ता', // T131754, Cookbook talk
-		104 => 'बालपुस्तक', // T131754, Wikijunior
-		105 => 'बालपुस्तक_वार्ता', // T131754, Wikijunior talk
-		106 => 'विषय', // T131754, Subject
-		107 => 'विषय_र्ता', // T131754, Subject talk
 	],
 	'newwiki' => [
 		100 => 'दबू',
@@ -6357,10 +6346,6 @@ function wmfGetVariantSettings() {
 		103 => 'Majadiliano_ya_Wikichanzo',
 	],
 	'tawiki' => [ 100 => 'வலைவாசல்', 101 => 'வலைவாசல்_பேச்சு', ],
-	'testwiki' => [
-		118 => 'Draft', // T198143
-		119 => 'Draft_talk',
-	],
 	'tewiki' => [ 100 => 'వేదిక', 101 => 'వేదిక_చర్చ', ],
 	'tgwiki' => [
 		100 => 'Портал',
@@ -7084,6 +7069,10 @@ function wmfGetVariantSettings() {
 		114 => 'Konkordans', // Concordance - T255391
 		115 => 'Perbincangan_konkordans', // Concordance talk - T255391
 	],
+	'mywiktionary' => [
+		100 => 'နောက်ဆက်တွဲ', // T178545, Appendix
+		101 => 'နောက်ဆက်တွဲ_ဆွေးနွေးချက်',
+	],
 	'ndswiktionary' => [ // T85122
 		100 => 'Anhang',
 		101 => 'Anhang_Diskuschoon',
@@ -7351,6 +7340,14 @@ function wmfGetVariantSettings() {
 	'mswikibooks' => [
 		100 => 'Resipi',
 		101 => 'Perbincangan_resipi',
+	],
+	'newikibooks' => [
+		102 => 'पाकपुस्तक', // T131754, Cookbook
+		103 => 'पाकपुस्तक_वार्ता', // T131754, Cookbook talk
+		104 => 'बालपुस्तक', // T131754, Wikijunior
+		105 => 'बालपुस्तक_वार्ता', // T131754, Wikijunior talk
+		106 => 'विषय', // T131754, Subject
+		107 => 'विषय_र्ता', // T131754, Subject talk
 	],
 	'nlwikibooks' => [
 		102 => 'Transwiki',
@@ -16993,9 +16990,6 @@ function wmfGetVariantSettings() {
 	'+cswiki' => [
 		'Project' => true, // T136628
 	],
-	'+cswikisource' => [
-		'Edice' => true, // T244133
-	],
 	'+enwiki' => [
 		'Portal' => true, // T58001
 		'Book' => true, // T58001
@@ -17089,6 +17083,9 @@ function wmfGetVariantSettings() {
 	],
 
 	// Wikisources
+	'+cswikisource' => [
+		'Edice' => true, // T244133
+	],
 
 	// Wikinewses
 
