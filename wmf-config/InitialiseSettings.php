@@ -25452,6 +25452,7 @@ function wmfGetVariantSettings() {
 	'default' => [
 		'cdn-url-purges' => [
 			'class' => \MediaWiki\Extension\EventBus\Adapters\EventRelayer\CdnPurgeEventRelayer::class,
+			'stream' => 'resource-purge',
 		],
 		'default' => [
 			'class' => EventRelayerNull::class,
