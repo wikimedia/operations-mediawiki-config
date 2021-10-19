@@ -68,6 +68,8 @@ return [
 		'shellbox-media' => null,
 		'shellbox-syntaxhighlight' => null,
 		'shellbox-timeline' => null,
+		// No envoy in beta cluster?
+		'mwapi' => null,
 
 		### Logstash
 		'logstash' => [

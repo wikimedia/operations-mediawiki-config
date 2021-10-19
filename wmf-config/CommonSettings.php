@@ -1037,6 +1037,9 @@ if ( $wmgUseTimeline ) {
 $wgCopyUploadProxy = ( $wmfRealm !== 'labs' ) ? $wmfLocalServices['urldownloader'] : false;
 $wgUploadThumbnailRenderHttpCustomHost = $wmfHostnames['upload'];
 $wgUploadThumbnailRenderHttpCustomDomain = $wmfLocalServices['upload'];
+if ( $wmgUseLocalHTTPProxy ) {
+	$wgLocalHTTPProxy = $wmfLocalServices['mwapi'] ?? false;
+}
 
 if ( $wmgUseWikiHiero ) {
 	wfLoadExtension( 'wikihiero' );
