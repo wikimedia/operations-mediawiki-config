@@ -26318,6 +26318,7 @@ function wmfGetVariantSettings() {
 
 'wgGENewcomerTasksImageRecommendationsEnabled' => [
 	'default' => false,
+	'testwiki' => true,
 ],
 
 'wgGENewcomerTasksLinkRecommendationsEnabled' => [

@@ -1131,9 +1131,6 @@ function wmfGetLabsOverrideSettings() {
 		'wgGENewcomerTasksImageRecommendationsEnabled' => [
 			'default' => true,
 		],
-		'wgGEImageRecommendationServiceUrl' => [
-			'default' => 'https://image-suggestion-api.wmcloud.org',
-		],
 		'wgGENewcomerTasksLinkRecommendationsEnabled' => [
 			'default' => true,
 		],
