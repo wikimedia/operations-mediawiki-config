@@ -7721,6 +7721,12 @@ function wmfGetVariantSettings() {
 		102 => '포털', // T46899
 		103 => '포털토론', // T46899
 	],
+	'ruwikiversity' => [
+		100 => 'Портал', //T293545, Portal
+		101 => 'Обсуждение_портала', //T293545, Portal talk
+		102 => 'Факультет', //T293545, Faculty
+		103 => 'Обсуждения_факультета', //T293545, Faculty talk
+	],
 	'svwikiversity' => [
 		100 => 'Portal',
 		101 => 'Portaldiskussion',
