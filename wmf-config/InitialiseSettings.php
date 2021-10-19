@@ -14204,6 +14204,7 @@ function wmfGetVariantSettings() {
 	'sourceswiki' => true, // T289140
 ],
 
+// DO NOT enable on any other wikis
 'wmgUseDynamicPageList' => [
 	'default' => false,
 
