@@ -26246,14 +26246,6 @@ function wmfGetVariantSettings() {
 
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
-
-	// pending visual editor (see T287878#7267554)
-	'kkwiki' => false,
-
-	'ganwiki' => false,
-	'itwiki' => false,
-	'iuwiki' => false,
-	'tgwiki' => false,
 ],
 
 'wgWelcomeSurveyEnabled' => [
