@@ -1,7 +1,7 @@
 {
-    "aawiki": "php-1.36.0-wmf.30",
-    "enwiki": "php-1.36.0-wmf.30",
-    "labtestwiki": "php-1.36.0-wmf.30",
-    "testwiki": "php-1.36.0-wmf.30",
-    "testwikidatawiki": "php-1.36.0-wmf.30"
+    "aawiki": "php-1.38.0-wmf.4",
+    "enwiki": "php-1.38.0-wmf.4",
+    "labtestwiki": "php-1.38.0-wmf.4",
+    "testwiki": "php-1.38.0-wmf.4",
+    "testwikidatawiki": "php-1.38.0-wmf.4"
 }
