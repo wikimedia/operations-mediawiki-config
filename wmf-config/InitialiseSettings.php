@@ -8620,7 +8620,7 @@ function wmfGetVariantSettings() {
 		'emailuser' => [
 			'ip' => [ 5, 86400 ], // 5 per day per ip (logged-out and new users)
 			'newbie' => [ 5, 86400 ], // 5 per day for non-autoconfirmed
-			'user' => [ 20, 86400 ], // 20 per day for users
+			'user-global' => [ 20, 86400 ], // 20 per day for users
 		],
 		'changeemail' => [
 			'ip-all' => [ 10, 3600 ],
