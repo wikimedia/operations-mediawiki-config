@@ -176,10 +176,6 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['dispatchDefaultBatchSize'] = $wmgWikibaseDispatchDefaultBatchSize;
 	$wgWBRepoSettings['dispatchLagToMaxLagFactor'] = 0;
 
-	$wgWBRepoSettings['dispatchViaJobsEnabled'] = true;
-	$wgWBRepoSettings['dispatchViaJobsPruneChangesTableInJobEnabled'] = true;
-	$wgWBRepoSettings['dispatchViaJobsAllowedClients'] = null;
-
 	$wgWBRepoSettings['unitStorage'] = [
 		'class' => '\\Wikibase\\Lib\\Units\\JsonUnitStorage',
 		'args' => [ __DIR__ . '/unitConversionConfig.json' ]
