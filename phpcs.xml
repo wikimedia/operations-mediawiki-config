@@ -27,7 +27,6 @@
 		<exclude name="MediaWiki.VariableAnalysis.MisleadingGlobalNames.Misleading$wgDBname" />
 		<exclude name="MediaWiki.VariableAnalysis.MisleadingGlobalNames.Misleading$wgDebugLogFile" />
 		<exclude name="MediaWiki.VariableAnalysis.MisleadingGlobalNames.Misleading$wgJobTypeConf" />
-		<exclude name="MediaWiki.VariableAnalysis.UnusedGlobalVariables.UnusedGlobal$wgFlaggedRevsStatsAge" />
 		<exclude name="MediaWiki.VariableAnalysis.UnusedGlobalVariables.UnusedGlobal$wmfUdp2logDest" />
 		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment" />
 		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.SingleSpaceBeforeSingleLineComment" />

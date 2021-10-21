@@ -15,8 +15,6 @@ wfLoadExtension( 'FlaggedRevs' );
 
 $wgFlaggedRevsAutopromote = false;
 
-$wgFlaggedRevsStatsAge = false;
-
 // Configuration fields that must be set before other configuration has been loaded
 call_user_func( static function () {
 	global $wgDBname,
@@ -192,7 +190,7 @@ call_user_func( static function () {
 $wgHooks['MediaWikiServices'][] = static function () {
 	global $wgAddGroups, $wgDBname, $wgDefaultUserOptions,
 		$wgFlaggedRevsNamespaces, $wgFlaggedRevsRestrictionLevels,
-		$wgFlaggedRevsStatsAge, $wgFlaggedRevsTags, $wgFlaggedRevsTagsRestrictions,
+		$wgFlaggedRevsTags, $wgFlaggedRevsTagsRestrictions,
 		$wgGroupPermissions, $wgRemoveGroups;
 
 	///////////////////////////////////////
