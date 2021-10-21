@@ -1025,7 +1025,7 @@ if ( $wmgUseTimeline ) {
 		// SetFontNames("FreeSans-WMF", "FreeSans WMF", "FreeSans WMF Regular", "Regular", "");
 		// Generate("FreeSansWMF.ttf", "", 4 );
 		'freesanswmf' => '/srv/app/fonts/FreeSansWMF',
-		'unifont' => '/srv/app/fonts/unifont-5.1.20080907'
+		'unifont' => '/srv/app/fonts/unifont'
 		// TODO: add noto fonts
 	];
 	$wgTimelineFonts['default'] = $wgTimelineFonts[$wmgTimelineDefaultFont];
