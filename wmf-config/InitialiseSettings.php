@@ -17774,6 +17774,12 @@ function wmfGetVariantSettings() {
 		'beta' => false,
 		'loggedin' => true,
 	],
+	// T293946
+	'enwiki' => [
+		'base' => true,
+		'beta' => true,
+		'loggedin' => true,
+	],
 	// T253985
 	'svwiki' => [
 		'base' => true,
