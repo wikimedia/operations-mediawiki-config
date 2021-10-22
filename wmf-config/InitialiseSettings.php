@@ -21858,24 +21858,6 @@ function wmfGetVariantSettings() {
 	'wikipedia' => [ 'no' => 'nb' ], // T173602
 ],
 
-'wmgWikibaseDispatchingLockManager' => [
-	'default' => 'wikibaseDispatchRedisLockManager',
-],
-
-'wmgWikibaseDispatchInterval' => [
-	'default' => 25,
-],
-
-'wmgWikibaseDispatchMaxTime' => [
-	'default' => 30,
-	'wikidatawiki' => 530, // Cron every 3 mins, length almost 9 mins, ~3 dispatching threads
-	'testwikidatawiki' => 890, // Cron every 15 mins, length almost 15 mins, ~1 dispatching thread
-],
-
-'wmgWikibaseDispatchDefaultBatchSize' => [
-	'default' => 420,
-],
-
 'wmgWikibaseCachePrefix' => [
 	'default' => 'wikidatawiki',
 	'wikidataclient-test' => 'testwikidatawiki0',
