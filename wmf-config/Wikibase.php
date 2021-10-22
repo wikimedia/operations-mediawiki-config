@@ -169,11 +169,6 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['sharedCacheKeyGroup'] = $wmgWikibaseCachePrefix;
 	$wgWBRepoSettings['sharedCacheKeyPrefix'] = $wmgWBSharedCacheKey;
 
-	// These settings can be overridden by the cron parameters in operations/puppet
-	$wgWBRepoSettings['dispatchingLockManager'] = $wmgWikibaseDispatchingLockManager;
-	$wgWBRepoSettings['dispatchDefaultDispatchInterval'] = $wmgWikibaseDispatchInterval;
-	$wgWBRepoSettings['dispatchMaxTime'] = $wmgWikibaseDispatchMaxTime;
-	$wgWBRepoSettings['dispatchDefaultBatchSize'] = $wmgWikibaseDispatchDefaultBatchSize;
 	$wgWBRepoSettings['dispatchLagToMaxLagFactor'] = 0;
 
 	$wgWBRepoSettings['unitStorage'] = [
