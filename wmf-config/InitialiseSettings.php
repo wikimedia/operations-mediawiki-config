@@ -26550,10 +26550,18 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'testwiki' => true,
 
-	// Growth pilot wikis
+	// Growth pilot wikis (phase I)
 	'arwiki' => true,
 	'bnwiki' => true,
 	'cswiki' => true,
+
+	// phrase II wikis
+	'azwiki' => true,
+	'ckbwiki' => true,
+	'frwiki' => true,
+	'kuwiki' => true,
+	'ukwiki' => true,
+	'rowiki' => true,
 ],
 
 'wgGEMentorDashboardBetaMode' => [
