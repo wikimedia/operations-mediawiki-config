@@ -1695,6 +1695,11 @@ function wmfGetLabsOverrideSettings() {
 			'wikidatawiki' => true,
 		],
 
+		// T294159: Enable Lexeme data access via Scribunto on the Beta Cluster
+		'-wgLexemeEnableDataTransclusion' => [
+			'default' => true
+		],
+
 		'wgMusicalNotationEnableWikibaseDataType' => [
 			'default' => false,
 			'wikidatawiki' => true,
