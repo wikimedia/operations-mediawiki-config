@@ -151,8 +151,6 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['sharedCacheKeyGroup'] = $wmgWikibaseCachePrefix;
 	$wgWBRepoSettings['sharedCacheKeyPrefix'] = $wmgWBSharedCacheKey;
 
-	$wgWBRepoSettings['dispatchLagToMaxLagFactor'] = 0;
-
 	$wgWBRepoSettings['unitStorage'] = [
 		'class' => '\\Wikibase\\Lib\\Units\\JsonUnitStorage',
 		'args' => [ __DIR__ . '/unitConversionConfig.json' ]
