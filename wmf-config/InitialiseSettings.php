@@ -61,7 +61,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgCapitalLinkOverrides' => [
-	'scowiki' => [ //T247172#5952219
+	'scowiki' => [ // T247172#5952219
 		102 => true,
 		103 => true,
 	],
@@ -1952,8 +1952,8 @@ function wmfGetVariantSettings() {
 	'kowikiversity' => '위키배움터',
 	'kowiktionary' => '위키낱말사전',
 	'krcwiki' => 'Википедия',
-	'kswiki' => 'وِکیٖپیٖڈیا', //T289752
-	'kswiktionary' => 'وِکیٖلۄغَتھ', //T289767
+	'kswiki' => 'وِکیٖپیٖڈیا', // T289752
+	'kswiktionary' => 'وِکیٖلۄغَتھ', // T289767
 	'kuwiki' => 'Wîkîpediya',
 	'kuwiktionary' => 'Wîkîferheng', // T29878
 	'wikitech' => 'Wikitech',
@@ -2425,7 +2425,7 @@ function wmfGetVariantSettings() {
 	'hewiktionary' => 'ויקימילון',
 	'hifwiktionary' => 'Sabdkosh', // T173643
 	'hiwiki' => 'विकिपीडिया',
-	'hiwikibooks' => 'विकिपुस्तक', //T254012
+	'hiwikibooks' => 'विकिपुस्तक', // T254012
 	'hiwikimedia' => 'विकिमीडिया', // T188366
 	'hiwikisource' => 'विकिस्रोत',
 	'hiwikiversity' => 'विकिविश्वविद्यालय',
@@ -2499,8 +2499,8 @@ function wmfGetVariantSettings() {
 	'kowiktionary' => '위키낱말사전',
 	'kowikiversity' => '위키배움터', // T46899
 	'krcwiki' => 'Википедия',
-	'kswiki' => 'وِکیٖپیٖڈیا', //T289752
-	'kswiktionary' => 'وِکیٖلۄغَتھ', //T289767
+	'kswiki' => 'وِکیٖپیٖڈیا', // T289752
+	'kswiktionary' => 'وِکیٖلۄغَتھ', // T289767
 	'kuwiki' => 'Wîkîpediya',
 	'kuwikibooks' => 'Wîkîpirtûk',
 	'kuwikiquote' => 'Wîkîgotin',
@@ -3751,7 +3751,7 @@ function wmfGetVariantSettings() {
 	'+kowikiquote' => [
 		'인' => NS_PROJECT,
 		'사' => NS_USER, // T255031
-		'사토' => NS_USER_TALK, //T255031
+		'사토' => NS_USER_TALK, // T255031
 	],
 	'+kowikisource' => [
 		'문' => NS_PROJECT, // T182487
@@ -4599,22 +4599,22 @@ function wmfGetVariantSettings() {
 		'模块讨论' => 829, // T165593
 		'模組' => 828, // T165593
 		'模組討論' => 829, // T165593
-		'專題' => 102, //T271612
-		'专题' => 102, //T271612
-		'維基專題' => 102, //T271612
-		'维基专题' => 102, //T271612
-		'PJ' => 102, //T271612
-		'WPJ' => 102, //T271612
-		'專題討論' => 103, //T271612
-		'专题讨论' => 103, //T271612
-		'專題對話' => 103, //T271612
-		'专题对话' => 103, //T271612
-		'維基專題討論' => 103, //T271612
-		'维基专题讨论' => 103, //T271612
-		'維基專題對話' => 103, //T271612
-		'维基专题对话' => 103, //T271612
-		'PJT' => 103, //T271612
-		'WPJT' => 103, //T271612
+		'專題' => 102, // T271612
+		'专题' => 102, // T271612
+		'維基專題' => 102, // T271612
+		'维基专题' => 102, // T271612
+		'PJ' => 102, // T271612
+		'WPJ' => 102, // T271612
+		'專題討論' => 103, // T271612
+		'专题讨论' => 103, // T271612
+		'專題對話' => 103, // T271612
+		'专题对话' => 103, // T271612
+		'維基專題討論' => 103, // T271612
+		'维基专题讨论' => 103, // T271612
+		'維基專題對話' => 103, // T271612
+		'维基专题对话' => 103, // T271612
+		'PJT' => 103, // T271612
+		'WPJT' => 103, // T271612
 	],
 	'+zhwikibooks' => [
 		'维基教科书' => NS_PROJECT,
@@ -6304,7 +6304,7 @@ function wmfGetVariantSettings() {
 	'scowiki' => [
 		100 => 'Portal', // T68107
 		101 => 'Portal_talk',
-		102 => 'Define', //T247172
+		102 => 'Define', // T247172
 		103 => 'Define_talk',
 	],
 	'sdwiki' => [
@@ -6443,8 +6443,8 @@ function wmfGetVariantSettings() {
 	'zhwiki' => [
 		100 => 'Portal',
 		101 => 'Portal_talk',
-		102 => 'WikiProject',//T271612
-		103 => 'WikiProject_talk',//T271612
+		102 => 'WikiProject',// T271612
+		103 => 'WikiProject_talk',// T271612
 		118 => 'Draft', // T91223
 		119 => 'Draft_talk', // T91223
 		828 => 'Module', // T165593
@@ -7163,12 +7163,12 @@ function wmfGetVariantSettings() {
 	'trwiktionary' => [
 		100 => 'Portal',
 		101 => 'Portal_tartışma',
-		102 => 'YeniKurum', //START T248734 - Reconstruction (Talk)
+		102 => 'YeniKurum', // START T248734 - Reconstruction (Talk)
 		103 => 'YeniKurum_tartışma',
-		104 => 'Ek', //Appendix (Talk)
+		104 => 'Ek', // Appendix (Talk)
 		105 => 'Ek_tartışma',
-		106 => 'Alıntılar', //Citations (Talk)
-		107 => 'Alıntılar_tartışma', //END T248734
+		106 => 'Alıntılar', // Citations (Talk)
+		107 => 'Alıntılar_tartışma', // END T248734
 	],
 	'ukwiktionary' => [
 		// T15791
@@ -7719,10 +7719,10 @@ function wmfGetVariantSettings() {
 		103 => '포털토론', // T46899
 	],
 	'ruwikiversity' => [
-		100 => 'Портал', //T293545, Portal
-		101 => 'Обсуждение_портала', //T293545, Portal talk
-		102 => 'Факультет', //T293545, Faculty
-		103 => 'Обсуждения_факультета', //T293545, Faculty talk
+		100 => 'Портал', // T293545, Portal
+		101 => 'Обсуждение_портала', // T293545, Portal talk
+		102 => 'Факультет', // T293545, Faculty
+		103 => 'Обсуждения_факультета', // T293545, Faculty talk
 	],
 	'svwikiversity' => [
 		100 => 'Portal',
@@ -10528,7 +10528,7 @@ function wmfGetVariantSettings() {
 			'rollback' => true,
 			'unwatchedpages' => true,
 			'block' => true, // T37261
-			'abusefilter-log-private' => true, //T237830
+			'abusefilter-log-private' => true, // T237830
 		], // T29563
 		'user' => [ 'move-rootuserpages' => false, ],
 		'sysop' => [
@@ -13192,7 +13192,7 @@ function wmfGetVariantSettings() {
 			'flood',
 			'massmessage-sender', // T130814
 			'filemover', // T195247
-			'eventparticipant', //T198167
+			'eventparticipant', // T198167
 			'transwiki', // T250972
 			'templateeditor', // T260012
 		],
@@ -16181,7 +16181,7 @@ function wmfGetVariantSettings() {
 	'srwikisource' => 'any', // T172974
 	'srwikiquote' => 'any', // T172974
 	'tawiktionary' => 'any', // T241684
-	'trwikisource' => 'any', //T248747
+	'trwikisource' => 'any', // T248747
 	'wikidatawiki' => 'any', // T144687
 	'zhwikinews' => 'any', // T53604
 	'zhwikiversity' => 'any', // T214946
@@ -16634,7 +16634,7 @@ function wmfGetVariantSettings() {
 	'cswikisource' => 'ReferencePopups',
 	'cswiktionary' => 'ReferencePopups',
 	'frwiki' => 'tooltipRef',
-//	'hewiki' => 'CiteTooltip', // check disabled T276330
+// 'hewiki' => 'CiteTooltip', // check disabled T276330
 	'hewikibooks' => 'RefTooltip',
 	'hewikinews' => 'RefTooltip',
 	'hewikisource' => 'CiteTooltip',
@@ -17022,8 +17022,8 @@ function wmfGetVariantSettings() {
 		'Project' => true, // T130177
 	],
 	'+hywiki' => [
-		'Սևագիր' => true, //Draft, T260825
-		'Վիքինախագիծ' => true, //Wikiproject, T260825
+		'Սևագիր' => true, // Draft, T260825
+		'Վիքինախագիծ' => true, // Wikiproject, T260825
 	],
 	'+itwiki' => [
 		'Bozza' => true, // Draft - T280289
@@ -17059,7 +17059,7 @@ function wmfGetVariantSettings() {
 		'Portal' => true, // T144688
 	],
 	'+thwiki' => [
-		'ฉบับร่าง' /* Draft */ => true, //T252959
+		'ฉบับร่าง' /* Draft */ => true, // T252959
 	],
 	'+vecwiki' => [
 		'Project' => true, // T250419
@@ -17081,7 +17081,7 @@ function wmfGetVariantSettings() {
 
 	// Wikibookses
 	'+bnwikibooks' => [
-		'উইকিশৈশব' => true, //T241893
+		'উইকিশৈশব' => true, // T241893
 	],
 
 	// Wikisources
@@ -17660,7 +17660,7 @@ function wmfGetVariantSettings() {
 	'srwiki' => true, // T37913
 	'svwiki' => true, // T32756
 	'svwikinews' => true, // T33754
-	'tawiki' => true, //T280326
+	'tawiki' => true, // T280326
 	'testwiki' => true,
 	'trwiki' => true, // T40227
 	'ukwiki' => true, // T91530
@@ -18023,7 +18023,7 @@ function wmfGetVariantSettings() {
 		'excludeNamespaces' => [ 10, -1 ],
 		'maxImages' => 1000,
 		'maxHeadings' => 4000,
-		'headings' => [ 'h2', 'h3', 'h4', 'h5', 'h6' ] //T110436, T110837
+		'headings' => [ 'h2', 'h3', 'h4', 'h5', 'h6' ] // T110436, T110837
 	],
 ],
 
@@ -24122,7 +24122,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgCirrusSearchNearMatchWeight' => [
-	'default' => 10, //T257922
+	'default' => 10, // T257922
 ],
 
 'wgCirrusSearchNamespaceWeights' => [
@@ -26700,30 +26700,30 @@ function wmfGetVariantSettings() {
 		'Q3518540', // terra cotta
 		'Q5960345', // turquoise
 		'Q3014419', // wine
-		'Q454847', //amaranth
-		'Q679355', //amber
-		'Q1324818', //apricot
-		'Q372973', //aquamarine
-		'Q797446', //burgundy
-		'Q5043987', //carnelian
-		'Q2541418', //celadon
-		'Q313120', //cerulean
-		'Q3309916', //chocolate
-		'Q2936397', //cinnamon
-		'Q2411228', //coral
-		'Q2730433', //cream
-		'Q303826', //crimson
-		'Q180778', //cyan
-		'Q5005364', //fuchsia
-		'Q5967009', //indigo
-		'Q650770', //khaki
-		'Q2720565', //lemon
-		'Q2294993', //lilac
-		'Q3276756', //magenta
-		'Q25203611', //Mango
-		'Q25393814', //maroon
-		'Q864152', //olive
-		'Q533047', //rose
+		'Q454847', // amaranth
+		'Q679355', // amber
+		'Q1324818', // apricot
+		'Q372973', // aquamarine
+		'Q797446', // burgundy
+		'Q5043987', // carnelian
+		'Q2541418', // celadon
+		'Q313120', // cerulean
+		'Q3309916', // chocolate
+		'Q2936397', // cinnamon
+		'Q2411228', // coral
+		'Q2730433', // cream
+		'Q303826', // crimson
+		'Q180778', // cyan
+		'Q5005364', // fuchsia
+		'Q5967009', // indigo
+		'Q650770', // khaki
+		'Q2720565', // lemon
+		'Q2294993', // lilac
+		'Q3276756', // magenta
+		'Q25203611', // Mango
+		'Q25393814', // maroon
+		'Q864152', // olive
+		'Q533047', // rose
 
 		// adjectives
 		'Q48997611', // vintage
@@ -26767,12 +26767,12 @@ function wmfGetVariantSettings() {
 		'Q11016', // technology
 		'Q1172903', // loch
 		'Q165848', // wind wave
-		'Q211778', //Lake District
-		'Q43238',  //Poaceae
-		'Q5135744', //religious institute
-		'Q486972', //human settlement
-		'Q826939', //canard
-		'Q1286', //Alps
+		'Q211778', // Lake District
+		'Q43238',  // Poaceae
+		'Q5135744', // religious institute
+		'Q486972', // human settlement
+		'Q826939', // canard
+		'Q1286', // Alps
 
 		// time oriented terms
 		'Q1187312', // yesterday

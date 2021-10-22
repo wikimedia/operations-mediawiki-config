@@ -276,7 +276,6 @@ function wmfStaticRespond() {
 
 	wmfStaticStreamFile( "$fallback/$uriPath", $responseType );
 	$stats->increment( 'wmfstatic.mismatch' );
-	return;
 }
 
 wfResetOutputBuffers();

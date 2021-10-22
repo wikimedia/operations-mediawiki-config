@@ -56,7 +56,7 @@ class CirrusTest extends WgConfTestCase {
 		foreach ( $config['wgCirrusSearchClusters'] as $key => $clusterConf ) {
 			$this->assertArrayHasKey( 'replica', $clusterConf );
 			$this->assertArrayHasKey( 'group', $clusterConf );
-			if ( 'chi' !== $clusterConf['group'] ) {
+			if ( $clusterConf['group'] !== 'chi' ) {
 				// enwiki is chi, the test would pass but it seems
 				// weird to test unrelated groups.
 				continue;

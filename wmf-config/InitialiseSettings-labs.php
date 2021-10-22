@@ -1404,7 +1404,7 @@ function wmfGetLabsOverrideSettings() {
 			'wikidatawiki' => 'https://ssr-termbox.wmflabs.org/termbox',
 		],
 
-		//T232191
+		// T232191
 		'wmgWikibaseTaintedReferencesEnabled' => [
 			'default' => false,
 			'wikidatawiki' => true,
