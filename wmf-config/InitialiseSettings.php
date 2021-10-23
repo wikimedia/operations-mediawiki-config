@@ -55,6 +55,7 @@ function wmfGetVariantSettings() {
 'wgCapitalLinks' => [
 	'default' => true,
 	'jbowiki' => false,
+	'pwnwiki' => false, // T292415
 	'szywiki' => false, // T237369
 	'taywiki' => false, // T275803
 	'wiktionary' => false,
@@ -504,6 +505,7 @@ function wmfGetVariantSettings() {
 	'pnbwiki' => 'Asia/Karachi',
 	'pnbwiktionary' => 'Asia/Karachi',
 	'punjabiwikimedia' => 'Asia/Kolkata',
+	'pwnwiki' => 'Asia/Taipei',
 	'rmwiki' => 'Europe/Berlin',
 	'roa_tarawiki' => 'Europe/Rome', // T263123
 	'romdwikimedia' => 'Europe/Chisinau',
