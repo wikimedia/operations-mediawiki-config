@@ -291,6 +291,7 @@ function wmfGetVariantSettings() {
 	'default' => 'UTC',
 
 	'acewiki' => 'Asia/Jakarta', // T205693
+	'amiwiki' => 'Asia/Taipei',
 	'alswiki' => 'Europe/Berlin',
 	'amwikimedia' => 'Asia/Yerevan', // T176042
 	'altwiki' => 'Asia/Barnaul',

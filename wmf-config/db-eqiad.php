@@ -48,6 +48,7 @@ $wgLBFactoryConf = [
 
 	# s5: dewiki and some other wikis
 	'altwiki'       => 's5',
+	'amiwiki'       => 's5',
 	'apiportalwiki' => 's5',
 	'arbcom_ruwiki' => 's5',
 	'avkwiki'      => 's5',
