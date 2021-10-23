@@ -438,6 +438,7 @@ function wmfGetVariantSettings() {
 	'ltgwiki' => 'Europe/Riga',
 	'ltwiki' => 'Europe/Vilnius',
 	'lmowiki' => 'Europe/Rome',
+	'lmowiktionary' => 'Europe/Rome',
 	'lvwiki' => 'Europe/Riga', // T45592
 	'madwiki' => 'Asia/Jakarta',
 	'maiwiki' => 'Asia/Kathmandu', // T74346
@@ -2530,6 +2531,7 @@ function wmfGetVariantSettings() {
 	'liwikinews' => 'Wikinuujs',
 	'liwikisource' => 'Wikibrónne',
 	'lijwikisource' => 'Wikivivàgna',
+	'lmowiktionary' => 'Wikizzionari',
 	'loginwiki' => 'Project',
 	'lowiki' => 'ວິກິພີເດຍ',
 	'lrcwiki' => 'ڤیکیپئدیا', // T102026
