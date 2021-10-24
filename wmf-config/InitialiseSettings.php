@@ -14146,7 +14146,7 @@ function wmfGetVariantSettings() {
 	'itwiki' => [ 118, 119 ], // draft and draft talk - T280289
 	'kowiki' => [ 118, 119 ], // draft and draft talk - T92798
 	'thwiki' => [ 118, 119 ], // draft and draft talk - T252959
-	'zhwiki' => [ 118, 119 ], // draft and draft talk - T91223
+	'zhwiki' => [ 2, 3, 118, 119 ], // user and user talk - T288947, draft and draft talk - T91223
 ],
 
 'wgRevisionCacheExpiry' => [
