@@ -3919,6 +3919,8 @@ function wmfGetVariantSettings() {
 	],
 	'+mywiktionary' => [
 		'WT' => NS_PROJECT, // T140998
+		'Appendix' => 100, // T291146
+		'Appendix_talk' => 101, // T291146
 	],
 	'+mznwiki' => [
 		'وپ' => NS_PROJECT,
