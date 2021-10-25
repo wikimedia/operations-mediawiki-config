@@ -841,6 +841,11 @@ function wmfGetVariantSettings() {
 		'width' => 125,
 		'height' => 23,
 	],
+	'mniwiki' => [ // T294189
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-mni.svg',
+		'width' => 119,
+		'height' => 18,
+	],
 	'mrwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-hi.svg',
 		'width' => 78,
