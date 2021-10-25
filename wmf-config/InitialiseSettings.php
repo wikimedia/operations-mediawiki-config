@@ -2948,33 +2948,41 @@ function wmfGetVariantSettings() {
 'wgNamespaceAliases' => [
 	// defaults to aid when things are switched
 	// Set default aliases for project_talk for all projects // T173070
+	// set default short aliases for NS_PROJECT (T293839)
 	'+wikibooks' => [
 		'Wikibooks' => NS_PROJECT,
 		'Wikibooks_talk' => NS_PROJECT_TALK,
+		'WB' => NS_PROJECT,
 	],
 	'+wikinews' => [
 		'Wikinews' => NS_PROJECT,
 		'Wikinews_talk' => NS_PROJECT_TALK,
+		'WN' => NS_PROJECT,
 	],
 	'+wikiquote' => [
 		'Wikiquote' => NS_PROJECT,
 		'Wikiquote_talk' => NS_PROJECT_TALK,
+		'WQ' => NS_PROJECT,
 	],
 	'+wikisource' => [
 		'Wikisource' => NS_PROJECT,
 		'Wikisource_talk' => NS_PROJECT_TALK,
+		'WS' => NS_PROJECT,
 	],
 	'+wikiversity' => [
 		'Wikiversity' => NS_PROJECT,
 		'Wikiversity_talk' => NS_PROJECT_TALK,
+		'WV' => NS_PROJECT,
 	],
 	'+wikipedia' => [
 		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
+		'WP' => NS_PROJECT,
 	],
 	'+wiktionary' => [
 		'Wiktionary' => NS_PROJECT,
 		'Wiktionary_talk' => NS_PROJECT_TALK,
+		'WT' => NS_PROJECT,
 	],
 	'+wikivoyage' => [
 		'Wikivoyage' => NS_PROJECT,
