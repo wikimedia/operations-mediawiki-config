@@ -14425,24 +14425,11 @@ function wmfGetVariantSettings() {
 	'thwikisource' => true,
 
 	// Wikiversity
-	'arwikiversity' => true,
 	'betawikiversity' => true,
-	'cswikiversity' => true,
-	'dewikiversity' => true,
-	'elwikiversity' => true,
 	'enwikiversity' => true,
 	'eswikiversity' => true,
-	'fiwikiversity' => true,
 	'frwikiversity' => true,
-	'hiwikiversity' => true,
-	'itwikiversity' => true,
-	'jawikiversity' => true,
-	'kowikiversity' => true,
 	'ptwikiversity' => true,
-	'ruwikiversity' => true,
-	'slwikiversity' => true,
-	'svwikiversity' => true,
-	'zhwikiversity' => true,
 ],
 
 'wgDLPQueryCacheTime' => [
