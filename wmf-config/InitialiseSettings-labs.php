@@ -1699,6 +1699,9 @@ function wmfGetLabsOverrideSettings() {
 		'-wgLexemeEnableDataTransclusion' => [
 			'default' => true
 		],
+		'-wmgWikibaseDisabledAccessEntityTypes' => [
+			'default' => [],
+		],
 
 		'wgMusicalNotationEnableWikibaseDataType' => [
 			'default' => false,
