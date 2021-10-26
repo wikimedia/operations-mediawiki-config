@@ -21786,8 +21786,10 @@ function wmfGetVariantSettings() {
 	// Monolingual text statements, it should rather be added to:
 	// Wikibase\Lib\WikibaseContentLanguages::getDefaultMonolingualTextLanguages
 	'wikidata' => [
+		'agq' => 'Aghem', // T288335
 		'fkv' => 'kvääni', // T167259
 		'kea' => 'kabuverdianu', // T127435
+		'mcn' => 'vùn màsànà', // T293884
 		'nod' => 'ᨣᩴᩤᨾᩮᩥᩬᨦ', // T93880
 		'ota' => 'لسان عثمانى', // T59342
 		'rmf' => 'kaalengo tšimb', // T226701
@@ -21798,8 +21800,10 @@ function wmfGetVariantSettings() {
 		'srq' => 'mbia cheë', // T113408
 	],
 	'commonswiki' => [
+		'agq' => 'Aghem', // T288335
 		'fkv' => 'kvääni', // T167259
 		'kea' => 'kabuverdianu', // T230480
+		'mcn' => 'vùn màsànà', // T293884
 		'nod' => 'ᨣᩴᩤᨾᩮᩥᩬᨦ', // T230480
 		'ota' => 'لسان عثمانى', // T230480
 		'rmf' => 'kaalengo tšimb', // T226701
