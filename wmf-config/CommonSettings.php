@@ -150,11 +150,11 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 	// rebuildLocalisationCache.php and mergeMessageFileList.php to
 	// run to completion without complaints.
 
-	$wmfEtcdLastModifiedIndex = "wmfEtcdLastModifiedIndex uninitialized due to WMF_MAINTENANCE_OFFLINE";
+	$wmgEtcdLastModifiedIndex = "wmgEtcdLastModifiedIndex uninitialized due to WMF_MAINTENANCE_OFFLINE";
 	$wgReadOnly = "In read-only mode because WMF_MAINTENANCE_OFFLINE is set";
-	$wmfMasterDatacenter = ServiceConfig::getInstance()->getDatacenter();
-	$wmfMasterServices = $wmfAllServices[$wmfMasterDatacenter];
-	$wmfDbconfigFromEtcd = [
+	$wmgMasterDatacenter = ServiceConfig::getInstance()->getDatacenter();
+	$wmgMasterServices = $wmfAllServices[$wmgMasterDatacenter];
+	$wmgDbconfigFromEtcd = [
 		'readOnlyBySection' => null,
 		'groupLoadsBySection' => [
 			'DEFAULT' => [
@@ -167,23 +167,27 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 		'sectionLoads' => [],
 		'externalLoads' => [],
 	];
-
 } else {
 	$etcdConfig = wmfSetupEtcd( $wmfLocalServices['etcd'] );
-	$wmfEtcdLastModifiedIndex = $etcdConfig->getModifiedIndex();
 
+	$wmgEtcdLastModifiedIndex = $etcdConfig->getModifiedIndex();
 	$wgReadOnly = $etcdConfig->get( "$wmfDatacenter/ReadOnly" );
-
-	$wmfMasterDatacenter = $etcdConfig->get( 'common/WMFMasterDatacenter' );
-	$wmfMasterServices = $wmfAllServices[$wmfMasterDatacenter];
+	$wmgMasterDatacenter = $etcdConfig->get( 'common/WMFMasterDatacenter' );
+	$wmgMasterServices = $wmfAllServices[$wmgMasterDatacenter];
 
 	// Database load balancer config (sectionLoads, groupLoadsBySection, …)
 	// This is later merged into $wgLBFactoryConf by wmfEtcdApplyDBConfig().
 	// See also <https://wikitech.wikimedia.org/wiki/Dbctl>
-	$wmfDbconfigFromEtcd = $etcdConfig->get( "$wmfDatacenter/dbconfig" );
+	$wmgDbconfigFromEtcd = $etcdConfig->get( "$wmfDatacenter/dbconfig" );
 
 	unset( $etcdConfig );
 }
+
+// Write to wmf* constants for backwards-compatibility - T45956
+$wmfEtcdLastModifiedIndex = $wmgEtcdLastModifiedIndex;
+$wmfMasterDatacenter = $wmgMasterDatacenter;
+$wmfMasterServices = $wmgMasterServices;
+$wmfDbconfigFromEtcd = $wmgDbconfigFromEtcd;
 
 $wmfUdp2logDest = $wmfLocalServices['udp2log'];
 if ( $wgDBname === 'testwiki' || $wgDBname === 'test2wiki' ) {
