@@ -8,10 +8,13 @@ require_once __DIR__ . "../../src/defines.php";
 
 $wmfConfigDir = __DIR__ . '/../wmf-config';
 
-global $wmfRealm, $wmfDatacenter;
+global $wmfRealm, $wmgRealm, $wmfDatacenter;
 
-$wmfRealm = 'production';
+$wmgRealm = 'production';
 $wmfDatacenter = 'eqiad';
+
+// Write to wmf* constant for backwards-compatibility - T45956
+$wmfRealm = $wmgRealm;
 
 require_once "{$wmfConfigDir}/InitialiseSettings.php";
 $settings['production'] = wmfGetVariantSettings();

@@ -69,7 +69,7 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 		$wmgEnableLogstash = true;
 		$wmgUseEventBus = true;
 		$wmgMonologChannels = [ 'test' => $channelConfig ];
-		$wmfRealm = 'production';
+		$wmgRealm = $wmfRealm = 'production';
 
 		include __DIR__ . '/../wmf-config/logging.php';
 
