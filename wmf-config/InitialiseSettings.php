@@ -215,7 +215,7 @@ function wmfGetVariantSettings() {
 	'thankyouwiki' => 'en',
 	'transitionteamwiki' => 'en',
 	'usabilitywiki' => 'en',
-	'votewiki' => 'en',
+	'votewiki' => 'fa', // T292685
 	'wg_enwiki' => 'en',
 	'wikimania' => 'en',
 	'wikimaniateamwiki' => 'en',
