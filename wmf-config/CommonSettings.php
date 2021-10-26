@@ -546,13 +546,13 @@ $wgLocalisationCacheConf['manualRecache'] = true;
 
 // Add some useful config data to query=siteinfo
 $wgHooks['APIQuerySiteInfoGeneralInfo'][] = static function ( $module, &$data ) {
-	global $wmfMasterDatacenter;
-	global $wmfEtcdLastModifiedIndex;
+	global $wmgMasterDatacenter;
+	global $wmgEtcdLastModifiedIndex;
 	global $wmgCirrusSearchDefaultCluster;
 	global $wgCirrusSearchDefaultCluster;
 	$data['wmf-config'] = [
-		'wmfMasterDatacenter' => $wmfMasterDatacenter,
-		'wmfEtcdLastModifiedIndex' => $wmfEtcdLastModifiedIndex,
+		'wmfMasterDatacenter' => $wmgMasterDatacenter,
+		'wmfEtcdLastModifiedIndex' => $wmgEtcdLastModifiedIndex,
 		'wmgCirrusSearchDefaultCluster' => $wmgCirrusSearchDefaultCluster,
 		'wgCirrusSearchDefaultCluster' => $wgCirrusSearchDefaultCluster,
 	];

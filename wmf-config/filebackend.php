@@ -219,7 +219,7 @@ $wgFileBackends[] = $sharedTestwikiMultiWriteFileBackend;
 $wgLockManagers[] = [
 	'name'         => 'redisLockManager',
 	'class'        => 'RedisLockManager',
-	'lockServers'  => $wmfMasterServices['redis_lock'],
+	'lockServers'  => $wmgMasterServices['redis_lock'],
 	'srvsByBucket' => [
 		0 => $redisLockServers
 	],
