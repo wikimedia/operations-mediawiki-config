@@ -87,23 +87,23 @@ set_include_path( implode( PATH_SEPARATOR, $includePaths ) );
 # 'upload'  : hostname where files are hosted
 # 'wikidata': hostname for the data repository
 # Whenever all realms/datacenters should use the same host, do not use
-# $wmfHostnames but use the hardcoded hostname instead. A good example are the
+# $wmgHostnames but use the hardcoded hostname instead. A good example are the
 # spam blacklists hosted on meta.wikimedia.org which you will surely want to
 # reuse.
-$wmfHostnames = [];
+$wmgHostnames = [];
 switch ( $wmfRealm ) {
 case 'labs':
-	$wmfHostnames['meta']     = 'meta.wikimedia.beta.wmflabs.org';
-	$wmfHostnames['test']     = 'test.wikipedia.beta.wmflabs.org';
-	$wmfHostnames['upload']   = 'upload.wikimedia.beta.wmflabs.org';
-	$wmfHostnames['wikidata'] = 'wikidata.beta.wmflabs.org';
+	$wmgHostnames['meta']     = 'meta.wikimedia.beta.wmflabs.org';
+	$wmgHostnames['test']     = 'test.wikipedia.beta.wmflabs.org';
+	$wmgHostnames['upload']   = 'upload.wikimedia.beta.wmflabs.org';
+	$wmgHostnames['wikidata'] = 'wikidata.beta.wmflabs.org';
 	break;
 case 'production':
 default:
-	$wmfHostnames['meta']   = 'meta.wikimedia.org';
-	$wmfHostnames['test']   = 'test.wikipedia.org';
-	$wmfHostnames['upload'] = 'upload.wikimedia.org';
-	$wmfHostnames['wikidata'] = 'www.wikidata.org';
+	$wmgHostnames['meta']   = 'meta.wikimedia.org';
+	$wmgHostnames['test']   = 'test.wikipedia.org';
+	$wmgHostnames['upload'] = 'upload.wikimedia.org';
+	$wmgHostnames['wikidata'] = 'www.wikidata.org';
 	break;
 }
 
@@ -1039,7 +1039,7 @@ if ( $wmgUseTimeline ) {
 
 // TODO: This should be handled by LocalServices, not here.
 $wgCopyUploadProxy = ( $wmfRealm !== 'labs' ) ? $wmfLocalServices['urldownloader'] : false;
-$wgUploadThumbnailRenderHttpCustomHost = $wmfHostnames['upload'];
+$wgUploadThumbnailRenderHttpCustomHost = $wmgHostnames['upload'];
 $wgUploadThumbnailRenderHttpCustomDomain = $wmfLocalServices['upload'];
 if ( $wmgUseLocalHTTPProxy ) {
 	$wgLocalHTTPProxy = $wmfLocalServices['mwapi'] ?? false;
@@ -1815,7 +1815,7 @@ if ( $wmgUseCentralAuth ) {
 			'meta.wikimedia.beta.wmflabs.org' => 'metawiki',
 			'deployment.wikimedia.beta.wmflabs.org' => 'deploymentwiki',
 			'commons.wikimedia.beta.wmflabs.org' => 'commonswiki',
-			$wmfHostnames['wikidata'] => 'wikidatawiki',
+			$wmgHostnames['wikidata'] => 'wikidatawiki',
 			'api.wikimedia.beta.wmflabs.org' => 'apiportalwiki',
 		];
 		$wgCentralAuthLoginWiki = 'loginwiki';
@@ -2097,7 +2097,7 @@ if ( $wmgUseCentralNotice ) {
 	wfLoadExtension( 'CentralNotice' );
 
 	// for DNS prefetching
-	$wgCentralHost = "//{$wmfHostnames['meta']}";
+	$wgCentralHost = "//{$wmgHostnames['meta']}";
 
 	// for banner loading
 	if ( $wmfRealm === 'production' && $wgDBname === 'testwiki' ) {
@@ -2107,7 +2107,7 @@ if ( $wmgUseCentralNotice ) {
 		// Never set this to zero on a highly trafficked wiki, there are server-melting consequences
 		$wgNoticeBannerMaxAge = 0;
 	} else {
-		$wgCentralSelectedBannerDispatcher = "//{$wmfHostnames['meta']}/w/index.php?title=Special:BannerLoader";
+		$wgCentralSelectedBannerDispatcher = "//{$wmgHostnames['meta']}/w/index.php?title=Special:BannerLoader";
 	}
 	// Relative URL which is hardcoded to HTTP 204 in Varnish config.
 	$wgCentralBannerRecorder = "{$wgServer}/beacon/impression";
@@ -2463,7 +2463,7 @@ if ( $wmgUseSandboxLink ) {
 
 if ( $wmgUseUploadWizard ) {
 	wfLoadExtension( 'UploadWizard' );
-	$wgUploadStashScalerBaseUrl = "//{$wmfHostnames['upload']}/$site/$lang/thumb/temp";
+	$wgUploadStashScalerBaseUrl = "//{$wmgHostnames['upload']}/$site/$lang/thumb/temp";
 	$wgUploadWizardConfig = [
 		# 'debug' => true,
 		// Normally we don't include API keys in CommonSettings, but this key
