@@ -1885,7 +1885,7 @@ function wmfGetLabsOverrideSettings() {
 		],
 
 		'-wgDiscussionTools_sourcemodetoolbar' => [
-			'default' => 'default',
+			'default' => 'available',
 		],
 
 		'-wgDiscussionTools_topicsubscription' => [
