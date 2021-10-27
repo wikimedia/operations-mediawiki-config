@@ -9426,7 +9426,10 @@ function wmfGetVariantSettings() {
 		'flood' => [ 'bot' => true ],
 	],
 	'+enwikisource' => [
-		'autoconfirmed' => [ 'patrol' => true ], // T14355
+		'autoconfirmed' => [
+			'patrol' => true, // T14355
+			'upload_by_url' => true, // T294447
+		],
 		'autopatrolled' => [ 'autopatrol' => true ], // T20307
 		'flood' => [ 'bot' => true ], // T38863
 		'upload-shared' => [ // T285130
