@@ -1443,6 +1443,10 @@ if ( $wmgUseSecurePoll ) {
 
 	// T209802 - gpg2 is untested and evidently broken
 	$wgSecurePollGPGCommand = 'gpg1';
+
+	if ( wfHostName() === 'mwmaint1002' ) {
+		$wgSecurePollShowErrorDetail = true;
+	}
 }
 
 // PoolCounter
