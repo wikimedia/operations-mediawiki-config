@@ -27380,10 +27380,6 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
-'wmgWikibaseTmpUseRequestLanguagesForRdfOutput' => [
-	'default' => true,
-],
-
 'wmgWikibaseTmpNormalizeDataValues' => [
 	'default' => true,
 ],
