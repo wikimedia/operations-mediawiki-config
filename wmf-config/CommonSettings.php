@@ -3796,9 +3796,8 @@ if ( $wmgUseGraph ) {
 
 if ( $wmgUseOAuth ) {
 	wfLoadExtension( 'OAuth' );
-	if ( in_array( $wgDBname, [ 'labswiki', 'labtestwiki', 'foundationwiki' ] ) ) {
+	if ( in_array( $wgDBname, [ 'labswiki', 'labtestwiki' ] ) ) {
 		// Wikitech and its testing variant use local OAuth tables
-		// WMF wiki uses OAuth tables of its own - T170301
 		$wgMWOAuthCentralWiki = false;
 	} else {
 		$wgMWOAuthCentralWiki = 'metawiki';
