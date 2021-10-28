@@ -4191,6 +4191,7 @@ if ( $wmgUseGrowthExperiments ) {
 
 	// POC API, allowed until 2022-03-31. See T294362.
 	$wgGEImageRecommendationServiceUrl = 'https://image-suggestion-api.wmcloud.org';
+	$wgGEImageRecommendationServiceHttpProxy = $wmfLocalServices['urldownloader'];
 	$wgGELinkRecommendationServiceUrl = $wmfLocalServices['linkrecommendation'];
 }
 
