@@ -3813,6 +3813,10 @@ function wmfGetVariantSettings() {
 		'Work' => 104, // T257672
 		'Work_talk' => 105, // T257672
 	],
+	'+lmowiktionary' => [
+		'Appendix' => 100,
+		'Appendix_talk' => 101,
+	],
 	'+ltwiki' => [
 		'Wikipedia_aptarimas' => NS_PROJECT_TALK,
 	],
@@ -7044,6 +7048,10 @@ function wmfGetVariantSettings() {
 	'lbwiktionary' => [
 		100 => 'Annexen',
 		101 => 'Annexen_Diskussioun',
+	],
+	'lmowiktionary' => [
+		100 => 'Apendice',
+		101 => 'Ciciarada_Apendice',
 	],
 	'ltwiktionary' => [
 		100 => 'Sąrašas',
