@@ -11148,18 +11148,25 @@ function wmfGetVariantSettings() {
 		'flood' => [ 'bot' => true ],
 	],
 	'+viwiki' => [
-		'eliminator' => [ // T70612
+		'eliminator' => [ // T70612, T294530
 			'autopatrol' => true,
+			'browsearchive' => true,
 			'delete' => true,
+			'deletelogentry' => true,
 			'deletedhistory' => true,
 			'deletedtext' => true,
 			'deleterevision' => true,
+			'mergehistory' => true,
+			'movefile' => true,
+			'move-subpages' => true,
+			'nuke' => true,
 			'patrol' => true,
 			'protect' => true,
+			'suppressredirect' => true,
 			'rollback' => true,
 			'undelete' => true,
-			'extendedconfirmed' => true
-		], // T215493
+			'extendedconfirmed' => true, // T215493
+		],
 		'flood' => [ 'bot' => true ],
 		'rollbacker' => [ 'rollback' => true ],
 		'patroller' => [ 'patrol' => true ], // T48828
