@@ -15240,6 +15240,7 @@ function wmfGetVariantSettings() {
 	'private' => false,
 	'fishbowl' => false,
 	'nonglobal' => false,
+	'foundationwiki' => false,
 ],
 
 'wmgUseOAuth' => [
