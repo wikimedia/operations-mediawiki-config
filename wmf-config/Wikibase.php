@@ -2,9 +2,18 @@
 
 use MediaWiki\MediaWikiServices;
 
-// Load the Repo, and Repo extensions
+// Load the Repo
 if ( !empty( $wmgUseWikibaseRepo ) ) {
 	wfLoadExtension( 'WikibaseRepository', "$IP/extensions/Wikibase/extension-repo.json" );
+}
+
+// Load the Client
+if ( !empty( $wmgUseWikibaseClient ) ) {
+	wfLoadExtension( 'WikibaseClient', "$IP/extensions/Wikibase/extension-client.json" );
+}
+
+// Load Repo extensions
+if ( !empty( $wmgUseWikibaseRepo ) ) {
 	if ( !empty( $wmgUseWikibaseWikidataOrg ) ) {
 		wfLoadExtension( 'Wikidata.org' );
 	}
@@ -29,9 +38,8 @@ if ( !empty( $wmgUseWikibaseRepo ) ) {
 	}
 }
 
-// Load the Client, and Client extensions
+// Load Client extensions
 if ( !empty( $wmgUseWikibaseClient ) ) {
-	wfLoadExtension( 'WikibaseClient', "$IP/extensions/Wikibase/extension-client.json" );
 	if ( !empty( $wmgUseWikibaseWikimediaBadges ) ) {
 		wfLoadExtension( 'WikimediaBadges' );
 	}
