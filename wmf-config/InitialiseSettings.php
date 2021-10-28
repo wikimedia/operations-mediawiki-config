@@ -9678,8 +9678,6 @@ function wmfGetVariantSettings() {
 	],
 	'+foundationwiki' => [
 		'user' => [
-			'editinterface' => true,
-			'editsitejson' => true,
 			'upload' => false,
 			'reupload' => false,
 			'reupload-own' => false,
