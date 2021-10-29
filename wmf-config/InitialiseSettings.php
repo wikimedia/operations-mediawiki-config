@@ -27202,6 +27202,7 @@ function wmfGetVariantSettings() {
 // Disables use of Special:CreateAcount, but allows CentralAuth accounts to still be autocreated
 'wmgDisableAccountCreation' => [
 	'default' => false,
+	'foundationwiki' => true,
 	'wikimaniawiki' => true,
 	'testwikidatawiki' => true,
 ],
