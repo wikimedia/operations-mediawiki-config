@@ -22298,6 +22298,7 @@ function wmfGetVariantSettings() {
 	'guwiki' => true,
 	'htwiki' => true,
 	'knwiki' => true,
+	'kswiki' => true, // T294632
 	'lvwiki' => true,
 	'napwiki' => true,
 	'nnwiki' => true,
