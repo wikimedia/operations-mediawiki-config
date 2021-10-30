@@ -952,6 +952,7 @@ $wgGrantPermissions['editprotected']['extendedconfirmed'] = true;
 $wgGrantPermissions['editprotected']['editautoreviewprotected'] = true;
 $wgGrantPermissions['editprotected']['editautopatrolprotected'] = true;
 $wgGrantPermissions['editprotected']['edittrustedprotected'] = true;
+$wgGrantPermissions['editprotected']['edit-legal'] = true;
 
 // Adding Flow's rights so that they are available for global groups/staff rights
 $wgAvailableRights[] = 'flow-create-board';
