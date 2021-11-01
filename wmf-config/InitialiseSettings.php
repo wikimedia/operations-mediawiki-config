@@ -25353,7 +25353,7 @@ function wmfGetVariantSettings() {
 			'question' => 'ext-quicksurveys-growth-ip-research-question',
 			'description' => 'ext-quicksurveys-growth-ip-research-description',
 			'link' => 'ext-quicksurveys-growth-ip-research-link',
-			'coverage' => 0,
+			'coverage' => 0.001,
 			'audience' => [
 				'minEdits' => 10,
 				'anons' => false,
@@ -25396,7 +25396,7 @@ function wmfGetVariantSettings() {
 				'ext-quicksurveys-example-internal-survey-answer-neutral',
 				'ext-quicksurveys-example-internal-survey-answer-negative',
 			],
-			'coverage' => 0.0,
+			'coverage' => 0.001,
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 			],
