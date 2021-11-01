@@ -25334,6 +25334,26 @@ function wmfGetVariantSettings() {
 
 'wgQuickSurveysConfig' => [
 	'default' => [],
+	'arwiki' => [
+		// T294568
+		[
+			'enabled' => true,
+			'type' => 'external',
+			'name' => 'growth-ip-research',
+			'question' => 'ext-quicksurveys-growth-ip-research-question',
+			'description' => 'ext-quicksurveys-growth-ip-research-description',
+			'link' => 'ext-quicksurveys-growth-ip-research-link',
+			'coverage' => 0,
+			'audience' => [
+				'minEdits' => 10,
+				'anons' => false,
+			],
+			'platforms' => [
+				'desktop'
+			],
+			'privacyPolicy' => 'ext-quicksurveys-growth-ip-research-privacy-policy'
+		],
+	],
 	'cawiki' => [
 		// T187299
 		[
@@ -25392,6 +25412,24 @@ function wmfGetVariantSettings() {
 			],
 			'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
 			'shuffleAnswersDisplay' => true,
+		],
+		// T294568
+		[
+			'enabled' => true,
+			'type' => 'external',
+			'name' => 'growth-ip-research',
+			'question' => 'ext-quicksurveys-growth-ip-research-question',
+			'description' => 'ext-quicksurveys-growth-ip-research-description',
+			'link' => 'ext-quicksurveys-growth-ip-research-link',
+			'coverage' => 0,
+			'audience' => [
+				'minEdits' => 10,
+				'anons' => false,
+			],
+			'platforms' => [
+				'desktop'
+			],
+			'privacyPolicy' => 'ext-quicksurveys-growth-ip-research-privacy-policy'
 		],
 	],
 	'frwiki' => [
