@@ -11202,7 +11202,10 @@ function wmfGetVariantSettings() {
 			'securepoll-create-poll' => true,
 			'editinterface' => true,
 		],
-		'electionadmin' => [ 'editinterface' => true ],
+		'electionadmin' => [
+			'editinterface' => true,
+			'securepoll-view-voter-pii' => true,
+		],
 	],
 	'wikidata' => [
 		'autoconfirmed' => [
