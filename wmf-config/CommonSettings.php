@@ -3643,25 +3643,6 @@ if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient || $wmgUseWikibaseMediaInfo ) 
 	include "$wmfConfigDir/Wikibase.php";
 }
 
-$wgHooks['RejectParserCacheValue'][] = static function ( $value, WikiPage $wikiPage, $popts ) {
-	$cachedTime = $value->getCacheTime();
-	// Reject parser output from 19:00 UTC to 21:05 UTC
-	// due to incompatible CacheTime objects.
-	// https://phabricator.wikimedia.org/T263851
-	$incidentStartTime = '20200930190000';
-	$incidentFullRestoreTime = '20200930210500';
-	// Consider using this condition if it is limited to
-	// e.g. wikitext articles only, or wikidata entities only, etc.
-	// $wikiPage->getContentModel() === CONTENT_MODEL_WIKITEXT
-	if (
-		$cachedTime > $incidentStartTime &&
-		$cachedTime < $incidentFullRestoreTime
-	) {
-		return false;
-	}
-	return true;
-};
-
 // Turn off exact search match redirects
 if ( $wmgDoNotRedirectOnSearchMatch ) {
 	$wgSearchMatchRedirectPreference = true;
