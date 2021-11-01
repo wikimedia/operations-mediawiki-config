@@ -1533,7 +1533,6 @@ $wgNoFollowLinks = true; // In case the MediaWiki default changed, T44594
 
 # XFF log for incident response
 $wgExtensionFunctions[] = static function () {
-	global $wmfUdp2logDest;
 	if (
 		isset( $_SERVER['REQUEST_METHOD'] )
 		&& $_SERVER['REQUEST_METHOD'] === 'POST'
