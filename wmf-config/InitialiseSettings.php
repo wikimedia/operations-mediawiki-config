@@ -19300,6 +19300,7 @@ function wmfGetVariantSettings() {
 	'collabwiki' => true,
 	'commonswiki' => true, // T50620
 	'testcommonswiki' => true, // T50620
+	'foundationwiki' => true, // T205349
 	'frwiktionary' => true, // T138972
 	'gewikimedia' => true, // T236389
 	'grwikimedia' => true, // T245911
