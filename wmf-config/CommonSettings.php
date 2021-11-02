@@ -1910,7 +1910,6 @@ if ( $wmgUseCentralAuth ) {
 		$wgCentralAuthStrict = false;
 		$wgCentralAuthAutoMigrateNonGlobalAccounts = false;
 		$wgCentralAuthCreateOnView = false;
-		$wgCentralAuthCookies = false;
 		$wgCentralAuthPreventUnattached = false;
 	}
 }
