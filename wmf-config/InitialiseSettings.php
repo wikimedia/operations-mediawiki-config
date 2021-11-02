@@ -26407,6 +26407,10 @@ function wmfGetVariantSettings() {
 	'viwiki' => true,
 ],
 
+'wgGEImageRecommendationServiceUseTitles' => [
+	'default' => false,
+],
+
 'wgGELinkRecommendationsFrontendEnabled' => [
 	'default' => false,
 	'testwiki' => true,

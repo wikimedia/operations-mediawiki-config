@@ -1137,6 +1137,9 @@ function wmfGetLabsOverrideSettings() {
 		'wgGELinkRecommendationsFrontendEnabled' => [
 			'default' => true,
 		],
+		'wgGEImageRecommendationServiceUseTitles' => [
+			'default' => true,
+		],
 		'wgGEHomepageDefaultVariant' => [
 			'default' => 'linkrecommendation',
 		],
