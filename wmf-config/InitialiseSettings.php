@@ -16075,6 +16075,7 @@ function wmfGetVariantSettings() {
 		'*.*.archive.org',                  // Internet Archive - T106293, T207581
 		'ia-upload.wmcloud.org',            // T287241 - IA-Upload tool
 		'wikisource-bot.toolforge.org',     // Wikisource-bot tool - T292213
+		'upload.wikimedia.org',             // Commons -> WS transfers - T294824
 	],
 ],
 
