@@ -26526,7 +26526,6 @@ function wmfGetVariantSettings() {
 	'arwiki' => 'linkrecommendation',
 	'bnwiki' => 'linkrecommendation',
 	'cswiki' => 'linkrecommendation',
-	'dewiki' => 'linkrecommendation',
 	'fawiki' => 'linkrecommendation',
 	'frwiki' => 'linkrecommendation',
 	'huwiki' => 'linkrecommendation',
