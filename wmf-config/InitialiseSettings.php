@@ -26409,6 +26409,7 @@ function wmfGetVariantSettings() {
 
 'wgGEImageRecommendationServiceUseTitles' => [
 	'default' => false,
+	'testwiki' => true,
 ],
 
 'wgGELinkRecommendationsFrontendEnabled' => [
