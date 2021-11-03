@@ -26387,10 +26387,6 @@ function wmfGetVariantSettings() {
 'wgGENewcomerTasksImageRecommendationsEnabled' => [
 	'default' => false,
 	'testwiki' => true,
-	'arwiki' => true,
-	'bnwiki' => true,
-	'cswiki' => true,
-	'viwiki' => true,
 ],
 
 'wgGENewcomerTasksLinkRecommendationsEnabled' => [
@@ -26414,11 +26410,6 @@ function wmfGetVariantSettings() {
 'wgGEImageRecommendationServiceUseTitles' => [
 	'default' => false,
 	'testwiki' => true,
-	// temporary hack while we figure out what's wrong with not using titles
-	'arwiki' => true,
-	'bnwiki' => true,
-	'cswiki' => true,
-	'viwiki' => true,
 ],
 
 'wgGELinkRecommendationsFrontendEnabled' => [
