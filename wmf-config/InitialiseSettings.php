@@ -26414,6 +26414,11 @@ function wmfGetVariantSettings() {
 'wgGEImageRecommendationServiceUseTitles' => [
 	'default' => false,
 	'testwiki' => true,
+	// temporary hack while we figure out what's wrong with not using titles
+	'arwiki' => true,
+	'bnwiki' => true,
+	'cswiki' => true,
+	'viwiki' => true,
 ],
 
 'wgGELinkRecommendationsFrontendEnabled' => [
