@@ -15706,6 +15706,7 @@ function wmfGetVariantSettings() {
 	'commonswiki' => [ 'default' => 0.30, ], // T87431
 	'testcommonswiki' => [ 'default' => 0.30, ], // T87431
 	'eswikibooks' => [ 'default' => 0.30, ], // T145765
+	'foundationwiki' => [ 'default' => 0.30 ],
 	'metawiki' => [ 'default' => 0.30, ], // T173633
 	'mediawikiwiki' => [ 'default' => 0.30, ], // T212667
 	'eswiki' => [ 'default' => 0.1, ], // T284797
@@ -15717,6 +15718,7 @@ function wmfGetVariantSettings() {
 	'eswikibooks' => [ 'default' => 10, ], // T145765
 	'commonswiki' => [ 'default' => 25, ], // T87431
 	'testcommonswiki' => [ 'default' => 25, ], // T87431
+	'foundationwiki' => [ 'default' => 25 ],
 	'metawiki' => [ 'default' => 25, ], // T173633
 	'mediawikiwiki' => [ 'default' => 25, ], // T212667
 	'eswiki' => [ 'default' => 3, ], // T284797
