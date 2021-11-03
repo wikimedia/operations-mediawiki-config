@@ -19941,7 +19941,6 @@ function wmfGetVariantSettings() {
 	'enwiki' => 'default',
 	'fiwiki' => 'default',
 	'ruwiki' => 'default',
-	'dewiki' => 'default',
 ],
 
 'wgDiscussionTools_newtopictool' => [
@@ -19964,7 +19963,6 @@ function wmfGetVariantSettings() {
 	'enwiki' => 'default',
 	'fiwiki' => 'default',
 	'ruwiki' => 'default',
-	'dewiki' => 'default',
 ],
 
 'wgDiscussionTools_topicsubscription' => [
