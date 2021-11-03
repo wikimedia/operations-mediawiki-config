@@ -26387,6 +26387,10 @@ function wmfGetVariantSettings() {
 'wgGENewcomerTasksImageRecommendationsEnabled' => [
 	'default' => false,
 	'testwiki' => true,
+	'arwiki' => true,
+	'bnwiki' => true,
+	'cswiki' => true,
+	'viwiki' => true,
 ],
 
 'wgGENewcomerTasksLinkRecommendationsEnabled' => [
