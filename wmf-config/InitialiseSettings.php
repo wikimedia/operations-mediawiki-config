@@ -11761,6 +11761,7 @@ function wmfGetVariantSettings() {
 	],
 	'+enwikiversity' => [
 		'sysop' => [ 'curator' ], // T113109
+		'bureaucrat' => [ 'import' ], // T294930
 	],
 	'+eswiki' => [
 		'bureaucrat' => [ 'abusefilter', 'rollbacker' ], // T262174
@@ -12610,6 +12611,7 @@ function wmfGetVariantSettings() {
 	],
 	'+enwikiversity' => [
 		'sysop' => [ 'curator' ], // T113109
+		'bureaucrat' => [ 'import' ], // T294930
 	],
 	'+enwikisource' => [
 		'bureaucrat' => [ 'autopatrolled', 'flood' ], // T38863
