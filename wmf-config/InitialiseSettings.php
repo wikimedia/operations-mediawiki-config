@@ -19972,7 +19972,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgDTSchemaEditAttemptStepSamplingRate' => [
-	'default' => false,
+	'default' => 0,
 ],
 
 'wgDTSchemaEditAttemptStepOversample' => [
