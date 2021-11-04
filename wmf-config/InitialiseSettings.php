@@ -19926,6 +19926,10 @@ function wmfGetVariantSettings() {
 	'default' => false,
 ],
 
+'wgDiscussionToolsEnableMobile' => [
+	'default' => false,
+],
+
 'wgDiscussionTools_replytool' => [
 	// Keep in sync with wgDiscussionTools_sourcemodetoolbar below
 	// T288485

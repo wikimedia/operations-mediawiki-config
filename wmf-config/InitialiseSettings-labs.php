@@ -1876,6 +1876,10 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true,
 		],
 
+		'-wgDiscussionToolsEnableMobile' => [
+			'default' => true,
+		],
+
 		'-wgDiscussionTools_replytool' => [
 			'default' => 'available',
 		],
