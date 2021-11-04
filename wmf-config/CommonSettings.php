@@ -390,6 +390,9 @@ $wgULSLanguageDetection = false;
 if ( PHP_SAPI === 'cli' ) {
 	// Should always be unlimited, this is probably redundant
 	$wgRequestTimeLimit = 0;
+} elseif ( XWikimediaDebug::getInstance()->hasOption( 'shorttimeout' ) ) {
+	// To probe for excimer-related memory corruption e.g. T293568
+	$wgRequestTimeLimit = 2;
 } else {
 	switch ( $_SERVER['HTTP_HOST'] ?? '' ) {
 		case 'videoscaler.svc.eqiad.wmnet':

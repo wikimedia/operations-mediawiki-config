@@ -12,6 +12,7 @@ namespace Wikimedia\MWConfig;
  * - 'profile': One-off profile to XHGui.
  * - 'readonly': (See wmf-config/CommonSettings.php).
  * - 'log': (See wmf-config/logging.php).
+ * - 'shorttimeout': Set a short request timeout.
  */
 class XWikimediaDebug {
 	private static $instance;
