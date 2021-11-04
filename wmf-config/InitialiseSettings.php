@@ -26976,6 +26976,12 @@ function wmfGetVariantSettings() {
 
 'wmgUseTheWikipediaLibrary' => [
 	'default' => false,
+	'metawiki' => true,
+	'testwiki' => true,
+],
+
+'wgTwlEditCount' => [
+	'default' => 50000, // T288070
 ],
 
 'wgWBCitoidFullRestbaseURL' => [
