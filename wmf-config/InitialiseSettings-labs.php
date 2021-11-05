@@ -595,7 +595,7 @@ function wmfGetLabsOverrideSettings() {
 
 		'wgQuickSurveysConfig' => [
 			'default' => [
-				[
+				'internal example' => [
 					'name' => 'internal example survey',
 					'type' => 'internal',
 					'layout' => 'single-answer',
@@ -612,7 +612,7 @@ function wmfGetLabsOverrideSettings() {
 						'mobile' => [ 'stable', 'beta' ],
 					],
 				],
-				[
+				'internal example with freeform text' => [
 					'name' => 'internal example survey with description and freeform text',
 					'type' => 'internal',
 					'layout' => 'single-answer',
@@ -631,7 +631,7 @@ function wmfGetLabsOverrideSettings() {
 						'mobile' => [ 'stable', 'beta' ],
 					],
 				],
-				[
+				'internal example with multiple ansers' => [
 					'name' => 'internal multiple answer example survey',
 					'type' => 'internal',
 					'layout' => 'multiple-answer',
@@ -649,7 +649,7 @@ function wmfGetLabsOverrideSettings() {
 					],
 					'shuffleAnswersDisplay' => true,
 				],
-				[
+				'internal example with multiple answers and freeform text' => [
 					'name' => 'internal multiple answer example survey with description and freeform text',
 					'type' => 'internal',
 					'layout' => 'multiple-answer',
@@ -669,7 +669,7 @@ function wmfGetLabsOverrideSettings() {
 					],
 					'shuffleAnswersDisplay' => true,
 				],
-				[
+				'external example' => [
 					'name' => 'external example survey',
 					'type' => 'external',
 					'question' => 'ext-quicksurveys-example-external-survey-question',
@@ -681,6 +681,30 @@ function wmfGetLabsOverrideSettings() {
 					'platforms' => [
 						'desktop' => [ 'stable' ],
 						'mobile' => [ 'stable', 'beta' ],
+					],
+				],
+			],
+			'+enwiki' => [
+				'tst-safety-survey' => [
+					// T293798
+					'name' => 'tst-safety-survey',
+					'type' => 'internal',
+					'layout' => 'single-answer',
+					'question' => 'ext-quicksurveys-tst-internal-survey-question',
+					'answers' => [
+						'ext-quicksurveys-tst-internal-survey-answer-positive',
+						'ext-quicksurveys-tst-internal-survey-answer-negative'
+					],
+					'audience' => [
+						// User:EssexIgyan/sandbox & User:Erayfield/sandbox
+						'pageIds' => [ 265894, 265895 ]
+					],
+					'privacyPolicy' => 'ext-quicksurveys-example-external-survey-privacy-policy',
+					'enabled' => true,
+					'coverage' => 1,
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ]
 					],
 				],
 			],
