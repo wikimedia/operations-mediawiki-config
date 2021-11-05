@@ -1,7 +1,7 @@
 <?php
 
-require_once 'multiversion/MWConfigCacheGenerator.php';
-require_once 'multiversion/MWWikiversions.php';
+require_once __DIR__ . '/MWConfigCacheGenerator.php';
+require_once __DIR__ . '/MWWikiversions.php';
 
 require_once __DIR__ . '../../vendor/autoload.php';
 require_once __DIR__ . "../../src/defines.php";
