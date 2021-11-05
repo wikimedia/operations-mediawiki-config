@@ -825,6 +825,11 @@ function wmfGetVariantSettings() {
 		'width' => 126,
 		'height' => 20,
 	],
+	'kswiki' => [
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ks.svg',
+		'width' => 62,
+		'height' => 25,
+	],
 	'lawiki' => [ // T240728
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-la.svg',
 		'width' => 112,
@@ -1187,6 +1192,11 @@ function wmfGetVariantSettings() {
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ko.svg',
 		'width' => 106,
 		'height' => 11,
+	],
+	'kswiki' => [
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ks.svg',
+		'width' => 62,
+		'height' => 20,
 	],
 	'nlwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-nl.svg',
