@@ -68,6 +68,7 @@ function wmfGetLabsOverrideSettings() {
 
 		'wgLanguageCode' => [
 			'deploymentwiki' => 'en',
+			'votewiki' => 'en', // T295242
 		],
 
 		'wgSitename' => [
