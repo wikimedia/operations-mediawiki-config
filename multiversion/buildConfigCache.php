@@ -28,14 +28,14 @@ foreach ( [ 'production', 'labs' ] as $realm ) {
 
 	foreach ( $wikiversions as $wgDBname => $wmgVersionNumber ) {
 
-		$megaConfig[$realm][$wgDBname] = Wikimedia\MWConfig\MWConfigCacheGenerator::getCachableMWConfig(
+		$cachableConfig = Wikimedia\MWConfig\MWConfigCacheGenerator::getCachableMWConfig(
 			$wgDBname, $config, $realm
 		);
 
 		Wikimedia\MWConfig\MWConfigCacheGenerator::writeToStaticCache(
 			$wmfConfigDir . "/config-cache",
 			"conf-$realm-$wgDBname.json",
-			$megaConfig[$realm][$wgDBname]
+			$cachableConfig
 		);
 	}
 
