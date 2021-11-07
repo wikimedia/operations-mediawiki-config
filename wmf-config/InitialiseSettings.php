@@ -13323,6 +13323,7 @@ function wmfGetVariantSettings() {
 	'betawikiversity' => [ 'meta', 'b', 'en', 'incubator', 'de', 'wikipedia:lt', 'wikipedia:zh' ], // T139922
 	'bhwiki' => [ 'commons', 'meta', 'species', 'de', 'en', 'wikibooks:en', 'wikiquote:en', 'wikinews:en', 'wikisource:en', 'wikiversity:en', 'es', 'fa', 'fr', 'hi', 'ml', 'ne', 'nl', 'ro', 'ru', 'pl', 'pt', 'simple', 'ta', 'ur' ], // T70616
 	'bnwiki' => [ 'en' ], // T36791
+	'bnwikibooks' => [ 'b:en' ], // T295051
 	'bnwikisource' => [ 'OldWikisource', 'w', 'en' ],
 	'cawikibooks' => [ 'w', 's', 'q', 'n', 'wikt', 'en', 'es', 'fr', 'it', 'de', 'pt', 'meta', 'w:en', 'w:es', 'w:fr', 'w:it', 'w:de', 'w:pt' ], // T93750
 	'cawikinews' => [ 'w', 'wikt', 'q', 'b', 's', 'v', 'fr', 'en', 'de', 'es', 'pt', 'it', 'commons', 'meta', 'eo', 'pl', 'ja', 'ru', 'sr', 'tr', 'uk', 'zh' ], // T93203
