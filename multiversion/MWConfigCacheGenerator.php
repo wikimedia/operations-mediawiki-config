@@ -288,7 +288,7 @@ class MWConfigCacheGenerator {
 
 			if ( json_last_error() === JSON_ERROR_NONE ) {
 				// Ignore non-array and array offset warnings (file may be in an older format)
-				if ( @$staticCacheObject['mtime'] === $confActualMtime ) {
+				if ( ( $staticCacheObject['mtime'] ?? null ) === $confActualMtime ) {
 					return $staticCacheObject['globals'];
 				}
 			} else {
