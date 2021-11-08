@@ -138,10 +138,6 @@ $wmfAllServices = ServiceConfig::getInstance()->getAllServices();
 # Shorthand when we have no master-replica situation to keep into account
 $wmfLocalServices = $wmfAllServices[$wmfDatacenter];
 
-if ( $wmfRealm === 'dev' ) {
-	putenv( 'MW_DEBUG_LOCAL=1' );
-}
-
 # The list of datacenters known to this realm
 $wmfDatacenters = ServiceConfig::getInstance()->getDatacenters();
 
