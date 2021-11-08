@@ -432,4 +432,13 @@ if ( $wmgUseChessBrowser ) {
 	wfLoadExtension( 'ChessBrowser' );
 }
 
+// SecurePoll -- do not let users to view PII
+if ( $wmgUseSecurePoll ) {
+	foreach ( $wgGroupPermissions as $group => $permissions ) {
+		if ( array_key_exists( 'securepoll-view-voter-pii', $permissions ) ) {
+			$wgGroupPermissions[$group]['securepoll-view-voter-pii'] = false;
+		}
+	}
+}
+
 } # end safeguard
