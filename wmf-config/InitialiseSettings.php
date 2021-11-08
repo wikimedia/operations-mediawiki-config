@@ -23136,6 +23136,10 @@ function wmfGetVariantSettings() {
 	'commonswiki' => true,
 ],
 
+'wgMediaInfoEnableReferences' => [
+	'commonswiki' => false,
+],
+
 'wgMediaInfoMediaSearchDefaultForAnon' => [
 	// NOTE: keep in sync with wgMediaSearchDefaultForAnon (until
 	// this is removed)
