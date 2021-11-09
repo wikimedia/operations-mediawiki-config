@@ -609,6 +609,7 @@ function wmfGetVariantSettings() {
 	'foundationwiki' => '/static/images/mobile/copyright/wikimedia.svg',
 	'incubatorwiki' => '/static/images/mobile/copyright/incubator.svg',
 	'mediawikiwiki' => '/static/images/mobile/copyright/mediawiki.svg',
+	'metawiki' => '/static/images/mobile/copyright/meta.svg',
 	'officewiki' => '/static/images/mobile/copyright/wikimedia.svg',
 	'specieswiki' => '/static/images/mobile/copyright/wikispecies.svg',
 	'wikimaniawiki' => '/static/images/mobile/copyright/wikimania.svg',
@@ -1069,6 +1070,11 @@ function wmfGetVariantSettings() {
 		'src' => '/static/images/mobile/copyright/mediawiki-wordmark-en.svg',
 		'width' => 120,
 		'height' => 18,
+	],
+	'metawiki' => [
+		'src' => '/static/images/mobile/copyright/meta-wordmark.svg',
+		'width' => 120,
+		'height' => 29
 	],
 	'test2wiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-en.svg',
