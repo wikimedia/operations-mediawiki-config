@@ -447,6 +447,10 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true,
 		],
 
+		'wgWMEMobileWebUIActionsTracking' => [
+			'default' => 1, // T294738
+		],
+
 		'wgMFAdvancedMobileContributions' => [
 			'default' => true,
 		],
