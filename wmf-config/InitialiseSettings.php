@@ -606,6 +606,7 @@ function wmfGetVariantSettings() {
 
 	// Special wikis
 	'commonswiki' => '/static/images/mobile/copyright/commons.svg',
+	'foundationwiki' => '/static/images/mobile/copyright/wikimedia.svg',
 	'incubatorwiki' => '/static/images/mobile/copyright/incubator.svg',
 	'mediawikiwiki' => '/static/images/mobile/copyright/mediawiki.svg',
 	'officewiki' => '/static/images/mobile/copyright/wikimedia.svg',
@@ -1058,6 +1059,11 @@ function wmfGetVariantSettings() {
 		'src' => '/static/images/mobile/copyright/commons-wordmark-en.svg',
 		'width' => 115,
 		'height' => 32,
+	],
+	'foundationwiki' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-wordmark.svg',
+		'width' => 183,
+		'height' => 40
 	],
 	'mediawikiwiki' => [
 		'src' => '/static/images/mobile/copyright/mediawiki-wordmark-en.svg',
