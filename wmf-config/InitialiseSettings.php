@@ -17093,6 +17093,7 @@ function wmfGetVariantSettings() {
 	'+wikimaniawiki' => [
 		'2019' => true, // T218645
 		'2021' => true, // T287197
+		'2022' => true, // T295267
 	],
 
 	// Wikimedias
