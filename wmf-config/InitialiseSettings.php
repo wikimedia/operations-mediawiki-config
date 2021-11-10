@@ -16380,6 +16380,7 @@ function wmfGetVariantSettings() {
 'wgForeignUploadTargets' => [
 	'default' => [ 'shared' ],
 	'commonswiki' => [ 'local' ],
+	'officewiki' => [ 'local' ],
 	'testcommonswiki' => [ 'local' ],
 	'test2wiki' => [ 'testwikirepo' ],
 	'testwiki' => [ 'local' ],
