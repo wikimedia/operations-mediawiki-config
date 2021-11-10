@@ -668,6 +668,10 @@ function wmfGetVariantSettings() {
 	]
 ],
 
+// IMPORTANT:
+// When defining new logos, ensure width <= 140px so that logos are
+// mobile friendly. Scale down logo if necessary.
+
 'wmgSiteLogoWordmark' => [
 	// Projects
 	'wikipedia' => [
@@ -1063,8 +1067,8 @@ function wmfGetVariantSettings() {
 	],
 	'foundationwiki' => [
 		'src' => '/static/images/mobile/copyright/wikimedia-wordmark.svg',
-		'width' => 183,
-		'height' => 40
+		'width' => 128,
+		'height' => 28,
 	],
 	'mediawikiwiki' => [
 		'src' => '/static/images/mobile/copyright/mediawiki-wordmark-en.svg',
