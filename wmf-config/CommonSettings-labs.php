@@ -150,17 +150,6 @@ if ( $wmgUseIPInfo ) {
 	$wgGroupPermissions['sysop']['ipinfo'] = true;
 }
 
-if ( $wmgUseCentralAuth ) {
-	// temporary for testing foundationwiki SUL migration (T205347)
-	if ( $wgDBname === 'foundationwiki' ) {
-		$wgCentralAuthStrict = false;
-		$wgCentralAuthAutoMigrateNonGlobalAccounts = false;
-		$wgCentralAuthCreateOnView = false;
-		$wgCentralAuthCookies = false;
-		$wgCentralAuthPreventUnattached = false;
-	}
-}
-
 if ( $wmgUseCentralNotice ) {
 	// Emit CSP headers on banner previews. This can go away when full CSP
 	// support (T135963) is deployed.
