@@ -25680,6 +25680,7 @@ function wmfGetVariantSettings() {
 
 'wgWMEMobileWebUIActionsTracking' => [
 	'default' => 0.1, // T220016
+	'enwiki' => 0.01, // T295432
 ],
 
 'wgWMEWikidataCompletionSearchClicks' => [
