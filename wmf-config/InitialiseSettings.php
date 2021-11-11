@@ -26346,6 +26346,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => true,
 	'bnwiki' => true,
 	'cswiki' => true,
+	'eswiki' => true,
 	'viwiki' => true,
 ],
 
