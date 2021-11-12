@@ -26158,6 +26158,7 @@ function wmfGetVariantSettings() {
 	'ugwiki' => true,
 	'ukwiki' => true,
 	'urwiki' => true,
+	'uzwiki' => true,
 	'vecwiki' => true,
 	'vepwiki' => true,
 	'vewiki' => true,
@@ -26191,6 +26192,7 @@ function wmfGetVariantSettings() {
 
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
+	'uzwiki' => false,
 ],
 
 'wgWelcomeSurveyEnabled' => [
