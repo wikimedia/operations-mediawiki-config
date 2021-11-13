@@ -1362,6 +1362,7 @@ function wmfGetVariantSettings() {
 	'viwikivoyage' => false, // T54034
 	'vowiki' => false, // T15740
 	'xmfwiki' => false,
+	'zhwikisource' => false, // T295265
 ],
 # @} end of wgEnableUploads
 
