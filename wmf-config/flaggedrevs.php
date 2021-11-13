@@ -288,14 +288,13 @@ $wgHooks['MediaWikiServices'][] = static function () {
 
 		# User groups permissions
 		$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
-		$wgGroupPermissions['reviewer']['autopatrol'] = true;
-		$wgGroupPermissions['reviewer']['editautopatrolprotected'] = true;
-		$wgGroupPermissions['reviewer']['patrol'] = true;
-		$wgGroupPermissions['reviewer']['unwatchedpages'] = true;
 		$wgGroupPermissions['sysop']['review'] = true;
 		$wgGroupPermissions['sysop']['validate'] = true;
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
 
+		# Use 'reviewer' group
+		$wgAddGroups['sysop'][] = 'reviewer';
+		$wgRemoveGroups['sysop'][] = 'reviewer';
 		# Remove editor and autoreview user groups
 		unset( $wgGroupPermissions['editor'], $wgGroupPermissions['autoreview'] );
 	} elseif ( $wgDBname == 'test2wiki' ) {
