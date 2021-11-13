@@ -25445,7 +25445,6 @@ function wmfGetVariantSettings() {
 	// Elaboration on this issue is at T229726#5419327
 	'dewiki' => false,
 	'huwiki' => false,
-	'idwiki' => false,
 	'plwiki' => false,
 	'sqwiki' => false,
 	'zh_classicalwiki' => false,
