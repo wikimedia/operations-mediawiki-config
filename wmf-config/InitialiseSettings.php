@@ -26295,7 +26295,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => true,
 	'bnwiki' => true,
 	'cswiki' => true,
-	'dewiki' => true,
+	'dewiki' => false, // T294712
 	'eswiki' => true,
 	'fawiki' => true,
 	'frwiki' => true,
