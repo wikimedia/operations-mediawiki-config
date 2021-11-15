@@ -25236,7 +25236,7 @@ function wmfGetVariantSettings() {
 				'anons' => false,
 			],
 			'platforms' => [
-				'desktop'
+				'desktop' => [ 'stable' ],
 			],
 			'privacyPolicy' => 'ext-quicksurveys-growth-ip-research-privacy-policy'
 		],
@@ -25314,7 +25314,7 @@ function wmfGetVariantSettings() {
 				'anons' => false,
 			],
 			'platforms' => [
-				'desktop'
+				'desktop' => [ 'stable' ],
 			],
 			'privacyPolicy' => 'ext-quicksurveys-growth-ip-research-privacy-policy'
 		],
