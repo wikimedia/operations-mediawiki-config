@@ -1154,6 +1154,18 @@ function wmfGetLabsOverrideSettings() {
 				'linkrecommendation' => 100,
 			],
 		],
+		'wgGEHomepageNewAccountVariantsByPlatform' => [
+			'default' => [
+				'control' => [
+					'mobile' => 50,
+					'desktop' => 50,
+				],
+				'imagerecommendation' => [
+					'mobile' => 50,
+					'desktop' => 50
+				]
+			]
+		],
 		'wgGELinkRecommendationServiceTimeout' => [
 			'default' => 30,
 		],
