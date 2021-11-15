@@ -1137,7 +1137,8 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true,
 		],
 		'wgGENewcomerTasksLinkRecommendationsEnabled' => [
-			'default' => true,
+			'default' => false,
+			'enwiki' => true,
 		],
 		'wgGELinkRecommendationsFrontendEnabled' => [
 			'default' => true,
