@@ -14690,12 +14690,18 @@ function wmfGetVariantSettings() {
 	],
 	'+foundationwiki' => [
 		NS_MAIN => [ 'edit-legal' ],
+		NS_PROJECT => [ 'edit-legal' ],
 		NS_FILE => [ 'edit-legal' ],
+		NS_CATEGORY => [ 'edit-legal' ],
+		NS_HELP => [ 'edit-legal' ],
 		NS_TEMPLATE => [ 'edit-legal' ],
 		100 => [ 'edit-legal' ], // Resolution
 		102 => [ 'edit-legal' ], // Legal
 		104 => [ 'edit-legal' ], // Minutes
 		106 => [ 'edit-legal' ], // Policy
+		112 => [ 'edit-legal' ], // Archive
+		710 => [ 'edit-legal' ], // TimedText
+		828 => [ 'edit-legal' ], // Module
 	],
 	'+fawiki' => [
 		NS_MAIN => [ 'minoredit' ], // T291018
