@@ -26436,6 +26436,21 @@ function wmfGetVariantSettings() {
 	'viwiki' => 'linkrecommendation',
 ],
 
+'wgGEHomepageNewAccountVariantsByPlatform' => [
+	'default' => [
+		'control' => [
+			'mobile' => 100,
+			'desktop' => 100,
+		],
+		'imagerecommendation' => [
+			'mobile' => 0,
+			'desktop' => 0
+		]
+	]
+],
+
+// Deprecated – remove after I41d96b4ea98d6bae5674440512ef371d33cce39c is in production for two
+// trains
 'wgGEHomepageNewAccountVariants' => [
 	'default' => [
 		'control' => 100,
