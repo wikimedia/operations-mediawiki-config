@@ -9708,6 +9708,9 @@ function wmfGetVariantSettings() {
 		'autoreview' => [ 'autopatrol' => true ], // T144817
 	],
 	'+foundationwiki' => [
+		'*' => [
+			'edit' => false,
+		],
 		'user' => [
 			'upload' => false,
 			'reupload' => false,
