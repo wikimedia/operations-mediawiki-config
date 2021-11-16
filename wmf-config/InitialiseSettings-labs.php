@@ -1136,7 +1136,7 @@ function wmfGetLabsOverrideSettings() {
 		'wgGENewcomerTasksImageRecommendationsEnabled' => [
 			'default' => true,
 		],
-		'wgGENewcomerTasksLinkRecommendationsEnabled' => [
+		'-wgGENewcomerTasksLinkRecommendationsEnabled' => [
 			'default' => false,
 			'enwiki' => true,
 		],
