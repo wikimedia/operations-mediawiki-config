@@ -26456,17 +26456,6 @@ function wmfGetVariantSettings() {
 
 'wgGEHomepageDefaultVariant' => [
 	'default' => 'control',
-	'arwiki' => 'linkrecommendation',
-	'bnwiki' => 'linkrecommendation',
-	'cswiki' => 'linkrecommendation',
-	'fawiki' => 'linkrecommendation',
-	'frwiki' => 'linkrecommendation',
-	'huwiki' => 'linkrecommendation',
-	'nlwiki' => 'linkrecommendation',
-	'plwiki' => 'linkrecommendation',
-	'rowiki' => 'linkrecommendation',
-	'ruwiki' => 'linkrecommendation',
-	'viwiki' => 'linkrecommendation',
 ],
 
 'wgGEHomepageNewAccountVariantsByPlatform' => [

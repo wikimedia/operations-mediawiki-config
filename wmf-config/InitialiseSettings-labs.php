@@ -1179,11 +1179,11 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true,
 		],
 		'wgGEHomepageDefaultVariant' => [
-			'default' => 'linkrecommendation',
+			'default' => 'control',
 		],
 		'wgGEHomepageNewAccountVariants' => [
 			'default' => [
-				'linkrecommendation' => 100,
+				'control' => 100,
 			],
 		],
 		'wgGEHomepageNewAccountVariantsByPlatform' => [
