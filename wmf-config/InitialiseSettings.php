@@ -605,13 +605,16 @@ function wmfGetVariantSettings() {
 	'wiktionary' => '/static/images/mobile/copyright/wiktionary.svg',
 
 	// Special wikis
+	'collabwiki' => '/static/images/mobile/copyright/collab-icon.svg',
 	'commonswiki' => '/static/images/mobile/copyright/commons.svg',
 	'foundationwiki' => '/static/images/mobile/copyright/wikimedia.svg',
 	'incubatorwiki' => '/static/images/mobile/copyright/incubator.svg',
 	'mediawikiwiki' => '/static/images/mobile/copyright/mediawiki.svg',
 	'metawiki' => '/static/images/mobile/copyright/meta.svg',
 	'officewiki' => '/static/images/mobile/copyright/wikimedia.svg',
+	'outreachwiki' => '/static/images/mobile/copyright/outreach-icon.svg',
 	'specieswiki' => '/static/images/mobile/copyright/wikispecies.svg',
+	'strategywiki' => '/static/images/mobile/copyright/strategy-icon.svg',
 	'wikimaniawiki' => '/static/images/mobile/copyright/wikimania.svg',
 ],
 
@@ -695,6 +698,11 @@ function wmfGetVariantSettings() {
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ar.svg',
 		'width' => 106,
 		'height' => 30,
+	],
+	'arywiki' => [
+		'src' => '/static/images/mobile/copyright/ary-wordmark.svg',
+		'width' => 103,
+		'height' => 35,
 	],
 	'arzwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ar.svg',
@@ -995,6 +1003,11 @@ function wmfGetVariantSettings() {
 	],
 
 	// Wikiquote
+	'frwikiquote' => [ // T290091
+		'src' => '/static/images/mobile/copyright/en-wordmark.svg',
+		'width' => 93,
+		'height' => 45,
+	],
 	'trwikiquote' => [ // T286133
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-tr.svg',
 		'width' => 119,
@@ -1002,8 +1015,18 @@ function wmfGetVariantSettings() {
 	],
 
 	// Wikibooks
+	'viwikibooks' => [ // T290091
+		'src' => '/static/images/mobile/copyright/en-wordmark.svg',
+		'width' => 93,
+		'height' => 45,
+	],
 
 	// Wikinews
+	'plwikinews' => [ // T290091
+		'src' => '/static/images/mobile/copyright/pl-wordmark.svg',
+		'width' => 153,
+		'height' => 32,
+	],
 	'ptwikinews' => [ // T281591
 		'src' => '/static/images/mobile/copyright/wikinews-wordmark-pt.svg',
 		'width' => 121,
@@ -1060,6 +1083,11 @@ function wmfGetVariantSettings() {
 
 	// Special wikis
 
+	'collabwiki' => [ // T290091
+		'src' => '/static/images/mobile/copyright/en-collab.svg',
+		'width' => 125,
+		'height' => 20,
+	],
 	'commonswiki' => [
 		'src' => '/static/images/mobile/copyright/commons-wordmark-en.svg',
 		'width' => 115,
@@ -1079,6 +1107,16 @@ function wmfGetVariantSettings() {
 		'src' => '/static/images/mobile/copyright/meta-wordmark.svg',
 		'width' => 120,
 		'height' => 29
+	],
+	'outreachwiki' => [ // T290091
+		'src' => '/static/images/mobile/copyright/en-wordmark.svg',
+		'width' => 93,
+		'height' => 45,
+	],
+	'strategywiki' => [ // T290091
+		'src' => '/static/images/mobile/copyright/en-wordmark.svg',
+		'width' => 93,
+		'height' => 45,
 	],
 	'test2wiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-en.svg',
@@ -1103,6 +1141,11 @@ function wmfGetVariantSettings() {
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ar.svg',
 		'width' => 66,
 		'height' => 11,
+	],
+	'arywiki' => [
+		'src' => '/static/images/mobile/copyright/ary-tagline.svg',
+		'width' => 60,
+		'height' => 12,
 	],
 	'bnwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-bn.svg',
@@ -1262,6 +1305,11 @@ function wmfGetVariantSettings() {
 	'viwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-vi.svg',
 		'width' => 117,
+		'height' => 10,
+	],
+	'viwikibooks' => [ // T290091
+		'src' => '/static/images/mobile/copyright/vi-tagline.svg',
+		'width' => 120,
 		'height' => 10,
 	],
 	'vecwiki' => [
