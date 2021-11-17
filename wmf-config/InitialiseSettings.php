@@ -19783,6 +19783,17 @@ function wmfGetVariantSettings() {
 	'lockeddown' => false, // T61702
 ],
 
+'wgDisambiguatorNotifications' => [
+	// T293319
+	'default' => false,
+	'huwiki' => true,
+	'cawiki' => true,
+	'plwiki' => true,
+	'viwiki' => true,
+	'fawiki' => true,
+	'fiwiki' => true,
+],
+
 'wmgUseDiscussionTools' => [
 	'default' => true, // T252264
 	// Can't be enabled on wikis where wmgUseLinter or wmgUseVisualEditor is disabled:
