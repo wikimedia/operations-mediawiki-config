@@ -20292,6 +20292,7 @@ function wmfGetVariantSettings() {
 'wgSectionTranslationTargetLanguages' => [
 	'default' => null,
 	'wikipedia' => [ 'bn', 'ha', 'ig', 'ku', 'th', 'yo' ],
+	'testwiki' => [ 'ar', 'az', 'ba', 'bn', 'ca', 'cs', 'es', 'fa', 'fr', 'ha', 'he', 'ht', 'id', 'ig', 'is', 'jv', 'ki', 'ko', 'ku', 'lu', 'ml', 'mn', 'mr', 'ms', 'oc', 'pt', 'ru', 'sq', 'te', 'th', 'tl', 'tr', 'uk', 'ur', 'vi', 'yo', 'zh', 'zu' ],
 ],
 
 'wmgUseExternalGuidance' => [
