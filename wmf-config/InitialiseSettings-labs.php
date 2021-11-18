@@ -1048,6 +1048,10 @@ function wmfGetLabsOverrideSettings() {
 			'default' => null
 		],
 
+		'wgActorTableSchemaMigrationStage' => [
+			'default' => SCHEMA_COMPAT_WRITE_TEMP_AND_NEW | SCHEMA_COMPAT_READ_TEMP,
+		],
+
 		'wgMultiContentRevisionSchemaMigrationStage' => [
 			'default' => SCHEMA_COMPAT_NEW,
 		],
