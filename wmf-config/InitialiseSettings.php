@@ -19855,7 +19855,28 @@ function wmfGetVariantSettings() {
 ],
 
 'wgDiscussionTools_autotopicsub' => [
-	'default' => 'unavailable',
+	'default' => 'default',
+	// T290500
+	'amwiki' => 'unavailable',
+	'arzwiki' => 'unavailable',
+	'bnwiki' => 'unavailable',
+	'eswiki' => 'unavailable',
+	'fawiki' => 'unavailable',
+	'frwiki' => 'unavailable',
+	'hewiki' => 'unavailable',
+	'hiwiki' => 'unavailable',
+	'idwiki' => 'unavailable',
+	'itwiki' => 'unavailable',
+	'jawiki' => 'unavailable',
+	'kowiki' => 'unavailable',
+	'nlwiki' => 'unavailable',
+	'omwiki' => 'unavailable',
+	'plwiki' => 'unavailable',
+	'ptwiki' => 'unavailable',
+	'thwiki' => 'unavailable',
+	'ukwiki' => 'unavailable',
+	'viwiki' => 'unavailable',
+	'zhwiki' => 'unavailable',
 ],
 
 'wgDTSchemaEditAttemptStepSamplingRate' => [
