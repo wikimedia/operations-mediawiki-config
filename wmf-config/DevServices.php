@@ -11,7 +11,7 @@
 # for a given datacenter.
 return [
 	'dev' => [
-		'udp2log' => '',
+		'udp2log' => '127.0.0.1:1',
 		'redis_lock' => '',
 		'etcd' => [
 			'host' => 'db:2379',
