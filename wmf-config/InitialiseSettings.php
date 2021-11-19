@@ -5387,6 +5387,7 @@ function wmfGetVariantSettings() {
 	'bhwiki' => false, // T160098
 	'hiwiki' => false, // T31279
 	'hiwikiversity' => false, // T182584
+	'kswiki' => false, // T296055
 	'tewiki' => false, // by request -- maybe remove from file
 	'mlwiki' => false, // 2005-01-03, by dubious request on Ts's talk page -ævar
 	'tewikibooks' => false,
