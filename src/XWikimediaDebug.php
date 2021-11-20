@@ -26,7 +26,7 @@ class XWikimediaDebug {
 	/** @var XWikimediaDebug|null */
 	private static $instance;
 	/** @var array */
-	private $options;
+	private $options = [];
 
 	/**
 	 * @return XWikimediaDebug
@@ -50,7 +50,7 @@ class XWikimediaDebug {
 		// and reject it if it's in the past or too far into the future.
 		$requireExpiry = $headerString === null;
 
-		$this->options = $options = [];
+		$options = [];
 		if ( $optionString === '' ) {
 			return;
 		}
@@ -58,14 +58,7 @@ class XWikimediaDebug {
 		$tokens = preg_split( '/;\s*/', $optionString );
 		foreach ( $tokens as $token ) {
 			$eqParts = explode( '=', $token, 2 );
-			if ( count( $eqParts ) === 2 ) {
-				$optName = $eqParts[0];
-				$optValue = $eqParts[1];
-			} else {
-				$optName = $token;
-				$optValue = true;
-			}
-			$options[$optName] = $optValue;
+			$options[$eqParts[0]] = $eqParts[1] ?? true;
 		}
 
 		if ( $requireExpiry ) {
