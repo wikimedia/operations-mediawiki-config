@@ -5,11 +5,7 @@ $selectableFilepaths = array_merge( glob( __DIR__ . '/*' ),
 	glob( __DIR__ . '/dblists/*.dblist' ) );
 
 // Name of file from user input
-if ( isset( $_GET['file'] ) ) {
-	$selectedFileName = $_GET['file'];
-} else {
-	$selectedFileName = null;
-}
+$selectedFileName = $_GET['file'] ?? null;
 
 // Absolute path to file on disk
 $selectedFilePath = false;

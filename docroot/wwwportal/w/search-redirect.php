@@ -1,10 +1,10 @@
 <?php
 // get params
-$language = isset( $_GET['language'] ) ? $_GET['language'] : 'en';
-$search   = isset( $_GET['search'] ) ? $_GET['search'] : '';
-$fulltext = isset( $_GET['fulltext'] ) ? $_GET['fulltext'] : false;
-$go       = isset( $_GET['go'] ) ? $_GET['go'] : false;
-$family   = strtolower( isset( $_GET['family'] ) ? $_GET['family'] : 'wikipedia' );
+$language = $_GET['language'] ?? 'en';
+$search = $_GET['search'] ?? '';
+$fulltext = $_GET['fulltext'] ?? false;
+$go = $_GET['go'] ?? false;
+$family = strtolower( $_GET['family'] ?? 'wikipedia' );
 
 if ( ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https' )
 	|| ( isset( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] === 'on' )

@@ -395,7 +395,7 @@ class MWMultiVersion {
 			self::error( "$phpFilename did not return an array as expected.\n" );
 		}
 
-		$version = isset( $wikiversions[$this->db] ) ? $wikiversions[$this->db] : false;
+		$version = $wikiversions[$this->db] ?? false;
 
 		if ( $version && strpos( $version, 'php-' ) !== 0 ) {
 			self::error( "$phpFilename version entry does not start with `php-` (got `$version`).\n" );
