@@ -7,7 +7,7 @@
  * Then view <http://localhost:9412/db.php>.
  */
 
-$format = isset( $_GET['format'] ) && $_GET['format'] === 'json' ? 'json' : 'html';
+$format = ( $_GET['format'] ?? null ) === 'json' ? 'json' : 'html';
 
 if ( $format === 'json' ) {
 	error_reporting( 0 );

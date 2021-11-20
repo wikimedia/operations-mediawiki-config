@@ -1593,7 +1593,7 @@ $wgExtensionFunctions[] = static function () {
 		// T129982
 		&& $_SERVER['HTTP_HOST'] !== 'jobrunner.discovery.wmnet'
 	) {
-		$uri = ( ( isset( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] ) ? 'https://' : 'http://' ) .
+		$uri = ( ( $_SERVER['HTTPS'] ?? null ) ? 'https://' : 'http://' ) .
 			$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 		$logger = LoggerFactory::getInstance( 'xff' );
@@ -1603,7 +1603,7 @@ $wgExtensionFunctions[] = static function () {
 				'uri' => $uri,
 				'xff' => $_SERVER['HTTP_X_FORWARDED_FOR'] ?? '',
 				'remoteaddr' => $_SERVER['REMOTE_ADDR'],
-				'wpSave' => ( isset( $_REQUEST['wpSave'] ) && $_REQUEST['wpSave'] ) ? 'save' : '',
+				'wpSave' => ( $_REQUEST['wpSave'] ?? null ) ? 'save' : '',
 			]
 		);
 	}

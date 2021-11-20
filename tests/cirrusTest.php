@@ -171,10 +171,7 @@ class CirrusTest extends WgConfTestCase {
 	}
 
 	private static function resolveClusterConfig( $config, $clusterName ) {
-		if ( isset( $config[$clusterName] ) ) {
-			return $config[$clusterName];
-		}
-		return $config;
+		return $config[$clusterName] ?? $config;
 	}
 
 	public function provideUserTestingBuckets() {
