@@ -27407,5 +27407,10 @@ function wmfGetVariantSettings() {
 	'group0' => true,
 ],
 
+// Early roll-out to Beta Cluster only
+'wmgUseWikiLambda' => [
+	'default' => false,
+],
+
 ];
 }
