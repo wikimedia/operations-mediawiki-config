@@ -103,7 +103,11 @@ $common = [
 			'transport' => 'Http',
 			'port' => 6106,
 		],
-	]
+	],
+
+	// Wikifunctions back-end services; currently in Beta Cluster only.
+	'wikifunctions-evaluator' => 'NOT YET DEFINED',
+	'wikifunctions-orchestrator' => 'NOT YET DEFINED',
 ];
 
 $services = [
