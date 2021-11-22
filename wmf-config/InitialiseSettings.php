@@ -21108,6 +21108,10 @@ function wmfGetVariantSettings() {
 			'schema_title' => 'analytics/mediawiki/content_translation_event',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		'mediawiki.reading_depth' => [
+			'schema_title' => 'analytics/mediawiki/web_ui_reading_depth',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		'wd_propertysuggester.client_side_property_request' => [
 			'schema_title' => 'analytics/mediawiki/wd_propertysuggester/client_side_property_request',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -21459,6 +21463,7 @@ function wmfGetVariantSettings() {
 		'mediawiki.structured_task.article.image_suggestion_interaction',
 		'mediawiki.pref_diff',
 		'mediawiki.skin_diff',
+		'mediawiki.reading_depth',
 		'test.instrumentation',
 		'test.instrumentation.sampled',
 		'wd_propertysuggester.client_side_property_request',
@@ -25570,6 +25575,11 @@ function wmfGetVariantSettings() {
 'wgWMEMobileWebUIActionsTracking' => [
 	'default' => 0.1, // T220016
 	'enwiki' => 0.01, // T295432
+],
+
+'wgWMEReadingDepthSamplingRate' => [
+	'default' => 0, // T294777
+	'enwiki' => 0.0001, // T294777
 ],
 
 'wgWMEWikidataCompletionSearchClicks' => [
