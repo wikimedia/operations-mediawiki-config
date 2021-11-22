@@ -148,6 +148,7 @@ if ( $wmgUseIPInfo ) {
 	// This allows admins on beta to test the feature.
 	// Remove this before deployment to production: T270347
 	$wgGroupPermissions['sysop']['ipinfo'] = true;
+	$wgGroupPermissions['sysop']['ipinfo-view-basic'] = true;
 }
 
 if ( $wmgUseCentralNotice ) {
