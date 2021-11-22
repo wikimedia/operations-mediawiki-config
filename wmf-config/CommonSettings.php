@@ -94,17 +94,19 @@ set_include_path( implode( PATH_SEPARATOR, $includePaths ) );
 $wmgHostnames = [];
 switch ( $wmfRealm ) {
 case 'labs':
-	$wmgHostnames['meta']     = 'meta.wikimedia.beta.wmflabs.org';
-	$wmgHostnames['test']     = 'test.wikipedia.beta.wmflabs.org';
-	$wmgHostnames['upload']   = 'upload.wikimedia.beta.wmflabs.org';
-	$wmgHostnames['wikidata'] = 'wikidata.beta.wmflabs.org';
+	$wmgHostnames['meta']          = 'meta.wikimedia.beta.wmflabs.org';
+	$wmgHostnames['test']          = 'test.wikipedia.beta.wmflabs.org';
+	$wmgHostnames['upload']        = 'upload.wikimedia.beta.wmflabs.org';
+	$wmgHostnames['wikidata']      = 'wikidata.beta.wmflabs.org';
+	$wmgHostnames['wikifunctions'] = 'wikifunctions.beta.wmflabs.org';
 	break;
 case 'production':
 default:
-	$wmgHostnames['meta']   = 'meta.wikimedia.org';
-	$wmgHostnames['test']   = 'test.wikipedia.org';
-	$wmgHostnames['upload'] = 'upload.wikimedia.org';
-	$wmgHostnames['wikidata'] = 'www.wikidata.org';
+	$wmgHostnames['meta']          = 'meta.wikimedia.org';
+	$wmgHostnames['test']          = 'test.wikipedia.org';
+	$wmgHostnames['upload']        = 'upload.wikimedia.org';
+	$wmgHostnames['wikidata']      = 'www.wikidata.org';
+	$wmgHostnames['wikifunctions'] = 'www.wikifunctions.org';
 	break;
 }
 
@@ -1816,6 +1818,7 @@ if ( $wmgUseCentralAuth ) {
 			'commons.wikimedia.beta.wmflabs.org' => 'commonswiki',
 			$wmgHostnames['wikidata'] => 'wikidatawiki',
 			'api.wikimedia.beta.wmflabs.org' => 'apiportalwiki',
+			$wmgHostnames['wikifunctions'] => 'wikifunctionswiki',
 		];
 		$wgCentralAuthLoginWiki = 'loginwiki';
 		break;
@@ -4170,6 +4173,14 @@ if ( $wmgUseGrowthExperiments ) {
 		$wgGEImageRecommendationServiceHttpProxy = $wmfLocalServices['urldownloader'];
 	}
 	$wgGELinkRecommendationServiceUrl = $wmfLocalServices['linkrecommendation'];
+}
+
+if ( $wmgUseWikiLambda && $wmfRealm === 'labs' ) {
+	wfLoadExtension( 'WikiLambda' );
+
+	$wgWikiLambdaOrchestratorLocation = $wmfLocalServices['wikifunctions-orcehstrator'];
+	$wgWikiLambdaEvaluatorLocation = "http://{$wmfLocalServices['wikifunctions-evaluator']}/1/v1/evaluate";
+	$wgWikiLambdaWikiAPILocation = 'https://wikifunctions.beta.wmflabs.org/w/api.php';
 }
 
 if ( PHP_SAPI === 'cli' ) {
