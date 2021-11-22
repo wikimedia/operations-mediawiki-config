@@ -26611,6 +26611,15 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
+'wgGERecentChangesUnstarredMenteesFilterEnabled' => [
+	'default' => true,
+
+	// do NOT enable on those wikis without OK from the Growth team (T293182)
+	'arwiki' => false,
+	'enwiki' => false,
+	'fawiki' => false,
+],
+
 'wgGECampaignPattern' => [
 	'default' => null,
 	'testwiki' => '/^growth-advancement-test-2021$/',
