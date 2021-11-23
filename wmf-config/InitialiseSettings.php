@@ -25754,6 +25754,10 @@ function wmfGetVariantSettings() {
 
 'wgActorTableSchemaMigrationStage' => [
 	'default' => SCHEMA_COMPAT_TEMP,
+	'testwiki' => SCHEMA_COMPAT_WRITE_TEMP_AND_NEW | SCHEMA_COMPAT_READ_TEMP,
+	'test2wiki' => SCHEMA_COMPAT_WRITE_TEMP_AND_NEW | SCHEMA_COMPAT_READ_TEMP,
+	'testwikidatawiki' => SCHEMA_COMPAT_WRITE_TEMP_AND_NEW | SCHEMA_COMPAT_READ_TEMP,
+	'testcommonswiki' => SCHEMA_COMPAT_WRITE_TEMP_AND_NEW | SCHEMA_COMPAT_READ_TEMP,
 ],
 
 'wgMultiContentRevisionSchemaMigrationStage' => [
