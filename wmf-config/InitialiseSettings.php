@@ -17115,6 +17115,26 @@ function wmfGetVariantSettings() {
 	'twwiki' => true, // T284553
 ],
 
+// Temporary feature flags for changes to the descriptions in the transclusion
+// dialog, see T271800 and T286765
+'wmgVisualEditorTransclusionDialogNewSidebarFeatures' => [
+	'default' => false,
+	// T284203 + T286992: pilot wikis
+	'group0' => true,
+	'dagwiki' => true,
+	'dewiki' => true,
+	'elwiki' => true,
+	'enwikivoyage' => true,
+	'fiwiki' => true,
+	'frwiki' => true,
+	'hewiki' => true,
+	'huwiki' => true,
+	'mswiki' => true,
+	'nawiktionary' => true,
+	'trwiki' => true,
+	'twwiki' => true,
+],
+
 // --------------- VisualEditor end ---------------
 
 'wgCiteResponsiveReferences' => [

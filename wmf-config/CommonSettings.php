@@ -2768,6 +2768,14 @@ if ( $wmgUseVisualEditor ) {
 	if ( $wmgVisualEditorSuggestedValues ) {
 		$wgVisualEditorTransclusionDialogSuggestedValues = true;
 	}
+
+	// Temporary feature flags for changes to the descriptions in the transclusion
+	// dialog, see T271800 and T286765.  Null coalesce is to prevent transient
+	// failure during initial config flag deployment.
+	if ( $wmgVisualEditorTransclusionDialogNewSidebarFeatures ?? false ) {
+		$wgVisualEditorTransclusionDialogInlineDescriptions = true;
+		$wgVisualEditorTransclusionDialogNewSidebar = true;
+	}
 }
 
 if ( $wmgUseTemplateData ) { // T61702 - 2015-07-20
