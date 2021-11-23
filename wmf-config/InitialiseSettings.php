@@ -25579,7 +25579,7 @@ function wmfGetVariantSettings() {
 
 'wgWMEReadingDepthSamplingRate' => [
 	'default' => 0, // T294777
-	'enwiki' => 0.0001, // T294777
+	'enwiki' => 0.001, // T294777
 ],
 
 'wgWMEWikidataCompletionSearchClicks' => [
