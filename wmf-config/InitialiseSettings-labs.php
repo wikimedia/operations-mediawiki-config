@@ -94,6 +94,7 @@ function wmfGetLabsOverrideSettings() {
 			'metawiki'      => 'https://meta.wikimedia.beta.wmflabs.org',
 			'votewiki'      => 'https://vote.wikimedia.beta.wmflabs.org',
 			'wikidatawiki'  => 'https://wikidata.beta.wmflabs.org',
+			'wikifunctionswiki' => 'https://wikifunctions.beta.wmflabs.org',
 			'en_rtlwiki' => 'https://en-rtl.wikipedia.beta.wmflabs.org',
 		],
 
@@ -2013,6 +2014,11 @@ function wmfGetLabsOverrideSettings() {
 		],
 		'wmgUseChessBrowser' => [
 			'default' => true,
+		],
+
+		// (T289315) Early roll-out to Beta Cluster only
+		'wmgUseWikiLambda' => [
+			'wikifunctionswiki' => true,
 		],
 	];
 } # wmflLabsSettings()
