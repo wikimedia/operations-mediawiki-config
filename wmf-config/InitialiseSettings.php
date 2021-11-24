@@ -17789,6 +17789,12 @@ function wmfGetVariantSettings() {
 		'beta' => true,
 		'loggedin' => true,
 	],
+	// T47955
+	'enwikisource' => [
+		'base' => true,
+		'beta' => true,
+		'loggedin' => true,
+	],
 ],
 
 // T169001
