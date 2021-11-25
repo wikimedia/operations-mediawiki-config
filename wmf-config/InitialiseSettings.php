@@ -5348,7 +5348,7 @@ function wmfGetVariantSettings() {
 	'srwiktionary' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
 	'svwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T279836
 	'testwiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T61084
-	'viwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T215493
+	'viwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T215493, T296154
 	'zhwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T260012, T287322
 	'zhwiktionary' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T286101
 ],
@@ -11253,9 +11253,17 @@ function wmfGetVariantSettings() {
 		'rollbacker' => [ 'rollback' => true ],
 		'patroller' => [ 'patrol' => true ], // T48828
 		'autopatrolled' => [ 'autopatrol' => true ], // T48828
-		'sysop' => [ 'extendedconfirmed' => true ], // T215493
+		'sysop' => [
+			'extendedconfirmed' => true, // T215493
+			'templateeditor' => true // T296154
+		],
 		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T215493
 		'bot' => [ 'extendedconfirmed' => true ], // T215493
+		'templateeditor' => [
+			'templateeditor' => true,
+			'tboverride' => true,
+			'editcontentmodel' => true
+		], // T296154
 	],
 	'+viwikibooks' => [
 		'eliminator' => [ // T202207
@@ -12352,7 +12360,8 @@ function wmfGetVariantSettings() {
 			'flood',
 			'patroller', // T48828
 			'autopatrolled', // T48828
-			'extendedconfirmed' // T215493
+			'extendedconfirmed', // T215493
+			'templateeditor' // T296154
 		],
 		'bureaucrat' => [
 			'eliminator', // T70612
@@ -13226,7 +13235,8 @@ function wmfGetVariantSettings() {
 			'flood',
 			'patroller', // T48828
 			'autopatrolled', // T48828
-			'extendedconfirmed' // T215493
+			'extendedconfirmed', // T215493
+			'templateeditor' // T296154
 		],
 		'bureaucrat' => [
 			'eliminator', // T70612
