@@ -15911,6 +15911,7 @@ function wmfGetVariantSettings() {
 		'ia-upload.wmcloud.org', // T287241 - IA-Upload tool
 		'wikisource-bot.toolforge.org', // Wikisource-bot tool - T292213
 		'americanantiquarian.org', // American antiquarian society - T292918
+		'planet4589.org', // Jonathan's Space Report - T296136
 	],
 	'+wikisource' => [
 		'archive.org', '*.archive.org',
