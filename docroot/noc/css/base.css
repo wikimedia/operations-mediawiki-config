@@ -13,11 +13,11 @@ body {
 	background: #fff;
 	padding: 0.5em 1em;
 	font: 14px/21px sans-serif;
-	color: #333;
+	color: #202122;
 }
 
 a {
-	color: #0645AD;
+	color: #36c;
 	text-decoration: none;
 }
 
@@ -26,7 +26,7 @@ a:hover {
 }
 
 a:visited {
-	color: #0b0080;
+	color: #6b4ba1;
 }
 
 img {

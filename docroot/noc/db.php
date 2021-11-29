@@ -103,13 +103,13 @@ if ( $format === 'json' ) {
 	<link rel="stylesheet" href="css/base.css">
 	<style>
 	h2 { font-weight: normal; }
-	code { color: #000; background: #f9f9f9; border: 1px solid #ddd; border-radius: 2px; padding: 1px 4px; }
+	code { color: #000; background: #f8f9fa; border: 1px solid #c8ccd1; border-radius: 2px; padding: 1px 4px; }
 	main { display: flex; flex-wrap: wrap; }
-	nav li { float: left; list-style: none; border: 1px solid #eee; padding: 1px 4px; margin: 0 1em 1em 0; }
-	section { flex: 1; min-width: 300px; border: 1px solid #eee; padding: 0 1em; margin: 0 1em 1em 0; }
+	nav li { float: left; list-style: none; border: 1px solid #eaecf0; padding: 1px 4px; margin: 0 1em 1em 0; }
+	section { flex: 1; min-width: 300px; border: 1px solid #eaecf0; padding: 0 1em; margin: 0 1em 1em 0; }
 	main, footer { clear: both; }
 	section:target { border-color: orange; }
-	section:target h2 { background: #ffe; }
+	section:target h2 { background: #fef6e7; }
 	</style>
 </head>
 <body>
