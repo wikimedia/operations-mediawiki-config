@@ -25608,6 +25608,15 @@ function wmfGetVariantSettings() {
 	'enwiki' => 0.001, // T294777
 ],
 
+'wgWMEWebUIScrollTrackingSamplingRate' => [
+	'default' => 0.1, // T292586
+	'enwiki' => 0.01, // T292586
+],
+
+'wgWMEWebUIScrollTrackingTimeToWaitBeforeScrollUp' => [
+	'default' => 5000, // T292586
+],
+
 'wgWMEWikidataCompletionSearchClicks' => [
 	'default' => [],
 ],
