@@ -26212,7 +26212,6 @@ function wmfGetVariantSettings() {
 
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
-	'uzwiki' => false,
 ],
 
 'wgWelcomeSurveyEnabled' => [
