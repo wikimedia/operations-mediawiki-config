@@ -25655,7 +25655,6 @@ function wmfGetVariantSettings() {
 	'private' => false,
 	'fishbowl' => false,
 	'nonglobal' => false,
-	'foundationwiki' => true,
 ],
 
 'wmgUseNewsletter' => [
