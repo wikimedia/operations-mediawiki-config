@@ -11938,8 +11938,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'rollbacker', 'accountcreator' ], // T149986
 	],
 	'+foundationwiki' => [
-		'sysop' => [ 'inactive', 'flood', 'editor' ],
-		'bureaucrat' => [ 'inactive', 'oauthadmin' ],
+		'sysop' => [ 'flood', 'editor' ],
 	],
 	'+frwiki' => [
 		'sysop' => [ 'rollbacker' ], // T170780
@@ -12792,8 +12791,7 @@ function wmfGetVariantSettings() {
 		'bureaucrat' => [ 'sysop', 'bureaucrat' ],
 	],
 	'+foundationwiki' => [
-		'sysop' => [ 'inactive', 'confirmed', 'flood', 'editor' ],
-		'bureaucrat' => [ 'inactive', 'confirmed', 'oauthadmin' ],
+		'sysop' => [ 'confirmed', 'flood', 'editor' ],
 	],
 	'+frwiki' => [
 		'sysop' => [ 'rollbacker' ], // T170780
