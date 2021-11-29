@@ -26442,6 +26442,36 @@ function wmfGetVariantSettings() {
 			'mobile' => 0,
 			'desktop' => 0
 		]
+	],
+	'arwiki' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 100,
+		],
+		'imagerecommendation' => [
+			'mobile' => 50,
+			'desktop' => 0
+		]
+	],
+	'bnwiki' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 100,
+		],
+		'imagerecommendation' => [
+			'mobile' => 50,
+			'desktop' => 0
+		]
+	],
+	'cswiki' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 100,
+		],
+		'imagerecommendation' => [
+			'mobile' => 50,
+			'desktop' => 0
+		]
 	]
 ],
 
