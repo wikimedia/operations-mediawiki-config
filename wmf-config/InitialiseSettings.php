@@ -16037,7 +16037,6 @@ function wmfGetVariantSettings() {
 'wgDisableHardRedirects' => [
 	'default' => true,
 	'donatewiki' => false,
-	'foundationwiki' => false,
 ],
 
 'wmgUseLivePreview' => [
