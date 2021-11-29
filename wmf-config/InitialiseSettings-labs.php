@@ -116,6 +116,7 @@ function wmfGetLabsOverrideSettings() {
 			'loginwiki'     => 'https://login.wikimedia.beta.wmflabs.org',
 			'votewiki'      => 'https://vote.wikimedia.beta.wmflabs.org',
 			'wikidatawiki'  => 'https://wikidata.beta.wmflabs.org',
+			'wikifunctionswiki' => 'https://wikifunctions.beta.wmflabs.org',
 			'en_rtlwiki' => 'https://en-rtl.wikipedia.beta.wmflabs.org',
 		],
 
