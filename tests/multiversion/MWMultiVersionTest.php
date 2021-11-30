@@ -146,6 +146,7 @@ class MWMultiVersionTest extends PHPUnit\Framework\TestCase {
 			[ 'testwiki', 'test.wikipedia.beta.wmflabs.org' ],
 
 			[ 'wikidatawiki', 'wikidata.beta.wmflabs.org' ],
+			[ 'wikifunctionswiki', 'wikifunctions.beta.wmflabs.org' ],
 		];
 	}
 }
