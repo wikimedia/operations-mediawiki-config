@@ -1997,7 +1997,7 @@ function wmfGetLabsOverrideSettings() {
 			'default' => 'wikidata.beta.wmflabs.org',
 		],
 
-		// T253271 Dont deploy Cirrus AB tests to beta
+		// T253271 Don't deploy Cirrus AB tests to beta
 		'wgCirrusSearchUserTesting' => [
 			'default' => [],
 		],
@@ -2015,6 +2015,15 @@ function wmfGetLabsOverrideSettings() {
 		],
 		'wmgUseChessBrowser' => [
 			'default' => true,
+		],
+
+		// Temporary until Wikifunctions is not just in Beta Cluster
+		'wgNamespaceAliases' => [
+			'+wikifunctionswiki' => [
+				'ZObject' => NS_MAIN,
+				'ZObject_talk' => NS_TALK,
+				'Wikifunctions' => NS_PROJECT,
+			],
 		],
 
 		// (T289315) Early roll-out to Beta Cluster only
