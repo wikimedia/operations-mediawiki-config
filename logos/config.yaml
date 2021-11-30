@@ -3269,6 +3269,10 @@ Wikivoyage:
         comment_1_5x:  T230120
         comment_2x:  T230120
 
+    # Commented out until the wiki goes live in production
+    # wikifunctionswiki:
+    #    commons: File:Wikifunctions-logo-en.svg
+
     wikimania2005wiki:
         comment:  T50382
         no_1_5x: true

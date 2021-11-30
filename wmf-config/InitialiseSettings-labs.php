@@ -74,6 +74,7 @@ function wmfGetLabsOverrideSettings() {
 		'wgSitename' => [
 			'deploymentwiki' => 'Deployment',
 			'wikivoyage'     => 'Wikivoyage',
+			'wikifunctionswiki' => 'Wikifunctions',
 		],
 
 		'-wgServer' => [
@@ -360,6 +361,7 @@ function wmfGetLabsOverrideSettings() {
 			'wikiversity' => '/static/images/project-logos/betawikiversity.png',
 			'wikivoyage' => '/static/images/project-logos/betacommons.png',
 			'wiktionary' => '/static/images/project-logos/betacommons.png',
+			'wikifunctionswiki' => '/static/images/project-logos/betawikifunctions.png',
 		],
 		'-wmgSiteLogo1_5x' => [],
 		'-wmgSiteLogo2x' => [],
@@ -2024,6 +2026,9 @@ function wmfGetLabsOverrideSettings() {
 				'ZObject_talk' => NS_TALK,
 				'Wikifunctions' => NS_PROJECT,
 			],
+		],
+		'wgFavicon' => [
+			'wikifunctionswiki' => '/static/favicon/wikifunctions.ico',
 		],
 
 		// (T289315) Early roll-out to Beta Cluster only
