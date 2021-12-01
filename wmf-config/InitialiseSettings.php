@@ -9930,6 +9930,9 @@ function wmfGetVariantSettings() {
 			'deletedtext' => true,
 			'abusefilter-log-detail' => true,
 		],
+		'templateeditor' => [
+			'templateeditor' => true,
+		], // T296769
 	],
 	'+hewikibooks' => [
 		'patroller' => [
@@ -11981,7 +11984,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'autopatrolled', 'rollbacker', 'transwiki' ], // T119787, T119787, T120346
 	],
 	'+hewiki' => [
-		'sysop' => [ 'patroller', 'autopatrolled', 'accountcreator' ],
+		'sysop' => [ 'patroller', 'autopatrolled', 'accountcreator', 'templateeditor' ], // T296769
 	],
 	'+hewikibooks' => [
 		'sysop' => [ 'patroller', 'autopatrolled' ],
@@ -12835,7 +12838,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'autopatrolled', 'rollbacker', 'transwiki' ], // T119787, T119787, T120346
 	],
 	'+hewiki' => [
-		'sysop' => [ 'patroller', 'autopatrolled', 'accountcreator' ],
+		'sysop' => [ 'patroller', 'autopatrolled', 'accountcreator', 'templateeditor' ], // T296769
 	],
 	'+hewikibooks' => [
 		'sysop' => [ 'patroller', 'autopatrolled' ],
