@@ -27037,9 +27037,11 @@ function wmfGetVariantSettings() {
 ],
 
 'wmgUseTheWikipediaLibrary' => [
-	'default' => false,
-	'metawiki' => true,
-	'testwiki' => true,
+	// T288070
+	'default' => true,
+	'private' => false,
+	'fishbowl' => false,
+	'nonglobal' => false,
 ],
 
 'wgTwlEditCount' => [
