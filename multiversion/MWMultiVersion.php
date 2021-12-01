@@ -359,10 +359,12 @@ class MWMultiVersion {
 		}
 		$this->versionLoaded = true;
 
+		$dir = dirname( __DIR__ );
+
 		if ( $wmfRealm === 'labs' ) {
-			$phpFilename = MEDIAWIKI_DEPLOYMENT_DIR . '/wikiversions-labs.php';
+			$phpFilename = $dir . '/wikiversions-labs.php';
 		} else {
-			$phpFilename = MEDIAWIKI_DEPLOYMENT_DIR . '/wikiversions.php';
+			$phpFilename = $dir . '/wikiversions.php';
 		}
 
 		$wikiversions = include $phpFilename;
