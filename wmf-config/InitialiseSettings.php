@@ -21198,6 +21198,10 @@ function wmfGetVariantSettings() {
 			'schema_title' => 'analytics/mediawiki/web_ab_test_enrollment',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		'mediawiki.web_ui_scroll' => [
+			'schema_title' => 'analytics/mediawiki/web_ui_scroll',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		'wd_propertysuggester.client_side_property_request' => [
 			'schema_title' => 'analytics/mediawiki/wd_propertysuggester/client_side_property_request',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -21551,6 +21555,7 @@ function wmfGetVariantSettings() {
 		'mediawiki.skin_diff',
 		'mediawiki.reading_depth',
 		'mediawiki.web_ab_test_enrollment',
+		'mediawiki.web_ui_scroll',
 		'test.instrumentation',
 		'test.instrumentation.sampled',
 		'wd_propertysuggester.client_side_property_request',
