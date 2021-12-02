@@ -20322,17 +20322,23 @@ function wmfGetVariantSettings() {
 'wgContentTranslationEnableSectionTranslation' => [
 	'default' => false,
 	'testwiki' => true,
+	'azwiki' => true, // T285842
+	'bawiki' => true, // T285842
 	'bnwiki' => true, // T271397
 	'hawiki' => true, // T290175
 	'igwiki' => true, // T290175
 	'kuwiki' => true, // T290238
+	'mlwiki' => true, // T285842
+	'mswiki' => true, // T285842
+	'sqwiki' => true, // T285842
+	'tawiki' => true, // T285842
 	'thwiki' => true, // T290175
 	'yowiki' => true, // T290175
 ],
 
 'wgSectionTranslationTargetLanguages' => [
 	'default' => null,
-	'wikipedia' => [ 'bn', 'ha', 'ig', 'ku', 'th', 'yo' ],
+	'wikipedia' => [ 'az', 'ba', 'bn', 'ha', 'ig', 'ku', 'ml', 'ms', 'sq', 'ta', 'th', 'yo' ],
 	'testwiki' => [ 'ar', 'az', 'ba', 'bn', 'ca', 'cs', 'es', 'fa', 'fr', 'ha', 'he', 'ht', 'id', 'ig', 'is', 'jv', 'ki', 'ko', 'ku', 'lu', 'ml', 'mn', 'mr', 'ms', 'oc', 'pt', 'ru', 'sq', 'ta', 'te', 'th', 'tl', 'tr', 'uk', 'ur', 'vi', 'yo', 'zh', 'zu' ],
 ],
 
