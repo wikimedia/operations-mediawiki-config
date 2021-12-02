@@ -7964,10 +7964,6 @@ function wmfGetVariantSettings() {
 		],
 	],
 ],
-'wgVectorShowSkinPreferences' => [
-	// T254228
-	'default' => true,
-],
 // Skin versions are strings not numbers. See skins/Vector/skin.json.
 'wgVectorDefaultSkinVersion' => [
 	'default' => '1', // Legacy Vector
@@ -17874,20 +17870,7 @@ function wmfGetVariantSettings() {
 		'beta' => false,
 		'loggedin' => true,
 	],
-	// T293946
-	'enwiki' => [
-		'base' => true,
-		'beta' => true,
-		'loggedin' => true,
-	],
-	// T253985
-	'svwiki' => [
-		'base' => true,
-		'beta' => true,
-		'loggedin' => true,
-	],
-	// T47955
-	'enwikisource' => [
+	'mobile-anon-talk' => [
 		'base' => true,
 		'beta' => true,
 		'loggedin' => true,
@@ -17912,24 +17895,8 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
-'wgMFAdvancedMobileContributions' => [
-	'default' => true, // T233612
-],
-
 'wgMFAmcOutreach' => [
 	'default' => true, // T234026
-],
-
-'wgMFAmcOutreachMinEditCount' => [
-	'default' => 100, // T231206
-],
-
-'wgMinervaOverflowInPageActions' => [
-	'default' => [
-		'base' => false,
-		'beta' => false,
-		'amc' => true, // T223883
-	],
 ],
 
 'wgMinervaEnableSiteNotice' => [
@@ -17949,29 +17916,11 @@ function wmfGetVariantSettings() {
 	'trwiki' => true,
 ],
 
-'wgMinervaABSamplingRate' => [
-	'default' => 0,
-],
-
-'wgMinervaApplyKnownTemplateHacks' => [
-	'default' => true,
-],
-
 // Link to help Google spider associate pages on wiki with our Android app.
 // They originally special-cased us but would like it done the normal way now. :)
 'wgMFAppPackageId' => [
 	'default' => false,
 	'wikipedia' => 'org.wikipedia',
-],
-
-// Blacklist some pages
-'wgMFNoMobileCategory' => [
-	'default' => false,
-	'foundationwiki' => 'Desktop-only_pages',
-],
-'wgMFNoMobilePages' => [
-	'default' => [],
-	'foundationwiki' => [ 'Special:FundraiserStatistics' ],
 ],
 
 'wgMFCollapseSectionsByDefault' => [
@@ -18068,12 +18017,6 @@ function wmfGetVariantSettings() {
 	],
 ],
 
-'wgMFShowFirstParagraphBeforeInfobox' => [
-	'default' => [
-		'base' => true,
-	]
-],
-
 'wgMFLazyLoadImages' => [
 	// T142399
 	'default' => [
@@ -18088,16 +18031,6 @@ function wmfGetVariantSettings() {
 		'base' => false,
 		'beta' => true,
 	],
-],
-'wgMFLazyLoadReferences' => [
-	'default' => [
-		'base' => false,
-		'beta' => true,
-	],
-],
-
-'wgMFExperiments' => [
-	'default' => [],
 ],
 
 'wgExtraGenderNamespaces' => [
