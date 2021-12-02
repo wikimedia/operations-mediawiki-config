@@ -14356,8 +14356,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgProofreadPageUseStatusChangeTags' => [
-	'default' => false,
-	'sourceswiki' => true, // T289140
+	'default' => true, // T289140
 ],
 
 // DO NOT enable on any other wikis
