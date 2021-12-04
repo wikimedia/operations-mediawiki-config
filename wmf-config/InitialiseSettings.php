@@ -16123,6 +16123,7 @@ function wmfGetVariantSettings() {
 	'bnwiki' => true,
 	'bnwikibooks' => true,
 	'bnwikisource' => true, // T152692
+	'bnwikivoyage' => true, // T296637
 	'bnwiktionary' => true,
 	'brwikimedia' => true,
 	'cawiki' => true,
