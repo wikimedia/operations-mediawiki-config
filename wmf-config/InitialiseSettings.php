@@ -5325,7 +5325,7 @@ function wmfGetVariantSettings() {
 	'dewiki' => [ '', 'autoconfirmed', 'editeditorprotected', 'sysop' ], // T94368
 	'dewiktionary' => [ '', 'autoconfirmed', 'editeditorprotected', 'editautoreviewprotected', 'sysop' ], // T216885
 	'enwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T126607, T57432
-	'enwiktionary' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T148007
+	'enwiktionary' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'templateeditor', 'sysop' ], // T148007, T296580
 	'enwikivoyage' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T198056
 	'etwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T153465
 	'fawiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T140839
@@ -9572,7 +9572,10 @@ function wmfGetVariantSettings() {
 	],
 	// T7033
 	'+enwiktionary' => [
-		'autopatrolled' => [ 'autopatrol' => true ],
+		'autopatrolled' => [
+			'autopatrol' => true,
+			'editautopatrolprotected' => true,
+		], // T296580
 		'extendedmover' => [
 			'move' => true,
 			'move-subpages' => true,
