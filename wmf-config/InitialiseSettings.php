@@ -26650,22 +26650,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgGEMentorDashboardEnabled' => [
-	// deployment requires Growth team approval
-	'default' => false,
-	'testwiki' => true,
-
-	// Growth pilot wikis (phase I)
-	'arwiki' => true,
-	'bnwiki' => true,
-	'cswiki' => true,
-
-	// phrase II wikis
-	'azwiki' => true,
-	'ckbwiki' => true,
-	'frwiki' => true,
-	'kuwiki' => true,
-	'ukwiki' => true,
-	'rowiki' => true,
+	'default' => true,
 ],
 
 'wgGEMentorDashboardBetaMode' => [
