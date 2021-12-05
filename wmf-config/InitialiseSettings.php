@@ -9431,7 +9431,8 @@ function wmfGetVariantSettings() {
 		'sysop' => [
 			'templateeditor' => true, // T57432
 			'changetags' => true, // T97013
-			'extendedconfirmed' => true // T126607
+			'extendedconfirmed' => true, // T126607
+			'autopatrol' => false, // T297058
 		],
 		'massmessage-sender' => [ 'massmessage' => true, ], // T60962
 		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T126607
