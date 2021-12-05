@@ -10257,9 +10257,6 @@ function wmfGetVariantSettings() {
 	'+kswiki' => [
 		'rollbacker' => [ 'rollback' => true ], // T286789
 	],
-	'+labswiki' => [
-		'bureaucrat' => [ 'usermerge' => true ],
-	],
 	'+ladwiki' => [
 		'flood' => [ 'bot' => true ], // T131527
 	],
@@ -20480,7 +20477,7 @@ function wmfGetVariantSettings() {
 	'private' => false,
 	'fishbowl' => false,
 	'nonglobal' => false,
-	'labswiki' => true, // T165795
+	'labswiki' => true, // originally enabled for T165795, disabling blocked on T218160
 ],
 
 'wmgUseEventLogging' => [
