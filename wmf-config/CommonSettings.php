@@ -1831,7 +1831,7 @@ if ( $wmgUseCentralAuth ) {
 
 	foreach ( $wmfLocalServices['irc'] as $address ) {
 		$wgCentralAuthRC[] = [
-			'formatter' => 'IRCColourfulCARCFeedFormatter',
+			'formatter' => 'MediaWiki\\Extension\\CentralAuth\\RCFeed\\IRCColourfulCARCFeedFormatter',
 			'uri' => "udp://$address:$wmgRC2UDPPort/#central\t",
 		];
 	}
