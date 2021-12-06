@@ -26266,6 +26266,7 @@ function wmfGetVariantSettings() {
 	'zh_classicalwiki' => true,
 	'zh_min_nanwiki' => true,
 	'zh_yuewiki' => true,
+	'zhwiki' => true,
 	'zuwiki' => true,
 ],
 
@@ -26279,6 +26280,7 @@ function wmfGetVariantSettings() {
 
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
+	'zhwiki' => false,
 ],
 
 'wgWelcomeSurveyEnabled' => [
