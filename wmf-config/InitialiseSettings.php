@@ -19876,7 +19876,6 @@ function wmfGetVariantSettings() {
 	// T288485
 	'default' => 'available',
 	'metawiki' => 'default',
-	'mediawikiwiki' => 'default',
 	'specieswiki' => 'default',
 	'enwiki' => 'default',
 	'fiwiki' => 'default',
@@ -19897,7 +19896,6 @@ function wmfGetVariantSettings() {
 	// to be always loaded, even when it's not supposed to be available.
 	'default' => 'available',
 	'metawiki' => 'default',
-	'mediawikiwiki' => 'default',
 	'specieswiki' => 'default',
 	'enwiki' => 'default',
 	'fiwiki' => 'default',
