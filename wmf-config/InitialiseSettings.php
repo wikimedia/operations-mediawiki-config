@@ -17100,6 +17100,7 @@ function wmfGetVariantSettings() {
 
 	'enwiki' => true,
 	'eswiki' => true,
+	'zhwiki' => true, // T296269
 ],
 
 // Whether VisualEditor should pay attention to the -autodisable user preference
