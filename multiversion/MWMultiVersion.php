@@ -361,10 +361,11 @@ class MWMultiVersion {
 
 		$dir = dirname( __DIR__ );
 
-		if ( $wmfRealm === 'labs' ) {
-			$phpFilename = $dir . '/wikiversions-labs.php';
-		} else {
+		if ( $wmfRealm === 'production' ) {
 			$phpFilename = $dir . '/wikiversions.php';
+		} else {
+			# Load the realm-specific wikiversions file, such as wikiversions-labs.php or wikiversions-dev.php
+			$phpFilename = $dir . "/wikiversions-$wmfRealm.php";
 		}
 
 		$wikiversions = include $phpFilename;
