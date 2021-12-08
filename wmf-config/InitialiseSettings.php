@@ -3075,7 +3075,6 @@ function wmfGetVariantSettings() {
 		'প্ৰকল্প' => NS_PROJECT,
 		'প্ৰকল্প_আলোচনা' => NS_PROJECT_TALK,
 		'Wikipedia_বার্তা' => NS_PROJECT_TALK,
-		'WP' => NS_PROJECT,
 		'CAT' => NS_CATEGORY,
 		"বাটচ'ৰা" => 100,
 		"বাটচ'ৰা_আলোচনা" => 101,
@@ -3108,9 +3107,6 @@ function wmfGetVariantSettings() {
 	],
 	'+bawiki' => [
 		'Wikipedia_буйынса_фекерләшеү' => NS_PROJECT_TALK,
-	],
-	'+banwiki' => [
-		'WP' => NS_PROJECT, // T255941
 	],
 	'+barwiki' => [
 		'Portal_Diskussion' => 101, // T43962 - now "Portal Dischkrian"
@@ -3162,7 +3158,6 @@ function wmfGetVariantSettings() {
 		'U' => NS_USER,
 		'वि' => NS_PROJECT,
 		'वि' => NS_PROJECT,
-		'WP' => NS_PROJECT,
 	],
 	'+bjnwiki' => [
 		'Wikipidia_pamandiran' => NS_PROJECT_TALK,
@@ -3172,20 +3167,17 @@ function wmfGetVariantSettings() {
 		'Portal_talk' => 101,
 		'കവാടം' => 100,
 		'കവാടത്തിന്റെ_സംവാദം' => 101,
-		'WP' => NS_PROJECT,
 		'WT' => NS_PROJECT_TALK,
 		'വിഭാഗം' => NS_CATEGORY,
 		'വിഭാഗത്തിന്റെ_സംവാദം' => NS_CATEGORY_TALK,
 	],
 	'+bnwikibooks' => [
-		'WB' => NS_PROJECT,
 		'Wikijunior' => 100,
 		'wikijunior_talk' => 101,
 		'Subject' => 102,
 		'Subject_talk' => 103,
 	],
 	'+bnwikisource' => [ // T59134
-		'WS' => NS_PROJECT,
 		'Author' => 100, // T61901
 		'Author_talk' => 101, // T61901
 		'Portal' => 106, // T61901
@@ -3221,7 +3213,6 @@ function wmfGetVariantSettings() {
 	],
 	'+ckbwiki' => [
 		'وپ' => NS_PROJECT, // T53605
-		'WP' => NS_PROJECT, // T71594
 		'لو' => NS_PROJECT_TALK, // T71594
 		'WT' => NS_PROJECT_TALK, // T71594
 		'ب' => NS_USER, // T71594
@@ -3253,14 +3244,12 @@ function wmfGetVariantSettings() {
 		'Diskuse_s_wikipedistkou' => NS_USER_TALK,
 		'Wikipedista_diskuse' => NS_USER_TALK,
 		'Wikipedistka_diskuse' => NS_USER_TALK,
-		'WP' => NS_PROJECT,
 		'Portal' => 100,
 		'Portal_talk' => 101,
 		'Portál_diskuse' => 101,
 		'Rejstřík_diskuse' => 103,
 	],
 	'+cswikibooks' => [
-		'WB' => NS_PROJECT,
 		'WK' => NS_PROJECT,
 		'Wikibooks_diskuse' => NS_PROJECT_TALK,
 	],
@@ -3271,18 +3260,15 @@ function wmfGetVariantSettings() {
 		'Diskuse_s_uživatelem' => NS_USER_TALK,
 		'Redaktor_diskuse' => NS_USER_TALK,
 		'Redaktorka_diskuse' => NS_USER_TALK,
-		'WN' => NS_PROJECT,
 		'WZ' => NS_PROJECT,
 		'Wikinews_diskuse' => NS_PROJECT_TALK,
 	],
 	'+cswikiquote' => [
 		'WC' => NS_PROJECT,
-		'WQ' => NS_PROJECT,
 		'Wikiquote_diskuse' => NS_PROJECT_TALK,
 		'Dílo_diskuse' => 101,
 	],
 	'+cswikisource' => [
-		'WS' => NS_PROJECT,
 		'WZ' => NS_PROJECT,
 		'Wikisource_diskuse' => NS_PROJECT_TALK,
 		'Author' => 100,
@@ -3291,7 +3277,6 @@ function wmfGetVariantSettings() {
 		'Edice_diskuse' => 103, // T221697
 	],
 	'+cswikiversity' => [
-		'WV' => NS_PROJECT,
 		'Wikiversity_diskuse' => NS_PROJECT_TALK,
 		'Forum' => 100,
 		'Forum_talk' => 101,
@@ -3299,7 +3284,6 @@ function wmfGetVariantSettings() {
 	],
 	'+cswiktionary' => [
 		'WS' => NS_PROJECT,
-		'WT' => NS_PROJECT,
 		'Wiktionary_diskuse' => NS_PROJECT_TALK,
 		'Příloha_diskuse' => 101,
 	],
@@ -3319,7 +3303,6 @@ function wmfGetVariantSettings() {
 		'Sgwrs_Wicitestun' => NS_PROJECT_TALK,
 	],
 	'+dawiki' => [
-		'WP' => NS_PROJECT, // T29998
 		'Portal_diskussion' => 101, // T9759
 	],
 	'+dawikisource' => [
@@ -3327,7 +3310,6 @@ function wmfGetVariantSettings() {
 		'Author_talk' => 103,
 	],
 	'+dewiki' => [
-		'WP' => NS_PROJECT,
 		'P' => 100,
 		'PD' => 101,
 		'WD' => NS_PROJECT_TALK,
@@ -3340,11 +3322,7 @@ function wmfGetVariantSettings() {
 		'Comments_talk' => 103,
 	],
 	'+dewikiquote' => [
-		'WQ' => NS_PROJECT,
 		'BD' => NS_USER_TALK,
-	],
-	'+dewikisource' => [
-		'WS' => NS_PROJECT,
 	],
 	'+dewikivoyage' => [ // T53794
 		'WD' => NS_PROJECT_TALK,
@@ -3361,7 +3339,6 @@ function wmfGetVariantSettings() {
 		'News_Diskussion' => 107,
 	],
 	'+dewiktionary' => [
-		'WT' => NS_PROJECT,
 		'WikiSaurus' => 104,
 		'WikiSaurus_Diskussion' => 105,
 		'BD' => NS_USER_TALK,
@@ -3382,33 +3359,25 @@ function wmfGetVariantSettings() {
 		'Portal_talk' => 111, // T157187
 	],
 	'+enwiki' => [ // T8313
-		'WP' => NS_PROJECT,
 		'WT' => NS_PROJECT_TALK,
 	],
 	'+enwikibooks' => [
-		'WB' => NS_PROJECT,
 		'WJ' => 110,
 		'CAT' => NS_CATEGORY,
 		'COOK' => 102,
 		'SUB' => 112,
 	],
 	'+enwikinews' => [
-		'WN' => NS_PROJECT,
 		'CAT' => NS_CATEGORY,
 	],
 	'+enwikisource' => [
-		'WS' => NS_PROJECT, // T44853
 		'WT' => NS_PROJECT_TALK, // T44853
 		'H' => NS_HELP, // T167563
-	],
-	'+enwikiversity' => [
-		'WV' => NS_PROJECT,
 	],
 	'+enwiktionary' => [
 		'WS' => 110, // Thesaurus
 		'Wikisaurus' => 110, // T174264
 		'Wikisaurus_talk' => 111,
-		'WT' => NS_PROJECT,
 		'CAT' => NS_CATEGORY, // T123187
 		'T' => NS_TEMPLATE, // T123187
 		'MOD' => 828, // T123187
@@ -3429,14 +3398,12 @@ function wmfGetVariantSettings() {
 	'+eswiki' => [
 		'CAT' => NS_CATEGORY, // T183612
 		'PR' => 102, // T183612
-		'WP' => NS_PROJECT, // T183612
 	],
 	'+eswikibooks' => [
 		'CAT' => NS_CATEGORY, // T216143
 		'WL' => NS_PROJECT, // T216143
 	],
 	'+eswikisource' => [
-		'WS' => NS_PROJECT, // T240050
 		'A' => NS_HELP, // T240050
 	],
 	'+eswiktionary' => [
@@ -3520,11 +3487,7 @@ function wmfGetVariantSettings() {
 	'+fawiktionary' => [
 		'وو' => NS_PROJECT,
 	],
-	'+fiwiki' => [
-		'WP' => NS_PROJECT,
-	],
 	'+frwiki' => [
-		'WP' => NS_PROJECT,
 		'DW' => NS_PROJECT_TALK, // T153952
 		'Discussion_Wikipedia' => NS_PROJECT_TALK,
 		'Utilisatrice' => NS_USER,
@@ -3535,23 +3498,17 @@ function wmfGetVariantSettings() {
 		'WJ' => 102, // T37977
 		'Wikijunior_talk' => 103, // T37977
 	],
-	'+frwikinews' => [
-		'WN' => NS_PROJECT,
-	],
 	'+frwikisource' => [
-		'WS' => NS_PROJECT, // T271939
 		'Author' => 102,
 		'Author_talk' => 103,
 	],
 	'+frwiktionary' => [
-		'WT' => NS_PROJECT,
 		'conj' => 116, // T262298
 	],
 	'+glwiki' => [
 		'Portal_talk' => 101, // T43213 (old namespace name)
 	],
 	'+guwiki' => [ // T255358
-		'WP' => NS_PROJECT,
 		'વિ' => NS_PROJECT,
 		'સ' => NS_USER,
 		'શ્રે' => NS_CATEGORY,
@@ -3567,7 +3524,6 @@ function wmfGetVariantSettings() {
 		'U' => NS_USER,
 		'שמש' => NS_USER_TALK,
 		'וק' => NS_PROJECT,
-		'WP' => NS_PROJECT,
 		'שוק' => NS_PROJECT_TALK,
 		'קו' => NS_FILE,
 		'שקו' => NS_FILE_TALK,
@@ -3613,7 +3569,6 @@ function wmfGetVariantSettings() {
 	'+hiwiki' => [
 		'वि' => NS_PROJECT,
 		'विवा' => NS_PROJECT_TALK,
-		'WP' => NS_PROJECT,
 		'WPT' => NS_PROJECT_TALK,
 		'U' => NS_USER,
 		'UT' => NS_USER_TALK,
@@ -3636,7 +3591,6 @@ function wmfGetVariantSettings() {
 	'+hiwikibooks' => [ // T254012
 		'वि' => NS_PROJECT,
 		'विपु' => NS_PROJECT,
-		'WB' => NS_PROJECT,
 	],
 	'+hiwikiversity' => [
 		'Portal' => 100, // T172977
@@ -3647,7 +3601,6 @@ function wmfGetVariantSettings() {
 		'Draft_talk' => 119, // T187535
 	],
 	'+hrwiki' => [
-		'WP' => NS_PROJECT,  // T287024
 		'WT' => NS_PROJECT_TALK,  // T287024
 		'RWP' => NS_PROJECT_TALK,  // T287024
 		'KT' => NS_CATEGORY,  // T287024
@@ -3715,7 +3668,6 @@ function wmfGetVariantSettings() {
 		'Author_talk' => 101,
 	],
 	'+ilowiki' => [
-		'WP' => NS_PROJECT, // T40247
 		'WT' => NS_PROJECT_TALK, // T40247
 	],
 	'+incubatorwiki' => [
@@ -3733,7 +3685,6 @@ function wmfGetVariantSettings() {
 		'Thesaurus_talk' => 111,
 	],
 	'+itwiki' => [
-		'WP' => NS_PROJECT, // T17116
 		'CAT' => NS_CATEGORY, // T101274
 		'DP' => 103, // T101274
 		'DW' => NS_PROJECT_TALK, // T101274
@@ -3744,10 +3695,6 @@ function wmfGetVariantSettings() {
 		'Discussioni_portale' => 101,
 		'Shelf' => 102,
 		'Shelf_talk' => 103,
-		'WB' => NS_PROJECT,
-	],
-	'+itwikiquote' => [
-		'WQ' => NS_PROJECT, // T273362
 	],
 	'+itwikisource' => [
 		'Author' => 102,
@@ -3760,7 +3707,6 @@ function wmfGetVariantSettings() {
 		'Discussioni_facoltà' => 101,
 		'U' => NS_USER, // T158775
 		'UT' => NS_USER_TALK, // T158775
-		'WV' => NS_PROJECT, // T158775
 		'DWV' => NS_PROJECT_TALK, // T158775
 		'T' => NS_TEMPLATE, // T158775
 		'DT' => NS_TEMPLATE_TALK, // T158775
@@ -3874,7 +3820,6 @@ function wmfGetVariantSettings() {
 		'WF' => NS_PROJECT, // T269319
 	],
 	'+kuwiki' => [
-		'WP' => NS_PROJECT, // T152815
 		'Portal_nîqaş' => 101, // T39521
 	],
 	'+kvwiki' => [
@@ -3904,7 +3849,6 @@ function wmfGetVariantSettings() {
 		'Wikipedia_aptarimas' => NS_PROJECT_TALK,
 	],
 	'+lvwiki' => [
-		'WP' => NS_PROJECT, // T95106
 		'VP' => NS_PROJECT, // T95106
 	],
 	'+maiwiki' => [
@@ -3912,7 +3856,6 @@ function wmfGetVariantSettings() {
 		'वि_वा' => NS_PROJECT_TALK,      // T125801
 		'CA' => NS_CATEGORY,             // T125801
 		'CT' => NS_CATEGORY_TALK,        // T125801
-		'WP' => NS_PROJECT,              // T125801
 		'WT' => NS_PROJECT_TALK,         // T125801
 		'u' => NS_USER,                  // T125801
 		'ut' => NS_USER_TALK,            // T125801
@@ -3927,7 +3870,6 @@ function wmfGetVariantSettings() {
 	'+mlwiki' => [
 		'വിക്കി' => NS_PROJECT,
 		'വിക്കിസം' => NS_PROJECT_TALK,
-		'WP' => NS_PROJECT,
 		'Portal' => 100,
 		'Portal_talk' => 101,
 		'ഘ' => 828, // T56951
@@ -3967,7 +3909,6 @@ function wmfGetVariantSettings() {
 		'Author_talk' => 101,
 		'Portal' => 102,
 		'Portal_talk' => 103,
-		'WS' => NS_PROJECT,
 		'H' => NS_HELP, // T37712
 		'Translation' => 114, // T154087
 		'Translation_talk' => 115,
@@ -4008,14 +3949,9 @@ function wmfGetVariantSettings() {
 	],
 	'+mwlwiki' => [
 		'Wikipedia_cumbersa' => NS_PROJECT_TALK,
-		'WP' => NS_PROJECT, // T180052
 		'BP' => NS_PROJECT, // T180052
 	],
-	'+mywiki' => [
-		'WP' => NS_PROJECT, // T119807
-	],
 	'+mywiktionary' => [
-		'WT' => NS_PROJECT, // T140998
 		'Appendix' => 100, // T291146
 		'Appendix_talk' => 101, // T291146
 	],
@@ -4031,9 +3967,6 @@ function wmfGetVariantSettings() {
 	'+napwikisource' => [
 		'Author' => 102, // T231880
 		'Author_talk' => 103, // T231880
-	],
-	'+ndswiki' => [
-		'WP' => NS_PROJECT,
 	],
 	'+newiki' => [
 		// Shorcuts per T89817
@@ -4072,19 +4005,12 @@ function wmfGetVariantSettings() {
 		'श्रे_वा' => NS_CATEGORY_TALK,
 	],
 	'+nlwiki' => [
-		'WP' => NS_PROJECT,
 		'H' => NS_HELP,
 		'P' => 100,
 	],
 	'+nlwikisource' => [
 		'Author' => 102,
 		'Author_talk' => 103,
-	],
-	'+nnwiki' => [
-		'WP' => NS_PROJECT,
-	],
-	'+nowiki' => [
-		'WP' => NS_PROJECT, // T43467
 	],
 	'+nowikibooks' => [
 		'Cookbook' => 102,
@@ -4108,7 +4034,6 @@ function wmfGetVariantSettings() {
 		'OW' => NS_PROJECT,
 	],
 	'+orwiki' => [
-		'WP' => NS_PROJECT, // T30257
 		'WT' => NS_PROJECT_TALK, // T30257
 	],
 	'+outreachwiki' => [
@@ -4118,18 +4043,12 @@ function wmfGetVariantSettings() {
 	'+plwiki' => [ // T12064
 		'Wikipedystka' => NS_USER,
 		'Dyskusja_wikipedystki' => NS_USER_TALK,
-		'WP' => NS_PROJECT,
 	],
 	'+plwikibooks' => [
 		'Wikipedystka' => NS_USER,
 		'Dyskusja_wikipedystki' => NS_USER_TALK,
-		'WB' => NS_PROJECT,
-	],
-	'+plwikinews' => [
-		'WN' => NS_PROJECT, // T291344
 	],
 	'+plwikisource' => [
-		'WS' => NS_PROJECT,
 		'Author' => 104,
 		'Author_talk' => 105,
 		'Collection' => 124, // T154711
@@ -4155,14 +4074,10 @@ function wmfGetVariantSettings() {
 		'Utilizador' => NS_USER, // T29495
 		'Utilizador_Discussão' => NS_USER_TALK, // T29495
 		'Discussão_Portal' => 101,
-		'WP' => NS_PROJECT, // T29728
 		'Wikipedia_Discussão' => NS_PROJECT_TALK,
 	],
 	'+ptwikibooks' => [
 		'Wikibooks_Discussão' => NS_PROJECT_TALK,
-	],
-	'+ptwikinews' => [
-		'WN' => NS_PROJECT, // T259959
 	],
 	'+ptwikisource' => [
 		'Author' => 102,
@@ -4202,7 +4117,6 @@ function wmfGetVariantSettings() {
 		'И' => 102,
 		'ПРО' => 104,             // T36124
 		'АК' => 106,              // T36527
-		'WP' => NS_PROJECT,       // T166035
 		'Участница' => NS_USER,                    // T14320
 		'Обсуждение_участницы' => NS_USER_TALK,
 		'ОПРО' => 105,                             // T189277
@@ -4272,7 +4186,6 @@ function wmfGetVariantSettings() {
 		'М' => 828, // T197565
 	],
 	'+sawiki' => [
-		'WP' => NS_PROJECT,
 		'WT' => NS_PROJECT_TALK,
 		'सहाय्यस्य_प्रवेशद्वारम्' => 101, // T101634 - Portal talk
 	],
@@ -4280,12 +4193,10 @@ function wmfGetVariantSettings() {
 		'विकिसूक्तिःसम्भाषणम्' => NS_PROJECT_TALK, // T101634
 	],
 	'+sewiki' => [
-		'WP' => NS_PROJECT, // T42436
 		'Temasiidu' => 100, // T41206
 		'Temasiidoságastallan' => 101, // T41206
 	],
 	'+shwiki' => [
-		'WP' => NS_PROJECT,
 		'VP' => NS_PROJECT,
 		'ВП' => NS_PROJECT,
 		'Wikipedija' => NS_PROJECT,
@@ -4302,20 +4213,7 @@ function wmfGetVariantSettings() {
 		'Portal_talk' => 101,
 	],
 	'+shnwiki' => [
-		'WP' => NS_PROJECT,
 		'WT' => NS_PROJECT_TALK, // T210699
-	],
-	'+shnwiktionary' => [
-		'WT' => NS_PROJECT, // T256348
-	],
-	'+simplewiki' => [
-		'WP' => NS_PROJECT,
-	],
-	'+simplewikiquote' => [
-		'WQ' => NS_PROJECT,
-	],
-	'+simplewiktionary' => [
-		'WT' => NS_PROJECT,
 	],
 	'+siwiki' => [
 		'Portal' => 100,
@@ -4329,25 +4227,17 @@ function wmfGetVariantSettings() {
 		'WL' => NS_PROJECT,
 	],
 	'+srwiki' => [
-		'WP' => NS_PROJECT, // T286396
 		'VP' => NS_PROJECT, // T286396
 		'ВП' => NS_PROJECT, // T286396
 		'Vikipedija' => NS_PROJECT,
 		'Draft' => 118, // T223472
 		'Draft_talk' => 119, // T223472
 	],
-	'+svwiki' => [
-		'WP' => NS_PROJECT,
-	],
-	'+svwikinews' => [
-		'WN' => NS_PROJECT,
-	],
 	'+svwikisource' => [
 		'Author' => 106,
 		'Author_talk' => 107,
 	],
 	'+svwiktionary' => [
-		'WT' => NS_PROJECT,
 		'WT-diskussion' => NS_PROJECT_TALK,
 		'KAT' => NS_CATEGORY, // T214329
 	],
@@ -4355,15 +4245,10 @@ function wmfGetVariantSettings() {
 		'Portal' => 100,
 		'Portal_talk' => 101,
 	],
-	'+sysop_itwiki' => [
-		'WP' => NS_PROJECT, // T259243
-	],
 	'+tawiki' => [
-		'WP' => NS_PROJECT, // T126604
 		'WT' => NS_PROJECT_TALK, // T126604
 	],
 	'+testwiki' => [
-		'WP' => NS_PROJECT,
 		'WT' => NS_PROJECT_TALK,
 	],
 	'+tewikiquote' => [
@@ -4379,7 +4264,6 @@ function wmfGetVariantSettings() {
 		'Wiktionary_చర్చ' => NS_PROJECT_TALK, // T38533
 	],
 	'+thwiki' => [
-		'WP' => NS_PROJECT,
 		'H' => NS_HELP,
 	], // T70108
 	'+thwikibooks' => [
@@ -4391,14 +4275,12 @@ function wmfGetVariantSettings() {
 		'SUB' => 102, // T251118
 		'Subject' => 102, // T48153
 		'Subject_talk' => 103, // T48153
-		'WB' => NS_PROJECT,
 		'Wikijunior' => 106, // T251118
 		'WJ' => 106, // T251118
 	],
 	'+thwikisource' => [
 		'ผู้ประพันธ์' => 102, // T236640
 		'คุยเรื่องผู้ประพันธ์' => 103, // T236640
-		'WS' => NS_PROJECT, // T251134
 		'H' => NS_HELP, // T251134
 		'CAT' => NS_CATEGORY, // T251134
 		'Portal' => 100, // T251134
@@ -4419,14 +4301,10 @@ function wmfGetVariantSettings() {
 	'+tiwiktionary' => [ // T263840
 		'ዊኪ-መዝገበ-ቃላት_ምይይጥ' => NS_PROJECT_TALK,
 	],
-	'+tlwikibooks' => [
-		'WB' => NS_PROJECT,
-	],
 	'+trwiki' => [
 		'T' => NS_TALK, // T265336
 		'K' => NS_USER, // T265336
 		'VP' => NS_PROJECT, // T265336
-		'WP' => NS_PROJECT, // T265336
 		'Ş' => NS_TEMPLATE, // T265336
 		'Y' => NS_HELP, // T265336
 		'KAT' => NS_CATEGORY, // T265336
@@ -4442,7 +4320,6 @@ function wmfGetVariantSettings() {
 		// T266608
 		'T' => NS_TALK,
 		'K' => NS_USER,
-		'WB' => NS_PROJECT,
 		'Ş' => NS_TEMPLATE,
 		'Y' => NS_HELP,
 	],
@@ -4457,7 +4334,6 @@ function wmfGetVariantSettings() {
 		'T' => NS_TALK,
 		'K' => NS_USER,
 		'VK' => NS_PROJECT,
-		'WS' => NS_PROJECT,
 		'Ş' => NS_TEMPLATE,
 		'Y' => NS_HELP,
 		'KAT' => NS_CATEGORY,
@@ -4467,7 +4343,6 @@ function wmfGetVariantSettings() {
 		'T' => NS_TALK,
 		'K' => NS_USER,
 		'VS' => NS_PROJECT,
-		'WQ' => NS_PROJECT,
 		'Ş' => NS_TEMPLATE,
 		'Y' => NS_HELP,
 		'KAT' => NS_CATEGORY,
@@ -4476,7 +4351,6 @@ function wmfGetVariantSettings() {
 		'T' => NS_TALK,
 		'K' => NS_USER,
 		'VS' => NS_PROJECT,
-		'WT' => NS_PROJECT,
 		'Ş' => NS_TEMPLATE,
 		'Y' => NS_HELP,
 		'KAT' => NS_CATEGORY,
@@ -4487,13 +4361,11 @@ function wmfGetVariantSettings() {
 		'T' => NS_TALK, // T272782
 		'K' => NS_USER, // T272782
 		'VG' => NS_PROJECT, // T272782
-		'WV' => NS_PROJECT, // T272782
 		'Ş' => NS_TEMPLATE, // T272782
 		'Y' => NS_HELP, // T272782
 		'KAT' => NS_CATEGORY, // T272782
 	],
 	'+ttwiki' => [
-		'WP' => NS_PROJECT,
 		'ВП' => NS_PROJECT,
 	],
 	'+ukwiki' => [
@@ -4605,7 +4477,6 @@ function wmfGetVariantSettings() {
 		'Book_talk' => 109,
 	],
 	'+vecwiki' => [
-		'WP' => NS_PROJECT,
 		'Immagine' => NS_FILE,
 	],
 	'+viwiki' => [
@@ -4633,14 +4504,12 @@ function wmfGetVariantSettings() {
 		'Index_talk' => 101,
 		'Appendix' => 102,
 		'Appendix_talk' => 103,
-		'WT' => NS_PROJECT,
 		'T' => NS_TEMPLATE,
 		'U' => NS_USER,
 		'CAT' => NS_CATEGORY,
 	],
 	'+wuuwiki' => [
 		// English aliases - T124389
-		'WP' => NS_PROJECT,
 		'T' => NS_TEMPLATE,
 
 		// Wu aliases - T124389, T128354
@@ -4659,7 +4528,6 @@ function wmfGetVariantSettings() {
 		'模块' => 828, // NS_MODULE
 	],
 	'+zh_classicalwiki' => [
-		'WP' => NS_PROJECT, // T162547
 		'H' => NS_HELP, // T162547
 		'WT' => NS_PROJECT_TALK, // T162547
 		'T' => NS_TEMPLATE, // T162547
@@ -4673,7 +4541,6 @@ function wmfGetVariantSettings() {
 	'+zhwiki' => [
 		'维基百科' => NS_PROJECT,
 		'維基百科' => NS_PROJECT,
-		'WP' => NS_PROJECT,
 		'维基百科讨论' => NS_PROJECT_TALK,
 		'维基百科对话' => NS_PROJECT_TALK,
 		'維基百科討論' => NS_PROJECT_TALK,
@@ -4718,7 +4585,6 @@ function wmfGetVariantSettings() {
 	'+zhwikibooks' => [
 		'维基教科书' => NS_PROJECT,
 		'維基教科書' => NS_PROJECT,
-		'WB' => NS_PROJECT,
 		'CAT' => NS_CATEGORY, // T46308
 		'維基兒童' => 110, // T46308
 		'维基儿童' => 110, // T46308
@@ -4736,7 +4602,6 @@ function wmfGetVariantSettings() {
 		'頻道' => 100, // T257101
 		'频道_讨论' => 101, // T257101
 		'頻道_讨论' => 101, // T257101
-		'WN' => NS_PROJECT, // T266925
 		'U' => NS_USER, // T266925
 		'UT' => NS_USER_TALK, // T266925
 		'T' => NS_TEMPLATE, // T266925
@@ -4744,7 +4609,6 @@ function wmfGetVariantSettings() {
 		'H' => NS_HELP, // T266925
 	],
 	'+zhwikiquote' => [
-		'WQ' => NS_PROJECT, // T181374
 		'WT' => NS_PROJECT_TALK, // T181374
 		'T' => NS_TEMPLATE, // T181374
 		'H' => NS_HELP, // T181374
@@ -4759,7 +4623,6 @@ function wmfGetVariantSettings() {
 		'模組討論' => 829, // T165593
 	],
 	'+zhwikisource' => [
-		'WS' => NS_PROJECT, // T230548
 		'CAT' => NS_CATEGORY, // T230548
 		'作者' => 102, // Author
 		'作者讨论' => 103, // Author_talk
@@ -4775,7 +4638,6 @@ function wmfGetVariantSettings() {
 	],
 	'+zhwikiversity' => [
 		'T' => NS_TEMPLATE, // T202821
-		'WV' => NS_PROJECT, // T202821
 		'WT' => NS_PROJECT_TALK, // T202821
 		'维基学院' => NS_PROJECT, // T207544
 		'維基學院' => NS_PROJECT, // T207544
@@ -4851,7 +4713,6 @@ function wmfGetVariantSettings() {
 		'模組討論' => 829, // T165593
 		'CAT' => NS_CATEGORY, // T286101
 		'T' => NS_TEMPLATE, // T286101
-		'WT' => NS_PROJECT, // T286101
 		'重建' => 118, // T286101
 		'重構' => 118, // T286101
 		'重构' => 118, // T286101
@@ -4862,7 +4723,6 @@ function wmfGetVariantSettings() {
 		'重建討論' => 119, // T286101
 	],
 	'+zh_yuewiki' => [
-		'WP' => NS_PROJECT,
 		'WT' => NS_PROJECT_TALK,
 		'T' => NS_TEMPLATE,
 		'H' => NS_HELP,
