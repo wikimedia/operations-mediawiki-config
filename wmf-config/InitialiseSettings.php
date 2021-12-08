@@ -7994,6 +7994,53 @@ function wmfGetVariantSettings() {
 		'logged_in' => false,
 		'logged_out' => false,
 	],
+	'testwiki' => [
+		'logged_in' => true,
+		'logged_out' => false,
+	],
+	'officewiki' => [
+		'logged_in' => true,
+		'logged_out' => false,
+	],
+],
+
+'wgVectorWebABTestEnrollment' => [
+	'testwiki' => [
+		'name' => 'vector.sticky_header_2021_12',
+		'enabled' => true,
+		'buckets' => [
+			'unsampled' => [
+				'samplingRate' => '0.1'
+			],
+			'control' => [
+				'samplingRate' => '0.3'
+			],
+			'stickyHeaderDisabled' => [
+				'samplingRate' => '0.3'
+			],
+			'stickyHeaderEnabled' => [
+				'samplingRate' => '0.3'
+			],
+		],
+	],
+	'officewiki' => [
+		'name' => 'vector.sticky_header_2021_12',
+		'enabled' => true,
+		'buckets' => [
+			'unsampled' => [
+				'samplingRate' => '0.1'
+			],
+			'control' => [
+				'samplingRate' => '0.3'
+			],
+			'stickyHeaderDisabled' => [
+				'samplingRate' => '0.3'
+			],
+			'stickyHeaderEnabled' => [
+				'samplingRate' => '0.3'
+			],
+		],
+	],
 ],
 
 'wgVectorLanguageInHeader' => [
