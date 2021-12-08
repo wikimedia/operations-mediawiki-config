@@ -7935,6 +7935,18 @@ function wmfGetVariantSettings() {
 		'logged_out' => false
 	],
 ],
+'wgVectorLanguageInMainPageHeader' => [
+	'default' => [
+		'logged_in' => false,
+		'logged_out' => false,
+	],
+	// T290480
+	'euwiki' => [
+		'logged_in' => true,
+		'logged_out' => true,
+	],
+],
+
 'wgVectorUseWvuiSearch' => [
 	'default' => true,
 	'wikidatawiki' => false,

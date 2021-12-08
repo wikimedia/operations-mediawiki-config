@@ -513,6 +513,12 @@ function wmfGetLabsOverrideSettings() {
 				'logged_out' => true
 			],
 		],
+		'wgVectorLanguageInMainPageHeader' => [
+			'default' => [
+				'logged_in' => true,
+				'logged_out' => true
+			],
+		],
 		'wgVectorStickyHeader' => [
 			'default' => [
 				'logged_in' => true,
