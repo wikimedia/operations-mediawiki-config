@@ -8006,7 +8006,7 @@ function wmfGetVariantSettings() {
 
 'wgVectorWebABTestEnrollment' => [
 	'testwiki' => [
-		'name' => 'vector.sticky_header_2021_12',
+		'name' => 'vector.sticky_header',
 		'enabled' => true,
 		'buckets' => [
 			'unsampled' => [
@@ -8024,7 +8024,7 @@ function wmfGetVariantSettings() {
 		],
 	],
 	'officewiki' => [
-		'name' => 'vector.sticky_header_2021_12',
+		'name' => 'vector.sticky_header',
 		'enabled' => true,
 		'buckets' => [
 			'unsampled' => [
