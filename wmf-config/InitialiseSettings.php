@@ -25572,7 +25572,8 @@ function wmfGetVariantSettings() {
 ],
 
 'wgKartographerDfltStyle' => [
-	'testwiki' => 'osm-tegola'
+	'testwiki' => 'osm-tegola',
+	'frwiki' => 'osm-tegola' // Enable tegola as a map source to frwiki initially
 ],
 
 // This MUST NOT be enabled on any additional wikis.
