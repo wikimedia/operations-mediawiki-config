@@ -432,4 +432,9 @@ if ( $wmgUseSecurePoll ) {
 	}
 }
 
+// Versioned maps support, see T294339
+$wgKartographerVersionedLiveMaps = true;
+$wgKartographerVersionedMapdata = true;
+$wgKartographerVersionedStaticMaps = true;
+
 } # end safeguard
