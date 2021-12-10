@@ -21249,6 +21249,10 @@ function wmfGetVariantSettings() {
 			'schema_title' => 'analytics/mediawiki/mentor_dashboard/visit',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		'mediawiki.welcomesurvey.interaction' => [
+			'schema_title' => 'analytics/mediawiki/welcomesurvey/interaction',
+			'destination_event_service' => 'eventgate-analytics-external'
+		],
 		[
 			'stream' => 'mediawiki.talk_page_edit',
 			'schema_title' => 'analytics/mediawiki/talk_page_edit',
