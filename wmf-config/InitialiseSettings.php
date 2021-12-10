@@ -8010,16 +8010,16 @@ function wmfGetVariantSettings() {
 		'enabled' => true,
 		'buckets' => [
 			'unsampled' => [
-				'samplingRate' => '0.1'
+				'samplingRate' => 0.1
 			],
 			'control' => [
-				'samplingRate' => '0.3'
+				'samplingRate' => 0.3
 			],
 			'stickyHeaderDisabled' => [
-				'samplingRate' => '0.3'
+				'samplingRate' => 0.3
 			],
 			'stickyHeaderEnabled' => [
-				'samplingRate' => '0.3'
+				'samplingRate' => 0.3
 			],
 		],
 	],
@@ -8028,16 +8028,16 @@ function wmfGetVariantSettings() {
 		'enabled' => true,
 		'buckets' => [
 			'unsampled' => [
-				'samplingRate' => '0.1'
+				'samplingRate' => 0.1
 			],
 			'control' => [
-				'samplingRate' => '0.3'
+				'samplingRate' => 0.3
 			],
 			'stickyHeaderDisabled' => [
-				'samplingRate' => '0.3'
+				'samplingRate' => 0.3
 			],
 			'stickyHeaderEnabled' => [
-				'samplingRate' => '0.3'
+				'samplingRate' => 0.3
 			],
 		],
 	],
