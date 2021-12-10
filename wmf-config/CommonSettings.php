@@ -1298,6 +1298,11 @@ if ( $wmgUseUploadsLink ) {
 	wfLoadExtension( 'UploadsLink' );
 }
 
+// Set default search experience to MediaSearch (T297484)
+if ( $wmgUseMediaSearch ) {
+	$wgDefaultUserOptions['search-special-page'] = 'MediaSearch';
+}
+
 if ( $wmgUseUrlShortener ) {
 	wfLoadExtension( 'UrlShortener' );
 	$wgUrlShortenerTemplate = '/$1';
