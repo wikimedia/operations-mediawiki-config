@@ -17861,6 +17861,10 @@ function wmfGetVariantSettings() {
 	],
 ],
 
+'wgMinervaDonateLink' => [
+	'default' => true,
+],
+
 'wgMinervaTalkAtTop' => [
 	// Blocked on T54165
 	'default' => [
