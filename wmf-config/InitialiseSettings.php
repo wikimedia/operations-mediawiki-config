@@ -19886,8 +19886,9 @@ function wmfGetVariantSettings() {
 'wgDisambiguatorNotifications' => [
 	// T293319
 	'default' => false,
+	'group0' => true,
+	'group1' => true,
 	'huwiki' => true,
-	'cawiki' => true,
 	'plwiki' => true,
 	'viwiki' => true,
 	'fawiki' => true,
