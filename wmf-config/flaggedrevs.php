@@ -524,6 +524,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 	} elseif ( $wgDBname == 'idwiki' ) {
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
+		$wgFlaggedRevsRestrictionLevels = [ '', 'autoconfirmed', 'autoreview', 'sysop' ];
 	} elseif ( $wgDBname == 'kawiki' ) {
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
