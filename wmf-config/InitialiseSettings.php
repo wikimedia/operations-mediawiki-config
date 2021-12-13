@@ -25572,9 +25572,12 @@ function wmfGetVariantSettings() {
 	'private' => false,
 ],
 
+// Gradual rollout of tegola:
+// frwiki, ruwiki
 'wgKartographerDfltStyle' => [
 	'testwiki' => 'osm-tegola',
-	'frwiki' => 'osm-tegola' // Enable tegola as a map source to frwiki initially
+	'frwiki' => 'osm-tegola',
+	'ruwiki' => 'osm-tegola',
 ],
 
 // This MUST NOT be enabled on any additional wikis.
