@@ -22898,6 +22898,10 @@ function wmfGetVariantSettings() {
 	'wikidatawiki' => 'P218',
 ],
 
+'wgLexemeEnableDataTransclusion' => [
+	'default' => false,
+],
+
 'wmgWikibaseDisabledDataTypes' => [
 	'default' => [
 		'entity-schema' // T229904 :'(
