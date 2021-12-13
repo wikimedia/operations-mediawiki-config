@@ -22762,6 +22762,11 @@ function wmfGetVariantSettings() {
 
 'wgLexemeEnableDataTransclusion' => [
 	'default' => false,
+	'wikidatawiki' => true, // T294159
+	'testwikidatawiki' => true, // T294159
+	'bnwiktionary' => true, // T294159
+	'euwiktionary' => true, // T294159
+	// when adding other wikis, also change wmgWikibaseDisabledUsageAspects accordingly
 ],
 
 'wmgWikibaseDisabledDataTypes' => [
@@ -22776,6 +22781,11 @@ function wmfGetVariantSettings() {
 
 'wmgWikibaseDisabledAccessEntityTypes' => [
 	'default' => [ 'lexeme', 'form', 'sense' ],
+	// see wgLexemeEnableDataTransclusion
+	'wikidatawiki' => [],
+	'testwikidatawiki' => [],
+	'bnwiktionary' => [],
+	'euwiktionary' => [],
 ],
 
 'wmgWikibaseMaxSerializedEntitySize' => [
