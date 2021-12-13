@@ -1968,6 +1968,10 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true,
 		],
 
+		'-wgDiscussionToolsABTest' => [
+			'enwiki' => 'newtopictool', // T291307#7567119
+		],
+
 		'-wgDiscussionToolsEnableMobile' => [
 			'default' => true,
 			'enwiki' => false, // T295816#7561919
@@ -1978,7 +1982,7 @@ function wmfGetLabsOverrideSettings() {
 		],
 
 		'-wgDiscussionTools_newtopictool' => [
-			'default' => 'available',
+			'default' => 'default',
 		],
 
 		'-wgDiscussionTools_sourcemodetoolbar' => [
