@@ -16856,7 +16856,6 @@ function wmfGetVariantSettings() {
 	'ugwiki' => true,			// Starting from SET
 	'urwiki' => true,			// Starting from SET
 	'wuuwiki' => true,          // Starting from SET
-	'zhwiki' => true,           // Starting from SET (T296269)
 	'zh_classicalwiki' => true, // Starting from SET
 	'zh_yuewiki' => true,       // Starting from SET
 
@@ -17143,9 +17142,6 @@ function wmfGetVariantSettings() {
 // This is a temporary variable for roll-out, to be removed once complete.
 // If a wiki was previously enabled by default for all users but then disabled,
 // this will need to be set true for 30 days (anon cache epoch).
-//
-// Only enable on wikis where wmgVisualEditorUseSingleEditTab=true, or wmgVisualEditorIsSecondaryEditor=true.
-// Apparently it works incorrectly for red links otherwise (T296269#7559810)
 'wmgVisualEditorDisableForAnons' => [
 	'default' => false,
 
