@@ -425,6 +425,10 @@ function wmfGetLabsOverrideSettings() {
 			'default' => 30000,
 		],
 
+		'wgEchoWatchlistNotifications' => [
+			'default' => true,
+		],
+
 		# FIXME: make that settings to be applied
 		'-wgShowExceptionDetails' => [
 			'default' => true,
