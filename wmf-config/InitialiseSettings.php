@@ -16852,6 +16852,7 @@ function wmfGetVariantSettings() {
 	'ugwiki' => true,			// Starting from SET
 	'urwiki' => true,			// Starting from SET
 	'wuuwiki' => true,          // Starting from SET
+	'zhwiki' => true,           // Starting from SET (T296269)
 	'zh_classicalwiki' => true, // Starting from SET
 	'zh_yuewiki' => true,       // Starting from SET
 
@@ -16929,6 +16930,7 @@ function wmfGetVariantSettings() {
 	'eswiki' => true, // T62188
 	'frwiktionary' => true, // T169741
 	'hewiki' => true, // T54552
+	'zhwiki' => true, // T296269
 ],
 
 // Whether to enable the 2017 wikitext editor by default.
