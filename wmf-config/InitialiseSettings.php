@@ -1108,10 +1108,10 @@ function wmfGetVariantSettings() {
 		'width' => 120,
 		'height' => 29
 	],
-	'outreachwiki' => [ // T290091
-		'src' => '/static/images/mobile/copyright/en-wordmark.svg',
-		'width' => 93,
-		'height' => 45,
+	'outreachwiki' => [ // T290091, T297580
+		'src' => '/static/images/mobile/copyright/outreach-wordmark.svg',
+		'width' => 120,
+		'height' => 29,
 	],
 	'strategywiki' => [ // T290091
 		'src' => '/static/images/mobile/copyright/en-wordmark.svg',
