@@ -17862,7 +17862,9 @@ function wmfGetVariantSettings() {
 ],
 
 'wgMinervaDonateLink' => [
-	'default' => true,
+	'default' => [
+		'base' => true,
+	],
 ],
 
 'wgMinervaTalkAtTop' => [
