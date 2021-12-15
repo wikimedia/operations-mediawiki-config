@@ -25398,6 +25398,7 @@ function wmfGetVariantSettings() {
 	'frwiki' => 'osm-tegola',
 	'ruwiki' => 'osm-tegola',
 	'jawiki' => 'osm-tegola',
+	'enwiki' => 'osm-tegola',
 ],
 
 // This MUST NOT be enabled on any additional wikis.
