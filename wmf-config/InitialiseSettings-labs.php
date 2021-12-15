@@ -743,6 +743,10 @@ function wmfGetLabsOverrideSettings() {
 						'ext-quicksurveys-internal-gdi-safety-survey-answer-negative',
 						'ext-quicksurveys-internal-gdi-safety-survey-answer-neutral',
 					],
+					'audience' => [
+						// T297623
+						'minEdits' => 5
+					],
 					'enabled' => true,
 					'coverage' => 0.2, // T296652
 					'platforms' => [
