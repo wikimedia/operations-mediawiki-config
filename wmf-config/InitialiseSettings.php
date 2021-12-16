@@ -23089,6 +23089,148 @@ function wmfGetVariantSettings() {
 	'commonswiki' => false,
 ],
 
+'wgMediaInfoMediaSearchProfiles' => [
+	'commonswiki' => [
+		'mediasearch_logistic_regression' => [
+			'boost' => [
+				'statement' => [
+					// depicts
+					'P180' => 1 * 0.11098311564161133,
+					// digital representation of
+					'P6243' => 1.1 * 0.11098311564161133,
+				],
+				'descriptions.$language' => 0.019320230186222098,
+				'descriptions.$language.plain' => 0,
+				'title' => 0.0702949038300864,
+				'title.plain' => 0,
+				'category' => 0.05158078808882278,
+				'category.plain' => 0,
+				'heading' => 0,
+				'heading.plain' => 0,
+				// Arbitrary small value to preserve ordering if we ONLY have a match in this field
+				'auxiliary_text' => 0.0001,
+				'auxiliary_text.plain' => 0,
+				'file_text' => 0,
+				'file_text.plain' => 0,
+				'redirect.title' => 0.01060150471482338,
+				'redirect.title.plain' => 0,
+				// Arbitrary small value to preserve ordering if we ONLY have a match in this field
+				'text' => 0.0001,
+				'text.plain' => 0,
+				'suggest' => 0,
+			],
+			'decay' => [
+				'descriptions.$language' => 0.9,
+				'descriptions.$language.plain' => 0.9,
+				// below is not actually a field
+				'synonyms' => 0,
+			],
+			'logisticRegressionIntercept' => -1.1975600089068401,
+			'entitiesVariableBoost' => true,
+			'normalizeFulltextScores' => true,
+			'normalizeMultiClauseScores' => true,
+			'applyLogisticFunction' => true,
+			'useSynonyms' => false,
+			'hasLtrPlugin' => true,
+		],
+		'mediasearch_synonyms' => [
+			'boost' => [
+				'statement' => [
+					// depicts
+					'P180' => 1 * 0.11098311564161133,
+					// digital representation of
+					'P6243' => 1.1 * 0.11098311564161133,
+				],
+				'descriptions.$language' => 0.019320230186222098,
+				'descriptions.$language.plain' => 0,
+				'title' => 0.0702949038300864,
+				'title.plain' => 0,
+				'category' => 0.05158078808882278,
+				'category.plain' => 0,
+				'heading' => 0,
+				'heading.plain' => 0,
+				// Arbitrary small value to preserve ordering if we ONLY have a match in this field
+				'auxiliary_text' => 0.0001,
+				'auxiliary_text.plain' => 0,
+				'file_text' => 0,
+				'file_text.plain' => 0,
+				'redirect.title' => 0.01060150471482338,
+				'redirect.title.plain' => 0,
+				// Arbitrary small value to preserve ordering if we ONLY have a match in this field
+				'text' => 0.0001,
+				'text.plain' => 0,
+				'suggest' => 0,
+			],
+			'decay' => [
+				'descriptions.$language' => 0.9,
+				'descriptions.$language.plain' => 0.9,
+				// below is not actually a field
+				'synonyms' => 0.5,
+			],
+			'logisticRegressionIntercept' => -1.1975600089068401,
+			'entitiesVariableBoost' => true,
+			'normalizeFulltextScores' => true,
+			'normalizeMultiClauseScores' => true,
+			'applyLogisticFunction' => true,
+			'useSynonyms' => true,
+			'hasLtrPlugin' => true,
+		],
+		'mediasearch_weighted_tags' => [
+			'boost' => [
+				'statement' => [
+					// depicts
+					'P180' => 1 * 0.07820204273071839,
+					// digital representation of
+					'P6243' => 1.1 * 0.07820204273071839,
+				],
+				'weighted_tags' => [
+					// NOTE the 1000 * is because we haven't stored a score for this field in the
+					// experimental search index, so it defaults to 1 which is transformed to
+					// 0.001 by cirrussearch code
+					// When we recreate the index on production we'll probably store a score of
+					// 1000 for this field, and can remove the 1000 * here
+					'image.linked.from.wikidata.p18/' => 1000 * 1.5653542537287244,
+					'image.linked.from.wikidata.p373/' => 4.0424359988709435,
+					'image.linked.from.wikidata.sitelink/' => 4.26335835247543,
+				],
+				'descriptions.$language' => 0.0392515093914008,
+				'descriptions.$language.plain' => 0,
+				'title' => 0.04487718624539365,
+				'title.plain' => 0,
+				'category' => 0.04321595766352061,
+				'category.plain' => 0,
+				'heading' => 0,
+				'heading.plain' => 0,
+				// Arbitrary small value to preserve ordering if we ONLY have a match in this field
+				'auxiliary_text' => 0.0001,
+				'auxiliary_text.plain' => 0,
+				'file_text' => 0,
+				'file_text.plain' => 0,
+				'redirect.title' => 0.01997210246565096,
+				'redirect.title.plain' => 0,
+				// Arbitrary small value to preserve ordering if we ONLY have a match in this field
+				'text' => 0.0001,
+				'text.plain' => 0,
+				'suggest' => 0.03278522607586197,
+			],
+			'decay' => [
+				'descriptions.$language' => 0.9,
+				'descriptions.$language.plain' => 0.9,
+				// below is not actually a field
+				'synonyms' => 0,
+			],
+			'logisticRegressionIntercept' => -1.4925851105992378,
+			'entitiesVariableBoost' => true,
+			'normalizeFulltextScores' => true,
+			'normalizeMultiClauseScores' => true,
+			'applyLogisticFunction' => true,
+			'useSynonyms' => false,
+			'hasLtrPlugin' => true,
+			'titleMatchBaseUri' => 'https://%s.wikipedia.org/w/api.php',
+		],
+	],
+],
+
 'wgMediaInfoMediaSearchDefaultForAnon' => [
 	// NOTE: keep in sync with wgMediaSearchDefaultForAnon (until
 	// this is removed)
