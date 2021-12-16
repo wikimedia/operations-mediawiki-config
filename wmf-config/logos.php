@@ -30,7 +30,7 @@ return [
 	'wikivoyage' => '/static/images/project-logos/wikivoyage.png', // T55653
 
 	// Wikipedia
-	'abwiki' => '/static/images/project-logos/abwiki.png', // T48589
+	'abwiki' => '/static/images/project-logos/abwiki.png', // T48589, T297810
 	'acewiki' => '/static/images/project-logos/acewiki.png',
 	'adywiki' => '/static/images/project-logos/adywiki.png', // T125501
 	'afwiki' => '/static/images/project-logos/afwiki.png',
@@ -833,7 +833,7 @@ return [
 	// Projects
 
 	// Wikipedia
-	'abwiki' => '/static/images/project-logos/abwiki-1.5x.png', // T150618
+	'abwiki' => '/static/images/project-logos/abwiki-1.5x.png', // T150618, T297810
 	'acewiki' => '/static/images/project-logos/acewiki-1.5x.png', // T150618
 	'adywiki' => '/static/images/project-logos/adywiki-1.5x.png', // T150618
 	'afwiki' => '/static/images/project-logos/afwiki-1.5x.png', // T150618
@@ -1410,7 +1410,7 @@ return [
 	// Projects
 
 	// Wikipedia
-	'abwiki' => '/static/images/project-logos/abwiki-2x.png', // T150618
+	'abwiki' => '/static/images/project-logos/abwiki-2x.png', // T150618, T297810
 	'acewiki' => '/static/images/project-logos/acewiki-2x.png', // T150618
 	'adywiki' => '/static/images/project-logos/adywiki-2x.png', // T150618
 	'afwiki' => '/static/images/project-logos/afwiki-2x.png', // T150618
