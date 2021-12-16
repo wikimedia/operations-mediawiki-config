@@ -20248,6 +20248,12 @@ function wmfGetVariantSettings() {
 	'testwiki' => [ 'ar', 'az', 'ba', 'bn', 'ca', 'cs', 'es', 'fa', 'fr', 'ha', 'he', 'ht', 'id', 'ig', 'is', 'jv', 'ki', 'ko', 'ku', 'lu', 'ml', 'mn', 'mr', 'ms', 'oc', 'pt', 'ru', 'sq', 'ta', 'te', 'th', 'tl', 'tr', 'uk', 'ur', 'vi', 'yo', 'zh', 'zu' ],
 ],
 
+'wgContentTranslationContentImportForSectionTranslation' => [
+	'default' => false,
+	'testwiki' => true, // T294642
+	'wikipedia' => false,
+],
+
 'wmgUseExternalGuidance' => [
 	'default' => false,
 	'wikipedia' => true,
