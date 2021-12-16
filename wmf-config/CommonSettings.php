@@ -337,6 +337,11 @@ if ( isset( $wmgProfiler ) ) {
 
 # Disallow web request DB transactions slower than this
 $wgMaxUserDBWriteDuration = 3;
+
+// Gradual roll out
+if ( mt_rand( 0, 100 ) < 33 ) {
+	$wgMaxExecutionTimeForExpensiveQueries = 30000;
+}
 # Activate read-only mode for bots when lag is getting high.
 # This should be lower than 'max lag' in the LBFactory conf.
 $wgAPIMaxLagThreshold = 3;
