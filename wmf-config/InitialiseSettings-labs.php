@@ -407,6 +407,10 @@ function wmfGetLabsOverrideSettings() {
 			'default' => 10,
 		],
 
+		'wgMaxExecutionTimeForExpensiveQueries' => [
+			'default' => 30000,
+		],
+
 		# FIXME: make that settings to be applied
 		'-wgShowExceptionDetails' => [
 			'default' => true,
