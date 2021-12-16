@@ -8817,6 +8817,13 @@ function wmfGetVariantSettings() {
 	'default' => [],
 ],
 
+'wgGroupInheritsPermissions' => [
+	'default' => [
+		// Confirmed can do anything autoconfirmed can.
+		'confirmed' => 'autoconfirmed',
+	],
+],
+
 # groupOverrides @{
 'groupOverrides' => [
 	// Note: don't change the default setting here, because it won't take

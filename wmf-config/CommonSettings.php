@@ -4066,16 +4066,7 @@ if ( $wmgUseRC2UDP ) {
 	}
 }
 
-// Confirmed can do anything autoconfirmed can.
-// T277704, T275334: Extension function would be a more nature place to put this code to,
-// but doing so is not reliable as of 2021-03-18. If you are here to put this into an extension
-// function, see also T213003.
-$wgHooks['MediaWikiServices'][] = static function () {
-	global $wgGroupPermissions;
-
-	$wgGroupPermissions['confirmed'] = $wgGroupPermissions['autoconfirmed'];
-	$wgGroupPermissions['confirmed']['skipcaptcha'] = true;
-};
+$wgGroupPermissions['confirmed']['skipcaptcha'] = true;
 
 $wgDefaultUserOptions['watchlistdays'] = $wmgWatchlistNumberOfDaysShow;
 
