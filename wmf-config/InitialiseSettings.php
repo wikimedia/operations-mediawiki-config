@@ -21457,6 +21457,7 @@ function wmfGetVariantSettings() {
 		'mediawiki.reading_depth',
 		'mediawiki.web_ab_test_enrollment',
 		'mediawiki.web_ui_scroll',
+		'mediawiki.welcomesurvey.interaction',
 		'test.instrumentation',
 		'test.instrumentation.sampled',
 		'wd_propertysuggester.client_side_property_request',
