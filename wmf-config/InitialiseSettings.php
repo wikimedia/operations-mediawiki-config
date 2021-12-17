@@ -1016,9 +1016,9 @@ function wmfGetVariantSettings() {
 
 	// Wikibooks
 	'viwikibooks' => [ // T290091
-		'src' => '/static/images/mobile/copyright/en-wordmark.svg',
-		'width' => 93,
-		'height' => 45,
+		'src' => '/static/images/mobile/copyright/wikibooks-wordmark.svg',
+		'width' => 120,
+		'height' => 15,
 	],
 
 	// Wikinews
@@ -1114,9 +1114,9 @@ function wmfGetVariantSettings() {
 		'height' => 29,
 	],
 	'strategywiki' => [ // T290091
-		'src' => '/static/images/mobile/copyright/en-wordmark.svg',
-		'width' => 93,
-		'height' => 45,
+		'src' => '/static/images/mobile/copyright/strategic-wordmark.svg',
+		'width' => 142,
+		'height' => 28,
 	],
 	'test2wiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-en.svg',
