@@ -4606,10 +4606,6 @@ function wmfGetVariantSettings() {
 		'主題討論' => 101, // T184866
 		'话题' => 2600, // T187546
 		'話題' => 2600, // T187546
-		'模块' => 828, // T165593
-		'模块讨论' => 829, // T165593
-		'模組' => 828, // T165593
-		'模組討論' => 829, // T165593
 		'專題' => 102, // T271612
 		'专题' => 102, // T271612
 		'維基專題' => 102, // T271612
@@ -4637,10 +4633,6 @@ function wmfGetVariantSettings() {
 		'書架' => 112, // T46308
 		'书架' => 112, // T46308
 		'SB' => 112, // T46308, Subject
-		'模块' => 828, // T165593
-		'模块讨论' => 829, // T165593
-		'模組' => 828, // T165593
-		'模組討論' => 829, // T165593
 	],
 	'+zhwikinews' => [
 		'频道' => 100, // T257101
@@ -4662,10 +4654,6 @@ function wmfGetVariantSettings() {
 		'UT' => NS_USER_TALK, // T240428
 		'F' => NS_FILE, // T240428
 		'FT' => NS_FILE_TALK, // T240428
-		'模块' => 828, // T165593
-		'模块讨论' => 829, // T165593
-		'模組' => 828, // T165593
-		'模組討論' => 829, // T165593
 	],
 	'+zhwikisource' => [
 		'CAT' => NS_CATEGORY, // T230548
@@ -4676,10 +4664,6 @@ function wmfGetVariantSettings() {
 		'翻译' => 114, // T66127
 		'翻譯討論' => 115, // T66127
 		'翻译讨论' => 115, // T66127
-		'模块' => 828, // T165593
-		'模块讨论' => 829, // T165593
-		'模組' => 828, // T165593
-		'模組討論' => 829, // T165593
 	],
 	'+zhwikiversity' => [
 		'T' => NS_TEMPLATE, // T202821
@@ -4722,10 +4706,6 @@ function wmfGetVariantSettings() {
 		'帮助' => NS_HELP, // T212919
 		'帮助讨论' => NS_HELP_TALK, // T212919
 		'幫助討論' => NS_HELP_TALK, // T212919
-		'模块' => 828, // T165593
-		'模块讨论' => 829, // T165593
-		'模組' => 828, // T165593
-		'模組討論' => 829, // T165593
 	],
 	'+zhwikivoyage' => [
 		'维基导游' => NS_PROJECT, // T62122
@@ -4738,10 +4718,6 @@ function wmfGetVariantSettings() {
 		'H' => NS_HELP, // T198007
 		'F' => NS_FILE, // T198007
 		'FT' => NS_FILE_TALK, // T198007
-		'模块' => 828, // T165593
-		'模块讨论' => 829, // T165593
-		'模組' => 828, // T165593
-		'模組討論' => 829, // T165593
 	],
 	'+zhwiktionary' => [
 		'附录' => 100, // T257101
@@ -4752,10 +4728,6 @@ function wmfGetVariantSettings() {
 		'韻部' => 106, 	// T241023
 		'韵部讨论' => 107, // T241023
 		'韻部討論' => 107, // T241023
-		'模块' => 828, // T165593
-		'模块讨论' => 829, // T165593
-		'模組' => 828, // T165593
-		'模組討論' => 829, // T165593
 		'CAT' => NS_CATEGORY, // T286101
 		'T' => NS_TEMPLATE, // T286101
 		'重建' => 118, // T286101
@@ -6465,8 +6437,6 @@ function wmfGetVariantSettings() {
 		103 => 'WikiProject_talk',// T271612
 		118 => 'Draft', // T91223
 		119 => 'Draft_talk', // T91223
-		828 => 'Module', // T165593
-		829 => 'Module_talk', // T165593
 	],
 	'zh_classicalwiki' => [
 		100 => '門',
@@ -6859,8 +6829,6 @@ function wmfGetVariantSettings() {
 		109 => 'Transwiki_talk',
 		114 => 'Translation', // T66127
 		115 => 'Translation_talk', // T66127
-		828 => 'Module', // T165593
-		829 => 'Module_talk', // T165593
 	],
 	# @} end of wikisource wikis
 
@@ -7250,8 +7218,6 @@ function wmfGetVariantSettings() {
 		107 => 'Rhymes_talk', // T241023
 		118 => 'Reconstruction', // T286101
 		119 => 'Reconstruction_talk', // T286101
-		828 => 'Module', // T165593
-		829 => 'Module_talk', // T165593
 	],
 	// @} end of Wiktionary
 
@@ -7465,8 +7431,6 @@ function wmfGetVariantSettings() {
 		111 => 'Wikijunior_talk', // T46308
 		112 => 'Subject', // T46308
 		113 => 'Subject_talk', // T46308
-		828 => 'Module', // T165593
-		829 => 'Module_talk', // T165593
 	],
 	// @} end of Wikibooks
 
@@ -7604,8 +7568,6 @@ function wmfGetVariantSettings() {
 	'zhwikinews' => [
 		100 => 'Portal', // T257101
 		101 => 'Portal_talk', // T257101
-		828 => 'Module', // T165593
-		829 => 'Module_talk', // T165593
 	],
 	// @} end of Wikinews
 
@@ -7653,8 +7615,6 @@ function wmfGetVariantSettings() {
 	'zhwikiquote' => [ // T42474
 		100 => 'Transwiki',
 		101 => 'Transwiki_talk',
-		828 => 'Module', // T165593
-		829 => 'Module_talk', // T165593
 	],
 	// @} end of Wikiquote
 
@@ -7767,8 +7727,6 @@ function wmfGetVariantSettings() {
 		107 => 'Experiment_talk', // T212919
 		108 => 'Lesson', // T212919
 		109 => 'Lesson_talk', // T212919
-		828 => 'Module', // T165593
-		829 => 'Module_talk', // T165593
 	],
 	// @} end of Wikiversity
 
@@ -7824,10 +7782,6 @@ function wmfGetVariantSettings() {
 	'ukwikivoyage' => [
 		100 => 'Портал', // Portal
 		101 => 'Обговорення_порталу', // Portal talk
-	],
-	'zhwikivoyage' => [
-		828 => 'Module', // T165593
-		829 => 'Module_talk', // T165593
 	],
 	// @} end of Wikivoyage
 
