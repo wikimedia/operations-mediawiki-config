@@ -7848,56 +7848,40 @@ function wmfGetVariantSettings() {
 
 'wgVectorStickyHeader' => [
 	'default' => [
+		'logged_in' => true,
+		'logged_out' => false,
+	],
+	'commonswiki' => [
 		'logged_in' => false,
 		'logged_out' => false,
 	],
-	'testwiki' => [
-		'logged_in' => true,
-		'logged_out' => false,
-	],
-	'officewiki' => [
-		'logged_in' => true,
+	'wikidatawiki' => [
+		'logged_in' => false,
 		'logged_out' => false,
 	],
 ],
 
 'wgVectorWebABTestEnrollment' => [
-	'testwiki' => [
+	'desktop-improvements' => [
 		'name' => 'vector.sticky_header',
 		'enabled' => true,
 		'buckets' => [
 			'unsampled' => [
-				'samplingRate' => 0.1
+				'samplingRate' => 0
 			],
 			'control' => [
-				'samplingRate' => 0.3
+				'samplingRate' => 0
 			],
 			'stickyHeaderDisabled' => [
-				'samplingRate' => 0.3
+				'samplingRate' => 0.5
 			],
 			'stickyHeaderEnabled' => [
-				'samplingRate' => 0.3
+				'samplingRate' => 0.5
 			],
 		],
 	],
-	'officewiki' => [
-		'name' => 'vector.sticky_header',
-		'enabled' => true,
-		'buckets' => [
-			'unsampled' => [
-				'samplingRate' => 0.1
-			],
-			'control' => [
-				'samplingRate' => 0.3
-			],
-			'stickyHeaderDisabled' => [
-				'samplingRate' => 0.3
-			],
-			'stickyHeaderEnabled' => [
-				'samplingRate' => 0.3
-			],
-		],
-	],
+	'testwiki' => [],
+	'officewiki' => [],
 ],
 
 'wgVectorLanguageInHeader' => [
