@@ -21103,6 +21103,10 @@ function wmfGetVariantSettings() {
 			'schema_title' => 'analytics/mobile_apps/android_daily_stats',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		'android.customize_toolbar_interaction' => [
+			'schema_title' => 'analytics/mobile_apps/android_customize_toolbar_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		'mediawiki.mediasearch_interaction' => [
 			'schema_title' => 'analytics/mediawiki/mediasearch_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
