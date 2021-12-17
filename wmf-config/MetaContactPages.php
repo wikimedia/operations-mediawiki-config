@@ -11,6 +11,10 @@ $wgHooks['ContactForm'][] = static function (
 	if ( $par === 'affcomusergroup' ) {
 		$subject = "User group request: {$data['GroupName']}";
 	}
+
+	if ( $par === 'affcomchapthorg' ) {
+		$subject = "Chapter/Thematic organization request: {$data['GroupName']}";
+	}
 	return true;
 };
 
@@ -69,6 +73,121 @@ $wgContactConfig['affcomusergroup'] = [
 		'Terms' => [
 			'label-message' => 'contactpage-affcom-user-group-terms-label',
 			'contactpage-email-label' => 'Terms',
+			'type' => 'check',
+			'required' => true,
+			'validation-callback' => static function ( $value ) {
+				return (bool)$value;
+			}
+		]
+	]
+];
+
+/**
+ * Configuration for [[:meta:Special:Contact/affcomchapthorg]]
+ *
+ * @see T298024
+ */
+$wgContactConfig['affcomchapthorg'] = [
+	'RecipientUser' => 'Chapthorgs',
+	'SenderName' => 'Contact Form on ' . $wgSitename,
+	'SenderEmail' => null,
+	'RequireDetails' => true,
+	'IncludeIP' => false,
+	'MustBeLoggedIn' => true,
+	'RLStyleModules' => [
+		'ext.wikimediamessages.contactpage.affcomchapthorg'
+	],
+	'AdditionalFields' => [
+		'ApplicationType' => [
+			'label-message' => 'contactpage-affcom-chapter-thorg-application-type-label',
+			'type' => 'select',
+			'options-messages' => [
+				'contactpage-affcom-chapter-thorg-application-chapter-status' => 'Application for Chapter status',
+				'contactpage-affcom-chapter-thorg-application-thorg-status' => 'Application for Thematic Organization status'
+			]
+		],
+		'GroupName' => [
+			'label-message' => 'contactpage-affcom-chapter-thorg-group-name-label',
+			'type' => 'text',
+			'required' => true
+		],
+		'OrgBylaws' => [
+			'label-message' => 'contactpage-affcom-chapter-thorg-bylaws-label',
+			'type' => 'text'
+		],
+		'SelfAssessmentChecklist' => [
+			'label-message' => 'contactpage-affcom-chapter-thorg-self-assessment-checklist-label',
+			'type' => 'info'
+		],
+		'LegalStatus' => [
+			'label-message' => 'contactpage-affcom-chapter-thorg-legal-status-label',
+			'type' => 'check',
+			'validation-callback' => static function ( $value ) {
+				return (bool)$value;
+			}
+		],
+		'GroupMission' => [
+			'label-message' => 'contactpage-affcom-chapter-thorg-group-mission-label',
+			'type' => 'check',
+			'validation-callback' => static function ( $value ) {
+				return (bool)$value;
+			}
+		],
+		'Inclusivity' => [
+			'label-message' => 'contactpage-affcom-chapter-thorg-inclusivity-label',
+			'type' => 'check',
+			'validation-callback' => static function ( $value ) {
+				return (bool)$value;
+			}
+		],
+		'StructureMemberRights' => [
+			'label-message' => 'contactpage-affcom-chapter-thorg-structure-member-rights-label',
+			'type' => 'check',
+			'validation-callback' => static function ( $value ) {
+				return (bool)$value;
+			}
+		],
+		'BoardStructure' => [
+			'label-message' => 'contactpage-affcom-chapter-thorg-board-structure-label',
+			'type' => 'check',
+			'validation-callback' => static function ( $value ) {
+				return (bool)$value;
+			}
+		],
+		'MeetingTerms' => [
+			'label-message' => 'contactpage-affcom-chapter-thorg-meeting-terms-label',
+			'type' => 'check',
+			'validation-callback' => static function ( $value ) {
+				return (bool)$value;
+			}
+		],
+		'Elections' => [
+			'label-message' => 'contactpage-affcom-chapter-thorg-elections-label',
+			'type' => 'check',
+			'validation-callback' => static function ( $value ) {
+				return (bool)$value;
+			}
+		],
+		'Representation' => [
+			'label-message' => 'contactpage-affcom-chapter-thorg-representation-label',
+			'type' => 'check',
+			'validation-callback' => static function ( $value ) {
+				return (bool)$value;
+			}
+		],
+		'CodeOfConduct' => [
+			'label-message' => 'contactpage-affcom-chapter-thorg-coc-label',
+			'type' => 'check',
+			'validation-callback' => static function ( $value ) {
+				return (bool)$value;
+			}
+		],
+		'Rules' => [
+			'label-message' => 'contactpage-affcom-chapter-thorg-rules-label',
+			'type' => 'info'
+		],
+		'Terms' => [
+			'label-message' => 'contactpage-affcom-chapter-thorg-terms-label',
 			'type' => 'check',
 			'required' => true,
 			'validation-callback' => static function ( $value ) {
