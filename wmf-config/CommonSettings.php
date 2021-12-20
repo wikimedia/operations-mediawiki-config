@@ -1086,7 +1086,7 @@ if ( $wmgUseTimeline ) {
 $wgCopyUploadProxy = ( $wmfRealm !== 'labs' ) ? $wmfLocalServices['urldownloader'] : false;
 $wgUploadThumbnailRenderHttpCustomHost = $wmgHostnames['upload'];
 $wgUploadThumbnailRenderHttpCustomDomain = $wmfLocalServices['upload'];
-if ( $wmgUseLocalHTTPProxy ) {
+if ( $wmgUseLocalHTTPProxy || $wmfUsingKubernetes ) {
 	$wgLocalHTTPProxy = $wmfLocalServices['mwapi'] ?? false;
 }
 
