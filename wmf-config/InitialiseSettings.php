@@ -20452,7 +20452,6 @@ return [
 	// Keep in sync with wgDiscussionTools_sourcemodetoolbar below
 	// T288485
 	'default' => 'available',
-	'fiwiki' => 'default',
 ],
 
 'wgDiscussionTools_newtopictool' => [
@@ -20468,7 +20467,6 @@ return [
 	// or 'wgDiscussionTools_newtopictool' is 'available'. Otherwise it will cause the reply tool
 	// to be always loaded, even when it's not supposed to be available.
 	'default' => 'available',
-	'fiwiki' => 'default',
 ],
 
 'wgDiscussionTools_topicsubscription' => [
