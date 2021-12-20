@@ -215,7 +215,13 @@ function wmfLoadInitialiseSettings( $conf ) {
 
 $wgLocalDatabases = $wgConf->getLocalDatabases();
 
-// Do not add wikimedia.org, because of other sites under that domain (such as codereview-proxy.wikimedia.org)
+// Do not add wikimedia.org, because of other non-MediaWiki sites under that domain
+// Do not add wikidata.org, because of query.wikidata.org
+// If a non-MediaWiki site gets into this list, MediaWiki will not be able to
+// make HTTP requests to it.
+// At a minimum, all SUL-linked wikis must be included here for cross-wiki HTTP
+// requests to work (GlobalUserPage, cross-wiki notifications, etc.).
+// TODO: add remaining MediaWiki sites
 $wgLocalVirtualHosts = [
 	'wikipedia.org',
 	'wiktionary.org',
@@ -226,10 +232,39 @@ $wgLocalVirtualHosts = [
 	'wikisource.org',
 	'wikiversity.org',
 	'wikivoyage.org',
-	'www.wikidata.org',
-	'meta.wikimedia.org', // Presumably needed to load meta spam list. Any others?
-	'commons.wikimedia.org',
 	'www.mediawiki.org',
+	'www.wikidata.org',
+	'test.wikidata.org',
+	'api.wikimedia.org',
+	'ar.wikimedia.org',
+	'bd.wikimedia.org',
+	'be.wikimedia.org',
+	'br.wikimedia.org',
+	'ca.wikimedia.org',
+	'co.wikimedia.org',
+	'commons.wikimedia.org',
+	'dk.wikimedia.org',
+	'ee.wikimedia.org',
+	'fi.wikimedia.org',
+	'foundation.wikimedia.org',
+	'incubator.wikimedia.org',
+	'login.wikimedia.org',
+	'meta.wikimedia.org',
+	'mk.wikimedia.org',
+	'mx.wikimedia.org',
+	'nl.wikimedia.org',
+	'no.wikimedia.org',
+	'nyc.wikimedia.org',
+	'outreach.wikimedia.org',
+	'pl.wikimedia.org',
+	'pt.wikimedia.org',
+	'ru.wikimedia.org',
+	'se.wikimedia.org',
+	'species.wikimedia.org',
+	'test-commons.wikimedia.org',
+	'tr.wikimedia.org',
+	'ua.wikimedia.org',
+	'wikimania.wikimedia.org',
 ];
 
 # Is this database listed in dblist?
