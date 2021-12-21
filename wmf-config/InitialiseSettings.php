@@ -26103,6 +26103,7 @@ function wmfGetVariantSettings() {
 	'pntwiki' => true,
 	'pswiki' => true,
 	'ptwiki' => true,
+	'pwnwiki' => true,
 	'quwiki' => true,
 	'rmwiki' => true,
 	'rmywiki' => true,
@@ -26205,6 +26206,7 @@ function wmfGetVariantSettings() {
 
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
+	'pwnwiki' => false,
 ],
 
 'wgWelcomeSurveyEnabled' => [
