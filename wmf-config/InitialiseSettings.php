@@ -5446,6 +5446,7 @@ function wmfGetVariantSettings() {
 		'session-ip' => [ 'udp2log' => false, 'logstash' => 'info' ],
 		'SimpleAntiSpam' => 'debug',
 		'slow-parse' => 'debug',
+		'slow-parsoid' => 'info',
 		'SpamBlacklistHit' => 'debug',
 		'SpamRegex' => 'debug',
 		'SQLBagOStuff' => 'debug',
@@ -5477,6 +5478,7 @@ function wmfGetVariantSettings() {
 
 	'+private' => [
 		'slow-parse' => false,  // Don't log slow parse on private wikis, so we can make the slow parse log public.
+		'slow-parsoid' => false,  // Don't log slow parse on private wikis, so we can make the slow parse log public.
 	],
 	'+group1' => [
 		'authorization' => [ 'udp2log' => 'info', 'logstash' => false ],

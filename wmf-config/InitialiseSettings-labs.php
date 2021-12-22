@@ -306,6 +306,7 @@ function wmfGetLabsOverrideSettings() {
 				'session-ip' => [ 'udp2log' => false, 'logstash' => 'info' ],
 				'SimpleAntiSpam' => 'debug',
 				'slow-parse' => 'debug',
+				'slow-parsoid' => 'info',
 				'SpamBlacklistHit' => 'debug',
 				'SpamRegex' => 'debug',
 				'SQLBagOStuff' => 'debug',
