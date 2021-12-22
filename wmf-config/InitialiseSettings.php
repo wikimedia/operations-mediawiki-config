@@ -9061,6 +9061,17 @@ function wmfGetVariantSettings() {
 			'suppressredirect' => true, // T296637
 		],
 	],
+	'+bnwiktionary' => [
+		'autopatrolled' => [
+			'autopatrol' => true, // T298187
+		],
+		'patroller' => [
+			'patrol' => true, // T298187
+			'patrolmarks' => true, // T298187
+			'rollback' => true, // T298187
+			'suppressredirect' => true, // T298187
+		],
+	],
 	'+bgwiki' => [
 		'autopatrolled' => [ 'autopatrol' => true, ],
 		'patroller' => [
@@ -11690,6 +11701,9 @@ function wmfGetVariantSettings() {
 	'+bnwikivoyage' => [
 		'sysop' => [ 'autopatrolled', 'patroller' ], // T296637
 	],
+	'+bnwiktionary' => [
+		'sysop' => [ 'autopatrolled', 'patroller' ], // T298187
+	],
 	'+brwikimedia' => [
 		'sysop' => [ 'autopatrolled', 'confirmed', 'translationadmin' ], // T60123, T65345
 	],
@@ -12543,6 +12557,9 @@ function wmfGetVariantSettings() {
 	],
 	'+bnwikivoyage' => [
 		'sysop' => [ 'autopatrolled', 'patroller' ], // T296637
+	],
+	'+bnwiktionary' => [
+		'sysop' => [ 'autopatrolled', 'patroller' ], // T298187
 	],
 	'+brwikimedia' => [
 		'sysop' => [ 'translationadmin', 'autopatrolled', 'confirmed' ], // T7812, T65345
