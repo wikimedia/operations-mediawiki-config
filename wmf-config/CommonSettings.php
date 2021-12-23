@@ -1424,7 +1424,6 @@ if ( $wmgUseGlobalBlocking ) {
 }
 
 wfLoadExtension( 'TrustedXFF' );
-$wgTrustedXffFile = "$wmfConfigDir/trusted-xff.php";
 
 if ( $wmgUseContactPage ) {
 	wfLoadExtension( 'ContactPage' );
