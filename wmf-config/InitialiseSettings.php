@@ -1053,7 +1053,7 @@ function wmfGetVariantSettings() {
 	],
 
 	// Wikivoyage
-	'bnwikivoyage' => [ // T196680
+	'bnwikivoyage' => [ // T196680, T298033
 		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-bn.svg',
 		'width' => 113,
 		'height' => 29,
