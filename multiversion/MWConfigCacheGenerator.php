@@ -273,6 +273,61 @@ class MWConfigCacheGenerator {
 	private $staticConfigs = [];
 
 	/**
+	 * @param string $dbname
+	 * @param \SiteConfiguration $wgConf
+	 * @param string $realm
+	 * @param string $cacheDir
+	 * @return array
+	 */
+	public static function getConfigGlobals(
+		string $dbname,
+		\SiteConfiguration $wgConf,
+		string $realm,
+		string $cacheDir
+	): array {
+		global $IP;
+
+		// Try configuration cache
+		$confCacheFileName = "conf2-$dbname.json";
+		$confActualMtime = max(
+			filemtime( dirname( __DIR__ ) . '/wmf-config/InitialiseSettings.php' ),
+			filemtime( dirname( __DIR__ ) . '/wmf-config/logos.php' ),
+			filemtime( "$IP/includes/Defines.php" )
+		);
+		$globals = self::readFromStaticCache(
+			$cacheDir . '/' . $confCacheFileName,
+			$confActualMtime
+		);
+
+		if ( !$globals ) {
+			// Populate SiteConfiguration object
+			wmfLoadInitialiseSettings( $wgConf );
+
+			list( $site, $lang ) = $wgConf->siteFromDB( $dbname );
+			$globals = self::getMWConfigForCacheing(
+				$dbname,
+				$site,
+				$lang,
+				$wgConf,
+				$realm
+			);
+
+			$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals ];
+
+			// Save cache if the grace period expired. We define the grace period as the opcache
+			// revalidation frequency + 1, in order to ensure we don't incur in race conditions
+			// when saving the values. See T236104
+			$minTime = $confActualMtime + intval( ini_get( 'opcache.revalidate_freq' ) );
+			if ( time() > $minTime ) {
+				self::writeToStaticCache(
+					$cacheDir, $confCacheFileName, $confCacheObject
+				);
+			}
+		}
+		return $globals;
+	}
+
+	/**
 	 * Read a static cached MultiVersion object from disc
 	 *
 	 * @param string $confCacheFile The full filepath for the wiki's cached config object

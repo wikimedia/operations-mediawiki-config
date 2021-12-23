@@ -279,44 +279,17 @@ if ( array_search( $wgDBname, $wgLocalDatabases ) === false ) {
 	exit;
 }
 
-# Determine domain and language and the directories for this instance
-list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
-
-# Try configuration cache
-$confCacheFileName = "conf2-$wgDBname.json";
-$confActualMtime = max(
-	filemtime( __DIR__ . '/InitialiseSettings.php' ),
-	filemtime( __DIR__ . '/logos.php' ),
-	filemtime( "$IP/includes/Defines.php" )
+$globals = Wikimedia\MWConfig\MWConfigCacheGenerator::getConfigGlobals(
+	$wgDBname,
+	$wgConf,
+	$wmgRealm,
+	$wgCacheDirectory
 );
-$globals = Wikimedia\MWConfig\MWConfigCacheGenerator::readFromStaticCache(
-	$wgCacheDirectory . '/' . $confCacheFileName, $confActualMtime
-);
-
-if ( !$globals ) {
-	# Get configuration from SiteConfiguration object
-	wmfLoadInitialiseSettings( $wgConf );
-
-	$globals = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
-		$wgDBname, $site, $lang, $wgConf, $wmgRealm
-	);
-
-	$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals ];
-
-	# Save cache if the grace period expired.
-	# We define the grace period as the opcache revalidation frequency + 1
-	# in order to ensure we don't incur in race conditions when saving the values.
-	# See T236104
-	$minTime = $confActualMtime + intval( ini_get( 'opcache.revalidate_freq' ) );
-	if ( time() > $minTime ) {
-		Wikimedia\MWConfig\MWConfigCacheGenerator::writeToStaticCache(
-			$wgCacheDirectory, $confCacheFileName, $confCacheObject
-		);
-	}
-}
-unset( $confCacheFileName, $confActualMtime, $confCacheObject );
 
 extract( $globals );
+
+# Determine legacy site/lang pair for the current wiki
+list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 
 # -------------------------------------------------------------------------
 # Settings common to all wikis
