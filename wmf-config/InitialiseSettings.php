@@ -13650,6 +13650,7 @@ function wmfGetVariantSettings() {
 	'thwikisource' => [ 'oldwikisouce', 'b', 'q', 'w', 'wikt' ], // T275281
 	'tnwiki' => [ 'en' ], // T53327
 	'tpiwiki' => [ 'en', 'simple', 'wikt:en', 'commons' ], // T26769
+	'twwiki' => [ 'ak', 'en', 'ar', 'es', 'fr', 'ru', 'zh', 'de', 'id', 'commons', 'meta', 'incubator' ], // T298296
 	'urwiki' => [ 'ar', 'en', 'fa', 'fr', 'he' ], // T212612
 	'vecwiki' => [ 'it' ], // T21639
 	'vecwiktionary' => [ 'w', 'en', 'fr', 'it' ], // T51575
