@@ -21684,35 +21684,33 @@ function wmfGetVariantSettings() {
 	// Some languages aren't currently supported by MediaWiki
 	// but available to encode information on Wikidata.
 	// This is (temporarily) needed due to T264295.
+	//
+	// Once a language is added to Names.php and this change
+	// is deployed, it can be removed from this section.
+	//
 	// Note: If the language is only supposed to be used with
 	// Monolingual text statements, it should rather be added to:
 	// Wikibase\Lib\WikibaseContentLanguages::getDefaultMonolingualTextLanguages
 	'wikidata' => [
 		'agq' => 'Aghem', // T288335
 		'fkv' => 'kvääni', // T167259
-		'kea' => 'kabuverdianu', // T127435
 		'mcn' => 'vùn màsànà', // T293884
-		'nod' => 'ᨣᩴᩤᨾᩮᩥᩬᨦ', // T93880
 		'ota' => 'لسان عثمانى', // T59342
 		'rmf' => 'kaalengo tšimb', // T226701
 		'rwr' => 'मारवाड़ी', // T61905
 		'sju' => 'ubmejesámiengiälla', // T226701
 		'smj' => 'julevsámegiella', // T146707
-		'sms' => 'nuõrttsääʹmǩiõll', // T220118, T223544
 		'srq' => 'mbia cheë', // T113408
 	],
 	'commonswiki' => [
 		'agq' => 'Aghem', // T288335
 		'fkv' => 'kvääni', // T167259
-		'kea' => 'kabuverdianu', // T230480
 		'mcn' => 'vùn màsànà', // T293884
-		'nod' => 'ᨣᩴᩤᨾᩮᩥᩬᨦ', // T230480
 		'ota' => 'لسان عثمانى', // T230480
 		'rmf' => 'kaalengo tšimb', // T226701
 		'rwr' => 'मारवाड़ी', // T230480
 		'sju' => 'ubmejesámiengiälla', // T226701
 		'smj' => 'julevsámegiella', // T230480
-		'sms' => 'sääʹmǩiõll', // T222309
 		'srq' => 'mbia cheë', // T230480
 	],
 ],
