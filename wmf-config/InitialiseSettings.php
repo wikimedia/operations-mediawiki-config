@@ -19740,7 +19740,6 @@ function wmfGetVariantSettings() {
 	// Keep in sync with wgDiscussionTools_sourcemodetoolbar below
 	// T288485
 	'default' => 'available',
-	'metawiki' => 'default',
 	'specieswiki' => 'default',
 	'enwiki' => 'default',
 	'fiwiki' => 'default',
@@ -19760,7 +19759,6 @@ function wmfGetVariantSettings() {
 	// or 'wgDiscussionTools_newtopictool' is 'available'. Otherwise it will cause the reply tool
 	// to be always loaded, even when it's not supposed to be available.
 	'default' => 'available',
-	'metawiki' => 'default',
 	'specieswiki' => 'default',
 	'enwiki' => 'default',
 	'fiwiki' => 'default',
