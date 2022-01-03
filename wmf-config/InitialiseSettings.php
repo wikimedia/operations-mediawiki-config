@@ -7739,8 +7739,7 @@ function wmfGetVariantSettings() {
 		100 => 'Portale',
 		101 => 'Discussioni_portale',
 		// 102 and 103 (Elezione) deleted per T47636
-		104 => 'Tematica',
-		105 => 'Discussioni_tematica',
+		// 104 and 105 (Tematica) deleted per T298315
 		// 106 and 107 (Notizie) deleted per T47636
 	],
 	'jawikivoyage' => [
