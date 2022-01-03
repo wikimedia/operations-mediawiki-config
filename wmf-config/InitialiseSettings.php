@@ -15104,6 +15104,10 @@ function wmfGetVariantSettings() {
 	'default' => 12582912, // 12 MB; temporary while I figure out what the deal with those overlarge revisions is --Roan
 ],
 
+'wgMaxExecutionTimeForExpensiveQueries' => [
+	'default' => 30000,
+],
+
 'wmgUseCollection' => [
 	// PDF generation / [[:mw:OCG]] stuff
 	'default' => true,
