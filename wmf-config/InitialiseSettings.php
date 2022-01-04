@@ -23521,9 +23521,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgCirrusSearchClusterOverrides' => [
-	# serve more_like explicitely from codfw in preparation of the switch back to eqiad
-	# so that the traffic is split by type between the two DCs
-	'default' => [ 'more_like' => 'codfw' ],
+	'default' => [],
 ],
 
 'wgCirrusSearchWriteClusters' => [
