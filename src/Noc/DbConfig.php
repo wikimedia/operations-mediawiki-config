@@ -130,8 +130,7 @@ class DbConfig {
 					// and browsers tend to render it nicely.
 					// (json is hard to read by default, jsonfm is slower)
 					$replagUrl = $this->getServer( $db ) . '/w/api.php?format=xml&action=query&meta=siteinfo&siprop=dbrepllag&sishowalldb=1';
-					$ret[] = ' (replag: <a href="' . htmlspecialchars( $replagUrl ) . '">mw-api</a> &bull;';
-					$ret[] = ' <a href="https://dbtree.wikimedia.org/">dbtree</a>)';
+					$ret[] = ' (replag: <a href="' . htmlspecialchars( $replagUrl ) . '">mw-api</a>)';
 				}
 				$ret[] = '<br>';
 			}
