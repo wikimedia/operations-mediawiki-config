@@ -2572,8 +2572,12 @@ Wikinews:
         comment:  T124778
 
     zhwikinews:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        commons: File:Wikinews-logo-zh-hant-source-han-sans-bold-lightshadown.svg
+        comment:  T298550
+        comment_1_5x:  T298550
+        comment_2x:  T298550
+        variants:
+            zhwikinews-hans: Wikinews-logo-zh-hans-source-han-sans-bold-lightshadown.svg
 
 Wikisource:
     arwikisource:
