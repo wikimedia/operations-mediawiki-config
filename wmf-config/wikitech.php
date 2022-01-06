@@ -242,10 +242,11 @@ $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( 
 		return;
 	}
 	try {
+		$username = strtolower( $block->getTargetName() );
 		$status = wmfGerritSetActive(
 			$wmfGerritApiUser,
 			$wmfGerritApiPassword,
-			strtolower( $block->getTargetName() ),
+			$username,
 			'DELETE'
 		);
 
@@ -274,10 +275,11 @@ $wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmf
 		return;
 	}
 	try {
+		$username = strtolower( $block->getTargetName() );
 		$status = wmfGerritSetActive(
 			$wmfGerritApiUser,
 			$wmfGerritApiPassword,
-			strtolower( $block->getTargetName() ),
+			$username,
 			'PUT'
 		);
 
