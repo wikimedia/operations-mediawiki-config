@@ -15890,7 +15890,8 @@ function wmfGetVariantSettings() {
 		'americanantiquarian.org', // American antiquarian society - T292918
 		'planet4589.org', // Jonathan's Space Report - T296136
 		'towiki.ru', // city-wiki of Tomsk City - T294190
-		'www.artsobservasjoner.no' // T298449
+		'www.artsobservasjoner.no', // T298449
+		'data.nhm.ac.uk', // Natural History Museum in London - T298451
 	],
 	'+wikisource' => [
 		'archive.org', '*.archive.org',
