@@ -8709,7 +8709,6 @@ function wmfGetVariantSettings() {
 		// Browser tests run by Jenkins on WMCS instances - T167432
 		// Network ranges come from:
 		//   https://wikitech.wikimedia.org/wiki/Portal:Cloud_VPS/Admin/Neutron
-		'10.68.16.0/21',  # Compat networking (eqiad1 legacy)
 		'172.16.0.0/21',  # LAN for instances (eqiad1 Neutron)
 	],
 ],

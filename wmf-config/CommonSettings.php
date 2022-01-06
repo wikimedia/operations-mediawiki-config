@@ -3948,7 +3948,7 @@ $wgSoftBlockRanges = array_merge(
 	[
 		// Ranges that aren't supposed to be publicly routable
 		'0.0.0.0/8', // "This host on this network" (RFC 6890)
-		// 10.0.0.0/8 is handled below, don't add it here.
+		'10.0.0.0/8', // Private
 		'100.64.0.0/10', // "Shared address space" for internal routing (RFC 6598)
 		'127.0.0.0/8', // Loopback
 		'169.254.0.0/16', // Link local
@@ -3978,19 +3978,11 @@ $wgSoftBlockRanges = array_merge(
 	// Addresses used by WMF, people should log in to edit from them directly.
 	$wgCdnServersNoPurge
 );
+
 if ( $wmgAllowLabsAnonEdits ) {
 	// CI makes anonymous edits on some wikis, so don't block Cloud VPS
 	// private addresses when this feature flag is true.
 	$wgSoftBlockRanges = array_merge( $wgSoftBlockRanges, [
-		'10.0.0.0/10',
-		'10.64.0.0/14',
-		// 10.68.0.0/16 is allowed
-		'10.69.0.0/16',
-		'10.70.0.0/15',
-		'10.72.0.0/13',
-		'10.80.0.0/12',
-		'10.96.0.0/11',
-		'10.128.0.0/9',
 		// 172.16.0.0/16 is allowed
 		'172.17.0.0/16',
 		'172.18.0.0/15',
@@ -4000,7 +3992,6 @@ if ( $wmgAllowLabsAnonEdits ) {
 } else {
 	// Cloud VPS users shouldn't be editing anonymously on most wikis, so we
 	// can block anonymous edits from the whole private ranges.
-	$wgSoftBlockRanges[] = '10.0.0.0/8';
 	$wgSoftBlockRanges[] = '172.16.0.0/12';
 	// Cloud VPS VMs with floating/public addresses
 	$wgSoftBlockRanges[] = '185.15.56.0/24';
