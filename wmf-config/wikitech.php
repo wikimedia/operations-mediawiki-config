@@ -103,8 +103,8 @@ $wgHooks['BlockIpComplete'][] = static function ( $block, $performer, $priorBloc
 };
 
 // Make arbitrary Conduit requests to the Wikimedia Phabricator
-function wmfPhabClient( $path, $query ) {
-	$query['__conduit__'] = [ 'token' => $wmfPhabricatorApiToken ];
+function wmfPhabClient( string $apiToken, string $path, $query ) {
+	$query['__conduit__'] = [ 'token' => $apiToken ];
 	$post = [
 		'params' => json_encode( $query ),
 		'output' => 'json',
@@ -143,7 +143,7 @@ $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( 
 
 	try {
 		$username = $block->getTargetName();
-		$resp = wmfPhabClient( 'user.ldapquery', [
+		$resp = wmfPhabClient( $wmfPhabricatorApiToken, 'user.ldapquery', [
 			'ldapnames' => [ $username ],
 			'offset' => 0,
 			'limit' => 1,
@@ -151,7 +151,7 @@ $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( 
 
 		if ( $resp ) {
 			$phid = $resp[0]['phid'];
-			wmfPhabClient( 'user.disable', [
+			wmfPhabClient( $wmfPhabricatorApiToken, 'user.disable', [
 				'phids' => [ $phid ],
 			] );
 		}
@@ -175,7 +175,7 @@ $wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmf
 
 	try {
 		$username = $block->getTargetName();
-		$resp = wmfPhabClient( 'user.ldapquery', [
+		$resp = wmfPhabClient( $wmfPhabricatorApiToken, 'user.ldapquery', [
 			'ldapnames' => [ $username ],
 			'offset' => 0,
 			'limit' => 1,
@@ -183,7 +183,7 @@ $wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmf
 
 		if ( $resp ) {
 			$phid = $resp[0]['phid'];
-			wmfPhabClient( 'user.enable', [
+			wmfPhabClient( $wmfPhabricatorApiToken, 'user.enable', [
 				'phids' => [ $phid ],
 			] );
 		}
@@ -197,10 +197,14 @@ $wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmf
 
 // Changes the Gerrit active status of the specified user using
 // the specified HTTP method (PUT to enable and DELETE to disable)
-function wmfGerritSetActive( string $username, string $httpMethod ) {
+function wmfGerritSetActive(
+	string $gerritUsername,
+	string $gerritPassword,
+	string $username,
+	string $httpMethod
+) {
 	// Disable gerrit user tied to developer account
 	$gerritUrl = 'https://gerrit.wikimedia.org';
-	$username = strtolower( $block->getTargetName() );
 	$ch = curl_init(
 		"{$gerritUrl}/r/a/accounts/" . urlencode( $username ) . '/active'
 	);
@@ -208,7 +212,7 @@ function wmfGerritSetActive( string $username, string $httpMethod ) {
 	curl_setopt( $ch, CURLOPT_CUSTOMREQUEST, $httpMethod );
 	curl_setopt(
 		$ch, CURLOPT_USERPWD,
-		"{$wmfGerritApiUser}:{$wmfGerritApiPassword}"
+		"{$gerritUsername}:{$gerritPassword}"
 	);
 
 	if ( !curl_exec( $ch ) ) {
@@ -238,7 +242,13 @@ $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( 
 		return;
 	}
 	try {
-		$status = wmfGerritSetActive( strtolower( $block->getTargetName() ), 'DELETE' );
+		$status = wmfGerritSetActive(
+			$wmfGerritApiUser,
+			$wmfGerritApiPassword,
+			strtolower( $block->getTargetName() ),
+			'DELETE'
+		);
+
 		if ( $status && $status !== 204 ) {
 			wfDebugLog(
 				'WikitechGerritBan',
@@ -264,7 +274,13 @@ $wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmf
 		return;
 	}
 	try {
-		$status = wmfGerritSetActive( strtolower( $block->getTargetName() ), 'PUT' );
+		$status = wmfGerritSetActive(
+			$wmfGerritApiUser,
+			$wmfGerritApiPassword,
+			strtolower( $block->getTargetName() ),
+			'PUT'
+		);
+
 		if ( $status && $status !== 204 ) {
 			wfDebugLog(
 				'WikitechGerritBan',
