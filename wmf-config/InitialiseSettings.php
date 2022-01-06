@@ -7145,6 +7145,10 @@ function wmfGetVariantSettings() {
 		102 => 'Індекс', // index
 		103 => 'Обговорення_індексу', // index talk
 	],
+	'viwiktionary' => [
+		100 => 'Phụ_lục', // Appendix - T298289
+		101 => 'Thảo_luận_Phụ_lục', // Appendix talk
+	],
 	'wawiktionary' => [
 		100 => 'Rawete', // T185289
 		101 => 'Rawete_copene', // T185289
