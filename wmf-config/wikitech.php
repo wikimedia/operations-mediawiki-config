@@ -130,7 +130,7 @@ function wmfPhabClient( $path, $query ) {
 
 // Attempt to disable related accounts when a developer account is
 // permablocked.
-$wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) {
+$wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( $wmfPhabricatorApiToken ) {
 	if ( !$wmfPhabricatorApiToken
 		|| $block->getType() !== /* Block::TYPE_USER */ 1
 		|| $block->getExpiry() !== 'infinity'
@@ -162,7 +162,7 @@ $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) {
 		);
 	}
 };
-$wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) {
+$wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmfPhabricatorApiToken ) {
 	if ( !$wmfPhabricatorApiToken
 		|| $block->getType() !== /* Block::TYPE_USER */ 1
 		|| $block->getExpiry() !== 'infinity'
