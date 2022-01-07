@@ -4361,16 +4361,6 @@ wfLoadExtension( 'Parsoid', "$parsoidDir/extension.json" );
 unset( $parsoidDir );
 // End of temporary hack for hooking up Parsoid/PHP with MediaWiki
 
-# Temporary, until T112147 is done
-# Assign everything assigned to suppressors to oversighters
-# and delete suppress group.
-$wgExtensionFunctions[] = static function () {
-	global $wgGroupPermissions;
-	if ( isset( $wgGroupPermissions['suppress'] ) ) {
-		$wgGroupPermissions['oversight'] += $wgGroupPermissions['suppress'];
-	}
-};
-
 class ClosedWikiProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvider {
 	/**
 	 * @param User $user
