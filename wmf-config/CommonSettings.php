@@ -4368,7 +4368,6 @@ $wgExtensionFunctions[] = static function () {
 	global $wgGroupPermissions;
 	if ( isset( $wgGroupPermissions['suppress'] ) ) {
 		$wgGroupPermissions['oversight'] += $wgGroupPermissions['suppress'];
-		unset( $wgGroupPermissions['suppress'] );
 	}
 };
 
