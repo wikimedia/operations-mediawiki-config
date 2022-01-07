@@ -93,15 +93,6 @@ if ( file_exists( '/etc/mediawiki/WikitechPrivateSettings.php' ) ) {
 # since we aren't using the shared jobqueue, we don't support delays
 $wgCdnReboundPurgeDelay = 0;
 
-// T218654
-$wgHooks['BlockIpComplete'][] = static function ( $block, $performer, $priorBlock ) {
-	global $wgBlockDisablesLogin;
-	if ( $wgBlockDisablesLogin && $block->getTargetUserIdentity() && $block->getExpiry() === 'infinity' && $block->isSitewide() ) {
-		MediaWikiServices::getInstance()->getAuthManager()
-			->revokeAccessForUser( $block->getTargetName() );
-	}
-};
-
 // Make arbitrary Conduit requests to the Wikimedia Phabricator
 function wmfPhabClient( string $apiToken, string $path, $query ) {
 	$query['__conduit__'] = [ 'token' => $apiToken ];
