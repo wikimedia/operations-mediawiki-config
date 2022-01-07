@@ -26697,6 +26697,20 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
+'wgGEMentorDashboardDeploymentMode' => [
+	// wikis only receive stable modules
+	'default' => 'stable',
+
+	// testwiki has all modules
+	'testwiki' => 'alpha',
+
+	// Growth's pilot wikis will have beta-tested modules
+	'arwiki' => 'beta',
+	'bnwiki' => 'beta',
+	'cswiki' => 'beta',
+],
+
+// Deprecated variable. Remove after wmf.17 is everywhere and won't rollback.
 'wgGEMentorDashboardBetaMode' => [
 	// do not enable outside of testwikis
 	'default' => false,
