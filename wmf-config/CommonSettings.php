@@ -3359,10 +3359,12 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	// Some settings specific to wikitech's extensions
 	include "$wmfConfigDir/wikitech.php";
 
-	# wgReadOnly is set by etcdConfig using datacenter-global configs.
-	#  since wikitech and labtestwikitech use their own databases, their
-	#  $wgReadOnly shouldn't be determined by that.
-	$wgReadOnly = null;
+	if ( $wgDBname === 'labtestwiki' ) {
+		// wgReadOnly is set by etcdConfig using datacenter-global configs.
+		// since labtestwikitech uses its own database, $wgReadOnly shouldn't
+		// be determined from etcd.
+		$wgReadOnly = null;
+	}
 }
 
 if ( $wmgUseThanks ) {
