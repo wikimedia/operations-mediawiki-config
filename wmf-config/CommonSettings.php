@@ -35,6 +35,7 @@
 #
 
 use MediaWiki\Auth\AuthenticationResponse;
+use MediaWiki\Extension\CentralAuth\User\CentralAuthUser;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\User\UserIdentity;
