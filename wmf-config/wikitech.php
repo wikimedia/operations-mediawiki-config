@@ -19,7 +19,7 @@ $wgAuthManagerAutoConfig['primaryauth'] += [
 $wgLDAPDomainNames = [ 'labs' ];
 switch ( $wgDBname ) {
 case 'labswiki':
-	$wgLDAPServerNames = [ 'labs' => 'ldap-labs.eqiad.wikimedia.org' ];
+	$wgLDAPServerNames = [ 'labs' => "ldap-rw.{$wmfDatacenter}.wikimedia.org" ];
 	break;
 case 'labtestwiki':
 	$wgLDAPServerNames = [ 'labs' => 'cloudservices2002-dev.wikimedia.org' ];
