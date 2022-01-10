@@ -759,7 +759,7 @@ function wmfGetLabsOverrideSettings() {
 						'minEdits' => 5
 					],
 					'enabled' => true,
-					'coverage' => 0.2, // T296652
+					'coverage' => 0.5, // T297623
 					'platforms' => [
 						'desktop' => [ 'stable' ],
 						'mobile' => [ 'stable', 'beta' ],
