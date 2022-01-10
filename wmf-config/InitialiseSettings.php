@@ -26674,31 +26674,31 @@ function wmfGetVariantSettings() {
 	'arwiki' => [
 		'control' => [
 			'mobile' => 50,
-			'desktop' => 100,
+			'desktop' => 50,
 		],
 		'imagerecommendation' => [
 			'mobile' => 50,
-			'desktop' => 0
+			'desktop' => 50
 		]
 	],
 	'bnwiki' => [
 		'control' => [
 			'mobile' => 50,
-			'desktop' => 100,
+			'desktop' => 50,
 		],
 		'imagerecommendation' => [
 			'mobile' => 50,
-			'desktop' => 0
+			'desktop' => 50
 		]
 	],
 	'cswiki' => [
 		'control' => [
 			'mobile' => 50,
-			'desktop' => 100,
+			'desktop' => 50,
 		],
 		'imagerecommendation' => [
 			'mobile' => 50,
-			'desktop' => 0
+			'desktop' => 50
 		]
 	]
 ],
