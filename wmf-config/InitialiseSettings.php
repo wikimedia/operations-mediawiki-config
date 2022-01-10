@@ -20324,6 +20324,8 @@ function wmfGetVariantSettings() {
 'wgRelatedArticlesUseCirrusSearch' => [
 	'default' => true,
 	'wikivoyage' => false, // T164391
+	'enwikivoyage' => true, // T297054
+	'itwikivoyage' => true, // T297054
 ],
 
 // T223824
