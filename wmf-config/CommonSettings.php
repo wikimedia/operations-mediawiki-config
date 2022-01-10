@@ -599,6 +599,17 @@ $wgObjectCaches['kask-echoseen'] = [
 	'extendedErrorBodyFields' => [ 'type', 'title', 'detail', 'instance' ],
 	'reportDupes' => false,
 ];
+$wgObjectCaches['db-mainstash'] = [
+	'class' => 'SqlBagOStuff',
+	'cluster' => 'extension2',
+	'dbDomain' => 'mainstash',
+	'globalKeyLbDomain' => 'mainstash',
+	'tableName' => 'objectstash',
+	'multiPrimaryMode' => true,
+	'purgePeriod' => 100,
+	'purgeLimit' => 1000,
+	'reportDupes' => false
+];
 
 session_name( $lang . 'wikiSession' );
 
