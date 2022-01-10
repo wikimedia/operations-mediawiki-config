@@ -496,6 +496,15 @@ function wmfGetLabsOverrideSettings() {
 		],
 
 		//
+		//
+		// Skins
+		//
+		//
+		'wgSkipSkins' => [
+			'default' => [ 'cologneblue', 'contenttranslation', 'modern' ], // T263093, T287616, T223824
+		],
+
+		//
 		// Vector
 		//
 		// Skin versions are strings not numbers. See skins/Vector/skin.json.

@@ -20328,8 +20328,8 @@ function wmfGetVariantSettings() {
 
 // T223824
 'wgSkipSkins' => [
-	'default' => [ 'cologneblue', 'contenttranslation', 'modern' ], // T263093, T287616
-	'apiportalwiki' => [ 'vector', 'monobook', 'modern', 'cologneblue', 'timeless', 'minerva' ],
+	'default' => [ 'cologneblue', 'contenttranslation', 'modern', 'vector-2022' ], // T263093, T287616
+	'apiportalwiki' => [ 'vector', 'vector-2022', 'monobook', 'modern', 'cologneblue', 'timeless', 'minerva' ],
 ],
 
 'wgRelatedArticlesFooterAllowedSkins' => [
