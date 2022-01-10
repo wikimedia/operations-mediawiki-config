@@ -886,10 +886,6 @@ function wmfGetLabsOverrideSettings() {
 			'commonswiki' => 'https://wikidata.beta.wmflabs.org/w/api.php',
 		],
 
-		'wgMediaInfoEnableReferences' => [
-			'commonswiki' => true,
-		],
-
 		// Extension for Special:MediaSearch
 		'wmgUseMediaSearch' => [
 			'commonswiki' => true,

@@ -23085,10 +23085,6 @@ function wmfGetVariantSettings() {
 	'commonswiki' => true,
 ],
 
-'wgMediaInfoEnableReferences' => [
-	'commonswiki' => false,
-],
-
 'wgMediaInfoMediaSearchProfiles' => [
 	'commonswiki' => [
 		'mediasearch_logistic_regression' => [
