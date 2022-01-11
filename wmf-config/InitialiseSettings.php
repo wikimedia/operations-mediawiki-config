@@ -19724,6 +19724,7 @@ function wmfGetVariantSettings() {
 	'viwiki' => true,
 	'fawiki' => true,
 	'fiwiki' => true,
+	'frwiki' => true,
 ],
 
 'wmgUseDiscussionTools' => [
