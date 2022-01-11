@@ -1330,7 +1330,7 @@ function wmfGetLabsOverrideSettings() {
 		'wgGEMentorDashboardEnabled' => [
 			'default' => true,
 		],
-		'wgGEMentorDashboardDeploymentMode' => [
+		'-wgGEMentorDashboardDeploymentMode' => [
 			'default' => 'alpha',
 		],
 		'wgGEMentorDashboardBetaMode' => [
