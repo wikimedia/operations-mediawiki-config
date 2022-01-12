@@ -15409,6 +15409,7 @@ function wmfGetVariantSettings() {
 	'fawiki' => 0,
 	'hiwiki' => 0,
 	'ptwiki' => 0,
+	'ruwikisource' => 0,
 ],
 
 'wgFlaggedRevsAutoReview' => [
