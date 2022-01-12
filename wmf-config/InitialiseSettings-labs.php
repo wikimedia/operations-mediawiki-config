@@ -897,7 +897,7 @@ function wmfGetLabsOverrideSettings() {
 
 		// switch 'audio' and 'video' mediasearch tabs for testing
 		'wgMediaSearchTabOrder'  => [
-			'commonswiki' => [ 'image', 'audio', 'video', 'other', 'page' ]
+			'commonswiki' => [ 'image', 'video', 'audio', 'other', 'page' ]
 		],
 
 		'wgMediaInfoHelpUrls' => [
