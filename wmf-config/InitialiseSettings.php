@@ -19726,16 +19726,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgDisambiguatorNotifications' => [
-	// T293319
-	'default' => false,
-	'group0' => true,
-	'group1' => true,
-	'huwiki' => true,
-	'plwiki' => true,
-	'viwiki' => true,
-	'fawiki' => true,
-	'fiwiki' => true,
-	'frwiki' => true,
+	'default' => true, // T293319
 ],
 
 'wmgUseDiscussionTools' => [
