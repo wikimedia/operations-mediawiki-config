@@ -128,7 +128,7 @@ $services = [
 		],
 
 		'poolcounter' => [
-			'10.64.0.151', # poolcounter1004.eqiad.wmnet
+		// '10.64.0.151', # poolcounter1004.eqiad.wmnet
 			'10.64.32.236', # poolcounter1005.eqiad.wmnet
 		],
 
