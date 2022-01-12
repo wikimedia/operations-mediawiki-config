@@ -895,6 +895,11 @@ function wmfGetLabsOverrideSettings() {
 			'commonswiki' => 'https://wikidata.beta.wmflabs.org/w/api.php',
 		],
 
+		// switch 'audio' and 'video' mediasearch tabs for testing
+		'wgMediaSearchTabOrder'  => [
+			'commonswiki' => [ 'image', 'audio', 'video', 'other', 'page' ]
+		],
+
 		'wgMediaInfoHelpUrls' => [
 			'commonswiki' => [
 				'P245962' => 'https://commons.wikimedia.org/wiki/Special:MyLanguage/Commons:Depicts',
