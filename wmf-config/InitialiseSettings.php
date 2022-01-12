@@ -9652,6 +9652,14 @@ function wmfGetVariantSettings() {
 		], // T87558, T135370, T135725, T176553
 		'sysop' => [ 'extendedconfirmed' => true, ],
 		'extendedconfirmed' => [ 'extendedconfirmed' => true, ], // T140839
+		'extendedmover' => [ // T299038
+			'suppressredirect' => true,
+			'move-subpages' => true,
+			'move' => true,
+			'tboverride' => true,
+			'move-categorypages' => true,
+			'delete-redirect' => true,
+		],
 	],
 	'+fawikibooks' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T111024
@@ -11858,6 +11866,7 @@ function wmfGetVariantSettings() {
 			'patroller', // T118847
 			'extendedconfirmed', // T140839
 			'eliminator', // T162396
+			'extendedmover', // T299038
 		]
 	],
 	'+fawikibooks' => [
@@ -12718,6 +12727,7 @@ function wmfGetVariantSettings() {
 			'confirmed', // T87348
 			'patroller', // T118847
 			'extendedconfirmed', // T140839
+			'extendedmover', // T299038
 		],
 	],
 	'+fawikibooks' => [
