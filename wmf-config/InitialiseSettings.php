@@ -19770,6 +19770,11 @@ function wmfGetVariantSettings() {
 	'default' => false,
 ],
 
+'wgDiscussionToolsReplyIndentation' => [
+	'default' => 'invisible',
+	'ruwiki' => 'bullet', // T259864
+],
+
 'wgDiscussionTools_replytool' => [
 	// Keep in sync with wgDiscussionTools_sourcemodetoolbar below
 	// T288485
