@@ -22184,6 +22184,7 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'bnwiki' => true,
 	'cywiki' => true,
+	'dagwiki' => true, // T298349
 	'eowiki' => true,
 	'etwiki' => true, // T186107
 	'guwiki' => true,
