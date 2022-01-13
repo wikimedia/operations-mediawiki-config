@@ -500,6 +500,9 @@ function wmfGetLabsOverrideSettings() {
 		// Skins
 		//
 		//
+		'wgDefaultSkin' => [
+			'default' => 'vector-2022',
+		],
 		'wgSkipSkins' => [
 			'default' => [ 'cologneblue', 'contenttranslation', 'modern' ], // T263093, T287616, T223824
 		],
@@ -508,15 +511,6 @@ function wmfGetLabsOverrideSettings() {
 		// Vector
 		//
 		// Skin versions are strings not numbers. See skins/Vector/skin.json.
-		'wgVectorDefaultSkinVersion' => [
-			'default' => '2', // Latest Vector
-		],
-		'wgVectorDefaultSkinVersionForExistingAccounts' => [
-			'default' => '2', // Latest Vector
-		],
-		'wgVectorDefaultSkinVersionForNewAccounts' => [
-			'default' => '2', // Latest Vector
-		],
 		'wgVectorLanguageInHeader' => [
 			'default' => [
 				'logged_in' => true,
