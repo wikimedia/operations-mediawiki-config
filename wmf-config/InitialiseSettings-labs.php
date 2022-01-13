@@ -538,6 +538,9 @@ function wmfGetLabsOverrideSettings() {
 		'wgVectorUseWvuiSearch' => [
 			'default' => true
 		],
+		'wgVectorSkinMigrationMode' => [
+			'default' => true
+		],
 
 		'wmgCommonsMetadataForceRecalculate' => [
 			'default' => true,

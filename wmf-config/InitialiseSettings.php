@@ -7845,6 +7845,9 @@ function wmfGetVariantSettings() {
 	// T254227
 	'desktop-improvements' => '2',
 ],
+'wgVectorSkinMigrationMode' => [
+	'default' => false,
+],
 // T258588: Sidebar expanded for anons on modern Vector
 'wgVectorDefaultSidebarVisibleForAnonymousUser' => [
 	'desktop-improvements' => true,
