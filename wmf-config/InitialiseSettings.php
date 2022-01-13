@@ -21491,6 +21491,11 @@ function wmfGetVariantSettings() {
 			'schema_title' => 'rdf_streaming_updater/fetch_failure',
 			'destination_event_service' => 'eventgate-main',
 		],
+		// reconciliation stream produced from a spark job via eventgate
+		'rdf-streaming-updater.reconcile' => [
+			'schema_title' => 'rdf_streaming_updater/reconcile',
+			'destination_event_service' => 'eventgate-main',
+		],
 
 		/*
 		 * == Streams needed for eventgate functionality ==
