@@ -9657,6 +9657,7 @@ function wmfGetVariantSettings() {
 			'autoreviewrestore' => true,
 			'validate' => true,
 			'review' => true,
+			'flow-delete' => true, // T299223
 		], // T87558, T135370, T135725, T176553
 		'sysop' => [ 'extendedconfirmed' => true, ],
 		'extendedconfirmed' => [ 'extendedconfirmed' => true, ], // T140839
