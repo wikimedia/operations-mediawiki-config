@@ -26366,7 +26366,6 @@ function wmfGetVariantSettings() {
 
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
-	'pwnwiki' => false,
 ],
 
 'wgWelcomeSurveyEnabled' => [
