@@ -7870,6 +7870,14 @@ function wmfGetVariantSettings() {
 		'logged_in' => false,
 		'logged_out' => false,
 	],
+	'thwiki' => [ // T298519
+		'logged_in' => false,
+		'logged_out' => false,
+	],
+	'viwiki' => [ // T298519
+		'logged_in' => false,
+		'logged_out' => false,
+	],
 ],
 
 'wgVectorWebABTestEnrollment' => [
@@ -7942,7 +7950,13 @@ function wmfGetVariantSettings() {
 		'logged_out' => true,
 	],
 ],
-
+'wgVectorLanguageAlertInSidebar' => [
+	// T298519 Ensure feature flag for language switching notice in the old location is "on" for pilot wikis:
+	'desktop-improvements' => [
+		'logged_in' => true,
+		'logged_out' => true,
+	],
+],
 'wgVectorUseWvuiSearch' => [
 	'default' => true,
 	'wikidatawiki' => false,

@@ -10,3 +10,4 @@ inheritsFrom:
   - s3
   - securepollglobal
   - wikidataclient
+  - desktop-improvements

@@ -9,3 +9,4 @@ inheritsFrom:
   - private
   - s3
   - securepollglobal
+  - desktop-improvements
