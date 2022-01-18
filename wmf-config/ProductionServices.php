@@ -41,7 +41,7 @@ $common = [
 	'xenon' => '10.64.32.141', # mwlog1002.eqiad.wmnet
 
 	// Statsd is not active-active.
-	'statsd' => '10.192.0.102', # statsd.eqiad.wmnet, now resolving to graphite2003.codfw.wmnet
+	'statsd' => '10.64.16.149', # statsd.eqiad.wmnet, now resolving to graphite1004.eqiad.wmnet
 
 	// EventLogging is not active-active.
 	'eventlogging' => 'udp://10.64.32.167:8421', # eventlog1001.eqiad.wmnet

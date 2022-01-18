@@ -102,7 +102,7 @@ class WmfConfigServicesTest extends PHPUnit\Framework\TestCase {
 				'expected_realm' => 'production',
 				'expected_dc' => 'eqiad',
 				'expected_dcs' => [ "eqiad", "codfw" ],
-				'expected_statsd' => "10.192.0.102",
+				'expected_statsd' => "10.64.16.149",
 			],
 			'labs' => [
 				'expected_realm' => 'labs',
