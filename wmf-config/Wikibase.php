@@ -331,6 +331,9 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['disabledUsageAspects'] = $wmgWikibaseDisabledUsageAspects;
 	$wgWBClientSettings['entityUsageModifierLimits'] = [ 'D' => 10, 'L' => 10, 'C' => 33 ];
+	if ( isset( $wmgEntityUsageModifierLimitsStatement ) ) {
+		$wgWBClientSettings['entityUsageModifierLimits']['C'] = $wmgEntityUsageModifierLimitsStatement;
+	}
 
 	// T208763
 	if ( isset( $wmgWikibaseClientPageSchemaNamespaces ) ) {

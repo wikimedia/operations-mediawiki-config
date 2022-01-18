@@ -23181,6 +23181,11 @@ return [
 	'cebwiki' => [ 'C' => 'O' ],
 ],
 
+'wmgEntityUsageModifierLimitsStatement' => [
+	'default' => null,
+	'cebwiki' => 10,
+],
+
 'wmgUseWikibaseWikidataOrg' => [
 	'default' => false,
 	'wikidata' => true,
