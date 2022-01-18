@@ -13875,6 +13875,8 @@ function wmfGetVariantSettings() {
 		829 => 'noindex,follow',
 	],
 	'fawiki' => [
+		NS_USER => 'noindex,nofollow', // T299363
+		NS_USER_TALK => 'noindex,nofollow', // T299363
 		118 => 'noindex,nofollow', // draft, T92760
 		119 => 'noindex,nofollow', // draft talk, T92760
 	],
