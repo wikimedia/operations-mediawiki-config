@@ -3095,7 +3095,7 @@ function wmfGetVariantSettings() {
 	],
 	'+azwiki' => [
 		'VP' => NS_PROJECT, // T280577
-		'Q' => 118, // T299332
+		'QA' => 118, // T299332
 		'Draft' => 118, // T299332
 		'Draft_talk' => 119, // T299332
 	],
