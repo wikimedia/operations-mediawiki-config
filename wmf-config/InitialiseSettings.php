@@ -23178,7 +23178,6 @@ return [
 	'default' => [],
 	// disabled statement usage tracking wikis
 	'commonswiki' => [ 'C' => 'O' ],
-	'cebwiki' => [ 'C' => 'O' ],
 ],
 
 'wmgEntityUsageModifierLimitsStatement' => [
