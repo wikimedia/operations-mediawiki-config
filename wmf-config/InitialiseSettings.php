@@ -15922,7 +15922,6 @@ function wmfGetVariantSettings() {
 		'towiki.ru', // city-wiki of Tomsk City - T294190
 		'www.artsobservasjoner.no', // T298449
 		'data.nhm.ac.uk', // Natural History Museum in London - T298451
-		'peerj.com', // Journal of Life & Environmental Sciences - T299247
 	],
 	'+wikisource' => [
 		'archive.org', '*.archive.org',
