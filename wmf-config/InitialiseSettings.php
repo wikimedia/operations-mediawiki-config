@@ -5360,7 +5360,6 @@ function wmfGetVariantSettings() {
 		'captcha' => 'debug',
 		'CentralAuth' => 'debug',
 		'CentralAuthRename' => 'debug', // -legoktm 2014-07-14 for T69875
-		'CentralAuthUserMerge' => 'debug',
 		'CentralNotice' => 'debug',
 		'CirrusSearch' => 'debug',
 		'cirrussearch-request' => [ 'udp2log' => false, 'logstash' => false, 'eventbus' => 'debug', 'buffer' => true, ],
