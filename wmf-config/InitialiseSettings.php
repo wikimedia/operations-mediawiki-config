@@ -20383,11 +20383,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wmgUseUserMerge' => [
-	'default' => true,
-	'private' => false,
-	'fishbowl' => false,
-	'nonglobal' => false,
-	'labswiki' => true, // originally enabled for T165795, disabling blocked on T218160
+	'default' => false,
 ],
 
 'wmgUseEventLogging' => [
