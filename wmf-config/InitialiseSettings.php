@@ -3095,6 +3095,9 @@ function wmfGetVariantSettings() {
 	],
 	'+azwiki' => [
 		'VP' => NS_PROJECT, // T280577
+		'Q' => 118, // T299332
+		'Draft' => 118, // T299332
+		'Draft_talk' => 119, // T299332
 	],
 	'+azwikibooks' => [
 		'Wikibooks_müzakirəsi' => NS_PROJECT_TALK, // T33068
@@ -5773,6 +5776,8 @@ function wmfGetVariantSettings() {
 	'azwiki' => [
 		100 => 'Portal',
 		101 => 'Portal_müzakirəsi',
+		118 => 'Qaralama', // Draft - T299332
+		119 => 'Qaralama_müzakirəsi',
 	],
 	'azbwiki' => [
 		100 => 'پوْرتال', // T106305
@@ -13801,6 +13806,10 @@ function wmfGetVariantSettings() {
 ],
 
 'wgNamespaceRobotPolicies' => [
+	'azwiki' => [
+		118 => 'noindex,nofollow', // Draft - T299332
+		119 => 'noindex,nofollow',
+	],
 	'bnwiki' => [
 		NS_USER => 'noindex,follow', // T286152
 		NS_USER_TALK => 'noindex,follow',
@@ -14217,6 +14226,7 @@ function wmfGetVariantSettings() {
 	// __NOINDEX__ and __INDEX__ will be ignored for these namepaces,
 	// as well as for namespaces in $wgContentNamespaces.
 	'default' => [],
+	'azwiki' => [ 118, 119 ], // draft and draft talk - T299332
 	'enwiki' => [ 118, 119 ], // draft and draft talk
 	'hewiki' => [ 118, 119 ], // draft and draft talk - T86329
 	'itwiki' => [ 118, 119 ], // draft and draft talk - T280289
@@ -16870,6 +16880,9 @@ function wmfGetVariantSettings() {
 	],
 
 	// Wikipedias
+	'+azwiki' => [
+		'Qaralama' => true, // Draft - T299332
+	],
 	'+cawiki' => [
 		'Project' => true, // T88896
 		'Portal' => true, // T58000
