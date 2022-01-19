@@ -22278,7 +22278,6 @@ function wmfGetVariantSettings() {
 	// disabled statement usage tracking wikis
 	'commonswiki' => [ 'C' => 'O' ],
 	'cebwiki' => [ 'C' => 'O' ],
-	'warwiki' => [ 'C' => 'O' ],
 	'hywiki' => [ 'C' => 'O' ],
 ],
 
