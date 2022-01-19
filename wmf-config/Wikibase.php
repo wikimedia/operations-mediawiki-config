@@ -225,6 +225,11 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['specialPageTags'] = [ 'wikidata-ui' ];
 		$wgWBRepoSettings['termboxTags'] = [ 'wikidata-ui', 'termbox' ];
 	}
+
+	// Temporary, T297393
+	if ( isset( $wmgWikibaseTmpEnableMulLanguageCode ) ) {
+		$wgWBRepoSettings['tmpEnableMulLanguageCode'] = $wmgWikibaseTmpEnableMulLanguageCode;
+	}
 }
 
 if ( $wmgUseWikibaseClient ) {
@@ -354,6 +359,11 @@ if ( $wmgUseWikibaseClient ) {
 	// Temporary
 	if ( isset( $wmgWikibaseClientUnconnectedPageMigrationStage ) ) {
 		$wgWBClientSettings['tmpUnconnectedPagePagePropMigrationStage'] = $wmgWikibaseClientUnconnectedPageMigrationStage;
+	}
+
+	// Temporary, T297393
+	if ( isset( $wmgWikibaseTmpEnableMulLanguageCode ) ) {
+		$wgWBClientSettings['tmpEnableMulLanguageCode'] = $wmgWikibaseTmpEnableMulLanguageCode;
 	}
 }
 

@@ -28424,6 +28424,11 @@ function wmfGetVariantSettings() {
 	'default' => MIGRATION_WRITE_BOTH,
 ],
 
+'wmgWikibaseTmpEnableMulLanguageCode' => [
+	'default' => null,
+	'wikidataclient-test' => true,
+],
+
 // T123582: enables <link rel="preconnect" href="//upload.wikimedia.org">
 'wgImagePreconnect' => [
 	'default' => true,
