@@ -160,7 +160,6 @@ $IP/extensions/UniversalLanguageSelector/extension.json
 $IP/extensions/UploadsLink/extension.json
 $IP/extensions/UploadWizard/extension.json
 $IP/extensions/UrlShortener/extension.json
-$IP/extensions/UserMerge/extension.json
 $IP/extensions/VipsScaler/extension.json
 $IP/extensions/VisualEditor/extension.json
 $IP/extensions/WebAuthn/extension.json
