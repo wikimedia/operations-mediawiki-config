@@ -3521,12 +3521,6 @@ if ( $wmgUseTwoColConflict ) {
 	$wgTwoColConflictTrackingOversample = true;
 }
 
-if ( $wmgUseUserMerge ) {
-	wfLoadExtension( 'UserMerge' );
-	// Don't let users get deleted outright (T69789)
-	$wgUserMergeEnableDelete = false;
-}
-
 if ( $wmgUseEventLogging ) {
 	wfLoadExtension( 'EventLogging' );
 	wfLoadExtension( 'EventStreamConfig' );
