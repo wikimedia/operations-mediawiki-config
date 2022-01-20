@@ -20415,10 +20415,6 @@ function wmfGetVariantSettings() {
 	'arwiki' => false,
 ],
 
-'wmgUseUserMerge' => [
-	'default' => false,
-],
-
 'wmgUseEventLogging' => [
 	'default' => true,
 ],
