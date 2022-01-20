@@ -7951,8 +7951,16 @@ function wmfGetVariantSettings() {
 	],
 ],
 'wgVectorLanguageAlertInSidebar' => [
-	// T298519 Ensure feature flag for language switching notice in the old location is "on" for pilot wikis:
+	// T298519 Turn feature flag for language alert off for pilot wikis with exceptions.
 	'desktop-improvements' => [
+		'logged_in' => false,
+		'logged_out' => false,
+	],
+	'thwiki' => [
+		'logged_in' => true,
+		'logged_out' => true,
+	],
+	'viwiki' => [
 		'logged_in' => true,
 		'logged_out' => true,
 	],
