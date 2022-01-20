@@ -3149,6 +3149,10 @@ function wmfGetVariantSettings() {
 		'Author' => 102, // T43322
 		'Author_talk' => 103,
 	],
+	'+bgwiki' => [
+		'Draft' => 118, // T299224
+		'Draft_talk' => 119,
+	],
 	'+bgwikisource' => [
 		'Author' => 100,
 		'Author_talk' => 101,
@@ -5813,6 +5817,8 @@ function wmfGetVariantSettings() {
 	'bgwiki' => [
 		100 => 'Портал',
 		101 => 'Портал_беседа',
+		118 => 'Чернова', // T299224 - Draft
+		119 => 'Чернова_беседа',
 	],
 	'bjnwiki' => [
 		100 => 'Lawang', // T259429 Portal
