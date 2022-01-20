@@ -771,6 +771,32 @@ function wmfGetLabsOverrideSettings() {
 					],
 				],
 			],
+			'+fawiki' => [
+				[
+					// T297628
+					'name' => 'internal-gdi-safety-survey',
+					'type' => 'internal',
+					'layout' => 'single-answer',
+					'question' => 'ext-quicksurveys-internal-gdi-safety-survey-question',
+					'privacyPolicy' => 'ext-quicksurveys-internal-gdi-safety-survey-privacy-policy',
+					'answers' => [
+						'ext-quicksurveys-internal-gdi-safety-survey-answer-positive',
+						'ext-quicksurveys-internal-gdi-safety-survey-answer-negative',
+						'ext-quicksurveys-internal-gdi-safety-survey-answer-neutral',
+					],
+					'audience' => [
+						// T296486
+						'minEdits' => 5
+					],
+					'enabled' => true,
+					'coverage' => 0.1, // T296486
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable', 'beta' ],
+					],
+				],
+			],
+
 		],
 		'-wgScorePath' => [
 			'default' => "//upload.wikimedia.beta.wmflabs.org/score",
