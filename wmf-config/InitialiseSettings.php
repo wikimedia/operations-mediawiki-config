@@ -21200,6 +21200,10 @@ function wmfGetVariantSettings() {
 			'schema_title' => 'analytics/mediawiki/talk_page_edit',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		'mwcli.command_execute' => [
+			'schema_title' => 'analytics/mwcli/command_execute',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 
 		/*
 		 * == eventgate-logging-external streams ==
