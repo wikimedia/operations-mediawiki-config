@@ -13847,14 +13847,6 @@ function wmfGetVariantSettings() {
 	'default' => false,
 ],
 
-'wmgAdditionalSoftwareTags' => [
-	'default' => [],
-	'wikipedia' => [
-		'mw-add-media' => true,
-		'mw-remove-media' => true,
-	],
-],
-
 'wgUnwatchedPageThreshold' => [
 	'default' => 30, // Default value of https://toolserver.org/~mzmcbride/watcher/
 ],
