@@ -9623,7 +9623,10 @@ function wmfGetVariantSettings() {
 	],
 	'+fawiki' => [
 		'*' => [ 'createpage' => false ], // T29195
-		'user' => [ 'move-categorypages' => false ], // T67728
+		'user' => [
+			'move-categorypages' => false, // T67728
+			'move-rootuserpages' => false,  // T299847
+		],
 		'bot' => [
 			'move-categorypages' => true, // T67728
 			'extendedconfirmed' => true, // T241904
