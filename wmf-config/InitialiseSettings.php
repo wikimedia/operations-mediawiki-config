@@ -14246,6 +14246,7 @@ function wmfGetVariantSettings() {
 	'default' => [],
 	'azwiki' => [ 118, 119 ], // draft and draft talk - T299332
 	'enwiki' => [ 118, 119 ], // draft and draft talk
+	'fawiki' => [ 118, 119 ], // draft and draft talk - T299850
 	'hewiki' => [ 118, 119 ], // draft and draft talk - T86329
 	'itwiki' => [ 118, 119 ], // draft and draft talk - T280289
 	'kowiki' => [ 118, 119 ], // draft and draft talk - T92798
