@@ -359,7 +359,7 @@ class MWMultiVersion {
 		}
 		$this->versionLoaded = true;
 
-		$dir = dirname( __DIR__ );
+		$dir = MEDIAWIKI_DEPLOYMENT_DIR;
 
 		if ( $wmfRealm === 'production' ) {
 			$phpFilename = $dir . '/wikiversions.php';
