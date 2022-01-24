@@ -7793,6 +7793,8 @@ function wmfGetVariantSettings() {
 	'default' => 'vector',
 	'nostalgiawiki' => 'nostalgia',
 	'apiportalwiki' => 'wikimediaapiportal', // T259661
+	// Desktop improvement wikis:
+	'euwiki' => 'vector-2022',
 ],
 
 //
@@ -7857,6 +7859,8 @@ function wmfGetVariantSettings() {
 ],
 'wgVectorSkinMigrationMode' => [
 	'default' => false,
+	// T299927
+	'euwiki' => true,
 ],
 // T258588: Sidebar expanded for anons on modern Vector
 'wgVectorDefaultSidebarVisibleForAnonymousUser' => [
@@ -20376,6 +20380,8 @@ function wmfGetVariantSettings() {
 // T223824
 'wgSkipSkins' => [
 	'default' => [ 'cologneblue', 'contenttranslation', 'modern', 'vector-2022' ], // T263093, T287616
+	// Show Vector-2022 on euwiki (T299927)
+	'euwiki' => [ 'cologneblue', 'contenttranslation', 'modern' ],
 	'apiportalwiki' => [ 'vector', 'vector-2022', 'monobook', 'modern', 'cologneblue', 'timeless', 'minerva' ],
 ],
 
