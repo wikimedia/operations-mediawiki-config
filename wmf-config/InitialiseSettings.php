@@ -20356,7 +20356,6 @@ function wmfGetVariantSettings() {
 	'wikipedia' => true,
 	'wikivoyage' => true,
 	'eswikinews' => true, // T230660
-	'ptwikinews' => true, // T268945
 	'frwikinews' => true, // T143480
 	'zhwikinews' => true, // T266933
 ],
