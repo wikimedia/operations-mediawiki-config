@@ -15943,6 +15943,7 @@ function wmfGetVariantSettings() {
 		'towiki.ru', // city-wiki of Tomsk City - T294190
 		'www.artsobservasjoner.no', // T298449
 		'*.nhm.ac.uk', // Natural History Museum in London - T298451, T299579
+		'ala-images.s3.ap-southeast-2.amazonaws.com' // Atlas of Living Australia - T299825
 	],
 	'+wikisource' => [
 		'archive.org', '*.archive.org',
