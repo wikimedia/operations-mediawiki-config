@@ -14255,6 +14255,7 @@ function wmfGetVariantSettings() {
 	// as well as for namespaces in $wgContentNamespaces.
 	'default' => [],
 	'azwiki' => [ 118, 119 ], // draft and draft talk - T299332
+	'bgwiki' => [ 118, 119 ], // draft and draft talk - T299224
 	'enwiki' => [ 118, 119 ], // draft and draft talk
 	'fawiki' => [ 118, 119 ], // draft and draft talk - T299850
 	'hewiki' => [ 118, 119 ], // draft and draft talk - T86329
@@ -16910,6 +16911,9 @@ function wmfGetVariantSettings() {
 	// Wikipedias
 	'+azwiki' => [
 		'Qaralama' => true, // Draft - T299332
+	],
+	'+bgwiki' => [
+		'Чернова' => true, // Draft - T299224
 	],
 	'+cawiki' => [
 		'Project' => true, // T88896
