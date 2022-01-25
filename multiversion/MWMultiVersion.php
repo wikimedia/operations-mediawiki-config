@@ -215,6 +215,7 @@ class MWMultiVersion {
 			'be-tarask.wikipedia.org' => 'be_x_old',
 			'ee.wikimedia.org' => 'et',
 			'vrt-wiki.wikimedia.org' => 'otrs_wiki',
+			'ombuds.wikimedia.org' => 'ombudsmen',
 
 			// Labs
 			'api.wikimedia.beta.wmflabs.org' => 'apiportal',
