@@ -7,7 +7,7 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 	protected $variantSettings = [];
 	private $originalWmfDC;
 
-	public function setUp() : void {
+	public function setUp(): void {
 		// This global is set by multiversion/MWRealm.php
 		$this->originalWmfDC = $GLOBALS['wmfDatacenter'];
 		$GLOBALS['wmfDatacenter'] = 'testvalue';
@@ -15,7 +15,7 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 		$this->variantSettings = wmfGetVariantSettings();
 	}
 
-	public function tearDown() : void {
+	public function tearDown(): void {
 		$GLOBALS['wmfDatacenter'] = $this->originalWmfDC;
 	}
 
@@ -35,7 +35,7 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 	public function testVariantUrlsAreLocalhost() {
 		$knownToContainExternalURLs = [
 			// These are user-facing, not in-cluster, and are fine
-			'wgCanonicalServer', 'wgServer', 'wgUploadPath', 'wgRedirectSources', 'wgUploadNavigationUrl', 'wgScorePath', 'wgUploadMissingFileUrl', 'wgRightsUrl', 'wgWelcomeSurveyPrivacyPolicyUrl', 'wgWBCitoidFullRestbaseURL', 'wgGlobalRenameBlacklist', 'wgWMEClientErrorIntakeURL', 'wgEventLoggingServiceUri',
+			'wgCanonicalServer', 'wgServer', 'wgUploadPath', 'wgRedirectSources', 'wgUploadNavigationUrl', 'wgScorePath', 'wgUploadMissingFileUrl', 'wgRightsUrl', 'wgWelcomeSurveyPrivacyPolicyUrl', 'wgWBCitoidFullRestbaseURL', 'wgGlobalRenameDenylist', 'wgWMEClientErrorIntakeURL', 'wgEventLoggingServiceUri',
 			// FIXME: Just… wow. By name, this should be a boolean.
 			'wmgUseFileExporter',
 			// FIXME: Just set in wikibase.php? Most of these are user-facing.
@@ -171,19 +171,19 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 		foreach ( $this->variantSettings['wgExtraNamespaces'] as $db => $entry ) {
 			foreach ( $entry as $number => $namespace ) {
 				// Test for invalid spaces
-				$this->assertFalse( strpos( $namespace, ' ' ), "Unexpected space in '$number' namespace title for $db, use underscores instead" );
+				$this->assertStringNotContainsString( ' ', $namespace, "Unexpected space in '$number' namespace title for $db, use underscores instead" );
 
 				// Test for invalid colons
-				$this->assertFalse( strpos( $namespace, ':' ), "Unexpected colon in '$number' namespace title for $db, final colon is not needed and can be removed" );
+				$this->assertStringNotContainsString( ':', $namespace, "Unexpected colon in '$number' namespace title for $db, final colon is not needed and can be removed" );
 
 				// Test namespace numbers
 				if ( $number < 100 || in_array( $number, [ 828, 829 ] ) ) {
 					continue; // It's not an extra namespace, do not test
 				}
 				if ( $number % 2 == 0 ) {
-					$this->assertTrue( array_key_exists( $number + 1, $entry ), "Namespace $namespace (ID $number) for $db doesn't have corresponding talk namespace set" );
+					$this->assertArrayHasKey( $number + 1, $entry, "Namespace $namespace (ID $number) for $db doesn't have corresponding talk namespace set" );
 				} else {
-					$this->assertTrue( array_key_exists( $number - 1, $entry ), "Namespace $namespace (ID $number) for $db doesn't have corresponding non-talk namespace set" );
+					$this->assertArrayHasKey( $number - 1, $entry, "Namespace $namespace (ID $number) for $db doesn't have corresponding non-talk namespace set" );
 				}
 			}
 		}
@@ -192,18 +192,18 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 	public function testMetaNamespaces() {
 		foreach ( $this->variantSettings['wgMetaNamespace'] as $db => $namespace ) {
 			// Test for invalid spaces
-			$this->assertFalse( strpos( $namespace, ' ' ), "Unexpected space in meta namespace title for $db, use underscores instead" );
+			$this->assertStringNotContainsString( ' ', $namespace, "Unexpected space in meta namespace title for $db, use underscores instead" );
 
 			// Test for invalid colons
-			$this->assertFalse( strpos( $namespace, ':' ), "Unexpected colon in meta namespace title for $db, final colon is not needed and should be removed" );
+			$this->assertStringNotContainsString( ':', $namespace, "Unexpected colon in meta namespace title for $db, final colon is not needed and should be removed" );
 		}
 
 		foreach ( $this->variantSettings['wgMetaNamespaceTalk'] as $db => $namespace ) {
 			// Test for invalid spaces
-			$this->assertFalse( strpos( $namespace, ' ' ), "Unexpected space in meta talk namespace title for $db, use underscores instead" );
+			$this->assertStringNotContainsString( ' ', $namespace, "Unexpected space in meta talk namespace title for $db, use underscores instead" );
 
 			// Test for invalid colons
-			$this->assertFalse( strpos( $namespace, ':' ), "Unexpected colon in meta talk namespace title for $db, final colon is not needed and should be removed" );
+			$this->assertStringNotContainsString( ':', $namespace, "Unexpected colon in meta talk namespace title for $db, final colon is not needed and should be removed" );
 		}
 	}
 
@@ -305,7 +305,7 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 	public function testwgSitename() {
 		foreach ( $this->variantSettings['wgSitename'] as $db => $entry ) {
 			// Test that the string doesn't contain invalid charcters T249014
-			$this->assertFalse( strpos( $entry, ',' ), "wgSitename for $db contains a ',' which breaks e-mails" );
+			$this->assertStringNotContainsString( ',', $entry, "wgSitename for $db contains a ',' which breaks e-mails" );
 		}
 	}
 

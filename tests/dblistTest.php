@@ -125,7 +125,7 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 			}
 		}
 
-		$all = array_filter( $all, function ( $v ) {
+		$all = array_filter( $all, static function ( $v ) {
 			return count( $v ) !== 1;
 		} );
 

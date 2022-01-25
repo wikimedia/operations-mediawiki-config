@@ -8,9 +8,12 @@ if ( !defined( 'DBO_DEFAULT' ) ) {
 # $wgReadOnly = "Wikimedia Sites are currently read-only during maintenance, please try again soon.";
 
 # LOOKING FOR $wmgOldExtTemplate ?  It no longer lives in the PHP configs.
-# Instead try https://noc.wikimedia.org/dbconfig/codfw.json (see 'es1')
+# Instead try https://noc.wikimedia.org/dbconfig/eqiad.json (see 'es1')
+# and https://noc.wikimedia.org/dbconfig/codfw.json
 # For more info see also https://wikitech.wikimedia.org/wiki/dbctl
 
+# If a wiki's section is different across datacenters, use a ternary to vary:
+# 'xxwiki' => $wmfDatacenter === 'codfw' ? 's1': 's2',
 $wgLBFactoryConf = [
 
 'class' => 'LBFactoryMulti',
@@ -48,6 +51,7 @@ $wgLBFactoryConf = [
 
 	# s5: dewiki and some other wikis
 	'altwiki'       => 's5',
+	'amiwiki'       => 's5',
 	'apiportalwiki' => 's5',
 	'arbcom_ruwiki' => 's5',
 	'avkwiki'      => 's5',
@@ -62,6 +66,7 @@ $wgLBFactoryConf = [
 	'jawikivoyage' => 's5',
 	'jvwikisource' => 's5',
 	'lldwiki'      => 's5',
+	'lmowiktionary' => 's5',
 	'mniwiki'      => 's5',
 	'mniwiktionary' => 's5',
 	'mnwwiktionary' => 's5',
@@ -71,6 +76,7 @@ $wgLBFactoryConf = [
 	'mgwiktionary' => 's5',
 	'mhwiktionary' => 's5',
 	'muswiki'      => 's5',
+	'pwnwiki'      => 's5',
 	'skrwiki'      => 's5',
 	'skrwiktionary' => 's5',
 	'shwiki'       => 's5',
@@ -131,7 +137,9 @@ $wgLBFactoryConf = [
 # function (the master is not included, as by definition has lag 0).
 #
 # LOOKING FOR THE LOAD LISTS?  They no longer live in the PHP configs.
-# Instead try https://noc.wikimedia.org/db.php?dc=codfw and
+# Instead try https://noc.wikimedia.org/db.php?dc=eqiad,
+# https://noc.wikimedia.org/db.php?dc=codfw,
+# https://noc.wikimedia.org/dbconfig/eqiad.json
 # https://noc.wikimedia.org/dbconfig/codfw.json
 # For more info see also https://wikitech.wikimedia.org/wiki/dbctl
 
@@ -146,7 +154,7 @@ $wgLBFactoryConf = [
 	'lagDetectionMethod' => 'pt-heartbeat',
 	'variables'          => [
 		'innodb_lock_wait_timeout' => 15
-	]
+	],
 ],
 
 'templateOverridesBySection' => [
@@ -193,18 +201,21 @@ $wgLBFactoryConf = [
 ],
 
 # LOOKING FOR GROUP LOADS?  They no longer live in the PHP configs.
-# Instead try https://noc.wikimedia.org/dbconfig/codfw.json
+# Instead try https://noc.wikimedia.org/dbconfig/eqiad.json
+# and https://noc.wikimedia.org/dbconfig/codfw.json
 # For more info see also https://wikitech.wikimedia.org/wiki/dbctl
 
 'groupLoadsByDB' => [],
 
 # LOOKING FOR HOSTS BY NAME?  They no longer live in the PHP configs.
-# Instead try https://noc.wikimedia.org/dbconfig/codfw.json
+# Instead try https://noc.wikimedia.org/dbconfig/eqiad.json
+# and https://noc.wikimedia.org/dbconfig/codfw.json
 # For more info see also https://wikitech.wikimedia.org/wiki/dbctl
 'hostsByName' => [],
 
 # LOOKING FOR EXTERNAL LOADS?  They no longer live in the PHP configs.
-# Instead try https://noc.wikimedia.org/dbconfig/codfw.json (see es1/es2/es3/x1)
+# Instead try https://noc.wikimedia.org/dbconfig/eqiad.json (see es1/es2/es3/x1)
+# and https://noc.wikimedia.org/dbconfig/codfw.json
 # For more info see also https://wikitech.wikimedia.org/wiki/dbctl
 'externalLoads' => [],
 
@@ -245,11 +256,12 @@ $wgLBFactoryConf = [
 # infrastructure if possible (IRC, other webpages) or infrastructure not prepared to absorve
 # large traffic (phabricator) because they tend to collapse. A meta page would be appropiate.
 #
-# Also keep these read only messages if codfw is not the active dc, to prevent accidental writes
+# Also keep these read only messages if eqiad is not the active dc, to prevent accidental writes
 # getting trasmmitted from codfw to eqiad when the master dc is eqiad.
 'readOnlyBySection' => [
 # LOOKING FOR READONLY SECTIONS?  They no longer live in the PHP configs.
-# Instead try https://noc.wikimedia.org/dbconfig/codfw.json
+# Instead try https://noc.wikimedia.org/dbconfig/eqiad.json
+# and https://noc.wikimedia.org/dbconfig/codfw.json
 # For more info see also https://wikitech.wikimedia.org/wiki/dbctl
 ],
 

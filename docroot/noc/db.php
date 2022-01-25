@@ -19,37 +19,27 @@ if ( $format === 'json' ) {
 
 // Default to eqiad but allow limited other DCs to be specified with ?dc=foo.
 $dbConfigEtcdPrefix = '/srv/dbconfig';
-$allowedDCs = [
-	'codfw' => 'db-codfw.php',
-	'eqiad' => 'db-eqiad.php',
-];
 $dbctlJsonByDC = [
 	'codfw' => 'codfw.json',
 	'eqiad' => 'eqiad.json',
 ];
-$defaultDC = 'eqiad';
+$wmfDatacenter = 'eqiad';
 
 if ( !is_dir( $dbConfigEtcdPrefix ) ) {
 	// Local testing and debugging fallback
 	$dbConfigEtcdPrefix = __DIR__ . '/../../tests/data/dbconfig';
-	$allowedDCs = [
-		'tmsx' => 'db-eqiad.php',
-		'tmsy' => 'db-codfw.php',
-	];
 	$dbctlJsonByDC = [
 		'tmsx' => 'tmsx.json',
 		'tmsy' => 'tmsy.json',
 	];
-	$defaultDC = 'tmsx';
+	$wmfDatacenter = 'tmsx';
 }
 
-$dbConfigFileName = ( isset( $_GET['dc'] ) && isset( $allowedDCs[$_GET['dc']] ) )
-	? $allowedDCs[$_GET['dc']]
-	: $allowedDCs[$defaultDC];
+if ( isset( $_GET['dc'] ) && isset( $dbctlJsonByDC[$_GET['dc']] ) ) {
+	$wmfDatacenter = $_GET['dc'];
+}
 
-$dbConfigEtcdJsonFilename = ( isset( $_GET['dc'] ) && isset( $dbctlJsonByDC[$_GET['dc']] ) )
-	? $dbctlJsonByDC[$_GET['dc']]
-	: $dbctlJsonByDC[$defaultDC];
+$dbConfigEtcdJsonFilename = $dbctlJsonByDC[$wmfDatacenter];
 
 // Mock vars needed by db-*.php (normally set by CommonSettings.php)
 $wgDBname = null;
@@ -60,7 +50,7 @@ $wgSecretKey = null;
 $wmfMasterDatacenter = null;
 
 // Load the actual db vars
-require_once __DIR__ . "/../../wmf-config/{$dbConfigFileName}";
+require_once __DIR__ . '/../../wmf-config/db-production.php';
 
 // Now load the JSON written to Etcd by dbctl, from the local disk and merge it in.
 // This is mimicking what wmfEtcdApplyDBConfig (wmf-config/etcd.php) does in prod.
@@ -103,13 +93,13 @@ if ( $format === 'json' ) {
 	<link rel="stylesheet" href="css/base.css">
 	<style>
 	h2 { font-weight: normal; }
-	code { color: #000; background: #f9f9f9; border: 1px solid #ddd; border-radius: 2px; padding: 1px 4px; }
+	code { color: #000; background: #f8f9fa; border: 1px solid #c8ccd1; border-radius: 2px; padding: 1px 4px; }
 	main { display: flex; flex-wrap: wrap; }
-	nav li { float: left; list-style: none; border: 1px solid #eee; padding: 1px 4px; margin: 0 1em 1em 0; }
-	section { flex: 1; min-width: 300px; border: 1px solid #eee; padding: 0 1em; margin: 0 1em 1em 0; }
+	nav li { float: left; list-style: none; border: 1px solid #eaecf0; padding: 1px 4px; margin: 0 1em 1em 0; }
+	section { flex: 1; min-width: 300px; border: 1px solid #eaecf0; padding: 0 1em; margin: 0 1em 1em 0; }
 	main, footer { clear: both; }
 	section:target { border-color: orange; }
-	section:target h2 { background: #ffe; }
+	section:target h2 { background: #fef6e7; }
 	</style>
 </head>
 <body>
@@ -133,12 +123,12 @@ foreach ( $sectionNames as $name ) {
 	print $dbConf->htmlFor( $name ) . '</section>';
 }
 print '</main>';
-print '<footer>Automatically generated based on <a href="./conf/highlight.php?file=' . htmlspecialchars( $dbConfigFileName ) . '">';
-print 'wmf-config/' . htmlspecialchars( $dbConfigFileName ) . '</a> ';
+print '<footer>Automatically generated based on <a href="./conf/highlight.php?file=db-production.php">';
+print 'wmf-config/db-production.php</a> ';
 print 'and on <a href="/dbconfig/' . htmlspecialchars( $dbConfigEtcdJsonFilename ) . '">';
 print htmlspecialchars( $dbConfigEtcdJsonFilename ) . '</a>.<br/>';
-foreach ( $allowedDCs as $dc => $file ) {
-	if ( $file !== $dbConfigFileName ) {
+foreach ( $dbctlJsonByDC as $dc => $file ) {
+	if ( $file !== $dbConfigEtcdJsonFilename ) {
 		print 'View <a href="' . htmlspecialchars( "?dc=$dc" ) . '">' . htmlspecialchars( ucfirst( $dc ) ) . '</a>. ';
 	}
 }

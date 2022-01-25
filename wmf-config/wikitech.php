@@ -18,12 +18,12 @@ $wgAuthManagerAutoConfig['primaryauth'] += [
 ];
 $wgLDAPDomainNames = [ 'labs' ];
 switch ( $wgDBname ) {
-case 'labswiki' :
-	$wgLDAPServerNames = [ 'labs' => 'ldap-labs.eqiad.wikimedia.org' ];
-		break;
-case 'labtestwiki' :
+case 'labswiki':
+	$wgLDAPServerNames = [ 'labs' => "ldap-rw.{$wmfDatacenter}.wikimedia.org" ];
+	break;
+case 'labtestwiki':
 	$wgLDAPServerNames = [ 'labs' => 'cloudservices2002-dev.wikimedia.org' ];
-		break;
+	break;
 }
 // T165795: require exact case matching of username via :caseExactMatch:
 $wgLDAPSearchAttributes = [ 'labs' => 'cn:caseExactMatch:' ];
@@ -93,18 +93,35 @@ if ( file_exists( '/etc/mediawiki/WikitechPrivateSettings.php' ) ) {
 # since we aren't using the shared jobqueue, we don't support delays
 $wgCdnReboundPurgeDelay = 0;
 
-// T218654
-$wgHooks['BlockIpComplete'][] = function ( $block, $performer, $priorBlock ) {
-	global $wgBlockDisablesLogin;
-	if ( $wgBlockDisablesLogin && $block->getTargetUserIdentity() && $block->getExpiry() === 'infinity' && $block->isSitewide() ) {
-		MediaWikiServices::getInstance()->getAuthManager()
-			->revokeAccessForUser( $block->getTargetName() );
+// Make arbitrary Conduit requests to the Wikimedia Phabricator
+function wmfPhabClient( string $apiToken, string $path, $query ) {
+	$query['__conduit__'] = [ 'token' => $apiToken ];
+	$post = [
+		'params' => json_encode( $query ),
+		'output' => 'json',
+	];
+	$phabUrl = 'https://phabricator.wikimedia.org';
+	$ch = curl_init( "{$phabUrl}/api/{$path}" );
+	curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+	curl_setopt( $ch, CURLOPT_POSTFIELDS, $post );
+	$ret = curl_exec( $ch );
+	curl_close( $ch );
+	if ( $ret ) {
+		$resp = json_decode( $ret, true );
+		if ( !$resp['error_code'] ) {
+			return $resp['result'];
+		}
 	}
-};
+	wfDebugLog(
+		'WikitechPhabBan',
+		"Phab {$path} error " . var_export( $ret, true )
+	);
+	return false;
+}
 
 // Attempt to disable related accounts when a developer account is
 // permablocked.
-$wgHooks['BlockIpComplete'][] = function ( $block, $user, $prior ) use ( $wmfPhabricatorApiToken ) {
+$wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( $wmfPhabricatorApiToken ) {
 	if ( !$wmfPhabricatorApiToken
 		|| $block->getType() !== /* Block::TYPE_USER */ 1
 		|| $block->getExpiry() !== 'infinity'
@@ -114,42 +131,18 @@ $wgHooks['BlockIpComplete'][] = function ( $block, $user, $prior ) use ( $wmfPha
 		// a site-wide indefinite block of a named user.
 		return;
 	}
-	try {
-		// Lookup and block phab user tied to developer account
-		$phabClient = function ( $path, $query ) use ( $wmfPhabricatorApiToken ) {
-			$query['__conduit__'] = [ 'token' => $wmfPhabricatorApiToken ];
-			$post = [
-				'params' => json_encode( $query ),
-				'output' => 'json',
-			];
-			$phabUrl = 'https://phabricator.wikimedia.org';
-			$ch = curl_init( "{$phabUrl}/api/{$path}" );
-			curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
-			curl_setopt( $ch, CURLOPT_POSTFIELDS, $post );
-			$ret = curl_exec( $ch );
-			curl_close( $ch );
-			if ( $ret ) {
-				$resp = json_decode( $ret, true );
-				if ( !$resp['error_code'] ) {
-					return $resp['result'];
-				}
-			}
-			wfDebugLog(
-				'WikitechPhabBan',
-				"Phab {$path} error " . var_export( $ret, true )
-			);
-			return false;
-		};
 
+	try {
 		$username = $block->getTargetName();
-		$resp = $phabClient( 'user.ldapquery', [
+		$resp = wmfPhabClient( $wmfPhabricatorApiToken, 'user.ldapquery', [
 			'ldapnames' => [ $username ],
 			'offset' => 0,
 			'limit' => 1,
 		] );
+
 		if ( $resp ) {
 			$phid = $resp[0]['phid'];
-			$phabClient( 'user.disable', [
+			wmfPhabClient( $wmfPhabricatorApiToken, 'user.disable', [
 				'phids' => [ $phid ],
 			] );
 		}
@@ -160,7 +153,75 @@ $wgHooks['BlockIpComplete'][] = function ( $block, $user, $prior ) use ( $wmfPha
 		);
 	}
 };
-$wgHooks['BlockIpComplete'][] = function ( $block, $user, $prior ) use ( $wmfGerritApiUser, $wmfGerritApiPassword ) {
+$wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmfPhabricatorApiToken ) {
+	if ( !$wmfPhabricatorApiToken
+		|| $block->getType() !== /* Block::TYPE_USER */ 1
+		|| $block->getExpiry() !== 'infinity'
+		|| !$block->isSitewide()
+	) {
+		// Nothing to do if we don't have config or if the block is not
+		// a site-wide indefinite block of a named user.
+		return;
+	}
+
+	try {
+		$username = $block->getTargetName();
+		$resp = wmfPhabClient( $wmfPhabricatorApiToken, 'user.ldapquery', [
+			'ldapnames' => [ $username ],
+			'offset' => 0,
+			'limit' => 1,
+		] );
+
+		if ( $resp ) {
+			$phid = $resp[0]['phid'];
+			wmfPhabClient( $wmfPhabricatorApiToken, 'user.enable', [
+				'phids' => [ $phid ],
+			] );
+		}
+	} catch ( Throwable $t ) {
+		wfDebugLog(
+			'WikitechPhabBan',
+			"Unhandled error unblocking Phabricator user: {$t}"
+		);
+	}
+};
+
+// Changes the Gerrit active status of the specified user using
+// the specified HTTP method (PUT to enable and DELETE to disable)
+function wmfGerritSetActive(
+	string $gerritUsername,
+	string $gerritPassword,
+	string $username,
+	string $httpMethod
+) {
+	// Disable gerrit user tied to developer account
+	$gerritUrl = 'https://gerrit.wikimedia.org';
+	$ch = curl_init(
+		"{$gerritUrl}/r/a/accounts/" . urlencode( $username ) . '/active'
+	);
+	curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+	curl_setopt( $ch, CURLOPT_CUSTOMREQUEST, $httpMethod );
+	curl_setopt(
+		$ch, CURLOPT_USERPWD,
+		"{$gerritUsername}:{$gerritPassword}"
+	);
+
+	if ( !curl_exec( $ch ) ) {
+		wfDebugLog(
+			'WikitechGerritBan',
+			"Gerrit user active status change ({$httpMethod}) of {$username} failed: " . curl_error( $ch )
+		);
+		$status = null;
+	} else {
+		$status = curl_getinfo( $ch, CURLINFO_HTTP_CODE );
+	}
+
+	curl_close( $ch );
+
+	return $status;
+}
+
+$wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( $wmfGerritApiUser, $wmfGerritApiPassword ) {
 	if ( !$wmfGerritApiUser
 		|| !$wmfGerritApiPassword
 		|| $block->getType() !== /* Block::TYPE_USER */ 1
@@ -172,33 +233,20 @@ $wgHooks['BlockIpComplete'][] = function ( $block, $user, $prior ) use ( $wmfGer
 		return;
 	}
 	try {
-		// Disable gerrit user tied to developer account
-		$gerritUrl = 'https://gerrit.wikimedia.org';
 		$username = strtolower( $block->getTargetName() );
-		$ch = curl_init(
-			"{$gerritUrl}/r/a/accounts/" . urlencode( $username ) . '/active'
+		$status = wmfGerritSetActive(
+			$wmfGerritApiUser,
+			$wmfGerritApiPassword,
+			$username,
+			'DELETE'
 		);
-		curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
-		curl_setopt( $ch, CURLOPT_CUSTOMREQUEST, 'DELETE' );
-		curl_setopt(
-			$ch, CURLOPT_USERPWD,
-			"{$wmfGerritApiUser}:{$wmfGerritApiPassword}"
-		);
-		if ( !curl_exec( $ch ) ) {
+
+		if ( $status && $status !== 204 ) {
 			wfDebugLog(
 				'WikitechGerritBan',
-				"Gerrit block of {$username} failed: " . curl_error( $ch )
+				"Gerrit block of {$username} failed with status {$status}"
 			);
-		} else {
-			$status = curl_getinfo( $ch, CURLINFO_HTTP_CODE );
-			if ( $status !== 204 ) {
-				wfDebugLog(
-					'WikitechGerritBan',
-					"Gerrit block of {$username} failed with status {$status}"
-				);
-			}
 		}
-		curl_close( $ch );
 	} catch ( Throwable $t ) {
 		wfDebugLog(
 			'WikitechGerritBan',
@@ -206,11 +254,44 @@ $wgHooks['BlockIpComplete'][] = function ( $block, $user, $prior ) use ( $wmfGer
 		);
 	}
 };
+$wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmfGerritApiUser, $wmfGerritApiPassword ) {
+	if ( !$wmfGerritApiUser
+		|| !$wmfGerritApiPassword
+		|| $block->getType() !== /* Block::TYPE_USER */ 1
+		|| $block->getExpiry() !== 'infinity'
+		|| !$block->isSitewide()
+	) {
+		// Nothing to do if we don't have config or if the block is not
+		// a site-wide indefinite block of a named user.
+		return;
+	}
+	try {
+		$username = strtolower( $block->getTargetName() );
+		$status = wmfGerritSetActive(
+			$wmfGerritApiUser,
+			$wmfGerritApiPassword,
+			$username,
+			'PUT'
+		);
+
+		if ( $status && $status !== 204 ) {
+			wfDebugLog(
+				'WikitechGerritBan',
+				"Gerrit unblock of {$username} failed with status {$status}"
+			);
+		}
+	} catch ( Throwable $t ) {
+		wfDebugLog(
+			'WikitechGerritBan',
+			"Unhandled error unblocking Gerrit user: {$t}"
+		);
+	}
+};
 
 /**
  * Invalidates sessions of a blocked user and therefore logs them out.
  */
-$wgHooks['BlockIpComplete'][] = function ( $block, $user, $prior ) {
+$wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) {
 	if ( $block->getType() !== /* Block::TYPE_USER */ 1
 		|| $block->getExpiry() !== 'infinity'
 		|| !$block->isSitewide()

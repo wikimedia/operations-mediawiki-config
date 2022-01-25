@@ -220,6 +220,7 @@ class MWMultiVersion {
 			'api.wikimedia.beta.wmflabs.org' => 'apiportal',
 			'beta.wmflabs.org' => 'deployment',
 			'wikidata.beta.wmflabs.org' => 'wikidata',
+			'wikifunctions.beta.wmflabs.org' => 'wikifunctions',
 		];
 
 		$lang = null;
@@ -319,7 +320,7 @@ class MWMultiVersion {
 
 	/**
 	 * Get the DB name for this wiki
-	 * @return String the database name
+	 * @return string the database name
 	 */
 	public function getDatabase() {
 		return $this->db;
@@ -358,10 +359,13 @@ class MWMultiVersion {
 		}
 		$this->versionLoaded = true;
 
+		$dir = MEDIAWIKI_DEPLOYMENT_DIR;
+
 		if ( $wmfRealm === 'production' ) {
-			$phpFilename = MEDIAWIKI_DEPLOYMENT_DIR . '/wikiversions.php';
+			$phpFilename = $dir . '/wikiversions.php';
 		} else {
-			$phpFilename = MEDIAWIKI_DEPLOYMENT_DIR . "/wikiversions-$wmfRealm.php";
+			# Load the realm-specific wikiversions file, such as wikiversions-labs.php or wikiversions-dev.php
+			$phpFilename = $dir . "/wikiversions-$wmfRealm.php";
 		}
 
 		$wikiversions = include $phpFilename;
@@ -393,7 +397,7 @@ class MWMultiVersion {
 	 * Get the version as specified in a php file located
 	 * at /srv/mediawiki/wikiversions.php.
 	 * Result is of the form "php-X.XX" or "php-trunk".
-	 * @return String the version directory for this wiki
+	 * @return string the version directory for this wiki
 	 */
 	public function getVersion() {
 		$this->loadVersionInfo();
@@ -407,7 +411,7 @@ class MWMultiVersion {
 	 * Get the version number as specified in a php file located
 	 * at /srv/mediawiki/wikiversions.php. Do not use this
 	 * to determine the path to cache or binary files, only the core MW code.
-	 * @return String the version number for this wiki (e.g. "x.xx" or "trunk")
+	 * @return string the version number for this wiki (e.g. "x.xx" or "trunk")
 	 */
 	public function getVersionNumber() {
 		$this->loadVersionInfo();

@@ -55,13 +55,14 @@ function wmfGetVariantSettings() {
 'wgCapitalLinks' => [
 	'default' => true,
 	'jbowiki' => false,
+	'pwnwiki' => false, // T292415
 	'szywiki' => false, // T237369
 	'taywiki' => false, // T275803
 	'wiktionary' => false,
 ],
 
 'wgCapitalLinkOverrides' => [
-	'scowiki' => [ //T247172#5952219
+	'scowiki' => [ // T247172#5952219
 		102 => true,
 		103 => true,
 	],
@@ -290,6 +291,7 @@ function wmfGetVariantSettings() {
 	'default' => 'UTC',
 
 	'acewiki' => 'Asia/Jakarta', // T205693
+	'amiwiki' => 'Asia/Taipei',
 	'alswiki' => 'Europe/Berlin',
 	'amwikimedia' => 'Asia/Yerevan', // T176042
 	'altwiki' => 'Asia/Barnaul',
@@ -436,6 +438,7 @@ function wmfGetVariantSettings() {
 	'ltgwiki' => 'Europe/Riga',
 	'ltwiki' => 'Europe/Vilnius',
 	'lmowiki' => 'Europe/Rome',
+	'lmowiktionary' => 'Europe/Rome',
 	'lvwiki' => 'Europe/Riga', // T45592
 	'madwiki' => 'Asia/Jakarta',
 	'maiwiki' => 'Asia/Kathmandu', // T74346
@@ -504,6 +507,7 @@ function wmfGetVariantSettings() {
 	'pnbwiki' => 'Asia/Karachi',
 	'pnbwiktionary' => 'Asia/Karachi',
 	'punjabiwikimedia' => 'Asia/Kolkata',
+	'pwnwiki' => 'Asia/Taipei',
 	'rmwiki' => 'Europe/Berlin',
 	'roa_tarawiki' => 'Europe/Rome', // T263123
 	'romdwikimedia' => 'Europe/Chisinau',
@@ -601,11 +605,16 @@ function wmfGetVariantSettings() {
 	'wiktionary' => '/static/images/mobile/copyright/wiktionary.svg',
 
 	// Special wikis
+	'collabwiki' => '/static/images/mobile/copyright/collab-icon.svg',
 	'commonswiki' => '/static/images/mobile/copyright/commons.svg',
+	'foundationwiki' => '/static/images/mobile/copyright/wikimedia.svg',
 	'incubatorwiki' => '/static/images/mobile/copyright/incubator.svg',
 	'mediawikiwiki' => '/static/images/mobile/copyright/mediawiki.svg',
+	'metawiki' => '/static/images/mobile/copyright/meta.svg',
 	'officewiki' => '/static/images/mobile/copyright/wikimedia.svg',
+	'outreachwiki' => '/static/images/mobile/copyright/outreach-icon.svg',
 	'specieswiki' => '/static/images/mobile/copyright/wikispecies.svg',
+	'strategywiki' => '/static/images/mobile/copyright/strategy-icon.svg',
 	'wikimaniawiki' => '/static/images/mobile/copyright/wikimania.svg',
 ],
 
@@ -662,6 +671,10 @@ function wmfGetVariantSettings() {
 	]
 ],
 
+// IMPORTANT:
+// When defining new logos, ensure width <= 140px so that logos are
+// mobile friendly. Scale down logo if necessary.
+
 'wmgSiteLogoWordmark' => [
 	// Projects
 	'wikipedia' => [
@@ -685,6 +698,11 @@ function wmfGetVariantSettings() {
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ar.svg',
 		'width' => 106,
 		'height' => 30,
+	],
+	'arywiki' => [
+		'src' => '/static/images/mobile/copyright/ary-wordmark.svg',
+		'width' => 103,
+		'height' => 35,
 	],
 	'arzwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ar.svg',
@@ -821,6 +839,11 @@ function wmfGetVariantSettings() {
 		'width' => 126,
 		'height' => 20,
 	],
+	'kswiki' => [
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ks.svg',
+		'width' => 62,
+		'height' => 25,
+	],
 	'lawiki' => [ // T240728
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-la.svg',
 		'width' => 112,
@@ -840,6 +863,11 @@ function wmfGetVariantSettings() {
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-sr.svg',
 		'width' => 125,
 		'height' => 23,
+	],
+	'mniwiki' => [ // T294189
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-mni.svg',
+		'width' => 129,
+		'height' => 21,
 	],
 	'mrwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-hi.svg',
@@ -975,6 +1003,11 @@ function wmfGetVariantSettings() {
 	],
 
 	// Wikiquote
+	'frwikiquote' => [ // T290091
+		'src' => '/static/images/mobile/copyright/en-wordmark.svg',
+		'width' => 93,
+		'height' => 45,
+	],
 	'trwikiquote' => [ // T286133
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-tr.svg',
 		'width' => 119,
@@ -982,8 +1015,18 @@ function wmfGetVariantSettings() {
 	],
 
 	// Wikibooks
+	'viwikibooks' => [ // T290091
+		'src' => '/static/images/mobile/copyright/wikibooks-wordmark.svg',
+		'width' => 120,
+		'height' => 15,
+	],
 
 	// Wikinews
+	'plwikinews' => [ // T290091
+		'src' => '/static/images/mobile/copyright/pl-wordmark.svg',
+		'width' => 153,
+		'height' => 32,
+	],
 	'ptwikinews' => [ // T281591
 		'src' => '/static/images/mobile/copyright/wikinews-wordmark-pt.svg',
 		'width' => 121,
@@ -1010,10 +1053,10 @@ function wmfGetVariantSettings() {
 	],
 
 	// Wikivoyage
-	'bnwikivoyage' => [ // T196680
+	'bnwikivoyage' => [ // T196680, T298033
 		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-bn.svg',
-		'width' => 113,
-		'height' => 29,
+		'width' => 96,
+		'height' => 25,
 	],
 	'hewikivoyage' => [ // T234278
 		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-he.svg',
@@ -1040,15 +1083,40 @@ function wmfGetVariantSettings() {
 
 	// Special wikis
 
+	'collabwiki' => [ // T290091
+		'src' => '/static/images/mobile/copyright/en-collab.svg',
+		'width' => 125,
+		'height' => 20,
+	],
 	'commonswiki' => [
 		'src' => '/static/images/mobile/copyright/commons-wordmark-en.svg',
 		'width' => 115,
 		'height' => 32,
 	],
+	'foundationwiki' => [
+		'src' => '/static/images/mobile/copyright/wikimedia-wordmark.svg',
+		'width' => 128,
+		'height' => 28,
+	],
 	'mediawikiwiki' => [
 		'src' => '/static/images/mobile/copyright/mediawiki-wordmark-en.svg',
 		'width' => 120,
 		'height' => 18,
+	],
+	'metawiki' => [
+		'src' => '/static/images/mobile/copyright/meta-wordmark.svg',
+		'width' => 120,
+		'height' => 29
+	],
+	'outreachwiki' => [ // T290091, T297580
+		'src' => '/static/images/mobile/copyright/outreach-wordmark.svg',
+		'width' => 120,
+		'height' => 29,
+	],
+	'strategywiki' => [ // T290091
+		'src' => '/static/images/mobile/copyright/strategic-wordmark.svg',
+		'width' => 142,
+		'height' => 28,
 	],
 	'test2wiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-en.svg',
@@ -1073,6 +1141,11 @@ function wmfGetVariantSettings() {
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ar.svg',
 		'width' => 66,
 		'height' => 11,
+	],
+	'arywiki' => [
+		'src' => '/static/images/mobile/copyright/ary-tagline.svg',
+		'width' => 60,
+		'height' => 12,
 	],
 	'bnwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-bn.svg',
@@ -1179,6 +1252,11 @@ function wmfGetVariantSettings() {
 		'width' => 106,
 		'height' => 11,
 	],
+	'kswiki' => [
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ks.svg',
+		'width' => 62,
+		'height' => 20,
+	],
 	'nlwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-nl.svg',
 		'width' => 115,
@@ -1227,6 +1305,11 @@ function wmfGetVariantSettings() {
 	'viwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-vi.svg',
 		'width' => 117,
+		'height' => 10,
+	],
+	'viwikibooks' => [ // T290091
+		'src' => '/static/images/mobile/copyright/vi-tagline.svg',
+		'width' => 120,
 		'height' => 10,
 	],
 	'vecwiki' => [
@@ -1327,6 +1410,7 @@ function wmfGetVariantSettings() {
 	'viwikivoyage' => false, // T54034
 	'vowiki' => false, // T15740
 	'xmfwiki' => false,
+	'zhwikisource' => false, // T295265
 ],
 # @} end of wgEnableUploads
 
@@ -1925,7 +2009,9 @@ function wmfGetVariantSettings() {
 	'jawikinews' => 'ウィキニュース',
 	'jawikiversity' => 'ウィキバーシティ',
 	'jawikivoyage' => 'ウィキボヤージュ',
+	'jvwiki' => 'Wikipédia', // T287437
 	'jvwikisource' => 'Wikisumber',
+	'jvwiktionary' => 'Wikisastra', // T287437
 	'kawiki' => 'ვიკიპედია',
 	'kawikibooks' => 'ვიკიწიგნები',
 	'kawikiquote' => 'ვიკიციტატა',
@@ -1950,6 +2036,8 @@ function wmfGetVariantSettings() {
 	'kowikiversity' => '위키배움터',
 	'kowiktionary' => '위키낱말사전',
 	'krcwiki' => 'Википедия',
+	'kswiki' => 'وِکیٖپیٖڈیا', // T289752
+	'kswiktionary' => 'وِکیٖلۄغَتھ', // T289767
 	'kuwiki' => 'Wîkîpediya',
 	'kuwiktionary' => 'Wîkîferheng', // T29878
 	'wikitech' => 'Wikitech',
@@ -2421,7 +2509,7 @@ function wmfGetVariantSettings() {
 	'hewiktionary' => 'ויקימילון',
 	'hifwiktionary' => 'Sabdkosh', // T173643
 	'hiwiki' => 'विकिपीडिया',
-	'hiwikibooks' => 'विकिपुस्तक', //T254012
+	'hiwikibooks' => 'विकिपुस्तक', // T254012
 	'hiwikimedia' => 'विकिमीडिया', // T188366
 	'hiwikisource' => 'विकिस्रोत',
 	'hiwikiversity' => 'विकिविश्वविद्यालय',
@@ -2470,7 +2558,9 @@ function wmfGetVariantSettings() {
 	'jamwiki' => 'Wikipidia',
 	'jawikinews' => 'ウィキニュース',
 	'jbowiki' => 'uikipedi\'as', // T118067
+	'jvwiki' => 'Wikipédia', // T287437
 	'jvwikisource' => 'Wikisumber',
+	'jvwiktionary' => 'Wikisastra', // T287437
 	'kawiki' => 'ვიკიპედია',
 	'kawikibooks' => 'ვიკიწიგნები',
 	'kawikiquote' => 'ვიკიციტატა',
@@ -2493,6 +2583,8 @@ function wmfGetVariantSettings() {
 	'kowiktionary' => '위키낱말사전',
 	'kowikiversity' => '위키배움터', // T46899
 	'krcwiki' => 'Википедия',
+	'kswiki' => 'وِکیٖپیٖڈیا', // T289752
+	'kswiktionary' => 'وِکیٖلۄغَتھ', // T289767
 	'kuwiki' => 'Wîkîpediya',
 	'kuwikibooks' => 'Wîkîpirtûk',
 	'kuwikiquote' => 'Wîkîgotin',
@@ -2514,6 +2606,7 @@ function wmfGetVariantSettings() {
 	'liwikinews' => 'Wikinuujs',
 	'liwikisource' => 'Wikibrónne',
 	'lijwikisource' => 'Wikivivàgna',
+	'lmowiktionary' => 'Wikizzionari',
 	'loginwiki' => 'Project',
 	'lowiki' => 'ວິກິພີເດຍ',
 	'lrcwiki' => 'ڤیکیپئدیا', // T102026
@@ -2855,33 +2948,41 @@ function wmfGetVariantSettings() {
 'wgNamespaceAliases' => [
 	// defaults to aid when things are switched
 	// Set default aliases for project_talk for all projects // T173070
+	// set default short aliases for NS_PROJECT (T293839)
 	'+wikibooks' => [
 		'Wikibooks' => NS_PROJECT,
 		'Wikibooks_talk' => NS_PROJECT_TALK,
+		'WB' => NS_PROJECT,
 	],
 	'+wikinews' => [
 		'Wikinews' => NS_PROJECT,
 		'Wikinews_talk' => NS_PROJECT_TALK,
+		'WN' => NS_PROJECT,
 	],
 	'+wikiquote' => [
 		'Wikiquote' => NS_PROJECT,
 		'Wikiquote_talk' => NS_PROJECT_TALK,
+		'WQ' => NS_PROJECT,
 	],
 	'+wikisource' => [
 		'Wikisource' => NS_PROJECT,
 		'Wikisource_talk' => NS_PROJECT_TALK,
+		'WS' => NS_PROJECT,
 	],
 	'+wikiversity' => [
 		'Wikiversity' => NS_PROJECT,
 		'Wikiversity_talk' => NS_PROJECT_TALK,
+		'WV' => NS_PROJECT,
 	],
 	'+wikipedia' => [
 		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
+		'WP' => NS_PROJECT,
 	],
 	'+wiktionary' => [
 		'Wiktionary' => NS_PROJECT,
 		'Wiktionary_talk' => NS_PROJECT_TALK,
+		'WT' => NS_PROJECT,
 	],
 	'+wikivoyage' => [
 		'Wikivoyage' => NS_PROJECT,
@@ -2974,7 +3075,6 @@ function wmfGetVariantSettings() {
 		'প্ৰকল্প' => NS_PROJECT,
 		'প্ৰকল্প_আলোচনা' => NS_PROJECT_TALK,
 		'Wikipedia_বার্তা' => NS_PROJECT_TALK,
-		'WP' => NS_PROJECT,
 		'CAT' => NS_CATEGORY,
 		"বাটচ'ৰা" => 100,
 		"বাটচ'ৰা_আলোচনা" => 101,
@@ -2995,6 +3095,9 @@ function wmfGetVariantSettings() {
 	],
 	'+azwiki' => [
 		'VP' => NS_PROJECT, // T280577
+		'QA' => 118, // T299332
+		'Draft' => 118, // T299332
+		'Draft_talk' => 119, // T299332
 	],
 	'+azwikibooks' => [
 		'Wikibooks_müzakirəsi' => NS_PROJECT_TALK, // T33068
@@ -3007,9 +3110,6 @@ function wmfGetVariantSettings() {
 	],
 	'+bawiki' => [
 		'Wikipedia_буйынса_фекерләшеү' => NS_PROJECT_TALK,
-	],
-	'+banwiki' => [
-		'WP' => NS_PROJECT, // T255941
 	],
 	'+barwiki' => [
 		'Portal_Diskussion' => 101, // T43962 - now "Portal Dischkrian"
@@ -3049,6 +3149,10 @@ function wmfGetVariantSettings() {
 		'Author' => 102, // T43322
 		'Author_talk' => 103,
 	],
+	'+bgwiki' => [
+		'Draft' => 118, // T299224
+		'Draft_talk' => 119,
+	],
 	'+bgwikisource' => [
 		'Author' => 100,
 		'Author_talk' => 101,
@@ -3061,7 +3165,6 @@ function wmfGetVariantSettings() {
 		'U' => NS_USER,
 		'वि' => NS_PROJECT,
 		'वि' => NS_PROJECT,
-		'WP' => NS_PROJECT,
 	],
 	'+bjnwiki' => [
 		'Wikipidia_pamandiran' => NS_PROJECT_TALK,
@@ -3071,20 +3174,17 @@ function wmfGetVariantSettings() {
 		'Portal_talk' => 101,
 		'കവാടം' => 100,
 		'കവാടത്തിന്റെ_സംവാദം' => 101,
-		'WP' => NS_PROJECT,
 		'WT' => NS_PROJECT_TALK,
 		'വിഭാഗം' => NS_CATEGORY,
 		'വിഭാഗത്തിന്റെ_സംവാദം' => NS_CATEGORY_TALK,
 	],
 	'+bnwikibooks' => [
-		'WB' => NS_PROJECT,
 		'Wikijunior' => 100,
 		'wikijunior_talk' => 101,
 		'Subject' => 102,
 		'Subject_talk' => 103,
 	],
 	'+bnwikisource' => [ // T59134
-		'WS' => NS_PROJECT,
 		'Author' => 100, // T61901
 		'Author_talk' => 101, // T61901
 		'Portal' => 106, // T61901
@@ -3120,7 +3220,6 @@ function wmfGetVariantSettings() {
 	],
 	'+ckbwiki' => [
 		'وپ' => NS_PROJECT, // T53605
-		'WP' => NS_PROJECT, // T71594
 		'لو' => NS_PROJECT_TALK, // T71594
 		'WT' => NS_PROJECT_TALK, // T71594
 		'ب' => NS_USER, // T71594
@@ -3152,14 +3251,12 @@ function wmfGetVariantSettings() {
 		'Diskuse_s_wikipedistkou' => NS_USER_TALK,
 		'Wikipedista_diskuse' => NS_USER_TALK,
 		'Wikipedistka_diskuse' => NS_USER_TALK,
-		'WP' => NS_PROJECT,
 		'Portal' => 100,
 		'Portal_talk' => 101,
 		'Portál_diskuse' => 101,
 		'Rejstřík_diskuse' => 103,
 	],
 	'+cswikibooks' => [
-		'WB' => NS_PROJECT,
 		'WK' => NS_PROJECT,
 		'Wikibooks_diskuse' => NS_PROJECT_TALK,
 	],
@@ -3170,18 +3267,15 @@ function wmfGetVariantSettings() {
 		'Diskuse_s_uživatelem' => NS_USER_TALK,
 		'Redaktor_diskuse' => NS_USER_TALK,
 		'Redaktorka_diskuse' => NS_USER_TALK,
-		'WN' => NS_PROJECT,
 		'WZ' => NS_PROJECT,
 		'Wikinews_diskuse' => NS_PROJECT_TALK,
 	],
 	'+cswikiquote' => [
 		'WC' => NS_PROJECT,
-		'WQ' => NS_PROJECT,
 		'Wikiquote_diskuse' => NS_PROJECT_TALK,
 		'Dílo_diskuse' => 101,
 	],
 	'+cswikisource' => [
-		'WS' => NS_PROJECT,
 		'WZ' => NS_PROJECT,
 		'Wikisource_diskuse' => NS_PROJECT_TALK,
 		'Author' => 100,
@@ -3190,7 +3284,6 @@ function wmfGetVariantSettings() {
 		'Edice_diskuse' => 103, // T221697
 	],
 	'+cswikiversity' => [
-		'WV' => NS_PROJECT,
 		'Wikiversity_diskuse' => NS_PROJECT_TALK,
 		'Forum' => 100,
 		'Forum_talk' => 101,
@@ -3198,7 +3291,6 @@ function wmfGetVariantSettings() {
 	],
 	'+cswiktionary' => [
 		'WS' => NS_PROJECT,
-		'WT' => NS_PROJECT,
 		'Wiktionary_diskuse' => NS_PROJECT_TALK,
 		'Příloha_diskuse' => 101,
 	],
@@ -3218,7 +3310,6 @@ function wmfGetVariantSettings() {
 		'Sgwrs_Wicitestun' => NS_PROJECT_TALK,
 	],
 	'+dawiki' => [
-		'WP' => NS_PROJECT, // T29998
 		'Portal_diskussion' => 101, // T9759
 	],
 	'+dawikisource' => [
@@ -3226,7 +3317,6 @@ function wmfGetVariantSettings() {
 		'Author_talk' => 103,
 	],
 	'+dewiki' => [
-		'WP' => NS_PROJECT,
 		'P' => 100,
 		'PD' => 101,
 		'WD' => NS_PROJECT_TALK,
@@ -3239,11 +3329,7 @@ function wmfGetVariantSettings() {
 		'Comments_talk' => 103,
 	],
 	'+dewikiquote' => [
-		'WQ' => NS_PROJECT,
 		'BD' => NS_USER_TALK,
-	],
-	'+dewikisource' => [
-		'WS' => NS_PROJECT,
 	],
 	'+dewikivoyage' => [ // T53794
 		'WD' => NS_PROJECT_TALK,
@@ -3260,7 +3346,6 @@ function wmfGetVariantSettings() {
 		'News_Diskussion' => 107,
 	],
 	'+dewiktionary' => [
-		'WT' => NS_PROJECT,
 		'WikiSaurus' => 104,
 		'WikiSaurus_Diskussion' => 105,
 		'BD' => NS_USER_TALK,
@@ -3281,33 +3366,25 @@ function wmfGetVariantSettings() {
 		'Portal_talk' => 111, // T157187
 	],
 	'+enwiki' => [ // T8313
-		'WP' => NS_PROJECT,
 		'WT' => NS_PROJECT_TALK,
 	],
 	'+enwikibooks' => [
-		'WB' => NS_PROJECT,
 		'WJ' => 110,
 		'CAT' => NS_CATEGORY,
 		'COOK' => 102,
 		'SUB' => 112,
 	],
 	'+enwikinews' => [
-		'WN' => NS_PROJECT,
 		'CAT' => NS_CATEGORY,
 	],
 	'+enwikisource' => [
-		'WS' => NS_PROJECT, // T44853
 		'WT' => NS_PROJECT_TALK, // T44853
 		'H' => NS_HELP, // T167563
-	],
-	'+enwikiversity' => [
-		'WV' => NS_PROJECT,
 	],
 	'+enwiktionary' => [
 		'WS' => 110, // Thesaurus
 		'Wikisaurus' => 110, // T174264
 		'Wikisaurus_talk' => 111,
-		'WT' => NS_PROJECT,
 		'CAT' => NS_CATEGORY, // T123187
 		'T' => NS_TEMPLATE, // T123187
 		'MOD' => 828, // T123187
@@ -3328,14 +3405,12 @@ function wmfGetVariantSettings() {
 	'+eswiki' => [
 		'CAT' => NS_CATEGORY, // T183612
 		'PR' => 102, // T183612
-		'WP' => NS_PROJECT, // T183612
 	],
 	'+eswikibooks' => [
 		'CAT' => NS_CATEGORY, // T216143
 		'WL' => NS_PROJECT, // T216143
 	],
 	'+eswikisource' => [
-		'WS' => NS_PROJECT, // T240050
 		'A' => NS_HELP, // T240050
 	],
 	'+eswiktionary' => [
@@ -3419,11 +3494,7 @@ function wmfGetVariantSettings() {
 	'+fawiktionary' => [
 		'وو' => NS_PROJECT,
 	],
-	'+fiwiki' => [
-		'WP' => NS_PROJECT,
-	],
 	'+frwiki' => [
-		'WP' => NS_PROJECT,
 		'DW' => NS_PROJECT_TALK, // T153952
 		'Discussion_Wikipedia' => NS_PROJECT_TALK,
 		'Utilisatrice' => NS_USER,
@@ -3434,23 +3505,17 @@ function wmfGetVariantSettings() {
 		'WJ' => 102, // T37977
 		'Wikijunior_talk' => 103, // T37977
 	],
-	'+frwikinews' => [
-		'WN' => NS_PROJECT,
-	],
 	'+frwikisource' => [
-		'WS' => NS_PROJECT, // T271939
 		'Author' => 102,
 		'Author_talk' => 103,
 	],
 	'+frwiktionary' => [
-		'WT' => NS_PROJECT,
 		'conj' => 116, // T262298
 	],
 	'+glwiki' => [
 		'Portal_talk' => 101, // T43213 (old namespace name)
 	],
 	'+guwiki' => [ // T255358
-		'WP' => NS_PROJECT,
 		'વિ' => NS_PROJECT,
 		'સ' => NS_USER,
 		'શ્રે' => NS_CATEGORY,
@@ -3466,7 +3531,6 @@ function wmfGetVariantSettings() {
 		'U' => NS_USER,
 		'שמש' => NS_USER_TALK,
 		'וק' => NS_PROJECT,
-		'WP' => NS_PROJECT,
 		'שוק' => NS_PROJECT_TALK,
 		'קו' => NS_FILE,
 		'שקו' => NS_FILE_TALK,
@@ -3512,7 +3576,6 @@ function wmfGetVariantSettings() {
 	'+hiwiki' => [
 		'वि' => NS_PROJECT,
 		'विवा' => NS_PROJECT_TALK,
-		'WP' => NS_PROJECT,
 		'WPT' => NS_PROJECT_TALK,
 		'U' => NS_USER,
 		'UT' => NS_USER_TALK,
@@ -3535,7 +3598,6 @@ function wmfGetVariantSettings() {
 	'+hiwikibooks' => [ // T254012
 		'वि' => NS_PROJECT,
 		'विपु' => NS_PROJECT,
-		'WB' => NS_PROJECT,
 	],
 	'+hiwikiversity' => [
 		'Portal' => 100, // T172977
@@ -3546,7 +3608,6 @@ function wmfGetVariantSettings() {
 		'Draft_talk' => 119, // T187535
 	],
 	'+hrwiki' => [
-		'WP' => NS_PROJECT,  // T287024
 		'WT' => NS_PROJECT_TALK,  // T287024
 		'RWP' => NS_PROJECT_TALK,  // T287024
 		'KT' => NS_CATEGORY,  // T287024
@@ -3571,6 +3632,8 @@ function wmfGetVariantSettings() {
 		'MOD' => 828,  // T287024
 		'RMD' => 829,  // T287024
 		'RMOD' => 829,  // T287024
+		'Draft' => 118, // T291755
+		'Draft_talk' => 119, // T291755
 	],
 	'+hrwikisource' => [
 		'Author' => 100,
@@ -3612,7 +3675,6 @@ function wmfGetVariantSettings() {
 		'Author_talk' => 101,
 	],
 	'+ilowiki' => [
-		'WP' => NS_PROJECT, // T40247
 		'WT' => NS_PROJECT_TALK, // T40247
 	],
 	'+incubatorwiki' => [
@@ -3630,7 +3692,6 @@ function wmfGetVariantSettings() {
 		'Thesaurus_talk' => 111,
 	],
 	'+itwiki' => [
-		'WP' => NS_PROJECT, // T17116
 		'CAT' => NS_CATEGORY, // T101274
 		'DP' => 103, // T101274
 		'DW' => NS_PROJECT_TALK, // T101274
@@ -3641,10 +3702,6 @@ function wmfGetVariantSettings() {
 		'Discussioni_portale' => 101,
 		'Shelf' => 102,
 		'Shelf_talk' => 103,
-		'WB' => NS_PROJECT,
-	],
-	'+itwikiquote' => [
-		'WQ' => NS_PROJECT, // T273362
 	],
 	'+itwikisource' => [
 		'Author' => 102,
@@ -3657,7 +3714,6 @@ function wmfGetVariantSettings() {
 		'Discussioni_facoltà' => 101,
 		'U' => NS_USER, // T158775
 		'UT' => NS_USER_TALK, // T158775
-		'WV' => NS_PROJECT, // T158775
 		'DWV' => NS_PROJECT_TALK, // T158775
 		'T' => NS_TEMPLATE, // T158775
 		'DT' => NS_TEMPLATE_TALK, // T158775
@@ -3741,7 +3797,7 @@ function wmfGetVariantSettings() {
 	'+kowikiquote' => [
 		'인' => NS_PROJECT,
 		'사' => NS_USER, // T255031
-		'사토' => NS_USER_TALK, //T255031
+		'사토' => NS_USER_TALK, // T255031
 	],
 	'+kowikisource' => [
 		'문' => NS_PROJECT, // T182487
@@ -3759,6 +3815,10 @@ function wmfGetVariantSettings() {
 	'+kowiktionary' => [
 		'낱' => NS_PROJECT, // T58761
 	],
+	'+kswiki' => [
+		'وپ' => NS_PROJECT, // T291740
+		'وب' => NS_PROJECT_TALK,
+	],
 	'+kuwiktionary' => [
 		'Wîkîferheng_gotûbêj' => NS_PROJECT_TALK, // T39524 (old namespace name)
 		'Pêvek_nîqas' => 101, // T39524 (old namespace name)
@@ -3767,7 +3827,6 @@ function wmfGetVariantSettings() {
 		'WF' => NS_PROJECT, // T269319
 	],
 	'+kuwiki' => [
-		'WP' => NS_PROJECT, // T152815
 		'Portal_nîqaş' => 101, // T39521
 	],
 	'+kvwiki' => [
@@ -3789,11 +3848,14 @@ function wmfGetVariantSettings() {
 		'Work' => 104, // T257672
 		'Work_talk' => 105, // T257672
 	],
+	'+lmowiktionary' => [
+		'Appendix' => 100,
+		'Appendix_talk' => 101,
+	],
 	'+ltwiki' => [
 		'Wikipedia_aptarimas' => NS_PROJECT_TALK,
 	],
 	'+lvwiki' => [
-		'WP' => NS_PROJECT, // T95106
 		'VP' => NS_PROJECT, // T95106
 	],
 	'+maiwiki' => [
@@ -3801,7 +3863,6 @@ function wmfGetVariantSettings() {
 		'वि_वा' => NS_PROJECT_TALK,      // T125801
 		'CA' => NS_CATEGORY,             // T125801
 		'CT' => NS_CATEGORY_TALK,        // T125801
-		'WP' => NS_PROJECT,              // T125801
 		'WT' => NS_PROJECT_TALK,         // T125801
 		'u' => NS_USER,                  // T125801
 		'ut' => NS_USER_TALK,            // T125801
@@ -3816,7 +3877,6 @@ function wmfGetVariantSettings() {
 	'+mlwiki' => [
 		'വിക്കി' => NS_PROJECT,
 		'വിക്കിസം' => NS_PROJECT_TALK,
-		'WP' => NS_PROJECT,
 		'Portal' => 100,
 		'Portal_talk' => 101,
 		'ഘ' => 828, // T56951
@@ -3856,7 +3916,6 @@ function wmfGetVariantSettings() {
 		'Author_talk' => 101,
 		'Portal' => 102,
 		'Portal_talk' => 103,
-		'WS' => NS_PROJECT,
 		'H' => NS_HELP, // T37712
 		'Translation' => 114, // T154087
 		'Translation_talk' => 115,
@@ -3897,14 +3956,11 @@ function wmfGetVariantSettings() {
 	],
 	'+mwlwiki' => [
 		'Wikipedia_cumbersa' => NS_PROJECT_TALK,
-		'WP' => NS_PROJECT, // T180052
 		'BP' => NS_PROJECT, // T180052
 	],
-	'+mywiki' => [
-		'WP' => NS_PROJECT, // T119807
-	],
 	'+mywiktionary' => [
-		'WT' => NS_PROJECT, // T140998
+		'Appendix' => 100, // T291146
+		'Appendix_talk' => 101, // T291146
 	],
 	'+mznwiki' => [
 		'وپ' => NS_PROJECT,
@@ -3918,9 +3974,6 @@ function wmfGetVariantSettings() {
 	'+napwikisource' => [
 		'Author' => 102, // T231880
 		'Author_talk' => 103, // T231880
-	],
-	'+ndswiki' => [
-		'WP' => NS_PROJECT,
 	],
 	'+newiki' => [
 		// Shorcuts per T89817
@@ -3959,19 +4012,12 @@ function wmfGetVariantSettings() {
 		'श्रे_वा' => NS_CATEGORY_TALK,
 	],
 	'+nlwiki' => [
-		'WP' => NS_PROJECT,
 		'H' => NS_HELP,
 		'P' => 100,
 	],
 	'+nlwikisource' => [
 		'Author' => 102,
 		'Author_talk' => 103,
-	],
-	'+nnwiki' => [
-		'WP' => NS_PROJECT,
-	],
-	'+nowiki' => [
-		'WP' => NS_PROJECT, // T43467
 	],
 	'+nowikibooks' => [
 		'Cookbook' => 102,
@@ -3995,7 +4041,6 @@ function wmfGetVariantSettings() {
 		'OW' => NS_PROJECT,
 	],
 	'+orwiki' => [
-		'WP' => NS_PROJECT, // T30257
 		'WT' => NS_PROJECT_TALK, // T30257
 	],
 	'+outreachwiki' => [
@@ -4005,18 +4050,12 @@ function wmfGetVariantSettings() {
 	'+plwiki' => [ // T12064
 		'Wikipedystka' => NS_USER,
 		'Dyskusja_wikipedystki' => NS_USER_TALK,
-		'WP' => NS_PROJECT,
 	],
 	'+plwikibooks' => [
 		'Wikipedystka' => NS_USER,
 		'Dyskusja_wikipedystki' => NS_USER_TALK,
-		'WB' => NS_PROJECT,
-	],
-	'+plwikinews' => [
-		'WN' => NS_PROJECT, // T291344
 	],
 	'+plwikisource' => [
-		'WS' => NS_PROJECT,
 		'Author' => 104,
 		'Author_talk' => 105,
 		'Collection' => 124, // T154711
@@ -4042,14 +4081,10 @@ function wmfGetVariantSettings() {
 		'Utilizador' => NS_USER, // T29495
 		'Utilizador_Discussão' => NS_USER_TALK, // T29495
 		'Discussão_Portal' => 101,
-		'WP' => NS_PROJECT, // T29728
 		'Wikipedia_Discussão' => NS_PROJECT_TALK,
 	],
 	'+ptwikibooks' => [
 		'Wikibooks_Discussão' => NS_PROJECT_TALK,
-	],
-	'+ptwikinews' => [
-		'WN' => NS_PROJECT, // T259959
 	],
 	'+ptwikisource' => [
 		'Author' => 102,
@@ -4089,7 +4124,6 @@ function wmfGetVariantSettings() {
 		'И' => 102,
 		'ПРО' => 104,             // T36124
 		'АК' => 106,              // T36527
-		'WP' => NS_PROJECT,       // T166035
 		'Участница' => NS_USER,                    // T14320
 		'Обсуждение_участницы' => NS_USER_TALK,
 		'ОПРО' => 105,                             // T189277
@@ -4132,7 +4166,7 @@ function wmfGetVariantSettings() {
 		'ВЦ' => NS_PROJECT,
 		'У' => NS_USER, // T197058
 		'U' => NS_USER, // T197058
-		'ОУ' > NS_USER_TALK, // T197058
+		'ОУ' => NS_USER_TALK, // T197058
 		'UT' => NS_USER_TALK, // T197058
 		'Ш' => NS_TEMPLATE, // T197058
 		'T' => NS_TEMPLATE, // T197058
@@ -4159,7 +4193,6 @@ function wmfGetVariantSettings() {
 		'М' => 828, // T197565
 	],
 	'+sawiki' => [
-		'WP' => NS_PROJECT,
 		'WT' => NS_PROJECT_TALK,
 		'सहाय्यस्य_प्रवेशद्वारम्' => 101, // T101634 - Portal talk
 	],
@@ -4167,12 +4200,10 @@ function wmfGetVariantSettings() {
 		'विकिसूक्तिःसम्भाषणम्' => NS_PROJECT_TALK, // T101634
 	],
 	'+sewiki' => [
-		'WP' => NS_PROJECT, // T42436
 		'Temasiidu' => 100, // T41206
 		'Temasiidoságastallan' => 101, // T41206
 	],
 	'+shwiki' => [
-		'WP' => NS_PROJECT,
 		'VP' => NS_PROJECT,
 		'ВП' => NS_PROJECT,
 		'Wikipedija' => NS_PROJECT,
@@ -4184,21 +4215,12 @@ function wmfGetVariantSettings() {
 		'Портал' => 100, // NS_PORTAL
 		'Разговор_о_порталу' => 101, // NS_PORTAL_TALK
 	],
+	'+shiwiki' => [
+		'Portal' => 100, // T288909
+		'Portal_talk' => 101,
+	],
 	'+shnwiki' => [
-		'WP' => NS_PROJECT,
 		'WT' => NS_PROJECT_TALK, // T210699
-	],
-	'+shnwiktionary' => [
-		'WT' => NS_PROJECT, // T256348
-	],
-	'+simplewiki' => [
-		'WP' => NS_PROJECT,
-	],
-	'+simplewikiquote' => [
-		'WQ' => NS_PROJECT,
-	],
-	'+simplewiktionary' => [
-		'WT' => NS_PROJECT,
 	],
 	'+siwiki' => [
 		'Portal' => 100,
@@ -4212,25 +4234,17 @@ function wmfGetVariantSettings() {
 		'WL' => NS_PROJECT,
 	],
 	'+srwiki' => [
-		'WP' => NS_PROJECT, // T286396
 		'VP' => NS_PROJECT, // T286396
 		'ВП' => NS_PROJECT, // T286396
 		'Vikipedija' => NS_PROJECT,
 		'Draft' => 118, // T223472
 		'Draft_talk' => 119, // T223472
 	],
-	'+svwiki' => [
-		'WP' => NS_PROJECT,
-	],
-	'+svwikinews' => [
-		'WN' => NS_PROJECT,
-	],
 	'+svwikisource' => [
 		'Author' => 106,
 		'Author_talk' => 107,
 	],
 	'+svwiktionary' => [
-		'WT' => NS_PROJECT,
 		'WT-diskussion' => NS_PROJECT_TALK,
 		'KAT' => NS_CATEGORY, // T214329
 	],
@@ -4238,15 +4252,10 @@ function wmfGetVariantSettings() {
 		'Portal' => 100,
 		'Portal_talk' => 101,
 	],
-	'+sysop_itwiki' => [
-		'WP' => NS_PROJECT, // T259243
-	],
 	'+tawiki' => [
-		'WP' => NS_PROJECT, // T126604
 		'WT' => NS_PROJECT_TALK, // T126604
 	],
 	'+testwiki' => [
-		'WP' => NS_PROJECT,
 		'WT' => NS_PROJECT_TALK,
 	],
 	'+tewikiquote' => [
@@ -4262,7 +4271,6 @@ function wmfGetVariantSettings() {
 		'Wiktionary_చర్చ' => NS_PROJECT_TALK, // T38533
 	],
 	'+thwiki' => [
-		'WP' => NS_PROJECT,
 		'H' => NS_HELP,
 	], // T70108
 	'+thwikibooks' => [
@@ -4274,14 +4282,12 @@ function wmfGetVariantSettings() {
 		'SUB' => 102, // T251118
 		'Subject' => 102, // T48153
 		'Subject_talk' => 103, // T48153
-		'WB' => NS_PROJECT,
 		'Wikijunior' => 106, // T251118
 		'WJ' => 106, // T251118
 	],
 	'+thwikisource' => [
 		'ผู้ประพันธ์' => 102, // T236640
 		'คุยเรื่องผู้ประพันธ์' => 103, // T236640
-		'WS' => NS_PROJECT, // T251134
 		'H' => NS_HELP, // T251134
 		'CAT' => NS_CATEGORY, // T251134
 		'Portal' => 100, // T251134
@@ -4291,6 +4297,8 @@ function wmfGetVariantSettings() {
 	],
 	'+thwiktionary' => [
 		'คุยเรื่องWiktionary' => NS_PROJECT_TALK,
+		'Rhymes' => 104,
+		'Rhymes_talk' => 105,
 	],
 	'+tiwiki' => [ // T263840
 		'ዊኪፔዲያ' => NS_PROJECT,
@@ -4300,14 +4308,10 @@ function wmfGetVariantSettings() {
 	'+tiwiktionary' => [ // T263840
 		'ዊኪ-መዝገበ-ቃላት_ምይይጥ' => NS_PROJECT_TALK,
 	],
-	'+tlwikibooks' => [
-		'WB' => NS_PROJECT,
-	],
 	'+trwiki' => [
 		'T' => NS_TALK, // T265336
 		'K' => NS_USER, // T265336
 		'VP' => NS_PROJECT, // T265336
-		'WP' => NS_PROJECT, // T265336
 		'Ş' => NS_TEMPLATE, // T265336
 		'Y' => NS_HELP, // T265336
 		'KAT' => NS_CATEGORY, // T265336
@@ -4323,7 +4327,6 @@ function wmfGetVariantSettings() {
 		// T266608
 		'T' => NS_TALK,
 		'K' => NS_USER,
-		'WB' => NS_PROJECT,
 		'Ş' => NS_TEMPLATE,
 		'Y' => NS_HELP,
 	],
@@ -4338,7 +4341,6 @@ function wmfGetVariantSettings() {
 		'T' => NS_TALK,
 		'K' => NS_USER,
 		'VK' => NS_PROJECT,
-		'WS' => NS_PROJECT,
 		'Ş' => NS_TEMPLATE,
 		'Y' => NS_HELP,
 		'KAT' => NS_CATEGORY,
@@ -4348,7 +4350,6 @@ function wmfGetVariantSettings() {
 		'T' => NS_TALK,
 		'K' => NS_USER,
 		'VS' => NS_PROJECT,
-		'WQ' => NS_PROJECT,
 		'Ş' => NS_TEMPLATE,
 		'Y' => NS_HELP,
 		'KAT' => NS_CATEGORY,
@@ -4357,7 +4358,6 @@ function wmfGetVariantSettings() {
 		'T' => NS_TALK,
 		'K' => NS_USER,
 		'VS' => NS_PROJECT,
-		'WT' => NS_PROJECT,
 		'Ş' => NS_TEMPLATE,
 		'Y' => NS_HELP,
 		'KAT' => NS_CATEGORY,
@@ -4368,13 +4368,11 @@ function wmfGetVariantSettings() {
 		'T' => NS_TALK, // T272782
 		'K' => NS_USER, // T272782
 		'VG' => NS_PROJECT, // T272782
-		'WV' => NS_PROJECT, // T272782
 		'Ş' => NS_TEMPLATE, // T272782
 		'Y' => NS_HELP, // T272782
 		'KAT' => NS_CATEGORY, // T272782
 	],
 	'+ttwiki' => [
-		'WP' => NS_PROJECT,
 		'ВП' => NS_PROJECT,
 	],
 	'+ukwiki' => [
@@ -4486,7 +4484,6 @@ function wmfGetVariantSettings() {
 		'Book_talk' => 109,
 	],
 	'+vecwiki' => [
-		'WP' => NS_PROJECT,
 		'Immagine' => NS_FILE,
 	],
 	'+viwiki' => [
@@ -4506,20 +4503,20 @@ function wmfGetVariantSettings() {
 		'Portal_talk' => 101,
 		'Author' => 102,
 		'Author_talk' => 103,
+		'Translation' => 114, // T290691
+		'Translation_talk' => 115,
 	],
 	'+yuewiktionary' => [ // T212678
 		'Index' => 100,
 		'Index_talk' => 101,
 		'Appendix' => 102,
 		'Appendix_talk' => 103,
-		'WT' => NS_PROJECT,
 		'T' => NS_TEMPLATE,
 		'U' => NS_USER,
 		'CAT' => NS_CATEGORY,
 	],
 	'+wuuwiki' => [
 		// English aliases - T124389
-		'WP' => NS_PROJECT,
 		'T' => NS_TEMPLATE,
 
 		// Wu aliases - T124389, T128354
@@ -4538,7 +4535,6 @@ function wmfGetVariantSettings() {
 		'模块' => 828, // NS_MODULE
 	],
 	'+zh_classicalwiki' => [
-		'WP' => NS_PROJECT, // T162547
 		'H' => NS_HELP, // T162547
 		'WT' => NS_PROJECT_TALK, // T162547
 		'T' => NS_TEMPLATE, // T162547
@@ -4552,7 +4548,6 @@ function wmfGetVariantSettings() {
 	'+zhwiki' => [
 		'维基百科' => NS_PROJECT,
 		'維基百科' => NS_PROJECT,
-		'WP' => NS_PROJECT,
 		'维基百科讨论' => NS_PROJECT_TALK,
 		'维基百科对话' => NS_PROJECT_TALK,
 		'維基百科討論' => NS_PROJECT_TALK,
@@ -4577,27 +4572,26 @@ function wmfGetVariantSettings() {
 		'模块讨论' => 829, // T165593
 		'模組' => 828, // T165593
 		'模組討論' => 829, // T165593
-		'專題' => 102, //T271612
-		'专题' => 102, //T271612
-		'維基專題' => 102, //T271612
-		'维基专题' => 102, //T271612
-		'PJ' => 102, //T271612
-		'WPJ' => 102, //T271612
-		'專題討論' => 103, //T271612
-		'专题讨论' => 103, //T271612
-		'專題對話' => 103, //T271612
-		'专题对话' => 103, //T271612
-		'維基專題討論' => 103, //T271612
-		'维基专题讨论' => 103, //T271612
-		'維基專題對話' => 103, //T271612
-		'维基专题对话' => 103, //T271612
-		'PJT' => 103, //T271612
-		'WPJT' => 103, //T271612
+		'專題' => 102, // T271612
+		'专题' => 102, // T271612
+		'維基專題' => 102, // T271612
+		'维基专题' => 102, // T271612
+		'PJ' => 102, // T271612
+		'WPJ' => 102, // T271612
+		'專題討論' => 103, // T271612
+		'专题讨论' => 103, // T271612
+		'專題對話' => 103, // T271612
+		'专题对话' => 103, // T271612
+		'維基專題討論' => 103, // T271612
+		'维基专题讨论' => 103, // T271612
+		'維基專題對話' => 103, // T271612
+		'维基专题对话' => 103, // T271612
+		'PJT' => 103, // T271612
+		'WPJT' => 103, // T271612
 	],
 	'+zhwikibooks' => [
 		'维基教科书' => NS_PROJECT,
 		'維基教科書' => NS_PROJECT,
-		'WB' => NS_PROJECT,
 		'CAT' => NS_CATEGORY, // T46308
 		'維基兒童' => 110, // T46308
 		'维基儿童' => 110, // T46308
@@ -4615,7 +4609,6 @@ function wmfGetVariantSettings() {
 		'頻道' => 100, // T257101
 		'频道_讨论' => 101, // T257101
 		'頻道_讨论' => 101, // T257101
-		'WN' => NS_PROJECT, // T266925
 		'U' => NS_USER, // T266925
 		'UT' => NS_USER_TALK, // T266925
 		'T' => NS_TEMPLATE, // T266925
@@ -4623,7 +4616,6 @@ function wmfGetVariantSettings() {
 		'H' => NS_HELP, // T266925
 	],
 	'+zhwikiquote' => [
-		'WQ' => NS_PROJECT, // T181374
 		'WT' => NS_PROJECT_TALK, // T181374
 		'T' => NS_TEMPLATE, // T181374
 		'H' => NS_HELP, // T181374
@@ -4638,7 +4630,6 @@ function wmfGetVariantSettings() {
 		'模組討論' => 829, // T165593
 	],
 	'+zhwikisource' => [
-		'WS' => NS_PROJECT, // T230548
 		'CAT' => NS_CATEGORY, // T230548
 		'作者' => 102, // Author
 		'作者讨论' => 103, // Author_talk
@@ -4654,7 +4645,6 @@ function wmfGetVariantSettings() {
 	],
 	'+zhwikiversity' => [
 		'T' => NS_TEMPLATE, // T202821
-		'WV' => NS_PROJECT, // T202821
 		'WT' => NS_PROJECT_TALK, // T202821
 		'维基学院' => NS_PROJECT, // T207544
 		'維基學院' => NS_PROJECT, // T207544
@@ -4730,7 +4720,6 @@ function wmfGetVariantSettings() {
 		'模組討論' => 829, // T165593
 		'CAT' => NS_CATEGORY, // T286101
 		'T' => NS_TEMPLATE, // T286101
-		'WT' => NS_PROJECT, // T286101
 		'重建' => 118, // T286101
 		'重構' => 118, // T286101
 		'重构' => 118, // T286101
@@ -4741,7 +4730,6 @@ function wmfGetVariantSettings() {
 		'重建討論' => 119, // T286101
 	],
 	'+zh_yuewiki' => [
-		'WP' => NS_PROJECT,
 		'WT' => NS_PROJECT_TALK,
 		'T' => NS_TEMPLATE,
 		'H' => NS_HELP,
@@ -5212,7 +5200,7 @@ function wmfGetVariantSettings() {
 	'dewiki' => [ '', 'autoconfirmed', 'editeditorprotected', 'sysop' ], // T94368
 	'dewiktionary' => [ '', 'autoconfirmed', 'editeditorprotected', 'editautoreviewprotected', 'sysop' ], // T216885
 	'enwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T126607, T57432
-	'enwiktionary' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T148007
+	'enwiktionary' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'templateeditor', 'sysop' ], // T148007, T296580
 	'enwikivoyage' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T198056
 	'etwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T153465
 	'fawiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T140839
@@ -5235,7 +5223,7 @@ function wmfGetVariantSettings() {
 	'srwiktionary' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
 	'svwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T279836
 	'testwiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T61084
-	'viwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T215493
+	'viwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T215493, T296154
 	'zhwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T260012, T287322
 	'zhwiktionary' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T286101
 ],
@@ -5322,6 +5310,7 @@ function wmfGetVariantSettings() {
 	'bhwiki' => false, // T160098
 	'hiwiki' => false, // T31279
 	'hiwikiversity' => false, // T182584
+	'kswiki' => false, // T296055
 	'tewiki' => false, // by request -- maybe remove from file
 	'mlwiki' => false, // 2005-01-03, by dubious request on Ts's talk page -ævar
 	'tewikibooks' => false,
@@ -5375,7 +5364,6 @@ function wmfGetVariantSettings() {
 		'captcha' => 'debug',
 		'CentralAuth' => 'debug',
 		'CentralAuthRename' => 'debug', // -legoktm 2014-07-14 for T69875
-		'CentralAuthUserMerge' => 'debug',
 		'CentralNotice' => 'debug',
 		'CirrusSearch' => 'debug',
 		'cirrussearch-request' => [ 'udp2log' => false, 'logstash' => false, 'eventbus' => 'debug', 'buffer' => true, ],
@@ -5464,6 +5452,7 @@ function wmfGetVariantSettings() {
 		'session-ip' => [ 'udp2log' => false, 'logstash' => 'info' ],
 		'SimpleAntiSpam' => 'debug',
 		'slow-parse' => 'debug',
+		'slow-parsoid' => 'info',
 		'SpamBlacklistHit' => 'debug',
 		'SpamRegex' => 'debug',
 		'SQLBagOStuff' => 'debug',
@@ -5495,6 +5484,7 @@ function wmfGetVariantSettings() {
 
 	'+private' => [
 		'slow-parse' => false,  // Don't log slow parse on private wikis, so we can make the slow parse log public.
+		'slow-parsoid' => false,  // Don't log slow parse on private wikis, so we can make the slow parse log public.
 	],
 	'+group1' => [
 		'authorization' => [ 'udp2log' => 'info', 'logstash' => false ],
@@ -5590,6 +5580,8 @@ function wmfGetVariantSettings() {
 		131 => '2020_talk',
 		132 => '2021',
 		133 => '2021_talk',
+		134 => '2022', // T295267
+		135 => '2022_talk', // T295267
 	],
 	# @}
 
@@ -5720,6 +5712,8 @@ function wmfGetVariantSettings() {
 		101 => 'Test_namespace_1_talk',
 		102 => 'Test_namespace_2',
 		103 => 'Test_namespace_2_talk',
+		118 => 'Draft', // T198143
+		119 => 'Draft_talk',
 	],
 	'test2wiki' => [
 		100 => 'Portal',
@@ -5785,6 +5779,8 @@ function wmfGetVariantSettings() {
 	'azwiki' => [
 		100 => 'Portal',
 		101 => 'Portal_müzakirəsi',
+		118 => 'Qaralama', // Draft - T299332
+		119 => 'Qaralama_müzakirəsi',
 	],
 	'azbwiki' => [
 		100 => 'پوْرتال', // T106305
@@ -5821,6 +5817,8 @@ function wmfGetVariantSettings() {
 	'bgwiki' => [
 		100 => 'Портал',
 		101 => 'Портал_беседа',
+		118 => 'Чернова', // T299224 - Draft
+		119 => 'Чернова_беседа',
 	],
 	'bjnwiki' => [
 		100 => 'Lawang', // T259429 Portal
@@ -5873,6 +5871,10 @@ function wmfGetVariantSettings() {
 		101 => 'Portaldiskussion',
 		102 => 'Artikeldata',
 		103 => 'Artikeldatadiskussion'
+	],
+	'+dagwiki' => [
+		104 => 'Salima', // T289911
+		105 => 'Salima_yɛltɔɣa',
 	],
 	'dewiki' => [
 		100 => 'Portal',
@@ -6155,15 +6157,10 @@ function wmfGetVariantSettings() {
 		100 => 'Portal', // T180052
 		101 => 'Cumbersa_portal', // T180052
 	],
-	'mywiktionary' => [
-		100 => 'နောက်ဆက်တွဲ', // T178545, Appendix
-		101 => 'နောက်ဆက်တွဲ_ဆွေးနွေးချက်',
-	],
 	'mznwiki' => [
 		100 => 'پورتال', # Portal
 		101 => 'پورتال_گپ', # Portal talk
 	],
-
 	'ndswiki' => [
 		100 => 'Portal',
 		101 => 'Portal_Diskuschoon'
@@ -6173,14 +6170,6 @@ function wmfGetVariantSettings() {
 		101 => 'पोर्टल_वार्ता',
 		118 => 'मस्यौदा', // T184157
 		119 => 'मस्यौदा_वार्ता',
-	],
-	'newikibooks' => [
-		102 => 'पाकपुस्तक', // T131754, Cookbook
-		103 => 'पाकपुस्तक_वार्ता', // T131754, Cookbook talk
-		104 => 'बालपुस्तक', // T131754, Wikijunior
-		105 => 'बालपुस्तक_वार्ता', // T131754, Wikijunior talk
-		106 => 'विषय', // T131754, Subject
-		107 => 'विषय_र्ता', // T131754, Subject talk
 	],
 	'newwiki' => [
 		100 => 'दबू',
@@ -6289,7 +6278,7 @@ function wmfGetVariantSettings() {
 	'scowiki' => [
 		100 => 'Portal', // T68107
 		101 => 'Portal_talk',
-		102 => 'Define', //T247172
+		102 => 'Define', // T247172
 		103 => 'Define_talk',
 	],
 	'sdwiki' => [
@@ -6301,6 +6290,10 @@ function wmfGetVariantSettings() {
 		101 => 'Portálaságastallan', // T41206
 	],
 	'shwiki' => [ 100 => 'Portal', 101 => 'Razgovor_o_portalu' ], // T32928
+	'shiwiki' => [
+		100 => 'Aggur', // T288909 - Portal
+		101 => 'Amsawal_n_waggur', // T288909 - Portal_talk
+	],
 	'shnwiki' => [ 100 => 'ၵိူၼ်ႇတူ', 101 => 'တွၼ်ႈဢုပ်ႇ_ၵိူၼ်ႇတူ' ], // T212992
 	'siwiki' => [ 100 => 'ද්වාරය', 101 => 'ද්වාරය_සාකච්ඡාව' ], // T8435, T26936
 	'skwiki' => [
@@ -6327,10 +6320,6 @@ function wmfGetVariantSettings() {
 		103 => 'Majadiliano_ya_Wikichanzo',
 	],
 	'tawiki' => [ 100 => 'வலைவாசல்', 101 => 'வலைவாசல்_பேச்சு', ],
-	'testwiki' => [
-		118 => 'Draft', // T198143
-		119 => 'Draft_talk',
-	],
 	'tewiki' => [ 100 => 'వేదిక', 101 => 'వేదిక_చర్చ', ],
 	'tgwiki' => [
 		100 => 'Портал',
@@ -6428,8 +6417,8 @@ function wmfGetVariantSettings() {
 	'zhwiki' => [
 		100 => 'Portal',
 		101 => 'Portal_talk',
-		102 => 'WikiProject',//T271612
-		103 => 'WikiProject_talk',//T271612
+		102 => 'WikiProject',// T271612
+		103 => 'WikiProject_talk',// T271612
 		118 => 'Draft', // T91223
 		119 => 'Draft_talk', // T91223
 		828 => 'Module', // T165593
@@ -6592,8 +6581,8 @@ function wmfGetVariantSettings() {
 		115 => 'अनुवाद_वार्ता', // T218155 - Translation talk
 	],
 	'hewikisource' => [
-		100 => 'קטע',
-		101 => 'שיחת_קטע',
+		# 100 => 'קטע', // Removed per T298430
+		# 101 => 'שיחת_קטע',
 		106 => 'ביאור',
 		107 => 'שיחת_ביאור',
 		108 => 'מחבר',
@@ -6808,6 +6797,8 @@ function wmfGetVariantSettings() {
 		101 => 'Thảo_luận_Chủ_đề',
 		102 => 'Tác_gia',
 		103 => 'Thảo_luận_Tác_gia',
+		114 => 'Biên_dịch', // T290691 - Translate
+		115 => 'Thảo_luận_Biên_dịch',
 	],
 	'wawikisource' => [
 		100 => 'Oteur', // T269431 - Author
@@ -7016,6 +7007,10 @@ function wmfGetVariantSettings() {
 		100 => 'Annexen',
 		101 => 'Annexen_Diskussioun',
 	],
+	'lmowiktionary' => [
+		100 => 'Apendice',
+		101 => 'Ciciarada_Apendice',
+	],
 	'ltwiktionary' => [
 		100 => 'Sąrašas',
 		101 => 'Sąrašo_aptarimas',
@@ -7051,6 +7046,10 @@ function wmfGetVariantSettings() {
 		113 => 'Perbincangan_padanan_isyarat', // Sign gloss talk - T255391
 		114 => 'Konkordans', // Concordance - T255391
 		115 => 'Perbincangan_konkordans', // Concordance talk - T255391
+	],
+	'mywiktionary' => [
+		100 => 'နောက်ဆက်တွဲ', // T178545, Appendix
+		101 => 'နောက်ဆက်တွဲ_ဆွေးနွေးချက်',
 	],
 	'ndswiktionary' => [ // T85122
 		100 => 'Anhang',
@@ -7134,18 +7133,20 @@ function wmfGetVariantSettings() {
 		101 => 'คุยเรื่องภาคผนวก', // Appendix talk
 		102 => 'ดัชนี', // Index - T114458
 		103 => 'คุยเรื่องดัชนี', // Index Talk
+		104 => 'สัมผัส', // Rhymes - T291761
+		105 => 'คุยเรื่องสัมผัส', // Rhymes_talk - T291761
 		110 => 'อรรถาภิธาน', // Thesaurus - T198585
 		111 => 'คุยเรื่องอรรถาภิธาน', // Thesaurus_talk
 	],
 	'trwiktionary' => [
 		100 => 'Portal',
 		101 => 'Portal_tartışma',
-		102 => 'YeniKurum', //START T248734 - Reconstruction (Talk)
+		102 => 'YeniKurum', // START T248734 - Reconstruction (Talk)
 		103 => 'YeniKurum_tartışma',
-		104 => 'Ek', //Appendix (Talk)
+		104 => 'Ek', // Appendix (Talk)
 		105 => 'Ek_tartışma',
-		106 => 'Alıntılar', //Citations (Talk)
-		107 => 'Alıntılar_tartışma', //END T248734
+		106 => 'Alıntılar', // Citations (Talk)
+		107 => 'Alıntılar_tartışma', // END T248734
 	],
 	'ukwiktionary' => [
 		// T15791
@@ -7153,6 +7154,10 @@ function wmfGetVariantSettings() {
 		101 => 'Обговорення_додатка', // appendix talk
 		102 => 'Індекс', // index
 		103 => 'Обговорення_індексу', // index talk
+	],
+	'viwiktionary' => [
+		100 => 'Phụ_lục', // Appendix - T298289
+		101 => 'Thảo_luận_Phụ_lục', // Appendix talk
 	],
 	'wawiktionary' => [
 		100 => 'Rawete', // T185289
@@ -7317,6 +7322,14 @@ function wmfGetVariantSettings() {
 	'mswikibooks' => [
 		100 => 'Resipi',
 		101 => 'Perbincangan_resipi',
+	],
+	'newikibooks' => [
+		102 => 'पाकपुस्तक', // T131754, Cookbook
+		103 => 'पाकपुस्तक_वार्ता', // T131754, Cookbook talk
+		104 => 'बालपुस्तक', // T131754, Wikijunior
+		105 => 'बालपुस्तक_वार्ता', // T131754, Wikijunior talk
+		106 => 'विषय', // T131754, Subject
+		107 => 'विषय_र्ता', // T131754, Subject talk
 	],
 	'nlwikibooks' => [
 		102 => 'Transwiki',
@@ -7687,6 +7700,12 @@ function wmfGetVariantSettings() {
 		102 => '포털', // T46899
 		103 => '포털토론', // T46899
 	],
+	'ruwikiversity' => [
+		100 => 'Портал', // T293545, Portal
+		101 => 'Обсуждение_портала', // T293545, Portal talk
+		102 => 'Факультет', // T293545, Faculty
+		103 => 'Обсуждения_факультета', // T293545, Faculty talk
+	],
 	'svwikiversity' => [
 		100 => 'Portal',
 		101 => 'Portaldiskussion',
@@ -7734,8 +7753,7 @@ function wmfGetVariantSettings() {
 		100 => 'Portale',
 		101 => 'Discussioni_portale',
 		// 102 and 103 (Elezione) deleted per T47636
-		104 => 'Tematica',
-		105 => 'Discussioni_tematica',
+		// 104 and 105 (Tematica) deleted per T298315
 		// 106 and 107 (Notizie) deleted per T47636
 	],
 	'jawikivoyage' => [
@@ -7775,6 +7793,8 @@ function wmfGetVariantSettings() {
 	'default' => 'vector',
 	'nostalgiawiki' => 'nostalgia',
 	'apiportalwiki' => 'wikimediaapiportal', // T259661
+	// Desktop improvement wikis:
+	'euwiki' => 'vector-2022',
 ],
 
 //
@@ -7821,10 +7841,6 @@ function wmfGetVariantSettings() {
 		],
 	],
 ],
-'wgVectorShowSkinPreferences' => [
-	// T254228
-	'default' => true,
-],
 // Skin versions are strings not numbers. See skins/Vector/skin.json.
 'wgVectorDefaultSkinVersion' => [
 	'default' => '1', // Legacy Vector
@@ -7841,6 +7857,11 @@ function wmfGetVariantSettings() {
 	// T254227
 	'desktop-improvements' => '2',
 ],
+'wgVectorSkinMigrationMode' => [
+	'default' => false,
+	// T299927
+	'euwiki' => true,
+],
 // T258588: Sidebar expanded for anons on modern Vector
 'wgVectorDefaultSidebarVisibleForAnonymousUser' => [
 	'desktop-improvements' => true,
@@ -7848,9 +7869,48 @@ function wmfGetVariantSettings() {
 
 'wgVectorStickyHeader' => [
 	'default' => [
+		'logged_in' => true,
+		'logged_out' => false,
+	],
+	'commonswiki' => [
 		'logged_in' => false,
 		'logged_out' => false,
 	],
+	'wikidatawiki' => [
+		'logged_in' => false,
+		'logged_out' => false,
+	],
+	'thwiki' => [ // T298519
+		'logged_in' => false,
+		'logged_out' => false,
+	],
+	'viwiki' => [ // T298519
+		'logged_in' => false,
+		'logged_out' => false,
+	],
+],
+
+'wgVectorWebABTestEnrollment' => [
+	'desktop-improvements' => [
+		'name' => 'vector.sticky_header',
+		'enabled' => true,
+		'buckets' => [
+			'unsampled' => [
+				'samplingRate' => 0
+			],
+			'control' => [
+				'samplingRate' => 0
+			],
+			'stickyHeaderDisabled' => [
+				'samplingRate' => 0.5
+			],
+			'stickyHeaderEnabled' => [
+				'samplingRate' => 0.5
+			],
+		],
+	],
+	'testwiki' => [],
+	'officewiki' => [],
 ],
 
 'wgVectorLanguageInHeader' => [
@@ -7887,6 +7947,32 @@ function wmfGetVariantSettings() {
 	'specieswiki' => [
 		'logged_in' => false,
 		'logged_out' => false
+	],
+],
+'wgVectorLanguageInMainPageHeader' => [
+	'default' => [
+		'logged_in' => false,
+		'logged_out' => false,
+	],
+	// T290480
+	'euwiki' => [
+		'logged_in' => true,
+		'logged_out' => true,
+	],
+],
+'wgVectorLanguageAlertInSidebar' => [
+	// T298519 Turn feature flag for language alert off for pilot wikis with exceptions.
+	'desktop-improvements' => [
+		'logged_in' => false,
+		'logged_out' => false,
+	],
+	'thwiki' => [
+		'logged_in' => true,
+		'logged_out' => true,
+	],
+	'viwiki' => [
+		'logged_in' => true,
+		'logged_out' => true,
 	],
 ],
 'wgVectorUseWvuiSearch' => [
@@ -8523,7 +8609,10 @@ function wmfGetVariantSettings() {
 	'+viwikisource' => [ 102 => 1, 106 => 1 ],
 	'+testwikidatawiki' => [ 120 => 1 ], // Search properties by default
 	'+wikidatawiki' => [ 120 => 1 ], // Search properties by default
-	'+wikimaniawiki' => [ 132 => 1 /* 2021 content */ ],
+	'+wikimaniawiki' => [
+		132 => 1, // 2021, T284793
+		134 => 1, // 2022, T295267
+	],
 	'+zhwikisource' => [ 102 => 1, 106 => 1, 114 => 1 ], // T66127
 ],
 # @} end of wgNamespacesToBeSearchedDefault
@@ -8563,7 +8652,7 @@ function wmfGetVariantSettings() {
 		'emailuser' => [
 			'ip' => [ 5, 86400 ], // 5 per day per ip (logged-out and new users)
 			'newbie' => [ 5, 86400 ], // 5 per day for non-autoconfirmed
-			'user' => [ 20, 86400 ], // 20 per day for users
+			'user-global' => [ 20, 86400 ], // 20 per day for users
 		],
 		'changeemail' => [
 			'ip-all' => [ 10, 3600 ],
@@ -8659,7 +8748,6 @@ function wmfGetVariantSettings() {
 		// Browser tests run by Jenkins on WMCS instances - T167432
 		// Network ranges come from:
 		//   https://wikitech.wikimedia.org/wiki/Portal:Cloud_VPS/Admin/Neutron
-		'10.68.16.0/21',  # Compat networking (eqiad1 legacy)
 		'172.16.0.0/21',  # LAN for instances (eqiad1 Neutron)
 	],
 ],
@@ -8975,10 +9063,41 @@ function wmfGetVariantSettings() {
 			'suppressredirect' => true, // T233137
 		],
 	],
+	'+bnwikibooks' => [
+		'autopatrolled' => [ 'autopatrol' => true ], // T296640
+		'patroller' => [
+			'patrol' => true,
+			'patrolmarks' => true,
+			'rollback' => true,
+			'suppressredirect' => true,
+		], // T296640
+	],
 	'+bnwikisource' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T199475
 		'flood' => [ 'bot' => true ], // T129087
 		'filemover' => [ 'movefile' => true ], // T129087
+	],
+	'+bnwikivoyage' => [
+		'autopatrolled' => [
+			'autopatrol' => true, // T296637
+		],
+		'patroller' => [
+			'patrol' => true, // T296637
+			'patrolmarks' => true, // T296637
+			'rollback' => true, // T296637
+			'suppressredirect' => true, // T296637
+		],
+	],
+	'+bnwiktionary' => [
+		'autopatrolled' => [
+			'autopatrol' => true, // T298187
+		],
+		'patroller' => [
+			'patrol' => true, // T298187
+			'patrolmarks' => true, // T298187
+			'rollback' => true, // T298187
+			'suppressredirect' => true, // T298187
+		],
 	],
 	'+bgwiki' => [
 		'autopatrolled' => [ 'autopatrol' => true, ],
@@ -9350,7 +9469,8 @@ function wmfGetVariantSettings() {
 		'sysop' => [
 			'templateeditor' => true, // T57432
 			'changetags' => true, // T97013
-			'extendedconfirmed' => true // T126607
+			'extendedconfirmed' => true, // T126607
+			'autopatrol' => false, // T297058
 		],
 		'massmessage-sender' => [ 'massmessage' => true, ], // T60962
 		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T126607
@@ -9382,7 +9502,10 @@ function wmfGetVariantSettings() {
 		'flood' => [ 'bot' => true ],
 	],
 	'+enwikisource' => [
-		'autoconfirmed' => [ 'patrol' => true ], // T14355
+		'autoconfirmed' => [
+			'patrol' => true, // T14355
+			'upload_by_url' => true, // T294447
+		],
 		'autopatrolled' => [ 'autopatrol' => true ], // T20307
 		'flood' => [ 'bot' => true ], // T38863
 		'upload-shared' => [ // T285130
@@ -9420,7 +9543,10 @@ function wmfGetVariantSettings() {
 	],
 	// T7033
 	'+enwiktionary' => [
-		'autopatrolled' => [ 'autopatrol' => true ],
+		'autopatrolled' => [
+			'autopatrol' => true,
+			'editautopatrolprotected' => true,
+		], // T296580
 		'extendedmover' => [
 			'move' => true,
 			'move-subpages' => true,
@@ -9507,7 +9633,10 @@ function wmfGetVariantSettings() {
 	],
 	'+fawiki' => [
 		'*' => [ 'createpage' => false ], // T29195
-		'user' => [ 'move-categorypages' => false ], // T67728
+		'user' => [
+			'move-categorypages' => false, // T67728
+			'move-rootuserpages' => false,  // T299847
+		],
 		'bot' => [
 			'move-categorypages' => true, // T67728
 			'extendedconfirmed' => true, // T241904
@@ -9562,9 +9691,18 @@ function wmfGetVariantSettings() {
 			'autoreviewrestore' => true,
 			'validate' => true,
 			'review' => true,
+			'flow-delete' => true, // T299223
 		], // T87558, T135370, T135725, T176553
 		'sysop' => [ 'extendedconfirmed' => true, ],
 		'extendedconfirmed' => [ 'extendedconfirmed' => true, ], // T140839
+		'extendedmover' => [ // T299038
+			'suppressredirect' => true,
+			'move-subpages' => true,
+			'move' => true,
+			'tboverride' => true,
+			'move-categorypages' => true,
+			'delete-redirect' => true,
+		],
 	],
 	'+fawikibooks' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T111024
@@ -9617,9 +9755,20 @@ function wmfGetVariantSettings() {
 		'autoreview' => [ 'autopatrol' => true ], // T144817
 	],
 	'+foundationwiki' => [
+		'*' => [
+			'edit' => false,
+		],
 		'user' => [
-			'editinterface' => true,
-			'editsitejson' => true,
+			'upload' => false,
+			'reupload' => false,
+			'reupload-own' => false,
+			'reupload-shared' => false,
+		],
+		'autoconfirmed' => [
+			'upload' => false,
+			'reupload' => false,
+			'reupload-own' => false,
+			'reupload-shared' => false,
 		],
 		'editor' => [
 			'edit-legal' => true,
@@ -9629,6 +9778,9 @@ function wmfGetVariantSettings() {
 			'skipcaptcha' => true,
 			'editinterface' => true,
 			'editsitejson' => true,
+			'upload' => true,
+			'reupload' => true,
+			'reupload-own' => true,
 		],
 		'flood' => [ 'bot' => true ],
 	],
@@ -9775,6 +9927,9 @@ function wmfGetVariantSettings() {
 			'deletedtext' => true,
 			'abusefilter-log-detail' => true,
 		],
+		'templateeditor' => [
+			'templateeditor' => true,
+		], // T296769
 	],
 	'+hewikibooks' => [
 		'patroller' => [
@@ -10068,9 +10223,6 @@ function wmfGetVariantSettings() {
 	'+kswiki' => [
 		'rollbacker' => [ 'rollback' => true ], // T286789
 	],
-	'+labswiki' => [
-		'bureaucrat' => [ 'usermerge' => true ],
-	],
 	'+ladwiki' => [
 		'flood' => [ 'bot' => true ], // T131527
 	],
@@ -10086,15 +10238,6 @@ function wmfGetVariantSettings() {
 			'createaccount' => true,
 		],
 		'autopatrolled' => [ 'autopatrol' => true ],
-		'cloudadmin' => [
-			'autopatrol' => true,
-			'listall' => true,
-			'manageproject' => true,
-			'userrights' => true,
-			'managednsdomain' => true,
-			'accessrestrictedregions' => true,
-			'editallhiera' => true,
-		],
 		'flood' => [ 'bot' => true ],
 		'oathauth' => [ 'oathauth-api-all' => true ], // T153487
 		'oauthadmin' => [ 'autopatrol' => true ],
@@ -10458,6 +10601,7 @@ function wmfGetVariantSettings() {
 			'autopatrol' => true,
 			'editautoreviewprotected' => true,
 			'movefile' => true, // T161532
+			'extendedconfirmed' => true, // T292912
 		],
 		'eliminator' => [
 			'browsearchive' => true,
@@ -10477,7 +10621,7 @@ function wmfGetVariantSettings() {
 			'rollback' => true,
 			'unwatchedpages' => true,
 			'block' => true, // T37261
-			'abusefilter-log-private' => true, //T237830
+			'abusefilter-log-private' => true, // T237830
 		], // T29563
 		'user' => [ 'move-rootuserpages' => false, ],
 		'sysop' => [
@@ -10495,6 +10639,7 @@ function wmfGetVariantSettings() {
 		],
 		'flood' => [ 'bot' => true, ], // T228521
 		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T281860
+		'autoextendedconfirmed' => [ 'extendedconfirmed' => true ], // T292915
 	],
 	'+ptwikinews' => [
 		'editprotected' => [
@@ -11073,25 +11218,40 @@ function wmfGetVariantSettings() {
 		'flood' => [ 'bot' => true ],
 	],
 	'+viwiki' => [
-		'eliminator' => [ // T70612
+		'eliminator' => [ // T70612, T294530
 			'autopatrol' => true,
+			'browsearchive' => true,
 			'delete' => true,
+			'deletelogentry' => true,
 			'deletedhistory' => true,
 			'deletedtext' => true,
 			'deleterevision' => true,
+			'mergehistory' => true,
+			'movefile' => true,
+			'move-subpages' => true,
+			'nuke' => true,
 			'patrol' => true,
 			'protect' => true,
+			'suppressredirect' => true,
 			'rollback' => true,
 			'undelete' => true,
-			'extendedconfirmed' => true
-		], // T215493
+			'extendedconfirmed' => true, // T215493
+		],
 		'flood' => [ 'bot' => true ],
 		'rollbacker' => [ 'rollback' => true ],
 		'patroller' => [ 'patrol' => true ], // T48828
 		'autopatrolled' => [ 'autopatrol' => true ], // T48828
-		'sysop' => [ 'extendedconfirmed' => true ], // T215493
+		'sysop' => [
+			'extendedconfirmed' => true, // T215493
+			'templateeditor' => true // T296154
+		],
 		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T215493
 		'bot' => [ 'extendedconfirmed' => true ], // T215493
+		'templateeditor' => [
+			'templateeditor' => true,
+			'tboverride' => true,
+			'editcontentmodel' => true
+		], // T296154
 	],
 	'+viwikibooks' => [
 		'eliminator' => [ // T202207
@@ -11122,7 +11282,10 @@ function wmfGetVariantSettings() {
 			'securepoll-create-poll' => true,
 			'editinterface' => true,
 		],
-		'electionadmin' => [ 'editinterface' => true ],
+		'electionadmin' => [
+			'editinterface' => true,
+			'securepoll-view-voter-pii' => true,
+		],
 	],
 	'wikidata' => [
 		'autoconfirmed' => [
@@ -11434,7 +11597,7 @@ function wmfGetVariantSettings() {
 		// metawiki local groups with global powers (some also on testwiki)
 		'centralnoticeadmin', 'global-renamer', 'translationadmin', 'wmf-officeit', 'wmf-supportsafety',
 		// wikitech local groups with global powers
-		'cloudadmin', 'oathauth',
+		'oathauth',
 	],
 	'+fishbowl' => [ 'user' ],
 	'+private' => [ 'user' ],
@@ -11559,8 +11722,17 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'autopatrolled', 'filemover', 'flood', 'rollbacker' ],
 		'bureaucrat' => [ 'import' ],
 	],
+	'+bnwikibooks' => [
+		'sysop' => [ 'autopatrolled', 'patroller' ], // TT296640
+	],
 	'+bnwikisource' => [
 		'sysop' => [ 'autopatrolled', 'filemover', 'flood' ], // T129087
+	],
+	'+bnwikivoyage' => [
+		'sysop' => [ 'autopatrolled', 'patroller' ], // T296637
+	],
+	'+bnwiktionary' => [
+		'sysop' => [ 'autopatrolled', 'patroller' ], // T298187
 	],
 	'+brwikimedia' => [
 		'sysop' => [ 'autopatrolled', 'confirmed', 'translationadmin' ], // T60123, T65345
@@ -11678,6 +11850,7 @@ function wmfGetVariantSettings() {
 	],
 	'+enwikiversity' => [
 		'sysop' => [ 'curator' ], // T113109
+		'bureaucrat' => [ 'import' ], // T294930
 	],
 	'+eswiki' => [
 		'bureaucrat' => [ 'abusefilter', 'rollbacker' ], // T262174
@@ -11727,6 +11900,7 @@ function wmfGetVariantSettings() {
 			'patroller', // T118847
 			'extendedconfirmed', // T140839
 			'eliminator', // T162396
+			'extendedmover', // T299038
 		]
 	],
 	'+fawikibooks' => [
@@ -11770,8 +11944,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'rollbacker', 'accountcreator' ], // T149986
 	],
 	'+foundationwiki' => [
-		'sysop' => [ 'inactive', 'flood', 'editor' ],
-		'bureaucrat' => [ 'inactive', 'oauthadmin' ],
+		'sysop' => [ 'flood', 'editor' ],
 	],
 	'+frwiki' => [
 		'sysop' => [ 'rollbacker' ], // T170780
@@ -11806,7 +11979,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'autopatrolled', 'rollbacker', 'transwiki' ], // T119787, T119787, T120346
 	],
 	'+hewiki' => [
-		'sysop' => [ 'patroller', 'autopatrolled', 'accountcreator' ],
+		'sysop' => [ 'patroller', 'autopatrolled', 'accountcreator', 'templateeditor' ], // T296769
 	],
 	'+hewikibooks' => [
 		'sysop' => [ 'patroller', 'autopatrolled' ],
@@ -12015,7 +12188,12 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'reviewer', 'editprotected' ], // T162577
 	],
 	'+ptwikivoyage' => [
-		'sysop' => [ 'autopatrolled' ], // T168981
+		'sysop' => [
+			'accountcreator',
+			'autopatrolled', // T168981
+			'confirmed',
+			'transwiki'
+		], // T292806
 	],
 	'+ptwiki' => [
 		'bureaucrat' => [ 'rollbacker', 'eliminator', 'autoreviewer', 'interface-editor', 'flood' ], // T41905, T65750, T212735, T228521
@@ -12180,7 +12358,8 @@ function wmfGetVariantSettings() {
 			'flood',
 			'patroller', // T48828
 			'autopatrolled', // T48828
-			'extendedconfirmed' // T215493
+			'extendedconfirmed', // T215493
+			'templateeditor' // T296154
 		],
 		'bureaucrat' => [
 			'eliminator', // T70612
@@ -12401,8 +12580,17 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'autopatrolled', 'filemover', 'flood', 'rollbacker' ],
 		'bureaucrat' => [ 'import' ],
 	],
+	'+bnwikibooks' => [
+		'sysop' => [ 'autopatrolled', 'patroller' ], // TT296640
+	],
 	'+bnwikisource' => [
 		'sysop' => [ 'autopatrolled', 'filemover', 'flood' ], // T129087
+	],
+	'+bnwikivoyage' => [
+		'sysop' => [ 'autopatrolled', 'patroller' ], // T296637
+	],
+	'+bnwiktionary' => [
+		'sysop' => [ 'autopatrolled', 'patroller' ], // T298187
 	],
 	'+brwikimedia' => [
 		'sysop' => [ 'translationadmin', 'autopatrolled', 'confirmed' ], // T7812, T65345
@@ -12522,6 +12710,7 @@ function wmfGetVariantSettings() {
 	],
 	'+enwikiversity' => [
 		'sysop' => [ 'curator' ], // T113109
+		'bureaucrat' => [ 'import' ], // T294930
 	],
 	'+enwikisource' => [
 		'bureaucrat' => [ 'autopatrolled', 'flood' ], // T38863
@@ -12572,6 +12761,7 @@ function wmfGetVariantSettings() {
 			'confirmed', // T87348
 			'patroller', // T118847
 			'extendedconfirmed', // T140839
+			'extendedmover', // T299038
 		],
 	],
 	'+fawikibooks' => [
@@ -12618,8 +12808,7 @@ function wmfGetVariantSettings() {
 		'bureaucrat' => [ 'sysop', 'bureaucrat' ],
 	],
 	'+foundationwiki' => [
-		'sysop' => [ 'inactive', 'confirmed', 'flood', 'editor' ],
-		'bureaucrat' => [ 'inactive', 'confirmed', 'oauthadmin' ],
+		'sysop' => [ 'confirmed', 'flood', 'editor' ],
 	],
 	'+frwiki' => [
 		'sysop' => [ 'rollbacker' ], // T170780
@@ -12654,7 +12843,7 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'autopatrolled', 'rollbacker', 'transwiki' ], // T119787, T119787, T120346
 	],
 	'+hewiki' => [
-		'sysop' => [ 'patroller', 'autopatrolled', 'accountcreator' ],
+		'sysop' => [ 'patroller', 'autopatrolled', 'accountcreator', 'templateeditor' ], // T296769
 	],
 	'+hewikibooks' => [
 		'sysop' => [ 'patroller', 'autopatrolled' ],
@@ -12884,7 +13073,12 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'reviewer', 'editprotected' ], // T162577
 	],
 	'+ptwikivoyage' => [
-		'sysop' => [ 'autopatrolled' ], // T168981
+		'sysop' => [
+			'accountcreator',
+			'autopatrolled', // T168981
+			'confirmed',
+			'transwiki'
+		], // T292806
 	],
 	'+quwiki' => [
 		'sysop' => [ 'rollbacker' ],
@@ -13049,7 +13243,8 @@ function wmfGetVariantSettings() {
 			'flood',
 			'patroller', // T48828
 			'autopatrolled', // T48828
-			'extendedconfirmed' // T215493
+			'extendedconfirmed', // T215493
+			'templateeditor' // T296154
 		],
 		'bureaucrat' => [
 			'eliminator', // T70612
@@ -13130,7 +13325,7 @@ function wmfGetVariantSettings() {
 			'flood',
 			'massmessage-sender', // T130814
 			'filemover', // T195247
-			'eventparticipant', //T198167
+			'eventparticipant', // T198167
 			'transwiki', // T250972
 			'templateeditor', // T260012
 		],
@@ -13218,6 +13413,7 @@ function wmfGetVariantSettings() {
 	'betawikiversity' => [ 'meta', 'b', 'en', 'incubator', 'de', 'wikipedia:lt', 'wikipedia:zh' ], // T139922
 	'bhwiki' => [ 'commons', 'meta', 'species', 'de', 'en', 'wikibooks:en', 'wikiquote:en', 'wikinews:en', 'wikisource:en', 'wikiversity:en', 'es', 'fa', 'fr', 'hi', 'ml', 'ne', 'nl', 'ro', 'ru', 'pl', 'pt', 'simple', 'ta', 'ur' ], // T70616
 	'bnwiki' => [ 'en' ], // T36791
+	'bnwikibooks' => [ 'b:en' ], // T295051
 	'bnwikisource' => [ 'OldWikisource', 'w', 'en' ],
 	'cawikibooks' => [ 'w', 's', 'q', 'n', 'wikt', 'en', 'es', 'fr', 'it', 'de', 'pt', 'meta', 'w:en', 'w:es', 'w:fr', 'w:it', 'w:de', 'w:pt' ], // T93750
 	'cawikinews' => [ 'w', 'wikt', 'q', 'b', 's', 'v', 'fr', 'en', 'de', 'es', 'pt', 'it', 'commons', 'meta', 'eo', 'pl', 'ja', 'ru', 'sr', 'tr', 'uk', 'zh' ], // T93203
@@ -13264,7 +13460,7 @@ function wmfGetVariantSettings() {
 	'enwikisource' => [ 'w', 'mul', 'b', 'commons', 'q', 'mw', 'd' ], // T17571 T155922 T160403
 	'enwikibooks' => [ 'w', 's', 'q', 'v', 'wikt', 'n', 'meta', 'simple', 'species', 'OldWikisource', 'commons' ], // T13226, T14665, T142333
 	'enwikiquote' => [ 'w', 'commons', 'wikidata' ], // T228607
-	'enwikiversity' => [ 'betawikiversity', 'w', 'b', 'q', 's', 'w:simple', 'commons' ], // T115938, T123212
+	'enwikiversity' => [ 'betawikiversity', 'w', 'b', 'q', 's', 'voy', 'w:simple', 'commons' ], // T115938, T123212, T294928
 	'enwikivoyage' => [ 'b', 'meta', 'w' ], // T44450, T65095
 	'eowikisource' => [ 'meta', 'commons', 'b:eo' ], // T45659
 	'eswiki' => [ 'b', 'q', 'v', 'wikt', 'n', 's', 'en' ],
@@ -13485,6 +13681,7 @@ function wmfGetVariantSettings() {
 	'thwikisource' => [ 'oldwikisouce', 'b', 'q', 'w', 'wikt' ], // T275281
 	'tnwiki' => [ 'en' ], // T53327
 	'tpiwiki' => [ 'en', 'simple', 'wikt:en', 'commons' ], // T26769
+	'twwiki' => [ 'ak', 'en', 'ar', 'es', 'fr', 'ru', 'zh', 'de', 'id', 'commons', 'meta', 'incubator' ], // T298296
 	'urwiki' => [ 'ar', 'en', 'fa', 'fr', 'he' ], // T212612
 	'vecwiki' => [ 'it' ], // T21639
 	'vecwiktionary' => [ 'w', 'en', 'fr', 'it' ], // T51575
@@ -13635,6 +13832,10 @@ function wmfGetVariantSettings() {
 ],
 
 'wgNamespaceRobotPolicies' => [
+	'azwiki' => [
+		118 => 'noindex,nofollow', // Draft - T299332
+		119 => 'noindex,nofollow',
+	],
 	'bnwiki' => [
 		NS_USER => 'noindex,follow', // T286152
 		NS_USER_TALK => 'noindex,follow',
@@ -13699,6 +13900,8 @@ function wmfGetVariantSettings() {
 		829 => 'noindex,follow',
 	],
 	'fawiki' => [
+		NS_USER => 'noindex,nofollow', // T299363
+		NS_USER_TALK => 'noindex,nofollow', // T299363
 		118 => 'noindex,nofollow', // draft, T92760
 		119 => 'noindex,nofollow', // draft talk, T92760
 	],
@@ -14011,8 +14214,18 @@ function wmfGetVariantSettings() {
 	// Namespaces not listed in $wgContentNamespaces are not necessary here
 	// for core, but reinforcing default config doesn't harm.
 	'default' => [ NS_PROJECT, NS_HELP ],
+
+	// Wikis primarily used for discussion and coordination.
+	// They often have discussions, including their "village pump" equivalent, in the main namespace.
+	'+incubatorwiki' => [ NS_MAIN ],
+	'+labswiki' => [ NS_MAIN ],
+	'+labtestwiki' => [ NS_MAIN ],
+	'+mediawikiwiki' => [ NS_MAIN ],
+	'+metawiki' => [ NS_MAIN ],
+	'+outreachwiki' => [ NS_MAIN ],
+	'+wikimania' => [ NS_MAIN ],
 	'+wikimedia' => [ NS_MAIN ],
-	'+special' => [ NS_MAIN ],
+	'+private' => [ NS_MAIN ],
 
 	'+dewiki' => [ 100 ], // T145619 - Portal
 	'+dewikivoyage' => [ 102 ], // T119420
@@ -14041,12 +14254,15 @@ function wmfGetVariantSettings() {
 	// __NOINDEX__ and __INDEX__ will be ignored for these namepaces,
 	// as well as for namespaces in $wgContentNamespaces.
 	'default' => [],
+	'azwiki' => [ 118, 119 ], // draft and draft talk - T299332
+	'bgwiki' => [ 118, 119 ], // draft and draft talk - T299224
 	'enwiki' => [ 118, 119 ], // draft and draft talk
+	'fawiki' => [ 118, 119 ], // draft and draft talk - T299850
 	'hewiki' => [ 118, 119 ], // draft and draft talk - T86329
 	'itwiki' => [ 118, 119 ], // draft and draft talk - T280289
 	'kowiki' => [ 118, 119 ], // draft and draft talk - T92798
 	'thwiki' => [ 118, 119 ], // draft and draft talk - T252959
-	'zhwiki' => [ 118, 119 ], // draft and draft talk - T91223
+	'zhwiki' => [ 2, 3, 118, 119 ], // user and user talk - T288947, draft and draft talk - T91223
 ],
 
 'wgRevisionCacheExpiry' => [
@@ -14105,6 +14321,8 @@ function wmfGetVariantSettings() {
 	'lockeddown' => false,
 ],
 
+# Set to false in case of emergency to disable Score with a nice
+# fallback message instead of breaking pages with error messages
 'wmgUseScoreShellbox' => [
 	'default' => true,
 	# Do not enable on higher-security wikis
@@ -14156,159 +14374,65 @@ function wmfGetVariantSettings() {
 ],
 
 'wgProofreadPageUseStatusChangeTags' => [
-	'default' => false,
-	'sourceswiki' => true, // T289140
+	'default' => true, // T289140
 ],
 
+// DO NOT enable on any other wikis
 'wmgUseDynamicPageList' => [
 	'default' => false,
 
 	'bdwikimedia' => true, // T188109
-	'bswiki' => true, // T10240
 	'dewiktionary' => true,
 	'enwiktionary' => true,
-	'eswiktionary' => true, // T9952
 	'frrwiki' => true, // T40023
 	'incubatorwiki' => true,
-	'iswiktionary' => true, // T9952
 	'legalteamwiki' => true, // T64610
 	'mediawikiwiki' => true, // T71974
 	'metawiki' => true,
-	'nowikimedia' => true, // T127161
 	'officewiki' => true,
 	'otrs_wikiwiki' => true,
 	'outreachwiki' => true, // T58245
 	'ptwiki' => true, // T37308
 	'srwiki' => true,
 	'srwiktionary' => true, // T70346
-	'strategywiki' => true,
 	'viwiktionary' => true, // T10886
-	'wikimania2016wiki' => true,
 
 	// Wikis where it was previously enabled by default by virtue
 	// of being in a wiki family
 
 	// Wikibooks
-	'aawikibooks' => true,
-	'afwikibooks' => true,
-	'akwikibooks' => true,
-	'angwikibooks' => true,
 	'arwikibooks' => true,
-	'astwikibooks' => true,
-	'aswikibooks' => true,
-	'aywikibooks' => true,
-	'azwikibooks' => true,
-	'bawikibooks' => true,
-	'bewikibooks' => true,
-	'bgwikibooks' => true,
-	'biwikibooks' => true,
-	'bmwikibooks' => true,
 	'bnwikibooks' => true,
-	'bowikibooks' => true,
-	'bswikibooks' => true,
-	'cawikibooks' => true,
-	'chwikibooks' => true,
-	'cowikibooks' => true,
-	'cswikibooks' => true,
-	'cvwikibooks' => true,
 	'cywikibooks' => true,
-	'dawikibooks' => true,
 	'dewikibooks' => true,
 	'elwikibooks' => true,
 	'enwikibooks' => true,
-	'eowikibooks' => true,
 	'eswikibooks' => true,
-	'etwikibooks' => true,
 	'euwikibooks' => true,
 	'fawikibooks' => true,
 	'fiwikibooks' => true,
 	'frwikibooks' => true,
-	'fywikibooks' => true,
-	'gawikibooks' => true,
-	'glwikibooks' => true,
-	'gnwikibooks' => true,
-	'gotwikibooks' => true,
-	'guwikibooks' => true,
-	'hewikibooks' => true,
 	'hiwikibooks' => true,
-	'hrwikibooks' => true,
 	'huwikibooks' => true,
-	'hywikibooks' => true,
-	'iawikibooks' => true,
-	'idwikibooks' => true,
-	'iewikibooks' => true,
-	'iswikibooks' => true,
 	'itwikibooks' => true,
-	'jawikibooks' => true,
-	'kawikibooks' => true,
-	'kkwikibooks' => true,
 	'kmwikibooks' => true,
-	'knwikibooks' => true,
-	'kowikibooks' => true,
-	'kswikibooks' => true,
-	'kuwikibooks' => true,
-	'kywikibooks' => true,
-	'lawikibooks' => true,
-	'lbwikibooks' => true,
-	'liwikibooks' => true,
-	'lnwikibooks' => true,
-	'ltwikibooks' => true,
 	'lvwikibooks' => true,
-	'mgwikibooks' => true,
-	'miwikibooks' => true,
-	'mkwikibooks' => true,
 	'mlwikibooks' => true,
-	'mnwikibooks' => true,
-	'mrwikibooks' => true,
-	'mswikibooks' => true,
-	'mywikibooks' => true,
-	'nahwikibooks' => true,
-	'nawikibooks' => true,
-	'ndswikibooks' => true,
 	'newikibooks' => true,
 	'nlwikibooks' => true,
-	'nowikibooks' => true,
-	'ocwikibooks' => true,
-	'pawikibooks' => true,
 	'plwikibooks' => true,
-	'pswikibooks' => true,
 	'ptwikibooks' => true,
-	'quwikibooks' => true,
-	'rmwikibooks' => true,
 	'rowikibooks' => true,
 	'ruwikibooks' => true,
-	'sawikibooks' => true,
-	'sewikibooks' => true,
-	'simplewikibooks' => true,
 	'siwikibooks' => true,
-	'skwikibooks' => true,
-	'slwikibooks' => true,
-	'sqwikibooks' => true,
 	'srwikibooks' => true,
-	'suwikibooks' => true,
 	'svwikibooks' => true,
-	'swwikibooks' => true,
 	'tawikibooks' => true,
-	'tewikibooks' => true,
-	'tgwikibooks' => true,
 	'thwikibooks' => true,
-	'tkwikibooks' => true,
 	'tlwikibooks' => true,
-	'trwikibooks' => true,
-	'ttwikibooks' => true,
-	'ugwikibooks' => true,
 	'ukwikibooks' => true,
-	'urwikibooks' => true,
-	'uzwikibooks' => true,
 	'viwikibooks' => true,
-	'vowikibooks' => true,
-	'wawikibooks' => true,
-	'xhwikibooks' => true,
-	'yowikibooks' => true,
-	'zawikibooks' => true,
-	'zh_min_nanwikibooks' => true,
 	'zhwikibooks' => true,
-	'zuwikibooks' => true,
 
 	// Wikinews
 	'arwikinews' => true,
@@ -14325,7 +14449,6 @@ function wmfGetVariantSettings() {
 	'fiwikinews' => true,
 	'frwikinews' => true,
 	'hewikinews' => true,
-	'huwikinews' => true,
 	'itwikinews' => true,
 	'jawikinews' => true,
 	'kowikinews' => true,
@@ -14342,196 +14465,41 @@ function wmfGetVariantSettings() {
 	'srwikinews' => true,
 	'svwikinews' => true,
 	'tawikinews' => true,
-	'thwikinews' => true,
 	'trwikinews' => true,
 	'ukwikinews' => true,
 	'zhwikinews' => true,
 
 	// Wikiquote
-	'afwikiquote' => true,
-	'amwikiquote' => true,
-	'angwikiquote' => true,
-	'arwikiquote' => true,
-	'astwikiquote' => true,
-	'azwikiquote' => true,
-	'bewikiquote' => true,
-	'bgwikiquote' => true,
-	'bmwikiquote' => true,
-	'brwikiquote' => true,
-	'bswikiquote' => true,
-	'cawikiquote' => true,
-	'cowikiquote' => true,
-	'crwikiquote' => true,
-	'cswikiquote' => true,
-	'cywikiquote' => true,
-	'dawikiquote' => true,
-	'dewikiquote' => true,
-	'elwikiquote' => true,
 	'enwikiquote' => true,
-	'eowikiquote' => true,
 	'eswikiquote' => true,
-	'etwikiquote' => true,
-	'euwikiquote' => true,
 	'fawikiquote' => true,
-	'fiwikiquote' => true,
-	'frwikiquote' => true,
-	'gawikiquote' => true,
-	'glwikiquote' => true,
-	'guwikiquote' => true,
-	'hewikiquote' => true,
-	'hiwikiquote' => true,
-	'hrwikiquote' => true,
-	'huwikiquote' => true,
-	'hywikiquote' => true,
-	'idwikiquote' => true,
-	'iswikiquote' => true,
 	'itwikiquote' => true,
-	'jawikiquote' => true,
-	'kawikiquote' => true,
-	'kkwikiquote' => true,
-	'knwikiquote' => true,
-	'kowikiquote' => true,
-	'krwikiquote' => true,
-	'kswikiquote' => true,
-	'kuwikiquote' => true,
-	'kwwikiquote' => true,
-	'kywikiquote' => true,
-	'lawikiquote' => true,
-	'lbwikiquote' => true,
-	'liwikiquote' => true,
-	'ltwikiquote' => true,
-	'mlwikiquote' => true,
-	'mrwikiquote' => true,
-	'nawikiquote' => true,
-	'ndswikiquote' => true,
-	'nlwikiquote' => true,
-	'nnwikiquote' => true,
-	'nowikiquote' => true,
-	'plwikiquote' => true,
-	'ptwikiquote' => true,
-	'quwikiquote' => true,
-	'rowikiquote' => true,
-	'ruwikiquote' => true,
-	'sahwikiquote' => true,
-	'sawikiquote' => true,
-	'simplewikiquote' => true,
-	'skwikiquote' => true,
-	'slwikiquote' => true,
-	'sqwikiquote' => true,
-	'srwikiquote' => true,
-	'suwikiquote' => true,
-	'svwikiquote' => true,
-	'tawikiquote' => true,
-	'tewikiquote' => true,
-	'thwikiquote' => true,
-	'tkwikiquote' => true,
-	'trwikiquote' => true,
-	'ttwikiquote' => true,
-	'ugwikiquote' => true,
 	'ukwikiquote' => true,
-	'urwikiquote' => true,
-	'uzwikiquote' => true,
-	'viwikiquote' => true,
-	'vowikiquote' => true,
-	'wowikiquote' => true,
-	'zawikiquote' => true,
-	'zh_min_nanwikiquote' => true,
-	'zhwikiquote' => true,
 
 	// Wikisource (T10563 and T14423)
-	'angwikisource' => true,
-	'arwikisource' => true,
 	'aswikisource' => true,
-	'azwikisource' => true,
-	'banwikisource' => true,
-	'bewikisource' => true,
-	'bgwikisource' => true,
 	'bnwikisource' => true,
-	'brwikisource' => true,
-	'bswikisource' => true,
-	'cawikisource' => true,
 	'cswikisource' => true,
-	'cywikisource' => true,
-	'dawikisource' => true,
-	'dewikisource' => true,
 	'elwikisource' => true,
 	'enwikisource' => true,
-	'eowikisource' => true,
 	'eswikisource' => true,
-	'etwikisource' => true,
-	'euwikisource' => true,
-	'fawikisource' => true,
-	'fiwikisource' => true,
-	'fowikisource' => true,
 	'frwikisource' => true,
-	'glwikisource' => true,
-	'guwikisource' => true,
-	'hewikisource' => true,
-	'hiwikisource' => true,
-	'hrwikisource' => true,
-	'htwikisource' => true,
-	'huwikisource' => true,
-	'hywikisource' => true,
-	'idwikisource' => true,
-	'iswikisource' => true,
 	'itwikisource' => true,
-	'jawikisource' => true,
 	'knwikisource' => true,
 	'kowikisource' => true,
-	'lawikisource' => true,
-	'lijwikisource' => true,
-	'liwikisource' => true,
-	'ltwikisource' => true,
-	'mkwikisource' => true,
-	'mlwikisource' => true,
-	'mrwikisource' => true,
 	'napwikisource' => true,
-	'nlwikisource' => true,
-	'nowikisource' => true,
-	'orwikisource' => true,
-	'pawikisource' => true,
 	'plwikisource' => true,
-	'pmswikisource' => true,
-	'ptwikisource' => true,
-	'rowikisource' => true,
 	'ruwikisource' => true,
-	'sahwikisource' => true,
-	'sawikisource' => true,
-	'skwikisource' => true,
-	'slwikisource' => true,
-	'srwikisource' => true,
 	'svwikisource' => true,
-	'tawikisource' => true,
 	'tewikisource' => true,
 	'thwikisource' => true,
-	'trwikisource' => true,
-	'ukwikisource' => true,
-	'vecwikisource' => true,
-	'viwikisource' => true,
-	'wawikisource' => true,
-	'yiwikisource' => true,
-	'zh_min_nanwikisource' => true,
-	'zhwikisource' => true,
 
 	// Wikiversity
-	'arwikiversity' => true,
 	'betawikiversity' => true,
-	'cswikiversity' => true,
-	'dewikiversity' => true,
-	'elwikiversity' => true,
 	'enwikiversity' => true,
 	'eswikiversity' => true,
-	'fiwikiversity' => true,
 	'frwikiversity' => true,
-	'hiwikiversity' => true,
-	'itwikiversity' => true,
-	'jawikiversity' => true,
-	'kowikiversity' => true,
 	'ptwikiversity' => true,
-	'ruwikiversity' => true,
-	'slwikiversity' => true,
-	'svwikiversity' => true,
-	'zhwikiversity' => true,
 ],
 
 'wgDLPQueryCacheTime' => [
@@ -14721,6 +14689,24 @@ function wmfGetVariantSettings() {
 	'+eswikibooks' => [
 		828 => [ 'autoconfirmed' ], // T202555 - Module:
 	],
+	'+foundationwiki' => [
+		NS_MAIN => [ 'edit-legal' ],
+		NS_PROJECT => [ 'edit-legal' ],
+		NS_FILE => [ 'edit-legal' ],
+		NS_CATEGORY => [ 'edit-legal' ],
+		NS_HELP => [ 'edit-legal' ],
+		NS_TEMPLATE => [ 'edit-legal' ],
+		100 => [ 'edit-legal' ], // Resolution
+		102 => [ 'edit-legal' ], // Legal
+		104 => [ 'edit-legal' ], // Minutes
+		106 => [ 'edit-legal' ], // Policy
+		112 => [ 'edit-legal' ], // Archive
+		710 => [ 'edit-legal' ], // TimedText
+		828 => [ 'edit-legal' ], // Module
+	],
+	'+fawiki' => [
+		NS_MAIN => [ 'minoredit' ], // T291018
+	],
 	'+metawiki' => [
 		866 => [ 'autoconfirmed' ], // T238723 - CNBanner:
 	],
@@ -14847,6 +14833,12 @@ function wmfGetVariantSettings() {
 			[ APCOND_AGE, 90 * 86400 ],
 		],
 	],
+	'ptwiki' => [
+		'autoextendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 30 * 86400 ], // 30 days
+		],
+	], // T292915
 	'ruwikiversity' => [
 		'patroller' => [ '&',
 			[ APCOND_EDITCOUNT, 1000 ],
@@ -14920,14 +14912,6 @@ function wmfGetVariantSettings() {
 			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
 			[ '!', [ APCOND_INGROUPS, 'bureaucrat' ] ],
 		], // T187187
-	],
-	'ptwiki' => [
-		'extendedconfirmed' => [ '&',
-			[ APCOND_EDITCOUNT, 500 ],
-			[ APCOND_AGE, 30 * 86400 ], // 30 days
-			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
-			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
-		], // T281926
 	],
 	'rowiki' => [
 		'extendedconfirmed' => [ '&',
@@ -15012,6 +14996,7 @@ function wmfGetVariantSettings() {
 'wmgExtraImplicitGroups' => [
 	'default' => false,
 	'frwiki' => [ 'autopatrolled' ],
+	'ptwiki' => [ 'autoextendedconfirmed' ], // T292915
 ],
 
 'wgDeleteRevisionsLimit' => [
@@ -15134,7 +15119,6 @@ function wmfGetVariantSettings() {
 	'default' => true,
 	'private' => false,
 	'fishbowl' => false,
-	'foundationwiki' => true, // T170301
 ],
 
 'wmgUseOAuthRateLimiter' => [
@@ -15164,6 +15148,10 @@ function wmfGetVariantSettings() {
 	'loginwiki' => true,
 ],
 
+'wgCentralAuthHiddenLevelMigrationStage' => [
+	'default' => SCHEMA_COMPAT_READ_OLD | SCHEMA_COMPAT_WRITE_BOTH,
+],
+
 # @}
 
 'wgEnableMWSuggest' => [
@@ -15177,6 +15165,10 @@ function wmfGetVariantSettings() {
 
 'wgAPIMaxResultSize' => [
 	'default' => 12582912, // 12 MB; temporary while I figure out what the deal with those overlarge revisions is --Roan
+],
+
+'wgMaxExecutionTimeForExpensiveQueries' => [
+	'default' => 30000,
 ],
 
 'wmgUseCollection' => [
@@ -15460,6 +15452,7 @@ function wmfGetVariantSettings() {
 	'fawiki' => 0,
 	'hiwiki' => 0,
 	'ptwiki' => 0,
+	'ruwikisource' => 0,
 ],
 
 'wgFlaggedRevsAutoReview' => [
@@ -15590,10 +15583,10 @@ function wmfGetVariantSettings() {
 	'commonswiki' => [ 'default' => 0.30, ], // T87431
 	'testcommonswiki' => [ 'default' => 0.30, ], // T87431
 	'eswikibooks' => [ 'default' => 0.30, ], // T145765
+	'foundationwiki' => [ 'default' => 0.30 ],
 	'metawiki' => [ 'default' => 0.30, ], // T173633
 	'mediawikiwiki' => [ 'default' => 0.30, ], // T212667
 	'eswiki' => [ 'default' => 0.1, ], // T284797
-	'ukwiki' => [ 'default' => 0.40, ], // Temporary
 ],
 'wgAbuseFilterEmergencyDisableCount' => [
 	'default' => [ 'default' => 2, ],
@@ -15601,14 +15594,13 @@ function wmfGetVariantSettings() {
 	'eswikibooks' => [ 'default' => 10, ], // T145765
 	'commonswiki' => [ 'default' => 25, ], // T87431
 	'testcommonswiki' => [ 'default' => 25, ], // T87431
+	'foundationwiki' => [ 'default' => 25 ],
 	'metawiki' => [ 'default' => 25, ], // T173633
 	'mediawikiwiki' => [ 'default' => 25, ], // T212667
 	'eswiki' => [ 'default' => 3, ], // T284797
-	'ukwiki' => [ 'default' => 75, ], // Temporary
 ],
 'wgAbuseFilterEmergencyDisableAge' => [
 	'default' => [ 'default' => 86400, ],
-	'ukwiki' => [ 'default' => 180, ], // Temporary
 ],
 # @}
 
@@ -15655,12 +15647,14 @@ function wmfGetVariantSettings() {
 	'test2wiki' => true,
 	'commonswiki' => true,
 	'testcommonswiki' => true,
+	'wikisource' => true, // T293205
 ],
 'wgCopyUploadsFromSpecialUpload' => [
 	'default' => false,
 	'testwiki' => true, // T73897
 	'commonswiki' => true, // T73897
 	'testcommonswiki' => true, // T73897
+	'wikisource' => true, // T293205
 ],
 'wgCopyUploadTimeout' => [
 	// This is set to a high value because there is no working mechanism for
@@ -15869,7 +15863,6 @@ function wmfGetVariantSettings() {
 		'media.mehrnews.com',               // Iranian news agency - T213961
 		'mirror.netcologne.de',             // T213632
 		'*.getty.edu',                      // J. Paul Getty Museum - T213649
-		'mojnews.com',                      // Iranian news agency - T213901
 		'openaccess-cdn.clevelandart.org',  // Cleveland Museum of Art - T213924
 		'polona.pl',                        // Library of Poland - T215501
 		'img.raremaps.com',                 // Barry Lawrence Ruderman Antique Maps Inc. - T216638
@@ -15950,6 +15943,19 @@ function wmfGetVariantSettings() {
 		'portrattarkiv.se', // Swedish Portrait Archive - T290581
 		'ia-upload.wmcloud.org', // T287241 - IA-Upload tool
 		'wikisource-bot.toolforge.org', // Wikisource-bot tool - T292213
+		'americanantiquarian.org', // American antiquarian society - T292918
+		'planet4589.org', // Jonathan's Space Report - T296136
+		'towiki.ru', // city-wiki of Tomsk City - T294190
+		'www.artsobservasjoner.no', // T298449
+		'*.nhm.ac.uk', // Natural History Museum in London - T298451, T299579
+		'ala-images.s3.ap-southeast-2.amazonaws.com' // Atlas of Living Australia - T299825
+	],
+	'+wikisource' => [
+		'archive.org', '*.archive.org',
+		'*.*.archive.org',                  // Internet Archive - T106293, T207581
+		'ia-upload.wmcloud.org',            // T287241 - IA-Upload tool
+		'wikisource-bot.toolforge.org',     // Wikisource-bot tool - T292213
+		'upload.wikimedia.org',             // Commons -> WS transfers - T294824
 	],
 ],
 
@@ -16067,7 +16073,6 @@ function wmfGetVariantSettings() {
 'wgDisableHardRedirects' => [
 	'default' => true,
 	'donatewiki' => false,
-	'foundationwiki' => false,
 ],
 
 'wmgUseLivePreview' => [
@@ -16096,7 +16101,7 @@ function wmfGetVariantSettings() {
 	'srwikisource' => 'any', // T172974
 	'srwikiquote' => 'any', // T172974
 	'tawiktionary' => 'any', // T241684
-	'trwikisource' => 'any', //T248747
+	'trwikisource' => 'any', // T248747
 	'wikidatawiki' => 'any', // T144687
 	'zhwikinews' => 'any', // T53604
 	'zhwikiversity' => 'any', // T214946
@@ -16128,6 +16133,7 @@ function wmfGetVariantSettings() {
 	'bnwiki' => true,
 	'bnwikibooks' => true,
 	'bnwikisource' => true, // T152692
+	'bnwikivoyage' => true, // T296637
 	'bnwiktionary' => true,
 	'brwikimedia' => true,
 	'cawiki' => true,
@@ -16170,6 +16176,7 @@ function wmfGetVariantSettings() {
 	'kkwiki' => true,
 	'knwiki' => true,
 	'kowiki' => true,
+	'lawiki' => true, // T296073
 	'ladwiki' => true, // T121524
 	'ltwiki' => true, // T273957
 	'lvwiki' => true,
@@ -16311,6 +16318,7 @@ function wmfGetVariantSettings() {
 'wgForeignUploadTargets' => [
 	'default' => [ 'shared' ],
 	'commonswiki' => [ 'local' ],
+	'officewiki' => [ 'local' ],
 	'testcommonswiki' => [ 'local' ],
 	'test2wiki' => [ 'testwikirepo' ],
 	'testwiki' => [ 'local' ],
@@ -16549,7 +16557,7 @@ function wmfGetVariantSettings() {
 	'cswikisource' => 'ReferencePopups',
 	'cswiktionary' => 'ReferencePopups',
 	'frwiki' => 'tooltipRef',
-//	'hewiki' => 'CiteTooltip', // check disabled T276330
+// 'hewiki' => 'CiteTooltip', // check disabled T276330
 	'hewikibooks' => 'RefTooltip',
 	'hewikinews' => 'RefTooltip',
 	'hewikisource' => 'CiteTooltip',
@@ -16788,6 +16796,7 @@ function wmfGetVariantSettings() {
 	'ugwiki' => true,			// Starting from SET
 	'urwiki' => true,			// Starting from SET
 	'wuuwiki' => true,          // Starting from SET
+	'zhwiki' => true,           // Starting from SET (T296269)
 	'zh_classicalwiki' => true, // Starting from SET
 	'zh_yuewiki' => true,       // Starting from SET
 
@@ -16865,6 +16874,7 @@ function wmfGetVariantSettings() {
 	'eswiki' => true, // T62188
 	'frwiktionary' => true, // T169741
 	'hewiki' => true, // T54552
+	'zhwiki' => true, // T296269
 ],
 
 // Whether to enable the 2017 wikitext editor by default.
@@ -16899,6 +16909,12 @@ function wmfGetVariantSettings() {
 	],
 
 	// Wikipedias
+	'+azwiki' => [
+		'Qaralama' => true, // Draft - T299332
+	],
+	'+bgwiki' => [
+		'Чернова' => true, // Draft - T299224
+	],
 	'+cawiki' => [
 		'Project' => true, // T88896
 		'Portal' => true, // T58000
@@ -16906,9 +16922,6 @@ function wmfGetVariantSettings() {
 	],
 	'+cswiki' => [
 		'Project' => true, // T136628
-	],
-	'+cswikisource' => [
-		'Edice' => true, // T244133
 	],
 	'+enwiki' => [
 		'Portal' => true, // T58001
@@ -16940,8 +16953,8 @@ function wmfGetVariantSettings() {
 		'Project' => true, // T130177
 	],
 	'+hywiki' => [
-		'Սևագիր' => true, //Draft, T260825
-		'Վիքինախագիծ' => true, //Wikiproject, T260825
+		'Սևագիր' => true, // Draft, T260825
+		'Վիքինախագիծ' => true, // Wikiproject, T260825
 	],
 	'+itwiki' => [
 		'Bozza' => true, // Draft - T280289
@@ -16977,7 +16990,7 @@ function wmfGetVariantSettings() {
 		'Portal' => true, // T144688
 	],
 	'+thwiki' => [
-		'ฉบับร่าง' /* Draft */ => true, //T252959
+		'ฉบับร่าง' /* Draft */ => true, // T252959
 	],
 	'+vecwiki' => [
 		'Project' => true, // T250419
@@ -16999,10 +17012,13 @@ function wmfGetVariantSettings() {
 
 	// Wikibookses
 	'+bnwikibooks' => [
-		'উইকিশৈশব' => true, //T241893
+		'উইকিশৈশব' => true, // T241893
 	],
 
 	// Wikisources
+	'+cswikisource' => [
+		'Edice' => true, // T244133
+	],
 
 	// Wikinewses
 
@@ -17024,6 +17040,7 @@ function wmfGetVariantSettings() {
 	'+wikimaniawiki' => [
 		'2019' => true, // T218645
 		'2021' => true, // T287197
+		'2022' => true, // T295267
 	],
 
 	// Wikimedias
@@ -17078,6 +17095,7 @@ function wmfGetVariantSettings() {
 
 	'enwiki' => true,
 	'eswiki' => true,
+	'zhwiki' => true, // T296269
 ],
 
 // Whether VisualEditor should pay attention to the -autodisable user preference
@@ -17142,6 +17160,26 @@ function wmfGetVariantSettings() {
 	'nawiktionary' => true, // T284553
 	'trwiki' => true, // T284553
 	'twwiki' => true, // T284553
+],
+
+// Temporary feature flags for changes to the descriptions in the transclusion
+// dialog, see T271800 and T286765
+'wmgVisualEditorTransclusionDialogNewSidebarFeatures' => [
+	'default' => false,
+	// T284203 + T286992: pilot wikis
+	'group0' => true,
+	'dagwiki' => true,
+	'dewiki' => true,
+	'elwiki' => true,
+	'enwikivoyage' => true,
+	'fiwiki' => true,
+	'frwiki' => true,
+	'hewiki' => true,
+	'huwiki' => true,
+	'mswiki' => true,
+	'nawiktionary' => true,
+	'trwiki' => true,
+	'twwiki' => true,
 ],
 
 // --------------- VisualEditor end ---------------
@@ -17575,7 +17613,7 @@ function wmfGetVariantSettings() {
 	'srwiki' => true, // T37913
 	'svwiki' => true, // T32756
 	'svwikinews' => true, // T33754
-	'tawiki' => true, //T280326
+	'tawiki' => true, // T280326
 	'testwiki' => true,
 	'trwiki' => true, // T40227
 	'ukwiki' => true, // T91530
@@ -17771,6 +17809,12 @@ function wmfGetVariantSettings() {
 	],
 ],
 
+'wgMinervaDonateLink' => [
+	'default' => [
+		'base' => true,
+	],
+],
+
 'wgMinervaTalkAtTop' => [
 	// Blocked on T54165
 	'default' => [
@@ -17778,8 +17822,7 @@ function wmfGetVariantSettings() {
 		'beta' => false,
 		'loggedin' => true,
 	],
-	// T253985
-	'svwiki' => [
+	'mobile-anon-talk' => [
 		'base' => true,
 		'beta' => true,
 		'loggedin' => true,
@@ -17804,30 +17847,15 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
-'wgMFAdvancedMobileContributions' => [
-	'default' => true, // T233612
-],
-
 'wgMFAmcOutreach' => [
 	'default' => true, // T234026
-],
-
-'wgMFAmcOutreachMinEditCount' => [
-	'default' => 100, // T231206
-],
-
-'wgMinervaOverflowInPageActions' => [
-	'default' => [
-		'base' => false,
-		'beta' => false,
-		'amc' => true, // T223883
-	],
 ],
 
 'wgMinervaEnableSiteNotice' => [
 	'default' => false,
 	'closed' => true, // T261357
 	'arwiki' => true,
+	'bnwiki' => true, // T299529
 	'kowiki' => true, // T172630
 	// WikidataPageBanner extensions must enable for Minerva support.
 	// (T254391)
@@ -17841,29 +17869,11 @@ function wmfGetVariantSettings() {
 	'trwiki' => true,
 ],
 
-'wgMinervaABSamplingRate' => [
-	'default' => 0,
-],
-
-'wgMinervaApplyKnownTemplateHacks' => [
-	'default' => true,
-],
-
 // Link to help Google spider associate pages on wiki with our Android app.
 // They originally special-cased us but would like it done the normal way now. :)
 'wgMFAppPackageId' => [
 	'default' => false,
 	'wikipedia' => 'org.wikipedia',
-],
-
-// Blacklist some pages
-'wgMFNoMobileCategory' => [
-	'default' => false,
-	'foundationwiki' => 'Desktop-only_pages',
-],
-'wgMFNoMobilePages' => [
-	'default' => [],
-	'foundationwiki' => [ 'Special:FundraiserStatistics' ],
 ],
 
 'wgMFCollapseSectionsByDefault' => [
@@ -17938,7 +17948,7 @@ function wmfGetVariantSettings() {
 		'excludeNamespaces' => [ 10, -1 ],
 		'maxImages' => 1000,
 		'maxHeadings' => 4000,
-		'headings' => [ 'h2', 'h3', 'h4', 'h5', 'h6' ] //T110436, T110837
+		'headings' => [ 'h2', 'h3', 'h4', 'h5', 'h6' ] // T110436, T110837
 	],
 ],
 
@@ -17960,12 +17970,6 @@ function wmfGetVariantSettings() {
 	],
 ],
 
-'wgMFShowFirstParagraphBeforeInfobox' => [
-	'default' => [
-		'base' => true,
-	]
-],
-
 'wgMFLazyLoadImages' => [
 	// T142399
 	'default' => [
@@ -17980,16 +17984,6 @@ function wmfGetVariantSettings() {
 		'base' => false,
 		'beta' => true,
 	],
-],
-'wgMFLazyLoadReferences' => [
-	'default' => [
-		'base' => false,
-		'beta' => true,
-	],
-],
-
-'wgMFExperiments' => [
-	'default' => [],
 ],
 
 'wgExtraGenderNamespaces' => [
@@ -18648,13 +18642,13 @@ function wmfGetVariantSettings() {
 		'N' => 'Користувачі %code%-N',
 	],
 	'uzwiki' => [ // T131924
-		'0' => false,
-		'1' => 'User %code%',
-		'2' => 'User %code%',
-		'3' => 'User %code%',
-		'4' => 'User %code%',
-		'5' => 'User %code%',
-		'N' => 'User %code%',
+		'0' => 'User %code%-0',
+		'1' => 'User %code%-1',
+		'2' => 'User %code%-2',
+		'3' => 'User %code%-3',
+		'4' => 'User %code%-4',
+		'5' => 'User %code%-5',
+		'N' => 'User %code%-N',
 	],
 	'vowiktionary' => [
 		'0' => 'Geban %code%-0',
@@ -19175,6 +19169,7 @@ function wmfGetVariantSettings() {
 	'collabwiki' => true,
 	'commonswiki' => true, // T50620
 	'testcommonswiki' => true, // T50620
+	'foundationwiki' => true, // T205349
 	'frwiktionary' => true, // T138972
 	'gewikimedia' => true, // T236389
 	'grwikimedia' => true, // T245911
@@ -19464,7 +19459,6 @@ function wmfGetVariantSettings() {
 'wmgUseEducationProgram' => [
 	'default' => false,
 	'elwiki' => true, // T58771
-	'eswiki' => true, // T56826
 	'fawiki' => true,
 	'itwikiversity' => true, // T162692
 	'lvwiki' => true, // T89898
@@ -19781,6 +19775,10 @@ function wmfGetVariantSettings() {
 	'lockeddown' => false, // T61702
 ],
 
+'wgDisambiguatorNotifications' => [
+	'default' => true, // T293319
+],
+
 'wmgUseDiscussionTools' => [
 	'default' => true, // T252264
 	// Can't be enabled on wikis where wmgUseLinter or wmgUseVisualEditor is disabled:
@@ -19799,19 +19797,22 @@ function wmfGetVariantSettings() {
 	'default' => false,
 ],
 
+'wgDiscussionToolsEnableMobile' => [
+	'default' => false,
+],
+
+'wgDiscussionToolsReplyIndentation' => [
+	'default' => 'invisible',
+	'ruwiki' => 'bullet', // T259864
+],
+
 'wgDiscussionTools_replytool' => [
 	// Keep in sync with wgDiscussionTools_sourcemodetoolbar below
 	// T288485
 	'default' => 'available',
-	'commonswiki' => 'default',
-	'metawiki' => 'default',
-	'mediawikiwiki' => 'default',
-	'specieswiki' => 'default',
 	'enwiki' => 'default',
 	'fiwiki' => 'default',
-	'frwiki' => 'default',
 	'ruwiki' => 'default',
-	'dewiki' => 'default',
 ],
 
 'wgDiscussionTools_newtopictool' => [
@@ -19827,33 +19828,42 @@ function wmfGetVariantSettings() {
 	// or 'wgDiscussionTools_newtopictool' is 'available'. Otherwise it will cause the reply tool
 	// to be always loaded, even when it's not supposed to be available.
 	'default' => 'available',
-	'commonswiki' => 'default',
-	'metawiki' => 'default',
-	'mediawikiwiki' => 'default',
-	'specieswiki' => 'default',
 	'enwiki' => 'default',
 	'fiwiki' => 'default',
-	'frwiki' => 'default',
 	'ruwiki' => 'default',
-	'dewiki' => 'default',
 ],
 
 'wgDiscussionTools_topicsubscription' => [
-	'default' => 'unavailable',
-	'wikipedia' => 'default', // T287801
-	'enwiki' => 'unavailable', // T287801
-	'metawiki' => 'default', // T274280
-	'mediawikiwiki' => 'default', // T274280
-	'commonswiki' => 'default', // T287800
-	'wikidatawiki' => 'default', // T287800
+	'default' => 'default', // T287802
 ],
 
 'wgDiscussionTools_autotopicsub' => [
-	'default' => 'unavailable',
+	'default' => 'default',
+	// T290500
+	'amwiki' => 'unavailable',
+	'arzwiki' => 'unavailable',
+	'bnwiki' => 'unavailable',
+	'eswiki' => 'unavailable',
+	'fawiki' => 'unavailable',
+	'frwiki' => 'unavailable',
+	'hewiki' => 'unavailable',
+	'hiwiki' => 'unavailable',
+	'idwiki' => 'unavailable',
+	'itwiki' => 'unavailable',
+	'jawiki' => 'unavailable',
+	'kowiki' => 'unavailable',
+	'nlwiki' => 'unavailable',
+	'omwiki' => 'unavailable',
+	'plwiki' => 'unavailable',
+	'ptwiki' => 'unavailable',
+	'thwiki' => 'unavailable',
+	'ukwiki' => 'unavailable',
+	'viwiki' => 'unavailable',
+	'zhwiki' => 'unavailable',
 ],
 
 'wgDTSchemaEditAttemptStepSamplingRate' => [
-	'default' => false,
+	'default' => 0,
 ],
 
 'wgDTSchemaEditAttemptStepOversample' => [
@@ -20285,17 +20295,30 @@ function wmfGetVariantSettings() {
 'wgContentTranslationEnableSectionTranslation' => [
 	'default' => false,
 	'testwiki' => true,
+	'azwiki' => true, // T285842
+	'bawiki' => true, // T285842
 	'bnwiki' => true, // T271397
 	'hawiki' => true, // T290175
 	'igwiki' => true, // T290175
 	'kuwiki' => true, // T290238
+	'mlwiki' => true, // T285842
+	'mswiki' => true, // T285842
+	'sqwiki' => true, // T285842
+	'tawiki' => true, // T285842
 	'thwiki' => true, // T290175
 	'yowiki' => true, // T290175
 ],
 
 'wgSectionTranslationTargetLanguages' => [
 	'default' => null,
-	'wikipedia' => [ 'bn', 'ha', 'ig', 'ku', 'th', 'yo' ],
+	'wikipedia' => [ 'az', 'ba', 'bn', 'ha', 'ig', 'ku', 'ml', 'ms', 'sq', 'ta', 'th', 'yo' ],
+	'testwiki' => [ 'ar', 'az', 'ba', 'bn', 'ca', 'cs', 'es', 'fa', 'fr', 'ha', 'he', 'ht', 'id', 'ig', 'is', 'jv', 'ki', 'ko', 'ku', 'lu', 'ml', 'mn', 'mr', 'ms', 'oc', 'pt', 'ru', 'sq', 'ta', 'te', 'th', 'tl', 'tr', 'uk', 'ur', 'vi', 'yo', 'zh', 'zu' ],
+],
+
+'wgContentTranslationContentImportForSectionTranslation' => [
+	'default' => false,
+	'testwiki' => true, // T294642
+	'wikipedia' => false,
 ],
 
 'wmgUseExternalGuidance' => [
@@ -20343,7 +20366,6 @@ function wmfGetVariantSettings() {
 	'wikipedia' => true,
 	'wikivoyage' => true,
 	'eswikinews' => true, // T230660
-	'ptwikinews' => true, // T268945
 	'frwikinews' => true, // T143480
 	'zhwikinews' => true, // T266933
 ],
@@ -20356,21 +20378,25 @@ function wmfGetVariantSettings() {
 'wgRelatedArticlesUseCirrusSearch' => [
 	'default' => true,
 	'wikivoyage' => false, // T164391
+	'enwikivoyage' => true, // T297054
+	'itwikivoyage' => true, // T297054
 ],
 
 // T223824
 'wgSkipSkins' => [
-	'default' => [ 'cologneblue', 'contenttranslation', 'modern' ], // T263093, T287616
-	'apiportalwiki' => [ 'vector', 'monobook', 'modern', 'cologneblue', 'timeless', 'minerva' ],
+	'default' => [ 'cologneblue', 'contenttranslation', 'modern', 'vector-2022' ], // T263093, T287616
+	// Show Vector-2022 on euwiki (T299927)
+	'euwiki' => [ 'cologneblue', 'contenttranslation', 'modern' ],
+	'apiportalwiki' => [ 'vector', 'vector-2022', 'monobook', 'modern', 'cologneblue', 'timeless', 'minerva' ],
 ],
 
 'wgRelatedArticlesFooterAllowedSkins' => [
 	'default' => [ 'minerva', 'timeless' ], // T144812, T181242
 	'dewiki' => [ 'minerva' ], // T278611
 	'eswikinews' => [], // T230660
-	'htwiki' => [ 'minerva', 'vector', 'timeless' ], // T126826
-	'hewiki' => [ 'minerva', 'vector', 'timeless' ], // T191573
-	'wikivoyage' => [ 'minerva', 'vector', 'timeless' ],
+	'htwiki' => [ 'minerva', 'vector', 'vector-2022', 'timeless' ], // T126826, T298916
+	'hewiki' => [ 'minerva', 'vector', 'vector-2022', 'timeless' ], // T191573, T298916
+	'wikivoyage' => [ 'minerva', 'vector', 'vector-2022', 'timeless' ], // T298916
 ],
 
 'wmgUseRevisionSlider' => [
@@ -20387,14 +20413,6 @@ function wmfGetVariantSettings() {
 	'dewiki' => false,
 	'fawiki' => false,
 	'arwiki' => false,
-],
-
-'wmgUseUserMerge' => [
-	'default' => true,
-	'private' => false,
-	'fishbowl' => false,
-	'nonglobal' => false,
-	'labswiki' => true, // T165795
 ],
 
 'wmgUseEventLogging' => [
@@ -20467,8 +20485,7 @@ function wmfGetVariantSettings() {
 		 * do not use topic prefixes.  Explicitly set topic_prefixes to null to disable
 		 * implicit topic prefixing by the EventStreamConfig extension.
 		 */
-		[
-			'stream' => 'eventlogging_CentralNoticeBannerHistory',
+		'eventlogging_CentralNoticeBannerHistory' => [
 			'schema_title' => 'analytics/legacy/centralnoticebannerhistory',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20479,8 +20496,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_CentralNoticeImpression',
+		'eventlogging_CentralNoticeImpression' => [
 			'schema_title' => 'analytics/legacy/centralnoticeimpression',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20491,8 +20507,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_CentralNoticeTiming',
+		'eventlogging_CentralNoticeTiming' => [
 			'schema_title' => 'analytics/legacy/centralnoticetiming',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20503,8 +20518,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_CodeMirrorUsage',
+		'eventlogging_CodeMirrorUsage' => [
 			'schema_title' => 'analytics/legacy/codemirrorusage',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20515,8 +20529,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_ContentTranslationAbuseFilter',
+		'eventlogging_ContentTranslationAbuseFilter' => [
 			'schema_title' => 'analytics/legacy/contenttranslationabusefilter',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20527,8 +20540,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_CpuBenchmark',
+		'eventlogging_CpuBenchmark' => [
 			'schema_title' => 'analytics/legacy/cpubenchmark',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20539,8 +20551,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_DesktopWebUIActionsTracking',
+		'eventlogging_DesktopWebUIActionsTracking' => [
 			'schema_title' => 'analytics/legacy/desktopwebuiactionstracking',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20551,8 +20562,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_ElementTiming',
+		'eventlogging_ElementTiming' => [
 			'schema_title' => 'analytics/legacy/elementtiming',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20563,8 +20573,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_EchoInteraction',
+		'eventlogging_EchoInteraction' => [
 			'schema_title' => 'analytics/legacy/echointeraction',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20575,8 +20584,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_EchoMail',
+		'eventlogging_EchoMail' => [
 			'schema_title' => 'analytics/legacy/echomail',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20587,8 +20595,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_EditAttemptStep',
+		'eventlogging_EditAttemptStep' => [
 			'schema_title' => 'analytics/legacy/editattemptstep',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20599,8 +20606,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_FeaturePolicyViolation',
+		'eventlogging_FeaturePolicyViolation' => [
 			'schema_title' => 'analytics/legacy/featurepolicyviolation',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20611,8 +20617,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_FirstInputTiming',
+		'eventlogging_FirstInputTiming' => [
 			'schema_title' => 'analytics/legacy/firstinputtiming',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20623,8 +20628,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_HelpPanel',
+		'eventlogging_HelpPanel' => [
 			'schema_title' => 'analytics/legacy/helppanel',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20635,8 +20639,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_HomepageModule',
+		'eventlogging_HomepageModule' => [
 			'schema_title' => 'analytics/legacy/homepagemodule',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20647,8 +20650,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_HomepageVisit',
+		'eventlogging_HomepageVisit' => [
 			'schema_title' => 'analytics/legacy/homepagevisit',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20659,8 +20661,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_InukaPageView',
+		'eventlogging_InukaPageView' => [
 			'schema_title' => 'analytics/legacy/inukapageview',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20671,8 +20672,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_KaiOSAppFirstRun',
+		'eventlogging_KaiOSAppFirstRun' => [
 			'schema_title' => 'analytics/legacy/kaiosappfirstrun',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20683,8 +20683,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_KaiOSAppFeedback',
+		'eventlogging_KaiOSAppFeedback' => [
 			'schema_title' => 'analytics/legacy/kaiosappfeedback',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20695,8 +20694,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_LandingPageImpression',
+		'eventlogging_LandingPageImpression' => [
 			'schema_title' => 'analytics/legacy/landingpageimpression',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20707,8 +20705,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_LayoutShift',
+		'eventlogging_LayoutShift' => [
 			'schema_title' => 'analytics/legacy/layoutshift',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20719,8 +20716,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_MobileWebUIActionsTracking',
+		'eventlogging_MobileWebUIActionsTracking' => [
 			'schema_title' => 'analytics/legacy/mobilewebuiactionstracking',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20731,8 +20727,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_NavigationTiming',
+		'eventlogging_NavigationTiming' => [
 			'schema_title' => 'analytics/legacy/navigationtiming',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20743,8 +20738,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_NewcomerTask',
+		'eventlogging_NewcomerTask' => [
 			'schema_title' => 'analytics/legacy/newcomertask',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20755,8 +20749,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_PaintTiming',
+		'eventlogging_PaintTiming' => [
 			'schema_title' => 'analytics/legacy/painttiming',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20767,8 +20760,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_PrefUpdate',
+		'eventlogging_PrefUpdate' => [
 			'schema_title' => 'analytics/legacy/prefupdate',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20779,8 +20771,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_QuickSurveyInitiation',
+		'eventlogging_QuickSurveyInitiation' => [
 			'schema_title' => 'analytics/legacy/quicksurveyinitiation',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20791,8 +20782,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_QuickSurveysResponses',
+		'eventlogging_QuickSurveysResponses' => [
 			'schema_title' => 'analytics/legacy/quicksurveysresponses',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20803,8 +20793,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_ReferencePreviewsBaseline',
+		'eventlogging_ReferencePreviewsBaseline' => [
 			'schema_title' => 'analytics/legacy/referencepreviewsbaseline',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20815,8 +20804,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_ReferencePreviewsCite',
+		'eventlogging_ReferencePreviewsCite' => [
 			'schema_title' => 'analytics/legacy/referencepreviewscite',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20827,8 +20815,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_ReferencePreviewsPopups',
+		'eventlogging_ReferencePreviewsPopups' => [
 			'schema_title' => 'analytics/legacy/referencepreviewspopups',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20839,8 +20826,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_ResourceTiming',
+		'eventlogging_ResourceTiming' => [
 			'schema_title' => 'analytics/legacy/resourcetiming',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20851,8 +20837,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_RUMSpeedIndex',
+		'eventlogging_RUMSpeedIndex' => [
 			'schema_title' => 'analytics/legacy/rumspeedindex',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20863,8 +20848,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_SaveTiming',
+		'eventlogging_SaveTiming' => [
 			'schema_title' => 'analytics/legacy/savetiming',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20875,8 +20859,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_SearchSatisfaction',
+		'eventlogging_SearchSatisfaction' => [
 			'schema_title' => 'analytics/legacy/searchsatisfaction',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20887,8 +20870,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_ServerSideAccountCreation',
+		'eventlogging_ServerSideAccountCreation' => [
 			'schema_title' => 'analytics/legacy/serversideaccountcreation',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20899,8 +20881,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_SpecialInvestigate',
+		'eventlogging_SpecialInvestigate' => [
 			'schema_title' => 'analytics/legacy/specialinvestigate',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20911,8 +20892,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_SpecialMuteSubmit',
+		'eventlogging_SpecialMuteSubmit' => [
 			'schema_title' => 'analytics/legacy/specialmutesubmit',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20923,8 +20903,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_SuggestedTagsAction',
+		'eventlogging_SuggestedTagsAction' => [
 			'schema_title' => 'analytics/legacy/suggestedtagsaction',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20935,8 +20914,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_TemplateDataApi',
+		'eventlogging_TemplateDataApi' => [
 			'schema_title' => 'analytics/legacy/templatedataapi',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20947,8 +20925,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_TemplateDataEditor',
+		'eventlogging_TemplateDataEditor' => [
 			'schema_title' => 'analytics/legacy/templatedataeditor',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20959,8 +20936,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_TemplateWizard',
+		'eventlogging_TemplateWizard' => [
 			'schema_title' => 'analytics/legacy/templatewizard',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20971,8 +20947,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_Test',
+		'eventlogging_Test' => [
 			'schema_title' => 'analytics/legacy/test',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20983,8 +20958,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_TranslationRecommendationUserAction',
+		'eventlogging_TranslationRecommendationUserAction' => [
 			'schema_title' => 'analytics/legacy/translationrecommendationuseraction',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -20995,8 +20969,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_TranslationRecommendationUIRequests',
+		'eventlogging_TranslationRecommendationUIRequests' => [
 			'schema_title' => 'analytics/legacy/translationrecommendationuirequests',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -21007,8 +20980,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_TranslationRecommendationAPIRequests',
+		'eventlogging_TranslationRecommendationAPIRequests' => [
 			'schema_title' => 'analytics/legacy/translationrecommendationapirequests',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -21019,8 +20991,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_TwoColConflictConflict',
+		'eventlogging_TwoColConflictConflict' => [
 			'schema_title' => 'analytics/legacy/twocolconflictconflict',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -21031,8 +21002,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_TwoColConflictExit',
+		'eventlogging_TwoColConflictExit' => [
 			'schema_title' => 'analytics/legacy/twocolconflictexit',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -21043,8 +21013,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_UniversalLanguageSelector',
+		'eventlogging_UniversalLanguageSelector' => [
 			'schema_title' => 'analytics/legacy/universallanguageselector',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -21055,8 +21024,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_VirtualPageView',
+		'eventlogging_VirtualPageView' => [
 			'schema_title' => 'analytics/legacy/virtualpageview',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -21067,8 +21035,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_VisualEditorFeatureUse',
+		'eventlogging_VisualEditorFeatureUse' => [
 			'schema_title' => 'analytics/legacy/visualeditorfeatureuse',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -21079,8 +21046,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_VisualEditorTemplateDialogUse',
+		'eventlogging_VisualEditorTemplateDialogUse' => [
 			'schema_title' => 'analytics/legacy/visualeditortemplatedialoguse',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -21091,8 +21057,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_WikidataCompletionSearchClicks',
+		'eventlogging_WikidataCompletionSearchClicks' => [
 			'schema_title' => 'analytics/legacy/wikidatacompletionsearchclicks',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -21103,8 +21068,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_WMDEBannerEvents',
+		'eventlogging_WMDEBannerEvents' => [
 			'schema_title' => 'analytics/legacy/wmdebannerevents',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -21115,8 +21079,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_WMDEBannerInteractions',
+		'eventlogging_WMDEBannerInteractions' => [
 			'schema_title' => 'analytics/legacy/wmdebannerinteractions',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -21127,8 +21090,7 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
-		[
-			'stream' => 'eventlogging_WMDEBannerSizeIssue',
+		'eventlogging_WMDEBannerSizeIssue' => [
 			'schema_title' => 'analytics/legacy/wmdebannersizeissue',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -21142,14 +21104,12 @@ function wmfGetVariantSettings() {
 		/*
 		 * === Streams for testing Event Platform-based instruments ===
 		 */
-		[
-			'stream' => 'test.instrumentation',
+		'test.instrumentation' => [
 			'schema_title' => 'analytics/test',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		// For verifying sampling:
-		[
-			'stream' => 'test.instrumentation.sampled',
+		'test.instrumentation.sampled' => [
 			'schema_title' => 'analytics/test',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'sample' => [
@@ -21160,8 +21120,7 @@ function wmfGetVariantSettings() {
 		/*
 		 * === Streams for Event Platform-based analytics instruments ===
 		 */
-		[
-			'stream' => 'mediawiki.client.session_tick',
+		'mediawiki.client.session_tick' => [
 			'schema_title' => 'analytics/session_tick',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'sample' => [
@@ -21169,69 +21128,93 @@ function wmfGetVariantSettings() {
 				'rate' => 0.1,
 			],
 		],
-		[
-			'stream' => 'ios.edit_history_compare',
+		'ios.edit_history_compare' => [
 			'schema_title' => 'analytics/mobile_apps/ios_edit_history_compare',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		[
-			'stream' => 'android.user_contribution_screen',
+		'ios.notification_interaction' => [
+			'schema_title' => 'analytics/mobile_apps/ios_notification_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'android.user_contribution_screen' => [
 			'schema_title' => 'analytics/mobile_apps/android_user_contribution_screen',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		[
-			'stream' => 'android.notification_interaction',
+		'android.notification_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/android_notification_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		[
-			'stream' => 'android.image_recommendation_interaction',
+		'android.image_recommendation_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/android_image_recommendation_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		[
-			'stream' => 'android.daily_stats',
+		'android.daily_stats' => [
 			'schema_title' => 'analytics/mobile_apps/android_daily_stats',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		[
-			'stream' => 'mediawiki.mediasearch_interaction',
+		'android.customize_toolbar_interaction' => [
+			'schema_title' => 'analytics/mobile_apps/android_customize_toolbar_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'mediawiki.mediasearch_interaction' => [
 			'schema_title' => 'analytics/mediawiki/mediasearch_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		[
-			'stream' => 'mediawiki.structured_task.article.link_suggestion_interaction',
+		'mediawiki.structured_task.article.link_suggestion_interaction' => [
 			'schema_title' => 'analytics/mediawiki/structured_task/article/link_suggestion_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		[
-			'stream' => 'mediawiki.structured_task.article.image_suggestion_interaction',
+		'mediawiki.structured_task.article.image_suggestion_interaction' => [
 			'schema_title' => 'analytics/mediawiki/structured_task/article/image_suggestion_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		[
-			'stream' => 'mediawiki.pref_diff',
+		'mediawiki.pref_diff' => [
 			'schema_title' => 'analytics/pref_diff',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		[
-			'stream' => 'mediawiki.content_translation_event',
+		'mediawiki.skin_diff' => [
+			'schema_title' => 'analytics/pref_diff',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'mediawiki.content_translation_event' => [
 			'schema_title' => 'analytics/mediawiki/content_translation_event',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		[
-			'stream' => 'wd_propertysuggester.client_side_property_request',
+		'mediawiki.reading_depth' => [
+			'schema_title' => 'analytics/mediawiki/web_ui_reading_depth',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'mediawiki.web_ab_test_enrollment' => [
+			'schema_title' => 'analytics/mediawiki/web_ab_test_enrollment',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'mediawiki.web_ui_scroll' => [
+			'schema_title' => 'analytics/mediawiki/web_ui_scroll',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'wd_propertysuggester.client_side_property_request' => [
 			'schema_title' => 'analytics/mediawiki/wd_propertysuggester/client_side_property_request',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		[
-			'stream' => 'wd_propertysuggester.server_side_property_request',
+		'wd_propertysuggester.server_side_property_request' => [
 			'schema_title' => 'analytics/mediawiki/wd_propertysuggester/server_side_property_request',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		[
-			'stream' => 'mediawiki.mentor_dashboard.visit',
+		'mediawiki.mentor_dashboard.visit' => [
 			'schema_title' => 'analytics/mediawiki/mentor_dashboard/visit',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'mediawiki.welcomesurvey.interaction' => [
+			'schema_title' => 'analytics/mediawiki/welcomesurvey/interaction',
+			'destination_event_service' => 'eventgate-analytics-external'
+		],
+		[
+			'stream' => 'mediawiki.talk_page_edit',
+			'schema_title' => 'analytics/mediawiki/talk_page_edit',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'mwcli.command_execute' => [
+			'schema_title' => 'analytics/mwcli/command_execute',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 
@@ -21241,20 +21224,17 @@ function wmfGetVariantSettings() {
 		 * These streams disable canary event production.
 		 * See: https://phabricator.wikimedia.org/T287789
 		 */
-		[
-			'stream' => 'mediawiki.client.error',
+		'mediawiki.client.error' => [
 			'schema_title' => 'mediawiki/client/error',
 			'destination_event_service' => 'eventgate-logging-external',
 			'canary_events_enabled' => false,
 		],
-		[
-			'stream' => 'kaios_app.error',
+		'kaios_app.error' => [
 			'schema_title' => 'mediawiki/client/error',
 			'destination_event_service' => 'eventgate-logging-external',
 			'canary_events_enabled' => false,
 		],
-		[
-			'stream' => 'w3c.reportingapi.network_error',
+		'w3c.reportingapi.network_error' => [
 			'schema_title' => 'w3c/reportingapi/network_error',
 			'destination_event_service' => 'eventgate-logging-external',
 			'canary_events_enabled' => false,
@@ -21264,38 +21244,31 @@ function wmfGetVariantSettings() {
 		 * == eventgate-analytics streams ==
 		 * These streams are produced to Kafka jumbo-eqiad from internal producers.
 		 */
-		[
-			'stream' => 'api-gateway.request',
+		'api-gateway.request' => [
 			'schema_title' => 'api-gateway/request',
 			'destination_event_service' => 'eventgate-analytics',
 		],
-		[
-			'stream' => 'mediawiki.api-request',
+		'mediawiki.api-request' => [
 			'schema_title' => 'mediawiki/api/request',
 			'destination_event_service' => 'eventgate-analytics',
 		],
-		[
-			'stream' => 'mediawiki.cirrussearch-request',
+		'mediawiki.cirrussearch-request' => [
 			'schema_title' => 'mediawiki/cirrussearch/request',
 			'destination_event_service' => 'eventgate-analytics',
 		],
-		[
-			'stream' => 'wdqs-internal.sparql-query',
+		'wdqs-internal.sparql-query' => [
 			'schema_title' => 'sparql/query',
 			'destination_event_service' => 'eventgate-analytics',
 		],
-		[
-			'stream' => 'wdqs-external.sparql-query',
+		'wdqs-external.sparql-query' => [
 			'schema_title' => 'sparql/query',
 			'destination_event_service' => 'eventgate-analytics',
 		],
-		[
-			'stream' => 'cqs-external.sparql-query',
+		'cqs-external.sparql-query' => [
 			'schema_title' => 'sparql/query',
 			'destination_event_service' => 'eventgate-analytics',
 		],
-		[
-			'stream' => '/^swift\.(.+\.)?upload-complete$/',
+		'/^swift\.(.+\.)?upload-complete$/' => [
 			'schema_title' => 'swift/upload/complete',
 			'destination_event_service' => 'eventgate-analytics',
 			// canary events will not work for regex streams.
@@ -21308,8 +21281,7 @@ function wmfGetVariantSettings() {
 		 * These streams disable canary event production.
 		 * See: https://phabricator.wikimedia.org/T287789
 		 */
-		[
-			'stream' => '/^mediawiki\\.job\\..+/' ,
+		'/^mediawiki\\.job\\..+/' => [
 			'schema_title' => 'mediawiki/job',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
@@ -21321,138 +21293,121 @@ function wmfGetVariantSettings() {
 				],
 			],
 		],
-		[
-			'stream' => 'mediawiki.centralnotice.campaign-change',
+		'mediawiki.centralnotice.campaign-change' => [
 			'schema_title' => 'mediawiki/centralnotice/campaign/change',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
-			'stream' => 'mediawiki.centralnotice.campaign-create',
+		'mediawiki.centralnotice.campaign-create' => [
 			'schema_title' => 'mediawiki/centralnotice/campaign/create',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
-			'stream' => 'mediawiki.centralnotice.campaign-delete',
+		'mediawiki.centralnotice.campaign-delete' => [
 			'schema_title' => 'mediawiki/centralnotice/campaign/delete',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
-			'stream' => 'mediawiki.page-create',
+		'mediawiki.page-create' => [
 			'schema_title' => 'mediawiki/revision/create',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
-			'stream' => 'mediawiki.page-delete',
+		'mediawiki.page-delete' => [
 			'schema_title' => 'mediawiki/page/delete',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
-			'stream' => 'mediawiki.page-links-change',
+		'mediawiki.page-links-change' => [
 			'schema_title' => 'mediawiki/page/links-change',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
-			'stream' => 'mediawiki.page-move',
+		'mediawiki.page-move' => [
 			'schema_title' => 'mediawiki/page/move',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
-			'stream' => 'mediawiki.page-properties-change',
+		'mediawiki.page-properties-change' => [
 			'schema_title' => 'mediawiki/page/properties-change',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
-			'stream' => 'mediawiki.page-restrictions-change',
+		'mediawiki.page-restrictions-change' => [
 			'schema_title' => 'mediawiki/page/restrictions-change',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
-			'stream' => 'mediawiki.page-suppress',
+		'mediawiki.page-suppress' => [
 			'schema_title' => 'mediawiki/page/delete',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
-			'stream' => 'mediawiki.page-undelete',
+		'mediawiki.page-undelete' => [
 			'schema_title' => 'mediawiki/page/undelete',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
-			'stream' => 'mediawiki.recentchange',
+		'mediawiki.recentchange' => [
 			'schema_title' => 'mediawiki/recentchange',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
-			'stream' => 'mediawiki.revision-create',
+		'mediawiki.revision-create' => [
 			'schema_title' => 'mediawiki/revision/create',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
-			'stream' => 'mediawiki.revision-score',
+		'mediawiki.revision-score' => [
 			'schema_title' => 'mediawiki/revision/score',
 			'destination_event_service' => 'eventgate-main',
 			// This stream is derived and created by change-propagation,
 			// and Hadoop is the main consumer.  Emit canary events.
 			'canary_events_enabled' => true,
 		],
-		[
-			'stream' => 'mediawiki.revision-tags-change',
+		'mediawiki.revision-tags-change' => [
 			'schema_title' => 'mediawiki/revision/tags-change',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
-			'stream' => 'mediawiki.revision-visibility-change',
+		'mediawiki.revision-visibility-change' => [
 			'schema_title' => 'mediawiki/revision/visibility-change',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
-			'stream' => 'mediawiki.user-blocks-change',
+		'mediawiki.user-blocks-change' => [
 			'schema_title' => 'mediawiki/user/blocks-change',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
-			'stream' => 'resource_change',
+		'resource_change' => [
 			'schema_title' => 'resource_change',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
-			'stream' => 'resource-purge',
+		'resource-purge' => [
 			'schema_title' => 'resource_change',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
-			'stream' => 'change-prop.transcludes.resource-change',
+		'change-prop.transcludes.resource-change' => [
 			'schema_title' => 'resource_change',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
-		[
-			'stream' => 'mediawiki.revision-recommendation-create',
+		'mediawiki.revision-recommendation-create' => [
 			'schema_title' => 'mediawiki/revision/recommendation-create',
 			'destination_event_service' => 'eventgate-main',
 			// This stream is new enough that consumers are aware of canary events.
-			'canary_events_enabled' => true,
 		],
-		[
-			'stream' => 'maps.tile_change',
+		// Stream exists for compatibility reasons. It's going to be decomissioned when
+		// batched version (maps.tiles_change) is used in production (T293366)
+		'maps.tile_change' => [
 			'schema_title' => 'maps/tile_change',
+			'destination_event_service' => 'eventgate-main',
+		],
+		'maps.tiles_change' => [
+			'schema_title' => 'maps/tiles_change',
 			'destination_event_service' => 'eventgate-main',
 		],
 
@@ -21461,18 +21416,15 @@ function wmfGetVariantSettings() {
 		 * Note that Flink does not produce these through eventgate,
 		 * it produces them directly to Kafka.
 		 */
-		[
-			'stream' => 'rdf-streaming-updater.lapsed-action',
+		'rdf-streaming-updater.lapsed-action' => [
 			'schema_title' => 'rdf_streaming_updater/lapsed_action',
 			'destination_event_service' => 'eventgate-main',
 		],
-		[
-			'stream' => 'rdf-streaming-updater.state-inconsistency',
+		'rdf-streaming-updater.state-inconsistency' => [
 			'schema_title' => 'rdf_streaming_updater/state_inconsistency',
 			'destination_event_service' => 'eventgate-main',
 		],
-		[
-			'stream' => 'rdf-streaming-updater.fetch-failure',
+		'rdf-streaming-updater.fetch-failure' => [
 			'schema_title' => 'rdf_streaming_updater/fetch_failure',
 			'destination_event_service' => 'eventgate-main',
 		],
@@ -21496,47 +21448,39 @@ function wmfGetVariantSettings() {
 		 */
 
 		// eventgate test.event streams
-		[
-			'stream' => 'eventgate-logging-external.test.event',
+		'eventgate-logging-external.test.event' => [
 			'schema_title' => 'test/event',
 			'destination_event_service' => 'eventgate-logging-external',
 		],
-		[
-			'stream' => 'eventgate-analytics-external.test.event',
+		'eventgate-analytics-external.test.event' => [
 			'schema_title' => 'test/event',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		[
-			'stream' => 'eventgate-analytics.test.event',
+		'eventgate-analytics.test.event' => [
 			'schema_title' => 'test/event',
 			'destination_event_service' => 'eventgate-analytics',
 		],
-		[
-			'stream' => 'eventgate-main.test.event',
+		'eventgate-main.test.event' => [
 			'schema_title' => 'test/event',
 			'destination_event_service' => 'eventgate-main',
 		],
 		// eventgate error.validation streams
-		[
-			'stream' => 'eventgate-logging-external.error.validation',
+		'eventgate-logging-external.error.validation' => [
 			'schema_title' => 'error',
 			'destination_event_service' => 'eventgate-logging-external',
 			'canary_events_enabled' => false,
 		],
-		[
-			'stream' => 'eventgate-analytics-external.error.validation',
+		'eventgate-analytics-external.error.validation' => [
 			'schema_title' => 'error',
 			'destination_event_service' => 'eventgate-analytics-external',
 			'canary_events_enabled' => false,
 		],
-		[
-			'stream' => 'eventgate-analytics.error.validation',
+		'eventgate-analytics.error.validation' => [
 			'schema_title' => 'error',
 			'destination_event_service' => 'eventgate-analytics',
 			'canary_events_enabled' => false,
 		],
-		[
-			'stream' => 'eventgate-main.error.validation',
+		'eventgate-main.error.validation' => [
 			'schema_title' => 'error',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
@@ -21601,10 +21545,16 @@ function wmfGetVariantSettings() {
 		'eventlogging_WMDEBannerSizeIssue',
 		'mediawiki.client.session_tick',
 		'mediawiki.content_translation_event',
+		'mediawiki.talk_page_edit',
 		'mediawiki.mediasearch_interaction',
 		'mediawiki.structured_task.article.link_suggestion_interaction',
 		'mediawiki.structured_task.article.image_suggestion_interaction',
 		'mediawiki.pref_diff',
+		'mediawiki.skin_diff',
+		'mediawiki.reading_depth',
+		'mediawiki.web_ab_test_enrollment',
+		'mediawiki.web_ui_scroll',
+		'mediawiki.welcomesurvey.interaction',
 		'test.instrumentation',
 		'test.instrumentation.sampled',
 		'wd_propertysuggester.client_side_property_request',
@@ -21751,35 +21701,33 @@ function wmfGetVariantSettings() {
 	// Some languages aren't currently supported by MediaWiki
 	// but available to encode information on Wikidata.
 	// This is (temporarily) needed due to T264295.
+	//
+	// Once a language is added to Names.php and this change
+	// is deployed, it can be removed from this section.
+	//
 	// Note: If the language is only supposed to be used with
 	// Monolingual text statements, it should rather be added to:
 	// Wikibase\Lib\WikibaseContentLanguages::getDefaultMonolingualTextLanguages
 	'wikidata' => [
+		'agq' => 'Aghem', // T288335
 		'fkv' => 'kvääni', // T167259
-		'kea' => 'Kabuverdianu', // T127435
-		'nod' => 'ᨣᩴᩤᨾᩮᩥᩬᨦ', // T93880
-		'ota' => 'لسان توركى', // T59342
+		'mcn' => 'vùn màsànà', // T293884
+		'ota' => 'لسان عثمانى', // T59342
 		'rmf' => 'kaalengo tšimb', // T226701
 		'rwr' => 'मारवाड़ी', // T61905
-		'sjd' => 'Кӣллт са̄мь кӣлл', // T226701
-		'sje' => 'bidumsámegiella', // T146707
 		'sju' => 'ubmejesámiengiälla', // T226701
 		'smj' => 'julevsámegiella', // T146707
-		'sms' => 'nuõrttsääʹmǩiõll', // T220118, T223544
 		'srq' => 'mbia cheë', // T113408
 	],
 	'commonswiki' => [
+		'agq' => 'Aghem', // T288335
 		'fkv' => 'kvääni', // T167259
-		'kea' => 'Kabuverdianu', // T230480
-		'nod' => 'ᨣᩴᩤᨾᩮᩥᩬᨦ', // T230480
-		'ota' => 'لسان توركى', // T230480
+		'mcn' => 'vùn màsànà', // T293884
+		'ota' => 'لسان عثمانى', // T230480
 		'rmf' => 'kaalengo tšimb', // T226701
 		'rwr' => 'मारवाड़ी', // T230480
-		'sjd' => 'Кӣллт са̄мь кӣлл', // T226701
-		'sje' => 'bidumsámegiella', // T230480
 		'sju' => 'ubmejesámiengiälla', // T226701
 		'smj' => 'julevsámegiella', // T230480
-		'sms' => 'sääʹmǩiõll', // T222309
 		'srq' => 'mbia cheë', // T230480
 	],
 ],
@@ -21883,42 +21831,6 @@ function wmfGetVariantSettings() {
 
 'wgInterlanguageLinkCodeMap' => [
 	'wikipedia' => [ 'no' => 'nb' ], // T173602
-],
-
-'wmgWikibaseDispatchingLockManager' => [
-	'default' => 'wikibaseDispatchRedisLockManager',
-],
-
-'wmgWikibaseDispatchInterval' => [
-	'default' => 25,
-],
-
-'wmgWikibaseDispatchMaxTime' => [
-	'default' => 30,
-	'wikidatawiki' => 530, // Cron every 3 mins, length almost 9 mins, ~3 dispatching threads
-	'testwikidatawiki' => 890, // Cron every 15 mins, length almost 15 mins, ~1 dispatching thread
-],
-
-'wmgWikibaseDispatchDefaultBatchSize' => [
-	'default' => 420,
-],
-
-// T291610
-'wmgWikibaseDispatchViaJobsEnabled' => [
-	'default' => false,
-	'testwikidatawiki' => true,
-	'wikidatawiki' => true,
-],
-
-'wmgWikibaseDispatchViaJobsPruneChangesTableInJobEnabled' => [
-	'default' => false,
-	'testwikidatawiki' => true,
-],
-
-'wmgWikibaseDispatchViaJobsAllowedClients' => [
-	'default' => [],
-	'testwikidatawiki' => [ 'testwikidatawiki', 'testwiki', 'test2wiki', 'testcommonswiki' ],
-	'wikidatawiki' => null,
 ],
 
 'wmgWikibaseCachePrefix' => [
@@ -22319,11 +22231,13 @@ function wmfGetVariantSettings() {
 	'default' => false,
 	'bnwiki' => true,
 	'cywiki' => true,
+	'dagwiki' => true, // T298349
 	'eowiki' => true,
 	'etwiki' => true, // T186107
 	'guwiki' => true,
 	'htwiki' => true,
 	'knwiki' => true,
+	'kswiki' => true, // T294632
 	'lvwiki' => true,
 	'napwiki' => true,
 	'nnwiki' => true,
@@ -22390,8 +22304,6 @@ function wmfGetVariantSettings() {
 	// disabled statement usage tracking wikis
 	'commonswiki' => [ 'C' => 'O' ],
 	'cebwiki' => [ 'C' => 'O' ],
-	'warwiki' => [ 'C' => 'O' ],
-	'hywiki' => [ 'C' => 'O' ],
 ],
 
 'wmgUseWikibaseWikidataOrg' => [
@@ -22943,6 +22855,15 @@ function wmfGetVariantSettings() {
 	'wikidatawiki' => 'P218',
 ],
 
+'wgLexemeEnableDataTransclusion' => [
+	'default' => false,
+	'wikidatawiki' => true, // T294159
+	'testwikidatawiki' => true, // T294159
+	'bnwiktionary' => true, // T294159
+	'euwiktionary' => true, // T294159
+	// when adding other wikis, also change wmgWikibaseDisabledUsageAspects accordingly
+],
+
 'wmgWikibaseDisabledDataTypes' => [
 	'default' => [
 		'entity-schema' // T229904 :'(
@@ -22955,6 +22876,11 @@ function wmfGetVariantSettings() {
 
 'wmgWikibaseDisabledAccessEntityTypes' => [
 	'default' => [ 'lexeme', 'form', 'sense' ],
+	// see wgLexemeEnableDataTransclusion
+	'wikidatawiki' => [],
+	'testwikidatawiki' => [],
+	'bnwiktionary' => [],
+	'euwiktionary' => [],
 ],
 
 'wmgWikibaseMaxSerializedEntitySize' => [
@@ -23220,6 +23146,148 @@ function wmfGetVariantSettings() {
 	'commonswiki' => true,
 ],
 
+'wgMediaInfoMediaSearchProfiles' => [
+	'commonswiki' => [
+		'mediasearch_logistic_regression' => [
+			'boost' => [
+				'statement' => [
+					// depicts
+					'P180' => 1 * 0.11098311564161133,
+					// digital representation of
+					'P6243' => 1.1 * 0.11098311564161133,
+				],
+				'descriptions.$language' => 0.019320230186222098,
+				'descriptions.$language.plain' => 0,
+				'title' => 0.0702949038300864,
+				'title.plain' => 0,
+				'category' => 0.05158078808882278,
+				'category.plain' => 0,
+				'heading' => 0,
+				'heading.plain' => 0,
+				// Arbitrary small value to preserve ordering if we ONLY have a match in this field
+				'auxiliary_text' => 0.0001,
+				'auxiliary_text.plain' => 0,
+				'file_text' => 0,
+				'file_text.plain' => 0,
+				'redirect.title' => 0.01060150471482338,
+				'redirect.title.plain' => 0,
+				// Arbitrary small value to preserve ordering if we ONLY have a match in this field
+				'text' => 0.0001,
+				'text.plain' => 0,
+				'suggest' => 0,
+			],
+			'decay' => [
+				'descriptions.$language' => 0.9,
+				'descriptions.$language.plain' => 0.9,
+				// below is not actually a field
+				'synonyms' => 0,
+			],
+			'logisticRegressionIntercept' => -1.1975600089068401,
+			'entitiesVariableBoost' => true,
+			'normalizeFulltextScores' => true,
+			'normalizeMultiClauseScores' => true,
+			'applyLogisticFunction' => true,
+			'useSynonyms' => false,
+			'hasLtrPlugin' => true,
+		],
+		'mediasearch_synonyms' => [
+			'boost' => [
+				'statement' => [
+					// depicts
+					'P180' => 1 * 0.11098311564161133,
+					// digital representation of
+					'P6243' => 1.1 * 0.11098311564161133,
+				],
+				'descriptions.$language' => 0.019320230186222098,
+				'descriptions.$language.plain' => 0,
+				'title' => 0.0702949038300864,
+				'title.plain' => 0,
+				'category' => 0.05158078808882278,
+				'category.plain' => 0,
+				'heading' => 0,
+				'heading.plain' => 0,
+				// Arbitrary small value to preserve ordering if we ONLY have a match in this field
+				'auxiliary_text' => 0.0001,
+				'auxiliary_text.plain' => 0,
+				'file_text' => 0,
+				'file_text.plain' => 0,
+				'redirect.title' => 0.01060150471482338,
+				'redirect.title.plain' => 0,
+				// Arbitrary small value to preserve ordering if we ONLY have a match in this field
+				'text' => 0.0001,
+				'text.plain' => 0,
+				'suggest' => 0,
+			],
+			'decay' => [
+				'descriptions.$language' => 0.9,
+				'descriptions.$language.plain' => 0.9,
+				// below is not actually a field
+				'synonyms' => 0.5,
+			],
+			'logisticRegressionIntercept' => -1.1975600089068401,
+			'entitiesVariableBoost' => true,
+			'normalizeFulltextScores' => true,
+			'normalizeMultiClauseScores' => true,
+			'applyLogisticFunction' => true,
+			'useSynonyms' => true,
+			'hasLtrPlugin' => true,
+		],
+		'mediasearch_weighted_tags' => [
+			'boost' => [
+				'statement' => [
+					// depicts
+					'P180' => 1 * 0.07820204273071839,
+					// digital representation of
+					'P6243' => 1.1 * 0.07820204273071839,
+				],
+				'weighted_tags' => [
+					// NOTE the 1000 * is because we haven't stored a score for this field in the
+					// experimental search index, so it defaults to 1 which is transformed to
+					// 0.001 by cirrussearch code
+					// When we recreate the index on production we'll probably store a score of
+					// 1000 for this field, and can remove the 1000 * here
+					'image.linked.from.wikidata.p18/' => 1000 * 1.5653542537287244,
+					'image.linked.from.wikidata.p373/' => 4.0424359988709435,
+					'image.linked.from.wikidata.sitelink/' => 4.26335835247543,
+				],
+				'descriptions.$language' => 0.0392515093914008,
+				'descriptions.$language.plain' => 0,
+				'title' => 0.04487718624539365,
+				'title.plain' => 0,
+				'category' => 0.04321595766352061,
+				'category.plain' => 0,
+				'heading' => 0,
+				'heading.plain' => 0,
+				// Arbitrary small value to preserve ordering if we ONLY have a match in this field
+				'auxiliary_text' => 0.0001,
+				'auxiliary_text.plain' => 0,
+				'file_text' => 0,
+				'file_text.plain' => 0,
+				'redirect.title' => 0.01997210246565096,
+				'redirect.title.plain' => 0,
+				// Arbitrary small value to preserve ordering if we ONLY have a match in this field
+				'text' => 0.0001,
+				'text.plain' => 0,
+				'suggest' => 0.03278522607586197,
+			],
+			'decay' => [
+				'descriptions.$language' => 0.9,
+				'descriptions.$language.plain' => 0.9,
+				// below is not actually a field
+				'synonyms' => 0,
+			],
+			'logisticRegressionIntercept' => -1.4925851105992378,
+			'entitiesVariableBoost' => true,
+			'normalizeFulltextScores' => true,
+			'normalizeMultiClauseScores' => true,
+			'applyLogisticFunction' => true,
+			'useSynonyms' => false,
+			'hasLtrPlugin' => true,
+			'titleMatchBaseUri' => 'https://%s.wikipedia.org/w/api.php',
+		],
+	],
+],
+
 'wgMediaInfoMediaSearchDefaultForAnon' => [
 	// NOTE: keep in sync with wgMediaSearchDefaultForAnon (until
 	// this is removed)
@@ -23246,14 +23314,17 @@ function wmfGetVariantSettings() {
 ],
 
 // Enable Commons community assessment filters in Special:MediaSearch
+// when adding further assessment filters, also add them to any-assessment at the top
 'wgMediaSearchAssessmentFilters' => [
 	'commonswiki' => [
+		'any-assessment' => 'P6731=Q63348049|P6731=Q63348069|P6731=Q63348040|P6731=Q6998859', // T285349
 		'featured-image' => 'P6731=Q63348049',
 		'quality-image' => 'P6731=Q63348069',
 		'valued-image' => 'P6731=Q63348040',
 		'picture-of-the-day' => 'P6731=Q6998859',
 	],
 	'testcommonswiki' => [
+		'any-assessment' => 'P6731=Q63348049|P6731=Q63348069|P6731=Q63348040|P6731=Q6998859', // T285349
 		'featured-image' => 'P6731=Q63348049',
 		'quality-image' => 'P6731=Q63348069',
 		'valued-image' => 'P6731=Q63348040',
@@ -23598,31 +23669,28 @@ function wmfGetVariantSettings() {
 ],
 
 'wmgUseGlobalAbuseFilters' => [
-	// Enabled for all wikis that open, global and small/medium in size
+	// Enabled by default on all SUL small/medium wikis. Large wikis may
+	// opt-in, there is no performance issue in doing so.
 	'default' => true,
-
-	// Groups
-	// Only use these groups to set false. The default is true, and
-	// overlapping groups may not set different values.
-	'large' => false,
-	'private' => false,
 	'fishbowl' => false,
+	'large' => false,
 	'nonglobal' => false,
+	'private' => false,
 
 	// Individual wikis
 	// Can set either true or false as-needed to override the default or group setting.
 	'enwikisource' => true, // T78496
 	'frwiki' => true, // T120568
-	'metawiki' => true,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'mediawikiwiki' => true,
-	'specieswiki' => true,
 	'incubatorwiki' => true,
-	'wikidatawiki' => true,
+	'mediawikiwiki' => true,
+	'metawiki' => true,
 	'ptwiki' => true, // T140395
-	'warwiki' => true, // T230304
 	'ruwikinews' => true, // Needs explicit enable after moving to large wiki
+	'specieswiki' => true,
+	'test2wiki' => true,
+	'testwiki' => true,
+	'warwiki' => true, // T230304
+	'wikidatawiki' => true,
 ],
 
 'wmgUseCampaigns' => [
@@ -23642,9 +23710,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgCirrusSearchClusterOverrides' => [
-	# serve more_like explicitely from codfw in preparation of the switch back to eqiad
-	# so that the traffic is split by type between the two DCs
-	'default' => [ 'more_like' => 'codfw' ],
+	'default' => [],
 ],
 
 'wgCirrusSearchWriteClusters' => [
@@ -24187,7 +24253,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgCirrusSearchNearMatchWeight' => [
-	'default' => 10, //T257922
+	'default' => 10, // T257922
 ],
 
 'wgCirrusSearchNamespaceWeights' => [
@@ -25363,6 +25429,7 @@ function wmfGetVariantSettings() {
 
 'wgQuickSurveysConfig' => [
 	'default' => [],
+	'arwiki' => [],
 	'cawiki' => [
 		// T187299
 		[
@@ -25381,6 +25448,29 @@ function wmfGetVariantSettings() {
 			],
 			'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
 			'shuffleAnswersDisplay' => true,
+		],
+		[
+			// T296657
+			'name' => 'internal-gdi-safety-survey',
+			'type' => 'internal',
+			'layout' => 'single-answer',
+			'question' => 'ext-quicksurveys-internal-gdi-safety-survey-question',
+			'privacyPolicy' => 'ext-quicksurveys-internal-gdi-safety-survey-privacy-policy',
+			'answers' => [
+				'ext-quicksurveys-internal-gdi-safety-survey-answer-positive',
+				'ext-quicksurveys-internal-gdi-safety-survey-answer-negative',
+				'ext-quicksurveys-internal-gdi-safety-survey-answer-neutral',
+			],
+			'audience' => [
+				// T297623
+				'minEdits' => 5
+			],
+			'enabled' => true,
+			'coverage' => 0.2, // T296486
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable', 'beta' ],
+			],
 		],
 	],
 	'enwikivoyage' => [
@@ -25555,6 +25645,16 @@ function wmfGetVariantSettings() {
 	'private' => false,
 ],
 
+// Gradual rollout of tegola:
+// frwiki, ruwiki
+'wgKartographerDfltStyle' => [
+	'testwiki' => 'osm-tegola',
+	'frwiki' => 'osm-tegola',
+	'ruwiki' => 'osm-tegola',
+	'jawiki' => 'osm-tegola',
+	'enwiki' => 'osm-tegola',
+],
+
 // This MUST NOT be enabled on any additional wikis.
 'wgKartographerWikivoyageMode' => [
 	'default' => false,
@@ -25583,7 +25683,6 @@ function wmfGetVariantSettings() {
 	// Elaboration on this issue is at T229726#5419327
 	'dewiki' => false,
 	'huwiki' => false,
-	'idwiki' => false,
 	'plwiki' => false,
 	'sqwiki' => false,
 	'zh_classicalwiki' => false,
@@ -25706,6 +25805,21 @@ function wmfGetVariantSettings() {
 
 'wgWMEMobileWebUIActionsTracking' => [
 	'default' => 0.1, // T220016
+	'enwiki' => 0.01, // T295432
+],
+
+'wgWMEReadingDepthSamplingRate' => [
+	'default' => 0, // T294777
+	'enwiki' => 0.001, // T294777
+],
+
+'wgWMEWebUIScrollTrackingSamplingRate' => [
+	'default' => 0.1, // T292586
+	'enwiki' => 0.01, // T292586
+],
+
+'wgWMEWebUIScrollTrackingTimeToWaitBeforeScrollUp' => [
+	'default' => 5000, // T292586
 ],
 
 'wgWMEWikidataCompletionSearchClicks' => [
@@ -25717,7 +25831,6 @@ function wmfGetVariantSettings() {
 	'private' => false,
 	'fishbowl' => false,
 	'nonglobal' => false,
-	'foundationwiki' => true,
 ],
 
 'wmgUseNewsletter' => [
@@ -25876,6 +25989,10 @@ function wmfGetVariantSettings() {
 // T166759
 'wgAutoloadAttemptLowercase' => [
 	'default' => false,
+],
+
+'wgActorTableSchemaMigrationStage' => [
+	'default' => SCHEMA_COMPAT_WRITE_TEMP_AND_NEW | SCHEMA_COMPAT_READ_TEMP,
 ],
 
 'wgMultiContentRevisionSchemaMigrationStage' => [
@@ -26066,6 +26183,7 @@ function wmfGetVariantSettings() {
 	'furwiki' => true,
 	'fywiki' => true,
 	'gagwiki' => true,
+	'ganwiki' => true,
 	'gawiki' => true,
 	'gcrwiki' => true,
 	'gdwiki' => true,
@@ -26098,6 +26216,8 @@ function wmfGetVariantSettings() {
 	'inhwiki' => true,
 	'iowiki' => true,
 	'iswiki' => true,
+	'itwiki' => true,
+	'iuwiki' => true,
 	'jamwiki' => true,
 	'jawiki' => true,
 	'jbowiki' => true,
@@ -26196,6 +26316,7 @@ function wmfGetVariantSettings() {
 	'pntwiki' => true,
 	'pswiki' => true,
 	'ptwiki' => true,
+	'pwnwiki' => true,
 	'quwiki' => true,
 	'rmwiki' => true,
 	'rmywiki' => true,
@@ -26243,6 +26364,7 @@ function wmfGetVariantSettings() {
 	'tcywiki' => true,
 	'tetwiki' => true,
 	'tewiki' => true,
+	'tgwiki' => true,
 	'thwiki' => true,
 	'tiwiki' => true,
 	'tkwiki' => true,
@@ -26262,6 +26384,7 @@ function wmfGetVariantSettings() {
 	'ugwiki' => true,
 	'ukwiki' => true,
 	'urwiki' => true,
+	'uzwiki' => true,
 	'vecwiki' => true,
 	'vepwiki' => true,
 	'vewiki' => true,
@@ -26282,6 +26405,7 @@ function wmfGetVariantSettings() {
 	'zh_classicalwiki' => true,
 	'zh_min_nanwiki' => true,
 	'zh_yuewiki' => true,
+	'zhwiki' => true,
 	'zuwiki' => true,
 ],
 
@@ -26295,9 +26419,6 @@ function wmfGetVariantSettings() {
 
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
-
-	// pending visual editor (see T287878#7267554)
-	'kkwiki' => false,
 ],
 
 'wgWelcomeSurveyEnabled' => [
@@ -26365,6 +26486,12 @@ function wmfGetVariantSettings() {
 
 'wgGENewcomerTasksImageRecommendationsEnabled' => [
 	'default' => false,
+	'testwiki' => true,
+	'arwiki' => true,
+	'bnwiki' => true,
+	'cswiki' => true,
+	'eswiki' => true,
+	'viwiki' => true,
 ],
 
 'wgGENewcomerTasksLinkRecommendationsEnabled' => [
@@ -26385,13 +26512,18 @@ function wmfGetVariantSettings() {
 	'viwiki' => true,
 ],
 
+'wgGEImageRecommendationServiceUseTitles' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 'wgGELinkRecommendationsFrontendEnabled' => [
 	'default' => false,
 	'testwiki' => true,
 	'arwiki' => true,
 	'bnwiki' => true,
 	'cswiki' => true,
-	'dewiki' => true,
+	'dewiki' => false, // T294712
 	'eswiki' => true,
 	'fawiki' => true,
 	'frwiki' => true,
@@ -26502,20 +26634,53 @@ function wmfGetVariantSettings() {
 
 'wgGEHomepageDefaultVariant' => [
 	'default' => 'control',
-	'arwiki' => 'linkrecommendation',
-	'bnwiki' => 'linkrecommendation',
-	'cswiki' => 'linkrecommendation',
-	'dewiki' => 'linkrecommendation',
-	'fawiki' => 'linkrecommendation',
-	'frwiki' => 'linkrecommendation',
-	'huwiki' => 'linkrecommendation',
-	'nlwiki' => 'linkrecommendation',
-	'plwiki' => 'linkrecommendation',
-	'rowiki' => 'linkrecommendation',
-	'ruwiki' => 'linkrecommendation',
-	'viwiki' => 'linkrecommendation',
 ],
 
+'wgGEHomepageNewAccountVariantsByPlatform' => [
+	'default' => [
+		'control' => [
+			'mobile' => 100,
+			'desktop' => 100,
+		],
+		'imagerecommendation' => [
+			'mobile' => 0,
+			'desktop' => 0
+		]
+	],
+	'arwiki' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 100,
+		],
+		'imagerecommendation' => [
+			'mobile' => 50,
+			'desktop' => 0
+		]
+	],
+	'bnwiki' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 100,
+		],
+		'imagerecommendation' => [
+			'mobile' => 50,
+			'desktop' => 0
+		]
+	],
+	'cswiki' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 100,
+		],
+		'imagerecommendation' => [
+			'mobile' => 50,
+			'desktop' => 0
+		]
+	]
+],
+
+// Deprecated – remove after I41d96b4ea98d6bae5674440512ef371d33cce39c is in production for two
+// trains
 'wgGEHomepageNewAccountVariants' => [
 	'default' => [
 		'control' => 100,
@@ -26608,16 +26773,23 @@ function wmfGetVariantSettings() {
 ],
 
 'wgGEMentorDashboardEnabled' => [
-	// deployment requires Growth team approval
-	'default' => false,
-	'testwiki' => true,
-
-	// Growth pilot wikis
-	'arwiki' => true,
-	'bnwiki' => true,
-	'cswiki' => true,
+	'default' => true,
 ],
 
+'wgGEMentorDashboardDeploymentMode' => [
+	// wikis only receive stable modules
+	'default' => 'stable',
+
+	// testwiki has all modules
+	'testwiki' => 'alpha',
+
+	// Growth's pilot wikis will have beta-tested modules
+	'arwiki' => 'beta',
+	'bnwiki' => 'beta',
+	'cswiki' => 'beta',
+],
+
+// Deprecated variable. Remove after wmf.17 is everywhere and won't rollback.
 'wgGEMentorDashboardBetaMode' => [
 	// do not enable outside of testwikis
 	'default' => false,
@@ -26629,23 +26801,23 @@ function wmfGetVariantSettings() {
 ],
 
 'wgGEMentorDashboardBackendEnabled' => [
-	// check extensions/GrowthExperiments/updateMenteeData.php finishes
-	// reasonably quickly before enabling (especially on wikis with many newcomers,
-	// like enwiki).
-	'default' => false,
+	'default' => true,
+],
 
-	// Growth's pilot wikis
-	'arwiki' => true,
-	'bnwiki' => true,
-	'cswiki' => true,
+'wgGERecentChangesUnstarredMenteesFilterEnabled' => [
+	'default' => true,
 
-	// test wikis
-	'testwiki' => true,
+	// do NOT enable on those wikis without OK from the Growth team (T293182)
+	'arwiki' => false,
+	'enwiki' => false,
+	'fawiki' => false,
 ],
 
 'wgGECampaignPattern' => [
 	'default' => null,
 	'testwiki' => '/^growth-advancement-test-2021$/',
+	'arwiki' => '/^growth-JOSA-jan2022$/',
+	'enwiki' => '/^growth-recurring-english-2021$|^growth-recurring-english-control-2021$/',
 	'eswiki' => '/^growth-advancement-spanish-2021$/',
 	'ptwiki' => '/^growth-advancement-brazil-2021$/'
 ],
@@ -26774,30 +26946,30 @@ function wmfGetVariantSettings() {
 		'Q3518540', // terra cotta
 		'Q5960345', // turquoise
 		'Q3014419', // wine
-		'Q454847', //amaranth
-		'Q679355', //amber
-		'Q1324818', //apricot
-		'Q372973', //aquamarine
-		'Q797446', //burgundy
-		'Q5043987', //carnelian
-		'Q2541418', //celadon
-		'Q313120', //cerulean
-		'Q3309916', //chocolate
-		'Q2936397', //cinnamon
-		'Q2411228', //coral
-		'Q2730433', //cream
-		'Q303826', //crimson
-		'Q180778', //cyan
-		'Q5005364', //fuchsia
-		'Q5967009', //indigo
-		'Q650770', //khaki
-		'Q2720565', //lemon
-		'Q2294993', //lilac
-		'Q3276756', //magenta
-		'Q25203611', //Mango
-		'Q25393814', //maroon
-		'Q864152', //olive
-		'Q533047', //rose
+		'Q454847', // amaranth
+		'Q679355', // amber
+		'Q1324818', // apricot
+		'Q372973', // aquamarine
+		'Q797446', // burgundy
+		'Q5043987', // carnelian
+		'Q2541418', // celadon
+		'Q313120', // cerulean
+		'Q3309916', // chocolate
+		'Q2936397', // cinnamon
+		'Q2411228', // coral
+		'Q2730433', // cream
+		'Q303826', // crimson
+		'Q180778', // cyan
+		'Q5005364', // fuchsia
+		'Q5967009', // indigo
+		'Q650770', // khaki
+		'Q2720565', // lemon
+		'Q2294993', // lilac
+		'Q3276756', // magenta
+		'Q25203611', // Mango
+		'Q25393814', // maroon
+		'Q864152', // olive
+		'Q533047', // rose
 
 		// adjectives
 		'Q48997611', // vintage
@@ -26841,12 +27013,12 @@ function wmfGetVariantSettings() {
 		'Q11016', // technology
 		'Q1172903', // loch
 		'Q165848', // wind wave
-		'Q211778', //Lake District
-		'Q43238',  //Poaceae
-		'Q5135744', //religious institute
-		'Q486972', //human settlement
-		'Q826939', //canard
-		'Q1286', //Alps
+		'Q211778', // Lake District
+		'Q43238',  // Poaceae
+		'Q5135744', // religious institute
+		'Q486972', // human settlement
+		'Q826939', // canard
+		'Q1286', // Alps
 
 		// time oriented terms
 		'Q1187312', // yesterday
@@ -26944,7 +27116,15 @@ function wmfGetVariantSettings() {
 ],
 
 'wmgUseTheWikipediaLibrary' => [
-	'default' => false,
+	// T288070
+	'default' => true,
+	'private' => false,
+	'fishbowl' => false,
+	'nonglobal' => false,
+],
+
+'wgTwlEditCount' => [
+	'default' => 2000, // T288070
 ],
 
 'wgWBCitoidFullRestbaseURL' => [
@@ -27211,16 +27391,18 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
-'wgGlobalRenameBlacklist' => [
+'wgGlobalRenameDenylist' => [
 	'default' => 'https://meta.wikimedia.org/w/index.php?title=Global_rename_blacklist&action=raw'
 ],
-'wgGlobalRenameBlacklistRegex' => [
+
+'wgGlobalRenameDenylistRegex' => [
 	'default' => true
 ],
 
 // Disables use of Special:CreateAcount, but allows CentralAuth accounts to still be autocreated
 'wmgDisableAccountCreation' => [
 	'default' => false,
+	'foundationwiki' => true,
 	'wikimaniawiki' => true,
 	'testwikidatawiki' => true,
 ],
@@ -27389,10 +27571,6 @@ function wmfGetVariantSettings() {
 	'default' => true,
 ],
 
-'wmgWikibaseTmpUseRequestLanguagesForRdfOutput' => [
-	'default' => true,
-],
-
 'wmgWikibaseTmpNormalizeDataValues' => [
 	'default' => true,
 ],
@@ -27450,6 +27628,17 @@ function wmfGetVariantSettings() {
 	'metawiki' => true,
 ],
 
+// Temporary setting to stage the rollout of $wgLocalHTTPProxy (T288848)
+'wmgUseLocalHTTPProxy' => [
+	'default' => false,
+	'group0' => true,
+],
+
+// Early roll-out to Beta Cluster only
+'wmgUseWikiLambda' => [
+	'default' => false,
+],
+
 ];
 }
 
@@ -27459,7 +27648,7 @@ function wmfGetVariantSettings() {
  * @param array[] $settings wgConf-style settings array
  * @return array
  */
-function wmfApplyOverrideSettings( array $settings ) : array {
+function wmfApplyOverrideSettings( array $settings ): array {
 	// Override (or add) settings that we need for non-production realms.
 	foreach ( wmfGetOverrideSettings() as $key => $value ) {
 		if ( substr( $key, 0, 1 ) == '-' ) {

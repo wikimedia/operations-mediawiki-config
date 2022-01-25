@@ -12,3 +12,4 @@ inheritsFrom:
   - small
   - visualeditor-nondefault
   - wikidataclient
+  - desktop-improvements

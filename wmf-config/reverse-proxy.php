@@ -55,7 +55,13 @@ $wgCdnServersNoPurge = [
 
 	## eqsin private1
 	'10.132.0.0/24',
-	'2001:df2:e500:101::/64'
+	'2001:df2:e500:101::/64',
+
+	## drmrs
+	'10.136.0.0/24', # private1-b12-drmrs
+	'2a02:ec80:600:101::/64', # private1-b12-drmrs
+	'10.136.1.0/24', # private1-b13-drmrs
+	'2a02:ec80:600:102::/64', # private1-b13-drmrs
 ];
 
 # IP addresses that aren't proxies, regardless of what the other sources might say

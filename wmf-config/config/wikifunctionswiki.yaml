@@ -1,0 +1,9 @@
+# WARNING: This file is publicly viewable on the Web. Do not put private data here.
+# This is the configuration file for settings specific to Wikifunctions.
+# See the inheritance tree to find where most settings are defined.
+
+# NOTE: This is temporarily Beta-Cluster only.
+
+inheritsFrom:
+  - special
+  - all-labs

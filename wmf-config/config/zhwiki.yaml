@@ -12,5 +12,5 @@ inheritsFrom:
   - large
   - s2
   - securepollglobal
-  - visualeditor-nondefault
   - wikidataclient
+  - growthexperiments

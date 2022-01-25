@@ -7,6 +7,7 @@ inheritsFrom:
   - all-labs
   - categories-rdf
   - cirrussearch-big-indices
+  - mobile-anon-talk # T47955
   - large
   - nowikidatadescriptiontaglines
   - s3

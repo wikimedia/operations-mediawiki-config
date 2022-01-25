@@ -12,3 +12,4 @@ inheritsFrom:
   - securepollglobal
   - visualeditor-nondefault
   - wikidataclient
+  - desktop-improvements

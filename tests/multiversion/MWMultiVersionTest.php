@@ -2,7 +2,7 @@
 
 class MWMultiVersionTest extends PHPUnit\Framework\TestCase {
 
-	protected function tearDown() : void {
+	protected function tearDown(): void {
 		MWMultiversion::destroySingleton();
 		parent::tearDown();
 	}
@@ -146,6 +146,7 @@ class MWMultiVersionTest extends PHPUnit\Framework\TestCase {
 			[ 'testwiki', 'test.wikipedia.beta.wmflabs.org' ],
 
 			[ 'wikidatawiki', 'wikidata.beta.wmflabs.org' ],
+			[ 'wikifunctionswiki', 'wikifunctions.beta.wmflabs.org' ],
 		];
 	}
 }

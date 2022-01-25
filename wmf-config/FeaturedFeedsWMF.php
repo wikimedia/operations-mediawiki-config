@@ -9,7 +9,7 @@
 #      `-- wmf-config/FeaturedFeedsWMF.php
 #
 
-$wgHooks['FeaturedFeeds::getFeeds'][] = function ( &$feeds ) {
+$wgHooks['FeaturedFeeds::getFeeds'][] = static function ( &$feeds ) {
 	global $wgConf, $wgDBname, $wmgFeaturedFeedsOverrides;
 	list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 	$media = [

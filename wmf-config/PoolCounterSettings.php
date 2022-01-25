@@ -20,7 +20,7 @@ $wgPoolCounterConf = [
 		'class' => Client::class,
 		'timeout' => 15,
 		'workers' => 180,
-		'maxqueue' => 540,
+		'maxqueue' => 200,
 	],
 	// Software tries to recognize sources of external automation, such as GAE,
 	// AWS, browser automation, etc. and give them a separate pool so they
@@ -29,21 +29,21 @@ $wgPoolCounterConf = [
 		'class' => PoolCounter_Client::class,
 		'timeout' => 15,
 		'workers' => 30,
-		'maxqueue' => 90,
+		'maxqueue' => 35,
 	],
 	// Super common and mostly fast
 	'CirrusSearch-Prefix' => [
 		'class' => Client::class,
 		'timeout' => 15,
 		'workers' => 32,
-		'maxqueue' => 60,
+		'maxqueue' => 40,
 	],
 	// Super common and mostly fast, replaces Prefix (eventually)
 	'CirrusSearch-Completion' => [
 		'class' => Client::class,
 		'timeout' => 15,
 		'workers' => 432,
-		'maxqueue' => 600,
+		'maxqueue' => 450,
 	],
 	// Regex searches are much heavier then regular searches so we limit the
 	// concurrent number.
@@ -51,14 +51,14 @@ $wgPoolCounterConf = [
 		'class' => Client::class,
 		'timeout' => 60,
 		'workers' => 10,
-		'maxqueue' => 20,
+		'maxqueue' => 15,
 	],
 	// These should be very very fast
 	'CirrusSearch-NamespaceLookup' => [
 		'class' => Client::class,
 		'timeout' => 5,
 		'workers' => 100,
-		'maxqueue' => 200,
+		'maxqueue' => 120,
 	],
 	// These are very expensive and incredibly common at more than 5M per hour
 	// before varnish caching. If the somehow the cache hit rate drops this
@@ -69,7 +69,7 @@ $wgPoolCounterConf = [
 		'class' => Client::class,
 		'timeout' => 5,
 		'workers' => 150,
-		'maxqueue' => 400,
+		'maxqueue' => 175,
 	],
 	'FileRender' => [
 		'class' => Client::class,

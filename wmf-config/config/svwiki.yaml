@@ -10,6 +10,7 @@ inheritsFrom:
   - flow-labs
   - flow
   - growthexperiments
+  - mobile-anon-talk # T253985
   - large
   - s2
   - securepollglobal

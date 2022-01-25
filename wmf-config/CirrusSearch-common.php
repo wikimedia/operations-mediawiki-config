@@ -32,7 +32,7 @@ $wgCirrusSearchTextcatModel = [
 	"$IP/vendor/wikimedia/textcat/LM",
 ];
 
-$wgHooks['CirrusSearchMappingConfig'][] = function ( array &$config, $mappingConfigBuilder ) {
+$wgHooks['CirrusSearchMappingConfig'][] = static function ( array &$config, $mappingConfigBuilder ) {
 	$config['page']['properties']['popularity_score'] = [
 		'type' => 'double',
 	];

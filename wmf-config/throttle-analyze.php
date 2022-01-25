@@ -8,7 +8,7 @@
 
 use Wikimedia\IPUtils;
 
-$wgExtensionFunctions[] = function () {
+$wgExtensionFunctions[] = static function () {
 	global $wmgThrottlingExceptions, $wgDBname, $wgRequest;
 
 	foreach ( $wmgThrottlingExceptions as $options ) {

@@ -76,6 +76,8 @@ $common = [
 	'shellbox-media' => 'http://localhost:6026',
 	'shellbox-syntaxhighlight' => 'http://localhost:6027',
 	'shellbox-timeline' => 'http://localhost:6028',
+	// Points back to MediaWiki for $wgLocalHTTPProxy
+	'mwapi' => 'http://localhost:6501',
 
 	// cloudelastic only exists in eqiad. No load balancer is available due to
 	// the part of the network that they live in so each host is enumerated
@@ -101,7 +103,11 @@ $common = [
 			'transport' => 'Http',
 			'port' => 6106,
 		],
-	]
+	],
+
+	// Wikifunctions back-end services; currently in Beta Cluster only.
+	'wikifunctions-evaluator' => 'NOT YET DEFINED',
+	'wikifunctions-orchestrator' => 'NOT YET DEFINED',
 ];
 
 $services = [

@@ -93,15 +93,16 @@ $wmgMonologProcessors = [
 		'class' => \Monolog\Processor\PsrLogMessageProcessor::class,
 	],
 	'wmfconfig' => [
-		'factory' => function () {
-			return function ( array $record ) {
-				// T253677: Like Monolog\Processor\WebProcessor, but without unique_id
-				// Ref <https://github.com/Seldaek/monolog/issues/1470>.
+		'factory' => static function () {
+			return static function ( array $record ) {
+				// Like Monolog\Processor\WebProcessor, but without 'unique_id' (per T253677).
+				// And without 'ip' (per T114700).
+				//
+				// Ref <https://github.com/Seldaek/monolog/issues/1470>
 				// Ref <https://github.com/Seldaek/monolog/blob/1.5.0/src/Monolog/Processor/WebProcessor.php>
 				if ( isset( $_SERVER['REQUEST_URI'] ) ) {
 					$record['extra'] += [
 						'url' => $_SERVER['REQUEST_URI'] ?? null,
-						'ip' => $_SERVER['REMOTE_ADDR'] ?? null,
 						'http_method' => $_SERVER['REQUEST_METHOD'] ?? null,
 						'server' => $_SERVER['SERVER_NAME'] ?? null,
 						'referrer' => $_SERVER['HTTP_REFERER'] ?? null,
@@ -312,7 +313,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 				$wmgMonologConfig['handlers'][$sampledHandler] = [
 					'class' => \Monolog\Handler\SamplingHandler::class,
 					'args' => [
-						function () use ( $handlerName ) {
+						static function () use ( $handlerName ) {
 							return LoggerFactory::getProvider()->getHandler(
 								$handlerName
 							);
@@ -334,7 +335,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 				$wmgMonologConfig['handlers'][$bufferedHandler] = [
 					'class' => \MediaWiki\Logger\Monolog\BufferHandler::class,
 					'args' => [
-						function () use ( $handlerName ) {
+						static function () use ( $handlerName ) {
 							return LoggerFactory::getProvider()->getHandler(
 								$handlerName
 							);
@@ -354,7 +355,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 			$wmgMonologConfig['handlers'][$failureGroupHandler] = [
 				'class' => \Monolog\Handler\WhatFailureGroupHandler::class,
 				'args' => [
-					function () use ( $handlers ) {
+					static function () use ( $handlers ) {
 						$provider = LoggerFactory::getProvider();
 						return array_map(
 							[ $provider, 'getHandler' ],

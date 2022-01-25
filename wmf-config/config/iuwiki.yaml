@@ -9,5 +9,5 @@ inheritsFrom:
   - s3
   - securepollglobal
   - small
-  - visualeditor-nondefault
   - wikidataclient
+  - growthexperiments

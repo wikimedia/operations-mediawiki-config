@@ -2,9 +2,18 @@
 
 use MediaWiki\MediaWikiServices;
 
-// Load the Repo, and Repo extensions
+// Load the Repo
 if ( !empty( $wmgUseWikibaseRepo ) ) {
 	wfLoadExtension( 'WikibaseRepository', "$IP/extensions/Wikibase/extension-repo.json" );
+}
+
+// Load the Client
+if ( !empty( $wmgUseWikibaseClient ) ) {
+	wfLoadExtension( 'WikibaseClient', "$IP/extensions/Wikibase/extension-client.json" );
+}
+
+// Load Repo extensions
+if ( !empty( $wmgUseWikibaseRepo ) ) {
 	if ( !empty( $wmgUseWikibaseWikidataOrg ) ) {
 		wfLoadExtension( 'Wikidata.org' );
 	}
@@ -29,9 +38,8 @@ if ( !empty( $wmgUseWikibaseRepo ) ) {
 	}
 }
 
-// Load the Client, and Client extensions
+// Load Client extensions
 if ( !empty( $wmgUseWikibaseClient ) ) {
-	wfLoadExtension( 'WikibaseClient', "$IP/extensions/Wikibase/extension-client.json" );
 	if ( !empty( $wmgUseWikibaseWikimediaBadges ) ) {
 		wfLoadExtension( 'WikimediaBadges' );
 	}
@@ -58,24 +66,6 @@ define( 'WB_NS_QUERY_TALK', 123 );
 // e.g. wikibase_shared/1_31_0-wmf_2-testwikidatawiki0 for test wikis
 // and wikibase_shared/1_31_0-wmf_2-wikidatawiki for all others.
 $wmgWBSharedCacheKey = 'wikibase_shared/' . str_replace( '.', '_', $wmgVersionNumber ) . '-' . $wmgWikibaseCachePrefix;
-
-// Lock manager config must use the master datacenter
-// Use a TTL of 15 mins, no script will run for longer than this
-$wgLockManagers[] = [
-	'name'         => 'wikibaseDispatchRedisLockManager',
-	'class'        => 'RedisLockManager',
-	'lockTTL'      => 900, // 15 mins ( 15 * 60 )
-	'lockServers'  => $wmfMasterServices['redis_lock'],
-	'domain'       => $wgDBname,
-	'srvsByBucket' => [
-		0 => $redisLockServers
-	],
-	'redisConfig'  => [
-		'connectTimeout' => 2,
-		'readTimeout'    => 2,
-		'password'       => $wmgRedisPassword
-	]
-];
 
 if ( $wmgUseWikibaseRepo ) {
 	if ( $wgDBname === 'wikidatawiki' ) {
@@ -169,29 +159,6 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['sharedCacheKeyGroup'] = $wmgWikibaseCachePrefix;
 	$wgWBRepoSettings['sharedCacheKeyPrefix'] = $wmgWBSharedCacheKey;
 
-	// These settings can be overridden by the cron parameters in operations/puppet
-	$wgWBRepoSettings['dispatchingLockManager'] = $wmgWikibaseDispatchingLockManager;
-	$wgWBRepoSettings['dispatchDefaultDispatchInterval'] = $wmgWikibaseDispatchInterval;
-	$wgWBRepoSettings['dispatchMaxTime'] = $wmgWikibaseDispatchMaxTime;
-	$wgWBRepoSettings['dispatchDefaultBatchSize'] = $wmgWikibaseDispatchDefaultBatchSize;
-	$wgWBRepoSettings['dispatchLagToMaxLagFactor'] = 0;
-
-	if ( isset( $wmgWikibaseDispatchViaJobsEnabled ) && isset( $wmgWikibaseDispatchViaJobsAllowedClients ) ) {
-		$wgWBRepoSettings['dispatchViaJobsEnabled'] = $wmgWikibaseDispatchViaJobsEnabled;
-		$wgWBRepoSettings['dispatchViaJobsAllowedClients'] = $wmgWikibaseDispatchViaJobsAllowedClients;
-
-		if ( isset( $wmgWikibaseDispatchViaJobsPruneChangesTableInJobEnabled ) ) {
-			$wgWBRepoSettings['dispatchViaJobsPruneChangesTableInJobEnabled'] =
-				$wmgWikibaseDispatchViaJobsPruneChangesTableInJobEnabled;
-		}
-	}
-	// Explicitly set wikidata to null, since setting null in IS.php just removes it
-	if ( $wgDBname === 'wikidatawiki' ) {
-		$wgWBRepoSettings['dispatchViaJobsAllowedClients'] = null;
-		$wgWBRepoSettings['dispatchViaJobsEnabled'] = true;
-		$wgWBRepoSettings['dispatchViaJobsPruneChangesTableInJobEnabled'] = true;
-	}
-
 	$wgWBRepoSettings['unitStorage'] = [
 		'class' => '\\Wikibase\\Lib\\Units\\JsonUnitStorage',
 		'args' => [ __DIR__ . '/unitConversionConfig.json' ]
@@ -242,11 +209,6 @@ if ( $wmgUseWikibaseRepo ) {
 	// Temporary, T241422
 	$wgWBRepoSettings['tmpSerializeEmptyListsAsObjects'] = $wmgWikibaseTmpSerializeEmptyListsAsObjects;
 
-	// Temporary, T285795
-	if ( isset( $wmgWikibaseTmpUseRequestLanguagesForRdfOutput ) ) {
-		$wgWBRepoSettings['tmpUseRequestLanguagesForRdfOutput'] = $wmgWikibaseTmpUseRequestLanguagesForRdfOutput;
-	}
-
 	// Temporary, T251480
 	if ( isset( $wmgWikibaseTmpNormalizeDataValues ) ) {
 		$wgWBRepoSettings['tmpNormalizeDataValues'] = $wmgWikibaseTmpNormalizeDataValues;
@@ -286,7 +248,7 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['namespaces'] = $wmgWikibaseClientNamespacesWithRepoAccess;
 
-	$wgWBClientSettings['excludeNamespaces'] = function () {
+	$wgWBClientSettings['excludeNamespaces'] = static function () {
 		global $wgDBname, $wgProofreadPageNamespaceIds;
 
 		$namespaceInfo = MediaWikiServices::getInstance()->getNamespaceInfo();

@@ -15,10 +15,8 @@ wfLoadExtension( 'FlaggedRevs' );
 
 $wgFlaggedRevsAutopromote = false;
 
-$wgFlaggedRevsStatsAge = false;
-
 // Configuration fields that must be set before other configuration has been loaded
-call_user_func( function () {
+call_user_func( static function () {
 	global $wgDBname,
 		$wgFlaggedRevsAutopromote, $wgFlaggedRevsAutoconfirm;
 
@@ -189,10 +187,10 @@ call_user_func( function () {
 
 // Configuration fields that must be set after all other configuration has been loaded
 // (probably to make sure it comes after FlaggedRevsSetup::doSetup)
-$wgHooks['MediaWikiServices'][] = function () {
+$wgHooks['MediaWikiServices'][] = static function () {
 	global $wgAddGroups, $wgDBname, $wgDefaultUserOptions,
 		$wgFlaggedRevsNamespaces, $wgFlaggedRevsRestrictionLevels,
-		$wgFlaggedRevsStatsAge, $wgFlaggedRevsTags, $wgFlaggedRevsTagsRestrictions,
+		$wgFlaggedRevsTags, $wgFlaggedRevsTagsRestrictions,
 		$wgGroupPermissions, $wgRemoveGroups;
 
 	///////////////////////////////////////
@@ -290,14 +288,13 @@ $wgHooks['MediaWikiServices'][] = function () {
 
 		# User groups permissions
 		$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
-		$wgGroupPermissions['reviewer']['autopatrol'] = true;
-		$wgGroupPermissions['reviewer']['editautopatrolprotected'] = true;
-		$wgGroupPermissions['reviewer']['patrol'] = true;
-		$wgGroupPermissions['reviewer']['unwatchedpages'] = true;
 		$wgGroupPermissions['sysop']['review'] = true;
 		$wgGroupPermissions['sysop']['validate'] = true;
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
 
+		# Use 'reviewer' group
+		$wgAddGroups['sysop'][] = 'reviewer';
+		$wgRemoveGroups['sysop'][] = 'reviewer';
 		# Remove editor and autoreview user groups
 		unset( $wgGroupPermissions['editor'], $wgGroupPermissions['autoreview'] );
 	} elseif ( $wgDBname == 'test2wiki' ) {
@@ -527,6 +524,7 @@ $wgHooks['MediaWikiServices'][] = function () {
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 	} elseif ( $wgDBname == 'idwiki' ) {
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
+		$wgFlaggedRevsRestrictionLevels = [ '', 'autoconfirmed', 'autoreview', 'sysop' ];
 	} elseif ( $wgDBname == 'kawiki' ) {
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;

@@ -160,7 +160,6 @@ $IP/extensions/UniversalLanguageSelector/extension.json
 $IP/extensions/UploadsLink/extension.json
 $IP/extensions/UploadWizard/extension.json
 $IP/extensions/UrlShortener/extension.json
-$IP/extensions/UserMerge/extension.json
 $IP/extensions/VipsScaler/extension.json
 $IP/extensions/VisualEditor/extension.json
 $IP/extensions/WebAuthn/extension.json
@@ -175,6 +174,7 @@ $IP/extensions/Wikidata.org/extension.json
 $IP/extensions/WikidataPageBanner/extension.json
 $IP/extensions/WikiEditor/extension.json
 $IP/extensions/wikihiero/extension.json
+$IP/extensions/WikiLambda/extension.json
 $IP/extensions/WikiLove/extension.json
 $IP/extensions/WikimediaApiPortalOAuth/extension.json
 $IP/extensions/WikimediaBadges/extension.json

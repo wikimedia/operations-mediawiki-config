@@ -3,22 +3,38 @@
 	<rule ref="vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
 		<exclude name="Generic.Classes.DuplicateClassName.Found" />
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingDocumentationPrivate" />
+		<exclude name="MediaWiki.Commenting.FunctionComment.MissingParamTag" />
+		<exclude name="MediaWiki.Commenting.FunctionComment.ObjectTypeHintParam" />
+		<exclude name="MediaWiki.Commenting.FunctionComment.ObjectTypeHintReturn" />
 		<exclude name="MediaWiki.Commenting.FunctionComment.SuperfluousVariadicArgComment" />
+		<exclude name="MediaWiki.Commenting.FunctionComment.WrongStyle" />
 		<exclude name="MediaWiki.Commenting.MissingCovers.MissingCovers" />
+		<exclude name="MediaWiki.Commenting.PropertyDocumentation.MissingDocumentationPrivate" />
+		<exclude name="MediaWiki.Commenting.PropertyDocumentation.MissingDocumentationProtected" />
+		<exclude name="MediaWiki.Commenting.PropertyDocumentation.MissingVar" />
+		<exclude name="MediaWiki.Commenting.PropertyDocumentation.WrongStyle" />
 		<exclude name="MediaWiki.Files.ClassMatchesFilename.NotMatch" />
 		<exclude name="MediaWiki.Files.ClassMatchesFilename.WrongCase" />
+		<exclude name="MediaWiki.NamingConventions.PrefixedGlobalFunctions.allowedPrefix" />
 		<exclude name="MediaWiki.NamingConventions.PrefixedGlobalFunctions.wfPrefix" />
 		<exclude name="MediaWiki.NamingConventions.ValidGlobalName.allowedPrefix" />
-		<exclude name="MediaWiki.PHP71Features.VoidReturnType.NotAllowed"/>
+		<exclude name="MediaWiki.Usage.ForbiddenFunctions.compact" />
 		<exclude name="MediaWiki.Usage.SuperGlobalsUsage.SuperGlobals" />
+		<exclude name="MediaWiki.VariableAnalysis.MisleadingGlobalNames.Misleading$wgCirrusSearchPoolCounterKey" />
+		<exclude name="MediaWiki.VariableAnalysis.MisleadingGlobalNames.Misleading$wgConf" />
+		<exclude name="MediaWiki.VariableAnalysis.MisleadingGlobalNames.Misleading$wgDBname" />
+		<exclude name="MediaWiki.VariableAnalysis.MisleadingGlobalNames.Misleading$wgDebugLogFile" />
+		<exclude name="MediaWiki.VariableAnalysis.MisleadingGlobalNames.Misleading$wgJobTypeConf" />
+		<exclude name="MediaWiki.VariableAnalysis.UnusedGlobalVariables.UnusedGlobal$wmfUdp2logDest" />
 		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment" />
-		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.SingleSpaceBeforeSingleLineComment" />
-		<exclude name="Squiz.PHP.NonExecutableCode.ReturnNotRequired" />
 	</rule>
 	<file>.</file>
 	<arg name="bootstrap" value="./vendor/mediawiki/mediawiki-codesniffer/utils/bootstrap-ci.php"/>
 	<arg name="encoding" value="utf8"/>
 	<arg name="extensions" value="php,php5,inc,sample"/>
+	<rule ref="Generic.ControlStructures.DisallowYodaConditions.Found">
+		<exclude-pattern>private/readme\.php</exclude-pattern>
+	</rule>
 	<rule ref="Generic.Files.LineLength.TooLong">
 		<severity>0</severity>
 	</rule>
@@ -43,6 +59,9 @@
 	<rule ref="MediaWiki.Usage.ForbiddenFunctions.exec">
 		<exclude-pattern>docroot/noc/conf/index\.php</exclude-pattern>
 		<exclude-pattern>docroot/noc/conf/activeMWVersions\.php</exclude-pattern>
+	</rule>
+	<rule ref="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.SingleSpaceBeforeSingleLineComment">
+		<exclude-pattern>wmf-config/InitialiseSettings-labs\.php</exclude-pattern>
 	</rule>
 
 	<exclude-pattern>\.git/</exclude-pattern>

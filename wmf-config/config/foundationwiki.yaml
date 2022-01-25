@@ -5,10 +5,10 @@
 inheritsFrom:
   - special
   - categories-rdf
-  - fishbowl
   - nowikidatadescriptiontaglines
   - s3
   - securepollglobal
   - small
   - visualeditor-nondefault
   - all-labs
+  - desktop-improvements

@@ -30,7 +30,7 @@ return [
 	'wikivoyage' => '/static/images/project-logos/wikivoyage.png', // T55653
 
 	// Wikipedia
-	'abwiki' => '/static/images/project-logos/abwiki.png', // T48589
+	'abwiki' => '/static/images/project-logos/abwiki.png', // T48589, T297810
 	'acewiki' => '/static/images/project-logos/acewiki.png',
 	'adywiki' => '/static/images/project-logos/adywiki.png', // T125501
 	'afwiki' => '/static/images/project-logos/afwiki.png',
@@ -38,6 +38,7 @@ return [
 	'alswiki' => '/static/images/project-logos/alswiki.png',
 	'altwiki' => '/static/images/project-logos/altwiki.png',
 	'amwiki' => '/static/images/project-logos/amwiki.png', // T42285
+	'amiwiki' => '/static/images/project-logos/amiwiki.png',
 	'angwiki' => '/static/images/project-logos/angwiki.png', // T51125
 	'anwiki' => '/static/images/project-logos/anwiki.png',
 	'arcwiki' => '/static/images/project-logos/arcwiki.png',
@@ -172,7 +173,7 @@ return [
 	'kowiki' => '/static/images/project-logos/kowiki.png',
 	'krcwiki' => '/static/images/project-logos/krcwiki.png',
 	'kshwiki' => '/static/images/project-logos/kshwiki.png',
-	'kswiki' => '/static/images/project-logos/kswiki.png',
+	'kswiki' => '/static/images/project-logos/kswiki.png', // T293342
 	'kuwiki' => '/static/images/project-logos/kuwiki.png',
 	'kvwiki' => '/static/images/project-logos/kvwiki.png', // T42285
 	'kwwiki' => '/static/images/project-logos/kwwiki.png',
@@ -253,6 +254,7 @@ return [
 	'pntwiki' => '/static/images/project-logos/pntwiki.png', // T51125
 	'pswiki' => '/static/images/project-logos/pswiki.png', // T50397
 	'ptwiki' => '/static/images/project-logos/ptwiki.png',
+	'pwnwiki' => '/static/images/project-logos/pwnwiki.png',
 	'quwiki' => '/static/images/project-logos/quwiki.png',
 	'rmwiki' => '/static/images/project-logos/rmwiki.png', // T48589
 	'rmywiki' => '/static/images/project-logos/rmywiki.png', // T48589
@@ -396,12 +398,14 @@ return [
 	'kmwiktionary' => '/static/images/project-logos/kmwiktionary.png',
 	'knwiktionary' => '/static/images/project-logos/knwiktionary.png', // T31380
 	'kowiktionary' => '/static/images/project-logos/kowiktionary.png',
+	'kswiktionary' => '/static/images/project-logos/kswiktionary.png', // T293373
 	'kuwiktionary' => '/static/images/project-logos/kuwiktionary.png',
 	'kwwiktionary' => '/static/images/project-logos/kwwiktionary.png', // T45240
 	'kywiktionary' => '/static/images/project-logos/kywiktionary.png', // T45240
 	'lawiktionary' => '/static/images/project-logos/lawiktionary.png',
 	'lbwiktionary' => '/static/images/project-logos/lbwiktionary.png',
 	'liwiktionary' => '/static/images/project-logos/liwiktionary.png', // T45240
+	'lmowiktionary' => '/static/images/project-logos/lmowiktionary.png',
 	'ltwiktionary' => '/static/images/project-logos/ltwiktionary.png',
 	'lvwiktionary' => '/static/images/project-logos/lvwiktionary.png', // T45240
 	'niawiktionary' => '/static/images/project-logos/niawiktionary.png',
@@ -618,7 +622,7 @@ return [
 	'thwikinews' => '/static/images/project-logos/thwikinews.png',
 	'trwikinews' => '/static/images/project-logos/trwikinews.png',
 	'ukwikinews' => '/static/images/project-logos/ukwikinews.png', // T124778
-	'zhwikinews' => '/static/images/project-logos/zhwikinews.png',
+	'zhwikinews' => '/static/images/project-logos/zhwikinews.png', // T298550
 
 	// Wikisource
 	'arwikisource' => '/static/images/project-logos/arwikisource.png',
@@ -831,7 +835,7 @@ return [
 	// Projects
 
 	// Wikipedia
-	'abwiki' => '/static/images/project-logos/abwiki-1.5x.png', // T150618
+	'abwiki' => '/static/images/project-logos/abwiki-1.5x.png', // T150618, T297810
 	'acewiki' => '/static/images/project-logos/acewiki-1.5x.png', // T150618
 	'adywiki' => '/static/images/project-logos/adywiki-1.5x.png', // T150618
 	'afwiki' => '/static/images/project-logos/afwiki-1.5x.png', // T150618
@@ -839,12 +843,13 @@ return [
 	'alswiki' => '/static/images/project-logos/alswiki-1.5x.png', // T150618
 	'altwiki' => '/static/images/project-logos/altwiki-1.5x.png',
 	'amwiki' => '/static/images/project-logos/amwiki-1.5x.png', // T150618
+	'amiwiki' => '/static/images/project-logos/amiwiki-1.5x.png',
 	'angwiki' => '/static/images/project-logos/angwiki-1.5x.png', // T150618
 	'anwiki' => '/static/images/project-logos/anwiki-1.5x.png', // T150618
 	'arwiki' => '/static/images/project-logos/arwiki-1.5x.png', // T150618
 	'arywiki' => '/static/images/project-logos/arywiki-1.5x.png',
 	'arzwiki' => '/static/images/project-logos/arzwiki-1.5x.png', // T150618
-	'astwiki' => '/static/images/project-logos/astwiki-1.5x.png', // T150618
+	'astwiki' => '/static/images/project-logos/astwiki-1.5x.png', // T150618, T292742
 	'atjwiki' => '/static/images/project-logos/atjwiki-1.5x.png', // T167714
 	'avwiki' => '/static/images/project-logos/avwiki-1.5x.png', // T150618
 	'avkwiki' => '/static/images/project-logos/avkwiki-1.5x.png', // T257943
@@ -968,7 +973,7 @@ return [
 	'kowiki' => '/static/images/project-logos/kowiki-1.5x.png', // T150618
 	'krcwiki' => '/static/images/project-logos/krcwiki-1.5x.png', // T150618
 	'kshwiki' => '/static/images/project-logos/kshwiki-1.5x.png', // T150618
-	'kswiki' => '/static/images/project-logos/kswiki-1.5x.png', // T150618
+	'kswiki' => '/static/images/project-logos/kswiki-1.5x.png', // T150618, T293342
 	'kuwiki' => '/static/images/project-logos/kuwiki-1.5x.png', // T150618
 	'kvwiki' => '/static/images/project-logos/kvwiki-1.5x.png', // T150618
 	'kwwiki' => '/static/images/project-logos/kwwiki-1.5x.png', // T150618
@@ -1048,6 +1053,7 @@ return [
 	'pntwiki' => '/static/images/project-logos/pntwiki-1.5x.png', // T150618
 	'pswiki' => '/static/images/project-logos/pswiki-1.5x.png', // T150618
 	'ptwiki' => '/static/images/project-logos/ptwiki-1.5x.png', // T150618
+	'pwnwiki' => '/static/images/project-logos/pwnwiki-1.5x.png',
 	'quwiki' => '/static/images/project-logos/quwiki-1.5x.png', // T150618
 	'rmwiki' => '/static/images/project-logos/rmwiki-1.5x.png', // T150618
 	'rmywiki' => '/static/images/project-logos/rmywiki-1.5x.png', // T150618
@@ -1173,9 +1179,11 @@ return [
 	'kmwiktionary' => '/static/images/project-logos/kmwiktionary-1.5x.png', // T150618
 	'knwiktionary' => '/static/images/project-logos/knwiktionary-1.5x.png', // T150618
 	'kowiktionary' => '/static/images/project-logos/kowiktionary-1.5x.png', // T150618
+	'kswiktionary' => '/static/images/project-logos/kswiktionary-1.5x.png', // T293373
 	'kwwiktionary' => '/static/images/project-logos/kwwiktionary-1.5x.png', // T150618
 	'kywiktionary' => '/static/images/project-logos/kywiktionary-1.5x.png', // T150618
 	'liwiktionary' => '/static/images/project-logos/liwiktionary-1.5x.png', // T150618
+	'lmowiktionary' => '/static/images/project-logos/lmowiktionary-1.5x.png',
 	'lvwiktionary' => '/static/images/project-logos/lvwiktionary-1.5x.png', // T150618
 	'niawiktionary' => '/static/images/project-logos/niawiktionary-1.5x.png',
 	'minwiktionary' => '/static/images/project-logos/minwiktionary-1.5x.png',
@@ -1292,7 +1300,7 @@ return [
 	'srwikinews' => '/static/images/project-logos/srwikinews-1.5x.png', // T172255
 	'trwikinews' => '/static/images/project-logos/trwikinews-1.5x.png', // T150618
 	'ukwikinews' => '/static/images/project-logos/ukwikinews-1.5x.png',
-	'zhwikinews' => '/static/images/project-logos/zhwikinews-1.5x.png', // T150618
+	'zhwikinews' => '/static/images/project-logos/zhwikinews-1.5x.png', // T150618, T298550
 
 	// Wikisource
 	'banwikisource' => '/static/images/project-logos/banwikisource-1.5x.png',
@@ -1406,7 +1414,7 @@ return [
 	// Projects
 
 	// Wikipedia
-	'abwiki' => '/static/images/project-logos/abwiki-2x.png', // T150618
+	'abwiki' => '/static/images/project-logos/abwiki-2x.png', // T150618, T297810
 	'acewiki' => '/static/images/project-logos/acewiki-2x.png', // T150618
 	'adywiki' => '/static/images/project-logos/adywiki-2x.png', // T150618
 	'afwiki' => '/static/images/project-logos/afwiki-2x.png', // T150618
@@ -1414,12 +1422,13 @@ return [
 	'alswiki' => '/static/images/project-logos/alswiki-2x.png', // T150618
 	'altwiki' => '/static/images/project-logos/altwiki-2x.png',
 	'amwiki' => '/static/images/project-logos/amwiki-2x.png', // T150618
+	'amiwiki' => '/static/images/project-logos/amiwiki-2x.png',
 	'angwiki' => '/static/images/project-logos/angwiki-2x.png', // T150618
 	'anwiki' => '/static/images/project-logos/anwiki-2x.png', // T150618
 	'arwiki' => '/static/images/project-logos/arwiki-2x.png', // T150618
 	'arywiki' => '/static/images/project-logos/arywiki-2x.png',
 	'arzwiki' => '/static/images/project-logos/arzwiki-2x.png', // T150618
-	'astwiki' => '/static/images/project-logos/astwiki-2x.png', // T150618
+	'astwiki' => '/static/images/project-logos/astwiki-2x.png', // T150618, T292742
 	'atjwiki' => '/static/images/project-logos/atjwiki-2x.png', // T167714
 	'avwiki' => '/static/images/project-logos/avwiki-2x.png', // T150618
 	'avkwiki' => '/static/images/project-logos/avkwiki-2x.png', // T257943
@@ -1543,7 +1552,7 @@ return [
 	'kowiki' => '/static/images/project-logos/kowiki-2x.png', // T150618
 	'krcwiki' => '/static/images/project-logos/krcwiki-2x.png', // T150618
 	'kshwiki' => '/static/images/project-logos/kshwiki-2x.png', // T150618
-	'kswiki' => '/static/images/project-logos/kswiki-2x.png', // T150618
+	'kswiki' => '/static/images/project-logos/kswiki-2x.png', // T150618, T293342
 	'kuwiki' => '/static/images/project-logos/kuwiki-2x.png', // T150618
 	'kvwiki' => '/static/images/project-logos/kvwiki-2x.png', // T150618
 	'kwwiki' => '/static/images/project-logos/kwwiki-2x.png', // T150618
@@ -1623,6 +1632,7 @@ return [
 	'pntwiki' => '/static/images/project-logos/pntwiki-2x.png', // T150618
 	'pswiki' => '/static/images/project-logos/pswiki-2x.png', // T150618
 	'ptwiki' => '/static/images/project-logos/ptwiki-2x.png', // T150618
+	'pwnwiki' => '/static/images/project-logos/pwnwiki-2x.png',
 	'quwiki' => '/static/images/project-logos/quwiki-2x.png', // T150618
 	'rmwiki' => '/static/images/project-logos/rmwiki-2x.png', // T150618
 	'rmywiki' => '/static/images/project-logos/rmywiki-2x.png', // T150618
@@ -1748,9 +1758,11 @@ return [
 	'kmwiktionary' => '/static/images/project-logos/kmwiktionary-2x.png', // T150618
 	'knwiktionary' => '/static/images/project-logos/knwiktionary-2x.png', // T150618
 	'kowiktionary' => '/static/images/project-logos/kowiktionary-2x.png', // T150618
+	'kswiktionary' => '/static/images/project-logos/kswiktionary-2x.png', // T293373
 	'kwwiktionary' => '/static/images/project-logos/kwwiktionary-2x.png', // T150618
 	'kywiktionary' => '/static/images/project-logos/kywiktionary-2x.png', // T150618
 	'liwiktionary' => '/static/images/project-logos/liwiktionary-2x.png', // T150618
+	'lmowiktionary' => '/static/images/project-logos/lmowiktionary-2x.png',
 	'lvwiktionary' => '/static/images/project-logos/lvwiktionary-2x.png', // T150618
 	'niawiktionary' => '/static/images/project-logos/niawiktionary-2x.png',
 	'minwiktionary' => '/static/images/project-logos/minwiktionary-2x.png',
@@ -1867,7 +1879,7 @@ return [
 	'srwikinews' => '/static/images/project-logos/srwikinews-2x.png', // T172255
 	'trwikinews' => '/static/images/project-logos/trwikinews-2x.png', // T150618
 	'ukwikinews' => '/static/images/project-logos/ukwikinews-2x.png',
-	'zhwikinews' => '/static/images/project-logos/zhwikinews-2x.png', // T150618
+	'zhwikinews' => '/static/images/project-logos/zhwikinews-2x.png', // T150618, T298550
 
 	// Wikisource
 	'banwikisource' => '/static/images/project-logos/banwikisource-2x.png',

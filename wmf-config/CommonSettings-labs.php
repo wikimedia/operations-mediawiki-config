@@ -53,7 +53,7 @@ $wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = [
 // Enforce password policy when users login on other wikis; also for sensitive global groups
 // FIXME does this just duplicate the global policy checks down in the main $wmgUseCentralAuth block?
 if ( $wmgUseCentralAuth ) {
-	$wgHooks['PasswordPoliciesForUser'][] = function ( User $user, array &$effectivePolicy ) use ( $wmgPrivilegedPolicy ) {
+	$wgHooks['PasswordPoliciesForUser'][] = static function ( User $user, array &$effectivePolicy ) use ( $wmgPrivilegedPolicy ) {
 		$privilegedGroups = wmfGetPrivilegedGroups( $user );
 		if ( $privilegedGroups ) {
 			$effectivePolicy = UserPasswordPolicy::maxOfPolicies( $effectivePolicy, $wmgPrivilegedPolicy );
@@ -80,10 +80,11 @@ $wgLocalVirtualHosts = [
 	'meta.wikimedia.beta.wmflabs.org',
 	'commons.wikimedia.beta.wmflabs.org',
 	'api.wikimedia.beta.wmflabs.org',
+	'wikifunctions.beta.wmflabs.org',
 ];
 
 // T49647
-$wgHooks['EnterMobileMode'][] = function () {
+$wgHooks['EnterMobileMode'][] = static function () {
 	global $wgCentralAuthCookieDomain, $wgHooks;
 	$domainRegexp = '/(?<!\.m)\.wikimedia\.beta\.wmflabs\.org$/';
 	$mobileDomain = '.m.wikimedia.beta.wmflabs.org';
@@ -91,7 +92,7 @@ $wgHooks['EnterMobileMode'][] = function () {
 	if ( preg_match( $domainRegexp, $wgCentralAuthCookieDomain ) ) {
 		$wgCentralAuthCookieDomain = preg_replace( $domainRegexp, $mobileDomain, $wgCentralAuthCookieDomain );
 	}
-	$wgHooks['WebResponseSetCookie'][] = function ( &$name, &$value, &$expire, &$options ) use ( $domainRegexp, $mobileDomain ) {
+	$wgHooks['WebResponseSetCookie'][] = static function ( &$name, &$value, &$expire, &$options ) use ( $domainRegexp, $mobileDomain ) {
 		if ( isset( $options['domain'] ) && preg_match( $domainRegexp, $options['domain'] ) ) {
 			$options['domain'] = preg_replace( $domainRegexp, $mobileDomain, $options['domain'] );
 		}
@@ -148,19 +149,7 @@ if ( $wmgUseIPInfo ) {
 	// This allows admins on beta to test the feature.
 	// Remove this before deployment to production: T270347
 	$wgGroupPermissions['sysop']['ipinfo'] = true;
-}
-
-if ( $wmgUseCentralAuth ) {
-	$wgCentralAuthUseSlaves = true;
-
-	// temporary for testing foundationwiki SUL migration (T205347)
-	if ( $wgDBname === 'foundationwiki' ) {
-		$wgCentralAuthStrict = false;
-		$wgCentralAuthAutoMigrateNonGlobalAccounts = false;
-		$wgCentralAuthCreateOnView = false;
-		$wgCentralAuthCookies = false;
-		$wgCentralAuthPreventUnattached = false;
-	}
+	$wgGroupPermissions['sysop']['ipinfo-view-basic'] = true;
 }
 
 if ( $wmgUseCentralNotice ) {
@@ -228,7 +217,7 @@ if ( $wmgUseBounceHandler ) {
 	// $wgVERPsecret = ''; // This was set in PrivateSettings.php by Legoktm
 	$wgBounceHandlerCluster = false;
 	$wgBounceHandlerSharedDB = false;
-	$wgBounceHandlerInternalIPs = [ '127.0.0.1', '::1', '172.16.4.120' ]; // deployment-mx02.deployment-prep.eqiad.wmflabs
+	$wgBounceHandlerInternalIPs = [ '127.0.0.1', '::1', '172.16.6.221' ]; // deployment-mx03.deployment-prep.eqiad1.wikimedia.cloud
 	$wgBounceHandlerUnconfirmUsers = true;
 	$wgBounceRecordLimit = 5;
 	$wgVERPdomainPart = 'beta.wmflabs.org';
@@ -361,28 +350,6 @@ if ( $wmgUseFileImporter ) {
 
 if ( $wmgUseEventBus ) {
 	$wgEventBusEnableRunJobAPI = true;
-
-	// TEMPORARILY OVERRIDE CommonSettings.php to test x_client_ip_forwarding_enabled in beta.
-	// https://phabricator.wikimedia.org/T288853
-	// For analytics purposes, we forward the X-Client-IP header to eventgate.
-	// eventgate will use this to set a default http.client_ip in event data when relevant.
-	// https://phabricator.wikimedia.org/T288853
-	$wgEventServices = [
-		'eventgate-analytics' => [
-			'url' => "{$wmfLocalServices['eventgate-analytics']}/v1/events?hasty=true",
-			'timeout' => 11,
-			'x_client_ip_forwarding_enabled' => true,
-		],
-		'eventgate-analytics-external' => [
-			'url' => "{$wmfLocalServices['eventgate-analytics-external']}/v1/events?hasty=true",
-			'timeout' => 11,
-			'x_client_ip_forwarding_enabled' => true,
-		],
-		'eventgate-main' => [
-			'url' => "{$wmfLocalServices['eventgate-main']}/v1/events",
-			'timeout' => 62, // envoy overall req timeout + 1
-		]
-	];
 }
 
 if ( $wmgUseStopForumSpam ) {
@@ -455,5 +422,21 @@ $wgPopupsReferencePreviewsBetaFeature = false;
 if ( $wmgUseChessBrowser ) {
 	wfLoadExtension( 'ChessBrowser' );
 }
+
+// SecurePoll -- do not let users to view PII
+if ( $wmgUseSecurePoll ) {
+	foreach ( $wgGroupPermissions as $group => $permissions ) {
+		if ( array_key_exists( 'securepoll-view-voter-pii', $permissions ) ) {
+			$wgGroupPermissions[$group]['securepoll-view-voter-pii'] = false;
+		}
+	}
+}
+
+// Versioned maps support, see T294339
+$wgKartographerVersionedLiveMaps = true;
+$wgKartographerVersionedMapdata = true;
+$wgKartographerVersionedStaticMaps = true;
+// Point to the maps-experiments kartotherian server, see T294339
+$wgKartographerMapServer = 'https://kartotherian.wmflabs.org';
 
 } # end safeguard

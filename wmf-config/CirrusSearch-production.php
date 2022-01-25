@@ -14,7 +14,6 @@
 #          `-- wmf-config/CirrusSearch-production.php
 #
 
-
 $wgCirrusSearchClusters = [
 	'eqiad-chi' => $wmfAllServices['eqiad']['search-chi'] + [ 'group' => 'chi', 'replica' => 'eqiad' ],
 	'codfw-chi' => $wmfAllServices['codfw']['search-chi'] + [ 'group' => 'chi', 'replica' => 'codfw' ],

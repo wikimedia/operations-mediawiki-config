@@ -39,9 +39,10 @@ Projects:
 
 Wikipedia:
     abwiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        commons: File:Wikipedia-logo-v2-ab-new.svg
+        comment:  T48589, T297810
+        comment_1_5x:  T150618, T297810
+        comment_2x:  T150618, T297810
 
     acewiki:
         comment_1_5x:  T150618
@@ -73,6 +74,9 @@ Wikipedia:
         comment_1_5x:  T150618
         comment_2x:  T150618
 
+    amiwiki:
+        commons: File:Wikipedia-logo-v2-ami.svg
+
     angwiki:
         comment:  T51125
         comment_1_5x:  T150618
@@ -99,8 +103,8 @@ Wikipedia:
 
     astwiki:
         comment:  T42285, T131247
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        comment_1_5x:  T150618, T292742
+        comment_2x:  T150618, T292742
 
     aswiki:
         no_1_5x: true
@@ -495,6 +499,7 @@ Wikipedia:
         comment_2x:  T150618
 
     hiwiki:
+        commons: File:Wikipedia-logo-v2-hi.svg
         comment_1_5x:  T150618
         comment_2x:  T150618
 
@@ -663,8 +668,10 @@ Wikipedia:
         comment_2x:  T150618
 
     kswiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        commons: File:Wikipedia-logo-v2-ks-1.svg
+        comment:  T293342
+        comment_1_5x:  T150618, T293342
+        comment_2x:  T150618, T293342
 
     kuwiki:
         comment_1_5x:  T150618
@@ -1016,6 +1023,9 @@ Wikipedia:
         commons: File:Wikipedia-logo-v2-pt.svg
         comment_1_5x:  T150618
         comment_2x:  T150618
+
+    pwnwiki:
+        commons: File:Wikipedia-logo-v2-pwn.svg
 
     quwiki:
         comment_1_5x:  T150618
@@ -1640,6 +1650,12 @@ Wiktionary:
         comment_1_5x:  T150618
         comment_2x:  T150618
 
+    kswiktionary:
+        commons: File:Wiktionary-logo-ks.svg
+        comment:  T293373
+        comment_1_5x:  T293373
+        comment_2x:  T293373
+
     kuwiktionary:
         no_1_5x: true
         no_2x: true
@@ -1663,9 +1679,13 @@ Wiktionary:
         no_2x: true
 
     liwiktionary:
+        commons: File:Wiktionary-logo-li.svg
         comment:  T45240
         comment_1_5x:  T150618
         comment_2x:  T150618
+
+    lmowiktionary:
+        commons: File:WiktionaryLmo.svg
 
     ltwiktionary:
         no_1_5x: true
@@ -1972,6 +1992,7 @@ Wikiquote:
         no_2x: true
 
     cawikiquote:
+        commons: File:Wikiquote-logo-ca.svg
         comment_1_5x:  T150618
         comment_2x:  T150618
 
@@ -1988,16 +2009,19 @@ Wikiquote:
         no_2x: true
 
     enwikiquote:
+        commons: File:Wikiquote-logo-en.svg
         comment:  T171810
         comment_1_5x:  T150618
         comment_2x:  T150618
 
     eowikiquote:
+        commons: File:Wikiquote-logo-eo.svg
         comment:  T45879
         comment_1_5x:  T150618
         comment_2x:  T150618
 
     eswikiquote:
+        commons: File:Wikiquote-logo-es.svg
         comment_1_5x:  T170604
         comment_2x:  T170604
 
@@ -2018,6 +2042,7 @@ Wikiquote:
         no_2x: true
 
     hrwikiquote:
+        commons: File:Wikiquote-logo-hr.svg
         comment_1_5x:  T150618
         comment_2x:  T150618
 
@@ -2026,6 +2051,7 @@ Wikiquote:
         no_2x: true
 
     hywikiquote:
+        commons: File:Wikiquote-logo-hy.svg
         comment_1_5x:  T150618
         comment_2x:  T150618
 
@@ -2038,6 +2064,7 @@ Wikiquote:
         no_2x: true
 
     knwikiquote:
+        commons: File:Wikiquote-logo-kn.svg
         comment:  T104260
         comment_1_5x:  T150618
         comment_2x:  T150618
@@ -2100,6 +2127,7 @@ Wikiquote:
         comment_2x:  T150618
 
     srwikiquote:
+        commons: File:Wikiquote-logo-sr.svg
         comment_1_5x:  T150618 and T168444
         comment_2x:  T150618 and T168444
 
@@ -2544,8 +2572,12 @@ Wikinews:
         comment:  T124778
 
     zhwikinews:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        commons: File:Wikinews-logo-zh-hant-source-han-sans-bold-lightshadown.svg
+        comment:  T298550
+        comment_1_5x:  T298550
+        comment_2x:  T298550
+        variants:
+            zhwikinews-hans: Wikinews-logo-zh-hans-source-han-sans-bold-lightshadown.svg
 
 Wikisource:
     arwikisource:
@@ -2912,6 +2944,7 @@ Wikivoyage:
         comment_2x:  T151570
 
     zhwikivoyage:
+        commons: File:Wikivoyage-Logo-v3-zh-hans.svg
         comment:  T61077
         comment_1_5x:  T150618
         comment_2x:  T150618
@@ -3246,6 +3279,10 @@ Wikivoyage:
     wikidatawiki:
         comment_1_5x:  T230120
         comment_2x:  T230120
+
+    # Commented out until the wiki goes live in production
+    # wikifunctionswiki:
+    #    commons: File:Wikifunctions-logo-en.svg
 
     wikimania2005wiki:
         comment:  T50382

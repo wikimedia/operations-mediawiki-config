@@ -11,6 +11,7 @@ inheritsFrom:
   - flow-labs
   - flow_only_labs
   - large
+  - mobile-anon-talk # T293946
   - pageassessments
   - s1
   - securepollglobal

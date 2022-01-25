@@ -11,7 +11,4 @@ if ( $wmfRealm == 'labs' ) {  # safe guard
 // Beta Cluster: Increase timeout to 500ms (in microseconds)
 $wgObjectCaches['mcrouter']['timeout'] = 0.5 * 1e6;
 
-// Beta Cluster: Experimentally enable the on-host tier for WAN cache
-$wgWANObjectCaches['wancache-main-mcrouter']['onHostRoutingPrefix'] = "/$wmfDatacenter/mw-with-onhost-tier/";
-
 } # end safe guard

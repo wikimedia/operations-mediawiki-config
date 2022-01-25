@@ -122,8 +122,8 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 	}
 
 	public function assertValidLogLevel( $level ) {
-		$this->assertTrue(
-			in_array( $level, [ 'debug', 'info', 'warning', 'error', false ], true ),
+		$this->assertContains(
+			$level, [ 'debug', 'info', 'warning', 'error', false ],
 			"$level must be one of: debug, info, warning, error, false"
 		);
 	}
