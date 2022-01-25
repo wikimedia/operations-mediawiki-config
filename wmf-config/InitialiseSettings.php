@@ -1617,7 +1617,7 @@ function wmfGetVariantSettings() {
 	'noboard_chapterswikimedia' => '//noboard-chapters.wikimedia.org',
 	'nycwikimedia' => '//nyc.wikimedia.org', // T31273
 	'officewiki' => '//office.wikimedia.org',
-	'ombudsmenwiki' => '//ombudsmen.wikimedia.org',
+	'ombudsmenwiki' => '//ombuds.wikimedia.org',
 	'otrs_wikiwiki' => '//vrt-wiki.wikimedia.org',
 	'outreachwiki' => '//outreach.wikimedia.org',
 	'pa_uswikimedia' => '//pa-us.wikimedia.org',
@@ -1717,7 +1717,7 @@ function wmfGetVariantSettings() {
 	'nostalgiawiki' => 'https://nostalgia.wikipedia.org',
 	'nycwikimedia' => 'https://nyc.wikimedia.org', // T31273
 	'officewiki' => 'https://office.wikimedia.org',
-	'ombudsmenwiki' => 'https://ombudsmen.wikimedia.org',
+	'ombudsmenwiki' => 'https://ombuds.wikimedia.org',
 	'otrs_wikiwiki' => 'https://vrt-wiki.wikimedia.org',
 	'outreachwiki' => 'https://outreach.wikimedia.org',
 	'pa_uswikimedia' => 'https://pa-us.wikimedia.org',
