@@ -26906,6 +26906,7 @@ function wmfGetVariantSettings() {
 				'MachineVisionRepository',
 				'MachineVisionRepoGroup',
 				'MachineVisionLabelResolver',
+				'JobQueueGroup',
 			],
 		],
 	],
