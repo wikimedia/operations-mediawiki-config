@@ -20490,6 +20490,12 @@ function wmfGetVariantSettings() {
 		 * We've configured default topic_prefixes, but legacy eventlogging_* topics
 		 * do not use topic prefixes.  Explicitly set topic_prefixes to null to disable
 		 * implicit topic prefixing by the EventStreamConfig extension.
+		 *
+		 * eventgate-analytics-external requests stream config at startup as well
+		 * as dynamically at runtime.  eventgate-analytics-external caches its stream
+		 * configs temporarily, so any changes you make here will eventually be
+		 * picked up.  When eventgate-analytics-external sees a stream it doesn't
+		 * have in cache, it will request its configs immediately.
 		 */
 		'eventlogging_CentralNoticeBannerHistory' => [
 			'schema_title' => 'analytics/legacy/centralnoticebannerhistory',
@@ -21229,6 +21235,8 @@ function wmfGetVariantSettings() {
 		 * These are produced to the Kafka logging clusters for ingestion into logstash.
 		 * These streams disable canary event production.
 		 * See: https://phabricator.wikimedia.org/T287789
+		 * eventgate-logging-external only requests its stream configs on service startup,
+		 * so if you modify something here, eventgate-logging-external will need a restart.
 		 */
 		'mediawiki.client.error' => [
 			'schema_title' => 'mediawiki/client/error',
@@ -21249,6 +21257,8 @@ function wmfGetVariantSettings() {
 		/*
 		 * == eventgate-analytics streams ==
 		 * These streams are produced to Kafka jumbo-eqiad from internal producers.
+		 * eventgate-analytics only requests its stream configs on service startup,
+		 * so if you modify something here, eventgate-analytics will need a restart.
 		 */
 		'api-gateway.request' => [
 			'schema_title' => 'api-gateway/request',
@@ -21286,6 +21296,9 @@ function wmfGetVariantSettings() {
 		 * These streams are produced to Kafka main-eqiad and main-codfw.
 		 * These streams disable canary event production.
 		 * See: https://phabricator.wikimedia.org/T287789
+		 * eventgate-main only requests its stream configs on service startup,
+		 * so if you modify something here, eventgate-main will need a restart.
+
 		 */
 		'/^mediawiki\\.job\\..+/' => [
 			'schema_title' => 'mediawiki/job',
