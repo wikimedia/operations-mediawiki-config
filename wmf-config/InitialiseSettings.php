@@ -7890,6 +7890,10 @@ function wmfGetVariantSettings() {
 		'logged_in' => false,
 		'logged_out' => false,
 	],
+	'idwiki' => [ // T299676
+		'logged_in' => false,
+		'logged_out' => false,
+	],
 ],
 
 'wgVectorWebABTestEnrollment' => [
@@ -7967,6 +7971,10 @@ function wmfGetVariantSettings() {
 	'desktop-improvements' => [
 		'logged_in' => false,
 		'logged_out' => false,
+	],
+	'idwiki' => [
+		'logged_in' => true,
+		'logged_out' => true,
 	],
 	'thwiki' => [
 		'logged_in' => true,
