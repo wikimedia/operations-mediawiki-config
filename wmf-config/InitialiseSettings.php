@@ -9647,6 +9647,7 @@ function wmfGetVariantSettings() {
 		'patroller' => [
 			'patrol' => true,
 			'move-categorypages' => true,
+			'unwatchedpages' => true, // T300126
 		], // T67728
 		'rollbacker' => [ 'rollback' => true ], // T25233
 		'autopatrolled' => [
