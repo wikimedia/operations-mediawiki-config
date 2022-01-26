@@ -9674,28 +9674,28 @@ function wmfGetVariantSettings() {
 			'tboverride' => true,
 		], // T74146
 		'eliminator' => [
-			'block' => true,
-			'delete' => true,
-			'deleterevision' => true,
-			'mergehistory' => true,
-			'protect' => true,
-			'suppressredirect'  => true,
-			'deletedtext'       => true,
-			'deletedhistory' => true,
-			'extendedconfirmed' => true,
-			'patrol' => true,
-			'move-categorypages' => true,
-			'rollback' => true,
-			'autopatrol' => true,
-			'upload' => true,
-			'reupload' => true,
-			'reupload-own' => true,
-			'autoreview' => true,
-			'autoreviewrestore' => true,
-			'validate' => true,
-			'review' => true,
+			'block' => true, // T87558
+			'delete' => true, // T87558
+			'deleterevision' => true, // T87558
+			'mergehistory' => true, // T87558
+			'protect' => true, // T87558
+			'suppressredirect'  => true, // T87558
+			'deletedtext'       => true, // T135370
+			'deletedhistory' => true, // T135725
+			'extendedconfirmed' => true, // T140839
+			'patrol' => true, // T176553
+			'move-categorypages' => true, // T176553
+			'rollback' => true, // T176553
+			'autopatrol' => true, // T176553
+			'upload' => true, // T176553
+			'reupload' => true, // T176553
+			'autoreview' => true, // T176553
+			'autoreviewrestore' => true, // T176553
+			'validate' => true, // T176553
+			'review' => true, // T176553
 			'flow-delete' => true, // T299223
-		], // T87558, T135370, T135725, T176553
+			'unwatchedpages' => true, // T300126
+		],
 		'sysop' => [ 'extendedconfirmed' => true, ],
 		'extendedconfirmed' => [ 'extendedconfirmed' => true, ], // T140839
 		'extendedmover' => [ // T299038
