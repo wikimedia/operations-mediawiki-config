@@ -21270,7 +21270,7 @@ function wmfGetVariantSettings() {
 			'schema_title' => 'sparql/query',
 			'destination_event_service' => 'eventgate-analytics',
 		],
-		'cqs-external.sparql-query' => [
+		'wcqs-external.sparql-query' => [
 			'schema_title' => 'sparql/query',
 			'destination_event_service' => 'eventgate-analytics',
 		],
