@@ -7899,7 +7899,7 @@ function wmfGetVariantSettings() {
 'wgVectorWebABTestEnrollment' => [
 	'desktop-improvements' => [
 		'name' => 'vector.sticky_header',
-		'enabled' => true,
+		'enabled' => false,
 		'buckets' => [
 			'unsampled' => [
 				'samplingRate' => 0
@@ -7915,8 +7915,6 @@ function wmfGetVariantSettings() {
 			],
 		],
 	],
-	'testwiki' => [],
-	'officewiki' => [],
 ],
 
 'wgVectorLanguageInHeader' => [
