@@ -7858,11 +7858,8 @@ function wmfGetVariantSettings() {
 	'desktop-improvements' => '2',
 ],
 'wgVectorSkinMigrationMode' => [
-	'default' => false,
 	// T299927
-	'group0' => true,
-	'group1' => true,
-	'desktop-improvements' => true,
+	'default' => true,
 ],
 // T258588: Sidebar expanded for anons on modern Vector
 'wgVectorDefaultSidebarVisibleForAnonymousUser' => [
@@ -20432,11 +20429,7 @@ function wmfGetVariantSettings() {
 
 // T223824
 'wgSkipSkins' => [
-	'default' => [ 'cologneblue', 'contenttranslation', 'modern', 'vector-2022' ], // T263093, T287616
-	// Show Vector-2022 on euwiki, mediawiki (T299927)
-	'desktop-improvements' => [ 'cologneblue', 'contenttranslation', 'modern' ],
-	'group0' => [ 'cologneblue', 'contenttranslation', 'modern' ],
-	'group1' => [ 'cologneblue', 'contenttranslation', 'modern' ],
+	'default' => [ 'cologneblue', 'contenttranslation', 'modern' ], // T263093, T287616
 	'apiportalwiki' => [ 'vector', 'vector-2022', 'monobook', 'modern', 'cologneblue', 'timeless', 'minerva' ],
 ],
 
