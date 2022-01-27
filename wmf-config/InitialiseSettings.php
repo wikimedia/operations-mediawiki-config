@@ -19804,6 +19804,27 @@ function wmfGetVariantSettings() {
 
 'wgDiscussionToolsABTest' => [
 	'default' => false,
+	// T291308
+	'amwiki' => 'newtopictool',
+	'bnwiki' => 'newtopictool',
+	'zhwiki' => 'newtopictool',
+	'nlwiki' => 'newtopictool',
+	'arzwiki' => 'newtopictool',
+	'frwiki' => 'newtopictool',
+	'hewiki' => 'newtopictool',
+	'hiwiki' => 'newtopictool',
+	'idwiki' => 'newtopictool',
+	'itwiki' => 'newtopictool',
+	'jawiki' => 'newtopictool',
+	'kowiki' => 'newtopictool',
+	'omwiki' => 'newtopictool',
+	'fawiki' => 'newtopictool',
+	'plwiki' => 'newtopictool',
+	'ptwiki' => 'newtopictool',
+	'eswiki' => 'newtopictool',
+	'thwiki' => 'newtopictool',
+	'ukwiki' => 'newtopictool',
+	'viwiki' => 'newtopictool',
 ],
 
 'wgDiscussionToolsEnableMobile' => [
