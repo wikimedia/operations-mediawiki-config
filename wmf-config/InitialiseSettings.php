@@ -7793,8 +7793,7 @@ function wmfGetVariantSettings() {
 	'default' => 'vector',
 	'nostalgiawiki' => 'nostalgia',
 	'apiportalwiki' => 'wikimediaapiportal', // T259661
-	// Desktop improvement wikis:
-	'euwiki' => 'vector-2022',
+	'desktop-improvements' => 'vector-2022',
 ],
 
 //
@@ -7860,9 +7859,9 @@ function wmfGetVariantSettings() {
 'wgVectorSkinMigrationMode' => [
 	'default' => false,
 	// T299927
-	'euwiki' => true,
-	'mediawikiwiki' => true,
-	'itwiki' => true,
+	'group0' => true,
+	'group1' => true,
+	'desktop-improvements' => true,
 ],
 // T258588: Sidebar expanded for anons on modern Vector
 'wgVectorDefaultSidebarVisibleForAnonymousUser' => [
@@ -20434,9 +20433,9 @@ function wmfGetVariantSettings() {
 'wgSkipSkins' => [
 	'default' => [ 'cologneblue', 'contenttranslation', 'modern', 'vector-2022' ], // T263093, T287616
 	// Show Vector-2022 on euwiki, mediawiki (T299927)
-	'euwiki' => [ 'cologneblue', 'contenttranslation', 'modern' ],
-	'mediawikiwiki' => [ 'cologneblue', 'contenttranslation', 'modern' ],
-	'itwiki' => [ 'cologneblue', 'contenttranslation', 'modern' ],
+	'desktop-improvements' => [ 'cologneblue', 'contenttranslation', 'modern' ],
+	'group0' => [ 'cologneblue', 'contenttranslation', 'modern' ],
+	'group1' => [ 'cologneblue', 'contenttranslation', 'modern' ],
 	'apiportalwiki' => [ 'vector', 'vector-2022', 'monobook', 'modern', 'cologneblue', 'timeless', 'minerva' ],
 ],
 
