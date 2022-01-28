@@ -4189,6 +4189,9 @@ if ( $wmgUseWikisource ) {
 if ( $wmgUseGrowthExperiments ) {
 	wfLoadExtension( 'GrowthExperiments' );
 
+	// T298122 temporary fix while mobile-only quality gate gets removed
+	$wgDefaultUserOptions['growthexperiments-addimage-desktop'] = 1;
+
 	if ( !$wmgGEFeaturesMayBeAvailableToNewcomers ) {
 		// Disable welcome survey
 		$wgWelcomeSurveyExperimentalGroups = [
