@@ -27165,7 +27165,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgTwlEditCount' => [
-	'default' => 2000, // T288070
+	'default' => 500, // T288070
 ],
 
 'wgWBCitoidFullRestbaseURL' => [
