@@ -15171,7 +15171,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgCentralAuthHiddenLevelMigrationStage' => [
-	'default' => SCHEMA_COMPAT_READ_OLD | SCHEMA_COMPAT_WRITE_BOTH,
+	'default' => SCHEMA_COMPAT_READ_NEW | SCHEMA_COMPAT_WRITE_BOTH,
 ],
 
 # @}
