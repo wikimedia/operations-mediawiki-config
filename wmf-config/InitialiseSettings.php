@@ -1364,7 +1364,7 @@ function wmfGetVariantSettings() {
 	'kowikinews' => true, // T26877
 	'liwikinews' => false,
 	'nlwikinews' => false,
-	'ptwikinews' => false,
+	'ptwikinews' => true, // T300466
 	'rowikinews' => false,
 	'ruwikinews' => false,
 	'sdwikinews' => false,
