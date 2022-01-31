@@ -15966,7 +15966,6 @@ function wmfGetVariantSettings() {
 		'*.nhm.ac.uk', // Natural History Museum in London - T298451, T299579
 		'ala-images.s3.ap-southeast-2.amazonaws.com', // Atlas of Living Australia - T299825
 		'www.kew.org', // Royal Botanical Gardens Kew - T300101
-		'leg.journals.isu.ac.ir', // Legal Educations Govah Bi-quarterly Journal - T300217
 		'monarch.calacademy.org', // California Academy of Sciences - T300375
 		'arter.dk', // Danish National portal - T300360
 		'files.plutof.ut.ee', // Lauri Mällo liblikaprojekt - T300359
