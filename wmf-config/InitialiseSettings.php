@@ -9022,6 +9022,9 @@ function wmfGetVariantSettings() {
 	'+azwikibooks' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T231493
 	],
+	'+azwikiquote' => [
+		'autopatrolled' => [ 'autopatrol' => true ], // T300435
+	],
 	'+azwikisource' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T229371
 	],
@@ -11702,6 +11705,9 @@ function wmfGetVariantSettings() {
 	'+azwikibooks' => [
 		'sysop' => [ 'autopatrolled', ], // T231493
 	],
+	'+azwikiquote' => [
+		'sysop' => [ 'autopatrolled', ], // T300435
+	],
 	'+azwikisource' => [
 		'sysop' => [ 'autopatrolled', ], // T229371
 	],
@@ -12553,6 +12559,9 @@ function wmfGetVariantSettings() {
 	],
 	'+azwikibooks' => [
 		'sysop' => [ 'autopatrolled', ], // T231493
+	],
+	'+azwikiquote' => [
+		'sysop' => [ 'autopatrolled', ], // T300435
 	],
 	'+azwikisource' => [
 		'sysop' => [ 'autopatrolled', ], // T229371
