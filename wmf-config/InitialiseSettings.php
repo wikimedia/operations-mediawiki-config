@@ -25506,29 +25506,6 @@ function wmfGetVariantSettings() {
 			'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
 			'shuffleAnswersDisplay' => true,
 		],
-		[
-			// T296657
-			'name' => 'internal-gdi-safety-survey',
-			'type' => 'internal',
-			'layout' => 'single-answer',
-			'question' => 'ext-quicksurveys-internal-gdi-safety-survey-question',
-			'privacyPolicy' => 'ext-quicksurveys-internal-gdi-safety-survey-privacy-policy',
-			'answers' => [
-				'ext-quicksurveys-internal-gdi-safety-survey-answer-positive',
-				'ext-quicksurveys-internal-gdi-safety-survey-answer-negative',
-				'ext-quicksurveys-internal-gdi-safety-survey-answer-neutral',
-			],
-			'audience' => [
-				// T297623
-				'minEdits' => 5
-			],
-			'enabled' => true,
-			'coverage' => 0.2, // T296486
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable', 'beta' ],
-			],
-		],
 	],
 	'enwikivoyage' => [
 		// T187299
