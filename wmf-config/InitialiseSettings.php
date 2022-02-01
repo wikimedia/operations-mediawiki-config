@@ -26739,7 +26739,6 @@ function wmfGetVariantSettings() {
 
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
-	'amiwiki' => false,
 ],
 
 'wgWelcomeSurveyEnabled' => [
