@@ -26141,6 +26141,7 @@ function wmfGetVariantSettings() {
 	'alswiki' => true,
 	'altwiki' => true,
 	'amwiki' => true,
+	'amiwiki' => true,
 	'angwiki' => true,
 	'anwiki' => true,
 	'arcwiki' => true,
@@ -26459,6 +26460,7 @@ function wmfGetVariantSettings() {
 
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
+	'amiwiki' => false,
 ],
 
 'wgWelcomeSurveyEnabled' => [
