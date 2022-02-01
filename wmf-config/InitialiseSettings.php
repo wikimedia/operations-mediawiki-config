@@ -7977,20 +7977,7 @@ function wmfGetVariantSettings() {
 	],
 ],
 'wgVectorLanguageAlertInSidebar' => [
-	// T298519 Turn feature flag for language alert off for pilot wikis with exceptions.
-	'desktop-improvements' => [
-		'logged_in' => false,
-		'logged_out' => false,
-	],
-	'idwiki' => [
-		'logged_in' => true,
-		'logged_out' => true,
-	],
-	'thwiki' => [
-		'logged_in' => true,
-		'logged_out' => true,
-	],
-	'viwiki' => [
+	'default' => [ // T300559
 		'logged_in' => true,
 		'logged_out' => true,
 	],
