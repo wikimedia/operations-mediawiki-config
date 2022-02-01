@@ -1502,6 +1502,7 @@ function wmfGetVariantSettings() {
 	'plwikiquote' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pl',
 	'plwikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pl', // T70191
 	'ptwiki' => '/wiki/Wikipedia:Carregar_ficheiro',
+	'ptwikinews' => '/wiki/Wikinotícias:Carregar_ficheiro', // T300466
 	'ptwikivoyage' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pt', // T44934
 	'rowiki' => '/wiki/Wikipedia:Trimite_fi%C8%99ier', // T85665
 	'ruwiki' => false, // T14334
