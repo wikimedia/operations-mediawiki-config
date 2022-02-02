@@ -12659,6 +12659,9 @@ function wmfGetVariantSettings() {
 			'templateeditor', // T227420
 		],
 	],
+	'+cowikimedia' => [
+		'bureaucrat' => [ 'bureaucrat', 'sysop' ], // T300779
+	],
 	'+cswiki' => [
 		'bureaucrat' => [ 'arbcom', 'autopatrolled', 'engineer' ], // T63418, T203000
 		'sysop' => [ 'rollbacker', 'patroller', 'accountcreator', 'confirmed' ], // T126931, T131684, T163206
