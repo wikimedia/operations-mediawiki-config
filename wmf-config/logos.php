@@ -177,7 +177,7 @@ return [
 	'kuwiki' => '/static/images/project-logos/kuwiki.png',
 	'kvwiki' => '/static/images/project-logos/kvwiki.png', // T42285
 	'kwwiki' => '/static/images/project-logos/kwwiki.png',
-	'kywiki' => '/static/images/project-logos/kywiki.png', // T48589
+	'kywiki' => '/static/images/project-logos/kywiki.png', // T300241
 	'ladwiki' => '/static/images/project-logos/ladwiki.png',
 	'lawiki' => '/static/images/project-logos/lawiki.png',
 	'lbewiki' => '/static/images/project-logos/lbewiki.png', // T42285
@@ -1300,7 +1300,7 @@ return [
 	'srwikinews' => '/static/images/project-logos/srwikinews-1.5x.png', // T172255
 	'trwikinews' => '/static/images/project-logos/trwikinews-1.5x.png', // T150618
 	'ukwikinews' => '/static/images/project-logos/ukwikinews-1.5x.png',
-	'zhwikinews' => '/static/images/project-logos/zhwikinews-1.5x.png', // T150618, T298550
+	'zhwikinews' => '/static/images/project-logos/zhwikinews-1.5x.png', // T298550
 
 	// Wikisource
 	'banwikisource' => '/static/images/project-logos/banwikisource-1.5x.png',
@@ -1879,7 +1879,7 @@ return [
 	'srwikinews' => '/static/images/project-logos/srwikinews-2x.png', // T172255
 	'trwikinews' => '/static/images/project-logos/trwikinews-2x.png', // T150618
 	'ukwikinews' => '/static/images/project-logos/ukwikinews-2x.png',
-	'zhwikinews' => '/static/images/project-logos/zhwikinews-2x.png', // T150618, T298550
+	'zhwikinews' => '/static/images/project-logos/zhwikinews-2x.png', // T298550
 
 	// Wikisource
 	'banwikisource' => '/static/images/project-logos/banwikisource-2x.png',
