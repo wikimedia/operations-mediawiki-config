@@ -8,7 +8,7 @@
 #
 # This is loaded very early. Only one set of globals should be
 # assumed here:
-# - $wmfRealm, $wmfDatacenter (from multiversion/MWRealm)
+# - $wmgRealm, $wmfDatacenter (from multiversion/MWRealm)
 #
 # Effective load order:
 # - multiversion
@@ -52,10 +52,10 @@ function wmfSetupEtcd( $etcdHost ) {
  * It overwrites a few sections of $wgLBFactoryConf with data from etcd.
  */
 function wmfEtcdApplyDBConfig() {
-	global $wgLBFactoryConf, $wmfDbconfigFromEtcd, $wmfRealm;
+	global $wgLBFactoryConf, $wmfDbconfigFromEtcd, $wmgRealm;
 	// In labs, the relevant key exists in etcd, but does not contain real data.
 	// Only do this in production.
-	if ( $wmfRealm === 'production' ) {
+	if ( $wmgRealm === 'production' ) {
 		$wgLBFactoryConf['readOnlyBySection'] = $wmfDbconfigFromEtcd['readOnlyBySection'];
 		$wgLBFactoryConf['groupLoadsBySection'] = $wmfDbconfigFromEtcd['groupLoadsBySection'];
 		$wgLBFactoryConf['hostsByName'] = $wmfDbconfigFromEtcd['hostsByName'];

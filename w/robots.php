@@ -30,7 +30,7 @@ if ( $page->exists() ) {
 	$extratext = ( $content instanceof TextContent ) ? $content->getText() : '';
 	// Take last modified timestamp of page into account
 	$mtime = max( $mtime, wfTimestamp( TS_UNIX, $page->getTouched() ) );
-} elseif ( $wmfRealm == 'labs' ) {
+} elseif ( $wmgRealm == 'labs' ) {
 	echo $dontIndex;
 }
 

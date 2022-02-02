@@ -20,8 +20,8 @@ if ( count( $argv ) < 2 ) {
  * @return string MW code version (e.g. "php-x.xx" or "php-trunk")
  */
 function getWikiVersion( $dbName ) {
-	global $wmfRealm;
-	$phpFilename = $wmfRealm === 'labs' ?
+	global $wmgRealm;
+	$phpFilename = $wmgRealm === 'labs' ?
 		MEDIAWIKI_DEPLOYMENT_DIR . '/wikiversions-labs.php' :
 		MEDIAWIKI_DEPLOYMENT_DIR . '/wikiversions.php';
 

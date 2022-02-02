@@ -1,7 +1,7 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-if ( $wmfRealm == 'labs' ) { # safe guard
+if ( $wmgRealm == 'labs' ) { # safe guard
 	# Database configuration files for the beta labs
 
 	$wgDBTableOptions = "ENGINE=InnoDB, DEFAULT CHARSET=binary";

@@ -352,7 +352,7 @@ class MWMultiVersion {
 	 * The first item is the MW version
 	 */
 	private function loadVersionInfo() {
-		global $wmfRealm;
+		global $wmgRealm;
 
 		if ( $this->versionLoaded ) {
 			return;
@@ -361,11 +361,11 @@ class MWMultiVersion {
 
 		$dir = MEDIAWIKI_DEPLOYMENT_DIR;
 
-		if ( $wmfRealm === 'production' ) {
+		if ( $wmgRealm === 'production' ) {
 			$phpFilename = $dir . '/wikiversions.php';
 		} else {
 			# Load the realm-specific wikiversions file, such as wikiversions-labs.php or wikiversions-dev.php
-			$phpFilename = $dir . "/wikiversions-$wmfRealm.php";
+			$phpFilename = $dir . "/wikiversions-$wmgRealm.php";
 		}
 
 		$wikiversions = include $phpFilename;

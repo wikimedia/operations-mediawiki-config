@@ -29,7 +29,7 @@ $wmfSwiftBigWikis = [ # DO NOT change without proper migration first
 $wmfSwiftShardLocal = in_array( $wgDBname, $wmfSwiftBigWikis ) ? 2 : 0; // shard levels
 $wmfSwiftShardCommon = in_array( 'commonswiki', $wmfSwiftBigWikis ) ? 2 : 0; // shard levels
 
-if ( $wmfRealm === 'labs' ) {
+if ( $wmgRealm === 'labs' ) {
 	$redisLockServers = [ 'rdb1', 'rdb2' ];
 	$commonsUrl = "https://commons.wikimedia.beta.wmflabs.org";
 	$uploadUrl = "//upload.wikimedia.beta.wmflabs.org";

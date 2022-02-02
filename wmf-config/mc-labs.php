@@ -6,7 +6,7 @@
 # This is for BETA only. It must not be loaded in production.
 #
 
-if ( $wmfRealm == 'labs' ) {  # safe guard
+if ( $wmgRealm == 'labs' ) {  # safe guard
 
 // Beta Cluster: Increase timeout to 500ms (in microseconds)
 $wgObjectCaches['mcrouter']['timeout'] = 0.5 * 1e6;

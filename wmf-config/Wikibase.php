@@ -94,10 +94,10 @@ if ( $wmgUseWikibaseRepo ) {
 		// Exclude closed wikis
 		$wgWBRepoSettings['localClientDatabases'] = array_diff(
 			$wgWBRepoSettings['localClientDatabases'],
-			MWWikiversions::readDbListFile( $wmfRealm === 'labs' ? 'closed-labs' : 'closed' )
+			MWWikiversions::readDbListFile( $wmgRealm === 'labs' ? 'closed-labs' : 'closed' )
 		);
 		// Exclude non-existent wikis in labs
-		if ( $wmfRealm === 'labs' ) {
+		if ( $wmgRealm === 'labs' ) {
 			$wgWBRepoSettings['localClientDatabases'] = array_intersect(
 				MWWikiversions::readDbListFile( 'all-labs' ),
 				$wgWBRepoSettings['localClientDatabases']

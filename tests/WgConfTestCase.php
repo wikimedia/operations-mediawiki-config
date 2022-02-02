@@ -73,10 +73,10 @@ abstract class WgConfTestCase extends PHPUnit\Framework\TestCase {
 	 *
 	 *     $wgLocaltimezone = $this->loadWgConf( 'production' )->settings['wgLocaltimezone'];
 	 *
-	 * @param string $wmfRealm Realm to use for example: 'labs' or 'production'
+	 * @param string $wmgRealm Realm to use for example: 'labs' or 'production'
 	 * @return Wikimedia\MWConfig\StaticSiteConfiguration
 	 */
-	final protected function loadWgConf( $wmfRealm ) {
+	final protected function loadWgConf( $wmgRealm ) {
 		$wmfConfigDir = __DIR__ . "/../wmf-config";
 
 		// Needed for InitialiseSettings.php
@@ -98,7 +98,7 @@ abstract class WgConfTestCase extends PHPUnit\Framework\TestCase {
 
 		$wgConf = new Wikimedia\MWConfig\StaticSiteConfiguration;
 		$wgConf->suffixes = MWMultiVersion::SUFFIXES;
-		$wgConf->wikis = MWWikiversions::readDbListFile( $wmfRealm === 'labs' ? 'all-labs' : 'all' );
+		$wgConf->wikis = MWWikiversions::readDbListFile( $wmgRealm === 'labs' ? 'all-labs' : 'all' );
 		$wgConf->settings = wmfGetVariantSettings();
 
 		// Make sure globals are restored, else they will be serialized on each

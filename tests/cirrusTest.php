@@ -120,11 +120,11 @@ class CirrusTest extends WgConfTestCase {
 		$this->assertArrayNotHasKey( 'wgCirrusSearchWikiToNameMap', $config );
 	}
 
-	private function loadCirrusConfig( $wmfRealm, $wgDBname, $dbSuffix ) {
+	private function loadCirrusConfig( $wmgRealm, $wgDBname, $dbSuffix ) {
 		$wmfConfigDir = __DIR__ . "/../wmf-config";
 		require __DIR__ . '/../private/readme.php';
 		require __DIR__ . '/data/TestServices.php';
-		$wgConf = $this->loadWgConf( $wmfRealm );
+		$wgConf = $this->loadWgConf( $wmgRealm );
 
 		list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 		$wikiTags = [];
