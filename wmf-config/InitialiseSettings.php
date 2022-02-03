@@ -15976,6 +15976,7 @@ function wmfGetVariantSettings() {
 		'arter.dk', // Danish National portal - T300360
 		'files.plutof.ut.ee', // Lauri Mällo liblikaprojekt - T300359
 		'www.nmr-pics.nl', // Natural History Museum Rotterdam - T300357
+		'www.gbols.smns-bw.org', // Bavarian Natural History Collections - T300842
 	],
 	'+wikisource' => [
 		'archive.org', '*.archive.org',
