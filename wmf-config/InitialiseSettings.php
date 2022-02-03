@@ -616,6 +616,11 @@ function wmfGetVariantSettings() {
 	'specieswiki' => '/static/images/mobile/copyright/wikispecies.svg',
 	'strategywiki' => '/static/images/mobile/copyright/strategy-icon.svg',
 	'wikimaniawiki' => '/static/images/mobile/copyright/wikimania.svg',
+
+	// Test wikis T299512
+	'testwiki' => '/static/images/mobile/copyright/test-wikipedia-icon.png',
+	'test2wiki' => '/static/images/mobile/copyright/test-wikipedia-icon.png',
+	'testwikidatawiki' => '/static/images/mobile/copyright/test-wikidata-icon.svg',
 ],
 
 'wmgSiteLogoVariants' => [
@@ -1132,6 +1137,11 @@ function wmfGetVariantSettings() {
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-en.svg',
 		'width' => 119,
 		'height' => 18,
+	],
+	'testwikidatawiki' => [
+		'src' => '/static/images/mobile/copyright/test-wikidata-wordmark.svg',
+		'width' => 130,
+		'height' => 17,
 	],
 	'wikimaniawiki' => [
 		'src' => '/static/images/mobile/copyright/wikimania-wordmark.svg',
