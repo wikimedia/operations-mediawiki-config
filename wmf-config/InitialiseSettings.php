@@ -15982,6 +15982,9 @@ function wmfGetVariantSettings() {
 		'files.plutof.ut.ee', // Lauri Mällo liblikaprojekt - T300359
 		'www.nmr-pics.nl', // Natural History Museum Rotterdam - T300357
 		'www.gbols.smns-bw.org', // Bavarian Natural History Collections - T300842
+		'images.collections.yale.edu', // Yale university and affiliated musea - T299835
+		'prd-cds2-image-store-ypm.s3.amazonaws.com', // Yale University and affiliated musea - T299835
+		'oxalis.br.fgov.be', // Meise botanical garden - T300848
 	],
 	'+wikisource' => [
 		'archive.org', '*.archive.org',
