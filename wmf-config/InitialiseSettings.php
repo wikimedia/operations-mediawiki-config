@@ -9090,7 +9090,6 @@ function wmfGetVariantSettings() {
 		'autopatrolled' => [ 'autopatrol' => true ], // T296640
 		'patroller' => [
 			'patrol' => true,
-			'patrolmarks' => true,
 			'rollback' => true,
 			'suppressredirect' => true,
 		], // T296640
@@ -9106,7 +9105,6 @@ function wmfGetVariantSettings() {
 		],
 		'patroller' => [
 			'patrol' => true, // T296637
-			'patrolmarks' => true, // T296637
 			'rollback' => true, // T296637
 			'suppressredirect' => true, // T296637
 		],
@@ -9117,7 +9115,6 @@ function wmfGetVariantSettings() {
 		],
 		'patroller' => [
 			'patrol' => true, // T298187
-			'patrolmarks' => true, // T298187
 			'rollback' => true, // T298187
 			'suppressredirect' => true, // T298187
 		],
@@ -9264,7 +9261,6 @@ function wmfGetVariantSettings() {
 		'rollbacker' => [ 'rollback' => true, ], // T126931
 		'patroller' => [ // T126931
 			'patrol' => true,
-			'patrolmarks' => true,
 			'unwatchedpages' => true,
 		],
 	],
@@ -9958,7 +9954,6 @@ function wmfGetVariantSettings() {
 	'+hewikibooks' => [
 		'patroller' => [
 			'patrol' => true, // T29918
-			'patrolmarks' => true, // T29918
 			'autopatrol' => true, // T62305
 			'rollback' => true, // T62305
 			'unwatchedpages' => true, // T73193
@@ -9995,7 +9990,6 @@ function wmfGetVariantSettings() {
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'patroller' => [
 			'patrol' => true,
-			'patrolmarks' => true,
 			'autopatrol' => true,
 			'rollback' => true,
 			'unwatchedpages' => true,
@@ -10335,7 +10329,6 @@ function wmfGetVariantSettings() {
 		'patroller' => [ // T176079
 			'autopatrol' => true,
 			'patrol' => true,
-			'patrolmarks' => true,
 			'rollback' => true,
 		],
 		'steward' => [
