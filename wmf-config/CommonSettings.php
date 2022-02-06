@@ -1420,7 +1420,8 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 	$wgExtDistGraphiteRenderApi = 'https://graphite.wikimedia.org/render';
 }
 
-if ( $wmgUseGlobalBlocking ) {
+// CentralAuth needed so that user CentralIds match
+if ( $wmgUseCentralAuth && $wmgUseGlobalBlocking ) {
 	wfLoadExtension( 'GlobalBlocking' );
 	$wgGlobalBlockingDatabase = 'centralauth';
 	$wgApplyGlobalBlocks = $wmgApplyGlobalBlocks;

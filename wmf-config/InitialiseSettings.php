@@ -24719,6 +24719,7 @@ function wmfGetVariantSettings() {
 	'lockeddown' => false,
 ],
 
+// This is also guarded by $wmgUseCentralAuth
 'wmgUseGlobalBlocking' => [
 	'default' => true,
 	'wikitech' => false,
