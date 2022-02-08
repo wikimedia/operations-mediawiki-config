@@ -11808,6 +11808,9 @@ function wmfGetVariantSettings() {
 		],
 		'image-reviewer' => [ 'image-reviewer' ],
 	],
+	'+cowikimedia' => [ // T300948
+		'sysop' => [ 'confirmed', 'accountcreator' ],
+	],
 	'+dawiki' => [
 		'sysop' => [ 'patroller', 'autopatrolled' ],
 	],
