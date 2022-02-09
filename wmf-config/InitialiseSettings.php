@@ -6758,6 +6758,8 @@ function wmfGetVariantSettings() {
 		101 => 'प्रवेशद्वारसम्भाषणम्', // T235343 - Portal talk
 		102 => 'लेखकः', // T214553 - Author
 		103 => 'लेखकसम्भाषणम्', // T214553 - Author talk
+		108 => 'श्रव्यम्', // T282970 - Audio
+		109 => 'श्रव्यसम्भाषणम्', // T282970 - Audio talk
 	],
 	'skwikisource' => [
 		102 => 'Autor',             // T122175
