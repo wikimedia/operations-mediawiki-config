@@ -34,5 +34,5 @@ foreach ( $wmfDatacenters as $dc ) {
 	];
 }
 
-$wgObjectCaches['redis_master'] = $wgObjectCaches["redis_{$wmfMasterDatacenter}"];
+$wgObjectCaches['redis_master'] = $wgObjectCaches["redis_{$wmgMasterDatacenter}"];
 $wgObjectCaches['redis_local'] = $wgObjectCaches["redis_{$wmfDatacenter}"];

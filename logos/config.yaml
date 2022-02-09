@@ -687,7 +687,8 @@ Wikipedia:
         comment_2x:  T150618
 
     kywiki:
-        comment:  T48589
+        commons: File:Wikipedia-logo-v2-new-ky.svg
+        comment:  T300241
         comment_1_5x:  T150618
         comment_2x:  T150618
 
@@ -2577,7 +2578,7 @@ Wikinews:
         comment_1_5x:  T298550
         comment_2x:  T298550
         variants:
-            zhwikinews-hans: Wikinews-logo-zh-hans-source-han-sans-bold-lightshadown.svg
+            zhwikinews-hans: File:Wikinews-logo-zh-hans-source-han-sans-bold-lightshadown.svg
 
 Wikisource:
     arwikisource:

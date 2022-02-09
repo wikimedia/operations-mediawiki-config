@@ -352,26 +352,30 @@ class MWMultiVersion {
 	 * The first item is the MW version
 	 */
 	private function loadVersionInfo() {
-		global $wmfRealm;
+		global $wmgRealm;
 
 		if ( $this->versionLoaded ) {
 			return;
 		}
 		$this->versionLoaded = true;
 
-		$dir = MEDIAWIKI_DEPLOYMENT_DIR;
+		$dir = dirname( __DIR__ );
 
-		if ( $wmfRealm === 'production' ) {
+		if ( $wmgRealm === 'production' ) {
 			$phpFilename = $dir . '/wikiversions.php';
 		} else {
 			# Load the realm-specific wikiversions file, such as wikiversions-labs.php or wikiversions-dev.php
-			$phpFilename = $dir . "/wikiversions-$wmfRealm.php";
+			$phpFilename = $dir . "/wikiversions-$wmgRealm.php";
 		}
 
 		$wikiversions = include $phpFilename;
 
-		if ( !is_array( $wikiversions ) ) {
+		if ( $wikiversions === false ) {
 			self::error( "Unable to open $phpFilename.\n" );
+		}
+
+		if ( !is_array( $wikiversions ) ) {
+			self::error( "$phpFilename did not return an array as expected.\n" );
 		}
 
 		$version = isset( $wikiversions[$this->db] ) ? $wikiversions[$this->db] : false;

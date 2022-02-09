@@ -725,29 +725,6 @@ function wmfGetOverrideSettings() {
 					'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
 					'shuffleAnswersDisplay' => true,
 				],
-				[
-					// T296655
-					'name' => 'internal-gdi-safety-survey',
-					'type' => 'internal',
-					'layout' => 'single-answer',
-					'question' => 'ext-quicksurveys-internal-gdi-safety-survey-question',
-					'privacyPolicy' => 'ext-quicksurveys-internal-gdi-safety-survey-privacy-policy',
-					'answers' => [
-						'ext-quicksurveys-internal-gdi-safety-survey-answer-positive',
-						'ext-quicksurveys-internal-gdi-safety-survey-answer-negative',
-						'ext-quicksurveys-internal-gdi-safety-survey-answer-neutral',
-					],
-					'audience' => [
-						// T297623
-						'minEdits' => 5
-					],
-					'enabled' => true,
-					'coverage' => 0.5, // T297623
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable', 'beta' ],
-					],
-				],
 			],
 			'+fawiki' => [
 				[
@@ -2112,7 +2089,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgCentralAuthHiddenLevelMigrationStage' => [
-			'default' => SCHEMA_COMPAT_READ_OLD | SCHEMA_COMPAT_WRITE_BOTH,
+			'default' => SCHEMA_COMPAT_READ_NEW | SCHEMA_COMPAT_WRITE_NEW,
 		],
 	];
 } # wmfGetOverrideSettings()

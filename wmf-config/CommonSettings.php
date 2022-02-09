@@ -93,7 +93,7 @@ set_include_path( implode( PATH_SEPARATOR, $includePaths ) );
 # spam blacklists hosted on meta.wikimedia.org which you will surely want to
 # reuse.
 $wmgHostnames = [];
-switch ( $wmfRealm ) {
+switch ( $wmgRealm ) {
 case 'labs':
 	$wmgHostnames['meta']          = 'meta.wikimedia.beta.wmflabs.org';
 	$wmgHostnames['test']          = 'test.wikipedia.beta.wmflabs.org';
@@ -150,11 +150,11 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 	// rebuildLocalisationCache.php and mergeMessageFileList.php to
 	// run to completion without complaints.
 
-	$wmfEtcdLastModifiedIndex = "wmfEtcdLastModifiedIndex uninitialized due to WMF_MAINTENANCE_OFFLINE";
+	$wmgEtcdLastModifiedIndex = "wmgEtcdLastModifiedIndex uninitialized due to WMF_MAINTENANCE_OFFLINE";
 	$wgReadOnly = "In read-only mode because WMF_MAINTENANCE_OFFLINE is set";
-	$wmfMasterDatacenter = ServiceConfig::getInstance()->getDatacenter();
-	$wmfMasterServices = $wmfAllServices[$wmfMasterDatacenter];
-	$wmfDbconfigFromEtcd = [
+	$wmgMasterDatacenter = ServiceConfig::getInstance()->getDatacenter();
+	$wmgMasterServices = $wmfAllServices[$wmgMasterDatacenter];
+	$wmgDbconfigFromEtcd = [
 		'readOnlyBySection' => null,
 		'groupLoadsBySection' => [
 			'DEFAULT' => [
@@ -167,23 +167,27 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 		'sectionLoads' => [],
 		'externalLoads' => [],
 	];
-
 } else {
 	$etcdConfig = wmfSetupEtcd( $wmfLocalServices['etcd'] );
-	$wmfEtcdLastModifiedIndex = $etcdConfig->getModifiedIndex();
 
+	$wmgEtcdLastModifiedIndex = $etcdConfig->getModifiedIndex();
 	$wgReadOnly = $etcdConfig->get( "$wmfDatacenter/ReadOnly" );
-
-	$wmfMasterDatacenter = $etcdConfig->get( 'common/WMFMasterDatacenter' );
-	$wmfMasterServices = $wmfAllServices[$wmfMasterDatacenter];
+	$wmgMasterDatacenter = $etcdConfig->get( 'common/WMFMasterDatacenter' );
+	$wmgMasterServices = $wmfAllServices[$wmgMasterDatacenter];
 
 	// Database load balancer config (sectionLoads, groupLoadsBySection, …)
 	// This is later merged into $wgLBFactoryConf by wmfEtcdApplyDBConfig().
 	// See also <https://wikitech.wikimedia.org/wiki/Dbctl>
-	$wmfDbconfigFromEtcd = $etcdConfig->get( "$wmfDatacenter/dbconfig" );
+	$wmgDbconfigFromEtcd = $etcdConfig->get( "$wmfDatacenter/dbconfig" );
 
 	unset( $etcdConfig );
 }
+
+// Write to wmf* constants for backwards-compatibility - T45956
+$wmfEtcdLastModifiedIndex = $wmgEtcdLastModifiedIndex;
+$wmfMasterDatacenter = $wmgMasterDatacenter;
+$wmfMasterServices = $wmgMasterServices;
+$wmfDbconfigFromEtcd = $wmgDbconfigFromEtcd;
 
 $wmfUdp2logDest = $wmfLocalServices['udp2log'];
 if ( $wgDBname === 'testwiki' || $wgDBname === 'test2wiki' ) {
@@ -194,20 +198,20 @@ if ( $wgDBname === 'testwiki' || $wgDBname === 'test2wiki' ) {
 
 $wgConf = new SiteConfiguration;
 $wgConf->suffixes = MWMultiVersion::SUFFIXES;
-$wgConf->wikis = MWWikiversions::readDbListFile( $wmfRealm === 'labs' ? 'all-labs' : 'all' );
+$wgConf->wikis = MWWikiversions::readDbListFile( $wmgRealm === 'labs' ? 'all-labs' : 'all' );
 $wgConf->fullLoadCallback = 'wmfLoadInitialiseSettings';
 
 /**
  * @param SiteConfiguration $conf
  */
 function wmfLoadInitialiseSettings( $conf ) {
-	global $wmfConfigDir, $wmfRealm;
+	global $wmfConfigDir, $wmgRealm;
 	require_once "$wmfConfigDir/InitialiseSettings.php";
 	$settings = wmfGetVariantSettings();
 
 	### Realm overrides #####
-	if ( $wmfRealm !== 'production' ) {
-		require_once "$wmfConfigDir/InitialiseSettings-$wmfRealm.php";
+	if ( $wmgRealm !== 'production' ) {
+		require_once "$wmfConfigDir/InitialiseSettings-$wmgRealm.php";
 		$settings = wmfApplyOverrideSettings( $settings );
 	}
 
@@ -299,7 +303,7 @@ if ( !$globals ) {
 	wmfLoadInitialiseSettings( $wgConf );
 
 	$globals = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
-		$wgDBname, $site, $lang, $wgConf, $wmfRealm
+		$wgDBname, $site, $lang, $wgConf, $wmgRealm
 	);
 
 	$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals ];
@@ -330,13 +334,13 @@ require "$wmfConfigDir/logging.php";
 require "$wmfConfigDir/redis.php";
 require "$wmfConfigDir/filebackend.php";
 require "$wmfConfigDir/mc.php";
-if ( $wmfRealm === 'labs' ) {
+if ( $wmgRealm === 'labs' ) {
 	// Beta Cluster overrides
 	require "$wmfConfigDir/mc-labs.php";
 }
 # db-*.php needs $wgDebugDumpSql so should be loaded after logging.php
-if ( $wmfRealm !== 'production' ) {
-	require "$wmfConfigDir/db-$wmfRealm.php";
+if ( $wmgRealm !== 'production' ) {
+	require "$wmfConfigDir/db-$wmgRealm.php";
 } else {
 	require "$wmfConfigDir/db-production.php";
 }
@@ -542,13 +546,13 @@ $wgLocalisationCacheConf['manualRecache'] = true;
 
 // Add some useful config data to query=siteinfo
 $wgHooks['APIQuerySiteInfoGeneralInfo'][] = static function ( $module, &$data ) {
-	global $wmfMasterDatacenter;
-	global $wmfEtcdLastModifiedIndex;
+	global $wmgMasterDatacenter;
+	global $wmgEtcdLastModifiedIndex;
 	global $wmgCirrusSearchDefaultCluster;
 	global $wgCirrusSearchDefaultCluster;
 	$data['wmf-config'] = [
-		'wmfMasterDatacenter' => $wmfMasterDatacenter,
-		'wmfEtcdLastModifiedIndex' => $wmfEtcdLastModifiedIndex,
+		'wmfMasterDatacenter' => $wmgMasterDatacenter,
+		'wmfEtcdLastModifiedIndex' => $wmgEtcdLastModifiedIndex,
 		'wmgCirrusSearchDefaultCluster' => $wmgCirrusSearchDefaultCluster,
 		'wgCirrusSearchDefaultCluster' => $wgCirrusSearchDefaultCluster,
 	];
@@ -819,9 +823,9 @@ $wgDjvuTxt = '/usr/bin/djvutxt';
 $wgStatsdServer = $wmfLocalServices['statsd'];
 
 $wgUseCdn = true;
-if ( $wmfRealm === 'production' ) {
+if ( $wmgRealm === 'production' ) {
 	require "$wmfConfigDir/reverse-proxy.php";
-} elseif ( $wmfRealm === 'labs' ) {
+} elseif ( $wmgRealm === 'labs' ) {
 	$wgStatsdMetricPrefix = 'BetaMediaWiki';
 	require "$wmfConfigDir/reverse-proxy-staging.php";
 }
@@ -1080,7 +1084,7 @@ if ( $wmgUseTimeline ) {
 }
 
 // TODO: This should be handled by LocalServices, not here.
-$wgCopyUploadProxy = ( $wmfRealm !== 'labs' ) ? $wmfLocalServices['urldownloader'] : false;
+$wgCopyUploadProxy = ( $wmgRealm !== 'labs' ) ? $wmfLocalServices['urldownloader'] : false;
 $wgUploadThumbnailRenderHttpCustomHost = $wmgHostnames['upload'];
 $wgUploadThumbnailRenderHttpCustomDomain = $wmfLocalServices['upload'];
 if ( $wmgUseLocalHTTPProxy || $wmfUsingKubernetes ) {
@@ -1094,7 +1098,7 @@ if ( $wmgUseWikiHiero ) {
 wfLoadExtension( 'SiteMatrix' );
 
 // Config for sitematrix
-$wgSiteMatrixFile = ( $wmfRealm === 'labs' ) ? "$IP/../langlist-labs" : "$IP/../langlist";
+$wgSiteMatrixFile = ( $wmgRealm === 'labs' ) ? "$IP/../langlist-labs" : "$IP/../langlist";
 
 $wgSiteMatrixSites = [
 	'wiki' => [
@@ -1416,7 +1420,8 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 	$wgExtDistGraphiteRenderApi = 'https://graphite.wikimedia.org/render';
 }
 
-if ( $wmgUseGlobalBlocking ) {
+// CentralAuth needed so that user CentralIds match
+if ( $wmgUseCentralAuth && $wmgUseGlobalBlocking ) {
 	wfLoadExtension( 'GlobalBlocking' );
 	$wgGlobalBlockingDatabase = 'centralauth';
 	$wgApplyGlobalBlocks = $wmgApplyGlobalBlocks;
@@ -1424,7 +1429,6 @@ if ( $wmgUseGlobalBlocking ) {
 }
 
 wfLoadExtension( 'TrustedXFF' );
-$wgTrustedXffFile = "$wmfConfigDir/trusted-xff.php";
 
 if ( $wmgUseContactPage ) {
 	wfLoadExtension( 'ContactPage' );
@@ -1568,7 +1572,7 @@ $wgFooterIcons['copyright']['copyright'] = '<a href="https://wikimediafoundation
 # All wikis are special and get Cirrus :)
 # Must come *AFTER* PoolCounterSettings.php
 wfLoadExtension( 'Elastica' );
-if ( $wmfRealm !== 'dev' ) { // dancy
+if ( $wmgRealm !== 'dev' ) { // dancy
  wfLoadExtension( 'CirrusSearch' );
  include "$wmfConfigDir/CirrusSearch-common.php";
 }
@@ -1743,7 +1747,7 @@ if ( is_array( $wmgExtraImplicitGroups ) ) {
 	$wgImplicitGroups = array_merge( $wgImplicitGroups, $wmgExtraImplicitGroups );
 }
 
-if ( $wmfRealm == 'labs' ) {
+if ( $wmgRealm == 'labs' ) {
 	$wgHTTPTimeout = 10;
 }
 if ( $wgRequestTimeLimit ) {
@@ -1799,7 +1803,7 @@ if ( extension_loaded( 'wikidiff2' ) ) {
 	$wgDiff = false;
 }
 
-if ( $wmfRealm === 'labs' ) {
+if ( $wmgRealm === 'labs' ) {
 	$wgInterwikiCache = require "$wmfConfigDir/interwiki-labs.php";
 } else {
 	$wgInterwikiCache = require "$wmfConfigDir/interwiki.php";
@@ -1839,7 +1843,16 @@ if ( $wmgUseCentralAuth ) {
 		];
 	}
 
-	if ( $wmfRealm == 'labs' ) {
+	switch ( $wmgRealm ) {
+	case 'dev':
+	case 'production':
+		// Production cluster
+		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\./';
+		$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
+		$wgCentralAuthLoginWiki = 'loginwiki';
+		break;
+
+	case 'labs':
 		// wmflabs beta cluster
 		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\.\w+\.\w+\./';
 		$wgCentralAuthAutoLoginWikis = [
@@ -1859,11 +1872,7 @@ if ( $wmgUseCentralAuth ) {
 			$wmgHostnames['wikifunctions'] => 'wikifunctionswiki',
 		];
 		$wgCentralAuthLoginWiki = 'loginwiki';
-	} else {
-		// Production cluster (and dev, or anything else)
-		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\./';
-		$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
-		$wgCentralAuthLoginWiki = 'loginwiki';
+		break;
 	}
 
 	if ( preg_match( $wmgSecondLevelDomainRegex, strrev( $wgServer ), $m ) ) {
@@ -2118,7 +2127,7 @@ $wgMaxShellTime = 50;  // seconds
 // with: mkdir -p -m777 /sys/fs/cgroup/memory/mediawiki/job
 $wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
 
-switch ( $wmfRealm ) {
+switch ( $wmgRealm ) {
 case 'production':
 	$wgImageMagickTempDir = '/tmp/magick-tmp';
 	break;
@@ -2135,7 +2144,7 @@ if ( $wmgUseCentralNotice ) {
 	$wgCentralHost = "//{$wmgHostnames['meta']}";
 
 	// for banner loading
-	if ( $wmfRealm === 'production' && $wgDBname === 'testwiki' ) {
+	if ( $wmgRealm === 'production' && $wgDBname === 'testwiki' ) {
 		$wgCentralSelectedBannerDispatcher = "//test.wikipedia.org/w/index.php?title=Special:BannerLoader";
 
 		// No caching for banners on testwiki, so we can develop them there a bit faster - NeilK 2012-01-16
@@ -2153,7 +2162,7 @@ if ( $wmgUseCentralNotice ) {
 	$wgCentralDBname = 'metawiki';
 	$wgNoticeInfrastructure = false;
 	$wgCentralNoticeAdminGroup = false;
-	if ( $wmfRealm == 'production' && $wgDBname === 'testwiki' ) {
+	if ( $wmgRealm == 'production' && $wgDBname === 'testwiki' ) {
 		// test.wikipedia.org has its own central database:
 		$wgCentralDBname = 'testwiki';
 		$wgNoticeInfrastructure = true;
@@ -2953,9 +2962,9 @@ if ( $wmgUseMath ) {
 	// HACK: $wgServerName is not available yet at this point, it's set by Setup.php
 	// so use a hook
 	$wgExtensionFunctions[] = static function () {
-		global $wgServerName, $wgMathFullRestbaseURL, $wmfRealm;
+		global $wgServerName, $wgMathFullRestbaseURL, $wmgRealm;
 
-		$wgMathFullRestbaseURL = $wmfRealm === 'production'
+		$wgMathFullRestbaseURL = $wmgRealm === 'production'
 			? 'https://wikimedia.org/api/rest_'  // T136205
 			: "//$wgServerName/api/rest_";
 	};
@@ -3577,8 +3586,6 @@ if ( $wmgUseUniversalLanguageSelector ) {
 		$wgTranslatePageTranslationULS = true;
 	}
 
-	$wgULSEventLogging = true;
-
 	// Compact Language Links …
 
 	// … as a beta feature (see T136677 for beta to stable)
@@ -3901,7 +3908,7 @@ if ( $wmgUseOATHAuth ) {
 }
 
 if ( $wmgUseMediaModeration ) {
-	if ( $wmfRealm === 'production' ) {
+	if ( $wmgRealm === 'production' ) {
 		$wgMediaModerationHttpProxy = $wmfLocalServices['urldownloader'];
 	}
 
@@ -4188,6 +4195,9 @@ if ( $wmgUseWikisource ) {
 if ( $wmgUseGrowthExperiments ) {
 	wfLoadExtension( 'GrowthExperiments' );
 
+	// T298122 temporary fix while mobile-only quality gate gets removed
+	$wgDefaultUserOptions['growthexperiments-addimage-desktop'] = 1;
+
 	if ( !$wmgGEFeaturesMayBeAvailableToNewcomers ) {
 		// Disable welcome survey
 		$wgWelcomeSurveyExperimentalGroups = [
@@ -4201,13 +4211,13 @@ if ( $wmgUseGrowthExperiments ) {
 
 	// POC API, allowed until 2022-03-31. See T294362.
 	$wgGEImageRecommendationServiceUrl = 'https://image-suggestion-api.wmcloud.org';
-	if ( $wmfRealm !== 'labs' ) {
+	if ( $wmgRealm !== 'labs' ) {
 		$wgGEImageRecommendationServiceHttpProxy = $wmfLocalServices['urldownloader'];
 	}
 	$wgGELinkRecommendationServiceUrl = $wmfLocalServices['linkrecommendation'];
 }
 
-if ( $wmgUseWikiLambda && $wmfRealm === 'labs' ) {
+if ( $wmgUseWikiLambda && $wmgRealm === 'labs' ) {
 	wfLoadExtension( 'WikiLambda' );
 
 	$wgWikiLambdaOrchestratorLocation = $wmfLocalServices['wikifunctions-orchestrator'];
@@ -4278,7 +4288,7 @@ if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession || $wmgUseCSP ) {
 	};
 }
 
-if ( $wmfRealm === 'labs' ) {
+if ( $wmgRealm === 'labs' ) {
 	require "$wmfConfigDir/CommonSettings-labs.php";
 }
 
@@ -4310,7 +4320,7 @@ if ( $wmgUseWikimediaEditorTasks ) {
 }
 
 if ( $wmgUseMachineVision ) {
-	if ( $wmfRealm === 'production' ) {
+	if ( $wmgRealm === 'production' ) {
 		$wgMachineVisionHttpProxy = $wmfLocalServices['urldownloader'];
 	}
 
@@ -4368,9 +4378,6 @@ $wgExtensionFunctions[] = static function () {
 		unset( $wgGroupPermissions['suppress'] );
 	}
 };
-
-// To enable media tags at only some of the wikis, see T266067
-$wgSoftwareTags = array_merge( $wgSoftwareTags, $wmgAdditionalSoftwareTags );
 
 class ClosedWikiProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvider {
 	/**

@@ -160,42 +160,42 @@ $wgLBFactoryConf = [
 'templateOverridesBySection' => [
 	's1' => [
 		'lagDetectionOptions' => [
-			'conds' => [ 'shard' => 's1', 'datacenter' => $wmfMasterDatacenter ]
+			'conds' => [ 'shard' => 's1', 'datacenter' => $wmgMasterDatacenter ]
 		],
 	],
 	's2' => [
 		'lagDetectionOptions' => [
-			'conds' => [ 'shard' => 's2', 'datacenter' => $wmfMasterDatacenter ]
+			'conds' => [ 'shard' => 's2', 'datacenter' => $wmgMasterDatacenter ]
 		],
 	],
 	'DEFAULT' /* s3 */  => [
 		'lagDetectionOptions' => [
-			'conds' => [ 'shard' => 's3', 'datacenter' => $wmfMasterDatacenter ]
+			'conds' => [ 'shard' => 's3', 'datacenter' => $wmgMasterDatacenter ]
 		],
 	],
 	's4' => [
 		'lagDetectionOptions' => [
-			'conds' => [ 'shard' => 's4', 'datacenter' => $wmfMasterDatacenter ]
+			'conds' => [ 'shard' => 's4', 'datacenter' => $wmgMasterDatacenter ]
 		],
 	],
 	's5' => [
 		'lagDetectionOptions' => [
-			'conds' => [ 'shard' => 's5', 'datacenter' => $wmfMasterDatacenter ]
+			'conds' => [ 'shard' => 's5', 'datacenter' => $wmgMasterDatacenter ]
 		],
 	],
 	's6' => [
 		'lagDetectionOptions' => [
-			'conds' => [ 'shard' => 's6', 'datacenter' => $wmfMasterDatacenter ]
+			'conds' => [ 'shard' => 's6', 'datacenter' => $wmgMasterDatacenter ]
 		],
 	],
 	's7' => [
 		'lagDetectionOptions' => [
-			'conds' => [ 'shard' => 's7', 'datacenter' => $wmfMasterDatacenter ]
+			'conds' => [ 'shard' => 's7', 'datacenter' => $wmgMasterDatacenter ]
 		],
 	],
 	's8' => [
 		'lagDetectionOptions' => [
-			'conds' => [ 'shard' => 's8', 'datacenter' => $wmfMasterDatacenter ]
+			'conds' => [ 'shard' => 's8', 'datacenter' => $wmgMasterDatacenter ]
 		],
 	],
 ],

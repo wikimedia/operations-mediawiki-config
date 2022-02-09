@@ -35,7 +35,6 @@ mwconfig_files_txt=(
 	throttle-analyze.php
 	reverse-proxy.php
 	reverse-proxy-staging.php
-	trusted-xff.php
 	Wikibase.php
 	wikitech.php
 )

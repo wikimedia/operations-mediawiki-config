@@ -58,8 +58,8 @@ return [
 			'rdb2' => 'deployment-memc10.deployment-prep.eqiad1.wikimedia.cloud',
 		],
 		'etcd' => [
-			'host' => 'deployment-etcd02.deployment-prep.eqiad1.wikimedia.cloud:2379',
-			'protocol' => 'https'
+			'host' => '_etcd._tcp.svc.deployment-prep.eqiad1.wikimedia.cloud',
+			'protocol' => 'https',
 		],
 		'mediaSwiftAuth' => 'http://deployment-ms-fe03.deployment-prep.eqiad.wmflabs/auth',
 		'mediaSwiftStore' => 'http://deployment-ms-fe03.deployment-prep.eqiad.wmflabs/v1/AUTH_mw',

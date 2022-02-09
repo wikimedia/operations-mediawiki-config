@@ -18,7 +18,7 @@
 # Included from: wmf-config/CommonSettings.php.
 #
 
-if ( $wmfRealm == 'labs' ) { # safe guard
+if ( $wmgRealm == 'labs' ) { # safe guard
 
 $wmgAddWikiNotify = false;
 
