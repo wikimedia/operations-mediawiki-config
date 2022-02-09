@@ -22,12 +22,12 @@
 
 global $wmfSwiftConfig;
 // Common OpenStack Swift backend convenience variables
-$wmfSwiftBigWikis = [ # DO NOT change without proper migration first
+$wmgSwiftBigWikis = [ # DO NOT change without proper migration first
 	'commonswiki', 'dewiki', 'enwiki', 'fiwiki', 'frwiki', 'hewiki', 'huwiki', 'idwiki',
 	'itwiki', 'jawiki', 'rowiki', 'ruwiki', 'thwiki', 'trwiki', 'ukwiki', 'zhwiki'
 ];
-$wmfSwiftShardLocal = in_array( $wgDBname, $wmfSwiftBigWikis ) ? 2 : 0; // shard levels
-$wmfSwiftShardCommon = in_array( 'commonswiki', $wmfSwiftBigWikis ) ? 2 : 0; // shard levels
+$wmgSwiftShardLocal = in_array( $wgDBname, $wmgSwiftBigWikis ) ? 2 : 0; // shard levels
+$wmgSwiftShardCommon = in_array( 'commonswiki', $wmgSwiftBigWikis ) ? 2 : 0; // shard levels
 
 if ( $wmgRealm === 'labs' ) {
 	$redisLockServers = [ 'rdb1', 'rdb2' ];
@@ -53,15 +53,15 @@ foreach ( $wmfDatacenters as $specificDC ) {
 		'swiftTempUrlKey'    => $wmfSwiftConfig[$specificDC]['tempUrlKey'],
 		'shardViaHashLevels' => [
 			'local-public'
-				=> [ 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ],
+				=> [ 'levels' => $wmgSwiftShardLocal, 'base' => 16, 'repeat' => 1 ],
 			'local-thumb'
-				=> [ 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ],
+				=> [ 'levels' => $wmgSwiftShardLocal, 'base' => 16, 'repeat' => 1 ],
 			'local-temp'
-				=> [ 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ],
+				=> [ 'levels' => $wmgSwiftShardLocal, 'base' => 16, 'repeat' => 1 ],
 			'local-transcoded'
-				=> [ 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ],
+				=> [ 'levels' => $wmgSwiftShardLocal, 'base' => 16, 'repeat' => 1 ],
 			'local-deleted'
-				=> [ 'levels' => $wmfSwiftShardLocal, 'base' => 36, 'repeat' => 0 ]
+				=> [ 'levels' => $wmgSwiftShardLocal, 'base' => 36, 'repeat' => 0 ]
 		],
 		'parallelize'        => 'implicit',
 		'cacheAuthInfo'      => true,
@@ -86,13 +86,13 @@ foreach ( $wmfDatacenters as $specificDC ) {
 		'swiftTempUrlKey'    => $wmfSwiftConfig[$specificDC]['tempUrlKey'],
 		'shardViaHashLevels' => [
 			'local-public'
-				=> [ 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ],
+				=> [ 'levels' => $wmgSwiftShardCommon, 'base' => 16, 'repeat' => 1 ],
 			'local-thumb'
-				=> [ 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ],
+				=> [ 'levels' => $wmgSwiftShardCommon, 'base' => 16, 'repeat' => 1 ],
 			'local-temp'
-				=> [ 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ],
+				=> [ 'levels' => $wmgSwiftShardCommon, 'base' => 16, 'repeat' => 1 ],
 			'local-transcoded'
-				=> [ 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ],
+				=> [ 'levels' => $wmgSwiftShardCommon, 'base' => 16, 'repeat' => 1 ],
 		],
 		'parallelize'        => 'implicit',
 		'cacheAuthInfo'      => true,
