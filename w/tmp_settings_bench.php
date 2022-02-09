@@ -38,7 +38,7 @@ try {
 		->apply();
 	$timing = 1000 * max( 0, microtime( true ) - $start );
 	echo "YAML loaded in $timing\n";
-	$stats->timing( "tmp_settings_load.${cacheType}_success", $timing );
+	$stats->timing( "tmp_settings_load.yaml_${cacheType}_success", $timing );
 } catch ( Throwable $e ) {
 	MediaWiki\Logger\LoggerFactory::getInstance( 'SettingsBuilder' )
 		->warning(
@@ -47,10 +47,38 @@ try {
 		);
 	$timing = 1000 * max( 0, microtime( true ) - $start );
 	echo "YAML errored in $timing\n";
-	$stats->timing( "tmp_settings_load.${cacheType}_failed", $timing );
+	$stats->timing( "tmp_settings_load.yaml_${cacheType}_failed", $timing );
 }
 
-// 2. Benchmark reloading settings from DefaultSettings.php
+// 2. Benchmark loading static PHP settings array with SettingsBuilder
+$phonySettings = new MediaWiki\Settings\SettingsBuilder(
+	$IP,
+	ExtensionRegistry::getInstance(),
+	new MediaWiki\Settings\Config\ArrayConfigBuilder(),
+	new MediaWiki\Settings\Config\PhpIniSink(),
+	$localCache
+);
+
+$start = microtime( true );
+try {
+	$phonySettings
+		->load( new MediaWiki\Settings\Source\PhpSettingsSource( "$IP/includes/config-schema.php" ) )
+		->apply();
+	$timing = 1000 * max( 0, microtime( true ) - $start );
+	echo "PHP loaded in $timing\n";
+	$stats->timing( "tmp_settings_load.php_${cacheType}_success", $timing );
+} catch ( Throwable $e ) {
+	MediaWiki\Logger\LoggerFactory::getInstance( 'SettingsBuilder' )
+		->warning(
+			'Failed to load config schema',
+			[ 'exception' => $e, ]
+		);
+	$timing = 1000 * max( 0, microtime( true ) - $start );
+	echo "PHP errored in $timing\n";
+	$stats->timing( "tmp_settings_load.php_${cacheType}_failed", $timing );
+}
+
+// 3. Benchmark reloading settings from DefaultSettings.php
 ( static function () use ( $IP, $stats ) {
 	$start = microtime( true );
 	require "$IP/includes/DefaultSettings.php";
