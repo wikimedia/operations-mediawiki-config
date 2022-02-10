@@ -3780,6 +3780,7 @@ function wmfGetVariantSettings() {
 		'WikiProject' => 102,
 		'WikiProject talk' => 103,
 		'プロジェクト‐ノート' => 103,
+		'モジュール・トーク' => 829,
 	],
 	'+kawikiquote' => [
 		'Wikiquote_განხილვა' => NS_PROJECT_TALK,
@@ -7796,6 +7797,7 @@ function wmfGetVariantSettings() {
 		// 102 and 103 used because they're the same as in jawiki
 		102 => 'プロジェクト',
 		103 => 'プロジェクト・ノート', // T262155
+		829 => 'モジュール・ノート', // T262155
 	],
 	'plwikivoyage' => [
 		NS_PROJECT_TALK => 'Dyskusja_Wikipodróży',
