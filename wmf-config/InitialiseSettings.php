@@ -3769,6 +3769,14 @@ function wmfGetVariantSettings() {
 		"ポータル‐ノート" => 101,
 	],
 	'+jawikivoyage' => [ // T262155
+		'トーク' => NS_TALK,
+		'利用者・トーク' => NS_USER_TALK,
+		'Wikivoyage・トーク' => NS_PROJECT_TALK,
+		'ファイル・トーク' => NS_FILE_TALK,
+		'MediaWiki・トーク' => NS_MEDIAWIKI_TALK,
+		'テンプレート・トーク' => NS_TEMPLATE_TALK,
+		'ヘルプ・トーク' => NS_HELP_TALK,
+		'カテゴリ・トーク' => NS_CATEGORY_TALK,
 		'WikiProject' => 102,
 		'WikiProject talk' => 103,
 		'プロジェクト‐ノート' => 103,
@@ -7775,6 +7783,16 @@ function wmfGetVariantSettings() {
 		// 106 and 107 (Notizie) deleted per T47636
 	],
 	'jawikivoyage' => [
+		# Override MediaWiki default namespace names for "ja" - T262155
+		NS_TALK => 'ノート',
+		NS_USER_TALK => '利用者・ノート',
+		NS_PROJECT_TALK => 'Wikivoyage・ノート',
+		NS_FILE_TALK => 'ファイル・ノート',
+		NS_MEDIAWIKI_TALK => 'MediaWiki・ノート',
+		NS_TEMPLATE_TALK => 'テンプレート・ノート',
+		NS_HELP_TALK => 'ヘルプ・ノート',
+		NS_CATEGORY_TALK => 'カテゴリ・ノート',
+		# Additional namespaces
 		// 102 and 103 used because they're the same as in jawiki
 		102 => 'プロジェクト',
 		103 => 'プロジェクト・ノート', // T262155
