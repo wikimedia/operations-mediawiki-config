@@ -11236,6 +11236,7 @@ function wmfGetVariantSettings() {
 			'suppressredirect' => true,
 			'tboverride' => true
 		], // T211978
+		'patroller' => [ 'patrol' => true ], // T301491
 	],
 	'+uzwiki' => [
 		'rollbacker' => [ 'rollback' => true ], // T265509
@@ -12377,9 +12378,26 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'autoeditor' ],
 	],
 	'+urwiki' => [
-		// T44737, T47643, T120348, T133564, T137888, T139302, T144701, T184607, T211978, T212612
-		'bureaucrat' => [ 'import', 'abusefilter', 'rollbacker', 'massmessage-sender', 'interface-editor', 'eliminator' ],
-		'sysop' => [ 'confirmed', 'abusefilter', 'rollbacker', 'accountcreator', 'filemover', 'autopatrolled', 'massmessage-sender', 'extendedmover', 'transwiki' ],
+		'bureaucrat' => [
+			'import', // T44737
+			'abusefilter', // T47643
+			'rollbacker', // T47643
+			'massmessage-sender', // T144701
+			'interface-editor', // T133564
+			'eliminator', // T184607
+		],
+		'sysop' => [
+			'confirmed', // T44737
+			'abusefilter', // T47643
+			'rollbacker', // T47643
+			'accountcreator', // T137888
+			'filemover', // T137888
+			'autopatrolled', // T139302
+			'massmessage-sender', // T144701
+			'extendedmover', // T211978
+			'transwiki', // T212612
+			'patroller', // T301491
+		],
 	],
 	'+uzwiki' => [
 		'sysop' => [ 'rollbacker' ], // T265509
@@ -13268,9 +13286,24 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'autoeditor' ],
 	],
 	'+urwiki' => [
-		// T44737, T47643, T120348, T133564, T137888, T139302, T144701, T184607, T211978, T212612
-		'bureaucrat' => [ 'import', 'abusefilter', 'rollbacker', 'massmessage-sender', 'interface-editor', 'eliminator' ],
-		'sysop' => [ 'confirmed', 'accountcreator', 'filemover', 'autopatrolled', 'massmessage-sender', 'extendedmover', 'transwiki' ],
+		'bureaucrat' => [
+			'import', // T44737
+			'abusefilter', // T47643
+			'rollbacker', // T47643
+			'massmessage-sender', // T144701
+			'interface-editor', // T133564
+			'eliminator', // T184607
+		],
+		'sysop' => [
+			'confirmed', // T44737
+			'accountcreator', // T137888
+			'filemover', // T137888
+			'autopatrolled', // T139302
+			'massmessage-sender', // T144701
+			'extendedmover', // T211978
+			'transwiki', // T212612
+			'patroller', // T301491
+		],
 	],
 	'+uzwiki' => [
 		'sysop' => [ 'rollbacker' ], // T265509
