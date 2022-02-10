@@ -20500,7 +20500,6 @@ function wmfGetVariantSettings() {
 	"lbewiki" => true,
 	"lezwiki" => true,
 	"lfnwiki" => true,
-	"lgwiki" => true,
 	"lijwiki" => true,
 	"liwiki" => true,
 	"lmowiki" => true,
@@ -20734,8 +20733,10 @@ function wmfGetVariantSettings() {
 	'hawiki' => true, // T290175
 	'igwiki' => true, // T290175
 	'kuwiki' => true, // T290238
+	'lgwiki' => true, // T301443
 	'mlwiki' => true, // T285842
 	'mswiki' => true, // T285842
+	'ocwiki' => true, // T301443
 	'sqwiki' => true, // T285842
 	'tawiki' => true, // T285842
 	'thwiki' => true, // T290175
@@ -20744,7 +20745,7 @@ function wmfGetVariantSettings() {
 
 'wgSectionTranslationTargetLanguages' => [
 	'default' => null,
-	'wikipedia' => [ 'az', 'ba', 'bn', 'ha', 'ig', 'ku', 'ml', 'ms', 'sq', 'ta', 'th', 'yo' ],
+	'wikipedia' => [ 'az', 'ba', 'bn', 'ha', 'ig', 'ku', 'lg', 'ml', 'ms', 'oc', 'sq', 'ta', 'th', 'yo' ],
 	'testwiki' => [ 'ar', 'az', 'ba', 'bn', 'ca', 'cs', 'es', 'fa', 'fr', 'ha', 'he', 'ht', 'id', 'ig', 'is', 'jv', 'ki', 'ko', 'ku', 'lg', 'ml', 'mn', 'mr', 'ms', 'oc', 'pt', 'ru', 'sq', 'ta', 'te', 'th', 'tl', 'tr', 'uk', 'ur', 'vi', 'yo', 'zh', 'zu' ],
 ],
 
