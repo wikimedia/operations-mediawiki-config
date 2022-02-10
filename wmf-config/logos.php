@@ -628,7 +628,7 @@ return [
 	'arwikisource' => '/static/images/project-logos/arwikisource.png',
 	'aswikisource' => '/static/images/project-logos/aswikisource.png', // T45129
 	'azwikisource' => '/static/images/project-logos/azwikisource.png', // T54019
-	'banwikisource' => '/static/images/project-logos/banwikisource.png',
+	'banwikisource' => '/static/images/project-logos/banwikisource.png', // T296459
 	'bewikisource' => '/static/images/project-logos/bewikisource.png',
 	'bgwikisource' => '/static/images/project-logos/bgwikisource.png', // T54019
 	'bnwikisource' => '/static/images/project-logos/bnwikisource.png',
