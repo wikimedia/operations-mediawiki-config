@@ -538,6 +538,12 @@ function wmfGetLabsOverrideSettings() {
 		'wmgCommonsMetadataForceRecalculate' => [
 			'default' => true,
 		],
+		'wgVectorDefaultSkinVersionForExistingAccounts' => [
+			'default' => '2',
+		],
+		'wgVectorDefaultSkinVersionForNewAccounts' => [
+			'default' => '2',
+		],
 
 		///
 		/// ----------- BetaFeatures start ----------
