@@ -20414,7 +20414,7 @@ function wmfGetVariantSettings() {
 'wgSectionTranslationTargetLanguages' => [
 	'default' => null,
 	'wikipedia' => [ 'az', 'ba', 'bn', 'ha', 'ig', 'ku', 'ml', 'ms', 'sq', 'ta', 'th', 'yo' ],
-	'testwiki' => [ 'ar', 'az', 'ba', 'bn', 'ca', 'cs', 'es', 'fa', 'fr', 'ha', 'he', 'ht', 'id', 'ig', 'is', 'jv', 'ki', 'ko', 'ku', 'lu', 'ml', 'mn', 'mr', 'ms', 'oc', 'pt', 'ru', 'sq', 'ta', 'te', 'th', 'tl', 'tr', 'uk', 'ur', 'vi', 'yo', 'zh', 'zu' ],
+	'testwiki' => [ 'ar', 'az', 'ba', 'bn', 'ca', 'cs', 'es', 'fa', 'fr', 'ha', 'he', 'ht', 'id', 'ig', 'is', 'jv', 'ki', 'ko', 'ku', 'lg', 'ml', 'mn', 'mr', 'ms', 'oc', 'pt', 'ru', 'sq', 'ta', 'te', 'th', 'tl', 'tr', 'uk', 'ur', 'vi', 'yo', 'zh', 'zu' ],
 ],
 
 'wgContentTranslationContentImportForSectionTranslation' => [
