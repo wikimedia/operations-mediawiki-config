@@ -84,7 +84,7 @@ if ( $wmgUseWikibaseRepo ) {
 	}
 
 	// Load wikibase search settings
-	require_once "{$wmfConfigDir}/SearchSettingsForWikibase.php";
+	require_once __DIR__ . '/SearchSettingsForWikibase.php';
 
 	// Calculate the client Db lists based on our wikiversions db lists
 	if ( $wgDBname === 'testwikidatawiki' ) {

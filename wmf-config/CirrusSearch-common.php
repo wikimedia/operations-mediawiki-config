@@ -96,8 +96,7 @@ if ( $wmgCirrusSearchMLRModel ) {
 	}
 }
 
-# Load per realm specific configuration, either:
+# Load per realm specific configuration, one of:
 # - CirrusSearch-labs.php
 # - CirrusSearch-production.php
-#
-require "{$wmfConfigDir}/CirrusSearch-{$wmgRealm}.php";
+require __DIR__ . "/CirrusSearch-{$wmgRealm}.php";
