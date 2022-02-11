@@ -23268,48 +23268,6 @@ function wmfGetVariantSettings() {
 
 'wgMediaInfoMediaSearchProfiles' => [
 	'commonswiki' => [
-		'mediasearch_logistic_regression' => [
-			'boost' => [
-				'statement' => [
-					// depicts
-					'P180' => 1 * 0.11098311564161133,
-					// digital representation of
-					'P6243' => 1.1 * 0.11098311564161133,
-				],
-				'descriptions.$language' => 0.019320230186222098,
-				'descriptions.$language.plain' => 0,
-				'title' => 0.0702949038300864,
-				'title.plain' => 0,
-				'category' => 0.05158078808882278,
-				'category.plain' => 0,
-				'heading' => 0,
-				'heading.plain' => 0,
-				// Arbitrary small value to preserve ordering if we ONLY have a match in this field
-				'auxiliary_text' => 0.0001,
-				'auxiliary_text.plain' => 0,
-				'file_text' => 0,
-				'file_text.plain' => 0,
-				'redirect.title' => 0.01060150471482338,
-				'redirect.title.plain' => 0,
-				// Arbitrary small value to preserve ordering if we ONLY have a match in this field
-				'text' => 0.0001,
-				'text.plain' => 0,
-				'suggest' => 0,
-			],
-			'decay' => [
-				'descriptions.$language' => 0.9,
-				'descriptions.$language.plain' => 0.9,
-				// below is not actually a field
-				'synonyms' => 0,
-			],
-			'logisticRegressionIntercept' => -1.1975600089068401,
-			'entitiesVariableBoost' => true,
-			'normalizeFulltextScores' => false,
-			'normalizeMultiClauseScores' => true,
-			'applyLogisticFunction' => true,
-			'useSynonyms' => false,
-			'hasLtrPlugin' => true,
-		],
 		'mediasearch_synonyms' => [
 			'boost' => [
 				'statement' => [
@@ -23350,6 +23308,48 @@ function wmfGetVariantSettings() {
 			'normalizeMultiClauseScores' => true,
 			'applyLogisticFunction' => true,
 			'useSynonyms' => true,
+			'hasLtrPlugin' => true,
+		],
+		'mediasearch_logistic_regression' => [
+			'boost' => [
+				'statement' => [
+					// depicts
+					'P180' => 1 * 0.11098311564161133,
+					// digital representation of
+					'P6243' => 1.1 * 0.11098311564161133,
+				],
+				'descriptions.$language' => 0.019320230186222098,
+				'descriptions.$language.plain' => 0,
+				'title' => 0.0702949038300864,
+				'title.plain' => 0,
+				'category' => 0.05158078808882278,
+				'category.plain' => 0,
+				'heading' => 0,
+				'heading.plain' => 0,
+				// Arbitrary small value to preserve ordering if we ONLY have a match in this field
+				'auxiliary_text' => 0.0001,
+				'auxiliary_text.plain' => 0,
+				'file_text' => 0,
+				'file_text.plain' => 0,
+				'redirect.title' => 0.01060150471482338,
+				'redirect.title.plain' => 0,
+				// Arbitrary small value to preserve ordering if we ONLY have a match in this field
+				'text' => 0.0001,
+				'text.plain' => 0,
+				'suggest' => 0,
+			],
+			'decay' => [
+				'descriptions.$language' => 0.9,
+				'descriptions.$language.plain' => 0.9,
+				// below is not actually a field
+				'synonyms' => 0,
+			],
+			'logisticRegressionIntercept' => -1.1975600089068401,
+			'entitiesVariableBoost' => true,
+			'normalizeFulltextScores' => false,
+			'normalizeMultiClauseScores' => true,
+			'applyLogisticFunction' => true,
+			'useSynonyms' => false,
 			'hasLtrPlugin' => true,
 		],
 		'mediasearch_weighted_tags' => [
