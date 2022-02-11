@@ -382,7 +382,7 @@ if ( $wmgUseWikimediaApiPortalOAuth ) {
 
 // Test of new import source configuration on labs cluster
 $wgImportSources = [];
-include __DIR__ . '/import.php';
+require_once __DIR__ . '/import.php';
 $wgHooks['ImportSources'][] = 'wmfImportSources';
 
 wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
