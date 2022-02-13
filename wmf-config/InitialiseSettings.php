@@ -15141,6 +15141,8 @@ function wmfGetVariantSettings() {
 	'wikivoyage' => '/srv/mediawiki/static/images/sul/wikivoyage.png',
 	'loginwiki' => '/srv/mediawiki/static/images/sul/foundation.png',
 	'brwikimedia' => '/srv/mediawiki/static/images/sul/foundation.png',
+	'apiportalwiki' => '/srv/mediawiki/static/images/sul/foundation-black.png',
+	'wikimaniawiki' => '/srv/mediawiki/static/images/sul/wikimania.png',
 ],
 
 'wmgCentralAuthAutoLoginWikis' => [
