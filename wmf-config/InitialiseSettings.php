@@ -18249,32 +18249,6 @@ function wmfGetVariantSettings() {
 		'amc' => true,
 	],
 ],
-'wgMFUseDesktopContributionsPage' => [
-	'default' => [
-		'base' => false,
-		'beta' => false,
-		'amc' => true,
-	],
-	// T283988#7212776
-	// Disable contributions simplification for all users on Wikidata.
-	'wikidata' => [
-		'base' => true,
-		'beta' => true,
-		'amc' => true,
-	],
-	// T283988#7212776
-	// Disable contributions simplification for all users on Commons
-	'commonswiki' => [
-		'base' => true,
-		'beta' => true,
-		'amc' => true,
-	],
-	'testcommonswiki' => [
-		'base' => true,
-		'beta' => true,
-		'amc' => true,
-	]
-],
 
 'wgMFDisplayWikibaseDescriptions' => [
 	'default' => [
