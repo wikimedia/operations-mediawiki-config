@@ -20958,6 +20958,7 @@ function wmfGetVariantSettings() {
 	'htwiki' => [ 'minerva', 'vector', 'vector-2022', 'timeless' ], // T126826, T298916
 	'hewiki' => [ 'minerva', 'vector', 'vector-2022', 'timeless' ], // T191573, T298916
 	'wikivoyage' => [ 'minerva', 'vector', 'vector-2022', 'timeless' ], // T298916
+	'zhwikinews' => [], // T299856
 ],
 
 'wmgUseRevisionSlider' => [
