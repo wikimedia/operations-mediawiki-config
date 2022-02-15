@@ -7848,6 +7848,7 @@ function wmfGetVariantSettings() {
 	'testwiki' => true,
 ],
 
+// Note that Wikisource modifies this default in wmf-config/CommonSettings.php
 'wgVectorMaxWidthOptions' => [
 	'default' => [
 		"exclude" => [
@@ -7863,24 +7864,6 @@ function wmfGetVariantSettings() {
 		],
 		"include" => [
 			"Special:Preferences",
-		],
-	],
-	// T260091
-	'wikisource' => [
-		"exclude" => [
-			"mainpage" => false,
-			"querystring" => [
-				"action" => "history",
-				"diff" => "*",
-			],
-			"namespaces" => [
-				NS_SPECIAL,
-				NS_CATEGORY,
-				104
-			],
-		],
-		"include" => [
-			"Special:Preferences"
 		],
 	],
 ],

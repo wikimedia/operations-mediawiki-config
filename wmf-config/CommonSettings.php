@@ -1210,6 +1210,11 @@ if ( $wmgUseProofreadPage ) {
 	if ( $wmgProofreadPageShowHeaders ) {
 		$wgDefaultUserOptions['proofreadpage-showheaders'] = 1;
 	}
+
+	// Wikisource requires special handling.
+	// See T300563#7665461 and T74525
+	$wgVectorMaxWidthOptions['exclude']['namespaces'][] = $wgProofreadPageNamespaceIds['page'];
+
 }
 
 if ( $wmgUseLabeledSectionTransclusion ) {
