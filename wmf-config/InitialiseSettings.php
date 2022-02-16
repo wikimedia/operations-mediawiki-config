@@ -27097,63 +27097,16 @@ function wmfGetVariantSettings() {
 			'mobile' => 50,
 			'desktop' => 50
 		]
-	]
-],
-
-// Deprecated – remove after I41d96b4ea98d6bae5674440512ef371d33cce39c is in production for two
-// trains
-'wgGEHomepageNewAccountVariants' => [
-	'default' => [
-		'control' => 100,
-		'linkrecommendation' => 0,
 	],
-	'arwiki' => [
-		'control' => 50,
-		'linkrecommendation' => 50,
-	],
-	'bnwiki' => [
-		'control' => 50,
-		'linkrecommendation' => 50,
-	],
-	'cswiki' => [
-		'control' => 50,
-		'linkrecommendation' => 50,
-	],
-	'dewiki' => [
-		'control' => 100,
-		'linkrecommendation' => 0,
-	],
-	'fawiki' => [
-		'control' => 50,
-		'linkrecommendation' => 50,
-	],
-	'frwiki' => [
-		'control' => 50,
-		'linkrecommendation' => 50,
-	],
-	'huwiki' => [
-		'control' => 50,
-		'linkrecommendation' => 50,
-	],
-	'nlwiki' => [
-		'control' => 0,
-		'linkrecommendation' => 100,
-	],
-	'plwiki' => [
-		'control' => 50,
-		'linkrecommendation' => 50,
-	],
-	'rowiki' => [
-		'control' => 50,
-		'linkrecommendation' => 50,
-	],
-	'ruwiki' => [
-		'control' => 50,
-		'linkrecommendation' => 50,
-	],
-	'viwiki' => [
-		'control' => 50,
-		'linkrecommendation' => 50,
+	'eswiki' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+		'imagerecommendation' => [
+			'mobile' => 50,
+			'desktop' => 50
+		]
 	],
 ],
 
