@@ -14332,7 +14332,6 @@ function wmfGetVariantSettings() {
 
 'wmgEmergencyCaptcha' => [
 	'default' => false,
-	'enwiki' => true,  // T302047
 ],
 # @} end of Captcha
 
