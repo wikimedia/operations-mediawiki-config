@@ -844,6 +844,11 @@ function wmfGetLabsOverrideSettings() {
 			'wikidatawiki' => 'P218',
 		],
 
+		'wgLexemeEnableNewAlpha' => [
+			'default' => null,
+			'wikidatawiki' => true,
+		],
+
 		'-wmgWikibaseSearchIndexProperties' => [
 			'default' => []
 		],
