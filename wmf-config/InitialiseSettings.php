@@ -16161,7 +16161,6 @@ function wmfGetVariantSettings() {
 ],
 'wgAbuseFilterEmergencyDisableAge' => [
 	'default' => [ 'default' => 86400, ],
-	'enwiki' => [ 'default' => 0, ], // T302047
 ],
 # @}
 
