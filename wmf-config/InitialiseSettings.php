@@ -5201,6 +5201,7 @@ return [
 	'metawiki' => [ 'default' => 0.30, ], // T173633
 	'mediawikiwiki' => [ 'default' => 0.30, ], // T212667
 	'eswiki' => [ 'default' => 0.1, ], // T284797
+	'fawiki' => [ 'default' => 0.1, ], // T302227
 ],
 'wgAbuseFilterEmergencyDisableCount' => [
 	'default' => [ 'default' => 2, ],
