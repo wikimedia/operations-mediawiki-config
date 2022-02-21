@@ -5399,7 +5399,7 @@ function wmfGetVariantSettings() {
 		'collection' => 'debug', // -cscott for T73675
 		'csp' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 		'csp-report-only' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
-		'DBConnection' => 'error',
+		'DBConnection' => 'warning',
 		'DBPerformance' => [ 'logstash' => 'debug', 'udp2log' => 'warning' ],
 		'DBQuery' => 'warning',
 		'DBReplication' => 'warning',
