@@ -13016,50 +13016,103 @@ function wmfGetVariantSettings() {
 	// The '+' in front of the DB name means 'add to the default'. It saves us duplicating
 	// changes to the default across all overrides --Andrew 2009-04-28
 	'default' => [
-		'bureaucrat' => [ 'accountcreator', 'bot', 'confirmed', 'interface-admin' ],
+		'bureaucrat' => [
+			'accountcreator',
+			'bot',
+			'confirmed',
+			'interface-admin',
+		],
 		'sysop' => [ 'ipblock-exempt' ],
 	],
 	'+private' => [
-		'bureaucrat' => [ 'sysop', 'bureaucrat', 'import', 'transwiki', 'inactive' ],
+		'bureaucrat' => [
+			'sysop',
+			'bureaucrat',
+			'import',
+			'transwiki',
+			'inactive',
+		],
 	],
 	'+fishbowl' => [
-		'bureaucrat' => [ 'sysop', 'bureaucrat', 'import', 'transwiki' ],
+		'bureaucrat' => [
+			'sysop',
+			'bureaucrat',
+			'import',
+			'transwiki',
+		],
 	],
 	'+testwiki' => [
-		'bureaucrat' => [ 'sysop', 'researcher', 'centralnoticeadmin', 'flow-bot', 'import', 'transwiki' ],
-		'sysop' => [ 'filemover', 'rollbacker', 'accountcreator', 'confirmed', 'templateeditor' ],
+		'bureaucrat' => [
+			'sysop',
+			'researcher',
+			'centralnoticeadmin',
+			'flow-bot',
+			'import',
+			'transwiki',
+		],
+		'sysop' => [
+			'filemover',
+			'rollbacker',
+			'accountcreator',
+			'confirmed',
+			'templateeditor',
+		],
 	],
 	'+test2wiki' => [
-		'bureaucrat' => [ 'flow-bot', 'sysop', 'import', 'transwiki' ], // T131037
+		'bureaucrat' => [
+			'flow-bot',
+			'sysop', // T131037
+			'import',
+			'transwiki',
+		],
 	],
 	// ******************************************************************
-	'+apiportalwiki' => [ // T259569
-		'bureaucrat' => [ 'docseditor' ],
+	'+apiportalwiki' => [
+		'bureaucrat' => [ 'docseditor' ], // T259569
 	],
 	'+arbcom_ruwiki' => [
 		'bureaucrat' => [ 'arbcom' ]
 	],
 	'+arwiki' => [
-		'bureaucrat' => [ 'import', 'reviewer', 'abusefilter' ], // T143844
-		'sysop' => [ 'uploader', 'reviewer', 'confirmed', 'rollbacker', 'abusefilter', 'patroller', 'autopatrolled', ],
+		'bureaucrat' => [
+			'import',
+			'reviewer',
+			'abusefilter',
+		],
+		'sysop' => [
+			'uploader',
+			'reviewer',
+			'confirmed',
+			'rollbacker',
+			'abusefilter',
+			'patroller',
+			'autopatrolled',
+		],
 	],
 	'+arwikibooks' => [
 		'sysop' => [ 'rollbacker', ], // T185720
+	],
+	'+arwikinews' => [
+		'sysop' => [ 'rollbacker', ], // T189206
 	],
 	'+arwikiquote' => [
 		'sysop' => [ 'rollbacker', ], // T189732
 	],
 	'+arwikisource' => [
-		'sysop' => [ 'patroller', 'autopatrolled', 'rollbacker' ],
+		'sysop' => [
+			'patroller',
+			'autopatrolled',
+			'rollbacker',
+		],
 	],
 	'+arwikiversity' => [
 		'sysop' => [ 'rollbacker', ], // T188633
 	],
 	'+arwiktionary' => [
-		'sysop' => [ 'autopatrolled', 'rollbacker' ],
-	],
-	'+arwikinews' => [
-		'sysop' => [ 'rollbacker', ], // T189206
+		'sysop' => [
+			'autopatrolled',
+			'rollbacker',
+		],
 	],
 	'+arzwiki' => [
 		'sysop' => [
@@ -13120,37 +13173,78 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'autopatrolled' ],
 	],
 	'+bnwiki' => [
-		'sysop' => [ 'autopatrolled', 'filemover', 'flood', 'rollbacker' ],
+		'sysop' => [
+			'autopatrolled',
+			'filemover',
+			'flood',
+			'rollbacker',
+		],
 		'bureaucrat' => [ 'import' ],
 	],
 	'+bnwikibooks' => [
-		'sysop' => [ 'autopatrolled', 'patroller' ], // TT296640
+		'sysop' => [
+			'autopatrolled', // T296640
+			'patroller', // T296640
+		],
 	],
 	'+bnwikisource' => [
-		'sysop' => [ 'autopatrolled', 'filemover', 'flood' ], // T129087
+		'sysop' => [
+			'autopatrolled',
+			'filemover', // T129087
+			'flood', // T129087
+		],
 	],
 	'+bnwikivoyage' => [
-		'sysop' => [ 'autopatrolled', 'patroller' ], // T296637
+		'sysop' => [
+			'autopatrolled', // T296637
+			'patroller', // T296637
+		],
 	],
 	'+bnwiktionary' => [
-		'sysop' => [ 'autopatrolled', 'patroller' ], // T298187
+		'sysop' => [
+			'autopatrolled', // T298187
+			'patroller', // T298187
+		],
 	],
 	'+brwikimedia' => [
-		'sysop' => [ 'translationadmin', 'autopatrolled', 'confirmed' ], // T7812, T65345
-		'bureaucrat' => [ 'sysop', 'bureaucrat' ], // T65345
+		'sysop' => [
+			'translationadmin', // T60123
+			'autopatrolled', // T65345
+			'confirmed', // T65345
+		],
+		'bureaucrat' => [
+			'sysop', // T65345
+			'bureaucrat', // T65345
+		],
 	],
 	'+bswiki' => [
 		'sysop' => [ 'flood' ], // T52425
-		'bureaucrat' => [ 'patroller', 'autopatrolled', 'rollbacker' ],
+		'bureaucrat' => [
+			'patroller',
+			'autopatrolled',
+			'rollbacker',
+		],
 	],
 	'+cawiki' => [
-		'sysop' => [ 'rollbacker', 'autopatrolled', 'abusefilter', 'accountcreator' ], // T58570
+		'sysop' => [
+			'rollbacker',
+			'autopatrolled',
+			'abusefilter',
+			'accountcreator', // T58570
+		],
 	],
 	'+cawikinews' => [
-		'sysop' => [ 'flood', 'confirmed' ], // T98576, T138069
+		'sysop' => [
+			'flood', // T98576
+			'confirmed', // T138069
+		],
 	],
 	'+cewiki' => [
-		'sysop' => [ 'rollbacker', 'suppressredirect', 'uploader' ], // T128205, T129005
+		'sysop' => [
+			'rollbacker', // T128205
+			'suppressredirect', // T128205
+			'uploader', // T129005
+		],
 	],
 	'+ckbwiki' => [
 		'sysop' => [
@@ -13188,11 +13282,23 @@ function wmfGetVariantSettings() {
 		],
 	],
 	'+cowikimedia' => [
-		'bureaucrat' => [ 'bureaucrat', 'sysop' ], // T300779
+		'bureaucrat' => [
+			'bureaucrat', // T300779
+			'sysop', // T300779
+		],
 	],
 	'+cswiki' => [
-		'bureaucrat' => [ 'arbcom', 'autopatrolled', 'engineer' ], // T63418, T203000
-		'sysop' => [ 'rollbacker', 'patroller', 'accountcreator', 'confirmed' ], // T126931, T131684, T163206
+		'bureaucrat' => [
+			'arbcom', // T63418
+			'autopatrolled',
+			'engineer', // T203000
+		],
+		'sysop' => [
+			'rollbacker', // T126931
+			'patroller', // T126931
+			'accountcreator', // T131684
+			'confirmed', // T163206
+		],
 	],
 	'+cswikinews' => [
 		'bureaucrat' => [ 'autopatrolled' ],
@@ -13207,13 +13313,16 @@ function wmfGetVariantSettings() {
 		'bureaucrat' => [ 'autopatrolled' ],
 	],
 	'+dawiki' => [
-		'sysop' => [ 'patroller', 'autopatrolled' ],
-	],
-	'+dawiktionary' => [
-		'sysop' => [ 'autopatrolled' ], // T86062
+		'sysop' => [
+			'patroller',
+			'autopatrolled',
+		],
 	],
 	'+dawikiquote' => [
 		'sysop' => [ 'autopatrolled' ], // T88591
+	],
+	'+dawiktionary' => [
+		'sysop' => [ 'autopatrolled' ], // T86062
 	],
 	'+dewiki' => [
 		'bureaucrat' => [ 'noratelimit' ], // T59819
@@ -13222,11 +13331,21 @@ function wmfGetVariantSettings() {
 		'sysop' => [ 'autopatrolled' ], // T67495
 	],
 	'+donatewiki' => [
-		'sysop' => [ 'inactive', 'confirmed', 'flood' ],
-		'bureaucrat' => [ 'inactive', 'confirmed' ],
+		'sysop' => [
+			'inactive',
+			'confirmed',
+			'flood',
+		],
+		'bureaucrat' => [
+			'inactive',
+			'confirmed',
+		],
 	],
 	'+dtywiki' => [
-		'sysop' => [ 'autopatrolled', 'transwiki' ], // T174226, T176709
+		'sysop' => [
+			'autopatrolled', // T176709
+			'transwiki', // T174226
+		],
 	],
 	'+elwiki' => [
 		'sysop' => [ 'rollbacker' ], // T257745
