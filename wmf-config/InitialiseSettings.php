@@ -9468,7 +9468,7 @@ function wmfGetVariantSettings() {
 			'extendedconfirmed' => true, // T126607
 			'move-categorypages' => true, // T219261
 		],
-		'oversight' => [
+		'suppress' => [
 			'browsearchive' => true,
 			'deletedhistory' => true,
 			'deletedtext' => true,
@@ -11132,7 +11132,7 @@ function wmfGetVariantSettings() {
 			'deletedtext' => true, // T40690
 		],
 		'massmessage-sender' => [ 'massmessage' => true, ], // T147740
-		'oversight' => [
+		'suppress' => [
 			'browsearchive' => true, // T40690
 			'deletedhistory' => true, // T40690
 			'deletedtext' => true, // T40690
@@ -11551,7 +11551,7 @@ function wmfGetVariantSettings() {
 		],
 
 		# To allow for inline log suppression -- 2009-01-29 -- BV
-		'oversight' => [
+		'suppress' => [
 			'deleterevision' => true,
 			'deletelogentry' => true,
 			'hideuser' => true, // was forgotten. added 2009-03-05 -- BV
