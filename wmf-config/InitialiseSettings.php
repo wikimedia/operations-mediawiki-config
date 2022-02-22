@@ -7997,6 +7997,11 @@ function wmfGetVariantSettings() {
 	'default' => true,
 	'wikidatawiki' => false,
 ],
+'wgVectorTableOfContents' => [
+	'default' => [
+		'default' => false
+	],
+],
 'wgVectorWvuiSearchOptions' => [
 	'default' => [
 		'showThumbnail' => true,

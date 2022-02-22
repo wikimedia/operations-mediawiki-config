@@ -532,6 +532,11 @@ function wmfGetLabsOverrideSettings() {
 		'wgVectorUseWvuiSearch' => [
 			'default' => true
 		],
+		'wgVectorTableOfContents' => [
+			'default' => [
+				'default' => true,
+			],
+		],
 		'wgVectorSkinMigrationMode' => [
 			'default' => true
 		],
