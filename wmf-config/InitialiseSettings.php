@@ -20481,6 +20481,7 @@ function wmfGetVariantSettings() {
 
 'wgDiscussionToolsEnableMobile' => [
 	'default' => false,
+	'htwiki' => true, // T302259
 ],
 
 'wgDiscussionToolsReplyIndentation' => [
