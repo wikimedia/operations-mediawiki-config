@@ -7993,10 +7993,6 @@ function wmfGetVariantSettings() {
 		'logged_out' => true,
 	],
 ],
-'wgVectorUseWvuiSearch' => [
-	'default' => true,
-	'wikidatawiki' => false,
-],
 'wgVectorTableOfContents' => [
 	'default' => [
 		'default' => false

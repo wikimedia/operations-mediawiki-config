@@ -529,9 +529,6 @@ function wmfGetLabsOverrideSettings() {
 				'logged_out' => false,
 			],
 		],
-		'wgVectorUseWvuiSearch' => [
-			'default' => true
-		],
 		'wgVectorTableOfContents' => [
 			'default' => [
 				'default' => true,
