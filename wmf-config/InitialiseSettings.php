@@ -20503,6 +20503,7 @@ function wmfGetVariantSettings() {
 	'default' => 'default', // T275827
 	'arwiki' => 'available', // T285724
 	'cswiki' => 'available', // T285724
+	'mediawikiwiki' => 'available', // T302256
 ],
 
 'wgDiscussionTools_sourcemodetoolbar' => [
@@ -20518,6 +20519,7 @@ function wmfGetVariantSettings() {
 
 'wgDiscussionTools_topicsubscription' => [
 	'default' => 'default', // T287802
+	'mediawikiwiki' => 'available', // T302256
 ],
 
 'wgDiscussionTools_autotopicsub' => [
