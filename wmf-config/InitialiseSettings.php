@@ -20522,6 +20522,7 @@ function wmfGetVariantSettings() {
 
 'wgDiscussionTools_autotopicsub' => [
 	'default' => 'default',
+	'mediawikiwiki' => 'available', // T302256
 	// T290500
 	'amwiki' => 'unavailable',
 	'arzwiki' => 'unavailable',
