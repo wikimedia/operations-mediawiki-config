@@ -53,3 +53,6 @@ $wgCirrusSearchDropDelayedJobsAfter = [
 	// and can be backfilled as necessary.
 	'cloudelastic' => 900,
 ];
+
+// T295705#7719071 Reduce write isolation to only cloudelastic to reduce job queue rates
+$wgCirrusSearchWriteIsolateClusters = [ 'cloudelastic' ];
