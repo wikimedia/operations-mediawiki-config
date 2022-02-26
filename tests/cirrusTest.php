@@ -147,7 +147,7 @@ class CirrusTest extends WgConfTestCase {
 		// variables that would have been setup elsewhere, perhaps in mediawiki
 		// default settings or by CommonSettings.php
 		$wgJobTypeConf = [ 'default' => [] ];
-		$wmfDatacenter = 'unittest';
+		$wmfDatacenter = $wmgDatacenter = 'unittest';
 		$wgCirrusSearchPoolCounterKey = 'unittest:poolcounter:blahblahblah';
 		// not used for anything, just to prevent undefined variable
 		$IP = '/dev/null';

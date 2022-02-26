@@ -83,6 +83,7 @@ abstract class WgConfTestCase extends PHPUnit\Framework\TestCase {
 		$this->setGlobals( [
 			'wmfUdp2logDest' => 'localhost',
 			'wmfDatacenter' => 'unittest',
+			'wmgDatacenter' => 'unittest',
 			'wmfMasterDatacenter' => 'unittest',
 			'wmfConfigDir' => $wmfConfigDir,
 		] );

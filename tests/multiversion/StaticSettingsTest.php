@@ -11,12 +11,14 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 		// This global is set by multiversion/MWRealm.php
 		$this->originalWmfDC = $GLOBALS['wmfDatacenter'];
 		$GLOBALS['wmfDatacenter'] = 'testvalue';
+		$GLOBALS['wmgDatacenter'] = 'testvalue';
 
 		$this->variantSettings = wmfGetVariantSettings();
 	}
 
 	public function tearDown(): void {
 		$GLOBALS['wmfDatacenter'] = $this->originalWmfDC;
+		$GLOBALS['wmgDatacenter'] = $this->originalWmfDC;
 	}
 
 	public function testConfigIsScalar() {

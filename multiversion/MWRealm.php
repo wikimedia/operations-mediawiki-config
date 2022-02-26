@@ -4,12 +4,12 @@ use Wikimedia\MWConfig\ServiceConfig;
 
 require_once __DIR__ . '/../src/ServiceConfig.php';
 
-global $wmfDatacenter, $wmgRealm;
+global $wmfDatacenter, $wmgDatacenter, $wmgRealm;
 
 $serviceConfig = ServiceConfig::getInstance();
 
 $wmgRealm = $serviceConfig->getRealm();
-$wmfDatacenter = $serviceConfig->getDatacenter();
+$wmgDatacenter = $wmfDatacenter = $serviceConfig->getDatacenter();
 
 unset( $serviceConfig );
 
