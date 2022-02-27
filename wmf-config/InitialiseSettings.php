@@ -10341,7 +10341,6 @@ function wmfGetVariantSettings() {
 			'globalgroupmembership' => true, // T207531
 			'globalgrouppermissions' => true, // T207531
 			'centralauth-lock' => true, // T208035
-			'centralauth-oversight' => true, // T208035
 			'centralauth-suppress' => true, // T302675
 			'centralauth-unmerge' => true, // T208035
 			'globalblock' => true, // T208035
@@ -10372,7 +10371,6 @@ function wmfGetVariantSettings() {
 		'wmf-supportsafety' => [ // T136046, T136864, T142123
 			'autopatrol' => true,
 			'centralauth-lock' => true,
-			'centralauth-oversight' => true,
 			'centralauth-suppress' => true, // T302675
 			'centralauth-rename' => true,
 			'editcontentmodel' => true, // TODO: remove when a change for T85847 is deployed
@@ -11522,7 +11520,6 @@ function wmfGetVariantSettings() {
 			'noratelimit' => true,
 			'bigdelete' => true,
 			'centralauth-lock' => false, // T208035
-			'centralauth-oversight' => false, // T208035
 			'centralauth-suppress' => false, // T302675
 			'centralauth-unmerge' => false, // T208035
 			'globalblock' => false, // T208035
