@@ -1136,6 +1136,9 @@ Wikipedia:
     slwiki:
         comment_1_5x:  T150618
         comment_2x:  T150618
+        selected: slwiki20 # T302661
+        variants:
+            slwiki20: File:Wikipedia-logo-v2-sl-20-yearsCoA.svg
 
     smwiki:
         comment:  T51125
