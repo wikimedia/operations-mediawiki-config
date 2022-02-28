@@ -1376,21 +1376,6 @@ function wmfGetLabsOverrideSettings() {
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
 			'viwiki' => null,
 		],
-		'wgGECampaigns' => [
-			'eswiki' => [
-				'growth-glam-2022' => [
-					'topics' => [ 'argentina', 'chile', 'mexico' ],
-					'pattern' => '/^growth-glam-2022$/'
-				]
-			]
-		],
-		'wgGECampaignTopics' => [
-			'eswiki' => [
-				'argentina' => 'growtharticletopic:argentina',
-				'chile' => 'growtharticletopic:chile',
-				'mexico' => 'growtharticletopic:mexico'
-			]
-		],
 		'wgEnableSpecialMute' => [
 			'default' => true,
 			'eswiki' => false,

@@ -27425,6 +27425,26 @@ function wmfGetVariantSettings() {
 	'ptwiki' => '/^growth-advancement-brazil-2021$/'
 ],
 
+'wgGECampaigns' => [
+	'default' => [],
+	'eswiki' => [
+		'growth-glam-2022' => [
+			'topics' => [ 'argentina', 'argentina-expanded', 'chile', 'mexico' ],
+			'pattern' => '/^growth-glam-2022$/'
+		]
+	]
+],
+
+'wgGECampaignTopics' => [
+	'default' => [],
+	'eswiki' => [
+		'argentina' => 'growtharticletopic:argentina',
+		'argentina-expanded' => 'argentina',
+		'chile' => 'growtharticletopic:chile',
+		'mexico' => 'growtharticletopic:mexico',
+	]
+],
+
 'wmgShowRollbackConfirmationDefaultUserOptions' => [
 	'default' => false,
 	'dewiki' => true
