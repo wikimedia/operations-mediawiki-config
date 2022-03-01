@@ -4036,6 +4036,13 @@ if ( $wmgUseCheckUser ) {
 
 if ( $wmgUseIPInfo ) {
 	wfLoadExtension( 'IPInfo' );
+	$wgGroupPermissions['sysop']['ipinfo'] = true;
+	$wgGroupPermissions['sysop']['ipinfo-view-full'] = true;
+	$wgGroupPermissions['sysop']['ipinfo-view-log'] = true;
+
+	$wgGroupPermissions['checkuser']['ipinfo'] = true;
+	$wgGroupPermissions['checkuser']['ipinfo-view-full'] = true;
+	$wgGroupPermissions['checkuser']['ipinfo-view-log'] = true;
 }
 
 // T39211
