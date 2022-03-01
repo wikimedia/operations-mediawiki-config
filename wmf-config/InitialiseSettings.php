@@ -18265,9 +18265,9 @@ function wmfGetVariantSettings() {
 // ----------- CheckUser end ----------
 
 // IPInfo extension
-// Deployed to Beta Cluster only, pending T260822
 'wmgUseIPInfo' => [
 	'default' => false,
+	'testwiki' => true, // T260598
 ],
 
 'wmgUseIncubator' => [
