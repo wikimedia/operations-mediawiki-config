@@ -17840,11 +17840,10 @@ function wmfGetVariantSettings() {
 	'enwiki' => false, // will follow later T286990
 ],
 
-// Temporary feature flags for changes to the descriptions in the transclusion
-// dialog, see T271800 and T286765
-'wmgVisualEditorTransclusionDialogNewSidebarFeatures' => [
+// Temporary feature flag for changes to the transclusion dialog sidebar
+'wgVisualEditorTransclusionDialogNewSidebar' => [
 	'default' => false,
-	// T284203 + T286992: pilot wikis
+	// T286992: pilot wikis
 	'group0' => true,
 	'dagwiki' => true,
 	'dewiki' => true,
@@ -17858,6 +17857,13 @@ function wmfGetVariantSettings() {
 	'nawiktionary' => true,
 	'trwiki' => true,
 	'twwiki' => true,
+],
+
+// Temporary feature flag for changes to the descriptions in the transclusion
+// dialog, see T271800
+'wgVisualEditorTransclusionDialogInlineDescriptions' => [
+	'default' => true,
+	'enwiki' => false, // will follow later T286991
 ],
 
 // --------------- VisualEditor end ---------------
