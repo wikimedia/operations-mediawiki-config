@@ -27263,14 +27263,13 @@ function wmfGetVariantSettings() {
 	'test2wiki' => 0,
 
 	// special treatment wikis
-	'enwiki' => 25, // T281896, T290927
+	'enwiki' => 100, // T281896, T290927, T302846
 
 	// large wikis with more than 500 registrations per months (T289786)
 	'arwiki' => 80,
 	'bnwiki' => 80,
 	'cswiki' => 80,
 	'dewiki' => 80,
-	// 'enwiki' => 80, // special treatment wiki
 	'eswiki' => 80,
 	'fawiki' => 80,
 	'ptwiki' => 80,
@@ -27279,7 +27278,7 @@ function wmfGetVariantSettings() {
 
 'wgGEMentorshipNewAccountEnablePercentage' => [
 	'default' => 100,
-	'enwiki' => 20, // T290927
+	'enwiki' => 10, // T290927
 ],
 
 'wgGEHomepageDefaultVariant' => [
