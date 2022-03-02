@@ -162,6 +162,12 @@ function wmfGetLabsOverrideSettings() {
 			'+group2' => [
 
 			],
+			'+enwiki' => [
+				'mediawiki.ipinfo_interaction' => [
+					'schema_title' => 'analytics/mediawiki/ipinfo_interaction',
+					'destination_event_service' => 'eventgate-analytics-external',
+				]
+			],
 		],
 
 		// EventLogging will POST events to this URI.
