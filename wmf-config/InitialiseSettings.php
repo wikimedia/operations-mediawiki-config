@@ -28243,12 +28243,8 @@ function wmfGetVariantSettings() {
 
 // Temporary feature flag for the CodeMirror accessibility colors see T271895
 'wgCodeMirrorAccessibilityColors' => [
-	'default' => false,
-	'cawiki' => true, // T276346
-	'dewiki' => true, // T276346
-	'trwiki' => true, // T276346
-	'group0' => true, // T276346
-	'wikitech' => true, // T276346
+	'default' => true,
+	'enwiki' => false, // will follow later T280024
 ],
 
 'wgCodeMirrorLineNumberingNamespaces' => [
