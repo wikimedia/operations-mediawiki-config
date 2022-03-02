@@ -35,6 +35,7 @@
 #
 
 use MediaWiki\Auth\AuthenticationResponse;
+use MediaWiki\Extension\ApiFeatureUsage\ApiFeatureUsageQueryEngineElastica;
 use MediaWiki\Extension\CentralAuth\User\CentralAuthUser;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
@@ -1999,7 +2000,7 @@ if ( $wmgLocalAuthLoginOnly && $wmgUseCentralAuth ) {
 if ( $wmgUseApiFeatureUsage ) {
 	wfLoadExtension( 'ApiFeatureUsage' );
 	$wgApiFeatureUsageQueryEngineConf = [
-		'class' => 'ApiFeatureUsageQueryEngineElastica',
+		'class' => ApiFeatureUsageQueryEngineElastica::class,
 		'serverList' => $wmfLocalServices['search-chi'],
 	];
 }
