@@ -17836,19 +17836,8 @@ function wmfGetVariantSettings() {
 ],
 
 'wgVisualEditorTransclusionDialogBackButton' => [
-	'default' => false,
-	'group0' => true, // T284553
-	'dewiki' => true, // T284553
-	'elwiki' => true, // T284553
-	'enwikivoyage' => true, // T284553
-	'fiwiki' => true, // T284553
-	'frwiki' => true, // T284553
-	'hewiki' => true, // T284553
-	'huwiki' => true, // T284553
-	'mswiki' => true, // T284553
-	'nawiktionary' => true, // T284553
-	'trwiki' => true, // T284553
-	'twwiki' => true, // T284553
+	'default' => true,
+	'enwiki' => false, // will follow later T286990
 ],
 
 // Temporary feature flags for changes to the descriptions in the transclusion
