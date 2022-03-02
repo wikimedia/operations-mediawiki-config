@@ -28237,12 +28237,8 @@ function wmfGetVariantSettings() {
 
 // Temporary feature flag for the CodeMirror bracket matching see T261857
 'wgCodeMirrorEnableBracketMatching' => [
-	'default' => false,
-	'cawiki' => true, // T270238
-	'dewiki' => true, // T270238
-	'trwiki' => true, // T270238
-	'group0' => true, // T273591
-	'wikitech' => true, // T273591
+	'default' => true,
+	'enwiki' => false, // will follow later T280023
 ],
 
 // Temporary feature flag for the CodeMirror accessibility colors see T271895
