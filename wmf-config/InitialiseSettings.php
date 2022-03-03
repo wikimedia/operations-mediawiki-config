@@ -3458,10 +3458,6 @@ function wmfGetVariantSettings() {
 		'بحث ویکی پدیا' => NS_PROJECT_TALK,
 		'بحث ويکي پديا' => NS_PROJECT_TALK,
 		'بحث ويکي‌پديا' => NS_PROJECT_TALK,
-		'Book' => 102,
-		'Book_talk' => 103,
-		'كتاب' => 102,
-		'بحث_كتاب' => 103,
 		'پیشنویس' => 118, // T92760
 		'بحث_پیشنویس' => 119, // T92760
 		'پيشنويس' => 118, // T92760
@@ -5966,8 +5962,8 @@ function wmfGetVariantSettings() {
 	'fawiki' => [
 		100 => 'درگاه',
 		101 => 'بحث_درگاه',
-		102 => 'کتاب',
-		103 => 'بحث_کتاب',
+		# 102 => 'کتاب', // Book - T302957
+		# 103 => 'بحث_کتاب', // Book talk - T302957
 		118 => 'پیش‌نویس', // T92760
 		119 => 'بحث_پیش‌نویس', // T92760
 	],
@@ -14556,8 +14552,6 @@ function wmfGetVariantSettings() {
 	'enwiki' => [
 		NS_USER => 'noindex,follow', // T104797
 		NS_USER_TALK => 'noindex,follow',
-		108 => 'noindex,nofollow', // T283522, Book
-		109 => 'noindex,nofollow', // T283522, Book talk
 		118 => 'noindex,nofollow', // draft
 		119 => 'noindex,nofollow', // draft talk
 	],
