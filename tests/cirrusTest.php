@@ -2,7 +2,6 @@
 
 class CirrusTest extends WgConfTestCase {
 	public function testClusterConfigurationForProdTestwiki() {
-		$wmfDatacenter = 'unittest';
 		$config = $this->loadCirrusConfig( 'production', 'testwiki', 'wiki' );
 		$this->assertArrayNotHasKey( 'wgCirrusSearchServers', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchClusters', $config );
