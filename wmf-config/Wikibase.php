@@ -346,6 +346,11 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['enableImplicitDescriptionUsage'] = true;
 
 	$wgWBClientSettings['linkItemTags'] = [ 'client-linkitem-change' ];
+
+	// Temporary
+	if ( isset( $wmgWikibaseClientUnconnectedPageMigrationStage ) ) {
+		$wgWBClientSettings['tmpUnconnectedPagePagePropMigrationStage'] = $wmgWikibaseClientUnconnectedPageMigrationStage;
+	}
 }
 
 unset( $wmgWBSharedCacheKey );

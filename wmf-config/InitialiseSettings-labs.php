@@ -2124,6 +2124,11 @@ function wmfGetLabsOverrideSettings() {
 		'wmgWikibaseTmpSerializeEmptyListsAsObjects' => [
 			'default' => true,
 		],
+
+		'wmgWikibaseClientUnconnectedPageMigrationStage' => [
+			'default' => MIGRATION_WRITE_BOTH,
+		],
+
 		'wmgUseChessBrowser' => [
 			'default' => true,
 		],
