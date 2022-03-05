@@ -23,7 +23,7 @@ $dbctlJsonByDC = [
 	'codfw' => 'codfw.json',
 	'eqiad' => 'eqiad.json',
 ];
-$wmfDatacenter = 'eqiad';
+$wmgDatacenter = 'eqiad';
 
 if ( !is_dir( $dbConfigEtcdPrefix ) ) {
 	// Local testing and debugging fallback
@@ -32,14 +32,14 @@ if ( !is_dir( $dbConfigEtcdPrefix ) ) {
 		'tmsx' => 'tmsx.json',
 		'tmsy' => 'tmsy.json',
 	];
-	$wmfDatacenter = 'tmsx';
+	$wmgDatacenter = 'tmsx';
 }
 
 if ( isset( $_GET['dc'] ) && isset( $dbctlJsonByDC[$_GET['dc']] ) ) {
-	$wmfDatacenter = $_GET['dc'];
+	$wmgDatacenter = $_GET['dc'];
 }
 
-$dbConfigEtcdJsonFilename = $dbctlJsonByDC[$wmfDatacenter];
+$dbConfigEtcdJsonFilename = $dbctlJsonByDC[$wmgDatacenter];
 
 // Mock vars needed by db-*.php (normally set by CommonSettings.php)
 $wgDBname = null;

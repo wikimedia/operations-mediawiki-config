@@ -21,7 +21,7 @@ if ( $wmfUsingKubernetes ) {
 } else {
 	$nutcrackerServersByDc = [ 'eqiad' => '/var/run/nutcracker/redis_eqiad.sock', 'codfw' => '/var/run/nutcracker/redis_codfw.sock' ];
 }
-foreach ( $wmfDatacenters as $dc ) {
+foreach ( $wmgDatacenters as $dc ) {
 	$wgObjectCaches["redis_{$dc}"] = [
 		'class'       => 'RedisBagOStuff',
 		'servers'     => [ $nutcrackerServersByDc[$dc] ],
@@ -32,4 +32,4 @@ foreach ( $wmfDatacenters as $dc ) {
 }
 
 $wgObjectCaches['redis_master'] = $wgObjectCaches["redis_{$wmgMasterDatacenter}"];
-$wgObjectCaches['redis_local'] = $wgObjectCaches["redis_{$wmfDatacenter}"];
+$wgObjectCaches['redis_local'] = $wgObjectCaches["redis_{$wmgDatacenter}"];

@@ -24412,7 +24412,7 @@ function wmfGetVariantSettings() {
 // $wgTranslateTranslationDefaultService in CommonSettings.php if you plan to
 // bring down a specific cluster.
 'wgCirrusSearchDefaultCluster' => [
-	'default' => $GLOBALS['wmfDatacenter'],
+	'default' => $GLOBALS['wmgDatacenter'],
 ],
 // Kept for BC with SRE tools that checks siteinfo (see APIQuerySiteInfoGeneralInfo in CommonSettings.php)
 'wmgCirrusSearchDefaultCluster' => [

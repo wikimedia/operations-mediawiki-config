@@ -139,7 +139,7 @@ $wmfUsingKubernetes = strpos( $wmgServerGroup, 'kube-' ) === 0;
 $wmfAllServices = ServiceConfig::getInstance()->getAllServices();
 
 # Shorthand when we have no master-replica situation to keep into account
-$wmfLocalServices = $wmfAllServices[$wmfDatacenter];
+$wmfLocalServices = $wmfAllServices[$wmgDatacenter];
 
 # The list of datacenters known to this realm
 $wmfDatacenters = $wmgDatacenters = ServiceConfig::getInstance()->getDatacenters();
@@ -170,14 +170,14 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 	$etcdConfig = wmfSetupEtcd( $wmfLocalServices['etcd'] );
 
 	$wmgEtcdLastModifiedIndex = $etcdConfig->getModifiedIndex();
-	$wgReadOnly = $etcdConfig->get( "$wmfDatacenter/ReadOnly" );
+	$wgReadOnly = $etcdConfig->get( "$wmgDatacenter/ReadOnly" );
 	$wmgMasterDatacenter = $etcdConfig->get( 'common/WMFMasterDatacenter' );
 	$wmgMasterServices = $wmfAllServices[$wmgMasterDatacenter];
 
 	// Database load balancer config (sectionLoads, groupLoadsBySection, …)
 	// This is later merged into $wgLBFactoryConf by wmfEtcdApplyDBConfig().
 	// See also <https://wikitech.wikimedia.org/wiki/Dbctl>
-	$wmgDbconfigFromEtcd = $etcdConfig->get( "$wmfDatacenter/dbconfig" );
+	$wmgDbconfigFromEtcd = $etcdConfig->get( "$wmgDatacenter/dbconfig" );
 
 	unset( $etcdConfig );
 }
@@ -3018,8 +3018,8 @@ if ( $wmgUseTranslate ) {
 	$wgTranslateTranslationServices = [];
 	if ( $wmgUseTranslationMemory ) {
 		// Switch to 'eqiad' or 'codfw' if you plan to bring down
-		// the elastic cluster equals to $wmfDatacenter
-		$wgTranslateTranslationDefaultService = $wmfDatacenter;
+		// the elastic cluster equals to $wmgDatacenter
+		$wgTranslateTranslationDefaultService = $wmgDatacenter;
 
 		// If the downtime is long (> 10mins) consider disabling
 		// mirroring in this var to avoid logspam about ttm updates

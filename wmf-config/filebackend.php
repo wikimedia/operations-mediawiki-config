@@ -40,7 +40,7 @@ if ( $wmgRealm === 'labs' ) {
 }
 
 /* DC-specific Swift backend config */
-foreach ( $wmfDatacenters as $specificDC ) {
+foreach ( $wmgDatacenters as $specificDC ) {
 	$wgFileBackends[] = [ // backend config for wiki's local repo
 		'class'              => 'SwiftFileBackend',
 		'name'               => "local-swift-{$specificDC}",
@@ -66,7 +66,7 @@ foreach ( $wmfDatacenters as $specificDC ) {
 		'parallelize'        => 'implicit',
 		'cacheAuthInfo'      => true,
 		// When used by FileBackendMultiWrite, read from this cluster if it's the local one
-		'readAffinity'       => ( $specificDC === $wmfDatacenter ),
+		'readAffinity'       => ( $specificDC === $wmgDatacenter ),
 		'readUsers'           => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
 		'writeUsers'          => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
 		'secureReadUsers'     => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ],
@@ -97,7 +97,7 @@ foreach ( $wmfDatacenters as $specificDC ) {
 		'parallelize'        => 'implicit',
 		'cacheAuthInfo'      => true,
 		// When used by FileBackendMultiWrite, read from this cluster if it's the local one
-		'readAffinity'       => ( $specificDC === $wmfDatacenter ),
+		'readAffinity'       => ( $specificDC === $wmgDatacenter ),
 		'readUsers'           => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
 		'writeUsers'          => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
 		'secureReadUsers'     => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ],
@@ -119,7 +119,7 @@ foreach ( $wmfDatacenters as $specificDC ) {
 		'parallelize'        => 'implicit',
 		'cacheAuthInfo'      => true,
 		// When used by FileBackendMultiWrite, read from this cluster if it's the local one
-		'readAffinity'       => ( $specificDC === $wmfDatacenter ),
+		'readAffinity'       => ( $specificDC === $wmgDatacenter ),
 		'readUsers'           => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
 		'writeUsers'          => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
 		'secureReadUsers'     => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ],
@@ -140,7 +140,7 @@ foreach ( $wmfDatacenters as $specificDC ) {
 		'parallelize'        => 'implicit',
 		'cacheAuthInfo'      => true,
 		// When used by FileBackendMultiWrite, read from this cluster if it's the local one
-		'readAffinity'       => ( $specificDC === $wmfDatacenter ),
+		'readAffinity'       => ( $specificDC === $wmgDatacenter ),
 		'readUsers'           => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
 		'writeUsers'          => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
 		'secureReadUsers'     => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ],
@@ -202,7 +202,7 @@ $sharedTestwikiMultiWriteFileBackend = [
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 ];
 
-if ( in_array( 'codfw', $wmfDatacenters ) ) {
+if ( in_array( 'codfw', $wmgDatacenters ) ) {
 	$localMultiWriteFileBackend['backends'][] = [ 'template' => 'local-swift-codfw' ];
 	$sharedMultiwriteFileBackend['backends'][] = [ 'template' => 'shared-swift-codfw' ];
 	$globalMultiWriteFileBackend['backends'][] = [ 'template' => 'global-swift-codfw' ];
@@ -245,8 +245,8 @@ $wgLocalFileRepo = [
 	'deletedHashLevels' => 3,
 	'abbrvThreshold'    => 160,
 	'isPrivate'         => $wmgPrivateWiki,
-	'thumbProxyUrl'     => $wmfSwiftConfig[$wmfDatacenter]['thumborUrl'] . '/' . $site . '/' . $lang . '/thumb/',
-	'thumbProxySecret'  => $wmfSwiftConfig[$wmfDatacenter]['thumborSecret'],
+	'thumbProxyUrl'     => $wmfSwiftConfig[$wmgDatacenter]['thumborUrl'] . '/' . $site . '/' . $lang . '/thumb/',
+	'thumbProxySecret'  => $wmfSwiftConfig[$wmgDatacenter]['thumborSecret'],
 	'zones'             => $wmgPrivateWiki
 		? [
 			'thumb' => [ 'url' => "$wgScriptPath/thumb_handler.php" ] ]

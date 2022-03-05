@@ -8,9 +8,9 @@ require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/../src/defines.php';
 require_once __DIR__ . '/../wmf-config/InitialiseSettings.php';
 
-global $wmgRealm, $wmfDatacenter;
+global $wmgRealm, $wmgDatacenter;
 $wmgRealm = 'production';
-$wmfDatacenter = 'eqiad';
+$wmgDatacenter = 'eqiad';
 
 $config = wmfGetVariantSettings();
 

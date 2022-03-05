@@ -8,7 +8,7 @@
 #
 # This is loaded very early. Only one set of globals should be
 # assumed here:
-# - $wmgRealm, $wmfDatacenter (from multiversion/MWRealm)
+# - $wmgRealm, $wmgDatacenter (from multiversion/MWRealm)
 #
 # Effective load order:
 # - multiversion
