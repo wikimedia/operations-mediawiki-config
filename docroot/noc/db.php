@@ -48,8 +48,6 @@ $wgDBpassword = null;
 $wgDebugDumpSql = false;
 $wgSecretKey = null;
 $wmgMasterDatacenter = null;
-// Write to wmf* constant for backwards-compatibility - T45956
-$wmfMasterDatacenter = $wmgMasterDatacenter;
 
 // Load the actual db vars
 require_once __DIR__ . '/../../wmf-config/db-production.php';

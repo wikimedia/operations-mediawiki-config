@@ -51,4 +51,4 @@ $wmfAllServices['unittest']['redis_lock'] = [
 
 # Make sure direct references to our datacenters work
 $wmfLocalServices = $wmfAllServices['eqiad'] = $wmfAllServices['codfw'] = $wmfAllServices['unittest'];
-$wmfMasterServices = $wmfLocalServices;
+$wmgMasterServices = $wmfLocalServices;

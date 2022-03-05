@@ -182,12 +182,6 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 	unset( $etcdConfig );
 }
 
-// Write to wmf* constants for backwards-compatibility - T45956
-$wmfEtcdLastModifiedIndex = $wmgEtcdLastModifiedIndex;
-$wmfMasterDatacenter = $wmgMasterDatacenter;
-$wmfMasterServices = $wmgMasterServices;
-$wmfDbconfigFromEtcd = $wmgDbconfigFromEtcd;
-
 $wmfUdp2logDest = $wmfLocalServices['udp2log'];
 if ( $wgDBname === 'testwiki' || $wgDBname === 'test2wiki' ) {
 	$wgDebugLogFile = "udp://{$wmfUdp2logDest}/testwiki";
