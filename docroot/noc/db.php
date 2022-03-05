@@ -59,11 +59,11 @@ require_once __DIR__ . '/../../wmf-config/db-production.php';
 //
 // On mwmaint hosts, these JSON files are produced by a 'fetch_dbconfig' script,
 // run via systemd timer, defined in puppet.
-$wmfDbconfigFromEtcd = json_decode( file_get_contents( "$dbConfigEtcdPrefix/$dbConfigEtcdJsonFilename" ), true );
+$dbconfig = json_decode( file_get_contents( "$dbConfigEtcdPrefix/$dbConfigEtcdJsonFilename" ), true );
 global $wgLBFactoryConf;
-$wgLBFactoryConf['readOnlyBySection'] = $wmfDbconfigFromEtcd['readOnlyBySection'];
-$wgLBFactoryConf['groupLoadsBySection'] = $wmfDbconfigFromEtcd['groupLoadsBySection'];
-foreach ( $wmfDbconfigFromEtcd['sectionLoads'] as $section => $sectionLoads ) {
+$wgLBFactoryConf['readOnlyBySection'] = $dbconfig['readOnlyBySection'];
+$wgLBFactoryConf['groupLoadsBySection'] = $dbconfig['groupLoadsBySection'];
+foreach ( $dbconfig['sectionLoads'] as $section => $sectionLoads ) {
 	$wgLBFactoryConf['sectionLoads'][$section] = array_merge( $sectionLoads[0], $sectionLoads[1] );
 }
 

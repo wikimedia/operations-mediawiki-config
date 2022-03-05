@@ -52,14 +52,14 @@ function wmfSetupEtcd( $etcdHost ) {
  * It overwrites a few sections of $wgLBFactoryConf with data from etcd.
  */
 function wmfEtcdApplyDBConfig() {
-	global $wgLBFactoryConf, $wmfDbconfigFromEtcd, $wmgRealm;
+	global $wgLBFactoryConf, $wmgDbconfigFromEtcd, $wmgRealm;
 	// In labs, the relevant key exists in etcd, but does not contain real data.
 	// Only do this in production.
 	if ( $wmgRealm === 'production' ) {
-		$wgLBFactoryConf['readOnlyBySection'] = $wmfDbconfigFromEtcd['readOnlyBySection'];
-		$wgLBFactoryConf['groupLoadsBySection'] = $wmfDbconfigFromEtcd['groupLoadsBySection'];
-		$wgLBFactoryConf['hostsByName'] = $wmfDbconfigFromEtcd['hostsByName'];
-		foreach ( $wmfDbconfigFromEtcd['sectionLoads'] as $section => $dbctlLoads ) {
+		$wgLBFactoryConf['readOnlyBySection'] = $wmgDbconfigFromEtcd['readOnlyBySection'];
+		$wgLBFactoryConf['groupLoadsBySection'] = $wmgDbconfigFromEtcd['groupLoadsBySection'];
+		$wgLBFactoryConf['hostsByName'] = $wmgDbconfigFromEtcd['hostsByName'];
+		foreach ( $wmgDbconfigFromEtcd['sectionLoads'] as $section => $dbctlLoads ) {
 			// For each section, MediaWiki treats the first host as the master.
 			// Since JSON dictionaries are unordered, dbctl stores an array of two host:load
 			// dictionaries, one containing the master and one containing all the replicas.
@@ -81,7 +81,7 @@ function wmfEtcdApplyDBConfig() {
 			'x1' => [ 'extension1' ],
 			'x2' => [ 'extension2' ],
 		];
-		foreach ( $wmfDbconfigFromEtcd['externalLoads'] as $dbctlCluster => $dbctlLoads ) {
+		foreach ( $wmgDbconfigFromEtcd['externalLoads'] as $dbctlCluster => $dbctlLoads ) {
 			// For each external cluster, MediaWiki treats the first host as the master.
 			// Since JSON dictionaries are unordered, dbctl stores an array of two host:load
 			// dictionaries, one containing the master and one containing all the replicas.
