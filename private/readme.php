@@ -96,9 +96,9 @@ $wmgCaptchaPassword = null;
 /**
  * @see wmf-config/filebackend.php
  */
-$wmfSwiftConfig = [];
-$wmfSwiftConfig['eqiad'] =
-$wmfSwiftConfig['codfw'] = [
+$wmgSwiftConfig = [];
+$wmgSwiftConfig['eqiad'] =
+$wmgSwiftConfig['codfw'] = [
 	'cirrusAuthUrl' => null,
 	'cirrusUser' => null,
 	'cirrusKey' => null,
@@ -110,6 +110,9 @@ $wmfSwiftConfig['codfw'] = [
 	'key' => null,
 	'tempUrlKey' => null,
 ];
+
+// Write to wmf* constant for backwards-compatibility - T45956
+$wmfSwiftConfig = $wmgSwiftConfig;
 
 /**
  * Credentials for RedisBagOStuff and RedisLockManager backends.
