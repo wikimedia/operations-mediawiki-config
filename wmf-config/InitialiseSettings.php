@@ -27163,6 +27163,10 @@ function wmfGetVariantSettings() {
 	'bnwiki' => true,
 	'cswiki' => true,
 	'eswiki' => true,
+	'fawiki' => true,
+	'frwiki' => true,
+	'ptwiki' => true,
+	'trwiki' => true,
 	'viwiki' => true,
 ],
 
@@ -27327,6 +27331,46 @@ function wmfGetVariantSettings() {
 		]
 	],
 	'eswiki' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+		'imagerecommendation' => [
+			'mobile' => 50,
+			'desktop' => 50
+		]
+	],
+	'fawiki' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+		'imagerecommendation' => [
+			'mobile' => 50,
+			'desktop' => 50
+		]
+	],
+	'frwiki' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+		'imagerecommendation' => [
+			'mobile' => 50,
+			'desktop' => 50
+		]
+	],
+	'ptwiki' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+		'imagerecommendation' => [
+			'mobile' => 50,
+			'desktop' => 50
+		]
+	],
+	'trwiki' => [
 		'control' => [
 			'mobile' => 50,
 			'desktop' => 50,
