@@ -485,7 +485,7 @@ return [
 	'enwikiquote' => '/static/images/project-logos/enwikiquote.png', // T171810
 	'eowikiquote' => '/static/images/project-logos/eowikiquote.png', // T45879
 	'eswikiquote' => '/static/images/project-logos/eswikiquote.png',
-	'etwikiquote' => '/static/images/project-logos/etwikiquote.png',
+	'etwikiquote' => '/static/images/project-logos/etwikiquote.png', // T302683
 	'fawikiquote' => '/static/images/project-logos/fawikiquote.png',
 	'guwikiquote' => '/static/images/project-logos/guwikiquote.png', // T121853
 	'hewikiquote' => '/static/images/project-logos/hewikiquote.png',
