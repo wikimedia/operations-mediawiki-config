@@ -9725,6 +9725,7 @@ function wmfGetVariantSettings() {
 			'move-categorypages' => true,
 			'delete-redirect' => true,
 		],
+		'autoconfirmed' => [ 'collectionsaveascommunitypage' => false ], // T303173
 	],
 	'+fawikibooks' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T111024
@@ -15898,6 +15899,7 @@ function wmfGetVariantSettings() {
 'wgCollectionDisableSidebarLink' => [
 	'default' => false,
 	'enwiki' => true, // T241683
+	'fawiki' => true, // T303173
 	'fiwiki' => true, // T257073
 	'enwikisource' => true, // T288021
 ],
