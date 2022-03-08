@@ -9665,33 +9665,34 @@ function wmfGetVariantSettings() {
 		],
 		'patroller' => [
 			'patrol' => true,
-			'move-categorypages' => true,
+			'move-categorypages' => true, // T67728
 			'unwatchedpages' => true, // T300126
-		], // T67728
+		],
 		'rollbacker' => [ 'rollback' => true ], // T25233
-		'autopatrolled' => [
-			'autopatrol' => true,
-			'move-categorypages' => true,
-		], // T31007, T67728, T144699
+		'autopatrolled' => [ // T144699
+			'autopatrol' => true, // T31007
+			'move-categorypages' => true, // T67728
+			'patrolmarks' => true, // T303269
+		],
 		'image-reviewer' => [
-			'movefile' => true,
-			'delete' => true,
-		], // T66532 and T73229
+			'movefile' => true, // T66532
+			'delete' => true, // T73229
+		],
 		'botadmin' => [
-			'block' => true,
-			'delete' => true,
-			'editprotected' => true,
-			'ipblock-exempt' => true,
-			'mergehistory' => true,
-			'protect' => true,
-			'undelete' => true,
+			'block' => true, // T71411
+			'delete' => true, // T71411
+			'editprotected' => true, // T71411
+			'ipblock-exempt' => true, // T71411
+			'mergehistory' => true, // T71411
+			'protect' => true, // T71411
+			'undelete' => true, // T71411
 			'extendedconfirmed' => true,
-			'deleterevision' => true,
-		], // T71411 and T277358
+			'deleterevision' => true, // T277358
+		],
 		'templateeditor' => [
-			'editprotected' => true,
-			'tboverride' => true,
-		], // T74146
+			'editprotected' => true, // T74146
+			'tboverride' => true, // T74146
+		],
 		'eliminator' => [
 			'block' => true, // T87558
 			'delete' => true, // T87558
@@ -9717,13 +9718,13 @@ function wmfGetVariantSettings() {
 		],
 		'sysop' => [ 'extendedconfirmed' => true, ],
 		'extendedconfirmed' => [ 'extendedconfirmed' => true, ], // T140839
-		'extendedmover' => [ // T299038
-			'suppressredirect' => true,
-			'move-subpages' => true,
-			'move' => true,
-			'tboverride' => true,
-			'move-categorypages' => true,
-			'delete-redirect' => true,
+		'extendedmover' => [
+			'suppressredirect' => true, // T299038
+			'move-subpages' => true, // T299038
+			'move' => true, // T299038
+			'tboverride' => true, // T299038
+			'move-categorypages' => true, // T299038
+			'delete-redirect' => true, // T299038
 		],
 		'autoconfirmed' => [ 'collectionsaveascommunitypage' => false ], // T303173
 	],
