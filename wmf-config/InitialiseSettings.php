@@ -20980,14 +20980,18 @@ function wmfGetVariantSettings() {
 	'bnwiki' => true, // T271397
 	'hawiki' => true, // T290175
 	'igwiki' => true, // T290175
+	'jvwiki' => true, // T298237
 	'kuwiki' => true, // T290238
 	'lgwiki' => true, // T301443
 	'mlwiki' => true, // T285842
+	'mnwiki' => true, // T298237
 	'mswiki' => true, // T285842
 	'ocwiki' => true, // T301443
 	'sqwiki' => true, // T285842
 	'tawiki' => true, // T285842
+	'tewiki' => true, // T298237
 	'thwiki' => true, // T290175
+	'tlwiki' => true, // T298237
 	'yowiki' => true, // T290175
 ],
 
