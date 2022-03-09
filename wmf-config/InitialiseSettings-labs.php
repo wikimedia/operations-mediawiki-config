@@ -197,6 +197,12 @@ function wmfGetLabsOverrideSettings() {
 			],
 		],
 
+		'wgEventLoggingStreamNames' => [
+			'+enwiki' => [
+				'mediawiki.ipinfo_interaction',
+			],
+		],
+
 		// Log channels for beta cluster
 		'wmgMonologChannels' => [
 			'default' => [
