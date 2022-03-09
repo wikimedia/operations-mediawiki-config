@@ -15176,6 +15176,8 @@ function wmfGetVariantSettings() {
 	'eswikiversity' => true,
 	'frwikiversity' => true,
 	'ptwikiversity' => true,
+
+	'nowikimedia' => true,
 ],
 
 'wgDLPQueryCacheTime' => [
