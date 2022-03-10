@@ -4200,7 +4200,7 @@ if ( $wmgUseGrowthExperiments ) {
 		$wgGEHomepageNewAccountEnablePercentage = 0;
 	}
 
-	// POC API, allowed until 2022-03-31. See T294362.
+	// Proof-of-concept API, allowed until 2022-06-30. See T294362#7768458.
 	$wgGEImageRecommendationServiceUrl = 'https://image-suggestion-api.wmcloud.org';
 	if ( $wmgRealm !== 'labs' ) {
 		$wgGEImageRecommendationServiceHttpProxy = $wmfLocalServices['urldownloader'];
