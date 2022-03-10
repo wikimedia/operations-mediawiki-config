@@ -26632,10 +26632,6 @@ function wmfGetVariantSettings() {
 	*/
 ],
 
-'wgWMESearchRelevancePages' => [
-	'default' => [],
-],
-
 'wmgUseDynamicSidebar' => [
 	'default' => false,
 	'labswiki' => true,
