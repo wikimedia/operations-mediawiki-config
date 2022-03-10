@@ -120,7 +120,6 @@ class CirrusTest extends WgConfTestCase {
 	}
 
 	private function loadCirrusConfig( $wmgRealm, $wgDBname, $dbSuffix ) {
-		$wmfConfigDir = __DIR__ . "/../wmf-config";
 		require __DIR__ . '/../private/readme.php';
 		require __DIR__ . '/data/TestServices.php';
 		$wgConf = $this->loadWgConf( $wmgRealm );
@@ -152,7 +151,7 @@ class CirrusTest extends WgConfTestCase {
 		// not used for anything, just to prevent undefined variable
 		$IP = '/dev/null';
 
-		require "{$wmfConfigDir}/CirrusSearch-common.php";
+		require __DIR__ . '/../wmf-config/CirrusSearch-common.php';
 
 		$ret = compact( array_keys( get_defined_vars() ) );
 		return $ret;
