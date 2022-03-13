@@ -17040,6 +17040,13 @@ function wmfGetVariantSettings() {
 'wmgTmhWebPlayer' => [
 	'default' => 'mwembed',
 	'group0' => 'videojs',
+	'dewikivoyage' => 'videojs',
+	'euwiki' => 'videojs',
+	'frwiktionary' => 'videojs',
+	'hewiki' => 'videojs',
+	'ptwikiversity' => 'videojs',
+	'srwiki' => 'videojs',
+	'viwikibooks' => 'videojs',
 ],
 
 // Enable the Beta Feature for trying out the new video player (see also the BF whitelist)
