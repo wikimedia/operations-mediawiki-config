@@ -430,10 +430,11 @@ function wmfGetVariantSettings() {
 	'kowiktionary' => 'Asia/Seoul',
 	'kshwiki' => 'Europe/Berlin',
 	'lezwiki' => 'Europe/Moscow',
-	'liwiki' => 'Europe/Berlin',
-	'liwikinews' => 'Europe/Amsterdam',
 	'lijwiki' => 'Europe/Rome', // T263123
 	'lijwikisource' => 'Europe/Rome',
+	'liwiki' => 'Europe/Berlin',
+	'liwikinews' => 'Europe/Amsterdam',
+	'liwiktionary' => 'Europe/Amsterdam', // T303734
 	'lldwiki' => 'Europe/Rome', // T259432
 	'ltgwiki' => 'Europe/Riga',
 	'ltwiki' => 'Europe/Vilnius',
