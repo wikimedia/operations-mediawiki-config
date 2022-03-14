@@ -9,6 +9,8 @@ You need to install:
 * [pngquant](https://github.com/kornelski/pngquant) (usually packaged)
 * [zopflipng](https://github.com/google/zopfli) (usually packaged)
 
+Note that you need the pngquant and zopflipng OS packages, not the Python packages.
+
 ### Adding a new logo
 Add or update the existing section in config.yaml for that wiki. Ensure a
 `commons` setting is present that points to the SVG on Wikimedia Commons. The
