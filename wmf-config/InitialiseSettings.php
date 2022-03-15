@@ -20871,6 +20871,9 @@ function wmfGetVariantSettings() {
 	'enwiki' => [
 		'userGroups' => [ 'extendedconfirmed', 'sysop' ]
 	],
+	'viwiki' => [
+		'userGroups' => [ 'extendedconfirmed', 'sysop' ]
+	],
 ],
 
 // CX Campaigns
