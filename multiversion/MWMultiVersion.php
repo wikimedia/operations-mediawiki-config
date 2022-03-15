@@ -302,6 +302,22 @@ class MWMultiVersion {
 			self::error( "Usage: mwscript scriptName.php --wiki=dbname\n" );
 		}
 
+		if ( isset( $argv[2] ) && $argv[2] === '--force-version' ) {
+			if ( !isset( $argv[3] ) ) {
+				self::error( "--force-version must be followed by a version number" );
+			}
+			$this->version = "php-" . $argv[3];
+			$this->versionLoaded = true;
+
+			# Delete the flag and its parameter so it won't be passed on to the
+			# maintenance script.
+			unset( $argv[3] );
+			unset( $argv[2] );
+
+			# Reindex
+			$argv = array_values( $argv );
+		}
+
 		$this->db = $dbname;
 	}
 
