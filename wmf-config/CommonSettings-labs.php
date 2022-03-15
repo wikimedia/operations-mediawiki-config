@@ -387,37 +387,6 @@ $wgHooks['ImportSources'][] = 'wmfImportSources';
 
 wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
 
-// Temporary feature flag for the CodeMirror bracket matching see T261857
-$wgCodeMirrorEnableBracketMatching = true;
-
-// Temporary feature flag for the CodeMirror accessibility color schema see T271895
-$wgCodeMirrorAccessibilityColors = true;
-
-// Temporarily enable line numbering on beta, see T267911.
-$wgCodeMirrorLineNumberingNamespaces = null;
-
-// Temporary feature flags for the suggested values feature, see T271825
-$wgTemplateDataSuggestedValuesEditor = true;
-$wgVisualEditorTransclusionDialogSuggestedValues = true;
-
-// Temporary feature flags for changes to the descriptions in the transclusion dialog, see T271800
-$wgVisualEditorTransclusionDialogInlineDescriptions = true;
-
-// Temporary flag to enable the back button in the transclusion dialog, see T272354
-$wgVisualEditorTransclusionDialogBackButton = true;
-
-// Temporary feature flag for the new template dialog sidebar design, see T286765
-$wgVisualEditorTransclusionDialogNewSidebar = true;
-
-// Temporary feature flag for the improved search features in the VE template dialog, see T271802
-$wgVisualEditorTemplateSearchImprovements = true;
-
-// Temporary feature flag for the improved search features in the TemplateWizard dialog, see T271802
-$wgTemplateWizardTemplateSearchImprovements = true;
-
-// Use ReferencePreviews as full default feature on the beta cluster
-$wgPopupsReferencePreviewsBetaFeature = false;
-
 // Enable ChessBrowser extension, see T244075
 if ( $wmgUseChessBrowser ) {
 	wfLoadExtension( 'ChessBrowser' );
