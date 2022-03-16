@@ -27466,6 +27466,13 @@ function wmfGetVariantSettings() {
 	'ptwiki' => '/^growth-advancement-brazil-2021$/'
 ],
 
+// Temporary, can be removed when T303240 is done.
+'wgGEWelcomeSurveyShowMailingListQuestion' => [
+	'default' => false,
+	// Needs approval in T303240 first.
+	'eswiki' => false,
+],
+
 'wgGECampaigns' => [
 	'default' => [],
 	'eswiki' => [

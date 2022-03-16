@@ -1282,6 +1282,11 @@ function wmfGetLabsOverrideSettings() {
 				'control' => 100,
 			],
 		],
+		// Temporary, can be removed after T303240 is done.
+		'wgGEWelcomeSurveyShowMailingListQuestion' => [
+			'default' => false,
+			'eswiki' => true,
+		],
 		'wgGEHomepageNewAccountVariantsByPlatform' => [
 			'default' => [
 				'control' => [
