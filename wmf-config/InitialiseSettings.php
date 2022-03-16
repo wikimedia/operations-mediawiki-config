@@ -17842,7 +17842,6 @@ function wmfGetVariantSettings() {
 
 'wgVisualEditorTransclusionDialogBackButton' => [
 	'default' => true,
-	'enwiki' => false, // will follow later T286990
 ],
 
 // Temporary feature flag for changes to the transclusion dialog sidebar
@@ -17868,7 +17867,6 @@ function wmfGetVariantSettings() {
 // dialog, see T271800
 'wgVisualEditorTransclusionDialogInlineDescriptions' => [
 	'default' => true,
-	'enwiki' => false, // will follow later T286991
 ],
 
 // --------------- VisualEditor end ---------------
@@ -25418,7 +25416,7 @@ function wmfGetVariantSettings() {
 
 'wmgTemplateSearchImprovements' => [
 	'default' => true,
-	'enwiki' => false, // will follow later T286990
+	'enwiki' => false, // will follow later T303802
 ],
 
 'wmgUseCharInsert' => [
@@ -28250,13 +28248,11 @@ function wmfGetVariantSettings() {
 // Temporary feature flag for the CodeMirror bracket matching see T261857
 'wgCodeMirrorEnableBracketMatching' => [
 	'default' => true,
-	'enwiki' => false, // will follow later T280023
 ],
 
 // Temporary feature flag for the CodeMirror accessibility colors see T271895
 'wgCodeMirrorAccessibilityColors' => [
 	'default' => true,
-	'enwiki' => false, // will follow later T280024
 ],
 
 'wgCodeMirrorLineNumberingNamespaces' => [
