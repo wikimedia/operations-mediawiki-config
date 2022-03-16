@@ -26655,6 +26655,10 @@ function wmfGetVariantSettings() {
 	'default' => false,
 ],
 
+'wgWMESearchRelevancePages' => [
+	'default' => [],
+],
+
 'wgShortPagesNamespaceExclusions' => [
 	'default' => [],
 	// T170687
