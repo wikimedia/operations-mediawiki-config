@@ -142,7 +142,7 @@ $wmfAllServices = ServiceConfig::getInstance()->getAllServices();
 $wmfLocalServices = $wmfAllServices[$wmgDatacenter];
 
 # The list of datacenters known to this realm
-$wmfDatacenters = $wmgDatacenters = ServiceConfig::getInstance()->getDatacenters();
+$wmgDatacenters = ServiceConfig::getInstance()->getDatacenters();
 
 if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 	// Prepare just enough configuration to allow
