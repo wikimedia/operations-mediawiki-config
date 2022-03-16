@@ -26653,8 +26653,6 @@ function wmfGetVariantSettings() {
 
 'wmgUseDynamicSidebar' => [
 	'default' => false,
-	'labswiki' => true,
-	'labtestwiki' => true,
 ],
 
 'wgShortPagesNamespaceExclusions' => [
