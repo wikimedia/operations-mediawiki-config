@@ -4155,10 +4155,6 @@ if ( $wgDBname === 'foundationwiki' ) {
 	};
 }
 
-if ( $wmgUseDynamicSidebar ) {
-	wfLoadExtension( 'DynamicSidebar' );
-}
-
 if ( $wmgUse3d ) {
 	wfLoadExtension( '3D' );
 	$wgTrustedMediaFormats[] = 'application/sla';
