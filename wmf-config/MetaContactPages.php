@@ -111,6 +111,11 @@ $wgContactConfig['affcomchapthorg'] = [
 			'type' => 'text',
 			'required' => true
 		],
+		'ApplicationSubPage' => [
+			'label-message' => 'contactpage-affcom-chapter-thorg-application-subpage-label',
+			'type' => 'text',
+			'required' => true
+		],
 		'OrgBylaws' => [
 			'label-message' => 'contactpage-affcom-chapter-thorg-bylaws-label',
 			'type' => 'text'
