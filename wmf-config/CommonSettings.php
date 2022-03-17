@@ -1371,6 +1371,7 @@ if ( $wmgUseUrlShortener ) {
 		'(.*\.)?wikivoyage\.org',
 		'(.*\.)?wikimedia\.org',
 		'(.*\.)?wikidata\.org',
+		'(.*\.)?wikifunctions\.org',
 		'(.*\.)?mediawiki\.org',
 	];
 	$wgUrlShortenerApprovedDomains = [
@@ -1384,6 +1385,7 @@ if ( $wmgUseUrlShortener ) {
 		'*.wikivoyage.org',
 		'*.wikimedia.org',
 		'*.wikidata.org',
+		'*.wikifunctions.org',
 		'*.mediawiki.org',
 	];
 	$wgUrlShortenerEnableSidebar = false;
