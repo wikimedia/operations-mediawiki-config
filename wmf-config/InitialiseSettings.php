@@ -16636,6 +16636,7 @@ function wmfGetVariantSettings() {
 		'www.gbols.smns-bw.org', // Bavarian Natural History Collections - T300842
 		'prd-cds2-image-store-ypm.s3.amazonaws.com', // Yale University and affiliated musea - T299835
 		'oxalis.br.fgov.be', // Meise botanical garden - T300848
+		'pictures.snsb.info', // Staatliche Naturwissenschaftliche Sammlungen Bayerns - T303929
 	],
 	'+wikisource' => [
 		'archive.org', '*.archive.org',
