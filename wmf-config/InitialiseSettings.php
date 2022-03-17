@@ -27164,7 +27164,6 @@ function wmfGetVariantSettings() {
 	'eswiki' => true,
 	'fawiki' => true,
 	'frwiki' => true,
-	'ptwiki' => true,
 	'trwiki' => true,
 	'viwiki' => true,
 ],
@@ -27350,16 +27349,6 @@ function wmfGetVariantSettings() {
 		]
 	],
 	'frwiki' => [
-		'control' => [
-			'mobile' => 50,
-			'desktop' => 50,
-		],
-		'imagerecommendation' => [
-			'mobile' => 50,
-			'desktop' => 50
-		]
-	],
-	'ptwiki' => [
 		'control' => [
 			'mobile' => 50,
 			'desktop' => 50,
