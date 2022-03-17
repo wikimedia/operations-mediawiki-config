@@ -69,6 +69,7 @@ function wmfGetLabsOverrideSettings() {
 		'wgLanguageCode' => [
 			'deploymentwiki' => 'en',
 			'votewiki' => 'en', // T295242
+			'wikifunctionswiki' => 'en', // Temporary until wikifunctions.org is a real wiki and so in special.dblist
 		],
 
 		'wgSitename' => [
