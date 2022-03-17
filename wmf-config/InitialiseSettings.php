@@ -528,6 +528,7 @@ function wmfGetVariantSettings() {
 	'shwiki' => 'Europe/Berlin',
 	'shiwiki' => 'Africa/Casablanca',
 	'shnwiktionary' => 'Asia/Yangon',
+	'shnwikivoyage' => 'Asia/Yangon',
 	'shywiktionary' => 'Africa/Algiers',
 	'slwiki' => 'Europe/Ljubljana',
 	'slwikibooks' => 'Europe/Ljubljana', // T142701
@@ -2191,6 +2192,7 @@ function wmfGetVariantSettings() {
 	'sdwiki' => 'وڪيپيڊيا',
 	'searchcomwiki' => 'Search Committee',
 	'shnwiki' => 'ဝီႇၶီႇၽီးတီးယႃး',
+	'shnwikivoyage' => 'ဝီႇၶီႇဝွႆးဢဵတ်ႇꩡ်',
 	'shnwiktionary' => 'ဝိၵ်ႇသျိၼ်ႇၼရီႇ',
 	'shywiktionary' => 'Wikasegzawal',
 	'siwiki' => 'විකිපීඩියා',
@@ -2741,6 +2743,7 @@ function wmfGetVariantSettings() {
 	'shiwiki' => 'Wikipidya',
 	'shnwiki' => 'ဝီႇၶီႇၽီးတီးယႃး',
 	'shnwiktionary' => 'ဝိၵ်ႇသျိၼ်ႇၼရီႇ',
+	'shnwikivoyage' => 'ဝီႇၶီႇဝွႆးဢဵတ်ႇꩡ်',
 	'shywiktionary' => 'Wikasegzawal',
 	'siwiki' => 'විකිපීඩියා',
 	'siwikibooks' => 'විකිපොත්',
