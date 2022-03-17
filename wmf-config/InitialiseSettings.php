@@ -11383,7 +11383,13 @@ function wmfGetVariantSettings() {
 			'undelete' => true,
 			'unwatchedpages' => true,
 		], // T74459
-		'sysop' => [ 'property-create' => true ], // T48953
+		'user' => [
+			'changetags' => false, // T303682
+		],
+		'sysop' => [
+			'changetags' => true, // T303682
+			'property-create' => true // T48953
+		],
 		'flood' => [ 'bot' => true ], // T50013
 	],
 	'+wikimaniawiki' => [
