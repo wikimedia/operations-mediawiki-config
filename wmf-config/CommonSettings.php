@@ -3381,6 +3381,8 @@ if ( $wmgUseDisambiguator ) {
 
 if ( $wmgUseDiscussionTools ) {
 	wfLoadExtension( 'DiscussionTools' );
+	// Auto topic subscriptions are initially disabled while in beta (T290500)
+	$wgDefaultUserOptions['discussiontools-autotopicsub'] = 0;
 }
 
 if ( $wmgUseCodeEditorForCore || $wmgUseScribunto ) {
