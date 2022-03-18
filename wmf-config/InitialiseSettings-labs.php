@@ -1255,18 +1255,14 @@ function wmfGetOverrideSettings() {
 			]
 		],
 
-		// Structured Data on Commons: wikibase properties that will be editable by default
-		'wgMediaInfoMediaSearchProperties' => [
-			'commonswiki' => [
-				// depicts
-				'P245962' => 1,
-				// digital representation of
-				'P248141' => 1.1,
-			],
-		],
-
 		'wgMediaInfoExternalEntitySearchBaseUri' => [
 			'commonswiki' => 'https://wikidata.beta.wmflabs.org/w/api.php',
+		],
+
+		'wgMediaInfoHelpUrls' => [
+			'commonswiki' => [
+				'P245962' => 'https://commons.wikimedia.org/wiki/Special:MyLanguage/Commons:Depicts',
+			],
 		],
 
 		// Extension for Special:MediaSearch
@@ -1281,12 +1277,6 @@ function wmfGetOverrideSettings() {
 		// switch 'audio' and 'video' mediasearch tabs for testing
 		'wgMediaSearchTabOrder'  => [
 			'commonswiki' => [ 'image', 'video', 'audio', 'other', 'page' ]
-		],
-
-		'wgMediaInfoHelpUrls' => [
-			'commonswiki' => [
-				'P245962' => 'https://commons.wikimedia.org/wiki/Special:MyLanguage/Commons:Depicts',
-			],
 		],
 
 		'wgSearchMatchRedirectPreference' => [
