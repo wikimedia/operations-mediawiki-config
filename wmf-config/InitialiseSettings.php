@@ -9030,6 +9030,8 @@ function wmfGetVariantSettings() {
 		], // T262218
 	],
 	'+azwiki' => [
+		'user' => [ 'move-categorypages' => false ], // T303752
+		'autoconfirmed' => [ 'move' => false ], // T303752
 		'autopatrolled' => [ 'autopatrol' => true ], // T196488
 		'patroller' => [
 			'patrol' => true,
@@ -9039,6 +9041,10 @@ function wmfGetVariantSettings() {
 		'bot' => [ 'extendedconfirmed' => true ], // T281860
 		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T281860
 		'sysop' => [ 'extendedconfirmed' => true ], // T281860
+		'pagemover' => [
+			'move' => true,
+			'move-categorypages' => true
+		], // T303752
 	],
 	'+azwikibooks' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T231493
@@ -11770,6 +11776,7 @@ function wmfGetVariantSettings() {
 			'patroller', // T196488
 			'rollbacker', // T215200
 			'extendedconfirmed', // T281860
+			'pagemover', // T303752
 		],
 	],
 	'+azwikibooks' => [
@@ -13145,6 +13152,7 @@ function wmfGetVariantSettings() {
 			'patroller', // T196488
 			'rollbacker', // T215200
 			'extendedconfirmed', // T281860
+			'pagemover', // T303752
 		],
 	],
 	'+azwikibooks' => [
