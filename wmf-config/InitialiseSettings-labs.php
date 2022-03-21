@@ -631,10 +631,6 @@ function wmfGetLabsOverrideSettings() {
 			],
 		],
 
-		'wmgUseQuickSurveys' => [
-			'hewiki' => true, // T225819
-		],
-
 		'wgQuickSurveysConfig' => [
 			'default' => [
 				'internal example' => [
@@ -749,6 +745,29 @@ function wmfGetLabsOverrideSettings() {
 						'mobile' => [ 'stable' ]
 					],
 				],
+				'internal-gdi-safety-survey' => [
+					// T303956
+					'name' => 'internal-gdi-safety-survey',
+					'type' => 'internal',
+					'layout' => 'single-answer',
+					'question' => 'ext-quicksurveys-internal-gdi-safety-survey-question',
+					'privacyPolicy' => 'ext-quicksurveys-internal-gdi-safety-survey-privacy-policy',
+					'answers' => [
+						'ext-quicksurveys-internal-gdi-safety-survey-answer-positive',
+						'ext-quicksurveys-internal-gdi-safety-survey-answer-negative',
+						'ext-quicksurveys-internal-gdi-safety-survey-answer-neutral',
+					],
+					'audience' => [
+						// T303736
+						'minEdits' => 5
+					],
+					'enabled' => true,
+					'coverage' => 0.05, // T303956
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ],
+					],
+				],
 			],
 			'cawiki' => [
 				// T187299
@@ -795,7 +814,31 @@ function wmfGetLabsOverrideSettings() {
 					],
 				],
 			],
-
+			'eswiki' => [
+				[
+					// T303956
+					'name' => 'internal-gdi-safety-survey',
+					'type' => 'internal',
+					'layout' => 'single-answer',
+					'question' => 'ext-quicksurveys-internal-gdi-safety-survey-question',
+					'privacyPolicy' => 'ext-quicksurveys-internal-gdi-safety-survey-privacy-policy',
+					'answers' => [
+						'ext-quicksurveys-internal-gdi-safety-survey-answer-positive',
+						'ext-quicksurveys-internal-gdi-safety-survey-answer-negative',
+						'ext-quicksurveys-internal-gdi-safety-survey-answer-neutral',
+					],
+					'audience' => [
+					// T303956
+						'minEdits' => 5
+					],
+					'enabled' => true,
+					'coverage' => 0.1, // T303956
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ],
+					],
+				],
+			],
 		],
 		'-wgScorePath' => [
 			'default' => "//upload.wikimedia.beta.wmflabs.org/score",
