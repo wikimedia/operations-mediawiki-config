@@ -26348,16 +26348,6 @@ function wmfGetVariantSettings() {
 	'private' => false,
 ],
 
-// Gradual rollout of tegola:
-// frwiki, ruwiki
-'wgKartographerDfltStyle' => [
-	'testwiki' => 'osm-tegola',
-	'frwiki' => 'osm-tegola',
-	'ruwiki' => 'osm-tegola',
-	'jawiki' => 'osm-tegola',
-	'enwiki' => 'osm-tegola',
-],
-
 // This MUST NOT be enabled on any additional wikis.
 'wgKartographerWikivoyageMode' => [
 	'default' => false,
