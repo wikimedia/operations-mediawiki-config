@@ -21487,6 +21487,17 @@ function wmfGetVariantSettings() {
 				],
 			]
 		],
+		'eventlogging_WikipediaPortal' => [
+			'schema_title' => 'analytics/legacy/wikipediaportal',
+			'topic_prefixes' => null,
+			'destination_event_service' => 'eventgate-analytics-external',
+			'consumers' => [
+				'analytics_hadoop_ingestion' => [
+					'job_name' => 'eventlogging_legacy',
+					'enabled' => true,
+				],
+			]
+		],
 		'eventlogging_QuickSurveyInitiation' => [
 			'schema_title' => 'analytics/legacy/quicksurveyinitiation',
 			'topic_prefixes' => null,
