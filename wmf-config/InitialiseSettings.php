@@ -16235,6 +16235,7 @@ function wmfGetVariantSettings() {
 		'contentadmin' => [ 'flood' ],
 		'sysop' => [ 'flood' ],
 	],
+	'viwiki' => [ 'flood' => [ 'flood' ] ], // T303578
 	'zhwiki' => [
 		'sysop' => [ 'flood' ],
 		'massmessage-sender' => [ 'massmessage-sender' ], // T130814
