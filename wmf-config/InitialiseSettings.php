@@ -26683,6 +26683,9 @@ function wmfGetVariantSettings() {
 'wgTemplateLinksSchemaMigrationStage' => [
 	'default' => SCHEMA_COMPAT_OLD,
 	'labswiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	'ruwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	'jawiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	'frwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 ],
 
 'wgMultiContentRevisionSchemaMigrationStage' => [
