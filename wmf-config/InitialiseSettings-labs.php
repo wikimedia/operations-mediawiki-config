@@ -1411,6 +1411,20 @@ function wmfGetLabsOverrideSettings() {
 		'wgGEMentorDashboardEnabled' => [
 			'default' => true,
 		],
+		'wgGECampaigns' => [
+			'default' => [
+				'growth-glam-2022' => [
+					'topics' => [ 'argentina', 'chile', 'mexico' ],
+					'pattern' => '/^growth-glam-2022$|^topics-test-AND$/'
+				]
+			],
+			'eswiki' => [
+				'growth-glam-2022' => [
+					'topics' => [ 'argentina', 'argentina-expanded', 'chile', 'mexico' ],
+					'pattern' => '/^growth-glam-2022$/'
+				]
+			]
+		],
 		'-wgGEMentorDashboardDeploymentMode' => [
 			'default' => 'alpha',
 		],

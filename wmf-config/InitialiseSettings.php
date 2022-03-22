@@ -27510,6 +27510,12 @@ function wmfGetVariantSettings() {
 
 'wgGECampaigns' => [
 	'default' => [],
+	'testwiki' => [
+		'growth-glam-2022' => [
+			'topics' => [ 'argentina', 'chile', 'mexico' ],
+			'pattern' => '/^growth-glam-2022$|^topics-test-AND$/'
+		]
+	],
 	'eswiki' => [
 		'growth-glam-2022' => [
 			'topics' => [ 'argentina', 'argentina-expanded', 'chile', 'mexico' ],
