@@ -26679,6 +26679,12 @@ function wmfGetVariantSettings() {
 	'default' => SCHEMA_COMPAT_WRITE_TEMP_AND_NEW | SCHEMA_COMPAT_READ_TEMP,
 ],
 
+// T299421
+'wgTemplateLinksSchemaMigrationStage' => [
+	'default' => SCHEMA_COMPAT_OLD,
+	'labswiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+],
+
 'wgMultiContentRevisionSchemaMigrationStage' => [
 	'default' => SCHEMA_COMPAT_NEW,
 ],
