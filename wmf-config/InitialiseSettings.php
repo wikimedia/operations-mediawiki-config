@@ -8453,6 +8453,7 @@ function wmfGetVariantSettings() {
 		# Original list 20111110 - T34309
 		'mediawiki.org',
 		'wikibooks.org',
+		'wikimedia.com',
 		'wikimedia.org',
 		'wikinews.org',
 		'wikipedia.org',
