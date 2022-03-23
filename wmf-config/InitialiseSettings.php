@@ -17130,6 +17130,7 @@ function wmfGetVariantSettings() {
 		'visualeditor-visualdiffpage',       // [Editing] 2019-11-06 – Visual diffs
 		'tmh-videojs',                       // [Readers] 2019-12-12 - New video player
 		'discussiontools-betaenable',        // [Editing] 2020-09-12 – Reply tool
+		'ipinfo-beta-feature-enable',        // [AHT] 2022-10-01 – IP Info
 	],
 ],
 
