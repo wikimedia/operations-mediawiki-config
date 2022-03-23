@@ -28567,5 +28567,9 @@ function wmfGetVariantSettings() {
 	'default' => false,
 ],
 
+'wmgUseWikistories' => [
+	'default' => false,
+],
+
 ];
 }

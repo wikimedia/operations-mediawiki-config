@@ -2371,6 +2371,11 @@ function wmfGetOverrideSettings() {
 			'wikifunctionswiki' => true,
 		],
 
+		// T303004
+		'wmgUseWikistories' => [
+			'enwiki' => true,
+		],
+
 		// (T302857) Temporarily disable template search improvements in advance of production deployment
 		'wmgTemplateSearchImprovements' => [
 			'default' => false,

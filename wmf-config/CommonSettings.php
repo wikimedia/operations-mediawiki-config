@@ -4214,6 +4214,10 @@ if ( $wmgUseWikiLambda && $wmgRealm === 'labs' ) {
 	$wgWikiLambdaWikiAPILocation = 'https://wikifunctions.beta.wmflabs.org/w/api.php';
 }
 
+if ( $wmgUseWikistories ) {
+	wfLoadExtension( 'Wikistories' );
+}
+
 if ( PHP_SAPI === 'cli' ) {
 	// Needed for the "abstracts" XML dumps. We only load it for PHP from the CLI.
 	// Must be loaded explicitly here so that autoloading works when specifying
