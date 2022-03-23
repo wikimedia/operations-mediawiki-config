@@ -28303,8 +28303,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wmgWikibaseClientUnconnectedPageMigrationStage' => [
-	'default' => MIGRATION_OLD,
-	'wikidataclient-test' => MIGRATION_WRITE_BOTH,
+	'default' => MIGRATION_WRITE_BOTH,
 ],
 
 // T123582: enables <link rel="preconnect" href="//upload.wikimedia.org">
