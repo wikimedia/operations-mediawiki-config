@@ -173,6 +173,10 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['taintedReferencesEnabled'] = $wmgWikibaseTaintedReferencesEnabled;
 	}
 
+	if ( isset( $wmgWikibaseRestApiEnabled ) ) {
+		$wgWBRepoSettings['restApiEnabled'] = $wmgWikibaseRestApiEnabled;
+	}
+
 	if ( isset( $wmgWikibaseStringLimits ) ) {
 		$wgWBRepoSettings['string-limits'] = $wmgWikibaseStringLimits;
 	}
