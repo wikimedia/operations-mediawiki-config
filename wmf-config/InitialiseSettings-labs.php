@@ -459,6 +459,10 @@ function wmfGetLabsOverrideSettings() {
 			'default' => 1,
 		],
 
+		'wgWMEPageSchemaSplitTestSamplingRatio' => [
+			'default' => 1,
+		],
+
 		'wgWMESessionTick' => [
 			'default' => true,
 		],
