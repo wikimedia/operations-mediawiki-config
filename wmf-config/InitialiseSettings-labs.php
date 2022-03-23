@@ -1478,10 +1478,34 @@ function wmfGetLabsOverrideSettings() {
 				'control' => 100,
 			],
 		],
-		// Temporary, can be removed after T303240 is done.
-		'wgGEWelcomeSurveyShowMailingListQuestion' => [
-			'default' => false,
-			'eswiki' => true,
+		'wgWelcomeSurveyExperimentalGroups' => [
+			'eswiki' => [
+				'exp2_target_specialpage' => [
+					'percentage' => 0,
+				],
+				'T303240_mailinglist' => [
+					// T305015
+					'percentage' => 80,
+					'questions' => [
+						'reason',
+						'edited',
+						'email',
+						'languages',
+						'mailinglist'
+					]
+				],
+				'T303240_mailinglist_control' => [
+					// T305015
+					'percentage' => 20,
+					'questions' => [
+						'reason',
+						'edited',
+						'email',
+						'languages',
+						'mailinglist'
+					]
+				]
+			]
 		],
 		'wgGEHomepageNewAccountVariantsByPlatform' => [
 			'default' => [

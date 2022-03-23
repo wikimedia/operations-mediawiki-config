@@ -27184,7 +27184,39 @@ function wmfGetVariantSettings() {
 ],
 
 'wgWelcomeSurveyExperimentalGroups' => [
-	'default' => [ 'exp2_target_specialpage' => [ 'percentage' => 100 ], 'exp2_target_popup' => [ 'percentage' => 0 ], 'exp1_group2' => [ 'percentage' => 0 ] ],
+	'default' => [
+		'exp2_target_specialpage' => [
+			'percentage' => 100
+		],
+	],
+	'eswiki' => [
+		'T303240_mailinglist' => [
+			// T305015: Set to 80 when T303240 begins
+			'percentage' => 0,
+			'questions' => [
+				'reason',
+				'edited',
+				'email',
+				'languages',
+				'mailinglist',
+			],
+		],
+		'T303240_mailinglist_control' => [
+			// T305015: Set to 20 when T303240 begins
+			'percentage' => 0,
+			'questions' => [
+				'reason',
+				'edited',
+				'email',
+				'languages',
+				'mailinglist',
+			],
+		],
+		'exp2_target_specialpage' => [
+			// Set to 0 when T303240 begins.
+			'percentage' => 100,
+		],
+	]
 ],
 
 'wgGEHomepageImpactModuleEnabled' => [
@@ -27546,13 +27578,6 @@ function wmfGetVariantSettings() {
 	'enwiki' => '/^growth-recurring-english-2021$|^growth-recurring-english-control-2021$|^growth-marketing-video$/',
 	'eswiki' => '/^growth-advancement-spanish-2021$/',
 	'ptwiki' => '/^growth-advancement-brazil-2021$/'
-],
-
-// Temporary, can be removed when T303240 is done.
-'wgGEWelcomeSurveyShowMailingListQuestion' => [
-	'default' => false,
-	// Needs approval in T303240 first.
-	'eswiki' => false,
 ],
 
 'wgGECampaigns' => [
