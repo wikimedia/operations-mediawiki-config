@@ -2727,7 +2727,7 @@ if ( $wmgUseCollection ) {
 if ( $wmgUseVisualEditor ) {
 	wfLoadExtension( 'VisualEditor' );
 
-	// RESTBase connection configuration is done by $wmfUseRestbaseVRS above.
+	// RESTBase connection configuration is done by $wmgUseRestbaseVRS above.
 	// Parsoid connection configuration is done by $wmgUseParsoid above.
 	// At least one of these should be set if you want to use Visual Editor.
 	$wgVisualEditorParsoidAutoConfig = false;
