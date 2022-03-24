@@ -4034,6 +4034,7 @@ if ( $wmgUseCheckUser ) {
 
 if ( $wmgUseIPInfo ) {
 	wfLoadExtension( 'IPInfo' );
+	$wgIPInfoGeoIP2EnterprisePath = '/usr/share/GeoIP/';
 
 	$wgGroupPermissions['autoconfirmed']['ipinfo'] = true;
 	$wgGroupPermissions['autoconfirmed']['ipinfo-view-basic'] = true;
