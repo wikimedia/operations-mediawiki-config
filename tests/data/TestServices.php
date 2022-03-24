@@ -9,9 +9,9 @@
 #
 # ######################################################################
 
-$wmfAllServices = [];
+$wmgAllServices = [];
 
-$wmfAllServices['unittest'] = [
+$wmgAllServices['unittest'] = [
 	'udp2log' => 'localhost:8420',
 	'statsd' => 'localhost',
 	'search-chi' => [ [ 'host' => 'localhost' ] ],
@@ -31,24 +31,26 @@ $wmfAllServices['unittest'] = [
 ];
 
 ### Logstash
-$wmfAllServices['unittest']['logstash'] = [ '127.0.0.1' ];
+$wmgAllServices['unittest']['logstash'] = [ '127.0.0.1' ];
 
 ### IRC
-$wmfAllServices['unittest']['irc'] = '127.0.0.1';
+$wmgAllServices['unittest']['irc'] = '127.0.0.1';
 
 ### Restbase
-$wmfAllServices['unittest']['restbase'] = "http://127.0.0.1:7231";
+$wmgAllServices['unittest']['restbase'] = "http://127.0.0.1:7231";
 
 ### Poolcounter
-$wmfAllServices['unittest']['poolcounter'] = [ '127.0.0.1' ];
+$wmgAllServices['unittest']['poolcounter'] = [ '127.0.0.1' ];
 
 ### LockManager Redis
-$wmfAllServices['unittest']['redis_lock'] = [
+$wmgAllServices['unittest']['redis_lock'] = [
 	'rdb1' => '127.0.0.1',
 	'rdb2' => '127.0.0.1',
 	'rdb3' => '127.0.0.1'
 ];
 
 # Make sure direct references to our datacenters work
-$wmfLocalServices = $wmfAllServices['eqiad'] = $wmfAllServices['codfw'] = $wmfAllServices['unittest'];
+$wmfLocalServices = $wmgAllServices['eqiad'] = $wmgAllServices['codfw'] = $wmgAllServices['unittest'];
 $wmgMasterServices = $wmfLocalServices;
+
+$wmfAllServices = $wmgAllServices;

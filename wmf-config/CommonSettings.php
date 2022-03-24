@@ -136,7 +136,7 @@ $wmgServerGroup = $_SERVER['SERVERGROUP'] ?? '';
 $wmfUsingKubernetes = strpos( $wmgServerGroup, 'kube-' ) === 0;
 
 # Get all the service definitions
-$wmfAllServices = ServiceConfig::getInstance()->getAllServices();
+$wmgAllServices = $wmfAllServices = ServiceConfig::getInstance()->getAllServices();
 
 # Shorthand when we have no master-replica situation to keep into account
 $wmfLocalServices = $wmfAllServices[$wmgDatacenter];
