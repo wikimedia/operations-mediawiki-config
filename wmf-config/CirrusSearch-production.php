@@ -15,15 +15,15 @@
 #
 
 $wgCirrusSearchClusters = [
-	'eqiad-chi' => $wmfAllServices['eqiad']['search-chi'] + [ 'group' => 'chi', 'replica' => 'eqiad' ],
-	'codfw-chi' => $wmfAllServices['codfw']['search-chi'] + [ 'group' => 'chi', 'replica' => 'codfw' ],
-	'cloudelastic-chi' => $wmfAllServices['eqiad']['cloudelastic-chi'] + [ 'group' => 'chi', 'replica' => 'cloudelastic' ],
-	'eqiad-psi' => $wmfAllServices['eqiad']['search-psi'] + [ 'group' => 'psi', 'replica' => 'eqiad' ],
-	'codfw-psi' => $wmfAllServices['codfw']['search-psi'] + [ 'group' => 'psi', 'replica' => 'codfw' ],
-	'cloudelastic-psi' => $wmfAllServices['eqiad']['cloudelastic-psi'] + [ 'group' => 'psi', 'replica' => 'cloudelastic' ],
-	'eqiad-omega' => $wmfAllServices['eqiad']['search-omega'] + [ 'group' => 'omega', 'replica' => 'eqiad' ],
-	'codfw-omega' => $wmfAllServices['codfw']['search-omega'] + [ 'group' => 'omega', 'replica' => 'codfw' ],
-	'cloudelastic-omega' => $wmfAllServices['eqiad']['cloudelastic-omega'] + [ 'group' => 'omega', 'replica' => 'cloudelastic' ],
+	'eqiad-chi' => $wmgAllServices['eqiad']['search-chi'] + [ 'group' => 'chi', 'replica' => 'eqiad' ],
+	'codfw-chi' => $wmgAllServices['codfw']['search-chi'] + [ 'group' => 'chi', 'replica' => 'codfw' ],
+	'cloudelastic-chi' => $wmgAllServices['eqiad']['cloudelastic-chi'] + [ 'group' => 'chi', 'replica' => 'cloudelastic' ],
+	'eqiad-psi' => $wmgAllServices['eqiad']['search-psi'] + [ 'group' => 'psi', 'replica' => 'eqiad' ],
+	'codfw-psi' => $wmgAllServices['codfw']['search-psi'] + [ 'group' => 'psi', 'replica' => 'codfw' ],
+	'cloudelastic-psi' => $wmgAllServices['eqiad']['cloudelastic-psi'] + [ 'group' => 'psi', 'replica' => 'cloudelastic' ],
+	'eqiad-omega' => $wmgAllServices['eqiad']['search-omega'] + [ 'group' => 'omega', 'replica' => 'eqiad' ],
+	'codfw-omega' => $wmgAllServices['codfw']['search-omega'] + [ 'group' => 'omega', 'replica' => 'codfw' ],
+	'cloudelastic-omega' => $wmgAllServices['eqiad']['cloudelastic-omega'] + [ 'group' => 'omega', 'replica' => 'cloudelastic' ],
 ];
 
 // wgCirrusSearchExtraIndexes is set in CirrusSearch-common.php

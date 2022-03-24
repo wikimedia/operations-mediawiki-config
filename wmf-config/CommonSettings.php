@@ -139,7 +139,7 @@ $wmfUsingKubernetes = strpos( $wmgServerGroup, 'kube-' ) === 0;
 $wmgAllServices = $wmfAllServices = ServiceConfig::getInstance()->getAllServices();
 
 # Shorthand when we have no master-replica situation to keep into account
-$wmfLocalServices = $wmfAllServices[$wmgDatacenter];
+$wmfLocalServices = $wmgAllServices[$wmgDatacenter];
 
 # The list of datacenters known to this realm
 $wmgDatacenters = ServiceConfig::getInstance()->getDatacenters();
@@ -152,7 +152,7 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 	$wmgEtcdLastModifiedIndex = "wmgEtcdLastModifiedIndex uninitialized due to WMF_MAINTENANCE_OFFLINE";
 	$wgReadOnly = "In read-only mode because WMF_MAINTENANCE_OFFLINE is set";
 	$wmgMasterDatacenter = ServiceConfig::getInstance()->getDatacenter();
-	$wmgMasterServices = $wmfAllServices[$wmgMasterDatacenter];
+	$wmgMasterServices = $wmgAllServices[$wmgMasterDatacenter];
 	$wmgDbconfigFromEtcd = [
 		'readOnlyBySection' => null,
 		'groupLoadsBySection' => [
@@ -172,7 +172,7 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 	$wmgEtcdLastModifiedIndex = $etcdConfig->getModifiedIndex();
 	$wgReadOnly = $etcdConfig->get( "$wmgDatacenter/ReadOnly" );
 	$wmgMasterDatacenter = $etcdConfig->get( 'common/WMFMasterDatacenter' );
-	$wmgMasterServices = $wmfAllServices[$wmgMasterDatacenter];
+	$wmgMasterServices = $wmgAllServices[$wmgMasterDatacenter];
 
 	// Database load balancer config (sectionLoads, groupLoadsBySection, …)
 	// This is later merged into $wgLBFactoryConf by wmfEtcdApplyDBConfig().
@@ -3028,11 +3028,11 @@ if ( $wmgUseTranslate ) {
 		// NOTE: these settings are also used for the labs cluster
 		// where codfw may not be available
 		$wgTranslateClustersAndMirrors = [
-			'eqiad' => isset( $wmfAllServices['codfw']['search-chi'] ) ? [ 'codfw' ] : [],
-			'codfw' => isset( $wmfAllServices['eqiad']['search-chi'] ) ? [ 'eqiad' ] : [],
+			'eqiad' => isset( $wmgAllServices['codfw']['search-chi'] ) ? [ 'codfw' ] : [],
+			'codfw' => isset( $wmgAllServices['eqiad']['search-chi'] ) ? [ 'eqiad' ] : [],
 		];
 		foreach ( $wgTranslateClustersAndMirrors as $cluster => $mirrors ) {
-			if ( !isset( $wmfAllServices[$cluster]['search-chi'] ) ) {
+			if ( !isset( $wmgAllServices[$cluster]['search-chi'] ) ) {
 				continue;
 			}
 			$wgTranslateTranslationServices[$cluster] = [
@@ -3053,7 +3053,7 @@ if ( $wmgUseTranslate ) {
 							'port' => 9243,
 							'transport' => 'Https',
 						];
-					}, $wmfAllServices[$cluster]['search-chi'] ),
+					}, $wmgAllServices[$cluster]['search-chi'] ),
 				],
 				'mirrors' => $mirrors,
 			];
