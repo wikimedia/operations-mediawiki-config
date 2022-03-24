@@ -1959,9 +1959,6 @@ if ( $wmgUseCentralAuth ) {
 
 	// Check global rename log on meta for new accounts
 	$wgCentralAuthOldNameAntiSpoofWiki = 'metawiki';
-
-	// Allow granting temporary global group membership.
-	$wgCentralAuthEnableTemporaryGlobalGroups = true;
 }
 
 // Config for GlobalCssJs

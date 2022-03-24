@@ -2228,10 +2228,6 @@ function wmfGetLabsOverrideSettings() {
 			'wikifunctionswiki' => true,
 		],
 
-		'wgCentralAuthHiddenLevelMigrationStage' => [
-			'default' => SCHEMA_COMPAT_READ_NEW | SCHEMA_COMPAT_WRITE_NEW,
-		],
-
 		// (T302857) Temporarily disable template search improvements in advance of production deployment
 		'wmgTemplateSearchImprovements' => [
 			'default' => false,
