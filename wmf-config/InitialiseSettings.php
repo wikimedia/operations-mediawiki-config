@@ -26444,12 +26444,25 @@ function wmfGetVariantSettings() {
 ],
 
 'wgKartographerStaticMapframe' => [
-	'default' => false,
+	// Important for performance (T291736).
+	'default' => true,
 	'wikipedia' => true,
-	'testwiki' => false,
+
+	'wikibooks' => false,
+	'wikinews' => false,
+	'wikiquote' => false,
+	'wikisource' => false,
+	'wikiversity' => false,
+	'wikivoyage' => false,
+	'wiktionary' => false,
+
 	'bgwiki' => false,
-	'mediawikiwiki' => true,
-	'uawikimedia' => true, // T164574
+	'commonswiki' => false,
+	'incubatorwiki' => false,
+	'metawiki' => false,
+	'testwiki' => false,
+	'wikidatawiki' => false,
+	// This should not be disabled on additional wikis (T291736).
 ],
 
 'wgKartographerEnableMapFrame' => [
