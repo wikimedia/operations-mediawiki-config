@@ -21891,6 +21891,14 @@ function wmfGetVariantSettings() {
 			'schema_title' => 'analytics/mobile_apps/android_customize_toolbar_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		'android.article_toolbar_interaction' => [
+			'schema_title' => 'analytics/mobile_apps/android_article_toolbar_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'android.edit_history_interaction' => [
+			'schema_title' => 'analytics/mobile_apps/android_edit_history_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		'mediawiki.mediasearch_interaction' => [
 			'schema_title' => 'analytics/mediawiki/mediasearch_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
