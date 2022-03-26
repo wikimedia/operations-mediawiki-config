@@ -17069,6 +17069,10 @@ function wmfGetVariantSettings() {
 	'ptwikiversity' => 'videojs',
 	'srwiki' => 'videojs',
 	'viwikibooks' => 'videojs',
+	'viwiki' => 'videojs',
+	'frwiki' => 'videojs',
+	'fawiki' => 'videojs',
+	'kowiki' => 'videojs',
 ],
 
 // Enable the Beta Feature for trying out the new video player (see also the BF whitelist)
