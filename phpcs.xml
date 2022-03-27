@@ -18,13 +18,9 @@
 		<exclude name="MediaWiki.NamingConventions.PrefixedGlobalFunctions.allowedPrefix" />
 		<exclude name="MediaWiki.NamingConventions.PrefixedGlobalFunctions.wfPrefix" />
 		<exclude name="MediaWiki.NamingConventions.ValidGlobalName.allowedPrefix" />
-		<exclude name="MediaWiki.Usage.ForbiddenFunctions.compact" />
 		<exclude name="MediaWiki.Usage.SuperGlobalsUsage.SuperGlobals" />
-		<exclude name="MediaWiki.VariableAnalysis.MisleadingGlobalNames.Misleading$wgCirrusSearchPoolCounterKey" />
 		<exclude name="MediaWiki.VariableAnalysis.MisleadingGlobalNames.Misleading$wgConf" />
-		<exclude name="MediaWiki.VariableAnalysis.MisleadingGlobalNames.Misleading$wgDBname" />
 		<exclude name="MediaWiki.VariableAnalysis.MisleadingGlobalNames.Misleading$wgDebugLogFile" />
-		<exclude name="MediaWiki.VariableAnalysis.MisleadingGlobalNames.Misleading$wgJobTypeConf" />
 		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment" />
 	</rule>
 	<file>.</file>
@@ -45,11 +41,9 @@
 	</rule>
 	<rule ref="MediaWiki.ControlStructures.AssignmentInControlStructures.AssignmentInControlStructures">
 		<exclude-pattern>multiversion/MWWikiversions\.php</exclude-pattern>
-		<exclude-pattern>tests/cirrusTest\.php</exclude-pattern>
 		<exclude-pattern>wmf-config/CommonSettings\.php</exclude-pattern>
 	</rule>
 	<rule ref="MediaWiki.Usage.ForbiddenFunctions.extract">
-		<exclude-pattern>tests/cirrusTest\.php</exclude-pattern>
 		<exclude-pattern>wmf-config/CommonSettings\.php</exclude-pattern>
 	</rule>
 	<rule ref="Squiz.Classes.ValidClassName.NotCamelCaps">

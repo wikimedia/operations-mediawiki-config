@@ -124,6 +124,9 @@ class CirrusTest extends WgConfTestCase {
 		require __DIR__ . '/data/TestServices.php';
 		$wgConf = $this->loadWgConf( $wmgRealm );
 
+		// phpcs doesn't realize that these are the actual globals variables and will
+		// work with extract()
+		// phpcs:disable MediaWiki.VariableAnalysis.MisleadingGlobalNames
 		list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 		$wikiTags = [];
 		foreach ( Wikimedia\MWConfig\MWConfigCacheGenerator::$dbLists as $tag ) {
@@ -141,6 +144,8 @@ class CirrusTest extends WgConfTestCase {
 		// Add a per-language tag as well
 		$wikiTags[] = $wgConf->get( 'wgLanguageCode', $wgDBname, $dbSuffix, $confParams, $wikiTags );
 		$globals = $wgConf->getAll( $wgDBname, $dbSuffix, $confParams, $wikiTags );
+		// we want to use globals
+		// phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
 		extract( $globals );
 
 		// variables that would have been setup elsewhere, perhaps in mediawiki
@@ -153,8 +158,12 @@ class CirrusTest extends WgConfTestCase {
 
 		require __DIR__ . '/../wmf-config/CirrusSearch-common.php';
 
+		// we want to use globals
+		// phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.compact
 		$ret = compact( array_keys( get_defined_vars() ) );
 		return $ret;
+
+		// phpcs:enable MediaWiki.VariableAnalysis.MisleadingGlobalNames
 	}
 
 	private static function resolveConfig( $config, $key ) {
