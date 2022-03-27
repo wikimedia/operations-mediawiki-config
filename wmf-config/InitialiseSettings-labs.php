@@ -1152,9 +1152,9 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true, // T291303
 		],
 
-		#####################################################
-		# Cirrus-related tweaks specific for the Beta cluster
-		#####################################################
+		// ***************************************************
+		// Cirrus-related tweaks specific for the Beta cluster
+		// ***************************************************
 
 		// Use a constant MLR model for all wikis. It's not ideal, but
 		// no models were trained specifically for data in labs anyways.

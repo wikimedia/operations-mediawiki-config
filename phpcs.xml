@@ -60,9 +60,6 @@
 		<exclude-pattern>docroot/noc/conf/index\.php</exclude-pattern>
 		<exclude-pattern>docroot/noc/conf/activeMWVersions\.php</exclude-pattern>
 	</rule>
-	<rule ref="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.SingleSpaceBeforeSingleLineComment">
-		<exclude-pattern>wmf-config/InitialiseSettings-labs\.php</exclude-pattern>
-	</rule>
 
 	<exclude-pattern>\.git/</exclude-pattern>
 	<exclude-pattern>vendor/</exclude-pattern>
