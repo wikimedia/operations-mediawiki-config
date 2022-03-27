@@ -59,11 +59,11 @@ class MWConfigCacheGenerator {
 	 * Create a MultiVersion config object for a wiki
 	 *
 	 * @param string $wikiDBname The wiki's database name, e.g. 'enwiki' or  'zh_min_nanwikisource'
-	 * @param object $site The wiki's site type family, e.g. 'wikipedia' or 'wikisource'
-	 * @param object $lang The wiki's MediaWiki language code, e.g. 'en' or 'zh-min-nan'
-	 * @param object $wgConf The global MultiVersion wgConf object
+	 * @param ?string $site The wiki's site type family, e.g. 'wikipedia' or 'wikisource'
+	 * @param ?string $lang The wiki's MediaWiki language code, e.g. 'en' or 'zh-min-nan'
+	 * @param SiteConfiguration $wgConf The global MultiVersion wgConf object
 	 * @param string $realm Realm, e.g. 'production' or 'labs'
-	 * @return object The wiki's config object
+	 * @return array The wiki's config
 	 */
 	public static function getMWConfigForCacheing( $wikiDBname, $site, $lang, $wgConf, $realm = 'production' ) {
 		# Collect all the dblist tags associated with this wiki
@@ -277,7 +277,7 @@ class MWConfigCacheGenerator {
 	 *
 	 * @param string $confCacheFile The full filepath for the wiki's cached config object
 	 * @param string $confActualMtime The expected mtime for the cached config object
-	 * @return object|null The wiki's config object, or null if not yet cached or stale
+	 * @return array|null The wiki's config array, or null if not yet cached or stale
 	 */
 	public static function readFromStaticCache( $confCacheFile, $confActualMtime ) {
 		// Ignore file warnings (file may be inaccessible, or deleted in a race)
@@ -307,7 +307,7 @@ class MWConfigCacheGenerator {
 	 *
 	 * @param string $cacheDir The filepath for cached multiversion config storage
 	 * @param string $cacheShard The filename for the cached multiversion config object
-	 * @param object $configObject The config object for this wiki
+	 * @param array $configObject The config array for this wiki
 	 */
 	public static function writeToStaticCache( $cacheDir, $cacheShard, $configObject ) {
 		@mkdir( $cacheDir );
