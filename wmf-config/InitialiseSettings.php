@@ -20904,7 +20904,7 @@ function wmfGetVariantSettings() {
 		'userGroups' => [ 'extendedconfirmed', 'sysop' ]
 	],
 	'viwiki' => [
-		'userGroups' => [ 'extendedconfirmed', 'sysop' ]
+		'userGroups' => [ 'extendedconfirmed', 'eliminator', 'sysop' ]
 	],
 ],
 
