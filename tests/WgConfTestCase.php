@@ -88,7 +88,6 @@ abstract class WgConfTestCase extends PHPUnit\Framework\TestCase {
 		$this->setGlobals( [
 			'wmgHostnames' => null,
 			'wmgAllServices' => null,
-			'wmfLocalServices' => null,
 			'wmgLocalServices' => null,
 			'wmgMasterServices' => null,
 		] );
