@@ -27532,7 +27532,14 @@ function wmfGetVariantSettings() {
 	],
 	'eswiki' => [
 		'growth-glam-2022' => [
-			'topics' => [ 'argentina', 'argentina-expanded', 'chile', 'mexico' ],
+			'topics' => [
+				'argentina',
+				'argentina-expanded',
+				'chile',
+				'chile-expanded',
+				'mexico',
+				'mexico-expanded',
+			],
 			'pattern' => '/^growth-glam-2022$/'
 		]
 	]
@@ -27544,7 +27551,9 @@ function wmfGetVariantSettings() {
 		'argentina' => 'growtharticletopic:argentina',
 		'argentina-expanded' => 'argentina',
 		'chile' => 'growtharticletopic:chile',
+		'chile-expanded' => 'chile',
 		'mexico' => 'growtharticletopic:mexico',
+		'mexico-expanded' => 'mexico',
 	]
 ],
 

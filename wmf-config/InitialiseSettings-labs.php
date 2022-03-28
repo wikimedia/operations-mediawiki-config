@@ -1428,7 +1428,14 @@ function wmfGetLabsOverrideSettings() {
 			],
 			'eswiki' => [
 				'growth-glam-2022' => [
-					'topics' => [ 'argentina', 'argentina-expanded', 'chile', 'mexico' ],
+					'topics' => [
+						'argentina',
+						'argentina-expanded',
+						'chile',
+						'chile-expanded',
+						'mexico',
+						'mexico-expanded',
+					],
 					'pattern' => '/^growth-glam-2022$/'
 				]
 			]
