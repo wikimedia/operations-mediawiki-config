@@ -89,6 +89,7 @@ abstract class WgConfTestCase extends PHPUnit\Framework\TestCase {
 			'wmgHostnames' => null,
 			'wmgAllServices' => null,
 			'wmfLocalServices' => null,
+			'wmgLocalServices' => null,
 			'wmgMasterServices' => null,
 		] );
 		require __DIR__ . '/data/TestServices.php';
