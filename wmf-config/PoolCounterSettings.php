@@ -100,7 +100,7 @@ $wgPoolCounterConf = [
 ];
 
 $wgPoolCountClientConf = [
-	'servers' => $wmfLocalServices['poolcounter'],
+	'servers' => $wmgLocalServices['poolcounter'],
 	'timeout' => 0.5,
 	'connect_timeout' => 0.01
 ];

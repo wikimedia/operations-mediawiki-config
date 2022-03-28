@@ -194,7 +194,7 @@ if ( $wmgUseWikibaseRepo ) {
 	}
 
 	if ( $wgWBQualityConstraintsFormatCheckerShellboxRatio ) {
-		$wgShellboxUrls['constraint-regex-checker'] = $wmfLocalServices['shellbox-constraints'];
+		$wgShellboxUrls['constraint-regex-checker'] = $wmgLocalServices['shellbox-constraints'];
 	}
 
 	$wgWBRepoSettings['enableRefTabs'] = $wmgWikibaseRepoEnableRefTabs;

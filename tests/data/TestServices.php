@@ -53,4 +53,4 @@ $wmgAllServices['unittest']['redis_lock'] = [
 $wmgLocalServices = $wmgAllServices['eqiad'] = $wmgAllServices['codfw'] = $wmgAllServices['unittest'];
 $wmfLocalServices = $wmgLocalServices;
 
-$wmgMasterServices = $wmfLocalServices;
+$wmgMasterServices = $wmgLocalServices;

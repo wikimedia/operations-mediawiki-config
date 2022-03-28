@@ -167,7 +167,7 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 		'externalLoads' => [],
 	];
 } else {
-	$etcdConfig = wmfSetupEtcd( $wmfLocalServices['etcd'] );
+	$etcdConfig = wmfSetupEtcd( $wmgLocalServices['etcd'] );
 
 	$wmgEtcdLastModifiedIndex = $etcdConfig->getModifiedIndex();
 	$wgReadOnly = $etcdConfig->get( "$wmgDatacenter/ReadOnly" );
@@ -182,7 +182,7 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 	unset( $etcdConfig );
 }
 
-$wmfUdp2logDest = $wmfLocalServices['udp2log'];
+$wmfUdp2logDest = $wmgLocalServices['udp2log'];
 if ( $wgDBname === 'testwiki' || $wgDBname === 'test2wiki' ) {
 	$wgDebugLogFile = "udp://{$wmfUdp2logDest}/testwiki";
 } else {
@@ -563,7 +563,7 @@ $wgTmpDirectory = '/tmp';
 $wgSessionName = $wgDBname . 'Session';
 
 $pcServers = [];
-foreach ( $wmfLocalServices['parsercache-dbs'] as $tag => $host ) {
+foreach ( $wmgLocalServices['parsercache-dbs'] as $tag => $host ) {
 	$pcServers[$tag] = [
 		'type' => 'mysql',
 		'host' => $host,
@@ -595,7 +595,7 @@ $wgObjectCaches['mysql-multiwrite'] = [
 ];
 $wgObjectCaches['kask-session'] = [
 	'class' => 'RESTBagOStuff',
-	'url' => "{$wmfLocalServices['sessionstore']}/sessions/v1/",
+	'url' => "{$wmgLocalServices['sessionstore']}/sessions/v1/",
 	'httpParams' => [
 		'writeHeaders' => [
 			'content-type' => 'application/octet-stream',
@@ -608,7 +608,7 @@ $wgObjectCaches['kask-session'] = [
 ];
 $wgObjectCaches['kask-echoseen'] = [
 	'class' => 'RESTBagOStuff',
-	'url' => "{$wmfLocalServices['echostore']}/echoseen/v1/",
+	'url' => "{$wmgLocalServices['echostore']}/echoseen/v1/",
 	'httpParams' => [
 		'writeHeaders' => [
 			'content-type' => 'application/octet-stream',
@@ -711,9 +711,9 @@ if ( $wmgUsePagedTiffHandler ) {
 	wfLoadExtension( 'PagedTiffHandler' );
 	$wgTiffUseTiffinfo = true;
 	$wgTiffMaxMetaSize = 1048576;
-	if ( $wmgUsePagedTiffHandlerShellbox && $wmfLocalServices['shellbox-media'] ) {
+	if ( $wmgUsePagedTiffHandlerShellbox && $wmgLocalServices['shellbox-media'] ) {
 		// Route pagedtiffhandler to the Shellbox named "shellbox-media".
-		$wgShellboxUrls['pagedtiffhandler'] = $wmfLocalServices['shellbox-media'];
+		$wgShellboxUrls['pagedtiffhandler'] = $wmgLocalServices['shellbox-media'];
 		// $wgShellboxSecretKey set in PrivateSettings.php
 	}
 }
@@ -813,7 +813,7 @@ $wgDjvuTxt = '/usr/bin/djvutxt';
 # Reverse proxy Configuration
 # ######################################################################
 
-$wgStatsdServer = $wmfLocalServices['statsd'];
+$wgStatsdServer = $wmgLocalServices['statsd'];
 
 $wgUseCdn = true;
 if ( $wmgRealm === 'production' ) {
@@ -1081,15 +1081,15 @@ if ( $wmgUseTimeline ) {
 	];
 	$wgTimelineFonts['default'] = $wgTimelineFonts[$wmgTimelineDefaultFont];
 	// Route easytimeline to the Shellbox named "shellbox-timeline".
-	$wgShellboxUrls['easytimeline'] = $wmfLocalServices['shellbox-timeline'];
+	$wgShellboxUrls['easytimeline'] = $wmgLocalServices['shellbox-timeline'];
 }
 
 // TODO: This should be handled by LocalServices, not here.
-$wgCopyUploadProxy = ( $wmgRealm !== 'labs' ) ? $wmfLocalServices['urldownloader'] : false;
+$wgCopyUploadProxy = ( $wmgRealm !== 'labs' ) ? $wmgLocalServices['urldownloader'] : false;
 $wgUploadThumbnailRenderHttpCustomHost = $wmgHostnames['upload'];
-$wgUploadThumbnailRenderHttpCustomDomain = $wmfLocalServices['upload'];
+$wgUploadThumbnailRenderHttpCustomDomain = $wmgLocalServices['upload'];
 if ( $wmgUseLocalHTTPProxy || $wmfUsingKubernetes ) {
-	$wgLocalHTTPProxy = $wmfLocalServices['mwapi'] ?? false;
+	$wgLocalHTTPProxy = $wmgLocalServices['mwapi'] ?? false;
 }
 
 if ( $wmgUseWikiHiero ) {
@@ -1176,9 +1176,9 @@ if ( $wmgUseImageMap ) {
 
 if ( $wmgUseSyntaxHighlight ) {
 	wfLoadExtension( 'SyntaxHighlight_GeSHi' );
-	if ( $wmgUseSyntaxHighlightShellbox && $wmfLocalServices['shellbox-syntaxhighlight'] ) {
+	if ( $wmgUseSyntaxHighlightShellbox && $wmgLocalServices['shellbox-syntaxhighlight'] ) {
 		// Route syntaxhighlight to the Shellbox named "shellbox-syntaxhighlight".
-		$wgShellboxUrls['syntaxhighlight'] = $wmfLocalServices['shellbox-syntaxhighlight'];
+		$wgShellboxUrls['syntaxhighlight'] = $wmgLocalServices['shellbox-syntaxhighlight'];
 		// $wgShellboxSecretKey set in PrivateSettings.php
 		$wgPygmentizePath = '/usr/bin/pygmentize';
 	}
@@ -1522,9 +1522,9 @@ if ( $wmgUseScore ) {
 	wfLoadExtension( 'Score' );
 	$wgScoreSafeMode = true;
 
-	if ( $wmgUseScoreShellbox && $wmfLocalServices['shellbox'] ) {
+	if ( $wmgUseScoreShellbox && $wmgLocalServices['shellbox'] ) {
 		// Route score to the Shellbox named "shellbox".
-		$wgShellboxUrls['score'] = $wmfLocalServices['shellbox'];
+		$wgShellboxUrls['score'] = $wmgLocalServices['shellbox'];
 		// $wgShellboxSecretKey set in PrivateSettings.php
 		$wgScoreImageMagickConvert = '/usr/bin/convert';
 	} else {
@@ -1841,7 +1841,7 @@ if ( $wmgUseCentralAuth ) {
 	// See https://phabricator.wikimedia.org/T189966#5436482
 	$wgCentralAuthCookiesP3P = "CP=\"See $wgCanonicalServer/wiki/Special:CentralAutoLogin/P3P for more info.\"";
 
-	foreach ( $wmfLocalServices['irc'] as $address ) {
+	foreach ( $wmgLocalServices['irc'] as $address ) {
 		$wgCentralAuthRC[] = [
 			'formatter' => 'MediaWiki\\Extension\\CentralAuth\\RCFeed\\IRCColourfulCARCFeedFormatter',
 			'uri' => "udp://$address:$wmgRC2UDPPort/#central\t",
@@ -1999,7 +1999,7 @@ if ( $wmgUseApiFeatureUsage ) {
 	wfLoadExtension( 'ApiFeatureUsage' );
 	$wgApiFeatureUsageQueryEngineConf = [
 		'class' => ApiFeatureUsageQueryEngineElastica::class,
-		'serverList' => $wmfLocalServices['search-chi'],
+		'serverList' => $wmgLocalServices['search-chi'],
 	];
 }
 
@@ -2287,7 +2287,7 @@ if ( $wmgUseCollection ) {
 	wfLoadExtension( 'Collection' );
 	// Use pediapress server for POD function (T73675)
 	$wgCollectionCommandToServeURL = [
-		'zip_post' => "{$wmfLocalServices['urldownloader']}|https://pediapress.com/wmfup/",
+		'zip_post' => "{$wmgLocalServices['urldownloader']}|https://pediapress.com/wmfup/",
 	];
 	$wgCollectionPODPartners = [
 		'pediapress' => [
@@ -2365,9 +2365,9 @@ if ( $wmgUseGlobalAbuseFilters ) {
 # PdfHandler
 if ( $wmgUsePdfHandler ) {
 	wfLoadExtension( 'PdfHandler' );
-	if ( $wmgUsePdfHandlerShellbox && $wmfLocalServices['shellbox-media'] ) {
+	if ( $wmgUsePdfHandlerShellbox && $wmgLocalServices['shellbox-media'] ) {
 		// Route pdfhandler to the Shellbox named "shellbox-media".
-		$wgShellboxUrls['pdfhandler'] = $wmfLocalServices['shellbox-media'];
+		$wgShellboxUrls['pdfhandler'] = $wmgLocalServices['shellbox-media'];
 		// $wgShellboxSecretKey set in PrivateSettings.php
 	} else {
 		$wgPdfProcessor = '/usr/local/bin/mediawiki-firejail-ghostscript';
@@ -2687,7 +2687,7 @@ if ( !isset( $wgVirtualRestConfig ) && ( $wmgUseRestbaseVRS || $wmgUseParsoid ||
 
 if ( $wmgUseRestbaseVRS ) {
 	$wgVirtualRestConfig['modules']['restbase'] = [
-		'url' => $wmfLocalServices['restbase'],
+		'url' => $wmgLocalServices['restbase'],
 		'domain' => $wgCanonicalServer,
 		'forwardCookies' => false,
 		'parsoidCompat' => false
@@ -2695,7 +2695,7 @@ if ( $wmgUseRestbaseVRS ) {
 }
 
 if ( $wmgUseParsoid ) {
-	$wmgParsoidURL = $wmfLocalServices['parsoid'];
+	$wmgParsoidURL = $wmgLocalServices['parsoid'];
 
 	$wgVirtualRestConfig['modules']['parsoid'] = [
 		'url' => $wmgParsoidURL,
@@ -2708,7 +2708,7 @@ if ( $wmgUseParsoid ) {
 
 if ( $wmgUseCollection ) {
 	$wgVirtualRestConfig['modules']['electron'] = [
-		'url' => $wmfLocalServices['electron'],
+		'url' => $wmgLocalServices['electron'],
 		'options' => [
 			'accessKey' => $wmgElectronSecret, // set in private repo
 		],
@@ -2947,7 +2947,7 @@ if ( $wmgUseMath ) {
 	// This variable points to non-WMF servers by default.
 	// Prevent accidental use.
 	$wgMathLaTeXMLUrl = null;
-	$wgMathMathMLUrl = $wmfLocalServices['mathoid'];
+	$wgMathMathMLUrl = $wmgLocalServices['mathoid'];
 	// Increase the number of concurrent connections made to RESTBase
 	$wgMathConcurrentReqs = 150;
 
@@ -3126,7 +3126,7 @@ if ( $wmgUseTranslate ) {
 
 	$wgTranslateTranslationServices['Apertium'] = [
 		'type' => 'cxserver',
-		'host' => $wmfLocalServices['cxserver'],
+		'host' => $wmgLocalServices['cxserver'],
 		'timeout' => 3,
 	];
 }
@@ -3294,7 +3294,7 @@ if ( $wmgUseEcho ) {
 
 	// Push notifications
 	$wgEchoEnablePush = $wmgEchoEnablePush ?? false;
-	$wgEchoPushServiceBaseUrl = "{$wmfLocalServices['push-notifications']}/v1/message";
+	$wgEchoPushServiceBaseUrl = "{$wmgLocalServices['push-notifications']}/v1/message";
 	$wgEchoPushMaxSubscriptionsPerUser = 10;
 
 	// Set up the push notifier type if push is enabled.
@@ -3902,7 +3902,7 @@ if ( $wmgUseOATHAuth ) {
 
 if ( $wmgUseMediaModeration ) {
 	if ( $wmgRealm === 'production' ) {
-		$wgMediaModerationHttpProxy = $wmfLocalServices['urldownloader'];
+		$wgMediaModerationHttpProxy = $wmgLocalServices['urldownloader'];
 	}
 
 	wfLoadExtension( 'MediaModeration' );
@@ -4057,7 +4057,7 @@ if ( $wmgUseRC2UDP ) {
 		}
 	}
 
-	foreach ( $wmfLocalServices['irc'] as $i => $address ) {
+	foreach ( $wmgLocalServices['irc'] as $i => $address ) {
 		$wgRCFeeds["irc$i"] = [
 			'formatter' => 'IRCColourfulRCFeedFormatter',
 			'uri' => "udp://$address:$wmgRC2UDPPort/$wmgRC2UDPPrefix",
@@ -4087,17 +4087,17 @@ if ( $wmgUseEventBus ) {
 	// https://phabricator.wikimedia.org/T288853
 	$wgEventServices = [
 		'eventgate-analytics' => [
-			'url' => "{$wmfLocalServices['eventgate-analytics']}/v1/events?hasty=true",
+			'url' => "{$wmgLocalServices['eventgate-analytics']}/v1/events?hasty=true",
 			'timeout' => 11,
 			'x_client_ip_forwarding_enabled' => true,
 		],
 		'eventgate-analytics-external' => [
-			'url' => "{$wmfLocalServices['eventgate-analytics-external']}/v1/events?hasty=true",
+			'url' => "{$wmgLocalServices['eventgate-analytics-external']}/v1/events?hasty=true",
 			'timeout' => 11,
 			'x_client_ip_forwarding_enabled' => true,
 		],
 		'eventgate-main' => [
-			'url' => "{$wmfLocalServices['eventgate-main']}/v1/events",
+			'url' => "{$wmgLocalServices['eventgate-main']}/v1/events",
 			'timeout' => 62, // envoy overall req timeout + 1
 		]
 	];
@@ -4202,16 +4202,16 @@ if ( $wmgUseGrowthExperiments ) {
 	// Proof-of-concept API, allowed until 2022-06-30. See T294362#7768458.
 	$wgGEImageRecommendationServiceUrl = 'https://image-suggestion-api.wmcloud.org';
 	if ( $wmgRealm !== 'labs' ) {
-		$wgGEImageRecommendationServiceHttpProxy = $wmfLocalServices['urldownloader'];
+		$wgGEImageRecommendationServiceHttpProxy = $wmgLocalServices['urldownloader'];
 	}
-	$wgGELinkRecommendationServiceUrl = $wmfLocalServices['linkrecommendation'];
+	$wgGELinkRecommendationServiceUrl = $wmgLocalServices['linkrecommendation'];
 }
 
 if ( $wmgUseWikiLambda && $wmgRealm === 'labs' ) {
 	wfLoadExtension( 'WikiLambda' );
 
-	$wgWikiLambdaOrchestratorLocation = $wmfLocalServices['wikifunctions-orchestrator'];
-	$wgWikiLambdaEvaluatorLocation = "http://{$wmfLocalServices['wikifunctions-evaluator']}/1/v1/evaluate";
+	$wgWikiLambdaOrchestratorLocation = $wmgLocalServices['wikifunctions-orchestrator'];
+	$wgWikiLambdaEvaluatorLocation = "http://{$wmgLocalServices['wikifunctions-evaluator']}/1/v1/evaluate";
 	$wgWikiLambdaWikiAPILocation = 'https://wikifunctions.beta.wmflabs.org/w/api.php';
 }
 
@@ -4311,7 +4311,7 @@ if ( $wmgUseWikimediaEditorTasks ) {
 
 if ( $wmgUseMachineVision ) {
 	if ( $wmgRealm === 'production' ) {
-		$wgMachineVisionHttpProxy = $wmfLocalServices['urldownloader'];
+		$wgMachineVisionHttpProxy = $wmgLocalServices['urldownloader'];
 	}
 
 	wfLoadExtension( 'MachineVision' );
