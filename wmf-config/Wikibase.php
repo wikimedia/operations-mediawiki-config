@@ -173,8 +173,8 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['taintedReferencesEnabled'] = $wmgWikibaseTaintedReferencesEnabled;
 	}
 
-	if ( isset( $wmgWikibaseRestApiEnabled ) ) {
-		$wgWBRepoSettings['restApiEnabled'] = $wmgWikibaseRestApiEnabled;
+	if ( isset( $wmgWikibaseRestApiEnabled ) && $wmgWikibaseRestApiEnabled ) {
+		$wgRestAPIAdditionalRouteFiles[] = 'extensions/Wikibase/repo/rest-api/routes.json';
 	}
 
 	if ( isset( $wmgWikibaseStringLimits ) ) {
