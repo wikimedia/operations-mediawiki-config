@@ -37,6 +37,7 @@
 use MediaWiki\Auth\AuthenticationResponse;
 use MediaWiki\Extension\ApiFeatureUsage\ApiFeatureUsageQueryEngineElastica;
 use MediaWiki\Extension\CentralAuth\User\CentralAuthUser;
+use MediaWiki\Extension\ExtensionDistributor\Providers\GerritExtDistProvider;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\User\UserIdentity;
@@ -1400,7 +1401,7 @@ if ( $wmgPFEnableStringFunctions ) {
 if ( $wgDBname === 'mediawikiwiki' ) {
 	wfLoadExtension( 'ExtensionDistributor' );
 	$wgExtDistAPIConfig = [
-		'class' => 'GerritExtDistProvider',
+		'class' => GerritExtDistProvider::class,
 		'apiUrl' => 'https://gerrit.wikimedia.org/r/projects/mediawiki%2F$TYPE%2F$EXT/branches',
 		'tarballUrl' => 'https://extdist.wmflabs.org/dist/$TYPE/$EXT-$REF-$SHA.tar.gz',
 		'tarballName' => '$EXT-$REF-$SHA.tar.gz',
