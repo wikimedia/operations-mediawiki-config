@@ -776,6 +776,154 @@ function wmfGetLabsOverrideSettings() {
 						'mobile' => [ 'stable' ],
 					],
 				],
+				// T294363: QA internal survey custom confirmation and additional info
+				'T294363-1' => [
+					'name' => 'T294363-1',
+					'type' => 'internal',
+					'layout' => 'single-answer',
+					'question' => 'ext-quicksurveys-tst-internal-survey-question',
+					'answers' => [
+						'ext-quicksurveys-tst-internal-survey-answer-positive',
+						'ext-quicksurveys-tst-internal-survey-answer-negative',
+					],
+					'shuffleAnswersDisplay' => true,
+					'privacyPolicy' => 'ext-quicksurveys-tst-internal-survey-privacy-policy',
+					'additionalInfo' => 'ext-quicksurveys-tst-internal-survey-additional-info',
+					'confirmMsg' => 'ext-quicksurveys-tst-internal-survey-confirm-msg',
+					'enabled' => true,
+					'coverage' => 0,
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ]
+					],
+				],
+				// T294363: QA internal survey custom confirmation
+				'T294363-2' => [
+					'name' => 'T294363-2',
+					'type' => 'internal',
+					'layout' => 'single-answer',
+					'question' => 'ext-quicksurveys-tst-internal-survey-question',
+					'answers' => [
+						'ext-quicksurveys-tst-internal-survey-answer-positive',
+						'ext-quicksurveys-tst-internal-survey-answer-negative',
+					],
+					'shuffleAnswersDisplay' => true,
+					'privacyPolicy' => 'ext-quicksurveys-tst-internal-survey-privacy-policy',
+					'confirmMsg' => 'ext-quicksurveys-tst-internal-survey-confirm-msg',
+					'enabled' => true,
+					'coverage' => 0,
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ]
+					],
+				],
+				// T294363: QA internal survey additional info
+				'T294363-3' => [
+					'name' => 'T294363-3',
+					'type' => 'internal',
+					'layout' => 'single-answer',
+					'question' => 'ext-quicksurveys-tst-internal-survey-question',
+					'answers' => [
+						'ext-quicksurveys-tst-internal-survey-answer-positive',
+						'ext-quicksurveys-tst-internal-survey-answer-negative',
+					],
+					'shuffleAnswersDisplay' => true,
+					'privacyPolicy' => 'ext-quicksurveys-tst-internal-survey-privacy-policy',
+					'additionalInfo' => 'ext-quicksurveys-tst-internal-survey-additional-info',
+					'enabled' => true,
+					'coverage' => 0,
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ]
+					],
+				],
+				// T294363: QA internal survey
+				'T294363-4' => [
+					'name' => 'T294363-4',
+					'type' => 'internal',
+					'layout' => 'single-answer',
+					'question' => 'ext-quicksurveys-tst-internal-survey-question',
+					'answers' => [
+						'ext-quicksurveys-tst-internal-survey-answer-positive',
+						'ext-quicksurveys-tst-internal-survey-answer-negative',
+					],
+					'shuffleAnswersDisplay' => true,
+					'privacyPolicy' => 'ext-quicksurveys-tst-internal-survey-privacy-policy',
+					'enabled' => true,
+					'coverage' => 0,
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ]
+					],
+				],
+				// T294363: QA external survey custom confirmation and additional info
+				'T294363-5' => [
+					'name' => 'T294363-5',
+					'type' => 'external',
+					'question' => 'ext-quicksurveys-example-external-survey-question',
+					'description' => 'ext-quicksurveys-example-external-survey-description',
+					'link' => 'ext-quicksurveys-example-external-survey-link',
+					'instanceTokenParameterName' => 'parameterName',
+					'privacyPolicy' => 'ext-quicksurveys-tst-internal-survey-privacy-policy',
+					'additionalInfo' => 'ext-quicksurveys-tst-internal-survey-additional-info',
+					'confirmMsg' => 'ext-quicksurveys-tst-internal-survey-confirm-msg',
+					'enabled' => true,
+					'coverage' => 0,
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ]
+					],
+				],
+				// T294363: QA external survey custom confirmation
+				'T294363-6' => [
+					'name' => 'T294363-6',
+					'type' => 'external',
+					'question' => 'ext-quicksurveys-example-external-survey-question',
+					'description' => 'ext-quicksurveys-example-external-survey-description',
+					'link' => 'ext-quicksurveys-example-external-survey-link',
+					'instanceTokenParameterName' => 'parameterName',
+					'privacyPolicy' => 'ext-quicksurveys-tst-internal-survey-privacy-policy',
+					'confirmMsg' => 'ext-quicksurveys-tst-internal-survey-confirm-msg',
+					'enabled' => true,
+					'coverage' => 0,
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ]
+					],
+				],
+				// T294363: QA external survey additional info
+				'T294363-7' => [
+					'name' => 'T294363-7',
+					'type' => 'external',
+					'question' => 'ext-quicksurveys-example-external-survey-question',
+					'description' => 'ext-quicksurveys-example-external-survey-description',
+					'link' => 'ext-quicksurveys-example-external-survey-link',
+					'instanceTokenParameterName' => 'parameterName',
+					'privacyPolicy' => 'ext-quicksurveys-tst-internal-survey-privacy-policy',
+					'additionalInfo' => 'ext-quicksurveys-tst-internal-survey-additional-info',
+					'enabled' => true,
+					'coverage' => 0,
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ]
+					],
+				],
+				// T294363: QA external survey
+				'T294363-8' => [
+					'name' => 'T294363-8',
+					'type' => 'external',
+					'question' => 'ext-quicksurveys-example-external-survey-question',
+					'description' => 'ext-quicksurveys-example-external-survey-description',
+					'link' => 'ext-quicksurveys-example-external-survey-link',
+					'instanceTokenParameterName' => 'parameterName',
+					'privacyPolicy' => 'ext-quicksurveys-tst-internal-survey-privacy-policy',
+					'enabled' => true,
+					'coverage' => 0,
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ]
+					],
+				],
 			],
 			'cawiki' => [
 				// T187299
