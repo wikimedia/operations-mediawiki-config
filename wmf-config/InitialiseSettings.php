@@ -26702,15 +26702,10 @@ function wmfGetVariantSettings() {
 
 // T299421
 'wgTemplateLinksSchemaMigrationStage' => [
-	'default' => SCHEMA_COMPAT_OLD,
-	'labswiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'ruwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'jawiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'frwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'enwikiquote' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'madwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'frwiktionary' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'wikidatawiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	'enwiki' => SCHEMA_COMPAT_OLD,
+	'commonswiki' => SCHEMA_COMPAT_OLD,
+	'testcommonswiki' => SCHEMA_COMPAT_OLD,
 ],
 
 'wgMultiContentRevisionSchemaMigrationStage' => [
