@@ -9183,6 +9183,7 @@ return [
 			'move' => true,
 			'move-categorypages' => true
 		], // T303752
+		'filemover' => [ 'movefile' => true ], // T304968
 	],
 	'+azwikibooks' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T231493
@@ -11973,6 +11974,7 @@ return [
 			'rollbacker', // T215200
 			'extendedconfirmed', // T281860
 			'pagemover', // T303752
+			'filemover', // T304968
 		],
 	],
 	'+azwikibooks' => [
@@ -13362,6 +13364,7 @@ return [
 			'rollbacker', // T215200
 			'extendedconfirmed', // T281860
 			'pagemover', // T303752
+			'filemover', // T304968
 		],
 	],
 	'+azwikibooks' => [
