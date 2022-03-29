@@ -2359,7 +2359,7 @@ function wmfGetLabsOverrideSettings() {
 		],
 
 		'wmgWikibaseClientUnconnectedPageMigrationStage' => [
-			'default' => MIGRATION_WRITE_BOTH,
+			'default' => MIGRATION_NEW,
 		],
 
 		'wmgUseChessBrowser' => [
