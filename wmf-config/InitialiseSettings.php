@@ -5231,7 +5231,7 @@ function wmfGetVariantSettings() {
 	'srwikiquote' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
 	'srwiktionary' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
 	'svwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T279836
-	'testwiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T61084
+	'testwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T61084, T302860
 	'viwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'editautopatrolprotected', 'sysop' ], // T215493, T296154, T303579
 	'zhwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T260012, T287322
 	'zhwiktionary' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T286101
@@ -5255,6 +5255,7 @@ function wmfGetVariantSettings() {
 	'+ptwiki' => [ 'extendedconfirmed' ], // T281926
 	'+rowiki' => [ 'extendedconfirmed' ], // T254471
 	'+svwiki' => [ 'extendedconfirmed' ], // T279836
+	'+testwiki' => [ 'extendedconfirmed' ], // T302860
 	'+viwiki' => [ 'extendedconfirmed' ], // T215493
 	'+zhwiki' => [ 'extendedconfirmed' ], // T287322
 ],
@@ -11037,6 +11038,8 @@ function wmfGetVariantSettings() {
 			'override-antispoof' => true,
 			'tboverride' => true,
 		],
+		'bot' => [ 'extendedconfirmed' => true ], // T302860
+		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T302860
 		'filemover' => [ 'movefile' => true ], // T32121
 		'user' => [
 			'upload_by_url' => true, // For testing of Flickr uploading via UploadWizard
@@ -11050,6 +11053,7 @@ function wmfGetVariantSettings() {
 		],
 		'sysop' => [
 			'deleterevision' => true,
+			'extendedconfirmed' => true, // T302860
 			'templateeditor' => true,
 			'securepoll-create-poll' => true,
 		],
@@ -11671,6 +11675,7 @@ function wmfGetVariantSettings() {
 			'accountcreator',
 			'confirmed',
 			'templateeditor',
+			'extendedconfirmed', // T302860
 		],
 	],
 	'+test2wiki' => [
@@ -13043,6 +13048,7 @@ function wmfGetVariantSettings() {
 			'accountcreator',
 			'confirmed',
 			'templateeditor',
+			'extendedconfirmed', // T302860
 		],
 	],
 	'+test2wiki' => [
@@ -15631,6 +15637,14 @@ function wmfGetVariantSettings() {
 			[ '!', [ APCOND_INGROUPS, 'bureaucrat' ] ],
 			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
 		],
+	],
+	'testwiki' => [
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 30 * 86400 ],
+			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+		], // T302860
 	],
 	'viwiki' => [
 		'extendedconfirmed' => [ '&',
