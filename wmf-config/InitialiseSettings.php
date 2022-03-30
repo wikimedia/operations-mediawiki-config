@@ -24182,6 +24182,12 @@ function wmfGetVariantSettings() {
 	'wikidatawiki' => 3,
 ],
 
+// Enable WikiEditor's Realtime Preview feature.
+'wgWikiEditorRealtimePreview' => [
+	'default' => false,
+	'testwiki' => true, // T302506
+],
+
 'wmgWikibaseUseSSRTermbox' => [
 	'wikidatawiki' => true,
 	'testwikidatawiki' => true,
