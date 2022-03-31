@@ -3395,7 +3395,6 @@ if ( $wmgUseFlow && $wmgUseParsoid ) {
 	}
 
 	if ( $wmgUseVisualEditor ) {
-		$wgFlowEditorList = [ 'visualeditor', 'none' ];
 		$wgDefaultUserOptions['flow-editor'] = 'visualeditor';
 	}
 
