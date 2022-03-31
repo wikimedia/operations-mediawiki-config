@@ -2,6 +2,9 @@
 
 class StaticSettingsGenerationTest extends PHPUnit\Framework\TestCase {
 
+	/**
+	 * @covers \Wikimedia\MWConfig\MWConfigCacheGenerator::getCachableMWConfig
+	 */
 	public function testInheritance() {
 		$inputSettings = [
 			'wgLanguageCode' =>

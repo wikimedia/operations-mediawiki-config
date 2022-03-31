@@ -9,6 +9,9 @@
  */
 use Wikimedia\MWConfig\MWConfigCacheGenerator;
 
+/**
+ * @covers wmf-config/logging.php
+ */
 class LoggingTest extends PHPUnit\Framework\TestCase {
 
 	public function provideHandlerSetup() {

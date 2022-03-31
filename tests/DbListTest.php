@@ -9,6 +9,9 @@
  */
 use Wikimedia\MWConfig\MWConfigCacheGenerator;
 
+/**
+ * @covers DBList
+ */
 class DbListTest extends PHPUnit\Framework\TestCase {
 
 	public static function provideFamilyDbnames() {

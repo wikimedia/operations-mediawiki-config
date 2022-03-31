@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * @covers wmf-config/docroot/noc/conf/highlight.php
+ */
 class NocHighlightTest extends PHPUnit\Framework\TestCase {
 	private $created = [];
 

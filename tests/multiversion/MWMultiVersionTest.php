@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * @covers MWMultiversion
+ */
 class MWMultiVersionTest extends PHPUnit\Framework\TestCase {
 
 	protected function tearDown(): void {

@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * @covers wmf-config/CirrusSearch-common.php
+ */
 class CirrusTest extends WgConfTestCase {
 	public function testClusterConfigurationForProdTestwiki() {
 		$config = $this->loadCirrusConfig( 'production', 'testwiki', 'wiki' );

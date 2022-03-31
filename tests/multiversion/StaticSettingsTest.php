@@ -4,6 +4,11 @@ declare( strict_types = 1 );
 
 use Wikimedia\MWConfig\MWConfigCacheGenerator;
 
+/**
+ * Really tests the settings retrieved from wmfGetVariantSettings, but no easy way to mark that
+ *
+ * @covers wmfGetVariantSettings
+ */
 class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 
 	/**
