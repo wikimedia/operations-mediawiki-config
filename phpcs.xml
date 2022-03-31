@@ -4,7 +4,6 @@
 		<exclude name="Generic.Classes.DuplicateClassName.Found" />
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingDocumentationPrivate" />
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingParamTag" />
-		<exclude name="MediaWiki.Commenting.FunctionComment.SuperfluousVariadicArgComment" />
 		<exclude name="MediaWiki.Commenting.FunctionComment.WrongStyle" />
 		<exclude name="MediaWiki.Commenting.MissingCovers.MissingCovers" />
 		<exclude name="MediaWiki.Commenting.PropertyDocumentation.MissingDocumentationPrivate" />
@@ -14,7 +13,6 @@
 		<exclude name="MediaWiki.Files.ClassMatchesFilename.NotMatch" />
 		<exclude name="MediaWiki.Files.ClassMatchesFilename.WrongCase" />
 		<exclude name="MediaWiki.NamingConventions.PrefixedGlobalFunctions.allowedPrefix" />
-		<exclude name="MediaWiki.NamingConventions.PrefixedGlobalFunctions.wfPrefix" />
 		<exclude name="MediaWiki.NamingConventions.ValidGlobalName.allowedPrefix" />
 		<exclude name="MediaWiki.Usage.SuperGlobalsUsage.SuperGlobals" />
 		<exclude name="MediaWiki.VariableAnalysis.MisleadingGlobalNames.Misleading$wgConf" />
@@ -31,9 +29,6 @@
 	<rule ref="Generic.Files.LineLength.TooLong">
 		<severity>0</severity>
 	</rule>
-	<rule ref="Generic.PHP.CharacterBeforePHPOpeningTag.Found">
-		<severity>0</severity>
-	</rule>
 	<rule ref="Generic.PHP.NoSilencedErrors.Discouraged">
 		<severity>0</severity>
 	</rule>
@@ -44,11 +39,7 @@
 	<rule ref="MediaWiki.Usage.ForbiddenFunctions.extract">
 		<exclude-pattern>wmf-config/CommonSettings\.php</exclude-pattern>
 	</rule>
-	<rule ref="Squiz.Classes.ValidClassName.NotCamelCaps">
-		<severity>0</severity>
-	</rule>
 	<rule ref="MediaWiki.Usage.ForbiddenFunctions.exec">
-		<exclude-pattern>docroot/noc/conf/index\.php</exclude-pattern>
 		<exclude-pattern>docroot/noc/conf/activeMWVersions\.php</exclude-pattern>
 	</rule>
 
