@@ -6,6 +6,10 @@ use Wikimedia\MWConfig\MWConfigCacheGenerator;
 
 class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 
+	/**
+	 * @var array[] keys are the names of settings, values are arrays mapping wiki names
+	 *   to configured setting values
+	 */
 	protected $variantSettings = [];
 	private $originalWmfDC;
 

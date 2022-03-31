@@ -12,7 +12,10 @@ use Wikimedia\MWConfig\MWConfigCacheGenerator;
 
 abstract class WgConfTestCase extends PHPUnit\Framework\TestCase {
 
+	/** @var array mapping string name to original value */
 	protected $globals = [];
+
+	/** @var bool[] mapping string name of the setting to the value true */
 	protected $globalsToUnset = [];
 
 	protected function restoreGlobals() {
