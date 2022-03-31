@@ -86,7 +86,10 @@ class NocHighlightTest extends PHPUnit\Framework\TestCase {
 		);
 	}
 
-	/** @return string Page output */
+	/**
+	 * @param string $q value of file parameter to set
+	 * @return string Page output
+	 */
 	protected function runHighlight( $q ) {
 		$_GET = [
 			'file' => $q
