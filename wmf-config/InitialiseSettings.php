@@ -27421,8 +27421,7 @@ function wmfGetVariantSettings() {
 	],
 	'eswiki' => [
 		'T303240_mailinglist' => [
-			// T305015: Set to 80 when T303240 begins
-			'percentage' => 0,
+			'percentage' => 80,
 			'questions' => [
 				'reason',
 				'edited',
@@ -27432,8 +27431,10 @@ function wmfGetVariantSettings() {
 			],
 		],
 		'T303240_mailinglist_control' => [
-			// T305015: Set to 20 when T303240 begins
-			'percentage' => 0,
+			// T305015: the questions are identical to above, but the experiment group is
+			// saved to the user's welcome survey response, so we can distinguish between
+			// control and experiment group
+			'percentage' => 20,
 			'questions' => [
 				'reason',
 				'edited',
@@ -27443,8 +27444,8 @@ function wmfGetVariantSettings() {
 			],
 		],
 		'exp2_target_specialpage' => [
-			// Set to 0 when T303240 begins.
-			'percentage' => 100,
+			// T307985: Revert back to 100 and remove the other options when the campaign ends.
+			'percentage' => 0,
 		],
 	]
 ],
