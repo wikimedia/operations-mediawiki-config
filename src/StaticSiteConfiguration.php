@@ -30,17 +30,17 @@ namespace Wikimedia\MWConfig;
 class StaticSiteConfiguration {
 
 	/**
-	 * Array of suffixes, for self::siteFromDB()
+	 * @var array the array of suffixes, for self::siteFromDB()
 	 */
 	public $suffixes = [];
 
 	/**
-	 * Array of wikis, should be the same as $wgLocalDatabases
+	 * @var array the array of wikis, should be the same as $wgLocalDatabases
 	 */
 	public $wikis = [];
 
 	/**
-	 * The whole array of settings
+	 * @var array the whole array of settings
 	 */
 	public $settings = [];
 
