@@ -629,6 +629,9 @@ function wmfGetVariantSettings() {
 'wmgSiteLogoVariants' => [
 	'zhwiki' => [
 		'zh-hans' => [
+			'1x' => '/static/images/project-logos/zhwiki-hans.png',
+			'1.5x' => '/static/images/project-logos/zhwiki-hans-1.5x.png',
+			'2x' => '/static/images/project-logos/zhwiki-hans-2x.png',
 			'wordmark' => [
 				'src' => '/static/images/mobile/copyright/wikipedia-wordmark-zh-hans.svg',
 				'width' => 105,
@@ -641,6 +644,9 @@ function wmfGetVariantSettings() {
 			],
 		],
 		'zh-cn' => [
+			'1x' => '/static/images/project-logos/zhwiki-hans.png',
+			'1.5x' => '/static/images/project-logos/zhwiki-hans-1.5x.png',
+			'2x' => '/static/images/project-logos/zhwiki-hans-2x.png',
 			'wordmark' => [
 				'src' => '/static/images/mobile/copyright/wikipedia-wordmark-zh-hans.svg',
 				'width' => 105,
@@ -653,6 +659,9 @@ function wmfGetVariantSettings() {
 			],
 		],
 		'zh-my' => [
+			'1x' => '/static/images/project-logos/zhwiki-hans.png',
+			'1.5x' => '/static/images/project-logos/zhwiki-hans-1.5x.png',
+			'2x' => '/static/images/project-logos/zhwiki-hans-2x.png',
 			'wordmark' => [
 				'src' => '/static/images/mobile/copyright/wikipedia-wordmark-zh-hans.svg',
 				'width' => 105,
@@ -665,6 +674,9 @@ function wmfGetVariantSettings() {
 			],
 		],
 		'zh-sg' => [
+			'1x' => '/static/images/project-logos/zhwiki-hans.png',
+			'1.5x' => '/static/images/project-logos/zhwiki-hans-1.5x.png',
+			'2x' => '/static/images/project-logos/zhwiki-hans-2x.png',
 			'wordmark' => [
 				'src' => '/static/images/mobile/copyright/wikipedia-wordmark-zh-hans.svg',
 				'width' => 105,
