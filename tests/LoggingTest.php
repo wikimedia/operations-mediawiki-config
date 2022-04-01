@@ -65,7 +65,7 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 		$wmgDefaultMonologHandler = 'blackhole';
 		$wgDebugLogFile = false;
 		$wmgLogAuthmanagerMetrics = false;
-		$wmgUdp2logDest = $wmfUdp2logDest = 'localhost';
+		$wmgUdp2logDest = 'localhost';
 		$wmgEnableLogstash = true;
 		$wmgUseEventBus = true;
 		$wmgMonologChannels = [ 'test' => $channelConfig ];

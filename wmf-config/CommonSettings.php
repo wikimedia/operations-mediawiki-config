@@ -183,7 +183,7 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 	unset( $etcdConfig );
 }
 
-$wmgUdp2logDest = $wmfUdp2logDest = $wmgLocalServices['udp2log'];
+$wmgUdp2logDest = $wmgLocalServices['udp2log'];
 if ( $wgDBname === 'testwiki' || $wgDBname === 'test2wiki' ) {
 	$wgDebugLogFile = "udp://{$wmgUdp2logDest}/testwiki";
 } else {

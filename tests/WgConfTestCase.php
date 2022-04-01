@@ -79,7 +79,6 @@ abstract class WgConfTestCase extends PHPUnit\Framework\TestCase {
 	final protected function loadWgConf( $wmgRealm ) {
 		// Needed for InitialiseSettings.php
 		$this->setGlobals( [
-			'wmfUdp2logDest' => 'localhost',
 			'wmgUdp2logDest' => 'localhost',
 			'wmgDatacenter' => 'unittest',
 			'wmgMasterDatacenter' => 'unittest',
