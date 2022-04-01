@@ -50,10 +50,10 @@
 #
 #   Note: Sampled logs will not be sent to Logstash!
 #
-#   Note: Udp2log events are sent to udp://{$wmfUdp2logDest}/{$channel}.
+#   Note: Udp2log events are sent to udp://{$wmgUdp2logDest}/{$channel}.
 #   Ultimately they end up in logfiles on mwlog1001.
 #
-# - $wmfUdp2logDest: udp2log host and port.
+# - $wmgUdp2logDest: udp2log host and port.
 # - $wmgLogAuthmanagerMetrics: Controls additional authmanager logging.
 #
 
@@ -74,7 +74,7 @@ if ( getenv( 'MW_DEBUG_LOCAL' ) ) {
 } elseif ( XWikimediaDebug::getInstance()->hasOption( 'log' ) ) {
 	// Forward all log messages to logstash for debugging.
 	// See <https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug>.
-	$wgDebugLogFile = "udp://{$wmfUdp2logDest}/XWikimediaDebug";
+	$wgDebugLogFile = "udp://{$wmgUdp2logDest}/XWikimediaDebug";
 	$wmgDefaultMonologHandler = [ 'wgDebugLogFile', 'logstash-debug' ];
 	$wmgMonologChannels = [];
 	$wgDebugDumpSql = true;
@@ -263,7 +263,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 			$wmgMonologConfig['handlers'][$udp2logHandler] = [
 				'class' => \MediaWiki\Logger\Monolog\LegacyHandler::class,
 				'args' => [
-					"udp://{$wmfUdp2logDest}/{channel}",
+					"udp://{$wmgUdp2logDest}/{channel}",
 					false,
 					$opts['udp2log']
 				],

@@ -5344,7 +5344,7 @@ function wmfGetVariantSettings() {
 // Defaults: [ 'udp2log'=>'debug', 'logstash'=>'info', 'sample'=>false, 'buffer'=>false, 'eventbus' => 'debug' ]
 // Valid levels: 'debug', 'info', 'warning', 'error', false
 // Note: sampled logs will not be sent to Logstash
-// Note: Udp2log events are sent to udp://{$wmfUdp2logDest}/{$channel}
+// Note: Udp2log events are sent to udp://{$wmgUdp2logDest}/{$channel}
 'wmgMonologChannels' => [
 	// When changing the default, please also update the -labs settings to ensure that the
 	// logging on the beta cluster includes at least the same data that production includes
