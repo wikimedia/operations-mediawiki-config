@@ -26807,6 +26807,11 @@ function wmfGetVariantSettings() {
 	'default' => [ 'DISPLAY' => ':99' ],
 ],
 
+// T233004
+'wgCheckUserActorMigrationStage' => [
+	'default' => SCHEMA_COMPAT_OLD,
+],
+
 // T166759
 'wgAutoloadAttemptLowercase' => [
 	'default' => false,
