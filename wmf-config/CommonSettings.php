@@ -133,7 +133,7 @@ $wmgServerGroup = $_SERVER['SERVERGROUP'] ?? '';
 # SERVERGROUP is set by Puppet in profile::mediawiki::httpd, in
 # Kubernetes pods, it's set by configuring the php.servergroup
 # Helm value.
-$wmgUsingKubernetes = $wmfUsingKubernetes = strpos( $wmgServerGroup, 'kube-' ) === 0;
+$wmgUsingKubernetes = strpos( $wmgServerGroup, 'kube-' ) === 0;
 
 # Get all the service definitions
 $wmgAllServices = ServiceConfig::getInstance()->getAllServices();
