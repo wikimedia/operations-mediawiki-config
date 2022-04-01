@@ -242,7 +242,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 			'status' => [ 'review' => 1, 'autoreview' => 1 ],
 		];
 		# Restriction levels for auto-review/review rights
-		$wgFlaggedRevsRestrictionLevels = [ '', 'autoconfirmed', 'review' ];
+		$wgFlaggedRevsRestrictionLevels = [ 'autoconfirmed', 'review' ];
 
 		# Group permissions for autoconfirmed
 		$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
@@ -281,7 +281,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 			'status' => [ 'review' => 1, 'autoreview' => 1 ],
 		];
 		# Restriction levels for autoconfirmed, autopatrol and review rights
-		$wgFlaggedRevsRestrictionLevels = [ '', 'autoconfirmed', 'autopatrol', 'review' ];
+		$wgFlaggedRevsRestrictionLevels = [ 'autoconfirmed', 'autopatrol', 'review' ];
 
 		# User groups permissions
 		$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
@@ -337,7 +337,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 			'status' => [ 'review' => 1, 'autoreview' => 1 ],
 		];
 		# Restriction levels for auto-review/review rights
-		$wgFlaggedRevsRestrictionLevels = [ '', 'autoconfirmed' ];
+		$wgFlaggedRevsRestrictionLevels = [ 'autoconfirmed' ];
 		# Group permissions for autoconfirmed
 		$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
 
@@ -392,7 +392,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 			'status' => [ 'review' => 1, 'autoreview' => 1 ],
 		];
 		# Restriction levels for auto-review/review rights
-		$wgFlaggedRevsRestrictionLevels = [ '', 'autoconfirmed', 'autoreview' ];
+		$wgFlaggedRevsRestrictionLevels = [ 'autoconfirmed', 'autoreview' ];
 
 		# User groups permissions
 		$wgGroupPermissions['rollbacker']['autoreviewrestore'] = true;
@@ -462,7 +462,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 			'status' => [ 'review' => 1, 'autoreview' => 1 ],
 		];
 		# Restriction levels for auto-review/review rights
-		$wgFlaggedRevsRestrictionLevels = [ '', 'autoconfirmed', 'review', 'sysop' ];
+		$wgFlaggedRevsRestrictionLevels = [ 'autoconfirmed', 'review', 'sysop' ];
 		# Group permissions for autoconfirmed
 		$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
 
@@ -509,7 +509,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 	} elseif ( $wgDBname == 'idwiki' ) {
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
-		$wgFlaggedRevsRestrictionLevels = [ '', 'autoconfirmed', 'autoreview', 'sysop' ];
+		$wgFlaggedRevsRestrictionLevels = [ 'autoconfirmed', 'autoreview', 'sysop' ];
 	} elseif ( $wgDBname == 'kawiki' ) {
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
@@ -530,7 +530,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 			'status' => [ 'review' => 1, 'autoreview' => 1 ],
 		];
 		# Restriction levels for autoconfirmed rights
-		$wgFlaggedRevsRestrictionLevels = [ '', 'autoconfirmed' ];
+		$wgFlaggedRevsRestrictionLevels = [ 'autoconfirmed' ];
 
 		# Group permissions
 		$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
