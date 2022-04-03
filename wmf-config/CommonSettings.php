@@ -2614,7 +2614,7 @@ if ( $wmgCustomUploadDialog ) {
 			'local' => $wgDBname === 'commonswiki' ? 'commons' : 'generic-local',
 			'foreign' => $wgDBname === 'commonswiki' ? 'commons' : 'generic-foreign',
 		],
-		'comment' => 'Cross-wiki upload from $HOST',
+		'comment' => 'Uploaded while editing "$PAGENAME" on $HOST',
 		'format' => [
 			'filepage' => '== {{int:filedesc}} ==
 {{Information
