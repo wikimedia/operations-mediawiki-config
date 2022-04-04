@@ -86,7 +86,7 @@ return [
 	'crhwiki' => '/static/images/project-logos/crhwiki.png',
 	'crwiki' => '/static/images/project-logos/crwiki.png',
 	'csbwiki' => '/static/images/project-logos/csbwiki.png', // T42285
-	'cswiki' => '/static/images/project-logos/cswiki-500k.png',
+	'cswiki' => '/static/images/project-logos/cswiki.png',
 	'cuwiki' => '/static/images/project-logos/cuwiki.png',
 	'cvwiki' => '/static/images/project-logos/cvwiki.png',
 	'cywiki' => '/static/images/project-logos/cywiki.png',
@@ -891,7 +891,7 @@ return [
 	'crhwiki' => '/static/images/project-logos/crhwiki-1.5x.png', // T150618
 	'crwiki' => '/static/images/project-logos/crwiki-1.5x.png', // T150618
 	'csbwiki' => '/static/images/project-logos/csbwiki-1.5x.png', // T150618
-	'cswiki' => '/static/images/project-logos/cswiki-500k-1.5x.png', // T130392
+	'cswiki' => '/static/images/project-logos/cswiki-1.5x.png', // T130392
 	'cuwiki' => '/static/images/project-logos/cuwiki-1.5x.png', // T150618
 	'cvwiki' => '/static/images/project-logos/cvwiki-1.5x.png', // T150618
 	'cywiki' => '/static/images/project-logos/cywiki-1.5x.png', // T150618
@@ -1472,7 +1472,7 @@ return [
 	'crhwiki' => '/static/images/project-logos/crhwiki-2x.png', // T150618
 	'crwiki' => '/static/images/project-logos/crwiki-2x.png', // T150618
 	'csbwiki' => '/static/images/project-logos/csbwiki-2x.png', // T150618
-	'cswiki' => '/static/images/project-logos/cswiki-500k-2x.png', // T130392
+	'cswiki' => '/static/images/project-logos/cswiki-2x.png', // T130392
 	'cuwiki' => '/static/images/project-logos/cuwiki-2x.png', // T150618
 	'cvwiki' => '/static/images/project-logos/cvwiki-2x.png', // T150618
 	'cywiki' => '/static/images/project-logos/cywiki-2x.png', // T150618
