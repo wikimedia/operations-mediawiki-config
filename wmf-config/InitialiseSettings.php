@@ -10412,6 +10412,12 @@ return [
 	],
 	'+kswiki' => [
 		'rollbacker' => [ 'rollback' => true ], // T286789
+		'uploader' => [ // T305320
+			'upload' => true,
+			'reupload' => true,
+			'reupload-own' => true,
+			'reupload-shared' => true,
+		],
 	],
 	'+ladwiki' => [
 		'flood' => [ 'bot' => true ], // T131527
@@ -12592,7 +12598,7 @@ return [
 		],
 	],
 	'+kswiki' => [
-		'sysop' => [ 'rollbacker' ], // T286789
+		'sysop' => [ 'rollbacker', 'uploader' ], // T286789, T305320
 	],
 	'+ladwiki' => [
 		'sysop' => [ 'flood' ], // T131527
@@ -13834,7 +13840,7 @@ return [
 		'sysop' => [ 'rollbacker', 'confirmed', 'uploader', 'autopatrolled', 'extendedconfirmed' ], // T85621, T130808, T184675
 	],
 	'+kswiki' => [
-		'sysop' => [ 'rollbacker' ], // T286789
+		'sysop' => [ 'rollbacker', 'uploader' ], // T286789, T305320
 	],
 	'+ladwiki' => [
 		'sysop' => [ 'flood' ], // T131527
