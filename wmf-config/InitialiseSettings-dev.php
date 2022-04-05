@@ -68,5 +68,8 @@ function wmfGetOverrideSettings() {
 		'-wmgUseScore' => [
 			'default' => false,
 		],
+		'-wmgUseDynamicSidebar' => [
+			'default' => false,
+		],
 	];
 }
