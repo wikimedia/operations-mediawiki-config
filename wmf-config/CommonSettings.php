@@ -211,7 +211,7 @@ function wmfLoadInitialiseSettings( $conf ) {
 
 	### Realm overrides #####
 	if ( $wmgRealm !== 'production' ) {
-		require_once "$wmfConfigDir/InitialiseSettings-$wmgRealm.php";
+		require_once __DIR__ . "/InitialiseSettings-$wmgRealm.php";
 		$settings = wmfApplyOverrideSettings( $settings );
 	}
 
@@ -339,11 +339,7 @@ if ( $wmgRealm === 'labs' ) {
 	require "$wmfConfigDir/mc-labs.php";
 }
 # db-*.php needs $wgDebugDumpSql so should be loaded after logging.php
-if ( $wmgRealm !== 'production' ) {
-	require "$wmfConfigDir/db-$wmgRealm.php";
-} else {
-	require "$wmfConfigDir/db-production.php";
-}
+require __DIR__ . "/db-$wmgRealm.php";
 
 # Override certain settings in command-line mode
 # This must be after InitialiseSettings.php is processed (T197475)
@@ -1573,8 +1569,8 @@ $wgFooterIcons['copyright']['copyright'] = '<a href="https://wikimediafoundation
 # Must come *AFTER* PoolCounterSettings.php
 wfLoadExtension( 'Elastica' );
 if ( $wmgRealm !== 'dev' ) { // dancy
- wfLoadExtension( 'CirrusSearch' );
- include "$wmfConfigDir/CirrusSearch-common.php";
+	wfLoadExtension( 'CirrusSearch' );
+	include __DIR__ . '/CirrusSearch-common.php';
 }
 
 $wgInvalidateCacheOnLocalSettingsChange = false;

@@ -159,7 +159,7 @@ $localMultiWriteFileBackend = [
 	'lockManager' => 'redisLockManager',
 	# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 	'backends'    => [
-		[ 'template' => "local-swift-$wmfMasterDatacenter", 'isMultiMaster' => true ],
+		[ 'template' => "local-swift-$wmgMasterDatacenter", 'isMultiMaster' => true ],
 	],
 	'replication' => 'sync', // read-after-update for assets
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
@@ -172,7 +172,7 @@ $sharedMultiwriteFileBackend = [
 	'lockManager' => 'redisLockManager',
 	# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 	'backends'    => [
-		[ 'template' => "shared-swift-$wmfMasterDatacenter", 'isMultiMaster' => true ],
+		[ 'template' => "shared-swift-$wmgMasterDatacenter", 'isMultiMaster' => true ],
 	],
 	'replication' => 'sync', // read-after-update for assets
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)

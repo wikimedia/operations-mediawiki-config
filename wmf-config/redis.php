@@ -24,7 +24,9 @@ if ( $wmfUsingKubernetes ) {
 		$nutcrackerServersByDc[$dc] = "/var/run/nutcracker/redis_{$dc}.sock";
 	}
 }
-foreach ( $wmfDatacenters as $dc ) {
+// train-dev hack
+$nutcrackerServersByDc['dev'] = '/var/run/nutcracker/redis_dev.sock';
+foreach ( $wmgDatacenters as $dc ) {
 	$wgObjectCaches["redis_{$dc}"] = [
 		'class'       => 'RedisBagOStuff',
 		'servers'     => [ $nutcrackerServersByDc[$dc] ],
