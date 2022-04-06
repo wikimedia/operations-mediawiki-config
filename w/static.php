@@ -19,11 +19,11 @@
  * - Apache configuration rewrites "/w/skins/*", "/w/resources/*", and "/w/extension/*"
  *   to /w/static.php (this file).
  *   Here we stream the file from the appropiate MediaWiki branch directory.
- * - For performance, Varnish caches responses from static.php in a hostname-agnostic
- *   way if a hexidecimal query string is set. (E.g. verifiable hash.)
- *   Therefore static.php MUST respond in a deterministic way for those requests
+ * - For performance and to address race conditions around deployment,
+ *   Varnish routes static.php requests in a hostname-agnostic way.
+ *   Therefore static.php MUST respond in a deterministic way for all requests
  *   regardless of which wiki made the request. (Compliance is enforced via VCL by
- *   hardcoding 'en.wikipedia.org' for these requests, per static_host config.)
+ *   hardcoding "en.wikipedia.org", via static_host in Puppet.)
  *
  * In addition to the above, when responding to a request with a version hash we consider
  * both the latest and previous MediaWiki branches as the source to serve the file.
@@ -170,8 +170,6 @@ function wmfStaticParsePath( $uri ) {
 }
 
 function wmfStaticRespond() {
-	global $IP;
-
 	if ( !isset( $_SERVER['REQUEST_URI'] ) || !isset( $_SERVER['SCRIPT_NAME'] ) ) {
 		wmfStaticShowError( 'Bad request', 400 );
 		return;
@@ -215,13 +213,9 @@ function wmfStaticRespond() {
 	$validHash = $urlHash && preg_match( '/^[a-fA-F0-9]{5}$/', $urlHash );
 
 	if ( $uriPrefix === WMF_STATIC_PREFIX_CURRENT ) {
-		// "Current" always points to the newest branch and ignores any validation hash
-		$branchDirs = array_slice( $branchDirs, 0, 1 );
 		$urlHash = false;
 		$validHash = false;
 		$responseType = 'nohash';
-	} elseif ( !$validHash ) {
-		array_unshift( $branchDirs, $IP );
 	}
 
 	$stats = RequestContext::getMain()->getStats();
