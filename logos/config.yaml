@@ -381,6 +381,7 @@ Wikipedia:
         comment_2x:  T150618
 
     fawiki:
+        commons: File:Wikipedia-logo-v2-fa.svg
 
     ffwiki:
         comment_1_5x:  T150618
@@ -468,6 +469,12 @@ Wikipedia:
     guwiki:
         comment_1_5x:  T150618
         comment_2x:  T150618
+
+    guwwiki:
+        comment: T303727
+        comment_1_5x: T303727
+        comment_2x: T303727
+        commons: File:Wikipedia-logo-v2-gungbe.svg
 
     gvwiki:
         comment:  T48589
@@ -2027,6 +2034,8 @@ Wikiquote:
         comment_2x:  T170604
 
     etwikiquote:
+        commons: File:EE Vikitsitaadid logo.svg
+        comment: T302683
         no_1_5x: true
         no_2x: true
 
@@ -2597,6 +2606,7 @@ Wikisource:
 
     banwikisource:
         commons: File:Wikisource-logo-ban.svg
+        comment: T296459
 
     bewikisource:
         comment_1_5x:  T150618
@@ -2934,6 +2944,12 @@ Wikivoyage:
     ruwikivoyage:
         comment_1_5x:  T150618
         comment_2x:  T150618
+
+    shnwikivoyage:
+        comment: T302797
+        comment_1_5x: T302797
+        comment_2x: T302797
+        commons: File:Wikivoyage-Logo-shn.svg
 
     ukwikivoyage:
         comment:  T110370

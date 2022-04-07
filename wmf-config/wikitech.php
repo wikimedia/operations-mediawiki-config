@@ -19,7 +19,7 @@ $wgAuthManagerAutoConfig['primaryauth'] += [
 $wgLDAPDomainNames = [ 'labs' ];
 switch ( $wgDBname ) {
 case 'labswiki':
-	$wgLDAPServerNames = [ 'labs' => "ldap-rw.{$wmfDatacenter}.wikimedia.org" ];
+	$wgLDAPServerNames = [ 'labs' => "ldap-rw.{$wmgDatacenter}.wikimedia.org" ];
 	break;
 case 'labtestwiki':
 	$wgLDAPServerNames = [ 'labs' => 'cloudservices2002-dev.wikimedia.org' ];
@@ -75,13 +75,13 @@ wfLoadExtension( 'OpenStackManager' );
 // Dummy setting for conduit api token to be used by the BlockIpComplete hook
 // that tries to disable Phabricator accounts. Real value should be provided
 // by /etc/mediawiki/WikitechPrivateSettings.php
-$wmfPhabricatorApiToken = false;
+$wmgPhabricatorApiToken = false;
 
 // Dummy settings for Gerrit api access to be used by the BlockIpComplete hook
 // that tries to disable Gerrit accounts. Real values should be provided by
 // /etc/mediawiki/WikitechPrivateSettings.php
-$wmfGerritApiUser = false;
-$wmfGerritApiPassword = false;
+$wmgGerritApiUser = false;
+$wmgGerritApiPassword = false;
 
 # This must be loaded AFTER OSM, to overwrite it's defaults
 # Except when we're not an OSM host and we're running like a maintenance script.
@@ -121,8 +121,8 @@ function wmfPhabClient( string $apiToken, string $path, $query ) {
 
 // Attempt to disable related accounts when a developer account is
 // permablocked.
-$wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( $wmfPhabricatorApiToken ) {
-	if ( !$wmfPhabricatorApiToken
+$wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( $wmgPhabricatorApiToken ) {
+	if ( !$wmgPhabricatorApiToken
 		|| $block->getType() !== /* Block::TYPE_USER */ 1
 		|| $block->getExpiry() !== 'infinity'
 		|| !$block->isSitewide()
@@ -134,7 +134,7 @@ $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( 
 
 	try {
 		$username = $block->getTargetName();
-		$resp = wmfPhabClient( $wmfPhabricatorApiToken, 'user.ldapquery', [
+		$resp = wmfPhabClient( $wmgPhabricatorApiToken, 'user.ldapquery', [
 			'ldapnames' => [ $username ],
 			'offset' => 0,
 			'limit' => 1,
@@ -142,7 +142,7 @@ $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( 
 
 		if ( $resp ) {
 			$phid = $resp[0]['phid'];
-			wmfPhabClient( $wmfPhabricatorApiToken, 'user.disable', [
+			wmfPhabClient( $wmgPhabricatorApiToken, 'user.disable', [
 				'phids' => [ $phid ],
 			] );
 		}
@@ -153,8 +153,8 @@ $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( 
 		);
 	}
 };
-$wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmfPhabricatorApiToken ) {
-	if ( !$wmfPhabricatorApiToken
+$wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmgPhabricatorApiToken ) {
+	if ( !$wmgPhabricatorApiToken
 		|| $block->getType() !== /* Block::TYPE_USER */ 1
 		|| $block->getExpiry() !== 'infinity'
 		|| !$block->isSitewide()
@@ -166,7 +166,7 @@ $wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmf
 
 	try {
 		$username = $block->getTargetName();
-		$resp = wmfPhabClient( $wmfPhabricatorApiToken, 'user.ldapquery', [
+		$resp = wmfPhabClient( $wmgPhabricatorApiToken, 'user.ldapquery', [
 			'ldapnames' => [ $username ],
 			'offset' => 0,
 			'limit' => 1,
@@ -174,7 +174,7 @@ $wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmf
 
 		if ( $resp ) {
 			$phid = $resp[0]['phid'];
-			wmfPhabClient( $wmfPhabricatorApiToken, 'user.enable', [
+			wmfPhabClient( $wmgPhabricatorApiToken, 'user.enable', [
 				'phids' => [ $phid ],
 			] );
 		}
@@ -221,9 +221,9 @@ function wmfGerritSetActive(
 	return $status;
 }
 
-$wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( $wmfGerritApiUser, $wmfGerritApiPassword ) {
-	if ( !$wmfGerritApiUser
-		|| !$wmfGerritApiPassword
+$wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( $wmgGerritApiUser, $wmgGerritApiPassword ) {
+	if ( !$wmgGerritApiUser
+		|| !$wmgGerritApiPassword
 		|| $block->getType() !== /* Block::TYPE_USER */ 1
 		|| $block->getExpiry() !== 'infinity'
 		|| !$block->isSitewide()
@@ -235,8 +235,8 @@ $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( 
 	try {
 		$username = strtolower( $block->getTargetName() );
 		$status = wmfGerritSetActive(
-			$wmfGerritApiUser,
-			$wmfGerritApiPassword,
+			$wmgGerritApiUser,
+			$wmgGerritApiPassword,
 			$username,
 			'DELETE'
 		);
@@ -254,9 +254,9 @@ $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( 
 		);
 	}
 };
-$wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmfGerritApiUser, $wmfGerritApiPassword ) {
-	if ( !$wmfGerritApiUser
-		|| !$wmfGerritApiPassword
+$wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmgGerritApiUser, $wmgGerritApiPassword ) {
+	if ( !$wmgGerritApiUser
+		|| !$wmgGerritApiPassword
 		|| $block->getType() !== /* Block::TYPE_USER */ 1
 		|| $block->getExpiry() !== 'infinity'
 		|| !$block->isSitewide()
@@ -268,8 +268,8 @@ $wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmf
 	try {
 		$username = strtolower( $block->getTargetName() );
 		$status = wmfGerritSetActive(
-			$wmfGerritApiUser,
-			$wmfGerritApiPassword,
+			$wmgGerritApiUser,
+			$wmgGerritApiPassword,
 			$username,
 			'PUT'
 		);

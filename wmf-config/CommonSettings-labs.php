@@ -25,7 +25,7 @@ $wmgAddWikiNotify = false;
 # Use a different address from the production one - T192686
 $wgPasswordSender = 'wiki@wikimedia.beta.wmflabs.org';
 
-# Enable for all Beta wikis, depends on $wmfAllServices.
+# Enable for all Beta wikis, depends on $wmgAllServices.
 $wgDebugLogFile = "udp://{$wmfUdp2logDest}/wfDebug";
 
 // Password policies; see https://meta.wikimedia.org/wiki/Password_policy
@@ -156,7 +156,7 @@ if ( $wmgUseCentralNotice ) {
 	// Emit CSP headers on banner previews. This can go away when full CSP
 	// support (T135963) is deployed.
 	// www.pages04.net is used by Wikimedia Fundraising to enable 'remind me later' banner functionality, which submits email addresses to our email campaign vendor
-	$wgCentralNoticeContentSecurityPolicy = "script-src 'unsafe-eval' blob: 'self' meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org 'unsafe-inline'; default-src 'self' data: blob: https://upload.beta.wmflabs.org upload.beta.wmflabs.org https://upload.wikimedia.beta.wmflabs.org upload.wikimedia.beta.wmflabs.org https://commons.wikimedia.beta.wmflabs.org https://upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net; style-src 'self' data: blob: https://upload.beta.wmflabs.org upload.beta.wmflabs.org https://upload.wikimedia.beta.wmflabs.org upload.wikimedia.beta.wmflabs.org https://commons.wikimedia.beta.wmflabs.org https://upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org wikimedia.org 'unsafe-inline';";
+	$wgCentralNoticeContentSecurityPolicy = "script-src 'unsafe-eval' blob: 'self' meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org 'unsafe-inline'; default-src 'self' data: blob: https://upload.beta.wmflabs.org upload.beta.wmflabs.org https://upload.wikimedia.beta.wmflabs.org upload.wikimedia.beta.wmflabs.org https://commons.wikimedia.beta.wmflabs.org https://upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.mediawiki.org wikimedia.org www.pages04.net; style-src 'self' data: blob: https://upload.beta.wmflabs.org upload.beta.wmflabs.org https://upload.wikimedia.beta.wmflabs.org upload.wikimedia.beta.wmflabs.org https://commons.wikimedia.beta.wmflabs.org https://wikifunctions.beta.wmflabs.org https://upload.wikimedia.org https://commons.wikimedia.org meta.wikimedia.beta.wmflabs.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikivoyage.org *.wikifunctions.org *.mediawiki.org wikimedia.org 'unsafe-inline';";
 }
 
 if ( $wmgUseCite ) {
@@ -356,7 +356,6 @@ if ( $wmgUseStopForumSpam ) {
 	wfLoadExtension( 'StopForumSpam' );
 	$wgSFSIPListLocation = 'https://www.stopforumspam.com/downloads/listed_ip_90_ipv46_all.gz';
 	$wgSFSIPListLocationMD5 = 'https://www.stopforumspam.com/downloads/listed_ip_90_ipv46_all.gz.md5';
-	$wgSFSReportOnly = true;
 }
 
 $wgMessageCacheType = CACHE_ACCEL;
@@ -382,41 +381,10 @@ if ( $wmgUseWikimediaApiPortalOAuth ) {
 
 // Test of new import source configuration on labs cluster
 $wgImportSources = [];
-include "$wmfConfigDir/import.php";
+require_once __DIR__ . '/import.php';
 $wgHooks['ImportSources'][] = 'wmfImportSources';
 
 wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
-
-// Temporary feature flag for the CodeMirror bracket matching see T261857
-$wgCodeMirrorEnableBracketMatching = true;
-
-// Temporary feature flag for the CodeMirror accessibility color schema see T271895
-$wgCodeMirrorAccessibilityColors = true;
-
-// Temporarily enable line numbering on beta, see T267911.
-$wgCodeMirrorLineNumberingNamespaces = null;
-
-// Temporary feature flags for the suggested values feature, see T271825
-$wgTemplateDataSuggestedValuesEditor = true;
-$wgVisualEditorTransclusionDialogSuggestedValues = true;
-
-// Temporary feature flags for changes to the descriptions in the transclusion dialog, see T271800
-$wgVisualEditorTransclusionDialogInlineDescriptions = true;
-
-// Temporary flag to enable the back button in the transclusion dialog, see T272354
-$wgVisualEditorTransclusionDialogBackButton = true;
-
-// Temporary feature flag for the new template dialog sidebar design, see T286765
-$wgVisualEditorTransclusionDialogNewSidebar = true;
-
-// Temporary feature flag for the improved search features in the VE template dialog, see T271802
-$wgVisualEditorTemplateSearchImprovements = true;
-
-// Temporary feature flag for the improved search features in the TemplateWizard dialog, see T271802
-$wgTemplateWizardTemplateSearchImprovements = true;
-
-// Use ReferencePreviews as full default feature on the beta cluster
-$wgPopupsReferencePreviewsBetaFeature = false;
 
 // Enable ChessBrowser extension, see T244075
 if ( $wmgUseChessBrowser ) {

@@ -4,12 +4,12 @@ use Wikimedia\MWConfig\ServiceConfig;
 
 require_once __DIR__ . '/../src/ServiceConfig.php';
 
-global $wmfDatacenter, $wmgRealm;
+global $wmgDatacenter, $wmgRealm;
 
 $serviceConfig = ServiceConfig::getInstance();
 
 $wmgRealm = $serviceConfig->getRealm();
-$wmfDatacenter = $serviceConfig->getDatacenter();
+$wmgDatacenter = $serviceConfig->getDatacenter();
 
 unset( $serviceConfig );
 
@@ -32,7 +32,7 @@ unset( $serviceConfig );
  * @return string Full path to file to be used
  */
 function getRealmSpecificFilename( $filename ) {
-	global $wmgRealm, $wmfDatacenter;
+	global $wmgRealm, $wmgDatacenter;
 
 	$pathinfo = pathinfo( $filename );
 	$ext = '';
@@ -50,7 +50,7 @@ function getRealmSpecificFilename( $filename ) {
 	//
 	// Please update /README whenever changing code below.
 
-	$new_filename = "{$base}-{$wmgRealm}-{$wmfDatacenter}{$ext}";
+	$new_filename = "{$base}-{$wmgRealm}-{$wmgDatacenter}{$ext}";
 	if ( file_exists( $new_filename ) ) {
 		return $new_filename;
 	}
@@ -61,7 +61,7 @@ function getRealmSpecificFilename( $filename ) {
 		return $new_filename;
 	}
 
-	$new_filename = "{$base}-{$wmfDatacenter}{$ext}";
+	$new_filename = "{$base}-{$wmgDatacenter}{$ext}";
 	if ( file_exists( $new_filename ) ) {
 		return $new_filename;
 	}

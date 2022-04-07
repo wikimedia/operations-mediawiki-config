@@ -47,6 +47,7 @@ function wmfGetOverrideSettings() {
 		'wgLanguageCode' => [
 			'deploymentwiki' => 'en',
 			'votewiki' => 'en', // T295242
+			'wikifunctionswiki' => 'en', // Temporary until wikifunctions.org is a real wiki and so in special.dblist
 		],
 
 		'wgSitename' => [
@@ -69,6 +70,7 @@ function wmfGetOverrideSettings() {
 			'commonswiki'   => 'https://commons.wikimedia.beta.wmflabs.org',
 			'deploymentwiki'      => 'https://deployment.wikimedia.beta.wmflabs.org',
 			'foundationwiki' => 'https://foundation.wikimedia.beta.wmflabs.org',
+			'incubatorwiki' => 'https://incubator.wikimedia.beta.wmflabs.org',
 			'loginwiki'     => 'https://login.wikimedia.beta.wmflabs.org',
 			'metawiki'      => 'https://meta.wikimedia.beta.wmflabs.org',
 			'votewiki'      => 'https://vote.wikimedia.beta.wmflabs.org',
@@ -139,6 +141,12 @@ function wmfGetOverrideSettings() {
 			'+group2' => [
 
 			],
+			'+enwiki' => [
+				'mediawiki.ipinfo_interaction' => [
+					'schema_title' => 'analytics/mediawiki/ipinfo_interaction',
+					'destination_event_service' => 'eventgate-analytics-external',
+				]
+			],
 		],
 
 		// EventLogging will POST events to this URI.
@@ -165,6 +173,12 @@ function wmfGetOverrideSettings() {
 				// Add beta only migrated wgEventLoggingSchemas configs here.  Production
 				// wgEventLoggingSchemas are merged in, so if your settings for
 				// production and beta are the same, you can omit also adding an entry here.
+			],
+		],
+
+		'wgEventLoggingStreamNames' => [
+			'+enwiki' => [
+				'mediawiki.ipinfo_interaction',
 			],
 		],
 
@@ -206,7 +220,7 @@ function wmfGetOverrideSettings() {
 				'collection' => 'debug', // -cscott for T73675
 				// 'csp' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 				// 'csp-report-only' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
-				'DBConnection' => 'error',
+				'DBConnection' => 'warning',
 				'DBPerformance' => [ 'logstash' => 'debug', 'udp2log' => 'warning' ],
 				'DBQuery' => 'warning',
 				'DBReplication' => 'warning',
@@ -389,6 +403,10 @@ function wmfGetOverrideSettings() {
 			'default' => 30000,
 		],
 
+		'wgEchoWatchlistNotifications' => [
+			'default' => true,
+		],
+
 		# FIXME: make that settings to be applied
 		'-wgShowExceptionDetails' => [
 			'default' => true,
@@ -419,6 +437,10 @@ function wmfGetOverrideSettings() {
 			'default' => 1,
 		],
 
+		'wgWMEPageSchemaSplitTestSamplingRatio' => [
+			'default' => 1,
+		],
+
 		'wgWMESessionTick' => [
 			'default' => true,
 		],
@@ -427,10 +449,6 @@ function wmfGetOverrideSettings() {
 		// This is the publicly accessible endpoint for eventgate-logging-external.
 		'wgWMEClientErrorIntakeURL' => [
 			'default' => 'https://intake-logging.wikimedia.beta.wmflabs.org/v1/events?hasty=true'
-		],
-
-		'wgWMEIPAddressCopyActionEnabled' => [
-			'default' => true,
 		],
 
 		'wgWMEMobileWebUIActionsTracking' => [
@@ -506,8 +524,10 @@ function wmfGetOverrideSettings() {
 				'logged_out' => false,
 			],
 		],
-		'wgVectorUseWvuiSearch' => [
-			'default' => true
+		'wgVectorTableOfContents' => [
+			'default' => [
+				'default' => true,
+			],
 		],
 		'wgVectorSkinMigrationMode' => [
 			'default' => true
@@ -515,6 +535,12 @@ function wmfGetOverrideSettings() {
 
 		'wmgCommonsMetadataForceRecalculate' => [
 			'default' => true,
+		],
+		'wgVectorDefaultSkinVersionForExistingAccounts' => [
+			'default' => '2',
+		],
+		'wgVectorDefaultSkinVersionForNewAccounts' => [
+			'default' => '2',
 		],
 
 		///
@@ -585,10 +611,6 @@ function wmfGetOverrideSettings() {
 				'smn' => 'anarâškielâ',	  // T222309
 				'sms' => 'sääʹmǩiõll',	  // T222309
 			],
-		],
-
-		'wmgUseQuickSurveys' => [
-			'hewiki' => true, // T225819
 		],
 
 		'wgQuickSurveysConfig' => [
@@ -705,6 +727,177 @@ function wmfGetOverrideSettings() {
 						'mobile' => [ 'stable' ]
 					],
 				],
+				'internal-gdi-safety-survey' => [
+					// T303956
+					'name' => 'internal-gdi-safety-survey',
+					'type' => 'internal',
+					'layout' => 'single-answer',
+					'question' => 'ext-quicksurveys-internal-gdi-safety-survey-question',
+					'privacyPolicy' => 'ext-quicksurveys-internal-gdi-safety-survey-privacy-policy',
+					'answers' => [
+						'ext-quicksurveys-internal-gdi-safety-survey-answer-positive',
+						'ext-quicksurveys-internal-gdi-safety-survey-answer-negative',
+						'ext-quicksurveys-internal-gdi-safety-survey-answer-neutral',
+					],
+					'audience' => [
+						// T303736
+						'minEdits' => 5
+					],
+					'enabled' => true,
+					'coverage' => 0.05, // T303956
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ],
+					],
+				],
+				// T294363: QA internal survey custom confirmation and additional info
+				'T294363-1' => [
+					'name' => 'T294363-1',
+					'type' => 'internal',
+					'layout' => 'single-answer',
+					'question' => 'ext-quicksurveys-tst-internal-survey-question',
+					'answers' => [
+						'ext-quicksurveys-tst-internal-survey-answer-positive',
+						'ext-quicksurveys-tst-internal-survey-answer-negative',
+					],
+					'shuffleAnswersDisplay' => true,
+					'privacyPolicy' => 'ext-quicksurveys-tst-internal-survey-privacy-policy',
+					'additionalInfo' => 'ext-quicksurveys-tst-internal-survey-additional-info',
+					'confirmMsg' => 'ext-quicksurveys-tst-internal-survey-confirm-msg',
+					'enabled' => true,
+					'coverage' => 0,
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ]
+					],
+				],
+				// T294363: QA internal survey custom confirmation
+				'T294363-2' => [
+					'name' => 'T294363-2',
+					'type' => 'internal',
+					'layout' => 'single-answer',
+					'question' => 'ext-quicksurveys-tst-internal-survey-question',
+					'answers' => [
+						'ext-quicksurveys-tst-internal-survey-answer-positive',
+						'ext-quicksurveys-tst-internal-survey-answer-negative',
+					],
+					'shuffleAnswersDisplay' => true,
+					'privacyPolicy' => 'ext-quicksurveys-tst-internal-survey-privacy-policy',
+					'confirmMsg' => 'ext-quicksurveys-tst-internal-survey-confirm-msg',
+					'enabled' => true,
+					'coverage' => 0,
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ]
+					],
+				],
+				// T294363: QA internal survey additional info
+				'T294363-3' => [
+					'name' => 'T294363-3',
+					'type' => 'internal',
+					'layout' => 'single-answer',
+					'question' => 'ext-quicksurveys-tst-internal-survey-question',
+					'answers' => [
+						'ext-quicksurveys-tst-internal-survey-answer-positive',
+						'ext-quicksurveys-tst-internal-survey-answer-negative',
+					],
+					'shuffleAnswersDisplay' => true,
+					'privacyPolicy' => 'ext-quicksurveys-tst-internal-survey-privacy-policy',
+					'additionalInfo' => 'ext-quicksurveys-tst-internal-survey-additional-info',
+					'enabled' => true,
+					'coverage' => 0,
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ]
+					],
+				],
+				// T294363: QA internal survey
+				'T294363-4' => [
+					'name' => 'T294363-4',
+					'type' => 'internal',
+					'layout' => 'single-answer',
+					'question' => 'ext-quicksurveys-tst-internal-survey-question',
+					'answers' => [
+						'ext-quicksurveys-tst-internal-survey-answer-positive',
+						'ext-quicksurveys-tst-internal-survey-answer-negative',
+					],
+					'shuffleAnswersDisplay' => true,
+					'privacyPolicy' => 'ext-quicksurveys-tst-internal-survey-privacy-policy',
+					'enabled' => true,
+					'coverage' => 0,
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ]
+					],
+				],
+				// T294363: QA external survey custom confirmation and additional info
+				'T294363-5' => [
+					'name' => 'T294363-5',
+					'type' => 'external',
+					'question' => 'ext-quicksurveys-example-external-survey-question',
+					'description' => 'ext-quicksurveys-example-external-survey-description',
+					'link' => 'ext-quicksurveys-example-external-survey-link',
+					'instanceTokenParameterName' => 'parameterName',
+					'privacyPolicy' => 'ext-quicksurveys-tst-internal-survey-privacy-policy',
+					'additionalInfo' => 'ext-quicksurveys-tst-internal-survey-additional-info',
+					'confirmMsg' => 'ext-quicksurveys-tst-internal-survey-confirm-msg',
+					'enabled' => true,
+					'coverage' => 0,
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ]
+					],
+				],
+				// T294363: QA external survey custom confirmation
+				'T294363-6' => [
+					'name' => 'T294363-6',
+					'type' => 'external',
+					'question' => 'ext-quicksurveys-example-external-survey-question',
+					'description' => 'ext-quicksurveys-example-external-survey-description',
+					'link' => 'ext-quicksurveys-example-external-survey-link',
+					'instanceTokenParameterName' => 'parameterName',
+					'privacyPolicy' => 'ext-quicksurveys-tst-internal-survey-privacy-policy',
+					'confirmMsg' => 'ext-quicksurveys-tst-internal-survey-confirm-msg',
+					'enabled' => true,
+					'coverage' => 0,
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ]
+					],
+				],
+				// T294363: QA external survey additional info
+				'T294363-7' => [
+					'name' => 'T294363-7',
+					'type' => 'external',
+					'question' => 'ext-quicksurveys-example-external-survey-question',
+					'description' => 'ext-quicksurveys-example-external-survey-description',
+					'link' => 'ext-quicksurveys-example-external-survey-link',
+					'instanceTokenParameterName' => 'parameterName',
+					'privacyPolicy' => 'ext-quicksurveys-tst-internal-survey-privacy-policy',
+					'additionalInfo' => 'ext-quicksurveys-tst-internal-survey-additional-info',
+					'enabled' => true,
+					'coverage' => 0,
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ]
+					],
+				],
+				// T294363: QA external survey
+				'T294363-8' => [
+					'name' => 'T294363-8',
+					'type' => 'external',
+					'question' => 'ext-quicksurveys-example-external-survey-question',
+					'description' => 'ext-quicksurveys-example-external-survey-description',
+					'link' => 'ext-quicksurveys-example-external-survey-link',
+					'instanceTokenParameterName' => 'parameterName',
+					'privacyPolicy' => 'ext-quicksurveys-tst-internal-survey-privacy-policy',
+					'enabled' => true,
+					'coverage' => 0,
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ]
+					],
+				],
 			],
 			'cawiki' => [
 				// T187299
@@ -751,7 +944,31 @@ function wmfGetOverrideSettings() {
 					],
 				],
 			],
-
+			'eswiki' => [
+				[
+					// T303956
+					'name' => 'internal-gdi-safety-survey',
+					'type' => 'internal',
+					'layout' => 'single-answer',
+					'question' => 'ext-quicksurveys-internal-gdi-safety-survey-question',
+					'privacyPolicy' => 'ext-quicksurveys-internal-gdi-safety-survey-privacy-policy',
+					'answers' => [
+						'ext-quicksurveys-internal-gdi-safety-survey-answer-positive',
+						'ext-quicksurveys-internal-gdi-safety-survey-answer-negative',
+						'ext-quicksurveys-internal-gdi-safety-survey-answer-neutral',
+					],
+					'audience' => [
+					// T303956
+						'minEdits' => 5
+					],
+					'enabled' => true,
+					'coverage' => 0.1, // T303956
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ],
+					],
+				],
+			],
 		],
 		'-wgScorePath' => [
 			'default' => "//upload.wikimedia.beta.wmflabs.org/score",
@@ -814,6 +1031,11 @@ function wmfGetOverrideSettings() {
 		'wgLexemeLanguageCodePropertyId' => [
 			'default' => null,
 			'wikidatawiki' => 'P218',
+		],
+
+		'wgLexemeEnableNewAlpha' => [
+			'default' => null,
+			'wikidatawiki' => true,
 		],
 
 		'-wmgWikibaseSearchIndexProperties' => [
@@ -1052,9 +1274,9 @@ function wmfGetOverrideSettings() {
 			'default' => true, // T291303
 		],
 
-		#####################################################
-		# Cirrus-related tweaks specific for the Beta cluster
-		#####################################################
+		// ***************************************************
+		// Cirrus-related tweaks specific for the Beta cluster
+		// ***************************************************
 
 		// Use a constant MLR model for all wikis. It's not ideal, but
 		// no models were trained specifically for data in labs anyways.
@@ -1122,6 +1344,10 @@ function wmfGetOverrideSettings() {
 
 		'wgActorTableSchemaMigrationStage' => [
 			'default' => SCHEMA_COMPAT_WRITE_TEMP_AND_NEW | SCHEMA_COMPAT_READ_TEMP,
+		],
+
+		'wgTemplateLinksSchemaMigrationStage' => [
+			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 		],
 
 		'wgMultiContentRevisionSchemaMigrationStage' => [
@@ -1230,6 +1456,35 @@ function wmfGetOverrideSettings() {
 				'control' => 100,
 			],
 		],
+		'wgWelcomeSurveyExperimentalGroups' => [
+			'eswiki' => [
+				'exp2_target_specialpage' => [
+					'percentage' => 0,
+				],
+				'T303240_mailinglist' => [
+					// T305015
+					'percentage' => 80,
+					'questions' => [
+						'reason',
+						'edited',
+						'email',
+						'languages',
+						'mailinglist'
+					]
+				],
+				'T303240_mailinglist_control' => [
+					// T305015
+					'percentage' => 20,
+					'questions' => [
+						'reason',
+						'edited',
+						'email',
+						'languages',
+						'mailinglist'
+					]
+				]
+			]
+		],
 		'wgGEHomepageNewAccountVariantsByPlatform' => [
 			'default' => [
 				'control' => [
@@ -1309,6 +1564,27 @@ function wmfGetOverrideSettings() {
 		],
 		'wgGEMentorDashboardEnabled' => [
 			'default' => true,
+		],
+		'wgGECampaigns' => [
+			'default' => [
+				'growth-glam-2022' => [
+					'topics' => [ 'argentina', 'chile', 'mexico' ],
+					'pattern' => '/^growth-glam-2022$|^topics-test-AND$/'
+				]
+			],
+			'eswiki' => [
+				'growth-glam-2022' => [
+					'topics' => [
+						'argentina',
+						'argentina-expanded',
+						'chile',
+						'chile-expanded',
+						'mexico',
+						'mexico-expanded',
+					],
+					'pattern' => '/^growth-glam-2022$/'
+				]
+			]
 		],
 		'-wgGEMentorDashboardDeploymentMode' => [
 			'default' => 'alpha',
@@ -1503,6 +1779,12 @@ function wmfGetOverrideSettings() {
 
 		// T232191
 		'wmgWikibaseTaintedReferencesEnabled' => [
+			'default' => false,
+			'wikidatawiki' => true,
+		],
+
+		// T302959
+		'wmgWikibaseRestApiEnabled' => [
 			'default' => false,
 			'wikidatawiki' => true,
 		],
@@ -1811,6 +2093,12 @@ function wmfGetOverrideSettings() {
 			'default' => 8,
 			'wikidatawiki' => 3,
 		],
+		'wgWikiEditorRealtimePreview' => [
+			'default' => false,
+			'enwiki' => true,
+			'enwikisource' => true,
+			'hewiktionary' => true,
+		],
 		'wmgUseWikisource' => [
 			'wikisource' => true,
 		],
@@ -2067,6 +2355,11 @@ function wmfGetOverrideSettings() {
 		'wmgWikibaseTmpSerializeEmptyListsAsObjects' => [
 			'default' => true,
 		],
+
+		'wmgWikibaseClientUnconnectedPageMigrationStage' => [
+			'default' => MIGRATION_NEW,
+		],
+
 		'wmgUseChessBrowser' => [
 			'default' => true,
 		],
@@ -2088,8 +2381,9 @@ function wmfGetOverrideSettings() {
 			'wikifunctionswiki' => true,
 		],
 
-		'wgCentralAuthHiddenLevelMigrationStage' => [
-			'default' => SCHEMA_COMPAT_READ_NEW | SCHEMA_COMPAT_WRITE_NEW,
+		// (T302857) Temporarily disable template search improvements in advance of production deployment
+		'wmgTemplateSearchImprovements' => [
+			'default' => false,
 		],
 	];
 } # wmfGetOverrideSettings()

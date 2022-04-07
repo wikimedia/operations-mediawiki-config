@@ -215,6 +215,7 @@ class MWMultiVersion {
 			'be-tarask.wikipedia.org' => 'be_x_old',
 			'ee.wikimedia.org' => 'et',
 			'vrt-wiki.wikimedia.org' => 'otrs_wiki',
+			'ombuds.wikimedia.org' => 'ombudsmen',
 
 			// Labs
 			'api.wikimedia.beta.wmflabs.org' => 'apiportal',
@@ -299,6 +300,22 @@ class MWMultiVersion {
 
 		if ( $dbname === '' ) {
 			self::error( "Usage: mwscript scriptName.php --wiki=dbname\n" );
+		}
+
+		if ( isset( $argv[2] ) && $argv[2] === '--force-version' ) {
+			if ( !isset( $argv[3] ) ) {
+				self::error( "--force-version must be followed by a version number" );
+			}
+			$this->version = "php-" . $argv[3];
+			$this->versionLoaded = true;
+
+			# Delete the flag and its parameter so it won't be passed on to the
+			# maintenance script.
+			unset( $argv[3] );
+			unset( $argv[2] );
+
+			# Reindex
+			$argv = array_values( $argv );
 		}
 
 		$this->db = $dbname;

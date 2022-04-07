@@ -20,7 +20,7 @@ $wgCirrusSearchClusters = [
 			'port' => '9243',
 			'host' => $host,
 		];
-	}, $wmfAllServices['eqiad']['search-chi'] ),
+	}, $wmgAllServices['eqiad']['search-chi'] ),
 ];
 
 // wgCirrusSearchShardCount is still handled through wmg vars for no good reasons

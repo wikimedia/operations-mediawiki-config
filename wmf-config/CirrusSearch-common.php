@@ -42,7 +42,7 @@ $wgHooks['CirrusSearchMappingConfig'][] = static function ( array &$config, $map
 // is pointed at a remote datacenter. Currently this makes the assumption that it will either
 // be eqiad or codfw which have ~40ms latency between them. Multiples are chosen using
 // (p75 + cross dc latency)/p75
-if ( $wgCirrusSearchDefaultCluster !== $wmfDatacenter ) {
+if ( $wgCirrusSearchDefaultCluster !== $wmgDatacenter ) {
 	// prefix has p75 of ~30ms
 	if ( isset( $wgPoolCounterConf[ 'CirrusSearch-Prefix' ] ) ) {
 		$wgPoolCounterConf['CirrusSearch-Prefix']['workers'] *= 2;
@@ -96,8 +96,7 @@ if ( $wmgCirrusSearchMLRModel ) {
 	}
 }
 
-# Load per realm specific configuration, either:
+# Load per realm specific configuration, one of:
 # - CirrusSearch-labs.php
 # - CirrusSearch-production.php
-#
-require "{$wmfConfigDir}/CirrusSearch-{$wmgRealm}.php";
+require __DIR__ . "/CirrusSearch-{$wmgRealm}.php";

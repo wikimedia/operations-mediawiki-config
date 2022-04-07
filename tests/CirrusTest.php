@@ -2,7 +2,6 @@
 
 class CirrusTest extends WgConfTestCase {
 	public function testClusterConfigurationForProdTestwiki() {
-		$wmfDatacenter = 'unittest';
 		$config = $this->loadCirrusConfig( 'production', 'testwiki', 'wiki' );
 		$this->assertArrayNotHasKey( 'wgCirrusSearchServers', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchClusters', $config );
@@ -121,11 +120,13 @@ class CirrusTest extends WgConfTestCase {
 	}
 
 	private function loadCirrusConfig( $wmgRealm, $wgDBname, $dbSuffix ) {
-		$wmfConfigDir = __DIR__ . "/../wmf-config";
 		require __DIR__ . '/../private/readme.php';
 		require __DIR__ . '/data/TestServices.php';
 		$wgConf = $this->loadWgConf( $wmgRealm );
 
+		// phpcs doesn't realize that these are the actual globals variables and will
+		// work with extract()
+		// phpcs:disable MediaWiki.VariableAnalysis.MisleadingGlobalNames
 		list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 		$wikiTags = [];
 		foreach ( Wikimedia\MWConfig\MWConfigCacheGenerator::$dbLists as $tag ) {
@@ -143,20 +144,26 @@ class CirrusTest extends WgConfTestCase {
 		// Add a per-language tag as well
 		$wikiTags[] = $wgConf->get( 'wgLanguageCode', $wgDBname, $dbSuffix, $confParams, $wikiTags );
 		$globals = $wgConf->getAll( $wgDBname, $dbSuffix, $confParams, $wikiTags );
+		// we want to use globals
+		// phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
 		extract( $globals );
 
 		// variables that would have been setup elsewhere, perhaps in mediawiki
 		// default settings or by CommonSettings.php
 		$wgJobTypeConf = [ 'default' => [] ];
-		$wmfDatacenter = 'unittest';
+		$wmgDatacenter = 'unittest';
 		$wgCirrusSearchPoolCounterKey = 'unittest:poolcounter:blahblahblah';
 		// not used for anything, just to prevent undefined variable
 		$IP = '/dev/null';
 
-		require "{$wmfConfigDir}/CirrusSearch-common.php";
+		require __DIR__ . '/../wmf-config/CirrusSearch-common.php';
 
+		// we want to use globals
+		// phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.compact
 		$ret = compact( array_keys( get_defined_vars() ) );
 		return $ret;
+
+		// phpcs:enable MediaWiki.VariableAnalysis.MisleadingGlobalNames
 	}
 
 	private static function resolveConfig( $config, $key ) {
@@ -171,10 +178,7 @@ class CirrusTest extends WgConfTestCase {
 	}
 
 	private static function resolveClusterConfig( $config, $clusterName ) {
-		if ( isset( $config[$clusterName] ) ) {
-			return $config[$clusterName];
-		}
-		return $config;
+		return $config[$clusterName] ?? $config;
 	}
 
 	public function provideUserTestingBuckets() {

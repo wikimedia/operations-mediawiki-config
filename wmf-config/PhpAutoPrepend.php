@@ -30,16 +30,16 @@ if ( PHP_SAPI === 'fpm-fcgi' ) {
 require_once __DIR__ . '/profiler.php';
 require_once __DIR__ . '/../src/ServiceConfig.php';
 
-$wmfServiceConfig = Wikimedia\MWConfig\ServiceConfig::getInstance();
+$wmgServiceConfig = Wikimedia\MWConfig\ServiceConfig::getInstance();
 
 wmfSetupProfiler( [
-	'redis-host' => $wmfServiceConfig->getLocalService( 'xenon' ),
+	'redis-host' => $wmgServiceConfig->getLocalService( 'xenon' ),
 	'redis-port' => 6379,
 	// Connection timeout, in seconds.
-	'redis-timeout' => $wmfServiceConfig->getRealm() === 'labs' ? 1 : 0.1,
-	'use-xhgui' => ( $wmfServiceConfig->getLocalService( 'xhgui' ) || $wmfServiceConfig->getLocalService( 'xhgui-pdo' ) ),
+	'redis-timeout' => $wmgServiceConfig->getRealm() === 'labs' ? 1 : 0.1,
+	'use-xhgui' => ( $wmgServiceConfig->getLocalService( 'xhgui' ) || $wmgServiceConfig->getLocalService( 'xhgui-pdo' ) ),
 	'xhgui-conf' => [
-		'pdo.connect' => $wmfServiceConfig->getLocalService( 'xhgui-pdo' ),
+		'pdo.connect' => $wmgServiceConfig->getLocalService( 'xhgui-pdo' ),
 		'pdo.table' => 'xhgui',
 	],
 ] );

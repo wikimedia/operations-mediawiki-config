@@ -46,7 +46,7 @@ $wgObjectCaches['mcrouter'] = [
 ];
 $wgObjectCaches['mcrouter-with-onhost-tier'] = array_merge(
 	$wgObjectCaches['mcrouter'],
-	[ 'routingPrefix' => "/$wmfDatacenter/mw-with-onhost-tier/" ]
+	[ 'routingPrefix' => "/$wmgDatacenter/mw-with-onhost-tier/" ]
 );
 
 $wgWANObjectCaches['wancache-main-mcrouter'] = [

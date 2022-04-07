@@ -15,15 +15,15 @@
 #
 
 $wgCirrusSearchClusters = [
-	'eqiad-chi' => $wmfAllServices['eqiad']['search-chi'] + [ 'group' => 'chi', 'replica' => 'eqiad' ],
-	'codfw-chi' => $wmfAllServices['codfw']['search-chi'] + [ 'group' => 'chi', 'replica' => 'codfw' ],
-	'cloudelastic-chi' => $wmfAllServices['eqiad']['cloudelastic-chi'] + [ 'group' => 'chi', 'replica' => 'cloudelastic' ],
-	'eqiad-psi' => $wmfAllServices['eqiad']['search-psi'] + [ 'group' => 'psi', 'replica' => 'eqiad' ],
-	'codfw-psi' => $wmfAllServices['codfw']['search-psi'] + [ 'group' => 'psi', 'replica' => 'codfw' ],
-	'cloudelastic-psi' => $wmfAllServices['eqiad']['cloudelastic-psi'] + [ 'group' => 'psi', 'replica' => 'cloudelastic' ],
-	'eqiad-omega' => $wmfAllServices['eqiad']['search-omega'] + [ 'group' => 'omega', 'replica' => 'eqiad' ],
-	'codfw-omega' => $wmfAllServices['codfw']['search-omega'] + [ 'group' => 'omega', 'replica' => 'codfw' ],
-	'cloudelastic-omega' => $wmfAllServices['eqiad']['cloudelastic-omega'] + [ 'group' => 'omega', 'replica' => 'cloudelastic' ],
+	'eqiad-chi' => $wmgAllServices['eqiad']['search-chi'] + [ 'group' => 'chi', 'replica' => 'eqiad' ],
+	'codfw-chi' => $wmgAllServices['codfw']['search-chi'] + [ 'group' => 'chi', 'replica' => 'codfw' ],
+	'cloudelastic-chi' => $wmgAllServices['eqiad']['cloudelastic-chi'] + [ 'group' => 'chi', 'replica' => 'cloudelastic' ],
+	'eqiad-psi' => $wmgAllServices['eqiad']['search-psi'] + [ 'group' => 'psi', 'replica' => 'eqiad' ],
+	'codfw-psi' => $wmgAllServices['codfw']['search-psi'] + [ 'group' => 'psi', 'replica' => 'codfw' ],
+	'cloudelastic-psi' => $wmgAllServices['eqiad']['cloudelastic-psi'] + [ 'group' => 'psi', 'replica' => 'cloudelastic' ],
+	'eqiad-omega' => $wmgAllServices['eqiad']['search-omega'] + [ 'group' => 'omega', 'replica' => 'eqiad' ],
+	'codfw-omega' => $wmgAllServices['codfw']['search-omega'] + [ 'group' => 'omega', 'replica' => 'codfw' ],
+	'cloudelastic-omega' => $wmgAllServices['eqiad']['cloudelastic-omega'] + [ 'group' => 'omega', 'replica' => 'cloudelastic' ],
 ];
 
 // wgCirrusSearchExtraIndexes is set in CirrusSearch-common.php
@@ -41,9 +41,9 @@ $wgCirrusSearchShardCount = [
 
 // 5 second timeout for local cluster, 10 seconds for remote.
 $wgCirrusSearchClientSideConnectTimeout = [
-	'eqiad' => $wmfDatacenter === 'eqiad' ? 5 : 10,
-	'codfw' => $wmfDatacenter === 'codfw' ? 5 : 10,
-	'cloudelastic' => $wmfDatacenter === 'eqiad' ? 5 : 10,
+	'eqiad' => $wmgDatacenter === 'eqiad' ? 5 : 10,
+	'codfw' => $wmgDatacenter === 'codfw' ? 5 : 10,
+	'cloudelastic' => $wmgDatacenter === 'eqiad' ? 5 : 10,
 ];
 
 $wgCirrusSearchDropDelayedJobsAfter = [
@@ -53,3 +53,6 @@ $wgCirrusSearchDropDelayedJobsAfter = [
 	// and can be backfilled as necessary.
 	'cloudelastic' => 900,
 ];
+
+// T295705#7719071 Reduce write isolation to only cloudelastic to reduce job queue rates
+$wgCirrusSearchWriteIsolateClusters = [ 'cloudelastic' ];

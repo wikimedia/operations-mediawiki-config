@@ -6,15 +6,15 @@
 class WmfConfigServicesTest extends PHPUnit\Framework\TestCase {
 
 	public static function getServicesFiles() {
-		$wmfConfigDir = dirname( __DIR__ ) . '/wmf-config';
+		$configDir = dirname( __DIR__ ) . '/wmf-config';
 
 		return [
 			'production' => [
-				'file' => "$wmfConfigDir/ProductionServices.php",
+				'file' => "$configDir/ProductionServices.php",
 				'dcs' => [ 'eqiad', 'codfw' ],
 			],
 			'labs' => [
-				'file' => "$wmfConfigDir/LabsServices.php",
+				'file' => "$configDir/LabsServices.php",
 				'dcs' => [ 'eqiad' ],
 			],
 		];

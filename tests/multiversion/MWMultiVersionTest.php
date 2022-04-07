@@ -62,7 +62,7 @@ class MWMultiVersionTest extends PHPUnit\Framework\TestCase {
 			[ 'noboard_chapterswikimedia', 'noboard-chapters.wikimedia.org' ],
 			[ 'nycwikimedia', 'nyc.wikimedia.org' ],
 			[ 'officewiki', 'office.wikimedia.org' ],
-			[ 'ombudsmenwiki', 'ombudsmen.wikimedia.org' ],
+			[ 'ombudsmenwiki', 'ombuds.wikimedia.org' ],
 			[ 'otrs_wikiwiki', 'otrs-wiki.wikimedia.org' ],
 			[ 'otrs_wikiwiki', 'vrt-wiki.wikimedia.org' ],
 			[ 'outreachwiki', 'outreach.wikimedia.org' ],

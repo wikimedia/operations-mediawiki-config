@@ -84,7 +84,7 @@ if ( $wmgUseWikibaseRepo ) {
 	}
 
 	// Load wikibase search settings
-	require_once "{$wmfConfigDir}/SearchSettingsForWikibase.php";
+	require_once __DIR__ . '/SearchSettingsForWikibase.php';
 
 	// Calculate the client Db lists based on our wikiversions db lists
 	if ( $wgDBname === 'testwikidatawiki' ) {
@@ -173,6 +173,10 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['taintedReferencesEnabled'] = $wmgWikibaseTaintedReferencesEnabled;
 	}
 
+	if ( isset( $wmgWikibaseRestApiEnabled ) ) {
+		$wgWBRepoSettings['restApiEnabled'] = $wmgWikibaseRestApiEnabled;
+	}
+
 	if ( isset( $wmgWikibaseStringLimits ) ) {
 		$wgWBRepoSettings['string-limits'] = $wmgWikibaseStringLimits;
 	}
@@ -190,7 +194,7 @@ if ( $wmgUseWikibaseRepo ) {
 	}
 
 	if ( $wgWBQualityConstraintsFormatCheckerShellboxRatio ) {
-		$wgShellboxUrls['constraint-regex-checker'] = $wmfLocalServices['shellbox-constraints'];
+		$wgShellboxUrls['constraint-regex-checker'] = $wmgLocalServices['shellbox-constraints'];
 	}
 
 	$wgWBRepoSettings['enableRefTabs'] = $wmgWikibaseRepoEnableRefTabs;
@@ -220,6 +224,11 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['viewUiTags'] = [ 'wikidata-ui' ];
 		$wgWBRepoSettings['specialPageTags'] = [ 'wikidata-ui' ];
 		$wgWBRepoSettings['termboxTags'] = [ 'wikidata-ui', 'termbox' ];
+	}
+
+	// Temporary, T297393
+	if ( isset( $wmgWikibaseTmpEnableMulLanguageCode ) ) {
+		$wgWBRepoSettings['tmpEnableMulLanguageCode'] = $wmgWikibaseTmpEnableMulLanguageCode;
 	}
 }
 
@@ -346,6 +355,16 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['enableImplicitDescriptionUsage'] = true;
 
 	$wgWBClientSettings['linkItemTags'] = [ 'client-linkitem-change' ];
+
+	// Temporary
+	if ( isset( $wmgWikibaseClientUnconnectedPageMigrationStage ) ) {
+		$wgWBClientSettings['tmpUnconnectedPagePagePropMigrationStage'] = $wmgWikibaseClientUnconnectedPageMigrationStage;
+	}
+
+	// Temporary, T297393
+	if ( isset( $wmgWikibaseTmpEnableMulLanguageCode ) ) {
+		$wgWBClientSettings['tmpEnableMulLanguageCode'] = $wmgWikibaseTmpEnableMulLanguageCode;
+	}
 }
 
 unset( $wmgWBSharedCacheKey );

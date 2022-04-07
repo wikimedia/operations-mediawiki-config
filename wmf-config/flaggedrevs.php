@@ -20,7 +20,7 @@ call_user_func( static function () {
 	global $wgDBname,
 		$wgFlaggedRevsAutopromote, $wgFlaggedRevsAutoconfirm;
 
-	$wmfStandardAutoPromote = [
+	$wmgStandardAutoPromote = [
 		'days'                  => 60, # days since registration
 		'edits'                 => 250, # total edit count
 		'excludeLastDays'       => 1, # exclude the last X days of edits from below edit counts
@@ -36,7 +36,7 @@ call_user_func( static function () {
 	];
 
 	if ( $wgDBname == 'test2wiki' ) {
-		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 		$wgFlaggedRevsAutopromote['edits'] = 300;
 		$wgFlaggedRevsAutopromote['editComments'] = 30;
 
@@ -56,7 +56,7 @@ call_user_func( static function () {
 		];
 
 	} elseif ( $wgDBname == 'dewiki' ) {
-		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 		$wgFlaggedRevsAutopromote['edits'] = 300;
 		$wgFlaggedRevsAutopromote['editComments'] = 30;
 
@@ -100,17 +100,17 @@ call_user_func( static function () {
 			'totalContentEdits' => 50,
 			'uniqueContentPages' => 10,
 			'editComments' => 50,
-		] + $wmfStandardAutoPromote;
+		] + $wmgStandardAutoPromote;
 
 	} elseif ( $wgDBname == 'frwikinews' ) {
-		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 
 	} elseif ( $wgDBname == 'hewikisource' ) {
-		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 
 	} elseif ( $wgDBname == 'plwiki' ) {
 		// T45617, T50043
-		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 		$wgFlaggedRevsAutopromote['days'] = 90;
 		$wgFlaggedRevsAutopromote['edits'] = 500;
 		$wgFlaggedRevsAutopromote['spacing'] = 3;
@@ -131,17 +131,17 @@ call_user_func( static function () {
 			'editComments' => 50, # how many edit comments used?
 			'email' => true, # user must be emailconfirmed?
 			'neverBlocked' => true, # Can users that were blocked be promoted?
-		] + $wmfStandardAutoPromote;
+		] + $wmgStandardAutoPromote;
 
 	} elseif ( $wgDBname == 'ptwikinews' ) {
-		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 		$wgFlaggedRevsAutopromote['days'] = 30;
 
 	} elseif ( $wgDBname == 'ptwikisource' ) {
-		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 
 	} elseif ( $wgDBname == 'ruwikisource' ) {
-		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 
 	} elseif ( $wgDBname == 'sqwiki' ) {
 		// T44782
@@ -153,7 +153,7 @@ call_user_func( static function () {
 		// unique pages with a maximum of 5% reverted edits in 30 days or more since
 		// registration they must be auto-promoted to autoreviewer (or autopatrolled)
 		// group.
-		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 		$wgFlaggedRevsAutopromote['days'] = 60; # days since registration
 		$wgFlaggedRevsAutopromote['edits'] = 300; # total edit count
 		$wgFlaggedRevsAutopromote['spacing'] = 3; # spacing of edit intervals
@@ -177,7 +177,7 @@ call_user_func( static function () {
 		];
 
 	} elseif ( $wgDBname == 'plwikisource' ) {
-		$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 		$wgFlaggedRevsAutopromote['edits'] = 100;
 		$wgFlaggedRevsAutopromote['totalContentEdits'] = 100;
 		$wgFlaggedRevsAutopromote['days'] = 14;

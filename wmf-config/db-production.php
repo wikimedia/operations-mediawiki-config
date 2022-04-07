@@ -13,7 +13,7 @@ if ( !defined( 'DBO_DEFAULT' ) ) {
 # For more info see also https://wikitech.wikimedia.org/wiki/dbctl
 
 # If a wiki's section is different across datacenters, use a ternary to vary:
-# 'xxwiki' => $wmfDatacenter === 'codfw' ? 's1': 's2',
+# 'xxwiki' => $wmgDatacenter === 'codfw' ? 's1': 's2',
 $wgLBFactoryConf = [
 
 'class' => 'LBFactoryMulti',
@@ -63,6 +63,7 @@ $wgLBFactoryConf = [
 	'diqwiktionary' => 's5',
 	'enwikivoyage' => 's5',
 	'eowikivoyage' => 's5',
+	'guwwiki'      => 's5',
 	'jawikivoyage' => 's5',
 	'jvwikisource' => 's5',
 	'lldwiki'      => 's5',
@@ -79,6 +80,7 @@ $wgLBFactoryConf = [
 	'pwnwiki'      => 's5',
 	'skrwiki'      => 's5',
 	'skrwiktionary' => 's5',
+	'shnwikivoyage' => 's5',
 	'shwiki'       => 's5',
 	'shiwiki'      => 's5',
 	'smnwiki'      => 's5',

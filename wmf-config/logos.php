@@ -130,6 +130,7 @@ return [
 	'gorwiki' => '/static/images/project-logos/gorwiki.png',
 	'gotwiki' => '/static/images/project-logos/gotwiki.png',
 	'guwiki' => '/static/images/project-logos/guwiki.png',
+	'guwwiki' => '/static/images/project-logos/guwwiki.png', // T303727
 	'gvwiki' => '/static/images/project-logos/gvwiki.png', // T48589
 	'hakwiki' => '/static/images/project-logos/hakwiki.png', // T48589
 	'hawiki' => '/static/images/project-logos/hawiki.png', // T48589
@@ -485,7 +486,7 @@ return [
 	'enwikiquote' => '/static/images/project-logos/enwikiquote.png', // T171810
 	'eowikiquote' => '/static/images/project-logos/eowikiquote.png', // T45879
 	'eswikiquote' => '/static/images/project-logos/eswikiquote.png',
-	'etwikiquote' => '/static/images/project-logos/etwikiquote.png',
+	'etwikiquote' => '/static/images/project-logos/etwikiquote.png', // T302683
 	'fawikiquote' => '/static/images/project-logos/fawikiquote.png',
 	'guwikiquote' => '/static/images/project-logos/guwikiquote.png', // T121853
 	'hewikiquote' => '/static/images/project-logos/hewikiquote.png',
@@ -628,7 +629,7 @@ return [
 	'arwikisource' => '/static/images/project-logos/arwikisource.png',
 	'aswikisource' => '/static/images/project-logos/aswikisource.png', // T45129
 	'azwikisource' => '/static/images/project-logos/azwikisource.png', // T54019
-	'banwikisource' => '/static/images/project-logos/banwikisource.png',
+	'banwikisource' => '/static/images/project-logos/banwikisource.png', // T296459
 	'bewikisource' => '/static/images/project-logos/bewikisource.png',
 	'bgwikisource' => '/static/images/project-logos/bgwikisource.png', // T54019
 	'bnwikisource' => '/static/images/project-logos/bnwikisource.png',
@@ -719,6 +720,7 @@ return [
 	'plwikivoyage' => '/static/images/project-logos/plwikivoyage.png',
 	'pswikivoyage' => '/static/images/project-logos/pswikivoyage.png',
 	'ruwikivoyage' => '/static/images/project-logos/ruwikivoyage.png',
+	'shnwikivoyage' => '/static/images/project-logos/shnwikivoyage.png', // T302797
 	'ukwikivoyage' => '/static/images/project-logos/ukwikivoyage.png', // T110370
 	'trwikivoyage' => '/static/images/project-logos/trwikivoyage.png',
 	'viwikivoyage' => '/static/images/project-logos/viwikivoyage.png',
@@ -931,6 +933,7 @@ return [
 	'gomwiki' => '/static/images/project-logos/gomwiki-1.5x.png', // T150618
 	'gorwiki' => '/static/images/project-logos/gorwiki-1.5x.png',
 	'guwiki' => '/static/images/project-logos/guwiki-1.5x.png', // T150618
+	'guwwiki' => '/static/images/project-logos/guwwiki-1.5x.png', // T303727
 	'gvwiki' => '/static/images/project-logos/gvwiki-1.5x.png', // T150618
 	'hakwiki' => '/static/images/project-logos/hakwiki-1.5x.png', // T150618
 	'hawiki' => '/static/images/project-logos/hawiki-1.5x.png', // T150618
@@ -1355,6 +1358,7 @@ return [
 	'plwikivoyage' => '/static/images/project-logos/plwikivoyage-1.5x.png',
 	'pswikivoyage' => '/static/images/project-logos/pswikivoyage-1.5x.png',
 	'ruwikivoyage' => '/static/images/project-logos/ruwikivoyage-1.5x.png', // T150618
+	'shnwikivoyage' => '/static/images/project-logos/shnwikivoyage-1.5x.png', // T302797
 	'ukwikivoyage' => '/static/images/project-logos/ukwikivoyage-1.5x.png',
 	'trwikivoyage' => '/static/images/project-logos/trwikivoyage-1.5x.png',
 	'viwikivoyage' => '/static/images/project-logos/viwikivoyage-1.5x.png', // T151570
@@ -1510,6 +1514,7 @@ return [
 	'gomwiki' => '/static/images/project-logos/gomwiki-2x.png', // T150618
 	'gorwiki' => '/static/images/project-logos/gorwiki-2x.png',
 	'guwiki' => '/static/images/project-logos/guwiki-2x.png', // T150618
+	'guwwiki' => '/static/images/project-logos/guwwiki-2x.png', // T303727
 	'gvwiki' => '/static/images/project-logos/gvwiki-2x.png', // T150618
 	'hakwiki' => '/static/images/project-logos/hakwiki-2x.png', // T150618
 	'hawiki' => '/static/images/project-logos/hawiki-2x.png', // T150618
@@ -1934,6 +1939,7 @@ return [
 	'plwikivoyage' => '/static/images/project-logos/plwikivoyage-2x.png',
 	'pswikivoyage' => '/static/images/project-logos/pswikivoyage-2x.png',
 	'ruwikivoyage' => '/static/images/project-logos/ruwikivoyage-2x.png', // T150618
+	'shnwikivoyage' => '/static/images/project-logos/shnwikivoyage-2x.png', // T302797
 	'ukwikivoyage' => '/static/images/project-logos/ukwikivoyage-2x.png',
 	'trwikivoyage' => '/static/images/project-logos/trwikivoyage-2x.png',
 	'viwikivoyage' => '/static/images/project-logos/viwikivoyage-2x.png', // T151570

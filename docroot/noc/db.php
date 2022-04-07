@@ -7,7 +7,7 @@
  * Then view <http://localhost:9412/db.php>.
  */
 
-$format = isset( $_GET['format'] ) && $_GET['format'] === 'json' ? 'json' : 'html';
+$format = ( $_GET['format'] ?? null ) === 'json' ? 'json' : 'html';
 
 if ( $format === 'json' ) {
 	error_reporting( 0 );
@@ -23,7 +23,7 @@ $dbctlJsonByDC = [
 	'codfw' => 'codfw.json',
 	'eqiad' => 'eqiad.json',
 ];
-$wmfDatacenter = 'eqiad';
+$wmgDatacenter = 'eqiad';
 
 if ( !is_dir( $dbConfigEtcdPrefix ) ) {
 	// Local testing and debugging fallback
@@ -32,14 +32,14 @@ if ( !is_dir( $dbConfigEtcdPrefix ) ) {
 		'tmsx' => 'tmsx.json',
 		'tmsy' => 'tmsy.json',
 	];
-	$wmfDatacenter = 'tmsx';
+	$wmgDatacenter = 'tmsx';
 }
 
 if ( isset( $_GET['dc'] ) && isset( $dbctlJsonByDC[$_GET['dc']] ) ) {
-	$wmfDatacenter = $_GET['dc'];
+	$wmgDatacenter = $_GET['dc'];
 }
 
-$dbConfigEtcdJsonFilename = $dbctlJsonByDC[$wmfDatacenter];
+$dbConfigEtcdJsonFilename = $dbctlJsonByDC[$wmgDatacenter];
 
 // Mock vars needed by db-*.php (normally set by CommonSettings.php)
 $wgDBname = null;
@@ -48,8 +48,6 @@ $wgDBpassword = null;
 $wgDebugDumpSql = false;
 $wgSecretKey = null;
 $wmgMasterDatacenter = null;
-// Write to wmf* constant for backwards-compatibility - T45956
-$wmfMasterDatacenter = $wmgMasterDatacenter;
 
 // Load the actual db vars
 require_once __DIR__ . '/../../wmf-config/db-production.php';
@@ -59,11 +57,11 @@ require_once __DIR__ . '/../../wmf-config/db-production.php';
 //
 // On mwmaint hosts, these JSON files are produced by a 'fetch_dbconfig' script,
 // run via systemd timer, defined in puppet.
-$wmfDbconfigFromEtcd = json_decode( file_get_contents( "$dbConfigEtcdPrefix/$dbConfigEtcdJsonFilename" ), true );
+$dbconfig = json_decode( file_get_contents( "$dbConfigEtcdPrefix/$dbConfigEtcdJsonFilename" ), true );
 global $wgLBFactoryConf;
-$wgLBFactoryConf['readOnlyBySection'] = $wmfDbconfigFromEtcd['readOnlyBySection'];
-$wgLBFactoryConf['groupLoadsBySection'] = $wmfDbconfigFromEtcd['groupLoadsBySection'];
-foreach ( $wmfDbconfigFromEtcd['sectionLoads'] as $section => $sectionLoads ) {
+$wgLBFactoryConf['readOnlyBySection'] = $dbconfig['readOnlyBySection'];
+$wgLBFactoryConf['groupLoadsBySection'] = $dbconfig['groupLoadsBySection'];
+foreach ( $dbconfig['sectionLoads'] as $section => $sectionLoads ) {
 	$wgLBFactoryConf['sectionLoads'][$section] = array_merge( $sectionLoads[0], $sectionLoads[1] );
 }
 

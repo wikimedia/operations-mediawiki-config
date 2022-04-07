@@ -71,8 +71,8 @@ $wgWBRepoSettings['searchIndexPropertiesExclude'] = $wmgWikibaseSearchIndexPrope
 // Load site-specific configs
 if ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) {
 	// Load wikidata specific search config
-	require_once "{$wmfConfigDir}/SearchSettingsForWikidata.php";
+	require_once __DIR__ . '/SearchSettingsForWikidata.php';
 } elseif ( $wgDBname === 'commonswiki' || $wgDBname === 'testcommonswiki' ) {
 	// Load SDoC specific search config
-	require_once "{$wmfConfigDir}/SearchSettingsForSDC.php";
+	require_once __DIR__ . '/SearchSettingsForSDC.php';
 }

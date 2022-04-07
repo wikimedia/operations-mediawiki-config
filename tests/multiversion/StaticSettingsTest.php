@@ -9,14 +9,14 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 
 	public function setUp(): void {
 		// This global is set by multiversion/MWRealm.php
-		$this->originalWmfDC = $GLOBALS['wmfDatacenter'];
-		$GLOBALS['wmfDatacenter'] = 'testvalue';
+		$this->originalWmfDC = $GLOBALS['wmgDatacenter'];
+		$GLOBALS['wmgDatacenter'] = 'testvalue';
 
 		$this->variantSettings = wmfGetVariantSettings();
 	}
 
 	public function tearDown(): void {
-		$GLOBALS['wmfDatacenter'] = $this->originalWmfDC;
+		$GLOBALS['wmgDatacenter'] = $this->originalWmfDC;
 	}
 
 	public function testConfigIsScalar() {
@@ -65,7 +65,6 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 		$knownToBeBad = [
 			'wgCirrusSearchUseCompletionSuggester',
 			'wgCirrusSearchUseIcuFolding',
-			"wgMFUseDesktopContributionsPage",
 			'wgMFUseDesktopSpecialHistoryPage',
 			"wgMFUseDesktopSpecialWatchlistPage",
 			'wmgUseCognate',

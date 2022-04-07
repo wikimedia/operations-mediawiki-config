@@ -77,22 +77,20 @@ abstract class WgConfTestCase extends PHPUnit\Framework\TestCase {
 	 * @return Wikimedia\MWConfig\StaticSiteConfiguration
 	 */
 	final protected function loadWgConf( $wmgRealm ) {
-		$wmfConfigDir = __DIR__ . "/../wmf-config";
-
 		// Needed for InitialiseSettings.php
 		$this->setGlobals( [
 			'wmfUdp2logDest' => 'localhost',
-			'wmfDatacenter' => 'unittest',
-			'wmfMasterDatacenter' => 'unittest',
-			'wmfConfigDir' => $wmfConfigDir,
+			'wmgUdp2logDest' => 'localhost',
+			'wmgDatacenter' => 'unittest',
+			'wmgMasterDatacenter' => 'unittest',
 		] );
 
 		// Needed for TestServices.php
 		$this->setGlobals( [
 			'wmgHostnames' => null,
-			'wmfAllServices' => null,
-			'wmfLocalServices' => null,
-			'wmfMasterServices' => null,
+			'wmgAllServices' => null,
+			'wmgLocalServices' => null,
+			'wmgMasterServices' => null,
 		] );
 		require __DIR__ . '/data/TestServices.php';
 

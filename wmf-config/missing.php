@@ -51,12 +51,11 @@ function handleMissingWiki() {
 		if ( isset( $_SERVER['PATH_INFO'] )
 			&& preg_match( '!^/(.*)$!', $_SERVER['PATH_INFO'], $m ) ) {
 			$page = $m[1];
-		} elseif ( isset( $_GET['title'] ) ) {
-			$page = $_GET['title']; # index.php?title=Page
 		} else {
-			$page = ''; # Main page
+			// Fall back to the Main page
+			$page = $_GET['title'] ?? '';
 		}
-		$incubatorCode = isset( $projects[$project] ) ? $projects[$project] : null;
+		$incubatorCode = $projects[$project] ?? null;
 	}
 
 	if ( !$incubatorCode ) {
@@ -76,10 +75,7 @@ function handleMissingWiki() {
 			$prefix = strtok( $page, ':' );
 
 			# Try looking for lateral links (w: q: voy: ...)
-			$row = null;
-			if ( isset( $db[ "{$language}wiki:$prefix" ] ) ) {
-				$row = $db[ "{$language}wiki:$prefix" ];
-			}
+			$row = $db[ "{$language}wiki:$prefix" ] ?? null;
 			if ( !$row ) {
 				# Also try interlanguage links
 				$projectKey = ( $project === 'wikipedia' ? 'wiki' : $project );

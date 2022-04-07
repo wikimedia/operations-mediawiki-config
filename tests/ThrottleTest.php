@@ -46,11 +46,11 @@ class ThrottleTest extends PHPUnit\Framework\TestCase {
 			// Parses date
 			// strtotime returns false when the string can't be parsed.
 			$this->assertTrue(
-				strtotime( $rule['from'] ),
+				(bool)strtotime( $rule['from'] ),
 				"Invalid value in a throttle rule detected: from should be a valid date"
 			 );
 			$this->assertTrue(
-				strtotime( $rule['to'] ),
+				(bool)strtotime( $rule['to'] ),
 				"Invalid value in a throttle rule detected: to should be a valid date"
 			);
 
