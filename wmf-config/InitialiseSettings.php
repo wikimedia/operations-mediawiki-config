@@ -17024,6 +17024,7 @@ function wmfGetVariantSettings() {
 	'default' => 'mwembed',
 	'group0' => 'videojs',
 	'desktop-improvements' => 'videojs',
+	'wiktionary' => 'videojs',
 ],
 
 // Enable the Beta Feature for trying out the new video player (see also the BF whitelist)
