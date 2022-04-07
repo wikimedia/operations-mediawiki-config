@@ -50,8 +50,7 @@ define( 'MW_NO_SESSION', 1 );
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 require MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
 
-define( 'WMF_STATIC_5MIN', 300 );
-define( 'WMF_STATIC_24H', 86400 );
+define( 'WMF_STATIC_1MIN', 60 );
 define( 'WMF_STATIC_1Y', 31536000 );
 
 // Requests for /static/current/ are also rewritten to /w/static.php (T285232)
@@ -68,7 +67,7 @@ function wmfStaticShowError( $message, $status ) {
 	HttpStatus::header( $status );
 	header(
 		'Cache-Control: ' .
-		's-maxage=' . WMF_STATIC_5MIN . ', must-revalidate, max-age=0'
+		's-maxage=' . WMF_STATIC_1MIN . ', must-revalidate, max-age=0'
 	);
 	header( 'Content-Type: text/plain; charset=utf-8' );
 	echo "$message\n";
@@ -90,6 +89,8 @@ function wmfStaticShowError( $message, $status ) {
  *  - "nohash": 1-year cache. Unversioned URLs to /w/, and legacy URLs from /static/current per T285232,
  *    and URLs to /w/ with invalid query parameters.
  *    These are misformatted URLs. Typically hotlinks, bots, or proxies adding a garbage query.
+ *
+ *  - "mismatch": 1-minute cache. Temporary debounce when a new hash doesn't match yet.
  */
 function wmfStaticStreamFile( $filePath, $responseType = 'nohash' ) {
 	$ctype = StreamFile::contentTypeFromPath( $filePath, /* safe: not for upload */ false );
@@ -112,14 +113,21 @@ function wmfStaticStreamFile( $filePath, $responseType = 'nohash' ) {
 	header( 'Last-Modified: ' . wfTimestamp( TS_RFC2822, $stat['mtime'] ) );
 	header( "Content-Type: $ctype" );
 	if ( $responseType === 'nohash' ) {
-		// Unversioned files should be renewed after a year
+		// Unversioned
 		header(
 			sprintf( 'Cache-Control: public, s-maxage=%d, max-age=%d, must-revalidate',
 				WMF_STATIC_1Y, WMF_STATIC_1Y
 			)
 		);
+	} elseif ( $responseType === 'mismatch' ) {
+		// Fallback
+		header(
+			sprintf( 'Cache-Control: public, s-maxage=%d, max-age=%d, must-revalidate',
+				WMF_STATIC_1MIN, WMF_STATIC_1MIN
+			)
+		);
 	} else {
-		// Anything else is considered immutable.
+		// Verified files are considered immutable
 		// For the CDN, and clients not supporting "immutable", allow re-use for 1 year.
 		header(
 			sprintf( 'Cache-Control: public, s-maxage=%d, max-age=%d, immutable',
@@ -195,8 +203,6 @@ function wmfStaticRespond() {
 		return;
 	}
 
-	$responseType = 'nohash';
-
 	// Get branch dirs and sort with newest first
 	$branchDirs = MWWikiversions::getAvailableBranchDirs();
 	usort( $branchDirs, static function ( $a, $b ) {
@@ -218,7 +224,6 @@ function wmfStaticRespond() {
 	// TODO: Remove once support for /static/current is removed (T302465))
 	if ( $uriPrefix === WMF_STATIC_PREFIX_CURRENT ) {
 		$validHash = false;
-		$responseType = 'nohash';
 	}
 
 	$stats = RequestContext::getMain()->getStats();
@@ -261,6 +266,8 @@ function wmfStaticRespond() {
 			}
 			// Cache hash-validated responses for long
 			$responseType = 'verified';
+		} else {
+			$responseType = 'nohash';
 		}
 
 		wmfStaticStreamFile( $filePath, $responseType );
@@ -276,7 +283,7 @@ function wmfStaticRespond() {
 
 	// Serve fallback with short TTL if version looks like a valid hash
 	// but we don't (yet) have a matching file.
-	wmfStaticStreamFile( "$newestFoundDir/$uriPath", $responseType );
+	wmfStaticStreamFile( "$newestFoundDir/$uriPath", 'mismatch' );
 	$stats->increment( 'wmfstatic.mismatch' );
 }
 
