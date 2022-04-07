@@ -184,7 +184,7 @@ $globalMultiWriteFileBackend = [
 	'lockManager' => 'redisLockManager',
 	# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 	'backends'    => [
-		[ 'template' => "global-swift-$wmfMasterDatacenter", 'isMultiMaster' => true ],
+		[ 'template' => "global-swift-$wmgMasterDatacenter", 'isMultiMaster' => true ],
 	],
 	'replication' => 'sync', // read-after-update for assets
 	'syncChecks'  => ( 1 | 4 ) // (size & sha1)
@@ -196,7 +196,7 @@ $sharedTestwikiMultiWriteFileBackend = [
 	'lockManager' => 'redisLockManager',
 	# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 	'backends'    => [
-		[ 'template' => "shared-testwiki-swift-$wmfMasterDatacenter", 'isMultiMaster' => true ],
+		[ 'template' => "shared-testwiki-swift-$wmgMasterDatacenter", 'isMultiMaster' => true ],
 	],
 	'replication' => 'sync', // read-after-update for assets
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)

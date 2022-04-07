@@ -20,12 +20,10 @@ if ( $wmfUsingKubernetes ) {
 	$nutcrackerServersByDc = [ 'eqiad' => '127.0.0.1:12000', 'codfw' => '127.0.0.1:12001' ];
 } else {
 	$nutcrackerServersByDc = [];
-	foreach ( $wmfDatacenters as $dc ) {
+	foreach ( $wmgDatacenters as $dc ) {
 		$nutcrackerServersByDc[$dc] = "/var/run/nutcracker/redis_{$dc}.sock";
 	}
 }
-// train-dev hack
-$nutcrackerServersByDc['dev'] = '/var/run/nutcracker/redis_dev.sock';
 foreach ( $wmgDatacenters as $dc ) {
 	$wgObjectCaches["redis_{$dc}"] = [
 		'class'       => 'RedisBagOStuff',
