@@ -407,4 +407,7 @@ $wgKartographerVersionedStaticMaps = true;
 // Point to the maps-experiments kartotherian server, see T294339
 $wgKartographerMapServer = 'https://kartotherian.wmflabs.org';
 
+// Temporary feature flag for the CodeMirror colorblind-friendly color scheme option see T292968
+$wgCodeMirrorColorblindColors = true;
+
 } # end safeguard
