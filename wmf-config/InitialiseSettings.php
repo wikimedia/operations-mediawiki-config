@@ -20875,6 +20875,11 @@ function wmfGetVariantSettings() {
 		'WikiGapFinder' => true, // T246335
 		'mskf-the-solution' => true, // T253305
 		'Wikidocumentaries' => true, // T269875
+		// SectionTranslation entry points: T298029
+		'mflanguagesearcher' => true,
+		'mfrecenttranslation' => true,
+		'mfrecentedit' => true,
+		'mffrequentlanguages' => true,
 	],
 	'dewiki' => [
 		'article-recommender-1' => true,
@@ -20890,6 +20895,11 @@ function wmfGetVariantSettings() {
 		'WikiGapFinder' => true,
 		'mskf-the-solution' => true,
 		'Wikidocumentaries' => true,
+		// SectionTranslation entry points: T298029
+		'mflanguagesearcher' => true,
+		'mfrecenttranslation' => true,
+		'mfrecentedit' => true,
+		'mffrequentlanguages' => true,
 	],
 	'enwiki' => [
 		'article-recommender-1' => true,
@@ -20905,6 +20915,11 @@ function wmfGetVariantSettings() {
 		'WikiGapFinder' => true,
 		'mskf-the-solution' => true,
 		'Wikidocumentaries' => true,
+		// SectionTranslation entry points: T298029
+		'mflanguagesearcher' => true,
+		'mfrecenttranslation' => true,
+		'mfrecentedit' => true,
+		'mffrequentlanguages' => true,
 	],
 	'eswiki' => [
 		'article-recommender-1' => true,
@@ -20921,6 +20936,11 @@ function wmfGetVariantSettings() {
 		'WikiGapFinder' => true,
 		'mskf-the-solution' => true,
 		'Wikidocumentaries' => true,
+		// SectionTranslation entry points: T298029
+		'mflanguagesearcher' => true,
+		'mfrecenttranslation' => true,
+		'mfrecentedit' => true,
+		'mffrequentlanguages' => true,
 	],
 	'fiwiki' => [
 		'article-recommender-1' => true,
@@ -20936,6 +20956,11 @@ function wmfGetVariantSettings() {
 		'WikiGapFinder' => true,
 		'mskf-the-solution' => true,
 		'Wikidocumentaries' => true,
+		// SectionTranslation entry points: T298029
+		'mflanguagesearcher' => true,
+		'mfrecenttranslation' => true,
+		'mfrecentedit' => true,
+		'mffrequentlanguages' => true,
 	],
 	'frwiki' => [
 		'article-recommender-1' => true,
@@ -20952,6 +20977,11 @@ function wmfGetVariantSettings() {
 		'WikiGapFinder' => true,
 		'mskf-the-solution' => true,
 		'Wikidocumentaries' => true,
+		// SectionTranslation entry points: T298029
+		'mflanguagesearcher' => true,
+		'mfrecenttranslation' => true,
+		'mfrecentedit' => true,
+		'mffrequentlanguages' => true,
 	],
 ],
 
