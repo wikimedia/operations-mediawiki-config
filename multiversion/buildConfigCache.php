@@ -6,17 +6,17 @@ require_once __DIR__ . '/MWWikiversions.php';
 require_once __DIR__ . '../../vendor/autoload.php';
 require_once __DIR__ . "../../src/defines.php";
 
-$wmfConfigDir = __DIR__ . '/../wmf-config';
+$configDir = __DIR__ . '/../wmf-config';
 
 global $wmgRealm, $wmgDatacenter;
 
 $wmgRealm = 'production';
 $wmgDatacenter = 'eqiad';
 
-require_once "{$wmfConfigDir}/InitialiseSettings.php";
+require_once "{$configDir}/InitialiseSettings.php";
 $settings['production'] = wmfGetVariantSettings();
 
-require_once "{$wmfConfigDir}/InitialiseSettings-labs.php";
+require_once "{$configDir}/InitialiseSettings-labs.php";
 $settings['labs'] = wmfApplyLabsOverrideSettings( $settings['production'] );
 
 foreach ( [ 'production', 'labs' ] as $realm ) {
@@ -33,7 +33,7 @@ foreach ( [ 'production', 'labs' ] as $realm ) {
 		);
 
 		Wikimedia\MWConfig\MWConfigCacheGenerator::writeToStaticCache(
-			$wmfConfigDir . "/config-cache",
+			$configDir . "/config-cache",
 			"conf-$realm-$wgDBname.json",
 			$cachableConfig
 		);
