@@ -546,6 +546,12 @@ function wmfGetLabsOverrideSettings() {
 				'logged_out' => false,
 			],
 		],
+		'wgVectorStickyHeaderEdit' => [
+			'default' => [
+				'logged_in' => true,
+				'logged_out' => true,
+			],
+		],
 		'wgVectorTableOfContents' => [
 			'default' => [
 				'default' => true,
