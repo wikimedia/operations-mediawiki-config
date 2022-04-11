@@ -26682,6 +26682,8 @@ function wmfGetVariantSettings() {
 // T233004
 'wgCheckUserActorMigrationStage' => [
 	'default' => SCHEMA_COMPAT_OLD,
+	'guwwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	'shnwikivoyage' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 ],
 
 // T166759
