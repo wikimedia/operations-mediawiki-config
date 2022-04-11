@@ -11143,10 +11143,6 @@ return [
 	// This should not be disabled on additional wikis (T291736).
 ],
 
-'wgKartographerUsePageLanguage' => [
-	'default' => true,
-],
-
 'wmgKartographerNearby' => [
 	'default' => true,
 ],
