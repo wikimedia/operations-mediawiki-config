@@ -557,6 +557,21 @@ function wmfGetLabsOverrideSettings() {
 				'default' => true,
 			],
 		],
+		'wgVectorWebABTestEnrollment' => [
+			'name' => 'skin-vector-toc-experiment',
+			'enabled' => true,
+			'buckets' => [
+				'unsampled' => [
+					'samplingRate' => 0
+				],
+				'control' => [
+					'samplingRate' => 0.5
+				],
+				'treatment' => [
+					'samplingRate' => 0.5
+				],
+			]
+		],
 		'wgVectorSkinMigrationMode' => [
 			'default' => true
 		],
