@@ -26116,7 +26116,6 @@ function wmfGetVariantSettings() {
 	'metawiki' => true,
 	'nowiki' => true,
 	'plwiki' => true,
-	'ptwiki' => true,
 	'rowiki' => true,
 	'ruwiki' => true,
 	'ukwiki' => true,
@@ -26230,31 +26229,6 @@ function wmfGetVariantSettings() {
 			'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
 			'shuffleAnswersDisplay' => true,
 		],
-	],
-		'ptwiki' => [
-			[
-				// T303736
-				'name' => 'internal-gdi-safety-survey',
-				'type' => 'internal',
-				'layout' => 'single-answer',
-				'question' => 'ext-quicksurveys-internal-gdi-safety-survey-question',
-				'privacyPolicy' => 'ext-quicksurveys-internal-gdi-safety-survey-privacy-policy',
-				'answers' => [
-					'ext-quicksurveys-internal-gdi-safety-survey-answer-positive',
-					'ext-quicksurveys-internal-gdi-safety-survey-answer-negative',
-					'ext-quicksurveys-internal-gdi-safety-survey-answer-neutral',
-				],
-				'audience' => [
-					// T303736
-					'minEdits' => 5
-				],
-				'enabled' => true,
-				'coverage' => 0.1, // T303736
-				'platforms' => [
-					'desktop' => [ 'stable' ],
-					'mobile' => [ 'stable' ],
-				],
-			],
 	],
 	// Note: make sure the wiki also has wmgUseQuickSurveys => true
 ],
