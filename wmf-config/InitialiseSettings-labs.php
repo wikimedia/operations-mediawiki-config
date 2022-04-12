@@ -796,7 +796,7 @@ function wmfGetLabsOverrideSettings() {
 					],
 				],
 				// T294363: QA internal survey custom confirmation and additional info
-				'T294363-1' => [
+				[
 					'name' => 'T294363-1',
 					'type' => 'internal',
 					'layout' => 'single-answer',
@@ -817,7 +817,7 @@ function wmfGetLabsOverrideSettings() {
 					],
 				],
 				// T294363: QA internal survey custom confirmation
-				'T294363-2' => [
+				[
 					'name' => 'T294363-2',
 					'type' => 'internal',
 					'layout' => 'single-answer',
@@ -837,7 +837,7 @@ function wmfGetLabsOverrideSettings() {
 					],
 				],
 				// T294363: QA internal survey additional info
-				'T294363-3' => [
+				[
 					'name' => 'T294363-3',
 					'type' => 'internal',
 					'layout' => 'single-answer',
@@ -857,7 +857,7 @@ function wmfGetLabsOverrideSettings() {
 					],
 				],
 				// T294363: QA internal survey
-				'T294363-4' => [
+				[
 					'name' => 'T294363-4',
 					'type' => 'internal',
 					'layout' => 'single-answer',
@@ -876,7 +876,7 @@ function wmfGetLabsOverrideSettings() {
 					],
 				],
 				// T294363: QA external survey custom confirmation and additional info
-				'T294363-5' => [
+				[
 					'name' => 'T294363-5',
 					'type' => 'external',
 					'question' => 'ext-quicksurveys-example-external-survey-question',
@@ -894,7 +894,7 @@ function wmfGetLabsOverrideSettings() {
 					],
 				],
 				// T294363: QA external survey custom confirmation
-				'T294363-6' => [
+				[
 					'name' => 'T294363-6',
 					'type' => 'external',
 					'question' => 'ext-quicksurveys-example-external-survey-question',
@@ -911,7 +911,7 @@ function wmfGetLabsOverrideSettings() {
 					],
 				],
 				// T294363: QA external survey additional info
-				'T294363-7' => [
+				[
 					'name' => 'T294363-7',
 					'type' => 'external',
 					'question' => 'ext-quicksurveys-example-external-survey-question',
@@ -928,7 +928,7 @@ function wmfGetLabsOverrideSettings() {
 					],
 				],
 				// T294363: QA external survey
-				'T294363-8' => [
+				[
 					'name' => 'T294363-8',
 					'type' => 'external',
 					'question' => 'ext-quicksurveys-example-external-survey-question',
