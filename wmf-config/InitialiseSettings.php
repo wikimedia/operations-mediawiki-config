@@ -26667,9 +26667,6 @@ function wmfGetVariantSettings() {
 	'testcommonswiki' => SCHEMA_COMPAT_OLD,
 ],
 
-'wgMultiContentRevisionSchemaMigrationStage' => [
-	'default' => SCHEMA_COMPAT_NEW,
-],
 // T280944
 'wgIncludejQueryMigrate' => [
 	'default' => false,
