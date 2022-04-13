@@ -2426,5 +2426,11 @@ function wmfGetLabsOverrideSettings() {
 		'wmgTemplateSearchImprovements' => [
 			'default' => false,
 		],
+
+		// T294363: QA Surveys on enwiki beta
+		'wmgUseQuickSurveys' => [
+			'enwiki' => true,
+		],
+
 	];
 } # wmflLabsSettings()
