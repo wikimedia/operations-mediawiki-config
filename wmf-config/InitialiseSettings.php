@@ -22223,6 +22223,12 @@ function wmfGetVariantSettings() {
 			'canary_events_enabled' => false,
 		],
 	],
+	'+testwiki' => [
+		'mediawiki.ipinfo_interaction' => [
+			'schema_title' => 'analytics/mediawiki/ipinfo_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		]
+	],
 ],
 
 // List of streams to register for use with the EventLogging extension.
@@ -22297,7 +22303,10 @@ function wmfGetVariantSettings() {
 		'wd_propertysuggester.client_side_property_request',
 		'wd_propertysuggester.server_side_property_request',
 		'mediawiki.mentor_dashboard.visit',
-	]
+	],
+	'+testwiki' => [
+		'mediawiki.ipinfo_interaction',
+	],
 ],
 
 // Enable sessionTick on these wikis
