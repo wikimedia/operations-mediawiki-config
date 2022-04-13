@@ -26702,8 +26702,6 @@ function wmfGetVariantSettings() {
 'wgTemplateLinksSchemaMigrationStage' => [
 	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 	'enwiki' => SCHEMA_COMPAT_OLD,
-	'commonswiki' => SCHEMA_COMPAT_OLD,
-	'testcommonswiki' => SCHEMA_COMPAT_OLD,
 ],
 
 // T280944
