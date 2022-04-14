@@ -7,6 +7,7 @@
  * @copyright Copyright © 2015, Erik Bernhardson <ebernhardson@wikimedia.org>
  * @file
  */
+use Wikimedia\MWConfig\MWConfigCacheGenerator;
 
 class LoggingTest extends PHPUnit\Framework\TestCase {
 
@@ -95,7 +96,7 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 
 	public function provideConfiguredBetaClusterChannels() {
 		$variantSettings = wmfGetVariantSettings();
-		$variantSettings = wmfApplyLabsOverrideSettings( $variantSettings );
+		$variantSettings = MWConfigCacheGenerator::applyOverrides( $variantSettings );
 
 		foreach ( $variantSettings['wmgMonologChannels'] as $wiki => $channels ) {
 			foreach ( $channels as $name => $config ) {

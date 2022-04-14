@@ -113,7 +113,7 @@ class MWConfigCacheGenerator {
 
 			require_once __DIR__ . "../../src/defines.php";
 			require_once __DIR__ . "../../wmf-config/InitialiseSettings-labs.php";
-			$config = wmfApplyLabsOverrideSettings( $config );
+			$config = self::applyOverrides( $config );
 		}
 
 		foreach ( $dbLists as $tag => $fileName ) {
@@ -334,6 +334,34 @@ class MWConfigCacheGenerator {
 			// T136258: Rename failed, write failed, or data wasn't cacheable; clean up temp file
 			unlink( $tmpFile );
 		}
+	}
+
+	/**
+	 * Override or add site settings as needed for non-production realms.
+	 *
+	 * This depends on 'wmfGetOverrideSettings' having been declared by a
+	 * `InitialiseSettings-*.php` file.
+	 *
+	 * TODO: Once InitialiseSettings is array-returning, this can be injected
+	 * by callers instead.
+	 *
+	 * @param array[] $settings wgConf-style settings array from IntialiseSettings.php
+	 * @return array
+	 */
+	public static function applyOverrides( array $settings ): array {
+		$overrides = wmfGetOverrideSettings();
+		foreach ( $overrides as $key => $value ) {
+			if ( substr( $key, 0, 1 ) == '-' ) {
+				// Settings prefixed with - are completely overriden
+				$settings[substr( $key, 1 )] = $value;
+			} elseif ( isset( $settings[$key] ) ) {
+				$settings[$key] = array_merge( $settings[$key], $value );
+			} else {
+				$settings[$key] = $value;
+			}
+		}
+
+		return $settings;
 	}
 
 }

@@ -14,7 +14,7 @@ wmf-config/ExtensionMessages-*.php
 wmf-config/config-cache/
 php-1.*/
 wikiversions.php
-wikiversions-labs.php
+wikiversions-*.php
 
 # Beta Cluster-specific items
 docroot/wwwportal/portal-master

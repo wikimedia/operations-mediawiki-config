@@ -203,10 +203,11 @@ function wmfLoadInitialiseSettings( $conf ) {
 	require_once __DIR__ . '/InitialiseSettings.php';
 	$settings = wmfGetVariantSettings();
 
-	if ( $wmgRealm == 'labs' ) {
-		// Beta Cluster overrides
-		require_once __DIR__ . '/InitialiseSettings-labs.php';
-		$settings = wmfApplyLabsOverrideSettings( $settings );
+	if ( $wmgRealm !== 'production' ) {
+		// Override for Beta Cluster and other realms.
+		// Ref: InitialiseSettings-labs.php
+		require_once __DIR__ . "/InitialiseSettings-$wmgRealm.php";
+		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::applyOverrides( $settings );
 	}
 
 	$conf->settings = $settings;
@@ -332,12 +333,9 @@ if ( $wmgRealm === 'labs' ) {
 	// Beta Cluster overrides
 	require __DIR__ . '/mc-labs.php';
 }
-# db-*.php needs $wgDebugDumpSql so should be loaded after logging.php
-if ( $wmgRealm === 'labs' ) {
-	require __DIR__ . '/db-labs.php';
-} else {
-	require __DIR__ . '/db-production.php';
-}
+# db-*.php needs $wgDebugDumpSql so should be loaded after logging.php.
+# Ref: db-production.php or db-labs.php
+require __DIR__ . "/db-$wmgRealm.php";
 
 # Override certain settings in command-line mode
 # This must be after InitialiseSettings.php is processed (T197475)

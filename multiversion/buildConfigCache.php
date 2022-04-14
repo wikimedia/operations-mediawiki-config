@@ -1,23 +1,24 @@
 <?php
 
+use Wikimedia\MWConfig\MWConfigCacheGenerator;
+
 require_once __DIR__ . '/MWConfigCacheGenerator.php';
 require_once __DIR__ . '/MWWikiversions.php';
-
 require_once __DIR__ . '../../vendor/autoload.php';
 require_once __DIR__ . "../../src/defines.php";
-
-$configDir = __DIR__ . '/../wmf-config';
 
 global $wmgRealm, $wmgDatacenter;
 
 $wmgRealm = 'production';
 $wmgDatacenter = 'eqiad';
 
-require_once "{$configDir}/InitialiseSettings.php";
-$settings['production'] = wmfGetVariantSettings();
+$configDir = __DIR__ . '/../wmf-config';
 
+require_once "{$configDir}/InitialiseSettings.php";
 require_once "{$configDir}/InitialiseSettings-labs.php";
-$settings['labs'] = wmfApplyLabsOverrideSettings( $settings['production'] );
+
+$settings['production'] = wmfGetVariantSettings();
+$settings['labs'] = MWConfigCacheGenerator::applyOverrides( $settings['production'] );
 
 foreach ( [ 'production', 'labs' ] as $realm ) {
 	$config = $settings[$realm];
@@ -28,11 +29,11 @@ foreach ( [ 'production', 'labs' ] as $realm ) {
 
 	foreach ( $wikiversions as $wgDBname => $wmgVersionNumber ) {
 
-		$cachableConfig = Wikimedia\MWConfig\MWConfigCacheGenerator::getCachableMWConfig(
+		$cachableConfig = MWConfigCacheGenerator::getCachableMWConfig(
 			$wgDBname, $config, $realm
 		);
 
-		Wikimedia\MWConfig\MWConfigCacheGenerator::writeToStaticCache(
+		MWConfigCacheGenerator::writeToStaticCache(
 			$configDir . "/config-cache",
 			"conf-$realm-$wgDBname.json",
 			$cachableConfig

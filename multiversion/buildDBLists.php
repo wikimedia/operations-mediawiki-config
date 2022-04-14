@@ -9,6 +9,7 @@ require_once __DIR__ . '/../src/defines.php';
 require_once __DIR__ . '/../wmf-config/InitialiseSettings.php';
 
 global $wmgRealm, $wmgDatacenter;
+
 $wmgRealm = 'production';
 $wmgDatacenter = 'eqiad';
 
