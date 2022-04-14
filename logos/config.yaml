@@ -3240,8 +3240,9 @@ Wikivoyage:
         no_2x: true
 
     specieswiki:
-        comment_1_5x:  T230113
-        comment_2x:  T230113
+        comment:  T306037
+        comment_1_5x:  T230113, T306037
+        comment_2x:  T230113, T306037
 
     stewardwiki:
         comment:  T39700
