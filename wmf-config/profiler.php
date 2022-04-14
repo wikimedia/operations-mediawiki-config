@@ -235,7 +235,7 @@ function wmfSetupExcimer( $options ) {
 
 	// The excimer-k8s definitions are temporary, to assist with migration
 	// (T288165).  We unfortunately have to duplicate the logic for
-	// $wmfUsingKubernetes from CommonSettings.php, since this file is loaded
+	// $wmgUsingKubernetes from CommonSettings.php, since this file is loaded
 	// before that one.
 	// grep: excimer-k8s, excimer-wall, excimer-k8s-wall
 	$redisChannel = 'excimer';

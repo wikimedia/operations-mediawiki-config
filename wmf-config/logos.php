@@ -108,7 +108,7 @@ return [
 	'etwiki' => '/static/images/project-logos/etwiki.png',
 	'euwiki' => '/static/images/project-logos/euwiki.png',
 	'extwiki' => '/static/images/project-logos/extwiki.png', // T48589
-	'fawiki' => '/static/images/project-logos/fawiki.png',
+	'fawiki' => '/static/images/project-logos/fawiki-milestone.png',
 	'ffwiki' => '/static/images/project-logos/ffwiki.png',
 	'fiu_vrowiki' => '/static/images/project-logos/fiu_vrowiki.png', // T48589
 	'fiwiki' => '/static/images/project-logos/fiwiki.png',
@@ -798,7 +798,7 @@ return [
 	'qualitywiki' => '/static/images/project-logos/qualitywiki.png',
 	'searchcomwiki' => '/static/images/project-logos/searchcomwiki.png',
 	'spcomwiki' => '/static/images/project-logos/spcomwiki.png',
-	'specieswiki' => '/static/images/project-logos/specieswiki.png',
+	'specieswiki' => '/static/images/project-logos/specieswiki.png', // T306037
 	'stewardwiki' => '/static/images/project-logos/stewardwiki.png', // T39700
 	'sysop_itwiki' => '/static/images/project-logos/sysop_itwiki.png', // T256545
 	'strategywiki' => '/static/images/project-logos/strategywiki.png',
@@ -913,7 +913,7 @@ return [
 	'etwiki' => '/static/images/project-logos/etwiki-1.5x.png', // T150618
 	'euwiki' => '/static/images/project-logos/euwiki-1.5x.png', // T150618
 	'extwiki' => '/static/images/project-logos/extwiki-1.5x.png', // T150618
-	'fawiki' => '/static/images/project-logos/fawiki-1.5x.png',
+	'fawiki' => '/static/images/project-logos/fawiki-milestone-1.5x.png',
 	'ffwiki' => '/static/images/project-logos/ffwiki-1.5x.png', // T150618
 	'fiu_vrowiki' => '/static/images/project-logos/fiu_vrowiki-1.5x.png', // T150618
 	'fiwiki' => '/static/images/project-logos/fiwiki-1.5x.png', // T150618
@@ -1400,7 +1400,7 @@ return [
 	'officewiki' => '/static/images/project-logos/officewiki-1.5x.png',
 	'ombudsmenwiki' => '/static/images/project-logos/ombudsmenwiki-1.5x.png',
 	'otrs_wikiwiki' => '/static/images/project-logos/otrs_wikiwiki-1.5x.png',
-	'specieswiki' => '/static/images/project-logos/specieswiki-1.5x.png', // T230113
+	'specieswiki' => '/static/images/project-logos/specieswiki-1.5x.png', // T230113, T306037
 	'sysop_itwiki' => '/static/images/project-logos/sysop_itwiki-1.5x.png', // T256545
 	'test2wiki' => '/static/images/project-logos/test2wiki-1.5x.png',
 	'testcommonswiki' => '/static/images/project-logos/commonswiki-1.5x.png', // T203343
@@ -1494,7 +1494,7 @@ return [
 	'etwiki' => '/static/images/project-logos/etwiki-2x.png', // T150618
 	'euwiki' => '/static/images/project-logos/euwiki-2x.png', // T150618
 	'extwiki' => '/static/images/project-logos/extwiki-2x.png', // T150618
-	'fawiki' => '/static/images/project-logos/fawiki-2x.png',
+	'fawiki' => '/static/images/project-logos/fawiki-milestone-2x.png',
 	'ffwiki' => '/static/images/project-logos/ffwiki-2x.png', // T150618
 	'fiu_vrowiki' => '/static/images/project-logos/fiu_vrowiki-2x.png', // T150618
 	'fiwiki' => '/static/images/project-logos/fiwiki-2x.png', // T150618
@@ -1981,7 +1981,7 @@ return [
 	'officewiki' => '/static/images/project-logos/officewiki-2x.png',
 	'ombudsmenwiki' => '/static/images/project-logos/ombudsmenwiki-2x.png',
 	'otrs_wikiwiki' => '/static/images/project-logos/otrs_wikiwiki-2x.png',
-	'specieswiki' => '/static/images/project-logos/specieswiki-2x.png', // T230113
+	'specieswiki' => '/static/images/project-logos/specieswiki-2x.png', // T230113, T306037
 	'sysop_itwiki' => '/static/images/project-logos/sysop_itwiki-2x.png', // T256545
 	'test2wiki' => '/static/images/project-logos/test2wiki-2x.png',
 	'testcommonswiki' => '/static/images/project-logos/commonswiki-2x.png', // T203343

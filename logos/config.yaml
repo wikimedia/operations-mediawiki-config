@@ -381,7 +381,10 @@ Wikipedia:
         comment_2x:  T150618
 
     fawiki:
+        selected: fawiki-milestone
         commons: File:Wikipedia-logo-v2-fa.svg
+        variants:
+            fawiki-milestone: File:Wikipedia-fa-900k-legacy.svg
 
     ffwiki:
         comment_1_5x:  T150618
@@ -3237,8 +3240,9 @@ Wikivoyage:
         no_2x: true
 
     specieswiki:
-        comment_1_5x:  T230113
-        comment_2x:  T230113
+        comment:  T306037
+        comment_1_5x:  T230113, T306037
+        comment_2x:  T230113, T306037
 
     stewardwiki:
         comment:  T39700

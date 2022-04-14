@@ -26,7 +26,7 @@ $wmgAddWikiNotify = false;
 $wgPasswordSender = 'wiki@wikimedia.beta.wmflabs.org';
 
 # Enable for all Beta wikis, depends on $wmgAllServices.
-$wgDebugLogFile = "udp://{$wmfUdp2logDest}/wfDebug";
+$wgDebugLogFile = "udp://{$wmgUdp2logDest}/wfDebug";
 
 // Password policies; see https://meta.wikimedia.org/wiki/Password_policy
 $wmgPrivilegedPolicy = [
@@ -406,5 +406,8 @@ $wgKartographerVersionedMapdata = true;
 $wgKartographerVersionedStaticMaps = true;
 // Point to the maps-experiments kartotherian server, see T294339
 $wgKartographerMapServer = 'https://kartotherian.wmflabs.org';
+
+// Temporary feature flag for the CodeMirror colorblind-friendly color scheme option see T292968
+$wgCodeMirrorColorblindColors = true;
 
 } # end safeguard

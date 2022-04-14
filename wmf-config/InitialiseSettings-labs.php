@@ -524,10 +524,33 @@ function wmfGetOverrideSettings() {
 				'logged_out' => false,
 			],
 		],
+		'wgVectorStickyHeaderEdit' => [
+			'default' => [
+				'logged_in' => true,
+				'logged_out' => true,
+			],
+		],
 		'wgVectorTableOfContents' => [
 			'default' => [
 				'default' => true,
 			],
+		],
+		'wgVectorWebABTestEnrollment' => [
+			'default' => [
+				'name' => 'skin-vector-toc-experiment',
+				'enabled' => true,
+				'buckets' => [
+					'unsampled' => [
+						'samplingRate' => 0
+					],
+					'control' => [
+						'samplingRate' => 0.5
+					],
+					'treatment' => [
+						'samplingRate' => 0.5
+					],
+				]
+			]
 		],
 		'wgVectorSkinMigrationMode' => [
 			'default' => true
@@ -727,31 +750,8 @@ function wmfGetOverrideSettings() {
 						'mobile' => [ 'stable' ]
 					],
 				],
-				'internal-gdi-safety-survey' => [
-					// T303956
-					'name' => 'internal-gdi-safety-survey',
-					'type' => 'internal',
-					'layout' => 'single-answer',
-					'question' => 'ext-quicksurveys-internal-gdi-safety-survey-question',
-					'privacyPolicy' => 'ext-quicksurveys-internal-gdi-safety-survey-privacy-policy',
-					'answers' => [
-						'ext-quicksurveys-internal-gdi-safety-survey-answer-positive',
-						'ext-quicksurveys-internal-gdi-safety-survey-answer-negative',
-						'ext-quicksurveys-internal-gdi-safety-survey-answer-neutral',
-					],
-					'audience' => [
-						// T303736
-						'minEdits' => 5
-					],
-					'enabled' => true,
-					'coverage' => 0.05, // T303956
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable' ],
-					],
-				],
 				// T294363: QA internal survey custom confirmation and additional info
-				'T294363-1' => [
+				[
 					'name' => 'T294363-1',
 					'type' => 'internal',
 					'layout' => 'single-answer',
@@ -772,7 +772,7 @@ function wmfGetOverrideSettings() {
 					],
 				],
 				// T294363: QA internal survey custom confirmation
-				'T294363-2' => [
+				[
 					'name' => 'T294363-2',
 					'type' => 'internal',
 					'layout' => 'single-answer',
@@ -792,7 +792,7 @@ function wmfGetOverrideSettings() {
 					],
 				],
 				// T294363: QA internal survey additional info
-				'T294363-3' => [
+				[
 					'name' => 'T294363-3',
 					'type' => 'internal',
 					'layout' => 'single-answer',
@@ -812,7 +812,7 @@ function wmfGetOverrideSettings() {
 					],
 				],
 				// T294363: QA internal survey
-				'T294363-4' => [
+				[
 					'name' => 'T294363-4',
 					'type' => 'internal',
 					'layout' => 'single-answer',
@@ -831,7 +831,7 @@ function wmfGetOverrideSettings() {
 					],
 				],
 				// T294363: QA external survey custom confirmation and additional info
-				'T294363-5' => [
+				[
 					'name' => 'T294363-5',
 					'type' => 'external',
 					'question' => 'ext-quicksurveys-example-external-survey-question',
@@ -849,7 +849,7 @@ function wmfGetOverrideSettings() {
 					],
 				],
 				// T294363: QA external survey custom confirmation
-				'T294363-6' => [
+				[
 					'name' => 'T294363-6',
 					'type' => 'external',
 					'question' => 'ext-quicksurveys-example-external-survey-question',
@@ -866,7 +866,7 @@ function wmfGetOverrideSettings() {
 					],
 				],
 				// T294363: QA external survey additional info
-				'T294363-7' => [
+				[
 					'name' => 'T294363-7',
 					'type' => 'external',
 					'question' => 'ext-quicksurveys-example-external-survey-question',
@@ -883,7 +883,7 @@ function wmfGetOverrideSettings() {
 					],
 				],
 				// T294363: QA external survey
-				'T294363-8' => [
+				[
 					'name' => 'T294363-8',
 					'type' => 'external',
 					'question' => 'ext-quicksurveys-example-external-survey-question',
@@ -941,31 +941,6 @@ function wmfGetOverrideSettings() {
 					'platforms' => [
 						'desktop' => [ 'stable' ],
 						'mobile' => [ 'stable', 'beta' ],
-					],
-				],
-			],
-			'eswiki' => [
-				[
-					// T303956
-					'name' => 'internal-gdi-safety-survey',
-					'type' => 'internal',
-					'layout' => 'single-answer',
-					'question' => 'ext-quicksurveys-internal-gdi-safety-survey-question',
-					'privacyPolicy' => 'ext-quicksurveys-internal-gdi-safety-survey-privacy-policy',
-					'answers' => [
-						'ext-quicksurveys-internal-gdi-safety-survey-answer-positive',
-						'ext-quicksurveys-internal-gdi-safety-survey-answer-negative',
-						'ext-quicksurveys-internal-gdi-safety-survey-answer-neutral',
-					],
-					'audience' => [
-					// T303956
-						'minEdits' => 5
-					],
-					'enabled' => true,
-					'coverage' => 0.1, // T303956
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable' ],
 					],
 				],
 			],
@@ -1343,15 +1318,11 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgActorTableSchemaMigrationStage' => [
-			'default' => SCHEMA_COMPAT_WRITE_TEMP_AND_NEW | SCHEMA_COMPAT_READ_TEMP,
+			'default' => SCHEMA_COMPAT_WRITE_TEMP_AND_NEW | SCHEMA_COMPAT_READ_NEW,
 		],
 
 		'wgTemplateLinksSchemaMigrationStage' => [
 			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-		],
-
-		'wgMultiContentRevisionSchemaMigrationStage' => [
-			'default' => SCHEMA_COMPAT_NEW,
 		],
 
 		'-wgIncludejQueryMigrate' => [
@@ -2385,5 +2356,11 @@ function wmfGetOverrideSettings() {
 		'wmgTemplateSearchImprovements' => [
 			'default' => false,
 		],
+
+		// T294363: QA Surveys on enwiki beta
+		'wmgUseQuickSurveys' => [
+			'enwiki' => true,
+		],
+
 	];
 } # wmfGetOverrideSettings()

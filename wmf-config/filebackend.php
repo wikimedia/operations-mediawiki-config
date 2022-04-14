@@ -20,7 +20,7 @@
 # Included from: wmf-config/CommonSettings.php.
 #
 
-global $wmfSwiftConfig;
+global $wmgSwiftConfig;
 // Common OpenStack Swift backend convenience variables
 $wmgSwiftBigWikis = [ # DO NOT change without proper migration first
 	'commonswiki', 'dewiki', 'enwiki', 'fiwiki', 'frwiki', 'hewiki', 'huwiki', 'idwiki',
@@ -48,9 +48,9 @@ foreach ( $wmgDatacenters as $specificDC ) {
 		'lockManager'        => 'redisLockManager',
 		'swiftAuthUrl'       => $wmgAllServices[$specificDC]['mediaSwiftAuth'],
 		'swiftStorageUrl'    => $wmgAllServices[$specificDC]['mediaSwiftStore'],
-		'swiftUser'          => $wmfSwiftConfig[$specificDC]['user'],
-		'swiftKey'           => $wmfSwiftConfig[$specificDC]['key'],
-		'swiftTempUrlKey'    => $wmfSwiftConfig[$specificDC]['tempUrlKey'],
+		'swiftUser'          => $wmgSwiftConfig[$specificDC]['user'],
+		'swiftKey'           => $wmgSwiftConfig[$specificDC]['key'],
+		'swiftTempUrlKey'    => $wmgSwiftConfig[$specificDC]['tempUrlKey'],
 		'shardViaHashLevels' => [
 			'local-public'
 				=> [ 'levels' => $wmgSwiftShardLocal, 'base' => 16, 'repeat' => 1 ],
@@ -67,10 +67,10 @@ foreach ( $wmgDatacenters as $specificDC ) {
 		'cacheAuthInfo'      => true,
 		// When used by FileBackendMultiWrite, read from this cluster if it's the local one
 		'readAffinity'       => ( $specificDC === $wmgDatacenter ),
-		'readUsers'           => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
-		'writeUsers'          => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
-		'secureReadUsers'     => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ],
-		'secureWriteUsers'    => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ],
+		'readUsers'           => [ $wmgSwiftConfig[$specificDC]['thumborUser'] ],
+		'writeUsers'          => [ $wmgSwiftConfig[$specificDC]['thumborUser'] ],
+		'secureReadUsers'     => [ $wmgSwiftConfig[$specificDC]['thumborPrivateUser'] ],
+		'secureWriteUsers'    => [ $wmgSwiftConfig[$specificDC]['thumborPrivateUser'] ],
 		'connTimeout'         => 10,
 		'reqTimeout'          => 900, // T226979
 	];
@@ -81,9 +81,9 @@ foreach ( $wmgDatacenters as $specificDC ) {
 		'lockManager'        => 'redisLockManager',
 		'swiftAuthUrl'       => $wmgAllServices[$specificDC]['mediaSwiftAuth'],
 		'swiftStorageUrl'    => $wmgAllServices[$specificDC]['mediaSwiftStore'],
-		'swiftUser'          => $wmfSwiftConfig[$specificDC]['user'],
-		'swiftKey'           => $wmfSwiftConfig[$specificDC]['key'],
-		'swiftTempUrlKey'    => $wmfSwiftConfig[$specificDC]['tempUrlKey'],
+		'swiftUser'          => $wmgSwiftConfig[$specificDC]['user'],
+		'swiftKey'           => $wmgSwiftConfig[$specificDC]['key'],
+		'swiftTempUrlKey'    => $wmgSwiftConfig[$specificDC]['tempUrlKey'],
 		'shardViaHashLevels' => [
 			'local-public'
 				=> [ 'levels' => $wmgSwiftShardCommon, 'base' => 16, 'repeat' => 1 ],
@@ -98,10 +98,10 @@ foreach ( $wmgDatacenters as $specificDC ) {
 		'cacheAuthInfo'      => true,
 		// When used by FileBackendMultiWrite, read from this cluster if it's the local one
 		'readAffinity'       => ( $specificDC === $wmgDatacenter ),
-		'readUsers'           => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
-		'writeUsers'          => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
-		'secureReadUsers'     => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ],
-		'secureWriteUsers'    => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ],
+		'readUsers'           => [ $wmgSwiftConfig[$specificDC]['thumborUser'] ],
+		'writeUsers'          => [ $wmgSwiftConfig[$specificDC]['thumborUser'] ],
+		'secureReadUsers'     => [ $wmgSwiftConfig[$specificDC]['thumborPrivateUser'] ],
+		'secureWriteUsers'    => [ $wmgSwiftConfig[$specificDC]['thumborPrivateUser'] ],
 		'connTimeout'         => 10,
 		'reqTimeout'          => 900, // T226979
 	];
@@ -112,18 +112,18 @@ foreach ( $wmgDatacenters as $specificDC ) {
 		'lockManager'        => 'redisLockManager',
 		'swiftAuthUrl'       => $wmgAllServices[$specificDC]['mediaSwiftAuth'],
 		'swiftStorageUrl'    => $wmgAllServices[$specificDC]['mediaSwiftStore'],
-		'swiftUser'          => $wmfSwiftConfig[$specificDC]['user'],
-		'swiftKey'           => $wmfSwiftConfig[$specificDC]['key'],
-		'swiftTempUrlKey'    => $wmfSwiftConfig[$specificDC]['tempUrlKey'],
+		'swiftUser'          => $wmgSwiftConfig[$specificDC]['user'],
+		'swiftKey'           => $wmgSwiftConfig[$specificDC]['key'],
+		'swiftTempUrlKey'    => $wmgSwiftConfig[$specificDC]['tempUrlKey'],
 		'shardViaHashLevels' => [],
 		'parallelize'        => 'implicit',
 		'cacheAuthInfo'      => true,
 		// When used by FileBackendMultiWrite, read from this cluster if it's the local one
 		'readAffinity'       => ( $specificDC === $wmgDatacenter ),
-		'readUsers'           => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
-		'writeUsers'          => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
-		'secureReadUsers'     => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ],
-		'secureWriteUsers'    => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ],
+		'readUsers'           => [ $wmgSwiftConfig[$specificDC]['thumborUser'] ],
+		'writeUsers'          => [ $wmgSwiftConfig[$specificDC]['thumborUser'] ],
+		'secureReadUsers'     => [ $wmgSwiftConfig[$specificDC]['thumborPrivateUser'] ],
+		'secureWriteUsers'    => [ $wmgSwiftConfig[$specificDC]['thumborPrivateUser'] ],
 		'connTimeout'         => 10,
 		'reqTimeout'          => 900, // T226979
 	];
@@ -134,17 +134,17 @@ foreach ( $wmgDatacenters as $specificDC ) {
 		'lockManager'        => 'redisLockManager',
 		'swiftAuthUrl'       => $wmgAllServices[$specificDC]['mediaSwiftAuth'],
 		'swiftStorageUrl'    => $wmgAllServices[$specificDC]['mediaSwiftStore'],
-		'swiftUser'          => $wmfSwiftConfig[$specificDC]['user'],
-		'swiftKey'           => $wmfSwiftConfig[$specificDC]['key'],
-		'swiftTempUrlKey'    => $wmfSwiftConfig[$specificDC]['tempUrlKey'],
+		'swiftUser'          => $wmgSwiftConfig[$specificDC]['user'],
+		'swiftKey'           => $wmgSwiftConfig[$specificDC]['key'],
+		'swiftTempUrlKey'    => $wmgSwiftConfig[$specificDC]['tempUrlKey'],
 		'parallelize'        => 'implicit',
 		'cacheAuthInfo'      => true,
 		// When used by FileBackendMultiWrite, read from this cluster if it's the local one
 		'readAffinity'       => ( $specificDC === $wmgDatacenter ),
-		'readUsers'           => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
-		'writeUsers'          => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
-		'secureReadUsers'     => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ],
-		'secureWriteUsers'    => [ $wmfSwiftConfig[$specificDC]['thumborPrivateUser'] ],
+		'readUsers'           => [ $wmgSwiftConfig[$specificDC]['thumborUser'] ],
+		'writeUsers'          => [ $wmgSwiftConfig[$specificDC]['thumborUser'] ],
+		'secureReadUsers'     => [ $wmgSwiftConfig[$specificDC]['thumborPrivateUser'] ],
+		'secureWriteUsers'    => [ $wmgSwiftConfig[$specificDC]['thumborPrivateUser'] ],
 		'connTimeout'         => 10,
 		'reqTimeout'          => 900, // T226979
 	];
@@ -245,8 +245,8 @@ $wgLocalFileRepo = [
 	'deletedHashLevels' => 3,
 	'abbrvThreshold'    => 160,
 	'isPrivate'         => $wmgPrivateWiki,
-	'thumbProxyUrl'     => $wmfSwiftConfig[$wmgDatacenter]['thumborUrl'] . '/' . $site . '/' . $lang . '/thumb/',
-	'thumbProxySecret'  => $wmfSwiftConfig[$wmgDatacenter]['thumborSecret'],
+	'thumbProxyUrl'     => $wmgSwiftConfig[$wmgDatacenter]['thumborUrl'] . '/' . $site . '/' . $lang . '/thumb/',
+	'thumbProxySecret'  => $wmgSwiftConfig[$wmgDatacenter]['thumborSecret'],
 	'zones'             => $wmgPrivateWiki
 		? [
 			'thumb' => [ 'url' => "$wgScriptPath/thumb_handler.php" ] ]

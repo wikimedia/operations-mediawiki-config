@@ -37,6 +37,7 @@
 use MediaWiki\Auth\AuthenticationResponse;
 use MediaWiki\Extension\ApiFeatureUsage\ApiFeatureUsageQueryEngineElastica;
 use MediaWiki\Extension\CentralAuth\User\CentralAuthUser;
+use MediaWiki\Extension\ExtensionDistributor\Providers\GerritExtDistProvider;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\User\UserIdentity;
@@ -133,7 +134,7 @@ $wmgServerGroup = $_SERVER['SERVERGROUP'] ?? '';
 # SERVERGROUP is set by Puppet in profile::mediawiki::httpd, in
 # Kubernetes pods, it's set by configuring the php.servergroup
 # Helm value.
-$wmgUsingKubernetes = $wmfUsingKubernetes = strpos( $wmgServerGroup, 'kube-' ) === 0;
+$wmgUsingKubernetes = strpos( $wmgServerGroup, 'kube-' ) === 0;
 
 # Get all the service definitions
 $wmgAllServices = ServiceConfig::getInstance()->getAllServices();
@@ -182,9 +183,9 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 	unset( $etcdConfig );
 }
 
-$wmgUdp2logDest = $wmfUdp2logDest = $wmgLocalServices['udp2log'];
+$wmgUdp2logDest = $wmgLocalServices['udp2log'];
 if ( $wgDBname === 'testwiki' || $wgDBname === 'test2wiki' ) {
-	$wgDebugLogFile = "udp://{$wmfUdp2logDest}/testwiki";
+	$wgDebugLogFile = "udp://{$wmgUdp2logDest}/testwiki";
 } else {
 	$wgDebugLogFile = '/dev/null';
 }
@@ -1084,7 +1085,7 @@ if ( $wmgUseTimeline ) {
 $wgCopyUploadProxy = ( $wmgRealm !== 'labs' ) ? $wmgLocalServices['urldownloader'] : false;
 $wgUploadThumbnailRenderHttpCustomHost = $wmgHostnames['upload'];
 $wgUploadThumbnailRenderHttpCustomDomain = $wmgLocalServices['upload'];
-if ( $wmgUseLocalHTTPProxy || $wmfUsingKubernetes ) {
+if ( $wmgUseLocalHTTPProxy || $wmgUsingKubernetes ) {
 	$wgLocalHTTPProxy = $wmgLocalServices['mwapi'] ?? false;
 }
 
@@ -1396,7 +1397,7 @@ if ( $wmgPFEnableStringFunctions ) {
 if ( $wgDBname === 'mediawikiwiki' ) {
 	wfLoadExtension( 'ExtensionDistributor' );
 	$wgExtDistAPIConfig = [
-		'class' => 'GerritExtDistProvider',
+		'class' => GerritExtDistProvider::class,
 		'apiUrl' => 'https://gerrit.wikimedia.org/r/projects/mediawiki%2F$TYPE%2F$EXT/branches',
 		'tarballUrl' => 'https://extdist.wmflabs.org/dist/$TYPE/$EXT-$REF-$SHA.tar.gz',
 		'tarballName' => '$EXT-$REF-$SHA.tar.gz',

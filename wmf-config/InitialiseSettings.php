@@ -607,6 +607,9 @@ function wmfGetVariantSettings() {
 	'wikivoyage' => '/static/images/mobile/copyright/wikivoyage.svg',
 	'wiktionary' => '/static/images/mobile/copyright/wiktionary.svg',
 
+	// Celebrations
+	'fawiki' => '/static/images/mobile/copyright/wikipedia-fa-900K.svg', // T306030
+
 	// Special wikis
 	'collabwiki' => '/static/images/mobile/copyright/collab-icon.svg',
 	'commonswiki' => '/static/images/mobile/copyright/commons.svg',
@@ -790,7 +793,7 @@ function wmfGetVariantSettings() {
 		'height' => 18,
 	],
 	'fawiki' => [
-		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fa.svg',
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fa-900k.svg', // T306030
 		'width' => 78,
 		'height' => 26,
 	],
@@ -1218,7 +1221,7 @@ function wmfGetVariantSettings() {
 		'height' => 13,
 	],
 	'fawiki' => [
-		'src' => '/static/images/mobile/copyright/wikipedia-tagline-fa.svg',
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-fa-900k.svg', // T306030
 		'width' => 76,
 		'height' => 19,
 	],
@@ -5228,7 +5231,7 @@ function wmfGetVariantSettings() {
 	'srwikiquote' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
 	'srwiktionary' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'patrol', 'rollback', 'bot', 'sysop' ], // T215653
 	'svwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T279836
-	'testwiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T61084
+	'testwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T61084, T302860
 	'viwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'editautopatrolprotected', 'sysop' ], // T215493, T296154, T303579
 	'zhwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T260012, T287322
 	'zhwiktionary' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T286101
@@ -5252,6 +5255,7 @@ function wmfGetVariantSettings() {
 	'+ptwiki' => [ 'extendedconfirmed' ], // T281926
 	'+rowiki' => [ 'extendedconfirmed' ], // T254471
 	'+svwiki' => [ 'extendedconfirmed' ], // T279836
+	'+testwiki' => [ 'extendedconfirmed' ], // T302860
 	'+viwiki' => [ 'extendedconfirmed' ], // T215493
 	'+zhwiki' => [ 'extendedconfirmed' ], // T287322
 ],
@@ -5344,7 +5348,7 @@ function wmfGetVariantSettings() {
 // Defaults: [ 'udp2log'=>'debug', 'logstash'=>'info', 'sample'=>false, 'buffer'=>false, 'eventbus' => 'debug' ]
 // Valid levels: 'debug', 'info', 'warning', 'error', false
 // Note: sampled logs will not be sent to Logstash
-// Note: Udp2log events are sent to udp://{$wmfUdp2logDest}/{$channel}
+// Note: Udp2log events are sent to udp://{$wmgUdp2logDest}/{$channel}
 'wmgMonologChannels' => [
 	// When changing the default, please also update the -labs settings to ensure that the
 	// logging on the beta cluster includes at least the same data that production includes
@@ -11034,6 +11038,8 @@ function wmfGetVariantSettings() {
 			'override-antispoof' => true,
 			'tboverride' => true,
 		],
+		'bot' => [ 'extendedconfirmed' => true ], // T302860
+		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T302860
 		'filemover' => [ 'movefile' => true ], // T32121
 		'user' => [
 			'upload_by_url' => true, // For testing of Flickr uploading via UploadWizard
@@ -11047,6 +11053,7 @@ function wmfGetVariantSettings() {
 		],
 		'sysop' => [
 			'deleterevision' => true,
+			'extendedconfirmed' => true, // T302860
 			'templateeditor' => true,
 			'securepoll-create-poll' => true,
 		],
@@ -11668,6 +11675,7 @@ function wmfGetVariantSettings() {
 			'accountcreator',
 			'confirmed',
 			'templateeditor',
+			'extendedconfirmed', // T302860
 		],
 	],
 	'+test2wiki' => [
@@ -13040,6 +13048,7 @@ function wmfGetVariantSettings() {
 			'accountcreator',
 			'confirmed',
 			'templateeditor',
+			'extendedconfirmed', // T302860
 		],
 	],
 	'+test2wiki' => [
@@ -15629,6 +15638,14 @@ function wmfGetVariantSettings() {
 			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
 		],
 	],
+	'testwiki' => [
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 30 * 86400 ],
+			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+		], // T302860
+	],
 	'viwiki' => [
 		'extendedconfirmed' => [ '&',
 			[ APCOND_EDITCOUNT, 500 ],
@@ -17024,6 +17041,7 @@ function wmfGetVariantSettings() {
 	'default' => 'mwembed',
 	'group0' => 'videojs',
 	'desktop-improvements' => 'videojs',
+	'wiktionary' => 'videojs',
 ],
 
 // Enable the Beta Feature for trying out the new video player (see also the BF whitelist)
@@ -20874,6 +20892,11 @@ function wmfGetVariantSettings() {
 		'WikiGapFinder' => true, // T246335
 		'mskf-the-solution' => true, // T253305
 		'Wikidocumentaries' => true, // T269875
+		// SectionTranslation entry points: T298029
+		'mflanguagesearcher' => true,
+		'mfrecenttranslation' => true,
+		'mfrecentedit' => true,
+		'mffrequentlanguages' => true,
 	],
 	'dewiki' => [
 		'article-recommender-1' => true,
@@ -20889,6 +20912,11 @@ function wmfGetVariantSettings() {
 		'WikiGapFinder' => true,
 		'mskf-the-solution' => true,
 		'Wikidocumentaries' => true,
+		// SectionTranslation entry points: T298029
+		'mflanguagesearcher' => true,
+		'mfrecenttranslation' => true,
+		'mfrecentedit' => true,
+		'mffrequentlanguages' => true,
 	],
 	'enwiki' => [
 		'article-recommender-1' => true,
@@ -20904,6 +20932,11 @@ function wmfGetVariantSettings() {
 		'WikiGapFinder' => true,
 		'mskf-the-solution' => true,
 		'Wikidocumentaries' => true,
+		// SectionTranslation entry points: T298029
+		'mflanguagesearcher' => true,
+		'mfrecenttranslation' => true,
+		'mfrecentedit' => true,
+		'mffrequentlanguages' => true,
 	],
 	'eswiki' => [
 		'article-recommender-1' => true,
@@ -20920,6 +20953,11 @@ function wmfGetVariantSettings() {
 		'WikiGapFinder' => true,
 		'mskf-the-solution' => true,
 		'Wikidocumentaries' => true,
+		// SectionTranslation entry points: T298029
+		'mflanguagesearcher' => true,
+		'mfrecenttranslation' => true,
+		'mfrecentedit' => true,
+		'mffrequentlanguages' => true,
 	],
 	'fiwiki' => [
 		'article-recommender-1' => true,
@@ -20935,6 +20973,11 @@ function wmfGetVariantSettings() {
 		'WikiGapFinder' => true,
 		'mskf-the-solution' => true,
 		'Wikidocumentaries' => true,
+		// SectionTranslation entry points: T298029
+		'mflanguagesearcher' => true,
+		'mfrecenttranslation' => true,
+		'mfrecentedit' => true,
+		'mffrequentlanguages' => true,
 	],
 	'frwiki' => [
 		'article-recommender-1' => true,
@@ -20951,6 +20994,11 @@ function wmfGetVariantSettings() {
 		'WikiGapFinder' => true,
 		'mskf-the-solution' => true,
 		'Wikidocumentaries' => true,
+		// SectionTranslation entry points: T298029
+		'mflanguagesearcher' => true,
+		'mfrecenttranslation' => true,
+		'mfrecentedit' => true,
+		'mffrequentlanguages' => true,
 	],
 ],
 
@@ -22192,6 +22240,12 @@ function wmfGetVariantSettings() {
 			'canary_events_enabled' => false,
 		],
 	],
+	'+testwiki' => [
+		'mediawiki.ipinfo_interaction' => [
+			'schema_title' => 'analytics/mediawiki/ipinfo_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		]
+	],
 ],
 
 // List of streams to register for use with the EventLogging extension.
@@ -22266,7 +22320,10 @@ function wmfGetVariantSettings() {
 		'wd_propertysuggester.client_side_property_request',
 		'wd_propertysuggester.server_side_property_request',
 		'mediawiki.mentor_dashboard.visit',
-	]
+	],
+	'+testwiki' => [
+		'mediawiki.ipinfo_interaction',
+	],
 ],
 
 // Enable sessionTick on these wikis
@@ -26115,7 +26172,6 @@ function wmfGetVariantSettings() {
 	'metawiki' => true,
 	'nowiki' => true,
 	'plwiki' => true,
-	'ptwiki' => true,
 	'rowiki' => true,
 	'ruwiki' => true,
 	'ukwiki' => true,
@@ -26230,31 +26286,6 @@ function wmfGetVariantSettings() {
 			'shuffleAnswersDisplay' => true,
 		],
 	],
-		'ptwiki' => [
-			[
-				// T303736
-				'name' => 'internal-gdi-safety-survey',
-				'type' => 'internal',
-				'layout' => 'single-answer',
-				'question' => 'ext-quicksurveys-internal-gdi-safety-survey-question',
-				'privacyPolicy' => 'ext-quicksurveys-internal-gdi-safety-survey-privacy-policy',
-				'answers' => [
-					'ext-quicksurveys-internal-gdi-safety-survey-answer-positive',
-					'ext-quicksurveys-internal-gdi-safety-survey-answer-negative',
-					'ext-quicksurveys-internal-gdi-safety-survey-answer-neutral',
-				],
-				'audience' => [
-					// T303736
-					'minEdits' => 5
-				],
-				'enabled' => true,
-				'coverage' => 0.1, // T303736
-				'platforms' => [
-					'desktop' => [ 'stable' ],
-					'mobile' => [ 'stable' ],
-				],
-			],
-	],
 	// Note: make sure the wiki also has wmgUseQuickSurveys => true
 ],
 
@@ -26345,16 +26376,6 @@ function wmfGetVariantSettings() {
 'wmgUseKartographer' => [
 	'default' => true,
 	'private' => false,
-],
-
-// Gradual rollout of tegola:
-// frwiki, ruwiki
-'wgKartographerDfltStyle' => [
-	'testwiki' => 'osm-tegola',
-	'frwiki' => 'osm-tegola',
-	'ruwiki' => 'osm-tegola',
-	'jawiki' => 'osm-tegola',
-	'enwiki' => 'osm-tegola',
 ],
 
 // This MUST NOT be enabled on any additional wikis.
@@ -26696,13 +26717,8 @@ function wmfGetVariantSettings() {
 'wgTemplateLinksSchemaMigrationStage' => [
 	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 	'enwiki' => SCHEMA_COMPAT_OLD,
-	'commonswiki' => SCHEMA_COMPAT_OLD,
-	'testcommonswiki' => SCHEMA_COMPAT_OLD,
 ],
 
-'wgMultiContentRevisionSchemaMigrationStage' => [
-	'default' => SCHEMA_COMPAT_NEW,
-],
 // T280944
 'wgIncludejQueryMigrate' => [
 	'default' => false,
@@ -28325,6 +28341,7 @@ function wmfGetVariantSettings() {
 
 'wmgWikibaseClientUnconnectedPageMigrationStage' => [
 	'default' => MIGRATION_WRITE_BOTH,
+	'wikidataclient-test' => MIGRATION_NEW,
 ],
 
 'wmgWikibaseTmpEnableMulLanguageCode' => [
