@@ -28326,7 +28326,8 @@ function wmfGetVariantSettings() {
 ],
 
 'wmgWikibaseClientUnconnectedPageMigrationStage' => [
-	'default' => MIGRATION_NEW,
+	'default' => MIGRATION_WRITE_BOTH,
+	'wikidataclient-test' => MIGRATION_NEW,
 ],
 
 'wmgWikibaseTmpEnableMulLanguageCode' => [
