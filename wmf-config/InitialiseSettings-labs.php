@@ -772,29 +772,6 @@ function wmfGetLabsOverrideSettings() {
 						'mobile' => [ 'stable' ]
 					],
 				],
-				'internal-gdi-safety-survey' => [
-					// T303956
-					'name' => 'internal-gdi-safety-survey',
-					'type' => 'internal',
-					'layout' => 'single-answer',
-					'question' => 'ext-quicksurveys-internal-gdi-safety-survey-question',
-					'privacyPolicy' => 'ext-quicksurveys-internal-gdi-safety-survey-privacy-policy',
-					'answers' => [
-						'ext-quicksurveys-internal-gdi-safety-survey-answer-positive',
-						'ext-quicksurveys-internal-gdi-safety-survey-answer-negative',
-						'ext-quicksurveys-internal-gdi-safety-survey-answer-neutral',
-					],
-					'audience' => [
-						// T303736
-						'minEdits' => 5
-					],
-					'enabled' => true,
-					'coverage' => 0.05, // T303956
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable' ],
-					],
-				],
 				// T294363: QA internal survey custom confirmation and additional info
 				[
 					'name' => 'T294363-1',
@@ -986,31 +963,6 @@ function wmfGetLabsOverrideSettings() {
 					'platforms' => [
 						'desktop' => [ 'stable' ],
 						'mobile' => [ 'stable', 'beta' ],
-					],
-				],
-			],
-			'eswiki' => [
-				[
-					// T303956
-					'name' => 'internal-gdi-safety-survey',
-					'type' => 'internal',
-					'layout' => 'single-answer',
-					'question' => 'ext-quicksurveys-internal-gdi-safety-survey-question',
-					'privacyPolicy' => 'ext-quicksurveys-internal-gdi-safety-survey-privacy-policy',
-					'answers' => [
-						'ext-quicksurveys-internal-gdi-safety-survey-answer-positive',
-						'ext-quicksurveys-internal-gdi-safety-survey-answer-negative',
-						'ext-quicksurveys-internal-gdi-safety-survey-answer-neutral',
-					],
-					'audience' => [
-					// T303956
-						'minEdits' => 5
-					],
-					'enabled' => true,
-					'coverage' => 0.1, // T303956
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable' ],
 					],
 				],
 			],
