@@ -111,9 +111,6 @@ $wmgSwiftConfig['codfw'] = [
 	'tempUrlKey' => null,
 ];
 
-// Write to wmf* constant for backwards-compatibility - T45956
-$wmfSwiftConfig = $wmgSwiftConfig;
-
 /**
  * Credentials for RedisBagOStuff and RedisLockManager backends.
  *
