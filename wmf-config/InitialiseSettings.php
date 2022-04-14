@@ -27822,6 +27822,20 @@ function wmfGetVariantSettings() {
 	'fawiki' => false,
 ],
 
+'wgGETopicsMatchModeEnabled' => [
+	'default' => false,
+	// Enable Growth's feature topic match mode (T305399).
+	// Will be removed after it's deployed to all wikis (T305408).
+	'testwiki' => true,
+	'arwiki' => true,
+	'bnwiki' => true,
+	'cswiki' => true,
+	'eswiki' => true,
+	'fawiki' => true,
+	'ptwiki' => true,
+	'trwiki' => true
+],
+
 'wgGECampaignPattern' => [
 	'default' => null,
 	'testwiki' => '/^growth-advancement-test-2021$/',
