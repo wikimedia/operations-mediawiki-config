@@ -17105,6 +17105,7 @@ function wmfGetVariantSettings() {
 		'tmh-videojs',                       // [Readers] 2019-12-12 - New video player
 		'discussiontools-betaenable',        // [Editing] 2020-09-12 – Reply tool
 		'ipinfo-beta-feature-enable',        // [AHT] 2022-10-01 – IP Info
+		'wikieditor-realtime-preview',       // [CommTech] 2022-04-18 – Realtime Preview
 	],
 ],
 
