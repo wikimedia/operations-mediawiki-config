@@ -3240,6 +3240,7 @@ Wikivoyage:
         no_2x: true
 
     specieswiki:
+        commons: File:WikiSpecies_logo.svg
         comment:  T306037
         comment_1_5x:  T230113, T306037
         comment_2x:  T230113, T306037
