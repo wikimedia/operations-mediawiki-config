@@ -5169,6 +5169,7 @@ function wmfGetVariantSettings() {
 	'eswikivoyage' => 25, // T46285
 	'fawiki' => 10, // T45630
 	'fawikivoyage' => 10, // T73709
+	'iswiki' => 10, // T306305
 	'itwiki' => 50, // T72128, T262738
 	'itwiktionary' => 10, // T24274
 	'jawiki' => 10, // T42270
