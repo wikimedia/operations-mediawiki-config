@@ -5209,6 +5209,7 @@ function wmfGetVariantSettings() {
 	'commonswiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T227420
 	'dewiki' => [ '', 'autoconfirmed', 'editeditorprotected', 'sysop' ], // T94368
 	'dewiktionary' => [ '', 'autoconfirmed', 'editeditorprotected', 'editautoreviewprotected', 'sysop' ], // T216885
+	'elwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T306241
 	'enwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T126607, T57432
 	'enwiktionary' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'templateeditor', 'sysop' ], // T148007, T296580
 	'enwikivoyage' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T198056
@@ -5249,6 +5250,7 @@ function wmfGetVariantSettings() {
 	'default' => [ 'autoconfirmed' ],
 	'+azwiki' => [ 'extendedconfirmed' ], // T281860
 	'+bgwiki' => [ 'extendedconfirmed' ], // T269709
+	'+elwiki' => [ 'extendedconfirmed' ], // T306241
 	'+enwiki' => [ 'extendedconfirmed' ], // T126607
 	'+fawiki' => [ 'extendedconfirmed' ], // T140839
 	'+frwiki' => [ 'editextendedsemiprotected' ], // T132248
@@ -9395,9 +9397,18 @@ function wmfGetVariantSettings() {
 		'autopatrolled' => [ 'autopatrol' => true ], // T176709
 	],
 	'+elwiki' => [
+		'bot' => [
+			'extendedconfirmed' => true, // T306241
+		],
+		'extendedconfirmed' => [
+			'extendedconfirmed' => true, // T306241
+		],
 		'rollbacker' => [ // T257745
 			'rollback' => true,
 			'suppressredirect' => true,
+		],
+		'sysop' => [
+			'extendedconfirmed' => true, // T306241
 		],
 	],
 	'+elwiktionary' => [
@@ -11971,7 +11982,7 @@ function wmfGetVariantSettings() {
 		],
 	],
 	'+elwiki' => [
-		'sysop' => [ 'rollbacker' ], // T257745
+		'sysop' => [ 'rollbacker', 'extendedconfirmed' ], // T257745, T306241
 	],
 	'+elwiktionary' => [
 		'bureaucrat' => [ 'interface-editor' ],
@@ -13366,7 +13377,7 @@ function wmfGetVariantSettings() {
 		],
 	],
 	'+elwiki' => [
-		'sysop' => [ 'rollbacker' ], // T257745
+		'sysop' => [ 'rollbacker', 'extendedconfirmed' ], // T257745, T306241
 	],
 	'+elwiktionary' => [
 		'bureaucrat' => [ 'interface-editor' ],
@@ -15571,6 +15582,14 @@ function wmfGetVariantSettings() {
 			[ APCOND_EDITCOUNT, 200 ],
 		],
 	], // T67495
+	'elwiki' => [
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 30 * 86400 ], // 30 days
+			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+		],
+	], // T306241
 	'enwiki' => [
 		'extendedconfirmed' => [ '&',
 			[ APCOND_EDITCOUNT, 500 ],
