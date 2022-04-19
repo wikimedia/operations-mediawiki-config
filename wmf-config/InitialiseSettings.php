@@ -2320,7 +2320,7 @@ function wmfGetVariantSettings() {
 	'default' => '//upload.wikimedia.org/$site/$lang',
 	'private' => '/w/img_auth.php',
 	'commonswiki' => 'https://upload.wikimedia.org/wikipedia/commons',
-	'testcommonswiki' => 'https://upload.wikimedia.org/wikipedia/test-commons',
+	'testcommonswiki' => 'https://upload.wikimedia.org/wikipedia/testcommons',
 	'labswiki' => '//upload.wikimedia.org/wikipedia/labs',
 	'labtestwiki' => '//upload.wikimedia.org/wikipedia/labtest',
 	'metawiki' => '//upload.wikimedia.org/wikipedia/meta',
