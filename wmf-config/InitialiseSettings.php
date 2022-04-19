@@ -5222,6 +5222,7 @@ function wmfGetVariantSettings() {
 	'jawiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T249820
 	'kowiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T184675
 	'lvwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T92645
+	'mrwikisource' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T269067
 	'plwiki' => [ '', 'autoconfirmed', 'editeditorprotected', 'sysop' ], // T48990
 	'ptwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'editautoreviewprotected', 'sysop' ], // T41652, T281926
 	'rowiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T63172, T254471
@@ -10425,6 +10426,22 @@ function wmfGetVariantSettings() {
 	'+mrwiki' => [
 		'rollbacker' => [ 'rollback' => true ], // T270864
 	],
+	'+mrwikisource' => [
+		'patroller' => [
+			'autopatrol' => true, // T269067
+			'patrol' => true, // T269067
+			'rollback' => true, // T269067
+			'suppressredirect' => true, // T269067
+		],
+		'sysop' => [
+			'templateeditor' => true, // T269067
+		],
+		'templateeditor' => [
+			'editcontentmodel' => true, // T269067
+			'tboverride' => true, // T269067
+			'templateeditor' => true, // T269067
+		],
+	],
 	'+mznwiki' => [
 		// Uploads are restricted to a uploader group - T187187
 		'user' => [ 'reupload-own' => false, ],
@@ -12454,6 +12471,12 @@ function wmfGetVariantSettings() {
 	'+mrwiki' => [
 		'sysop' => [ 'rollbacker' ], // T270864
 	],
+	'+mrwikisource' => [
+		'sysop' => [
+			'templateeditor',  // T269067
+			'patroller',  // T269067
+		],
+	],
 	'+mznwiki' => [
 		'sysop' => [ 'uploader' ],
 	],
@@ -13650,6 +13673,12 @@ function wmfGetVariantSettings() {
 	],
 	'+mrwiki' => [
 		'sysop' => [ 'rollbacker' ],      // T270864
+	],
+	'+mrwikisource' => [
+		'sysop' => [
+			'templateeditor',  // T269067
+			'patroller',  // T269067
+		],
 	],
 	'+mznwiki' => [
 		'sysop' => [ 'uploader' ]
