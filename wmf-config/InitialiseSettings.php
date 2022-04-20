@@ -11285,6 +11285,10 @@ function wmfGetVariantSettings() {
 			'tboverride' => true,
 			'editcontentmodel' => true
 		], // T296154
+		'uploader' => [ // T303577
+			'upload' => true,
+			'upload_by_url' => true,
+		],
 	],
 	'+viwikibooks' => [
 		'eliminator' => [ // T202207
@@ -12906,6 +12910,7 @@ function wmfGetVariantSettings() {
 			'autopatrolled', // T48828
 			'extendedconfirmed', // T215493
 			'templateeditor', // T296154
+			'uploader', // T303577
 		],
 		'bureaucrat' => [
 			'eliminator', // T70612
@@ -13956,7 +13961,8 @@ function wmfGetVariantSettings() {
 			'patroller', // T48828
 			'autopatrolled', // T48828
 			'extendedconfirmed', // T215493
-			'templateeditor' // T296154
+			'templateeditor', // T296154
+			'uploader', // T303577
 		],
 		'bureaucrat' => [
 			'eliminator', // T70612
