@@ -1558,6 +1558,9 @@ function wmfGetLabsOverrideSettings() {
 		'wgGEMentorDashboardEnabled' => [
 			'default' => true,
 		],
+		'wgGECampaignPattern' => [
+			'default' => '/^growth-|^facebook-latam-2022-A$/',
+		],
 		'wgGECampaigns' => [
 			'default' => [
 				'growth-glam-2022' => [
