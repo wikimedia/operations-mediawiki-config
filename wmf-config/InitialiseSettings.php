@@ -5240,7 +5240,7 @@ function wmfGetVariantSettings() {
 
 'wgCascadingRestrictionLevels' => [
 	'default' => [ 'sysop' ],
-	'plwiki' => [ 'editor', 'sysop' ], // T50374
+	'plwiki' => [ 'editeditorprotected', 'sysop' ], // T50374
 ],
 
 'wgSemiprotectedRestrictionLevels' => [
