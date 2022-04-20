@@ -607,9 +607,6 @@ function wmfGetVariantSettings() {
 	'wikivoyage' => '/static/images/mobile/copyright/wikivoyage.svg',
 	'wiktionary' => '/static/images/mobile/copyright/wiktionary.svg',
 
-	// Celebrations
-	'fawiki' => '/static/images/mobile/copyright/wikipedia-fa-900K.svg', // T306030
-
 	// Special wikis
 	'collabwiki' => '/static/images/mobile/copyright/collab-icon.svg',
 	'commonswiki' => '/static/images/mobile/copyright/commons.svg',
