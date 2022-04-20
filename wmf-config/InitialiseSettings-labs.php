@@ -1559,7 +1559,7 @@ function wmfGetLabsOverrideSettings() {
 			'default' => true,
 		],
 		'wgGECampaignPattern' => [
-			'default' => '/^growth-|^facebook-latam-2022-A$/',
+			'enwiki' => '/^growth-|^facebook-latam-2022-A$/',
 		],
 		'wgGECampaigns' => [
 			'default' => [
