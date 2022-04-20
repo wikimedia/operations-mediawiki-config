@@ -790,7 +790,7 @@ function wmfGetVariantSettings() {
 		'height' => 18,
 	],
 	'fawiki' => [
-		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fa-900k.svg', // T306030
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fa.svg',
 		'width' => 78,
 		'height' => 26,
 	],
@@ -1218,7 +1218,7 @@ function wmfGetVariantSettings() {
 		'height' => 13,
 	],
 	'fawiki' => [
-		'src' => '/static/images/mobile/copyright/wikipedia-tagline-fa-900k.svg', // T306030
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-fa.svg',
 		'width' => 76,
 		'height' => 19,
 	],

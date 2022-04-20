@@ -381,10 +381,7 @@ Wikipedia:
         comment_2x:  T150618
 
     fawiki:
-        selected: fawiki-milestone
         commons: File:Wikipedia-logo-v2-fa.svg
-        variants:
-            fawiki-milestone: File:Wikipedia-fa-900k-legacy.svg
 
     ffwiki:
         comment_1_5x:  T150618
