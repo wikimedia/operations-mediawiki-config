@@ -11483,7 +11483,10 @@ function wmfGetVariantSettings() {
 	// due to mass vandalism complaint, 2006-04-11
 	'+zhwiki' => [
 		'*' => [ 'flow-hide' => false, ], // T264489, to revise on 2020-10-12
-		'autoconfirmed' => [ 'flow-hide' => true ],  // T264489, to revise on 2020-10-12
+		'autoconfirmed' => [
+			'flow-hide' => true, // T264489, to revise on 2020-10-12
+			'upload_by_url' => true, // T142991
+		],
 		'bot' => [ 'extendedconfirmed' => true ], // T287322
 		'rollbacker' => [
 			'rollback' => true, // T18988
@@ -11515,7 +11518,10 @@ function wmfGetVariantSettings() {
 		],
 		'transwiki' => [ 'suppressredirect' => true, ], // T250972
 		'templateeditor' => [ 'templateeditor' => true, ], // T260012
-		'sysop' => [ 'templateeditor' => true, 'extendedconfirmed' => true ], // T260012, T287322
+		'sysop' => [
+			'templateeditor' => true, // T260012
+			'extendedconfirmed' => true, // T287322
+		],
 	],
 	'+zh_classicalwiki' => [
 		'editor' => [ 'rollback' => true ], // T188064
@@ -16434,6 +16440,7 @@ function wmfGetVariantSettings() {
 	'testcommonswiki' => true,
 	'wikisource' => true, // T293205
 	'viwiki' => true, // T303577
+	'zhwiki' => true, // T142991
 ],
 'wgCopyUploadsFromSpecialUpload' => [
 	'default' => false,
@@ -16442,6 +16449,7 @@ function wmfGetVariantSettings() {
 	'testcommonswiki' => true, // T73897
 	'wikisource' => true, // T293205
 	'viwiki' => true, // T303577
+	'zhwiki' => true, // T142991
 ],
 'wgCopyUploadTimeout' => [
 	// This is set to a high value because there is no working mechanism for
@@ -16757,6 +16765,9 @@ function wmfGetVariantSettings() {
 	],
 	'+viwiki' => [
 		'upload.wikimedia.org',             // Commons -> WS transfers - T303577
+	],
+	'+zhwiki' => [
+		'upload.wikimedia.org', // Commons -> WP transfers - T142991
 	],
 ],
 
