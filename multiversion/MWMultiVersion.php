@@ -36,14 +36,9 @@ class MWMultiVersion {
 	private $db;
 
 	/**
-	 * @var string
+	 * @var null|false|string
 	 */
 	private $version;
-
-	/**
-	 * @var bool
-	 */
-	private $versionLoaded = false;
 
 	/**
 	 * List of *.wikimedia.org subdomains that are chapter wikis
@@ -89,7 +84,7 @@ class MWMultiVersion {
 		'ua',
 		'uk',
 		've',
-		'wb'
+		'wb',
 	];
 
 	/**
@@ -104,9 +99,10 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Create a multiversion object based on a dbname
+	 * Create an instance by explicit wiki ID.
+	 *
 	 * @param string $dbName
-	 * @return MWMultiVersion object for this wiki
+	 * @return MWMultiVersion
 	 */
 	public static function newFromDBName( $dbName ) {
 		$m = new self();
@@ -114,10 +110,6 @@ class MWMultiVersion {
 		return $m;
 	}
 
-	/**
-	 * Create the singleton version instance
-	 * @return MWMultiVersion object for this wiki
-	 */
 	private static function createInstance() {
 		if ( isset( self::$instance ) ) {
 			self::error( "MWMultiVersion instance already set!\n" );
@@ -127,10 +119,13 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Initialize and get the singleton instance of MWMultiVersion.
-	 * Use this for all web hits except to /w/thumb.php on upload.wikimedia.org.
-	 * @param string $serverName the ServerName for this wiki -- $_SERVER['SERVER_NAME']
-	 * @return MWMultiVersion object for this wiki
+	 * Create an instance by HTTP host name.
+	 *
+	 * Use this for all web requests, except those rewritten from
+	 * upload.wikimedia.org to /w/thumb.php.
+	 *
+	 * @param string $serverName HTTP host name from `$_SERVER['SERVER_NAME']`.
+	 * @return MWMultiVersion
 	 */
 	public static function initializeForWiki( $serverName ) {
 		$instance = self::createInstance();
@@ -139,10 +134,17 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Initialize and get the singleton instance of MWMultiVersion.
-	 * Use this for web hits to /w/thumb.php on upload.wikimedia.org.
-	 * @param string $pathInfo the PathInfo -- $_SERVER['PATH_INFO']
-	 * @return MWMultiVersion object for the wiki derived from the pathinfo
+	 * Create an instance for upload.wikimedia.org requests to /w/thumb_handler.php.
+	 *
+	 * For example:
+	 * <https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Example.svg/240px-Example.svg.png>
+	 *
+	 * TODO: As of 2022, this might be obsolete. Even before Thumbor, it
+	 * seems swift-rewrite.py had already been routing requests in a way
+	 * that wouldn't satisfy this condition.
+	 *
+	 * @param string $pathInfo CGI path info, from `$_SERVER['PATH_INFO']`.
+	 * @return MWMultiVersion
 	 */
 	public static function initializeForUploadWiki( $pathInfo ) {
 		$instance = self::createInstance();
@@ -151,9 +153,12 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Initialize and get the singleton instance of MWMultiVersion.
-	 * Use this for PHP CLI hits to maintenance scripts.
-	 * @return MWMultiVersion object for the wiki derived from --wiki CLI parameter
+	 * Create an instance by `--wiki` CLI parameter.
+	 *
+	 * This is used by MWScript.php and the `mwscript` command for
+	 * running maintenance scripts.
+	 *
+	 * @return MWMultiVersion
 	 */
 	public static function initializeForMaintenance() {
 		$instance = self::createInstance();
@@ -162,10 +167,10 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Initialize and get the singleton instance of MWMultiVersion.
-	 * Use this for all other special web entry points.
-	 * @param string $dbName DB name
-	 * @return MWMultiVersion object for this wiki
+	 * Create an instance by explicit wiki ID.
+	 *
+	 * @param string $dbName
+	 * @return MWMultiVersion
 	 */
 	public static function initializeFromDBName( $dbName ) {
 		$instance = self::createInstance();
@@ -174,29 +179,34 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Get the singleton instance of MWMultiVersion that was previously initialized
-	 * @return MWMultiVersion|null version object for the wiki
+	 * Get the previously created singleton for the current wiki.
+	 *
+	 * @return MWMultiVersion|null
 	 */
 	public static function getInstance() {
 		return self::$instance;
 	}
 
 	/**
-	 * Destroy the singleton instance to let a subsequent call create a new
-	 * one. This should NEVER be used on non CLI interface, that will throw an
-	 * internal error.
+	 * Destroy the singleton instance.
+	 *
+	 * Use this to let a subsequent call create a new instance.
+	 *
+	 * This MUST NOT be used outside command-line or test contexts,
+	 * and will exit with a fatal error in that case.
 	 */
 	public static function destroySingleton() {
 		if ( PHP_SAPI !== 'cli' ) {
-			self::error( 'Can not destroy singleton instance when used ' .
+			self::error( 'Must not destroy singleton instance when used ' .
 				'with non-CLI interface' );
 		}
 		self::$instance = null;
 	}
 
 	/**
-	 * Derives site and lang from the parameters and sets $site and $lang on the instance
-	 * @param string $serverName the ServerName for this wiki -- $_SERVER['SERVER_NAME']
+	 * Initialize object state by mapping an HTTP hostname to a wiki ID.
+	 *
+	 * @param string $serverName
 	 */
 	private function setSiteInfoForWiki( $serverName ) {
 		$matches = [];
@@ -265,8 +275,9 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Derives site and lang from the parameter and sets $site and $lang on the instance
-	 * @param string $pathInfo the PathInfo -- $_SERVER['PATH_INFO']
+	 * Initialize object state from a upload.wikimedia.org request path.
+	 *
+	 * @param string $pathInfo
 	 */
 	private function setSiteInfoForUploadWiki( $pathInfo ) {
 		$pathBits = explode( '/', $pathInfo );
@@ -279,8 +290,9 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Gets the site and lang from the --wiki argument.
-	 * This code reflects how Maintenance.php reads arguments.
+	 * Initialize object state from CLI `--wiki` parameter.
+	 *
+	 * This code is based on how MediaWiki's Maintenance.php script reads arguments.
 	 */
 	private function setSiteInfoForMaintenance() {
 		global $argv;
@@ -310,7 +322,6 @@ class MWMultiVersion {
 				self::error( "--force-version must be followed by a version number" );
 			}
 			$this->version = "php-" . $argv[3];
-			$this->versionLoaded = true;
 
 			# Delete the flag and its parameter so it won't be passed on to the
 			# maintenance script.
@@ -325,7 +336,8 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Load the DB from the site and lang for this wiki
+	 * Initialize object state from a legacy site-lang pair.
+	 *
 	 * @param string $site
 	 * @param string $lang
 	 */
@@ -340,14 +352,15 @@ class MWMultiVersion {
 
 	/**
 	 * Get the DB name for this wiki
-	 * @return string the database name
+	 *
+	 * @return string
 	 */
 	public function getDatabase() {
 		return $this->db;
 	}
 
 	/**
-	 * Handler for the wfShellWikiCmd hook.
+	 * Handle the wfShellWikiCmd hook.
 	 *
 	 * This converts shell commands like "php $IP/maintenance/foo.php" into
 	 * commands that use the "MWScript.php" wrapper, for example:
@@ -368,32 +381,30 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Get the space-separated list of version params for this wiki.
-	 * The first item is the MW version
+	 * Lazy initialize `$this->version` after the wiki ID has been mapped in `$this->db`.
 	 */
 	private function loadVersionInfo() {
 		global $wmgRealm;
 
-		if ( $this->versionLoaded ) {
+		if ( $this->version !== null ) {
 			return;
 		}
-		$this->versionLoaded = true;
 
 		$dir = dirname( __DIR__ );
 
 		if ( $wmgRealm === 'production' ) {
 			$phpFilename = $dir . '/wikiversions.php';
 		} else {
-			# Load the realm-specific wikiversions file, such as wikiversions-labs.php or wikiversions-dev.php
+			// Load the realm-specific wikiversions file,
+			// such as wikiversions-labs.php or wikiversions-dev.php
 			$phpFilename = $dir . "/wikiversions-$wmgRealm.php";
 		}
 
+		// This intentionally tolerates absence by using `include` instead of `require`
 		$wikiversions = include $phpFilename;
-
 		if ( $wikiversions === false ) {
 			self::error( "Unable to open $phpFilename.\n" );
 		}
-
 		if ( !is_array( $wikiversions ) ) {
 			self::error( "$phpFilename did not return an array as expected.\n" );
 		}
@@ -401,14 +412,15 @@ class MWMultiVersion {
 		$version = $wikiversions[$this->db] ?? false;
 
 		if ( $version && strpos( $version, 'php-' ) !== 0 ) {
-			self::error( "$phpFilename version entry does not start with `php-` (got `$version`).\n" );
+			self::error( "$phpFilename entry must start with `php-` (got `$version`).\n" );
 		}
 
 		$this->version = $version;
 	}
 
 	/**
-	 * Check if this wiki is *not* specified in wikiversions.
+	 * Whether the mapped wiki ID is not a known wiki in wikiversions.php.
+	 *
 	 * @return bool
 	 */
 	public function isMissing() {
@@ -417,9 +429,9 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Get the version as specified in wikiversions.
+	 * Get the version directory name for the current wiki ID.
 	 *
-	 * @return string Version directory name, e.g. "php-X.XX" or "php-trunk".
+	 * @return string Version directory name, e.g. "php-X.XX" or "php-master".
 	 */
 	public function getVersion() {
 		$this->loadVersionInfo();
@@ -430,24 +442,28 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Get the version number as specified in wikiversions
+	 * Get the short version name for the current wiki ID
 	 *
-	 * Do NOT use this to determine the path to cache or binary files,
-	 * only the core MW code.
+	 * Do NOT use this to determine paths to MediaWiki directories and such.
+	 * Use only for display purposes or in cache keys.
 	 *
-	 * @return string Version number, e.g. "x.xx" or "trunk".
+	 * TODO: Consider deprecating in favour of getVersion() for simplicity,
+	 * this is a redundant concept.
+	 *
+	 * @return string Version number, e.g. "x.xx" or "master".
 	 */
 	public function getVersionNumber() {
 		$this->loadVersionInfo();
 		if ( $this->version === false ) {
 			self::error( "no version entry for `{$this->db}`.\n" );
 		}
-		// remove "php-"
+		// strip "php-"
 		return substr( $this->version, 4 );
 	}
 
 	/**
-	 * Error out and exit(1);
+	 * Print error and exit PHP process.
+	 *
 	 * @param string $msg Error to show to the client
 	 * @param int $httpError HTTP header error code
 	 * @return void
@@ -475,17 +491,21 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Get the location of the correct version of a MediaWiki web
-	 * entry-point file given environmental variables such as the server name.
-	 * This function should only be called on web views.
+	 * Get the location of the correct version of a MediaWiki web entry point.
+	 *
+	 * This works based on environmental variables, such as the server name,
+	 * as given by CGI (php-fpm).
+	 *
+	 * This must be called from web requests. For CLI, use getMediaWikiCli.
 	 *
 	 * If the wiki doesn't exist, then wmf-config/missing.php will
-	 * be included (and thus displayed) and PHP will exit.
+	 * be rendered and flushed to stdout and the process exited.
 	 *
-	 * If it does, then this function also has some other effects:
-	 * (a) Sets the $IP global variable (path to MediaWiki)
-	 * (b) Sets the MW_INSTALL_PATH environmental variable
-	 * (c) Changes PHP's current directory to the directory of this file.
+	 * If the wiki exists, this function also has these responsibilities:
+	 *
+	 * - Set the $IP global variable (path to MediaWiki).
+	 * - Set the MW_INSTALL_PATH environmental variable.
+	 * - Change PHP's current directory to the chosen MediaWiki install path.
 	 *
 	 * @param string $file File path (relative to MediaWiki dir)
 	 * @param string|null $wiki Force the Wiki ID rather than detecting it
@@ -497,29 +517,29 @@ class MWMultiVersion {
 		if ( $wiki === null ) {
 			$scriptName = @$_SERVER['SCRIPT_NAME'];
 			$serverName = @$_SERVER['SERVER_NAME'];
-			# Upload URL hit (to upload.wikimedia.org rather than wiki of origin)...
 			if ( $scriptName === '/w/thumb.php' && $serverName === 'upload.wikimedia.org' ) {
+				// Upload URL hit (to upload.wikimedia.org rather than wiki of origin)...
 				$multiVersion = self::initializeForUploadWiki( $_SERVER['PATH_INFO'] );
-			# Regular URL hit (wiki of origin)...
 			} else {
+				// Regular URL hit (wiki of origin)...
 				$multiVersion = self::initializeForWiki( $serverName );
 			}
 		} else {
 			$multiVersion = self::initializeFromDBName( $wiki );
 		}
 
-		# Wiki doesn't exist yet?
+		// Wiki doesn't exist, yet?
 		if ( $multiVersion->isMissing() ) {
 			// same hack as CommonSettings.php
-			header( "Cache-control: no-cache" );
+			header( 'Cache-control: no-cache' );
 			include MEDIAWIKI_DEPLOYMENT_DIR . '/wmf-config/missing.php';
 			exit;
 		}
 
-		# Get the MediaWiki version running on this wiki...
+		// Get the MediaWiki version running on this wiki...
 		$version = $multiVersion->getVersion();
 
-		# Get the correct MediaWiki path based on this version...
+		// Get the correct MediaWiki path based on this version...
 		$IP = MEDIAWIKI_DEPLOYMENT_DIR . "/$version";
 
 		chdir( $IP );
@@ -530,7 +550,7 @@ class MWMultiVersion {
 
 	/**
 	 * Get the location of the correct version of a MediaWiki CLI
-	 * entry-point file given the --wiki parameter passed in.
+	 * entry-point file given the `--wiki` parameter passed in.
 	 *
 	 * This also has some other effects:
 	 * (a) Sets the $IP global variable (path to MediaWiki)
@@ -559,7 +579,7 @@ class MWMultiVersion {
 
 		putenv( "MW_INSTALL_PATH=$IP" );
 
-		if ( $file !== "" && $file[0] === '/' ) {
+		if ( $file !== '' && $file[0] === '/' ) {
 			return $file;
 		} else {
 			return "$IP/$file";
