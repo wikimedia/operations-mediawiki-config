@@ -15418,9 +15418,6 @@ function wmfGetVariantSettings() {
 		710 => [ 'edit-legal' ], // TimedText
 		828 => [ 'edit-legal' ], // Module
 	],
-	'+fawiki' => [
-		NS_MAIN => [ 'minoredit' ], // T291018
-	],
 	'+metawiki' => [
 		866 => [ 'autoconfirmed' ], // T238723 - CNBanner:
 	],
