@@ -16375,7 +16375,6 @@ function wmfGetVariantSettings() {
 	'commonswiki' => true,
 	'testcommonswiki' => true,
 	'wikisource' => true, // T293205
-	'viwiki' => true, // T303577
 ],
 'wgCopyUploadsFromSpecialUpload' => [
 	'default' => false,
@@ -16693,9 +16692,6 @@ function wmfGetVariantSettings() {
 		'ia-upload.wmcloud.org',            // T287241 - IA-Upload tool
 		'wikisource-bot.toolforge.org',     // Wikisource-bot tool - T292213
 		'upload.wikimedia.org',             // Commons -> WS transfers - T294824
-	],
-	'+viwiki' => [
-		'upload.wikimedia.org',             // Commons -> WS transfers - T303577
 	],
 ],
 
