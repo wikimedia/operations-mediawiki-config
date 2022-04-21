@@ -1450,7 +1450,7 @@ function wmfGetLabsOverrideSettings() {
 			],
 		],
 		'wgWelcomeSurveyExperimentalGroups' => [
-			'eswiki' => [
+			'enwiki' => [
 				'exp2_target_specialpage' => [
 					'percentage' => 0,
 				],
