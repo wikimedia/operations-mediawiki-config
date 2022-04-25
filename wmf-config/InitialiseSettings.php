@@ -7963,6 +7963,9 @@ function wmfGetVariantSettings() {
 ],
 'wgVectorTableOfContents' => [
 	'default' => [
+		'default' => true
+	],
+	'desktop-improvements' => [
 		'default' => false
 	],
 ],
