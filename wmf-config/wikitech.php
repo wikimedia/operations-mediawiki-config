@@ -1,10 +1,10 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-// phpcs:disable MediaWiki.Classes.UnsortedUseStatements.UnsortedUse
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Session\SessionManager;
+use Monolog\Handler\StreamHandler;
 
 wfLoadExtension( 'LdapAuthentication' );
 $wgAuthManagerAutoConfig['primaryauth'] += [
@@ -64,7 +64,7 @@ if ( false ) {
 		],
 		'handlers' => [
 			'wikitech-ldap' => [
-				'class' => '\\Monolog\\Handler\\StreamHandler',
+				'class' => StreamHandler::class,
 				'args' => [ '/tmp/ldap-s-1-debug.log' ],
 				'formatter' => 'line',
 			],
