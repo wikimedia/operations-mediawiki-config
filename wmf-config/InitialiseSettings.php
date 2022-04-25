@@ -26597,6 +26597,9 @@ function wmfGetVariantSettings() {
 ],
 
 'wgWMEWebUIScrollTrackingSamplingRate' => [
+	'default' => 1, // T305442#7877354
+],
+'wgWMEWebUIScrollTrackingSamplingRateAnons' => [
 	'default' => 0.1, // T292586
 	'enwiki' => 0.01, // T292586
 ],
