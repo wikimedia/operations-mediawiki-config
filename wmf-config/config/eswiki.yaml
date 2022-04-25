@@ -7,7 +7,6 @@ inheritsFrom:
   - all-labs
   - categories-rdf
   - cirrussearch-big-indices
-  - closed-labs
   - large
   - s7
   - securepollglobal
