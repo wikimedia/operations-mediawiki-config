@@ -26610,6 +26610,50 @@ function wmfGetVariantSettings() {
 
 'wgWMEWikidataCompletionSearchClicks' => [
 	'default' => [],
+	'wikidata' => [
+		'enabled' => false,
+		'buckets' => [
+			'control' => [
+				'samplingRate' => 1,
+			],
+			'T306644-en' => [
+				'samplingRate' => 1,
+				'context' => 'item',
+				'language' => 'en',
+				'searchApiParameters' => [
+					'cirrusWBProfile' => 'wikibase_config_prefix_query-202203-en',
+					'cirrusRescoreProfile' => 'wikibase_config_entity_weight-202203-en',
+				],
+			],
+			'T306644-de' => [
+				'samplingRate' => 1,
+				'context' => 'item',
+				'language' => 'de',
+				'searchApiParameters' => [
+					'cirrusWBProfile' => 'wikibase_config_prefix_query-202203-de',
+					'cirrusRescoreProfile' => 'wikibase_config_detity_weight-202203-de',
+				],
+			],
+			'T306644-es' => [
+				'samplingRate' => 1,
+				'context' => 'item',
+				'language' => 'es',
+				'searchApiParameters' => [
+					'cirrusWBProfile' => 'wikibase_config_prefix_query-202203-es',
+					'cirrusRescoreProfile' => 'wikibase_config_estity_weight-202203-es',
+				],
+			],
+			'T306644-fr' => [
+				'samplingRate' => 1,
+				'context' => 'item',
+				'language' => 'fr',
+				'searchApiParameters' => [
+					'cirrusWBProfile' => 'wikibase_config_prefix_query-202203-fr',
+					'cirrusRescoreProfile' => 'wikibase_config_frtity_weight-202203-fr',
+				],
+			],
+		],
+	],
 ],
 
 'wmgUsePageViewInfo' => [
