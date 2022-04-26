@@ -259,7 +259,6 @@ function wmfGetOverrideSettings() {
 				'headers-sent' => 'debug',
 				'HttpError' => 'error', // Only log http errors with a 500+ code T85795
 				// 'JobExecutor' => [ 'logstash' => 'warning' ],
-				'Kartographer' => 'debug', // temporary, see T304813
 				'ldap' => 'warning',
 				'Linter' => 'debug',
 				'LocalFile' => 'debug',
