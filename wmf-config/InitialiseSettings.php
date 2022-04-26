@@ -27982,7 +27982,9 @@ function wmfGetVariantSettings() {
 ],
 
 'wgCirrusSearchElasticQuirks' => [
-	'default' => []
+	'default' => [
+		'retry_on_conflict' => true,
+	]
 ],
 
 # Turn off leading wildcard matches, they are a very slow and inefficient query
