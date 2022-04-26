@@ -286,84 +286,92 @@ $wgWBCSRescoreProfiles = [
 		'i18n_msg' => 'wikibase-rescore-profile-prefix',
 		'supported_namespaces' => 'all',
 		'rescore' => [
-			'window' => 8192,
-			'window_size_override' => 'EntitySearchRescoreWindowSize',
-			'score_mode' => 'total',
-			'type' => 'function_score',
-			'function_chain' => 'wikibase_config_entity_weight',
-			'function_chain_overrides' => [
-				'functions.0.params.a' => 0.374,
-				'functions.0.params.k' => 302.0,
-				'functions.0.weight' => 0.561,
-				'functions.1.params.a' => 9.84,
-				'functions.1.params.k' => 384.0,
-				'functions.1.weight' => 0.467
+			[
+				'window' => 8192,
+				'window_size_override' => 'EntitySearchRescoreWindowSize',
+				'score_mode' => 'total',
+				'type' => 'function_score',
+				'function_chain' => 'wikibase_config_entity_weight',
+				'function_chain_overrides' => [
+					'functions.0.params.a' => 0.374,
+					'functions.0.params.k' => 302.0,
+					'functions.0.weight' => 0.561,
+					'functions.1.params.a' => 9.84,
+					'functions.1.params.k' => 384.0,
+					'functions.1.weight' => 0.467
+				],
+				'query_weight' => 0.0743,
+				'rescore_query_weight' => 0.708,
 			],
-			'query_weight' => 0.0743,
-			'rescore_query_weight' => 0.708,
 		],
 	],
 	'wikibase_config_entity_weight-202203-de' => [
 		'i18n_msg' => 'wikibase-rescore-profile-prefix',
 		'supported_namespaces' => 'all',
 		'rescore' => [
-			'window' => 8192,
-			'window_size_override' => 'EntitySearchRescoreWindowSize',
-			'score_mode' => 'total',
-			'type' => 'function_score',
-			'function_chain' => 'wikibase_config_entity_weight',
-			'function_chain_overrides' => [
-				'functions.0.params.a' => 0.587,
-				'functions.0.params.k' => 216.0,
-				'functions.0.weight' => 0.897,
-				'functions.1.params.a' => 7.76,
-				'functions.1.params.k' => 390.0,
-				'functions.1.weight' => 0.716
+			[
+				'window' => 8192,
+				'window_size_override' => 'EntitySearchRescoreWindowSize',
+				'score_mode' => 'total',
+				'type' => 'function_score',
+				'function_chain' => 'wikibase_config_entity_weight',
+				'function_chain_overrides' => [
+					'functions.0.params.a' => 0.587,
+					'functions.0.params.k' => 216.0,
+					'functions.0.weight' => 0.897,
+					'functions.1.params.a' => 7.76,
+					'functions.1.params.k' => 390.0,
+					'functions.1.weight' => 0.716
+				],
+				'query_weight' => 0.1,
+				'rescore_query_weight' => 0.706,
 			],
-			'query_weight' => 0.1,
-			'rescore_query_weight' => 0.706,
 		],
 	],
 	'wikibase_config_entity_weight-202203-es' => [
 		'i18n_msg' => 'wikibase-rescore-profile-prefix',
 		'supported_namespaces' => 'all',
 		'rescore' => [
-			'window' => 8192,
-			'window_size_override' => 'EntitySearchRescoreWindowSize',
-			'score_mode' => 'total',
-			'type' => 'function_score',
-			'function_chain' => 'wikibase_config_entity_weight',
-			'function_chain_overrides' => [
-				'functions.0.params.a' => 0.973,
-				'functions.0.params.k' => 397.0,
-				'functions.0.weight' => 0.805,
-				'functions.1.params.a' => 8.4,
-				'functions.1.params.k' => 470.0,
-				'functions.1.weight' => 0.781
+			[
+				'window' => 8192,
+				'window_size_override' => 'EntitySearchRescoreWindowSize',
+				'score_mode' => 'total',
+				'type' => 'function_score',
+				'function_chain' => 'wikibase_config_entity_weight',
+				'function_chain_overrides' => [
+					'functions.0.params.a' => 0.973,
+					'functions.0.params.k' => 397.0,
+					'functions.0.weight' => 0.805,
+					'functions.1.params.a' => 8.4,
+					'functions.1.params.k' => 470.0,
+					'functions.1.weight' => 0.781
+				],
+				'query_weight' => 0.118,
+				'rescore_query_weight' => 0.421,
 			],
-			'query_weight' => 0.118,
-			'rescore_query_weight' => 0.421,
 		],
 	],
 	'wikibase_config_entity_weight-202203-fr' => [
 		'i18n_msg' => 'wikibase-rescore-profile-prefix',
 		'supported_namespaces' => 'all',
 		'rescore' => [
-			'window' => 8192,
-			'window_size_override' => 'EntitySearchRescoreWindowSize',
-			'score_mode' => 'total',
-			'type' => 'function_score',
-			'function_chain' => 'wikibase_config_entity_weight',
-			'function_chain_overrides' => [
-				'functions.0.params.a' => 0.587,
-				'functions.0.params.k' => 216.0,
-				'functions.0.weight' => 0.897,
-				'functions.1.params.a' => 7.76,
-				'functions.1.params.k' => 390.0,
-				'functions.1.weight' => 0.716
+			[
+				'window' => 8192,
+				'window_size_override' => 'EntitySearchRescoreWindowSize',
+				'score_mode' => 'total',
+				'type' => 'function_score',
+				'function_chain' => 'wikibase_config_entity_weight',
+				'function_chain_overrides' => [
+					'functions.0.params.a' => 0.587,
+					'functions.0.params.k' => 216.0,
+					'functions.0.weight' => 0.897,
+					'functions.1.params.a' => 7.76,
+					'functions.1.params.k' => 390.0,
+					'functions.1.weight' => 0.716
+				],
+				'query_weight' => 0.1,
+				'rescore_query_weight' => 0.706,
 			],
-			'query_weight' => 0.1,
-			'rescore_query_weight' => 0.706,
 		],
 	],
 ];
