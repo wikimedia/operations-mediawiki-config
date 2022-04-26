@@ -47,8 +47,8 @@ return [
 		'upload' => 'deployment-ms-fe03.deployment-prep.eqiad.wmflabs',
 		'cxserver' => 'http://deployment-docker-cxserver01.eqiad.wmflabs:8080',
 
-		'wikifunctions-orchestrator' => 'deployment-docker-wikifunctions01.eqiad.wmflabs:6254',
-		'wikifunctions-evaluator' => 'deployment-docker-wikifunctions01.eqiad.wmflabs:6927',
+		'wikifunctions-orchestrator' => 'deployment-docker-wikifunctions01.deployment-prep.eqiad1.wikimedia.cloud:6254',
+		'wikifunctions-evaluator' => 'deployment-docker-wikifunctions01.deployment-prep.eqiad1.wikimedia.cloud:6927',
 
 		'irc' => [
 			'irc.beta.wmflabs.org', // deployment-ircd02

@@ -204,9 +204,10 @@ function wmfLoadInitialiseSettings( $conf ) {
 	$settings = wmfGetVariantSettings();
 
 	if ( $wmgRealm !== 'production' ) {
-		// Realm overrides
+		// Override for Beta Cluster and other realms.
+		// Ref: InitialiseSettings-labs.php
 		require_once __DIR__ . "/InitialiseSettings-$wmgRealm.php";
-		$settings = wmfApplyOverrideSettings( $settings );
+		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::applyOverrides( $settings );
 	}
 
 	$conf->settings = $settings;
@@ -332,7 +333,8 @@ if ( $wmgRealm === 'labs' ) {
 	// Beta Cluster overrides
 	require __DIR__ . '/mc-labs.php';
 }
-# db-*.php needs $wgDebugDumpSql so should be loaded after logging.php
+# db-*.php needs $wgDebugDumpSql so should be loaded after logging.php.
+# Ref: db-production.php or db-labs.php
 require __DIR__ . "/db-$wmgRealm.php";
 
 # Override certain settings in command-line mode
@@ -2262,18 +2264,16 @@ if ( $wgDBname === 'enwiki' ) {
 	};
 }
 
-if ( $wgDBname === 'enwiki' ) {
+if ( $wgDBname === 'enwiki' || $wgDBname === 'fawiki' ) {
 	// T59569, T105118
 	//
-	// If it's an anonymous user creating a page in the English Wikipedia
+	// If it's an anonymous user creating a page in the English and Persian Wikipedia
 	// Draft namespace, tell TitleQuickPermissions to abort the normal
 	// checkQuickPermissions checks.  This lets anonymous users create a page in this
 	// namespace, even though they don't have the general 'createpage' right.
 	//
 	// It does not affect other checks from getUserPermissionsErrorsInternal
 	// (e.g. protection and blocking).
-	//
-	// This used to apply to Persian Wikipedia as well but that was disabled in T291018
 	//
 	// Returning true tells it to proceed as normal in other cases.
 	$wgHooks['TitleQuickPermissions'][] = static function ( Title $title, User $user, $action, &$errors, $doExpensiveQueries, $short ) {

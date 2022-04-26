@@ -255,6 +255,7 @@ function wmfGetOverrideSettings() {
 				'headers-sent' => 'debug',
 				'HttpError' => 'error', // Only log http errors with a 500+ code T85795
 				// 'JobExecutor' => [ 'logstash' => 'warning' ],
+				'Kartographer' => 'debug', // temporary, see T304813
 				'ldap' => 'warning',
 				'Linter' => 'debug',
 				'LocalFile' => 'debug',
@@ -1322,7 +1323,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgTemplateLinksSchemaMigrationStage' => [
-			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
 		],
 
 		'-wgIncludejQueryMigrate' => [
@@ -1428,7 +1429,7 @@ function wmfGetOverrideSettings() {
 			],
 		],
 		'wgWelcomeSurveyExperimentalGroups' => [
-			'eswiki' => [
+			'enwiki' => [
 				'exp2_target_specialpage' => [
 					'percentage' => 0,
 				],
@@ -1535,6 +1536,9 @@ function wmfGetOverrideSettings() {
 		],
 		'wgGEMentorDashboardEnabled' => [
 			'default' => true,
+		],
+		'wgGECampaignPattern' => [
+			'enwiki' => '/^growth-|^social-latam-2022-A$/',
 		],
 		'wgGECampaigns' => [
 			'default' => [

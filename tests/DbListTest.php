@@ -7,6 +7,7 @@
  * @copyright Copyright © 2012, Antoine Musso <hashar at free dot fr>
  * @file
  */
+use Wikimedia\MWConfig\MWConfigCacheGenerator;
 
 class DbListTest extends PHPUnit\Framework\TestCase {
 
@@ -141,7 +142,7 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 		$unusedDblists = array_flip( DBList::getDblistsUsedInSettings() );
 
 		$prodSettings = wmfGetVariantSettings();
-		$labsSettings = wmfApplyOverrideSettings( $prodSettings );
+		$labsSettings = MWConfigCacheGenerator::applyOverrides( $prodSettings );
 
 		foreach ( $prodSettings as $settingName => $settingsArray ) {
 			foreach ( $settingsArray as $wiki => $settingValue ) {

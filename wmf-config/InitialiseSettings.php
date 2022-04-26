@@ -607,9 +607,6 @@ function wmfGetVariantSettings() {
 	'wikivoyage' => '/static/images/mobile/copyright/wikivoyage.svg',
 	'wiktionary' => '/static/images/mobile/copyright/wiktionary.svg',
 
-	// Celebrations
-	'fawiki' => '/static/images/mobile/copyright/wikipedia-fa-900K.svg', // T306030
-
 	// Special wikis
 	'collabwiki' => '/static/images/mobile/copyright/collab-icon.svg',
 	'commonswiki' => '/static/images/mobile/copyright/commons.svg',
@@ -793,7 +790,7 @@ function wmfGetVariantSettings() {
 		'height' => 18,
 	],
 	'fawiki' => [
-		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fa-900k.svg', // T306030
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fa.svg',
 		'width' => 78,
 		'height' => 26,
 	],
@@ -1221,7 +1218,7 @@ function wmfGetVariantSettings() {
 		'height' => 13,
 	],
 	'fawiki' => [
-		'src' => '/static/images/mobile/copyright/wikipedia-tagline-fa-900k.svg', // T306030
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-fa.svg',
 		'width' => 76,
 		'height' => 19,
 	],
@@ -2320,7 +2317,7 @@ function wmfGetVariantSettings() {
 	'default' => '//upload.wikimedia.org/$site/$lang',
 	'private' => '/w/img_auth.php',
 	'commonswiki' => 'https://upload.wikimedia.org/wikipedia/commons',
-	'testcommonswiki' => 'https://upload.wikimedia.org/wikipedia/test-commons',
+	'testcommonswiki' => 'https://upload.wikimedia.org/wikipedia/testcommons',
 	'labswiki' => '//upload.wikimedia.org/wikipedia/labs',
 	'labtestwiki' => '//upload.wikimedia.org/wikipedia/labtest',
 	'metawiki' => '//upload.wikimedia.org/wikipedia/meta',
@@ -5169,6 +5166,7 @@ function wmfGetVariantSettings() {
 	'eswikivoyage' => 25, // T46285
 	'fawiki' => 10, // T45630
 	'fawikivoyage' => 10, // T73709
+	'iswiki' => 10, // T306305
 	'itwiki' => 50, // T72128, T262738
 	'itwiktionary' => 10, // T24274
 	'jawiki' => 10, // T42270
@@ -5208,6 +5206,7 @@ function wmfGetVariantSettings() {
 	'commonswiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T227420
 	'dewiki' => [ '', 'autoconfirmed', 'editeditorprotected', 'sysop' ], // T94368
 	'dewiktionary' => [ '', 'autoconfirmed', 'editeditorprotected', 'editautoreviewprotected', 'sysop' ], // T216885
+	'elwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T306241
 	'enwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T126607, T57432
 	'enwiktionary' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'templateeditor', 'sysop' ], // T148007, T296580
 	'enwikivoyage' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T198056
@@ -5221,6 +5220,7 @@ function wmfGetVariantSettings() {
 	'jawiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T249820
 	'kowiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T184675
 	'lvwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T92645
+	'mrwikisource' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T269067
 	'plwiki' => [ '', 'autoconfirmed', 'editeditorprotected', 'sysop' ], // T48990
 	'ptwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'editautoreviewprotected', 'sysop' ], // T41652, T281926
 	'rowiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T63172, T254471
@@ -5240,13 +5240,14 @@ function wmfGetVariantSettings() {
 
 'wgCascadingRestrictionLevels' => [
 	'default' => [ 'sysop' ],
-	'plwiki' => [ 'editor', 'sysop' ], // T50374
+	'plwiki' => [ 'editeditorprotected', 'sysop' ], // T50374
 ],
 
 'wgSemiprotectedRestrictionLevels' => [
 	'default' => [ 'autoconfirmed' ],
 	'+azwiki' => [ 'extendedconfirmed' ], // T281860
 	'+bgwiki' => [ 'extendedconfirmed' ], // T269709
+	'+elwiki' => [ 'extendedconfirmed' ], // T306241
 	'+enwiki' => [ 'extendedconfirmed' ], // T126607
 	'+fawiki' => [ 'extendedconfirmed' ], // T140839
 	'+frwiki' => [ 'editextendedsemiprotected' ], // T132248
@@ -7962,6 +7963,9 @@ function wmfGetVariantSettings() {
 ],
 'wgVectorTableOfContents' => [
 	'default' => [
+		'default' => true
+	],
+	'desktop-improvements' => [
 		'default' => false
 	],
 ],
@@ -9393,9 +9397,18 @@ function wmfGetVariantSettings() {
 		'autopatrolled' => [ 'autopatrol' => true ], // T176709
 	],
 	'+elwiki' => [
+		'bot' => [
+			'extendedconfirmed' => true, // T306241
+		],
+		'extendedconfirmed' => [
+			'extendedconfirmed' => true, // T306241
+		],
 		'rollbacker' => [ // T257745
 			'rollback' => true,
 			'suppressredirect' => true,
+		],
+		'sysop' => [
+			'extendedconfirmed' => true, // T306241
 		],
 	],
 	'+elwiktionary' => [
@@ -10424,6 +10437,22 @@ function wmfGetVariantSettings() {
 	'+mrwiki' => [
 		'rollbacker' => [ 'rollback' => true ], // T270864
 	],
+	'+mrwikisource' => [
+		'patroller' => [
+			'autopatrol' => true, // T269067
+			'patrol' => true, // T269067
+			'rollback' => true, // T269067
+			'suppressredirect' => true, // T269067
+		],
+		'sysop' => [
+			'templateeditor' => true, // T269067
+		],
+		'templateeditor' => [
+			'editcontentmodel' => true, // T269067
+			'tboverride' => true, // T269067
+			'templateeditor' => true, // T269067
+		],
+	],
 	'+mznwiki' => [
 		// Uploads are restricted to a uploader group - T187187
 		'user' => [ 'reupload-own' => false, ],
@@ -11259,6 +11288,10 @@ function wmfGetVariantSettings() {
 			'tboverride' => true,
 			'editcontentmodel' => true
 		], // T296154
+		'uploader' => [ // T303577
+			'upload' => true,
+			'upload_by_url' => true,
+		],
 	],
 	'+viwikibooks' => [
 		'eliminator' => [ // T202207
@@ -11953,7 +11986,7 @@ function wmfGetVariantSettings() {
 		],
 	],
 	'+elwiki' => [
-		'sysop' => [ 'rollbacker' ], // T257745
+		'sysop' => [ 'rollbacker', 'extendedconfirmed' ], // T257745, T306241
 	],
 	'+elwiktionary' => [
 		'bureaucrat' => [ 'interface-editor' ],
@@ -12453,6 +12486,12 @@ function wmfGetVariantSettings() {
 	'+mrwiki' => [
 		'sysop' => [ 'rollbacker' ], // T270864
 	],
+	'+mrwikisource' => [
+		'sysop' => [
+			'templateeditor',  // T269067
+			'patroller',  // T269067
+		],
+	],
 	'+mznwiki' => [
 		'sysop' => [ 'uploader' ],
 	],
@@ -12874,6 +12913,7 @@ function wmfGetVariantSettings() {
 			'autopatrolled', // T48828
 			'extendedconfirmed', // T215493
 			'templateeditor', // T296154
+			'uploader', // T303577
 		],
 		'bureaucrat' => [
 			'eliminator', // T70612
@@ -13342,7 +13382,7 @@ function wmfGetVariantSettings() {
 		],
 	],
 	'+elwiki' => [
-		'sysop' => [ 'rollbacker' ], // T257745
+		'sysop' => [ 'rollbacker', 'extendedconfirmed' ], // T257745, T306241
 	],
 	'+elwiktionary' => [
 		'bureaucrat' => [ 'interface-editor' ],
@@ -13650,6 +13690,12 @@ function wmfGetVariantSettings() {
 	'+mrwiki' => [
 		'sysop' => [ 'rollbacker' ],      // T270864
 	],
+	'+mrwikisource' => [
+		'sysop' => [
+			'templateeditor',  // T269067
+			'patroller',  // T269067
+		],
+	],
 	'+mznwiki' => [
 		'sysop' => [ 'uploader' ]
 	],
@@ -13918,7 +13964,8 @@ function wmfGetVariantSettings() {
 			'patroller', // T48828
 			'autopatrolled', // T48828
 			'extendedconfirmed', // T215493
-			'templateeditor' // T296154
+			'templateeditor', // T296154
+			'uploader', // T303577
 		],
 		'bureaucrat' => [
 			'eliminator', // T70612
@@ -15374,9 +15421,6 @@ function wmfGetVariantSettings() {
 		710 => [ 'edit-legal' ], // TimedText
 		828 => [ 'edit-legal' ], // Module
 	],
-	'+fawiki' => [
-		NS_MAIN => [ 'minoredit' ], // T291018
-	],
 	'+metawiki' => [
 		866 => [ 'autoconfirmed' ], // T238723 - CNBanner:
 	],
@@ -15541,6 +15585,14 @@ function wmfGetVariantSettings() {
 			[ APCOND_EDITCOUNT, 200 ],
 		],
 	], // T67495
+	'elwiki' => [
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 30 * 86400 ], // 30 days
+			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+		],
+	], // T306241
 	'enwiki' => [
 		'extendedconfirmed' => [ '&',
 			[ APCOND_EDITCOUNT, 500 ],
@@ -16636,6 +16688,7 @@ function wmfGetVariantSettings() {
 		'prd-cds2-image-store-ypm.s3.amazonaws.com', // Yale University and affiliated musea - T299835
 		'oxalis.br.fgov.be', // Meise botanical garden - T300848
 		'pictures.snsb.info', // Staatliche Naturwissenschaftliche Sammlungen Bayerns - T303929
+		'tothemoon.ser.asu.edu', // Mercury, Gemini, and Apollo Digital Image Archive - T306671
 	],
 	'+wikisource' => [
 		'archive.org', '*.archive.org',
@@ -17040,14 +17093,15 @@ function wmfGetVariantSettings() {
 'wmgTmhWebPlayer' => [
 	'default' => 'mwembed',
 	'group0' => 'videojs',
+	'group1' => 'videojs',
 	'desktop-improvements' => 'videojs',
-	'wiktionary' => 'videojs',
 ],
 
 // Enable the Beta Feature for trying out the new video player (see also the BF whitelist)
 'wgTmhUseBetaFeatures' => [
 	'default' => true,
 	'group0' => false,
+	'desktop-improvements' => false,
 ],
 
 'wmgMinimumVideoPlayerSize' => [
@@ -17103,6 +17157,7 @@ function wmfGetVariantSettings() {
 		'tmh-videojs',                       // [Readers] 2019-12-12 - New video player
 		'discussiontools-betaenable',        // [Editing] 2020-09-12 – Reply tool
 		'ipinfo-beta-feature-enable',        // [AHT] 2022-10-01 – IP Info
+		'wikieditor-realtime-preview',       // [CommTech] 2022-04-18 – Realtime Preview
 	],
 ],
 
@@ -21030,7 +21085,7 @@ function wmfGetVariantSettings() {
 'wgSectionTranslationTargetLanguages' => [
 	'default' => null,
 	'wikipedia' => [ 'az', 'ba', 'bn', 'ha', 'fa', 'ig', 'jv', 'ku', 'lg', 'ml', 'mn', 'ms', 'oc', 'sq', 'ta', 'te', 'th', 'tl', 'yo' ],
-	'testwiki' => [ 'ar', 'az', 'ba', 'bn', 'ca', 'cs', 'es', 'fa', 'fr', 'ha', 'he', 'ht', 'id', 'ig', 'is', 'jv', 'ki', 'ko', 'ku', 'lg', 'ml', 'mn', 'mr', 'ms', 'oc', 'pt', 'ru', 'sq', 'ta', 'te', 'th', 'tl', 'tr', 'uk', 'ur', 'vi', 'yo', 'zh', 'zu' ],
+	'testwiki' => [ 'ar', 'az', 'ba', 'bn', 'ca', 'ckb', 'cs', 'el', 'es', 'eu', 'fa', 'fr', 'ha', 'he', 'ht', 'id', 'ig', 'is', 'jv', 'ki', 'ko', 'ku', 'lg', 'ml', 'mn', 'mr', 'ms', 'oc', 'pt', 'ru', 'sq', 'ta', 'te', 'th', 'tl', 'tr', 'uk', 'ur', 'vi', 'yo', 'zh', 'zh-yue', 'zu' ],
 ],
 
 'wgContentTranslationContentImportForSectionTranslation' => [
@@ -26392,12 +26447,25 @@ function wmfGetVariantSettings() {
 ],
 
 'wgKartographerStaticMapframe' => [
-	'default' => false,
+	// Important for performance (T291736).
+	'default' => true,
 	'wikipedia' => true,
-	'testwiki' => false,
+
+	'wikibooks' => false,
+	'wikinews' => false,
+	'wikiquote' => false,
+	'wikisource' => false,
+	'wikiversity' => false,
+	'wikivoyage' => false,
+	'wiktionary' => false,
+
 	'bgwiki' => false,
-	'mediawikiwiki' => true,
-	'uawikimedia' => true, // T164574
+	'commonswiki' => false,
+	'incubatorwiki' => false,
+	'metawiki' => false,
+	'testwiki' => false,
+	'wikidatawiki' => false,
+	// This should not be disabled on additional wikis (T291736).
 ],
 
 'wgKartographerEnableMapFrame' => [
@@ -26529,6 +26597,9 @@ function wmfGetVariantSettings() {
 ],
 
 'wgWMEWebUIScrollTrackingSamplingRate' => [
+	'default' => 1, // T305442#7877354
+],
+'wgWMEWebUIScrollTrackingSamplingRateAnons' => [
 	'default' => 0.1, // T292586
 	'enwiki' => 0.01, // T292586
 ],
@@ -26711,6 +26782,9 @@ function wmfGetVariantSettings() {
 
 'wgActorTableSchemaMigrationStage' => [
 	'default' => SCHEMA_COMPAT_WRITE_TEMP_AND_NEW | SCHEMA_COMPAT_READ_TEMP,
+	'group0' => SCHEMA_COMPAT_WRITE_TEMP_AND_NEW | SCHEMA_COMPAT_READ_NEW,
+	'small' => SCHEMA_COMPAT_WRITE_TEMP_AND_NEW | SCHEMA_COMPAT_READ_NEW,
+	'medium' => SCHEMA_COMPAT_WRITE_TEMP_AND_NEW | SCHEMA_COMPAT_READ_NEW,
 ],
 
 // T299421
@@ -27546,7 +27620,7 @@ function wmfGetVariantSettings() {
 	'testwiki' => '/^growth-advancement-test-2021$/',
 	'arwiki' => '/^growth-JOSA-jan2022$/',
 	'enwiki' => '/^growth-recurring-english-2021$|^growth-recurring-english-control-2021$|^growth-marketing-video$/',
-	'eswiki' => '/^growth-advancement-spanish-2021$/',
+	'eswiki' => '/^growth-advancement-spanish-2021$|^social-latam-2022-A$/',
 	'ptwiki' => '/^growth-advancement-brazil-2021$/'
 ],
 

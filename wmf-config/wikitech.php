@@ -22,7 +22,7 @@ case 'labswiki':
 	$wgLDAPServerNames = [ 'labs' => "ldap-rw.{$wmgDatacenter}.wikimedia.org" ];
 	break;
 case 'labtestwiki':
-	$wgLDAPServerNames = [ 'labs' => 'cloudservices2002-dev.wikimedia.org' ];
+	$wgLDAPServerNames = [ 'labs' => 'cloudservices2004-dev.wikimedia.org' ];
 	break;
 }
 // T165795: require exact case matching of username via :caseExactMatch:
