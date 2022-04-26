@@ -7816,6 +7816,19 @@ function wmfGetVariantSettings() {
 	'testwiki' => true,
 ],
 
+'wmgVectorMaxWidthOptionsNamespaces' => [
+	'default' => [
+		NS_SPECIAL,
+		NS_CATEGORY,
+	],
+	// T300182#7868654
+	'wikidatawiki' => [
+		NS_MAIN,
+		NS_SPECIAL,
+		NS_CATEGORY,
+	],
+],
+
 // Note that Wikisource modifies this default in wmf-config/CommonSettings.php
 'wgVectorMaxWidthOptions' => [
 	'default' => [
@@ -7825,13 +7838,13 @@ function wmfGetVariantSettings() {
 				"action" => "history",
 				"diff" => "*",
 			],
-			"namespaces" => [
-				NS_SPECIAL,
-				NS_CATEGORY,
-			],
+			/* namespaces key is defined in wmgVectorMaxWidthOptionsNamespaces */
 		],
 		"include" => [
 			"Special:Preferences",
+			// T306834
+			"Special:UserLogin",
+			"Special:CreateAccount",
 		],
 	],
 ],

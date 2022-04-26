@@ -1062,6 +1062,9 @@ if ( isset( $wmgSiteLogo1x ) ) {
 	];
 }
 
+// Max width modifications
+$wgVectorMaxWidthOptions['namespaces'] = $wmgVectorMaxWidthOptionsNamespaces;
+
 if ( $wmgUseTimeline ) {
 	wfLoadExtension( 'timeline' );
 	$wgTimelineFontDirectory = '/srv/mediawiki/fonts';
