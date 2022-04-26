@@ -1441,8 +1441,8 @@ function wmfGetOverrideSettings() {
 						'edited',
 						'email',
 						'languages',
-						'mailinglist'
-					]
+						'mailinglist',
+					],
 				],
 				'T303240_mailinglist_control' => [
 					// T305015
@@ -1452,10 +1452,37 @@ function wmfGetOverrideSettings() {
 						'edited',
 						'email',
 						'languages',
-						'mailinglist'
-					]
-				]
-			]
+						'mailinglist',
+					],
+				],
+			],
+			'eswiki' => [
+				'exp2_target_specialpage' => [
+					'percentage' => 0,
+				],
+				'T303240_mailinglist' => [
+					// T305015
+					'percentage' => 80,
+					'questions' => [
+						'reason',
+						'edited',
+						'email',
+						'languages',
+						'mailinglist',
+					],
+				],
+				'T303240_mailinglist_control' => [
+					// T305015
+					'percentage' => 20,
+					'questions' => [
+						'reason',
+						'edited',
+						'email',
+						'languages',
+						'mailinglist',
+					],
+				],
+			],
 		],
 		'wgGEHomepageNewAccountVariantsByPlatform' => [
 			'default' => [
@@ -1539,27 +1566,15 @@ function wmfGetOverrideSettings() {
 		],
 		'wgGECampaignPattern' => [
 			'enwiki' => '/^growth-|^social-latam-2022-A$/',
+			'eswiki' => '/^growth-|^social-latam-2022-A$/',
 		],
 		'wgGECampaigns' => [
 			'default' => [
 				'growth-glam-2022' => [
 					'topics' => [ 'argentina', 'chile', 'mexico' ],
-					'pattern' => '/^growth-glam-2022$|^topics-test-AND$/'
-				]
+					'pattern' => '/^growth-glam-2022$|^topics-test-AND$/',
+				],
 			],
-			'eswiki' => [
-				'growth-glam-2022' => [
-					'topics' => [
-						'argentina',
-						'argentina-expanded',
-						'chile',
-						'chile-expanded',
-						'mexico',
-						'mexico-expanded',
-					],
-					'pattern' => '/^growth-glam-2022$/'
-				]
-			]
 		],
 		'-wgGEMentorDashboardDeploymentMode' => [
 			'default' => 'alpha',
