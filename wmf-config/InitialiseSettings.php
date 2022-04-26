@@ -7888,7 +7888,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgVectorWebABTestEnrollment' => [
-	'desktop-improvements' => [
+	'default' => [
 		'name' => 'vector.sticky_header',
 		'enabled' => false,
 		'buckets' => [
@@ -7905,6 +7905,38 @@ function wmfGetVariantSettings() {
 				'samplingRate' => 0.5
 			],
 		],
+	],
+	// T306606
+	'euwiki' => [
+		'name' => 'skin-vector-toc-experiment',
+		'enabled' => true,
+		'buckets' => [
+			'unsampled' => [
+				'samplingRate' => 0
+			],
+			'control' => [
+				'samplingRate' => 0.5
+			],
+			'treatment' => [
+				'samplingRate' => 0.5
+			],
+		]
+	],
+	// T306606
+	'hewiki' => [
+		'name' => 'skin-vector-toc-experiment',
+		'enabled' => true,
+		'buckets' => [
+			'unsampled' => [
+				'samplingRate' => 0
+			],
+			'control' => [
+				'samplingRate' => 0.5
+			],
+			'treatment' => [
+				'samplingRate' => 0.5
+			],
+		]
 	],
 ],
 
@@ -26594,6 +26626,7 @@ function wmfGetVariantSettings() {
 'wgWMEReadingDepthSamplingRate' => [
 	'default' => 0, // T294777
 	'enwiki' => 0.001, // T294777
+	'desktop-improvements' => 0.01, // T306606#7881912
 ],
 
 'wgWMEWebUIScrollTrackingSamplingRate' => [
