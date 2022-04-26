@@ -16735,6 +16735,7 @@ function wmfGetVariantSettings() {
 		'oxalis.br.fgov.be', // Meise botanical garden - T300848
 		'pictures.snsb.info', // Staatliche Naturwissenschaftliche Sammlungen Bayerns - T303929
 		'tothemoon.ser.asu.edu', // Mercury, Gemini, and Apollo Digital Image Archive - T306671
+		'kanoner.com', // T306795
 	],
 	'+wikisource' => [
 		'archive.org', '*.archive.org',
