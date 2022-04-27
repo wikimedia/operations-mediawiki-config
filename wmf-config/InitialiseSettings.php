@@ -26637,7 +26637,7 @@ function wmfGetVariantSettings() {
 'wgWMEWikidataCompletionSearchClicks' => [
 	'default' => [],
 	'wikidata' => [
-		'enabled' => false,
+		'enabled' => true,
 		'buckets' => [
 			'control' => [
 				'samplingRate' => 1,
