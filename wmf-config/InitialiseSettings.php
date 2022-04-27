@@ -5377,6 +5377,7 @@ function wmfGetVariantSettings() {
 		'CentralAuthRename' => 'debug', // -legoktm 2014-07-14 for T69875
 		'CentralNotice' => 'debug',
 		'CirrusSearch' => 'debug',
+		'CirrusSearchDeprecation' => 'debug',
 		'cirrussearch-request' => [ 'udp2log' => false, 'logstash' => false, 'eventbus' => 'debug', 'buffer' => true, ],
 		'CirrusSearchChangeFailed' => 'debug',
 		'CirrusSearchSlowRequests' => 'debug',
