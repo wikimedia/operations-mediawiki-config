@@ -150,21 +150,21 @@ $services = [
 		'search-chi' => [
 			[ // forwarded to https://search.svc.eqiad.wmnet:9243/
 				'host' => 'localhost',
-				'transport' => CirrusSearch\Elastica\DeprecationLoggedHttp::class,
+				'transport' => 'Http',
 				'port' => 6102,
 			]
 		],
 		'search-psi' => [
 			[ // forwarded to https://search.svc.eqiad.wmnet:9643/
 				'host' => 'localhost',
-				'transport' => CirrusSearch\Elastica\DeprecationLoggedHttp::class,
+				'transport' => 'Http',
 				'port' => 6104,
 			]
 		],
 		'search-omega' => [
 			[ // forwarded to https://search.svc.eqiad.wmnet:9443/
 				'host' => 'localhost',
-				'transport' => CirrusSearch\Elastica\DeprecationLoggedHttp::class,
+				'transport' => 'Http',
 				'port' => 6103,
 			]
 		],
