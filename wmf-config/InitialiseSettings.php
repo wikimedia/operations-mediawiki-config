@@ -10137,6 +10137,7 @@ function wmfGetVariantSettings() {
 			'move-subpages' => true,
 			'suppressredirect' => true
 		],
+		'bot' => [ 'setmentor' => true, ], // T307005
 		'botadmin' => [ // T220915
 			'apihighlimits' => true,
 			'autoconfirmed' => true,
