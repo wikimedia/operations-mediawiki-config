@@ -1407,6 +1407,9 @@ Wikipedia:
         commons: File:Wikipedia-logo-v2-zh.svg
         variants:
             zhwiki-hans: File:Wikipedia-logo-v2-zh-hans.svg
+        comment:  T276694
+        comment_1_5x:  T276694
+        comment_2x:  T276694
 
     zuwiki:
         comment:  T233424
