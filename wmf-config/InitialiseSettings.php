@@ -28138,4 +28138,10 @@ return [
 	'default' => false,
 ],
 
+// Danger: Do *NOT* enable on any public wiki (T17622)
+'wgFixDoubleRedirects' => [
+	'default' => false,
+	'officewiki' => true, // T305782
+],
+
 ];
