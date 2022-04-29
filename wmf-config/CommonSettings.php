@@ -4127,6 +4127,7 @@ if ( $wmgUseCapiunto ) {
 if ( $wmgUseKartographer ) {
 	wfLoadExtension( 'Kartographer' );
 	$wgKartographerMapServer = 'https://maps.wikimedia.org';
+	$wgKartographerVersionedMapdata = true; // T307110
 }
 
 if ( $wmgUsePageViewInfo ) {
