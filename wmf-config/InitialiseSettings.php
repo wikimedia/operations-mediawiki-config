@@ -17945,7 +17945,7 @@ function wmfGetVariantSettings() {
 	'default' => [ 'external-machine-translation' ],
 ],
 
-'wmgVisualEditorSuggestedValues' => [
+'wgVisualEditorTransclusionDialogSuggestedValues' => [
 	'default' => true,
 ],
 
