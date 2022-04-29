@@ -409,7 +409,4 @@ $wgKartographerMapServer = 'https://kartotherian.wmflabs.org';
 // Temporary feature flag for the Kartographer nearby feature see T304076
 $wgKartographerNearby = true;
 
-// Temporary feature flag for the CodeMirror colorblind-friendly color scheme option see T292968
-$wgCodeMirrorColorblindColors = true;
-
 } # end safeguard
