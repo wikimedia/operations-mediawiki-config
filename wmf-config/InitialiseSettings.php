@@ -22041,7 +22041,6 @@ function wmfGetVariantSettings() {
 			'schema_title' => 'analytics/mwcli/command_execute',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-
 		/*
 		 * == eventgate-logging-external streams ==
 		 * These are produced to the Kafka logging clusters for ingestion into logstash.
@@ -22230,6 +22229,10 @@ function wmfGetVariantSettings() {
 			'schema_title' => 'mediawiki/revision/recommendation-create',
 			'destination_event_service' => 'eventgate-main',
 			// This stream is new enough that consumers are aware of canary events.
+		],
+		'mediawiki.image_suggestions_feedback' => [
+			'schema_title' => 'mediawiki/page/image-suggestions-feedback',
+			'destination_event_service' => 'eventgate-main',
 		],
 		'maps.tiles_change' => [
 			'schema_title' => 'maps/tiles_change',
