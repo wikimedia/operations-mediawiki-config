@@ -17955,21 +17955,9 @@ function wmfGetVariantSettings() {
 
 // Temporary feature flag for changes to the transclusion dialog sidebar
 'wgVisualEditorTransclusionDialogNewSidebar' => [
-	'default' => false,
-	// T286992: pilot wikis
-	'group0' => true,
-	'dagwiki' => true,
-	'dewiki' => true,
-	'elwiki' => true,
-	'enwikivoyage' => true,
-	'fiwiki' => true,
-	'frwiki' => true,
-	'hewiki' => true,
-	'huwiki' => true,
-	'mswiki' => true,
-	'nawiktionary' => true,
-	'trwiki' => true,
-	'twwiki' => true,
+	'default' => true,
+	// T306967: Wait for enwiki deployment.
+	'enwiki' => false,
 ],
 
 // Temporary feature flag for changes to the descriptions in the transclusion
