@@ -56,6 +56,10 @@ function wmfGetOverrideSettings() {
 			'wikifunctionswiki' => 'Wikifunctions',
 		],
 
+		'wgWikimediaMessagesLicensing' => [
+			'wikifunctionswiki' => 'wikifunctions',
+		],
+
 		'-wgServer' => [
 			'wiktionary'	=> 'https://$lang.wiktionary.beta.wmflabs.org',
 			'wikipedia'     => 'https://$lang.wikipedia.beta.wmflabs.org',
