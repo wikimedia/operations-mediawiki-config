@@ -640,7 +640,7 @@ function wmfGetVariantSettings() {
 			'tagline' => [
 				'src' => '/static/images/mobile/copyright/wikipedia-tagline-zh-hans.svg',
 				'width' => 103,
-				'height' => 15,
+				'height' => 14,
 			],
 		],
 		'zh-cn' => [
@@ -655,7 +655,7 @@ function wmfGetVariantSettings() {
 			'tagline' => [
 				'src' => '/static/images/mobile/copyright/wikipedia-tagline-zh-hans.svg',
 				'width' => 103,
-				'height' => 15,
+				'height' => 14,
 			],
 		],
 		'zh-my' => [
@@ -670,7 +670,7 @@ function wmfGetVariantSettings() {
 			'tagline' => [
 				'src' => '/static/images/mobile/copyright/wikipedia-tagline-zh-hans.svg',
 				'width' => 103,
-				'height' => 15,
+				'height' => 14,
 			],
 		],
 		'zh-sg' => [
@@ -685,7 +685,7 @@ function wmfGetVariantSettings() {
 			'tagline' => [
 				'src' => '/static/images/mobile/copyright/wikipedia-tagline-zh-hans.svg',
 				'width' => 103,
-				'height' => 15,
+				'height' => 14,
 			],
 		],
 	]
