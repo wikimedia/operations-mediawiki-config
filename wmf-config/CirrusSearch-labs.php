@@ -16,7 +16,7 @@
 $wgCirrusSearchClusters = [
 	'eqiad' => array_map( static function ( $host ) {
 		return [
-			'transport' => 'Https',
+			'transport' => CirrusSearch\Elastica\DeprecationLoggedHttp::class,
 			'port' => '9243',
 			'host' => $host,
 		];
