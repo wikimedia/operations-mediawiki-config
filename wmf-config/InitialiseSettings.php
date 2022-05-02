@@ -17198,10 +17198,7 @@ return [
 
 // Enable the Beta Feature for trying out the new video player (see also the BF whitelist)
 'wgTmhUseBetaFeatures' => [
-	'default' => true,
-	'group0' => false,
-	'desktop-improvements' => false,
-	'wiktionary' => false,
+	'default' => false,
 ],
 
 'wmgMinimumVideoPlayerSize' => [
