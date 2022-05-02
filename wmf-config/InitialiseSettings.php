@@ -26731,76 +26731,76 @@ function wmfGetVariantSettings() {
 	'enwiki' => [
 		'mlr-1024rs' => [
 			// Name of model stored in elasticsearch ltr plugin
-			'model' => 'enwiki-20200708-20180215-query_explorer',
+			'model' => 'enwiki-20220421-20180215-query_explorer',
 			// Number of results to score per-shard. Defaults to
 			// 1024 if not provided.
 			'window' => 448,
 		],
 	],
 	'arwiki' => [
-		'mlr-1024rs' => [ 'model' => 'arwiki-20200708-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'arwiki-20220421-20180215-query_explorer' ],
 	],
 	'fawiki' => [
-		'mlr-1024rs' => [ 'model' => 'fawiki-20200708-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'fawiki-20220421-20180215-query_explorer' ],
 	],
 	/* TODO: re-enable once we have a model trained with BM25 features (T219534)
 	'jawiki' => [
-		'mlr-1024rs' => [ 'model' => 'jawiki-20200708-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'jawiki-20220421-20180215-query_explorer' ],
 	],
 	*/
 	'svwiki' => [
-		'mlr-1024rs' => [ 'model' => 'svwiki-20200708-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'svwiki-20220421-20180215-query_explorer' ],
 	],
 	'frwiki' => [
-		'mlr-1024rs' => [ 'model' => 'frwiki-20200708-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'frwiki-20220421-20180215-query_explorer' ],
 	],
 	'itwiki' => [
-		'mlr-1024rs' => [ 'model' => 'itwiki-20200708-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'itwiki-20220421-20180215-query_explorer' ],
 	],
 	'ptwiki' => [
-		'mlr-1024rs' => [ 'model' => 'ptwiki-20200708-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'ptwiki-20220421-20180215-query_explorer' ],
 	],
 	'ruwiki' => [
-		'mlr-1024rs' => [ 'model' => 'ruwiki-20200708-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'ruwiki-20220421-20180215-query_explorer' ],
 	],
 	'dewiki' => [
-		'mlr-1024rs' => [ 'model' => 'dewiki-20200708-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'dewiki-20220421-20180215-query_explorer' ],
 	],
 	'fiwiki' => [
-		'mlr-1024rs' => [ 'model' => 'fiwiki-20200708-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'fiwiki-20220421-20180215-query_explorer' ],
 	],
 	'hewiki' => [
-		'mlr-1024rs' => [ 'model' => 'hewiki-20200708-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'hewiki-20220421-20180215-query_explorer' ],
 	],
 	'idwiki' => [
-		'mlr-1024rs' => [ 'model' => 'idwiki-20200708-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'idwiki-20220421-20180215-query_explorer' ],
 	],
 	/* TODO: re-enable once we have a model trained with the nori analyzer (T219534)
 	'kowiki' => [
-		'mlr-1024rs' => [ 'model' => 'kowiki-20200708-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'kowiki-20220421-20180215-query_explorer' ],
 	],
 	*/
 	'nlwiki' => [
-		'mlr-1024rs' => [ 'model' => 'nlwiki-20200708-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'nlwiki-20220421-20180215-query_explorer' ],
 	],
 	'nowiki' => [
-		'mlr-1024rs' => [ 'model' => 'nowiki-20200708-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'nowiki-20220421-20180215-query_explorer' ],
 	],
 	'plwiki' => [
-		'mlr-1024rs' => [ 'model' => 'plwiki-20200708-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'plwiki-20220421-20180215-query_explorer' ],
 	],
 	'viwiki' => [
-		'mlr-1024rs' => [ 'model' => 'viwiki-20200708-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'viwiki-20220421-20180215-query_explorer' ],
 	],
 	'zhwiki' => [
-		'mlr-1024rs' => [ 'model' => 'zhwiki-20200708-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'zhwiki-20220421-20180215-query_explorer' ],
 	],
 	'kowiki' => [
-		'mlr-1024rs' => [ 'model' => 'kowiki-20200708-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'kowiki-20220421-20180215-query_explorer' ],
 	],
 	/* TODO: re-enable once we have a model trained with BM25 features (T219534)
 	'zhwiki' => [
-		'mlr-1024rs' => [ 'model' => 'zhwiki-20200708-20180215-query_explorer' ],
+		'mlr-1024rs' => [ 'model' => 'zhwiki-20220421-20180215-query_explorer' ],
 	],
 	*/
 ],
