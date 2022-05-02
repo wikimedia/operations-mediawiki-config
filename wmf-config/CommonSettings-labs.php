@@ -400,9 +400,6 @@ if ( $wmgUseSecurePoll ) {
 	}
 }
 
-// Versioned maps support, see T294339
-$wgKartographerVersionedLiveMaps = true;
-$wgKartographerVersionedStaticMaps = true;
 // Point to the maps-experiments kartotherian server, see T294339
 $wgKartographerMapServer = 'https://kartotherian.wmflabs.org';
 
