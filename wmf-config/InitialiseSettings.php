@@ -24142,6 +24142,7 @@ function wmfGetVariantSettings() {
 	'testcommonswiki' => true,
 	'testwiki' => true,
 	'commonswiki' => true,
+	'ptwikinews' => true, // T299872
 ],
 
 'wgMediaSearchDefaultForAnon' => [
@@ -24153,6 +24154,10 @@ function wmfGetVariantSettings() {
 'wgMediaSearchExternalEntitySearchBaseUri' => [
 	'default' => 'https://www.wikidata.org/w/api.php',
 	'testcommonswiki' => 'https://test.wikidata.org/w/api.php',
+],
+
+'wgMediaSearchExternalSearchUri' => [
+	'ptwikinews' => 'https://commons.wikimedia.org/w/api.php', // T299872
 ],
 
 // Enable Commons community assessment filters in Special:MediaSearch
