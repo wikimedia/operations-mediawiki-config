@@ -15373,7 +15373,8 @@ function wmfGetVariantSettings() {
 		'Mostrevisions' => 'half-monthly',
 		'Wantedpages' => 'half-monthly',
 	],
-	'small' => [],
+	'small' => [], // T45668
+	'medium' => [], // T48094
 
 	// Individual wikis
 	'+enwiki' => [
