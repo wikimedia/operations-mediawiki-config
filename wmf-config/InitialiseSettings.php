@@ -27693,6 +27693,7 @@ function wmfGetVariantSettings() {
 	'arwiki' => '/^growth-JOSA-jan2022$/',
 	'enwiki' => '/^growth-recurring-english-2021$|^growth-recurring-english-control-2021$|^growth-marketing-video$/',
 	'eswiki' => '/^growth-advancement-spanish-2021$|^social-latam-2022-A$/',
+	'itwiki' => '/^growth-advancement-spanish-2021$|^social-latam-2022-A$/',
 	'ptwiki' => '/^growth-advancement-brazil-2021$/'
 ],
 
@@ -27716,7 +27717,20 @@ function wmfGetVariantSettings() {
 			],
 			'pattern' => '/^growth-glam-2022$/'
 		]
-	]
+	],
+	'itwiki' => [
+		'growth-glam-2022' => [
+			'topics' => [
+				'argentina',
+				'argentina-expanded',
+				'chile',
+				'chile-expanded',
+				'mexico',
+				'mexico-expanded',
+			],
+			'pattern' => '/^growth-glam-2022$/'
+		]
+	],
 ],
 
 'wgGECampaignTopics' => [
@@ -27728,7 +27742,15 @@ function wmfGetVariantSettings() {
 		'chile-expanded' => 'chile',
 		'mexico' => 'growtharticletopic:mexico',
 		'mexico-expanded' => 'mexico',
-	]
+	],
+	'itwiki' => [
+		'argentina' => 'growtharticletopic:argentina',
+		'argentina-expanded' => 'argentina',
+		'chile' => 'growtharticletopic:chile',
+		'chile-expanded' => 'chile',
+		'mexico' => 'growtharticletopic:mexico',
+		'mexico-expanded' => 'mexico',
+	],
 ],
 
 'wmgShowRollbackConfirmationDefaultUserOptions' => [
