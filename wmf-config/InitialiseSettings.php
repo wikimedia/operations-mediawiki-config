@@ -18572,6 +18572,7 @@ function wmfGetVariantSettings() {
 	'testwiki' => true,
 	'wikiversity' => true,
 	'cswiktionary' => true, // T40903
+	'labswiki' => true, // T304181
 ],
 
 'wmgShowHiddenCats' => [
