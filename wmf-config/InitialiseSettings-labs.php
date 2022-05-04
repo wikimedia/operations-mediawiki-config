@@ -1323,7 +1323,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgActorTableSchemaMigrationStage' => [
-			'default' => SCHEMA_COMPAT_WRITE_TEMP_AND_NEW | SCHEMA_COMPAT_READ_NEW,
+			'default' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 		],
 
 		'wgTemplateLinksSchemaMigrationStage' => [
