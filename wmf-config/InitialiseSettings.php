@@ -1025,6 +1025,11 @@ return [
 		'width' => 129,
 		'height' => 21,
 	],
+	'plwiktionary' => [ // T307683
+		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-pl.svg',
+		'width' => 140,
+		'height' => 19,
+	],
 	'ruwiktionary' => [ // T308233
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-ru.svg',
 		'width' => 122,
