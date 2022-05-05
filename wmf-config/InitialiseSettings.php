@@ -12945,6 +12945,7 @@ function wmfGetVariantSettings() {
 			'extendedmover', // T211978
 			'transwiki', // T212612
 			'patroller', // T301491
+			'eliminator', // T307029
 		],
 	],
 	'+uzwiki' => [
@@ -14000,6 +14001,7 @@ function wmfGetVariantSettings() {
 			'extendedmover', // T211978
 			'transwiki', // T212612
 			'patroller', // T301491
+			'eliminator', // T307029
 		],
 	],
 	'+uzwiki' => [
