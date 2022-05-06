@@ -16,19 +16,23 @@ return [
 		'statsd' => 'cloudmetrics1001.eqiad.wmnet',
 		'search-chi' => [
 			// These MUST match the installed SSL certs
-			'deployment-elastic05.deployment-prep.eqiad.wmflabs',
-			'deployment-elastic06.deployment-prep.eqiad.wmflabs',
-			'deployment-elastic07.deployment-prep.eqiad.wmflabs',
+			'deployment-elastic09.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-elastic10.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-elastic11.deployment-prep.eqiad1.wikimedia.cloud',
 		],
 		'search-psi' => [
 			// Same as search-chi for now to match production services
 			// These MUST match the installed SSL certs
-			'deployment-elastic06.deployment-prep.eqiad.wmflabs',
+			'deployment-elastic09.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-elastic10.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-elastic11.deployment-prep.eqiad1.wikimedia.cloud',
 		],
 		'search-omega' => [
 			// Same as search-chi for now to match production services
 			// These MUST match the installed SSL certs
-			'deployment-elastic07.deployment-prep.eqiad.wmflabs',
+			'deployment-elastic09.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-elastic10.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-elastic11.deployment-prep.eqiad1.wikimedia.cloud',
 		],
 		// cloudelastic is not duplicated in labs, it is a write-only cluster and multi-cluster
 		// is sufficiently tested with the clusters above.
