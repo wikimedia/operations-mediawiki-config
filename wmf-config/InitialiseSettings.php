@@ -16760,7 +16760,6 @@ function wmfGetVariantSettings() {
 	// Affects URL uploads and chunked uploads (experimental).
 	// Limit on other web uploads is enforced by PHP.
 	'default' => 1024 * 1024 * 4096, // 4 GB (i.e. equals 2^32)
-	'ptwiki' => 1024 * 500, // 500 KB - T25186
 ],
 
 'wmgUsePdfHandler' => [
