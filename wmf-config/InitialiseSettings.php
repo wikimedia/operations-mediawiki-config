@@ -4134,9 +4134,12 @@ function wmfGetVariantSettings() {
 	'+rowiki' => [
 		'Discuţie_MediWiki' => NS_MEDIAWIKI_TALK,
 		'Discuţie_Portal' => 101,
-		'Discuţie_Proiect' => 103,
-		'Book' => 110, // T68530
-		'Discuţie_Book' => 111,
+		'Proiect' => 102, // T127607
+		'Discuţie_Proiect' => 103, // T127607
+		'Cod' => 108, // T127607
+		'Discuție_Cod' => 109, // T127607
+		'Carte' => 110, // T127607
+		'Discuţie_Carte' => 111, // T127607
 	],
 	'+rowikibooks' => [
 		'Discuţie_Wikibooks' => NS_PROJECT_TALK,
@@ -6265,13 +6268,13 @@ function wmfGetVariantSettings() {
 	],
 	'rowiki' => [
 		100 => 'Portal',
-		101 => 'Discuție_Portal',
-		102 => 'Proiect',
-		103 => 'Discuție_Proiect',
-		108 => 'Cod', // T44690 - Code
-		109 => 'Discuție_Cod',
-		110 => 'Carte', // T68530
-		111 => 'Discuție_Carte',
+		101 => 'Portal_talk', // T127607
+		102 => 'WikiProject', // T127607
+		103 => 'WikiProject_talk', // T127607
+		108 => 'Code', // T44690 - Code, T127607
+		109 => 'Code_talk', // T127607
+		110 => 'Book', // T68530, T127607
+		111 => 'Book_talk', // T127607
 	],
 	'ruwiki' => [
 		100 => 'Портал',
