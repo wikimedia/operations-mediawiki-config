@@ -25552,6 +25552,16 @@ function wmfGetVariantSettings() {
 	'zhwikiversity' => '20161201000000',
 	'zhwikivoyage' => '20161201000000',
 	'zhwiktionary' => '20161201000000',
+	// End of all zh language wikis
+	// "Greater zh" language wikis, T188997
+	'cdowiki' => '20161201000000',
+	'ganwiki' => '20161201000000',
+	'hakwiki' => '20161201000000',
+	'wuuwiki' => '20161201000000',
+	'yuewiktionary' => '20161201000000',
+	'zh_classicalwiki' => '20161201000000',
+	'zh_yuewiki' => '20161201000000',
+	// End of "Greater zh" language wikis
 ],
 
 'wgTimelineFontFile' => [
@@ -25568,13 +25578,23 @@ function wmfGetVariantSettings() {
 	'zhwikiversity' => 'unifont-5.1.20080907',
 	'zhwikivoyage' => 'unifont-5.1.20080907',
 	'zhwiktionary' => 'unifont-5.1.20080907',
+	// End of all zh language wikis
+	// "Greater zh" language wikis, T188997
+	'cdowiki' => 'unifont-5.1.20080907',
+	'ganwiki' => 'unifont-5.1.20080907',
+	'hakwiki' => 'unifont-5.1.20080907',
+	'wuuwiki' => 'unifont-5.1.20080907',
+	'yuewiktionary' => 'unifont-5.1.20080907',
+	'zh_classicalwiki' => 'unifont-5.1.20080907',
+	'zh_yuewiki' => 'unifont-5.1.20080907',
+	// End of "Greater zh" language wikis
 ],
 
 'wmgTimelineDefaultFont' => [
 	'default' => 'freesans',
 	'mlwiki' => 'freesanswmf',
 	'testwiki' => 'freesanswmf',
-	// All zh language wikis
+	// All zh language wikis, T289226
 	'cnwikimedia' => 'unifont',
 	'zhwiki' => 'unifont',
 	'zhwikibooks' => 'unifont',
@@ -25584,6 +25604,16 @@ function wmfGetVariantSettings() {
 	'zhwikiversity' => 'unifont',
 	'zhwikivoyage' => 'unifont',
 	'zhwiktionary' => 'unifont',
+	// End of all zh language wikis
+	// "Greater zh" language wikis, T188997
+	'cdowiki' => 'unifont',
+	'ganwiki' => 'unifont',
+	'hakwiki' => 'unifont',
+	'wuuwiki' => 'unifont',
+	'yuewiktionary' => 'unifont',
+	'zh_classicalwiki' => 'unifont',
+	'zh_yuewiki' => 'unifont',
+	// End of "Greater zh" language wikis
 ],
 
 'wmgUseWikiHiero' => [
