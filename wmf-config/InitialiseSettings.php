@@ -23663,6 +23663,26 @@ return [
 	'wikidatawiki' => 'P218',
 ],
 
+'wgLexemeLexicalCategoryItemIds' => [
+	'default' => null,
+	'wikidatawiki' => [ // T307441
+		'Q1084', // noun
+		'Q34698', // adjective
+		'Q24905', // verb
+		'Q380057', // adverb
+		'Q63116', // numeral
+		'Q83034', // interjection
+		'Q4833830', // preposition
+		'Q111029', // root
+		'Q36484', // conjunction
+		'Q36224', // pronoun
+		'Q102047', // suffix
+		'Q134830', // prefix
+		'Q161873', // postposition
+		'Q62155', // affix
+	],
+],
+
 'wgLexemeEnableDataTransclusion' => [
 	'default' => true, // T309593
 ],
