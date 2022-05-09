@@ -1012,6 +1012,15 @@ function wmfGetOverrideSettings() {
 			'wikidatawiki' => 'P218',
 		],
 
+		'wgLexemeLexicalCategoryItemIds' => [
+			'default' => null,
+			'wikidatawiki' => [
+				'Q593111', // noun
+				'Q487091', // adjective
+				'Q486787', // adverb
+			],
+		],
+
 		'wgLexemeEnableNewAlpha' => [
 			'default' => null,
 			'wikidatawiki' => true,
