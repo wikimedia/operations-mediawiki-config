@@ -26235,7 +26235,6 @@ function wmfGetVariantSettings() {
 	'wikidata' => 'wikidata',
 	'commonswiki' => 'commons',
 	'testcommonswiki' => 'commons',
-	'mediawikiwiki' => 'mediawiki',
 ],
 'wgRightsPage' => [
 	// Default: Use wgRightsUrl
