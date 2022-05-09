@@ -20580,6 +20580,27 @@ function wmfGetVariantSettings() {
 	'arwiki' => 'available', // T285724
 	'cswiki' => 'available', // T285724
 	'mediawikiwiki' => 'available', // T302256
+	// T307410
+	'amwiki' => 'available',
+	'bnwiki' => 'available',
+	'zhwiki' => 'available',
+	'nlwiki' => 'available',
+	'arzwiki' => 'available',
+	'frwiki' => 'available',
+	'hewiki' => 'available',
+	'hiwiki' => 'available',
+	'idwiki' => 'available',
+	'itwiki' => 'available',
+	'jawiki' => 'available',
+	'kowiki' => 'available',
+	'omwiki' => 'available',
+	'fawiki' => 'available',
+	'plwiki' => 'available',
+	'ptwiki' => 'available',
+	'eswiki' => 'available',
+	'thwiki' => 'available',
+	'ukwiki' => 'available',
+	'viwiki' => 'available',
 ],
 
 'wgDiscussionTools_sourcemodetoolbar' => [
