@@ -26978,9 +26978,7 @@ function wmfGetVariantSettings() {
 ],
 
 'wgActorTableSchemaMigrationStage' => [
-	'default' => SCHEMA_COMPAT_WRITE_TEMP_AND_NEW | SCHEMA_COMPAT_READ_NEW,
-	'group0' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
-	'group1' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
+	'default' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 ],
 
 // T299421
