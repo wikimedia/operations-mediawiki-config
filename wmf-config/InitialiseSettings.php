@@ -26966,35 +26966,6 @@ return [
 			'percentage' => 100
 		],
 	],
-	'eswiki' => [
-		'T303240_mailinglist' => [
-			'percentage' => 80,
-			'questions' => [
-				'reason',
-				'edited',
-				'email',
-				'languages',
-				'mailinglist',
-			],
-		],
-		'T303240_mailinglist_control' => [
-			// T305015: the questions are identical to above, but the experiment group is
-			// saved to the user's welcome survey response, so we can distinguish between
-			// control and experiment group
-			'percentage' => 20,
-			'questions' => [
-				'reason',
-				'edited',
-				'email',
-				'languages',
-				'mailinglist',
-			],
-		],
-		'exp2_target_specialpage' => [
-			// T307985: Revert back to 100 and remove the other options when the campaign ends.
-			'percentage' => 0,
-		],
-	]
 ],
 
 'wgGEHomepageImpactModuleEnabled' => [
