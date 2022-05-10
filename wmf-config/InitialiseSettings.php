@@ -27893,57 +27893,111 @@ function wmfGetVariantSettings() {
 'wgGECampaigns' => [
 	'default' => [],
 	'testwiki' => [
-		'growth-glam-2022' => [
-			'topics' => [ 'argentina', 'chile', 'mexico' ],
-			'pattern' => '/^growth-glam-2022$|^topics-test-AND$/'
+		'social-latam-2022' => [
+			'messageKey' => 'marketingvideocampaign',
+			'pattern' => '/^social-latam-2022-A$/',
+			'signupPageTemplate' => 'video',
+			'signupPageTemplateParameters' => [
+				'messageKey' => 'marketingvideocampaign',
+				'file' => 'Wikimedia_Foundation_newcomer_experience_pilot_-_account_creation.webm',
+				'thumbtime' => 38,
+			],
+		],
+		'social-latam-2022-control' => [
+			'pattern' => '/^social-latam-2022-B$/',
+		],
+		'thankyoupage-2022' => [
+			'messageKey' => 'thankyoupage',
+			'skipWelcomeSurvey' => true,
+			'signupPageTemplate' => 'hero',
+			'signupPageTemplateParameters' => [
+				'messageKey' => 'thankyoupage',
+			],
+			'pattern' => '/^typage-(latam|in|za)-en-2022$|^typage-latam-(es|pt)-2022$/'
+		],
+		'thankyoubanner-2022' => [
+			'skipWelcomeSurvey' => true,
+			'signupPageTemplate' => 'hero',
+			'signupPageTemplateParameters' => [
+				'messageKey' => 'thankyoupage',
+			],
+			'pattern' => '/^tybanner-(latam|in|za)-en-2022$|^tybanner-latam-(es|pt)-2022$/'
+		]
+	],
+	'enwiki' => [
+		'thankyoupage-2022' => [
+			'messageKey' => 'thankyoupage',
+			'skipWelcomeSurvey' => true,
+			'signupPageTemplate' => 'hero',
+			'signupPageTemplateParameters' => [
+				'messageKey' => 'thankyoupage',
+			],
+			'pattern' => '/^typage-(latam|in|za)-en-2022$/'
+		],
+		'thankyoubanner-2022' => [
+			'skipWelcomeSurvey' => true,
+			'signupPageTemplate' => 'hero',
+			'signupPageTemplateParameters' => [
+				'messageKey' => 'thankyoupage',
+			],
+			'pattern' => '/^tybanner-(latam|in|za)-en-2022$/'
 		]
 	],
 	'eswiki' => [
-		'growth-glam-2022' => [
-			'topics' => [
-				'argentina',
-				'argentina-expanded',
-				'chile',
-				'chile-expanded',
-				'mexico',
-				'mexico-expanded',
+		'social-latam-2022' => [
+			'messageKey' => 'marketingvideocampaign',
+			'signupPageTemplate' => 'video',
+			'signupPageTemplateParameters' => [
+				'messageKey' => 'marketingvideocampaign',
+				'file' => 'Wikimedia_Foundation_newcomer_experience_pilot_-_account_creation.webm',
+				'thumbtime' => 38,
 			],
-			'pattern' => '/^growth-glam-2022$/'
+			'pattern' => '/^social-latam-2022-A$/'
+		],
+		'social-latam-2022-control' => [
+			'pattern' => '/^social-latam-2022-B$/',
+		],
+		'thankyoupage-2022' => [
+			'messageKey' => 'thankyoupage',
+			'skipWelcomeSurvey' => true,
+			'signupPageTemplate' => 'hero',
+			'signupPageTemplateParameters' => [
+				'messageKey' => 'thankyoupage',
+			],
+			'pattern' => '/^typage-latam-es-2022$/'
+		],
+		'thankyoubanner-2022' => [
+			'skipWelcomeSurvey' => true,
+			'signupPageTemplate' => 'hero',
+			'signupPageTemplateParameters' => [
+				'messageKey' => 'thankyoupage',
+			],
+			'pattern' => '/^tybanner-latam-es-2022$/'
 		]
 	],
-	'itwiki' => [
-		'growth-glam-2022' => [
-			'topics' => [
-				'argentina',
-				'argentina-expanded',
-				'chile',
-				'chile-expanded',
-				'mexico',
-				'mexico-expanded',
+	'ptwiki' => [
+		'thankyoupage-2022' => [
+			'messageKey' => 'thankyoupage',
+			'skipWelcomeSurvey' => true,
+			'signupPageTemplate' => 'hero',
+			'signupPageTemplateParameters' => [
+				'messageKey' => 'thankyoupage',
 			],
-			'pattern' => '/^growth-glam-2022$/'
+			'pattern' => '/^typage-latam-pt-2022$/'
+		],
+		'thankyoubanner-2022' => [
+			'skipWelcomeSurvey' => true,
+			'signupPageTemplate' => 'hero',
+			'signupPageTemplateParameters' => [
+				'messageKey' => 'thankyoupage',
+			],
+			'pattern' => '/^tybanner-latam-pt-2022$/'
 		]
 	],
 ],
 
 'wgGECampaignTopics' => [
-	'default' => [],
-	'eswiki' => [
-		'argentina' => 'growtharticletopic:argentina',
-		'argentina-expanded' => 'argentina',
-		'chile' => 'growtharticletopic:chile',
-		'chile-expanded' => 'chile',
-		'mexico' => 'growtharticletopic:mexico',
-		'mexico-expanded' => 'mexico',
-	],
-	'itwiki' => [
-		'argentina' => 'growtharticletopic:argentina',
-		'argentina-expanded' => 'argentina',
-		'chile' => 'growtharticletopic:chile',
-		'chile-expanded' => 'chile',
-		'mexico' => 'growtharticletopic:mexico',
-		'mexico-expanded' => 'mexico',
-	],
+	'default' => []
 ],
 
 'wmgShowRollbackConfirmationDefaultUserOptions' => [
