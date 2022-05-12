@@ -164,6 +164,7 @@ return [
 	'kawiki' => '/static/images/project-logos/kawiki.png',
 	'kbdwiki' => '/static/images/project-logos/kbdwiki.png',
 	'kbpwiki' => '/static/images/project-logos/kbpwiki.png', // T160868
+	'kcgwiki' => '/static/images/project-logos/kcgwiki.png',
 	'kgwiki' => '/static/images/project-logos/kgwiki.png', // T189586
 	'kiwiki' => '/static/images/project-logos/kiwiki.png', // T50397
 	'kkwiki' => '/static/images/project-logos/kkwiki.png',
@@ -966,6 +967,7 @@ return [
 	'kawiki' => '/static/images/project-logos/kawiki-1.5x.png', // T150618
 	'kbdwiki' => '/static/images/project-logos/kbdwiki-1.5x.png', // T150618
 	'kbpwiki' => '/static/images/project-logos/kbpwiki-1.5x.png', // T160868
+	'kcgwiki' => '/static/images/project-logos/kcgwiki-1.5x.png',
 	'kgwiki' => '/static/images/project-logos/kgwiki-1.5x.png', // T189586
 	'kiwiki' => '/static/images/project-logos/kiwiki-1.5x.png', // T150618
 	'kkwiki' => '/static/images/project-logos/kkwiki-1.5x.png', // T150618
@@ -1547,6 +1549,7 @@ return [
 	'kawiki' => '/static/images/project-logos/kawiki-2x.png', // T150618
 	'kbdwiki' => '/static/images/project-logos/kbdwiki-2x.png', // T150618
 	'kbpwiki' => '/static/images/project-logos/kbpwiki-2x.png', // T160868
+	'kcgwiki' => '/static/images/project-logos/kcgwiki-2x.png',
 	'kgwiki' => '/static/images/project-logos/kgwiki-2x.png', // T189586
 	'kiwiki' => '/static/images/project-logos/kiwiki-2x.png', // T150618
 	'kkwiki' => '/static/images/project-logos/kkwiki-2x.png', // T150618

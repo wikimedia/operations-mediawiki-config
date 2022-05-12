@@ -417,6 +417,7 @@ function wmfGetVariantSettings() {
 	'jamwiki' => 'America/Jamaica',
 	'kbdwiki' => 'Europe/Moscow',
 	'kbpwiki' => 'Africa/Lome', // T160868
+	'kcgwiki' => 'Africa/Lagos',
 	'kkwiki' => 'Asia/Almaty',
 	'kkwiktionary' => 'Asia/Almaty',
 	'kkwikibooks' => 'Asia/Almaty',
@@ -2604,6 +2605,7 @@ function wmfGetVariantSettings() {
 	'kawiktionary' => 'ვიქსიკონი',
 	'kbdwiki' => 'Уикипедиэ',
 	'kbpwiki' => 'Wikipediya', // T160868
+	'kcgwiki' => 'Wukipedia',
 	'kkwiki' => 'Уикипедия',
 	'kkwikibooks' => 'Уикикітап',
 	'kkwikiquote' => 'Уикидәйек',
