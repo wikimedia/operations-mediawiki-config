@@ -26876,10 +26876,6 @@ return [
 	'frwiktionary' => false,
 ],
 
-'wgGEHomepageSuggestedEditsRequiresOptIn' => [
-	'default' => false,
-],
-
 'wgGEHomepageSuggestedEditsEnableTopics' => [
 	'default' => true,
 ],
