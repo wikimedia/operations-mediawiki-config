@@ -17993,8 +17993,6 @@ function wmfGetVariantSettings() {
 // Temporary feature flag for changes to the transclusion dialog sidebar
 'wgVisualEditorTransclusionDialogNewSidebar' => [
 	'default' => true,
-	// T306967: Wait for enwiki deployment.
-	'enwiki' => false,
 ],
 
 // Temporary feature flag for changes to the descriptions in the transclusion
