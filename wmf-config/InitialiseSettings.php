@@ -25743,7 +25743,6 @@ function wmfGetVariantSettings() {
 
 'wmgTemplateSearchImprovements' => [
 	'default' => true,
-	'enwiki' => false, // will follow later T303802
 ],
 
 'wmgUseCharInsert' => [
