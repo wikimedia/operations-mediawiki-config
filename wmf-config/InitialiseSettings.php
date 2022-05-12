@@ -26880,10 +26880,6 @@ return [
 	'default' => true,
 ],
 
-'wgGEHomepageSuggestedEditsTopicsRequiresOptIn' => [
-	'default' => false,
-],
-
 'wgGENewcomerTasksImageRecommendationsEnabled' => [
 	'default' => false,
 	'testwiki' => true,
