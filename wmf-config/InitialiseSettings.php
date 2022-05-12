@@ -11336,7 +11336,8 @@ function wmfGetVariantSettings() {
 		],
 		'sysop' => [
 			'extendedconfirmed' => true, // T215493
-			'templateeditor' => true // T296154
+			'templateeditor' => true, // T296154
+			'upload_by_url' => true, // T303577
 		],
 		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T215493
 		'bot' => [ 'extendedconfirmed' => true ], // T215493
