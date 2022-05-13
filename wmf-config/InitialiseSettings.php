@@ -21155,6 +21155,7 @@ function wmfGetVariantSettings() {
 	'testwiki' => true,
 	'azwiki' => true, // T285842
 	'bawiki' => true, // T285842
+	'bclwiki' => true, // T304828
 	'bnwiki' => true, // T271397
 	'cswiki' => true, // T304855
 	'euwiki' => true, // T304862
@@ -21163,6 +21164,7 @@ function wmfGetVariantSettings() {
 	'hawiki' => true, // T290175
 	'hewiki' => true, // T304863
 	'igwiki' => true, // T290175
+	'iswiki' => true, // T304828
 	'jvwiki' => true, // T298237
 	'kowiki' => true, // T298239
 	'kuwiki' => true, // T290238
@@ -21170,7 +21172,9 @@ function wmfGetVariantSettings() {
 	'mlwiki' => true, // T285842
 	'mnwiki' => true, // T298237
 	'mswiki' => true, // T285842
+	'newiki' => true, // T304828
 	'ocwiki' => true, // T301443
+	'pawiki' => true, // T304828
 	'sqwiki' => true, // T285842
 	'swwiki' => true, // T304828
 	'tawiki' => true, // T285842
@@ -21178,13 +21182,15 @@ function wmfGetVariantSettings() {
 	'thwiki' => true, // T290175
 	'tlwiki' => true, // T298237
 	'trwiki' => true, // T304853
+	'tswiki' => true, // T304828
+	'urwiki' => true, // T304828
 	'yowiki' => true, // T290175
 ],
 
 'wgSectionTranslationTargetLanguages' => [
 	'default' => null,
-	'wikipedia' => [ 'az', 'ba', 'bn', 'cs', 'el', 'eu', 'fa', 'ha', 'he', 'ig', 'jv', 'ko', 'ku', 'lg', 'ml', 'mn', 'ms', 'oc', 'sq', 'sw', 'ta', 'te', 'th', 'tl', 'tr', 'yo' ],
-	'testwiki' => [ 'af', 'ar', 'as', 'az', 'ba', 'bn', 'ca', 'ckb', 'cs', 'el', 'es', 'eu', 'fa', 'fr', 'gu', 'ha', 'he', 'ht', 'id', 'ig', 'is', 'jv', 'ki', 'kn', 'ko', 'ku', 'lg', 'mk', 'ml', 'mn', 'mr', 'ms', 'ne', 'oc', 'pa', 'pt', 'ru', 'sq', 'sr', 'sw', 'ta', 'te', 'th', 'tl', 'tr', 'ts', 'uk', 'ur', 'vi', 'yo', 'zh', 'zh-yue', 'zu' ],
+	'wikipedia' => [ 'az', 'ba', 'bcl', 'bn', 'cs', 'el', 'eu', 'fa', 'ha', 'he', 'ig', 'is', 'jv', 'ko', 'ku', 'lg', 'ml', 'mn', 'ms', 'ne', 'oc', 'pa', 'sq', 'sw', 'ta', 'te', 'th', 'tl', 'tr', 'ts', 'ur', 'yo' ],
+	'testwiki' => [ 'af', 'ar', 'as', 'az', 'ba', 'bcl', 'bn', 'ca', 'ckb', 'cs', 'el', 'es', 'eu', 'fa', 'fr', 'gu', 'ha', 'he', 'ht', 'id', 'ig', 'is', 'jv', 'ki', 'kn', 'ko', 'ku', 'lg', 'mk', 'ml', 'mn', 'mr', 'ms', 'ne', 'oc', 'pa', 'pt', 'ru', 'sq', 'sr', 'sw', 'ta', 'te', 'th', 'tl', 'tr', 'ts', 'uk', 'ur', 'vi', 'yo', 'zh', 'zh-yue', 'zu' ],
 ],
 
 'wgContentTranslationContentImportForSectionTranslation' => [
