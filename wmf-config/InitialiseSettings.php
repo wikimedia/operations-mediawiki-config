@@ -15340,6 +15340,7 @@ function wmfGetVariantSettings() {
 	'huwikibooks' => true, // T168471
 	'ruwikibooks' => true, // T212622
 	'svwiki' => true,
+	'thwikibooks' => true, // T308377
 	'viwikibooks' => true, // T40361
 	'zhwiki' => true,
 	'zhwikibooks' => true, // T188213
