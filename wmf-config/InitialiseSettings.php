@@ -19370,6 +19370,15 @@ function wmfGetVariantSettings() {
 		'5' => 'User %code%-5',
 		'N' => 'User %code%-N',
 	],
+	'thwikibooks' => [ // T308378
+		'0' => 'User %code%-0',
+		'1' => 'User %code%-1',
+		'2' => 'User %code%-2',
+		'3' => 'User %code%-3',
+		'4' => 'User %code%-4',
+		'5' => 'User %code%-5',
+		'N' => 'User %code%-N',
+	],
 	'thwikisource' => [ // T275283
 		'0' => 'User %code%-0',
 		'1' => 'User %code%-1',
@@ -19868,6 +19877,7 @@ function wmfGetVariantSettings() {
 	'tewiki' => 'User %code%',
 	'tgwiki' => 'User %code%',
 	'thwiki' => 'User %code%', // T49418
+	'thwikibooks' => 'User %code%', // T308378
 	'thwikisource' => 'User %code%', // T275283
 	'tiwiki' => 'User %code%',
 	'tkwiki' => 'User %code%',
