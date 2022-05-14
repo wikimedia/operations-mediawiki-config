@@ -24269,6 +24269,7 @@ function wmfGetVariantSettings() {
 	'testcommonswiki' => true,
 	'testwiki' => true,
 	'commonswiki' => true,
+	'ptwikinews' => true, // T299872
 ],
 
 'wgMediaSearchDefaultForAnon' => [
@@ -24299,6 +24300,10 @@ function wmfGetVariantSettings() {
 		'valued-image' => 'P6731=Q63348040',
 		'picture-of-the-day' => 'P6731=Q6998859',
 	],
+],
+
+'wgMediaSearchTabOrder' => [
+	'ptwikinews' => [ 'page', 'image', 'video', 'audio', 'other' ], // T299872, show cat first
 ],
 
 // Disable redirects for search inputs to exact matches by default
