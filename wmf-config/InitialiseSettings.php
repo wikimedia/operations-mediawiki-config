@@ -8659,7 +8659,10 @@ function wmfGetVariantSettings() {
 		132 => 1, // 2021, T284793
 		134 => 1, // 2022, T295267
 	],
-	'+zhwikisource' => [ 102 => 1, 106 => 1, 114 => 1 ], // T66127
+	'+zhwikisource' => [
+		100 => 1, // T308393, Portal
+		102 => 1, 106 => 1, 114 => 1, // T66127
+	],
 ],
 # @} end of wgNamespacesToBeSearchedDefault
 
