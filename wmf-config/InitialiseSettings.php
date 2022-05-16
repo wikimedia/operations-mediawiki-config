@@ -26829,7 +26829,7 @@ function wmfGetVariantSettings() {
 'wgWMEWikidataCompletionSearchClicks' => [
 	'default' => [],
 	'wikidata' => [
-		'enabled' => true,
+		'enabled' => false,
 		'buckets' => [
 			'control' => [
 				'samplingRate' => 1,
