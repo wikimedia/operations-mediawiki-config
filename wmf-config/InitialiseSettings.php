@@ -1022,6 +1022,11 @@ function wmfGetVariantSettings() {
 		'width' => 114,
 		'height' => 15,
 	],
+	'hewiktionary' => [ // T308411
+		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-he.svg',
+		'width' => 93,
+		'height' => 29,
+	],
 	'mniwiktionary' => [ // T294709
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-mni.svg',
 		'width' => 129,
