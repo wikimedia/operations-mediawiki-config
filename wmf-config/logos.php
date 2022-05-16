@@ -468,7 +468,7 @@ return [
 	'vowiktionary' => '/static/images/project-logos/vowiktionary.png',
 	'wawiktionary' => '/static/images/project-logos/wawiktionary.png', // T45240
 	'wowiktionary' => '/static/images/project-logos/wowiktionary.png',
-	'yiwiktionary' => '/static/images/project-logos/yiwiktionary.png',
+	'yiwiktionary' => '/static/images/project-logos/yiwiktionary.png', // T308411
 	'yuewiktionary' => '/static/images/project-logos/yuewiktionary.png',
 	'zh_min_nanwiktionary' => '/static/images/project-logos/zh_min_nanwiktionary.png', // T45240
 	'zhwiktionary' => '/static/images/project-logos/zhwiktionary.png',
@@ -1231,6 +1231,7 @@ return [
 	'uzwiktionary' => '/static/images/project-logos/uzwiktionary-1.5x.png', // T150618
 	'viwiktionary' => '/static/images/project-logos/viwiktionary-1.5x.png',
 	'wawiktionary' => '/static/images/project-logos/wawiktionary-1.5x.png', // T150618
+	'yiwiktionary' => '/static/images/project-logos/yiwiktionary-1.5x.png', // T308411
 	'yuewiktionary' => '/static/images/project-logos/yuewiktionary-1.5x.png',
 	'zh_min_nanwiktionary' => '/static/images/project-logos/zh_min_nanwiktionary-1.5x.png', // T150618
 	'zhwiktionary' => '/static/images/project-logos/zhwiktionary-1.5x.png', // T150618
@@ -1813,6 +1814,7 @@ return [
 	'uzwiktionary' => '/static/images/project-logos/uzwiktionary-2x.png', // T150618
 	'viwiktionary' => '/static/images/project-logos/viwiktionary-2x.png',
 	'wawiktionary' => '/static/images/project-logos/wawiktionary-2x.png', // T150618
+	'yiwiktionary' => '/static/images/project-logos/yiwiktionary-2x.png', // T308411
 	'yuewiktionary' => '/static/images/project-logos/yuewiktionary-2x.png',
 	'zh_min_nanwiktionary' => '/static/images/project-logos/zh_min_nanwiktionary-2x.png', // T150618
 	'zhwiktionary' => '/static/images/project-logos/zhwiktionary-2x.png', // T150618

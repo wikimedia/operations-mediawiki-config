@@ -1965,8 +1965,10 @@ Wiktionary:
         no_2x: true
 
     yiwiktionary:
-        no_1_5x: true
-        no_2x: true
+        commons:  File:WiktprintableYi.svg
+        comment:  T308411
+        comment_1_5x: T308411
+        comment_2x: T308411
 
     yuewiktionary:
 
