@@ -7941,8 +7941,8 @@ function wmfGetVariantSettings() {
 			],
 		],
 	],
-	// T306606
-	'euwiki' => [
+	// T306607
+	'desktop-improvements' => [
 		'name' => 'skin-vector-toc-experiment',
 		'enabled' => true,
 		'buckets' => [
@@ -7957,19 +7957,33 @@ function wmfGetVariantSettings() {
 			],
 		]
 	],
-	// T306606
-	'hewiki' => [
+	'frwiki' => [
 		'name' => 'skin-vector-toc-experiment',
-		'enabled' => true,
+		'enabled' => false,
 		'buckets' => [
 			'unsampled' => [
-				'samplingRate' => 0
+				'samplingRate' => 1
 			],
 			'control' => [
-				'samplingRate' => 0.5
+				'samplingRate' => 0
 			],
 			'treatment' => [
-				'samplingRate' => 0.5
+				'samplingRate' => 0
+			],
+		]
+	],
+	'ptwiki' => [
+		'name' => 'skin-vector-toc-experiment',
+		'enabled' => false,
+		'buckets' => [
+			'unsampled' => [
+				'samplingRate' => 1
+			],
+			'control' => [
+				'samplingRate' => 0
+			],
+			'treatment' => [
+				'samplingRate' => 0
 			],
 		]
 	],
