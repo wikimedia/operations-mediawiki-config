@@ -1596,6 +1596,7 @@ function wmfGetOverrideSettings() {
 					'skipWelcomeSurvey' => true,
 					'signupPageTemplate' => 'hero',
 					'signupPageTemplateParameters' => [
+						'showBenefitsList' => 'desktop',
 						'messageKey' => 'thankyoupage',
 					],
 					'pattern' => '/^typage-(latam|in|za)-en-2022$|^typage-latam-(es|pt)-2022$/'
@@ -1603,7 +1604,10 @@ function wmfGetOverrideSettings() {
 				'thankyoubanner-2022' => [
 					'skipWelcomeSurvey' => true,
 					'signupPageTemplate' => 'hero',
-					'signupPageTemplateParameters' => [],
+					'signupPageTemplateParameters' => [
+						'showBenefitsList' => 'desktop',
+						'messageKey' => 'thankyoubanner',
+					],
 					'pattern' => '/^tybanner-(latam|in|za)-en-2022$|^tybanner-latam-(es|pt)-2022$/'
 				]
 			],

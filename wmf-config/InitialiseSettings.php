@@ -27925,6 +27925,7 @@ function wmfGetVariantSettings() {
 			'skipWelcomeSurvey' => true,
 			'signupPageTemplate' => 'hero',
 			'signupPageTemplateParameters' => [
+				'showBenefitsList' => 'desktop',
 				'messageKey' => 'thankyoupage',
 			],
 			'pattern' => '/^typage-(latam|in|za)-en-2022$|^typage-latam-(es|pt)-2022$/'
@@ -27933,7 +27934,8 @@ function wmfGetVariantSettings() {
 			'skipWelcomeSurvey' => true,
 			'signupPageTemplate' => 'hero',
 			'signupPageTemplateParameters' => [
-				'messageKey' => 'thankyoupage',
+				'showBenefitsList' => 'desktop',
+				'messageKey' => 'thankyoubanner',
 			],
 			'pattern' => '/^tybanner-(latam|in|za)-en-2022$|^tybanner-latam-(es|pt)-2022$/'
 		]
@@ -27944,6 +27946,7 @@ function wmfGetVariantSettings() {
 			'skipWelcomeSurvey' => true,
 			'signupPageTemplate' => 'hero',
 			'signupPageTemplateParameters' => [
+				'showBenefitsList' => 'desktop',
 				'messageKey' => 'thankyoupage',
 			],
 			'pattern' => '/^typage-(latam|in|za)-en-2022$/'
@@ -27952,7 +27955,8 @@ function wmfGetVariantSettings() {
 			'skipWelcomeSurvey' => true,
 			'signupPageTemplate' => 'hero',
 			'signupPageTemplateParameters' => [
-				'messageKey' => 'thankyoupage',
+				'showBenefitsList' => 'desktop',
+				'messageKey' => 'thankyoubanner',
 			],
 			'pattern' => '/^tybanner-(latam|in|za)-en-2022$/'
 		]
@@ -27976,6 +27980,7 @@ function wmfGetVariantSettings() {
 			'skipWelcomeSurvey' => true,
 			'signupPageTemplate' => 'hero',
 			'signupPageTemplateParameters' => [
+				'showBenefitsList' => 'desktop',
 				'messageKey' => 'thankyoupage',
 			],
 			'pattern' => '/^typage-latam-es-2022$/'
@@ -27984,7 +27989,8 @@ function wmfGetVariantSettings() {
 			'skipWelcomeSurvey' => true,
 			'signupPageTemplate' => 'hero',
 			'signupPageTemplateParameters' => [
-				'messageKey' => 'thankyoupage',
+				'showBenefitsList' => 'desktop',
+				'messageKey' => 'thankyoubanner',
 			],
 			'pattern' => '/^tybanner-latam-es-2022$/'
 		]
@@ -27995,6 +28001,7 @@ function wmfGetVariantSettings() {
 			'skipWelcomeSurvey' => true,
 			'signupPageTemplate' => 'hero',
 			'signupPageTemplateParameters' => [
+				'showBenefitsList' => 'desktop',
 				'messageKey' => 'thankyoupage',
 			],
 			'pattern' => '/^typage-latam-pt-2022$/'
@@ -28003,7 +28010,8 @@ function wmfGetVariantSettings() {
 			'skipWelcomeSurvey' => true,
 			'signupPageTemplate' => 'hero',
 			'signupPageTemplateParameters' => [
-				'messageKey' => 'thankyoupage',
+				'showBenefitsList' => 'desktop',
+				'messageKey' => 'thankyoubanner',
 			],
 			'pattern' => '/^tybanner-latam-pt-2022$/'
 		]
