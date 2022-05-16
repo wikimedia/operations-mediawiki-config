@@ -1037,6 +1037,11 @@ function wmfGetVariantSettings() {
 		'width' => 122,
 		'height' => 20,
 	],
+	'yiwiktionary' => [ // T308411
+		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-yi.svg',
+		'width' => 147,
+		'height' => 25,
+	],
 
 	// Wikiquote
 	'frwikiquote' => [ // T290091
