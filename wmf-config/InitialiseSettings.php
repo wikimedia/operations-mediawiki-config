@@ -17055,6 +17055,7 @@ function wmfGetVariantSettings() {
 	'sdwiktionary' => true, // T152609
 	'simplewiktionary' => true,
 	'skwiki' => true,
+	'shnwiki' => true, // T308623
 	'sowiki' => true,
 	'sqwiki' => true, // T227970
 	'sqwikiquote' => true, // T230390
