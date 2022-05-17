@@ -690,7 +690,7 @@ return [
 
 	// Wikiversity
 	'arwikiversity' => '/static/images/project-logos/arwikiversity.png',
-	'betawikiversity' => '/static/images/project-logos/betawikiversity.png',
+	'betawikiversity' => '/static/images/project-logos/betawikiversity.png', // T308604
 	'cswikiversity' => '/static/images/project-logos/cswikiversity.png', // T54019
 	'dewikiversity' => '/static/images/project-logos/dewikiversity.png',
 	'elwikiversity' => '/static/images/project-logos/elwikiversity.png', // T248391
@@ -1332,6 +1332,7 @@ return [
 
 	// Wikiversity
 	'arwikiversity' => '/static/images/project-logos/arwikiversity-1.5x.png',
+	'betawikiversity' => '/static/images/project-logos/betawikiversity-1.5x.png', // T308604
 	'cswikiversity' => '/static/images/project-logos/cswikiversity-1.5x.png', // T150618
 	'dewikiversity' => '/static/images/project-logos/dewikiversity-1.5x.png',
 	'elwikiversity' => '/static/images/project-logos/elwikiversity-1.5x.png', // T248391
@@ -1915,6 +1916,7 @@ return [
 
 	// Wikiversity
 	'arwikiversity' => '/static/images/project-logos/arwikiversity-2x.png',
+	'betawikiversity' => '/static/images/project-logos/betawikiversity-2x.png', // T308604
 	'cswikiversity' => '/static/images/project-logos/cswikiversity-2x.png', // T150618
 	'dewikiversity' => '/static/images/project-logos/dewikiversity-2x.png',
 	'elwikiversity' => '/static/images/project-logos/elwikiversity-2x.png', // T248391

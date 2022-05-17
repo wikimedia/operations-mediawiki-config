@@ -2855,8 +2855,10 @@ Wikiversity:
     arwikiversity:
 
     betawikiversity:
-        no_1_5x: true
-        no_2x: true
+        commons:  File:Wikiversity-logo-beta-v2.svg
+        comment:  T308604
+        comment_1_5x:  T308604
+        comment_2x:  T308604
 
     cswikiversity:
         comment:  T54019
