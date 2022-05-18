@@ -11,7 +11,7 @@
 		"mediawiki/mediawiki-codesniffer": "39.0.0",
 		"phpunit/phpunit": "^9.5",
 		"mediawiki/minus-x": "1.1.1",
-		"symfony/yaml": "^5.3"
+		"symfony/yaml": "5.4.3"
 	},
 	"scripts": {
 		"lint": "parallel-lint --exclude vendor --exclude multiversion/vendor --ignore-fails .",
