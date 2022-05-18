@@ -2183,8 +2183,12 @@ Wikiquote:
     viwikiquote:
 
     zhwikiquote:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        commons:  File:Wikiquote-logo-zh-hant.svg
+        variants:
+            zhwikiquote-hans:  File:Wikiquote-logo-zh-hans.svg
+        comment:  T199863, T308620
+        comment_1_5x:  T150618, T199863, T308620
+        comment_2x:  T150618, T199863, T308620
 
 Wikibooks:
     afwikibooks:
