@@ -1078,10 +1078,10 @@ return [
 		'width' => 120,
 		'height' => 21,
 	],
-	'zhwikisource' => [ // T261076
+	'zhwikisource' => [ // T261076, T308620
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-zh.svg',
-		'width' => 166,
-		'height' => 35,
+		'width' => 114,
+		'height' => 24,
 	],
 
 	// Wikiversity
