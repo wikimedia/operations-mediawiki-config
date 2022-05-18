@@ -706,7 +706,7 @@ return [
 	'ruwikiversity' => '/static/images/project-logos/ruwikiversity.png',
 	'slwikiversity' => '/static/images/project-logos/slwikiversity.png',
 	'svwikiversity' => '/static/images/project-logos/svwikiversity.png',
-	'zhwikiversity' => '/static/images/project-logos/zhwikiversity.png',
+	'zhwikiversity' => '/static/images/project-logos/zhwikiversity.png', // T202127, T308620
 
 	// Wikivoyage
 	'bnwikivoyage' => '/static/images/project-logos/bnwikivoyage.png',
@@ -1348,7 +1348,7 @@ return [
 	'ruwikiversity' => '/static/images/project-logos/ruwikiversity-1.5x.png', // T150618
 	'slwikiversity' => '/static/images/project-logos/slwikiversity-1.5x.png', // T150618
 	'svwikiversity' => '/static/images/project-logos/svwikiversity-1.5x.png',
-	'zhwikiversity' => '/static/images/project-logos/zhwikiversity-1.5x.png',
+	'zhwikiversity' => '/static/images/project-logos/zhwikiversity-1.5x.png', // T202127, T308620
 
 	// Wikivoyage
 	'bnwikivoyage' => '/static/images/project-logos/bnwikivoyage-1.5x.png',
@@ -1932,7 +1932,7 @@ return [
 	'ruwikiversity' => '/static/images/project-logos/ruwikiversity-2x.png', // T150618
 	'slwikiversity' => '/static/images/project-logos/slwikiversity-2x.png', // T150618
 	'svwikiversity' => '/static/images/project-logos/svwikiversity-2x.png',
-	'zhwikiversity' => '/static/images/project-logos/zhwikiversity-2x.png',
+	'zhwikiversity' => '/static/images/project-logos/zhwikiversity-2x.png', // T202127, T308620
 
 	// Wikivoyage
 	'bnwikivoyage' => '/static/images/project-logos/bnwikivoyage-2x.png',

@@ -2919,6 +2919,12 @@ Wikiversity:
     svwikiversity:
 
     zhwikiversity:
+        commons:  File:Wikiversity_logo_2017_zh-hant.svg
+        variants:
+            zhwikiversity-hans:  File:Wikiversity_logo_2017_zh-hans.svg
+        comment:  T202127, T308620
+        comment_1_5x:  T202127, T308620
+        comment_2x:  T202127, T308620
 
 Wikivoyage:
     bnwikivoyage:
