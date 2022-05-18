@@ -2984,10 +2984,12 @@ Wikivoyage:
         comment_2x:  T151570
 
     zhwikivoyage:
-        commons: File:Wikivoyage-Logo-v3-zh-hans.svg
-        comment:  T61077
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        commons:  File:Wikivoyage-Logo-v3-zh-hans.svg
+        variants:
+            zhwikivoyage-hant:  File:Wikivoyage-Logo-v3-zh-hant.svg
+        comment:  T61077, T308620
+        comment_1_5x:  T150618, T308620
+        comment_2x:  T150618, T308620
 
 "Chapter and local user group wikis":
     amwikimedia:

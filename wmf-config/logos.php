@@ -725,7 +725,7 @@ return [
 	'ukwikivoyage' => '/static/images/project-logos/ukwikivoyage.png', // T110370
 	'trwikivoyage' => '/static/images/project-logos/trwikivoyage.png',
 	'viwikivoyage' => '/static/images/project-logos/viwikivoyage.png',
-	'zhwikivoyage' => '/static/images/project-logos/zhwikivoyage.png', // T61077
+	'zhwikivoyage' => '/static/images/project-logos/zhwikivoyage.png', // T61077, T308620
 
 	// Chapter and local user group wikis
 	'amwikimedia' => '/static/images/project-logos/amwikimedia.png', // T176042
@@ -1366,7 +1366,7 @@ return [
 	'ukwikivoyage' => '/static/images/project-logos/ukwikivoyage-1.5x.png',
 	'trwikivoyage' => '/static/images/project-logos/trwikivoyage-1.5x.png',
 	'viwikivoyage' => '/static/images/project-logos/viwikivoyage-1.5x.png', // T151570
-	'zhwikivoyage' => '/static/images/project-logos/zhwikivoyage-1.5x.png', // T150618
+	'zhwikivoyage' => '/static/images/project-logos/zhwikivoyage-1.5x.png', // T150618, T308620
 
 	// Chapter and local user group wikis
 	'amwikimedia' => '/static/images/project-logos/amwikimedia-1.5x.png', // T176042
@@ -1950,7 +1950,7 @@ return [
 	'ukwikivoyage' => '/static/images/project-logos/ukwikivoyage-2x.png',
 	'trwikivoyage' => '/static/images/project-logos/trwikivoyage-2x.png',
 	'viwikivoyage' => '/static/images/project-logos/viwikivoyage-2x.png', // T151570
-	'zhwikivoyage' => '/static/images/project-logos/zhwikivoyage-2x.png', // T150618
+	'zhwikivoyage' => '/static/images/project-logos/zhwikivoyage-2x.png', // T150618, T308620
 
 	// Chapter and local user group wikis
 	'amwikimedia' => '/static/images/project-logos/amwikimedia-2x.png', // T176042
