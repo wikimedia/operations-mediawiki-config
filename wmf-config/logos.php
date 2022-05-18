@@ -686,7 +686,7 @@ return [
 	'wawikisource' => '/static/images/project-logos/wawikisource.png',
 	'yiwikisource' => '/static/images/project-logos/yiwikisource.png',
 	'zh_min_nanwikisource' => '/static/images/project-logos/zh_min_nanwikisource.png',
-	'zhwikisource' => '/static/images/project-logos/zhwikisource.png', // T229715
+	'zhwikisource' => '/static/images/project-logos/zhwikisource.png', // T229715, T261076, T308620
 
 	// Wikiversity
 	'arwikiversity' => '/static/images/project-logos/arwikiversity.png',
@@ -1328,7 +1328,7 @@ return [
 	'viwikisource' => '/static/images/project-logos/enwikisource-1.5x.png',
 	'wawikisource' => '/static/images/project-logos/wawikisource-1.5x.png',
 	'yiwikisource' => '/static/images/project-logos/yiwikisource-1.5x.png', // T193562
-	'zhwikisource' => '/static/images/project-logos/zhwikisource-1.5x.png', // T229715
+	'zhwikisource' => '/static/images/project-logos/zhwikisource-1.5x.png', // T229715, T261076, T308620
 
 	// Wikiversity
 	'arwikiversity' => '/static/images/project-logos/arwikiversity-1.5x.png',
@@ -1912,7 +1912,7 @@ return [
 	'viwikisource' => '/static/images/project-logos/enwikisource-2x.png',
 	'wawikisource' => '/static/images/project-logos/wawikisource-2x.png',
 	'yiwikisource' => '/static/images/project-logos/yiwikisource-2x.png', // T193562
-	'zhwikisource' => '/static/images/project-logos/zhwikisource-2x.png', // T229715
+	'zhwikisource' => '/static/images/project-logos/zhwikisource-2x.png', // T229715, T261076, T308620
 
 	// Wikiversity
 	'arwikiversity' => '/static/images/project-logos/arwikiversity-2x.png',

@@ -2853,9 +2853,10 @@ Wikisource:
         no_2x: true
 
     zhwikisource:
-        comment:  T229715
-        comment_1_5x:  T229715
-        comment_2x:  T229715
+        commons:  File:Wikisource-logo-zh-SKQS.svg
+        comment:  T229715, T261076, T308620
+        comment_1_5x:  T229715, T261076, T308620
+        comment_2x:  T229715, T261076, T308620
 
 Wikiversity:
     arwikiversity:
