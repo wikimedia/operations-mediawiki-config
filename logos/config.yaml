@@ -1978,8 +1978,10 @@ Wiktionary:
         comment_2x:  T150618
 
     zhwiktionary:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        commons:  File:Wiktprintable-zh.svg
+        comment:  T308620
+        comment_1_5x:  T150618, T308620
+        comment_2x:  T150618, T308620
 
 Wikiquote:
     angwikiquote:
