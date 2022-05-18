@@ -11518,9 +11518,9 @@ function wmfGetVariantSettings() {
 	],
 	// due to mass vandalism complaint, 2006-04-11
 	'+zhwiki' => [
-		'*' => [ 'flow-hide' => false, ], // T264489, to revise on 2020-10-12
+		'*' => [ 'flow-hide' => false, ], // T264489
 		'autoconfirmed' => [
-			'flow-hide' => true, // T264489, to revise on 2020-10-12
+			'flow-hide' => true, // T264489
 			'upload_by_url' => true, // T142991
 		],
 		'bot' => [ 'extendedconfirmed' => true ], // T287322
