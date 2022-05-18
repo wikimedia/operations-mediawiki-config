@@ -8867,10 +8867,6 @@ function wmfGetVariantSettings() {
 	'default' => 1.0,
 ],
 
-'wgElementTiming' => [
-	'default' => false,
-],
-
 'wgFeaturePolicyReportOnly' => [
 	'default' => [],
 ],
