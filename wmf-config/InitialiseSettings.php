@@ -8860,14 +8860,6 @@ return [
 	'default' => [],
 ],
 
-'wgPriorityHints' => [
-	'default' => false,
-],
-
-'wgPriorityHintsRatio' => [
-	'default' => 1.0,
-],
-
 'wgFeaturePolicyReportOnly' => [
 	'default' => [],
 ],
