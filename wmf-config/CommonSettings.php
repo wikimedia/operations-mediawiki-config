@@ -459,6 +459,10 @@ if ( $wmgUseGlobalPreferences ) {
 	];
 }
 
+if ( $wmgUseSimilarEditors ) {
+	wfLoadExtension( 'SimilarEditors' );
+}
+
 # ######################################################################
 # Legal matters
 # ######################################################################
