@@ -18083,8 +18083,7 @@ return [
 
 // IPInfo extension
 'wmgUseIPInfo' => [
-	'default' => false,
-	'testwiki' => true, // T260598
+	'default' => true, // T260597
 ],
 
 'wmgUseIncubator' => [
