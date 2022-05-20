@@ -8810,8 +8810,8 @@ return [
 	// note that account creation is not the only bottleneck
 	'default' => [],
 	'+enwiki' => [
-		'45.79.101.112', // Wiki Education Foundation dashboard T283096
-		'2600:3c01::f03c:92ff:fe44:4b6d', // T283096
+		'45.79.106.114', // Wiki Education Foundation dashboard, T308702
+		'2600:3c01::f03c:93ff:fe24:db1b', // T308702
 	],
 	'+testwikidatawiki' => [
 		// Browser tests run by Jenkins on WMCS instances - T167432
