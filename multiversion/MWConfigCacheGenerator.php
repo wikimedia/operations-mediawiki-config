@@ -59,13 +59,11 @@ class MWConfigCacheGenerator {
 	 * Create a MultiVersion config object for a wiki
 	 *
 	 * @param string $wikiDBname The wiki's database name, e.g. 'enwiki' or  'zh_min_nanwikisource'
-	 * @param ?string $site The wiki's site type family, e.g. 'wikipedia' or 'wikisource'
-	 * @param ?string $lang The wiki's MediaWiki language code, e.g. 'en' or 'zh-min-nan'
 	 * @param SiteConfiguration $wgConf The global MultiVersion wgConf object
 	 * @param string $realm Realm, e.g. 'production' or 'labs'
 	 * @return array The wiki's config
 	 */
-	public static function getMWConfigForCacheing( $wikiDBname, $site, $lang, $wgConf, $realm = 'production' ) {
+	public static function getMWConfigForCacheing( $wikiDBname, $wgConf, $realm = 'production' ) {
 		# Collect all the dblist tags associated with this wiki
 		$wikiTags = [];
 
@@ -81,6 +79,7 @@ class MWConfigCacheGenerator {
 			}
 		}
 
+		list( $site, $lang ) = $wgConf->siteFromDB( $wikiDBname );
 		$dbSuffix = ( $site === 'wikipedia' ) ? 'wiki' : $site;
 		$confParams = [
 			'lang' => $lang,
@@ -303,11 +302,8 @@ class MWConfigCacheGenerator {
 			// Populate SiteConfiguration object
 			wmfLoadInitialiseSettings( $wgConf );
 
-			list( $site, $lang ) = $wgConf->siteFromDB( $dbname );
 			$globals = self::getMWConfigForCacheing(
 				$dbname,
-				$site,
-				$lang,
 				$wgConf,
 				$realm
 			);
