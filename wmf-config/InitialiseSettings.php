@@ -28888,3 +28888,5 @@ function wmfGetVariantSettings() {
 
 ];
 }
+
+return wmfGetVariantSettings();
