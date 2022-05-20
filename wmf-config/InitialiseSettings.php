@@ -9131,7 +9131,7 @@ return [
 		],
 	],
 	'+bnwiki' => [
-		'autoconfirmed' => [ 'patrol' => true ],
+		'patroller' => [ 'patrol' => true ], // T308945
 		'autopatrolled' => [ 'autopatrol' => true ], // T30717
 		'rollbacker' => [ 'rollback' => true ], // T30717
 		'reviewer' => [
@@ -11916,6 +11916,7 @@ return [
 			'autopatrolled',
 			'filemover',
 			'flood',
+			'patroller', // T308945
 			'rollbacker',
 		],
 		'bureaucrat' => [ 'import' ],
@@ -13304,6 +13305,7 @@ return [
 			'autopatrolled',
 			'filemover',
 			'flood',
+			'patroller', // T308945
 			'rollbacker',
 		],
 		'bureaucrat' => [ 'import' ],
