@@ -64,7 +64,7 @@ $wgLBFactoryConf['groupLoadsBySection'] = $dbconfig['groupLoadsBySection'];
 foreach ( $dbconfig['sectionLoads'] as $section => $sectionLoads ) {
 	$wgLBFactoryConf['sectionLoads'][$section] = array_merge( $sectionLoads[0], $sectionLoads[1] );
 }
-
+require_once __DIR__ . '/../../multiversion/MWConfigCacheGenerator.php';
 require_once __DIR__ . '/../../src/Noc/DbConfig.php';
 
 $dbConf = new Wikimedia\MWConfig\Noc\DbConfig();

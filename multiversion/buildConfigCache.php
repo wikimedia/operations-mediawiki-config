@@ -17,7 +17,7 @@ $configDir = __DIR__ . '/../wmf-config';
 require_once "{$configDir}/InitialiseSettings.php";
 require_once "{$configDir}/InitialiseSettings-labs.php";
 
-$settings['production'] = wmfGetVariantSettings();
+$settings['production'] = MWConfigCacheGenerator::getStaticConfig();
 $settings['labs'] = MWConfigCacheGenerator::applyOverrides( $settings['production'] );
 
 foreach ( [ 'production', 'labs' ] as $realm ) {

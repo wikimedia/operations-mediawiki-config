@@ -8,6 +8,8 @@
  * @file
  */
 
+use Wikimedia\MWConfig\MWConfigCacheGenerator;
+
 abstract class WgConfTestCase extends PHPUnit\Framework\TestCase {
 
 	protected $globals = [];
@@ -96,7 +98,7 @@ abstract class WgConfTestCase extends PHPUnit\Framework\TestCase {
 		$wgConf = new Wikimedia\MWConfig\StaticSiteConfiguration;
 		$wgConf->suffixes = MWMultiVersion::SUFFIXES;
 		$wgConf->wikis = MWWikiversions::readDbListFile( $wmgRealm === 'labs' ? 'all-labs' : 'all' );
-		$wgConf->settings = wmfGetVariantSettings();
+		$wgConf->settings = MWConfigCacheGenerator::getStaticConfig();
 
 		// Make sure globals are restored, else they will be serialized on each
 		// test run which slow the test run dramatically.

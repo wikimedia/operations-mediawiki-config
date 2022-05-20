@@ -84,7 +84,7 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 	}
 
 	public function provideConfiguredProductionChannels() {
-		$variantSettings = wmfGetVariantSettings();
+		$variantSettings = MWConfigCacheGenerator::getStaticConfig();
 
 		foreach ( $variantSettings['wmgMonologChannels'] as $wiki => $channels ) {
 			foreach ( $channels as $name => $config ) {
@@ -95,7 +95,7 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 	}
 
 	public function provideConfiguredBetaClusterChannels() {
-		$variantSettings = wmfGetVariantSettings();
+		$variantSettings = MWConfigCacheGenerator::getStaticConfig();
 		$variantSettings = MWConfigCacheGenerator::applyOverrides( $variantSettings );
 
 		foreach ( $variantSettings['wmgMonologChannels'] as $wiki => $channels ) {

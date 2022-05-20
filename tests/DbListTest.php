@@ -141,7 +141,7 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 	public function testNoUnusedDblistsLoaded() {
 		$unusedDblists = array_flip( DBList::getDblistsUsedInSettings() );
 
-		$prodSettings = wmfGetVariantSettings();
+		$prodSettings = MWConfigCacheGenerator::getStaticConfig();
 		$labsSettings = MWConfigCacheGenerator::applyOverrides( $prodSettings );
 
 		foreach ( $prodSettings as $settingName => $settingsArray ) {

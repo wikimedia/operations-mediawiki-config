@@ -200,8 +200,7 @@ $wgConf->fullLoadCallback = 'wmfLoadInitialiseSettings';
  */
 function wmfLoadInitialiseSettings( $conf ) {
 	global $wmgRealm;
-	require_once __DIR__ . '/InitialiseSettings.php';
-	$settings = wmfGetVariantSettings();
+	$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getStaticConfig();
 
 	if ( $wmgRealm !== 'production' ) {
 		// Override for Beta Cluster and other realms.

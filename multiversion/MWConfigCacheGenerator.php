@@ -415,4 +415,16 @@ class MWConfigCacheGenerator {
 		return $settings;
 	}
 
+	/**
+	 * Return static configuration without overrides
+	 *
+	 * @return array
+	 */
+	public static function getStaticConfig(): array {
+		$configDir = __DIR__ . '/../wmf-config';
+		$config = require $configDir . '/logos.php';
+		$config += require $configDir . '/InitialiseSettings.php';
+		return $config;
+	}
+
 }

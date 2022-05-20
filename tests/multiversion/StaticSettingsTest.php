@@ -2,6 +2,8 @@
 // Ensure that we're not casting any types
 declare( strict_types = 1 );
 
+use Wikimedia\MWConfig\MWConfigCacheGenerator;
+
 class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 
 	protected $variantSettings = [];
@@ -12,7 +14,7 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 		$this->originalWmfDC = $GLOBALS['wmgDatacenter'];
 		$GLOBALS['wmgDatacenter'] = 'testvalue';
 
-		$this->variantSettings = wmfGetVariantSettings();
+		$this->variantSettings = MWConfigCacheGenerator::getStaticConfig();
 	}
 
 	public function tearDown(): void {
