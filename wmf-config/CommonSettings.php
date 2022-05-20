@@ -3979,6 +3979,9 @@ if ( $wmgUseIPInfo ) {
 	wfLoadExtension( 'IPInfo' );
 	$wgIPInfoGeoIP2EnterprisePath = '/usr/share/GeoIPInfo/';
 
+	// Consult the Legal team before updating these, since they
+	// must remain compatible with our contract with MaxMind
+
 	$wgGroupPermissions['autoconfirmed']['ipinfo'] = true;
 	$wgGroupPermissions['autoconfirmed']['ipinfo-view-basic'] = true;
 
