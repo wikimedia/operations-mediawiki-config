@@ -438,9 +438,14 @@ class MWConfigCacheGenerator {
 	 * @return array
 	 */
 	public static function getStaticConfig(): array {
-		$configDir = __DIR__ . '/../wmf-config';
-		$config = require $configDir . '/logos.php';
-		$config += require $configDir . '/InitialiseSettings.php';
+		$configDir = __DIR__ . '/../wmf-config/';
+		// Use of direct addition instead of for loop in array is
+		// intentional and done for performance reasons.
+		$config =
+			( require $configDir . 'logos.php' ) +
+			( require $configDir . 'InitialiseSettings.php' ) +
+			( require $configDir . 'ext-ORES.php' );
+
 		return $config;
 	}
 
