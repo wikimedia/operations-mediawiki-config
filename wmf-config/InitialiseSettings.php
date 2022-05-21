@@ -5230,6 +5230,7 @@ return [
 	'hewiki' => [ '', 'autoconfirmed', 'editautopatrolprotected',  'templateeditor' /* T102466 */, 'sysop' ], // T60207
 	'hewikisource' => [ '', 'autoconfirmed', 'editautoreviewprotected', 'sysop' ], // T275076
 	'huwiki' => [ '', 'autoconfirmed', 'edittrustedprotected', 'templateeditor', 'sysop' ], // T74055, T194568
+	'itwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T308917
 	'jawiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T249820
 	'kowiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T184675
 	'lvwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T92645
@@ -5264,6 +5265,7 @@ return [
 	'+enwiki' => [ 'extendedconfirmed' ], // T126607
 	'+fawiki' => [ 'extendedconfirmed' ], // T140839
 	'+frwiki' => [ 'editextendedsemiprotected' ], // T132248
+	'+itwiki' => [ 'editautopatrolprotected' ], // T308917
 	'+jawiki' => [ 'extendedconfirmed' ], // T249820
 	'+kowiki' => [ 'extendedconfirmed' ], // T184675
 	'+ptwiki' => [ 'extendedconfirmed' ], // T281926
@@ -10156,17 +10158,22 @@ return [
 			'rollback' => true,
 			'autopatrol' => true,
 			'patrol' => true, // T261587
+			'editautopatrolprotected' => true, // T308917
 		],
 		'autopatrolled' => [
 			'autopatrol' => true,
 			'patrol' => true, // T261587
+			'editautopatrolprotected' => true, // T308917
 		],
 		'mover' => [ // T102770
 			'movefile' => true,
 			'move-subpages' => true,
 			'suppressredirect' => true
 		],
-		'bot' => [ 'setmentor' => true, ], // T307005
+		'bot' => [
+			'setmentor' => true, // T307005
+			'editautopatrolprotected' => true, // T308917
+		],
 		'botadmin' => [ // T220915
 			'apihighlimits' => true,
 			'autoconfirmed' => true,
@@ -10188,6 +10195,10 @@ return [
 			'suppressredirect' => true,
 			'tboverride' => true,
 			'writeapi' => true,
+			'editautopatrolprotected' => true, // T308917
+		],
+		'sysop' => [
+			'editautopatrolprotected' => true, // T308917
 		],
 	],
 	'+itwikisource' => [
