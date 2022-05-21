@@ -8659,6 +8659,7 @@ return [
 	'+nowikimedia' => [ 100 => 1 ], // T181625
 	'+nowikisource' => [ 102 => 1, 106 => 1 ],
 	'+otrs_wikiwiki' => [ 100 => 1 ], // T266917
+	'+pawikisource' => [ 100 => 1, 110 => 1, 114 => 1, 250 => 1, 252 => 1 ], // T287887
 	'+plwiktionary' => [ 100 => 1, 102 => 1 ],
 	'+plwikisource' => [ 102 => 1, 104 => 1, 124 => 1, ], // T154711
 	'+ptwikisource' => [ 102 => 1, 104 => 1 ],
