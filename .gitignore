@@ -1,40 +1,32 @@
-# Repository management
-.svn
+# Production files that are temporary or private
+/php-1.*/
+/private
+/scap/log
+/wikiversions-*.php
+/wikiversions.php
+/wmf-config/config-cache/
+/wmf-config/ExtensionMessages-*.php
 
-# Editors
-*~
-*.swp
-*.vscode/
-.idea/
-/nbproject/private/
+# Beta Cluster
+/docroot/wwwportal/portal-master
+/php-master/
+/portal-master/
 
-# Wikimedia private/temporary stuff
-private
-wmf-config/ExtensionMessages-*.php
-wmf-config/config-cache/
-php-1.*/
-wikiversions.php
-wikiversions-*.php
-
-# Beta Cluster-specific items
-docroot/wwwportal/portal-master
-php-master/
-portal-master/
-
-# Test runners
+# CI and local development
+## Testing
 /logs
 /.phpunit.result.cache
 /vendor
-
-# Operating system stuff
+## Editors
+/*~
+/*.swp
+/*.vscode/
+/.idea/
+/nbproject/private/
 ## Mac OS X
 .DS_Store
-
-# python stuff
+# Python
 *.pyc
 /.tox
 mediawiki_config.egg-info
 __pycache__
-
-# scap stuff
-scap/log
