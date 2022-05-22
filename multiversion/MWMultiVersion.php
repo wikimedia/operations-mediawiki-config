@@ -405,8 +405,7 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Check if this wiki is *not* specified in a php file
-	 * located at /srv/mediawiki/wikiversions.php.
+	 * Check if this wiki is *not* specified in wikiversions.
 	 * @return bool
 	 */
 	public function isMissing() {
@@ -415,10 +414,9 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Get the version as specified in a php file located
-	 * at /srv/mediawiki/wikiversions.php.
-	 * Result is of the form "php-X.XX" or "php-trunk".
-	 * @return string the version directory for this wiki
+	 * Get the version as specified in wikiversions.
+	 *
+	 * @return string Version directory name, e.g. "php-X.XX" or "php-trunk".
 	 */
 	public function getVersion() {
 		$this->loadVersionInfo();
@@ -429,10 +427,12 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Get the version number as specified in a php file located
-	 * at /srv/mediawiki/wikiversions.php. Do not use this
-	 * to determine the path to cache or binary files, only the core MW code.
-	 * @return string the version number for this wiki (e.g. "x.xx" or "trunk")
+	 * Get the version number as specified in wikiversions
+	 *
+	 * Do NOT use this to determine the path to cache or binary files,
+	 * only the core MW code.
+	 *
+	 * @return string Version number, e.g. "x.xx" or "trunk".
 	 */
 	public function getVersionNumber() {
 		$this->loadVersionInfo();
