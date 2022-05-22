@@ -8457,6 +8457,7 @@ return [
 	'viwiki' => true, // T7060
 	'testwiki' => true,
 	'test2wiki' => true, // request by Krinkle for testing
+	'zhwiki' => true, // T308976
 	'zhwiktionary' => true, // T7596
 ],
 # @}
