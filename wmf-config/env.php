@@ -12,7 +12,7 @@
 #
 # - This file MUST NOT have any side effects when included.
 # - This file MAY may be included in scripts on app servers before MediaWiki
-#   is initialised. For example, PhpAutoPrepend.php and profiler.php.
+#   is initialised. For example, PhpAutoPrepend.php and Profiler.php.
 # - This file MUST NOT use any predefined state, only plain PHP.
 #
 # For MediaWiki, this file is included via ../src/ServiceConfig.php.

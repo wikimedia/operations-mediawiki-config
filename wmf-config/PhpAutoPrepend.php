@@ -27,7 +27,7 @@ if ( PHP_SAPI === 'fpm-fcgi' ) {
 }
 
 // https://phabricator.wikimedia.org/T180183
-require_once __DIR__ . '/profiler.php';
+require_once __DIR__ . '/../src/Profiler.php';
 require_once __DIR__ . '/../src/ServiceConfig.php';
 
 $wmgServiceConfig = Wikimedia\MWConfig\ServiceConfig::getInstance();

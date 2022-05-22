@@ -165,7 +165,7 @@ $wmgSessionStoreHMACKey = null;
  * XHGui database credentials.
  *
  * @see wmf-config/PhpAutoPrepend.php
- * @see wmf-config/profiler.php
+ * @see src/Profiler.php
  * @see https://phabricator.wikimedia.org/T254795
  */
 $wmgXhguiDBuser = null;
