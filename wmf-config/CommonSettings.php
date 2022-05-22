@@ -63,14 +63,27 @@ require_once __DIR__ . '/../src/ServiceConfig.php';
 require_once __DIR__ . '/etcd.php';
 require_once __DIR__ . '/../multiversion/MWConfigCacheGenerator.php';
 
+// Past this point we know:
+//
 // - This file must be included by MediaWiki via our LocalSettings.php file.
 //   Determined by MediaWiki core having initialised the $IP variable.
+//
 // - MediaWiki must be included via a multiversion-aware entry point
 //   (e.g. WMF's "w/index.php", or MWScript).
 //   That entry point must have initialised the MWMultiVersion singleton and
 //   decided which wiki we are on (based on hostname or --wiki CLI arg).
 //   Note that getInstance does not (and may not) lazy-create this instance,
 //   it returns null if it hasn't been setup yet.
+//
+// - The wiki ID must be determined by MWMultiVersion::getMediaWiki, as called
+//   in the entry point (e.g. based on server name or --wiki). MWMultiVersion
+//   asserts that it is known in wikiversions.json, and otherwise bails
+//   by rendering `missing.php`.
+//
+//   We can naturally only reach here (wmf-config/CommonSettings.php) if the
+//   wiki was known, the MW version was known, and MW core then loaded
+//   this file via LocalSettings.php.
+//
 $multiVersion = class_exists( 'MWMultiVersion' ) ? MWMultiVersion::getInstance() : null;
 if ( !isset( $IP ) || !$multiVersion ) {
 	print "No MWMultiVersion instance initialized! MWScript.php wrapper not used?\n";
@@ -265,18 +278,6 @@ $wgLocalVirtualHosts = [
 	'ua.wikimedia.org',
 	'wikimania.wikimedia.org',
 ];
-
-# Is this database listed in dblist?
-# Note: must be done before calling $multiVersion functions other than getDatabase().
-if ( array_search( $wgDBname, $wgLocalDatabases ) === false ) {
-	# No? Load missing.php
-	if ( $wgCommandLineMode ) {
-		print "Database name $wgDBname is not listed in dblist\n";
-	} else {
-		require __DIR__ . '/missing.php';
-	}
-	exit;
-}
 
 $globals = Wikimedia\MWConfig\MWConfigCacheGenerator::getConfigGlobals(
 	$wgDBname,
