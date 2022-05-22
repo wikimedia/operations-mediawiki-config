@@ -7,6 +7,7 @@
 # Exposes:
 # - $wmgProfiler (used by CommonSettings.php)
 
+use Wikimedia\MWConfig\XhguiSaverPdo;
 use Wikimedia\MWConfig\XWikimediaDebug;
 
 require_once __DIR__ . '/../src/XWikimediaDebug.php';
@@ -120,10 +121,7 @@ function wmfSetupTideways( $options ) {
 		if ( $profileToXhgui ) {
 			// XHGui save callback
 			$saveCallback = static function () use ( $options ) {
-				// XHGui used to use MongoDB.  Even though we're now using MariaDB,
-				// the MongoDate class from mongofill remains.  Despite its name,
-				// there is no MongoDB-specific functionality in it.
-				require_once __DIR__ . '/../lib/profiler-autoload.php';
+				require_once __DIR__ . '/../src/XhguiSaverPdo.php';
 
 				// These globals are set by private/PrivateSettings.php and may only be
 				// read by wmf-config after MediaWiki is initialised.
@@ -131,14 +129,15 @@ function wmfSetupTideways( $options ) {
 				// only materialise these globals during the save callback, not sooner.
 				global $wmgXhguiDBuser, $wmgXhguiDBpassword;
 
-				$data = [ 'profile' => tideways_xhprof_disable() ];
-				if ( !isset( $data['profile']['main()'] ) ) {
+				$profile = tideways_xhprof_disable();
+				if ( !isset( $profile['main()'] ) ) {
 					// There isn't valid profile data to save (T271865).
 					return;
 				}
 
-				$sec  = $_SERVER['REQUEST_TIME'];
-				$usec = $_SERVER['REQUEST_TIME_FLOAT'] - $sec;
+				$requestTimeFloat = explode( '.', sprintf( '%.6F', $_SERVER['REQUEST_TIME_FLOAT'] ) );
+				$sec  = $requestTimeFloat[0];
+				$usec = $requestTimeFloat[1] ?? 0;
 
 				// Fake the URL to have a prefix of the request ID, that way it can
 				// be easily found through XHGui through a predictable search URL
@@ -173,15 +172,17 @@ function wmfSetupTideways( $options ) {
 				// Re-insert scrubbed URL as REQUEST_URL:
 				$server['REQUEST_URI'] = $url;
 
-				$data['meta'] = [
-					'url'              => $url,
-					'SERVER'           => $server,
-					'get'              => $get,
-					'env'              => $env,
-					'simple_url'       => $url,
-					'request_ts'       => new MongoDate( $sec ),
-					'request_ts_micro' => new MongoDate( $sec, $usec ),
-					'request_date'     => date( 'Y-m-d', $sec ),
+				// Based on https://github.com/perftools/php-profiler/blob/v0.5.0/src/ProfilingData.php#L26
+				$data = [
+					'profile' => $profile,
+					'meta' => [
+						'url' => $url,
+						'SERVER' => $server,
+						'get' => $get,
+						'env' => $env,
+						'simple_url' => $url,
+						'request_ts_micro' => [ 'sec' => $sec, 'usec' => $usec ],
+					]
 				];
 
 				if ( !empty( $options['xhgui-conf']['pdo.connect'] )
@@ -193,7 +194,7 @@ function wmfSetupTideways( $options ) {
 						$wmgXhguiDBuser,
 						$wmgXhguiDBpassword
 					);
-					$saver = new Xhgui_Saver_Pdo( $pdo, $options['xhgui-conf']['pdo.table'] );
+					$saver = new XhguiSaverPdo( $pdo, $options['xhgui-conf']['pdo.table'] );
 					$saver->save( $data );
 				}
 			};
