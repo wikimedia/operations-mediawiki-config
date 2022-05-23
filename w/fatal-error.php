@@ -13,6 +13,10 @@
  * See $allowedActions below for allowed values for "action".
  */
 
+// This file is reached with multiple paths due to symbolic links for the doc root folders,
+// all of the duplicate class names are only from this file being processed multiple times
+// phpcs:disable Generic.Classes.DuplicateClassName.Found
+
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 require MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
 require_once __DIR__ . '/../private/FatalErrorSettings.php';
