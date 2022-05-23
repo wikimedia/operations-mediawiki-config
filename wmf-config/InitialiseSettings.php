@@ -7959,31 +7959,31 @@ return [
 	],
 	'frwiki' => [
 		'name' => 'skin-vector-toc-experiment',
-		'enabled' => false,
+		'enabled' => true,
 		'buckets' => [
 			'unsampled' => [
-				'samplingRate' => 1
+				'samplingRate' => 0.5
 			],
 			'control' => [
-				'samplingRate' => 0
+				'samplingRate' => 0.25
 			],
 			'treatment' => [
-				'samplingRate' => 0
+				'samplingRate' => 0.25
 			],
 		]
 	],
 	'ptwiki' => [
 		'name' => 'skin-vector-toc-experiment',
-		'enabled' => false,
+		'enabled' => true,
 		'buckets' => [
 			'unsampled' => [
-				'samplingRate' => 1
+				'samplingRate' => 0.5
 			],
 			'control' => [
-				'samplingRate' => 0
+				'samplingRate' => 0.25
 			],
 			'treatment' => [
-				'samplingRate' => 0
+				'samplingRate' => 0.25
 			],
 		]
 	],
