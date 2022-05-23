@@ -4334,6 +4334,7 @@ if ( $wmgServerGroup === 'parsoid' ) {
 unset( $parsoidDir );
 // End of temporary hack for hooking up Parsoid/PHP with MediaWiki
 
+// phpcs:ignore MediaWiki.Files.ClassMatchesFilename.NotMatch
 class ClosedWikiProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvider {
 	/**
 	 * @param User $user

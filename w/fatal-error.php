@@ -26,6 +26,7 @@ CauseFatalError::go();
 /**
  * Implementing as a class helps avoid conflicts in an already well-populated global namespace.
  */
+// phpcs:ignore MediaWiki.Files.ClassMatchesFilename.NotMatch
 class CauseFatalError {
 	/** @var string[] */
 	private static $allowedActions = [
