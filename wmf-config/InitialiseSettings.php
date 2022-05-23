@@ -24139,6 +24139,8 @@ return [
 'wgWikiEditorRealtimePreview' => [
 	'default' => false,
 	'testwiki' => true, // T302506
+	'huwiki' => true, // T303961
+	'fiwiki' => true,
 ],
 
 'wmgWikibaseUseSSRTermbox' => [
