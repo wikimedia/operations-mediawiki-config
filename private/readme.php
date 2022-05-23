@@ -57,6 +57,7 @@ $wgDBpassword = null;
  * MySQL database credentials with elevated access,
  * if appropriate for the current process.
  */
+// phpcs:ignore Generic.ControlStructures.DisallowYodaConditions.Found
 if ( false === true ) {
 	$wgDBadminuser = null;
 	$wgDBadminpassword = null;

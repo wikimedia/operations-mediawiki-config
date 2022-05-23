@@ -18,9 +18,6 @@
 	<arg name="bootstrap" value="./vendor/mediawiki/mediawiki-codesniffer/utils/bootstrap-ci.php"/>
 	<arg name="encoding" value="utf8"/>
 	<arg name="extensions" value="php,php5,inc,sample"/>
-	<rule ref="Generic.ControlStructures.DisallowYodaConditions.Found">
-		<exclude-pattern>private/readme\.php</exclude-pattern>
-	</rule>
 	<rule ref="Generic.Files.LineLength.TooLong">
 		<severity>0</severity>
 	</rule>
