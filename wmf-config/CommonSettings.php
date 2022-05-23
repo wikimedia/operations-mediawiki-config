@@ -285,6 +285,7 @@ $globals = Wikimedia\MWConfig\MWConfigCacheGenerator::getConfigGlobals(
 	$wgCacheDirectory
 );
 
+// phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
 extract( $globals );
 
 # Determine legacy site/lang pair for the current wiki
