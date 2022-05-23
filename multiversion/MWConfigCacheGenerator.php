@@ -16,10 +16,14 @@ class MWConfigCacheGenerator {
 	# When updating list please run ./docroot/noc/createTxtFileSymlinks.sh
 	# Expand computed dblists with ./multiversion/bin/expanddblist
 
-	// Note that most wiki families are available as tags for free without
-	// needing a dblist to be maintained and read from disk, because their
-	// dbname suffix (as mapped in MWMultiVersion::SUFFIXES) already makes them
-	// available as tag for InitialiseSettings.php.
+	/**
+	 * Note that most wiki families are available as tags for free without
+	 * needing a dblist to be maintained and read from disk, because their
+	 * dbname suffix (as mapped in MWMultiVersion::SUFFIXES) already makes them
+	 * available as tag for InitialiseSettings.php.
+	 *
+	 * @var string[]
+	 */
 	public static $dbLists = [
 		'wikipedia',
 		'special',

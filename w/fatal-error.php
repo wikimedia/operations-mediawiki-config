@@ -185,10 +185,14 @@ class CauseFatalError {
 
 // phpcs:ignore Generic.Files.OneObjectStructurePerFile.MultipleFound
 class CauseFatalErrorFromLateDestruct {
-	// Keep self-reference to singleton so that destructor does not run during the
-	// main or postsend stages, but later, as part of the shutdown.
-	// Without this, the destructor would run implicitly at the end of CauseFatalError::go(),
-	// which would behave no different than from=main.
+	/**
+	 * Keep self-reference to singleton so that destructor does not run during the
+	 * main or postsend stages, but later, as part of the shutdown.
+	 * Without this, the destructor would run implicitly at the end of CauseFatalError::go(),
+	 * which would behave no different than from=main.
+	 *
+	 * @var CauseFatalErrorFromLateDestruct|null
+	 */
 	public static $instance;
 
 	private $fn;
