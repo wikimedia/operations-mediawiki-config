@@ -184,6 +184,11 @@ class MWConfigCacheGenerator {
 		}
 	}
 
+	/**
+	 * @param string $name name of the configuration source to handle
+	 * @return array array of configuration sources to use, the current one and the sources
+	 *   it inherits from
+	 */
 	private function getInheritanceTree( $name ) {
 		if ( !array_key_exists( $name, $this->staticConfigs ) ) {
 			throw new \Exception( "Couldn't find config file for '$name'." );
@@ -213,6 +218,10 @@ class MWConfigCacheGenerator {
 		throw new \Exception( "Bad 'inheritsFrom' value for '$name'." );
 	}
 
+	/**
+	 * @param string $name name of the configuration source to handle
+	 * @return array expanded configuration with inherited sources applied
+	 */
 	private function expandConfig( $name ) {
 		$this->loadConfig( $name );
 
