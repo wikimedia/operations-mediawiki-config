@@ -23,9 +23,6 @@
 		<exclude-pattern>multiversion/MWWikiversions\.php</exclude-pattern>
 		<exclude-pattern>wmf-config/CommonSettings\.php</exclude-pattern>
 	</rule>
-	<rule ref="MediaWiki.Usage.ForbiddenFunctions.exec">
-		<exclude-pattern>docroot/noc/conf/activeMWVersions\.php</exclude-pattern>
-	</rule>
 
 	<exclude-pattern>\.git/</exclude-pattern>
 	<exclude-pattern>vendor/</exclude-pattern>
