@@ -15,8 +15,11 @@ namespace Wikimedia\MWConfig;
  * - 'shorttimeout': Set a short request timeout.
  */
 class XWikimediaDebug {
+	/** @var XWikimediaDebug|null */
 	private static $instance;
+	/** @var array */
 	private $options;
+	/** @var bool */
 	private $headerPresent;
 
 	/**

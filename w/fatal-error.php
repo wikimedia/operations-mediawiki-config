@@ -27,9 +27,11 @@ CauseFatalError::go();
  * Implementing as a class helps avoid conflicts in an already well-populated global namespace.
  */
 class CauseFatalError {
+	/** @var string[] */
 	private static $allowedActions = [
 		'noerror', 'exception', 'nomethod', 'oom', 'timeout', 'segfault', 'coredump',
 	];
+	/** @var string[] */
 	private static $allowedFrom = [
 		'main', 'postsend', 'shutdown', 'destruct',
 	];
@@ -199,6 +201,7 @@ class CauseFatalErrorFromLateDestruct {
 	 */
 	public static $instance;
 
+	/** @var callable callback to invoke upon shutdown */
 	private $fn;
 
 	/**

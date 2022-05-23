@@ -16,6 +16,10 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 	 *   to configured setting values
 	 */
 	protected $variantSettings = [];
+
+	/**
+	 * @var string original value of $wmgDatacenter
+	 */
 	private $originalWmfDC;
 
 	public function setUp(): void {

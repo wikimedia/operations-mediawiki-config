@@ -54,6 +54,7 @@ class MWConfigCacheGenerator {
 		'cirrussearch-big-indices',
 	];
 
+	/** @var string[] */
 	private static $labsDbLists = [
 		'closed' => 'closed-labs',
 		'flow' => 'flow-labs',
@@ -282,6 +283,9 @@ class MWConfigCacheGenerator {
 		return self::$instance;
 	}
 
+	/**
+	 * @var array loaded static configuration
+	 */
 	private $staticConfigs = [];
 
 	/**
