@@ -1549,6 +1549,7 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 
 if ( $wgDBname === 'nostalgiawiki' ) {
 	# Link back to current version from the archive funhouse
+	// phpcs:ignore MediaWiki.ControlStructures.AssignmentInControlStructures.AssignmentInControlStructures
 	if ( ( isset( $_REQUEST['title'] ) && ( $title = $_REQUEST['title'] ) )
 		|| ( isset( $_SERVER['PATH_INFO'] ) && ( $title = substr( $_SERVER['PATH_INFO'], 1 ) ) ) ) {
 		if ( preg_match( '/^(.*)\\/Talk$/', $title, $matches ) ) {

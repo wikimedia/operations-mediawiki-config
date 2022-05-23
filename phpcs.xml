@@ -19,10 +19,6 @@
 	<rule ref="Generic.PHP.NoSilencedErrors.Discouraged">
 		<severity>0</severity>
 	</rule>
-	<rule ref="MediaWiki.ControlStructures.AssignmentInControlStructures.AssignmentInControlStructures">
-		<exclude-pattern>multiversion/MWWikiversions\.php</exclude-pattern>
-		<exclude-pattern>wmf-config/CommonSettings\.php</exclude-pattern>
-	</rule>
 
 	<exclude-pattern>\.git/</exclude-pattern>
 	<exclude-pattern>vendor/</exclude-pattern>
