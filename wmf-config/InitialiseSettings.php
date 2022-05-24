@@ -20665,7 +20665,6 @@ return [
 	"smwiki" => true,
 	"snwiki" => true,
 	"srnwiki" => true,
-	"srwiki" => true,
 	"sswiki" => true,
 	"stqwiki" => true,
 	"stwiki" => true,
@@ -20704,7 +20703,6 @@ return [
 	"zh_min_nanwiki" => true,
 	"zh_yuewiki" => true,
 	"zhwiki" => true,
-	"zuwiki" => true,
 ],
 
 'wgContentTranslationEnableMT' => [
@@ -20883,6 +20881,7 @@ return [
 	'ocwiki' => true, // T301443
 	'pawiki' => true, // T304828
 	'sqwiki' => true, // T285842
+	'srwiki' => true, // T304858
 	'swwiki' => true, // T304828
 	'tawiki' => true, // T285842
 	'tewiki' => true, // T298237
@@ -20892,11 +20891,12 @@ return [
 	'tswiki' => true, // T304828
 	'urwiki' => true, // T304828
 	'yowiki' => true, // T290175
+	'zuwiki' => true, // T304834
 ],
 
 'wgSectionTranslationTargetLanguages' => [
 	'default' => null,
-	'wikipedia' => [ 'as', 'az', 'ba', 'bcl', 'bn', 'cs', 'el', 'eu', 'fa', 'gu', 'ha', 'he', 'ig', 'is', 'jv', 'kn', 'ko', 'ku', 'lg', 'mk', 'ml', 'mn', 'mr', 'ms', 'ne', 'oc', 'pa', 'sq', 'sw', 'ta', 'te', 'th', 'tl', 'tr', 'ts', 'ur', 'yo' ],
+	'wikipedia' => [ 'as', 'az', 'ba', 'bcl', 'bn', 'cs', 'el', 'eu', 'fa', 'gu', 'ha', 'he', 'ig', 'is', 'jv', 'kn', 'ko', 'ku', 'lg', 'mk', 'ml', 'mn', 'mr', 'ms', 'ne', 'oc', 'pa', 'sq', 'sr', 'sw', 'ta', 'te', 'th', 'tl', 'tr', 'ts', 'ur', 'yo', 'zu' ],
 	'testwiki' => [ 'af', 'ar', 'as', 'az', 'ba', 'bcl', 'bn', 'ca', 'ckb', 'cs', 'el', 'es', 'eu', 'fa', 'fr', 'gu', 'ha', 'he', 'ht', 'id', 'ig', 'is', 'jv', 'ki', 'kn', 'ko', 'ku', 'lg', 'mk', 'ml', 'mn', 'mr', 'ms', 'ne', 'oc', 'pa', 'pt', 'ru', 'sq', 'sr', 'sw', 'ta', 'te', 'th', 'tl', 'tr', 'ts', 'uk', 'ur', 'vi', 'yo', 'zh', 'zh-yue', 'zu' ],
 ],
 
