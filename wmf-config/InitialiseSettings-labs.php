@@ -2288,7 +2288,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'-wgDiscussionToolsABTest' => [
-			'enwiki' => 'newtopictool', // T291307#7567119
+			'enwiki' => 'topicsubscription', // T304030
 		],
 
 		'-wgDiscussionToolsEnableMobile' => [
@@ -2301,7 +2301,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'-wgDiscussionTools_newtopictool' => [
-			'default' => 'default',
+			'default' => 'available',
 		],
 
 		'-wgDiscussionTools_sourcemodetoolbar' => [
