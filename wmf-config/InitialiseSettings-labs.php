@@ -970,17 +970,24 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 		],
 
+		'wmgUseSimilarEditors' => [
+			'enwiki' => true,
+		],
+
 		'wgSecurePollUseLogging' => [
 			'default' => true,
 		],
+
 		'wgSecurePollSingleTransferableVoteEnabled' => [
 			'default' => true,
 			'eswiki' => false,
 		],
+
 		'wmgUseIPInfo' => [
 			'default' => true,
 			'loginwiki' => false,
 		],
+
 		'wgIPInfoGeoIP2Prefix' => [
 			'default' => '/usr/share/GeoIP/GeoLite2-',
 		],
