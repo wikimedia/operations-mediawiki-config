@@ -461,6 +461,7 @@ if ( $wmgUseGlobalPreferences ) {
 
 if ( $wmgUseSimilarEditors ) {
 	wfLoadExtension( 'SimilarEditors' );
+	$wgGroupPermissions['checkuser']['similareditors'] = true;
 }
 
 # ######################################################################
