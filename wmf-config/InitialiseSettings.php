@@ -25607,7 +25607,7 @@ return [
 	'wikitech' => 'memcached-pecl',
 ],
 'wgMainStash' => [
-	'default' => 'redis_local',  // declared in redis.php
+	'default' => 'db-mainstash',
 	'wikitech' => 'memcached-pecl',
 ],
 
