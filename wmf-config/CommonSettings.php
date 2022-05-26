@@ -167,7 +167,7 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 	$wgReadOnly = "In read-only mode because WMF_MAINTENANCE_OFFLINE is set";
 	$wmgMasterDatacenter = ServiceConfig::getInstance()->getDatacenter();
 	$wmgMasterServices = $wmgAllServices[$wmgMasterDatacenter];
-	$wmgDbconfigFromEtcd = [
+	$wmgDbconfigFromEtcd = $wmgLocalDbConfig = [
 		'readOnlyBySection' => null,
 		'groupLoadsBySection' => [
 			'DEFAULT' => [
@@ -180,6 +180,7 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 		'sectionLoads' => [],
 		'externalLoads' => [],
 	];
+	$wmgRemoteMasterDbConfig = null;
 } else {
 	$etcdConfig = wmfSetupEtcd( $wmgLocalServices['etcd'] );
 
@@ -191,7 +192,12 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 	// Database load balancer config (sectionLoads, groupLoadsBySection, …)
 	// This is later merged into $wgLBFactoryConf by wmfEtcdApplyDBConfig().
 	// See also <https://wikitech.wikimedia.org/wiki/Dbctl>
-	$wmgDbconfigFromEtcd = $etcdConfig->get( "$wmgDatacenter/dbconfig" );
+	$wmgDbconfigFromEtcd = $wmgLocalDbConfig = $etcdConfig->get( "$wmgDatacenter/dbconfig" );
+	if ( $wmgDatacenter !== $wmgMasterDatacenter ) {
+		$wmgRemoteMasterDbConfig = $etcdConfig->get( "$wmgMasterDatacenter/dbconfig" );
+	} else {
+		$wmgRemoteMasterDbConfig = null;
+	}
 
 	unset( $etcdConfig );
 }

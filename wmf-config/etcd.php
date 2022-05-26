@@ -45,6 +45,22 @@ function wmfSetupEtcd( $etcdHost ) {
 	return $etcdConfig;
 }
 
+/**
+ * @param array $array
+ * @return mixed
+ */
+function wmfArrayKeyFirst( array $array ) {
+	if ( function_exists( 'array_key_first' ) ) {
+		return array_key_first( $array );
+	} else {
+		// PHP 7.2
+		foreach ( $array as $key => $unused ) {
+			return $key;
+		}
+		return null;
+	}
+}
+
 /** In production, read the database loadbalancer config from etcd.
  * See https://wikitech.wikimedia.org/wiki/Dbctl
  *
@@ -52,18 +68,27 @@ function wmfSetupEtcd( $etcdHost ) {
  * It overwrites a few sections of $wgLBFactoryConf with data from etcd.
  */
 function wmfEtcdApplyDBConfig() {
-	global $wgLBFactoryConf, $wmgDbconfigFromEtcd, $wmgRealm;
+	global $wgLBFactoryConf, $wmgLocalDbConfig, $wmgRemoteMasterDbConfig, $wmgRealm;
 	// In labs, the relevant key exists in etcd, but does not contain real data.
 	// Only do this in production.
 	if ( $wmgRealm === 'production' ) {
-		$wgLBFactoryConf['readOnlyBySection'] = $wmgDbconfigFromEtcd['readOnlyBySection'];
-		$wgLBFactoryConf['groupLoadsBySection'] = $wmgDbconfigFromEtcd['groupLoadsBySection'];
-		$wgLBFactoryConf['hostsByName'] = $wmgDbconfigFromEtcd['hostsByName'];
-		foreach ( $wmgDbconfigFromEtcd['sectionLoads'] as $section => $dbctlLoads ) {
+		$wgLBFactoryConf['readOnlyBySection'] = $wmgLocalDbConfig['readOnlyBySection'];
+		$wgLBFactoryConf['groupLoadsBySection'] = $wmgLocalDbConfig['groupLoadsBySection'];
+		$wgLBFactoryConf['hostsByName'] = $wmgLocalDbConfig['hostsByName'];
+		foreach ( $wmgLocalDbConfig['sectionLoads'] as $section => $dbctlLoads ) {
 			// For each section, MediaWiki treats the first host as the master.
 			// Since JSON dictionaries are unordered, dbctl stores an array of two host:load
 			// dictionaries, one containing the master and one containing all the replicas.
-			$loadByHost = array_merge( $dbctlLoads[0], $dbctlLoads[1] );
+			// We also need to merge in the cross-DC master entries if that is relevant.
+			$crossDCLoads = $wmgRemoteMasterDbConfig['sectionLoads'][$section][0] ?? null;
+			if ( $crossDCLoads ) {
+				$remoteMaster = wmfArrayKeyFirst( $crossDCLoads );
+				$loadByHost = array_merge( [ $remoteMaster => 0 ], ...$dbctlLoads );
+				$wgLBFactoryConf['hostsByName'][$remoteMaster] =
+					$wmgRemoteMasterDbConfig['hostsByName'][$remoteMaster];
+			} else {
+				$loadByHost = array_merge( ...$dbctlLoads );
+			}
 			$wgLBFactoryConf['sectionLoads'][$section] = $loadByHost;
 		}
 		// Since MediaWiki components that use ExternalStore includes cluster names in the rows
@@ -81,11 +106,29 @@ function wmfEtcdApplyDBConfig() {
 			'x1' => [ 'extension1' ],
 			'x2' => [ 'extension2' ],
 		];
-		foreach ( $wmgDbconfigFromEtcd['externalLoads'] as $dbctlCluster => $dbctlLoads ) {
-			// For each external cluster, MediaWiki treats the first host as the master.
-			// Since JSON dictionaries are unordered, dbctl stores an array of two host:load
-			// dictionaries, one containing the master and one containing all the replicas.
-			$loadByHost = array_merge( $dbctlLoads[0], $dbctlLoads[1] );
+		// x2 uses circular replication so there is no need for cross-DC connections
+		$circularReplicationClusters = [
+			'x2' => true,
+		];
+		foreach ( $wmgLocalDbConfig['externalLoads'] as $dbctlCluster => $dbctlLoads ) {
+			// Merge the same way as sectionLoads
+			if ( !empty( $circularReplicationClusters[$dbctlCluster] ) ) {
+				$localMaster = wmfArrayKeyFirst( $dbctlLoads[0] );
+				// Override the 'ssl' flag set in masterTemplateOverrides via db-production.php
+				$wgLBFactoryConf['templateOverridesByServer'][$localMaster]['ssl'] = false;
+				$loadByHost = array_merge( ...$dbctlLoads );
+			} else {
+				$crossDCLoads = $wmgRemoteMasterDbConfig['externalLoads'][$dbctlCluster][0] ?? null;
+				if ( $crossDCLoads ) {
+					$remoteMaster = wmfArrayKeyFirst( $crossDCLoads );
+					$loadByHost = array_merge( [ $remoteMaster => 0 ], ...$dbctlLoads );
+					$wgLBFactoryConf['hostsByName'][$remoteMaster] =
+						$wmgRemoteMasterDbConfig['hostsByName'][$remoteMaster];
+				} else {
+					$loadByHost = array_merge( ...$dbctlLoads );
+				}
+			}
+
 			foreach ( $externalStoreAliasesByCluster[$dbctlCluster] as $mwLoadName ) {
 				$wgLBFactoryConf['externalLoads'][$mwLoadName] = $loadByHost;
 			}
