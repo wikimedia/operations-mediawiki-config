@@ -26267,12 +26267,96 @@ return [
 
 // T233004
 'wgCheckUserActorMigrationStage' => [
-	'default' => SCHEMA_COMPAT_OLD,
-	'guwwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'shnwikivoyage' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'testwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'test2wiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'testwikidatawiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+
+	// s1
+	'enwiki' => SCHEMA_COMPAT_OLD,
+
+	// s2
+	'bgwiki' => SCHEMA_COMPAT_OLD,
+	'bgwiktionary' => SCHEMA_COMPAT_OLD,
+	'cswiki' => SCHEMA_COMPAT_OLD,
+	'enwikiquote' => SCHEMA_COMPAT_OLD,
+	'enwiktionary' => SCHEMA_COMPAT_OLD,
+	'eowiki' => SCHEMA_COMPAT_OLD,
+	'fiwiki' => SCHEMA_COMPAT_OLD,
+	'idwiki' => SCHEMA_COMPAT_OLD,
+	'itwiki' => SCHEMA_COMPAT_OLD,
+	'nlwiki' => SCHEMA_COMPAT_OLD,
+	'nowiki' => SCHEMA_COMPAT_OLD,
+	'plwiki' => SCHEMA_COMPAT_OLD,
+	'ptwiki' => SCHEMA_COMPAT_OLD,
+	'svwiki' => SCHEMA_COMPAT_OLD,
+	'thwiki' => SCHEMA_COMPAT_OLD,
+	'trwiki' => SCHEMA_COMPAT_OLD,
+	'zhwiki' => SCHEMA_COMPAT_OLD,
+
+	// s4
+	'commonswiki' => SCHEMA_COMPAT_OLD,
+	'testcommonswiki' => SCHEMA_COMPAT_OLD,
+
+	// s5
+	'altwiki' => SCHEMA_COMPAT_OLD,
+	'amiwiki' => SCHEMA_COMPAT_OLD,
+	'apiportalwiki' => SCHEMA_COMPAT_OLD,
+	'arbcom_ruwiki' => SCHEMA_COMPAT_OLD,
+	'avkwiki' => SCHEMA_COMPAT_OLD,
+	'banwikisource' => SCHEMA_COMPAT_OLD,
+	'bclwiktionary' => SCHEMA_COMPAT_OLD,
+	'cebwiki' => SCHEMA_COMPAT_OLD,
+	'dagwiki' => SCHEMA_COMPAT_OLD,
+	'dewiki' => SCHEMA_COMPAT_OLD,
+	'diqwiktionary' => SCHEMA_COMPAT_OLD,
+	'enwikivoyage' => SCHEMA_COMPAT_OLD,
+	'eowikivoyage' => SCHEMA_COMPAT_OLD,
+	'jawikivoyage' => SCHEMA_COMPAT_OLD,
+	'jvwikisource' => SCHEMA_COMPAT_OLD,
+	'lldwiki' => SCHEMA_COMPAT_OLD,
+	'lmowiktionary' => SCHEMA_COMPAT_OLD,
+	'madwiki' => SCHEMA_COMPAT_OLD,
+	'mgwiktionary' => SCHEMA_COMPAT_OLD,
+	'mhwiktionary' => SCHEMA_COMPAT_OLD,
+	'mniwiki' => SCHEMA_COMPAT_OLD,
+	'mniwiktionary' => SCHEMA_COMPAT_OLD,
+	'mnwwiktionary' => SCHEMA_COMPAT_OLD,
+	'muswiki' => SCHEMA_COMPAT_OLD,
+	'niawiki' => SCHEMA_COMPAT_OLD,
+	'niawiktionary' => SCHEMA_COMPAT_OLD,
+	'pwnwiki' => SCHEMA_COMPAT_OLD,
+	'shiwiki' => SCHEMA_COMPAT_OLD,
+	'shwiki' => SCHEMA_COMPAT_OLD,
+	'skrwiki' => SCHEMA_COMPAT_OLD,
+	'skrwiktionary' => SCHEMA_COMPAT_OLD,
+	'smnwiki' => SCHEMA_COMPAT_OLD,
+	'srwiki' => SCHEMA_COMPAT_OLD,
+	'taywiki' => SCHEMA_COMPAT_OLD,
+	'thankyouwiki' => SCHEMA_COMPAT_OLD,
+	'trvwiki' => SCHEMA_COMPAT_OLD,
+	'trwikivoyage' => SCHEMA_COMPAT_OLD,
+	'wawikisource' => SCHEMA_COMPAT_OLD,
+
+	// s6
+	'frwiki' => SCHEMA_COMPAT_OLD,
+	'jawiki' => SCHEMA_COMPAT_OLD,
+	'labswiki' => SCHEMA_COMPAT_OLD,
+	'ruwiki' => SCHEMA_COMPAT_OLD,
+
+	// s7
+	'arwiki' => SCHEMA_COMPAT_OLD,
+	'cawiki' => SCHEMA_COMPAT_OLD,
+	'eswiki' => SCHEMA_COMPAT_OLD,
+	'fawiki' => SCHEMA_COMPAT_OLD,
+	'frwiktionary' => SCHEMA_COMPAT_OLD,
+	'hewiki' => SCHEMA_COMPAT_OLD,
+	'huwiki' => SCHEMA_COMPAT_OLD,
+	'kowiki' => SCHEMA_COMPAT_OLD,
+	'metawiki' => SCHEMA_COMPAT_OLD,
+	'rowiki' => SCHEMA_COMPAT_OLD,
+	'ukwiki' => SCHEMA_COMPAT_OLD,
+	'viwiki' => SCHEMA_COMPAT_OLD,
+
+	// s8
+	'wikidatawiki' => SCHEMA_COMPAT_OLD,
 ],
 
 // T166759
