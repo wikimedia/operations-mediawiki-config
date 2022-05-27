@@ -23,7 +23,7 @@ $dbctlJsonByDC = [
 	'codfw' => 'codfw.json',
 	'eqiad' => 'eqiad.json',
 ];
-$wmgDatacenter = 'eqiad';
+$dbSelectedDC = 'eqiad';
 
 if ( !is_dir( $dbConfigEtcdPrefix ) ) {
 	// Local testing and debugging fallback
@@ -32,14 +32,14 @@ if ( !is_dir( $dbConfigEtcdPrefix ) ) {
 		'tmsx' => 'tmsx.json',
 		'tmsy' => 'tmsy.json',
 	];
-	$wmgDatacenter = 'tmsx';
+	$dbSelectedDC = 'tmsx';
 }
 
 if ( isset( $_GET['dc'] ) && isset( $dbctlJsonByDC[$_GET['dc']] ) ) {
-	$wmgDatacenter = $_GET['dc'];
+	$dbSelectedDC = $_GET['dc'];
 }
 
-$dbConfigEtcdJsonFilename = $dbctlJsonByDC[$wmgDatacenter];
+$dbConfigEtcdJsonFilename = $dbctlJsonByDC[$dbSelectedDC];
 
 // Mock vars needed by db-*.php (normally set by CommonSettings.php)
 $wgDBname = null;
@@ -85,54 +85,88 @@ if ( $format === 'json' ) {
 	exit;
 }
 
+$pageTitle = "Database configuration: $dbSelectedDC"
+
 ?><!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Wikimedia database configuration</title>
+	<title><?php echo htmlspecialchars( "$pageTitle – Wikimedia NOC" ); ?></title>
 	<link rel="stylesheet" href="css/base.css">
 	<style>
-	h2 { font-weight: normal; }
-	code { color: #000; background: #f8f9fa; border: 1px solid #c8ccd1; border-radius: 2px; padding: 1px 4px; }
-	main { display: flex; flex-wrap: wrap; }
-	nav li { float: left; list-style: none; border: 1px solid #eaecf0; padding: 1px 4px; margin: 0 1em 1em 0; }
-	section { flex: 1; min-width: 300px; border: 1px solid #eaecf0; padding: 0 1em; margin: 0 1em 1em 0; }
-	main, footer { clear: both; }
+	code {
+		color: #000;
+		background: #f8f9fa;
+		border: 1px solid #c8ccd1;
+		border-radius: 2px;
+		padding: 1px 4px;
+	}
+	.nocdb-sections {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	section {
+		flex: 1;
+		min-width: 250px;
+		border: 1px solid #eaecf0;
+		padding: 0 1rem 1rem 1rem;
+		margin: 0 1rem 1rem 0;
+	}
 	section:target { border-color: orange; }
 	section:target h2 { background: #fef6e7; }
 	</style>
 </head>
 <body>
+	<header><div class="wm-container">
+	<a role="banner" href="/" title="Visit the home page"><em>Wikimedia</em> NOC</a>
+	</div></header>
+	<main role="main">
+	<nav class="wm-site-nav"><ul class="wm-nav">
 <?php
 
 $sectionNames = $dbConf->getNames();
 natsort( $sectionNames ); // natsort for s1 < s2 < s10 rather than s1 < s10 < s2
 
 // Generate navigation links
-print '<nav><ul>';
 foreach ( $sectionNames as $name ) {
 	$id = urlencode( 'tabs-' . $name );
 	print '<li><a href="#' . htmlspecialchars( $id ) . '">Section ' . htmlspecialchars( $name ) . '</a></li>';
 }
-print '</ul></nav><main>';
 
+?>
+	</ul></nav>
+		<!--
+			NOTE: We don't use <div class="wm-container"> here,
+			as we want this portal to be full-width
+		-->
+	<article>
+<?php
+
+print '<h1>' . htmlspecialchars( $pageTitle ) . '</h1>';
+print '<div class="nocdb-sections">';
 // Generate content sections
 foreach ( $sectionNames as $name ) {
 	$id = urlencode( 'tabs-' . $name );
 	print "<section id=\"" . htmlspecialchars( $id ) . "\"><h2>Section <strong>" . htmlspecialchars( $name ) . '</strong></h2>';
 	print $dbConf->htmlFor( $name ) . '</section>';
 }
-print '</main>';
-print '<footer>Automatically generated based on <a href="./conf/highlight.php?file=db-production.php">';
+print '</div>';
+?>
+	</article>
+	</main>
+	<footer role="contentinfo"><div class="wm-container">
+<?php
+print '<p>Automatically generated based on <a href="./conf/highlight.php?file=db-production.php">';
 print 'wmf-config/db-production.php</a> ';
 print 'and on <a href="/dbconfig/' . htmlspecialchars( $dbConfigEtcdJsonFilename ) . '">';
 print htmlspecialchars( $dbConfigEtcdJsonFilename ) . '</a>.<br/>';
 foreach ( $dbctlJsonByDC as $dc => $file ) {
 	if ( $file !== $dbConfigEtcdJsonFilename ) {
-		print 'View <a href="' . htmlspecialchars( "?dc=$dc" ) . '">' . htmlspecialchars( ucfirst( $dc ) ) . '</a>. ';
+		print 'View <a href="' . htmlspecialchars( "?dc=$dc" ) . '">' . htmlspecialchars( ucfirst( $dc ) ) . '</a> instead. ';
 	}
 }
-print '</footer>';
+print '</p>';
 ?>
+	</div></footer>
 </body>
 </html>

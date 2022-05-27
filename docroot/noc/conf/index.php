@@ -37,12 +37,16 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Wikimedia configuration files</title>
+	<title>Configuration files – Wikimedia NOC</title>
 	<link rel="shortcut icon" href="/static/favicon/wmf.ico">
 	<link rel="stylesheet" href="../css/base.css">
 </head>
 <body>
-
+<header><div class="wm-container">
+	<a role="banner" href="/" title="Visit the home page"><em>Wikimedia</em> NOC</a>
+</div></header>
+<main role="main"><div class="wm-container">
+<article>
 <p>Below is a selection of Wikimedia configuration files available for easy viewing.
 	The files are dynamically generated and are perfectly up-to-date.
 	Each of these files is also available in public version control in one of the following repositories:
@@ -67,7 +71,7 @@
 ?></p>
 <hr>
 
-<h2><img src="./images/source_php.png" alt=""> MediaWiki configuration</h2>
+<h2>MediaWiki configuration</h2>
 <ul>
 <?php
 	$viewFilenames = array_merge(
@@ -79,7 +83,7 @@
 ?>
 </ul>
 
-<h3><img src="./images/document.png" alt=""> Database lists</h3>
+<h3>Database lists</h3>
 <ul>
 <?php
 	outputFiles( glob( __DIR__ . '/dblists/*.dblist' ), true, static function ( $name ) {
@@ -88,6 +92,6 @@
 ?>
 </ul>
 
-<hr>
+</article></div></main>
 </body>
 </html>
