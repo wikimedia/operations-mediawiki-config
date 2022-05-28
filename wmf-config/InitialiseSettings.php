@@ -20898,7 +20898,7 @@ return [
 'wgSectionTranslationTargetLanguages' => [
 	'default' => null,
 	'wikipedia' => [ 'as', 'az', 'ba', 'bcl', 'bn', 'cs', 'el', 'eu', 'fa', 'gu', 'ha', 'he', 'ig', 'is', 'jv', 'kn', 'ko', 'ku', 'lg', 'mk', 'ml', 'mn', 'mr', 'ms', 'ne', 'oc', 'pa', 'sq', 'sr', 'sw', 'ta', 'te', 'th', 'tl', 'tr', 'ts', 'ur', 'yo', 'zu' ],
-	'testwiki' => [ 'af', 'ar', 'as', 'az', 'ba', 'bcl', 'bn', 'ca', 'ckb', 'cs', 'el', 'es', 'eu', 'fa', 'fr', 'gu', 'ha', 'he', 'hi', 'ht', 'id', 'ig', 'is', 'jv', 'ki', 'kn', 'ko', 'ku', 'lg', 'mk', 'ml', 'mn', 'mr', 'ms', 'ne', 'oc', 'pa', 'pt', 'ru', 'sq', 'sr', 'sw', 'ta', 'te', 'th', 'tl', 'tr', 'ts', 'uk', 'ur', 'vi', 'yo', 'zh', 'zh-yue', 'zu' ],
+	'testwiki' => [ 'af', 'ar', 'as', 'az', 'ba', 'bcl', 'bn', 'ca', 'ckb', 'cs', 'cy', 'el', 'eo', 'es', 'et', 'eu', 'fa', 'fr', 'gl', 'gu', 'ha', 'he', 'hi', 'ht', 'hy', 'id', 'ig', 'is', 'jv', 'ki', 'kn', 'ko', 'ku', 'lg', 'lt', 'mk', 'ml', 'mn', 'mr', 'ms', 'mt', 'my', 'ne', 'oc', 'pa', 'pt', 'ru', 'sl', 'sq', 'sr', 'su', 'sw', 'ta', 'te', 'th', 'tl', 'tr', 'ts', 'uk', 'ur', 'vi', 'yo', 'zh', 'zh-yue', 'zu' ],
 ],
 
 'wgContentTranslationContentImportForSectionTranslation' => [
