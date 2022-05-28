@@ -763,6 +763,11 @@ return [
 		'width' => 110,
 		'height' => 30,
 	],
+	'crhwiki' => [ // T309431
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-crh.svg',
+		'width' => 119,
+		'height' => 18,
+	],
 	'cswiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-cs.svg',
 		'width' => 119,
