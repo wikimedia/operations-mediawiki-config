@@ -983,6 +983,11 @@ return [
 		'width' => 126,
 		'height' => 20,
 	],
+	'ugwiki' => [ // T309431
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ug.svg',
+		'width' => 112,
+		'height' => 21,
+	],
 	'ukwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-uk.svg',
 		'width' => 112,
