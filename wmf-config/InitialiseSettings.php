@@ -21767,6 +21767,10 @@ return [
 			'schema_title' => 'analytics/mobile_apps/android_edit_history_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		'android.breadcrumbs_event' => [
+			'schema_title' => 'analytics/mobile_apps/android_breadcrumbs_event',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		'mediawiki.mediasearch_interaction' => [
 			'schema_title' => 'analytics/mediawiki/mediasearch_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
