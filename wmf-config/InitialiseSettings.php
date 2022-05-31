@@ -25338,6 +25338,14 @@ return [
 	'lockeddown' => false,
 ],
 
+'wgMultiShardSiteStats' => [
+	'default' => false,
+	'enwiki' => true,
+	'commonswiki' => true,
+	'wikidatawiki' => true,
+	'testwiki' => true,
+],
+
 'wgTimelineEpochTimestamp' => [
 	'default' => '20130601000000',
 	'mlwiki' => '20161201000000',
