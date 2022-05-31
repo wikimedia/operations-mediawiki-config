@@ -20324,6 +20324,27 @@ return [
 
 'wgDiscussionToolsABTest' => [
 	'default' => false,
+	// T304029
+	'amwiki' => 'topicsubscription',
+	'bnwiki' => 'topicsubscription',
+	'zhwiki' => 'topicsubscription',
+	'nlwiki' => 'topicsubscription',
+	'arzwiki' => 'topicsubscription',
+	'frwiki' => 'topicsubscription',
+	'hewiki' => 'topicsubscription',
+	'hiwiki' => 'topicsubscription',
+	'idwiki' => 'topicsubscription',
+	'itwiki' => 'topicsubscription',
+	'jawiki' => 'topicsubscription',
+	'kowiki' => 'topicsubscription',
+	'omwiki' => 'topicsubscription',
+	'fawiki' => 'topicsubscription',
+	'plwiki' => 'topicsubscription',
+	'ptwiki' => 'topicsubscription',
+	'eswiki' => 'topicsubscription',
+	'thwiki' => 'topicsubscription',
+	'ukwiki' => 'topicsubscription',
+	'viwiki' => 'topicsubscription',
 ],
 
 'wgDiscussionToolsEnableMobile' => [
