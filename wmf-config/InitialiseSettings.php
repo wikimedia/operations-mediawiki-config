@@ -20368,30 +20368,21 @@ return [
 'wgDiscussionTools_newtopictool' => [
 	// Keep in sync with wgDiscussionTools_sourcemodetoolbar below
 	'default' => 'default', // T275827
-	'arwiki' => 'available', // T285724
-	'cswiki' => 'available', // T285724
 	'mediawikiwiki' => 'available', // T302256
-	// T307410
-	'amwiki' => 'available',
-	'bnwiki' => 'available',
-	'zhwiki' => 'available',
-	'nlwiki' => 'available',
-	'arzwiki' => 'available',
-	'frwiki' => 'available',
-	'hewiki' => 'available',
-	'hiwiki' => 'available',
-	'idwiki' => 'available',
-	'itwiki' => 'available',
-	'jawiki' => 'available',
-	'kowiki' => 'available',
-	'omwiki' => 'available',
-	'fawiki' => 'available',
-	'plwiki' => 'available',
-	'ptwiki' => 'available',
-	'eswiki' => 'available',
-	'thwiki' => 'available',
-	'ukwiki' => 'available',
-	'viwiki' => 'available',
+	// T309368
+	'wikipedia' => 'available',
+	'dewiki' => 'default',
+	'enwiki' => 'default',
+	'fiwiki' => 'default',
+	'ruwiki' => 'default',
+	'wikibooks' => 'available',
+	'wikinews' => 'available',
+	'wikiquote' => 'available',
+	'wikisource' => 'available',
+	'wikiversity' => 'available',
+	'wikivoyage' => 'available',
+	'wiktionary' => 'available',
+	'specieswiki' => 'available',
 ],
 
 'wgDiscussionTools_sourcemodetoolbar' => [
