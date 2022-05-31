@@ -459,7 +459,9 @@ if ( $wmgUseGlobalPreferences ) {
 	];
 }
 
-if ( $wmgUseSimilarEditors ) {
+// QuickSurveys is a hard dependency for SimilarEditors, do not call
+// wfLoadExtension if QuickSurveys is not enabled to avoid fatal errors.
+if ( $wmgUseSimilarEditors && $wmgUseQuickSurveys ) {
 	wfLoadExtension( 'SimilarEditors' );
 	$wgGroupPermissions['checkuser']['similareditors'] = true;
 }
