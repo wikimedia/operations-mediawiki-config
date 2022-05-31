@@ -2414,5 +2414,10 @@ function wmfGetOverrideSettings() {
 			'enwiki' => true,
 		],
 
+		'-wgMultiShardSiteStats' => [
+			'default' => false,
+			'enwiki' => true,
+		],
+
 	];
 } # wmfGetOverrideSettings()
