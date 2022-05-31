@@ -23621,6 +23621,32 @@ return [
 	]
 ],
 
+'wmgWBCSLanguageSelectorStatementBoost' => [
+	'default' => [],
+	'wikidatawiki' => [
+		// Q34770=language
+		'P31=Q34770' => 10,
+		// Q1288568=modern language
+		'P31=Q1288568' => 10,
+		// Q45762=dead language
+		'P31=Q45762' => 10,
+		// Q33384=dialect
+		'P31=Q33384' => 10,
+		// Q4167410=Wikimedia disambiguation page
+		'P31=Q4167410' => -10,
+		// T183510:
+		// Q13442814=scientific article
+		'P31=Q13442814' => -5,
+		// Q18918145=academic journal article
+		'P31=Q18918145' => -5,
+	],
+	'testwikidatawiki' => [
+		// not necessarily meaningful, for testing only
+		// Q15561=Wikimedia disambiguation page
+		'P7=Q15561' => -10,
+	],
+],
+
 // Structured media file data (the WikibaseMediaInfo extension)
 'wmgUseWikibaseMediaInfo' => [
 	'default' => false,
