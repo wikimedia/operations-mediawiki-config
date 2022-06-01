@@ -20391,27 +20391,6 @@ return [
 'wgDiscussionTools_autotopicsub' => [
 	'default' => 'default',
 	'mediawikiwiki' => 'available', // T302256
-	// T290500
-	'amwiki' => 'unavailable',
-	'arzwiki' => 'unavailable',
-	'bnwiki' => 'unavailable',
-	'eswiki' => 'unavailable',
-	'fawiki' => 'unavailable',
-	'frwiki' => 'unavailable',
-	'hewiki' => 'unavailable',
-	'hiwiki' => 'unavailable',
-	'idwiki' => 'unavailable',
-	'itwiki' => 'unavailable',
-	'jawiki' => 'unavailable',
-	'kowiki' => 'unavailable',
-	'nlwiki' => 'unavailable',
-	'omwiki' => 'unavailable',
-	'plwiki' => 'unavailable',
-	'ptwiki' => 'unavailable',
-	'thwiki' => 'unavailable',
-	'ukwiki' => 'unavailable',
-	'viwiki' => 'unavailable',
-	'zhwiki' => 'unavailable',
 ],
 
 'wgDTSchemaEditAttemptStepSamplingRate' => [
