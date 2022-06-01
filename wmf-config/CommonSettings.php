@@ -1053,6 +1053,19 @@ if ( isset( $wmgSiteLogo1x ) ) {
 	];
 }
 
+switch ( $wmgSiteLogoVariantFallback ) {
+	case 'zh-hans':
+		$wmgSiteLogoVariants['zh-cn'] = $wmgSiteLogoVariants['zh-hans'];
+		$wmgSiteLogoVariants['zh-my'] = $wmgSiteLogoVariants['zh-hans'];
+		$wmgSiteLogoVariants['zh-sg'] = $wmgSiteLogoVariants['zh-hans'];
+		break;
+	case 'zh-hant':
+		$wmgSiteLogoVariants['zh-hk'] = $wmgSiteLogoVariants['zh-hant'];
+		$wmgSiteLogoVariants['zh-tw'] = $wmgSiteLogoVariants['zh-hant'];
+		$wmgSiteLogoVariants['zh-mo'] = $wmgSiteLogoVariants['zh-hant'];
+		break;
+}
+
 // Max width modifications
 $wgVectorMaxWidthOptions['exclude']['namespaces'] = $wmgVectorMaxWidthOptionsNamespaces;
 
