@@ -32,7 +32,7 @@ require_once __DIR__ . '/../src/ServiceConfig.php';
 
 $wmgServiceConfig = Wikimedia\MWConfig\ServiceConfig::getInstance();
 
-wmfSetupProfiler( [
+Wikimedia\MWConfig\Profiler::setup( [
 	'redis-host' => $wmgServiceConfig->getLocalService( 'xenon' ),
 	'redis-port' => 6379,
 	// Connection timeout, in seconds.
