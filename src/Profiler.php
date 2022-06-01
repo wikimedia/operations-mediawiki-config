@@ -7,7 +7,7 @@
 # Exposes:
 # - $wmgProfiler (used by CommonSettings.php)
 
-namespace Wikimedia\MWConfig {
+namespace Wikimedia\MWConfig;
 
 use ExcimerProfiler;
 use PDO;
@@ -336,16 +336,5 @@ class Profiler {
 				}
 			}
 		}
-	}
-}
-}
-
-// Temporary for compat
-namespace {
-	/**
-	 * @param array $options
-	 */
-	function wmfSetupProfiler( $options ) {
-		\Wikimedia\MWConfig\Profiler::setup( $options );
 	}
 }
