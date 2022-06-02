@@ -2874,6 +2874,8 @@ if ( $wmgUseMath ) {
 	// This variable points to non-WMF servers by default.
 	// Prevent accidental use.
 	$wgMathLaTeXMLUrl = null;
+	// Create LateXML database table before enabling LaTeXML T309686
+	$wgMathValidModes = [ 'png', 'source', 'mathml' ];
 	$wgMathMathMLUrl = $wmgLocalServices['mathoid'];
 	// Increase the number of concurrent connections made to RESTBase
 	$wgMathConcurrentReqs = 150;
