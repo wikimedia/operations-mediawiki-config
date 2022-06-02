@@ -10220,7 +10220,7 @@ return [
 			'autopatrol' => true,
 			'rollback' => true,
 			'suppressredirect' => true,
-			'markbotedit' => true,
+			'markbotedits' => true, // T309750
 		], // T114930 and T207300
 		'flood' => [ 'bot' => true, ], // T114930
 	],
