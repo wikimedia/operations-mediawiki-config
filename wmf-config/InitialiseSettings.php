@@ -25949,13 +25949,6 @@ return [
 
 'wgKartographerEnableMapFrame' => [
 	'default' => true,
-	// Disable for FlaggedRevs wikis with $wgFlaggedRevsOverride=true (T191585)
-	// Elaboration on this issue is at T229726#5419327
-	'dewiki' => false,
-	'huwiki' => false,
-	'plwiki' => false,
-	'sqwiki' => false,
-	'zh_classicalwiki' => false,
 ],
 
 'wgKartographerUsePageLanguage' => [
