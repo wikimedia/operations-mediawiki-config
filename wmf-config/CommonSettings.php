@@ -1413,7 +1413,6 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 		'master',
 		'REL1_38',
 		'REL1_37',
-		'REL1_36',
 		'REL1_35',
 	];
 
