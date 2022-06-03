@@ -7881,8 +7881,8 @@ return [
 		"exclude" => [
 			"mainpage" => false,
 			"querystring" => [
-				"action" => "history",
-				"diff" => "*",
+				"action" => "(history|edit)",
+				"diff" => ".+",
 			],
 			/* namespaces key is defined in wmgVectorMaxWidthOptionsNamespaces */
 		],
