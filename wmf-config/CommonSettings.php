@@ -1298,8 +1298,6 @@ if ( $wmgUseTimedMediaHandler ) {
 	if ( $wgDBname === 'commonswiki' ) {
 		$wgTimedTextNS = 102;
 	}
-	// overwrite enabling of local TimedText namespace
-	$wgEnableLocalTimedText = $wmgEnableLocalTimedText;
 
 	// enable transcoding on all wikis that allow uploads
 	$wgEnableTranscode = $wgEnableUploads;
