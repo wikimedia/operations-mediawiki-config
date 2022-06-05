@@ -209,7 +209,7 @@ return [
 	'thankyouwiki' => 'en',
 	'transitionteamwiki' => 'en',
 	'usabilitywiki' => 'en',
-	'votewiki' => 'zh', // T308397
+	'votewiki' => 'en',
 	'wg_enwiki' => 'en',
 	'wikimania' => 'en',
 	'wikimaniateamwiki' => 'en',
