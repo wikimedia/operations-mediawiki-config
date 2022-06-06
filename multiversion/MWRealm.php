@@ -13,6 +13,9 @@ $wmgDatacenter = $serviceConfig->getDatacenter();
 
 unset( $serviceConfig );
 
+// TODO rename global function to match wmf*() convention
+// phpcs:disable MediaWiki.NamingConventions.PrefixedGlobalFunctions.allowedPrefix
+
 /**
  * Get the filename for the current realm/datacenter, falling back
  * to the $filename if not found.

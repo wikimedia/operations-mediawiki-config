@@ -4,6 +4,9 @@ if ( PHP_SAPI !== 'cli' && PHP_SAPI !== 'phpdbg' ) {
 	exit( 1 );
 }
 
+// TODO rename global functions to match wmf*() convention
+// phpcs:disable MediaWiki.NamingConventions.PrefixedGlobalFunctions.allowedPrefix
+
 function usage() {
 	global $argv;
 	fwrite( STDERR, <<<EOT

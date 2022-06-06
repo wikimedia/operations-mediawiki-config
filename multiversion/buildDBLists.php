@@ -66,6 +66,9 @@ foreach ( glob( __DIR__ . '/../dblists/*.dbexpr' ) as $filepath ) {
 	);
 }
 
+// TODO rename global function to match wmf*() convention
+// phpcs:disable MediaWiki.NamingConventions.PrefixedGlobalFunctions.allowedPrefix
+
 /**
  * @param string $listname The name of the db list to write.
  * @param string[] $listcontent The wikidbs for the dblist contents.

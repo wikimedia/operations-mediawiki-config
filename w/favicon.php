@@ -5,6 +5,9 @@ require MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
 
 use MediaWiki\MediaWikiServices;
 
+// TODO rename global functions to match wmf*() convention
+// phpcs:disable MediaWiki.NamingConventions.PrefixedGlobalFunctions.allowedPrefix
+
 /**
  * @param string $text
  */

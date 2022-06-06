@@ -20,6 +20,9 @@
 
 // define( 'MISSING_PHP_TEST', 1 );
 
+// TODO rename global functions to match wmf*() convention
+// phpcs:disable MediaWiki.NamingConventions.PrefixedGlobalFunctions.allowedPrefix
+
 /**
  * The main function
  */

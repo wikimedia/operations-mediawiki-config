@@ -7,6 +7,9 @@
  * Then view <http://localhost:9412/conf/>.
  */
 
+// TODO rename global functions to match wmf*() convention
+// phpcs:disable MediaWiki.NamingConventions.PrefixedGlobalFunctions.allowedPrefix
+
 	/**
 	 * @param array $viewFilenames
 	 * @param bool $highlight
