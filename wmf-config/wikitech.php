@@ -93,7 +93,14 @@ if ( file_exists( '/etc/mediawiki/WikitechPrivateSettings.php' ) ) {
 # since we aren't using the shared jobqueue, we don't support delays
 $wgCdnReboundPurgeDelay = 0;
 
-// Make arbitrary Conduit requests to the Wikimedia Phabricator
+/**
+ * Make arbitrary Conduit requests to the Wikimedia Phabricator
+ *
+ * @param string $apiToken
+ * @param string $path
+ * @param array $query
+ * @return mixed|false Result of the Conduit request or false on error
+ */
 function wmfPhabClient( string $apiToken, string $path, $query ) {
 	$query['__conduit__'] = [ 'token' => $apiToken ];
 	$post = [
@@ -186,8 +193,16 @@ $wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmg
 	}
 };
 
-// Changes the Gerrit active status of the specified user using
-// the specified HTTP method (PUT to enable and DELETE to disable)
+/**
+ * Changes the Gerrit active status of the specified user using
+ * the specified HTTP method (PUT to enable and DELETE to disable)
+ *
+ * @param string $gerritUsername
+ * @param string $gerritPassword
+ * @param string $username
+ * @param string $httpMethod
+ * @return int|null null on failure, or HTTP response code on success
+ */
 function wmfGerritSetActive(
 	string $gerritUsername,
 	string $gerritPassword,
