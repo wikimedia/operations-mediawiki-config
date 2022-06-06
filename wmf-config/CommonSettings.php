@@ -4007,7 +4007,6 @@ if ( $wmgUseIPInfo ) {
 	$wgGroupPermissions['autoconfirmed']['ipinfo-view-basic'] = true;
 
 	$wgGroupPermissions['sysop']['ipinfo-view-full'] = true;
-	$wgGroupPermissions['sysop']['ipinfo-view-log'] = true;
 
 	$wgGroupPermissions['checkuser']['ipinfo-view-full'] = true;
 	$wgGroupPermissions['checkuser']['ipinfo-view-log'] = true;
