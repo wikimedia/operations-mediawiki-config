@@ -14,9 +14,9 @@ class GrowthTest extends WgConfTestCase {
 	 */
 	public function testDblist() {
 		$dbList = MWWikiversions::readDbListFile( 'growthexperiments' );
-		$wgConf = $this->loadWgConf( 'production' );
-		foreach ( $wgConf->wikis as $wiki ) {
-			$enabled = $wgConf->get( 'wmgUseGrowthExperiments', $wiki );
+		$configuration = $this->loadWgConf( 'production' );
+		foreach ( $configuration->wikis as $wiki ) {
+			$enabled = $configuration->get( 'wmgUseGrowthExperiments', $wiki );
 			if ( $enabled ) {
 				$this->assertContains( $wiki, $dbList );
 			} else {

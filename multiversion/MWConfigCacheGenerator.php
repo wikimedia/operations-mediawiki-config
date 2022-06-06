@@ -64,11 +64,11 @@ class MWConfigCacheGenerator {
 	 * Create a MultiVersion config object for a wiki
 	 *
 	 * @param string $wikiDBname The wiki's database name, e.g. 'enwiki' or  'zh_min_nanwikisource'
-	 * @param SiteConfiguration $wgConf The global MultiVersion wgConf object
+	 * @param SiteConfiguration $siteConfiguration The global MultiVersion wgConf object
 	 * @param string $realm Realm, e.g. 'production' or 'labs'
 	 * @return array The wiki's config
 	 */
-	public static function getMWConfigForCacheing( $wikiDBname, $wgConf, $realm = 'production' ) {
+	public static function getMWConfigForCacheing( $wikiDBname, $siteConfiguration, $realm = 'production' ) {
 		# Collect all the dblist tags associated with this wiki
 		$wikiTags = [];
 
@@ -84,7 +84,7 @@ class MWConfigCacheGenerator {
 			}
 		}
 
-		list( $site, $lang ) = $wgConf->siteFromDB( $wikiDBname );
+		list( $site, $lang ) = $siteConfiguration->siteFromDB( $wikiDBname );
 		$dbSuffix = ( $site === 'wikipedia' ) ? 'wiki' : $site;
 		$confParams = [
 			'lang' => $lang,
@@ -92,8 +92,8 @@ class MWConfigCacheGenerator {
 		];
 
 		// Add a per-language tag as well
-		$wikiTags[] = $wgConf->get( 'wgLanguageCode', $wikiDBname, $dbSuffix, $confParams, $wikiTags );
-		$globals = $wgConf->getAll( $wikiDBname, $dbSuffix, $confParams, $wikiTags );
+		$wikiTags[] = $siteConfiguration->get( 'wgLanguageCode', $wikiDBname, $dbSuffix, $confParams, $wikiTags );
+		$globals = $siteConfiguration->getAll( $wikiDBname, $dbSuffix, $confParams, $wikiTags );
 
 		return $globals;
 	}
@@ -290,14 +290,14 @@ class MWConfigCacheGenerator {
 
 	/**
 	 * @param string $dbname
-	 * @param \SiteConfiguration $wgConf
+	 * @param \SiteConfiguration $siteConfiguration
 	 * @param string $realm
 	 * @param string $cacheDir
 	 * @return array
 	 */
 	public static function getConfigGlobals(
 		string $dbname,
-		\SiteConfiguration $wgConf,
+		\SiteConfiguration $siteConfiguration,
 		string $realm,
 		string $cacheDir
 	): array {
@@ -317,11 +317,11 @@ class MWConfigCacheGenerator {
 
 		if ( !$globals ) {
 			// Populate SiteConfiguration object
-			wmfLoadInitialiseSettings( $wgConf );
+			wmfLoadInitialiseSettings( $siteConfiguration );
 
 			$globals = self::getMWConfigForCacheing(
 				$dbname,
-				$wgConf,
+				$siteConfiguration,
 				$realm
 			);
 

@@ -98,15 +98,15 @@ abstract class WgConfTestCase extends PHPUnit\Framework\TestCase {
 		] );
 		require __DIR__ . '/data/TestServices.php';
 
-		$wgConf = new Wikimedia\MWConfig\StaticSiteConfiguration;
-		$wgConf->suffixes = MWMultiVersion::SUFFIXES;
-		$wgConf->wikis = MWWikiversions::readDbListFile( $wmgRealm === 'labs' ? 'all-labs' : 'all' );
-		$wgConf->settings = MWConfigCacheGenerator::getStaticConfig();
+		$configuration = new Wikimedia\MWConfig\StaticSiteConfiguration;
+		$configuration->suffixes = MWMultiVersion::SUFFIXES;
+		$configuration->wikis = MWWikiversions::readDbListFile( $wmgRealm === 'labs' ? 'all-labs' : 'all' );
+		$configuration->settings = MWConfigCacheGenerator::getStaticConfig();
 
 		// Make sure globals are restored, else they will be serialized on each
 		// test run which slow the test run dramatically.
 		$this->restoreGlobals();
-		return $wgConf;
+		return $configuration;
 	}
 
 }

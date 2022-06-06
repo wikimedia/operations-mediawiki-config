@@ -2,7 +2,6 @@
 <ruleset>
 	<rule ref="vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
 		<exclude name="MediaWiki.Usage.SuperGlobalsUsage.SuperGlobals" />
-		<exclude name="MediaWiki.VariableAnalysis.MisleadingGlobalNames.Misleading$wgConf" />
 		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment" />
 	</rule>
 	<file>.</file>
