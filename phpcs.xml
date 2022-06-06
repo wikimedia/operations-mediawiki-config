@@ -2,7 +2,6 @@
 <ruleset>
 	<rule ref="vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
 		<exclude name="MediaWiki.NamingConventions.PrefixedGlobalFunctions.allowedPrefix" />
-		<exclude name="MediaWiki.NamingConventions.ValidGlobalName.allowedPrefix" />
 		<exclude name="MediaWiki.Usage.SuperGlobalsUsage.SuperGlobals" />
 		<exclude name="MediaWiki.VariableAnalysis.MisleadingGlobalNames.Misleading$wgConf" />
 		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment" />
@@ -16,6 +15,12 @@
 	</rule>
 	<rule ref="Generic.PHP.NoSilencedErrors.Discouraged">
 		<severity>0</severity>
+	</rule>
+	<rule ref="MediaWiki.NamingConventions.ValidGlobalName">
+		<properties>
+			<property name="ignoreList" type="array" value="$IP" />
+			<property name="allowedPrefixes" type="array" value="wg,wmg" />
+		</properties>
 	</rule>
 
 	<exclude-pattern>\.git/</exclude-pattern>

@@ -12,6 +12,8 @@
  * @param array &$sources
  */
 function wmfImportSources( &$sources ) {
+	// $lang is the site language from, eg, CommonSettings.php
+	// phpcs:ignore MediaWiki.NamingConventions.ValidGlobalName.allowedPrefix
 	global $wgConf, $lang;
 	$wikipedias = array_flip( MWWikiversions::readDbListFile( 'wikipedia' ) );
 	$privates = array_flip( MWWikiversions::readDbListFile( 'private' ) );

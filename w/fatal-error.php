@@ -44,6 +44,9 @@ class CauseFatalError {
 		$mediawiki = new MediaWiki();
 		$request = RequestContext::getMain()->getRequest();
 
+		// This global should probably be renamed but that requires coordination with
+		// deployment to the private file that sets it
+		// phpcs:ignore MediaWiki.NamingConventions.ValidGlobalName.allowedPrefix
 		global $fatalErrorPassword;
 		$password = $request->getRawVal( 'password', '' );
 		if ( !isset( $fatalErrorPassword ) ) {
