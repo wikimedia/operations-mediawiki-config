@@ -166,8 +166,8 @@ if ( $wmgUseWikibaseRepo ) {
 		'args' => [ __DIR__ . '/unitConversionConfig.json' ]
 	];
 
-	if ( isset( $wmgWikibaseUseSSRTermbox ) && isset( $wmgWikibaseSSRTermboxServerUrl ) ) {
-		$wgWBRepoSettings['termboxEnabled'] = $wmgWikibaseUseSSRTermbox;
+	if ( isset( $wmgWikibaseTermboxEnabled ) && isset( $wmgWikibaseSSRTermboxServerUrl ) ) {
+		$wgWBRepoSettings['termboxEnabled'] = $wmgWikibaseTermboxEnabled;
 		$wgWBRepoSettings['ssrServerUrl'] = $wmgWikibaseSSRTermboxServerUrl;
 	}
 
