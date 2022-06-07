@@ -24137,6 +24137,11 @@ return [
 	'fawiki' => true,
 ],
 
+'wmgWikibaseTermboxEnabled' => [
+	'wikidatawiki' => true,
+	'testwikidatawiki' => true,
+],
+
 'wmgWikibaseUseSSRTermbox' => [
 	'wikidatawiki' => true,
 	'testwikidatawiki' => true,
