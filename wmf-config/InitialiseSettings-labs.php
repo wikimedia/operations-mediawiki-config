@@ -1918,9 +1918,8 @@ function wmfGetOverrideSettings() {
 			'default' => 'https://wikidata.beta.wmflabs.org',
 		],
 
-		'wmgWikibaseSSRTermboxServerUrl' => [
-			'default' => '',
-			'wikidatawiki' => 'https://ssr-termbox.wmflabs.org/termbox',
+		'-wmgWikibaseSSRTermboxServerUrl' => [
+			'default' => null, // T304328
 		],
 
 		// T232191
