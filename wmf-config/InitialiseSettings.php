@@ -24134,11 +24134,6 @@ return [
 	'testwikidatawiki' => true,
 ],
 
-'wmgWikibaseUseSSRTermbox' => [
-	'wikidatawiki' => true,
-	'testwikidatawiki' => true,
-],
-
 'wmgWikibaseSSRTermboxServerUrl' => [
 	'wikidatawiki' => 'http://localhost:6008/termbox',
 	'testwikidatawiki' => 'http://termbox-test.staging.svc.eqiad.wmnet:3031/termbox',
