@@ -320,10 +320,10 @@ class Profiler {
 		}
 
 		if ( $error || $toobig ) {
-			if ( !class_exists( Wikimedia\MWConfig\ServiceConfig::class ) ) {
+			if ( !class_exists( \Wikimedia\MWConfig\ServiceConfig::class ) ) {
 				require_once __DIR__ . '/../src/ServiceConfig.php';
 			}
-			$dest = Wikimedia\MWConfig\ServiceConfig::getInstance()->getLocalService( 'statsd' );
+			$dest = \Wikimedia\MWConfig\ServiceConfig::getInstance()->getLocalService( 'statsd' );
 			if ( $dest ) {
 				$sock = socket_create( AF_INET, SOCK_DGRAM, SOL_UDP );
 				if ( $error ) {
