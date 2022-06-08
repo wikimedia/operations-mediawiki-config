@@ -556,18 +556,12 @@ function wmfGetOverrideSettings() {
 				]
 			]
 		],
-		'wgVectorSkinMigrationMode' => [
+		'wgVectorTitleAboveTabs' => [
 			'default' => true
 		],
 
 		'wmgCommonsMetadataForceRecalculate' => [
 			'default' => true,
-		],
-		'wgVectorDefaultSkinVersionForExistingAccounts' => [
-			'default' => '2',
-		],
-		'wgVectorDefaultSkinVersionForNewAccounts' => [
-			'default' => '2',
 		],
 
 		///
