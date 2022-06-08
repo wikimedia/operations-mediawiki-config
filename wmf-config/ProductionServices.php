@@ -24,13 +24,10 @@
 #
 
 $common = [
-	// XHGui is the on-demand profiler, backed by MariaDB.  The
-	// username and password are set in PrivateSettings.php.
+	// XHGui is the on-demand profiler, backed by MariaDB.
+	// The username and password are set in PrivateSettings.php.
+	// Set to null to disable XHGui.
 	'xhgui-pdo' => 'mysql:host=m2-master.eqiad.wmnet;dbname=xhgui',
-
-	// This refers to the old, MongoDB-based XHGui backend, which
-	// has been replaced by xhgui-pdo (T180761).
-	'xhgui' => null,
 
 	// ArcLamp (formerly known as Xenon) is the sampling profiler
 	// pipeline.  Frames from the Excimer extension will be sent to

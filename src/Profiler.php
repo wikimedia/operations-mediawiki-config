@@ -23,8 +23,9 @@ class Profiler {
 	 *   - redis-host: The host used for Xenon events
 	 *   - redis-port: The port used for Xenon events
 	 *   - redis-timeout: The redis socket timeout
-	 *   - use-xhgui: True to use XHGui saver
-	 *   - xhgui-conf: The configuration array to pass to Xhgui_Saver::factory
+	 *   - xhgui-conf: [optional] The configuration array to pass to XhguiSaverPdo
+	 *     - pdo.connect: connection string for PDO (e.g. `mysql:host=mydbhost;dbname=xhgui`)
+	 *     - pdo.table: table name within the xhgui database where the profiles are stored.
 	 *   - statsd: [optional] The host address for StatsD messages
 	 */
 	public static function setup( array $options ): void {
@@ -53,7 +54,7 @@ class Profiler {
 	private static function tidewaysSetup( $options ) {
 		$xwd = XWikimediaDebug::getInstance();
 		$profileToStdout = $xwd->hasOption( 'forceprofile' );
-		$profileToXhgui = $xwd->hasOption( 'profile' ) && !empty( $options['use-xhgui'] );
+		$profileToXhgui = $xwd->hasOption( 'profile' ) && !empty( $options['xhgui-conf'] );
 
 		// This is passed as query parameter instead of header attribute,
 		// but is nonetheless considered part of X-Wikimedia-Debug and must

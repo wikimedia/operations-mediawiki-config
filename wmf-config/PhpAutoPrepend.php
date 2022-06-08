@@ -37,10 +37,11 @@ Wikimedia\MWConfig\Profiler::setup( [
 	'redis-port' => 6379,
 	// Connection timeout, in seconds.
 	'redis-timeout' => $wmgServiceConfig->getRealm() === 'labs' ? 1 : 0.1,
-	'use-xhgui' => ( $wmgServiceConfig->getLocalService( 'xhgui' ) || $wmgServiceConfig->getLocalService( 'xhgui-pdo' ) ),
-	'xhgui-conf' => [
-		'pdo.connect' => $wmgServiceConfig->getLocalService( 'xhgui-pdo' ),
-		'pdo.table' => 'xhgui',
-	],
+	'xhgui-conf' => $wmgServiceConfig->getLocalService( 'xhgui-pdo' )
+		? [
+			'pdo.connect' => $wmgServiceConfig->getLocalService( 'xhgui-pdo' ),
+			'pdo.table' => 'xhgui',
+		]
+		: null,
 	'statsd' => $wmgServiceConfig->getLocalService( 'statsd' ),
 ] );
