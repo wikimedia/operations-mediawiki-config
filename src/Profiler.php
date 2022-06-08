@@ -13,7 +13,7 @@ use ExcimerProfiler;
 use PDO;
 use Redis;
 
-require_once __DIR__ . '/../src/XWikimediaDebug.php';
+require_once __DIR__ . '/XWikimediaDebug.php';
 
 class Profiler {
 	/**
@@ -25,6 +25,7 @@ class Profiler {
 	 *   - redis-timeout: The redis socket timeout
 	 *   - use-xhgui: True to use XHGui saver
 	 *   - xhgui-conf: The configuration array to pass to Xhgui_Saver::factory
+	 *   - statsd: [optional] The host address for StatsD messages
 	 */
 	public static function setup( array $options ): void {
 		global $wmgProfiler;
@@ -320,10 +321,7 @@ class Profiler {
 		}
 
 		if ( $error || $toobig ) {
-			if ( !class_exists( \Wikimedia\MWConfig\ServiceConfig::class ) ) {
-				require_once __DIR__ . '/../src/ServiceConfig.php';
-			}
-			$dest = \Wikimedia\MWConfig\ServiceConfig::getInstance()->getLocalService( 'statsd' );
+			$dest = $options['statsd'] ?? null;
 			if ( $dest ) {
 				$sock = socket_create( AF_INET, SOCK_DGRAM, SOL_UDP );
 				if ( $error ) {
