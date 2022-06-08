@@ -399,8 +399,8 @@ if ( $wmgUseSecurePoll ) {
 	}
 }
 
-// Point to the maps-experiments kartotherian server, see T294339
-$wgKartographerMapServer = 'https://kartotherian.wmflabs.org';
+// Point to the deployment-prep kartotherian server, see T310150.
+$wgKartographerMapServer = 'https://maps-beta.wmflabs.org';
 
 // Temporary feature flag for the Kartographer nearby feature see T304076
 $wgKartographerNearby = true;
