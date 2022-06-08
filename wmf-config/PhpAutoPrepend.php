@@ -42,4 +42,5 @@ Wikimedia\MWConfig\Profiler::setup( [
 		'pdo.connect' => $wmgServiceConfig->getLocalService( 'xhgui-pdo' ),
 		'pdo.table' => 'xhgui',
 	],
+	'statsd' => $wmgServiceConfig->getLocalService( 'statsd' ),
 ] );
