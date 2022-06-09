@@ -26072,11 +26072,45 @@ return [
 	'desktop-improvements' => 0.2, // T258058
 	'officewiki' => 0,
 	'testwiki' => 1, // T256992
+	// T309260 (some overlap with desktop-improvements group):
+	'arwiki' => 0.2,
+	'bnwiki' => 0.2,
+	'frwiki' => 0.2,
+	'hewiki' => 0.2,
+	'htwiki' => 0.2,
+	'jawiki' => 0.2,
+	'kowiki' => 0.2,
+	'viwiki' => 0.2,
+	'zhwiki' => 0.2,
 ],
 
 'wgWMEMobileWebUIActionsTracking' => [
 	'default' => 0.1, // T220016
 	'enwiki' => 0.01, // T295432
+	// T309260:
+	'arwiki' => 0.2,
+	'bnwiki' => 0.2,
+	'frwiki' => 0.2,
+	'hewiki' => 0.2,
+	'htwiki' => 0.2,
+	'jawiki' => 0.2,
+	'kowiki' => 0.2,
+	'viwiki' => 0.2,
+	'zhwiki' => 0.2,
+],
+
+'wgWMESchemaEditAttemptStepSamplingRate' => [
+	'default' => 0.0625,
+	// T309260:
+	'arwiki' => 0.2,
+	'bnwiki' => 0.2,
+	'frwiki' => 0.2,
+	'hewiki' => 0.2,
+	'htwiki' => 0.2,
+	'jawiki' => 0.2,
+	'kowiki' => 0.2,
+	'viwiki' => 0.2,
+	'zhwiki' => 0.2,
 ],
 
 'wgWMEReadingDepthSamplingRate' => [
