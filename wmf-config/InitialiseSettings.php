@@ -20408,6 +20408,10 @@ return [
 	'mediawikiwiki' => 'available', // T302256
 ],
 
+'wgDiscussionTools_visualenhancements' => [
+	'default' => 'unavailable',
+],
+
 'wgDTSchemaEditAttemptStepSamplingRate' => [
 	'default' => 0,
 ],
