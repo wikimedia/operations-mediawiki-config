@@ -2085,6 +2085,7 @@ return [
 	'kswiktionary' => 'وِکیٖلۄغَتھ', // T289767
 	'kuwiki' => 'Wîkîpediya',
 	'kuwiktionary' => 'Wîkîferheng', // T29878
+	'kywiki' => 'Википедия', // T309866
 	'wikitech' => 'Wikitech',
 	'lawiki' => 'Vicipaedia',
 	'lawikibooks' => 'Vicilibri',
@@ -2637,6 +2638,7 @@ return [
 	'kuwikiquote' => 'Wîkîgotin',
 	'kuwiktionary' => 'Wîkîferheng',
 	'kvwiki' => 'Википедия',
+	'kywiki' => 'Википедия', // T309866
 	'wikitech' => 'Wikitech',
 	'lawiki' => 'Vicipaedia',
 	'lawikibooks' => 'Vicilibri',
@@ -2927,6 +2929,7 @@ return [
 	'kowikinews' => '위키뉴스토론',
 	'kowikiquote' => '위키인용집토론',
 	'kvwiki' => 'Википедия_донъялӧм',
+	'kywiki' => 'Википедияны_талкуулоо', // T309866
 	'lawikisource' => 'Disputatio_Vicifontis',
 	'lezwiki' => 'Википедия_веревирд_авун',
 	'lfnwiki' => 'Vicipedia_Discute', // T183561
