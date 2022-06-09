@@ -25718,10 +25718,6 @@ return [
 	'commonswiki' => true,
 ],
 
-'wgQuickSurveysUseVue' => [
-	'default' => true,
-],
-
 'wgQuickSurveysConfig' => [
 	'default' => [],
 	'arwiki' => [],
