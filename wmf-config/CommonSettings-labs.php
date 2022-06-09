@@ -406,6 +406,6 @@ $wgKartographerMapServer = 'https://maps-beta.wmflabs.org';
 $wgKartographerNearby = true;
 
 // Enable max-width for editing. T307725.
-$wgVectorMaxWidthOptions['default']['exclude']['querystring']['action'] = '(history|edit)';
+$wgVectorMaxWidthOptions['exclude']['querystring']['action'] = '(history|edit)';
 
 } # end safeguard
