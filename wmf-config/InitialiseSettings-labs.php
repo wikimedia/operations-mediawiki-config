@@ -2461,11 +2461,6 @@ function wmfGetOverrideSettings() {
 			'enwiki' => true,
 		],
 
-		// (T302857) Temporarily disable template search improvements in advance of production deployment
-		'wmgTemplateSearchImprovements' => [
-			'default' => false,
-		],
-
 		// T294363: QA Surveys on enwiki beta
 		'wmgUseQuickSurveys' => [
 			'enwiki' => true,

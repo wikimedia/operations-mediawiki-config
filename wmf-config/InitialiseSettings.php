@@ -17739,25 +17739,6 @@ return [
 	'default' => [ 'external-machine-translation' ],
 ],
 
-'wgVisualEditorTransclusionDialogSuggestedValues' => [
-	'default' => true,
-],
-
-'wgVisualEditorTransclusionDialogBackButton' => [
-	'default' => true,
-],
-
-// Temporary feature flag for changes to the transclusion dialog sidebar
-'wgVisualEditorTransclusionDialogNewSidebar' => [
-	'default' => true,
-],
-
-// Temporary feature flag for changes to the descriptions in the transclusion
-// dialog, see T271800
-'wgVisualEditorTransclusionDialogInlineDescriptions' => [
-	'default' => true,
-],
-
 // --------------- VisualEditor end ---------------
 
 'wgCiteResponsiveReferences' => [
@@ -25543,14 +25524,6 @@ return [
 	'lockeddown' => false, // T61702
 ],
 
-'wmgTemplateDataSuggestedValues' => [
-	'default' => true,
-],
-
-'wmgTemplateSearchImprovements' => [
-	'default' => true,
-],
-
 'wmgUseCharInsert' => [
 	'default' => true,
 	'loginwiki' => false, // T61702
@@ -28340,16 +28313,6 @@ return [
 
 // T123582: enables <link rel="preconnect" href="//upload.wikimedia.org">
 'wgImagePreconnect' => [
-	'default' => true,
-],
-
-// Temporary feature flag for the CodeMirror bracket matching see T261857
-'wgCodeMirrorEnableBracketMatching' => [
-	'default' => true,
-],
-
-// Temporary feature flag for the CodeMirror accessibility colors see T271895
-'wgCodeMirrorAccessibilityColors' => [
 	'default' => true,
 ],
 

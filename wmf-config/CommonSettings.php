@@ -2402,9 +2402,6 @@ $wgTemplateStylesAllowedUrls = [
 
 wfLoadExtension( 'CodeMirror' );
 
-// Temporary feature flag for the CodeMirror colorblind-friendly color scheme option see T306867
-$wgCodeMirrorColorblindColors = true;
-
 // Must be loaded BEFORE VisualEditor, or things will break
 if ( $wmgUseArticleCreationWorkflow ) {
 	wfLoadExtension( 'ArticleCreationWorkflow' );
