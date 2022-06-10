@@ -309,7 +309,7 @@ class Profiler {
 					$redis->publish( $redisChannel, $line );
 				}
 			}
-		} catch ( Exception $e ) {
+		} catch ( \Exception $e ) {
 			// Known failure scenarios:
 			//
 			// - "RedisException: read error on connection"
