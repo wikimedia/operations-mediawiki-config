@@ -34,9 +34,9 @@
 	}
 
 ?><!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
 	<title>Configuration files – Wikimedia NOC</title>
 	<link rel="shortcut icon" href="/static/favicon/wmf.ico">
 	<link rel="stylesheet" href="../css/base.css">
@@ -45,8 +45,20 @@
 <header><div class="wm-container">
 	<a role="banner" href="/" title="Visit the home page"><em>Wikimedia</em> NOC</a>
 </div></header>
+
 <main role="main"><div class="wm-container">
-<article>
+
+<nav class="wm-site-nav"><ul class="wm-nav">
+	<li><a href="./" class="wm-nav-item-active">MediaWiki config</a>
+		<ul>
+			<li><a href="#dblist">Database lists</a></li>
+		</ul>
+	</li>
+	<li><a href="../db.php">Database config</a></li>
+</ul></nav>
+
+	<article>
+
 <p>Below is a selection of Wikimedia configuration files available for easy viewing.
 	The files are dynamically generated and are perfectly up-to-date.
 	Each of these files is also available in public version control in one of the following repositories:
@@ -71,7 +83,7 @@
 ?></p>
 <hr>
 
-<h2>MediaWiki configuration</h2>
+<h2 id="wmf-config">MediaWiki configuration</h2>
 <ul>
 <?php
 	$viewFilenames = array_merge(
@@ -83,7 +95,7 @@
 ?>
 </ul>
 
-<h3>Database lists</h3>
+<h3 id="dblist">Database lists</h3>
 <ul>
 <?php
 	outputFiles( glob( __DIR__ . '/dblists/*.dblist' ), true, static function ( $name ) {
@@ -92,6 +104,7 @@
 ?>
 </ul>
 
-</article></div></main>
+</article>
+</div></main>
 </body>
 </html>

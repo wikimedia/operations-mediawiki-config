@@ -47,9 +47,10 @@ $wgDBuser = null;
 $wgDBpassword = null;
 $wgDebugDumpSql = false;
 $wgSecretKey = null;
+$wmgDatacenter = null;
 $wmgMasterDatacenter = null;
 
-// Load the actual db vars
+// Load file to obtain $wgLBFactoryConf
 require_once __DIR__ . '/../../wmf-config/db-production.php';
 
 // Now load the JSON written to Etcd by dbctl, from the local disk and merge it in.
@@ -67,11 +68,13 @@ foreach ( $dbconfig['sectionLoads'] as $section => $sectionLoads ) {
 require_once __DIR__ . '/../../multiversion/MWConfigCacheGenerator.php';
 require_once __DIR__ . '/../../src/Noc/DbConfig.php';
 
-$dbConf = new Wikimedia\MWConfig\Noc\DbConfig();
+$dbConf = new Wikimedia\MWConfig\Noc\DbConfig( [
+	'DEFAULT' => 's3',
+] );
 
 if ( $format === 'json' ) {
 	$data = [];
-	foreach ( $dbConf->getNames() as $name ) {
+	foreach ( $dbConf->getSections() as $name => $_ ) {
 		$data[$name] = [
 			'hosts' => $dbConf->getHosts( $name ),
 			'loads' => $dbConf->getLoads( $name ),
@@ -88,10 +91,11 @@ if ( $format === 'json' ) {
 $pageTitle = "Database configuration: $dbSelectedDC"
 
 ?><!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
 	<title><?php echo htmlspecialchars( "$pageTitle – Wikimedia NOC" ); ?></title>
+	<link rel="shortcut icon" href="/static/favicon/wmf.ico">
 	<link rel="stylesheet" href="css/base.css">
 	<style>
 	code {
@@ -107,54 +111,59 @@ $pageTitle = "Database configuration: $dbSelectedDC"
 	}
 	section {
 		flex: 1;
-		min-width: 250px;
+		min-width: 180px;
 		border: 1px solid #eaecf0;
 		padding: 0 1rem 1rem 1rem;
 		margin: 0 1rem 1rem 0;
+		font-size: 1.4rem;
 	}
 	section:target { border-color: orange; }
 	section:target h2 { background: #fef6e7; }
 	</style>
 </head>
 <body>
-	<header><div class="wm-container">
+<header><div class="wm-container">
 	<a role="banner" href="/" title="Visit the home page"><em>Wikimedia</em> NOC</a>
-	</div></header>
-	<main role="main">
-	<nav class="wm-site-nav"><ul class="wm-nav">
-<?php
+</div></header>
 
-$sectionNames = $dbConf->getNames();
-natsort( $sectionNames ); // natsort for s1 < s2 < s10 rather than s1 < s10 < s2
+<main role="main"><div class="wm-container">
+
+	<nav class="wm-site-nav"><ul class="wm-nav">
+		<li><a href="./conf/">MediaWiki config</a></li>
+		<li><a href="./db.php" class="wm-nav-item-active">Database config</a>
+			<ul><?php
+
+$sections = $dbConf->getSections();
 
 // Generate navigation links
-foreach ( $sectionNames as $name ) {
+foreach ( $sections as $name => $label ) {
 	$id = urlencode( 'tabs-' . $name );
-	print '<li><a href="#' . htmlspecialchars( $id ) . '">Section ' . htmlspecialchars( $name ) . '</a></li>';
+	print '<li><a href="#' . htmlspecialchars( $id ) . '">Section ' . htmlspecialchars( $label ) . '</a></li>';
 }
 
 ?>
+			</ul>
+		</li>
 	</ul></nav>
-		<!--
-			NOTE: We don't use <div class="wm-container"> here,
-			as we want this portal to be full-width
-		-->
+
 	<article>
 <?php
 
 print '<h1>' . htmlspecialchars( $pageTitle ) . '</h1>';
 print '<div class="nocdb-sections">';
 // Generate content sections
-foreach ( $sectionNames as $name ) {
+foreach ( $sections as $name => $label ) {
 	$id = urlencode( 'tabs-' . $name );
-	print "<section id=\"" . htmlspecialchars( $id ) . "\"><h2>Section <strong>" . htmlspecialchars( $name ) . '</strong></h2>';
+	print "<section id=\"" . htmlspecialchars( $id ) . "\"><h2>Section " . htmlspecialchars( $label ) . '</h2>';
 	print $dbConf->htmlFor( $name ) . '</section>';
 }
 print '</div>';
 ?>
 	</article>
-	</main>
-	<footer role="contentinfo"><div class="wm-container">
+
+</div></main>
+
+<footer role="contentinfo"><div class="wm-container">
 <?php
 print '<p>Automatically generated based on <a href="./conf/highlight.php?file=db-production.php">';
 print 'wmf-config/db-production.php</a> ';
@@ -167,6 +176,7 @@ foreach ( $dbctlJsonByDC as $dc => $file ) {
 }
 print '</p>';
 ?>
-	</div></footer>
+</div></footer>
+
 </body>
 </html>

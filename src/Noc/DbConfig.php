@@ -5,12 +5,28 @@ namespace Wikimedia\MWConfig\Noc;
 use Wikimedia\MWConfig\MWConfigCacheGenerator;
 
 class DbConfig {
+	/** @var string[] */
+	private $sectionLabels;
+
 	/**
-	 * @return array
+	 * @param string[] $sectionLabels
 	 */
-	public function getNames() {
+	public function __construct( array $sectionLabels = [] ) {
+		$this->sectionLabels = $sectionLabels;
+	}
+
+	/**
+	 * @return array<string,string>
+	 */
+	public function getSections(): array {
 		global $wgLBFactoryConf;
-		return array_keys( $wgLBFactoryConf['sectionLoads'] );
+		$sections = [];
+		foreach ( array_keys( $wgLBFactoryConf['sectionLoads'] ) as $sectionName ) {
+			$sections[$sectionName] = $this->getLabel( $sectionName );
+		}
+		// natsort for s1 < s2 < s10 rather than s1 < s10 < s2
+		natsort( $sections );
+		return $sections;
 	}
 
 	/**
@@ -65,6 +81,15 @@ class DbConfig {
 	}
 
 	/**
+	 * @param string $sectionName
+	 * @return string
+	 */
+	public function getLabel( string $sectionName ): string {
+		// Try to resolve 'DEFAULT'
+		return $this->sectionLabels[$sectionName] ?? $sectionName;
+	}
+
+	/**
 	 * @param string $db
 	 * @return string
 	 */
@@ -108,13 +133,20 @@ class DbConfig {
 	 * @return string HTML
 	 */
 	public function htmlFor( $sectionName ) {
-		$ret = [ "<strong>Hosts</strong><br>" ];
+		$ret = [ "<strong>Hosts</strong>:<br>" ];
 		foreach ( $this->getHosts( $sectionName ) as $host ) {
 			$ret[] = "<code>$host</code>";
 		}
-		$ret[] = '<br><strong>Loads</strong> (master first; replicas follow):<br>';
+		$ret[] = '<br><strong>Loads</strong>:<br>';
+		$first = true;
 		foreach ( $this->getLoads( $sectionName ) as $host => $load ) {
-			$ret[] = "$host => $load<br>";
+			$line = "$host => $load";
+			if ( $first ) {
+				$line .= " (primary)";
+				$first = false;
+			}
+			$line .= "<br>";
+			$ret[] = $line;
 		}
 		$ret[] = '<br><strong>Databases</strong>:<br>';
 		if ( $sectionName == 'DEFAULT' ) {
@@ -128,7 +160,7 @@ class DbConfig {
 					// and browsers tend to render it nicely.
 					// (json is hard to read by default, jsonfm is slower)
 					$replagUrl = $this->getServer( $db ) . '/w/api.php?format=xml&action=query&meta=siteinfo&siprop=dbrepllag&sishowalldb=1';
-					$ret[] = ' (replag: <a href="' . htmlspecialchars( $replagUrl ) . '">mw-api</a>)';
+					$ret[] = ' (replag: <a href="' . htmlspecialchars( $replagUrl ) . '">api</a>)';
 				}
 				$ret[] = '<br>';
 			}

@@ -90,19 +90,28 @@ $selectedFileNameEsc = htmlspecialchars( $selectedFileName );
 $selectedFileViewRawUrlEsc = htmlspecialchars( $selectedFileViewRawUrl );
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
+	<meta charset="utf-8">
 	<title><?php echo $selectedFileNameEsc; ?> – Wikimedia NOC</title>
-	<link rel="shortcut icon" href="//www.wikimedia.org/static/favicon/wmf.ico">
+	<link rel="shortcut icon" href="/static/favicon/wmf.ico">
 	<link rel="stylesheet" href="../css/base.css">
 </head>
 <body>
 <header><div class="wm-container">
 	<a role="banner" href="/" title="Visit the home page"><em>Wikimedia</em> NOC</a>
 </div></header>
+
 <main role="main"><div class="wm-container">
-<article>
-<h1><a href="./">&laquo;</a> <?php echo $selectedFileNameEsc; ?></h1>
+
+	<nav class="wm-site-nav"><ul class="wm-nav">
+		<li><a href="./">MediaWiki config</a><li>
+		<li><a href="../db.php">Database config</a></li>
+	</ul></nav>
+
+	<article>
+
+		<h1><a href="./">&laquo;</a> <?php echo $selectedFileNameEsc; ?></h1>
 <?php
 if ( $selectedFilePath !== false ) {
 ?>
@@ -117,6 +126,10 @@ if ( $selectedFilePath !== false ) {
 ?>
 <hr>
 <?php echo $hlHtml; ?>
-</article></div></main>
+
+	</article>
+
+</div></main>
+
 </body>
 </html>
