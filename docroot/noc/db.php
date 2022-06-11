@@ -88,13 +88,11 @@ if ( $format === 'json' ) {
 	exit;
 }
 
-$pageTitle = "Database configuration: $dbSelectedDC"
-
 ?><!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
 	<meta charset="utf-8">
-	<title><?php echo htmlspecialchars( "$pageTitle – Wikimedia NOC" ); ?></title>
+	<title><?php echo htmlspecialchars( "Database configuration: $dbSelectedDC – Wikimedia NOC" ); ?></title>
 	<link rel="shortcut icon" href="/static/favicon/wmf.ico">
 	<link rel="stylesheet" href="css/base.css">
 	<style>
@@ -147,9 +145,21 @@ foreach ( $sections as $name => $label ) {
 	</ul></nav>
 
 	<article>
+		<h1>Database configuration</h1>
 <?php
+print '<p>';
+foreach ( $dbctlJsonByDC as $dc => $file ) {
+	$active = ( $file === $dbConfigEtcdJsonFilename ) ? ' wm-btn-active' : '';
+	print '<a role="button" class="wm-btn' . $active . '" href="' . htmlspecialchars( "?dc=$dc" ) . '">' . htmlspecialchars( ucfirst( $dc ) ) . '</a> ';
+}
+print '</p>';
 
-print '<h1>' . htmlspecialchars( $pageTitle ) . '</h1>';
+print '<p>Automatically generated based on <a href="./conf/highlight.php?file=db-production.php">';
+print 'wmf-config/db-production.php</a> ';
+print 'and on <a href="/dbconfig/' . htmlspecialchars( $dbConfigEtcdJsonFilename ) . '">';
+print htmlspecialchars( $dbConfigEtcdJsonFilename ) . '</a>.';
+print '</p>';
+
 print '<div class="nocdb-sections">';
 // Generate content sections
 foreach ( $sections as $name => $label ) {
@@ -162,21 +172,6 @@ print '</div>';
 	</article>
 
 </div></main>
-
-<footer role="contentinfo"><div class="wm-container">
-<?php
-print '<p>Automatically generated based on <a href="./conf/highlight.php?file=db-production.php">';
-print 'wmf-config/db-production.php</a> ';
-print 'and on <a href="/dbconfig/' . htmlspecialchars( $dbConfigEtcdJsonFilename ) . '">';
-print htmlspecialchars( $dbConfigEtcdJsonFilename ) . '</a>.<br/>';
-foreach ( $dbctlJsonByDC as $dc => $file ) {
-	if ( $file !== $dbConfigEtcdJsonFilename ) {
-		print 'View <a href="' . htmlspecialchars( "?dc=$dc" ) . '">' . htmlspecialchars( ucfirst( $dc ) ) . '</a> instead. ';
-	}
-}
-print '</p>';
-?>
-</div></footer>
 
 </body>
 </html>
