@@ -24167,6 +24167,9 @@ return [
 	'testwiki' => true, // T302506
 	'huwiki' => true, // T303961
 	'fiwiki' => true,
+	'cawiki' => true,
+	'viwiki' => true,
+	'fawiki' => true,
 ],
 
 'wmgWikibaseUseSSRTermbox' => [
