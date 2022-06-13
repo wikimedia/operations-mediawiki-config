@@ -7965,10 +7965,10 @@ return [
 			],
 		],
 	],
-	// T306607
-	'desktop-improvements' => [
+	// T309683
+	'default' => [
 		'name' => 'skin-vector-toc-experiment',
-		'enabled' => true,
+		'enabled' => false,
 		'buckets' => [
 			'unsampled' => [
 				'samplingRate' => 0
@@ -7978,36 +7978,6 @@ return [
 			],
 			'treatment' => [
 				'samplingRate' => 0.5
-			],
-		]
-	],
-	'frwiki' => [
-		'name' => 'skin-vector-toc-experiment',
-		'enabled' => true,
-		'buckets' => [
-			'unsampled' => [
-				'samplingRate' => 0.5
-			],
-			'control' => [
-				'samplingRate' => 0.25
-			],
-			'treatment' => [
-				'samplingRate' => 0.25
-			],
-		]
-	],
-	'ptwiki' => [
-		'name' => 'skin-vector-toc-experiment',
-		'enabled' => true,
-		'buckets' => [
-			'unsampled' => [
-				'samplingRate' => 0.5
-			],
-			'control' => [
-				'samplingRate' => 0.25
-			],
-			'treatment' => [
-				'samplingRate' => 0.25
 			],
 		]
 	],
@@ -8069,9 +8039,6 @@ return [
 'wgVectorTableOfContents' => [
 	'default' => [
 		'default' => true
-	],
-	'desktop-improvements' => [
-		'default' => false
 	],
 ],
 'wgVectorWvuiSearchOptions' => [
