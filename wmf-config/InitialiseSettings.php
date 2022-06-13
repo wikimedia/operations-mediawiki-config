@@ -4040,7 +4040,6 @@ return [
 	'+enwiki' => [
 		'Lonelypages' => 'monthly',
 		'Mostcategories' => 'monthly',
-		'Mostlinkedcategories' => 'monthly',
 		'Mostlinkedtemplates' => 'monthly',
 		'Uncategorizedcategories' => 'monthly',
 		'Wantedtemplates' => 'monthly',
