@@ -20380,22 +20380,12 @@ return [
 
 'wgDiscussionTools_newtopictool' => [
 	// Keep in sync with wgDiscussionTools_sourcemodetoolbar below
-	'default' => 'default', // T275827
-	'mediawikiwiki' => 'available', // T302256
-	// T309368
-	'wikipedia' => 'available',
+	// T310392
+	'default' => 'available',
 	'dewiki' => 'default',
 	'enwiki' => 'default',
 	'fiwiki' => 'default',
 	'ruwiki' => 'default',
-	'wikibooks' => 'available',
-	'wikinews' => 'available',
-	'wikiquote' => 'available',
-	'wikisource' => 'available',
-	'wikiversity' => 'available',
-	'wikivoyage' => 'available',
-	'wiktionary' => 'available',
-	'specieswiki' => 'available',
 ],
 
 'wgDiscussionTools_sourcemodetoolbar' => [
