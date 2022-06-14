@@ -1635,6 +1635,11 @@ function wmfGetOverrideSettings() {
 		'wgGEMentorDashboardEnabled' => [
 			'default' => true,
 		],
+		'wgGEMentorDashboardUseVue' => [
+			'default' => false,
+			'enwiki' => true,
+			'arwiki' => true
+		],
 		'wgGECampaignPattern' => [
 			'enwiki' => '/^growth-|^social-latam-2022-A$/',
 			'eswiki' => '/^growth-|^social-latam-2022-A$/',
