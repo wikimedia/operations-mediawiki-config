@@ -27,19 +27,21 @@ if ( PHP_SAPI === 'fpm-fcgi' ) {
 }
 
 // https://phabricator.wikimedia.org/T180183
-require_once __DIR__ . '/profiler.php';
+require_once __DIR__ . '/../src/Profiler.php';
 require_once __DIR__ . '/../src/ServiceConfig.php';
 
 $wmgServiceConfig = Wikimedia\MWConfig\ServiceConfig::getInstance();
 
-wmfSetupProfiler( [
+Wikimedia\MWConfig\Profiler::setup( [
 	'redis-host' => $wmgServiceConfig->getLocalService( 'xenon' ),
 	'redis-port' => 6379,
 	// Connection timeout, in seconds.
 	'redis-timeout' => $wmgServiceConfig->getRealm() === 'labs' ? 1 : 0.1,
-	'use-xhgui' => ( $wmgServiceConfig->getLocalService( 'xhgui' ) || $wmgServiceConfig->getLocalService( 'xhgui-pdo' ) ),
-	'xhgui-conf' => [
-		'pdo.connect' => $wmgServiceConfig->getLocalService( 'xhgui-pdo' ),
-		'pdo.table' => 'xhgui',
-	],
+	'xhgui-conf' => $wmgServiceConfig->getLocalService( 'xhgui-pdo' )
+		? [
+			'pdo.connect' => $wmgServiceConfig->getLocalService( 'xhgui-pdo' ),
+			'pdo.table' => 'xhgui',
+		]
+		: null,
+	'statsd' => $wmgServiceConfig->getLocalService( 'statsd' ),
 ] );

@@ -355,7 +355,7 @@ Wikipedia:
 
     enwiki:
         commons: File:Wikipedia-logo-v2-en.svg
-        comment:  T272094
+        comment:  T309544
 
     eowiki:
         commons: File:Wikipedia-logo-v2-eo.svg
@@ -629,6 +629,9 @@ Wikipedia:
         comment:  T160868
         comment_1_5x:  T160868
         comment_2x:  T160868
+
+    kcgwiki:
+        commons: File:Wikipedia-logo-v2-kcg.svg
 
     kgwiki:
         comment:  T189586
@@ -1407,6 +1410,9 @@ Wikipedia:
         commons: File:Wikipedia-logo-v2-zh.svg
         variants:
             zhwiki-hans: File:Wikipedia-logo-v2-zh-hans.svg
+        comment:  T276694
+        comment_1_5x:  T276694
+        comment_2x:  T276694
 
     zuwiki:
         comment:  T233424
@@ -1959,8 +1965,10 @@ Wiktionary:
         no_2x: true
 
     yiwiktionary:
-        no_1_5x: true
-        no_2x: true
+        commons:  File:WiktprintableYi.svg
+        comment:  T308411
+        comment_1_5x: T308411
+        comment_2x: T308411
 
     yuewiktionary:
 
@@ -1970,8 +1978,10 @@ Wiktionary:
         comment_2x:  T150618
 
     zhwiktionary:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        commons:  File:Wiktprintable-zh.svg
+        comment:  T308620
+        comment_1_5x:  T150618, T308620
+        comment_2x:  T150618, T308620
 
 Wikiquote:
     angwikiquote:
@@ -2173,8 +2183,12 @@ Wikiquote:
     viwikiquote:
 
     zhwikiquote:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        commons:  File:Wikiquote-logo-zh-hant.svg
+        variants:
+            zhwikiquote-hans:  File:Wikiquote-logo-zh-hans.svg
+        comment:  T199863, T308620
+        comment_1_5x:  T150618, T199863, T308620
+        comment_2x:  T150618, T199863, T308620
 
 Wikibooks:
     afwikibooks:
@@ -2839,16 +2853,19 @@ Wikisource:
         no_2x: true
 
     zhwikisource:
-        comment:  T229715
-        comment_1_5x:  T229715
-        comment_2x:  T229715
+        commons:  File:Wikisource-logo-zh-SKQS.svg
+        comment:  T229715, T261076, T308620
+        comment_1_5x:  T229715, T261076, T308620
+        comment_2x:  T229715, T261076, T308620
 
 Wikiversity:
     arwikiversity:
 
     betawikiversity:
-        no_1_5x: true
-        no_2x: true
+        commons:  File:Wikiversity-logo-beta-v2.svg
+        comment:  T308604
+        comment_1_5x:  T308604
+        comment_2x:  T308604
 
     cswikiversity:
         comment:  T54019
@@ -2903,6 +2920,12 @@ Wikiversity:
     svwikiversity:
 
     zhwikiversity:
+        commons:  File:Wikiversity_logo_2017_zh-hant.svg
+        variants:
+            zhwikiversity-hans:  File:Wikiversity_logo_2017_zh-hans.svg
+        comment:  T202127, T308620
+        comment_1_5x:  T202127, T308620
+        comment_2x:  T202127, T308620
 
 Wikivoyage:
     bnwikivoyage:
@@ -2961,10 +2984,12 @@ Wikivoyage:
         comment_2x:  T151570
 
     zhwikivoyage:
-        commons: File:Wikivoyage-Logo-v3-zh-hans.svg
-        comment:  T61077
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        commons:  File:Wikivoyage-Logo-v3-zh-hans.svg
+        variants:
+            zhwikivoyage-hant:  File:Wikivoyage-Logo-v3-zh-hant.svg
+        comment:  T61077, T308620
+        comment_1_5x:  T150618, T308620
+        comment_2x:  T150618, T308620
 
 "Chapter and local user group wikis":
     amwikimedia:

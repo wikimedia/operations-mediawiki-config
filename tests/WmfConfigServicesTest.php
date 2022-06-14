@@ -1,8 +1,11 @@
 <?php
+
 /**
  * Structure tests for wmf-config/ProductionServices.php.
+ *
+ * @covers wmf-config/ProductionServices.php
+ * @covers wmf-config/LabsServices.php
  */
-
 class WmfConfigServicesTest extends PHPUnit\Framework\TestCase {
 
 	public static function getServicesFiles() {

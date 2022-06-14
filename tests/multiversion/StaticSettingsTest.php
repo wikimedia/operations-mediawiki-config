@@ -2,9 +2,24 @@
 // Ensure that we're not casting any types
 declare( strict_types = 1 );
 
+use Wikimedia\MWConfig\MWConfigCacheGenerator;
+
+/**
+ * Really tests the settings retrieved from wmfGetVariantSettings, but no easy way to mark that
+ *
+ * @covers wmfGetVariantSettings
+ */
 class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 
+	/**
+	 * @var array[] keys are the names of settings, values are arrays mapping wiki names
+	 *   to configured setting values
+	 */
 	protected $variantSettings = [];
+
+	/**
+	 * @var string original value of $wmgDatacenter
+	 */
 	private $originalWmfDC;
 
 	public function setUp(): void {
@@ -12,7 +27,7 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 		$this->originalWmfDC = $GLOBALS['wmgDatacenter'];
 		$GLOBALS['wmgDatacenter'] = 'testvalue';
 
-		$this->variantSettings = wmfGetVariantSettings();
+		$this->variantSettings = MWConfigCacheGenerator::getStaticConfig();
 	}
 
 	public function tearDown(): void {

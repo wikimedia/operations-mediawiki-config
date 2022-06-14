@@ -24,13 +24,10 @@
 #
 
 $common = [
-	// XHGui is the on-demand profiler, backed by MariaDB.  The
-	// username and password are set in PrivateSettings.php.
+	// XHGui is the on-demand profiler, backed by MariaDB.
+	// The username and password are set in PrivateSettings.php.
+	// Set to null to disable XHGui.
 	'xhgui-pdo' => 'mysql:host=m2-master.eqiad.wmnet;dbname=xhgui',
-
-	// This refers to the old, MongoDB-based XHGui backend, which
-	// has been replaced by xhgui-pdo (T180761).
-	'xhgui' => null,
 
 	// ArcLamp (formerly known as Xenon) is the sampling profiler
 	// pipeline.  Frames from the Excimer extension will be sent to
@@ -134,10 +131,10 @@ $services = [
 
 		// eqiad parsercache
 		'parsercache-dbs' => [
-			'pc1' => '10.64.0.57',   # pc1011, A1 8.8TB 512GB # pc1
+			'pc1' => '10.64.48.89',   # pc1014, D6 8.8TB 512GB # pc1
 			'pc2' => '10.64.16.65',  # pc1012, B1 8.8TB 512GB # pc2
 			'pc3' => '10.64.32.163', # pc1013, C5 8.8TB 512GB # pc3
-			# spare: '10.64.48.89',  # pc1014, D6 8.8TB 512GB
+			# spare: '10.64.0.57',  # pc1011, A1 8.8TB 512GB
 			# Use spare(s) to replace any of the above if needed
 		],
 
@@ -150,21 +147,21 @@ $services = [
 		'search-chi' => [
 			[ // forwarded to https://search.svc.eqiad.wmnet:9243/
 				'host' => 'localhost',
-				'transport' => 'Http',
+				'transport' => CirrusSearch\Elastica\DeprecationLoggedHttp::class,
 				'port' => 6102,
 			]
 		],
 		'search-psi' => [
 			[ // forwarded to https://search.svc.eqiad.wmnet:9643/
 				'host' => 'localhost',
-				'transport' => 'Http',
+				'transport' => CirrusSearch\Elastica\DeprecationLoggedHttp::class,
 				'port' => 6104,
 			]
 		],
 		'search-omega' => [
 			[ // forwarded to https://search.svc.eqiad.wmnet:9443/
 				'host' => 'localhost',
-				'transport' => 'Http',
+				'transport' => CirrusSearch\Elastica\DeprecationLoggedHttp::class,
 				'port' => 6103,
 			]
 		],

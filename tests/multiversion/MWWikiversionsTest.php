@@ -3,6 +3,17 @@
 class MWWikiversionsTest extends PHPUnit\Framework\TestCase {
 
 	/**
+	 * @coversNothing
+	 */
+	public function testWikiversionsFileComplete() {
+		$wikiversions = MWWikiversions::readWikiVersionsFile( __DIR__ . '/../../wikiversions.json' );
+		$allDbs = MWWikiversions::readDbListFile( 'all' );
+
+		$missingVersionKeys = array_diff( $allDbs, array_keys( $wikiversions ) );
+		$this->assertEquals( [], $missingVersionKeys );
+	}
+
+	/**
 	 * @covers MWWikiversions::evalDbListExpression
 	 */
 	public function testEvalDbListExpression() {

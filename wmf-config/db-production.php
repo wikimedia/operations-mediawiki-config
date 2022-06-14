@@ -64,6 +64,7 @@ $wgLBFactoryConf = [
 	'enwikivoyage' => 's5',
 	'eowikivoyage' => 's5',
 	'guwwiki'      => 's5',
+	'kcgwiki'      => 's5',
 	'jawikivoyage' => 's5',
 	'jvwikisource' => 's5',
 	'lldwiki'      => 's5',
@@ -221,7 +222,9 @@ $wgLBFactoryConf = [
 # For more info see also https://wikitech.wikimedia.org/wiki/dbctl
 'externalLoads' => [],
 
-'masterTemplateOverrides' => [],
+'masterTemplateOverrides' => [
+	'ssl' => $wmgDatacenter !== $wmgMasterDatacenter
+],
 
 'externalTemplateOverrides' => [
 	'flags' => $wgDebugDumpSql ? DBO_DEBUG : 0, // No transactions

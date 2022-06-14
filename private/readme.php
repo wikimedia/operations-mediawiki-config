@@ -57,6 +57,7 @@ $wgDBpassword = null;
  * MySQL database credentials with elevated access,
  * if appropriate for the current process.
  */
+// phpcs:ignore Generic.ControlStructures.DisallowYodaConditions.Found
 if ( false === true ) {
 	$wgDBadminuser = null;
 	$wgDBadminpassword = null;
@@ -165,7 +166,7 @@ $wmgSessionStoreHMACKey = null;
  * XHGui database credentials.
  *
  * @see wmf-config/PhpAutoPrepend.php
- * @see wmf-config/profiler.php
+ * @see src/Profiler.php
  * @see https://phabricator.wikimedia.org/T254795
  */
 $wmgXhguiDBuser = null;

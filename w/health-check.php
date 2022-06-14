@@ -24,11 +24,7 @@ foreach ( $processors as $i => $processor ) {
 		$props[$name] = $value;
 	}
 
-	if ( isset( $props['physical id'] ) ) {
-		$id = $props['physical id'];
-	} else {
-		$id = $props['processor'];
-	}
+	$id = $props['physical id'] ?? $props['processor'];
 	if ( isset( $props['core id'] ) ) {
 		$id .= ',' . $props['core id'];
 	}

@@ -23,7 +23,7 @@ $dbctlJsonByDC = [
 	'codfw' => 'codfw.json',
 	'eqiad' => 'eqiad.json',
 ];
-$wmgDatacenter = 'eqiad';
+$dbSelectedDC = 'eqiad';
 
 if ( !is_dir( $dbConfigEtcdPrefix ) ) {
 	// Local testing and debugging fallback
@@ -32,14 +32,14 @@ if ( !is_dir( $dbConfigEtcdPrefix ) ) {
 		'tmsx' => 'tmsx.json',
 		'tmsy' => 'tmsy.json',
 	];
-	$wmgDatacenter = 'tmsx';
+	$dbSelectedDC = 'tmsx';
 }
 
 if ( isset( $_GET['dc'] ) && isset( $dbctlJsonByDC[$_GET['dc']] ) ) {
-	$wmgDatacenter = $_GET['dc'];
+	$dbSelectedDC = $_GET['dc'];
 }
 
-$dbConfigEtcdJsonFilename = $dbctlJsonByDC[$wmgDatacenter];
+$dbConfigEtcdJsonFilename = $dbctlJsonByDC[$dbSelectedDC];
 
 // Mock vars needed by db-*.php (normally set by CommonSettings.php)
 $wgDBname = null;
@@ -47,9 +47,10 @@ $wgDBuser = null;
 $wgDBpassword = null;
 $wgDebugDumpSql = false;
 $wgSecretKey = null;
+$wmgDatacenter = null;
 $wmgMasterDatacenter = null;
 
-// Load the actual db vars
+// Load file to obtain $wgLBFactoryConf
 require_once __DIR__ . '/../../wmf-config/db-production.php';
 
 // Now load the JSON written to Etcd by dbctl, from the local disk and merge it in.
@@ -64,14 +65,16 @@ $wgLBFactoryConf['groupLoadsBySection'] = $dbconfig['groupLoadsBySection'];
 foreach ( $dbconfig['sectionLoads'] as $section => $sectionLoads ) {
 	$wgLBFactoryConf['sectionLoads'][$section] = array_merge( $sectionLoads[0], $sectionLoads[1] );
 }
-
+require_once __DIR__ . '/../../multiversion/MWConfigCacheGenerator.php';
 require_once __DIR__ . '/../../src/Noc/DbConfig.php';
 
-$dbConf = new Wikimedia\MWConfig\Noc\DbConfig();
+$dbConf = new Wikimedia\MWConfig\Noc\DbConfig( [
+	'DEFAULT' => 's3',
+] );
 
 if ( $format === 'json' ) {
 	$data = [];
-	foreach ( $dbConf->getNames() as $name ) {
+	foreach ( $dbConf->getSections() as $name => $_ ) {
 		$data[$name] = [
 			'hosts' => $dbConf->getHosts( $name ),
 			'loads' => $dbConf->getLoads( $name ),
@@ -86,53 +89,89 @@ if ( $format === 'json' ) {
 }
 
 ?><!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 <head>
-	<meta charset="UTF-8">
-	<title>Wikimedia database configuration</title>
+	<meta charset="utf-8">
+	<title><?php echo htmlspecialchars( "Database configuration: $dbSelectedDC – Wikimedia NOC" ); ?></title>
+	<link rel="shortcut icon" href="/static/favicon/wmf.ico">
 	<link rel="stylesheet" href="css/base.css">
 	<style>
-	h2 { font-weight: normal; }
-	code { color: #000; background: #f8f9fa; border: 1px solid #c8ccd1; border-radius: 2px; padding: 1px 4px; }
-	main { display: flex; flex-wrap: wrap; }
-	nav li { float: left; list-style: none; border: 1px solid #eaecf0; padding: 1px 4px; margin: 0 1em 1em 0; }
-	section { flex: 1; min-width: 300px; border: 1px solid #eaecf0; padding: 0 1em; margin: 0 1em 1em 0; }
-	main, footer { clear: both; }
+	code {
+		color: #000;
+		background: #f8f9fa;
+		border: 1px solid #c8ccd1;
+		border-radius: 2px;
+		padding: 1px 4px;
+	}
+	.nocdb-sections {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	section {
+		flex: 1;
+		min-width: 180px;
+		border: 1px solid #eaecf0;
+		padding: 0 1rem 1rem 1rem;
+		margin: 0 1rem 1rem 0;
+		font-size: 1.4rem;
+	}
 	section:target { border-color: orange; }
 	section:target h2 { background: #fef6e7; }
 	</style>
 </head>
 <body>
-<?php
+<header><div class="wm-container">
+	<a role="banner" href="/" title="Visit the home page"><em>Wikimedia</em> NOC</a>
+</div></header>
 
-$sectionNames = $dbConf->getNames();
-natsort( $sectionNames ); // natsort for s1 < s2 < s10 rather than s1 < s10 < s2
+<main role="main"><div class="wm-container">
+
+	<nav class="wm-site-nav"><ul class="wm-nav">
+		<li><a href="./conf/">MediaWiki config</a></li>
+		<li><a href="./db.php" class="wm-nav-item-active">Database config</a>
+			<ul><?php
+
+$sections = $dbConf->getSections();
 
 // Generate navigation links
-print '<nav><ul>';
-foreach ( $sectionNames as $name ) {
+foreach ( $sections as $name => $label ) {
 	$id = urlencode( 'tabs-' . $name );
-	print '<li><a href="#' . htmlspecialchars( $id ) . '">Section ' . htmlspecialchars( $name ) . '</a></li>';
+	print '<li><a href="#' . htmlspecialchars( $id ) . '">Section ' . htmlspecialchars( $label ) . '</a></li>';
 }
-print '</ul></nav><main>';
 
-// Generate content sections
-foreach ( $sectionNames as $name ) {
-	$id = urlencode( 'tabs-' . $name );
-	print "<section id=\"" . htmlspecialchars( $id ) . "\"><h2>Section <strong>" . htmlspecialchars( $name ) . '</strong></h2>';
-	print $dbConf->htmlFor( $name ) . '</section>';
+?>
+			</ul>
+		</li>
+	</ul></nav>
+
+	<article>
+		<h1>Database configuration</h1>
+<?php
+print '<p>';
+foreach ( $dbctlJsonByDC as $dc => $file ) {
+	$active = ( $file === $dbConfigEtcdJsonFilename ) ? ' wm-btn-active' : '';
+	print '<a role="button" class="wm-btn' . $active . '" href="' . htmlspecialchars( "?dc=$dc" ) . '">' . htmlspecialchars( ucfirst( $dc ) ) . '</a> ';
 }
-print '</main>';
-print '<footer>Automatically generated based on <a href="./conf/highlight.php?file=db-production.php">';
+print '</p>';
+
+print '<p>Automatically generated based on <a href="./conf/highlight.php?file=db-production.php">';
 print 'wmf-config/db-production.php</a> ';
 print 'and on <a href="/dbconfig/' . htmlspecialchars( $dbConfigEtcdJsonFilename ) . '">';
-print htmlspecialchars( $dbConfigEtcdJsonFilename ) . '</a>.<br/>';
-foreach ( $dbctlJsonByDC as $dc => $file ) {
-	if ( $file !== $dbConfigEtcdJsonFilename ) {
-		print 'View <a href="' . htmlspecialchars( "?dc=$dc" ) . '">' . htmlspecialchars( ucfirst( $dc ) ) . '</a>. ';
-	}
+print htmlspecialchars( $dbConfigEtcdJsonFilename ) . '</a>.';
+print '</p>';
+
+print '<div class="nocdb-sections">';
+// Generate content sections
+foreach ( $sections as $name => $label ) {
+	$id = urlencode( 'tabs-' . $name );
+	print "<section id=\"" . htmlspecialchars( $id ) . "\"><h2>Section " . htmlspecialchars( $label ) . '</h2>';
+	print $dbConf->htmlFor( $name ) . '</section>';
 }
-print '</footer>';
+print '</div>';
 ?>
+	</article>
+
+</div></main>
+
 </body>
 </html>

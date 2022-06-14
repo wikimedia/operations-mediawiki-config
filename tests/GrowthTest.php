@@ -2,6 +2,8 @@
 
 /**
  * Structure tests related to Growth team settings
+ *
+ * @covers dblists/growthexperiments.dblist
  */
 class GrowthTest extends WgConfTestCase {
 

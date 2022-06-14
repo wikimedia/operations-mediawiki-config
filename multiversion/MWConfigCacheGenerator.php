@@ -16,10 +16,14 @@ class MWConfigCacheGenerator {
 	# When updating list please run ./docroot/noc/createTxtFileSymlinks.sh
 	# Expand computed dblists with ./multiversion/bin/expanddblist
 
-	// Note that most wiki families are available as tags for free without
-	// needing a dblist to be maintained and read from disk, because their
-	// dbname suffix (as mapped in MWMultiVersion::SUFFIXES) already makes them
-	// available as tag for InitialiseSettings.php.
+	/**
+	 * Note that most wiki families are available as tags for free without
+	 * needing a dblist to be maintained and read from disk, because their
+	 * dbname suffix (as mapped in MWMultiVersion::SUFFIXES) already makes them
+	 * available as tag for InitialiseSettings.php.
+	 *
+	 * @var string[]
+	 */
 	public static $dbLists = [
 		'wikipedia',
 		'special',
@@ -50,6 +54,7 @@ class MWConfigCacheGenerator {
 		'cirrussearch-big-indices',
 	];
 
+	/** @var string[] */
 	private static $labsDbLists = [
 		'closed' => 'closed-labs',
 		'flow' => 'flow-labs',
@@ -59,13 +64,11 @@ class MWConfigCacheGenerator {
 	 * Create a MultiVersion config object for a wiki
 	 *
 	 * @param string $wikiDBname The wiki's database name, e.g. 'enwiki' or  'zh_min_nanwikisource'
-	 * @param ?string $site The wiki's site type family, e.g. 'wikipedia' or 'wikisource'
-	 * @param ?string $lang The wiki's MediaWiki language code, e.g. 'en' or 'zh-min-nan'
 	 * @param SiteConfiguration $wgConf The global MultiVersion wgConf object
 	 * @param string $realm Realm, e.g. 'production' or 'labs'
 	 * @return array The wiki's config
 	 */
-	public static function getMWConfigForCacheing( $wikiDBname, $site, $lang, $wgConf, $realm = 'production' ) {
+	public static function getMWConfigForCacheing( $wikiDBname, $wgConf, $realm = 'production' ) {
 		# Collect all the dblist tags associated with this wiki
 		$wikiTags = [];
 
@@ -81,6 +84,7 @@ class MWConfigCacheGenerator {
 			}
 		}
 
+		list( $site, $lang ) = $wgConf->siteFromDB( $wikiDBname );
 		$dbSuffix = ( $site === 'wikipedia' ) ? 'wiki' : $site;
 		$confParams = [
 			'lang' => $lang,
@@ -185,6 +189,11 @@ class MWConfigCacheGenerator {
 		}
 	}
 
+	/**
+	 * @param string $name name of the configuration source to handle
+	 * @return array array of configuration sources to use, the current one and the sources
+	 *   it inherits from
+	 */
 	private function getInheritanceTree( $name ) {
 		if ( !array_key_exists( $name, $this->staticConfigs ) ) {
 			throw new \Exception( "Couldn't find config file for '$name'." );
@@ -214,6 +223,10 @@ class MWConfigCacheGenerator {
 		throw new \Exception( "Bad 'inheritsFrom' value for '$name'." );
 	}
 
+	/**
+	 * @param string $name name of the configuration source to handle
+	 * @return array expanded configuration with inherited sources applied
+	 */
 	private function expandConfig( $name ) {
 		$this->loadConfig( $name );
 
@@ -270,7 +283,62 @@ class MWConfigCacheGenerator {
 		return self::$instance;
 	}
 
+	/**
+	 * @var array loaded static configuration
+	 */
 	private $staticConfigs = [];
+
+	/**
+	 * @param string $dbname
+	 * @param \SiteConfiguration $wgConf
+	 * @param string $realm
+	 * @param string $cacheDir
+	 * @return array
+	 */
+	public static function getConfigGlobals(
+		string $dbname,
+		\SiteConfiguration $wgConf,
+		string $realm,
+		string $cacheDir
+	): array {
+		global $IP;
+
+		// Try configuration cache
+		$confCacheFileName = "conf2-$dbname.json";
+		$confActualMtime = max(
+			filemtime( dirname( __DIR__ ) . '/wmf-config/InitialiseSettings.php' ),
+			filemtime( dirname( __DIR__ ) . '/wmf-config/logos.php' ),
+			filemtime( "$IP/includes/Defines.php" )
+		);
+		$globals = self::readFromStaticCache(
+			$cacheDir . '/' . $confCacheFileName,
+			$confActualMtime
+		);
+
+		if ( !$globals ) {
+			// Populate SiteConfiguration object
+			wmfLoadInitialiseSettings( $wgConf );
+
+			$globals = self::getMWConfigForCacheing(
+				$dbname,
+				$wgConf,
+				$realm
+			);
+
+			$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals ];
+
+			// Save cache if the grace period expired. We define the grace period as the opcache
+			// revalidation frequency + 1, in order to ensure we don't incur in race conditions
+			// when saving the values. See T236104
+			$minTime = $confActualMtime + intval( ini_get( 'opcache.revalidate_freq' ) );
+			if ( time() > $minTime ) {
+				self::writeToStaticCache(
+					$cacheDir, $confCacheFileName, $confCacheObject
+				);
+			}
+		}
+		return $globals;
+	}
 
 	/**
 	 * Read a static cached MultiVersion object from disc
@@ -362,6 +430,23 @@ class MWConfigCacheGenerator {
 		}
 
 		return $settings;
+	}
+
+	/**
+	 * Return static configuration without overrides
+	 *
+	 * @return array
+	 */
+	public static function getStaticConfig(): array {
+		$configDir = __DIR__ . '/../wmf-config/';
+		// Use of direct addition instead of for loop in array is
+		// intentional and done for performance reasons.
+		$config =
+			( require $configDir . 'logos.php' ) +
+			( require $configDir . 'InitialiseSettings.php' ) +
+			( require $configDir . 'ext-ORES.php' );
+
+		return $config;
 	}
 
 }

@@ -5,11 +5,7 @@ $selectableFilepaths = array_merge( glob( __DIR__ . '/*' ),
 	glob( __DIR__ . '/dblists/*.dblist' ) );
 
 // Name of file from user input
-if ( isset( $_GET['file'] ) ) {
-	$selectedFileName = $_GET['file'];
-} else {
-	$selectedFileName = null;
-}
+$selectedFileName = $_GET['file'] ?? null;
 
 // Absolute path to file on disk
 $selectedFilePath = false;
@@ -31,26 +27,39 @@ foreach ( $selectableFilepaths as $selectableFilePath ) {
 		break;
 	}
 }
-// Don't run if executing unit tests
-if ( PHP_SAPI !== 'cli' ) {
-	header( 'Content-Type: text/html; charset=utf-8' );
+
+// Don't (re)run if executing unit tests
+if ( !function_exists( 'wmfNocHeader' ) ) {
+	/**
+	 * @param string $header
+	 */
+	function wmfNocHeader( $header ): void {
+		// Don't emit headers in unit tests
+		if ( PHP_SAPI !== 'cli' ) {
+			header( $header );
+		}
+	}
 }
+
+wmfNocHeader( 'Content-Type: text/html; charset=utf-8' );
 
 if ( !$selectedFilePath ) {
 	if ( $selectedFileName === null ) {
 		// If no 'file' is given (e.g. accessing this file directly), redirect to overview
-		header( 'HTTP/1.1 302 Found' );
-		header( 'Location: ./index.php' );
-		echo '<a href="./index.php">Redirect</a>';
+		wmfNocHeader( 'HTTP/1.1 302 Found' );
+		wmfNocHeader( 'Location: ./' );
+		echo '<a href="./">Redirect</a>';
 		exit;
 	} else {
+		wmfNocHeader( 'HTTP/1.1 404 Not Found' );
 		// Parameter file is given, but not existing in this directory
 		$hlHtml = '<p>Invalid filename given.</p>';
 	}
 } else {
 	// Follow symlink
 	if ( !file_exists( $selectedFilePath ) ) {
-		$hlHtml = "Invalid symlink for $selectedFilePath :(";
+		wmfNocHeader( 'HTTP/1.1 404 Not Found' );
+		$hlHtml = "Invalid symlink :(";
 		$selectedFilePath = false;
 	} else {
 		// Resolve symlink
@@ -72,35 +81,55 @@ if ( !$selectedFilePath ) {
 		} else {
 			$hlHtml = htmlspecialchars( file_get_contents( $selectedFilePath ) );
 		}
-	}
 
-	$hlHtml = "<pre>$hlHtml</pre>";
+		$hlHtml = "<pre>$hlHtml</pre>";
+	}
 }
 
 $selectedFileNameEsc = htmlspecialchars( $selectedFileName );
 $selectedFileViewRawUrlEsc = htmlspecialchars( $selectedFileViewRawUrl );
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-	<title><?php echo $selectedFileNameEsc; ?> - Wikimedia configuration files</title>
-	<link rel="shortcut icon" href="//www.wikimedia.org/static/favicon/wmf.ico">
+	<meta charset="utf-8">
+	<title><?php echo $selectedFileNameEsc; ?> – Wikimedia NOC</title>
+	<link rel="shortcut icon" href="/static/favicon/wmf.ico">
 	<link rel="stylesheet" href="../css/base.css">
 </head>
 <body>
-<h1><a href="./">&laquo;</a> <?php echo $selectedFileNameEsc; ?></h1>
+<header><div class="wm-container">
+	<a role="banner" href="/" title="Visit the home page"><em>Wikimedia</em> NOC</a>
+</div></header>
+
+<main role="main"><div class="wm-container">
+
+	<nav class="wm-site-nav"><ul class="wm-nav">
+		<li><a href="./">MediaWiki config</a><li>
+		<li><a href="../db.php">Database config</a></li>
+	</ul></nav>
+
+	<article>
+
+		<h1><a href="./">&laquo;</a> <?php echo $selectedFileNameEsc; ?></h1>
 <?php
 if ( $selectedFilePath !== false ) {
 ?>
-<p>(
-<a href="https://gerrit.wikimedia.org/g/operations/mediawiki-config/+log/master/<?php echo $selectedFileRepoPath; ?>">version control</a> &bull;
-<a href="https://gerrit.wikimedia.org/g/operations/mediawiki-config/+blame/master/<?php echo $selectedFileRepoPath; ?>?blame=1">blame</a> &bull;
+<p>
+<a href="https://gerrit.wikimedia.org/r/q/project:operations/mediawiki-config+branch:master+file:<?php echo urlencode( $selectedFileName ); ?>">code review</a> &bull;
+<a href="https://gerrit.wikimedia.org/g/operations/mediawiki-config/+log/master/<?php echo urlencode( $selectedFileRepoPath ); ?>">git-log</a> &bull;
+<a href="https://gerrit.wikimedia.org/g/operations/mediawiki-config/+blame/master/<?php echo urlencode( $selectedFileRepoPath ); ?>?blame=1">git-blame</a> &bull;
 <a href="<?php echo $selectedFileViewRawUrlEsc; ?>">raw text</a>
-)</p>
+</p>
 <?php
 }
 ?>
 <hr>
 <?php echo $hlHtml; ?>
+
+	</article>
+
+</div></main>
+
 </body>
 </html>

@@ -63,14 +63,27 @@ require_once __DIR__ . '/../src/ServiceConfig.php';
 require_once __DIR__ . '/etcd.php';
 require_once __DIR__ . '/../multiversion/MWConfigCacheGenerator.php';
 
+// Past this point we know:
+//
 // - This file must be included by MediaWiki via our LocalSettings.php file.
 //   Determined by MediaWiki core having initialised the $IP variable.
+//
 // - MediaWiki must be included via a multiversion-aware entry point
 //   (e.g. WMF's "w/index.php", or MWScript).
 //   That entry point must have initialised the MWMultiVersion singleton and
 //   decided which wiki we are on (based on hostname or --wiki CLI arg).
 //   Note that getInstance does not (and may not) lazy-create this instance,
 //   it returns null if it hasn't been setup yet.
+//
+// - The wiki ID must be determined by MWMultiVersion::getMediaWiki, as called
+//   in the entry point (e.g. based on server name or --wiki). MWMultiVersion
+//   asserts that it is known in wikiversions.json, and otherwise bails
+//   by rendering `missing.php`.
+//
+//   We can naturally only reach here (wmf-config/CommonSettings.php) if the
+//   wiki was known, the MW version was known, and MW core then loaded
+//   this file via LocalSettings.php.
+//
 $multiVersion = class_exists( 'MWMultiVersion' ) ? MWMultiVersion::getInstance() : null;
 if ( !isset( $IP ) || !$multiVersion ) {
 	print "No MWMultiVersion instance initialized! MWScript.php wrapper not used?\n";
@@ -154,7 +167,7 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 	$wgReadOnly = "In read-only mode because WMF_MAINTENANCE_OFFLINE is set";
 	$wmgMasterDatacenter = ServiceConfig::getInstance()->getDatacenter();
 	$wmgMasterServices = $wmgAllServices[$wmgMasterDatacenter];
-	$wmgDbconfigFromEtcd = [
+	$wmgLocalDbConfig = [
 		'readOnlyBySection' => null,
 		'groupLoadsBySection' => [
 			'DEFAULT' => [
@@ -167,6 +180,7 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 		'sectionLoads' => [],
 		'externalLoads' => [],
 	];
+	$wmgRemoteMasterDbConfig = null;
 } else {
 	$etcdConfig = wmfSetupEtcd( $wmgLocalServices['etcd'] );
 
@@ -178,7 +192,12 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 	// Database load balancer config (sectionLoads, groupLoadsBySection, …)
 	// This is later merged into $wgLBFactoryConf by wmfEtcdApplyDBConfig().
 	// See also <https://wikitech.wikimedia.org/wiki/Dbctl>
-	$wmgDbconfigFromEtcd = $etcdConfig->get( "$wmgDatacenter/dbconfig" );
+	$wmgLocalDbConfig = $etcdConfig->get( "$wmgDatacenter/dbconfig" );
+	if ( $wmgDatacenter !== $wmgMasterDatacenter ) {
+		$wmgRemoteMasterDbConfig = $etcdConfig->get( "$wmgMasterDatacenter/dbconfig" );
+	} else {
+		$wmgRemoteMasterDbConfig = null;
+	}
 
 	unset( $etcdConfig );
 }
@@ -200,8 +219,7 @@ $wgConf->fullLoadCallback = 'wmfLoadInitialiseSettings';
  */
 function wmfLoadInitialiseSettings( $conf ) {
 	global $wmgRealm;
-	require_once __DIR__ . '/InitialiseSettings.php';
-	$settings = wmfGetVariantSettings();
+	$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getStaticConfig();
 
 	if ( $wmgRealm !== 'production' ) {
 		// Override for Beta Cluster and other realms.
@@ -267,56 +285,18 @@ $wgLocalVirtualHosts = [
 	'wikimania.wikimedia.org',
 ];
 
-# Is this database listed in dblist?
-# Note: must be done before calling $multiVersion functions other than getDatabase().
-if ( array_search( $wgDBname, $wgLocalDatabases ) === false ) {
-	# No? Load missing.php
-	if ( $wgCommandLineMode ) {
-		print "Database name $wgDBname is not listed in dblist\n";
-	} else {
-		require __DIR__ . '/missing.php';
-	}
-	exit;
-}
-
-# Determine domain and language and the directories for this instance
-list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
-
-# Try configuration cache
-$confCacheFileName = "conf2-$wgDBname.json";
-$confActualMtime = max(
-	filemtime( __DIR__ . '/InitialiseSettings.php' ),
-	filemtime( __DIR__ . '/logos.php' ),
-	filemtime( "$IP/includes/Defines.php" )
-);
-$globals = Wikimedia\MWConfig\MWConfigCacheGenerator::readFromStaticCache(
-	$wgCacheDirectory . '/' . $confCacheFileName, $confActualMtime
+$globals = Wikimedia\MWConfig\MWConfigCacheGenerator::getConfigGlobals(
+	$wgDBname,
+	$wgConf,
+	$wmgRealm,
+	$wgCacheDirectory
 );
 
-if ( !$globals ) {
-	# Get configuration from SiteConfiguration object
-	wmfLoadInitialiseSettings( $wgConf );
-
-	$globals = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
-		$wgDBname, $site, $lang, $wgConf, $wmgRealm
-	);
-
-	$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals ];
-
-	# Save cache if the grace period expired.
-	# We define the grace period as the opcache revalidation frequency + 1
-	# in order to ensure we don't incur in race conditions when saving the values.
-	# See T236104
-	$minTime = $confActualMtime + intval( ini_get( 'opcache.revalidate_freq' ) );
-	if ( time() > $minTime ) {
-		Wikimedia\MWConfig\MWConfigCacheGenerator::writeToStaticCache(
-			$wgCacheDirectory, $confCacheFileName, $confCacheObject
-		);
-	}
-}
-unset( $confCacheFileName, $confActualMtime, $confCacheObject );
-
+// phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
 extract( $globals );
+
+# Determine legacy site/lang pair for the current wiki
+list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 
 # -------------------------------------------------------------------------
 # Settings common to all wikis
@@ -486,6 +466,13 @@ if ( $wmgUseGlobalPreferences ) {
 	];
 }
 
+// QuickSurveys is a hard dependency for SimilarEditors, do not call
+// wfLoadExtension if QuickSurveys is not enabled to avoid fatal errors.
+if ( $wmgUseSimilarEditors && $wmgUseQuickSurveys ) {
+	wfLoadExtension( 'SimilarEditors' );
+	$wgGroupPermissions['checkuser']['similareditors'] = true;
+}
+
 # ######################################################################
 # Legal matters
 # ######################################################################
@@ -617,6 +604,17 @@ $wgObjectCaches['kask-echoseen'] = [
 	'serialization_type' => 'JSON',
 	'extendedErrorBodyFields' => [ 'type', 'title', 'detail', 'instance' ],
 	'reportDupes' => false,
+];
+$wgObjectCaches['db-mainstash'] = [
+	'class' => 'SqlBagOStuff',
+	'cluster' => 'extension2',
+	'dbDomain' => 'mainstash',
+	'globalKeyLbDomain' => 'mainstash',
+	'tableName' => 'objectstash',
+	'multiPrimaryMode' => true,
+	'purgePeriod' => 100,
+	'purgeLimit' => 1000,
+	'reportDupes' => false
 ];
 
 session_name( $lang . 'wikiSession' );
@@ -1062,6 +1060,9 @@ if ( isset( $wmgSiteLogo1x ) ) {
 	];
 }
 
+// Max width modifications
+$wgVectorMaxWidthOptions['exclude']['namespaces'] = $wmgVectorMaxWidthOptionsNamespaces;
+
 if ( $wmgUseTimeline ) {
 	wfLoadExtension( 'timeline' );
 	$wgTimelineFontDirectory = '/srv/mediawiki/fonts';
@@ -1295,8 +1296,6 @@ if ( $wmgUseTimedMediaHandler ) {
 		'2160p.vp9.webm' => true,
 	];
 
-	$wgOggThumbLocation = false; // use ffmpeg for performance
-
 	// tmh1/2 have 12 cores and need lots of shared memory
 	// for ffmpeg, which mmaps large input files
 	$wgTranscodeBackgroundMemoryLimit = 4 * 1024 * 1024; // 4GB
@@ -1339,7 +1338,7 @@ if ( $wmgUseTimedMediaHandler ) {
 	$wgTmhSoundfontLocation = '/usr/share/sounds/sf2/FluidR3_GM.sf2';
 
 	// The type of HTML5 player to use
-	$wgTmhWebPlayer = $wmgTmhWebPlayer;
+	$wgTmhWebPlayer = 'videojs';
 }
 
 if ( $wmgUseUploadsLink ) {
@@ -1368,6 +1367,7 @@ if ( $wmgUseUrlShortener ) {
 		'(.*\.)?wikivoyage\.org',
 		'(.*\.)?wikimedia\.org',
 		'(.*\.)?wikidata\.org',
+		'(.*\.)?wikifunctions\.org',
 		'(.*\.)?mediawiki\.org',
 	];
 	$wgUrlShortenerApprovedDomains = [
@@ -1381,6 +1381,7 @@ if ( $wmgUseUrlShortener ) {
 		'*.wikivoyage.org',
 		'*.wikimedia.org',
 		'*.wikidata.org',
+		'*.wikifunctions.org',
 		'*.mediawiki.org',
 	];
 	$wgUrlShortenerEnableSidebar = false;
@@ -1408,17 +1409,16 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 	];
 
 	// Current stable release
-	$wgExtDistDefaultSnapshot = 'REL1_37';
+	$wgExtDistDefaultSnapshot = 'REL1_38';
 
 	// Current development snapshot
-	$wgExtDistCandidateSnapshot = 'REL1_38';
+	//$wgExtDistCandidateSnapshot = 'REL1_39';
 
 	// Available snapshots
 	$wgExtDistSnapshotRefs = [
 		'master',
 		'REL1_38',
 		'REL1_37',
-		'REL1_36',
 		'REL1_35',
 	];
 
@@ -1779,7 +1779,7 @@ if ( $wmgEnableCaptcha ) {
 	$wgCaptchaStorageClass = 'CaptchaCacheStore';
 	$wgCaptchaClass = 'FancyCaptcha';
 	$wgCaptchaWhitelist =
-		'#^(https?:)?//([.a-z0-9-]+\\.)?((wikimedia|wikipedia|wiktionary|wikiquote|wikibooks|wikisource|wikispecies|mediawiki|wikinews|wikiversity|wikivoyage|wikidata|wmflabs)\.org'
+		'#^(https?:)?//([.a-z0-9-]+\\.)?((wikimedia|wikipedia|wiktionary|wikiquote|wikibooks|wikisource|wikispecies|mediawiki|wikinews|wikiversity|wikivoyage|wikidata|wikifunctions|wmflabs)\.org'
 		. '|dnsstuff\.com|completewhois\.com|wikimedia\.de)([?/\#]|$)#i';
 
 	// 'XRumer' spambot
@@ -2336,24 +2336,6 @@ if ( $wmgUseNewUserMessage ) {
 	$wgNewUserMessageOnAutoCreate = $wmgNewUserMessageOnAutoCreate;
 }
 
-if ( $wmgUseCodeReview ) {
-	wfLoadExtension( 'CodeReview' );
-
-	$wgGroupPermissions['user']['codereview-add-tag'] = false;
-	$wgGroupPermissions['user']['codereview-remove-tag'] = false;
-	$wgGroupPermissions['user']['codereview-post-comment'] = false;
-	$wgGroupPermissions['user']['codereview-set-status'] = false;
-	$wgGroupPermissions['user']['codereview-link-user'] = false;
-	$wgGroupPermissions['user']['codereview-signoff'] = false;
-	$wgGroupPermissions['user']['codereview-associate'] = false;
-
-	$wgCodeReviewRepoStatsCacheTime = 24 * 60 * 60;
-	$wgCodeReviewMaxDiffPaths = 100;
-
-	// Delist the deprecated special page.
-	$wgCodeReviewListSpecialPage = false;
-}
-
 # AbuseFilter
 wfLoadExtension( 'AbuseFilter' );
 include __DIR__ . '/abusefilter.php';
@@ -2378,16 +2360,6 @@ if ( $wmgUsePdfHandler ) {
 # WikiEditor
 wfLoadExtension( 'WikiEditor' );
 $wgDefaultUserOptions['usebetatoolbar'] = 1;
-
-# LocalisationUpdate
-# wfLoadExtension( 'LocalisationUpdate' );
-$wgLocalisationUpdateDirectory = "/var/lib/l10nupdate/caches/cache-$wmgVersionNumber";
-$wgLocalisationUpdateRepository = 'local';
-$wgLocalisationUpdateRepositories['local'] = [
-	'mediawiki' => '/var/lib/l10nupdate/mediawiki/core/%PATH%',
-	'extension' => '/var/lib/l10nupdate/mediawiki/extensions/%NAME%/%PATH%',
-	'skin' => '/var/lib/l10nupdate/mediawiki/skins/%NAME%/%PATH%',
-];
 
 if ( $wmgEnableLandingCheck ) {
 	wfLoadExtension( 'LandingCheck' );
@@ -2440,6 +2412,9 @@ $wgTemplateStylesAllowedUrls = [
 ];
 
 wfLoadExtension( 'CodeMirror' );
+
+// Temporary feature flag for the CodeMirror colorblind-friendly color scheme option see T306867
+$wgCodeMirrorColorblindColors = true;
 
 // Must be loaded BEFORE VisualEditor, or things will break
 if ( $wmgUseArticleCreationWorkflow ) {
@@ -2809,10 +2784,6 @@ if ( $wmgUseVisualEditor ) {
 
 	// Enable the diff page visual diff Beta Feature for opt-in
 	$wgVisualEditorEnableDiffPageBetaFeature = true;
-
-	if ( $wmgVisualEditorSuggestedValues ) {
-		$wgVisualEditorTransclusionDialogSuggestedValues = true;
-	}
 }
 
 if ( $wmgUseTemplateData ) { // T61702 - 2015-07-20
@@ -3437,6 +3408,8 @@ if ( $wmgUseDisambiguator ) {
 
 if ( $wmgUseDiscussionTools ) {
 	wfLoadExtension( 'DiscussionTools' );
+	// Auto topic subscriptions are initially disabled while in beta (T290500)
+	$wgDefaultUserOptions['discussiontools-autotopicsub'] = 0;
 }
 
 if ( $wmgUseCodeEditorForCore || $wmgUseScribunto ) {
@@ -4035,11 +4008,13 @@ if ( $wmgUseIPInfo ) {
 	wfLoadExtension( 'IPInfo' );
 	$wgIPInfoGeoIP2EnterprisePath = '/usr/share/GeoIPInfo/';
 
+	// Consult the Legal team before updating these, since they
+	// must remain compatible with our contract with MaxMind
+
 	$wgGroupPermissions['autoconfirmed']['ipinfo'] = true;
 	$wgGroupPermissions['autoconfirmed']['ipinfo-view-basic'] = true;
 
 	$wgGroupPermissions['sysop']['ipinfo-view-full'] = true;
-	$wgGroupPermissions['sysop']['ipinfo-view-log'] = true;
 
 	$wgGroupPermissions['checkuser']['ipinfo-view-full'] = true;
 	$wgGroupPermissions['checkuser']['ipinfo-view-log'] = true;
@@ -4127,6 +4102,10 @@ if ( $wmgUseCapiunto ) {
 if ( $wmgUseKartographer ) {
 	wfLoadExtension( 'Kartographer' );
 	$wgKartographerMapServer = 'https://maps.wikimedia.org';
+	$wgKartographerVersionedMapdata = true; // T307110
+	// Versioned maps support, see T300712
+	$wgKartographerVersionedLiveMaps = true;
+	$wgKartographerVersionedStaticMaps = true;
 }
 
 if ( $wmgUsePageViewInfo ) {
@@ -4212,6 +4191,10 @@ if ( $wmgUseWikiLambda && $wmgRealm === 'labs' ) {
 	$wgWikiLambdaOrchestratorLocation = $wmgLocalServices['wikifunctions-orchestrator'];
 	$wgWikiLambdaEvaluatorLocation = "http://{$wmgLocalServices['wikifunctions-evaluator']}/1/v1/evaluate";
 	$wgWikiLambdaWikiAPILocation = 'https://wikifunctions.beta.wmflabs.org/w/api.php';
+}
+
+if ( $wmgUseWikistories ) {
+	wfLoadExtension( 'Wikistories' );
 }
 
 if ( PHP_SAPI === 'cli' ) {
@@ -4365,6 +4348,7 @@ if ( $wmgServerGroup === 'parsoid' ) {
 unset( $parsoidDir );
 // End of temporary hack for hooking up Parsoid/PHP with MediaWiki
 
+// phpcs:ignore MediaWiki.Files.ClassMatchesFilename.NotMatch
 class ClosedWikiProvider extends \MediaWiki\Auth\AbstractPreAuthenticationProvider {
 	/**
 	 * @param User $user

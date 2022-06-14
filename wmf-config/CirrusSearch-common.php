@@ -32,11 +32,9 @@ $wgCirrusSearchTextcatModel = [
 	"$IP/vendor/wikimedia/textcat/LM",
 ];
 
-$wgHooks['CirrusSearchMappingConfig'][] = static function ( array &$config, $mappingConfigBuilder ) {
-	$config['page']['properties']['popularity_score'] = [
-		'type' => 'double',
-	];
-};
+$wgCirrusSearchCustomPageFields = [
+	'popularity_score' => 'number',
+];
 
 // PoolCounter needs to be adjusted to account for additional latency when default search
 // is pointed at a remote datacenter. Currently this makes the assumption that it will either

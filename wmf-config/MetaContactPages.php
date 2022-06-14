@@ -26,7 +26,7 @@ $wgContactConfig['affcomusergroup'] = [
 	'MustBeLoggedIn' => true,
 	'IncludeIP' => false,
 	'RLStyleModules' => [
-		'ext.wikimediamessages.contactpage.affcomusergroup',
+		'ext.wikimediamessages.contactpage',
 	],
 	'AdditionalFields' => [
 		'GroupName' => [
@@ -95,7 +95,7 @@ $wgContactConfig['affcomchapthorg'] = [
 	'IncludeIP' => false,
 	'MustBeLoggedIn' => true,
 	'RLStyleModules' => [
-		'ext.wikimediamessages.contactpage.affcomchapthorg'
+		'ext.wikimediamessages.contactpage'
 	],
 	'AdditionalFields' => [
 		'ApplicationType' => [
@@ -308,7 +308,7 @@ $wgContactConfig['movecomsignup'] = [
 	'MustBeLoggedIn' => true,
 	'IncludeIP' => false,
 	'RLStyleModules' => [
-		'ext.wikimediamessages.contactpage.affcomusergroup',
+		'ext.wikimediamessages.contactpage',
 	],
 	'AdditionalFields' => [
 		'Username' => [

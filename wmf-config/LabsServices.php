@@ -11,24 +11,27 @@ return [
 	'eqiad' => [
 		'udp2log' => 'deployment-mwlog01.deployment-prep.eqiad1.wikimedia.cloud:8420',
 		'xenon' => 'deployment-mwlog01.deployment-prep.eqiad1.wikimedia.cloud',
-		'xhgui' => null,
 		'xhgui-pdo' => 'mysql:host=deployment-mdb01.deployment-prep.eqiad.wmflabs;dbname=xhgui',
 		'statsd' => 'cloudmetrics1001.eqiad.wmnet',
 		'search-chi' => [
 			// These MUST match the installed SSL certs
-			'deployment-elastic05.deployment-prep.eqiad.wmflabs',
-			'deployment-elastic06.deployment-prep.eqiad.wmflabs',
-			'deployment-elastic07.deployment-prep.eqiad.wmflabs',
+			'deployment-elastic09.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-elastic10.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-elastic11.deployment-prep.eqiad1.wikimedia.cloud',
 		],
 		'search-psi' => [
 			// Same as search-chi for now to match production services
 			// These MUST match the installed SSL certs
-			'deployment-elastic06.deployment-prep.eqiad.wmflabs',
+			'deployment-elastic09.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-elastic10.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-elastic11.deployment-prep.eqiad1.wikimedia.cloud',
 		],
 		'search-omega' => [
 			// Same as search-chi for now to match production services
 			// These MUST match the installed SSL certs
-			'deployment-elastic07.deployment-prep.eqiad.wmflabs',
+			'deployment-elastic09.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-elastic10.deployment-prep.eqiad1.wikimedia.cloud',
+			'deployment-elastic11.deployment-prep.eqiad1.wikimedia.cloud',
 		],
 		// cloudelastic is not duplicated in labs, it is a write-only cluster and multi-cluster
 		// is sufficiently tested with the clusters above.
@@ -41,9 +44,9 @@ return [
 		'parsoid' => 'http://deployment-parsoid12.deployment-prep.eqiad1.wikimedia.cloud/w/rest.php',
 		'mathoid' => 'http://deployment-docker-mathoid01.eqiad.wmflabs:10044',
 		'eventlogging' => 'udp://deployment-eventlogging03.eqiad.wmflabs:8421',
-		'eventgate-analytics' => 'http://deployment-eventgate-3.deployment-prep.eqiad.wmflabs:8192',
-		'eventgate-analytics-external' => 'http://deployment-eventgate-3.deployment-prep.eqiad.wmflabs:8492',
-		'eventgate-main' => 'http://deployment-eventgate-3.deployment-prep.eqiad.wmflabs:8292',
+		'eventgate-analytics' => 'http://deployment-eventgate-4.deployment-prep.eqiad1.wikimedia.cloud:8192',
+		'eventgate-analytics-external' => 'http://deployment-eventgate-4.deployment-prep.eqiad1.wikimedia.cloud:8492',
+		'eventgate-main' => 'http://deployment-eventgate-4.deployment-prep.eqiad1.wikimedia.cloud:8292',
 		'upload' => 'deployment-ms-fe03.deployment-prep.eqiad.wmflabs',
 		'cxserver' => 'http://deployment-docker-cxserver01.eqiad.wmflabs:8080',
 
@@ -81,7 +84,7 @@ return [
 		],
 
 		### Restbase
-		'restbase' => 'http://deployment-restbase03.deployment-prep.eqiad.wmflabs:7231',
+		'restbase' => 'http://deployment-restbase04.deployment-prep.eqiad1.wikimedia.cloud:7231',
 
 		### Poolcounter
 		'poolcounter' => [

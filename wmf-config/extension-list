@@ -24,7 +24,6 @@ $IP/extensions/Citoid/extension.json
 $IP/extensions/cldr/extension.json
 $IP/extensions/CodeEditor/extension.json
 $IP/extensions/CodeMirror/extension.json
-$IP/extensions/CodeReview/extension.json
 $IP/extensions/Cognate/extension.json
 $IP/extensions/Collection/extension.json
 $IP/extensions/CommonsMetadata/extension.json
@@ -86,7 +85,6 @@ $IP/extensions/LdapAuthentication/extension.json
 $IP/extensions/Linter/extension.json
 $IP/extensions/LiquidThreads/extension.json
 $IP/extensions/Listings/extension.json
-$IP/extensions/LocalisationUpdate/extension.json
 $IP/extensions/LoginNotify/extension.json
 $IP/extensions/MachineVision/extension.json
 $IP/extensions/MapSources/extension.json
@@ -133,6 +131,7 @@ $IP/extensions/SearchExtraNS/extension.json
 $IP/extensions/SecureLinkFixer/extension.json
 $IP/extensions/SecurePoll/extension.json
 $IP/extensions/ShortUrl/extension.json
+$IP/extensions/SimilarEditors/extension.json
 $IP/extensions/SiteMatrix/extension.json
 $IP/extensions/SpamBlacklist/extension.json
 $IP/extensions/StopForumSpam/extension.json
@@ -182,6 +181,7 @@ $IP/extensions/WikimediaEvents/extension.json
 $IP/extensions/WikimediaIncubator/extension.json
 $IP/extensions/WikimediaMessages/extension.json
 $IP/extensions/Wikisource/extension.json
+$IP/extensions/Wikistories/extension.json
 $IP/extensions/XAnalytics/extension.json
 $IP/skins/CologneBlue/skin.json
 $IP/skins/MinervaNeue/skin.json

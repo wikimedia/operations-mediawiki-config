@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * @covers wmf-config/throttle.php
+ */
 class ThrottleTest extends PHPUnit\Framework\TestCase {
 
 	/**

@@ -13,6 +13,10 @@
  * See $allowedActions below for allowed values for "action".
  */
 
+// This file is reached with multiple paths due to symbolic links for the doc root folders,
+// all of the duplicate class names are only from this file being processed multiple times
+// phpcs:disable Generic.Classes.DuplicateClassName.Found
+
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 require MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
 require_once __DIR__ . '/../private/FatalErrorSettings.php';
@@ -22,10 +26,13 @@ CauseFatalError::go();
 /**
  * Implementing as a class helps avoid conflicts in an already well-populated global namespace.
  */
+// phpcs:ignore MediaWiki.Files.ClassMatchesFilename.NotMatch
 class CauseFatalError {
+	/** @var string[] */
 	private static $allowedActions = [
 		'noerror', 'exception', 'nomethod', 'oom', 'timeout', 'segfault', 'coredump',
 	];
+	/** @var string[] */
 	private static $allowedFrom = [
 		'main', 'postsend', 'shutdown', 'destruct',
 	];
@@ -185,12 +192,17 @@ class CauseFatalError {
 
 // phpcs:ignore Generic.Files.OneObjectStructurePerFile.MultipleFound
 class CauseFatalErrorFromLateDestruct {
-	// Keep self-reference to singleton so that destructor does not run during the
-	// main or postsend stages, but later, as part of the shutdown.
-	// Without this, the destructor would run implicitly at the end of CauseFatalError::go(),
-	// which would behave no different than from=main.
+	/**
+	 * Keep self-reference to singleton so that destructor does not run during the
+	 * main or postsend stages, but later, as part of the shutdown.
+	 * Without this, the destructor would run implicitly at the end of CauseFatalError::go(),
+	 * which would behave no different than from=main.
+	 *
+	 * @var CauseFatalErrorFromLateDestruct|null
+	 */
 	public static $instance;
 
+	/** @var callable callback to invoke upon shutdown */
 	private $fn;
 
 	/**

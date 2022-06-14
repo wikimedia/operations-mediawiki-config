@@ -7,10 +7,19 @@ namespace Wikimedia\MWConfig;
  * configuration.
  */
 class ServiceConfig {
+	/** @var ServiceConfig|null */
 	private static $instance;
+	/** @var string */
 	private $realm;
+	/** @var string */
 	private $datacenter;
+	/** @var string[] */
 	private $datacenters;
+	/**
+	 * Result of requiring services file, eg ../wmf-config/ProductionServices.php
+	 *
+	 * @var array
+	 */
 	private $services;
 
 	/**

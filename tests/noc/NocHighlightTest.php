@@ -1,6 +1,12 @@
 <?php
 
+/**
+ * @covers wmf-config/docroot/noc/conf/highlight.php
+ */
 class NocHighlightTest extends PHPUnit\Framework\TestCase {
+	/**
+	 * @var string[] names of files created, so that they can be removed on tearDown
+	 */
 	private $created = [];
 
 	protected function setUp(): void {
@@ -86,7 +92,10 @@ class NocHighlightTest extends PHPUnit\Framework\TestCase {
 		);
 	}
 
-	/** @return string Page output */
+	/**
+	 * @param string $q value of file parameter to set
+	 * @return string Page output
+	 */
 	protected function runHighlight( $q ) {
 		$_GET = [
 			'file' => $q

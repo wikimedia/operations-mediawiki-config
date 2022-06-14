@@ -13,7 +13,7 @@ global $wmgRealm, $wmgDatacenter;
 $wmgRealm = 'production';
 $wmgDatacenter = 'eqiad';
 
-$config = wmfGetVariantSettings();
+$config = MWConfigCacheGenerator::getStaticConfig();
 
 $prodWikis = array_keys( MWWikiversions::readWikiVersionsFile( 'wikiversions.json' ) );
 $labsOnlyWikis = array_keys( MWWikiversions::readWikiVersionsFile( 'wikiversions-labs.json' ) );

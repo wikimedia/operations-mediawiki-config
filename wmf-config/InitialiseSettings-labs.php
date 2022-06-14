@@ -56,6 +56,10 @@ function wmfGetOverrideSettings() {
 			'wikifunctionswiki' => 'Wikifunctions',
 		],
 
+		'wgWikimediaMessagesLicensing' => [
+			'wikifunctionswiki' => 'wikifunctions',
+		],
+
 		'-wgServer' => [
 			'wiktionary'	=> 'https://$lang.wiktionary.beta.wmflabs.org',
 			'wikipedia'     => 'https://$lang.wikipedia.beta.wmflabs.org',
@@ -255,7 +259,6 @@ function wmfGetOverrideSettings() {
 				'headers-sent' => 'debug',
 				'HttpError' => 'error', // Only log http errors with a 500+ code T85795
 				// 'JobExecutor' => [ 'logstash' => 'warning' ],
-				'Kartographer' => 'debug', // temporary, see T304813
 				'ldap' => 'warning',
 				'Linter' => 'debug',
 				'LocalFile' => 'debug',
@@ -265,7 +268,7 @@ function wmfGetOverrideSettings() {
 				'LoginNotify' => 'debug',
 				'MassMessage' => 'debug', // for 59464 -legoktm 2013/12/15
 				'Math' => 'info',  // mobrovac for T121445
-				'mediamoderation' => 'warning', // for T287511
+				'mediamoderation' => 'debug', // for T303312 changed from warning
 				'memcached' => 'error', // -aaron 2012/10/24
 				'message-format' => [ 'logstash' => 'warning' ],
 				'MessageCacheError' => 'debug',
@@ -539,7 +542,7 @@ function wmfGetOverrideSettings() {
 		'wgVectorWebABTestEnrollment' => [
 			'default' => [
 				'name' => 'skin-vector-toc-experiment',
-				'enabled' => true,
+				'enabled' => false,
 				'buckets' => [
 					'unsampled' => [
 						'samplingRate' => 0
@@ -553,18 +556,12 @@ function wmfGetOverrideSettings() {
 				]
 			]
 		],
-		'wgVectorSkinMigrationMode' => [
+		'wgVectorTitleAboveTabs' => [
 			'default' => true
 		],
 
 		'wmgCommonsMetadataForceRecalculate' => [
 			'default' => true,
-		],
-		'wgVectorDefaultSkinVersionForExistingAccounts' => [
-			'default' => '2',
-		],
-		'wgVectorDefaultSkinVersionForNewAccounts' => [
-			'default' => '2',
 		],
 
 		///
@@ -750,6 +747,33 @@ function wmfGetOverrideSettings() {
 						'desktop' => [ 'stable' ],
 						'mobile' => [ 'stable' ]
 					],
+				],
+				'similareditors' => [
+					// T307025
+					'name' => 'similareditors',
+					'type' => 'internal',
+					'layout' => 'single-answer',
+					'answers' => [],
+					// Ensures a text input is added
+					'freeformTextLabel' => 'similareditors-survey-freeform-text-label',
+					'question' => 'similareditors-survey-question',
+					'privacyPolicy' => 'ext-quicksurveys-similareditors-survey-privacy-policy',
+					'enabled' => true,
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ]
+					],
+					'audience' => [
+						// This prevents audience being checked on every page.
+						// However, we must still load quicksurveys manually on
+						// Special:SimilarEditors, because automatic loading only
+						// works for page IDs of pages that exist (not special pages).
+						// 0 matches the page ID check for Special:SimilarEditors.
+						'pageIds' => [ 0 ],
+					],
+					// Ensures the correct survey is added if multiple are enabled
+					'embedElementId' => 'similareditors-survey-embed',
+					'coverage' => 1,
 				],
 				// T294363: QA internal survey custom confirmation and additional info
 				[
@@ -967,17 +991,24 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 		],
 
+		'wmgUseSimilarEditors' => [
+			'enwiki' => true,
+		],
+
 		'wgSecurePollUseLogging' => [
 			'default' => true,
 		],
+
 		'wgSecurePollSingleTransferableVoteEnabled' => [
 			'default' => true,
 			'eswiki' => false,
 		],
+
 		'wmgUseIPInfo' => [
 			'default' => true,
 			'loginwiki' => false,
 		],
+
 		'wgIPInfoGeoIP2Prefix' => [
 			'default' => '/usr/share/GeoIP/GeoLite2-',
 		],
@@ -1007,6 +1038,15 @@ function wmfGetOverrideSettings() {
 		'wgLexemeLanguageCodePropertyId' => [
 			'default' => null,
 			'wikidatawiki' => 'P218',
+		],
+
+		'wgLexemeLexicalCategoryItemIds' => [
+			'default' => null,
+			'wikidatawiki' => [
+				'Q593111', // noun
+				'Q487091', // adjective
+				'Q486787', // adverb
+			],
 		],
 
 		'wgLexemeEnableNewAlpha' => [
@@ -1319,7 +1359,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgActorTableSchemaMigrationStage' => [
-			'default' => SCHEMA_COMPAT_WRITE_TEMP_AND_NEW | SCHEMA_COMPAT_READ_NEW,
+			'default' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 		],
 
 		'wgTemplateLinksSchemaMigrationStage' => [
@@ -1410,8 +1450,7 @@ function wmfGetOverrideSettings() {
 		'wgGENewcomerTasksImageRecommendationsEnabled' => [
 			'default' => true,
 		],
-		'-wgGENewcomerTasksLinkRecommendationsEnabled' => [
-			'default' => false,
+		'wgGENewcomerTasksLinkRecommendationsEnabled' => [
 			'enwiki' => true,
 		],
 		'wgGELinkRecommendationsFrontendEnabled' => [
@@ -1441,8 +1480,8 @@ function wmfGetOverrideSettings() {
 						'edited',
 						'email',
 						'languages',
-						'mailinglist'
-					]
+						'mailinglist',
+					],
 				],
 				'T303240_mailinglist_control' => [
 					// T305015
@@ -1452,10 +1491,37 @@ function wmfGetOverrideSettings() {
 						'edited',
 						'email',
 						'languages',
-						'mailinglist'
-					]
-				]
-			]
+						'mailinglist',
+					],
+				],
+			],
+			'eswiki' => [
+				'exp2_target_specialpage' => [
+					'percentage' => 0,
+				],
+				'T303240_mailinglist' => [
+					// T305015
+					'percentage' => 80,
+					'questions' => [
+						'reason',
+						'edited',
+						'email',
+						'languages',
+						'mailinglist',
+					],
+				],
+				'T303240_mailinglist_control' => [
+					// T305015
+					'percentage' => 20,
+					'questions' => [
+						'reason',
+						'edited',
+						'email',
+						'languages',
+						'mailinglist',
+					],
+				],
+			],
 		],
 		'wgGEHomepageNewAccountVariantsByPlatform' => [
 			'default' => [
@@ -1539,27 +1605,40 @@ function wmfGetOverrideSettings() {
 		],
 		'wgGECampaignPattern' => [
 			'enwiki' => '/^growth-|^social-latam-2022-A$/',
+			'eswiki' => '/^growth-|^social-latam-2022-A$/',
 		],
 		'wgGECampaigns' => [
 			'default' => [
-				'growth-glam-2022' => [
-					'topics' => [ 'argentina', 'chile', 'mexico' ],
-					'pattern' => '/^growth-glam-2022$|^topics-test-AND$/'
+				'social-latam-2022' => [
+					'messageKey' => 'marketingvideocampaign',
+					'signupPageTemplate' => 'video',
+					'signupPageTemplateParameters' => [
+						'messageKey' => 'marketingvideocampaign',
+						'file' => 'Wikimedia_Foundation_newcomer_experience_pilot_-_account_creation.webm',
+						'thumbtime' => 38,
+					],
+					'pattern' => '/^social-latam-2022-A$/'
+				],
+				'thankyoupage-2022' => [
+					'messageKey' => 'thankyoupage',
+					'skipWelcomeSurvey' => true,
+					'signupPageTemplate' => 'hero',
+					'signupPageTemplateParameters' => [
+						'showBenefitsList' => 'desktop',
+						'messageKey' => 'thankyoupage',
+					],
+					'pattern' => '/^typage-(latam|in|za)-en-2022$|^typage-latam-(es|pt)-2022$/'
+				],
+				'thankyoubanner-2022' => [
+					'skipWelcomeSurvey' => true,
+					'signupPageTemplate' => 'hero',
+					'signupPageTemplateParameters' => [
+						'showBenefitsList' => 'desktop',
+						'messageKey' => 'thankyoubanner',
+					],
+					'pattern' => '/^tybanner-(latam|in|za)-en-2022$|^tybanner-latam-(es|pt)-2022$/'
 				]
 			],
-			'eswiki' => [
-				'growth-glam-2022' => [
-					'topics' => [
-						'argentina',
-						'argentina-expanded',
-						'chile',
-						'chile-expanded',
-						'mexico',
-						'mexico-expanded',
-					],
-					'pattern' => '/^growth-glam-2022$/'
-				]
-			]
 		],
 		'-wgGEMentorDashboardDeploymentMode' => [
 			'default' => 'alpha',
@@ -2237,7 +2316,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'-wgDiscussionToolsABTest' => [
-			'enwiki' => 'newtopictool', // T291307#7567119
+			'enwiki' => 'topicsubscription', // T304030
 		],
 
 		'-wgDiscussionToolsEnableMobile' => [
@@ -2250,7 +2329,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		'-wgDiscussionTools_newtopictool' => [
-			'default' => 'default',
+			'default' => 'available',
 		],
 
 		'-wgDiscussionTools_sourcemodetoolbar' => [
@@ -2267,14 +2346,6 @@ function wmfGetOverrideSettings() {
 
 		'wgWatchlistExpiry' => [
 			'default' => true,
-		],
-
-		// Force the videojs player for all users and disable the beta feature
-		'-wmgTmhWebPlayer' => [
-			'default' => 'videojs',
-		],
-		'-wgTmhUseBetaFeatures' => [
-			'default' => false,
 		],
 
 		'wgAbuseFilterEmergencyDisableThreshold' => [
@@ -2356,6 +2427,11 @@ function wmfGetOverrideSettings() {
 			'wikifunctionswiki' => true,
 		],
 
+		// T303004
+		'wmgUseWikistories' => [
+			'enwiki' => true,
+		],
+
 		// (T302857) Temporarily disable template search improvements in advance of production deployment
 		'wmgTemplateSearchImprovements' => [
 			'default' => false,
@@ -2363,6 +2439,11 @@ function wmfGetOverrideSettings() {
 
 		// T294363: QA Surveys on enwiki beta
 		'wmgUseQuickSurveys' => [
+			'enwiki' => true,
+		],
+
+		'-wgMultiShardSiteStats' => [
+			'default' => false,
 			'enwiki' => true,
 		],
 
