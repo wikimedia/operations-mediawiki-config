@@ -52,6 +52,11 @@ if ( $wmgRealm == 'labs' ) { # safe guard
 				'172.16.3.206:3306' => 1 , # deployment-db07.deployment-prep.eqiad1.wikimedia.cloud, master
 				'172.16.6.39:3306'  => 3 , # deployment-db08.deployment-prep.eqiad1.wikimedia.cloud
 			],
+
+			'extension2' => [
+				'172.16.3.206:3306' => 1 , # deployment-db07.deployment-prep.eqiad1.wikimedia.cloud, master
+				'172.16.6.39:3306'  => 3 , # deployment-db08.deployment-prep.eqiad1.wikimedia.cloud
+			]
 		],
 
 		'templateOverridesByCluster' => [
