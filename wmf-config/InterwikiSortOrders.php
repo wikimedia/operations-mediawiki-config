@@ -9,7 +9,8 @@
  */
 
 return [
-	'alphabetic' => [ // by language name, e.g. 'id' as 'Indonesia, bahasa'
+	// by language name, e.g. 'id' as 'Indonesia, bahasa'
+	'alphabetic' => [
 		'ace', 'kbd', 'ady', 'af', 'ak', 'als', 'alt', 'am', 'smn', 'ang', 'ab', 'ar', 'an', 'arc', 'hyw',
 		'roa-rup', 'frp', 'as', 'ast', 'atj', 'awa', 'gn', 'av', 'ay', 'az', 'azb', 'ban', 'bm', 'bn', 'bjn',
 		'zh-min-nan', 'nan', 'map-bms', 'ba', 'be', 'be-x-old', 'bh', 'bcl', 'bi',
@@ -37,7 +38,8 @@ return [
 		'vls', 'war', 'wo', 'wuu', 'ts', 'yi', 'yo', 'yue', 'zh-yue', 'diq', 'zea', 'bat-smg',
 		'zh', 'zh-tw', 'zh-cn'
 	],
-	'alphabetic_revised' => [ // by first word, e.g. 'id' as 'bahasa Indonesia'
+	// by first word, e.g. 'id' as 'bahasa Indonesia'
+	'alphabetic_revised' => [
 		'ace', 'ady', 'kbd', 'af', 'ak', 'als', 'alt', 'am', 'smn', 'ang', 'ab', 'ar', 'an', 'arc', 'hyw', 'roa-rup',
 		'frp', 'as', 'ast', 'atj', 'awa', 'gn', 'av', 'ay', 'az', 'azb', 'gor', 'id', 'ms', 'ban',
 		'bm', 'bn', 'bjn', 'zh-min-nan', 'nan', 'map-bms', 'ba', 'be', 'be-x-old', 'mad', 'bh',
@@ -64,7 +66,8 @@ return [
 		'zh-classical', 'vls', 'war', 'wo', 'wuu', 'ts', 'yi', 'yo', 'yue', 'zh-yue', 'diq',
 		'zea', 'bat-smg', 'zh', 'zh-tw', 'zh-cn'
 	],
-	'alphabetic_sr' => [ // by first word, non-Cyrillic/non-Roman/non-Greek name by language code
+	// by first word, non-Cyrillic/non-Roman/non-Greek name by language code
+	'alphabetic_sr' => [
 		'ace', 'ady', 'kbd', 'af', 'ak', 'als', 'alt', 'am', 'smn', 'ang', 'ab', 'ar', 'an', 'arc',
 		'roa-rup', 'frp', 'ary', 'arz', 'as', 'ast', 'atj', 'gn', 'av', 'awa', 'ay', 'az', 'azb', 'gor',
 		'id', 'ms', 'ban', 'bg', 'bm', 'bjn', 'zh-min-nan', 'nan', 'map-bms', 'ba', 'be',
@@ -92,7 +95,8 @@ return [
 		'vep', 'vo', 'fiu-vro', 'wa', 'vls', 'war', 'wo', 'wuu', 'ts', 'xmf', 'yi',
 		'yo', 'diq', 'zea', 'zh', 'zh-tw', 'zh-cn', 'zh-classical', 'yue', 'zh-yue', 'bat-smg'
 	],
-	'alphabetic_fy' => [ // by language code, exepct 'y' is sorted like 'i'
+	// by language code, except 'y' is sorted like 'i'
+	'alphabetic_fy' => [
 		'aa', 'ab', 'ace', 'ady', 'af', 'ay', 'ak', 'als', 'alt', 'am', 'an', 'ang', 'ar', 'arc',
 		'ary', 'arz', 'as', 'ast', 'atj', 'av', 'avk', 'awa', 'az', 'azb', 'ba', 'ban', 'bar', 'bat-smg', 'bcl', 'be',
 		'be-x-old', 'bg', 'bh', 'bi', 'bjn', 'bm', 'bn', 'bo', 'bpy', 'br', 'bs', 'bug', 'bxr',
@@ -119,7 +123,8 @@ return [
 		'xh', 'xmf', 'za', 'zea', 'zh', 'zh-classical', 'zh-cn', 'yue', 'zh-yue', 'zh-min-nan',
 		'zh-tw', 'zu'
 	],
-	'alphabetic_svwiktionary' => [ // by first word, Roman letters first
+	// by first word, Roman letters first
+	'alphabetic_svwiktionary' => [
 		'aa', 'af', 'ak', 'als', 'an', 'roa-rup', 'ast', 'atj', 'gn', 'ay', 'az',
 		'id', 'ms', 'bm', 'zh-min-nan', 'mt', 'bcl', 'bi', 'bo', 'bs',
 		'br', 'ca', 'cs', 'ch', 'sn', 'co', 'za', 'cy', 'da', 'de', 'na',

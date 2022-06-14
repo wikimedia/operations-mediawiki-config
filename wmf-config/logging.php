@@ -173,11 +173,16 @@ if ( $wmgEnableLogstash ) {
 			'class'     => \MediaWiki\Logger\Monolog\SyslogHandler::class,
 			'formatter' => 'cee',
 			'args'      => [
-				'mediawiki',             // tag
-				'127.0.0.1',             // host
-				10514,                   // port
-				LOG_USER,                // facility
-				$logLevel,               // log level threshold
+				// tag
+				'mediawiki',
+				// host
+				'127.0.0.1',
+				// port
+				10514,
+				// facility
+				LOG_USER,
+				// log level threshold
+				$logLevel,
 			],
 		];
 	}
@@ -211,9 +216,12 @@ $wmgMonologConfig = [
 			'args' => [
 				"%datetime% [%extra.reqId%] %extra.host% %extra.wiki% %extra.mwversion% %channel% %level_name%: %message% %context% %exception%\n",
 				'Y-m-d H:i:s',
-				true, // allowInlineLineBreaks
-				true, // ignoreEmptyContextAndExtra
-				true, // includeStacktraces
+				// allowInlineLineBreaks
+				true,
+				// ignoreEmptyContextAndExtra
+				true,
+				// includeStacktraces
+				true,
 			],
 		],
 		'cee' => [
@@ -287,7 +295,8 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 			$wmgMonologConfig['handlers'][$eventBusHandler] = [
 				'class' => \MediaWiki\Extension\EventBus\Adapters\Monolog\EventBusMonologHandler::class,
 				'args' => [
-					'eventgate-analytics' // EventServiceName
+					// EventServiceName
+					'eventgate-analytics'
 				]
 			];
 		}
@@ -383,7 +392,8 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 
 if (
 	$wmgLogAuthmanagerMetrics
-	&& $wmgUseWikimediaEvents // T160490
+	// T160490
+	&& $wmgUseWikimediaEvents
 ) {
 	$wmgMonologConfig['loggers']['authevents']['handlers'][] = 'authmanager-statsd';
 	$wmgMonologConfig['loggers']['authevents']['calls'] = $wmgMonologLoggerCalls;

@@ -26,7 +26,16 @@
 	</rule>
 	<rule ref="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment">
 		<!-- TODO enable and fix everywhere, T171115 -->
-		<exclude-pattern>wmf-config/*</exclude-pattern>
+		<exclude-pattern>wmf-config/CommonSettings\.php</exclude-pattern>
+		<exclude-pattern>wmf-config/InitialiseSettings\.php</exclude-pattern>
+		<exclude-pattern>wmf-config/InitialiseSettings-labs\.php</exclude-pattern>
+		<exclude-pattern>wmf-config/ProductionServices\.php</exclude-pattern>
+		<exclude-pattern>wmf-config/abusefilter\.php</exclude-pattern>
+		<exclude-pattern>wmf-config/ext-ORES\.php</exclude-pattern>
+		<exclude-pattern>wmf-config/filebackend\.php</exclude-pattern>
+		<exclude-pattern>wmf-config/flaggedrevs\.php</exclude-pattern>
+		<exclude-pattern>wmf-config/reverse-proxy\.php</exclude-pattern>
+		<exclude-pattern>wmf-config/logos\.php</exclude-pattern>
 	</rule>
 
 	<exclude-pattern>\.git/</exclude-pattern>

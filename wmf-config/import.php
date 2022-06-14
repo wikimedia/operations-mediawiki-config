@@ -61,7 +61,8 @@ function wmfImportSources( &$sources ) {
 		} elseif (
 			// Don't list sites under "wikipedia" that are not Wikipedias (e.g. meta)
 			( $project !== 'wikipedia' || isset( $wikipedias[$dbname] ) ) &&
-			$subdomain !== 'beta' // Beta Wikiversity is handled separately
+			// Beta Wikiversity is handled separately
+			$subdomain !== 'beta'
 		) {
 			$sources[$project][] = $subdomain;
 		}

@@ -32,8 +32,9 @@ function handleMissingWiki() {
 		'wikinews'    => 'n',
 		'wikipedia'   => 'p',
 		'wikiquote'   => 'q',
-		'wikisource'  => 's', // forward compatibility, unused ATM
-		'wikiversity' => 'v', // forward compatibility, unused ATM
+		// forward compatibility, unused ATM (both 's' and 'v')
+		'wikisource'  => 's',
+		'wikiversity' => 'v',
 		'wikivoyage'  => 'y',
 		'wiktionary'  => 't',
 	];

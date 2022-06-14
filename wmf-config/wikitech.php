@@ -11,9 +11,11 @@ $wgAuthManagerAutoConfig['primaryauth'] += [
 	LdapPrimaryAuthenticationProvider::class => [
 		'class' => LdapPrimaryAuthenticationProvider::class,
 		'args' => [ [
-			'authoritative' => true, // don't allow local non-LDAP accounts
+			// don't allow local non-LDAP accounts
+			'authoritative' => true,
 		] ],
-		'sort' => 50, // must be smaller than local pw provider
+		// must be smaller than local pw provider
+		'sort' => 50,
 	],
 ];
 $wgLDAPDomainNames = [ 'labs' ];
@@ -130,7 +132,8 @@ function wmfPhabClient( string $apiToken, string $path, $query ) {
 // permablocked.
 $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( $wmgPhabricatorApiToken ) {
 	if ( !$wmgPhabricatorApiToken
-		|| $block->getType() !== /* Block::TYPE_USER */ 1
+		// 1 is the value of Block::TYPE_USER
+		|| $block->getType() !== 1
 		|| $block->getExpiry() !== 'infinity'
 		|| !$block->isSitewide()
 	) {
@@ -162,7 +165,8 @@ $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( 
 };
 $wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmgPhabricatorApiToken ) {
 	if ( !$wmgPhabricatorApiToken
-		|| $block->getType() !== /* Block::TYPE_USER */ 1
+		// 1 is the value of Block::TYPE_USER
+		|| $block->getType() !== 1
 		|| $block->getExpiry() !== 'infinity'
 		|| !$block->isSitewide()
 	) {
@@ -239,7 +243,8 @@ function wmfGerritSetActive(
 $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( $wmgGerritApiUser, $wmgGerritApiPassword ) {
 	if ( !$wmgGerritApiUser
 		|| !$wmgGerritApiPassword
-		|| $block->getType() !== /* Block::TYPE_USER */ 1
+		// 1 is the value of Block::TYPE_USER
+		|| $block->getType() !== 1
 		|| $block->getExpiry() !== 'infinity'
 		|| !$block->isSitewide()
 	) {
@@ -272,7 +277,8 @@ $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( 
 $wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmgGerritApiUser, $wmgGerritApiPassword ) {
 	if ( !$wmgGerritApiUser
 		|| !$wmgGerritApiPassword
-		|| $block->getType() !== /* Block::TYPE_USER */ 1
+		// 1 is the value of Block::TYPE_USER
+		|| $block->getType() !== 1
 		|| $block->getExpiry() !== 'infinity'
 		|| !$block->isSitewide()
 	) {
@@ -307,7 +313,8 @@ $wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmg
  * Invalidates sessions of a blocked user and therefore logs them out.
  */
 $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) {
-	if ( $block->getType() !== /* Block::TYPE_USER */ 1
+	// 1 is the value of Block::TYPE_USER
+	if ( $block->getType() !== 1
 		|| $block->getExpiry() !== 'infinity'
 		|| !$block->isSitewide()
 	) {

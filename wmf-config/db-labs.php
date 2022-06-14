@@ -1,7 +1,8 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-if ( $wmgRealm == 'labs' ) { # safe guard
+// safe guard
+if ( $wmgRealm == 'labs' ) {
 	# Database configuration files for the beta labs
 
 	$wgDBTableOptions = "ENGINE=InnoDB, DEFAULT CHARSET=binary";
@@ -28,34 +29,45 @@ if ( $wmgRealm == 'labs' ) { # safe guard
 			'password'	  => $wgDBpassword,
 			'type'		  => 'mysql',
 			'flags'		  => DBO_DEFAULT | ( $wgDebugDumpSql ? DBO_DEBUG : 0 ),
-			'max lag'	  => 300, // 5 minutes
+			// 5 minutes
+			'max lag'	  => 300,
 			'useGTIDs'    => true,
 		],
 
 		'hostsByName' => [
-			'deployment-db07' => '172.16.3.206:3306', # deployment-db07.deployment-prep.eqiad1.wikimedia.cloud, master
-			'deployment-db08' => '172.16.6.39:3306',  # deployment-db08.deployment-prep.eqiad1.wikimedia.cloud
+			// deployment-db07.deployment-prep.eqiad1.wikimedia.cloud, master
+			'deployment-db07' => '172.16.3.206:3306',
+			// deployment-db08.deployment-prep.eqiad1.wikimedia.cloud
+			'deployment-db08' => '172.16.6.39:3306',
 		],
 
 		'externalLoads' => [
 			'cluster1' => [
-				'172.16.3.206:3306' => 1 , # deployment-db07.deployment-prep.eqiad1.wikimedia.cloud, master
-				'172.16.6.39:3306'  => 3 , # deployment-db08.deployment-prep.eqiad1.wikimedia.cloud
+				// deployment-db07.deployment-prep.eqiad1.wikimedia.cloud, master
+				'172.16.3.206:3306' => 1 ,
+				// deployment-db08.deployment-prep.eqiad1.wikimedia.cloud
+				'172.16.6.39:3306'  => 3 ,
 			],
 
 			'flow_cluster1' => [
-				'172.16.3.206:3306' => 1 , # deployment-db07.deployment-prep.eqiad1.wikimedia.cloud, master
-				'172.16.6.39:3306'  => 3 , # deployment-db08.deployment-prep.eqiad1.wikimedia.cloud
+				// deployment-db07.deployment-prep.eqiad1.wikimedia.cloud, master
+				'172.16.3.206:3306' => 1 ,
+				// deployment-db08.deployment-prep.eqiad1.wikimedia.cloud
+				'172.16.6.39:3306'  => 3 ,
 			],
 
 			'extension1' => [
-				'172.16.3.206:3306' => 1 , # deployment-db07.deployment-prep.eqiad1.wikimedia.cloud, master
-				'172.16.6.39:3306'  => 3 , # deployment-db08.deployment-prep.eqiad1.wikimedia.cloud
+				// deployment-db07.deployment-prep.eqiad1.wikimedia.cloud, master
+				'172.16.3.206:3306' => 1 ,
+				// deployment-db08.deployment-prep.eqiad1.wikimedia.cloud
+				'172.16.6.39:3306'  => 3 ,
 			],
 
 			'extension2' => [
-				'172.16.3.206:3306' => 1 , # deployment-db07.deployment-prep.eqiad1.wikimedia.cloud, master
-				'172.16.6.39:3306'  => 3 , # deployment-db08.deployment-prep.eqiad1.wikimedia.cloud
+				// deployment-db07.deployment-prep.eqiad1.wikimedia.cloud, master
+				'172.16.3.206:3306' => 1 ,
+				// deployment-db08.deployment-prep.eqiad1.wikimedia.cloud
+				'172.16.6.39:3306'  => 3 ,
 			]
 		],
 
@@ -69,4 +81,5 @@ if ( $wmgRealm == 'labs' ) { # safe guard
 		'DB://cluster1',
 	];
 
-} # end safe guard
+// end safe guard
+}

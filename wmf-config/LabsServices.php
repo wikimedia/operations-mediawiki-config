@@ -54,7 +54,8 @@ return [
 		'wikifunctions-evaluator' => 'deployment-docker-wikifunctions01.deployment-prep.eqiad1.wikimedia.cloud:6927',
 
 		'irc' => [
-			'irc.beta.wmflabs.org', // deployment-ircd02
+			// deployment-ircd02
+			'irc.beta.wmflabs.org',
 		],
 		'redis_lock' => [
 			'rdb1' => 'deployment-memc09.deployment-prep.eqiad1.wikimedia.cloud',

@@ -14,7 +14,8 @@ $wgPoolCounterConf = [
 		'timeout' => 15,
 		'workers' => 2,
 		'maxqueue' => 100,
-		'fastStale' => true, // T250248
+		// T250248
+		'fastStale' => true,
 	],
 	'CirrusSearch-Search' => [
 		'class' => Client::class,
