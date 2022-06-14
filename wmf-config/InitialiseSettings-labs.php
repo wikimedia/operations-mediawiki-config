@@ -1690,6 +1690,11 @@ function wmfGetOverrideSettings() {
 				]
 			],
 		],
+
+		'wgGEStructuredTaskRejectionReasonTextInputEnabled' => [
+			'default' => true
+		],
+
 		'-wgGEMentorDashboardDeploymentMode' => [
 			'default' => 'alpha',
 		],
