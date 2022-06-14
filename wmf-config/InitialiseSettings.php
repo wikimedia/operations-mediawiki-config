@@ -25611,6 +25611,10 @@ return [
 	'wikitech' => 'memcached-pecl',
 ],
 
+'wgAbuseFilterProfilerCache' => [
+	'default' => 'redis_local', // not using mainstash due to high traffic
+],
+
 'wmgFileExtensions' => [
 	// Note that 'wmgPrivateWikiUploads' allows additional file extensions on some wikis
 	'default' => [
