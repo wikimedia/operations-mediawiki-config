@@ -1,6 +1,10 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
+// Inline comments are used for noting the proxies that are associated with IP addresses
+// and requiring comments to be on their own line would reduce readability for this file
+// phpcs:disable MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment
+
 # Accept XFF from these proxies
 $wgCdnServersNoPurge = [
 	# Note: the general idea here is to cover infrastructure space

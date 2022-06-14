@@ -10,6 +10,10 @@
 #      `-- wmf-config/logos.php
 #
 
+// Inline comments are often used for noting the task(s) associated with specific configuration
+// and requiring comments to be on their own line would reduce readability for this file
+// phpcs:disable MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment
+
 # ⚠️ IMPORTANT!!!! ⚠️
 # When updating these logos, please note that official Wikimedia logos should not be
 # used on labs instances.

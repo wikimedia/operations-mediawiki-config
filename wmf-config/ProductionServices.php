@@ -23,6 +23,10 @@
 # operations/puppet.git:/hieradata/common/profile/services_proxy/envoy.yaml
 #
 
+// Inline comments are often used for noting the service associated with specific configuration
+// and requiring comments to be on their own line would reduce readability for this file
+// phpcs:disable MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment
+
 $common = [
 	// XHGui is the on-demand profiler, backed by MariaDB.
 	// The username and password are set in PrivateSettings.php.
