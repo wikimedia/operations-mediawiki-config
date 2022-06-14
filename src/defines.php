@@ -59,20 +59,29 @@ if ( !defined( 'NS_MEDIAWIKI' ) ) {
 	/** @{
 	 * Cache type
 	 */
-	define( 'CACHE_ANYTHING', -1 );  // Use anything, as long as it works
-	define( 'CACHE_NONE', 0 );       // Do not cache
-	define( 'CACHE_DB', 1 );         // Store cache objects in the DB
-	define( 'CACHE_MEMCACHED', 2 );  // MemCached, must specify servers in $wgMemCacheServers
-	define( 'CACHE_ACCEL', 3 );      // APC or WinCache
+	// Use anything, as long as it works
+	define( 'CACHE_ANYTHING', -1 );
+	// Do not cache
+	define( 'CACHE_NONE', 0 );
+	// Store cache objects in the DB
+	define( 'CACHE_DB', 1 );
+	// MemCached, must specify servers in $wgMemCacheServers
+	define( 'CACHE_MEMCACHED', 2 );
+	// APC or WinCache
+	define( 'CACHE_ACCEL', 3 );
 	/** @} */
 
 	/** @{
 	 * Antivirus result codes, for use in $wgAntivirusSetup.
 	 */
-	define( 'AV_NO_VIRUS', 0 );  # scan ok, no virus found
-	define( 'AV_VIRUS_FOUND', 1 );  # virus found!
-	define( 'AV_SCAN_ABORTED', -1 );  # scan aborted, the file is probably immune
-	define( 'AV_SCAN_FAILED', false );  # scan failed (scanner not found or error in scanner)
+	// scan ok, no virus found
+	define( 'AV_NO_VIRUS', 0 );
+	// virus found!
+	define( 'AV_VIRUS_FOUND', 1 );
+	// scan aborted, the file is probably immune
+	define( 'AV_SCAN_ABORTED', -1 );
+	// scan failed (scanner not found or error in scanner)
+	define( 'AV_SCAN_FAILED', false );
 	/** @} */
 
 	/** @{
@@ -104,7 +113,8 @@ if ( !defined( 'NS_MEDIAWIKI' ) ) {
 	define( 'EDIT_MINOR', 4 );
 	define( 'EDIT_SUPPRESS_RC', 8 );
 	define( 'EDIT_FORCE_BOT', 16 );
-	define( 'EDIT_DEFER_UPDATES', 32 ); // Unused since 1.27
+	// Unused since 1.27
+	define( 'EDIT_DEFER_UPDATES', 32 );
 	define( 'EDIT_AUTOSUMMARY', 64 );
 	define( 'EDIT_INTERNAL', 128 );
 	/** @} */
@@ -134,7 +144,8 @@ if ( !defined( 'NS_MEDIAWIKI' ) ) {
 	define( 'OT_HTML', 1 );
 	define( 'OT_WIKI', 2 );
 	define( 'OT_PREPROCESS', 3 );
-	define( 'OT_MSG', 3 );  // b/c alias for OT_PREPROCESS
+	// b/c alias for OT_PREPROCESS
+	define( 'OT_MSG', 3 );
 	define( 'OT_PLAIN', 4 );
 	/** @} */
 

@@ -353,7 +353,8 @@ class MWConfigCacheGenerator {
 
 		if ( $cacheRecord !== false ) {
 			// TODO: Use JSON_THROW_ON_ERROR with a try/catch once production is running PHP 7.3.
-			$staticCacheObject = json_decode( $cacheRecord, /* assoc */ true );
+			// `true` means to decode as an associative array
+			$staticCacheObject = json_decode( $cacheRecord, true );
 
 			if ( json_last_error() === JSON_ERROR_NONE ) {
 				// Ignore non-array and array offset warnings (file may be in an older format)

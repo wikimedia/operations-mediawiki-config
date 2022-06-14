@@ -30,7 +30,8 @@ require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 $wiki = $_GET['wiki'] ?? '';
 require MWMultiVersion::getMediaWiki( 'includes/WebStart.php', $wiki );
 
-error_reporting( E_ERROR ); // fatals but not random I/O warnings
+// fatals but not random I/O warnings
+error_reporting( E_ERROR );
 ini_set( 'display_errors', 1 );
 $wgShowExceptionDetails = true;
 

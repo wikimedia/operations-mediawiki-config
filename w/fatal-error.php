@@ -189,7 +189,8 @@ class CauseFatalError {
 	 */
 	public static function doCoredump() {
 		posix_setrlimit( POSIX_RLIMIT_CORE, (int)10e9, POSIX_RLIMIT_INFINITY );
-		posix_kill( posix_getpid(), 6 /*SIGABRT*/ );
+		// 6 is the value of SIGABRT
+		posix_kill( posix_getpid(), 6 );
 	}
 }
 

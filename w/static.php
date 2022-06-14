@@ -90,7 +90,8 @@ function wmfStaticShowError( $message, $status ) {
  *  - "mismatch": 1-minute cache. Quick debounce when a new hash isn't yet found on this server.
  */
 function wmfStaticStreamFile( $filePath, $responseType = 'nohash' ) {
-	$ctype = StreamFile::contentTypeFromPath( $filePath, /* safe: not for upload */ false );
+	// `false` below means not to do retroactive upload prevention checks
+	$ctype = StreamFile::contentTypeFromPath( $filePath, false );
 	if ( !$ctype || $ctype === 'unknown/unknown' ) {
 		// Directory, extension-less file or unknown extension
 		wmfStaticShowError( 'Unknown file path', 404 );

@@ -2,7 +2,6 @@
 <ruleset>
 	<rule ref="vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
 		<exclude name="MediaWiki.Usage.SuperGlobalsUsage.SuperGlobals" />
-		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment" />
 	</rule>
 	<file>.</file>
 	<arg name="bootstrap" value="./vendor/mediawiki/mediawiki-codesniffer/utils/bootstrap-ci.php"/>
@@ -24,6 +23,10 @@
 		<properties>
 			<property name="allowedPrefixes" type="array" value="wg,wmf" />
 		</properties>
+	</rule>
+	<rule ref="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment">
+		<!-- TODO enable and fix everywhere, T171115 -->
+		<exclude-pattern>wmf-config/*</exclude-pattern>
 	</rule>
 
 	<exclude-pattern>\.git/</exclude-pattern>

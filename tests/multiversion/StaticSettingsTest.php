@@ -192,7 +192,8 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 
 				// Test namespace numbers
 				if ( $number < 100 || in_array( $number, [ 828, 829 ] ) ) {
-					continue; // It's not an extra namespace, do not test
+					// It's not an extra namespace, do not test
+					continue;
 				}
 				if ( $number % 2 == 0 ) {
 					$this->assertArrayHasKey( $number + 1, $entry, "Namespace $namespace (ID $number) for $db doesn't have corresponding talk namespace set" );
@@ -333,7 +334,8 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 					in_array( $dbNormalized, $dblistNames ) ||
 					DBList::isInDblist( $dbNormalized, "all" ) ||
 					in_array( $dbNormalized,  $langs ) ||
-					in_array( $dbNormalized, [ "default", "lzh", "yue", "nan" ] ), // TODO: revert back to $db == "default"
+					// TODO: revert back to $db == "default"
+					in_array( $dbNormalized, [ "default", "lzh", "yue", "nan" ] ),
 					"$dbNormalized is referenced, but it isn't either a wiki or a dblist" );
 			}
 		}

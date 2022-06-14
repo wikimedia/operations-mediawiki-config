@@ -290,11 +290,14 @@ class MWMultiVersion {
 		# The --wiki param must the second argument to to avoid
 		# any "options with args" ambiguity (see Maintenance.php).
 		if ( isset( $argv[1] ) && $argv[1] === '--wiki' ) {
-			$dbname = isset( $argv[2] ) ? $argv[2] : ''; // "script.php --wiki dbname"
+			// "script.php --wiki dbname"
+			$dbname = isset( $argv[2] ) ? $argv[2] : '';
 		} elseif ( isset( $argv[1] ) && substr( $argv[1], 0, 7 ) === '--wiki=' ) {
-			$dbname = substr( $argv[1], 7 ); // "script.php --wiki=dbname"
+			// "script.php --wiki=dbname"
+			$dbname = substr( $argv[1], 7 );
 		} elseif ( isset( $argv[1] ) && substr( $argv[1], 0, 2 ) !== '--' ) {
-			$dbname = $argv[1]; // "script.php dbname"
+			// "script.php dbname"
+			$dbname = $argv[1];
 			$argv[1] = '--wiki=' . $dbname;
 		}
 
@@ -439,7 +442,8 @@ class MWMultiVersion {
 		if ( $this->version === false ) {
 			self::error( "no version entry for `{$this->db}`.\n" );
 		}
-		return substr( $this->version, 4 ); // remove "php-"
+		// remove "php-"
+		return substr( $this->version, 4 );
 	}
 
 	/**
@@ -467,7 +471,7 @@ class MWMultiVersion {
 		if ( $httpError >= 500 ) {
 			trigger_error( $msg, E_USER_ERROR );
 		}
-		exit( 1 ); // sanity
+		exit( 1 );
 	}
 
 	/**
@@ -506,7 +510,8 @@ class MWMultiVersion {
 
 		# Wiki doesn't exist yet?
 		if ( $multiVersion->isMissing() ) {
-			header( "Cache-control: no-cache" ); // same hack as CommonSettings.php
+			// same hack as CommonSettings.php
+			header( "Cache-control: no-cache" );
 			include MEDIAWIKI_DEPLOYMENT_DIR . '/wmf-config/missing.php';
 			exit;
 		}
