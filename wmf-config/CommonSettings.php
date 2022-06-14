@@ -487,8 +487,6 @@ $wgRightsIcon = '//creativecommons.org/images/public/somerights20.png';
 # ResourceLoader settings
 # ######################################################################
 
-unset( $wgStylePath );
-
 $wgInternalServer = $wgCanonicalServer;
 $wgArticlePath = '/wiki/$1';
 
@@ -529,10 +527,8 @@ $wgLocalisationCacheConf['manualRecache'] = true;
 
 // Add some useful config data to query=siteinfo
 $wgHooks['APIQuerySiteInfoGeneralInfo'][] = static function ( $module, &$data ) {
-	global $wmgMasterDatacenter;
-	global $wmgEtcdLastModifiedIndex;
-	global $wmgCirrusSearchDefaultCluster;
-	global $wgCirrusSearchDefaultCluster;
+	global $wmgMasterDatacenter, $wmgEtcdLastModifiedIndex, $wmgCirrusSearchDefaultCluster,
+		$wgCirrusSearchDefaultCluster;
 	$data['wmf-config'] = [
 		'wmfMasterDatacenter' => $wmgMasterDatacenter,
 		'wmfEtcdLastModifiedIndex' => $wmgEtcdLastModifiedIndex,
@@ -689,7 +685,6 @@ if ( $wmgUseCentralAuth ) {
 				];
 			}
 		}
-		return true;
 	};
 }
 
@@ -1494,7 +1489,6 @@ if ( $wmgUseSecurePoll ) {
 	$wgSecurePollScript = 'auth-api.php';
 	$wgHooks['SecurePoll_JumpUrl'][] = static function ( $page, &$url ) use ( $site, $lang ) {
 		$url = wfAppendQuery( $url, [ 'site' => $site, 'lang' => $lang ] );
-		return true;
 	};
 	$wgSecurePollCreateWikiGroups = [
 		'securepollglobal' => 'securepoll-dblist-securepollglobal'
@@ -1729,12 +1723,7 @@ if ( $wgDBname === 'loginwiki' ) {
 	unset( $wgGroupPermissions['import'] );
 	unset( $wgGroupPermissions['transwiki'] );
 
-	$wgGroupPermissions['sysop'] = array_merge(
-		$wgGroupPermissions['sysop'],
-		[
-			'editinterface' => false,
-		]
-	);
+	$wgGroupPermissions['sysop']['editinterface'] = false;
 }
 
 $wgAutopromote = [
@@ -2262,7 +2251,6 @@ if ( $wgDBname === 'enwiki' ) {
 			$result = [ 'cant-delete-main-page' ];
 			return false;
 		}
-		return true;
 	};
 }
 
@@ -2430,50 +2418,17 @@ $wgDefaultUserOptions['watchcreations'] = true;
 
 // Temporary override: WMF is not hardcore enough to enable this.
 // See T37785, T38316, T47022 about it.
-if ( $wmgWatchlistDefault ) {
-	$wgDefaultUserOptions['watchdefault'] = 1;
-} else {
-	$wgDefaultUserOptions['watchdefault'] = 0;
-}
-
-if ( $wmgWatchMoves ) {
-	$wgDefaultUserOptions['watchmoves'] = 1;
-} else {
-	$wgDefaultUserOptions['watchmoves'] = 0;
-}
-
-if ( $wmgWatchRollback ) {
-	$wgDefaultUserOptions['watchrollback'] = 1;
-} else {
-	$wgDefaultUserOptions['watchrollback'] = 0;
-}
+$wgDefaultUserOptions['watchdefault'] = (int)$wmgWatchlistDefault;
+$wgDefaultUserOptions['watchmoves'] = (int)$wmgWatchMoves;
+$wgDefaultUserOptions['watchrollback'] = (int)$wmgWatchRollback;
 
 $wgDefaultUserOptions['enotifminoredits'] = $wmgEnotifMinorEditsUserDefault;
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
 
-if ( $wmgEnhancedRecentChanges ) {
-	$wgDefaultUserOptions['usenewrc'] = 1;
-} else {
-	$wgDefaultUserOptions['usenewrc'] = 0;
-}
-
-if ( $wmgEnhancedWatchlist ) {
-	$wgDefaultUserOptions['extendwatchlist'] = 1;
-} else {
-	$wgDefaultUserOptions['extendwatchlist'] = 0;
-}
-
-if ( $wmgForceEditSummary ) {
-	$wgDefaultUserOptions['forceeditsummary'] = 1;
-} else {
-	$wgDefaultUserOptions['forceeditsummary'] = 0;
-}
-
-if ( $wmgShowWikidataInWatchlist ) {
-	$wgDefaultUserOptions['wlshowwikibase'] = 1;
-} else {
-	$wgDefaultUserOptions['wlshowwikibase'] = 0;
-}
+$wgDefaultUserOptions['usenewrc'] = (int)$wmgEnhancedRecentChanges;
+$wgDefaultUserOptions['extendwatchlist'] = (int)$wmgEnhancedWatchlist;
+$wgDefaultUserOptions['forceeditsummary'] = (int)$wmgForceEditSummary;
+$wgDefaultUserOptions['wlshowwikibase'] = (int)$wmgShowWikidataInWatchlist;
 
 if ( $wmgUseMassMessage ) {
 	wfLoadExtension( 'MassMessage' );
@@ -3193,7 +3148,6 @@ if ( $wmgUseWikimediaShopLink ) {
 			'title' => $skin->msg( 'wikimediashoplink-link-tooltip' )->text(),
 			'id'    => 'n-shoplink',
 		];
-		return true;
 	};
 }
 
@@ -3686,12 +3640,8 @@ if ( $wmgUseGraph ) {
 
 if ( $wmgEnableJsonConfigDataMode ) {
 	// Safety: before extension.json, these values were initialized by JsonConfig.php
-	if ( !isset( $wgJsonConfigModels ) ) {
-		$wgJsonConfigModels = [];
-	}
-	if ( !isset( $wgJsonConfigs ) ) {
-		$wgJsonConfigs = [];
-	}
+	$wgJsonConfigModels = $wgJsonConfigModels ?? [];
+	$wgJsonConfigs = $wgJsonConfigs ?? [];
 
 	$wgJsonConfigEnableLuaSupport = true;
 
@@ -3980,7 +3930,6 @@ $wgHooks['SpecialVersionVersionUrl'][] = static function ( $version, &$versionUr
 		}
 		return false;
 	}
-	return true;
 };
 
 if ( $wmgAllowRobotsControlInAllNamespaces ) {
@@ -4090,11 +4039,7 @@ if ( $wmgUseEventBus ) {
 		];
 	}
 
-	if ( $wmgServerGroup === 'jobrunner' || $wmgServerGroup === 'videoscaler' ) {
-		$wgEventBusEnableRunJobAPI = true;
-	} else {
-		$wgEventBusEnableRunJobAPI = false;
-	}
+	$wgEventBusEnableRunJobAPI = ( $wmgServerGroup === 'jobrunner' || $wmgServerGroup === 'videoscaler' );
 }
 
 if ( $wmgUseCapiunto ) {
@@ -4210,11 +4155,9 @@ if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession || $wmgUseCSP ) {
 	// Temporary global whitelist for origins used by trusted
 	// opt-in scripts, until a per-user ability for this exists.
 	// T207900#4846582
-	$wgCSPFalsePositiveUrls = array_merge( $wgCSPFalsePositiveUrls, [
-		'https://cvn.wmflabs.org' => true,
-		'https://tools.wmflabs.org/intuition/' => true,
-		'https://intuition.toolforge.org/' => true,
-	] );
+	$wgCSPFalsePositiveUrls['https://cvn.wmflabs.org'] = true;
+	$wgCSPFalsePositiveUrls['https://tools.wmflabs.org/intuition/'] = true;
+	$wgCSPFalsePositiveUrls['https://intuition.toolforge.org/'] = true;
 
 	$wgExtensionFunctions[] = static function () {
 		global $wgCSPReportOnlyHeader, $wmgUseCSPReportOnly, $wgCommandLineMode,
