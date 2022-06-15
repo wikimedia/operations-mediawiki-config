@@ -26829,6 +26829,7 @@ return [
 	'arcwiki' => true,
 	'arwiki' => true,
 	'arzwiki' => true,
+	'aswiki' => true,
 	'astwiki' => true,
 	'atjwiki' => true,
 	'avwiki' => true,
