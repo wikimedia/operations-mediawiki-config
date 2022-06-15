@@ -1394,9 +1394,10 @@ Wikipedia:
         comment_2x:  T150618
 
     zh_classicalwiki:
-        comment:  T177165
-        comment_1_5x:  T177165
-        comment_2x:  T177165
+        commons:  File:Wikipedia-logo-v4-zh-classical.svg
+        comment:  T177165, T259006
+        comment_1_5x:  T177165, T259006
+        comment_2x:  T177165, T259006
 
     zh_min_nanwiki:
         comment_1_5x:  T150618

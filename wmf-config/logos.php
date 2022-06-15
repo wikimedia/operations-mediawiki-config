@@ -341,7 +341,7 @@ return [
 	'yowiki' => '/static/images/project-logos/yowiki.png',
 	'zawiki' => '/static/images/project-logos/zawiki.png', // T50397
 	'zeawiki' => '/static/images/project-logos/zeawiki.png', // T51125
-	'zh_classicalwiki' => '/static/images/project-logos/zh_classicalwiki.png', // T177165
+	'zh_classicalwiki' => '/static/images/project-logos/zh_classicalwiki.png', // T177165, T259006
 	'zh_min_nanwiki' => '/static/images/project-logos/zh_min_nanwiki.png',
 	'zh_yuewiki' => '/static/images/project-logos/zh_yuewiki.png',
 	'zhwiki' => '/static/images/project-logos/zhwiki.png', // T276694
@@ -1143,7 +1143,7 @@ return [
 	'yowiki' => '/static/images/project-logos/yowiki-1.5x.png', // T150618
 	'zawiki' => '/static/images/project-logos/zawiki-1.5x.png', // T150618
 	'zeawiki' => '/static/images/project-logos/zeawiki-1.5x.png', // T150618
-	'zh_classicalwiki' => '/static/images/project-logos/zh_classicalwiki-1.5x.png', // T177165
+	'zh_classicalwiki' => '/static/images/project-logos/zh_classicalwiki-1.5x.png', // T177165, T259006
 	'zh_min_nanwiki' => '/static/images/project-logos/zh_min_nanwiki-1.5x.png', // T150618
 	'zh_yuewiki' => '/static/images/project-logos/zh_yuewiki-1.5x.png', // T150618
 	'zhwiki' => '/static/images/project-logos/zhwiki-1.5x.png', // T276694
@@ -1727,7 +1727,7 @@ return [
 	'yowiki' => '/static/images/project-logos/yowiki-2x.png', // T150618
 	'zawiki' => '/static/images/project-logos/zawiki-2x.png', // T150618
 	'zeawiki' => '/static/images/project-logos/zeawiki-2x.png', // T150618
-	'zh_classicalwiki' => '/static/images/project-logos/zh_classicalwiki-2x.png', // T177165
+	'zh_classicalwiki' => '/static/images/project-logos/zh_classicalwiki-2x.png', // T177165, T259006
 	'zh_min_nanwiki' => '/static/images/project-logos/zh_min_nanwiki-2x.png', // T150618
 	'zh_yuewiki' => '/static/images/project-logos/zh_yuewiki-2x.png', // T150618
 	'zhwiki' => '/static/images/project-logos/zhwiki-2x.png', // T276694
