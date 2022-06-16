@@ -369,13 +369,13 @@ function wmfGetOverrideSettings() {
 			'default' => '/static/images/project-logos/wikimedia-cloud-services.svg'
 		],
 		'-wmgSiteLogoVariants' => [
-			'default' => false,
+			'default' => null,
 		],
 		'-wmgSiteLogoWordmark' => [
-			'default' => false,
+			'default' => null,
 		],
 		'-wmgSiteLogoTagline' => [
-			'default' => false,
+			'default' => null,
 		],
 
 		'wgFavicon' => [

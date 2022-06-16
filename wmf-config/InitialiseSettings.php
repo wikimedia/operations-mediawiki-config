@@ -1193,7 +1193,7 @@ return [
 	],
 ],
 'wmgSiteLogoTagline' => [
-	'default' => false,
+	'default' => null,
 	// Wikipedia
 	'arwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ar.svg',
