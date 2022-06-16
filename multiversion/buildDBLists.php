@@ -56,25 +56,22 @@ foreach ( glob( __DIR__ . '/../dblists/*.dblist' ) as $filepath ) {
 }
 
 foreach ( $knownDBLists as $DBList => $contents ) {
-	writeDBList( $DBList, $contents );
+	wmfWriteDBList( $DBList, $contents );
 }
 foreach ( glob( __DIR__ . '/../dblists/*.dbexpr' ) as $filepath ) {
-	writeDBList(
+	wmfWriteDBList(
 		basename( $filepath, '.dbexpr' ),
 		MWWikiversions::evalDbListExpression( file_get_contents( $filepath ) ),
 		'dbexpr'
 	);
 }
 
-// TODO rename global function to match wmf*() convention
-// phpcs:disable MediaWiki.NamingConventions.PrefixedGlobalFunctions.allowedPrefix
-
 /**
  * @param string $listname The name of the db list to write.
  * @param string[] $listcontent The wikidbs for the dblist contents.
  * @param string $source One of "YAML" or "dbexpr"
  */
-function writeDBList( $listname, $listcontent, $source = 'YAML' ) {
+function wmfWriteDBList( $listname, $listcontent, $source = 'YAML' ) {
 	$path = __DIR__ . '/../dblists/' . $listname . '.dblist';
 
 	// Alpha-sort the contents of the list by array value for consitency

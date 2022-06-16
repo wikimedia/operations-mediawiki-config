@@ -7,15 +7,12 @@
  * Then view <http://localhost:9412/conf/>.
  */
 
-// TODO rename global functions to match wmf*() convention
-// phpcs:disable MediaWiki.NamingConventions.PrefixedGlobalFunctions.allowedPrefix
-
 	/**
 	 * @param array $viewFilenames
 	 * @param bool $highlight
 	 * @param string $prefixFunc
 	 */
-	function outputFiles( $viewFilenames, $highlight = true, $prefixFunc = 'basename' ) {
+	function wmfOutputFiles( $viewFilenames, $highlight = true, $prefixFunc = 'basename' ) {
 		$viewFilenames = array_map( $prefixFunc, $viewFilenames );
 		natsort( $viewFilenames );
 		foreach ( $viewFilenames as $viewFilename ) {
@@ -94,14 +91,14 @@
 		glob( __DIR__ . '/{fc-list,langlist*,wikiversions*.json,extension-list}', GLOB_BRACE ),
 		glob( __DIR__ . '/*.yaml' )
 	);
-	outputFiles( $viewFilenames );
+	wmfOutputFiles( $viewFilenames );
 ?>
 </ul>
 
 <h3 id="dblist">Database lists</h3>
 <ul>
 <?php
-	outputFiles( glob( __DIR__ . '/dblists/*.dblist' ), true, static function ( $name ) {
+	wmfOutputFiles( glob( __DIR__ . '/dblists/*.dblist' ), true, static function ( $name ) {
 		return str_replace( __DIR__ . '/', '', $name );
 	} );
 ?>
