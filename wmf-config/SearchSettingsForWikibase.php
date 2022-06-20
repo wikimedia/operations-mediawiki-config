@@ -56,14 +56,6 @@ $wgWBCSUseStemming = [
 	'zh' => [ 'index' => true, 'query' => true ],
 ];
 
-// Statement boosting
-if ( isset( $wmgWikibaseSearchStatementBoosts ) ) {
-	$wgWBCSStatementBoost = $wmgWikibaseSearchStatementBoosts;
-}
-if ( isset( $wmgWBCSLanguageSelectorStatementBoost ) ) {
-	$wgWBCSLanguageSelectorStatementBoost = $wmgWBCSLanguageSelectorStatementBoost;
-}
-
 // Properties to index
 $wgWBRepoSettings['searchIndexProperties'] = $wmgWikibaseSearchIndexProperties;
 // T163642, T99899
