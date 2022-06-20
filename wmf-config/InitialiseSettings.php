@@ -16707,6 +16707,7 @@ return [
 	'eswikivoyage' => true, // T241163
 	'euwiki' => true, // T166553
 	'fawiki' => true,
+	'fawiktionary' => true, // T308505
 	'frwiki' => true, // T95604
 	'gawiki' => true, // T177775
 	'gdwiki' => true, // T156281
