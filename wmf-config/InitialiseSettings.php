@@ -23822,6 +23822,11 @@ return [
 // EntitySearchElastic::CONTEXT_WIKIBASE_PREFIX = 'wikibase_prefix_search'
 'wmgWikibaseSearchProfiles' => [
 	'default' => null,
+	'wikidatawiki' => [
+		'default' => null,
+		// \Wikibase\Search\Elastic\Hooks::LANGUAGE_SELECTOR_PREFIX
+		'language' => 'language_selector_prefix',
+	],
 	'testwikidatawiki' => [
 		'default' => null,
 		// \Wikibase\Search\Elastic\Hooks::LANGUAGE_SELECTOR_PREFIX
