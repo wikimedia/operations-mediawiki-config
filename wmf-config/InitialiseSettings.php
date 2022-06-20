@@ -15028,6 +15028,7 @@ return [
 	'+thwikisource' => [ 102, 114 ], // T275282
 	'+trwikibooks' => [ 100, 110, ],
 	'+trwikisource' => [ 100 ],
+	'+ukwikibooks' => [ 102 ], // T310940
 	'+ukwikisource' => [ 102, 116 ], // T52561, T53684
 	'+vecwikisource' => [ 100 ],
 	'+viwikibooks' => [ 104, 106 ],
