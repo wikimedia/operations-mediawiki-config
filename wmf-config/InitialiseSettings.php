@@ -23873,7 +23873,7 @@ return [
 // Wikidata search: configure boost based on statements (T148411)
 // see SearchSettingsForWikibase.php
 // NOTE: these properties need to be indexed first (see wmgWikibaseSearchIndexProperties)
-'wmgWikibaseSearchStatementBoosts' => [
+'wgWBCSStatementBoost' => [
 	'default' => [],
 	'wikidatawiki' => [
 		// Q4167410=Wikimedia disambiguation page
@@ -23893,7 +23893,7 @@ return [
 
 // Wikidata search: configure boost based on language "attributes" for the wbsearchentities "language" profile
 // Note that only the max score is kept and thus is not suited for negative boosts
-'wmgWBCSLanguageSelectorStatementBoost' => [
+'wgWBCSLanguageSelectorStatementBoost' => [
 	'default' => [],
 	'wikidatawiki' => [
 		// Q34770=language

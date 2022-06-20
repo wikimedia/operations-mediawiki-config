@@ -432,7 +432,7 @@ $wgWBCSRescoreFunctionChains = [
 				'type' => 'term_boost',
 				'weight' => 0.1,
 				'params' => [
-					// Will be replaced by $wmgWikibaseSearchStatementBoosts
+					// Will be replaced by $wgWBCSStatementBoost
 					'statement_keywords' => '_statementBoost_',
 				]
 			]
@@ -452,7 +452,7 @@ $wgWBCSLanguageSelectorRescoreFunctionChains = [
 				'type' => 'term_boost',
 				'weight' => 0.1,
 				'params' => [
-					// Will be replaced by $wmgWBCSLanguageSelectorStatementBoost
+					// Will be replaced by $wgWBCSLanguageSelectorStatementBoost
 					'statement_keywords' => '_statementBoost_',
 				]
 			]

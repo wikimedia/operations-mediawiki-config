@@ -1069,10 +1069,10 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
-		'-wmgWikibaseSearchStatementBoosts' => [
+		'-wgWBCSStatementBoost' => [
 			'default' => []
 		],
-		'-wmgWBCSLanguageSelectorStatementBoost' => [
+		'-wgWBCSLanguageSelectorStatementBoost' => [
 			'default' => []
 		],
 
