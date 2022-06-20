@@ -1468,6 +1468,7 @@ return [
 	'viwikivoyage' => false, // T54034
 	'vowiki' => false, // T15740
 	'xmfwiki' => false,
+	'zhwikiquote' => false, // T311017
 	'zhwikisource' => false, // T295265
 ],
 # @} end of wgEnableUploads
