@@ -70,6 +70,7 @@ $IP/extensions/GrowthExperiments/extension.json
 $IP/extensions/GuidedTour/extension.json
 $IP/extensions/GWToolset/extension.json
 $IP/extensions/ImageMap/extension.json
+$IP/extensions/ImageSuggestions/extension.json
 $IP/extensions/InputBox/extension.json
 $IP/extensions/Insider/extension.json
 $IP/extensions/intersection/extension.json

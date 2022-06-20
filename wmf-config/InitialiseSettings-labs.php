@@ -2451,5 +2451,8 @@ function wmfGetOverrideSettings() {
 			'enwiki' => true,
 		],
 
+		'wmgUseImageSuggestions' => [
+			'default' => false,
+		],
 	];
 } # wmfGetOverrideSettings()
