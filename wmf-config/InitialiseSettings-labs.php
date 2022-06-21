@@ -927,6 +927,29 @@ function wmfGetOverrideSettings() {
 						'mobile' => [ 'stable' ]
 					],
 				],
+				[
+					// T311079
+					'name' => 'internal-gdi-safety-survey-wave2',
+					'type' => 'internal',
+					'layout' => 'single-answer',
+					'question' => 'ext-quicksurveys-internal-gdi-safety-survey-question',
+					'privacyPolicy' => 'ext-quicksurveys-internal-gdi-safety-survey-privacy-policy',
+					'answers' => [
+						'ext-quicksurveys-internal-gdi-safety-survey-answer-positive',
+						'ext-quicksurveys-internal-gdi-safety-survey-answer-negative',
+						'ext-quicksurveys-internal-gdi-safety-survey-answer-neutral',
+					],
+					'audience' => [
+						// T311079
+						'minEdits' => 5
+					],
+					'enabled' => true,
+					'coverage' => 1.0, // T311079
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable', 'beta' ],
+					]
+				],
 			],
 			'cawiki' => [
 				// T187299
@@ -948,10 +971,33 @@ function wmfGetOverrideSettings() {
 					'shuffleAnswersDisplay' => true,
 				],
 			],
+			'eswiki' => [
+				// T187299
+				'name' => 'internal-gdi-safety-survey-wave2',
+				'type' => 'internal',
+				'layout' => 'single-answer',
+				'question' => 'ext-quicksurveys-internal-gdi-safety-survey-question',
+				'privacyPolicy' => 'ext-quicksurveys-internal-gdi-safety-survey-privacy-policy',
+				'answers' => [
+					'ext-quicksurveys-internal-gdi-safety-survey-answer-positive',
+					'ext-quicksurveys-internal-gdi-safety-survey-answer-negative',
+					'ext-quicksurveys-internal-gdi-safety-survey-answer-neutral',
+				],
+				'audience' => [
+					// T311079
+					'minEdits' => 5
+				],
+				'enabled' => true,
+				'coverage' => 1.0, // T311079
+				'platforms' => [
+					'desktop' => [ 'stable' ],
+					'mobile' => [ 'stable', 'beta' ],
+				],
+			],
 			'+fawiki' => [
 				[
 					// T297628
-					'name' => 'internal-gdi-safety-survey',
+					'name' => 'internal-gdi-safety-survey-wave2',
 					'type' => 'internal',
 					'layout' => 'single-answer',
 					'question' => 'ext-quicksurveys-internal-gdi-safety-survey-question',
@@ -966,7 +1012,7 @@ function wmfGetOverrideSettings() {
 						'minEdits' => 5
 					],
 					'enabled' => true,
-					'coverage' => 0.1, // T296486
+					'coverage' => 1.0, // T296486
 					'platforms' => [
 						'desktop' => [ 'stable' ],
 						'mobile' => [ 'stable', 'beta' ],
