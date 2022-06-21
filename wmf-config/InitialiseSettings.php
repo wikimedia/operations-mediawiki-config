@@ -28120,6 +28120,9 @@ return [
 
 'wmgUseImageSuggestions' => [
 	'default' => false,
+	'ptwiki' => true,
+	'ruwiki' => true,
+	'idwiki' => true,
 ],
 
 'wgImageSuggestionsHelpLink' => [
