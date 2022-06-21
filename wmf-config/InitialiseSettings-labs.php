@@ -1019,6 +1019,27 @@ function wmfGetOverrideSettings() {
 					],
 				],
 			],
+			'jawiki' => [
+				// T311015
+				[
+					'enabled' => true,
+					'type' => 'external',
+					'name' => 'research-incentive',
+					'question' => 'research-incentive-message',
+					'description' => 'research-incentive-description',
+					'answers' => [
+						'research-incentive-answer-positive',
+						'research-incentive-answer-negative',
+					],
+					'coverage' => 0,
+					'platform' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ]
+					],
+					'link' => 'research-incentive-link',
+					'privacyPolicy' => 'research-incentive-privacy',
+				],
+			],
 		],
 		'-wgScorePath' => [
 			'default' => "//upload.wikimedia.beta.wmflabs.org/score",
