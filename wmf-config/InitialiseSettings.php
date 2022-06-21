@@ -25742,6 +25742,7 @@ return [
 	'frwiktionary' => true,
 	'hewiki' => true,
 	'huwiki' => true,
+	'jawiki' => true,
 	'metawiki' => true,
 	'nowiki' => true,
 	'plwiki' => true,
@@ -25880,6 +25881,28 @@ return [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable', 'beta' ],
 			],
+		],
+	],
+	'jawiki' => [
+		// T311015
+		[
+			'enabled' => false,
+			'type' => 'external',
+			'name' => 'research-incentive',
+			'question' => 'research-incentive-message',
+			'description' => 'research-incentive-description',
+			'answers' => [
+				'research-incentive-answer-positive',
+				'research-incentive-answer-negative',
+			],
+			'coverage' => 0.00002,
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'link' => 'research-incentive-link',
+			'privacyPolicy' => 'research-incentive-privacy',
+			'confirmMsg' => 'research-incentive-confirm-msg',
 		],
 	],
 	'ruwiki' => [
