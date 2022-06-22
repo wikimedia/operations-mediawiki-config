@@ -544,7 +544,7 @@ class MWMultiVersion {
 	 *
 	 * This must be called from web requests. For CLI, use getMediaWikiCli.
 	 *
-	 * If the wiki doesn't exist, then wmf-config/missing.php will
+	 * If the wiki doesn't exist, then missing.php will
 	 * be rendered and flushed to stdout and the process exited.
 	 *
 	 * If the wiki exists, this function also has these responsibilities:
@@ -578,7 +578,7 @@ class MWMultiVersion {
 		if ( $multiVersion->isMissing() ) {
 			// same hack as CommonSettings.php
 			header( 'Cache-control: no-cache' );
-			include MEDIAWIKI_DEPLOYMENT_DIR . '/wmf-config/missing.php';
+			include __DIR__ . '/missing.php';
 			exit;
 		}
 
