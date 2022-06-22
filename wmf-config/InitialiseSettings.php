@@ -17841,6 +17841,7 @@ return [
 	'frwikinews' => 'uca-fr', // T68165
 	'frwikiversity' => 'uca-fr', // T71782
 	'frwiktionary' => 'uca-default', // T169810
+	'gawiki' => 'uca-ga-u-kn', // T311136
 	'gdwiki' => 'uca-default', // T125315
 	'gewikimedia' => 'uca-ka-u-kn', // T236389
 	'glwiki' => 'uca-gl-u-kn', // T149002
