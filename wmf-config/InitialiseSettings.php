@@ -27455,6 +27455,17 @@ return [
 	'default' => []
 ],
 
+'wgGEStructuredTaskRejectionReasonTextInputEnabled' => [
+	'default' => false,
+	// Enable free text field for entering rejection reason (T304099).
+	'testwiki' => true,
+	'arwiki' => true,
+	'bnwiki' => true,
+	'cswiki' => true,
+	'eswiki' => true,
+	'frwiki' => true
+],
+
 'wmgShowRollbackConfirmationDefaultUserOptions' => [
 	'default' => false,
 	'dewiki' => true
