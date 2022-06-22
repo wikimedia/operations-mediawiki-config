@@ -1,20 +1,30 @@
 <?php
-
 /**
- * Missing wiki redirect / 404 page
+ * Handle "Missing wiki" HTTP response (either redirect or 404).
  *
- * This file redirects non-existing languages of Wikipedia, Wiktionary, Wikiquote,
- * Wikibooks and Wikinews to the Wikimedia Incubator. Non-existing languages of
- * Wikisource and Wikiversity show static 404 page.
+ * To test the script locally:
  *
- * There is a specific extension on Incubator used to make nice "welcome pages"
- * (adapted to each language, project and translatable).
+ * - Uncomment MISSING_PHP_TEST
+ * - Run `php -S localhost:9412` from this directory.
+ * - <http://localhost:9412/missing.php?host=aa.wikinews.org> (Incubator redirect)
+ * - <http://localhost:9412/missing.php?host=nl.wikiversity.org> (404)
+ * - <http://localhost:9412/missing.php?host=nl.wikiversity.org&title=wikt:foo> (interwiki redirect)
  *
- * These redirects allow the usage of interwiki links from existing language
- * subdomains to Incubator, e.g. [[xyz:Page]] on en.wikipedia links to
- * http://incubator.wikimedia.org/wiki/Wp/xyz/Page
+ * We redirect non-existing languages of Wikipedia, Wiktionary, Wikiquote,
+ * Wikibooks, and Wikinews to the Wikimedia Incubator.
  *
- * @copyright Copyright © 2011-2013, Danny B., SPQRobin, Tim Starling
+ * Non-existing languages of Wikisource and Wikiversity show a 404 page.
+ *
+ * The WikimediaIncubator extension ensures a localised "welcome page"
+ * adapted to the given project/language.
+ *
+ * These redirects are relied upon as part of the interwiki map
+ * and language link databases, by allowing any two languages to
+ * have a stable and canonical link between them, regardless of whether
+ * it is still on Incubator, e.g. [[xyz:Page]] on en.wikipedia redirects
+ * via missing.php to <https://incubator.wikimedia.org/wiki/Wp/xyz/Page>.
+ *
+ * @copyright Copyright 2011-2013, Danny B., SPQRobin, Tim Starling
  * @license GPL-2.0-or-later
  */
 
