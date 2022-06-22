@@ -10,7 +10,8 @@
 if ( $wmgRealm == 'labs' ) {
 
 	// Beta Cluster: Increase timeout to 500ms (in microseconds)
-	$wgObjectCaches['mcrouter']['timeout'] = 0.5 * 1e6;
+	$wgObjectCaches['mcrouter']['timeout'] = 0.5e6;
+	$wgObjectCaches['mcrouter-primary-dc']['timeout'] = 0.5e6;
 
 }
 // end safe guard
