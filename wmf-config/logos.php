@@ -803,7 +803,7 @@ return [
 	'qualitywiki' => '/static/images/project-logos/qualitywiki.png',
 	'searchcomwiki' => '/static/images/project-logos/searchcomwiki.png',
 	'spcomwiki' => '/static/images/project-logos/spcomwiki.png',
-	'specieswiki' => '/static/images/project-logos/specieswiki.png', // T306037
+	'specieswiki' => '/static/images/project-logos/specieswiki.png', // T306037, T310961
 	'stewardwiki' => '/static/images/project-logos/stewardwiki.png', // T39700
 	'sysop_itwiki' => '/static/images/project-logos/sysop_itwiki.png', // T256545
 	'strategywiki' => '/static/images/project-logos/strategywiki.png',
@@ -1408,7 +1408,7 @@ return [
 	'officewiki' => '/static/images/project-logos/officewiki-1.5x.png',
 	'ombudsmenwiki' => '/static/images/project-logos/ombudsmenwiki-1.5x.png',
 	'otrs_wikiwiki' => '/static/images/project-logos/otrs_wikiwiki-1.5x.png',
-	'specieswiki' => '/static/images/project-logos/specieswiki-1.5x.png', // T230113, T306037
+	'specieswiki' => '/static/images/project-logos/specieswiki-1.5x.png', // T230113, T306037, T310961
 	'sysop_itwiki' => '/static/images/project-logos/sysop_itwiki-1.5x.png', // T256545
 	'test2wiki' => '/static/images/project-logos/test2wiki-1.5x.png',
 	'testcommonswiki' => '/static/images/project-logos/commonswiki-1.5x.png', // T203343
@@ -1992,7 +1992,7 @@ return [
 	'officewiki' => '/static/images/project-logos/officewiki-2x.png',
 	'ombudsmenwiki' => '/static/images/project-logos/ombudsmenwiki-2x.png',
 	'otrs_wikiwiki' => '/static/images/project-logos/otrs_wikiwiki-2x.png',
-	'specieswiki' => '/static/images/project-logos/specieswiki-2x.png', // T230113, T306037
+	'specieswiki' => '/static/images/project-logos/specieswiki-2x.png', // T230113, T306037, T310961
 	'sysop_itwiki' => '/static/images/project-logos/sysop_itwiki-2x.png', // T256545
 	'test2wiki' => '/static/images/project-logos/test2wiki-2x.png',
 	'testcommonswiki' => '/static/images/project-logos/commonswiki-2x.png', // T203343
