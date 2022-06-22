@@ -58,7 +58,6 @@ $wgWBCSUseStemming = [
 
 // Statement boosting
 $wgWBCSStatementBoost = $wmgWikibaseSearchStatementBoosts;
-$wgWBCSLanguageSelectorStatementBoost = $wmgWBCSLanguageSelectorStatementBoost;
 
 // Properties to index
 $wgWBRepoSettings['searchIndexProperties'] = $wmgWikibaseSearchIndexProperties;

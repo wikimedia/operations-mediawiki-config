@@ -12,12 +12,6 @@ $wgWBCSFulltextSearchProfile = 'wikibase_config_fulltext_query';
 // Fulltext search rescore
 $wgWBCSDefaultFulltextRescoreProfile = 'wikibase_config_phrase';
 
-// Prefix search queries for the language selector (e.g. in Special:NewLexeme)
-// Re-use the same query builder
-$wgWBCSLanguageSelectorRescoreProfile = "wikibase_config_prefix_query";
-// Tune the rescore window to apply different statementBoosts
-$wgWBCSLanguageSelectorRescoreProfile = "wikibase_config_language_selector";
-
 // Fine tuning of the completion search (main elastic query)
 $wgWBCSPrefixSearchProfiles = [
 	'wikibase_config_prefix_query' => [
@@ -380,22 +374,6 @@ $wgWBCSRescoreProfiles = [
 			],
 		],
 	],
-	// Language selector profile
-	'wikibase_config_language_selector' => [
-		'i18n_msg' => 'wikibase-rescore-profile-prefix',
-		'supported_namespaces' => 'all',
-		'rescore' => [
-			[
-				'window' => 8192,
-				'window_size_override' => 'EntitySearchRescoreWindowSize',
-				'query_weight' => 1.0,
-				'rescore_query_weight' => 1.0,
-				'score_mode' => 'total',
-				'type' => 'function_score',
-				'function_chain' => 'wikibase_config_entity_weight_language_selector'
-			]
-		]
-	],
 ];
 
 // Cirrus rescore function chains
@@ -420,34 +398,6 @@ $wgWBCSRescoreFunctionChains = [
 				'weight' => 0.1,
 				'params' => [
 					// Will be replaced by $wmgWikibaseSearchStatementBoosts
-					'statement_keywords' => '_statementBoost_',
-				]
-			]
-		]
-	],
-];
-
-$wgWBCSLanguageSelectorRescoreFunctionChains = [
-	'wikibase_config_entity_weight_language_selector' => [
-		'score_mode' => 'sum',
-		'functions' => [
-			[
-				// Incoming links: k = 100, since it is normal to have a bunch of incoming links
-				'type' => 'satu',
-				'weight' => '0.6',
-				'params' => [ 'field' => 'incoming_links', 'missing' => 0, 'a' => 1 , 'k' => 100 ]
-			],
-			[
-				// Site links: k = 20, tens of sites is a lot
-				'type' => 'satu',
-				'weight' => '0.4',
-				'params' => [ 'field' => 'sitelink_count', 'missing' => 0, 'a' => 2, 'k' => 20 ]
-			],
-			[
-				'type' => 'term_boost',
-				'weight' => 0.1,
-				'params' => [
-					// Will be replaced by $wmgWBCSLanguageSelectorStatementBoost
 					'statement_keywords' => '_statementBoost_',
 				]
 			]
