@@ -7,7 +7,6 @@ use MWWikiversions;
 
 require_once __DIR__ . '/MWMultiVersion.php';
 require_once __DIR__ . '/MWWikiversions.php';
-require_once __DIR__ . '/../src/StaticSiteConfiguration.php';
 
 /**
  * Wrapper for config caching code.
@@ -99,7 +98,13 @@ class MWConfigCacheGenerator {
 	}
 
 	/**
-	 * Create a MultiVersion config object for a wiki
+	 * Compute the config globals for a wiki in a standalone way for testing.
+	 *
+	 * In production code, use getMWConfigForCacheing() or getConfigGlobals() instead.
+	 *
+	 * This method will load InitialiseSettings (which requires Defines.php) and create
+	 * a SiteConfiguration object (which requires SiteConfiguration.php). It is the responsibility
+	 * of the caller to ensure those are loaded (either from MW or standalone from /tests/data).
 	 *
 	 * @param string $wikiDBname The wiki's database name, e.g. 'enwiki' or  'zh_min_nanwikisource'
 	 * @param array $config A 2D array of setting -> wiki -> values
@@ -115,7 +120,6 @@ class MWConfigCacheGenerator {
 			// Replace some lists with labs-specific versions
 			$dbLists = array_merge( $dbLists, self::$labsDbLists );
 
-			require_once __DIR__ . "../../src/defines.php";
 			require_once __DIR__ . "../../wmf-config/InitialiseSettings-labs.php";
 			$config = self::applyOverrides( $config );
 		}

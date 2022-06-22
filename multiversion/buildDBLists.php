@@ -5,7 +5,8 @@ use Wikimedia\MWConfig\MWConfigCacheGenerator;
 require_once __DIR__ . '/MWWikiversions.php';
 require_once __DIR__ . '/MWConfigCacheGenerator.php';
 require_once __DIR__ . '/../vendor/autoload.php';
-require_once __DIR__ . '/../src/defines.php';
+require_once __DIR__ . '/../tests/data/MWDefines.php';
+require_once __DIR__ . '/../src/StaticSiteConfiguration.php';
 require_once __DIR__ . '/../wmf-config/InitialiseSettings.php';
 
 global $wmgRealm, $wmgDatacenter;

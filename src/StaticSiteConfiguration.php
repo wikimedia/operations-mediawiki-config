@@ -4,6 +4,9 @@
  * slimmed down to remove dynamic things that depend on MediaWiki
  * (which we don't need for static configuration).
  *
+ * This is for standalone interpreting of wmf-config, such as in unit tests,
+ * CI jobs (config diff), and safely viewing non-private settings on noc.wm.o.
+ *
  * Authors:
  * https://gerrit.wikimedia.org/g/mediawiki/core/+log/15f6e986eb/includes/SiteConfiguration.php
  *

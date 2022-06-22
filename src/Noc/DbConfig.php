@@ -96,7 +96,7 @@ class DbConfig {
 	public function getServer( $db ) {
 		static $canonicalServers;
 		if ( $canonicalServers === null ) {
-			require_once __DIR__ . '/../../src/defines.php';
+			require_once __DIR__ . '/../../tests/data/MWDefines.php';
 			$settings = MWConfigCacheGenerator::getStaticConfig();
 			$canonicalServers = $settings['wgCanonicalServer'];
 		}
