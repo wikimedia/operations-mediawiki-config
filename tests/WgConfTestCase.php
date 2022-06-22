@@ -79,9 +79,9 @@ abstract class WgConfTestCase extends PHPUnit\Framework\TestCase {
 	 *     $wgLocaltimezone = $this->loadWgConf( 'production' )->settings['wgLocaltimezone'];
 	 *
 	 * @param string $wmgRealm Realm to use for example: 'labs' or 'production'
-	 * @return Wikimedia\MWConfig\StaticSiteConfiguration
+	 * @return SiteConfiguration
 	 */
-	final protected function loadWgConf( $wmgRealm ) {
+	final protected function loadWgConf( string $wmgRealm ): SiteConfiguration {
 		// Needed for InitialiseSettings.php
 		$this->setGlobals( [
 			'wmgUdp2logDest' => 'localhost',
@@ -98,7 +98,7 @@ abstract class WgConfTestCase extends PHPUnit\Framework\TestCase {
 		] );
 		require __DIR__ . '/data/TestServices.php';
 
-		$configuration = new Wikimedia\MWConfig\StaticSiteConfiguration;
+		$configuration = new SiteConfiguration();
 		$configuration->suffixes = MWMultiVersion::SUFFIXES;
 		$configuration->wikis = MWWikiversions::readDbListFile( $wmgRealm === 'labs' ? 'all-labs' : 'all' );
 		$configuration->settings = MWConfigCacheGenerator::getStaticConfig();

@@ -141,10 +141,12 @@ function wmfGetOverrideSettings() {
 		],
 
 		// EventStreamConfig overrides for beta sites.
-		// NOTE: StaticSiteConfiguration
-		// config merging with '+' does not support merging for 'default'.
-		// You must specify the +wiki or +tag (e.g. wiki group) you
-		// want to overide and merge stream configs for.
+		//
+		// NOTE: It is not valid to use '+' with 'default'.
+		// Keys for group/wiki here replace those from prod. The result is interpreted by
+		// SiteConfiguration. There can only be one 'default' in the end. The order is the same
+		// as within prod settings (default>group>wikiid), with later ones replacing earlier ones,
+		// unless '+' is used on a later one in which case the values are merged.
 		'wgEventStreams' => [
 			'+group2' => [
 

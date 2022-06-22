@@ -4,6 +4,7 @@ namespace Wikimedia\MWConfig;
 
 use MWMultiVersion;
 use MWWikiversions;
+use SiteConfiguration;
 
 require_once __DIR__ . '/MWMultiVersion.php';
 require_once __DIR__ . '/MWWikiversions.php';
@@ -132,7 +133,7 @@ class MWConfigCacheGenerator {
 			}
 		}
 
-		$conf = new StaticSiteConfiguration();
+		$conf = new SiteConfiguration();
 		$conf->suffixes = MWMultiVersion::SUFFIXES;
 		$conf->settings = $config;
 

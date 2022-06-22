@@ -28,9 +28,7 @@
  * @file
  */
 
-namespace Wikimedia\MWConfig;
-
-class StaticSiteConfiguration {
+class SiteConfiguration {
 
 	/**
 	 * @var array the array of suffixes, for self::siteFromDB()

@@ -1,7 +1,8 @@
 <?php
 /**
- * A few constants from MediaWiki core that we copy here to allow
- * parts of wmf-config to be interpreted without a MediaWiki context.
+ * Copy of MediaWiki core's Defines.php. This is for standalone interpreting
+ * of wmf-config, such as in unit tests, CI jobs (config diff), and safely
+ * viewing of non-private settings on noc.wikimedia.org.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
