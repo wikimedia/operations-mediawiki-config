@@ -1034,6 +1034,11 @@ return [
 		'width' => 93,
 		'height' => 29,
 	],
+	'jvwiktionary' => [ // T311104
+		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-jv.svg',
+		'width' => 119,
+		'height' => 18,
+	],
 	'mniwiktionary' => [ // T294709
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-mni.svg',
 		'width' => 129,
@@ -1087,6 +1092,11 @@ return [
 	],
 
 	// Wikisource
+	'jvwikisource' => [ // T311104
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-jv.svg',
+		'width' => 137,
+		'height' => 18,
+	],
 	'trwikisource' => [ // T260658
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-tr.svg',
 		'width' => 120,
@@ -1295,6 +1305,11 @@ return [
 		'width' => 90,
 		'height' => 12,
 	],
+	'jvwiki' => [ // T311104
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-jv.svg',
+		'width' => 110,
+		'height' => 13,
+	],
 	'hewiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-he.svg',
 		'width' => 111,
@@ -1391,6 +1406,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wiktionary-tagline-fr.svg',
 		'width' => 107,
 		'height' => 10,
+	],
+	'jvwiktionary' => [ // T311104
+		'src' => '/static/images/mobile/copyright/wiktionary-tagline-jv.svg',
+		'width' => 102,
+		'height' => 13,
 	],
 ],
 # @} end of wgLogos
