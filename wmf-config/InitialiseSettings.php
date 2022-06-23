@@ -7921,6 +7921,12 @@ return [
 	],
 ],
 
+'wgVectorTitleAboveTabs' => [
+	'default' => false,
+	'group0' => true,
+	'group1' => true,
+],
+
 // Skin versions are strings not numbers. See skins/Vector/skin.json.
 'wgVectorDefaultSkinVersionForExistingAccounts' => [
 	'default' => '1', // Legacy Vector
