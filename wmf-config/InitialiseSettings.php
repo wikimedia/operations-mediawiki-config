@@ -7919,12 +7919,8 @@ return [
 		],
 	],
 ],
+
 // Skin versions are strings not numbers. See skins/Vector/skin.json.
-'wgVectorDefaultSkinVersion' => [
-	'default' => '1', // Legacy Vector
-	// T254227
-	'desktop-improvements' => '2',
-],
 'wgVectorDefaultSkinVersionForExistingAccounts' => [
 	'default' => '1', // Legacy Vector
 	// T254227
@@ -7934,10 +7930,6 @@ return [
 	'default' => '1', // Legacy Vector
 	// T254227
 	'desktop-improvements' => '2',
-],
-'wgVectorSkinMigrationMode' => [
-	// T299927
-	'default' => true,
 ],
 // T258588: Sidebar expanded for anons on modern Vector
 'wgVectorDefaultSidebarVisibleForAnonymousUser' => [
