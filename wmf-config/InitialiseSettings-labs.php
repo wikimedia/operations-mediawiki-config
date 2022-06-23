@@ -950,6 +950,25 @@ function wmfGetOverrideSettings() {
 						'mobile' => [ 'stable', 'beta' ],
 					]
 				],
+				// T311015
+				[
+					'enabled' => true,
+					'type' => 'external',
+					'name' => 'research-incentive',
+					'question' => 'research-incentive-message',
+					'description' => 'research-incentive-description',
+					'answers' => [
+						'research-incentive-answer-positive',
+						'research-incentive-answer-negative',
+					],
+					'coverage' => 0,
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ]
+					],
+					'link' => 'research-incentive-link',
+					'privacyPolicy' => 'research-incentive-privacy',
+				],
 			],
 			'cawiki' => [
 				// T187299
@@ -1032,7 +1051,7 @@ function wmfGetOverrideSettings() {
 						'research-incentive-answer-negative',
 					],
 					'coverage' => 0,
-					'platform' => [
+					'platforms' => [
 						'desktop' => [ 'stable' ],
 						'mobile' => [ 'stable' ]
 					],
