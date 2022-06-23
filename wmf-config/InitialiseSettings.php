@@ -20396,11 +20396,13 @@ return [
 'wgDiscussionTools_topicsubscription' => [
 	'default' => 'default', // T287802
 	'mediawikiwiki' => 'available', // T302256
+	'testwiki' => 'available', // T310808
 ],
 
 'wgDiscussionTools_autotopicsub' => [
 	'default' => 'default',
 	'mediawikiwiki' => 'available', // T302256
+	'testwiki' => 'available', // T310808
 ],
 
 'wgDiscussionTools_visualenhancements' => [
