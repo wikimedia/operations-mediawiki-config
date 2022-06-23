@@ -1164,6 +1164,9 @@ function wmfGetOverrideSettings() {
 		'-wmgWikibaseSearchStatementBoosts' => [
 			'default' => []
 		],
+		'-wmgWBCSLanguageSelectorStatementBoost' => [
+			'default' => []
+		],
 
 		'-wmgWikibaseDisabledDataTypes' => [
 			'default' => []
