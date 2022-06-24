@@ -27185,6 +27185,10 @@ return [
 	'viwiki' => 'Wikipedia:Sách_hướng_dẫn',
 ],
 
+'wgGEMentorProvider' => [
+	'default' => 'wikitext',
+],
+
 'wgGEHomepageMentorsList' => [
 	'default' => '',
 ],

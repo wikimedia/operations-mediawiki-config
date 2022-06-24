@@ -1610,6 +1610,9 @@ function wmfGetOverrideSettings() {
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
 			'viwiki' => 'https://vi.wikipedia.org/w/api.php',
 		],
+		'wgGEMentorProvider' => [
+			'default' => 'wikitext',
+		],
 		'wgGEHomepageMentorsList' => [
 			'default' => '',
 			'arwiki' => 'Wikipedia:Mentors',
