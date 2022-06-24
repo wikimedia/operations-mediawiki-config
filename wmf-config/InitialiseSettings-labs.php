@@ -1466,6 +1466,10 @@ function wmfGetOverrideSettings() {
 		'wmgUseGrowthExperiments' => [
 			'enwiki' => true,
 		],
+		'wgGEImageRecommendationApiHandler' => [
+			// Can be changed to 'production' when T306349 is resolved.
+			'default' => 'mvp'
+		],
 		'-wgGEDatabaseCluster' => [
 			'default' => false,
 		],
