@@ -1670,9 +1670,6 @@ function wmfGetOverrideSettings() {
 		'-wgGEMentorDashboardDeploymentMode' => [
 			'default' => 'alpha',
 		],
-		'wgGEMentorDashboardBetaMode' => [
-			'default' => true,
-		],
 		'wgGEMentorDashboardDiscoveryEnabled' => [
 			'default' => true,
 		],

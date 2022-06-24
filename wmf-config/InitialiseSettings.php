@@ -27210,13 +27210,6 @@ return [
 	'cswiki' => 'beta',
 ],
 
-// Deprecated variable. Remove after wmf.17 is everywhere and won't rollback.
-'wgGEMentorDashboardBetaMode' => [
-	// do not enable outside of testwikis
-	'default' => false,
-	'testwiki' => true,
-],
-
 'wgGEMentorDashboardDiscoveryEnabled' => [
 	'default' => true,
 ],
