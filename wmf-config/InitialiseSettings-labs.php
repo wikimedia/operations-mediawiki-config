@@ -1670,9 +1670,6 @@ function wmfGetOverrideSettings() {
 		'-wgGEMentorDashboardDeploymentMode' => [
 			'default' => 'alpha',
 		],
-		'wgGEMentorDashboardDiscoveryEnabled' => [
-			'default' => true,
-		],
 		'wgGEHomepageTutorialTitle' => [
 			'default' => '',
 			'arwiki' => 'Help:Tutorial',
