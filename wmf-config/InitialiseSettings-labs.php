@@ -1618,6 +1618,7 @@ function wmfGetOverrideSettings() {
 		],
 		'wgGEMentorProvider' => [
 			'default' => 'wikitext',
+			'enwiki' => 'structured',
 		],
 		'wgGEHomepageMentorsList' => [
 			'default' => '',
