@@ -1307,7 +1307,7 @@ return [
 	],
 	'jvwiki' => [ // T311104
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-jv.svg',
-		'width' => 110,
+		'width' => 117,
 		'height' => 13,
 	],
 	'hewiki' => [
