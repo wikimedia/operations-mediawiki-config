@@ -9597,6 +9597,9 @@ return [
 	'+enwikinews' => [
 		'flood' => [ 'bot' => true ],
 	],
+	'+enwikiquote' => [
+		'rollbacker' => [ 'rollback' => true ], // T310950
+	],
 	'+enwikisource' => [
 		'autoconfirmed' => [
 			'patrol' => true, // T14355
@@ -12129,6 +12132,9 @@ return [
 		'bureaucrat' => [ 'flood' ],
 		'sysop' => [ 'flood' ],
 	],
+	'+enwikiquote' => [
+		'sysop' => [ 'rollbacker' ], // T310950
+	],
 	'+enwikisource' => [
 		'bureaucrat' => [
 			'autopatrolled',
@@ -13503,6 +13509,9 @@ return [
 	'+enwikinews' => [
 		'bureaucrat' => [ 'flood', 'sysop' ],
 		'sysop' => [ 'flood' ],
+	],
+	'+enwikiquote' => [
+		'sysop' => [ 'rollbacker' ], // T310950
 	],
 	'+enwikivoyage' => [
 		'sysop' => [
