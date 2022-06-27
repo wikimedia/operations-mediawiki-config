@@ -20365,7 +20365,15 @@ return [
 
 'wgDiscussionToolsEnableMobile' => [
 	'default' => false,
-	'htwiki' => true, // T302259
+	'jawiki' => true, // T298221
+	'arwiki' => true, // T298221
+	'frwiki' => true, // T298221
+	'kowiki' => true, // T298221
+	'viwiki' => true, // T298221
+	'hewiki' => true, // T298221
+	'bnwiki' => true, // T298221
+	'zhwiki' => true, // T298221
+	'htwiki' => true, // T298221, T302259
 ],
 
 'wgDiscussionToolsReplyIndentation' => [
