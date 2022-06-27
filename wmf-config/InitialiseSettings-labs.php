@@ -545,8 +545,8 @@ function wmfGetOverrideSettings() {
 		],
 		'wgVectorWebABTestEnrollment' => [
 			'default' => [
-				'name' => 'skin-vector-toc-experiment',
-				'enabled' => false,
+				'name' => 'vector.sticky_header_edit',
+				'enabled' => true,
 				'buckets' => [
 					'unsampled' => [
 						'samplingRate' => 0
