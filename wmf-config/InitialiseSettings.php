@@ -20386,7 +20386,6 @@ return [
 	// T310392
 	'default' => 'available',
 	'dewiki' => 'default',
-	'enwiki' => 'default',
 	'fiwiki' => 'default',
 	'ruwiki' => 'default',
 ],
