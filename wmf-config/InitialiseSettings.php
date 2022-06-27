@@ -23666,13 +23666,13 @@ return [
 	'default' => [],
 	'wikidatawiki' => [
 		// Q34770=language
-		'P31=Q34770' => 10,
+		'P31=Q34770' => 50,
 		// Q1288568=modern language
-		'P31=Q1288568' => 10,
+		'P31=Q1288568' => 50,
 		// Q45762=dead language
-		'P31=Q45762' => 10,
+		'P31=Q45762' => 50,
 		// Q33384=dialect
-		'P31=Q33384' => 10,
+		'P31=Q33384' => 50,
 		// Q4167410=Wikimedia disambiguation page
 		'P31=Q4167410' => -10,
 		// T183510:
