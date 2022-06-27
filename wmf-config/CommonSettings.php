@@ -2750,15 +2750,6 @@ if ( $wmgUseTemplateData ) { // T61702 - 2015-07-20
 
 	// TemplateWizard enabled for all TemplateData wikis – T202545
 	wfLoadExtension( 'TemplateWizard' );
-
-	if ( $wmgTemplateDataSuggestedValues ) {
-		$wgTemplateDataSuggestedValuesEditor = true;
-	}
-}
-
-if ( $wmgTemplateSearchImprovements ) {
-	$wgVisualEditorTemplateSearchImprovements = true;
-	$wgTemplateWizardTemplateSearchImprovements = true;
 }
 
 if ( $wmgUseGoogleNewsSitemap ) {
