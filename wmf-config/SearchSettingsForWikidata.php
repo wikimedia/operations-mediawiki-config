@@ -14,7 +14,7 @@ $wgWBCSDefaultFulltextRescoreProfile = 'wikibase_config_phrase';
 
 // Prefix search queries for the language selector (e.g. in Special:NewLexeme)
 // Re-use the same query builder
-$wgWBCSLanguageSelectorRescoreProfile = "wikibase_config_prefix_query";
+$wgWBCSLanguageSelectorPrefixSearchProfile = "wikibase_config_prefix_query";
 // Tune the rescore window to apply different statementBoosts
 $wgWBCSLanguageSelectorRescoreProfile = "wikibase_config_language_selector";
 
