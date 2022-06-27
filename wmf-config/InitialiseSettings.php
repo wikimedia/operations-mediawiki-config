@@ -20422,6 +20422,7 @@ return [
 
 'wgDiscussionTools_visualenhancements' => [
 	'default' => 'unavailable',
+	'mediawikiwiki' => 'available', // T310960
 ],
 
 'wgDTSchemaEditAttemptStepSamplingRate' => [
