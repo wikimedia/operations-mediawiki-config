@@ -20374,6 +20374,7 @@ return [
 	'bnwiki' => true, // T298221
 	'zhwiki' => true, // T298221
 	'htwiki' => true, // T298221, T302259
+	'mediawikiwiki' => true, // T310960
 ],
 
 'wgDiscussionToolsReplyIndentation' => [
