@@ -16988,6 +16988,7 @@ return [
 		'discussiontools-betaenable',        // [Editing] 2020-09-12 – Reply tool
 		'ipinfo-beta-feature-enable',        // [AHT] 2022-10-01 – IP Info
 		'wikieditor-realtime-preview',       // [CommTech] 2022-04-18 – Realtime Preview
+		'wikistories-storiesonarticles',     // [Inuka] 2022-12-30 - Wikistories on articles
 	],
 ],
 
@@ -28310,6 +28311,7 @@ return [
 
 'wmgUseWikistories' => [
 	'default' => false,
+	'idwiki' => true, // T311143
 ],
 
 // Danger: Do *NOT* enable on any public wiki (T17622)
