@@ -2900,7 +2900,6 @@ if ( $wmgUseBabel ) {
 	$wgBabelUseDatabase = true;
 	if ( $wmgUseCentralAuth ) {
 		$wgBabelCentralDb = 'metawiki';
-		$wgBabelCentralApi = 'https://meta.wikimedia.org/w/api.php';
 	}
 }
 
