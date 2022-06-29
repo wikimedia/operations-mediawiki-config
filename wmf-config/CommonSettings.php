@@ -1894,7 +1894,6 @@ if ( $wmgUseCentralAuth ) {
 		$wgCentralAuthCookieDomain = '';
 	}
 	$wgCentralAuthLoginIcon = $wmgCentralAuthLoginIcon;
-	$wgCentralAuthAutoNew = true;
 
 	/**
 	 * This function is used for both the CentralAuthWikiList and
