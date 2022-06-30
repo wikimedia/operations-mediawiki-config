@@ -25904,7 +25904,7 @@ return [
 	'jawiki' => [
 		// T311015
 		[
-			'enabled' => false,
+			'enabled' => true,
 			'type' => 'external',
 			'name' => 'research-incentive',
 			'question' => 'research-incentive-message',
