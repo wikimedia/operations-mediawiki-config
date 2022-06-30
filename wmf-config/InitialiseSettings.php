@@ -7922,9 +7922,9 @@ return [
 ],
 
 'wgVectorTitleAboveTabs' => [
-	'default' => true,
-	// (T310054)
-	'desktop-improvements-group-2' => false,
+	'default' => false,
+	'group0' => true,
+	'group1' => true,
 ],
 
 // Skin versions are strings not numbers. See skins/Vector/skin.json.
