@@ -560,9 +560,6 @@ function wmfGetOverrideSettings() {
 				]
 			]
 		],
-		'wgVectorTitleAboveTabs' => [
-			'default' => true
-		],
 
 		'wmgCommonsMetadataForceRecalculate' => [
 			'default' => true,
