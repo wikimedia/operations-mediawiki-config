@@ -4349,6 +4349,10 @@ return [
 	'+tawiki' => [
 		'WT' => NS_PROJECT_TALK, // T126604
 	],
+	'+tawikisource' => [
+		'Author' => 102, // T165813
+		'Author_talk' => 103, // T165813
+	],
 	'+testwiki' => [
 		'WT' => NS_PROJECT_TALK,
 	],
@@ -6844,7 +6848,7 @@ return [
 	],
 	'tawikisource' => [
 		102 => 'ஆசிரியர்', // T165813 - Author
-		103 => 'ஆசிரியர்_பேச்சு',
+		103 => 'ஆசிரியர்_பேச்சு', // T165813 - Author talk
 	],
 	'tewikisource' => [
 		100 => 'ద్వారము', // Portal
