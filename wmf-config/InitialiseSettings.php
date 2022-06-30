@@ -22009,6 +22009,15 @@ return [
 			// and Hadoop is the main consumer.  Emit canary events.
 			'canary_events_enabled' => true,
 		],
+		'mediawiki.revision-score-test' => [
+			'schema_title' => 'mediawiki/revision/score',
+			'destination_event_service' => 'eventgate-main',
+			// This stream is a subset of the revision-score one,
+			// and the events will be emitted by
+			// the Lift Wing platform. More info in T301878.
+			// Emit canary events.
+			'canary_events_enabled' => true,
+		],
 		'mediawiki.revision-tags-change' => [
 			'schema_title' => 'mediawiki/revision/tags-change',
 			'destination_event_service' => 'eventgate-main',
