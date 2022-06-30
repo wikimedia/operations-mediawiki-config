@@ -25755,6 +25755,7 @@ return [
 	'ruwiki' => true,
 	'ukwiki' => true,
 	'ptwiki' => true,
+	'enwiki' => true,
 	'zhwiki' => true,
 	'commonswiki' => true,
 ],
@@ -25949,6 +25950,56 @@ return [
 			],
 			'enabled' => true,
 			'coverage' => 0.2, // T311643
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable', 'beta' ],
+			],
+		],
+	],
+	'+enwiki' => [
+		[
+			// T311759
+			'name' => 'internal-gdi-safety-survey-wave2',
+			'type' => 'internal',
+			'layout' => 'single-answer',
+			'question' => 'ext-quicksurveys-internal-gdi-safety-survey-question',
+			'privacyPolicy' => 'ext-quicksurveys-internal-gdi-safety-survey-privacy-policy',
+			'answers' => [
+				'ext-quicksurveys-internal-gdi-safety-survey-answer-positive',
+				'ext-quicksurveys-internal-gdi-safety-survey-answer-negative',
+				'ext-quicksurveys-internal-gdi-safety-survey-answer-neutral',
+			],
+			'audience' => [
+				// T311759
+				'minEdits' => 5
+			],
+			'enabled' => true,
+			'coverage' => 0.03, // T311759
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable', 'beta' ],
+			],
+		],
+	],
+	'+fawiki' => [
+		[
+			// T311759
+			'name' => 'internal-gdi-safety-survey-wave2',
+			'type' => 'internal',
+			'layout' => 'single-answer',
+			'question' => 'ext-quicksurveys-internal-gdi-safety-survey-question',
+			'privacyPolicy' => 'ext-quicksurveys-internal-gdi-safety-survey-privacy-policy',
+			'answers' => [
+				'ext-quicksurveys-internal-gdi-safety-survey-answer-positive',
+				'ext-quicksurveys-internal-gdi-safety-survey-answer-negative',
+				'ext-quicksurveys-internal-gdi-safety-survey-answer-neutral',
+			],
+			'audience' => [
+				// T311759
+				'minEdits' => 5
+			],
+			'enabled' => true,
+			'coverage' => 0.2, // T311759
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable', 'beta' ],
