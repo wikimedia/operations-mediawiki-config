@@ -560,6 +560,9 @@ function wmfGetOverrideSettings() {
 				]
 			]
 		],
+		'wgVectorGrid' => [
+			'default' => true
+		],
 
 		'wmgCommonsMetadataForceRecalculate' => [
 			'default' => true,
