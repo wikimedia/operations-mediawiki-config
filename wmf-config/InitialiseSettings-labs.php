@@ -2128,6 +2128,9 @@ function wmfGetOverrideSettings() {
 		'wgProofreadPageUseStatusChangeTags' => [
 			'wikisource' => true,
 		],
+		'wgProofreadPageEnableEditInSequence' => [
+			'wikisource' => true,
+		],
 		'wmgUseWikimediaEditorTasks' => [
 			'default' => false,
 			'wikidatawiki' => true,
