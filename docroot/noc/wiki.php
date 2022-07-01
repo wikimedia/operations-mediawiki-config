@@ -26,7 +26,7 @@ if ( $wmgRealm === 'labs' ) {
 
 $wgConf = new SiteConfiguration();
 $wgConf->suffixes = MWMultiVersion::SUFFIXES;
-$wgConf->wikis = MWWikiversions::readDbListFile( $wmgRealm === 'labs' ? 'all-labs' : 'all' );
+$wgConf->wikis = $wikis;
 $wgConf->settings = $settings;
 
 $selected = $_GET['wiki'] ?? '';
@@ -39,6 +39,7 @@ $selectedGlobals = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCach
 	$wgConf,
 	$wmgRealm
 );
+$selectedGlobals['* dblists'] = MWMultiVersion::getTagsForWiki( $selected, $wmgRealm );
 wmfAssertNoPrivateSettings( $selectedGlobals );
 $isComparing = false;
 if ( $compare ) {
@@ -47,18 +48,30 @@ if ( $compare ) {
 		$wgConf,
 		$wmgRealm
 	);
+	$beforeGlobals['* dblists'] = MWMultiVersion::getTagsForWiki( $compare, $wmgRealm );
 	wmfAssertNoPrivateSettings( $beforeGlobals );
 	$allKeys = array_unique( array_merge( array_keys( $selectedGlobals ), array_keys( $beforeGlobals ) ) );
 	$afterGlobals = $selectedGlobals;
 	$selectedGlobals = [];
 	foreach ( $allKeys as $key ) {
-		if ( ( $beforeGlobals[$key] ?? null ) === ( $afterGlobals[$key] ?? null ) ) {
+		$before = $beforeGlobals[$key] ?? null;
+		$after = $afterGlobals[$key] ?? null;
+		if ( $before === $after ) {
+			continue;
+		}
+
+		if ( $key === '* dblists' ) {
+			$selectedGlobals[$key] = [
+				'context' => implode( "\n", array_intersect( $before, $after ) ),
+				'before' => implode( "\n", array_diff( $before, $after ) ),
+				'after' => implode( "\n", array_diff( $after, $before ) ),
+			];
 			continue;
 		}
 
 		$selectedGlobals[$key] = [
-			'before' => $beforeGlobals[$key] ?? null,
-			'after' => $afterGlobals[$key] ?? null,
+			'before' => $before,
+			'after' => $after,
 		];
 	}
 	unset( $beforeGlobals );
@@ -85,16 +98,25 @@ function wmfAssertNoPrivateSettings( array $globals ) {
 	}
 }
 
-function wmfNocJsonForHtml( string $name, $val ): string {
+function wmfNocJsonForHtml( $val ): string {
 	return htmlspecialchars(
-		$name
-			. ': '
-			. json_encode( $val, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE )
+		json_encode( $val, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE )
 	);
 }
 
 function wmfNocWrapLines( string $str, string $pre = '', string $post = '' ): string {
 	return $pre . str_replace( "\n", "$post\n$pre", $str ) . $post;
+}
+
+function wmfNocDiff( $before, $after, string $context = '' ): string {
+	if ( $context !== '' ) {
+		return wmfNocWrapLines( htmlspecialchars( $before ), '<del>- ', '</del>' ) . "\n"
+			. wmfNocWrapLines( htmlspecialchars( $after ), '<ins>+ ', '</ins>' ) . "\n"
+			. htmlspecialchars( $context );
+	} else {
+		return wmfNocWrapLines( wmfNocJsonForHtml( $before ), '<del>- ', '</del>' ) . "\n"
+			. wmfNocWrapLines( wmfNocJsonForHtml( $after ), '<ins>+ ', '</ins>' );
+	}
 }
 
 function wmfNocViewWiki( array $globals, bool $isComparing ): array {
@@ -116,12 +138,13 @@ function wmfNocViewWiki( array $globals, bool $isComparing ): array {
 			$preHtml .= '<a name="' . htmlspecialchars( $prefix ) . '"></a>';
 			$lastPrefix = $prefix;
 		}
-		$preHtml .= '<a href="#' . htmlspecialchars( $name ) . '" name="' . htmlspecialchars( $name ) . '"></a>';
+		$preHtml .= '<a href="#' . htmlspecialchars( $name ) . '" name="' . htmlspecialchars( $name ) . '"></a>'
+			. htmlspecialchars( $name ) . ':';
 		if ( !$isComparing ) {
-			$preHtml .= wmfNocJsonForHtml( $name, $val );
+			$preHtml .= ' ' . wmfNocJsonForHtml( $val );
 		} else {
-			$preHtml .= wmfNocWrapLines( wmfNocJsonForHtml( $name, $val['before'] ), '<del>- ', '</del>' ) . "\n";
-			$preHtml .= wmfNocWrapLines( wmfNocJsonForHtml( $name, $val['after'] ), '<ins>+ ', '</ins>' );
+			$preHtml .= "\n"
+				. wmfNocDiff( $val['before'], $val['after'], $val['context'] ?? '' );
 		}
 		$preHtml .= "\n\n";
 	}
