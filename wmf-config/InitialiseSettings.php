@@ -8123,11 +8123,6 @@ return [
 		'logged_out' => true,
 	],
 ],
-'wgVectorTableOfContents' => [
-	'default' => [
-		'default' => true
-	],
-],
 'wgVectorWvuiSearchOptions' => [
 	'default' => [
 		'showThumbnail' => true,

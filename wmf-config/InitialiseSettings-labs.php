@@ -571,11 +571,6 @@ function wmfGetOverrideSettings() {
 				'logged_out' => true,
 			],
 		],
-		'wgVectorTableOfContents' => [
-			'default' => [
-				'default' => true,
-			],
-		],
 		'wgVectorWebABTestEnrollment' => [
 			'default' => [
 				'name' => 'vector.sticky_header_edit',
