@@ -160,7 +160,7 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 		}
 
 		// The diff will report dblist names that are unused,
-		// and also mention the array offset in MWConfigCacheGenerator::$dbLists.
+		// and also mention the array offset in MWMultiVersion::DB_LISTS.
 		$this->assertEquals(
 			[],
 			$unusedDblists,

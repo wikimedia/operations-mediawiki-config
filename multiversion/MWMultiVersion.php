@@ -26,6 +26,52 @@ class MWMultiVersion {
 	];
 
 	/**
+	 * Note that most wiki families are available as tags for free without
+	 * needing a dblist to be maintained and read from disk, because their
+	 * dbname suffix (as mapped in MWMultiVersion::SUFFIXES) already makes them
+	 * available as SiteConfiguration tag in InitialiseSettings.php.
+	 *
+	 * @var string[]
+	 */
+	public const DB_LISTS = [
+		// When updating list run ./docroot/noc/createTxtFileSymlinks.sh
+		// Expand computed dblists with ./multiversion/bin/expanddblist
+		'wikipedia',
+		'special',
+		'private',
+		'fishbowl',
+		'closed',
+		'desktop-improvements',
+		'flow',
+		'flaggedrevs',
+		'small',
+		'medium',
+		'large',
+		'wikimania',
+		'wikidata',
+		'wikibaserepo',
+		'wikidataclient',
+		'wikidataclient-test',
+		'visualeditor-nondefault',
+		'commonsuploads',
+		'lockeddown',
+		'group0',
+		'group1',
+		'nonglobal',
+		'wikitech',
+		'nonecho',
+		'mobile-anon-talk',
+		'nowikidatadescriptiontaglines',
+		'cirrussearch-big-indices',
+	];
+
+	/** @var string[] */
+	public const DB_LISTS_LABS = [
+		'closed' => 'closed-labs',
+		'flow' => 'flow-labs',
+	];
+
+	/**
 	 * @var MWMultiVersion
 	 */
 	private static $instance;
@@ -584,5 +630,32 @@ class MWMultiVersion {
 		} else {
 			return "$IP/$file";
 		}
+	}
+
+	/**
+	 * Get a list of dblist names that contain a given wiki.
+	 *
+	 * This is for wmf-config array keys as interpreted by SiteConfiguration ($wgConf).
+	 *
+	 * @param string $dbName The wiki's database name, e.g. 'enwiki' or 'zh_min_nanwikisource'
+	 * @param string $realm
+	 * @return string[]
+	 */
+	public static function getTagsForWiki( string $dbName, string $realm = 'production' ): array {
+		$dbLists = array_combine( self::DB_LISTS, self::DB_LISTS );
+		if ( $realm === 'labs' ) {
+			// Replace some lists with labs-specific versions
+			$dbLists = array_merge( $dbLists, self::DB_LISTS_LABS );
+		}
+
+		$wikiTags = [];
+		foreach ( $dbLists as $tag => $fileName ) {
+			$dblist = MWWikiversions::readDbListFile( $fileName );
+			if ( in_array( $dbName, $dblist ) ) {
+				$wikiTags[] = $tag;
+			}
+		}
+
+		return $wikiTags;
 	}
 }

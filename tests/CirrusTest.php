@@ -122,29 +122,25 @@ class CirrusTest extends WgConfTestCase {
 		$this->assertArrayNotHasKey( 'wgCirrusSearchWikiToNameMap', $config );
 	}
 
-	private function loadCirrusConfig( $wmgRealm, $databaseName, $dbSuffix ) {
+	private function loadCirrusConfig( $wmgRealm, $dbName, $dbSuffix ) {
 		require __DIR__ . '/../private/readme.php';
 		require __DIR__ . '/data/TestServices.php';
 
 		$configuration = $this->loadWgConf( $wmgRealm );
 
-		list( $site, $lang ) = $configuration->siteFromDB( $databaseName );
-		$wikiTags = [];
-		foreach ( Wikimedia\MWConfig\MWConfigCacheGenerator::$dbLists as $tag ) {
-			$dblist = MWWikiversions::readDbListFile( $tag );
-			if ( in_array( $databaseName, $dblist ) ) {
-				$wikiTags[] = $tag;
-			}
-		}
-
+		list( $site, $lang ) = $configuration->siteFromDB( $dbName );
 		$dbSuffix = ( $site === 'wikipedia' ) ? 'wiki' : $site;
 		$confParams = [
 			'lang'    => $lang,
 			'site'    => $site,
 		];
+
 		// Add a per-language tag as well
-		$wikiTags[] = $configuration->get( 'wgLanguageCode', $databaseName, $dbSuffix, $confParams, $wikiTags );
-		$globals = $configuration->getAll( $databaseName, $dbSuffix, $confParams, $wikiTags );
+		$wikiTags = MWMultiversion::getTagsForWiki( $dbName, 'production' );
+		$wikiTags[] = $configuration->get( 'wgLanguageCode', $dbName, $dbSuffix, $confParams, $wikiTags );
+
+		$globals = $configuration->getAll( $dbName, $dbSuffix, $confParams, $wikiTags );
+
 		// we want to use globals
 		// phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
 		extract( $globals );
