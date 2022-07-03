@@ -622,6 +622,9 @@ return [
 	'testwiki' => '/static/images/mobile/copyright/test-wikipedia-icon.png',
 	'test2wiki' => '/static/images/mobile/copyright/test-wikipedia-icon.png',
 	'testwikidatawiki' => '/static/images/mobile/copyright/test-wikidata-icon.svg',
+
+	// Celebrations
+	'trwiki' => '/static/images/mobile/copyright/wikipedia-tr-500k.svg', // T311946
 ],
 
 'wmgSiteLogoVariants' => [

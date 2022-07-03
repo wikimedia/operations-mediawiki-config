@@ -1272,8 +1272,12 @@ Wikipedia:
 
     trwiki:
         commons: File:Wikipedia-logo-v2-tr.svg
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        selected: trwiki-500k
+        variants:
+            trwiki-500k: File:Wikipedia-logo-v2-tr-2022 500.svg
+        comment:  T311946
+        comment_1_5x:  T150618, T311946
+        comment_2x:  T150618, T311946
 
     tswiki:
         comment:  T51125
