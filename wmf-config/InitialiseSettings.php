@@ -25492,8 +25492,10 @@ return [
 ],
 
 'wgGlobalBlockingAllowedRanges' => [
-	'default' => [],
-	'testwiki' => [ '185.15.56.0/24', '172.16.0.0/21' ],
+	'default' => [ '185.15.56.0/24', '172.16.0.0/21' ],
+	'wikitech' => [],
+	'fishbowl' => [],
+	'private' => [],
 ],
 
 // Only allow local 'crats to rename on non-CentralAuth wikis
