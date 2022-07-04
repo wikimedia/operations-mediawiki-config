@@ -214,7 +214,7 @@ function wmfStaticRespond() {
 	$queryStr = $_SERVER['QUERY_STRING'] ?? '';
 	$validHash = ( preg_match( '/^[a-fA-F0-9]{5}$/', $queryStr ) ? $queryStr : false );
 
-	$stats = RequestContext::getMain()->getStats();
+	$stats = MediaWiki\MediaWikiServices::getInstance()->getStatsdDataFactory();
 
 	// Try each version in descending order
 	//
