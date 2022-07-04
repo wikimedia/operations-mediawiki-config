@@ -1490,6 +1490,8 @@ return [
 	'xmfwiki' => false,
 	'zhwikiquote' => false, // T311017
 	'zhwikisource' => false, // T295265
+	'zhwikiversity' => false, // T312012
+	'zhwiktionary' => false, // T312012
 ],
 # @} end of wgEnableUploads
 
