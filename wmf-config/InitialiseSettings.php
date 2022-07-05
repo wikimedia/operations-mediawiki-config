@@ -7930,22 +7930,9 @@ return [
 	],
 ],
 
+// T310054
 'wgVectorTitleAboveTabs' => [
 	'default' => true,
-	// (T310054)
-	'arywiki' => false,
-	'bnwiki' => false,
-	'fawiki' => false,
-	'frwiki' => false,
-	'idwiki' => false,
-	'jawiki' => false,
-	'kowiki' => false,
-	'ptwiki' => false,
-	'srwiki' => false,
-	'thwiki' => false,
-	'trwiki' => false,
-	'vecwiki' => false,
-	'viwiki' => false,
 ],
 
 // Skin versions are strings not numbers. See skins/Vector/skin.json.
