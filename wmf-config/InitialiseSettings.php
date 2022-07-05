@@ -25898,7 +25898,7 @@ return [
 				'research-incentive-answer-positive',
 				'research-incentive-answer-negative',
 			],
-			'coverage' => 0.00002,
+			'coverage' => 0.02,
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
