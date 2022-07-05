@@ -24491,6 +24491,7 @@ return [
 'wgCirrusSearchWriteClusters' => [
 	'default' => [ 'eqiad', 'codfw', 'cloudelastic' ],
 	'private' => [ 'eqiad', 'codfw' ],
+	'commonswiki' => [ 'eqiad', 'codfw' ], // T309648: Disable writes during recovery.
 ],
 
 'wgCirrusSearchReplicaGroup' => [
