@@ -1564,38 +1564,6 @@ function wmfGetOverrideSettings() {
 		'wgGEHelpPanelViewMoreTitle' => [
 			'enwiki' => 'Help:Contents',
 		],
-		'wgGEHelpPanelLinks' => [
-			'enwiki' => [
-				[
-					'title' => 'Help:Contents',
-					'text' => 'The most helpful help link',
-					'id' => 'example',
-				],
-				[
-					'title' => 'Wikipedia:Community_portal',
-					'text' => 'Community Portal',
-					'id' => 'community',
-				],
-				[
-					'title' => 'Wikipedia:Village_pump',
-					'text' => 'Village pump',
-					'id' => 'village-pump',
-				],
-				[
-					'title' => 'Portal:Contents',
-					'text' => 'Portal contents',
-					'id' => 'portal-contents',
-				],
-				[
-					'title' => 'Wikipedia:File_Upload_Wizard',
-					'text' => 'File upload wizard',
-					'id' => 'file-upload-wizard',
-				],
-			],
-		],
-		'wgGEHelpPanelReadingModeNamespaces' => [
-			'default' => [ 2, 3, 4, 12 ]
-		],
 		'wgGEHelpPanelSearchForeignAPI' => [
 			'default' => 'https://en.wikipedia.org/w/api.php',
 			'arwiki' => 'https://ar.wikipedia.org/w/api.php',
@@ -1608,11 +1576,6 @@ function wmfGetOverrideSettings() {
 		'wgGEMentorProvider' => [
 			'default' => 'wikitext',
 			'enwiki' => 'structured',
-		],
-		'wgGEHomepageMentorsList' => [
-			'default' => '',
-			'arwiki' => 'Wikipedia:Mentors',
-			'enwiki' => 'Wikipedia:Mentors',
 		],
 		'wgGEMentorDashboardUseVue' => [
 			'default' => false,
