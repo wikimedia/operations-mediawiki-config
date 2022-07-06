@@ -25630,6 +25630,10 @@ return [
 	'default' => 'mcrouter', // declared in mc.php
 	'wikitech' => 'memcached-pecl',
 ],
+'wgStatsCacheType' => [
+	'default' => 'mcrouter-primary-dc',
+	'wikitech' => 'memcached-pecl',
+],
 
 'wgAbuseFilterProfilerCache' => [
 	'default' => 'redis_local', // not using mainstash due to high traffic
