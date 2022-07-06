@@ -7978,6 +7978,25 @@ return [
 	],
 ],
 
+'wgVectorStickyHeaderEdit' => [
+	'default' => [
+		'logged_in' => false,
+		'logged_out' => false,
+	],
+	'desktop-improvements' => [
+		'logged_in' => true,
+		'logged_out' => false,
+	],
+	'viwiki' => [
+		'logged_in' => false,
+		'logged_out' => false,
+	],
+	'idwiki' => [
+		'logged_in' => false,
+		'logged_out' => false,
+	],
+],
+
 'wgVectorWebABTestEnrollment' => [
 	'default' => [
 		'name' => 'vector.sticky_header',
@@ -7997,9 +8016,24 @@ return [
 			],
 		],
 	],
-	// T309683
-	'default' => [
-		'name' => 'skin-vector-toc-experiment',
+	// T311144
+	'desktop-improvements' => [
+		'name' => 'vector.sticky_header_edit',
+		'enabled' => true,
+		'buckets' => [
+			'unsampled' => [
+				'samplingRate' => 0
+			],
+			'stickyHeaderEditButtonControl' => [
+				'samplingRate' => 0.5
+			],
+			'stickyHeaderEditButtonTreatment' => [
+				'samplingRate' => 0.5
+			],
+		],
+	],
+	'idwiki' => [
+		'name' => 'vector.sticky_header_edit',
 		'enabled' => false,
 		'buckets' => [
 			'unsampled' => [
@@ -8008,10 +8042,25 @@ return [
 			'control' => [
 				'samplingRate' => 0.5
 			],
-			'treatment' => [
+			'stickyHeaderEditButtonTreatment' => [
 				'samplingRate' => 0.5
 			],
-		]
+		],
+	],
+	'viwiki' => [
+		'name' => 'vector.sticky_header_edit',
+		'enabled' => false,
+		'buckets' => [
+			'unsampled' => [
+				'samplingRate' => 0
+			],
+			'control' => [
+				'samplingRate' => 0.5
+			],
+			'stickyHeaderEditButtonTreatment' => [
+				'samplingRate' => 0.5
+			],
+		],
 	],
 ],
 
