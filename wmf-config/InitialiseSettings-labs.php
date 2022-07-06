@@ -1491,18 +1491,12 @@ function wmfGetOverrideSettings() {
 			'default' => 'wikidatawiki',
 			'commonswiki' => 'commonswiki',
 		],
-		'wmgUseGrowthExperiments' => [
-			'enwiki' => true,
-		],
 		'wgGEImageRecommendationApiHandler' => [
 			// Can be changed to 'production' when T306349 is resolved.
 			'default' => 'mvp'
 		],
 		'-wgGEDatabaseCluster' => [
 			'default' => false,
-		],
-		'wgGEWikiConfigEnabled' => [
-			'default' => true,
 		],
 		'wgGEDeveloperSetup' => [
 			'default' => true,
@@ -1663,9 +1657,6 @@ function wmfGetOverrideSettings() {
 		'wgGEMentorshipNewAccountEnablePercentage' => [
 			'default' => 100,
 			'enwiki' => 8, // T287903
-		],
-		'wgGEMentorDashboardEnabled' => [
-			'default' => true,
 		],
 		'wgGEMentorDashboardUseVue' => [
 			'default' => false,
