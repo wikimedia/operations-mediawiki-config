@@ -1611,11 +1611,6 @@ function wmfGetOverrideSettings() {
 		'-wgGEMentorDashboardDeploymentMode' => [
 			'default' => 'alpha',
 		],
-		'wgGEHomepageTutorialTitle' => [
-			'default' => '',
-			'arwiki' => 'Help:Tutorial',
-			'enwiki' => 'Help:Getting started',
-		],
 		'wgGENewcomerTasksRemoteApiUrl' => [
 			'enwiki' => null,
 			'arwiki' => null,
