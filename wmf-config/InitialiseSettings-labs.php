@@ -148,7 +148,7 @@ function wmfGetOverrideSettings() {
 		// as within prod settings (default>group>wikiid), with later ones replacing earlier ones,
 		// unless '+' is used on a later one in which case the values are merged.
 		'wgEventStreams' => [
-			'+group2' => [
+			'+wikipedia' => [
 				// See https://phabricator.wikimedia.org/T311268
 				'mediawiki.web_ui.interactions' => [
 					'schema_title' => 'analytics/mediawiki/client/metrics_event',
@@ -215,6 +215,9 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgEventLoggingStreamNames' => [
+			'+wikipedia' => [
+				'mediawiki.web_ui.interactions',
+			],
 			'+enwiki' => [
 				'mediawiki.ipinfo_interaction',
 			],
