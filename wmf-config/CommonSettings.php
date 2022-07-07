@@ -4110,11 +4110,7 @@ if ( $wmgUseGrowthExperiments ) {
 		$wgGEHomepageNewAccountEnablePercentage = 0;
 	}
 
-	// Proof-of-concept API, allowed until 2022-06-30. See T294362#7768458.
-	$wgGEImageRecommendationServiceUrl = 'https://image-suggestion-api.wmcloud.org';
-	if ( $wmgRealm !== 'labs' ) {
-		$wgGEImageRecommendationServiceHttpProxy = $wmgLocalServices['urldownloader'];
-	}
+	$wgGEImageRecommendationServiceUrl = $wmgLocalServices['image-suggestion'];
 	$wgGELinkRecommendationServiceUrl = $wmgLocalServices['linkrecommendation'];
 }
 

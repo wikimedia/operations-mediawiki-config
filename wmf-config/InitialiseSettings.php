@@ -27000,6 +27000,10 @@ return [
 	'default' => true,
 ],
 
+'wgGEImageRecommendationApiHandler' => [
+	'default' => 'production',
+],
+
 'wmgGEFeaturesMayBeAvailableToNewcomers' => [
 	'default' => true,
 ],
