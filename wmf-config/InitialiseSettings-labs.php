@@ -2489,7 +2489,6 @@ function wmfGetOverrideSettings() {
 
 		'wmgUseImageSuggestions' => [
 			'default' => false,
-			'testwiki' => true,
 		],
 	];
 } # wmfGetOverrideSettings()
