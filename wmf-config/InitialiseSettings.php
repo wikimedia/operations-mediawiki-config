@@ -15954,6 +15954,7 @@ return [
 	'testwiki' => true,
 	'mediawikiwiki' => true,
 	'group0' => true,
+	'dewiki' => true,
 ],
 
 # CENTRAL AUTH @{
