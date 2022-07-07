@@ -32,7 +32,7 @@ $wgConf->settings = $settings;
 $selected = $_GET['wiki'] ?? '';
 $selected = in_array( $selected, $wikis ) ? $selected : 'enwiki';
 $compare = $_GET['compare'] ?? '';
-$compare = in_array( $compare, $wikis ) ? $compare : '';
+$compare = in_array( $compare, $wikis ) ? $compare : null;
 
 $selectedGlobals = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
 	$selected,
@@ -42,7 +42,7 @@ $selectedGlobals = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCach
 $selectedGlobals['* dblists'] = MWMultiVersion::getTagsForWiki( $selected, $wmgRealm );
 wmfAssertNoPrivateSettings( $selectedGlobals );
 $isComparing = false;
-if ( $compare ) {
+if ( $compare !== null ) {
 	$beforeGlobals = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
 		$compare,
 		$wgConf,
@@ -152,11 +152,13 @@ function wmfNocViewWiki( array $globals, bool $isComparing ): array {
 	return [ 'nav' => $navHtml, 'pre' => $preHtml ];
 }
 
+$title = "Settings: " . ( $compare !== null ? "Compare $selected to $compare" : $selected );
+
 ?><!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
 	<meta charset="utf-8">
-	<title><?php echo htmlspecialchars( "Wiki view: $selected – Wikimedia NOC" ); ?></title>
+	<title><?php echo htmlspecialchars( "$title – Wikimedia NOC" ); ?></title>
 	<link rel="shortcut icon" href="/static/favicon/wmf.ico">
 	<link rel="stylesheet" href="/css/base.css">
 	<style>
@@ -206,7 +208,7 @@ function wmfNocViewWiki( array $globals, bool $isComparing ): array {
 	</ul></nav>
 
 	<article>
-		<h1>Wiki view: <?php print htmlspecialchars( $selected ); ?></h1>
+		<h1><?php print htmlspecialchars( $title ); ?></h1>
 		<form action="./wiki.php" autocomplete="off">
 			<label>Wiki:
 				<select name="wiki"><?php
@@ -251,7 +253,7 @@ function wmfNocViewWiki( array $globals, bool $isComparing ): array {
 		<pre><?php
 			if ( $isComparing ) {
 				print '<del>' . htmlspecialchars( "--- before/$compare" ) . '</del>' . "\n";
-				print '<ins>' . htmlspecialchars( "--- after/$selected" ) . '</ins>' . "\n";
+				print '<ins>' . htmlspecialchars( "+++ after/$selected" ) . '</ins>' . "\n";
 				print "\n";
 			}
 			print $data['pre'];
