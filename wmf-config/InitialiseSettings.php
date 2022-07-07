@@ -5530,7 +5530,6 @@ return [
 		'redis' => 'info', // -asher 2012/10/12
 		'Renameuser' => 'debug',
 		'resourceloader' => 'info',
-		'ResourceLoaderImage' => 'debug', // - demon, matmarex
 		'RevisionStore' => 'info',
 		'runJobs' => [ 'logstash' => 'warning' ], // - bd808, T113571
 		'SaveParse' => 'debug',
