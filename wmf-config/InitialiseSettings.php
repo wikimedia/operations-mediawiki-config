@@ -21895,6 +21895,10 @@ return [
 			'schema_title' => 'analytics/mediawiki/welcomesurvey/interaction',
 			'destination_event_service' => 'eventgate-analytics-external'
 		],
+		'mediawiki.editgrowthconfig' => [
+			'schema_title' => 'analytics/mediawiki/editgrowthconfig',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		[
 			'stream' => 'mediawiki.talk_page_edit',
 			'schema_title' => 'analytics/mediawiki/talk_page_edit',
@@ -22266,6 +22270,7 @@ return [
 		'wd_propertysuggester.server_side_property_request',
 		'mediawiki.mentor_dashboard.visit',
 		'mediawiki.ipinfo_interaction',
+		'mediawiki.editgrowthconfig',
 	],
 ],
 
