@@ -544,6 +544,12 @@ $wgRCMaxAge = 30 * 86400;
 
 $wgTmpDirectory = '/tmp';
 
+# Temporary for the PHP 7.2 → 7.4 migration. Adds an array of Unicode chars
+# that have different uppercasing in 7.4.
+if ( PHP_VERSION_ID >= 70400 ) {
+	$wgOverrideUcfirstCharacters = include __DIR__ . '/Php72ToUpper.php';
+}
+
 # Object cache and session settings
 
 $wgSessionName = $wgDBname . 'Session';
@@ -1061,6 +1067,12 @@ if ( isset( $wmgSiteLogo1x ) ) {
 
 // Max width modifications
 $wgVectorMaxWidthOptions['exclude']['namespaces'] = $wmgVectorMaxWidthOptionsNamespaces;
+
+# ######################################################################
+# Extensions
+# ######################################################################
+// Yeah the next 3000 or so lines is for extension configuration except for the
+// bits that aren't.
 
 if ( $wmgUseTimeline ) {
 	wfLoadExtension( 'timeline' );
