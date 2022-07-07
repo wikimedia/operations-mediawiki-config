@@ -21728,17 +21728,6 @@ return [
 				],
 			]
 		],
-		'eventlogging_WikibaseTermboxInteraction' => [
-			'schema_title' => 'analytics/legacy/wikibasetermboxinteraction',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
 		'eventlogging_WikidataCompletionSearchClicks' => [
 			'schema_title' => 'analytics/legacy/wikidatacompletionsearchclicks',
 			'topic_prefixes' => null,
@@ -22259,7 +22248,6 @@ return [
 		'eventlogging_VirtualPageView',
 		'eventlogging_VisualEditorFeatureUse',
 		'eventlogging_VisualEditorTemplateDialogUse',
-		'eventlogging_WikibaseTermboxInteraction',
 		'eventlogging_WikidataCompletionSearchClicks',
 		'eventlogging_WMDEBannerEvents',
 		'eventlogging_WMDEBannerInteractions',
@@ -22310,9 +22298,6 @@ return [
 'wgEventLoggingSchemas' => [
 	'default' => [
 		// Only in progress schema migrations go here, once migration finished, they are removed.
-	],
-	'testwiki' => [
-		'WikibaseTermboxInteraction' => '/analytics/legacy/wikibasetermboxinteraction/1.0.0',
 	],
 ],
 
