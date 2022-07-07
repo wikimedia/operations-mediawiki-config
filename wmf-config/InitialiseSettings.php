@@ -15952,7 +15952,8 @@ return [
 'wgResourceLoaderUseObjectCacheForDeps' => [
 	'default' => false,
 	'testwiki' => true,
-	'mediawikiwiki' => true
+	'mediawikiwiki' => true,
+	'group0' => true,
 ],
 
 # CENTRAL AUTH @{
