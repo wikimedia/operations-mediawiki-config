@@ -16,9 +16,12 @@
 			"phpcbf",
 			"minus-x fix ."
 		],
+		"phpunit": [
+			"phpunit"
+		],
 		"test": [
 			"@lint",
-			"phpunit",
+			"@phpunit",
 			"@phpcs",
 			"minus-x check .",
 			"@buildDBLists",
