@@ -182,6 +182,25 @@ function wmfGetOverrideSettings() {
 				'mediawiki.ipinfo_interaction' => [
 					'schema_title' => 'analytics/mediawiki/ipinfo_interaction',
 					'destination_event_service' => 'eventgate-analytics-external',
+				],
+				// See https://phabricator.wikimedia.org/T310852
+				'desktop_mobile_link_clicks' => [
+					'schema_title' => '/analytics/mediawiki/client/metrics_event',
+					'destination_event_service' => 'eventgate-analytics-external',
+					'producers' => [
+						'metrics_platform_client' => [
+							'events' => [
+								'mediawiki.desktop_link.click', // T310852
+							],
+							'provide_values' => [
+								'page_title',
+								'page_namespace',
+								'performer_edit_count_bucket',
+								'performer_groups',
+								'performer_is_logged_in',
+							],
+						],
+					],
 				]
 			],
 		],
@@ -219,6 +238,7 @@ function wmfGetOverrideSettings() {
 			],
 			'+enwiki' => [
 				'mediawiki.ipinfo_interaction',
+				'desktop_mobile_link_clicks',
 			],
 		],
 
