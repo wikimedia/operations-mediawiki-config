@@ -5481,7 +5481,7 @@ return [
 		'Bug58676' => 'debug', // Invalid message parameter
 		'cache-cookies' => 'debug',
 		'captcha' => 'debug',
-		'CentralAuth' => 'debug',
+		'CentralAuth' => 'info', // Don't log personal names by default T312704
 		'CentralAuthRename' => 'debug', // -legoktm 2014-07-14 for T69875
 		'CentralNotice' => 'debug',
 		'CirrusSearch' => 'debug',
