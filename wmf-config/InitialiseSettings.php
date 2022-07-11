@@ -22311,8 +22311,6 @@ return [
 'wgEventLoggingSchemas' => [
 	'default' => [
 		// Only in progress schema migrations go here, once migration finished, they are removed.
-	],
-	'testwiki' => [
 		'WikibaseTermboxInteraction' => '/analytics/legacy/wikibasetermboxinteraction/1.0.0',
 	],
 ],
