@@ -26657,10 +26657,6 @@ return [
 	'default' => false,
 ],
 
-'wmgUseCongressLookup' => [ // Disabled per T205049
-	'default' => false,
-],
-
 // This is wikis that have it for all users
 // vs below where its only for users with sessions.
 'wmgUseCSPReportOnly' => [
