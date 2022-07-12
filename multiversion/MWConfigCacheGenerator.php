@@ -13,7 +13,7 @@ require_once __DIR__ . '/MWMultiVersion.php';
 class MWConfigCacheGenerator {
 
 	/**
-	 * Create a MultiVersion config object for a wiki
+	 * Compute the config globals.
 	 *
 	 * @param string $dbName The wiki's database name, e.g. 'enwiki' or 'zh_min_nanwikisource'
 	 * @param SiteConfiguration $siteConfiguration The global MultiVersion wgConf object
@@ -51,11 +51,6 @@ class MWConfigCacheGenerator {
 	 * @return array The wiki's config array
 	 */
 	public static function getCachableMWConfig( $wikiDBname, $config, $realm = 'production' ) {
-		if ( $realm === 'labs' ) {
-			require_once __DIR__ . "../../wmf-config/InitialiseSettings-labs.php";
-			$config = self::applyOverrides( $config );
-		}
-
 		$conf = new SiteConfiguration();
 		$conf->suffixes = MWMultiVersion::SUFFIXES;
 		$conf->settings = $config;

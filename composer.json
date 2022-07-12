@@ -28,14 +28,14 @@
 			"@checkclean"
 		],
 		"buildDBLists": "php -e multiversion/buildDBLists.php",
-		"buildConfigCache": "php -e multiversion/buildConfigCache.php",
+		"buildConfigCache": "php -e tests/buildConfigCache.php",
 		"diffConfig": [
 			"@buildConfigCache",
 			"git checkout -q HEAD~1",
-			"git add -f wmf-config/config-cache/",
+			"git add -f tests/data/config-cache/",
 			"@buildConfigCache",
-			"git diff -R --minimal --color --exit-code wmf-config/config-cache/",
-			"git reset wmf-config/config-cache/"
+			"git diff -R --minimal --color --exit-code",
+			"git reset tests/data/config-cache/"
 		],
 		"checkclean": "git diff --exit-code wmf-config/ dblists/"
 	}
