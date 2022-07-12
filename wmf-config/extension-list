@@ -29,7 +29,6 @@ $IP/extensions/Collection/extension.json
 $IP/extensions/CommonsMetadata/extension.json
 $IP/extensions/ConfirmEdit/extension.json
 $IP/extensions/ConfirmEdit/FancyCaptcha/extension.json
-$IP/extensions/CongressLookup/extension.json
 $IP/extensions/ContactPage/extension.json
 $IP/extensions/ContentTranslation/extension.json
 $IP/extensions/CreditsSource/extension.json
