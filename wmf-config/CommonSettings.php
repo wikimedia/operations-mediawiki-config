@@ -4096,10 +4096,6 @@ if ( $wmgUseGlobalPreferences && $wmgUseCentralAuth ) {
 	wfLoadExtension( 'GlobalPreferences' );
 }
 
-if ( $wmgUseCongressLookup ) {
-	wfLoadExtension( 'CongressLookup' );
-}
-
 if ( $wmgUseWikisource ) {
 	// Intentionally loaded *after* the Collection extension above.
 	wfLoadExtension( 'Wikisource' );
