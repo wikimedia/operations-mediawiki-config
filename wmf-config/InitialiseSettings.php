@@ -15949,11 +15949,12 @@ return [
 
 // EXPERIMENTAL: Store RL deps in main stash instead of core database (T113916)
 'wgResourceLoaderUseObjectCacheForDeps' => [
-	'default' => true,
+	// 'default' => true,
 
-	// 'default' => false,
-	// 'testwiki' => true,
-	// 'mediawikiwiki' => true,
+	'default' => false,
+	'testwiki' => true,
+	'mediawikiwiki' => true,
+	'group0' => true,
 ],
 
 # CENTRAL AUTH @{
