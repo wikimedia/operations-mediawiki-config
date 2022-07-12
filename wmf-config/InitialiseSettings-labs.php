@@ -2318,6 +2318,8 @@ function wmfGetOverrideSettings() {
 				'm.wikidata.beta.wmflabs.org',
 				'*.wikivoyage.beta.wmflabs.org',
 				'*.mediawiki.beta.wmflabs.org',
+				'wikifunctions.beta.wmflabs.org',
+				'm.wikifunctions.beta.wmflabs.org',
 
 				// Prod domains, to allow easier gadget testing
 				'*.wikimedia.org',
