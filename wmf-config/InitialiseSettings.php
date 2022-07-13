@@ -20377,6 +20377,7 @@ return [
 
 'wgDiscussionToolsBeta' => [
 	'default' => true,
+	'mediawikiwiki' => false, // T310960
 ],
 
 'wgDiscussionToolsABTest' => [
