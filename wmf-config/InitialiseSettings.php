@@ -19244,7 +19244,7 @@ return [
 		'5' => 'Geban %code%-5',
 		'N' => 'Geban %code%-N',
 	],
-	'wikidatawiki' => [ // T54145
+	'wikidata' => [ // T54145, T312920
 		'0' => 'User %code%-0',
 		'1' => 'User %code%-1',
 		'2' => 'User %code%-2',
