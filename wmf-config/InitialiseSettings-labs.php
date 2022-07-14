@@ -1381,7 +1381,7 @@ function wmfGetOverrideSettings() {
 			'default' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 		],
 
-		'wgTemplateLinksSchemaMigrationStage' => [
+		'-wgTemplateLinksSchemaMigrationStage' => [
 			'default' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 		],
 
