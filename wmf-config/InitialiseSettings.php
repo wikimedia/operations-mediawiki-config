@@ -28441,4 +28441,9 @@ return [
 	'idwiki' => '/wiki/Wikipedia:Kebijakan_penggunaan_gambar', // T292310
 ],
 
+// Enabled on the Beta Cluster only (T311752)
+'wmgUseCampaignEvents' => [
+	'default' => false,
+],
+
 ];
