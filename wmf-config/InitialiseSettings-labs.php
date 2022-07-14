@@ -2448,5 +2448,11 @@ function wmfGetOverrideSettings() {
 		'wmgUseImageSuggestions' => [
 			'default' => false,
 		],
+
+		// See T311752
+		'wmgUseCampaignEvents' => [
+			'default' => true,
+			'loginwiki' => false,
+		],
 	];
 } # wmfGetOverrideSettings()
