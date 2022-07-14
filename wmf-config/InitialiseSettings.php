@@ -24109,25 +24109,20 @@ return [
 			'boost' => [
 				'statement' => [
 					// depicts
-					'P180' => 1 * 0.07820204273071839,
+					'P180' => 1 * 0.07513802266010573,
 					// digital representation of
-					'P6243' => 1.1 * 0.07820204273071839,
+					'P6243' => 1.1 * 0.07513802266010573,
 				],
 				'weighted_tags' => [
-					// NOTE the 1000 * is because we haven't stored a score for this field in the
-					// experimental search index, so it defaults to 1 which is transformed to
-					// 0.001 by cirrussearch code
-					// When we recreate the index on production we'll probably store a score of
-					// 1000 for this field, and can remove the 1000 * here
-					'image.linked.from.wikidata.p18/' => 1000 * 1.5653542537287244,
-					'image.linked.from.wikidata.p373/' => 4.0424359988709435,
-					'image.linked.from.wikidata.sitelink/' => 4.26335835247543,
+					'image.linked.from.wikidata.p18/' => 2.342153943085914,
+					'image.linked.from.wikidata.p373/' => 4.386547106798469,
+					'image.linked.from.wikipedia.lead_image/' => 4.795040181639707,
 				],
-				'descriptions.$language' => 0.0392515093914008,
+				'descriptions.$language' => 0.03162901642674604,
 				'descriptions.$language.plain' => 0,
-				'title' => 0.04487718624539365,
+				'title' => 0.03905305579260523,
 				'title.plain' => 0,
-				'category' => 0.04321595766352061,
+				'category' => 0.040469141251219885,
 				'category.plain' => 0,
 				'heading' => 0,
 				'heading.plain' => 0,
@@ -24141,20 +24136,20 @@ return [
 				// Arbitrary small value to preserve ordering if we ONLY have a match in this field
 				'text' => 0.0001,
 				'text.plain' => 0,
-				'suggest' => 0.03278522607586197,
+				'suggest' => 0.03460658854618614,
 			],
 			'decay' => [
 				'descriptions.$language' => 0.9,
 				'descriptions.$language.plain' => 0.9,
 				// below is not actually a field
-				'synonyms' => 0,
+				'synonyms' => 0.5,
 			],
-			'logisticRegressionIntercept' => -1.4925851105992378,
+			'logisticRegressionIntercept' => -1.3880461372968826,
 			'entitiesVariableBoost' => true,
 			'normalizeFulltextScores' => false,
 			'normalizeMultiClauseScores' => true,
 			'applyLogisticFunction' => true,
-			'useSynonyms' => false,
+			'useSynonyms' => true,
 			'hasLtrPlugin' => true,
 			'titleMatchBaseUri' => 'https://%s.wikipedia.org/w/api.php',
 		],
