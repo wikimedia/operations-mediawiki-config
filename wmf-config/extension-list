@@ -9,6 +9,7 @@ $IP/extensions/Babel/extension.json
 $IP/extensions/BetaFeatures/extension.json
 $IP/extensions/BounceHandler/extension.json
 $IP/extensions/Calendar/extension.json
+$IP/extensions/CampaignEvents/extension.json
 $IP/extensions/Campaigns/extension.json
 $IP/extensions/Capiunto/extension.json
 $IP/extensions/CategoryTree/extension.json
