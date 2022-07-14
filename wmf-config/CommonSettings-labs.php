@@ -420,5 +420,10 @@ $wgKartographerNearby = true;
 // Enable max-width for editing. T307725.
 $wgVectorMaxWidthOptions['exclude']['querystring']['action'] = '(history|edit)';
 
+if ( $wmgUseCampaignEvents ) {
+	$wgCampaignEventsDatabaseCluster = false;
+	$wgCampaignEventsDatabaseName = 'wikishared';
+}
+
 }
 // end safeguard
