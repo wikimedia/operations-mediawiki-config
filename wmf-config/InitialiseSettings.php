@@ -2209,15 +2209,15 @@ return [
 ],
 
 'wgAccountCreationThrottle' => [
-	'default' => 6,
-	'private' => 0, // disable for wikis with sysop-only account creation
-	'fishbowl' => 0,
-	'eswikiquote' => 1, // T230796
-	'hewikibooks' => 4,
-	'hewikinews' => 4,
-	'hewikiquote' => 4,
-	'hewikisource' => 4,
-	'hewiktionary' => 4,
+	'default' => [ [ 'count' => 6, 'seconds' => 86400 ] ],
+	'private' => [ [ 'count' => 0, 'seconds' => 86400 ] ], // disable for wikis with sysop-only account creation
+	'fishbowl' => [ [ 'count' => 0, 'seconds' => 86400 ] ],
+	'eswikiquote' => [ [ 'count' => 1, 'seconds' => 86400 ] ], // T230796
+	'hewikibooks' => [ [ 'count' => 4, 'seconds' => 86400 ] ],
+	'hewikinews' => [ [ 'count' => 4, 'seconds' => 86400 ] ],
+	'hewikiquote' => [ [ 'count' => 4, 'seconds' => 86400 ] ],
+	'hewikisource' => [ [ 'count' => 4, 'seconds' => 86400 ] ],
+	'hewiktionary' => [ [ 'count' => 4, 'seconds' => 86400 ] ],
 ],
 
 'wgDefaultSkin' => [

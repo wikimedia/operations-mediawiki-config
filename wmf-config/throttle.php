@@ -10,7 +10,7 @@ $wmgThrottlingExceptions = [];
 #
 # Optional arguments can be added to set the value or restrict by client IP
 # or project dbname. Options are:
-#  'value'  => new value for $wgAccountCreationThrottle (default: 50)
+#  'value'  => new value for $wgAccountCreationThrottle (default: 50 per day)
 #  'IP'     => client IP as given by $wgRequest->getIP() or array (default: any IP)
 #  'range'  => alternatively, the client IP CIDR ranges or array (default: any range)
 #  'dbname' => a $wgDBname or array of dbnames to compare to
