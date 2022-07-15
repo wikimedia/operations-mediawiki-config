@@ -24005,19 +24005,22 @@ return [
 		'depicts_or_linked_from' => [
 			'fields' => [
 				'statement_keywords' => [
-					[ 'prefix' => 'P180=', 'boost' => 0.06800689749434177 ], // depicts
+					[ 'prefix' => 'P180=', 'boost' => 0.05032411940299784 ], // depicts
 					[ 'prefix' => 'P6243=', 'boost' => 0.0001 ], // digital representation of (arbitrary small value)
 				],
 				'weighted_tags' => [
-					[ 'prefix' => 'image.linked.from.wikidata.p18/', 'boost' => 0.9862993091599952 ],
-					[ 'prefix' => 'image.linked.from.wikidata.p373/', 'boost' => 7.190793838918551 ],
-					[ 'prefix' => 'image.linked.from.wikidata.sitelink/', 'boost' => 5.031161363459293 ],
+					[ 'prefix' => 'image.linked.from.wikidata.p18/', 'boost' => 1.984794590275781 ],
+					[ 'prefix' => 'image.linked.from.wikidata.p373/', 'boost' => 5.739424158364518 ],
+					[
+						'prefix' => 'image.linked.from.wikipedia.lead_image/',
+						'boost' => 3.74983393205065
+					],
 				],
 			],
 			// logistic function
 			'functionScore' => [
 				'scriptCode' => '100 / ( 1 + exp( -1 * ( _score + intercept ) ) )',
-				'params' => [ 'intercept' => -1.3459675572537635 ],
+				'params' => [ 'intercept' => -0.29925433614892966 ],
 			]
 		],
 	],
