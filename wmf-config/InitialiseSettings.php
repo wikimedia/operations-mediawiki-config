@@ -24028,6 +24028,54 @@ return [
 
 'wgMediaInfoMediaSearchProfiles' => [
 	'commonswiki' => [
+		'mediasearch_weighted_tags' => [
+			'boost' => [
+				'statement' => [
+					// depicts
+					'P180' => 1 * 0.07513802266010573,
+					// digital representation of
+					'P6243' => 1.1 * 0.07513802266010573,
+				],
+				'weighted_tags' => [
+					'image.linked.from.wikidata.p18/' => 2.342153943085914,
+					'image.linked.from.wikidata.p373/' => 4.386547106798469,
+					'image.linked.from.wikipedia.lead_image/' => 4.795040181639707,
+				],
+				'descriptions.$language' => 0.03162901642674604,
+				'descriptions.$language.plain' => 0,
+				'title' => 0.03905305579260523,
+				'title.plain' => 0,
+				'category' => 0.040469141251219885,
+				'category.plain' => 0,
+				'heading' => 0,
+				'heading.plain' => 0,
+				// Arbitrary small value to preserve ordering if we ONLY have a match in this field
+				'auxiliary_text' => 0.0001,
+				'auxiliary_text.plain' => 0,
+				'file_text' => 0,
+				'file_text.plain' => 0,
+				'redirect.title' => 0.01997210246565096,
+				'redirect.title.plain' => 0,
+				// Arbitrary small value to preserve ordering if we ONLY have a match in this field
+				'text' => 0.0001,
+				'text.plain' => 0,
+				'suggest' => 0.03460658854618614,
+			],
+			'decay' => [
+				'descriptions.$language' => 0.9,
+				'descriptions.$language.plain' => 0.9,
+				// below is not actually a field
+				'synonyms' => 0.5,
+			],
+			'logisticRegressionIntercept' => -1.3880461372968826,
+			'entitiesVariableBoost' => true,
+			'normalizeFulltextScores' => false,
+			'normalizeMultiClauseScores' => true,
+			'applyLogisticFunction' => true,
+			'useSynonyms' => true,
+			'hasLtrPlugin' => true,
+			'titleMatchBaseUri' => 'https://%s.wikipedia.org/w/api.php',
+		],
 		'mediasearch_synonyms' => [
 			'boost' => [
 				'statement' => [
@@ -24111,54 +24159,6 @@ return [
 			'applyLogisticFunction' => true,
 			'useSynonyms' => false,
 			'hasLtrPlugin' => true,
-		],
-		'mediasearch_weighted_tags' => [
-			'boost' => [
-				'statement' => [
-					// depicts
-					'P180' => 1 * 0.07513802266010573,
-					// digital representation of
-					'P6243' => 1.1 * 0.07513802266010573,
-				],
-				'weighted_tags' => [
-					'image.linked.from.wikidata.p18/' => 2.342153943085914,
-					'image.linked.from.wikidata.p373/' => 4.386547106798469,
-					'image.linked.from.wikipedia.lead_image/' => 4.795040181639707,
-				],
-				'descriptions.$language' => 0.03162901642674604,
-				'descriptions.$language.plain' => 0,
-				'title' => 0.03905305579260523,
-				'title.plain' => 0,
-				'category' => 0.040469141251219885,
-				'category.plain' => 0,
-				'heading' => 0,
-				'heading.plain' => 0,
-				// Arbitrary small value to preserve ordering if we ONLY have a match in this field
-				'auxiliary_text' => 0.0001,
-				'auxiliary_text.plain' => 0,
-				'file_text' => 0,
-				'file_text.plain' => 0,
-				'redirect.title' => 0.01997210246565096,
-				'redirect.title.plain' => 0,
-				// Arbitrary small value to preserve ordering if we ONLY have a match in this field
-				'text' => 0.0001,
-				'text.plain' => 0,
-				'suggest' => 0.03460658854618614,
-			],
-			'decay' => [
-				'descriptions.$language' => 0.9,
-				'descriptions.$language.plain' => 0.9,
-				// below is not actually a field
-				'synonyms' => 0.5,
-			],
-			'logisticRegressionIntercept' => -1.3880461372968826,
-			'entitiesVariableBoost' => true,
-			'normalizeFulltextScores' => false,
-			'normalizeMultiClauseScores' => true,
-			'applyLogisticFunction' => true,
-			'useSynonyms' => true,
-			'hasLtrPlugin' => true,
-			'titleMatchBaseUri' => 'https://%s.wikipedia.org/w/api.php',
 		],
 	],
 ],
