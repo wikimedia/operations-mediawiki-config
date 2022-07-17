@@ -606,6 +606,9 @@ return [
 	'wikivoyage' => '/static/images/mobile/copyright/wikivoyage.svg',
 	'wiktionary' => '/static/images/mobile/copyright/wiktionary.svg',
 
+	// Chapter wikis
+	'brwikimedia' => '/static/images/mobile/copyright/brwikimedia.svg',
+
 	// Special wikis
 	'collabwiki' => '/static/images/mobile/copyright/collab-icon.svg',
 	'commonswiki' => '/static/images/mobile/copyright/commons.svg',
@@ -1142,6 +1145,11 @@ return [
 	],
 
 	// Chapter and local user group wikis
+	'brwikimedia' => [
+		'src' => '/static/images/mobile/copyright/brwikimedia-wordmark.svg',
+		'width' => 101,
+		'height' => 29,
+	],
 	'officewiki' => [
 		'src' => '/static/images/mobile/copyright/office-wordmark.svg',
 		'width' => 140,
