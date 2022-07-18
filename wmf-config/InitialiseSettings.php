@@ -8067,22 +8067,11 @@ return [
 'wgVectorLanguageInHeader' => [
 	'default' => [
 		'logged_in' => true,
-		'logged_out' => false,
-	],
-	'desktop-improvements' => [
-		'logged_in' => true,
+		// T312861
 		'logged_out' => true,
 	],
 	// Some of the following wikis are part of the `desktop-improvements` group,
 	// but have special treatment due to their wiki-specific language handling.
-	'testwiki' => [
-		'logged_in' => true,
-		'logged_out' => true,
-	],
-	'officewiki' => [
-		'logged_in' => true,
-		'logged_out' => true,
-	],
 	'commonswiki' => [
 		'logged_in' => false,
 		'logged_out' => false
