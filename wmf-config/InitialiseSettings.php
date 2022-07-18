@@ -7953,6 +7953,14 @@ return [
 	'default' => true,
 ],
 
+'wgVectorGrid' => [
+	'default' => false,
+	// T312241
+	'group0' => true,
+	'group1' => false,
+	'group2' => false,
+],
+
 // Skin versions are strings not numbers. See skins/Vector/skin.json.
 'wgVectorDefaultSkinVersionForExistingAccounts' => [
 	'default' => '1', // Legacy Vector

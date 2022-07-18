@@ -593,9 +593,6 @@ function wmfGetOverrideSettings() {
 				]
 			]
 		],
-		'wgVectorTitleAboveTabs' => [
-			'default' => true
-		],
 
 		'wgVectorGrid' => [
 			'default' => true
