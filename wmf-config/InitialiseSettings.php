@@ -7947,7 +7947,8 @@ return [
 ],
 // T258588: Sidebar expanded for anons on modern Vector
 'wgVectorDefaultSidebarVisibleForAnonymousUser' => [
-	'desktop-improvements' => true,
+	// T287609
+	'desktop-improvements' => false,
 ],
 
 'wgVectorStickyHeader' => [
