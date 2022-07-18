@@ -7896,8 +7896,17 @@ return [
 	'testwiki' => true,
 ],
 
+// Note:
+// This is the list of namespaces the max-width should be EXCLUDED from.
+// It is not a list of namespaces where it should be included.
 'wmgVectorMaxWidthOptionsNamespaces' => [
 	'default' => [
+		NS_SPECIAL,
+		NS_CATEGORY,
+	],
+	'wikisource' => [
+		// T311607
+		NS_MAIN,
 		NS_SPECIAL,
 		NS_CATEGORY,
 	],
