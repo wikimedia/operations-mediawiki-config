@@ -7957,7 +7957,7 @@ return [
 	'default' => false,
 	// T312241
 	'group0' => true,
-	'group1' => false,
+	'group1' => true,
 	'group2' => false,
 ],
 
