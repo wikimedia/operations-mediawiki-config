@@ -27429,7 +27429,8 @@ return [
 ],
 
 'wgGEMentorDashboardUseVue' => [
-	'default' => false
+	'default' => false,
+	'testwiki' => true,
 ],
 
 'wgGEMentorDashboardDeploymentMode' => [
