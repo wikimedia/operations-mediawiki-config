@@ -25132,7 +25132,7 @@ return [
 // wgCirrusSearchRecycleCompletionSuggesterIndex @{
 // Recycle suggester indices for small wikis (less than 100MB store size)
 'wgCirrusSearchRecycleCompletionSuggesterIndex' => [
-	'default' => false,
+	'default' => true,
 	'enwiki' => false,
 	'svwiki' => false,
 	'enwiktionary' => false,
