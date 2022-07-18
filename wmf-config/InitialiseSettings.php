@@ -7948,17 +7948,8 @@ return [
 	],
 ],
 
-// T310054
-'wgVectorTitleAboveTabs' => [
-	'default' => true,
-],
-
 'wgVectorGrid' => [
-	'default' => false,
-	// T312241
-	'group0' => true,
-	'group1' => true,
-	'group2' => false,
+	'default' => true,
 ],
 
 // Skin versions are strings not numbers. See skins/Vector/skin.json.
