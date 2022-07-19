@@ -1575,6 +1575,7 @@ function wmfGetOverrideSettings() {
 		],
 		'wgGEMentorProvider' => [
 			'default' => 'wikitext',
+			'arwiki' => 'structured',
 			'enwiki' => 'structured',
 		],
 		'wgGEMentorDashboardUseVue' => [
