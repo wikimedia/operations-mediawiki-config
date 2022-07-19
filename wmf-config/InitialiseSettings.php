@@ -20495,6 +20495,9 @@ return [
 
 'wgDiscussionTools_visualenhancements' => [
 	'default' => 'unavailable',
+	'arwiki' => 'default', // T312670
+	'cswiki' => 'default', // T312670
+	'huwiki' => 'default', // T312670
 	'mediawikiwiki' => 'available', // T310960
 ],
 
