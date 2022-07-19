@@ -326,6 +326,7 @@ return [
 'guwikisource' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'guwiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'guwwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
+'guwwiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'gvwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads' ],
 'gvwiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'hakwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads' ],

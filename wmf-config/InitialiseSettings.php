@@ -386,6 +386,7 @@ return [
 	'guwikisource' => 'Asia/Kolkata',
 	'guwiktionary' => 'Asia/Kolkata', // T253827
 	'guwwiki' => 'Africa/Lagos',
+	'guwwiktionary' => 'Africa/Lagos',
 	'hewiki' => 'Asia/Tel_Aviv',
 	'hewikibooks' => 'Asia/Tel_Aviv',
 	'hewikiquote' => 'Asia/Tel_Aviv',
