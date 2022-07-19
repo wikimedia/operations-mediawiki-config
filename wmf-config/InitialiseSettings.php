@@ -20762,7 +20762,6 @@ return [
 	"smwiki" => true,
 	"snwiki" => true,
 	"srnwiki" => true,
-	"sswiki" => true,
 	"stqwiki" => true,
 	"stwiki" => true,
 	"svwiki" => true,
