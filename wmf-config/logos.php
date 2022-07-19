@@ -251,6 +251,7 @@ return [
 	'papwiki' => '/static/images/project-logos/papwiki.png', // T51125
 	'pawiki' => '/static/images/project-logos/pawiki.png',
 	'pcdwiki' => '/static/images/project-logos/pcdwiki.png',
+	'pcmwiki' => '/static/images/project-logos/pcmwiki.png',
 	'pdcwiki' => '/static/images/project-logos/pdcwiki.png',
 	'pflwiki' => '/static/images/project-logos/pflwiki.png',
 	'pihwiki' => '/static/images/project-logos/pihwiki.png', // T42285
@@ -1054,6 +1055,7 @@ return [
 	'papwiki' => '/static/images/project-logos/papwiki-1.5x.png', // T150618
 	'pawiki' => '/static/images/project-logos/pawiki-1.5x.png', // T150618
 	'pcdwiki' => '/static/images/project-logos/pcdwiki-1.5x.png', // T150618
+	'pcmwiki' => '/static/images/project-logos/pcmwiki-1.5x.png',
 	'pdcwiki' => '/static/images/project-logos/pdcwiki-1.5x.png', // T150618
 	'pflwiki' => '/static/images/project-logos/pflwiki-1.5x.png', // T150618
 	'pihwiki' => '/static/images/project-logos/pihwiki-1.5x.png', // T150618
@@ -1640,6 +1642,7 @@ return [
 	'papwiki' => '/static/images/project-logos/papwiki-2x.png', // T150618
 	'pawiki' => '/static/images/project-logos/pawiki-2x.png', // T150618
 	'pcdwiki' => '/static/images/project-logos/pcdwiki-2x.png', // T150618
+	'pcmwiki' => '/static/images/project-logos/pcmwiki-2x.png',
 	'pdcwiki' => '/static/images/project-logos/pdcwiki-2x.png', // T150618
 	'pflwiki' => '/static/images/project-logos/pflwiki-2x.png', // T150618
 	'pihwiki' => '/static/images/project-logos/pihwiki-2x.png', // T150618

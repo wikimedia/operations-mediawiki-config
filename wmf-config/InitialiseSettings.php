@@ -503,6 +503,7 @@ return [
 	'orwiki' => 'Asia/Kolkata', // T122273
 	'orwikisource' => 'Asia/Kolkata', // T73875
 	'pawikisource' => 'Asia/Kolkata', // T149522
+	'pcmwiki' => 'Africa/Lagos',
 	'pdcwiki' => 'America/New_York',
 	'pflwiki' => 'Europe/Berlin',
 	'plwiki' => 'Europe/Warsaw',

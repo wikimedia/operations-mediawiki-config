@@ -652,6 +652,7 @@ return [
 'pawikisource' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'pawiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'pcdwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
+'pcmwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'pdcwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'pflwiki' => [ 'wikipedia', 'small', 'wikidataclient' ],
 'pihwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
