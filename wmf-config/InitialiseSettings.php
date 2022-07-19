@@ -11428,6 +11428,9 @@ return [
 	],
 	'+uzwiki' => [
 		'rollbacker' => [ 'rollback' => true ], // T265509
+		'eliminator' => [
+			'delete' => true, // T302670
+		]
 	],
 	'+vecwiki' => [
 		'flood' => [ 'bot' => true ],
@@ -13097,7 +13100,10 @@ return [
 		],
 	],
 	'+uzwiki' => [
-		'sysop' => [ 'rollbacker' ], // T265509
+		'sysop' => [
+			'rollbacker', // T265509
+			'eliminator', // T302670
+	],
 	],
 	'+vecwiki' => [
 		'sysop' => [ 'flood' ],
@@ -14158,7 +14164,10 @@ return [
 		],
 	],
 	'+uzwiki' => [
-		'sysop' => [ 'rollbacker' ], // T265509
+		'sysop' => [
+			'rollbacker', // T265509
+			'eliminator', // T302670
+		],
 	],
 	'+viwiki' => [
 		'sysop' => [
