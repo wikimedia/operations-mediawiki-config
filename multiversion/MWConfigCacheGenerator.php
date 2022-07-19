@@ -258,9 +258,15 @@ class MWConfigCacheGenerator {
 			$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals ];
 
 			// Save cache if the grace period expired. We define the grace period as the opcache
-			// revalidation frequency + 1, in order to ensure we don't incur in race conditions
+			// revalidation frequency, in order to ensure we don't incur in race conditions
 			// when saving the values. See T236104
-			$minTime = $confActualMtime + intval( ini_get( 'opcache.revalidate_freq' ) );
+			$revalidateFreq = intval( ini_get( 'opcache.revalidate_freq' ) );
+			if ( $revalidateFreq === 0 ) {
+				// opcache revalidation is disabled, so allow some time for php-fpm restart
+				// to complete (T311788)
+				$revalidateFreq = 10;
+			}
+			$minTime = $confActualMtime + $revalidateFreq;
 			if ( time() > $minTime ) {
 				self::writeToStaticCache(
 					$cacheDir, $confCacheFileName, $confCacheObject
