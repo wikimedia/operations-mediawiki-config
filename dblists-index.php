@@ -102,6 +102,7 @@ return [
 'biwikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
 'biwiktionary' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
 'bjnwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads' ],
+'bjnwiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'blkwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'bmwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'bmwikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
