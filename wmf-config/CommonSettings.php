@@ -455,6 +455,9 @@ $wgEnotifWatchlist = true;
 // setting. T142727
 $wgEnotifMinorEdits = true;
 
+// Use the same expiry for core sessions as for CentralAuth sessions (T313496)
+$wgObjectCacheSessionExpiry = 86400;
+
 # ######################################################################
 # Anti-abuse settings
 # ######################################################################
