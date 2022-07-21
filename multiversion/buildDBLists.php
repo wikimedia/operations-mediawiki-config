@@ -5,7 +5,8 @@ use Wikimedia\MWConfig\MWConfigCacheGenerator;
 require_once __DIR__ . '/MWWikiversions.php';
 require_once __DIR__ . '/MWConfigCacheGenerator.php';
 require_once __DIR__ . '/../vendor/autoload.php';
-require_once __DIR__ . '/../src/defines.php';
+require_once __DIR__ . '/../tests/data/MWDefines.php';
+require_once __DIR__ . '/../tests/data/SiteConfiguration.php';
 require_once __DIR__ . '/../wmf-config/InitialiseSettings.php';
 
 global $wmgRealm, $wmgDatacenter;
@@ -56,10 +57,10 @@ foreach ( glob( __DIR__ . '/../dblists/*.dblist' ) as $filepath ) {
 }
 
 foreach ( $knownDBLists as $DBList => $contents ) {
-	writeDBList( $DBList, $contents );
+	wmfWriteDBList( $DBList, $contents );
 }
 foreach ( glob( __DIR__ . '/../dblists/*.dbexpr' ) as $filepath ) {
-	writeDBList(
+	wmfWriteDBList(
 		basename( $filepath, '.dbexpr' ),
 		MWWikiversions::evalDbListExpression( file_get_contents( $filepath ) ),
 		'dbexpr'
@@ -71,7 +72,7 @@ foreach ( glob( __DIR__ . '/../dblists/*.dbexpr' ) as $filepath ) {
  * @param string[] $listcontent The wikidbs for the dblist contents.
  * @param string $source One of "YAML" or "dbexpr"
  */
-function writeDBList( $listname, $listcontent, $source = 'YAML' ) {
+function wmfWriteDBList( $listname, $listcontent, $source = 'YAML' ) {
 	$path = __DIR__ . '/../dblists/' . $listname . '.dblist';
 
 	// Alpha-sort the contents of the list by array value for consitency

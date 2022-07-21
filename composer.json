@@ -16,21 +16,24 @@
 			"phpcbf",
 			"minus-x fix ."
 		],
+		"phpunit": [
+			"phpunit"
+		],
 		"test": [
-			"composer lint",
-			"phpunit",
-			"composer phpcs",
+			"@lint",
+			"@phpunit",
+			"@phpcs",
 			"minus-x check .",
-			"composer buildDBLists",
-			"composer checkclean"
+			"@buildDBLists",
+			"@checkclean"
 		],
 		"buildDBLists": "php -e multiversion/buildDBLists.php",
 		"buildConfigCache": "php -e multiversion/buildConfigCache.php",
 		"diffConfig": [
-			"composer buildConfigCache",
+			"@buildConfigCache",
 			"git checkout -q HEAD~1",
 			"git add -f wmf-config/config-cache/",
-			"composer buildConfigCache",
+			"@buildConfigCache",
 			"git diff -R --minimal --color --exit-code wmf-config/config-cache/",
 			"git reset wmf-config/config-cache/"
 		],

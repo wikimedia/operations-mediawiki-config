@@ -48,9 +48,8 @@ class DBList {
 	 * Get list of dblist names loaded in CommonSettings.php.
 	 *
 	 * @return string[]
-	 * @throws Exception
 	 */
 	public static function getDblistsUsedInSettings() {
-		return Wikimedia\MWConfig\MWConfigCacheGenerator::$dbLists;
+		return MWMultiVersion::DB_LISTS;
 	}
 }

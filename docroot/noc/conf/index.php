@@ -12,7 +12,7 @@
 	 * @param bool $highlight
 	 * @param string $prefixFunc
 	 */
-	function outputFiles( $viewFilenames, $highlight = true, $prefixFunc = 'basename' ) {
+	function wmfOutputFiles( $viewFilenames, $highlight = true, $prefixFunc = 'basename' ) {
 		$viewFilenames = array_map( $prefixFunc, $viewFilenames );
 		natsort( $viewFilenames );
 		foreach ( $viewFilenames as $viewFilename ) {
@@ -48,14 +48,16 @@
 
 <main role="main"><div class="wm-container">
 
-<nav class="wm-site-nav"><ul class="wm-nav">
-	<li><a href="./" class="wm-nav-item-active">MediaWiki config</a>
-		<ul>
-			<li><a href="#dblist">Database lists</a></li>
-		</ul>
-	</li>
-	<li><a href="../db.php">Database config</a></li>
-</ul></nav>
+	<nav class="wm-site-nav"><ul class="wm-nav">
+		<li><a href="/conf/" class="wm-nav-item-active">Config files</a>
+			<ul>
+				<li><a href="#wmf-config">MediaWiki config</a></li>
+				<li><a href="#dblist">Database lists</a></li>
+			</ul>
+		</li>
+		<li><a href="/db.php">Database view</a></li>
+		<li><a href="/wiki.php">Wiki view</a></li>
+	</ul></nav>
 
 	<article>
 
@@ -91,14 +93,14 @@
 		glob( __DIR__ . '/{fc-list,langlist*,wikiversions*.json,extension-list}', GLOB_BRACE ),
 		glob( __DIR__ . '/*.yaml' )
 	);
-	outputFiles( $viewFilenames );
+	wmfOutputFiles( $viewFilenames );
 ?>
 </ul>
 
-<h3 id="dblist">Database lists</h3>
+<h2 id="dblist">Database lists</h2>
 <ul>
 <?php
-	outputFiles( glob( __DIR__ . '/dblists/*.dblist' ), true, static function ( $name ) {
+	wmfOutputFiles( glob( __DIR__ . '/dblists/*.dblist' ), true, static function ( $name ) {
 		return str_replace( __DIR__ . '/', '', $name );
 	} );
 ?>

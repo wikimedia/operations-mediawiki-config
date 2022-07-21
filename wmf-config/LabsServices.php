@@ -54,7 +54,8 @@ return [
 		'wikifunctions-evaluator' => 'deployment-docker-wikifunctions01.deployment-prep.eqiad1.wikimedia.cloud:6927',
 
 		'irc' => [
-			'irc.beta.wmflabs.org', // deployment-ircd02
+			// deployment-ircd02
+			'irc.beta.wmflabs.org',
 		],
 		'redis_lock' => [
 			'rdb1' => 'deployment-memc09.deployment-prep.eqiad1.wikimedia.cloud',
@@ -69,6 +70,10 @@ return [
 		'electron' => 'http://deployment-pdfrender02.deployment-prep.eqiad.wmflabs:5252',
 		'push-notifications' => 'http://deployment-push-notifications01.deployment-prep.eqiad1.wikimedia.cloud:8900',
 		'linkrecommendation' => 'https://api.wikimedia.org/service/linkrecommendation',
+		// Proof-of-concept API for betalabs.
+		// There is not yet a public API (T306349) for the new production API, so we need to keep using this
+		// one in labs.
+		'image-suggestion' => 'https://image-suggestion-api.wmcloud.org',
 		// No Shellbox/k8s in beta cluster (T286298)
 		'shellbox' => null,
 		'shellbox-constraints' => 'https://shellbox.svc.deployment-prep.eqiad1.wikimedia.cloud',

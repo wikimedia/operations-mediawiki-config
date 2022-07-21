@@ -23,6 +23,10 @@
 # Included from: wmf-config/CommonSettings.php.
 #
 
+// Inline comments are often used for noting the task(s) associated with specific configuration
+// and requiring comments to be on their own line would reduce readability for this file
+// phpcs:disable MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment
+
 /**
  * Get overrides for Beta Cluster settings. This is used by
  * wmfLoadInitialiseSettings() in CommonSettings.php.
@@ -137,13 +141,43 @@ function wmfGetOverrideSettings() {
 		],
 
 		// EventStreamConfig overrides for beta sites.
-		// NOTE: StaticSiteConfiguration
-		// config merging with '+' does not support merging for 'default'.
-		// You must specify the +wiki or +tag (e.g. wiki group) you
-		// want to overide and merge stream configs for.
+		//
+		// NOTE: It is not valid to use '+' with 'default'.
+		// Keys for group/wiki here replace those from prod. The result is interpreted by
+		// SiteConfiguration. There can only be one 'default' in the end. The order is the same
+		// as within prod settings (default>group>wikiid), with later ones replacing earlier ones,
+		// unless '+' is used on a later one in which case the values are merged.
 		'wgEventStreams' => [
-			'+group2' => [
+			'+wikipedia' => [
+				// See https://phabricator.wikimedia.org/T311268
+				'mediawiki.web_ui.interactions' => [
+					'schema_title' => 'analytics/mediawiki/client/metrics_event',
+					'destination_event_service' => 'eventgate-analytics-external',
+					'producers' => [
+						'metrics_platform_client' => [
+							'events' => [
+								'web.ui.',
 
+								// TODO: Change event name prefix to "web_ui" in the
+								// instrument
+								'web_ui.',
+							],
+							'provide_values' => [
+								'page_namespace',
+								'performer_is_logged_in',
+								'performer_session_id',
+								'performer_pageview_id',
+								'performer_edit_count_bucket',
+								'mediawiki_skin',
+							],
+							'curation' => [
+								'mediawiki_skin' => [
+									'in' => [ 'minerva', 'vector', 'vector-2022' ],
+								],
+							],
+						],
+					],
+				],
 			],
 			'+enwiki' => [
 				'mediawiki.ipinfo_interaction' => [
@@ -181,6 +215,9 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgEventLoggingStreamNames' => [
+			'+wikipedia' => [
+				'mediawiki.web_ui.interactions',
+			],
 			'+enwiki' => [
 				'mediawiki.ipinfo_interaction',
 			],
@@ -365,13 +402,13 @@ function wmfGetOverrideSettings() {
 			'default' => '/static/images/project-logos/wikimedia-cloud-services.svg'
 		],
 		'-wmgSiteLogoVariants' => [
-			'default' => false,
+			'default' => null,
 		],
 		'-wmgSiteLogoWordmark' => [
-			'default' => false,
+			'default' => null,
 		],
 		'-wmgSiteLogoTagline' => [
-			'default' => false,
+			'default' => null,
 		],
 
 		'wgFavicon' => [
@@ -541,8 +578,8 @@ function wmfGetOverrideSettings() {
 		],
 		'wgVectorWebABTestEnrollment' => [
 			'default' => [
-				'name' => 'skin-vector-toc-experiment',
-				'enabled' => false,
+				'name' => 'vector.sticky_header_edit',
+				'enabled' => true,
 				'buckets' => [
 					'unsampled' => [
 						'samplingRate' => 0
@@ -556,7 +593,8 @@ function wmfGetOverrideSettings() {
 				]
 			]
 		],
-		'wgVectorTitleAboveTabs' => [
+
+		'wgVectorGrid' => [
 			'default' => true
 		],
 
@@ -944,31 +982,6 @@ function wmfGetOverrideSettings() {
 					'shuffleAnswersDisplay' => true,
 				],
 			],
-			'+fawiki' => [
-				[
-					// T297628
-					'name' => 'internal-gdi-safety-survey',
-					'type' => 'internal',
-					'layout' => 'single-answer',
-					'question' => 'ext-quicksurveys-internal-gdi-safety-survey-question',
-					'privacyPolicy' => 'ext-quicksurveys-internal-gdi-safety-survey-privacy-policy',
-					'answers' => [
-						'ext-quicksurveys-internal-gdi-safety-survey-answer-positive',
-						'ext-quicksurveys-internal-gdi-safety-survey-answer-negative',
-						'ext-quicksurveys-internal-gdi-safety-survey-answer-neutral',
-					],
-					'audience' => [
-						// T296486
-						'minEdits' => 5
-					],
-					'enabled' => true,
-					'coverage' => 0.1, // T296486
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable', 'beta' ],
-					],
-				],
-			],
 		],
 		'-wgScorePath' => [
 			'default' => "//upload.wikimedia.beta.wmflabs.org/score",
@@ -1072,6 +1085,9 @@ function wmfGetOverrideSettings() {
 		],
 
 		'-wmgWikibaseSearchStatementBoosts' => [
+			'default' => []
+		],
+		'-wmgWBCSLanguageSelectorStatementBoost' => [
 			'default' => []
 		],
 
@@ -1362,8 +1378,8 @@ function wmfGetOverrideSettings() {
 			'default' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 		],
 
-		'wgTemplateLinksSchemaMigrationStage' => [
-			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
+		'-wgTemplateLinksSchemaMigrationStage' => [
+			'default' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 		],
 
 		'-wgIncludejQueryMigrate' => [
@@ -1435,14 +1451,12 @@ function wmfGetOverrideSettings() {
 			'default' => 'wikidatawiki',
 			'commonswiki' => 'commonswiki',
 		],
-		'wmgUseGrowthExperiments' => [
-			'enwiki' => true,
+		'wgGEImageRecommendationApiHandler' => [
+			// Can be changed to 'production' when T306349 is resolved.
+			'default' => 'mvp'
 		],
 		'-wgGEDatabaseCluster' => [
 			'default' => false,
-		],
-		'wgGEWikiConfigEnabled' => [
-			'default' => true,
 		],
 		'wgGEDeveloperSetup' => [
 			'default' => true,
@@ -1547,38 +1561,6 @@ function wmfGetOverrideSettings() {
 		'wgGEHelpPanelViewMoreTitle' => [
 			'enwiki' => 'Help:Contents',
 		],
-		'wgGEHelpPanelLinks' => [
-			'enwiki' => [
-				[
-					'title' => 'Help:Contents',
-					'text' => 'The most helpful help link',
-					'id' => 'example',
-				],
-				[
-					'title' => 'Wikipedia:Community_portal',
-					'text' => 'Community Portal',
-					'id' => 'community',
-				],
-				[
-					'title' => 'Wikipedia:Village_pump',
-					'text' => 'Village pump',
-					'id' => 'village-pump',
-				],
-				[
-					'title' => 'Portal:Contents',
-					'text' => 'Portal contents',
-					'id' => 'portal-contents',
-				],
-				[
-					'title' => 'Wikipedia:File_Upload_Wizard',
-					'text' => 'File upload wizard',
-					'id' => 'file-upload-wizard',
-				],
-			],
-		],
-		'wgGEHelpPanelReadingModeNamespaces' => [
-			'default' => [ 2, 3, 4, 12 ]
-		],
 		'wgGEHelpPanelSearchForeignAPI' => [
 			'default' => 'https://en.wikipedia.org/w/api.php',
 			'arwiki' => 'https://ar.wikipedia.org/w/api.php',
@@ -1588,20 +1570,15 @@ function wmfGetOverrideSettings() {
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
 			'viwiki' => 'https://vi.wikipedia.org/w/api.php',
 		],
-		'wgGEHomepageMentorsList' => [
-			'default' => '',
-			'arwiki' => 'Wikipedia:Mentors',
-			'enwiki' => 'Wikipedia:Mentors',
+		'wgGEMentorProvider' => [
+			'default' => 'wikitext',
+			'arwiki' => 'structured',
+			'enwiki' => 'structured',
 		],
-		'wgGEHomepageNewAccountEnablePercentage' => [
-			'enwiki' => 25,
-		],
-		'wgGEMentorshipNewAccountEnablePercentage' => [
-			'default' => 100,
-			'enwiki' => 8, // T287903
-		],
-		'wgGEMentorDashboardEnabled' => [
-			'default' => true,
+		'wgGEMentorDashboardUseVue' => [
+			'default' => false,
+			'enwiki' => true,
+			'arwiki' => true
 		],
 		'wgGECampaignPattern' => [
 			'enwiki' => '/^growth-|^social-latam-2022-A$/',
@@ -1640,14 +1617,9 @@ function wmfGetOverrideSettings() {
 				]
 			],
 		],
+
 		'-wgGEMentorDashboardDeploymentMode' => [
 			'default' => 'alpha',
-		],
-		'wgGEMentorDashboardBetaMode' => [
-			'default' => true,
-		],
-		'wgGEMentorDashboardDiscoveryEnabled' => [
-			'default' => true,
 		],
 		'wgGEHomepageTutorialTitle' => [
 			'default' => '',
@@ -1820,15 +1792,8 @@ function wmfGetOverrideSettings() {
 			'default' => 'https://wikidata.beta.wmflabs.org',
 		],
 
-		// T209143
-		'wmgWikibaseUseSSRTermbox' => [
-			'default' => false,
-			'wikidatawiki' => true,
-		],
-
-		'wmgWikibaseSSRTermboxServerUrl' => [
-			'default' => '',
-			'wikidatawiki' => 'https://ssr-termbox.wmflabs.org/termbox',
+		'-wmgWikibaseSSRTermboxServerUrl' => [
+			'default' => null, // T304328
 		],
 
 		// T232191
@@ -2128,14 +2093,6 @@ function wmfGetOverrideSettings() {
 			'wikidatawiki' => true,
 		],
 
-		// T294159: Enable Lexeme data access via Scribunto on the Beta Cluster
-		'-wgLexemeEnableDataTransclusion' => [
-			'default' => true
-		],
-		'-wmgWikibaseDisabledAccessEntityTypes' => [
-			'default' => [],
-		],
-
 		'wgMusicalNotationEnableWikibaseDataType' => [
 			'default' => false,
 			'wikidatawiki' => true,
@@ -2169,6 +2126,9 @@ function wmfGetOverrideSettings() {
 			'wikisource' => 'https://ocr-test.wmcloud.org',
 		],
 		'wgProofreadPageUseStatusChangeTags' => [
+			'wikisource' => true,
+		],
+		'wgProofreadPageEnableEditInSequence' => [
 			'wikisource' => true,
 		],
 		'wmgUseWikimediaEditorTasks' => [
@@ -2278,6 +2238,8 @@ function wmfGetOverrideSettings() {
 				'm.wikidata.beta.wmflabs.org',
 				'*.wikivoyage.beta.wmflabs.org',
 				'*.mediawiki.beta.wmflabs.org',
+				'wikifunctions.beta.wmflabs.org',
+				'm.wikifunctions.beta.wmflabs.org',
 
 				// Prod domains, to allow easier gadget testing
 				'*.wikimedia.org',
@@ -2341,6 +2303,10 @@ function wmfGetOverrideSettings() {
 		],
 
 		'-wgDiscussionTools_autotopicsub' => [
+			'default' => 'default',
+		],
+
+		'-wgDiscussionTools_visualenhancements' => [
 			'default' => 'default',
 		],
 
@@ -2432,14 +2398,10 @@ function wmfGetOverrideSettings() {
 			'enwiki' => true,
 		],
 
-		// (T302857) Temporarily disable template search improvements in advance of production deployment
-		'wmgTemplateSearchImprovements' => [
-			'default' => false,
-		],
-
 		// T294363: QA Surveys on enwiki beta
 		'wmgUseQuickSurveys' => [
 			'enwiki' => true,
+			'jawiki' => true,
 		],
 
 		'-wgMultiShardSiteStats' => [
@@ -2447,5 +2409,14 @@ function wmfGetOverrideSettings() {
 			'enwiki' => true,
 		],
 
+		'wmgUseImageSuggestions' => [
+			'default' => false,
+		],
+
+		// See T311752
+		'wmgUseCampaignEvents' => [
+			'default' => true,
+			'loginwiki' => false,
+		],
 	];
 } # wmfGetOverrideSettings()

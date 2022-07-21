@@ -23,6 +23,10 @@
 # operations/puppet.git:/hieradata/common/profile/services_proxy/envoy.yaml
 #
 
+// Inline comments are often used for noting the service associated with specific configuration
+// and requiring comments to be on their own line would reduce readability for this file
+// phpcs:disable MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment
+
 $common = [
 	// XHGui is the on-demand profiler, backed by MariaDB.
 	// The username and password are set in PrivateSettings.php.
@@ -67,6 +71,7 @@ $common = [
 	'sessionstore' => 'http://localhost:6006',
 	'echostore' => 'http://localhost:6007',
 	'push-notifications' => 'http://localhost:6012',
+	'image-suggestion' => 'http://localhost:6030',
 	'linkrecommendation' => 'http://localhost:6029',
 	'shellbox' => 'http://localhost:6024',
 	'shellbox-constraints' => 'http://localhost:6025',
@@ -131,10 +136,10 @@ $services = [
 
 		// eqiad parsercache
 		'parsercache-dbs' => [
-			'pc1' => '10.64.48.89',   # pc1014, D6 8.8TB 512GB # pc1
+			'pc1' => '10.64.0.57',   # pc1011, A1 8.8TB 512GB # pc1
 			'pc2' => '10.64.16.65',  # pc1012, B1 8.8TB 512GB # pc2
 			'pc3' => '10.64.32.163', # pc1013, C5 8.8TB 512GB # pc3
-			# spare: '10.64.0.57',  # pc1011, A1 8.8TB 512GB
+			# spare: '10.64.48.89',  # pc1014, D6 8.8TB 512GB
 			# Use spare(s) to replace any of the above if needed
 		],
 

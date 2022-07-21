@@ -140,11 +140,13 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['formatterUrlProperty'] = $wmgWBRepoFormatterUrlProperty;
 	}
 	if ( isset( $wmgWBRepoCanonicalUriProperty ) ) {
-		$wgWBRepoSettings['canonicalUriProperty'] = $wmgWBRepoCanonicalUriProperty; // T178180
+		// T178180
+		$wgWBRepoSettings['canonicalUriProperty'] = $wmgWBRepoCanonicalUriProperty;
 	}
 
 	if ( isset( $wmgWBRepoIdGenerator ) ) {
-		$wgWBRepoSettings['idGenerator'] = $wmgWBRepoIdGenerator; // T194299
+		// T194299
+		$wgWBRepoSettings['idGenerator'] = $wmgWBRepoIdGenerator;
 	}
 
 	if ( isset( $wmgWBRepoIdGeneratorInErrorPingLimiter ) ) {
@@ -164,8 +166,10 @@ if ( $wmgUseWikibaseRepo ) {
 		'args' => [ __DIR__ . '/unitConversionConfig.json' ]
 	];
 
-	if ( isset( $wmgWikibaseUseSSRTermbox ) && isset( $wmgWikibaseSSRTermboxServerUrl ) ) {
-		$wgWBRepoSettings['termboxEnabled'] = $wmgWikibaseUseSSRTermbox;
+	if ( isset( $wmgWikibaseTermboxEnabled ) ) {
+		$wgWBRepoSettings['termboxEnabled'] = $wmgWikibaseTermboxEnabled;
+	}
+	if ( isset( $wmgWikibaseSSRTermboxServerUrl ) ) {
 		$wgWBRepoSettings['ssrServerUrl'] = $wmgWikibaseSSRTermboxServerUrl;
 	}
 
@@ -278,7 +282,8 @@ if ( $wmgUseWikibaseClient ) {
 
 		if ( in_array( $wgDBname, MWWikiversions::readDbListFile( 'wiktionary' ) ) ) {
 			$excludeNamespaces[] = NS_MAIN;
-			$excludeNamespaces[] = 114; // citations ns
+			// citations namespace
+			$excludeNamespaces[] = 114;
 		}
 
 		return $excludeNamespaces;

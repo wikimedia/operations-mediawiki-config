@@ -10,6 +10,10 @@
 #      `-- wmf-config/logos.php
 #
 
+// Inline comments are often used for noting the task(s) associated with specific configuration
+// and requiring comments to be on their own line would reduce readability for this file
+// phpcs:disable MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment
+
 # ⚠️ IMPORTANT!!!! ⚠️
 # When updating these logos, please note that official Wikimedia logos should not be
 # used on labs instances.
@@ -65,6 +69,7 @@ return [
 	'bhwiki' => '/static/images/project-logos/bhwiki.png', // T50397
 	'biwiki' => '/static/images/project-logos/biwiki.png', // T51125
 	'bjnwiki' => '/static/images/project-logos/bjnwiki.png', // T48564
+	'blkwiki' => '/static/images/project-logos/blkwiki.png',
 	'bmwiki' => '/static/images/project-logos/bmwiki.png', // T42285
 	'bnwiki' => '/static/images/project-logos/bnwiki.png',
 	'bowiki' => '/static/images/project-logos/bowiki.png', // T50397
@@ -311,7 +316,7 @@ return [
 	'towiki' => '/static/images/project-logos/towiki.png', // T51125
 	'tpiwiki' => '/static/images/project-logos/tpiwiki.png', // T29240
 	'trvwiki' => '/static/images/project-logos/trvwiki.png',
-	'trwiki' => '/static/images/project-logos/trwiki.png',
+	'trwiki' => '/static/images/project-logos/trwiki-500k.png', // T311946
 	'tswiki' => '/static/images/project-logos/tswiki.png', // T51125
 	'ttwiki' => '/static/images/project-logos/ttwiki.png',
 	'twwiki' => '/static/images/project-logos/akwiki.png', // T189578
@@ -337,7 +342,7 @@ return [
 	'yowiki' => '/static/images/project-logos/yowiki.png',
 	'zawiki' => '/static/images/project-logos/zawiki.png', // T50397
 	'zeawiki' => '/static/images/project-logos/zeawiki.png', // T51125
-	'zh_classicalwiki' => '/static/images/project-logos/zh_classicalwiki.png', // T177165
+	'zh_classicalwiki' => '/static/images/project-logos/zh_classicalwiki.png', // T177165, T259006
 	'zh_min_nanwiki' => '/static/images/project-logos/zh_min_nanwiki.png',
 	'zh_yuewiki' => '/static/images/project-logos/zh_yuewiki.png',
 	'zhwiki' => '/static/images/project-logos/zhwiki.png', // T276694
@@ -799,7 +804,7 @@ return [
 	'qualitywiki' => '/static/images/project-logos/qualitywiki.png',
 	'searchcomwiki' => '/static/images/project-logos/searchcomwiki.png',
 	'spcomwiki' => '/static/images/project-logos/spcomwiki.png',
-	'specieswiki' => '/static/images/project-logos/specieswiki.png', // T306037
+	'specieswiki' => '/static/images/project-logos/specieswiki.png', // T306037, T310961
 	'stewardwiki' => '/static/images/project-logos/stewardwiki.png', // T39700
 	'sysop_itwiki' => '/static/images/project-logos/sysop_itwiki.png', // T256545
 	'strategywiki' => '/static/images/project-logos/strategywiki.png',
@@ -871,6 +876,7 @@ return [
 	'bhwiki' => '/static/images/project-logos/bhwiki-1.5x.png', // T150618
 	'biwiki' => '/static/images/project-logos/biwiki-1.5x.png', // T150618
 	'bjnwiki' => '/static/images/project-logos/bjnwiki-1.5x.png', // T150618
+	'blkwiki' => '/static/images/project-logos/blkwiki-1.5x.png',
 	'bmwiki' => '/static/images/project-logos/bmwiki-1.5x.png', // T150618
 	'bnwiki' => '/static/images/project-logos/bnwiki-1.5x.png',
 	'bowiki' => '/static/images/project-logos/bowiki-1.5x.png', // T150618
@@ -1113,7 +1119,7 @@ return [
 	'towiki' => '/static/images/project-logos/towiki-1.5x.png', // T150618
 	'tpiwiki' => '/static/images/project-logos/tpiwiki-1.5x.png', // T150618
 	'trvwiki' => '/static/images/project-logos/trvwiki-1.5x.png',
-	'trwiki' => '/static/images/project-logos/trwiki-1.5x.png', // T150618
+	'trwiki' => '/static/images/project-logos/trwiki-500k-1.5x.png', // T150618, T311946
 	'tswiki' => '/static/images/project-logos/tswiki-1.5x.png', // T150618
 	'ttwiki' => '/static/images/project-logos/ttwiki-1.5x.png', // T150618
 	'twwiki' => '/static/images/project-logos/akwiki-1.5x.png', // T189578
@@ -1139,7 +1145,7 @@ return [
 	'yowiki' => '/static/images/project-logos/yowiki-1.5x.png', // T150618
 	'zawiki' => '/static/images/project-logos/zawiki-1.5x.png', // T150618
 	'zeawiki' => '/static/images/project-logos/zeawiki-1.5x.png', // T150618
-	'zh_classicalwiki' => '/static/images/project-logos/zh_classicalwiki-1.5x.png', // T177165
+	'zh_classicalwiki' => '/static/images/project-logos/zh_classicalwiki-1.5x.png', // T177165, T259006
 	'zh_min_nanwiki' => '/static/images/project-logos/zh_min_nanwiki-1.5x.png', // T150618
 	'zh_yuewiki' => '/static/images/project-logos/zh_yuewiki-1.5x.png', // T150618
 	'zhwiki' => '/static/images/project-logos/zhwiki-1.5x.png', // T276694
@@ -1404,7 +1410,7 @@ return [
 	'officewiki' => '/static/images/project-logos/officewiki-1.5x.png',
 	'ombudsmenwiki' => '/static/images/project-logos/ombudsmenwiki-1.5x.png',
 	'otrs_wikiwiki' => '/static/images/project-logos/otrs_wikiwiki-1.5x.png',
-	'specieswiki' => '/static/images/project-logos/specieswiki-1.5x.png', // T230113, T306037
+	'specieswiki' => '/static/images/project-logos/specieswiki-1.5x.png', // T230113, T306037, T310961
 	'sysop_itwiki' => '/static/images/project-logos/sysop_itwiki-1.5x.png', // T256545
 	'test2wiki' => '/static/images/project-logos/test2wiki-1.5x.png',
 	'testcommonswiki' => '/static/images/project-logos/commonswiki-1.5x.png', // T203343
@@ -1455,6 +1461,7 @@ return [
 	'bhwiki' => '/static/images/project-logos/bhwiki-2x.png', // T150618
 	'biwiki' => '/static/images/project-logos/biwiki-2x.png', // T150618
 	'bjnwiki' => '/static/images/project-logos/bjnwiki-2x.png', // T150618
+	'blkwiki' => '/static/images/project-logos/blkwiki-2x.png',
 	'bmwiki' => '/static/images/project-logos/bmwiki-2x.png', // T150618
 	'bnwiki' => '/static/images/project-logos/bnwiki-2x.png',
 	'bowiki' => '/static/images/project-logos/bowiki-2x.png', // T150618
@@ -1697,7 +1704,7 @@ return [
 	'towiki' => '/static/images/project-logos/towiki-2x.png', // T150618
 	'tpiwiki' => '/static/images/project-logos/tpiwiki-2x.png', // T150618
 	'trvwiki' => '/static/images/project-logos/trvwiki-2x.png',
-	'trwiki' => '/static/images/project-logos/trwiki-2x.png', // T150618
+	'trwiki' => '/static/images/project-logos/trwiki-500k-2x.png', // T150618, T311946
 	'tswiki' => '/static/images/project-logos/tswiki-2x.png', // T150618
 	'ttwiki' => '/static/images/project-logos/ttwiki-2x.png', // T150618
 	'twwiki' => '/static/images/project-logos/akwiki-2x.png', // T189578
@@ -1723,7 +1730,7 @@ return [
 	'yowiki' => '/static/images/project-logos/yowiki-2x.png', // T150618
 	'zawiki' => '/static/images/project-logos/zawiki-2x.png', // T150618
 	'zeawiki' => '/static/images/project-logos/zeawiki-2x.png', // T150618
-	'zh_classicalwiki' => '/static/images/project-logos/zh_classicalwiki-2x.png', // T177165
+	'zh_classicalwiki' => '/static/images/project-logos/zh_classicalwiki-2x.png', // T177165, T259006
 	'zh_min_nanwiki' => '/static/images/project-logos/zh_min_nanwiki-2x.png', // T150618
 	'zh_yuewiki' => '/static/images/project-logos/zh_yuewiki-2x.png', // T150618
 	'zhwiki' => '/static/images/project-logos/zhwiki-2x.png', // T276694
@@ -1988,7 +1995,7 @@ return [
 	'officewiki' => '/static/images/project-logos/officewiki-2x.png',
 	'ombudsmenwiki' => '/static/images/project-logos/ombudsmenwiki-2x.png',
 	'otrs_wikiwiki' => '/static/images/project-logos/otrs_wikiwiki-2x.png',
-	'specieswiki' => '/static/images/project-logos/specieswiki-2x.png', // T230113, T306037
+	'specieswiki' => '/static/images/project-logos/specieswiki-2x.png', // T230113, T306037, T310961
 	'sysop_itwiki' => '/static/images/project-logos/sysop_itwiki-2x.png', // T256545
 	'test2wiki' => '/static/images/project-logos/test2wiki-2x.png',
 	'testcommonswiki' => '/static/images/project-logos/commonswiki-2x.png', // T203343

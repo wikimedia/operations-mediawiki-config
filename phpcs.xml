@@ -1,13 +1,8 @@
 <?xml version="1.0"?>
 <ruleset>
 	<rule ref="vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
-		<exclude name="MediaWiki.Commenting.FunctionComment.WrongStyle" />
-		<exclude name="MediaWiki.NamingConventions.PrefixedGlobalFunctions.allowedPrefix" />
-		<exclude name="MediaWiki.NamingConventions.ValidGlobalName.allowedPrefix" />
 		<exclude name="MediaWiki.Usage.SuperGlobalsUsage.SuperGlobals" />
-		<exclude name="MediaWiki.VariableAnalysis.MisleadingGlobalNames.Misleading$wgConf" />
-		<exclude name="MediaWiki.VariableAnalysis.MisleadingGlobalNames.Misleading$wgDebugLogFile" />
-		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment" />
+		<exclude name="MediaWiki.Commenting.FunctionComment.MissingDocumentationPublic" />
 	</rule>
 	<file>.</file>
 	<arg name="bootstrap" value="./vendor/mediawiki/mediawiki-codesniffer/utils/bootstrap-ci.php"/>
@@ -19,9 +14,16 @@
 	<rule ref="Generic.PHP.NoSilencedErrors.Discouraged">
 		<severity>0</severity>
 	</rule>
-	<rule ref="MediaWiki.ControlStructures.AssignmentInControlStructures.AssignmentInControlStructures">
-		<exclude-pattern>multiversion/MWWikiversions\.php</exclude-pattern>
-		<exclude-pattern>wmf-config/CommonSettings\.php</exclude-pattern>
+	<rule ref="MediaWiki.NamingConventions.ValidGlobalName">
+		<properties>
+			<property name="ignoreList" type="array" value="$IP" />
+			<property name="allowedPrefixes" type="array" value="wg,wmg" />
+		</properties>
+	</rule>
+	<rule ref="MediaWiki.NamingConventions.PrefixedGlobalFunctions">
+		<properties>
+			<property name="allowedPrefixes" type="array" value="wg,wmf" />
+		</properties>
 	</rule>
 
 	<exclude-pattern>\.git/</exclude-pattern>

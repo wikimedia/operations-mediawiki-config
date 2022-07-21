@@ -1,19 +1,21 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-// phpcs:disable MediaWiki.Classes.UnsortedUseStatements.UnsortedUse
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Session\SessionManager;
+use Monolog\Handler\StreamHandler;
 
 wfLoadExtension( 'LdapAuthentication' );
 $wgAuthManagerAutoConfig['primaryauth'] += [
 	LdapPrimaryAuthenticationProvider::class => [
 		'class' => LdapPrimaryAuthenticationProvider::class,
 		'args' => [ [
-			'authoritative' => true, // don't allow local non-LDAP accounts
+			// don't allow local non-LDAP accounts
+			'authoritative' => true,
 		] ],
-		'sort' => 50, // must be smaller than local pw provider
+		// must be smaller than local pw provider
+		'sort' => 50,
 	],
 ];
 $wgLDAPDomainNames = [ 'labs' ];
@@ -62,7 +64,7 @@ if ( false ) {
 		],
 		'handlers' => [
 			'wikitech-ldap' => [
-				'class' => '\\Monolog\\Handler\\StreamHandler',
+				'class' => StreamHandler::class,
 				'args' => [ '/tmp/ldap-s-1-debug.log' ],
 				'formatter' => 'line',
 			],
@@ -93,7 +95,14 @@ if ( file_exists( '/etc/mediawiki/WikitechPrivateSettings.php' ) ) {
 # since we aren't using the shared jobqueue, we don't support delays
 $wgCdnReboundPurgeDelay = 0;
 
-// Make arbitrary Conduit requests to the Wikimedia Phabricator
+/**
+ * Make arbitrary Conduit requests to the Wikimedia Phabricator
+ *
+ * @param string $apiToken
+ * @param string $path
+ * @param array $query
+ * @return mixed|false Result of the Conduit request or false on error
+ */
 function wmfPhabClient( string $apiToken, string $path, $query ) {
 	$query['__conduit__'] = [ 'token' => $apiToken ];
 	$post = [
@@ -123,7 +132,8 @@ function wmfPhabClient( string $apiToken, string $path, $query ) {
 // permablocked.
 $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( $wmgPhabricatorApiToken ) {
 	if ( !$wmgPhabricatorApiToken
-		|| $block->getType() !== /* Block::TYPE_USER */ 1
+		// 1 is the value of Block::TYPE_USER
+		|| $block->getType() !== 1
 		|| $block->getExpiry() !== 'infinity'
 		|| !$block->isSitewide()
 	) {
@@ -155,7 +165,8 @@ $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( 
 };
 $wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmgPhabricatorApiToken ) {
 	if ( !$wmgPhabricatorApiToken
-		|| $block->getType() !== /* Block::TYPE_USER */ 1
+		// 1 is the value of Block::TYPE_USER
+		|| $block->getType() !== 1
 		|| $block->getExpiry() !== 'infinity'
 		|| !$block->isSitewide()
 	) {
@@ -186,8 +197,16 @@ $wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmg
 	}
 };
 
-// Changes the Gerrit active status of the specified user using
-// the specified HTTP method (PUT to enable and DELETE to disable)
+/**
+ * Changes the Gerrit active status of the specified user using
+ * the specified HTTP method (PUT to enable and DELETE to disable)
+ *
+ * @param string $gerritUsername
+ * @param string $gerritPassword
+ * @param string $username
+ * @param string $httpMethod
+ * @return int|null null on failure, or HTTP response code on success
+ */
 function wmfGerritSetActive(
 	string $gerritUsername,
 	string $gerritPassword,
@@ -224,7 +243,8 @@ function wmfGerritSetActive(
 $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( $wmgGerritApiUser, $wmgGerritApiPassword ) {
 	if ( !$wmgGerritApiUser
 		|| !$wmgGerritApiPassword
-		|| $block->getType() !== /* Block::TYPE_USER */ 1
+		// 1 is the value of Block::TYPE_USER
+		|| $block->getType() !== 1
 		|| $block->getExpiry() !== 'infinity'
 		|| !$block->isSitewide()
 	) {
@@ -257,7 +277,8 @@ $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) use ( 
 $wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmgGerritApiUser, $wmgGerritApiPassword ) {
 	if ( !$wmgGerritApiUser
 		|| !$wmgGerritApiPassword
-		|| $block->getType() !== /* Block::TYPE_USER */ 1
+		// 1 is the value of Block::TYPE_USER
+		|| $block->getType() !== 1
 		|| $block->getExpiry() !== 'infinity'
 		|| !$block->isSitewide()
 	) {
@@ -292,7 +313,8 @@ $wgHooks['UnblockUserComplete'][] = static function ( $block, $user ) use ( $wmg
  * Invalidates sessions of a blocked user and therefore logs them out.
  */
 $wgHooks['BlockIpComplete'][] = static function ( $block, $user, $prior ) {
-	if ( $block->getType() !== /* Block::TYPE_USER */ 1
+	// 1 is the value of Block::TYPE_USER
+	if ( $block->getType() !== 1
 		|| $block->getExpiry() !== 'infinity'
 		|| !$block->isSitewide()
 	) {

@@ -98,7 +98,7 @@ class WmfConfigServicesTest extends PHPUnit\Framework\TestCase {
 		}
 	}
 
-	/* Verify that ServiceConfig methods operate as expected */
+	/** Verify that ServiceConfig methods operate as expected */
 	public function testServiceConfig() {
 		$expectations = [
 			'eqiad' => [

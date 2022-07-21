@@ -34,6 +34,10 @@
 #       `-- (main stuff in CommonSettings.php)
 #
 
+// Inline comments are often used for noting the task(s) associated with specific configuration
+// and requiring comments to be on their own line would reduce readability for this file
+// phpcs:disable MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment
+
 use MediaWiki\Auth\AuthenticationResponse;
 use MediaWiki\Extension\ApiFeatureUsage\ApiFeatureUsageQueryEngineElastica;
 use MediaWiki\Extension\CentralAuth\User\CentralAuthUser;
@@ -483,8 +487,6 @@ $wgRightsIcon = '//creativecommons.org/images/public/somerights20.png';
 # ResourceLoader settings
 # ######################################################################
 
-unset( $wgStylePath );
-
 $wgInternalServer = $wgCanonicalServer;
 $wgArticlePath = '/wiki/$1';
 
@@ -525,10 +527,8 @@ $wgLocalisationCacheConf['manualRecache'] = true;
 
 // Add some useful config data to query=siteinfo
 $wgHooks['APIQuerySiteInfoGeneralInfo'][] = static function ( $module, &$data ) {
-	global $wmgMasterDatacenter;
-	global $wmgEtcdLastModifiedIndex;
-	global $wmgCirrusSearchDefaultCluster;
-	global $wgCirrusSearchDefaultCluster;
+	global $wmgMasterDatacenter, $wmgEtcdLastModifiedIndex, $wmgCirrusSearchDefaultCluster,
+		$wgCirrusSearchDefaultCluster;
 	$data['wmf-config'] = [
 		'wmfMasterDatacenter' => $wmgMasterDatacenter,
 		'wmfEtcdLastModifiedIndex' => $wmgEtcdLastModifiedIndex,
@@ -543,6 +543,12 @@ $wgShowIPinHeader = false;
 $wgRCMaxAge = 30 * 86400;
 
 $wgTmpDirectory = '/tmp';
+
+# Temporary for the PHP 7.2 → 7.4 migration. Adds an array of Unicode chars
+# that have different uppercasing in 7.4.
+if ( PHP_VERSION_ID >= 70400 ) {
+	$wgOverrideUcfirstCharacters = include __DIR__ . '/Php72ToUpper.php';
+}
 
 # Object cache and session settings
 
@@ -685,7 +691,6 @@ if ( $wmgUseCentralAuth ) {
 				];
 			}
 		}
-		return true;
 	};
 }
 
@@ -1062,6 +1067,12 @@ if ( isset( $wmgSiteLogo1x ) ) {
 
 // Max width modifications
 $wgVectorMaxWidthOptions['exclude']['namespaces'] = $wmgVectorMaxWidthOptionsNamespaces;
+
+# ######################################################################
+# Extensions
+# ######################################################################
+// Yeah the next 3000 or so lines is for extension configuration except for the
+// bits that aren't.
 
 if ( $wmgUseTimeline ) {
 	wfLoadExtension( 'timeline' );
@@ -1490,7 +1501,6 @@ if ( $wmgUseSecurePoll ) {
 	$wgSecurePollScript = 'auth-api.php';
 	$wgHooks['SecurePoll_JumpUrl'][] = static function ( $page, &$url ) use ( $site, $lang ) {
 		$url = wfAppendQuery( $url, [ 'site' => $site, 'lang' => $lang ] );
-		return true;
 	};
 	$wgSecurePollCreateWikiGroups = [
 		'securepollglobal' => 'securepoll-dblist-securepollglobal'
@@ -1549,6 +1559,7 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 
 if ( $wgDBname === 'nostalgiawiki' ) {
 	# Link back to current version from the archive funhouse
+	// phpcs:ignore MediaWiki.ControlStructures.AssignmentInControlStructures.AssignmentInControlStructures
 	if ( ( isset( $_REQUEST['title'] ) && ( $title = $_REQUEST['title'] ) )
 		|| ( isset( $_SERVER['PATH_INFO'] ) && ( $title = substr( $_SERVER['PATH_INFO'], 1 ) ) ) ) {
 		if ( preg_match( '/^(.*)\\/Talk$/', $title, $matches ) ) {
@@ -1726,12 +1737,7 @@ if ( $wgDBname === 'loginwiki' ) {
 	unset( $wgGroupPermissions['import'] );
 	unset( $wgGroupPermissions['transwiki'] );
 
-	$wgGroupPermissions['sysop'] = array_merge(
-		$wgGroupPermissions['sysop'],
-		[
-			'editinterface' => false,
-		]
-	);
+	$wgGroupPermissions['sysop']['editinterface'] = false;
 }
 
 $wgAutopromote = [
@@ -1903,7 +1909,6 @@ if ( $wmgUseCentralAuth ) {
 		$wgCentralAuthCookieDomain = '';
 	}
 	$wgCentralAuthLoginIcon = $wmgCentralAuthLoginIcon;
-	$wgCentralAuthAutoNew = true;
 
 	/**
 	 * This function is used for both the CentralAuthWikiList and
@@ -2260,7 +2265,6 @@ if ( $wgDBname === 'enwiki' ) {
 			$result = [ 'cant-delete-main-page' ];
 			return false;
 		}
-		return true;
 	};
 }
 
@@ -2413,9 +2417,6 @@ $wgTemplateStylesAllowedUrls = [
 
 wfLoadExtension( 'CodeMirror' );
 
-// Temporary feature flag for the CodeMirror colorblind-friendly color scheme option see T306867
-$wgCodeMirrorColorblindColors = true;
-
 // Must be loaded BEFORE VisualEditor, or things will break
 if ( $wmgUseArticleCreationWorkflow ) {
 	wfLoadExtension( 'ArticleCreationWorkflow' );
@@ -2428,50 +2429,17 @@ $wgDefaultUserOptions['watchcreations'] = true;
 
 // Temporary override: WMF is not hardcore enough to enable this.
 // See T37785, T38316, T47022 about it.
-if ( $wmgWatchlistDefault ) {
-	$wgDefaultUserOptions['watchdefault'] = 1;
-} else {
-	$wgDefaultUserOptions['watchdefault'] = 0;
-}
-
-if ( $wmgWatchMoves ) {
-	$wgDefaultUserOptions['watchmoves'] = 1;
-} else {
-	$wgDefaultUserOptions['watchmoves'] = 0;
-}
-
-if ( $wmgWatchRollback ) {
-	$wgDefaultUserOptions['watchrollback'] = 1;
-} else {
-	$wgDefaultUserOptions['watchrollback'] = 0;
-}
+$wgDefaultUserOptions['watchdefault'] = (int)$wmgWatchlistDefault;
+$wgDefaultUserOptions['watchmoves'] = (int)$wmgWatchMoves;
+$wgDefaultUserOptions['watchrollback'] = (int)$wmgWatchRollback;
 
 $wgDefaultUserOptions['enotifminoredits'] = $wmgEnotifMinorEditsUserDefault;
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
 
-if ( $wmgEnhancedRecentChanges ) {
-	$wgDefaultUserOptions['usenewrc'] = 1;
-} else {
-	$wgDefaultUserOptions['usenewrc'] = 0;
-}
-
-if ( $wmgEnhancedWatchlist ) {
-	$wgDefaultUserOptions['extendwatchlist'] = 1;
-} else {
-	$wgDefaultUserOptions['extendwatchlist'] = 0;
-}
-
-if ( $wmgForceEditSummary ) {
-	$wgDefaultUserOptions['forceeditsummary'] = 1;
-} else {
-	$wgDefaultUserOptions['forceeditsummary'] = 0;
-}
-
-if ( $wmgShowWikidataInWatchlist ) {
-	$wgDefaultUserOptions['wlshowwikibase'] = 1;
-} else {
-	$wgDefaultUserOptions['wlshowwikibase'] = 0;
-}
+$wgDefaultUserOptions['usenewrc'] = (int)$wmgEnhancedRecentChanges;
+$wgDefaultUserOptions['extendwatchlist'] = (int)$wmgEnhancedWatchlist;
+$wgDefaultUserOptions['forceeditsummary'] = (int)$wmgForceEditSummary;
+$wgDefaultUserOptions['wlshowwikibase'] = (int)$wmgShowWikidataInWatchlist;
 
 if ( $wmgUseMassMessage ) {
 	wfLoadExtension( 'MassMessage' );
@@ -2794,15 +2762,6 @@ if ( $wmgUseTemplateData ) { // T61702 - 2015-07-20
 
 	// TemplateWizard enabled for all TemplateData wikis – T202545
 	wfLoadExtension( 'TemplateWizard' );
-
-	if ( $wmgTemplateDataSuggestedValues ) {
-		$wgTemplateDataSuggestedValuesEditor = true;
-	}
-}
-
-if ( $wmgTemplateSearchImprovements ) {
-	$wgVisualEditorTemplateSearchImprovements = true;
-	$wgTemplateWizardTemplateSearchImprovements = true;
 }
 
 if ( $wmgUseGoogleNewsSitemap ) {
@@ -2944,7 +2903,6 @@ if ( $wmgUseBabel ) {
 	$wgBabelUseDatabase = true;
 	if ( $wmgUseCentralAuth ) {
 		$wgBabelCentralDb = 'metawiki';
-		$wgBabelCentralApi = 'https://meta.wikimedia.org/w/api.php';
 	}
 }
 
@@ -3191,7 +3149,6 @@ if ( $wmgUseWikimediaShopLink ) {
 			'title' => $skin->msg( 'wikimediashoplink-link-tooltip' )->text(),
 			'id'    => 'n-shoplink',
 		];
-		return true;
 	};
 }
 
@@ -3684,12 +3641,8 @@ if ( $wmgUseGraph ) {
 
 if ( $wmgEnableJsonConfigDataMode ) {
 	// Safety: before extension.json, these values were initialized by JsonConfig.php
-	if ( !isset( $wgJsonConfigModels ) ) {
-		$wgJsonConfigModels = [];
-	}
-	if ( !isset( $wgJsonConfigs ) ) {
-		$wgJsonConfigs = [];
-	}
+	$wgJsonConfigModels = $wgJsonConfigModels ?? [];
+	$wgJsonConfigs = $wgJsonConfigs ?? [];
 
 	$wgJsonConfigEnableLuaSupport = true;
 
@@ -3978,7 +3931,6 @@ $wgHooks['SpecialVersionVersionUrl'][] = static function ( $version, &$versionUr
 		}
 		return false;
 	}
-	return true;
 };
 
 if ( $wmgAllowRobotsControlInAllNamespaces ) {
@@ -4088,11 +4040,7 @@ if ( $wmgUseEventBus ) {
 		];
 	}
 
-	if ( $wmgServerGroup === 'jobrunner' || $wmgServerGroup === 'videoscaler' ) {
-		$wgEventBusEnableRunJobAPI = true;
-	} else {
-		$wgEventBusEnableRunJobAPI = false;
-	}
+	$wgEventBusEnableRunJobAPI = ( $wmgServerGroup === 'jobrunner' || $wmgServerGroup === 'videoscaler' );
 }
 
 if ( $wmgUseCapiunto ) {
@@ -4151,10 +4099,6 @@ if ( $wmgUseGlobalPreferences && $wmgUseCentralAuth ) {
 	wfLoadExtension( 'GlobalPreferences' );
 }
 
-if ( $wmgUseCongressLookup ) {
-	wfLoadExtension( 'CongressLookup' );
-}
-
 if ( $wmgUseWikisource ) {
 	// Intentionally loaded *after* the Collection extension above.
 	wfLoadExtension( 'Wikisource' );
@@ -4177,11 +4121,7 @@ if ( $wmgUseGrowthExperiments ) {
 		$wgGEHomepageNewAccountEnablePercentage = 0;
 	}
 
-	// Proof-of-concept API, allowed until 2022-06-30. See T294362#7768458.
-	$wgGEImageRecommendationServiceUrl = 'https://image-suggestion-api.wmcloud.org';
-	if ( $wmgRealm !== 'labs' ) {
-		$wgGEImageRecommendationServiceHttpProxy = $wmgLocalServices['urldownloader'];
-	}
+	$wgGEImageRecommendationServiceUrl = $wmgLocalServices['image-suggestion'];
 	$wgGELinkRecommendationServiceUrl = $wmgLocalServices['linkrecommendation'];
 }
 
@@ -4208,11 +4148,9 @@ if ( $wmgUseCSPReportOnly || $wmgUseCSPReportOnlyHasSession || $wmgUseCSP ) {
 	// Temporary global whitelist for origins used by trusted
 	// opt-in scripts, until a per-user ability for this exists.
 	// T207900#4846582
-	$wgCSPFalsePositiveUrls = array_merge( $wgCSPFalsePositiveUrls, [
-		'https://cvn.wmflabs.org' => true,
-		'https://tools.wmflabs.org/intuition/' => true,
-		'https://intuition.toolforge.org/' => true,
-	] );
+	$wgCSPFalsePositiveUrls['https://cvn.wmflabs.org'] = true;
+	$wgCSPFalsePositiveUrls['https://tools.wmflabs.org/intuition/'] = true;
+	$wgCSPFalsePositiveUrls['https://intuition.toolforge.org/'] = true;
 
 	$wgExtensionFunctions[] = static function () {
 		global $wgCSPReportOnlyHeader, $wmgUseCSPReportOnly, $wgCommandLineMode,
@@ -4319,6 +4257,16 @@ if ( $wmgUseGlobalWatchlist ) {
 
 if ( $wmgUseNearbyPages ) {
 	wfLoadExtension( 'NearbyPages' );
+}
+
+if ( $wmgUseImageSuggestions ) {
+	wfLoadExtension( 'ImageSuggestions' );
+}
+
+if ( $wmgUseCampaignEvents ) {
+	wfLoadExtension( 'CampaignEvents' );
+	$wgCampaignEventsDatabaseCluster = 'extension1';
+	$wgCampaignEventsDatabaseName = 'wikishared';
 }
 
 // This is a temporary hack for hooking up Parsoid/PHP with MediaWiki

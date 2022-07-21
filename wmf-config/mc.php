@@ -30,7 +30,8 @@ $wgObjectCaches['memcached-pecl'] = [
 	// Effectively disable the retry timeout
 	'retry_timeout'        => -1,
 	'loggroup'             => 'memcached',
-	'timeout'              => 0.25 * 1e6, // 250ms, in microseconds
+	// 250ms, in microseconds
+	'timeout'              => 0.25 * 1e6,
 ];
 
 $wgObjectCaches['mcrouter'] = [
@@ -41,9 +42,14 @@ $wgObjectCaches['mcrouter'] = [
 	'server_failure_limit'  => 1e9,
 	'retry_timeout'         => -1,
 	'loggroup'              => 'memcached',
-	'timeout'               => 0.25 * 1e6, // 250ms, in microseconds
+	// 250ms, in microseconds
+	'timeout'               => 0.25 * 1e6,
 	'allow_tcp_nagle_delay' => false,
 ];
+$wgObjectCaches['mcrouter-primary-dc'] = array_merge(
+	$wgObjectCaches['mcrouter'],
+	[ 'routingPrefix' => "/$wmgMasterDatacenter/mw/" ]
+);
 $wgObjectCaches['mcrouter-with-onhost-tier'] = array_merge(
 	$wgObjectCaches['mcrouter'],
 	[ 'routingPrefix' => "/$wmgDatacenter/mw-with-onhost-tier/" ]

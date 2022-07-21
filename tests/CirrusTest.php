@@ -122,37 +122,33 @@ class CirrusTest extends WgConfTestCase {
 		$this->assertArrayNotHasKey( 'wgCirrusSearchWikiToNameMap', $config );
 	}
 
-	private function loadCirrusConfig( $wmgRealm, $wgDBname, $dbSuffix ) {
+	private function loadCirrusConfig( $wmgRealm, $dbName, $dbSuffix ) {
 		require __DIR__ . '/../private/readme.php';
 		require __DIR__ . '/data/TestServices.php';
-		$wgConf = $this->loadWgConf( $wmgRealm );
 
-		// phpcs doesn't realize that these are the actual globals variables and will
-		// work with extract()
-		// phpcs:disable MediaWiki.VariableAnalysis.MisleadingGlobalNames
-		list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
-		$wikiTags = [];
-		foreach ( Wikimedia\MWConfig\MWConfigCacheGenerator::$dbLists as $tag ) {
-			$dblist = MWWikiversions::readDbListFile( $tag );
-			if ( in_array( $wgDBname, $dblist ) ) {
-				$wikiTags[] = $tag;
-			}
-		}
+		$configuration = $this->loadWgConf( $wmgRealm );
 
+		list( $site, $lang ) = $configuration->siteFromDB( $dbName );
 		$dbSuffix = ( $site === 'wikipedia' ) ? 'wiki' : $site;
 		$confParams = [
 			'lang'    => $lang,
 			'site'    => $site,
 		];
+
 		// Add a per-language tag as well
-		$wikiTags[] = $wgConf->get( 'wgLanguageCode', $wgDBname, $dbSuffix, $confParams, $wikiTags );
-		$globals = $wgConf->getAll( $wgDBname, $dbSuffix, $confParams, $wikiTags );
+		$wikiTags = MWMultiversion::getTagsForWiki( $dbName, 'production' );
+		$wikiTags[] = $configuration->get( 'wgLanguageCode', $dbName, $dbSuffix, $confParams, $wikiTags );
+
+		$globals = $configuration->getAll( $dbName, $dbSuffix, $confParams, $wikiTags );
+
 		// we want to use globals
 		// phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
 		extract( $globals );
 
 		// variables that would have been setup elsewhere, perhaps in mediawiki
 		// default settings or by CommonSettings.php
+		// these correspond to the globals
+		// phpcs:disable MediaWiki.VariableAnalysis.MisleadingGlobalNames
 		$wgJobTypeConf = [ 'default' => [] ];
 		$wmgDatacenter = 'unittest';
 		$wgCirrusSearchPoolCounterKey = 'unittest:poolcounter:blahblahblah';
@@ -188,8 +184,8 @@ class CirrusTest extends WgConfTestCase {
 		// No need to check multiple wikis, or even a real wiki.
 		// When this was written convention is to use same config
 		// for all wikis, per-wiki usage is controlled by frontend.
-		$wgConf = $this->loadWgConf( 'unittest' );
-		$conf = $wgConf->settings['wgCirrusSearchUserTesting']['default'];
+		$allConfig = $this->loadWgConf( 'unittest' );
+		$conf = $allConfig->settings['wgCirrusSearchUserTesting']['default'];
 		$tests = [];
 		foreach ( $conf as $name => $testConfig ) {
 			$tests[$name] = [ $testConfig ];
@@ -226,10 +222,10 @@ class CirrusTest extends WgConfTestCase {
 	}
 
 	public function providePerClusterShardsAndReplicas() {
-		$wgConf = $this->loadWgConf( 'unittest' );
-		$shards = $wgConf->settings['wmgCirrusSearchShardCount'];
-		$replicas = $wgConf->settings['wgCirrusSearchReplicas'];
-		$maxShardPerNode = $wgConf->settings['wgCirrusSearchMaxShardsPerNode'];
+		$allConfig = $this->loadWgConf( 'unittest' );
+		$shards = $allConfig->settings['wmgCirrusSearchShardCount'];
+		$replicas = $allConfig->settings['wgCirrusSearchReplicas'];
+		$maxShardPerNode = $allConfig->settings['wgCirrusSearchMaxShardsPerNode'];
 		$wikis = array_merge( array_keys( $shards ), array_keys( $replicas ), array_keys( $maxShardPerNode ) );
 		foreach ( $wikis as $idx => $wiki ) {
 			if ( $wiki[0] === '+' ) {
@@ -241,20 +237,20 @@ class CirrusTest extends WgConfTestCase {
 		$clusters = [ 'eqiad' => 36, 'codfw' => 36 ];
 
 		// restrict wgConf to only the settings we care about
-		$wgConf->settings = [
+		$allConfig->settings = [
 			'shards' => $shards,
 			'replicas' => $replicas,
 			'max_shards_per_node' => $maxShardPerNode,
 		];
 		$tests = [];
 		foreach ( $wikis as $wiki ) {
-			list( $site, $lang ) = $wgConf->siteFromDB( $wiki );
-			foreach ( $wgConf->suffixes as $altSite => $suffix ) {
+			list( $site, $lang ) = $allConfig->siteFromDB( $wiki );
+			foreach ( $allConfig->suffixes as $altSite => $suffix ) {
 				if ( substr( $wiki, -strlen( $suffix ) ) === $suffix ) {
 					break;
 				}
 			}
-			$config = $wgConf->getAll( $wiki, $suffix, [
+			$config = $allConfig->getAll( $wiki, $suffix, [
 				'lang' => $lang,
 				'site' => $site,
 			] );

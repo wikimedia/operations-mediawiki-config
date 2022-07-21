@@ -13,14 +13,16 @@ $wgHooks['FeaturedFeeds::getFeeds'][] = static function ( &$feeds ) {
 	global $wgConf, $wgDBname, $wmgFeaturedFeedsOverrides;
 	list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 	$media = [
-		'potd' => [ // Picture Of The Day
+		// Picture Of The Day
+		'potd' => [
 			'page' => 'ffeed-potd-page',
 			'title' => 'ffeed-potd-title',
 			'short-title' => 'ffeed-potd-short-title',
 			'description' => 'ffeed-potd-desc',
 			'entryName' => 'ffeed-potd-entry',
 		],
-		'motd' => [ // Media Of The Day
+		// Media Of The Day
+		'motd' => [
 			'page' => 'ffeed-motd-page',
 			'title' => 'ffeed-motd-title',
 			'short-title' => 'ffeed-motd-short-title',
@@ -34,7 +36,8 @@ $wgHooks['FeaturedFeeds::getFeeds'][] = static function ( &$feeds ) {
 			if ( $lang == 'commons' ) {
 				$feeds['potd']['inUserLanguage'] = $feeds['motd']['inUserLanguage'] = true;
 			} elseif ( $lang == 'meta' ) {
-				$feeds['technews'] = [ // T65596 - Metawiki Tech News bulletin
+				// T65596 - Metawiki Tech News bulletin
+				$feeds['technews'] = [
 					'page' => 'ffeed-technews-page',
 					'title' => 'ffeed-technews-title',
 					'short-title' => 'ffeed-technews-short-title',
@@ -64,7 +67,8 @@ $wgHooks['FeaturedFeeds::getFeeds'][] = static function ( &$feeds ) {
 						'description' => 'ffeed-onthisday-desc',
 						'entryName' => 'ffeed-onthisday-entry',
 					],
-					'dyk' => [ // Did you know?
+					// Did you know?
+					'dyk' => [
 						'page' => 'ffeed-dyk-page',
 						'title' => 'ffeed-dyk-title',
 						'short-title' => 'ffeed-dyk-short-title',
@@ -75,14 +79,16 @@ $wgHooks['FeaturedFeeds::getFeeds'][] = static function ( &$feeds ) {
 			}
 			if ( $lang == 'fr' ) {
 				$feeds += [
-					'raw' => [ // T167617 - French Regards sur l'actualité de la Wikimedia bulletin
+					// T167617 - French Regards sur l'actualité de la Wikimedia bulletin
+					'raw' => [
 						'page' => 'ffeed-raw-page',
 						'title' => 'ffeed-raw-title',
 						'short-title' => 'ffeed-raw-short-title',
 						'description' => 'ffeed-raw-desc',
 						'entryName' => 'ffeed-raw-entry',
 					],
-					'wikimag' => [ // T168005 - French Wikimag bulletin
+					// T168005 - French Wikimag bulletin
+					'wikimag' => [
 						'page' => 'ffeed-wikimag-page',
 						'title' => 'ffeed-wikimag-title',
 						'short-title' => 'ffeed-wikimag-short-title',
@@ -93,7 +99,8 @@ $wgHooks['FeaturedFeeds::getFeeds'][] = static function ( &$feeds ) {
 			}
 			break;
 		case 'wikiquote':
-			$feeds['qotd'] = [ // Quote of the Day
+			// Quote of the Day
+			$feeds['qotd'] = [
 				'page' => 'ffeed-qotd-page',
 				'title' => 'ffeed-qotd-title',
 				'short-title' => 'ffeed-qotd-short-title',
@@ -102,7 +109,8 @@ $wgHooks['FeaturedFeeds::getFeeds'][] = static function ( &$feeds ) {
 			];
 			break;
 		case 'wikisource':
-			$feeds['featuredtexts'] = [ // Featured Text
+			// Featured Text
+			$feeds['featuredtexts'] = [
 				'page' => 'ffeed-featuredtexts-page',
 				'title' => 'ffeed-featuredtexts-title',
 				'short-title' => 'ffeed-featuredtexts-short-title',
@@ -111,14 +119,16 @@ $wgHooks['FeaturedFeeds::getFeeds'][] = static function ( &$feeds ) {
 			];
 			break;
 		case 'wiktionary':
-			$feeds['wotd'] = [ // Word of the Day
+			// Word of the Day
+			$feeds['wotd'] = [
 				'page' => 'ffeed-wotd-page',
 				'title' => 'ffeed-wotd-title',
 				'short-title' => 'ffeed-wotd-short-title',
 				'description' => 'ffeed-wotd-desc',
 				'entryName' => 'ffeed-wotd-entry',
 			];
-			$feeds['fwotd'] = [ // Foreign Word of the Day
+			// Foreign Word of the Day
+			$feeds['fwotd'] = [
 				'page' => 'ffeed-fwotd-page',
 				'title' => 'ffeed-fwotd-title',
 				'short-title' => 'ffeed-fwotd-short-title',

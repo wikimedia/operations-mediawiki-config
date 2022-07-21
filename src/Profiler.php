@@ -100,7 +100,8 @@ class Profiler {
 				$wmgProfiler = [
 					'class' => 'ProfilerXhprof',
 					'flags' => $xhprofFlags,
-					'running' => true, // T247332
+					// T247332
+					'running' => true,
 					'output' => 'text',
 				];
 			}

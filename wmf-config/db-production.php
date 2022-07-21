@@ -57,6 +57,7 @@ $wgLBFactoryConf = [
 	'avkwiki'      => 's5',
 	'banwikisource' => 's5',
 	'bclwiktionary' => 's5',
+	'blkwiki'      => 's5',
 	'cebwiki'      => 's5',
 	'dagwiki'      => 's5',
 	'dewiki'       => 's5',
@@ -152,7 +153,8 @@ $wgLBFactoryConf = [
 	'password'           => $wgDBpassword,
 	'type'               => 'mysql',
 	'flags'              => DBO_DEFAULT | ( $wgDebugDumpSql ? DBO_DEBUG : 0 ),
-	'max lag'            => 6, // should be safely less than $wgCdnReboundPurgeDelay
+	// should be safely less than $wgCdnReboundPurgeDelay
+	'max lag'            => 6,
 	'useGTIDs'           => true,
 	'lagDetectionMethod' => 'pt-heartbeat',
 	'variables'          => [
@@ -171,7 +173,8 @@ $wgLBFactoryConf = [
 			'conds' => [ 'shard' => 's2', 'datacenter' => $wmgMasterDatacenter ]
 		],
 	],
-	'DEFAULT' /* s3 */  => [
+	// Default is s3
+	'DEFAULT' => [
 		'lagDetectionOptions' => [
 			'conds' => [ 'shard' => 's3', 'datacenter' => $wmgMasterDatacenter ]
 		],
@@ -227,8 +230,10 @@ $wgLBFactoryConf = [
 ],
 
 'externalTemplateOverrides' => [
-	'flags' => $wgDebugDumpSql ? DBO_DEBUG : 0, // No transactions
-	'lagDetectionMethod' => 'Seconds_Behind_Master', // no pt-heartbeat
+	// No transactions
+	'flags' => $wgDebugDumpSql ? DBO_DEBUG : 0,
+	// no pt-heartbeat
+	'lagDetectionMethod' => 'Seconds_Behind_Master',
 ],
 
 'templateOverridesByCluster' => [

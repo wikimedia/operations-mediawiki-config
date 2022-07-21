@@ -11,6 +11,11 @@
 #      `-- wmf-config/flaggedrevs.php
 #
 
+// Inline comments are often used for noting the task(s) associated with specific configuration
+// or explaining the meaning of flagged revs auto promotion array keys, and requiring comments to
+// be on their own line would reduce readability for this file
+// phpcs:disable MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment
+
 wfLoadExtension( 'FlaggedRevs' );
 
 $wgFlaggedRevsAutopromote = false;
@@ -653,29 +658,35 @@ $wgHooks['MediaWikiServices'][] = static function () {
 	# Rights for Bureaucrats (b/c)
 	if ( isset( $wgGroupPermissions['reviewer'] ) ) {
 		if ( !in_array( 'reviewer', $wgAddGroups['bureaucrat'] ) ) {
-			$wgAddGroups['bureaucrat'][] = 'reviewer'; // promote to full reviewers
+			// promote to full reviewers
+			$wgAddGroups['bureaucrat'][] = 'reviewer';
 		}
 		if ( !in_array( 'reviewer', $wgRemoveGroups['bureaucrat'] ) ) {
-			$wgRemoveGroups['bureaucrat'][] = 'reviewer'; // demote from full reviewers
+			// demote from full reviewers
+			$wgRemoveGroups['bureaucrat'][] = 'reviewer';
 		}
 	}
 
 	# Rights for Sysops
 	if ( isset( $wgGroupPermissions['editor'] ) && $allowSysopsAssignEditor ) {
 		if ( !in_array( 'editor', $wgAddGroups['sysop'] ) ) {
-			$wgAddGroups['sysop'][] = 'editor'; // promote to basic reviewer (established editors)
+			// promote to basic reviewer (established editors)
+			$wgAddGroups['sysop'][] = 'editor';
 		}
 		if ( !in_array( 'editor', $wgRemoveGroups['sysop'] ) ) {
-			$wgRemoveGroups['sysop'][] = 'editor'; // demote from basic reviewer (established editors)
+			// demote from basic reviewer (established editors)
+			$wgRemoveGroups['sysop'][] = 'editor';
 		}
 	}
 
 	if ( isset( $wgGroupPermissions['autoreview'] ) ) {
 		if ( !in_array( 'autoreview', $wgAddGroups['sysop'] ) ) {
-			$wgAddGroups['sysop'][] = 'autoreview'; // promote to basic auto-reviewer (semi-trusted users)
+			// promote to basic auto-reviewer (semi-trusted users)
+			$wgAddGroups['sysop'][] = 'autoreview';
 		}
 		if ( !in_array( 'autoreview', $wgRemoveGroups['sysop'] ) ) {
-			$wgRemoveGroups['sysop'][] = 'autoreview'; // demote from basic auto-reviewer (semi-trusted users)
+			// demote from basic auto-reviewer (semi-trusted users)
+			$wgRemoveGroups['sysop'][] = 'autoreview';
 		}
 	}
 };

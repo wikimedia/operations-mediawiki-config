@@ -8,7 +8,7 @@ use MediaWiki\MediaWikiServices;
 /**
  * @param string $text
  */
-function faviconShowError( $text ) {
+function wmfFaviconShowError( $text ) {
 	header( 'Content-Type: text/html; charset=utf-8' );
 	echo "<!DOCTYPE html>\n<p>" . htmlspecialchars( $text ) . "</p>\n";
 }
@@ -16,13 +16,13 @@ function faviconShowError( $text ) {
 /**
  * Stream the favicon!
  */
-function streamFavicon() {
+function wmfStreamFavicon() {
 	global $wgFavicon;
 	wfResetOutputBuffers();
 	if ( $wgFavicon === '/favicon.ico' ) {
 		# That's not very helpful, that's where we are already
 		header( 'HTTP/1.1 404 Not Found' );
-		faviconShowError( '$wgFavicon is configured incorrectly, ' .
+		wmfFaviconShowError( '$wgFavicon is configured incorrectly, ' .
 			'it must be set to something other than /favicon.ico' );
 		return;
 	}
@@ -30,7 +30,7 @@ function streamFavicon() {
 	$req = RequestContext::getMain()->getRequest();
 	if ( $req->getHeader( 'X-Favicon-Loop' ) !== false ) {
 		header( 'HTTP/1.1 500 Internal Server Error' );
-		faviconShowError( 'Proxy forwarding loop detected' );
+		wmfFaviconShowError( 'Proxy forwarding loop detected' );
 		return;
 	}
 
@@ -43,7 +43,7 @@ function streamFavicon() {
 	$status = $client->execute();
 	if ( !$status->isOK() ) {
 		header( 'HTTP/1.1 500 Internal Server Error' );
-		faviconShowError( "Failed to fetch URL \"$url\"" );
+		wmfFaviconShowError( "Failed to fetch URL \"$url\"" );
 		return;
 	}
 
@@ -55,4 +55,4 @@ function streamFavicon() {
 	echo $content;
 }
 
-streamFavicon();
+wmfStreamFavicon();

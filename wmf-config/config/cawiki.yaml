@@ -7,6 +7,7 @@ inheritsFrom:
   - all-labs
   - categories-rdf
   - cirrussearch-big-indices
+  - desktop-improvements
   - flow-labs
   - flow
   - group1-wikipedia

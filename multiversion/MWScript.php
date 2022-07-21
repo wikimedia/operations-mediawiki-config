@@ -4,7 +4,7 @@ if ( PHP_SAPI !== 'cli' && PHP_SAPI !== 'phpdbg' ) {
 	exit( 1 );
 }
 
-function usage() {
+function wmfUsage() {
 	global $argv;
 	fwrite( STDERR, <<<EOT
 Usage: php $argv[0] SCRIPT --wiki=WIKI <script args>
@@ -33,10 +33,10 @@ EOT
  *
  * @return string Absolute MediaWiki script path
  */
-function getMWScriptWithArgs() {
+function wmfGetMWScriptWithArgs() {
 	global $argv;
 	if ( count( $argv ) < 2 ) {
-		usage();
+		wmfUsage();
 	}
 
 	# Security check -- don't allow scripts to run as privileged users
@@ -61,19 +61,23 @@ EOT
 		}
 	}
 
-	$relFile = $argv[1]; // the script file to run
+	// the script file to run
+	$relFile = $argv[1];
 	# If no MW directory is given then assume this is a /maintenance script
 	if ( strpos( $relFile, '/' ) === false ) {
-		$relFile = "maintenance/$relFile"; // convenience
+		// convenience
+		$relFile = "maintenance/$relFile";
 	} elseif ( getenv( 'MEDIAWIKI_MAINT_INIT_ONLY' ) ) {
 		$relFile = 'maintenance/commandLine.inc';
 	}
 
 	# Remove effects of this wrapper from $argv...
-	array_shift( $argv ); // remove this file's name from args
+	// remove this file's name from args
+	array_shift( $argv );
 	# Code stolen from wfBasename() in GlobalFunctions.php :)
 	if ( preg_match( "#([^/\\\\]*?)[/\\\\]*$#", $argv[0], $matches ) ) {
-		$argv[0] = $matches[1]; // make first arg the script file name
+		// make first arg the script file name
+		$argv[0] = $matches[1];
 	}
 
 	# For addwiki.php, the wiki DB doesn't yet exist, and for some
@@ -113,4 +117,4 @@ EOT
 }
 
 # Run the script!
-require_once getMWScriptWithArgs();
+require_once wmfGetMWScriptWithArgs();

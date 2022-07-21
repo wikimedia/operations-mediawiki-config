@@ -1,20 +1,30 @@
 <?php
-
 /**
- * Missing wiki redirect / 404 page
+ * Handle "Missing wiki" HTTP response (either redirect or 404).
  *
- * This file redirects non-existing languages of Wikipedia, Wiktionary, Wikiquote,
- * Wikibooks and Wikinews to the Wikimedia Incubator. Non-existing languages of
- * Wikisource and Wikiversity show static 404 page.
+ * To test the script locally:
  *
- * There is a specific extension on Incubator used to make nice "welcome pages"
- * (adapted to each language, project and translatable).
+ * - Uncomment MISSING_PHP_TEST
+ * - Run `php -S localhost:9412` from this directory.
+ * - <http://localhost:9412/missing.php?host=aa.wikinews.org> (Incubator redirect)
+ * - <http://localhost:9412/missing.php?host=nl.wikiversity.org> (404)
+ * - <http://localhost:9412/missing.php?host=nl.wikiversity.org&title=wikt:foo> (interwiki redirect)
  *
- * These redirects allow the usage of interwiki links from existing language
- * subdomains to Incubator, e.g. [[xyz:Page]] on en.wikipedia links to
- * http://incubator.wikimedia.org/wiki/Wp/xyz/Page
+ * We redirect non-existing languages of Wikipedia, Wiktionary, Wikiquote,
+ * Wikibooks, and Wikinews to the Wikimedia Incubator.
  *
- * @copyright Copyright © 2011-2013, Danny B., SPQRobin, Tim Starling
+ * Non-existing languages of Wikisource and Wikiversity show a 404 page.
+ *
+ * The WikimediaIncubator extension ensures a localised "welcome page"
+ * adapted to the given project/language.
+ *
+ * These redirects are relied upon as part of the interwiki map
+ * and language link databases, by allowing any two languages to
+ * have a stable and canonical link between them, regardless of whether
+ * it is still on Incubator, e.g. [[xyz:Page]] on en.wikipedia redirects
+ * via missing.php to <https://incubator.wikimedia.org/wiki/Wp/xyz/Page>.
+ *
+ * @copyright Copyright 2011-2013, Danny B., SPQRobin, Tim Starling
  * @license GPL-2.0-or-later
  */
 
@@ -23,23 +33,24 @@
 /**
  * The main function
  */
-function handleMissingWiki() {
+function wmfHandleMissingWiki() {
 	$projects = [
 		'wikibooks'   => 'b',
 		'wikinews'    => 'n',
 		'wikipedia'   => 'p',
 		'wikiquote'   => 'q',
-		'wikisource'  => 's', // forward compatibility, unused ATM
-		'wikiversity' => 'v', // forward compatibility, unused ATM
+		// forward compatibility, unused ATM (both 's' and 'v')
+		'wikisource'  => 's',
+		'wikiversity' => 'v',
 		'wikivoyage'  => 'y',
 		'wiktionary'  => 't',
 	];
 
-	list( $protocol, $host ) = getProtocolAndHost();
+	list( $protocol, $host ) = wmfGetProtocolAndHost();
 
 	if ( strpos( $host, '.m.' ) !== false ) {
 		// Invalid request to mobile site, not rewritten by Varnish
-		showMobileError();
+		wmfShowMobileError();
 		return;
 	}
 
@@ -59,7 +70,7 @@ function handleMissingWiki() {
 	}
 
 	if ( !$incubatorCode ) {
-		showGenericError();
+		wmfShowGenericError();
 		return;
 	}
 
@@ -67,7 +78,7 @@ function handleMissingWiki() {
 		# Open the interwiki file to see if we have an interwiki prefix
 		$db = null;
 		try {
-			$db = include __DIR__ . '/interwiki.php';
+			$db = include __DIR__ . '/../wmf-config/interwiki.php';
 		} catch ( Exception $e ) {
 		}
 
@@ -89,7 +100,7 @@ function handleMissingWiki() {
 				if ( $iw_local ) {
 					# Redirect to the appropriate WMF wiki
 					# strtok gives us the remainder of the page title after the interwiki prefix
-					showRedirect( str_replace( '$1', strtok( '' ), $iw_url ) );
+					wmfShowRedirect( str_replace( '$1', strtok( '' ), $iw_url ) );
 					return;
 				}
 			}
@@ -99,10 +110,10 @@ function handleMissingWiki() {
 
 	if ( $project === 'wikisource' ) {
 		# Wikisource should redirect to the multilingual wikisource
-		showRedirect( $protocol . '://wikisource.org/wiki/' . $page );
+		wmfShowRedirect( $protocol . '://wikisource.org/wiki/' . $page );
 	} elseif ( $project === 'wikiversity' ) {
 		# Wikiversity gives an error page
-		showMissingSubdomainError( $project, $language );
+		wmfShowMissingSubdomainError( $project, $language );
 	} else {
 		# Redirect to incubator
 		$incubatorBase = 'incubator.wikimedia.org/wiki/';
@@ -112,7 +123,7 @@ function handleMissingWiki() {
 		$location .= $page && $page !== '/' ? '/' . $page :
 			'?goto=mainpage' . ( isset( $_GET['uselang'] ) ? '&uselang=' . urlencode( $_GET['uselang'] ) : '' );
 
-		showRedirect( $location );
+		wmfShowRedirect( $location );
 	}
 }
 
@@ -120,7 +131,7 @@ function handleMissingWiki() {
  * Obtaining the full self URL
  * @return string Actual URL except for fragment part
  */
-function getProtocolAndHost() {
+function wmfGetProtocolAndHost() {
 	if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ) {
 		$protocol = 'https';
 	} else {
@@ -140,7 +151,7 @@ function getProtocolAndHost() {
  * @param string $logo
  * @return string
  */
-function getStyleSheet( $logo ) {
+function wmfGetStyleSheet( $logo ) {
 	return <<<CSS
 * {
 	font-family: 'Gill Sans MT', 'Gill Sans', sans-serif;
@@ -189,7 +200,7 @@ CSS;
 /**
  * Output an error which indicates that a request for *.m.wik*.org was received
  */
-function showMobileError() {
+function wmfShowMobileError() {
 	header( 'HTTP/1.x 403 Forbidden' );
 	header( 'Content-Type: text/html; charset=utf-8' );
 
@@ -202,7 +213,7 @@ function showMobileError() {
 <head>
 <style type="text/css">
 /* <![CDATA[ */
-<?php echo getStyleSheet( 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/300px-Wikimedia-logo.svg.png' ); ?>
+<?php echo wmfGetStyleSheet( 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/300px-Wikimedia-logo.svg.png' ); ?>
 /* ]]> */
 </style>
 <title>Internal error</title>
@@ -229,7 +240,7 @@ function showMobileError() {
  * @param string $project
  * @param string $language
  */
-function showMissingSubdomainError( $project, $language ) {
+function wmfShowMissingSubdomainError( $project, $language ) {
 	$projectInfos = [
 		'wikiversity' => [
 			'logo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/300px-Wikiversity-logo.svg.png',
@@ -254,7 +265,7 @@ function showMissingSubdomainError( $project, $language ) {
 	<link rel="shortcut icon" href="<?php echo $info['home']; ?>/favicon.ico" />
 	<style type="text/css">
 /* <![CDATA[ */
-<?php echo getStyleSheet( $info['logo'] ); ?>
+<?php echo wmfGetStyleSheet( $info['logo'] ); ?>
 /* ]]> */
 	</style>
 </head>
@@ -285,7 +296,7 @@ function showMissingSubdomainError( $project, $language ) {
 /**
  * Show a generic error message which does not refer to any particular project.
  */
-function showGenericError() {
+function wmfShowGenericError() {
 	header( 'HTTP/1.x 404 Not Found' );
 	header( 'Content-Type: text/html; charset=utf-8' );
 ?>
@@ -295,7 +306,7 @@ function showGenericError() {
 	<title>No wiki found</title>
 	<style type="text/css">
 /* <![CDATA[ */
-<?php echo getStyleSheet( 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/300px-Wikimedia-logo.svg.png' ); ?>
+<?php echo wmfGetStyleSheet( 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/300px-Wikimedia-logo.svg.png' ); ?>
 /* ]]> */
 	</style>
 </head>
@@ -322,7 +333,7 @@ function showGenericError() {
  * Show a redirect, including "short hypertext note" as suggested by RFC 2616 section 10.3.2.
  * @param string $url
  */
-function showRedirect( $url ) {
+function wmfShowRedirect( $url ) {
 	header( 'Location: ' . $url );
 	header( 'Content-Type: text/html; charset=utf-8' );
 	$escUrl = htmlspecialchars( $url );
@@ -337,4 +348,4 @@ function showRedirect( $url ) {
 HTML;
 }
 
-handleMissingWiki();
+wmfHandleMissingWiki();

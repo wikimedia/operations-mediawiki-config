@@ -127,8 +127,8 @@ if ( $format === 'json' ) {
 <main role="main"><div class="wm-container">
 
 	<nav class="wm-site-nav"><ul class="wm-nav">
-		<li><a href="./conf/">MediaWiki config</a></li>
-		<li><a href="./db.php" class="wm-nav-item-active">Database config</a>
+		<li><a href="./conf/">Config files</a></li>
+		<li><a href="./db.php" class="wm-nav-item-active">Database view</a>
 			<ul><?php
 
 $sections = $dbConf->getSections();
@@ -142,6 +142,7 @@ foreach ( $sections as $name => $label ) {
 ?>
 			</ul>
 		</li>
+		<li><a href="/wiki.php">Wiki view</a></li>
 	</ul></nav>
 
 	<article>

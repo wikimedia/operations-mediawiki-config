@@ -3,137 +3,64 @@
 namespace Wikimedia\MWConfig;
 
 use MWMultiVersion;
-use MWWikiversions;
+use SiteConfiguration;
 
 require_once __DIR__ . '/MWMultiVersion.php';
-require_once __DIR__ . '/MWWikiversions.php';
-require_once __DIR__ . '/../src/StaticSiteConfiguration.php';
 
 /**
  * Wrapper for config caching code.
  */
 class MWConfigCacheGenerator {
-	# When updating list please run ./docroot/noc/createTxtFileSymlinks.sh
-	# Expand computed dblists with ./multiversion/bin/expanddblist
-
-	/**
-	 * Note that most wiki families are available as tags for free without
-	 * needing a dblist to be maintained and read from disk, because their
-	 * dbname suffix (as mapped in MWMultiVersion::SUFFIXES) already makes them
-	 * available as tag for InitialiseSettings.php.
-	 *
-	 * @var string[]
-	 */
-	public static $dbLists = [
-		'wikipedia',
-		'special',
-		'private',
-		'fishbowl',
-		'closed',
-		'desktop-improvements',
-		'flow',
-		'flaggedrevs',
-		'small',
-		'medium',
-		'large',
-		'wikimania',
-		'wikidata',
-		'wikibaserepo',
-		'wikidataclient',
-		'wikidataclient-test',
-		'visualeditor-nondefault',
-		'commonsuploads',
-		'lockeddown',
-		'group0',
-		'group1',
-		'nonglobal',
-		'wikitech',
-		'nonecho',
-		'mobile-anon-talk',
-		'nowikidatadescriptiontaglines',
-		'cirrussearch-big-indices',
-	];
-
-	/** @var string[] */
-	private static $labsDbLists = [
-		'closed' => 'closed-labs',
-		'flow' => 'flow-labs',
-	];
 
 	/**
 	 * Create a MultiVersion config object for a wiki
 	 *
-	 * @param string $wikiDBname The wiki's database name, e.g. 'enwiki' or  'zh_min_nanwikisource'
-	 * @param SiteConfiguration $wgConf The global MultiVersion wgConf object
+	 * @param string $dbName The wiki's database name, e.g. 'enwiki' or 'zh_min_nanwikisource'
+	 * @param SiteConfiguration $siteConfiguration The global MultiVersion wgConf object
 	 * @param string $realm Realm, e.g. 'production' or 'labs'
 	 * @return array The wiki's config
 	 */
-	public static function getMWConfigForCacheing( $wikiDBname, $wgConf, $realm = 'production' ) {
-		# Collect all the dblist tags associated with this wiki
-		$wikiTags = [];
-
-		$dbLists = array_combine( self::$dbLists, self::$dbLists );
-		if ( $realm === 'labs' ) {
-			// Replace some lists with labs-specific versions
-			$dbLists = array_merge( $dbLists, self::$labsDbLists );
-		}
-		foreach ( $dbLists as $tag => $fileName ) {
-			$dblist = MWWikiversions::readDbListFile( $fileName );
-			if ( in_array( $wikiDBname, $dblist ) ) {
-				$wikiTags[] = $tag;
-			}
-		}
-
-		list( $site, $lang ) = $wgConf->siteFromDB( $wikiDBname );
+	public static function getMWConfigForCacheing( $dbName, $siteConfiguration, $realm = 'production' ) {
+		list( $site, $lang ) = $siteConfiguration->siteFromDB( $dbName );
 		$dbSuffix = ( $site === 'wikipedia' ) ? 'wiki' : $site;
 		$confParams = [
 			'lang' => $lang,
 			'site' => $site,
 		];
 
+		// Collect all the dblist tags associated with this wiki
 		// Add a per-language tag as well
-		$wikiTags[] = $wgConf->get( 'wgLanguageCode', $wikiDBname, $dbSuffix, $confParams, $wikiTags );
-		$globals = $wgConf->getAll( $wikiDBname, $dbSuffix, $confParams, $wikiTags );
+		$wikiTags = MWMultiversion::getTagsForWiki( $dbName, $realm );
+		$wikiTags[] = $siteConfiguration->get( 'wgLanguageCode', $dbName, $dbSuffix, $confParams, $wikiTags );
 
-		return $globals;
+		return $siteConfiguration->getAll( $dbName, $dbSuffix, $confParams, $wikiTags );
 	}
 
 	/**
-	 * Create a MultiVersion config object for a wiki
+	 * Compute the config globals for a wiki in a standalone way for testing.
 	 *
-	 * @param string $wikiDBname The wiki's database name, e.g. 'enwiki' or  'zh_min_nanwikisource'
+	 * In production code, use getMWConfigForCacheing() or getConfigGlobals() instead.
+	 *
+	 * This method will load InitialiseSettings (which requires Defines.php) and create
+	 * a SiteConfiguration object (which requires SiteConfiguration.php). It is the responsibility
+	 * of the caller to ensure those are loaded (either from MW or standalone from /tests/data).
+	 *
+	 * @param string $wikiDBname The wiki's database name, e.g. 'enwiki' or 'zh_min_nanwikisource'
 	 * @param array $config A 2D array of setting -> wiki -> values
 	 * @param string $realm Realm, e.g. 'production' or 'labs'
 	 * @return array The wiki's config array
 	 */
 	public static function getCachableMWConfig( $wikiDBname, $config, $realm = 'production' ) {
-		# Collect all the dblist tags associated with this wiki
-		$wikiTags = [];
-
-		$dbLists = array_combine( self::$dbLists, self::$dbLists );
 		if ( $realm === 'labs' ) {
-			// Replace some lists with labs-specific versions
-			$dbLists = array_merge( $dbLists, self::$labsDbLists );
-
-			require_once __DIR__ . "../../src/defines.php";
 			require_once __DIR__ . "../../wmf-config/InitialiseSettings-labs.php";
 			$config = self::applyOverrides( $config );
 		}
 
-		foreach ( $dbLists as $tag => $fileName ) {
-			$dblist = MWWikiversions::readDbListFile( $fileName );
-
-			if ( in_array( $wikiDBname, $dblist ) ) {
-				$wikiTags[] = $tag;
-			}
-		}
-
-		$conf = new StaticSiteConfiguration();
+		$conf = new SiteConfiguration();
 		$conf->suffixes = MWMultiVersion::SUFFIXES;
 		$conf->settings = $config;
 
 		list( $site, $lang ) = $conf->siteFromDB( $wikiDBname );
-
 		$dbSuffix = ( $site === 'wikipedia' ) ? 'wiki' : $site;
 		$confParams = [
 			'lang' => $lang,
@@ -159,8 +86,11 @@ class MWConfigCacheGenerator {
 			}
 		}
 
+		// Collect all the dblist tags associated with this wiki
 		// Add a per-language tag as well
+		$wikiTags = MWMultiversion::getTagsForWiki( $wikiDBname, $realm );
 		$wikiTags[] = $conf->get( 'wgLanguageCode', $wikiDBname, $dbSuffix, $confParams, $wikiTags );
+
 		$settings = $conf->getAll( $wikiDBname, $dbSuffix, $confParams, $wikiTags );
 
 		$instance = self::getInstance();
@@ -290,14 +220,14 @@ class MWConfigCacheGenerator {
 
 	/**
 	 * @param string $dbname
-	 * @param \SiteConfiguration $wgConf
+	 * @param \SiteConfiguration $siteConfiguration
 	 * @param string $realm
 	 * @param string $cacheDir
 	 * @return array
 	 */
 	public static function getConfigGlobals(
 		string $dbname,
-		\SiteConfiguration $wgConf,
+		\SiteConfiguration $siteConfiguration,
 		string $realm,
 		string $cacheDir
 	): array {
@@ -317,20 +247,26 @@ class MWConfigCacheGenerator {
 
 		if ( !$globals ) {
 			// Populate SiteConfiguration object
-			wmfLoadInitialiseSettings( $wgConf );
+			wmfLoadInitialiseSettings( $siteConfiguration );
 
 			$globals = self::getMWConfigForCacheing(
 				$dbname,
-				$wgConf,
+				$siteConfiguration,
 				$realm
 			);
 
 			$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals ];
 
 			// Save cache if the grace period expired. We define the grace period as the opcache
-			// revalidation frequency + 1, in order to ensure we don't incur in race conditions
+			// revalidation frequency, in order to ensure we don't incur in race conditions
 			// when saving the values. See T236104
-			$minTime = $confActualMtime + intval( ini_get( 'opcache.revalidate_freq' ) );
+			$revalidateFreq = intval( ini_get( 'opcache.revalidate_freq' ) );
+			if ( $revalidateFreq === 0 ) {
+				// opcache revalidation is disabled, so allow some time for php-fpm restart
+				// to complete (T311788)
+				$revalidateFreq = 10;
+			}
+			$minTime = $confActualMtime + $revalidateFreq;
 			if ( time() > $minTime ) {
 				self::writeToStaticCache(
 					$cacheDir, $confCacheFileName, $confCacheObject
@@ -353,7 +289,8 @@ class MWConfigCacheGenerator {
 
 		if ( $cacheRecord !== false ) {
 			// TODO: Use JSON_THROW_ON_ERROR with a try/catch once production is running PHP 7.3.
-			$staticCacheObject = json_decode( $cacheRecord, /* assoc */ true );
+			// `true` means to decode as an associative array
+			$staticCacheObject = json_decode( $cacheRecord, true );
 
 			if ( json_last_error() === JSON_ERROR_NONE ) {
 				// Ignore non-array and array offset warnings (file may be in an older format)

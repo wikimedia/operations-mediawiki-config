@@ -44,6 +44,9 @@ class CauseFatalError {
 		$mediawiki = new MediaWiki();
 		$request = RequestContext::getMain()->getRequest();
 
+		// This global should probably be renamed but that requires coordination with
+		// deployment to the private file that sets it
+		// phpcs:ignore MediaWiki.NamingConventions.ValidGlobalName.allowedPrefix
 		global $fatalErrorPassword;
 		$password = $request->getRawVal( 'password', '' );
 		if ( !isset( $fatalErrorPassword ) ) {
@@ -186,7 +189,8 @@ class CauseFatalError {
 	 */
 	public static function doCoredump() {
 		posix_setrlimit( POSIX_RLIMIT_CORE, (int)10e9, POSIX_RLIMIT_INFINITY );
-		posix_kill( posix_getpid(), 6 /*SIGABRT*/ );
+		// 6 is the value of SIGABRT
+		posix_kill( posix_getpid(), 6 );
 	}
 }
 

@@ -18,7 +18,8 @@
 # Included from: wmf-config/CommonSettings.php.
 #
 
-if ( $wmgRealm == 'labs' ) { # safe guard
+// safe guard
+if ( $wmgRealm == 'labs' ) {
 
 $wmgAddWikiNotify = false;
 
@@ -38,7 +39,8 @@ foreach ( $wmgPrivilegedGroups as $group ) {
 	// On non-SUL wikis this is the effective password policy. On SUL wikis, it will be overridden
 	// in the PasswordPoliciesForUser hook, but still needed for Special:PasswordPolicies
 	if ( $group === 'user' ) {
-		$group = 'default'; // For e.g. private and fishbowl wikis; covers 'user' in password policies
+		// For e.g. private and fishbowl wikis; covers 'user' in password policies
+		$group = 'default';
 	}
 	$wgPasswordPolicy['policies'][$group] = array_merge( $wgPasswordPolicy['policies'][$group] ?? [],
 		$wmgPrivilegedPolicy );
@@ -132,7 +134,8 @@ if ( $wmgUseFlow ) {
 		191 => true,
 	];
 
-	$wgNamespaceContentModels[ 191 ] = 'flow-board'; // CONTENT_MODEL_FLOW_BOARD
+	// CONTENT_MODEL_FLOW_BOARD
+	$wgNamespaceContentModels[ 191 ] = 'flow-board';
 }
 
 if ( $wmgUseFileExporter ) {
@@ -216,7 +219,8 @@ if ( $wmgUseBounceHandler ) {
 	// $wgVERPsecret = ''; // This was set in PrivateSettings.php by Legoktm
 	$wgBounceHandlerCluster = false;
 	$wgBounceHandlerSharedDB = false;
-	$wgBounceHandlerInternalIPs = [ '127.0.0.1', '::1', '172.16.6.221' ]; // deployment-mx03.deployment-prep.eqiad1.wikimedia.cloud
+	// deployment-mx03.deployment-prep.eqiad1.wikimedia.cloud
+	$wgBounceHandlerInternalIPs = [ '127.0.0.1', '::1', '172.16.6.221' ];
 	$wgBounceHandlerUnconfirmUsers = true;
 	$wgBounceRecordLimit = 5;
 	$wgVERPdomainPart = 'beta.wmflabs.org';
@@ -227,15 +231,18 @@ if ( $wmgUseTimedMediaHandler ) {
 	"commons" => [
 		'url' => '//commons.wikimedia.beta.wmflabs.org/w/api.php'
 	] ];
-	$wgEnableTranscode = true; // enable transcoding on labs
-	$wgFFmpegLocation = '/usr/bin/ffmpeg'; // use new ffmpeg build w/ VP9 & Opus support
+	// enable transcoding on labs
+	$wgEnableTranscode = true;
+	// use new ffmpeg build w/ VP9 & Opus support
+	$wgFFmpegLocation = '/usr/bin/ffmpeg';
 }
 
 // Enable Flickr uploads on commons beta T86120
 if ( $wgDBname == 'commonswiki' ) {
 	$wgGroupPermissions['user']['upload'] = true;
 	$wgGroupPermissions['user']['upload_by_url'] = true;
-} else { // Use InstantCommons on all betawikis except commonswiki
+} else {
+	// Use InstantCommons on all betawikis except commonswiki
 	$wgUseInstantCommons = true;
 }
 
@@ -357,6 +364,11 @@ if ( $wmgUseStopForumSpam ) {
 	$wgSFSIPListLocationMD5 = 'https://www.stopforumspam.com/downloads/listed_ip_90_ipv46_all.gz.md5';
 }
 
+if ( $wmgUseGrowthExperiments ) {
+	// temporarily allow everyone, per T310905
+	$wgGroupPermissions['*']['enrollasmentor'] = true;
+}
+
 $wgMessageCacheType = CACHE_ACCEL;
 
 // This will work for most wikis, which is considered good enough.
@@ -408,4 +420,10 @@ $wgKartographerNearby = true;
 // Enable max-width for editing. T307725.
 $wgVectorMaxWidthOptions['exclude']['querystring']['action'] = '(history|edit)';
 
-} # end safeguard
+if ( $wmgUseCampaignEvents ) {
+	$wgCampaignEventsDatabaseCluster = false;
+	$wgCampaignEventsDatabaseName = 'wikishared';
+}
+
+}
+// end safeguard

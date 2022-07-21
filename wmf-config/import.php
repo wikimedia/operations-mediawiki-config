@@ -12,6 +12,8 @@
  * @param array &$sources
  */
 function wmfImportSources( &$sources ) {
+	// $lang is the site language from, eg, CommonSettings.php
+	// phpcs:ignore MediaWiki.NamingConventions.ValidGlobalName.allowedPrefix
 	global $wgConf, $lang;
 	$wikipedias = array_flip( MWWikiversions::readDbListFile( 'wikipedia' ) );
 	$privates = array_flip( MWWikiversions::readDbListFile( 'private' ) );
@@ -59,7 +61,8 @@ function wmfImportSources( &$sources ) {
 		} elseif (
 			// Don't list sites under "wikipedia" that are not Wikipedias (e.g. meta)
 			( $project !== 'wikipedia' || isset( $wikipedias[$dbname] ) ) &&
-			$subdomain !== 'beta' // Beta Wikiversity is handled separately
+			// Beta Wikiversity is handled separately
+			$subdomain !== 'beta'
 		) {
 			$sources[$project][] = $subdomain;
 		}

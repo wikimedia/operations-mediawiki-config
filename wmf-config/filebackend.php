@@ -20,6 +20,11 @@
 # Included from: wmf-config/CommonSettings.php.
 #
 
+// Inline comments are often used for noting the task(s) associated with specific configuration
+// or for explaining the configuration settings, and requiring comments to be on their own line
+// would reduce readability for this file
+// phpcs:disable MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment
+
 global $wmgSwiftConfig;
 // Common OpenStack Swift backend convenience variables
 $wmgSwiftBigWikis = [ # DO NOT change without proper migration first

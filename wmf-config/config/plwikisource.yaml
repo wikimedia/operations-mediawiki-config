@@ -6,6 +6,7 @@ inheritsFrom:
   - wikisource
   - categories-rdf
   - cirrussearch-big-indices
+  - desktop-improvements
   - flaggedrevs
   - medium
   - nowikidatadescriptiontaglines

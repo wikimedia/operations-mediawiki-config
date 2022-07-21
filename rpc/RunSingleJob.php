@@ -51,7 +51,8 @@ define( 'MEDIAWIKI_JOB_RUNNER', 1 );
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 require MWMultiVersion::getMediaWiki( 'includes/WebStart.php', $event['database'] );
 
-error_reporting( E_ERROR ); // fatals but not random I/O warnings
+// fatals but not random I/O warnings
+error_reporting( E_ERROR );
 ini_set( 'display_errors', 1 );
 $wgShowExceptionDetails = true;
 

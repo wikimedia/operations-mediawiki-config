@@ -191,6 +191,9 @@ Wikipedia:
         comment_1_5x:  T150618
         comment_2x:  T150618
 
+    blkwiki:
+        commons: File:Wikipedia-logo-v2-blk.svg
+
     bmwiki:
         comment:  T42285
         comment_1_5x:  T150618
@@ -1272,8 +1275,12 @@ Wikipedia:
 
     trwiki:
         commons: File:Wikipedia-logo-v2-tr.svg
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        selected: trwiki-500k
+        variants:
+            trwiki-500k: File:Wikipedia-logo-v2-tr-2022 500.svg
+        comment:  T311946
+        comment_1_5x:  T150618, T311946
+        comment_2x:  T150618, T311946
 
     tswiki:
         comment:  T51125
@@ -1394,9 +1401,10 @@ Wikipedia:
         comment_2x:  T150618
 
     zh_classicalwiki:
-        comment:  T177165
-        comment_1_5x:  T177165
-        comment_2x:  T177165
+        commons:  File:Wikipedia-logo-v4-zh-classical.svg
+        comment:  T177165, T259006
+        comment_1_5x:  T177165, T259006
+        comment_2x:  T177165, T259006
 
     zh_min_nanwiki:
         comment_1_5x:  T150618
@@ -3263,9 +3271,9 @@ Wikivoyage:
 
     specieswiki:
         commons: File:WikiSpecies_logo.svg
-        comment:  T306037
-        comment_1_5x:  T230113, T306037
-        comment_2x:  T230113, T306037
+        comment:  T306037, T310961
+        comment_1_5x:  T230113, T306037, T310961
+        comment_2x:  T230113, T306037, T310961
 
     stewardwiki:
         comment:  T39700

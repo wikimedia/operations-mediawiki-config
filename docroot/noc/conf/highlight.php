@@ -76,8 +76,10 @@ if ( !$selectedFilePath ) {
 
 		if ( substr( $selectedFileName, -4 ) === '.php' ) {
 			$hlHtml = highlight_file( $selectedFilePath, true );
-			$hlHtml = str_replace( '&nbsp;', ' ', $hlHtml ); // https://bugzilla.wikimedia.org/19253
-			$hlHtml = str_replace( '    ', "\t", $hlHtml ); // convert 4 spaces to 1 tab character; bug #36576
+			// Avoid non-breaking spaces, T21253
+			$hlHtml = str_replace( '&nbsp;', ' ', $hlHtml );
+			// Convert 4 spaces to a tab character, T38576
+			$hlHtml = str_replace( '    ', "\t", $hlHtml );
 		} else {
 			$hlHtml = htmlspecialchars( file_get_contents( $selectedFilePath ) );
 		}
@@ -105,8 +107,9 @@ $selectedFileViewRawUrlEsc = htmlspecialchars( $selectedFileViewRawUrl );
 <main role="main"><div class="wm-container">
 
 	<nav class="wm-site-nav"><ul class="wm-nav">
-		<li><a href="./">MediaWiki config</a><li>
-		<li><a href="../db.php">Database config</a></li>
+		<li><a href="/conf/" class="wm-nav-item-active">Config files</a><li>
+		<li><a href="/db.php">Database view</a></li>
+		<li><a href="/wiki.php">Wiki view</a></li>
 	</ul></nav>
 
 	<article>
