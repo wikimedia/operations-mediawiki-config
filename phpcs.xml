@@ -29,5 +29,6 @@
 	<exclude-pattern>vendor/</exclude-pattern>
 	<exclude-pattern>portals/</exclude-pattern>
 	<!-- Auto generated files -->
+	<exclude-pattern>dblists-index\.php</exclude-pattern>
 	<exclude-pattern>wmf-config/interwiki\.php</exclude-pattern>
 </ruleset>

@@ -37,6 +37,6 @@
 			"git diff -R --minimal --color --exit-code",
 			"git reset tests/data/config-cache/"
 		],
-		"checkclean": "git diff --exit-code wmf-config/ dblists/"
+		"checkclean": "git diff --exit-code wmf-config/ dblists/ dblists-index.php"
 	}
 }
