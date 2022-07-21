@@ -207,7 +207,7 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 }
 
 $wmgUdp2logDest = $wmgLocalServices['udp2log'];
-if ( $wgDBname === 'testwiki' || $wgDBname === 'test2wiki' ) {
+if ( $wgDBname === 'testwiki' ) {
 	$wgDebugLogFile = "udp://{$wmgUdp2logDest}/testwiki";
 } else {
 	$wgDebugLogFile = '/dev/null';

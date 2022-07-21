@@ -5420,7 +5420,6 @@ return [
 'wmgDefaultMonologHandler' => [
 	'default' => 'blackhole',
 	'testwiki' => 'wgDebugLogFile',
-	'test2wiki' => 'wgDebugLogFile',
 ],
 
 # wmgMonologChannels @{
