@@ -23823,18 +23823,6 @@ return [
 	],
 ],
 
-// keys are wbsearchentities profile parameter values, values are $profileContext values;
-// first entry should always be 'default' => null: in WikibaseCirrusSearch, null corresponds to
-// EntitySearchElastic::CONTEXT_WIKIBASE_PREFIX = 'wikibase_prefix_search'
-'wmgWikibaseSearchProfiles' => [
-	'default' => null,
-	'testwikidatawiki' => [
-		'default' => null,
-		// \Wikibase\Search\Elastic\Hooks::LANGUAGE_SELECTOR_PREFIX
-		'language' => 'language_selector_prefix',
-	],
-],
-
 // Structured media file data (the WikibaseMediaInfo extension)
 'wmgUseWikibaseMediaInfo' => [
 	'default' => false,

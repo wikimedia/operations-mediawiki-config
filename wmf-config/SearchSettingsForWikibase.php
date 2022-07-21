@@ -69,11 +69,6 @@ $wgWBRepoSettings['searchIndexTypes'] = [
 ];
 $wgWBRepoSettings['searchIndexPropertiesExclude'] = $wmgWikibaseSearchIndexPropertiesExclude;
 
-// map wbsearchentities profile parameter values to internal profile context values
-if ( isset( $wmgWikibaseSearchProfiles ) ) {
-	$wgWBRepoSettings['searchProfiles'] = $wmgWikibaseSearchProfiles;
-}
-
 // Load site-specific configs
 if ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) {
 	// Load wikidata specific search config
