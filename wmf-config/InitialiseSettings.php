@@ -25788,7 +25788,7 @@ return [
 	'wikitech' => 'memcached-pecl',
 ],
 'wgCentralAuthSessionCacheType' => [
-	'default' => 'redis_local',  // declared in redis.php
+	'default' => 'kask-session',
 	'wikitech' => 'memcached-pecl',
 ],
 'wgMWOAuthSessionCacheType' => [
