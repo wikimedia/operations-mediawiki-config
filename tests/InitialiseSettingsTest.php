@@ -5,17 +5,13 @@ declare( strict_types = 1 );
 use Wikimedia\MWConfig\MWConfigCacheGenerator;
 
 /**
- * Really tests the settings retrieved from wmfGetVariantSettings, but no easy way to mark that
+ * Structure test for the wmf-config settings themselves.
  *
- * @covers wmfGetVariantSettings
+ * @covers \Wikimedia\MWConfig\MWConfigCacheGenerator
  */
-class StaticSettingsTest extends PHPUnit\Framework\TestCase {
-
-	/**
-	 * @var array[] keys are the names of settings, values are arrays mapping wiki names
-	 *   to configured setting values
-	 */
-	protected $variantSettings = [];
+class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
+	private $settings;
+	private $conf;
 
 	/**
 	 * @var string original value of $wmgDatacenter
@@ -27,7 +23,12 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 		$this->originalWmfDC = $GLOBALS['wmgDatacenter'];
 		$GLOBALS['wmgDatacenter'] = 'testvalue';
 
-		$this->variantSettings = MWConfigCacheGenerator::getStaticConfig();
+		$this->settings = MWConfigCacheGenerator::getStaticConfig();
+
+		$conf = new SiteConfiguration();
+		$conf->suffixes = MWMultiVersion::SUFFIXES;
+		$conf->settings = $this->settings;
+		$this->config = $conf;
 	}
 
 	public function tearDown(): void {
@@ -35,19 +36,19 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 	}
 
 	public function testConfigIsScalar() {
-		foreach ( $this->variantSettings as $variantSetting => $settingsArray ) {
-			$this->assertTrue( is_array( $settingsArray ), "Each variant setting set must be an array, but $variantSetting is not" );
+		foreach ( $this->settings as $settingName => $settingsArray ) {
+			$this->assertTrue( is_array( $settingsArray ), "Each setting set must be an array, but $settingName is not" );
 
 			foreach ( $settingsArray as $wiki => $value ) {
 				$this->assertTrue(
 					is_scalar( $value ) || is_array( $value ) || $value === null,
-					"Each variant setting must be scalar, an array, or null, but $variantSetting is not for $wiki."
+					"Each setting must be scalar, an array, or null, but $settingName is not for $wiki."
 				);
 			}
 		}
 	}
 
-	public function testVariantUrlsAreLocalhost() {
+	public function testUrlSettingsAreLocalhost() {
 		$knownToContainExternalURLs = [
 			// These are user-facing, not in-cluster, and are fine
 			'wgCanonicalServer', 'wgServer', 'wgUploadPath', 'wgRedirectSources', 'wgUploadNavigationUrl', 'wgScorePath', 'wgUploadMissingFileUrl', 'wgRightsUrl', 'wgWelcomeSurveyPrivacyPolicyUrl', 'wgWBCitoidFullRestbaseURL', 'wgGlobalRenameDenylist', 'wgWMEClientErrorIntakeURL', 'wgEventLoggingServiceUri',
@@ -57,8 +58,8 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 			'wgEntitySchemaShExSimpleUrl', 'wmgWBRepoSettingsSparqlEndpoint', 'wmgWikibaseClientRepoUrl', 'wmgWikibaseClientPropertyOrderUrl', 'wgArticlePlaceholderRepoApiUrl', 'wgMediaInfoExternalEntitySearchBaseUri', 'wgMediaSearchExternalEntitySearchBaseUri', 'wmgWikibaseSSRTermboxServerUrl', 'wmgWikibaseClientDataBridgeHrefRegExp',
 		];
 
-		foreach ( $this->variantSettings as $variantSetting => $settingsArray ) {
-			if ( in_array( $variantSetting, $knownToContainExternalURLs ) ) {
+		foreach ( $this->settings as $settingName => $settingsArray ) {
+			if ( in_array( $settingName, $knownToContainExternalURLs ) ) {
 				// Skip for now.
 				continue;
 			}
@@ -70,7 +71,7 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 
 				$this->assertFalse(
 					strpos( $value, '//' ) !== false && strpos( $value, 'localhost' ) === false,
-					"Variant URLs must point to localhost, or be defined in CommonSettings, but $variantSetting for $wiki is '$value'."
+					"URLs must point to localhost, or be defined in CommonSettings, but $settingName for $wiki is '$value'."
 				);
 			}
 		}
@@ -87,9 +88,9 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 			'wmgUseFileImporter',
 		];
 
-		foreach ( $this->variantSettings as $variantSetting => $settingsArray ) {
-			if ( preg_match( '/Use[A-Z]/', $variantSetting ) ) {
-				if ( in_array( $variantSetting, $knownToBeBad ) ) {
+		foreach ( $this->settings as $settingName => $settingsArray ) {
+			if ( preg_match( '/Use[A-Z]/', $settingName ) ) {
+				if ( in_array( $settingName, $knownToBeBad ) ) {
 					// Skip for now.
 					continue;
 				}
@@ -97,7 +98,7 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 				foreach ( $settingsArray as $wiki => $value ) {
 					$this->assertTrue(
 						is_bool( $value ),
-						"Use flags should be boolean, but $variantSetting for $wiki is " . ( is_array( $value ) ? "an array" : "'" . (string)$value . "'" ) . "."
+						"Use flags should be boolean, but $settingName for $wiki is " . ( is_array( $value ) ? "an array" : "'" . (string)$value . "'" ) . "."
 					);
 				}
 			}
@@ -116,8 +117,8 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 
 		// Test if all scalar logos exist
 		foreach ( $scalarLogoKeys as $size => $key ) {
-			foreach ( $this->variantSettings[ $key ] as $db => $entry ) {
-				$this->assertFileExists( __DIR__ . '/../..' . $entry, "$db has non-existent $size logo in $key" );
+			foreach ( $this->settings[ $key ] as $db => $entry ) {
+				$this->assertFileExists( __DIR__ . '/..' . $entry, "$db has non-existent $size logo in $key" );
 
 				if ( in_array( $size, $pairedSizes ) ) {
 					$otherSize = array_values( array_diff( $pairedSizes, [ $size ] ) )[ 0 ];
@@ -125,7 +126,7 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 
 					$this->assertArrayHasKey(
 						$db,
-						$this->variantSettings[ $otherKey ],
+						$this->settings[ $otherKey ],
 						"$db has a logo set for $size in $key but not for $otherSize in $otherKey"
 					);
 
@@ -133,15 +134,15 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 
 					$this->assertArrayHasKey(
 						$db,
-						$this->variantSettings[ $baseKey ],
+						$this->settings[ $baseKey ],
 						"$db has an over-ride HD logo set for $size in $key but not for regular resoltion in $baseKey"
 					);
 
 					// Test if 2x and 1.5x is really of correct size
 					// Tolerate up to 5 px difference
-					$imagesizeOne = getimagesize( __DIR__ . '/../..' . $this->variantSettings[ $scalarLogoKeys[ '1x' ] ][ $db ] )[0];
-					$imagesizeOneAndHalf = getimagesize( __DIR__ . '/../..' . $this->variantSettings[ $scalarLogoKeys[ '1.5x' ] ][ $db ] )[0];
-					$imagesizeTwo = getimagesize( __DIR__ . '/../..' . $this->variantSettings[ $scalarLogoKeys[ '2x' ] ][ $db ] )[0];
+					$imagesizeOne = getimagesize( __DIR__ . '/..' . $this->settings[ $scalarLogoKeys[ '1x' ] ][ $db ] )[0];
+					$imagesizeOneAndHalf = getimagesize( __DIR__ . '/..' . $this->settings[ $scalarLogoKeys[ '1.5x' ] ][ $db ] )[0];
+					$imagesizeTwo = getimagesize( __DIR__ . '/..' . $this->settings[ $scalarLogoKeys[ '2x' ] ][ $db ] )[0];
 
 					// Remove this exception as soon as the logos are updated to meet the condition
 					if ( !in_array( $db, [
@@ -169,20 +170,20 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 		}
 
 		// Test if all wordmark logo values are set and the file exists
-		foreach ( $this->variantSettings[ 'wmgSiteLogoWordmark' ] as $db => $entry ) {
+		foreach ( $this->settings[ 'wmgSiteLogoWordmark' ] as $db => $entry ) {
 			if ( !count( $entry ) ) {
 				// Wordmark logo over-ridden to unset.
 				continue;
 			}
 			$this->assertArrayHasKey( 'src', $entry, "$db has no path set for its wordmark logo in wmgSiteLogoWordmark" );
-			$this->assertFileExists( __DIR__ . '/../..' . $entry['src'], "$db has non-existent wordmark logo in wmgSiteLogoWordmark" );
+			$this->assertFileExists( __DIR__ . '/..' . $entry['src'], "$db has non-existent wordmark logo in wmgSiteLogoWordmark" );
 			$this->assertArrayHasKey( 'width', $entry, "$db has no width set for its wordmark logo in wmgSiteLogoWordmark" );
 			$this->assertArrayHasKey( 'height', $entry, "$db has no height set for its wordmark logo in wmgSiteLogoWordmark" );
 		}
 	}
 
 	public function testwgExtraNamespaces() {
-		foreach ( $this->variantSettings['wgExtraNamespaces'] as $db => $entry ) {
+		foreach ( $this->settings['wgExtraNamespaces'] as $db => $entry ) {
 			foreach ( $entry as $number => $namespace ) {
 				// Test for invalid spaces
 				$this->assertStringNotContainsString( ' ', $namespace, "Unexpected space in '$number' namespace title for $db, use underscores instead" );
@@ -205,7 +206,7 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 	}
 
 	public function testMetaNamespaces() {
-		foreach ( $this->variantSettings['wgMetaNamespace'] as $db => $namespace ) {
+		foreach ( $this->settings['wgMetaNamespace'] as $db => $namespace ) {
 			// Test for invalid spaces
 			$this->assertStringNotContainsString( ' ', $namespace, "Unexpected space in meta namespace title for $db, use underscores instead" );
 
@@ -213,7 +214,7 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 			$this->assertStringNotContainsString( ':', $namespace, "Unexpected colon in meta namespace title for $db, final colon is not needed and should be removed" );
 		}
 
-		foreach ( $this->variantSettings['wgMetaNamespaceTalk'] as $db => $namespace ) {
+		foreach ( $this->settings['wgMetaNamespaceTalk'] as $db => $namespace ) {
 			// Test for invalid spaces
 			$this->assertStringNotContainsString( ' ', $namespace, "Unexpected space in meta talk namespace title for $db, use underscores instead" );
 
@@ -232,7 +233,7 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 			foreach ( $wikiFamilies as $j => $family ) {
 				$this->assertArrayHasKey(
 					$family,
-					$this->variantSettings[ $setting ],
+					$this->settings[ $setting ],
 					"Family '$family' has no default $setting."
 				);
 			}
@@ -286,7 +287,7 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 			foreach ( $mustHaveConfigForSpecialWikis as $j => $setting ) {
 				$this->assertArrayHasKey(
 					$db,
-					$this->variantSettings[ $setting ],
+					$this->settings[ $setting ],
 					"Wiki '$db' is in the 'special' family but has no $setting set."
 				);
 			}
@@ -298,7 +299,7 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 
 				$this->assertArrayHasKey(
 					$db,
-					$this->variantSettings[ $setting ],
+					$this->settings[ $setting ],
 					"Wiki '$db' is in the 'special' family but has no $setting set."
 				);
 			}
@@ -306,19 +307,19 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 	}
 
 	public function testwgServer() {
-		foreach ( $this->variantSettings['wgCanonicalServer'] as $db => $entry ) {
+		foreach ( $this->settings['wgCanonicalServer'] as $db => $entry ) {
 			// Test if wgCanonicalServer start with https://
 			$this->assertStringStartsWith( "https://", $entry, "wgCanonicalServer for $db doesn't start with https://" );
 		}
 
-		foreach ( $this->variantSettings['wgServer'] as $db => $entry ) {
+		foreach ( $this->settings['wgServer'] as $db => $entry ) {
 			// Test if wgServer start with //
 			$this->assertStringStartsWith( "//", $entry, "wgServer for $db doesn't start with //" );
 		}
 	}
 
 	public function testwgSitename() {
-		foreach ( $this->variantSettings['wgSitename'] as $db => $entry ) {
+		foreach ( $this->settings['wgSitename'] as $db => $entry ) {
 			// Test that the string doesn't contain invalid charcters T249014
 			$this->assertStringNotContainsString( ',', $entry, "wgSitename for $db contains a ',' which breaks e-mails" );
 		}
@@ -326,8 +327,8 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 
 	public function testOnlyExistingWikis() {
 		$dblistNames = array_keys( DBList::getLists() );
-		$langs = file( __DIR__ . "/../../langlist", FILE_IGNORE_NEW_LINES );
-		foreach ( $this->variantSettings as $config ) {
+		$langs = file( __DIR__ . "/../langlist", FILE_IGNORE_NEW_LINES );
+		foreach ( $this->settings as $config ) {
 			foreach ( $config as $db => $entry ) {
 				$dbNormalized = str_replace( "+", "", $db );
 				$this->assertTrue(
@@ -357,7 +358,7 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 
 		$ambiguous = [];
 
-		foreach ( $this->variantSettings as $configName => $values ) {
+		foreach ( $this->settings as $configName => $values ) {
 			foreach ( $overlapping as $listA => $lists ) {
 				if ( isset( $values[$listA] ) ) {
 					foreach ( $lists as $listB ) {
@@ -395,48 +396,48 @@ class StaticSettingsTest extends PHPUnit\Framework\TestCase {
 	}
 
 	public function testCacheableLoad() {
-		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getCachableMWConfig(
-			'enwiki', $this->variantSettings, 'production'
+		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
+			'enwiki', $this->config, 'production'
 		);
 
 		$this->assertEquals(
 			'windows-1252', $settings['wgLegacyEncoding'],
-			"Variant settings array must have 'wgLegacyEncoding' set to 'windows-1252' for enwiki."
+			"settings array must have 'wgLegacyEncoding' set to 'windows-1252' for enwiki."
 		);
 
-		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getCachableMWConfig(
-			'dewiki', $this->variantSettings, 'production'
+		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
+			'dewiki', $this->config, 'production'
 		);
 
 		$this->assertFalse(
 			 $settings['wgLegacyEncoding'],
-			"Variant settings array must have 'wgLegacyEncoding' set to 'windows-1252' for enwiki."
+			"settings array must have 'wgLegacyEncoding' set to 'windows-1252' for enwiki."
 		);
 	}
 
 	public function testCacheableLoadForLabs() {
-		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getCachableMWConfig(
-			'enwiki', $this->variantSettings, 'production'
+		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
+			'enwiki', $this->config, 'production'
 		);
 		$this->assertFalse(
 			$settings['wmgUseFlow'],
-			"Variant settings array must have 'wmgUseFlow' set to 'false' for production enwiki."
+			"settings array must have 'wmgUseFlow' set to 'false' for production enwiki."
 		);
 
-		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getCachableMWConfig(
-			'mediawikiwiki', $this->variantSettings, 'production'
+		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
+			'mediawikiwiki', $this->config, 'production'
 		);
 		$this->assertTrue(
 			$settings['wmgUseFlow'],
-			"Variant settings array must have 'wmgUseFlow' set to 'true' for production mediawikiwiki."
+			"settings array must have 'wmgUseFlow' set to 'true' for production mediawikiwiki."
 		);
 
-		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getCachableMWConfig(
-			'enwiki', $this->variantSettings, 'labs'
+		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
+			'enwiki', $this->config, 'labs'
 		);
 		$this->assertTrue(
 			$settings['wmgUseFlow'],
-			"Variant settings array must have 'wmgUseFlow' set to 'true' for labs enwiki."
+			"settings array must have 'wmgUseFlow' set to 'true' for labs enwiki."
 		);
 	}
 }
