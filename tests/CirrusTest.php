@@ -109,7 +109,7 @@ class CirrusTest extends WgConfTestCase {
 		$config = $this->loadCirrusConfig( 'production', 'mediawikiwiki', 'wiki' );
 		$this->assertTrue( $config['wgCirrusSearchCompletionSuggesterSubphrases']['build'] );
 
-		$config = $this->loadCirrusConfig( 'production', 'wikitech', 'wiki' );
+		$config = $this->loadCirrusConfig( 'production', 'labswiki', 'wiki' );
 		$this->assertTrue( $config['wgCirrusSearchCompletionSuggesterSubphrases']['build'] );
 	}
 
