@@ -642,17 +642,22 @@ class MWMultiVersion {
 	 * @return string[]
 	 */
 	public static function getTagsForWiki( string $dbName, string $realm = 'production' ): array {
-		$dbLists = array_combine( self::DB_LISTS, self::DB_LISTS );
-		if ( $realm === 'labs' ) {
-			// Replace some lists with labs-specific versions
-			$dbLists = array_merge( $dbLists, self::DB_LISTS_LABS );
-		}
+		$dblistsIndex = require __DIR__ . '/../dblists-index.php';
 
-		$wikiTags = [];
-		foreach ( $dbLists as $tag => $fileName ) {
-			$dblist = MWWikiversions::readDbListFile( $fileName );
-			if ( in_array( $dbName, $dblist ) ) {
-				$wikiTags[] = $tag;
+		// Tolerate absence, e.g. for a labs-only wiki.
+		// The structure is verified by DbListTest.
+		// The freshness of the index is checked by composer buildDBLists/checkclean.
+		$wikiTags = $dblistsIndex[$dbName] ?? [];
+
+		// Replace some lists with labs-specific versions
+		if ( $realm === 'labs' ) {
+			foreach ( self::DB_LISTS_LABS as $tag => $fileName ) {
+				// Unset any reference to the prod-specific version
+				$wikiTags = array_values( array_diff( $wikiTags, [ $tag ] ) );
+				$dblist = MWWikiversions::readDbListFile( $fileName );
+				if ( in_array( $dbName, $dblist ) ) {
+					$wikiTags[] = $tag;
+				}
 			}
 		}
 
