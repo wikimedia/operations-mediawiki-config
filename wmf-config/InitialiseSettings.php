@@ -13196,7 +13196,10 @@ return [
 		],
 	],
 	'+zhwikibooks' => [
-		'sysop' => [ 'flood' ], // T185182
+		'sysop' => [
+			'flood', // T185182
+			'transwiki', // T313657
+		],
 	],
 	'+zhwikinews' => [
 		'sysop' => [
@@ -13206,7 +13209,15 @@ return [
 		],
 	],
 	'+zhwikiquote' => [
-		'sysop' => [ 'flood' ], // T189289
+		'sysop' => [
+			'flood', // T189289
+			'transwiki', // T313657
+		],
+	],
+	'+zhwikisource' => [
+		'sysop' => [
+			'transwiki', // T313657
+		],
 	],
 	'+zhwikiversity' => [
 		'sysop' => [
@@ -13229,6 +13240,7 @@ return [
 		'sysop' => [
 			'flood', // T187018
 			'templateeditor', // T286101
+			'transwiki', // T313657
 		],
 	],
 	'+zh_yuewiki' => [
@@ -14263,7 +14275,10 @@ return [
 		],
 	],
 	'+zhwikibooks' => [
-		'sysop' => [ 'flood' ], // T185182
+		'sysop' => [
+			'flood', // T185182
+			'transwiki', // T313657
+		],
 	],
 	'+zhwikinews' => [
 		'sysop' => [
@@ -14273,16 +14288,39 @@ return [
 		],
 	],
 	'+zhwikiquote' => [
-		'sysop' => [ 'flood' ], // T189289
+		'sysop' => [
+			'flood', // T189289
+			'transwiki', // T313657
+		],
+	],
+	'+zhwikisource' => [
+		'sysop' => [
+			'transwiki', // T313657
+		],
 	],
 	'+zhwikiversity' => [
-		'sysop' => [ 'transwiki', 'patroller', 'autopatrolled', 'confirmed', 'flood' ],
+		'sysop' => [
+			'transwiki', // T201328
+			'patroller', // T202599
+			'autopatrolled', // T202599
+			'flood', // T202599
+			'confirmed', // T202599
+		],
 	],
 	'+zhwikivoyage' => [
-		'sysop' => [ 'autopatrolled', 'confirmed', 'patroller', 'transwiki' ], // T62085, T62328
+		'sysop' => [
+			'autopatrolled', // T62328
+			'confirmed', // T62085
+			'patroller', // T62328
+			'transwiki', // T62085
+		],
 	],
 	'+zhwiktionary' => [
-		'sysop' => [ 'flood', 'templateeditor', ], // T187018, T286101
+		'sysop' => [
+			'flood', // T187018
+			'templateeditor', // T286101
+			'transwiki', // T313657
+		],
 	],
 	'+zh_yuewiki' => [
 		'sysop' => [ 'abusefilter', 'rollbacker', 'autoreviewer', 'confirmed' ],
