@@ -10980,7 +10980,10 @@ return [
 		'autopatrolled' => [ 'autopatrol' => true ], // T48915
 		'rollbacker' => [ 'rollback' => true ], // T116143
 		'patroller' => [ 'patrol' => true ], // T116143
-		'filemover' => [ 'movefile' => true ], // T116143
+		'filemover' => [
+			'movefile' => true, // T116143
+			'suppressredirect' => true, // T313614
+		],
 	],
 	'+ruwiktionary' => [
 		'rollbacker' => [ 'rollback' => true ], // T183655
