@@ -18228,6 +18228,7 @@ return [
 	'orwiki' => true, // T33172
 	'pawiki' => true, // T178919
 	'ptwiki' => true, // T33178
+	'ptwikinews' => true, // T313173
 	'sawiki' => true, // T192212
 	'sewikimedia' => true, // T32491
 	'siwiki' => true, // T35485
