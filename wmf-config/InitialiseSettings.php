@@ -24927,6 +24927,7 @@ return [
 	'ptwiki' => [ 'content' => 7, 'general' => 5, 'titlesuggest' => 2, 'archive' => 1 ],
 	'rowiki' => [ 'content' => 3, 'general' => 2, 'titlesuggest' => 1, 'archive' => 1 ],
 	'ruwiki' => [ 'content' => 7, 'general' => 8, 'titlesuggest' => 3, 'archive' => 1 ],
+	'ruwikinews' => [ 'content' => 4, 'general' => 4, 'titlesuggest' => 1, 'archive' => 1 ],
 	'ruwikisource' => [ 'content' => 4, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
 	'ruwiktionary' => [ 'content' => 3, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
 	'shwiki' => [ 'content' => 4, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
