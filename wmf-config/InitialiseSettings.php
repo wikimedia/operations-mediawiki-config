@@ -10787,16 +10787,19 @@ return [
 		'autoconfirmed' => [
 			'patrol' => true,
 			'abusefilter-log-detail' => true,
+			'move' => false, // T313802
 		],
 		'bot' => [
 			'editautoreviewprotected' => true,
 			'extendedconfirmed' => true, // T281926
+			'move' => true, // T313802
 		],
 		'autoreviewer' => [
 			'autopatrol' => true,
 			'editautoreviewprotected' => true,
 			'movefile' => true, // T161532
 			'extendedconfirmed' => true, // T292912
+			'move' => true, // T313802
 		],
 		'eliminator' => [
 			'browsearchive' => true,
@@ -10833,8 +10836,14 @@ return [
 			'editsitejson' => true,
 		],
 		'flood' => [ 'bot' => true, ], // T228521
-		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T281860
-		'autoextendedconfirmed' => [ 'extendedconfirmed' => true ], // T292915
+		'extendedconfirmed' => [
+			'extendedconfirmed' => true, // T281860
+			'move' => true, // T313802
+		],
+		'autoextendedconfirmed' => [
+			'extendedconfirmed' => true, // T292915
+			'move' => true, // T313802
+		],
 	],
 	'+ptwikinews' => [
 		'editprotected' => [
