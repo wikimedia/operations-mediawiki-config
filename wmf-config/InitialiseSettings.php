@@ -21997,6 +21997,16 @@ return [
 			],
 		],
 
+		// Wikistories streams
+		'mediawiki.wikistories_consumption_event' => [
+			'schema_title' => 'analytics/mediawiki/wikistories_consumption_event',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'mediawiki.wikistories_contribution_event' => [
+			'schema_title' => 'analytics/mediawiki/wikistories_contribution_event',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+
 		/*
 		 * == eventgate-logging-external streams ==
 		 * These are produced to the Kafka logging clusters for ingestion into logstash.
@@ -22368,6 +22378,8 @@ return [
 		'mediawiki.mentor_dashboard.visit',
 		'mediawiki.ipinfo_interaction',
 		'mediawiki.editgrowthconfig',
+		'mediawiki.wikistories_consumption_event',
+		'mediawiki.wikistories_contribution_event',
 	],
 	'+testwiki' => [
 		'mediawiki.web_ui.interactions',
