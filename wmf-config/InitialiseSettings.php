@@ -25792,7 +25792,11 @@ return [
 	'wikitech' => 'memcached-pecl',
 ],
 'wgMWOAuthSessionCacheType' => [
-	'default' => 'redis_local',  // declared in redis.php
+	'default' => 'db-mainstash',
+	'wikitech' => 'memcached-pecl',
+],
+'wgMWOAuthNonceCacheType' => [
+	'default' => 'mcrouter',
 	'wikitech' => 'memcached-pecl',
 ],
 'wgMainStash' => [
@@ -25806,10 +25810,6 @@ return [
 'wgStatsCacheType' => [
 	'default' => 'mcrouter-primary-dc',
 	'wikitech' => 'memcached-pecl',
-],
-
-'wgAbuseFilterProfilerCache' => [
-	'default' => 'redis_local', // not using mainstash due to high traffic
 ],
 
 'wmgFileExtensions' => [
