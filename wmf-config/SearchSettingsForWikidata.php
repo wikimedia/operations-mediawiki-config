@@ -392,7 +392,20 @@ $wgWBCSRescoreProfiles = [
 				'rescore_query_weight' => 1.0,
 				'score_mode' => 'total',
 				'type' => 'function_score',
-				'function_chain' => 'wikibase_config_entity_weight_language_selector'
+				// Reuse the "main" profile for entity weights
+				// (incoming_links, sitelink_count and $wmgWikibaseSearchStatementBoosts boosts)
+				'function_chain' => 'wikibase_config_entity_weight'
+			],
+			[
+				// Append another rescore window to rescore based on the language "attributes" of the entity.
+				// This will boost entities based on $wmgWBCSLanguageSelectorStatementBoost
+				'window' => 8192,
+				'window_size_override' => 'EntitySearchRescoreWindowSize',
+				'query_weight' => 1.0,
+				'rescore_query_weight' => 1.0,
+				'score_mode' => 'total',
+				'type' => 'function_score',
+				'function_chain' => 'wikibase_config_language_selector_language_boosts'
 			]
 		]
 	],
@@ -428,21 +441,13 @@ $wgWBCSRescoreFunctionChains = [
 ];
 
 $wgWBCSLanguageSelectorRescoreFunctionChains = [
-	'wikibase_config_entity_weight_language_selector' => [
-		'score_mode' => 'sum',
+	'wikibase_config_language_selector_language_boosts' => [
+		// get the max score so that languages that are instances of
+		// multiple of the boosted attributes do not get extra points.
+		// Negative boosts should not be used here as they'll be
+		// flipped to their inverse query with a positive boost.
+		'score_mode' => 'max',
 		'functions' => [
-			[
-				// Incoming links: k = 100, since it is normal to have a bunch of incoming links
-				'type' => 'satu',
-				'weight' => '0.6',
-				'params' => [ 'field' => 'incoming_links', 'missing' => 0, 'a' => 1 , 'k' => 100 ]
-			],
-			[
-				// Site links: k = 20, tens of sites is a lot
-				'type' => 'satu',
-				'weight' => '0.4',
-				'params' => [ 'field' => 'sitelink_count', 'missing' => 0, 'a' => 2, 'k' => 20 ]
-			],
 			[
 				'type' => 'term_boost',
 				'weight' => 0.1,

@@ -23790,6 +23790,8 @@ return [
 	]
 ],
 
+// Wikidata search: configure boost based on language "attributes" for the wbsearchentities "language" profile
+// Note that only the max score is kept and thus is not suited for negative boosts
 'wmgWBCSLanguageSelectorStatementBoost' => [
 	'default' => [],
 	'wikidatawiki' => [
@@ -23801,18 +23803,6 @@ return [
 		'P31=Q45762' => 50,
 		// Q33384=dialect
 		'P31=Q33384' => 50,
-		// Q4167410=Wikimedia disambiguation page
-		'P31=Q4167410' => -10,
-		// T183510:
-		// Q13442814=scientific article
-		'P31=Q13442814' => -5,
-		// Q18918145=academic journal article
-		'P31=Q18918145' => -5,
-	],
-	'testwikidatawiki' => [
-		// not necessarily meaningful, for testing only
-		// Q15561=Wikimedia disambiguation page
-		'P7=Q15561' => -10,
 	],
 ],
 
