@@ -8045,45 +8045,15 @@ return [
 			],
 		],
 	],
-	// T311144
+	// T312296
 	'desktop-improvements' => [
 		'name' => 'vector.sticky_header_edit',
-		'enabled' => true,
+		'enabled' => false,
 		'buckets' => [
 			'unsampled' => [
 				'samplingRate' => 0
 			],
 			'stickyHeaderEditButtonControl' => [
-				'samplingRate' => 0.5
-			],
-			'stickyHeaderEditButtonTreatment' => [
-				'samplingRate' => 0.5
-			],
-		],
-	],
-	'idwiki' => [
-		'name' => 'vector.sticky_header_edit',
-		'enabled' => false,
-		'buckets' => [
-			'unsampled' => [
-				'samplingRate' => 0
-			],
-			'control' => [
-				'samplingRate' => 0.5
-			],
-			'stickyHeaderEditButtonTreatment' => [
-				'samplingRate' => 0.5
-			],
-		],
-	],
-	'viwiki' => [
-		'name' => 'vector.sticky_header_edit',
-		'enabled' => false,
-		'buckets' => [
-			'unsampled' => [
-				'samplingRate' => 0
-			],
-			'control' => [
 				'samplingRate' => 0.5
 			],
 			'stickyHeaderEditButtonTreatment' => [
