@@ -17770,6 +17770,8 @@ return [
 
 'wmgVisualEditorAllowExternalLinkPaste' => [
 	'default' => false,
+	'mediawikiwiki' => true, // T129546#8109242
+	'metawiki' => true, // T129546#8109242
 	'officewiki' => true,
 ],
 
