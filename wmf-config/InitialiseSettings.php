@@ -21005,7 +21005,7 @@ return [
 'wgSectionTranslationTargetLanguages' => [
 	'default' => null,
 	'wikipedia' => [ 'as', 'ast', 'ay', 'az', 'ba', 'bcl', 'bn', 'ckb', 'cs', 'el', 'eu', 'fa', 'gu', 'ha', 'he', 'ig', 'ilo', 'is', 'jv', 'kg', 'kn', 'ko', 'ku', 'lg', 'ln', 'mk', 'ml', 'mn', 'mr', 'ms', 'ne', 'nso', 'oc', 'om', 'pa', 'sq', 'sr', 'ss', 'sw', 'ta', 'te', 'th', 'tl', 'tn', 'tr', 'ts', 'ur', 'uz', 'wo', 'yo', 'zu' ],
-	'testwiki' => [ 'af', 'ar', 'as', 'ast', 'ay', 'az', 'ba', 'bcl', 'bn', 'ca', 'ckb', 'cs', 'cy', 'el', 'eo', 'es', 'et', 'eu', 'fa', 'fr', 'gl', 'gu', 'ha', 'he', 'hi', 'ht', 'hy', 'id', 'ig', 'ilo', 'is', 'jv', 'kg', 'ki', 'kn', 'ko', 'ku', 'lg', 'ln', 'lt', 'mk', 'ml', 'mn', 'mr', 'ms', 'mt', 'my', 'ne', 'nso', 'oc', 'om', 'pa', 'pt', 'ru', 'sl', 'sq', 'sr', 'ss', 'su', 'sw', 'ta', 'te', 'th', 'tl', 'tn', 'tr', 'ts', 'uk', 'ur', 'uz', 'vi', 'wo', 'yo', 'zh', 'zh-yue', 'zu' ],
+	'testwiki' => [ 'af', 'am', 'ar', 'as', 'ast', 'ay', 'az', 'ba', 'bcl', 'bn', 'bs', 'ca', 'ceb', 'ckb', 'cs', 'cy', 'el', 'eo', 'es', 'et', 'eu', 'fa', 'fr', 'gl', 'gu', 'ha', 'he', 'hi', 'ht', 'hy', 'id', 'ig', 'ilo', 'is', 'jv', 'kg', 'ki', 'km', 'kn', 'ko', 'ku', 'lg', 'ln', 'lt', 'lv', 'mk', 'ml', 'mn', 'mr', 'ms', 'mt', 'my', 'ne', 'nso', 'oc', 'om', 'or', 'pa', 'pt', 'ru', 'si', 'sl', 'so', 'sq', 'sr', 'ss', 'su', 'sw', 'ta', 'te', 'th', 'tl', 'tn', 'tr', 'ts', 'uk', 'ur', 'uz', 'vi', 'wo', 'yo', 'zh', 'zh-yue', 'zu' ],
 ],
 
 'wgContentTranslationContentImportForSectionTranslation' => [
