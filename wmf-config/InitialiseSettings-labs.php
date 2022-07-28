@@ -1636,7 +1636,15 @@ function wmfGetOverrideSettings() {
 				'Q98649' => 'wb-badge-notproofread', // T97014 - Wikisource badges
 				'Q98650' => 'wb-badge-problematic',
 				'Q98658' => 'wb-badge-proofread',
-				'Q98651' => 'wb-badge-validated'
+				'Q98651' => 'wb-badge-validated',
+				'Q612803' => 'wb-badge-redirect-sitelink', // T313896
+				'Q612804' => 'wb-badge-redirect-intentional-sitelink', // T313896
+			],
+		],
+		'wmgWikibaseRepoRedirectBadgeItems' => [
+			'wikidatawiki' => [
+				'Q612803', // T313896
+				'Q612804', // T313896
 			],
 		],
 		'wmgWikibaseClientBadgeClassNames' => [
