@@ -3845,7 +3845,6 @@ return [
 		'Portal・トーク' => 101,
 		'プロジェクト・トーク' => 103,
 		'モジュール・トーク' => 829, // T49933
-		'Module talk' => 829, // T314013
 	],
 	'+jawikinews' => [
 		"ポータル‐ノート" => 101,
@@ -3863,7 +3862,6 @@ return [
 		'WikiProject talk' => 103,
 		'プロジェクト‐ノート' => 103,
 		'モジュール・トーク' => 829,
-		'Module talk' => 829, // T314013
 	],
 	'+kawikiquote' => [
 		'Wikiquote_განხილვა' => NS_PROJECT_TALK,
