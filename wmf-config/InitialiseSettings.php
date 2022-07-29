@@ -19780,6 +19780,7 @@ return [
 ],
 'wmgUseBounceHandler' => [
 	'default' => true,
+	'wikitech' => false, // T225097
 ],
 
 'wmgUseTranslate' => [
