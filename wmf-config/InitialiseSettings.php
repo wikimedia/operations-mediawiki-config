@@ -14892,6 +14892,7 @@ return [
 	],
 	'itwiki' => [
 		NS_USER => 'noindex,follow', // T107992
+		NS_USER_TALK => 'noindex,follow', // T314165
 		118 => 'noindex,nofollow', // T280289
 		119 => 'noindex,nofollow', // T280289
 	],
@@ -15194,7 +15195,7 @@ return [
 	'enwiki' => [ 118, 119 ], // draft and draft talk
 	'fawiki' => [ 118, 119 ], // draft and draft talk - T299850
 	'hewiki' => [ 118, 119 ], // draft and draft talk - T86329
-	'itwiki' => [ 118, 119 ], // draft and draft talk - T280289
+	'itwiki' => [ 2, 3, 118, 119 ], // user and user talk - T314165, draft and draft talk - T280289
 	'kowiki' => [ 118, 119 ], // draft and draft talk - T92798
 	'thwiki' => [ 118, 119 ], // draft and draft talk - T252959
 	'zhwiki' => [ 2, 3, 118, 119 ], // user and user talk - T288947, draft and draft talk - T91223
