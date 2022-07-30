@@ -4040,6 +4040,10 @@ return [
 		'Portal' => 100,
 		'Portal_talk' => 101,
 	],
+	'mnwwiktionary' => [
+		'အဆက်လက္ကရဴ' => 100, // T314023
+		'အဆက်လက္ကရဴ_ဓရီုကျာ' => 101, // T314023
+	],
 	'+mrwiki' => [
 		'विपी' => NS_PROJECT,
 	],
@@ -7123,6 +7127,10 @@ return [
 	'mgwiktionary' => [
 		100 => 'Rakibolana', # Portal
 		101 => "Dinika_amin'ny_rakibolana",
+	],
+	'mnwwiktionary' => [
+		100 => 'Appendix', // T314023
+		101 => 'Appendix_talk', // T314023
 	],
 	'mrwiktionary' => [
 		104 => 'सूची',
