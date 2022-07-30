@@ -680,7 +680,7 @@ return [
 	'skwikisource' => '/static/images/project-logos/skwikisource.png',
 	'slwikisource' => '/static/images/project-logos/slwikisource.png', // T54019
 	'sourceswiki' => '/static/images/project-logos/sourceswiki.png',
-	'srwikisource' => '/static/images/project-logos/srwikisource.png', // T54019
+	'srwikisource' => '/static/images/project-logos/srwikisource.png', // T54019, T310961
 	'tawikisource' => '/static/images/project-logos/tawikisource.png',
 	'tewikisource' => '/static/images/project-logos/tewikisource.png', // T46796
 	'thwikisource' => '/static/images/project-logos/thwikisource.png', // T54019
@@ -1330,7 +1330,7 @@ return [
 	'pawikisource' => '/static/images/project-logos/pawikisource-1.5x.png', // T149522
 	'ruwikisource' => '/static/images/project-logos/ruwikisource-1.5x.png', // T203343
 	'sourceswiki' => '/static/images/project-logos/sourceswiki-1.5x.png', // T150618
-	'srwikisource' => '/static/images/project-logos/srwikisource-1.5x.png', // T172268
+	'srwikisource' => '/static/images/project-logos/srwikisource-1.5x.png', // T172268, T310961
 	'tewikisource' => '/static/images/project-logos/tewikisource-1.5x.png',
 	'viwikisource' => '/static/images/project-logos/enwikisource-1.5x.png',
 	'wawikisource' => '/static/images/project-logos/wawikisource-1.5x.png',
@@ -1916,7 +1916,7 @@ return [
 	'pawikisource' => '/static/images/project-logos/pawikisource-2x.png', // T149522
 	'ruwikisource' => '/static/images/project-logos/ruwikisource-2x.png', // T203343
 	'sourceswiki' => '/static/images/project-logos/sourceswiki-2x.png', // T150618
-	'srwikisource' => '/static/images/project-logos/srwikisource-2x.png', // T172268
+	'srwikisource' => '/static/images/project-logos/srwikisource-2x.png', // T172268, T310961
 	'tewikisource' => '/static/images/project-logos/tewikisource-2x.png',
 	'viwikisource' => '/static/images/project-logos/enwikisource-2x.png',
 	'wawikisource' => '/static/images/project-logos/wawikisource-2x.png',

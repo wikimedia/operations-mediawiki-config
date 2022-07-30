@@ -2819,9 +2819,10 @@ Wikisource:
         comment_2x:  T150618
 
     srwikisource:
-        comment:  T54019
-        comment_1_5x:  T172268
-        comment_2x:  T172268
+        commons:  File:Wikisource-logo-sr2.svg
+        comment:  T54019, T310961
+        comment_1_5x:  T172268, T310961
+        comment_2x:  T172268, T310961
 
     tawikisource:
         no_1_5x: true
