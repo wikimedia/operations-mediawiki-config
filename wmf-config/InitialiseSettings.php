@@ -16769,6 +16769,7 @@ return [
 	'srwikiquote' => 'any', // T172974
 	'tawiktionary' => 'any', // T241684
 	'trwikisource' => 'any', // T248747
+	'viwikibooks' => 'any', // T314239
 	'wikidatawiki' => 'any', // T144687
 	'zhwikinews' => 'any', // T53604
 	'zhwikiversity' => 'any', // T214946
