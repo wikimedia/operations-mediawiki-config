@@ -395,27 +395,37 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 		}
 	}
 
-	public function testCacheableLoad() {
-		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
+	public function testImportantProductionSettings() {
+		$enwikiSettings = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
 			'enwiki', $this->config, 'production'
+		);
+		$dewikiSettings = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
+			'dewiki', $this->config, 'production'
+		);
+		$officewikiSettings = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
+			'officewiki', $this->config, 'production'
 		);
 
 		$this->assertEquals(
-			'windows-1252', $settings['wgLegacyEncoding'],
-			"settings array must have 'wgLegacyEncoding' set to 'windows-1252' for enwiki."
+			'windows-1252',
+			$enwikiSettings['wgLegacyEncoding'],
+			'Enable by dbname, wgLegacyEncoding for enwiki'
 		);
-
-		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
-			'dewiki', $this->config, 'production'
-		);
-
 		$this->assertFalse(
-			 $settings['wgLegacyEncoding'],
-			"settings array must have 'wgLegacyEncoding' set to 'windows-1252' for enwiki."
+			$dewikiSettings['wgLegacyEncoding'],
+			'Disable by dbname, wgLegacyEncoding for most other wikis'
+		);
+		$this->assertFalse(
+			$officewikiSettings['groupOverrides2']['*']['read'],
+			'Set by "private" tag, restrict reading on officewiki'
+		);
+		$this->assertTrue(
+			count( $officewikiSettings['wgWhitelistRead'] ) > 1,
+			'Enable by "private" tag, wgWhitelistRead for officewiki'
 		);
 	}
 
-	public function testCacheableLoadForLabs() {
+	public function testExampleLabsSettings() {
 		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
 			'enwiki', $this->config, 'production'
 		);
