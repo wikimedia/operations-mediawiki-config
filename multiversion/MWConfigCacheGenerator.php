@@ -226,45 +226,14 @@ class MWConfigCacheGenerator {
 		string $realm,
 		string $cacheDir
 	): array {
-		global $IP;
+		// Populate SiteConfiguration object
+		wmfLoadInitialiseSettings( $siteConfiguration );
 
-		// Try configuration cache
-		$confCacheFileName = "conf2-$dbname.json";
-		$confActualMtime = max(
-			filemtime( dirname( __DIR__ ) . '/wmf-config/InitialiseSettings.php' ),
-			filemtime( dirname( __DIR__ ) . '/wmf-config/logos.php' ),
-			filemtime( "$IP/includes/Defines.php" )
+		return self::getMWConfigForCacheing(
+			$dbname,
+			$siteConfiguration,
+			$realm
 		);
-		$globals = self::readFromStaticCache(
-			$cacheDir . '/' . $confCacheFileName,
-			$confActualMtime
-		);
-
-		if ( !$globals ) {
-			// Populate SiteConfiguration object
-			wmfLoadInitialiseSettings( $siteConfiguration );
-
-			$globals = self::getMWConfigForCacheing(
-				$dbname,
-				$siteConfiguration,
-				$realm
-			);
-
-			$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals ];
-
-			// Save the cache if the grace period has passed.  We use a grace
-			// period of 3 minutes which is about 30 seconds longer
-			// than it takes for the php-fpm-restarts phase of scap sync-file
-			// to complete. See T236104 and T311788.
-			$gracePeriod = 3 * 60;
-			$minTime = $confActualMtime + $gracePeriod;
-			if ( time() > $minTime ) {
-				self::writeToStaticCache(
-					$cacheDir, $confCacheFileName, $confCacheObject
-				);
-			}
-		}
-		return $globals;
 	}
 
 	/**
