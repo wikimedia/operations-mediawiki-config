@@ -905,9 +905,9 @@ return [
 		'height' => 18,
 	],
 	'newiki' => [
-		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-hi.svg',
-		'width' => 78,
-		'height' => 18,
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ne.svg',
+		'width' => 113,
+		'height' => 25,
 	],
 	'papwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
