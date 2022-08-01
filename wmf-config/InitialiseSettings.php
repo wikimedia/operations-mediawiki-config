@@ -27493,6 +27493,10 @@ return [
 'wgGEMentorProvider' => [
 	'default' => 'wikitext',
 	'testwiki' => 'structured',
+	'arwiki' => 'structured',
+	'bnwiki' => 'structured',
+	'cswiki' => 'structured',
+	'eswiki' => 'structured',
 ],
 
 'wgGEHomepageMentorsList' => [
