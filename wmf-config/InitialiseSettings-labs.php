@@ -1582,9 +1582,7 @@ function wmfGetOverrideSettings() {
 			'viwiki' => 'https://vi.wikipedia.org/w/api.php',
 		],
 		'wgGEMentorProvider' => [
-			'default' => 'wikitext',
-			'arwiki' => 'structured',
-			'enwiki' => 'structured',
+			'default' => 'structured',
 		],
 		'wgGEMentorDashboardUseVue' => [
 			'default' => false,
