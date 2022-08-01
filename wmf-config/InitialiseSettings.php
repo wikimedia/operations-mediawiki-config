@@ -27351,6 +27351,7 @@ return [
 
 'wgGEMentorProvider' => [
 	'default' => 'wikitext',
+	'testwiki' => 'structured',
 ],
 
 'wgGEHomepageMentorsList' => [
