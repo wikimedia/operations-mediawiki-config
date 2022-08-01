@@ -216,24 +216,6 @@ if ( $wgDBname === 'testwiki' ) {
 $wgConf = new SiteConfiguration;
 $wgConf->suffixes = MWMultiVersion::SUFFIXES;
 $wgConf->wikis = MWWikiversions::readDbListFile( $wmgRealm === 'labs' ? 'all-labs' : 'all' );
-$wgConf->fullLoadCallback = 'wmfLoadInitialiseSettings';
-
-/**
- * @param SiteConfiguration $conf
- */
-function wmfLoadInitialiseSettings( $conf ) {
-	global $wmgRealm;
-	$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getStaticConfig();
-
-	if ( $wmgRealm !== 'production' ) {
-		// Override for Beta Cluster and other realms.
-		// Ref: InitialiseSettings-labs.php
-		require_once __DIR__ . "/InitialiseSettings-$wmgRealm.php";
-		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::applyOverrides( $settings );
-	}
-
-	$conf->settings = $settings;
-}
 
 $wgLocalDatabases = $wgConf->getLocalDatabases();
 
