@@ -39,7 +39,7 @@ class MWConfigCacheGenerator {
 	/**
 	 * Compute the config globals for a wiki in a standalone way for testing.
 	 *
-	 * In production code, use getMWConfigForCacheing() or getConfigGlobals() instead.
+	 * In production code, use getConfigGlobals() instead.
 	 *
 	 * This method will load InitialiseSettings (which requires Defines.php) and create
 	 * a SiteConfiguration object (which requires SiteConfiguration.php). It is the responsibility
@@ -214,17 +214,15 @@ class MWConfigCacheGenerator {
 	private $staticConfigs = [];
 
 	/**
-	 * @param string $dbname
-	 * @param \SiteConfiguration $siteConfiguration
-	 * @param string $realm
-	 * @param string $cacheDir
+	 * @param string $dbname Database name, e.g. 'enwiki' or 'zh_min_nanwikisource'
+	 * @param \SiteConfiguration $siteConfiguration The wgConf object
+	 * @param string $realm Realm, e.g. 'production' or 'labs'
 	 * @return array
 	 */
 	public static function getConfigGlobals(
 		string $dbname,
 		\SiteConfiguration $siteConfiguration,
-		string $realm,
-		string $cacheDir
+		string $realm = 'production'
 	): array {
 		// Populate SiteConfiguration object
 		wmfLoadInitialiseSettings( $siteConfiguration );
@@ -265,40 +263,6 @@ class MWConfigCacheGenerator {
 
 		// Reached if the file doesn't exist yet, can't be read, was out of date, or was corrupt.
 		return null;
-	}
-
-	/**
-	 * Write a static MultiVersion object to disc cache
-	 *
-	 * @param string $cacheDir The filepath for cached multiversion config storage
-	 * @param string $cacheShard The filename for the cached multiversion config object
-	 * @param array $configObject The config array for this wiki
-	 */
-	public static function writeToStaticCache( $cacheDir, $cacheShard, $configObject ) {
-		@mkdir( $cacheDir );
-		$tmpFile = tempnam( '/tmp/', $cacheShard );
-
-		$staticCacheObject = json_encode(
-			$configObject,
-			// TODO: Use JSON_THROW_ON_ERROR with a try/catch once production is running PHP 7.3.
-			JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
-		) . "\n";
-
-		if ( $tmpFile ) {
-			if ( json_last_error() !== JSON_ERROR_NONE ) {
-				// Something went wrong; for safety, don't write anything, and raise an error
-				trigger_error( "Config cache failure: Static encoding failed", E_USER_ERROR );
-			} else {
-				if ( file_put_contents( $tmpFile, $staticCacheObject ) ) {
-					if ( rename( $tmpFile, $cacheDir . '/' . $cacheShard ) ) {
-						// Rename succeded; no need to clean up temp file
-						return;
-					}
-				}
-			}
-			// T136258: Rename failed, write failed, or data wasn't cacheable; clean up temp file
-			unlink( $tmpFile );
-		}
 	}
 
 	/**
