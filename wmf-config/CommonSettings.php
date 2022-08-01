@@ -292,8 +292,7 @@ $wgLocalVirtualHosts = [
 $globals = Wikimedia\MWConfig\MWConfigCacheGenerator::getConfigGlobals(
 	$wgDBname,
 	$wgConf,
-	$wmgRealm,
-	$wgCacheDirectory
+	$wmgRealm
 );
 
 // phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
