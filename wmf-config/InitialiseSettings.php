@@ -24427,7 +24427,7 @@ return [
 // Enable WikiEditor's Realtime Preview feature.
 'wgWikiEditorRealtimePreview' => [
 	'default' => false,
-	'testwiki' => true, // T302506
+	'group0' => true, // T314150
 	'huwiki' => true, // T303961
 	'fiwiki' => true,
 	'cawiki' => true,
