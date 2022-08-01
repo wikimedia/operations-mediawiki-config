@@ -4,7 +4,6 @@
 /scap/log
 /wikiversions-*.php
 /wikiversions.php
-/wmf-config/config-cache/
 /wmf-config/ExtensionMessages-*.php
 
 # Beta Cluster
@@ -17,6 +16,7 @@
 /logs
 /.phpunit.result.cache
 /vendor
+/tests/data/config-cache/
 ## Editors
 /*~
 /*.swp

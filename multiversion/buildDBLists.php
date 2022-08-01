@@ -60,12 +60,14 @@ foreach ( $knownDBLists as $DBList => $contents ) {
 	wmfWriteDBList( $DBList, $contents );
 }
 foreach ( glob( __DIR__ . '/../dblists/*.dbexpr' ) as $filepath ) {
-	wmfWriteDBList(
-		basename( $filepath, '.dbexpr' ),
-		MWWikiversions::evalDbListExpression( file_get_contents( $filepath ) ),
-		'dbexpr'
-	);
+	$listname = basename( $filepath, '.dbexpr' );
+	$contents = MWWikiversions::evalDbListExpression( file_get_contents( $filepath ) );
+	$knownDBLists[$listname] = $contents;
+
+	wmfWriteDBList( $listname, $contents, 'dbexpr' );
 }
+
+wmfWriteDblistsIndex( $knownDBLists );
 
 /**
  * @param string $listname The name of the db list to write.
@@ -96,4 +98,50 @@ function wmfWriteDBList( $listname, $listcontent, $source = 'YAML' ) {
 		print "Unable to write to $path.\n";
 		exit( 1 );
 	}
+}
+
+/**
+ * @param string $head Comment
+ * @param string $path Path to PHP-file to create or replace
+ * @param array $data
+ */
+function wmfWriteStaticArrayFile( string $head, string $path, array $data ) {
+	$code = "<?php\n"
+		. "// " . implode( "\n// ", explode( "\n", $head ) ) . "\n"
+		. "return [\n";
+	foreach ( $data as $key => $value ) {
+		$code .= var_export( $key, true ) . " => [ "
+			. implode( ", ", array_map( static function ( $sub ) {
+				return var_export( $sub, true );
+			}, $value ) )
+			. " ],\n";
+	}
+	$code .= "];\n";
+
+	if ( !file_put_contents( $path, $code, LOCK_EX ) ) {
+		print "Unable to write to $path.\n";
+		exit( 1 );
+	}
+}
+
+/**
+ * @param array<string,string[]> $dblists
+ */
+function wmfWriteDblistsIndex( array $dblists ): void {
+	$indexByDbname = [];
+	foreach ( MWMultiVersion::DB_LISTS as $listname ) {
+		$contents = $dblists[$listname];
+		foreach ( $contents as $dbname ) {
+			$indexByDbname[$dbname][] = $listname;
+		}
+	}
+	ksort( $indexByDbname );
+
+	$path = __DIR__ . '/../dblists-index.php';
+	wmfWriteStaticArrayFile(
+		'NOTE: Automatically generated from the /dblists directory' . "\n"
+			. 'Do not edit it directly, run "composer buildDBLists" instead.',
+		$path,
+		$indexByDbname
+	);
 }

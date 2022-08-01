@@ -149,33 +149,9 @@ function wmfGetOverrideSettings() {
 		// unless '+' is used on a later one in which case the values are merged.
 		'wgEventStreams' => [
 			'+wikipedia' => [
-				// See https://phabricator.wikimedia.org/T311268
 				'mediawiki.web_ui.interactions' => [
-					'schema_title' => 'analytics/mediawiki/client/metrics_event',
-					'destination_event_service' => 'eventgate-analytics-external',
-					'producers' => [
-						'metrics_platform_client' => [
-							'events' => [
-								'web.ui.',
-
-								// TODO: Change event name prefix to "web_ui" in the
-								// instrument
-								'web_ui.',
-							],
-							'provide_values' => [
-								'page_namespace',
-								'performer_is_logged_in',
-								'performer_session_id',
-								'performer_pageview_id',
-								'performer_edit_count_bucket',
-								'mediawiki_skin',
-							],
-							'curation' => [
-								'mediawiki_skin' => [
-									'in' => [ 'minerva', 'vector', 'vector-2022' ],
-								],
-							],
-						],
+					'sample' => [
+						'rate' => 1,
 					],
 				],
 			],
@@ -571,11 +547,6 @@ function wmfGetOverrideSettings() {
 				'logged_out' => true,
 			],
 		],
-		'wgVectorTableOfContents' => [
-			'default' => [
-				'default' => true,
-			],
-		],
 		'wgVectorWebABTestEnrollment' => [
 			'default' => [
 				'name' => 'vector.sticky_header_edit',
@@ -592,10 +563,6 @@ function wmfGetOverrideSettings() {
 					],
 				]
 			]
-		],
-
-		'wgVectorGrid' => [
-			'default' => true
 		],
 
 		'wmgCommonsMetadataForceRecalculate' => [
@@ -1669,7 +1636,15 @@ function wmfGetOverrideSettings() {
 				'Q98649' => 'wb-badge-notproofread', // T97014 - Wikisource badges
 				'Q98650' => 'wb-badge-problematic',
 				'Q98658' => 'wb-badge-proofread',
-				'Q98651' => 'wb-badge-validated'
+				'Q98651' => 'wb-badge-validated',
+				'Q612803' => 'wb-badge-redirect-sitelink', // T313896
+				'Q612804' => 'wb-badge-redirect-intentional-sitelink', // T313896
+			],
+		],
+		'wmgWikibaseRepoRedirectBadgeItems' => [
+			'wikidatawiki' => [
+				'Q612803', // T313896
+				'Q612804', // T313896
 			],
 		],
 		'wmgWikibaseClientBadgeClassNames' => [
@@ -2307,6 +2282,10 @@ function wmfGetOverrideSettings() {
 		],
 
 		'-wgDiscussionTools_visualenhancements' => [
+			'default' => 'default',
+		],
+
+		'-wgDiscussionTools_visualenhancements_reply' => [
 			'default' => 'default',
 		],
 

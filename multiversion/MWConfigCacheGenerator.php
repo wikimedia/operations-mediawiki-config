@@ -13,7 +13,7 @@ require_once __DIR__ . '/MWMultiVersion.php';
 class MWConfigCacheGenerator {
 
 	/**
-	 * Create a MultiVersion config object for a wiki
+	 * Compute the config globals.
 	 *
 	 * @param string $dbName The wiki's database name, e.g. 'enwiki' or 'zh_min_nanwikisource'
 	 * @param SiteConfiguration $siteConfiguration The global MultiVersion wgConf object
@@ -51,11 +51,6 @@ class MWConfigCacheGenerator {
 	 * @return array The wiki's config array
 	 */
 	public static function getCachableMWConfig( $wikiDBname, $config, $realm = 'production' ) {
-		if ( $realm === 'labs' ) {
-			require_once __DIR__ . "../../wmf-config/InitialiseSettings-labs.php";
-			$config = self::applyOverrides( $config );
-		}
-
 		$conf = new SiteConfiguration();
 		$conf->suffixes = MWMultiVersion::SUFFIXES;
 		$conf->settings = $config;
@@ -231,49 +226,14 @@ class MWConfigCacheGenerator {
 		string $realm,
 		string $cacheDir
 	): array {
-		global $IP;
+		// Populate SiteConfiguration object
+		wmfLoadInitialiseSettings( $siteConfiguration );
 
-		// Try configuration cache
-		$confCacheFileName = "conf2-$dbname.json";
-		$confActualMtime = max(
-			filemtime( dirname( __DIR__ ) . '/wmf-config/InitialiseSettings.php' ),
-			filemtime( dirname( __DIR__ ) . '/wmf-config/logos.php' ),
-			filemtime( "$IP/includes/Defines.php" )
+		return self::getMWConfigForCacheing(
+			$dbname,
+			$siteConfiguration,
+			$realm
 		);
-		$globals = self::readFromStaticCache(
-			$cacheDir . '/' . $confCacheFileName,
-			$confActualMtime
-		);
-
-		if ( !$globals ) {
-			// Populate SiteConfiguration object
-			wmfLoadInitialiseSettings( $siteConfiguration );
-
-			$globals = self::getMWConfigForCacheing(
-				$dbname,
-				$siteConfiguration,
-				$realm
-			);
-
-			$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals ];
-
-			// Save cache if the grace period expired. We define the grace period as the opcache
-			// revalidation frequency, in order to ensure we don't incur in race conditions
-			// when saving the values. See T236104
-			$revalidateFreq = intval( ini_get( 'opcache.revalidate_freq' ) );
-			if ( $revalidateFreq === 0 ) {
-				// opcache revalidation is disabled, so allow some time for php-fpm restart
-				// to complete (T311788)
-				$revalidateFreq = 10;
-			}
-			$minTime = $confActualMtime + $revalidateFreq;
-			if ( time() > $minTime ) {
-				self::writeToStaticCache(
-					$cacheDir, $confCacheFileName, $confCacheObject
-				);
-			}
-		}
-		return $globals;
 	}
 
 	/**

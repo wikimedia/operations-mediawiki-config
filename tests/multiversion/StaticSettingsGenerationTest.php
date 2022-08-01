@@ -1,10 +1,10 @@
 <?php
 
+/**
+ * @covers \Wikimedia\MWConfig\MWConfigCacheGenerator
+ */
 class StaticSettingsGenerationTest extends PHPUnit\Framework\TestCase {
 
-	/**
-	 * @covers \Wikimedia\MWConfig\MWConfigCacheGenerator::getCachableMWConfig
-	 */
 	public function testInheritance() {
 		$inputSettings = [
 			'wgLanguageCode' =>
@@ -36,13 +36,16 @@ class StaticSettingsGenerationTest extends PHPUnit\Framework\TestCase {
 				'enwiki' => 'boom_value_enwiki',
 			],
 		];
+		$conf = new SiteConfiguration();
+		$conf->suffixes = MWMultiVersion::SUFFIXES;
+		$conf->settings = $inputSettings;
 
-		$calculatedSettings_enwiki = Wikimedia\MWConfig\MWConfigCacheGenerator::getCachableMWConfig(
-			'enwiki', $inputSettings, 'production'
+		$calculatedSettings_enwiki = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
+			'enwiki', $conf, 'production'
 		);
 
-		$calculatedSettings_frwikt = Wikimedia\MWConfig\MWConfigCacheGenerator::getCachableMWConfig(
-			'frwiktionary', $inputSettings, 'production'
+		$calculatedSettings_frwikt = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
+			'frwiktionary', $conf, 'production'
 		);
 
 		$this->assertEquals(

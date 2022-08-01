@@ -905,9 +905,9 @@ return [
 		'height' => 18,
 	],
 	'newiki' => [
-		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-hi.svg',
-		'width' => 78,
-		'height' => 18,
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ne.svg',
+		'width' => 113,
+		'height' => 25,
 	],
 	'papwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
@@ -4040,6 +4040,10 @@ return [
 		'Portal' => 100,
 		'Portal_talk' => 101,
 	],
+	'mnwwiktionary' => [
+		'အဆက်လက္ကရဴ' => 100, // T314023
+		'အဆက်လက္ကရဴ_ဓရီုကျာ' => 101, // T314023
+	],
 	'+mrwiki' => [
 		'विपी' => NS_PROJECT,
 	],
@@ -5420,7 +5424,6 @@ return [
 'wmgDefaultMonologHandler' => [
 	'default' => 'blackhole',
 	'testwiki' => 'wgDebugLogFile',
-	'test2wiki' => 'wgDebugLogFile',
 ],
 
 # wmgMonologChannels @{
@@ -5569,7 +5572,6 @@ return [
 		'VisualEditor' => 'debug',
 		'wfLogDBError' => 'debug', // Former $wgDBerrorLog
 		'Wikibase' => [ 'udp2log' => 'info', 'logstash' => 'warning', 'sample' => false, ],
-		'WikibaseTerms' => [ 'logstash' => 'debug', 'udp2log' => 'debug' ], // T311307
 		'WikibaseQualityConstraints' => 'debug',
 		'WikimediaEvents' => 'error', // For T205754 & T208233
 		'WikitechGerritBan' => 'debug',
@@ -7126,6 +7128,10 @@ return [
 		100 => 'Rakibolana', # Portal
 		101 => "Dinika_amin'ny_rakibolana",
 	],
+	'mnwwiktionary' => [
+		100 => 'Appendix', // T314023
+		101 => 'Appendix_talk', // T314023
+	],
 	'mrwiktionary' => [
 		104 => 'सूची',
 		105 => 'सूची_चर्चा',
@@ -7948,17 +7954,8 @@ return [
 	],
 ],
 
-// T310054
-'wgVectorTitleAboveTabs' => [
-	'default' => true,
-],
-
 'wgVectorGrid' => [
-	'default' => false,
-	// T312241
-	'group0' => true,
-	'group1' => true,
-	'group2' => false,
+	'default' => true,
 ],
 
 // Skin versions are strings not numbers. See skins/Vector/skin.json.
@@ -8131,11 +8128,6 @@ return [
 	'default' => [ // T300559
 		'logged_in' => true,
 		'logged_out' => true,
-	],
-],
-'wgVectorTableOfContents' => [
-	'default' => [
-		'default' => true
 	],
 ],
 'wgVectorWvuiSearchOptions' => [
@@ -10803,16 +10795,19 @@ return [
 		'autoconfirmed' => [
 			'patrol' => true,
 			'abusefilter-log-detail' => true,
+			'move' => false, // T313802
 		],
 		'bot' => [
 			'editautoreviewprotected' => true,
 			'extendedconfirmed' => true, // T281926
+			'move' => true, // T313802
 		],
 		'autoreviewer' => [
 			'autopatrol' => true,
 			'editautoreviewprotected' => true,
 			'movefile' => true, // T161532
 			'extendedconfirmed' => true, // T292912
+			'move' => true, // T313802
 		],
 		'eliminator' => [
 			'browsearchive' => true,
@@ -10849,8 +10844,14 @@ return [
 			'editsitejson' => true,
 		],
 		'flood' => [ 'bot' => true, ], // T228521
-		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T281860
-		'autoextendedconfirmed' => [ 'extendedconfirmed' => true ], // T292915
+		'extendedconfirmed' => [
+			'extendedconfirmed' => true, // T281860
+			'move' => true, // T313802
+		],
+		'autoextendedconfirmed' => [
+			'extendedconfirmed' => true, // T292915
+			'move' => true, // T313802
+		],
 	],
 	'+ptwikinews' => [
 		'editprotected' => [
@@ -10990,7 +10991,10 @@ return [
 		'autopatrolled' => [ 'autopatrol' => true ], // T48915
 		'rollbacker' => [ 'rollback' => true ], // T116143
 		'patroller' => [ 'patrol' => true ], // T116143
-		'filemover' => [ 'movefile' => true ], // T116143
+		'filemover' => [
+			'movefile' => true, // T116143
+			'suppressredirect' => true, // T313614
+		],
 	],
 	'+ruwiktionary' => [
 		'rollbacker' => [ 'rollback' => true ], // T183655
@@ -14888,6 +14892,7 @@ return [
 	],
 	'itwiki' => [
 		NS_USER => 'noindex,follow', // T107992
+		NS_USER_TALK => 'noindex,follow', // T314165
 		118 => 'noindex,nofollow', // T280289
 		119 => 'noindex,nofollow', // T280289
 	],
@@ -15190,7 +15195,7 @@ return [
 	'enwiki' => [ 118, 119 ], // draft and draft talk
 	'fawiki' => [ 118, 119 ], // draft and draft talk - T299850
 	'hewiki' => [ 118, 119 ], // draft and draft talk - T86329
-	'itwiki' => [ 118, 119 ], // draft and draft talk - T280289
+	'itwiki' => [ 2, 3, 118, 119 ], // user and user talk - T314165, draft and draft talk - T280289
 	'kowiki' => [ 118, 119 ], // draft and draft talk - T92798
 	'thwiki' => [ 118, 119 ], // draft and draft talk - T252959
 	'zhwiki' => [ 2, 3, 118, 119 ], // user and user talk - T288947, draft and draft talk - T91223
@@ -16773,6 +16778,7 @@ return [
 	'srwikiquote' => 'any', // T172974
 	'tawiktionary' => 'any', // T241684
 	'trwikisource' => 'any', // T248747
+	'viwikibooks' => 'any', // T314239
 	'wikidatawiki' => 'any', // T144687
 	'zhwikinews' => 'any', // T53604
 	'zhwikiversity' => 'any', // T214946
@@ -17774,6 +17780,8 @@ return [
 
 'wmgVisualEditorAllowExternalLinkPaste' => [
 	'default' => false,
+	'mediawikiwiki' => true, // T129546#8109242
+	'metawiki' => true, // T129546#8109242
 	'officewiki' => true,
 ],
 
@@ -18235,6 +18243,7 @@ return [
 	'orwiki' => true, // T33172
 	'pawiki' => true, // T178919
 	'ptwiki' => true, // T33178
+	'ptwikinews' => true, // T313173
 	'sawiki' => true, // T192212
 	'sewikimedia' => true, // T32491
 	'siwiki' => true, // T35485
@@ -20501,6 +20510,11 @@ return [
 	'mediawikiwiki' => 'available', // T310960
 ],
 
+'wgDiscussionTools_visualenhancements_reply' => [
+	'default' => 'unavailable',
+	'mediawikiwiki' => 'available', // T314076
+],
+
 'wgDTSchemaEditAttemptStepSamplingRate' => [
 	'default' => 0,
 ],
@@ -20997,6 +21011,7 @@ return [
 	'trwiki' => true, // T304853
 	'tswiki' => true, // T304828
 	'urwiki' => true, // T304828
+	'uzwiki' => true, // T310116
 	'wowiki' => true, // T309384
 	'yowiki' => true, // T290175
 	'zuwiki' => true, // T304834
@@ -21004,8 +21019,8 @@ return [
 
 'wgSectionTranslationTargetLanguages' => [
 	'default' => null,
-	'wikipedia' => [ 'as', 'ast', 'ay', 'az', 'ba', 'bcl', 'bn', 'ckb', 'cs', 'el', 'eu', 'fa', 'gu', 'ha', 'he', 'ig', 'ilo', 'is', 'jv', 'kg', 'kn', 'ko', 'ku', 'lg', 'ln', 'mk', 'ml', 'mn', 'mr', 'ms', 'ne', 'nso', 'oc', 'om', 'pa', 'sq', 'sr', 'ss', 'sw', 'ta', 'te', 'th', 'tl', 'tn', 'tr', 'ts', 'ur', 'wo', 'yo', 'zu' ],
-	'testwiki' => [ 'af', 'ar', 'as', 'ast', 'ay', 'az', 'ba', 'bcl', 'bn', 'ca', 'ckb', 'cs', 'cy', 'el', 'eo', 'es', 'et', 'eu', 'fa', 'fr', 'gl', 'gu', 'ha', 'he', 'hi', 'ht', 'hy', 'id', 'ig', 'ilo', 'is', 'jv', 'kg', 'ki', 'kn', 'ko', 'ku', 'lg', 'ln', 'lt', 'mk', 'ml', 'mn', 'mr', 'ms', 'mt', 'my', 'ne', 'nso', 'oc', 'om', 'pa', 'pt', 'ru', 'sl', 'sq', 'sr', 'ss', 'su', 'sw', 'ta', 'te', 'th', 'tl', 'tn', 'tr', 'ts', 'uk', 'ur', 'uz', 'vi', 'wo', 'yo', 'zh', 'zh-yue', 'zu' ],
+	'wikipedia' => [ 'as', 'ast', 'ay', 'az', 'ba', 'bcl', 'bn', 'ckb', 'cs', 'el', 'eu', 'fa', 'gu', 'ha', 'he', 'ig', 'ilo', 'is', 'jv', 'kg', 'kn', 'ko', 'ku', 'lg', 'ln', 'mk', 'ml', 'mn', 'mr', 'ms', 'ne', 'nso', 'oc', 'om', 'pa', 'sq', 'sr', 'ss', 'sw', 'ta', 'te', 'th', 'tl', 'tn', 'tr', 'ts', 'ur', 'uz', 'wo', 'yo', 'zu' ],
+	'testwiki' => [ 'af', 'am', 'ar', 'as', 'ast', 'ay', 'az', 'ba', 'bcl', 'bn', 'bs', 'ca', 'ceb', 'ckb', 'cs', 'cy', 'el', 'eo', 'es', 'et', 'eu', 'fa', 'fr', 'gl', 'gu', 'ha', 'he', 'hi', 'ht', 'hy', 'id', 'ig', 'ilo', 'is', 'jv', 'kg', 'ki', 'km', 'kn', 'ko', 'ku', 'lg', 'ln', 'lt', 'lv', 'mk', 'ml', 'mn', 'mr', 'ms', 'mt', 'my', 'ne', 'nso', 'oc', 'om', 'or', 'pa', 'pt', 'ru', 'si', 'sl', 'so', 'sq', 'sr', 'ss', 'su', 'sw', 'ta', 'te', 'th', 'tl', 'tn', 'tr', 'ts', 'uk', 'ur', 'uz', 'vi', 'wo', 'yo', 'zh', 'zh-yue', 'zu' ],
 ],
 
 'wgContentTranslationContentImportForSectionTranslation' => [
@@ -21888,6 +21903,10 @@ return [
 		'android.breadcrumbs_event' => [
 			'schema_title' => 'analytics/mobile_apps/android_breadcrumbs_event',
 			'destination_event_service' => 'eventgate-analytics-external',
+			'sample' => [
+				'unit' => 'device',
+				'rate' => 0.5,
+			],
 		],
 		'mediawiki.mediasearch_interaction' => [
 			'schema_title' => 'analytics/mediawiki/mediasearch_interaction',
@@ -21958,6 +21977,51 @@ return [
 			'schema_title' => 'analytics/mwcli/command_execute',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+
+		// See https://phabricator.wikimedia.org/T311268
+		'mediawiki.web_ui.interactions' => [
+			'schema_title' => 'analytics/mediawiki/client/metrics_event',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'events' => [
+						'web.ui.',
+
+						// TODO: Change event name prefix to "web_ui" in the
+						// instrument
+						'web_ui.',
+					],
+					'provide_values' => [
+						'page_namespace',
+						'performer_is_logged_in',
+						'performer_session_id',
+						'performer_pageview_id',
+						'performer_edit_count_bucket',
+						'mediawiki_skin',
+					],
+					'curation' => [
+						'mediawiki_skin' => [
+							'in' => [ 'minerva', 'vector', 'vector-2022' ],
+						],
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'pageview',
+				'rate' => 0,
+			],
+		],
+
+		// Wikistories streams
+		'mediawiki.wikistories_consumption_event' => [
+			'schema_title' => 'analytics/mediawiki/wikistories_consumption_event',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'mediawiki.wikistories_contribution_event' => [
+			'schema_title' => 'analytics/mediawiki/wikistories_contribution_event',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+
 		/*
 		 * == eventgate-logging-external streams ==
 		 * These are produced to the Kafka logging clusters for ingestion into logstash.
@@ -22245,6 +22309,13 @@ return [
 			'canary_events_enabled' => false,
 		],
 	],
+	'+testwiki' => [
+		'mediawiki.web_ui.interactions' => [
+			'sample' => [
+				'rate' => 1,
+			],
+		],
+	],
 ],
 
 // List of streams to register for use with the EventLogging extension.
@@ -22322,6 +22393,11 @@ return [
 		'mediawiki.mentor_dashboard.visit',
 		'mediawiki.ipinfo_interaction',
 		'mediawiki.editgrowthconfig',
+		'mediawiki.wikistories_consumption_event',
+		'mediawiki.wikistories_contribution_event',
+	],
+	'+testwiki' => [
+		'mediawiki.web_ui.interactions',
 	],
 ],
 
@@ -23797,6 +23873,8 @@ return [
 	]
 ],
 
+// Wikidata search: configure boost based on language "attributes" for the wbsearchentities "language" profile
+// Note that only the max score is kept and thus is not suited for negative boosts
 'wmgWBCSLanguageSelectorStatementBoost' => [
 	'default' => [],
 	'wikidatawiki' => [
@@ -23808,18 +23886,6 @@ return [
 		'P31=Q45762' => 50,
 		// Q33384=dialect
 		'P31=Q33384' => 50,
-		// Q4167410=Wikimedia disambiguation page
-		'P31=Q4167410' => -10,
-		// T183510:
-		// Q13442814=scientific article
-		'P31=Q13442814' => -5,
-		// Q18918145=academic journal article
-		'P31=Q18918145' => -5,
-	],
-	'testwikidatawiki' => [
-		// not necessarily meaningful, for testing only
-		// Q15561=Wikimedia disambiguation page
-		'P7=Q15561' => -10,
 	],
 ],
 
@@ -23828,6 +23894,11 @@ return [
 // EntitySearchElastic::CONTEXT_WIKIBASE_PREFIX = 'wikibase_prefix_search'
 'wmgWikibaseSearchProfiles' => [
 	'default' => null,
+	'wikidatawiki' => [
+		'default' => null,
+		// \Wikibase\Search\Elastic\Hooks::LANGUAGE_SELECTOR_PREFIX
+		'language' => 'language_selector_prefix',
+	],
 	'testwikidatawiki' => [
 		'default' => null,
 		// \Wikibase\Search\Elastic\Hooks::LANGUAGE_SELECTOR_PREFIX
@@ -24933,6 +25004,7 @@ return [
 	'ptwiki' => [ 'content' => 7, 'general' => 5, 'titlesuggest' => 2, 'archive' => 1 ],
 	'rowiki' => [ 'content' => 3, 'general' => 2, 'titlesuggest' => 1, 'archive' => 1 ],
 	'ruwiki' => [ 'content' => 7, 'general' => 8, 'titlesuggest' => 3, 'archive' => 1 ],
+	'ruwikinews' => [ 'content' => 4, 'general' => 4, 'titlesuggest' => 1, 'archive' => 1 ],
 	'ruwikisource' => [ 'content' => 4, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
 	'ruwiktionary' => [ 'content' => 3, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
 	'shwiki' => [ 'content' => 4, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
@@ -25132,7 +25204,7 @@ return [
 // wgCirrusSearchRecycleCompletionSuggesterIndex @{
 // Recycle suggester indices for small wikis (less than 100MB store size)
 'wgCirrusSearchRecycleCompletionSuggesterIndex' => [
-	'default' => false,
+	'default' => true,
 	'enwiki' => false,
 	'svwiki' => false,
 	'enwiktionary' => false,
@@ -25793,11 +25865,15 @@ return [
 	'wikitech' => 'memcached-pecl',
 ],
 'wgCentralAuthSessionCacheType' => [
-	'default' => 'redis_local',  // declared in redis.php
+	'default' => 'kask-session',
 	'wikitech' => 'memcached-pecl',
 ],
 'wgMWOAuthSessionCacheType' => [
-	'default' => 'redis_local',  // declared in redis.php
+	'default' => 'db-mainstash',
+	'wikitech' => 'memcached-pecl',
+],
+'wgMWOAuthNonceCacheType' => [
+	'default' => 'mcrouter',
 	'wikitech' => 'memcached-pecl',
 ],
 'wgMainStash' => [
@@ -25811,10 +25887,6 @@ return [
 'wgStatsCacheType' => [
 	'default' => 'mcrouter-primary-dc',
 	'wikitech' => 'memcached-pecl',
-],
-
-'wgAbuseFilterProfilerCache' => [
-	'default' => 'redis_local', // not using mainstash due to high traffic
 ],
 
 'wmgFileExtensions' => [
@@ -26551,6 +26623,8 @@ return [
 	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
 	'enwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 	'commonswiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	'testwiki' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
+	'itwikisource' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 ],
 
 // T280944

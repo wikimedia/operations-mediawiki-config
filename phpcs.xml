@@ -1,18 +1,13 @@
 <?xml version="1.0"?>
 <ruleset>
 	<rule ref="vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
-		<exclude name="MediaWiki.Usage.SuperGlobalsUsage.SuperGlobals" />
+		<exclude name="Generic.Files.LineLength.TooLong" />
+		<exclude name="Generic.PHP.NoSilencedErrors.Discouraged" />
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingDocumentationPublic" />
+		<exclude name="MediaWiki.Usage.SuperGlobalsUsage.SuperGlobals" />
 	</rule>
-	<file>.</file>
-	<arg name="bootstrap" value="./vendor/mediawiki/mediawiki-codesniffer/utils/bootstrap-ci.php"/>
-	<arg name="encoding" value="utf8"/>
-	<arg name="extensions" value="php,php5,inc,sample"/>
-	<rule ref="Generic.Files.LineLength.TooLong">
-		<severity>0</severity>
-	</rule>
-	<rule ref="Generic.PHP.NoSilencedErrors.Discouraged">
-		<severity>0</severity>
+	<rule ref="MediaWiki.Commenting.PropertyDocumentation.MissingDocumentationPrivate">
+		<exclude-pattern>tests/</exclude-pattern>
 	</rule>
 	<rule ref="MediaWiki.NamingConventions.ValidGlobalName">
 		<properties>
@@ -26,9 +21,14 @@
 		</properties>
 	</rule>
 
+	<file>.</file>
+	<arg name="encoding" value="utf8"/>
+	<arg name="extensions" value="php"/>
+	<arg name="bootstrap" value="./vendor/mediawiki/mediawiki-codesniffer/utils/bootstrap-ci.php"/>
 	<exclude-pattern>\.git/</exclude-pattern>
 	<exclude-pattern>vendor/</exclude-pattern>
-	<exclude-pattern>*/portals/*</exclude-pattern>
+	<exclude-pattern>portals/</exclude-pattern>
 	<!-- Auto generated files -->
+	<exclude-pattern>dblists-index\.php</exclude-pattern>
 	<exclude-pattern>wmf-config/interwiki\.php</exclude-pattern>
 </ruleset>

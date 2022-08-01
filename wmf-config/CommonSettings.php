@@ -207,7 +207,7 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 }
 
 $wmgUdp2logDest = $wmgLocalServices['udp2log'];
-if ( $wgDBname === 'testwiki' || $wgDBname === 'test2wiki' ) {
+if ( $wgDBname === 'testwiki' ) {
 	$wgDebugLogFile = "udp://{$wmgUdp2logDest}/testwiki";
 } else {
 	$wgDebugLogFile = '/dev/null';
@@ -454,6 +454,9 @@ $wgEnotifWatchlist = true;
 // Keep this true; it's just whether the feature is available at all, not the default
 // setting. T142727
 $wgEnotifMinorEdits = true;
+
+// Use the same expiry for core sessions as for CentralAuth sessions (T313496)
+$wgObjectCacheSessionExpiry = 86400;
 
 # ######################################################################
 # Anti-abuse settings
@@ -2877,6 +2880,8 @@ if ( $wmgUseMath ) {
 	// This variable points to non-WMF servers by default.
 	// Prevent accidental use.
 	$wgMathLaTeXMLUrl = null;
+	// Create LateXML database table before enabling LaTeXML T309686
+	$wgMathValidModes = [ 'png', 'source', 'mathml' ];
 	$wgMathMathMLUrl = $wmgLocalServices['mathoid'];
 	// Increase the number of concurrent connections made to RESTBase
 	$wgMathConcurrentReqs = 150;

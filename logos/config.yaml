@@ -2053,9 +2053,12 @@ Wikiquote:
 
     etwikiquote:
         commons: File:EE Vikitsitaadid logo.svg
-        comment: T302683
-        no_1_5x: true
-        no_2x: true
+        selected: etwikiquote-10k
+        variants:
+            etwikiquote-10k: File:Vikitsitaadid 10 000.svg
+        comment: T302683, T313698
+        comment_1_5x:  T313698
+        comment_2x:  T313698
 
     fawikiquote:
 
@@ -2816,9 +2819,10 @@ Wikisource:
         comment_2x:  T150618
 
     srwikisource:
-        comment:  T54019
-        comment_1_5x:  T172268
-        comment_2x:  T172268
+        commons:  File:Wikisource-logo-sr2.svg
+        comment:  T54019, T310961
+        comment_1_5x:  T172268, T310961
+        comment_2x:  T172268, T310961
 
     tawikisource:
         no_1_5x: true

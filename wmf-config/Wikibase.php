@@ -120,6 +120,9 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['specialSiteLinkGroups'] = $wmgWikibaseRepoSpecialSiteLinkGroups;
 	$wgWBRepoSettings['statementSections'] = $wmgWikibaseRepoStatementSections;
 	$wgWBRepoSettings['badgeItems'] = $wmgWikibaseRepoBadgeItems;
+	if ( isset( $wmgWikibaseRepoRedirectBadgeItems ) ) {
+		$wgWBRepoSettings['redirectBadgeItems'] = $wmgWikibaseRepoRedirectBadgeItems;
+	}
 	$wgWBRepoSettings['preferredGeoDataProperties'] = $wmgWBRepoPreferredGeoDataProperties;
 	$wgWBRepoSettings['preferredPageImagesProperties'] = $wmgWBRepoPreferredPageImagesProperties;
 	if ( isset( $wmgWikibaseRepoSandboxEntityIds ) ) {
