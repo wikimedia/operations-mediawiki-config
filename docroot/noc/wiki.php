@@ -16,26 +16,17 @@ require_once __DIR__ . '/../../multiversion/MWWikiversions.php';
 require_once __DIR__ . '/../../tests/data/MWDefines.php';
 require_once __DIR__ . '/../../tests/data/SiteConfiguration.php';
 
-// Based on MWConfigCacheGenerator::getConfigGlobals()
-// TODO: Remove below duplication, now that getConfigGlobals() is independent of CommonSettings.php.
-$wikis = MWWikiversions::readDbListFile( $wmgRealm === 'labs' ? 'all-labs' : 'all' );
-$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getStaticConfig();
-if ( $wmgRealm === 'labs' ) {
-	require_once __DIR__ . "/../../wmf-config/InitialiseSettings-$wmgRealm.php";
-	$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::applyOverrides( $settings );
-}
-
+// Based on $wgConf in CommonSettings.php
 $wgConf = new SiteConfiguration();
 $wgConf->suffixes = MWMultiVersion::SUFFIXES;
-$wgConf->wikis = $wikis;
-$wgConf->settings = $settings;
+$wgConf->wikis = $wikis = MWWikiversions::readDbListFile( $wmgRealm === 'labs' ? 'all-labs' : 'all' );
 
 $selected = $_GET['wiki'] ?? '';
 $selected = in_array( $selected, $wikis ) ? $selected : 'enwiki';
 $compare = $_GET['compare'] ?? '';
 $compare = in_array( $compare, $wikis ) ? $compare : null;
 
-$selectedGlobals = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
+$selectedGlobals = Wikimedia\MWConfig\MWConfigCacheGenerator::getConfigGlobals(
 	$selected,
 	$wgConf,
 	$wmgRealm
@@ -44,7 +35,7 @@ $selectedGlobals['* dblists'] = MWMultiVersion::getTagsForWiki( $selected, $wmgR
 wmfAssertNoPrivateSettings( $selectedGlobals );
 $isComparing = false;
 if ( $compare !== null ) {
-	$beforeGlobals = Wikimedia\MWConfig\MWConfigCacheGenerator::getMWConfigForCacheing(
+	$beforeGlobals = Wikimedia\MWConfig\MWConfigCacheGenerator::getConfigGlobals(
 		$compare,
 		$wgConf,
 		$wmgRealm
