@@ -225,14 +225,7 @@ class MWConfigCacheGenerator {
 		string $realm = 'production'
 	): array {
 		// Populate SiteConfiguration object
-		$settings = self::getStaticConfig();
-		if ( $realm !== 'production' ) {
-			// Override for Beta Cluster and other realms.
-			// Ref: InitialiseSettings-labs.php
-			require_once __DIR__ . "/../wmf-config/InitialiseSettings-$realm.php";
-			$settings = self::applyOverrides( $settings );
-		}
-		$siteConfiguration->settings = $settings;
+		$siteConfiguration->settings = self::getStaticConfig( $realm );
 
 		return self::getMWConfigForCacheing(
 			$dbname,
@@ -284,7 +277,7 @@ class MWConfigCacheGenerator {
 	 * @param array[] $settings wgConf-style settings array from IntialiseSettings.php
 	 * @return array
 	 */
-	public static function applyOverrides( array $settings ): array {
+	private static function applyOverrides( array $settings ): array {
 		$overrides = wmfGetOverrideSettings();
 		foreach ( $overrides as $key => $value ) {
 			if ( substr( $key, 0, 1 ) == '-' ) {
@@ -301,20 +294,28 @@ class MWConfigCacheGenerator {
 	}
 
 	/**
-	 * Return static configuration without overrides
+	 * Return static configuration
 	 *
+	 * @param string $realm Realm, e.g. 'production' or 'labs'
 	 * @return array
 	 */
-	public static function getStaticConfig(): array {
-		$configDir = __DIR__ . '/../wmf-config/';
+	public static function getStaticConfig( string $realm = 'production' ): array {
+		$configDir = __DIR__ . '/../wmf-config';
 		// Use of direct addition instead of for loop in array is
 		// intentional and done for performance reasons.
-		$config =
-			( require $configDir . 'logos.php' ) +
-			( require $configDir . 'InitialiseSettings.php' ) +
-			( require $configDir . 'ext-ORES.php' );
+		$settings =
+			( require $configDir . '/logos.php' ) +
+			( require $configDir . '/InitialiseSettings.php' ) +
+			( require $configDir . '/ext-ORES.php' );
 
-		return $config;
+		if ( $realm !== 'production' ) {
+			// Override for Beta Cluster and other realms.
+			// Ref: InitialiseSettings-labs.php
+			require_once $configDir . "/InitialiseSettings-$realm.php";
+			$settings = self::applyOverrides( $settings );
+		}
+
+		return $settings;
 	}
 
 }

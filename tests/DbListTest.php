@@ -145,7 +145,7 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 		$unusedDblists = array_flip( DBList::getDblistsUsedInSettings() );
 
 		$prodSettings = MWConfigCacheGenerator::getStaticConfig();
-		$labsSettings = MWConfigCacheGenerator::applyOverrides( $prodSettings );
+		$labsSettings = MWConfigCacheGenerator::getStaticConfig( 'labs' );
 
 		foreach ( $prodSettings as $settingName => $settingsArray ) {
 			foreach ( $settingsArray as $wiki => $settingValue ) {
