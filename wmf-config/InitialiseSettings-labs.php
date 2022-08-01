@@ -2285,6 +2285,10 @@ function wmfGetOverrideSettings() {
 			'default' => 'default',
 		],
 
+		'-wgDiscussionTools_visualenhancements_reply' => [
+			'default' => 'default',
+		],
+
 		'wgWatchlistExpiry' => [
 			'default' => true,
 		],

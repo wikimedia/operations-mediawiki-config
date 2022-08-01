@@ -20501,6 +20501,11 @@ return [
 	'mediawikiwiki' => 'available', // T310960
 ],
 
+'wgDiscussionTools_visualenhancements_reply' => [
+	'default' => 'unavailable',
+	'mediawikiwiki' => 'available', // T314076
+],
+
 'wgDTSchemaEditAttemptStepSamplingRate' => [
 	'default' => 0,
 ],
