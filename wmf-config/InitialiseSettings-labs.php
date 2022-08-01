@@ -28,8 +28,7 @@
 // phpcs:disable MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment
 
 /**
- * Get overrides for Beta Cluster settings. This is used by
- * wmfLoadInitialiseSettings() in CommonSettings.php.
+ * Get overrides for Beta Cluster settings. This is applied in MWConfigCacheGenerator.
  *
  * Keys that start with a hyphen will completely override the prodution settings
  * from InitializeSettings.php.

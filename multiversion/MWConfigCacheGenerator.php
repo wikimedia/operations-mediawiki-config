@@ -225,7 +225,14 @@ class MWConfigCacheGenerator {
 		string $realm = 'production'
 	): array {
 		// Populate SiteConfiguration object
-		wmfLoadInitialiseSettings( $siteConfiguration );
+		$settings = self::getStaticConfig();
+		if ( $realm !== 'production' ) {
+			// Override for Beta Cluster and other realms.
+			// Ref: InitialiseSettings-labs.php
+			require_once __DIR__ . "/../wmf-config/InitialiseSettings-$realm.php";
+			$settings = self::applyOverrides( $settings );
+		}
+		$siteConfiguration->settings = $settings;
 
 		return self::getMWConfigForCacheing(
 			$dbname,

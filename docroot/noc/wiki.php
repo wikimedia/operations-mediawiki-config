@@ -16,7 +16,8 @@ require_once __DIR__ . '/../../multiversion/MWWikiversions.php';
 require_once __DIR__ . '/../../tests/data/MWDefines.php';
 require_once __DIR__ . '/../../tests/data/SiteConfiguration.php';
 
-// Based on CommonSettings.php and wmfLoadInitialiseSettings()
+// Based on MWConfigCacheGenerator::getConfigGlobals()
+// TODO: Remove below duplication, now that getConfigGlobals() is independent of CommonSettings.php.
 $wikis = MWWikiversions::readDbListFile( $wmgRealm === 'labs' ? 'all-labs' : 'all' );
 $settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getStaticConfig();
 if ( $wmgRealm === 'labs' ) {
