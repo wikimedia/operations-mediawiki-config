@@ -224,9 +224,6 @@ class MWConfigCacheGenerator {
 		\SiteConfiguration $siteConfiguration,
 		string $realm = 'production'
 	): array {
-		// Populate SiteConfiguration object
-		$siteConfiguration->settings = self::getStaticConfig( $realm );
-
 		return self::getMWConfigForCacheing(
 			$dbname,
 			$siteConfiguration,
