@@ -45,6 +45,7 @@ use MediaWiki\Extension\ExtensionDistributor\Providers\GerritExtDistProvider;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\User\UserIdentity;
+use Wikimedia\MWConfig\MWConfigCacheGenerator;
 use Wikimedia\MWConfig\ServiceConfig;
 use Wikimedia\MWConfig\XWikimediaDebug;
 
@@ -216,6 +217,7 @@ if ( $wgDBname === 'testwiki' ) {
 $wgConf = new SiteConfiguration;
 $wgConf->suffixes = MWMultiVersion::SUFFIXES;
 $wgConf->wikis = MWWikiversions::readDbListFile( $wmgRealm === 'labs' ? 'all-labs' : 'all' );
+$wgConf->settings = MWConfigCacheGenerator::getStaticConfig( $wmgRealm );
 
 $wgLocalDatabases = $wgConf->getLocalDatabases();
 
@@ -271,7 +273,7 @@ $wgLocalVirtualHosts = [
 	'wikimania.wikimedia.org',
 ];
 
-$globals = Wikimedia\MWConfig\MWConfigCacheGenerator::getConfigGlobals(
+$globals = MWConfigCacheGenerator::getConfigGlobals(
 	$wgDBname,
 	$wgConf,
 	$wmgRealm

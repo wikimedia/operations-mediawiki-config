@@ -7,6 +7,8 @@
  * Then view <http://localhost:9412/>.
  */
 
+use Wikimedia\MWConfig\MWConfigCacheGenerator;
+
 // Verbose error reporting
 error_reporting( E_ALL );
 ini_set( 'display_errors', 1 );
@@ -20,13 +22,14 @@ require_once __DIR__ . '/../../tests/data/SiteConfiguration.php';
 $wgConf = new SiteConfiguration();
 $wgConf->suffixes = MWMultiVersion::SUFFIXES;
 $wgConf->wikis = $wikis = MWWikiversions::readDbListFile( $wmgRealm === 'labs' ? 'all-labs' : 'all' );
+$wgConf->settings = MWConfigCacheGenerator::getStaticConfig( $wmgRealm );
 
 $selected = $_GET['wiki'] ?? '';
 $selected = in_array( $selected, $wikis ) ? $selected : 'enwiki';
 $compare = $_GET['compare'] ?? '';
 $compare = in_array( $compare, $wikis ) ? $compare : null;
 
-$selectedGlobals = Wikimedia\MWConfig\MWConfigCacheGenerator::getConfigGlobals(
+$selectedGlobals = MWConfigCacheGenerator::getConfigGlobals(
 	$selected,
 	$wgConf,
 	$wmgRealm
@@ -35,7 +38,7 @@ $selectedGlobals['* dblists'] = MWMultiVersion::getTagsForWiki( $selected, $wmgR
 wmfAssertNoPrivateSettings( $selectedGlobals );
 $isComparing = false;
 if ( $compare !== null ) {
-	$beforeGlobals = Wikimedia\MWConfig\MWConfigCacheGenerator::getConfigGlobals(
+	$beforeGlobals = MWConfigCacheGenerator::getConfigGlobals(
 		$compare,
 		$wgConf,
 		$wmgRealm
