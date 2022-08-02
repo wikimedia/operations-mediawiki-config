@@ -78,10 +78,10 @@ abstract class WgConfTestCase extends PHPUnit\Framework\TestCase {
 	 *
 	 *     $wgLocaltimezone = $this->loadWgConf( 'production' )->settings['wgLocaltimezone'];
 	 *
-	 * @param string $wmgRealm Realm to use for example: 'labs' or 'production'
+	 * @param string $realm Realm to use for example: 'labs' or 'production'
 	 * @return SiteConfiguration
 	 */
-	final protected function loadWgConf( string $wmgRealm ): SiteConfiguration {
+	final protected function loadWgConf( string $realm = 'production' ): SiteConfiguration {
 		// Needed for InitialiseSettings.php
 		$this->setGlobals( [
 			'wmgUdp2logDest' => 'localhost',
@@ -98,15 +98,15 @@ abstract class WgConfTestCase extends PHPUnit\Framework\TestCase {
 		] );
 		require __DIR__ . '/data/TestServices.php';
 
-		$configuration = new SiteConfiguration();
-		$configuration->suffixes = MWMultiVersion::SUFFIXES;
-		$configuration->wikis = MWWikiversions::readDbListFile( $wmgRealm === 'labs' ? 'all-labs' : 'all' );
-		$configuration->settings = MWConfigCacheGenerator::getStaticConfig();
+		$conf = new SiteConfiguration();
+		$conf->suffixes = MWMultiVersion::SUFFIXES;
+		$conf->wikis = MWWikiversions::readDbListFile( $realm === 'labs' ? 'all-labs' : 'all' );
+		$conf->settings = MWConfigCacheGenerator::getStaticConfig();
 
 		// Make sure globals are restored, else they will be serialized on each
 		// test run which slow the test run dramatically.
 		$this->restoreGlobals();
-		return $configuration;
+		return $conf;
 	}
 
 }

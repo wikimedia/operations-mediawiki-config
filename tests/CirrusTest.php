@@ -181,10 +181,7 @@ class CirrusTest extends WgConfTestCase {
 	}
 
 	public function provideUserTestingBuckets() {
-		// No need to check multiple wikis, or even a real wiki.
-		// When this was written convention is to use same config
-		// for all wikis, per-wiki usage is controlled by frontend.
-		$allConfig = $this->loadWgConf( 'unittest' );
+		$allConfig = $this->loadWgConf( 'production' );
 		$conf = $allConfig->settings['wgCirrusSearchUserTesting']['default'];
 		$tests = [];
 		foreach ( $conf as $name => $testConfig ) {
@@ -222,7 +219,7 @@ class CirrusTest extends WgConfTestCase {
 	}
 
 	public function providePerClusterShardsAndReplicas() {
-		$allConfig = $this->loadWgConf( 'unittest' );
+		$allConfig = $this->loadWgConf( 'production' );
 		$shards = $allConfig->settings['wmgCirrusSearchShardCount'];
 		$replicas = $allConfig->settings['wgCirrusSearchReplicas'];
 		$maxShardPerNode = $allConfig->settings['wgCirrusSearchMaxShardsPerNode'];
