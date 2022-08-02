@@ -26563,6 +26563,9 @@ return [
 // T233004
 'wgCheckUserActorMigrationStage' => [
 	'default' => SCHEMA_COMPAT_OLD,
+	'testwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	'test2wiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	'testwikidatawiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 ],
 'wgCheckUserLogActorMigrationStage' => [
 	'default' => SCHEMA_COMPAT_OLD,
