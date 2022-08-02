@@ -235,37 +235,6 @@ class MWConfigCacheGenerator {
 	}
 
 	/**
-	 * Read a static cached MultiVersion object from disc
-	 *
-	 * @param string $confCacheFile The full filepath for the wiki's cached config object
-	 * @param string $confActualMtime The expected mtime for the cached config object
-	 * @return array|null The wiki's config array, or null if not yet cached or stale
-	 */
-	public static function readFromStaticCache( $confCacheFile, $confActualMtime ) {
-		// Ignore file warnings (file may be inaccessible, or deleted in a race)
-		$cacheRecord = @file_get_contents( $confCacheFile );
-
-		if ( $cacheRecord !== false ) {
-			// TODO: Use JSON_THROW_ON_ERROR with a try/catch once production is running PHP 7.3.
-			// `true` means to decode as an associative array
-			$staticCacheObject = json_decode( $cacheRecord, true );
-
-			if ( json_last_error() === JSON_ERROR_NONE ) {
-				// Ignore non-array and array offset warnings (file may be in an older format)
-				if ( ( $staticCacheObject['mtime'] ?? null ) === $confActualMtime ) {
-					return $staticCacheObject['globals'];
-				}
-			} else {
-				// Something went wrong; raise an error
-				trigger_error( "Config cache failure: Static decoding failed", E_USER_ERROR );
-			}
-		}
-
-		// Reached if the file doesn't exist yet, can't be read, was out of date, or was corrupt.
-		return null;
-	}
-
-	/**
 	 * Override or add site settings as needed for non-production realms.
 	 *
 	 * This depends on 'wmfGetOverrideSettings' having been declared by a
