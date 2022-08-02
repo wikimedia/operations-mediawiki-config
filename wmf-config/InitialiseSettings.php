@@ -20595,6 +20595,7 @@ return [
 	'default' => 99,
 	'aswiki' => 70,
 	'idwiki' => 70,
+	'hywiki' => 80, // T313208
 	'tewiki' => 70,
 	'viwiki' => 90, // T275121
 	'zhwiki' => 95, // T252786
