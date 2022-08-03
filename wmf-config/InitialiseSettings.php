@@ -904,7 +904,7 @@ return [
 		'width' => 78,
 		'height' => 18,
 	],
-	'newiki' => [
+	'newiki' => [ // T311700
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ne.svg',
 		'width' => 113,
 		'height' => 25,
@@ -978,6 +978,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-th.svg',
 		'width' => 103,
 		'height' => 27,
+	],
+	'tkwiki' => [ // T314435
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-tk.svg',
+		'width' => 148,
+		'height' => 20,
 	],
 	'trwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-tr.svg',
