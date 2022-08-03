@@ -328,7 +328,9 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 	public function testOnlyExistingWikis() {
 		$dblistNames = array_keys( DBList::getLists() );
 		$langs = file( __DIR__ . "/../langlist", FILE_IGNORE_NEW_LINES );
-		foreach ( $this->settings as $config ) {
+		$settings = $this->settings;
+		unset( $settings['@replaceableSettings'] );
+		foreach ( $settings as $config ) {
 			foreach ( $config as $db => $entry ) {
 				$dbNormalized = str_replace( "+", "", $db );
 				$this->assertTrue(

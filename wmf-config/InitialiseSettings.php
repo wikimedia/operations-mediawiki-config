@@ -36,6 +36,16 @@
 
 # ############### Basic settings ###############
 return [
+// All settings with $lang, $site, etc. for replacement during initialisation must be listed here
+'@replaceableSettings' => [
+	'wgLanguageCode',
+	'wgLocalInterwikis',
+	'wgUploadNavigationUrl',
+	'wgServer',
+	'wgCanonicalServer',
+	'wgUploadPath',
+	'wgNoticeProject',
+],
 // For live conversion of old revisions:
 'wgLegacyEncoding' => [
 	'default' => false,

@@ -147,6 +147,9 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 		$prodSettings = MWConfigCacheGenerator::getStaticConfig();
 		$labsSettings = MWConfigCacheGenerator::getStaticConfig( 'labs' );
 
+		unset( $prodSettings['@replaceableSettings'] );
+		unset( $labsSettings['@replaceableSettings'] );
+
 		foreach ( $prodSettings as $settingName => $settingsArray ) {
 			foreach ( $settingsArray as $wiki => $settingValue ) {
 				if ( $wiki[0] === '+' || $wiki[0] === '-' ) {
