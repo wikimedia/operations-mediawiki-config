@@ -547,6 +547,11 @@ $wgHooks['APIQuerySiteInfoGeneralInfo'][] = static function ( $module, &$data ) 
 
 $wgEmergencyContact = 'noc@wikipedia.org';
 
+# Default address gets rejected by some mail hosts.
+# This email is used for more than just sending password resets, also e.g. Echo notifications
+# and random contact forms.
+$wgPasswordSender = 'wiki@wikimedia.org';
+
 $wgShowIPinHeader = false;
 $wgRCMaxAge = 30 * 86400;
 
@@ -1485,7 +1490,7 @@ if ( $wmgUseContactPage ) {
 		include __DIR__ . '/MetaContactPages.php';
 		$wgContactConfig['stewards'] = [ // T98625
 			'RecipientUser' => 'Wikimedia Stewards',
-			'SenderEmail' => $wmgNotificationSender,
+			'SenderEmail' => $wgPasswordSender,
 			'RequireDetails' => true,
 			'IncludeIP' => true,
 			'AdditionalFields' => [
@@ -1556,9 +1561,6 @@ if ( $wmgUseScore ) {
 }
 
 $wgHiddenPrefs[] = 'realname';
-
-# Default address gets rejected by some mail hosts
-$wgPasswordSender = 'wiki@wikimedia.org';
 
 # e-mailing password based on e-mail address (T36386)
 $wgPasswordResetRoutes['email'] = true;
@@ -3166,11 +3168,6 @@ if ( $wmgUseEcho ) {
 	$wgEchoEnableEmailBatch = $wmgEchoEnableEmailBatch;
 	$wgEchoEmailFooterAddress = $wmgEchoEmailFooterAddress;
 	$wgEchoNotificationIcons['site']['url'] = $wmgEchoSiteNotificationIconUrl;
-
-	# Outgoing from and reply to address for Echo notifications extension
-	$wgNotificationSender = $wmgNotificationSender;
-	$wgNotificationSenderName = $wgSitename;
-	$wgNotificationReplyName = 'No Reply';
 
 	// Define the cluster database, false to use main database
 	$wgEchoCluster = $wmgEchoCluster;

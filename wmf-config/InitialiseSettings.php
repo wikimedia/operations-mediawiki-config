@@ -20126,11 +20126,6 @@ return [
 	'fishbowl' => false,
 	'nonglobal' => false,
 ],
-# from and reply to address when Echo sends email notifications
-'wmgNotificationSender' => [
-	'default' => 'wiki@wikimedia.org',
-	'enwiki' => 'no-reply-notifications@wikipedia.org',
-],
 
 // Use extension1 db for all wikis
 'wmgEchoCluster' => [

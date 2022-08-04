@@ -210,7 +210,7 @@ $wgContactConfig['affcomchapthorg'] = [
 $wgContactConfig['requestlicense'] = [
 	'RecipientUser' => 'Trademarks (WMF)',
 	// TODO: Replace with details submitted on form
-	'SenderEmail' => $wmgNotificationSender,
+	'SenderEmail' => $wgPasswordSender,
 	'SenderName' => 'Contact Page',
 	'RequireDetails' => true,
 	'IncludeIP' => false,
@@ -298,7 +298,7 @@ $wgContactConfig['movecomsignup'] = [
 
 $wgContactConfig['ombudscommission'] = [
 	'RecipientUser' => 'Ombuds commission',
-	'SenderEmail' => $wmgNotificationSender,
+	'SenderEmail' => $wgPasswordSender,
 	'RequireDetails' => true,
 	'IncludeIP' => false,
 	'AdditionalFields' => [
