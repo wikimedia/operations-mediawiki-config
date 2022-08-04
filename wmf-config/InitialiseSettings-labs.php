@@ -1057,10 +1057,6 @@ function wmfGetOverrideSettings() {
 			'default' => '/usr/share/GeoIP/GeoLite2-',
 		],
 
-		'wgMediaViewerNetworkPerformanceSamplingFactor' => [
-			'default' => 1,
-		],
-
 		'wgMediaViewerUseThumbnailGuessing' => [
 			'default' => false, // T69651
 		],
