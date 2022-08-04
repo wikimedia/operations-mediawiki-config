@@ -361,7 +361,7 @@ if ( $wmgUseEventBus ) {
 if ( $wmgUseStopForumSpam ) {
 	wfLoadExtension( 'StopForumSpam' );
 	$wgSFSIPListLocation = 'https://www.stopforumspam.com/downloads/listed_ip_90_ipv46_all.gz';
-	$wgSFSIPListLocationMD5 = 'https://www.stopforumspam.com/downloads/listed_ip_90_ipv46_all.gz.md5';
+	$wgSFSValidateIPListLocationMD5 = 'https://www.stopforumspam.com/downloads/listed_ip_90_ipv46_all.gz.md5';
 }
 
 if ( $wmgUseGrowthExperiments ) {
