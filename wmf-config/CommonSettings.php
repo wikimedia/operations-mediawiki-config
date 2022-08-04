@@ -4093,8 +4093,6 @@ if ( $wmgUseWikiLambda && $wmgRealm === 'labs' ) {
 	wfLoadExtension( 'WikiLambda' );
 
 	$wgWikiLambdaOrchestratorLocation = $wmgLocalServices['wikifunctions-orchestrator'];
-	$wgWikiLambdaEvaluatorLocation = "http://{$wmgLocalServices['wikifunctions-evaluator']}/1/v1/evaluate";
-	$wgWikiLambdaWikiAPILocation = 'https://wikifunctions.beta.wmflabs.org/w/api.php';
 }
 
 if ( $wmgUseWikistories ) {
