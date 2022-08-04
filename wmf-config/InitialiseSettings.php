@@ -25784,10 +25784,6 @@ return [
 	'lockeddown' => false,
 ],
 
-'wgLegacyJavaScriptGlobals' => [
-	'default' => false,
-],
-
 // Which licensing/copyright message overrides to use in the WikimediaMessages extension
 'wgWikimediaMessagesLicensing' => [
 	'default' => 'standard',

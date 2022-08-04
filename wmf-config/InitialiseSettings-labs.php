@@ -2272,10 +2272,6 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
-		'wgLegacyJavaScriptGlobals' => [
-			'default' => false,
-		],
-
 		'wmgUseDiscussionTools' => [
 			'default' => true,
 			'loginwiki' => false,
