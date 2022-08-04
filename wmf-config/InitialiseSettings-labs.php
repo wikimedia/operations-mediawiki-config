@@ -1393,10 +1393,6 @@ function wmfGetOverrideSettings() {
 			'default' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 		],
 
-		'-wgIncludejQueryMigrate' => [
-			'default' => false,
-		],
-
 		'wgOresUiEnabled' => [
 			'default' => true,
 			'wikidatawiki' => false,

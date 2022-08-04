@@ -26608,10 +26608,6 @@ return [
 	'itwikisource' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 ],
 
-// T280944
-'wgIncludejQueryMigrate' => [
-	'default' => false,
-],
 'wgXmlDumpSchemaVersion' => [
 	'default' => XML_DUMP_SCHEMA_VERSION_10,
 ],
