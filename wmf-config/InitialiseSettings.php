@@ -16072,11 +16072,6 @@ return [
 
 # @}
 
-'wgEnableMWSuggest' => [
-	'default' => true,
-	'private' => false,
-],
-
 'wgCookieHttpOnly' => [
 	'default' => true,
 ],
