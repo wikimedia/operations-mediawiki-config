@@ -20420,7 +20420,6 @@ return [
 	// Keep in sync with wgDiscussionTools_sourcemodetoolbar below
 	// T310392
 	'default' => 'available',
-	'dewiki' => 'default',
 	'fiwiki' => 'default',
 	'ruwiki' => 'default',
 ],
