@@ -41,8 +41,6 @@ $wgLDAPPasswordHash = [ 'labs' => 'clear' ];
 // Force strict mode. T218589
 // $wgLDAPMailPassword = [ 'labs' => true, 'invaliddomain' => true ];
 $wgLDAPPreferences = [ 'labs' => [ "email" => "mail" ] ];
-$wgLDAPUseFetchedUsername = [ 'labs' => true ];
-$wgLDAPLowerCaseUsernameScheme = [ 'labs' => false, 'invaliddomain' => false ];
 $wgLDAPLowerCaseUsername = [ 'labs' => false, 'invaliddomain' => false ];
 // Only enable UseLocal if you need to promote an LDAP user
 // $wgLDAPUseLocal = true;
