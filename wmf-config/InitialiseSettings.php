@@ -21924,6 +21924,41 @@ return [
 			'schema_title' => 'analytics/mwcli/command_execute',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+
+		// See https://phabricator.wikimedia.org/T311268
+		'mediawiki.web_ui.interactions' => [
+			'schema_title' => 'analytics/mediawiki/client/metrics_event',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'events' => [
+						'web.ui.',
+
+						// TODO: Change event name prefix to "web_ui" in the
+						// instrument
+						'web_ui.',
+					],
+					'provide_values' => [
+						'page_namespace',
+						'performer_is_logged_in',
+						'performer_session_id',
+						'performer_pageview_id',
+						'performer_edit_count_bucket',
+						'mediawiki_skin',
+					],
+					'curation' => [
+						'mediawiki_skin' => [
+							'in' => [ 'minerva', 'vector', 'vector-2022' ],
+						],
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'pageview',
+				'rate' => 0,
+			],
+		],
+
 		// Wikistories streams
 		'mediawiki.wikistories_consumption_event' => [
 			'schema_title' => 'analytics/mediawiki/wikistories_consumption_event',
@@ -21933,6 +21968,7 @@ return [
 			'schema_title' => 'analytics/mediawiki/wikistories_contribution_event',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+
 		/*
 		 * == eventgate-logging-external streams ==
 		 * These are produced to the Kafka logging clusters for ingestion into logstash.
@@ -22220,6 +22256,13 @@ return [
 			'canary_events_enabled' => false,
 		],
 	],
+	'+testwiki' => [
+		'mediawiki.web_ui.interactions' => [
+			'sample' => [
+				'rate' => 1,
+			],
+		],
+	],
 ],
 
 // List of streams to register for use with the EventLogging extension.
@@ -22299,6 +22342,9 @@ return [
 		'mediawiki.editgrowthconfig',
 		'mediawiki.wikistories_consumption_event',
 		'mediawiki.wikistories_contribution_event',
+	],
+	'+testwiki' => [
+		'mediawiki.web_ui.interactions',
 	],
 ],
 
