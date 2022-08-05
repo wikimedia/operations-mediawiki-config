@@ -27538,16 +27538,6 @@ return [
 	'trwiki' => true
 ],
 
-'wgGECampaignPattern' => [
-	'default' => null,
-	'testwiki' => '/^growth-advancement-test-2021$/',
-	'arwiki' => '/^growth-JOSA-jan2022$/',
-	'enwiki' => '/^growth-recurring-english-2021$|^growth-recurring-english-control-2021$|^growth-marketing-video$/',
-	'eswiki' => '/^growth-advancement-spanish-2021$|^social-latam-2022-A$/',
-	'itwiki' => '/^growth-advancement-spanish-2021$|^social-latam-2022-A$/',
-	'ptwiki' => '/^growth-advancement-brazil-2021$/'
-],
-
 'wgGECampaigns' => [
 	'default' => [],
 	'testwiki' => [

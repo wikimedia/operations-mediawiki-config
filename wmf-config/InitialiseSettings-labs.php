@@ -1559,10 +1559,6 @@ function wmfGetOverrideSettings() {
 			'enwiki' => true,
 			'arwiki' => true
 		],
-		'wgGECampaignPattern' => [
-			'enwiki' => '/^growth-|^social-latam-2022-A$/',
-			'eswiki' => '/^growth-|^social-latam-2022-A$/',
-		],
 		'wgGECampaigns' => [
 			'default' => [
 				'social-latam-2022' => [
