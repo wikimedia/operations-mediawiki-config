@@ -11382,6 +11382,9 @@ return [
 			'deletedhistory' => true,
 		], // T122710
 	],
+	'+trwikivoyage' => [
+		'rollbacker' => [ 'rollback' => true ], // T314678
+	],
 	'+ukwiki' => [
 		'patroller' => [
 			'patrol' => true,
@@ -13061,6 +13064,9 @@ return [
 		],
 		'bureaucrat' => [ 'interface-editor' ], // T41690
 	],
+	'+trwikivoyage' => [
+		'sysop' => [ 'rollbacker' ], // T314678
+	],
 	'+thwiki' => [
 		'sysop' => [
 			'uploader', // T216615
@@ -14138,6 +14144,9 @@ return [
 	'+trwiki' => [
 		'sysop' => [ 'patroller', 'massmessage-sender' ], // bureaucrat -> sysop, T40690, T147740
 		'bureaucrat' => [ 'interface-editor' ], // T41690
+	],
+	'+trwikivoyage' => [
+		'sysop' => [ 'rollbacker' ], // T314678
 	],
 	'+thwiki' => [
 		'sysop' => [ 'uploader', 'patroller' ], // T216615, T272149
