@@ -26534,10 +26534,14 @@ return [
 
 // T233004
 'wgCheckUserActorMigrationStage' => [
-	'default' => SCHEMA_COMPAT_OLD,
-	'testwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'test2wiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'testwikidatawiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+
+	// s4
+	'commonswiki' => SCHEMA_COMPAT_OLD,
+	'testcommonswiki' => SCHEMA_COMPAT_OLD,
+
+	// s8
+	'wikidatawiki' => SCHEMA_COMPAT_OLD,
 ],
 'wgCheckUserLogActorMigrationStage' => [
 	'default' => SCHEMA_COMPAT_OLD,
