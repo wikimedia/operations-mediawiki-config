@@ -21,8 +21,8 @@ require_once __DIR__ . '/../../tests/data/SiteConfiguration.php';
 // Based on $wgConf in CommonSettings.php
 $wgConf = new SiteConfiguration();
 $wgConf->suffixes = MWMultiVersion::SUFFIXES;
-$wgConf->wikis = $wikis = MWWikiversions::readDbListFile( $wmgRealm === 'labs' ? 'all-labs' : 'all' );
-$wgConf->settings = MWConfigCacheGenerator::getStaticConfig( $wmgRealm );
+$wgConf->wikis = $wikis = MWWikiversions::readDbListFile( 'all' );
+$wgConf->settings = MWConfigCacheGenerator::getStaticConfig();
 
 $selected = $_GET['wiki'] ?? '';
 $selected = in_array( $selected, $wikis ) ? $selected : 'enwiki';
@@ -31,19 +31,29 @@ $compare = in_array( $compare, $wikis ) ? $compare : null;
 
 $selectedGlobals = MWConfigCacheGenerator::getConfigGlobals(
 	$selected,
-	$wgConf,
-	$wmgRealm
+	$wgConf
 );
-$selectedGlobals['* dblists'] = MWMultiVersion::getTagsForWiki( $selected, $wmgRealm );
+$selectedGlobals['* wikitags'] = MWMultiVersion::getTagsForWiki( $selected );
+$selectedGlobals['* dblists'] = array_keys( array_filter(
+	MWWikiversions::getAllDbListsForCLI(),
+	static function ( array $list ) use ( $selected ) {
+		return in_array( $selected, $list );
+	}
+) );
 wmfAssertNoPrivateSettings( $selectedGlobals );
 $isComparing = false;
 if ( $compare !== null ) {
 	$beforeGlobals = MWConfigCacheGenerator::getConfigGlobals(
 		$compare,
-		$wgConf,
-		$wmgRealm
+		$wgConf
 	);
-	$beforeGlobals['* dblists'] = MWMultiVersion::getTagsForWiki( $compare, $wmgRealm );
+	$beforeGlobals['* wikitags'] = MWMultiVersion::getTagsForWiki( $compare );
+	$beforeGlobals['* dblists'] = array_keys( array_filter(
+		MWWikiversions::getAllDbListsForCLI(),
+		static function ( array $list ) use ( $compare ) {
+			return in_array( $compare, $list );
+		}
+	) );
 	wmfAssertNoPrivateSettings( $beforeGlobals );
 	$allKeys = array_unique( array_merge( array_keys( $selectedGlobals ), array_keys( $beforeGlobals ) ) );
 	$afterGlobals = $selectedGlobals;
@@ -55,7 +65,7 @@ if ( $compare !== null ) {
 			continue;
 		}
 
-		if ( $key === '* dblists' ) {
+		if ( $key[0] === '*' ) {
 			$selectedGlobals[$key] = [
 				'context' => implode( "\n", array_intersect( $before, $after ) ),
 				'before' => implode( "\n", array_diff( $before, $after ) ),

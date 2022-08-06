@@ -108,6 +108,18 @@ class MWWikiversions {
 	}
 
 	/**
+	 * @return array<string,string[]>
+	 */
+	public static function getAllDbListsForCLI() {
+		$lists = [];
+		foreach ( glob( __DIR__ . '/../dblists/*.dblist' ) as $filename ) {
+			$basename = basename( $filename, '.dblist' );
+			$lists[$basename] = self::readDbListFile( $basename );
+		}
+		return $lists;
+	}
+
+	/**
 	 * @return array List of wiki versions
 	 */
 	public static function getAvailableBranchDirs() {
