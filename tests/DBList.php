@@ -30,7 +30,7 @@ class DBList {
 	 * @return bool
 	 */
 	public static function isWikiFamily( $dbname ) {
-		return isset( MWMultiVersion::SUFFIXES[ $dbname ] );
+		return in_array( $dbname, MWMultiVersion::SUFFIXES );
 	}
 
 	/**

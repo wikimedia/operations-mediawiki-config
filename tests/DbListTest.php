@@ -21,7 +21,7 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 				continue;
 			}
 			foreach ( $databases as $database ) {
-				yield [ $family, $database ];
+				yield "$family-$database" => [ $family, $database ];
 			}
 		}
 	}
