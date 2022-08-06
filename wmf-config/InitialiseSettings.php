@@ -26584,6 +26584,9 @@ return [
 'wgCheckUserLogActorMigrationStage' => [
 	'default' => SCHEMA_COMPAT_OLD,
 ],
+'wgCheckUserLogReasonMigrationStage' => [
+	'default' => SCHEMA_COMPAT_OLD,
+],
 
 // T166759
 'wgAutoloadAttemptLowercase' => [
