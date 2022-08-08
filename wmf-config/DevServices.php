@@ -37,6 +37,7 @@ return [
 		'eventgate-main' => '',
 		'linkrecommendation' => '',
 		'push-notifications' => '',
+		'image-suggestion' => '',
 		'shellbox' => null,
 		'shellbox-media' => null,
 		'shellbox-syntaxhighlight' => null,
