@@ -598,11 +598,14 @@ function wmfGetOverrideSettings() {
 					'unsampled' => [
 						'samplingRate' => 0
 					],
-					'control' => [
-						'samplingRate' => 0.5
+					'noStickyHeaderControl' => [
+						'samplingRate' => 0.34
 					],
-					'treatment' => [
-						'samplingRate' => 0.5
+					'stickyHeaderNoEditButtonTreatment1' => [
+						'samplingRate' => 0.33
+					],
+					'stickyHeaderEditButtonTreatment2' => [
+						'samplingRate' => 0.33
 					],
 				]
 			]
