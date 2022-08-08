@@ -1001,6 +1001,8 @@ $wgAvailableRights[] = 'flow-delete';
 
 // Adding GrowthExperiments's rights
 $wgAvailableRights[] = 'setmentor';
+$wgAvailableRights[] = 'managementors';
+$wgAvailableRights[] = 'enrollasmentor';
 
 // Checkuser
 $wgGrantPermissions['checkuser']['checkuser'] = true;
