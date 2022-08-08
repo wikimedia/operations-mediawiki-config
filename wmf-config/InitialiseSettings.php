@@ -16535,8 +16535,7 @@ return [
 ],
 
 'wgTorTagChanges' => [
-	'default' => false, // pending discussion
-	'testwiki' => true,
+	'default' => false
 ],
 
 'wmgUseContactPage' => [
