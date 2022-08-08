@@ -3173,9 +3173,6 @@ if ( $wmgUseEcho ) {
 	// Define the cluster database, false to use main database
 	$wgEchoCluster = $wmgEchoCluster;
 
-	// Whether to use job queue to process web and email notifications
-	$wgEchoUseJobQueue = $wmgEchoUseJobQueue;
-
 	// CentralAuth is extra check to be absolutely sure we don't enable on non-SUL
 	// wikis.
 	if ( $wmgUseCentralAuth && $wmgEchoCrossWikiByDefault ) {

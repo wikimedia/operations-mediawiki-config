@@ -20170,14 +20170,6 @@ return [
 	'officewiki' => false,
 ],
 
-// Whether to use job queue to process web and email notifications
-'wmgEchoUseJobQueue' => [
-	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'mediawikiwiki' => true,
-],
-
 // Default user options for Echo notifications
 // Format: 'blahwiki' => [ 'web' => [ 'emailuser' => false ], 'email' => [ 'reverted' => true ] ]
 'wmgEchoDefaultUserSubscriptions' => [
