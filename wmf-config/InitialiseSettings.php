@@ -15175,11 +15175,6 @@ return [
 	'zhwiki' => [ 2, 3, 118, 119 ], // user and user talk - T288947, draft and draft talk - T91223
 ],
 
-'wgRevisionCacheExpiry' => [
-	'default' => 86400 * 7,  // set back to 0 if this breaks
-	'testwiki' => 3600,
-],
-
 'wgPageLanguageUseDB' => [
 	'default' => false,
 	'sourceswiki' => true, // T175622
