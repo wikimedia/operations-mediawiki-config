@@ -5603,9 +5603,6 @@ return [
 # @} end of wmgMonologChannels
 
 'wgOverrideSiteFeed' => [
-	'testwiki' => [
-		'rss' => 'http://www.example.org/feedstuff.rss',
-	],
 	'enwikinews' => [
 		'atom' => 'http://en.wikinews.org/w/index.php?title=Special:NewsFeed&feed=atom&categories='
 			. 'Published&notcategories=No%20publish%7CArchived%7CAutoArchived%7Cdisputed&namespace=0&count=30&hourcount=124&ordermethod=categoryadd&stablepages=only',
