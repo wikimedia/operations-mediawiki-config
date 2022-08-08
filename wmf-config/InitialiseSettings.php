@@ -18066,7 +18066,6 @@ return [
 
 'wmgUseCLDR' => [
 	'default' => true,
-	'testwiki' => true,
 ],
 
 'wgParserCacheType' => [
