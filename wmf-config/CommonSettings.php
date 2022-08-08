@@ -2375,10 +2375,6 @@ if ( $wmgUseGlobalUsage ) {
 	$wgGlobalUsagePurgeBacklinks = true;
 }
 
-if ( $wmgUseLivePreview ) {
-	$wgDefaultUserOptions['uselivepreview'] = 1;
-}
-
 wfLoadExtension( 'TemplateStyles' );
 // allow protocol-relative URLs per T188760
 $wgTemplateStylesAllowedUrls = [

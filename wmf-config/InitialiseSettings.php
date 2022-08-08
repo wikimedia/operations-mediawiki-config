@@ -16719,11 +16719,6 @@ return [
 	'donatewiki' => false,
 ],
 
-'wmgUseLivePreview' => [
-	'default' => false,
-	'testwiki' => true,
-],
-
 'wgRevokePermissions' => [
 	'tawiki' => [
 		'nocreate' => [ 'createpage' => true ],
