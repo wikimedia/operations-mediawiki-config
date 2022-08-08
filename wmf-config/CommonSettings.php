@@ -3115,22 +3115,6 @@ if ( $wmgUseEducationProgram ) {
 	$wgNamespacesWithSubpages[447] = true;
 }
 
-if ( $wmgUseWikimediaShopLink ) {
-	/**
-	 * @param Skin $skin
-	 * @param array $sidebar
-	 * @return bool
-	 */
-	$wgHooks['SkinBuildSidebar'][] = static function ( $skin, &$sidebar ) {
-		$sidebar['navigation'][] = [
-			'text'  => $skin->msg( 'wikimediashoplink-linktext' )->text(),
-			'href'  => '//shop.wikimedia.org',
-			'title' => $skin->msg( 'wikimediashoplink-link-tooltip' )->text(),
-			'id'    => 'n-shoplink',
-		];
-	};
-}
-
 if ( $wmgEnableGeoData ) {
 	wfLoadExtension( 'GeoData' );
 	$wgGeoDataBackend = 'elastic';

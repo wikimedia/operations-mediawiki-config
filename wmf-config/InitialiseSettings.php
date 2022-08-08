@@ -20051,12 +20051,6 @@ return [
 	'ukwiki' => true, // T66143
 ],
 
-'wmgUseWikimediaShopLink' => [
-	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
-],
-
 // arbcom_*wiki, sysop_*wiki and wg_enwiki must remain explicitly false in this array, because the default false
 // will be overriden by 'wikipedia' => true in their cases, since they are both in wikipedia.dblist
 // and special.dblist. (T183549)
