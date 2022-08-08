@@ -215,7 +215,7 @@ $wmgMonologConfig = [
 			'class' => \MediaWiki\Logger\Monolog\LineFormatter::class,
 			'args' => [
 				"%datetime% [%extra.reqId%] %extra.host% %extra.wiki% %extra.mwversion% %channel% %level_name%: %message% %context% %exception%\n",
-				'Y-m-d H:i:s',
+				'Y-m-d H:i:s.u',
 				// allowInlineLineBreaks
 				true,
 				// ignoreEmptyContextAndExtra
