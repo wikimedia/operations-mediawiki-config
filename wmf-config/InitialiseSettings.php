@@ -19957,6 +19957,12 @@ return [
 	'wikimania2018wiki' => true,
 	'wikimaniawiki' => true,
 ],
+
+'wgTranslateEnableMessageBundleIntegration' => [
+	'default' => false,
+	'metawiki' => true,
+],
+
 'wmgUseVips' => [
 	'default' => true,
 	'wikitech' => false,
