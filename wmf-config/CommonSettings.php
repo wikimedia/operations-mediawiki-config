@@ -3079,7 +3079,7 @@ if ( $wmgUseFeaturedFeeds ) {
 	require_once __DIR__ . '/FeaturedFeedsWMF.php';
 }
 
-$wgDisplayFeedsInSidebar = $wmgDisplayFeedsInSidebar;
+$wgDisplayFeedsInSidebar = false;
 
 if ( $wmgEnablePageTriage ) {
 	wfLoadExtension( 'PageTriage' );

@@ -19955,10 +19955,6 @@ return [
 		'inUserLanguage' => true,
 	],
 ],
-'wmgDisplayFeedsInSidebar' => [
-	'default' => false,
-	'testwiki' => true,
-],
 'wmgFeaturedFeedsOverrides' => [
 	'default' => [],
 	'dewiki' => [
