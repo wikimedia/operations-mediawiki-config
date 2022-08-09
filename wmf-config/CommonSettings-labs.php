@@ -423,5 +423,8 @@ if ( $wmgUseCampaignEvents ) {
 	$wgCampaignEventsDatabaseName = 'wikishared';
 }
 
+// Ignore parameter order when matching request URLs to CDN URLs (T314868)
+$wgCdnMatchParameterOrder = false;
+
 }
 // end safeguard
