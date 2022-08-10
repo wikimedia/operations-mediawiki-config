@@ -28399,4 +28399,9 @@ return [
 	'default' => false,
 ],
 
+'wgCdnMatchParameterOrder' => [
+	'default' => true,
+	'testwiki' => false,  // T314868
+],
+
 ];
