@@ -325,9 +325,6 @@ require __DIR__ . "/db-$wmgRealm.php";
 # This must be after InitialiseSettings.php is processed (T197475)
 if ( PHP_SAPI === 'cli' ) {
 	$wgShowExceptionDetails = true;
-
-	# APC not available in CLI mode
-	$wgLanguageConverterCacheType = CACHE_NONE;
 }
 
 if ( XWikimediaDebug::getInstance()->hasOption( 'readonly' ) ) {

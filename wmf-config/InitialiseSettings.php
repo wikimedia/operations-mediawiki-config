@@ -18150,6 +18150,7 @@ return [
 ],
 
 'wgLanguageConverterCacheType' => [
+	// For CLI, this is effectively CACHE_NONE
 	'default' => CACHE_ACCEL,
 ],
 
