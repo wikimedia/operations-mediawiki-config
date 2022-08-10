@@ -3250,8 +3250,6 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgGroupPermissions['contentadmin']['abusefilter-modify-restricted'] = true;
 	$wgGroupPermissions['contentadmin']['abusefilter-view-private'] = true;
 
-	$wgMessageCacheType = 'memcached-pecl';
-
 	if ( $wgDBname === 'labswiki' ) {
 		$wgCookieDomain = "wikitech.wikimedia.org"; // TODO: Is this really necessary?
 	} elseif ( $wgDBname === 'labtestwiki' ) {

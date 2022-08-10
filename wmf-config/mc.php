@@ -66,7 +66,7 @@ $wgWANObjectCaches['wancache-main-mcrouter'] = [
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	// nutcracker only; no mcrouter present
 	$wgMainCacheType = 'memcached-pecl';
-	// Wikitech will use the default $wgMainWANCache from MediaWiki's Setup.php.
+	// Wikitech uses the default $wgMainWANCache from MediaWiki's Setup.php.
 } else {
 	$wgMainCacheType = 'mcrouter';
 	$wgMainWANCache = 'wancache-main-mcrouter';

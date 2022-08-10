@@ -25900,6 +25900,10 @@ return [
 		'the Creative Commons Attribution-ShareAlike License; additional terms may apply.',
 ],
 
+'wgMessageCacheType' => [
+	'default' => 'mcrouter',
+	'wikitech' => 'memcached-pecl',
+],
 'wgSessionCacheType' => [
 	'default' => 'kask-session',
 ],
