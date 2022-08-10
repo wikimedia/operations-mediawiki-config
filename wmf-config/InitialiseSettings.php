@@ -28332,6 +28332,8 @@ return [
 	'dewiki' => null, // T280027
 	'group0' => null, // T280027
 	'wikitech' => null, // T280027
+	// T302852: Enable on all namespaces, by request.
+	'twwiki' => null, // T302852
 ],
 
 'wgParserEnableLegacyMediaDOM' => [
