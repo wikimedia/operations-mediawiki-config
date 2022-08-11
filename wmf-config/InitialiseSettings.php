@@ -22371,6 +22371,8 @@ return [
 // https://phabricator.wikimedia.org/T238230
 'wgEventLoggingSchemas' => [
 	'default' => [
+		// Only in progress schema migrations go here, once migration finished, they are removed.
+		'WikibaseTermboxInteraction' => '/analytics/legacy/wikibasetermboxinteraction/1.0.0',
 	],
 ],
 
