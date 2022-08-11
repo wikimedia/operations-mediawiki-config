@@ -20445,10 +20445,10 @@ return [
 ],
 
 'wgDiscussionTools_visualenhancements' => [
-	'default' => 'unavailable',
-	'arwiki' => 'default', // T312670
-	'cswiki' => 'default', // T312670
-	'huwiki' => 'default', // T312670
+	'default' => 'default',
+	'dewiki' => 'unavailable', // T312672
+	'enwiki' => 'unavailable', // T312672
+	'jawiki' => 'unavailable', // T312672
 	'mediawikiwiki' => 'available', // T310960
 ],
 
