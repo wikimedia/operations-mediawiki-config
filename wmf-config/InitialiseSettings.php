@@ -28478,4 +28478,9 @@ return [
 	],
 ],
 
+// Enabled on the Beta Cluster only (T314294)
+'wmgUsePhonos' => [
+	'default' => false,
+],
+
 ];
