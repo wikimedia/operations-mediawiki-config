@@ -44,9 +44,6 @@ $common = [
 	// Statsd is not active-active.
 	'statsd' => '10.64.16.149', # statsd.eqiad.wmnet, now resolving to graphite1004.eqiad.wmnet
 
-	// EventLogging is not active-active.
-	'eventlogging' => 'udp://10.64.32.167:8421', # eventlog1001.eqiad.wmnet
-
 	// Logstash is not active-active.
 	'logstash' => [
 		'10.2.2.36', # logstash.svc.eqiad.wmnet

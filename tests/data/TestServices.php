@@ -24,7 +24,6 @@ $wmgAllServices['unittest'] = [
 	'urldownloader' => 'localhost',
 	'parsoidcache' => 'localhost',
 	'mathoid' => 'localhost',
-	'eventlogging' => 'localhost',
 	'eventbus' => 'localhost',
 	'sessionstore' => 'localhost',
 	'echostore' => 'localhost',
