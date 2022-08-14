@@ -42,4 +42,23 @@ $wmgThrottlingExceptions[] = [
 	'value' => 35,
 ];
 
+// T315182
+$wmgThrottlingExceptions[] = [
+	'from' => '2022-08-23T0:00 +2:00',
+	'to' => '2022-08-23T23:59 +2:00',
+	'IP' => [ '193.85.242.128', '193.85.242.129', '193.85.242.130', '193.85.242.131' ],
+	'dbname' => [
+		'cswiki',
+		'enwiki',
+		'frwiki',
+		'dewiki',
+		'ruwiki',
+		'itwiki',
+		'commonswiki',
+		'wikidatawiki',
+	],
+	// up to 180 expected
+	'value' => 180,
+];
+
 ## Add throttling definitions above.
