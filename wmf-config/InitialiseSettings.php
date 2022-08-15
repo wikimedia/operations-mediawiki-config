@@ -14585,6 +14585,7 @@ return [
 	'tewikiquote' => [ 'w', 'en' ], // T91635
 	'testwiki' => [ 'de', 'en', 'es', 'fr', 'ja', 'commons', 'meta', 'incubator', 'strategy', 'wikinews:en', 'wikinews:es', 'mediawikiwiki' ], // T154879
 	'test2wiki' => [ 'en', 'cs', 'n', 'n:es', 'n:fr', 'mediawikiwiki' ], // T155906
+	'testwikidatawiki' => [ 'meta', 'commons', 'd', 'en', 'de', 'fr', 'es' ], // T315211
 	'tetwiki' => [ 'en', 'de', 'pt' ],
 	'thwikibooks' => [ 'q', 's', 'w', 'wikt' ], // T308374
 	'thwikisource' => [ 'oldwikisouce', 'b', 'q', 'w', 'wikt' ], // T275281
