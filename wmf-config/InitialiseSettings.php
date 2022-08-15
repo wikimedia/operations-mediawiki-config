@@ -8013,37 +8013,40 @@ return [
 ],
 
 'wgVectorWebABTestEnrollment' => [
-	'default' => [
-		'name' => 'vector.sticky_header',
-		'enabled' => false,
+	// T312295
+	'idwiki' => [
+		'name' => 'vector.sticky_header_edit',
+		'enabled' => true,
 		'buckets' => [
 			'unsampled' => [
 				'samplingRate' => 0
 			],
-			'control' => [
-				'samplingRate' => 0
+			'noStickyHeaderControl' => [
+				'samplingRate' => 0.34
 			],
-			'stickyHeaderDisabled' => [
-				'samplingRate' => 0.5
+			'stickyHeaderNoEditButtonTreatment1' => [
+				'samplingRate' => 0.33
 			],
-			'stickyHeaderEnabled' => [
-				'samplingRate' => 0.5
+			'stickyHeaderEditButtonTreatment2' => [
+				'samplingRate' => 0.33
 			],
 		],
 	],
-	// T312296
-	'desktop-improvements' => [
+	'viwiki' => [
 		'name' => 'vector.sticky_header_edit',
-		'enabled' => false,
+		'enabled' => true,
 		'buckets' => [
 			'unsampled' => [
 				'samplingRate' => 0
 			],
-			'stickyHeaderEditButtonControl' => [
-				'samplingRate' => 0.5
+			'noStickyHeaderControl' => [
+				'samplingRate' => 0.34
 			],
-			'stickyHeaderEditButtonTreatment' => [
-				'samplingRate' => 0.5
+			'stickyHeaderNoEditButtonTreatment1' => [
+				'samplingRate' => 0.33
+			],
+			'stickyHeaderEditButtonTreatment2' => [
+				'samplingRate' => 0.33
 			],
 		],
 	],
