@@ -7996,14 +7996,6 @@ return [
 		'logged_in' => false,
 		'logged_out' => false,
 	],
-	'viwiki' => [ // T298519
-		'logged_in' => false,
-		'logged_out' => false,
-	],
-	'idwiki' => [ // T299676
-		'logged_in' => false,
-		'logged_out' => false,
-	],
 ],
 
 'wgVectorStickyHeaderEdit' => [
@@ -8013,14 +8005,6 @@ return [
 	],
 	'desktop-improvements' => [
 		'logged_in' => true,
-		'logged_out' => false,
-	],
-	'viwiki' => [
-		'logged_in' => false,
-		'logged_out' => false,
-	],
-	'idwiki' => [
-		'logged_in' => false,
 		'logged_out' => false,
 	],
 ],
