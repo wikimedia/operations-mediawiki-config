@@ -28567,7 +28567,7 @@ return [
 ],
 
 'wgWMENewPHPSamplingRate' => [
-	'default' => 2, // 50% of traffic
+	'default' => 1, // all traffic accepting cookies
 ],
 
 ];
