@@ -20457,6 +20457,10 @@ return [
 	'mediawikiwiki' => 'available', // T314076
 ],
 
+'wgDiscussionToolsEnablePermalinksBackend' => [
+	'default' => false, // Until the tables are created: T315353
+],
+
 'wgDTSchemaEditAttemptStepSamplingRate' => [
 	'default' => 0,
 ],
