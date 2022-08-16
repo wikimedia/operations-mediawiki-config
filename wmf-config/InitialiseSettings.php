@@ -28476,4 +28476,11 @@ return [
 	'mediawikiwiki' => false,  // T314868
 ],
 
+'wmgLogRestrictions' => [
+	'default' => [],
+	'+jawiki' => [
+		'abusefilter' => 'abusefilter-modify', // T315199
+	],
+],
+
 ];
