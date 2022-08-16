@@ -28525,7 +28525,7 @@ return [
 ],
 
 'wgWMENewPHPSamplingRate' => [
-	'default' => 6, // 16% of traffic
+	'default' => 2, // 50% of traffic
 ],
 
 ];
