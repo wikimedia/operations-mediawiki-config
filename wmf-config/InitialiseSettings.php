@@ -17803,6 +17803,7 @@ return [
 	'metawiki' => true, // T200707
 	'mswiki' => true, // T165247
 	'nowiki' => true, // T160362
+	'plwiki' => true, // T315333
 	'ptwiki' => true, // T189658
 	'rowiki' => true, // T187997
 	'svwiki' => true, // T281622
