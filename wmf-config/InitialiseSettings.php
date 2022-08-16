@@ -25828,7 +25828,7 @@ return [
 	'wikitech' => 'memcached-pecl',
 ],
 'wgMWOAuthSessionCacheType' => [
-	'default' => 'db-mainstash',
+	'default' => 'redis_local',
 	'wikitech' => 'memcached-pecl',
 ],
 'wgMWOAuthNonceCacheType' => [
@@ -25836,7 +25836,7 @@ return [
 	'wikitech' => 'memcached-pecl',
 ],
 'wgMainStash' => [
-	'default' => 'db-mainstash',
+	'default' => 'redis_local',
 	'wikitech' => 'memcached-pecl',
 ],
 'wgCentralAuthTokenCacheType' => [
