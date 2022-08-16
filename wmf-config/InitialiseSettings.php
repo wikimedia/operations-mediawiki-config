@@ -20364,27 +20364,6 @@ return [
 
 'wgDiscussionToolsABTest' => [
 	'default' => false,
-	// T304029
-	'amwiki' => 'topicsubscription',
-	'bnwiki' => 'topicsubscription',
-	'zhwiki' => 'topicsubscription',
-	'nlwiki' => 'topicsubscription',
-	'arzwiki' => 'topicsubscription',
-	'frwiki' => 'topicsubscription',
-	'hewiki' => 'topicsubscription',
-	'hiwiki' => 'topicsubscription',
-	'idwiki' => 'topicsubscription',
-	'itwiki' => 'topicsubscription',
-	'jawiki' => 'topicsubscription',
-	'kowiki' => 'topicsubscription',
-	'omwiki' => 'topicsubscription',
-	'fawiki' => 'topicsubscription',
-	'plwiki' => 'topicsubscription',
-	'ptwiki' => 'topicsubscription',
-	'eswiki' => 'topicsubscription',
-	'thwiki' => 'topicsubscription',
-	'ukwiki' => 'topicsubscription',
-	'viwiki' => 'topicsubscription',
 ],
 
 'wgDiscussionToolsEnableMobile' => [
@@ -20431,6 +20410,26 @@ return [
 
 'wgDiscussionTools_topicsubscription' => [
 	'default' => 'default', // T287802
+	'amwiki' => 'available', // T314693
+	'bnwiki' => 'available', // T314693
+	'zhwiki' => 'available', // T314693
+	'nlwiki' => 'available', // T314693
+	'arzwiki' => 'available', // T314693
+	'frwiki' => 'available', // T314693
+	'hewiki' => 'available', // T314693
+	'hiwiki' => 'available', // T314693
+	'idwiki' => 'available', // T314693
+	'itwiki' => 'available', // T314693
+	'jawiki' => 'available', // T314693
+	'kowiki' => 'available', // T314693
+	'omwiki' => 'available', // T314693
+	'fawiki' => 'available', // T314693
+	'plwiki' => 'available', // T314693
+	'ptwiki' => 'available', // T314693
+	'eswiki' => 'available', // T314693
+	'thwiki' => 'available', // T314693
+	'ukwiki' => 'available', // T314693
+	'viwiki' => 'available', // T314693
 	'mediawikiwiki' => 'available', // T302256
 	'testwiki' => 'available', // T310808
 ],
