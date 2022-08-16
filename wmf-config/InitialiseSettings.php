@@ -20411,7 +20411,6 @@ return [
 	// T288485
 	'default' => 'available',
 	'fiwiki' => 'default',
-	'ruwiki' => 'default',
 ],
 
 'wgDiscussionTools_newtopictool' => [
@@ -20419,7 +20418,6 @@ return [
 	// T310392
 	'default' => 'available',
 	'fiwiki' => 'default',
-	'ruwiki' => 'default',
 ],
 
 'wgDiscussionTools_sourcemodetoolbar' => [
@@ -20429,7 +20427,6 @@ return [
 	// to be always loaded, even when it's not supposed to be available.
 	'default' => 'available',
 	'fiwiki' => 'default',
-	'ruwiki' => 'default',
 ],
 
 'wgDiscussionTools_topicsubscription' => [
