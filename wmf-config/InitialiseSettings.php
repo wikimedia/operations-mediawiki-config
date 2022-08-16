@@ -17628,6 +17628,9 @@ return [
 		'Projeto' /* WikiProject */ => true, // T250419
 		'Portałe' /* Portal */ => true, // T250419
 	],
+	'+viwiki' => [
+		'Project' => true, // T314968
+	],
 	'+zhwiki' => [
 		'Draft' => true, // T91223
 	],
