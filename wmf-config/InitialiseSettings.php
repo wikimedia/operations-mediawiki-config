@@ -28480,10 +28480,4 @@ return [
 	'testwiki' => false,  // T314868
 ],
 
-'wgLogRestrictions' => [
-	'+jawiki' => [
-		'abusefilter' => 'abusefilter-modify', // T315199
-	],
-],
-
 ];
