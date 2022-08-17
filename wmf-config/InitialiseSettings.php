@@ -26629,9 +26629,6 @@ return [
 	// s4
 	'commonswiki' => SCHEMA_COMPAT_OLD,
 	'testcommonswiki' => SCHEMA_COMPAT_OLD,
-
-	// s8
-	'wikidatawiki' => SCHEMA_COMPAT_OLD,
 ],
 'wgCheckUserLogActorMigrationStage' => [
 	'default' => SCHEMA_COMPAT_OLD,
