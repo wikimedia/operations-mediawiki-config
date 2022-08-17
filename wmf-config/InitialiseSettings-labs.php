@@ -2387,7 +2387,6 @@ function wmfGetOverrideSettings() {
 		// T294363: QA Surveys on enwiki beta
 		'wmgUseQuickSurveys' => [
 			'enwiki' => true,
-			'jawiki' => true,
 		],
 
 		'-wgMultiShardSiteStats' => [

@@ -25944,7 +25944,6 @@ return [
 	'frwiktionary' => true,
 	'hewiki' => true,
 	'huwiki' => true,
-	'jawiki' => true,
 	'metawiki' => true,
 	'nowiki' => true,
 	'plwiki' => true,
