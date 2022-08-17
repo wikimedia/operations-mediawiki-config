@@ -17328,6 +17328,7 @@ return [
 'wmgUseRestbaseVRS' => [
 	'default' => true,
 	'wikitech' => false,		// T102178
+	'closed' => false,			// T315383
 	'private' => false,
 ],
 
@@ -17360,6 +17361,7 @@ return [
 'wmgVisualEditorAccessRestbaseDirectly' => [
 	'default' => true,		// T100026
 	'wikitech' => false,	# Wikitech uses local Parsoid operation
+	'closed' => false,		// T315383
 	'private' => false,		# Private wikis aren't yet supported by RESTBase
 ],
 // Whether VisualEditor should re-use the edit tab (and section link) or insert its own; "SET"
