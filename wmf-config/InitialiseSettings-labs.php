@@ -2350,6 +2350,9 @@ function wmfGetOverrideSettings() {
 		'wmgUseStopForumSpam' => [
 			'default' => true,
 		],
+		'wgSFSReportOnly' => [
+			'default' => false,
+		],
 		'wmgWikibaseTmpSerializeEmptyListsAsObjects' => [
 			'default' => true,
 		],
