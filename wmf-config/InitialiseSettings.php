@@ -5575,6 +5575,7 @@ return [
 		'SpamRegex' => 'debug',
 		'SQLBagOStuff' => 'debug',
 		'StashEdit' => 'debug',
+		'StopForumSpam' => 'debug',
 		'SwiftBackend' => 'debug', // -aaron 5/15/12
 		'texvc' => 'debug',
 		'throttler' => 'info',
@@ -11738,6 +11739,7 @@ return [
 		'ipblock-exempt' => [
 			'ipblock-exempt' => true,
 			'torunblocked' => true,
+			'sfsblock-bypass' => true,
 		],
 
 		# To allow for inline log suppression -- 2009-01-29 -- BV
@@ -28468,6 +28470,22 @@ return [
 // Enabled on the Beta Cluster only (T311752)
 'wmgUseCampaignEvents' => [
 	'default' => false,
+],
+
+// T309900
+'wmgUseStopForumSpam' => [
+	'default' => false,
+	'azwikibooks' => true,
+	'dkwikimedia' => true,
+	'eswikinews' => true,
+	'eswikiversity' => true,
+	'frwikinews' => true,
+	'jawiktionary' => true,
+	'plwikiquote' => true,
+	'ptwikibooks' => true,
+	'ptwikiversity' => true,
+	'svwikiquote' => true,
+	'testwiki' => true,
 ],
 
 'wgCdnMatchParameterOrder' => [
