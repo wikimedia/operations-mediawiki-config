@@ -14560,6 +14560,7 @@ return [
 	'mrwiki' => [ 'meta', 'commons', 'en', 'hi' ], // T96807
 	'mrwikibooks' => [ 'c', 'en', 's', 'w' ], // T270402
 	'mrwikisource' => [ 'w', 'b', 'en', 'sa', 'oldwikisource', 'w:en', 'c' ], // T105116
+	'mrwiktionary' => [ 'w', 's', 'wikt:en', 'c', 'w:en' ], // T314939
 	'mswiki' => [ 'id' ], // T18033
 	'mswiktionary' => [ 'w' ],
 	'myvwiki' => [ 'incubator' ],
