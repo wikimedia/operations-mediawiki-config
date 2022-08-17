@@ -421,5 +421,13 @@ if ( $wmgUseCampaignEvents ) {
 // Ignore parameter order when matching request URLs to CDN URLs (T314868)
 $wgCdnMatchParameterOrder = false;
 
+// T314294
+if ( $wmgUsePhonos ) {
+	wfLoadExtension( 'Phonos' );
+	// T314294#8163339 — Initial testing configuration
+	$wgPhonosEngine = 'larynx';
+	$wgPhonosApiEndpointLarynx = 'https://larynx-tts.wmcloud.org/api/tts';
+}
+
 }
 // end safeguard
