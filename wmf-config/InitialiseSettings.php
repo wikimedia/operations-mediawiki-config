@@ -24382,6 +24382,7 @@ return [
 'wgWikiEditorRealtimePreview' => [
 	'default' => false,
 	'group0' => true, // T314150
+	'group1' => true, // T314182
 	'huwiki' => true, // T303961
 	'fiwiki' => true,
 	'cawiki' => true,
