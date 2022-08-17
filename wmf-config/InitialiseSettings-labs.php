@@ -2406,5 +2406,11 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 			'loginwiki' => false,
 		],
+
+		// T314294
+		'wmgUsePhonos' => [
+			'default' => false,
+			'enwiki' => true,
+		],
 	];
 } # wmfGetOverrideSettings()
