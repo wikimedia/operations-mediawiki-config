@@ -4229,6 +4229,14 @@ if ( $wmgUseCampaignEvents ) {
 	$wgCampaignEventsDatabaseName = 'wikishared';
 }
 
+if ( $wmgUseStopForumSpam ) {
+	wfLoadExtension( 'StopForumSpam' );
+	$wgSFSIPListLocation = 'https://www.stopforumspam.com/downloads/listed_ip_90_ipv46_all.gz';
+	$wgSFSValidateIPListLocationMD5 = 'https://www.stopforumspam.com/downloads/listed_ip_90_ipv46_all.gz.md5';
+	$wgSFSProxy = $wgCopyUploadProxy;
+	$wgSFSReportOnly = true;
+}
+
 // This is a temporary hack for hooking up Parsoid/PHP with MediaWiki
 // This is just the regular check out of parsoid in that week's vendor
 $parsoidDir = "$IP/vendor/wikimedia/parsoid";
