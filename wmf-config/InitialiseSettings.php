@@ -25935,7 +25935,6 @@ return [
 'wmgUseQuickSurveys' => [
 	'default' => false,
 	'arwiki' => true,
-	'bnwiki' => true,
 	'cawiki' => true,
 	'dewiki' => true,
 	'enwikivoyage' => true,
@@ -25959,27 +25958,6 @@ return [
 'wgQuickSurveysConfig' => [
 	'default' => [],
 	'arwiki' => [],
-	'bnwiki' => [
-		// T314333
-		[
-			'enabled' => true,
-			'type' => 'external',
-			'name' => 'research-incentive',
-			'question' => 'research-incentive-message',
-			'description' => 'research-incentive-description',
-			'answers' => [
-				'ext-quicksurveys-example-internal-survey-answer-positive',
-				'ext-quicksurveys-example-internal-survey-answer-negative',
-			],
-			'coverage' => 0.1,
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-			'link' => 'research-incentive-link',
-			'privacyPolicy' => 'research-incentive-privacy',
-		],
-	],
 	'cawiki' => [
 		// T187299
 		[
