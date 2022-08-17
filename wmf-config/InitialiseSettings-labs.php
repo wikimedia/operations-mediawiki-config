@@ -2292,6 +2292,10 @@ function wmfGetOverrideSettings() {
 			'default' => 'default',
 		],
 
+		'-wgDiscussionTools_visualenhancements_pageframe' => [
+			'default' => 'default',
+		],
+
 		'-wgDiscussionToolsEnablePermalinksBackend' => [
 			'default' => true,
 		],

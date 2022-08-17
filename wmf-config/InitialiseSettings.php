@@ -20461,6 +20461,11 @@ return [
 	'mediawikiwiki' => 'available', // T314076
 ],
 
+'wgDiscussionTools_visualenhancements_pageframe' => [
+	'default' => 'unavailable',
+	'mediawikiwiki' => 'available',
+],
+
 'wgDiscussionToolsEnablePermalinksBackend' => [
 	'default' => false, // Until the tables are created: T315353
 ],
