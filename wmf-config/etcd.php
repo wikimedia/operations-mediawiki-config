@@ -66,13 +66,15 @@ function wmfArrayKeyFirst( array $array ) {
  *
  * This function must be called after db-{eqiad,codfw}.php has been loaded!
  * It overwrites a few sections of $wgLBFactoryConf with data from etcd.
+ * @param array $localDbConfig Local config loaded from etcd, to be applied to
+ * @param array &$lbFactoryConf LBFactoryConf array to be updated using $localDbConfig
  */
-function wmfEtcdApplyDBConfig() {
-	global $wgLBFactoryConf, $wmgLocalDbConfig, $wmgRemoteMasterDbConfig;
-	$wgLBFactoryConf['readOnlyBySection'] = $wmgLocalDbConfig['readOnlyBySection'];
-	$wgLBFactoryConf['groupLoadsBySection'] = $wmgLocalDbConfig['groupLoadsBySection'];
-	$wgLBFactoryConf['hostsByName'] = $wmgLocalDbConfig['hostsByName'];
-	foreach ( $wmgLocalDbConfig['sectionLoads'] as $section => $dbctlLoads ) {
+function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
+	global $wmgRemoteMasterDbConfig;
+	$lbFactoryConf['readOnlyBySection'] = $localDbConfig['readOnlyBySection'];
+	$lbFactoryConf['groupLoadsBySection'] = $localDbConfig['groupLoadsBySection'];
+	$lbFactoryConf['hostsByName'] = $localDbConfig['hostsByName'];
+	foreach ( $localDbConfig['sectionLoads'] as $section => $dbctlLoads ) {
 		// For each section, MediaWiki treats the first host as the master.
 		// Since JSON dictionaries are unordered, dbctl stores an array of two host:load
 		// dictionaries, one containing the master and one containing all the replicas.
@@ -81,12 +83,12 @@ function wmfEtcdApplyDBConfig() {
 		if ( $crossDCLoads ) {
 			$remoteMaster = wmfArrayKeyFirst( $crossDCLoads );
 			$loadByHost = array_merge( [ $remoteMaster => 0 ], ...$dbctlLoads );
-			$wgLBFactoryConf['hostsByName'][$remoteMaster] =
+			$lbFactoryConf['hostsByName'][$remoteMaster] =
 				$wmgRemoteMasterDbConfig['hostsByName'][$remoteMaster];
 		} else {
 			$loadByHost = array_merge( ...$dbctlLoads );
 		}
-		$wgLBFactoryConf['sectionLoads'][$section] = $loadByHost;
+		$lbFactoryConf['sectionLoads'][$section] = $loadByHost;
 	}
 	// Since MediaWiki components that use ExternalStore includes cluster names in the rows
 	// of blob tracking tables, the periodic consolidation of clusters by DBAs requires the
@@ -107,19 +109,19 @@ function wmfEtcdApplyDBConfig() {
 	$circularReplicationClusters = [
 		'x2' => true,
 	];
-	foreach ( $wmgLocalDbConfig['externalLoads'] as $dbctlCluster => $dbctlLoads ) {
+	foreach ( $localDbConfig['externalLoads'] as $dbctlCluster => $dbctlLoads ) {
 		// Merge the same way as sectionLoads
 		if ( !empty( $circularReplicationClusters[$dbctlCluster] ) ) {
 			$localMaster = wmfArrayKeyFirst( $dbctlLoads[0] );
 			// Override the 'ssl' flag set in masterTemplateOverrides via db-production.php
-			$wgLBFactoryConf['templateOverridesByServer'][$localMaster]['ssl'] = false;
+			$lbFactoryConf['templateOverridesByServer'][$localMaster]['ssl'] = false;
 			$loadByHost = array_merge( ...$dbctlLoads );
 		} else {
 			$crossDCLoads = $wmgRemoteMasterDbConfig['externalLoads'][$dbctlCluster][0] ?? null;
 			if ( $crossDCLoads ) {
 				$remoteMaster = wmfArrayKeyFirst( $crossDCLoads );
 				$loadByHost = array_merge( [ $remoteMaster => 0 ], ...$dbctlLoads );
-				$wgLBFactoryConf['hostsByName'][$remoteMaster] =
+				$lbFactoryConf['hostsByName'][$remoteMaster] =
 					$wmgRemoteMasterDbConfig['hostsByName'][$remoteMaster];
 			} else {
 				$loadByHost = array_merge( ...$dbctlLoads );
@@ -127,7 +129,12 @@ function wmfEtcdApplyDBConfig() {
 		}
 
 		foreach ( $externalStoreAliasesByCluster[$dbctlCluster] as $mwLoadName ) {
-			$wgLBFactoryConf['externalLoads'][$mwLoadName] = $loadByHost;
+			$lbFactoryConf['externalLoads'][$mwLoadName] = $loadByHost;
 		}
 	}
+}
+
+function wmfEtcdApplyDBConfig() {
+	global $wgLBFactoryConf, $wmgLocalDbConfig;
+	wmfApplyEtcdDBConfig( $wmgLocalDbConfig, $wgLBFactoryConf );
 }
