@@ -7921,23 +7921,6 @@ return [
 	'desktop-improvements' => 'vector-2022',
 ],
 
-'wgVector2022PreviewPages' => [
-	'default' => 'false',
-	'enwiki' => [
-		'Wikipedia',
-		'MediaWiki',
-		'Wikimedia_Foundation',
-		'Future',
-		'Design',
-		'Galaxy',
-		'James_Webb_Space_Telescope',
-		'Evolution',
-		'Typography',
-		'Magnifying_glass',
-		'Preview_(computing)',
-	],
-],
-
 // Note:
 // This is the list of namespaces the max-width should be EXCLUDED from.
 // It is not a list of namespaces where it should be included.
