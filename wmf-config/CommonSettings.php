@@ -209,18 +209,19 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 	// The callback below does not support data center switches, but does support
 	// read-only flags and changes to replica weights. In particular, it allows a replica
 	// to be taken out of rotation.
-	if ( PHP_SAPI === 'cli' ) {
-		$wgLBFactoryConf['configCallback'] = static function () use ( $wmgLocalServices, $wmgDatacenter ) {
+	// Disabled for now, until it's fixed
+	//if ( PHP_SAPI === 'cli' ) {
+	//	$wgLBFactoryConf['configCallback'] = static function () use ( $wmgLocalServices, $wmgDatacenter ) {
 			// NOTE: Don't re-use the existing $etcdConfig, the entire point of this
 			//       callback is that the we want to re-load it to see if it has changed.
-			$etcdConfig = wmfSetupEtcd( $wmgLocalServices['etcd'] );
-			$dbConfigFromEtcd = $etcdConfig->get( "$wmgDatacenter/dbconfig" );
-			$lbFactoryConf = [];
-			wmfApplyEtcdDBConfig( $dbConfigFromEtcd, $lbFactoryConf );
-			$lbConfigBuilder = \MediaWiki\MediaWikiServices::getInstance()->getDBLoadBalancerFactoryConfigBuilder();
-			return $lbConfigBuilder->applyDefaultConfig( $lbFactoryConf );
-		};
-	}
+	//		$etcdConfig = wmfSetupEtcd( $wmgLocalServices['etcd'] );
+	//		$dbConfigFromEtcd = $etcdConfig->get( "$wmgDatacenter/dbconfig" );
+	//		$lbFactoryConf = [];
+	//		wmfApplyEtcdDBConfig( $dbConfigFromEtcd, $lbFactoryConf );
+	//		$lbConfigBuilder = \MediaWiki\MediaWikiServices::getInstance()->getDBLoadBalancerFactoryConfigBuilder();
+	//		return $lbConfigBuilder->applyDefaultConfig( $lbFactoryConf );
+	//	};
+	//}
 
 	unset( $etcdConfig );
 }
