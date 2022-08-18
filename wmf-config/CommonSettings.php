@@ -322,8 +322,11 @@ $wgAllowedCorsHeaders[] = 'X-Wikimedia-Debug';
 // See https://wikitech.wikimedia.org/wiki/Dbctl
 // This must be called after db-{eqiad,codfw}.php has been loaded!
 // It overwrites a few sections of $wgLBFactoryConf with data from etcd.
-wmfEtcdApplyDBConfig();
-
+// In labs, the relevant key exists in etcd, but does not contain real data.
+// Only do this in production.
+if ( $wmgRealm === 'production' ) {
+	wmfEtcdApplyDBConfig();
+}
 // labtestwiki is a one-off test server, using a wmcs-managed database.  Cut
 // etcd out of the loop entirely for this one.
 $wgLBFactoryConf['sectionLoads']['s11'] = [ 'clouddb2002-dev' => 1 ];
