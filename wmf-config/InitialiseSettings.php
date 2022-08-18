@@ -18140,7 +18140,7 @@ return [
 ],
 
 'wgChronologyProtectorStash' => [
-	'default' => 'redis_local',
+	'default' => 'mcrouter',
 	'wikitech' => 'memcached-pecl'
 ],
 
