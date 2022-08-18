@@ -204,6 +204,24 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 		$wmgRemoteMasterDbConfig = null;
 	}
 
+	// Define a callback for use by LBFactory::autoReconfigure().
+	// This allows long-running scripts to take into account changes to the database config (T298485).
+	// The callback below does not support data center switches, but does support
+	// read-only flags and changes to replica weights. In particular, it allows a replica
+	// to be taken out of rotation.
+	if ( PHP_SAPI === 'cli' ) {
+		$wgLBFactoryConf['configCallback'] = static function () use ( $wmgLocalServices, $wmgDatacenter ) {
+			// NOTE: Don't re-use the existing $etcdConfig, the entire point of this
+			//       callback is that the we want to re-load it to see if it has changed.
+			$etcdConfig = wmfSetupEtcd( $wmgLocalServices['etcd'] );
+			$dbConfigFromEtcd = $etcdConfig->get( "$wmgDatacenter/dbconfig" );
+			$lbFactoryConf = [];
+			wmfEtcdApplyDBConfig( $dbConfigFromEtcd, $lbFactoryConf );
+			$lbConfigBuilder = \MediaWiki\MediaWikiServices::getInstance()->getDBLoadBalancerFactoryConfigBuilder();
+			return $lbConfigBuilder->applyDefaultConfig( $lbFactoryConf );
+		};
+	}
+
 	unset( $etcdConfig );
 }
 
