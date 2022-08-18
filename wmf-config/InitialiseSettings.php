@@ -28470,6 +28470,10 @@ return [
 	'testwiki' => true,
 ],
 
+'wgSFSReportOnly' => [
+	'default' => true,
+],
+
 'wgCdnMatchParameterOrder' => [
 	'default' => true,
 	'testwiki' => false,  // T314868
