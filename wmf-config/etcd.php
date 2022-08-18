@@ -133,8 +133,3 @@ function wmfApplyEtcdDBConfig( $localDbConfig, &$lbFactoryConf ) {
 		}
 	}
 }
-
-function wmfEtcdApplyDBConfig() {
-	global $wgLBFactoryConf, $wmgLocalDbConfig;
-	wmfApplyEtcdDBConfig( $wmgLocalDbConfig, $wgLBFactoryConf );
-}

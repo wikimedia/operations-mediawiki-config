@@ -195,7 +195,7 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 	$wmgMasterServices = $wmgAllServices[$wmgMasterDatacenter];
 
 	// Database load balancer config (sectionLoads, groupLoadsBySection, …)
-	// This is later merged into $wgLBFactoryConf by wmfEtcdApplyDBConfig().
+	// This is later merged into $wgLBFactoryConf by wmfApplyEtcdDBConfig().
 	// See also <https://wikitech.wikimedia.org/wiki/Dbctl>
 	$wmgLocalDbConfig = $etcdConfig->get( "$wmgDatacenter/dbconfig" );
 	if ( $wmgDatacenter !== $wmgMasterDatacenter ) {
