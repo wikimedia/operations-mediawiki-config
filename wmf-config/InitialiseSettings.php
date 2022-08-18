@@ -8918,6 +8918,7 @@ return [
 'wgEnablePartialActionBlocks' => [
 	'default' => false,
 	'testwiki' => true,
+	'cswiki' => true, // T315525
 ],
 
 'wgOriginTrials' => [
