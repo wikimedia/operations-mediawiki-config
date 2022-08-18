@@ -216,7 +216,7 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 			$etcdConfig = wmfSetupEtcd( $wmgLocalServices['etcd'] );
 			$dbConfigFromEtcd = $etcdConfig->get( "$wmgDatacenter/dbconfig" );
 			$lbFactoryConf = [];
-			wmfEtcdApplyDBConfig( $dbConfigFromEtcd, $lbFactoryConf );
+			wmfApplyEtcdDBConfig( $dbConfigFromEtcd, $lbFactoryConf );
 			$lbConfigBuilder = \MediaWiki\MediaWikiServices::getInstance()->getDBLoadBalancerFactoryConfigBuilder();
 			return $lbConfigBuilder->applyDefaultConfig( $lbFactoryConf );
 		};
