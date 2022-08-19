@@ -15,21 +15,4 @@
 # Included from: wmf-config/CommonSettings.php.
 #
 
-// If the installation is on kubernetes, use tcp to connect to nutcracker
-if ( $wmgUsingKubernetes ) {
-	$nutcrackerServersByDc = [ 'eqiad' => '127.0.0.1:12000', 'codfw' => '127.0.0.1:12001' ];
-} else {
-	$nutcrackerServersByDc = [ 'eqiad' => '/var/run/nutcracker/redis_eqiad.sock', 'codfw' => '/var/run/nutcracker/redis_codfw.sock' ];
-}
-foreach ( $wmgDatacenters as $dc ) {
-	$wgObjectCaches["redis_{$dc}"] = [
-		'class'       => 'RedisBagOStuff',
-		'servers'     => [ $nutcrackerServersByDc[$dc] ],
-		'password'    => $wmgRedisPassword,
-		'loggroup'    => 'redis',
-		'reportDupes' => false
-	];
-}
-
-$wgObjectCaches['redis_master'] = $wgObjectCaches["redis_{$wmgMasterDatacenter}"];
-$wgObjectCaches['redis_local'] = $wgObjectCaches["redis_{$wmgDatacenter}"];
+// TODO: Remove this file (T267581).
