@@ -36,25 +36,6 @@ $wgCirrusSearchCustomPageFields = [
 	'popularity_score' => 'number',
 ];
 
-// PoolCounter needs to be adjusted to account for additional latency when default search
-// is pointed at a remote datacenter. Currently this makes the assumption that it will either
-// be eqiad or codfw which have ~40ms latency between them. Multiples are chosen using
-// (p75 + cross dc latency)/p75
-if ( $wgCirrusSearchDefaultCluster !== $wmgDatacenter ) {
-	// prefix has p75 of ~30ms
-	if ( isset( $wgPoolCounterConf[ 'CirrusSearch-Prefix' ] ) ) {
-		$wgPoolCounterConf['CirrusSearch-Prefix']['workers'] *= 2;
-	}
-	// namespace has a p75 of ~15ms
-	if ( isset( $wgPoolCounterConf['CirrusSearch-NamespaceLookup' ] ) ) {
-		$wgPoolCounterConf['CirrusSearch-NamespaceLookup']['workers'] *= 3;
-	}
-	// completion has p75 of ~30ms
-	if ( isset( $wgPoolCounterConf['CirrusSearch-Completion'] ) ) {
-		$wgPoolCounterConf['CirrusSearch-Completion']['workers'] *= 2;
-	}
-}
-
 if ( $wmgCirrusSearchMLRModel ) {
 	foreach ( $wmgCirrusSearchMLRModel as $name => $mlrModel ) {
 		// LTR Rescore profile
@@ -98,3 +79,24 @@ if ( $wmgCirrusSearchMLRModel ) {
 # - CirrusSearch-labs.php
 # - CirrusSearch-production.php
 require __DIR__ . "/CirrusSearch-{$wmgRealm}.php";
+
+// PoolCounter needs to be adjusted to account for additional latency when default search
+// is pointed at a remote datacenter. Currently this makes the assumption that it will either
+// be eqiad or codfw which have ~40ms latency between them. Multiples are chosen using
+// (p75 + cross dc latency)/p75
+// Must come after loading realm specific config. During elasticsearch version
+// upgrades the realm config might change the default cluster.
+if ( $wgCirrusSearchDefaultCluster !== $wmgDatacenter ) {
+	// prefix has p75 of ~30ms
+	if ( isset( $wgPoolCounterConf[ 'CirrusSearch-Prefix' ] ) ) {
+		$wgPoolCounterConf['CirrusSearch-Prefix']['workers'] *= 2;
+	}
+	// namespace has a p75 of ~15ms
+	if ( isset( $wgPoolCounterConf['CirrusSearch-NamespaceLookup' ] ) ) {
+		$wgPoolCounterConf['CirrusSearch-NamespaceLookup']['workers'] *= 3;
+	}
+	// completion has p75 of ~30ms
+	if ( isset( $wgPoolCounterConf['CirrusSearch-Completion'] ) ) {
+		$wgPoolCounterConf['CirrusSearch-Completion']['workers'] *= 2;
+	}
+}

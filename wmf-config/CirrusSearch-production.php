@@ -57,3 +57,28 @@ $wgCirrusSearchDropDelayedJobsAfter = [
 // T295705#7719071 Reduce write isolation to only cloudelastic to reduce job queue rates
 $wgCirrusSearchWriteIsolateClusters = [ 'cloudelastic' ];
 $wgCirrusSearchElasticaWritePartitionCounts = [ 'cloudelastic' => 3 ];
+
+// Handles transition from elasticsearch 6.8 to 7.10 during 1.39.0-wmf.28 branch
+if ( $wmgVersionNumber >= '1.39.0-wmf.28' ) {
+	// Running the 7.10 compatible version of cirrus and querying elasticsearch 7.10 in codfw
+	$wgCirrusSearchDefaultCluster = 'codfw';
+	$wmgCirrusSearchDefaultCluster = 'codfw';
+	// Writes from the 7.10 compatible cirrus are not immediately backwards
+	// compatible. Wrap with ES6CompatTransportWrapper to ensure compat.
+	$wgCirrusSearchClusters = array_map( static function ( $config ) {
+		if ( isset( $config[0]['transport'] ) ) {
+			$config[0]['transport'] = [
+				'type' => CirrusSearch\Elastica\ES6CompatTransportWrapper::class,
+				'wrapped_transport' => $config[0]['transport']
+			];
+		}
+
+		return $config;
+	}, $wgCirrusSearchClusters );
+} else {
+	// Running the 6.8 compatible version of cirrus and querying elasticsearch 6.8 in eqiad.
+	// Write are flowing also to 7.10 in codfw but no special action is required, the writes
+	// are forward compatible.
+	$wgCirrusSearchDefaultCluster = 'eqiad';
+	$wmgCirrusSearchDefaultCluster = 'eqiad';
+}

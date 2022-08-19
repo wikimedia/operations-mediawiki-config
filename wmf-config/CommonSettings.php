@@ -2962,15 +2962,21 @@ if ( $wmgUseTranslate ) {
 				'cutoff' => 0.65,
 				'use_wikimedia_extra' => true,
 				'config' => [
-					'servers' => array_map( static function ( $hostConfig ) {
-						if ( is_array( $hostConfig ) ) {
-							return $hostConfig;
+					'servers' => array_map( static function ( $hostConfig ) use ( $wmgVersionNumber ) {
+						if ( !is_array( $hostConfig ) ) {
+							$hostConfig = [
+								'host' => $hostConfig,
+								'port' => 9243,
+								'transport' => 'Https',
+							];
 						}
-						return [
-							'host' => $hostConfig,
-							'port' => 9243,
-							'transport' => 'Https',
-						];
+						if ( $wmgVersionNumber >= '1.39.0-wmf.28' && isset( $hostConfig['transport'] ) ) {
+							$hostConfig['transport'] = [
+								'type' => CirrusSearch\Elastica\ES6CompatTransportWrapper::class,
+								'wrapped_transport' => $hostConfig['transport']
+							];
+						}
+						return $hostConfig;
 					}, $wmgAllServices[$cluster]['search-chi'] ),
 				],
 				'mirrors' => $mirrors,

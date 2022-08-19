@@ -14,9 +14,9 @@ $wmgAllServices = [];
 $wmgAllServices['unittest'] = [
 	'udp2log' => 'localhost:8420',
 	'statsd' => 'localhost',
-	'search-chi' => [ [ 'host' => 'localhost' ] ],
-	'search-psi' => [ [ 'host' => 'localhost' ] ],
-	'search-omega' => [ [ 'host' => 'localhost' ] ],
+	'search-chi' => [ [ 'host' => 'localhost', 'transport' => Elastica\Transport\Example::class ] ],
+	'search-psi' => [ [ 'host' => 'localhost', 'transport' => Elastica\Transport\Example::class ] ],
+	'search-omega' => [ [ 'host' => 'localhost', 'transport' => Elastica\Transport\Example::class ] ],
 	'cloudelastic-chi' => [ [ 'host' => 'localhost' ] ],
 	'cloudelastic-psi' => [ [ 'host' => 'localhost' ] ],
 	'cloudelastic-omega' => [ [ 'host' => 'localhost' ] ],
