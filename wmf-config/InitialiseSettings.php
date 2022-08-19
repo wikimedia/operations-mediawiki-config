@@ -26571,10 +26571,6 @@ return [
 	'default' => false,
 ],
 
-'wgWMESearchRelevancePages' => [
-	'default' => [],
-],
-
 'wgShortPagesNamespaceExclusions' => [
 	'default' => [],
 	// T170687
