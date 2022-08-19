@@ -115,7 +115,6 @@ $wmgSwiftConfig['codfw'] = [
 /**
  * Credentials for RedisBagOStuff and RedisLockManager backends.
  *
- * @see wmf-config/redis.php, $wgObjectCaches
  * @see wmf-config/filebackend.php, $wgLockManagers
  */
 $wmgRedisPassword = null;

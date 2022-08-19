@@ -26,7 +26,6 @@
 #       |-- wmf-config/InitialiseSettings.php
 #       |-- private/PrivateSettings.php
 #       |-- wmf-config/logging.php
-#       |-- wmf-config/redis.php
 #       |-- wmf-config/filebackend.php
 #       |-- wmf-config/db-*.php
 #       |-- wmf-config/mc.php
@@ -312,7 +311,6 @@ list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 require __DIR__ . '/../private/PrivateSettings.php';
 
 require __DIR__ . '/logging.php';
-require __DIR__ . '/redis.php';
 require __DIR__ . '/filebackend.php';
 require __DIR__ . '/mc.php';
 if ( $wmgRealm === 'labs' ) {

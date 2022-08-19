@@ -29,7 +29,6 @@ mwconfig_files_txt=(
 	logos.php
 	mc.php
 	mc-labs.php
-	redis.php
 	throttle.php
 	throttle-analyze.php
 	reverse-proxy.php
