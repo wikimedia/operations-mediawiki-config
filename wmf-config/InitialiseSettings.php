@@ -28532,9 +28532,7 @@ return [
 ],
 
 'wgCdnMatchParameterOrder' => [
-	'default' => true,
-	'testwiki' => false,  // T314868
-	'mediawikiwiki' => false,  // T314868
+	'default' => false,  // T314868
 ],
 
 'wmgLogRestrictions' => [
