@@ -443,6 +443,11 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterBlockDuration = 'indefinite'; // T161960
 		$wgAbuseFilterAnonBlockDuration = '24 hours';
 		break;
+	case 'trwikiquote':
+		$wgAbuseFilterActions['block'] = true; // T315736
+		$wgAbuseFilterBlockDuration = 'indefinite'; // T315736
+		$wgAbuseFilterAnonBlockDuration = '72 hours'; // T315736
+		break;
 	case 'ukwiki':
 		$wgGroupPermissions['*']['abusefilter-log'] = false;
 		$wgGroupPermissions['*']['abusefilter-view'] = false;
