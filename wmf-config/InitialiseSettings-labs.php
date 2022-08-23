@@ -153,6 +153,11 @@ function wmfGetOverrideSettings() {
 						'rate' => 1,
 					],
 				],
+				'mediawiki.edit_attempt' => [
+					'sample' => [
+						'rate' => 1,
+					],
+				],
 			],
 			'+enwiki' => [
 				'mediawiki.ipinfo_interaction' => [
@@ -211,6 +216,7 @@ function wmfGetOverrideSettings() {
 		'wgEventLoggingStreamNames' => [
 			'+wikipedia' => [
 				'mediawiki.web_ui.interactions',
+				'mediawiki.edit_attempt',
 			],
 			'+enwiki' => [
 				'mediawiki.ipinfo_interaction',
