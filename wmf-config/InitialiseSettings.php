@@ -26268,7 +26268,6 @@ return [
 	'commonswiki' => false,
 	'incubatorwiki' => false,
 	'metawiki' => false,
-	'testwiki' => false,
 	'wikidatawiki' => false,
 	// This should not be disabled on additional wikis (T291736).
 ],
