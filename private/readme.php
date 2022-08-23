@@ -182,3 +182,11 @@ $wgWMEVectorPrefDiffSalt = null;
  * Shellbox secret key, also set in private puppet
  */
 $wgShellboxSecretKey = null;
+
+/**
+ * API key for Phonos' Google Cloud Speech API
+ *
+ * @see mediawiki/extensions/Phonos
+ * @see https://phabricator.wikimedia.org/T315491
+ */
+$wgPhonosApiKeyGoogle = null;
