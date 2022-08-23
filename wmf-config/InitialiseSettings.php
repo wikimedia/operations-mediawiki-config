@@ -26625,10 +26625,6 @@ return [
 // T233004
 'wgCheckUserActorMigrationStage' => [
 	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-
-	// s4
-	'commonswiki' => SCHEMA_COMPAT_OLD,
-	'testcommonswiki' => SCHEMA_COMPAT_OLD,
 ],
 'wgCheckUserLogActorMigrationStage' => [
 	'default' => SCHEMA_COMPAT_OLD,
