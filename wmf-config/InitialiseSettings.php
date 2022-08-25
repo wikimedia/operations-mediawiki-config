@@ -5309,6 +5309,7 @@ return [
 	'bgwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T269709
 	'ckbwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T54533
 	'commonswiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T227420
+	'cswiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T316283
 	'dewiki' => [ '', 'autoconfirmed', 'editeditorprotected', 'sysop' ], // T94368
 	'dewiktionary' => [ '', 'autoconfirmed', 'editeditorprotected', 'editautoreviewprotected', 'sysop' ], // T216885
 	'elwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T306241
@@ -5353,6 +5354,7 @@ return [
 	'default' => [ 'autoconfirmed' ],
 	'+azwiki' => [ 'extendedconfirmed' ], // T281860
 	'+bgwiki' => [ 'extendedconfirmed' ], // T269709
+	'+cswiki' => [ 'extendedconfirmed' ], // T316283
 	'+elwiki' => [ 'extendedconfirmed' ], // T306241
 	'+enwiki' => [ 'extendedconfirmed' ], // T126607
 	'+fawiki' => [ 'extendedconfirmed' ], // T140839
@@ -9358,7 +9360,10 @@ return [
 			'override-antispoof' => true,
 		],
 		'autopatrolled' => [ 'autopatrol' => true, ],
-		'bot' => [ 'ipblock-exempt' => true, ], // T44720
+		'bot' => [
+			'ipblock-exempt' => true, // T44720
+			'extendedconfirmed', // T316283
+		],
 		'arbcom' => [ // T63418
 			'browsearchive' => true,
 			'deletedhistory' => true,
@@ -9382,11 +9387,13 @@ return [
 			'mergehistory' => true,
 			'apihighlimits' => true,
 		],
+		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T316283
 		'rollbacker' => [ 'rollback' => true, ], // T126931
 		'patroller' => [ // T126931
 			'patrol' => true,
 			'unwatchedpages' => true,
 		],
+		'sysop' => [ 'extendedconfirmed' => true ], // T316283
 	],
 	'+cswikinews' => [
 		'autopatrolled' => [ 'autopatrol' => true, ],
@@ -12130,6 +12137,7 @@ return [
 			'patroller', // T126931
 			'accountcreator', // T131684
 			'confirmed',
+			'extendedconfirmed', // T316283
 		],
 	],
 	'+cswikinews' => [
@@ -13545,6 +13553,7 @@ return [
 			'patroller', // T126931
 			'accountcreator', // T131684
 			'confirmed', // T163206
+			'extendedconfirmed', // T316283
 		],
 	],
 	'+cswikinews' => [
@@ -15794,6 +15803,12 @@ return [
 # wmgAutopromoteExtraGroups @{
 'wmgAutopromoteExtraGroups' => [
 	'default' => false,
+	'cswiki' => [
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 30 * 86400 ],
+		], // T316283
+	],
 	'frwiki' => [
 		'autopatrolled' => [ '&',
 			[ APCOND_EDITCOUNT, 500 ],
