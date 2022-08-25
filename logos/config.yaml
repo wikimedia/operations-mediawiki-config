@@ -2640,8 +2640,10 @@ Wikisource:
         comment: T296459
 
     bewikisource:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        commons:  File:Wikisource-logo-be_v2.svg
+        comment:  T310961
+        comment_1_5x:  T150618, T310961
+        comment_2x:  T150618, T310961
 
     bgwikisource:
         comment:  T54019
