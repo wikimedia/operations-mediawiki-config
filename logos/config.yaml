@@ -2666,8 +2666,10 @@ Wikisource:
         no_2x: true
 
     cswikisource:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        commons:  File:Wikisource-logo-cs-v2.svg
+        comment:  T310961
+        comment_1_5x:  T150618, T310961
+        comment_2x:  T150618, T310961
 
     cywikisource:
         comment:  T58807
