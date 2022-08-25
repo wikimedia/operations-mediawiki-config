@@ -709,6 +709,11 @@ return [
 	]
 ],
 
+// Logo Variant will fallback to which language
+'wmgSiteLogoVariantFallback' => [
+	'default' => false,
+],
+
 // IMPORTANT:
 // When defining new logos, ensure width <= 140px so that logos are
 // mobile friendly. Scale down logo if necessary.
