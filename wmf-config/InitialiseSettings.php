@@ -28588,6 +28588,12 @@ return [
 	'idwiki' => true, // T311143
 ],
 
+// Wikistories discovery module config
+'wgWikistoriesDiscoveryMode' => [
+	'default' => 'off',
+	'idwiki' => 'beta',
+],
+
 // Danger: Do *NOT* enable on any public wiki (T17622)
 'wgFixDoubleRedirects' => [
 	'default' => false,

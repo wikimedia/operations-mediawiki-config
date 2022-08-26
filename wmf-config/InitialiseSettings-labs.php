@@ -2367,6 +2367,12 @@ function wmfGetOverrideSettings() {
 			'enwiki' => true,
 		],
 
+		// Wikistories discovery module config
+		'wgWikistoriesDiscoveryMode' => [
+			'default' => 'off',
+			'enwiki' => 'beta',
+		],
+
 		// T294363: QA Surveys on enwiki beta
 		'wmgUseQuickSurveys' => [
 			'enwiki' => true,
