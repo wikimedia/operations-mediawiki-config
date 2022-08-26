@@ -26751,6 +26751,9 @@ return [
 	'zhwiki' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 	// s8
 	'wikidatawiki' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
+	// s4
+	'commonswiki' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
+	'testcommonswiki' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 ],
 
 'wgXmlDumpSchemaVersion' => [
