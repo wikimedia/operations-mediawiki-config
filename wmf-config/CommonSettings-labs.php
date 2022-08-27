@@ -356,9 +356,10 @@ if ( $wmgUseEventBus ) {
 	$wgEventBusEnableRunJobAPI = true;
 }
 
-if ( $wmgUseGrowthExperiments ) {
-	// temporarily allow everyone, per T310905
-	$wgGroupPermissions['*']['enrollasmentor'] = true;
+if ( $wmgUseStopForumSpam ) {
+	wfLoadExtension( 'StopForumSpam' );
+	$wgSFSIPListLocation = 'https://www.stopforumspam.com/downloads/listed_ip_90_ipv46_all.gz';
+	$wgSFSIPListLocationMD5 = 'https://www.stopforumspam.com/downloads/listed_ip_90_ipv46_all.gz.md5';
 }
 
 $wgMessageCacheType = CACHE_ACCEL;
