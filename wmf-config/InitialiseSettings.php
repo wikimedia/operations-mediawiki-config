@@ -9362,7 +9362,7 @@ return [
 		'autopatrolled' => [ 'autopatrol' => true, ],
 		'bot' => [
 			'ipblock-exempt' => true, // T44720
-			'extendedconfirmed', // T316283
+			'extendedconfirmed' => true, // T316283
 		],
 		'arbcom' => [ // T63418
 			'browsearchive' => true,
