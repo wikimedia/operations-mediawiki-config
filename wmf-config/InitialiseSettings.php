@@ -11241,7 +11241,6 @@ return [
 		'rollbacker' => [ 'rollback' => true ], // T95180
 	],
 	'testwiki' => [
-		'*' => [ 'enrollasmentor' => true ], // For testing structured mentor list, T310905, T264343
 		'accountcreator' => [
 			'override-antispoof' => true,
 			'tboverride' => true,
