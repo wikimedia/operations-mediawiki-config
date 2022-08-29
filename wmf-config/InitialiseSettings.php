@@ -20998,6 +20998,7 @@ return [
 'wgContentTranslationEnableSectionTranslation' => [
 	'default' => false,
 	'testwiki' => true,
+	'amwiki' => true, // T313300
 	'aswiki' => true, // T304828
 	'astwiki' => true, // T309384
 	'aywiki' => true, // T309384
@@ -21005,7 +21006,9 @@ return [
 	'bawiki' => true, // T285842
 	'bclwiki' => true, // T304828
 	'bnwiki' => true, // T271397
+	'bswiki' => true, // T313300
 	'ckbwiki' => true, // T309384
+	'cebwiki' => true, // T313300
 	'cswiki' => true, // T304855
 	'cywiki' => true, // T308829
 	'elwiki' => true, // T304854
@@ -21017,18 +21020,21 @@ return [
 	'guwiki' => true, // T304828
 	'hawiki' => true, // T290175
 	'hewiki' => true, // T304863
+	'htwiki' => true, // T313300
 	'hywiki' => true, // T308829
 	'igwiki' => true, // T290175
 	'ilowiki' => true, // T309384
 	'iswiki' => true, // T304828
 	'jvwiki' => true, // T298237
 	'kgwiki' => true, // T309384
+	'kmwiki' => true, // T313300
 	'knwiki' => true, // T304828
 	'kowiki' => true, // T298239
 	'kuwiki' => true, // T290238
 	'lgwiki' => true, // T301443
 	'lnwiki' => true, // T309384
 	'ltwiki' => true, // T308829
+	'lvwiki' => true, // T313300
 	'mkwiki' => true, // T304828
 	'mlwiki' => true, // T285842
 	'mnwiki' => true, // T298237
@@ -21041,8 +21047,10 @@ return [
 	'ocwiki' => true, // T301443
 	'omwiki' => true, // T309384
 	'pawiki' => true, // T304828
-	'sqwiki' => true, // T285842
+	'siwiki' => true, // T313300
 	'slwiki' => true, // T308829
+	'sowiki' => true, // T313300
+	'sqwiki' => true, // T285842
 	'srwiki' => true, // T304858
 	'sswiki' => true, // T309384
 	'suwiki' => true, // T308829
@@ -21063,7 +21071,7 @@ return [
 
 'wgSectionTranslationTargetLanguages' => [
 	'default' => null,
-	'wikipedia' => [ 'as', 'ast', 'ay', 'az', 'ba', 'bcl', 'bn', 'ckb', 'cs', 'cy', 'el', 'eo', 'et', 'eu', 'fa', 'gl', 'gu', 'ha', 'he', 'hy', 'ig', 'ilo', 'is', 'jv', 'kg', 'kn', 'ko', 'ku', 'lg', 'ln', 'lt', 'mk', 'ml', 'mn', 'mr', 'ms', 'mt', 'my', 'ne', 'nso', 'oc', 'om', 'pa', 'sl', 'sq', 'sr', 'ss', 'su', 'sw', 'ta', 'te', 'th', 'tl', 'tn', 'tr', 'ts', 'ur', 'uz', 'wo', 'yo', 'zu' ],
+	'wikipedia' => [ 'am', 'as', 'ast', 'ay', 'az', 'ba', 'bcl', 'bn', 'bs', 'ceb', 'ckb', 'cs', 'cy', 'el', 'eo', 'et', 'eu', 'fa', 'gl', 'gu', 'ha', 'he', 'ht', 'hy', 'ig', 'ilo', 'is', 'jv', 'kg', 'km', 'kn', 'ko', 'ku', 'lg', 'ln', 'lt', 'lv', 'mk', 'ml', 'mn', 'mr', 'ms', 'mt', 'my', 'ne', 'nso', 'oc', 'om', 'pa', 'si', 'sl', 'so', 'sq', 'sr', 'ss', 'su', 'sw', 'ta', 'te', 'th', 'tl', 'tn', 'tr', 'ts', 'ur', 'uz', 'wo', 'yo', 'zu' ],
 	'testwiki' => [ 'af', 'am', 'ar', 'as', 'ast', 'ay', 'az', 'ba', 'bcl', 'bh', 'bn', 'bs', 'ca', 'ceb', 'ckb', 'cs', 'cy', 'dv', 'ee', 'el', 'eo', 'es', 'et', 'eu', 'fa', 'fr', 'gl', 'gn', 'gu', 'ha', 'he', 'hi', 'ht', 'hy', 'id', 'ig', 'ilo', 'is', 'jv', 'kg', 'ki', 'km', 'kn', 'ko', 'ku', 'lg', 'ln', 'lt', 'lv', 'mk', 'ml', 'mn', 'mni', 'mr', 'ms', 'mt', 'my', 'ne', 'nso', 'oc', 'om', 'or', 'pa', 'pt', 'qu', 'ru', 'sa', 'si', 'sl', 'so', 'sq', 'sr', 'ss', 'su', 'sw', 'ta', 'te', 'th', 'ti', 'tl', 'tn', 'tr', 'ts', 'tw', 'uk', 'ur', 'uz', 'vi', 'wo', 'yo', 'zh', 'zh-yue', 'zu' ],
 ],
 
