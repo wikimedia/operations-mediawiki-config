@@ -20471,56 +20471,12 @@ return [
 
 'wgDiscussionTools_topicsubscription' => [
 	// Keep in sync with wgDiscussionTools_autotopicsub below (unless you have a very good reason)
-	'default' => 'default', // T287802
-	'amwiki' => 'available', // T314693
-	'bnwiki' => 'available', // T314693
-	'zhwiki' => 'available', // T314693
-	'nlwiki' => 'available', // T314693
-	'arzwiki' => 'available', // T314693
-	'frwiki' => 'available', // T314693
-	'hewiki' => 'available', // T314693
-	'hiwiki' => 'available', // T314693
-	'idwiki' => 'available', // T314693
-	'itwiki' => 'available', // T314693
-	'jawiki' => 'available', // T314693
-	'kowiki' => 'available', // T314693
-	'omwiki' => 'available', // T314693
-	'fawiki' => 'available', // T314693
-	'plwiki' => 'available', // T314693
-	'ptwiki' => 'available', // T314693
-	'eswiki' => 'available', // T314693
-	'thwiki' => 'available', // T314693
-	'ukwiki' => 'available', // T314693
-	'viwiki' => 'available', // T314693
-	'mediawikiwiki' => 'available', // T302256
-	'testwiki' => 'available', // T310808
+	'default' => 'available', // T315714
 ],
 
 'wgDiscussionTools_autotopicsub' => [
 	// Keep in sync with wgDiscussionTools_topicsubscription above (unless you have a very good reason)
-	'default' => 'default',
-	'amwiki' => 'available', // T314693
-	'bnwiki' => 'available', // T314693
-	'zhwiki' => 'available', // T314693
-	'nlwiki' => 'available', // T314693
-	'arzwiki' => 'available', // T314693
-	'frwiki' => 'available', // T314693
-	'hewiki' => 'available', // T314693
-	'hiwiki' => 'available', // T314693
-	'idwiki' => 'available', // T314693
-	'itwiki' => 'available', // T314693
-	'jawiki' => 'available', // T314693
-	'kowiki' => 'available', // T314693
-	'omwiki' => 'available', // T314693
-	'fawiki' => 'available', // T314693
-	'plwiki' => 'available', // T314693
-	'ptwiki' => 'available', // T314693
-	'eswiki' => 'available', // T314693
-	'thwiki' => 'available', // T314693
-	'ukwiki' => 'available', // T314693
-	'viwiki' => 'available', // T314693
-	'mediawikiwiki' => 'available', // T302256
-	'testwiki' => 'available', // T310808
+	'default' => 'available', // T315714
 ],
 
 'wgDiscussionTools_visualenhancements' => [
