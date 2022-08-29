@@ -104,6 +104,8 @@ def download(commons: str, name: str):
     )
     req.raise_for_status()
     info = req.json()["query"]["pages"][0]["imageinfo"][0]
+    if info["thumbheight"] > 155:
+        raise RuntimeError(f"{commons}: logo is taller than 155px, please resize it")
     urls = {
         f"{name}.png": info["thumburl"],
         f"{name}-1.5x.png": info["responsiveUrls"]["1.5"].replace("203px", "202px"),
