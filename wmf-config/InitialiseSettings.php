@@ -22112,6 +22112,10 @@ return [
 		'Q226102', // T316637 sitelink to redirect
 		'Q226103', // T316637 intentional sitelink to redirect
 	],
+	'wikidatawiki' => [
+		'Q70893996', // T316637 sitelink to redirect
+		'Q70894304', // T316637 intentional sitelink to redirect
+	],
 ],
 
 'wmgWikibaseClientBadgeClassNames' => [
