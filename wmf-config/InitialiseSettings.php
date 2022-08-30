@@ -17098,7 +17098,7 @@ return [
 		'visualeditor-visualdiffpage',       // [Editing] 2019-11-06 – Visual diffs
 		'discussiontools-betaenable',        // [Editing] 2020-09-12 – Reply tool
 		'ipinfo-beta-feature-enable',        // [AHT] 2022-10-01 – IP Info
-		'wikieditor-realtime-preview',       // [CommTech] 2022-04-18 – Realtime Preview
+		'wikieditor-realtime-preview',       // [CommTech] 2023-03-03 – Realtime Preview
 		'wikistories-storiesonarticles',     // [Inuka] 2022-12-30 - Wikistories on articles
 	],
 ],
@@ -17265,6 +17265,12 @@ return [
 	'default' => false,
 	'ruwikivoyage' => true,
 	'wikisource' => true,
+],
+
+// Enable WikiEditor Realtime Preview beta feature.
+'wgWikiEditorRealtimePreview' => [
+	'default' => true,
+	'plwiki' => false, // T313420
 ],
 
 // ------------ BetaFeatures end -----------
@@ -24434,18 +24440,6 @@ return [
 	'default' => 8,
 	'testwikidatawiki' => 3,
 	'wikidatawiki' => 3,
-],
-
-// Enable WikiEditor's Realtime Preview feature.
-'wgWikiEditorRealtimePreview' => [
-	'default' => false,
-	'group0' => true, // T314150
-	'group1' => true, // T314182
-	'huwiki' => true, // T303961
-	'fiwiki' => true,
-	'cawiki' => true,
-	'viwiki' => true,
-	'fawiki' => true,
 ],
 
 'wmgWikibaseTermboxEnabled' => [
