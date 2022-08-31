@@ -25967,6 +25967,7 @@ return [
 	'frwiktionary' => true,
 	'hewiki' => true,
 	'huwiki' => true,
+	'idwiki' => true,
 	'metawiki' => true,
 	'nowiki' => true,
 	'plwiki' => true,
@@ -26058,6 +26059,24 @@ return [
 			],
 			'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
 			'shuffleAnswersDisplay' => true,
+		],
+	],
+	'idwiki' => [
+		// T316466
+		[
+			'enabled' => true,
+			'type' => 'external',
+			'name' => 'research-incentive',
+			'question' => 'research-incentive-message',
+			'description' => 'research-incentive-description',
+			'confirmMsg' => 'research-incentive-confirm-msg',
+			'coverage' => 0.015,
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ]
+			],
+			'link' => 'research-incentive-link',
+			'privacyPolicy' => 'research-incentive-privacy',
 		],
 	],
 	'ruwiki' => [
