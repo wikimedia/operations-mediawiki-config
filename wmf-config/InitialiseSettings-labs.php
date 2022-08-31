@@ -1169,7 +1169,7 @@ function wmfGetOverrideSettings() {
 			'loginwiki' => false,
 		],
 
-		'wgIPInfoGeoIP2Prefix' => [
+		'wgIPInfoGeoLite2Prefix' => [
 			'default' => '/usr/share/GeoIP/GeoLite2-',
 		],
 
