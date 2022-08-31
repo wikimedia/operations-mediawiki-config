@@ -7965,10 +7965,6 @@ return [
 	],
 ],
 
-'wgVectorGrid' => [
-	'default' => true,
-],
-
 // Skin versions are strings not numbers. See skins/Vector/skin.json.
 'wgVectorDefaultSkinVersionForExistingAccounts' => [
 	'default' => '1', // Legacy Vector
