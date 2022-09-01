@@ -8013,43 +8013,21 @@ return [
 ],
 
 'wgVectorWebABTestEnrollment' => [
-	// T312295
-	'idwiki' => [
+	'default' => [
 		'name' => 'vector.sticky_header_edit',
-		'enabled' => true,
+		'enabled' => false,
 		'buckets' => [
 			'unsampled' => [
 				'samplingRate' => 0
 			],
-			'noStickyHeaderControl' => [
-				'samplingRate' => 0.34
+			'control' => [
+				'samplingRate' => 0.5
 			],
-			'stickyHeaderNoEditButtonTreatment1' => [
-				'samplingRate' => 0.33
-			],
-			'stickyHeaderEditButtonTreatment2' => [
-				'samplingRate' => 0.33
+			'treatment' => [
+				'samplingRate' => 0.5
 			],
 		],
-	],
-	'viwiki' => [
-		'name' => 'vector.sticky_header_edit',
-		'enabled' => true,
-		'buckets' => [
-			'unsampled' => [
-				'samplingRate' => 0
-			],
-			'noStickyHeaderControl' => [
-				'samplingRate' => 0.34
-			],
-			'stickyHeaderNoEditButtonTreatment1' => [
-				'samplingRate' => 0.33
-			],
-			'stickyHeaderEditButtonTreatment2' => [
-				'samplingRate' => 0.33
-			],
-		],
-	],
+	]
 ],
 
 'wgVectorLanguageInHeader' => [
