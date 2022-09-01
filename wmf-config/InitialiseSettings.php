@@ -22895,7 +22895,9 @@ return [
 	'default' => [],
 	'testwikidatawiki' => [
 		'Q608' => 'wb-badge-goodarticle',
-		'Q609' => 'wb-badge-featuredarticle'
+		'Q609' => 'wb-badge-featuredarticle',
+		'Q226102' => 'wb-badge-redirect-sitelink', // T316637
+		'Q226103' => 'wb-badge-redirect-intentional-sitelink', // T316637
 	],
 	'wikidatawiki' => [
 		'Q17437798' => 'wb-badge-goodarticle',
@@ -22911,6 +22913,13 @@ return [
 		'Q51759403' => 'wb-badge-goodlist', // T190976
 		'Q70893996' => 'wb-badge-redirect-sitelink', // T235420
 		'Q70894304' => 'wb-badge-redirect-intentional-sitelink', // T235420
+	],
+],
+'wmgWikibaseRepoRedirectBadgeItems' => [
+	'default' => [],
+	'testwikidatawiki' => [
+		'Q226102', // T316637 sitelink to redirect
+		'Q226103', // T316637 intentional sitelink to redirect
 	],
 ],
 
