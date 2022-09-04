@@ -8,6 +8,8 @@ You need to install:
 * [tox](https://tox.readthedocs.io/en/latest/index.html)
 * [pngquant](https://github.com/kornelski/pngquant) (usually packaged)
 * [zopflipng](https://github.com/google/zopfli) (usually packaged)
+* [svgo](https://github.com/svg/svgo)
+* [rsvg-convert](https://wiki.gnome.org/Projects/LibRsvg) (part of `librsvg` package)
 
 Note that you need the pngquant and zopflipng OS packages, not the Python packages.
 

@@ -21,12 +21,15 @@ import argparse
 import subprocess
 import sys
 import textwrap
+import os
+from math import ceil
 
 from pathlib import Path
 from typing import Optional
 
 import requests
 import yaml
+import xml.etree.ElementTree as ET
 
 
 if sys.version_info < (3, 7):
@@ -34,6 +37,7 @@ if sys.version_info < (3, 7):
 
 DIR = Path(__file__).parent
 project_logos = DIR.parent / "static/images/project-logos"
+project_svgs = DIR.parent / "static/images/mobile/copyright"
 
 
 def validate_commons(name: str, value: str):
@@ -74,6 +78,19 @@ def validate(data: dict):
                 filename = f"{selected}{path_size}.png"
                 if not (project_logos / filename).exists():
                     raise RuntimeError(f"{site}: {filename} doesn't exist!")
+            for svg_type in ["wordmark", "tagline"]:
+                if f"commons_{svg_type}" in info:
+                    validate_commons(site, info[f"commons_{svg_type}"])
+                if f"commons_{svg_type}" in info or f"selected_{svg_type}" in info:
+                    selected = info.get(f"selected_{svg_type}", site)
+                    proj, lang = transform_name(data, selected)
+                    if lang is None:
+                        name = f"{proj}-{svg_type}"
+                    else:
+                        name = f"{proj}-{svg_type}-{lang}"
+                    filename = f"{name}.svg"
+                    if not (project_svgs / filename).exists():
+                        raise RuntimeError(f"Error: {filename} doesn't exist!")
 
 
 def download(commons: str, name: str):
@@ -136,6 +153,89 @@ def download(commons: str, name: str):
             cwd=project_logos,
         )
 
+def download_svg(commons: str, name: str, svg_type: str, data: dict):
+    # Check dependencies first
+    for dep in ["svgo", "rsvg-convert"]:
+        try:
+            subprocess.check_output([dep, "--help"])
+        except subprocess.CalledProcessError:
+            raise RuntimeError(f"Error: {dep} not installed")
+
+    s = requests.Session()
+    s.headers.update({
+        "User-Agent": "logos-manage (https://gerrit.wikimedia.org/g/operations/mediawiki-config/+/HEAD/logos/manage.py)"
+    })
+
+    req = s.get(
+        "https://commons.wikimedia.org/w/api.php",
+        params={
+            "action": "query",
+            "prop": "imageinfo",
+            "titles": commons,
+            "iiprop": "url",
+            "iilimit": "1",
+            "format": "json",
+            "formatversion": "2",
+        }
+    )
+    req.raise_for_status()
+    url = req.json()["query"]["pages"][0]["imageinfo"][0]["url"]
+
+    req = s.get(url)
+    req.raise_for_status()
+    proj, lang = transform_name(data, name)
+    name = ""
+    if lang is None:
+        name = f"{proj}-{svg_type}"
+    else:
+        name = f"{proj}-{svg_type}-{lang}"
+    filename = f"{name}.svg"
+    filename1 = f"{name}-tmp.svg"
+    (project_svgs / filename).write_bytes(req.content)
+    print(f"Saved {filename}")
+
+    width, height = get_svg_size(filename)
+    if width > 140 or height > 40:
+        tmp_height = 140 * height / width
+        if tmp_height > 40:
+            new_width = 40 * width / height
+            width = ceil(new_width)
+            height = 40
+        else:
+            new_height = 140 * height / width
+            height = ceil(new_height)
+            width = 140
+        print(f"File {filename} too wide or too tall, resizing to {width} x {height}")
+        resize_svg(filename, filename1, str(width), str(height))
+
+    subprocess.check_call(
+        [
+            "scour",
+            "-i",
+            filename,
+            "-o",
+            filename1,
+            "--enable-id-stripping",
+            "--enable-comment-stripping",
+            "--shorten-ids",
+            "--strip-xml-prolog",
+            "--remove-descriptive-elements",
+            "--create-groups",
+            "--enable-viewboxing",
+            "--set-precision",
+            "3",
+            "--indent=none",
+            "--no-line-breaks",
+        ],
+        cwd=project_svgs,
+    )
+    os.rename(project_svgs / filename1, project_svgs / filename)
+    subprocess.check_call(
+        ["svgo", "-i", filename, "-o", filename],
+        cwd=project_svgs,
+    )
+    print("")
+
 
 def make_block(size: str, data: dict):
     if size == "1x":
@@ -170,6 +270,58 @@ def make_block(size: str, data: dict):
     return text
 
 
+def make_block2(svg_type: str, data: dict):
+    commons_key = f"commons_{svg_type}"
+    comment_key = f"comment_{svg_type}"
+    selected_key = f"selected_{svg_type}"
+    text = f"'wmgSiteLogo{svg_type.capitalize()}' => [\n"
+    for group, sites in data.items():
+        text += f"\t// {group}\n"
+        for site, info in sites.items():
+            if info is None:
+                # Default values
+                info = {}
+            # "no_wordmark" to generate null value
+            url = ""
+            if f"no_{svg_type}" in info and info[f"no_{svg_type}"]:
+                url = "null"
+                text += f"\t'{site}' => {url},\n"
+                continue
+            if commons_key not in info and selected_key not in info:
+                # Skip, doesn't have this type
+                continue
+            # It should not contains any variant, default to site name
+            selected = info.get(f"selected_{svg_type}", site)
+            proj, lang = transform_name(data, selected)
+            if lang is None:
+                name = f"{proj}-{svg_type}"
+            else:
+                name = f"{proj}-{svg_type}-{lang}"
+            filename = f"{name}.svg"
+            if not (project_svgs / filename).exists():
+                raise RuntimeError(f"Error: {filename} doesn't exist!")
+            url = f"/static/images/mobile/copyright/{filename}"
+            width, height = get_svg_size(filename)
+            width = ceil(width)
+            height = ceil(height)
+            # override width and height if specified
+            if f"width_{svg_type}" in info:
+                width = info[f"width_{svg_type}"]
+            if f"height_{svg_type}" in info:
+                height = info[f"height_{svg_type}"]
+            if comment_key in info:
+                comment = f" // {info[comment_key]}"
+            else:
+                comment = ""
+            text += f"\t'{site}' => [{comment}\n"
+            text += f"\t\t'src' => '{url}',\n"
+            text += f"\t\t'width' => {width},\n"
+            text += f"\t\t'height' => {height},\n\t],\n"
+        text += "\n"
+    text += "],\n\n"
+    return text
+
+
 def generate(data: dict):
     text = textwrap.dedent("""\
     <?php
@@ -193,11 +345,15 @@ def generate(data: dict):
     # used on labs instances.
     # Please check that any overrides in InitialiseSettings-labs.php work per instructions
     # at https://wikitech.wikimedia.org/wiki/Wikitech:Cloud_Services_Terms_of_use
+    # When defining new wordmarks or taglines, ensure width <= 140px so that logos are
+    # mobile friendly. Scale down them if necessary.
 
     return [
     """)
     for size in ["1x", "1_5x", "2x"]:
         text += make_block(size, data)
+    for svg_type in ["wordmark", "tagline"]:
+        text += make_block2(svg_type, data)
     text += "];\n"
 
     (DIR.parent / "wmf-config/logos.php").write_text(text)
@@ -215,23 +371,91 @@ def update(data: dict, wiki: str, variant: Optional[str]):
 
     if info is None:
         raise RuntimeError(f"I can't find any configuration for {wiki}")
-    if variant:
-        try:
-            commons = info["variants"][variant]
-            name = variant
-        except KeyError:
-            raise RuntimeError(f"Cannot find variant {variant} for site {wiki}")
-    else:
-        if "commons" not in info:
-            raise RuntimeError(
-                "The update function can only be used if a 'commons' SVG is present in config.yaml"
-            )
+    name = wiki
+    if "commons_wordmark" in info or "commons_tagline" in info:
+        for svg_type in ["wordmark", "tagline"]:
+            if f"commons_{svg_type}" in info:
+                commons_svg = info[f"commons_{svg_type}"]
+                download_svg(commons_svg, name, svg_type, data)
+    if "commons" in info:
+        if variant:
+            try:
+                commons = info["variants"][variant]
+                name = variant
+            except KeyError:
+                raise RuntimeError(f"Cannot find variant {variant} for site {wiki}")
         commons = info["commons"]
         name = wiki
-    download(commons, name)
+        download(commons, name)
+    elif "commons_wordmark" not in info and "commons_tagline" not in info \
+            and "selected_wordmark" not in info and "selected_tagline" not in info:
+        raise RuntimeError(
+            "The update function can only be used if a 'commons' SVG is present in config.yaml"
+        )
 
     # Regenerate
     generate(data)
+
+
+def transform_name(data: dict, name: str):
+    # "zhwikiquote" -> ("wikiquote", "zh"), for wordmark/tagline file naming
+    projects = list(data["Projects"].keys())
+    projects.extend(["wiki", "wikimedia"])
+    specials = list(data["Special wikis"].keys())
+    if name in projects:
+        return name, None
+    if name in specials:
+        if name.endswith("wiki"):
+            return name[:-4], None
+        else:
+            return name, None
+    for project in projects:
+        if name.endswith(project):
+            if project == "wiki":
+                project = "wikipedia"
+                return project, name[: -len("wiki")]
+            return project, name[: -len(project)]
+    raise RuntimeError(f"Cannot find project for {name}")
+
+
+def get_svg_size(filename: str):
+    with open(project_svgs / filename, "r") as f:
+        svg = f.read()
+        attr = ET.fromstring(svg).attrib
+        width = attr["width"] if "width" in attr else None
+        height = attr["height"] if "height" in attr else None
+        viewbox = attr["viewBox"] if "viewBox" in attr else None
+        if width is None and height is None and viewbox is None:
+            raise RuntimeError(f"{filename}: file doesn't have width, height or viewBox")
+        # Some optimized svg files don't have "width" and "height" attributes,
+        # so extract them from viewBox and store them for future use
+        if width is None or height is None or \
+                not width.replace('.','',1).isdigit() or not height.replace('.','',1).isdigit():
+                # some svg files has "width" and "height" with unit "pt" or "mm"
+            width, height = viewbox.split(" ")[2:]
+
+        return float(width), float(height)
+
+
+def resize_svg(filename: str, filename1: str, width: str, height: str):
+    subprocess.run(
+        [
+            "rsvg-convert",
+            "-a",
+            "-w",
+            width,
+            "-h",
+            height,
+            "-f",
+            "svg",
+            "-o",
+            filename1, # tmp file
+            filename,
+        ],
+        check=True,
+        cwd=project_svgs,
+    )
+    os.rename(project_svgs / filename1, project_svgs / filename)
 
 
 def main():
