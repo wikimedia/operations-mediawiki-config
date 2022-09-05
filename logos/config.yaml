@@ -1752,6 +1752,12 @@ Wiktionary:
         comment_1_5x:  T150618
         comment_2x:  T150618
 
+    mniwiktionary:
+        commons: File:Wiktionary-logo.svg
+        comment: T317004
+        comment_1_5x: T317004
+        comment_2x: T317004
+
     mrwiktionary:
         comment:  T45240
         comment_1_5x:  T150618
@@ -2067,6 +2073,12 @@ Wikiquote:
         comment_2x:  T313698
 
     fawikiquote:
+
+    frwikiquote:
+        commons: File:Wikiquote-logo-en.svg
+        comment: T317004
+        comment_1_5x: T317004
+        comment_2x: T317004
 
     guwikiquote:
         comment:  T121853

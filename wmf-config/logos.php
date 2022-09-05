@@ -424,6 +424,7 @@ return [
 	'mkwiktionary' => '/static/images/project-logos/mkwiktionary.png', // T140566
 	'mlwiktionary' => '/static/images/project-logos/mlwiktionary.png', // T43785
 	'mnwiktionary' => '/static/images/project-logos/mnwiktionary.png', // T45240
+	'mniwiktionary' => '/static/images/project-logos/mniwiktionary.png', // T317004
 	'mrwiktionary' => '/static/images/project-logos/mrwiktionary.png', // T45240
 	'mswiktionary' => '/static/images/project-logos/mswiktionary.png', // T45240
 	'mtwiktionary' => '/static/images/project-logos/mtwiktionary.png', // T45240
@@ -496,6 +497,7 @@ return [
 	'eswikiquote' => '/static/images/project-logos/eswikiquote.png',
 	'etwikiquote' => '/static/images/project-logos/etwikiquote-10k.png', // T302683, T313698
 	'fawikiquote' => '/static/images/project-logos/fawikiquote.png',
+	'frwikiquote' => '/static/images/project-logos/frwikiquote.png', // T317004
 	'guwikiquote' => '/static/images/project-logos/guwikiquote.png', // T121853
 	'hewikiquote' => '/static/images/project-logos/hewikiquote.png',
 	'hiwikiquote' => '/static/images/project-logos/hiwikiquote.png', // T126185
@@ -1205,6 +1207,7 @@ return [
 	'miwiktionary' => '/static/images/project-logos/miwiktionary-1.5x.png', // T150618
 	'mlwiktionary' => '/static/images/project-logos/mlwiktionary-1.5x.png', // T150618
 	'mnwiktionary' => '/static/images/project-logos/mnwiktionary-1.5x.png', // T150618
+	'mniwiktionary' => '/static/images/project-logos/mniwiktionary-1.5x.png', // T317004
 	'mrwiktionary' => '/static/images/project-logos/mrwiktionary-1.5x.png', // T150618
 	'mswiktionary' => '/static/images/project-logos/mswiktionary-1.5x.png', // T150618
 	'mtwiktionary' => '/static/images/project-logos/mtwiktionary-1.5x.png', // T150618
@@ -1255,6 +1258,7 @@ return [
 	'eswikiquote' => '/static/images/project-logos/eswikiquote-1.5x.png', // T170604
 	'etwikiquote' => '/static/images/project-logos/etwikiquote-10k-1.5x.png', // T313698
 	'fawikiquote' => '/static/images/project-logos/fawikiquote-1.5x.png',
+	'frwikiquote' => '/static/images/project-logos/frwikiquote-1.5x.png', // T317004
 	'guwikiquote' => '/static/images/project-logos/guwikiquote-1.5x.png',
 	'hewikiquote' => '/static/images/project-logos/hewikiquote-1.5x.png',
 	'hrwikiquote' => '/static/images/project-logos/hrwikiquote-1.5x.png', // T150618
@@ -1793,6 +1797,7 @@ return [
 	'miwiktionary' => '/static/images/project-logos/miwiktionary-2x.png', // T150618
 	'mlwiktionary' => '/static/images/project-logos/mlwiktionary-2x.png', // T150618
 	'mnwiktionary' => '/static/images/project-logos/mnwiktionary-2x.png', // T150618
+	'mniwiktionary' => '/static/images/project-logos/mniwiktionary-2x.png', // T317004
 	'mrwiktionary' => '/static/images/project-logos/mrwiktionary-2x.png', // T150618
 	'mswiktionary' => '/static/images/project-logos/mswiktionary-2x.png', // T150618
 	'mtwiktionary' => '/static/images/project-logos/mtwiktionary-2x.png', // T150618
@@ -1843,6 +1848,7 @@ return [
 	'eswikiquote' => '/static/images/project-logos/eswikiquote-2x.png', // T170604
 	'etwikiquote' => '/static/images/project-logos/etwikiquote-10k-2x.png', // T313698
 	'fawikiquote' => '/static/images/project-logos/fawikiquote-2x.png',
+	'frwikiquote' => '/static/images/project-logos/frwikiquote-2x.png', // T317004
 	'guwikiquote' => '/static/images/project-logos/guwikiquote-2x.png',
 	'hewikiquote' => '/static/images/project-logos/hewikiquote-2x.png',
 	'hrwikiquote' => '/static/images/project-logos/hrwikiquote-2x.png', // T150618
