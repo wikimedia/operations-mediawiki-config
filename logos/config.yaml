@@ -2,6 +2,7 @@ Projects:
     default:
         no_1_5x: true
         no_2x: true
+        no_tagline: true
 
     wikibooks:
         no_1_5x: true
@@ -15,6 +16,7 @@ Projects:
         selected: enwiki
         no_1_5x: true
         no_2x: true
+        selected_wordmark: enwiki
 
     wikiquote:
         no_1_5x: true
@@ -31,11 +33,13 @@ Projects:
     wiktionary:
         no_1_5x: true
         no_2x: true
+        selected_wordmark: enwiktionary
 
     wikivoyage:
         comment:  T55653
         no_1_5x: true
         no_2x: true
+        selected_wordmark: enwikivoyage
 
 Wikipedia:
     abwiki:
@@ -94,12 +98,20 @@ Wikipedia:
         commons: File:Wikipedia-logo-v2-ar.svg
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_wordmark: File:Wikipedia-wordmark-ar.svg
+        commons_tagline: File:Wikipedia-tagline-ar.svg
+        comment_tagline: T258552
 
     arywiki:
+        commons_wordmark: File:Wikipedia-wordmark-ary.svg
+        comment_wordmark: T290091
+        commons_tagline: File:Wikipedia-tagline-ary.svg
+        comment_tagline: T290091
 
     arzwiki:
         comment_1_5x:  T150618
         comment_2x:  T150618
+        selected_wordmark: arwiki
 
     astwiki:
         comment:  T42285, T131247
@@ -114,6 +126,7 @@ Wikipedia:
         comment:  T167714
         comment_1_5x:  T167714
         comment_2x:  T167714
+        commons_wordmark: File:Wikipedia_wordmark_atj_notext.svg
 
     avwiki:
         comment:  T48589
@@ -143,6 +156,8 @@ Wikipedia:
         comment:  T50397
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_wordmark: File:Wikipedia-wordmark-az.svg
+        comment_wordmark: T284877
 
     banwiki:
 
@@ -159,6 +174,7 @@ Wikipedia:
     bawiki:
         comment_1_5x:  T150618
         comment_2x:  T150618
+        selected_wordmark: ruwiki
 
     bclwiki:
         comment_1_5x:  T150618
@@ -180,6 +196,7 @@ Wikipedia:
         comment:  T50397
         comment_1_5x:  T150618
         comment_2x:  T150618
+        selected_wordmark: hiwiki
 
     biwiki:
         comment:  T51125
@@ -201,6 +218,10 @@ Wikipedia:
 
     bnwiki:
         commons: File:Wikipedia-logo-v2-bn.svg
+        commons_wordmark: File:Wikipedia-wordmark-bn.svg
+        comment_wordmark: T273085
+        commons_tagline: File:Wikipedia-tagline-bn.svg
+        comment_tagline: T273085
 
     bowiki:
         comment:  T50397
@@ -211,6 +232,8 @@ Wikipedia:
         comment:  T42285
         comment_1_5x:  T150618
         comment_2x:  T150618
+        selected_wordmark: bnwiki
+        comment_wordmark: T273085
 
     brwiki:
         comment_1_5x:  T150618
@@ -232,6 +255,9 @@ Wikipedia:
         commons: File:Wikipedia-logo-v2-ca.svg
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_wordmark: File:Wikipedia-wordmark-ca.svg
+        commons_tagline: File:Wikipedia-tagline-ca.svg
+        comment_tagline: T258552
 
     cbk_zamwiki:
         comment:  T46974
@@ -268,6 +294,8 @@ Wikipedia:
     ckbwiki:
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_wordmark: File:Wikipedia-wordmark-ckb.svg
+        comment_wordmark: T288368
 
     cowiki:
         comment:  T42285
@@ -277,6 +305,8 @@ Wikipedia:
     crhwiki:
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_wordmark: File:Wikipedia-wordmark-crh.svg
+        comment_wordmark: T309431
 
     crwiki:
         comment_1_5x:  T150618
@@ -291,6 +321,9 @@ Wikipedia:
         commons: File:Wikipedia-logo-v2-cs.svg
         comment_1_5x:  T130392
         comment_2x:  T130392
+        commons_wordmark: File:Wikipedia-wordmark-cs.svg
+        commons_tagline: File:Wikipedia-tagline-cs.svg
+        comment_tagline: T258552
 
     cuwiki:
         comment_1_5x:  T150618
@@ -303,6 +336,8 @@ Wikipedia:
     cywiki:
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_wordmark: File:Wikipedia-wordmark-cy.svg
+        comment_wordmark: T254788
 
     dawiki:
         commons: File:Wikipedia-logo-v2-da.svg
@@ -316,6 +351,8 @@ Wikipedia:
         commons: File:Wikipedia-logo-v2-de.svg
         comment_1_5x:  T132792
         comment_2x:  T132792
+        commons_tagline: File:Wikipedia-tagline-de.svg
+        comment_tagline: T258552
 
     dinwiki:
 
@@ -350,6 +387,10 @@ Wikipedia:
     elwiki:
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_wordmark: File:Wikipedia-wordmark-el.svg
+        comment_wordmark: T254788
+        commons_tagline: File:Wikipedia-tagline-el.svg
+        comment_tagline: T258552
 
     emlwiki:
         comment:  T100953
@@ -359,6 +400,10 @@ Wikipedia:
     enwiki:
         commons: File:Wikipedia-logo-v2-en.svg
         comment:  T309544
+        commons_wordmark: File:Wikipedia-wordmark-en.svg
+        comment_wordmark: T157476, T249047
+        commons_tagline: File:Wikipedia-tagline-en.svg
+        comment_tagline: T249047
 
     eowiki:
         commons: File:Wikipedia-logo-v2-eo.svg
@@ -369,14 +414,20 @@ Wikipedia:
         commons: File:Wikipedia-logo-v2-es.svg
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_tagline: File:Wikipedia-tagline-es.svg
+        comment_tagline: T258552
 
     etwiki:
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_wordmark: File:Wikipedia-wordmark-et.svg
+        comment_wordmark: T254788
 
     euwiki:
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_tagline: File:Wikipedia-tagline-eu.svg
+        comment_tagline: T249047
 
     extwiki:
         comment:  T48589
@@ -385,6 +436,10 @@ Wikipedia:
 
     fawiki:
         commons: File:Wikipedia-logo-v2-fa.svg
+        commons_wordmark: File:Wikipedia-wordmark-fa.svg
+        comment_wordmarktagline: T249047
+        commons_tagline: File:Wikipedia-tagline-fa.svg
+        comment_tagline: T249047
 
     ffwiki:
         comment_1_5x:  T150618
@@ -399,6 +454,8 @@ Wikipedia:
         commons: File:Wikipedia-logo-v2-fi.svg
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_tagline: File:Wikipedia-tagline-fi.svg
+        comment_tagline: T258552
 
     fowiki:
         comment:  T42285
@@ -415,6 +472,10 @@ Wikipedia:
 
     frwiki:
         commons: File:Wikipedia-logo-v2-fr.svg
+        commons_wordmark: File:Wikipedia-wordmark-fr.svg
+        comment_wordmark: T249047
+        commons_tagline: File:Wikipedia-tagline-fr.svg
+        comment_tagline: T249047
 
     furwiki:
         comment:  T48589
@@ -462,6 +523,7 @@ Wikipedia:
     gomwiki:
         comment_1_5x:  T150618
         comment_2x:  T150618
+        selected_wordmark: hiwiki
 
     gorwiki:
 
@@ -502,6 +564,10 @@ Wikipedia:
     hewiki:
         comment_1_5x:  T145017
         comment_2x:  T145017
+        commons_wordmark: File:Wikipedia-wordmark-he.svg
+        comment_wordmark: T249047
+        commons_tagline: File:Wikipedia-tagline-he.svg
+        comment_tagline: T249047
 
     hifwiki:
         comment:  T29361
@@ -512,6 +578,10 @@ Wikipedia:
         commons: File:Wikipedia-logo-v2-hi.svg
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_wordmark: File:Wikipedia-wordmark-hi.svg
+        comment_wordmark: T258552
+        commons_tagline: File:Wikipedia-tagline-hi.svg
+        comment_tagline: T258552
 
     hrwiki:
         comment_1_5x:  T150618
@@ -530,10 +600,17 @@ Wikipedia:
         commons: File:Wikipedia-logo-v2-hu.svg
         comment_1_5x:  T150618
         comment_2x:  T150618
+        selected_wordmark: frwiki
+        commons_tagline: File:Wikipedia-tagline-hu.svg
+        comment_tagline: T258552
 
     hywiki:
         comment_1_5x:  T150620
         comment_2x:  T150620
+        commons_wordmark: File:Wikipedia-wordmark-hy.svg
+        comment_wordmark: T259985
+        commons_tagline: File:Wikipedia-tagline-hy.svg
+        comment_tagline: T259985
 
     hywwiki:
         comment:  T212597
@@ -548,6 +625,8 @@ Wikipedia:
         commons: File:Wikipedia-logo-v2-id.svg
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_tagline: File:Wikipedia-tagline-id.svg
+        comment_tagline: T258552
 
     iewiki:
         comment:  T51125
@@ -584,6 +663,8 @@ Wikipedia:
 
     itwiki:
         commons: File:Wikipedia-logo-v2-it.svg
+        commons_tagline: File:Wikipedia-tagline-it.svg
+        comment_tagline: T258552
 
     iuwiki:
         comment:  T42285
@@ -599,6 +680,9 @@ Wikipedia:
         commons: File:Wikipedia-logo-v2-ja.svg
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_wordmark: File:Wikipedia-wordmark-ja.svg
+        commons_tagline: File:Wikipedia-tagline-ja.svg
+        comment_tagline: T258552
 
     jbowiki:
         comment:  T48589
@@ -609,6 +693,9 @@ Wikipedia:
         comment:  T251050
         comment_1_5x:  T251050
         comment_2x:  T251050
+        selected_wordmark: frwiki
+        commons_tagline: File:Wikipedia-tagline-jv.svg
+        comment_tagline: T311104
 
     kaawiki:
         comment:  T48589
@@ -623,6 +710,10 @@ Wikipedia:
     kawiki:
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_wordmark: File:Wikipedia-wordmark-ka.svg
+        comment_wordmark: T267776
+        commons_tagline: File:Wikipedia-tagline-ka.svg
+        comment_tagline: T267776
 
     kbdwiki:
         comment_1_5x:  T150618
@@ -666,15 +757,21 @@ Wikipedia:
     koiwiki:
         comment_1_5x:  T150618
         comment_2x:  T150618
+        selected_wordmark: ruwiki
 
     kowiki:
         commons: File:Wikipedia-logo-v2-ko.svg
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_wordmark: File:Wikipedia-wordmark-ko.svg
+        comment_wordmark: T258552
+        commons_tagline: File:Wikipedia-tagline-ko.svg
+        comment_tagline: T258552
 
     krcwiki:
         comment_1_5x:  T150618
         comment_2x:  T150618
+        selected_wordmark: ruwiki
 
     kshwiki:
         comment_1_5x:  T150618
@@ -685,6 +782,10 @@ Wikipedia:
         comment:  T293342
         comment_1_5x:  T150618, T293342
         comment_2x:  T150618, T293342
+        commons_wordmark: File:Wikipedia-wordmark-ks.svg
+        comment_wordmark: T294093
+        commons_tagline: File:Wikipedia-tagline-ks.svg
+        comment_tagline: T294093
 
     kuwiki:
         comment_1_5x:  T150618
@@ -710,11 +811,14 @@ Wikipedia:
         comment_2x:  T132120
 
     lawiki:
+        commons_wordmark: File:Wikipedia-wordmark-la.svg
+        comment_wordmark: T240728
 
     lbewiki:
         comment:  T42285
         comment_1_5x:  T150618
         comment_2x:  T150618
+        selected_wordmark: ruwiki
 
     lbwiki:
         comment_1_5x:  T150618
@@ -723,6 +827,7 @@ Wikipedia:
     lezwiki:
         comment_1_5x:  T150618
         comment_2x:  T150618
+        selected_wordmark: ruwiki
 
     lfnwiki:
         comment:  T183561
@@ -823,18 +928,27 @@ Wikipedia:
     mkwiki:
         comment_1_5x:  T150618
         comment_2x:  T150618
+        selected_wordmark: srwiki
+        comment_wordmark: T165896
 
     mlwiki:
         comment_1_5x:  T150618
         comment_2x:  T150618
 
     mnwiki:
+        commons: File:Wikipedia-logo-v2-mn.svg
         comment:  T48589
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_wordmark: File:Wikipedia-wordmark-mn.svg
+        comment_wordmark: T318478
+        commons_tagline: File:Wikipedia-tagline-mn.svg
+        comment_tagline: T318478
 
     mniwiki:
         commons: File:Wikipedia-logo-v2-mni-v2.svg
+        commons_wordmark: File:Wikipedia-wordmark-mni.svg
+        comment_wordmark: T294189
 
     mnwwiki:
 
@@ -848,6 +962,7 @@ Wikipedia:
     mrwiki:
         comment_1_5x:  T150618
         comment_2x:  T150618
+        selected_wordmark: hiwiki
 
     mswiki:
 
@@ -900,6 +1015,8 @@ Wikipedia:
         comment:  T139240
         comment_1_5x:  T139240
         comment_2x:  T139240
+        commons_wordmark: File:Wikipedia-wordmark-ne.svg
+        comment_wordmark: T311700
 
     newwiki:
         comment:  T42285
@@ -910,6 +1027,8 @@ Wikipedia:
 
     nlwiki:
         commons: File:Wikipedia-logo-v2-nl.svg
+        commons_tagline: File:Wikipedia-tagline-nl.svg
+        comment_tagline: T258552
 
     nnwiki:
         comment_1_5x:  T150618
@@ -983,6 +1102,7 @@ Wikipedia:
         comment:  T51125
         comment_1_5x:  T150618
         comment_2x:  T150618
+        selected_wordmark: frwiki
 
     pawiki:
         comment_1_5x:  T150618
@@ -991,6 +1111,7 @@ Wikipedia:
     pcdwiki:
         comment_1_5x:  T150618
         comment_2x:  T150618
+        selected_wordmark: frwiki
 
     pcmwiki:
         commons: File:Wikipedia-logo-v2-pcm.svg
@@ -1011,11 +1132,14 @@ Wikipedia:
     piwiki:
         comment_1_5x:  T150618
         comment_2x:  T150618
+        selected_wordmark: hiwiki
 
     plwiki:
         commons: File:Wikipedia-logo-v2-pl.svg
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_tagline: File:Wikipedia-tagline-pl.svg
+        comment_tagline: T258552
 
     pmswiki:
         comment_1_5x:  T150618
@@ -1035,11 +1159,17 @@ Wikipedia:
         comment:  T50397
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_wordmark: File:Wikipedia-wordmark-ps.svg
+        comment_wordmark: T184442
 
     ptwiki:
         commons: File:Wikipedia-logo-v2-pt.svg
         comment_1_5x:  T150618
         comment_2x:  T150618
+        comment_tagline: T258552
+        selected_wordmark: frwiki
+        commons_tagline: File:Wikipedia-tagline-pt.svg
+        comment_tagline: T258552
 
     pwnwiki:
         commons: File:Wikipedia-logo-v2-pwn.svg
@@ -1078,6 +1208,10 @@ Wikipedia:
 
     ruwiki:
         commons: File:Wikipedia-logo-v2-ru.svg
+        commons_wordmark: File:Wikipedia-wordmark-ru.svg
+        comment_wordmark: T162036
+        commons_tagline: File:Wikipedia-tagline-ru.svg
+        comment_tagline: T258552
 
     sahwiki:
         comment_1_5x:  T150618
@@ -1089,6 +1223,7 @@ Wikipedia:
         comment:  T50397
         comment_1_5x:  T150618
         comment_2x:  T150618
+        selected_wordmark: hiwiki
 
     scnwiki:
         comment:  T42285
@@ -1108,6 +1243,8 @@ Wikipedia:
         comment:  T50397
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_wordmark: File:Wikipedia-wordmark-sd.svg
+        comment_wordmark: T200870
 
     sewiki:
         comment_1_5x:  T150618
@@ -1140,6 +1277,7 @@ Wikipedia:
     skwiki:
         comment_1_5x:  T150618
         comment_2x:  T150618
+        selected_wordmark: frwiki
 
     skrwiki:
         comment:  T268410
@@ -1179,6 +1317,10 @@ Wikipedia:
     srwiki:
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_wordmark: File:Wikipedia-wordmark-sr.svg
+        comment_wordmark: T165896, T254788
+        commons_tagline: File:Wikipedia-tagline-sr.svg
+        comment_tagline: T258552
 
     sswiki:
         comment:  T46974
@@ -1199,11 +1341,14 @@ Wikipedia:
         comment:  T42285
         comment_1_5x:  T150618
         comment_2x:  T150618
+        selected_wordmark: frwiki
 
     svwiki:
         commons: File:Wikipedia-logo-v2-sv.svg
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_tagline: File:Wikipedia-tagline-sv.svg
+        comment_tagline: T258552
 
     swwiki:
         comment_1_5x:  T150618
@@ -1212,6 +1357,8 @@ Wikipedia:
     szlwiki:
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_wordmark: File:Wikipedia-wordmark-szl.svg
+        comment_wordmark: T233104
 
     szywiki:
 
@@ -1230,6 +1377,7 @@ Wikipedia:
         comment:  T48589
         comment_1_5x:  T150618
         comment_2x:  T150618
+        selected_wordmark: frwiki
 
     tewiki:
         comment_1_5x:  T150618
@@ -1243,6 +1391,10 @@ Wikipedia:
     thwiki:
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_wordmark: File:Wikipedia-wordmark-th.svg
+        comment_wordmark: T258552
+        commons_tagline: File:Wikipedia-tagline-th.svg
+        comment_tagline: T258552
 
     tiwiki:
         comment:  T249451
@@ -1253,6 +1405,8 @@ Wikipedia:
         comment:  T48589
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_wordmark: File:Wikipedia_wordmark-tk.svg
+        comment_wordmark: T314435
 
     tlwiki:
         comment_1_5x:  T150618
@@ -1280,6 +1434,10 @@ Wikipedia:
         commons: File:Wikipedia-logo-v2-tr.svg
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_wordmark: File:Wikipedia_wordmark-tr.svg
+        comment_wordmark: T255489, T254788
+        commons_tagline: File:Wikipedia-tagline-tr.svg
+        comment_tagline: T258552
 
     tswiki:
         comment:  T51125
@@ -1300,6 +1458,7 @@ Wikipedia:
         comment:  T51328
         comment_1_5x:  T150618
         comment_2x:  T150618
+        selected_wordmark: ruwiki
 
     tywiki:
         comment:  T48589
@@ -1310,36 +1469,51 @@ Wikipedia:
         comment:  T48589
         comment_1_5x:  T150618
         comment_2x:  T150618
+        selected_wordmark: ruwiki
 
     ugwiki:
         comment:  T50397
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_wordmark: File:Wikipedia-wordmark-ug.svg
+        comment_wordmark: T309431
 
     ukwiki:
         commons: File:Wikipedia-logo-v2-uk.svg
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_wordmark: File:Wikipedia-wordmark-uk.svg
+        comment_wordmark: T254788
+        commons_tagline: File:Wikipedia-tagline-uk.svg
+        comment_tagline: T258552
 
     urwiki:
         comment:  T48589
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_wordmark: File:Wikipedia-wordmark-ur.svg
+        comment_wordmark: T171769, T254788
 
     uzwiki:
         comment:  T39699
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_wordmark: File:Wikipedia-wordmark-uz.svg
+        comment_wordmark: T205226, T254788
 
     vecwiki:
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_tagline: File:Wikipedia-tagline-vec.svg
+        comment_tagline: T273085
 
     vepwiki:
         comment_1_5x:  T150618
         comment_2x:  T150618
 
     viwiki:
+        commons_tagline: File:Wikipedia-tagline-vi.svg
+        comment_tagline: T258552
 
     vlswiki:
         comment:  T42285
@@ -1404,6 +1578,10 @@ Wikipedia:
         comment:  T177165, T259006
         comment_1_5x:  T177165, T259006
         comment_2x:  T177165, T259006
+        commons_wordmark: File:Wikipedia-wordmark-zh-c.svg
+        comment_wordmark: T174192, T261110
+        commons_tagline: File:Wikipedia-tagline-zh-c.svg
+        comment_tagline: T258552, T261110
 
     zh_min_nanwiki:
         comment_1_5x:  T150618
@@ -1420,6 +1598,10 @@ Wikipedia:
         comment:  T276694
         comment_1_5x:  T276694
         comment_2x:  T276694
+        commons_wordmark: File:Wikipedia-wordmark-zh.svg
+        comment_wordmark: T258552, T260908
+        commons_tagline: File:Wikipedia-tagline-zh.svg
+        comment_tagline: T258552, T260908
 
     zuwiki:
         comment:  T233424
@@ -1473,6 +1655,8 @@ Wiktionary:
         comment:  T45240
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_wordmark: File:Wiktionary-wordmark-bn.svg
+        comment_wordmark: T316953
 
     brwiktionary:
         no_1_5x: true
@@ -1521,6 +1705,8 @@ Wiktionary:
     enwiktionary:
         comment_1_5x:  T138801
         comment_2x:  T138801
+        commons_wordmark: File:Wiktionary-wordmark-en.svg
+        comment_wordmark: T157476, T249047
 
     eowiktionary:
         comment:  T45240
@@ -1530,6 +1716,8 @@ Wiktionary:
     eswiktionary:
         no_1_5x: true
         no_2x: true
+        commons_wordmark: File:Wiktionary-wordmark-es.svg
+        comment_wordmark: T254059
 
     etwiktionary:
         comment:  T45240
@@ -1557,6 +1745,10 @@ Wiktionary:
     frwiktionary:
         comment_1_5x:  T144427
         comment_2x:  T144427
+        commons_wordmark: File:Wiktionary-wordmark-fr.svg
+        comment_wordmark: T249047
+        commons_tagline: File:Wiktionary-tagline-fr.svg
+        comment_tagline: T249047
 
     fywiktionary:
         comment:  T45240
@@ -1592,6 +1784,8 @@ Wiktionary:
         comment_2x:  T150618
 
     hewiktionary:
+        commons_wordmark: File:Wiktionary-wordmark-he.svg
+        comment_wordmark: T308411
 
     hiwiktionary:
         comment:  T45240
@@ -1652,6 +1846,10 @@ Wiktionary:
         comment:  T287425
         comment_1_5x:  T287425
         comment_2x:  T287425
+        commons_wordmark: File:Wiktionary-wordmark-jv.svg
+        comment_wordmark: T311104
+        commons_tagline: File:Wiktionary-tagline-jv.svg
+        comment_tagline: T311104
 
     kawiktionary:
         no_1_5x: true
@@ -1753,6 +1951,8 @@ Wiktionary:
         comment: T317004
         comment_1_5x: T317004
         comment_2x: T317004
+        commons_wordmark: File:Wiktionary-wordmark-mni.svg
+        comment_wordmark: T294709
 
     mrwiktionary:
         comment:  T45240
@@ -1813,6 +2013,8 @@ Wiktionary:
     plwiktionary:
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_wordmark: File:Wiktionary-wordmark-pl.svg
+        comment_wordmark: T307683
 
     pnbwiktionary:
         no_1_5x: true
@@ -1844,6 +2046,8 @@ Wiktionary:
     ruwiktionary:
         no_1_5x: true
         no_2x: true
+        commons_wordmark: File:Wiktionary-wordmark-ru.svg
+        comment_wordmark: T308233
 
     sawiktionary:
         comment:  T45240
@@ -1985,6 +2189,8 @@ Wiktionary:
         comment:  T308411
         comment_1_5x: T308411
         comment_2x: T308411
+        commons_wordmark: File:Wiktionary-wordmark-yi.svg
+        comment_wordmark: T308411
 
     yuewiktionary:
 
@@ -2081,6 +2287,8 @@ Wikiquote:
         comment: T317004
         comment_1_5x: T317004
         comment_2x: T317004
+        commons_wordmark: File:Wikiquote.svg
+        comment_wordmark: T290091
 
     guwikiquote:
         comment:  T121853
@@ -2207,6 +2415,8 @@ Wikiquote:
     trwikiquote:
         no_1_5x: true
         no_2x: true
+        commons_wordmark: File:Wikiquote-wordmark-tr.svg
+        comment_wordmark: T286133
 
     ukwikiquote:
         no_1_5x: true
@@ -2273,6 +2483,10 @@ Wikibooks:
         no_2x: true
 
     bnwikibooks:
+        commons_wordmark: File:Wikibooks-wordmark-bn.svg
+        comment_wordmark: T319320
+        commons_tagline: File:Wikibooks-tagline-bn.svg
+        comment_tagline: T319320
 
     cawikibooks:
 
@@ -2496,6 +2710,10 @@ Wikibooks:
 
     viwikibooks:
         comment:  T39661
+        commons_wordmark: File:Wikibooks-wordmark-vi.svg
+        comment_wordmark: T290091
+        commons_tagline: File:Wikibooks-tagline-vi.svg
+        comment_tagline: T290091
 
     zhwikibooks:
         no_1_5x: true
@@ -2587,10 +2805,16 @@ Wikinews:
     plwikinews:
         no_1_5x: true
         no_2x: true
+        commons_wordmark: File:Wikinews-wordmark-pl.svg
+        comment_wordmark: T290091
 
     ptwikinews:
         no_1_5x: true
         no_2x: true
+        commons_wordmark: File:Wikinews-wordmark-pt.svg
+        comment_wordmark: T281591, T313174
+        commons_tagline: File:Wikinews-tagline-pt.svg
+        comment_tagline: T313174
 
     rowikinews:
         no_1_5x: true
@@ -2763,6 +2987,8 @@ Wikisource:
 
     jvwikisource:
         commons: File:Wikisource-logo-jv.svg
+        commons_wordmark: File:Wikisource-wordmark-jv.svg
+        comment_wordmark: T311104
 
     knwikisource:
         comment:  T110806
@@ -2874,6 +3100,8 @@ Wikisource:
         comment:  T54019
         no_1_5x: true
         no_2x: true
+        commons_wordmark: File:Vikikaynak.svg
+        comment_wordmark: T260658
 
     ukwikisource:
         comment:  T56491
@@ -2903,6 +3131,8 @@ Wikisource:
         comment:  T229715, T261076, T308620
         comment_1_5x:  T229715, T261076, T308620
         comment_2x:  T229715, T261076, T308620
+        commons_wordmark: File:Wikisource-wordmark-zh.svg
+        comment_wordmark: T261076, T308620
 
 Wikiversity:
     arwikiversity:
@@ -2954,6 +3184,8 @@ Wikiversity:
     ptwikiversity:
         comment_1_5x:  T150618
         comment_2x:  T150618
+        commons_wordmark: File:Wikiversity-wordmark-pt.svg
+        comment_wordmark: T249047
 
     ruwikiversity:
         comment_1_5x:  T150618
@@ -2975,12 +3207,16 @@ Wikiversity:
 
 Wikivoyage:
     bnwikivoyage:
+        commons_wordmark: File:Wikivoyage-wordmark-bn.svg
+        comment_wordmark: T196680, T298033
 
     elwikivoyage:
         no_1_5x: true
         no_2x: true
 
     enwikivoyage:
+        commons_wordmark: File:Wikivoyage-wordmark-en.svg
+        comment_wordmark: T157476, T261033, T273477
 
     eowikivoyage:
 
@@ -3000,6 +3236,8 @@ Wikivoyage:
     hewikivoyage:
         comment_1_5x:  T208148
         comment_2x:  T208148
+        commons_wordmark: File:Wikivoyage-wordmark-he.svg
+        comment_wordmark: T234278
 
     hiwikivoyage:
         comment:  T173013
@@ -3009,6 +3247,8 @@ Wikivoyage:
     plwikivoyage:
 
     pswikivoyage:
+        commons_wordmark: File:Wikivoyage-wordmark-ps.svg
+        comment_wordmark: T200152
 
     ruwikivoyage:
         comment_1_5x:  T150618
@@ -3025,6 +3265,8 @@ Wikivoyage:
         comment:  T110370
 
     trwikivoyage:
+        commons_wordmark: File:Wikivoyage-wordmark-tr.svg
+        comment_wordmark: T272776
 
     viwikivoyage:
         comment_1_5x:  T151570
@@ -3052,6 +3294,8 @@ Wikivoyage:
         comment:  T257925
         comment_1_5x:  T257925
         comment_2x:  T257925
+        commons_wordmark: File:Wiki_Movimento_Brasil_wordmark.svg
+        comment_wordmark: T313194
 
     bdwikimedia:
         no_1_5x: true
@@ -3128,6 +3372,8 @@ Wikivoyage:
     nowikimedia:
         no_1_5x: true
         no_2x: true
+        commons_wordmark: File:Wikimedia-wordmark-no.svg
+        comment_wordmark: T318341
 
     nycwikimedia:
         no_1_5x: true
@@ -3234,10 +3480,14 @@ Wikivoyage:
     collabwiki:
         no_1_5x: true
         no_2x: true
+        commons_wordmark: File:Collab-wordmark.svg
+        comment_wordmark: T290091
 
     commonswiki:
         comment_1_5x:  T203343
         comment_2x:  T203343
+        commons_wordmark: File:Commons-wordmark-en.svg
+        comment_wordmark: T157476
 
     donatewiki:
 
@@ -3251,6 +3501,8 @@ Wikivoyage:
         no_2x: true
 
     foundationwiki:
+        commons_wordmark: File:Foundation-wordmark.svg
+        comment_wordmark: T295303
 
     iegcomwiki:
         comment:  T50379
@@ -3276,14 +3528,20 @@ Wikivoyage:
 
     mediawikiwiki:
         commons: File:MediaWiki-2020-logo.svg
+        commons_wordmark: File:MediaWiki-2020-wordmark.svg
+        comment_wordmark: T268230
 
     metawiki:
+        commons_wordmark: File:Meta-wordmark.svg
+        comment_wordmark: T295303
 
     nostalgiawiki:
         no_1_5x: true
         no_2x: true
 
     officewiki:
+        commons_wordmark: File:Office-wordmark.svg
+        comment_wordmark: T249047
 
     ombudsmenwiki:
         commons: File:Wikimedia Ombuds logo.svg
@@ -3295,6 +3553,8 @@ Wikivoyage:
     outreachwiki:
         no_1_5x: true
         no_2x: true
+        commons_wordmark: File:Outreach-wordmark.svg
+        comment_wordmark: T290091, T297580
 
     qualitywiki:
         no_1_5x: true
@@ -3327,12 +3587,15 @@ Wikivoyage:
     strategywiki:
         no_1_5x: true
         no_2x: true
+        commons_wordmark: File:Strategy-wordmark.svg
+        comment_wordmark: T290091
 
     tenwiki:
         no_1_5x: true
         no_2x: true
 
     test2wiki:
+        selected_wordmark: enwiki
 
     testcommonswiki:
         selected: commonswiki
@@ -3342,10 +3605,13 @@ Wikivoyage:
     testwiki:
         comment_1_5x:  T150618
         comment_2x:  T150618
+        selected_wordmark: enwiki
 
     testwikidatawiki:
         no_1_5x: true
         no_2x: true
+        commons_wordmark: File:Wikidata wordmark.svg
+        comment_wordmark: T299512
 
     transitionteamwiki:
         comment:  T50379
@@ -3370,6 +3636,9 @@ Wikivoyage:
     wikidatawiki:
         comment_1_5x:  T230120
         comment_2x:  T230120
+        commons_wordmark: File:Wikidata wordmark.svg
+        comment_wordmark: T315572
+
 
     # Commented out until the wiki goes live in production
     # wikifunctionswiki:
@@ -3452,6 +3721,8 @@ Wikivoyage:
     wikimaniawiki:
         comment_1_5x:  T194340
         comment_2x:  T194340
+        commons_wordmark: File:Wikimania mark.svg
+        comment_wordmark: T286405
 
     wikitech:
         commons: File:Wikitech-2021-logo-blue.svg
