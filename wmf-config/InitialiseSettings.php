@@ -8713,8 +8713,8 @@ return [
 	'+testwikidatawiki' => [ 120 => 1 ], // Search properties by default
 	'+wikidatawiki' => [ 120 => 1 ], // Search properties by default
 	'+wikimaniawiki' => [
-		132 => 1, // 2021, T284793
 		134 => 1, // 2022, T295267
+		136 => 1, // 2023, T316928
 	],
 	'+zhwikisource' => [
 		100 => 1, // T308393, Portal
