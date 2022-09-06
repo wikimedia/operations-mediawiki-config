@@ -772,6 +772,11 @@ return [
 		'width' => 113,
 		'height' => 25,
 	],
+	'bnwiktionary' => [ // T316953
+		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-bn.svg',
+		'width' => 123,
+		'height' => 25,
+	],
 	'bpywiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-bn.svg',
 		'width' => 113,
