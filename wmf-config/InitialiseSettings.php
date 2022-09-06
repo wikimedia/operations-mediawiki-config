@@ -27461,6 +27461,10 @@ return [
 'wgGEMentorDashboardUseVue' => [
 	'default' => false,
 	'testwiki' => true,
+	'arwiki' => true,
+	'bnwiki' => true,
+	'cswiki' => true,
+	'eswiki' => true,
 ],
 
 'wgGEMentorDashboardDeploymentMode' => [
