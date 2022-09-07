@@ -715,6 +715,11 @@ return [
 
 'wmgSiteLogoWordmark' => [
 	// Projects
+	'wikidata' => [
+		'src' => '/static/images/mobile/copyright/wikidata-en.svg',
+		'width' => 130,
+		'height' => 17,
+	],
 	'wikipedia' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-en.svg',
 		'width' => 119,
