@@ -424,9 +424,8 @@ $wgCdnMatchParameterOrder = false;
 // T314294
 if ( $wmgUsePhonos ) {
 	wfLoadExtension( 'Phonos' );
-	// T314294#8163339 — Initial testing configuration
-	$wgPhonosEngine = 'larynx';
-	$wgPhonosApiEndpointLarynx = 'https://larynx-tts.wmcloud.org/api/tts';
+	// $wgPhonosApiKeyGoogle in PrivateSettings
+	$wgPhonosEngine = 'google';
 }
 
 }
