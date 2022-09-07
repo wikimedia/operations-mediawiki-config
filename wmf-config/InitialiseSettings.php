@@ -26259,6 +26259,7 @@ return [
 // T246493
 'wmgUseNearbyPages' => [
 	'default' => false,
+	'wikidatawiki' => true,
 ],
 'wgNearbyPagesUrl' => [
 	'default' => '/w/api.php',
