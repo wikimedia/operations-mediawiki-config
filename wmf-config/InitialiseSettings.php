@@ -28468,6 +28468,7 @@ return [
 	'test2wiki' => false,
 	'wikitech' => false,
 	'cswiki' => false,
+	'enwikivoyage' => false,
 	// Careful with these, since they can partake in cross-wiki inclusion.
 	// See T51097#7401266
 	'metawiki' => true,
