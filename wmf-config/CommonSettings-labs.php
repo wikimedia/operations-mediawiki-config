@@ -426,6 +426,7 @@ if ( $wmgUsePhonos ) {
 	wfLoadExtension( 'Phonos' );
 	// $wgPhonosApiKeyGoogle in PrivateSettings
 	$wgPhonosEngine = 'google';
+	$wgPhonosFileBackend = 'global-multiwrite';
 }
 
 }
