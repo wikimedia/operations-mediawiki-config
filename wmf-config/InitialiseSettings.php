@@ -20486,8 +20486,7 @@ return [
 ],
 
 'wgDiscussionToolsEnablePermalinksBackend' => [
-	'default' => false, // Until the tables are created: T315353
-	'testwiki' => true,
+	'default' => true, // T315353
 ],
 
 'wgDTSchemaEditAttemptStepSamplingRate' => [
