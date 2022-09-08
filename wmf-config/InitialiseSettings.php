@@ -27998,9 +27998,9 @@ return [
 
 'wmgUseSearchVue' => [
 	'default' => false,
-	// 'ptwiki' => true, // to be enabled later
-	// 'ruwiki' => true, // to be enabled later
-	// 'idwiki' => true, // to be enabled later
+	'ptwiki' => true,
+	'ruwiki' => true,
+	'idwiki' => true,
 ],
 
 'wgImageSuggestionsHelpLink' => [
