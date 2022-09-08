@@ -2424,7 +2424,19 @@ function wmfGetOverrideSettings() {
 
 		'wmgUseSearchVue' => [
 			'default' => false,
-			// 'en' => true, // to be enabled later
+			'en' => true,
+		],
+		'wgQuickViewMediaRepositoryApiBaseUri' => [
+			'default' => '//commons.wikimedia.beta.wmflabs.org/w/api.php',
+		],
+		'wgQuickViewMediaRepositorySearchUri' => [
+			'default' => '//commons.wikimedia.beta.wmflabs.org/wiki/Special:MediaSearch',
+		],
+		'wgQuickViewMediaRepositoryUri' => [
+			'default' => '//commons.wikimedia.beta.wmflabs.org',
+		],
+		'wgQuickViewSearchFilterForQID' => [
+			'default' => 'haswbstatement:P245962=%s',
 		],
 
 		// See T311752
