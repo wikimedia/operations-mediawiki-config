@@ -10496,6 +10496,7 @@ return [
 		'translationadmin' => [
 			'autopatrol' => true, // T142123
 			'banner-protect' => true,
+			'editcontentmodel' => true, // T311587
 		],
 		'uploader' => [ // T52287
 			'upload' => true,
