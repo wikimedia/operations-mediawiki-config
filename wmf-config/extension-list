@@ -130,6 +130,7 @@ $IP/extensions/SandboxLink/extension.json
 $IP/extensions/Score/extension.json
 $IP/extensions/Scribunto/extension.json
 $IP/extensions/SearchExtraNS/extension.json
+$IP/extensions/SearchVue/extension.json
 $IP/extensions/SecureLinkFixer/extension.json
 $IP/extensions/SecurePoll/extension.json
 $IP/extensions/ShortUrl/extension.json

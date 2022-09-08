@@ -4225,6 +4225,10 @@ if ( $wmgUseImageSuggestions ) {
 	wfLoadExtension( 'ImageSuggestions' );
 }
 
+if ( $wmgUseSearchVue ) {
+	wfLoadExtension( 'SearchVue' );
+}
+
 if ( $wmgUseCampaignEvents ) {
 	wfLoadExtension( 'CampaignEvents' );
 	$wgCampaignEventsDatabaseCluster = 'extension1';

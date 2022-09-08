@@ -2422,6 +2422,11 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 		],
 
+		'wmgUseSearchVue' => [
+			'default' => false,
+			// 'en' => true, // to be enabled later
+		],
+
 		// See T311752
 		'wmgUseCampaignEvents' => [
 			'default' => true,

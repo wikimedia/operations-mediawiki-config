@@ -27782,6 +27782,13 @@ return [
 	'idwiki' => true,
 ],
 
+'wmgUseSearchVue' => [
+	'default' => false,
+	// 'ptwiki' => true, // to be enabled later
+	// 'ruwiki' => true, // to be enabled later
+	// 'idwiki' => true, // to be enabled later
+],
+
 'wgImageSuggestionsHelpLink' => [
 	'ptwiki' => '/wiki/Ajuda:Guia_de_edi%C3%A7%C3%A3o/Como_usar_imagens', // T292310
 	'ruwiki' => '/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%98%D0%BB%D0%BB%D1%8E%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5', // T292310
