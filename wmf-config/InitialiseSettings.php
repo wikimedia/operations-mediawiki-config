@@ -25122,7 +25122,7 @@ return [
 
 // Enable completion suggester on all wikis (except wikidata)
 'wgCirrusSearchUseCompletionSuggester' => [
-	'default' => 'yes',
+	'default' => 'build',
 	'wikidatawiki' => 'no',
 ],
 
