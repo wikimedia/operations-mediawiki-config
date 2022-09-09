@@ -26257,6 +26257,8 @@ return [
 // T246493
 'wmgUseNearbyPages' => [
 	'default' => false,
+	'hewiki' => true,
+	'frwiki' => true,
 	'wikidatawiki' => true,
 ],
 'wgNearbyPagesUrl' => [
