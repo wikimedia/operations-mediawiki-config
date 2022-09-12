@@ -1117,7 +1117,7 @@ return [
 		'width' => 153,
 		'height' => 32,
 	],
-	'ptwikinews' => [ // T281591
+	'ptwikinews' => [ // T281591, T313174
 		'src' => '/static/images/mobile/copyright/wikinews-wordmark-pt.svg',
 		'width' => 121,
 		'height' => 25,
@@ -1448,6 +1448,13 @@ return [
 		'src' => '/static/images/mobile/copyright/wiktionary-tagline-jv.svg',
 		'width' => 102,
 		'height' => 13,
+	],
+
+	// Wikinews
+	'ptwikinews' => [ // T313174
+		'src' => '/static/images/mobile/copyright/wikinews-tagline-pt.svg',
+		'width' => 121,
+		'height' => 10,
 	],
 ],
 # @} end of wgLogos
