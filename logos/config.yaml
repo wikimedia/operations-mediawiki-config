@@ -669,12 +669,8 @@ Wikipedia:
 
     kowiki:
         commons: File:Wikipedia-logo-v2-ko.svg
-        selected: kowiki-600k
-        variants:
-            kowiki-600k: File:Wikipedia-logo-ko-600k.svg
-        comment:  T315127
-        comment_1_5x:  T150618, T315127
-        comment_2x:  T150618, T315127
+        comment_1_5x:  T150618
+        comment_2x:  T150618
 
     krcwiki:
         comment_1_5x:  T150618
