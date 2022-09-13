@@ -20979,6 +20979,7 @@ return [
 	'nsowiki' => true, // T309384
 	'ocwiki' => true, // T301443
 	'omwiki' => true, // T309384
+	'orwiki' => true, // T313300
 	'pawiki' => true, // T304828
 	'siwiki' => true, // T313300
 	'slwiki' => true, // T308829
@@ -21004,7 +21005,7 @@ return [
 
 'wgSectionTranslationTargetLanguages' => [
 	'default' => null,
-	'wikipedia' => [ 'am', 'as', 'ast', 'ay', 'az', 'ba', 'bcl', 'bn', 'bs', 'ceb', 'ckb', 'cs', 'cy', 'el', 'eo', 'et', 'eu', 'fa', 'gl', 'gu', 'ha', 'he', 'ht', 'hy', 'ig', 'ilo', 'is', 'jv', 'kg', 'km', 'kn', 'ko', 'ku', 'lg', 'ln', 'lt', 'lv', 'mk', 'ml', 'mn', 'mr', 'ms', 'mt', 'my', 'ne', 'nso', 'oc', 'om', 'pa', 'si', 'sl', 'so', 'sq', 'sr', 'ss', 'su', 'sw', 'ta', 'te', 'th', 'tl', 'tn', 'tr', 'ts', 'ur', 'uz', 'wo', 'yo', 'zu' ],
+	'wikipedia' => [ 'am', 'as', 'ast', 'ay', 'az', 'ba', 'bcl', 'bn', 'bs', 'ceb', 'ckb', 'cs', 'cy', 'el', 'eo', 'et', 'eu', 'fa', 'gl', 'gu', 'ha', 'he', 'ht', 'hy', 'ig', 'ilo', 'is', 'jv', 'kg', 'km', 'kn', 'ko', 'ku', 'lg', 'ln', 'lt', 'lv', 'mk', 'ml', 'mn', 'mr', 'ms', 'mt', 'my', 'ne', 'nso', 'oc', 'om', 'or', 'pa', 'si', 'sl', 'so', 'sq', 'sr', 'ss', 'su', 'sw', 'ta', 'te', 'th', 'tl', 'tn', 'tr', 'ts', 'ur', 'uz', 'wo', 'yo', 'zu' ],
 	'testwiki' => [ 'af', 'am', 'ar', 'as', 'ast', 'ay', 'az', 'ba', 'bcl', 'bho', 'bn', 'bs', 'ca', 'ceb', 'ckb', 'cs', 'cy', 'dv', 'ee', 'el', 'eo', 'es', 'et', 'eu', 'fa', 'fr', 'gl', 'gn', 'gu', 'ha', 'he', 'hi', 'ht', 'hy', 'id', 'ig', 'ilo', 'is', 'jv', 'kg', 'ki', 'km', 'kn', 'ko', 'ku', 'lg', 'ln', 'lt', 'lv', 'mk', 'ml', 'mn', 'mni', 'mr', 'ms', 'mt', 'my', 'ne', 'nso', 'oc', 'om', 'or', 'pa', 'pt', 'qu', 'ru', 'sa', 'si', 'sl', 'so', 'sq', 'sr', 'ss', 'su', 'sw', 'ta', 'te', 'th', 'ti', 'tl', 'tn', 'tr', 'ts', 'tw', 'uk', 'ur', 'uz', 'vi', 'wo', 'yo', 'zh', 'zh-yue', 'zu' ],
 ],
 
