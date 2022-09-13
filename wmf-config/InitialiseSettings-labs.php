@@ -997,8 +997,13 @@ function wmfGetOverrideSettings() {
 				],
 			],
 		],
+
 		'-wgScorePath' => [
 			'default' => "//upload.wikimedia.beta.wmflabs.org/score",
+		],
+
+		'-wgPhonosPath' => [
+			'default' => "//upload.wikimedia.beta.wmflabs.org/phonos",
 		],
 
 		'wgRateLimitsExcludedIPs' => [
