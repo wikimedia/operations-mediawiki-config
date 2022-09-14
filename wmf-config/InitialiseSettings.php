@@ -20615,9 +20615,7 @@ return [
 	"diqwiki" => true,
 	"dsbwiki" => true,
 	"dtywiki" => true,
-	"dvwiki" => true,
 	"dzwiki" => true,
-	"eewiki" => true,
 	"emlwiki" => true,
 	"enwiki" => true,
 	"eswiki" => true,
@@ -20636,7 +20634,6 @@ return [
 	"ganwiki" => true,
 	"gdwiki" => true,
 	"glkwiki" => true,
-	"gnwiki" => true,
 	"gomwiki" => true,
 	"gorwiki" => true,
 	"gotwiki" => true,
@@ -20724,7 +20721,6 @@ return [
 	"pntwiki" => true,
 	"pswiki" => true,
 	"ptwiki" => true,
-	"quwiki" => true,
 	"rmwiki" => true,
 	"rmywiki" => true,
 	"rnwiki" => true,
@@ -20734,7 +20730,6 @@ return [
 	"ruewiki" => true,
 	"ruwiki" => true,
 	"satwiki" => true,
-	"sawiki" => true,
 	"scnwiki" => true,
 	"scwiki" => true,
 	"sewiki" => true,
@@ -20753,12 +20748,10 @@ return [
 	"szywiki" => true,
 	"tcywiki" => true,
 	"tetwiki" => true,
-	"tiwiki" => true,
 	"towiki" => true,
 	"tpiwiki" => true,
 	"ttwiki" => true,
 	"tumwiki" => true,
-	"twwiki" => true,
 	"tyvwiki" => true,
 	"tywiki" => true,
 	"udmwiki" => true,
@@ -20944,12 +20937,15 @@ return [
 	'cebwiki' => true, // T313300
 	'cswiki' => true, // T304855
 	'cywiki' => true, // T308829
+	'dvwiki' => true, // T313296
+	'eewiki' => true, // T313296
 	'elwiki' => true, // T304854
 	'eowiki' => true, // T308829
 	'etwiki' => true, // T308829
 	'euwiki' => true, // T304854
 	'fawiki' => true, // T296475
 	'glwiki' => true, // T308829
+	'gnwiki' => true, // T313296
 	'guwiki' => true, // T304828
 	'hawiki' => true, // T290175
 	'hewiki' => true, // T304863
@@ -20971,6 +20967,7 @@ return [
 	'mkwiki' => true, // T304828
 	'mlwiki' => true, // T285842
 	'mnwiki' => true, // T298237
+	'mniwiki' => true, // T313296
 	'mrwiki' => true, // T304828
 	'mswiki' => true, // T285842
 	'mtwiki' => true, // T308829
@@ -20981,6 +20978,8 @@ return [
 	'omwiki' => true, // T309384
 	'orwiki' => true, // T313300
 	'pawiki' => true, // T304828
+	'quwiki' => true, // T313296
+	'sawiki' => true, // T313296
 	'siwiki' => true, // T313300
 	'slwiki' => true, // T308829
 	'sowiki' => true, // T313300
@@ -20991,11 +20990,13 @@ return [
 	'swwiki' => true, // T304828
 	'tawiki' => true, // T285842
 	'tewiki' => true, // T298237
+	'tiwiki' => true, // T313296
 	'thwiki' => true, // T290175
 	'tlwiki' => true, // T298237
 	'tnwiki' => true, // T309384
 	'trwiki' => true, // T304853
 	'tswiki' => true, // T304828
+	'twwiki' => true, // T313296
 	'urwiki' => true, // T304828
 	'uzwiki' => true, // T310116
 	'wowiki' => true, // T309384
@@ -21005,7 +21006,7 @@ return [
 
 'wgSectionTranslationTargetLanguages' => [
 	'default' => null,
-	'wikipedia' => [ 'am', 'as', 'ast', 'ay', 'az', 'ba', 'bcl', 'bn', 'bs', 'ceb', 'ckb', 'cs', 'cy', 'el', 'eo', 'et', 'eu', 'fa', 'gl', 'gu', 'ha', 'he', 'ht', 'hy', 'ig', 'ilo', 'is', 'jv', 'kg', 'km', 'kn', 'ko', 'ku', 'lg', 'ln', 'lt', 'lv', 'mk', 'ml', 'mn', 'mr', 'ms', 'mt', 'my', 'ne', 'nso', 'oc', 'om', 'or', 'pa', 'si', 'sl', 'so', 'sq', 'sr', 'ss', 'su', 'sw', 'ta', 'te', 'th', 'tl', 'tn', 'tr', 'ts', 'ur', 'uz', 'wo', 'yo', 'zu' ],
+	'wikipedia' => [ 'am', 'as', 'ast', 'ay', 'az', 'ba', 'bcl', 'bn', 'bs', 'ceb', 'ckb', 'cs', 'cy', 'dv', 'ee', 'el', 'eo', 'et', 'eu', 'fa', 'gl', 'gn', 'gu', 'ha', 'he', 'ht', 'hy', 'ig', 'ilo', 'is', 'jv', 'kg', 'km', 'kn', 'ko', 'ku', 'lg', 'ln', 'lt', 'lv', 'mk', 'ml', 'mn', 'mni', 'mr', 'ms', 'mt', 'my', 'ne', 'nso', 'oc', 'om', 'or', 'pa', 'qu', 'sa', 'si', 'sl', 'so', 'sq', 'sr', 'ss', 'su', 'sw', 'ta', 'te', 'th', 'ti', 'tl', 'tn', 'tr', 'ts', 'tw', 'ur', 'uz', 'wo', 'yo', 'zu' ],
 	'testwiki' => [ 'af', 'am', 'ar', 'as', 'ast', 'ay', 'az', 'ba', 'bcl', 'bho', 'bn', 'bs', 'ca', 'ceb', 'ckb', 'cs', 'cy', 'dv', 'ee', 'el', 'eo', 'es', 'et', 'eu', 'fa', 'fr', 'gl', 'gn', 'gu', 'ha', 'he', 'hi', 'ht', 'hy', 'id', 'ig', 'ilo', 'is', 'jv', 'kg', 'ki', 'km', 'kn', 'ko', 'ku', 'lg', 'ln', 'lt', 'lv', 'mk', 'ml', 'mn', 'mni', 'mr', 'ms', 'mt', 'my', 'ne', 'nso', 'oc', 'om', 'or', 'pa', 'pt', 'qu', 'ru', 'sa', 'si', 'sl', 'so', 'sq', 'sr', 'ss', 'su', 'sw', 'ta', 'te', 'th', 'ti', 'tl', 'tn', 'tr', 'ts', 'tw', 'uk', 'ur', 'uz', 'vi', 'wo', 'yo', 'zh', 'zh-yue', 'zu' ],
 ],
 
