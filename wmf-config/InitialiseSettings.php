@@ -3324,6 +3324,16 @@ return [
 		'Portal' => 106, // T61901
 		'Portal_talk' => 107, // T61901
 	],
+	'+bnwiktionary' => [ // T317745
+		'Appendix' => 100,
+		'Appendix_talk' => 101,
+		'Rhymes' => 106,
+		'Rhymes_talk' => 107,
+		'Thesaurus' => 110,
+		'Thesaurus_talk' => 111,
+		'Citations' => 114,
+		'Citations_talk' => 115,
+	],
 	'+bpywiki' => [
 		'Portal' => 100,
 		'Portal_talk' => 101,
@@ -6973,8 +6983,8 @@ return [
 		101 => 'Kaozeadenn_Stagadenn', // Appendix talk
 	],
 	'bnwiktionary' => [
-		100 => 'উইকিসরাস',
-		101 => 'উইকিসরাস_আলোচনা',
+		100 => 'পরিশিষ্ট', // Appendix - T317745
+		101 => 'পরিশিষ্ট_আলোচনা', // Appendix_talk - T317745
 		106 => 'ছন্দ', // Rhymes - T317424
 		107 => 'ছন্দ_আলোচনা', // Rhymes talk - T317424
 		110 => 'থিসরাস', // Thesaurus - T317424
