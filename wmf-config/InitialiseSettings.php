@@ -26131,7 +26131,7 @@ return [
 			'question' => 'research-incentive-message',
 			'description' => 'research-incentive-description',
 			'confirmMsg' => 'research-incentive-confirm-msg',
-			'coverage' => 0.015,
+			'coverage' => 0.1,
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable' ]
