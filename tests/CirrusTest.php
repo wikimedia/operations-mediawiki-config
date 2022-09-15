@@ -43,24 +43,6 @@ class CirrusTest extends WgConfTestCase {
 		}
 	}
 
-	public function testTransportModification() {
-		$config = $this->loadCirrusConfig( 'production', 'enwiki', 'wiki', '1.39.0-wmf.28' );
-		$this->assertEquals(
-			$config['wgCirrusSearchClusters']['eqiad-omega'],
-			[
-				[
-					'host' => 'localhost',
-					'transport' => [
-						'type' => CirrusSearch\Elastica\ES6CompatTransportWrapper::class,
-						'wrapped_transport' => Elastica\Transport\Example::class,
-					]
-				],
-				'group' => 'omega',
-				'replica' => 'eqiad',
-			]
-		);
-	}
-
 	public function testClusterConfigurationForProdEnwiki() {
 		$config = $this->loadCirrusConfig( 'production', 'enwiki', 'wiki' );
 		$this->assertArrayNotHasKey( 'wgCirrusSearchServers', $config );
@@ -140,7 +122,7 @@ class CirrusTest extends WgConfTestCase {
 		$this->assertArrayNotHasKey( 'wgCirrusSearchWikiToNameMap', $config );
 	}
 
-	private function loadCirrusConfig( $wmgRealm, $dbName, $dbSuffix, $wmgVersionNumber = null ) {
+	private function loadCirrusConfig( $wmgRealm, $dbName, $dbSuffix ) {
 		require __DIR__ . '/../private/readme.php';
 		require __DIR__ . '/data/TestServices.php';
 
@@ -170,11 +152,6 @@ class CirrusTest extends WgConfTestCase {
 		$wgJobTypeConf = [ 'default' => [] ];
 		$wmgDatacenter = 'unittest';
 		$wgCirrusSearchPoolCounterKey = 'unittest:poolcounter:blahblahblah';
-		// A plausible version number
-		if ( $wmgVersionNumber === null ) {
-			$wmgVersionNumber = substr( json_decode(
-				file_get_contents( __DIR__ . '/../wikiversions.json' ), true )['testwiki'], 4 );
-		}
 		// not used for anything, just to prevent undefined variable
 		$IP = '/dev/null';
 
