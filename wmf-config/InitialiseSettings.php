@@ -3303,14 +3303,10 @@ return [
 	'+bjnwiki' => [
 		'Wikipidia_pamandiran' => NS_PROJECT_TALK,
 	],
-	'+bnwiki' => [
+	'+bnwiki' => [ // T318003
 		'Portal' => 100,
 		'Portal_talk' => 101,
-		'കവാടം' => 100,
-		'കവാടത്തിന്റെ_സംവാദം' => 101,
 		'WT' => NS_PROJECT_TALK,
-		'വിഭാഗം' => NS_CATEGORY,
-		'വിഭാഗത്തിന്റെ_സംവാദം' => NS_CATEGORY_TALK,
 	],
 	'+bnwikibooks' => [
 		'Wikijunior' => 100,
