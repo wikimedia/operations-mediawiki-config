@@ -37,7 +37,7 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 
 	public function testConfigIsScalar() {
 		foreach ( $this->settings as $settingName => $settingsArray ) {
-			$this->assertTrue( is_array( $settingsArray ), "Each setting set must be an array, but $settingName is not" );
+			$this->assertIsArray( $settingsArray, "Each setting set must be an array, but $settingName is not" );
 
 			foreach ( $settingsArray as $wiki => $value ) {
 				$this->assertTrue(
