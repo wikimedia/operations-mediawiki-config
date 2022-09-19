@@ -27166,12 +27166,17 @@ return [
 	'arwiki' => true,
 	'bnwiki' => true,
 	'cswiki' => true,
+	'elwiki' => true,
 	'eswiki' => true,
 	'fawiki' => true,
 	'frwiki' => true,
+	'idwiki' => true,
+	'plwiki' => true,
 	'ptwiki' => true,
+	'rowiki' => true,
 	'trwiki' => true,
 	'viwiki' => true,
+	'zhwiki' => true,
 ],
 
 'wgGENewcomerTasksLinkRecommendationsEnabled' => [
@@ -27385,6 +27390,16 @@ return [
 			'desktop' => 50
 		]
 	],
+	'elwiki' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+		'imagerecommendation' => [
+			'mobile' => 50,
+			'desktop' => 50
+		]
+	],
 	'eswiki' => [
 		'control' => [
 			'mobile' => 50,
@@ -27415,6 +27430,26 @@ return [
 			'desktop' => 50
 		]
 	],
+	'idwiki' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+		'imagerecommendation' => [
+			'mobile' => 50,
+			'desktop' => 50
+		]
+	],
+	'plwiki' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+		'imagerecommendation' => [
+			'mobile' => 50,
+			'desktop' => 50
+		]
+	],
 	'ptwiki' => [
 		'control' => [
 			'mobile' => 50,
@@ -27425,7 +27460,27 @@ return [
 			'desktop' => 50
 		]
 	],
+	'rowiki' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+		'imagerecommendation' => [
+			'mobile' => 50,
+			'desktop' => 50
+		]
+	],
 	'trwiki' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+		'imagerecommendation' => [
+			'mobile' => 50,
+			'desktop' => 50
+		]
+	],
+	'zhwiki' => [
 		'control' => [
 			'mobile' => 50,
 			'desktop' => 50,
