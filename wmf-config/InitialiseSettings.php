@@ -26058,28 +26058,6 @@ return [
 			'shuffleAnswersDisplay' => true,
 		],
 	],
-	'dewiki' => [
-		// T316676
-		[
-			'enabled' => true,
-			'name' => 'T316676',
-			'type' => 'external',
-			'question' => 'wmde-tw-participation-2022-survey-header',
-			'description' => 'wmde-tw-participation-2022-survey-description',
-			'link' => 'wmde-tw-participation-2022-survey-link',
-			'confirmMsg' => 'wmde-tw-participation-2022-survey-confirm',
-			'additionalInfo' => 'wmde-tw-participation-2022-survey-thanks',
-			'privacyPolicy' => 'wmde-tw-participation-2022-survey-privacy-policy',
-			'coverage' => 1.0,
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ],
-			],
-			'audience' => [
-				'anons' => false,
-			],
-		],
-	],
 	'enwikivoyage' => [
 		// T187299
 		[
