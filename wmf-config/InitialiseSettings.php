@@ -26313,10 +26313,7 @@ return [
 // NearbyPages extension
 // T246493
 'wmgUseNearbyPages' => [
-	'default' => false,
-	'hewiki' => true,
-	'frwiki' => true,
-	'wikidatawiki' => true,
+	'default' => true,
 ],
 'wgNearbyPagesUrl' => [
 	'default' => '/w/api.php',
