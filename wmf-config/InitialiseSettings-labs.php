@@ -2391,5 +2391,15 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 			'enwiki' => true,
 		],
+
+		// T299612
+		'wgLinterWriteNamespaceColumnStage' => [
+			'default' => true,
+		],
+
+		// T175177
+		'wgLinterWriteTagAndTemplateColumnsStage' => [
+			'default' => true,
+		],
 	];
 } # wmfGetOverrideSettings()
