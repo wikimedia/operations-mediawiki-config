@@ -21178,6 +21178,10 @@ return [
 			'schema_title' => 'analytics/mediawiki/accountcreation/block',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		'mediawiki.editattempt_block' => [
+			'schema_title' => 'analytics/mediawiki/editattemptsblocked',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		[
 			'stream' => 'mediawiki.talk_page_edit',
 			'schema_title' => 'analytics/mediawiki/talk_page_edit',
@@ -21653,6 +21657,7 @@ return [
 		'mediawiki.wikistories_consumption_event',
 		'mediawiki.wikistories_contribution_event',
 		'mediawiki.accountcreation_block',
+		'mediawiki.editattempt_block',
 		'mediawiki.maps_interaction',
 	],
 	'+testwiki' => [
