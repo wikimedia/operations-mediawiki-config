@@ -366,8 +366,8 @@ return [
 		'cloudelastic' => []
 	],
 	'enwiki' => [
-		'eqiad' => [ 'content' => 2, 'general' => 3 ],
-		'codfw' => [ 'content' => 2, 'general' => 3 ],
+		'eqiad' => [ 'content' => 1, 'general' => 3 ],
+		'codfw' => [ 'content' => 1, 'general' => 3 ],
 		'cloudelastic' => []
 	],
 	'eswiki' => [
