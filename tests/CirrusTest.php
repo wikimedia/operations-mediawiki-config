@@ -231,7 +231,7 @@ class CirrusTest extends WgConfTestCase {
 		}
 		$wikis = array_unique( $wikis );
 		$indexTypes = [ 'content', 'general', 'titlesuggest', 'file' ];
-		$clusters = [ 'eqiad' => 36, 'codfw' => 36 ];
+		$clusters = [ 'eqiad' => 50, 'codfw' => 50 ];
 
 		// restrict wgConf to only the settings we care about
 		$allConfig->settings = [
@@ -301,14 +301,16 @@ class CirrusTest extends WgConfTestCase {
 		}
 
 		// For our busiest wikis we want to make sure we are using most of the
-		// cluster for the indices. This was guesstimated by running the following query
+		// cluster for the indices. In the past we
+		// guesstimated this by running the following query
 		// in hive and choosing wikis with > 100M queries/week:
-		// select wikiid, count(1) as count from wmf_raw.cirrussearchrequestset where year = 2016
-		// and month = 1 and day >= 2 and day < 9 group by wikiid order by count desc limit 10;
-		$busyWikis = [ 'enwiki', 'dewiki' ];
+		// select wikiid, count(1) as count from wmf_raw.cirrussearchrequestset where 'year' = 2016
+		// and 'month' = 1 and 'day' >= 2 and 'day' < 9 group by wikiid order by count desc limit 10;
+		// However since then we've decided to exclude dewiki, leaving just enwiki.
+		$busyWikis = [ 'enwiki' ];
 		if ( in_array( $wiki, $busyWikis ) && $indexType == 'content' ) {
 			// For busy indices ensure we are using most of the cluster to serve them
-			$this->assertGreaterThanOrEqual( $numServers - 3, $totalShards );
+			$this->assertGreaterThanOrEqual( $numServers - 5, $totalShards );
 		}
 	}
 

@@ -25001,7 +25001,7 @@ return [
 	'elwiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
 	// These shards tend to be closer to our threshold of 50GB.
 	// We shard enwiki more so that most servers have 2 enwiki shards.
-	'enwiki' => [ 'content' => 16, 'general' => 21, 'titlesuggest' => 4, 'archive' => 1 ],
+	'enwiki' => [ 'content' => 15, 'general' => 21, 'titlesuggest' => 4, 'archive' => 1 ],
 	'enwikinews' => [ 'content' => 1, 'general' => 4, 'titlesuggest' => 1, 'archive' => 1 ],
 	'enwikisource' => [ 'content' => 7, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
 	'enwiktionary' => [ 'content' => 5, 'general' => 2, 'titlesuggest' => 2, 'archive' => 1 ],
@@ -25065,8 +25065,8 @@ return [
 		'cloudelastic' => [ 'content' => '0-1', 'general' => '0-1', 'titlesuggest' => '0-1', 'file' => '0-1', 'archive' => '0-1' ],
 	],
 	'enwiki' => [
-		'eqiad' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-3', 'archive' => '0-2' ],
-		'codfw' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-3', 'archive' => '0-2' ],
+		'eqiad' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-3', 'archive' => '0-2' ],
+		'codfw' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-3', 'archive' => '0-2' ],
 		'cloudelastic' => [ 'content' => '0-1', 'general' => '0-1', 'titlesuggest' => '0-1', 'archive' => '0-1' ],
 	],
 	'dewiki' => [
