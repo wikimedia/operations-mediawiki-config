@@ -19,7 +19,6 @@ if ( $wmgRealm == 'labs' ) {
 		'sectionLoads' => [
 			'DEFAULT' => [
 				'deployment-db07' => 0,
-				'deployment-db08' => 0,
 				'deployment-db09' => 400,
 			],
 		],
@@ -38,8 +37,6 @@ if ( $wmgRealm == 'labs' ) {
 		'hostsByName' => [
 			// deployment-db07.deployment-prep.eqiad1.wikimedia.cloud, master
 			'deployment-db07' => '172.16.3.206:3306',
-			// deployment-db08.deployment-prep.eqiad1.wikimedia.cloud
-			'deployment-db08' => '172.16.6.39:3306',
 			// deployment-db09.deployment-prep.eqiad1.wikimedia.cloud
 			'deployment-db09' => '172.16.0.238:3306',
 		],
