@@ -16760,6 +16760,11 @@ return [
 	'officewiki' => true,
 ],
 
+// Enable VE-based visual diffs on history pages
+'wgVisualEditorEnableDiffPage' => [
+	'default' => false,
+],
+
 // Namespaces for VisualEditor to be active in, in addition to wgContentNamespaces
 'wmgVisualEditorAvailableNamespaces' => [
 	'default' => [

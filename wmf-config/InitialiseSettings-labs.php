@@ -636,6 +636,11 @@ function wmfGetOverrideSettings() {
 			'dewiki' => false, // T320531
 		],
 
+		// Enable VE-based visual diffs on history pages
+		'wgVisualEditorEnableDiffPage' => [
+			'default' => true,
+		],
+
 		'wmgUseRSSExtension' => [
 			'dewiki' => true,
 		],
