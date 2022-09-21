@@ -17847,9 +17847,6 @@ return [
 	'default' => false,
 	'enwiki' => true,
 ],
-'wgMFNearby' => [
-	'default' => true, // Does not gets enabled on wikis w/o GeoData anyway
-],
 
 // Enable X-Analytics logging
 'wgMFEnableXAnalyticsLogging' => [

@@ -2802,9 +2802,9 @@ wfLoadExtension( 'MobileFrontend' );
 wfLoadSkin( 'MinervaNeue' );
 
 $wgMFMobileHeader = 'X-Subdomain';
-if ( !$wmgEnableGeoData ) {
-	$wgMFNearby = false;
-}
+
+// Enable this everywhere except where GeoData isn't available
+$wgMFNearby = $wmgEnableGeoData;
 
 $wgHooks['EnterMobileMode'][] = static function () {
 	global $wgCentralAuthCookieDomain, $wgHooks, $wgIncludeLegacyJavaScript;
