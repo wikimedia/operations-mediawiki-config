@@ -17885,9 +17885,6 @@ return [
 	'default' => true,
 	'wiktionary' => false,
 ],
-'wgMFUseWikibase' => [
-	'default' => true,
-],
 'wgMFEnableWikidataDescriptions' => [
 	'default' => [
 		'base' => true, 'beta' => true,

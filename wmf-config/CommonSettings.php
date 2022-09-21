@@ -2845,6 +2845,8 @@ if ( $wmgMFDefaultEditor ) {
 	$wgMFDefaultEditor = $wmgMFDefaultEditor;
 }
 
+$wgMFUseWikibase = true;
+
 # MUST be after MobileFrontend initialization
 if ( $wmgEnableTextExtracts ) {
 	wfLoadExtension( 'TextExtracts' );
