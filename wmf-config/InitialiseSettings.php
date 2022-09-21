@@ -20468,8 +20468,6 @@ return [
 
 'wgDiscussionTools_visualenhancements' => [
 	'default' => 'default',
-	'dewiki' => 'unavailable', // T312672
-	'enwiki' => 'unavailable', // T312672
 	'jawiki' => 'unavailable', // T312672
 	'mediawikiwiki' => 'available', // T310960
 ],
