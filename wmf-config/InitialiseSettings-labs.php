@@ -975,6 +975,28 @@ function wmfGetOverrideSettings() {
 					'link' => 'research-incentive-link',
 					'privacyPolicy' => 'research-incentive-privacy',
 				],
+				// T318333
+				[
+					'enabled' => true,
+					'type' => 'external',
+					'name' => 'research-incentive-georestricted',
+					'question' => 'research-incentive-message',
+					'description' => 'research-incentive-description',
+					'confirmMsg' => 'research-incentive-confirm-msg',
+					'coverage' => 1,
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ]
+					],
+					'audience' => [
+						// Nigeria, Sierra Leone, Uganda, Tanzania, Kenya, South Africa
+						'countries' => [ 'NG', 'SL', 'UG', 'TZ', 'KE', 'ZA' ],
+						// User:DDesouza/sandbox
+						'pageIds' => [ 282634 ]
+					],
+					'link' => 'research-incentive-link',
+					'privacyPolicy' => 'research-incentive-privacy',
+				],
 			],
 			'cawiki' => [
 				// T187299
