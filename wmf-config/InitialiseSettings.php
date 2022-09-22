@@ -2704,7 +2704,9 @@ return [
 	'kkwiktionary' => 'Уикисөздік',
 	'kmwiki' => 'វិគីភីឌា',
 	'knwiki' => 'ವಿಕಿಪೀಡಿಯ',
+	'knwikiquote' => 'ವಿಕಿಕೋಟ್',  // T318318
 	'knwikisource' => 'ವಿಕಿಸೋರ್ಸ್', // T110806
+	'knwiktionary' => 'ವಿಕ್ಷನರಿ',  // T318318
 	'koiwiki' => 'Википедия',
 	'kowiki' => '위키백과',
 	'kowikinews' => '위키뉴스',
