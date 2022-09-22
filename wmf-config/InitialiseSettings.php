@@ -621,6 +621,7 @@ return [
 
 	// Chapter wikis
 	'brwikimedia' => '/static/images/mobile/copyright/brwikimedia.svg',
+	'nowikimedia' => '/static/images/mobile/copyright/wikimedia.svg',
 
 	// Special wikis
 	'collabwiki' => '/static/images/mobile/copyright/collab-icon.svg',
@@ -1174,6 +1175,11 @@ return [
 		'src' => '/static/images/mobile/copyright/brwikimedia-wordmark.svg',
 		'width' => 101,
 		'height' => 29,
+	],
+	'nowikimedia' => [
+		'src' => '/static/images/mobile/copyright/nowikimedia-wordmark.svg',
+		'width' => 128,
+		'height' => 28,
 	],
 	'officewiki' => [
 		'src' => '/static/images/mobile/copyright/office-wordmark.svg',
