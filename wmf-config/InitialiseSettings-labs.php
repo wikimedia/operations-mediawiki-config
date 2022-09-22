@@ -1,8 +1,6 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-# This is an edit to test T317242. It will be removed in a followup commit.
-
 # This file holds per-wiki overrides specific to Beta Cluster.
 # For overrides common to all wikis, see CommonSettings-labs.php.
 #
