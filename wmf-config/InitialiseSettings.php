@@ -920,6 +920,11 @@ return [
 		'width' => 129,
 		'height' => 21,
 	],
+	'mnwiki' => [
+		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-mn.svg',
+		'width' => 119,
+		'height' => 18,
+	],
 	'mrwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-hi.svg',
 		'width' => 78,
@@ -1372,6 +1377,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ks.svg',
 		'width' => 62,
 		'height' => 20,
+	],
+	'mnwiki' => [
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-mn.svg',
+		'width' => 119,
+		'height' => 11,
 	],
 	'nlwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-nl.svg',
