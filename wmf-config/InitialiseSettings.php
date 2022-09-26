@@ -9079,7 +9079,7 @@ return [
 			'reupload-shared' => true,
 			'autopatrol' => true, // T167071
 			'editautoreviewprotected' => true,
-			'enrollasmentor', // T310905
+			'enrollasmentor' => true, // T310905
 		],
 		'rollbacker' => [ 'rollback' => true ],
 
