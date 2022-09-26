@@ -17391,6 +17391,11 @@ return [
 	'wikitech' => false,		// T102178
 	'closed' => false,			// T315383
 	'private' => false,
+	// For reasons lost to history RESTBase was never set up for these wikis: (T318325)
+	'hiwikimedia' => false,
+	'maiwikimedia' => false,
+	'romdwikimedia' => false,
+	'wbwikimedia' => false,
 ],
 
 // -------------- RESTBase end --------------
@@ -17424,6 +17429,11 @@ return [
 	'wikitech' => false,	# Wikitech uses local Parsoid operation
 	'closed' => false,		// T315383
 	'private' => false,		# Private wikis aren't yet supported by RESTBase
+	// For reasons lost to history RESTBase was never set up for these wikis: (T318325)
+	'hiwikimedia' => false,
+	'maiwikimedia' => false,
+	'romdwikimedia' => false,
+	'wbwikimedia' => false,
 ],
 // Whether VisualEditor should re-use the edit tab (and section link) or insert its own; "SET"
 'wmgVisualEditorUseSingleEditTab' => [
