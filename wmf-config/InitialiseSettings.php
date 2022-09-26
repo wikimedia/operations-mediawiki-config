@@ -27483,6 +27483,7 @@ return [
 	'arwiki' => 'structured',
 	'bnwiki' => 'structured',
 	'cswiki' => 'structured',
+	'eswiki' => 'structured',
 ],
 
 'wgGEHomepageMentorsList' => [
