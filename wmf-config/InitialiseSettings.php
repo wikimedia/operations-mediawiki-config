@@ -8022,11 +8022,6 @@ return [
 	// T254227
 	'desktop-improvements' => '2',
 ],
-// T258588: Sidebar expanded for anons on modern Vector
-'wgVectorDefaultSidebarVisibleForAnonymousUser' => [
-	// T287609
-	'desktop-improvements' => false,
-],
 
 'wgVectorStickyHeader' => [
 	'default' => [
@@ -8038,10 +8033,6 @@ return [
 		'logged_out' => false,
 	],
 	'wikidatawiki' => [
-		'logged_in' => false,
-		'logged_out' => false,
-	],
-	'thwiki' => [ // T298519
 		'logged_in' => false,
 		'logged_out' => false,
 	],
@@ -8108,12 +8099,6 @@ return [
 	],
 	// T290480
 	'euwiki' => [
-		'logged_in' => true,
-		'logged_out' => true,
-	],
-],
-'wgVectorLanguageAlertInSidebar' => [
-	'default' => [ // T300559
 		'logged_in' => true,
 		'logged_out' => true,
 	],
@@ -18511,13 +18496,6 @@ return [
 	'trwiki' => true,
 ],
 
-// Link to help Google spider associate pages on wiki with our Android app.
-// They originally special-cased us but would like it done the normal way now. :)
-'wgMFAppPackageId' => [
-	'default' => false,
-	'wikipedia' => 'org.wikipedia',
-],
-
 'wgMFCollapseSectionsByDefault' => [
 	'default' => true,
 	'wiktionary' => false,
@@ -18550,21 +18528,6 @@ return [
 	],
 	'ruwiki' => [
 		'search' => true, 'nearby' => true, 'watchlist' => true, 'tagline' => false
-	],
-],
-
-'wgMFMobileFormatterOptions' => [
-	'default' => [
-		'excludeNamespaces' => [ 10, -1 ],
-		'maxImages' => 1000000, // T317070
-		'maxHeadings' => 4000000, // T317070
-		'headings' => [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ]
-	],
-	'wikivoyage' => [
-		'excludeNamespaces' => [ 10, -1 ],
-		'maxImages' => 1000000, // T317070
-		'maxHeadings' => 4000000, // T317070
-		'headings' => [ 'h2', 'h3', 'h4', 'h5', 'h6' ] // T110436, T110837
 	],
 ],
 
