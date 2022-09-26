@@ -18352,56 +18352,10 @@ return [
 'wgMFNoindexPages' => [
 	'default' => true, // T255458
 ],
-// Which editor to use as the default on MobileFrontend
-// 'source', 'visual', 'preference' (to use the desktop editor preference), or 'abtest'
-'wmgMFDefaultEditor' => [
-	'default' => false,
-	'azwiki' => 'abtest', // Azerbaijani
-	'bgwiki' => 'abtest', // Bulgarian
-	'zh_yuewiki' => 'abtest', // Cantonese
-	'cawiki' => 'abtest', // Catalan
-	'hrwiki' => 'abtest', // Croatian
-	'dawiki' => 'abtest', // Danish
-	'etwiki' => 'abtest', // Estonian
-	'fiwiki' => 'abtest', // Finnish
-	'elwiki' => 'abtest', // Greek
-	'huwiki' => 'abtest', // Hungarian
-	'mswiki' => 'abtest', // Malay
-	'mlwiki' => 'abtest', // Malayalam
-	'nowiki' => 'abtest', // Norwegian (Bokmål)
-	'ptwiki' => 'abtest', // Portugese
-	'rowiki' => 'abtest', // Romanian
-	'srwiki' => 'abtest', // Serbian
-	'svwiki' => 'abtest', // Swedish
-	'tawiki' => 'abtest', // Tamil
-	'thwiki' => 'abtest', // Thai
-	'urwiki' => 'abtest' // Urdu
-],
 // Whether to oversample EditAttemptStep logging on MobileFrontend
-// 'visualeditor' or 'all', currently kept in sync with the above
-// wmgMFDefaultEditor preference so wikis with abtest are being oversampled.
+// 'visualeditor' or 'all'
 'wgMFSchemaEditAttemptStepOversample' => [
 	'default' => 'visualeditor',
-	'azwiki' => 'all', // Azerbaijani
-	'bgwiki' => 'all', // Bulgarian
-	'zh_yuewiki' => 'all', // Cantonese
-	'cawiki' => 'all', // Catalan
-	'hrwiki' => 'all', // Croatian
-	'dawiki' => 'all', // Danish
-	'etwiki' => 'all', // Estonian
-	'fiwiki' => 'all', // Finnish
-	'elwiki' => 'all', // Greek
-	'huwiki' => 'all', // Hungarian
-	'mswiki' => 'all', // Malay
-	'mlwiki' => 'all', // Malayalam
-	'nowiki' => 'all', // Norwegian (Bokmål)
-	'ptwiki' => 'all', // Portugese
-	'rowiki' => 'all', // Romanian
-	'srwiki' => 'all', // Serbian
-	'svwiki' => 'all', // Swedish
-	'tawiki' => 'all', // Tamil
-	'thwiki' => 'all', // Thai
-	'urwiki' => 'all' // Urdu
 ],
 
 // Namespaces where lead paragraph should be moved above infobox on mobile devices.
