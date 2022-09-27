@@ -20504,6 +20504,8 @@ return [
 
 'wgDiscussionTools_visualenhancements_reply' => [
 	'default' => 'unavailable',
+	'cswiki' => 'available', // T315626
+	'huwiki' => 'available', // T315626
 	'mediawikiwiki' => 'available', // T314076
 ],
 
