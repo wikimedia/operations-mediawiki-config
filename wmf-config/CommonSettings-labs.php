@@ -429,5 +429,9 @@ if ( $wmgUsePhonos ) {
 	$wgPhonosFileBackend = 'global-multiwrite';
 }
 
+if ( $wgDBname == 'dewiki' ) {
+	$wgAutoCreateTempUser['enabled'] = true;
+}
+
 }
 // end safeguard
