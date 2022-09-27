@@ -26417,6 +26417,7 @@ return [
 'wgWMEMobileWebUIActionsTracking' => [
 	'default' => 0.1, // T220016
 	'enwiki' => 0.01, // T295432
+	'testwiki' => 1, // T302108
 	// T309260:
 	'arwiki' => 0.2,
 	'bnwiki' => 0.2,
