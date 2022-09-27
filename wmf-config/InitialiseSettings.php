@@ -5003,6 +5003,7 @@ return [
 	'+otrs_wikiwiki' => [ 0 => 1 ],
 	'+outreachwiki' => [ 0 => 1 ],
 	'+plwikimedia' => [ 0 => 1, 8 => 0, 14 => 1 ],
+	'+romdwikimedia' => [ 0 => 1 ], // T318491
 	'+rswikimedia' => [ 0 => 1, 8 => 0 ],
 	'+ruwikimedia' => [ 0 => 1, 6 => 1, 7 => 0, 9 => 0, 14 => 1, 15 => 0 ],
 	'+sewikimedia' => [ 0 => 1 ],
