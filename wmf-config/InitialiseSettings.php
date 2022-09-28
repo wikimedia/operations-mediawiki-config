@@ -23266,7 +23266,6 @@ return [
 
 'wmgEntityUsageModifierLimitsStatement' => [
 	'default' => null,
-	'cebwiki' => 10,
 ],
 
 'wmgUseWikibaseWikidataOrg' => [
