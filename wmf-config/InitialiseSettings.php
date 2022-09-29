@@ -22251,6 +22251,13 @@ return [
 			'destination_event_service' => 'eventgate-main',
 		],
 
+		// Temporary analytics for Kartographer Nearby feature
+		// See T315972
+		'mediawiki.maps_interaction' => [
+			'schema_title' => 'analytics/mediawiki/maps/interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+
 		/*
 		 * == Streams needed for eventgate functionality ==
 		 * EventGate instances some streams defined for error logging and monitoring:
@@ -22400,6 +22407,7 @@ return [
 		'mediawiki.wikistories_consumption_event',
 		'mediawiki.wikistories_contribution_event',
 		'mediawiki.accountcreation_block',
+		'mediawiki.maps_interaction',
 	],
 	'+testwiki' => [
 		'mediawiki.web_ui.interactions',
