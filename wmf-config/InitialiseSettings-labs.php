@@ -2362,6 +2362,10 @@ function wmfGetOverrideSettings() {
 			'default' => MIGRATION_NEW,
 		],
 
+		'wmgWikibaseTmpEnableMulLanguageCode' => [
+			'default' => true,
+		],
+
 		'wmgUseChessBrowser' => [
 			'default' => true,
 		],
