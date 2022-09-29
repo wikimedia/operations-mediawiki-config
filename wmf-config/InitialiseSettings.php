@@ -28537,6 +28537,11 @@ return [
 	'default' => MIGRATION_NEW,
 ],
 
+'wmgWikibaseClientUnconnectedPagePagePropMigrationLegacyFormat' => [
+	'default' => true,
+	'wikidataclient-test' => false,
+],
+
 'wmgWikibaseTmpEnableMulLanguageCode' => [
 	'default' => null,
 	'wikidataclient-test' => true,
