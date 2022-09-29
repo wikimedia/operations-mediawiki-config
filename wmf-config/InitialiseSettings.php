@@ -1383,6 +1383,11 @@ return [
 		'width' => 119,
 		'height' => 11,
 	],
+	'newiki' => [ // T318737
+		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ne.svg',
+		'width' => 706,
+		'height' => 98,
+	],
 	'nlwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-nl.svg',
 		'width' => 115,
