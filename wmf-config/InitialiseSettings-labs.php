@@ -496,10 +496,6 @@ function wmfGetOverrideSettings() {
 			'default' => 1, // T294738
 		],
 
-		'wgMFAdvancedMobileContributions' => [
-			'default' => true,
-		],
-
 		'wgMFAmcOutreach' => [
 			'default' => true
 		],
@@ -513,19 +509,6 @@ function wmfGetOverrideSettings() {
 			'wikidatawiki' => 'm.%h0.%h1.%h2.%h3', // T87440
 		],
 
-		'wgMinervaShowShareButton' => [
-			'default' => [
-				'base' => false,
-				'beta' => true
-			]
-		],
-		'wgMFUseDesktopSpecialWatchlistPage' => [
-			'default' => [
-				'base' => false,
-				'beta' => false,
-				'amc' => true,
-			]
-		],
 		# Do not run any A/B tests on beta cluster (T206179)
 		'-wgMinervaABSamplingRate' => [
 			'default' => 0,
@@ -547,22 +530,10 @@ function wmfGetOverrideSettings() {
 		// Vector
 		//
 		// Skin versions are strings not numbers. See skins/Vector/skin.json.
-		'wgVectorLanguageInHeader' => [
-			'default' => [
-				'logged_in' => true,
-				'logged_out' => true
-			],
-		],
 		'wgVectorLanguageInMainPageHeader' => [
 			'default' => [
 				'logged_in' => true,
 				'logged_out' => true
-			],
-		],
-		'wgVectorStickyHeader' => [
-			'default' => [
-				'logged_in' => true,
-				'logged_out' => false,
 			],
 		],
 		'wgVectorStickyHeaderEdit' => [
@@ -1842,7 +1813,7 @@ function wmfGetOverrideSettings() {
 		// Needed by browser tests for Minerva otherwise those will fail
 		'wgMFDisplayWikibaseDescriptions' => [
 			'enwiki' => [
-				'search' => true, 'nearby' => true, 'watchlist' => true, 'tagline' => true
+				'search' => true, 'watchlist' => true, 'tagline' => true
 			]
 		],
 
