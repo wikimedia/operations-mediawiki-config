@@ -619,7 +619,7 @@ return [
 'novwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'nowiki' => [ 'wikipedia', 'flow', 'large', 'wikidataclient', 'cirrussearch-big-indices' ],
 'nowikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
-'nowikimedia' => [ 'small', 'visualeditor-nondefault', 'group1' ],
+'nowikimedia' => [ 'desktop-improvements', 'small', 'visualeditor-nondefault', 'group1' ],
 'nowikinews' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'nowikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],
 'nowikisource' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
