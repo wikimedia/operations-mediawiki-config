@@ -26,6 +26,14 @@ $wgCirrusSearchClusters = [
 	'cloudelastic-omega' => $wmgAllServices['eqiad']['cloudelastic-omega'] + [ 'group' => 'omega', 'replica' => 'cloudelastic' ],
 ];
 
+if ( $wmgPrivateWiki ) {
+	unset(
+		$wgCirrusSearchClusters['cloudelastic-chi'],
+		$wgCirrusSearchClusters['cloudelastic-psi'],
+		$wgCirrusSearchClusters['cloudelastic-omega'],
+	);
+}
+
 // wgCirrusSearchExtraIndexes is set in CirrusSearch-common.php
 if ( isset( $wgCirrusSearchExtraIndexes[NS_FILE] ) ) {
 	$wgCirrusSearchExtraIndexes[NS_FILE] = [ 'chi:commonswiki_file' ];
