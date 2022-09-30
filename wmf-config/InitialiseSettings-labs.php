@@ -2266,7 +2266,6 @@ function wmfGetOverrideSettings() {
 
 		'-wgDiscussionToolsEnableMobile' => [
 			'default' => true,
-			'enwiki' => false, // T295816#7561919
 		],
 
 		'-wgDiscussionTools_replytool' => [
