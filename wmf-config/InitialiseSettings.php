@@ -26357,10 +26357,6 @@ return [
 	],
 ],
 
-'wgGEHomepageImpactModuleEnabled' => [
-	'default' => true,
-],
-
 'wgGEHelpPanelEnabled' => [
 	'default' => true,
 ],
