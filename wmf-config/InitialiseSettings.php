@@ -26001,7 +26001,6 @@ return [
 // https://phabricator.wikimedia.org/T110661
 'wmgUseQuickSurveys' => [
 	'default' => false,
-	'arwiki' => true,
 	'cawiki' => true,
 	'dewiki' => true,
 	'enwikivoyage' => true,
@@ -26025,24 +26024,6 @@ return [
 
 'wgQuickSurveysConfig' => [
 	'default' => [],
-	'arwiki' => [
-		// T318328
-		[
-			'enabled' => true,
-			'type' => 'external',
-			'name' => 'research-incentive',
-			'question' => 'research-incentive-message',
-			'description' => 'research-incentive-description',
-			'confirmMsg' => 'research-incentive-confirm-msg',
-			'coverage' => 0.05,
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-			'link' => 'research-incentive-link',
-			'privacyPolicy' => 'research-incentive-privacy',
-		],
-	],
 	'cawiki' => [
 		// T187299
 		[
