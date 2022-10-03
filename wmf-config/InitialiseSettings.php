@@ -11372,6 +11372,7 @@ return [
 			'movefile' => true,
 			'suppressredirect' => true,
 		], // T119636
+		'flood' => [ 'bot' => true ], // T319243
 	],
 	'+ukwikivoyage' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T56299
@@ -13058,6 +13059,7 @@ return [
 			'rollbacker',
 			'accountcreator', // T104034
 			'filemover', // T119636
+			'flood', // T319243
 		],
 	],
 	'+ukwikivoyage' => [
@@ -14144,7 +14146,13 @@ return [
 		'sysop' => [ 'uploader', 'patroller' ], // T216615, T272149
 	],
 	'+ukwiki' => [
-		'sysop' => [ 'patroller', 'rollbacker', 'accountcreator', 'filemover' ], // T104034, T119636
+		'sysop' => [
+			'patroller',
+			'rollbacker',
+			'accountcreator', // T104034
+			'filemover', // T119636
+			'flood', // T319243
+		],
 	],
 	'+ukwikivoyage' => [
 		'sysop' => [ 'rollbacker', 'uploader', 'autopatrolled' ], // T56229
