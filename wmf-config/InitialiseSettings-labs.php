@@ -1370,7 +1370,7 @@ function wmfGetOverrideSettings() {
 		# nothing in beta cluster is large enough to need multiple shards
 		'-wmgCirrusSearchShardCount' => [
 			// Most wikis are too small to be worth sharding
-			'default' => [ 'content' => 1, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
+			'default' => [ 'content' => 1, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1, 'file' => 1 ],
 		],
 
 		# Override prod configuration, there is only one cluster in beta
