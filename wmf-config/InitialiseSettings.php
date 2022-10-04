@@ -1111,6 +1111,11 @@ return [
 	],
 
 	// Wikibooks
+	'bnwikibooks' => [ // T319320
+		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-bn.svg',
+		'width' => 120,
+		'height' => 15,
+	],
 	'viwikibooks' => [ // T290091
 		'src' => '/static/images/mobile/copyright/wikibooks-wordmark.svg',
 		'width' => 120,
@@ -1464,6 +1469,13 @@ return [
 		'src' => '/static/images/mobile/copyright/wiktionary-tagline-jv.svg',
 		'width' => 102,
 		'height' => 13,
+	],
+
+	// Wikibooks
+	'bnwikibooks' => [ // T319320
+		'src' => '/static/images/mobile/copyright/wikibooks-tagline-bn.svg',
+		'width' => 110,
+		'height' => 15,
 	],
 
 	// Wikinews
