@@ -2130,6 +2130,10 @@ function wmfGetOverrideSettings() {
 		'wgMachineVisionRequestLabelsFromWikidataPublicApi' => [
 			'default' => true,
 		],
+		// T319240
+		'wgSpecialContributeSkinsDisabled' => [
+			'default' => [ "modern", "cologneblue", "monobook", "timeless", "vector", "vector-2022" ],
+		],
 		'-wgSpecialSearchFormOptions' => [
 			'wikidatawiki' => [ 'showDescriptions' => true ],
 		],
