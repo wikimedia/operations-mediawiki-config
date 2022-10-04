@@ -52,7 +52,6 @@ class CirrusTest extends WgConfTestCase {
 		$this->assertCount( 3 * 3, $config['wgCirrusSearchClusters'] );
 		$this->assertCount( 3, $config['wgCirrusSearchShardCount'] );
 		$this->assertCount( 3, $config['wgCirrusSearchReplicas'] );
-		$this->assertCount( 3, $config['wgCirrusSearchClientSideConnectTimeout'] );
 
 		$dc_config_tested = 0;
 		foreach ( $config['wgCirrusSearchClusters'] as $key => $clusterConf ) {
@@ -67,7 +66,6 @@ class CirrusTest extends WgConfTestCase {
 			$dc_config_tested += 1;
 			$this->assertArrayHasKey( $dc, $config['wgCirrusSearchShardCount'] );
 			$this->assertArrayHasKey( $dc, $config['wgCirrusSearchReplicas'] );
-			$this->assertArrayHasKey( $dc, $config['wgCirrusSearchClientSideConnectTimeout'] );
 		}
 		// Test that we scanned 2 DCs + cloudelastic for the group chi
 		$this->assertEquals( 3, $dc_config_tested );

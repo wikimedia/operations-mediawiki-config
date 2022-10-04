@@ -47,13 +47,6 @@ $wgCirrusSearchShardCount = [
 	'cloudelastic' => $wmgCirrusSearchShardCount,
 ];
 
-// 5 second timeout for local cluster, 10 seconds for remote.
-$wgCirrusSearchClientSideConnectTimeout = [
-	'eqiad' => $wmgDatacenter === 'eqiad' ? 5 : 10,
-	'codfw' => $wmgDatacenter === 'codfw' ? 5 : 10,
-	'cloudelastic' => $wmgDatacenter === 'eqiad' ? 5 : 10,
-];
-
 $wgCirrusSearchDropDelayedJobsAfter = [
 	'eqiad' => $wgCirrusSearchDropDelayedJobsAfter,
 	'codfw' => $wgCirrusSearchDropDelayedJobsAfter,
