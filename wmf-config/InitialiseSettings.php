@@ -18491,6 +18491,7 @@ return [
 	'closed' => true, // T261357
 	'arwiki' => true,
 	'bnwiki' => true, // T299529
+	'bnwikibooks' => true, // T319317
 	'kowiki' => true, // T172630
 	// WikidataPageBanner extensions must enable for Minerva support.
 	// (T254391)
