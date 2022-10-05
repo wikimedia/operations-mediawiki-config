@@ -28535,6 +28535,8 @@ return [
 	'arwiki' => false,
 	'commonswiki' => false,
 	'enwiki' => false,
+	'enwiktionary' => false,
+	'frwiki' => false,
 	'ruwikinews' => false,
 	'zhwiki' => false,
 ],
