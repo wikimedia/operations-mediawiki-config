@@ -28534,7 +28534,9 @@ return [
 	'wikidataclient-test' => false,
 	'arwiki' => false,
 	'commonswiki' => false,
+	'enwiki' => false,
 	'ruwikinews' => false,
+	'zhwiki' => false,
 ],
 
 'wmgWikibaseTmpEnableMulLanguageCode' => [
