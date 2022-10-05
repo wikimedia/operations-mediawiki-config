@@ -28533,6 +28533,7 @@ return [
 	'default' => true,
 	'wikidataclient-test' => false,
 	'arwiki' => false,
+	'commonswiki' => false,
 	'ruwikinews' => false,
 ],
 
