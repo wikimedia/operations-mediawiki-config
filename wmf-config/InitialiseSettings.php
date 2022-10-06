@@ -27944,13 +27944,4 @@ return [
 	'default' => false,
 ],
 
-// Php 7.4 migration, T271736
-'wgWMENewPHPVersion' => [
-	'default' => '7.4',
-],
-
-'wgWMENewPHPSamplingRate' => [
-	'default' => 1, // all traffic accepting cookies
-],
-
 ];
