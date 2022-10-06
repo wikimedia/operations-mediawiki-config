@@ -433,8 +433,5 @@ if ( $wgDBname == 'dewiki' ) {
 	$wgAutoCreateTempUser['enabled'] = true;
 }
 
-// T306883
-$wgThumbnailNamespaces = array_merge( $wgPageImagesNamespaces ?? [], [ NS_FILE ] );
-
 }
 // end safeguard

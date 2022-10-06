@@ -4238,6 +4238,9 @@ if ( $wmgUseStopForumSpam ) {
 	$wgSFSProxy = $wgCopyUploadProxy;
 }
 
+// T306883
+$wgThumbnailNamespaces = array_merge( $wgPageImagesNamespaces ?? [], [ NS_FILE ] );
+
 // This is a temporary hack for hooking up Parsoid/PHP with MediaWiki
 // This is just the regular check out of parsoid in that week's vendor
 $parsoidDir = "$IP/vendor/wikimedia/parsoid";
