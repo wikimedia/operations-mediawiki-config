@@ -1304,6 +1304,9 @@ function wmfGetOverrideSettings() {
 		'wgReadingListsDatabase' => [
 			'default' => 'metawiki',
 		],
+		'wgReadingListsWeb' => [
+			'default' => true,
+		],
 
 		'-wgPageCreationLog' => [
 			'default' => true, // T196400
