@@ -18310,6 +18310,7 @@ return [
 	'testwiki' => true,
 	'trwiki' => true, // T40227
 	'trwikiquote' => true, // T314895
+	'trwikivoyage' => true, // T319537
 	'ukwiki' => true, // T91530
 	'urwiki' => true, // T42848
 	'viwiki' => true, // T50878
