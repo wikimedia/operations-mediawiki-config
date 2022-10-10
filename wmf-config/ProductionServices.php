@@ -119,7 +119,7 @@ $services = [
 		'mediaSwiftStore' => 'https://ms-fe.svc.eqiad.wmnet/v1/AUTH_mw',
 
 		'etcd' => [
-			'host' => '_etcd._tcp.eqiad.wmnet',
+			'host' => '_etcd-client-ssl._tcp.eqiad.wmnet',
 			'protocol' => 'https'
 		],
 
