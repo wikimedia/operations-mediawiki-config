@@ -397,6 +397,7 @@ return [
 	'hewiktionary' => 'Asia/Tel_Aviv',
 	'hewikinews' => 'Asia/Tel_Aviv',
 	'igwikiquote' => 'Africa/Lagos',
+	'igwiktionary' => 'Africa/Lagos',
 	'ilwikimedia' => 'Asia/Tel_Aviv',
 	'itwikivoyage' => 'Europe/Rome', // T43992
 	'hifwiktionary' => 'Pacific/Fiji', // T173647
