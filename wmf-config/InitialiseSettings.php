@@ -2538,6 +2538,7 @@ return [
 	'blkwiki' => 'ဝီခီပီးဒီးယား',
 	'bnwiki' => 'উইকিপিডিয়া',
 	'bnwikibooks' => 'উইকিবই',
+	'bnwikiquote' => 'উইকিউক্তি',
 	'bnwikisource' => 'উইকিসংকলন',
 	'bnwikivoyage' => 'উইকিভ্রমণ',
 	'bnwiktionary' => 'উইকিঅভিধান',
