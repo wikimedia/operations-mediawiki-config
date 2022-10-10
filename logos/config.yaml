@@ -2012,6 +2012,9 @@ Wikiquote:
         no_1_5x: true
         no_2x: true
 
+    bclwikiquote:
+        commons: File:Wikisambit-logo-01.svg
+
     bewikiquote:
         comment:  T196134
         comment_1_5x:  T196134

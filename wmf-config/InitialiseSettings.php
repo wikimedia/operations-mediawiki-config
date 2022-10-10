@@ -316,6 +316,7 @@ return [
 	'bat_smgwiki' => 'Europe/Vilnius',
 	'bawikibooks' => 'Asia/Yekaterinburg', // T173471
 	'bclwiktionary' => 'Asia/Manila',
+	'bclwikiquote' => 'Asia/Manila',
 	'bdwikimedia' => 'Asia/Dhaka', // T150252
 	'be_x_oldwiki' => 'Europe/Minsk',
 	'bewiki' => 'Europe/Minsk',
@@ -2520,6 +2521,7 @@ return [
 	'banwiki' => 'Wikipédia',
 	'bat_smgwiki' => 'Vikipedėjė',
 	'bclwiktionary' => 'Wiksyunaryo',
+	'bclwikiquote' => 'Wikisambit',
 	'bdwikimedia' => 'উইকিমিডিয়া_বাংলাদেশ',
 	'be_x_oldwiki' => 'Вікіпэдыя',
 	'bewiki' => 'Вікіпедыя',

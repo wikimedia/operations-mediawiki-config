@@ -80,6 +80,7 @@ return [
 'bawiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'cirrussearch-big-indices' ],
 'bawikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines' ],
 'bclwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads' ],
+'bclwikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],
 'bclwiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'bdwikimedia' => [ 'small', 'visualeditor-nondefault', 'group1' ],
 'be_x_oldwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'cirrussearch-big-indices' ],

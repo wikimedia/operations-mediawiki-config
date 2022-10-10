@@ -485,6 +485,7 @@ return [
 	'angwikiquote' => '/static/images/project-logos/angwikiquote.png',
 	'arwikiquote' => '/static/images/project-logos/arwikiquote.png',
 	'azwikiquote' => '/static/images/project-logos/azwikiquote.png',
+	'bclwikiquote' => '/static/images/project-logos/bclwikiquote.png',
 	'bewikiquote' => '/static/images/project-logos/bewikiquote.png', // T196134
 	'bgwikiquote' => '/static/images/project-logos/bgwikiquote.png',
 	'bnwikiquote' => '/static/images/project-logos/bnwikiquote.png',
@@ -1252,6 +1253,7 @@ return [
 	'zhwiktionary' => '/static/images/project-logos/zhwiktionary-1.5x.png', // T150618, T308620
 
 	// Wikiquote
+	'bclwikiquote' => '/static/images/project-logos/bclwikiquote-1.5x.png',
 	'bewikiquote' => '/static/images/project-logos/bewikiquote-1.5x.png', // T196134
 	'bnwikiquote' => '/static/images/project-logos/bnwikiquote-1.5x.png',
 	'cawikiquote' => '/static/images/project-logos/cawikiquote-1.5x.png', // T150618
@@ -1844,6 +1846,7 @@ return [
 	'zhwiktionary' => '/static/images/project-logos/zhwiktionary-2x.png', // T150618, T308620
 
 	// Wikiquote
+	'bclwikiquote' => '/static/images/project-logos/bclwikiquote-2x.png',
 	'bewikiquote' => '/static/images/project-logos/bewikiquote-2x.png', // T196134
 	'bnwikiquote' => '/static/images/project-logos/bnwikiquote-2x.png',
 	'cawikiquote' => '/static/images/project-logos/cawikiquote-2x.png', // T150618
