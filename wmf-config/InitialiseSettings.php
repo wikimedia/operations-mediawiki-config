@@ -576,6 +576,7 @@ return [
 	'thwikisource' => 'Asia/Bangkok',
 	'thwiktionary' => 'Asia/Bangkok',
 	'thwikiquote' => 'Asia/Bangkok',
+	'tlwikiquote' => 'Asia/Manila',
 	'trwikimedia' => 'Europe/Istanbul',
 	'trvwiki' => 'Asia/Taipei',
 	'tyvwiki' => 'Asia/Krasnoyarsk',
@@ -3099,6 +3100,7 @@ return [
 	'tiwiki' => 'ምይይጥ_ዊኪፐድያ', // T263840
 	'tiwiktionary' => 'ምይይጥ_ዊኪ-መዝገበ-ቃላት', // T263840
 	'thwiktionary' => 'คุยเรื่องวิกิพจนานุกรม', // T42717
+	'tlwikiquote' => 'Wikikawikaan',
 	'tyvwiki' => 'Википедия_дугайында_сүмелел', // T51328
 	'uawikimedia' => 'Обговорення_Вікімедіа',
 	'ukwiktionary' => 'Обговорення_Вікісловника',

@@ -93,6 +93,7 @@ $wgLBFactoryConf = [
 	'srwiki'       => 's5',
 	'taywiki'      => 's5',
 	'thankyouwiki' => 's5',
+	'tlwikiquote'  => 's5',
 	'trwikivoyage' => 's5',
 	'trvwiki'      => 's5',
 	'wawikisource' => 's5',
