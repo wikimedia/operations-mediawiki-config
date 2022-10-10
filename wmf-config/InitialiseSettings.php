@@ -396,6 +396,7 @@ return [
 	'hewikivoyage' => 'Asia/Tel_Aviv',
 	'hewiktionary' => 'Asia/Tel_Aviv',
 	'hewikinews' => 'Asia/Tel_Aviv',
+	'igwikiquote' => 'Africa/Lagos',
 	'ilwikimedia' => 'Asia/Tel_Aviv',
 	'itwikivoyage' => 'Europe/Rome', // T43992
 	'hifwiktionary' => 'Pacific/Fiji', // T173647
@@ -2703,6 +2704,7 @@ return [
 	'idwikibooks' => 'Wikibuku',
 	'idwikimedia' => 'Wikimedia_Indonesia',
 	'iegcomwiki' => 'Project',
+	'igwikiquote' => 'Wikikwotu',
 	'ilwikimedia' => 'ויקימדיה',
 	'incubatorwiki' => 'Incubator',
 	'inhwiki' => 'Википеди',

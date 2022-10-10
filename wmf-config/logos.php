@@ -506,6 +506,7 @@ return [
 	'hrwikiquote' => '/static/images/project-logos/hrwikiquote.png',
 	'huwikiquote' => '/static/images/project-logos/huwikiquote.png',
 	'hywikiquote' => '/static/images/project-logos/hywikiquote.png',
+	'igwikiquote' => '/static/images/project-logos/igwikiquote.png',
 	'iswikiquote' => '/static/images/project-logos/iswikiquote.png',
 	'kawikiquote' => '/static/images/project-logos/kawikiquote.png',
 	'knwikiquote' => '/static/images/project-logos/knwikiquote.png', // T104260
@@ -1268,6 +1269,7 @@ return [
 	'hewikiquote' => '/static/images/project-logos/hewikiquote-1.5x.png',
 	'hrwikiquote' => '/static/images/project-logos/hrwikiquote-1.5x.png', // T150618
 	'hywikiquote' => '/static/images/project-logos/hywikiquote-1.5x.png', // T150618
+	'igwikiquote' => '/static/images/project-logos/igwikiquote-1.5x.png',
 	'knwikiquote' => '/static/images/project-logos/knwikiquote-1.5x.png', // T150618
 	'mlwikiquote' => '/static/images/project-logos/mlwikiquote-1.5x.png', // T150618
 	'plwikiquote' => '/static/images/project-logos/plwikiquote-1.5x.png', // T150618
@@ -1861,6 +1863,7 @@ return [
 	'hewikiquote' => '/static/images/project-logos/hewikiquote-2x.png',
 	'hrwikiquote' => '/static/images/project-logos/hrwikiquote-2x.png', // T150618
 	'hywikiquote' => '/static/images/project-logos/hywikiquote-2x.png', // T150618
+	'igwikiquote' => '/static/images/project-logos/igwikiquote-2x.png',
 	'knwikiquote' => '/static/images/project-logos/knwikiquote-2x.png', // T150618
 	'mlwikiquote' => '/static/images/project-logos/mlwikiquote-2x.png', // T150618
 	'plwikiquote' => '/static/images/project-logos/plwikiquote-2x.png', // T150618
