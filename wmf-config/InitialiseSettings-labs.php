@@ -2400,6 +2400,8 @@ function wmfGetOverrideSettings() {
 		'wmgUsePhonos' => [
 			'default' => false,
 			'enwiki' => true,
+			'en_rtlwiki' => true,
+			'enwiktionary' => true,
 		],
 
 		// T299612
