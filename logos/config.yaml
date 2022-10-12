@@ -322,6 +322,8 @@ Wikipedia:
         comment_1_5x:  T130392
         comment_2x:  T130392
         commons_wordmark: File:Wikipedia-wordmark-cs.svg
+        width_wordmark: 111
+        height_wordmark: 17
         commons_tagline: File:Wikipedia-tagline-cs.svg
         comment_tagline: T258552
 
@@ -1166,7 +1168,6 @@ Wikipedia:
         commons: File:Wikipedia-logo-v2-pt.svg
         comment_1_5x:  T150618
         comment_2x:  T150618
-        comment_tagline: T258552
         selected_wordmark: frwiki
         commons_tagline: File:Wikipedia-tagline-pt.svg
         comment_tagline: T258552
@@ -2232,6 +2233,9 @@ Wikiquote:
 
     bnwikiquote:
         commons: File:Wikiquote-logo-bn.svg
+        comment:  T319183
+        comment_1_5x:  T319183
+        comment_2x:  T319183
 
     bswikiquote:
         no_1_5x: true
@@ -3610,8 +3614,7 @@ Wikivoyage:
     testwikidatawiki:
         no_1_5x: true
         no_2x: true
-        commons_wordmark: File:Wikidata wordmark.svg
-        comment_wordmark: T299512
+        selected_wordmark: wikidatawiki
 
     transitionteamwiki:
         comment:  T50379

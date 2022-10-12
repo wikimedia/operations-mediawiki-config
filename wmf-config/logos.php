@@ -490,7 +490,7 @@ return [
 	'bclwikiquote' => '/static/images/project-logos/bclwikiquote.png',
 	'bewikiquote' => '/static/images/project-logos/bewikiquote.png', // T196134
 	'bgwikiquote' => '/static/images/project-logos/bgwikiquote.png',
-	'bnwikiquote' => '/static/images/project-logos/bnwikiquote.png',
+	'bnwikiquote' => '/static/images/project-logos/bnwikiquote.png', // T319183
 	'bswikiquote' => '/static/images/project-logos/bswikiquote.png',
 	'cawikiquote' => '/static/images/project-logos/cawikiquote.png',
 	'cswikiquote' => '/static/images/project-logos/cswikiquote.png',
@@ -1258,7 +1258,7 @@ return [
 	// Wikiquote
 	'bclwikiquote' => '/static/images/project-logos/bclwikiquote-1.5x.png',
 	'bewikiquote' => '/static/images/project-logos/bewikiquote-1.5x.png', // T196134
-	'bnwikiquote' => '/static/images/project-logos/bnwikiquote-1.5x.png',
+	'bnwikiquote' => '/static/images/project-logos/bnwikiquote-1.5x.png', // T319183
 	'cawikiquote' => '/static/images/project-logos/cawikiquote-1.5x.png', // T150618
 	'cswikiquote' => '/static/images/project-logos/cswikiquote-1.5x.png', // T150618
 	'enwikiquote' => '/static/images/project-logos/enwikiquote-1.5x.png', // T150618
@@ -1852,7 +1852,7 @@ return [
 	// Wikiquote
 	'bclwikiquote' => '/static/images/project-logos/bclwikiquote-2x.png',
 	'bewikiquote' => '/static/images/project-logos/bewikiquote-2x.png', // T196134
-	'bnwikiquote' => '/static/images/project-logos/bnwikiquote-2x.png',
+	'bnwikiquote' => '/static/images/project-logos/bnwikiquote-2x.png', // T319183
 	'cawikiquote' => '/static/images/project-logos/cawikiquote-2x.png', // T150618
 	'cswikiquote' => '/static/images/project-logos/cswikiquote-2x.png', // T150618
 	'enwikiquote' => '/static/images/project-logos/enwikiquote-2x.png', // T150618
@@ -2073,8 +2073,8 @@ return [
 	],
 	'atjwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-atj.svg',
-		'width' => 129,
-		'height' => 18,
+		'width' => 141,
+		'height' => 20,
 	],
 	'azwiki' => [ // T284877
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-az.svg',
@@ -2118,8 +2118,8 @@ return [
 	],
 	'cswiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-cs.svg',
-		'width' => 119,
-		'height' => 18,
+		'width' => 111,
+		'height' => 17,
 	],
 	'cywiki' => [ // T254788
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-cy.svg',
@@ -2143,8 +2143,8 @@ return [
 	],
 	'fawiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fa.svg',
-		'width' => 78,
-		'height' => 26,
+		'width' => 103,
+		'height' => 35,
 	],
 	'frwiki' => [ // T249047
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
@@ -2173,8 +2173,8 @@ return [
 	],
 	'hywiki' => [ // T259985
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-hy.svg',
-		'width' => 152,
-		'height' => 24,
+		'width' => 138,
+		'height' => 22,
 	],
 	'jawiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ja.svg',
@@ -2208,8 +2208,8 @@ return [
 	],
 	'kswiki' => [ // T294093
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ks.svg',
-		'width' => 512,
-		'height' => 206,
+		'width' => 99,
+		'height' => 40,
 	],
 	'lawiki' => [ // T240728
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-la.svg',
@@ -2248,7 +2248,7 @@ return [
 	],
 	'newiki' => [ // T311700
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ne.svg',
-		'width' => 114,
+		'width' => 113,
 		'height' => 26,
 	],
 	'papwiki' => [
@@ -2323,8 +2323,8 @@ return [
 	],
 	'tkwiki' => [ // T314435
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-tk.svg',
-		'width' => 148,
-		'height' => 20,
+		'width' => 140,
+		'height' => 19,
 	],
 	'trwiki' => [ // T255489, T254788
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-tr.svg',
@@ -2343,8 +2343,8 @@ return [
 	],
 	'ugwiki' => [ // T309431
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ug.svg',
-		'width' => 1080,
-		'height' => 298,
+		'width' => 141,
+		'height' => 39,
 	],
 	'ukwiki' => [ // T254788
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-uk.svg',
@@ -2385,8 +2385,8 @@ return [
 	],
 	'eswiktionary' => [ // T254059
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-es.svg',
-		'width' => 287,
-		'height' => 40,
+		'width' => 146,
+		'height' => 20,
 	],
 	'frwiktionary' => [ // T249047
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-fr.svg',
@@ -2396,7 +2396,7 @@ return [
 	'hewiktionary' => [ // T308411
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-he.svg',
 		'width' => 93,
-		'height' => 30,
+		'height' => 29,
 	],
 	'jvwiktionary' => [ // T311104
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-jv.svg',
@@ -2410,18 +2410,18 @@ return [
 	],
 	'plwiktionary' => [ // T307683
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-pl.svg',
-		'width' => 290,
-		'height' => 39,
+		'width' => 141,
+		'height' => 19,
 	],
 	'ruwiktionary' => [ // T308233
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-ru.svg',
-		'width' => 123,
+		'width' => 122,
 		'height' => 20,
 	],
 	'yiwiktionary' => [ // T308411
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-yi.svg',
-		'width' => 147,
-		'height' => 26,
+		'width' => 141,
+		'height' => 24,
 	],
 
 	// Wikiquote
@@ -2432,8 +2432,8 @@ return [
 	],
 	'trwikiquote' => [ // T286133
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-tr.svg',
-		'width' => 598,
-		'height' => 384,
+		'width' => 62,
+		'height' => 40,
 	],
 
 	// Wikibooks
@@ -2468,8 +2468,8 @@ return [
 	],
 	'trwikisource' => [ // T260658
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-tr.svg',
-		'width' => 247,
-		'height' => 43,
+		'width' => 143,
+		'height' => 25,
 	],
 	'zhwikisource' => [ // T261076, T308620
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-zh.svg',
@@ -2497,18 +2497,18 @@ return [
 	],
 	'hewikivoyage' => [ // T234278
 		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-he.svg',
-		'width' => 101,
-		'height' => 26,
+		'width' => 88,
+		'height' => 21,
 	],
 	'pswikivoyage' => [ // T200152
 		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-ps.svg',
-		'width' => 100,
-		'height' => 33,
+		'width' => 88,
+		'height' => 21,
 	],
 	'trwikivoyage' => [ // T272776
 		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-tr.svg',
-		'width' => 114,
-		'height' => 26,
+		'width' => 90,
+		'height' => 18,
 	],
 
 	// Chapter and local user group wikis
@@ -2574,10 +2574,10 @@ return [
 		'width' => 119,
 		'height' => 18,
 	],
-	'testwikidatawiki' => [ // T299512
-		'src' => '/static/images/mobile/copyright/testwikidata-wordmark.svg',
-		'width' => 142,
-		'height' => 20,
+	'testwikidatawiki' => [
+		'src' => '/static/images/mobile/copyright/wikidata-wordmark.svg',
+		'width' => 130,
+		'height' => 17,
 	],
 	'wikidatawiki' => [ // T315572
 		'src' => '/static/images/mobile/copyright/wikidata-wordmark.svg',
@@ -2586,8 +2586,8 @@ return [
 	],
 	'wikimaniawiki' => [ // T286405
 		'src' => '/static/images/mobile/copyright/wikimania-wordmark.svg',
-		'width' => 410,
-		'height' => 45,
+		'width' => 144,
+		'height' => 17,
 	],
 
 ],
@@ -2649,8 +2649,8 @@ return [
 	],
 	'fawiki' => [ // T249047
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-fa.svg',
-		'width' => 76,
-		'height' => 19,
+		'width' => 61,
+		'height' => 15,
 	],
 	'fiwiki' => [ // T258552
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-fi.svg',
@@ -2679,8 +2679,8 @@ return [
 	],
 	'hywiki' => [ // T259985
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-hy.svg',
-		'width' => 161,
-		'height' => 17,
+		'width' => 150,
+		'height' => 15,
 	],
 	'idwiki' => [ // T258552
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-id.svg',
@@ -2704,8 +2704,8 @@ return [
 	],
 	'kawiki' => [ // T267776
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ka.svg',
-		'width' => 119,
-		'height' => 10,
+		'width' => 130,
+		'height' => 14,
 	],
 	'kowiki' => [ // T258552
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ko.svg',
@@ -2714,12 +2714,12 @@ return [
 	],
 	'kswiki' => [ // T294093
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ks.svg',
-		'width' => 385,
-		'height' => 124,
+		'width' => 124,
+		'height' => 40,
 	],
 	'mnwiki' => [ // T318478
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-mn.svg',
-		'width' => 120,
+		'width' => 119,
 		'height' => 11,
 	],
 	'nlwiki' => [ // T258552
@@ -2791,8 +2791,8 @@ return [
 	// Wiktionary
 	'frwiktionary' => [ // T249047
 		'src' => '/static/images/mobile/copyright/wiktionary-tagline-fr.svg',
-		'width' => 107,
-		'height' => 10,
+		'width' => 113,
+		'height' => 13,
 	],
 	'jvwiktionary' => [ // T311104
 		'src' => '/static/images/mobile/copyright/wiktionary-tagline-jv.svg',
