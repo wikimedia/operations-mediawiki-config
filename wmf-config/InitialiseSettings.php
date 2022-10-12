@@ -26283,6 +26283,15 @@ return [
 	'default' => true,
 ],
 
+'wgKartographerNearby' => [
+	'default' => false,
+	'cawiki' => true, // T316782
+	'dewiki' => true, // T316782
+	'hewiki' => true, // T316782
+
+	'enwikivoyage' => true, // T316782
+],
+
 'wmgUseMediaModeration' => [
 	'default' => true,
 ],
