@@ -599,6 +599,15 @@ function wmfGetOverrideSettings() {
 			'default' => 'mobile',
 		],
 
+		// Whether to configure RESTBase as a Virtual REST Service
+		// in MW Core. If false, VE will call parsoid directly in PHP.
+		// We should have both modes in the Beta cluster, as long as we
+		// support both in prod.
+		'wmgUseRestbaseVRS' => [
+			'default' => true,
+			'dewiki' => false, // T320531
+		],
+
 		'wmgUseRSSExtension' => [
 			'dewiki' => true,
 		],
