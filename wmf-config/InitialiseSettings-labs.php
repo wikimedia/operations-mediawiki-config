@@ -47,6 +47,15 @@ function wmfGetOverrideSettings() {
 			'default' => 'mcrouter-with-onhost-tier',
 		],
 
+		'wgParsoidCacheConfig' => [
+			'default' => [
+				'StashType' => null, // defaults to using MainStash
+				'StashDuration' => 2 * 60 * 60, // 24h in production
+				'CacheThresholdTime' => 0.0, // 0 means cache all
+				'WarmParsoidParserCache' => true, // T320535: enable cache warming
+			],
+		],
+
 		'wgLanguageCode' => [
 			'deploymentwiki' => 'en',
 			'votewiki' => 'en', // T295242
