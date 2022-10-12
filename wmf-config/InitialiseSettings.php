@@ -23897,6 +23897,12 @@ return [
 	'default' => true,
 ],
 
+'wgThumbnailNamespaces' => [
+	'default' => [ NS_FILE ],
+	// T320510
+	'wikipedia' => [ NS_MAIN, NS_FILE ],
+],
+
 'wmgUseTorBlock' => [
 	'default' => true,
 	'private' => false,
