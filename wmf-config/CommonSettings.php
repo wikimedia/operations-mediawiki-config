@@ -621,22 +621,13 @@ $wgObjectCaches['db-mainstash'] = [
 
 session_name( $lang . 'wikiSession' );
 
-if ( $wgDBname === 'testwiki' ) {
-	$wgPasswordConfig['pbkdf2'] = [
-		'class' => Pbkdf2PasswordUsingOpenSSL::class,
-		'algo' => 'sha512',
-		'cost' => '128000',
-		'length' => '64',
-	];
-} else {
-	// This needs to be increased as allowable by server performance
-	$wgPasswordConfig['pbkdf2'] = [
-		'class' => 'Pbkdf2Password',
-		'algo' => 'sha512',
-		'cost' => '128000',
-		'length' => '64',
-	];
-}
+// This needs to be increased as allowable by server performance
+$wgPasswordConfig['pbkdf2'] = [
+	'class' => Pbkdf2PasswordUsingOpenSSL::class,
+	'algo' => 'sha512',
+	'cost' => '128000',
+	'length' => '64',
+];
 
 // Temporary for T57420
 $wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
