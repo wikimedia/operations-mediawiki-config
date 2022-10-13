@@ -25433,7 +25433,13 @@ return [
 	'dewiki' => true, // T316782
 	'hewiki' => true, // T316782
 
+	'dewikivoyage' => true, // T320692
 	'enwikivoyage' => true, // T316782
+],
+
+'wgKartographerWikivoyageNearby' => [
+	'default' => true,
+	'dewikivoyage' => false, // T320692
 ],
 
 'wmgUseMediaModeration' => [
