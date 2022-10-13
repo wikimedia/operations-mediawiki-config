@@ -1325,6 +1325,15 @@ function wmfGetOverrideSettings() {
 		'wgReadingListsWeb' => [
 			'default' => true,
 		],
+		'wgReadingListsAnonymizedPreviews' => [
+			'default' => true,
+		],
+		'wgReadingListAndroidAppDownloadLink' => [
+			'default' => 'https://play.google.com/store/apps/details?id=org.wikipedia&referrer=utm_source%3DreadingLists',
+		],
+		'wgReadingListiOSAppDownloadLink' => [
+			'default' => 'https://itunes.apple.com/app/apple-store/id324715238?pt=208305&ct=readingLists&mt=8',
+		],
 
 		'-wgPageCreationLog' => [
 			'default' => true, // T196400
