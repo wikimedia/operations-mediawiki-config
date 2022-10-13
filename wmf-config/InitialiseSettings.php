@@ -8719,6 +8719,9 @@ return [
 			'upload_by_url' => true,
 		], // T134196, T145010
 		'translationadmin' => [ 'noratelimit' => true, ], // T155162
+		'interface-admin' => [
+			'editcontentmodel' => true, // T320752
+		],
 	],
 	'+dawiki' => [
 		'patroller' => [
