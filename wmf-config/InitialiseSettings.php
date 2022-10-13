@@ -8685,6 +8685,7 @@ return [
 			'templateeditor' => true,
 			'tboverride' => true,
 		], // T227420
+		'interface-admin' => [ 'editcontentmodel' => true, ], // T320752
 	],
 	'+testcommonswiki' => [
 		'user' => [
