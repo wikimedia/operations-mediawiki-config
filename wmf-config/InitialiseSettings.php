@@ -26733,7 +26733,12 @@ return [
 ],
 
 'wgGEMentorDashboardUseVue' => [
-	'default' => true,
+	'default' => false,
+	'testwiki' => true,
+	'arwiki' => true,
+	'bnwiki' => true,
+	'cswiki' => true,
+	'eswiki' => true,
 ],
 
 'wgGEMentorDashboardDeploymentMode' => [
