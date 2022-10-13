@@ -1547,11 +1547,6 @@ function wmfGetOverrideSettings() {
 		'wgGEMentorProvider' => [
 			'default' => 'structured',
 		],
-		'wgGEMentorDashboardUseVue' => [
-			'default' => false,
-			'enwiki' => true,
-			'arwiki' => true
-		],
 		'wgGECampaigns' => [
 			'default' => [
 				'social-latam-2022' => [
