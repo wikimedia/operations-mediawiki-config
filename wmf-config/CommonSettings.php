@@ -552,11 +552,7 @@ $wgRCMaxAge = 30 * 86400;
 
 $wgTmpDirectory = '/tmp';
 
-# Temporary for the PHP 7.2 → 7.4 migration. Adds an array of Unicode chars
-# that have different uppercasing in 7.4.
-if ( PHP_VERSION_ID >= 70400 ) {
-	$wgOverrideUcfirstCharacters = include __DIR__ . '/Php72ToUpper.php';
-}
+$wgOverrideUcfirstCharacters = include __DIR__ . '/UcfirstOverrides.php';
 
 # Object cache and session settings
 
