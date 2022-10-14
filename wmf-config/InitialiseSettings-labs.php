@@ -608,6 +608,14 @@ function wmfGetOverrideSettings() {
 			'dewiki' => false, // T320531
 		],
 
+		// T320703: Whether $wmgUseRestbaseVRS is false, $wmgVisualEditorAccessRestbaseDirectly
+		// should be false as well. Otherwise, VE will load HTML from RESTbase, but
+		// will save via MW core code, which will fail because the ETag does not match.
+		'wmgVisualEditorAccessRestbaseDirectly' => [
+			'default' => true,
+			'dewiki' => false, // T320531
+		],
+
 		'wmgUseRSSExtension' => [
 			'dewiki' => true,
 		],
