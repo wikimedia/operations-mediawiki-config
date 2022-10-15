@@ -1600,11 +1600,14 @@ Wikipedia:
 
     zhwiki:
         commons: File:Wikipedia-logo-v2-zh.svg
+        selected: zhwiki-20
         variants:
             zhwiki-hans: File:Wikipedia-logo-v2-zh-hans.svg
-        comment:  T276694
-        comment_1_5x:  T276694
-        comment_2x:  T276694
+            zhwiki-20: File:Wikipedia-logo-zh-20zhWP-魔琴-hant.svg
+            zhwiki-20-hans: File:Wikipedia-logo-zh-20zhWP-魔琴-hans.svg
+        comment:  T276694, T320859
+        comment_1_5x:  T276694, T320859
+        comment_2x:  T276694, T320859
         commons_wordmark: File:Wikipedia-wordmark-zh.svg
         comment_wordmark: T258552, T260908
         commons_tagline: File:Wikipedia-tagline-zh.svg

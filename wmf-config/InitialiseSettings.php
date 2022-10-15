@@ -645,14 +645,17 @@ return [
 	'testwiki' => '/static/images/icons/testwiki.png',
 	'test2wiki' => '/static/images/icons/testwiki.png',
 	'testwikidatawiki' => '/static/images/icons/testwikidatawiki.svg',
+
+	// Celebrations
+	'zhwiki' => '/static/images/icons/wikipedia-zh-20.svg', // T320859
 ],
 
 'wmgSiteLogoVariants' => [
 	'zhwiki' => [
 		'zh-hans' => [
-			'1x' => '/static/images/project-logos/zhwiki-hans.png',
-			'1.5x' => '/static/images/project-logos/zhwiki-hans-1.5x.png',
-			'2x' => '/static/images/project-logos/zhwiki-hans-2x.png',
+			'1x' => '/static/images/project-logos/zhwiki-20-hans.png',
+			'1.5x' => '/static/images/project-logos/zhwiki-20-hans-1.5x.png',
+			'2x' => '/static/images/project-logos/zhwiki-20-hans-2x.png',
 			'wordmark' => [
 				'src' => '/static/images/mobile/copyright/wikipedia-wordmark-zh-hans.svg',
 				'width' => 105,
@@ -665,9 +668,9 @@ return [
 			],
 		],
 		'zh-cn' => [
-			'1x' => '/static/images/project-logos/zhwiki-hans.png',
-			'1.5x' => '/static/images/project-logos/zhwiki-hans-1.5x.png',
-			'2x' => '/static/images/project-logos/zhwiki-hans-2x.png',
+			'1x' => '/static/images/project-logos/zhwiki-20-hans.png',
+			'1.5x' => '/static/images/project-logos/zhwiki-20-hans-1.5x.png',
+			'2x' => '/static/images/project-logos/zhwiki-20-hans-2x.png',
 			'wordmark' => [
 				'src' => '/static/images/mobile/copyright/wikipedia-wordmark-zh-hans.svg',
 				'width' => 105,
@@ -680,9 +683,9 @@ return [
 			],
 		],
 		'zh-my' => [
-			'1x' => '/static/images/project-logos/zhwiki-hans.png',
-			'1.5x' => '/static/images/project-logos/zhwiki-hans-1.5x.png',
-			'2x' => '/static/images/project-logos/zhwiki-hans-2x.png',
+			'1x' => '/static/images/project-logos/zhwiki-20-hans.png',
+			'1.5x' => '/static/images/project-logos/zhwiki-20-hans-1.5x.png',
+			'2x' => '/static/images/project-logos/zhwiki-20-hans-2x.png',
 			'wordmark' => [
 				'src' => '/static/images/mobile/copyright/wikipedia-wordmark-zh-hans.svg',
 				'width' => 105,
@@ -695,9 +698,9 @@ return [
 			],
 		],
 		'zh-sg' => [
-			'1x' => '/static/images/project-logos/zhwiki-hans.png',
-			'1.5x' => '/static/images/project-logos/zhwiki-hans-1.5x.png',
-			'2x' => '/static/images/project-logos/zhwiki-hans-2x.png',
+			'1x' => '/static/images/project-logos/zhwiki-20-hans.png',
+			'1.5x' => '/static/images/project-logos/zhwiki-20-hans-1.5x.png',
+			'2x' => '/static/images/project-logos/zhwiki-20-hans-2x.png',
 			'wordmark' => [
 				'src' => '/static/images/mobile/copyright/wikipedia-wordmark-zh-hans.svg',
 				'width' => 105,
