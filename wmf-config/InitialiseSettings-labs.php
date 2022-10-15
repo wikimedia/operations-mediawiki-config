@@ -280,11 +280,11 @@ function wmfGetOverrideSettings() {
 				'collection' => 'debug', // -cscott for T73675
 				// 'csp' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 				// 'csp-report-only' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
+				'rdbms' => 'warning',
 				'DBConnection' => 'warning',
 				'DBPerformance' => [ 'logstash' => 'debug', 'udp2log' => 'warning' ],
 				'DBQuery' => 'warning',
 				'DBReplication' => 'warning',
-				'DBTransaction' => 'debug',
 				'DeferredUpdates' => 'error',
 				'deprecated' => 'debug',
 				'diff' => 'debug',
