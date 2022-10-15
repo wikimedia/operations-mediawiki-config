@@ -2789,10 +2789,10 @@ return [
 	],
 
 	// Wiktionary
-	'frwiktionary' => [ // T249047
+	'frwiktionary' => [ // T249047, T320840
 		'src' => '/static/images/mobile/copyright/wiktionary-tagline-fr.svg',
-		'width' => 113,
-		'height' => 13,
+		'width' => 107,
+		'height' => 10,
 	],
 	'jvwiktionary' => [ // T311104
 		'src' => '/static/images/mobile/copyright/wiktionary-tagline-jv.svg',
