@@ -378,14 +378,14 @@ def update(data: dict, wiki: str, variant: Optional[str]):
                 commons_svg = info[f"commons_{svg_type}"]
                 download_svg(commons_svg, name, svg_type, data)
     if "commons" in info:
+        commons = info["commons"]
+        name = wiki
         if variant:
             try:
                 commons = info["variants"][variant]
                 name = variant
             except KeyError:
                 raise RuntimeError(f"Cannot find variant {variant} for site {wiki}")
-        commons = info["commons"]
-        name = wiki
         download(commons, name)
     elif "commons_wordmark" not in info and "commons_tagline" not in info \
             and "selected_wordmark" not in info and "selected_tagline" not in info:
