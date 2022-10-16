@@ -16090,6 +16090,7 @@ return [
 	'bhwiki' => true,
 	'bnwiki' => true,
 	'bnwikibooks' => true,
+	'bnwikiquote' => true, // T320903
 	'bnwikisource' => true, // T152692
 	'bnwikivoyage' => true, // T296637
 	'bnwiktionary' => true,
