@@ -1696,8 +1696,10 @@ Wiktionary:
         comment_2x:  T150618
 
     dewiktionary:
-        no_1_5x: true
-        no_2x: true
+        commons:  File:Wiktionary_logo_de_4.svg
+        comment:  T320891
+        comment_1_5x:  T320891
+        comment_2x:  T320891
 
     elwiktionary:
         no_1_5x: true
