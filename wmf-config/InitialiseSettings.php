@@ -19690,10 +19690,14 @@ return [
 ],
 
 'wgDiscussionTools_visualenhancements_reply' => [
-	'default' => 'unavailable',
-	'cswiki' => 'available', // T315626
-	'huwiki' => 'available', // T315626
-	'mediawikiwiki' => 'available', // T314076
+	'default' => 'default', // T320683
+	'arwiki' => 'unavailable', // T320683
+	'dewiki' => 'unavailable', // T320683
+	'enwiki' => 'unavailable', // T320683
+	'frwiki' => 'unavailable', // T320683
+	'jawiki' => 'unavailable', // T320683
+	'zh_yuewiki' => 'unavailable', // T320683
+	'zhwiki' => 'unavailable', // T320683
 ],
 
 'wgDiscussionTools_visualenhancements_pageframe' => [
