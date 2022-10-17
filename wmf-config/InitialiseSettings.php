@@ -20049,6 +20049,7 @@ return [
 		'mfrecenttranslation' => true,
 		'mfrecentedit' => true,
 		'mffrequentlanguages' => true,
+		'specialcontribute' => true,
 	],
 	'dewiki' => [
 		'article-recommender-1' => true,
@@ -20069,6 +20070,7 @@ return [
 		'mfrecenttranslation' => true,
 		'mfrecentedit' => true,
 		'mffrequentlanguages' => true,
+		'specialcontribute' => true,
 	],
 	'enwiki' => [
 		'article-recommender-1' => true,
@@ -20089,6 +20091,7 @@ return [
 		'mfrecenttranslation' => true,
 		'mfrecentedit' => true,
 		'mffrequentlanguages' => true,
+		'specialcontribute' => true,
 	],
 	'eswiki' => [
 		'article-recommender-1' => true,
@@ -20110,6 +20113,7 @@ return [
 		'mfrecenttranslation' => true,
 		'mfrecentedit' => true,
 		'mffrequentlanguages' => true,
+		'specialcontribute' => true,
 	],
 	'fiwiki' => [
 		'article-recommender-1' => true,
@@ -20130,6 +20134,7 @@ return [
 		'mfrecenttranslation' => true,
 		'mfrecentedit' => true,
 		'mffrequentlanguages' => true,
+		'specialcontribute' => true,
 	],
 	'frwiki' => [
 		'article-recommender-1' => true,
@@ -20151,6 +20156,7 @@ return [
 		'mfrecenttranslation' => true,
 		'mfrecentedit' => true,
 		'mffrequentlanguages' => true,
+		'specialcontribute' => true,
 	],
 ],
 
