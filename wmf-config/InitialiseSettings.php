@@ -14701,6 +14701,11 @@ return [
 	'default' => true, // T289140
 ],
 
+'wgProofreadPageBookNamespaces' => [
+	'enwikisource' => [ NS_MAIN, 114 ], // T53980
+	'thwikisource' => [ NS_MAIN, 114 ], // T53980
+],
+
 // DO NOT enable on any other wikis
 'wmgUseDynamicPageList' => [
 	'default' => false,

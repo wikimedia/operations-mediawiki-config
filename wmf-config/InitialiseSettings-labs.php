@@ -2131,6 +2131,9 @@ function wmfGetOverrideSettings() {
 		'wgWikisourceOcrUrl' => [
 			'wikisource' => 'https://ocr-test.wmcloud.org',
 		],
+		'wgProofreadPageBookNamespaces' => [
+			'wikisource' => [ NS_MAIN, NS_USER ]
+		],
 		'wgProofreadPageUseStatusChangeTags' => [
 			'wikisource' => true,
 		],
