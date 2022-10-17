@@ -77,10 +77,8 @@ $common = [
 	// Points back to MediaWiki for $wgLocalHTTPProxy
 	'mwapi' => 'http://localhost:6501',
 
-	// cloudelastic only exists in eqiad. No load balancer is available due to
-	// the part of the network that they live in so each host is enumerated
+	// cloudelastic only exists in eqiad.
 
-	// WARNING: psi and omega have their ports "mixed up", see https://phabricator.wikimedia.org/T262630
 	'cloudelastic-chi' => [
 		[ // forwarded to https://cloudelastic.wikimedia.org:9243/
 			'host' => 'localhost',
@@ -88,18 +86,18 @@ $common = [
 			'port' => 6105,
 		],
 	],
-	'cloudelastic-psi' => [
+	'cloudelastic-omega' => [
 		[ // forwarded to https://cloudelastic.wikimedia.org:9443/
 			'host' => 'localhost',
 			'transport' => 'Http',
-			'port' => 6107,
+			'port' => 6106,
 		],
 	],
-	'cloudelastic-omega' => [
+	'cloudelastic-psi' => [
 		[ // forwarded to https://cloudelastic.wikimedia.org:9643/
 			'host' => 'localhost',
 			'transport' => 'Http',
-			'port' => 6106,
+			'port' => 6107,
 		],
 	],
 
@@ -152,18 +150,18 @@ $services = [
 				'port' => 6102,
 			]
 		],
-		'search-psi' => [
-			[ // forwarded to https://search.svc.eqiad.wmnet:9643/
-				'host' => 'localhost',
-				'transport' => CirrusSearch\Elastica\DeprecationLoggedHttp::class,
-				'port' => 6104,
-			]
-		],
 		'search-omega' => [
 			[ // forwarded to https://search.svc.eqiad.wmnet:9443/
 				'host' => 'localhost',
 				'transport' => CirrusSearch\Elastica\DeprecationLoggedHttp::class,
 				'port' => 6103,
+			]
+		],
+		'search-psi' => [
+			[ // forwarded to https://search.svc.eqiad.wmnet:9643/
+				'host' => 'localhost',
+				'transport' => CirrusSearch\Elastica\DeprecationLoggedHttp::class,
+				'port' => 6104,
 			]
 		],
 	],
@@ -208,18 +206,18 @@ $services = [
 				'port' => 6202,
 			]
 		],
-		'search-psi' => [
-			[ // forwarded to https://search.svc.codfw.wmnet:9643/
-				'host' => 'localhost',
-				'transport' => 'Http',
-				'port' => 6204,
-			]
-		],
 		'search-omega' => [
 			[ // forwarded to https://search.svc.codfw.wmnet:9443/
 				'host' => 'localhost',
 				'transport' => 'Http',
 				'port' => 6203,
+			]
+		],
+		'search-psi' => [
+			[ // forwarded to https://search.svc.codfw.wmnet:9643/
+				'host' => 'localhost',
+				'transport' => 'Http',
+				'port' => 6204,
 			]
 		],
 	],
