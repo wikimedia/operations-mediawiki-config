@@ -19553,10 +19553,6 @@ return [
 	'htwiki' => true, // T298221, T302259
 	'mediawikiwiki' => true, // T310960
 ],
-'wgDiscussionToolsEnableMobile_visualenhancements' => [
-	'default' => true,
-	'jawiki' => false, // T318871
-],
 
 'wgDiscussionToolsReplyIndentation' => [
 	'default' => 'invisible',
