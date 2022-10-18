@@ -1522,6 +1522,9 @@ function wmfGetOverrideSettings() {
 		'wgGEAllowAccessToNewImpactModule' => [
 			'default' => true,
 		],
+		'wgGEUseNewImpactModule' => [
+			'default' => true,
+		],
 		'wgGEImageRecommendationApiHandler' => [
 			// Can be changed to 'production' when T306349 is resolved.
 			'default' => 'mvp'
