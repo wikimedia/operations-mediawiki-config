@@ -17299,6 +17299,21 @@ return [
 	'wikitech' => 'memcached-pecl',
 ],
 
+'wgParsoidCacheConfig' => [
+	'default' => [
+		'StashType' => null, // defaults to using MainStash
+		'StashDuration' => 24 * 60 * 60, // 24h in production, VE will fail to save after this time.
+		'CacheThresholdTime' => 0.0, // 0 means cache all
+		'WarmParsoidParserCache' => false, // whether parsoid output should be generated and cached after every edit
+	],
+	'testwiki' => [
+		'StashType' => null, // defaults to using MainStash
+		'StashDuration' => 24 * 60 * 60, // 24h in production, VE will fail to save after this time.
+		'CacheThresholdTime' => 0.0, // 0 means cache all
+		'WarmParsoidParserCache' => true, // T320535: enable cache warming
+	],
+],
+
 'wgLanguageConverterCacheType' => [
 	// For CLI, this is effectively CACHE_NONE
 	'default' => CACHE_ACCEL,
