@@ -1498,6 +1498,9 @@ function wmfGetOverrideSettings() {
 			'default' => 'wikidatawiki',
 			'commonswiki' => 'commonswiki',
 		],
+		'wgGEAllowAccessToNewImpactModule' => [
+			'default' => true,
+		],
 		'wgGEImageRecommendationApiHandler' => [
 			// Can be changed to 'production' when T306349 is resolved.
 			'default' => 'mvp'
