@@ -1449,6 +1449,12 @@ Wikipedia:
         comment_1_5x:  T150618
         comment_2x:  T150618
 
+    tumwiki:
+        commons:  File:Wikipedia-logo-v2-tum.svg
+        comment:  T320473
+        comment_1_5x:  T320473
+        comment_2x:  T320473
+
     twwiki:
         selected: akwiki
         comment:  T189578
