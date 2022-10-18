@@ -27710,6 +27710,7 @@ return [
 	'cswiki' => false,
 	'enwikivoyage' => false,
 	'viwiki' => false,
+	'itwiki' => false,
 	// Careful with these, since they can partake in cross-wiki inclusion.
 	// See T51097#7401266
 	'metawiki' => true,
