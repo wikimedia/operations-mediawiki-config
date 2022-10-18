@@ -614,37 +614,37 @@ return [
 'wmgSiteLogoIcon' => [
 	// Projects
 	'default' => null, // See T244486
-	'wikibooks' => '/static/images/mobile/copyright/wikibooks.svg',
-	'wikidata' => '/static/images/mobile/copyright/wikidata.svg',
-	'wikinews' => '/static/images/mobile/copyright/wikinews.svg',
-	'wikipedia' => '/static/images/mobile/copyright/wikipedia.png',
-	'wikiquote' => '/static/images/mobile/copyright/wikiquote.svg',
-	'wikisource' => '/static/images/mobile/copyright/wikisource.svg',
-	'wikiversity' => '/static/images/mobile/copyright/wikiversity.svg',
-	'wikivoyage' => '/static/images/mobile/copyright/wikivoyage.svg',
-	'wiktionary' => '/static/images/mobile/copyright/wiktionary.svg',
+	'wikibooks' => '/static/images/icons/wikibooks.svg',
+	'wikidata' => '/static/images/icons/wikidata.svg',
+	'wikinews' => '/static/images/icons/wikinews.svg',
+	'wikipedia' => '/static/images/icons/wikipedia.png',
+	'wikiquote' => '/static/images/icons/wikiquote.svg',
+	'wikisource' => '/static/images/icons/wikisource.svg',
+	'wikiversity' => '/static/images/icons/wikiversity.svg',
+	'wikivoyage' => '/static/images/icons/wikivoyage.svg',
+	'wiktionary' => '/static/images/icons/wiktionary.svg',
 
 	// Chapter wikis
-	'brwikimedia' => '/static/images/mobile/copyright/brwikimedia.svg',
-	'nowikimedia' => '/static/images/mobile/copyright/wikimedia.svg',
+	'brwikimedia' => '/static/images/icons/brwikimedia.svg',
+	'nowikimedia' => '/static/images/icons/wikimedia.svg',
 
 	// Special wikis
-	'collabwiki' => '/static/images/mobile/copyright/collab-icon.svg',
-	'commonswiki' => '/static/images/mobile/copyright/commons.svg',
-	'foundationwiki' => '/static/images/mobile/copyright/wikimedia.svg',
-	'incubatorwiki' => '/static/images/mobile/copyright/incubator.svg',
-	'mediawikiwiki' => '/static/images/mobile/copyright/mediawiki.svg',
-	'metawiki' => '/static/images/mobile/copyright/meta.svg',
-	'officewiki' => '/static/images/mobile/copyright/wikimedia.svg',
-	'outreachwiki' => '/static/images/mobile/copyright/outreach-icon.svg',
-	'specieswiki' => '/static/images/mobile/copyright/wikispecies.svg',
-	'strategywiki' => '/static/images/mobile/copyright/strategy-icon.svg',
-	'wikimaniawiki' => '/static/images/mobile/copyright/wikimania.svg',
+	'collabwiki' => '/static/images/icons/collabwiki.svg',
+	'commonswiki' => '/static/images/icons/commonswiki.svg',
+	'foundationwiki' => '/static/images/icons/wikimedia.svg',
+	'incubatorwiki' => '/static/images/icons/incubatorwiki.svg',
+	'mediawikiwiki' => '/static/images/icons/mediawikiwiki.svg',
+	'metawiki' => '/static/images/icons/metawiki.svg',
+	'officewiki' => '/static/images/icons/wikimedia.svg',
+	'outreachwiki' => '/static/images/icons/outreachwiki.svg',
+	'specieswiki' => '/static/images/icons/specieswiki.svg',
+	'strategywiki' => '/static/images/icons/strategywiki.svg',
+	'wikimaniawiki' => '/static/images/icons/wikimaniawiki.svg',
 
 	// Test wikis T299512
-	'testwiki' => '/static/images/mobile/copyright/test-wikipedia-icon.png',
-	'test2wiki' => '/static/images/mobile/copyright/test-wikipedia-icon.png',
-	'testwikidatawiki' => '/static/images/mobile/copyright/test-wikidata-icon.svg',
+	'testwiki' => '/static/images/icons/testwiki.png',
+	'test2wiki' => '/static/images/icons/testwiki.png',
+	'testwikidatawiki' => '/static/images/icons/testwikidatawiki.svg',
 ],
 
 'wmgSiteLogoVariants' => [
