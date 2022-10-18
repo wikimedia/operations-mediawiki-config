@@ -404,10 +404,7 @@ def transform_name(data: dict, name: str):
     if name in projects:
         return name, None
     if name in specials:
-        if name.endswith("wiki"):
-            return name[:-4], None
-        else:
-            return name, None
+        return name, None
     for project in projects:
         if name.endswith(project):
             if project == "wiki":

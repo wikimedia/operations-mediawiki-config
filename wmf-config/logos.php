@@ -2527,42 +2527,42 @@ return [
 
 	// Special wikis
 	'collabwiki' => [ // T290091
-		'src' => '/static/images/mobile/copyright/collab-wordmark.svg',
+		'src' => '/static/images/mobile/copyright/collabwiki-wordmark.svg',
 		'width' => 125,
 		'height' => 20,
 	],
 	'commonswiki' => [ // T157476
-		'src' => '/static/images/mobile/copyright/commons-wordmark.svg',
+		'src' => '/static/images/mobile/copyright/commonswiki-wordmark.svg',
 		'width' => 115,
 		'height' => 32,
 	],
 	'foundationwiki' => [ // T295303
-		'src' => '/static/images/mobile/copyright/foundation-wordmark.svg',
+		'src' => '/static/images/mobile/copyright/foundationwiki-wordmark.svg',
 		'width' => 141,
 		'height' => 31,
 	],
 	'mediawikiwiki' => [ // T268230
-		'src' => '/static/images/mobile/copyright/mediawiki-wordmark.svg',
+		'src' => '/static/images/mobile/copyright/mediawikiwiki-wordmark.svg',
 		'width' => 120,
 		'height' => 18,
 	],
 	'metawiki' => [ // T295303
-		'src' => '/static/images/mobile/copyright/meta-wordmark.svg',
+		'src' => '/static/images/mobile/copyright/metawiki-wordmark.svg',
 		'width' => 120,
 		'height' => 29,
 	],
 	'officewiki' => [ // T249047
-		'src' => '/static/images/mobile/copyright/office-wordmark.svg',
+		'src' => '/static/images/mobile/copyright/officewiki-wordmark.svg',
 		'width' => 140,
 		'height' => 34,
 	],
 	'outreachwiki' => [ // T290091, T297580
-		'src' => '/static/images/mobile/copyright/outreach-wordmark.svg',
+		'src' => '/static/images/mobile/copyright/outreachwiki-wordmark.svg',
 		'width' => 120,
 		'height' => 29,
 	],
 	'strategywiki' => [ // T290091
-		'src' => '/static/images/mobile/copyright/strategy-wordmark.svg',
+		'src' => '/static/images/mobile/copyright/strategywiki-wordmark.svg',
 		'width' => 142,
 		'height' => 28,
 	],
@@ -2577,17 +2577,17 @@ return [
 		'height' => 18,
 	],
 	'testwikidatawiki' => [
-		'src' => '/static/images/mobile/copyright/wikidata-wordmark.svg',
+		'src' => '/static/images/mobile/copyright/wikidatawiki-wordmark.svg',
 		'width' => 130,
 		'height' => 17,
 	],
 	'wikidatawiki' => [ // T315572
-		'src' => '/static/images/mobile/copyright/wikidata-wordmark.svg',
+		'src' => '/static/images/mobile/copyright/wikidatawiki-wordmark.svg',
 		'width' => 130,
 		'height' => 17,
 	],
 	'wikimaniawiki' => [ // T286405
-		'src' => '/static/images/mobile/copyright/wikimania-wordmark.svg',
+		'src' => '/static/images/mobile/copyright/wikimaniawiki-wordmark.svg',
 		'width' => 144,
 		'height' => 17,
 	],
