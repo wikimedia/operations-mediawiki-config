@@ -3,3740 +3,3400 @@ Projects:
         no_1_5x: true
         no_2x: true
         no_tagline: true
-
     wikibooks:
         no_1_5x: true
         no_2x: true
-
+        selected_wordmark: viwikibooks
     wikinews:
         no_1_5x: true
         no_2x: true
-
     wikipedia:
         selected: enwiki
         no_1_5x: true
         no_2x: true
         selected_wordmark: enwiki
-
     wikiquote:
         no_1_5x: true
         no_2x: true
-
+        selected_wordmark: frwikiquote
     wikisource:
         no_1_5x: true
         no_2x: true
-
     wikiversity:
         no_1_5x: true
         no_2x: true
-
     wiktionary:
         no_1_5x: true
         no_2x: true
         selected_wordmark: enwiktionary
-
     wikivoyage:
-        comment:  T55653
+        comment: T55653
         no_1_5x: true
         no_2x: true
         selected_wordmark: enwikivoyage
-
 Wikipedia:
+    aawiki:
+        no_1_5x: true
+        no_2x: true
+        selected_tagline: enwiki
     abwiki:
-        commons: File:Wikipedia-logo-v2-ab-new.svg
-        comment:  T48589, T297810
-        comment_1_5x:  T150618, T297810
-        comment_2x:  T150618, T297810
-
+        commons: 'File:Wikipedia-logo-v2-ab-new.svg'
+        comment: 'T48589, T297810'
+        comment_1_5x: 'T150618, T297810'
+        comment_2x: 'T150618, T297810'
+        local_tagline: true
+        local_wordmark: true
     acewiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     adywiki:
-        comment:  T125501
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T125501
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     afwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     akwiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     alswiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     altwiki:
-        commons: File:Wikipedia-logo-v2-alt.svg
-
+        commons: 'File:Wikipedia-logo-v2-alt.svg'
     amwiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     amiwiki:
-        commons: File:Wikipedia-logo-v2-ami.svg
-
+        commons: 'File:Wikipedia-logo-v2-ami.svg'
     angwiki:
-        comment:  T51125
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T51125
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     anwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     arcwiki:
         no_1_5x: true
         no_2x: true
-
+        local_tagline: true
+        local_wordmark: true
     arwiki:
-        commons: File:Wikipedia-logo-v2-ar.svg
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_wordmark: File:Wikipedia-wordmark-ar.svg
-        commons_tagline: File:Wikipedia-tagline-ar.svg
+        commons: 'File:Wikipedia-logo-v2-ar.svg'
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_wordmark: 'File:Wikipedia-wordmark-ar.svg'
+        commons_tagline: 'File:Wikipedia-tagline-ar.svg'
         comment_tagline: T258552
-
     arywiki:
-        commons_wordmark: File:Wikipedia-wordmark-ary.svg
+        commons_wordmark: 'File:Wikipedia-wordmark-ary.svg'
         comment_wordmark: T290091
-        commons_tagline: File:Wikipedia-tagline-ary.svg
+        commons_tagline: 'File:Wikipedia-tagline-ary.svg'
         comment_tagline: T290091
-
     arzwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        comment_1_5x: T150618
+        comment_2x: T150618
         selected_wordmark: arwiki
-
+        local_tagline: true
+        local_wordmark: true
     astwiki:
-        comment:  T42285, T131247
-        comment_1_5x:  T150618, T292742
-        comment_2x:  T150618, T292742
-
+        comment: 'T42285, T131247'
+        comment_1_5x: 'T150618, T292742'
+        comment_2x: 'T150618, T292742'
+        local_tagline: true
+        local_wordmark: true
     aswiki:
         no_1_5x: true
         no_2x: true
-
+        local_tagline: true
+        local_wordmark: true
     atjwiki:
-        comment:  T167714
-        comment_1_5x:  T167714
-        comment_2x:  T167714
-        commons_wordmark: File:Wikipedia_wordmark_atj_notext.svg
-
+        comment: T167714
+        comment_1_5x: T167714
+        comment_2x: T167714
+        commons_wordmark: 'File:Wikipedia_wordmark_atj_notext.svg'
     avwiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     avkwiki:
-        comment:  T257943
-        comment_1_5x:  T257943
-        comment_2x:  T257943
-
+        comment: T257943
+        comment_1_5x: T257943
+        comment_2x: T257943
+        local_tagline: true
     awawiki:
-        comment:  T251371
-        comment_1_5x:  T251371
-        comment_2x:  T251371
-
+        comment: T251371
+        comment_1_5x: T251371
+        comment_2x: T251371
+        local_tagline: true
+        local_wordmark: true
     aywiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     azbwiki:
-        comment:  T106305
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T106305
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     azwiki:
-        comment:  T50397
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_wordmark: File:Wikipedia-wordmark-az.svg
+        comment: T50397
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_wordmark: 'File:Wikipedia-wordmark-az.svg'
         comment_wordmark: T284877
-
-    banwiki:
-
+        local_tagline: true
+    banwiki: null
     barwiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
     bat_smgwiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     bawiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        comment_1_5x: T150618
+        comment_2x: T150618
         selected_wordmark: ruwiki
-
+        local_tagline: true
+        local_wordmark: true
     bclwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     be_x_oldwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     bewiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     bgwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     bhwiki:
-        comment:  T50397
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        comment: T50397
+        comment_1_5x: T150618
+        comment_2x: T150618
         selected_wordmark: hiwiki
-
+        local_tagline: true
+        local_wordmark: true
     biwiki:
-        comment:  T51125
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T51125
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     bjnwiki:
-        comment:  T48564
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T48564
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     blkwiki:
-        commons: File:Wikipedia-logo-v2-blk.svg
-
+        commons: 'File:Wikipedia-logo-v2-blk.svg'
     bmwiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     bnwiki:
-        commons: File:Wikipedia-logo-v2-bn.svg
-        commons_wordmark: File:Wikipedia-wordmark-bn.svg
+        commons: 'File:Wikipedia-logo-v2-bn.svg'
+        commons_wordmark: 'File:Wikipedia-wordmark-bn.svg'
         comment_wordmark: T273085
-        commons_tagline: File:Wikipedia-tagline-bn.svg
+        commons_tagline: 'File:Wikipedia-tagline-bn.svg'
         comment_tagline: T273085
-
     bowiki:
-        comment:  T50397
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T50397
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     bpywiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
         selected_wordmark: bnwiki
         comment_wordmark: T273085
-
+        local_tagline: true
+        local_wordmark: true
     brwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     bswiki:
-        comment_1_5x:  T158815
-        comment_2x:  T158815
-
+        comment_1_5x: T158815
+        comment_2x: T158815
+        local_tagline: true
     bugwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     bxrwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     cawiki:
-        commons: File:Wikipedia-logo-v2-ca.svg
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_wordmark: File:Wikipedia-wordmark-ca.svg
-        commons_tagline: File:Wikipedia-tagline-ca.svg
+        commons: 'File:Wikipedia-logo-v2-ca.svg'
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_wordmark: 'File:Wikipedia-wordmark-ca.svg'
+        commons_tagline: 'File:Wikipedia-tagline-ca.svg'
         comment_tagline: T258552
-
     cbk_zamwiki:
-        comment:  T46974
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T46974
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     cdowiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     cebwiki:
-        comment:  T42285
-        comment_1_5x:  T150616
-        comment_2x:  T150616
-
+        comment: T42285
+        comment_1_5x: T150616
+        comment_2x: T150616
+        local_tagline: true
+        local_wordmark: true
     cewiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     chrwiki:
-        comment:  T39327
-
+        comment: T39327
+        local_tagline: true
+        local_wordmark: true
     chwiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    chywiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    ckbwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_wordmark: File:Wikipedia-wordmark-ckb.svg
-        comment_wordmark: T288368
-
-    cowiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    crhwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_wordmark: File:Wikipedia-wordmark-crh.svg
-        comment_wordmark: T309431
-
-    crwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    csbwiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    cswiki:
-        commons: File:Wikipedia-logo-v2-cs.svg
-        comment_1_5x:  T130392
-        comment_2x:  T130392
-        commons_wordmark: File:Wikipedia-wordmark-cs.svg
-        width_wordmark: 111
-        height_wordmark: 17
-        commons_tagline: File:Wikipedia-tagline-cs.svg
-        comment_tagline: T258552
-
-    cuwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    cvwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    cywiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_wordmark: File:Wikipedia-wordmark-cy.svg
-        comment_wordmark: T254788
-
-    dawiki:
-        commons: File:Wikipedia-logo-v2-da.svg
-        comment_1_5x:  T131033
-        comment_2x:  T131033
-
-    dagwiki:
-        commons: File:Wikipedia-logo-v2-dag.svg
-
-    dewiki:
-        commons: File:Wikipedia-logo-v2-de.svg
-        comment_1_5x:  T132792
-        comment_2x:  T132792
-        commons_tagline: File:Wikipedia-tagline-de.svg
-        comment_tagline: T258552
-
-    dinwiki:
-
-    diqwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    dsbwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    dtywiki:
-        comment:  T161529
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    dvwiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    dzwiki:
-        comment:  T50397
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    eewiki:
-        comment:  T50397
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    elwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_wordmark: File:Wikipedia-wordmark-el.svg
-        comment_wordmark: T254788
-        commons_tagline: File:Wikipedia-tagline-el.svg
-        comment_tagline: T258552
-
-    emlwiki:
-        comment:  T100953
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    enwiki:
-        commons: File:Wikipedia-logo-v2-en.svg
-        comment:  T309544
-        commons_wordmark: File:Wikipedia-wordmark-en.svg
-        comment_wordmark: T157476, T249047
-        commons_tagline: File:Wikipedia-tagline-en.svg
-        comment_tagline: T249047
-
-    eowiki:
-        commons: File:Wikipedia-logo-v2-eo.svg
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    eswiki:
-        commons: File:Wikipedia-logo-v2-es.svg
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_tagline: File:Wikipedia-tagline-es.svg
-        comment_tagline: T258552
-
-    etwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_wordmark: File:Wikipedia-wordmark-et.svg
-        comment_wordmark: T254788
-
-    euwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_tagline: File:Wikipedia-tagline-eu.svg
-        comment_tagline: T249047
-
-    extwiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    fawiki:
-        commons: File:Wikipedia-logo-v2-fa.svg
-        commons_wordmark: File:Wikipedia-wordmark-fa.svg
-        comment_wordmarktagline: T249047
-        commons_tagline: File:Wikipedia-tagline-fa.svg
-        comment_tagline: T249047
-
-    ffwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    fiu_vrowiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    fiwiki:
-        commons: File:Wikipedia-logo-v2-fi.svg
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_tagline: File:Wikipedia-tagline-fi.svg
-        comment_tagline: T258552
-
-    fowiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    frpwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    frrwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    frwiki:
-        commons: File:Wikipedia-logo-v2-fr.svg
-        commons_wordmark: File:Wikipedia-wordmark-fr.svg
-        comment_wordmark: T249047
-        commons_tagline: File:Wikipedia-tagline-fr.svg
-        comment_tagline: T249047
-
-    furwiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    fywiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    gagwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    ganwiki:
-        comment:  T46974
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+    chowiki:
         no_1_5x: true
         no_2x: true
-
+        selected_tagline: enwiki
+    chywiki:
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    ckbwiki:
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_wordmark: 'File:Wikipedia-wordmark-ckb.svg'
+        comment_wordmark: T288368
+        local_tagline: true
+    cowiki:
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+    crhwiki:
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_wordmark: 'File:Wikipedia-wordmark-crh.svg'
+        comment_wordmark: T309431
+        local_tagline: true
+    crwiki:
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    csbwiki:
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    cswiki:
+        commons: 'File:Wikipedia-logo-v2-cs.svg'
+        comment_1_5x: T130392
+        comment_2x: T130392
+        commons_wordmark: 'File:Wikipedia-wordmark-cs.svg'
+        width_wordmark: 111
+        height_wordmark: 17
+        commons_tagline: 'File:Wikipedia-tagline-cs.svg'
+        comment_tagline: T258552
+    cuwiki:
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    cvwiki:
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    cywiki:
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_wordmark: 'File:Wikipedia-wordmark-cy.svg'
+        comment_wordmark: T254788
+    dawiki:
+        commons: 'File:Wikipedia-logo-v2-da.svg'
+        comment_1_5x: T131033
+        comment_2x: T131033
+        local_tagline: true
+    dagwiki:
+        commons: 'File:Wikipedia-logo-v2-dag.svg'
+    dewiki:
+        commons: 'File:Wikipedia-logo-v2-de.svg'
+        comment_1_5x: T132792
+        comment_2x: T132792
+        commons_tagline: 'File:Wikipedia-tagline-de.svg'
+        comment_tagline: T258552
+    dinwiki:
+        local_tagline: true
+    diqwiki:
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    dsbwiki:
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    dtywiki:
+        comment: T161529
+        comment_1_5x: T150618
+        comment_2x: T150618
+    dvwiki:
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    dzwiki:
+        comment: T50397
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    eewiki:
+        comment: T50397
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    elwiki:
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_wordmark: 'File:Wikipedia-wordmark-el.svg'
+        comment_wordmark: T254788
+        commons_tagline: 'File:Wikipedia-tagline-el.svg'
+        comment_tagline: T258552
+    emlwiki:
+        comment: T100953
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+    enwiki:
+        commons: 'File:Wikipedia-logo-v2-en.svg'
+        comment: T309544
+        commons_wordmark: 'File:Wikipedia-wordmark-en.svg'
+        comment_wordmark: 'T157476, T249047'
+        commons_tagline: 'File:Wikipedia-tagline-en.svg'
+        comment_tagline: T249047
+    eowiki:
+        commons: 'File:Wikipedia-logo-v2-eo.svg'
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    eswiki:
+        commons: 'File:Wikipedia-logo-v2-es.svg'
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_tagline: 'File:Wikipedia-tagline-es.svg'
+        comment_tagline: T258552
+    etwiki:
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_wordmark: 'File:Wikipedia-wordmark-et.svg'
+        comment_wordmark: T254788
+    euwiki:
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_tagline: 'File:Wikipedia-tagline-eu.svg'
+        comment_tagline: T249047
+    extwiki:
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    fawiki:
+        commons: 'File:Wikipedia-logo-v2-fa.svg'
+        commons_wordmark: 'File:Wikipedia-wordmark-fa.svg'
+        comment_wordmarktagline: T249047
+        commons_tagline: 'File:Wikipedia-tagline-fa.svg'
+        comment_tagline: T249047
+    ffwiki:
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+    fjwiki:
+        no_1_5x: true
+        no_2x: true
+        selected_tagline: enwiki
+    fiu_vrowiki:
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    fiwiki:
+        commons: 'File:Wikipedia-logo-v2-fi.svg'
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_tagline: 'File:Wikipedia-tagline-fi.svg'
+        comment_tagline: T258552
+    fowiki:
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    frpwiki:
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+    frrwiki:
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+    frwiki:
+        commons: 'File:Wikipedia-logo-v2-fr.svg'
+        commons_wordmark: 'File:Wikipedia-wordmark-fr.svg'
+        comment_wordmark: T249047
+        commons_tagline: 'File:Wikipedia-tagline-fr.svg'
+        comment_tagline: T249047
+    furwiki:
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    fywiki:
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    gagwiki:
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    ganwiki:
+        comment: T46974
+        no_1_5x: true
+        no_2x: true
+        local_tagline: true
+        local_wordmark: true
     gawiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     gcrwiki:
-
+        local_tagline: true
+        local_wordmark: true
     gdwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     glkwiki:
-        comment:  T50397
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T50397
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     glwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     gnwiki:
-        comment:  T51125
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T51125
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     gomwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        comment_1_5x: T150618
+        comment_2x: T150618
         selected_wordmark: hiwiki
-
+        local_tagline: true
+        local_wordmark: true
     gorwiki:
-
+        local_tagline: true
     gotwiki:
         no_1_5x: true
         no_2x: true
-
     guwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     guwwiki:
         comment: T303727
         comment_1_5x: T303727
         comment_2x: T303727
-        commons: File:Wikipedia-logo-v2-gungbe.svg
-
+        commons: 'File:Wikipedia-logo-v2-gungbe.svg'
     gvwiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     hakwiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     hawiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     hawwiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     hewiki:
-        comment_1_5x:  T145017
-        comment_2x:  T145017
-        commons_wordmark: File:Wikipedia-wordmark-he.svg
+        comment_1_5x: T145017
+        comment_2x: T145017
+        commons_wordmark: 'File:Wikipedia-wordmark-he.svg'
         comment_wordmark: T249047
-        commons_tagline: File:Wikipedia-tagline-he.svg
+        commons_tagline: 'File:Wikipedia-tagline-he.svg'
         comment_tagline: T249047
-
     hifwiki:
-        comment:  T29361
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T29361
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     hiwiki:
-        commons: File:Wikipedia-logo-v2-hi.svg
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_wordmark: File:Wikipedia-wordmark-hi.svg
+        commons: 'File:Wikipedia-logo-v2-hi.svg'
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_wordmark: 'File:Wikipedia-wordmark-hi.svg'
         comment_wordmark: T258552
-        commons_tagline: File:Wikipedia-tagline-hi.svg
+        commons_tagline: 'File:Wikipedia-tagline-hi.svg'
         comment_tagline: T258552
-
-    hrwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    hsbwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    htwiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    huwiki:
-        commons: File:Wikipedia-logo-v2-hu.svg
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        selected_wordmark: frwiki
-        commons_tagline: File:Wikipedia-tagline-hu.svg
-        comment_tagline: T258552
-
-    hywiki:
-        comment_1_5x:  T150620
-        comment_2x:  T150620
-        commons_wordmark: File:Wikipedia-wordmark-hy.svg
-        comment_wordmark: T259985
-        commons_tagline: File:Wikipedia-tagline-hy.svg
-        comment_tagline: T259985
-
-    hywwiki:
-        comment:  T212597
-        comment_1_5x:  T212597
-        comment_2x:  T212597
-
-    iawiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    idwiki:
-        commons: File:Wikipedia-logo-v2-id.svg
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_tagline: File:Wikipedia-tagline-id.svg
-        comment_tagline: T258552
-
-    iewiki:
-        comment:  T51125
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    igwiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    ikwiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    ilowiki:
-        comment:  T42285
-
-    inhwiki:
-        comment:  T184374
+    howiki:
         no_1_5x: true
         no_2x: true
-
-    iowiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    iswiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    itwiki:
-        commons: File:Wikipedia-logo-v2-it.svg
-        commons_tagline: File:Wikipedia-tagline-it.svg
-        comment_tagline: T258552
-
-    iuwiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    jamwiki:
-        comment:  T134017
-        comment_1_5x:  T134017
-        comment_2x:  T134017
-
-    jawiki:
-        commons: File:Wikipedia-logo-v2-ja.svg
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_wordmark: File:Wikipedia-wordmark-ja.svg
-        commons_tagline: File:Wikipedia-tagline-ja.svg
-        comment_tagline: T258552
-
-    jbowiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    jvwiki:
-        comment:  T251050
-        comment_1_5x:  T251050
-        comment_2x:  T251050
+        selected_tagline: enwiki
+    hrwiki:
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    hsbwiki:
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    htwiki:
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+    huwiki:
+        commons: 'File:Wikipedia-logo-v2-hu.svg'
+        comment_1_5x: T150618
+        comment_2x: T150618
         selected_wordmark: frwiki
-        commons_tagline: File:Wikipedia-tagline-jv.svg
-        comment_tagline: T311104
-
-    kaawiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    kabwiki:
-        comment:  T46974
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    kawiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_wordmark: File:Wikipedia-wordmark-ka.svg
-        comment_wordmark: T267776
-        commons_tagline: File:Wikipedia-tagline-ka.svg
-        comment_tagline: T267776
-
-    kbdwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    kbpwiki:
-        comment:  T160868
-        comment_1_5x:  T160868
-        comment_2x:  T160868
-
-    kcgwiki:
-        commons: File:Wikipedia-logo-v2-kcg.svg
-
-    kgwiki:
-        comment:  T189586
-        comment_1_5x:  T189586
-        comment_2x:  T189586
-
-    kiwiki:
-        comment:  T50397
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    kkwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    klwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    kmwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    knwiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    koiwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        selected_wordmark: ruwiki
-
-    kowiki:
-        commons: File:Wikipedia-logo-v2-ko.svg
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_wordmark: File:Wikipedia-wordmark-ko.svg
-        comment_wordmark: T258552
-        commons_tagline: File:Wikipedia-tagline-ko.svg
+        commons_tagline: 'File:Wikipedia-tagline-hu.svg'
         comment_tagline: T258552
-
+    hywiki:
+        comment_1_5x: T150620
+        comment_2x: T150620
+        commons_wordmark: 'File:Wikipedia-wordmark-hy.svg'
+        comment_wordmark: T259985
+        commons_tagline: 'File:Wikipedia-tagline-hy.svg'
+        comment_tagline: T259985
+    hywwiki:
+        comment: T212597
+        comment_1_5x: T212597
+        comment_2x: T212597
+        local_tagline: true
+        local_wordmark: true
+    hzwiki:
+        no_1_5x: true
+        no_2x: true
+        selected_tagline: enwiki
+    iawiki:
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+    idwiki:
+        commons: 'File:Wikipedia-logo-v2-id.svg'
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_tagline: 'File:Wikipedia-tagline-id.svg'
+        comment_tagline: T258552
+    iewiki:
+        comment: T51125
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+    igwiki:
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+    iiwiki:
+        no_1_5x: true
+        no_2x: true
+        selected_tagline: enwiki
+    ikwiki:
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    ilowiki:
+        comment: T42285
+        local_tagline: true
+        local_wordmark: true
+    inhwiki:
+        comment: T184374
+        no_1_5x: true
+        no_2x: true
+        local_tagline: true
+        local_wordmark: true
+    iowiki:
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    iswiki:
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+    itwiki:
+        commons: 'File:Wikipedia-logo-v2-it.svg'
+        commons_tagline: 'File:Wikipedia-tagline-it.svg'
+        comment_tagline: T258552
+    iuwiki:
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    jamwiki:
+        comment: T134017
+        comment_1_5x: T134017
+        comment_2x: T134017
+        local_tagline: true
+    jawiki:
+        commons: 'File:Wikipedia-logo-v2-ja.svg'
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_wordmark: 'File:Wikipedia-wordmark-ja.svg'
+        commons_tagline: 'File:Wikipedia-tagline-ja.svg'
+        comment_tagline: T258552
+    jbowiki:
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+    jvwiki:
+        comment: T251050
+        comment_1_5x: T251050
+        comment_2x: T251050
+        selected_wordmark: frwiki
+        commons_tagline: 'File:Wikipedia-tagline-jv.svg'
+        comment_tagline: T311104
+        local_wordmark: true
+    kaawiki:
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+    kabwiki:
+        comment: T46974
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+    kawiki:
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_wordmark: 'File:Wikipedia-wordmark-ka.svg'
+        comment_wordmark: T267776
+        commons_tagline: 'File:Wikipedia-tagline-ka.svg'
+        comment_tagline: T267776
+    kbdwiki:
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    kbpwiki:
+        comment: T160868
+        comment_1_5x: T160868
+        comment_2x: T160868
+        local_tagline: true
+        local_wordmark: true
+    kcgwiki:
+        commons: 'File:Wikipedia-logo-v2-kcg.svg'
+    kgwiki:
+        comment: T189586
+        comment_1_5x: T189586
+        comment_2x: T189586
+        local_tagline: true
+    kiwiki:
+        comment: T50397
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+    kjwiki:
+        no_1_5x: true
+        no_2x: true
+        selected_tagline: enwiki
+    kkwiki:
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    klwiki:
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+    kmwiki:
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    knwiki:
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    koiwiki:
+        comment_1_5x: T150618
+        comment_2x: T150618
+        selected_wordmark: ruwiki
+        local_tagline: true
+        local_wordmark: true
+    kowiki:
+        commons: 'File:Wikipedia-logo-v2-ko.svg'
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_wordmark: 'File:Wikipedia-wordmark-ko.svg'
+        comment_wordmark: T258552
+        commons_tagline: 'File:Wikipedia-tagline-ko.svg'
+        comment_tagline: T258552
+    krwiki:
+        no_1_5x: true
+        no_2x: true
+        selected_tagline: enwiki
     krcwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        comment_1_5x: T150618
+        comment_2x: T150618
         selected_wordmark: ruwiki
-
+        local_tagline: true
+        local_wordmark: true
     kshwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     kswiki:
-        commons: File:Wikipedia-logo-v2-ks-1.svg
-        comment:  T293342
-        comment_1_5x:  T150618, T293342
-        comment_2x:  T150618, T293342
-        commons_wordmark: File:Wikipedia-wordmark-ks.svg
+        commons: 'File:Wikipedia-logo-v2-ks-1.svg'
+        comment: T293342
+        comment_1_5x: 'T150618, T293342'
+        comment_2x: 'T150618, T293342'
+        commons_wordmark: 'File:Wikipedia-wordmark-ks.svg'
         comment_wordmark: T294093
-        commons_tagline: File:Wikipedia-tagline-ks.svg
+        commons_tagline: 'File:Wikipedia-tagline-ks.svg'
         comment_tagline: T294093
-
     kuwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     kvwiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     kwwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     kywiki:
-        commons: File:Wikipedia-logo-v2-new-ky.svg
-        comment:  T300241
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        commons: 'File:Wikipedia-logo-v2-new-ky.svg'
+        comment: T300241
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     ladwiki:
-        comment_1_5x:  T132120
-        comment_2x:  T132120
-
+        comment_1_5x: T132120
+        comment_2x: T132120
+        local_tagline: true
+        local_wordmark: true
     lawiki:
-        commons_wordmark: File:Wikipedia-wordmark-la.svg
+        commons_wordmark: 'File:Wikipedia-wordmark-la.svg'
         comment_wordmark: T240728
-
     lbewiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
         selected_wordmark: ruwiki
-
+        local_tagline: true
+        local_wordmark: true
     lbwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     lezwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        comment_1_5x: T150618
+        comment_2x: T150618
         selected_wordmark: ruwiki
-
+        local_tagline: true
+        local_wordmark: true
     lfnwiki:
-        comment:  T183561
-
+        comment: T183561
+        local_tagline: true
+        local_wordmark: true
     lgwiki:
-        comment:  T46974
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T46974
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     lijwiki:
-        comment:  T51125
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T51125
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     liwiki:
-        comment_1_5x:  T189116
-        comment_2x:  T189116
-
+        comment_1_5x: T189116
+        comment_2x: T189116
+        local_tagline: true
     lldwiki:
-        comment:  T259432
-        comment_1_5x:  T259432
-        comment_2x:  T189116
-
+        comment: T259432
+        comment_1_5x: T259432
+        comment_2x: T189116
+        local_tagline: true
     lmowiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     lnwiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     lowiki:
-        comment:  T50397
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T50397
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     lrcwiki:
-        comment:  T102026
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T102026
+        comment_1_5x: T150618
+        comment_2x: T150618
     ltgwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     ltwiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     lvwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     madwiki:
-        comment:  T270693
-        comment_1_5x:  T270693
-        comment_2x:  T270693
-
+        comment: T270693
+        comment_1_5x: T270693
+        comment_2x: T270693
     maiwiki:
-        comment:  T74346
-        comment_1_5x:  T149790
-        comment_2x:  T149790
-
+        comment: T74346
+        comment_1_5x: T149790
+        comment_2x: T149790
+        local_tagline: true
+        local_wordmark: true
     map_bmswiki:
         selected: idwiki
-        comment:  T189155
-        comment_1_5x:  T189155
-        comment_2x:  T189155
-
+        comment: T189155
+        comment_1_5x: T189155
+        comment_2x: T189155
+        local_tagline: true
     mdfwiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     mgwiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     mhrwiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     minwiki:
-        comment:  T50397
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T50397
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     miwiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     mkwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        comment_1_5x: T150618
+        comment_2x: T150618
         selected_wordmark: srwiki
         comment_wordmark: T165896
-
+        local_tagline: true
+        local_wordmark: true
+    mhwiki:
+        no_1_5x: true
+        no_2x: true
+        selected_tagline: enwiki
     mlwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     mnwiki:
-        commons: File:Wikipedia-logo-v2-mn.svg
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_wordmark: File:Wikipedia-wordmark-mn.svg
+        commons: 'File:Wikipedia-logo-v2-mn.svg'
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_wordmark: 'File:Wikipedia-wordmark-mn.svg'
         comment_wordmark: T318478
-        commons_tagline: File:Wikipedia-tagline-mn.svg
+        commons_tagline: 'File:Wikipedia-tagline-mn.svg'
         comment_tagline: T318478
-
     mniwiki:
-        commons: File:Wikipedia-logo-v2-mni-v2.svg
-        commons_wordmark: File:Wikipedia-wordmark-mni.svg
+        commons: 'File:Wikipedia-logo-v2-mni-v2.svg'
+        commons_wordmark: 'File:Wikipedia-wordmark-mni.svg'
         comment_wordmark: T294189
-
     mnwwiki:
-
+        local_tagline: true
+        local_wordmark: true
     mnwwiktionary:
-        commons: File:Wiktionary-logo-mnw.svg
-
+        commons: 'File:Wiktionary-logo-mnw.svg'
     mrjwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     mrwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        comment_1_5x: T150618
+        comment_2x: T150618
         selected_wordmark: hiwiki
-
+        local_tagline: true
+        local_wordmark: true
     mswiki:
-
+        local_tagline: true
     mtwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    muswiki:
+        no_1_5x: true
+        no_2x: true
+        selected_tagline: enwiki
     mwlwiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     myvwiki:
-        comment:  T50397
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T50397
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     mywiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     mznwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     nahwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     napwiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     nawiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     nds_nlwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     ndswiki:
-        comment:  T51125
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T51125
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     newiki:
-        comment:  T139240
-        comment_1_5x:  T139240
-        comment_2x:  T139240
-        commons_wordmark: File:Wikipedia-wordmark-ne.svg
+        comment: T139240
+        comment_1_5x: T139240
+        comment_2x: T139240
+        commons_wordmark: 'File:Wikipedia-wordmark-ne.svg'
         comment_wordmark: T311700
-
+        local_tagline: true
     newwiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    niawiki:
-
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    ngwiki:
+        no_1_5x: true
+        no_2x: true
+        selected_tagline: enwiki
+    niawiki: null
     nlwiki:
-        commons: File:Wikipedia-logo-v2-nl.svg
-        commons_tagline: File:Wikipedia-tagline-nl.svg
+        commons: 'File:Wikipedia-logo-v2-nl.svg'
+        commons_tagline: 'File:Wikipedia-tagline-nl.svg'
         comment_tagline: T258552
-
     nnwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     novwiki:
-        comment:  T46974
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T46974
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     nowiki:
-        commons: File:Wikipedia-logo-v2-no.svg
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        commons: 'File:Wikipedia-logo-v2-no.svg'
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     nqowiki:
-
+        local_tagline: true
+        local_wordmark: true
     nrmwiki:
-        comment:  T51125
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T51125
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     nsowiki:
         no_1_5x: true
         no_2x: true
-
+        local_tagline: true
     nvwiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     nywiki:
-        comment:  T211570
-        comment_1_5x:  T211570
-        comment_2x:  T211570
-
+        comment: T211570
+        comment_1_5x: T211570
+        comment_2x: T211570
+        local_tagline: true
     ocwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     olowiki:
-        comment:  T146612
-        comment_1_5x:  T146745
-        comment_2x:  T146745
-
+        comment: T146612
+        comment_1_5x: T146745
+        comment_2x: T146745
+        local_tagline: true
+        local_wordmark: true
     omwiki:
-        comment:  T46974
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T46974
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     orwiki:
-        comment:  T29704
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T29704
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     oswiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     pagwiki:
-        comment:  T46974
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T46974
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     pamwiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     papwiki:
-        comment:  T51125
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        comment: T51125
+        comment_1_5x: T150618
+        comment_2x: T150618
         selected_wordmark: frwiki
-
+        local_tagline: true
+        local_wordmark: true
     pawiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     pcdwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        comment_1_5x: T150618
+        comment_2x: T150618
         selected_wordmark: frwiki
-
+        local_tagline: true
+        local_wordmark: true
     pcmwiki:
-        commons: File:Wikipedia-logo-v2-pcm.svg
-
+        commons: 'File:Wikipedia-logo-v2-pcm.svg'
     pdcwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     pflwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     pihwiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     piwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        comment_1_5x: T150618
+        comment_2x: T150618
         selected_wordmark: hiwiki
-
+        local_tagline: true
+        local_wordmark: true
     plwiki:
-        commons: File:Wikipedia-logo-v2-pl.svg
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_tagline: File:Wikipedia-tagline-pl.svg
+        commons: 'File:Wikipedia-logo-v2-pl.svg'
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_tagline: 'File:Wikipedia-tagline-pl.svg'
         comment_tagline: T258552
-
     pmswiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     pnbwiki:
-        comment:  T50397
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T50397
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     pntwiki:
-        comment:  T51125
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T51125
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     pswiki:
-        comment:  T50397
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_wordmark: File:Wikipedia-wordmark-ps.svg
+        comment: T50397
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_wordmark: 'File:Wikipedia-wordmark-ps.svg'
         comment_wordmark: T184442
-
     ptwiki:
-        commons: File:Wikipedia-logo-v2-pt.svg
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        commons: 'File:Wikipedia-logo-v2-pt.svg'
+        comment_1_5x: T150618
+        comment_2x: T150618
         selected_wordmark: frwiki
-        commons_tagline: File:Wikipedia-tagline-pt.svg
+        commons_tagline: 'File:Wikipedia-tagline-pt.svg'
         comment_tagline: T258552
-
     pwnwiki:
-        commons: File:Wikipedia-logo-v2-pwn.svg
-
+        commons: 'File:Wikipedia-logo-v2-pwn.svg'
     quwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     rmwiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     rmywiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    rnwiki:
+        no_1_5x: true
+        no_2x: true
+        selected_tagline: enwiki
     roa_rupwiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     roa_tarawiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     rowiki:
-        commons: File:Wikipedia-logo-v2-ro.svg
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        commons: 'File:Wikipedia-logo-v2-ro.svg'
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     ruewiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     ruwiki:
-        commons: File:Wikipedia-logo-v2-ru.svg
-        commons_wordmark: File:Wikipedia-wordmark-ru.svg
+        commons: 'File:Wikipedia-logo-v2-ru.svg'
+        commons_wordmark: 'File:Wikipedia-wordmark-ru.svg'
         comment_wordmark: T162036
-        commons_tagline: File:Wikipedia-tagline-ru.svg
+        commons_tagline: 'File:Wikipedia-tagline-ru.svg'
         comment_tagline: T258552
-
+    rwwiki:
+        no_1_5x: true
+        no_2x: true
+        selected_tagline: enwiki
     sahwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     satwiki:
-
+        local_tagline: true
+        local_wordmark: true
     sawiki:
-        comment:  T50397
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        comment: T50397
+        comment_1_5x: T150618
+        comment_2x: T150618
         selected_wordmark: hiwiki
-
+        local_tagline: true
+        local_wordmark: true
     scnwiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     scowiki:
-        comment:  T51125
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T51125
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     scwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     sdwiki:
-        comment:  T50397
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_wordmark: File:Wikipedia-wordmark-sd.svg
+        comment: T50397
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_wordmark: 'File:Wikipedia-wordmark-sd.svg'
         comment_wordmark: T200870
-
+        local_tagline: true
     sewiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     sgwiki:
-        comment:  T51125
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T51125
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     shnwiki:
-
+        local_tagline: true
+        local_wordmark: true
     shwiki:
-        comment:  T51125
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T51125
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     shiwiki:
-        commons: File:Wikipedia-logo-v2-shi.svg
-
+        commons: 'File:Wikipedia-logo-v2-shi.svg'
     simplewiki:
-        comment:  T181448
-        comment_1_5x:  T181448
-        comment_2x:  T181448
-
+        comment: T181448
+        comment_1_5x: T181448
+        comment_2x: T181448
+        local_tagline: true
     siwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     skwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        comment_1_5x: T150618
+        comment_2x: T150618
         selected_wordmark: frwiki
-
+        local_tagline: true
+        local_wordmark: true
     skrwiki:
-        comment:  T268410
-        comment_1_5x:  T268410
-        comment_2x:  T268410
-
+        comment: T268410
+        comment_1_5x: T268410
+        comment_2x: T268410
     slwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     smwiki:
-        comment:  T51125
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    smnwiki:
-
+        comment: T51125
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+    smnwiki: null
     snwiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     sowiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     sqwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     srnwiki:
-        comment:  T46974
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T46974
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     srwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_wordmark: File:Wikipedia-wordmark-sr.svg
-        comment_wordmark: T165896, T254788
-        commons_tagline: File:Wikipedia-tagline-sr.svg
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_wordmark: 'File:Wikipedia-wordmark-sr.svg'
+        comment_wordmark: 'T165896, T254788'
+        commons_tagline: 'File:Wikipedia-tagline-sr.svg'
         comment_tagline: T258552
-
     sswiki:
-        comment:  T46974
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T46974
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     stqwiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     stwiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     suwiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
         selected_wordmark: frwiki
-
+        local_tagline: true
+        local_wordmark: true
     svwiki:
-        commons: File:Wikipedia-logo-v2-sv.svg
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_tagline: File:Wikipedia-tagline-sv.svg
+        commons: 'File:Wikipedia-logo-v2-sv.svg'
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_tagline: 'File:Wikipedia-tagline-sv.svg'
         comment_tagline: T258552
-
     swwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     szlwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_wordmark: File:Wikipedia-wordmark-szl.svg
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_wordmark: 'File:Wikipedia-wordmark-szl.svg'
         comment_wordmark: T233104
-
     szywiki:
-
+        local_tagline: true
+        local_wordmark: true
     tawiki:
-        comment:  T29826
-
+        comment: T29826
+        local_tagline: true
+        local_wordmark: true
     taywiki:
-        commons: File:Wikipedia-logo-v2-tay.svg
-
+        commons: 'File:Wikipedia-logo-v2-tay.svg'
     tcywiki:
-        comment:  T140898
-        comment_1_5x:  T140898
-        comment_2x:  T140898
-
+        comment: T140898
+        comment_1_5x: T140898
+        comment_2x: T140898
+        local_tagline: true
+        local_wordmark: true
     tetwiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
         selected_wordmark: frwiki
-
+        local_tagline: true
+        local_wordmark: true
     tewiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     tgwiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     thwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_wordmark: File:Wikipedia-wordmark-th.svg
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_wordmark: 'File:Wikipedia-wordmark-th.svg'
         comment_wordmark: T258552
-        commons_tagline: File:Wikipedia-tagline-th.svg
+        commons_tagline: 'File:Wikipedia-tagline-th.svg'
         comment_tagline: T258552
-
     tiwiki:
-        comment:  T249451
-        comment_1_5x:  T249451
-        comment_2x:  T249451
-
+        comment: T249451
+        comment_1_5x: T249451
+        comment_2x: T249451
+        local_tagline: true
+        local_wordmark: true
     tkwiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_wordmark: File:Wikipedia_wordmark-tk.svg
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_wordmark: 'File:Wikipedia_wordmark-tk.svg'
         comment_wordmark: T314435
-
+        local_tagline: true
     tlwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     tnwiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     towiki:
-        comment:  T51125
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T51125
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     tpiwiki:
-        comment:  T29240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T29240
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     trvwiki:
-        commons: File:Wikipedia-logo-v2-trv.svg
-
+        commons: 'File:Wikipedia-logo-v2-trv.svg'
     trwiki:
-        commons: File:Wikipedia-logo-v2-tr.svg
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_wordmark: File:Wikipedia_wordmark-tr.svg
-        comment_wordmark: T255489, T254788
-        commons_tagline: File:Wikipedia-tagline-tr.svg
+        commons: 'File:Wikipedia-logo-v2-tr.svg'
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_wordmark: 'File:Wikipedia_wordmark-tr.svg'
+        comment_wordmark: 'T255489, T254788'
+        commons_tagline: 'File:Wikipedia-tagline-tr.svg'
         comment_tagline: T258552
-
     tswiki:
-        comment:  T51125
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T51125
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     ttwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     tumwiki:
-        commons:  File:Wikipedia-logo-v2-tum.svg
-        comment:  T320473
-        comment_1_5x:  T320473
-        comment_2x:  T320473
-
+        commons: 'File:Wikipedia-logo-v2-tum.svg'
+        comment: T320473
+        comment_1_5x: T320473
+        comment_2x: T320473
+        local_tagline: true
+        local_wordmark: true
     twwiki:
         selected: akwiki
-        comment:  T189578
-        comment_1_5x:  T189578
-        comment_2x:  T189578
-
+        comment: T189578
+        comment_1_5x: T189578
+        comment_2x: T189578
+        local_tagline: true
     tyvwiki:
-        comment:  T51328
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        comment: T51328
+        comment_1_5x: T150618
+        comment_2x: T150618
         selected_wordmark: ruwiki
-
+        local_tagline: true
+        local_wordmark: true
     tywiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     udmwiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
         selected_wordmark: ruwiki
-
+        local_tagline: true
+        local_wordmark: true
     ugwiki:
-        comment:  T50397
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_wordmark: File:Wikipedia-wordmark-ug.svg
+        comment: T50397
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_wordmark: 'File:Wikipedia-wordmark-ug.svg'
         comment_wordmark: T309431
-
+        local_tagline: true
     ukwiki:
-        commons: File:Wikipedia-logo-v2-uk.svg
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_wordmark: File:Wikipedia-wordmark-uk.svg
+        commons: 'File:Wikipedia-logo-v2-uk.svg'
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_wordmark: 'File:Wikipedia-wordmark-uk.svg'
         comment_wordmark: T254788
-        commons_tagline: File:Wikipedia-tagline-uk.svg
+        commons_tagline: 'File:Wikipedia-tagline-uk.svg'
         comment_tagline: T258552
-
     urwiki:
-        comment:  T48589
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_wordmark: File:Wikipedia-wordmark-ur.svg
-        comment_wordmark: T171769, T254788
-
+        comment: T48589
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_wordmark: 'File:Wikipedia-wordmark-ur.svg'
+        comment_wordmark: 'T171769, T254788'
     uzwiki:
-        comment:  T39699
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_wordmark: File:Wikipedia-wordmark-uz.svg
-        comment_wordmark: T205226, T254788
-
+        comment: T39699
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_wordmark: 'File:Wikipedia-wordmark-uz.svg'
+        comment_wordmark: 'T205226, T254788'
+    vewiki:
+        no_1_5x: true
+        no_2x: true
+        selected_tagline: enwiki
     vecwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_tagline: File:Wikipedia-tagline-vec.svg
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_tagline: 'File:Wikipedia-tagline-vec.svg'
         comment_tagline: T273085
-
     vepwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     viwiki:
-        commons_tagline: File:Wikipedia-tagline-vi.svg
+        commons_tagline: 'File:Wikipedia-tagline-vi.svg'
         comment_tagline: T258552
-
     vlswiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     vowiki:
-        commons: File:Wikipedia-logo-v2-vo.svg
-        comment:  T51125
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        commons: 'File:Wikipedia-logo-v2-vo.svg'
+        comment: T51125
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     warwiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     wawiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     wowiki:
-        comment:  T42285
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T42285
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     wuuwiki:
-        comment:  T46974
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T46974
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     xalwiki:
-        comment:  T46974
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T46974
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
+    xhwiki:
+        no_1_5x: true
+        no_2x: true
+        selected_tagline: enwiki
     xmfwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     yiwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     yowiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     zawiki:
-        comment:  T50397
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T50397
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
+        local_wordmark: true
     zeawiki:
-        comment:  T51125
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T51125
+        comment_1_5x: T150618
+        comment_2x: T150618
+        local_tagline: true
     zh_classicalwiki:
-        commons:  File:Wikipedia-logo-v4-zh-classical.svg
-        comment:  T177165, T259006
-        comment_1_5x:  T177165, T259006
-        comment_2x:  T177165, T259006
-        commons_wordmark: File:Wikipedia-wordmark-zh-c.svg
-        comment_wordmark: T174192, T261110
-        commons_tagline: File:Wikipedia-tagline-zh-c.svg
-        comment_tagline: T258552, T261110
-
+        commons: 'File:Wikipedia-logo-v4-zh-classical.svg'
+        comment: 'T177165, T259006'
+        comment_1_5x: 'T177165, T259006'
+        comment_2x: 'T177165, T259006'
+        commons_wordmark: 'File:Wikipedia-wordmark-zh-c.svg'
+        comment_wordmark: 'T174192, T261110'
+        commons_tagline: 'File:Wikipedia-tagline-zh-c.svg'
+        comment_tagline: 'T258552, T261110'
     zh_min_nanwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     zh_yuewiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     zhwiki:
-        commons: File:Wikipedia-logo-v2-zh.svg
+        commons: 'File:Wikipedia-logo-v2-zh.svg'
         selected: zhwiki-20
         variants:
-            zhwiki-hans: File:Wikipedia-logo-v2-zh-hans.svg
-            zhwiki-20: File:Wikipedia-logo-zh-20zhWP-魔琴-hant.svg
-            zhwiki-20-hans: File:Wikipedia-logo-zh-20zhWP-魔琴-hans.svg
-        comment:  T276694, T320859
-        comment_1_5x:  T276694, T320859
-        comment_2x:  T276694, T320859
-        commons_wordmark: File:Wikipedia-wordmark-zh.svg
-        comment_wordmark: T258552, T260908
-        commons_tagline: File:Wikipedia-tagline-zh.svg
-        comment_tagline: T258552, T260908
-
+            zhwiki-hans: 'File:Wikipedia-logo-v2-zh-hans.svg'
+            zhwiki-20: 'File:Wikipedia-logo-zh-20zhWP-魔琴-hant.svg'
+            zhwiki-20-hans: 'File:Wikipedia-logo-zh-20zhWP-魔琴-hans.svg'
+        comment: 'T276694, T320859'
+        comment_1_5x: 'T276694, T320859'
+        comment_2x: 'T276694, T320859'
+        commons_wordmark: 'File:Wikipedia-wordmark-zh.svg'
+        comment_wordmark: 'T258552, T260908'
+        commons_tagline: 'File:Wikipedia-tagline-zh.svg'
+        comment_tagline: 'T258552, T260908'
     zuwiki:
-        comment:  T233424
-        comment_1_5x:  T233424
-        comment_2x:  T233424
-
+        comment: T233424
+        comment_1_5x: T233424
+        comment_2x: T233424
+        local_tagline: true
 Wiktionary:
     afwiktionary:
-        comment:  T178824
-        comment_1_5x:  T178824
-        comment_2x:  T178824
-
+        comment: T178824
+        comment_1_5x: T178824
+        comment_2x: T178824
     amwiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     angwiktionary:
         no_1_5x: true
         no_2x: true
-
     anwiktionary:
         no_1_5x: true
         no_2x: true
-
     arwiktionary:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     astwiktionary:
         no_1_5x: true
         no_2x: true
-
     azwiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    bclwiktionary:
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
+    bclwiktionary: null
     bewiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     bgwiktionary:
         no_1_5x: true
         no_2x: true
-
     bnwiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_wordmark: File:Wiktionary-wordmark-bn.svg
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_wordmark: 'File:Wiktionary-wordmark-bn.svg'
         comment_wordmark: T316953
-
     brwiktionary:
         no_1_5x: true
         no_2x: true
-
     bswiktionary:
-        comment:  T45240
-        comment_1_5x:  T159542
-        comment_2x:  T159542
-
+        comment: T45240
+        comment_1_5x: T159542
+        comment_2x: T159542
     cawiktionary:
         no_1_5x: true
         no_2x: true
-
     cowiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     csbwiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     cswiktionary:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     cywiktionary:
         no_1_5x: true
         no_2x: true
-
     dawiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     dewiktionary:
-        commons:  File:Wiktionary_logo_de_4.svg
-        comment:  T320891
-        comment_1_5x:  T320891
-        comment_2x:  T320891
-
+        commons: 'File:Wiktionary_logo_de_4.svg'
+        comment: T320891
+        comment_1_5x: T320891
+        comment_2x: T320891
     elwiktionary:
         no_1_5x: true
         no_2x: true
-
     enwiktionary:
-        comment_1_5x:  T138801
-        comment_2x:  T138801
-        commons_wordmark: File:Wiktionary-wordmark-en.svg
-        comment_wordmark: T157476, T249047
-
+        comment_1_5x: T138801
+        comment_2x: T138801
+        commons_wordmark: 'File:Wiktionary-wordmark-en.svg'
+        comment_wordmark: 'T157476, T249047'
     eowiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     eswiktionary:
         no_1_5x: true
         no_2x: true
-        commons_wordmark: File:Wiktionary-wordmark-es.svg
+        commons_wordmark: 'File:Wiktionary-wordmark-es.svg'
         comment_wordmark: T254059
-
     etwiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     euwiktionary:
         no_1_5x: true
         no_2x: true
-
     fawiktionary:
         no_1_5x: true
         no_2x: true
-
     fiwiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     fowiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     frwiktionary:
-        comment_1_5x:  T144427
-        comment_2x:  T144427
-        commons_wordmark: File:Wiktionary-wordmark-fr.svg
+        comment_1_5x: T144427
+        comment_2x: T144427
+        commons_wordmark: 'File:Wiktionary-wordmark-fr.svg'
         comment_wordmark: T249047
-        commons_tagline: File:Wiktionary-tagline-fr.svg
-        comment_tagline: T249047, T320840
-
+        commons_tagline: 'File:Wiktionary-tagline-fr.svg'
+        comment_tagline: 'T249047, T320840'
     fywiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     gawiktionary:
         no_1_5x: true
         no_2x: true
-
     gdwiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     glwiktionary:
         no_1_5x: true
         no_2x: true
-
-    gomwiktionary:
-
+    gomwiktionary: null
     guwiktionary:
-        comment:  T45240
+        comment: T45240
         no_1_5x: true
         no_2x: true
-
     guwwiktionary:
-        commons: File:Wiktionary-logo-guw-v6.svg
-
+        commons: 'File:Wiktionary-logo-guw-v6.svg'
     gvwiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     hewiktionary:
-        commons_wordmark: File:Wiktionary-wordmark-he.svg
+        commons_wordmark: 'File:Wiktionary-wordmark-he.svg'
         comment_wordmark: T308411
-
     hiwiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     hsbwiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     huwiktionary:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     hywiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     iawiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     idwiktionary:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     iewiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     ikwiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     iowiktionary:
         no_1_5x: true
         no_2x: true
-
     iswiktionary:
         no_1_5x: true
         no_2x: true
-
     itwiktionary:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     jbowiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     jvwiktionary:
-        comment:  T287425
-        comment_1_5x:  T287425
-        comment_2x:  T287425
-        commons_wordmark: File:Wiktionary-wordmark-jv.svg
+        comment: T287425
+        comment_1_5x: T287425
+        comment_2x: T287425
+        commons_wordmark: 'File:Wiktionary-wordmark-jv.svg'
         comment_wordmark: T311104
-        commons_tagline: File:Wiktionary-tagline-jv.svg
+        commons_tagline: 'File:Wiktionary-tagline-jv.svg'
         comment_tagline: T311104
-
     kawiktionary:
         no_1_5x: true
         no_2x: true
-
     kkwiktionary:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     kmwiktionary:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     knwiktionary:
-        comment:  T31380
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T31380
+        comment_1_5x: T150618
+        comment_2x: T150618
     kowiktionary:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     kswiktionary:
-        commons: File:Wiktionary-logo-ks.svg
-        comment:  T293373
-        comment_1_5x:  T293373
-        comment_2x:  T293373
-
+        commons: 'File:Wiktionary-logo-ks.svg'
+        comment: T293373
+        comment_1_5x: T293373
+        comment_2x: T293373
     kuwiktionary:
         no_1_5x: true
         no_2x: true
-
     kwwiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     kywiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     lawiktionary:
         no_1_5x: true
         no_2x: true
-
     lbwiktionary:
         no_1_5x: true
         no_2x: true
-
     liwiktionary:
-        commons: File:Wiktionary-logo-li.svg
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        commons: 'File:Wiktionary-logo-li.svg'
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     lmowiktionary:
-        commons: File:WiktionaryLmo.svg
-
+        commons: 'File:WiktionaryLmo.svg'
     ltwiktionary:
         no_1_5x: true
         no_2x: true
-
     lvwiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    niawiktionary:
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
+    niawiktionary: null
     mgwiktionary:
         no_1_5x: true
         no_2x: true
-
-    minwiktionary:
-
+    minwiktionary: null
     miwiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     mkwiktionary:
-        comment:  T140566
+        comment: T140566
         no_1_5x: true
         no_2x: true
-
     mlwiktionary:
-        comment:  T43785
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T43785
+        comment_1_5x: T150618
+        comment_2x: T150618
     mnwiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     mniwiktionary:
-        commons: File:Wiktionary-logo.svg
+        commons: 'File:Wiktionary-logo.svg'
         comment: T317004
         comment_1_5x: T317004
         comment_2x: T317004
-        commons_wordmark: File:Wiktionary-wordmark-mni.svg
+        commons_wordmark: 'File:Wiktionary-wordmark-mni.svg'
         comment_wordmark: T294709
-
     mrwiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     mswiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     mtwiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     mywiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     ndswiktionary:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     newiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     nlwiktionary:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     nnwiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     nowiktionary:
         no_1_5x: true
         no_2x: true
-
     ocwiktionary:
-        comment:  T54019
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T54019
+        comment_1_5x: T150618
+        comment_2x: T150618
     orwiktionary:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     pawiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     plwiktionary:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_wordmark: File:Wiktionary-wordmark-pl.svg
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_wordmark: 'File:Wiktionary-wordmark-pl.svg'
         comment_wordmark: T307683
-
     pnbwiktionary:
         no_1_5x: true
         no_2x: true
-
     pswiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     ptwiktionary:
-        comment:  T55685
+        comment: T55685
         no_1_5x: true
         no_2x: true
-
     quwiktionary:
         no_1_5x: true
         no_2x: true
-
     roa_rupwiktionary:
-        comment:  T45240
+        comment: T45240
         no_1_5x: true
         no_2x: true
-
     rowiktionary:
         no_1_5x: true
         no_2x: true
-
     ruwiktionary:
         no_1_5x: true
         no_2x: true
-        commons_wordmark: File:Wiktionary-wordmark-ru.svg
+        commons_wordmark: 'File:Wiktionary-wordmark-ru.svg'
         comment_wordmark: T308233
-
     sawiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     scnwiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     sdwiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     sgwiktionary:
         no_1_5x: true
         no_2x: true
-
     shwiktionary:
         no_1_5x: true
         no_2x: true
-
-    shnwiktionary:
-
-    shywiktionary:
-
+    shnwiktionary: null
+    shywiktionary: null
     simplewiktionary:
         no_1_5x: true
         no_2x: true
-
     siwiktionary:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     skwiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     slwiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     sqwiktionary:
         no_1_5x: true
         no_2x: true
-
     srwiktionary:
-        comment_1_5x:  T172245
-        comment_2x:  T172245
-
+        comment_1_5x: T172245
+        comment_2x: T172245
     suwiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     svwiktionary:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     swwiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     tawiktionary:
         no_1_5x: true
         no_2x: true
-
     tewiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     thwiktionary:
         no_1_5x: true
         no_2x: true
-
     tiwiktionary:
-        comment:  T249451
-        comment_1_5x:  T249451
-        comment_2x:  T249451
-
+        comment: T249451
+        comment_1_5x: T249451
+        comment_2x: T249451
     tkwiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     trwiktionary:
-        comment:  T176008
-        comment_1_5x:  T176008
-        comment_2x:  T176008
-
+        comment: T176008
+        comment_1_5x: T176008
+        comment_2x: T176008
     ttwiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     ugwiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     ukwiktionary:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     urwiktionary:
-        comment:  T187209
-        comment_1_5x:  T187209
-        comment_2x:  T187209
-
+        comment: T187209
+        comment_1_5x: T187209
+        comment_2x: T187209
     uzwiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     viwiktionary:
-        comment:  T45240
-
+        comment: T45240
     vowiktionary:
         no_1_5x: true
         no_2x: true
-
     wawiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     wowiktionary:
         no_1_5x: true
         no_2x: true
-
     yiwiktionary:
-        commons:  File:WiktprintableYi.svg
-        comment:  T308411, T310961
-        comment_1_5x: T308411, T310961
-        comment_2x: T308411, T310961
-        commons_wordmark: File:Wiktionary-wordmark-yi.svg
+        commons: 'File:WiktprintableYi.svg'
+        comment: 'T308411, T310961'
+        comment_1_5x: 'T308411, T310961'
+        comment_2x: 'T308411, T310961'
+        commons_wordmark: 'File:Wiktionary-wordmark-yi.svg'
         comment_wordmark: T308411
-
-    yuewiktionary:
-
+    yuewiktionary: null
     zh_min_nanwiktionary:
-        comment:  T45240
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45240
+        comment_1_5x: T150618
+        comment_2x: T150618
     zhwiktionary:
-        commons:  File:Wiktprintable-zh.svg
-        comment:  T308620
-        comment_1_5x:  T150618, T308620
-        comment_2x:  T150618, T308620
-
+        commons: 'File:Wiktprintable-zh.svg'
+        comment: T308620
+        comment_1_5x: 'T150618, T308620'
+        comment_2x: 'T150618, T308620'
 Wikiquote:
     angwikiquote:
         no_1_5x: true
         no_2x: true
-
     arwikiquote:
         no_1_5x: true
         no_2x: true
-
     azwikiquote:
         no_1_5x: true
         no_2x: true
-
     bclwikiquote:
-        commons: File:Wikisambit-logo-01.svg
-
+        commons: 'File:Wikisambit-logo-01.svg'
     bewikiquote:
-        comment:  T196134
-        comment_1_5x:  T196134
-        comment_2x:  T196134
-
+        comment: T196134
+        comment_1_5x: T196134
+        comment_2x: T196134
     bgwikiquote:
         no_1_5x: true
         no_2x: true
-
     bnwikiquote:
-        commons: File:Wikiquote-logo-bn.svg
-        comment:  T319183
-        comment_1_5x:  T319183
-        comment_2x:  T319183
-
+        commons: 'File:Wikiquote-logo-bn.svg'
+        comment: T319183
+        comment_1_5x: T319183
+        comment_2x: T319183
     bswikiquote:
         no_1_5x: true
         no_2x: true
-
     cawikiquote:
-        commons: File:Wikiquote-logo-ca.svg
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        commons: 'File:Wikiquote-logo-ca.svg'
+        comment_1_5x: T150618
+        comment_2x: T150618
     cswikiquote:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     dewikiquote:
         no_1_5x: true
         no_2x: true
-
     elwikiquote:
         no_1_5x: true
         no_2x: true
-
     enwikiquote:
-        commons: File:Wikiquote-logo-en.svg
-        comment:  T171810
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        commons: 'File:Wikiquote-logo-en.svg'
+        comment: T171810
+        comment_1_5x: T150618
+        comment_2x: T150618
     eowikiquote:
-        commons: File:Wikiquote-logo-eo.svg
-        comment:  T45879
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        commons: 'File:Wikiquote-logo-eo.svg'
+        comment: T45879
+        comment_1_5x: T150618
+        comment_2x: T150618
+    euwikiquote:
+        no_1_5x: true
+        no_2x: true
     eswikiquote:
-        commons: File:Wikiquote-logo-es.svg
-        comment_1_5x:  T170604
-        comment_2x:  T170604
-
+        commons: 'File:Wikiquote-logo-es.svg'
+        comment_1_5x: T170604
+        comment_2x: T170604
     etwikiquote:
-        commons: File:EE Vikitsitaadid logo.svg
+        commons: 'File:EE Vikitsitaadid logo.svg'
         selected: etwikiquote-10k
         variants:
-            etwikiquote-10k: File:Vikitsitaadid 10 000.svg
-        comment: T302683, T313698
-        comment_1_5x:  T313698
-        comment_2x:  T313698
-
-    fawikiquote:
-
+            etwikiquote-10k: 'File:Vikitsitaadid 10 000.svg'
+        comment: 'T302683, T313698'
+        comment_1_5x: T313698
+        comment_2x: T313698
+    fawikiquote: null
     frwikiquote:
-        commons: File:Wikiquote-logo-en.svg
+        commons: 'File:Wikiquote-logo-en.svg'
         comment: T317004
         comment_1_5x: T317004
         comment_2x: T317004
-        commons_wordmark: File:Wikiquote.svg
+        commons_wordmark: 'File:Wikiquote.svg'
         comment_wordmark: T290091
-
     guwikiquote:
-        comment:  T121853
-
-    hewikiquote:
-
+        comment: T121853
+    hewikiquote: null
     hiwikiquote:
-        comment:  T126185
+        comment: T126185
         no_1_5x: true
         no_2x: true
-
     hrwikiquote:
-        commons: File:Wikiquote-logo-hr.svg
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        commons: 'File:Wikiquote-logo-hr.svg'
+        comment_1_5x: T150618
+        comment_2x: T150618
     huwikiquote:
         no_1_5x: true
         no_2x: true
-
     hywikiquote:
-        commons: File:Wikiquote-logo-hy.svg
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        commons: 'File:Wikiquote-logo-hy.svg'
+        comment_1_5x: T150618
+        comment_2x: T150618
     igwikiquote:
-        commons: File:Wikiquote-logo-ig.svg
-
+        commons: 'File:Wikiquote-logo-ig.svg'
     iswikiquote:
         no_1_5x: true
         no_2x: true
-
     kawikiquote:
         no_1_5x: true
         no_2x: true
-
     knwikiquote:
-        commons: File:Wikiquote-logo-kn.svg
-        comment:  T104260
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        commons: 'File:Wikiquote-logo-kn.svg'
+        comment: T104260
+        comment_1_5x: T150618
+        comment_2x: T150618
     kowikiquote:
-        comment:  T29548
+        comment: T29548
         no_1_5x: true
         no_2x: true
-
     kuwikiquote:
         no_1_5x: true
         no_2x: true
-
     mlwikiquote:
-        comment:  T44771
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T44771
+        comment_1_5x: T150618
+        comment_2x: T150618
     nlwikiquote:
         no_1_5x: true
         no_2x: true
-
     nnwikiquote:
-        comment:  T29555
+        comment: T29555
         no_1_5x: true
         no_2x: true
-
     plwikiquote:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     rowikiquote:
         no_1_5x: true
         no_2x: true
-
     ruwikiquote:
-        comment_1_5x:  T197508
-        comment_2x:  T197508
-
+        comment_1_5x: T197508
+        comment_2x: T197508
     sahwikiquote:
-        comment:  T222065
-        comment_1_5x:  T222065
-        comment_2x:  T222065
-
+        comment: T222065
+        comment_1_5x: T222065
+        comment_2x: T222065
     sawikiquote:
-        comment:  T45812
+        comment: T45812
         no_1_5x: true
         no_2x: true
-
     skwikiquote:
         no_1_5x: true
         no_2x: true
-
     slwikiquote:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     sqwikiquote:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     srwikiquote:
-        commons: File:Wikiquote-logo-sr.svg
-        comment_1_5x:  T150618 and T168444
-        comment_2x:  T150618 and T168444
-
+        commons: 'File:Wikiquote-logo-sr.svg'
+        comment_1_5x: 'T150618 and T168444'
+        comment_2x: 'T150618 and T168444'
     suwikiquote:
-        comment:  T106784
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T106784
+        comment_1_5x: T150618
+        comment_2x: T150618
     tawikiquote:
-        comment:  T57864
+        comment: T57864
         no_1_5x: true
         no_2x: true
-
-    tewikiquote:
-
+    tewikiquote: null
     thwikiquote:
         no_1_5x: true
         no_2x: true
-
     tlwikiquote:
-       commons: File:Wikikawikaan-logo.svg
-
+        commons: 'File:Wikikawikaan-logo.svg'
     trwikiquote:
         no_1_5x: true
         no_2x: true
-        commons_wordmark: File:Wikiquote-wordmark-tr.svg
+        commons_wordmark: 'File:Wikiquote-wordmark-tr.svg'
         comment_wordmark: T286133
-
     ukwikiquote:
         no_1_5x: true
         no_2x: true
-
     urwikiquote:
-        comment:  T97510
+        comment: T97510
         no_1_5x: true
         no_2x: true
-
-    viwikiquote:
-
+    viwikiquote: null
     zhwikiquote:
-        commons:  File:Wikiquote-logo-zh-hant.svg
+        commons: 'File:Wikiquote-logo-zh-hant.svg'
         variants:
-            zhwikiquote-hans:  File:Wikiquote-logo-zh-hans.svg
-        comment:  T199863, T308620
-        comment_1_5x:  T150618, T199863, T308620
-        comment_2x:  T150618, T199863, T308620
-
+            zhwikiquote-hans: 'File:Wikiquote-logo-zh-hans.svg'
+        comment: 'T199863, T308620'
+        comment_1_5x: 'T150618, T199863, T308620'
+        comment_2x: 'T150618, T199863, T308620'
 Wikibooks:
     afwikibooks:
-        comment:  T150618
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T150618
+        comment_1_5x: T150618
+        comment_2x: T150618
     akwikibooks:
-        comment:  T150618
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    angwikibooks:
-
-    arwikibooks:
-
+        comment: T150618
+        comment_1_5x: T150618
+        comment_2x: T150618
+    angwikibooks: null
+    arwikibooks: null
     astwikibooks:
-        comment:  T150618
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T150618
+        comment_1_5x: T150618
+        comment_2x: T150618
     aswikibooks:
-        comment:  T150618
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T150618
+        comment_1_5x: T150618
+        comment_2x: T150618
     aywikibooks:
-        comment:  T150618
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T150618
+        comment_1_5x: T150618
+        comment_2x: T150618
     azwikibooks:
-        comment:  T54019
+        comment: T54019
         no_1_5x: true
         no_2x: true
-
     bawikibooks:
-        comment_1_5x:  T227418
-        comment_2x:  T227418
-
-    bewikibooks:
-
+        comment_1_5x: T227418
+        comment_2x: T227418
+    bewikibooks: null
     bgwikibooks:
         no_1_5x: true
         no_2x: true
-
     bnwikibooks:
-        commons_wordmark: File:Wikibooks-wordmark-bn.svg
+        commons_wordmark: 'File:Wikibooks-wordmark-bn.svg'
         comment_wordmark: T319320
-        commons_tagline: File:Wikibooks-tagline-bn.svg
+        commons_tagline: 'File:Wikibooks-tagline-bn.svg'
         comment_tagline: T319320
-
-    cawikibooks:
-
+    cawikibooks: null
     cswikibooks:
-        comment_1_5x:  T177506
-        comment_2x:  T177506
-
+        comment_1_5x: T177506
+        comment_2x: T177506
     cywikibooks:
-        comment:  T54019
+        comment: T54019
         no_1_5x: true
         no_2x: true
-
     dewikibooks:
-        comment_1_5x:  T177506
-        comment_2x:  T177506
-
+        comment_1_5x: T177506
+        comment_2x: T177506
     elwikibooks:
         no_1_5x: true
         no_2x: true
-
     enwikibooks:
-        comment_1_5x:  T177506
-        comment_2x:  T177506
-
+        comment_1_5x: T177506
+        comment_2x: T177506
     eowikibooks:
-        comment:  T54019
+        comment: T54019
         no_1_5x: true
         no_2x: true
-
     eswikibooks:
-        comment_1_5x:  T170248
-        comment_2x:  T170248
-
+        comment_1_5x: T170248
+        comment_2x: T170248
     etwikibooks:
-        comment:  T54019
+        comment: T54019
         no_1_5x: true
         no_2x: true
-
     euwikibooks:
-        comment:  T54019
+        comment: T54019
         no_1_5x: true
         no_2x: true
-
     fawikibooks:
         no_1_5x: true
         no_2x: true
-
     fiwikibooks:
-        comment_1_5x:  T177506
-        comment_2x:  T177506
-
+        comment_1_5x: T177506
+        comment_2x: T177506
     frwikibooks:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     fywikibooks:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     hewikibooks:
-        comment_1_5x:  T201562
-        comment_2x:  T201562
-
+        comment_1_5x: T201562
+        comment_2x: T201562
     hiwikibooks:
-        comment:  T157229
-
+        comment: T157229
     hrwikibooks:
         no_1_5x: true
         no_2x: true
-
     huwikibooks:
-        comment_1_5x:  T177506
-        comment_2x:  T177506
-
+        comment_1_5x: T177506
+        comment_2x: T177506
     iawikibooks:
-        comment:  T150618
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T150618
+        comment_1_5x: T150618
+        comment_2x: T150618
     idwikibooks:
         no_1_5x: true
         no_2x: true
-
     iewikibooks:
-        comment:  T150618
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T150618
+        comment_1_5x: T150618
+        comment_2x: T150618
     iswikibooks:
         no_1_5x: true
         no_2x: true
-
     itwikibooks:
-        comment_1_5x:  T177506
-        comment_2x:  T177506
-
+        comment_1_5x: T177506
+        comment_2x: T177506
     kawikibooks:
         no_1_5x: true
         no_2x: true
-
     kowikibooks:
-        comment:  T58760
+        comment: T58760
         no_1_5x: true
         no_2x: true
-
-    lawikibooks:
-
+    lawikibooks: null
     liwikibooks:
-        comment:  T193680
+        comment: T193680
         no_1_5x: true
         no_2x: true
-
     ltwikibooks:
         no_1_5x: true
         no_2x: true
-
     mgwikibooks:
-        comment:  T150618
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T150618
+        comment_1_5x: T150618
+        comment_2x: T150618
     miwikibooks:
-        comment:  T150618
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T150618
+        comment_1_5x: T150618
+        comment_2x: T150618
     mkwikibooks:
-        comment:  T54019
+        comment: T54019
         no_1_5x: true
         no_2x: true
-
     mlwikibooks:
-        comment:  T45111
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment: T45111
+        comment_1_5x: T150618
+        comment_2x: T150618
     mrwikibooks:
-        comment:  T104132
+        comment: T104132
         no_1_5x: true
         no_2x: true
-
     mswikibooks:
         no_1_5x: true
         no_2x: true
-
     newikibooks:
-        comment:  T124881
+        comment: T124881
         no_1_5x: true
         no_2x: true
-
-    nowikibooks:
-
+    nowikibooks: null
     ocwikibooks:
-        comment:  T54019
+        comment: T54019
         no_1_5x: true
         no_2x: true
-
     ptwikibooks:
         no_1_5x: true
         no_2x: true
-
     rowikibooks:
         no_1_5x: true
         no_2x: true
-
     ruwikibooks:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     simplewikibooks:
-        comment:  T150618
+        comment: T150618
         no_1_5x: true
         no_2x: true
-
     siwikibooks:
         no_1_5x: true
         no_2x: true
-
     skwikibooks:
         no_1_5x: true
         no_2x: true
-
     slwikibooks:
-        comment:  T54019
+        comment: T54019
         no_1_5x: true
         no_2x: true
-
     sqwikibooks:
         no_1_5x: true
         no_2x: true
-
     srwikibooks:
-        comment_1_5x:  T159534
-        comment_2x:  T159534
-
+        comment_1_5x: T159534
+        comment_2x: T159534
     tawikibooks:
-        comment:  T33862
+        comment: T33862
         no_1_5x: true
         no_2x: true
-
     thwikibooks:
         no_1_5x: true
         no_2x: true
-
     trwikibooks:
-        comment_1_5x:  T177506
-        comment_2x:  T177506
-
+        comment_1_5x: T177506
+        comment_2x: T177506
     ttwikibooks:
         no_1_5x: true
         no_2x: true
-
     ukwikibooks:
         no_1_5x: true
         no_2x: true
-
     urwikibooks:
-        comment:  T185977
-        comment_1_5x:  T185977
-        comment_2x:  T185977
-
+        comment: T185977
+        comment_1_5x: T185977
+        comment_2x: T185977
     viwikibooks:
-        comment:  T39661
-        commons_wordmark: File:Wikibooks-wordmark-vi.svg
+        comment: T39661
+        commons_wordmark: 'File:Wikibooks-wordmark-vi.svg'
         comment_wordmark: T290091
-        commons_tagline: File:Wikibooks-tagline-vi.svg
+        commons_tagline: 'File:Wikibooks-tagline-vi.svg'
         comment_tagline: T290091
-
     zhwikibooks:
         no_1_5x: true
         no_2x: true
-
 Wikinews:
     arwikinews:
         no_1_5x: true
         no_2x: true
-
     bgwikinews:
         no_1_5x: true
         no_2x: true
-
     bswikinews:
         no_1_5x: true
         no_2x: true
-
     cawikinews:
         no_1_5x: true
         no_2x: true
-
     cswikinews:
         no_1_5x: true
         no_2x: true
-
     dewikinews:
         no_1_5x: true
         no_2x: true
-
     elwikinews:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     enwikinews:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     eowikinews:
         no_1_5x: true
         no_2x: true
-
     eswikinews:
         no_1_5x: true
         no_2x: true
-
     fawikinews:
         no_1_5x: true
         no_2x: true
-
     fiwikinews:
         no_1_5x: true
         no_2x: true
-
     frwikinews:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     hewikinews:
         no_1_5x: true
         no_2x: true
-
     huwikinews:
         no_1_5x: true
         no_2x: true
-
     itwikinews:
         no_1_5x: true
         no_2x: true
-
     jawikinews:
         no_1_5x: true
         no_2x: true
-
     kowikinews:
         no_1_5x: true
         no_2x: true
-
-    liwikinews:
-
+    liwikinews: null
     nlwikinews:
         no_1_5x: true
         no_2x: true
-
     nowikinews:
         no_1_5x: true
         no_2x: true
-
     plwikinews:
         no_1_5x: true
         no_2x: true
-        commons_wordmark: File:Wikinews-wordmark-pl.svg
+        commons_wordmark: 'File:Wikinews-wordmark-pl.svg'
         comment_wordmark: T290091
-
     ptwikinews:
         no_1_5x: true
         no_2x: true
-        commons_wordmark: File:Wikinews-wordmark-pt.svg
-        comment_wordmark: T281591, T313174
-        commons_tagline: File:Wikinews-tagline-pt.svg
+        commons_wordmark: 'File:Wikinews-wordmark-pt.svg'
+        comment_wordmark: 'T281591, T313174'
+        commons_tagline: 'File:Wikinews-tagline-pt.svg'
         comment_tagline: T313174
-
     rowikinews:
         no_1_5x: true
         no_2x: true
-
     ruwikinews:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     sdwikinews:
         no_1_5x: true
         no_2x: true
-
     sqwikinews:
-        comment:  T30114
+        comment: T30114
         no_1_5x: true
         no_2x: true
-
     srwikinews:
-        comment_1_5x:  T172255
-        comment_2x:  T172255
-
+        comment_1_5x: T172255
+        comment_2x: T172255
     svwikinews:
         no_1_5x: true
         no_2x: true
-
     tawikinews:
         no_1_5x: true
         no_2x: true
-
     thwikinews:
         no_1_5x: true
         no_2x: true
-
     trwikinews:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     ukwikinews:
-        comment:  T124778
-
+        comment: T124778
     zhwikinews:
-        commons: File:Wikinews-logo-zh-hant-source-han-sans-bold-lightshadown.svg
-        comment:  T298550
-        comment_1_5x:  T298550
-        comment_2x:  T298550
+        commons: 'File:Wikinews-logo-zh-hant-source-han-sans-bold-lightshadown.svg'
+        comment: T298550
+        comment_1_5x: T298550
+        comment_2x: T298550
         variants:
-            zhwikinews-hans: File:Wikinews-logo-zh-hans-source-han-sans-bold-lightshadown.svg
-
+            zhwikinews-hans: 'File:Wikinews-logo-zh-hans-source-han-sans-bold-lightshadown.svg'
 Wikisource:
     arwikisource:
         no_1_5x: true
         no_2x: true
-
     aswikisource:
-        comment:  T45129
+        comment: T45129
         no_1_5x: true
         no_2x: true
-
     azwikisource:
-        comment:  T54019
+        comment: T54019
         no_1_5x: true
         no_2x: true
-
     banwikisource:
-        commons: File:Wikisource-logo-ban.svg
+        commons: 'File:Wikisource-logo-ban.svg'
         comment: T296459
-
     bewikisource:
-        commons:  File:Wikisource-logo-be_v2.svg
-        comment:  T310961
-        comment_1_5x:  T150618, T310961
-        comment_2x:  T150618, T310961
-
+        commons: 'File:Wikisource-logo-be_v2.svg'
+        comment: T310961
+        comment_1_5x: 'T150618, T310961'
+        comment_2x: 'T150618, T310961'
     bgwikisource:
-        comment:  T54019
+        comment: T54019
         no_1_5x: true
         no_2x: true
-
-    bnwikisource:
-
+    bnwikisource: null
     brwikisource:
         no_1_5x: true
         no_2x: true
-
     bswikisource:
-        comment:  T54019
+        comment: T54019
         no_1_5x: true
         no_2x: true
-
     cawikisource:
         no_1_5x: true
         no_2x: true
-
     cswikisource:
-        commons:  File:Wikisource-logo-cs-v2.svg
-        comment:  T310961
-        comment_1_5x:  T150618, T310961
-        comment_2x:  T150618, T310961
-
+        commons: 'File:Wikisource-logo-cs-v2.svg'
+        comment: T310961
+        comment_1_5x: 'T150618, T310961'
+        comment_2x: 'T150618, T310961'
     cywikisource:
-        comment:  T58807
+        comment: T58807
         no_1_5x: true
         no_2x: true
-
     dewikisource:
         no_1_5x: true
         no_2x: true
-
     elwikisource:
         no_1_5x: true
         no_2x: true
-
-    enwikisource:
-
+    enwikisource: null
     eowikisource:
         no_1_5x: true
         no_2x: true
-
     etwikisource:
         no_1_5x: true
         no_2x: true
-
     euwikisource:
-        commons: File:Wikisource-logo-EU.svg
+        commons: 'File:Wikisource-logo-EU.svg'
         comment: T310961
         comment_1_5x: T310961
         comment_2x: T310961
-
     fawikisource:
         no_1_5x: true
         no_2x: true
-
     fiwikisource:
-        comment:  T54019
+        comment: T54019
         no_1_5x: true
         no_2x: true
-
-    frwikisource:
-
+    frwikisource: null
     guwikisource:
         no_1_5x: true
         no_2x: true
-
     hewikisource:
         no_1_5x: true
         no_2x: true
-
-    hiwikisource:
-
+    hiwikisource: null
     htwikisource:
-        comment:  T54019
+        comment: T54019
         no_1_5x: true
         no_2x: true
-
     huwikisource:
-        comment:  T54019
+        comment: T54019
         no_1_5x: true
         no_2x: true
-
     hywikisource:
-        comment:  T54019
+        comment: T54019
         no_1_5x: true
         no_2x: true
-
     iswikisource:
-        comment:  T54019
+        comment: T54019
         no_1_5x: true
         no_2x: true
-
     jvwikisource:
-        commons: File:Wikisource-logo-jv.svg
-        commons_wordmark: File:Wikisource-wordmark-jv.svg
+        commons: 'File:Wikisource-logo-jv.svg'
+        commons_wordmark: 'File:Wikisource-wordmark-jv.svg'
         comment_wordmark: T311104
-
     knwikisource:
-        comment:  T110806
+        comment: T110806
         no_1_5x: true
         no_2x: true
-
     kowikisource:
-        comment:  T40543
+        comment: T40543
         no_1_5x: true
         no_2x: true
-
     lawikisource:
-        comment:  T54019
+        comment: T54019
         no_1_5x: true
         no_2x: true
-
     liwikisource:
-        comment:  T54019
+        comment: T54019
         no_1_5x: true
         no_2x: true
-
     ltwikisource:
-        comment:  T54019
+        comment: T54019
         no_1_5x: true
         no_2x: true
-
     mkwikisource:
-        comment:  T54019
+        comment: T54019
         no_1_5x: true
         no_2x: true
-
     mlwikisource:
         no_1_5x: true
         no_2x: true
-
     mrwikisource:
-        comment:  T103655
+        comment: T103655
         no_1_5x: true
         no_2x: true
-
     napwikisource:
-        comment:  T210752
-        comment_1_5x:  T210752
-        comment_2x:  T210752
-
+        comment: T210752
+        comment_1_5x: T210752
+        comment_2x: T210752
     nowikisource:
-        comment:  T167192
-        comment_1_5x:  T167192
-        comment_2x:  T167192
-
+        comment: T167192
+        comment_1_5x: T167192
+        comment_2x: T167192
     orwikisource:
-        comment:  T73875
+        comment: T73875
         no_1_5x: true
         no_2x: true
-
     pawikisource:
-        comment:  T149522
-        comment_1_5x:  T149522
-        comment_2x:  T149522
-
+        comment: T149522
+        comment_1_5x: T149522
+        comment_2x: T149522
     plwikisource:
         no_1_5x: true
         no_2x: true
-
     ruwikisource:
-        comment_1_5x:  T203343
-        comment_2x:  T203343
-
+        comment_1_5x: T203343
+        comment_2x: T203343
     sahwikisource:
         no_1_5x: true
         no_2x: true
-
     sawikisource:
         no_1_5x: true
         no_2x: true
-
     skwikisource:
         no_1_5x: true
         no_2x: true
-
     slwikisource:
-        comment:  T54019
+        comment: T54019
         no_1_5x: true
         no_2x: true
-
     sourceswiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     srwikisource:
-        commons:  File:Wikisource-logo-sr2.svg
-        comment:  T54019, T310961
-        comment_1_5x:  T172268, T310961
-        comment_2x:  T172268, T310961
-
+        commons: 'File:Wikisource-logo-sr2.svg'
+        comment: 'T54019, T310961'
+        comment_1_5x: 'T172268, T310961'
+        comment_2x: 'T172268, T310961'
     tawikisource:
         no_1_5x: true
         no_2x: true
-
     tewikisource:
-        comment:  T46796
-
+        comment: T46796
     thwikisource:
-        comment:  T54019
+        comment: T54019
         no_1_5x: true
         no_2x: true
-
     trwikisource:
-        comment:  T54019
+        comment: T54019
         no_1_5x: true
         no_2x: true
-        commons_wordmark: File:Vikikaynak.svg
+        commons_wordmark: 'File:Vikikaynak.svg'
         comment_wordmark: T260658
-
     ukwikisource:
-        comment:  T56491
+        comment: T56491
         no_1_5x: true
         no_2x: true
-
     vecwikisource:
-        comment:  T132157
+        comment: T132157
         no_1_5x: true
         no_2x: true
-
     viwikisource:
-       selected: enwikisource # T284612
-
-    wawikisource:
-
+        selected: enwikisource
+    wawikisource: null
     yiwikisource:
-        comment_1_5x:  T193562
-        comment_2x:  T193562
-
+        comment_1_5x: T193562
+        comment_2x: T193562
     zh_min_nanwikisource:
         no_1_5x: true
         no_2x: true
-
     zhwikisource:
-        commons:  File:Wikisource-logo-zh-SKQS.svg
-        comment:  T229715, T261076, T308620
-        comment_1_5x:  T229715, T261076, T308620
-        comment_2x:  T229715, T261076, T308620
-        commons_wordmark: File:Wikisource-wordmark-zh.svg
-        comment_wordmark: T261076, T308620
-
+        commons: 'File:Wikisource-logo-zh-SKQS.svg'
+        comment: 'T229715, T261076, T308620'
+        comment_1_5x: 'T229715, T261076, T308620'
+        comment_2x: 'T229715, T261076, T308620'
+        commons_wordmark: 'File:Wikisource-wordmark-zh.svg'
+        comment_wordmark: 'T261076, T308620'
 Wikiversity:
-    arwikiversity:
-
+    arwikiversity: null
     betawikiversity:
-        commons:  File:Wikiversity-logo-beta-v2.svg
-        comment:  T308604
-        comment_1_5x:  T308604
-        comment_2x:  T308604
-
+        commons: 'File:Wikiversity-logo-beta-v2.svg'
+        comment: T308604
+        comment_1_5x: T308604
+        comment_2x: T308604
     cswikiversity:
-        comment:  T54019
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    dewikiversity:
-
+        comment: T54019
+        comment_1_5x: T150618
+        comment_2x: T150618
+    dewikiversity: null
     elwikiversity:
-        comment:  T248391
-        comment_1_5x:  T248391
-        comment_2x:  T248391
-
+        comment: T248391
+        comment_1_5x: T248391
+        comment_2x: T248391
     enwikiversity:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    eswikiversity:
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+    eswikiversity: null
     fiwikiversity:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     frwikiversity:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    hiwikiversity:
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+    hiwikiversity: null
     itwikiversity:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    jawikiversity:
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+    jawikiversity: null
     kowikiversity:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     ptwikiversity:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-        commons_wordmark: File:Wikiversity-wordmark-pt.svg
+        comment_1_5x: T150618
+        comment_2x: T150618
+        commons_wordmark: 'File:Wikiversity-wordmark-pt.svg'
         comment_wordmark: T249047
-
     ruwikiversity:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     slwikiversity:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
-    svwikiversity:
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+    svwikiversity: null
     zhwikiversity:
-        commons:  File:Wikiversity_logo_2017_zh-hant.svg
+        commons: 'File:Wikiversity_logo_2017_zh-hant.svg'
         variants:
-            zhwikiversity-hans:  File:Wikiversity_logo_2017_zh-hans.svg
-        comment:  T202127, T308620
-        comment_1_5x:  T202127, T308620
-        comment_2x:  T202127, T308620
-
+            zhwikiversity-hans: 'File:Wikiversity_logo_2017_zh-hans.svg'
+        comment: 'T202127, T308620'
+        comment_1_5x: 'T202127, T308620'
+        comment_2x: 'T202127, T308620'
 Wikivoyage:
     bnwikivoyage:
-        commons_wordmark: File:Wikivoyage-wordmark-bn.svg
-        comment_wordmark: T196680, T298033
-
+        commons_wordmark: 'File:Wikivoyage-wordmark-bn.svg'
+        comment_wordmark: 'T196680, T298033'
     elwikivoyage:
         no_1_5x: true
         no_2x: true
-
     enwikivoyage:
-        commons_wordmark: File:Wikivoyage-wordmark-en.svg
-        comment_wordmark: T157476, T261033, T273477
-
-    eowikivoyage:
-
+        commons_wordmark: 'File:Wikivoyage-wordmark-en.svg'
+        comment_wordmark: 'T157476, T261033, T273477'
+    eowikivoyage: null
     eswikivoyage:
-        comment:  T170604
-        comment_1_5x:  T170604
-        comment_2x:  T170604
-
+        comment: T170604
+        comment_1_5x: T170604
+        comment_2x: T170604
     fawikivoyage:
-        comment:  T73382
-        comment_1_5x:  T73382
-        comment_2x:  T73382
-
+        comment: T73382
+        comment_1_5x: T73382
+        comment_2x: T73382
     fiwikivoyage:
-        comment:  T151570
-
+        comment: T151570
     hewikivoyage:
-        comment_1_5x:  T208148
-        comment_2x:  T208148
-        commons_wordmark: File:Wikivoyage-wordmark-he.svg
+        comment_1_5x: T208148
+        comment_2x: T208148
+        commons_wordmark: 'File:Wikivoyage-wordmark-he.svg'
         comment_wordmark: T234278
-
     hiwikivoyage:
-        comment:  T173013
-        comment_1_5x:  T173013
-        comment_2x:  T173013
-
-    plwikivoyage:
-
+        comment: T173013
+        comment_1_5x: T173013
+        comment_2x: T173013
+    plwikivoyage: null
     pswikivoyage:
-        commons_wordmark: File:Wikivoyage-wordmark-ps.svg
+        commons_wordmark: 'File:Wikivoyage-wordmark-ps.svg'
         comment_wordmark: T200152
-
     ruwikivoyage:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     shnwikivoyage:
         comment: T302797
         comment_1_5x: T302797
         comment_2x: T302797
-        commons: File:Wikivoyage-Logo-shn.svg
-
+        commons: 'File:Wikivoyage-Logo-shn.svg'
     ukwikivoyage:
-        commons:  File:Wikivoyage-Logo-v3-ukrainian.svg
-        comment:  T110370
-
+        commons: 'File:Wikivoyage-Logo-v3-ukrainian.svg'
+        comment: T110370
     trwikivoyage:
-        commons_wordmark: File:Wikivoyage-wordmark-tr.svg
+        commons_wordmark: 'File:Wikivoyage-wordmark-tr.svg'
         comment_wordmark: T272776
-
     viwikivoyage:
-        comment_1_5x:  T151570
-        comment_2x:  T151570
-
+        comment_1_5x: T151570
+        comment_2x: T151570
     zhwikivoyage:
-        commons:  File:Wikivoyage-Logo-v3-zh-hans.svg
+        commons: 'File:Wikivoyage-Logo-v3-zh-hans.svg'
         variants:
-            zhwikivoyage-hant:  File:Wikivoyage-Logo-v3-zh-hant.svg
-        comment:  T61077, T308620
-        comment_1_5x:  T150618, T308620
-        comment_2x:  T150618, T308620
-
-"Chapter and local user group wikis":
+            zhwikivoyage-hant: 'File:Wikivoyage-Logo-v3-zh-hant.svg'
+        comment: 'T61077, T308620'
+        comment_1_5x: 'T150618, T308620'
+        comment_2x: 'T150618, T308620'
+'Chapter and local user group wikis':
     amwikimedia:
-        comment:  T176042
-        comment_1_5x:  T176042
-        comment_2x:  T176042
-
+        comment: T176042
+        comment_1_5x: T176042
+        comment_2x: T176042
     arwikimedia:
         no_1_5x: true
         no_2x: true
-
     brwikimedia:
-        comment:  T257925
-        comment_1_5x:  T257925
-        comment_2x:  T257925
-        commons_wordmark: File:Wiki_Movimento_Brasil_wordmark.svg
+        comment: T257925
+        comment_1_5x: T257925
+        comment_2x: T257925
+        commons_wordmark: 'File:Wiki_Movimento_Brasil_wordmark.svg'
         comment_wordmark: T313194
-
     bdwikimedia:
         no_1_5x: true
         no_2x: true
-
     bewikimedia:
         no_1_5x: true
         no_2x: true
-
-    cawikimedia:
-
+    cawikimedia: null
     cnwikimedia:
-        comment:  T98676
+        comment: T98676
         no_1_5x: true
         no_2x: true
-
     cowikimedia:
         no_1_5x: true
         no_2x: true
-
     dkwikimedia:
         no_1_5x: true
         no_2x: true
-
     ecwikimedia:
-        comment:  T135521
-        comment_1_5x:  T135521
-        comment_2x:  T135521
-
+        comment: T135521
+        comment_1_5x: T135521
+        comment_2x: T135521
     etwikimedia:
         no_1_5x: true
         no_2x: true
-
     fiwikimedia:
         no_1_5x: true
         no_2x: true
-
     gewikimedia:
-        comment:  T236389
-        comment_1_5x:  T236389
-        comment_2x:  T236389
-
+        comment: T236389
+        comment_1_5x: T236389
+        comment_2x: T236389
     grwikimedia:
-        comment:  T245911
-
-    hiwikimedia:
-
-    id_internalwikimedia:
-
+        comment: T245911
+    hiwikimedia: null
+    id_internalwikimedia: null
     idwikimedia:
-        comment:  T192726
-        comment_1_5x:  T192726
-        comment_2x:  T192726
-
-    maiwikimedia:
-
+        comment: T192726
+        comment_1_5x: T192726
+        comment_2x: T192726
+    maiwikimedia: null
     mkwikimedia:
         no_1_5x: true
         no_2x: true
-
     mxwikimedia:
         no_1_5x: true
         no_2x: true
-
     ngwikimedia:
-        comment:  T242416
-        comment_1_5x:  T242416
-        comment_2x:  T242416
-
+        comment: T242416
+        comment_1_5x: T242416
+        comment_2x: T242416
     nlwikimedia:
         no_1_5x: true
         no_2x: true
-
     nowikimedia:
         no_1_5x: true
         no_2x: true
-        commons_wordmark: File:Wikimedia-wordmark-no.svg
+        commons_wordmark: 'File:Wikimedia-wordmark-no.svg'
         comment_wordmark: T318341
-
     nycwikimedia:
         no_1_5x: true
         no_2x: true
-
     nzwikimedia:
         no_1_5x: true
         no_2x: true
-
     pa_uswikimedia:
         no_1_5x: true
         no_2x: true
-
     plwikimedia:
         no_1_5x: true
         no_2x: true
-
     ptwikimedia:
-        comment:  T126832
-        comment_1_5x:  T126832
-        comment_2x:  T126832
-
-    punjabiwikimedia:
-
-    romdwikimedia:
-
+        comment: T126832
+        comment_1_5x: T126832
+        comment_2x: T126832
+    punjabiwikimedia: null
+    romdwikimedia: null
     rswikimedia:
         no_1_5x: true
         no_2x: true
-
     ruwikimedia:
         no_1_5x: true
         no_2x: true
-
     sewikimedia:
         no_1_5x: true
         no_2x: true
-
-    trwikimedia:
-
+    trwikimedia: null
     uawikimedia:
         no_1_5x: true
         no_2x: true
-
     wbwikimedia:
-        comment:  T162510
-        comment_1_5x:  T162510
-        comment_2x:  T162510
-
-"Special wikis":
+        comment: T162510
+        comment_1_5x: T162510
+        comment_2x: T162510
+'Special wikis':
     advisorswiki:
-        comment:  T202844
-        comment_1_5x:  T202844
-        comment_2x:  T202844
-
+        comment: T202844
+        comment_1_5x: T202844
+        comment_2x: T202844
     advisorywiki:
         no_1_5x: true
         no_2x: true
-
     arbcom_cswiki:
-        comment:  T151731
-        comment_1_5x:  T151731
-        comment_2x:  T151731
-
+        comment: T151731
+        comment_1_5x: T151731
+        comment_2x: T151731
     arbcom_dewiki:
-        comment:  T166947
-        comment_1_5x:  T166947
-        comment_2x:  T166947
-
+        comment: T166947
+        comment_1_5x: T166947
+        comment_2x: T166947
     arbcom_enwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     arbcom_fiwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
+        selected_tagline: fiwiki
     arbcom_nlwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
-
+        comment_1_5x: T150618
+        comment_2x: T150618
     arbcom_ruwiki:
-        comment:  T262812
-        comment_1_5x:  T262812
-        comment_2x:  T262812
-
+        comment: T262812
+        comment_1_5x: T262812
+        comment_2x: T262812
     boardwiki:
         no_1_5x: true
         no_2x: true
-
     chairwiki:
         no_1_5x: true
         no_2x: true
-
     chapcomwiki:
-        comment_1_5x:  T193024
-        comment_2x:  T193024
-
+        comment_1_5x: T193024
+        comment_2x: T193024
     checkuserwiki:
-        comment:  T30785
+        comment: T30785
         no_1_5x: true
         no_2x: true
-
     collabwiki:
         no_1_5x: true
         no_2x: true
-        commons_wordmark: File:Collab-wordmark.svg
+        commons_wordmark: 'File:Collab-wordmark.svg'
         comment_wordmark: T290091
-
     commonswiki:
-        comment_1_5x:  T203343
-        comment_2x:  T203343
-        commons_wordmark: File:Commons-wordmark-en.svg
+        comment_1_5x: T203343
+        comment_2x: T203343
+        commons_wordmark: 'File:Commons-wordmark-en.svg'
         comment_wordmark: T157476
-
-    donatewiki:
-
+    donatewiki: null
     execwiki:
         no_1_5x: true
         no_2x: true
-
     fdcwiki:
-        comment:  T50379
+        comment: T50379
         no_1_5x: true
         no_2x: true
-
     foundationwiki:
-        commons_wordmark: File:Foundation-wordmark.svg
+        commons_wordmark: 'File:Foundation-wordmark.svg'
         comment_wordmark: T295303
-
     iegcomwiki:
-        comment:  T50379
+        comment: T50379
         no_1_5x: true
         no_2x: true
-
     incubatorwiki:
-        comment_1_5x:  T230122
-        comment_2x:  T230122
-
+        comment_1_5x: T230122
+        comment_2x: T230122
     internalwiki:
         no_1_5x: true
         no_2x: true
-
     legalteamwiki:
         no_1_5x: true
         no_2x: true
-
     loginwiki:
-        comment:  T50236
+        comment: T50236
         no_1_5x: true
         no_2x: true
-
     mediawikiwiki:
-        commons: File:MediaWiki-2020-logo.svg
-        commons_wordmark: File:MediaWiki-2020-wordmark.svg
+        commons: 'File:MediaWiki-2020-logo.svg'
+        commons_wordmark: 'File:MediaWiki-2020-wordmark.svg'
         comment_wordmark: T268230
-
     metawiki:
-        commons_wordmark: File:Meta-wordmark.svg
+        commons_wordmark: 'File:Meta-wordmark.svg'
         comment_wordmark: T295303
-
     nostalgiawiki:
         no_1_5x: true
         no_2x: true
-
     officewiki:
-        commons_wordmark: File:Office-wordmark.svg
+        commons_wordmark: 'File:Office-wordmark.svg'
         comment_wordmark: T249047
-
     ombudsmenwiki:
-        commons: File:Wikimedia Ombuds logo.svg
-        comment:  T50379
-
+        commons: 'File:Wikimedia Ombuds logo.svg'
+        comment: T50379
     otrs_wikiwiki:
-        commons: File:Wikimedia_VRT_RGB_logo.svg
-
+        commons: 'File:Wikimedia_VRT_RGB_logo.svg'
     outreachwiki:
         no_1_5x: true
         no_2x: true
-        commons_wordmark: File:Outreach-wordmark.svg
-        comment_wordmark: T290091, T297580
-
+        commons_wordmark: 'File:Outreach-wordmark.svg'
+        comment_wordmark: 'T290091, T297580'
     qualitywiki:
         no_1_5x: true
         no_2x: true
-
     searchcomwiki:
         no_1_5x: true
         no_2x: true
-
     spcomwiki:
         no_1_5x: true
         no_2x: true
-
     specieswiki:
-        commons: File:WikiSpecies_logo.svg
-        comment:  T306037, T310961
-        comment_1_5x:  T230113, T306037, T310961
-        comment_2x:  T230113, T306037, T310961
-
+        commons: 'File:WikiSpecies_logo.svg'
+        comment: 'T306037, T310961'
+        comment_1_5x: 'T230113, T306037, T310961'
+        comment_2x: 'T230113, T306037, T310961'
     stewardwiki:
-        comment:  T39700
+        comment: T39700
         no_1_5x: true
         no_2x: true
-
     sysop_itwiki:
-        comment:  T256545
-        comment_1_5x:  T256545
-        comment_2x:  T256545
-
+        comment: T256545
+        comment_1_5x: T256545
+        comment_2x: T256545
     strategywiki:
         no_1_5x: true
         no_2x: true
-        commons_wordmark: File:Strategy-wordmark.svg
+        commons_wordmark: 'File:Strategy-wordmark.svg'
         comment_wordmark: T290091
-
     tenwiki:
         no_1_5x: true
         no_2x: true
-
     test2wiki:
         selected_wordmark: enwiki
-
+        selected_tagline: enwiki
     testcommonswiki:
         selected: commonswiki
-        comment_1_5x:  T203343
-        comment_2x:  T203343
-
+        comment_1_5x: T203343
+        comment_2x: T203343
     testwiki:
-        comment_1_5x:  T150618
-        comment_2x:  T150618
+        comment_1_5x: T150618
+        comment_2x: T150618
         selected_wordmark: enwiki
-
     testwikidatawiki:
         no_1_5x: true
         no_2x: true
         selected_wordmark: wikidatawiki
-
     transitionteamwiki:
-        comment:  T50379
+        comment: T50379
         no_1_5x: true
         no_2x: true
-
     thankyouwiki:
         selected: donatewiki
-        comment:  always same as donatewiki, see T259002
-        comment_2x:  always same as donatewiki, see T259002
-
+        comment: 'always same as donatewiki, see T259002'
+        comment_2x: 'always same as donatewiki, see T259002'
     usabilitywiki:
         no_1_5x: true
         no_2x: true
-
-    votewiki:
-
+    votewiki: null
     wg_enwiki:
         no_1_5x: true
         no_2x: true
-
     wikidatawiki:
-        comment_1_5x:  T230120
-        comment_2x:  T230120
-        commons_wordmark: File:Wikidata wordmark.svg
+        comment_1_5x: T230120
+        comment_2x: T230120
+        commons_wordmark: 'File:Wikidata wordmark.svg'
         comment_wordmark: T315572
-
-
-    # Commented out until the wiki goes live in production
-    # wikifunctionswiki:
-    #    commons: File:Wikifunctions-logo-en.svg
-
     wikimania2005wiki:
-        comment:  T50382
+        comment: T50382
         no_1_5x: true
         no_2x: true
-
     wikimania2006wiki:
-        comment:  T50382
+        comment: T50382
         no_1_5x: true
         no_2x: true
-
     wikimania2007wiki:
-        comment:  T50382
+        comment: T50382
         no_1_5x: true
         no_2x: true
-
     wikimania2008wiki:
-        comment:  T50382
+        comment: T50382
         no_1_5x: true
         no_2x: true
-
     wikimania2009wiki:
-        comment:  T50382
+        comment: T50382
         no_1_5x: true
         no_2x: true
-
     wikimania2010wiki:
-        comment:  T50382
+        comment: T50382
         no_1_5x: true
         no_2x: true
-
     wikimania2011wiki:
-        comment:  T50382
+        comment: T50382
         no_1_5x: true
         no_2x: true
-
     wikimania2012wiki:
-        comment:  T50382
+        comment: T50382
         no_1_5x: true
         no_2x: true
-
     wikimania2013wiki:
-        comment:  T50382
+        comment: T50382
         no_1_5x: true
         no_2x: true
-
     wikimania2014wiki:
-        comment:  T58398
+        comment: T58398
         no_1_5x: true
         no_2x: true
-
     wikimania2015wiki:
-        comment:  T50382
+        comment: T50382
         no_1_5x: true
         no_2x: true
-
     wikimania2016wiki:
         no_1_5x: true
         no_2x: true
-
     wikimania2017wiki:
-        comment:  T122062
+        comment: T122062
         no_1_5x: true
         no_2x: true
-
     wikimania2018wiki:
-        comment:  T173042
-        comment_1_5x:  T194340
-        comment_2x:  T194340
-
+        comment: T173042
+        comment_1_5x: T194340
+        comment_2x: T194340
     wikimaniateamwiki:
-        comment:  T50376
+        comment: T50376
         no_1_5x: true
         no_2x: true
-
     wikimaniawiki:
-        comment_1_5x:  T194340
-        comment_2x:  T194340
-        commons_wordmark: File:Wikimania mark.svg
+        comment_1_5x: T194340
+        comment_2x: T194340
+        commons_wordmark: 'File:Wikimania mark.svg'
         comment_wordmark: T286405
-
     wikitech:
-        commons: File:Wikitech-2021-logo-blue.svg
+        commons: 'File:Wikitech-2021-logo-blue.svg'

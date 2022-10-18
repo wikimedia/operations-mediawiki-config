@@ -271,6 +271,7 @@ def make_block(size: str, data: dict):
 
 def make_block2(svg_type: str, data: dict):
     commons_key = f"commons_{svg_type}"
+    local_key = f"local_{svg_type}"
     comment_key = f"comment_{svg_type}"
     selected_key = f"selected_{svg_type}"
     text = f"'wmgSiteLogo{svg_type.capitalize()}' => [\n"
@@ -286,7 +287,7 @@ def make_block2(svg_type: str, data: dict):
                 url = "null"
                 text += f"\t'{site}' => {url},\n"
                 continue
-            if commons_key not in info and selected_key not in info:
+            if commons_key not in info and selected_key not in info and local_key not in info:
                 # Skip, doesn't have this type
                 continue
             # It should not contains any variant, default to site name
@@ -387,6 +388,7 @@ def update(data: dict, wiki: str, variant: Optional[str]):
                 raise RuntimeError(f"Cannot find variant {variant} for site {wiki}")
         download(commons, name)
     elif "commons_wordmark" not in info and "commons_tagline" not in info \
+            and "local_wordmark" not in info and "local_tagline" not in info \
             and "selected_wordmark" not in info and "selected_tagline" not in info:
         raise RuntimeError(
             "The update function can only be used if a 'commons' SVG is present in config.yaml"
