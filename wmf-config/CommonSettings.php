@@ -2167,6 +2167,10 @@ if ( $wmgUseCentralNotice ) {
 	$wgCentralDBname = 'metawiki';
 	$wgNoticeInfrastructure = false;
 	$wgCentralNoticeAdminGroup = false;
+
+	// ESI test; see T308799
+	$wgCentralNoticeESITestString = '<!--esi <esi:include src="/esitest-fa8a495983347898/content" /> -->';
+
 	if ( $wmgRealm == 'production' && $wgDBname === 'testwiki' ) {
 		// test.wikipedia.org has its own central database:
 		$wgCentralDBname = 'testwiki';
