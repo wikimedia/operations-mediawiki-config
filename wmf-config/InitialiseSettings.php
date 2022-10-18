@@ -4587,7 +4587,7 @@ return [
 		'autoconfirmed', // semi-protection level on
 		'sysop',
 	],
-	'arwiki' => [ '', 'autoconfirmed', 'editautoreviewprotected', 'review', 'sysop' ], // T54109, T146575, T225896
+	'arwiki' => [ '', 'autoconfirmed', 'editautoreviewprotected', 'editeditorprotected', 'sysop' ], // T54109, T146575, T225896, T321111
 	'azwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T281860
 	'bgwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T269709
 	'ckbwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T54533
@@ -4635,6 +4635,7 @@ return [
 
 'wgSemiprotectedRestrictionLevels' => [
 	'default' => [ 'autoconfirmed' ],
+	'+arwiki' => [ 'editautoreviewprotected', 'editeditorprotected' ], // T321111
 	'+azwiki' => [ 'extendedconfirmed' ], // T281860
 	'+bgwiki' => [ 'extendedconfirmed' ], // T269709
 	'+cswiki' => [ 'extendedconfirmed' ], // T316283
@@ -8309,6 +8310,7 @@ return [
 			'reupload-shared' => true,
 			'autopatrol' => true, // T167071
 			'editautoreviewprotected' => true,
+			'editeditorprotected' => true, // T321111
 			'enrollasmentor' => true, // T310905
 		],
 		'rollbacker' => [ 'rollback' => true ],
@@ -8339,6 +8341,7 @@ return [
 			'reupload-shared' => true,
 			'autopatrol' => true, // T167071
 			'editautoreviewprotected' => true,
+			'editeditorprotected' => true, // T321111
 		],
 		'autoreview' => [
 			'autopatrol' => true, // T167071
@@ -8346,9 +8349,11 @@ return [
 		],
 		'bot' => [
 			'editautoreviewprotected' => true,
+			'editeditorprotected' => true, // T321111
 		],
 		'sysop' => [
 			'editautoreviewprotected' => true,
+			'editeditorprotected' => true, // T321111
 		]
 	],
 	'+arwikibooks' => [
