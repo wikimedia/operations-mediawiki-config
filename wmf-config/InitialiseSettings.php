@@ -26430,6 +26430,7 @@ return [
 	'bawiki' => true,
 	'banwiki' => true,
 	'barwiki' => true,
+	'bat_smgwiki' => true,
 	'bclwiki' => true,
 	'bewiki' => true,
 	'bgwiki' => true,
