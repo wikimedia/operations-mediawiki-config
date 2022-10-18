@@ -26433,6 +26433,7 @@ return [
 	'bat_smgwiki' => true,
 	'bclwiki' => true,
 	'bewiki' => true,
+	'be_x_oldwiki' => true,
 	'bgwiki' => true,
 	'bhwiki' => true,
 	'biwiki' => true,
