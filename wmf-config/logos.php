@@ -2253,7 +2253,7 @@ return [
 	],
 	'newiki' => [ // T311700
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ne.svg',
-		'width' => 113,
+		'width' => 114,
 		'height' => 26,
 	],
 	'papwiki' => [
@@ -2401,7 +2401,7 @@ return [
 	'hewiktionary' => [ // T308411
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-he.svg',
 		'width' => 93,
-		'height' => 29,
+		'height' => 30,
 	],
 	'jvwiktionary' => [ // T311104
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-jv.svg',
@@ -2420,7 +2420,7 @@ return [
 	],
 	'ruwiktionary' => [ // T308233
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-ru.svg',
-		'width' => 122,
+		'width' => 123,
 		'height' => 20,
 	],
 	'yiwiktionary' => [ // T308411
@@ -2519,7 +2519,7 @@ return [
 	// Chapter and local user group wikis
 	'brwikimedia' => [ // T313194
 		'src' => '/static/images/mobile/copyright/wikimedia-wordmark-br.svg',
-		'width' => 119,
+		'width' => 120,
 		'height' => 29,
 	],
 	'nowikimedia' => [ // T318341
