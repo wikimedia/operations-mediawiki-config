@@ -986,8 +986,25 @@ function wmfGetOverrideSettings() {
 						'mobile' => [ 'stable' ]
 					],
 					'audience' => [
-						// Nigeria, Sierra Leone, Uganda, Tanzania, Kenya, South Africa
-						'countries' => [ 'NG', 'SL', 'UG', 'TZ', 'KE', 'ZA' ],
+						/*  Latin America
+						Argentina, Bolivia, Brazil, Chile, Colombia, Costa
+						Rica, Cuba, Dominican Republic, Ecuador, El Savador,
+						Guatemala, Haiti, Honduras, Mexico, Nicaragua,
+						Panama, Paraguay, Peru, Suriname, Uruguay, Venezuela */
+
+						/*  Sub-Saharan Africa
+						Angola, Benin, Botswana, Burkina Faso, Burundi,
+						Cameroon, Cape Verde, Central African Republic,
+						Chad, Comoros, Democratic Republic of the Congo,
+						Equatorial Guinea, Eritrea, Eswatini (Swaziland), Ethiopia,
+						Gabon, Gambia, Ghana, Guinea, Guinea-Bissau, Ivory
+						Coast, Kenya, Lesotho, Liberia, Madagascar, Malawi,
+						Mali, Mauritania, Mauiritius, Mozambique, Namibia,
+						Niger, Nigeria, Republic of the Congo, Rwanda, São
+						Tomé and Príncipe, Senegal, Seychelles, Sierra
+						Leone, Somalia, South Africa, South Sudan, Sudan,
+						Tanzania, Togo, Uganda, Zambia, Zimbabwe */
+						'countries' => [ 'AR', 'BO', 'BR', 'CL', 'CO', 'CR', 'CU', 'DR', 'EC', 'SV', 'GT', 'HT', 'HN', 'MX', 'NI', 'PA', 'PY', 'PE', 'SR', 'UY', 'VE', 'AO', 'BJ', 'BW', 'BF', 'BI', 'CM', 'CV', 'CF', 'TD',  'KM', 'CD', 'GQ', 'ER', 'SZ', 'ET', 'GA', 'GM', 'GH', 'GN', 'GW', 'CI', 'KE', 'LS', 'LR', 'MG', 'MW', 'ML', 'MR', 'MU', 'MZ', 'NA', 'NE', 'NG', 'CG', 'RW', 'ST', 'SN', 'SC', 'SL', 'SO', 'ZA', 'SS', 'SD', 'TZ', 'TG', 'UG', 'ZM', 'ZW' ],
 						// User:DDesouza/sandbox
 						'pageIds' => [ 282634 ]
 					],
