@@ -2450,7 +2450,7 @@ function wmfGetOverrideSettings() {
 			'default' => '//commons.wikimedia.beta.wmflabs.org/w/api.php',
 		],
 		'wgQuickViewMediaRepositorySearchUri' => [
-			'default' => '//commons.wikimedia.beta.wmflabs.org/wiki/Special:MediaSearch',
+			'default' => '//commons.wikimedia.beta.wmflabs.org/wiki/Special:MediaSearch?search=%s',
 		],
 		'wgQuickViewMediaRepositoryUri' => [
 			'default' => '//commons.wikimedia.beta.wmflabs.org',
