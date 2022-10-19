@@ -26357,6 +26357,11 @@ return [
 	],
 ],
 
+'wgGEMentorshipEnabled' => [
+	// overriden in community configuration for mentorship-enabled wikis
+	'default' => false,
+],
+
 'wgGEHelpPanelEnabled' => [
 	'default' => true,
 ],
