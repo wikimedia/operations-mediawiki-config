@@ -171,7 +171,7 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 
 		// Test if all wordmark logo values are set and the file exists
 		foreach ( $this->settings[ 'wmgSiteLogoWordmark' ] as $db => $entry ) {
-			if ( !count( $entry ) ) {
+			if ( !$entry || !count( $entry ) ) {
 				// Wordmark logo over-ridden to unset.
 				continue;
 			}

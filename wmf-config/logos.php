@@ -2352,11 +2352,7 @@ return [
 		'width' => 121,
 		'height' => 18,
 	],
-	'extwiki' => [
-		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ext.svg',
-		'width' => 120,
-		'height' => 23,
-	],
+	'extwiki' => null,
 	'fawiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fa.svg',
 		'width' => 103,
@@ -3089,6 +3085,7 @@ return [
 		'width' => 146,
 		'height' => 20,
 	],
+	'fawiktionary' => null,
 	'frwiktionary' => [ // T249047
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-fr.svg',
 		'width' => 114,
@@ -3126,11 +3123,15 @@ return [
 	],
 
 	// Wikiquote
+	'euwikiquote' => null,
+	'etwikiquote' => null,
 	'frwikiquote' => [ // T290091
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-fr.svg',
 		'width' => 77,
 		'height' => 40,
 	],
+	'hrwikiquote' => null,
+	'sahwikiquote' => null,
 	'trwikiquote' => [ // T286133
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-tr.svg',
 		'width' => 62,
@@ -3143,6 +3144,8 @@ return [
 		'width' => 80,
 		'height' => 25,
 	],
+	'fawikibooks' => null,
+	'fiwikibooks' => null,
 	'viwikibooks' => [ // T290091
 		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-vi.svg',
 		'width' => 120,
@@ -3196,6 +3199,7 @@ return [
 		'width' => 120,
 		'height' => 25,
 	],
+	'fawikivoyage' => null,
 	'hewikivoyage' => [ // T234278
 		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-he.svg',
 		'width' => 88,
@@ -3225,6 +3229,11 @@ return [
 	],
 
 	// Special wikis
+	'arbcom_cswiki' => null,
+	'arbcom_dewiki' => null,
+	'arbcom_enwiki' => null,
+	'arbcom_nlwiki' => null,
+	'arbcom_ruwiki' => null,
 	'collabwiki' => [ // T290091
 		'src' => '/static/images/mobile/copyright/collabwiki-wordmark.svg',
 		'width' => 125,
@@ -3260,6 +3269,7 @@ return [
 		'width' => 120,
 		'height' => 29,
 	],
+	'sysop_itwiki' => null,
 	'strategywiki' => [ // T290091
 		'src' => '/static/images/mobile/copyright/strategywiki-wordmark.svg',
 		'width' => 142,
@@ -3280,6 +3290,7 @@ return [
 		'width' => 130,
 		'height' => 17,
 	],
+	'wg_enwiki' => null,
 	'wikidatawiki' => [ // T315572
 		'src' => '/static/images/mobile/copyright/wikidatawiki-wordmark.svg',
 		'width' => 130,

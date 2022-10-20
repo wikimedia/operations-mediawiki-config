@@ -457,6 +457,7 @@ Wikipedia:
         comment_1_5x: T150618
         comment_2x: T150618
         local_tagline: true
+        no_wordmark: true
         local_wordmark: true
     fawiki:
         commons: 'File:Wikipedia-logo-v2-fa.svg'
@@ -1854,6 +1855,7 @@ Wiktionary:
     fawiktionary:
         no_1_5x: true
         no_2x: true
+        no_wordmark: true
     fiwiktionary:
         comment: T45240
         comment_1_5x: T150618
@@ -2277,6 +2279,7 @@ Wikiquote:
     euwikiquote:
         no_1_5x: true
         no_2x: true
+        no_wordmark: true
     eswikiquote:
         commons: 'File:Wikiquote-logo-es.svg'
         comment_1_5x: T170604
@@ -2289,6 +2292,7 @@ Wikiquote:
         comment: 'T302683, T313698'
         comment_1_5x: T313698
         comment_2x: T313698
+        no_wordmark: true
     fawikiquote: null
     frwikiquote:
         commons: 'File:Wikiquote-logo-en.svg'
@@ -2308,6 +2312,7 @@ Wikiquote:
         commons: 'File:Wikiquote-logo-hr.svg'
         comment_1_5x: T150618
         comment_2x: T150618
+        no_wordmark: true
     huwikiquote:
         no_1_5x: true
         no_2x: true
@@ -2359,6 +2364,7 @@ Wikiquote:
         comment: T222065
         comment_1_5x: T222065
         comment_2x: T222065
+        no_wordmark: true
     sawikiquote:
         comment: T45812
         no_1_5x: true
@@ -2484,9 +2490,11 @@ Wikibooks:
     fawikibooks:
         no_1_5x: true
         no_2x: true
+        no_wordmark: true
     fiwikibooks:
         comment_1_5x: T177506
         comment_2x: T177506
+        no_wordmark: true
     frwikibooks:
         comment_1_5x: T150618
         comment_2x: T150618
@@ -3019,6 +3027,7 @@ Wikivoyage:
         comment: T73382
         comment_1_5x: T73382
         comment_2x: T73382
+        no_wordmark: true
     fiwikivoyage:
         comment: T151570
     hewikivoyage:
@@ -3177,13 +3186,16 @@ Wikivoyage:
         comment: T151731
         comment_1_5x: T151731
         comment_2x: T151731
+        no_wordmark: true
     arbcom_dewiki:
         comment: T166947
         comment_1_5x: T166947
         comment_2x: T166947
+        no_wordmark: true
     arbcom_enwiki:
         comment_1_5x: T150618
         comment_2x: T150618
+        no_wordmark: true
     arbcom_fiwiki:
         comment_1_5x: T150618
         comment_2x: T150618
@@ -3191,10 +3203,12 @@ Wikivoyage:
     arbcom_nlwiki:
         comment_1_5x: T150618
         comment_2x: T150618
+        no_wordmark: true
     arbcom_ruwiki:
         comment: T262812
         comment_1_5x: T262812
         comment_2x: T262812
+        no_wordmark: true
     boardwiki:
         no_1_5x: true
         no_2x: true
@@ -3291,6 +3305,7 @@ Wikivoyage:
         comment: T256545
         comment_1_5x: T256545
         comment_2x: T256545
+        no_wordmark: true
     strategywiki:
         no_1_5x: true
         no_2x: true
@@ -3329,6 +3344,7 @@ Wikivoyage:
     wg_enwiki:
         no_1_5x: true
         no_2x: true
+        no_wordmark: true
     wikidatawiki:
         comment_1_5x: T230120
         comment_2x: T230120
