@@ -26360,11 +26360,6 @@ return [
 	],
 ],
 
-'wgGEMentorshipEnabled' => [
-	// overriden in community configuration for mentorship-enabled wikis
-	'default' => false,
-],
-
 'wgGEHelpPanelEnabled' => [
 	'default' => true,
 ],
@@ -26598,6 +26593,11 @@ return [
 	'fawiki' => 80,
 	'ptwiki' => 80,
 	'trwiki' => 80,
+],
+
+'wgGEMentorshipEnabled' => [
+	// overriden in community configuration for mentorship-enabled wikis
+	'default' => false,
 ],
 
 'wgGEMentorshipNewAccountEnablePercentage' => [
