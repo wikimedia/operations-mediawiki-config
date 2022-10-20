@@ -16573,6 +16573,16 @@ return [
 	'lockeddown' => false,
 ],
 
+// Tell VisualEditor how to talk to Parsoid.
+// If set to 'vrs' and $wmgUseRESTbaseVRS is true,
+// VisualEditor will talk to Parsoid over HTTP,
+// probably to RESTbase but it just might be talking
+// directly to the Parsoid API.
+'wgVisualEditorDefaultParsoidClient' => [
+	'default' => 'vrs',
+	'testwiki' => 'direct', // T320531
+],
+
 // Whether VisualEditor should bypass the MediaWiki layer and contact RESTBase directly for speed
 'wmgVisualEditorAccessRestbaseDirectly' => [
 	'default' => true,		// T100026

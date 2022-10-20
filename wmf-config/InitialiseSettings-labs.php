@@ -615,21 +615,14 @@ function wmfGetOverrideSettings() {
 			'default' => 'mobile',
 		],
 
-		// Whether to configure RESTBase as a Virtual REST Service
-		// in MW Core. If false, VE will call parsoid directly in PHP.
-		// We should have both modes in the Beta cluster, as long as we
-		// support both in prod.
-		'wmgUseRestbaseVRS' => [
-			'default' => true,
-			'dewiki' => false, // T320531
-		],
-
-		// T320703: Whether $wmgUseRestbaseVRS is false, $wmgVisualEditorAccessRestbaseDirectly
-		// should be false as well. Otherwise, VE will load HTML from RESTbase, but
-		// will save via MW core code, which will fail because the ETag does not match.
-		'wmgVisualEditorAccessRestbaseDirectly' => [
-			'default' => true,
-			'dewiki' => false, // T320531
+		// Tell VisualEditor how to talk to Parsoid.
+		// If set to 'vrs' and $wmgUseRESTbaseVRS is true,
+		// VisualEditor will talk to Parsoid over HTTP,
+		// probably to RESTbase but it just might be talking
+		// directly to the Parsoid API.
+		'wgVisualEditorDefaultParsoidClient' => [
+			'default' => 'vrs',
+			'dewiki' => 'direct', // T320531
 		],
 
 		'wmgUseRSSExtension' => [
