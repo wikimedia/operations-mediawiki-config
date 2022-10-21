@@ -71,6 +71,17 @@ directly use the local icon file.
 When adding or modifying logos, it is highly recommended to add a `comment_icon`
 setting (normally Phabricator task ID) in config.yaml to explain the change.
 
+### Renaming files in static folder
+
+''IMPORTANT'': When renaming files, it is important to use symbolic links to
+point to the old version of static assets for cached HTML. It is also important
+to verify that no symbolic links are broken.
+
+```bash
+find static -xtype l # unix
+find static | xargs file | grep -i "broken symbolic link" # osx
+```
+
 ### Logo variants (usually temporary)
 Sometimes a wiki wants to use a temporary logo for a celebration or needs an
 alternative logo for language converter purposes.
