@@ -21199,6 +21199,10 @@ return [
 			'schema_title' => 'analytics/mediawiki/mediasearch_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		'mediawiki.searchpreview' => [
+			'schema_title' => 'analytics/mediawiki/searchpreview',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		'mediawiki.structured_task.article.link_suggestion_interaction' => [
 			'schema_title' => 'analytics/mediawiki/structured_task/article/link_suggestion_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -21803,6 +21807,7 @@ return [
 		'mediawiki.content_translation_event',
 		'mediawiki.talk_page_edit',
 		'mediawiki.mediasearch_interaction',
+		'mediawiki.searchpreview',
 		'mediawiki.structured_task.article.link_suggestion_interaction',
 		'mediawiki.structured_task.article.image_suggestion_interaction',
 		'mediawiki.pref_diff',
