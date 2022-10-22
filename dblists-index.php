@@ -666,7 +666,7 @@ return [
 'piwiktionary' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
 'plwiki' => [ 'wikipedia', 'flow', 'flaggedrevs', 'large', 'wikidataclient', 'cirrussearch-big-indices' ],
 'plwikibooks' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
-'plwikimedia' => [ 'small', 'visualeditor-nondefault', 'group1' ],
+'plwikimedia' => [ 'small', 'group1' ],
 'plwikinews' => [ 'desktop-improvements', 'medium', 'wikidataclient', 'group1', 'nowikidatadescriptiontaglines' ],
 'plwikiquote' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'cirrussearch-big-indices' ],
 'plwikisource' => [ 'desktop-improvements', 'flaggedrevs', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
