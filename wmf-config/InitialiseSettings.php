@@ -597,152 +597,15 @@ return [
 # @} end of wgLocaltimezone
 
 # wgLogos, consolidated in CommonSettings @{
-// $wmgSiteLogo1x, $wmgSiteLogo1_5x, $wmgSiteLogo2x, $wmgSiteLogoWordmark and
-// $wmgSiteLogoTagline are defined in logos.php.
+// $wmgSiteLogo1x, $wmgSiteLogo1_5x, $wmgSiteLogo2x, $wmgSiteLogoWordmark,
+// $wmgSiteLogoTagline and $wmgSiteLogoIcon are defined in logos.php.
 // See ../logos/README.md for instructions.
-
-// NOTE: These lists are ordered by *project family* for ease of maintenance.
-// The order is: Wikipedia, Wiktionary, Wikiquote, Wikibooks, Wikinews, Wikisource,
-// Wikiversity, Wikivoyage, chapter wikis, and finally special wikis
 
 // ⚠️ IMPORTANT!!!! ⚠️
 // When updating these logos, please note that official Wikimedia logos should not
 // be used on labs instances.
 // Please check that any overrides in InitialiseSettings-labs.php work per instructions
 // at https://wikitech.wikimedia.org/wiki/Wikitech:Cloud_Services_Terms_of_use
-
-'wmgSiteLogoIcon' => [
-	// Projects
-	'default' => null, // See T244486
-	'wikibooks' => '/static/images/icons/wikibooks.svg',
-	'wikidata' => '/static/images/icons/wikidata.svg',
-	'wikimedia' => '/static/images/icons/wikimedia.svg',
-	'wikinews' => '/static/images/icons/wikinews.svg',
-	'wikipedia' => '/static/images/icons/wikipedia.png',
-	'wikiquote' => '/static/images/icons/wikiquote.svg',
-	'wikisource' => '/static/images/icons/wikisource.svg',
-	'wikiversity' => '/static/images/icons/wikiversity.svg',
-	'wikivoyage' => '/static/images/icons/wikivoyage.svg',
-	'wiktionary' => '/static/images/icons/wiktionary.svg',
-
-	// Wikitionary's with different logos
-	'angwiktionary' => null,
-	'anwiktionary' => null,
-	'bgwiktionary' => null,
-	'brwiktionary' => null,
-	'cawiktionary' => null,
-	'cswiktionary' => null,
-	'cywiktionary' => null,
-	'dewiktionary' => null,
-	'euwiktionary' => null,
-	'hewiktionary' => null,
-	'huwiktionary' => null,
-	'iowiktionary' => null,
-	'iswiktionary' => null,
-	'kawiktionary' => null,
-	'knwiktionary' => null,
-	'kuwiktionary' => null,
-	'lawiktionary' => null,
-	'lbwiktionary' => null,
-	'ltwiktionary' => null,
-	'mgwiktionary' => null,
-	'minwiktionary' => null,
-	'mkwiktionary' => null,
-	'nowiktionary' => null,
-	'orwiktionary' => null,
-	'quwiktionary' => null,
-	'rowiktionary' => null,
-	'ruwiktionary' => null,
-	'sgwiktionary' => null,
-	'shwiktionary' => null,
-	'simplewiktionary' => null,
-	'siwiktionary' => null,
-	'shywiktionary' => null,
-	'siwiktionary' => null,
-	'srwiktionary' => null,
-	'tawiktionary' => null,
-	'trwiktionary' => null,
-	'vowiktionary' => null,
-
-	// non standard logos wikiversity
-	'betawikiversity' => null,
-
-	// Wikipedia projects with custom logos
-	'arbcom_cswiki' => null,
-	'arbcom_dewiki' => null,
-	'arbcom_enwiki' => null,
-	'arbcom_nlwiki' => null,
-	'arbcom_ruwiki' => null,
-	'arbcom_ruwiki' => null,
-	'sysop_itwiki' => null,
-
-	// RTL wikiquote
-	'arwikiquote' => null,
-	'urwikiquote' => null,
-
-	// Chapter wikis
-	'brwikimedia' => '/static/images/icons/brwikimedia.svg',
-	'nowikimedia' => '/static/images/icons/wikimedia.svg',
-
-	// Special wikis
-	'collabwiki' => '/static/images/icons/collabwiki.svg',
-	'commonswiki' => '/static/images/icons/commonswiki.svg',
-	'foundationwiki' => '/static/images/icons/wikimedia.svg',
-	'incubatorwiki' => '/static/images/icons/incubatorwiki.svg',
-	'mediawikiwiki' => '/static/images/icons/mediawikiwiki.svg',
-	'metawiki' => '/static/images/icons/metawiki.svg',
-	'donatewiki' => '/static/images/icons/wikimedia.svg',
-	'officewiki' => '/static/images/icons/wikimedia.svg',
-	'outreachwiki' => '/static/images/icons/outreachwiki.svg',
-	'specieswiki' => '/static/images/icons/specieswiki.svg',
-	'strategywiki' => '/static/images/icons/strategywiki.svg',
-	'stewardwiki' => '/static/images/icons/strategywiki.svg',
-	'wikimania' => '/static/images/icons/wikimania.svg',
-	'wikimaniateamwiki' => '/static/images/icons/wikimania.svg',
-	'chapcomwiki' => '/static/images/icons/wikimedia.svg',
-	'sourceswiki' => '/static/images/icons/wikisource.svg',
-	'tenwiki' => null,
-	'votewiki' => '/static/images/icons/wikimedia.svg',
-	'stewardwiki' => '/static/images/icons/strategywiki.svg',
-	'wg_enwiki' => '/static/images/icons/strategywiki.svg',
-
-	// wikimedia logo (previously colored)
-	'advisorywiki' => '/static/images/icons/wikimedia.svg',
-	'auditcomwiki' => '/static/images/icons/wikimedia.svg',
-	'apiportalwiki' => '/static/images/icons/wikimedia.svg',
-	'boardwiki' => '/static/images/icons/wikimedia.svg',
-	'boardgovcomwiki' => '/static/images/icons/wikimedia.svg',
-	'chairwiki' => '/static/images/icons/wikimedia.svg',
-	'electcomwiki' => '/static/images/icons/wikimedia.svg',
-	'fdcwiki' => '/static/images/icons/wikimedia.svg',
-	'iegcomwiki' => '/static/images/icons/wikimedia.svg',
-	'internalwiki' => '/static/images/icons/wikimedia.svg',
-	'loginwiki' => '/static/images/icons/wikimedia.svg',
-	'movementroleswiki' => '/static/images/icons/wikimedia.svg',
-	'otrs_wikiwiki' => '/static/images/icons/wikimedia.svg',
-	'ombudsmenwiki' => '/static/images/icons/wikimedia.svg',
-	'projectcomwiki' => '/static/images/icons/wikimedia.svg',
-	'qualitywiki' => '/static/images/icons/wikimedia.svg',
-	'searchcomwiki' => '/static/images/icons/wikimedia.svg',
-	'spcomwiki' => '/static/images/icons/wikimedia.svg',
-	'transitionteamwiki' => '/static/images/icons/wikimedia.svg',
-
-	// custom wikibooks
-	'sqwikibooks' => null,
-
-	// wikimedia chapters with unique logos
-	'ecwikimedia' => null,
-	'romdwikimedia' => null,
-
-	// Test wikis T299512
-	'testwiki' => '/static/images/icons/testwiki.png',
-	'test2wiki' => '/static/images/icons/testwiki.png',
-	'testcommonswiki' => '/static/images/icons/commonswiki.svg',
-	'testwikidatawiki' => '/static/images/icons/testwikidatawiki.svg',
-
-	// Celebrations
-	'zhwiki' => '/static/images/icons/wikipedia-zh-20.svg', // T320859
-],
 
 'wmgSiteLogoVariants' => [
 	'zhwiki' => [

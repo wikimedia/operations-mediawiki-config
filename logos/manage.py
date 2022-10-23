@@ -36,8 +36,12 @@ if sys.version_info < (3, 7):
     raise RuntimeError("You must use Python 3.7+ to run this script")
 
 DIR = Path(__file__).parent
-project_logos = DIR.parent / "static/images/project-logos"
-project_svgs = DIR.parent / "static/images/mobile/copyright"
+project_logos_path = "static/images/project-logos"
+project_svgs_path = "static/images/mobile/copyright"
+project_icons_path = "static/images/icons"
+project_logos = DIR.parent / project_logos_path
+project_svgs = DIR.parent / project_svgs_path
+project_icons = DIR.parent / project_icons_path
 
 
 def validate_commons(name: str, value: str):
@@ -61,11 +65,13 @@ def validate(data: dict):
             if "commons" in info:
                 validate_commons(site, info["commons"])
             if "variants" in info:
-                for variant_name, variant_commons in info["variants"].items():
-                    if not variant_name.startswith(site):
+                for variant_name, variant_info in info["variants"].items():
+                    if not variant_name.startswith(site + "-"):
                         # Variant name must start with site name
-                        raise RuntimeError(f"{site}: variant {variant_name} must start with {site}")
-                    validate_commons(f"{site} (variant: {variant_name})", variant_commons)
+                        raise RuntimeError(f"{site}: variant {variant_name} must " \
+                            "start with {site}, connected with a dash")
+                    for variant_type, variant_commons in variant_info.items():
+                        validate_commons(f"{site} (variant: {variant_name})", variant_commons)
             for size in ["1x", "1_5x", "2x"]:
                 if size != "1x" and info.get(f"no_{size}"):
                     # Skip, doesn't have this size
@@ -153,7 +159,8 @@ def download(commons: str, name: str):
             cwd=project_logos,
         )
 
-def download_svg(commons: str, name: str, svg_type: str, data: dict):
+
+def download_svg(commons: str, name: str, svg_type: str, data: dict, variant=None):
     # Check dependencies first
     for dep in ["svgo", "rsvg-convert"]:
         try:
@@ -183,16 +190,19 @@ def download_svg(commons: str, name: str, svg_type: str, data: dict):
 
     req = s.get(url)
     req.raise_for_status()
+    wiki = name
     proj, lang = transform_name(data, name)
     name = ""
     if lang is None:
         name = f"{proj}-{svg_type}"
     else:
         name = f"{proj}-{svg_type}-{lang}"
+    if variant is not None:
+        # "zhwiki-hans" -> "hans"
+        name = f"{name}-{variant[len(wiki) + 1:]}"
     filename = f"{name}.svg"
-    filename1 = f"{name}-tmp.svg"
     (project_svgs / filename).write_bytes(req.content)
-    print(f"Saved {filename}")
+    print(f"Saved {svg_type} {filename}")
 
     width, height = get_svg_size(filename)
     if width > 140 or height > 40:
@@ -206,34 +216,59 @@ def download_svg(commons: str, name: str, svg_type: str, data: dict):
             height = ceil(new_height)
             width = 140
         print(f"File {filename} too wide or too tall, resizing to {width} x {height}")
-        resize_svg(filename, filename1, str(width), str(height))
+        resize_svg(filename, str(width), str(height))
 
-    subprocess.check_call(
-        [
-            "scour",
-            "-i",
-            filename,
-            "-o",
-            filename1,
-            "--enable-id-stripping",
-            "--enable-comment-stripping",
-            "--shorten-ids",
-            "--strip-xml-prolog",
-            "--remove-descriptive-elements",
-            "--create-groups",
-            "--enable-viewboxing",
-            "--set-c-precision=3",
-            "--indent=none",
-            "--no-line-breaks",
-        ],
-        cwd=project_svgs,
+    optimize_svg(filename)
+
+
+def download_icon(commons: str, name: str, data: dict, variant=None):
+    # Check dependencies first
+    for dep in ["svgo", "rsvg-convert"]:
+        try:
+            subprocess.check_output([dep, "--help"])
+        except subprocess.CalledProcessError:
+            raise RuntimeError(f"Error: {dep} not installed")
+
+    s = requests.Session()
+    s.headers.update({
+        "User-Agent": "logos-manage (https://gerrit.wikimedia.org/g/operations/mediawiki-config/+/HEAD/logos/manage.py)"
+    })
+
+    req = s.get(
+        "https://commons.wikimedia.org/w/api.php",
+        params={
+            "action": "query",
+            "prop": "imageinfo",
+            "titles": commons,
+            "iiprop": "url",
+            "iilimit": "1",
+            "format": "json",
+            "formatversion": "2",
+        }
     )
-    os.rename(project_svgs / filename1, project_svgs / filename)
-    subprocess.check_call(
-        ["svgo", "-i", filename, "-o", filename],
-        cwd=project_svgs,
-    )
-    print("")
+    req.raise_for_status()
+    url = req.json()["query"]["pages"][0]["imageinfo"][0]["url"]
+
+    req = s.get(url)
+    req.raise_for_status()
+    
+    wiki = name
+    if variant is not None:
+        name = f"{name}-{variant[len(wiki) + 1:]}"
+    filename = f"{name}.svg"
+
+    (project_icons / filename).write_bytes(req.content)
+    print(f"Saved icon {filename}")
+
+    width, height = get_svg_size(filename, project_icons)
+    if width != height:
+        raise RuntimeError(f"Icon {filename} is not square")
+    if width > 100:
+        width = height = 100
+        print(f"File {filename} too big, resizing to {width} x {height}")
+        resize_svg(filename, str(width), str(height), project_icons)
+
+    optimize_svg(filename, project_icons)
 
 
 def make_block(size: str, data: dict):
@@ -258,7 +293,7 @@ def make_block(size: str, data: dict):
             filename = f"{selected}{path_size}.png"
             if not (project_logos / filename).exists():
                 raise RuntimeError(f"Error: {filename} doesn't exist!")
-            url = f"/static/images/project-logos/{filename}"
+            url = f"/{project_logos_path}/{filename}"
             if comment_key in info:
                 comment = f" // {info[comment_key]}"
             else:
@@ -297,10 +332,15 @@ def make_block2(svg_type: str, data: dict):
                 name = f"{proj}-{svg_type}"
             else:
                 name = f"{proj}-{svg_type}-{lang}"
+            if "variants" in info and "selected" in info:
+                # If selected is set, it should be a variant
+                variant = info["selected"]
+                if commons_key in info["variants"][variant]:
+                    name = f"{name}-{variant[len(site) + 1:]}"
             filename = f"{name}.svg"
             if not (project_svgs / filename).exists():
                 raise RuntimeError(f"Error: {filename} doesn't exist!")
-            url = f"/static/images/mobile/copyright/{filename}"
+            url = f"/{project_svgs_path}/{filename}"
             width, height = get_svg_size(filename)
             width = ceil(width)
             height = ceil(height)
@@ -322,6 +362,50 @@ def make_block2(svg_type: str, data: dict):
     return text
 
 
+def make_block_icon(data: dict):
+    commons_key = "commons_icon"
+    local_key = "local_icon"
+    comment_key = "comment_icon"
+    selected_key = "selected_icon"
+    text = f"'wmgSiteLogoIcon' => [\n"
+    for group, sites in data.items():
+        text += f"\t// {group}\n"
+        for site, info in sites.items():
+            if info is None:
+                # Default values
+                info = {}
+            url = ""
+            if "no_icon" in info and info["no_icon"]:
+                url = "null"
+                text += f"\t'{site}' => {url},\n"
+                continue
+            if commons_key not in info and local_key not in info and selected_key not in info \
+                and not ("variants" in info and "selected" in info \
+                    and commons_key in info["variants"][info["selected"]]):
+                continue
+            name = info.get(selected_key, site)
+            if "variants" in info and "selected" in info:
+                # If selected is set, it should be a variant
+                variant = info["selected"]
+                if commons_key in info["variants"][variant]:
+                    name = f"{name}-{variant[len(site) + 1:]}"
+            ext = "svg"
+            if "no_svg_icon" in info and info["no_svg_icon"]:
+                ext = "png"
+            filename = f"{name}.{ext}"
+            if not (project_icons / filename).exists():
+                raise RuntimeError(f"Error: {filename} doesn't exist!")
+            url = f"/{project_icons_path}/{filename}"
+            if comment_key in info:
+                comment = f" // {info[comment_key]}"
+            else:
+                comment = ""
+            text += f"\t'{site}' => '{url}',{comment}\n"
+        text += "\n"
+    text += "],\n\n"
+    return text
+
+
 def generate(data: dict):
     text = textwrap.dedent("""\
     <?php
@@ -336,6 +420,10 @@ def generate(data: dict):
     #      `-- wmf-config/logos.php
     #
 
+    // NOTE: These lists are ordered by *project family* for ease of maintenance.
+    // The order is: Wikipedia, Wiktionary, Wikiquote, Wikibooks, Wikinews, Wikisource,
+    // Wikiversity, Wikivoyage, chapter wikis, and finally special wikis
+
     // Inline comments are often used for noting the task(s) associated with specific configuration
     // and requiring comments to be on their own line would reduce readability for this file
     // phpcs:disable MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment
@@ -345,6 +433,7 @@ def generate(data: dict):
     # used on labs instances.
     # Please check that any overrides in InitialiseSettings-labs.php work per instructions
     # at https://wikitech.wikimedia.org/wiki/Wikitech:Cloud_Services_Terms_of_use
+    #
     # When defining new wordmarks or taglines, ensure width <= 140px so that logos are
     # mobile friendly. Scale down them if necessary.
 
@@ -354,6 +443,7 @@ def generate(data: dict):
         text += make_block(size, data)
     for svg_type in ["wordmark", "tagline"]:
         text += make_block2(svg_type, data)
+    text += make_block_icon(data)
     text += "];\n"
 
     (DIR.parent / "wmf-config/logos.php").write_text(text)
@@ -372,24 +462,38 @@ def update(data: dict, wiki: str, variant: Optional[str]):
     if info is None:
         raise RuntimeError(f"I can't find any configuration for {wiki}")
     name = wiki
-    if "commons_wordmark" in info or "commons_tagline" in info:
-        for svg_type in ["wordmark", "tagline"]:
-            if f"commons_{svg_type}" in info:
-                commons_svg = info[f"commons_{svg_type}"]
+    for svg_type in ["wordmark", "tagline"]:
+        if f"commons_{svg_type}" in info:
+            commons_svg = info[f"commons_{svg_type}"]
+            if variant:
+                try:
+                    if f"commons_{svg_type}" in info["variants"][variant]:
+                        commons_svg = info["variants"][variant][f"commons_{svg_type}"]
+                        download_svg(commons_svg, name, svg_type, data, variant)
+                except KeyError:
+                    raise RuntimeError(f"Cannot find variant {variant} for site {wiki}")
+            else:
                 download_svg(commons_svg, name, svg_type, data)
+    if "commons_icon" in info:
+        commons_icon = info["commons_icon"]
+        download_icon(commons_icon, name, data)
+    if variant and "commons_icon" in info["variants"][variant]:
+        commons_icon = info["variants"][variant]["commons_icon"]
+        download_icon(commons_icon, name, data, variant)
     if "commons" in info:
         commons = info["commons"]
-        name = wiki
         if variant:
             try:
-                commons = info["variants"][variant]
+                commons = info["variants"][variant]["commons"]
                 name = variant
             except KeyError:
                 raise RuntimeError(f"Cannot find variant {variant} for site {wiki}")
         download(commons, name)
     elif "commons_wordmark" not in info and "commons_tagline" not in info \
             and "local_wordmark" not in info and "local_tagline" not in info \
-            and "selected_wordmark" not in info and "selected_tagline" not in info:
+            and "selected_wordmark" not in info and "selected_tagline" not in info \
+            and "commons_icon" not in info and "local_icon" not in info \
+            and "selected_icon" not in info:
         raise RuntimeError(
             "The update function can only be used if a 'commons' SVG is present in config.yaml"
         )
@@ -416,8 +520,8 @@ def transform_name(data: dict, name: str):
     raise RuntimeError(f"Cannot find project for {name}")
 
 
-def get_svg_size(filename: str):
-    with open(project_svgs / filename, "r") as f:
+def get_svg_size(filename: str, dir=project_svgs):
+    with open(dir / filename, "r") as f:
         svg = f.read()
         attr = ET.fromstring(svg).attrib
         width = attr["width"] if "width" in attr else None
@@ -435,7 +539,8 @@ def get_svg_size(filename: str):
         return float(width), float(height)
 
 
-def resize_svg(filename: str, filename1: str, width: str, height: str):
+def resize_svg(filename: str, width: str, height: str, dir=project_svgs):
+    filename1 = "!" + filename
     subprocess.run(
         [
             "rsvg-convert",
@@ -451,9 +556,39 @@ def resize_svg(filename: str, filename1: str, width: str, height: str):
             filename,
         ],
         check=True,
-        cwd=project_svgs,
+        cwd=dir,
     )
-    os.rename(project_svgs / filename1, project_svgs / filename)
+    os.rename(dir / filename1, dir / filename)
+
+
+def optimize_svg(filename: str, dir=project_svgs):
+    filename1 = "!" + filename
+    subprocess.check_call(
+        [
+            "scour",
+            "-i",
+            filename,
+            "-o",
+            filename1,
+            "--enable-id-stripping",
+            "--enable-comment-stripping",
+            "--shorten-ids",
+            "--strip-xml-prolog",
+            "--remove-descriptive-elements",
+            "--create-groups",
+            "--enable-viewboxing",
+            "--set-c-precision=3",
+            "--indent=none",
+            "--no-line-breaks",
+        ],
+        cwd=dir,
+    )
+    os.rename(dir / filename1, dir / filename)
+    subprocess.check_call(
+        ["svgo", "-i", filename, "-o", filename],
+        cwd=dir,
+    )
+    print("")
 
 
 def main():
