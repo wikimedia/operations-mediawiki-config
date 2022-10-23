@@ -806,7 +806,95 @@ return [
 				'height' => 14,
 			],
 		],
-	]
+	],
+	'zhwikinews' => [
+		'zh-hans' => [ // T308620
+			'1x' => '/static/images/project-logos/zhwikinews-hans.png',
+			'1.5x' => '/static/images/project-logos/zhwikinews-hans-1.5x.png',
+			'2x' => '/static/images/project-logos/zhwikinews-hans-2x.png',
+		],
+		'zh-cn' => [ // T308620
+			'1x' => '/static/images/project-logos/zhwikinews-hans.png',
+			'1.5x' => '/static/images/project-logos/zhwikinews-hans-1.5x.png',
+			'2x' => '/static/images/project-logos/zhwikinews-hans-2x.png',
+		],
+		'zh-my' => [ // T308620
+			'1x' => '/static/images/project-logos/zhwikinews-hans.png',
+			'1.5x' => '/static/images/project-logos/zhwikinews-hans-1.5x.png',
+			'2x' => '/static/images/project-logos/zhwikinews-hans-2x.png',
+		],
+		'zh-sg' => [ // T308620
+			'1x' => '/static/images/project-logos/zhwikinews-hans.png',
+			'1.5x' => '/static/images/project-logos/zhwikinews-hans-1.5x.png',
+			'2x' => '/static/images/project-logos/zhwikinews-hans-2x.png',
+		],
+	],
+	'zhwikiquote' => [
+		'zh-hans' => [ // T308620
+			'1x' => '/static/images/project-logos/zhwikiquote-hans.png',
+			'1.5x' => '/static/images/project-logos/zhwikiquote-hans-1.5x.png',
+			'2x' => '/static/images/project-logos/zhwikiquote-hans-2x.png',
+		],
+		'zh-cn' => [ // T308620
+			'1x' => '/static/images/project-logos/zhwikiquote-hans.png',
+			'1.5x' => '/static/images/project-logos/zhwikiquote-hans-1.5x.png',
+			'2x' => '/static/images/project-logos/zhwikiquote-hans-2x.png',
+		],
+		'zh-my' => [ // T308620
+			'1x' => '/static/images/project-logos/zhwikiquote-hans.png',
+			'1.5x' => '/static/images/project-logos/zhwikiquote-hans-1.5x.png',
+			'2x' => '/static/images/project-logos/zhwikiquote-hans-2x.png',
+		],
+		'zh-sg' => [ // T308620
+			'1x' => '/static/images/project-logos/zhwikiquote-hans.png',
+			'1.5x' => '/static/images/project-logos/zhwikiquote-hans-1.5x.png',
+			'2x' => '/static/images/project-logos/zhwikiquote-hans-2x.png',
+		],
+	],
+	'zhwikiversity' => [
+		'zh-hans' => [ // T308620
+			'1x' => '/static/images/project-logos/zhwikiversity-hans.png',
+			'1.5x' => '/static/images/project-logos/zhwikiversity-hans-1.5x.png',
+			'2x' => '/static/images/project-logos/zhwikiversity-hans-2x.png',
+		],
+		'zh-cn' => [ // T308620
+			'1x' => '/static/images/project-logos/zhwikiversity-hans.png',
+			'1.5x' => '/static/images/project-logos/zhwikiversity-hans-1.5x.png',
+			'2x' => '/static/images/project-logos/zhwikiversity-hans-2x.png',
+		],
+		'zh-my' => [ // T308620
+			'1x' => '/static/images/project-logos/zhwikiversity-hans.png',
+			'1.5x' => '/static/images/project-logos/zhwikiversity-hans-1.5x.png',
+			'2x' => '/static/images/project-logos/zhwikiversity-hans-2x.png',
+		],
+		'zh-sg' => [ // T308620
+			'1x' => '/static/images/project-logos/zhwikiversity-hans.png',
+			'1.5x' => '/static/images/project-logos/zhwikiversity-hans-1.5x.png',
+			'2x' => '/static/images/project-logos/zhwikiversity-hans-2x.png',
+		],
+	],
+	'zhwikivoyage' => [
+		'zh-hant' => [ // T308620
+			'1x' => '/static/images/project-logos/zhwikivoyage-hant.png',
+			'1.5x' => '/static/images/project-logos/zhwikivoyage-hant-1.5x.png',
+			'2x' => '/static/images/project-logos/zhwikivoyage-hant-2x.png',
+		],
+		'zh-hk' => [ // T308620
+			'1x' => '/static/images/project-logos/zhwikivoyage-hant.png',
+			'1.5x' => '/static/images/project-logos/zhwikivoyage-hant-1.5x.png',
+			'2x' => '/static/images/project-logos/zhwikivoyage-hant-2x.png',
+		],
+		'zh-mo' => [ // T308620
+			'1x' => '/static/images/project-logos/zhwikivoyage-hant.png',
+			'1.5x' => '/static/images/project-logos/zhwikivoyage-hant-1.5x.png',
+			'2x' => '/static/images/project-logos/zhwikivoyage-hant-2x.png',
+		],
+		'zh-tw' => [ // T308620
+			'1x' => '/static/images/project-logos/zhwikivoyage-hant.png',
+			'1.5x' => '/static/images/project-logos/zhwikivoyage-hant-1.5x.png',
+			'2x' => '/static/images/project-logos/zhwikivoyage-hant-2x.png',
+		],
+	],
 ],
 
 # @} end of wgLogos
