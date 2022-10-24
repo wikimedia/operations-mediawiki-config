@@ -208,19 +208,21 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 	// The callback below does not support data center switches, but does support
 	// read-only flags and changes to replica weights. In particular, it allows a replica
 	// to be taken out of rotation.
-	// Disabled for now, until it's fixed
-	//if ( PHP_SAPI === 'cli' ) {
-	//	$wgLBFactoryConf['configCallback'] = static function () use ( $wmgLocalServices, $wmgDatacenter ) {
+	$wmgLBFactoryConfConfigCallback = null;
+	if ( PHP_SAPI === 'cli' ) {
+		$wmgLBFactoryConfigCallback = static function () use ( $wmgLocalServices, $wmgDatacenter ) {
 			// NOTE: Don't re-use the existing $etcdConfig, the entire point of this
 			//       callback is that the we want to re-load it to see if it has changed.
-	//		$etcdConfig = wmfSetupEtcd( $wmgLocalServices['etcd'] );
-	//		$dbConfigFromEtcd = $etcdConfig->get( "$wmgDatacenter/dbconfig" );
-	//		$lbFactoryConf = [];
-	//		wmfApplyEtcdDBConfig( $dbConfigFromEtcd, $lbFactoryConf );
-	//		$lbConfigBuilder = \MediaWiki\MediaWikiServices::getInstance()->getDBLoadBalancerFactoryConfigBuilder();
-	//		return $lbConfigBuilder->applyDefaultConfig( $lbFactoryConf );
-	//	};
-	//}
+			$etcdConfig = wmfSetupEtcd( $wmgLocalServices['etcd'] );
+			$dbConfigFromEtcd = $etcdConfig->get( "$wmgDatacenter/dbconfig" );
+			$lbFactoryConf = [];
+			wmfApplyEtcdDBConfig( $dbConfigFromEtcd, $lbFactoryConf );
+			$lbConfigBuilder = \MediaWiki\MediaWikiServices::getInstance()->getDBLoadBalancerFactoryConfigBuilder();
+			return $lbConfigBuilder->applyDefaultConfig( $lbFactoryConf );
+		};
+	} else {
+		$wmgLBFactoryConfigCallback = null;
+	}
 
 	unset( $etcdConfig );
 }
@@ -346,6 +348,8 @@ if ( $wmgRealm === 'production' ) {
 $wgLBFactoryConf['sectionLoads']['s11'] = [ 'clouddb2002-dev' => 1 ];
 $wgLBFactoryConf['hostsByName']['clouddb2002-dev'] = '10.192.20.6';
 
+// Add the config callback
+$wgLBFactoryConf['configCallback'] = $wmgLBFactoryConfigCallback;
 // Set $wgProfiler to the value provided by PhpAutoPrepend.php
 if ( isset( $wmgProfiler ) ) {
 	$wgProfiler = $wmgProfiler;
