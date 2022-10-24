@@ -320,7 +320,10 @@ def make_block2(svg_type: str, data: dict):
             url = ""
             if f"no_{svg_type}" in info and info[f"no_{svg_type}"]:
                 url = "null"
-                text += f"\t'{site}' => {url},\n"
+                text += f"\t'{site}' => {url},"
+                if comment_key in info:
+                    text += f" // {info[comment_key]}"
+                text += "\n"
                 continue
             if commons_key not in info and selected_key not in info and local_key not in info:
                 # Skip, doesn't have this type
@@ -377,7 +380,10 @@ def make_block_icon(data: dict):
             url = ""
             if "no_icon" in info and info["no_icon"]:
                 url = "null"
-                text += f"\t'{site}' => {url},\n"
+                text += f"\t'{site}' => {url},"
+                if comment_key in info:
+                    text += f" // {info[comment_key]}"
+                text += "\n"
                 continue
             if commons_key not in info and local_key not in info and selected_key not in info \
                 and not ("variants" in info and "selected" in info \
@@ -403,6 +409,76 @@ def make_block_icon(data: dict):
             text += f"\t'{site}' => '{url}',{comment}\n"
         text += "\n"
     text += "],\n\n"
+    return text
+
+
+def make_block_lang_variant(data: dict):
+    text = "'wmgSiteLogoVariants' => [\n"
+    for group, sites in data.items():
+        text += f"\t// {group}\n"
+        for site, info in sites.items():
+            if info is None:
+                info = {}
+            if "lang_variants" not in info:
+                continue
+            text += f"\t'{site}' => [\n"
+            comment = ""
+            if "comment_lang_variants" in info:
+                comment = f" // {info['comment_lang_variants']}"
+            for lang, lang_info in info["lang_variants"].items():
+                text += f"\t\t'{lang}' => [{comment}\n"
+                if "selected_lang" in lang_info:
+                    text += make_block_lang_single(site,
+                        lang_info["selected_lang"],
+                        info["lang_variants"][lang_info["selected_lang"]],
+                        data)
+                else:
+                    text += make_block_lang_single(site, lang, lang_info, data)
+                text += "\t\t],\n"
+            text += "\t],\n"
+        text += "\n"
+    text += "],\n\n"
+    return text
+
+
+def make_block_lang_single(site: str, lang: str, lang_info: dict, data: dict):
+    text = ""
+    if "selected_logo" in lang_info:
+        selected = lang_info["selected_logo"]
+        for size in ["1x", "1.5x", "2x"]:
+            size1 = "" if size == "1x" else f"-{size}"
+            filename = f"{selected}{size1}.png"
+            if not (project_logos / filename).exists():
+                raise RuntimeError(f"Error: {filename} doesn't exist!")
+            url = f"/{project_logos_path}/{selected}{size1}.png"
+            text += f"\t\t\t'{size}' => '{url}',\n"
+    for svg_type in ["wordmark", "tagline"]:
+        if f"selected_{svg_type}" in lang_info:
+            proj, lang = transform_name(data, site)
+            name = ""
+            if lang is None:
+                name = f"{proj}-{svg_type}"
+            else:
+                name = f"{proj}-{svg_type}-{lang}"
+            name += f"-{lang_info[f'selected_{svg_type}'][len(site) + 1:]}"
+            filename = f"{name}.svg"
+            if not (project_svgs / filename).exists():
+                raise RuntimeError(f"Error: {filename} doesn't exist!")
+            url = f"/{project_svgs_path}/{filename}"
+            width, height = get_svg_size(filename)
+            width = ceil(width)
+            height = ceil(height)
+            text += f"\t\t\t'{svg_type}' => [\n"
+            text += f"\t\t\t\t'src' => '{url}',\n"
+            text += f"\t\t\t\t'width' => {width},\n"
+            text += f"\t\t\t\t'height' => {height},\n\t\t\t],\n"
+    if "selected_icon" in lang_info:
+        selected = lang_info["selected_icon"]
+        filename = f"{selected}.svg"
+        if not (project_icons / filename).exists():
+            raise RuntimeError(f"Error: {filename} doesn't exist!")
+        url = f"/{project_icons_path}/{filename}"
+        text += f"\t\t\t'icon' => '{url}',\n"
     return text
 
 
@@ -444,6 +520,7 @@ def generate(data: dict):
     for svg_type in ["wordmark", "tagline"]:
         text += make_block2(svg_type, data)
     text += make_block_icon(data)
+    text += make_block_lang_variant(data)
     text += "];\n"
 
     (DIR.parent / "wmf-config/logos.php").write_text(text)
