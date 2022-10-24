@@ -208,7 +208,6 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 	// The callback below does not support data center switches, but does support
 	// read-only flags and changes to replica weights. In particular, it allows a replica
 	// to be taken out of rotation.
-	$wmgLBFactoryConfConfigCallback = null;
 	if ( PHP_SAPI === 'cli' ) {
 		$wmgLBFactoryConfigCallback = static function () use ( $wmgLocalServices, $wmgDatacenter ) {
 			// NOTE: Don't re-use the existing $etcdConfig, the entire point of this
@@ -217,8 +216,7 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 			$dbConfigFromEtcd = $etcdConfig->get( "$wmgDatacenter/dbconfig" );
 			$lbFactoryConf = [];
 			wmfApplyEtcdDBConfig( $dbConfigFromEtcd, $lbFactoryConf );
-			$lbConfigBuilder = \MediaWiki\MediaWikiServices::getInstance()->getDBLoadBalancerFactoryConfigBuilder();
-			return $lbConfigBuilder->applyDefaultConfig( $lbFactoryConf );
+			return $lbFactoryConf;
 		};
 	} else {
 		$wmgLBFactoryConfigCallback = null;
