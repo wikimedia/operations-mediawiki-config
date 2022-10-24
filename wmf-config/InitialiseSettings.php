@@ -7271,6 +7271,14 @@ return [
 		'showThumbnail' => false,
 		'showDescription' => false,
 	],
+	'wikidatawiki' => [
+		'showThumbnail' => false,
+		'showDescription' => true,
+	],
+	'testwikidatawiki' => [
+		'showThumbnail' => false,
+		'showDescription' => true,
+	],
 ],
 
 # wgForceUIMsgAsContentMsg @{
