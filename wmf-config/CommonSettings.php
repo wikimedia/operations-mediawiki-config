@@ -216,6 +216,7 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 			$dbConfigFromEtcd = $etcdConfig->get( "$wmgDatacenter/dbconfig" );
 			$lbFactoryConf = [];
 			wmfApplyEtcdDBConfig( $dbConfigFromEtcd, $lbFactoryConf );
+			$lbFactoryConf['class'] = 'LBFactoryMulti';
 			return $lbFactoryConf;
 		};
 	} else {
