@@ -3161,8 +3161,8 @@ return [
 	],
 	'zhwiki' => [ // T258552, T260908
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-zh.svg',
-		'width' => 120,
-		'height' => 26,
+		'width' => 105,
+		'height' => 22,
 	],
 
 	// Wiktionary
@@ -5022,8 +5022,8 @@ return [
 	],
 	'zhwiki' => [ // T258552, T260908
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-zh.svg',
-		'width' => 64,
-		'height' => 18,
+		'width' => 102,
+		'height' => 13,
 	],
 	'zuwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-zu.svg',
