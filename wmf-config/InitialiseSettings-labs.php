@@ -167,6 +167,23 @@ function wmfGetOverrideSettings() {
 						'rate' => 1,
 					],
 				],
+				// Declare release candiate 0 of
+				// mediawiki.page_change stream in beta
+				// https://phabricator.wikimedia.org/T311129
+				'rc0.mediawiki.page_change' => [
+					'schema_title' => 'development/mediawiki/page/change',
+					'producers' => [
+						'mediawiki_eventbus' => [
+							// event_service_name is replacing destination_event_service
+							// setting.
+							// https://phabricator.wikimedia.org/T321557
+							// Temporarily use eventgate-analytics.
+							// We want to produce to Kafka jumbo for
+							// release candidates.
+							'event_service_name' => 'eventgate-analytics',
+						],
+					],
+				],
 			],
 			'+enwiki' => [
 				'mediawiki.ipinfo_interaction' => [
@@ -200,6 +217,20 @@ function wmfGetOverrideSettings() {
 			// Configured in profile::trafficserver::backend::mapping_rules
 			// in Horizon hiera prefixpuppet for deployment-cache-text.
 			'default' => 'https://intake-analytics.wikimedia.beta.wmflabs.org/v1/events?hasty=true',
+		],
+
+		// EventBusStreamNamesMap is used by EventBus HookHandlers that produce
+		// events to map from an internal stream name to the actual produced
+		// stream name.   This is usually only set while a stream is still in
+		// development/testing.
+		'wgEventBusStreamNamesMap' => [
+			// We are in a development/release candidate phase for
+			// mediawiki.page_change  Override the default stream name until
+			// we release it.
+			// NOTE: the values here MUST map to a key in wgEventStreams.
+			'+wikipedia' => [
+				'mediawiki_page_change' => 'rc0.mediawiki.page_change'
+			]
 		],
 
 		// Historically, EventLogging would register Schemas and revisions it used

@@ -20284,7 +20284,7 @@ return [
 		// look for streams to ingest using these settings.
 		// Each stream in a job should have similar volumes to allow
 		// the job to scale properly and not cause stream ingestion starvation.
-		// The default job_name is be event_default.
+		// The default job_name is event_default.
 		// Override this if the stream should be imported by a different job,
 		// or disabled altogether.
 		'consumers' => [
