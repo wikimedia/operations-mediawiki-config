@@ -2468,7 +2468,8 @@ function wmfGetOverrideSettings() {
 
 		'wmgUseSearchVue' => [
 			'default' => false,
-			'en' => true,
+			'enwiki' => true,
+			'ruwiki' => true,
 		],
 		'wgQuickViewMediaRepositoryApiBaseUri' => [
 			'default' => 'https://commons.wikimedia.beta.wmflabs.org/w/api.php',
