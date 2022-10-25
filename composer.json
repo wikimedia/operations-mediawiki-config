@@ -26,6 +26,7 @@
 			"@buildDBLists",
 			"@checkclean"
 		],
+		"buildLogoHTML": "php -e multiversion/buildLogoHTML.php",
 		"buildDBLists": "php -e multiversion/buildDBLists.php",
 		"buildConfigCache": "php -e tests/buildConfigCache.php",
 		"diffConfig": [

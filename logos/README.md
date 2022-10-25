@@ -116,7 +116,7 @@ want a variant available on the server it can be omitted.
 
 If you just need to update logos.php after tweaking config.yaml, run:
 
-`tox -e logos -- generate`.
+`tox -e logos -- generate && composer buildLogoHTML`.
 
 ### Schema
 config.yaml contains the definitions for the 1x, 1.5x, and 2x versions of wiki
