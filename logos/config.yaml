@@ -371,8 +371,6 @@ Wikipedia:
         comment_1_5x: T130392
         comment_2x: T130392
         commons_wordmark: 'File:Wikipedia-wordmark-cs.svg'
-        width_wordmark: 111
-        height_wordmark: 17
         commons_tagline: 'File:Wikipedia-tagline-cs.svg'
         comment_tagline: T258552
     cuwiki:
@@ -1309,6 +1307,7 @@ Wikipedia:
         comment: T50397
         comment_1_5x: T150618
         comment_2x: T150618
+        local_tagline: true
         commons_wordmark: 'File:Wikipedia-wordmark-ps.svg'
         comment_wordmark: T184442
     ptwiki:
@@ -1641,6 +1640,7 @@ Wikipedia:
         comment: T189578
         comment_1_5x: T189578
         comment_2x: T189578
+        selected_wordmark: akwiki
         selected_tagline: akwiki
     tyvwiki:
         comment: T51328
@@ -1681,6 +1681,7 @@ Wikipedia:
         comment: T48589
         comment_1_5x: T150618
         comment_2x: T150618
+        local_tagline: true
         commons_wordmark: 'File:Wikipedia-wordmark-ur.svg'
         comment_wordmark: 'T171769, T254788'
     uzwiki:
