@@ -26679,6 +26679,7 @@ return [
 
 'wgGEMentorProvider' => [
 	'default' => 'structured',
+	'kswiki' => 'wikitext',
 ],
 
 'wgGEHomepageMentorsList' => [
