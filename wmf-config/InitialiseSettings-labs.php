@@ -1588,9 +1588,6 @@ function wmfGetOverrideSettings() {
 		'wgGEMentorshipUseIsActiveFlag' => [
 			'default' => true,
 		],
-		'wgGEMentorProvider' => [
-			'default' => 'structured',
-		],
 		'wgGECampaigns' => [
 			'default' => [
 				'social-latam-2022' => [
