@@ -19204,6 +19204,10 @@ return [
 	'enwiki' => true,
 ],
 
+'wgPageTriageMaxAge' => [
+	'default' => 90,
+],
+
 'wmgEnableInterwiki' => [
 	'default' => true,
 ],
