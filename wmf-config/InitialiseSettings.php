@@ -27757,6 +27757,10 @@ return [
 	'ptwiki' => true,
 	'ruwiki' => true,
 	'idwiki' => true,
+	'cawiki' => true,
+	'nowiki' => true,
+	'fiwiki' => true,
+	'huwiki' => true,
 ],
 
 'wmgUseSearchVue' => [
