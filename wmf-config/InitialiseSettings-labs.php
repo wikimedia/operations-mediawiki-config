@@ -1353,6 +1353,9 @@ function wmfGetOverrideSettings() {
 		'wgReadingListsAnonymizedPreviews' => [
 			'default' => true,
 		],
+		'wgReadingListsWebAuthenticatedPreviews' => [
+			'default' => true,
+		],
 		'wgReadingListAndroidAppDownloadLink' => [
 			'default' => 'https://play.google.com/store/apps/details?id=org.wikipedia&referrer=utm_source%3DreadingLists',
 		],
