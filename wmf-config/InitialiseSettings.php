@@ -8706,6 +8706,7 @@ return [
 	'default' => false,
 	'commonswiki' => true, // T98307
 	'testcommonswiki' => true, // T98307
+	'foundationwiki' => true, // T321967
 	'metawiki' => true,
 	'wikidata' => true,
 ],
@@ -8959,6 +8960,7 @@ return [
 	'default' => [],
 	'wikidatawiki' => [
 		'commons',
+		'foundation', // T321967
 		'mediawiki',
 		'meta',
 		'species',
@@ -8969,6 +8971,7 @@ return [
 	],
 	'commonswiki' => [
 		'commons',
+		'foundation', // T321967
 		'mediawiki',
 		'meta',
 		'species',
@@ -8993,6 +8996,7 @@ return [
 'wmgWikibaseClientSpecialSiteLinkGroups' => [
 	'wikidataclient' => [
 		'commons',
+		'foundation', // T321967
 		'mediawiki',
 		'meta',
 		'species',
@@ -9151,6 +9155,7 @@ return [
 	'wiktionary' => 'wiktionary',
 	'commonswiki' => 'commons',
 	'testcommonswiki' => 'testcommons',
+	'foundationwiki' => 'foundation', // T321967
 	'mediawikiwiki' => 'mediawiki',
 	'metawiki' => 'meta',
 	'specieswiki' => 'species',
