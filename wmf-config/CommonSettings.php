@@ -4224,7 +4224,6 @@ if ( $wmgUseSearchVue ) {
 if ( $wmgUseCampaignEvents ) {
 	wfLoadExtension( 'CampaignEvents' );
 	$wgCampaignEventsDatabaseCluster = 'extension1';
-	$wgCampaignEventsDatabaseName = 'wikishared';
 }
 
 if ( $wmgUseStopForumSpam ) {
