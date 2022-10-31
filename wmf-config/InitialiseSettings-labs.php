@@ -220,7 +220,7 @@ function wmfGetOverrideSettings() {
 			// mediawiki.page_change  Override the default stream name until
 			// we release it.
 			// NOTE: the values here MUST map to a key in wgEventStreams.
-			'+wikipedia' => [
+			'+metawiki' => [
 				'mediawiki_page_change' => 'rc0.mediawiki.page_change'
 			]
 		],
