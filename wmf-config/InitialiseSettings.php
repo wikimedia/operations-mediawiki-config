@@ -19592,7 +19592,6 @@ return [
 
 'wgDiscussionTools_visualenhancements' => [
 	'default' => 'default',
-	'jawiki' => 'unavailable', // T312672
 	'mediawikiwiki' => 'available', // T310960
 ],
 
