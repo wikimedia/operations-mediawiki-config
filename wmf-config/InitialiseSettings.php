@@ -21186,6 +21186,33 @@ return [
 			],
 		],
 
+		// See https://phabricator.wikimedia.org/T309602
+		'mediawiki.visual_editor_feature_use' => [
+			'schema_title' => 'analytics/mediawiki/client/metrics_event',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'events' => [ 'vefu.' ],
+
+					// The following are the values common to all client-side VisualEditorFeatureUse
+					// instruments [0][1][2] that the Metrics Platform Clients can provide.
+					//
+					// [0] https://gerrit.wikimedia.org/g/mediawiki/extensions/MobileFrontend/+/878ac506cd4911bc6e2fab9a9fbf6246a331fd0a/src/mobile.init/eventLogging/schemaVisualEditorFeatureUse.js#22
+					// [1] https://gerrit.wikimedia.org/g/mediawiki/extensions/DiscussionTools/+/c728f35e3a43807b3e014a80d8e57504d7e45259/modules/logger.js#71
+					// [2] https://gerrit.wikimedia.org/g/mediawiki/extensions/VisualEditor/+/e115c055044146d4eb4fb52afb0192b5acbae7c2/modules/ve-mw/init/ve.init.mw.trackSubscriber.js#305
+					'provide_values' => [
+						'agent_client_platform_family',
+						'performer_id',
+						'performer_edit_count',
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'pageview',
+				'rate' => 0,
+			],
+		],
+
 		// Wikistories streams
 		'mediawiki.wikistories_consumption_event' => [
 			'schema_title' => 'analytics/mediawiki/wikistories_consumption_event',
@@ -21536,6 +21563,11 @@ return [
 				'mediawiki_eventbus' => [
 					'enabled' => true
 				],
+			],
+		],
+		'mediawiki.visual_editor_feature_use' => [
+			'sample' => [
+				'rate' => 1
 			],
 		],
 	],
