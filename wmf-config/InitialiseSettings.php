@@ -21494,7 +21494,7 @@ return [
 			'canary_events_enabled' => false,
 		],
 	],
-	'+testwiki' => [
+	'+group0' => [
 		'mediawiki.web_ui.interactions' => [
 			'sample' => [
 				'rate' => 1,
