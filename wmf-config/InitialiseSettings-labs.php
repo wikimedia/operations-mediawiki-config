@@ -2322,7 +2322,6 @@ function wmfGetOverrideSettings() {
 		],
 
 		'-wgDiscussionToolsABTest' => [
-			'enwiki' => 'topicsubscription', // T304030
 		],
 
 		'-wgDiscussionToolsEnableMobile' => [
