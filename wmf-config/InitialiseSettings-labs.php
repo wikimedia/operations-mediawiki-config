@@ -156,15 +156,6 @@ function wmfGetOverrideSettings() {
 		// as within prod settings (default>group>wikiid), with later ones replacing earlier ones,
 		// unless '+' is used on a later one in which case the values are merged.
 		'wgEventStreams' => [
-			'+metawiki' => [
-				// Declare release candiate 0 of
-				// mediawiki.page_change stream in beta
-				// https://phabricator.wikimedia.org/T311129
-				'rc0.mediawiki.page_change' => [
-					'schema_title' => 'development/mediawiki/page/change',
-					'destination_event_service' => 'eventgate-analytics',
-				],
-			],
 			'+wikipedia' => [
 				'mediawiki.web_ui.interactions' => [
 					'sample' => [
@@ -174,6 +165,16 @@ function wmfGetOverrideSettings() {
 				'mediawiki.edit_attempt' => [
 					'sample' => [
 						'rate' => 1,
+					],
+				],
+				// Override default settings to enable
+				// rc0.mediawiki.page_change on selective wikis as we roll it out and test it.
+				// https://phabricator.wikimedia.org/T311129
+				'rc0.mediawiki.page_change' => [
+					'producers' => [
+						'mediawiki_eventbus' => [
+							'enabled' => true
+						],
 					],
 				],
 			],
@@ -209,20 +210,6 @@ function wmfGetOverrideSettings() {
 			// Configured in profile::trafficserver::backend::mapping_rules
 			// in Horizon hiera prefixpuppet for deployment-cache-text.
 			'default' => 'https://intake-analytics.wikimedia.beta.wmflabs.org/v1/events?hasty=true',
-		],
-
-		// EventBusStreamNamesMap is used by EventBus HookHandlers that produce
-		// events to map from an internal stream name to the actual produced
-		// stream name.   This is usually only set while a stream is still in
-		// development/testing.
-		'wgEventBusStreamNamesMap' => [
-			// We are in a development/release candidate phase for
-			// mediawiki.page_change  Override the default stream name until
-			// we release it.
-			// NOTE: the values here MUST map to a key in wgEventStreams.
-			'+metawiki' => [
-				'mediawiki_page_change' => 'rc0.mediawiki.page_change'
-			]
 		],
 
 		// Historically, EventLogging would register Schemas and revisions it used

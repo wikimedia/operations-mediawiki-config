@@ -21261,6 +21261,25 @@ return [
 			'canary_events_enabled' => false,
 		],
 
+		// Declare release candiate 0 of
+		// mediawiki.page_change stream in beta
+		// https://phabricator.wikimedia.org/T311129
+		'rc0.mediawiki.page_change' => [
+			// Schema is still in a 'development' namespace.
+			'schema_title' => 'development/mediawiki/page/change',
+			// For release candidate,
+			// use eventgate-analytics so we only produce to kafka jumbo.
+			'destination_event_service' => 'eventgate-analytics',
+			// Disable this stream by default.
+			// As we test it and roll it out, it will be enabled
+			// selectively in per wiki config overrides below.
+			'producers' => [
+				'mediawiki_eventbus' => [
+					'enabled' => false,
+				]
+			],
+		],
+
 		/*
 		 * == eventgate-main streams ==
 		 * These streams are produced to Kafka main-eqiad and main-codfw.
@@ -21593,6 +21612,20 @@ return [
 		'mediawiki.web_ui.interactions',
 		'mediawiki.edit_attempt',
 	],
+],
+
+// EventBusStreamNamesMap is used by EventBus HookHandlers that produce
+// events to map from an internal stream name to the actual produced
+// stream name.   This is usually only set while a stream is still in
+// development/testing.
+'wgEventBusStreamNamesMap' => [
+	// We are in a development/release candidate phase for
+	// mediawiki.page_change  Override the default stream name until
+	// we release it.
+	// NOTE: the values here MUST map to a key in wgEventStreams.
+	'default' => [
+		'mediawiki_page_change' => 'rc0.mediawiki.page_change'
+	]
 ],
 
 // Enable sessionTick on these wikis
