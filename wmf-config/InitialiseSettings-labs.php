@@ -156,6 +156,15 @@ function wmfGetOverrideSettings() {
 		// as within prod settings (default>group>wikiid), with later ones replacing earlier ones,
 		// unless '+' is used on a later one in which case the values are merged.
 		'wgEventStreams' => [
+			'+metawiki' => [
+				// Declare release candiate 0 of
+				// mediawiki.page_change stream in beta
+				// https://phabricator.wikimedia.org/T311129
+				'rc0.mediawiki.page_change' => [
+					'schema_title' => 'development/mediawiki/page/change',
+					'destination_event_service' => 'eventgate-analytics',
+				],
+			],
 			'+wikipedia' => [
 				'mediawiki.web_ui.interactions' => [
 					'sample' => [
@@ -165,23 +174,6 @@ function wmfGetOverrideSettings() {
 				'mediawiki.edit_attempt' => [
 					'sample' => [
 						'rate' => 1,
-					],
-				],
-				// Declare release candiate 0 of
-				// mediawiki.page_change stream in beta
-				// https://phabricator.wikimedia.org/T311129
-				'rc0.mediawiki.page_change' => [
-					'schema_title' => 'development/mediawiki/page/change',
-					'producers' => [
-						'mediawiki_eventbus' => [
-							// event_service_name is replacing destination_event_service
-							// setting.
-							// https://phabricator.wikimedia.org/T321557
-							// Temporarily use eventgate-analytics.
-							// We want to produce to Kafka jumbo for
-							// release candidates.
-							'event_service_name' => 'eventgate-analytics',
-						],
 					],
 				],
 			],
