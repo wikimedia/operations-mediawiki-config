@@ -26327,10 +26327,6 @@ return [
 	'default' => 'production',
 ],
 
-'wmgGEFeaturesMayBeAvailableToNewcomers' => [
-	'default' => true,
-],
-
 'wgWelcomeSurveyEnabled' => [
 	'default' => true,
 	'viwiki' => false,

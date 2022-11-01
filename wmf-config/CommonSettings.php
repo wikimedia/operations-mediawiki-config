@@ -4077,17 +4077,6 @@ if ( $wmgUseGrowthExperiments ) {
 	// T298122 temporary fix while mobile-only quality gate gets removed
 	$wgDefaultUserOptions['growthexperiments-addimage-desktop'] = 1;
 
-	if ( !$wmgGEFeaturesMayBeAvailableToNewcomers ) {
-		// Disable welcome survey
-		$wgWelcomeSurveyExperimentalGroups = [
-			'exp2_target_specialpage' => [ 'percentage' => 0 ],
-			'exp2_target_popup' => [ 'percentage' => 0 ],
-			'exp1_group2' => [ 'percentage' => 0 ],
-		];
-		// Disable all other Growth features
-		$wgGEHomepageNewAccountEnablePercentage = 0;
-	}
-
 	$wgGEImageRecommendationServiceUrl = $wmgLocalServices['image-suggestion'];
 	$wgGELinkRecommendationServiceUrl = $wmgLocalServices['linkrecommendation'];
 }
