@@ -21526,6 +21526,16 @@ return [
 			],
 		],
 	],
+	// Enable rc0.mediawiki.page_change on testwiki: T311129
+	'+testwiki' => [
+		'rc0.mediawiki.page_change' => [
+			'producers' => [
+				'mediawiki_eventbus' => [
+					'enabled' => true
+				],
+			],
+		],
+	],
 ],
 
 // List of streams to register for use with the EventLogging extension.
