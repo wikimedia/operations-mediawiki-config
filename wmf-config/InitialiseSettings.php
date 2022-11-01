@@ -25263,7 +25263,6 @@ return [
 	'default' => false,
 	'cawiki' => true,
 	'dewiki' => true,
-	'enwiki' => true,
 	'enwikivoyage' => true,
 	'eswiki' => true,
 	'fawiki' => true,
@@ -25301,45 +25300,6 @@ return [
 			],
 			'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
 			'shuffleAnswersDisplay' => true,
-		],
-	],
-	'enwiki' => [
-		// T318333
-		[
-			'enabled' => true,
-			'type' => 'external',
-			'name' => 'research-incentive',
-			'question' => 'research-incentive-message',
-			'description' => 'research-incentive-description',
-			'confirmMsg' => 'research-incentive-confirm-msg',
-			'coverage' => 0.1,
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-			'audience' => [
-				/*  Latin America
-				Argentina, Bolivia, Brazil, Chile, Colombia, Costa
-				Rica, Cuba, Dominican Republic, Ecuador, El Savador,
-				Guatemala, Haiti, Honduras, Mexico, Nicaragua,
-				Panama, Paraguay, Peru, Suriname, Uruguay, Venezuela */
-
-				/*  Sub-Saharan Africa
-				Angola, Benin, Botswana, Burkina Faso, Burundi,
-				Cameroon, Cape Verde, Central African Republic,
-				Chad, Comoros, Democratic Republic of the Congo,
-				Equatorial Guinea, Eritrea, Eswatini (Swaziland), Ethiopia,
-				Gabon, Gambia, Ghana, Guinea, Guinea-Bissau, Ivory
-				Coast, Kenya, Lesotho, Liberia, Madagascar, Malawi,
-				Mali, Mauritania, Mauiritius, Mozambique, Namibia,
-				Niger, Nigeria, Republic of the Congo, Rwanda, São
-				Tomé and Príncipe, Senegal, Seychelles, Sierra
-				Leone, Somalia, South Africa, South Sudan, Sudan,
-				Tanzania, Togo, Uganda, Zambia, Zimbabwe */
-				'countries' => [ 'AR', 'BO', 'BR', 'CL', 'CO', 'CR', 'CU', 'DR', 'EC', 'SV', 'GT', 'HT', 'HN', 'MX', 'NI', 'PA', 'PY', 'PE', 'SR', 'UY', 'VE', 'AO', 'BJ', 'BW', 'BF', 'BI', 'CM', 'CV', 'CF', 'TD',  'KM', 'CD', 'GQ', 'ER', 'SZ', 'ET', 'GA', 'GM', 'GH', 'GN', 'GW', 'CI', 'KE', 'LS', 'LR', 'MG', 'MW', 'ML', 'MR', 'MU', 'MZ', 'NA', 'NE', 'NG', 'CG', 'RW', 'ST', 'SN', 'SC', 'SL', 'SO', 'ZA', 'SS', 'SD', 'TZ', 'TG', 'UG', 'ZM', 'ZW' ],
-			],
-			'link' => 'research-incentive-link',
-			'privacyPolicy' => 'research-incentive-privacy',
 		],
 	],
 	'enwikivoyage' => [
