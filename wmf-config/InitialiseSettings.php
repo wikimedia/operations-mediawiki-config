@@ -21535,9 +21535,7 @@ return [
 				'rate' => 1,
 			],
 		],
-	],
-	// Enable rc0.mediawiki.page_change on testwiki: T311129
-	'+testwiki' => [
+		// Enable rc0.mediawiki.page_change on group0 wikis: T311129
 		'rc0.mediawiki.page_change' => [
 			'producers' => [
 				'mediawiki_eventbus' => [
