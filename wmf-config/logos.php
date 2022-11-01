@@ -3311,6 +3311,11 @@ return [
 		'width' => 90,
 		'height' => 18,
 	],
+	'zhwikivoyage' => [ // T322133
+		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-zh.svg',
+		'width' => 115,
+		'height' => 25,
+	],
 
 	// Chapter and local user group wikis
 	'brwikimedia' => [ // T313194
@@ -5375,25 +5380,45 @@ return [
 
 	// Wikivoyage
 	'zhwikivoyage' => [
-		'zh-hant' => [ // T308620
+		'zh-hant' => [ // T308620, T322133
 			'1x' => '/static/images/project-logos/zhwikivoyage-hant.png',
 			'1.5x' => '/static/images/project-logos/zhwikivoyage-hant-1.5x.png',
 			'2x' => '/static/images/project-logos/zhwikivoyage-hant-2x.png',
+			'wordmark' => [
+				'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-zh-hant.svg',
+				'width' => 115,
+				'height' => 25,
+			],
 		],
-		'zh-hk' => [ // T308620
+		'zh-hk' => [ // T308620, T322133
 			'1x' => '/static/images/project-logos/zhwikivoyage-hant.png',
 			'1.5x' => '/static/images/project-logos/zhwikivoyage-hant-1.5x.png',
 			'2x' => '/static/images/project-logos/zhwikivoyage-hant-2x.png',
+			'wordmark' => [
+				'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-zh-hant.svg',
+				'width' => 115,
+				'height' => 25,
+			],
 		],
-		'zh-mo' => [ // T308620
+		'zh-mo' => [ // T308620, T322133
 			'1x' => '/static/images/project-logos/zhwikivoyage-hant.png',
 			'1.5x' => '/static/images/project-logos/zhwikivoyage-hant-1.5x.png',
 			'2x' => '/static/images/project-logos/zhwikivoyage-hant-2x.png',
+			'wordmark' => [
+				'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-zh-hant.svg',
+				'width' => 115,
+				'height' => 25,
+			],
 		],
-		'zh-tw' => [ // T308620
+		'zh-tw' => [ // T308620, T322133
 			'1x' => '/static/images/project-logos/zhwikivoyage-hant.png',
 			'1.5x' => '/static/images/project-logos/zhwikivoyage-hant-1.5x.png',
 			'2x' => '/static/images/project-logos/zhwikivoyage-hant-2x.png',
+			'wordmark' => [
+				'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-zh-hant.svg',
+				'width' => 115,
+				'height' => 25,
+			],
 		],
 	],
 

@@ -3221,12 +3221,15 @@ Wikivoyage:
         comment_2x: T151570
     zhwikivoyage:
         commons: 'File:Wikivoyage-Logo-v3-zh-hans.svg'
+        commons_wordmark: 'File:Wikivoyage-wordmark-zh.svg'
         variants:
             zhwikivoyage-hant:
                 commons: 'File:Wikivoyage-Logo-v3-zh-hant.svg'
+                commons_wordmark: 'File:Wikivoyage-wordmark-zh-hant.svg'
         lang_variants:
             zh-hant:
                 selected_logo: zhwikivoyage-hant
+                selected_wordmark: zhwikivoyage-hant
             zh-hk:
                 selected_lang: zh-hant
             zh-mo:
@@ -3236,7 +3239,8 @@ Wikivoyage:
         comment: 'T61077, T308620'
         comment_1_5x: 'T150618, T308620'
         comment_2x: 'T150618, T308620'
-        comment_lang_variants: T308620
+        comment_wordmark: T322133
+        comment_lang_variants: 'T308620, T322133'
 'Chapter and local user group wikis':
     amwikimedia:
         comment: T176042
