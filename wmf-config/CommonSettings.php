@@ -829,7 +829,7 @@ if ( $wmgRealm === 'production' ) {
 	require __DIR__ . '/reverse-proxy.php';
 } elseif ( $wmgRealm === 'labs' ) {
 	$wgStatsdMetricPrefix = 'BetaMediaWiki';
-	require __DIR__ . '/reverse-proxy-staging.php';
+	require __DIR__ . '/reverse-proxy-labs.php';
 }
 
 // CORS (cross-domain AJAX, T22814)

@@ -32,7 +32,7 @@ mwconfig_files_txt=(
 	throttle.php
 	throttle-analyze.php
 	reverse-proxy.php
-	reverse-proxy-staging.php
+	reverse-proxy-labs.php
 	Wikibase.php
 	wikitech.php
 )
