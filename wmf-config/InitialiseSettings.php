@@ -21263,7 +21263,7 @@ return [
 		],
 
 		// Declare release candiate 0 of
-		// mediawiki.page_change stream in beta
+		// mediawiki.page_change stream.
 		// https://phabricator.wikimedia.org/T311129
 		'rc0.mediawiki.page_change' => [
 			// Schema is still in a 'development' namespace.
@@ -21281,6 +21281,16 @@ return [
 				]
 			],
 		],
+		// Declare release candiate 0 of
+		// mediawiki.page_content_change stream.
+		// This stream uses the mediawiki/page/change schema
+		// but includes content bodies in content slots.
+		// It is produced by a streaming enrichment pipeline,
+		// (not via MediaWiki EventBus).
+		// https://phabricator.wikimedia.org/T307959
+		'rc0.mediawiki.page_content_change' => [
+			'schema_title' => 'development/mediawiki/page/change',
+		],
 
 		/*
 		 * == eventgate-main streams ==
@@ -21289,7 +21299,6 @@ return [
 		 * See: https://phabricator.wikimedia.org/T287789
 		 * eventgate-main only requests its stream configs on service startup,
 		 * so if you modify something here, eventgate-main will need a restart.
-
 		 */
 		'/^mediawiki\\.job\\..+/' => [
 			'schema_title' => 'mediawiki/job',
