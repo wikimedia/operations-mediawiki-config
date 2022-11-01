@@ -25709,6 +25709,8 @@ return [
 	'kowiki' => 0.2,
 	'viwiki' => 0.2,
 	'zhwiki' => 0.2,
+	// T312016:
+	'group0' => 1,
 ],
 
 'wgWMEReadingDepthSamplingRate' => [
