@@ -21269,8 +21269,9 @@ return [
 			// Schema is still in a 'development' namespace.
 			'schema_title' => 'development/mediawiki/page/change',
 			// For release candidate,
-			// use eventgate-analytics so we only produce to kafka jumbo.
-			'destination_event_service' => 'eventgate-analytics',
+			// use eventgate-analytics-external so we get dynamic config and
+			// only produce to kafka jumbo.
+			'destination_event_service' => 'eventgate-analytics-external',
 			// Disable this stream by default.
 			// As we test it and roll it out, it will be enabled
 			// selectively in per wiki config overrides below.
