@@ -26632,17 +26632,7 @@ return [
 	'test2wiki' => 0,
 
 	// special treatment wikis
-	'enwiki' => 100, // T281896, T290927, T302846
-
-	// large wikis with more than 500 registrations per months (T289786)
-	'arwiki' => 80,
-	'bnwiki' => 80,
-	'cswiki' => 80,
-	'dewiki' => 80,
-	'eswiki' => 80,
-	'fawiki' => 80,
-	'ptwiki' => 80,
-	'trwiki' => 80,
+	'dewiki' => 80, // has control group on their own request, T320876#8342832
 ],
 
 'wgGEMentorshipEnabled' => [
