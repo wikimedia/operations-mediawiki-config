@@ -167,6 +167,11 @@ function wmfGetOverrideSettings() {
 						'rate' => 1,
 					],
 				],
+				'mediawiki.visual_editor_feature_use' => [
+					'sample' => [
+						'rate' => 1,
+					],
+				],
 				// Override default settings to enable
 				// rc0.mediawiki.page_change on selective wikis as we roll it out and test it.
 				// https://phabricator.wikimedia.org/T311129
@@ -236,6 +241,7 @@ function wmfGetOverrideSettings() {
 			'+wikipedia' => [
 				'mediawiki.web_ui.interactions',
 				'mediawiki.edit_attempt',
+				'mediawiki.visual_editor_feature_use'
 			],
 			'+enwiki' => [
 				'mediawiki.ipinfo_interaction',

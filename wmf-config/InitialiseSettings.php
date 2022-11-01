@@ -21565,6 +21565,9 @@ return [
 				],
 			],
 		],
+	],
+	// Enable mediawiki.visual_editor_feature_use for testwiki: T309602
+	'+testwiki' => [
 		'mediawiki.visual_editor_feature_use' => [
 			'sample' => [
 				'rate' => 1
@@ -21657,6 +21660,7 @@ return [
 	'+testwiki' => [
 		'mediawiki.web_ui.interactions',
 		'mediawiki.edit_attempt',
+		'mediawiki.visual_editor_feature_use',
 	],
 ],
 
