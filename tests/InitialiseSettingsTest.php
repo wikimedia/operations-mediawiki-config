@@ -86,6 +86,7 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 			'wmgUseCognate',
 			'wmgUseFileExporter',
 			'wmgUseFileImporter',
+			'wgWMESchemaVisualEditorFeatureUseSamplingRate',
 		];
 
 		foreach ( $this->settings as $settingName => $settingsArray ) {

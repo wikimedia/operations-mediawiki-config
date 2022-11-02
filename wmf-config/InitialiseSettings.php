@@ -25705,6 +25705,11 @@ return [
 	'group0' => 1,
 ],
 
+'wgWMESchemaVisualEditorFeatureUseSamplingRate' => [
+	'default' => 0.0625,
+	'testwiki' => 1,
+],
+
 'wgWMEReadingDepthSamplingRate' => [
 	'default' => 0, // T294777
 	'enwiki' => 0.001, // T294777
