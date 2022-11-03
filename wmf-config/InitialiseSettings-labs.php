@@ -2296,6 +2296,9 @@ function wmfGetOverrideSettings() {
 
 				// Special entry for VE-RealTime until it can be done properly
 				'ws://visualeditor-realtime.wmflabs.org',
+
+				// T322323, CX Server in Beta Cluster
+				'cxserver-beta.wmcloud.org',
 			],
 		],
 
@@ -2511,5 +2514,6 @@ function wmfGetOverrideSettings() {
 		'wgLinterWriteTagAndTemplateColumnsStage' => [
 			'default' => true,
 		],
+
 	];
 } # wmfGetOverrideSettings()
