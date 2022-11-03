@@ -21312,6 +21312,10 @@ return [
 		// https://phabricator.wikimedia.org/T307959
 		'rc0.mediawiki.page_content_change' => [
 			'schema_title' => 'development/mediawiki/page/change',
+			// Even though this stream will not be produced via EventGate,
+			// we need to set an event service, so that the ProduceCanaryEvents
+			// monitoring job can produce events through EventGate.
+			'destination_event_service' => 'eventgate-analytics-external',
 		],
 
 		/*
