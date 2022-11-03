@@ -21176,6 +21176,7 @@ return [
 						'performer_pageview_id',
 						'performer_edit_count_bucket',
 						'mediawiki_skin',
+						'mediawiki_database'
 					],
 					'curation' => [
 						'mediawiki_skin' => [
@@ -21211,6 +21212,8 @@ return [
 						'page_namespace',
 						'page_revision_id',
 						'mediawiki_version',
+						'mediawiki_is_debug_mode',
+						'mediawiki_database',
 						'performer_is_logged_in',
 						'performer_id',
 						'performer_session_id',
@@ -21241,6 +21244,7 @@ return [
 					// [2] https://gerrit.wikimedia.org/g/mediawiki/extensions/VisualEditor/+/e115c055044146d4eb4fb52afb0192b5acbae7c2/modules/ve-mw/init/ve.init.mw.trackSubscriber.js#305
 					'provide_values' => [
 						'agent_client_platform_family',
+						'mediawiki_database',
 						'performer_id',
 						'performer_edit_count',
 					],
@@ -21709,6 +21713,8 @@ return [
 		'mediawiki.maps_interaction',
 	],
 	'+group0' => [
+		'mediawiki.web_ui.interactions',
+
 		// Enable mediawiki.edit_attempt on group0 wikis: T312016
 		'mediawiki.edit_attempt',
 	],
@@ -21717,7 +21723,6 @@ return [
 		'mediawiki.edit_attempt',
 	],
 	'+testwiki' => [
-		'mediawiki.web_ui.interactions',
 		'mediawiki.visual_editor_feature_use',
 	],
 ],
