@@ -2515,5 +2515,9 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
+		'wmgUseContentTranslation' => [
+			'wikivoyage' => true, // T322325
+		],
+
 	];
 } # wmfGetOverrideSettings()
