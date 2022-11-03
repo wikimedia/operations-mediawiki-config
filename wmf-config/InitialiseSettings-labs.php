@@ -2297,8 +2297,10 @@ function wmfGetOverrideSettings() {
 				// Special entry for VE-RealTime until it can be done properly
 				'ws://visualeditor-realtime.wmflabs.org',
 
-				// T322323, CX Server in Beta Cluster
+				// T322323, CX Server in Beta Cluster, recommendation service
 				'cxserver-beta.wmcloud.org',
+				'recommend.wmflabs.org',
+
 			],
 		],
 
