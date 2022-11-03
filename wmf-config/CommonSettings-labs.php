@@ -143,7 +143,7 @@ if ( $wmgUseFileExporter ) {
 }
 
 if ( $wmgUseContentTranslation ) {
-	$wgContentTranslationSiteTemplates['cx'] = 'https://cxserver-beta.wmflabs.org/v1';
+	$wgContentTranslationSiteTemplates['cx'] = 'https://cxserver-beta.wmcloud.org/v1';
 	$wgContentTranslationSiteTemplates['cookieDomain'] = false;
 	$wgContentTranslationTranslateInTarget = false;
 }
