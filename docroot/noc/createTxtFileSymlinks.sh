@@ -29,11 +29,10 @@ mwconfig_files_txt=(
 	logos.php
 	mc.php
 	mc-labs.php
-	redis.php
 	throttle.php
 	throttle-analyze.php
 	reverse-proxy.php
-	reverse-proxy-staging.php
+	reverse-proxy-labs.php
 	Wikibase.php
 	wikitech.php
 )

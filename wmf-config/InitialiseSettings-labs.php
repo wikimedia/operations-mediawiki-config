@@ -28,8 +28,7 @@
 // phpcs:disable MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment
 
 /**
- * Get overrides for Beta Cluster settings. This is used by
- * wmfLoadInitialiseSettings() in CommonSettings.php.
+ * Get overrides for Beta Cluster settings. This is applied in MWConfigCacheGenerator.
  *
  * Keys that start with a hyphen will completely override the prodution settings
  * from InitializeSettings.php.
@@ -46,6 +45,15 @@ function wmfGetOverrideSettings() {
 			// Like production, but without the mysql fallback behind it
 			// See $wgObjectCaches['mysql-multiwrite'] in CommonSettings.php
 			'default' => 'mcrouter-with-onhost-tier',
+		],
+
+		'wgParsoidCacheConfig' => [
+			'default' => [
+				'StashType' => null, // defaults to using MainStash
+				'StashDuration' => 2 * 60 * 60, // 24h in production
+				'CacheThresholdTime' => 0.0, // 0 means cache all
+				'WarmParsoidParserCache' => true, // T320535: enable cache warming
+			],
 		],
 
 		'wgLanguageCode' => [
@@ -154,11 +162,50 @@ function wmfGetOverrideSettings() {
 						'rate' => 1,
 					],
 				],
+				'mediawiki.edit_attempt' => [
+					'sample' => [
+						'rate' => 1,
+					],
+				],
+				'mediawiki.visual_editor_feature_use' => [
+					'sample' => [
+						'rate' => 1,
+					],
+				],
+				// Override default settings to enable
+				// rc0.mediawiki.page_change on selective wikis as we roll it out and test it.
+				// https://phabricator.wikimedia.org/T311129
+				'rc0.mediawiki.page_change' => [
+					'producers' => [
+						'mediawiki_eventbus' => [
+							'enabled' => true
+						],
+					],
+				],
 			],
 			'+enwiki' => [
 				'mediawiki.ipinfo_interaction' => [
 					'schema_title' => 'analytics/mediawiki/ipinfo_interaction',
 					'destination_event_service' => 'eventgate-analytics-external',
+				],
+				// See https://phabricator.wikimedia.org/T310852
+				'desktop_mobile_link_clicks' => [
+					'schema_title' => '/analytics/mediawiki/client/metrics_event',
+					'destination_event_service' => 'eventgate-analytics-external',
+					'producers' => [
+						'metrics_platform_client' => [
+							'events' => [
+								'mediawiki.desktop_link.click', // T310852
+							],
+							'provide_values' => [
+								'page_title',
+								'page_namespace',
+								'performer_edit_count_bucket',
+								'performer_groups',
+								'performer_is_logged_in',
+							],
+						],
+					],
 				]
 			],
 		],
@@ -193,9 +240,12 @@ function wmfGetOverrideSettings() {
 		'wgEventLoggingStreamNames' => [
 			'+wikipedia' => [
 				'mediawiki.web_ui.interactions',
+				'mediawiki.edit_attempt',
+				'mediawiki.visual_editor_feature_use'
 			],
 			'+enwiki' => [
 				'mediawiki.ipinfo_interaction',
+				'desktop_mobile_link_clicks',
 			],
 		],
 
@@ -226,7 +276,6 @@ function wmfGetOverrideSettings() {
 				'cache-cookies' => 'debug',
 				'captcha' => 'debug',
 				'CentralAuth' => 'debug',
-				'CentralAuthRename' => 'debug', // -legoktm 2014-07-14 for T69875
 				'CentralNotice' => 'debug',
 				// 'CirrusSearch' => 'debug',
 				'cirrussearch-request' => [ 'udp2log' => false, 'logstash' => false, 'eventbus' => 'debug', 'buffer' => true, ],
@@ -472,10 +521,6 @@ function wmfGetOverrideSettings() {
 			'default' => 1, // T294738
 		],
 
-		'wgMFAdvancedMobileContributions' => [
-			'default' => true,
-		],
-
 		'wgMFAmcOutreach' => [
 			'default' => true
 		],
@@ -489,19 +534,6 @@ function wmfGetOverrideSettings() {
 			'wikidatawiki' => 'm.%h0.%h1.%h2.%h3', // T87440
 		],
 
-		'wgMinervaShowShareButton' => [
-			'default' => [
-				'base' => false,
-				'beta' => true
-			]
-		],
-		'wgMFUseDesktopSpecialWatchlistPage' => [
-			'default' => [
-				'base' => false,
-				'beta' => false,
-				'amc' => true,
-			]
-		],
 		# Do not run any A/B tests on beta cluster (T206179)
 		'-wgMinervaABSamplingRate' => [
 			'default' => 0,
@@ -523,22 +555,10 @@ function wmfGetOverrideSettings() {
 		// Vector
 		//
 		// Skin versions are strings not numbers. See skins/Vector/skin.json.
-		'wgVectorLanguageInHeader' => [
-			'default' => [
-				'logged_in' => true,
-				'logged_out' => true
-			],
-		],
 		'wgVectorLanguageInMainPageHeader' => [
 			'default' => [
 				'logged_in' => true,
 				'logged_out' => true
-			],
-		],
-		'wgVectorStickyHeader' => [
-			'default' => [
-				'logged_in' => true,
-				'logged_out' => false,
 			],
 		],
 		'wgVectorStickyHeaderEdit' => [
@@ -555,11 +575,14 @@ function wmfGetOverrideSettings() {
 					'unsampled' => [
 						'samplingRate' => 0
 					],
-					'control' => [
-						'samplingRate' => 0.5
+					'noStickyHeaderControl' => [
+						'samplingRate' => 0.34
 					],
-					'treatment' => [
-						'samplingRate' => 0.5
+					'stickyHeaderNoEditButtonTreatment1' => [
+						'samplingRate' => 0.33
+					],
+					'stickyHeaderEditButtonTreatment2' => [
+						'samplingRate' => 0.33
 					],
 				]
 			]
@@ -590,6 +613,23 @@ function wmfGetOverrideSettings() {
 		// Whether to enable true section editing. false, true, 'mobile', or 'mobile-ab'
 		'wmgVisualEditorEnableVisualSectionEditing' => [
 			'default' => 'mobile',
+		],
+
+		// Whether to configure RESTBase as a Virtual REST Service
+		// in MW Core. If false, VE will call parsoid directly in PHP.
+		// We should have both modes in the Beta cluster, as long as we
+		// support both in prod.
+		'wmgUseRestbaseVRS' => [
+			'default' => true,
+			'dewiki' => false, // T320531
+		],
+
+		// T320703: Whether $wmgUseRestbaseVRS is false, $wmgVisualEditorAccessRestbaseDirectly
+		// should be false as well. Otherwise, VE will load HTML from RESTbase, but
+		// will save via MW core code, which will fail because the ETag does not match.
+		'wmgVisualEditorAccessRestbaseDirectly' => [
+			'default' => true,
+			'dewiki' => false, // T320531
 		],
 
 		'wmgUseRSSExtension' => [
@@ -928,6 +968,65 @@ function wmfGetOverrideSettings() {
 						'mobile' => [ 'stable' ]
 					],
 				],
+				// T316464
+				[
+					'enabled' => true,
+					'type' => 'external',
+					'name' => 'research-incentive',
+					'question' => 'research-incentive-message',
+					'description' => 'research-incentive-description',
+					'answers' => [
+						'ext-quicksurveys-example-internal-survey-answer-positive',
+						'ext-quicksurveys-example-internal-survey-answer-negative',
+					],
+					'confirmMsg' => 'research-incentive-confirm-msg',
+					'coverage' => 0,
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ]
+					],
+					'link' => 'research-incentive-link',
+					'privacyPolicy' => 'research-incentive-privacy',
+				],
+				// T318333
+				[
+					'enabled' => true,
+					'type' => 'external',
+					'name' => 'research-incentive-georestricted',
+					'question' => 'research-incentive-message',
+					'description' => 'research-incentive-description',
+					'confirmMsg' => 'research-incentive-confirm-msg',
+					'coverage' => 1,
+					'platforms' => [
+						'desktop' => [ 'stable' ],
+						'mobile' => [ 'stable' ]
+					],
+					'audience' => [
+						/*  Latin America
+						Argentina, Bolivia, Brazil, Chile, Colombia, Costa
+						Rica, Cuba, Dominican Republic, Ecuador, El Savador,
+						Guatemala, Haiti, Honduras, Mexico, Nicaragua,
+						Panama, Paraguay, Peru, Suriname, Uruguay, Venezuela */
+
+						/*  Sub-Saharan Africa
+						Angola, Benin, Botswana, Burkina Faso, Burundi,
+						Cameroon, Cape Verde, Central African Republic,
+						Chad, Comoros, Democratic Republic of the Congo,
+						Equatorial Guinea, Eritrea, Eswatini (Swaziland), Ethiopia,
+						Gabon, Gambia, Ghana, Guinea, Guinea-Bissau, Ivory
+						Coast, Kenya, Lesotho, Liberia, Madagascar, Malawi,
+						Mali, Mauritania, Mauiritius, Mozambique, Namibia,
+						Niger, Nigeria, Republic of the Congo, Rwanda, São
+						Tomé and Príncipe, Senegal, Seychelles, Sierra
+						Leone, Somalia, South Africa, South Sudan, Sudan,
+						Tanzania, Togo, Uganda, Zambia, Zimbabwe */
+						'countries' => [ 'AR', 'BO', 'BR', 'CL', 'CO', 'CR', 'CU', 'DR', 'EC', 'SV', 'GT', 'HT', 'HN', 'MX', 'NI', 'PA', 'PY', 'PE', 'SR', 'UY', 'VE', 'AO', 'BJ', 'BW', 'BF', 'BI', 'CM', 'CV', 'CF', 'TD',  'KM', 'CD', 'GQ', 'ER', 'SZ', 'ET', 'GA', 'GM', 'GH', 'GN', 'GW', 'CI', 'KE', 'LS', 'LR', 'MG', 'MW', 'ML', 'MR', 'MU', 'MZ', 'NA', 'NE', 'NG', 'CG', 'RW', 'ST', 'SN', 'SC', 'SL', 'SO', 'ZA', 'SS', 'SD', 'TZ', 'TG', 'UG', 'ZM', 'ZW' ],
+						// User:DDesouza/sandbox
+						'pageIds' => [ 282634 ]
+					],
+					'link' => 'research-incentive-link',
+					'privacyPolicy' => 'research-incentive-privacy',
+				],
 			],
 			'cawiki' => [
 				// T187299
@@ -950,8 +1049,13 @@ function wmfGetOverrideSettings() {
 				],
 			],
 		],
+
 		'-wgScorePath' => [
 			'default' => "//upload.wikimedia.beta.wmflabs.org/score",
+		],
+
+		'-wgPhonosPath' => [
+			'default' => "//upload.wikimedia.beta.wmflabs.org/phonos",
 		],
 
 		'wgRateLimitsExcludedIPs' => [
@@ -991,10 +1095,6 @@ function wmfGetOverrideSettings() {
 
 		'wgIPInfoGeoIP2Prefix' => [
 			'default' => '/usr/share/GeoIP/GeoLite2-',
-		],
-
-		'wgMediaViewerNetworkPerformanceSamplingFactor' => [
-			'default' => 1,
 		],
 
 		'wgMediaViewerUseThumbnailGuessing' => [
@@ -1051,10 +1151,10 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
-		'-wmgWikibaseSearchStatementBoosts' => [
+		'-wgWBCSStatementBoost' => [
 			'default' => []
 		],
-		'-wmgWBCSLanguageSelectorStatementBoost' => [
+		'-wgWBCSLanguageSelectorStatementBoost' => [
 			'default' => []
 		],
 
@@ -1194,7 +1294,6 @@ function wmfGetOverrideSettings() {
 
 		'wgLinterSubmitterWhitelist' => [
 			'default' => [
-				'172.16.1.115' => true, // deployment-parsoid11.deployment-prep.eqiad.wmflabs
 				'172.16.4.125' => true, // deployment-parsoid12.deployment-prep.eqiad1.wikimedia.cloud
 			]
 		],
@@ -1264,6 +1363,21 @@ function wmfGetOverrideSettings() {
 		'wgReadingListsDatabase' => [
 			'default' => 'metawiki',
 		],
+		'wgReadingListsWeb' => [
+			'default' => true,
+		],
+		'wgReadingListsAnonymizedPreviews' => [
+			'default' => true,
+		],
+		'wgReadingListsWebAuthenticatedPreviews' => [
+			'default' => true,
+		],
+		'wgReadingListAndroidAppDownloadLink' => [
+			'default' => 'https://play.google.com/store/apps/details?id=org.wikipedia&referrer=utm_source%3DreadingLists',
+		],
+		'wgReadingListiOSAppDownloadLink' => [
+			'default' => 'https://itunes.apple.com/app/apple-store/id324715238?pt=208305&ct=readingLists&mt=8',
+		],
 
 		'-wgPageCreationLog' => [
 			'default' => true, // T196400
@@ -1295,6 +1409,12 @@ function wmfGetOverrideSettings() {
 		# them off.
 		'-wgCirrusSearchMaxShardsPerNode' => [
 			'default' => []
+		],
+
+		# nothing in beta cluster is large enough to need multiple shards
+		'-wmgCirrusSearchShardCount' => [
+			// Most wikis are too small to be worth sharding
+			'default' => [ 'content' => 1, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1, 'file' => 1 ],
 		],
 
 		# Override prod configuration, there is only one cluster in beta
@@ -1349,8 +1469,8 @@ function wmfGetOverrideSettings() {
 			'default' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 		],
 
-		'-wgIncludejQueryMigrate' => [
-			'default' => false,
+		'-wgExternalLinksSchemaMigrationStage' => [
+			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 		],
 
 		'wgOresUiEnabled' => [
@@ -1418,6 +1538,15 @@ function wmfGetOverrideSettings() {
 			'default' => 'wikidatawiki',
 			'commonswiki' => 'commonswiki',
 		],
+		'wgGEAllowAccessToNewImpactModule' => [
+			'default' => true,
+		],
+		'wgGEUseNewImpactModule' => [
+			'default' => true,
+		],
+		'wgGENewImpactD3Enabled' => [
+			'default' => true,
+		],
 		'wgGEImageRecommendationApiHandler' => [
 			// Can be changed to 'production' when T306349 is resolved.
 			'default' => 'mvp'
@@ -1446,62 +1575,6 @@ function wmfGetOverrideSettings() {
 		'wgGEHomepageNewAccountVariants' => [
 			'default' => [
 				'control' => 100,
-			],
-		],
-		'wgWelcomeSurveyExperimentalGroups' => [
-			'enwiki' => [
-				'exp2_target_specialpage' => [
-					'percentage' => 0,
-				],
-				'T303240_mailinglist' => [
-					// T305015
-					'percentage' => 80,
-					'questions' => [
-						'reason',
-						'edited',
-						'email',
-						'languages',
-						'mailinglist',
-					],
-				],
-				'T303240_mailinglist_control' => [
-					// T305015
-					'percentage' => 20,
-					'questions' => [
-						'reason',
-						'edited',
-						'email',
-						'languages',
-						'mailinglist',
-					],
-				],
-			],
-			'eswiki' => [
-				'exp2_target_specialpage' => [
-					'percentage' => 0,
-				],
-				'T303240_mailinglist' => [
-					// T305015
-					'percentage' => 80,
-					'questions' => [
-						'reason',
-						'edited',
-						'email',
-						'languages',
-						'mailinglist',
-					],
-				],
-				'T303240_mailinglist_control' => [
-					// T305015
-					'percentage' => 20,
-					'questions' => [
-						'reason',
-						'edited',
-						'email',
-						'languages',
-						'mailinglist',
-					],
-				],
 			],
 		],
 		'wgGEHomepageNewAccountVariantsByPlatform' => [
@@ -1537,19 +1610,8 @@ function wmfGetOverrideSettings() {
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
 			'viwiki' => 'https://vi.wikipedia.org/w/api.php',
 		],
-		'wgGEMentorProvider' => [
-			'default' => 'wikitext',
-			'arwiki' => 'structured',
-			'enwiki' => 'structured',
-		],
-		'wgGEMentorDashboardUseVue' => [
-			'default' => false,
-			'enwiki' => true,
-			'arwiki' => true
-		],
-		'wgGECampaignPattern' => [
-			'enwiki' => '/^growth-|^social-latam-2022-A$/',
-			'eswiki' => '/^growth-|^social-latam-2022-A$/',
+		'wgGEMentorshipUseIsActiveFlag' => [
+			'default' => true,
 		],
 		'wgGECampaigns' => [
 			'default' => [
@@ -1587,11 +1649,6 @@ function wmfGetOverrideSettings() {
 
 		'-wgGEMentorDashboardDeploymentMode' => [
 			'default' => 'alpha',
-		],
-		'wgGEHomepageTutorialTitle' => [
-			'default' => '',
-			'arwiki' => 'Help:Tutorial',
-			'enwiki' => 'Help:Getting started',
 		],
 		'wgGENewcomerTasksRemoteApiUrl' => [
 			'enwiki' => null,
@@ -1838,7 +1895,7 @@ function wmfGetOverrideSettings() {
 		// Needed by browser tests for Minerva otherwise those will fail
 		'wgMFDisplayWikibaseDescriptions' => [
 			'enwiki' => [
-				'search' => true, 'nearby' => true, 'watchlist' => true, 'tagline' => true
+				'search' => true, 'watchlist' => true, 'tagline' => true
 			]
 		],
 
@@ -2100,6 +2157,9 @@ function wmfGetOverrideSettings() {
 		'wgWikisourceOcrUrl' => [
 			'wikisource' => 'https://ocr-test.wmcloud.org',
 		],
+		'wgProofreadPageBookNamespaces' => [
+			'wikisource' => [ NS_MAIN, NS_USER ]
+		],
 		'wgProofreadPageUseStatusChangeTags' => [
 			'wikisource' => true,
 		],
@@ -2154,6 +2214,10 @@ function wmfGetOverrideSettings() {
 		],
 		'wgMachineVisionRequestLabelsFromWikidataPublicApi' => [
 			'default' => true,
+		],
+		// T319240
+		'wgSpecialContributeSkinsDisabled' => [
+			'default' => [ "modern", "cologneblue", "monobook", "timeless", "vector", "vector-2022" ],
 		],
 		'-wgSpecialSearchFormOptions' => [
 			'wikidatawiki' => [ 'showDescriptions' => true ],
@@ -2232,11 +2296,12 @@ function wmfGetOverrideSettings() {
 
 				// Special entry for VE-RealTime until it can be done properly
 				'ws://visualeditor-realtime.wmflabs.org',
-			],
-		],
 
-		'wgLegacyJavaScriptGlobals' => [
-			'default' => false,
+				// T322323, CX Server in Beta Cluster, recommendation service
+				'cxserver-beta.wmcloud.org',
+				'recommend.wmflabs.org',
+
+			],
 		],
 
 		'wmgUseDiscussionTools' => [
@@ -2258,7 +2323,6 @@ function wmfGetOverrideSettings() {
 
 		'-wgDiscussionToolsEnableMobile' => [
 			'default' => true,
-			'enwiki' => false, // T295816#7561919
 		],
 
 		'-wgDiscussionTools_replytool' => [
@@ -2287,6 +2351,14 @@ function wmfGetOverrideSettings() {
 
 		'-wgDiscussionTools_visualenhancements_reply' => [
 			'default' => 'default',
+		],
+
+		'-wgDiscussionTools_visualenhancements_pageframe' => [
+			'default' => 'default',
+		],
+
+		'-wgDiscussionToolsEnablePermalinksBackend' => [
+			'default' => true,
 		],
 
 		'wgWatchlistExpiry' => [
@@ -2343,12 +2415,19 @@ function wmfGetOverrideSettings() {
 		'wmgUseStopForumSpam' => [
 			'default' => true,
 		],
+		'wgSFSReportOnly' => [
+			'default' => false,
+		],
 		'wmgWikibaseTmpSerializeEmptyListsAsObjects' => [
 			'default' => true,
 		],
 
 		'wmgWikibaseClientUnconnectedPageMigrationStage' => [
 			'default' => MIGRATION_NEW,
+		],
+
+		'wmgWikibaseTmpEnableMulLanguageCode' => [
+			'default' => true,
 		],
 
 		'wmgUseChessBrowser' => [
@@ -2377,10 +2456,15 @@ function wmfGetOverrideSettings() {
 			'enwiki' => true,
 		],
 
+		// Wikistories discovery module config
+		'wgWikistoriesDiscoveryMode' => [
+			'default' => 'off',
+			'enwiki' => 'beta',
+		],
+
 		// T294363: QA Surveys on enwiki beta
 		'wmgUseQuickSurveys' => [
 			'enwiki' => true,
-			'jawiki' => true,
 		],
 
 		'-wgMultiShardSiteStats' => [
@@ -2392,10 +2476,50 @@ function wmfGetOverrideSettings() {
 			'default' => false,
 		],
 
+		'wmgUseSearchVue' => [
+			'default' => false,
+			'en' => true,
+		],
+		'wgQuickViewMediaRepositoryApiBaseUri' => [
+			'default' => '//commons.wikimedia.beta.wmflabs.org/w/api.php',
+		],
+		'wgQuickViewMediaRepositorySearchUri' => [
+			'default' => '//commons.wikimedia.beta.wmflabs.org/wiki/Special:MediaSearch?search=%s',
+		],
+		'wgQuickViewMediaRepositoryUri' => [
+			'default' => '//commons.wikimedia.beta.wmflabs.org',
+		],
+		'wgQuickViewSearchFilterForQID' => [
+			'default' => 'haswbstatement:P245962=%s',
+		],
+
 		// See T311752
 		'wmgUseCampaignEvents' => [
 			'default' => true,
 			'loginwiki' => false,
 		],
+
+		// T314294
+		'wmgUsePhonos' => [
+			'default' => false,
+			'enwiki' => true,
+			'en_rtlwiki' => true,
+			'enwiktionary' => true,
+		],
+
+		// T299612
+		'wgLinterWriteNamespaceColumnStage' => [
+			'default' => true,
+		],
+
+		// T175177
+		'wgLinterWriteTagAndTemplateColumnsStage' => [
+			'default' => true,
+		],
+
+		'wmgUseContentTranslation' => [
+			'wikivoyage' => true, // T322325
+		],
+
 	];
 } # wmfGetOverrideSettings()

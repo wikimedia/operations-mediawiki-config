@@ -21,7 +21,7 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 				continue;
 			}
 			foreach ( $databases as $database ) {
-				yield [ $family, $database ];
+				yield "$family-$database" => [ $family, $database ];
 			}
 		}
 	}
@@ -145,7 +145,10 @@ class DbListTest extends PHPUnit\Framework\TestCase {
 		$unusedDblists = array_flip( DBList::getDblistsUsedInSettings() );
 
 		$prodSettings = MWConfigCacheGenerator::getStaticConfig();
-		$labsSettings = MWConfigCacheGenerator::applyOverrides( $prodSettings );
+		$labsSettings = MWConfigCacheGenerator::getStaticConfig( 'labs' );
+
+		unset( $prodSettings['@replaceableSettings'] );
+		unset( $labsSettings['@replaceableSettings'] );
 
 		foreach ( $prodSettings as $settingName => $settingsArray ) {
 			foreach ( $settingsArray as $wiki => $settingValue ) {

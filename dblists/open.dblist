@@ -60,6 +60,7 @@ bat_smgwiki
 bawiki
 bawikibooks
 bclwiki
+bclwikiquote
 bclwiktionary
 bdwikimedia
 be_x_oldwiki
@@ -78,10 +79,12 @@ bgwiktionary
 bhwiki
 biwiki
 bjnwiki
+bjnwiktionary
 blkwiki
 bmwiki
 bnwiki
 bnwikibooks
+bnwikiquote
 bnwikisource
 bnwikivoyage
 bnwiktionary
@@ -284,6 +287,7 @@ guwikiquote
 guwikisource
 guwiktionary
 guwwiki
+guwwiktionary
 gvwiki
 gvwiktionary
 hakwiki
@@ -340,6 +344,8 @@ iegcomwiki
 iewiki
 iewiktionary
 igwiki
+igwikiquote
+igwiktionary
 ikwiki
 ilowiki
 ilwikimedia
@@ -575,6 +581,7 @@ pawikibooks
 pawikisource
 pawiktionary
 pcdwiki
+pcmwiki
 pdcwiki
 pflwiki
 pihwiki
@@ -651,7 +658,6 @@ scowiki
 scwiki
 sdwiki
 sdwiktionary
-searchcomwiki
 sewiki
 sewikimedia
 sgwiki
@@ -688,7 +694,6 @@ snwiki
 sourceswiki
 sowiki
 sowiktionary
-spcomwiki
 specieswiki
 sqwiki
 sqwikibooks
@@ -758,6 +763,7 @@ tkwiki
 tkwiktionary
 tlwiki
 tlwikibooks
+tlwikiquote
 tlwiktionary
 tnwiki
 tnwiktionary

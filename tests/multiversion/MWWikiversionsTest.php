@@ -23,6 +23,6 @@ class MWWikiversionsTest extends PHPUnit\Framework\TestCase {
 		$expectedDbs = array_diff( $allDbs, $allPrivateDbs );
 		sort( $exprDbs );
 		sort( $expectedDbs );
-		$this->assertEquals( $exprDbs, $expectedDbs );
+		$this->assertEquals( $expectedDbs, $exprDbs );
 	}
 }

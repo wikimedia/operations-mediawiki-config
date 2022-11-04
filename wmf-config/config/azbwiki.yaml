@@ -12,3 +12,4 @@ inheritsFrom:
   - securepollglobal
   - wikidataclient
   - growthexperiments
+  - desktop-improvements

@@ -5,6 +5,7 @@
 inheritsFrom:
   - wikimedia
   - categories-rdf
+  - desktop-improvements
   - s3
   - securepollglobal
   - small

@@ -56,10 +56,6 @@ $wgWBCSUseStemming = [
 	'zh' => [ 'index' => true, 'query' => true ],
 ];
 
-// Statement boosting
-$wgWBCSStatementBoost = $wmgWikibaseSearchStatementBoosts;
-$wgWBCSLanguageSelectorStatementBoost = $wmgWBCSLanguageSelectorStatementBoost;
-
 // Properties to index
 $wgWBRepoSettings['searchIndexProperties'] = $wmgWikibaseSearchIndexProperties;
 // T163642, T99899
@@ -78,7 +74,4 @@ if ( isset( $wmgWikibaseSearchProfiles ) ) {
 if ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) {
 	// Load wikidata specific search config
 	require_once __DIR__ . '/SearchSettingsForWikidata.php';
-} elseif ( $wgDBname === 'commonswiki' || $wgDBname === 'testcommonswiki' ) {
-	// Load SDoC specific search config
-	require_once __DIR__ . '/SearchSettingsForSDC.php';
 }

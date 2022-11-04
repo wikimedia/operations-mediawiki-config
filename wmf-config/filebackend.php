@@ -14,7 +14,6 @@
 # - wmf-config/etcd.php
 # - wmf-config/InitialiseSettings.php
 # - wmf-config/logging.php
-# - wmf-config/redis.php
 # - wmf-config/filebackend.php [THIS FILE]
 #
 # Included from: wmf-config/CommonSettings.php.

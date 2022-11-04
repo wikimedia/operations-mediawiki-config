@@ -26,6 +26,14 @@ $wgCirrusSearchClusters = [
 	'cloudelastic-omega' => $wmgAllServices['eqiad']['cloudelastic-omega'] + [ 'group' => 'omega', 'replica' => 'cloudelastic' ],
 ];
 
+if ( $wmgPrivateWiki ) {
+	unset(
+		$wgCirrusSearchClusters['cloudelastic-chi'],
+		$wgCirrusSearchClusters['cloudelastic-psi'],
+		$wgCirrusSearchClusters['cloudelastic-omega']
+	);
+}
+
 // wgCirrusSearchExtraIndexes is set in CirrusSearch-common.php
 if ( isset( $wgCirrusSearchExtraIndexes[NS_FILE] ) ) {
 	$wgCirrusSearchExtraIndexes[NS_FILE] = [ 'chi:commonswiki_file' ];
@@ -39,13 +47,6 @@ $wgCirrusSearchShardCount = [
 	'cloudelastic' => $wmgCirrusSearchShardCount,
 ];
 
-// 5 second timeout for local cluster, 10 seconds for remote.
-$wgCirrusSearchClientSideConnectTimeout = [
-	'eqiad' => $wmgDatacenter === 'eqiad' ? 5 : 10,
-	'codfw' => $wmgDatacenter === 'codfw' ? 5 : 10,
-	'cloudelastic' => $wmgDatacenter === 'eqiad' ? 5 : 10,
-];
-
 $wgCirrusSearchDropDelayedJobsAfter = [
 	'eqiad' => $wgCirrusSearchDropDelayedJobsAfter,
 	'codfw' => $wgCirrusSearchDropDelayedJobsAfter,
@@ -56,3 +57,4 @@ $wgCirrusSearchDropDelayedJobsAfter = [
 
 // T295705#7719071 Reduce write isolation to only cloudelastic to reduce job queue rates
 $wgCirrusSearchWriteIsolateClusters = [ 'cloudelastic' ];
+$wgCirrusSearchElasticaWritePartitionCounts = [ 'cloudelastic' => 3 ];

@@ -393,12 +393,12 @@ $wgWBCSRescoreProfiles = [
 				'score_mode' => 'total',
 				'type' => 'function_score',
 				// Reuse the "main" profile for entity weights
-				// (incoming_links, sitelink_count and $wmgWikibaseSearchStatementBoosts boosts)
+				// (incoming_links, sitelink_count and $wgWBCSStatementBoost boosts)
 				'function_chain' => 'wikibase_config_entity_weight'
 			],
 			[
 				// Append another rescore window to rescore based on the language "attributes" of the entity.
-				// This will boost entities based on $wmgWBCSLanguageSelectorStatementBoost
+				// This will boost entities based on $wgWBCSLanguageSelectorStatementBoost
 				'window' => 8192,
 				'window_size_override' => 'EntitySearchRescoreWindowSize',
 				'query_weight' => 1.0,
@@ -432,7 +432,7 @@ $wgWBCSRescoreFunctionChains = [
 				'type' => 'term_boost',
 				'weight' => 0.1,
 				'params' => [
-					// Will be replaced by $wmgWikibaseSearchStatementBoosts
+					// Will be replaced by $wgWBCSStatementBoost
 					'statement_keywords' => '_statementBoost_',
 				]
 			]
@@ -452,7 +452,7 @@ $wgWBCSLanguageSelectorRescoreFunctionChains = [
 				'type' => 'term_boost',
 				'weight' => 0.1,
 				'params' => [
-					// Will be replaced by $wmgWBCSLanguageSelectorStatementBoost
+					// Will be replaced by $wgWBCSLanguageSelectorStatementBoost
 					'statement_keywords' => '_statementBoost_',
 				]
 			]

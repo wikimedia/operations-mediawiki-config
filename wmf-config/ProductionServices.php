@@ -44,9 +44,6 @@ $common = [
 	// Statsd is not active-active.
 	'statsd' => '10.64.16.149', # statsd.eqiad.wmnet, now resolving to graphite1004.eqiad.wmnet
 
-	// EventLogging is not active-active.
-	'eventlogging' => 'udp://10.64.32.167:8421', # eventlog1001.eqiad.wmnet
-
 	// Logstash is not active-active.
 	'logstash' => [
 		'10.2.2.36', # logstash.svc.eqiad.wmnet
@@ -66,7 +63,6 @@ $common = [
 	'eventgate-analytics-external' => 'http://localhost:6013',
 	'eventgate-main' => 'http://localhost:6005',
 	'cxserver' => 'http://localhost:6015',
-	'electron' => 'http://pdfrender.discovery.wmnet:5252',
 	'restbase' => 'http://localhost:6011',
 	'sessionstore' => 'http://localhost:6006',
 	'echostore' => 'http://localhost:6007',
@@ -81,10 +77,8 @@ $common = [
 	// Points back to MediaWiki for $wgLocalHTTPProxy
 	'mwapi' => 'http://localhost:6501',
 
-	// cloudelastic only exists in eqiad. No load balancer is available due to
-	// the part of the network that they live in so each host is enumerated
+	// cloudelastic only exists in eqiad.
 
-	// WARNING: psi and omega have their ports "mixed up", see https://phabricator.wikimedia.org/T262630
 	'cloudelastic-chi' => [
 		[ // forwarded to https://cloudelastic.wikimedia.org:9243/
 			'host' => 'localhost',
@@ -92,18 +86,18 @@ $common = [
 			'port' => 6105,
 		],
 	],
-	'cloudelastic-psi' => [
+	'cloudelastic-omega' => [
 		[ // forwarded to https://cloudelastic.wikimedia.org:9443/
 			'host' => 'localhost',
 			'transport' => 'Http',
-			'port' => 6107,
+			'port' => 6106,
 		],
 	],
-	'cloudelastic-omega' => [
+	'cloudelastic-psi' => [
 		[ // forwarded to https://cloudelastic.wikimedia.org:9643/
 			'host' => 'localhost',
 			'transport' => 'Http',
-			'port' => 6106,
+			'port' => 6107,
 		],
 	],
 
@@ -138,8 +132,8 @@ $services = [
 		'parsercache-dbs' => [
 			'pc1' => '10.64.0.57',   # pc1011, A1 8.8TB 512GB # pc1
 			'pc2' => '10.64.16.65',  # pc1012, B1 8.8TB 512GB # pc2
-			'pc3' => '10.64.48.89', # pc1014, D6 8.8TB 512GB # pc3
-			# spare: '10.64.32.163',  # pc1013, C5 8.8TB 512GB
+			'pc3' => '10.64.32.163', # pc1013, C5 8.8TB 512GB # pc3
+			# spare: '10.64.48.89',  # pc1014, D6 8.8TB 512GB
 			# Use spare(s) to replace any of the above if needed
 		],
 
@@ -156,18 +150,18 @@ $services = [
 				'port' => 6102,
 			]
 		],
-		'search-psi' => [
-			[ // forwarded to https://search.svc.eqiad.wmnet:9643/
-				'host' => 'localhost',
-				'transport' => CirrusSearch\Elastica\DeprecationLoggedHttp::class,
-				'port' => 6104,
-			]
-		],
 		'search-omega' => [
 			[ // forwarded to https://search.svc.eqiad.wmnet:9443/
 				'host' => 'localhost',
 				'transport' => CirrusSearch\Elastica\DeprecationLoggedHttp::class,
 				'port' => 6103,
+			]
+		],
+		'search-psi' => [
+			[ // forwarded to https://search.svc.eqiad.wmnet:9643/
+				'host' => 'localhost',
+				'transport' => CirrusSearch\Elastica\DeprecationLoggedHttp::class,
+				'port' => 6104,
 			]
 		],
 	],
@@ -212,18 +206,18 @@ $services = [
 				'port' => 6202,
 			]
 		],
-		'search-psi' => [
-			[ // forwarded to https://search.svc.codfw.wmnet:9643/
-				'host' => 'localhost',
-				'transport' => 'Http',
-				'port' => 6204,
-			]
-		],
 		'search-omega' => [
 			[ // forwarded to https://search.svc.codfw.wmnet:9443/
 				'host' => 'localhost',
 				'transport' => 'Http',
 				'port' => 6203,
+			]
+		],
+		'search-psi' => [
+			[ // forwarded to https://search.svc.codfw.wmnet:9643/
+				'host' => 'localhost',
+				'transport' => 'Http',
+				'port' => 6204,
 			]
 		],
 	],

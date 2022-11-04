@@ -54,7 +54,7 @@ $wmgMasterDatacenter = null;
 require_once __DIR__ . '/../../wmf-config/db-production.php';
 
 // Now load the JSON written to Etcd by dbctl, from the local disk and merge it in.
-// This is mimicking what wmfEtcdApplyDBConfig (wmf-config/etcd.php) does in prod.
+// This is mimicking what wmfApplyEtcdDBConfig (wmf-config/etcd.php) does in prod.
 //
 // On mwmaint hosts, these JSON files are produced by a 'fetch_dbconfig' script,
 // run via systemd timer, defined in puppet.

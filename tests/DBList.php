@@ -11,18 +11,14 @@
 class DBList {
 
 	/**
-	 * @return array
+	 * @return array<string,string[]>
 	 */
 	public static function getLists() {
-		static $list = null;
-		if ( !$list ) {
-			$list = [];
-			foreach ( glob( __DIR__ . '/../dblists/*.dblist' ) as $filename ) {
-				$basename = basename( $filename, '.dblist' );
-				$list[$basename] = MWWikiversions::readDbListFile( $basename );
-			}
+		static $lists;
+		if ( !$lists ) {
+			$lists = MWWikiversions::getAllDbListsForCLI();
 		}
-		return $list;
+		return $lists;
 	}
 
 	/**
@@ -30,7 +26,7 @@ class DBList {
 	 * @return bool
 	 */
 	public static function isWikiFamily( $dbname ) {
-		return isset( MWMultiVersion::SUFFIXES[ $dbname ] );
+		return in_array( $dbname, MWMultiVersion::SUFFIXES );
 	}
 
 	/**
@@ -41,7 +37,10 @@ class DBList {
 	 * @return bool
 	 */
 	public static function isInDblist( $dbname, $dblist ) {
-		return in_array( $dbname, self::getLists()[$dblist] );
+		// Optimization: Use getLists() instead of readDbListFile()
+		// to benefit caching during the many calls from data-provided tests.
+		$list = self::getLists()[$dblist];
+		return in_array( $dbname, $list );
 	}
 
 	/**

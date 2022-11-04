@@ -52,7 +52,6 @@ class CirrusTest extends WgConfTestCase {
 		$this->assertCount( 3 * 3, $config['wgCirrusSearchClusters'] );
 		$this->assertCount( 3, $config['wgCirrusSearchShardCount'] );
 		$this->assertCount( 3, $config['wgCirrusSearchReplicas'] );
-		$this->assertCount( 3, $config['wgCirrusSearchClientSideConnectTimeout'] );
 
 		$dc_config_tested = 0;
 		foreach ( $config['wgCirrusSearchClusters'] as $key => $clusterConf ) {
@@ -67,7 +66,6 @@ class CirrusTest extends WgConfTestCase {
 			$dc_config_tested += 1;
 			$this->assertArrayHasKey( $dc, $config['wgCirrusSearchShardCount'] );
 			$this->assertArrayHasKey( $dc, $config['wgCirrusSearchReplicas'] );
-			$this->assertArrayHasKey( $dc, $config['wgCirrusSearchClientSideConnectTimeout'] );
 		}
 		// Test that we scanned 2 DCs + cloudelastic for the group chi
 		$this->assertEquals( 3, $dc_config_tested );
@@ -181,10 +179,7 @@ class CirrusTest extends WgConfTestCase {
 	}
 
 	public function provideUserTestingBuckets() {
-		// No need to check multiple wikis, or even a real wiki.
-		// When this was written convention is to use same config
-		// for all wikis, per-wiki usage is controlled by frontend.
-		$allConfig = $this->loadWgConf( 'unittest' );
+		$allConfig = $this->loadWgConf( 'production' );
 		$conf = $allConfig->settings['wgCirrusSearchUserTesting']['default'];
 		$tests = [];
 		foreach ( $conf as $name => $testConfig ) {
@@ -222,7 +217,7 @@ class CirrusTest extends WgConfTestCase {
 	}
 
 	public function providePerClusterShardsAndReplicas() {
-		$allConfig = $this->loadWgConf( 'unittest' );
+		$allConfig = $this->loadWgConf( 'production' );
 		$shards = $allConfig->settings['wmgCirrusSearchShardCount'];
 		$replicas = $allConfig->settings['wgCirrusSearchReplicas'];
 		$maxShardPerNode = $allConfig->settings['wgCirrusSearchMaxShardsPerNode'];
@@ -234,7 +229,7 @@ class CirrusTest extends WgConfTestCase {
 		}
 		$wikis = array_unique( $wikis );
 		$indexTypes = [ 'content', 'general', 'titlesuggest', 'file' ];
-		$clusters = [ 'eqiad' => 36, 'codfw' => 36 ];
+		$clusters = [ 'eqiad' => 50, 'codfw' => 50 ];
 
 		// restrict wgConf to only the settings we care about
 		$allConfig->settings = [
@@ -304,14 +299,16 @@ class CirrusTest extends WgConfTestCase {
 		}
 
 		// For our busiest wikis we want to make sure we are using most of the
-		// cluster for the indices. This was guesstimated by running the following query
+		// cluster for the indices. In the past we
+		// guesstimated this by running the following query
 		// in hive and choosing wikis with > 100M queries/week:
-		// select wikiid, count(1) as count from wmf_raw.cirrussearchrequestset where year = 2016
-		// and month = 1 and day >= 2 and day < 9 group by wikiid order by count desc limit 10;
-		$busyWikis = [ 'enwiki', 'dewiki' ];
+		// select wikiid, count(1) as count from wmf_raw.cirrussearchrequestset where 'year' = 2016
+		// and 'month' = 1 and 'day' >= 2 and 'day' < 9 group by wikiid order by count desc limit 10;
+		// However since then we've decided to exclude dewiki, leaving just enwiki.
+		$busyWikis = [ 'enwiki' ];
 		if ( in_array( $wiki, $busyWikis ) && $indexType == 'content' ) {
 			// For busy indices ensure we are using most of the cluster to serve them
-			$this->assertGreaterThanOrEqual( $numServers - 3, $totalShards );
+			$this->assertGreaterThanOrEqual( $numServers - 5, $totalShards );
 		}
 	}
 

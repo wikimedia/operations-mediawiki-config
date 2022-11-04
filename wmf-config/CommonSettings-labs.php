@@ -143,7 +143,7 @@ if ( $wmgUseFileExporter ) {
 }
 
 if ( $wmgUseContentTranslation ) {
-	$wgContentTranslationSiteTemplates['cx'] = 'https://cxserver-beta.wmflabs.org/v1';
+	$wgContentTranslationSiteTemplates['cx'] = 'https://cxserver-beta.wmcloud.org/v1';
 	$wgContentTranslationSiteTemplates['cookieDomain'] = false;
 	$wgContentTranslationTranslateInTarget = false;
 }
@@ -261,8 +261,6 @@ if ( $wmgUseMath ) {
 	$wgMathWikibasePropertyIdHasPart = 'P253104';
 	$wgMathWikibasePropertyIdDefiningFormula = 'P253105';
 	$wgMathWikibasePropertyIdQuantitySymbol = 'P253106';
-	// Temporary setting for conversion off RESTBase to pure Mathoid. See T274436
-	$wgMathUseRestBase = false;
 }
 
 // CORS (cross-domain AJAX, T22814)
@@ -364,11 +362,6 @@ if ( $wmgUseStopForumSpam ) {
 	$wgSFSIPListLocationMD5 = 'https://www.stopforumspam.com/downloads/listed_ip_90_ipv46_all.gz.md5';
 }
 
-if ( $wmgUseGrowthExperiments ) {
-	// temporarily allow everyone, per T310905
-	$wgGroupPermissions['*']['enrollasmentor'] = true;
-}
-
 $wgMessageCacheType = CACHE_ACCEL;
 
 // This will work for most wikis, which is considered good enough.
@@ -416,6 +409,7 @@ $wgKartographerMapServer = 'https://maps-beta.wmflabs.org';
 
 // Temporary feature flag for the Kartographer nearby feature see T304076
 $wgKartographerNearby = true;
+$wgKartographerNearbyClustering = true;
 
 // Enable max-width for editing. T307725.
 $wgVectorMaxWidthOptions['exclude']['querystring']['action'] = '(history|edit)';
@@ -423,6 +417,21 @@ $wgVectorMaxWidthOptions['exclude']['querystring']['action'] = '(history|edit)';
 if ( $wmgUseCampaignEvents ) {
 	$wgCampaignEventsDatabaseCluster = false;
 	$wgCampaignEventsDatabaseName = 'wikishared';
+}
+
+// Ignore parameter order when matching request URLs to CDN URLs (T314868)
+$wgCdnMatchParameterOrder = false;
+
+// T314294
+if ( $wmgUsePhonos ) {
+	wfLoadExtension( 'Phonos' );
+	// $wgPhonosApiKeyGoogle in PrivateSettings
+	$wgPhonosEngine = 'google';
+	$wgPhonosFileBackend = 'global-multiwrite';
+}
+
+if ( $wgDBname == 'dewiki' ) {
+	$wgAutoCreateTempUser['enabled'] = true;
 }
 
 }

@@ -39,7 +39,7 @@ class MWConfigCacheGenerator {
 	/**
 	 * Compute the config globals for a wiki in a standalone way for testing.
 	 *
-	 * In production code, use getMWConfigForCacheing() or getConfigGlobals() instead.
+	 * In production code, use getConfigGlobals() instead.
 	 *
 	 * This method will load InitialiseSettings (which requires Defines.php) and create
 	 * a SiteConfiguration object (which requires SiteConfiguration.php). It is the responsibility
@@ -214,91 +214,21 @@ class MWConfigCacheGenerator {
 	private $staticConfigs = [];
 
 	/**
-	 * @param string $dbname
-	 * @param \SiteConfiguration $siteConfiguration
-	 * @param string $realm
-	 * @param string $cacheDir
+	 * @param string $dbname Database name, e.g. 'enwiki' or 'zh_min_nanwikisource'
+	 * @param \SiteConfiguration $siteConfiguration The wgConf object
+	 * @param string $realm Realm, e.g. 'production' or 'labs'
 	 * @return array
 	 */
 	public static function getConfigGlobals(
 		string $dbname,
 		\SiteConfiguration $siteConfiguration,
-		string $realm,
-		string $cacheDir
+		string $realm = 'production'
 	): array {
-		// Populate SiteConfiguration object
-		wmfLoadInitialiseSettings( $siteConfiguration );
-
 		return self::getMWConfigForCacheing(
 			$dbname,
 			$siteConfiguration,
 			$realm
 		);
-	}
-
-	/**
-	 * Read a static cached MultiVersion object from disc
-	 *
-	 * @param string $confCacheFile The full filepath for the wiki's cached config object
-	 * @param string $confActualMtime The expected mtime for the cached config object
-	 * @return array|null The wiki's config array, or null if not yet cached or stale
-	 */
-	public static function readFromStaticCache( $confCacheFile, $confActualMtime ) {
-		// Ignore file warnings (file may be inaccessible, or deleted in a race)
-		$cacheRecord = @file_get_contents( $confCacheFile );
-
-		if ( $cacheRecord !== false ) {
-			// TODO: Use JSON_THROW_ON_ERROR with a try/catch once production is running PHP 7.3.
-			// `true` means to decode as an associative array
-			$staticCacheObject = json_decode( $cacheRecord, true );
-
-			if ( json_last_error() === JSON_ERROR_NONE ) {
-				// Ignore non-array and array offset warnings (file may be in an older format)
-				if ( ( $staticCacheObject['mtime'] ?? null ) === $confActualMtime ) {
-					return $staticCacheObject['globals'];
-				}
-			} else {
-				// Something went wrong; raise an error
-				trigger_error( "Config cache failure: Static decoding failed", E_USER_ERROR );
-			}
-		}
-
-		// Reached if the file doesn't exist yet, can't be read, was out of date, or was corrupt.
-		return null;
-	}
-
-	/**
-	 * Write a static MultiVersion object to disc cache
-	 *
-	 * @param string $cacheDir The filepath for cached multiversion config storage
-	 * @param string $cacheShard The filename for the cached multiversion config object
-	 * @param array $configObject The config array for this wiki
-	 */
-	public static function writeToStaticCache( $cacheDir, $cacheShard, $configObject ) {
-		@mkdir( $cacheDir );
-		$tmpFile = tempnam( '/tmp/', $cacheShard );
-
-		$staticCacheObject = json_encode(
-			$configObject,
-			// TODO: Use JSON_THROW_ON_ERROR with a try/catch once production is running PHP 7.3.
-			JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
-		) . "\n";
-
-		if ( $tmpFile ) {
-			if ( json_last_error() !== JSON_ERROR_NONE ) {
-				// Something went wrong; for safety, don't write anything, and raise an error
-				trigger_error( "Config cache failure: Static encoding failed", E_USER_ERROR );
-			} else {
-				if ( file_put_contents( $tmpFile, $staticCacheObject ) ) {
-					if ( rename( $tmpFile, $cacheDir . '/' . $cacheShard ) ) {
-						// Rename succeded; no need to clean up temp file
-						return;
-					}
-				}
-			}
-			// T136258: Rename failed, write failed, or data wasn't cacheable; clean up temp file
-			unlink( $tmpFile );
-		}
 	}
 
 	/**
@@ -313,7 +243,7 @@ class MWConfigCacheGenerator {
 	 * @param array[] $settings wgConf-style settings array from IntialiseSettings.php
 	 * @return array
 	 */
-	public static function applyOverrides( array $settings ): array {
+	private static function applyOverrides( array $settings ): array {
 		$overrides = wmfGetOverrideSettings();
 		foreach ( $overrides as $key => $value ) {
 			if ( substr( $key, 0, 1 ) == '-' ) {
@@ -330,20 +260,28 @@ class MWConfigCacheGenerator {
 	}
 
 	/**
-	 * Return static configuration without overrides
+	 * Return static configuration
 	 *
+	 * @param string $realm Realm, e.g. 'production' or 'labs'
 	 * @return array
 	 */
-	public static function getStaticConfig(): array {
-		$configDir = __DIR__ . '/../wmf-config/';
+	public static function getStaticConfig( string $realm = 'production' ): array {
+		$configDir = __DIR__ . '/../wmf-config';
 		// Use of direct addition instead of for loop in array is
 		// intentional and done for performance reasons.
-		$config =
-			( require $configDir . 'logos.php' ) +
-			( require $configDir . 'InitialiseSettings.php' ) +
-			( require $configDir . 'ext-ORES.php' );
+		$settings =
+			( require $configDir . '/logos.php' ) +
+			( require $configDir . '/InitialiseSettings.php' ) +
+			( require $configDir . '/ext-ORES.php' );
 
-		return $config;
+		if ( $realm !== 'production' ) {
+			// Override for Beta Cluster and other realms.
+			// Ref: InitialiseSettings-labs.php
+			require_once $configDir . "/InitialiseSettings-$realm.php";
+			$settings = self::applyOverrides( $settings );
+		}
+
+		return $settings;
 	}
 
 }

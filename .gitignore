@@ -1,7 +1,7 @@
 # Production files that are temporary or private
 /php-1.*/
 /private
-/scap/log
+/scap/
 /wikiversions-*.php
 /wikiversions.php
 /wmf-config/ExtensionMessages-*.php

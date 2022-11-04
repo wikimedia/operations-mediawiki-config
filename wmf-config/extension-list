@@ -113,6 +113,7 @@ $IP/extensions/PageTriage/extension.json
 $IP/extensions/PageViewInfo/extension.json
 $IP/extensions/ParserFunctions/extension.json
 $IP/extensions/PdfHandler/extension.json
+$IP/extensions/Phonos/extension.json
 $IP/extensions/Poem/extension.json
 $IP/extensions/PoolCounter/extension.json
 $IP/extensions/Popups/extension.json
@@ -129,6 +130,7 @@ $IP/extensions/SandboxLink/extension.json
 $IP/extensions/Score/extension.json
 $IP/extensions/Scribunto/extension.json
 $IP/extensions/SearchExtraNS/extension.json
+$IP/extensions/SearchVue/extension.json
 $IP/extensions/SecureLinkFixer/extension.json
 $IP/extensions/SecurePoll/extension.json
 $IP/extensions/ShortUrl/extension.json

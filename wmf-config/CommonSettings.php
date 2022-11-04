@@ -26,7 +26,6 @@
 #       |-- wmf-config/InitialiseSettings.php
 #       |-- private/PrivateSettings.php
 #       |-- wmf-config/logging.php
-#       |-- wmf-config/redis.php
 #       |-- wmf-config/filebackend.php
 #       |-- wmf-config/db-*.php
 #       |-- wmf-config/mc.php
@@ -45,6 +44,7 @@ use MediaWiki\Extension\ExtensionDistributor\Providers\GerritExtDistProvider;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\User\UserIdentity;
+use Wikimedia\MWConfig\MWConfigCacheGenerator;
 use Wikimedia\MWConfig\ServiceConfig;
 use Wikimedia\MWConfig\XWikimediaDebug;
 
@@ -194,13 +194,33 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 	$wmgMasterServices = $wmgAllServices[$wmgMasterDatacenter];
 
 	// Database load balancer config (sectionLoads, groupLoadsBySection, …)
-	// This is later merged into $wgLBFactoryConf by wmfEtcdApplyDBConfig().
+	// This is later merged into $wgLBFactoryConf by wmfApplyEtcdDBConfig().
 	// See also <https://wikitech.wikimedia.org/wiki/Dbctl>
 	$wmgLocalDbConfig = $etcdConfig->get( "$wmgDatacenter/dbconfig" );
 	if ( $wmgDatacenter !== $wmgMasterDatacenter ) {
 		$wmgRemoteMasterDbConfig = $etcdConfig->get( "$wmgMasterDatacenter/dbconfig" );
 	} else {
 		$wmgRemoteMasterDbConfig = null;
+	}
+
+	// Define a callback for use by LBFactory::autoReconfigure().
+	// This allows long-running scripts to take into account changes to the database config (T298485).
+	// The callback below does not support data center switches, but does support
+	// read-only flags and changes to replica weights. In particular, it allows a replica
+	// to be taken out of rotation.
+	if ( PHP_SAPI === 'cli' ) {
+		$wmgLBFactoryConfigCallback = static function () use ( $wmgLocalServices, $wmgDatacenter ) {
+			// NOTE: Don't re-use the existing $etcdConfig, the entire point of this
+			//       callback is that the we want to re-load it to see if it has changed.
+			$etcdConfig = wmfSetupEtcd( $wmgLocalServices['etcd'] );
+			$dbConfigFromEtcd = $etcdConfig->get( "$wmgDatacenter/dbconfig" );
+			$lbFactoryConf = [];
+			wmfApplyEtcdDBConfig( $dbConfigFromEtcd, $lbFactoryConf );
+			$lbFactoryConf['class'] = 'LBFactoryMulti';
+			return $lbFactoryConf;
+		};
+	} else {
+		$wmgLBFactoryConfigCallback = null;
 	}
 
 	unset( $etcdConfig );
@@ -216,24 +236,7 @@ if ( $wgDBname === 'testwiki' ) {
 $wgConf = new SiteConfiguration;
 $wgConf->suffixes = MWMultiVersion::SUFFIXES;
 $wgConf->wikis = MWWikiversions::readDbListFile( $wmgRealm === 'labs' ? 'all-labs' : 'all' );
-$wgConf->fullLoadCallback = 'wmfLoadInitialiseSettings';
-
-/**
- * @param SiteConfiguration $conf
- */
-function wmfLoadInitialiseSettings( $conf ) {
-	global $wmgRealm;
-	$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::getStaticConfig();
-
-	if ( $wmgRealm !== 'production' ) {
-		// Override for Beta Cluster and other realms.
-		// Ref: InitialiseSettings-labs.php
-		require_once __DIR__ . "/InitialiseSettings-$wmgRealm.php";
-		$settings = Wikimedia\MWConfig\MWConfigCacheGenerator::applyOverrides( $settings );
-	}
-
-	$conf->settings = $settings;
-}
+$wgConf->settings = MWConfigCacheGenerator::getStaticConfig( $wmgRealm );
 
 $wgLocalDatabases = $wgConf->getLocalDatabases();
 
@@ -289,11 +292,10 @@ $wgLocalVirtualHosts = [
 	'wikimania.wikimedia.org',
 ];
 
-$globals = Wikimedia\MWConfig\MWConfigCacheGenerator::getConfigGlobals(
+$globals = MWConfigCacheGenerator::getConfigGlobals(
 	$wgDBname,
 	$wgConf,
-	$wmgRealm,
-	$wgCacheDirectory
+	$wmgRealm
 );
 
 // phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
@@ -310,7 +312,6 @@ list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 require __DIR__ . '/../private/PrivateSettings.php';
 
 require __DIR__ . '/logging.php';
-require __DIR__ . '/redis.php';
 require __DIR__ . '/filebackend.php';
 require __DIR__ . '/mc.php';
 if ( $wmgRealm === 'labs' ) {
@@ -325,9 +326,6 @@ require __DIR__ . "/db-$wmgRealm.php";
 # This must be after InitialiseSettings.php is processed (T197475)
 if ( PHP_SAPI === 'cli' ) {
 	$wgShowExceptionDetails = true;
-
-	# APC not available in CLI mode
-	$wgLanguageConverterCacheType = CACHE_NONE;
 }
 
 if ( XWikimediaDebug::getInstance()->hasOption( 'readonly' ) ) {
@@ -339,13 +337,18 @@ $wgAllowedCorsHeaders[] = 'X-Wikimedia-Debug';
 // See https://wikitech.wikimedia.org/wiki/Dbctl
 // This must be called after db-{eqiad,codfw}.php has been loaded!
 // It overwrites a few sections of $wgLBFactoryConf with data from etcd.
-wmfEtcdApplyDBConfig();
-
+// In labs, the relevant key exists in etcd, but does not contain real data.
+// Only do this in production.
+if ( $wmgRealm === 'production' ) {
+	wmfApplyEtcdDBConfig( $wmgLocalDbConfig, $wgLBFactoryConf );
+}
 // labtestwiki is a one-off test server, using a wmcs-managed database.  Cut
 // etcd out of the loop entirely for this one.
-$wgLBFactoryConf['sectionLoads']['s11'] = [ 'clouddb2001-dev' => 1 ];
-$wgLBFactoryConf['hostsByName']['clouddb2001-dev'] = '10.192.20.11';
+$wgLBFactoryConf['sectionLoads']['s11'] = [ 'clouddb2002-dev' => 1 ];
+$wgLBFactoryConf['hostsByName']['clouddb2002-dev'] = '10.192.20.6';
 
+// Add the config callback
+$wgLBFactoryConf['configCallback'] = $wmgLBFactoryConfigCallback;
 // Set $wgProfiler to the value provided by PhpAutoPrepend.php
 if ( isset( $wmgProfiler ) ) {
 	$wgProfiler = $wmgProfiler;
@@ -542,16 +545,17 @@ $wgHooks['APIQuerySiteInfoGeneralInfo'][] = static function ( $module, &$data ) 
 
 $wgEmergencyContact = 'noc@wikipedia.org';
 
+# Default address gets rejected by some mail hosts.
+# This email is used for more than just sending password resets, also e.g. Echo notifications
+# and random contact forms.
+$wgPasswordSender = 'wiki@wikimedia.org';
+
 $wgShowIPinHeader = false;
 $wgRCMaxAge = 30 * 86400;
 
 $wgTmpDirectory = '/tmp';
 
-# Temporary for the PHP 7.2 → 7.4 migration. Adds an array of Unicode chars
-# that have different uppercasing in 7.4.
-if ( PHP_VERSION_ID >= 70400 ) {
-	$wgOverrideUcfirstCharacters = include __DIR__ . '/Php72ToUpper.php';
-}
+$wgOverrideUcfirstCharacters = include __DIR__ . '/UcfirstOverrides.php';
 
 # Object cache and session settings
 
@@ -825,7 +829,7 @@ if ( $wmgRealm === 'production' ) {
 	require __DIR__ . '/reverse-proxy.php';
 } elseif ( $wmgRealm === 'labs' ) {
 	$wgStatsdMetricPrefix = 'BetaMediaWiki';
-	require __DIR__ . '/reverse-proxy-staging.php';
+	require __DIR__ . '/reverse-proxy-labs.php';
 }
 
 // CORS (cross-domain AJAX, T22814)
@@ -1018,6 +1022,8 @@ $wgAvailableRights[] = 'flow-delete';
 
 // Adding GrowthExperiments's rights
 $wgAvailableRights[] = 'setmentor';
+$wgAvailableRights[] = 'managementors';
+$wgAvailableRights[] = 'enrollasmentor';
 
 // Checkuser
 $wgGrantPermissions['checkuser']['checkuser'] = true;
@@ -1426,11 +1432,12 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 	$wgExtDistDefaultSnapshot = 'REL1_38';
 
 	// Current development snapshot
-	//$wgExtDistCandidateSnapshot = 'REL1_39';
+	$wgExtDistCandidateSnapshot = 'REL1_39';
 
 	// Available snapshots
 	$wgExtDistSnapshotRefs = [
 		'master',
+		'REL1_39',
 		'REL1_38',
 		'REL1_37',
 		'REL1_35',
@@ -1478,7 +1485,7 @@ if ( $wmgUseContactPage ) {
 		include __DIR__ . '/MetaContactPages.php';
 		$wgContactConfig['stewards'] = [ // T98625
 			'RecipientUser' => 'Wikimedia Stewards',
-			'SenderEmail' => $wmgNotificationSender,
+			'SenderEmail' => $wgPasswordSender,
 			'RequireDetails' => true,
 			'IncludeIP' => true,
 			'AdditionalFields' => [
@@ -1549,9 +1556,6 @@ if ( $wmgUseScore ) {
 }
 
 $wgHiddenPrefs[] = 'realname';
-
-# Default address gets rejected by some mail hosts
-$wgPasswordSender = 'wiki@wikimedia.org';
 
 # e-mailing password based on e-mail address (T36386)
 $wgPasswordResetRoutes['email'] = true;
@@ -1846,10 +1850,6 @@ if ( $wmgUseCentralAuth ) {
 
 	$wgCentralAuthUseEventLogging = true;
 	$wgCentralAuthPreventUnattached = true;
-
-	// Optimisation: Avoid overhead of computing localised urls
-	// See https://phabricator.wikimedia.org/T189966#5436482
-	$wgCentralAuthCookiesP3P = "CP=\"See $wgCanonicalServer/wiki/Special:CentralAutoLogin/P3P for more info.\"";
 
 	foreach ( $wmgLocalServices['irc'] as $address ) {
 		$wgCentralAuthRC[] = [
@@ -2173,6 +2173,10 @@ if ( $wmgUseCentralNotice ) {
 	$wgCentralDBname = 'metawiki';
 	$wgNoticeInfrastructure = false;
 	$wgCentralNoticeAdminGroup = false;
+
+	// ESI test; see T308799
+	$wgCentralNoticeESITestString = '<!--esi <esi:include src="/esitest-fa8a495983347898/content" /> -->';
+
 	if ( $wmgRealm == 'production' && $wgDBname === 'testwiki' ) {
 		// test.wikipedia.org has its own central database:
 		$wgCentralDBname = 'testwiki';
@@ -2395,10 +2399,6 @@ if ( $wmgUseGlobalUsage ) {
 	$wgGlobalUsageDatabase = 'commonswiki';
 	$wgGlobalUsageSharedRepoWiki = 'commonswiki';
 	$wgGlobalUsagePurgeBacklinks = true;
-}
-
-if ( $wmgUseLivePreview ) {
-	$wgDefaultUserOptions['uselivepreview'] = 1;
 }
 
 wfLoadExtension( 'TemplateStyles' );
@@ -2649,15 +2649,6 @@ if ( $wmgUseParsoid ) {
 		'domain' => $wgCanonicalServer,
 		'forwardCookies' => $wmgParsoidForwardCookies,
 		'restbaseCompat' => false
-	];
-}
-
-if ( $wmgUseCollection ) {
-	$wgVirtualRestConfig['modules']['electron'] = [
-		'url' => $wmgLocalServices['electron'],
-		'options' => [
-			'accessKey' => $wmgElectronSecret, // set in private repo
-		],
 	];
 }
 
@@ -3105,7 +3096,7 @@ if ( $wmgUseFeaturedFeeds ) {
 	require_once __DIR__ . '/FeaturedFeedsWMF.php';
 }
 
-$wgDisplayFeedsInSidebar = $wmgDisplayFeedsInSidebar;
+$wgDisplayFeedsInSidebar = false;
 
 if ( $wmgEnablePageTriage ) {
 	wfLoadExtension( 'PageTriage' );
@@ -3141,22 +3132,6 @@ if ( $wmgUseEducationProgram ) {
 	$wgNamespacesWithSubpages[447] = true;
 }
 
-if ( $wmgUseWikimediaShopLink ) {
-	/**
-	 * @param Skin $skin
-	 * @param array $sidebar
-	 * @return bool
-	 */
-	$wgHooks['SkinBuildSidebar'][] = static function ( $skin, &$sidebar ) {
-		$sidebar['navigation'][] = [
-			'text'  => $skin->msg( 'wikimediashoplink-linktext' )->text(),
-			'href'  => '//shop.wikimedia.org',
-			'title' => $skin->msg( 'wikimediashoplink-link-tooltip' )->text(),
-			'id'    => 'n-shoplink',
-		];
-	};
-}
-
 if ( $wmgEnableGeoData ) {
 	wfLoadExtension( 'GeoData' );
 	$wgGeoDataBackend = 'elastic';
@@ -3187,16 +3162,8 @@ if ( $wmgUseEcho ) {
 	$wgEchoEmailFooterAddress = $wmgEchoEmailFooterAddress;
 	$wgEchoNotificationIcons['site']['url'] = $wmgEchoSiteNotificationIconUrl;
 
-	# Outgoing from and reply to address for Echo notifications extension
-	$wgNotificationSender = $wmgNotificationSender;
-	$wgNotificationSenderName = $wgSitename;
-	$wgNotificationReplyName = 'No Reply';
-
 	// Define the cluster database, false to use main database
 	$wgEchoCluster = $wmgEchoCluster;
-
-	// Whether to use job queue to process web and email notifications
-	$wgEchoUseJobQueue = $wmgEchoUseJobQueue;
 
 	// CentralAuth is extra check to be absolutely sure we don't enable on non-SUL
 	// wikis.
@@ -3280,8 +3247,6 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgGroupPermissions['contentadmin']['abusefilter-modify'] = true;
 	$wgGroupPermissions['contentadmin']['abusefilter-modify-restricted'] = true;
 	$wgGroupPermissions['contentadmin']['abusefilter-view-private'] = true;
-
-	$wgMessageCacheType = 'memcached-pecl';
 
 	if ( $wgDBname === 'labswiki' ) {
 		$wgCookieDomain = "wikitech.wikimedia.org"; // TODO: Is this really necessary?
@@ -4115,17 +4080,6 @@ if ( $wmgUseGrowthExperiments ) {
 	// T298122 temporary fix while mobile-only quality gate gets removed
 	$wgDefaultUserOptions['growthexperiments-addimage-desktop'] = 1;
 
-	if ( !$wmgGEFeaturesMayBeAvailableToNewcomers ) {
-		// Disable welcome survey
-		$wgWelcomeSurveyExperimentalGroups = [
-			'exp2_target_specialpage' => [ 'percentage' => 0 ],
-			'exp2_target_popup' => [ 'percentage' => 0 ],
-			'exp1_group2' => [ 'percentage' => 0 ],
-		];
-		// Disable all other Growth features
-		$wgGEHomepageNewAccountEnablePercentage = 0;
-	}
-
 	$wgGEImageRecommendationServiceUrl = $wmgLocalServices['image-suggestion'];
 	$wgGELinkRecommendationServiceUrl = $wmgLocalServices['linkrecommendation'];
 }
@@ -4134,8 +4088,6 @@ if ( $wmgUseWikiLambda && $wmgRealm === 'labs' ) {
 	wfLoadExtension( 'WikiLambda' );
 
 	$wgWikiLambdaOrchestratorLocation = $wmgLocalServices['wikifunctions-orchestrator'];
-	$wgWikiLambdaEvaluatorLocation = "http://{$wmgLocalServices['wikifunctions-evaluator']}/1/v1/evaluate";
-	$wgWikiLambdaWikiAPILocation = 'https://wikifunctions.beta.wmflabs.org/w/api.php';
 }
 
 if ( $wmgUseWikistories ) {
@@ -4268,10 +4220,20 @@ if ( $wmgUseImageSuggestions ) {
 	wfLoadExtension( 'ImageSuggestions' );
 }
 
+if ( $wmgUseSearchVue ) {
+	wfLoadExtension( 'SearchVue' );
+}
+
 if ( $wmgUseCampaignEvents ) {
 	wfLoadExtension( 'CampaignEvents' );
 	$wgCampaignEventsDatabaseCluster = 'extension1';
-	$wgCampaignEventsDatabaseName = 'wikishared';
+}
+
+if ( $wmgUseStopForumSpam ) {
+	wfLoadExtension( 'StopForumSpam' );
+	$wgSFSIPListLocation = 'https://www.stopforumspam.com/downloads/listed_ip_90_ipv46_all.gz';
+	$wgSFSValidateIPListLocationMD5 = 'https://www.stopforumspam.com/downloads/listed_ip_90_ipv46_all.gz.md5';
+	$wgSFSProxy = $wgCopyUploadProxy;
 }
 
 // This is a temporary hack for hooking up Parsoid/PHP with MediaWiki
@@ -4352,6 +4314,8 @@ if (
 		'sort' => 0,
 	];
 }
+
+$wgLogRestrictions = array_merge( $wgLogRestrictions, $wmgLogRestrictions );
 
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #

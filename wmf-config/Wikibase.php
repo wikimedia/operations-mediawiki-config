@@ -331,6 +331,9 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['disabledUsageAspects'] = $wmgWikibaseDisabledUsageAspects;
 	$wgWBClientSettings['entityUsageModifierLimits'] = [ 'D' => 10, 'L' => 10, 'C' => 33 ];
+	if ( isset( $wmgEntityUsageModifierLimitsStatement ) ) {
+		$wgWBClientSettings['entityUsageModifierLimits']['C'] = $wmgEntityUsageModifierLimitsStatement;
+	}
 
 	// T208763
 	if ( isset( $wmgWikibaseClientPageSchemaNamespaces ) ) {
@@ -367,6 +370,10 @@ if ( $wmgUseWikibaseClient ) {
 	// Temporary
 	if ( isset( $wmgWikibaseClientUnconnectedPageMigrationStage ) ) {
 		$wgWBClientSettings['tmpUnconnectedPagePagePropMigrationStage'] = $wmgWikibaseClientUnconnectedPageMigrationStage;
+	}
+	// Temporary 2022-09
+	if ( isset( $wmgWikibaseClientUnconnectedPagePagePropMigrationLegacyFormat ) ) {
+		$wgWBClientSettings['tmpUnconnectedPagePagePropMigrationLegacyFormat'] = $wmgWikibaseClientUnconnectedPagePagePropMigrationLegacyFormat;
 	}
 
 	// Temporary, T297393

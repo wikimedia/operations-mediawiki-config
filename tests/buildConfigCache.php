@@ -19,8 +19,8 @@ require_once "{$configDir}/InitialiseSettings.php";
 require_once "{$configDir}/InitialiseSettings-labs.php";
 
 $realms = [];
-$realms['production'] = MWConfigCacheGenerator::getStaticConfig();
-$realms['labs'] = MWConfigCacheGenerator::applyOverrides( $realms['production'] );
+$realms['production'] = MWConfigCacheGenerator::getStaticConfig( 'production' );
+$realms['labs'] = MWConfigCacheGenerator::getStaticConfig( 'labs' );
 
 foreach ( [ 'production', 'labs' ] as $realm ) {
 

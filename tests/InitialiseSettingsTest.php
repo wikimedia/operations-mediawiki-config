@@ -37,7 +37,7 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 
 	public function testConfigIsScalar() {
 		foreach ( $this->settings as $settingName => $settingsArray ) {
-			$this->assertTrue( is_array( $settingsArray ), "Each setting set must be an array, but $settingName is not" );
+			$this->assertIsArray( $settingsArray, "Each setting set must be an array, but $settingName is not" );
 
 			foreach ( $settingsArray as $wiki => $value ) {
 				$this->assertTrue(
@@ -171,7 +171,7 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 
 		// Test if all wordmark logo values are set and the file exists
 		foreach ( $this->settings[ 'wmgSiteLogoWordmark' ] as $db => $entry ) {
-			if ( !count( $entry ) ) {
+			if ( !$entry || !count( $entry ) ) {
 				// Wordmark logo over-ridden to unset.
 				continue;
 			}
@@ -328,7 +328,9 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 	public function testOnlyExistingWikis() {
 		$dblistNames = array_keys( DBList::getLists() );
 		$langs = file( __DIR__ . "/../langlist", FILE_IGNORE_NEW_LINES );
-		foreach ( $this->settings as $config ) {
+		$settings = $this->settings;
+		unset( $settings['@replaceableSettings'] );
+		foreach ( $settings as $config ) {
 			foreach ( $config as $db => $entry ) {
 				$dbNormalized = str_replace( "+", "", $db );
 				$this->assertTrue(

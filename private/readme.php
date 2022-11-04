@@ -115,7 +115,6 @@ $wmgSwiftConfig['codfw'] = [
 /**
  * Credentials for RedisBagOStuff and RedisLockManager backends.
  *
- * @see wmf-config/redis.php, $wgObjectCaches
  * @see wmf-config/filebackend.php, $wgLockManagers
  */
 $wmgRedisPassword = null;
@@ -147,13 +146,6 @@ $wmgContentTranslationCXServerAuthKey = null;
 
 // FIXME: Is this still used?
 $wmgContributionTrackingDBpassword = null;
-
-/**
- * @see wmf-config/CommonSettings.php, $wgVirtualRestConfig
- * @see wmf-config/ProductionServices.php, 'electron'
- * @see mediawiki/extensions/Collection
- */
-$wmgElectronSecret = null;
 
 /**
  * The 'hmac_key' option of the RESTBagOStuff for Kask.
@@ -190,3 +182,11 @@ $wgWMEVectorPrefDiffSalt = null;
  * Shellbox secret key, also set in private puppet
  */
 $wgShellboxSecretKey = null;
+
+/**
+ * API key for Phonos' Google Cloud Speech API
+ *
+ * @see mediawiki/extensions/Phonos
+ * @see https://phabricator.wikimedia.org/T315491
+ */
+$wgPhonosApiKeyGoogle = null;
