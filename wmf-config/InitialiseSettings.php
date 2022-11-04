@@ -4770,6 +4770,7 @@ return [
 		'torblock' => 'debug',
 		'TranslationNotifications.Jobs' => 'debug',
 		'Translate.Jobs' => 'debug',
+		'Translate.MessageBundle' => 'debug',
 		'Translate' => 'debug',
 		'UpdateRepo' => 'debug',
 		'updateTranstagOnNullRevisions' => 'debug',
