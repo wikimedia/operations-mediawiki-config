@@ -1608,9 +1608,6 @@ function wmfGetOverrideSettings() {
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
 			'viwiki' => 'https://vi.wikipedia.org/w/api.php',
 		],
-		'wgGEMentorshipUseIsActiveFlag' => [
-			'default' => true,
-		],
 		'wgGECampaigns' => [
 			'default' => [
 				'social-latam-2022' => [

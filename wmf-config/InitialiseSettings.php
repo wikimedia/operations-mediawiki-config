@@ -26740,11 +26740,6 @@ return [
 	'eswiki' => 15, // T285235
 ],
 
-'wgGEMentorshipUseIsActiveFlag' => [
-	// do not change until T318518 is resolved
-	'default' => false,
-],
-
 'wgGEHomepageDefaultVariant' => [
 	'default' => 'control',
 ],
