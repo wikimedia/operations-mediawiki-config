@@ -435,6 +435,10 @@ return [
 	'kkwiktionary' => 'Asia/Almaty',
 	'kkwikibooks' => 'Asia/Almaty',
 	'kkwikiquote' => 'Asia/Almaty',
+	'knwikiquote' => 'Asia/Kolkata', // T322471
+	'knwiki' => 'Asia/Kolkata', // T322471
+	'knwikisource' => 'Asia/Kolkata', // T322471
+	'knwiktionary' => 'Asia/Kolkata', // T322471
 	'koiwiki' => 'Asia/Yekaterinburg',
 	'kowiki' => 'Asia/Seoul',
 	'kowikibooks' => 'Asia/Seoul', // T51639
