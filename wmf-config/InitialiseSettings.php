@@ -21586,17 +21586,20 @@ return [
 				'rate' => 1,
 			],
 		],
-		'mediawiki.edit_attempt' => [
-			'sample' => [
-				'rate' => 1,
-			],
-		],
 		// Enable rc0.mediawiki.page_change on group0 wikis: T311129
 		'rc0.mediawiki.page_change' => [
 			'producers' => [
 				'mediawiki_eventbus' => [
 					'enabled' => true
 				],
+			],
+		],
+	],
+	// Enable mediawiki.edit_attempt on group1 wikis: T312016
+	'+group1' => [
+		'mediawiki.edit_attempt' => [
+			'sample' => [
+				'rate' => 1,
 			],
 		],
 	],
@@ -25709,6 +25712,7 @@ return [
 	'zhwiki' => 0.2,
 	// T312016:
 	'group0' => 1,
+	'group1' => 1,
 ],
 
 'wgWMESchemaVisualEditorFeatureUseSamplingRate' => [
