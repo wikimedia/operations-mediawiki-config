@@ -19653,6 +19653,10 @@ return [
 	'testwiki' => true,
 ],
 
+'wgDiscussionToolsShowFeedbackLinks' => [
+	'default' => true, // T322494
+],
+
 'wgDTSchemaEditAttemptStepSamplingRate' => [
 	'default' => 0,
 ],
