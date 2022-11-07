@@ -625,6 +625,13 @@ function wmfGetOverrideSettings() {
 			'dewiki' => 'direct', // T320531
 		],
 
+		// Needs to be false for wikis that have wgVisualEditorDefaultParsoidClient = 'direct'.
+		// This shouldn't be needed anyomore once we sort out the logic for $wgVisualEditorAllowLossySwitching.
+		'wmgVisualEditorAccessRestbaseDirectly' => [
+			'default' => true,
+			'dewiki' => false, // T320531
+		],
+
 		'wmgUseRSSExtension' => [
 			'dewiki' => true,
 		],

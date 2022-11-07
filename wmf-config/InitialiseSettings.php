@@ -16586,6 +16586,7 @@ return [
 // Whether VisualEditor should bypass the MediaWiki layer and contact RESTBase directly for speed
 'wmgVisualEditorAccessRestbaseDirectly' => [
 	'default' => true,		// T100026
+	'testwiki' => false,	// T320531 Needs to be false if wgVisualEditorDefaultParsoidClient is 'direct' for now.
 	'wikitech' => false,	# Wikitech uses local Parsoid operation
 	'closed' => false,		// T315383
 	'private' => false,		# Private wikis aren't yet supported by RESTBase
