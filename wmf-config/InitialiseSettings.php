@@ -21609,6 +21609,14 @@ return [
 			],
 		],
 	],
+	// Enable mediawiki.edit_attempt on group1 wikis: T312016
+	'+group1' => [
+		'mediawiki.edit_attempt' => [
+			'sample' => [
+				'rate' => 1,
+			],
+		],
+	],
 	// Enable mediawiki.visual_editor_feature_use for testwiki: T309602
 	'+testwiki' => [
 		'mediawiki.visual_editor_feature_use' => [
@@ -21700,9 +21708,16 @@ return [
 		'mediawiki.editattempt_block',
 		'mediawiki.maps_interaction',
 	],
+	'+group0' => [
+		// Enable mediawiki.edit_attempt on group0 wikis: T312016
+		'mediawiki.edit_attempt',
+	],
+	'+group1' => [
+		// Enable mediawiki.edit_attempt on group1 wikis: T312016
+		'mediawiki.edit_attempt',
+	],
 	'+testwiki' => [
 		'mediawiki.web_ui.interactions',
-		'mediawiki.edit_attempt',
 		'mediawiki.visual_editor_feature_use',
 	],
 ],
@@ -25766,6 +25781,7 @@ return [
 	'ukwiki' => 0.2,
 	// T312016:
 	'group0' => 1,
+	'group1' => 1,
 ],
 
 'wgWMESchemaVisualEditorFeatureUseSamplingRate' => [
