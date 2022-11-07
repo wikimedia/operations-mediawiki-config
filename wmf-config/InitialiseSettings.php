@@ -15295,22 +15295,12 @@ return [
 // See T252236
 'wmgEnableCrossOriginSessions' => [
 	'default' => true,
-	'group0' => true,
-	'group1' => true,
-	'group2' => true,
-
-	'loginwiki' => true,
 ],
 
 // Enabling will disable use of insecure 'forceHttps' cookies.
 // See T256095
 'wgForceHTTPS' => [
 	'default' => true,
-	'group0' => true,
-	'group1' => true,
-	'group2' => true,
-
-	'loginwiki' => true,
 ],
 
 # @}
