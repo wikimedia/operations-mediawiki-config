@@ -162,11 +162,6 @@ function wmfGetOverrideSettings() {
 						'rate' => 1,
 					],
 				],
-				'mediawiki.edit_attempt' => [
-					'sample' => [
-						'rate' => 1,
-					],
-				],
 				'mediawiki.visual_editor_feature_use' => [
 					'sample' => [
 						'rate' => 1,
@@ -240,7 +235,6 @@ function wmfGetOverrideSettings() {
 		'wgEventLoggingStreamNames' => [
 			'+wikipedia' => [
 				'mediawiki.web_ui.interactions',
-				'mediawiki.edit_attempt',
 				'mediawiki.visual_editor_feature_use'
 			],
 			'+enwiki' => [

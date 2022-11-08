@@ -21238,7 +21238,7 @@ return [
 			],
 			'sample' => [
 				'unit' => 'pageview',
-				'rate' => 0,
+				'rate' => 1,
 			],
 		],
 
@@ -21613,25 +21613,12 @@ return [
 				'rate' => 1,
 			],
 		],
-		'mediawiki.edit_attempt' => [
-			'sample' => [
-				'rate' => 1,
-			],
-		],
 		// Enable rc0.mediawiki.page_change on group0 wikis: T311129
 		'rc0.mediawiki.page_change' => [
 			'producers' => [
 				'mediawiki_eventbus' => [
 					'enabled' => true
 				],
-			],
-		],
-	],
-	// Enable mediawiki.edit_attempt on group1 wikis: T312016
-	'+group1' => [
-		'mediawiki.edit_attempt' => [
-			'sample' => [
-				'rate' => 1,
 			],
 		],
 	],
@@ -21725,16 +21712,10 @@ return [
 		'mediawiki.accountcreation_block',
 		'mediawiki.editattempt_block',
 		'mediawiki.maps_interaction',
+		'mediawiki.edit_attempt',
 	],
 	'+group0' => [
 		'mediawiki.web_ui.interactions',
-
-		// Enable mediawiki.edit_attempt on group0 wikis: T312016
-		'mediawiki.edit_attempt',
-	],
-	'+group1' => [
-		// Enable mediawiki.edit_attempt on group1 wikis: T312016
-		'mediawiki.edit_attempt',
 	],
 	'+testwiki' => [
 		'mediawiki.visual_editor_feature_use',
@@ -25790,36 +25771,8 @@ return [
 ],
 
 'wgWMESchemaEditAttemptStepSamplingRate' => [
-	'default' => 0.0625,
-	// T309260:
-	'arwiki' => 0.2,
-	'bnwiki' => 0.2,
-	'frwiki' => 0.2,
-	'hewiki' => 0.2,
-	'htwiki' => 0.2,
-	'jawiki' => 0.2,
-	'kowiki' => 0.2,
-	'viwiki' => 0.2,
-	'zhwiki' => 0.2,
-	// T321734:
-	'azwiki' => 0.2,
-	'dewiki' => 0.2,
-	'eswiki' => 0.2,
-	'fawiki' => 0.2,
-	'hiwiki' => 0.2,
-	'idwiki' => 0.2,
-	'itwiki' => 0.2,
-	'nlwiki' => 0.2,
-	'plwiki' => 0.2,
-	'ptwiki' => 0.2,
-	'rowiki' => 0.2,
-	'ruwiki' => 0.2,
-	'thwiki' => 0.2,
-	'trwiki' => 0.2,
-	'ukwiki' => 0.2,
 	// T312016:
-	'group0' => 1,
-	'group1' => 1,
+	'default' => 1,
 ],
 
 'wgWMESchemaVisualEditorFeatureUseSamplingRate' => [
