@@ -22091,6 +22091,10 @@ return [
 
 'wgInterlanguageLinkCodeMap' => [
 	'wikipedia' => [ 'no' => 'nb' ], // T173602
+	'wikidata' => [ 'no' => 'nb' ], // T322696
+	'commonswiki' => [ 'no' => 'nb' ], // T322696
+	'mediawikiwiki' => [ 'no' => 'nb' ], // T322696
+	'specieswiki' => [ 'no' => 'nb' ], // T322696
 ],
 
 'wmgWikibaseCachePrefix' => [
