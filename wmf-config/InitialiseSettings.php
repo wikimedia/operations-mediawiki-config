@@ -25586,6 +25586,7 @@ return [
 	'cawiki' => true, // T316782
 	'dewiki' => true, // T316782
 	'hewiki' => true, // T316782
+	'ruwiki' => true, // T321548
 
 	'dewikivoyage' => true, // T320692
 	'enwikivoyage' => true, // T316782
