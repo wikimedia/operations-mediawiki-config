@@ -19758,7 +19758,6 @@ return [
 	"banwiki" => true,
 	"bat_smgwiki" => true,
 	"be_x_oldwiki" => true,
-	"bgwiki" => true,
 	"biwiki" => true,
 	"bjnwiki" => true,
 	"bowiki" => true,
@@ -19807,7 +19806,6 @@ return [
 	"hakwiki" => true,
 	"hifwiki" => true,
 	"hiwiki" => true,
-	"hrwiki" => true,
 	"hsbwiki" => true,
 	"huwiki" => true,
 	"hywwiki" => true,
@@ -19846,12 +19844,10 @@ return [
 	"lmowiki" => true,
 	"lrcwiki" => true,
 	"ltgwiki" => true,
-	"maiwiki" => true,
 	"map_bmswiki" => true,
 	"mdfwiki" => true,
 	"mhrwiki" => true,
 	"minwiki" => true,
-	"miwiki" => true,
 	"mnwwiki" => true,
 	"mrjwiki" => true,
 	"mwlwiki" => true,
@@ -19890,7 +19886,6 @@ return [
 	"rnwiki" => true,
 	"roa_rupwiki" => true,
 	"roa_tarawiki" => true,
-	"rowiki" => true,
 	"ruewiki" => true,
 	"ruwiki" => true,
 	"satwiki" => true,
@@ -19903,7 +19898,6 @@ return [
 	"simplewiki" => true,
 	"skwiki" => true,
 	"smwiki" => true,
-	"snwiki" => true,
 	"srnwiki" => true,
 	"stqwiki" => true,
 	"stwiki" => true,
@@ -20102,6 +20096,7 @@ return [
 	'bclwiki' => true, // T304828
 	'bmwiki' => true, // T314557
 	'bnwiki' => true, // T271397
+	'bgwiki' => true, // T319175
 	'bhwiki' => true, // T313296
 	'bswiki' => true, // T313300
 	'ckbwiki' => true, // T309384
@@ -20122,6 +20117,7 @@ return [
 	'hawiki' => true, // T290175
 	'hawwiki' => true, // T317289
 	'hewiki' => true, // T304863
+	'hrwiki' => true, // T319175
 	'htwiki' => true, // T313300
 	'hywiki' => true, // T308829
 	'igwiki' => true, // T290175
@@ -20137,6 +20133,8 @@ return [
 	'lnwiki' => true, // T309384
 	'ltwiki' => true, // T308829
 	'lvwiki' => true, // T313300
+	'maiwiki' => true, // T319175
+	'miwiki' => true, // T319175
 	'mkwiki' => true, // T304828
 	'mlwiki' => true, // T285842
 	'mnwiki' => true, // T298237
@@ -20153,9 +20151,11 @@ return [
 	'pawiki' => true, // T304828
 	'pswiki' => true, // T317289
 	'quwiki' => true, // T313296
+	'rowiki' => true, // T319175
 	'sawiki' => true, // T313296
 	'siwiki' => true, // T313300
 	'slwiki' => true, // T308829
+	'snwiki' => true, // T319175
 	'sowiki' => true, // T313300
 	'sqwiki' => true, // T285842
 	'srwiki' => true, // T304858
@@ -20181,7 +20181,7 @@ return [
 
 'wgSectionTranslationTargetLanguages' => [
 	'default' => null,
-	'wikipedia' => [ 'am', 'as', 'ast', 'ay', 'az', 'ba', 'bcl', 'bho', 'bm', 'bn', 'bs', 'ceb', 'ckb', 'cs', 'cy', 'dv', 'ee', 'el', 'eo', 'et', 'eu', 'fa', 'gl', 'gn', 'gom', 'gu', 'ha', 'haw', 'he', 'ht', 'hy', 'ig', 'ilo', 'is', 'jv', 'kg', 'km', 'kn', 'ko', 'ku', 'lg', 'ln', 'lt', 'lv', 'mk', 'ml', 'mn', 'mni', 'mr', 'ms', 'mt', 'my', 'ne', 'nso', 'oc', 'om', 'or', 'pa', 'ps', 'qu', 'sa', 'si', 'sl', 'so', 'sq', 'sr', 'ss', 'su', 'sw', 'ta', 'te', 'th', 'ti', 'tl', 'tn', 'tr', 'ts', 'tw', 'ur', 'uz', 'wo', 'xh', 'yo', 'zu' ],
+	'wikipedia' => [ 'am', 'as', 'ast', 'ay', 'az', 'ba', 'bcl', 'bg', 'bho', 'bm', 'bn', 'bs', 'ceb', 'ckb', 'cs', 'cy', 'dv', 'ee', 'el', 'eo', 'et', 'eu', 'fa', 'gl', 'gn', 'gom', 'gu', 'ha', 'haw', 'he', 'hr', 'ht', 'hy', 'ig', 'ilo', 'is', 'jv', 'kg', 'km', 'kn', 'ko', 'ku', 'lg', 'ln', 'lt', 'lv', 'mai', 'mi', 'mk', 'ml', 'mn', 'mni', 'mr', 'ms', 'mt', 'my', 'ne', 'nso', 'oc', 'om', 'or', 'pa', 'ps', 'qu', 'ro', 'sa', 'si', 'sl', 'sn', 'so', 'sq', 'sr', 'ss', 'su', 'sw', 'ta', 'te', 'th', 'ti', 'tl', 'tn', 'tr', 'ts', 'tw', 'ur', 'uz', 'wo', 'xh', 'yo', 'zu' ],
 	'testwiki' => [ 'af', 'am', 'ar', 'as', 'ast', 'ay', 'az', 'ba', 'bcl', 'bg', 'bho', 'bm', 'bn', 'bs', 'ca', 'ceb', 'ckb', 'co', 'cs', 'cu', 'cy', 'dv', 'ee', 'el', 'eo', 'es', 'et', 'eu', 'fa', 'fr', 'gl', 'gn', 'gom', 'gu', 'ha', 'haw', 'he', 'hi', 'hr', 'ht', 'hy', 'id', 'ig', 'ilo', 'is', 'jv', 'ka', 'kg', 'ki', 'km', 'kn', 'ko', 'ku', 'la', 'lg', 'ln', 'lo', 'lt', 'lv', 'mai', 'mg', 'mi', 'mk', 'ml', 'mn', 'mni', 'mr', 'ms', 'mt', 'my', 'ne', 'nso', 'oc', 'om', 'or', 'pa', 'pap', 'ps', 'pt', 'qu', 'ro', 'ru', 'rw', 'sa', 'sah', 'si', 'sl', 'sn', 'so', 'sq', 'sr', 'ss', 'su', 'sw', 'ta', 'te', 'th', 'ti', 'tl', 'tn', 'tr', 'ts', 'tw', 'uk', 'ur', 'uz', 'vi', 'wo', 'xh', 'yi', 'yo', 'zh', 'zh-yue', 'zu' ],
 ],
 
