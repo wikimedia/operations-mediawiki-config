@@ -217,6 +217,8 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 			$lbFactoryConf = [];
 			wmfApplyEtcdDBConfig( $dbConfigFromEtcd, $lbFactoryConf );
 			$lbFactoryConf['class'] = 'LBFactoryMulti';
+			$lbFactoryConf['sectionLoads']['s11'] = [ 'clouddb2002-dev' => 1 ];
+			$lbFactoryConf['hostsByName']['clouddb2002-dev'] = '10.192.20.6';
 			return $lbFactoryConf;
 		};
 	} else {
