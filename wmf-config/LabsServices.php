@@ -46,7 +46,7 @@ return [
 		'eventgate-analytics' => 'http://deployment-eventgate-4.deployment-prep.eqiad1.wikimedia.cloud:8192',
 		'eventgate-analytics-external' => 'http://deployment-eventgate-4.deployment-prep.eqiad1.wikimedia.cloud:8492',
 		'eventgate-main' => 'http://deployment-eventgate-4.deployment-prep.eqiad1.wikimedia.cloud:8292',
-		'upload' => 'deployment-ms-fe03.deployment-prep.eqiad.wmflabs',
+		'upload' => 'deployment-ms-fe04.deployment-prep.eqiad1.wikimedia.cloud',
 		'cxserver' => 'http://deployment-docker-cxserver01.eqiad.wmflabs:8080',
 
 		'wikifunctions-orchestrator' => 'deployment-docker-wikifunctions01.deployment-prep.eqiad1.wikimedia.cloud:6254',
@@ -64,8 +64,8 @@ return [
 			'host' => '_etcd._tcp.svc.deployment-prep.eqiad1.wikimedia.cloud',
 			'protocol' => 'https',
 		],
-		'mediaSwiftAuth' => 'http://deployment-ms-fe03.deployment-prep.eqiad.wmflabs/auth',
-		'mediaSwiftStore' => 'http://deployment-ms-fe03.deployment-prep.eqiad.wmflabs/v1/AUTH_mw',
+		'mediaSwiftAuth' => 'http://deployment-ms-fe04.deployment-prep.eqiad1.wikimedia.cloud/auth',
+		'mediaSwiftStore' => 'http://deployment-ms-fe04.deployment-prep.eqiad1.wikimedia.cloud/v1/AUTH_mw',
 		'push-notifications' => 'http://deployment-push-notifications01.deployment-prep.eqiad1.wikimedia.cloud:8900',
 		'linkrecommendation' => 'https://api.wikimedia.org/service/linkrecommendation',
 		// Proof-of-concept API for betalabs.
