@@ -16587,12 +16587,14 @@ return [
 'wgVisualEditorDefaultParsoidClient' => [
 	'default' => 'vrs',
 	'testwiki' => 'direct', // T320531
+	'mediawikiwiki' => 'direct', // T320529
 ],
 
 // Whether VisualEditor should bypass the MediaWiki layer and contact RESTBase directly for speed
 'wmgVisualEditorAccessRestbaseDirectly' => [
 	'default' => true,		// T100026
 	'testwiki' => false,	// T320531 Needs to be false if wgVisualEditorDefaultParsoidClient is 'direct' for now.
+	'mediawikiwiki' => false,	// T320531 Needs to be false if wgVisualEditorDefaultParsoidClient is 'direct' for now.
 	'wikitech' => false,	# Wikitech uses local Parsoid operation
 	'closed' => false,		// T315383
 	'private' => false,		# Private wikis aren't yet supported by RESTBase
@@ -17333,6 +17335,12 @@ return [
 		'StashDuration' => 24 * 60 * 60, // 24h in production, VE will fail to save after this time.
 		'CacheThresholdTime' => 0.0, // 0 means cache all
 		'WarmParsoidParserCache' => true, // T320535: enable cache warming
+	],
+	'mediawikiwiki' => [
+		'StashType' => null, // defaults to using MainStash
+		'StashDuration' => 24 * 60 * 60, // 24h in production, VE will fail to save after this time.
+		'CacheThresholdTime' => 0.0, // 0 means cache all
+		'WarmParsoidParserCache' => true, // T320534: enable cache warming
 	],
 ],
 
