@@ -378,6 +378,7 @@ function wmfGetOverrideSettings() {
 				'torblock' => 'debug',
 				'TranslationNotifications.Jobs' => 'debug',
 				'Translate.Jobs' => 'debug',
+				'Translate.MessageBundle' => 'debug',
 				'Translate' => 'debug',
 				'UpdateRepo' => 'debug',
 				'updateTranstagOnNullRevisions' => 'debug',
@@ -521,6 +522,10 @@ function wmfGetOverrideSettings() {
 			'default' => 1, // T294738
 		],
 
+		'wgWMESchemaVisualEditorFeatureUseSamplingRate' => [
+			'default' => 1,
+		],
+
 		'wgMFAmcOutreach' => [
 			'default' => true
 		],
@@ -615,21 +620,26 @@ function wmfGetOverrideSettings() {
 			'default' => 'mobile',
 		],
 
-		// Whether to configure RESTBase as a Virtual REST Service
-		// in MW Core. If false, VE will call parsoid directly in PHP.
-		// We should have both modes in the Beta cluster, as long as we
-		// support both in prod.
-		'wmgUseRestbaseVRS' => [
+		// Tell VisualEditor how to talk to Parsoid.
+		// If set to 'vrs' and $wmgUseRESTbaseVRS is true,
+		// VisualEditor will talk to Parsoid over HTTP,
+		// probably to RESTbase but it just might be talking
+		// directly to the Parsoid API.
+		'wgVisualEditorDefaultParsoidClient' => [
+			'default' => 'vrs',
+			'dewiki' => 'direct', // T320531
+		],
+
+		// Needs to be false for wikis that have wgVisualEditorDefaultParsoidClient = 'direct'.
+		// This shouldn't be needed anyomore once we sort out the logic for $wgVisualEditorAllowLossySwitching.
+		'wmgVisualEditorAccessRestbaseDirectly' => [
 			'default' => true,
 			'dewiki' => false, // T320531
 		],
 
-		// T320703: Whether $wmgUseRestbaseVRS is false, $wmgVisualEditorAccessRestbaseDirectly
-		// should be false as well. Otherwise, VE will load HTML from RESTbase, but
-		// will save via MW core code, which will fail because the ETag does not match.
-		'wmgVisualEditorAccessRestbaseDirectly' => [
+		// Enable VE-based visual diffs on history pages
+		'wgVisualEditorEnableDiffPage' => [
 			'default' => true,
-			'dewiki' => false, // T320531
 		],
 
 		'wmgUseRSSExtension' => [
@@ -2216,8 +2226,8 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 		// T319240
-		'wgSpecialContributeSkinsDisabled' => [
-			'default' => [ "modern", "cologneblue", "monobook", "timeless", "vector", "vector-2022" ],
+		'wgSpecialContributeSkinsEnabled' => [
+			'default' => [ "minerva" ],
 		],
 		'-wgSpecialSearchFormOptions' => [
 			'wikidatawiki' => [ 'showDescriptions' => true ],
@@ -2318,7 +2328,6 @@ function wmfGetOverrideSettings() {
 		],
 
 		'-wgDiscussionToolsABTest' => [
-			'enwiki' => 'topicsubscription', // T304030
 		],
 
 		'-wgDiscussionToolsEnableMobile' => [
