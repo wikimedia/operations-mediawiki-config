@@ -22350,6 +22350,13 @@ return [
 				'propertyIds' => [ 'P2302' ],
 			],
 		],
+		'lexeme' => [
+			'statements' => null,
+			'identifiers' => [
+				'type' => 'dataType',
+				'dataTypes' => [ 'external-id' ],
+			],
+		],
 	],
 	'testwikidatawiki' => [
 		'item' => [
@@ -22364,6 +22371,13 @@ return [
 			'constraints' => [
 				'type' => 'propertySet',
 				'propertyIds' => [ 'P400' ],
+			],
+		],
+		'lexeme' => [
+			'statements' => null,
+			'identifiers' => [
+				'type' => 'dataType',
+				'dataTypes' => [ 'external-id' ],
 			],
 		],
 	],
