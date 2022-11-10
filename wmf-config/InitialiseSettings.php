@@ -26515,6 +26515,10 @@ return [
 	'default' => true,
 ],
 
+'wgGERefreshUserImpactDataMaintenanceScriptEnabled' => [
+	'default' => false,
+],
+
 'wgGEHomepageSuggestedEditsEnabled' => [
 	'default' => true,
 	'frwiktionary' => false,
