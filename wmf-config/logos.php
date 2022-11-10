@@ -370,7 +370,7 @@ return [
 	'zh_classicalwiki' => '/static/images/project-logos/zh_classicalwiki.png', // T177165, T259006
 	'zh_min_nanwiki' => '/static/images/project-logos/zh_min_nanwiki.png',
 	'zh_yuewiki' => '/static/images/project-logos/zh_yuewiki.png',
-	'zhwiki' => '/static/images/project-logos/zhwiki-20.png', // T276694, T320859
+	'zhwiki' => '/static/images/project-logos/zhwiki.png', // T276694
 	'zuwiki' => '/static/images/project-logos/zuwiki.png', // T233424
 
 	// Wiktionary
@@ -1189,7 +1189,7 @@ return [
 	'zh_classicalwiki' => '/static/images/project-logos/zh_classicalwiki-1.5x.png', // T177165, T259006
 	'zh_min_nanwiki' => '/static/images/project-logos/zh_min_nanwiki-1.5x.png', // T150618
 	'zh_yuewiki' => '/static/images/project-logos/zh_yuewiki-1.5x.png', // T150618
-	'zhwiki' => '/static/images/project-logos/zhwiki-20-1.5x.png', // T276694, T320859
+	'zhwiki' => '/static/images/project-logos/zhwiki-1.5x.png', // T276694
 	'zuwiki' => '/static/images/project-logos/zuwiki-1.5x.png', // T233424
 
 	// Wiktionary
@@ -1785,7 +1785,7 @@ return [
 	'zh_classicalwiki' => '/static/images/project-logos/zh_classicalwiki-2x.png', // T177165, T259006
 	'zh_min_nanwiki' => '/static/images/project-logos/zh_min_nanwiki-2x.png', // T150618
 	'zh_yuewiki' => '/static/images/project-logos/zh_yuewiki-2x.png', // T150618
-	'zhwiki' => '/static/images/project-logos/zhwiki-20-2x.png', // T276694, T320859
+	'zhwiki' => '/static/images/project-logos/zhwiki-2x.png', // T276694
 	'zuwiki' => '/static/images/project-logos/zuwiki-2x.png', // T233424
 
 	// Wiktionary
@@ -5120,7 +5120,6 @@ return [
 	'wikimedia' => '/static/images/icons/wikimedia.svg',
 
 	// Wikipedia
-	'zhwiki' => '/static/images/icons/zhwiki-20.svg', // T320859
 
 	// Wiktionary
 	'angwiktionary' => null,
@@ -5254,9 +5253,9 @@ return [
 	// Wikipedia
 	'zhwiki' => [
 		'zh-hans' => [ // T261153, T273578, T308620
-			'1x' => '/static/images/project-logos/zhwiki-20-hans.png',
-			'1.5x' => '/static/images/project-logos/zhwiki-20-hans-1.5x.png',
-			'2x' => '/static/images/project-logos/zhwiki-20-hans-2x.png',
+			'1x' => '/static/images/project-logos/zhwiki-hans.png',
+			'1.5x' => '/static/images/project-logos/zhwiki-hans-1.5x.png',
+			'2x' => '/static/images/project-logos/zhwiki-hans-2x.png',
 			'wordmark' => [
 				'src' => '/static/images/mobile/copyright/wikipedia-wordmark-zh-hans.svg',
 				'width' => 105,
@@ -5269,9 +5268,9 @@ return [
 			],
 		],
 		'zh-cn' => [ // T261153, T273578, T308620
-			'1x' => '/static/images/project-logos/zhwiki-20-hans.png',
-			'1.5x' => '/static/images/project-logos/zhwiki-20-hans-1.5x.png',
-			'2x' => '/static/images/project-logos/zhwiki-20-hans-2x.png',
+			'1x' => '/static/images/project-logos/zhwiki-hans.png',
+			'1.5x' => '/static/images/project-logos/zhwiki-hans-1.5x.png',
+			'2x' => '/static/images/project-logos/zhwiki-hans-2x.png',
 			'wordmark' => [
 				'src' => '/static/images/mobile/copyright/wikipedia-wordmark-zh-hans.svg',
 				'width' => 105,
@@ -5284,9 +5283,9 @@ return [
 			],
 		],
 		'zh-my' => [ // T261153, T273578, T308620
-			'1x' => '/static/images/project-logos/zhwiki-20-hans.png',
-			'1.5x' => '/static/images/project-logos/zhwiki-20-hans-1.5x.png',
-			'2x' => '/static/images/project-logos/zhwiki-20-hans-2x.png',
+			'1x' => '/static/images/project-logos/zhwiki-hans.png',
+			'1.5x' => '/static/images/project-logos/zhwiki-hans-1.5x.png',
+			'2x' => '/static/images/project-logos/zhwiki-hans-2x.png',
 			'wordmark' => [
 				'src' => '/static/images/mobile/copyright/wikipedia-wordmark-zh-hans.svg',
 				'width' => 105,
@@ -5299,9 +5298,9 @@ return [
 			],
 		],
 		'zh-sg' => [ // T261153, T273578, T308620
-			'1x' => '/static/images/project-logos/zhwiki-20-hans.png',
-			'1.5x' => '/static/images/project-logos/zhwiki-20-hans-1.5x.png',
-			'2x' => '/static/images/project-logos/zhwiki-20-hans-2x.png',
+			'1x' => '/static/images/project-logos/zhwiki-hans.png',
+			'1.5x' => '/static/images/project-logos/zhwiki-hans-1.5x.png',
+			'2x' => '/static/images/project-logos/zhwiki-hans-2x.png',
 			'wordmark' => [
 				'src' => '/static/images/mobile/copyright/wikipedia-wordmark-zh-hans.svg',
 				'width' => 105,

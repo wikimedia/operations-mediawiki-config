@@ -1797,20 +1797,14 @@ Wikipedia:
         local_tagline: true
     zhwiki:
         commons: 'File:Wikipedia-logo-v2-zh.svg'
-        selected: zhwiki-20
         variants:
             zhwiki-hans:
                 commons: 'File:Wikipedia-logo-v2-zh-hans.svg'
                 commons_wordmark: 'File:Wikipedia-wordmark-zh-hans.svg'
                 commons_tagline: 'File:Wikipedia-tagline-zh-hans.svg'
-            zhwiki-20:
-                commons: 'File:Wikipedia-logo-zh-20zhWP-魔琴-hant.svg'
-                commons_icon: 'File:Wikipedia-logo-zh-20zhWP-魔琴-wikiball.svg'
-            zhwiki-20-hans:
-                commons: 'File:Wikipedia-logo-zh-20zhWP-魔琴-hans.svg'
         lang_variants:
             zh-hans:
-                selected_logo: zhwiki-20-hans
+                selected_logo: zhwiki-hans
                 selected_wordmark: zhwiki-hans
                 selected_tagline: zhwiki-hans
             zh-cn:
@@ -1819,14 +1813,13 @@ Wikipedia:
                 selected_lang: zh-hans
             zh-sg:
                 selected_lang: zh-hans
-        comment: 'T276694, T320859'
-        comment_1_5x: 'T276694, T320859'
-        comment_2x: 'T276694, T320859'
+        comment: 'T276694'
+        comment_1_5x: 'T276694'
+        comment_2x: 'T276694'
         commons_wordmark: 'File:Wikipedia-wordmark-zh.svg'
         comment_wordmark: 'T258552, T260908'
         commons_tagline: 'File:Wikipedia-tagline-zh.svg'
         comment_tagline: 'T258552, T260908'
-        comment_icon: T320859
         comment_lang_variants: 'T261153, T273578, T308620'
     zuwiki:
         comment: T233424
