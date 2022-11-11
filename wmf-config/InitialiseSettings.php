@@ -27028,10 +27028,6 @@ return [
 	'default' => true,
 ],
 
-'wgGEMentorDashboardUseVue' => [
-	'default' => true,
-],
-
 'wgGEMentorDashboardDeploymentMode' => [
 	// wikis only receive stable modules
 	'default' => 'stable',
