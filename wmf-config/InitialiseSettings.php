@@ -19662,6 +19662,10 @@ return [
 	'testwiki' => true,
 ],
 
+'wgDiscussionToolsLegacyHeadingMarkup' => [
+	'default' => true, // T314714
+],
+
 'wgDiscussionToolsShowFeedbackLinks' => [
 	'default' => true, // T322494
 ],

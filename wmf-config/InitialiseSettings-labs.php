@@ -2373,6 +2373,10 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
+		'-wgDiscussionToolsLegacyHeadingMarkup' => [
+			'default' => false,
+		],
+
 		'wgWatchlistExpiry' => [
 			'default' => true,
 		],
