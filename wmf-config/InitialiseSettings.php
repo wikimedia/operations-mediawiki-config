@@ -19692,6 +19692,7 @@ return [
 
 'wgDiscussionToolsLegacyHeadingMarkup' => [
 	'default' => true, // T314714
+	'plwiki' => false, // T314714
 ],
 
 'wgDiscussionToolsShowFeedbackLinks' => [
