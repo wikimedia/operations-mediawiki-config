@@ -584,6 +584,7 @@ return [
 	'thwiktionary' => 'Asia/Bangkok',
 	'thwikiquote' => 'Asia/Bangkok',
 	'tlwikiquote' => 'Asia/Manila',
+	'tnwiki' => 'Africa/Gaborone', // T318208
 	'trwikimedia' => 'Europe/Istanbul',
 	'trvwiki' => 'Asia/Taipei',
 	'tyvwiki' => 'Asia/Krasnoyarsk',
