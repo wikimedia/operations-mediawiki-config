@@ -9065,6 +9065,11 @@ return [
 		],
 		'autoreview' => [ 'autopatrol' => true ], // T144817
 	],
+	'+fiwiktionary' => [
+		'rollbacker' => [ // T323063
+			'rollback' => true,
+		],
+	],
 	'+foundationwiki' => [
 		'*' => [
 			'edit' => false,
@@ -11530,6 +11535,11 @@ return [
 			'accountcreator', // T149986
 		],
 	],
+	'+fiwiktionary' => [
+		'sysop' => [
+			'rollbacker', // T323063
+		],
+	],
 	'+foundationwiki' => [
 		'sysop' => [
 			'flood',
@@ -12881,6 +12891,11 @@ return [
 	'+fiwiki' => [
 		'bureaucrat' => [ 'sysop', 'bureaucrat', 'arbcom' ],
 		'sysop' => [ 'rollbacker', 'accountcreator' ], // T149986
+	],
+	'+fiwiktionary' => [
+		'sysop' => [
+			'rollbacker', // T323063
+		],
 	],
 	'+fiwikimedia' => [
 		'bureaucrat' => [ 'sysop', 'bureaucrat' ],
