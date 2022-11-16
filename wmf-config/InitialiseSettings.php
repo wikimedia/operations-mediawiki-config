@@ -26044,6 +26044,28 @@ return [
 'wgReadingListsCentralWiki' => [
 	'default' => 'metawiki',
 ],
+'wgReadingListsWeb' => [
+	'default' => false,
+	'metawiki' => true,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'arwiki' => true,
+	'arzwiki' => true,
+	'bnwiki' => true,
+	'fawiki' => true,
+	'hiwiki' => true,
+	'newiki' => true,
+	'siwiki' => true,
+	'swwiki' => true,
+	'tewiki' => true,
+	'urwiki' => true,
+],
+'wgReadingListsAnonymizedPreviews' => [
+	'default' => true,
+],
+'wgReadingListsWebAuthenticatedPreviews' => [
+	'default' => false,
+],
 // T183665
 'wgMinervaAlwaysShowLanguageButton' => [
 	'default' => true,
