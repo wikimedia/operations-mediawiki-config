@@ -12,7 +12,7 @@ return [
 		'udp2log' => 'deployment-mwlog01.deployment-prep.eqiad1.wikimedia.cloud:8420',
 		'xenon' => 'deployment-mwlog01.deployment-prep.eqiad1.wikimedia.cloud',
 		'xhgui-pdo' => 'mysql:host=deployment-mdb01.deployment-prep.eqiad.wmflabs;dbname=xhgui',
-		'statsd' => 'cloudmetrics1001.eqiad.wmnet',
+		'statsd' => 'prometheus-labmon.eqiad.wmnet',
 		'search-chi' => [
 			// These MUST match the installed SSL certs
 			'deployment-elastic09.deployment-prep.eqiad1.wikimedia.cloud',
