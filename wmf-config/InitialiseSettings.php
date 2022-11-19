@@ -17360,6 +17360,17 @@ return [
 	],
 ],
 
+// Control the probability with which Parsoid's /{domain}/v3/page/html endpoint
+// writes to the parser cache. This endpoint is hit by RESTbase when pre-populating
+// its cache after a page is edited. Setting this to 1 cause all edits to trigger
+// a parser cache write, putting full pressure on the parser cache.
+// This needs to be enabled gradually. See T322672.
+'wgTemporaryParsoidHandlerParserCacheWriteRatio' => [
+	'default' => 0.0,
+	'testwiki' => 1.0,
+	'mediawikiwiki' => 1.0,
+],
+
 'wgLanguageConverterCacheType' => [
 	// For CLI, this is effectively CACHE_NONE
 	'default' => CACHE_ACCEL,
