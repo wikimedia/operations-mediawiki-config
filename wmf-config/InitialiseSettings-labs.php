@@ -1519,16 +1519,20 @@ function wmfGetOverrideSettings() {
 			// Explicitly disabled on non-CentralAuth wikis in CommonSettings.php
 			'default' => true,
 		],
-		'wgPageTriageDraftNamespaceId' => [
-			'enwiki' => 118,
+		'wmgEnablePageTriage' => [
+			'zhwiki' => true, // T323378
 		],
-		'wgPageTriageEnableOresFilters' => [
-			'default' => false,
-			'enwiki' => true,
+		'wgPageTriageEnableCurationToolbar' => [
+			'zhwiki' => true, // T323378
+		],
+		'wgPageTriageDraftNamespaceId' => [
+			'zhwiki' => 118, // T323378
 		],
 		'wgPageTriageEnableCopyvio' => [
-			'default' => false,
-			'enwiki' => true,
+			'zhwiki' => true, // T323378
+		],
+		'wgPageTriageEnableEnglishWikipediaFeatures' => [
+			'zhwiki' => false, // T323378
 		],
 		'-wmgWikibaseCachePrefix' => [
 			'default' => 'wikidatawiki',
