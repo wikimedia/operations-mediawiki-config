@@ -2,6 +2,7 @@
 """
 Eases management of Wikimedia site logos
 Copyright (C) 2021 Kunal Mehta <legoktm@member.fsf.org>
+Copyright (C) 2022 Stang <stang@toolforge.org>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -25,7 +26,7 @@ import os
 from math import ceil
 
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Tuple
 
 import requests
 import yaml
@@ -62,8 +63,10 @@ def validate(data: dict):
             if info is None:
                 # default values
                 info = {}
-            if "commons" in info:
-                validate_commons(site, info["commons"])
+            for c_type in ["", "wordmark", "tagline", "icon"]:
+                key = f"commons{'' if c_type == '' else f'_{c_type}'}"
+                if key in info:
+                    validate_commons(site, info[key])
             if "variants" in info:
                 for variant_name, variant_info in info["variants"].items():
                     if not variant_name.startswith(site + "-"):
@@ -84,18 +87,25 @@ def validate(data: dict):
                 filename = f"{selected}{path_size}.png"
                 if not (project_logos / filename).exists():
                     raise RuntimeError(f"{site}: {filename} doesn't exist!")
-            for svg_type in ["wordmark", "tagline"]:
-                if f"commons_{svg_type}" in info:
-                    validate_commons(site, info[f"commons_{svg_type}"])
-                if f"commons_{svg_type}" in info or f"selected_{svg_type}" in info:
+            for svg_type in ["wordmark", "tagline", "icon"]:
+                if f"commons_{svg_type}" in info or f"selected_{svg_type}" in info\
+                        or (f"local_{svg_type}" in info and info[f"local_{svg_type}"]):
                     selected = info.get(f"selected_{svg_type}", site)
-                    proj, lang = transform_name(data, selected)
-                    if lang is None:
-                        name = f"{proj}-{svg_type}"
+                    _project_svgs = project_svgs
+                    if svg_type == "icon":
+                        ext = "svg"
+                        if f"no_svg_{svg_type}" in info and info[f"no_svg_{svg_type}"]:
+                            ext = "png"
+                        filename = f"{selected}.{ext}"
+                        _project_svgs = project_icons
                     else:
-                        name = f"{proj}-{svg_type}-{lang}"
-                    filename = f"{name}.svg"
-                    if not (project_svgs / filename).exists():
+                        proj, lang = transform_name(data, selected)
+                        if lang is None:
+                            name = f"{proj}-{svg_type}"
+                        else:
+                            name = f"{proj}-{svg_type}-{lang}"
+                        filename = f"{name}.svg"
+                    if not (_project_svgs / filename).exists():
                         raise RuntimeError(f"Error: {filename} doesn't exist!")
 
 
@@ -237,7 +247,7 @@ def download_svg(commons: str, name: str, svg_type: str, data: dict, variant=Non
     optimize_svg(filename, _project_svgs)
 
 
-def make_block(size: str, data: dict):
+def make_block(size: str, data: dict) -> str:
     if size == "1x":
         path_size = ""
         comment_key = "comment"
@@ -270,7 +280,7 @@ def make_block(size: str, data: dict):
     return text
 
 
-def make_block2(svg_type: str, data: dict):
+def make_block2(svg_type: str, data: dict) -> str:
     commons_key = f"commons_{svg_type}"
     local_key = f"local_{svg_type}"
     comment_key = f"comment_{svg_type}"
@@ -349,7 +359,7 @@ def make_block2(svg_type: str, data: dict):
     return text
 
 
-def make_block_lang_variant(data: dict):
+def make_block_lang_variant(data: dict) -> str:
     text = "'wmgSiteLogoVariants' => [\n"
     for group, sites in data.items():
         text += f"\t// {group}\n"
@@ -378,7 +388,7 @@ def make_block_lang_variant(data: dict):
     return text
 
 
-def make_block_lang_single(site: str, lang: str, lang_info: dict, data: dict):
+def make_block_lang_single(site: str, lang: Optional[str], lang_info: dict, data: dict) -> str:
     text = ""
     if "selected_logo" in lang_info:
         selected = lang_info["selected_logo"]
@@ -511,7 +521,7 @@ def update(data: dict, wiki: str, variant: Optional[str]):
     generate(data)
 
 
-def transform_name(data: dict, name: str):
+def transform_name(data: dict, name: str) -> Tuple[str, Optional[str]]:
     # "zhwikiquote" -> ("wikiquote", "zh"), for wordmark/tagline file naming
     projects = list(data["Projects"].keys())
     projects.extend(["wiki", "wikimedia"])
@@ -529,7 +539,7 @@ def transform_name(data: dict, name: str):
     raise RuntimeError(f"Cannot find project for {name}")
 
 
-def get_svg_size(filename: str, dir=project_svgs):
+def get_svg_size(filename: str, dir=project_svgs) -> Tuple[float, float]:
     with open(dir / filename, "r") as f:
         svg = f.read()
         attr = ET.fromstring(svg).attrib
@@ -540,12 +550,12 @@ def get_svg_size(filename: str, dir=project_svgs):
             raise RuntimeError(f"{filename}: file doesn't have width, height or viewBox")
         # Some optimized svg files don't have "width" and "height" attributes,
         # so extract them from viewBox and store them for future use
-        if width is None or height is None or \
-                not width.replace('.','',1).isdigit() or not height.replace('.','',1).isdigit():
+        if viewbox and (width is None or height is None or \
+                not width.replace('.','',1).isdigit() or not height.replace('.','',1).isdigit()):
                 # some svg files has "width" and "height" with unit "pt" or "mm"
             width, height = viewbox.split(" ")[2:]
 
-        return float(width), float(height)
+        return float(width), float(height) # type: ignore
 
 
 def resize_svg(filename: str, width: str, height: str, dir=project_svgs):
