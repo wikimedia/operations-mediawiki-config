@@ -531,6 +531,7 @@ function wmfGetOverrideSettings() {
 		'wgMobileUrlTemplate' => [
 			'default' => '%h0.m.%h1.%h2.%h3.%h4',
 			'wikidatawiki' => 'm.%h0.%h1.%h2.%h3', // T87440
+			'wikifunctionswiki' => 'm.%h0.%h1.%h2.%h3', // T314891
 		],
 
 		# Do not run any A/B tests on beta cluster (T206179)
