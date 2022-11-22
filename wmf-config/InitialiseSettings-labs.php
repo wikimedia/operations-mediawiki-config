@@ -1535,9 +1535,6 @@ function wmfGetOverrideSettings() {
 			'default' => 'wikidatawiki',
 			'commonswiki' => 'commonswiki',
 		],
-		'wgGEAllowAccessToNewImpactModule' => [
-			'default' => true,
-		],
 		'wgGEUseNewImpactModule' => [
 			'default' => true,
 		],
