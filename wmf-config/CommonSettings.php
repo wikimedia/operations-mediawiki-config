@@ -4232,6 +4232,9 @@ if ( $wmgUseSearchVue ) {
 if ( $wmgUseCampaignEvents ) {
 	wfLoadExtension( 'CampaignEvents' );
 	$wgCampaignEventsDatabaseCluster = 'extension1';
+	if ( $wgDBname === 'metawiki' ) {
+		$wgCampaignEventsDatabaseName = 'wikishared';
+	}
 }
 
 if ( $wmgUseStopForumSpam ) {
