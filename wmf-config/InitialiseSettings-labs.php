@@ -2448,6 +2448,9 @@ function wmfGetOverrideSettings() {
 		'wgFavicon' => [
 			'wikifunctionswiki' => '/static/favicon/wikifunctions.ico',
 		],
+		'wmgCentralAuthLoginIcon' => [
+			'wikifunctionswiki' => '/srv/mediawiki/static/images/sul/wikifunctions.png',
+		],
 
 		// (T289315) Early roll-out to Beta Cluster only
 		'wmgUseWikiLambda' => [
