@@ -27997,12 +27997,13 @@ return [
 	'idwiki' => '/wiki/Wikipedia:Kebijakan_penggunaan_gambar', // T292310
 ],
 
-// Test wikis and officewiki only (T318592)
+// Test wikis and officewiki (T318592), and meta (T322745)
 'wmgUseCampaignEvents' => [
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
 	'officewiki' => true,
+	'metawiki' => true,
 ],
 
 // T309900
