@@ -5440,6 +5440,53 @@ return [
 	// Chapter and local user group wikis
 
 	// Special wikis
+	'wikidatawiki' => [
+		'ar' => [ // T323734
+			'1x' => '/static/images/project-logos/wikidatawiki-ar.png',
+			'1.5x' => '/static/images/project-logos/wikidatawiki-ar-1.5x.png',
+			'2x' => '/static/images/project-logos/wikidatawiki-ar-2x.png',
+		],
+		'bn' => [ // T323734
+			'1x' => '/static/images/project-logos/wikidatawiki-bn.png',
+			'1.5x' => '/static/images/project-logos/wikidatawiki-bn-1.5x.png',
+			'2x' => '/static/images/project-logos/wikidatawiki-bn-2x.png',
+		],
+		'eo' => [ // T323734
+			'1x' => '/static/images/project-logos/wikidatawiki-eo.png',
+			'1.5x' => '/static/images/project-logos/wikidatawiki-eo-1.5x.png',
+			'2x' => '/static/images/project-logos/wikidatawiki-eo-2x.png',
+		],
+		'lfn' => [ // T323734
+			'1x' => '/static/images/project-logos/wikidatawiki-lfn.png',
+			'1.5x' => '/static/images/project-logos/wikidatawiki-lfn-1.5x.png',
+			'2x' => '/static/images/project-logos/wikidatawiki-lfn-2x.png',
+		],
+		'pa' => [ // T323734
+			'1x' => '/static/images/project-logos/wikidatawiki-pa.png',
+			'1.5x' => '/static/images/project-logos/wikidatawiki-pa-1.5x.png',
+			'2x' => '/static/images/project-logos/wikidatawiki-pa-2x.png',
+		],
+		'pnb' => [ // T323734
+			'1x' => '/static/images/project-logos/wikidatawiki-pnb.png',
+			'1.5x' => '/static/images/project-logos/wikidatawiki-pnb-1.5x.png',
+			'2x' => '/static/images/project-logos/wikidatawiki-pnb-2x.png',
+		],
+		'sk' => [ // T323734
+			'1x' => '/static/images/project-logos/wikidatawiki-sk.png',
+			'1.5x' => '/static/images/project-logos/wikidatawiki-sk-1.5x.png',
+			'2x' => '/static/images/project-logos/wikidatawiki-sk-2x.png',
+		],
+		'uk' => [ // T323734
+			'1x' => '/static/images/project-logos/wikidatawiki-uk.png',
+			'1.5x' => '/static/images/project-logos/wikidatawiki-uk-1.5x.png',
+			'2x' => '/static/images/project-logos/wikidatawiki-uk-2x.png',
+		],
+		'ur' => [ // T323734
+			'1x' => '/static/images/project-logos/wikidatawiki-ur.png',
+			'1.5x' => '/static/images/project-logos/wikidatawiki-ur-1.5x.png',
+			'2x' => '/static/images/project-logos/wikidatawiki-ur-2x.png',
+		],
+	],
 
 ],
 
