@@ -2627,7 +2627,7 @@ return [
 	'kywiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ky.svg',
 		'width' => 120,
-		'height' => 19,
+		'height' => 21,
 	],
 	'ladwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-lad.svg',
@@ -4198,7 +4198,7 @@ return [
 	'kywiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ky.svg',
 		'width' => 120,
-		'height' => 11,
+		'height' => 13,
 	],
 	'ladwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-lad.svg',
@@ -4282,8 +4282,8 @@ return [
 	],
 	'lvwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-lv.svg',
-		'width' => 118,
-		'height' => 13,
+		'width' => 120,
+		'height' => 15,
 	],
 	'madwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-mad.svg',
