@@ -1575,11 +1575,6 @@ function wmfGetOverrideSettings() {
 		'wgGEHomepageDefaultVariant' => [
 			'default' => 'control',
 		],
-		'wgGEHomepageNewAccountVariants' => [
-			'default' => [
-				'control' => 100,
-			],
-		],
 		'wgGEHomepageNewAccountVariantsByPlatform' => [
 			'default' => [
 				'control' => [
