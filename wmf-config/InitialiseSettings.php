@@ -26966,14 +26966,6 @@ return [
 	'cswiki' => 'beta',
 ],
 
-'wgGEMentorDashboardDiscoveryEnabled' => [
-	'default' => true,
-],
-
-'wgGEMentorDashboardBackendEnabled' => [
-	'default' => true,
-],
-
 'wgGERecentChangesUnstarredMenteesFilterEnabled' => [
 	'default' => true,
 ],
