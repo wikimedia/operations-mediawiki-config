@@ -26894,6 +26894,46 @@ return [
 			'desktop' => 100,
 		],
 	],
+	'arwiki' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+		'oldimpact' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+	],
+	'bnwiki' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+		'oldimpact' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+	],
+	'cswiki' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+		'oldimpact' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+	],
+	'eswiki' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+		'oldimpact' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+	],
 ],
 
 'wgGEMentorProvider' => [

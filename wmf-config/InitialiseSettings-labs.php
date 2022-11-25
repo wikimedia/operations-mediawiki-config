@@ -1572,9 +1572,13 @@ function wmfGetOverrideSettings() {
 		'wgGEHomepageNewAccountVariantsByPlatform' => [
 			'default' => [
 				'control' => [
-					'mobile' => 100,
-					'desktop' => 100,
+					'mobile' => 50,
+					'desktop' => 50,
 				],
+				'oldimpact' => [
+					'mobile' => 50,
+					'desktop' => 50
+				]
 			]
 		],
 		'wgGELinkRecommendationServiceTimeout' => [
