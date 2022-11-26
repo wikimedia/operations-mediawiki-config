@@ -15787,6 +15787,7 @@ return [
 
 'wmgUseContactPage' => [
 	'default' => false,
+	'enwiki' => true,
 	'foundationwiki' => true,
 	'metawiki' => true,
 	'nlwiki' => true,

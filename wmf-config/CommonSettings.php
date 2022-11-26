@@ -1505,6 +1505,9 @@ if ( $wmgUseContactPage ) {
 			]
 		];
 	}
+	if ( $wgDBname === 'enwiki' ) {
+		include __DIR__ . '/EnWikiContactPages.php';
+	}
 }
 
 if ( $wmgUseSecurePoll ) {
