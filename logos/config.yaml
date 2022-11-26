@@ -3342,7 +3342,11 @@ Wikivoyage:
     sewikimedia:
         no_1_5x: true
         no_2x: true
-    trwikimedia: null
+    trwikimedia:
+        commons: 'File:Wikimedia CUG Turkey Logo in Turkish.svg'
+        comment: T323850
+        comment_1_5x: T323850
+        comment_2x: T323850
     uawikimedia:
         no_1_5x: true
         no_2x: true

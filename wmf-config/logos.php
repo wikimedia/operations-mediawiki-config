@@ -799,7 +799,7 @@ return [
 	'rswikimedia' => '/static/images/project-logos/rswikimedia.png',
 	'ruwikimedia' => '/static/images/project-logos/ruwikimedia.png',
 	'sewikimedia' => '/static/images/project-logos/sewikimedia.png',
-	'trwikimedia' => '/static/images/project-logos/trwikimedia.png',
+	'trwikimedia' => '/static/images/project-logos/trwikimedia.png', // T323850
 	'uawikimedia' => '/static/images/project-logos/uawikimedia.png',
 	'wbwikimedia' => '/static/images/project-logos/wbwikimedia.png', // T162510
 
@@ -1439,7 +1439,7 @@ return [
 	'ptwikimedia' => '/static/images/project-logos/ptwikimedia-1.5x.png', // T126832
 	'punjabiwikimedia' => '/static/images/project-logos/punjabiwikimedia-1.5x.png',
 	'romdwikimedia' => '/static/images/project-logos/romdwikimedia-1.5x.png', // T187184
-	'trwikimedia' => '/static/images/project-logos/trwikimedia-1.5x.png',
+	'trwikimedia' => '/static/images/project-logos/trwikimedia-1.5x.png', // T323850
 	'wbwikimedia' => '/static/images/project-logos/wbwikimedia-1.5x.png', // T162510
 
 	// Special wikis
@@ -2035,7 +2035,7 @@ return [
 	'ptwikimedia' => '/static/images/project-logos/ptwikimedia-2x.png', // T126832
 	'punjabiwikimedia' => '/static/images/project-logos/punjabiwikimedia-2x.png',
 	'romdwikimedia' => '/static/images/project-logos/romdwikimedia-2x.png', // T187184
-	'trwikimedia' => '/static/images/project-logos/trwikimedia-2x.png',
+	'trwikimedia' => '/static/images/project-logos/trwikimedia-2x.png', // T323850
 	'wbwikimedia' => '/static/images/project-logos/wbwikimedia-2x.png', // T162510
 
 	// Special wikis
