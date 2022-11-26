@@ -3601,6 +3601,8 @@ Wikivoyage:
                 commons: 'File:Wikidata-logo-eo.svg'
             wikidatawiki-lfn:
                 commons: 'File:Wikidata-logo-lfn.svg'
+            wikidatawiki-ne:
+                commons: 'File:Wikidata-logo-ne.svg'
             wikidatawiki-pa:
                 commons: 'File:Wikidata-logo-pa.svg'
             wikidatawiki-pnb:
@@ -3620,6 +3622,8 @@ Wikivoyage:
                 selected_logo: wikidatawiki-eo
             lfn:
                 selected_logo: wikidatawiki-lfn
+            ne:
+                selected_logo: wikidatawiki-ne
             pa:
                 selected_logo: wikidatawiki-pa
             pnb:

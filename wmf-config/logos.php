@@ -5460,6 +5460,11 @@ return [
 			'1.5x' => '/static/images/project-logos/wikidatawiki-lfn-1.5x.png',
 			'2x' => '/static/images/project-logos/wikidatawiki-lfn-2x.png',
 		],
+		'ne' => [ // T323734
+			'1x' => '/static/images/project-logos/wikidatawiki-ne.png',
+			'1.5x' => '/static/images/project-logos/wikidatawiki-ne-1.5x.png',
+			'2x' => '/static/images/project-logos/wikidatawiki-ne-2x.png',
+		],
 		'pa' => [ // T323734
 			'1x' => '/static/images/project-logos/wikidatawiki-pa.png',
 			'1.5x' => '/static/images/project-logos/wikidatawiki-pa-1.5x.png',
