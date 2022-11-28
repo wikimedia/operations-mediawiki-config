@@ -7130,6 +7130,11 @@ return [
 		NS_SPECIAL,
 		NS_CATEGORY,
 	],
+	'plwikisource' => [
+		// T323185#8422601
+		NS_SPECIAL,
+		NS_CATEGORY
+	],
 	// T300182#7868654
 	'wikidatawiki' => [
 		NS_MAIN,
