@@ -172,10 +172,6 @@ function wmfGetOverrideSettings() {
 				// https://phabricator.wikimedia.org/T311129
 				'rc0.mediawiki.page_change' => [
 					'producers' => [
-						'message_key_fields' => [
-							'wiki_id' => 'wiki_id',
-							'page_id' => 'page.page_id',
-						],
 						'mediawiki_eventbus' => [
 							'enabled' => true,
 						],

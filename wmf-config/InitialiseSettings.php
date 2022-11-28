@@ -21375,6 +21375,14 @@ return [
 		'rc0.mediawiki.page_change' => [
 			// Schema is still in a 'development' namespace.
 			'schema_title' => 'development/mediawiki/page/change',
+			# When producing this stream to kafka, use a message key
+			# like { wiki_id: X, page_id: Y }.  X and Y will be
+			# obtained from the message value at wiki_id and page.page_id.
+			# See also: https://phabricator.wikimedia.org/T318846
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page.page_id',
+			],
 			// For release candidate,
 			// use eventgate-analytics-external so we get dynamic config and
 			// only produce to kafka jumbo.
