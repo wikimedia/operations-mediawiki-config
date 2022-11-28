@@ -42,7 +42,7 @@ $common = [
 	'xenon' => '10.64.32.141', # mwlog1002.eqiad.wmnet
 
 	// Statsd is not active-active.
-	'statsd' => '10.64.16.149', # statsd.eqiad.wmnet, now resolving to graphite1004.eqiad.wmnet
+	'statsd' => '10.64.16.81', # statsd.eqiad.wmnet, now resolving to graphite1005.eqiad.wmnet
 
 	// Logstash is not active-active.
 	'logstash' => [
