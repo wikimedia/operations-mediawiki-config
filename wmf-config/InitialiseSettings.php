@@ -14503,6 +14503,15 @@ return [
 	'testwikidatawiki' => 1500,
 ],
 
+'wmgUsePhonos' => [
+	'default' => false,
+	'testwiki' => true, // T321084
+],
+
+'wgPhonosPath' => [
+	'default' => '//upload.wikimedia.org/phonos',
+],
+
 'wmgUseProofreadPage' => [
 	'default' => false,
 	'wikisource' => true,
@@ -28035,11 +28044,6 @@ return [
 	'+jawiki' => [
 		'abusefilter' => 'abusefilter-modify', // T315199
 	],
-],
-
-// Enabled on the Beta Cluster only (T314294)
-'wmgUsePhonos' => [
-	'default' => false,
 ],
 
 ];

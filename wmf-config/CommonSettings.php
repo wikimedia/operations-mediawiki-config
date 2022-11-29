@@ -4244,6 +4244,13 @@ if ( $wmgUseStopForumSpam ) {
 	$wgSFSProxy = $wgCopyUploadProxy;
 }
 
+if ( $wmgUsePhonos ) {
+	wfLoadExtension( 'Phonos' );
+	// $wgPhonosApiKeyGoogle in PrivateSettings
+	$wgPhonosEngine = 'google';
+	$wgPhonosFileBackend = 'global-multiwrite';
+}
+
 // This is a temporary hack for hooking up Parsoid/PHP with MediaWiki
 // This is just the regular check out of parsoid in that week's vendor
 $parsoidDir = "$IP/vendor/wikimedia/parsoid";
