@@ -26596,6 +26596,10 @@ return [
 	'default' => false,
 ],
 
+'wgGENewImpactD3Enabled' => [
+	'default' => true,
+],
+
 'wgGEHomepageSuggestedEditsEnabled' => [
 	'default' => true,
 	'frwiktionary' => false,

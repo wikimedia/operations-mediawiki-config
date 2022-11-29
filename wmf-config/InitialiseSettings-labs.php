@@ -1544,9 +1544,6 @@ function wmfGetOverrideSettings() {
 		'wgGERefreshUserImpactDataMaintenanceScriptEnabled' => [
 			'default' => true,
 		],
-		'wgGENewImpactD3Enabled' => [
-			'default' => true,
-		],
 		'wgGEImageRecommendationApiHandler' => [
 			// Can be changed to 'production' when T306349 is resolved.
 			'default' => 'mvp'
