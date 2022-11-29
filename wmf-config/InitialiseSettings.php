@@ -26107,6 +26107,10 @@ return [
 ],
 'wgCheckUserLogActorMigrationStage' => [
 	'default' => SCHEMA_COMPAT_OLD,
+	'testcommonswiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	'testwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	'test2wiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	'testwikidatawiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 ],
 'wgCheckUserLogReasonMigrationStage' => [
 	'default' => SCHEMA_COMPAT_OLD,
