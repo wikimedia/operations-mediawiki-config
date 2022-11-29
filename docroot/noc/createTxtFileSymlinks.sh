@@ -15,6 +15,7 @@ mwconfig_files_txt=(
 	CirrusSearch-production.php
 	db-production.php
 	db-labs.php
+	EnWikiContactPages.php
 	etcd.php
 	FeaturedFeedsWMF.php
 	filebackend.php
