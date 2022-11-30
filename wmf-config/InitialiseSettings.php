@@ -14375,8 +14375,14 @@ return [
 	'+zhwikiversity' => [ 100, 102, 104, 106, 108 ], // T201675, T212919 (106, 108)
 	'+dewikivoyage' => [ 104 ],
 	'+commonswiki' => [ 6 ], // T167077
-	'+testwikidatawiki' => [ 146 ], // So that Lexeme are indexed in the content indes (Cirrus)
-	'+wikidatawiki' => [ 146 ], // So that Lexeme are indexed in the content indes (Cirrus)
+	'+testwikidatawiki' => [
+		120, // Property (T321282)
+		146, // So that Lexeme is indexed in the content index (Cirrus)
+	],
+	'+wikidatawiki' => [
+		120, // Property (T321282)
+		146, // So that Lexeme is indexed in the content index (Cirrus)
+	],
 ],
 
 'wgExtraSignatureNamespaces' => [
