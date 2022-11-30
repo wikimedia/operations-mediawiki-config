@@ -27837,7 +27837,11 @@ return [
 'wgCirrusSearchAutomationHeaderRegexes' => [
 	'default' => [
 		'x-public-cloud' => '/.*/',
-	]
+	],
+],
+
+'wgCirrusSearchEnableIncomingLinkCounting' => [
+	'default' => false,
 ],
 
 'wgRestAPIAdditionalRouteFiles' => [
