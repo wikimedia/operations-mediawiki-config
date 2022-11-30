@@ -19781,7 +19781,6 @@ return [
 	'fywiki' => 90, // T323415
 	'hywiki' => 80, // T313208
 	'idwiki' => 70,
-	'jawiki' => 75, // T321819
 	'mnwiki' => 89, // T319156
 	'tewiki' => 70,
 	'viwiki' => 90, // T275121
@@ -19990,6 +19989,7 @@ return [
 	'default' => true,
 	'enwiki' => false,
 	'dewiki' => false,
+	'jawiki' => false, // T323973
 ],
 
 'wgContentTranslationPublishRequirements' => [
