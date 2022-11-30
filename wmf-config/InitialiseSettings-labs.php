@@ -1529,7 +1529,10 @@ function wmfGetOverrideSettings() {
 			'zhwiki' => true, // T323378
 		],
 		'wgPageTriageEnableEnglishWikipediaFeatures' => [
-			'zhwiki' => false, // T323378
+			'default' => false, // T321922
+			'testwiki' => true,
+			'test2wiki' => true,
+			'enwiki' => true,
 		],
 		'-wmgWikibaseCachePrefix' => [
 			'default' => 'wikidatawiki',
