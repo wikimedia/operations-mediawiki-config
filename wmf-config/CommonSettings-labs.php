@@ -417,6 +417,8 @@ $wgVectorMaxWidthOptions['exclude']['querystring']['action'] = '(history|edit)';
 if ( $wmgUseCampaignEvents ) {
 	$wgCampaignEventsDatabaseCluster = false;
 	$wgCampaignEventsDatabaseName = 'wikishared';
+	// Re-add right removed in production via groupOverrides in IS.php
+	$wgGroupPermissions['user']['campaignevents-enable-registration'] = true;
 }
 
 // Ignore parameter order when matching request URLs to CDN URLs (T314868)
