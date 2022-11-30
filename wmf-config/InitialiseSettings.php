@@ -9624,6 +9624,9 @@ return [
 	'+metawiki' => [
 		'autopatrolled' => [ 'autopatrol' => true, ], // T27160
 		'bot' => [ 'changetags' => true ], // T283625
+		'campaignevents-beta-tester' => [ // Temporary, T316227
+			'campaignevents-enable-registration' => true
+		],
 		'centralnoticeadmin' => [ // gerrit:50196, T142123
 			'autopatrol' => true,
 			'banner-protect' => true,
@@ -9671,7 +9674,10 @@ return [
 			'reupload' => true,
 			'reupload-own' => true,
 		],
-		'user' => [ 'changetags' => false ], // T283625
+		'user' => [
+			'changetags' => false, // T283625
+			'campaignevents-enable-registration' => false, // Temporary, T316227
+		],
 		'wmf-officeit' => [ // T106724, T142123, T254372
 			'autopatrol' => true,
 			'centralauth-lock' => true,
