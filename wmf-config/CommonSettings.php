@@ -4249,6 +4249,7 @@ if ( $wmgUsePhonos ) {
 	// $wgPhonosApiKeyGoogle in PrivateSettings
 	$wgPhonosEngine = 'google';
 	$wgPhonosFileBackend = 'global-multiwrite';
+	$wgPhonosApiProxy = $wgCopyUploadProxy;
 }
 
 // This is a temporary hack for hooking up Parsoid/PHP with MediaWiki
