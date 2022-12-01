@@ -26637,15 +26637,19 @@ return [
 
 'wgGERefreshUserImpactDataMaintenanceScriptEnabled' => [
 	'default' => false,
-	'testwiki' => true,
 	'arwiki' => true,
 	'bnwiki' => true,
 	'cswiki' => true,
 	'eswiki' => true,
+	'testwiki' => true,
 ],
 
 'wgGEUseNewImpactModule' => [
 	'default' => false,
+	'arwiki' => true,
+	'bnwiki' => true,
+	'cswiki' => true,
+	'eswiki' => true,
 	'testwiki' => true,
 ],
 
