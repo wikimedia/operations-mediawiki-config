@@ -21142,6 +21142,26 @@ return [
 				'rate' => 0.5,
 			],
 		],
+		'android.app_appearance_settings_interaction' => [
+			'schema_title' => 'analytics/mobile_apps/android_app_appearance_settings_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'android.article_link_preview_interaction' => [
+			'schema_title' => 'analytics/mobile_apps/android_article_link_preview_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'android.article_page_scroll_interaction' => [
+			'schema_title' => 'analytics/mobile_apps/android_article_page_scroll_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'android.article_toc_interaction' => [
+			'schema_title' => 'analytics/mobile_apps/android_article_toc_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'android.find_in_page_interaction' => [
+			'schema_title' => 'analytics/mobile_apps/android_find_in_page_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		'mediawiki.mediasearch_interaction' => [
 			'schema_title' => 'analytics/mediawiki/mediasearch_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
