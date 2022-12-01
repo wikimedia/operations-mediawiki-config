@@ -26594,6 +26594,12 @@ return [
 
 'wgGERefreshUserImpactDataMaintenanceScriptEnabled' => [
 	'default' => false,
+	'testwiki' => true,
+],
+
+'wgGEUseNewImpactModule' => [
+	'default' => false,
+	'testwiki' => true,
 ],
 
 'wgGENewImpactD3Enabled' => [
