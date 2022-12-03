@@ -224,10 +224,13 @@ def download_svg(commons: str, name: str, svg_type: str, data: dict, variant=Non
 
     width, height = get_svg_size(filename, _project_svgs)
     if svg_type == "icon":
-        if width != height:
-            raise RuntimeError(f"Icon {filename} is not square")
-        if width > 100:
-            width = height = 100
+        if width > 100 or height > 100:
+            if width > height:
+                height = int(height * 100 / width)
+                width = 100
+            else:
+                width = int(width * 100 / height)
+                height = 100
             print(f"File {filename} too big, resizing to {width} x {height}")
             resize_svg(filename, str(width), str(height), _project_svgs)
     else:
