@@ -7,4 +7,4 @@ call_user_func( static function () {
 	}
 } );
 require_once __DIR__ . '/MWMultiVersion.php';
-@require_once MWMultiVersion::getMediaWiki( 'maintenance/commandLine.inc', getenv( 'MW_WIKI' ) ?: 'testwiki' );
+@require_once MWMultiVersion::getMediaWiki( 'maintenance/CommandLineInc.php', getenv( 'MW_WIKI' ) ?: 'testwiki' );

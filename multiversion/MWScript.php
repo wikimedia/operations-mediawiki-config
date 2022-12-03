@@ -68,7 +68,7 @@ EOT
 		// convenience
 		$relFile = "maintenance/$relFile";
 	} elseif ( getenv( 'MEDIAWIKI_MAINT_INIT_ONLY' ) ) {
-		$relFile = 'maintenance/commandLine.inc';
+		$relFile = 'maintenance/CommandLineInc.php';
 	}
 
 	# Remove effects of this wrapper from $argv...
