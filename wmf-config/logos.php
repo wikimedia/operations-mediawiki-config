@@ -338,7 +338,7 @@ return [
 	'towiki' => '/static/images/project-logos/towiki.png', // T51125
 	'tpiwiki' => '/static/images/project-logos/tpiwiki.png', // T29240
 	'trvwiki' => '/static/images/project-logos/trvwiki.png',
-	'trwiki' => '/static/images/project-logos/trwiki.png',
+	'trwiki' => '/static/images/project-logos/trwiki-20.png',
 	'tswiki' => '/static/images/project-logos/tswiki.png', // T51125
 	'ttwiki' => '/static/images/project-logos/ttwiki.png',
 	'tumwiki' => '/static/images/project-logos/tumwiki.png', // T320473
@@ -1159,7 +1159,7 @@ return [
 	'towiki' => '/static/images/project-logos/towiki-1.5x.png', // T150618
 	'tpiwiki' => '/static/images/project-logos/tpiwiki-1.5x.png', // T150618
 	'trvwiki' => '/static/images/project-logos/trvwiki-1.5x.png',
-	'trwiki' => '/static/images/project-logos/trwiki-1.5x.png', // T150618
+	'trwiki' => '/static/images/project-logos/trwiki-20-1.5x.png', // T150618, T324393
 	'tswiki' => '/static/images/project-logos/tswiki-1.5x.png', // T150618
 	'ttwiki' => '/static/images/project-logos/ttwiki-1.5x.png', // T150618
 	'tumwiki' => '/static/images/project-logos/tumwiki-1.5x.png', // T320473
@@ -1755,7 +1755,7 @@ return [
 	'towiki' => '/static/images/project-logos/towiki-2x.png', // T150618
 	'tpiwiki' => '/static/images/project-logos/tpiwiki-2x.png', // T150618
 	'trvwiki' => '/static/images/project-logos/trvwiki-2x.png',
-	'trwiki' => '/static/images/project-logos/trwiki-2x.png', // T150618
+	'trwiki' => '/static/images/project-logos/trwiki-20-2x.png', // T150618, T324393
 	'tswiki' => '/static/images/project-logos/tswiki-2x.png', // T150618
 	'ttwiki' => '/static/images/project-logos/ttwiki-2x.png', // T150618
 	'tumwiki' => '/static/images/project-logos/tumwiki-2x.png', // T320473
@@ -5120,6 +5120,7 @@ return [
 	'wikimedia' => '/static/images/icons/wikimedia.svg',
 
 	// Wikipedia
+	'trwiki' => '/static/images/icons/trwiki-20.svg', // T324393
 
 	// Wiktionary
 	'angwiktionary' => null,

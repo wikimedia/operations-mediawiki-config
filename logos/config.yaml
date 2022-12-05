@@ -1611,12 +1611,18 @@ Wikipedia:
         local_tagline: true
     trwiki:
         commons: 'File:Wikipedia-logo-v2-tr.svg'
-        comment_1_5x: T150618
-        comment_2x: T150618
+        selected: trwiki-20
+        variants:
+            trwiki-20:
+                commons: 'File:Turkce-vikipedi-20-yas.svg'
+                commons_icon: 'File:20th anniversary logo of Turkish Wikipedia 04.svg'
+        comment_1_5x: T150618, T324393
+        comment_2x: T150618, T324393
         commons_wordmark: 'File:Wikipedia_wordmark-tr.svg'
         comment_wordmark: 'T255489, T254788'
         commons_tagline: 'File:Wikipedia-tagline-tr.svg'
         comment_tagline: T258552
+        comment_icon: T324393
     tswiki:
         comment: T51125
         comment_1_5x: T150618
