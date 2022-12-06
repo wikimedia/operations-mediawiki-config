@@ -198,7 +198,7 @@ $services = [
 		// LockManager Redis codfw
 		'redis_lock' => [
 			'rdb1' => '10.192.0.198:6381', # rdb2007 A5
-			'rdb2' => '10.192.0.86',   # mc2022 A8
+			'rdb2' => '10.192.0.198:6382', # rdb2007 A5
 			'rdb3' => '10.192.48.78',  # mc2034 D4
 		],
 		'search-chi' => [
