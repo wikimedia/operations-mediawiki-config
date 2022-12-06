@@ -199,7 +199,7 @@ $services = [
 		'redis_lock' => [
 			'rdb1' => '10.192.0.198:6381', # rdb2007 A5
 			'rdb2' => '10.192.0.198:6382', # rdb2007 A5
-			'rdb3' => '10.192.48.78',  # mc2034 D4
+			'rdb3' => '10.192.32.8:6381',  # rdb2009 C3
 		],
 		'search-chi' => [
 			[ // forwarded to https://search.svc.codfw.wmnet:9243/
