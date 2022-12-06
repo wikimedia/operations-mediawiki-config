@@ -21979,12 +21979,6 @@ return [
 		// 'userAgent' => [],
 		// 'pageName' => [],
 	],
-	'ruwiki' => [
-		'wiki' => 100,
-	],
-	'eswiki' => [
-		'wiki' => 100,
-	],
 	'cawiki' => [
 		'wiki' => 1,
 	],
