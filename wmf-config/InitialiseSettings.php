@@ -17396,6 +17396,7 @@ return [
 	'default' => 0.0,
 	'testwiki' => 1.0,
 	'mediawikiwiki' => 1.0,
+	'hewiki' => 1.0,
 ],
 
 'wgLanguageConverterCacheType' => [
