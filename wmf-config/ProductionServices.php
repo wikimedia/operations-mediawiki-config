@@ -197,7 +197,7 @@ $services = [
 		],
 		// LockManager Redis codfw
 		'redis_lock' => [
-			'rdb1' => '10.192.32.162', # mc2030 C5
+			'rdb1' => '10.192.0.198:6381', # rdb2007 A5
 			'rdb2' => '10.192.0.86',   # mc2022 A8
 			'rdb3' => '10.192.48.78',  # mc2034 D4
 		],
