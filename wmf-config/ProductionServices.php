@@ -142,7 +142,7 @@ $services = [
 		// while now it is hosted on redis_misc (rdb* servers)
 		'redis_lock' => [
 			'rdb1' => '10.64.16.76:6381', # rdb1009 B8
-			'rdb2' => '10.64.32.153', # mc1048 C2
+			'rdb2' => '10.64.16.76:6382', # rdb1009 B8
 			'rdb3' => '10.64.48.91',  # mc1052 D4
 		],
 		'search-chi' => [
