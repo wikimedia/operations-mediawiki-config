@@ -22088,7 +22088,6 @@ return [
 	'plwiki' => true,
 	'rowiki' => true,
 	'ruwiki' => true,
-	'swwiki' => true,
 	'ukwiki' => true,
 	'zhwiki' => true,
 	'commonswiki' => true,
@@ -22196,24 +22195,6 @@ return [
 			'shuffleAnswersDisplay' => true,
 		],
 	],
-	'swwiki' => [
-		// T321252
-		[
-			'enabled' => true,
-			'type' => 'external',
-			'name' => 'research-incentive',
-			'question' => 'research-incentive-message',
-			'description' => 'research-incentive-description',
-			'confirmMsg' => 'research-incentive-confirm-msg',
-			'coverage' => 1,
-			'platforms' => [
-				'desktop' => [ 'stable' ],
-				'mobile' => [ 'stable' ]
-			],
-			'link' => 'research-incentive-link',
-			'privacyPolicy' => 'research-incentive-privacy',
-		],
-	]
 
 	// Note: make sure the wiki also has wmgUseQuickSurveys => true
 ],
