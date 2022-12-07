@@ -19352,6 +19352,7 @@ return [
 	'wg_enwiki' => false,
 	'wikidata' => true,
 	'incubatorwiki' => true,
+	'specieswiki' => true, // T324348
 ],
 'wgMaxGeoSearchRadius' => [
 	'default' => 10000,
