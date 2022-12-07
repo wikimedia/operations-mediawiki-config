@@ -26840,6 +26840,7 @@ return [
 	'viwiki' => false,
 	'itwiki' => false,
 	'cawiki' => false,
+	'group1' => false,
 	// Careful with these, since they can partake in cross-wiki inclusion.
 	// See T51097#7401266
 	'metawiki' => true,
