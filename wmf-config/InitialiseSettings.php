@@ -19640,6 +19640,22 @@ return [
 
 'wgDiscussionToolsABTest' => [
 	'default' => false,
+	// T321961
+	'azwiki' => 'mobile',
+	'dewiki' => 'mobile',
+	'eswiki' => 'mobile',
+	'fawiki' => 'mobile',
+	'hiwiki' => 'mobile',
+	'idwiki' => 'mobile',
+	'itwiki' => 'mobile',
+	'nlwiki' => 'mobile',
+	'plwiki' => 'mobile',
+	'ptwiki' => 'mobile',
+	'rowiki' => 'mobile',
+	'ruwiki' => 'mobile',
+	'thwiki' => 'mobile',
+	'trwiki' => 'mobile',
+	'ukwiki' => 'mobile',
 ],
 
 'wgDiscussionToolsEnableMobile' => [
