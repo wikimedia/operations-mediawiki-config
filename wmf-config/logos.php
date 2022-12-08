@@ -122,7 +122,7 @@ return [
 	'eswiki' => '/static/images/project-logos/eswiki.png',
 	'etwiki' => '/static/images/project-logos/etwiki.png',
 	'euwiki' => '/static/images/project-logos/euwiki.png',
-	'extwiki' => '/static/images/project-logos/extwiki.png', // T48589
+	'extwiki' => '/static/images/project-logos/extwiki.png', // T48589, T318766
 	'fawiki' => '/static/images/project-logos/fawiki.png',
 	'ffwiki' => '/static/images/project-logos/ffwiki.png',
 	'fjwiki' => '/static/images/project-logos/fjwiki.png',
@@ -958,7 +958,7 @@ return [
 	'eswiki' => '/static/images/project-logos/eswiki-1.5x.png', // T150618
 	'etwiki' => '/static/images/project-logos/etwiki-1.5x.png', // T150618
 	'euwiki' => '/static/images/project-logos/euwiki-1.5x.png', // T150618
-	'extwiki' => '/static/images/project-logos/extwiki-1.5x.png', // T150618
+	'extwiki' => '/static/images/project-logos/extwiki-1.5x.png', // T150618, T318766
 	'fawiki' => '/static/images/project-logos/fawiki-1.5x.png',
 	'ffwiki' => '/static/images/project-logos/ffwiki-1.5x.png', // T150618
 	'fiu_vrowiki' => '/static/images/project-logos/fiu_vrowiki-1.5x.png', // T150618
@@ -1554,7 +1554,7 @@ return [
 	'eswiki' => '/static/images/project-logos/eswiki-2x.png', // T150618
 	'etwiki' => '/static/images/project-logos/etwiki-2x.png', // T150618
 	'euwiki' => '/static/images/project-logos/euwiki-2x.png', // T150618
-	'extwiki' => '/static/images/project-logos/extwiki-2x.png', // T150618
+	'extwiki' => '/static/images/project-logos/extwiki-2x.png', // T150618, T318766
 	'fawiki' => '/static/images/project-logos/fawiki-2x.png',
 	'ffwiki' => '/static/images/project-logos/ffwiki-2x.png', // T150618
 	'fiu_vrowiki' => '/static/images/project-logos/fiu_vrowiki-2x.png', // T150618

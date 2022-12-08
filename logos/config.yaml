@@ -482,9 +482,10 @@ Wikipedia:
         commons_tagline: 'File:Wikipedia-tagline-eu.svg'
         comment_tagline: T249047
     extwiki:
-        comment: T48589
-        comment_1_5x: T150618
-        comment_2x: T150618
+        commons: 'File:Wikipedia-logo-v2-ext-new.svg'
+        comment: 'T48589, T318766'
+        comment_1_5x: 'T150618, T318766'
+        comment_2x: 'T150618, T318766'
         local_tagline: true
         local_wordmark: true
     fawiki:
