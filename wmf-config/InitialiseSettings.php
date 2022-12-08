@@ -21139,6 +21139,10 @@ return [
 			'schema_title' => 'analytics/mobile_apps/ios_notification_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		'ios.talk_page_interaction' => [
+			'schema_title' => 'analytics/mobile_apps/ios_talk_page_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		'android.user_contribution_screen' => [
 			'schema_title' => 'analytics/mobile_apps/android_user_contribution_screen',
 			'destination_event_service' => 'eventgate-analytics-external',
