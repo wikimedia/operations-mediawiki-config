@@ -2507,6 +2507,11 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
+		// T299612
+		'LinterMigrateNamespaceStage' => [
+			'default' => true,
+		],
+
 		// T175177
 		'wgLinterWriteTagAndTemplateColumnsStage' => [
 			'default' => true,
