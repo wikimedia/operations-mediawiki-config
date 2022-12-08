@@ -16,3 +16,4 @@ inheritsFrom:
   - s7
   - securepollglobal
   - wikidataclient
+  - desktop-improvements
