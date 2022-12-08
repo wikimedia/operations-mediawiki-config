@@ -14290,6 +14290,7 @@ return [
 	'enwikibooks' => false,
 	'fawikinews' => false, // T85380
 	'foundationwiki' => false,
+	'frwikiversity' => false, // T324277
 	'pflwiki' => false, // T205055
 	'rmwiki' => false,
 	'thankyouwiki' => false,
