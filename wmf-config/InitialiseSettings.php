@@ -16635,11 +16635,14 @@ return [
 // If set to 'vrs' and $wmgUseRESTbaseVRS is true,
 // VisualEditor will talk to Parsoid over HTTP,
 // probably to RESTbase but it just might be talking
-// directly to the Parsoid API.
+// to the Parsoid extension API.
+// 'direct' tells VE to use the Parsoid code in MediaWiki
+// by calling PHP functions.
 'wgVisualEditorDefaultParsoidClient' => [
 	'default' => 'vrs',
 	'testwiki' => 'direct', // T320531
 	'mediawikiwiki' => 'direct', // T320529
+	'hewiki' => 'direct',	// T320529
 ],
 
 // Whether VisualEditor should bypass the MediaWiki layer and contact RESTBase directly for speed
@@ -16647,6 +16650,7 @@ return [
 	'default' => true,		// T100026
 	'testwiki' => false,	// T320531 Needs to be false if wgVisualEditorDefaultParsoidClient is 'direct' for now.
 	'mediawikiwiki' => false,	// T320531 Needs to be false if wgVisualEditorDefaultParsoidClient is 'direct' for now.
+	'hewiki' => false,	// T320529 Needs to be false if wgVisualEditorDefaultParsoidClient is 'direct' for now.
 	'wikitech' => false,	# Wikitech uses local Parsoid operation
 	'closed' => false,		// T315383
 	'private' => false,		# Private wikis aren't yet supported by RESTBase
