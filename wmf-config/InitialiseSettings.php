@@ -17403,6 +17403,8 @@ return [
 // This needs to be enabled gradually. See T322672.
 'wgTemporaryParsoidHandlerParserCacheWriteRatio' => [
 	'default' => 0.05, // 5% for now
+	'commonswiki' => 0.0, // disable for commons, useless for file descriptions
+	'wikidatawiki' => 0.0, // disable for wikidata, we shouldn't render items anyway
 	'testwiki' => 1.0,
 	'mediawikiwiki' => 1.0,
 	'hewiki' => 1.0,
