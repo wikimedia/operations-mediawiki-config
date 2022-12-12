@@ -17402,7 +17402,7 @@ return [
 // a parser cache write, putting full pressure on the parser cache.
 // This needs to be enabled gradually. See T322672.
 'wgTemporaryParsoidHandlerParserCacheWriteRatio' => [
-	'default' => 0.05, // 5% for now
+	'default' => 0.01, // 1% for now
 	'commonswiki' => 0.0, // disable for commons, useless for file descriptions
 	'wikidatawiki' => 0.0, // disable for wikidata, we shouldn't render items anyway
 	'testwiki' => 1.0,
