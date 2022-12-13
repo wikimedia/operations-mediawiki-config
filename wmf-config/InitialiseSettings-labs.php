@@ -2508,7 +2508,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		// T299612
-		'LinterMigrateNamespaceStage' => [
+		'wgLinterMigrateNamespaceStage' => [
 			'default' => true,
 		],
 
