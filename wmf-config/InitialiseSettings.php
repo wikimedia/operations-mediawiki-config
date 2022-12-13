@@ -19733,9 +19733,10 @@ return [
 	'dewiki' => 'unavailable', // T320683
 	'enwiki' => 'unavailable', // T320683
 	'frwiki' => 'unavailable', // T320683
-	'jawiki' => 'unavailable', // T320683
-	'zh_yuewiki' => 'unavailable', // T320683
-	'zhwiki' => 'unavailable', // T320683
+],
+
+'wgDiscussionTools_visualenhancements_reply_icon_languages' => [
+	'default' => [ 'zh', 'zh-yue', 'ja', 'nod' ], // T323537
 ],
 
 'wgDiscussionTools_visualenhancements_pageframe' => [
