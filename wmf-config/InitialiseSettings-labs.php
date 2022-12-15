@@ -2475,13 +2475,13 @@ function wmfGetOverrideSettings() {
 			'en' => true,
 		],
 		'wgQuickViewMediaRepositoryApiBaseUri' => [
-			'default' => '//commons.wikimedia.beta.wmflabs.org/w/api.php',
+			'default' => 'https://commons.wikimedia.beta.wmflabs.org/w/api.php',
 		],
 		'wgQuickViewMediaRepositorySearchUri' => [
-			'default' => '//commons.wikimedia.beta.wmflabs.org/wiki/Special:MediaSearch?search=%s',
+			'default' => 'https://commons.wikimedia.beta.wmflabs.org/wiki/Special:MediaSearch?search=%s',
 		],
 		'wgQuickViewMediaRepositoryUri' => [
-			'default' => '//commons.wikimedia.beta.wmflabs.org',
+			'default' => 'https://commons.wikimedia.beta.wmflabs.org',
 		],
 		'wgQuickViewSearchFilterForQID' => [
 			'default' => 'haswbstatement:P245962=%s',
