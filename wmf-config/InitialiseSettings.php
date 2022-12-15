@@ -19712,14 +19712,9 @@ return [
 
 'wgDiscussionTools_visualenhancements_reply' => [
 	'default' => 'default', // T320683
-	'arwiki' => 'unavailable', // T320683
 	'dewiki' => 'unavailable', // T320683
 	'enwiki' => 'unavailable', // T320683
 	'frwiki' => 'unavailable', // T320683
-],
-
-'wgDiscussionTools_visualenhancements_reply_icon_languages' => [
-	'default' => [ 'zh', 'zh-yue', 'ja', 'nod' ], // T323537
 ],
 
 'wgDiscussionTools_visualenhancements_pageframe' => [
