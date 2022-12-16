@@ -2516,6 +2516,11 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
+		// T175177
+		'wgLinterMigrateTagAndTemplateColumnsStage' => [
+			'default' => true,
+		],
+
 		'wmgUseContentTranslation' => [
 			'wikivoyage' => true, // T322325
 		],
