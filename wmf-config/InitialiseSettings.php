@@ -16354,7 +16354,6 @@ return [
 		'visualeditor-visualdiffpage',       // [Editing] 2019-11-06 – Visual diffs
 		'discussiontools-betaenable',        // [Editing] 2020-09-12 – Reply tool
 		'ipinfo-beta-feature-enable',        // [AHT] 2022-10-01 – IP Info
-		'wikieditor-realtime-preview',       // [CommTech] 2023-03-03 – Realtime Preview
 		'wikistories-storiesonarticles',     // [Inuka] 2022-12-30 - Wikistories on articles
 	],
 ],
@@ -16523,10 +16522,12 @@ return [
 	'wikisource' => true,
 ],
 
-// Enable WikiEditor Realtime Preview beta feature.
+// Enable WikiEditor Realtime Preview feature (without a Beta Feature).
 'wgWikiEditorRealtimePreview' => [
 	'default' => true,
-	'plwiki' => false, // T313420
+],
+'wgWikiEditorRealtimePreviewBeta' => [
+	'default' => false,
 ],
 
 // ------------ BetaFeatures end -----------
