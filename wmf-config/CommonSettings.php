@@ -2737,6 +2737,7 @@ if ( $wmgUseVisualEditor ) {
 
 	// Citoid
 	wfLoadExtension( 'Citoid' );
+	$wgCitoidFullRestbaseURL = "/api/rest_";
 
 	// Move the citation button from the primary toolbar into the "other" group
 	if ( $wmgCiteVisualEditorOtherGroup ) {
