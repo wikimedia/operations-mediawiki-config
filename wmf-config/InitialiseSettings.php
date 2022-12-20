@@ -19997,7 +19997,6 @@ return [
 	"tetwiki" => true,
 	"towiki" => true,
 	"tpiwiki" => true,
-	"ttwiki" => true,
 	"tumwiki" => true,
 	"tyvwiki" => true,
 	"tywiki" => true,
