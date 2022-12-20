@@ -42,7 +42,7 @@ return [
 		'parsercache-dbs' => [],
 		'urldownloader' => 'http://deployment-urldownloader03.deployment-prep.eqiad1.wikimedia.cloud:8080',
 		'parsoid' => 'http://deployment-parsoid12.deployment-prep.eqiad1.wikimedia.cloud/w/rest.php',
-		'mathoid' => 'http://deployment-docker-mathoid01.eqiad.wmflabs:10044',
+		'mathoid' => 'http://deployment-docker-mathoid02.deployment-prep.eqiad1.wikimedia.cloud:10044',
 		'eventgate-analytics' => 'http://deployment-eventgate-4.deployment-prep.eqiad1.wikimedia.cloud:8192',
 		'eventgate-analytics-external' => 'http://deployment-eventgate-4.deployment-prep.eqiad1.wikimedia.cloud:8492',
 		'eventgate-main' => 'http://deployment-eventgate-4.deployment-prep.eqiad1.wikimedia.cloud:8292',
