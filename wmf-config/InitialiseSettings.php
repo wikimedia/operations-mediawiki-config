@@ -16108,6 +16108,7 @@ return [
 	'kkwiki' => true,
 	'knwiki' => true,
 	'kowiki' => true,
+	'kuwiki' => true, // T325469
 	'lawiki' => true, // T296073
 	'ladwiki' => true, // T121524
 	'ltwiki' => true, // T273957
