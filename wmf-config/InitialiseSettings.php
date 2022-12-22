@@ -9944,6 +9944,7 @@ return [
 			'deletedhistory' => true,
 			'deletedtext' => true,
 		],
+		'interface-admin' => [ 'editcontentmodel' => true, ], // T325819
 	],
 	'+plwikiquote' => [
 		'patroller' => [
