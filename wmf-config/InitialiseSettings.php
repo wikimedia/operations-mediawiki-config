@@ -19490,31 +19490,8 @@ return [
 	'commonswiki' => true,
 ],
 
-// Before updating wmgFlowNamespaces, you must run populateContentModel.php (from core) on
-// the affected namespaces.  See
-// https://www.mediawiki.org/wiki/Extension:Flow#Enabling_or_disabling_Flow
 'wmgFlowNamespaces' => [
 	'default' => [],
-	'mediawikiwiki' => [
-		NS_TALK,
-		NS_USER_TALK,
-		NS_PROJECT_TALK,
-		NS_FILE_TALK,
-		NS_MEDIAWIKI_TALK,
-		NS_TEMPLATE_TALK,
-		NS_HELP_TALK,
-		NS_CATEGORY_TALK,
-		101, /* Manual talk */
-		103, /* Extension talk */
-		105, /* API talk */
-		107, /* Skin talk */
-		487, /* Skin talk */
-		829, /* Module talk */
-		1199, /* Translations talk */
-		2301, /* Gadget talk */
-		2303, /* Gadget definition talk */
-		5501, /* Newsletter talk from Newsletter extension */
-	],
 	'officewiki' => [
 		NS_TALK,
 		NS_USER_TALK,
