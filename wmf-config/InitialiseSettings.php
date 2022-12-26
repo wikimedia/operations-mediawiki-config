@@ -13281,6 +13281,7 @@ return [
 		'sysop' => [
 			'filemover', 'patroller', 'rollbacker', // T52802
 			'flood', // T54273
+			'autopatrolled', // T325938
 		],
 	],
 	'+shwiktionary' => [
