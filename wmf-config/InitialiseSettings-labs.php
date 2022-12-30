@@ -1453,10 +1453,6 @@ function wmfGetOverrideSettings() {
 			'default' => null
 		],
 
-		'wgActorTableSchemaMigrationStage' => [
-			'default' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
-		],
-
 		'-wgTemplateLinksSchemaMigrationStage' => [
 			'default' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 		],
