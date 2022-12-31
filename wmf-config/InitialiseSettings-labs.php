@@ -1466,6 +1466,12 @@ function wmfGetOverrideSettings() {
 			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 		],
 
+		'-wgCommentTempTableSchemaMigrationStage' => [
+			'default' => [
+				'rev_comment' => MIGRATION_WRITE_BOTH,
+			],
+		],
+
 		'wgOresUiEnabled' => [
 			'default' => true,
 			'wikidatawiki' => false,
