@@ -26170,6 +26170,13 @@ return [
 	'fawikiquote' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 ],
 
+// T299954
+'wgCommentTempTableSchemaMigrationStage' => [
+	'default' => [
+		'rev_comment' => MIGRATION_OLD,
+	],
+],
+
 'wgXmlDumpSchemaVersion' => [
 	'default' => XML_DUMP_SCHEMA_VERSION_10,
 ],
