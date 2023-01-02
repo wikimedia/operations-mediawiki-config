@@ -26151,6 +26151,9 @@ return [
 'wgCheckUserActorMigrationStage' => [
 	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 ],
+'wgCheckUserCommentMigrationStage' => [
+	'default' => SCHEMA_COMPAT_OLD,
+],
 'wgCheckUserLogActorMigrationStage' => [
 	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 ],
