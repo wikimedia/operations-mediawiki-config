@@ -19748,6 +19748,7 @@ return [
 'wgDiscussionToolsLegacyHeadingMarkup' => [
 	'default' => true, // T314714
 	'group0' => false, // T314714
+	'group1' => false, // T314714
 	'plwiki' => false, // T314714
 ],
 
