@@ -350,6 +350,11 @@ if ( $wmgRealm === 'production' ) {
 	// etcd out of the loop entirely for this one.
 	$wgLBFactoryConf['sectionLoads']['s11'] = [ 'clouddb2002-dev' => 1 ];
 	$wgLBFactoryConf['hostsByName']['clouddb2002-dev'] = '10.192.20.6';
+
+	// Disable LoadMonitor in CLI, it doesn't provide much value in CLI.
+	if ( PHP_SAPI === 'cli' ) {
+		$wgLBFactoryConf['loadMonitorClass'] = '\Wikimedia\Rdbms\LoadMonitorNull';
+	}
 }
 
 // Set $wgProfiler to the value provided by PhpAutoPrepend.php
