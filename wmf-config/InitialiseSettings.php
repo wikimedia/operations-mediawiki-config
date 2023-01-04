@@ -307,6 +307,7 @@ return [
 	'arbcom_fiwiki' => 'Europe/Helsinki',
 	'arbcom_nlwiki' => 'Europe/Berlin',
 	'arywiki' => 'Africa/Casablanca',
+	'aswikiquote' => 'Asia/Kolkata',
 	'aswikisource' => 'Asia/Kolkata', // T45129
 	'atjwiki' => 'America/Montreal', // T167714
 	'awawiki' => 'Asia/Kolkata', // T251371
