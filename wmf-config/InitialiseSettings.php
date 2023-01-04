@@ -388,6 +388,7 @@ return [
 	'guwikisource' => 'Asia/Kolkata',
 	'guwiktionary' => 'Asia/Kolkata', // T253827
 	'guwwiki' => 'Africa/Lagos',
+	'guwwikiquote' => 'Africa/Lagos',
 	'guwwiktionary' => 'Africa/Lagos',
 	'hewiki' => 'Asia/Tel_Aviv',
 	'hewikibooks' => 'Asia/Tel_Aviv',
@@ -1790,6 +1791,7 @@ return [
 	'guwikiquote' => 'વિકિસૂક્તિ', // T121853
 	'guwikisource' => 'વિકિસ્રોત',
 	'guwiktionary' => 'વિકિકોશ', // T122407
+	'guwwikiquote' => 'Wikihoyidọ',
 	'hewiki' => 'ויקיפדיה',
 	'hewikibooks' => 'ויקיספר',
 	'hewikinews' => 'ויקיחדשות',
