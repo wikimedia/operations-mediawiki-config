@@ -755,6 +755,7 @@ return [
 'sgwiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'shiwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'shnwiki' => [ 'wikipedia', 'desktop-improvements', 'small', 'wikidataclient', 'commonsuploads' ],
+'shnwikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'shnwikivoyage' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'shnwiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'shwiki' => [ 'wikipedia', 'large', 'wikidataclient', 'cirrussearch-big-indices' ],
