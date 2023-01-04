@@ -293,6 +293,7 @@ $wgLocalVirtualHosts = [
 	'test-commons.wikimedia.org',
 	'tr.wikimedia.org',
 	'ua.wikimedia.org',
+	've.wikimedia.org',
 	'wikimania.wikimedia.org',
 ];
 

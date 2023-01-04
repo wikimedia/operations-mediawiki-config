@@ -5436,6 +5436,7 @@ return [
 	'uzwiktionary' => 'Vikilug‘at',
 	'vecwiktionary' => 'Wikisionario',
 	'vepwiki' => 'Vikipedii',
+	'vewikimedia' => 'Asociación',
 	'votewiki' => 'Project',
 	'vowiki' => 'Vükiped',
 	'vowikibooks' => 'Vükibuks',
@@ -5568,6 +5569,7 @@ return [
 	'ukwiktionary' => 'Обговорення_Вікісловника',
 	'ukwikinews' => 'Обговорення_Вікіновин', // T50843
 	'vepwiki' => 'Paginad_Vikipedii',
+	'vewikimedia' => 'Asociación_discusión',
 	'wawiktionary' => 'Wiccionaire_copene', // T181782
 	'xmfwiki' => 'ვიკიპედია_სხუნუა',
 ],

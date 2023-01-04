@@ -601,6 +601,7 @@ return [
 	'vecwikisource' => 'Europe/Berlin',
 	'vecwiktionary' => 'Europe/Brussels',
 	'vepwiki' => 'Europe/Moscow',
+	'vewikimedia' => 'America/Caracas',
 	'viwikivoyage' => 'Asia/Ho_Chi_Minh',
 	'wbwikimedia' => 'Asia/Kolkata', // T163322
 	'xmfwiki' => 'Asia/Tbilisi',
@@ -912,6 +913,7 @@ return [
 	'thankyouwiki' => '//thankyou.wikipedia.org',
 	'transitionteamwiki' => '//transitionteam.wikimedia.org',
 	'usabilitywiki' => '//usability.wikimedia.org',
+	'vewikimedia' => '//ve.wikimedia.org',
 	'votewiki' => '//vote.wikimedia.org',
 	'wikidatawiki' => '//www.wikidata.org',
 	'wikimania2005wiki' => '//wikimania2005.wikimedia.org',
@@ -1013,6 +1015,7 @@ return [
 	'thankyouwiki' => 'https://thankyou.wikipedia.org',
 	'transitionteamwiki' => 'https://transitionteam.wikimedia.org',
 	'usabilitywiki' => 'https://usability.wikimedia.org',
+	'vewikimedia' => 'https://ve.wikimedia.org',
 	'votewiki' => 'https://vote.wikimedia.org',
 	'wikidatawiki' => 'https://www.wikidata.org',
 	'wikimania2005wiki' => 'https://wikimania2005.wikimedia.org',
@@ -3179,6 +3182,7 @@ return [
 	'sewikimedia' => [ 'wikipedia:sv', 'commons' ],
 	'trwikimedia' => [ 'wikipedia:tr', 'meta' ],
 	'uawikimedia' => [ 'wikipedia:uk', 'wikipedia', 'wikipedia:ru', 'meta', 'foundation', 'outreachwiki', 'mediawikiwiki', 'commons' ], // T91187
+	'vewikimedia' => [ 'w', 'meta' ],
 
 	// content wikis
 	'alswiki' => [ 'de', 'wikt', 'b', 'q', 'en', 'fr', 'it', 'b:de' ],

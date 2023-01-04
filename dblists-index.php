@@ -926,6 +926,7 @@ return [
 'vecwiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'vepwiki' => [ 'wikipedia', 'desktop-improvements', 'medium', 'wikidataclient', 'commonsuploads' ],
 'vewiki' => [ 'wikipedia', 'desktop-improvements', 'small', 'wikidataclient', 'commonsuploads' ],
+'vewikimedia' => [ 'fishbowl', 'small', 'group1' ],
 'viwiki' => [ 'wikipedia', 'desktop-improvements', 'large', 'wikidataclient', 'cirrussearch-big-indices' ],
 'viwikibooks' => [ 'desktop-improvements', 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'viwikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],
