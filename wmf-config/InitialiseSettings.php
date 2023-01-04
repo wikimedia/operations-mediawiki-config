@@ -1229,6 +1229,7 @@ return [
 	'gnwiki' => 'Vikipetã',
 	'gomwiki' => 'विकिपीडिया', // T96468
 	'gorwiki' => 'Wikipedia', // T189109
+	'gorwiktionary' => 'Wikikamus',
 	'grwikimedia' => 'Wikimedia User Group Greece', // T245911
 	'grantswiki' => 'Wikimedia Foundation Grants Discussion',
 	'guwiki' => 'વિકિપીડિયા',
@@ -1788,6 +1789,7 @@ return [
 	'gomwiktionary' => 'विक्शनरी', // T249506
 	'gorwiki' => 'Wikipedia', // T189109
 	'grantswiki' => 'Project',
+	'gorwiktionary' => 'Wikikamus',
 	'guwiki' => 'વિકિપીડિયા',
 	'guwikiquote' => 'વિકિસૂક્તિ', // T121853
 	'guwikisource' => 'વિકિસ્રોત',

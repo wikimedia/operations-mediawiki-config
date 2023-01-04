@@ -320,6 +320,7 @@ return [
 'gomwiki' => [ 'wikipedia', 'desktop-improvements', 'flow', 'small', 'wikidataclient' ],
 'gomwiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'gorwiki' => [ 'wikipedia', 'desktop-improvements', 'small', 'wikidataclient', 'commonsuploads' ],
+'gorwiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'gotwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'gotwikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
 'grantswiki' => [ 'special', 'private', 'small', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines' ],
