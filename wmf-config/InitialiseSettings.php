@@ -6271,6 +6271,10 @@ return [
 		100 => 'Apéndice',
 		101 => 'Conversa_apéndice',
 	],
+	'gorwiktionary' => [
+		100 => 'Indeks', // T326253
+		101 => 'Lo\'iya_indeks', // T326253
+	],
 	'hewiktionary' => [
 		100 => 'נספח',
 		101 => 'שיחת_נספח'
