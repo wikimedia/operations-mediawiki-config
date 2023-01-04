@@ -56,6 +56,7 @@ return [
 'astwiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'aswiki' => [ 'wikipedia', 'desktop-improvements', 'medium', 'wikidataclient' ],
 'aswikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
+'aswikiquote' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'aswikisource' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'aswiktionary' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
 'atjwiki' => [ 'wikipedia', 'desktop-improvements', 'small', 'wikidataclient' ],

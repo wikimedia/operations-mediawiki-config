@@ -1073,6 +1073,7 @@ return [
 	'arzwiki' => 'ويكيبيديا',
 	'astwiktionary' => 'Wikcionariu', // T99315
 	'aswiki' => 'অসমীয়া ৱিকিপিডিয়া',
+	'aswikiquote' => 'ৱিকিউদ্ধৃতি',
 	'atjwiki' => 'Wikipetcia', // T167714
 	'aswikisource' => 'ৱিকিউৎস', // T45129
 	'auditcomwiki' => 'Audit Committee',
@@ -1630,6 +1631,7 @@ return [
 	'arzwiki' => 'ويكيبيديا',
 	'astwiktionary' => 'Wikcionariu', // T99315
 	'aswiki' => 'ৱিকিপিডিয়া',
+	'aswikiquote' => 'ৱিকিউদ্ধৃতি',
 	'aswikisource' => 'ৱিকিউৎস', // T45129
 	'atjwiki' => 'Wikipetcia', // T167714
 	'auditcomwiki' => 'Project',
