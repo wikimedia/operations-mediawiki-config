@@ -482,9 +482,10 @@ Wikipedia:
         commons_tagline: 'File:Wikipedia-tagline-eu.svg'
         comment_tagline: T249047
     extwiki:
-        comment: T48589
-        comment_1_5x: T150618
-        comment_2x: T150618
+        commons: 'File:Wikipedia-logo-v2-ext-new.svg'
+        comment: 'T48589, T318766'
+        comment_1_5x: 'T150618, T318766'
+        comment_2x: 'T150618, T318766'
         local_tagline: true
         local_wordmark: true
     fawiki:
@@ -1797,20 +1798,14 @@ Wikipedia:
         local_tagline: true
     zhwiki:
         commons: 'File:Wikipedia-logo-v2-zh.svg'
-        selected: zhwiki-20
         variants:
             zhwiki-hans:
                 commons: 'File:Wikipedia-logo-v2-zh-hans.svg'
                 commons_wordmark: 'File:Wikipedia-wordmark-zh-hans.svg'
                 commons_tagline: 'File:Wikipedia-tagline-zh-hans.svg'
-            zhwiki-20:
-                commons: 'File:Wikipedia-logo-zh-20zhWP-魔琴-hant.svg'
-                commons_icon: 'File:Wikipedia-logo-zh-20zhWP-魔琴-wikiball.svg'
-            zhwiki-20-hans:
-                commons: 'File:Wikipedia-logo-zh-20zhWP-魔琴-hans.svg'
         lang_variants:
             zh-hans:
-                selected_logo: zhwiki-20-hans
+                selected_logo: zhwiki-hans
                 selected_wordmark: zhwiki-hans
                 selected_tagline: zhwiki-hans
             zh-cn:
@@ -1819,14 +1814,13 @@ Wikipedia:
                 selected_lang: zh-hans
             zh-sg:
                 selected_lang: zh-hans
-        comment: 'T276694, T320859'
-        comment_1_5x: 'T276694, T320859'
-        comment_2x: 'T276694, T320859'
+        comment: 'T276694'
+        comment_1_5x: 'T276694'
+        comment_2x: 'T276694'
         commons_wordmark: 'File:Wikipedia-wordmark-zh.svg'
         comment_wordmark: 'T258552, T260908'
         commons_tagline: 'File:Wikipedia-tagline-zh.svg'
         comment_tagline: 'T258552, T260908'
-        comment_icon: T320859
         comment_lang_variants: 'T261153, T273578, T308620'
     zuwiki:
         comment: T233424
@@ -2355,6 +2349,8 @@ Wikiquote:
         no_1_5x: true
         no_2x: true
         no_icon: true
+    aswikiquote:
+        commons: File:Wikiquote-logo-as.svg
     azwikiquote:
         no_1_5x: true
         no_2x: true
@@ -3349,7 +3345,11 @@ Wikivoyage:
     sewikimedia:
         no_1_5x: true
         no_2x: true
-    trwikimedia: null
+    trwikimedia:
+        commons: 'File:Wikimedia CUG Turkey Logo in Turkish.svg'
+        comment: T323850
+        comment_1_5x: T323850
+        comment_2x: T323850
     uawikimedia:
         no_1_5x: true
         no_2x: true
@@ -3598,10 +3598,54 @@ Wikivoyage:
         no_wordmark: true
         selected_icon: metawiki
     wikidatawiki:
+        commons: 'File:Wikidata-logo-en.svg'
+        variants:
+            wikidatawiki-ar:
+                commons: 'File:Wikidata-logo-ar.svg'
+            wikidatawiki-bn:
+                commons: 'File:Wikidata-logo-bn.svg'
+            wikidatawiki-eo:
+                commons: 'File:Wikidata-logo-eo.svg'
+            wikidatawiki-lfn:
+                commons: 'File:Wikidata-logo-lfn.svg'
+            wikidatawiki-ne:
+                commons: 'File:Wikidata-logo-ne.svg'
+            wikidatawiki-pa:
+                commons: 'File:Wikidata-logo-pa.svg'
+            wikidatawiki-pnb:
+                commons: 'File:Wikidata-logo-pnb.svg'
+            wikidatawiki-sk:
+                commons: 'File:Wikidata-logo-sk.svg'
+            wikidatawiki-uk:
+                commons: 'File:Wikidata-logo-uk.svg'
+            wikidatawiki-ur:
+                commons: 'File:Wikidata-logo-ur.svg'
+        lang_variants:
+            ar:
+                selected_logo: wikidatawiki-ar
+            bn:
+                selected_logo: wikidatawiki-bn
+            eo:
+                selected_logo: wikidatawiki-eo
+            lfn:
+                selected_logo: wikidatawiki-lfn
+            ne:
+                selected_logo: wikidatawiki-ne
+            pa:
+                selected_logo: wikidatawiki-pa
+            pnb:
+                selected_logo: wikidatawiki-pnb
+            sk:
+                selected_logo: wikidatawiki-sk
+            uk:
+                selected_logo: wikidatawiki-uk
+            ur:
+                selected_logo: wikidatawiki-ur
         comment_1_5x: T230120
         comment_2x: T230120
         commons_wordmark: 'File:Wikidata wordmark.svg'
         comment_wordmark: T315572
+        comment_lang_variants: T323734
         local_icon: true
     wikimania2005wiki:
         comment: T50382

@@ -100,7 +100,7 @@ class LoggingTest extends PHPUnit\Framework\TestCase {
 	}
 
 	public function provideConfiguredBetaClusterChannels() {
-		$seettings = MWConfigCacheGenerator::getStaticConfig( 'labs' );
+		$settings = MWConfigCacheGenerator::getStaticConfig( 'labs' );
 		foreach ( $settings['wmgMonologChannels'] as $wiki => $channels ) {
 			foreach ( $channels as $name => $config ) {
 				$tests["\$wmgMonologChannels['$wiki']['$name']"] = [ $config ];

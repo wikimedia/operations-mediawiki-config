@@ -20,7 +20,7 @@ $wgPoolCounterConf = [
 	'CirrusSearch-Search' => [
 		'class' => Client::class,
 		'timeout' => 15,
-		'workers' => 180,
+		'workers' => 200,
 		'maxqueue' => 200,
 	],
 	// Software tries to recognize sources of external automation, such as GAE,

@@ -162,11 +162,6 @@ function wmfGetOverrideSettings() {
 						'rate' => 1,
 					],
 				],
-				'mediawiki.edit_attempt' => [
-					'sample' => [
-						'rate' => 1,
-					],
-				],
 				'mediawiki.visual_editor_feature_use' => [
 					'sample' => [
 						'rate' => 1,
@@ -178,7 +173,7 @@ function wmfGetOverrideSettings() {
 				'rc0.mediawiki.page_change' => [
 					'producers' => [
 						'mediawiki_eventbus' => [
-							'enabled' => true
+							'enabled' => true,
 						],
 					],
 				],
@@ -240,7 +235,6 @@ function wmfGetOverrideSettings() {
 		'wgEventLoggingStreamNames' => [
 			'+wikipedia' => [
 				'mediawiki.web_ui.interactions',
-				'mediawiki.edit_attempt',
 				'mediawiki.visual_editor_feature_use'
 			],
 			'+enwiki' => [
@@ -267,7 +261,6 @@ function wmfGetOverrideSettings() {
 				'api-warning' => 'debug',
 				'authentication' => 'info',
 				'authevents' => 'info',
-				'autoloader' => 'debug',  // ori, for T166759 (2017-06-02)
 				'badpass' => 'debug',
 				'badpass-priv' => 'debug',
 				'BlockManager' => 'info',
@@ -286,11 +279,11 @@ function wmfGetOverrideSettings() {
 				'collection' => 'debug', // -cscott for T73675
 				// 'csp' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 				// 'csp-report-only' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
+				'rdbms' => 'warning',
 				'DBConnection' => 'warning',
 				'DBPerformance' => [ 'logstash' => 'debug', 'udp2log' => 'warning' ],
 				'DBQuery' => 'warning',
 				'DBReplication' => 'warning',
-				'DBTransaction' => 'debug',
 				'DeferredUpdates' => 'error',
 				'deprecated' => 'debug',
 				'diff' => 'debug',
@@ -500,6 +493,11 @@ function wmfGetOverrideSettings() {
 			'default'	=> true,
 		],
 
+		// T320613
+		'wgKartographerNearbyOnMobile' => [
+			'default' => true,
+		],
+
 		'wgWMEDesktopWebUIActionsTracking' => [
 			'default' => 1,
 		],
@@ -537,6 +535,7 @@ function wmfGetOverrideSettings() {
 		'wgMobileUrlTemplate' => [
 			'default' => '%h0.m.%h1.%h2.%h3.%h4',
 			'wikidatawiki' => 'm.%h0.%h1.%h2.%h3', // T87440
+			'wikifunctionswiki' => 'm.%h0.%h1.%h2.%h3', // T314891
 		],
 
 		# Do not run any A/B tests on beta cluster (T206179)
@@ -1373,20 +1372,8 @@ function wmfGetOverrideSettings() {
 		'wgReadingListsDatabase' => [
 			'default' => 'metawiki',
 		],
-		'wgReadingListsWeb' => [
-			'default' => true,
-		],
-		'wgReadingListsAnonymizedPreviews' => [
-			'default' => true,
-		],
 		'wgReadingListsWebAuthenticatedPreviews' => [
 			'default' => true,
-		],
-		'wgReadingListAndroidAppDownloadLink' => [
-			'default' => 'https://play.google.com/store/apps/details?id=org.wikipedia&referrer=utm_source%3DreadingLists',
-		],
-		'wgReadingListiOSAppDownloadLink' => [
-			'default' => 'https://itunes.apple.com/app/apple-store/id324715238?pt=208305&ct=readingLists&mt=8',
 		],
 
 		'-wgPageCreationLog' => [
@@ -1471,10 +1458,6 @@ function wmfGetOverrideSettings() {
 			'default' => null
 		],
 
-		'wgActorTableSchemaMigrationStage' => [
-			'default' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
-		],
-
 		'-wgTemplateLinksSchemaMigrationStage' => [
 			'default' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 		],
@@ -1533,28 +1516,32 @@ function wmfGetOverrideSettings() {
 			// Explicitly disabled on non-CentralAuth wikis in CommonSettings.php
 			'default' => true,
 		],
-		'wgPageTriageDraftNamespaceId' => [
-			'enwiki' => 118,
+		'wmgEnablePageTriage' => [
+			'zhwiki' => true, // T323378
 		],
-		'wgPageTriageEnableOresFilters' => [
-			'default' => false,
-			'enwiki' => true,
+		'wgPageTriageEnableCurationToolbar' => [
+			'zhwiki' => true, // T323378
+		],
+		'wgPageTriageDraftNamespaceId' => [
+			'zhwiki' => 118, // T323378
 		],
 		'wgPageTriageEnableCopyvio' => [
-			'default' => false,
+			'zhwiki' => true, // T323378
+		],
+		'wgPageTriageEnableEnglishWikipediaFeatures' => [
+			'default' => false, // T321922
+			'testwiki' => true,
+			'test2wiki' => true,
 			'enwiki' => true,
 		],
 		'-wmgWikibaseCachePrefix' => [
 			'default' => 'wikidatawiki',
 			'commonswiki' => 'commonswiki',
 		],
-		'wgGEAllowAccessToNewImpactModule' => [
-			'default' => true,
-		],
 		'wgGEUseNewImpactModule' => [
 			'default' => true,
 		],
-		'wgGENewImpactD3Enabled' => [
+		'wgGERefreshUserImpactDataMaintenanceScriptEnabled' => [
 			'default' => true,
 		],
 		'wgGEImageRecommendationApiHandler' => [
@@ -1582,18 +1569,13 @@ function wmfGetOverrideSettings() {
 		'wgGEHomepageDefaultVariant' => [
 			'default' => 'control',
 		],
-		'wgGEHomepageNewAccountVariants' => [
-			'default' => [
-				'control' => 100,
-			],
-		],
 		'wgGEHomepageNewAccountVariantsByPlatform' => [
 			'default' => [
 				'control' => [
 					'mobile' => 50,
 					'desktop' => 50,
 				],
-				'imagerecommendation' => [
+				'oldimpact' => [
 					'mobile' => 50,
 					'desktop' => 50
 				]
@@ -1619,9 +1601,6 @@ function wmfGetOverrideSettings() {
 			'kowiki' => 'https://ko.wikipedia.org/w/api.php',
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
 			'viwiki' => 'https://vi.wikipedia.org/w/api.php',
-		],
-		'wgGEMentorshipUseIsActiveFlag' => [
-			'default' => true,
 		],
 		'wgGECampaigns' => [
 			'default' => [
@@ -2370,6 +2349,10 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
+		'-wgDiscussionToolsLegacyHeadingMarkup' => [
+			'default' => false,
+		],
+
 		'wgWatchlistExpiry' => [
 			'default' => true,
 		],
@@ -2454,6 +2437,9 @@ function wmfGetOverrideSettings() {
 		'wgFavicon' => [
 			'wikifunctionswiki' => '/static/favicon/wikifunctions.ico',
 		],
+		'wmgCentralAuthLoginIcon' => [
+			'wikifunctionswiki' => '/srv/mediawiki/static/images/sul/wikifunctions.png',
+		],
 
 		// (T289315) Early roll-out to Beta Cluster only
 		'wmgUseWikiLambda' => [
@@ -2487,16 +2473,17 @@ function wmfGetOverrideSettings() {
 
 		'wmgUseSearchVue' => [
 			'default' => false,
-			'en' => true,
+			'enwiki' => true,
+			'ruwiki' => true,
 		],
 		'wgQuickViewMediaRepositoryApiBaseUri' => [
-			'default' => '//commons.wikimedia.beta.wmflabs.org/w/api.php',
+			'default' => 'https://commons.wikimedia.beta.wmflabs.org/w/api.php',
 		],
 		'wgQuickViewMediaRepositorySearchUri' => [
-			'default' => '//commons.wikimedia.beta.wmflabs.org/wiki/Special:MediaSearch?search=%s',
+			'default' => 'https://commons.wikimedia.beta.wmflabs.org/wiki/Special:MediaSearch?search=%s',
 		],
 		'wgQuickViewMediaRepositoryUri' => [
-			'default' => '//commons.wikimedia.beta.wmflabs.org',
+			'default' => 'https://commons.wikimedia.beta.wmflabs.org',
 		],
 		'wgQuickViewSearchFilterForQID' => [
 			'default' => 'haswbstatement:P245962=%s',
@@ -2521,8 +2508,18 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
+		// T299612
+		'wgLinterMigrateNamespaceStage' => [
+			'default' => true,
+		],
+
 		// T175177
 		'wgLinterWriteTagAndTemplateColumnsStage' => [
+			'default' => true,
+		],
+
+		// T175177
+		'wgLinterMigrateTagAndTemplateColumnsStage' => [
 			'default' => true,
 		],
 

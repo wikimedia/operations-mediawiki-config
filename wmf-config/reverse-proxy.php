@@ -7,9 +7,11 @@
 
 # Accept XFF from these proxies
 $wgCdnServersNoPurge = [
-	# Note: the general idea here is to cover infrastructure space
-	# where e.g. Varnish and SSL servers could be located, but exclude
-	# other misc subnets (e.g. labs, analytics).
+	// This list includes all hosts which are trusted by MediaWiki in
+	// X-Forwarded-For headers, including the caches and appservers.
+	// TODO: generate this from Puppet's network module or Netbox
+	// directly.
+	// TODO: Are the public* subnets needed anymore?
 
 	## eqiad
 	'208.80.154.0/26',	# public1-a-eqiad
@@ -20,6 +22,7 @@ $wgCdnServersNoPurge = [
 	'2620:0:861:3::/64',	# public1-c-eqiad
 	'208.80.155.96/27',	# public1-d-eqiad
 	'2620:0:861:4::/64',	# public1-d-eqiad
+
 	'10.64.0.0/22',		# private1-a-eqiad
 	'2620:0:861:101::/64',	# private1-a-eqiad
 	'10.64.16.0/22',	# private1-b-eqiad
@@ -28,6 +31,22 @@ $wgCdnServersNoPurge = [
 	'2620:0:861:103::/64',	# private1-c-eqiad
 	'10.64.48.0/22',	# private1-d-eqiad
 	'2620:0:861:107::/64',	# private1-d-eqiad
+	'10.64.130.0/24',	# private1-e1-eqiad
+	'2620:0:861:109::/64',	# private1-e1-eqiad
+	'10.64.131.0/24',	# private1-e2-eqiad
+	'2620:0:861:10a::/64',	# private1-e2-eqiad
+	'10.64.132.0/24',	# private1-e3-eqiad
+	'2620:0:861:10b::/64',	# private1-e3-eqiad
+	'10.64.133.0/24',	# private1-e4-eqiad
+	'2620:0:861:10c::/64',	# private1-e4-eqiad
+	'10.64.134.0/24',	# private1-f1-eqiad
+	'2620:0:861:10d::/64',	# private1-f1-eqiad
+	'10.64.135.0/24',	# private1-f2-eqiad
+	'2620:0:861:10e::/64',	# private1-f2-eqiad
+	'10.64.136.0/24',	# private1-f3-eqiad
+	'2620:0:861:10f::/64',	# private1-f3-eqiad
+	'10.64.137.0/24',	# private1-f4-eqiad
+	'2620:0:861:110::/64',  # private1-f4-eqiad
 
 	## codfw
 	'208.80.153.0/27', # public1-a-codfw
@@ -38,6 +57,7 @@ $wgCdnServersNoPurge = [
 	'2620:0:860:3::/64', # public1-c-codfw
 	'208.80.153.96/27', # public1-d-codfw
 	'2620:0:860:4::/64', # public1-d-codfw
+
 	'10.192.0.0/22', # private1-a-codfw
 	'2620:0:860:101::/64', # private1-a-codfw
 	'10.192.16.0/22', # private1-b-codfw

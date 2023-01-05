@@ -10,12 +10,8 @@ servers at '/srv/mediawiki'.
  individual site's Apache config in operations/puppet.git.
 
 404.php
- Configured by class mediawiki::hhvm in operations/puppet.git as the
- default 404-handler (error_document404) for HHVM.
-
- Also symlinked to /w/404.php, which is the default 404-handler as
- configured by 'apache/apache2.conf.erb', and various mediawiki sites
- in operations/puppet.git.
+ Symlinked to /w/404.php, which is the default 404 ErrorDocument in
+ Apache on MediaWiki appservers, configured in operations/puppet.git.
 
 503.html
  Symlinked to "/503.html" in most docroots, which is the default 503-handler

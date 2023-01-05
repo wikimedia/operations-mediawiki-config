@@ -42,7 +42,7 @@ $common = [
 	'xenon' => '10.64.32.141', # mwlog1002.eqiad.wmnet
 
 	// Statsd is not active-active.
-	'statsd' => '10.64.16.149', # statsd.eqiad.wmnet, now resolving to graphite1004.eqiad.wmnet
+	'statsd' => '10.64.16.81', # statsd.eqiad.wmnet, now resolving to graphite1005.eqiad.wmnet
 
 	// Logstash is not active-active.
 	'logstash' => [
@@ -119,7 +119,7 @@ $services = [
 		'mediaSwiftStore' => 'https://ms-fe.svc.eqiad.wmnet/v1/AUTH_mw',
 
 		'etcd' => [
-			'host' => '_etcd._tcp.eqiad.wmnet',
+			'host' => '_etcd-client-ssl._tcp.eqiad.wmnet',
 			'protocol' => 'https'
 		],
 
@@ -138,10 +138,12 @@ $services = [
 		],
 
 		// LockManager Redis eqiad
+		// This was hosted on redis_sessions which was phased out (T267581)
+		// while now it is hosted on redis_misc (rdb* servers)
 		'redis_lock' => [
-			'rdb1' => '10.64.0.65',   # mc1040 A2
-			'rdb2' => '10.64.32.153', # mc1048 C2
-			'rdb3' => '10.64.48.91',  # mc1052 D4
+			'rdb1' => '10.64.16.76:6381', # rdb1009 B8
+			'rdb2' => '10.64.16.76:6382', # rdb1009 B8
+			'rdb3' => '10.64.0.36:6381',  # rdb1011 A1
 		],
 		'search-chi' => [
 			[ // forwarded to https://search.svc.eqiad.wmnet:9243/
@@ -195,9 +197,9 @@ $services = [
 		],
 		// LockManager Redis codfw
 		'redis_lock' => [
-			'rdb1' => '10.192.32.162', # mc2030 C5
-			'rdb2' => '10.192.0.86',   # mc2022 A8
-			'rdb3' => '10.192.48.78',  # mc2034 D4
+			'rdb1' => '10.192.0.198:6381', # rdb2007 A5
+			'rdb2' => '10.192.0.198:6382', # rdb2007 A5
+			'rdb3' => '10.192.32.8:6381',  # rdb2009 C3
 		],
 		'search-chi' => [
 			[ // forwarded to https://search.svc.codfw.wmnet:9243/

@@ -1,6 +1,6 @@
 <?php
 /**
- * This is the 404-handler for Apache and HHVM (see README).
+ * This is the 404-handler for Apache (see README).
  * It is typically served from wiki domains for urls outside
  * the scope of MediaWiki. For example:
  *

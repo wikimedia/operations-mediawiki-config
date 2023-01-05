@@ -105,13 +105,14 @@ class WmfConfigServicesTest extends PHPUnit\Framework\TestCase {
 				'expected_realm' => 'production',
 				'expected_dc' => 'eqiad',
 				'expected_dcs' => [ "eqiad", "codfw" ],
-				'expected_statsd' => "10.64.16.149",
+				// graphite1005.eqiad.wmnet
+				'expected_statsd' => "10.64.16.81",
 			],
 			'labs' => [
 				'expected_realm' => 'labs',
 				'expected_dc' => 'eqiad',
 				'expected_dcs' => [ "eqiad" ],
-				'expected_statsd' => 'cloudmetrics1001.eqiad.wmnet',
+				'expected_statsd' => 'prometheus-labmon.eqiad.wmnet',
 			],
 		];
 

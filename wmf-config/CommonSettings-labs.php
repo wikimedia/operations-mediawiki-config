@@ -411,12 +411,17 @@ $wgKartographerMapServer = 'https://maps-beta.wmflabs.org';
 $wgKartographerNearby = true;
 $wgKartographerNearbyClustering = true;
 
+// Temporary feature flag to expand map shapes when saving page, see T323113
+$wgKartographerExternalDataParseTimeFetch = true;
+
 // Enable max-width for editing. T307725.
 $wgVectorMaxWidthOptions['exclude']['querystring']['action'] = '(history|edit)';
 
 if ( $wmgUseCampaignEvents ) {
 	$wgCampaignEventsDatabaseCluster = false;
 	$wgCampaignEventsDatabaseName = 'wikishared';
+	// Re-add right removed in production via groupOverrides in IS.php
+	$wgGroupPermissions['user']['campaignevents-enable-registration'] = true;
 }
 
 // Ignore parameter order when matching request URLs to CDN URLs (T314868)

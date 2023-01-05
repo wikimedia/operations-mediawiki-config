@@ -217,6 +217,8 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 			$lbFactoryConf = [];
 			wmfApplyEtcdDBConfig( $dbConfigFromEtcd, $lbFactoryConf );
 			$lbFactoryConf['class'] = 'LBFactoryMulti';
+			$lbFactoryConf['sectionLoads']['s11'] = [ 'clouddb2002-dev' => 1 ];
+			$lbFactoryConf['hostsByName']['clouddb2002-dev'] = '10.192.20.6';
 			return $lbFactoryConf;
 		};
 	} else {
@@ -348,6 +350,11 @@ if ( $wmgRealm === 'production' ) {
 	// etcd out of the loop entirely for this one.
 	$wgLBFactoryConf['sectionLoads']['s11'] = [ 'clouddb2002-dev' => 1 ];
 	$wgLBFactoryConf['hostsByName']['clouddb2002-dev'] = '10.192.20.6';
+
+	// Disable LoadMonitor in CLI, it doesn't provide much value in CLI.
+	if ( PHP_SAPI === 'cli' ) {
+		$wgLBFactoryConf['loadMonitorClass'] = '\Wikimedia\Rdbms\LoadMonitorNull';
+	}
 }
 
 // Set $wgProfiler to the value provided by PhpAutoPrepend.php
@@ -1430,17 +1437,16 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 	];
 
 	// Current stable release
-	$wgExtDistDefaultSnapshot = 'REL1_38';
+	$wgExtDistDefaultSnapshot = 'REL1_39';
 
 	// Current development snapshot
-	$wgExtDistCandidateSnapshot = 'REL1_39';
+	// $wgExtDistCandidateSnapshot = 'REL1_40';
 
 	// Available snapshots
 	$wgExtDistSnapshotRefs = [
 		'master',
 		'REL1_39',
 		'REL1_38',
-		'REL1_37',
 		'REL1_35',
 	];
 
@@ -1502,6 +1508,9 @@ if ( $wmgUseContactPage ) {
 				]
 			]
 		];
+	}
+	if ( $wgDBname === 'enwiki' ) {
+		include __DIR__ . '/EnWikiContactPages.php';
 	}
 }
 
@@ -2736,6 +2745,7 @@ if ( $wmgUseVisualEditor ) {
 
 	// Citoid
 	wfLoadExtension( 'Citoid' );
+	$wgCitoidFullRestbaseURL = "/api/rest_";
 
 	// Move the citation button from the primary toolbar into the "other" group
 	if ( $wmgCiteVisualEditorOtherGroup ) {
@@ -4061,8 +4071,10 @@ if ( $wmgUse3d ) {
 }
 
 if ( $wmgUseReadingLists ) {
-	$wgReadingListsMaxEntriesPerList = 5000;
 	wfLoadExtension( 'ReadingLists' );
+	$wgReadingListsMaxEntriesPerList = 5000;
+	$wgReadingListAndroidAppDownloadLink = 'https://play.google.com/store/apps/details?id=org.wikipedia&referrer=utm_source%3DreadingLists';
+	$wgReadingListiOSAppDownloadLink = 'https://apps.apple.com/app/apple-store/id324715238?pt=208305&ct=shared-reading-list-landing&mt=8';
 }
 
 if ( $wmgUseGlobalPreferences && $wmgUseCentralAuth ) {
@@ -4228,6 +4240,9 @@ if ( $wmgUseSearchVue ) {
 if ( $wmgUseCampaignEvents ) {
 	wfLoadExtension( 'CampaignEvents' );
 	$wgCampaignEventsDatabaseCluster = 'extension1';
+	if ( $wgDBname === 'metawiki' ) {
+		$wgCampaignEventsDatabaseName = 'wikishared';
+	}
 }
 
 if ( $wmgUseStopForumSpam ) {
@@ -4235,6 +4250,14 @@ if ( $wmgUseStopForumSpam ) {
 	$wgSFSIPListLocation = 'https://www.stopforumspam.com/downloads/listed_ip_90_ipv46_all.gz';
 	$wgSFSValidateIPListLocationMD5 = 'https://www.stopforumspam.com/downloads/listed_ip_90_ipv46_all.gz.md5';
 	$wgSFSProxy = $wgCopyUploadProxy;
+}
+
+if ( $wmgUsePhonos ) {
+	wfLoadExtension( 'Phonos' );
+	// $wgPhonosApiKeyGoogle in PrivateSettings
+	$wgPhonosEngine = 'google';
+	$wgPhonosFileBackend = 'global-multiwrite';
+	$wgPhonosApiProxy = $wgCopyUploadProxy;
 }
 
 // This is a temporary hack for hooking up Parsoid/PHP with MediaWiki
