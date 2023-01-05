@@ -489,10 +489,6 @@ function wmfGetOverrideSettings() {
 			'simplewiki' => true,
 		],
 
-		'-wgKartographerEnableMapFrame' => [
-			'default'	=> true,
-		],
-
 		// T320613
 		'wgKartographerNearbyOnMobile' => [
 			'default' => true,

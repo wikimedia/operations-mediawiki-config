@@ -25742,10 +25742,6 @@ return [
 	// This should not be disabled on additional wikis (T291736).
 ],
 
-'wgKartographerEnableMapFrame' => [
-	'default' => true,
-],
-
 'wgKartographerUsePageLanguage' => [
 	'default' => true,
 ],
