@@ -16100,6 +16100,7 @@ return [
 	'eswikiversity' => true, // T198335
 	'eswikivoyage' => true, // T241163
 	'euwiki' => true, // T166553
+	'extwiki' => true, // T326450
 	'fawiki' => true,
 	'fawiktionary' => true, // T308505
 	'frwiki' => true, // T95604
