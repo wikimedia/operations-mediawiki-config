@@ -8281,7 +8281,14 @@ return [
 		'sysop' => [
 			'editautoreviewprotected' => true,
 			'editeditorprotected' => true, // T321111
-		]
+		],
+		'extendedmover' => [ // T326434
+			'move' => true,
+			'move-subpages' => true,
+			'delete-redirect' => true,
+			'suppressredirect' => true,
+			'tboverride' => true,
+		],
 	],
 	'+arwikibooks' => [
 		'rollbacker' => [ 'rollback' => true ], // T185720
@@ -11119,6 +11126,7 @@ return [
 			'confirmed',
 			'rollbacker',
 			'abusefilter',
+			'extendedmover', // T326434
 		],
 	],
 	'+arwikibooks' => [
@@ -12535,6 +12543,7 @@ return [
 			'abusefilter',
 			'patroller',
 			'autopatrolled',
+			'extendedmover', // T326434
 		],
 	],
 	'+arwikibooks' => [
