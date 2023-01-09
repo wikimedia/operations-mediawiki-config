@@ -694,6 +694,7 @@ return [
 	'huwikisource' => '/static/images/project-logos/huwikisource.png', // T54019
 	'hywikisource' => '/static/images/project-logos/hywikisource.png', // T54019
 	'iswikisource' => '/static/images/project-logos/iswikisource.png', // T54019
+	'jawikisource' => '/static/images/project-logos/jawikisource.png', // T326488
 	'jvwikisource' => '/static/images/project-logos/jvwikisource.png',
 	'knwikisource' => '/static/images/project-logos/knwikisource.png', // T110806
 	'kowikisource' => '/static/images/project-logos/kowikisource.png', // T40543
@@ -1375,6 +1376,7 @@ return [
 	'euwikisource' => '/static/images/project-logos/euwikisource-1.5x.png', // T310961
 	'frwikisource' => '/static/images/project-logos/frwikisource-1.5x.png',
 	'hiwikisource' => '/static/images/project-logos/hiwikisource-1.5x.png',
+	'jawikisource' => '/static/images/project-logos/jawikisource-1.5x.png', // T326488
 	'jvwikisource' => '/static/images/project-logos/jvwikisource-1.5x.png',
 	'napwikisource' => '/static/images/project-logos/napwikisource-1.5x.png', // T210752
 	'nowikisource' => '/static/images/project-logos/nowikisource-1.5x.png', // T167192
@@ -1972,6 +1974,7 @@ return [
 	'euwikisource' => '/static/images/project-logos/euwikisource-2x.png', // T310961
 	'frwikisource' => '/static/images/project-logos/frwikisource-2x.png',
 	'hiwikisource' => '/static/images/project-logos/hiwikisource-2x.png',
+	'jawikisource' => '/static/images/project-logos/jawikisource-2x.png', // T326488
 	'jvwikisource' => '/static/images/project-logos/jvwikisource-2x.png',
 	'napwikisource' => '/static/images/project-logos/napwikisource-2x.png', // T210752
 	'nowikisource' => '/static/images/project-logos/nowikisource-2x.png', // T167192
@@ -3269,6 +3272,11 @@ return [
 	],
 
 	// Wikisource
+	'jawikisource' => [ // T326488
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-ja.svg',
+		'width' => 137,
+		'height' => 24,
+	],
 	'jvwikisource' => [ // T311104
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-jv.svg',
 		'width' => 137,

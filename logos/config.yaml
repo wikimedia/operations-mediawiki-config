@@ -2981,6 +2981,13 @@ Wikisource:
         comment: T54019
         no_1_5x: true
         no_2x: true
+    jawikisource:
+        commons: 'File:Wikisource-logo-ja.svg'
+        commons_wordmark: 'File:Wikisource-wordmark-ja.svg'
+        comment: T326488
+        comment_1_5x: T326488
+        comment_2x: T326488
+        comment_wordmark: T326488
     jvwikisource:
         commons: 'File:Wikisource-logo-jv.svg'
         commons_wordmark: 'File:Wikisource-wordmark-jv.svg'
