@@ -25464,6 +25464,7 @@ return [
 	'default' => false,
 	'cawiki' => true,
 	'dewiki' => true,
+	'enwiki' => true,
 	'enwikivoyage' => true,
 	'eswiki' => true,
 	'fawiki' => true,
@@ -25474,6 +25475,7 @@ return [
 	'metawiki' => true,
 	'nowiki' => true,
 	'plwiki' => true,
+	'ptwiki' => true,
 	'rowiki' => true,
 	'ruwiki' => true,
 	'swwiki' => true,
@@ -25543,6 +25545,30 @@ return [
 			'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
 			'shuffleAnswersDisplay' => true,
 		],
+		[
+			// T325136
+			'name' => 'internal-gdi-safety-survey-wave4',
+			'type' => 'internal',
+			'layout' => 'single-answer',
+			'question' => 'ext-quicksurveys-internal-gdi-safety-survey-question',
+			'privacyPolicy' => 'ext-quicksurveys-internal-gdi-safety-survey-privacy-policy',
+			'answers' => [
+				'ext-quicksurveys-internal-gdi-safety-survey-answer-positive',
+				'ext-quicksurveys-internal-gdi-safety-survey-answer-negative',
+				'ext-quicksurveys-internal-gdi-safety-survey-answer-neutral',
+			],
+			'audience' => [
+				// T325136
+				'minEdits' => 5
+			],
+			'enabled' => true,
+			'coverage' => 0.1, // T325136
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable', 'beta' ],
+			],
+		],
+
 	],
 	'frwiki' => [
 		// T187299
@@ -25562,6 +25588,29 @@ return [
 			],
 			'privacyPolicy' => 'ext-quicksurveys-performance-internal-survey-privacy-policy',
 			'shuffleAnswersDisplay' => true,
+		],
+		[
+			// T325136
+			'name' => 'internal-gdi-safety-survey-wave4',
+			'type' => 'internal',
+			'layout' => 'single-answer',
+			'question' => 'ext-quicksurveys-internal-gdi-safety-survey-question',
+			'privacyPolicy' => 'ext-quicksurveys-internal-gdi-safety-survey-privacy-policy',
+			'answers' => [
+				'ext-quicksurveys-internal-gdi-safety-survey-answer-positive',
+				'ext-quicksurveys-internal-gdi-safety-survey-answer-negative',
+				'ext-quicksurveys-internal-gdi-safety-survey-answer-neutral',
+			],
+			'audience' => [
+				// T325136
+				'minEdits' => 5
+			],
+			'enabled' => true,
+			'coverage' => 0.1, // T325136
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable', 'beta' ],
+			],
 		],
 	],
 	'ruwiki' => [
@@ -25601,7 +25650,76 @@ return [
 			'link' => 'research-incentive-link',
 			'privacyPolicy' => 'research-incentive-privacy',
 		],
-	]
+	],
+	'ptwiki' => [
+		// T325136
+		'name' => 'internal-gdi-safety-survey-wave4',
+		'type' => 'internal',
+		'layout' => 'single-answer',
+		'question' => 'ext-quicksurveys-internal-gdi-safety-survey-question',
+		'privacyPolicy' => 'ext-quicksurveys-internal-gdi-safety-survey-privacy-policy',
+		'answers' => [
+			'ext-quicksurveys-internal-gdi-safety-survey-answer-positive',
+			'ext-quicksurveys-internal-gdi-safety-survey-answer-negative',
+			'ext-quicksurveys-internal-gdi-safety-survey-answer-neutral',
+		],
+		'audience' => [
+			// T325136
+			'minEdits' => 5
+		],
+		'enabled' => true,
+		'coverage' => 0.2, // T325136
+		'platforms' => [
+			'desktop' => [ 'stable' ],
+			'mobile' => [ 'stable', 'beta' ],
+		],
+	],
+	'+fawiki' => [
+		// T325136
+		'name' => 'internal-gdi-safety-survey-wave4',
+		'type' => 'internal',
+		'layout' => 'single-answer',
+		'question' => 'ext-quicksurveys-internal-gdi-safety-survey-question',
+		'privacyPolicy' => 'ext-quicksurveys-internal-gdi-safety-survey-privacy-policy',
+		'answers' => [
+			'ext-quicksurveys-internal-gdi-safety-survey-answer-positive',
+			'ext-quicksurveys-internal-gdi-safety-survey-answer-negative',
+			'ext-quicksurveys-internal-gdi-safety-survey-answer-neutral',
+		],
+		'audience' => [
+			// T325136
+			'minEdits' => 5
+		],
+		'enabled' => true,
+		'coverage' => 0.2, // T325136
+		'platforms' => [
+			'desktop' => [ 'stable' ],
+			'mobile' => [ 'stable', 'beta' ],
+		],
+	],
+	'+enwiki' => [
+		// T325136
+		'name' => 'internal-gdi-safety-survey-wave4',
+		'type' => 'internal',
+		'layout' => 'single-answer',
+		'question' => 'ext-quicksurveys-internal-gdi-safety-survey-question',
+		'privacyPolicy' => 'ext-quicksurveys-internal-gdi-safety-survey-privacy-policy',
+		'answers' => [
+			'ext-quicksurveys-internal-gdi-safety-survey-answer-positive',
+			'ext-quicksurveys-internal-gdi-safety-survey-answer-negative',
+			'ext-quicksurveys-internal-gdi-safety-survey-answer-neutral',
+		],
+		'audience' => [
+			// T325136
+			'minEdits' => 5
+		],
+		'enabled' => true,
+		'coverage' => 0.03, // T325136
+		'platforms' => [
+			'desktop' => [ 'stable' ],
+			'mobile' => [ 'stable', 'beta' ],
+		],
+	],
 
 	// Note: make sure the wiki also has wmgUseQuickSurveys => true
 ],
