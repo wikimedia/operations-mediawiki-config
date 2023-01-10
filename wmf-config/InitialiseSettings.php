@@ -26312,6 +26312,15 @@ return [
 	'default' => [
 		'rev_comment' => MIGRATION_OLD,
 	],
+	'labtestwiki' => [
+		'rev_comment' => MIGRATION_WRITE_BOTH,
+	],
+	'testwiki' => [
+		'rev_comment' => MIGRATION_WRITE_BOTH,
+	],
+	'testwikidatawiki' => [
+		'rev_comment' => MIGRATION_WRITE_BOTH,
+	],
 ],
 
 'wgXmlDumpSchemaVersion' => [
