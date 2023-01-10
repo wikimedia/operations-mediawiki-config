@@ -19750,11 +19750,6 @@ return [
 	'testwiki' => true,
 ],
 
-'wgDiscussionToolsLegacyHeadingMarkup' => [
-	'default' => false, // T314714
-	'enwiki' => true, // T314714
-],
-
 'wgDiscussionToolsShowFeedbackLinks' => [
 	'default' => true, // T322494
 ],
