@@ -27978,6 +27978,15 @@ return [
 	'default' => false,
 ],
 
+// T324999
+'wmgWikibaseRestApiEnabled' => [
+	'default' => false,
+	'testwikidatawiki' => true,
+	// do NOT set this to true until all the blockers in T320470 are resolved (incl. actually having metrics ready)
+	// and this was green-lit by all stakeholders in the stage-gate meeting
+	'wikidatawiki' => false,
+],
+
 // Wikidata Bridge configuration
 
 'wmgWikibaseRepoDataBridgeEnabled' => [
