@@ -19737,6 +19737,9 @@ return [
 
 'wgDiscussionTools_visualenhancements_pageframe' => [
 	'default' => 'unavailable',
+	'arwiki' => 'default', // T317907
+	'cswiki' => 'default', // T317907
+	'huwiki' => 'default', // T317907
 	'mediawikiwiki' => 'available',
 ],
 
