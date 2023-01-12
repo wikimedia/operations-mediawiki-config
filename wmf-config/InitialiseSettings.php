@@ -7295,9 +7295,6 @@ return [
 		'showThumbnail' => true,
 		'showDescription' => true,
 	],
-	'+frwiktionary' => [
-		'showDescription' => false,
-	],
 	'officewiki' => [
 		'showThumbnail' => false,
 		'showDescription' => false,
