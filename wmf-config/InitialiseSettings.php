@@ -27834,6 +27834,12 @@ return [
 	'default' => 'wmf_capped',
 ],
 
+'wgCirrusSearchAutomationHeaderRegexes' => [
+	'default' => [
+		'x-public-cloud' => '/.*/',
+	]
+],
+
 'wgRestAPIAdditionalRouteFiles' => [
 	'default' => [],
 	'testwiki' => [ 'includes/Rest/coreDevelopmentRoutes.json' ],
