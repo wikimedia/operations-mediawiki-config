@@ -9844,6 +9844,7 @@ return [
 			'deletedhistory' => true,
 			'deletedtext' => true,
 			'browsearchive' => true,
+			'block' => true, // T326355
 		],
 		'arbcom' => [
 			'deletedhistory' => true,
