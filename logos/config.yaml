@@ -2404,13 +2404,9 @@ Wikiquote:
         comment_2x: T170604
     etwikiquote:
         commons: 'File:EE Vikitsitaadid logo.svg'
-        selected: etwikiquote-10k
-        variants:
-            etwikiquote-10k:
-                commons: 'File:Vikitsitaadid 10 000.svg'
-        comment: 'T302683, T313698'
-        comment_1_5x: T313698
-        comment_2x: T313698
+        comment: T302683
+        comment_1_5x: T302683
+        comment_2x: T302683
         no_wordmark: true
     fawikiquote: null
     frwikiquote:
