@@ -20316,6 +20316,11 @@ return [
 	'wikipedia' => false,
 ],
 
+'wgContentTranslationDefaultParsoidClient' => [
+	'default' => 'vrs',
+	'testwiki' => 'direct', // T323667
+],
+
 'wmgUseExternalGuidance' => [
 	'default' => false,
 	'wikipedia' => true,
