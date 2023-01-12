@@ -26318,6 +26318,9 @@ return [
 	'default' => [
 		'rev_comment' => MIGRATION_OLD,
 	],
+	'group1' => [
+		'rev_comment' => MIGRATION_WRITE_BOTH,
+	],
 	'group0' => [
 		'rev_comment' => MIGRATION_WRITE_BOTH,
 	],
