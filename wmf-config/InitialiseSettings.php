@@ -19732,10 +19732,7 @@ return [
 ],
 
 'wgDiscussionTools_visualenhancements_reply' => [
-	'default' => 'default', // T320683
-	'dewiki' => 'unavailable', // T320683
-	'enwiki' => 'unavailable', // T320683
-	'frwiki' => 'unavailable', // T320683
+	'default' => 'default', // T320683, T323537, T321955
 ],
 
 'wgDiscussionTools_visualenhancements_pageframe' => [
