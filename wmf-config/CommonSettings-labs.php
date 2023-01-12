@@ -411,9 +411,6 @@ $wgKartographerMapServer = 'https://maps-beta.wmflabs.org';
 $wgKartographerNearby = true;
 $wgKartographerNearbyClustering = true;
 
-// Temporary feature flag to expand map shapes when saving page, see T323113
-$wgKartographerExternalDataParseTimeFetch = true;
-
 // Enable max-width for editing. T307725.
 $wgVectorMaxWidthOptions['exclude']['querystring']['action'] = '(history|edit)';
 
