@@ -2969,7 +2969,7 @@ return [
 			// 5 password reminders per hour per IP
 			'ip' => [ 5, 3600 ],
 		],
-		'emailuser' => [
+		'sendemail' => [
 			'ip' => [ 5, 86400 ], // 5 per day per ip (logged-out and new users)
 			'newbie' => [ 5, 86400 ], // 5 per day for non-autoconfirmed
 			'user-global' => [ 20, 86400 ], // 20 per day for users
