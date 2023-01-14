@@ -20610,17 +20610,6 @@ return [
 				],
 			]
 		],
-		'eventlogging_ElementTiming' => [
-			'schema_title' => 'analytics/legacy/elementtiming',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
 		'eventlogging_EchoInteraction' => [
 			'schema_title' => 'analytics/legacy/echointeraction',
 			'topic_prefixes' => null,
@@ -20656,17 +20645,6 @@ return [
 		],
 		'eventlogging_FeaturePolicyViolation' => [
 			'schema_title' => 'analytics/legacy/featurepolicyviolation',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
-		'eventlogging_FirstInputTiming' => [
-			'schema_title' => 'analytics/legacy/firstinputtiming',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
 			'consumers' => [
@@ -20744,17 +20722,6 @@ return [
 		],
 		'eventlogging_LandingPageImpression' => [
 			'schema_title' => 'analytics/legacy/landingpageimpression',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
-		'eventlogging_LayoutShift' => [
-			'schema_title' => 'analytics/legacy/layoutshift',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
 			'consumers' => [
@@ -20876,17 +20843,6 @@ return [
 		],
 		'eventlogging_ReferencePreviewsPopups' => [
 			'schema_title' => 'analytics/legacy/referencepreviewspopups',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
-		'eventlogging_ResourceTiming' => [
-			'schema_title' => 'analytics/legacy/resourcetiming',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
 			'consumers' => [
@@ -21822,14 +21778,11 @@ return [
 		'eventlogging_EchoInteraction',
 		'eventlogging_EchoMail',
 		'eventlogging_EditAttemptStep',
-		'eventlogging_ElementTiming',
 		'eventlogging_FeaturePolicyViolation',
-		'eventlogging_FirstInputTiming',
 		'eventlogging_HelpPanel',
 		'eventlogging_HomepageModule',
 		'eventlogging_HomepageVisit',
 		'eventlogging_LandingPageImpression',
-		'eventlogging_LayoutShift',
 		'eventlogging_MobileWebUIActionsTracking',
 		'eventlogging_NavigationTiming',
 		'eventlogging_NewcomerTask',
@@ -21840,7 +21793,6 @@ return [
 		'eventlogging_ReferencePreviewsBaseline',
 		'eventlogging_ReferencePreviewsCite',
 		'eventlogging_ReferencePreviewsPopups',
-		'eventlogging_ResourceTiming',
 		'eventlogging_SaveTiming',
 		'eventlogging_ServerSideAccountCreation',
 		'eventlogging_SpecialInvestigate',
