@@ -7209,7 +7209,7 @@ return [
 	],
 	'desktop-improvements' => [
 		'logged_in' => true,
-		'logged_out' => false,
+		'logged_out' => true,
 	],
 ],
 
