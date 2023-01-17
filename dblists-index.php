@@ -223,7 +223,7 @@ return [
 'elwikivoyage' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'elwiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
 'emlwiki' => [ 'wikipedia', 'desktop-improvements', 'medium', 'wikidataclient' ],
-'enwiki' => [ 'wikipedia', 'flaggedrevs', 'large', 'wikidataclient', 'mobile-anon-talk', 'cirrussearch-big-indices' ],
+'enwiki' => [ 'wikipedia', 'desktop-improvements', 'flaggedrevs', 'large', 'wikidataclient', 'mobile-anon-talk', 'cirrussearch-big-indices' ],
 'enwikibooks' => [ 'flaggedrevs', 'medium', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
 'enwikinews' => [ 'flaggedrevs', 'large', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
 'enwikiquote' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'cirrussearch-big-indices' ],
