@@ -26317,21 +26317,6 @@ return [
 // T299954
 'wgCommentTempTableSchemaMigrationStage' => [
 	'default' => [
-		'rev_comment' => MIGRATION_OLD,
-	],
-	'group1' => [
-		'rev_comment' => MIGRATION_WRITE_BOTH,
-	],
-	'group0' => [
-		'rev_comment' => MIGRATION_WRITE_BOTH,
-	],
-	'labtestwiki' => [
-		'rev_comment' => MIGRATION_WRITE_BOTH,
-	],
-	'testwiki' => [
-		'rev_comment' => MIGRATION_WRITE_BOTH,
-	],
-	'testwikidatawiki' => [
 		'rev_comment' => MIGRATION_WRITE_BOTH,
 	],
 ],
