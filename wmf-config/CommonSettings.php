@@ -307,7 +307,7 @@ extract( $globals );
 list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 
 // Gradual roll out of Vector 2022 skin to English Wikipedia (T326892)
-if ( $wgDBname === 'enwiki' && mt_rand( 0, 100 ) < 26 ) {
+if ( $wgDBname === 'enwiki' && mt_rand( 0, 100 ) < 49 ) {
 	$wgDefaultSkin = 'vector-2022';
 }
 

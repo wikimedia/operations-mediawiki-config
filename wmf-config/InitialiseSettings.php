@@ -25977,8 +25977,8 @@ return [
 	'desktop-improvements' => 0.2, // T258058
 	'officewiki' => 0,
 	'testwiki' => 1, // T256992
-	// Temporarily disabled during enwiki deployment
-	'enwiki' => 0,
+	// Set to 0.5% for Enwiki deployment
+	'enwiki' => 0.005,
 	// T309260 (some overlap with desktop-improvements group):
 	'arwiki' => 0.2,
 	'bnwiki' => 0.2,
