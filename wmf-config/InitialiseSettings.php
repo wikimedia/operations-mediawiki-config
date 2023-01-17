@@ -7204,12 +7204,8 @@ return [
 
 'wgVectorStickyHeaderEdit' => [
 	'default' => [
-		'logged_in' => false,
-		'logged_out' => false,
-	],
-	'desktop-improvements' => [
 		'logged_in' => true,
-		'logged_out' => true,
+		'logged_out' => false,
 	],
 ],
 
