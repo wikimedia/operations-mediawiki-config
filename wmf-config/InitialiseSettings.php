@@ -26281,12 +26281,7 @@ return [
 	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 ],
 'wgCheckUserLogActorMigrationStage' => [
-	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
-	'testwiki' => SCHEMA_COMPAT_NEW,
-	'metawiki' => SCHEMA_COMPAT_NEW,
-	'fawiki' => SCHEMA_COMPAT_NEW,
-	'hewiki' => SCHEMA_COMPAT_NEW,
-	'itwiki' => SCHEMA_COMPAT_NEW,
+	'default' => SCHEMA_COMPAT_NEW,
 ],
 'wgCheckUserLogReasonMigrationStage' => [
 	'default' => SCHEMA_COMPAT_OLD,
