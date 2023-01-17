@@ -14550,6 +14550,8 @@ return [
 'wmgUsePhonos' => [
 	'default' => false,
 	'testwiki' => true, // T321084
+	'afwiktionary' => true, // T324561
+	'arwiki' => true, // T324561
 ],
 
 'wgPhonosPath' => [
