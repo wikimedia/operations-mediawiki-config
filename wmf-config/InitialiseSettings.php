@@ -26187,6 +26187,11 @@ return [
 	'group1' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
 ],
 
+// T324907
+'wgCheckUserEventTablesMigrationStage' => [
+	'default' => SCHEMA_COMPAT_OLD
+],
+
 // T299421
 'wgTemplateLinksSchemaMigrationStage' => [
 	'default' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
