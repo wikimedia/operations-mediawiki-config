@@ -7187,6 +7187,22 @@ return [
 	'desktop-improvements' => '2',
 ],
 
+'wgVectorPageTools' => [
+	'default' => [
+		'logged_in' => false,
+		'logged_out' => false,
+	],
+	// T327348
+	'viwiki' => [
+		'logged_in' => true,
+		'logged_out' => true,
+	],
+	'itwiki' => [
+		'logged_in' => true,
+		'logged_out' => false,
+	],
+],
+
 'wgVectorStickyHeader' => [
 	'default' => [
 		'logged_in' => true,
