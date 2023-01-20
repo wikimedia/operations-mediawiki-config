@@ -21207,6 +21207,18 @@ return [
 			'schema_title' => 'analytics/mobile_apps/android_edit_history_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		'android.app_session' => [
+			'schema_title' => 'analytics/mobile_apps/mobile_apps/android_app_session',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'android.create_account_interaction' => [
+			'schema_title' => 'analytics/mobile_apps/android_create_account_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'android.install_referrer_event' => [
+			'schema_title' => 'analytics/mobile_apps/android_install_referrer_event',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		'android.breadcrumbs_event' => [
 			'schema_title' => 'analytics/mobile_apps/android_breadcrumbs_event',
 			'destination_event_service' => 'eventgate-analytics-external',
