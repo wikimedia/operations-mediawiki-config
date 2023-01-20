@@ -1474,7 +1474,7 @@ function wmfGetOverrideSettings() {
 
 		'-wgCommentTempTableSchemaMigrationStage' => [
 			'default' => [
-				'rev_comment' => MIGRATION_WRITE_BOTH,
+				'rev_comment' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
 			],
 		],
 
