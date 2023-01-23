@@ -20078,6 +20078,7 @@ return [
 		'WikiGapFinder' => true, // T246335
 		'mskf-the-solution' => true, // T253305
 		'Wikidocumentaries' => true, // T269875
+		'wiki-loves-living-heritage' => true, // T327587
 		// SectionTranslation entry points: T298029
 		'mflanguagesearcher' => true,
 		'mfrecenttranslation' => true,
@@ -20099,6 +20100,7 @@ return [
 		'WikiGapFinder' => true,
 		'mskf-the-solution' => true,
 		'Wikidocumentaries' => true,
+		'wiki-loves-living-heritage' => true, // T327587
 		// SectionTranslation entry points: T298029
 		'mflanguagesearcher' => true,
 		'mfrecenttranslation' => true,
@@ -20120,6 +20122,7 @@ return [
 		'WikiGapFinder' => true,
 		'mskf-the-solution' => true,
 		'Wikidocumentaries' => true,
+		'wiki-loves-living-heritage' => true, // T327587
 		// SectionTranslation entry points: T298029
 		'mflanguagesearcher' => true,
 		'mfrecenttranslation' => true,
@@ -20142,6 +20145,7 @@ return [
 		'WikiGapFinder' => true,
 		'mskf-the-solution' => true,
 		'Wikidocumentaries' => true,
+		'wiki-loves-living-heritage' => true, // T327587
 		// SectionTranslation entry points: T298029
 		'mflanguagesearcher' => true,
 		'mfrecenttranslation' => true,
@@ -20163,6 +20167,7 @@ return [
 		'WikiGapFinder' => true,
 		'mskf-the-solution' => true,
 		'Wikidocumentaries' => true,
+		'wiki-loves-living-heritage' => true, // T327587
 		// SectionTranslation entry points: T298029
 		'mflanguagesearcher' => true,
 		'mfrecenttranslation' => true,
@@ -20185,6 +20190,7 @@ return [
 		'WikiGapFinder' => true,
 		'mskf-the-solution' => true,
 		'Wikidocumentaries' => true,
+		'wiki-loves-living-heritage' => true, // T327587
 		// SectionTranslation entry points: T298029
 		'mflanguagesearcher' => true,
 		'mfrecenttranslation' => true,
