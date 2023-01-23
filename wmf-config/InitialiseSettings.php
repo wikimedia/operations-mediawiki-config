@@ -9842,10 +9842,18 @@ return [
 	'+newiki' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T89816
 		'rollbacker' => [
-			'rollback' => true,
-			'suppressredirect' => true,
-		], // T90888 and T214012
-		'reviewer' => [ 'patrol' => true ], // T95101
+			'rollback' => true, // T90888
+			'suppressredirect' => true, // T214012
+		],
+		'patroller' => [
+			'patrol' => true,  // T95101
+			'move' => true, // T327114
+			'move-subpages' => true, // T327114
+			'move-categorypages' => true, // T327114
+			'suppressredirect' => true, // T327114
+			'delete-redirect' => true, // T327114
+			'tboverride' => true, // T327114
+		],
 		'filemover' => [ 'movefile' => true ], // T95103
 		'templateeditor' => [
 			'templateeditor' => true,
