@@ -612,7 +612,10 @@ function wmfGetOverrideSettings() {
 		/// ----------- BetaFeatures start ----------
 		///
 
-		// Enable all Beta Features in Beta Labs, even if not in production whitelist
+		// Enable all Beta Features in Beta Labs, even if not in production allow list
+		'wgBetaFeaturesAllowList' => [
+			'default' => false,
+		],
 		'wgBetaFeaturesWhitelist' => [
 			'default' => false,
 		],
