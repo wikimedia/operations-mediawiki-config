@@ -616,9 +616,6 @@ function wmfGetOverrideSettings() {
 		'wgBetaFeaturesAllowList' => [
 			'default' => false,
 		],
-		'wgBetaFeaturesWhitelist' => [
-			'default' => false,
-		],
 
 		'wgVisualEditorRebaserURL' => [
 			'default' => false,

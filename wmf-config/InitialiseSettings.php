@@ -16430,23 +16430,6 @@ return [
 		'wikistories-storiesonarticles',     // [Inuka] 2022-12-30 - Wikistories on articles
 	],
 ],
-// Legacy name, being removed (T277931)
-'wgBetaFeaturesWhitelist' => [
-	'default' => [
-		'visualeditor-enable',               // [Editing] On-going (special permission) – VisualEditor
-		'beta-feature-flow-user-talk-page',  // [Growth*] On-going (special permission) – Flow opt-in
-		'visualeditor-newwikitext',          // [Editing] On-going (special permission) – New wikitext editor
-		'uls-compact-links',                 // [LangEng] 2018-09-13 – Compact language links (Wikisource only)
-		'popups',                            // [WebTeam] 2019-10-04 – Page Previews
-		'popupsreferencepreviews',           // [WMDE TW] 2019-10-04 – Reference Previews
-		'cx',                                // [LangEng] 2019-11-07 - ContentTranslation
-		'twocolconflict',                    // [WMDE TW] 2019-10-30 – New edit conflict view
-		'visualeditor-visualdiffpage',       // [Editing] 2019-11-06 – Visual diffs
-		'discussiontools-betaenable',        // [Editing] 2020-09-12 – Reply tool
-		'ipinfo-beta-feature-enable',        // [AHT] 2022-10-01 – IP Info
-		'wikistories-storiesonarticles',     // [Inuka] 2022-12-30 - Wikistories on articles
-	],
-],
 
 'wmgUseFileImporter' => [
 	'default' => false,
