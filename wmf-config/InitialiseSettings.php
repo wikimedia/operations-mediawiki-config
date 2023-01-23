@@ -7201,6 +7201,11 @@ return [
 		'logged_in' => true,
 		'logged_out' => false,
 	],
+	// T327686
+	'enwiki' => [
+		'logged_in' => true,
+		'logged_out' => false,
+	]
 ],
 
 'wgVectorStickyHeader' => [
