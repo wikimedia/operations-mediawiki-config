@@ -26167,7 +26167,6 @@ return [
 ],
 'wgCheckUserCommentMigrationStage' => [
 	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
-	'wikidatawiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 ],
 'wgCheckUserLogActorMigrationStage' => [
 	'default' => SCHEMA_COMPAT_NEW,
