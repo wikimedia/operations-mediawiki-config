@@ -2712,6 +2712,11 @@ Wikibooks:
     ruwikibooks:
         comment_1_5x: T150618
         comment_2x: T150618
+    shnwikibooks:
+        commons: 'File:Wikibooks-logo-shn.svg'
+        comment: T327380
+        comment_1_5x: T327380
+        comment_2x: T327380
     simplewikibooks:
         comment: T150618
         no_1_5x: true
