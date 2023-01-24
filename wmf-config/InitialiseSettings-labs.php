@@ -492,6 +492,7 @@ function wmfGetOverrideSettings() {
 		// T320613
 		'wgKartographerNearbyOnMobile' => [
 			'default' => true,
+			'wikifunctionswiki' => false,
 		],
 
 		'wgWMEDesktopWebUIActionsTracking' => [
