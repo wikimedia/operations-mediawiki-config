@@ -11928,7 +11928,7 @@ return [
 		'sysop' => [
 			'autopatrolled',  // T89816
 			'rollbacker',     // T90888
-			'reviewer',       // T95101
+			'patroller',       // T95101, T327114
 			'abusefilter',    // T95102
 			'filemover',      // T95103
 			'import',         // T100925
@@ -13167,7 +13167,7 @@ return [
 		'sysop' => [
 			'autopatrolled',        // T89816, T148171
 			'import',               // T100925, T148171
-			'reviewer',             // T95101, T148171
+			'patroller',             // T95101, T148171, T327114
 			'rollbacker',           // T90888, T148171
 			'templateeditor',       // T195557
 			'flood',                // T211181
