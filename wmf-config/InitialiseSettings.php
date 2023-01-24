@@ -26102,10 +26102,6 @@ return [
 	],
 ],
 
-'wgGEMentorProvider' => [
-	'default' => 'structured',
-],
-
 'wgGEHomepageMentorsList' => [
 	'default' => '',
 ],
