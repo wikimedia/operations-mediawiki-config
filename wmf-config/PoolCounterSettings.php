@@ -4,8 +4,6 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	exit( 1 );
 }
 
-wfLoadExtension( 'PoolCounter' );
-
 $wgPoolCounterConf = [
 	'ArticleView' => [
 		'class' => 'PoolCounter_Client',
