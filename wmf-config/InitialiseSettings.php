@@ -26205,6 +26205,9 @@ return [
 	'default' => [
 		'rev_comment' => MIGRATION_WRITE_BOTH,
 	],
+	'testcommonswiki' => [
+		'rev_comment' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
+	],
 ],
 
 'wgXmlDumpSchemaVersion' => [
