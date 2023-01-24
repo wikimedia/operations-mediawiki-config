@@ -489,10 +489,14 @@ function wmfGetOverrideSettings() {
 			'simplewiki' => true,
 		],
 
+		'wmgUseKartographer' => [
+			'default' => true,
+			'wikifunctionswiki' => false,
+		],
+
 		// T320613
 		'wgKartographerNearbyOnMobile' => [
 			'default' => true,
-			'wikifunctionswiki' => false,
 		],
 
 		'wgWMEDesktopWebUIActionsTracking' => [
