@@ -26102,14 +26102,6 @@ return [
 	],
 ],
 
-'wgGEHomepageMentorsList' => [
-	'default' => '',
-],
-
-'wgGEHomepageManualAssignmentMentorsList' => [
-	'default' => null,
-],
-
 'wgGEMentorDashboardEnabled' => [
 	'default' => true,
 ],
