@@ -26667,7 +26667,6 @@ return [
 
 'wgWelcomeSurveyEnabled' => [
 	'default' => true,
-	'viwiki' => false,
 ],
 
 'wgWelcomeSurveyEnableWithHomepage' => [
