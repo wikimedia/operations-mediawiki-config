@@ -3546,6 +3546,16 @@ return [
 	'+shnwiki' => [
 		'WT' => NS_PROJECT_TALK, // T210699
 	],
+	'+shnwikibooks' => [ // T327850
+		'Cookbook' => 102,
+		'Cookbook_talk' => 103,
+		'Transwiki' => 108,
+		'Transwiki_talk' => 109,
+		'Wikijunior' => 110,
+		'Wikijunior_talk' => 111,
+		'Subject' => 112,
+		'Subject_talk' => 113,
+	],
 	'+siwiki' => [
 		'Portal' => 100,
 		'Portal_talk' => 101,
@@ -6704,6 +6714,16 @@ return [
 		105 => 'Обсуждение_рецепта',
 		106 => 'Задача',
 		107 => 'Обсуждение_задачи',
+	],
+	'shnwikibooks' => [
+		102 => 'ပပ်ႉတူမ်ႈႁုင်', // T327850, Cookbook
+		103 => 'ဢုပ်ႇၵုမ်_ပပ်ႉတူမ်ႈႁုင်', // T327850, Cookbook talk
+		108 => 'ထရၼ်ႇသ်ဝီႇၶီႇ', // T327850, Transwiki
+		109 => 'ဢုပ်ႇၵုမ်_ထရၼ်ႇသ်ဝီႇၶီႇ', // T327850, Transwiki talk
+		110 => 'ဝီႇၶီႇလုၵ်ႈဢွၼ်ႇ', // T327850, Wikijunior
+		111 => 'ဢုပ်ႇၵုမ်_ဝီႇၶီႇလုၵ်ႈဢွၼ်ႇ', // T327850, Wikijunior talk
+		112 => 'ပၢႆး', // T327850, Subject
+		113 => 'ဢုပ်ႇၵုမ်_ပၢႆး', // T327850, Subject talk
 	],
 	'siwikibooks' => [
 		112 => 'විෂයය',
