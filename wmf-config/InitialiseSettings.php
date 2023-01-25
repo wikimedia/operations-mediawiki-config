@@ -16182,6 +16182,7 @@ return [
 	'sdwiktionary' => true, // T152609
 	'simplewiktionary' => true,
 	'skwiki' => true,
+	'shwiki' => true, // T327833
 	'shnwiki' => true, // T308623
 	'sowiki' => true,
 	'sqwiki' => true, // T227970
