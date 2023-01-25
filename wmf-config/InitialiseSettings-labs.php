@@ -556,11 +556,6 @@ function wmfGetOverrideSettings() {
 			'default' => [ 'cologneblue', 'contenttranslation', 'modern' ], // T263093, T287616, T223824
 		],
 
-		// ResourceLoader
-		'wgResourceLoaderClientPreferences' => [
-			'default' => true,
-		],
-
 		//
 		// Vector
 		//
