@@ -5608,7 +5608,12 @@ return [
 		100 => 'Portála', // T41206
 		101 => 'Portálaságastallan', // T41206
 	],
-	'shwiki' => [ 100 => 'Portal', 101 => 'Razgovor_o_portalu' ], // T32928
+	'shwiki' => [
+		100 => 'Portal', // T32928
+		101 => 'Razgovor_o_portalu', // T32928
+		118 => 'Nacrt', // T327864
+		119 => 'Razgovor_o_nacrtu', // T327864
+	],
 	'shiwiki' => [
 		100 => 'Aggur', // T288909 - Portal
 		101 => 'Amsawal_n_waggur', // T288909 - Portal_talk
