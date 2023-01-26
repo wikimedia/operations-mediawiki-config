@@ -1966,6 +1966,11 @@ Wiktionary:
         no_1_5x: true
         no_2x: true
     gomwiktionary: null
+    gorwiktionary:
+        commons: 'File:Wiktionary-logo-gor.svg'
+        comment: T327987
+        comment_1_5x: T327987
+        comment_2x: T327987
     guwiktionary:
         comment: T45240
         no_1_5x: true
