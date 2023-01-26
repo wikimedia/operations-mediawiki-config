@@ -16596,6 +16596,18 @@ return [
 	'lockeddown' => false,
 ],
 
+// T299612
+'wgLinterWriteNamespaceColumnStage' => [
+	'default' => false,
+	'group0' => true,
+],
+
+// T175177
+'wgLinterWriteTagAndTemplateColumnsStage' => [
+	'default' => false,
+	'group0' => true,
+],
+
 'wgLinterStatsdSampleFactor' => [
 	'default' => 1000,
 	'commonswiki' => 5000, // T184280
