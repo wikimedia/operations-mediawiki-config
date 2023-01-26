@@ -7312,6 +7312,10 @@ return [
 		'showDescription' => true,
 	],
 ],
+// T328045
+'wgVectorTableOfContentsCollapseAtCount' => [
+	'default' => 28,
+],
 
 # wgForceUIMsgAsContentMsg @{
 'wgForceUIMsgAsContentMsg' => [
