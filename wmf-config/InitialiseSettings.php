@@ -9669,8 +9669,14 @@ return [
 		'rollbacker' => [ 'rollback' => true ], // T118934
 	],
 	'+mediawikiwiki' => [
-		'*' => [ 'flow-hide' => false, ], // T245780
-		'autoconfirmed' => [ 'flow-hide' => true ],  // T245780
+		'*' => [
+			'flow-hide' => false, // T245780
+			'flow-edit-title' => false, // T328097
+		],
+		'autoconfirmed' => [
+			'flow-hide' => true, // T245780
+			'flow-edit-title' => true, // T328097
+		],
 		'user' => [ 'flow-create-board' => true, ],
 		'autopatrolled' => [ 'autopatrol' => true, ],
 		'uploader' => [ // T217523
