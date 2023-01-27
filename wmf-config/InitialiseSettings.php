@@ -9681,6 +9681,15 @@ return [
 			'move-subpages' => true,
 		],
 	],
+	'+lmowiktionary' => [
+		'extendedmover' => [ // T327340
+			'move' => true,
+			'move-subpages' => true,
+			'suppressredirect' => true,
+			'delete-redirect' => true,
+			'tboverride' => true,
+		]
+	],
 	'+lvwiki' => [
 		'autopatrolled' => [
 			'autopatrol' => true,
@@ -11892,6 +11901,9 @@ return [
 			'rollbacker', // T256109
 		],
 	],
+	'+lmowiktionary' => [
+		'sysop' => [ 'extendedmover' ], // T327340
+	],
 	'+ltwiki' => [
 		'sysop' => [ 'abusefilter' ],
 	],
@@ -13159,6 +13171,9 @@ return [
 	],
 	'+lijwiki' => [ // T256109
 		'sysop' => [ 'mover', 'rollbacker' ],
+	],
+	'+lmowiktionary' => [
+		'sysop' => [ 'extendedmover' ], // T327340
 	],
 	'+ltwiki' => [
 		'sysop' => [ 'abusefilter' ],
