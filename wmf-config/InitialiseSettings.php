@@ -21632,6 +21632,69 @@ return [
 			// Emit canary events.
 			'canary_events_enabled' => true,
 		],
+		'mediawiki.revision_score_goodfaith' => [
+			'schema_title' => 'mediawiki/revision/score',
+			'destination_event_service' => 'eventgate-main',
+			// This stream is a subset of the revision-score one,
+			// and the events will be emitted by
+			// the Lift Wing platform. More info in T317768.
+			// Emit canary events.
+			'canary_events_enabled' => true,
+		],
+		'mediawiki.revision_score_damaging' => [
+			'schema_title' => 'mediawiki/revision/score',
+			'destination_event_service' => 'eventgate-main',
+			// This stream is a subset of the revision-score one,
+			// and the events will be emitted by
+			// the Lift Wing platform. More info in T317768.
+			// Emit canary events.
+			'canary_events_enabled' => true,
+		],
+		'mediawiki.revision_score_reverted' => [
+			'schema_title' => 'mediawiki/revision/score',
+			'destination_event_service' => 'eventgate-main',
+			// This stream is a subset of the revision-score one,
+			// and the events will be emitted by
+			// the Lift Wing platform. More info in T317768.
+			// Emit canary events.
+			'canary_events_enabled' => true,
+		],
+		'mediawiki.revision_score_articlequality' => [
+			'schema_title' => 'mediawiki/revision/score',
+			'destination_event_service' => 'eventgate-main',
+			// This stream is a subset of the revision-score one,
+			// and the events will be emitted by
+			// the Lift Wing platform. More info in T317768.
+			// Emit canary events.
+			'canary_events_enabled' => true,
+		],
+		'mediawiki.revision_score_draftquality' => [
+			'schema_title' => 'mediawiki/revision/score',
+			'destination_event_service' => 'eventgate-main',
+			// This stream is a subset of the revision-score one,
+			// and the events will be emitted by
+			// the Lift Wing platform. More info in T317768.
+			// Emit canary events.
+			'canary_events_enabled' => true,
+		],
+		'mediawiki.revision_score_articletopic' => [
+			'schema_title' => 'mediawiki/revision/score',
+			'destination_event_service' => 'eventgate-main',
+			// This stream is a subset of the revision-score one,
+			// and the events will be emitted by
+			// the Lift Wing platform. More info in T317768.
+			// Emit canary events.
+			'canary_events_enabled' => true,
+		],
+		'mediawiki.revision_score_drafttopic' => [
+			'schema_title' => 'mediawiki/revision/score',
+			'destination_event_service' => 'eventgate-main',
+			// This stream is a subset of the revision-score one,
+			// and the events will be emitted by
+			// the Lift Wing platform. More info in T317768.
+			// Emit canary events.
+			'canary_events_enabled' => true,
+		],
 		'mediawiki.revision-tags-change' => [
 			'schema_title' => 'mediawiki/revision/tags-change',
 			'destination_event_service' => 'eventgate-main',
