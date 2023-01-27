@@ -2486,9 +2486,8 @@ function wmfGetOverrideSettings() {
 			'enwiktionary' => true,
 		],
 
-		// Planned to be enabled in early February, see T315621
 		'wmgUseVueTest' => [
-			'default' => false,
+			'default' => true,
 		],
 
 		// T299612
