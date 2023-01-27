@@ -4257,6 +4257,10 @@ if ( $wmgUsePhonos ) {
 	$wgPhonosApiProxy = $wgCopyUploadProxy;
 }
 
+if ( $wmgUseVueTest ) {
+	wfLoadExtension( 'VueTest' );
+}
+
 // This is a temporary hack for hooking up Parsoid/PHP with MediaWiki
 // This is just the regular check out of parsoid in that week's vendor
 $parsoidDir = "$IP/vendor/wikimedia/parsoid";
