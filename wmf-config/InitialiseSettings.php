@@ -27055,8 +27055,18 @@ return [
 ],
 
 'wgGECampaigns' => [
-	'default' => [],
-	'testwiki' => [
+	'default' => [
+		'thankyoupage-2023' => [
+			'skipWelcomeSurvey' => true,
+			'signupPageTemplate' => 'hero',
+			'signupPageTemplateParameters' => [
+				'showBenefitsList' => 'desktop',
+				'messageKey' => 'thankyoupage',
+			],
+			'pattern' => '/^typage-\w+-\w+-2023$/',
+		],
+	],
+	'+testwiki' => [
 		'social-latam-2022' => [
 			'messageKey' => 'marketingvideocampaign',
 			'pattern' => '/^social-latam-2022-A$/',
@@ -27090,7 +27100,7 @@ return [
 			'pattern' => '/^tybanner-(latam|in|za)-en-2022$|^tybanner-latam-(es|pt)-2022$/'
 		]
 	],
-	'enwiki' => [
+	'+enwiki' => [
 		'thankyoupage-2022' => [
 			'messageKey' => 'thankyoupage',
 			'skipWelcomeSurvey' => true,
@@ -27111,7 +27121,7 @@ return [
 			'pattern' => '/^tybanner-(latam|in|za)-en-2022$/'
 		]
 	],
-	'eswiki' => [
+	'+eswiki' => [
 		'social-latam-2022' => [
 			'messageKey' => 'marketingvideocampaign',
 			'signupPageTemplate' => 'video',
@@ -27145,7 +27155,7 @@ return [
 			'pattern' => '/^tybanner-latam-es-2022$/'
 		]
 	],
-	'ptwiki' => [
+	'+ptwiki' => [
 		'thankyoupage-2022' => [
 			'messageKey' => 'thankyoupage',
 			'skipWelcomeSurvey' => true,

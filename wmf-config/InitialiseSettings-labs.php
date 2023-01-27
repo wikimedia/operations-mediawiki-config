@@ -1620,40 +1620,6 @@ function wmfGetOverrideSettings() {
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
 			'viwiki' => 'https://vi.wikipedia.org/w/api.php',
 		],
-		'wgGECampaigns' => [
-			'default' => [
-				'social-latam-2022' => [
-					'messageKey' => 'marketingvideocampaign',
-					'signupPageTemplate' => 'video',
-					'signupPageTemplateParameters' => [
-						'messageKey' => 'marketingvideocampaign',
-						'file' => 'Wikimedia_Foundation_newcomer_experience_pilot_-_account_creation.webm',
-						'thumbtime' => 38,
-					],
-					'pattern' => '/^social-latam-2022-A$/'
-				],
-				'thankyoupage-2022' => [
-					'messageKey' => 'thankyoupage',
-					'skipWelcomeSurvey' => true,
-					'signupPageTemplate' => 'hero',
-					'signupPageTemplateParameters' => [
-						'showBenefitsList' => 'desktop',
-						'messageKey' => 'thankyoupage',
-					],
-					'pattern' => '/^typage-(latam|in|za)-en-2022$|^typage-latam-(es|pt)-2022$/'
-				],
-				'thankyoubanner-2022' => [
-					'skipWelcomeSurvey' => true,
-					'signupPageTemplate' => 'hero',
-					'signupPageTemplateParameters' => [
-						'showBenefitsList' => 'desktop',
-						'messageKey' => 'thankyoubanner',
-					],
-					'pattern' => '/^tybanner-(latam|in|za)-en-2022$|^tybanner-latam-(es|pt)-2022$/'
-				]
-			],
-		],
-
 		'-wgGEMentorDashboardDeploymentMode' => [
 			'default' => 'alpha',
 		],
