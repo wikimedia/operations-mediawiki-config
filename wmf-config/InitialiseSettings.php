@@ -27038,10 +27038,6 @@ return [
 	'cswiki' => 'beta',
 ],
 
-'wgGERecentChangesUnstarredMenteesFilterEnabled' => [
-	'default' => true,
-],
-
 'wgGETopicsMatchModeEnabled' => [
 	'default' => false,
 	// Enable Growth's feature topic match mode (T305399).
