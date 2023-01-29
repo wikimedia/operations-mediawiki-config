@@ -24133,6 +24133,7 @@ return [
 	'default' => false,
 	'testwiki' => true,
 	'enwiki' => true,
+	'zhwiki' => true, // T326387
 ],
 
 'wmgUsePageImages' => [
