@@ -17552,10 +17552,6 @@ return [
 	'default' => true, // T73457
 ],
 
-'wgCheckUserEnableSpecialInvestigate' => [
-	'default' => true, // T264357
-],
-
 'wgCheckUserLogLogins' => [
 	// T253802 - enabled everywhere but loginwiki
 	'default' => true,
