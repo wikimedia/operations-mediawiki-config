@@ -13,6 +13,9 @@
 #   variables.
 # - Settings prefixed with 'wmg' are custom parameters handled by
 #   CommonSettings.php.
+# - Prefixing the wiki name with '+' will cause the configuration
+#   value to be merged with the previous, less specific value
+#   (typically the one for 'default').
 #
 # Effective load order:
 # - multiversion
