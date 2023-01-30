@@ -15842,6 +15842,7 @@ return [
 	'metawiki' => [ 'default' => 0.30, ], // T173633
 	'mediawikiwiki' => [ 'default' => 0.30, ], // T212667
 	'eswiki' => [ 'default' => 0.1, ], // T284797
+	'slwiki' => [ 'default' => 0.85, ] // Temporary
 ],
 'wgAbuseFilterEmergencyDisableCount' => [
 	'default' => [ 'default' => 2, ],
@@ -15853,6 +15854,7 @@ return [
 	'metawiki' => [ 'default' => 25, ], // T173633
 	'mediawikiwiki' => [ 'default' => 25, ], // T212667
 	'eswiki' => [ 'default' => 3, ], // T284797
+	'slwiki' => [ 'default' => 100, ], // Temporary
 ],
 'wgAbuseFilterEmergencyDisableAge' => [
 	'default' => [ 'default' => 86400, ],
