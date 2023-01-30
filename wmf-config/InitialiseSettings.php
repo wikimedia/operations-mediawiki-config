@@ -25778,11 +25778,6 @@ return [
 	'dewikivoyage' => false, // T320692
 ],
 
-// Temporary feature flag to expand map shapes when saving page, see T323113
-'wgKartographerExternalDataParseTimeFetch' => [
-	'default' => true,
-],
-
 'wmgUseMediaModeration' => [
 	'default' => true,
 ],
