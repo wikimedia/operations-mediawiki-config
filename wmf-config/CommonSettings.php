@@ -217,6 +217,7 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 			$lbFactoryConf = [];
 			wmfApplyEtcdDBConfig( $dbConfigFromEtcd, $lbFactoryConf );
 			$lbFactoryConf['class'] = 'LBFactoryMulti';
+			$lbFactoryConf['groupLoadsBySection']['s11'] = [];
 			$lbFactoryConf['sectionLoads']['s11'] = [ 'clouddb2002-dev' => 1 ];
 			$lbFactoryConf['hostsByName']['clouddb2002-dev'] = '10.192.20.6';
 			return $lbFactoryConf;
@@ -348,6 +349,7 @@ if ( $wmgRealm === 'production' ) {
 
 	// labtestwiki is a one-off test server, using a wmcs-managed database.  Cut
 	// etcd out of the loop entirely for this one.
+	$wgLBFactoryConf['groupLoadsBySection']['s11'] = [];
 	$wgLBFactoryConf['sectionLoads']['s11'] = [ 'clouddb2002-dev' => 1 ];
 	$wgLBFactoryConf['hostsByName']['clouddb2002-dev'] = '10.192.20.6';
 
