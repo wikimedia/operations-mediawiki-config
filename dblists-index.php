@@ -171,7 +171,7 @@ return [
 'crwiktionary' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
 'csbwiki' => [ 'wikipedia', 'desktop-improvements', 'small', 'wikidataclient', 'commonsuploads' ],
 'csbwiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
-'cswiki' => [ 'wikipedia', 'flow', 'large', 'wikidataclient', 'commonsuploads', 'cirrussearch-big-indices' ],
+'cswiki' => [ 'wikipedia', 'desktop-improvements', 'flow', 'large', 'wikidataclient', 'commonsuploads', 'cirrussearch-big-indices' ],
 'cswikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'cswikinews' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'cswikiquote' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],

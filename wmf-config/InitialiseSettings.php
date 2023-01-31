@@ -7235,6 +7235,11 @@ return [
 	'enwiki' => [
 		'logged_in' => true,
 		'logged_out' => false,
+	],
+	// T328154
+	'cswiki' => [
+		'logged_in' => true,
+		'logged_out' => false,
 	]
 ],
 
