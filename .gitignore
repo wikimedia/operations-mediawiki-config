@@ -12,6 +12,7 @@
 /portal-master/
 
 # CI and local development
+/logos/index.html
 ## Testing
 /logs
 /.phpunit.result.cache
