@@ -1893,6 +1893,8 @@ Wiktionary:
         comment_1_5x: T150618
         comment_2x: T150618
         no_icon: true
+        commons_wordmark: 'File:Wiktionary-wordmark-cs.svg'
+        comment_wordmark: T328357
     cywiktionary:
         no_1_5x: true
         no_2x: true

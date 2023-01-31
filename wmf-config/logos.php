@@ -3188,6 +3188,11 @@ return [
 		'width' => 123,
 		'height' => 25,
 	],
+	'cswiktionary' => [ // T328357
+		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-cs.svg',
+		'width' => 120,
+		'height' => 18,
+	],
 	'enwiktionary' => [ // T157476, T249047
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-en.svg',
 		'width' => 107,
