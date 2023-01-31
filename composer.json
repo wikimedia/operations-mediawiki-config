@@ -28,14 +28,14 @@
 			"@phpunit",
 			"@phpcs",
 			"minus-x check .",
-			"@buildDBLists",
+			"@manage-dblist update",
 			"@checkclean"
 		],
+		"manage-dblist": "php multiversion/bin/manage-dblist",
 		"buildLogoHTML": "php -e multiversion/buildLogoHTML.php",
-		"buildDBLists": "php -e multiversion/buildDBLists.php",
 		"buildConfigCache": "php -e tests/buildConfigCache.php",
 		"diffConfig": [
-			"@buildConfigCache",
+			"@manage-dblist update",
 			"git checkout -q HEAD~1",
 			"git add -f tests/data/config-cache/",
 			"@buildConfigCache",

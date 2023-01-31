@@ -1,6 +1,6 @@
 <?php
 // NOTE: Automatically generated from the /dblists directory
-// Do not edit it directly, run "composer buildDBLists" instead.
+// Do not edit it directly, run "composer manage-dblist update" instead.
 return [
 'aawiki' => [ 'wikipedia', 'closed', 'small', 'wikidataclient' ],
 'aawikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],

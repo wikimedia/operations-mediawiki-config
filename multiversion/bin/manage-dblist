@@ -1,0 +1,257 @@
+#!/usr/bin/env php
+<?php declare( strict_types=1 );
+/**
+ * Helper script for locally making patches to dblists/ files.
+ *
+ * For compatibility and performance reasons, the files used
+ * at run-time by web requests and maintenance scripts are
+ * organised by list name.
+ *
+ * When making changes to dblists, the intent is sometimes thought of
+ * relating to a dblist and sometimes as relating to a wiki.
+ *
+ * This script makes it easy to edit the files no matter which way
+ * you think about it. It also validates and normalizes the files.
+ */
+
+require_once dirname( __DIR__ ) . '/MWWikiversions.php';
+require_once dirname( __DIR__ ) . '/MWMultiVersion.php';
+
+final class WmfManageDblistCli {
+	private $command;
+	private $params;
+
+	/**
+	 * @param string[] $argv
+	 */
+	public function __construct( array $argv ) {
+		$this->command = $argv[1] ?? '';
+		$this->params = array_slice( $argv, 2 );
+	}
+
+	private function help(): void {
+		print <<<TEXT
+	usage: manage-dblist <command> [<args>]
+
+	COMMANDS
+
+	list <dbname>
+			Show which dblists contain a given wiki.
+
+	add <dbname> <dblist>
+			Add a wiki to a dblist, and normalize all dblist files.
+
+			If the wiki isn't valid for that list (e.g. not yet in "all.dblist"),
+			then the addition is ignored.
+
+			Example: manage-dblist add aawiki closed
+
+	del <dbname> <dblist>
+			Remove a wiki from a dblist, and normalize all dblist files.
+			Example: manage-dblist del aawiki open
+
+	update
+			Normalize all dblist files,
+			including expansion of ".dbexpr" files.
+
+	TEXT;
+	}
+
+	public function run(): void {
+		try {
+			switch ( $this->command ) {
+			case 'add':
+				$this->doAdd( ...$this->params );
+				return;
+			case 'list':
+				$this->doList( ...$this->params );
+				return;
+			case 'del':
+				$this->doDel( ...$this->params );
+				return;
+			case 'update':
+				$this->doUpdate( ...$this->params );
+				return;
+			case '':
+			case 'help':
+				$this->help();
+				exit( 1 );
+			default:
+				$this->error( 'Unknown command' );
+				return;
+			}
+		} catch ( \Throwable $e ) {
+			$this->error( (string)$e );
+		}
+
+	}
+
+	private function doList( string $dbname ): void {
+		$dblists = array_keys( array_filter(
+			MWWikiversions::getAllDbListsForCLI(),
+			static function ( array $list ) use ( $dbname ) {
+				return in_array( $dbname, $list );
+			}
+		) );
+		sort( $dblists );
+		foreach ( $dblists as $dblist ) {
+			print "* $dblist\n";
+		}
+	}
+
+	private function doAdd( string $dbname, string $listname ): void {
+		if ( $listname !== 'all' && $listname !== 'all-labs' ) {
+			$validDbnames = strpos( $listname, 'labs' )
+				? array_keys( MWWikiversions::readWikiVersionsFile( 'wikiversions-labs.json' ) )
+				: array_keys( MWWikiversions::readWikiVersionsFile( 'wikiversions.json' ) );
+			if ( !in_array( $dbname, $validDbnames ) ) {
+				$this->error( "Unknown wiki: $dbname" );
+				return;
+			}
+		}
+
+		$content = MWWikiversions::readDbListFile( $listname );
+		$content[] = $dbname;
+		$this->writeDblist( $listname, $content );
+		$this->doUpdate();
+	}
+
+	private function doDel( string $dbname, string $listname ): void {
+		$content = MWWikiversions::readDbListFile( $listname );
+		$i = array_search( $dbname, $content );
+		if ( $i !== false ) {
+			unset( $content[$i] );
+		}
+
+		$this->writeDblist( $listname, $content );
+		$this->doUpdate();
+	}
+
+	private function doUpdate(): void {
+		$prodWikis = array_keys( MWWikiversions::readWikiVersionsFile( 'wikiversions.json' ) );
+		$labsOnlyWikis = array_keys( MWWikiversions::readWikiVersionsFile( 'wikiversions-labs.json' ) );
+		$knownDBLists = MWWikiversions::getAllDbListsForCLI();
+
+		// There is only one set of dblists for all realms combined.
+		// This means it is important that a labs-only wiki never be included in
+		// production dblists like "all", "closed", "fishbowl", "echo", etc.
+		//
+		// This caveat is validated by DblistTest::testDblistAllContainsEverything().
+		//
+		$labsOnlyTags = [ 'all-labs', 'closed-labs', 'flow_only_labs', 'flow-labs' ];
+		$untracked = [
+			// This naturally contains wikis we don't know about
+			'deleted',
+		];
+
+		$sources = [];
+		foreach ( glob( __DIR__ . '/../../dblists/*.dbexpr' ) as $filepath ) {
+			$listname = basename( $filepath, '.dbexpr' );
+			$contents = MWWikiversions::evalDbListExpression( file_get_contents( $filepath ) );
+			$knownDBLists[$listname] = $contents;
+			$sources[$listname] = 'dbexpr';
+		}
+
+		foreach ( $knownDBLists as $listname => $content ) {
+			// Ensure no Beta Cluster-only dblists under Labs-specific lists.
+			$validDbnames = in_array( $listname, $labsOnlyTags ) ? $labsOnlyWikis : $prodWikis;
+			if ( !in_array( $listname, $untracked ) ) {
+				foreach ( $content as $i => $dbname ) {
+					if ( !in_array( $dbname, $validDbnames ) ) {
+						unset( $content[$i] );
+					}
+				}
+				$this->writeDblist( $listname, $content, $sources[$listname] ?? null );
+			}
+
+		}
+
+		$this->writeDblistsIndex( $knownDBLists );
+	}
+
+	/**
+	 * @param string $listname The name of the db list to write.
+	 * @param string[] $listcontent The wikidbs for the dblist contents.
+	 * @param string|null $source One of "dbexpr" or null
+	 */
+	private function writeDblist( $listname, $listcontent, $source = null ) {
+		$path = __DIR__ . '/../../dblists/' . $listname . '.dblist';
+
+		// Alpha-sort the contents of the list by array value for consistency
+		asort( $listcontent );
+
+		$from = ( $source === 'dbexpr' ? " from {$listname}.dbexpr" : '' );
+
+		if ( !file_put_contents(
+			$path,
+			[
+				// Header warning about being a generated file
+				"# NOTE: This file is automatically generated{$from}."
+					. " Do not edit it directly, run 'composer manage-dblist' instead.\n",
+				// The contents of the list, written one per line, unique'd
+				implode( "\n", array_unique( $listcontent ) ),
+				// Trailing new line for consistency
+				"\n"
+			],
+			LOCK_EX
+		) ) {
+			print "Unable to write to $path.\n";
+			exit( 1 );
+		}
+	}
+
+	/**
+	 * @param string $head Comment
+	 * @param string $path Path to PHP-file to create or replace
+	 * @param array $data
+	 */
+	private function writeStaticArrayFile( string $head, string $path, array $data ) {
+		$code = "<?php\n"
+			. "// " . implode( "\n// ", explode( "\n", $head ) ) . "\n"
+			. "return [\n";
+		foreach ( $data as $key => $value ) {
+			$code .= var_export( $key, true ) . " => [ "
+				. implode( ", ", array_map( static function ( $sub ) {
+					return var_export( $sub, true );
+				}, $value ) )
+				. " ],\n";
+		}
+		$code .= "];\n";
+
+		if ( !file_put_contents( $path, $code, LOCK_EX ) ) {
+			print "Unable to write to $path.\n";
+			exit( 1 );
+		}
+	}
+
+	/**
+	 * @param array<string,string[]> $dblists
+	 */
+	private function writeDblistsIndex( array $dblists ): void {
+		$indexByDbname = [];
+		foreach ( MWMultiVersion::DB_LISTS as $listname ) {
+			$contents = $dblists[$listname];
+			foreach ( $contents as $dbname ) {
+				$indexByDbname[$dbname][] = $listname;
+			}
+		}
+		ksort( $indexByDbname );
+
+		$path = __DIR__ . '/../../dblists-index.php';
+		$this->writeStaticArrayFile(
+			'NOTE: Automatically generated from the /dblists directory' . "\n"
+				. 'Do not edit it directly, run "composer manage-dblist update" instead.',
+			$path,
+			$indexByDbname
+		);
+	}
+
+	private function error( string $msg ): void {
+		print "\n" . $msg . "\n\n";
+		$this->help();
+		exit( 1 );
+	}
+}
+
+$cli = new WmfManageDblistCli( $argv );
+$cli->run();
