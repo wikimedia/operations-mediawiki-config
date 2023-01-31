@@ -7160,7 +7160,11 @@ return [
 		NS_CATEGORY,
 	],
 ],
-
+'wgResourceLoaderClientPreferences' => [
+	'default' => false,
+	// T327979
+	'group0' => true
+],
 // Note that Wikisource modifies this default in wmf-config/CommonSettings.php
 'wgVectorMaxWidthOptions' => [
 	'default' => [
