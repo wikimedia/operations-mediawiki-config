@@ -15,7 +15,6 @@ $wmgLogosPath = '../';
 function wmfCheckMissingLogosAndGenerateHTML() {
 	global $wmgLogosPath;
 	$prodWikis = array_keys( MWWikiversions::readWikiVersionsFile( 'wikiversions.json' ) );
-	$config = MWConfigCacheGenerator::getStaticConfig();
 	$textareaVal = '';
 	foreach ( $prodWikis as $dbname ) {
 		$textareaVal .= $dbname . "\n";
@@ -71,8 +70,13 @@ document.getElementById('filter').addEventListener( 'input', function () {
 } );
 </script>
 HEREDOC;
+
+	$conf = new SiteConfiguration();
+	$conf->suffixes = MWMultiVersion::SUFFIXES;
+	$conf->wikis = $wikis = MWWikiversions::readDbListFile( 'all' );
+	$conf->settings = MWConfigCacheGenerator::getStaticConfig( 'production' );
 	foreach ( $prodWikis as $dbname ) {
-		$fullConfig = MWConfigCacheGenerator::getCachableMWConfig( $dbname, $config, 'production' );
+		$fullConfig = MWConfigCacheGenerator::getConfigGlobals( $dbname, $conf );
 		$wordmark = $fullConfig['wmgSiteLogoWordmark'] ?? null;
 		$icon = $fullConfig['wmgSiteLogoIcon'] ?? null;
 		$tagline = $fullConfig['wmgSiteLogoTagline'] ?? null;
