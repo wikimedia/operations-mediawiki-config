@@ -65,15 +65,6 @@ if ( $compare !== null ) {
 			continue;
 		}
 
-		if ( $key[0] === '*' ) {
-			$selectedGlobals[$key] = [
-				'context' => implode( "\n", array_intersect( $before, $after ) ),
-				'before' => implode( "\n", array_diff( $before, $after ) ),
-				'after' => implode( "\n", array_diff( $after, $before ) ),
-			];
-			continue;
-		}
-
 		$selectedGlobals[$key] = [
 			'before' => $before,
 			'after' => $after,
@@ -103,21 +94,39 @@ function wmfAssertNoPrivateSettings( array $globals ) {
 	}
 }
 
+function wmfNocJsonText( $val ): string {
+	return json_encode( $val, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE );
+}
+
 function wmfNocJsonForHtml( $val ): string {
-	return htmlspecialchars(
-		json_encode( $val, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE )
-	);
+	return htmlspecialchars( wmfNocJsonText( $val ) );
 }
 
 function wmfNocWrapLines( string $str, string $pre = '', string $post = '' ): string {
 	return $pre . str_replace( "\n", "$post\n$pre", $str ) . $post;
 }
 
-function wmfNocDiff( $before, $after, string $context = '' ): string {
-	if ( $context !== '' ) {
-		return wmfNocWrapLines( htmlspecialchars( $before ), '<del>- ', '</del>' ) . "\n"
-			. wmfNocWrapLines( htmlspecialchars( $after ), '<ins>+ ', '</ins>' ) . "\n"
-			. htmlspecialchars( $context );
+// Disable moved line detection
+//
+// Value: 0.0 (max) - 1.0 (disabled)
+ini_set( 'wikidiff2.moved_line_threshold', 1.0 );
+
+// Disabled moved paragraph detection
+//
+// Value: Input upto N lines will be subject to moved paragraph detection
+ini_set( 'wikidiff2.moved_paragraph_detection_cutoff', 0 );
+
+// Inline differences
+//
+// Value: 0.0 (max) - 1.0 (disabled)
+ini_set( 'wikidiff2.change_threshold', 1.0 );
+
+function wmfNocDiff( $before, $after ): string {
+	if ( is_array( $before ) && function_exists( 'wikidiff2_inline_diff' ) ) {
+		$html = wikidiff2_inline_diff( wmfNocJsonText( $before ), wmfNocJsonText( $after ), 10 );
+		return strtr( $html, [
+			"<div class=\"mw-diff-inline-header\"><!-- LINES 1,1 --></div>\n" => '',
+		] );
 	} else {
 		return wmfNocWrapLines( wmfNocJsonForHtml( $before ), '<del>- ', '</del>' ) . "\n"
 			. wmfNocWrapLines( wmfNocJsonForHtml( $after ), '<ins>+ ', '</ins>' );
@@ -148,8 +157,7 @@ function wmfNocViewWiki( array $globals, bool $isComparing ): array {
 		if ( !$isComparing ) {
 			$preHtml .= ' ' . wmfNocJsonForHtml( $val );
 		} else {
-			$preHtml .= "\n"
-				. wmfNocDiff( $val['before'], $val['after'], $val['context'] ?? '' );
+			$preHtml .= "\n" . wmfNocDiff( $val['before'], $val['after'] );
 		}
 		$preHtml .= "\n\n";
 	}
@@ -158,6 +166,7 @@ function wmfNocViewWiki( array $globals, bool $isComparing ): array {
 }
 
 $title = "Settings: " . ( $compare !== null ? "Compare $selected to $compare" : $selected );
+$data = wmfNocViewWiki( $selectedGlobals, $isComparing );
 
 ?><!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -184,6 +193,22 @@ $title = "Settings: " . ( $compare !== null ? "Compare $selected to $compare" : 
 	pre a[href]:after {
 		content: '#';
 	}
+	pre .mw-diff-inline-header {
+		display: none;
+	}
+	pre .mw-diff-inline-context,
+	pre .mw-diff-inline-deleted,
+	pre .mw-diff-inline-added,
+	pre .mw-diff-inline-changed {
+		display: inline;
+		width: 100%;
+	}
+	pre .mw-diff-inline-context,
+	pre .mw-diff-inline-added {
+		display: inline-block;
+		width: 70%;
+		margin-left: 30%;
+	}
 	del {
 		text-decoration: none;
 		background: #feeec8;
@@ -205,10 +230,7 @@ $title = "Settings: " . ( $compare !== null ? "Compare $selected to $compare" : 
 		<li><a href="/conf/">Config files</a></li>
 		<li><a href="/db.php">Database view</a></li>
 		<li><a href="/wiki.php" class="wm-nav-item-active">Wiki view</a>
-			<ul><?php
-				$data = wmfNocViewWiki( $selectedGlobals, $isComparing );
-				print $data['nav'];
-			?></ul>
+			<ul><?php print $data['nav']; ?></ul>
 		</li>
 	</ul></nav>
 
