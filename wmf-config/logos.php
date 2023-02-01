@@ -3234,6 +3234,11 @@ return [
 		'width' => 123,
 		'height' => 20,
 	],
+	'trwiktionary' => [ // T328499
+		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-tr.svg',
+		'width' => 120,
+		'height' => 18,
+	],
 	'yiwiktionary' => [ // T308411
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-yi.svg',
 		'width' => 141,
