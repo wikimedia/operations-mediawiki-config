@@ -21499,12 +21499,11 @@ return [
 			'canary_events_enabled' => false,
 		],
 
-		// Declare release candiate 0 of
+		// Declare release candiate 1 of
 		// mediawiki.page_change stream.
 		// https://phabricator.wikimedia.org/T311129
-		'rc0.mediawiki.page_change' => [
-			// Schema is still in a 'development' namespace.
-			'schema_title' => 'development/mediawiki/page/change',
+		'rc1.mediawiki.page_change' => [
+			'schema_title' => 'mediawiki/page/change',
 			# When producing this stream to kafka, use a message key
 			# like { wiki_id: X, page_id: Y }.  X and Y will be
 			# obtained from the message value at wiki_id and page.page_id.
@@ -21526,15 +21525,15 @@ return [
 				]
 			],
 		],
-		// Declare release candiate 0 of
+		// Declare release candiate 1 of
 		// mediawiki.page_content_change stream.
 		// This stream uses the mediawiki/page/change schema
 		// but includes content bodies in content slots.
 		// It is produced by a streaming enrichment pipeline,
 		// (not via MediaWiki EventBus).
 		// https://phabricator.wikimedia.org/T307959
-		'rc0.mediawiki.page_content_change' => [
-			'schema_title' => 'development/mediawiki/page/change',
+		'rc1.mediawiki.page_content_change' => [
+			'schema_title' => 'mediawiki/page/change',
 			// Even though this stream will not be produced via EventGate,
 			// we need to set an event service, so that the ProduceCanaryEvents
 			// monitoring job can produce events through EventGate.
@@ -21842,8 +21841,8 @@ return [
 				'rate' => 1,
 			],
 		],
-		// Enable rc0.mediawiki.page_change on group0 wikis: T311129
-		'rc0.mediawiki.page_change' => [
+		// Enable rc1.mediawiki.page_change on group0 wikis: T311129
+		'rc1.mediawiki.page_change' => [
 			'producers' => [
 				'mediawiki_eventbus' => [
 					'enabled' => true
@@ -21952,12 +21951,12 @@ return [
 // stream name.   This is usually only set while a stream is still in
 // development/testing.
 'wgEventBusStreamNamesMap' => [
-	// We are in a development/release candidate phase for
+	// We are in a release candidate phase for
 	// mediawiki.page_change  Override the default stream name until
 	// we release it.
 	// NOTE: the values here MUST map to a key in wgEventStreams.
 	'default' => [
-		'mediawiki_page_change' => 'rc0.mediawiki.page_change'
+		'mediawiki_page_change' => 'rc1.mediawiki.page_change'
 	]
 ],
 
