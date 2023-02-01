@@ -16635,16 +16635,12 @@ return [
 
 // T299612
 'wgLinterWriteNamespaceColumnStage' => [
-	'default' => false,
-	'group0' => true,
-	'group1' => true,
+	'default' => true,
 ],
 
 // T175177
 'wgLinterWriteTagAndTemplateColumnsStage' => [
-	'default' => false,
-	'group0' => true,
-	'group1' => true,
+	'default' => true,
 ],
 
 'wgLinterStatsdSampleFactor' => [
