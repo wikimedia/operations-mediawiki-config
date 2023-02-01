@@ -272,7 +272,8 @@ class MWConfigCacheGenerator {
 		$settings =
 			( require $configDir . '/logos.php' ) +
 			( require $configDir . '/InitialiseSettings.php' ) +
-			( require $configDir . '/ext-ORES.php' );
+			( require $configDir . '/ext-ORES.php' ) +
+			( require $configDir . '/ext-CirrusSearch.php' );
 
 		if ( $realm !== 'production' ) {
 			// Override for Beta Cluster and other realms.
