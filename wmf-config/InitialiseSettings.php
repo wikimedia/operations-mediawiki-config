@@ -25268,10 +25268,7 @@ return [
 	'default' => SCHEMA_COMPAT_NEW,
 ],
 'wgCheckUserCommentMigrationStage' => [
-	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
-	'testwiki' => SCHEMA_COMPAT_NEW,
-	'group0' => SCHEMA_COMPAT_NEW,
-	'group1' => SCHEMA_COMPAT_NEW,
+	'default' => SCHEMA_COMPAT_NEW,
 ],
 'wgCheckUserLogReasonMigrationStage' => [
 	'default' => SCHEMA_COMPAT_NEW,
