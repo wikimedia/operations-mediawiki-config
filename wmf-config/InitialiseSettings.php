@@ -7184,10 +7184,8 @@ return [
 	],
 ],
 'wgResourceLoaderClientPreferences' => [
-	'default' => false,
 	// T327979
-	'group0' => true,
-	'group1' => true
+	'default' => true
 ],
 // Note that Wikisource modifies this default in wmf-config/CommonSettings.php
 'wgVectorMaxWidthOptions' => [
