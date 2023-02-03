@@ -1559,6 +1559,9 @@ function wmfGetOverrideSettings() {
 		'wgGEUseNewImpactModule' => [
 			'default' => true,
 		],
+		'wgGELevelingUpFeaturesEnabled' => [
+			'default' => true,
+		],
 		'wgGERefreshUserImpactDataMaintenanceScriptEnabled' => [
 			'default' => true,
 		],
