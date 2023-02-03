@@ -6903,6 +6903,12 @@ return [
 	'default' => false, // T253802
 ],
 
+// T328726
+'wgCheckUserCollapseCheckUserHelperByDefault' => [
+	'default' => 2500,
+	'loginwiki' => true
+],
+
 // ----------- CheckUser end ----------
 
 // IPInfo extension
