@@ -25797,6 +25797,10 @@ return [
 	'default' => true,
 ],
 
+'wgGELevelingUpFeaturesEnabled' => [
+	'default' => false,
+],
+
 'wgGERefreshUserImpactDataMaintenanceScriptEnabled' => [
 	'default' => false,
 	'arwiki' => true,
