@@ -24175,17 +24175,6 @@ return [
 	'default' => [ 'DISPLAY' => ':99' ],
 ],
 
-// T233004
-'wgCheckUserActorMigrationStage' => [
-	'default' => SCHEMA_COMPAT_NEW,
-],
-'wgCheckUserCommentMigrationStage' => [
-	'default' => SCHEMA_COMPAT_NEW,
-],
-'wgCheckUserLogReasonMigrationStage' => [
-	'default' => SCHEMA_COMPAT_NEW,
-],
-
 // T324907
 'wgCheckUserEventTablesMigrationStage' => [
 	'default' => SCHEMA_COMPAT_OLD
