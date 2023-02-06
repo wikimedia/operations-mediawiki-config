@@ -293,7 +293,7 @@ return [
 	'wikimania2016wiki' => [ 'wm2016' ],
 	'wikimania2017wiki' => [ 'wm2017' ],
 	'wikimania2018wiki' => [ 'wm2018' ],
-	'wikimaniawiki' => [ 'wm' ],
+	'+wikimaniawiki' => [ 'wmania' ],
 ],
 
 # wgLocaltimezone @{
