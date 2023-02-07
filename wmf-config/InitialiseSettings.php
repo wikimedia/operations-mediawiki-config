@@ -21207,7 +21207,7 @@ return [
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		'android.app_session' => [
-			'schema_title' => 'analytics/mobile_apps/mobile_apps/android_app_session',
+			'schema_title' => 'analytics/mobile_apps/android_app_session',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		'android.create_account_interaction' => [
