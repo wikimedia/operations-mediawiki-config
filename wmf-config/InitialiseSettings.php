@@ -19804,8 +19804,7 @@ return [
 ],
 
 'wgDiscussionTools_visualenhancements_pageframe' => [
-	'default' => 'default', // T323727
-	'enwiki' => 'unavailable', // T323727
+	'default' => 'default', // T323727, T327456
 	'mediawikiwiki' => 'available',
 ],
 
