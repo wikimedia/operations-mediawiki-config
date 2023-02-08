@@ -5155,6 +5155,7 @@ return [
 	'wikimedia' => '/static/images/icons/wikimedia.svg',
 
 	// Wikipedia
+	'trwiki' => '/static/images/icons/trwiki-temp.svg', // T329047
 
 	// Wiktionary
 	'angwiktionary' => null,

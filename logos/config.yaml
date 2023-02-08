@@ -1616,10 +1616,12 @@ Wikipedia:
         variants:
             trwiki-temp:
                 commons: File:Türkçe yas logosu.svg
+                commons_icon: 'File:Türkçe yas logosu.svg'
         commons_wordmark: 'File:Wikipedia_wordmark-tr.svg'
         comment_wordmark: 'T255489, T254788'
         commons_tagline: 'File:Wikipedia-tagline-tr.svg'
         comment_tagline: T258552
+        comment_icon: T329047
     tswiki:
         comment: T51125
         comment_1_5x: T150618
