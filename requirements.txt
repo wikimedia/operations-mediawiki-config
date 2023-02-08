@@ -1,0 +1,5 @@
+pyyaml==6.0
+requests==2.28
+scour==0.38.2
+types-requests>=2.28,<2.29
+types-PyYAML>=6.0,<7.0
