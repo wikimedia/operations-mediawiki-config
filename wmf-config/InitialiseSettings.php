@@ -24166,10 +24166,13 @@ return [
 	'viwiki' => SCHEMA_COMPAT_WRITE_OLD | SCHEMA_COMPAT_READ_OLD,
 ],
 
-// T299954
+// T275246, T299954
 'wgCommentTempTableSchemaMigrationStage' => [
 	'default' => [
 		'rev_comment' => MIGRATION_WRITE_BOTH,
+	],
+	'cebwiki' => [
+		'rev_comment' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
 	],
 	'testcommonswiki' => [
 		'rev_comment' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
