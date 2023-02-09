@@ -20030,6 +20030,30 @@ return [
 			'schema_title' => 'analytics/mobile_apps/ios_talk_page_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		'ios.setting_action' => [
+			'schema_title' => 'analytics/mobile_apps/ios_setting_action',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'ios.sessions' => [
+			'schema_title' => 'analytics/mobile_apps/ios_sessions',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'ios.login_action' => [
+			'schema_title' => 'analytics/mobile_apps/ios_login_action',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'ios.search' => [
+			'schema_title' => 'analytics/mobile_apps/ios_search',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'ios.user_history' => [
+			'schema_title' => 'analytics/mobile_apps/ios_user_history',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'ios.reading_lists' => [
+			'schema_title' => 'analytics/mobile_apps/ios_reading_lists',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		'android.user_contribution_screen' => [
 			'schema_title' => 'analytics/mobile_apps/android_user_contribution_screen',
 			'destination_event_service' => 'eventgate-analytics-external',
