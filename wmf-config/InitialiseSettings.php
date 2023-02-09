@@ -23020,7 +23020,6 @@ return [
 	'frwiki' => true, // T153393
 	'huwiki' => true, // T191697
 	'zhwiki' => true, // T326387
-	'newiki' => true, // T328224
 ],
 'wgPageAssessmentsOnTalkPages' => [
 	'default' => true,
@@ -23031,7 +23030,6 @@ return [
 	'testwiki' => true,
 	'enwiki' => true,
 	'zhwiki' => true, // T326387
-	'newiki' => true,
 ],
 
 'wmgUsePageImages' => [
