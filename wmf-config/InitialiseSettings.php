@@ -1800,6 +1800,7 @@ return [
 	'guwikisource' => 'વિકિસ્રોત',
 	'guwiktionary' => 'વિકિકોશ', // T122407
 	'guwwikiquote' => 'Wikihoyidọ',
+	'guwwiktionary' => 'Wikiwezẹhomẹ',
 	'hewiki' => 'ויקיפדיה',
 	'hewikibooks' => 'ויקיספר',
 	'hewikinews' => 'ויקיחדשות',
