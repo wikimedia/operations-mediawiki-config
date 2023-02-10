@@ -483,6 +483,12 @@ return [
 	'officewiki' => 'fuzzy-subphrases',
 ],
 
+// Inject defaultsort in autocomplete suggestions served by the completion suggester
+'wgCirrusSearchCompletionSuggesterUseDefaultSort' => [
+	'default' => false,
+	'mnwiki' => true, // T327878
+],
+
 // @} end of wgCirrusSearchCompletionSuggesterSubphrases
 
 // Enable phrase suggester (did you mean) on all wikis (except wikidata)
