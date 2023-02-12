@@ -325,7 +325,7 @@ return [
 	'be_x_oldwiki' => 'Europe/Minsk',
 	'bewiki' => 'Europe/Minsk',
 	'bewikisource' => 'Europe/Minsk',
-	'bjnwiki' => 'Asia/Bangkok',
+	'bjnwiki' => 'Asia/Makassar', // T328887
 	'bjnwiktionary' => 'Asia/Makassar',
 	'blkwiki' => 'Asia/Rangoon',
 	'brwikisource' => 'Europe/Paris',
