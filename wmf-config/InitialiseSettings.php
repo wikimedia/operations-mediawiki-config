@@ -6797,8 +6797,8 @@ return [
 	// Legacy Graph deployments, with a Graph: namespace.
 	// Yurik would like new wikis only use <graph>...</graph>.
 	// See T97027 discussion for context.
+	// To be removed as per T124748.
 	'collabwiki' => true,
-	'mediawikiwiki' => true,
 ],
 
 'wmgUseSubPageList3' => [
