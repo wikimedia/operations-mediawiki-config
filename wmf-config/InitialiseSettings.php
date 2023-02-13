@@ -5924,7 +5924,10 @@ return [
 
 // Enable VE-based visual diffs on history pages
 'wgVisualEditorEnableDiffPage' => [
-	'default' => false,
+	'default' => true,
+	// Everywhere except Wikipedias and Wiktionaries (T314588)
+	'wikipedia' => false,
+	'wiktionary' => false,
 ],
 
 // Namespaces for VisualEditor to be active in, in addition to wgContentNamespaces
