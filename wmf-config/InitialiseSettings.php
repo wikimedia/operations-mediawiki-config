@@ -20727,6 +20727,16 @@ return [
 			],
 		],
 	],
+	'+group1' => [
+		// Enable rc1.mediawiki.page_change on group1 wikis: T311129
+		'rc1.mediawiki.page_change' => [
+			'producers' => [
+				'mediawiki_eventbus' => [
+					'enabled' => true
+				],
+			],
+		],
+	],
 	// Enable mediawiki.visual_editor_feature_use for testwiki: T309602
 	'+testwiki' => [
 		'mediawiki.visual_editor_feature_use' => [
