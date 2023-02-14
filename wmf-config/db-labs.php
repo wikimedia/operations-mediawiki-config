@@ -19,6 +19,8 @@ if ( $wmgRealm == 'labs' ) {
 		'sectionLoads' => [
 			'DEFAULT' => [
 				'deployment-db09' => 400,
+				'deployment-db11' => 0,
+				'deployment-db12' => 0,
 			],
 		],
 
