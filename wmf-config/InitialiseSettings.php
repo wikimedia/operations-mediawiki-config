@@ -18580,36 +18580,11 @@ return [
 
 'wgDiscussionToolsABTest' => [
 	'default' => false,
-	// T321961
-	'azwiki' => 'mobile',
-	'dewiki' => 'mobile',
-	'eswiki' => 'mobile',
-	'fawiki' => 'mobile',
-	'hiwiki' => 'mobile',
-	'idwiki' => 'mobile',
-	'itwiki' => 'mobile',
-	'nlwiki' => 'mobile',
-	'plwiki' => 'mobile',
-	'ptwiki' => 'mobile',
-	'rowiki' => 'mobile',
-	'ruwiki' => 'mobile',
-	'thwiki' => 'mobile',
-	'trwiki' => 'mobile',
-	'ukwiki' => 'mobile',
 ],
 
 'wgDiscussionToolsEnableMobile' => [
-	'default' => false,
-	'jawiki' => true, // T298221
-	'arwiki' => true, // T298221
-	'frwiki' => true, // T298221
-	'kowiki' => true, // T298221
-	'viwiki' => true, // T298221
-	'hewiki' => true, // T298221
-	'bnwiki' => true, // T298221
-	'zhwiki' => true, // T298221
-	'htwiki' => true, // T298221, T302259
-	'mediawikiwiki' => true, // T310960
+	'default' => true, // T328940
+	'enwiki' => false, // T328940
 ],
 
 'wgDiscussionToolsReplyIndentation' => [
