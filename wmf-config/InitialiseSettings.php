@@ -20405,14 +20405,6 @@ return [
 				'page_id' => 'page.page_id',
 			],
 			'destination_event_service' => 'eventgate-main',
-			// Disable this stream by default.
-			// As we test it and roll it out, it will be enabled
-			// selectively in per wiki config overrides below.
-			'producers' => [
-				'mediawiki_eventbus' => [
-					'enabled' => false,
-				]
-			],
 		],
 		// Declare release candiate 1 of
 		// mediawiki.page_content_change stream.
@@ -20730,24 +20722,6 @@ return [
 		'mediawiki.web_ui.interactions' => [
 			'sample' => [
 				'rate' => 1,
-			],
-		],
-		// Enable rc1.mediawiki.page_change on group0 wikis: T311129
-		'rc1.mediawiki.page_change' => [
-			'producers' => [
-				'mediawiki_eventbus' => [
-					'enabled' => true
-				],
-			],
-		],
-	],
-	'+group1' => [
-		// Enable rc1.mediawiki.page_change on group1 wikis: T311129
-		'rc1.mediawiki.page_change' => [
-			'producers' => [
-				'mediawiki_eventbus' => [
-					'enabled' => true
-				],
 			],
 		],
 	],
