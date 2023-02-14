@@ -20404,10 +20404,7 @@ return [
 				'wiki_id' => 'wiki_id',
 				'page_id' => 'page.page_id',
 			],
-			// For release candidate,
-			// use eventgate-analytics-external so we get dynamic config and
-			// only produce to kafka jumbo.
-			'destination_event_service' => 'eventgate-analytics-external',
+			'destination_event_service' => 'eventgate-main',
 			// Disable this stream by default.
 			// As we test it and roll it out, it will be enabled
 			// selectively in per wiki config overrides below.
@@ -20429,6 +20426,8 @@ return [
 			// Even though this stream will not be produced via EventGate,
 			// we need to set an event service, so that the ProduceCanaryEvents
 			// monitoring job can produce events through EventGate.
+			// TODO: When we move the enrichment job to producing to kafka main,
+			// we should set this to eventgate-main too.
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 
