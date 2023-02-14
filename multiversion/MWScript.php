@@ -94,6 +94,24 @@ EOT
 		'maintenance/mcc.php',
 	];
 
+	// maint scripts using CommandLineInc and thus can't use run.php
+	$oldScripts = [
+		'maintenance/storage/checkStorage.php',
+		'maintenance/storage/recompressTracked.php',
+		'maintenance/storage/testCompression.php',
+		'maintenance/storage/trackBlobs.php',
+		'extensions/WikimediaMaintenance/getPageCounts.php',
+		'extensions/WikimediaMaintenance/listDatabases.php',
+		'extensions/WikimediaMaintenance/sanityCheck.php',
+		'extensions/WikimediaMaintenance/storage/testRctComplete.php',
+		'extensions/Babel/tab2txt.php',
+		'extensions/Babel/txt2php.php',
+		'extensions/CentralAuth/maintenance/migrateStewards.php',
+		'extensions/SecurePoll/cli/wm-scripts/bv2022/populateEditCount.php',
+		'extensions/SecurePoll/cli/wm-scripts/ucoc2023/populateEditCount.php',
+		'extensions/TrustedXFF/generate.php',
+	];
+
 	# Check if a --wiki param was given...
 	# Maintenance.php will treat $argv[1] as the wiki if it doesn't start '-'
 	if ( !isset( $argv[1] ) || !preg_match( '/^([^-]|--wiki(=|$))/', $argv[1] ) ) {
@@ -102,10 +120,16 @@ EOT
 			$argv = array_merge( [ $argv[0], "--wiki=aawiki" ], array_slice( $argv, 1 ) );
 		}
 	}
+	if ( in_array( $relFile, $oldScripts ) ) {
+		$runPath = $relFile;
+	} else {
+		$runPath = 'maintenance/run.php';
+		array_unshift( $argv, $relFile );
+	}
 
 	# MWScript.php should be in common/
 	require_once __DIR__ . '/MWMultiVersion.php';
-	$file = MWMultiVersion::getMediaWikiCli( $relFile );
+	$file = MWMultiVersion::getMediaWikiCli( $runPath, in_array( $relFile, $oldScripts ) );
 	if ( !file_exists( $file ) ) {
 		fwrite( STDERR, "The MediaWiki script file \"{$file}\" does not exist.\n" );
 		exit( 1 );
