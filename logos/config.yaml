@@ -1611,13 +1611,17 @@ Wikipedia:
         local_wordmark: true
         local_tagline: true
     trwiki:
+        selected: trwiki-temp
         commons: 'File:Wikipedia-logo-v2-tr.svg'
-        comment_1_5x: T150618
-        comment_2x: T150618
+        variants:
+            trwiki-temp:
+                commons: File:Türkçe yas logosu.svg
+                commons_icon: 'File:Türkçe yas logosu.svg'
         commons_wordmark: 'File:Wikipedia_wordmark-tr.svg'
         comment_wordmark: 'T255489, T254788'
         commons_tagline: 'File:Wikipedia-tagline-tr.svg'
         comment_tagline: T258552
+        comment_icon: T329047
     tswiki:
         comment: T51125
         comment_1_5x: T150618
@@ -1893,6 +1897,8 @@ Wiktionary:
         comment_1_5x: T150618
         comment_2x: T150618
         no_icon: true
+        commons_wordmark: 'File:Wiktionary-wordmark-cs.svg'
+        comment_wordmark: T328357
     cywiktionary:
         no_1_5x: true
         no_2x: true
@@ -1966,6 +1972,11 @@ Wiktionary:
         no_1_5x: true
         no_2x: true
     gomwiktionary: null
+    gorwiktionary:
+        commons: 'File:Wiktionary-logo-gor.svg'
+        comment: T327987
+        comment_1_5x: T327987
+        comment_2x: T327987
     guwiktionary:
         comment: T45240
         no_1_5x: true
@@ -2022,6 +2033,8 @@ Wiktionary:
     itwiktionary:
         comment_1_5x: T150618
         comment_2x: T150618
+        commons_wordmark: 'File:Wiktionary-wordmark-it.svg'
+        comment_wordmark: T329168
     jbowiktionary:
         comment: T45240
         comment_1_5x: T150618
@@ -2292,6 +2305,8 @@ Wiktionary:
         comment_1_5x: T176008
         comment_2x: T176008
         no_icon: true
+        commons_wordmark: 'File:Wiktionary-wordmark-tr.svg'
+        comment_wordmark: T328499
     ttwiktionary:
         comment: T45240
         comment_1_5x: T150618
@@ -2365,9 +2380,9 @@ Wikiquote:
         no_2x: true
     bnwikiquote:
         commons: 'File:Wikiquote-logo-bn.svg'
-        comment: T319183
-        comment_1_5x: T319183
-        comment_2x: T319183
+        comment: 'T319183, T323131'
+        comment_1_5x: 'T319183, T323131'
+        comment_2x: 'T319183, T323131'
     bswikiquote:
         no_1_5x: true
         no_2x: true
@@ -2404,13 +2419,9 @@ Wikiquote:
         comment_2x: T170604
     etwikiquote:
         commons: 'File:EE Vikitsitaadid logo.svg'
-        selected: etwikiquote-10k
-        variants:
-            etwikiquote-10k:
-                commons: 'File:Vikitsitaadid 10 000.svg'
-        comment: 'T302683, T313698'
-        comment_1_5x: T313698
-        comment_2x: T313698
+        comment: T302683
+        comment_1_5x: T302683
+        comment_2x: T302683
         no_wordmark: true
     fawikiquote: null
     frwikiquote:
@@ -2422,6 +2433,8 @@ Wikiquote:
         comment_wordmark: T290091
     guwikiquote:
         comment: T121853
+    guwwikiquote:
+        commons: File:Wikiquote-logo-guw-v1.svg
     hewikiquote: null
     hiwikiquote:
         comment: T126185
@@ -2516,10 +2529,15 @@ Wikiquote:
     tlwikiquote:
         commons: 'File:Wikikawikaan-logo.svg'
     trwikiquote:
-        no_1_5x: true
-        no_2x: true
+        selected: trwikiquote-temp
+        commons: 'File:Wikiquote-logo-tr.svg'
+        variants:
+            trwikiquote-temp:
+                commons: 'File:Turkish Wikiquote 5000 logo (v2), ribbon,grey.svg'
+                commons_icon: 'File:Turkish Wikiquote 5000 logo,ribbon,grey.svg'
         commons_wordmark: 'File:Wikiquote-wordmark-tr.svg'
         comment_wordmark: T286133
+        comment_icon: T329399
     ukwikiquote:
         no_1_5x: true
         no_2x: true
@@ -2716,6 +2734,11 @@ Wikibooks:
     ruwikibooks:
         comment_1_5x: T150618
         comment_2x: T150618
+    shnwikibooks:
+        commons: 'File:Wikibooks-logo-shn.svg'
+        comment: T327380
+        comment_1_5x: T327380
+        comment_2x: T327380
     simplewikibooks:
         comment: T150618
         no_1_5x: true
@@ -2981,6 +3004,13 @@ Wikisource:
         comment: T54019
         no_1_5x: true
         no_2x: true
+    jawikisource:
+        commons: 'File:Wikisource-logo-ja.svg'
+        commons_wordmark: 'File:Wikisource-wordmark-ja.svg'
+        comment: T326488
+        comment_1_5x: T326488
+        comment_2x: T326488
+        comment_wordmark: T326488
     jvwikisource:
         commons: 'File:Wikisource-logo-jv.svg'
         commons_wordmark: 'File:Wikisource-wordmark-jv.svg'

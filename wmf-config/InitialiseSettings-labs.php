@@ -489,8 +489,9 @@ function wmfGetOverrideSettings() {
 			'simplewiki' => true,
 		],
 
-		'-wgKartographerEnableMapFrame' => [
-			'default'	=> true,
+		'wmgUseKartographer' => [
+			'default' => true,
+			'wikifunctionswiki' => false,
 		],
 
 		// T320613
@@ -555,6 +556,11 @@ function wmfGetOverrideSettings() {
 			'default' => [ 'cologneblue', 'contenttranslation', 'modern' ], // T263093, T287616, T223824
 		],
 
+		// ResourceLoader
+		'wgResourceLoaderClientPreferences' => [
+			'default' => true,
+		],
+
 		//
 		// Vector
 		//
@@ -566,6 +572,12 @@ function wmfGetOverrideSettings() {
 			],
 		],
 		'wgVectorStickyHeaderEdit' => [
+			'default' => [
+				'logged_in' => true,
+				'logged_out' => true,
+			],
+		],
+		'wgVectorPageTools' => [
 			'default' => [
 				'logged_in' => true,
 				'logged_out' => true,
@@ -600,8 +612,8 @@ function wmfGetOverrideSettings() {
 		/// ----------- BetaFeatures start ----------
 		///
 
-		// Enable all Beta Features in Beta Labs, even if not in production whitelist
-		'wgBetaFeaturesWhitelist' => [
+		// Enable all Beta Features in Beta Labs, even if not in production allow list
+		'wgBetaFeaturesAllowList' => [
 			'default' => false,
 		],
 
@@ -1466,6 +1478,12 @@ function wmfGetOverrideSettings() {
 			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 		],
 
+		'-wgCommentTempTableSchemaMigrationStage' => [
+			'default' => [
+				'rev_comment' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
+			],
+		],
+
 		'wgOresUiEnabled' => [
 			'default' => true,
 			'wikidatawiki' => false,
@@ -1538,7 +1556,7 @@ function wmfGetOverrideSettings() {
 			'default' => 'wikidatawiki',
 			'commonswiki' => 'commonswiki',
 		],
-		'wgGEUseNewImpactModule' => [
+		'wgGELevelingUpFeaturesEnabled' => [
 			'default' => true,
 		],
 		'wgGERefreshUserImpactDataMaintenanceScriptEnabled' => [
@@ -1602,40 +1620,6 @@ function wmfGetOverrideSettings() {
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
 			'viwiki' => 'https://vi.wikipedia.org/w/api.php',
 		],
-		'wgGECampaigns' => [
-			'default' => [
-				'social-latam-2022' => [
-					'messageKey' => 'marketingvideocampaign',
-					'signupPageTemplate' => 'video',
-					'signupPageTemplateParameters' => [
-						'messageKey' => 'marketingvideocampaign',
-						'file' => 'Wikimedia_Foundation_newcomer_experience_pilot_-_account_creation.webm',
-						'thumbtime' => 38,
-					],
-					'pattern' => '/^social-latam-2022-A$/'
-				],
-				'thankyoupage-2022' => [
-					'messageKey' => 'thankyoupage',
-					'skipWelcomeSurvey' => true,
-					'signupPageTemplate' => 'hero',
-					'signupPageTemplateParameters' => [
-						'showBenefitsList' => 'desktop',
-						'messageKey' => 'thankyoupage',
-					],
-					'pattern' => '/^typage-(latam|in|za)-en-2022$|^typage-latam-(es|pt)-2022$/'
-				],
-				'thankyoubanner-2022' => [
-					'skipWelcomeSurvey' => true,
-					'signupPageTemplate' => 'hero',
-					'signupPageTemplateParameters' => [
-						'showBenefitsList' => 'desktop',
-						'messageKey' => 'thankyoubanner',
-					],
-					'pattern' => '/^tybanner-(latam|in|za)-en-2022$|^tybanner-latam-(es|pt)-2022$/'
-				]
-			],
-		],
-
 		'-wgGEMentorDashboardDeploymentMode' => [
 			'default' => 'alpha',
 		],

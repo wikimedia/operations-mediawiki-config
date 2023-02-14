@@ -1,6 +1,6 @@
 <?php
 // NOTE: Automatically generated from the /dblists directory
-// Do not edit it directly, run "composer buildDBLists" instead.
+// Do not edit it directly, run "composer manage-dblist update" instead.
 return [
 'aawiki' => [ 'wikipedia', 'closed', 'small', 'wikidataclient' ],
 'aawikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
@@ -171,7 +171,7 @@ return [
 'crwiktionary' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
 'csbwiki' => [ 'wikipedia', 'desktop-improvements', 'small', 'wikidataclient', 'commonsuploads' ],
 'csbwiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
-'cswiki' => [ 'wikipedia', 'flow', 'large', 'wikidataclient', 'commonsuploads', 'cirrussearch-big-indices' ],
+'cswiki' => [ 'wikipedia', 'desktop-improvements', 'flow', 'large', 'wikidataclient', 'commonsuploads', 'cirrussearch-big-indices' ],
 'cswikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'cswikinews' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'cswikiquote' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],
@@ -223,7 +223,7 @@ return [
 'elwikivoyage' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'elwiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
 'emlwiki' => [ 'wikipedia', 'desktop-improvements', 'medium', 'wikidataclient' ],
-'enwiki' => [ 'wikipedia', 'flaggedrevs', 'large', 'wikidataclient', 'mobile-anon-talk', 'cirrussearch-big-indices' ],
+'enwiki' => [ 'wikipedia', 'desktop-improvements', 'flaggedrevs', 'large', 'wikidataclient', 'mobile-anon-talk', 'cirrussearch-big-indices' ],
 'enwikibooks' => [ 'flaggedrevs', 'medium', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
 'enwikinews' => [ 'flaggedrevs', 'large', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
 'enwikiquote' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'cirrussearch-big-indices' ],

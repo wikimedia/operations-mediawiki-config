@@ -217,6 +217,7 @@ if ( getenv( 'WMF_MAINTENANCE_OFFLINE' ) ) {
 			$lbFactoryConf = [];
 			wmfApplyEtcdDBConfig( $dbConfigFromEtcd, $lbFactoryConf );
 			$lbFactoryConf['class'] = 'LBFactoryMulti';
+			$lbFactoryConf['groupLoadsBySection']['s11'] = [];
 			$lbFactoryConf['sectionLoads']['s11'] = [ 'clouddb2002-dev' => 1 ];
 			$lbFactoryConf['hostsByName']['clouddb2002-dev'] = '10.192.20.6';
 			return $lbFactoryConf;
@@ -348,6 +349,7 @@ if ( $wmgRealm === 'production' ) {
 
 	// labtestwiki is a one-off test server, using a wmcs-managed database.  Cut
 	// etcd out of the loop entirely for this one.
+	$wgLBFactoryConf['groupLoadsBySection']['s11'] = [];
 	$wgLBFactoryConf['sectionLoads']['s11'] = [ 'clouddb2002-dev' => 1 ];
 	$wgLBFactoryConf['hostsByName']['clouddb2002-dev'] = '10.192.20.6';
 
@@ -2803,9 +2805,9 @@ wfLoadExtension( 'MobileFrontend' );
 wfLoadSkin( 'MinervaNeue' );
 
 $wgMFMobileHeader = 'X-Subdomain';
-if ( !$wmgEnableGeoData ) {
-	$wgMFNearby = false;
-}
+
+// Enable this everywhere except where GeoData isn't available
+$wgMFNearby = $wmgEnableGeoData;
 
 $wgHooks['EnterMobileMode'][] = static function () {
 	global $wgCentralAuthCookieDomain, $wgHooks, $wgIncludeLegacyJavaScript;
@@ -2845,6 +2847,8 @@ $wgMFStripResponsiveImages = true;
 if ( $wmgMFDefaultEditor ) {
 	$wgMFDefaultEditor = $wmgMFDefaultEditor;
 }
+
+$wgMFUseWikibase = true;
 
 # MUST be after MobileFrontend initialization
 if ( $wmgEnableTextExtracts ) {
@@ -4031,10 +4035,6 @@ if ( $wmgUseCapiunto ) {
 if ( $wmgUseKartographer ) {
 	wfLoadExtension( 'Kartographer' );
 	$wgKartographerMapServer = 'https://maps.wikimedia.org';
-	$wgKartographerVersionedMapdata = true; // T307110
-	// Versioned maps support, see T300712
-	$wgKartographerVersionedLiveMaps = true;
-	$wgKartographerVersionedStaticMaps = true;
 }
 
 if ( $wmgUsePageViewInfo ) {

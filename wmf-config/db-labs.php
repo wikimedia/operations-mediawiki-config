@@ -19,7 +19,8 @@ if ( $wmgRealm == 'labs' ) {
 		'sectionLoads' => [
 			'DEFAULT' => [
 				'deployment-db09' => 0,
-				'deployment-db10' => 400,
+				'deployment-db11' => 400,
+				'deployment-db12' => 400,
 			],
 		],
 
@@ -37,37 +38,47 @@ if ( $wmgRealm == 'labs' ) {
 		'hostsByName' => [
 			// deployment-db09.deployment-prep.eqiad1.wikimedia.cloud, master
 			'deployment-db09' => '172.16.0.238:3306',
-			// deployment-db10.deployment-prep.eqiad1.wikimedia.cloud
-			'deployment-db10' => '172.16.2.170:3306',
+			// deployment-db11.deployment-prep.eqiad1.wikimedia.cloud
+			'deployment-db11' => '172.16.5.150:3306',
+			// deployment-db12.deployment-prep.eqiad1.wikimedia.cloud
+			'deployment-db12' => '172.16.3.239:3306',
 		],
 
 		'externalLoads' => [
 			'cluster1' => [
 				// deployment-db09.deployment-prep.eqiad1.wikimedia.cloud, master
 				'172.16.0.238:3306' => 1,
-				// deployment-db10.deployment-prep.eqiad1.wikimedia.cloud
-				'172.16.2.170:3306' => 3,
+				// deployment-db11.deployment-prep.eqiad1.wikimedia.cloud
+				'172.16.5.150:3306' => 3,
+				// deployment-db12.deployment-prep.eqiad1.wikimedia.cloud
+				'172.16.3.239:3306' => 3,
 			],
 
 			'flow_cluster1' => [
 				// deployment-db09.deployment-prep.eqiad1.wikimedia.cloud, master
 				'172.16.0.238:3306' => 1,
-				// deployment-db10.deployment-prep.eqiad1.wikimedia.cloud
-				'172.16.2.170:3306' => 3,
+				// deployment-db11.deployment-prep.eqiad1.wikimedia.cloud
+				'172.16.5.150:3306' => 3,
+				// deployment-db12.deployment-prep.eqiad1.wikimedia.cloud
+				'172.16.3.239:3306' => 3,
 			],
 
 			'extension1' => [
 				// deployment-db09.deployment-prep.eqiad1.wikimedia.cloud, master
 				'172.16.0.238:3306' => 1,
-				// deployment-db10.deployment-prep.eqiad1.wikimedia.cloud
-				'172.16.2.170:3306' => 3,
+				// deployment-db11.deployment-prep.eqiad1.wikimedia.cloud
+				'172.16.5.150:3306' => 3,
+				// deployment-db12.deployment-prep.eqiad1.wikimedia.cloud
+				'172.16.3.239:3306' => 3,
 			],
 
 			'extension2' => [
 				// deployment-db09.deployment-prep.eqiad1.wikimedia.cloud, master
 				'172.16.0.238:3306' => 1,
-				// deployment-db10.deployment-prep.eqiad1.wikimedia.cloud
-				'172.16.2.170:3306' => 3,
+				// deployment-db11.deployment-prep.eqiad1.wikimedia.cloud
+				'172.16.5.150:3306' => 3,
+				// deployment-db12.deployment-prep.eqiad1.wikimedia.cloud
+				'172.16.3.239:3306' => 3,
 			]
 		],
 

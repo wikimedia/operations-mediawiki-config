@@ -67,8 +67,6 @@ EOT
 	if ( strpos( $relFile, '/' ) === false ) {
 		// convenience
 		$relFile = "maintenance/$relFile";
-	} elseif ( getenv( 'MEDIAWIKI_MAINT_INIT_ONLY' ) ) {
-		$relFile = 'maintenance/CommandLineInc.php';
 	}
 
 	# Remove effects of this wrapper from $argv...

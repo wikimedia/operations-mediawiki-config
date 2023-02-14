@@ -308,13 +308,18 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterBlockDuration = '1 day';
 		$wgAbuseFilterAnonBlockDuration = '1 day';
 		break;
-	case 'itwiktionary': // T199783
+	case 'itwikiquote':
+		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
+		break;
+	case 'itwikiversity': // T328194
 		$wgAbuseFilterActions['block'] = true;
 		$wgAbuseFilterBlockDuration = '1 day';
 		$wgAbuseFilterAnonBlockDuration = '1 day';
 		break;
-	case 'itwikiquote':
-		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
+	case 'itwiktionary': // T199783
+		$wgAbuseFilterActions['block'] = true;
+		$wgAbuseFilterBlockDuration = '1 day';
+		$wgAbuseFilterAnonBlockDuration = '1 day';
 		break;
 	case 'jawiki':
 		$wgGroupPermissions['sysop']['abusefilter-modify'] = false;

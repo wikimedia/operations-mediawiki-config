@@ -13,6 +13,9 @@
 #   variables.
 # - Settings prefixed with 'wmg' are custom parameters handled by
 #   CommonSettings.php.
+# - Prefixing the wiki name with '+' will cause the configuration
+#   value to be merged with the previous, less specific value
+#   (typically the one for 'default').
 #
 # Effective load order:
 # - multiversion
@@ -322,7 +325,7 @@ return [
 	'be_x_oldwiki' => 'Europe/Minsk',
 	'bewiki' => 'Europe/Minsk',
 	'bewikisource' => 'Europe/Minsk',
-	'bjnwiki' => 'Asia/Bangkok',
+	'bjnwiki' => 'Asia/Makassar', // T328887
 	'bjnwiktionary' => 'Asia/Makassar',
 	'blkwiki' => 'Asia/Rangoon',
 	'brwikisource' => 'Europe/Paris',
@@ -383,6 +386,7 @@ return [
 	'gomwiki' => 'Asia/Kolkata', // T96468
 	'gomwiktionary' => 'Asia/Kolkata', // T249506
 	'gorwiki' => 'Asia/Makassar', // T189109
+	'gorwiktionary' => 'Asia/Makassar', // T327986
 	'grwikimedia' => 'Europe/Athens', // T245911
 	'guwiki' => 'Asia/Kolkata',
 	'guwikiquote' => 'Asia/Kolkata', // T121853
@@ -1796,6 +1800,7 @@ return [
 	'guwikisource' => 'વિકિસ્રોત',
 	'guwiktionary' => 'વિકિકોશ', // T122407
 	'guwwikiquote' => 'Wikihoyidọ',
+	'guwwiktionary' => 'Wikiwezẹhomẹ',
 	'hewiki' => 'ויקיפדיה',
 	'hewikibooks' => 'ויקיספר',
 	'hewikinews' => 'ויקיחדשות',
@@ -2753,6 +2758,7 @@ return [
 		'بحث ویکی پدیا' => NS_PROJECT_TALK,
 		'بحث ويکي پديا' => NS_PROJECT_TALK,
 		'بحث ويکي‌پديا' => NS_PROJECT_TALK,
+		'ره' => NS_HELP, // T329465
 		'پیشنویس' => 118, // T92760
 		'بحث_پیشنویس' => 119, // T92760
 		'پيشنويس' => 118, // T92760
@@ -3544,6 +3550,16 @@ return [
 	],
 	'+shnwiki' => [
 		'WT' => NS_PROJECT_TALK, // T210699
+	],
+	'+shnwikibooks' => [ // T327850
+		'Cookbook' => 102,
+		'Cookbook_talk' => 103,
+		'Transwiki' => 108,
+		'Transwiki_talk' => 109,
+		'Wikijunior' => 110,
+		'Wikijunior_talk' => 111,
+		'Subject' => 112,
+		'Subject_talk' => 113,
 	],
 	'+siwiki' => [
 		'Portal' => 100,
@@ -5608,7 +5624,12 @@ return [
 		100 => 'Portála', // T41206
 		101 => 'Portálaságastallan', // T41206
 	],
-	'shwiki' => [ 100 => 'Portal', 101 => 'Razgovor_o_portalu' ], // T32928
+	'shwiki' => [
+		100 => 'Portal', // T32928
+		101 => 'Razgovor_o_portalu', // T32928
+		118 => 'Nacrt', // T327864
+		119 => 'Razgovor_o_nacrtu', // T327864
+	],
 	'shiwiki' => [
 		100 => 'Aggur', // T288909 - Portal
 		101 => 'Amsawal_n_waggur', // T288909 - Portal_talk
@@ -6699,6 +6720,16 @@ return [
 		106 => 'Задача',
 		107 => 'Обсуждение_задачи',
 	],
+	'shnwikibooks' => [
+		102 => 'ပပ်ႉတူမ်ႈႁုင်', // T327850, Cookbook
+		103 => 'ဢုပ်ႇၵုမ်_ပပ်ႉတူမ်ႈႁုင်', // T327850, Cookbook talk
+		108 => 'ထရၼ်ႇသ်ဝီႇၶီႇ', // T327850, Transwiki
+		109 => 'ဢုပ်ႇၵုမ်_ထရၼ်ႇသ်ဝီႇၶီႇ', // T327850, Transwiki talk
+		110 => 'ဝီႇၶီႇလုၵ်ႈဢွၼ်ႇ', // T327850, Wikijunior
+		111 => 'ဢုပ်ႇၵုမ်_ဝီႇၶီႇလုၵ်ႈဢွၼ်ႇ', // T327850, Wikijunior talk
+		112 => 'ပၢႆး', // T327850, Subject
+		113 => 'ဢုပ်ႇၵုမ်_ပၢႆး', // T327850, Subject talk
+	],
 	'siwikibooks' => [
 		112 => 'විෂයය',
 		113 => 'විෂයය_සාකච්ඡාව',
@@ -7154,7 +7185,10 @@ return [
 		NS_CATEGORY,
 	],
 ],
-
+'wgResourceLoaderClientPreferences' => [
+	// T327979
+	'default' => true
+],
 // Note that Wikisource modifies this default in wmf-config/CommonSettings.php
 'wgVectorMaxWidthOptions' => [
 	'default' => [
@@ -7187,6 +7221,32 @@ return [
 	'desktop-improvements' => '2',
 ],
 
+'wgVectorPageTools' => [
+	'default' => [
+		'logged_in' => false,
+		'logged_out' => false,
+	],
+	// T327348
+	'viwiki' => [
+		'logged_in' => true,
+		'logged_out' => true,
+	],
+	'itwiki' => [
+		'logged_in' => true,
+		'logged_out' => false,
+	],
+	// T327686
+	'enwiki' => [
+		'logged_in' => true,
+		'logged_out' => false,
+	],
+	// T328154
+	'cswiki' => [
+		'logged_in' => true,
+		'logged_out' => false,
+	]
+],
+
 'wgVectorStickyHeader' => [
 	'default' => [
 		'logged_in' => true,
@@ -7204,10 +7264,6 @@ return [
 
 'wgVectorStickyHeaderEdit' => [
 	'default' => [
-		'logged_in' => false,
-		'logged_out' => false,
-	],
-	'desktop-improvements' => [
 		'logged_in' => true,
 		'logged_out' => false,
 	],
@@ -7272,9 +7328,6 @@ return [
 		'showThumbnail' => true,
 		'showDescription' => true,
 	],
-	'+frwiktionary' => [
-		'showDescription' => false,
-	],
 	'officewiki' => [
 		'showThumbnail' => false,
 		'showDescription' => false,
@@ -7291,6 +7344,10 @@ return [
 		'showThumbnail' => false,
 		'showDescription' => true,
 	],
+],
+// T328045
+'wgVectorTableOfContentsCollapseAtCount' => [
+	'default' => 28,
 ],
 
 # wgForceUIMsgAsContentMsg @{
@@ -8281,7 +8338,14 @@ return [
 		'sysop' => [
 			'editautoreviewprotected' => true,
 			'editeditorprotected' => true, // T321111
-		]
+		],
+		'extendedmover' => [ // T326434
+			'move' => true,
+			'move-subpages' => true,
+			'delete-redirect' => true,
+			'suppressredirect' => true,
+			'tboverride' => true,
+		],
 	],
 	'+arwikibooks' => [
 		'rollbacker' => [ 'rollback' => true ], // T185720
@@ -9617,6 +9681,15 @@ return [
 			'move-subpages' => true,
 		],
 	],
+	'+lmowiktionary' => [
+		'extendedmover' => [ // T327340
+			'move' => true,
+			'move-subpages' => true,
+			'suppressredirect' => true,
+			'delete-redirect' => true,
+			'tboverride' => true,
+		]
+	],
 	'+lvwiki' => [
 		'autopatrolled' => [
 			'autopatrol' => true,
@@ -9634,8 +9707,14 @@ return [
 		'rollbacker' => [ 'rollback' => true ], // T118934
 	],
 	'+mediawikiwiki' => [
-		'*' => [ 'flow-hide' => false, ], // T245780
-		'autoconfirmed' => [ 'flow-hide' => true ],  // T245780
+		'*' => [
+			'flow-hide' => false, // T245780
+			'flow-edit-title' => false, // T328097
+		],
+		'autoconfirmed' => [
+			'flow-hide' => true, // T245780
+			'flow-edit-title' => true, // T328097
+		],
 		'user' => [ 'flow-create-board' => true, ],
 		'autopatrolled' => [ 'autopatrol' => true, ],
 		'uploader' => [ // T217523
@@ -9818,10 +9897,18 @@ return [
 	'+newiki' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T89816
 		'rollbacker' => [
-			'rollback' => true,
-			'suppressredirect' => true,
-		], // T90888 and T214012
-		'reviewer' => [ 'patrol' => true ], // T95101
+			'rollback' => true, // T90888
+			'suppressredirect' => true, // T214012
+		],
+		'patroller' => [
+			'patrol' => true,  // T95101
+			'move' => true, // T327114
+			'move-subpages' => true, // T327114
+			'move-categorypages' => true, // T327114
+			'suppressredirect' => true, // T327114
+			'delete-redirect' => true, // T327114
+			'tboverride' => true, // T327114
+		],
 		'filemover' => [ 'movefile' => true ], // T95103
 		'templateeditor' => [
 			'templateeditor' => true,
@@ -9837,6 +9924,7 @@ return [
 			'deletedhistory' => true,
 			'deletedtext' => true,
 			'browsearchive' => true,
+			'block' => true, // T326355
 		],
 		'arbcom' => [
 			'deletedhistory' => true,
@@ -11016,7 +11104,7 @@ return [
 	// we can only check memberships on a non-current wiki, not config, so we need to mash everything together here.
 	'default' => [
 		// core or extension groups
-		'bureaucrat', 'checkuser', 'interface-admin', 'oauthadmin', 'oversight', 'suppress',  'sysop',
+		'bureaucrat', 'checkuser', 'interface-admin', 'oauthadmin', 'suppress',  'sysop',
 		// custom groups used on several wikis
 		'arbcom', 'botadmin', 'eliminator', 'import', 'interface-editor', 'transwiki',
 		// custom groups used on one or a few wikis
@@ -11119,6 +11207,7 @@ return [
 			'confirmed',
 			'rollbacker',
 			'abusefilter',
+			'extendedmover', // T326434
 		],
 	],
 	'+arwikibooks' => [
@@ -11812,6 +11901,9 @@ return [
 			'rollbacker', // T256109
 		],
 	],
+	'+lmowiktionary' => [
+		'sysop' => [ 'extendedmover' ], // T327340
+	],
 	'+ltwiki' => [
 		'sysop' => [ 'abusefilter' ],
 	],
@@ -11894,7 +11986,7 @@ return [
 		'sysop' => [
 			'autopatrolled',  // T89816
 			'rollbacker',     // T90888
-			'reviewer',       // T95101
+			'patroller',       // T95101, T327114
 			'abusefilter',    // T95102
 			'filemover',      // T95103
 			'import',         // T100925
@@ -12535,6 +12627,7 @@ return [
 			'abusefilter',
 			'patroller',
 			'autopatrolled',
+			'extendedmover', // T326434
 		],
 	],
 	'+arwikibooks' => [
@@ -13079,6 +13172,9 @@ return [
 	'+lijwiki' => [ // T256109
 		'sysop' => [ 'mover', 'rollbacker' ],
 	],
+	'+lmowiktionary' => [
+		'sysop' => [ 'extendedmover' ], // T327340
+	],
 	'+ltwiki' => [
 		'sysop' => [ 'abusefilter' ],
 	],
@@ -13132,7 +13228,7 @@ return [
 		'sysop' => [
 			'autopatrolled',        // T89816, T148171
 			'import',               // T100925, T148171
-			'reviewer',             // T95101, T148171
+			'patroller',             // T95101, T148171, T327114
 			'rollbacker',           // T90888, T148171
 			'templateeditor',       // T195557
 			'flood',                // T211181
@@ -13272,6 +13368,7 @@ return [
 		'sysop' => [
 			'filemover', 'patroller', 'rollbacker', // T52802
 			'flood', // T54273
+			'autopatrolled', // T325938
 		],
 	],
 	'+shwiktionary' => [
@@ -14539,6 +14636,8 @@ return [
 'wmgUsePhonos' => [
 	'default' => false,
 	'testwiki' => true, // T321084
+	'afwiktionary' => true, // T324561
+	'arwiki' => true, // T324561
 ],
 
 'wgPhonosPath' => [
@@ -16091,6 +16190,7 @@ return [
 	'eswikiversity' => true, // T198335
 	'eswikivoyage' => true, // T241163
 	'euwiki' => true, // T166553
+	'extwiki' => true, // T326450
 	'fawiki' => true,
 	'fawiktionary' => true, // T308505
 	'frwiki' => true, // T95604
@@ -16143,6 +16243,7 @@ return [
 	'sdwiktionary' => true, // T152609
 	'simplewiktionary' => true,
 	'skwiki' => true,
+	'shwiki' => true, // T327833
 	'shnwiki' => true, // T308623
 	'sowiki' => true,
 	'sqwiki' => true, // T227970
@@ -16330,7 +16431,7 @@ return [
 // at which point the feature should be un-deployed.
 //
 // DO NOT add entries here without OK from Greg Grossmeier or James Forrester.
-'wgBetaFeaturesWhitelist' => [
+'wgBetaFeaturesAllowList' => [
 	'default' => [
 		'visualeditor-enable',               // [Editing] On-going (special permission) – VisualEditor
 		'beta-feature-flow-user-talk-page',  // [Growth*] On-going (special permission) – Flow opt-in
@@ -16343,7 +16444,6 @@ return [
 		'visualeditor-visualdiffpage',       // [Editing] 2019-11-06 – Visual diffs
 		'discussiontools-betaenable',        // [Editing] 2020-09-12 – Reply tool
 		'ipinfo-beta-feature-enable',        // [AHT] 2022-10-01 – IP Info
-		'wikieditor-realtime-preview',       // [CommTech] 2023-03-03 – Realtime Preview
 		'wikistories-storiesonarticles',     // [Inuka] 2022-12-30 - Wikistories on articles
 	],
 ],
@@ -16512,10 +16612,12 @@ return [
 	'wikisource' => true,
 ],
 
-// Enable WikiEditor Realtime Preview beta feature.
+// Enable WikiEditor Realtime Preview feature (without a Beta Feature).
 'wgWikiEditorRealtimePreview' => [
 	'default' => true,
-	'plwiki' => false, // T313420
+],
+'wgWikiEditorRealtimePreviewBeta' => [
+	'default' => false,
 ],
 
 // ------------ BetaFeatures end -----------
@@ -16546,6 +16648,16 @@ return [
 'wmgUseLinter' => [
 	'default' => true,
 	'lockeddown' => false,
+],
+
+// T299612
+'wgLinterWriteNamespaceColumnStage' => [
+	'default' => true,
+],
+
+// T175177
+'wgLinterWriteTagAndTemplateColumnsStage' => [
+	'default' => true,
 ],
 
 'wgLinterStatsdSampleFactor' => [
@@ -17420,7 +17532,7 @@ return [
 // a parser cache write, putting full pressure on the parser cache.
 // This needs to be enabled gradually. See T322672.
 'wgTemporaryParsoidHandlerParserCacheWriteRatio' => [
-	'default' => 0.01, // 1% for now
+	'default' => 0.25, // 25% for now
 	'commonswiki' => 0.0, // disable for commons, useless for file descriptions
 	'wikidatawiki' => 0.0, // disable for wikidata, we shouldn't render items anyway
 	'testwiki' => 1.0,
@@ -17490,10 +17602,6 @@ return [
 	'default' => true, // T73457
 ],
 
-'wgCheckUserEnableSpecialInvestigate' => [
-	'default' => true, // T264357
-],
-
 'wgCheckUserLogLogins' => [
 	// T253802 - enabled everywhere but loginwiki
 	'default' => true,
@@ -17527,6 +17635,7 @@ return [
 	'arwiki' => true,
 	'azwiki' => true, // T119727
 	'bnwiki' => true, // T129728
+	'bnwikiquote' => true, // T328834
 	'bnwikisource' => true, // T149683
 	'ckbwiki' => true, // T169563
 	'commonswiki' => true,
@@ -17755,9 +17864,6 @@ return [
 	'default' => false,
 	'enwiki' => true,
 ],
-'wgMFNearby' => [
-	'default' => true, // Does not gets enabled on wikis w/o GeoData anyway
-],
 
 // Enable X-Analytics logging
 'wgMFEnableXAnalyticsLogging' => [
@@ -17778,6 +17884,7 @@ return [
 	'arwiki' => true,
 	'bnwiki' => true, // T299529
 	'bnwikibooks' => true, // T319317
+	'bnwiktionary' => true, // T328630
 	'kowiki' => true, // T172630
 	// WikidataPageBanner extensions must enable for Minerva support.
 	// (T254391)
@@ -17794,9 +17901,6 @@ return [
 'wgMFCollapseSectionsByDefault' => [
 	'default' => true,
 	'wiktionary' => false,
-],
-'wgMFUseWikibase' => [
-	'default' => true,
 ],
 'wgMFEnableWikidataDescriptions' => [
 	'default' => [
@@ -17888,1151 +17992,9 @@ return [
 	],
 	'test2wiki' => [ NS_USER => [ 'male' => 'Male_user', 'female' => 'Female_user' ] ],
 ],
-
 'wmgUseBabel' => [
 	'default' => true,
 	'lockeddown' => false,
-],
-'wmgBabelCategoryNames' => [
-	'default' => [
-		'0' => false,
-		'1' => false,
-		'2' => false,
-		'3' => false,
-		'4' => false,
-		'5' => false,
-		'N' => false,
-	],
-	'betawikiversity' => [ // T66168
-		'0' => 'User %code%-0',
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => 'User %code%-5',
-		'N' => 'User %code%-N',
-	],
-	'cawiki' => [
-		'0' => false,
-		'1' => 'Usuaris %code%-1',
-		'2' => 'Usuaris %code%-2',
-		'3' => 'Usuaris %code%-3',
-		'4' => 'Usuaris %code%-4',
-		'5' => false,
-		'N' => 'Usuaris %code%-N',
-	],
-	'cswikiversity' => [ // T67211
-		'0' => 'Uživatel %code%-0',
-		'1' => 'Uživatel %code%-1',
-		'2' => 'Uživatel %code%-2',
-		'3' => 'Uživatel %code%-3',
-		'4' => 'Uživatel %code%-4',
-		'5' => 'Uživatel %code%-5',
-		'N' => 'Uživatel %code%-N',
-	],
-	'cawiktionary' => [ // T49287
-		'0' => false,
-		'1' => 'Usuaris %code%-1',
-		'2' => 'Usuaris %code%-2',
-		'3' => 'Usuaris %code%-3',
-		'4' => 'Usuaris %code%-4',
-		'5' => false,
-		'N' => 'Usuaris %code%-N',
-	],
-	'commonswiki' => [
-		'0' => 'User %code%-0',
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => false,
-		'N' => 'User %code%-N',
-	],
-	'testcommonswiki' => [
-		'0' => 'User %code%-0',
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => false,
-		'N' => 'User %code%-N',
-	],
-	'dewiki' => [
-		'0' => false,
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => false,
-		'N' => 'User %code%-M',
-	],
-	'elwikisource' => [ // T161593
-		'0' => 'Χρήστης %code%-0',
-		'1' => 'Χρήστης %code%-1',
-		'2' => 'Χρήστης %code%-2',
-		'3' => 'Χρήστης %code%-3',
-		'4' => 'Χρήστης %code%-4',
-		'5' => 'Χρήστης %code%-5',
-		'N' => 'Χρήστης %code%-M',
-	],
-	'enwiki' => [
-		'0' => false,
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => 'User %code%-5',
-		'N' => 'User %code%-N',
-	],
-	'enwiktionary' => [
-		'0' => false,
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => false,
-		'N' => 'User %code%-N',
-	],
-	'enwikiquote' => [
-		'0' => false,
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => 'User %code%-5',
-		'N' => 'User %code%-N',
-	],
-	'enwikisource' => [
-		'0' => false,
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => false,
-		'N' => 'User %code%-N',
-	],
-	'enwikinews' => [
-		'0' => false,
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => false,
-		'N' => 'User %code%-N',
-	],
-	'enwikiversity' => [
-		'0' => 'User %code%-0',
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => false,
-		'N' => 'User %code%-N',
-	],
-	'eowiktionary' => [ // T63116
-		'0' => 'Vikivortaristo %code%-0',
-		'1' => 'Vikivortaristo %code%-1',
-		'2' => 'Vikivortaristo %code%-2',
-		'3' => 'Vikivortaristo %code%-3',
-		'4' => 'Vikivortaristo %code%-4',
-		'5' => false,
-		'N' => 'Vikivortaristo %code%-D',
-	],
-	'eswiki' => [
-		'0' => false,
-		'1' => 'Wikipedia:Wikipedistas con nivel básico de %wikiname%',
-		'2' => 'Wikipedia:Wikipedistas con nivel intermedio de %wikiname%',
-		'3' => 'Wikipedia:Wikipedistas con nivel avanzado de %wikiname%',
-		'4' => 'Wikipedia:Wikipedistas con nivel experto de %wikiname%',
-		'5' => 'Wikipedia:Wikipedistas con nivel profesional de %wikiname%',
-		'N' => 'Wikipedia:Wikipedistas con nivel nativo de %wikiname%',
-	],
-	'eswikibooks' => [
-		'0' => false,
-		'1' => false,
-		'2' => false,
-		'3' => false,
-		'4' => false,
-		'5' => false,
-		'N' => false,
-	],
-	'eswikinews' => [
-		'0' => 'Usuario %code%-0',
-		'1' => 'Usuario %code%-1',
-		'2' => 'Usuario %code%-2',
-		'3' => 'Usuario %code%-3',
-		'4' => 'Usuario %code%-4',
-		'5' => false,
-		'N' => 'Usuario %code%-N',
-	],
-	'eswikivoyage' => [ // T54309
-		'0' => 'Usuario %code%-0',
-		'1' => 'Usuario %code%-1',
-		'2' => 'Usuario %code%-2',
-		'3' => 'Usuario %code%-3',
-		'4' => 'Usuario %code%-4',
-		'5' => 'Usuario %code%-5',
-		'N' => 'Usuario %code%-N',
-	],
-	'fiwiki' => [
-		'0' => false,
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => false,
-		'N' => 'User %code%-N',
-	],
-	'fowiki' => [
-		'0' => false,
-		'1' => 'Brúkari %code%-1',
-		'2' => 'Brúkari %code%-2',
-		'3' => 'Brúkari %code%-3',
-		'4' => 'Brúkari %code%-4',
-		'5' => 'Brúkari %code%-5',
-		'N' => 'Brúkari %code%-N',
-	], // T39401
-	'frwiki' => [
-		'0' => 'Utilisateur %code%-0',
-		'1' => 'Utilisateur %code%-1',
-		'2' => 'Utilisateur %code%-2',
-		'3' => 'Utilisateur %code%-3',
-		'4' => 'Utilisateur %code%-4',
-		'5' => false,
-		'N' => 'Utilisateur %code%-M',
-	],
-	'frwikibooks' => [ // T146213
-		'0' => 'Utilisateurs %code%-0',
-		'1' => 'Utilisateurs %code%-1',
-		'2' => 'Utilisateurs %code%-2',
-		'3' => 'Utilisateurs %code%-3',
-		'4' => 'Utilisateurs %code%-4',
-		'5' => 'Utilisateurs %code%-5',
-		'N' => 'Utilisateurs %code%-M',
-	],
-	'frwikiquote' => [ // T41472
-		'0' => 'Utilisateur %code%-0',
-		'1' => 'Utilisateur %code%-1',
-		'2' => 'Utilisateur %code%-2',
-		'3' => 'Utilisateur %code%-3',
-		'4' => 'Utilisateur %code%-4',
-		'5' => 'Utilisateur %code%-5',
-		'N' => 'Utilisateur %code%-M',
-	],
-	'frwikisource' => [
-		'0' => 'Utilisateurs %code%-0',
-		'1' => 'Utilisateurs %code%-1',
-		'2' => 'Utilisateurs %code%-2',
-		'3' => 'Utilisateurs %code%-3',
-		'4' => 'Utilisateurs %code%-4',
-		'5' => false,
-		'N' => 'Utilisateurs %code%-M',
-	],
-	'frwikiversity' => [ // T146213
-		'0' => 'Utilisateurs %code%-0',
-		'1' => 'Utilisateurs %code%-1',
-		'2' => 'Utilisateurs %code%-2',
-		'3' => 'Utilisateurs %code%-3',
-		'4' => 'Utilisateurs %code%-4',
-		'5' => false,
-		'N' => 'Utilisateurs %code%-M',
-	],
-	'frwiktionary' => [
-		'0' => 'Personnes ne parlant pas %wikiname% mais s’y intéressant',
-		'1' => 'Personnes ayant un niveau débutant en %wikiname%',
-		'2' => 'Personnes ayant un niveau intermédiaire en %wikiname%',
-		'3' => 'Personnes ayant un niveau avancé en %wikiname%',
-		'4' => 'Personnes ayant un niveau très avancé en %wikiname%',
-		'5' => false,
-		'N' => 'Personnes parlant nativement en %wikiname%',
-	],
-	'hewiki' => [
-		'0' => false,
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => 'User %code%-5',
-		'N' => 'User %code%-N',
-	],
-	'huwikiquote' => [ // T94842
-		'0' => 'User %code%-0',
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => 'User %code%-5',
-		'N' => 'User %code%-N',
-	],
-	'ilowiki' => [ // T39981
-		'0' => false,
-		'1' => 'Agar-aramat %code%-1',
-		'2' => 'Agar-aramat %code%-2',
-		'3' => 'Agar-aramat %code%-3',
-		'4' => 'Agar-aramat %code%-4',
-		'5' => 'Agar-aramat %code%-5',
-		'N' => 'Agar-aramat %code%-N',
-	],
-	'incubatorwiki' => [
-		'0' => 'Users:By language:%code%-0',
-		'1' => 'Users:By language:%code%-1',
-		'2' => 'Users:By language:%code%-2',
-		'3' => 'Users:By language:%code%-3',
-		'4' => 'Users:By language:%code%-4',
-		'5' => 'Users:By language:%code%-5',
-		'N' => 'Users:By language:%code%-N',
-	],
-	'iswiki' => [
-		'0' => 'Notandi %code%-0',
-		'1' => 'Notandi %code%-1',
-		'2' => 'Notandi %code%-2',
-		'3' => 'Notandi %code%-3',
-		'4' => 'Notandi %code%-4',
-		'5' => 'Notandi %code%-5',
-		'N' => 'Notandi %code%-M',
-	],
-	'itwiki' => [
-		'0' => 'Utenti %code%-0',
-		'1' => 'Utenti %code%-1',
-		'2' => 'Utenti %code%-2',
-		'3' => 'Utenti %code%-3',
-		'4' => 'Utenti %code%-4',
-		'5' => false,
-		'N' => 'Utenti %code%-M',
-	],
-	'itwiktionary' => [
-		'0' => 'Utenti %code%-0',
-		'1' => 'Utenti %code%-1',
-		'2' => 'Utenti %code%-2',
-		'3' => 'Utenti %code%-3',
-		'4' => 'Utenti %code%-4',
-		'5' => false,
-		'N' => 'Utenti %code%-M',
-	],
-	'itwikibooks' => [
-		'0' => 'Utenti %code%-0',
-		'1' => 'Utenti %code%-1',
-		'2' => 'Utenti %code%-2',
-		'3' => 'Utenti %code%-3',
-		'4' => 'Utenti %code%-4',
-		'5' => false,
-		'N' => 'Utenti %code%-M',
-	],
-	'itwikinews' => [
-		'0' => 'Utenti %code%-0',
-		'1' => 'Utenti %code%-1',
-		'2' => 'Utenti %code%-2',
-		'3' => 'Utenti %code%-3',
-		'4' => 'Utenti %code%-4',
-		'5' => false,
-		'N' => 'Utenti %code%-M',
-	],
-	'itwikiquote' => [
-		'0' => 'Utenti %code%-0',
-		'1' => 'Utenti %code%-1',
-		'2' => 'Utenti %code%-2',
-		'3' => 'Utenti %code%-3',
-		'4' => 'Utenti %code%-4',
-		'5' => false,
-		'N' => 'Utenti %code%-M',
-	],
-	'itwikisource' => [
-		'0' => 'Utenti %code%-0',
-		'1' => 'Utenti %code%-1',
-		'2' => 'Utenti %code%-2',
-		'3' => 'Utenti %code%-3',
-		'4' => 'Utenti %code%-4',
-		'5' => false,
-		'N' => 'Utenti %code%-M',
-	],
-	'itwikiversity' => [
-		'0' => 'Utenti %code%-0',
-		'1' => 'Utenti %code%-1',
-		'2' => 'Utenti %code%-2',
-		'3' => 'Utenti %code%-3',
-		'4' => 'Utenti %code%-4',
-		'5' => false,
-		'N' => 'Utenti %code%-M',
-	],
-	'itwikivoyage' => [
-		'0' => 'Utenti %code%-0',
-		'1' => 'Utenti %code%-1',
-		'2' => 'Utenti %code%-2',
-		'3' => 'Utenti %code%-3',
-		'4' => 'Utenti %code%-4',
-		'5' => false,
-		'N' => 'Utenti %code%-M',
-	],
-	'jawiki' => [
-		'0' => false,
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => false,
-		'N' => 'User %code%-N',
-	],
-	'lawiki' => [
-		'0' => false,
-		'1' => 'Usores %code%-1',
-		'2' => 'Usores %code%-2',
-		'3' => 'Usores %code%-3',
-		'4' => 'Usores %code%-4',
-		'5' => false,
-		'N' => 'Usores %code%-N',
-	],
-	'ladwiki' => [
-		'0' => false,
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => 'User %code%-5',
-		'N' => 'User %code%-N',
-	],
-	'minwiki' => [
-		'0' => 'Pengguna %code%-0',
-		'1' => 'Pengguna %code%-1',
-		'2' => 'Pengguna %code%-2',
-		'3' => 'Pengguna %code%-3',
-		'4' => 'Pengguna %code%-4',
-		'5' => 'Pengguna %code%-5',
-		'N' => 'Pengguna %code%-M',
-	],
-	'napwiki' => [
-		'0' => 'Utente %code%-0',
-		'1' => 'Utente %code%-1',
-		'2' => 'Utente %code%-2',
-		'3' => 'Utente %code%-3',
-		'4' => 'Utente %code%-4',
-		'5' => 'Utente %code%-5',
-		'N' => 'Utente %code%-N',
-	],
-	'ndswiki' => [ // T264990
-		'0' => false,
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => 'User %code%-5',
-		'N' => 'User %code%-M',
-	],
-	'nlwiki' => [
-		'0' => false,
-		'1' => 'Wikipedia:Gebruiker %code%-1',
-		'2' => 'Wikipedia:Gebruiker %code%-2',
-		'3' => 'Wikipedia:Gebruiker %code%-3',
-		'4' => 'Wikipedia:Gebruiker %code%-4',
-		'5' => false,
-		'N' => 'Wikipedia:Gebruiker %code%-M',
-	],
-	'nowiki' => [
-		'0' => 'Bruker %code%-0',
-		'1' => 'Bruker %code%-1',
-		'2' => 'Bruker %code%-2',
-		'3' => 'Bruker %code%-3',
-		'4' => 'Bruker %code%-4',
-		'5' => false,
-		'N' => 'Bruker %code%-N',
-	],
-	'officewiki' => [
-		'0' => 'User %code%-0',
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => 'User %code%-5',
-		'N' => 'User %code%-N',
-	],
-	'oswiki' => [
-		'0' => 'Архайджытæ %code%-0',
-		'1' => 'Архайджытæ %code%-1',
-		'2' => 'Архайджытæ %code%-2',
-		'3' => 'Архайджытæ %code%-3',
-		'4' => 'Архайджытæ %code%-4',
-		'5' => 'Архайджытæ %code%-5',
-		'N' => 'Архайджытæ %code%-N',
-	],
-	'outreachwiki' => [ // T89484
-		'0' => false,
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => 'User %code%-5',
-		'N' => 'User %code%-N',
-	],
-	'plwiki' => [
-		'0' => false,
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => false,
-		'N' => 'User %code%-N',
-	],
-	'plwikisource' => [ // T41225
-		'0' => false,
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => false,
-		'N' => 'User %code%-N',
-	],
-	'ptwiki' => [
-		'0' => false,
-		'1' => 'Usuário %code%-1',
-		'2' => 'Usuário %code%-2',
-		'3' => 'Usuário %code%-3',
-		'4' => false,
-		'5' => false,
-		'N' => 'Usuário %code%',
-	],
-	'ptwiktionary' => [
-		'0' => '!Usuário %code%-0',
-		'1' => '!Usuário %code%-1',
-		'2' => '!Usuário %code%-2',
-		'3' => '!Usuário %code%-3',
-		'4' => '!Usuário %code%-4',
-		'5' => '!Usuário %code%-5',
-		'N' => '!Usuário %code%-M',
-	],
-	'ruwiki' => [
-		'0' => 'User %code%-0',
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => 'User %code%-5',
-		'N' => 'User %code%-N',
-	],
-	'ruwikinews' => [ // T54679
-		'0' => 'User %code%-0',
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => 'User %code%-5',
-		'N' => 'User %code%-N',
-	],
-	'simplewiktionary' => [
-		'0' => 'User %code%-0',
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => 'User %code%-5',
-		'N' => 'User %code%-N',
-	],
-	'specieswiki' => [
-		'0' => false,
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => false,
-		'N' => 'User %code%-N',
-	],
-	'svwiki' => [
-		'0' => 'Användare %code%-0',
-		'1' => 'Användare %code%-1',
-		'2' => 'Användare %code%-2',
-		'3' => 'Användare %code%-3',
-		'4' => 'Användare %code%-4',
-		'5' => false,
-		'N' => 'Användare %code%-N',
-	],
-	'svwiktionary' => [ // T44288
-		'0' => 'Wiktionary:Användare %code%-0',
-		'1' => 'Wiktionary:Användare %code%-1',
-		'2' => 'Wiktionary:Användare %code%-2',
-		'3' => 'Wiktionary:Användare %code%-3',
-		'4' => 'Wiktionary:Användare %code%-4',
-		'5' => false,
-		'N' => 'Wiktionary:Användare %code%-N',
-	],
-	'thwiki' => [ // T49418
-		'0' => 'User %code%-0',
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => 'User %code%-5',
-		'N' => 'User %code%-N',
-	],
-	'thwikibooks' => [ // T308378
-		'0' => 'User %code%-0',
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => 'User %code%-5',
-		'N' => 'User %code%-N',
-	],
-	'thwikisource' => [ // T275283
-		'0' => 'User %code%-0',
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => 'User %code%-5',
-		'N' => 'User %code%-N',
-	],
-	'tlwiki' => [
-		'0' => false,
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => 'User %code%-5',
-		'N' => 'User %code%-N',
-	],
-	'udmwiki' => [ // T49749
-		'0' => 'User %code%-0',
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => 'User %code%-5',
-		'N' => 'User %code%-N',
-	],
-	'ukwiki' => [
-		'0' => 'User %code%-0',
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => false,
-		'N' => 'User %code%-N',
-	],
-	'ukwikinews' => [ // T48489
-		'0' => 'User %code%-0',
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => 'User %code%-5',
-		'N' => 'User %code%-N',
-	],
-	'ukwikisource' => [ // T53608
-		'0' => 'Користувачі %code%-0',
-		'1' => 'Користувачі %code%-1',
-		'2' => 'Користувачі %code%-2',
-		'3' => 'Користувачі %code%-3',
-		'4' => 'Користувачі %code%-4',
-		'5' => 'Користувачі %code%-5',
-		'N' => 'Користувачі %code%-N',
-	],
-	'uzwiki' => [ // T131924
-		'0' => 'User %code%-0',
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => 'User %code%-5',
-		'N' => 'User %code%-N',
-	],
-	'vowiktionary' => [
-		'0' => 'Geban %code%-0',
-		'1' => 'Geban %code%-1',
-		'2' => 'Geban %code%-2',
-		'3' => 'Geban %code%-3',
-		'4' => 'Geban %code%-4',
-		'5' => 'Geban %code%-5',
-		'N' => 'Geban %code%-N',
-	],
-	'wikidata' => [ // T54145, T312920
-		'0' => 'User %code%-0',
-		'1' => 'User %code%-1',
-		'2' => 'User %code%-2',
-		'3' => 'User %code%-3',
-		'4' => 'User %code%-4',
-		'5' => 'User %code%-5',
-		'N' => 'User %code%-N',
-	],
-	'zhwiktionary' => [
-		'0' => false,
-		'1' => '%wikiname%(初级)使用者',
-		'2' => '%wikiname%(中级)使用者',
-		'3' => '%wikiname%(高级)使用者',
-		'4' => '%wikiname%(近母语)使用者',
-		'5' => false,
-		'N' => '%wikiname%(母语)使用者',
-	],
-	'zhwiki' => [
-		'0' => '%code%-0_使用者',
-		'1' => '%code%-1_使用者',
-		'2' => '%code%-2_使用者',
-		'3' => '%code%-3_使用者',
-		'4' => '%code%-4_使用者',
-		'5' => false,
-		'N' => '%code%_母语使用者',
-	],
-	'zhwikibooks' => [
-		'0' => '%code%-0_使用者',
-		'1' => '%code%-1_使用者',
-		'2' => '%code%-2_使用者',
-		'3' => '%code%-3_使用者',
-		'4' => '%code%-4_使用者',
-		'5' => false,
-		'N' => '%code%_母语使用者',
-	],
-	'zhwikinews' => [
-		'0' => '%code%-0_使用者',
-		'1' => '%code%-1_使用者',
-		'2' => '%code%-2_使用者',
-		'3' => '%code%-3_使用者',
-		'4' => '%code%-4_使用者',
-		'5' => false,
-		'N' => '%code%_母语使用者',
-	],
-	'zhwikiquote' => [
-		'0' => '%code%-0_使用者',
-		'1' => '%code%-1_使用者',
-		'2' => '%code%-2_使用者',
-		'3' => '%code%-3_使用者',
-		'4' => '%code%-4_使用者',
-		'5' => false,
-		'N' => '%code%_母语使用者',
-	],
-	'zhwikisource' => [
-		'0' => '%code%-0_使用者',
-		'1' => '%code%-1_使用者',
-		'2' => '%code%-2_使用者',
-		'3' => '%code%-3_使用者',
-		'4' => '%code%-4_使用者',
-		'5' => false,
-		'N' => '%code%_母语使用者',
-	],
-	'zhwikivoyage' => [ // T63819
-		'0' => '%code%-0_使用者',
-		'1' => '%code%-1_使用者',
-		'2' => '%code%-2_使用者',
-		'3' => '%code%-3_使用者',
-		'4' => '%code%-4_使用者',
-		'5' => false,
-		'N' => '%code%_母语使用者',
-	],
-
-],
-'wmgBabelMainCategory' => [
-	'default' => false,
-	'abwiki' => 'User %code%',
-	'acewiki' => 'User %code%',
-	'afwiki' => 'Gebruiker %code%',
-	'akwiki' => 'User %code%',
-	'alswiki' => 'User %code%',
-	'amwiki' => 'User %code%',
-	'angwiki' => 'Brūcend %code%',
-	'anwiki' => 'Usuario %code%',
-	'arcwiki' => 'User %code%',
-	'arwiki' => 'مستخدم %code%',
-	'arwikinews' => 'مستخدم %code%',
-	'arwikiquote' => 'مستخدم %code%',
-	'arwikisource' => 'مستخدم %code%',
-	'arwikiversity' => 'مستخدم %code%',
-	'arzwiki' => 'User %code%',
-	'aswiki' => 'User %code%',
-	'avwiki' => 'User %code%',
-	'aywiki' => 'Aru:%code%',
-	'azwiki' => 'İstifadəçi %code%',
-	'azwikibooks' => 'İstifadəçi %code%',
-	'azwikiquote' => 'İstifadəçi %code%',
-	'azwikisource' => 'İstifadəçi %code%',
-	'barwiki' => 'User %code%',
-	'bat_smgwiki' => 'User %code%',
-	'bawiki' => 'User %code%',
-	'be_x_oldwiki' => 'Вікіпэдыйцы, якія ведаюць мову %code%',
-	'betawikiversity' => 'User %code%', // T66168
-	'bewiki' => 'User %code%',
-	'bhwiki' => 'User %code%',
-	'biwiki' => 'User %code%',
-	'bjnwiki' => 'User %code%',
-	'bmwiki' => 'User %code%',
-	'bowiki' => 'User %code%',
-	'bpywiki' => 'আতাকুরা %code%',
-	'brwiki' => 'Implijerien %code%',
-	'brwikisource' => 'Implijerien %code%',
-	'bswiki' => 'Korisnik %code%',
-	'bswikinews' => 'User %code%',
-	'bugwiki' => 'Pengguna %code%',
-	'bxrwiki' => 'User %code%',
-	'cawiki' => 'Usuaris %code%',
-	'cawikinews' => 'Usuaris %code%',
-	'cawiktionary' => 'Usuaris %code%', // T49287
-	'cbk_zamwiki' => 'User %code%',
-	'cdowiki' => 'User %code%',
-	'cebwiki' => 'User %code%',
-	'cewiki' => 'User %code%',
-	'checkuserwiki' => 'User %code%',
-	'chrwiki' => 'User %code%',
-	'chwiki' => 'User %code%',
-	'chywiki' => 'User %code%',
-	'ckbwiki' => 'User %code%',
-	'commonswiki' => 'User %code%',
-	'testcommonswiki' => 'User %code%',
-	'cowiki' => 'Utilizatore %code%',
-	'crhwiki' => 'User %code%',
-	'crwiki' => 'User %code%',
-	'csbwiki' => 'Brëkòwnik %code%',
-	'cswiki' => 'User %code%',
-	'cswikiversity' => 'Uživatel %code%', // T15530
-	'cuwiki' => 'User %code%',
-	'cvwiki' => 'User %code%',
-	'cywiki' => 'Defnyddiwr %code%',
-	'dawiki' => 'Brugere %code%',
-	'dawikibooks' => 'Brugere %code%',
-	'dawikiquote' => 'Brugere %code%',
-	'dawikisource' => 'Brugere %code%',
-	'dewiki' => 'User %code%',
-	'dewikibooks' => 'User %code%',
-	'dewikinews' => 'User %code%',
-	'dewikiquote' => 'User %code%',
-	'dewikisource' => 'User %code%',
-	'dewikiversity' => 'User %code%',
-	'dinwiki' => 'User %code%',
-	'diqwiki' => 'User %code%',
-	'dsbwiki' => 'Wužywaŕ %code%',
-	'dvwiki' => 'User %code%',
-	'dzwiki' => 'User %code%',
-	'eewiki' => 'User %code%',
-	'elwiki' => 'Χρήστης %code%',
-	'elwikibooks' => 'Χρήστης %code%',
-	'elwikiquote' => 'Χρήστης %code%',
-	'elwikisource' => 'Χρήστης %code%', // T161593
-	'elwikiversity' => 'User %code%',
-	'emlwiki' => 'User %code%',
-	'enwiki' => 'User %code%',
-	'enwikibooks' => 'User %code%',
-	'enwikinews' => 'User %code%',
-	'enwikiquote' => 'User %code%',
-	'enwikisource' => 'User %code%',
-	'enwikiversity' => 'User %code%',
-	'enwikivoyage' => 'User %code%',
-	'enwiktionary' => 'User %code%',
-	'eowiki' => 'Vikipediisto %code%',
-	'eowikibooks' => 'Uzanto %code%',
-	'eowikinews' => 'Uzanto %code%',
-	'eowikiquote' => 'Vikipediisto %code%',
-	'eowikisource' => 'Uzanto %code%',
-	'eowiktionary' => 'Vikivortaristo %code%', // T63116
-	'eswiki' => 'Wikipedia:Wikipedistas con conocimientos de %wikiname%',
-	'eswikibooks' => 'Wikibooks:Babel %code%',
-	'eswikinews' => 'Usuario %code%',
-	'eswikisource' => 'Usuario %code%',
-	'eswikiversity' => 'Usuario %code%',
-	'eswikivoyage' => 'Wikiviajes:Usuarios %code%',
-	'etwiki' => 'User %code%',
-	'fawiki' => 'User %code%',
-	'fawikinews' => 'User %code%',
-	'fawikiquote' => 'User %code%',
-	'ffwiki' => 'User %code%',
-	'fiu_vrowiki' => 'User %code%',
-	'fiwiki' => 'User %code%',
-	'fiwikibooks' => 'User %code%',
-	'fiwikinews' => 'User %code%',
-	'fiwikisource' => 'User %code%',
-	'fiwikiversity' => 'User %code%',
-	'fjwiki' => 'User %code%',
-	'fowiki' => 'Brúkari %code%', // T39401
-	'frpwiki' => 'Utilisator %code%',
-	'frrwiki' => 'User %code%',
-	'frwiki' => 'Utilisateur %code%',
-	'frwikibooks' => 'Utilisateurs %code%', // T146213
-	'frwikinews' => 'Utilisateur %code%',
-	'frwikiquote' => 'Utilisateur %code%', // T41472
-	'frwikisource' => 'Utilisateurs %code%',
-	'frwikiversity' => 'Utilisateurs %code%', // T146213
-	'frwiktionary' => 'Personnes ayant un intérêt ou parlant %wikiname%', // T274137
-	'furwiki' => 'Utent %code%',
-	'fywiki' => 'Meidogger/Taal %code%',
-	'gawiki' => 'Úsáideoir %code%',
-	'gdwiki' => 'User %code%',
-	'glwiki' => 'Usuario %code%',
-	'glwikiquote' => 'Usuario %code%',
-	'glwikisource' => 'Usuario %code%',
-	'gnwiki' => 'User %code%',
-	'gotwiki' => 'Niutands %code%',
-	'guwiki' => 'User %code%',
-	'gvwiki' => 'Ymmydeyr %code%',
-	'hakwiki' => 'User %code%',
-	'hawiki' => 'User %code%',
-	'hawwiki' => 'User %code%',
-	'hewiki' => 'User %code%',
-	'hewikiquote' => 'משתמשי כישורי שפה %code%',
-	'hewikisource' => 'משתמשי כישורי שפה %code%',
-	'hifwiki' => 'User %code%',
-	'hiwiki' => 'सदस्य %code%',
-	'hrwiki' => 'Suradnik %code%',
-	'hsbwiki' => 'User %code%',
-	'htwiki' => 'User %code%',
-	'huwiki' => 'User %code%',
-	'huwikibooks' => 'User %code%',
-	'huwikinews' => 'User %code%',
-	'huwikiquote' => 'User %code%', // T94842
-	'huwikisource' => 'User %code%',
-	'hywiki' => 'User %code%',
-	'hywikibooks' => 'User %code%',
-	'hywikiquote' => 'User %code%',
-	'iawiki' => 'Usator %code%',
-	'idwiki' => 'User %code%',
-	'idwikibooks' => 'User %code%',
-	'idwikiquote' => 'User %code%',
-	'idwikisource' => 'User %code%',
-	'iewiki' => 'User %code%',
-	'igwiki' => 'User %code%',
-	'ikwiki' => 'User %code%',
-	'ilowiki' => 'Agar-aramat %code%', // T39981
-	'incubatorwiki' => 'Users:By language:%code%',
-	'iowiki' => 'User %code%',
-	'iswiki' => 'Notandi %code%',
-	'itwiki' => 'Utenti %code%',
-	'itwikibooks' => 'Utenti %code%',
-	'itwikinews' => 'Utenti %code%',
-	'itwikiquote' => 'Utenti %code%',
-	'itwikisource' => 'Utenti %code%',
-	'itwikiversity' => 'Utenti %code%',
-	'itwikivoyage' => 'Utenti %code%',
-	'itwiktionary' => 'Utenti %code%',
-	'iuwiki' => 'User %code%',
-	'jawiki' => 'User %code%',
-	'jawikibooks' => 'User %code%',
-	'jawikinews' => 'User %code%',
-	'jawikiquote' => 'User %code%',
-	'jawikisource' => 'User %code%',
-	'jawikiversity' => 'User %code%',
-	'jbowiki' => 'pilno %code%',
-	'jvwiki' => 'Naraguna %code%',
-	'kabwiki' => 'User %code%',
-	'kawiki' => 'მომხმარებელი %code%',
-	'kawikibooks' => 'მომხმარებელი %code%',
-	'kawikiquote' => 'მომხმარებელი %code%',
-	'kbdwiki' => 'User %code%',
-	'kgwiki' => 'User %code%',
-	'kiwiki' => 'User %code%',
-	'kkwiki' => 'User %code%',
-	'kkwikibooks' => 'User %code%',
-	'klwiki' => 'User %code%',
-	'kmwiki' => 'User %code%',
-	'knwiki' => 'ಸದಸ್ಯರು %code%',
-	'kowiki' => '사용자 %code%',
-	'kowikibooks' => 'User %code%',
-	'kowikinews' => '사용자 %code%',
-	'kowikiquote' => '사용자 %code%',
-	'kowikisource' => '사용자 %code%',
-	'krcwiki' => 'User %code%',
-	'kuwikiquote' => 'Bikarhêner %code%',
-	'kvwiki' => 'User %code%',
-	'kwwiki' => 'User %code%',
-	'kywiki' => 'User %code%',
-	'ladwiki' => 'User %code%',
-	'lawiki' => 'Usores %code%',
-	'lawikiquote' => 'Usor %code%',
-	'lawikisource' => 'Usores %code%',
-	'lbewiki' => 'User %code%',
-	'lbwiki' => 'Benotzer %code%',
-	'lgwiki' => 'User %code%',
-	'lijwiki' => 'User %code%',
-	'liwiki' => 'Gebroeker %code%',
-	'liwikiquote' => 'Gebroeker %code%',
-	'liwikisource' => 'Gebroeker %code%',
-	'lmowiki' => 'User %code%',
-	'lnwiki' => 'User %code%',
-	'lowiki' => 'User %code%',
-	'ltgwiki' => 'User %code%',
-	'ltwiki' => 'User %code%',
-	'ltwikiquote' => 'User %code%',
-	'lvwiki' => 'User %code%',
-	'map_bmswiki' => 'User %code%',
-	'metawiki' => 'User %code%',
-	'mdfwiki' => 'User %code%',
-	'mgwiki' => 'User %code%',
-	'mhrwiki' => 'Пайдаланыше %code%',
-	'minwiki' => 'Pengguna %code%',
-	'miwiki' => 'User %code%',
-	'mkwiki' => 'Корисник %code%',
-	'mkwikisource' => 'Корисник %code%',
-	'mlwiki' => 'ഭാഷാജ്ഞാനം %code%',
-	'mnwiki' => 'User %code%',
-	'mrjwiki' => 'User %code%',
-	'mrwiki' => 'User %code%',
-	'mswiki' => 'Pengguna %code%',
-	'mtwiki' => 'Utenti %code%',
-	'mwlwiki' => 'Outelizador %code%',
-	'myvwiki' => 'User %code%',
-	'mywiki' => 'User %code%',
-	'mznwiki' => 'User %code%',
-	'nahwiki' => 'Tlatequitiltilīlli %code%',
-	'nawiki' => 'User %code%',
-	'nds_nlwiki' => 'Gebruker %code%',
-	'ndswiki' => 'User %code%',
-	'newiki' => 'User %code%',
-	'newwiki' => 'User %code%',
-	'nlwiki' => 'Wikipedia:Gebruiker %code%',
-	'nnwiki' => 'Brukar %code%',
-	'novwiki' => 'Usere %code%',
-	'nowiki' => 'Bruker %code%',
-	'nowikibooks' => 'Bruker %code%',
-	'nowikinews' => 'Bruker %code%',
-	'nowikiquote' => 'Bruker %code%',
-	'nowikisource' => 'Bruker %code%',
-	'nrmwiki' => 'Féchouneus %code%',
-	'nvwiki' => 'Choyoołʼįįhí %code%',
-	'nywiki' => 'User %code%',
-	'ocwiki' => 'Utilizaire %code%',
-	'officewiki' => 'User %code%',
-	'omwiki' => 'User %code%',
-	'orwiki' => 'User %code%',
-	'oswiki' => 'Архайджытæ %code%',
-	'otrs_wikiwiki' => 'User %code%',
-	'outreachwiki' => 'User %code%', // T89484
-	'pagwiki' => 'User %code%',
-	'pamwiki' => 'User %code%',
-	'papwiki' => 'User %code%',
-	'pawiki' => 'User %code%',
-	'pcdwiki' => 'Uzeu %code%',
-	'pdcwiki' => 'Benutzer %code%',
-	'pflwiki' => 'User %code%',
-	'pihwiki' => 'User %code%',
-	'piwiki' => 'User %code%',
-	'plwiki' => 'User %code%',
-	'plwikibooks' => 'User %code%',
-	'plwikinews' => 'User %code%',
-	'plwikiquote' => 'User %code%',
-	'plwikisource' => 'User %code%', // T41225
-	'pnbwiki' => 'User %code%',
-	'pntwiki' => 'User %code%',
-	'pswiki' => 'User %code%',
-	'ptwiki' => 'Usuários %code%',
-	'ptwikibooks' => 'Usuário %code%',
-	'ptwikinews' => 'Usuários %code%',
-	'ptwikiquote' => 'Usuário %code%',
-	'ptwikisource' => 'Utilizador %code%',
-	'ptwikiversity' => 'Usuários %code% ',
-	'quwiki' => 'Ruwaq:%code%',
-	'rmwiki' => 'Utilisaders %code%',
-	'rmywiki' => 'Jeno %code%',
-	'rnwiki' => 'User %code%',
-	'roa_rupwiki' => 'User %code%',
-	'roa_tarawiki' => 'Utinde %code%',
-	'rowiki' => 'Utilizator %code%',
-	'rowikibooks' => 'Utilizator %code%',
-	'rowikinews' => 'Utilizator %code%',
-	'rowikiquote' => 'Utilizator %code%',
-	'ruewiki' => 'User %code%',
-	'ruwiki' => 'User %code%',
-	'ruwikibooks' => 'User %code%',
-	'ruwikinews' => 'User %code%', // T54679
-	'ruwikiquote' => 'User %code%',
-	'ruwikisource' => 'User %code%',
-	'rwwiki' => 'User %code%',
-	'sahwiki' => 'User %code%',
-	'scnwiki' => 'User %code%',
-	'scowiki' => 'Uiser %code%',
-	'scwiki' => 'Usuariu %code%',
-	'sdwiki' => 'User %code%',
-	'sewiki' => 'Geavaheaddji %code%',
-	'sgwiki' => 'User %code%',
-	'shwiki' => 'User %code%',
-	'simplewiki' => 'User %code%',
-	'simplewiktionary' => 'User %code%',
-	'siwiki' => 'User %code%',
-	'siwikibooks' => 'User %code%',
-	'skwiki' => 'User %code%',
-	'slwiki' => 'Uporabnik %code%',
-	'smwiki' => 'User %code%',
-	'snwiki' => 'User %code%',
-	'sowiki' => 'User %code%',
-	'specieswiki' => 'User %code%',
-	'sqwiki' => 'User %code%',
-	'sqwikinews' => 'User %code%',
-	'srwiki' => 'Корисник %code%',
-	'srwikibooks' => 'Корисник %code%',
-	'srwikinews' => 'Корисник %code%',
-	'srwikisource' => 'Корисник %code%',
-	'srwikiquote' => 'Корисник %code%',
-	'srwiktionary' => 'Корисник %code%',
-	'sswiki' => 'Bantfu %code%',
-	'stqwiki' => 'Benutser/Sproake %code%',
-	'suwiki' => 'User %code%',
-	'svwiki' => 'Användare %code%',
-	'svwikibooks' => 'Användare %code%',
-	'svwikinews' => 'Användare %code%',
-	'svwikiquote' => 'Användare %code%',
-	'svwikivoyage' => 'Användare %code%',
-	'svwiktionary' => 'Wiktionary:Användare %code%', // T44288
-	'swwiki' => 'User %code%',
-	'szlwiki' => 'User %code%',
-	'tawiki' => 'பயனர் %code%',
-	'tewiki' => 'User %code%',
-	'tgwiki' => 'User %code%',
-	'thwiki' => 'User %code%', // T49418
-	'thwikibooks' => 'User %code%', // T308378
-	'thwikisource' => 'User %code%', // T275283
-	'tiwiki' => 'User %code%',
-	'tkwiki' => 'User %code%',
-	'tlwiki' => 'User %code%',
-	'tnwiki' => 'User %code%',
-	'towiki' => 'ʻetita %code%',
-	'tpiwiki' => 'Yusa %code%',
-	'trwiki' => 'Kullanıcı %code%',
-	'trwikibooks' => 'Kullanıcı %code%',
-	'trwikinews' => 'Kullanıcı %code%',
-	'trwikiquote' => 'Kullanıcı %code%',
-	'tswiki' => 'User %code%',
-	'ttwiki' => 'User %code%',
-	'tumwiki' => 'User %code%',
-	'twwiki' => 'User %code%',
-	'tywiki' => 'User %code%',
-	'udmwiki' => 'User %code%', // T49749
-	'ugwiki' => 'User %code%',
-	'ukwiki' => 'User %code%',
-	'ukwikibooks' => 'User %code%',
-	'ukwikinews' => 'User %code%', // T48489
-	'ukwikisource' => 'Користувачі %code%', // T53608
-	'urwiki' => 'User %code%',
-	'uzwiki' => 'User %code%',
-	'vecwiki' => 'Utenti %code%',
-	'vewiki' => 'User %code%',
-	'viwiki' => 'Thành viên %code%',
-	'viwikiquote' => 'User %code%',
-	'viwikivoyage' => 'User %code%',
-	'vlswiki' => 'Gebruker %code%',
-	'vowiki' => 'Geban %code%',
-	'warwiki' => 'User %code%',
-	'wawiki' => 'Uzeus %code%',
-	'wikidata' => 'User %code%',
-	'wowiki' => 'Jëfandikukat %code%',
-	'wuuwiki' => 'User %code%',
-	'xalwiki' => 'User %code%',
-	'xhwiki' => 'User %code%',
-	'xmfwiki' => 'მახვარებუ %code%',
-	'yiwiki' => 'באַניצער %code%',
-	'yowiki' => 'Oníṣe %code%',
-	'zawiki' => 'User %code%',
-	'zeawiki' => 'Gebruker %code%',
-	'zh_classicalwiki' => 'User %code%',
-	'zh_min_nanwiki' => 'User %code%',
-	'zh_yuewiki' => 'User %code%',
-	'zhwiki' => '%code%_使用者',
-	'zhwikibooks' => '%code%_使用者',
-	'zhwikinews' => '%code%_使用者',
-	'zhwikiquote' => '%code%_使用者',
-	'zhwikisource' => '%code%_使用者',
-	'zhwikivoyage' => '%code%_使用者', // T63819
-	'zhwiktionary' => '%wikiname%使用者',
-	'zuwiki' => 'User %code% ',
-],
-'wmgBabelDefaultLevel' => [
-	'default' => 'N',
-],
-'wmgBabelUseUserLanguage' => [
-	'default' => false,
-	'commonswiki' => true,
-	'testcommonswiki' => true,
-	'incubatorwiki' => true,
-	'wikidata' => true,
 ],
 'wmgUseApiFeatureUsage' => [
 	'default' => true,
@@ -19490,31 +18452,8 @@ return [
 	'commonswiki' => true,
 ],
 
-// Before updating wmgFlowNamespaces, you must run populateContentModel.php (from core) on
-// the affected namespaces.  See
-// https://www.mediawiki.org/wiki/Extension:Flow#Enabling_or_disabling_Flow
 'wmgFlowNamespaces' => [
 	'default' => [],
-	'mediawikiwiki' => [
-		NS_TALK,
-		NS_USER_TALK,
-		NS_PROJECT_TALK,
-		NS_FILE_TALK,
-		NS_MEDIAWIKI_TALK,
-		NS_TEMPLATE_TALK,
-		NS_HELP_TALK,
-		NS_CATEGORY_TALK,
-		101, /* Manual talk */
-		103, /* Extension talk */
-		105, /* API talk */
-		107, /* Skin talk */
-		487, /* Skin talk */
-		829, /* Module talk */
-		1199, /* Translations talk */
-		2301, /* Gadget talk */
-		2303, /* Gadget definition talk */
-		5501, /* Newsletter talk from Newsletter extension */
-	],
 	'officewiki' => [
 		NS_TALK,
 		NS_USER_TALK,
@@ -19582,19 +18521,6 @@ return [
 		829, // Module_talk from Scribunto
 		2301, // Gadget_talk from Gadgets
 		2303, // Gadget_definition_talk from Gadgets
-	],
-	'techconductwiki' => [
-		NS_TALK,
-		NS_USER_TALK,
-		NS_PROJECT_TALK,
-		NS_FILE_TALK,
-		NS_MEDIAWIKI_TALK,
-		NS_TEMPLATE_TALK,
-		NS_HELP_TALK,
-		NS_CATEGORY_TALK,
-		829, /* Module talk */
-		2301, /* Gadget talk */
-		2303, /* Gadget definition talk */
 	],
 ],
 
@@ -19742,14 +18668,11 @@ return [
 ],
 
 'wgDiscussionTools_visualenhancements_reply' => [
-	'default' => 'default', // T320683
-	'dewiki' => 'unavailable', // T320683
-	'enwiki' => 'unavailable', // T320683
-	'frwiki' => 'unavailable', // T320683
+	'default' => 'default', // T320683, T323537, T321955
 ],
 
 'wgDiscussionTools_visualenhancements_pageframe' => [
-	'default' => 'unavailable',
+	'default' => 'default', // T323727, T327456
 	'mediawikiwiki' => 'available',
 ],
 
@@ -19758,13 +18681,6 @@ return [
 	'group0' => true, // T315353
 	'group1' => true, // T315353
 	'testwiki' => true,
-],
-
-'wgDiscussionToolsLegacyHeadingMarkup' => [
-	'default' => true, // T314714
-	'group0' => false, // T314714
-	'group1' => false, // T314714
-	'plwiki' => false, // T314714
 ],
 
 'wgDiscussionToolsShowFeedbackLinks' => [
@@ -19849,6 +18765,7 @@ return [
 'wmgContentTranslationUnmodifiedMTThresholdForPublish' => [
 	'default' => 99,
 	'aswiki' => 70,
+	'cswiki' => 79, // T324721
 	'fywiki' => 90, // T323415
 	'hywiki' => 80, // T313208
 	'idwiki' => 70,
@@ -20088,6 +19005,7 @@ return [
 		'WikiGapFinder' => true, // T246335
 		'mskf-the-solution' => true, // T253305
 		'Wikidocumentaries' => true, // T269875
+		'wiki-loves-living-heritage' => true, // T327587
 		// SectionTranslation entry points: T298029
 		'mflanguagesearcher' => true,
 		'mfrecenttranslation' => true,
@@ -20109,6 +19027,7 @@ return [
 		'WikiGapFinder' => true,
 		'mskf-the-solution' => true,
 		'Wikidocumentaries' => true,
+		'wiki-loves-living-heritage' => true, // T327587
 		// SectionTranslation entry points: T298029
 		'mflanguagesearcher' => true,
 		'mfrecenttranslation' => true,
@@ -20130,6 +19049,7 @@ return [
 		'WikiGapFinder' => true,
 		'mskf-the-solution' => true,
 		'Wikidocumentaries' => true,
+		'wiki-loves-living-heritage' => true, // T327587
 		// SectionTranslation entry points: T298029
 		'mflanguagesearcher' => true,
 		'mfrecenttranslation' => true,
@@ -20152,6 +19072,7 @@ return [
 		'WikiGapFinder' => true,
 		'mskf-the-solution' => true,
 		'Wikidocumentaries' => true,
+		'wiki-loves-living-heritage' => true, // T327587
 		// SectionTranslation entry points: T298029
 		'mflanguagesearcher' => true,
 		'mfrecenttranslation' => true,
@@ -20173,6 +19094,7 @@ return [
 		'WikiGapFinder' => true,
 		'mskf-the-solution' => true,
 		'Wikidocumentaries' => true,
+		'wiki-loves-living-heritage' => true, // T327587
 		// SectionTranslation entry points: T298029
 		'mflanguagesearcher' => true,
 		'mfrecenttranslation' => true,
@@ -20195,6 +19117,7 @@ return [
 		'WikiGapFinder' => true,
 		'mskf-the-solution' => true,
 		'Wikidocumentaries' => true,
+		'wiki-loves-living-heritage' => true, // T327587
 		// SectionTranslation entry points: T298029
 		'mflanguagesearcher' => true,
 		'mfrecenttranslation' => true,
@@ -20325,6 +19248,11 @@ return [
 	'default' => false,
 	'testwiki' => true, // T294642
 	'wikipedia' => false,
+],
+
+'wgContentTranslationDefaultParsoidClient' => [
+	'default' => 'vrs',
+	'testwiki' => 'direct', // T323667
 ],
 
 'wmgUseExternalGuidance' => [
@@ -20573,17 +19501,6 @@ return [
 				],
 			]
 		],
-		'eventlogging_ElementTiming' => [
-			'schema_title' => 'analytics/legacy/elementtiming',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
 		'eventlogging_EchoInteraction' => [
 			'schema_title' => 'analytics/legacy/echointeraction',
 			'topic_prefixes' => null,
@@ -20619,17 +19536,6 @@ return [
 		],
 		'eventlogging_FeaturePolicyViolation' => [
 			'schema_title' => 'analytics/legacy/featurepolicyviolation',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
-		'eventlogging_FirstInputTiming' => [
-			'schema_title' => 'analytics/legacy/firstinputtiming',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
 			'consumers' => [
@@ -20707,17 +19613,6 @@ return [
 		],
 		'eventlogging_LandingPageImpression' => [
 			'schema_title' => 'analytics/legacy/landingpageimpression',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
-		'eventlogging_LayoutShift' => [
-			'schema_title' => 'analytics/legacy/layoutshift',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
 			'consumers' => [
@@ -20839,28 +19734,6 @@ return [
 		],
 		'eventlogging_ReferencePreviewsPopups' => [
 			'schema_title' => 'analytics/legacy/referencepreviewspopups',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
-		'eventlogging_ResourceTiming' => [
-			'schema_title' => 'analytics/legacy/resourcetiming',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
-		'eventlogging_RUMSpeedIndex' => [
-			'schema_title' => 'analytics/legacy/rumspeedindex',
 			'topic_prefixes' => null,
 			'destination_event_service' => 'eventgate-analytics-external',
 			'consumers' => [
@@ -21173,6 +20046,30 @@ return [
 			'schema_title' => 'analytics/mobile_apps/ios_talk_page_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		'ios.setting_action' => [
+			'schema_title' => 'analytics/mobile_apps/ios_setting_action',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'ios.sessions' => [
+			'schema_title' => 'analytics/mobile_apps/ios_sessions',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'ios.login_action' => [
+			'schema_title' => 'analytics/mobile_apps/ios_login_action',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'ios.search' => [
+			'schema_title' => 'analytics/mobile_apps/ios_search',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'ios.user_history' => [
+			'schema_title' => 'analytics/mobile_apps/ios_user_history',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'ios.reading_lists' => [
+			'schema_title' => 'analytics/mobile_apps/ios_reading_lists',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		'android.user_contribution_screen' => [
 			'schema_title' => 'analytics/mobile_apps/android_user_contribution_screen',
 			'destination_event_service' => 'eventgate-analytics-external',
@@ -21199,6 +20096,18 @@ return [
 		],
 		'android.edit_history_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/android_edit_history_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'android.app_session' => [
+			'schema_title' => 'analytics/mobile_apps/android_app_session',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'android.create_account_interaction' => [
+			'schema_title' => 'analytics/mobile_apps/android_create_account_interaction',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+		'android.install_referrer_event' => [
+			'schema_title' => 'analytics/mobile_apps/android_install_referrer_event',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		'android.breadcrumbs_event' => [
@@ -21482,12 +20391,11 @@ return [
 			'canary_events_enabled' => false,
 		],
 
-		// Declare release candiate 0 of
+		// Declare release candiate 1 of
 		// mediawiki.page_change stream.
 		// https://phabricator.wikimedia.org/T311129
-		'rc0.mediawiki.page_change' => [
-			// Schema is still in a 'development' namespace.
-			'schema_title' => 'development/mediawiki/page/change',
+		'rc1.mediawiki.page_change' => [
+			'schema_title' => 'mediawiki/page/change',
 			# When producing this stream to kafka, use a message key
 			# like { wiki_id: X, page_id: Y }.  X and Y will be
 			# obtained from the message value at wiki_id and page.page_id.
@@ -21496,31 +20404,22 @@ return [
 				'wiki_id' => 'wiki_id',
 				'page_id' => 'page.page_id',
 			],
-			// For release candidate,
-			// use eventgate-analytics-external so we get dynamic config and
-			// only produce to kafka jumbo.
-			'destination_event_service' => 'eventgate-analytics-external',
-			// Disable this stream by default.
-			// As we test it and roll it out, it will be enabled
-			// selectively in per wiki config overrides below.
-			'producers' => [
-				'mediawiki_eventbus' => [
-					'enabled' => false,
-				]
-			],
+			'destination_event_service' => 'eventgate-main',
 		],
-		// Declare release candiate 0 of
+		// Declare release candiate 1 of
 		// mediawiki.page_content_change stream.
 		// This stream uses the mediawiki/page/change schema
 		// but includes content bodies in content slots.
 		// It is produced by a streaming enrichment pipeline,
 		// (not via MediaWiki EventBus).
 		// https://phabricator.wikimedia.org/T307959
-		'rc0.mediawiki.page_content_change' => [
-			'schema_title' => 'development/mediawiki/page/change',
+		'rc1.mediawiki.page_content_change' => [
+			'schema_title' => 'mediawiki/page/change',
 			// Even though this stream will not be produced via EventGate,
 			// we need to set an event service, so that the ProduceCanaryEvents
 			// monitoring job can produce events through EventGate.
+			// TODO: When we move the enrichment job to producing to kafka main,
+			// we should set this to eventgate-main too.
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 
@@ -21622,6 +20521,69 @@ return [
 			// This stream is a subset of the revision-score one,
 			// and the events will be emitted by
 			// the Lift Wing platform. More info in T301878.
+			// Emit canary events.
+			'canary_events_enabled' => true,
+		],
+		'mediawiki.revision_score_goodfaith' => [
+			'schema_title' => 'mediawiki/revision/score',
+			'destination_event_service' => 'eventgate-main',
+			// This stream is a subset of the revision-score one,
+			// and the events will be emitted by
+			// the Lift Wing platform. More info in T317768.
+			// Emit canary events.
+			'canary_events_enabled' => true,
+		],
+		'mediawiki.revision_score_damaging' => [
+			'schema_title' => 'mediawiki/revision/score',
+			'destination_event_service' => 'eventgate-main',
+			// This stream is a subset of the revision-score one,
+			// and the events will be emitted by
+			// the Lift Wing platform. More info in T317768.
+			// Emit canary events.
+			'canary_events_enabled' => true,
+		],
+		'mediawiki.revision_score_reverted' => [
+			'schema_title' => 'mediawiki/revision/score',
+			'destination_event_service' => 'eventgate-main',
+			// This stream is a subset of the revision-score one,
+			// and the events will be emitted by
+			// the Lift Wing platform. More info in T317768.
+			// Emit canary events.
+			'canary_events_enabled' => true,
+		],
+		'mediawiki.revision_score_articlequality' => [
+			'schema_title' => 'mediawiki/revision/score',
+			'destination_event_service' => 'eventgate-main',
+			// This stream is a subset of the revision-score one,
+			// and the events will be emitted by
+			// the Lift Wing platform. More info in T317768.
+			// Emit canary events.
+			'canary_events_enabled' => true,
+		],
+		'mediawiki.revision_score_draftquality' => [
+			'schema_title' => 'mediawiki/revision/score',
+			'destination_event_service' => 'eventgate-main',
+			// This stream is a subset of the revision-score one,
+			// and the events will be emitted by
+			// the Lift Wing platform. More info in T317768.
+			// Emit canary events.
+			'canary_events_enabled' => true,
+		],
+		'mediawiki.revision_score_articletopic' => [
+			'schema_title' => 'mediawiki/revision/score',
+			'destination_event_service' => 'eventgate-main',
+			// This stream is a subset of the revision-score one,
+			// and the events will be emitted by
+			// the Lift Wing platform. More info in T317768.
+			// Emit canary events.
+			'canary_events_enabled' => true,
+		],
+		'mediawiki.revision_score_drafttopic' => [
+			'schema_title' => 'mediawiki/revision/score',
+			'destination_event_service' => 'eventgate-main',
+			// This stream is a subset of the revision-score one,
+			// and the events will be emitted by
+			// the Lift Wing platform. More info in T317768.
 			// Emit canary events.
 			'canary_events_enabled' => true,
 		],
@@ -21762,14 +20724,6 @@ return [
 				'rate' => 1,
 			],
 		],
-		// Enable rc0.mediawiki.page_change on group0 wikis: T311129
-		'rc0.mediawiki.page_change' => [
-			'producers' => [
-				'mediawiki_eventbus' => [
-					'enabled' => true
-				],
-			],
-		],
 	],
 	// Enable mediawiki.visual_editor_feature_use for testwiki: T309602
 	'+testwiki' => [
@@ -21796,14 +20750,11 @@ return [
 		'eventlogging_EchoInteraction',
 		'eventlogging_EchoMail',
 		'eventlogging_EditAttemptStep',
-		'eventlogging_ElementTiming',
 		'eventlogging_FeaturePolicyViolation',
-		'eventlogging_FirstInputTiming',
 		'eventlogging_HelpPanel',
 		'eventlogging_HomepageModule',
 		'eventlogging_HomepageVisit',
 		'eventlogging_LandingPageImpression',
-		'eventlogging_LayoutShift',
 		'eventlogging_MobileWebUIActionsTracking',
 		'eventlogging_NavigationTiming',
 		'eventlogging_NewcomerTask',
@@ -21814,8 +20765,6 @@ return [
 		'eventlogging_ReferencePreviewsBaseline',
 		'eventlogging_ReferencePreviewsCite',
 		'eventlogging_ReferencePreviewsPopups',
-		'eventlogging_ResourceTiming',
-		'eventlogging_RUMSpeedIndex',
 		'eventlogging_SaveTiming',
 		'eventlogging_ServerSideAccountCreation',
 		'eventlogging_SpecialInvestigate',
@@ -21877,12 +20826,12 @@ return [
 // stream name.   This is usually only set while a stream is still in
 // development/testing.
 'wgEventBusStreamNamesMap' => [
-	// We are in a development/release candidate phase for
+	// We are in a release candidate phase for
 	// mediawiki.page_change  Override the default stream name until
 	// we release it.
 	// NOTE: the values here MUST map to a key in wgEventStreams.
 	'default' => [
-		'mediawiki_page_change' => 'rc0.mediawiki.page_change'
+		'mediawiki_page_change' => 'rc1.mediawiki.page_change'
 	]
 ],
 
@@ -24094,6 +23043,7 @@ return [
 	'arwiki' => true, // T185023
 	'frwiki' => true, // T153393
 	'huwiki' => true, // T191697
+	'zhwiki' => true, // T326387
 ],
 'wgPageAssessmentsOnTalkPages' => [
 	'default' => true,
@@ -24103,6 +23053,7 @@ return [
 	'default' => false,
 	'testwiki' => true,
 	'enwiki' => true,
+	'zhwiki' => true, // T326387
 ],
 
 'wmgUsePageImages' => [
@@ -24214,866 +23165,6 @@ return [
 	'default' => true,
 	'wikitech' => false,
 ],
-
-// NOTE: don't forget to update TTM default cluster via
-// $wgTranslateTranslationDefaultService in CommonSettings.php if you plan to
-// bring down a specific cluster.
-'wgCirrusSearchDefaultCluster' => [
-	'default' => $GLOBALS['wmgDatacenter'],
-],
-// Kept for BC with SRE tools that checks siteinfo (see APIQuerySiteInfoGeneralInfo in CommonSettings.php)
-'wmgCirrusSearchDefaultCluster' => [
-	'default' => 'local',
-],
-
-'wgCirrusSearchClusterOverrides' => [
-	'default' => [],
-],
-
-'wgCirrusSearchWriteClusters' => [
-	'default' => [ 'eqiad', 'codfw', 'cloudelastic' ],
-	'private' => [ 'eqiad', 'codfw' ],
-],
-
-'wgCirrusSearchReplicaGroup' => [
-	'default' => [
-		'type' => 'roundrobin',
-		'groups' => [ 'psi', 'omega' ]
-	],
-	'cirrussearch-big-indices' => 'chi',
-],
-
-'wgCirrusSearchPreferRecentDefaultDecayPortion' => [
-	'default' => 0,
-	'wikinews' => 0.6,
-],
-
-'wgCirrusSearchWeights' => [
-	'default' => [],
-	'commonswiki' => [
-		'title' => 25.0,
-	],
-	'testcommonswiki' => [
-		'title' => 25.0,
-	],
-],
-
-'wgCirrusSimilarityProfiles' => [
-	// Push all our similarity settings to default so that we can reuse them
-	// on multiple wikis
-	'default' => [
-		'wikibase_similarity' => [
-			'similarity' => [
-				'default' => [
-					'type' => 'BM25',
-				],
-				'descriptions' => [
-					'type' => 'BM25',
-				],
-				// This is a bit verbose to redefine always the same settings
-				// but the advantage is that you can re-tune and specialize
-				// these on an existing index (requires closing the index).
-				// "labels" here means the label + aliases
-				'labels' => [
-					'type' => 'BM25',
-					'k1' => 1.2,
-					'b' => 0.3,
-				],
-				// We consider all as being very similar to an array field
-				// as it is a simple concatenation of all the item data
-				'all' => [
-					'type' => 'BM25',
-					'k1' => 1.2,
-					'b' => 0.3,
-				]
-			],
-			'fields' => [
-				'__default__' => 'default',
-				'labels' => 'labels',
-				'descriptions' => 'descriptions',
-				'all' => 'all',
-			]
-		]
-	],
-],
-
-'wgCirrusSearchSimilarityProfile' => [
-	'default' => 'wmf_defaults',
-	"wikidata" => "wikibase_similarity",
-	"testwikidatawiki" => "wikibase_similarity",
-	"commonswiki" => "wikibase_similarity",
-	"testwikidatawiki" => "wikibase_similarity",
-],
-
-'wgCirrusSearchRescoreProfile' => [
-	'default' => 'wsum_inclinks',
-	'commonswiki' => 'classic_noboostlinks',
-	'testcommonswiki' => 'classic_noboostlinks',
-	'enwiki' => 'mlr-1024rs',
-	'arwiki' => 'mlr-1024rs',
-	'dewiki' => 'mlr-1024rs',
-	'fawiki' => 'mlr-1024rs',
-	'fiwiki' => 'mlr-1024rs',
-	'frwiki' => 'mlr-1024rs',
-	'idwiki' => 'mlr-1024rs',
-	'itwiki' => 'mlr-1024rs',
-	'jawiki' => 'classic', // TODO: switch back to 'mlr-1024rs',
-	'kowiki' => 'classic', // TODO: switch back to 'mlr-1024rs',
-	'nlwiki' => 'mlr-1024rs',
-	'nowiki' => 'mlr-1024rs',
-	'plwiki' => 'mlr-1024rs',
-	'ptwiki' => 'mlr-1024rs',
-	'ruwiki' => 'mlr-1024rs',
-	'svwiki' => 'mlr-1024rs',
-	'viwiki' => 'mlr-1024rs',
-	'zhwiki' => 'wsum_inclinks', // TODO: Switch back to 'mlr-1024rs',
-],
-
-'wgCirrusSearchFullTextQueryBuilderProfile' => [
-	'default' => 'perfield_builder',
-],
-
-// Enable crossprocess search (side bar)
-'wgCirrusSearchEnableCrossProjectSearch' => [
-	'default' => false,
-	'wikipedia' => true, // Activated on all wikipedias
-
-	'frwikibooks' => true, // T251683
-	'frwiktionary' => true, // T250724
-	// italian wikis used to have the old sidebar on all sisterwikis
-	// use the one there too.
-	'itwiktionary' => true,
-	'itwikibooks' => true,
-	'itwikinews' => true,
-	'itwikiquote' => true,
-	'itwikisource' => true,
-	'itwikiversity' => true,
-	'itwikivoyage' => true,
-],
-
-// Tune crossproject ordering
-'wgCirrusSearchCrossProjectOrder' => [
-	'default' => 'recall',
-	'enwiki' => 'wmf_enwiki', // T171803: 'wikt' always first, 'b' always last, others ordered by recall
-],
-
-// Define list of projects to block from CrossProject search
-// (only effective if SiteMatrix implementation is being used)
-'wgCirrusSearchCrossProjectSearchBlockList' => [
-	'default' => [],
-	// Block wikinews and wikiversity T163463
-	'enwiki' => [ 'n', 'v' ],
-],
-
-// Define overridden interwiki prefixes
-// Mostly to match what's done in WikimediaMaintenance/dumpInterwiki.php ( see $prefixRewrites )
-'wgCirrusSearchInterwikiPrefixOverrides' => [
-	'default' => [],
-	'svwiki' => [ 's' => 'src' ],
-],
-
-// Show/Hide multimedia content in the crossproject
-// search results sidebar
-'wgCirrusSearchCrossProjectShowMultimedia' => [
-	'default' => true,
-	'enwiki' => false, // T163463, requested during RfC
-	// Disable multimedia on italian non-wikipedias
-	'itwiktionary' => false,
-	'itwikibooks' => false,
-	'itwikinews' => false,
-	'itwikiquote' => false,
-	'itwikisource' => false,
-	'itwikiversity' => false,
-	'itwikivoyage' => false,
-],
-
-'wgCirrusSearchCrossProjectProfiles' => [
-	'default' => [
-		// full text wikivoyage results are often irrelevant, filter the
-		// search with title matches to improve relevance
-		'voy' => [
-			'ftbuilder' => 'perfield_builder_title_filter',
-			'rescore' => 'wsum_inclinks',
-		],
-	],
-	'+enwiki' => [
-		// T185250
-		'wikt' => [
-			'ftbuilder' => 'perfield_builder_title_filter',
-			'rescore' => 'wsum_inclinks',
-		],
-	],
-],
-
-'wgCirrusSearchIgnoreOnWikiBoostTemplates' => [
-	'default' => false,
-	// on wiki boost templates have to high boosts for enwiki
-	'enwiki' => true,
-],
-
-'wgCirrusSearchLanguageWeight' => [
-	'default' => [
-		'user' => 0.0,
-		'wiki' => 0.0,
-	],
-	'mediawikiwiki' => [
-		'user' => 5.0,
-		'wiki' => 2.5,
-	],
-],
-
-'wgCirrusSearchInstantIndexNew' => [
-	'default' => [],
-],
-
-'wgCirrusSearchRefreshInterval' => [
-	'default' => 30,
-],
-
-// Changing this for a wiki
-// requires an in place reindex.  Last full review 2014-07-01.  See
-// https://wikitech.wikimedia.org/wiki/Search/New#Estimating_the_number_of_shards_required
-// for estimation of new wikis.
-
-// Optimal shard count requires making a tradeoff between a few competing factors.
-
-// Each Elasticsearch shard is actually a Lucene index,
-//  which requires some amount of file descriptors/disk usage, compute, and RAM.
-// So, a higher shard count causes more overhead, due to resource contention as well as "fixed costs".
-
-// Since Elasticsearch is designed to be shardable and robust,
-// if a node drops out of the cluster, shards must rebalance across the remaining nodes
-// (likewise for changes in instance count, etc).
-// Shard rebalancing is rate-limited by network throughput,
-// and thus excessively large shards can cause the cluster to be stuck
-// "recovering" (rebalancing) for an unacceptable amount of time.
-
-// Thus the optimal shard size is a balancing act between overhead (which is optimized via having larger shards),
-// and rebalancing time (which is optimized via smaller, more numerous shards).
-// Additionally, due to the problem of fragmentation,
-// we also don't want a given shard to be too large a % of the available disk capacity.
-
-// Currently (01/07/2020 DD/MM/YY), in most cases we don't want shards to exceed 50GB,
-// and ideally they wouldn't be smaller than 10GB
-// (but note that for small indices this is unavoidable).
-// Once our Elasticsearch cluster has 10G networking, we can increase our desired shard size.
-'wmgCirrusSearchShardCount' => [
-	// Most wikis are too small to be worth sharding
-	'default' => [ 'content' => 1, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	'arwiki' => [ 'content' => 5, 'general' => 4, 'titlesuggest' => 1, 'archive' => 1 ],
-	'arwikisource' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	'bgwiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	'cawiki' => [ 'content' => 5, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	'cebwiki' => [ 'content' => 4, 'general' => 1, 'titlesuggest' => 2, 'archive' => 1 ],
-	// Commons is special and has a 'file' index in addition to the regular ones.
-	// We're sharding 'file' like it is a content index because searching it is
-	// very very common.
-	'commonswiki' => [ 'content' => 2, 'general' => 8, 'file' => 32, 'titlesuggest' => 1, 'archive' => 1 ],
-	'testcommonswiki' => [ 'content' => 1, 'general' => 8, 'file' => 21, 'titlesuggest' => 1, 'archive' => 1 ],
-	'cswiki' => [ 'content' => 3, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	'dawiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	'dewiki' => [ 'content' => 9, 'general' => 8, 'titlesuggest' => 3, 'archive' => 1 ],
-	'dewikisource' => [ 'content' => 3, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	'elwiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	// These shards tend to be closer to our threshold of 50GB.
-	// We shard enwiki more so that most servers have 2 enwiki shards.
-	'enwiki' => [ 'content' => 15, 'general' => 21, 'titlesuggest' => 4, 'archive' => 1 ],
-	'enwikinews' => [ 'content' => 1, 'general' => 4, 'titlesuggest' => 1, 'archive' => 1 ],
-	'enwikisource' => [ 'content' => 7, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	'enwiktionary' => [ 'content' => 5, 'general' => 2, 'titlesuggest' => 2, 'archive' => 1 ],
-	'eswiki' => [ 'content' => 7, 'general' => 6, 'titlesuggest' => 2, 'archive' => 1 ],
-	'eswikisource' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	'fawiki' => [ 'content' => 5, 'general' => 2, 'titlesuggest' => 2, 'archive' => 1 ],
-	'fiwiki' => [ 'content' => 3, 'general' => 8, 'titlesuggest' => 1, 'archive' => 1 ],
-	'frwiki' => [ 'content' => 7, 'general' => 8, 'titlesuggest' => 3, 'archive' => 1 ],
-	'frwikisource' => [ 'content' => 7, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	'frwiktionary' => [ 'content' => 3, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	'hewiki' => [ 'content' => 3, 'general' => 2, 'titlesuggest' => 1, 'archive' => 1 ],
-	'hewikisource' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	'huwiki' => [ 'content' => 4, 'general' => 2, 'titlesuggest' => 1, 'archive' => 1 ],
-	'hywiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	'idwiki' => [ 'content' => 2, 'general' => 2, 'titlesuggest' => 1, 'archive' => 1 ],
-	'incubatorwiki' => [ 'content' => 1, 'general' => 2, 'titlesuggest' => 1, 'archive' => 1 ],
-	'itwiki' => [ 'content' => 7, 'general' => 8, 'titlesuggest' => 2, 'archive' => 1 ],
-	'itwikisource' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	'jawiki' => [ 'content' => 7, 'general' => 6, 'titlesuggest' => 2, 'archive' => 1 ],
-	'kkwiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	'kowiki' => [ 'content' => 4, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	'ltwiktionary' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	'mswiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	'metawiki' => [ 'content' => 1, 'general' => 8, 'titlesuggest' => 1, 'archive' => 1 ],
-	'mgwiktionary' => [ 'content' => 4, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	'nlwiki' => [ 'content' => 7, 'general' => 4, 'titlesuggest' => 2, 'archive' => 1 ],
-	'nowiki' => [ 'content' => 3, 'general' => 2, 'titlesuggest' => 1, 'archive' => 1 ],
-	'plwiki' => [ 'content' => 7, 'general' => 3, 'titlesuggest' => 2, 'archive' => 1 ],
-	'plwikisource' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	'ptwiki' => [ 'content' => 7, 'general' => 5, 'titlesuggest' => 2, 'archive' => 1 ],
-	'rowiki' => [ 'content' => 3, 'general' => 2, 'titlesuggest' => 1, 'archive' => 1 ],
-	'ruwiki' => [ 'content' => 7, 'general' => 8, 'titlesuggest' => 3, 'archive' => 1 ],
-	'ruwikinews' => [ 'content' => 4, 'general' => 4, 'titlesuggest' => 1, 'archive' => 1 ],
-	'ruwikisource' => [ 'content' => 4, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	'ruwiktionary' => [ 'content' => 3, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	'shwiki' => [ 'content' => 4, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	'srwiki' => [ 'content' => 3, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	'svwiki' => [ 'content' => 7, 'general' => 2, 'titlesuggest' => 4, 'archive' => 1 ],
-	'thwiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	'trwiki' => [ 'content' => 2, 'general' => 2, 'titlesuggest' => 1, 'archive' => 1 ],
-	'ukwiki' => [ 'content' => 7, 'general' => 2, 'titlesuggest' => 1, 'archive' => 1 ],
-	'viwiki' => [ 'content' => 6, 'general' => 5, 'titlesuggest' => 1, 'archive' => 1 ],
-	'wikidatawiki' => [ 'content' => 21, 'general' => 1, 'archive' => 1 ],
-	'warwiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-	'zhwiki' => [ 'content' => 7, 'general' => 5, 'titlesuggest' => 2, 'archive' => 1 ],
-	'zhwikisource' => [ 'content' => 5, 'general' => 1, 'titlesuggest' => 1, 'archive' => 1 ],
-],
-
-// Most wikis are fine with 0-2 replicas for all indexes
-// some of the larger ones will want more replicas for content indexes
-'wgCirrusSearchReplicas' => [
-	// NOTE: cloudelastic is intentionally set to an "unsafe" mode with 1 replica (see T231517)
-	'default' => [
-		'eqiad' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'archive' => '0-2' ],
-		'codfw' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'archive' => '0-2' ],
-		'cloudelastic' => [ 'content' => '0-1', 'general' => '0-1', 'titlesuggest' => '0-1', 'archive' => '0-1' ],
-	],
-	'commonswiki' => [
-		'eqiad' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'file' => '0-2', 'archive' => '0-2' ],
-		'codfw' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'file' => '0-2', 'archive' => '0-2' ],
-		'cloudelastic' => [ 'content' => '0-1', 'general' => '0-1', 'titlesuggest' => '0-1', 'file' => '0-1', 'archive' => '0-1' ],
-	],
-	'enwiki' => [
-		'eqiad' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-3', 'archive' => '0-2' ],
-		'codfw' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-3', 'archive' => '0-2' ],
-		'cloudelastic' => [ 'content' => '0-1', 'general' => '0-1', 'titlesuggest' => '0-1', 'archive' => '0-1' ],
-	],
-	'dewiki' => [
-		'eqiad' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-2', 'archive' => '0-2' ],
-		'codfw' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-2', 'archive' => '0-2' ],
-		'cloudelastic' => [ 'content' => '0-1', 'general' => '0-1', 'titlesuggest' => '0-1', 'archive' => '0-1' ],
-	],
-],
-
-'wgCirrusSearchMaxShardsPerNode' => [
-	'default' => [],
-	'commonswiki' => [
-		'eqiad' => [ 'file' => 4, 'general' => 2 ],
-		'codfw' => [ 'file' => 4, 'general' => 2 ],
-		'cloudelastic' => []
-	],
-	'dewiki' => [
-		'eqiad' => [ 'content' => 2 ],
-		'codfw' => [ 'content' => 2 ],
-		'cloudelastic' => []
-	],
-	'wikidatawiki' => [
-		'eqiad' => [ 'content' => 3 ],
-		'codfw' => [ 'content' => 3 ],
-		'cloudelastic' => []
-	],
-	'enwiktionary' => [
-		'eqiad' => [ 'content' => 1, 'general' => 1 ],
-		'codfw' => [ 'content' => 1, 'general' => 1 ],
-		'cloudelastic' => []
-	],
-	'enwiki' => [
-		'eqiad' => [ 'content' => 2, 'general' => 3 ],
-		'codfw' => [ 'content' => 2, 'general' => 3 ],
-		'cloudelastic' => []
-	],
-	'eswiki' => [
-		'eqiad' => [ 'content' => 1 ],
-		'codfw' => [ 'content' => 1 ],
-		'cloudelastic' => []
-	],
-	'frwiki' => [
-		'eqiad' => [ 'content' => 1 ],
-		'codfw' => [ 'content' => 1 ],
-		'cloudelastic' => []
-	],
-	'nlwiki' => [
-		'eqiad' => [ 'content' => 1 ],
-		'codfw' => [ 'content' => 1 ],
-		'cloudelastic' => []
-	],
-	'ptwiki' => [
-		'eqiad' => [ 'content' => 1 ],
-		'codfw' => [ 'content' => 1 ],
-		'cloudelastic' => []
-	],
-	'ruwiki' => [
-		'eqiad' => [ 'content' => 1 ],
-		'codfw' => [ 'content' => 1 ],
-		'cloudelastic' => []
-	],
-	'zhwiki' => [
-		'eqiad' => [ 'content' => 1 ],
-		'codfw' => [ 'content' => 1 ],
-		'cloudelastic' => []
-	],
-],
-
-// Setup our custom index settings, only used at index
-// creation time.
-'wgCirrusSearchExtraIndexSettings' => [
-	'default' => [
-		// indexing slow log
-		'indexing.slowlog.threshold.index.warn' => '10s',
-		'indexing.slowlog.threshold.index.info' => '5s',
-		'indexing.slowlog.threshold.index.debug' => '2s',
-		'indexing.slowlog.threshold.index.trace' => -1,
-		// query slow log
-		'search.slowlog.threshold.query.warn' => '60s',
-		'search.slowlog.threshold.query.info' => '10s',
-		'search.slowlog.threshold.query.debug' => '5s',
-		'search.slowlog.threshold.query.trace' => -1,
-		// fetch slow log
-		'search.slowlog.threshold.fetch.warn' => '10s',
-		'search.slowlog.threshold.fetch.info' => '5s',
-		'search.slowlog.threshold.fetch.debug' => '1s',
-		'search.slowlog.threshold.fetch.trace' => '-1',
-		// Number of merge threads to use. Use only 1 thread
-		// (instead of 3) to avoid updates interfering with
-		// actual searches
-		'merge.scheduler.max_thread_count' => 1,
-	],
-	'+wikidata' => [
-		// increase defaults to add language specific fields
-		'index.mapping.total_fields.limit' => 5000,
-	],
-],
-
-// Enable completion suggester on all wikis (except wikidata)
-'wgCirrusSearchUseCompletionSuggester' => [
-	'default' => 'yes',
-	'wikidatawiki' => 'no',
-],
-
-// wgCirrusSearchCompletionSuggesterSubphrases @{
-// Please verify mem usage on the cluster before adding new wiki here.
-// NOTE: activate 'build' => true first then verify that the index has been
-// updated with the new mapping then you can switch 'use' to true
-'wgCirrusSearchCompletionSuggesterSubphrases' => [
-	'default' => [
-		'build' => false,
-		'use' => false,
-		'type' => 'anywords',
-		'limit' => 10,
-	],
-	'wikisource' => [
-		'build' => true,
-		'use' => true,
-		'type' => 'anywords',
-		'limit' => 10,
-	],
-	'mediawikiwiki' => [
-		'build' => true,
-		'use' => true,
-		'type' => 'anywords',
-		'limit' => 10,
-	],
-	'wikitech' => [
-		'build' => true,
-		'use' => true,
-		'type' => 'anywords',
-		'limit' => 10,
-	],
-	'officewiki' => [
-		'build' => true,
-		'use' => true,
-		'type' => 'anywords',
-		'limit' => 10,
-	],
-],
-
-// Default profile for autocomplete for when the completion suggester is enabled
-'wgCirrusSearchCompletionSettings' => [
-	'default' => 'fuzzy',
-	'mediawikiwiki' => 'fuzzy-subphrases',
-	'wikitech' => 'fuzzy-subphrases',
-	'officewiki' => 'fuzzy-subphrases',
-],
-
-// @} end of wgCirrusSearchCompletionSuggesterSubphrases
-
-// Enable phrase suggester (did you mean) on all wikis (except wikidata)
-'wgCirrusSearchEnablePhraseSuggest' => [
-	'default' => true,
-	'wikidatawiki' => false,
-	'testwikidatawiki' => false
-],
-
-// wgCirrusSearchRecycleCompletionSuggesterIndex @{
-// Recycle suggester indices for small wikis (less than 100MB store size)
-'wgCirrusSearchRecycleCompletionSuggesterIndex' => [
-	'default' => true,
-	'enwiki' => false,
-	'svwiki' => false,
-	'enwiktionary' => false,
-	'ruwiki' => false,
-	'mgwiktionary' => false,
-	'dewiki' => false,
-	'frwiki' => false,
-	'cebwiki' => false,
-	'nlwiki' => false,
-	'frwiktionary' => false,
-	'eswiki' => false,
-	'shwiki' => false,
-	'itwiki' => false,
-	'warwiki' => false,
-	'jawiki' => false,
-	'plwiki' => false,
-	'fawiki' => false,
-	'ptwiki' => false,
-	'zhwiki' => false,
-	'viwiki' => false,
-	'ukwiki' => false,
-	'zhwiktionary' => false,
-	'arwiki' => false,
-	'cawiki' => false,
-	'ruwiktionary' => false,
-	'srwiki' => false,
-	'ruwikisource' => false,
-	'enwikisource' => false,
-	'shwiktionary' => false,
-	'rowiki' => false,
-	'eswiktionary' => false,
-	'nowiki' => false,
-	'specieswiki' => false,
-	'idwiki' => false,
-	'fiwiki' => false,
-	'kowiki' => false,
-	'huwiki' => false,
-	'cswiki' => false,
-	'ltwiktionary' => false,
-],
-// @} end of wgCirrusSearchRecycleCompletionSuggesterIndex
-
-// Disable phrase rescore on queries with too many tokens.
-// Bandaid for T169498, should be removed when a proper
-// fix is determined
-'wgCirrusSearchMaxPhraseTokens' => [
-	'default' => 10,
-],
-
-// Configure ICU Folding, 'default': controlled by cirrus
-// 'no': disable, 'yes': force
-'wgCirrusSearchUseIcuFolding' => [
-	'default' => 'default',
-],
-
-'wgCirrusSearchAllFields' => [
-	'default' => [ 'build' => true, 'use' => true ],
-],
-
-'wgCirrusSearchNearMatchWeight' => [
-	'default' => 10, // T257922
-],
-
-'wgCirrusSearchNamespaceWeights' => [
-	'default' => [],
-	'mediawikiwiki' => [ // T155142
-		12 => 0.9,
-		100 => 0.9,
-		102 => 0.9,
-		104 => 0.9,
-		106 => 0.9,
-	],
-	'commonswiki' => [
-		6 => 1.0,
-	],
-	'labswiki' => [
-		12 => 1.0, // Put NS_HELP on equal footing with NS_MAIN
-	],
-	'metawiki' => [
-		// T260569
-		200 => 0.6, // grants
-		202 => 0.6, // research
-	],
-	// Author namespace on wikisource should match NS_MAIN weight
-	'arwikisource' => [ 102 => 1.0 ],
-	'aswikisource' => [ 102 => 1.0 ],
-	'bewikisource' => [ 102 => 1.0 ],
-	'bgwikisource' => [ 100 => 1.0 ],
-	'bnwikisource' => [ 100 => 1.0 ],
-	'brwikisource' => [ 104 => 1.0 ],
-	'cawikisource' => [ 106 => 1.0 ],
-	'cswikisource' => [ 100 => 1.0 ],
-	'dawikisource' => [ 102 => 1.0 ],
-	'elwikisource' => [ 108 => 1.0 ],
-	'enwikisource' => [ 102 => 1.0 ],
-	'etwikisource' => [ 106 => 1.0 ],
-	'euwikisource' => [ 106 => 1.0 ],
-	'fawikisource' => [ 102 => 1.0 ],
-	'frwikisource' => [ 102 => 1.0 ],
-	'hewikisource' => [ 108 => 1.0 ],
-	'hrwikisource' => [ 100 => 1.0 ],
-	'huwikisource' => [ 100 => 1.0 ],
-	'hywikisource' => [ 100 => 1.0 ],
-	'idwikisource' => [ 100 => 1.0 ],
-	'iswikisource' => [ 102 => 1.0 ],
-	'itwikisource' => [ 102 => 1.0 ],
-	'knwikisource' => [ 102 => 1.0 ],
-	'kowikisource' => [ 100 => 1.0 ],
-	'lawikisource' => [ 102 => 1.0 ],
-	'lijwikisource' => [ 102 => 1.0 ],
-	'mlwikisource' => [ 100 => 1.0 ],
-	'mrwikisource' => [ 102 => 1.0 ],
-	'napwikisource' => [ 102 => 1.0 ],
-	'nlwikisource' => [ 102 => 1.0 ],
-	'nowikisource' => [ 102 => 1.0 ],
-	'plwikisource' => [ 104 => 1.0 ],
-	'ptwikisource' => [ 102 => 1.0 ],
-	'rowikisource' => [ 102 => 1.0 ],
-	'svwikisource' => [ 106 => 1.0 ],
-	'tewikisource' => [ 102 => 1.0 ],
-	'thwikisource' => [ 102 => 1.0 ],
-	'trwikisource' => [ 100 => 1.0 ],
-	'ukwikisource' => [ 102 => 1.0 ],
-	'vecwikisource' => [ 100 => 1.0 ],
-	'viwikisource' => [ 102 => 1.0 ],
-	'wawikisource' => [ 100 => 1.0 ],
-	'zhwikisource' => [ 102 => 1.0 ],
-],
-
-// Enable the "Give us feedback" link after search results on enwiki
-'wgCirrusSearchFeedbackLink' => [
-	'default' => false,
-],
-
-// NOTE: When enabling a profile that embarks the phrase suggester
-// make sure to enable it with wgCirrusSearchEnablePhraseSuggest
-// and reindex the wiki
-// Available profiles are in CirrusSearch/profiles/FallbackProfiles.config.php
-// or defined in the config var wgCirrusSearchFallbackProfiles
-'wgCirrusSearchFallbackProfile' => [
-	'default' => 'phrase_suggest',
-	// Nothing for wikidata
-	'wikidatawiki' => 'none',
-	'testwikidatawiki' => 'none',
-	// PhraseSuggest & Language detection
-	'eswiki' => 'phrase_suggest_and_language_detection',
-	'itwiki' => 'phrase_suggest_and_language_detection',
-	'jawiki' => 'phrase_suggest_and_language_detection',
-	'nlwiki' => 'phrase_suggest_and_language_detection',
-	'ptwiki' => 'phrase_suggest_and_language_detection',
-	'ruwiki' => 'phrase_suggest_and_language_detection',
-	// Glent M0 & PhraseSuggest & Language detection
-	'dewiki' => 'phrase_suggest_glentM0_and_langdetect',
-	'enwiki' => 'phrase_suggest_glentM0_and_langdetect',
-	'frwiki' => 'phrase_suggest_glentM0_and_langdetect',
-],
-
-'wgCirrusSearchUserTesting' => [
-	'default' => [
-		// T219534
-		'mlr-2020-test' => [
-			'buckets' => [
-				'control' => [
-					'trigger' => 'control',
-				],
-				'mlr-2020-test' => [
-					'trigger' => 'mlr-2020-test',
-					'globals' => [
-						'wgCirrusSearchRescoreProfile' => 'mlr-1024rs',
-					],
-				],
-			],
-		],
-		# T246947
-		'glent_m0' => [
-			'buckets' => [
-				'control' => [
-					'trigger' => 'control',
-					'globals' => [
-						// 'wgCirrusSearchFallbackProfile' => 'phrase_suggest_and_language_detection',
-					],
-				],
-				'glent_m0' => [
-					'trigger' => 'glent_m0',
-					'globals' => [
-						'wgCirrusSearchFallbackProfile' => 'phrase_suggest_glentM0_and_langdetect',
-					],
-				],
-			],
-		],
-		'T262612_glent_m01' => [
-			'buckets' => [
-				'control' => [
-					'trigger' => 'control',
-					'globals' => [
-						// 'wgCirrusSearchFallbackProfile' => 'phrase_suggest_and_language_detection',
-					],
-				],
-				'glent_m01' => [
-					'trigger' => 'glent_m01',
-					'globals' => [
-						'wgCirrusSearchFallbackProfile' => 'phrase_suggest_glentM01_and_langdetect',
-					],
-				],
-			],
-		],
-	],
-],
-
-'wgCirrusSearchLanguageDetectors' => [
-	'default' => [],
-	'dewiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
-	'enwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
-	'eswiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
-	'frwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
-	'itwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
-	'jawiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
-	'nlwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
-	'ptwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
-	'ruwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
-],
-
-// Enable interwiki search by language detection. The list of language
-// detected and their corresponding wiki is defined by
-// wgCirrusSearchLanguageToWikiMap and SiteMatrix.
-// Note that if language detectors are enabled they will always run, this
-// gates if the result of running is shown to the user (for AB test control
-// bucket reasons).
-// NOTE: be sure to enable a fallback profile that triggers language detection
-//       see wgCirrusSearchFallbackProfile
-'wgCirrusSearchEnableAltLanguage' => [
-	'default' => false,
-	'dewiki' => true,
-	'enwiki' => true,
-	'eswiki' => true,
-	'frwiki' => true,
-	'itwiki' => true,
-	'jawiki' => true,
-	'nlwiki' => true,
-	'ptwiki' => true,
-	'ruwiki' => true,
-],
-
-'wgCirrusSearchTextcatLanguages' => [
-	'default' => [],
-	'dewiki' => [
-		'de', 'en', 'la', 'it', 'es', 'fr', 'zh', 'pl',
-		'vi', 'el', 'ru', 'ar', 'hi', 'th', 'ko', 'ja',
-	],
-	'enwiki' => [
-		'en', 'zh', 'es', 'ar', 'de', 'fa', 'fr', 'id',
-		'pl', 'ru', 'vi', 'it', 'ja', 'pt', 'cs', 'bn',
-		'hr', 'he', 'no', 'af', 'is', 'tl', 'th', 'hu',
-		'ga', 'ko', 'uk', 'ur', 'hi', 'el', 'te', 'ka',
-	],
-	'eswiki' => [
-		'es', 'en', 'la', 'ru', 'zh', 'pt', 'it', 'fr',
-		'de', 'ar', 'ja',
-	],
-	'frwiki' => [
-		'fr', 'en', 'ar', 'pt', 'de', 'es', 'ru', 'zh',
-		'nl', 'pl', 'it', 'th', 'sv', 'la', 'is', 'hy',
-		'hu', 'br', 'el', 'he', 'ko',
-	],
-	'itwiki' => [
-		'it', 'en', 'de', 'ru', 'ar', 'zh', 'pl', 'el',
-		'ko',
-	],
-	'jawiki' => [
-		'ja', 'en', 'zh', 'ko', 'de', 'ar', 'he',
-	],
-	'nlwiki' => [
-		'nl', 'en', 'fr', 'de', 'es', 'la', 'zh', 'pl',
-		'ar', 'vi', 'pt', 'my', 'ko', 'hr', 'da', 'cs',
-		'el', 'he', 'ja', 'ru',
-	],
-	'ptwiki' => [
-		'pt', 'en', 'tl', 'ru', 'fr', 'he', 'ar', 'zh',
-		'ko', 'el',
-	],
-	'ruwiki' => [
-		'ru', 'en', 'uk', 'de', 'ka', 'hy', 'lv', 'ja',
-		'fi', 'es', 'ar', 'he', 'zh',
-	],
-],
-
-// Method to use when detecting the namespace prefix
-// within queries:
-// elastic: lookup against elastic (default)
-// utr30: uses PHP Transliterator with UTR30 rule
-// naise: uses PHP Transliterator with naive folding rules (unicode diacritics
-// removal)
-'wgCirrusSearchNamespaceResolutionMethod' => [
-	'default' => 'utr30',
-],
-
-// List of languages detected by the short-text
-// profiles.
-// See: https://www.mediawiki.org/wiki/User:TJones_(WMF)/Notes/Language_Detection_Evaluation
-// This includes also the lang codes that might be used by browsers in Accept-Language
-# wgCirrusSearchLanguageToWikiMap @{
-'wgCirrusSearchLanguageToWikiMap' => [
-	'default' => [],
-	'wikipedia' => [
-		"ar" => "ar",
-		"ay" => "ay", // not detected
-		"az" => "az", // not detected
-		"bg" => "bg",
-		"bn" => "bn",
-		"ca" => "ca",
-		"cs" => "cs",
-		"da" => "da",
-		"de" => "de",
-		"el" => "el",
-		"en" => "en",
-		"es" => "es",
-		"et" => "et",
-		"fa" => "fa",
-		"fi" => "fi",
-		"fil" => "tl", // unknown code, filipino? mapping to tagalog, maybe fijian?
-		"fr" => "fr",
-		"gu" => "gu",
-		"he" => "he",
-		"hi" => "hi",
-		"hr" => "hr",
-		"hu" => "hu",
-		"id" => "id",
-		"it" => "it",
-		"ja" => "ja",
-		"km" => "km", // not detected
-		"ko" => "ko",
-		"lt" => "lt",
-		"lv" => "lv",
-		"mk" => "mk",
-		"ml" => "ml",
-		"mr" => "mr", // not detected
-		"ms" => "ms", // not detected
-		"nb" => "no", // not detected but covered by no
-		"nl" => "nl",
-		"no" => "no",
-		"pa" => "pa",
-		"pl" => "pl",
-		"pt" => "pt",
-		"ro" => "ro", // very bad precision
-		"ru" => "ru",
-		"si" => "si",
-		"sk" => "sk", // not detected
-		"sl" => "sl", // not detected
-		"sq" => "sq",
-		"sv" => "sv",
-		"sw" => "sw", // not detected
-		"ta" => "ta",
-		"te" => "te",
-		"th" => "th",
-		"tl" => "tl",
-		"tr" => "tr",
-		"uk" => "uk",
-		"ur" => "ur",
-		"vi" => "vi",
-		"zh" => "zh", // not detected (browser header). Usually detected as zh-cn, zh-hk, zh-tw or zh-hans-cn, zh-hant-hk, zh-hant-tw
-		"zh-cn" => "zh",
-		"zh-hans-cn" => "zh",
-		"zh-hant-hk" => "zh",
-		"zh-hant-tw" => "zh",
-		"zh-hk" => "zh",
-		"zh-tw" => "zh"
-	],
-],
-# @} end of wgCirrusSearchLanguageToWikiMap
 
 'wmgUseCite' => [
 	'default' => true,
@@ -25742,10 +23833,6 @@ return [
 	// This should not be disabled on additional wikis (T291736).
 ],
 
-'wgKartographerEnableMapFrame' => [
-	'default' => true,
-],
-
 'wgKartographerUsePageLanguage' => [
 	'default' => true,
 ],
@@ -25867,6 +23954,7 @@ return [
 	'desktop-improvements' => 0.2, // T258058
 	'officewiki' => 0,
 	'testwiki' => 1, // T256992
+	'enwiki' => 0.01,
 	// T309260 (some overlap with desktop-improvements group):
 	'arwiki' => 0.2,
 	'bnwiki' => 0.2,
@@ -26028,103 +24116,6 @@ return [
 	'default' => 'Project:New user landing page',
 ],
 
-// Enable archive for testwiki
-'wgCirrusSearchIndexDeletes' => [
-	'default' => true,
-	'wikidatawiki' => false,
-	'testwikidatawiki' => false,
-],
-
-'wgCirrusSearchEnableArchive' => [
-	'default' => true,
-	'wikidatawiki' => false,
-	'testwikidatawiki' => false,
-],
-
-'wmgCirrusSearchMLRModelFallback' => [
-	'default' => 'wsum_inclinks',
-	'enwiki' => 'wsum_inclinks_pv',
-],
-
-'wmgCirrusSearchMLRModel' => [
-	'default' => false,
-	'enwiki' => [
-		'mlr-1024rs' => [
-			// Name of model stored in elasticsearch ltr plugin
-			'model' => 'enwiki-20220421-20180215-query_explorer',
-			// Number of results to score per-shard. Defaults to
-			// 1024 if not provided.
-			'window' => 448,
-		],
-	],
-	'arwiki' => [
-		'mlr-1024rs' => [ 'model' => 'arwiki-20220421-20180215-query_explorer' ],
-	],
-	'fawiki' => [
-		'mlr-1024rs' => [ 'model' => 'fawiki-20220421-20180215-query_explorer' ],
-	],
-	/* TODO: re-enable once we have a model trained with BM25 features (T219534)
-	'jawiki' => [
-		'mlr-1024rs' => [ 'model' => 'jawiki-20220421-20180215-query_explorer' ],
-	],
-	*/
-	'svwiki' => [
-		'mlr-1024rs' => [ 'model' => 'svwiki-20220421-20180215-query_explorer' ],
-	],
-	'frwiki' => [
-		'mlr-1024rs' => [ 'model' => 'frwiki-20220421-20180215-query_explorer' ],
-	],
-	'itwiki' => [
-		'mlr-1024rs' => [ 'model' => 'itwiki-20220421-20180215-query_explorer' ],
-	],
-	'ptwiki' => [
-		'mlr-1024rs' => [ 'model' => 'ptwiki-20220421-20180215-query_explorer' ],
-	],
-	'ruwiki' => [
-		'mlr-1024rs' => [ 'model' => 'ruwiki-20220421-20180215-query_explorer' ],
-	],
-	'dewiki' => [
-		'mlr-1024rs' => [ 'model' => 'dewiki-20220421-20180215-query_explorer' ],
-	],
-	'fiwiki' => [
-		'mlr-1024rs' => [ 'model' => 'fiwiki-20220421-20180215-query_explorer' ],
-	],
-	'hewiki' => [
-		'mlr-1024rs' => [ 'model' => 'hewiki-20220421-20180215-query_explorer' ],
-	],
-	'idwiki' => [
-		'mlr-1024rs' => [ 'model' => 'idwiki-20220421-20180215-query_explorer' ],
-	],
-	/* TODO: re-enable once we have a model trained with the nori analyzer (T219534)
-	'kowiki' => [
-		'mlr-1024rs' => [ 'model' => 'kowiki-20220421-20180215-query_explorer' ],
-	],
-	*/
-	'nlwiki' => [
-		'mlr-1024rs' => [ 'model' => 'nlwiki-20220421-20180215-query_explorer' ],
-	],
-	'nowiki' => [
-		'mlr-1024rs' => [ 'model' => 'nowiki-20220421-20180215-query_explorer' ],
-	],
-	'plwiki' => [
-		'mlr-1024rs' => [ 'model' => 'plwiki-20220421-20180215-query_explorer' ],
-	],
-	'viwiki' => [
-		'mlr-1024rs' => [ 'model' => 'viwiki-20220421-20180215-query_explorer' ],
-	],
-	'zhwiki' => [
-		'mlr-1024rs' => [ 'model' => 'zhwiki-20220421-20180215-query_explorer' ],
-	],
-	'kowiki' => [
-		'mlr-1024rs' => [ 'model' => 'kowiki-20220421-20180215-query_explorer' ],
-	],
-	/* TODO: re-enable once we have a model trained with BM25 features (T219534)
-	'zhwiki' => [
-		'mlr-1024rs' => [ 'model' => 'zhwiki-20220421-20180215-query_explorer' ],
-	],
-	*/
-],
-
 'wmgUseDynamicSidebar' => [
 	'default' => false,
 ],
@@ -26157,19 +24148,9 @@ return [
 	'default' => [ 'DISPLAY' => ':99' ],
 ],
 
-// T233004
-'wgCheckUserActorMigrationStage' => [
-	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-],
-'wgCheckUserCommentMigrationStage' => [
-	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-],
-'wgCheckUserLogActorMigrationStage' => [
-	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'testwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
-],
-'wgCheckUserLogReasonMigrationStage' => [
-	'default' => SCHEMA_COMPAT_OLD,
+// T324907
+'wgCheckUserEventTablesMigrationStage' => [
+	'default' => SCHEMA_COMPAT_OLD
 ],
 
 // T299421
@@ -26179,24 +24160,32 @@ return [
 
 // T312666
 'wgExternalLinksSchemaMigrationStage' => [
-	'default' => SCHEMA_COMPAT_WRITE_OLD | SCHEMA_COMPAT_READ_OLD,
-	'testwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'fawikiquote' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'ruwikinews' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'arzwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'cewiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'idwiktionary' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'ttwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'hywiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'euwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'dawiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	'elwiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	'commonswiki' => SCHEMA_COMPAT_WRITE_OLD | SCHEMA_COMPAT_READ_OLD,
+	'testcommonswiki' => SCHEMA_COMPAT_WRITE_OLD | SCHEMA_COMPAT_READ_OLD,
+	'wikidatawiki' => SCHEMA_COMPAT_WRITE_OLD | SCHEMA_COMPAT_READ_OLD,
+	// s7
+	'arwiki' => SCHEMA_COMPAT_WRITE_OLD | SCHEMA_COMPAT_READ_OLD,
+	'cawiki' => SCHEMA_COMPAT_WRITE_OLD | SCHEMA_COMPAT_READ_OLD,
+	'eswiki' => SCHEMA_COMPAT_WRITE_OLD | SCHEMA_COMPAT_READ_OLD,
+	'fawiki' => SCHEMA_COMPAT_WRITE_OLD | SCHEMA_COMPAT_READ_OLD,
+	'frwiktionary' => SCHEMA_COMPAT_WRITE_OLD | SCHEMA_COMPAT_READ_OLD,
+	'hewiki' => SCHEMA_COMPAT_WRITE_OLD | SCHEMA_COMPAT_READ_OLD,
+	'huwiki' => SCHEMA_COMPAT_WRITE_OLD | SCHEMA_COMPAT_READ_OLD,
+	'kowiki' => SCHEMA_COMPAT_WRITE_OLD | SCHEMA_COMPAT_READ_OLD,
+	'metawiki' => SCHEMA_COMPAT_WRITE_OLD | SCHEMA_COMPAT_READ_OLD,
+	'rowiki' => SCHEMA_COMPAT_WRITE_OLD | SCHEMA_COMPAT_READ_OLD,
+	'ukwiki' => SCHEMA_COMPAT_WRITE_OLD | SCHEMA_COMPAT_READ_OLD,
+	'viwiki' => SCHEMA_COMPAT_WRITE_OLD | SCHEMA_COMPAT_READ_OLD,
 ],
 
 // T299954
 'wgCommentTempTableSchemaMigrationStage' => [
 	'default' => [
-		'rev_comment' => MIGRATION_OLD,
+		'rev_comment' => MIGRATION_WRITE_BOTH,
+	],
+	'testcommonswiki' => [
+		'rev_comment' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
 	],
 ],
 
@@ -26627,7 +24616,6 @@ return [
 
 'wgWelcomeSurveyEnabled' => [
 	'default' => true,
-	'viwiki' => false,
 ],
 
 'wgWelcomeSurveyEnableWithHomepage' => [
@@ -26669,6 +24657,10 @@ return [
 
 'wgGEHomepageEnabled' => [
 	'default' => true,
+],
+
+'wgGELevelingUpFeaturesEnabled' => [
+	'default' => false,
 ],
 
 'wgGERefreshUserImpactDataMaintenanceScriptEnabled' => [
@@ -26972,18 +24964,6 @@ return [
 	],
 ],
 
-'wgGEMentorProvider' => [
-	'default' => 'structured',
-],
-
-'wgGEHomepageMentorsList' => [
-	'default' => '',
-],
-
-'wgGEHomepageManualAssignmentMentorsList' => [
-	'default' => null,
-],
-
 'wgGEMentorDashboardEnabled' => [
 	'default' => true,
 ],
@@ -27001,10 +24981,6 @@ return [
 	'cswiki' => 'beta',
 ],
 
-'wgGERecentChangesUnstarredMenteesFilterEnabled' => [
-	'default' => true,
-],
-
 'wgGETopicsMatchModeEnabled' => [
 	'default' => false,
 	// Enable Growth's feature topic match mode (T305399).
@@ -27020,8 +24996,18 @@ return [
 ],
 
 'wgGECampaigns' => [
-	'default' => [],
-	'testwiki' => [
+	'default' => [
+		'thankyoupage-2023' => [
+			'skipWelcomeSurvey' => true,
+			'signupPageTemplate' => 'hero',
+			'signupPageTemplateParameters' => [
+				'showBenefitsList' => 'desktop',
+				'messageKey' => 'thankyoupage',
+			],
+			'pattern' => '/^typage-\w+-\w+-2023$/',
+		],
+	],
+	'+testwiki' => [
 		'social-latam-2022' => [
 			'messageKey' => 'marketingvideocampaign',
 			'pattern' => '/^social-latam-2022-A$/',
@@ -27055,7 +25041,7 @@ return [
 			'pattern' => '/^tybanner-(latam|in|za)-en-2022$|^tybanner-latam-(es|pt)-2022$/'
 		]
 	],
-	'enwiki' => [
+	'+enwiki' => [
 		'thankyoupage-2022' => [
 			'messageKey' => 'thankyoupage',
 			'skipWelcomeSurvey' => true,
@@ -27076,7 +25062,7 @@ return [
 			'pattern' => '/^tybanner-(latam|in|za)-en-2022$/'
 		]
 	],
-	'eswiki' => [
+	'+eswiki' => [
 		'social-latam-2022' => [
 			'messageKey' => 'marketingvideocampaign',
 			'signupPageTemplate' => 'video',
@@ -27110,7 +25096,7 @@ return [
 			'pattern' => '/^tybanner-latam-es-2022$/'
 		]
 	],
-	'ptwiki' => [
+	'+ptwiki' => [
 		'thankyoupage-2022' => [
 			'messageKey' => 'thankyoupage',
 			'skipWelcomeSurvey' => true,
@@ -27463,240 +25449,6 @@ return [
 	'default' => 'CirrusSearch'
 ],
 
-'wgCirrusSearchElasticQuirks' => [
-	'default' => [
-		'retry_on_conflict' => true,
-	]
-],
-
-# Turn off leading wildcard matches, they are a very slow and inefficient query
-'wgCirrusSearchAllowLeadingWildcard' => [
-	'default' => false
-],
-
-# Turn off the more accurate but slower search mode.  It is most helpful when you
-# have many small shards.  We don't do that in production and we could use the speed.
-'wgCirrusSearchMoreAccurateScoringMode' => [
-	'default' => false
-],
-
-# Limit the number of states generated by wildcard queries (500 will allow about 20 wildcards)
-'wgCirrusSearchQueryStringMaxDeterminizedStates' => [
-	'default' => 500
-],
-
-# Ban the hebrew plugin, it is unstable
-'wgCirrusSearchBannedPlugins' => [
-	'default' => [ 'elasticsearch-analysis-hebrew' ]
-],
-
-# Build and use an ngram index for faster regex matching
-'wgCirrusSearchWikimediaExtraPlugin' => [
-	'default' => [
-		'regex' => [
-			'build',
-			'use',
-		],
-		'super_detect_noop' => true,
-		'documentVersion' => true,
-		'token_count_router' => true,
-		'term_freq' => true
-	]
-],
-
-# Enable the ores_articletopics field
-'wgCirrusSearchWMFExtraFeatures' => [
-	'default' => [
-		'ores_articletopics' => [
-			'build' => true,
-			'use' => true,
-		],
-		'weighted_tags' => [
-			'build' => true,
-			'use' => true,
-		]
-	]
-],
-
-# Enable the "experimental" highlighter on all wikis
-'wgCirrusSearchUseExperimentalHighlighter' => [
-	'default' => true
-],
-
-'wgCirrusSearchOptimizeIndexForExperimentalHighlighter' => [
-	'default' => true
-],
-
-// We had an incident of filling up the entire clusters redis instances after
-// 6 hours, and problems with the new kafka (before we enabled compression)
-// based job queue as well. Cut the time down to 2 hours, as this is not supposed
-// to ride out a full-fledged outage, but paper over minor unavailabilities
-// for cluster/network/etc maintenance.
-'wgCirrusSearchDropDelayedJobsAfter' => [
-	'default' => 60 * 60 * 2
-],
-
-// Commons is special
-'wgCirrusSearchNamespaceMappings' => [
-	'default' => [],
-	'commonswiki' => [ NS_FILE => 'file' ],
-],
-
-// T94856 - makes searching difficult for locally uploaded files
-// T76957 - doesn't make sense to have Commons files on foundationwiki search
-'wgCirrusSearchExtraIndexes' => [
-	'default' => [ NS_FILE => [ 'commonswiki_file' ] ],
-	'commonswiki' => [], // Commons is special
-	'officewiki' => [], // T94856 - makes searching difficult for locally uploaded files
-	'foundationwiki' => [], // T76957 - doesn't make sense to have Commons files on foundationwiki search
-],
-
-'wgCirrusSearchExtraIndexBoostTemplates' => [
-	'default' => [
-		'commonswiki_file' => [
-			'wiki' => 'commonswiki',
-			'boosts' => [
-				// Copied from https://commons.wikimedia.org/wiki/MediaWiki:Cirrussearch-boost-templates
-				'Template:Assessments/commons/featured' => 2.5,
-				'Template:Picture_of_the_day' => 1.5,
-				'Template:Valued_image' => 1.75,
-				'Template:Assessments' => 1.5,
-				'Template:Quality_image' => 1.75,
-			],
-		],
-	],
-	'commonswiki' => [], // Commons is special
-	'officewiki' => [], // T94856 - makes searching difficult for locally uploaded files
-	'foundationwiki' => [], // T76957 - doesn't make sense to have Commons files on foundationwiki search
-],
-
-'wgCirrusSearchTextcatConfig' => [
-	'default' => [
-		'maxNgrams' => 9000,
-		'maxReturnedLanguages' => 1,
-		'resultsRatio' => 1.06,
-		'minInputLength' => 3,
-		'maxProportion' => 0.85,
-		'langBoostScore' => 0.14,
-		'numBoostedLangs' => 2,
-	],
-],
-
-// Set the scoring method
-'wgCirrusSearchCompletionDefaultScore' => [
-	'default' => 'popqual'
-],
-
-// Aliases for filetype: search
-'wgCirrusSearchFiletypeAliases' => [
-	'default' => [
-		"pdf" => "office",
-		"ppt" => "office",
-		"doc" => "office",
-		"jpg" => "bitmap",
-		"image" => "bitmap",
-		"webp" => "bitmap",
-		"mp3" => "audio",
-		"svg" => "drawing"
-	]
-],
-
-// Enable the new layout, FIXME: remove the old one
-'wgCirrusSearchNewCrossProjectPage' => [
-	'default' => true
-],
-
-// Display X results per crossproject
-'wgCirrusSearchNumCrossProjectSearchResults' => [
-	'default' => 1
-],
-
-// Load other project config via cirrus dump config API
-'wgCirrusSearchFetchConfigFromApi' => [
-	'default' => true
-],
-
-'wgCirrusSearchRescoreProfiles' => [
-	'default' => []
-],
-
-// Set SPARQL endpoint for categories
-'wgCirrusSearchCategoryEndpoint' => [
-	'default' => 'https://query.wikidata.org/bigdata/namespace/categories/sparql'
-],
-
-// Our cluster often has issues completing master actions
-// within the default 30s timeout.
-'wgCirrusSearchMasterTimeout' => [
-	'default' => '5m'
-],
-
-// Limit archive indices to our internal search clusters (and not cloudelastic)
-'wgCirrusSearchPrivateClusters' => [
-	'default' => [ 'eqiad', 'codfw' ]
-],
-
-# Lower the timeouts - the defaults are too high and allow to scan too many
-# pages. 40s shard timeout for regex allowed to deep scan 9million pages for
-# insource:/the/ on commons. Keep client timeout relatively high in comparaison,
-# but not higher than 60sec as it's the max time allowed for GET requests.
-# we really don't want to timeout the client before the shard retrieval (we may
-# release the poolcounter before the end of the query on the backend)
-'wgCirrusSearchSearchShardTimeout' => [
-	'default' => [
-		"comp_suggest" => "5s",
-		"prefix" => "5s",
-		"default" => "10s",
-		"regex" => "15s",
-	],
-],
-
-'wgCirrusSearchClientSideSearchTimeout' => [
-	'default' => [
-		"comp_suggest" => 10,
-		"prefix" => 10,
-		// GET requests timeout at 60s, give some room to treat request timeout (T216860)
-		"default" => 40,
-		"regex" => 50,
-	],
-],
-
-'wgCirrusSearchCrossClusterSearch' => [
-	'default' => true
-],
-
-'wgCirrusSearchSanityCheck' => [
-	'default' => true
-],
-
-'wgCirrusSearchConnectionAttempts' => [
-	'default' => 3
-],
-
-'wgCirrusSearchPoolCounterKey' => [
-	'default' => '_elasticsearch',
-	'enwiki' => '_elasticsearch_enwiki'
-],
-
-// cache morelike queries to ObjectCache for 24 hours
-'wgCirrusSearchMoreLikeThisTTL' => [
-	'default' => 86400
-],
-
-// Internal WDQS endpoint
-'wgCirrusSearchCategoryEndpoint' => [
-	'default' => 'http://localhost:6009/bigdata/namespace/categories/sparql'
-],
-
-'wgCirrusSearchCompletionBannedPageIds' => [
-	'default' => [],
-	'enwiktionary' => [ 1821 ],
-],
-
-'wgCirrusSearchDocumentSizeLimiterProfile' => [
-	'default' => 'wmf_capped',
-],
-
 'wgRestAPIAdditionalRouteFiles' => [
 	'default' => [],
 	'testwiki' => [ 'includes/Rest/coreDevelopmentRoutes.json' ],
@@ -27849,6 +25601,13 @@ return [
 	'default' => false,
 ],
 
+// T324999
+'wmgWikibaseRestApiEnabled' => [
+	'default' => false,
+	'testwikidatawiki' => true,
+	'wikidatawiki' => true,
+],
+
 // Wikidata Bridge configuration
 
 'wmgWikibaseRepoDataBridgeEnabled' => [
@@ -27940,6 +25699,7 @@ return [
 	'viwiki' => false,
 	'itwiki' => false,
 	'cawiki' => false,
+	'group1' => false,
 	// Careful with these, since they can partake in cross-wiki inclusion.
 	// See T51097#7401266
 	'metawiki' => true,
