@@ -36,6 +36,10 @@ if ( $wmgRealm == 'labs' ) {
 		'hostsByName' => [
 			// deployment-db09.deployment-prep.eqiad1.wikimedia.cloud, master
 			'deployment-db09' => '172.16.0.238:3306',
+			// deployment-db11.deployment-prep.eqiad1.wikimedia.cloud
+			'deployment-db11' => '172.16.5.150:3306',
+			// deployment-db12.deployment-prep.eqiad1.wikimedia.cloud
+			'deployment-db12' => '172.16.3.239:3306',
 		],
 
 		'externalLoads' => [
