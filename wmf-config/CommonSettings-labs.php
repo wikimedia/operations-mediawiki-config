@@ -439,5 +439,8 @@ if ( $wgDBname == 'dewiki' ) {
 	$wgAutoCreateTempUser['enabled'] = true;
 }
 
+// Temporary read only mode
+$wgReadOnly = 'db maint. If you see this, it means everything else is working again. \o/ --zabe';
+
 }
 // end safeguard
