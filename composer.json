@@ -35,7 +35,7 @@
 		"buildLogoHTML": "php -e multiversion/buildLogoHTML.php",
 		"buildConfigCache": "php -e tests/buildConfigCache.php",
 		"diffConfig": [
-			"@manage-dblist update",
+			"@buildConfigCache",
 			"git checkout -q HEAD~1",
 			"git add -f tests/data/config-cache/",
 			"@buildConfigCache",
