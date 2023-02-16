@@ -17380,6 +17380,7 @@ return [
 	'ruwiktionary' => 'uca-ru', // T54997
 	'sewiki' => 'uca-se-u-kn', // T182431
 	'shwiki' => 'uca-hr-u-kn', // T69287, T149002
+	'simplewiki' => 'uca-default-u-kn', // T329815
 	'slwiki' => 'uca-sl-u-kn', // T208984
 	'slwikibooks' => 'uca-sl-u-kn', // T208984
 	'slwikiquote' => 'uca-sl-u-kn', // T208984
