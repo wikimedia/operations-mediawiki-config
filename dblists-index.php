@@ -172,7 +172,7 @@ return [
 'csbwiki' => [ 'wikipedia', 'desktop-improvements', 'small', 'wikidataclient', 'commonsuploads' ],
 'csbwiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'cswiki' => [ 'wikipedia', 'desktop-improvements', 'flow', 'large', 'wikidataclient', 'commonsuploads', 'cirrussearch-big-indices' ],
-'cswikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
+'cswikibooks' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'cswikinews' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'cswikiquote' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],
 'cswikisource' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
