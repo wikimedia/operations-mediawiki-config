@@ -480,6 +480,16 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterBlockDuration = '24 hours'; // T210364
 		$wgAbuseFilterAnonBlockDuration = '24 hours'; // T210364
 		break;
+	case 'zhwikibooks':
+		$wgAbuseFilterActions['block'] = true; // T330026
+		$wgAbuseFilterBlockDuration = '24 hours'; // T330026
+		$wgAbuseFilterAnonBlockDuration = '24 hours'; // T330026
+		break;
+	case 'zhwikiquote':
+		$wgAbuseFilterActions['block'] = true; // T330026
+		$wgAbuseFilterBlockDuration = '24 hours'; // T330026
+		$wgAbuseFilterAnonBlockDuration = '24 hours'; // T330026
+		break;
 	case 'zhwikiversity':
 		$wgAbuseFilterActions['block'] = true; // T307007
 		$wgAbuseFilterBlockDuration = '24 hours'; // T307007
