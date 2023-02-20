@@ -1308,11 +1308,6 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
-		'wgLinterSubmitterWhitelist' => [
-			'default' => [
-				'172.16.4.125' => true, // deployment-parsoid12.deployment-prep.eqiad1.wikimedia.cloud
-			]
-		],
 		'wgLinterStatsdSampleFactor' => [
 			'default' => 10,
 		],

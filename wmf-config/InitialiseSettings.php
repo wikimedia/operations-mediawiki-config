@@ -12367,55 +12367,6 @@ return [
 	'medium' => 100,
 ],
 
-'wgLinterSubmitterWhitelist' => [
-	'default' => [
-		'10.64.0.39'   => true, # parse1001.eqiad.wmnet
-		'10.64.0.90'   => true, # parse1002.eqiad.wmnet
-		'10.64.0.121'  => true, # parse1003.eqiad.wmnet
-		'10.64.0.123'  => true, # parse1004.eqiad.wmnet
-		'10.64.0.178'  => true, # parse1005.eqiad.wmnet
-		'10.64.0.177'  => true, # parse1006.eqiad.wmnet
-		'10.64.16.48'  => true, # parse1007.eqiad.wmnet
-		'10.64.16.66'  => true, # parse1008.eqiad.wmnet
-		'10.64.16.67'  => true, # parse1009.eqiad.wmnet
-		'10.64.16.68'  => true, # parse1010.eqiad.wmnet
-		'10.64.16.69'  => true, # parse1011.eqiad.wmnet
-		'10.64.16.70'  => true, # parse1012.eqiad.wmnet
-		'10.64.32.108' => true, # parse1013.eqiad.wmnet
-		'10.64.32.109' => true, # parse1014.eqiad.wmnet
-		'10.64.32.110' => true, # parse1015.eqiad.wmnet
-		'10.64.32.183' => true, # parse1016.eqiad.wmnet
-		'10.64.16.71'  => true, # parse1017.eqiad.wmnet
-		'10.64.48.129' => true, # parse1018.eqiad.wmnet
-		'10.64.48.116' => true, # parse1019.eqiad.wmnet
-		'10.64.48.118' => true, # parse1020.eqiad.wmnet
-		'10.64.48.108' => true, # parse1021.eqiad.wmnet
-		'10.64.48.55'  => true, # parse1022.eqiad.wmnet
-		'10.64.48.114' => true, # parse1023.eqiad.wmnet
-		'10.64.48.115' => true, # parse1024.eqiad.wmnet
-		'10.192.0.182' => true, # parse2001.codfw.wmnet
-		'10.192.0.183' => true, # parse2002.codfw.wmnet
-		'10.192.0.184' => true, # parse2003.codfw.wmnet
-		'10.192.0.185' => true, # parse2004.codfw.wmnet
-		'10.192.0.186' => true, # parse2005.codfw.wmnet
-		'10.192.16.21' => true, # parse2006.codfw.wmnet
-		'10.192.16.22' => true, # parse2007.codfw.wmnet
-		'10.192.16.24' => true, # parse2008.codfw.wmnet
-		'10.192.16.25' => true, # parse2009.codfw.wmnet
-		'10.192.16.206' => true, # parse2010.codfw.wmnet
-		'10.192.32.195' => true, # parse2011.codfw.wmnet
-		'10.192.32.196' => true, # parse2012.codfw.wmnet
-		'10.192.32.197' => true, # parse2013.codfw.wmnet
-		'10.192.32.198' => true, # parse2014.codfw.wmnet
-		'10.192.32.199' => true, # parse2015.codfw.wmnet
-		'10.192.48.149' => true, # parse2016.codfw.wmnet
-		'10.192.48.150' => true, # parse2017.codfw.wmnet
-		'10.192.48.151' => true, # parse2018.codfw.wmnet
-		'10.192.48.152' => true, # parse2019.codfw.wmnet
-		'10.192.48.153' => true, # parse2020.codfw.wmnet
-	],
-],
-
 // -------------- RESTBase start --------------
 
 // whether to configure RESTBase as a Virtual REST Service
