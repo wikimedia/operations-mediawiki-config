@@ -16475,16 +16475,6 @@ return [
 	'default' => true, // T309593
 ],
 
-/*
- * Enabled for T306016
- * This should be removed again once the new special page replaced the legacy one.
- */
-'wgLexemeEnableNewAlpha' => [
-	'default' => null,
-	'testwikidatawiki' => true,
-	'wikidatawiki' => true,
-],
-
 'wmgWikibaseDisabledDataTypes' => [
 	'default' => [
 		'entity-schema' // T229904 :'(
