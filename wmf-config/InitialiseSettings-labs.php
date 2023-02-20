@@ -1150,11 +1150,6 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
-		'wgLexemeEnableNewAlpha' => [
-			'default' => null,
-			'wikidatawiki' => true,
-		],
-
 		'-wmgWikibaseSearchIndexProperties' => [
 			'default' => []
 		],
