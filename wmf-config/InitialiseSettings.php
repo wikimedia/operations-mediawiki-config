@@ -9968,6 +9968,10 @@ return [
 		118 => 'noindex,nofollow', // draft, T248860
 		119 => 'noindex,nofollow', // draft talk, T248860
 	],
+	'tawiki' => [
+		118 => 'noindex,nofollow', // T329248
+		119 => 'noindex,nofollow', // T329248
+	],
 	'thwiki' => [
 		NS_TALK => 'noindex,follow',
 		NS_USER => 'noindex,follow',
@@ -10250,6 +10254,7 @@ return [
 	'hewiki' => [ 118, 119 ], // draft and draft talk - T86329
 	'itwiki' => [ 2, 3, 118, 119 ], // user and user talk - T314165, draft and draft talk - T280289
 	'kowiki' => [ 118, 119 ], // draft and draft talk - T92798
+	'tawiki' => [ 118, 119 ], // draft and draft talk - T329248
 	'thwiki' => [ 118, 119 ], // draft and draft talk - T252959
 	'zhwiki' => [ 2, 3, 118, 119 ], // user and user talk - T288947, draft and draft talk - T91223
 ],
@@ -12743,6 +12748,9 @@ return [
 	'+svwiki' => [
 		'Project' => true, // T144688
 		'Portal' => true, // T144688
+	],
+	'+tawiki' => [
+		'வரைவு' => true, // Draft - T329248
 	],
 	'+thwiki' => [
 		'ฉบับร่าง' /* Draft */ => true, // T252959
