@@ -2455,6 +2455,9 @@ function wmfGetOverrideSettings() {
 			'enwiki' => true,
 			'ruwiki' => true,
 		],
+		'wgQuickViewDataRepositoryApiBaseUri' => [
+			'default' => 'https://wikidata.beta.wmflabs.org/w/api.php',
+		],
 		'wgQuickViewMediaRepositoryApiBaseUri' => [
 			'default' => 'https://commons.wikimedia.beta.wmflabs.org/w/api.php',
 		],
