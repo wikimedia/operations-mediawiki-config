@@ -96,6 +96,7 @@ class MWConfigCacheGenerator {
 			( require $configDir . '/logos.php' ) +
 			( require $configDir . '/InitialiseSettings.php' ) +
 			( require $configDir . '/core-Namespaces.php' ) +
+			( require $configDir . '/core-Permissions.php' ) +
 			( require $configDir . '/ext-ORES.php' ) +
 			( require $configDir . '/ext-CirrusSearch.php' ) +
 			( require $configDir . '/ext-Babel.php' ) +
