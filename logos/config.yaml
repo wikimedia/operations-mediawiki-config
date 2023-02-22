@@ -3568,10 +3568,12 @@ Wikivoyage:
         no_2x: true
         selected_icon: metawiki
     sysop_itwiki:
-        comment: T256545
-        comment_1_5x: T256545
-        comment_2x: T256545
-        no_wordmark: true
+        commons: 'File:Wikipedia Administrator.svg'
+        comment: T256545, T330279
+        comment_1_5x: T330279, T330279
+        comment_2x: T330279, T330279
+        commons_wordmark: 'File:Sysop itwiki-wordmark.svg'
+        comment_wordmark: T330279
         no_icon: true
     strategywiki:
         no_1_5x: true

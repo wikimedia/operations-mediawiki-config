@@ -850,7 +850,7 @@ return [
 	'spcomwiki' => '/static/images/project-logos/spcomwiki.png',
 	'specieswiki' => '/static/images/project-logos/specieswiki.png', // T306037, T310961
 	'stewardwiki' => '/static/images/project-logos/stewardwiki.png', // T39700
-	'sysop_itwiki' => '/static/images/project-logos/sysop_itwiki.png', // T256545
+	'sysop_itwiki' => '/static/images/project-logos/sysop_itwiki.png', // T256545, T330279
 	'strategywiki' => '/static/images/project-logos/strategywiki.png',
 	'tenwiki' => '/static/images/project-logos/tenwiki.png',
 	'test2wiki' => '/static/images/project-logos/test2wiki.png',
@@ -1472,7 +1472,7 @@ return [
 	'ombudsmenwiki' => '/static/images/project-logos/ombudsmenwiki-1.5x.png',
 	'otrs_wikiwiki' => '/static/images/project-logos/otrs_wikiwiki-1.5x.png',
 	'specieswiki' => '/static/images/project-logos/specieswiki-1.5x.png', // T230113, T306037, T310961
-	'sysop_itwiki' => '/static/images/project-logos/sysop_itwiki-1.5x.png', // T256545
+	'sysop_itwiki' => '/static/images/project-logos/sysop_itwiki-1.5x.png', // T330279, T330279
 	'test2wiki' => '/static/images/project-logos/test2wiki-1.5x.png',
 	'testcommonswiki' => '/static/images/project-logos/commonswiki-1.5x.png', // T203343
 	'testwiki' => '/static/images/project-logos/testwiki-1.5x.png', // T150618
@@ -2074,7 +2074,7 @@ return [
 	'ombudsmenwiki' => '/static/images/project-logos/ombudsmenwiki-2x.png',
 	'otrs_wikiwiki' => '/static/images/project-logos/otrs_wikiwiki-2x.png',
 	'specieswiki' => '/static/images/project-logos/specieswiki-2x.png', // T230113, T306037, T310961
-	'sysop_itwiki' => '/static/images/project-logos/sysop_itwiki-2x.png', // T256545
+	'sysop_itwiki' => '/static/images/project-logos/sysop_itwiki-2x.png', // T330279, T330279
 	'test2wiki' => '/static/images/project-logos/test2wiki-2x.png',
 	'testcommonswiki' => '/static/images/project-logos/commonswiki-2x.png', // T203343
 	'testwiki' => '/static/images/project-logos/testwiki-2x.png', // T150618
@@ -3412,7 +3412,11 @@ return [
 		'width' => 120,
 		'height' => 29,
 	],
-	'sysop_itwiki' => null,
+	'sysop_itwiki' => [ // T330279
+		'src' => '/static/images/mobile/copyright/sysop_itwiki-wordmark.svg',
+		'width' => 79,
+		'height' => 12,
+	],
 	'strategywiki' => [ // T290091
 		'src' => '/static/images/mobile/copyright/strategywiki-wordmark.svg',
 		'width' => 142,
