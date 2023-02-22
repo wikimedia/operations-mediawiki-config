@@ -14399,6 +14399,7 @@ return [
 	'fywiki' => 90, // T323415
 	'hywiki' => 80, // T313208
 	'idwiki' => 70,
+	'kuwiki' => 45, // T324941
 	'mnwiki' => 89, // T319156
 	'tewiki' => 70,
 	'viwiki' => 90, // T275121
