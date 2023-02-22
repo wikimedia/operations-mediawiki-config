@@ -3107,14 +3107,6 @@ return [
 	'itwiki' => true, // T330533
 ],
 
-'wgOriginTrials' => [
-	'default' => [],
-],
-
-'wgFeaturePolicyReportOnly' => [
-	'default' => [],
-],
-
 'wgGroupInheritsPermissions' => [
 	'default' => [
 		// Confirmed can do anything autoconfirmed can.
