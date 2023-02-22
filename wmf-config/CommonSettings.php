@@ -265,6 +265,7 @@ $wgLocalVirtualHosts = [
 	'test.wikidata.org',
 	'api.wikimedia.org',
 	'ar.wikimedia.org',
+	'az.wikimedia.org',
 	'bd.wikimedia.org',
 	'be.wikimedia.org',
 	'br.wikimedia.org',

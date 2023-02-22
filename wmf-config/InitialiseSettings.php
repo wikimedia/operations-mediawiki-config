@@ -314,6 +314,7 @@ return [
 	'aswikisource' => 'Asia/Kolkata', // T45129
 	'atjwiki' => 'America/Montreal', // T167714
 	'awawiki' => 'Asia/Kolkata', // T251371
+	'azwikimedia' => 'Asia/Baku',
 	'banwiki' => 'Asia/Makassar',
 	'banwikisource' => 'Asia/Makassar',
 	'barwiki' => 'Europe/Berlin',
@@ -661,6 +662,7 @@ return [
 	'zhwikinews' => false,
 
 	// Other individual wikis
+	'azwikimedia' => false,
 	'enwikiquote' => false, // http://en.wikiquote.org/wiki/Wikiquote_talk:Image_use_policy
 	'eswiki' => false, // T8408
 	'eswikibooks' => false, // T20865
@@ -850,6 +852,7 @@ return [
 	'apiportalwiki' => '//api.wikimedia.org',
 	'arwikimedia' => '//ar.wikimedia.org',
 	'auditcomwiki' => '//auditcom.wikimedia.org',
+	'azwikimedia' => '//az.wikimedia.org',
 	'be_x_oldwiki' => '//be-tarask.wikipedia.org',
 	'boardgovcomwiki' => '//boardgovcom.wikimedia.org',
 	'boardwiki' => '//board.wikimedia.org',
@@ -950,6 +953,7 @@ return [
 	'apiportalwiki' => 'https://api.wikimedia.org',
 	'arwikimedia' => 'https://ar.wikimedia.org',
 	'auditcomwiki' => 'https://auditcom.wikimedia.org',
+	'azwikimedia' => 'https://az.wikimedia.org',
 	'be_x_oldwiki' => 'https://be-tarask.wikipedia.org',
 	'boardgovcomwiki' => 'https://boardgovcom.wikimedia.org',
 	'boardwiki' => 'https://board.wikimedia.org',
@@ -1086,6 +1090,7 @@ return [
 	'awawiki' => 'विकिपीडिया', // T251371
 	'azwiki' => 'Vikipediya',
 	'azwikibooks' => 'Vikikitab', // T33068
+	'azwikimedia' => 'Azərbaycan vikimediaçıları istifadəçi qrupu',
 	'azwikiquote' => 'Vikisitat',
 	'azwikisource' => 'Vikimənbə', // T114002
 	'azbwiki' => 'ویکی‌پدیا', // T106305
@@ -3148,6 +3153,7 @@ return [
 	// Specific wikis
 
 	// chapter wikis
+	'azwikimedia' => [ 'w', 'meta' ],
 	'bdwikimedia' => [ 'w:bn', 'w:en', 'c' ], // T154990
 	'bewikimedia' => [ 'meta' ],
 	'brwikimedia' => [ 'wikipedia:pt', 'meta', 'wiktionary:pt', 'wikisource:pt', 'wikinews:pt', 'wikiquote:pt', 'wikibooks:pt', 'wikiversity:pt', 'commons' ], // T60936
@@ -6256,6 +6262,7 @@ return [
 	// Single-language wikis
 	'abwiki' => 'uppercase-ab', // T183430
 	'azwiki' => 'uca-az', // T201770
+	'azwikimedia' => 'uca-az',
 	'bawiki' => 'uppercase-ba', // T162823
 	'bawikibooks' => 'uppercase-ba', // T162823
 	'be_x_oldwiki' => 'uca-be-tarask', // T48005

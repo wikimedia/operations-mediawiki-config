@@ -93,6 +93,7 @@ class MWMultiVersion {
 	private $wikimediaSubdomains = [
 		'am',
 		'ar',
+		'az',
 		'bd',
 		'be',
 		'br',

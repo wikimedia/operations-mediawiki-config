@@ -4963,6 +4963,7 @@ return [
 	'aywiki' => 'Wikipidiya',
 	'azwiki' => 'Vikipediya',
 	'azwikibooks' => 'Vikikitab', // T33068
+	'azwikimedia' => 'Vikimedia',
 	'azwikisource' => 'Vikimənbə',
 	'azwikiquote' => 'Vikisitat',
 	'azwiktionary' => 'Vikilüğət', // T128296
@@ -5462,6 +5463,7 @@ return [
 	'aswikisource' => 'ৱিকিউৎস_বাৰ্তা', // T45129, T226027
 	'aywiki' => 'Wikipidiyan_Aruskipäwi',
 	'azbwiki' => 'ویکی‌پدیا_دانیشیغی', // T106305
+	'azwikimedia' => 'Müzakirə',
 	'bat_smgwiki' => 'Vikipedėjės_aptarėms',
 	'bawikibooks' => 'Викидәреслек_буйынса_фекерләшеү', // T173471
 	'bdwikimedia' => 'উইকিমিডিয়া_বাংলাদেশ_আলোচনা',

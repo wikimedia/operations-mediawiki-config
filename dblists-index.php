@@ -71,6 +71,7 @@ return [
 'azbwiki' => [ 'wikipedia', 'desktop-improvements', 'medium', 'wikidataclient', 'cirrussearch-big-indices' ],
 'azwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'cirrussearch-big-indices' ],
 'azwikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
+'azwikimedia' => [ 'fishbowl', 'small', 'group1' ],
 'azwikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],
 'azwikisource' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'azwiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],

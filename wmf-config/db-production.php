@@ -56,6 +56,7 @@ $wgLBFactoryConf = [
 	'arbcom_ruwiki' => 's5',
 	'aswikiquote'   => 's5',
 	'avkwiki'      => 's5',
+	'azwikimedia'   => 's5',
 	'banwikisource' => 's5',
 	'bclwiktionary' => 's5',
 	'bclwikiquote'  => 's5',
