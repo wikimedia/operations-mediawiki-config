@@ -13694,6 +13694,15 @@ return [
 	'cswiki' => 'beta',
 ],
 
+'wgGEPersonalizedPraiseBackendEnabled' => [
+	'default' => false,
+	'arwiki' => true,
+	'bnwiki' => true,
+	'cswiki' => true,
+	'eswiki' => true,
+	'testwiki' => true,
+],
+
 'wgGETopicsMatchModeEnabled' => [
 	'default' => false,
 	// Enable Growth's feature topic match mode (T305399).
