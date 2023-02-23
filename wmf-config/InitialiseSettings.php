@@ -9155,7 +9155,10 @@ return [
 	'enwiki' => [
 		'userGroups' => [ 'extendedconfirmed', 'sysop' ]
 	],
-	'viwiki' => [
+	'trwiki' => [ // T330363
+		'userGroups' => [ 'autoreview', 'patroller', 'sysop' ]
+	],
+	'viwiki' => [ // T299636
 		'userGroups' => [ 'extendedconfirmed', 'eliminator', 'sysop' ]
 	],
 ],
