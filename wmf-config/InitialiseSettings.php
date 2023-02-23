@@ -6974,6 +6974,7 @@ return [
 	'default' => false,
 	'advisorswiki' => true, // T189181
 	'amwikimedia' => true, // T180879
+	'azwikimedia' => true,
 	'bewikimedia' => true, // T39391
 	'betawikiversity' => true, // T160120
 	'brwikimedia' => true, // T46054
