@@ -2389,10 +2389,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		'wmgWikibaseClientUnconnectedPageMigrationStage' => [
-			'default' => MIGRATION_NEW,
-		],
-
 		'wmgWikibaseTmpEnableMulLanguageCode' => [
 			'default' => true,
 		],

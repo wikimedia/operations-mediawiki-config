@@ -371,15 +371,6 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['linkItemTags'] = [ 'client-linkitem-change' ];
 
-	// Temporary
-	if ( isset( $wmgWikibaseClientUnconnectedPageMigrationStage ) ) {
-		$wgWBClientSettings['tmpUnconnectedPagePagePropMigrationStage'] = $wmgWikibaseClientUnconnectedPageMigrationStage;
-	}
-	// Temporary 2022-09
-	if ( isset( $wmgWikibaseClientUnconnectedPagePagePropMigrationLegacyFormat ) ) {
-		$wgWBClientSettings['tmpUnconnectedPagePagePropMigrationLegacyFormat'] = $wmgWikibaseClientUnconnectedPagePagePropMigrationLegacyFormat;
-	}
-
 	// Temporary, T297393
 	if ( isset( $wmgWikibaseTmpEnableMulLanguageCode ) ) {
 		$wgWBClientSettings['tmpEnableMulLanguageCode'] = $wmgWikibaseTmpEnableMulLanguageCode;

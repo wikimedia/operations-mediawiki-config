@@ -13149,14 +13149,6 @@ return [
 	'default' => true,
 ],
 
-'wmgWikibaseClientUnconnectedPageMigrationStage' => [
-	'default' => MIGRATION_NEW,
-],
-
-'wmgWikibaseClientUnconnectedPagePagePropMigrationLegacyFormat' => [
-	'default' => false,
-],
-
 'wmgWikibaseTmpEnableMulLanguageCode' => [
 	'default' => null,
 	'wikidataclient-test' => true,
