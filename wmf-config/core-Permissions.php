@@ -443,6 +443,7 @@ return [
 		'bot' => [
 			'ipblock-exempt' => true, // T44720
 			'extendedconfirmed' => true, // T316283
+			'changetags' => true, // T330383
 		],
 		'arbcom' => [ // T63418
 			'browsearchive' => true,
@@ -473,7 +474,11 @@ return [
 			'patrol' => true,
 			'unwatchedpages' => true,
 		],
-		'sysop' => [ 'extendedconfirmed' => true ], // T316283
+		'sysop' => [
+			'extendedconfirmed' => true, // T316283
+			'changetags' => true, // T330383
+		],
+		'user' => [ 'changetags' => false ], // T330383
 	],
 	'+cswikinews' => [
 		'autopatrolled' => [ 'autopatrol' => true, ],
