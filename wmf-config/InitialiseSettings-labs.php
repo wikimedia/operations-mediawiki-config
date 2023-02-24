@@ -603,6 +603,9 @@ function wmfGetOverrideSettings() {
 				]
 			]
 		],
+		'wgVectorPromoteAddTopic' => [
+			'default' => true
+		],
 
 		'wmgCommonsMetadataForceRecalculate' => [
 			'default' => true,

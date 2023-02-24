@@ -2400,6 +2400,10 @@ return [
 	'default' => 28,
 ],
 
+'wgVectorPromoteAddTopic' => [
+	'default' => false
+],
+
 # wgForceUIMsgAsContentMsg @{
 'wgForceUIMsgAsContentMsg' => [
 	'default' => [],
