@@ -108,8 +108,8 @@ $selectedFileViewRawUrlEsc = htmlspecialchars( $selectedFileViewRawUrl );
 
 	<nav class="wm-site-nav"><ul class="wm-nav">
 		<li><a href="/conf/" class="wm-nav-item-active">Config files</a><li>
-		<li><a href="/db.php">Database view</a></li>
-		<li><a href="/wiki.php">Wiki view</a></li>
+		<li><a href="/db.php">Database config</a></li>
+		<li><a href="/wiki.php">Wiki config</a></li>
 	</ul></nav>
 
 	<article>

@@ -1,10 +1,6 @@
 <?php
 /**
- * To test the script locally, run:
- *
- *     cd docroot/noc$ php -S localhost:9412
- *
- * Then view <http://localhost:9412/conf/>.
+ * To preview NOC locally, check docroot/noc/README.md
  */
 
 	/**
@@ -51,12 +47,12 @@
 	<nav class="wm-site-nav"><ul class="wm-nav">
 		<li><a href="/conf/" class="wm-nav-item-active">Config files</a>
 			<ul>
-				<li><a href="#wmf-config">MediaWiki config</a></li>
-				<li><a href="#dblist">Database lists</a></li>
+				<li><a href="#wmf-config">wmf-config/</a></li>
+				<li><a href="#dblist">dblists/</a></li>
 			</ul>
 		</li>
-		<li><a href="/db.php">Database view</a></li>
-		<li><a href="/wiki.php">Wiki view</a></li>
+		<li><a href="/db.php">Database config</a></li>
+		<li><a href="/wiki.php">Wiki config</a></li>
 	</ul></nav>
 
 	<article>
