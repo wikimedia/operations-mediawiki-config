@@ -22,7 +22,6 @@
 # - mediawiki/LocalSettings.php
 #   `-- wmf-config/CommonSettings.php [THIS FILE]
 #       |-- wmf-config/*Services.php
-#       |-- wmf-config/etcd.php
 #       |-- wmf-config/InitialiseSettings.php
 #       |-- private/PrivateSettings.php
 #       |-- wmf-config/logging.php
@@ -73,7 +72,7 @@ if ( PHP_SAPI !== 'cli' ) {
 require_once __DIR__ . '/../src/XWikimediaDebug.php';
 require_once __DIR__ . '/../src/ServiceConfig.php';
 require_once __DIR__ . '/../src/ClusterConfig.php';
-require_once __DIR__ . '/etcd.php';
+require_once __DIR__ . '/../src/etcd.php';
 require_once __DIR__ . '/../multiversion/MWConfigCacheGenerator.php';
 
 // Past this point we know:

@@ -32,7 +32,7 @@ $dbSelectedDC = in_array( $_GET['dc'] ?? null, $validDCs )
 	: $validDCs[0];
 
 // Now load the JSON written to Etcd by dbctl, and merge it in.
-// This is mimicking what wmfApplyEtcdDBConfig (wmf-config/etcd.php) does in prod.
+// This is mimicking what wmfApplyEtcdDBConfig (src/etcd.php) does in prod.
 if ( $isLocalhost ) {
 	$dbconfig = json_decode(
 		file_get_contents(
