@@ -824,6 +824,12 @@ return [
 			'abusefilter-log-detail' => true, // T70319
 		],
 		'flood' => [ 'bot' => true ], // T50682
+		'sysop' => [ 'templateeditor' => true ], // T330470
+		'templateeditor' => [
+			'templateeditor' => true,
+			'tboverride' => true,
+			'editcontentmodel' => true,
+			], // T330470
 	],
 	'+eswikibooks' => [
 		'*' => [
@@ -3357,6 +3363,7 @@ return [
 		'bureaucrat' => [
 			'abusefilter', // T262174
 			'rollbacker',
+			'templateeditor', // T330470
 		],
 		'sysop' => [
 			'rollbacker',
@@ -4748,7 +4755,7 @@ return [
 		'sysop' => [ 'abusefilter', 'autopatrolled', 'upload-shared', ],
 	],
 	'+eswiki' => [
-		'bureaucrat' => [ 'abusefilter', 'rollbacker' ], // T262174
+		'bureaucrat' => [ 'abusefilter', 'rollbacker', 'templateeditor' ], // T262174, T330470
 		'sysop' => [ 'rollbacker', 'autopatrolled', 'patroller' ],
 	],
 	'+eswikibooks' => [

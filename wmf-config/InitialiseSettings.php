@@ -1885,6 +1885,7 @@ return [
 	'enwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T126607, T57432
 	'enwiktionary' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'templateeditor', 'sysop' ], // T148007, T296580
 	'enwikivoyage' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T198056
+	'eswiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T330470
 	'etwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T153465
 	'fawiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T140839
 	'foundationwiki' => [ '', 'autoconfirmed', 'edit-legal', 'sysop' ], // T205352
