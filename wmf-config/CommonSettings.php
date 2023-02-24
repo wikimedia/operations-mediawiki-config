@@ -3798,6 +3798,8 @@ if ( $wmgUseOATHAuth ) {
 	$wgGroupPermissions['sysop']['oathauth-view-log'] = false;
 	$wgGroupPermissions['sysop']['oathauth-verify-user'] = false; // T209749
 
+	$wgOATHAuthMultipleDevicesMigrationStage = MIGRATION_OLD;
+
 	if ( $wmgUseCentralAuth ) {
 		$wgOATHAuthAccountPrefix = 'Wikimedia';
 		$wgOATHAuthDatabase = 'centralauth';
