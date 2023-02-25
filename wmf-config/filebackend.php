@@ -1,23 +1,23 @@
 <?php
-# WARNING: This file is publicly viewable on the web. Do not put private data here.
+// WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-# filebackend.php holds the configuration for MediaWiki file backends and file repos.
-# See also <https://www.mediawiki.org/wiki/Manual:$wgFileBackends> and
-# <https://www.mediawiki.org/wiki/Manual:$wgForeignFileRepos>.
-#
-# This for PRODUCTION.
-#
-# Effective load order:
-# - multiversion
-# - mediawiki/DefaultSettings.php
-# - wmf-config/*Services.php
-# - wmf-config/etcd.php
-# - wmf-config/InitialiseSettings.php
-# - wmf-config/logging.php
-# - wmf-config/filebackend.php [THIS FILE]
-#
-# Included from: wmf-config/CommonSettings.php.
-#
+// filebackend.php holds the configuration for MediaWiki file backends and file repos.
+// See also <https://www.mediawiki.org/wiki/Manual:$wgFileBackends> and
+// <https://www.mediawiki.org/wiki/Manual:$wgForeignFileRepos>.
+//
+// This for PRODUCTION.
+//
+// Effective load order:
+// - multiversion
+// - mediawiki/DefaultSettings.php
+// - wmf-config/*Services.php
+// - wmf-config/etcd.php
+// - wmf-config/InitialiseSettings.php
+// - wmf-config/logging.php
+// - wmf-config/filebackend.php [THIS FILE]
+//
+// Included from: wmf-config/CommonSettings.php.
+//
 
 // Inline comments are often used for noting the task(s) associated with specific configuration
 // or for explaining the configuration settings, and requiring comments to be on their own line
@@ -26,7 +26,7 @@
 
 global $wmgSwiftConfig;
 // Common OpenStack Swift backend convenience variables
-$wmgSwiftBigWikis = [ # DO NOT change without proper migration first
+$wmgSwiftBigWikis = [ // DO NOT change without proper migration first
 	'commonswiki', 'dewiki', 'enwiki', 'fiwiki', 'frwiki', 'hewiki', 'huwiki', 'idwiki',
 	'itwiki', 'jawiki', 'rowiki', 'ruwiki', 'thwiki', 'trwiki', 'ukwiki', 'zhwiki'
 ];
@@ -45,165 +45,184 @@ if ( $wmgRealm === 'labs' ) {
 
 /* DC-specific Swift backend config */
 foreach ( $wmgDatacenters as $specificDC ) {
-	$wgFileBackends[] = [ // backend config for wiki's local repo
-		'class'              => SwiftFileBackend::class,
-		'name'               => "local-swift-{$specificDC}",
-		'wikiId'             => "{$site}-{$lang}",
-		'lockManager'        => 'redisLockManager',
-		'swiftAuthUrl'       => $wmgAllServices[$specificDC]['mediaSwiftAuth'],
-		'swiftStorageUrl'    => $wmgAllServices[$specificDC]['mediaSwiftStore'],
-		'swiftUser'          => $wmgSwiftConfig[$specificDC]['user'],
-		'swiftKey'           => $wmgSwiftConfig[$specificDC]['key'],
-		'swiftTempUrlKey'    => $wmgSwiftConfig[$specificDC]['tempUrlKey'],
+	// backend config for wiki's local repo
+	$wgFileBackends[] = [
+		'class' => SwiftFileBackend::class,
+		'name' => "local-swift-{$specificDC}",
+		'wikiId' => "{$site}-{$lang}",
+		'lockManager' => 'redisLockManager',
+		'swiftAuthUrl' => $wmgAllServices[$specificDC]['mediaSwiftAuth'],
+		'swiftStorageUrl' => $wmgAllServices[$specificDC]['mediaSwiftStore'],
+		'swiftUser' => $wmgSwiftConfig[$specificDC]['user'],
+		'swiftKey' => $wmgSwiftConfig[$specificDC]['key'],
+		'swiftTempUrlKey' => $wmgSwiftConfig[$specificDC]['tempUrlKey'],
 		'shardViaHashLevels' => [
-			'local-public'
-				=> [ 'levels' => $wmgSwiftShardLocal, 'base' => 16, 'repeat' => 1 ],
-			'local-thumb'
-				=> [ 'levels' => $wmgSwiftShardLocal, 'base' => 16, 'repeat' => 1 ],
-			'local-temp'
-				=> [ 'levels' => $wmgSwiftShardLocal, 'base' => 16, 'repeat' => 1 ],
-			'local-transcoded'
-				=> [ 'levels' => $wmgSwiftShardLocal, 'base' => 16, 'repeat' => 1 ],
-			'local-deleted'
-				=> [ 'levels' => $wmgSwiftShardLocal, 'base' => 36, 'repeat' => 0 ]
+			'local-public' =>
+				[ 'levels' => $wmgSwiftShardLocal, 'base' => 16, 'repeat' => 1 ],
+			'local-thumb' =>
+				[ 'levels' => $wmgSwiftShardLocal, 'base' => 16, 'repeat' => 1 ],
+			'local-temp' =>
+				[ 'levels' => $wmgSwiftShardLocal, 'base' => 16, 'repeat' => 1 ],
+			'local-transcoded' =>
+				[ 'levels' => $wmgSwiftShardLocal, 'base' => 16, 'repeat' => 1 ],
+			'local-deleted' =>
+				[ 'levels' => $wmgSwiftShardLocal, 'base' => 36, 'repeat' => 0 ],
 		],
-		'parallelize'        => 'implicit',
-		'cacheAuthInfo'      => true,
+		'parallelize' => 'implicit',
+		'cacheAuthInfo' => true,
 		// When used by FileBackendMultiWrite, read from this cluster if it's the local one
-		'readAffinity'       => ( $specificDC === $wmgDatacenter ),
-		'readUsers'           => [ $wmgSwiftConfig[$specificDC]['thumborUser'] ],
-		'writeUsers'          => [ $wmgSwiftConfig[$specificDC]['thumborUser'] ],
-		'secureReadUsers'     => [ $wmgSwiftConfig[$specificDC]['thumborPrivateUser'] ],
-		'secureWriteUsers'    => [ $wmgSwiftConfig[$specificDC]['thumborPrivateUser'] ],
-		'connTimeout'         => 10,
-		'reqTimeout'          => 900, // T226979
+		'readAffinity' => ( $specificDC === $wmgDatacenter ),
+		'readUsers' => [ $wmgSwiftConfig[$specificDC]['thumborUser'] ],
+		'writeUsers' => [ $wmgSwiftConfig[$specificDC]['thumborUser'] ],
+		'secureReadUsers' => [ $wmgSwiftConfig[$specificDC]['thumborPrivateUser'] ],
+		'secureWriteUsers' => [ $wmgSwiftConfig[$specificDC]['thumborPrivateUser'] ],
+		'connTimeout' => 10,
+		// T226979
+		'reqTimeout' => 900,
 	];
-	$wgFileBackends[] = [ // backend config for wiki's access to shared repo
-		'class'              => SwiftFileBackend::class,
-		'name'               => "shared-swift-{$specificDC}",
-		'wikiId'             => "wikipedia-commons",
-		'lockManager'        => 'redisLockManager',
-		'swiftAuthUrl'       => $wmgAllServices[$specificDC]['mediaSwiftAuth'],
-		'swiftStorageUrl'    => $wmgAllServices[$specificDC]['mediaSwiftStore'],
-		'swiftUser'          => $wmgSwiftConfig[$specificDC]['user'],
-		'swiftKey'           => $wmgSwiftConfig[$specificDC]['key'],
-		'swiftTempUrlKey'    => $wmgSwiftConfig[$specificDC]['tempUrlKey'],
+
+	// backend config for wiki's access to shared repo
+	$wgFileBackends[] = [
+		'class' => SwiftFileBackend::class,
+		'name' => "shared-swift-{$specificDC}",
+		'wikiId' => "wikipedia-commons",
+		'lockManager' => 'redisLockManager',
+		'swiftAuthUrl' => $wmgAllServices[$specificDC]['mediaSwiftAuth'],
+		'swiftStorageUrl' => $wmgAllServices[$specificDC]['mediaSwiftStore'],
+		'swiftUser' => $wmgSwiftConfig[$specificDC]['user'],
+		'swiftKey' => $wmgSwiftConfig[$specificDC]['key'],
+		'swiftTempUrlKey' => $wmgSwiftConfig[$specificDC]['tempUrlKey'],
 		'shardViaHashLevels' => [
-			'local-public'
-				=> [ 'levels' => $wmgSwiftShardCommon, 'base' => 16, 'repeat' => 1 ],
-			'local-thumb'
-				=> [ 'levels' => $wmgSwiftShardCommon, 'base' => 16, 'repeat' => 1 ],
-			'local-temp'
-				=> [ 'levels' => $wmgSwiftShardCommon, 'base' => 16, 'repeat' => 1 ],
-			'local-transcoded'
-				=> [ 'levels' => $wmgSwiftShardCommon, 'base' => 16, 'repeat' => 1 ],
+			'local-public' =>
+				 [ 'levels' => $wmgSwiftShardCommon, 'base' => 16, 'repeat' => 1 ],
+			'local-thumb' =>
+				[ 'levels' => $wmgSwiftShardCommon, 'base' => 16, 'repeat' => 1 ],
+			'local-temp' =>
+				[ 'levels' => $wmgSwiftShardCommon, 'base' => 16, 'repeat' => 1 ],
+			'local-transcoded' =>
+				[ 'levels' => $wmgSwiftShardCommon, 'base' => 16, 'repeat' => 1 ],
 		],
-		'parallelize'        => 'implicit',
-		'cacheAuthInfo'      => true,
+		'parallelize' => 'implicit',
+		'cacheAuthInfo' => true,
 		// When used by FileBackendMultiWrite, read from this cluster if it's the local one
-		'readAffinity'       => ( $specificDC === $wmgDatacenter ),
-		'readUsers'           => [ $wmgSwiftConfig[$specificDC]['thumborUser'] ],
-		'writeUsers'          => [ $wmgSwiftConfig[$specificDC]['thumborUser'] ],
-		'secureReadUsers'     => [ $wmgSwiftConfig[$specificDC]['thumborPrivateUser'] ],
-		'secureWriteUsers'    => [ $wmgSwiftConfig[$specificDC]['thumborPrivateUser'] ],
-		'connTimeout'         => 10,
-		'reqTimeout'          => 900, // T226979
+		'readAffinity' => ( $specificDC === $wmgDatacenter ),
+		'readUsers' => [ $wmgSwiftConfig[$specificDC]['thumborUser'] ],
+		'writeUsers' => [ $wmgSwiftConfig[$specificDC]['thumborUser'] ],
+		'secureReadUsers' => [ $wmgSwiftConfig[$specificDC]['thumborPrivateUser'] ],
+		'secureWriteUsers' => [ $wmgSwiftConfig[$specificDC]['thumborPrivateUser'] ],
+		'connTimeout' => 10,
+		// T226979
+		'reqTimeout' => 900,
 	];
-	$wgFileBackends[] = [ // backend config for wiki's access to shared files
-		'class'              => SwiftFileBackend::class,
-		'name'               => "global-swift-{$specificDC}",
-		'wikiId'             => "global-data",
-		'lockManager'        => 'redisLockManager',
-		'swiftAuthUrl'       => $wmgAllServices[$specificDC]['mediaSwiftAuth'],
-		'swiftStorageUrl'    => $wmgAllServices[$specificDC]['mediaSwiftStore'],
-		'swiftUser'          => $wmgSwiftConfig[$specificDC]['user'],
-		'swiftKey'           => $wmgSwiftConfig[$specificDC]['key'],
-		'swiftTempUrlKey'    => $wmgSwiftConfig[$specificDC]['tempUrlKey'],
+
+	// backend config for wiki's access to shared files
+	$wgFileBackends[] = [
+		'class' => SwiftFileBackend::class,
+		'name' => "global-swift-{$specificDC}",
+		'wikiId' => "global-data",
+		'lockManager' => 'redisLockManager',
+		'swiftAuthUrl' => $wmgAllServices[$specificDC]['mediaSwiftAuth'],
+		'swiftStorageUrl' => $wmgAllServices[$specificDC]['mediaSwiftStore'],
+		'swiftUser' => $wmgSwiftConfig[$specificDC]['user'],
+		'swiftKey' => $wmgSwiftConfig[$specificDC]['key'],
+		'swiftTempUrlKey' => $wmgSwiftConfig[$specificDC]['tempUrlKey'],
 		'shardViaHashLevels' => [],
-		'parallelize'        => 'implicit',
-		'cacheAuthInfo'      => true,
+		'parallelize' => 'implicit',
+		'cacheAuthInfo' => true,
 		// When used by FileBackendMultiWrite, read from this cluster if it's the local one
-		'readAffinity'       => ( $specificDC === $wmgDatacenter ),
-		'readUsers'           => [ $wmgSwiftConfig[$specificDC]['thumborUser'] ],
-		'writeUsers'          => [ $wmgSwiftConfig[$specificDC]['thumborUser'] ],
-		'secureReadUsers'     => [ $wmgSwiftConfig[$specificDC]['thumborPrivateUser'] ],
-		'secureWriteUsers'    => [ $wmgSwiftConfig[$specificDC]['thumborPrivateUser'] ],
-		'connTimeout'         => 10,
-		'reqTimeout'          => 900, // T226979
+		'readAffinity' => ( $specificDC === $wmgDatacenter ),
+		'readUsers' => [ $wmgSwiftConfig[$specificDC]['thumborUser'] ],
+		'writeUsers' => [ $wmgSwiftConfig[$specificDC]['thumborUser'] ],
+		'secureReadUsers' => [ $wmgSwiftConfig[$specificDC]['thumborPrivateUser'] ],
+		'secureWriteUsers' => [ $wmgSwiftConfig[$specificDC]['thumborPrivateUser'] ],
+		'connTimeout' => 10,
+		// T226979
+		'reqTimeout' => 900,
 	];
-	$wgFileBackends[] = [ // backend config for wiki's access to shared test repo
-		'class'              => SwiftFileBackend::class,
-		'name'               => "shared-testwiki-swift-{$specificDC}",
-		'wikiId'             => "wikipedia-test",
-		'lockManager'        => 'redisLockManager',
-		'swiftAuthUrl'       => $wmgAllServices[$specificDC]['mediaSwiftAuth'],
-		'swiftStorageUrl'    => $wmgAllServices[$specificDC]['mediaSwiftStore'],
-		'swiftUser'          => $wmgSwiftConfig[$specificDC]['user'],
-		'swiftKey'           => $wmgSwiftConfig[$specificDC]['key'],
-		'swiftTempUrlKey'    => $wmgSwiftConfig[$specificDC]['tempUrlKey'],
-		'parallelize'        => 'implicit',
-		'cacheAuthInfo'      => true,
+
+	// backend config for wiki's access to shared test repo
+	$wgFileBackends[] = [
+		'class' => SwiftFileBackend::class,
+		'name' => "shared-testwiki-swift-{$specificDC}",
+		'wikiId' => "wikipedia-test",
+		'lockManager' => 'redisLockManager',
+		'swiftAuthUrl' => $wmgAllServices[$specificDC]['mediaSwiftAuth'],
+		'swiftStorageUrl' => $wmgAllServices[$specificDC]['mediaSwiftStore'],
+		'swiftUser' => $wmgSwiftConfig[$specificDC]['user'],
+		'swiftKey' => $wmgSwiftConfig[$specificDC]['key'],
+		'swiftTempUrlKey' => $wmgSwiftConfig[$specificDC]['tempUrlKey'],
+		'parallelize' => 'implicit',
+		'cacheAuthInfo' => true,
 		// When used by FileBackendMultiWrite, read from this cluster if it's the local one
-		'readAffinity'       => ( $specificDC === $wmgDatacenter ),
-		'readUsers'           => [ $wmgSwiftConfig[$specificDC]['thumborUser'] ],
-		'writeUsers'          => [ $wmgSwiftConfig[$specificDC]['thumborUser'] ],
-		'secureReadUsers'     => [ $wmgSwiftConfig[$specificDC]['thumborPrivateUser'] ],
-		'secureWriteUsers'    => [ $wmgSwiftConfig[$specificDC]['thumborPrivateUser'] ],
-		'connTimeout'         => 10,
-		'reqTimeout'          => 900, // T226979
+		'readAffinity' => ( $specificDC === $wmgDatacenter ),
+		'readUsers' => [ $wmgSwiftConfig[$specificDC]['thumborUser'] ],
+		'writeUsers' => [ $wmgSwiftConfig[$specificDC]['thumborUser'] ],
+		'secureReadUsers' => [ $wmgSwiftConfig[$specificDC]['thumborPrivateUser'] ],
+		'secureWriteUsers' => [ $wmgSwiftConfig[$specificDC]['thumborPrivateUser'] ],
+		'connTimeout' => 10,
+		// T226979
+		'reqTimeout' => 900,
 	];
 }
 /* end DC-specific Swift backend config */
 
 /* Common multiwrite backend config */
 $localMultiWriteFileBackend = [
-	'class'       => FileBackendMultiWrite::class,
-	'name'        => 'local-multiwrite',
-	'wikiId'      => "{$site}-{$lang}",
+	'class' => FileBackendMultiWrite::class,
+	'name' => 'local-multiwrite',
+	'wikiId' => "{$site}-{$lang}",
 	'lockManager' => 'redisLockManager',
-	# DO NOT change the master backend unless it is fully trusted or autoRsync is off
-	'backends'    => [
+	// DO NOT change the master backend unless it is fully trusted or autoRsync is off
+	'backends' => [
 		[ 'template' => 'local-swift-eqiad', 'isMultiMaster' => true ],
 	],
-	'replication' => 'sync', // read-after-update for assets
-	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
-	'autoResync'  => 'conservative'
+	// read-after-update for assets
+	'replication' => 'sync',
+	// (size & sha1)
+	'syncChecks' => ( 1 | 4 ),
+	'autoResync' => 'conservative',
 ];
 $sharedMultiwriteFileBackend = [
-	'class'       => FileBackendMultiWrite::class,
-	'name'        => 'shared-multiwrite',
-	'wikiId'      => "wikipedia-commons",
+	'class' => FileBackendMultiWrite::class,
+	'name' => 'shared-multiwrite',
+	'wikiId' => "wikipedia-commons",
 	'lockManager' => 'redisLockManager',
-	# DO NOT change the master backend unless it is fully trusted or autoRsync is off
-	'backends'    => [
+	// DO NOT change the master backend unless it is fully trusted or autoRsync is off
+	'backends' => [
 		[ 'template' => 'shared-swift-eqiad', 'isMultiMaster' => true ],
 	],
-	'replication' => 'sync', // read-after-update for assets
-	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
+	// read-after-update for assets
+	'replication' => 'sync',
+	// (size & sha1)
+	'syncChecks' => ( 1 | 4 ),
 ];
 $globalMultiWriteFileBackend = [
-	'class'       => FileBackendMultiWrite::class,
-	'name'        => 'global-multiwrite',
-	'wikiId'      => "global-data",
+	'class' => FileBackendMultiWrite::class,
+	'name' => 'global-multiwrite',
+	'wikiId' => "global-data",
 	'lockManager' => 'redisLockManager',
-	# DO NOT change the master backend unless it is fully trusted or autoRsync is off
-	'backends'    => [
+	// DO NOT change the master backend unless it is fully trusted or autoRsync is off
+	'backends' => [
 		[ 'template' => 'global-swift-eqiad', 'isMultiMaster' => true ],
 	],
-	'replication' => 'sync', // read-after-update for assets
-	'syncChecks'  => ( 1 | 4 ) // (size & sha1)
+	// read-after-update for assets
+	'replication' => 'sync',
+	// (size & sha1)
+	'syncChecks' => ( 1 | 4 ),
 ];
 $sharedTestwikiMultiWriteFileBackend = [
-	'class'       => FileBackendMultiWrite::class,
-	'name'        => 'shared-testwiki-multiwrite',
-	'wikiId'      => "wikipedia-test",
+	'class' => FileBackendMultiWrite::class,
+	'name' => 'shared-testwiki-multiwrite',
+	'wikiId' => "wikipedia-test",
 	'lockManager' => 'redisLockManager',
-	# DO NOT change the master backend unless it is fully trusted or autoRsync is off
-	'backends'    => [
+	// DO NOT change the master backend unless it is fully trusted or autoRsync is off
+	'backends' => [
 		[ 'template' => 'shared-testwiki-swift-eqiad', 'isMultiMaster' => true ],
 	],
-	'replication' => 'sync', // read-after-update for assets
-	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
+	// read-after-update for assets
+	'replication' => 'sync',
+	// (size & sha1)
+	'syncChecks' => ( 1 | 4 ),
 ];
 
 if ( in_array( 'codfw', $wmgDatacenters ) ) {
@@ -221,39 +240,38 @@ $wgFileBackends[] = $sharedTestwikiMultiWriteFileBackend;
 
 // Lock manager config must use the master datacenter
 $wgLockManagers[] = [
-	'name'         => 'redisLockManager',
-	'class'        => RedisLockManager::class,
-	'lockServers'  => $wmgMasterServices['redis_lock'],
+	'name' => 'redisLockManager',
+	'class' => RedisLockManager::class,
+	'lockServers' => $wmgMasterServices['redis_lock'],
 	'srvsByBucket' => [
 		0 => $redisLockServers
 	],
-	'redisConfig'  => [
+	'redisConfig' => [
 		'connectTimeout' => 2,
-		'readTimeout'    => 2,
-		'password'       => $wmgRedisPassword
-	]
+		'readTimeout' => 2,
+		'password' => $wmgRedisPassword
+	],
 ];
 
 $wgLocalFileRepo = [
-	'class'             => LocalRepo::class,
-	'name'              => 'local',
-	'backend'           => 'local-multiwrite',
-	'url'               => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
-	'scriptDirUrl'      => $wgScriptPath,
-	'hashLevels'        => 2,
-	'thumbScriptUrl'    => $wgThumbnailScriptPath,
-	'transformVia404'   => true,
-	'useJsonMetadata'   => true,
-	'useSplitMetadata'  => true,
-	'initialCapital'    => $wgCapitalLinks,
+	'class' => LocalRepo::class,
+	'name' => 'local',
+	'backend' => 'local-multiwrite',
+	'url' => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
+	'scriptDirUrl' => $wgScriptPath,
+	'hashLevels' => 2,
+	'thumbScriptUrl' => $wgThumbnailScriptPath,
+	'transformVia404' => true,
+	'useJsonMetadata' => true,
+	'useSplitMetadata' => true,
+	'initialCapital' => $wgCapitalLinks,
 	'deletedHashLevels' => 3,
-	'abbrvThreshold'    => 160,
-	'isPrivate'         => $wmgPrivateWiki,
-	'thumbProxyUrl'     => $wmgSwiftConfig[$wmgDatacenter]['thumborUrl'] . '/' . $site . '/' . $lang . '/thumb/',
-	'thumbProxySecret'  => $wmgSwiftConfig[$wmgDatacenter]['thumborSecret'],
-	'zones'             => $wmgPrivateWiki
-		? [
-			'thumb' => [ 'url' => "$wgScriptPath/thumb_handler.php" ] ]
+	'abbrvThreshold' => 160,
+	'isPrivate' => $wmgPrivateWiki,
+	'thumbProxyUrl' => $wmgSwiftConfig[$wmgDatacenter]['thumborUrl'] . '/' . $site . '/' . $lang . '/thumb/',
+	'thumbProxySecret' => $wmgSwiftConfig[$wmgDatacenter]['thumborSecret'],
+	'zones' => $wmgPrivateWiki
+		? [ 'thumb' => [ 'url' => "$wgScriptPath/thumb_handler.php" ] ]
 		: [],
 ];
 
@@ -261,55 +279,59 @@ $wgLocalFileRepo = [
 // Does not exist in labs.
 if ( $wgDBname === 'test2wiki' ) {
 	$wgForeignFileRepos[] = [
-		'class'            => ForeignDBViaLBRepo::class,
-		'name'             => 'testwikirepo',
-		'backend'          => 'shared-testwiki-multiwrite',
-		'url'              => "{$uploadUrl}/wikipedia/test",
-		'hashLevels'       => 2,
-		'thumbScriptUrl'   => false,
-		'transformVia404'  => true,
-		'hasSharedCache'   => true,
-		'descBaseUrl'      => "https://test.wikipedia.org/wiki/File:",
-		'scriptDirUrl'     => "https://test.wikipedia.org/w",
-		'favicon'          => "/static/favicon/black-globe.ico",
+		'class' => ForeignDBViaLBRepo::class,
+		'name' => 'testwikirepo',
+		'backend' => 'shared-testwiki-multiwrite',
+		'url' => "{$uploadUrl}/wikipedia/test",
+		'hashLevels' => 2,
+		'thumbScriptUrl' => false,
+		'transformVia404' => true,
+		'hasSharedCache' => true,
+		'descBaseUrl' => "https://test.wikipedia.org/wiki/File:",
+		'scriptDirUrl' => "https://test.wikipedia.org/w",
+		'favicon' => "/static/favicon/black-globe.ico",
 		'fetchDescription' => true,
 		'descriptionCacheExpiry' => 86400 * 7,
-		'wiki'             => 'testwiki',
-		'initialCapital'   => true,
-		'zones'            => [ // actual swift containers have 'local-*'
-			'public'  => [ 'container' => 'local-public' ],
-			'thumb'   => [ 'container' => 'local-thumb' ],
-			'temp'    => [ 'container' => 'local-temp' ],
-			'deleted' => [ 'container' => 'local-deleted' ]
+		'wiki' => 'testwiki',
+		'initialCapital' => true,
+		'zones' => [
+			// actual swift containers have 'local-*'
+			'public' => [ 'container' => 'local-public' ],
+			'thumb' => [ 'container' => 'local-thumb' ],
+			'temp' => [ 'container' => 'local-temp' ],
+			'deleted' => [ 'container' => 'local-deleted' ],
 		],
-		'abbrvThreshold'   => 160 /* Keep in sync with with local repo on testwiki or things break. */
+		// Keep in sync with the local repo on testwiki or things break.
+		'abbrvThreshold' => 160,
 	];
 }
 if ( $wgDBname != 'commonswiki' && $wgDBname != 'labswiki' && $wgDBname != 'labtestwiki' ) {
 	// Commons is local to commonswiki :)
 	// wikitech uses $wgUseInstantCommons instead of db access.
 	$wgForeignFileRepos[] = [
-		'class'            => ForeignDBViaLBRepo::class,
-		'name'             => 'shared',
-		'backend'          => 'shared-multiwrite',
-		'url'              => "{$uploadUrl}/wikipedia/commons",
-		'hashLevels'       => 2,
-		'thumbScriptUrl'   => false,
-		'transformVia404'  => true,
-		'hasSharedCache'   => true,
-		'descBaseUrl'      => "{$commonsUrl}/wiki/File:",
-		'scriptDirUrl'     => "{$commonsUrl}/w",
-		'favicon'          => "/static/favicon/commons.ico",
+		'class' => ForeignDBViaLBRepo::class,
+		'name' => 'shared',
+		'backend' => 'shared-multiwrite',
+		'url' => "{$uploadUrl}/wikipedia/commons",
+		'hashLevels' => 2,
+		'thumbScriptUrl' => false,
+		'transformVia404' => true,
+		'hasSharedCache' => true,
+		'descBaseUrl' => "{$commonsUrl}/wiki/File:",
+		'scriptDirUrl' => "{$commonsUrl}/w",
+		'favicon' => "/static/favicon/commons.ico",
 		'fetchDescription' => true,
 		'descriptionCacheExpiry' => 86400 * 7,
-		'wiki'             => 'commonswiki',
-		'initialCapital'   => true,
-		'zones'            => [ // actual swift containers have 'local-*'
-			'public'  => [ 'container' => 'local-public' ],
-			'thumb'   => [ 'container' => 'local-thumb' ],
-			'temp'    => [ 'container' => 'local-temp' ],
-			'deleted' => [ 'container' => 'local-deleted' ]
+		'wiki' => 'commonswiki',
+		'initialCapital' => true,
+		'zones' => [
+			// actual swift containers have 'local-*'
+			'public' => [ 'container' => 'local-public' ],
+			'thumb' => [ 'container' => 'local-thumb' ],
+			'temp' => [ 'container' => 'local-temp' ],
+			'deleted' => [ 'container' => 'local-deleted' ],
 		],
-		'abbrvThreshold'   => 160 /* Keep in sync with with local repo on commons or things break. */
+		// Keep in sync with the local repo on commons or things break.
+		'abbrvThreshold' => 160,
 	];
 }
