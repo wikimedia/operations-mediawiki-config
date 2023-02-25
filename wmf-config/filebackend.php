@@ -46,7 +46,7 @@ if ( $wmgRealm === 'labs' ) {
 /* DC-specific Swift backend config */
 foreach ( $wmgDatacenters as $specificDC ) {
 	$wgFileBackends[] = [ // backend config for wiki's local repo
-		'class'              => 'SwiftFileBackend',
+		'class'              => SwiftFileBackend::class,
 		'name'               => "local-swift-{$specificDC}",
 		'wikiId'             => "{$site}-{$lang}",
 		'lockManager'        => 'redisLockManager',
@@ -79,7 +79,7 @@ foreach ( $wmgDatacenters as $specificDC ) {
 		'reqTimeout'          => 900, // T226979
 	];
 	$wgFileBackends[] = [ // backend config for wiki's access to shared repo
-		'class'              => 'SwiftFileBackend',
+		'class'              => SwiftFileBackend::class,
 		'name'               => "shared-swift-{$specificDC}",
 		'wikiId'             => "wikipedia-commons",
 		'lockManager'        => 'redisLockManager',
@@ -110,7 +110,7 @@ foreach ( $wmgDatacenters as $specificDC ) {
 		'reqTimeout'          => 900, // T226979
 	];
 	$wgFileBackends[] = [ // backend config for wiki's access to shared files
-		'class'              => 'SwiftFileBackend',
+		'class'              => SwiftFileBackend::class,
 		'name'               => "global-swift-{$specificDC}",
 		'wikiId'             => "global-data",
 		'lockManager'        => 'redisLockManager',
@@ -132,7 +132,7 @@ foreach ( $wmgDatacenters as $specificDC ) {
 		'reqTimeout'          => 900, // T226979
 	];
 	$wgFileBackends[] = [ // backend config for wiki's access to shared test repo
-		'class'              => 'SwiftFileBackend',
+		'class'              => SwiftFileBackend::class,
 		'name'               => "shared-testwiki-swift-{$specificDC}",
 		'wikiId'             => "wikipedia-test",
 		'lockManager'        => 'redisLockManager',
@@ -157,7 +157,7 @@ foreach ( $wmgDatacenters as $specificDC ) {
 
 /* Common multiwrite backend config */
 $localMultiWriteFileBackend = [
-	'class'       => 'FileBackendMultiWrite',
+	'class'       => FileBackendMultiWrite::class,
 	'name'        => 'local-multiwrite',
 	'wikiId'      => "{$site}-{$lang}",
 	'lockManager' => 'redisLockManager',
@@ -170,7 +170,7 @@ $localMultiWriteFileBackend = [
 	'autoResync'  => 'conservative'
 ];
 $sharedMultiwriteFileBackend = [
-	'class'       => 'FileBackendMultiWrite',
+	'class'       => FileBackendMultiWrite::class,
 	'name'        => 'shared-multiwrite',
 	'wikiId'      => "wikipedia-commons",
 	'lockManager' => 'redisLockManager',
@@ -182,7 +182,7 @@ $sharedMultiwriteFileBackend = [
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 ];
 $globalMultiWriteFileBackend = [
-	'class'       => 'FileBackendMultiWrite',
+	'class'       => FileBackendMultiWrite::class,
 	'name'        => 'global-multiwrite',
 	'wikiId'      => "global-data",
 	'lockManager' => 'redisLockManager',
@@ -194,7 +194,7 @@ $globalMultiWriteFileBackend = [
 	'syncChecks'  => ( 1 | 4 ) // (size & sha1)
 ];
 $sharedTestwikiMultiWriteFileBackend = [
-	'class'       => 'FileBackendMultiWrite',
+	'class'       => FileBackendMultiWrite::class,
 	'name'        => 'shared-testwiki-multiwrite',
 	'wikiId'      => "wikipedia-test",
 	'lockManager' => 'redisLockManager',
@@ -222,7 +222,7 @@ $wgFileBackends[] = $sharedTestwikiMultiWriteFileBackend;
 // Lock manager config must use the master datacenter
 $wgLockManagers[] = [
 	'name'         => 'redisLockManager',
-	'class'        => 'RedisLockManager',
+	'class'        => RedisLockManager::class,
 	'lockServers'  => $wmgMasterServices['redis_lock'],
 	'srvsByBucket' => [
 		0 => $redisLockServers
@@ -235,7 +235,7 @@ $wgLockManagers[] = [
 ];
 
 $wgLocalFileRepo = [
-	'class'             => 'LocalRepo',
+	'class'             => LocalRepo::class,
 	'name'              => 'local',
 	'backend'           => 'local-multiwrite',
 	'url'               => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
@@ -261,7 +261,7 @@ $wgLocalFileRepo = [
 // Does not exist in labs.
 if ( $wgDBname === 'test2wiki' ) {
 	$wgForeignFileRepos[] = [
-		'class'            => 'ForeignDBViaLBRepo',
+		'class'            => ForeignDBViaLBRepo::class,
 		'name'             => 'testwikirepo',
 		'backend'          => 'shared-testwiki-multiwrite',
 		'url'              => "{$uploadUrl}/wikipedia/test",
@@ -289,7 +289,7 @@ if ( $wgDBname != 'commonswiki' && $wgDBname != 'labswiki' && $wgDBname != 'labt
 	// Commons is local to commonswiki :)
 	// wikitech uses $wgUseInstantCommons instead of db access.
 	$wgForeignFileRepos[] = [
-		'class'            => 'ForeignDBViaLBRepo',
+		'class'            => ForeignDBViaLBRepo::class,
 		'name'             => 'shared',
 		'backend'          => 'shared-multiwrite',
 		'url'              => "{$uploadUrl}/wikipedia/commons",
