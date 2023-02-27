@@ -1244,6 +1244,7 @@ return [
 	'grwikimedia' => 'Wikimedia User Group Greece', // T245911
 	'grantswiki' => 'Wikimedia Foundation Grants Discussion',
 	'gucwiki' => 'Wikipeetia',
+	'gurwiki' => 'Wikipiidiya',
 	'guwiki' => 'વિકિપીડિયા',
 	'guwikiquote' => 'વિકિસૂક્તિ', // T121853
 	'guwikisource' => 'વિકિસ્રોત',

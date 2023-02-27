@@ -604,6 +604,8 @@ Wikipedia:
         local_wordmark: true
     gucwiki:
         commons: 'File:Wikipedia-logo-v2-guc.svg'
+    gurwiki:
+        commons: 'File:Wikipedia-logo-v2-gur.svg'
     guwwiki:
         comment: T303727
         comment_1_5x: T303727

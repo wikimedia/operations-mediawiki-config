@@ -327,6 +327,7 @@ return [
 'grantswiki' => [ 'special', 'private', 'small', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines' ],
 'grwikimedia' => [ 'fishbowl', 'small', 'group1', 'nowikidatadescriptiontaglines' ],
 'gucwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
+'gurwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'guwiki' => [ 'wikipedia', 'desktop-improvements', 'medium', 'wikidataclient', 'cirrussearch-big-indices' ],
 'guwikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
 'guwikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],
