@@ -2496,7 +2496,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		// T299612
-		'wgLinterMigrateNamespaceStage' => [
+		'wgLinterUseNamespaceColumnStage' => [
 			'default' => true,
 		],
 
@@ -2506,7 +2506,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		// T175177
-		'wgLinterMigrateTagAndTemplateColumnsStage' => [
+		'wgLinterUserInterfaceTagAndTemplateStage' => [
 			'default' => true,
 		],
 
