@@ -2417,10 +2417,10 @@ return [
 		'width' => 120,
 		'height' => 18,
 	],
-	'extwiki' => [
+	'extwiki' => [ // T330588
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ext.svg',
-		'width' => 120,
-		'height' => 23,
+		'width' => 123,
+		'height' => 19,
 	],
 	'fawiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-fa.svg',
@@ -3862,10 +3862,10 @@ return [
 		'width' => 120,
 		'height' => 13,
 	],
-	'extwiki' => [
+	'extwiki' => [ // T330588
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ext.svg',
-		'width' => 120,
-		'height' => 15,
+		'width' => 95,
+		'height' => 13,
 	],
 	'fawiki' => [ // T249047
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-fa.svg',

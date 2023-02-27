@@ -486,8 +486,10 @@ Wikipedia:
         comment: 'T48589, T318766'
         comment_1_5x: 'T150618, T318766'
         comment_2x: 'T150618, T318766'
-        local_tagline: true
-        local_wordmark: true
+        commons_wordmark: 'File:Wikipedia-wordmark-ext.svg'
+        comment_wordmark: 'T330588'
+        commons_tagline: 'File:Wikipedia-tagline-ext.svg'
+        comment_tagline: 'T330588'
     fawiki:
         commons: 'File:Wikipedia-logo-v2-fa.svg'
         commons_wordmark: 'File:Wikipedia-wordmark-fa.svg'
