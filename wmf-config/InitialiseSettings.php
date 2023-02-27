@@ -180,6 +180,7 @@ return [
 	'rswikimedia' => 'sr',
 	'sewikimedia' => 'sv',
 	'uawikimedia' => 'uk',
+	'vewikimedia' => 'es',
 
 	# Local user group wikis (xxwikimedia)
 	'cnwikimedia' => 'zh', // T98676
