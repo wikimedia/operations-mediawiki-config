@@ -389,6 +389,7 @@ return [
 	'gorwiki' => 'Asia/Makassar', // T189109
 	'gorwiktionary' => 'Asia/Makassar', // T327986
 	'grwikimedia' => 'Europe/Athens', // T245911
+	'gucwiki' => 'America/Bogota',
 	'guwiki' => 'Asia/Kolkata',
 	'guwikiquote' => 'Asia/Kolkata', // T121853
 	'guwikisource' => 'Asia/Kolkata',
@@ -1242,6 +1243,7 @@ return [
 	'gorwiktionary' => 'Wikikamus',
 	'grwikimedia' => 'Wikimedia User Group Greece', // T245911
 	'grantswiki' => 'Wikimedia Foundation Grants Discussion',
+	'gucwiki' => 'Wikipeetia',
 	'guwiki' => 'વિકિપીડિયા',
 	'guwikiquote' => 'વિકિસૂક્તિ', // T121853
 	'guwikisource' => 'વિકિસ્રોત',

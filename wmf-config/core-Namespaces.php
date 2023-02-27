@@ -5111,6 +5111,7 @@ return [
 	'gorwiki' => 'Wikipedia', // T189109
 	'grantswiki' => 'Project',
 	'gorwiktionary' => 'Wikikamus',
+	'gucwiki' => 'Wikipeetia',
 	'guwiki' => 'વિકિપીડિયા',
 	'guwikiquote' => 'વિકિસૂક્તિ', // T121853
 	'guwikisource' => 'વિકિસ્રોત',
