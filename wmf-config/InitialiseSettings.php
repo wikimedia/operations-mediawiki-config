@@ -7013,6 +7013,7 @@ return [
 	'sewikimedia' => true, // T239091
 	'testwiki' => true,
 	'uawikimedia' => true, // T131731
+	'vewikimedia' => true,
 	'wbwikimedia' => true, // T162510
 	'wikidata' => true, // T43585
 	'wikimania2012wiki' => true, // T36120
