@@ -537,42 +537,6 @@ return [
 		], // T227420
 		'interface-admin' => [ 'editcontentmodel' => true, ], // T320752
 	],
-	'+testcommonswiki' => [
-		'user' => [
-			'changetags' => false, // T134196
-			'upload' => true, // exception for T14556
-		],
-		'rollbacker' => [ 'rollback' => true ],
-		'patroller' => [ // T214003
-			'autopatrol' => true,
-			'patrol' => true,
-			'abusefilter-log-detail' => true,
-			'upload_by_url' => true,
-		],
-		'autopatrolled' => [
-			'autopatrol' => true,
-			'upload_by_url' => true,
-		], // T214003
-		'filemover' => [ 'movefile' => true ],
-		'image-reviewer' => [
-			'autopatrol' => true,
-			'upload_by_url' => true,
-			'patrol' => true, // T183835
-		],
-		'sysop' => [
-			'importupload' => true, // TestCommons testing purposes only
-			'changetags' => true, // T134196
-			'upload_by_url' => true,
-		],
-		'bot' => [
-			'changetags' => true,
-			'upload_by_url' => true,
-		], // T134196, T145010
-		'translationadmin' => [ 'noratelimit' => true, ], // T155162
-		'interface-admin' => [
-			'editcontentmodel' => true, // T320752
-		],
-	],
 	'+dawiki' => [
 		'patroller' => [
 			'patrol' => true,
