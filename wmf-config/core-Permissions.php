@@ -1786,7 +1786,11 @@ return [
 	],
 	'+nlwiki' => [
 		'autoconfirmed' => [ 'patrol' => true ],
-		'bot' => [ 'move-categorypages' => true ], // T161551
+		'bot' => [
+			'move-categorypages' => true, // T161551
+			'extendedconfirmed' => true, // T329642
+		],
+		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T329642
 		'checkuser' => [
 			'deletedhistory' => true,
 			'deletedtext' => true,
@@ -1799,6 +1803,7 @@ return [
 			'browsearchive' => true,
 		],
 		'rollbacker' => [ 'rollback' => true ],
+		'sysop' => [ 'extendedconfirmed' => true ], // T329642
 		'user' => [ 'move-categorypages' => false ], // T161551
 	],
 	'+nlwiktionary' => [
@@ -3981,6 +3986,7 @@ return [
 		'bureaucrat' => [
 			'abusefilter',
 			'arbcom',
+			'extendedconfirmed', // T329642
 			'rollbacker',
 		],
 	],
@@ -5253,7 +5259,12 @@ return [
 		],
 	],
 	'+nlwiki' => [
-		'bureaucrat' => [ 'abusefilter', 'arbcom', 'rollbacker' ],
+		'bureaucrat' => [
+			'abusefilter',
+			'arbcom',
+			'extendedconfirmed', // T329642
+			'rollbacker',
+		],
 	],
 	'+nlwikibooks' => [
 		'sysop' => [ 'abusefilter' ],

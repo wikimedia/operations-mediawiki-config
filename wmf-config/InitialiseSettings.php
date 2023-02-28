@@ -1916,6 +1916,7 @@ return [
 	'kowiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T184675
 	'lvwiki' => [ '', 'autoconfirmed', 'editautopatrolprotected', 'sysop' ], // T92645
 	'mrwikisource' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T269067
+	'nlwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T329642
 	'newiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T343257
 	'plwiki' => [ '', 'autoconfirmed', 'editeditorprotected', 'sysop' ], // T48990
 	'ptwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'editautoreviewprotected', 'sysop' ], // T41652, T281926
@@ -1953,6 +1954,7 @@ return [
 	'+itwiki' => [ 'editautopatrolprotected' ], // T308917
 	'+jawiki' => [ 'extendedconfirmed' ], // T249820
 	'+kowiki' => [ 'extendedconfirmed' ], // T184675
+	'+nlwiki' => [ 'extendedconfirmed' ], // T329642
 	'+ptwiki' => [ 'extendedconfirmed' ], // T281926
 	'+rowiki' => [ 'extendedconfirmed' ], // T254471
 	'+ruwiki' => [ 'editautoreviewprotected' ], // T337430
@@ -4291,6 +4293,14 @@ return [
 			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
 			[ '!', [ APCOND_INGROUPS, 'bureaucrat' ] ],
 		], // T187187
+	],
+	'nlwiki' => [
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 30 * 86400 ], // 30 days * seconds in a day
+			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+		], // T329642
 	],
 	'rowiki' => [
 		'extendedconfirmed' => [ '&',
