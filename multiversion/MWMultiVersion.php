@@ -214,18 +214,6 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * @todo remove once all scripts have been migrated
-	 * not to use CommandLineInc
-	 *
-	 * @return MWMultiVersion
-	 */
-	public static function initializeForMaintenanceOld() {
-		$instance = self::createInstance();
-		$instance->setSiteInfoForMaintenanceOld();
-		return $instance;
-	}
-
-	/**
 	 * Create an instance by explicit wiki ID.
 	 *
 	 * @param string $dbName
@@ -360,50 +348,6 @@ class MWMultiVersion {
 
 		# The --wiki param must the second argument to to avoid
 		# any "options with args" ambiguity (see Maintenance.php).
-		if ( isset( $argv[2] ) && $argv[2] === '--wiki' ) {
-			// "script.php --wiki dbname"
-			$dbname = isset( $argv[3] ) ? $argv[3] : '';
-		} elseif ( isset( $argv[2] ) && substr( $argv[2], 0, 7 ) === '--wiki=' ) {
-			// "script.php --wiki=dbname"
-			$dbname = substr( $argv[2], 7 );
-		} elseif ( isset( $argv[2] ) && substr( $argv[2], 0, 2 ) !== '--' ) {
-			// "script.php dbname"
-			$dbname = $argv[2];
-			$argv[2] = '--wiki=' . $dbname;
-		}
-
-		if ( $dbname === '' ) {
-			self::error( "Usage: mwscript scriptName.php --wiki=dbname\n" );
-		}
-
-		if ( isset( $argv[3] ) && $argv[3] === '--force-version' ) {
-			if ( !isset( $argv[4] ) ) {
-				self::error( "--force-version must be followed by a version number" );
-			}
-			$this->version = "php-" . $argv[4];
-
-			# Delete the flag and its parameter so it won't be passed on to the
-			# maintenance script.
-			unset( $argv[4] );
-			unset( $argv[3] );
-
-			# Reindex
-			$argv = array_values( $argv );
-		}
-
-		$this->db = $dbname;
-	}
-
-	/**
-	 * This is like setSiteInfoForMaintenanceOld but for old maint scripts using
-	 *  CommandLineInc
-	 * TODO: Remove once all of them have been migrated.
-	 */
-	private function setSiteInfoForMaintenanceOld() {
-		global $argv;
-		$dbname = getenv( 'MW_WIKI' ) ?: '';
-		# The --wiki param must the second argument to to avoid
-		# any "options with args" ambiguity (see Maintenance.php).
 		if ( isset( $argv[1] ) && $argv[1] === '--wiki' ) {
 			// "script.php --wiki dbname"
 			$dbname = isset( $argv[2] ) ? $argv[2] : '';
@@ -415,21 +359,26 @@ class MWMultiVersion {
 			$dbname = $argv[1];
 			$argv[1] = '--wiki=' . $dbname;
 		}
+
 		if ( $dbname === '' ) {
 			self::error( "Usage: mwscript scriptName.php --wiki=dbname\n" );
 		}
+
 		if ( isset( $argv[2] ) && $argv[2] === '--force-version' ) {
 			if ( !isset( $argv[3] ) ) {
 				self::error( "--force-version must be followed by a version number" );
 			}
 			$this->version = "php-" . $argv[3];
+
 			# Delete the flag and its parameter so it won't be passed on to the
 			# maintenance script.
 			unset( $argv[3] );
 			unset( $argv[2] );
+
 			# Reindex
 			$argv = array_values( $argv );
 		}
+
 		$this->db = $dbname;
 	}
 
@@ -656,19 +605,14 @@ class MWMultiVersion {
 	 * (c) Changes PHP's current directory to the directory of this file.
 	 *
 	 * @param string $file File path (relative to MediaWiki dir or absolute)
-	 * @param bool $useOld Whether the cli file is using CommandLineInc
 	 * @return string Absolute file path with proper MW location
 	 */
-	public static function getMediaWikiCli( $file, $useOld = false ) {
+	public static function getMediaWikiCli( $file ) {
 		global $IP;
 
 		$multiVersion = self::getInstance();
 		if ( !$multiVersion ) {
-			if ( $useOld ) {
-				$multiVersion = self::initializeForMaintenanceOld();
-			} else {
-				$multiVersion = self::initializeForMaintenance();
-			}
+			$multiVersion = self::initializeForMaintenance();
 		}
 		if ( $multiVersion->getDatabase() === 'testwiki' ) {
 			define( 'TESTWIKI', 1 );
