@@ -843,7 +843,7 @@ return [
 'techconductwiki' => [ 'special', 'private', 'flow', 'small', 'group1', 'nowikidatadescriptiontaglines' ],
 'tenwiki' => [ 'wikipedia', 'closed', 'small', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
 'test2wiki' => [ 'wikipedia', 'desktop-improvements', 'flow', 'flaggedrevs', 'medium', 'wikidataclient-test', 'group1', 'nowikidatadescriptiontaglines' ],
-'testcommonswiki' => [ 'special', 'small', 'wikibaserepo', 'wikidataclient-test', 'visualeditor-nondefault', 'group0' ],
+'testcommonswiki' => [ 'special', 'closed', 'small', 'wikibaserepo', 'wikidataclient-test', 'visualeditor-nondefault', 'group0' ],
 'testwiki' => [ 'wikipedia', 'desktop-improvements', 'flow', 'medium', 'wikidataclient-test', 'group0', 'nowikidatadescriptiontaglines' ],
 'testwikidatawiki' => [ 'special', 'medium', 'wikidata', 'wikibaserepo', 'wikidataclient-test', 'group0', 'nowikidatadescriptiontaglines' ],
 'tetwiki' => [ 'wikipedia', 'desktop-improvements', 'small', 'wikidataclient', 'commonsuploads' ],
