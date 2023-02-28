@@ -4611,7 +4611,6 @@ return [
 	'bhwiki' => true, // T97920
 	'ckbwiki' => true, // T54678
 	'commonswiki' => true,
-	'testcommonswiki' => true,
 	'dewikiversity' => true, // T51449
 	'dtywiki' => true, // T166121
 	'enwikinews' => true,
@@ -4677,7 +4676,6 @@ return [
 	'arwikisource' => true,
 	'bhwiki' => true, // T97920
 	'commonswiki' => true,
-	'testcommonswiki' => true,
 	'dtywiki' => true, // T177688
 	'enwikinews' => true,
 	'fawikibooks' => true, // T91861
@@ -4913,7 +4911,6 @@ return [
 'wgAbuseFilterEmergencyDisableThreshold' => [
 	'default' => [ 'default' => 0.05, ],
 	'commonswiki' => [ 'default' => 0.30, ], // T87431
-	'testcommonswiki' => [ 'default' => 0.30, ], // T87431
 	'eswikibooks' => [ 'default' => 0.30, ], // T145765
 	'foundationwiki' => [ 'default' => 0.30 ],
 	'metawiki' => [ 'default' => 0.30, ], // T173633
@@ -4925,7 +4922,6 @@ return [
 	'enwiki' => [ 'default' => 25, ],
 	'eswikibooks' => [ 'default' => 10, ], // T145765
 	'commonswiki' => [ 'default' => 25, ], // T87431
-	'testcommonswiki' => [ 'default' => 25, ], // T87431
 	'foundationwiki' => [ 'default' => 25 ],
 	'metawiki' => [ 'default' => 25, ], // T173633
 	'mediawikiwiki' => [ 'default' => 25, ], // T212667
@@ -4978,7 +4974,6 @@ return [
 	'testwiki' => true,
 	'test2wiki' => true,
 	'commonswiki' => true,
-	'testcommonswiki' => true,
 	'wikisource' => true, // T293205
 	'viwiki' => true, // T303577
 	'zhwiki' => true, // T142991
@@ -4987,7 +4982,6 @@ return [
 	'default' => false,
 	'testwiki' => true, // T73897
 	'commonswiki' => true, // T73897
-	'testcommonswiki' => true, // T73897
 	'wikisource' => true, // T293205
 	'viwiki' => true, // T303577
 	'zhwiki' => true, // T142991
@@ -5302,7 +5296,6 @@ return [
 	'rowiki' => true, // T61242
 	'testwiki' => true,
 	'commonswiki' => true,
-	'testcommonswiki' => true,
 	'donatewiki' => true,
 	'foundationwiki' => true,
 ],
