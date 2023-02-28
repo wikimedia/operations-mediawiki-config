@@ -33,8 +33,10 @@ import yaml
 import xml.etree.ElementTree as ET
 
 
-if sys.version_info < (3, 7):
-    raise RuntimeError("You must use Python 3.7+ to run this script")
+if sys.version_info < (3, 9):
+    raise RuntimeError("You must use Python 3.9+ to run this script")
+
+USER_AGENT = "logos-manage (https://gerrit.wikimedia.org/g/operations/mediawiki-config/+/HEAD/logos/manage.py)"  # noqa: E501
 
 DIR = Path(__file__).parent
 project_logos_path = "static/images/project-logos"
@@ -71,8 +73,8 @@ def validate(data: dict):
                 for variant_name, variant_info in info["variants"].items():
                     if not variant_name.startswith(site + "-"):
                         # Variant name must start with site name
-                        raise RuntimeError(f"{site}: variant {variant_name} must " \
-                            "start with {site}, connected with a dash")
+                        raise RuntimeError(f"{site}: variant {variant_name} must "
+                                           "start with {site}, connected with a dash")
                     for variant_type, variant_commons in variant_info.items():
                         validate_commons(f"{site} (variant: {variant_name})", variant_commons)
             for size in ["1x", "1_5x", "2x"]:
@@ -119,7 +121,7 @@ def download(commons: str, name: str):
 
     s = requests.Session()
     s.headers.update({
-        "User-Agent": "logos-manage (https://gerrit.wikimedia.org/g/operations/mediawiki-config/+/HEAD/logos/manage.py)"
+        "User-Agent": USER_AGENT
     })
 
     req = s.get(
@@ -184,7 +186,7 @@ def download_svg(commons: str, name: str, svg_type: str, data: dict, variant=Non
 
     s = requests.Session()
     s.headers.update({
-        "User-Agent": "logos-manage (https://gerrit.wikimedia.org/g/operations/mediawiki-config/+/HEAD/logos/manage.py)"
+        "User-Agent": USER_AGENT
     })
 
     req = s.get(
@@ -311,8 +313,8 @@ def make_block2(svg_type: str, data: dict) -> str:
                 text += "\n"
                 continue
             if commons_key not in info and selected_key not in info and local_key not in info \
-                and not ("variants" in info and "selected" in info \
-                    and commons_key in info["variants"][info["selected"]]):
+                    and not ("variants" in info and "selected" in info
+                             and commons_key in info["variants"][info["selected"]]):
                 # Skip, doesn't have this type
                 continue
             # It should not contains any variant, default to site name
@@ -378,10 +380,12 @@ def make_block_lang_variant(data: dict) -> str:
             for lang, lang_info in info["lang_variants"].items():
                 text += f"\t\t'{lang}' => [{comment}\n"
                 if "selected_lang" in lang_info:
-                    text += make_block_lang_single(site,
+                    text += make_block_lang_single(
+                        site,
                         lang_info["selected_lang"],
                         info["lang_variants"][lang_info["selected_lang"]],
-                        data)
+                        data
+                    )
                 else:
                     text += make_block_lang_single(site, lang, lang_info, data)
                 text += "\t\t],\n"
@@ -489,7 +493,8 @@ def update(data: dict, wiki: str, variant: Optional[str]):
         raise RuntimeError(f"I can't find any configuration for {wiki}")
     name = wiki
     for svg_type in ["wordmark", "tagline", "icon"]:
-        if f"commons_{svg_type}" in info or (variant and f"commons_{svg_type}" in info["variants"][variant]):
+        if f"commons_{svg_type}" in info or \
+                (variant and f"commons_{svg_type}" in info["variants"][variant]):
             commons_svg = ""
             if f"commons_{svg_type}" in info:
                 commons_svg = info[f"commons_{svg_type}"]
@@ -553,12 +558,13 @@ def get_svg_size(filename: str, dir=project_svgs) -> Tuple[float, float]:
             raise RuntimeError(f"{filename}: file doesn't have width, height or viewBox")
         # Some optimized svg files don't have "width" and "height" attributes,
         # so extract them from viewBox and store them for future use
-        if viewbox and (width is None or height is None or \
-                not width.replace('.','',1).isdigit() or not height.replace('.','',1).isdigit()):
-                # some svg files has "width" and "height" with unit "pt" or "mm"
+        if viewbox and (width is None or height is None
+                        or not width.replace('.', '', 1).isdigit()
+                        or not height.replace('.', '', 1).isdigit()):
+            # some svg files has "width" and "height" with unit "pt" or "mm"
             width, height = viewbox.split(" ")[2:]
 
-        return float(width), float(height) # type: ignore
+        return float(width), float(height)  # type: ignore
 
 
 def resize_svg(filename: str, width: str, height: str, dir=project_svgs):
@@ -574,7 +580,7 @@ def resize_svg(filename: str, width: str, height: str, dir=project_svgs):
             "-f",
             "svg",
             "-o",
-            filename1, # tmp file
+            filename1,  # tmp file
             filename,
         ],
         check=True,

@@ -39,9 +39,8 @@ class Profiler {
 			self::tidewaysSetup( $options );
 		}
 
-		if ( extension_loaded( 'excimer' ) ) {
-			// Used for sampling of live production traffic.
-			// Always enabled.
+		if ( PHP_SAPI !== 'cli' && extension_loaded( 'excimer' ) ) {
+			// Used for unconditional sampling of production web requests.
 			self::excimerSetup( $options );
 		}
 	}
@@ -52,51 +51,31 @@ class Profiler {
 	 * @param array $options
 	 */
 	private static function tidewaysSetup( $options ) {
+		global $wmgProfiler;
 		$xwd = XWikimediaDebug::getInstance();
 		$profileToStdout = $xwd->hasOption( 'forceprofile' );
 		$profileToXhgui = $xwd->hasOption( 'profile' ) && !empty( $options['xhgui-conf'] );
 
-		// This is passed as query parameter instead of header attribute,
-		// but is nonetheless considered part of X-Wikimedia-Debug and must
-		// only be enabled when X-Wikimedia-Debug is also enabled, due to caching.
-		if ( $xwd->isHeaderPresent() && isset( $_GET['forceprofile'] ) ) {
-			$profileToStdout = true;
-		}
-
-		/**
-		 * Enable request profiling
-		 *
-		 * We can only enable Tideways once, and the first call controls the flags.
-		 * Later calls are ignored. Therefore, always use the same flags.
-		 *
-		 * - TIDEWAYS_XHPROF_FLAGS_NO_BUILTINS: Used by MediaWiki and by XHGui.
-		 *   Doesn't modify output format, but makes output more concise.
-		 *
-		 * - TIDEWAYS_XHPROF_FLAGS_CPU: Only used by XHGui only.
-		 *   Adds 'cpu' keys to profile entries.
-		 *
-		 * - TIDEWAYS_XHPROF_FLAGS_MEMORY: Only used by XHGui only.
-		 *   Adds 'mu' and 'pmu' keys to profile entries.
-		 */
+		// - TIDEWAYS_XHPROF_FLAGS_CPU:
+		//   Adds 'cpu' keys to profile entries.
+		//
+		// - TIDEWAYS_XHPROF_FLAGS_MEMORY:
+		//   Adds 'mu' and 'pmu' keys to profile entries.
+		//
+		// - TIDEWAYS_XHPROF_FLAGS_NO_BUILTINS:
+		//   Doesn't modify output format, but makes output more concise.
 		$xhprofFlags = TIDEWAYS_XHPROF_FLAGS_CPU | TIDEWAYS_XHPROF_FLAGS_MEMORY | TIDEWAYS_XHPROF_FLAGS_NO_BUILTINS;
-		if ( $profileToStdout
-			|| PHP_SAPI === 'cli'
-			|| $profileToXhgui
-		) {
-			// Enable Tideways now instead of waiting for MediaWiki to start it later.
-			// This ensures a balanced and complete call graph. (T180183)
+
+		// For web requests with XWD "profile" or "forceprofile", start the profiler now.
+		//
+		// This ensures a balanced and more complete call graph (T180183). This is important for
+		// web requests because we want to measure even the pre-MediaWiki setup (such as multiversion
+		// and wmf-config) which is significant during low-latency requests.
+		if ( $profileToStdout || $profileToXhgui ) {
 			tideways_xhprof_enable( $xhprofFlags );
 
-			/**
-			 * One-off profile to stdout.
-			 *
-			 * For web: Set X-Wikimedia-Debug (to bypass cache) and query param 'forceprofile=1'.
-			 * For CLI: Set CLI option '--profiler=text'.
-			 *
-			 * https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug#Plaintext_request_profile
-			 */
-			if ( $profileToStdout || PHP_SAPI === 'cli' ) {
-				global $wmgProfiler;
+			// https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug#Plaintext_request_profile
+			if ( $profileToStdout ) {
 				$wmgProfiler = [
 					'class' => 'ProfilerXhprof',
 					'flags' => $xhprofFlags,
@@ -106,110 +85,109 @@ class Profiler {
 				];
 			}
 
-			/**
-			 * One-off profile to XHGui.
-			 *
-			 * Set X-Wikimedia-Debug header with 'profile' attribute to instrument a web request
-			 * with XHProf and save the profile to XHGui.
-			 *
-			 * To find the profile in XHGui, either browse "Recent", or use wgRequestId value
-			 * from the mw.config data in the HTML web response, e.g. by running the
-			 * `mw.config.get('wgRequestId')` snippet in JavaScript. Then look up as follows:
-			 *
-			 * https://performance.wikimedia.org/xhgui/?url=WShdaQpAIHwAAF9HkX4AAAAW
-			 *
-			 * See https://performance.wikimedia.org/xhgui/
-			 * See https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug#Request_profiling
-			 */
-			if ( $profileToXhgui ) {
-				// XHGui save callback
-				$saveCallback = static function () use ( $options ) {
-					require_once __DIR__ . '/../src/XhguiSaverPdo.php';
+		// On the CLI, there is virtually no pre-MW setup to measure (multiversion is handled by
+		// 'mwscript' in the the parent process), and we can't officially know the parsed MW CLI
+		// args at this time, and we're generally not interested in the little bit of process setup
+		// for profiling of long-running CLI scripts. Instead, on the CLI, MediaWiki will start the
+		// profiler on its own based on $wmgProfiler.
+		} elseif ( PHP_SAPI === 'cli' ) {
+			$wmgProfiler = [
+				'class' => 'ProfilerXhprof',
+				'flags' => $xhprofFlags,
+				'output' => 'text',
+			];
+		}
 
-					// These globals are set by private/PrivateSettings.php and may only be
-					// read by wmf-config after MediaWiki is initialised.
-					// The profiler is set up much earlier via PhpAutoPrepend, as such,
-					// only materialise these globals during the save callback, not sooner.
-					global $wmgXhguiDBuser, $wmgXhguiDBpassword;
+		// For web requests with XWD "profile" attribute set, instrument a web request
+		// and save the profile to XHGui.
+		if ( $profileToXhgui ) {
+			// XHGui save callback
+			$saveCallback = static function () use ( $options ) {
+				require_once __DIR__ . '/../src/XhguiSaverPdo.php';
 
-					$profile = tideways_xhprof_disable();
-					if ( !isset( $profile['main()'] ) ) {
-						// There isn't valid profile data to save (T271865).
-						return;
-					}
+				// These globals are set by private/PrivateSettings.php and may only be
+				// read by wmf-config after MediaWiki is initialised.
+				// The profiler is set up much earlier via PhpAutoPrepend, as such,
+				// only materialise these globals during the save callback, not sooner.
+				global $wmgXhguiDBuser, $wmgXhguiDBpassword;
 
-					$requestTimeFloat = explode( '.', sprintf( '%.6F', $_SERVER['REQUEST_TIME_FLOAT'] ) );
-					$sec  = $requestTimeFloat[0];
-					$usec = $requestTimeFloat[1] ?? 0;
+				$profile = tideways_xhprof_disable();
+				if ( !isset( $profile['main()'] ) ) {
+					// There isn't valid profile data to save (T271865).
+					return;
+				}
 
-					// Fake the URL to have a prefix of the request ID, that way it can
-					// be easily found through XHGui through a predictable search URL
-					// that looks for the request ID.
-					// Matches mediawiki/core: WebRequest::getRequestId (T253674).
-					$reqId = $_SERVER['HTTP_X_REQUEST_ID'] ?? $_SERVER['UNIQUE_ID'] ?? null;
+				$requestTimeFloat = explode( '.', sprintf( '%.6F', $_SERVER['REQUEST_TIME_FLOAT'] ) );
+				$sec  = $requestTimeFloat[0];
+				$usec = $requestTimeFloat[1] ?? 0;
 
-					// Create a simplified url with just script name and 'action' query param
-					$qs = isset( $_GET['action'] ) ? ( '?action=' . $_GET['action'] ) : '';
-					$url = '//' . $reqId . $_SERVER['SCRIPT_NAME'] . $qs;
+				// Fake the URL to have a prefix of the request ID, that way it can
+				// be easily found through XHGui through a predictable search URL
+				// that looks for the request ID.
+				// Matches mediawiki/core: WebRequest::getRequestId (T253674).
+				$reqId = $_SERVER['HTTP_X_REQUEST_ID'] ?? $_SERVER['UNIQUE_ID'] ?? null;
 
-					// Create sanitized copies of $_SERVER, $_ENV, and $_GET that are
-					// appropiate for exposing publicly to the web.
-					// This intentionally omits 'REQUEST_URI' (added later)
-					$serverKeys = array_flip( [
-						'HTTP_X_REQUEST_ID', 'UNIQUE_ID',
-						'HTTP_HOST', 'HTTP_X_WIKIMEDIA_DEBUG', 'REQUEST_METHOD',
-						'REQUEST_START_TIME', 'REQUEST_TIME', 'REQUEST_TIME_FLOAT',
-						'SERVER_NAME'
-					] );
-					$getKeys = array_flip( [ 'action' ] );
-					$server = array_intersect_key( $_SERVER, $serverKeys );
-					$get = array_intersect_key( $_GET, $getKeys );
-					$env = [];
+				// Create a simplified url with just script name and 'action' query param
+				$qs = isset( $_GET['action'] ) ? ( '?action=' . $_GET['action'] ) : '';
+				$url = '//' . $reqId . $_SERVER['SCRIPT_NAME'] . $qs;
 
-					// Add hostname of current web server.
-					// - Not SERVER_NAME which is usually identical to HTTP_HOST, e.g. wikipedia.org.
-					// - Not SERVER_ADDR which the local IP address, e.g. 10.xx.xx.xx.
-					// Get what we're looking for from uname.
-					$server['HOSTNAME'] = php_uname( 'n' );
+				// Create sanitized copies of $_SERVER, $_ENV, and $_GET that are
+				// appropiate for exposing publicly to the web.
+				// This intentionally omits 'REQUEST_URI' (added later)
+				$serverKeys = array_flip( [
+					'HTTP_X_REQUEST_ID', 'UNIQUE_ID',
+					'HTTP_HOST', 'HTTP_X_WIKIMEDIA_DEBUG', 'REQUEST_METHOD',
+					'REQUEST_START_TIME', 'REQUEST_TIME', 'REQUEST_TIME_FLOAT',
+					'SERVER_NAME'
+				] );
+				$getKeys = array_flip( [ 'action' ] );
+				$server = array_intersect_key( $_SERVER, $serverKeys );
+				$get = array_intersect_key( $_GET, $getKeys );
+				$env = [];
 
-					// Re-insert scrubbed URL as REQUEST_URL:
-					$server['REQUEST_URI'] = $url;
+				// Add hostname of current web server.
+				// - Not SERVER_NAME which is usually identical to HTTP_HOST, e.g. wikipedia.org.
+				// - Not SERVER_ADDR which the local IP address, e.g. 10.xx.xx.xx.
+				// Get what we're looking for from uname.
+				$server['HOSTNAME'] = php_uname( 'n' );
 
-					// Based on https://github.com/perftools/php-profiler/blob/v0.5.0/src/ProfilingData.php#L26
-					$data = [
-						'profile' => $profile,
-						'meta' => [
-							'url' => $url,
-							'SERVER' => $server,
-							'get' => $get,
-							'env' => $env,
-							'simple_url' => $url,
-							'request_ts_micro' => [ 'sec' => $sec, 'usec' => $usec ],
-						]
-					];
+				// Re-insert scrubbed URL as REQUEST_URL:
+				$server['REQUEST_URI'] = $url;
 
-					if ( !empty( $options['xhgui-conf']['pdo.connect'] )
-						&& $wmgXhguiDBuser
-						&& $wmgXhguiDBpassword
-					) {
-						$pdo = new PDO(
-							$options['xhgui-conf']['pdo.connect'],
-							$wmgXhguiDBuser,
-							$wmgXhguiDBpassword
-						);
-						$saver = new XhguiSaverPdo( $pdo, $options['xhgui-conf']['pdo.table'] );
-						$saver->save( $data );
-					}
-				};
+				// Based on https://github.com/perftools/php-profiler/blob/v0.5.0/src/ProfilingData.php#L26
+				$data = [
+					'profile' => $profile,
+					'meta' => [
+						'url' => $url,
+						'SERVER' => $server,
+						'get' => $get,
+						'env' => $env,
+						'simple_url' => $url,
+						'request_ts_micro' => [ 'sec' => $sec, 'usec' => $usec ],
+					]
+				];
 
-				// Register the callback as a shutdown_function, so that the profile
-				// includes MediaWiki's post-send DeferredUpdates as well.
-				// FIXME: This doesn't actually capture MW's post-send work because
-				// this callback is registered before MW is initialised, and the list
-				// is FIFO. It still captures all the main work during the request
-				// and pre-send work. On HHVM, we used a nested register_postsend_function().
-				register_shutdown_function( $saveCallback );
-			}
+				if ( !empty( $options['xhgui-conf']['pdo.connect'] )
+					&& $wmgXhguiDBuser
+					&& $wmgXhguiDBpassword
+				) {
+					$pdo = new PDO(
+						$options['xhgui-conf']['pdo.connect'],
+						$wmgXhguiDBuser,
+						$wmgXhguiDBpassword
+					);
+					$saver = new XhguiSaverPdo( $pdo, $options['xhgui-conf']['pdo.table'] );
+					$saver->save( $data );
+				}
+			};
+
+			// Register the callback as a shutdown_function, so that the profile
+			// includes MediaWiki's post-send DeferredUpdates as well.
+			// FIXME: This doesn't actually capture MW's post-send work because
+			// this callback is registered before MW is initialised, and the list
+			// is FIFO. It still captures all the main work during the request
+			// and pre-send work. On HHVM, we used a nested register_postsend_function().
+			register_shutdown_function( $saveCallback );
 		}
 	}
 

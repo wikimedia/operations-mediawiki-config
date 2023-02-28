@@ -8,10 +8,10 @@
 	},
 	"require-dev": {
 		"php-parallel-lint/php-parallel-lint": "1.3.2",
-		"mediawiki/mediawiki-codesniffer": "39.0.0",
-		"phpunit/phpunit": "^9.5",
+		"mediawiki/mediawiki-codesniffer": "40.0.1",
+		"phpunit/phpunit": "9.5.28",
 		"mediawiki/minus-x": "1.1.1",
-		"symfony/yaml": "5.4.3"
+		"symfony/yaml": "5.4.17"
 	},
 	"scripts": {
 		"lint": "parallel-lint --exclude vendor --exclude multiversion/vendor --ignore-fails .",
@@ -35,7 +35,7 @@
 		"buildLogoHTML": "php -e multiversion/buildLogoHTML.php",
 		"buildConfigCache": "php -e tests/buildConfigCache.php",
 		"diffConfig": [
-			"@manage-dblist update",
+			"@buildConfigCache",
 			"git checkout -q HEAD~1",
 			"git add -f tests/data/config-cache/",
 			"@buildConfigCache",

@@ -265,6 +265,7 @@ $wgLocalVirtualHosts = [
 	'test.wikidata.org',
 	'api.wikimedia.org',
 	'ar.wikimedia.org',
+	'az.wikimedia.org',
 	'bd.wikimedia.org',
 	'be.wikimedia.org',
 	'br.wikimedia.org',
@@ -292,6 +293,7 @@ $wgLocalVirtualHosts = [
 	'test-commons.wikimedia.org',
 	'tr.wikimedia.org',
 	'ua.wikimedia.org',
+	've.wikimedia.org',
 	'wikimania.wikimedia.org',
 ];
 
@@ -4258,6 +4260,10 @@ if ( $wmgUsePhonos ) {
 	$wgPhonosEngine = 'google';
 	$wgPhonosFileBackend = 'global-multiwrite';
 	$wgPhonosApiProxy = $wgCopyUploadProxy;
+}
+
+if ( $wmgUseVueTest ) {
+	wfLoadExtension( 'VueTest' );
 }
 
 // This is a temporary hack for hooking up Parsoid/PHP with MediaWiki

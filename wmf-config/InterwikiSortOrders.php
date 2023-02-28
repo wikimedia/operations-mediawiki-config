@@ -17,7 +17,7 @@ return [
 		'bg', 'bar', 'bo', 'bs', 'br', 'bxr', 'ca', 'cv', 'ceb', 'cs', 'ch',
 		'cbk-zam', 'ny', 'sn', 'tum', 'cho', 'co', 'cy', 'dag', 'da', 'dk', 'ary', 'se', 'pdc', 'de',
 		'dv', 'nv', 'dsb', 'dty', 'dz', 'mh', 'et', 'el', 'eml', 'en', 'myv', 'es', 'eo',
-		'ext', 'eu', 'ee', 'fa', 'hif', 'fo', 'fr', 'fy', 'ff', 'fur', 'ga', 'gv',
+		'ext', 'eu', 'ee', 'gur', 'fa', 'hif', 'fo', 'fr', 'fy', 'ff', 'fur', 'ga', 'gv',
 		'gag', 'gd', 'gl', 'inh', 'gan', 'ki', 'glk', 'gu', 'got', 'gom', 'guw', 'hak', 'xal', 'ko',
 		'ha', 'haw', 'hy', 'hi', 'ho', 'hsb', 'hr', 'gor', 'io', 'ig', 'ilo', 'bpy', 'id', 'ia',
 		'ie', 'iu', 'ik', 'os', 'xh', 'zu', 'is', 'it', 'he', 'jv', 'kbp', 'kl', 'kn', 'kr',
@@ -34,7 +34,7 @@ return [
 		'si', 'simple', 'sd', 'ss', 'sk', 'sl', 'cu', 'szl', 'so', 'ckb', 'srn', 'sr',
 		'sh', 'su', 'fi', 'sv', 'shy', 'tl', 'ta', 'shi', 'kab', 'roa-tara', 'tt', 'shn', 'tay', 'te', 'tet',
 		'th', 'din', 'ti', 'tg', 'to', 'chr', 'chy', 've', 'tcy', 'tr', 'tk', 'tw', 'kcg', 'tyv', 'udm', 'bug',
-		'uk', 'ur', 'ug', 'za', 'vec', 'vep', 'vi', 'vo', 'fiu-vro', 'wa', 'zh-classical',
+		'uk', 'ur', 'ug', 'za', 'vec', 'vep', 'vi', 'vo', 'fiu-vro', 'wa', 'guc', 'zh-classical',
 		'vls', 'war', 'wo', 'wuu', 'ts', 'yi', 'yo', 'yue', 'zh-yue', 'diq', 'zea', 'bat-smg',
 		'zh', 'zh-tw', 'zh-cn'
 	],
@@ -46,7 +46,7 @@ return [
 		'bcl', 'bi', 'bar', 'bo', 'bs', 'br', 'bug', 'bg', 'bxr', 'ca', 'ceb', 'cv', 'cs',
 		'ch', 'cbk-zam', 'ny', 'sn', 'tum', 'cho', 'co', 'cy', 'dag', 'da', 'dk', 'ary', 'se', 'pdc', 'de',
 		'dv', 'nv', 'dsb', 'na', 'dty', 'dz', 'mh', 'et', 'el', 'eml', 'en', 'myv', 'es', 'eo',
-		'ext', 'eu', 'ee', 'fa', 'hif', 'fo', 'fr', 'fy', 'ff', 'fur', 'ga', 'gv', 'sm',
+		'ext', 'eu', 'ee', 'gur', 'fa', 'hif', 'fo', 'fr', 'fy', 'ff', 'fur', 'ga', 'gv', 'sm',
 		'gag', 'gd', 'gl', 'inh', 'gan', 'ki', 'glk', 'gu', 'got', 'gom', 'guw', 'hak', 'xal', 'ko',
 		'ha', 'haw', 'hy', 'hi', 'ho', 'hsb', 'hr', 'io', 'ig', 'ilo', 'bpy', 'ia', 'ie',
 		'iu', 'ik', 'os', 'xh', 'zu', 'is', 'it', 'he', 'jv', 'kbp', 'kl', 'kn', 'kr', 'pam', 'krc', 'ka',
@@ -63,7 +63,7 @@ return [
 		'fi', 'sv', 'shy', 'shi', 'tl', 'ta', 'kab', 'roa-tara', 'tt', 'tay', 'te', 'tet', 'din', 'th', 'vi',
 		'ti', 'tg', 'tpi', 'tokipona', 'tp', 'chr', 'chy', 've', 'tcy', 'tr', 'tk', 'tw', 'kcg',
 		'tyv', 'udm', 'uk', 'ur', 'ug', 'za', 'vec', 'vep', 'vo', 'fiu-vro', 'wa',
-		'zh-classical', 'vls', 'war', 'wo', 'wuu', 'ts', 'yi', 'yo', 'yue', 'zh-yue', 'diq',
+		'zh-classical', 'vls', 'war', 'guc', 'wo', 'wuu', 'ts', 'yi', 'yo', 'yue', 'zh-yue', 'diq',
 		'zea', 'bat-smg', 'zh', 'zh-tw', 'zh-cn'
 	],
 	// by first word, non-Cyrillic/non-Roman/non-Greek name by language code
@@ -74,7 +74,7 @@ return [
 		'be-x-old', 'mad', 'bh', 'bcl', 'bi', 'bn', 'bo', 'bar', 'bs', 'bpy', 'br', 'bug',
 		'bxr', 'ca', 'ceb', 'ch', 'cbk-zam', 'sn', 'tum', 'ny', 'cho', 'chr', 'co',
 		'cy', 'cv', 'cs', 'dag', 'da', 'dk', 'se', 'pdc', 'de', 'nv', 'dsb', 'na', 'dty', 'dv', 'dz',
-		'mh', 'et', 'el', 'eml', 'en', 'myv', 'es', 'eo', 'ext', 'eu', 'ee', 'fa',
+		'mh', 'et', 'el', 'eml', 'en', 'myv', 'es', 'eo', 'ext', 'eu', 'ee', 'fa', 'gur',
 		'hif', 'fo', 'fr', 'fy', 'ff', 'fur', 'ga', 'gv', 'sm', 'gag', 'gd', 'gl', 'inh',
 		'gan', 'ki', 'glk', 'got', 'gom', 'gu', 'guw', 'ha', 'hak', 'xal', 'haw', 'he',
 		'hi', 'ho', 'hsb', 'hr', 'hy', 'hyw', 'io', 'ig', 'ii', 'ilo', 'ia', 'ie', 'iu',
@@ -92,7 +92,7 @@ return [
 		'so', 'ckb', 'srn', 'sr', 'sh', 'shn', 'su', 'fi', 'sv', 'ta', 'shy', 'shi', 'tl', 'kab',
 		'roa-tara', 'tt', 'tay', 'te', 'tet', 'din', 'th', 'ti', 'vi', 'tg', 'tokipona', 'tp',
 		'tpi', 'chy', 've', 'tcy', 'tr', 'tk', 'tw', 'kcg', 'tyv', 'udm', 'uk', 'ur', 'ug', 'za', 'vec',
-		'vep', 'vo', 'fiu-vro', 'wa', 'vls', 'war', 'wo', 'wuu', 'ts', 'xmf', 'yi',
+		'vep', 'vo', 'fiu-vro', 'wa', 'guc', 'vls', 'war', 'wo', 'wuu', 'ts', 'xmf', 'yi',
 		'yo', 'diq', 'zea', 'zh', 'zh-tw', 'zh-cn', 'zh-classical', 'yue', 'zh-yue', 'bat-smg'
 	],
 	// by language code, except 'y' is sorted like 'i'
@@ -102,7 +102,7 @@ return [
 		'be-x-old', 'bg', 'bh', 'bi', 'bjn', 'bm', 'bn', 'bo', 'bpy', 'br', 'bs', 'bug', 'bxr',
 		'ca', 'cbk-zam', 'cdo', 'ce', 'ceb', 'ch', 'chy', 'cho', 'chr', 'cy', 'ckb',
 		'co', 'cr', 'crh', 'cs', 'csb', 'cu', 'cv', 'da', 'dag', 'de', 'din', 'diq', 'dk', 'dsb', 'dty', 'dv',
-		'dz', 'ee', 'el', 'eml', 'en', 'eo', 'es', 'et', 'eu', 'ext', 'fa', 'ff', 'fi',
+		'dz', 'ee', 'el', 'eml', 'en', 'eo', 'es', 'et', 'eu', 'ext', 'gur', 'fa', 'ff', 'fi',
 		'fy', 'fiu-vro', 'fj', 'fo', 'fr', 'frp', 'frr', 'fur', 'ga', 'gag', 'gan', 'gcr', 'gd',
 		'gl', 'glk', 'gn', 'gor', 'got', 'gom', 'gu', 'guw', 'gv', 'ha', 'hak', 'haw', 'he', 'hi', 'hy',
 		'hyw', 'hif', 'ho', 'hr', 'hsb', 'ht', 'hu', 'hz', 'ia', 'id', 'ie', 'ig', 'ii', 'yi',
@@ -119,7 +119,7 @@ return [
 		'sk', 'skr', 'sl', 'sm', 'smn', 'sn', 'so', 'sq', 'sr', 'srn', 'ss', 'st', 'stq', 'su', 'sv',
 		'sw', 'szl', 'szy', 'ta', 'tay', 'tcy', 'te', 'tet', 'tg', 'th', 'ti', 'ty', 'tk', 'tl', 'tn', 'to',
 		'tokipona', 'tp', 'tpi', 'tr', 'ts', 'tt', 'tum', 'tw', 'tyv', 'udm', 'ug', 'uk', 'ur',
-		'uz', 've', 'vec', 'vep', 'vi', 'vls', 'vo', 'wa', 'war', 'wo', 'wuu', 'xal',
+		'uz', 've', 'vec', 'vep', 'vi', 'vls', 'vo', 'guc', 'wa', 'war', 'wo', 'wuu', 'xal',
 		'xh', 'xmf', 'za', 'zea', 'zh', 'zh-classical', 'zh-cn', 'yue', 'zh-yue', 'zh-min-nan',
 		'zh-tw', 'zu'
 	],

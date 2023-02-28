@@ -56,6 +56,7 @@ $wgLBFactoryConf = [
 	'arbcom_ruwiki' => 's5',
 	'aswikiquote'   => 's5',
 	'avkwiki'      => 's5',
+	'azwikimedia'   => 's5',
 	'banwikisource' => 's5',
 	'bclwiktionary' => 's5',
 	'bclwikiquote'  => 's5',
@@ -69,6 +70,8 @@ $wgLBFactoryConf = [
 	'enwikivoyage' => 's5',
 	'eowikivoyage' => 's5',
 	'gorwiktionary' => 's5',
+	'gucwiki'      => 's5',
+	'gurwiki'      => 's5',
 	'guwwiki'      => 's5',
 	'guwwiktionary' => 's5',
 	'guwwikiquote' => 's5',
@@ -103,6 +106,7 @@ $wgLBFactoryConf = [
 	'tlwikiquote'  => 's5',
 	'trwikivoyage' => 's5',
 	'trvwiki'      => 's5',
+	'vewikimedia'  => 's5',
 	'wawikisource' => 's5',
 
 	# s6: large wikis + wikitech

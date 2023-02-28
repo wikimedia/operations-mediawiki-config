@@ -486,8 +486,10 @@ Wikipedia:
         comment: 'T48589, T318766'
         comment_1_5x: 'T150618, T318766'
         comment_2x: 'T150618, T318766'
-        local_tagline: true
-        local_wordmark: true
+        commons_wordmark: 'File:Wikipedia-wordmark-ext.svg'
+        comment_wordmark: 'T330588'
+        commons_tagline: 'File:Wikipedia-tagline-ext.svg'
+        comment_tagline: 'T330588'
     fawiki:
         commons: 'File:Wikipedia-logo-v2-fa.svg'
         commons_wordmark: 'File:Wikipedia-wordmark-fa.svg'
@@ -602,6 +604,10 @@ Wikipedia:
         comment_2x: T150618
         local_tagline: true
         local_wordmark: true
+    gucwiki:
+        commons: 'File:Wikipedia-logo-v2-guc.svg'
+    gurwiki:
+        commons: 'File:Wikipedia-logo-v2-gur.svg'
     guwwiki:
         comment: T303727
         comment_1_5x: T303727
@@ -3568,10 +3574,12 @@ Wikivoyage:
         no_2x: true
         selected_icon: metawiki
     sysop_itwiki:
-        comment: T256545
-        comment_1_5x: T256545
-        comment_2x: T256545
-        no_wordmark: true
+        commons: 'File:Wikipedia Administrator.svg'
+        comment: T256545, T330279
+        comment_1_5x: T330279, T330279
+        comment_2x: T330279, T330279
+        commons_wordmark: 'File:Sysop itwiki-wordmark.svg'
+        comment_wordmark: T330279
         no_icon: true
     strategywiki:
         no_1_5x: true

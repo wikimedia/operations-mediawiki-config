@@ -1150,11 +1150,6 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
-		'wgLexemeEnableNewAlpha' => [
-			'default' => null,
-			'wikidatawiki' => true,
-		],
-
 		'-wmgWikibaseSearchIndexProperties' => [
 			'default' => []
 		],
@@ -1313,11 +1308,6 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
-		'wgLinterSubmitterWhitelist' => [
-			'default' => [
-				'172.16.4.125' => true, // deployment-parsoid12.deployment-prep.eqiad1.wikimedia.cloud
-			]
-		],
 		'wgLinterStatsdSampleFactor' => [
 			'default' => 10,
 		],
@@ -1809,6 +1799,12 @@ function wmfGetOverrideSettings() {
 
 		// T302959
 		'wmgWikibaseRestApiEnabled' => [
+			'default' => false,
+			'wikidatawiki' => true,
+		],
+
+		// T326313
+		'wmgWikibaseRestApiDevelopmentEnabled' => [
 			'default' => false,
 			'wikidatawiki' => true,
 		],
@@ -2460,6 +2456,9 @@ function wmfGetOverrideSettings() {
 			'enwiki' => true,
 			'ruwiki' => true,
 		],
+		'wgQuickViewDataRepositoryApiBaseUri' => [
+			'default' => 'https://wikidata.beta.wmflabs.org/w/api.php',
+		],
 		'wgQuickViewMediaRepositoryApiBaseUri' => [
 			'default' => 'https://commons.wikimedia.beta.wmflabs.org/w/api.php',
 		],
@@ -2487,13 +2486,17 @@ function wmfGetOverrideSettings() {
 			'enwiktionary' => true,
 		],
 
+		'wmgUseVueTest' => [
+			'default' => true,
+		],
+
 		// T299612
 		'wgLinterWriteNamespaceColumnStage' => [
 			'default' => true,
 		],
 
 		// T299612
-		'wgLinterMigrateNamespaceStage' => [
+		'wgLinterUseNamespaceColumnStage' => [
 			'default' => true,
 		],
 
@@ -2503,7 +2506,7 @@ function wmfGetOverrideSettings() {
 		],
 
 		// T175177
-		'wgLinterMigrateTagAndTemplateColumnsStage' => [
+		'wgLinterUserInterfaceTagAndTemplateStage' => [
 			'default' => true,
 		],
 

@@ -6,6 +6,9 @@
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingDocumentationPublic" />
 		<exclude name="MediaWiki.Usage.SuperGlobalsUsage.SuperGlobals" />
 	</rule>
+	<rule ref="MediaWiki.Commenting.FunctionComment.MissingDocumentationPrivate">
+		<exclude-pattern>tests/</exclude-pattern>
+	</rule>
 	<rule ref="MediaWiki.Commenting.PropertyDocumentation.MissingDocumentationPrivate">
 		<exclude-pattern>tests/</exclude-pattern>
 	</rule>
