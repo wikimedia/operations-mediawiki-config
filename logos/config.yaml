@@ -1617,7 +1617,6 @@ Wikipedia:
         local_wordmark: true
         local_tagline: true
     trwiki:
-        selected: trwiki-temp
         commons: 'File:Wikipedia-logo-v2-tr.svg'
         variants:
             trwiki-temp:

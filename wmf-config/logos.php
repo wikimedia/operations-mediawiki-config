@@ -340,7 +340,7 @@ return [
 	'towiki' => '/static/images/project-logos/towiki.png', // T51125
 	'tpiwiki' => '/static/images/project-logos/tpiwiki.png', // T29240
 	'trvwiki' => '/static/images/project-logos/trvwiki.png',
-	'trwiki' => '/static/images/project-logos/trwiki-temp.png',
+	'trwiki' => '/static/images/project-logos/trwiki.png',
 	'tswiki' => '/static/images/project-logos/tswiki.png', // T51125
 	'ttwiki' => '/static/images/project-logos/ttwiki.png',
 	'tumwiki' => '/static/images/project-logos/tumwiki.png', // T320473
@@ -1168,7 +1168,7 @@ return [
 	'towiki' => '/static/images/project-logos/towiki-1.5x.png', // T150618
 	'tpiwiki' => '/static/images/project-logos/tpiwiki-1.5x.png', // T150618
 	'trvwiki' => '/static/images/project-logos/trvwiki-1.5x.png',
-	'trwiki' => '/static/images/project-logos/trwiki-temp-1.5x.png',
+	'trwiki' => '/static/images/project-logos/trwiki-1.5x.png',
 	'tswiki' => '/static/images/project-logos/tswiki-1.5x.png', // T150618
 	'ttwiki' => '/static/images/project-logos/ttwiki-1.5x.png', // T150618
 	'tumwiki' => '/static/images/project-logos/tumwiki-1.5x.png', // T320473
@@ -1772,7 +1772,7 @@ return [
 	'towiki' => '/static/images/project-logos/towiki-2x.png', // T150618
 	'tpiwiki' => '/static/images/project-logos/tpiwiki-2x.png', // T150618
 	'trvwiki' => '/static/images/project-logos/trvwiki-2x.png',
-	'trwiki' => '/static/images/project-logos/trwiki-temp-2x.png',
+	'trwiki' => '/static/images/project-logos/trwiki-2x.png',
 	'tswiki' => '/static/images/project-logos/tswiki-2x.png', // T150618
 	'ttwiki' => '/static/images/project-logos/ttwiki-2x.png', // T150618
 	'tumwiki' => '/static/images/project-logos/tumwiki-2x.png', // T320473
@@ -3079,8 +3079,8 @@ return [
 	],
 	'trwiki' => [ // T255489, T254788
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-tr.svg',
-		'width' => 120,
-		'height' => 21,
+		'width' => 107,
+		'height' => 18,
 	],
 	'tswiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ts.svg',
@@ -4929,8 +4929,8 @@ return [
 	],
 	'trwiki' => [ // T258552
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-tr.svg',
-		'width' => 120,
-		'height' => 15,
+		'width' => 104,
+		'height' => 13,
 	],
 	'tswiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ts.svg',
@@ -5167,7 +5167,6 @@ return [
 	'wikimedia' => '/static/images/icons/wikimedia.svg',
 
 	// Wikipedia
-	'trwiki' => '/static/images/icons/trwiki-temp.svg', // T329047
 
 	// Wiktionary
 	'angwiktionary' => null,
