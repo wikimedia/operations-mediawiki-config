@@ -38,9 +38,13 @@
 			"@buildConfigCache",
 			"git checkout -q HEAD~1",
 			"git add -f tests/data/config-cache/",
+			"git stash",
 			"@buildConfigCache",
-			"git diff -R --minimal --color --exit-code",
-			"git reset tests/data/config-cache/"
+			"git add -f tests/data/config-cache/",
+			"git stash",
+			"git diff stash@{0} stash@{1} --minimal --color --exit-code",
+			"git stash drop",
+			"git stash drop"
 		],
 		"checkclean": "git diff --exit-code wmf-config/ dblists/ dblists-index.php"
 	}
