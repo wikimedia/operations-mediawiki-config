@@ -167,6 +167,8 @@ foreach ( $wmgDatacenters as $specificDC ) {
 /* end DC-specific Swift backend config */
 
 /* Common multiwrite backend config */
+$isEqiadMaster = ( $wmgMasterDatacenter == 'eqiad' );
+$isCodfwMaster = ( $wmgMasterDatacenter == 'codfw' );
 $localMultiWriteFileBackend = [
 	'class' => FileBackendMultiWrite::class,
 	'name' => 'local-multiwrite',
@@ -174,7 +176,7 @@ $localMultiWriteFileBackend = [
 	'lockManager' => 'redisLockManager',
 	// DO NOT change the master backend unless it is fully trusted or autoRsync is off
 	'backends' => [
-		[ 'template' => 'local-swift-eqiad', 'isMultiMaster' => true ],
+		[ 'template' => 'local-swift-eqiad', 'isMultiMaster' => $isEqiadMaster ],
 	],
 	// read-after-update for assets
 	'replication' => 'sync',
@@ -189,7 +191,7 @@ $sharedMultiwriteFileBackend = [
 	'lockManager' => 'redisLockManager',
 	// DO NOT change the master backend unless it is fully trusted or autoRsync is off
 	'backends' => [
-		[ 'template' => 'shared-swift-eqiad', 'isMultiMaster' => true ],
+		[ 'template' => 'shared-swift-eqiad', 'isMultiMaster' => $isEqiadMaster ],
 	],
 	// read-after-update for assets
 	'replication' => 'sync',
@@ -203,7 +205,7 @@ $globalMultiWriteFileBackend = [
 	'lockManager' => 'redisLockManager',
 	// DO NOT change the master backend unless it is fully trusted or autoRsync is off
 	'backends' => [
-		[ 'template' => 'global-swift-eqiad', 'isMultiMaster' => true ],
+		[ 'template' => 'global-swift-eqiad', 'isMultiMaster' => $isEqiadMaster ],
 	],
 	// read-after-update for assets
 	'replication' => 'sync',
@@ -217,7 +219,7 @@ $sharedTestwikiMultiWriteFileBackend = [
 	'lockManager' => 'redisLockManager',
 	// DO NOT change the master backend unless it is fully trusted or autoRsync is off
 	'backends' => [
-		[ 'template' => 'shared-testwiki-swift-eqiad', 'isMultiMaster' => true ],
+		[ 'template' => 'shared-testwiki-swift-eqiad', 'isMultiMaster' => $isEqiadMaster ],
 	],
 	// read-after-update for assets
 	'replication' => 'sync',
@@ -226,10 +228,10 @@ $sharedTestwikiMultiWriteFileBackend = [
 ];
 
 if ( in_array( 'codfw', $wmgDatacenters ) ) {
-	$localMultiWriteFileBackend['backends'][] = [ 'template' => 'local-swift-codfw' ];
-	$sharedMultiwriteFileBackend['backends'][] = [ 'template' => 'shared-swift-codfw' ];
-	$globalMultiWriteFileBackend['backends'][] = [ 'template' => 'global-swift-codfw' ];
-	$sharedTestwikiMultiWriteFileBackend['backends'][] = [ 'template' => 'shared-testwiki-swift-codfw' ];
+	$localMultiWriteFileBackend['backends'][] = [ 'template' => 'local-swift-codfw', 'isMultiMaster' => $isCodfwMaster ];
+	$sharedMultiwriteFileBackend['backends'][] = [ 'template' => 'shared-swift-codfw', 'isMultiMaster' => $isCodfwMaster ];
+	$globalMultiWriteFileBackend['backends'][] = [ 'template' => 'global-swift-codfw', 'isMultiMaster' => $isCodfwMaster ];
+	$sharedTestwikiMultiWriteFileBackend['backends'][] = [ 'template' => 'shared-testwiki-swift-codfw', 'isMultiMaster' => $isCodfwMaster ];
 }
 $wgFileBackends[] = $localMultiWriteFileBackend;
 $wgFileBackends[] = $sharedMultiwriteFileBackend;
