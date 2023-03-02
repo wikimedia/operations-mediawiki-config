@@ -1310,6 +1310,7 @@ return [
 		'bot' => [
 			'setmentor' => true, // T307005
 			'editautopatrolprotected' => true, // T308917
+			'changetags' => true, // T331051
 		],
 		'botadmin' => [ // T220915
 			'apihighlimits' => true,
@@ -1333,10 +1334,13 @@ return [
 			'tboverride' => true,
 			'writeapi' => true,
 			'editautopatrolprotected' => true, // T308917
+			'changetags' => true, // T331051
 		],
 		'sysop' => [
 			'editautopatrolprotected' => true, // T308917
+			'changetags' => true, // T331051
 		],
+		'user' => [ 'changetags' => false ], // T331051
 	],
 	'+itwikisource' => [
 		'flood' => [ 'bot' => true ], // T38600
