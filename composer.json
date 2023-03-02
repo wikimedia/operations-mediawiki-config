@@ -35,6 +35,8 @@
 		"buildLogoHTML": "php -e multiversion/buildLogoHTML.php",
 		"buildConfigCache": "php -e tests/buildConfigCache.php",
 		"diffConfig": [
+			"@putenv GIT_AUTHOR_EMAIL=diffConfig@localhost",
+			"@putenv GIT_COMMITTER_EMAIL=diffConfig@localhost",
 			"@buildConfigCache",
 			"git checkout -q HEAD~1",
 			"git add -f tests/data/config-cache/",
