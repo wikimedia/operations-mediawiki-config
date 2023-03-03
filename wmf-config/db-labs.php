@@ -20,6 +20,7 @@ if ( $wmgRealm == 'labs' ) {
 			'DEFAULT' => [
 				'deployment-db11' => 0,
 				'deployment-db12' => 400,
+				'deployment-db13' => 0,
 			],
 		],
 
@@ -39,6 +40,8 @@ if ( $wmgRealm == 'labs' ) {
 			'deployment-db11' => '172.16.5.150:3306',
 			// deployment-db12.deployment-prep.eqiad1.wikimedia.cloud
 			'deployment-db12' => '172.16.3.239:3306',
+			// deployment-db13.deployment-prep.eqiad1.wikimedia.cloud
+			'deployment-db13' => '172.16.4.172:3306',
 		],
 
 		'externalLoads' => [
