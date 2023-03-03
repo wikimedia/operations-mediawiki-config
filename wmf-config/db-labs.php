@@ -20,7 +20,7 @@ if ( $wmgRealm == 'labs' ) {
 			'DEFAULT' => [
 				'deployment-db11' => 0,
 				'deployment-db12' => 400,
-				'deployment-db13' => 0,
+				'deployment-db13' => 400,
 			],
 		],
 
@@ -50,6 +50,8 @@ if ( $wmgRealm == 'labs' ) {
 				'172.16.5.150:3306' => 1,
 				// deployment-db12.deployment-prep.eqiad1.wikimedia.cloud
 				'172.16.3.239:3306' => 3,
+				// deployment-db13.deployment-prep.eqiad1.wikimedia.cloud
+				'172.16.4.172:3306' => 3,
 			],
 
 			'flow_cluster1' => [
@@ -57,6 +59,8 @@ if ( $wmgRealm == 'labs' ) {
 				'172.16.5.150:3306' => 1,
 				// deployment-db12.deployment-prep.eqiad1.wikimedia.cloud
 				'172.16.3.239:3306' => 3,
+				// deployment-db13.deployment-prep.eqiad1.wikimedia.cloud
+				'172.16.4.172:3306' => 3,
 			],
 
 			'extension1' => [
@@ -64,6 +68,8 @@ if ( $wmgRealm == 'labs' ) {
 				'172.16.5.150:3306' => 1,
 				// deployment-db12.deployment-prep.eqiad1.wikimedia.cloud
 				'172.16.3.239:3306' => 3,
+				// deployment-db13.deployment-prep.eqiad1.wikimedia.cloud
+				'172.16.4.172:3306' => 3,
 			],
 
 			'extension2' => [
@@ -71,6 +77,8 @@ if ( $wmgRealm == 'labs' ) {
 				'172.16.5.150:3306' => 1,
 				// deployment-db12.deployment-prep.eqiad1.wikimedia.cloud
 				'172.16.3.239:3306' => 3,
+				// deployment-db13.deployment-prep.eqiad1.wikimedia.cloud
+				'172.16.4.172:3306' => 3,
 			]
 		],
 
