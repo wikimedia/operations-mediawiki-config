@@ -12,6 +12,7 @@ namespace Wikimedia\MWConfig;
 use ExcimerProfiler;
 use PDO;
 use Redis;
+use ReflectionException;
 
 require_once __DIR__ . '/XWikimediaDebug.php';
 
@@ -225,14 +226,23 @@ class Profiler {
 			$redisChannel .= '-k8s';
 		}
 
+		// The period is 60s, so there's no point waiting for more samples to arrive
+		// before the end of the request, they probably won't.
 		$cpuProf->setFlushCallback(
 			static function ( $log ) use ( $options, $redisChannel ) {
-				self::excimerFlushCallback( $log, $options, $redisChannel );
+				$logLines = explode( "\n", $log->formatCollapsed() );
+				self::excimerFlushToArclamp( $logLines, $options, $redisChannel );
 			},
 			/* $maxSamples = */ 1 );
 		$realProf->setFlushCallback(
 			static function ( $log ) use ( $options, $redisChannel ) {
-				self::excimerFlushCallback( $log, $options, $redisChannel . '-wall' );
+				$logLines = explode( "\n", $log->formatCollapsed() );
+				self::excimerFlushToArclamp( $logLines, $options, $redisChannel . '-wall' );
+				register_shutdown_function(
+					[ self::class, 'excimerFlushToStatsd' ],
+					$logLines,
+					$options
+				);
 			},
 			/* $maxSamples = */ 1 );
 
@@ -241,15 +251,15 @@ class Profiler {
 	}
 
 	/**
-	 * The callback for production profiling. This is called every time Excimer
-	 * collects a stack trace. The period is 60s, so there's no point waiting for
-	 * more samples to arrive before the end of the request, they probably won't.
+	 * Production callback for recording profiling data in arclamp
 	 *
-	 * @param string $log
+	 * This is called every time Excimer collects a stack trace
+	 *
+	 * @param string[] $logLines Result of ExcimerLog::formatCollapsed()
 	 * @param array $options
 	 * @param string $redisChannel
 	 */
-	public static function excimerFlushCallback( $log, $options, $redisChannel ) {
+	public static function excimerFlushToArclamp( $logLines, $options, $redisChannel ) {
 		$error = null;
 		$toobig = 0;
 		try {
@@ -264,8 +274,7 @@ class Profiler {
 				// callbacks, this isn't the case on PHP 7.2. E.g. a line may be:
 				// "LBFactory::__destruct;LBFactory::LBFactory::shutdown;… 1".
 				$firstFrame = realpath( $_SERVER['SCRIPT_FILENAME'] ) . ';';
-				$collapsed = $log->formatCollapsed();
-				foreach ( explode( "\n", $collapsed ) as $line ) {
+				foreach ( $logLines as $line ) {
 					if ( ( substr_count( $line, ';' ) + 1 ) >= 249 ) {
 						// Stacks are separated by semi-colon, so +1 to get the frame count.
 						// Anything size 249 or more, may be cut off (per setMaxDepth).
@@ -314,5 +323,112 @@ class Profiler {
 				}
 			}
 		}
+	}
+
+	/**
+	 * Production callback for recording profiling data in statsd
+	 *
+	 * This is called every time Excimer collects a stack trace
+	 *
+	 * @param string[] $logLines Result of ExcimerLog::formatCollapsed()
+	 * @param array $options
+	 */
+	public static function excimerFlushToStatsd( $logLines, $options ) {
+		$dest = $options['statsd'] ?? null;
+		$verb = $_SERVER['REQUEST_METHOD'] ?? '';
+		$handler = class_exists( \MediaWiki\Profiler\ProfilingContext::class )
+			? \MediaWiki\Profiler\ProfilingContext::singleton()->getHandlerMetricPrefix()
+			: 'unknown';
+
+		if ( $dest && $verb !== '' && $handler !== 'unknown' ) {
+			$sock = socket_create( AF_INET, SOCK_DGRAM, SOL_UDP );
+			foreach ( $logLines as $line ) {
+				if ( $line === '' ) {
+					// $collapsed ends with a line break
+					continue;
+				}
+				$componentsInStack = [];
+				foreach ( explode( ';', $line ) as $fname ) {
+					$cname = self::excimerComponentFromMethod( $fname );
+					if ( $cname !== null ) {
+						$componentsInStack[$cname] = 1;
+					}
+				}
+				$stat = "MediaWiki.arclamp_samples.$handler.$verb:1|c\n";
+				@socket_sendto( $sock, $stat, strlen( $stat ), 0, $dest, 8125 );
+				foreach ( $componentsInStack as $cname => $hit ) {
+					$stat = "MediaWiki.arclamp_samples_components.$handler.$verb.$cname:1|c\n";
+					@socket_sendto( $sock, $stat, strlen( $stat ), 0, $dest, 8125 );
+				}
+			}
+		}
+	}
+
+	/**
+	 * Get the component name from a class suitable for metrics
+	 *
+	 * @param string $fname Fully qualified caller name (e.g. from __METHOD__)
+	 * @return string|null Metric name component (e.g. "core", "MySkin", "MyExtension")
+	 */
+	private static function excimerComponentFromMethod( $fname ) {
+		$m = [];
+		if ( !preg_match( '/^([a-zA-Z0-9_\\\\]+)::[a-zA-Z0-9_]+$/', $fname, $m ) ) {
+			return null;
+		}
+
+		// Determine the class file path
+		try {
+			$path = ( new \ReflectionClass( $m[1] ) )->getFileName();
+			$component = self::excimerComponentFromPath( $path );
+		} catch ( ReflectionException $e ) {
+			$component = 'unknown';
+		}
+
+		return $component;
+	}
+
+	/**
+	 * Get the component name from a class suitable for metrics
+	 *
+	 * @param string|false $path Fully qualified path name
+	 * @return string|null Metric name component (e.g. "core", "MySkin", "MyExtension")
+	 */
+	private static function excimerComponentFromPath( $path ) {
+		global $IP, $wgStyleDirectory, $wgExtensionDirectory;
+
+		if ( $path === false ) {
+			// Part of PHP core or PECL extension
+			return 'other';
+		}
+
+		// Try to determine the component from the class file path.
+		// Note that skins/extensions might use directories nested within $IP.
+		foreach ( [
+			  "$wgExtensionDirectory/" => 'ext_',
+			  "$wgStyleDirectory/" => 'skin_',
+			  "$IP/includes/libs/" => 'lib_',
+			  "$IP/includes/" => 'core_',
+			  "$IP/vendor/wikimedia/" => 'lib_',
+		  ] as $baseDirectoryWithSlash => $basePrefix ) {
+			$offset = strlen( $baseDirectoryWithSlash );
+			// @todo: use str_starts_with() with PHP 8.0
+			if ( substr( $path, 0, $offset ) === $baseDirectoryWithSlash ) {
+				$pos = strpos( $path, '/', $offset );
+				$name = ( $pos !== false )
+					// Treat the relative subdirectory as the component. This ideally matches
+					// the relative sub-namespace of Wikimedia\ and MediaWiki\ namespaced files.
+					? substr( $path, $offset, $pos - $offset )
+					// Placeholder to use for files that should be moved to a subdirectory
+					: 'other';
+
+				return $basePrefix . str_replace( '.', '_', $name );
+			}
+		}
+
+		if ( substr( $path, 0, strlen( "$IP/vendor/" ) ) === "$IP/vendor/" ) {
+			return 'lib_other';
+		}
+
+		return 'other';
 	}
 }
