@@ -6134,6 +6134,13 @@ return [
 		'OfficeIT' => true,
 		'Tool' => true,
 	],
+	'+foundationwiki' => [
+		'Resolution' => true, // T331079
+		'Legal' => true, // T331079
+		'Minutes' => true, // T331079
+		'Policy' => true, // T331079
+		'Archive' => true, // T331079
+	],
 
 	// Private wikis
 	'+officewiki' => [
