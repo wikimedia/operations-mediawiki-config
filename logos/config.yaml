@@ -3281,6 +3281,8 @@ Wikivoyage:
     arwikimedia:
         no_1_5x: true
         no_2x: true
+    azwikimedia:
+        commons: 'File:Azerbaijani Wikimedians Black logo-en SVG.svg'
     bdwikimedia:
         no_1_5x: true
         no_2x: true
@@ -3388,6 +3390,8 @@ Wikivoyage:
     uawikimedia:
         no_1_5x: true
         no_2x: true
+    vewikimedia:
+        commons: 'File:Wikimedia Venezuela logo negro.svg'
     wbwikimedia:
         comment: T162510
         comment_1_5x: T162510
