@@ -2471,6 +2471,10 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 			'loginwiki' => false,
 		],
+		// T327470
+		'wgCampaignEventsEnableMultipleOrganizers' => [
+			'default' => true,
+		],
 
 		// T314294
 		'wmgUsePhonos' => [
