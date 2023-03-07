@@ -1689,7 +1689,6 @@ if ( $wmgUseDynamicPageList ) {
 	$wgDLPMaxCacheTime = 604800;
 }
 
-wfLoadExtension( 'Renameuser' );
 $wgGroupPermissions['bureaucrat']['renameuser'] = $wmgAllowLocalRenameuser;
 
 if ( $wmgUseSpecialNuke ) {
