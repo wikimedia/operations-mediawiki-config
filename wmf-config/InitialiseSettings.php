@@ -2358,6 +2358,7 @@ return [
 		'logged_out' => false
 	],
 ],
+// Shows language selector beside the main page title.
 'wgVectorLanguageInMainPageHeader' => [
 	'default' => [
 		'logged_in' => false,
@@ -2368,6 +2369,24 @@ return [
 		'logged_in' => true,
 		'logged_out' => true,
 	],
+	// START: T325362
+	'frwiki' => [
+		'logged_in' => true,
+		'logged_out' => true,
+	],
+	'gomwiki' => [
+		'logged_in' => true,
+		'logged_out' => true,
+	],
+	'gomwiktionary' => [
+		'logged_in' => true,
+		'logged_out' => true,
+	],
+	'avkwiki' => [
+		'logged_in' => true,
+		'logged_out' => true,
+	],
+	// END: T325362
 ],
 'wgVectorWvuiSearchOptions' => [
 	'default' => [
