@@ -1086,14 +1086,6 @@ return [
 			// we should set this to eventgate-main too.
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
-		// This stream will be used by the streaming enrichment pipeline
-		// to emit error events encountered during enrichment.
-		// These events can be used if backfilling of the failed enrichment
-		// is desired later.
-		'rc1.enrichment.mediawiki_page_content_change.error.' => [
-			'schema_title' => 'error',
-			'canary_events_enabled' => false,
-		],
 
 		/*
 		 * == eventgate-main streams ==
