@@ -390,6 +390,7 @@ function wmfGetOverrideSettings() {
 				'MessageCache' => 'debug',
 				'runJobs' => [ 'logstash' => 'info' ],
 				'squid' => 'debug',
+				'WikiLambda' => 'debug',
 			],
 		],
 
