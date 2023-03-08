@@ -5,13 +5,60 @@
 // phpcs:disable MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment
 
 /**
- * Configuration for the EventLogging extension.
+ * Event Stream Configuration via the EventStreamConfig extension.
+ * https://wikitech.wikimedia.org/wiki/Event_Platform/Stream_Configuration
  */
 
 return [
 
+// Stream config default settings.
+// The EventStreamConfig extension will add these
+// settings to each entry in wgEventStreams if
+// the entry does not already have the setting.
+'wgEventStreamsDefaultSettings' => [
+	'default' => [
+		'topic_prefixes' => [ 'eqiad.', 'codfw.' ],
+		// Canary events are produced into streams
+		// for ingestion monitoring purposes.
+		// Absence of these events either means
+		// that canary event production is failing, or
+		// another component of the event pipeline is failing.
+		// Without canary events, we cannot differentiate between
+		// an idle stream and a broken pipeline.
+		// This is explicitly disabled for MW state change (EventBus) streams
+		// until https://phabricator.wikimedia.org/T266798 is done.
+		'canary_events_enabled' => true,
+		// By default, all events should be imported into Hadoop.
+		// The analytics hadoop ingestion consumer (Gobblin) will
+		// look for streams to ingest using these settings.
+		// Each stream in a job should have similar volumes to allow
+		// the job to scale properly and not cause stream ingestion starvation.
+		// The default job_name is event_default.
+		// Override this if the stream should be imported by a different job,
+		// or disabled altogether.
+		'consumers' => [
+			'analytics_hadoop_ingestion' => [
+				'job_name' => 'event_default',
+				'enabled' => true,
+			],
+		],
+	],
+],
+
 /*
- * NOTE: THIS IS MOVING INTO ext-EventStreamConfig.php
+ * Event stream configuration. A list of stream configurations.
+ * Each item must have a 'stream' setting of either the specific
+ * stream name or a regex patterns to matching stream names.
+ * Each item must also at minimum include the schema_title of the
+ * JSONSchema that events in the stream must conform to.
+ * This is used by the EventStreamConfig extension
+ * to allow for remote configuration of streams.  It
+ * is used by the EventLogging extension to vary e.g.
+ * sample rate that browsers use when producing events,
+ * as well as the eventgate-analytics-external service
+ * to dynamically add event streams that it should accept
+ * and validate.
+ * See https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/EventStreamConfig/#mediawiki-config
  */
 'wgEventStreams' => [
 	'default' => [
@@ -1352,113 +1399,6 @@ return [
 				'rate' => 1
 			],
 		],
-	],
-],
-
-// List of streams to register for use with the EventLogging extension.
-// EventLogging will request the stream config (defined in wgEventStreams
-// in ext-EventStreamConfig.php) for each of the stream names listed here.
-'wgEventLoggingStreamNames' => [
-	'default' => [
-		'eventlogging_CentralNoticeBannerHistory',
-		'eventlogging_CentralNoticeImpression',
-		'eventlogging_CentralNoticeTiming',
-		'eventlogging_ContentTranslationAbuseFilter',
-		'eventlogging_CodeMirrorUsage',
-		'eventlogging_CpuBenchmark',
-		'eventlogging_DesktopWebUIActionsTracking',
-		'eventlogging_EchoInteraction',
-		'eventlogging_EchoMail',
-		'eventlogging_EditAttemptStep',
-		'eventlogging_FeaturePolicyViolation',
-		'eventlogging_HelpPanel',
-		'eventlogging_HomepageModule',
-		'eventlogging_HomepageVisit',
-		'eventlogging_LandingPageImpression',
-		'eventlogging_MobileWebUIActionsTracking',
-		'eventlogging_NavigationTiming',
-		'eventlogging_NewcomerTask',
-		'eventlogging_PaintTiming',
-		'eventlogging_PrefUpdate',
-		'eventlogging_QuickSurveyInitiation',
-		'eventlogging_QuickSurveysResponses',
-		'eventlogging_ReferencePreviewsBaseline',
-		'eventlogging_ReferencePreviewsCite',
-		'eventlogging_ReferencePreviewsPopups',
-		'eventlogging_SaveTiming',
-		'eventlogging_ServerSideAccountCreation',
-		'eventlogging_SpecialInvestigate',
-		'eventlogging_SpecialMuteSubmit',
-		'eventlogging_SearchSatisfaction',
-		'eventlogging_SuggestedTagsAction',
-		'eventlogging_TemplateDataApi',
-		'eventlogging_TemplateDataEditor',
-		'eventlogging_TemplateWizard',
-		'eventlogging_Test',
-		'eventlogging_TwoColConflictConflict',
-		'eventlogging_TwoColConflictExit',
-		'eventlogging_UniversalLanguageSelector',
-		'eventlogging_VirtualPageView',
-		'eventlogging_VisualEditorFeatureUse',
-		'eventlogging_VisualEditorTemplateDialogUse',
-		'eventlogging_WikibaseTermboxInteraction',
-		'eventlogging_WikidataCompletionSearchClicks',
-		'eventlogging_WMDEBannerEvents',
-		'eventlogging_WMDEBannerInteractions',
-		'eventlogging_WMDEBannerSizeIssue',
-		'mediawiki.client.session_tick',
-		'mediawiki.content_translation_event',
-		'mediawiki.talk_page_edit',
-		'mediawiki.mediasearch_interaction',
-		'mediawiki.searchpreview',
-		'mediawiki.structured_task.article.link_suggestion_interaction',
-		'mediawiki.structured_task.article.image_suggestion_interaction',
-		'mediawiki.pref_diff',
-		'mediawiki.skin_diff',
-		'mediawiki.reading_depth',
-		'mediawiki.web_ab_test_enrollment',
-		'mediawiki.web_ui_scroll',
-		'mediawiki.welcomesurvey.interaction',
-		'test.instrumentation',
-		'test.instrumentation.sampled',
-		'wd_propertysuggester.client_side_property_request',
-		'wd_propertysuggester.server_side_property_request',
-		'mediawiki.mentor_dashboard.visit',
-		'mediawiki.ipinfo_interaction',
-		'mediawiki.editgrowthconfig',
-		'mediawiki.wikistories_consumption_event',
-		'mediawiki.wikistories_contribution_event',
-		'mediawiki.accountcreation_block',
-		'mediawiki.editattempt_block',
-		'mediawiki.maps_interaction',
-		'mediawiki.edit_attempt',
-	],
-	'+group0' => [
-		'mediawiki.web_ui.interactions',
-	],
-	'+testwiki' => [
-		'mediawiki.visual_editor_feature_use',
-	],
-],
-
-// EventLogging JavaScript client code will POST events to this URI.
-'wgEventLoggingServiceUri' => [
-	'default' => 'https://intake-analytics.wikimedia.org/v1/events?hasty=true',
-],
-
-// Historically, EventLogging would register Schemas and revisions it used
-// via the EventLoggingSchemas extension attribute like in
-// https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/WikimediaEvents/+/master/extension.json#51
-// It also overrides these with the $wgEventLoggingSchemas global.
-// While in the process of migrating legacy EventLogging events to event platform,
-// use the wgEventLoggingSchemas to override the extension attribute for an incremental rollout.
-// This will be removed from mediawiki-config once all schemas have been successfully migrated
-// and the EventLoggingSchemas extension attributes are all set to Event Platform schema URIs.
-// ONLY Legacy EventLogging schemas need to go here.  This is the switch that tells
-// EventLogging to POST to EventGate rather than GET to EventLogging beacon.
-// https://phabricator.wikimedia.org/T238230
-'wgEventLoggingSchemas' => [
-	'default' => [
 	],
 ],
 

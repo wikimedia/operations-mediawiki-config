@@ -8309,10 +8309,7 @@ return [
 	'default' => true,
 ],
 
-// Stream config default settings.
-// The EventStreamConfig extension will add these
-// settings to each entry in wgEventStreams if
-// the entry does not already have the setting.
+// NOTE: THIS IS MOVING INTO ext-EventStreamConfig.php
 'wgEventStreamsDefaultSettings' => [
 	'default' => [
 		'topic_prefixes' => [ 'eqiad.', 'codfw.' ],
