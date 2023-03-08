@@ -5669,9 +5669,7 @@ return [
 
 // T299612
 'wgLinterUseNamespaceColumnStage' => [
-	'default' => false,
-	'group0' => true,
-	'group1' => true,
+	'default' => true,
 ],
 
 // T175177
@@ -5681,9 +5679,7 @@ return [
 
 // T175177
 'wgLinterUserInterfaceTagAndTemplateStage' => [
-	'default' => false,
-	'group0' => true,
-	'group1' => true,
+	'default' => true,
 ],
 
 'wgLinterStatsdSampleFactor' => [
