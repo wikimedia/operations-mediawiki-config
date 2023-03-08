@@ -7583,11 +7583,6 @@ return [
 	'default' => false,
 ],
 
-'wgDiscussionToolsEnableMobile' => [
-	'default' => true, // T328940
-	'enwiki' => false, // T328940
-],
-
 'wgDiscussionToolsReplyIndentation' => [
 	'default' => 'invisible',
 	'ruwiki' => 'bullet', // T259864
