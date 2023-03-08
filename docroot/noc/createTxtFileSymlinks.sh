@@ -13,10 +13,16 @@ mwconfig_files_txt=(
 	CirrusSearch-common.php
 	CirrusSearch-labs.php
 	CirrusSearch-production.php
+	core-Namespaces.php
+	core-Permissions.php
 	db-production.php
 	db-labs.php
 	EnWikiContactPages.php
 	etcd.php
+	ext-Babel.php
+	ext-CirrusSearch.php
+	ext-EventLogging.php
+	ext-ORES.php
 	FeaturedFeedsWMF.php
 	filebackend.php
 	flaggedrevs.php
