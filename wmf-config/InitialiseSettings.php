@@ -8309,37 +8309,6 @@ return [
 	'default' => true,
 ],
 
-// NOTE: THIS IS MOVING INTO ext-EventStreamConfig.php
-'wgEventStreamsDefaultSettings' => [
-	'default' => [
-		'topic_prefixes' => [ 'eqiad.', 'codfw.' ],
-		// Canary events are produced into streams
-		// for ingestion monitoring purposes.
-		// Absence of these events either means
-		// that canary event production is failing, or
-		// another component of the event pipeline is failing.
-		// Without canary events, we cannot differentiate between
-		// an idle stream and a broken pipeline.
-		// This is explicitly disabled for MW state change (EventBus) streams
-		// until https://phabricator.wikimedia.org/T266798 is done.
-		'canary_events_enabled' => true,
-		// By default, all events should be imported into Hadoop.
-		// The analytics hadoop ingestion consumer (Gobblin) will
-		// look for streams to ingest using these settings.
-		// Each stream in a job should have similar volumes to allow
-		// the job to scale properly and not cause stream ingestion starvation.
-		// The default job_name is event_default.
-		// Override this if the stream should be imported by a different job,
-		// or disabled altogether.
-		'consumers' => [
-			'analytics_hadoop_ingestion' => [
-				'job_name' => 'event_default',
-				'enabled' => true,
-			],
-		],
-	],
-],
-
 // EventBusStreamNamesMap is used by EventBus HookHandlers that produce
 // events to map from an internal stream name to the actual produced
 // stream name.   This is usually only set while a stream is still in
