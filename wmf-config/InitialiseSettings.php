@@ -5746,6 +5746,7 @@ return [
 	'default' => 'vrs',
 	'testwiki' => 'direct', // T320531
 	'mediawikiwiki' => 'direct', // T320529
+	'officewiki' => 'direct',
 	'hewiki' => 'direct',	// T320529
 ],
 
@@ -6517,6 +6518,12 @@ return [
 		'WarmParsoidParserCache' => true, // T320535: enable cache warming
 	],
 	'mediawikiwiki' => [
+		'StashType' => null, // defaults to using MainStash
+		'StashDuration' => 24 * 60 * 60, // 24h in production, VE will fail to save after this time.
+		'CacheThresholdTime' => 0.0, // 0 means cache all
+		'WarmParsoidParserCache' => true, // T320534: enable cache warming
+	],
+	'officewiki' => [
 		'StashType' => null, // defaults to using MainStash
 		'StashDuration' => 24 * 60 * 60, // 24h in production, VE will fail to save after this time.
 		'CacheThresholdTime' => 0.0, // 0 means cache all
