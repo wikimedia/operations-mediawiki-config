@@ -22,6 +22,7 @@ mwconfig_files_txt=(
 	ext-Babel.php
 	ext-CirrusSearch.php
 	ext-EventLogging.php
+	ext-EventStreamConfig.php
 	ext-ORES.php
 	FeaturedFeedsWMF.php
 	filebackend.php
