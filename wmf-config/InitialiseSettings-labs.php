@@ -2483,6 +2483,7 @@ function wmfGetOverrideSettings() {
 			'enwiki' => true,
 			'en_rtlwiki' => true,
 			'enwiktionary' => true,
+			'metawiki' => true, // T331670
 		],
 
 		'wmgUseVueTest' => [
