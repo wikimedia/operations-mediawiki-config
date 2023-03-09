@@ -13272,6 +13272,7 @@ return [
 
 'wgSFSReportOnly' => [
 	'default' => true,
+	'eswikiversity' => false, // T331182
 ],
 
 'wgCdnMatchParameterOrder' => [
