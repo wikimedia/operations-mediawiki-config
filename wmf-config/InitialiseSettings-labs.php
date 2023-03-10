@@ -203,7 +203,29 @@ function wmfGetOverrideSettings() {
 							],
 						],
 					],
-				]
+				],
+				// See https://phabricator.wikimedia.org/T326214
+				'mediawiki.special_diff_interactions' => [
+					'schema_title' => 'analytics/mediawiki/client/metrics_event',
+					'producers' => [
+						'metrics_platform_client' => [
+							'events' => [
+								'specialDiff.click.', // T326214
+								'specialMobileDiff.click.', // T326216
+							],
+							'provide_values' => [
+								'mediawiki_skin',
+								'mediawiki_version',
+								'mediawiki_is_production',
+								'mediawiki_database',
+								'performer_is_logged_in',
+								'performer_groups',
+								'performer_edit_count_bucket',
+								'performer_registration_dt',
+							],
+						],
+					],
+				],
 			],
 			'+wikifunctionswiki' => [
 				// See https://phabricator.wikimedia.org/T336722
@@ -275,6 +297,7 @@ function wmfGetOverrideSettings() {
 			'+enwiki' => [
 				'mediawiki.ipinfo_interaction',
 				'desktop_mobile_link_clicks',
+				'mediawiki.special_diff_interactions',
 			],
 		],
 
