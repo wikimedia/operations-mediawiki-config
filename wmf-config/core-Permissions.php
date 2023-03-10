@@ -1010,6 +1010,8 @@ return [
 			'upload' => true,
 			'reupload' => true,
 			'reupload-own' => true,
+			'pagetranslation' => true, // T297396
+			'translate-manage' => true, // T297396
 		],
 		'flood' => [ 'bot' => true ],
 	],
