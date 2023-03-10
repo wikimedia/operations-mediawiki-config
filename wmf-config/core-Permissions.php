@@ -2744,7 +2744,10 @@ return [
 			'autopatrol' => true,
 			'movefile' => true,
 		], // T195247
-		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T287322
+		'extendedconfirmed' => [
+			'extendedconfirmed' => true, // T287322
+			'movefile' => true, // T331691
+		],
 		'flood' => [ 'bot' => true ],
 		'massmessage-sender' => [ 'massmessage' => true ], // T130814
 		'filemover' => [ 'movefile' => true ], // T195247
