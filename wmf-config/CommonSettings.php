@@ -4045,6 +4045,18 @@ if ( $wgDBname === 'foundationwiki' ) {
 	};
 }
 
+if ( $wgDBname === 'mediawikiwiki' ) {
+	// Verify Mastodon account with <link rel="me"> on the main page
+	// This is mostly temporary for now, should be done by RealMe
+	// extension in the future (T324937).
+	$wgHooks['BeforePageDisplay'][] = static function ( $out, $skin ) {
+		$title = $out->getTitle();
+		if ( $title && $title->isMainPage() ) {
+			$out->addLink( [ 'rel' => 'me', 'href' => 'https://wikis.world/@mediawiki' ] );
+		}
+	};
+}
+
 if ( $wmgUse3d ) {
 	wfLoadExtension( '3D' );
 	$wgTrustedMediaFormats[] = 'application/sla';
