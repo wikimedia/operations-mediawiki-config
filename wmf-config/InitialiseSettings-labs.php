@@ -806,33 +806,6 @@ function wmfGetOverrideSettings() {
 						'mobile' => [ 'stable' ]
 					],
 				],
-				'similareditors' => [
-					// T307025
-					'name' => 'similareditors',
-					'type' => 'internal',
-					'layout' => 'single-answer',
-					'answers' => [],
-					// Ensures a text input is added
-					'freeformTextLabel' => 'similareditors-survey-freeform-text-label',
-					'question' => 'similareditors-survey-question',
-					'privacyPolicy' => 'ext-quicksurveys-similareditors-survey-privacy-policy',
-					'enabled' => true,
-					'platforms' => [
-						'desktop' => [ 'stable' ],
-						'mobile' => [ 'stable' ]
-					],
-					'audience' => [
-						// This prevents audience being checked on every page.
-						// However, we must still load quicksurveys manually on
-						// Special:SimilarEditors, because automatic loading only
-						// works for page IDs of pages that exist (not special pages).
-						// 0 matches the page ID check for Special:SimilarEditors.
-						'pageIds' => [ 0 ],
-					],
-					// Ensures the correct survey is added if multiple are enabled
-					'embedElementId' => 'similareditors-survey-embed',
-					'coverage' => 1,
-				],
 				// T294363: QA internal survey custom confirmation and additional info
 				[
 					'name' => 'T294363-1',
@@ -1086,10 +1059,6 @@ function wmfGetOverrideSettings() {
 
 		'wmgUseCheckUser' => [
 			'default' => false,
-		],
-
-		'wmgUseSimilarEditors' => [
-			'enwiki' => true,
 		],
 
 		'wgSecurePollUseLogging' => [

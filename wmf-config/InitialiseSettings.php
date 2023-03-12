@@ -6622,12 +6622,6 @@ return [
 	'default' => true, // T260597
 ],
 
-// SimilarEditors extension
-// Deployment tracked at T304666
-'wmgUseSimilarEditors' => [
-	'default' => false,
-],
-
 'wmgUseIncubator' => [
 	'default' => false,
 	'incubatorwiki' => true,
