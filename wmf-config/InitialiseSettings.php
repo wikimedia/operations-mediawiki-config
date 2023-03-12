@@ -3112,6 +3112,7 @@ return [
 	'cswiki' => true, // T315525
 	'fawiki' => true, // T315525
 	'ptwiki' => true, // T317157
+	'itwiki' => true, // T330533
 ],
 
 'wgOriginTrials' => [
