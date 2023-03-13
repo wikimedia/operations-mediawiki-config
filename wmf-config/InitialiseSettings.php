@@ -7659,6 +7659,10 @@ return [
 	'mediawikiwiki' => 'available',
 ],
 
+'wgDiscussionTools_visualenhancements_newsectionlink_enable' => [
+	'default' => false
+],
+
 'wgDiscussionToolsEnablePermalinksBackend' => [
 	'default' => false, // T315353
 	'group0' => true, // T315353
