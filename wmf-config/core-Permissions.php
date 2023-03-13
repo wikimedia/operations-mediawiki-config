@@ -3238,7 +3238,10 @@ return [
 		'sysop' => [ 'autopatrolled' ], // T86062
 	],
 	'+dewiki' => [
-		'bureaucrat' => [ 'noratelimit' ], // T59819
+		'bureaucrat' => [
+			'noratelimit', // T59819
+			'import', // T331921
+		],
 	],
 	'+dewikivoyage' => [
 		'sysop' => [ 'autopatrolled' ], // T67495
@@ -4668,7 +4671,11 @@ return [
 		'sysop' => [ 'autopatrolled' ], // T86062
 	],
 	'+dewiki' => [
-		'bureaucrat' => [ 'noratelimit' ], // T59819
+		'bureaucrat' => [
+			'noratelimit', // T59819
+			'import', // T331921
+			'sysop', // T331921
+		],
 	],
 	'+dewikivoyage' => [
 		'sysop' => [ 'autopatrolled' ], // T67495
