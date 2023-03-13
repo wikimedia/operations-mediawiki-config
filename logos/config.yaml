@@ -2534,12 +2534,13 @@ Wikiquote:
     tlwikiquote:
         commons: 'File:Wikikawikaan-logo.svg'
     trwikiquote:
-        selected: trwikiquote-temp
         commons: 'File:Wikiquote-logo-tr.svg'
         variants:
             trwikiquote-temp:
                 commons: 'File:Turkish Wikiquote 5000 logo (v2), ribbon,grey.svg'
                 commons_icon: 'File:Turkish Wikiquote 5000 logo,ribbon,grey.svg'
+        no_1_5x: true
+        no_2x: true
         commons_wordmark: 'File:Wikiquote-wordmark-tr.svg'
         comment_wordmark: T286133
         comment_icon: T329399
