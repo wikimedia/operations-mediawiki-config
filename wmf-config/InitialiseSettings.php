@@ -7646,6 +7646,8 @@ return [
 'wgDiscussionTools_visualenhancements' => [
 	'default' => 'default',
 	'mediawikiwiki' => 'available', // T310960
+	'cswiki' => 'available', // T329407
+	'huwiki' => 'available', // T329407
 ],
 
 'wgDiscussionTools_visualenhancements_reply' => [
