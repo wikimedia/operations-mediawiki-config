@@ -2416,7 +2416,9 @@ return [
 ],
 
 'wgVectorPromoteAddTopic' => [
-	'default' => false
+	'default' => false,
+	'cswiki' => true, // T331313
+	'huwiki' => true, // T331313
 ],
 
 # wgForceUIMsgAsContentMsg @{
