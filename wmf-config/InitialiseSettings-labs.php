@@ -1594,6 +1594,12 @@ function wmfGetOverrideSettings() {
 		'wgGELinkRecommendationsUseEventGate' => [
 			'default' => false,
 		],
+		'wgGELevelingUpGetStartedNotificationSendAfterSeconds' => [
+			'default' => 300,
+		],
+		'wgGELevelingUpKeepGoingNotificationSendAfterSeconds' => [
+			'default' => 300,
+		],
 		'wgGEHelpPanelHelpDeskTitle' => [
 			'enwiki' => 'Wikipedia:Help_desk',
 		],
