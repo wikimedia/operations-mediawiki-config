@@ -2418,6 +2418,7 @@ return [
 
 'wgVectorPromoteAddTopic' => [
 	'default' => false,
+	'arwiki' => true, // T331313
 	'cswiki' => true, // T331313
 	'huwiki' => true, // T331313
 ],
