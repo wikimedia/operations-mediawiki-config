@@ -16,6 +16,7 @@
 	"scripts": {
 		"lint": "parallel-lint --exclude vendor --exclude multiversion/vendor --ignore-fails .",
 		"phpcs": "phpcs -p -s",
+		"typos": "sh -c \"! git grep -E -I -f typos -- . ':(exclude)typos'\"",
 		"fix": [
 			"phpcbf",
 			"minus-x fix ."
@@ -24,6 +25,7 @@
 			"phpunit"
 		],
 		"test": [
+			"@typos",
 			"@lint",
 			"@phpunit",
 			"@phpcs",
