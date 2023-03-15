@@ -7643,7 +7643,6 @@ return [
 
 'wgDiscussionTools_visualenhancements' => [
 	'default' => 'default',
-	'mediawikiwiki' => 'available', // T310960
 	'cswiki' => 'available', // T329407
 	'huwiki' => 'available', // T329407
 ],
@@ -7656,7 +7655,6 @@ return [
 
 'wgDiscussionTools_visualenhancements_pageframe' => [
 	'default' => 'default', // T323727, T327456
-	'mediawikiwiki' => 'available',
 	'cswiki' => 'available', // T329407
 	'huwiki' => 'available', // T329407
 ],
