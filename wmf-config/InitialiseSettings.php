@@ -7650,11 +7650,15 @@ return [
 
 'wgDiscussionTools_visualenhancements_reply' => [
 	'default' => 'default', // T320683, T323537, T321955
+	'cswiki' => 'available', // T329407
+	'huwiki' => 'available', // T329407
 ],
 
 'wgDiscussionTools_visualenhancements_pageframe' => [
 	'default' => 'default', // T323727, T327456
 	'mediawikiwiki' => 'available',
+	'cswiki' => 'available', // T329407
+	'huwiki' => 'available', // T329407
 ],
 
 'wgDiscussionTools_visualenhancements_newsectionlink_enable' => [
