@@ -12135,6 +12135,7 @@ return [
 
 'wgGELevelingUpFeaturesEnabled' => [
 	'default' => false,
+	'testwiki' => true,
 ],
 
 'wgGERefreshUserImpactDataMaintenanceScriptEnabled' => [
