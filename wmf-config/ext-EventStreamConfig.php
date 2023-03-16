@@ -772,10 +772,6 @@ return [
 		'android.breadcrumbs_event' => [
 			'schema_title' => 'analytics/mobile_apps/android_breadcrumbs_event',
 			'destination_event_service' => 'eventgate-analytics-external',
-			'sample' => [
-				'unit' => 'device',
-				'rate' => 0.5,
-			],
 		],
 		'android.app_appearance_settings_interaction' => [
 			'schema_title' => 'analytics/mobile_apps/android_app_appearance_settings_interaction',
