@@ -2331,6 +2331,10 @@ function wmfGetOverrideSettings() {
 			'default' => 'default',
 		],
 
+		'-wgDiscussionTools_visualenhancements_newsectionlink_enable' => [
+			'default' => true
+		],
+
 		'-wgDiscussionToolsEnablePermalinksBackend' => [
 			'default' => true,
 		],
