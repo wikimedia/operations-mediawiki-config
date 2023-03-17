@@ -229,9 +229,9 @@ $wgHooks['MediaWikiServices'][] = static function () {
 	} elseif ( $wgDBname == 'bewiki' ) {
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
-		$wgGroupPermissions['autoeditor']['autoreview'] = true;
-		$wgGroupPermissions['autoeditor']['autoconfirmed'] = true;
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
+		# Remove reviewer group, T326012
+		unset( $wgGroupPermissions['reviewer'] );
 	} elseif ( $wgDBname == 'bnwiki' ) { // T30717
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_PROJECT ];
 
