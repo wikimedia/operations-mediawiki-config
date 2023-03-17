@@ -3363,10 +3363,10 @@ return [
 		'width' => 88,
 		'height' => 21,
 	],
-	'trwikivoyage' => [ // T272776
+	'trwikivoyage' => [ // T272776, T332439
 		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-tr.svg',
-		'width' => 90,
-		'height' => 18,
+		'width' => 111,
+		'height' => 25,
 	],
 	'zhwikivoyage' => [ // T322133
 		'src' => '/static/images/mobile/copyright/wikivoyage-wordmark-zh.svg',
