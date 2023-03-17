@@ -1331,6 +1331,10 @@ return [
 		'Užívateľ' => NS_USER, // T143472
 		'Diskusia_s_užívateľom' => NS_USER_TALK,
 	],
+	'+slwiki' => [
+		'Draft' => 118, // T332351
+		'Draft_talk' => 119, // T332351
+	],
 	'+sqwikinews' => [
 		'WL' => NS_PROJECT,
 	],
@@ -2811,7 +2815,12 @@ return [
 		100 => 'Portál',
 		101 => 'Diskusia_k_portálu',
 	],
-	'slwiki' => [ 100 => 'Portal', 101 => 'Pogovor_o_portalu' ],
+	'slwiki' => [
+		100 => 'Portal',
+		101 => 'Pogovor_o_portalu',
+		118 => 'Osnutek', // Draft, T332351
+		119 => 'Pogovor_o_osnutku', // Draft_talk, T332351
+	],
 	'sowiki' => [ 100 => 'Portal', 101 => 'Portal_talk' ], // T51600
 	'sqwiki' => [ 100 => 'Portal', 101 => 'Portal_diskutim' ],
 	'srwiki' => [
