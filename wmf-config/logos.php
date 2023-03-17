@@ -3239,6 +3239,11 @@ return [
 		'width' => 119,
 		'height' => 18,
 	],
+	'kuwiktionary' => [ // T326067
+		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-ku.svg',
+		'width' => 115,
+		'height' => 20,
+	],
 	'mniwiktionary' => [ // T294709
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-mni.svg',
 		'width' => 129,

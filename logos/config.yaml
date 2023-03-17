@@ -2074,6 +2074,8 @@ Wiktionary:
         no_1_5x: true
         no_2x: true
         no_icon: true
+        commons_wordmark: 'File:Wiktionary-wordmark-ku.svg'
+        comment_wordmark: T326067
     kwwiktionary:
         comment: T45240
         comment_1_5x: T150618
