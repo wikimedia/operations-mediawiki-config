@@ -1955,6 +1955,27 @@ return [
 			'editsemiprotected' => true,
 		], // T162577
 	],
+	'+ptwikisource' => [ // T331762
+		'user' => [ 'move-categorypages' => false ],
+		'patroller' => [
+			'patrol' => true,
+			'move-categorypages' => true,
+			'movefile' => true,
+			'suppressredirect' => true,
+		],
+		'autopatrolled' => [
+			'autopatrol' => true,
+			'move-categorypages' => true,
+			'movefile' => true,
+		],
+		'rollbacker' => [
+			'rollback' => true,
+			'move-categorypages' => true,
+			'movefile' => true,
+			'suppressredirect' => true,
+		],
+		'bot' => [ 'move-subpages' => true ],
+	],
 	'+ptwikivoyage' => [
 		'autopatrolled' => [ 'autopatrol' => true, ], // T168981
 	],
@@ -3904,6 +3925,13 @@ return [
 			'editprotected', // T162577
 		],
 	],
+	'+ptwikisource' => [
+		'sysop' => [ // T331762
+			'patroller',
+			'autopatrolled',
+			'rollbacker',
+		],
+	],
 	'+ptwikivoyage' => [
 		'sysop' => [
 			'accountcreator', // T292806
@@ -5106,6 +5134,9 @@ return [
 	],
 	'+ptwikinews' => [
 		'sysop' => [ 'reviewer', 'editprotected' ], // T162577
+	],
+	'+ptwikisource' => [ // T331762
+		'sysop' => [ 'patroller', 'autopatrolled', 'rollbacker' ],
 	],
 	'+ptwikivoyage' => [
 		'sysop' => [

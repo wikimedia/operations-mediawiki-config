@@ -2802,6 +2802,7 @@ return [
 	'plwikiquote' => true, // T6697
 	'ptwiki' => true, // T6500
 	'ptwikibooks' => true, // T32136
+	'ptwikisource' => true, // T331762
 	'rowiki' => true, // T30192
 	'ruwikiversity' => true,
 	'sawiki' => true, // T35200
@@ -4817,7 +4818,6 @@ return [
 'wgFlaggedRevsLowProfile' => [
 	'default' => true,
 	'huwiki' => false,
-	'ptwikisource' => false,
 ],
 
 'wgMaximumMovedPages' => [

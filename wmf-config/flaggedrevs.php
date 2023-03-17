@@ -142,9 +142,6 @@ call_user_func( static function () {
 		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 		$wgFlaggedRevsAutopromote['days'] = 30;
 
-	} elseif ( $wgDBname == 'ptwikisource' ) {
-		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
-
 	} elseif ( $wgDBname == 'ruwikisource' ) {
 		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 
@@ -557,13 +554,6 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		$wgGroupPermissions['sysop']['validate'] = true;
 	} elseif ( $wgDBname == 'ptwikinews' ) {
 		$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
-	} elseif ( $wgDBname == 'ptwikisource' ) {
-		$wgFlaggedRevsNamespaces[] = 102;
-		$wgFlaggedRevsNamespaces[] = 104;
-		$wgFlaggedRevsNamespaces[] = 106;
-		$wgFlaggedRevsNamespaces[] = 108;
-		$wgFlaggedRevsNamespaces[] = 110;
-		$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 	} elseif ( $wgDBname == 'ruwiki' ) {
 		// T39675, T49337
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 100, 828 ];

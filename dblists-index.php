@@ -693,7 +693,7 @@ return [
 'ptwikimedia' => [ 'small', 'visualeditor-nondefault', 'group1' ],
 'ptwikinews' => [ 'desktop-improvements', 'flaggedrevs', 'medium', 'wikidataclient', 'group1', 'nowikidatadescriptiontaglines' ],
 'ptwikiquote' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],
-'ptwikisource' => [ 'flaggedrevs', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
+'ptwikisource' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
 'ptwikiversity' => [ 'desktop-improvements', 'medium', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'ptwikivoyage' => [ 'small', 'wikidataclient', 'group1' ],
 'ptwiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
