@@ -537,42 +537,6 @@ return [
 		], // T227420
 		'interface-admin' => [ 'editcontentmodel' => true, ], // T320752
 	],
-	'+testcommonswiki' => [
-		'user' => [
-			'changetags' => false, // T134196
-			'upload' => true, // exception for T14556
-		],
-		'rollbacker' => [ 'rollback' => true ],
-		'patroller' => [ // T214003
-			'autopatrol' => true,
-			'patrol' => true,
-			'abusefilter-log-detail' => true,
-			'upload_by_url' => true,
-		],
-		'autopatrolled' => [
-			'autopatrol' => true,
-			'upload_by_url' => true,
-		], // T214003
-		'filemover' => [ 'movefile' => true ],
-		'image-reviewer' => [
-			'autopatrol' => true,
-			'upload_by_url' => true,
-			'patrol' => true, // T183835
-		],
-		'sysop' => [
-			'importupload' => true, // TestCommons testing purposes only
-			'changetags' => true, // T134196
-			'upload_by_url' => true,
-		],
-		'bot' => [
-			'changetags' => true,
-			'upload_by_url' => true,
-		], // T134196, T145010
-		'translationadmin' => [ 'noratelimit' => true, ], // T155162
-		'interface-admin' => [
-			'editcontentmodel' => true, // T320752
-		],
-	],
 	'+dawiki' => [
 		'patroller' => [
 			'patrol' => true,
@@ -1046,6 +1010,8 @@ return [
 			'upload' => true,
 			'reupload' => true,
 			'reupload-own' => true,
+			'pagetranslation' => true, // T297396
+			'translate-manage' => true, // T297396
 		],
 		'flood' => [ 'bot' => true ],
 	],
@@ -1346,6 +1312,7 @@ return [
 		'bot' => [
 			'setmentor' => true, // T307005
 			'editautopatrolprotected' => true, // T308917
+			'changetags' => true, // T331051
 		],
 		'botadmin' => [ // T220915
 			'apihighlimits' => true,
@@ -1369,10 +1336,13 @@ return [
 			'tboverride' => true,
 			'writeapi' => true,
 			'editautopatrolprotected' => true, // T308917
+			'changetags' => true, // T331051
 		],
 		'sysop' => [
 			'editautopatrolprotected' => true, // T308917
+			'changetags' => true, // T331051
 		],
+		'user' => [ 'changetags' => false ], // T331051
 	],
 	'+itwikisource' => [
 		'flood' => [ 'bot' => true ], // T38600
@@ -2776,7 +2746,10 @@ return [
 			'autopatrol' => true,
 			'movefile' => true,
 		], // T195247
-		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T287322
+		'extendedconfirmed' => [
+			'extendedconfirmed' => true, // T287322
+			'movefile' => true, // T331691
+		],
 		'flood' => [ 'bot' => true ],
 		'massmessage-sender' => [ 'massmessage' => true ], // T130814
 		'filemover' => [ 'movefile' => true ], // T195247
@@ -3265,7 +3238,10 @@ return [
 		'sysop' => [ 'autopatrolled' ], // T86062
 	],
 	'+dewiki' => [
-		'bureaucrat' => [ 'noratelimit' ], // T59819
+		'bureaucrat' => [
+			'noratelimit', // T59819
+			'import', // T331921
+		],
 	],
 	'+dewikivoyage' => [
 		'sysop' => [ 'autopatrolled' ], // T67495
@@ -4695,7 +4671,11 @@ return [
 		'sysop' => [ 'autopatrolled' ], // T86062
 	],
 	'+dewiki' => [
-		'bureaucrat' => [ 'noratelimit' ], // T59819
+		'bureaucrat' => [
+			'noratelimit', // T59819
+			'import', // T331921
+			'sysop', // T331921
+		],
 	],
 	'+dewikivoyage' => [
 		'sysop' => [ 'autopatrolled' ], // T67495

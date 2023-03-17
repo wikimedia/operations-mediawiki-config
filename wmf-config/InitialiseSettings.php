@@ -2064,10 +2064,6 @@ return [
 		'csp' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 		'csp-report-only' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 		'rdbms' => 'warning',
-		'DBConnection' => 'warning',
-		'DBPerformance' => [ 'logstash' => 'debug', 'udp2log' => 'warning' ],
-		'DBQuery' => 'warning',
-		'DBReplication' => 'warning',
 		'DeferredUpdates' => 'error',
 		'deprecated' => 'debug',
 		'diff' => 'debug',
@@ -2362,6 +2358,7 @@ return [
 		'logged_out' => false
 	],
 ],
+// Shows language selector beside the main page title.
 'wgVectorLanguageInMainPageHeader' => [
 	'default' => [
 		'logged_in' => false,
@@ -2372,6 +2369,24 @@ return [
 		'logged_in' => true,
 		'logged_out' => true,
 	],
+	// START: T325362
+	'frwiki' => [
+		'logged_in' => true,
+		'logged_out' => true,
+	],
+	'gomwiki' => [
+		'logged_in' => true,
+		'logged_out' => true,
+	],
+	'gomwiktionary' => [
+		'logged_in' => true,
+		'logged_out' => true,
+	],
+	'avkwiki' => [
+		'logged_in' => true,
+		'logged_out' => true,
+	],
+	// END: T325362
 ],
 'wgVectorWvuiSearchOptions' => [
 	'default' => [
@@ -2398,6 +2413,12 @@ return [
 // T328045
 'wgVectorTableOfContentsCollapseAtCount' => [
 	'default' => 28,
+],
+
+'wgVectorPromoteAddTopic' => [
+	'default' => false,
+	'cswiki' => true, // T331313
+	'huwiki' => true, // T331313
 ],
 
 # wgForceUIMsgAsContentMsg @{
@@ -3091,6 +3112,7 @@ return [
 	'cswiki' => true, // T315525
 	'fawiki' => true, // T315525
 	'ptwiki' => true, // T317157
+	'itwiki' => true, // T330533
 ],
 
 'wgOriginTrials' => [
@@ -4607,7 +4629,6 @@ return [
 	'bhwiki' => true, // T97920
 	'ckbwiki' => true, // T54678
 	'commonswiki' => true,
-	'testcommonswiki' => true,
 	'dewikiversity' => true, // T51449
 	'dtywiki' => true, // T166121
 	'enwikinews' => true,
@@ -4673,7 +4694,6 @@ return [
 	'arwikisource' => true,
 	'bhwiki' => true, // T97920
 	'commonswiki' => true,
-	'testcommonswiki' => true,
 	'dtywiki' => true, // T177688
 	'enwikinews' => true,
 	'fawikibooks' => true, // T91861
@@ -4909,7 +4929,6 @@ return [
 'wgAbuseFilterEmergencyDisableThreshold' => [
 	'default' => [ 'default' => 0.05, ],
 	'commonswiki' => [ 'default' => 0.30, ], // T87431
-	'testcommonswiki' => [ 'default' => 0.30, ], // T87431
 	'eswikibooks' => [ 'default' => 0.30, ], // T145765
 	'foundationwiki' => [ 'default' => 0.30 ],
 	'metawiki' => [ 'default' => 0.30, ], // T173633
@@ -4921,7 +4940,6 @@ return [
 	'enwiki' => [ 'default' => 25, ],
 	'eswikibooks' => [ 'default' => 10, ], // T145765
 	'commonswiki' => [ 'default' => 25, ], // T87431
-	'testcommonswiki' => [ 'default' => 25, ], // T87431
 	'foundationwiki' => [ 'default' => 25 ],
 	'metawiki' => [ 'default' => 25, ], // T173633
 	'mediawikiwiki' => [ 'default' => 25, ], // T212667
@@ -4974,7 +4992,6 @@ return [
 	'testwiki' => true,
 	'test2wiki' => true,
 	'commonswiki' => true,
-	'testcommonswiki' => true,
 	'wikisource' => true, // T293205
 	'viwiki' => true, // T303577
 	'zhwiki' => true, // T142991
@@ -4983,7 +5000,6 @@ return [
 	'default' => false,
 	'testwiki' => true, // T73897
 	'commonswiki' => true, // T73897
-	'testcommonswiki' => true, // T73897
 	'wikisource' => true, // T293205
 	'viwiki' => true, // T303577
 	'zhwiki' => true, // T142991
@@ -5298,7 +5314,6 @@ return [
 	'rowiki' => true, // T61242
 	'testwiki' => true,
 	'commonswiki' => true,
-	'testcommonswiki' => true,
 	'donatewiki' => true,
 	'foundationwiki' => true,
 ],
@@ -5674,8 +5689,18 @@ return [
 	'default' => true,
 ],
 
+// T299612
+'wgLinterUseNamespaceColumnStage' => [
+	'default' => true,
+],
+
 // T175177
 'wgLinterWriteTagAndTemplateColumnsStage' => [
+	'default' => true,
+],
+
+// T175177
+'wgLinterUserInterfaceTagAndTemplateStage' => [
 	'default' => true,
 ],
 
@@ -5917,7 +5942,10 @@ return [
 
 // Enable VE-based visual diffs on history pages
 'wgVisualEditorEnableDiffPage' => [
-	'default' => false,
+	'default' => true,
+	// Everywhere except Wikipedias and Wiktionaries (T314588)
+	'wikipedia' => false,
+	'wiktionary' => false,
 ],
 
 // Namespaces for VisualEditor to be active in, in addition to wgContentNamespaces
@@ -6108,6 +6136,13 @@ return [
 		'Obsolete' => true,
 		'OfficeIT' => true,
 		'Tool' => true,
+	],
+	'+foundationwiki' => [
+		'Resolution' => true, // T331079
+		'Legal' => true, // T331079
+		'Minutes' => true, // T331079
+		'Policy' => true, // T331079
+		'Archive' => true, // T331079
 	],
 
 	// Private wikis
@@ -6507,12 +6542,9 @@ return [
 // a parser cache write, putting full pressure on the parser cache.
 // This needs to be enabled gradually. See T322672.
 'wgTemporaryParsoidHandlerParserCacheWriteRatio' => [
-	'default' => 0.25, // 25% for now
+	'default' => 1.0, // Enabled per default
 	'commonswiki' => 0.0, // disable for commons, useless for file descriptions
 	'wikidatawiki' => 0.0, // disable for wikidata, we shouldn't render items anyway
-	'testwiki' => 1.0,
-	'mediawikiwiki' => 1.0,
-	'hewiki' => 1.0,
 ],
 
 'wgLanguageConverterCacheType' => [
@@ -7573,11 +7605,6 @@ return [
 	'default' => false,
 ],
 
-'wgDiscussionToolsEnableMobile' => [
-	'default' => true, // T328940
-	'enwiki' => false, // T328940
-],
-
 'wgDiscussionToolsReplyIndentation' => [
 	'default' => 'invisible',
 	'ruwiki' => 'bullet', // T259864
@@ -7616,16 +7643,24 @@ return [
 
 'wgDiscussionTools_visualenhancements' => [
 	'default' => 'default',
-	'mediawikiwiki' => 'available', // T310960
+	'cswiki' => 'available', // T329407
+	'huwiki' => 'available', // T329407
 ],
 
 'wgDiscussionTools_visualenhancements_reply' => [
 	'default' => 'default', // T320683, T323537, T321955
+	'cswiki' => 'available', // T329407
+	'huwiki' => 'available', // T329407
 ],
 
 'wgDiscussionTools_visualenhancements_pageframe' => [
 	'default' => 'default', // T323727, T327456
-	'mediawikiwiki' => 'available',
+	'cswiki' => 'available', // T329407
+	'huwiki' => 'available', // T329407
+],
+
+'wgDiscussionTools_visualenhancements_newsectionlink_enable' => [
+	'default' => false
 ],
 
 'wgDiscussionToolsEnablePermalinksBackend' => [
@@ -7715,7 +7750,7 @@ return [
 ],
 
 'wmgContentTranslationUnmodifiedMTThresholdForPublish' => [
-	'default' => 99,
+	'default' => 95,
 	'aswiki' => 70,
 	'cswiki' => 79, // T324721
 	'fywiki' => 90, // T323415
@@ -8197,7 +8232,7 @@ return [
 'wgSectionTranslationTargetLanguages' => [
 	'default' => null,
 	'wikipedia' => [ 'am', 'arz', 'as', 'ast', 'ay', 'az', 'ba', 'bcl', 'be', 'bg', 'bho', 'bm', 'bn', 'bs', 'ceb', 'ckb', 'co', 'cs', 'cu', 'cy', 'dv', 'ee', 'el', 'eo', 'et', 'eu', 'fa', 'fy', 'gan', 'gl', 'gn', 'gom', 'gu', 'ha', 'haw', 'he', 'hr', 'ht', 'hy', 'ig', 'ilo', 'is', 'jv', 'ka', 'kg', 'km', 'kn', 'ko', 'ku', 'lb', 'lg', 'ln', 'lo', 'lt', 'lv', 'mai', 'mg', 'mi', 'mk', 'ml', 'mn', 'mni', 'mr', 'ms', 'mt', 'my', 'ne', 'nso', 'ny', 'oc', 'om', 'or', 'pa', 'pap', 'ps', 'qu', 'ro', 'rw', 'sa', 'sah', 'sd', 'si', 'sk', 'sl', 'sn', 'so', 'sq', 'sr', 'ss', 'st', 'su', 'sw', 'ta', 'te', 'tg', 'th', 'ti', 'tk', 'tl', 'tn', 'tr', 'ts', 'tt', 'tw', 'udm', 'ur', 'uz', 'wo', 'wuu', 'xh', 'yue', 'yi', 'yo', 'zu' ],
-	'testwiki' => [ 'af', 'am', 'ar', 'arz', 'as', 'ast', 'ay', 'az', 'ba', 'bcl', 'be', 'bg', 'bho', 'bm', 'bn', 'bs', 'ca', 'ceb', 'ckb', 'co', 'cs', 'cu', 'cy', 'dv', 'ee', 'el', 'eo', 'es', 'et', 'eu', 'fa', 'fr', 'fy', 'gan', 'gl', 'gn', 'gom', 'gu', 'ha', 'haw', 'he', 'hi', 'hr', 'ht', 'hy', 'id', 'ig', 'ilo', 'is', 'jv', 'ka', 'kg', 'ki', 'km', 'kn', 'ko', 'ku', 'la', 'lb', 'lg', 'ln', 'lo', 'lt', 'lv', 'mai', 'mg', 'mi', 'mk', 'ml', 'mn', 'mni', 'mr', 'ms', 'mt', 'my', 'ne', 'nso', 'ny', 'oc', 'om', 'or', 'pa', 'pap', 'ps', 'pt', 'qu', 'ro', 'ru', 'rw', 'sa', 'sah', 'sd', 'si', 'sk', 'sl', 'sn', 'so', 'sq', 'sr', 'ss', 'st', 'su', 'sw', 'ta', 'te', 'tg', 'th', 'ti', 'tk', 'tl', 'tn', 'tr', 'ts', 'tt', 'tw', 'udm', 'ug', 'uk', 'ur', 'uz', 'vi', 'wo', 'wuu', 'xh', 'yi', 'yo', 'yue', 'zh', 'zu' ],
+	'testwiki' => [ 'af', 'am', 'ar', 'arz', 'as', 'ast', 'ay', 'az', 'ba', 'bcl', 'be', 'bg', 'bho', 'bm', 'bn', 'bs', 'ca', 'ceb', 'ckb', 'co', 'cs', 'cu', 'cy', 'da', 'dv', 'ee', 'el', 'eo', 'es', 'et', 'eu', 'fa', 'fi', 'fr', 'fy', 'ga', 'gan', 'gd', 'gl', 'gn', 'gom', 'gu', 'ha', 'haw', 'he', 'hi', 'hr', 'ht', 'hy', 'id', 'ig', 'ilo', 'is', 'jv', 'ka', 'kg', 'ki', 'km', 'kn', 'ko', 'ks', 'ku', 'la', 'lb', 'lg', 'ln', 'lo', 'lt', 'lv', 'mai', 'mhr', 'mg', 'mi', 'mk', 'ml', 'mn', 'mni', 'mr', 'mrj', 'ms', 'mt', 'my', 'ne', 'nn', 'no', 'nso', 'ny', 'oc', 'om', 'or', 'pa', 'pap', 'ps', 'pt', 'qu', 'ro', 'ru', 'rw', 'sa', 'sah', 'sd', 'sh', 'si', 'sk', 'sl', 'sm', 'sn', 'so', 'sq', 'sr', 'ss', 'st', 'su', 'sw', 'ta', 'te', 'tg', 'th', 'ti', 'tk', 'tl', 'tn', 'tr', 'ts', 'tt', 'tw', 'udm', 'ug', 'uk', 'ur', 'uz', 'vi', 'wo', 'wuu', 'xh', 'yi', 'yo', 'yue', 'zh', 'zu' ],
 ],
 
 'wgContentTranslationContentImportForSectionTranslation' => [
@@ -8306,40 +8341,6 @@ return [
 
 'wmgUseEventLogging' => [
 	'default' => true,
-],
-
-// Stream config default settings.
-// The EventStreamConfig extension will add these
-// settings to each entry in wgEventStreams if
-// the entry does not already have the setting.
-'wgEventStreamsDefaultSettings' => [
-	'default' => [
-		'topic_prefixes' => [ 'eqiad.', 'codfw.' ],
-		// Canary events are produced into streams
-		// for ingestion monitoring purposes.
-		// Absence of these events either means
-		// that canary event production is failing, or
-		// another component of the event pipeline is failing.
-		// Without canary events, we cannot differentiate between
-		// an idle stream and a broken pipeline.
-		// This is explicitly disabled for MW state change (EventBus) streams
-		// until https://phabricator.wikimedia.org/T266798 is done.
-		'canary_events_enabled' => true,
-		// By default, all events should be imported into Hadoop.
-		// The analytics hadoop ingestion consumer (Gobblin) will
-		// look for streams to ingest using these settings.
-		// Each stream in a job should have similar volumes to allow
-		// the job to scale properly and not cause stream ingestion starvation.
-		// The default job_name is event_default.
-		// Override this if the stream should be imported by a different job,
-		// or disabled altogether.
-		'consumers' => [
-			'analytics_hadoop_ingestion' => [
-				'job_name' => 'event_default',
-				'enabled' => true,
-			],
-		],
-	],
 ],
 
 // EventBusStreamNamesMap is used by EventBus HookHandlers that produce
@@ -12134,6 +12135,7 @@ return [
 
 'wgGELevelingUpFeaturesEnabled' => [
 	'default' => false,
+	'testwiki' => true,
 ],
 
 'wgGERefreshUserImpactDataMaintenanceScriptEnabled' => [
@@ -12152,10 +12154,6 @@ return [
 	'cswiki' => true,
 	'eswiki' => true,
 	'testwiki' => true,
-],
-
-'wgGENewImpactD3Enabled' => [
-	'default' => true,
 ],
 
 'wgGEHomepageSuggestedEditsEnabled' => [
@@ -12200,6 +12198,7 @@ return [
 	'angwiki' => true,
 	'arcwiki' => true,
 	'arwiki' => true,
+	'arywiki' => true,
 	'arzwiki' => true,
 	'aswiki' => true,
 	'astwiki' => true,
@@ -12243,13 +12242,54 @@ return [
 	'cuwiki' => true,
 	'cvwiki' => true,
 	'cywiki' => true,
+	'dawiki' => true,
 	'dewiki' => true,
+	'dinwiki' => true,
+	'diqwiki' => true,
+	'dsbwiki' => true,
+	'dvwiki' => true,
+	'eewiki' => true,
+	'emlwiki' => true,
+	'elwiki' => true,
+	'eowiki' => true,
 	'eswiki' => true,
+	'etwiki' => true,
+	'euwiki' => true,
+	'extwiki' => true,
 	'fawiki' => true,
+	'ffwiki' => true,
+	'fiwiki' => true,
+	'fiu_vrowiki' => true,
+	'fjwiki' => true,
+	'fowiki' => true,
 	'frwiki' => true,
+	'frpwiki' => true,
+	'frrwiki' => true,
+	'furwiki' => true,
+	'gawiki' => true,
+	'gagwiki' => true,
+	'ganwiki' => true,
+	'gcrwiki' => true,
+	'gdwiki' => true,
+	'glwiki' => true,
+	'glkwiki' => true,
+	'gnwiki' => true,
+	'gomwiki' => true,
+	'gotwiki' => true,
+	'guwiki' => true,
+	'gvwiki' => true,
+	'hawiki' => true,
+	'hakwiki' => true,
+	'hawwiki' => true,
 	'hewiki' => true,
 	'hiwiki' => true,
+	'hifwiki' => true,
+	'hrwiki' => true,
+	'hsbwiki' => true,
+	'htwiki' => true,
 	'huwiki' => true,
+	'hywwiki' => true,
+	'iawiki' => true,
 	'idwiki' => true,
 	'itwiki' => true,
 	'kowiki' => true,
@@ -12261,6 +12301,7 @@ return [
 	'ruwiki' => true,
 	'simplewiki' => true,
 	'svwiki' => true,
+	'tumwiki' => true,
 	'ukwiki' => true,
 	'viwiki' => true,
 ],
@@ -12308,7 +12349,22 @@ return [
 	'bswiki' => true,
 	'bxrwiki' => true,
 	'cawiki' => true,
+	'cbk_zamwiki' => true,
+	'cdowiki' => true,
+	'cewiki' => true,
+	'cebwiki' => true,
+	'chwiki' => false, // T304550
+	'chrwiki' => true,
+	'chywiki' => true,
+	'ckbwiki' => true,
+	'cowiki' => true,
+	'crwiki' => false, // T304550
+	'crhwiki' => true,
 	'cswiki' => true,
+	'csbwiki' => true,
+	'cuwiki' => true,
+	'cvwiki' => true,
+	'cywiki' => true,
 	'dewiki' => false, // T294712
 	'eswiki' => true,
 	'fawiki' => true,
@@ -12317,6 +12373,7 @@ return [
 	'hiwiki' => true,
 	'huwiki' => true,
 	'idwiki' => true,
+	'itwiki' => true,
 	'kowiki' => true,
 	'nlwiki' => true,
 	'nowiki' => true,
@@ -12382,8 +12439,6 @@ return [
 
 'wgGEHomepageNewAccountEnablePercentage' => [
 	'default' => 100,
-	'testwiki' => 0,
-	'test2wiki' => 0,
 
 	// special treatment wikis
 	'dewiki' => 80, // has control group on their own request, T320876#8342832
@@ -13158,14 +13213,6 @@ return [
 	'default' => true,
 ],
 
-'wmgWikibaseClientUnconnectedPageMigrationStage' => [
-	'default' => MIGRATION_NEW,
-],
-
-'wmgWikibaseClientUnconnectedPagePagePropMigrationLegacyFormat' => [
-	'default' => false,
-],
-
 'wmgWikibaseTmpEnableMulLanguageCode' => [
 	'default' => null,
 	'wikidataclient-test' => true,
@@ -13296,6 +13343,7 @@ return [
 
 'wgSFSReportOnly' => [
 	'default' => true,
+	'eswikiversity' => false, // T331182
 ],
 
 'wgCdnMatchParameterOrder' => [

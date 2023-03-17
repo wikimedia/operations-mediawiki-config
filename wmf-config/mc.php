@@ -62,6 +62,11 @@ $wgWANObjectCaches['wancache-main-mcrouter'] = [
 	// The route prefix is configured in Puppet (profile::mediawiki::mcrouter_wancache).
 	'broadcastRoutingPrefix' => '/*/mw-wan/',
 ];
+$wgWANObjectCache = [
+	// Specify the route prefix that mcrouter listens for and broadcasts.
+	// The route prefix is configured in Puppet (profile::mediawiki::mcrouter_wancache).
+	'broadcastRoutingPrefix' => '/*/mw-wan/',
+];
 
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	// nutcracker only; no mcrouter present

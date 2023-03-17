@@ -228,8 +228,8 @@ $data = wmfNocViewWiki( $selectedGlobals, $isComparing );
 
 	<nav class="wm-site-nav"><ul class="wm-nav">
 		<li><a href="/conf/">Config files</a></li>
-		<li><a href="/db.php">Database view</a></li>
-		<li><a href="/wiki.php" class="wm-nav-item-active">Wiki view</a>
+		<li><a href="/db.php">Database config</a></li>
+		<li><a href="/wiki.php" class="wm-nav-item-active">Wiki config</a>
 			<ul><?php print $data['nav']; ?></ul>
 		</li>
 	</ul></nav>

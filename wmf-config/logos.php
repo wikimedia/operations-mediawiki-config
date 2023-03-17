@@ -340,7 +340,7 @@ return [
 	'towiki' => '/static/images/project-logos/towiki.png', // T51125
 	'tpiwiki' => '/static/images/project-logos/tpiwiki.png', // T29240
 	'trvwiki' => '/static/images/project-logos/trvwiki.png',
-	'trwiki' => '/static/images/project-logos/trwiki-temp.png',
+	'trwiki' => '/static/images/project-logos/trwiki.png',
 	'tswiki' => '/static/images/project-logos/tswiki.png', // T51125
 	'ttwiki' => '/static/images/project-logos/ttwiki.png',
 	'tumwiki' => '/static/images/project-logos/tumwiki.png', // T320473
@@ -559,7 +559,7 @@ return [
 	'tewikiquote' => '/static/images/project-logos/tewikiquote.png',
 	'thwikiquote' => '/static/images/project-logos/thwikiquote.png',
 	'tlwikiquote' => '/static/images/project-logos/tlwikiquote.png',
-	'trwikiquote' => '/static/images/project-logos/trwikiquote-temp.png',
+	'trwikiquote' => '/static/images/project-logos/trwikiquote.png',
 	'ukwikiquote' => '/static/images/project-logos/ukwikiquote.png',
 	'urwikiquote' => '/static/images/project-logos/urwikiquote.png', // T97510
 	'viwikiquote' => '/static/images/project-logos/viwikiquote.png',
@@ -775,6 +775,7 @@ return [
 	// Chapter and local user group wikis
 	'amwikimedia' => '/static/images/project-logos/amwikimedia.png', // T176042
 	'arwikimedia' => '/static/images/project-logos/arwikimedia.png',
+	'azwikimedia' => '/static/images/project-logos/azwikimedia.png',
 	'bdwikimedia' => '/static/images/project-logos/bdwikimedia.png',
 	'bewikimedia' => '/static/images/project-logos/bewikimedia.png',
 	'brwikimedia' => '/static/images/project-logos/brwikimedia.png', // T257925
@@ -808,6 +809,7 @@ return [
 	'sewikimedia' => '/static/images/project-logos/sewikimedia.png',
 	'trwikimedia' => '/static/images/project-logos/trwikimedia.png', // T323850
 	'uawikimedia' => '/static/images/project-logos/uawikimedia.png',
+	'vewikimedia' => '/static/images/project-logos/vewikimedia.png',
 	'wbwikimedia' => '/static/images/project-logos/wbwikimedia.png', // T162510
 
 	// Special wikis
@@ -1168,7 +1170,7 @@ return [
 	'towiki' => '/static/images/project-logos/towiki-1.5x.png', // T150618
 	'tpiwiki' => '/static/images/project-logos/tpiwiki-1.5x.png', // T150618
 	'trvwiki' => '/static/images/project-logos/trvwiki-1.5x.png',
-	'trwiki' => '/static/images/project-logos/trwiki-temp-1.5x.png',
+	'trwiki' => '/static/images/project-logos/trwiki-1.5x.png',
 	'tswiki' => '/static/images/project-logos/tswiki-1.5x.png', // T150618
 	'ttwiki' => '/static/images/project-logos/ttwiki-1.5x.png', // T150618
 	'tumwiki' => '/static/images/project-logos/tumwiki-1.5x.png', // T320473
@@ -1326,7 +1328,6 @@ return [
 	'suwikiquote' => '/static/images/project-logos/suwikiquote-1.5x.png', // T150618
 	'tewikiquote' => '/static/images/project-logos/tewikiquote-1.5x.png',
 	'tlwikiquote' => '/static/images/project-logos/tlwikiquote-1.5x.png',
-	'trwikiquote' => '/static/images/project-logos/trwikiquote-temp-1.5x.png',
 	'viwikiquote' => '/static/images/project-logos/viwikiquote-1.5x.png',
 	'zhwikiquote' => '/static/images/project-logos/zhwikiquote-1.5x.png', // T150618, T199863, T308620
 
@@ -1441,6 +1442,7 @@ return [
 
 	// Chapter and local user group wikis
 	'amwikimedia' => '/static/images/project-logos/amwikimedia-1.5x.png', // T176042
+	'azwikimedia' => '/static/images/project-logos/azwikimedia-1.5x.png',
 	'brwikimedia' => '/static/images/project-logos/brwikimedia-1.5x.png', // T257925
 	'cawikimedia' => '/static/images/project-logos/cawikimedia-1.5x.png',
 	'ecwikimedia' => '/static/images/project-logos/ecwikimedia-1.5x.png', // T135521
@@ -1455,6 +1457,7 @@ return [
 	'punjabiwikimedia' => '/static/images/project-logos/punjabiwikimedia-1.5x.png',
 	'romdwikimedia' => '/static/images/project-logos/romdwikimedia-1.5x.png', // T187184
 	'trwikimedia' => '/static/images/project-logos/trwikimedia-1.5x.png', // T323850
+	'vewikimedia' => '/static/images/project-logos/vewikimedia-1.5x.png',
 	'wbwikimedia' => '/static/images/project-logos/wbwikimedia-1.5x.png', // T162510
 
 	// Special wikis
@@ -1772,7 +1775,7 @@ return [
 	'towiki' => '/static/images/project-logos/towiki-2x.png', // T150618
 	'tpiwiki' => '/static/images/project-logos/tpiwiki-2x.png', // T150618
 	'trvwiki' => '/static/images/project-logos/trvwiki-2x.png',
-	'trwiki' => '/static/images/project-logos/trwiki-temp-2x.png',
+	'trwiki' => '/static/images/project-logos/trwiki-2x.png',
 	'tswiki' => '/static/images/project-logos/tswiki-2x.png', // T150618
 	'ttwiki' => '/static/images/project-logos/ttwiki-2x.png', // T150618
 	'tumwiki' => '/static/images/project-logos/tumwiki-2x.png', // T320473
@@ -1930,7 +1933,6 @@ return [
 	'suwikiquote' => '/static/images/project-logos/suwikiquote-2x.png', // T150618
 	'tewikiquote' => '/static/images/project-logos/tewikiquote-2x.png',
 	'tlwikiquote' => '/static/images/project-logos/tlwikiquote-2x.png',
-	'trwikiquote' => '/static/images/project-logos/trwikiquote-temp-2x.png',
 	'viwikiquote' => '/static/images/project-logos/viwikiquote-2x.png',
 	'zhwikiquote' => '/static/images/project-logos/zhwikiquote-2x.png', // T150618, T199863, T308620
 
@@ -2045,6 +2047,7 @@ return [
 
 	// Chapter and local user group wikis
 	'amwikimedia' => '/static/images/project-logos/amwikimedia-2x.png', // T176042
+	'azwikimedia' => '/static/images/project-logos/azwikimedia-2x.png',
 	'brwikimedia' => '/static/images/project-logos/brwikimedia-2x.png', // T257925
 	'cawikimedia' => '/static/images/project-logos/cawikimedia-2x.png',
 	'ecwikimedia' => '/static/images/project-logos/ecwikimedia-2x.png', // T135521
@@ -2059,6 +2062,7 @@ return [
 	'punjabiwikimedia' => '/static/images/project-logos/punjabiwikimedia-2x.png',
 	'romdwikimedia' => '/static/images/project-logos/romdwikimedia-2x.png', // T187184
 	'trwikimedia' => '/static/images/project-logos/trwikimedia-2x.png', // T323850
+	'vewikimedia' => '/static/images/project-logos/vewikimedia-2x.png',
 	'wbwikimedia' => '/static/images/project-logos/wbwikimedia-2x.png', // T162510
 
 	// Special wikis
@@ -3079,8 +3083,8 @@ return [
 	],
 	'trwiki' => [ // T255489, T254788
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-tr.svg',
-		'width' => 120,
-		'height' => 21,
+		'width' => 107,
+		'height' => 18,
 	],
 	'tswiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-ts.svg',
@@ -4929,8 +4933,8 @@ return [
 	],
 	'trwiki' => [ // T258552
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-tr.svg',
-		'width' => 120,
-		'height' => 15,
+		'width' => 104,
+		'height' => 13,
 	],
 	'tswiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-ts.svg',
@@ -5167,7 +5171,6 @@ return [
 	'wikimedia' => '/static/images/icons/wikimedia.svg',
 
 	// Wikipedia
-	'trwiki' => '/static/images/icons/trwiki-temp.svg', // T329047
 
 	// Wiktionary
 	'angwiktionary' => null,
@@ -5209,7 +5212,6 @@ return [
 
 	// Wikiquote
 	'arwikiquote' => null,
-	'trwikiquote' => '/static/images/icons/trwikiquote-temp.svg', // T329399
 	'urwikiquote' => null,
 
 	// Wikibooks

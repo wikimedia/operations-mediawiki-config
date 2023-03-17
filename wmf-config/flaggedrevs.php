@@ -204,9 +204,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 	///////////////////////////////////////
 
 	$wgFlaggedRevsNamespaces[] = 828; // NS_MODULE
-	$wgFlaggedRevsTags = [
-		'accuracy' => [ 'levels' => 2, 'quality' => 20, 'pristine' => 21 ],
-	];
+	$wgFlaggedRevsTags = [ 'accuracy' => [ 'levels' => 2 ] ];
 	$wgFlaggedRevsTagsRestrictions = [
 		'accuracy' => [ 'review' => 1, 'autoreview' => 1 ],
 	];
@@ -238,9 +236,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_PROJECT ];
 
 		# We have only one tag with one level
-		$wgFlaggedRevsTags = [
-			'status' => [ 'levels' => 1, 'quality' => 20, 'pristine' => 21 ],
-		];
+		$wgFlaggedRevsTags = [ 'status' => [ 'levels' => 1 ] ];
 		# Restrict autoconfirmed to flagging semi-protected
 		$wgFlaggedRevsTagsRestrictions = [
 			'status' => [ 'review' => 1, 'autoreview' => 1 ],
@@ -260,9 +256,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		# Remove 'editor' group
 		unset( $wgGroupPermissions['editor'] );
 	} elseif ( $wgDBname == 'bswiki' ) { // T158662
-		$wgFlaggedRevsTags = [
-			'status' => [ 'levels' => 1, 'quality' => 20, 'pristine' => 21 ],
-		];
+		$wgFlaggedRevsTags = [ 'status' => [ 'levels' => 1 ] ];
 
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
 		# Remove reviewer group
@@ -281,9 +275,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		# Namespaces
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_PROJECT, NS_HELP, NS_TEMPLATE, NS_CATEGORY, NS_FILE, 100, 102, 828 ];
 		# We have only one tag with one level
-		$wgFlaggedRevsTags = [
-			'status' => [ 'levels' => 1, 'quality' => 20, 'pristine' => 21 ],
-		];
+		$wgFlaggedRevsTags = [ 'status' => [ 'levels' => 1 ] ];
 		# Restrict autoconfirmed to flagging semi-protected
 		$wgFlaggedRevsTagsRestrictions = [
 			'status' => [ 'review' => 1, 'autoreview' => 1 ],
@@ -339,9 +331,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 	} elseif ( $wgDBname == 'enwiki' ) {
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_PROJECT ];
 		# We have only one tag with one level
-		$wgFlaggedRevsTags = [
-			'status' => [ 'levels' => 1, 'quality' => 20, 'pristine' => 21 ],
-		];
+		$wgFlaggedRevsTags = [ 'status' => [ 'levels' => 1 ] ];
 		# Restrict autoconfirmed to flagging semi-protected
 		$wgFlaggedRevsTagsRestrictions = [
 			'status' => [ 'review' => 1, 'autoreview' => 1 ],
@@ -363,9 +353,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		// Cookbook, WikiJunior
 		$wgFlaggedRevsNamespaces[] = 102;
 		$wgFlaggedRevsNamespaces[] = 110;
-		$wgFlaggedRevsTags = [
-			'value' => [ 'levels' => 3, 'quality' => 20, 'pristine' => 21 ]
-		];
+		$wgFlaggedRevsTags = [ 'value' => [ 'levels' => 3 ] ];
 
 		$wgGroupPermissions['editor']['rollback'] = true;
 		$wgGroupPermissions['sysop']['review'] = true;
@@ -398,9 +386,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		# Namespaces
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_PROJECT, NS_HELP, NS_TEMPLATE, NS_CATEGORY, NS_FILE, 100, 102, 828 ];
 		# We have only one tag with one level
-		$wgFlaggedRevsTags = [
-			'status' => [ 'levels' => 1, 'quality' => 20, 'pristine' => 21 ],
-		];
+		$wgFlaggedRevsTags = [ 'status' => [ 'levels' => 1 ] ];
 		# Restrict autoconfirmed to flagging semi-protected
 		$wgFlaggedRevsTagsRestrictions = [
 			'status' => [ 'review' => 1, 'autoreview' => 1 ],
@@ -438,9 +424,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		$wgGroupPermissions['sysop']['stablesettings'] = true;
 		$wgGroupPermissions['sysop']['unreviewedpages'] = true;
 
-		$wgFlaggedRevsTags = [
-			'accuracy' => [ 'levels' => 3, 'quality' => 20, 'pristine' => 21 ],
-		];
+		$wgFlaggedRevsTags = [ 'accuracy' => [ 'levels' => 3 ] ];
 		$wgFlaggedRevsTagsRestrictions = [
 			'accuracy' => [ 'review' => 3, 'autoreview' => 2 ],
 		];
@@ -461,9 +445,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		$wgFlaggedRevsNamespaces[] = 108;
 		$wgFlaggedRevsNamespaces[] = 110;
 		$wgFlaggedRevsNamespaces[] = 112;
-		$wgFlaggedRevsTags = [
-			'accuracy' => [ 'levels' => 4, 'quality' => 20, 'pristine' => 21 ],
-		];
+		$wgFlaggedRevsTags = [ 'accuracy' => [ 'levels' => 4 ] ];
 		$wgFlaggedRevsTagsRestrictions = [
 			'accuracy'     => [ 'review' => 3, 'autoreview' => 3 ],
 		];
@@ -474,9 +456,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 		$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 		$wgFlaggedRevsNamespaces[] = 100;
 		# We have only one tag with one level
-		$wgFlaggedRevsTags = [
-			'status' => [ 'levels' => 1, 'quality' => 20, 'pristine' => 21 ],
-		];
+		$wgFlaggedRevsTags = [ 'status' => [ 'levels' => 1 ] ];
 		# Restrict autoconfirmed to flagging semi-protected
 		$wgFlaggedRevsTagsRestrictions = [
 			'status' => [ 'review' => 1, 'autoreview' => 1 ],
@@ -544,9 +524,7 @@ $wgHooks['MediaWikiServices'][] = static function () {
 	} elseif ( $wgDBname == 'ptwiki' ) { // T56828
 		$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_TEMPLATE, 102, 828 ];
 		# We have only one tag with one level
-		$wgFlaggedRevsTags = [
-			'status' => [ 'levels' => 1, 'quality' => 20, 'pristine' => 21 ],
-		];
+		$wgFlaggedRevsTags = [ 'status' => [ 'levels' => 1 ] ];
 		# Restrict autoconfirmed to flagging semi-protected
 		$wgFlaggedRevsTagsRestrictions = [
 			'status' => [ 'review' => 1, 'autoreview' => 1 ],

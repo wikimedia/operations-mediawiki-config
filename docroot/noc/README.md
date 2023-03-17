@@ -1,14 +1,15 @@
 These are the files for the [noc.wikimedia.org](https://noc.wikimedia.org/) microsite.
 
-* [db.php](./db.php) generates the database page at <https://noc.wikimedia.org/db.php>.
-* [conf/index.php](./conf/index.php) creates the overview at <https://noc.wikimedia.org/conf/>.
+* [conf/index.php](./conf/index.php): Config file browser, at <https://noc.wikimedia.org/conf/>.
+* [db.php](./db.php): Database config, at <https://noc.wikimedia.org/db.php>.
+* [wiki.php](./wiki.php): Wiki config, at <https://noc.wikimedia.org/wiki.php>.
 
 In production, noc is served from `mwwmaint*` hosts.
 
-To test this locally:
+To preview this locally:
 
 ```
-cd docroot/noc$ php -S localhost:9412
+docroot/noc$ php -S localhost:4000
 ```
 
-Then view <http://localhost:9412/>.
+Then open <http://localhost:4000/>.

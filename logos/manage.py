@@ -151,21 +151,27 @@ def download(commons: str, name: str):
         req.raise_for_status()
         (project_logos / filename).write_bytes(req.content)
         print(f"Saved {filename}")
-        subprocess.check_call(
-            [
-                "pngquant",
-                "--skip-if-larger",
-                "--speed",
-                "3",
-                "--quality",
-                "80-100",
-                filename,
-                "--ext",
-                ".png",
-                "--force",
-            ],
-            cwd=project_logos,
-        )
+        try:
+            subprocess.check_call(
+                [
+                    "pngquant",
+                    "--skip-if-larger",
+                    "--speed",
+                    "3",
+                    "--quality",
+                    "80-100",
+                    filename,
+                    "--ext",
+                    ".png",
+                    "--force",
+                ],
+                cwd=project_logos,
+            )
+        except subprocess.CalledProcessError as e:
+            if e.returncode == 98:
+                print("pngquant: result was larger than original, skipping")
+            else:
+                raise e
         subprocess.check_call(
             ["zopflipng", "--lossy_transparent", "-m", "-y", filename, filename],
             cwd=project_logos,

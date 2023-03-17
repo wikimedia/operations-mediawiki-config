@@ -1444,11 +1444,12 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 	$wgExtDistDefaultSnapshot = 'REL1_39';
 
 	// Current development snapshot
-	// $wgExtDistCandidateSnapshot = 'REL1_40';
+	$wgExtDistCandidateSnapshot = 'REL1_40';
 
 	// Available snapshots
 	$wgExtDistSnapshotRefs = [
 		'master',
+		'REL1_40',
 		'REL1_39',
 		'REL1_38',
 		'REL1_35',
@@ -1691,7 +1692,6 @@ if ( $wmgUseDynamicPageList ) {
 	$wgDLPMaxCacheTime = 604800;
 }
 
-wfLoadExtension( 'Renameuser' );
 $wgGroupPermissions['bureaucrat']['renameuser'] = $wmgAllowLocalRenameuser;
 
 if ( $wmgUseSpecialNuke ) {
@@ -1894,7 +1894,6 @@ if ( $wmgUseCentralAuth ) {
 			'.wikivoyage.beta.wmflabs.org' => 'enwikivoyage',
 			'.wiktionary.beta.wmflabs.org' => 'enwiktionary',
 			'meta.wikimedia.beta.wmflabs.org' => 'metawiki',
-			'deployment.wikimedia.beta.wmflabs.org' => 'deploymentwiki',
 			'commons.wikimedia.beta.wmflabs.org' => 'commonswiki',
 			$wmgHostnames['wikidata'] => 'wikidatawiki',
 			'api.wikimedia.beta.wmflabs.org' => 'apiportalwiki',
@@ -3801,6 +3800,8 @@ if ( $wmgUseOATHAuth ) {
 	$wgGroupPermissions['sysop']['oathauth-disable-for-user'] = false;
 	$wgGroupPermissions['sysop']['oathauth-view-log'] = false;
 	$wgGroupPermissions['sysop']['oathauth-verify-user'] = false; // T209749
+
+	$wgOATHAuthMultipleDevicesMigrationStage = MIGRATION_OLD;
 
 	if ( $wmgUseCentralAuth ) {
 		$wgOATHAuthAccountPrefix = 'Wikimedia';

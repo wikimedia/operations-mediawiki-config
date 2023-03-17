@@ -57,13 +57,11 @@ function wmfGetOverrideSettings() {
 		],
 
 		'wgLanguageCode' => [
-			'deploymentwiki' => 'en',
 			'votewiki' => 'en', // T295242
 			'wikifunctionswiki' => 'en', // Temporary until wikifunctions.org is a real wiki and so in special.dblist
 		],
 
 		'wgSitename' => [
-			'deploymentwiki' => 'Deployment',
 			'wikivoyage'     => 'Wikivoyage',
 			'wikifunctionswiki' => 'Wikifunctions',
 		],
@@ -84,7 +82,6 @@ function wmfGetOverrideSettings() {
 
 			'apiportalwiki'       => 'https://api.wikimedia.beta.wmflabs.org',
 			'commonswiki'   => 'https://commons.wikimedia.beta.wmflabs.org',
-			'deploymentwiki'      => 'https://deployment.wikimedia.beta.wmflabs.org',
 			'foundationwiki' => 'https://foundation.wikimedia.beta.wmflabs.org',
 			'incubatorwiki' => 'https://incubator.wikimedia.beta.wmflabs.org',
 			'loginwiki'     => 'https://login.wikimedia.beta.wmflabs.org',
@@ -108,7 +105,6 @@ function wmfGetOverrideSettings() {
 			'apiportalwiki'       => 'https://api.wikimedia.beta.wmflabs.org',
 			'metawiki'      => 'https://meta.wikimedia.beta.wmflabs.org',
 			'commonswiki'	=> 'https://commons.wikimedia.beta.wmflabs.org',
-			'deploymentwiki'      => 'https://deployment.wikimedia.beta.wmflabs.org',
 			'foundationwiki' => 'https://foundation.wikimedia.beta.wmflabs.org',
 			'loginwiki'     => 'https://login.wikimedia.beta.wmflabs.org',
 			'votewiki'      => 'https://vote.wikimedia.beta.wmflabs.org',
@@ -280,10 +276,6 @@ function wmfGetOverrideSettings() {
 				// 'csp' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 				// 'csp-report-only' => [ 'logstash' => 'info', 'udp2log' => 'info' ],
 				'rdbms' => 'warning',
-				'DBConnection' => 'warning',
-				'DBPerformance' => [ 'logstash' => 'debug', 'udp2log' => 'warning' ],
-				'DBQuery' => 'warning',
-				'DBReplication' => 'warning',
 				'DeferredUpdates' => 'error',
 				'deprecated' => 'debug',
 				'diff' => 'debug',
@@ -398,6 +390,7 @@ function wmfGetOverrideSettings() {
 				'MessageCache' => 'debug',
 				'runJobs' => [ 'logstash' => 'info' ],
 				'squid' => 'debug',
+				'WikiLambda' => 'debug',
 			],
 		],
 
@@ -602,6 +595,9 @@ function wmfGetOverrideSettings() {
 					],
 				]
 			]
+		],
+		'wgVectorPromoteAddTopic' => [
+			'default' => true
 		],
 
 		'wmgCommonsMetadataForceRecalculate' => [
@@ -1549,6 +1545,9 @@ function wmfGetOverrideSettings() {
 		'wgGELevelingUpFeaturesEnabled' => [
 			'default' => true,
 		],
+		'wgGEUseNewImpactModule' => [
+			'default' => true,
+		],
 		'wgGERefreshUserImpactDataMaintenanceScriptEnabled' => [
 			'default' => true,
 		],
@@ -1594,6 +1593,12 @@ function wmfGetOverrideSettings() {
 		],
 		'wgGELinkRecommendationsUseEventGate' => [
 			'default' => false,
+		],
+		'wgGELevelingUpGetStartedNotificationSendAfterSeconds' => [
+			'default' => 300,
+		],
+		'wgGELevelingUpKeepGoingNotificationSendAfterSeconds' => [
+			'default' => 300,
 		],
 		'wgGEHelpPanelHelpDeskTitle' => [
 			'enwiki' => 'Wikipedia:Help_desk',
@@ -2394,10 +2399,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		'wmgWikibaseClientUnconnectedPageMigrationStage' => [
-			'default' => MIGRATION_NEW,
-		],
-
 		'wmgWikibaseTmpEnableMulLanguageCode' => [
 			'default' => true,
 		],
@@ -2477,6 +2478,10 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 			'loginwiki' => false,
 		],
+		// T327470
+		'wgCampaignEventsEnableMultipleOrganizers' => [
+			'default' => true,
+		],
 
 		// T314294
 		'wmgUsePhonos' => [
@@ -2484,6 +2489,7 @@ function wmfGetOverrideSettings() {
 			'enwiki' => true,
 			'en_rtlwiki' => true,
 			'enwiktionary' => true,
+			'metawiki' => true, // T331670
 		],
 
 		'wmgUseVueTest' => [
