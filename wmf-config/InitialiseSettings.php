@@ -1476,6 +1476,7 @@ return [
 	'scnwiktionary' => 'Wikizziunariu',
 	'sdwiki' => 'وڪيپيڊيا',
 	'searchcomwiki' => 'Search Committee',
+	'shwiki' => 'Wikipedija', // T332468
 	'shnwiki' => 'ဝီႇၶီႇၽီးတီးယႃး',
 	'shnwikibooks' => 'ဝီႇၶီႇပပ်ႉ',
 	'shnwikivoyage' => 'ဝီႇၶီႇဝွႆးဢဵတ်ႇꩡ်',
