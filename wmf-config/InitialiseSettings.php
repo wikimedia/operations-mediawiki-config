@@ -2287,13 +2287,8 @@ return [
 'wgVectorPageTools' => [
 	'default' => [
 		'logged_in' => true,
-		'logged_out' => false,
-	],
-	// T327348
-	'viwiki' => [
-		'logged_in' => true,
 		'logged_out' => true,
-	]
+	],
 ],
 
 'wgVectorStickyHeader' => [
