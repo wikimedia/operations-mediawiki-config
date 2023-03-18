@@ -279,6 +279,8 @@ function wmfGetOverrideSettings() {
 		],
 
 		// Log channels for beta cluster
+		// See detailed comments on 'wmgMonologChannels' in InitializeSettings.php
+		// Note: logstash won't go below info level, unless logstash=>debug is specified
 		'wmgMonologChannels' => [
 			'default' => [
 				// Copied from default production
