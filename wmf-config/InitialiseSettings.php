@@ -4927,6 +4927,15 @@ return [
 	'default' => 'metawiki',
 ],
 
+// T332521: Mark some global AbuseFilter actions as locally disabled
+'wgAbuseFilterLocallyDisabledGlobalActions' => [
+	'default' => [
+		'blockautopromote' => true,
+		'block' => true,
+		'rangeblock' => true,
+	],
+],
+
 // emergency disable: shut off filters tagging >5% of posts on a total of at least 25 posts per day
 'wgAbuseFilterEmergencyDisableThreshold' => [
 	'default' => [ 'default' => 0.05, ],
