@@ -391,6 +391,7 @@ function wmfGetOverrideSettings() {
 				'runJobs' => [ 'logstash' => 'info' ],
 				'squid' => 'debug',
 				'WikiLambda' => 'debug',
+				'Phonos' => 'debug',
 			],
 		],
 
