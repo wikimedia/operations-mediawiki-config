@@ -12148,6 +12148,10 @@ return [
 
 'wgGELevelingUpFeaturesEnabled' => [
 	'default' => false,
+	'arwiki' => true,
+	'bnwiki' => true,
+	'cswiki' => true,
+	'eswiki' => true,
 	'testwiki' => true,
 ],
 
