@@ -58,6 +58,9 @@ if ( $wmgUseCheckUser ) {
 	$wgCheckUserLogAdditionalRights[] = 'abusefilter-view';
 }
 
+// T309609 — Set default AbuseFilter condition limit to 2000
+$wgAbuseFilterConditionLimit = 2000;
+
 // Custom permissions
 switch ( $wgDBname ) {
 	case 'arwiki':
@@ -103,9 +106,6 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['interface-editor']['abusefilter-modify'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-log-private'] = true;
-		break;
-	case 'commonswiki':
-		$wgAbuseFilterConditionLimit = 2000; // T132048
 		break;
 	case 'elwiki':
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
