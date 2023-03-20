@@ -2357,6 +2357,15 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
+		// T332521: Mark some global AbuseFilter actions as locally disabled
+		'wgAbuseFilterLocallyDisabledGlobalActions' => [
+			'default' => [
+				'blockautopromote' => true,
+				'block' => true,
+				'rangeblock' => true,
+			],
+		],
+
 		// T246493
 		'wmgUseNearbyPages' => [
 			'default' => true,
