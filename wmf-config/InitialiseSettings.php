@@ -12530,6 +12530,10 @@ return [
 	'cswiki' => 'beta',
 ],
 
+'wgGEPersonalizedPraiseEnabled' => [
+	'default' => false,
+],
+
 'wgGEPersonalizedPraiseBackendEnabled' => [
 	'default' => false,
 	'arwiki' => true,
