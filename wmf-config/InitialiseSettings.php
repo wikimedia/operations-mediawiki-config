@@ -305,6 +305,7 @@ return [
 	'amiwiki' => 'Asia/Taipei',
 	'alswiki' => 'Europe/Berlin',
 	'amwikimedia' => 'Asia/Yerevan', // T176042
+	'anpwiki' => 'Asia/Kolkata',
 	'altwiki' => 'Asia/Barnaul',
 	'arbcom_cswiki' => 'Europe/Prague', // T151731
 	'arbcom_dewiki' => 'Europe/Berlin',
@@ -1066,6 +1067,7 @@ return [
 	'angwiki' => 'Wikipǣdia', // T58634
 	'angwikisource' => 'Wicifruma',
 	'angwiktionary' => 'Wikiwordbōc', // T58634
+	'anpwiki' => 'विकिपीडिया',
 	'amwiki' => 'ውክፔዲያ',
 	'altwiki' => 'Википедия',
 	'apiportalwiki' => 'API Portal',

@@ -106,6 +106,8 @@ Wikipedia:
         comment_2x: T150618
         local_tagline: true
         local_wordmark: true
+    anpwiki:
+        commons: 'File:Wikipedia-logo-v2-anp.svg'
     anwiki:
         comment_1_5x: T150618
         comment_2x: T150618

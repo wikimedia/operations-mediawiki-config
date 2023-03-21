@@ -4944,6 +4944,7 @@ return [
 	'angwiki' => 'Wikipǣdia', // T58634
 	'angwikisource' => 'Wicifruma',
 	'angwiktionary' => 'Wikiwordbōc', // T58634
+	'anpwiki' => 'विकिपीडिया',
 	'arbcom_cswiki' => 'Projekt', // T151731
 	'arbcom_dewiki' => 'Project',
 	'arbcom_enwiki' => 'Project',

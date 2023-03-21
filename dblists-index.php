@@ -30,6 +30,7 @@ return [
 'angwikiquote' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0' ],
 'angwikisource' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
 'angwiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines' ],
+'anpwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'anwiki' => [ 'wikipedia', 'desktop-improvements', 'medium', 'wikidataclient', 'commonsuploads', 'cirrussearch-big-indices' ],
 'anwiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'apiportalwiki' => [ 'special', 'small', 'group0', 'nowikidatadescriptiontaglines' ],
