@@ -2279,44 +2279,7 @@ function wmfGetOverrideSettings() {
 			],
 		],
 
-		'wmgUseDiscussionTools' => [
-			'default' => true,
-			'loginwiki' => false,
-		],
-
-		'-wgDiscussionToolsEnable' => [
-			'default' => true,
-		],
-
-		'-wgDiscussionToolsBeta' => [
-			'default' => true,
-		],
-
 		'-wgDiscussionToolsABTest' => [
-		],
-
-		'-wgDiscussionToolsEnableMobile' => [
-			'default' => true,
-		],
-
-		'-wgDiscussionTools_replytool' => [
-			'default' => 'available',
-		],
-
-		'-wgDiscussionTools_newtopictool' => [
-			'default' => 'available',
-		],
-
-		'-wgDiscussionTools_sourcemodetoolbar' => [
-			'default' => 'available',
-		],
-
-		'-wgDiscussionTools_topicsubscription' => [
-			'default' => 'default',
-		],
-
-		'-wgDiscussionTools_autotopicsub' => [
-			'default' => 'default',
 		],
 
 		'-wgDiscussionTools_visualenhancements' => [
@@ -2333,14 +2296,6 @@ function wmfGetOverrideSettings() {
 
 		'-wgDiscussionTools_visualenhancements_newsectionlink_enable' => [
 			'default' => true
-		],
-
-		'-wgDiscussionToolsEnablePermalinksBackend' => [
-			'default' => true,
-		],
-
-		'-wgDiscussionToolsLegacyHeadingMarkup' => [
-			'default' => false,
 		],
 
 		'wgWatchlistExpiry' => [
