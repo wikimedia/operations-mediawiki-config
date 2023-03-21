@@ -7681,6 +7681,7 @@ return [
 	'default' => false, // T315353
 	'group0' => true, // T315353
 	'group1' => true, // T315353
+	'group2' => true, // T315353
 	'testwiki' => true,
 ],
 
