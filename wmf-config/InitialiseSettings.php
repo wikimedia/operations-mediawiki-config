@@ -5645,14 +5645,6 @@ return [
 	'wikisource' => true,
 ],
 
-// Enable WikiEditor Realtime Preview feature (without a Beta Feature).
-'wgWikiEditorRealtimePreview' => [
-	'default' => true,
-],
-'wgWikiEditorRealtimePreviewBeta' => [
-	'default' => false,
-],
-
 // ------------ BetaFeatures end -----------
 
 // -------------- Media Viewer configs --------------

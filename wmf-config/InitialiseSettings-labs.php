@@ -2106,12 +2106,6 @@ function wmfGetOverrideSettings() {
 			'default' => 8,
 			'wikidatawiki' => 3,
 		],
-		'wgWikiEditorRealtimePreview' => [
-			'default' => false,
-			'enwiki' => true,
-			'enwikisource' => true,
-			'hewiktionary' => true,
-		],
 		'wmgUseWikisource' => [
 			'wikisource' => true,
 		],
