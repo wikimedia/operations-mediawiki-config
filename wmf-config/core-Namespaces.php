@@ -4863,6 +4863,11 @@ return [
 	],
 ],
 
+// When adding entries to this array, consider running the DiscussionTools maintenance script to
+// index existing comments with signatures in its permalink database. Use --current unless you want
+// to index old revisions too, which would take forever on large wikis and isn't very beneficial.
+// For example:
+// extensions/DiscussionTools/maintenance/persistRevisionThreadItems.php --current --namespace 102
 'wgExtraSignatureNamespaces' => [
 	// Namespaces not listed in $wgContentNamespaces are not necessary here
 	// for core, but reinforcing default config doesn't harm.
