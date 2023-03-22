@@ -553,7 +553,10 @@ return [
 	],
 	'+dewiki' => [
 		'*' => [ 'patrolmarks' => true, ], // T100682
-		'bot' => [ 'editeditorprotected' => true, ], // T94368
+		'bot' => [
+			'editeditorprotected' => true, // T94368
+			'ipblock-exempt' => true, // T332759
+		],
 		'editor' => [
 			'rollback' => true, // per DaBPunkt's request, 2008-05-07
 			'editeditorprotected' => true, // T94368
