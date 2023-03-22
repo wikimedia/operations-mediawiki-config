@@ -783,7 +783,7 @@ return [
 	'cawikimedia' => '/static/images/project-logos/cawikimedia.png',
 	'cnwikimedia' => '/static/images/project-logos/cnwikimedia.png', // T98676
 	'cowikimedia' => '/static/images/project-logos/cowikimedia.png',
-	'dkwikimedia' => '/static/images/project-logos/dkwikimedia.png',
+	'dkwikimedia' => '/static/images/project-logos/dkwikimedia.png', // T332784
 	'ecwikimedia' => '/static/images/project-logos/ecwikimedia.png', // T135521
 	'etwikimedia' => '/static/images/project-logos/etwikimedia.png',
 	'fiwikimedia' => '/static/images/project-logos/fiwikimedia.png',
@@ -1447,6 +1447,7 @@ return [
 	'azwikimedia' => '/static/images/project-logos/azwikimedia-1.5x.png',
 	'brwikimedia' => '/static/images/project-logos/brwikimedia-1.5x.png', // T257925
 	'cawikimedia' => '/static/images/project-logos/cawikimedia-1.5x.png',
+	'dkwikimedia' => '/static/images/project-logos/dkwikimedia-1.5x.png', // T332784
 	'ecwikimedia' => '/static/images/project-logos/ecwikimedia-1.5x.png', // T135521
 	'gewikimedia' => '/static/images/project-logos/gewikimedia-1.5x.png', // T236389
 	'grwikimedia' => '/static/images/project-logos/grwikimedia-1.5x.png',
@@ -2053,6 +2054,7 @@ return [
 	'azwikimedia' => '/static/images/project-logos/azwikimedia-2x.png',
 	'brwikimedia' => '/static/images/project-logos/brwikimedia-2x.png', // T257925
 	'cawikimedia' => '/static/images/project-logos/cawikimedia-2x.png',
+	'dkwikimedia' => '/static/images/project-logos/dkwikimedia-2x.png', // T332784
 	'ecwikimedia' => '/static/images/project-logos/ecwikimedia-2x.png', // T135521
 	'gewikimedia' => '/static/images/project-logos/gewikimedia-2x.png', // T236389
 	'grwikimedia' => '/static/images/project-logos/grwikimedia-2x.png',

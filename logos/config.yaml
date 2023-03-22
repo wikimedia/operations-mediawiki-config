@@ -3306,8 +3306,10 @@ Wikivoyage:
         no_1_5x: true
         no_2x: true
     dkwikimedia:
-        no_1_5x: true
-        no_2x: true
+        commons: 'File:Wikimedia_Danmark_logo.svg'
+        comment: T332784
+        comment_1_5x: T332784
+        comment_2x: T332784
     ecwikimedia:
         comment: T135521
         comment_1_5x: T135521
