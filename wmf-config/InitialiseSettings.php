@@ -13373,4 +13373,8 @@ return [
 	],
 ],
 
+'wgOATHAuthMultipleDevicesMigrationStage' => [
+	'default' => SCHEMA_COMPAT_OLD,
+],
+
 ];
