@@ -2083,6 +2083,8 @@ return [
 		135 => '2022_talk', // T295267
 		136 => '2023', // T316928
 		137 => '2023_talk', // T316928
+		138 => '2024', // T332782
+		139 => '2024_talk', // T332782
 	],
 	# @}
 
@@ -4775,8 +4777,8 @@ return [
 	'+testwikidatawiki' => [ 120 => 1 ], // Search properties by default
 	'+wikidatawiki' => [ 120 => 1 ], // Search properties by default
 	'+wikimaniawiki' => [
-		134 => 1, // 2022, T295267
 		136 => 1, // 2023, T316928
+		138 => 1, // 2024, T332782
 	],
 	'+zhwikisource' => [
 		100 => 1, // T308393, Portal
