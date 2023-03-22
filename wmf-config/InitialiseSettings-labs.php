@@ -2489,5 +2489,8 @@ function wmfGetOverrideSettings() {
 			'wikivoyage' => true, // T322325
 		],
 
+		'wgOATHAuthMultipleDevicesMigrationStage' => [
+			'default' => SCHEMA_COMPAT_READ_OLD | SCHEMA_COMPAT_WRITE_BOTH,
+		],
 	];
 } # wmfGetOverrideSettings()
