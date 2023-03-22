@@ -11688,6 +11688,8 @@ return [
 ],
 'wgReadingListsWebAuthenticatedPreviews' => [
 	'default' => false,
+	'mediawikiwiki' => true,
+	'metawiki' => true,
 ],
 // T183665
 'wgMinervaAlwaysShowLanguageButton' => [
