@@ -12262,9 +12262,9 @@ return [
 	'dawiki' => true,
 	'dewiki' => true,
 	'dinwiki' => true,
-	'diqwiki' => true,
+	'diqwiki' => false, // T304551
 	'dsbwiki' => true,
-	'dvwiki' => true,
+	'dvwiki' => false, // T304551
 	'eewiki' => true,
 	'emlwiki' => true,
 	'elwiki' => true,
