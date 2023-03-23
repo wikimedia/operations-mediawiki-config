@@ -5986,6 +5986,9 @@ return [
 		'Portal' => true, // T58000
 		'Viquiprojecte' => true, // T58000
 	],
+	'+ckbwiki' => [
+		'ڕەشنووس' => true, // Draft - T332470
+	],
 	'+cswiki' => [
 		'Project' => true, // T136628
 	],

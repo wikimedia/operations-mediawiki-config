@@ -305,6 +305,8 @@ return [
 		'Wikiproject_talk' => 103, // T54665
 		'Portal' => 100, // T71594
 		'Portal_talk' => 101, // T71594
+		'Draft' => 118, // T332470
+		'Draft_talk' => 119, // T332470
 	],
 	'+commonswiki' => [
 		'Museum' => 106,
@@ -2359,6 +2361,8 @@ return [
 		101 => 'لێدوانی_دەروازە',
 		102 => 'ویکیپرۆژە', // T54665
 		103 => 'لێدوانی_ویکیپرۆژە', // T54665
+		118 => 'ڕەشنووس', // T332470
+		119 => 'لێدوانی_ڕەشنووس', // T332470
 	],
 	'cswiki' => [
 		NS_USER => 'Wikipedista', # language default set back in wgNamespaceAliases
@@ -4360,7 +4364,9 @@ return [
 		101 => 'noindex,follow', // portal talk
 		103 => 'noindex,follow', // wikiproject talk
 		829 => 'noindex,follow', // module talk
-	], // T73663
+		118 => 'noindex,nofollow', // draft
+		119 => 'noindex,nofollow', // draft talk
+	], // T73663, T332470
 	'cswiki' => [
 		NS_USER => 'noindex,follow', // T125068
 		NS_USER_TALK => 'noindex,follow',
@@ -4916,6 +4922,7 @@ return [
 	'default' => [],
 	'azwiki' => [ 118, 119 ], // draft and draft talk - T299332
 	'bgwiki' => [ 118, 119 ], // draft and draft talk - T299224
+	'ckbwiki' => [ 118, 119 ], // draft and draft talk - T332470
 	'enwiki' => [ 118, 119 ], // draft and draft talk
 	'fawiki' => [ 118, 119 ], // draft and draft talk - T299850
 	'hewiki' => [ 118, 119 ], // draft and draft talk - T86329
