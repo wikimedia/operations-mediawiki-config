@@ -6902,6 +6902,7 @@ return [
 	'bnwikibooks' => true, // T319317
 	'bnwiktionary' => true, // T328630
 	'kowiki' => true, // T172630
+	'ptwikinews' => true, // T332813
 	// WikidataPageBanner extensions must enable for Minerva support.
 	// (T254391)
 	'testwiki' => true,
