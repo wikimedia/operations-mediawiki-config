@@ -12469,7 +12469,7 @@ return [
 'wgGEMentorshipNewAccountEnablePercentage' => [
 	'default' => 100,
 	'enwiki' => 10, // T290927
-	'eswiki' => 35, // T285235
+	'eswiki' => 50, // T285235
 ],
 
 'wgGEHomepageDefaultVariant' => [
