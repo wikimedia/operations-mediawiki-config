@@ -33,6 +33,10 @@ $common = [
 	// Set to null to disable XHGui.
 	'xhgui-pdo' => 'mysql:host=m2-master.eqiad.wmnet;dbname=xhgui',
 
+	// https://wikitech.wikimedia.org/wiki/WikimediaDebug#Request_profiling
+	'excimer-ui-url' => 'https://performance.wikimedia.org/excimer/',
+	'excimer-ui-server' => 'https://performance.discovery.wmnet/excimer/',
+
 	// ArcLamp (formerly known as Xenon) is the sampling profiler
 	// pipeline.  Frames from the Excimer extension will be sent to
 	// Redis on this host.

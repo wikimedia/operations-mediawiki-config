@@ -13,8 +13,10 @@ use ExcimerProfiler;
 use PDO;
 use Redis;
 use ReflectionException;
+use Wikimedia\ExcimerUI\Client\ExcimerClient;
 
 require_once __DIR__ . '/XWikimediaDebug.php';
+require_once __DIR__ . '/../lib/ExcimerClient.php';
 
 class Profiler {
 	/**
@@ -28,6 +30,8 @@ class Profiler {
 	 *     - pdo.connect: connection string for PDO (e.g. `mysql:host=mydbhost;dbname=xhgui`)
 	 *     - pdo.table: table name within the xhgui database where the profiles are stored.
 	 *   - statsd: [optional] The host address for StatsD messages
+	 *   - excimer-ui-url (string|null): The url for Wikimedia\ExcimerUI\Client\ExcimerClient
+	 *   - excimer-ui-server (string|null): The ingestionUrl for Wikimedia\ExcimerUI\Client\ExcimerClient
 	 */
 	public static function setup( array $options ): void {
 		global $wmgProfiler;
@@ -43,6 +47,9 @@ class Profiler {
 		if ( PHP_SAPI !== 'cli' && extension_loaded( 'excimer' ) ) {
 			// Used for unconditional sampling of production web requests.
 			self::excimerSetup( $options );
+
+			// Used for WikimediaDebug flamegraphs
+			self::excimerDebugSetup( $options );
 		}
 	}
 
@@ -251,7 +258,37 @@ class Profiler {
 	}
 
 	/**
-	 * Production callback for recording profiling data in arclamp
+	 * Set up Excimer for debug profiles
+	 *
+	 * @param array $options
+	 * - excimer-ui-client (array|null) See Wikimedia\ExcimerUI\Client\ExcimerClient::setup
+	 */
+	private static function excimerDebugSetup( $options ) {
+		$xwd = XWikimediaDebug::getInstance();
+		if ( $xwd->hasOption( 'excimer' ) && $options['excimer-ui-server'] ) {
+			$client = ExcimerClient::setup( [
+				'url' => $options['excimer-ui-url'],
+				'ingestionUrl' => $options['excimer-ui-server'],
+				'activate' => 'always',
+				'errorCallback' => static function ( $msg ) {
+					trigger_error( $msg, E_USER_WARNING );
+				}
+			] );
+
+			// Emitting a header this early is not universally safe, but should be fine
+			// for debugging requests. Ideally we'd use the PHP built-in
+			// header_register_callback(), except MediaWiki uses that already (discards ours),
+			// or leverage MediaWiki' DeferredUpdate to schedule a PRESEND callback, except
+			// Profiler.php runs before that is available.
+			// We could use $wgHooks['SetupAfterCache'] in CommonSettings.php and call DeferredUpdate
+			// from there, if this causes a problem.
+			$publicLink = $client->getUrl();
+			header( 'excimer-ui-link: ' . $publicLink );
+		}
+	}
+
+	/**
+	 * Production callback for sending Excimer samples to Arc Lamp
 	 *
 	 * This is called every time Excimer collects a stack trace
 	 *

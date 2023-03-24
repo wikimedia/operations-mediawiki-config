@@ -44,4 +44,6 @@ Wikimedia\MWConfig\Profiler::setup( [
 		]
 		: null,
 	'statsd' => $wmgServiceConfig->getLocalService( 'statsd' ),
+	'excimer-ui-url' => $wmgServiceConfig->getLocalService( 'excimer-ui-url' ),
+	'excimer-ui-server' => $wmgServiceConfig->getLocalService( 'excimer-ui-server' ),
 ] );
