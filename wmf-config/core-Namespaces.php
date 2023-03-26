@@ -711,6 +711,8 @@ return [
 	],
 	'+huwiki' => [
 		'Portál_vita' => 101,
+		'Draft' => 118, // T333083
+		'Draft_talk' => 119, // T333083
 	],
 	'+huwikinews' => [
 		'Wikihírek_vita' => NS_PROJECT_TALK,
@@ -1891,7 +1893,7 @@ return [
 	'+eswiki' => [ 8 => 0 ],
 	'+frwiki' => [ 8 => 0 ],
 	'+guwiki' => [ 8 => 0, 14 => 1 ],
-	'+huwiki' => [ 8 => 0, 14 => 1 ],
+	'+huwiki' => [ 8 => 0, 14 => 1, 118 => 0 ], // 118 added per T333083
 	'+idwiki' => [ 8 => 0 ],
 	'+itwiki' => [ 8 => 0, 14 => 0 ],
 	'+kkwiki' => [ 8 => 0, 12 => 0 ],
@@ -2508,6 +2510,8 @@ return [
 	'huwiki' => [
 		100 => 'Portál',
 		101 => 'Portálvita',
+		118 => 'Cikkjelölt', // T333083
+		119 => 'Cikkjelöltvita', // T333083
 	],
 	'hywiki' => [
 		100 => 'Պորտալ',
@@ -4452,6 +4456,10 @@ return [
 		118 => 'noindex,nofollow', // draft, T284384
 		119 => 'noindex,nofollow', // draft talk, T284384
 	],
+	'huwiki' => [
+		118 => 'noindex,nofollow', // draft, T333083
+		119 => 'noindex,nofollow', // draft talk, T333083
+	],
 	'hywiki' => [
 		NS_USER => 'noindex,follow', // T257112
 		NS_USER_TALK => 'noindex,follow', // T257112
@@ -4926,6 +4934,7 @@ return [
 	'enwiki' => [ 118, 119 ], // draft and draft talk
 	'fawiki' => [ 118, 119 ], // draft and draft talk - T299850
 	'hewiki' => [ 118, 119 ], // draft and draft talk - T86329
+	'huwiki' => [ 118, 119 ], // draft and draft talk - T333083
 	'itwiki' => [ 2, 3, 118, 119 ], // user and user talk - T314165, draft and draft talk - T280289
 	'kowiki' => [ 118, 119 ], // draft and draft talk - T92798
 	'tawiki' => [ 118, 119 ], // draft and draft talk - T329248

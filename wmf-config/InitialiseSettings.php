@@ -6021,6 +6021,9 @@ return [
 	'+htwiki' => [
 		'Project' => true, // T130177
 	],
+	'+huwiki' => [
+		'Cikkjelölt' => true, // Draft - T333083
+	],
 	'+hywiki' => [
 		'Սևագիր' => true, // Draft, T260825
 		'Վիքինախագիծ' => true, // Wikiproject, T260825
