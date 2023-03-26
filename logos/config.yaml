@@ -472,6 +472,7 @@ Wikipedia:
         comment_2x: T150618
         commons_tagline: 'File:Wikipedia-tagline-es.svg'
         comment_tagline: T258552
+		local_wordmark: true
     etwiki:
         comment_1_5x: T150618
         comment_2x: T150618
