@@ -61,6 +61,7 @@ class MWMultiVersion {
 		'wikitech',
 		'nonecho',
 		'mobile-anon-talk',
+		'modern-mainpage',
 		'nowikidatadescriptiontaglines',
 		'cirrussearch-big-indices',
 	];

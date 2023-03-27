@@ -2363,28 +2363,11 @@ return [
 		'logged_out' => false,
 	],
 	// T290480
-	'euwiki' => [
+	// T325362
+	'modern-mainpage' => [
 		'logged_in' => true,
 		'logged_out' => true,
 	],
-	// START: T325362
-	'frwiki' => [
-		'logged_in' => true,
-		'logged_out' => true,
-	],
-	'gomwiki' => [
-		'logged_in' => true,
-		'logged_out' => true,
-	],
-	'gomwiktionary' => [
-		'logged_in' => true,
-		'logged_out' => true,
-	],
-	'avkwiki' => [
-		'logged_in' => true,
-		'logged_out' => true,
-	],
-	// END: T325362
 ],
 'wgVectorWvuiSearchOptions' => [
 	'default' => [
