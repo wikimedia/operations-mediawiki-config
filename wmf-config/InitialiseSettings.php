@@ -6013,7 +6013,6 @@ return [
 	],
 	'+itwiki' => [
 		'Bozza' => true, // Draft - T280289
-		'Discussioni_bozza' => true // Draft talk - T280289
 	],
 	'+jawiki' => [
 		'Portal' => true, // T97313
