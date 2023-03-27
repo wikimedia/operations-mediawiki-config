@@ -105,8 +105,8 @@ class WmfConfigServicesTest extends PHPUnit\Framework\TestCase {
 				'expected_realm' => 'production',
 				'expected_dc' => 'eqiad',
 				'expected_dcs' => [ "eqiad", "codfw" ],
-				// graphite1005.eqiad.wmnet
-				'expected_statsd' => "10.64.16.81",
+				// graphite2004.codfw.wmnet
+				'expected_statsd' => "10.192.16.37",
 			],
 			'labs' => [
 				'expected_realm' => 'labs',
