@@ -5475,7 +5475,6 @@ return [
 		'popupsreferencepreviews',           // [WMDE TW] 2019-10-04 – Reference Previews
 		'cx',                                // [LangEng] 2019-11-07 - ContentTranslation
 		'twocolconflict',                    // [WMDE TW] 2019-10-30 – New edit conflict view
-		'visualeditor-visualdiffpage',       // [Editing] 2019-11-06 – Visual diffs
 		'discussiontools-betaenable',        // [Editing] 2020-09-12 – Reply tool
 		'ipinfo-beta-feature-enable',        // [AHT] 2022-10-01 – IP Info
 		'wikistories-storiesonarticles',     // [Inuka] 2022-12-30 - Wikistories on articles
@@ -5938,11 +5937,6 @@ return [
 	'default' => 'mobile',
 	'wikitech' => true,
 	'officewiki' => true,
-],
-
-// Enable VE-based visual diffs on history pages (T314588)
-'wgVisualEditorEnableDiffPage' => [
-	'default' => true,
 ],
 
 // Namespaces for VisualEditor to be active in, in addition to wgContentNamespaces
