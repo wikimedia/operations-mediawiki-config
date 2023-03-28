@@ -339,6 +339,7 @@ return [
 	'cawikiquote' => 'Europe/Berlin',
 	'cawikisource' => 'Europe/Berlin',
 	'cawikinews' => 'Europe/Berlin',
+	'ckbwiktionary' => 'Asia/Baghdad',
 	'cnwikimedia' => 'Asia/Shanghai', // T98676
 	'cswiki' => 'Europe/Prague', // T73902
 	'cswikinews' => 'Europe/Prague', // T73902
@@ -1151,6 +1152,7 @@ return [
 	'chapcomwiki' => 'Affcom',
 	'checkuserwiki' => 'CheckUser Wiki',
 	'chywiki' => 'Tsétsêhéstâhese Wikipedia',
+	'ckbwiktionary' => 'ویکیفەرھەنگ',
 	'cnwikimedia' => '中国维基媒体用户组', // T98676
 	'collabwiki' => 'Collab',
 	'commonswiki' => 'Wikimedia Commons',

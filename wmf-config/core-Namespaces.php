@@ -5052,6 +5052,7 @@ return [
 	'chapcomwiki' => 'Affcom', // T41482
 	'checkuserwiki' => 'Project', // T30781
 	'ckbwiki' => 'ویکیپیدیا',
+	'ckbwiktionary' => 'ویکیفەرھەنگ',
 	'collabwiki' => 'Project',
 	'commonswiki' => 'Commons',
 	'testcommonswiki' => 'Commons',
