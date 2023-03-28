@@ -5933,12 +5933,9 @@ return [
 	'officewiki' => true,
 ],
 
-// Enable VE-based visual diffs on history pages
+// Enable VE-based visual diffs on history pages (T314588)
 'wgVisualEditorEnableDiffPage' => [
 	'default' => true,
-	// Everywhere except Wikipedias and Wiktionaries (T314588)
-	'wikipedia' => false,
-	'wiktionary' => false,
 ],
 
 // Namespaces for VisualEditor to be active in, in addition to wgContentNamespaces
