@@ -6213,6 +6213,13 @@ return [
 	'default' => [ 'external-machine-translation' ],
 ],
 
+// https://www.mediawiki.org/wiki/Edit_check
+// Enable hidden tag for evaluating heuristics (T324733)
+'wgVisualEditorEditCheckTagging' => [
+	'default' => false,
+	'wikipedia' => true,
+],
+
 // --------------- VisualEditor end ---------------
 
 'wgCiteResponsiveReferences' => [
