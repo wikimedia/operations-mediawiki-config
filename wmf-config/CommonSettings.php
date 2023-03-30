@@ -376,7 +376,9 @@ $wgAPIMaxLagThreshold = 3;
 # Allow different memory_limit settings for Parsoid/PHP servers (T236833)
 # keep in sync with php7-fatal-error.php in operations/puppet
 # and with wmf-config/logging.php
-if ( $wmgServerGroup === 'parsoid' ) {
+# Use the same memory limit for jobrunner servers to handle WarmParsoidParserCache
+# T333528
+if ( $wmgServerGroup === 'parsoid' || $wmgServerGroup === 'jobrunner' ) {
 	ini_set( 'memory_limit', $wmgMemoryLimitParsoid );
 } else {
 	ini_set( 'memory_limit', $wmgMemoryLimit );
