@@ -7660,7 +7660,8 @@ return [
 ],
 
 'wgDiscussionTools_visualenhancements_newsectionlink_enable' => [
-	'default' => false
+	'default' => false,
+	'huwiki' => true, // T333570
 ],
 
 'wgDiscussionToolsEnablePermalinksBackend' => [
