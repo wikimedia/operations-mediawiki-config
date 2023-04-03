@@ -101,7 +101,8 @@ class MWConfigCacheGenerator {
 			( require $configDir . '/ext-CirrusSearch.php' ) +
 			( require $configDir . '/ext-Babel.php' ) +
 			( require $configDir . '/ext-EventLogging.php' ) +
-			( require $configDir . '/ext-EventStreamConfig.php' );
+			( require $configDir . '/ext-EventStreamConfig.php' ) +
+			( require $configDir . '/skin-Minerva.php' );
 
 		if ( $realm !== 'production' ) {
 			// Override for Beta Cluster and other realms.
