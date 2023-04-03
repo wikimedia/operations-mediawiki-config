@@ -7746,7 +7746,6 @@ return [
 	"abwiki" => true,
 	"acewiki" => true,
 	"adywiki" => true,
-	"akwiki" => true,
 	"alswiki" => true,
 	"angwiki" => true,
 	"anwiki" => true,
