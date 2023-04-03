@@ -13,12 +13,74 @@ return [
 	'wgMinervaPageIssuesNewTreatment' => [
 		'default' => [
 			"base" => true,
-			"beta" => true,
 		],
 	],
 
 	'wgMinervaDonateLink' => [
 		'default' => [
+			'base' => true,
+		],
+	],
+
+	'wgMinervaHistoryInPageActions' => [
+		'default' => [
+			'base' => false,
+			'loggedin' => true,
+		],
+		// T290812
+		'ptwikinews' => [
+			'base' => true,
+		],
+	],
+
+	'wgMinervaAdvancedMainMenu' => [
+		'default' => [
+			'base' => false,
+			'beta' => false,
+			'loggedin' => false,
+			'amc' => true,
+		],
+		// T290812
+		'ptwikinews' => [
+			'base' => true,
+		],
+	],
+
+	'wgMinervaPersonalMenu' => [
+		'default' => [
+			'base' => false,
+			'beta' => false,
+			'loggedin' => false,
+			'amc' => true,
+		],
+		// T290812
+		'ptwikinews' => [
+			'base' => true,
+		],
+	],
+
+	'wgMinervaOverflowInPageActions' => [
+		'default' => [
+			'base' => false,
+			'beta' => false,
+			'loggedin' => true,
+			'amc' => true,
+		],
+		// T290812
+		'ptwikinews' => [
+			'base' => true,
+		],
+	],
+
+	'wgMinervaShowCategories' => [
+		'default' => [
+			'base' => false,
+			'beta' => false,
+			'loggedin' => false,
+			'amc' => true,
+		],
+		// T290812
+		'ptwikinews' => [
 			'base' => true,
 		],
 	],
@@ -34,6 +96,10 @@ return [
 			'base' => true,
 			'beta' => true,
 			'loggedin' => true,
+		],
+		// T290812
+		'ptwikinews' => [
+			'base' => true,
 		],
 	],
 

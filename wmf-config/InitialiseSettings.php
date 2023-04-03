@@ -6875,6 +6875,22 @@ return [
 		'beta' => false,
 		'amc' => true,
 	],
+	// T290812
+	'ptwikinews' => [
+		'base' => true,
+	],
+],
+
+'wgMFUseDesktopSpecialWatchlistPage' => [
+	'default' => [
+		'base' => false,
+		'beta' => false,
+		'amc' => true,
+	],
+	// T290812
+	'ptwikinews' => [
+		'base' => true,
+	],
 ],
 
 'wgMFDisplayWikibaseDescriptions' => [
