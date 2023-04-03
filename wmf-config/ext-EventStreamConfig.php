@@ -939,6 +939,18 @@ return [
 						'performer_pageview_id',
 						'performer_edit_count',
 					],
+
+					'curation' => [
+
+						// Ignore events from the PHP Metrics Platform
+						// Client until it has been tested on the Beta
+						// Cluster.
+						//
+						// See https://phabricator.wikimedia.org/T309985
+						'agent_client_platform' => [
+							'not_equals' => 'mediawiki_php',
+						],
+					],
 				],
 			],
 			'sample' => [
