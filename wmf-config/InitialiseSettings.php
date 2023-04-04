@@ -6730,12 +6730,6 @@ return [
 'wgMFNoindexPages' => [
 	'default' => true, // T255458
 ],
-// Which editor to use as the default on MobileFrontend
-// 'source', 'visual', 'preference' (to use the desktop editor preference), or false
-// to allow the extension's default
-'wmgMFDefaultEditor' => [
-	'default' => false,
-],
 // Whether to oversample EditAttemptStep logging on MobileFrontend
 // 'visualeditor' or 'all'
 'wgMFSchemaEditAttemptStepOversample' => [

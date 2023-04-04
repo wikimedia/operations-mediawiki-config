@@ -2835,10 +2835,6 @@ $wgMFEnableJSConsoleRecruitment = true;
 // Brute-force bandwidth optimization by stripping srcset (T119797)
 $wgMFStripResponsiveImages = true;
 
-if ( $wmgMFDefaultEditor ) {
-	$wgMFDefaultEditor = $wmgMFDefaultEditor;
-}
-
 $wgMFUseWikibase = true;
 
 # MUST be after MobileFrontend initialization
