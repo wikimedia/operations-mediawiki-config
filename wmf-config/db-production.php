@@ -296,6 +296,6 @@ $wgLBFactoryConf = [
 ];
 
 $wgDefaultExternalStore = [
-	'DB://cluster26',
+	# 'DB://cluster26',  # depooled for writes T333961
 	'DB://cluster27',
 ];
