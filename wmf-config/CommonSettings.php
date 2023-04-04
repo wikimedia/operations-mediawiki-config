@@ -2808,7 +2808,7 @@ $wgMFMobileHeader = 'X-Subdomain';
 $wgMFNearby = $wmgEnableGeoData;
 
 $wgHooks['EnterMobileMode'][] = static function () {
-	global $wgCentralAuthCookieDomain, $wgHooks, $wgIncludeLegacyJavaScript;
+	global $wgCentralAuthCookieDomain, $wgIncludeLegacyJavaScript;
 
 	// Disable loading of legacy wikibits in the mobile web experience
 	$wgIncludeLegacyJavaScript = false;
@@ -2821,7 +2821,8 @@ $wgHooks['EnterMobileMode'][] = static function () {
 	}
 
 	// Better hack for T49647
-	$wgHooks['WebResponseSetCookie'][] = static function ( &$name, &$value, &$expire, &$options ) {
+	$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
+	$hookContainer->register( 'WebResponseSetCookie', static function ( &$name, &$value, &$expire, &$options ) {
 		if ( isset( $options['domain'] ) ) {
 			if ( $options['domain'] == 'commons.wikimedia.org' ) {
 				$options['domain'] = 'commons.m.wikimedia.org';
@@ -2829,7 +2830,7 @@ $wgHooks['EnterMobileMode'][] = static function () {
 				$options['domain'] = 'meta.m.wikimedia.org';
 			}
 		}
-	};
+	} );
 
 	return true;
 };
