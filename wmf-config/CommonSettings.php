@@ -2691,7 +2691,6 @@ if ( $wmgUseVisualEditor ) {
 	// Tab configuration
 	if ( $wmgVisualEditorUseSingleEditTab ) {
 		$wgVisualEditorUseSingleEditTab = true;
-		$wgVisualEditorSingleEditTabSwitchTime = $wmgVisualEditorSingleEditTabSwitchTime;
 	}
 	if ( $wmgVisualEditorIsSecondaryEditor ) {
 		if ( !$wmgVisualEditorUseSingleEditTab ) {
@@ -2706,13 +2705,8 @@ if ( $wmgUseVisualEditor ) {
 		$wgDefaultUserOptions['visualeditor-newwikitext'] = true;
 	}
 
-	if ( $wmgVisualEditorEnableVisualSectionEditing ) {
-		$wgVisualEditorEnableVisualSectionEditing = $wmgVisualEditorEnableVisualSectionEditing;
-	}
-
-	// Namespace configuration
-	$wgVisualEditorAvailableNamespaces = $wmgVisualEditorAvailableNamespaces;
 	if ( !isset( $wgVisualEditorAvailableNamespaces ) ) {
+		// TODO: This is probably not needed?
 		$wgVisualEditorAvailableNamespaces = []; // Set null to be an empty array to avoid fatals
 	}
 
@@ -2722,16 +2716,6 @@ if ( $wmgUseVisualEditor ) {
 	} else {
 		$wgDefaultUserOptions['visualeditor-enable'] = 0;
 		$wgVisualEditorEnableBetaFeature = true;
-	}
-	if ( $wmgVisualEditorTransitionDefault ) {
-		$wgVisualEditorTransitionDefault = true;
-	}
-	if ( $wmgVisualEditorAllowExternalLinkPaste ) {
-		$wgVisualEditorAllowExternalLinkPaste = true;
-	}
-	// T52000 - to remove once roll-out is complete.
-	if ( $wmgVisualEditorDisableForAnons ) {
-		$wgVisualEditorDisableForAnons = true;
 	}
 
 	// Feedback configuration
@@ -2744,11 +2728,6 @@ if ( $wmgUseVisualEditor ) {
 	// Citoid
 	wfLoadExtension( 'Citoid' );
 	$wgCitoidFullRestbaseURL = "/api/rest_";
-
-	// Move the citation button from the primary toolbar into the "other" group
-	if ( $wmgCiteVisualEditorOtherGroup ) {
-		$wgCiteVisualEditorOtherGroup = true;
-	}
 
 	// Enable the wikitext mode Beta Feature for opt-in
 	$wgVisualEditorEnableWikitextBetaFeature = true;

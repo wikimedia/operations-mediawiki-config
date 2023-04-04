@@ -5832,7 +5832,7 @@ return [
 
 // Time that above variable was switched on, used to determine whether we should prompt user about
 // preference on first load
-'wmgVisualEditorSingleEditTabSwitchTime' => [
+'wgVisualEditorSingleEditTabSwitchTime' => [
 	'default' => 20160101000000,
 	'mediawikiwiki' => 20160203000000,
 	'testwiki' => 20160203000000,
@@ -5911,14 +5911,14 @@ return [
 ],
 
 // Whether to enable true section editing. false, true or 'mobile'
-'wmgVisualEditorEnableVisualSectionEditing' => [
+'wgVisualEditorEnableVisualSectionEditing' => [
 	'default' => 'mobile',
 	'wikitech' => true,
 	'officewiki' => true,
 ],
 
 // Namespaces for VisualEditor to be active in, in addition to wgContentNamespaces
-'wmgVisualEditorAvailableNamespaces' => [
+'wgVisualEditorAvailableNamespaces' => [
 	'default' => [
 		'User' => true,
 		'File' => true,
@@ -6137,7 +6137,7 @@ return [
 // This is a temporary variable for roll-out, to be removed once complete.
 // If a wiki was previously enabled by default for all users but then disabled,
 // this will need to be set true for 30 days (anon cache epoch).
-'wmgVisualEditorDisableForAnons' => [
+'wgVisualEditorDisableForAnons' => [
 	'default' => false,
 
 	'enwiki' => true,
@@ -6148,13 +6148,13 @@ return [
 // Whether VisualEditor should pay attention to the -autodisable user preference
 // to augment the -betatempdisable one (for wikis transitioning from opt-in to
 // opt-out).
-'wmgVisualEditorTransitionDefault' => [
+'wgVisualEditorTransitionDefault' => [
 	'default' => false,
 	'dewiki' => true,
 	'enwiki' => true,
 ],
 
-'wmgVisualEditorAllowExternalLinkPaste' => [
+'wgVisualEditorAllowExternalLinkPaste' => [
 	'default' => false,
 	'mediawikiwiki' => true, // T129546#8109242
 	'metawiki' => true, // T129546#8109242
@@ -6178,7 +6178,7 @@ return [
 ],
 
 // Should the citation button be moved from the primary toolbar into the "other" group
-'wmgCiteVisualEditorOtherGroup' => [
+'wgCiteVisualEditorOtherGroup' => [
 	'default' => true,
 	'enwiktionary' => false, // T267504
 	'wikipedia' => false,
