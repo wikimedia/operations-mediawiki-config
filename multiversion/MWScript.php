@@ -63,8 +63,9 @@ EOT
 
 	// the script file to run
 	$relFile = $argv[1];
-	# If no MW directory is given then assume this is a /maintenance script
-	if ( strpos( $relFile, '/' ) === false ) {
+	// If no MW directory is given then assume this is a /maintenance script
+	// run.php allows running maint scripts like Myextension:Foo
+	if ( strpos( $relFile, '/' ) === false && strpos( $relFile, ':' ) === false ) {
 		// convenience
 		$relFile = "maintenance/$relFile";
 	}
@@ -94,6 +95,21 @@ EOT
 		'maintenance/mcc.php',
 	];
 
+	// maint scripts using CommandLineInc and thus can't use run.php
+	// mergeMessageFileList uses the new way but it's quite unusual as
+	// it does a lot after class so it has to use the old way.
+	$oldScripts = [
+		'maintenance/mergeMessageFileList.php',
+		'maintenance/storage/checkStorage.php',
+		'maintenance/storage/recompressTracked.php',
+		'maintenance/storage/testCompression.php',
+		'maintenance/storage/trackBlobs.php',
+		'extensions/WikimediaMaintenance/listDatabases.php',
+		'extensions/WikimediaMaintenance/sanityCheck.php',
+		'extensions/WikimediaMaintenance/storage/testRctComplete.php',
+		'extensions/CentralAuth/maintenance/migrateStewards.php',
+	];
+
 	# Check if a --wiki param was given...
 	# Maintenance.php will treat $argv[1] as the wiki if it doesn't start '-'
 	if ( !isset( $argv[1] ) || !preg_match( '/^([^-]|--wiki(=|$))/', $argv[1] ) ) {
@@ -102,10 +118,16 @@ EOT
 			$argv = array_merge( [ $argv[0], "--wiki=aawiki" ], array_slice( $argv, 1 ) );
 		}
 	}
+	if ( in_array( $relFile, $oldScripts ) ) {
+		$runPath = $relFile;
+	} else {
+		$runPath = 'maintenance/run.php';
+		array_unshift( $argv, $relFile );
+	}
 
 	# MWScript.php should be in common/
 	require_once __DIR__ . '/MWMultiVersion.php';
-	$file = MWMultiVersion::getMediaWikiCli( $relFile );
+	$file = MWMultiVersion::getMediaWikiCli( $runPath, in_array( $relFile, $oldScripts ) );
 	if ( !file_exists( $file ) ) {
 		fwrite( STDERR, "The MediaWiki script file \"{$file}\" does not exist.\n" );
 		exit( 1 );
