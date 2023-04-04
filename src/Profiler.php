@@ -40,12 +40,10 @@ class Profiler {
 			self::tidewaysSetup( $options );
 		}
 
-		/* --- disable for T330165
 		if ( PHP_SAPI !== 'cli' && extension_loaded( 'excimer' ) ) {
 			// Used for unconditional sampling of production web requests.
 			self::excimerSetup( $options );
 		}
-		*/
 	}
 
 	/**
