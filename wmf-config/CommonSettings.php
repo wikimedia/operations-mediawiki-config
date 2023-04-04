@@ -2705,11 +2705,6 @@ if ( $wmgUseVisualEditor ) {
 		$wgDefaultUserOptions['visualeditor-newwikitext'] = true;
 	}
 
-	if ( !isset( $wgVisualEditorAvailableNamespaces ) ) {
-		// TODO: This is probably not needed?
-		$wgVisualEditorAvailableNamespaces = []; // Set null to be an empty array to avoid fatals
-	}
-
 	// User access configuration
 	if ( $wmgVisualEditorDefault ) {
 		$wgDefaultUserOptions['visualeditor-enable'] = 1;
