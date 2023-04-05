@@ -1369,6 +1369,9 @@ function wmfGetOverrideSettings() {
 		'wgReadingListsWebAuthenticatedPreviews' => [
 			'default' => true,
 		],
+		'wgReadingListsAnonymizedPreviews' => [
+			'default' => false,
+		],
 
 		'-wgPageCreationLog' => [
 			'default' => true, // T196400
