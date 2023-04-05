@@ -2739,10 +2739,10 @@ return [
 		'width' => 120,
 		'height' => 18,
 	],
-	'mgwiki' => [
+	'mgwiki' => [ // T334022
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-mg.svg',
-		'width' => 120,
-		'height' => 26,
+		'width' => 119,
+		'height' => 18,
 	],
 	'mhrwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-mhr.svg',

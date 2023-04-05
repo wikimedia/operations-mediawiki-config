@@ -1029,8 +1029,9 @@ Wikipedia:
         comment: T48589
         comment_1_5x: T150618
         comment_2x: T150618
+        commons_wordmark: 'File:Wikipedia-wordmark-mg.svg'
+        comment_wordmark: T334022
         local_tagline: true
-        local_wordmark: true
     mhrwiki:
         comment: T48589
         comment_1_5x: T150618
