@@ -693,6 +693,10 @@ return [
 				'rate' => 0.1,
 			],
 		],
+		'app_session' => [
+			'schema_title' => 'analytics/mobile_apps/app_session',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		'ios.edit_history_compare' => [
 			'schema_title' => 'analytics/mobile_apps/ios_edit_history_compare',
 			'destination_event_service' => 'eventgate-analytics-external',
