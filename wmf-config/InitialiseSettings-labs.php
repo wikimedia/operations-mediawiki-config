@@ -515,6 +515,10 @@ function wmfGetOverrideSettings() {
 			'default' => 1, // T294738
 		],
 
+		'wgWMESchemaVisualEditorFeatureUseSamplingRate' => [
+			'default' => 1,
+		],
+
 		'wgMFAmcOutreach' => [
 			'default' => true
 		],
