@@ -7625,8 +7625,9 @@ return [
 ],
 
 'wgDiscussionToolsEnablePermalinksBackend' => [
-	'default' => true, // T315353
-	'enwiki' => false,
+	'default' => false,
+	'group0' => true, // T315353
+	'group1' => true,
 ],
 
 'wgDiscussionToolsShowFeedbackLinks' => [
