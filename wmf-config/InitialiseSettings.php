@@ -1121,6 +1121,7 @@ return [
 	'bgwiktionary' => 'Уикиречник',
 	'bhwiki' => 'विकिपीडिया',
 	'bjnwiki' => 'Wikipidia',
+	'blkwiki' => 'ဝီခီပီးဒီးယား', // T334351
 	'bnwiki' => 'উইকিপিডিয়া',
 	'bnwikibooks' => 'উইকিবই',
 	'bnwikiquote' => 'উইকিউক্তি',
