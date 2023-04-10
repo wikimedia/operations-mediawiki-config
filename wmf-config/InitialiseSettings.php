@@ -2294,13 +2294,6 @@ return [
 	'desktop-improvements' => '2',
 ],
 
-'wgVectorPageTools' => [
-	'default' => [
-		'logged_in' => true,
-		'logged_out' => true,
-	],
-],
-
 'wgVectorStickyHeader' => [
 	'default' => [
 		'logged_in' => true,

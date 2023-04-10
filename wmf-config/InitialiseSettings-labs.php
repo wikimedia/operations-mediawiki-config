@@ -571,12 +571,6 @@ function wmfGetOverrideSettings() {
 				'logged_out' => true,
 			],
 		],
-		'wgVectorPageTools' => [
-			'default' => [
-				'logged_in' => true,
-				'logged_out' => true,
-			],
-		],
 		'wgVectorWebABTestEnrollment' => [
 			'default' => [
 				'name' => 'vector.sticky_header_edit',
