@@ -78,6 +78,7 @@ $wgLBFactoryConf = [
 	'guwwiki'       => 's5',
 	'guwwiktionary' => 's5',
 	'guwwikiquote'  => 's5',
+	'guwwikinews'   => 's5',
 	'igwikiquote'   => 's5',
 	'igwiktionary'  => 's5',
 	'kbdwiktionary' => 's5',

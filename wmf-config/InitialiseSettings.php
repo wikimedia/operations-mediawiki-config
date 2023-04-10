@@ -401,6 +401,7 @@ return [
 	'guwwiki' => 'Africa/Lagos',
 	'guwwikiquote' => 'Africa/Lagos',
 	'guwwiktionary' => 'Africa/Lagos',
+	'guwwikinews' => 'Africa/Lagos',
 	'hewiki' => 'Asia/Tel_Aviv',
 	'hewikibooks' => 'Asia/Tel_Aviv',
 	'hewikiquote' => 'Asia/Tel_Aviv',
@@ -1261,6 +1262,7 @@ return [
 	'guwikiquote' => 'વિકિસૂક્તિ', // T121853
 	'guwikisource' => 'વિકિસ્રોત',
 	'guwiktionary' => 'વિકિકોશ', // T122407
+	'guwwikinews' => 'Wikilinlin', // T334394
 	'hewiki' => 'ויקיפדיה',
 	'hewikibooks' => 'ויקיספר',
 	'hewikinews' => 'ויקיחדשות',

@@ -5164,6 +5164,7 @@ return [
 	'guwiktionary' => 'વિકિકોશ', // T122407
 	'guwwikiquote' => 'Wikihoyidọ',
 	'guwwiktionary' => 'Wikiwezẹhomẹ',
+	'guwwikinews' => 'Wikilinlin',
 	'hewiki' => 'ויקיפדיה',
 	'hewikibooks' => 'ויקיספר',
 	'hewikinews' => 'ויקיחדשות',
@@ -5538,6 +5539,7 @@ return [
 	'grwikimedia' => 'Συζήτηση_Wikimedia', // T245911
 	'guwikiquote' => 'વિકિસૂક્તિની_ચર્ચા', // T121853
 	'guwikisource' => 'વિકિસ્રોત_ચર્ચા',
+	'guwwikinews' => 'Wikilinlin_hodidọ',
 	'hifwiktionary' => 'Sabdkosh_ke_baat', // T173643
 	'hiwikibooks' => 'विकिपुस्तक_वार्ता', // T254012
 	'hiwikimedia' => 'विकिमीडिया_वार्ता', // T188366
