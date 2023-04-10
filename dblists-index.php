@@ -184,7 +184,7 @@ return [
 'cuwiki' => [ 'wikipedia', 'desktop-improvements', 'small', 'wikidataclient', 'commonsuploads' ],
 'cvwiki' => [ 'wikipedia', 'desktop-improvements', 'medium', 'wikidataclient', 'commonsuploads', 'cirrussearch-big-indices' ],
 'cvwikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
-'cywiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'cirrussearch-big-indices' ],
+'cywiki' => [ 'wikipedia', 'desktop-improvements', 'medium', 'wikidataclient', 'cirrussearch-big-indices' ],
 'cywikibooks' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'cywikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],
 'cywikisource' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
