@@ -966,7 +966,7 @@ return [
 'wikimaniateamwiki' => [ 'special', 'private', 'small', 'group1', 'nowikidatadescriptiontaglines' ],
 'wikimaniawiki' => [ 'special', 'small', 'wikimania', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'wowiki' => [ 'wikipedia', 'desktop-improvements', 'small', 'wikidataclient', 'commonsuploads' ],
-'wowikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],
+'wowikiquote' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0' ],
 'wowiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'wuuwiki' => [ 'wikipedia', 'medium', 'wikidataclient', 'commonsuploads' ],
 'xalwiki' => [ 'wikipedia', 'desktop-improvements', 'medium', 'wikidataclient', 'commonsuploads' ],
