@@ -11268,15 +11268,15 @@ return [
 	'default' => true,
 ],
 
-'wgKartographerNearby' => [
-	'default' => false,
-	'cawiki' => true, // T316782
-	'dewiki' => true, // T316782
-	'hewiki' => true, // T316782
-	'ruwiki' => true, // T321548
-
-	'dewikivoyage' => true, // T320692
-	'enwikivoyage' => true, // T316782
+'wmgKartographerNearby' => [
+	'default' => true,
+	'eswikivoyage' => false, // T333821
+	'fiwikivoyage' => false, // T333821
+	'frwikivoyage' => false, // T333821
+	'hewikivoyage' => false, // T333821
+	'ruwikivoyage' => false, // T333821
+	'shnwikivoyage' => false, // T333821
+	'zhwikivoyage' => false, // T333821
 ],
 
 'wgKartographerWikivoyageNearby' => [
