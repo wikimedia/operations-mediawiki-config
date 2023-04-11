@@ -4026,6 +4026,10 @@ if ( $wmgUseCapiunto ) {
 if ( $wmgUseKartographer ) {
 	wfLoadExtension( 'Kartographer' );
 	$wgKartographerMapServer = 'https://maps.wikimedia.org';
+
+	if ( $wmgEnableGeoData && $wmgKartographerNearby ) {
+		$wgKartographerNearby = true;
+	}
 }
 
 if ( $wmgUsePageViewInfo ) {
