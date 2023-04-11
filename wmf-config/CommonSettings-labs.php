@@ -87,18 +87,20 @@ $wgLocalVirtualHosts = [
 
 // T49647
 $wgHooks['EnterMobileMode'][] = static function () {
-	global $wgCentralAuthCookieDomain, $wgHooks;
+	global $wgCentralAuthCookieDomain;
 	$domainRegexp = '/(?<!\.m)\.wikimedia\.beta\.wmflabs\.org$/';
 	$mobileDomain = '.m.wikimedia.beta.wmflabs.org';
 
 	if ( preg_match( $domainRegexp, $wgCentralAuthCookieDomain ) ) {
 		$wgCentralAuthCookieDomain = preg_replace( $domainRegexp, $mobileDomain, $wgCentralAuthCookieDomain );
 	}
-	$wgHooks['WebResponseSetCookie'][] = static function ( &$name, &$value, &$expire, &$options ) use ( $domainRegexp, $mobileDomain ) {
-		if ( isset( $options['domain'] ) && preg_match( $domainRegexp, $options['domain'] ) ) {
-			$options['domain'] = preg_replace( $domainRegexp, $mobileDomain, $options['domain'] );
-		}
-	};
+
+	$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
+	$hookContainer->register( 'WebResponseSetCookie', static function ( &$name, &$value, &$expire, &$options ) use ( $domainRegexp, $mobileDomain ) {
+			if ( isset( $options['domain'] ) && preg_match( $domainRegexp, $options['domain'] ) ) {
+				$options['domain'] = preg_replace( $domainRegexp, $mobileDomain, $options['domain'] );
+			}
+	} );
 };
 
 # Attempt to auto block users using faulty servers
