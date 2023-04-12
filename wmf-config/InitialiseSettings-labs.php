@@ -1588,6 +1588,9 @@ function wmfGetOverrideSettings() {
 		'-wgGEPersonalizedPraiseEnabled' => [
 			'default' => true,
 		],
+		'-wgGEPersonalizedPraiseNotificationsEnabled' => [
+			'default' => true,
+		],
 		'-wgGEPersonalizedPraiseBackendEnabled' => [
 			'default' => true,
 		],
