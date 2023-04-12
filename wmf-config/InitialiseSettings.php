@@ -12558,10 +12558,6 @@ return [
 	'cswiki' => 'beta',
 ],
 
-'wgGEPersonalizedPraiseEnabled' => [
-	'default' => false,
-],
-
 'wgGEPersonalizedPraiseNotificationsEnabled' => [
 	'default' => false,
 ],

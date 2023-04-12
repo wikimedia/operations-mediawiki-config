@@ -1590,9 +1590,6 @@ function wmfGetOverrideSettings() {
 		'-wgGEMentorDashboardDeploymentMode' => [
 			'default' => 'alpha',
 		],
-		'-wgGEPersonalizedPraiseEnabled' => [
-			'default' => true,
-		],
 		'-wgGEPersonalizedPraiseNotificationsEnabled' => [
 			'default' => true,
 		],
