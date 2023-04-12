@@ -1586,6 +1586,12 @@ function wmfGetOverrideSettings() {
 		'-wgGEMentorDashboardDeploymentMode' => [
 			'default' => 'alpha',
 		],
+		'-wgGEPersonalizedPraiseEnabled' => [
+			'default' => true,
+		],
+		'-wgGEPersonalizedPraiseBackendEnabled' => [
+			'default' => true,
+		],
 		'wgGENewcomerTasksRemoteApiUrl' => [
 			'enwiki' => null,
 			'arwiki' => null,
