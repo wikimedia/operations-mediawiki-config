@@ -636,7 +636,8 @@ return [
 			'createpagemainns' => false,
 			'move-categorypages' => false, // T219261
 		],
-		'founder' => [ 'userrights' => true ],
+		// The group exists as a courtesy, see T334692
+		'founder' => [ 'read' => true ],
 		'rollbacker' => [ 'rollback' => true ],
 		'abusefilter-helper' => [ 'spamblacklistlog' => true ], // T175684
 		'accountcreator' => [
