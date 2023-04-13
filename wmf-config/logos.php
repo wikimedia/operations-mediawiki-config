@@ -3471,6 +3471,11 @@ return [
 		'width' => 144,
 		'height' => 17,
 	],
+	'wikitech' => [ // T334666
+		'src' => '/static/images/mobile/copyright/wikitech-wordmark.svg',
+		'width' => 140,
+		'height' => 27,
+	],
 
 ],
 
@@ -5308,6 +5313,7 @@ return [
 	'wikimania2018wiki' => '/static/images/icons/wikimaniawiki.svg',
 	'wikimaniateamwiki' => '/static/images/icons/wikimaniawiki.svg',
 	'wikimaniawiki' => '/static/images/icons/wikimaniawiki.svg',
+	'wikitech' => '/static/images/icons/wikitech.svg', // T334666
 
 ],
 

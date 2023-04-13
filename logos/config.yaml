@@ -3771,3 +3771,7 @@ Wikivoyage:
         local_icon: true
     wikitech:
         commons: 'File:Wikitech-2021-logo-blue.svg'
+        commons_icon: 'File:Wikitech-logo-vector2022.svg'
+        comment_icon: T334666
+        commons_wordmark: 'File:Wikitech-wordmark.svg'
+        comment_wordmark: T334666
