@@ -725,7 +725,7 @@ return [
 'rowiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
 'rswikimedia' => [ 'fishbowl', 'small', 'visualeditor-nondefault', 'group1' ],
 'ruewiki' => [ 'wikipedia', 'desktop-improvements', 'medium', 'wikidataclient', 'commonsuploads' ],
-'ruwiki' => [ 'wikipedia', 'flaggedrevs', 'large', 'wikidataclient', 'commonsuploads', 'cirrussearch-big-indices' ],
+'ruwiki' => [ 'wikipedia', 'flaggedrevs', 'large', 'wikidataclient', 'commonsuploads', 'mobile-anon-talk', 'cirrussearch-big-indices' ],
 'ruwikibooks' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines' ],
 'ruwikimedia' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'group1' ],
 'ruwikinews' => [ 'flaggedrevs', 'large', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
