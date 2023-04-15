@@ -3966,6 +3966,7 @@ return [
 			'closer',
 			'filemover',
 			'suppressredirect',
+			'confirmed', // T334780
 		],
 		'bureaucrat' => [
 			'arbcom', // T51334
@@ -5159,8 +5160,19 @@ return [
 		'sysop' => [ 'rollbacker' ], // T264147
 	],
 	'+ruwiki' => [
-		'bureaucrat' => [ 'arbcom', 'engineer', 'sysop' ], // T51334, T144599
-		'sysop' => [ 'rollbacker', 'uploader', 'closer', 'filemover', 'suppressredirect' ],
+		'bureaucrat' => [ // T51334, T144599
+			'arbcom',
+			'engineer',
+			'sysop',
+		],
+		'sysop' => [
+			'rollbacker',
+			'uploader',
+			'closer',
+			'filemover',
+			'suppressredirect',
+			'confirmed', // T334780
+		],
 	],
 	'+ruwikinews' => [
 		'sysop' => [ 'rollbacker' ], // T201265
