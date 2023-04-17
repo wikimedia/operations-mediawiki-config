@@ -18,6 +18,8 @@
 # Included from: wmf-config/CommonSettings.php.
 #
 
+use MediaWiki\MediaWikiServices;
+
 // safe guard
 if ( $wmgRealm == 'labs' ) {
 
