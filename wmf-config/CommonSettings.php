@@ -1064,6 +1064,9 @@ if ( in_array( 'editautopatrolprotected', $wgRestrictionLevels ) ) {
 	$wgGroupPermissions['bot']['editautopatrolprotected'] = true;
 }
 
+// Extension:StopForumSpam rights, so they can be assigned to global groups (T334856)
+$wgAvailableRights[] = 'sfsblock-bypass';
+
 # ######################################################################
 # Logo settings
 # ######################################################################
