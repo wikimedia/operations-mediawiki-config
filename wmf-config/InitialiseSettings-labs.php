@@ -2471,10 +2471,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 			'loginwiki' => false,
 		],
-		// T327470
-		'wgCampaignEventsEnableMultipleOrganizers' => [
-			'default' => true,
-		],
 		'wgCampaignEventsUseNewTrackingToolsSchema' => [
 			'default' => true,
 		],
