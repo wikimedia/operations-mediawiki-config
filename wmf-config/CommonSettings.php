@@ -3823,6 +3823,10 @@ if ( $wmgUseNewsletter ) {
 	wfLoadExtension( 'Newsletter' );
 }
 
+if ( $wmgUseRealMe ) {
+	wfLoadExtension( 'RealMe' );
+}
+
 ### End (roughly) of general extensions ########################
 
 $wgApplyIpBlocksToXff = true;

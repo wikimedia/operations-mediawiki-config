@@ -8317,6 +8317,10 @@ return [
 	'itwikivoyage' => false, // T253096
 ],
 
+'wmgUseRealMe' => [
+	'default' => false,
+],
+
 'wmgUseRelatedArticles' => [
 	'default' => false,
 	'wikipedia' => true,
