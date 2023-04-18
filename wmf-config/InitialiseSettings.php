@@ -6771,7 +6771,7 @@ return [
 ],
 
 'wmgUseGraph' => [
-	'default' => true,
+	'default' => false, // T334895
 ],
 
 'wgGraphDefaultVegaVer' => [
