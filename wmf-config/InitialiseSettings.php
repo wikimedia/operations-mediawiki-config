@@ -6778,6 +6778,11 @@ return [
 	'default' => false, // T334895
 ],
 
+// T334895
+'wmgHideGraphTags' => [
+	'default' => true,
+],
+
 'wgGraphDefaultVegaVer' => [
 	'default' => 2,
 ],

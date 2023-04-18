@@ -3690,6 +3690,18 @@ if ( $wmgUseGraph ) {
 			'pattern' => '/^Json:./',
 		];
 	}
+} elseif ( $wmgHideGraphTags ) {
+	// Hide raw tags that are displayed due to T334895
+	$wgHooks['ParserFirstCallInit'][] = 'wmfAddGraphTagToHideRawUsage';
+
+	function wmfAddGraphTagToHideRawUsage( Parser $parser ) {
+		$parser->setHook( 'graph', 'wmfRenderEmptyGraphTag' );
+	}
+
+	function wmfRenderEmptyGraphTag( $input, array $args, Parser $parser, PPFrame $frame ) {
+		$parser->addTrackingCategory( 'graph-tracking-category' );
+		return '';
+	}
 }
 
 if ( $wmgUseOAuth ) {
