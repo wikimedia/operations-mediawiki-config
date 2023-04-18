@@ -5759,7 +5759,7 @@ return [
 	'wbwikimedia' => false,
 ],
 // Whether VisualEditor should re-use the edit tab (and section link) or insert its own; "SET"
-'wmgVisualEditorUseSingleEditTab' => [
+'wgVisualEditorUseSingleEditTab' => [
 	'default' => false,         // Deploying slowly with community advanced notice
 
 	'wikisource' => true,       // Starting from SET
@@ -5893,8 +5893,6 @@ return [
 ],
 
 // Whether the wikitext editor should be the default editor.
-// * on SET wikis, this affects the text and behavior of the edit tab
-// * on non-SET wikis, this affects the order of tabs (and behavior of red links after T223705)
 'wmgVisualEditorIsSecondaryEditor' => [
 	'default' => false,
 	'enwiki' => true, // T132806
@@ -5902,6 +5900,12 @@ return [
 	'frwiktionary' => true, // T169741
 	'hewiki' => true, // T54552
 	'zhwiki' => true, // T296269
+],
+
+'wgVisualEditorTabPosition' => [
+	'default' => 'before',
+	'eswiki' => 'after', // T62188
+	'hewiki' => 'after', // T54552
 ],
 
 // Whether to enable the 2017 wikitext editor by default.

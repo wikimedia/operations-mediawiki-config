@@ -2689,13 +2689,7 @@ if ( $wmgUseVisualEditor ) {
 	}
 
 	// Tab configuration
-	if ( $wmgVisualEditorUseSingleEditTab ) {
-		$wgVisualEditorUseSingleEditTab = true;
-	}
 	if ( $wmgVisualEditorIsSecondaryEditor ) {
-		if ( !$wmgVisualEditorUseSingleEditTab ) {
-			$wgVisualEditorTabPosition = 'after';
-		}
 		$wgDefaultUserOptions['visualeditor-editor'] = 'wikitext';
 	} else {
 		$wgDefaultUserOptions['visualeditor-editor'] = 'visualeditor';
