@@ -3645,7 +3645,7 @@ if ( $wmgEnableJsonConfigDataMode ) {
 }
 
 // Enable Config:Dashiki: sub-namespace on meta.wikimedia.org - T156971
-if ( $wmgEnableDashikiData ) {
+if ( $wmgEnableDashikiData && $wmgUseGraph ) {
 	// Dashiki sub-namespace Config:Dashiki: is configured in extension.json
 	wfLoadExtension( 'Dashiki' );
 }
@@ -4001,7 +4001,7 @@ if ( $wmgUseCapiunto ) {
 	wfLoadExtension( 'Capiunto' );
 }
 
-if ( $wmgUseKartographer || $wmgUseGraph ) {
+if ( $wmgUseKartographer && $wmgUseGraph ) {
 	wfLoadExtension( 'Kartographer' );
 	$wgKartographerMapServer = 'https://maps.wikimedia.org';
 
