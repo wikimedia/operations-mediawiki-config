@@ -3692,7 +3692,11 @@ if ( $wmgUseGraph ) {
 	}
 } elseif ( $wmgHideGraphTags ) {
 	// Hide raw tags that are displayed due to T334895
+	// Note this still uses messages from E:Graph, which are available
+	// as long as it is in wmf-config/extension-list.
 	$wgHooks['ParserFirstCallInit'][] = 'wmfAddGraphTagToHideRawUsage';
+	$wgTrackingCategories[] = 'graph-tracking-category';
+	$wgTrackingCategories[] = 'graph-disabled-category';
 
 	function wmfAddGraphTagToHideRawUsage( Parser $parser ) {
 		$parser->setHook( 'graph', 'wmfRenderEmptyGraphTag' );
@@ -3700,6 +3704,7 @@ if ( $wmgUseGraph ) {
 
 	function wmfRenderEmptyGraphTag( $input, array $args, Parser $parser, PPFrame $frame ) {
 		$parser->addTrackingCategory( 'graph-tracking-category' );
+		$parser->addTrackingCategory( 'graph-disabled-category' );
 		$msg = $parser->msg( 'graph-disabled' );
 		if ( $msg->isDisabled() ) {
 			return '';
