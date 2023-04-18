@@ -4001,7 +4001,7 @@ if ( $wmgUseCapiunto ) {
 	wfLoadExtension( 'Capiunto' );
 }
 
-if ( $wmgUseKartographer ) {
+if ( $wmgUseKartographer || $wmgUseGraph ) {
 	wfLoadExtension( 'Kartographer' );
 	$wgKartographerMapServer = 'https://maps.wikimedia.org';
 
