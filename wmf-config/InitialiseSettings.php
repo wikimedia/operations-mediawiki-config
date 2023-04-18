@@ -6758,6 +6758,10 @@ return [
 	'default' => false,
 ],
 
+'wmgUseJsonConfig' => [
+	'default' => true,
+],
+
 'wmgEnableJsonConfigDataMode' => [
 	'default' => true,
 	# Technically they could be enabled as well, but keep them off just in case for now
