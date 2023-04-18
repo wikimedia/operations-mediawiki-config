@@ -7617,6 +7617,7 @@ return [
 
 'wgDiscussionTools_visualenhancements_newsectionlink_enable' => [
 	'default' => false,
+	'dewiki' => true, // T318596
 	'huwiki' => true, // T333570
 ],
 
