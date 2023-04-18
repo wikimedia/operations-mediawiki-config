@@ -7761,7 +7761,6 @@ return [
 	"crhwiki" => true,
 	"crwiki" => true,
 	"csbwiki" => true,
-	"dawiki" => true,
 	"dewiki" => true,
 	"dinwiki" => true,
 	"diqwiki" => true,
@@ -7829,10 +7828,8 @@ return [
 	"ltgwiki" => true,
 	"map_bmswiki" => true,
 	"mdfwiki" => true,
-	"mhrwiki" => true,
 	"minwiki" => true,
 	"mnwwiki" => true,
-	"mrjwiki" => true,
 	"mwlwiki" => true,
 	"myvwiki" => true,
 	"mznwiki" => true,
@@ -7875,9 +7872,7 @@ return [
 	"sewiki" => true,
 	"sgwiki" => true,
 	"shnwiki" => true,
-	"shwiki" => true,
 	"simplewiki" => true,
-	"smwiki" => true,
 	"srnwiki" => true,
 	"stqwiki" => true,
 	"svwiki" => true,
@@ -8094,6 +8089,7 @@ return [
 	'cswiki' => true, // T304855
 	'cuwiki' => true, // T319176
 	'cywiki' => true, // T308829
+	'dawiki' => true, // T327102
 	'dvwiki' => true, // T313296
 	'eewiki' => true, // T313296
 	'elwiki' => true, // T304854
@@ -8133,16 +8129,19 @@ return [
 	'lvwiki' => true, // T313300
 	'maiwiki' => true, // T319175
 	'mgwiki' => true, // T319176
+	'mhrwiki' => true, // T327102
 	'miwiki' => true, // T319175
 	'mkwiki' => true, // T304828
 	'mlwiki' => true, // T285842
 	'mnwiki' => true, // T298237
 	'mniwiki' => true, // T313296
 	'mrwiki' => true, // T304828
+	'mrjwiki' => true, // T327102
 	'mswiki' => true, // T285842
 	'mtwiki' => true, // T308829
 	'mywiki' => true, // T308829
 	'newiki' => true, // T304828
+	'nnwiki' => true, // T327102
 	'nsowiki' => true, // T309384
 	'nywiki' => true, // T323825
 	'ocwiki' => true, // T301443
@@ -8158,9 +8157,11 @@ return [
 	'sawiki' => true, // T313296
 	'sahwiki' => true, // T319176
 	'sdwiki' => true, // T319177
+	'shwiki' => true, // T327102
 	'siwiki' => true, // T313300
 	'skwiki' => true, // T323825
 	'slwiki' => true, // T308829
+	'smwiki' => true, // T327102
 	'snwiki' => true, // T319175
 	'sowiki' => true, // T313300
 	'sqwiki' => true, // T285842
@@ -8196,7 +8197,7 @@ return [
 
 'wgSectionTranslationTargetLanguages' => [
 	'default' => null,
-	'wikipedia' => [ 'am', 'ar', 'arz', 'as', 'ast', 'ay', 'az', 'ba', 'bcl', 'be', 'bg', 'bho', 'bm', 'bn', 'bs', 'ca', 'ceb', 'ckb', 'co', 'cs', 'cu', 'cy', 'dv', 'ee', 'el', 'eo', 'et', 'eu', 'fa', 'fy', 'gan', 'gl', 'gn', 'gom', 'gu', 'ha', 'haw', 'he', 'hi', 'hr', 'ht', 'hy', 'ig', 'ilo', 'is', 'jv', 'ka', 'kg', 'km', 'kn', 'ko', 'ks', 'ku', 'lb', 'lg', 'ln', 'lo', 'lt', 'lv', 'mai', 'mg', 'mi', 'mk', 'ml', 'mn', 'mni', 'mr', 'ms', 'mt', 'my', 'ne', 'nso', 'ny', 'oc', 'om', 'or', 'pa', 'pap', 'ps', 'pt', 'qu', 'ro', 'rw', 'sa', 'sah', 'sd', 'si', 'sk', 'sl', 'sn', 'so', 'sq', 'sr', 'ss', 'st', 'su', 'sw', 'ta', 'te', 'tg', 'th', 'ti', 'tk', 'tl', 'tn', 'tr', 'ts', 'tt', 'tw', 'udm', 'ur', 'uz', 'wo', 'wuu', 'xh', 'yue', 'yi', 'yo', 'zh', 'zu' ],
+	'wikipedia' => [ 'am', 'ar', 'arz', 'as', 'ast', 'ay', 'az', 'ba', 'bcl', 'be', 'bg', 'bho', 'bm', 'bn', 'bs', 'ca', 'ceb', 'ckb', 'co', 'cs', 'cu', 'cy', 'da', 'dv', 'ee', 'el', 'eo', 'et', 'eu', 'fa', 'fy', 'gan', 'gl', 'gn', 'gom', 'gu', 'ha', 'haw', 'he', 'hi', 'hr', 'ht', 'hy', 'ig', 'ilo', 'is', 'jv', 'ka', 'kg', 'km', 'kn', 'ko', 'ks', 'ku', 'lb', 'lg', 'ln', 'lo', 'lt', 'lv', 'mai', 'mg', 'mhr', 'mi', 'mk', 'ml', 'mn', 'mni', 'mr', 'mrj', 'ms', 'mt', 'my', 'ne', 'nn', 'nso', 'ny', 'oc', 'om', 'or', 'pa', 'pap', 'ps', 'pt', 'qu', 'ro', 'rw', 'sa', 'sah', 'sd', 'sh', 'si', 'sk', 'sl', 'sm', 'sn', 'so', 'sq', 'sr', 'ss', 'st', 'su', 'sw', 'ta', 'te', 'tg', 'th', 'ti', 'tk', 'tl', 'tn', 'tr', 'ts', 'tt', 'tw', 'udm', 'ur', 'uz', 'wo', 'wuu', 'xh', 'yue', 'yi', 'yo', 'zh', 'zu' ],
 	'testwiki' => [ 'af', 'am', 'ar', 'arz', 'as', 'ast', 'ay', 'az', 'ba', 'bcl', 'be', 'bg', 'bho', 'bm', 'bn', 'bs', 'ca', 'ceb', 'ckb', 'co', 'cs', 'cu', 'cy', 'da', 'dv', 'ee', 'el', 'eo', 'es', 'et', 'eu', 'fa', 'fi', 'fr', 'fy', 'ga', 'gan', 'gd', 'gl', 'gn', 'gom', 'gu', 'ha', 'haw', 'he', 'hi', 'hr', 'ht', 'hy', 'id', 'ig', 'ilo', 'is', 'jv', 'ka', 'kg', 'ki', 'km', 'kn', 'ko', 'ks', 'ku', 'la', 'lb', 'lg', 'ln', 'lo', 'lt', 'lv', 'mai', 'mhr', 'mg', 'mi', 'mk', 'ml', 'mn', 'mni', 'mr', 'mrj', 'ms', 'mt', 'my', 'ne', 'nn', 'no', 'nso', 'ny', 'oc', 'om', 'or', 'pa', 'pap', 'ps', 'pt', 'qu', 'ro', 'ru', 'rw', 'sa', 'sah', 'sd', 'sh', 'si', 'sk', 'sl', 'sm', 'sn', 'so', 'sq', 'sr', 'ss', 'st', 'su', 'sw', 'ta', 'te', 'tg', 'th', 'ti', 'tk', 'tl', 'tn', 'tr', 'ts', 'tt', 'tw', 'udm', 'ug', 'uk', 'ur', 'uz', 'vi', 'wo', 'wuu', 'xh', 'yi', 'yo', 'yue', 'zh', 'zu' ],
 ],
 
