@@ -11220,7 +11220,7 @@ return [
 ],
 
 'wmgUseKartographer' => [
-	'default' => true,
+	'default' => false, // T334895
 	'private' => false,
 ],
 
