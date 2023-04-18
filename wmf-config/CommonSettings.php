@@ -3700,7 +3700,12 @@ if ( $wmgUseGraph ) {
 
 	function wmfRenderEmptyGraphTag( $input, array $args, Parser $parser, PPFrame $frame ) {
 		$parser->addTrackingCategory( 'graph-tracking-category' );
-		return '';
+		$msg = $parser->msg( 'graph-disabled' );
+		if ( $msg->isDisabled() ) {
+			return '';
+		} else {
+			return $msg->parseAsBlock();
+		}
 	}
 }
 
