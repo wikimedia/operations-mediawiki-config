@@ -1563,7 +1563,8 @@ return [
 		'autopatrolled' => [ 'autopatrol' => true, ], // T27160
 		'bot' => [ 'changetags' => true ], // T283625
 		'campaignevents-beta-tester' => [ // Temporary, T316227
-			'campaignevents-enable-registration' => true
+			'campaignevents-enable-registration' => true,
+			'campaignevents-organize-events' => true,
 		],
 		'centralnoticeadmin' => [ // gerrit:50196, T142123
 			'autopatrol' => true,
@@ -1615,6 +1616,7 @@ return [
 		'user' => [
 			'changetags' => false, // T283625
 			'campaignevents-enable-registration' => false, // Temporary, T316227
+			'campaignevents-organize-events' => false,
 		],
 		'wmf-officeit' => [ // T106724, T142123, T254372
 			'autopatrol' => true,
