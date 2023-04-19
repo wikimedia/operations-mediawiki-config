@@ -3958,8 +3958,6 @@ if ( $wmgUseRC2UDP ) {
 	}
 }
 
-$wgGroupPermissions['confirmed']['skipcaptcha'] = true;
-
 $wgDefaultUserOptions['watchlistdays'] = $wmgWatchlistNumberOfDaysShow;
 
 if ( $wmgUseWikidataPageBanner ) {
