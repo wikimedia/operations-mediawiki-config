@@ -4694,7 +4694,6 @@ return [
 	'hifwiki' => true, // T99824
 	'incubatorwiki' => true,
 	'kkwiki' => true, // T149563
-	'knwikisource' => true, // T204405
 	'lvwiki' => true,
 	'maiwiki' => true, // T99488
 	'mlwiki' => true,
