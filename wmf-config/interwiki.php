@@ -439,7 +439,7 @@ return [
 	'__global:wowwiki' => '0 http://www.wowwiki.com/$1',
 	'__global:wqy' => '0 http://wqy.sourceforge.net/cgi-bin/index.cgi?$1',
 	'__global:wurmpedia' => '0 https://wurmpedia.com/index.php/$1',
-	'__global:xtools' => '0 https://xtools.wmflabs.org/$1',
+	'__global:xtools' => '0 https://xtools.wmcloud.org/$1',
 	'__global:zrhwiki' => '0 http://www.zrhwiki.ch/wiki/$1',
 	'__global:zum' => '0 https://wiki.zum.de/$1',
 	'__global:zwiki' => '0 http://www.zwiki.org/$1',
