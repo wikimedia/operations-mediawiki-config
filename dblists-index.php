@@ -449,6 +449,7 @@ return [
 'kbdwiki' => [ 'wikipedia', 'desktop-improvements', 'small', 'wikidataclient', 'commonsuploads' ],
 'kbpwiki' => [ 'wikipedia', 'desktop-improvements', 'small', 'wikidataclient', 'commonsuploads' ],
 'kcgwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
+'kcgwiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'kgwiki' => [ 'wikipedia', 'desktop-improvements', 'small', 'wikidataclient', 'commonsuploads' ],
 'kiwiki' => [ 'wikipedia', 'desktop-improvements', 'small', 'wikidataclient', 'commonsuploads' ],
 'kjwiki' => [ 'wikipedia', 'closed', 'small', 'wikidataclient', 'group0' ],

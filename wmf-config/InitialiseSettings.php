@@ -442,6 +442,7 @@ return [
 	'kbdwiki' => 'Europe/Moscow',
 	'kbpwiki' => 'Africa/Lome', // T160868
 	'kcgwiki' => 'Africa/Lagos',
+	'kcgwiktionary' => 'Africa/Lagos',
 	'kkwiki' => 'Asia/Almaty',
 	'kkwiktionary' => 'Asia/Almaty',
 	'kkwikibooks' => 'Asia/Almaty',
@@ -1325,6 +1326,7 @@ return [
 	'kawiktionary' => 'ვიქსიკონი',
 	'kbdwiki' => 'Уикипедиэ',
 	'kbpwiki' => 'Wikipediya', // T160868
+	'kcgwiktionary' => 'Swánga̱lyiatwuki',
 	'kkwiki' => 'Уикипедия',
 	'kkwikibooks' => 'Уикикітап',
 	'kkwikiquote' => 'Уикидәйек',

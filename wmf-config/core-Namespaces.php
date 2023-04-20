@@ -5221,6 +5221,7 @@ return [
 	'kbdwiki' => 'Уикипедиэ',
 	'kbpwiki' => 'Wikipediya', // T160868
 	'kcgwiki' => 'Wukipedia',
+	'kcgwiktionary' => 'Swánga̱lyiatwuki',
 	'kkwiki' => 'Уикипедия',
 	'kkwikibooks' => 'Уикикітап',
 	'kkwikiquote' => 'Уикидәйек',
@@ -5535,6 +5536,7 @@ return [
 	'jbowiki' => 'casnu_la_.uikipedi\'as.', // T118067
 	'kbdwiki' => 'Уикипедиэм_и_тепсэлъыхьыгъуэ',
 	'kbpwiki' => 'Wikipediya_ndɔnjɔɔlɩyɛ', // T160868
+	'kcgwiktionary' => 'A̱lyiat_Swánga̱lyiatwuki',
 	'knwikisource' => 'ವಿಕಿಸೋರ್ಸ್_ಚರ್ಚೆ', // T110806
 	'kmwiki' => 'ការពិភាក្សាអំពីវិគីភីឌា',
 	'koiwiki' => 'Баитам_Википедия_йылiсь',
