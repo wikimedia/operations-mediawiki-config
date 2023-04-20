@@ -151,6 +151,7 @@ return [
 	'gucwiki' => '/static/images/project-logos/gucwiki.png',
 	'gurwiki' => '/static/images/project-logos/gurwiki.png',
 	'guwwiki' => '/static/images/project-logos/guwwiki.png', // T303727
+	'guwwikinews' => '/static/images/project-logos/guwwikinews.png', // T335162
 	'gvwiki' => '/static/images/project-logos/gvwiki.png', // T48589
 	'hakwiki' => '/static/images/project-logos/hakwiki.png', // T48589
 	'hawiki' => '/static/images/project-logos/hawiki.png', // T48589
@@ -998,6 +999,7 @@ return [
 	'gucwiki' => '/static/images/project-logos/gucwiki-1.5x.png',
 	'gurwiki' => '/static/images/project-logos/gurwiki-1.5x.png',
 	'guwwiki' => '/static/images/project-logos/guwwiki-1.5x.png', // T303727
+	'guwwikinews' => '/static/images/project-logos/guwwikinews-1.5x.png', // T335162
 	'gvwiki' => '/static/images/project-logos/gvwiki-1.5x.png', // T150618
 	'hakwiki' => '/static/images/project-logos/hakwiki-1.5x.png', // T150618
 	'hawiki' => '/static/images/project-logos/hawiki-1.5x.png', // T150618
@@ -1610,6 +1612,7 @@ return [
 	'gucwiki' => '/static/images/project-logos/gucwiki-2x.png',
 	'gurwiki' => '/static/images/project-logos/gurwiki-2x.png',
 	'guwwiki' => '/static/images/project-logos/guwwiki-2x.png', // T303727
+	'guwwikinews' => '/static/images/project-logos/guwwikinews-2x.png', // T335162
 	'gvwiki' => '/static/images/project-logos/gvwiki-2x.png', // T150618
 	'hakwiki' => '/static/images/project-logos/hakwiki-2x.png', // T150618
 	'hawiki' => '/static/images/project-logos/hawiki-2x.png', // T150618

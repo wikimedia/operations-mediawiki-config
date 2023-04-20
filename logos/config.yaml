@@ -617,6 +617,11 @@ Wikipedia:
         comment_1_5x: T303727
         comment_2x: T303727
         commons: 'File:Wikipedia-logo-v2-gungbe.svg'
+    guwwikinews:
+      commons: 'File:WikiNews-logo-guw-v3.svg'
+      comment: T335162
+      comment_1_5x: T335162
+      comment_2x: T335162
     gvwiki:
         comment: T48589
         comment_1_5x: T150618
