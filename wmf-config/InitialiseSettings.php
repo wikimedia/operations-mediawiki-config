@@ -5734,6 +5734,13 @@ return [
 	'private' => true,
 ],
 
+// Experimental Parsoid Read Views support: T335157
+'wgParsoidEnableQueryString' => [
+	'default' => true,
+	'commonswiki' => false,
+	'wikidatawiki' => false,
+],
+
 // -------------- Shared Parsoid end --------------
 
 // -------------- VisualEditor start --------------
