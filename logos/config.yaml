@@ -819,6 +819,11 @@ Wikipedia:
     kcgwiki:
         commons: 'File:Wikipedia-logo-v2-kcg.svg'
         local_tagline: true
+    kcgwiktionary:
+        commons: 'File:Wiktionary-logo-kcg.svg'
+        comment: T335162
+        comment_1_5x: T335162
+        comment_2x: T335162
     kgwiki:
         comment: T189586
         comment_1_5x: T189586
