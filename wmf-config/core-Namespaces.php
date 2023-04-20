@@ -838,6 +838,12 @@ return [
 	'+kawikiquote' => [
 		'Wikiquote_განხილვა' => NS_PROJECT_TALK,
 	],
+	'+kbdwiktionary' => [
+		'Appendix' => 100,
+		'Appendix_talk' => 101,
+		'Index' => 102,
+		'Index_talk' => 103,
+	],
 	'+kkwiki' => [
 		'Joba' => 102, // T42794
 		'Joba_talqılawı' => 103,
@@ -3526,6 +3532,12 @@ return [
 		100 => 'ფორმაწარმოება', // T212956
 		101 => 'ფორმაწარმოების_განხილვა', // T212956
 	],
+	'kbdwiktionary' => [
+		100 => 'Гуэлъхьэ', // Appendix
+		101 => 'Гуэлъхьэм_тепсэлъыхьын', // Appendix talk
+		102 => 'Индекс', // Index
+		103 => 'Индексым_тепсэлъыхьын', // Index talk
+	],
 	'kowiktionary' => [
 		100 => '부록',
 		101 => '부록_토론',
@@ -5219,6 +5231,7 @@ return [
 	'kawikiquote' => 'ვიკიციტატა',
 	'kawiktionary' => 'ვიქსიკონი',
 	'kbdwiki' => 'Уикипедиэ',
+	'kbdwiktionary' => 'Википсалъалъэ',
 	'kbpwiki' => 'Wikipediya', // T160868
 	'kcgwiki' => 'Wukipedia',
 	'kcgwiktionary' => 'Swánga̱lyiatwuki',
@@ -5536,6 +5549,7 @@ return [
 	'jamwiki' => 'Wikipidia_diskoshan',
 	'jbowiki' => 'casnu_la_.uikipedi\'as.', // T118067
 	'kbdwiki' => 'Уикипедиэм_и_тепсэлъыхьыгъуэ',
+	'kbdwiktionary' => 'Википсалъалъэм_тепсэлъыхьын',
 	'kbpwiki' => 'Wikipediya_ndɔnjɔɔlɩyɛ', // T160868
 	'kcgwiktionary' => 'A̱lyiat_Swánga̱lyiatwuki',
 	'knwikisource' => 'ವಿಕಿಸೋರ್ಸ್_ಚರ್ಚೆ', // T110806

@@ -441,6 +441,7 @@ return [
 	'itwiktionary' => 'Europe/Berlin',
 	'jamwiki' => 'America/Jamaica',
 	'kbdwiki' => 'Europe/Moscow',
+	'kbdwiktionary' => 'Europe/Moscow',
 	'kbpwiki' => 'Africa/Lome', // T160868
 	'kcgwiki' => 'Africa/Lagos',
 	'kcgwiktionary' => 'Africa/Lagos',
@@ -1326,6 +1327,7 @@ return [
 	'kawikiquote' => 'ვიკიციტატა',
 	'kawiktionary' => 'ვიქსიკონი',
 	'kbdwiki' => 'Уикипедиэ',
+	'kbdwiktionary' => 'Википсалъалъэ',
 	'kbpwiki' => 'Wikipediya', // T160868
 	'kcgwiktionary' => 'Swánga̱lyiatwuki',
 	'kkwiki' => 'Уикипедия',
