@@ -3580,6 +3580,16 @@ if ( $wmgUseSearchExtraNS ) {
 
 if ( $wmgUseJsonConfig ) {
 	wfLoadExtension( 'JsonConfig' );
+
+	if ( $wmgUseGraphWithJsonNamespace ) {
+		$wgJsonConfigModels['Json.JsonConfig'] = null;
+		$wgJsonConfigs['Json.JsonConfig'] = [
+			'namespace' => 486,
+			'nsName' => 'Data',
+			'isLocal' => true,
+			'pattern' => '/^Json:./',
+		];
+	}
 }
 
 if ( $wmgEnableJsonConfigDataMode ) {
@@ -3669,16 +3679,6 @@ if ( $wmgUseGraph ) {
 			'maps.wikimedia.org',
 		],
 	];
-
-	if ( $wmgUseGraphWithJsonNamespace ) {
-		$wgJsonConfigModels['Json.JsonConfig'] = null;
-		$wgJsonConfigs['Json.JsonConfig'] = [
-			'namespace' => 486,
-			'nsName' => 'Data',
-			'isLocal' => true,
-			'pattern' => '/^Json:./',
-		];
-	}
 } elseif ( $wmgHideGraphTags ) {
 	// Hide raw tags that are displayed due to T334895
 	// Note this still uses messages from E:Graph, which are available
