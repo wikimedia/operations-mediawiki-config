@@ -105,17 +105,6 @@ return [
 				],
 			]
 		],
-		'eventlogging_CentralNoticeTiming' => [
-			'schema_title' => 'analytics/legacy/centralnoticetiming',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
 		'eventlogging_CodeMirrorUsage' => [
 			'schema_title' => 'analytics/legacy/codemirrorusage',
 			'topic_prefixes' => null,

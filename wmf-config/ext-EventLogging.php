@@ -17,7 +17,6 @@ return [
 	'default' => [
 		'eventlogging_CentralNoticeBannerHistory',
 		'eventlogging_CentralNoticeImpression',
-		'eventlogging_CentralNoticeTiming',
 		'eventlogging_ContentTranslationAbuseFilter',
 		'eventlogging_CodeMirrorUsage',
 		'eventlogging_CpuBenchmark',
