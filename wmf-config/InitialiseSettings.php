@@ -374,6 +374,7 @@ return [
 	'etwikisource' => 'Europe/Tallinn',
 	'etwiktionary' => 'Europe/Tallinn',
 	'euwiki' => 'Europe/Berlin',
+	'fatwiki' => 'Africa/Accra',
 	'fawikinews' => 'Asia/Tehran',
 	'fiwiki' => 'Europe/Helsinki',
 	'fiwikimedia' => 'Europe/Helsinki',

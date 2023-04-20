@@ -5516,6 +5516,7 @@ return [
 	'eowiki' => 'Vikipedia_diskuto',
 	'eowikinews' => 'Vikinovaĵoj_diskuto',
 	'eowikisource' => 'Vikifontaro_diskuto',
+	'fatwiki' => 'Wikipedia_nkɔmbɔdzibea',
 	'fiwikiversity' => 'Keskustelu_Wikiopistosta',
 	'fiwikivoyage' => 'Keskustelu_Wikimatkoista', // T151570
 	'gewikimedia' => 'განხილვა', // T236389

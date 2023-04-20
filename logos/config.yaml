@@ -498,6 +498,8 @@ Wikipedia:
         comment_wordmarktagline: T249047
         commons_tagline: 'File:Wikipedia-tagline-fa.svg'
         comment_tagline: T249047
+    fatwiki:
+        commons: 'File:Wikipedia-logo-v2-fat.svg'
     ffwiki:
         comment_1_5x: T150618
         comment_2x: T150618

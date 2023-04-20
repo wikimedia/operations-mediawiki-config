@@ -262,6 +262,7 @@ return [
 'euwiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'execwiki' => [ 'special', 'private', 'small', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines' ],
 'extwiki' => [ 'wikipedia', 'desktop-improvements', 'small', 'wikidataclient', 'commonsuploads' ],
+'fatwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'fawiki' => [ 'wikipedia', 'desktop-improvements', 'flow', 'flaggedrevs', 'large', 'wikidataclient', 'cirrussearch-big-indices' ],
 'fawikibooks' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines' ],
 'fawikinews' => [ 'flaggedrevs', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
