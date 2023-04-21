@@ -2431,6 +2431,13 @@ function wmfGetOverrideSettings() {
 			'en_rtlwiki' => true,
 			'enwiktionary' => true,
 			'metawiki' => true, // T331670
+			'testwiki' => true, // T332787
+		],
+
+		// T332787
+		'-wgPhonosInlineAudioPlayerMode' => [
+			'default' => false,
+			'testwiki' => true, // T332787
 		],
 
 		'wmgUseVueTest' => [
