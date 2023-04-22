@@ -11,7 +11,7 @@
 return [
 	// by language name, e.g. 'id' as 'Indonesia, bahasa'
 	'alphabetic' => [
-		'ace', 'kbd', 'ady', 'af', 'ak', 'als', 'alt', 'am', 'smn', 'ang', 'ab', 'ar', 'an', 'arc', 'hyw',
+		'ace', 'kbd', 'ady', 'af', 'ak', 'als', 'alt', 'am', 'smn', 'anp', 'ang', 'ab', 'ar', 'an', 'arc', 'hyw',
 		'roa-rup', 'frp', 'as', 'ast', 'atj', 'awa', 'gn', 'av', 'ay', 'az', 'azb', 'ban', 'bm', 'bn', 'bjn',
 		'zh-min-nan', 'nan', 'map-bms', 'ba', 'be', 'be-x-old', 'bh', 'bcl', 'bi',
 		'bg', 'bar', 'bo', 'bs', 'br', 'bxr', 'ca', 'cv', 'ceb', 'cs', 'ch',
@@ -24,7 +24,7 @@ return [
 		'pam', 'krc', 'ka', 'ks', 'csb', 'kk', 'kw', 'rw', 'rn', 'sw', 'kv', 'kg', 'avk',
 		'ht', 'gcr', 'ku', 'kj', 'ky', 'mrj', 'lld', 'lad', 'lbe', 'lo', 'lrc', 'ltg', 'la',
 		'lv', 'lb', 'lez', 'lt', 'nia', 'lij', 'li', 'ln', 'lfn', 'olo', 'jbo', 'lg', 'lmo', 'hu', 'mad', 'mai', 'mk',
-		'mg', 'ml', 'mt', 'mi', 'mr', 'xmf', 'arz', 'mnw', 'mzn', 'ms', 'mni', 'min', 'cdo', 'mwl',
+		'mg', 'ml', 'mt', 'mi', 'mr', 'xmf', 'arz', 'mnw', 'mzn', 'ms', 'mni', 'fat', 'min', 'cdo', 'mwl',
 		'mdf', 'mo', 'mn', 'mus', 'my', 'nah', 'pcm', 'na', 'fj', 'nl', 'nds-nl', 'cr', 'ne',
 		'new', 'ja', 'nap', 'nqo', 'ce', 'frr', 'pih', 'no', 'nb', 'nn', 'nrm', 'nov', 'ii', 'oc',
 		'mhr', 'or', 'om', 'ng', 'hz', 'uz', 'pa', 'pi', 'pfl', 'pag', 'ami', 'pnb', 'blk', 'pap', 'ps',
@@ -40,7 +40,7 @@ return [
 	],
 	// by first word, e.g. 'id' as 'bahasa Indonesia'
 	'alphabetic_revised' => [
-		'ace', 'ady', 'kbd', 'af', 'ak', 'als', 'alt', 'am', 'smn', 'ang', 'ab', 'ar', 'an', 'arc', 'hyw', 'roa-rup',
+		'ace', 'ady', 'kbd', 'af', 'ak', 'als', 'alt', 'am', 'smn', 'anp', 'ang', 'ab', 'ar', 'an', 'arc', 'hyw', 'roa-rup',
 		'frp', 'as', 'ast', 'atj', 'awa', 'gn', 'av', 'ay', 'az', 'azb', 'gor', 'id', 'ms', 'ban',
 		'bm', 'bn', 'bjn', 'zh-min-nan', 'nan', 'map-bms', 'ba', 'be', 'be-x-old', 'mad', 'bh',
 		'bcl', 'bi', 'bar', 'bo', 'bs', 'br', 'bug', 'bg', 'bxr', 'ca', 'ceb', 'cv', 'cs',
@@ -53,7 +53,7 @@ return [
 		'ks', 'csb', 'kk', 'kw', 'rw', 'ky', 'rn', 'mrj', 'sw', 'kv', 'kg', 'avk', 'ht', 'gcr', 'ku',
 		'kj', 'lld', 'lad', 'lbe', 'lo', 'la', 'lrc', 'ltg', 'lv', 'to', 'lb', 'lez', 'lt', 'nia', 'lij',
 		'li', 'ln', 'lfn', 'olo', 'jbo', 'lg', 'lmo', 'hu', 'mai', 'mk', 'mg', 'ml', 'mt',
-		'mi', 'mr', 'xmf', 'arz', 'mzn', 'mni', 'min', 'cdo', 'mwl', 'mdf', 'mo', 'mn', 'mus', 'my',
+		'mi', 'mr', 'xmf', 'arz', 'mzn', 'mni', 'fat', 'min', 'cdo', 'mwl', 'mdf', 'mo', 'mn', 'mus', 'my',
 		'nah', 'pcm', 'fj', 'nl',  'nds-nl', 'cr', 'ne', 'new', 'ja', 'nap', 'nqo', 'ce', 'frr', 'pih', 'no',
 		'nb', 'nn', 'nrm', 'nov', 'ii', 'oc', 'mhr', 'or', 'om', 'ng', 'hz', 'uz', 'pa', 'pi',
 		'pfl', 'pag', 'ami', 'pnb', 'blk', 'pap', 'ps', 'jam', 'koi', 'km', 'shn', 'mnw', 'pcd', 'pms', 'pwn', 'nds',
@@ -68,7 +68,7 @@ return [
 	],
 	// by first word, non-Cyrillic/non-Roman/non-Greek name by language code
 	'alphabetic_sr' => [
-		'ace', 'ady', 'kbd', 'af', 'ak', 'als', 'alt', 'am', 'smn', 'ang', 'ab', 'ar', 'an', 'arc',
+		'ace', 'ady', 'kbd', 'af', 'ak', 'als', 'alt', 'am', 'smn', 'ang', 'anp', 'ab', 'ar', 'an', 'arc',
 		'roa-rup', 'frp', 'ary', 'arz', 'as', 'ast', 'atj', 'gn', 'av', 'awa', 'ay', 'az', 'azb', 'gor',
 		'id', 'ms', 'ban', 'bg', 'bm', 'bjn', 'zh-min-nan', 'nan', 'map-bms', 'ba', 'be',
 		'be-x-old', 'mad', 'bh', 'bcl', 'bi', 'bn', 'bo', 'bar', 'bs', 'bpy', 'br', 'bug',
@@ -82,7 +82,7 @@ return [
 		'csb', 'kk', 'kw', 'rw', 'ky', 'mrj', 'rn', 'sw', 'km', 'kn', 'ko', 'kv',
 		'kg', 'avk', 'ht', 'gcr', 'ks', 'ku', 'kj', 'lld', 'lad', 'lbe', 'la', 'lrc', 'ltg', 'lv', 'to',
 		'lb', 'lez', 'nia', 'lt', 'lij', 'li', 'ln', 'lfn', 'olo', 'lo', 'jbo', 'lg', 'lmo', 'hu', 'mai',
-		'mk', 'mg', 'mt', 'mi', 'min', 'cdo', 'mwl', 'ml', 'mdf', 'mo', 'mn', 'mni', 'mnw', 'mr', 'mus',
+		'mk', 'mg', 'mt', 'mi', 'min', 'cdo', 'mwl', 'ml', 'fat', 'mdf', 'mo', 'mn', 'mni', 'mnw', 'mr', 'mus',
 		'my', 'mzn', 'nah', 'pcm', 'fj', 'ne', 'nl', 'nds-nl', 'cr', 'new', 'nap', 'ce',
 		'frr', 'pih', 'no', 'nb', 'nn', 'nqo', 'nrm', 'nov', 'oc', 'mhr', 'or', 'om', 'ng',
 		'hz', 'uz', 'pa', 'pfl', 'pag', 'ami', 'blk', 'pap', 'koi', 'pi', 'pcd', 'pms', 'pwn', 'nds',
@@ -97,12 +97,12 @@ return [
 	],
 	// by language code, except 'y' is sorted like 'i'
 	'alphabetic_fy' => [
-		'aa', 'ab', 'ace', 'ady', 'af', 'ay', 'ak', 'als', 'alt', 'am', 'ami', 'an', 'ang', 'ar', 'arc',
+		'aa', 'ab', 'ace', 'ady', 'af', 'ay', 'ak', 'als', 'alt', 'am', 'ami', 'an', 'ang', 'anp', 'ar', 'arc',
 		'ary', 'arz', 'as', 'ast', 'atj', 'av', 'avk', 'awa', 'az', 'azb', 'ba', 'ban', 'bar', 'bat-smg', 'bcl', 'be',
 		'be-x-old', 'bg', 'bh', 'bi', 'bjn', 'bm', 'bn', 'bo', 'bpy', 'br', 'bs', 'bug', 'bxr',
 		'ca', 'cbk-zam', 'cdo', 'ce', 'ceb', 'ch', 'chy', 'cho', 'chr', 'cy', 'ckb',
 		'co', 'cr', 'crh', 'cs', 'csb', 'cu', 'cv', 'da', 'dag', 'de', 'din', 'diq', 'dk', 'dsb', 'dty', 'dv',
-		'dz', 'ee', 'el', 'eml', 'en', 'eo', 'es', 'et', 'eu', 'ext', 'gur', 'fa', 'ff', 'fi',
+		'dz', 'ee', 'el', 'eml', 'en', 'eo', 'es', 'et', 'eu', 'ext', 'gur', 'fa', 'fat', 'ff', 'fi',
 		'fy', 'fiu-vro', 'fj', 'fo', 'fr', 'frp', 'frr', 'fur', 'ga', 'gag', 'gan', 'gcr', 'gd',
 		'gl', 'glk', 'gn', 'gor', 'got', 'gom', 'gu', 'guw', 'gv', 'ha', 'hak', 'haw', 'he', 'hi', 'hy',
 		'hyw', 'hif', 'ho', 'hr', 'hsb', 'ht', 'hu', 'hz', 'ia', 'id', 'ie', 'ig', 'ii', 'yi',
@@ -135,9 +135,9 @@ return [
 		'fj', 'nah', 'nl', 'cr', 'no', 'nn', 'hsb', 'oc', 'om', 'ug',
 		'uz', 'nds', 'pl', 'pt', 'ro', 'rm', 'qu', 'sg', 'sc', 'st', 'tn',
 		'sq', 'scn', 'simple', 'ss', 'sk', 'sl', 'so', 'sh', 'shn', 'su', 'fi', 'sv',
-		'shy', 'tl', 'tt', 'vi', 'tpi', 'tr', 'tw', 'din', 'vo', 'wa', 'wo', 'ts', 'yo', 'diq',
-		'el', 'av', 'ab', 'ba', 'be', 'bg', 'mk', 'mn', 'ru', 'sr', 'tg',
-		'uk', 'kk', 'hy', 'hyw', 'yi', 'he', 'ur', 'ar', 'tk', 'sd', 'fa', 'ha',
+		'shy', 'tl', 'tt', 'vi', 'tpi', 'tr', 'tw', 'kcg', 'din', 'vo', 'wa', 'wo', 'ts', 'yo', 'diq',
+		'el', 'av', 'ab', 'kbd', 'ba', 'be', 'bg', 'mk', 'mn', 'ru', 'sr', 'tg',
+		'uk', 'kk', 'hy', 'hyw', 'yi', 'he', 'ur', 'ar', 'tk', 'sd', 'fa', 'ckb', 'ha',
 		'skr', 'ps', 'dv', 'ks', 'ne', 'pi', 'bh', 'mni', 'mr', 'my', 'mnw', 'sa', 'hi', 'as', 'bn',
 		'pa', 'pnb', 'gu', 'or', 'ta', 'te', 'kn', 'ml', 'si', 'th', 'lo',
 		'dz', 'ka', 'ti', 'am', 'chr', 'iu', 'km', 'zh', 'ja', 'ko',
