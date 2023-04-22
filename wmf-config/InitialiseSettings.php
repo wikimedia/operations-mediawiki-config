@@ -4476,6 +4476,14 @@ return [
 	'fishbowl' => false,
 ],
 
+'wgOAuthAutoApprove' => [
+	'default' => [
+		// T67750 do not require manual approval for readonly grants
+		[ 'grants' => [ 'mwoauth-authonly', 'mwoauth-authonlyprivate', 'basic' ] ],
+	],
+	'private' => [],
+],
+
 'wmgUseOAuthRateLimiter' => [
 	'metawiki' => true,
 	'default' => false,
