@@ -579,6 +579,10 @@ return [
 	'+frwiktionary' => [
 		'conj' => 116, // T262298
 	],
+	'+fywiki' => [ // T334807
+		'Portal' => 100,
+		'Portal_talk' => 101,
+	],
 	'+glwiki' => [
 		'Portal_talk' => 101, // T43213 (old namespace name)
 	],
@@ -3101,6 +3105,10 @@ return [
 		103 => 'Discussion_Auteur',
 		106 => 'Portail',
 		107 => 'Discussion_Portail',
+	],
+	'fywiki' => [
+		100 => 'Tema', // T334807
+		101 => 'Tema_oerlis', // T334807
 	],
 	'glwikisource' => [
 		102 => 'Autor', // T134041
