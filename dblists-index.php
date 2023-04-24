@@ -160,7 +160,7 @@ return [
 'chywiki' => [ 'wikipedia', 'desktop-improvements', 'small', 'wikidataclient', 'commonsuploads' ],
 'ckbwiki' => [ 'wikipedia', 'desktop-improvements', 'flaggedrevs', 'medium', 'wikidataclient', 'commonsuploads', 'cirrussearch-big-indices' ],
 'ckbwiktionary' => [ 'small', 'wikidataclient', 'group1' ],
-'cnwikimedia' => [ 'fishbowl', 'small', 'visualeditor-nondefault', 'group1' ],
+'cnwikimedia' => [ 'fishbowl', 'closed', 'small', 'visualeditor-nondefault', 'group0' ],
 'collabwiki' => [ 'special', 'private', 'desktop-improvements', 'medium', 'group1', 'nowikidatadescriptiontaglines' ],
 'commonswiki' => [ 'special', 'flow', 'large', 'wikibaserepo', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'cirrussearch-big-indices' ],
 'cowiki' => [ 'wikipedia', 'desktop-improvements', 'medium', 'wikidataclient', 'commonsuploads' ],
