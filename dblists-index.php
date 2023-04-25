@@ -676,7 +676,7 @@ return [
 'pihwiki' => [ 'wikipedia', 'desktop-improvements', 'small', 'wikidataclient', 'commonsuploads' ],
 'piwiki' => [ 'wikipedia', 'desktop-improvements', 'small', 'wikidataclient', 'commonsuploads' ],
 'piwiktionary' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
-'plwiki' => [ 'wikipedia', 'flow', 'flaggedrevs', 'large', 'wikidataclient', 'cirrussearch-big-indices' ],
+'plwiki' => [ 'wikipedia', 'desktop-improvements', 'flow', 'flaggedrevs', 'large', 'wikidataclient', 'cirrussearch-big-indices' ],
 'plwikibooks' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'plwikimedia' => [ 'small', 'group1' ],
 'plwikinews' => [ 'desktop-improvements', 'medium', 'wikidataclient', 'group1', 'nowikidatadescriptiontaglines' ],
