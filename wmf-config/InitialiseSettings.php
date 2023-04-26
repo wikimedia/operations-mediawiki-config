@@ -13267,6 +13267,12 @@ return [
 	'wikidataclient-test' => true,
 ],
 
+// temporary, for the rollout of T327062, to be deleted in T335107
+'wmgWikibaseTmpEnableLabelsInApiSummaries' => [
+	'default' => false,
+	'testwikidatawiki' => true,
+],
+
 // T123582: enables <link rel="preconnect" href="//upload.wikimedia.org">
 'wgImagePreconnect' => [
 	'default' => true,
