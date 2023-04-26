@@ -11620,6 +11620,11 @@ return [
 	],
 ],
 
+// T334295
+'wgAbuseFilterActorTableSchemaMigrationStage' => [
+	'default' => SCHEMA_COMPAT_OLD,
+],
+
 'wgXmlDumpSchemaVersion' => [
 	'default' => XML_DUMP_SCHEMA_VERSION_10,
 ],
