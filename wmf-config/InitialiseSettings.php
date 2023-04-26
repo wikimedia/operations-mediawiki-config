@@ -8454,6 +8454,7 @@ return [
 		'bqz' => 'Mka\'a', // T263946
 		'byv' => 'Medumba', // T263946
 		'cak' => 'Kaqchikel', // T278854
+		'cal' => 'Carolinian', // T308062
 		'cnh' => 'Hakha Chin', // T278853
 		'dua' => 'Duala', // T263946
 		'en-us' => 'American English', // T154589
@@ -8487,6 +8488,7 @@ return [
 		'sju' => 'ubmejesámiengiälla', // T226701
 		'smj' => 'julevsámegiella', // T146707
 		'srq' => 'mbia cheë', // T113408
+		'tpv' => 'Tanapag', // T308062
 		'tvu' => 'Tunen', // T263946
 		'vut' => 'Vute', // T263946
 		'wes' => 'Pidgin (Cameroon)', // T263946
