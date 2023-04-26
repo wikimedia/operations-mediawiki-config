@@ -55,16 +55,15 @@ $wgObjectCaches['mcrouter-with-onhost-tier'] = array_merge(
 	[ 'routingPrefix' => "/$wmgDatacenter/mw-with-onhost-tier/" ]
 );
 
-$wgWANObjectCache = [
-	// Specify the route prefix that mcrouter listens for and broadcasts.
-	// The route prefix is configured in Puppet (profile::mediawiki::mcrouter_wancache).
-	'broadcastRoutingPrefix' => '/*/mw-wan/',
-];
-
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	// nutcracker only; no mcrouter present
 	$wgMainCacheType = 'memcached-pecl';
 } else {
+	$wgWANObjectCache = [
+		// Specify the route prefix that mcrouter listens for and broadcasts.
+		// The route prefix is configured in Puppet (profile::mediawiki::mcrouter_wancache).
+		'broadcastRoutingPrefix' => '/*/mw-wan/',
+	];
 	$wgMainCacheType = 'mcrouter';
 }
 
