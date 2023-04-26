@@ -12455,9 +12455,6 @@ return [
 
 'wgGEHomepageNewAccountEnablePercentage' => [
 	'default' => 100,
-
-	// special treatment wikis
-	'dewiki' => 80, // has control group on their own request, T320876#8342832
 ],
 
 'wgGEMentorshipEnabled' => [
