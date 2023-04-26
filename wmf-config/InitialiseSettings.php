@@ -12117,41 +12117,13 @@ return [
 	'default' => 'extension1',
 ],
 
-'wgGEWikiConfigEnabled' => [
-	'default' => true,
-],
-
 'wgGEImageRecommendationApiHandler' => [
 	'default' => 'production',
-],
-
-'wgWelcomeSurveyEnabled' => [
-	'default' => true,
 ],
 
 'wgWelcomeSurveyEnableWithHomepage' => [
 	'default' => false,
 	'enwiki' => true, // T281896
-],
-
-'wgWelcomeSurveyExperimentalGroups' => [
-	'default' => [
-		'exp2_target_specialpage' => [
-			'percentage' => 100
-		],
-	],
-],
-
-'wgGEHelpPanelEnabled' => [
-	'default' => true,
-],
-
-'wgGEHelpPanelLoggingEnabled' => [
-	'default' => true,
-],
-
-'wgGEHelpPanelNewAccountEnableWithHomepage' => [
-	'default' => true,
 ],
 
 'wgGEHelpPanelHelpDeskTitle' => [
@@ -12164,10 +12136,6 @@ return [
 
 'wgGEHelpPanelLinks' => [
 	'default' => [],
-],
-
-'wgGEHomepageEnabled' => [
-	'default' => true,
 ],
 
 'wgGELevelingUpFeaturesEnabled' => [
@@ -12200,10 +12168,6 @@ return [
 'wgGEHomepageSuggestedEditsEnabled' => [
 	'default' => true,
 	'frwiktionary' => false,
-],
-
-'wgGEHomepageSuggestedEditsEnableTopics' => [
-	'default' => true,
 ],
 
 'wgGENewcomerTasksImageRecommendationsEnabled' => [
@@ -12490,44 +12454,12 @@ return [
 	'testwiki' => 'simplewiki',
 ],
 
-'wgGENewcomerTasksConfigTitle' => [
-	'default' => 'MediaWiki:NewcomerTasks.json',
-],
-
-'wgGENewcomerTasksTopicConfigTitle' => [
-	'default' => 'MediaWiki:NewcomerTopics.json',
-],
-
 'wgGENewcomerTasksOresTopicConfigTitle' => [
 	'default' => 'mw:MediaWiki:NewcomerTopicsOres.json',
 ],
 
 'wgGENewcomerTasksTopicType' => [
 	'default' => 'ores',
-],
-
-'wgGENewcomerTasksRemoteApiUrl' => [
-	'default' => null,
-],
-
-'wgGENewcomerTasksGuidanceEnabled' => [
-	'default' => true,
-],
-
-'wgGENewcomerTasksGuidanceRequiresOptIn' => [
-	'default' => false,
-],
-
-'wgGERestbaseUrl' => [
-	'default' => false,
-],
-
-'wgGEHomepageLoggingEnabled' => [
-	'default' => true,
-],
-
-'wgGEHomepageNewAccountEnablePercentage' => [
-	'default' => 100,
 ],
 
 'wgGEMentorshipEnabled' => [
@@ -12772,10 +12704,6 @@ return [
 
 'wgGECampaignTopics' => [
 	'default' => []
-],
-
-'wgGEStructuredTaskRejectionReasonTextInputEnabled' => [
-	'default' => false,
 ],
 
 'wmgShowRollbackConfirmationDefaultUserOptions' => [
