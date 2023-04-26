@@ -2534,5 +2534,18 @@ function wmfGetOverrideSettings() {
 		'-wmgHideGraphTags' => [
 			'default' => false,
 		],
+
+		// T319064 - temporary testing for CC BY-SA 3.0 -> 4.0 migration
+		'wgRightsUrl' => [
+			'default' => 'https://creativecommons.org/licenses/by-sa/4.0/',
+			'wikinews' => 'https://creativecommons.org/licenses/by/2.5/',
+		],
+		'wgRightsText' => [
+			'default' => 'Creative Commons Attribution-Share Alike 4.0',
+			'wikinews' => 'Creative Commons Attribution 2.5',
+			'wikidata' => 'All structured data from the main and property namespace is available under ' .
+				'the Creative Commons CC0 License; text in the other namespaces is available under ' .
+				'the Creative Commons Attribution-ShareAlike License; additional terms may apply.',
+		],
 	];
 } # wmfGetOverrideSettings()
