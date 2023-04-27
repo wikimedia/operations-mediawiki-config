@@ -2820,6 +2820,8 @@ Wikinews:
         no_1_5x: true
         no_2x: true
     cawikinews:
+        commons_wordmark: 'File:Wikinews wordmark-ca.svg'
+        comment_wordmark: T331823
         no_1_5x: true
         no_2x: true
     cswikinews:

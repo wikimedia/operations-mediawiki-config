@@ -3328,6 +3328,11 @@ return [
 	],
 
 	// Wikinews
+	'cawikinews' => [ // T331823
+		'src' => '/static/images/mobile/copyright/wikinews-wordmark-ca.svg',
+		'width' => 108,
+		'height' => 26,
+	],
 	'plwikinews' => [ // T290091
 		'src' => '/static/images/mobile/copyright/wikinews-wordmark-pl.svg',
 		'width' => 135,
