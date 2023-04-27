@@ -3293,6 +3293,11 @@ return [
 	],
 
 	// Wikiquote
+	'cawikiquote' => [ // T331823
+		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-ca.svg',
+		'width' => 78,
+		'height' => 40,
+	],
 	'euwikiquote' => null,
 	'etwikiquote' => null,
 	'frwikiquote' => [ // T290091
