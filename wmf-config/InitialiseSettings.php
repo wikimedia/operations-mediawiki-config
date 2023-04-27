@@ -11007,7 +11007,7 @@ return [
 // Thumbnail chaining
 
 'wgThumbnailBuckets' => [
-	'default' => [ 1920 ],
+	'default' => [ 1280 ],
 ],
 
 'wgThumbnailMinimumBucketDistance' => [
@@ -11016,7 +11016,7 @@ return [
 
 // Thumbnail prerendering at upload time
 'wgUploadThumbnailRenderMap' => [
-	'default' => [ 320, 640, 800, 1024, 1280, 1920 ],
+	'default' => [ 320, 640, 800, 1280 ],
 	'private' => [],
 ],
 
