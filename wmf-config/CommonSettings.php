@@ -1210,7 +1210,7 @@ if ( $wmgUseSyntaxHighlight ) {
 		// Route syntaxhighlight to the Shellbox named "shellbox-syntaxhighlight".
 		$wgShellboxUrls['syntaxhighlight'] = $wmgLocalServices['shellbox-syntaxhighlight'];
 		// $wgShellboxSecretKey set in PrivateSettings.php
-		$wgPygmentizePath = '/usr/bin/pygmentize';
+		$wgPygmentizePath = '/srv/app/pygmentize';
 	}
 }
 
