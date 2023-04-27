@@ -2622,7 +2622,9 @@ Wikibooks:
         comment_wordmark: T319320
         commons_tagline: 'File:Wikibooks-tagline-bn.svg'
         comment_tagline: T319320
-    cawikibooks: null
+    cawikibooks:
+        commons_wordmark: 'File:Wikibooks wordmark-ca.svg'
+        comment_wordmark: T331823
     cswikibooks:
         comment_1_5x: T177506
         comment_2x: T177506

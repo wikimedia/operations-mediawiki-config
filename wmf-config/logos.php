@@ -3314,6 +3314,11 @@ return [
 		'width' => 80,
 		'height' => 25,
 	],
+	'cawikibooks' => [ // T331823
+		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-ca.svg',
+		'width' => 108,
+		'height' => 26,
+	],
 	'fawikibooks' => null,
 	'fiwikibooks' => null,
 	'viwikibooks' => [ // T290091
