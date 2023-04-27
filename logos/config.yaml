@@ -1900,6 +1900,8 @@ Wiktionary:
         no_1_5x: true
         no_2x: true
         no_icon: true
+        commons_wordmark: 'File:Wiktionary-wordmark-ca.svg'
+        comment_wordmark: T331823
     ckbwiktionary:
         commons: 'File:Wiktionary-logo-ckb-bold.svg'
     cowiktionary:

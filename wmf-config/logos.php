@@ -3225,6 +3225,11 @@ return [
 		'width' => 123,
 		'height' => 25,
 	],
+	'cawiktionary' => [ // T331823
+		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-ca.svg',
+		'width' => 97,
+		'height' => 19,
+	],
 	'cswiktionary' => [ // T328357
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-cs.svg',
 		'width' => 122,
