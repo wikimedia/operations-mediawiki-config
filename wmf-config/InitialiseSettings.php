@@ -6534,23 +6534,29 @@ return [
 		'CacheThresholdTime' => 0.0, // 0 means cache all
 		'WarmParsoidParserCache' => false, // whether parsoid output should be generated and cached after every edit
 	],
-	'testwiki' => [
+	'group0' => [
 		'StashType' => null, // defaults to using MainStash
 		'StashDuration' => 24 * 60 * 60, // 24h in production, VE will fail to save after this time.
 		'CacheThresholdTime' => 0.0, // 0 means cache all
-		'WarmParsoidParserCache' => true, // T320535: enable cache warming
+		'WarmParsoidParserCache' => true, // T329366: enable cache warming
 	],
-	'mediawikiwiki' => [
+	'small' => [
 		'StashType' => null, // defaults to using MainStash
 		'StashDuration' => 24 * 60 * 60, // 24h in production, VE will fail to save after this time.
 		'CacheThresholdTime' => 0.0, // 0 means cache all
-		'WarmParsoidParserCache' => true, // T320534: enable cache warming
+		'WarmParsoidParserCache' => true, // T329366: enable cache warming
 	],
-	'officewiki' => [
+	'commonswiki' => [
 		'StashType' => null, // defaults to using MainStash
 		'StashDuration' => 24 * 60 * 60, // 24h in production, VE will fail to save after this time.
-		'CacheThresholdTime' => 0.0, // 0 means cache all
-		'WarmParsoidParserCache' => true, // T320534: enable cache warming
+		'CacheThresholdTime' => 1.0, // only cache if parsing takes longer than n seconds
+		'WarmParsoidParserCache' => false, // disable cache warming for now
+	],
+	'wikidatawiki' => [
+		'StashType' => null, // defaults to using MainStash
+		'StashDuration' => 24 * 60 * 60, // 24h in production, VE will fail to save after this time.
+		'CacheThresholdTime' => 1.0, // only cache if parsing takes longer than n seconds
+		'WarmParsoidParserCache' => false, // disable cache warming for now
 	],
 ],
 
