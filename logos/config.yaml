@@ -2970,6 +2970,8 @@ Wikisource:
     cawikisource:
         no_1_5x: true
         no_2x: true
+        commons_wordmark: 'File:Wikisource wordmark-ca.svg'
+        comment_wordmark: T331823
     cswikisource:
         commons: 'File:Wikisource-logo-cs-v2.svg'
         comment: T310961

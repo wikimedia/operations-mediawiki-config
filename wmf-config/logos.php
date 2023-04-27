@@ -3350,6 +3350,11 @@ return [
 	],
 
 	// Wikisource
+	'cawikisource' => [ // T331823
+		'src' => '/static/images/mobile/copyright/wikisource-wordmark-ca.svg',
+		'width' => 108,
+		'height' => 26,
+	],
 	'jawikisource' => [ // T326488
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-ja.svg',
 		'width' => 137,
