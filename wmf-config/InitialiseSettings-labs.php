@@ -43,8 +43,6 @@ function wmfGetOverrideSettings() {
 
 		// All settings with $lang, $site, etc. for replacement during initialisation must be listed here
 		'@replaceableSettings' => [
-			// T319064 - temporary testing for CC BY-SA 3.0 -> 4.0 migration
-			'wgRightsUrl',
 		],
 
 		'wgParserCacheType' => [
@@ -2584,16 +2582,6 @@ function wmfGetOverrideSettings() {
 		],
 		'-wmgHideGraphTags' => [
 			'default' => false,
-		],
-
-		// T319064 - temporary testing for CC BY-SA 3.0 -> 4.0 migration
-		'wgRightsUrl' => [
-			// Link to the translation of the license in the relevant language where available
-			// For unrecognized language codes, creativecommons.org falls back to English
-			'default' => 'https://creativecommons.org/licenses/by-sa/4.0/deed.$lang',
-			// Don't try to link to weird things like /deed.meta or /deed.commons
-			'special' => 'https://creativecommons.org/licenses/by-sa/4.0/',
-			'wikinews' => 'https://creativecommons.org/licenses/by/2.5/',
 		],
 	];
 } # wmfGetOverrideSettings()

@@ -48,6 +48,7 @@ return [
 	'wgCanonicalServer',
 	'wgUploadPath',
 	'wgNoticeProject',
+	'wgRightsUrl',
 ],
 // For live conversion of old revisions:
 'wgLegacyEncoding' => [
@@ -11214,7 +11215,11 @@ return [
 	'wikidata' => 'Wikidata:Copyright',
 ],
 'wgRightsUrl' => [
-	'default' => 'https://creativecommons.org/licenses/by-sa/4.0/',
+	// Link to the translation of the license in the relevant language where available
+	// For unrecognized language codes, creativecommons.org falls back to English
+	'default' => 'https://creativecommons.org/licenses/by-sa/4.0/deed.$lang',
+	// Don't try to link to weird things like /deed.meta or /deed.commons
+	'special' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 	'huwikinews' => 'https://creativecommons.org/licenses/by/3.0/',
 	'wikinews' => 'https://creativecommons.org/licenses/by/2.5/',
 ],
