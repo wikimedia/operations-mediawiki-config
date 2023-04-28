@@ -11214,12 +11214,12 @@ return [
 	'wikidata' => 'Wikidata:Copyright',
 ],
 'wgRightsUrl' => [
-	'default' => 'https://creativecommons.org/licenses/by-sa/3.0/',
+	'default' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 	'huwikinews' => 'https://creativecommons.org/licenses/by/3.0/',
 	'wikinews' => 'https://creativecommons.org/licenses/by/2.5/',
 ],
 'wgRightsText' => [
-	'default' => 'Creative Commons Attribution-Share Alike 3.0',
+	'default' => 'Creative Commons Attribution-Share Alike 4.0',
 	'huwikinews' => 'Creative Commons Attribution 3.0',
 	'wikinews' => 'Creative Commons Attribution 2.5',
 	// Wikidata footer, T112606
