@@ -6859,6 +6859,10 @@ return [
 	'wikitech' => true, // Not behind Varnish
 ],
 
+'wgMFCustomSiteModules' => [
+	'default' => true,
+],
+
 // T169001
 'wgMFLogWrappedInfoboxes' => [
 	'default' => false,
