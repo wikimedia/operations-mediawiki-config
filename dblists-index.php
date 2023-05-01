@@ -602,7 +602,7 @@ return [
 'nahwiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'napwiki' => [ 'wikipedia', 'desktop-improvements', 'medium', 'wikidataclient', 'commonsuploads' ],
 'napwikisource' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
-'nawiki' => [ 'wikipedia', 'desktop-improvements', 'small', 'wikidataclient', 'commonsuploads' ],
+'nawiki' => [ 'wikipedia', 'closed', 'desktop-improvements', 'small', 'wikidataclient', 'group0' ],
 'nawikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
 'nawikiquote' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0' ],
 'nawiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
