@@ -596,7 +596,7 @@ return [
 	'euwikibooks' => '/static/images/project-logos/euwikibooks.png', // T54019
 	'fawikibooks' => '/static/images/project-logos/fawikibooks.png',
 	'fiwikibooks' => '/static/images/project-logos/fiwikibooks.png',
-	'frwikibooks' => '/static/images/project-logos/frwikibooks.png',
+	'frwikibooks' => '/static/images/project-logos/frwikibooks.png', // T335642
 	'fywikibooks' => '/static/images/project-logos/fywikibooks.png',
 	'hewikibooks' => '/static/images/project-logos/hewikibooks.png',
 	'hiwikibooks' => '/static/images/project-logos/hiwikibooks.png', // T157229
@@ -1361,7 +1361,7 @@ return [
 	'enwikibooks' => '/static/images/project-logos/enwikibooks-1.5x.png', // T177506
 	'eswikibooks' => '/static/images/project-logos/eswikibooks-1.5x.png', // T170248
 	'fiwikibooks' => '/static/images/project-logos/fiwikibooks-1.5x.png', // T177506
-	'frwikibooks' => '/static/images/project-logos/frwikibooks-1.5x.png', // T150618
+	'frwikibooks' => '/static/images/project-logos/frwikibooks-1.5x.png', // T150618, T335642
 	'fywikibooks' => '/static/images/project-logos/fywikibooks-1.5x.png', // T150618
 	'hewikibooks' => '/static/images/project-logos/hewikibooks-1.5x.png', // T201562
 	'hiwikibooks' => '/static/images/project-logos/hiwikibooks-1.5x.png',
@@ -1974,7 +1974,7 @@ return [
 	'enwikibooks' => '/static/images/project-logos/enwikibooks-2x.png', // T177506
 	'eswikibooks' => '/static/images/project-logos/eswikibooks-2x.png', // T170248
 	'fiwikibooks' => '/static/images/project-logos/fiwikibooks-2x.png', // T177506
-	'frwikibooks' => '/static/images/project-logos/frwikibooks-2x.png', // T150618
+	'frwikibooks' => '/static/images/project-logos/frwikibooks-2x.png', // T150618, T335642
 	'fywikibooks' => '/static/images/project-logos/fywikibooks-2x.png', // T150618
 	'hewikibooks' => '/static/images/project-logos/hewikibooks-2x.png', // T201562
 	'hiwikibooks' => '/static/images/project-logos/hiwikibooks-2x.png',
@@ -3331,6 +3331,11 @@ return [
 	],
 	'fawikibooks' => null,
 	'fiwikibooks' => null,
+	'frwikibooks' => [ // T335642
+		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-fr.svg',
+		'width' => 140,
+		'height' => 17,
+	],
 	'viwikibooks' => [ // T290091
 		'src' => '/static/images/mobile/copyright/wikibooks-wordmark-vi.svg',
 		'width' => 120,

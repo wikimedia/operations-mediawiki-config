@@ -2669,8 +2669,12 @@ Wikibooks:
         comment_2x: T177506
         no_wordmark: true
     frwikibooks:
-        comment_1_5x: T150618
-        comment_2x: T150618
+        commons: File:Wikibooks-logo-fr-noslogan.svg
+        comment: T335642
+        comment_1_5x: 'T150618, T335642'
+        comment_2x: 'T150618, T335642'
+        commons_wordmark: 'File:Wikibooks-wordmark-fr.svg'
+        comment_wordmark: T335642
     fywikibooks:
         comment_1_5x: T150618
         comment_2x: T150618
