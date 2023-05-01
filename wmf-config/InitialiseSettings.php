@@ -6024,6 +6024,10 @@ return [
 	'+skwiki' => [
 		'Project' => true, // T229014
 	],
+	'+slwiki' => [
+		'Osnutek' /* Draft */ => true, // T335208
+		'Project' => true, // T335208
+	],
 	'+srwiki' => [
 		'Project' => true, // T205206
 		'Нацрт' /* Draft */ => true, // T223024
