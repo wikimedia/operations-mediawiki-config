@@ -6639,6 +6639,7 @@ return [
 	'arwiki' => true,
 	'azwiki' => true, // T119727
 	'bnwiki' => true, // T129728
+	'bnwikibooks' => true, // T335705
 	'bnwikiquote' => true, // T328834
 	'bnwikisource' => true, // T149683
 	'ckbwiki' => true, // T169563
