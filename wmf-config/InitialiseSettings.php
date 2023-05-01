@@ -12158,6 +12158,11 @@ return [
 	'zhwiki' => true,
 ],
 
+'wgGENewcomerTasksSectionImageRecommendationsEnabled' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 'wgGENewcomerTasksLinkRecommendationsEnabled' => [
 	'default' => false,
 	'testwiki' => true,

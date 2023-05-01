@@ -1538,6 +1538,9 @@ function wmfGetOverrideSettings() {
 		'wgGENewcomerTasksImageRecommendationsEnabled' => [
 			'default' => true,
 		],
+		'wgGENewcomerTasksSectionImageRecommendationsEnabled' => [
+			'default' => true,
+		],
 		'wgGENewcomerTasksLinkRecommendationsEnabled' => [
 			'enwiki' => true,
 		],
