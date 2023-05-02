@@ -12571,6 +12571,15 @@ return [
 	'+testwiki' => [
 		'personalized-praise' => true,
 	],
+	'+arwiki' => [
+		'personalized-praise' => true,
+	],
+	'+bnwiki' => [
+		'personalized-praise' => true,
+	],
+	'+cswiki' => [
+		'personalized-praise' => true,
+	],
 ],
 
 'wgGEPersonalizedPraiseNotificationsEnabled' => [
