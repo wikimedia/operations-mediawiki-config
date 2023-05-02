@@ -12558,6 +12558,18 @@ return [
 	'cswiki' => 'beta',
 ],
 
+'wgGEMentorDashboardEnabledModules' => [
+	'default' => [
+		'mentee-overview' => true,
+		'mentor-tools' => true,
+		'resources' => true,
+		'personalized-praise' => false,
+	],
+	'+testwiki' => [
+		'personalized-praise' => true,
+	],
+],
+
 'wgGEPersonalizedPraiseNotificationsEnabled' => [
 	'default' => false,
 ],
