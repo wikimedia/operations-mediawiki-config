@@ -12561,19 +12561,6 @@ return [
 	'default' => true,
 ],
 
-'wgGEMentorDashboardDeploymentMode' => [
-	// wikis only receive stable modules
-	'default' => 'stable',
-
-	// testwiki has all modules
-	'testwiki' => 'alpha',
-
-	// Growth's pilot wikis will have beta-tested modules
-	'arwiki' => 'beta',
-	'bnwiki' => 'beta',
-	'cswiki' => 'beta',
-],
-
 'wgGEMentorDashboardEnabledModules' => [
 	'default' => [
 		'mentee-overview' => true,

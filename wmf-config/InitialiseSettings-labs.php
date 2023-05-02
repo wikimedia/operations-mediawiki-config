@@ -1587,9 +1587,6 @@ function wmfGetOverrideSettings() {
 			'srwiki' => 'https://sr.wikipedia.org/w/api.php',
 			'viwiki' => 'https://vi.wikipedia.org/w/api.php',
 		],
-		'-wgGEMentorDashboardDeploymentMode' => [
-			'default' => 'alpha',
-		],
 		'-wgGEMentorDashboardEnabledModules' => [
 			'default' => [
 				'mentee-overview' => true,
