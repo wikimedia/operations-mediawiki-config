@@ -11311,6 +11311,11 @@ return [
 	'zhwikivoyage' => false, // T333821
 ],
 
+// T333137
+'wgKartographerNearbyOnMobile' => [
+	'default' => true,
+],
+
 'wgKartographerWikivoyageNearby' => [
 	'default' => true,
 	'dewikivoyage' => false, // T320692
