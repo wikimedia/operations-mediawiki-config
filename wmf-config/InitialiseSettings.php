@@ -6807,11 +6807,15 @@ return [
 
 'wmgUseGraph' => [
 	'default' => false, // T334895
+	'mediawikiwiki' => true,
+	'testwiki' => true,
 ],
 
 // T334895
 'wmgHideGraphTags' => [
 	'default' => true,
+	'mediawikiwiki' => false,
+	'testwiki' => false,
 ],
 
 'wgGraphDefaultVegaVer' => [
