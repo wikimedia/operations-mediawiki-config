@@ -300,6 +300,16 @@ return [
 			'suppressredirect' => true,
 		], // T296640
 	],
+	'+bnwikiquote' => [
+		'autopatrolled' => [
+			'autopatrol' => true, // T335829
+		],
+		'patroller' => [
+			'patrol' => true, // T335829
+			'rollback' => true, // T335829
+			'suppressredirect' => true, // T335829
+		],
+	],
 	'+bnwikisource' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T199475
 		'flood' => [ 'bot' => true ], // T129087
@@ -3130,6 +3140,12 @@ return [
 			'patroller', // T296640
 		],
 	],
+	'+bnwikiquote' => [
+		'sysop' => [
+			'autopatrolled', // T335829
+			'patroller', // T335829
+		],
+	],
 	'+bnwikisource' => [
 		'sysop' => [
 			'autopatrolled',
@@ -4565,6 +4581,12 @@ return [
 		'sysop' => [
 			'autopatrolled', // T296640
 			'patroller', // T296640
+		],
+	],
+	'+bnwikiquote' => [
+		'sysop' => [
+			'autopatrolled', // T335829
+			'patroller', // T335829
 		],
 	],
 	'+bnwikisource' => [
