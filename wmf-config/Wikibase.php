@@ -246,6 +246,11 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( isset( $wmgWikibaseTmpEnableLabelsInApiSummaries ) ) {
 		$wgWBRepoSettings['tmpEnableLabelsInApiSummaries'] = $wmgWikibaseTmpEnableLabelsInApiSummaries;
 	}
+
+	// Temporary, added for T300458, to be deleted in T335783
+	if ( isset( $wmgWikibaseTmpWbsubscribersSensibleOutput ) ) {
+		$wgWBRepoSettings['tmpWbsubscribersSensibleOutput'] = $wmgWikibaseTmpWbsubscribersSensibleOutput;
+	}
 }
 
 if ( $wmgUseWikibaseClient ) {
