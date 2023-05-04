@@ -292,7 +292,7 @@ return [
 'frrwiki' => [ 'wikipedia', 'desktop-improvements', 'medium', 'wikidataclient' ],
 'frwiki' => [ 'wikipedia', 'desktop-improvements', 'flow', 'large', 'wikidataclient', 'modern-mainpage', 'cirrussearch-big-indices' ],
 'frwikibooks' => [ 'medium', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
-'frwikinews' => [ 'flaggedrevs', 'medium', 'wikidataclient', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
+'frwikinews' => [ 'desktop-improvements', 'flaggedrevs', 'medium', 'wikidataclient', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
 'frwikiquote' => [ 'desktop-improvements', 'flow', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'modern-mainpage' ],
 'frwikisource' => [ 'flow', 'large', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
 'frwikiversity' => [ 'flow', 'medium', 'wikidataclient', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
