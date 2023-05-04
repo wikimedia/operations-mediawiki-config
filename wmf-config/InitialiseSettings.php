@@ -6809,6 +6809,7 @@ return [
 	'default' => false, // T334895
 	'mediawikiwiki' => true,
 	'testwiki' => true,
+	'test2wiki' => true,
 ],
 
 // T334895
@@ -6816,6 +6817,7 @@ return [
 	'default' => true,
 	'mediawikiwiki' => false,
 	'testwiki' => false,
+	'test2wiki' => false,
 ],
 
 'wgGraphDefaultVegaVer' => [
