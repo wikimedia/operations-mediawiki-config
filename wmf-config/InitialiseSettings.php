@@ -11451,8 +11451,7 @@ return [
 	// T321734:
 	'azwiki' => 0.2,
 	'dewiki' => 0.2,
-	// Temporarily disable during eswiki deployment.
-	'eswiki' => 0,
+	'eswiki' => 0.2,
 	'fawiki' => 0.2,
 	'hiwiki' => 0.2,
 	'idwiki' => 0.2,

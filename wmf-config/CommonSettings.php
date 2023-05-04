@@ -309,11 +309,6 @@ extract( $globals );
 # Determine legacy site/lang pair for the current wiki
 list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 
-// Gradual roll out of Vector 2022 skin to Spanish Wikipedia (T326892)
-if ( $wgDBname === 'eswiki' && mt_rand( 0, 100 ) < 11 ) {
-	$wgDefaultSkin = 'vector-2022';
-}
-
 # -------------------------------------------------------------------------
 # Settings common to all wikis
 

@@ -241,7 +241,7 @@ return [
 'eowikisource' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'eowikivoyage' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'eowiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
-'eswiki' => [ 'wikipedia', 'large', 'wikidataclient', 'cirrussearch-big-indices' ],
+'eswiki' => [ 'wikipedia', 'desktop-improvements', 'large', 'wikidataclient', 'cirrussearch-big-indices' ],
 'eswikibooks' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
 'eswikinews' => [ 'flaggedrevs', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines' ],
 'eswikiquote' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1' ],
