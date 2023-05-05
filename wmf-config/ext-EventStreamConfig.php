@@ -1255,6 +1255,11 @@ return [
 			// Emit canary events.
 			'canary_events_enabled' => true,
 		],
+		'mediawiki.page_outlink_topic_prediction_change' => [
+			'schema_title' => 'mediawiki/page/prediction_classification_change',
+			'destination_event_service' => 'eventgate-main',
+			'canary_events_enabled' => true,
+		],
 		'mediawiki.revision-tags-change' => [
 			'schema_title' => 'mediawiki/revision/tags-change',
 			'destination_event_service' => 'eventgate-main',
