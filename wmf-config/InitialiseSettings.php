@@ -7136,6 +7136,7 @@ return [
 'wmgUseTranslationMemory' => [
 	'default' => true,
 	'otrs_wikiwiki' => false, // T63297
+	'collabwiki' => false, // T313241
 ],
 'wmgTranslateESIndex' => [
 	'default' => 'ttmserver',
