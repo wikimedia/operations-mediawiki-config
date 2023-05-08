@@ -2943,8 +2943,10 @@ Wikinews:
         comment_lang_variants: T308620
 Wikisource:
     arwikisource:
-        no_1_5x: true
-        no_2x: true
+        commons: 'File:Wikisource-logo-ar.svg'
+        comment: T336193
+        comment_1_5x: T336193
+        comment_2x: T336193
     aswikisource:
         comment: T45129
         no_1_5x: true

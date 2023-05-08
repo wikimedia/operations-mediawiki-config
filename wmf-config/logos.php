@@ -677,7 +677,7 @@ return [
 	'zhwikinews' => '/static/images/project-logos/zhwikinews.png', // T298550
 
 	// Wikisource
-	'arwikisource' => '/static/images/project-logos/arwikisource.png',
+	'arwikisource' => '/static/images/project-logos/arwikisource.png', // T336193
 	'aswikisource' => '/static/images/project-logos/aswikisource.png', // T45129
 	'azwikisource' => '/static/images/project-logos/azwikisource.png', // T54019
 	'banwikisource' => '/static/images/project-logos/banwikisource.png', // T296459
@@ -1393,6 +1393,7 @@ return [
 	'zhwikinews' => '/static/images/project-logos/zhwikinews-1.5x.png', // T298550
 
 	// Wikisource
+	'arwikisource' => '/static/images/project-logos/arwikisource-1.5x.png', // T336193
 	'banwikisource' => '/static/images/project-logos/banwikisource-1.5x.png',
 	'bewikisource' => '/static/images/project-logos/bewikisource-1.5x.png', // T150618, T310961
 	'bnwikisource' => '/static/images/project-logos/bnwikisource-1.5x.png',
@@ -2006,6 +2007,7 @@ return [
 	'zhwikinews' => '/static/images/project-logos/zhwikinews-2x.png', // T298550
 
 	// Wikisource
+	'arwikisource' => '/static/images/project-logos/arwikisource-2x.png', // T336193
 	'banwikisource' => '/static/images/project-logos/banwikisource-2x.png',
 	'bewikisource' => '/static/images/project-logos/bewikisource-2x.png', // T150618, T310961
 	'bnwikisource' => '/static/images/project-logos/bnwikisource-2x.png',
