@@ -78,6 +78,7 @@ return [
 		'wd_propertysuggester.client_side_property_request',
 		'wd_propertysuggester.server_side_property_request',
 		'mediawiki.mentor_dashboard.visit',
+		'mediawiki.mentor_dashboard.personalized_praise',
 		'mediawiki.ipinfo_interaction',
 		'mediawiki.editgrowthconfig',
 		'mediawiki.wikistories_consumption_event',

@@ -842,6 +842,10 @@ return [
 			'schema_title' => 'analytics/mediawiki/mentor_dashboard/visit',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		'mediawiki.mentor_dashboard.personalized_praise' => [
+			'schema_title' => 'analytics/mediawiki/mentor_dashboard/personalized_praise',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		'mediawiki.welcomesurvey.interaction' => [
 			'schema_title' => 'analytics/mediawiki/welcomesurvey/interaction',
 			'destination_event_service' => 'eventgate-analytics-external'
