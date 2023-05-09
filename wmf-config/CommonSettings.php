@@ -1176,6 +1176,19 @@ $wgSiteMatrixPrivateSites = MWWikiversions::readDbListFile( 'private' );
 $wgSiteMatrixFishbowlSites = MWWikiversions::readDbListFile( 'fishbowl' );
 $wgSiteMatrixNonGlobalSites = MWWikiversions::readDbListFile( 'nonglobal' );
 
+// list of codex icons to use for interwiki (based on SiteMatrix) search results widget
+// https://phabricator.wikimedia.org/T315269
+$wgInterwikiLogoOverride = [
+	'w' => 'logoWikipedia',
+	'wikt' => 'logoWiktionary',
+	'b' => 'logoWikibooks',
+	'n' => 'logoWikinews',
+	'q' => 'logoWikiquote',
+	's' => 'logoWikisource',
+	'v' => 'logoWikiversity',
+	'voy' => 'logoWikivoyage',
+];
+
 if ( $wmgUseCharInsert ) {
 	wfLoadExtension( 'CharInsert' );
 }
