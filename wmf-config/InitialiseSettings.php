@@ -6551,6 +6551,12 @@ return [
 		'CacheThresholdTime' => 0.0, // 0 means cache all
 		'WarmParsoidParserCache' => true, // T329366: enable cache warming
 	],
+	'medium' => [
+		'StashType' => null, // defaults to using MainStash
+		'StashDuration' => 24 * 60 * 60, // 24h in production, VE will fail to save after this time.
+		'CacheThresholdTime' => 0.0, // 0 means cache all
+		'WarmParsoidParserCache' => true, // T329366: enable cache warming
+	],
 	'commonswiki' => [
 		'StashType' => null, // defaults to using MainStash
 		'StashDuration' => 24 * 60 * 60, // 24h in production, VE will fail to save after this time.
