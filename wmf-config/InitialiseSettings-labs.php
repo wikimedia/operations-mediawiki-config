@@ -566,22 +566,25 @@ function wmfGetOverrideSettings() {
 				'logged_out' => true,
 			],
 		],
+		'wgVectorZebraDesign' => [
+			'default' => [
+				'logged_in' => true,
+				'logged_out' => false,
+			],
+		],
 		'wgVectorWebABTestEnrollment' => [
 			'default' => [
-				'name' => 'vector.sticky_header_edit',
+				'name' => 'skin-vector-zebra-experiment',
 				'enabled' => true,
 				'buckets' => [
 					'unsampled' => [
 						'samplingRate' => 0
 					],
-					'noStickyHeaderControl' => [
-						'samplingRate' => 0.34
+					'control' => [
+						'samplingRate' => 0.5
 					],
-					'stickyHeaderNoEditButtonTreatment1' => [
-						'samplingRate' => 0.33
-					],
-					'stickyHeaderEditButtonTreatment2' => [
-						'samplingRate' => 0.33
+					'treatment' => [
+						'samplingRate' => 0.5
 					],
 				]
 			]
