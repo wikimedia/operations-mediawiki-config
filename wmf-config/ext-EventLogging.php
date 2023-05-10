@@ -25,6 +25,7 @@ return [
 		'eventlogging_EchoMail',
 		'eventlogging_EditAttemptStep',
 		'eventlogging_FeaturePolicyViolation',
+		'eventlogging_FirstInputDelay',
 		'eventlogging_HelpPanel',
 		'eventlogging_HomepageModule',
 		'eventlogging_HomepageVisit',
