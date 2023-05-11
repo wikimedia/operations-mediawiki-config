@@ -8278,6 +8278,15 @@ return [
 	'testwiki' => 'direct', // T323667
 ],
 
+'wgSpecialContributeSkinsEnabled' => [
+	'default' => null,
+	'bnwiki' => [ 'minerva' ],
+	'mlwiki' => [ 'minerva' ],
+	'mnwiki' => [ 'minerva' ],
+	'swwiki' => [ 'minerva' ],
+	'tlwiki' => [ 'minerva' ],
+],
+
 'wmgUseExternalGuidance' => [
 	'default' => false,
 	'wikipedia' => true,
