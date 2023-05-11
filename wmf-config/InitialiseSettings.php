@@ -13441,4 +13441,8 @@ return [
 	'default' => SCHEMA_COMPAT_OLD,
 ],
 
+'wgWatchersMaxAge' => [
+	'default' => 30 * 24 * 3600, // T336250
+],
+
 ];
