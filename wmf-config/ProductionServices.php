@@ -192,9 +192,9 @@ $services = [
 		// codfw parsercache
 		'parsercache-dbs' => [
 			'pc1' => '10.192.0.72',   # pc2011, A5 8.8TB 512GB # pc1
-			'pc2' => '10.192.16.55',  # pc2012, B5 8.8TB 512GB # pc2
+			'pc2' => '10.192.48.52',  # pc2014, D1 8.8TB 512GB # pc2
 			'pc3' => '10.192.32.57',  # pc2013, C1 8.8TB 512GB # pc3
-			# spare: '10.192.48.52',  # pc2014, D1 8.8TB 512GB
+			# spare: '10.192.16.55',  # pc2012, B5 8.8TB 512GB
 			# Use spare(s) to replace any of the above if needed
 		],
 		// LockManager Redis codfw
