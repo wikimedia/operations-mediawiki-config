@@ -660,7 +660,7 @@ return [
 'orwiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'oswiki' => [ 'wikipedia', 'desktop-improvements', 'medium', 'wikidataclient', 'commonsuploads' ],
 'otrs_wikiwiki' => [ 'special', 'private', 'medium', 'group1', 'nowikidatadescriptiontaglines' ],
-'outreachwiki' => [ 'special', 'flow', 'medium', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines' ],
+'outreachwiki' => [ 'special', 'flow', 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines' ],
 'pa_uswikimedia' => [ 'closed', 'small', 'visualeditor-nondefault', 'group0' ],
 'pagwiki' => [ 'wikipedia', 'desktop-improvements', 'small', 'wikidataclient', 'commonsuploads' ],
 'pamwiki' => [ 'wikipedia', 'desktop-improvements', 'medium', 'wikidataclient', 'commonsuploads' ],
