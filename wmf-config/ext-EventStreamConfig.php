@@ -722,6 +722,10 @@ return [
 			'schema_title' => 'analytics/mobile_apps/ios_reading_lists',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		'ios.navigation_events' => [
+			'schema_title' => 'analytics/mobile_apps/ios_navigation_events',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		'android.user_contribution_screen' => [
 			'schema_title' => 'analytics/mobile_apps/android_user_contribution_screen',
 			'destination_event_service' => 'eventgate-analytics-external',
