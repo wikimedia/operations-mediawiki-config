@@ -2065,6 +2065,7 @@ return [
 		'Bug58676' => 'debug', // Invalid message parameter
 		'cache-cookies' => 'debug',
 		'captcha' => 'debug',
+		'CampaignEvents' => 'debug',
 		'CentralAuth' => 'info', // Don't log personal names by default T312704
 		'CentralNotice' => 'debug',
 		'CirrusSearch' => 'debug',
