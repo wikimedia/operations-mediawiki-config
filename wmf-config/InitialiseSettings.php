@@ -13240,8 +13240,7 @@ return [
 
 // temporary, for the rollout of T327062, to be deleted in T335107
 'wmgWikibaseTmpEnableLabelsInApiSummaries' => [
-	'default' => false,
-	'testwikidatawiki' => true,
+	'default' => true,
 ],
 
 // temporary, for the rollout of T300458, to be deleted in T335783
