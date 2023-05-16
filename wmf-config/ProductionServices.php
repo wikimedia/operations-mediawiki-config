@@ -43,7 +43,7 @@ $common = [
 	//
 	// Profile collection is not active-active (but is consumed by
 	// pipelines in both data centers).
-	'xenon' => '10.64.32.141', # mwlog1002.eqiad.wmnet
+	'xenon' => '10.64.16.88', # arclamp1001.eqiad.wmnet
 
 	// Statsd is not active-active.
 	'statsd' => '10.64.16.81', # statsd.eqiad.wmnet, now resolving to graphite1005.eqiad.wmnet
