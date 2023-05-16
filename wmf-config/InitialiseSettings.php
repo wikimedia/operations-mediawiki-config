@@ -13247,8 +13247,7 @@ return [
 // temporary, for the rollout of T300458, to be deleted in T335783
 'wmgWikibaseTmpWbsubscribersSensibleOutput' => [
 	'default' => null,
-	'wikibaserepo' => false,
-	'testwikidatawiki' => true,
+	'wikibaserepo' => true,
 ],
 
 // T123582: enables <link rel="preconnect" href="//upload.wikimedia.org">
