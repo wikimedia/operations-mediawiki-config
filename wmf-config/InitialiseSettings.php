@@ -2329,10 +2329,21 @@ return [
 	],
 ],
 
+'wgVectorZebraDesign' => [
+	'default' => [
+		'logged_in' => false,
+		'logged_out' => false,
+	],
+	'hewiki' => [
+		'logged_in' => true,
+		'logged_out' => false,
+	],
+],
+
 'wgVectorWebABTestEnrollment' => [
 	'default' => [
-		'name' => 'vector.sticky_header_edit',
-		'enabled' => false,
+		'name' => 'skin-vector-zebra-experiment',
+		'enabled' => true,
 		'buckets' => [
 			'unsampled' => [
 				'samplingRate' => 0
