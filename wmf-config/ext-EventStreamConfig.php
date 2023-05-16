@@ -1059,10 +1059,31 @@ return [
 			'canary_events_enabled' => false,
 		],
 
-		// Declare release candiate 1 of
-		// mediawiki.page_change stream.
-		// https://phabricator.wikimedia.org/T311129
+		// NOTE: We are releasing mediawiki.page_change.v1.
+		// This stream will be removed soon - 2023-05.
+		// https://phabricator.wikimedia.org/T325303
 		'rc1.mediawiki.page_change' => [
+			'schema_title' => 'mediawiki/page/change',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page.page_id',
+			],
+			'destination_event_service' => 'eventgate-main',
+		],
+
+		// NOTE: We have changed error stream name conventions.
+		// This stream will be removed soon - 2023-05.
+		// https://phabricator.wikimedia.org/T326536
+		'rc1.enrichment.mediawiki_page_content_change.error' => [
+			'schema_title' => 'error',
+			'canary_events_enabled' => false,
+		],
+
+		// mediawiki.page_change stream.
+		// This stream is using major API versioning.
+		// https://wikitech.wikimedia.org/wiki/Event_Platform/Stream_Configuration#Stream_versioning
+		// https://phabricator.wikimedia.org/T311129
+		'mediawiki.page_change.v1' => [
 			'schema_title' => 'mediawiki/page/change',
 			# When producing this stream to kafka, use a message key
 			# like { wiki_id: X, page_id: Y }.  X and Y will be
@@ -1074,6 +1095,7 @@ return [
 			],
 			'destination_event_service' => 'eventgate-main',
 		],
+
 		// Declare release candiate 1 of
 		// mediawiki.page_content_change stream.
 		// This stream uses the mediawiki/page/change schema
@@ -1090,11 +1112,13 @@ return [
 			// we should set this to eventgate-main too.
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+
 		// This stream will be used by the streaming enrichment pipeline
 		// to emit error events encountered during enrichment.
 		// These events can be used if backfilling of the failed enrichment
 		// is desired later.
-		'rc1.enrichment.mediawiki_page_content_change.error' => [
+		// This follows the naming convention of <job_name>.error
+		'mediawiki_page_content_change_enrichment.error' => [
 			'schema_title' => 'error',
 			'canary_events_enabled' => false,
 		],
