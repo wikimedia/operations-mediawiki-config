@@ -65,7 +65,11 @@ EOT
 	$relFile = $argv[1];
 	// If no MW directory is given then assume this is a /maintenance script
 	// run.php allows running maint scripts like Myextension:Foo
-	if ( strpos( $relFile, '/' ) === false && strpos( $relFile, ':' ) === false ) {
+	if (
+		strpos( $relFile, '/' ) === false &&
+		strpos( $relFile, ':' ) === false &&
+		substr_count( $relFile, "." ) < 2
+	) {
 		// convenience
 		$relFile = "maintenance/$relFile";
 	}
