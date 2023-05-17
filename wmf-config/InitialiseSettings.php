@@ -12453,7 +12453,7 @@ return [
 	'itwiki' => true,
 	'iuwiki' => true,
 	'jamwiki' => true,
-	'jbo' => false, // T308134#8840607
+	'jbowiki' => false, // T308134#8840607
 	'jvwiki' => true,
 	'kowiki' => true,
 	'nlwiki' => true,
