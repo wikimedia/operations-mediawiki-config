@@ -568,12 +568,31 @@ function wmfGetOverrideSettings() {
 		],
 		'wgVectorZebraDesign' => [
 			'default' => [
+				'logged_in' => false,
+				'logged_out' => false,
+			],
+			'eswiki' => [
 				'logged_in' => true,
 				'logged_out' => false,
 			],
 		],
 		'wgVectorWebABTestEnrollment' => [
 			'default' => [
+				'name' => 'skin-vector-zebra-experiment',
+				'enabled' => false,
+				'buckets' => [
+					'unsampled' => [
+						'samplingRate' => 0
+					],
+					'control' => [
+						'samplingRate' => 0.5
+					],
+					'treatment' => [
+						'samplingRate' => 0.5
+					],
+				]
+			],
+			'eswiki' => [
 				'name' => 'skin-vector-zebra-experiment',
 				'enabled' => true,
 				'buckets' => [
