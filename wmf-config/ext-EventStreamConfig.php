@@ -193,17 +193,6 @@ return [
 				],
 			]
 		],
-		'eventlogging_FirstInputDelay' => [
-			'schema_title' => 'analytics/legacy/firstinputdelay',
-			'topic_prefixes' => null,
-			'destination_event_service' => 'eventgate-analytics-external',
-			'consumers' => [
-				'analytics_hadoop_ingestion' => [
-					'job_name' => 'eventlogging_legacy',
-					'enabled' => true,
-				],
-			]
-		],
 		'eventlogging_HelpPanel' => [
 			'schema_title' => 'analytics/legacy/helppanel',
 			'topic_prefixes' => null,
