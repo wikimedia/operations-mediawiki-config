@@ -11826,8 +11826,8 @@ return [
 ],
 
 'wgWMESchemaVisualEditorFeatureUseSamplingRate' => [
-	'default' => 0.0625,
-	'testwiki' => 1,
+	// T333168:
+	'default' => 1,
 ],
 
 'wgWMEReadingDepthSamplingRate' => [
