@@ -693,10 +693,6 @@ function wmfGetOverrideSettings() {
 			'default' => 'P751',
 		],
 
-		'wmgUseRealMe' => [
-			'default' => true,
-		],
-
 		'wmgUseRelatedArticles' => [
 			'default' => true,
 		],

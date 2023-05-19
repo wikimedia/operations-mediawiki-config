@@ -8325,7 +8325,10 @@ return [
 ],
 
 'wmgUseRealMe' => [
-	'default' => false,
+	'default' => true,
+	'private' => false,
+	'fishbowl' => false,
+	'lockeddown' => false,
 ],
 
 'wmgUseRelatedArticles' => [
