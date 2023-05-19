@@ -3935,8 +3935,6 @@ return [
 
 'wmgUseGWToolset' => [
 	'default' => false,
-	'commonswiki' => true,
-	'testcommonswiki' => false, // Leaving in case we need it for testing - JDF
 ],
 
 'wmgUseSpecialNuke' => [
