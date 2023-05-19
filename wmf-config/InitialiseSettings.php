@@ -3998,10 +3998,6 @@ return [
 	'dewikivoyage' => false, // T87534
 ],
 
-'wmgUseGWToolset' => [
-	'default' => false,
-],
-
 'wmgUseSpecialNuke' => [
 	'default' => true,
 	'lockeddown' => false,
