@@ -3222,7 +3222,6 @@ return [
 	],
 	'+commonswiki' => [
 		'bureaucrat' => [
-			'gwtoolset', // T65124
 			'ipblock-exempt',
 		],
 		'checkuser' => [ 'ipblock-exempt' ],
@@ -4669,7 +4668,6 @@ return [
 	],
 	'+commonswiki' => [
 		'bureaucrat' => [
-			'gwtoolset', // T65124
 			'ipblock-exempt',
 			'sysop', // T261481
 		],

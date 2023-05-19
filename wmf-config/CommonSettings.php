@@ -1000,9 +1000,6 @@ $wgAvailableRights[] = 'unreviewedpages';
 $wgAvailableRights[] = 'validate';
 $wgGrantPermissions['editprotected']['movestable'] = true;
 
-// Enable GWToolset's right
-$wgAvailableRights[] = 'gwtoolset';
-
 // So that protection rights can be assigned to global groups
 $wgAvailableRights[] = 'templateeditor';
 $wgAvailableRights[] = 'editeditorprotected';
@@ -2601,15 +2598,6 @@ if ( $wmgUseCommonsMetadata ) {
 	$wgCommonsMetadataForceRecalculate = $wmgCommonsMetadataForceRecalculate;
 }
 
-if ( $wmgUseGWToolset ) {
-	wfLoadExtension( 'GWToolset' );
-	$wgGWTFileBackend = 'local-multiwrite';
-
-	// extra throttling until the image scalers are more robust
-	$wgGWToolsetConfigOverrides['mediafile_job_throttle_default'] = 5; // 5 files per batch
-	$wgJobBackoffThrottling['gwtoolsetUploadMetadataJob'] = 5 / 3600; // 5 batches per hour
-}
-
 if ( $wmgUseMultimediaViewer ) {
 	wfLoadExtension( 'MultimediaViewer' );
 }
@@ -3093,11 +3081,6 @@ $wgJobBackoffThrottling['htmlCacheUpdate'] = 50; // pages/sec per runner
 # Timed Media Handler:
 $wgJobTypesExcludedFromDefaultQueue[] = 'webVideoTranscode';
 $wgJobTypesExcludedFromDefaultQueue[] = 'webVideoTranscodePrioritized';
-
-# GWToolset
-$wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetUploadMetadataJob';
-$wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetUploadMediafileJob';
-$wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetGWTFileBackendCleanupJob';
 
 if ( $wmgUseEducationProgram ) {
 	$wgExtraNamespaces[446] = 'Education_Program';
