@@ -49,7 +49,7 @@ final class WmfManageDblistCli {
 	del <dbname> <dblist>
 			Remove a wiki from a dblist, and normalize all dblist files.
 			Example: manage-dblist del aawiki open
-
+			Alias: remove
 	update
 			Normalize all dblist files,
 			including expansion of ".dbexpr" files.
@@ -67,6 +67,7 @@ final class WmfManageDblistCli {
 				$this->doList( ...$this->params );
 				return;
 			case 'del':
+			case 'remove':
 				$this->doDel( ...$this->params );
 				return;
 			case 'update':
