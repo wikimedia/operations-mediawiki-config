@@ -3795,8 +3795,12 @@ Wikivoyage:
         no_2x: true
         selected_icon: wikimaniawiki
     wikimaniawiki:
-        comment_1_5x: T194340
-        comment_2x: T194340
+        comment_1_5x: T194340, T337044
+        comment_2x: T194340, T337044
+        selected: wikimaniawiki-2023
+        variants:
+            wikimaniawiki-2023:
+                commons: 'File:Wikimania 2023 Singapore Square logo.svg'
         commons_wordmark: 'File:Wikimania mark.svg'
         comment_wordmark: T286405
         local_icon: true
