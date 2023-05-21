@@ -2031,6 +2031,8 @@ return [
 			'browsearchive' => true,
 			'deletedhistory' => true,
 			'deletedtext' => true,
+			'abusefilter-log-private' => true, // T336625
+			'abusefilter-view-private' => true, // T336625
 		],
 		'autoconfirmed' => [ 'collectionsaveascommunitypage' => false, ], // T85780
 		'bot' => [
