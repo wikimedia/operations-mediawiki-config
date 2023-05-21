@@ -9939,6 +9939,8 @@ return [
 		'P180' => 1,
 		// digital representation of
 		'P6243' => 1.1,
+		// main subject of
+		'P921' => 1.1,
 	],
 ],
 
@@ -10129,6 +10131,7 @@ return [
 				'statement_keywords' => [
 					[ 'prefix' => 'P180=', 'boost' => 0.05032411940299784 ], // depicts
 					[ 'prefix' => 'P6243=', 'boost' => 0.0001 ], // digital representation of (arbitrary small value)
+					[ 'prefix' => 'P921=', 'boost' => 0.0001 ], // main subject of (arbitrary small value)
 				],
 				'weighted_tags' => [
 					[ 'prefix' => 'image.linked.from.wikidata.p18/', 'boost' => 1.984794590275781 ],
@@ -10157,6 +10160,8 @@ return [
 					'P180' => 1 * 0.07513802266010573,
 					// digital representation of
 					'P6243' => 1.1 * 0.07513802266010573,
+					// main subject of
+					'P921' => 1.1 * 0.07513802266010573,
 				],
 				'weighted_tags' => [
 					'image.linked.from.wikidata.p18/' => 2.342153943085914,
@@ -10205,6 +10210,8 @@ return [
 					'P180' => 1 * 0.11098311564161133,
 					// digital representation of
 					'P6243' => 1.1 * 0.11098311564161133,
+					// main subject of
+					'P921' => 1.1 * 0.11098311564161133,
 				],
 				'descriptions.$language' => 0.019320230186222098,
 				'descriptions.$language.plain' => 0,
@@ -10247,6 +10254,8 @@ return [
 					'P180' => 1 * 0.11098311564161133,
 					// digital representation of
 					'P6243' => 1.1 * 0.11098311564161133,
+					// main subject
+					'P921' => 1.1 * 0.11098311564161133,
 				],
 				'descriptions.$language' => 0.019320230186222098,
 				'descriptions.$language.plain' => 0,
