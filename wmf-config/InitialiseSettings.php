@@ -5249,6 +5249,7 @@ return [
 	'itwiki' => true, // T103643
 	'jawiki' => true,
 	'jvwiki' => true, // T176308
+	'kaawiki' => true, // T336648
 	'kkwiki' => true,
 	'knwiki' => true,
 	'kowiki' => true,
