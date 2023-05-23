@@ -8282,7 +8282,7 @@ return [
 	'bnwiki' => [ "minerva", "monobook", "timeless", "vector", "vector-2022" ],
 	'mlwiki' => [ "minerva", "monobook", "timeless", "vector", "vector-2022" ],
 	'mnwiki' => [ "minerva", "monobook", "timeless", "vector", "vector-2022" ],
-	'swwiki' => [ "minerva", "monobook", "timeless", "vector", "vector-2022" ],
+	'sqwiki' => [ "minerva", "monobook", "timeless", "vector", "vector-2022" ],
 	'tlwiki' => [ "minerva", "monobook", "timeless", "vector", "vector-2022" ],
 ],
 
