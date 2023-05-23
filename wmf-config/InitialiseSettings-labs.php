@@ -205,6 +205,39 @@ function wmfGetOverrideSettings() {
 					],
 				]
 			],
+			'+wikifunctionswiki' => [
+				// See https://phabricator.wikimedia.org/T336722
+				'wikifunctions.ui' => [
+					'schema_title' => '/analytics/mediawiki/client/metrics_event',
+					'destination_event_service' => 'eventgate-analytics-external',
+					'producers' => [
+						'metrics_platform_client' => [
+							'events' => [
+								'wf.ui',
+							],
+							'provide_values' => [
+								'agent_client_platform_family',
+								'page_id',
+								'page_title',
+								'page_revision_id',
+								'performer_is_logged_in',
+								'performer_id',
+								'performer_name',
+								'performer_session_id',
+								'performer_language',
+								'performer_language_variant',
+								'performer_edit_count',
+								'performer_edit_count_bucket',
+								'performer_groups',
+							],
+						],
+					],
+					'sample' => [
+						'unit' => 'session',
+						'rate' => 1,
+					],
+				]
+			]
 		],
 
 		// EventLogging will POST events to this URI.
