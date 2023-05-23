@@ -2916,9 +2916,7 @@ if ( $wmgUseTranslate ) {
 
 	$wgTranslateTranslationServices = [];
 	if ( $wmgUseTranslationMemory ) {
-		// Switch to 'eqiad' or 'codfw' if you plan to bring down
-		// the elastic cluster equals to $wmgDatacenter
-		$wgTranslateTranslationDefaultService = $wmgDatacenter;
+		$wgTranslateTranslationDefaultService = 'default';
 
 		// If the downtime is long (> 10mins) consider disabling
 		// mirroring in this var to avoid logspam about ttm updates
@@ -2926,21 +2924,26 @@ if ( $wmgUseTranslate ) {
 		// it's back up.
 		// NOTE: these settings are also used for the labs cluster
 		// where codfw may not be available
-		$wgTranslateClustersAndMirrors = [
-			'eqiad' => isset( $wmgAllServices['codfw']['search-chi'] ) ? [ 'codfw' ] : [],
-			'codfw' => isset( $wmgAllServices['eqiad']['search-chi'] ) ? [ 'eqiad' ] : [],
+		$wgTranslateServices = [
+			// Switch to 'eqiad' or 'codfw' if you plan to bring down
+			// the elastic cluster equals to $wmgDatacenter
+			'default' => [ 'service' => $wmgDatacenter, 'writable' => false ],
+			'eqiad' => [ 'service' => 'eqiad', 'writable' => true ],
+			'codfw' => [ 'service' => 'codfw', 'writable' => true ],
 		];
-		foreach ( $wgTranslateClustersAndMirrors as $cluster => $mirrors ) {
-			if ( !isset( $wmgAllServices[$cluster]['search-chi'] ) ) {
+		foreach ( $wgTranslateServices as $service => $conf ) {
+			if ( !isset( $wmgAllServices[$conf['service']]['search-chi'] ) ) {
 				continue;
 			}
-			$wgTranslateTranslationServices[$cluster] = [
+			// see https://www.mediawiki.org/wiki/Help:Extension:Translate/Translation_memories#Configuration
+			$wgTranslateTranslationServices[$service] = [
 				'type' => 'ttmserver',
 				'class' => 'ElasticSearchTTMServer',
 				'shards' => 1,
 				'replicas' => 1,
 				'index' => $wmgTranslateESIndex,
 				'cutoff' => 0.65,
+				'writable' => $conf['writable'],
 				'use_wikimedia_extra' => true,
 				'config' => [
 					'servers' => array_map( static function ( $hostConfig ) {
@@ -2952,12 +2955,11 @@ if ( $wmgUseTranslate ) {
 							'port' => 9243,
 							'transport' => 'Https',
 						];
-					}, $wmgAllServices[$cluster]['search-chi'] ),
+					}, $wmgAllServices[$conf['service']]['search-chi'] ),
 				],
-				'mirrors' => $mirrors,
 			];
 		}
-		unset( $wgTranslateClustersAndMirrors );
+		unset( $wgTranslateServices );
 	} else {
 		$wgTranslateTranslationDefaultService = false;
 	}
