@@ -2329,6 +2329,21 @@ return [
 	],
 ],
 
+'wgVectorZebraDesign' => [
+	'default' => [
+		'logged_in' => false,
+		'logged_out' => false,
+	],
+	'testwiki' => [
+		'logged_in' => true,
+		'logged_out' => false,
+	],
+	'test2wiki' => [
+		'logged_in' => true,
+		'logged_out' => false,
+	],
+],
+
 'wgVectorWebABTestEnrollment' => [
 	'default' => [
 		'name' => 'skin-vector-zebra-experiment',
@@ -2344,6 +2359,36 @@ return [
 				'samplingRate' => 0.5
 			],
 		],
+	],
+	'testwiki' => [
+		'name' => 'skin-vector-zebra-experiment',
+		'enabled' => true,
+		'buckets' => [
+			'unsampled' => [
+				'samplingRate' => 0
+			],
+			'control' => [
+				'samplingRate' => 0.5
+			],
+			'treatment' => [
+				'samplingRate' => 0.5
+			],
+		]
+	],
+	'test2wiki' => [
+		'name' => 'skin-vector-zebra-experiment',
+		'enabled' => true,
+		'buckets' => [
+			'unsampled' => [
+				'samplingRate' => 0
+			],
+			'control' => [
+				'samplingRate' => 0.5
+			],
+			'treatment' => [
+				'samplingRate' => 0.5
+			],
+		]
 	]
 ],
 
