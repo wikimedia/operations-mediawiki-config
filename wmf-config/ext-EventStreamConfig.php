@@ -1118,7 +1118,7 @@ return [
 		// These events can be used if backfilling of the failed enrichment
 		// is desired later.
 		// This follows the naming convention of <job_name>.error
-		'mediawiki_page_content_change_enrichment.error' => [
+		'mw_page_content_change_enrich.error' => [
 			'schema_title' => 'error',
 			'canary_events_enabled' => false,
 		],
