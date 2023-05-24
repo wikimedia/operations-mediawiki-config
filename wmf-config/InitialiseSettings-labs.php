@@ -264,6 +264,7 @@ function wmfGetOverrideSettings() {
 				'Bug58676' => 'debug', // Invalid message parameter
 				'cache-cookies' => 'debug',
 				'captcha' => 'debug',
+				'CampaignEvents' => 'debug',
 				'CentralAuth' => 'debug',
 				'CentralNotice' => 'debug',
 				// 'CirrusSearch' => 'debug',
