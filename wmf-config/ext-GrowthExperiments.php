@@ -786,10 +786,13 @@ return [
 	'+cswiki' => [
 		'personalized-praise' => true,
 	],
+	'+eswiki' => [
+		'personalized-praise' => true,
+	],
 ],
 
 'wgGEPersonalizedPraiseNotificationsEnabled' => [
-	'default' => false,
+	'default' => true,
 ],
 
 'wgGEPersonalizedPraiseBackendEnabled' => [
