@@ -2454,6 +2454,9 @@ function wmfGetOverrideSettings() {
 		'wgCampaignEventsEnableMultipleOrganizers' => [
 			'default' => true,
 		],
+		'wgCampaignEventsUseNewTrackingToolsSchema' => [
+			'default' => true,
+		],
 
 		// T314294
 		'wmgUsePhonos' => [
