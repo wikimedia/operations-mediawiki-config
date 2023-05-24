@@ -11410,13 +11410,6 @@ return [
 
 'wmgKartographerNearby' => [
 	'default' => true,
-	'eswikivoyage' => false, // T333821
-	'fiwikivoyage' => false, // T333821
-	'frwikivoyage' => false, // T333821
-	'hewikivoyage' => false, // T333821
-	'ruwikivoyage' => false, // T333821
-	'shnwikivoyage' => false, // T333821
-	'zhwikivoyage' => false, // T333821
 ],
 
 // T333137
@@ -11425,8 +11418,7 @@ return [
 ],
 
 'wgKartographerWikivoyageNearby' => [
-	'default' => true,
-	'dewikivoyage' => false, // T320692
+	'default' => false, // T336834
 ],
 
 'wmgUseMediaModeration' => [
