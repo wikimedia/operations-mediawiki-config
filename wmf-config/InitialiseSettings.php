@@ -7687,7 +7687,6 @@ return [
 	// Keep in sync with wgDiscussionTools_sourcemodetoolbar below
 	// T310392
 	'default' => 'available',
-	'fiwiki' => 'default',
 ],
 
 'wgDiscussionTools_sourcemodetoolbar' => [
