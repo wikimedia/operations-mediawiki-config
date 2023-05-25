@@ -572,15 +572,34 @@ function wmfGetOverrideSettings() {
 				'logged_in' => false,
 				'logged_out' => false,
 			],
-			'eswiki' => [
+			'enwiki' => [
 				'logged_in' => true,
 				'logged_out' => false,
 			],
+			'eswiki' => [
+				'logged_in' => true,
+				'logged_out' => false,
+			]
 		],
 		'wgVectorWebABTestEnrollment' => [
 			'default' => [
 				'name' => 'skin-vector-zebra-experiment',
 				'enabled' => false,
+				'buckets' => [
+					'unsampled' => [
+						'samplingRate' => 0
+					],
+					'control' => [
+						'samplingRate' => 0.5
+					],
+					'treatment' => [
+						'samplingRate' => 0.5
+					],
+				]
+			],
+			'enwiki' => [
+				'name' => 'skin-vector-zebra-experiment',
+				'enabled' => true,
 				'buckets' => [
 					'unsampled' => [
 						'samplingRate' => 0
