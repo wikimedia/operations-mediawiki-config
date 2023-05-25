@@ -12696,6 +12696,10 @@ return [
 	'metawiki' => true,
 ],
 
+'wgCampaignEventsUseNewTrackingToolsSchema' => [
+	'default' => true,
+],
+
 // T309900
 'wmgUseStopForumSpam' => [
 	'default' => false,
