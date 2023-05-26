@@ -2454,11 +2454,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 		],
 
-		// Temporary, added for T327062, to be deleted in T335107
-		'wmgWikibaseTmpEnableLabelsInApiSummaries' => [
-			'default' => true,
-		],
-
 		'wmgUseChessBrowser' => [
 			'default' => true,
 		],

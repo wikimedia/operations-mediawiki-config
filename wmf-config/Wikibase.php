@@ -241,11 +241,6 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( isset( $wmgWikibaseTmpEnableMulLanguageCode ) ) {
 		$wgWBRepoSettings['tmpEnableMulLanguageCode'] = $wmgWikibaseTmpEnableMulLanguageCode;
 	}
-
-	// Temporary, added for T327062, to be deleted in T335107
-	if ( isset( $wmgWikibaseTmpEnableLabelsInApiSummaries ) ) {
-		$wgWBRepoSettings['tmpEnableLabelsInApiSummaries'] = $wmgWikibaseTmpEnableLabelsInApiSummaries;
-	}
 }
 
 if ( $wmgUseWikibaseClient ) {
