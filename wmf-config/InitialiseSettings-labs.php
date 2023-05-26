@@ -2211,7 +2211,7 @@ function wmfGetOverrideSettings() {
 		],
 		// T319240
 		'wgSpecialContributeSkinsEnabled' => [
-			'default' => [ "minerva", "monobook", "timeless", "vector", "vector-2022" ],
+			'default' => [ "minerva", "vector-2022" ],
 		],
 		'-wgSpecialSearchFormOptions' => [
 			'wikidatawiki' => [ 'showDescriptions' => true ],

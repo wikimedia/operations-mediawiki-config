@@ -8324,11 +8324,11 @@ return [
 
 'wgSpecialContributeSkinsEnabled' => [
 	'default' => [],
-	'bnwiki' => [ "minerva", "monobook", "timeless", "vector", "vector-2022" ],
-	'mlwiki' => [ "minerva", "monobook", "timeless", "vector", "vector-2022" ],
-	'mnwiki' => [ "minerva", "monobook", "timeless", "vector", "vector-2022" ],
-	'sqwiki' => [ "minerva", "monobook", "timeless", "vector", "vector-2022" ],
-	'tlwiki' => [ "minerva", "monobook", "timeless", "vector", "vector-2022" ],
+	'bnwiki' => [ "minerva", "vector-2022" ],
+	'mlwiki' => [ "minerva", "vector-2022" ],
+	'mnwiki' => [ "minerva", "vector-2022" ],
+	'sqwiki' => [ "minerva", "vector-2022" ],
+	'tlwiki' => [ "minerva", "vector-2022" ],
 ],
 
 'wmgUseExternalGuidance' => [
