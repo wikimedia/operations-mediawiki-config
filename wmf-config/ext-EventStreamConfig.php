@@ -1370,7 +1370,7 @@ return [
 			// Emit canary events.
 			'canary_events_enabled' => true,
 		],
-		'mediawiki.page_outlink_topic_prediction_change' => [
+		'mediawiki.page_outlink_topic_prediction_change.v1' => [
 			'schema_title' => 'mediawiki/page/prediction_classification_change',
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => true,
