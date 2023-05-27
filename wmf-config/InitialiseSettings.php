@@ -4026,6 +4026,10 @@ return [
 	'default' => true, // T289140
 ],
 
+'wgProofreadPageEnableEditInSequence' => [
+	'napwikisource' => true, // T337472
+],
+
 'wgProofreadPageBookNamespaces' => [
 	'bnwikisource' => [ NS_MAIN, 114 ], // T53980
 	'enwikisource' => [ NS_MAIN, 114 ], // T53980
