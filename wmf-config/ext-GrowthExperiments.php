@@ -386,7 +386,16 @@ return [
 	'arwiki' => true,
 	'bnwiki' => true,
 	'cswiki' => true,
+	'elwiki' => true,
 	'eswiki' => true,
+	'fawiki' => true,
+	'frwiki' => true,
+	'frwiktionary' => true,
+	'idwiki' => true,
+	'plwiki' => true,
+	'ptwiki' => true,
+	'trwiki' => true,
+	'viwiki' => true,
 	'testwiki' => true,
 ],
 
@@ -760,7 +769,97 @@ return [
 			'desktop' => 50,
 		],
 	],
+	'elwiki' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+		'oldimpact' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+	],
 	'eswiki' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+		'oldimpact' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+	],
+	'fawiki' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+		'oldimpact' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+	],
+	'frwiki' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+		'oldimpact' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+	],
+	'frwiktionary' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+		'oldimpact' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+	],
+	'idwiki' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+		'oldimpact' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+	],
+	'plwiki' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+		'oldimpact' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+	],
+	'ptwiki' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+		'oldimpact' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+	],
+	'trwiki' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+		'oldimpact' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+	],
+	'viwiki' => [
 		'control' => [
 			'mobile' => 50,
 			'desktop' => 50,
