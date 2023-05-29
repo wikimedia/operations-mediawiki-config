@@ -1566,13 +1566,6 @@ function wmfGetOverrideSettings() {
 			// Can be changed to 'production' when T306349 is resolved.
 			'default' => 'actionapi',
 		],
-		'wgGEImageRecommendationServiceUrl' => [
-			'default' => 'https://en.wikipedia.org/w/api.php', // not super useful outside beta en but we have to set something
-			'ar' => 'https://ar.wikipedia.org/w/api.php',
-			'bn' => 'https://bn.wikipedia.org/w/api.php',
-			'cs' => 'https://cs.wikipedia.org/w/api.php',
-			'es' => 'https://es.wikipedia.org/w/api.php',
-		],
 		// $wgGEImageRecommendationServiceAccessToken is in private/PrivateSettings.php
 		'-wgGEDatabaseCluster' => [
 			'default' => false,

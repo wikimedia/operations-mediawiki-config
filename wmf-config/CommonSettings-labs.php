@@ -372,6 +372,9 @@ $wgMessageCacheType = CACHE_ACCEL;
 $wgPageViewInfoWikimediaDomain = "$lang.$site.org";
 if ( $wmgUseGrowthExperiments ) {
 	$wgGERestbaseUrl = $wgGERestbaseUrl ?: "https://$lang.$site.org/api/rest_v1";
+	// Overrides CommonSettings.php which would use LabsServices.php,
+	// but we can't use variables there.
+	$wgGEImageRecommendationServiceUrl = "https://$lang.$site.org/w/api.php";
 }
 
 // Let Beta Cluster Commons do upload-from-URL from production Commons.
