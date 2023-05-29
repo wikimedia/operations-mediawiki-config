@@ -946,4 +946,8 @@ return [
 	'default' => []
 ],
 
+'wgGERestbaseUrl' => [
+	'default' => false,
+],
+
 ];
