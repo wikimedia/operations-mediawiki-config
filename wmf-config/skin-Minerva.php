@@ -109,6 +109,7 @@ return [
 		'arwiki' => true,
 		'bnwiki' => true, // T299529
 		'bnwikibooks' => true, // T319317
+		'bnwikiquote' => true, // T337683
 		'bnwiktionary' => true, // T328630
 		'kowiki' => true, // T172630
 		'ptwikinews' => true, // T332813
