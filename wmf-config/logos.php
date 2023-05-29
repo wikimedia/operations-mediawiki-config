@@ -183,7 +183,7 @@ return [
 	'jawiki' => '/static/images/project-logos/jawiki.png',
 	'jbowiki' => '/static/images/project-logos/jbowiki.png', // T48589
 	'jvwiki' => '/static/images/project-logos/jvwiki.png', // T251050
-	'kaawiki' => '/static/images/project-logos/kaawiki.png', // T48589
+	'kaawiki' => '/static/images/project-logos/kaawiki.png', // T48589, T337641
 	'kabwiki' => '/static/images/project-logos/kabwiki.png', // T46974
 	'kawiki' => '/static/images/project-logos/kawiki.png',
 	'kbdwiki' => '/static/images/project-logos/kbdwiki.png',
@@ -1027,7 +1027,7 @@ return [
 	'jawiki' => '/static/images/project-logos/jawiki-1.5x.png', // T150618
 	'jbowiki' => '/static/images/project-logos/jbowiki-1.5x.png', // T150618
 	'jvwiki' => '/static/images/project-logos/jvwiki-1.5x.png', // T251050
-	'kaawiki' => '/static/images/project-logos/kaawiki-1.5x.png', // T150618
+	'kaawiki' => '/static/images/project-logos/kaawiki-1.5x.png', // T150618, T337641
 	'kabwiki' => '/static/images/project-logos/kabwiki-1.5x.png', // T150618
 	'kawiki' => '/static/images/project-logos/kawiki-1.5x.png', // T150618
 	'kbdwiki' => '/static/images/project-logos/kbdwiki-1.5x.png', // T150618
@@ -1641,7 +1641,7 @@ return [
 	'jawiki' => '/static/images/project-logos/jawiki-2x.png', // T150618
 	'jbowiki' => '/static/images/project-logos/jbowiki-2x.png', // T150618
 	'jvwiki' => '/static/images/project-logos/jvwiki-2x.png', // T251050
-	'kaawiki' => '/static/images/project-logos/kaawiki-2x.png', // T150618
+	'kaawiki' => '/static/images/project-logos/kaawiki-2x.png', // T150618, T337641
 	'kabwiki' => '/static/images/project-logos/kabwiki-2x.png', // T150618
 	'kawiki' => '/static/images/project-logos/kawiki-2x.png', // T150618
 	'kbdwiki' => '/static/images/project-logos/kbdwiki-2x.png', // T150618
@@ -4202,8 +4202,8 @@ return [
 	],
 	'kaawiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-kaa.svg',
-		'width' => 120,
-		'height' => 14,
+		'width' => 103,
+		'height' => 12,
 	],
 	'kabwiki' => [
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-kab.svg',

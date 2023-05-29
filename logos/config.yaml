@@ -794,10 +794,11 @@ Wikipedia:
         comment_tagline: T311104
         local_wordmark: true
     kaawiki:
-        comment: T48589
-        comment_1_5x: T150618
-        comment_2x: T150618
-        local_tagline: true
+        commons: 'File:Wikipedia-logo-v2-kaa.svg'
+        comment: 'T48589, T337641'
+        comment_1_5x: 'T150618, T337641'
+        comment_2x: 'T150618, T337641'
+        commons_tagline: 'File:Wikipedia-tagline-kaa.svg'
     kabwiki:
         comment: T46974
         comment_1_5x: T150618
