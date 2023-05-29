@@ -1566,7 +1566,7 @@ function wmfGetOverrideSettings() {
 			// Can be changed to 'production' when T306349 is resolved.
 			'default' => 'actionapi',
 		],
-		'GEImageRecommendationServiceUrl' => [
+		'wgGEImageRecommendationServiceUrl' => [
 			'default' => 'https://en.wikipedia.org/w/api.php', // not super useful outside beta en but we have to set something
 			'ar' => 'https://ar.wikipedia.org/w/api.php',
 			'bn' => 'https://bn.wikipedia.org/w/api.php',
