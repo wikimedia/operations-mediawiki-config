@@ -12507,11 +12507,6 @@ return [
 	'metawiki' => true,
 ],
 
-// T327470 T334088
-'wgCampaignEventsEnableMultipleOrganizers' => [
-	'default' => true,
-],
-
 // T309900
 'wmgUseStopForumSpam' => [
 	'default' => false,
