@@ -2343,6 +2343,10 @@ return [
 		'logged_in' => true,
 		'logged_out' => false,
 	],
+	'hewiki' => [
+		'logged_in' => true,
+		'logged_out' => false,
+	]
 ],
 
 'wgVectorWebABTestEnrollment' => [
@@ -2377,6 +2381,21 @@ return [
 		]
 	],
 	'test2wiki' => [
+		'name' => 'skin-vector-zebra-experiment',
+		'enabled' => true,
+		'buckets' => [
+			'unsampled' => [
+				'samplingRate' => 0
+			],
+			'control' => [
+				'samplingRate' => 0.5
+			],
+			'treatment' => [
+				'samplingRate' => 0.5
+			],
+		]
+	],
+	'hewiki' => [
 		'name' => 'skin-vector-zebra-experiment',
 		'enabled' => true,
 		'buckets' => [
