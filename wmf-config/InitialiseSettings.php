@@ -5186,6 +5186,10 @@ return [
 'wgAbuseFilterEmergencyDisableAge' => [
 	'default' => [ 'default' => 86400, ],
 ],
+'wgAbuseFilterEnableBlockedExternalDomain' => [
+	'default' => false,
+],
+
 # @}
 
 'wgThumbLimits' => [

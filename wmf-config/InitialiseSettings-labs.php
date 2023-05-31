@@ -1481,6 +1481,10 @@ function wmfGetOverrideSettings() {
 			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 		],
 
+		'-wgAbuseFilterEnableBlockedExternalDomain' => [
+			'default' => true,
+		],
+
 		'wgOresUiEnabled' => [
 			'default' => true,
 			'wikidatawiki' => false,
