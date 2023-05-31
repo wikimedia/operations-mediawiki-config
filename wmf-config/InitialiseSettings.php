@@ -2345,6 +2345,42 @@ return [
 	'hewiki' => [
 		'logged_in' => true,
 		'logged_out' => false,
+	],
+	'enwiki' => [
+		'logged_in' => true,
+		'logged_out' => false,
+	],
+	'fawiki' => [
+		'logged_in' => true,
+		'logged_out' => false,
+	],
+	'frwiki' => [
+		'logged_in' => true,
+		'logged_out' => false,
+	],
+	'kowiki' => [
+		'logged_in' => true,
+		'logged_out' => false,
+	],
+	'ptwiki' => [
+		'logged_in' => true,
+		'logged_out' => false,
+	],
+	'srwiki' => [
+		'logged_in' => true,
+		'logged_out' => false,
+	],
+	'thwiki' => [
+		'logged_in' => true,
+		'logged_out' => false,
+	],
+	'trwiki' => [
+		'logged_in' => true,
+		'logged_out' => false,
+	],
+	'viwiki' => [
+		'logged_in' => true,
+		'logged_out' => false,
 	]
 ],
 
@@ -2395,6 +2431,141 @@ return [
 		]
 	],
 	'hewiki' => [
+		'name' => 'skin-vector-zebra-experiment',
+		'enabled' => true,
+		'buckets' => [
+			'unsampled' => [
+				'samplingRate' => 0
+			],
+			'control' => [
+				'samplingRate' => 0.5
+			],
+			'treatment' => [
+				'samplingRate' => 0.5
+			],
+		]
+	],
+	'enwiki' => [
+		'name' => 'skin-vector-zebra-experiment',
+		'enabled' => true,
+		'buckets' => [
+			'unsampled' => [
+				'samplingRate' => 0
+			],
+			'control' => [
+				'samplingRate' => 0.5
+			],
+			'treatment' => [
+				'samplingRate' => 0.5
+			],
+		]
+	],
+	'fawiki' => [
+		'name' => 'skin-vector-zebra-experiment',
+		'enabled' => true,
+		'buckets' => [
+			'unsampled' => [
+				'samplingRate' => 0
+			],
+			'control' => [
+				'samplingRate' => 0.5
+			],
+			'treatment' => [
+				'samplingRate' => 0.5
+			],
+		]
+	],
+	'frwiki' => [
+		'name' => 'skin-vector-zebra-experiment',
+		'enabled' => true,
+		'buckets' => [
+			'unsampled' => [
+				'samplingRate' => 0
+			],
+			'control' => [
+				'samplingRate' => 0.5
+			],
+			'treatment' => [
+				'samplingRate' => 0.5
+			],
+		]
+	],
+	'kowiki' => [
+		'name' => 'skin-vector-zebra-experiment',
+		'enabled' => true,
+		'buckets' => [
+			'unsampled' => [
+				'samplingRate' => 0
+			],
+			'control' => [
+				'samplingRate' => 0.5
+			],
+			'treatment' => [
+				'samplingRate' => 0.5
+			],
+		]
+	],
+	'ptwiki' => [
+		'name' => 'skin-vector-zebra-experiment',
+		'enabled' => true,
+		'buckets' => [
+			'unsampled' => [
+				'samplingRate' => 0
+			],
+			'control' => [
+				'samplingRate' => 0.5
+			],
+			'treatment' => [
+				'samplingRate' => 0.5
+			],
+		]
+	],
+	'srwiki' => [
+		'name' => 'skin-vector-zebra-experiment',
+		'enabled' => true,
+		'buckets' => [
+			'unsampled' => [
+				'samplingRate' => 0
+			],
+			'control' => [
+				'samplingRate' => 0.5
+			],
+			'treatment' => [
+				'samplingRate' => 0.5
+			],
+		]
+	],
+	'thwiki' => [
+		'name' => 'skin-vector-zebra-experiment',
+		'enabled' => true,
+		'buckets' => [
+			'unsampled' => [
+				'samplingRate' => 0
+			],
+			'control' => [
+				'samplingRate' => 0.5
+			],
+			'treatment' => [
+				'samplingRate' => 0.5
+			],
+		]
+	],
+	'trwiki' => [
+		'name' => 'skin-vector-zebra-experiment',
+		'enabled' => true,
+		'buckets' => [
+			'unsampled' => [
+				'samplingRate' => 0
+			],
+			'control' => [
+				'samplingRate' => 0.5
+			],
+			'treatment' => [
+				'samplingRate' => 0.5
+			],
+		]
+	],
+	'viwiki' => [
 		'name' => 'skin-vector-zebra-experiment',
 		'enabled' => true,
 		'buckets' => [
