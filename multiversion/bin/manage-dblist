@@ -59,6 +59,10 @@ final class WmfManageDblistCli {
 			<privacy> must be one of 'public', 'fishbowl' or 'private'
 			Example: manage-dblist init fatwiki wikipedia public
 
+	close <dbname>
+			Update the dblists of a wiki to reflect it being closed
+			Example: manage-dblist close enwiki
+
 	TEXT;
 	}
 
@@ -80,6 +84,9 @@ final class WmfManageDblistCli {
 				return;
 			case 'init':
 				$this->doInit( ...$this->params );
+				return;
+			case 'close':
+				$this->doClose( ...$this->params );
 				return;
 			case '':
 			case 'help':
@@ -249,6 +256,13 @@ final class WmfManageDblistCli {
 			break;
 		default:
 		}
+	}
+
+	private function doClose( $dbName ) {
+		$this->doAdd( $dbName, 'closed' );
+		$this->doAdd( $dbName, 'group0' );
+		$this->doDel( $dbName, 'securepollglobal' );
+		$this->doDel( $dbName, 'commonsuploads' );
 	}
 
 	/**
