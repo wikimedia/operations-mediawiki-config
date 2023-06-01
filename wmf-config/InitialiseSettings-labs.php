@@ -567,12 +567,6 @@ function wmfGetOverrideSettings() {
 				'logged_out' => true
 			],
 		],
-		'wgVectorStickyHeaderEdit' => [
-			'default' => [
-				'logged_in' => true,
-				'logged_out' => true,
-			],
-		],
 		'wgVectorZebraDesign' => [
 			'default' => [
 				'logged_in' => false,

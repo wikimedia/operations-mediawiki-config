@@ -2322,13 +2322,6 @@ return [
 	],
 ],
 
-'wgVectorStickyHeaderEdit' => [
-	'default' => [
-		'logged_in' => true,
-		'logged_out' => false,
-	],
-],
-
 'wgVectorZebraDesign' => [
 	'default' => [
 		'logged_in' => false,
