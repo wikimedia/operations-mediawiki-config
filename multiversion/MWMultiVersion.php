@@ -680,11 +680,12 @@ class MWMultiVersion {
 
 		# Get the correct MediaWiki path based on this version...
 		$IP = dirname( __DIR__ ) . "/$version";
-		// Make the file path, absolute as run.php is not a big fan of relative paths
-		// Can't be done sooner as the version thus the actual $IP is not determined yet.
-		$scriptPath = $argv[0];
-		if ( !$useOld && $scriptPath !== '' && $scriptPath[0] !== '/' && strpos( $scriptPath, '/' ) !== false ) {
-			$argv[1] = "$IP/$scriptPath";
+		// Make the script file path absolute.
+		// Can't be done sooner as the version thus the actual $IP was not determined.
+		$scriptIndex = $useOld ? 0 : 1;
+		$scriptPath = $argv[$scriptIndex];
+		if ( $scriptPath !== '' && $scriptPath[0] !== '/' && strpos( $scriptPath, '/' ) !== false ) {
+			$argv[$scriptIndex] = "$IP/$scriptPath";
 		}
 
 		putenv( "MW_INSTALL_PATH=$IP" );
