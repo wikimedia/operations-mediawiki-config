@@ -3260,8 +3260,8 @@ return [
 	],
 	'itwiktionary' => [ // T329168
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-it.svg',
-		'width' => 119,
-		'height' => 18,
+		'width' => 140,
+		'height' => 21,
 	],
 	'jvwiktionary' => [ // T311104
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-jv.svg',
@@ -5171,6 +5171,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wiktionary-tagline-fr.svg',
 		'width' => 107,
 		'height' => 10,
+	],
+	'itwiktionary' => [ // T337688
+		'src' => '/static/images/mobile/copyright/wiktionary-tagline-it.svg',
+		'width' => 140,
+		'height' => 15,
 	],
 	'jvwiktionary' => [ // T311104
 		'src' => '/static/images/mobile/copyright/wiktionary-tagline-jv.svg',
