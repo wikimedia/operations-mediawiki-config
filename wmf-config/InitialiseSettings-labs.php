@@ -2481,9 +2481,6 @@ function wmfGetOverrideSettings() {
 			'default' => true,
 			'loginwiki' => false,
 		],
-		'wgCampaignEventsUseNewTrackingToolsSchema' => [
-			'default' => true,
-		],
 
 		// T314294
 		'wmgUsePhonos' => [
