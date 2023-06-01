@@ -8531,6 +8531,8 @@ return [
 'wgContentTranslationDefaultParsoidClient' => [
 	'default' => 'vrs',
 	'testwiki' => 'direct', // T323667
+	'small' => 'direct', // T337922
+	'medium' => 'direct', // T337922
 ],
 
 'wgSpecialContributeSkinsEnabled' => [
