@@ -16,7 +16,7 @@ use ReflectionException;
 use Wikimedia\ExcimerUI\Client\ExcimerClient;
 
 require_once __DIR__ . '/XWikimediaDebug.php';
-require_once __DIR__ . '/../lib/ExcimerClient.php';
+require_once __DIR__ . '/../lib/excimer-ui-client/src/ExcimerClient.php';
 
 class Profiler {
 	/**

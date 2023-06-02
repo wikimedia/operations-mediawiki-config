@@ -4,3 +4,6 @@
 [submodule "fonts"]
 	path = fonts
 	url = https://gerrit.wikimedia.org/r/operations/mediawiki-config/fonts
+[submodule "lib/excimer-ui-client"]
+	path = lib/excimer-ui-client
+	url = https://gerrit.wikimedia.org/r/performance/excimer-ui-client
