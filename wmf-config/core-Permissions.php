@@ -2035,10 +2035,12 @@ return [
 			'abusefilter-view-private' => true, // T336625
 		],
 		'autoconfirmed' => [ 'collectionsaveascommunitypage' => false, ], // T85780
+		'autoreview' => [ 'editautoreviewprotected' => true ], // T337430
 		'bot' => [
 			'autopatrol' => false, // T154285
 			'changetags' => true, // T136187
 			'move-categorypages' => true, // T87230
+			'editautoreviewprotected' => true, // T337430
 		],
 		'closer' => [
 			'delete' => true,
@@ -2049,6 +2051,7 @@ return [
 			'suppressredirect' => true,
 			'upload' => true,
 		],
+		'editor' => [ 'editautoreviewprotected' => true ], // T337430
 		'engineer' => [ // T144599, T190619
 			'apihighlimits' => true,
 			'editcontentmodel' => true,
@@ -2090,6 +2093,7 @@ return [
 			'autopatrol' => false, // T154285
 			'changetags' => true, // T136187
 			'patrol' => false, // T154285
+			'editautoreviewprotected' => true, // T337430
 		],
 	],
 	'+ruwikinews' => [
