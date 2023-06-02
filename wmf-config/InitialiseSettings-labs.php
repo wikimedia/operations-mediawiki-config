@@ -687,10 +687,6 @@ function wmfGetOverrideSettings() {
 		'wgVectorPromoteAddTopic' => [
 			'default' => true
 		],
-		// T333601
-		'wgVectorLimitedWidthIndicator' => [
-			'default' => true
-		],
 		'wmgCommonsMetadataForceRecalculate' => [
 			'default' => true,
 		],

@@ -2238,11 +2238,6 @@ return [
 	// T332809
 	'plwiki' => false,
 ],
-'wgVectorLimitedWidthIndicator' => [
-	'default' => false,
-	// T335307
-	'enwiki' => true,
-],
 
 // Note:
 // This is the list of namespaces the max-width should be EXCLUDED from.
