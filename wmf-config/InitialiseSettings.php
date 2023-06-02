@@ -12700,6 +12700,12 @@ return [
 	'ptwiki' => true,
 	'ruwiki' => true,
 	'idwiki' => true,
+	// https://phabricator.wikimedia.org/T336870
+	'cawiki' => true,
+	'nowiki' => true,
+	'huwiki' => true,
+	'nlwiki' => true,
+	'ukwiki' => true,
 ],
 
 'wgImageSuggestionsHelpLink' => [
