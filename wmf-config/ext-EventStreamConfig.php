@@ -790,6 +790,79 @@ return [
 			'schema_title' => 'analytics/mobile_apps/android_find_in_page_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+		// See https://phabricator.wikimedia.org/T330355
+		'android.metrics_platform.article_link_preview_interaction' => [
+			'schema_title' => 'analytics/mediawiki/client/metrics_event',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'events' => [ 'android.metrics_platform.article_link_preview_interaction' ],
+					'provide_values' => [
+						'agent_app_install_id',
+						'agent_client_platform',
+						'agent_client_platform_family'
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'session',
+				'rate' => 1,
+			],
+		],
+		'android.metrics_platform.article_toc_interaction' => [
+			'schema_title' => 'analytics/mediawiki/client/metrics_event',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'events' => [ 'android.metrics_platform.article_toc_interaction' ],
+					'provide_values' => [
+						'agent_app_install_id',
+						'agent_client_platform',
+						'agent_client_platform_family'
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'session',
+				'rate' => 1,
+			],
+		],
+		'android.metrics_platform.article_toolbar_interaction' => [
+			'schema_title' => 'analytics/mediawiki/client/metrics_event',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'events' => [ 'android.metrics_platform.article_toolbar_interaction' ],
+					'provide_values' => [
+						'agent_app_install_id',
+						'agent_client_platform',
+						'agent_client_platform_family'
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'session',
+				'rate' => 1,
+			],
+		],
+		'android.metrics_platform.find_in_page_interaction' => [
+			'schema_title' => 'analytics/mediawiki/client/metrics_event',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'events' => [ 'android.metrics_platform.find_in_page_interaction' ],
+					'provide_values' => [
+						'agent_app_install_id',
+						'agent_client_platform',
+						'agent_client_platform_family'
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'session',
+				'rate' => 1,
+			],
+		],
 		'mediawiki.mediasearch_interaction' => [
 			'schema_title' => 'analytics/mediawiki/mediasearch_interaction',
 			'destination_event_service' => 'eventgate-analytics-external',
