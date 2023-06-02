@@ -8199,6 +8199,9 @@ return [
 	'enwiki' => [
 		'userGroups' => [ 'extendedconfirmed', 'sysop' ]
 	],
+	'fiwiki' => [ // T337412
+		'userGroups' => [ 'autoreview', 'bot', 'editor', 'reviewer', 'sysop' ]
+	],
 	'trwiki' => [ // T330363
 		'userGroups' => [ 'autoreview', 'patroller', 'sysop' ]
 	],
