@@ -6903,6 +6903,11 @@ return [
 	'loginwiki' => true
 ],
 
+// T337944
+'wgCheckUserClientHintsEnabled' => [
+	'default' => false,
+],
+
 // ----------- CheckUser end ----------
 
 // IPInfo extension
