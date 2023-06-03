@@ -12,8 +12,8 @@ return [
 		'udp2log' => 'deployment-mwlog01.deployment-prep.eqiad1.wikimedia.cloud:8420',
 		'xenon' => 'deployment-mwlog01.deployment-prep.eqiad1.wikimedia.cloud',
 		'xhgui-pdo' => 'mysql:host=deployment-mdb01.deployment-prep.eqiad.wmflabs;dbname=xhgui',
-		'excimer-ui-url' => null,
-		'excimer-ui-server' => null,
+		'excimer-ui-url' => 'https://performance.wikimedia.beta.wmflabs.org/excimer/',
+		'excimer-ui-server' => 'https://deployment-webperf21.deployment-prep.eqiad1.wikimedia.cloud/excimer/',
 		'statsd' => 'prometheus-labmon.eqiad.wmnet',
 		'search-chi' => [
 			// These MUST match the installed SSL certs
