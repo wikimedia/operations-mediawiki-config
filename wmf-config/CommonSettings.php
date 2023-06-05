@@ -3754,6 +3754,12 @@ if ( $wmgUseOAuthRateLimiter ) {
 				'unit'  => 'HOUR'
 			],
 		],
+		'wme' => [
+			'ratelimit' => [
+				'requests_per_unit' => 250000,
+				'unit'  => 'HOUR'
+			],
+		],
 	];
 }
 
