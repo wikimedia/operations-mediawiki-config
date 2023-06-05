@@ -1007,6 +1007,7 @@ return [
 			'schema_title' => 'development/network/probe',
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
+
 		/*
 		 * == eventgate-logging-external streams ==
 		 * These are produced to the Kafka logging clusters for ingestion into logstash.
@@ -1065,6 +1066,70 @@ return [
 			'schema_title' => 'swift/upload/complete',
 			'destination_event_service' => 'eventgate-analytics',
 			// canary events will not work for regex streams.
+			'canary_events_enabled' => false,
+		],
+
+		// NOTE: We are releasing mediawiki.page_change.v1.
+		// This stream will be removed soon - 2023-05.
+		// https://phabricator.wikimedia.org/T325303
+		'rc1.mediawiki.page_change' => [
+			'schema_title' => 'mediawiki/page/change',
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page.page_id',
+			],
+			'destination_event_service' => 'eventgate-main',
+		],
+
+		// NOTE: We have changed error stream name conventions.
+		// This stream will be removed soon - 2023-05.
+		// https://phabricator.wikimedia.org/T326536
+		'rc1.enrichment.mediawiki_page_content_change.error' => [
+			'schema_title' => 'error',
+			'canary_events_enabled' => false,
+		],
+
+		// mediawiki.page_change stream.
+		// This stream is using major API versioning.
+		// https://wikitech.wikimedia.org/wiki/Event_Platform/Stream_Configuration#Stream_versioning
+		// https://phabricator.wikimedia.org/T311129
+		'mediawiki.page_change.v1' => [
+			'schema_title' => 'mediawiki/page/change',
+			# When producing this stream to kafka, use a message key
+			# like { wiki_id: X, page_id: Y }.  X and Y will be
+			# obtained from the message value at wiki_id and page.page_id.
+			# See also: https://phabricator.wikimedia.org/T318846
+			'message_key_fields' => [
+				'wiki_id' => 'wiki_id',
+				'page_id' => 'page.page_id',
+			],
+			'destination_event_service' => 'eventgate-main',
+		],
+
+		// Declare release candiate 1 of
+		// mediawiki.page_content_change stream.
+		// This stream uses the mediawiki/page/change schema
+		// but includes content bodies in content slots.
+		// It is produced by a streaming enrichment pipeline,
+		// (not via MediaWiki EventBus).
+		// https://phabricator.wikimedia.org/T307959
+		'rc1.mediawiki.page_content_change' => [
+			'schema_title' => 'mediawiki/page/change',
+			// Even though this stream will not be produced via EventGate,
+			// we need to set an event service, so that the ProduceCanaryEvents
+			// monitoring job can produce events through EventGate.
+			// TODO: When we move the enrichment job to producing to kafka main,
+			// we should set this to eventgate-main too.
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
+
+		// This stream will be used by the streaming enrichment pipeline
+		// to emit error events encountered during enrichment.
+		// These events can be used if backfilling of the failed enrichment
+		// is desired later.
+		// This follows the naming convention of <job_name>.error
+		'mw_page_content_change_enrich.error' => [
+			'schema_title' => 'error',
 			'canary_events_enabled' => false,
 		],
 
@@ -1279,49 +1344,6 @@ return [
 		'maps.tiles_change' => [
 			'schema_title' => 'maps/tiles_change',
 			'destination_event_service' => 'eventgate-main',
-		],
-
-		// mediawiki.page_change stream.
-		// This stream is using major API versioning.
-		// https://wikitech.wikimedia.org/wiki/Event_Platform/Stream_Configuration#Stream_versioning
-		// https://phabricator.wikimedia.org/T311129
-		'mediawiki.page_change.v1' => [
-			'schema_title' => 'mediawiki/page/change',
-			# When producing this stream to kafka, use a message key
-			# like { wiki_id: X, page_id: Y }.  X and Y will be
-			# obtained from the message value at wiki_id and page.page_id.
-			# See also: https://phabricator.wikimedia.org/T318846
-			'message_key_fields' => [
-				'wiki_id' => 'wiki_id',
-				'page_id' => 'page.page_id',
-			],
-			'destination_event_service' => 'eventgate-main',
-		],
-		// Declare release candiate 1 of
-		// mediawiki.page_content_change stream.
-		// This stream uses the mediawiki/page/change schema
-		// but includes content bodies in content slots.
-		// It is produced by a streaming enrichment pipeline,
-		// (not via MediaWiki EventBus).
-		// https://wikitech.wikimedia.org/wiki/MediaWiki_Event_Enrichment
-		'rc1.mediawiki.page_content_change' => [
-			'schema_title' => 'mediawiki/page/change',
-			// Even though this stream will not be produced via EventGate,
-			// we need to set an event service, so that the ProduceCanaryEvents
-			// monitoring job can produce events through EventGate.
-			// page_content_change is produced directly to Kafka jumbo-eqiad,
-			// so we need to use an eventgate that also produces to jumbo-eqiad.
-			// We use eventgate-analytics
-			'destination_event_service' => 'eventgate-analytics',
-		],
-		// This stream will be used by the streaming enrichment pipeline
-		// to emit error events encountered during enrichment.
-		// These events can be used if backfilling of the failed enrichment
-		// is desired later.
-		// This follows the naming convention of <job_name>.error
-		'mw_page_content_change_enrich.error' => [
-			'schema_title' => 'error',
-			'canary_events_enabled' => false,
 		],
 
 		/*
