@@ -4415,7 +4415,7 @@ return [
 ],
 
 'wgReferrerPolicy' => [
-	'default' => [ 'origin-when-cross-origin', 'origin-when-crossorigin', 'origin' ], // T180921
+	'default' => [ 'origin-when-cross-origin', 'origin' ], // T180921
 	'private' => 'no-referrer',
 ],
 
