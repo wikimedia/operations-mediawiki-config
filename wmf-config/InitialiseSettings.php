@@ -11977,7 +11977,7 @@ return [
 	'default' => [
 		'rev_comment' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
 	],
-	'testwiki' => [
+	'group0' => [
 		'rev_comment' => SCHEMA_COMPAT_NEW,
 	],
 ],
