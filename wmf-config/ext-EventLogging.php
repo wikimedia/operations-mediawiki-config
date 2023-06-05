@@ -88,6 +88,7 @@ return [
 		'mediawiki.editattempt_block',
 		'mediawiki.maps_interaction',
 		'mediawiki.edit_attempt',
+		'development.network.probe',
 	],
 	'+group0' => [
 		'mediawiki.web_ui.interactions',

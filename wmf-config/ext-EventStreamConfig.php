@@ -1002,6 +1002,11 @@ return [
 			'destination_event_service' => 'eventgate-analytics-external',
 		],
 
+		// GeoIP mapping experiments (T332024)
+		'development.network.probe' => [
+			'schema_title' => 'development/network/probe',
+			'destination_event_service' => 'eventgate-analytics-external',
+		],
 		/*
 		 * == eventgate-logging-external streams ==
 		 * These are produced to the Kafka logging clusters for ingestion into logstash.
