@@ -9273,6 +9273,7 @@ return [
 		'wikidata',
 		'wikimania',
 		'sources',
+		'outreach', // T171140
 	],
 	'commonswiki' => [
 		'commons',
@@ -9282,6 +9283,7 @@ return [
 		'wikidata',
 		'wikimania',
 		'sources',
+		'outreach', // T171140
 	],
 	'testwikidatawiki' => [
 		'commons',
@@ -9305,6 +9307,7 @@ return [
 		'wikidata',
 		'wikimania',
 		'sources',
+		'outreach', // T171140
 	],
 	'wikidataclient-test' => [
 		'commons',
