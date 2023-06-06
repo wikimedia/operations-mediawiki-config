@@ -7613,36 +7613,6 @@ return [
 	'ruwiki' => 'bullet', // T259864
 ],
 
-'wgDiscussionTools_replytool' => [
-	// Keep in sync with wgDiscussionTools_sourcemodetoolbar below
-	// T288485
-	'default' => 'available',
-],
-
-'wgDiscussionTools_newtopictool' => [
-	// Keep in sync with wgDiscussionTools_sourcemodetoolbar below
-	// T310392
-	'default' => 'available',
-],
-
-'wgDiscussionTools_sourcemodetoolbar' => [
-	// Intended to be available everywhere (T287927).
-	// However, it must be marked as 'available' only on wikis where 'wgDiscussionTools_replytool'
-	// or 'wgDiscussionTools_newtopictool' is 'available'. Otherwise it will cause the reply tool
-	// to be always loaded, even when it's not supposed to be available.
-	'default' => 'available',
-],
-
-'wgDiscussionTools_topicsubscription' => [
-	// Keep in sync with wgDiscussionTools_autotopicsub below (unless you have a very good reason)
-	'default' => 'available', // T315714
-],
-
-'wgDiscussionTools_autotopicsub' => [
-	// Keep in sync with wgDiscussionTools_topicsubscription above (unless you have a very good reason)
-	'default' => 'available', // T315714
-],
-
 'wgDiscussionTools_visualenhancements' => [
 	'default' => 'default',
 	'arwiki' => 'available', // T329407
