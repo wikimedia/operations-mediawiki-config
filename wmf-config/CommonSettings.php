@@ -373,16 +373,8 @@ $wgMaxUserDBWriteDuration = 3;
 # This should be lower than 'max lag' in the LBFactory conf.
 $wgAPIMaxLagThreshold = 3;
 
-# Allow different memory_limit settings for Parsoid/PHP servers (T236833)
-# keep in sync with php7-fatal-error.php in operations/puppet
-# and with wmf-config/logging.php
-# Use the same memory limit for jobrunner servers to handle WarmParsoidParserCache
-# T333528
-if ( $wmgServerGroup === 'parsoid' || $wmgServerGroup === 'jobrunner' ) {
-	ini_set( 'memory_limit', $wmgMemoryLimitParsoid );
-} else {
-	ini_set( 'memory_limit', $wmgMemoryLimit );
-}
+# Set the max memory used.
+ini_set( 'memory_limit', $wmgMemoryLimit );
 
 # Change calls to wfShellWikiCmd() to use MWScript.php wrapper
 $wgHooks['wfShellWikiCmd'][] = 'MWMultiVersion::onWfShellMaintenanceCmd';

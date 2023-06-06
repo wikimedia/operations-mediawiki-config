@@ -7529,7 +7529,7 @@ return [
 	],
 ],
 'wmgMemoryLimit' => [
-	'default' => 666 * 1024 * 1024, // 666MiB
+	'default' => 1400 * 1024 * 1024, // 1400MiB
 ],
 'wmgMemoryLimitParsoid' => [
 	'default' => 1400 * 1024 * 1024, // 1400MiB
