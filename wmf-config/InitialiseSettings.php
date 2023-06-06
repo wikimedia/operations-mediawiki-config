@@ -7531,10 +7531,6 @@ return [
 'wmgMemoryLimit' => [
 	'default' => 1400 * 1024 * 1024, // 1400MiB
 ],
-'wmgMemoryLimitParsoid' => [
-	'default' => 1400 * 1024 * 1024, // 1400MiB
-],
-
 'wmgEnablePageTriage' => [
 	'default' => false,
 	'testwiki' => true,
