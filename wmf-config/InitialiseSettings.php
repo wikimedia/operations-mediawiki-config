@@ -7583,10 +7583,6 @@ return [
 	'lockeddown' => false,
 ],
 
-'wgDiscussionToolsEnable' => [
-	'default' => true, // T276497
-],
-
 'wgDiscussionToolsBeta' => [
 	'default' => true,
 	'mediawikiwiki' => false, // T310960
