@@ -11982,12 +11982,6 @@ return [
 // T299954
 'wgCommentTempTableSchemaMigrationStage' => [
 	'default' => [
-		'rev_comment' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
-	],
-	'group0' => [
-		'rev_comment' => SCHEMA_COMPAT_NEW,
-	],
-	'group1' => [
 		'rev_comment' => SCHEMA_COMPAT_NEW,
 	],
 ],
