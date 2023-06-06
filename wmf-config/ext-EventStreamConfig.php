@@ -1079,6 +1079,17 @@ return [
 		'development.network.probe' => [
 			'schema_title' => 'development/network/probe',
 			'destination_event_service' => 'eventgate-analytics-external',
+			// Temporarily disable canary events until schema is well defined.
+			'canary_events_enabled' => false,
+			'consumers' => [
+				// Temporarily disable hadoop ingestion; this schema
+				// is in development and does not yet have a well defined
+				// schema.
+				// https://phabricator.wikimedia.org/T332024
+				'analytics_hadoop_ingestion' => [
+					'enabled' => false,
+				],
+			],
 		],
 
 		/*
