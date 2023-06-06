@@ -6773,37 +6773,7 @@ return [
 		'StashType' => null, // defaults to using MainStash
 		'StashDuration' => 24 * 60 * 60, // 24h in production, VE will fail to save after this time.
 		'CacheThresholdTime' => 0.0, // 0 means cache all
-		'WarmParsoidParserCache' => false, // whether parsoid output should be generated and cached after every edit
-	],
-	'group0' => [
-		'StashType' => null, // defaults to using MainStash
-		'StashDuration' => 24 * 60 * 60, // 24h in production, VE will fail to save after this time.
-		'CacheThresholdTime' => 0.0, // 0 means cache all
-		'WarmParsoidParserCache' => true, // T329366: enable cache warming
-	],
-	'small' => [
-		'StashType' => null, // defaults to using MainStash
-		'StashDuration' => 24 * 60 * 60, // 24h in production, VE will fail to save after this time.
-		'CacheThresholdTime' => 0.0, // 0 means cache all
-		'WarmParsoidParserCache' => true, // T329366: enable cache warming
-	],
-	'medium' => [
-		'StashType' => null, // defaults to using MainStash
-		'StashDuration' => 24 * 60 * 60, // 24h in production, VE will fail to save after this time.
-		'CacheThresholdTime' => 0.0, // 0 means cache all
-		'WarmParsoidParserCache' => true, // T329366: enable cache warming
-	],
-	'enwiki' => [
-		'StashType' => null, // defaults to using MainStash
-		'StashDuration' => 24 * 60 * 60, // 24h in production, VE will fail to save after this time.
-		'CacheThresholdTime' => 0.0, // 0 means cache all
-		'WarmParsoidParserCache' => true, // T329366: enable cache warming
-	],
-	'frwiki' => [
-		'StashType' => null, // defaults to using MainStash
-		'StashDuration' => 24 * 60 * 60, // 24h in production, VE will fail to save after this time.
-		'CacheThresholdTime' => 0.0, // 0 means cache all
-		'WarmParsoidParserCache' => true, // T329366: enable cache warming
+		'WarmParsoidParserCache' => true, // parsoid output should be generated and cached after every edit
 	],
 	'commonswiki' => [
 		'StashType' => null, // defaults to using MainStash
