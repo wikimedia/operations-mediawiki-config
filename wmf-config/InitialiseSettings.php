@@ -1076,11 +1076,11 @@ return [
 	'arbcom_ruwiki' => 'Арбитражный комитет русской Википедии', // T262812
 	'arcwiki' => 'ܘܝܩܝܦܕܝܐ',
 	'arwiki' => 'ويكيبيديا',
-	'arwikibooks' => 'ويكي_الكتب',
+	'arwikibooks' => 'ويكي الكتب', // T337725
 	'arwikimedia' => 'Wikimedia Argentina',
-	'arwikinews' => 'ويكي_الأخبار',
-	'arwikiquote' => 'ويكي_الاقتباس',
-	'arwikisource' => 'ويكي_مصدر',
+	'arwikinews' => 'ويكي الأخبار', // T337725
+	'arwikiquote' => 'ويكي الاقتباس', // T337725
+	'arwikisource' => 'ويكي مصدر', // T337725
 	'arwikiversity' => 'ويكي الجامعة',
 	'arwiktionary' => 'ويكاموس',
 	'arywiki' => 'ويكيپيديا',
