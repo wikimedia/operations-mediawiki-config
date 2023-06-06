@@ -298,6 +298,9 @@ function wmfGetOverrideSettings() {
 				'desktop_mobile_link_clicks',
 				'mediawiki.special_diff_interactions',
 			],
+			'+wikifunctionswiki' => [
+				'wikifunctions.ui',
+			],
 		],
 
 		// Log channels for beta cluster
