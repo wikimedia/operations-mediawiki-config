@@ -11985,6 +11985,9 @@ return [
 	'group0' => [
 		'rev_comment' => SCHEMA_COMPAT_NEW,
 	],
+	'group1' => [
+		'rev_comment' => SCHEMA_COMPAT_NEW,
+	],
 ],
 
 // T334295
