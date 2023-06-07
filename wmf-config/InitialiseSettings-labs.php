@@ -416,6 +416,7 @@ function wmfGetOverrideSettings() {
 				'TranslationNotifications.Jobs' => 'debug',
 				'Translate.Jobs' => 'debug',
 				'Translate.MessageBundle' => 'debug',
+				'Translate.TtmServerUpdates' => 'debug',
 				'Translate' => 'debug',
 				'UpdateRepo' => 'debug',
 				'updateTranstagOnNullRevisions' => 'debug',
