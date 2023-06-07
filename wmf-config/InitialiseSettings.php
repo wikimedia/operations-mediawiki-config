@@ -11991,6 +11991,11 @@ return [
 	'default' => SCHEMA_COMPAT_OLD
 ],
 
+'wgCheckUserMaximumRowCount' => [
+	'default' => 5000,
+	'testwiki' => 5,
+],
+
 // T299421
 'wgTemplateLinksSchemaMigrationStage' => [
 	'default' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
