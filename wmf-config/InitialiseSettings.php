@@ -58,7 +58,6 @@ return [
 	'svwiki' => 'windows-1252',
 	'nlwiki' => 'windows-1252',
 
-	'dawiktionary' => 'windows-1252',
 	'svwiktionary' => 'windows-1252',
 ],
 
