@@ -7053,7 +7053,7 @@ return [
 ],
 
 'wmgUseGraph' => [
-	'default' => false, // T334895
+	'default' => false, // T334895, T336556
 ],
 
 // T334895
