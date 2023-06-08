@@ -258,6 +258,13 @@ function wmfGetOverrideSettings() {
 						'rate' => 1,
 					],
 				]
+			],
+			'+metawiki' => [
+				// See https://phabricator.wikimedia.org/T336722
+				'wikifunctions.ui' => [
+					'schema_title' => '/analytics/mediawiki/client/metrics_event',
+					'destination_event_service' => 'eventgate-analytics-external',
+				]
 			]
 		],
 
