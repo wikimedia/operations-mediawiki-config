@@ -5995,6 +5995,7 @@ return [
 	'mediawikiwiki' => 'direct', // T320529
 	'officewiki' => 'direct',
 	'hewiki' => 'direct',	// T320529
+	'enwiki' => 'direct',	// T320529
 ],
 
 // Whether VisualEditor should bypass the MediaWiki layer and contact RESTBase directly for speed
@@ -6006,6 +6007,7 @@ return [
 	'medium' => false,
 	'mediawikiwiki' => false,
 	'hewiki' => false,
+	'enwiki' => false,
 	'wikitech' => false,	# Wikitech uses local Parsoid operation
 	'closed' => false,		// T315383
 	'private' => false,		# Private wikis aren't yet supported by RESTBase
