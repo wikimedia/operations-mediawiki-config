@@ -859,11 +859,18 @@ Wikipedia:
         local_tagline: true
         local_wordmark: true
     knwiki:
-        comment: T48589
-        comment_1_5x: T150618
-        comment_2x: T150618
+        selected: knwiki-temp
+        commons: 'File:Wikipedia-logo-v2-kn.svg'
+        variants:
+            knwiki-temp:
+                commons: 'File:20th anniversary logo of Kannada Wikipedia -legacy vector.svg'
+                commons_icon: 'File:20th anniversary logo of Kannada Wikipedia -vector 2022.svg'
+        comment: 'T48589,T338136'
+        comment_1_5x: 'T150618,T338136'
+        comment_2x: 'T150618,T338136'
         local_tagline: true
         local_wordmark: true
+        comment_icon: T338136
     koiwiki:
         comment_1_5x: T150618
         comment_2x: T150618
