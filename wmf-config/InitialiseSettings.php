@@ -7653,6 +7653,11 @@ return [
 	'wikidatawiki' => true,
 ],
 
+'wgEntitySchemaEnableDatatype' => [
+	'default' => false,
+	'testwikidatawiki' => true, // T332724
+],
+
 'wgEntitySchemaShExSimpleUrl' => [
 	'default' => null,
 	'wikidatawiki' => 'https://shex-simple.toolforge.org/wikidata/packages/shex-webapp/doc/shex-simple.html?data=Endpoint:%20https://query.wikidata.org/sparql&hideData&manifest=[]&textMapIsSparqlQuery'
