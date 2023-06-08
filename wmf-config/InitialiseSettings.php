@@ -10032,9 +10032,7 @@ return [
 ],
 
 'wmgWikibaseDisabledDataTypes' => [
-	'default' => [
-		'entity-schema' // T229904 :'(
-	],
+	'default' => [],
 ],
 
 'wmgWikibaseEntityTypesWithoutRdfOutput' => [
