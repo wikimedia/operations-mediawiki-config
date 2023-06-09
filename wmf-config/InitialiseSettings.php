@@ -12737,7 +12737,7 @@ return [
 	'ptwiki' => true,
 	'ruwiki' => true,
 	'idwiki' => true,
-	// https://phabricator.wikimedia.org/T336870
+	// T336870
 	'cawiki' => true,
 	'nowiki' => true,
 	'huwiki' => true,
@@ -12746,9 +12746,15 @@ return [
 ],
 
 'wgImageSuggestionsHelpLink' => [
-	'ptwiki' => '/wiki/Ajuda:Guia_de_edi%C3%A7%C3%A3o/Como_usar_imagens', // T292310
-	'ruwiki' => '/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%98%D0%BB%D0%BB%D1%8E%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5', // T292310
-	'idwiki' => '/wiki/Wikipedia:Kebijakan_penggunaan_gambar', // T292310
+	// T292310
+	'ptwiki' => '/wiki/Ajuda:Guia_de_edi%C3%A7%C3%A3o/Como_usar_imagens',
+	'ruwiki' => '/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%98%D0%BB%D0%BB%D1%8E%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5',
+	'idwiki' => '/wiki/Wikipedia:Kebijakan_penggunaan_gambar',
+	// T331036
+	'cawiki' => '/wiki/Ajuda:%C3%9As_d%27imatges',
+	'fiwiki' => '/wiki/Ohje:Kuvien_lis%C3%A4%C3%A4minen',
+	'huwiki' => '/wiki/Wikip%C3%A9dia:K%C3%A9pek_haszn%C3%A1lata',
+	'nowiki' => '/wiki/Hjelp:Bilder',
 ],
 
 // Test wikis and officewiki (T318592), and meta (T322745)
