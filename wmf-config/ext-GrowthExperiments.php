@@ -395,6 +395,7 @@ return [
 	'idwiki' => true,
 	'plwiki' => true,
 	'ptwiki' => true,
+	'rowiki' => true,
 	'trwiki' => true,
 	'viwiki' => true,
 	'testwiki' => true,
@@ -844,6 +845,16 @@ return [
 		'control' => [
 			'mobile' => 50,
 			'desktop' => 50,
+		],
+		'oldimpact' => [
+			'mobile' => 50,
+			'desktop' => 50,
+		],
+	],
+	'rowiki' => [
+		'control' => [
+			'mobile' => 50,
+			'desktop' => 50
 		],
 		'oldimpact' => [
 			'mobile' => 50,
