@@ -2734,6 +2734,7 @@ return [
 			'translate-manage' => true,
 			'undelete' => true,
 			'unwatchedpages' => true,
+			'pagelang' => true, // T337760
 		], // T74459
 		'user' => [
 			'changetags' => false, // T303682
