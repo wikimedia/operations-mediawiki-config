@@ -2629,10 +2629,8 @@ return [
 		101 => 'Euverlèk_portaol',
 	],
 	'lmowiki' => [
-		100 => 'Portal',
-		101 => 'Descüssiú_Portal',
-		102 => 'Purtaal',
-		103 => 'Descüssiun_Purtaal',
+		100 => 'Portal', // T8920
+		101 => 'Ciciarada_Portal', // T8920, T338621
 	],
 	'lrcwiki' => [
 		100 => 'پورتال', // T102026
