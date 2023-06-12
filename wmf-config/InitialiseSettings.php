@@ -5645,17 +5645,6 @@ return [
 	'lockeddown' => false,
 ],
 
-'wmgEnableLocalTimedText' => [
-	'default' => false,
-	'commonswiki' => true,
-	'testcommonswiki' => true,
-	'enwiki' => true,
-	'ptwiki' => true, // T60984
-	'test2wiki' => true,
-	'testwiki' => true,
-	'foundationwiki' => true,
-],
-
 'wmgMinimumVideoPlayerSize' => [
 	'default' => 800,
 ],
