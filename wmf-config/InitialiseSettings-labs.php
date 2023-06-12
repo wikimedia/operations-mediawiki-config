@@ -1585,6 +1585,9 @@ function wmfGetOverrideSettings() {
 				],
 			],
 		],
+		'-wgOresLiftWingBaseUrl' => [
+			'default' => 'https://api.wikimedia.org/service/lw/inference/'
+		],
 		// T184668
 		'wmgUseGlobalPreferences' => [
 			// Explicitly disabled on non-CentralAuth wikis in CommonSettings.php
