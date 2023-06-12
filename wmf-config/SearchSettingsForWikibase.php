@@ -70,6 +70,9 @@ if ( isset( $wmgWikibaseSearchProfiles ) ) {
 	$wgWBRepoSettings['searchProfiles'] = $wmgWikibaseSearchProfiles;
 }
 
+// T328276
+$wgCirrusSearchDeduplicateAnalysis = true;
+
 // Load site-specific configs
 if ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) {
 	// Load wikidata specific search config
