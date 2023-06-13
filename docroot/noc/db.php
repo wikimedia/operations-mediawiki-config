@@ -23,7 +23,7 @@ $dbctlJsonByDC = [
 	'codfw' => 'codfw.json',
 	'eqiad' => 'eqiad.json',
 ];
-$dbSelectedDC = 'codfw';
+$dbSelectedDC = 'eqiad';
 
 if ( !is_dir( $dbConfigEtcdPrefix ) ) {
 	// Local testing and debugging fallback
