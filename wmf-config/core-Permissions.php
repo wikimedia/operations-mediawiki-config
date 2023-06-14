@@ -2156,6 +2156,7 @@ return [
 		'autopatrolled' => [ 'autopatrol' => true ], // T177141
 	],
 	'+simplewiki' => [
+		'bot' => [ 'changetags' => true ], // T339124
 		'flood' => [ 'bot' => true ],
 		'rollbacker' => [ 'rollback' => true, ],
 		// T29875 (see comment 4)
@@ -2163,11 +2164,13 @@ return [
 			'patrol' => true,
 			'autopatrol' => true,
 		],
+		'sysop' => [ 'changetags' => true ], // T339124
 		'uploader' => [
 			'upload' => true,
 			'reupload' => true,
 			'reupload-own' => true,
 		], // T127826
+		'user' => [ 'changetags' => false ], // T339124
 	],
 	'+simplewiktionary' => [
 		'rollbacker' => [ 'rollback' => true, ],
