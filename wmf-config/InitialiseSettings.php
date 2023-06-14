@@ -11415,13 +11415,6 @@ return [
 	'commonswiki' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 ],
 
-// T299954
-'wgCommentTempTableSchemaMigrationStage' => [
-	'default' => [
-		'rev_comment' => SCHEMA_COMPAT_NEW,
-	],
-],
-
 // T334295
 'wgAbuseFilterActorTableSchemaMigrationStage' => [
 	'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,

@@ -1521,12 +1521,6 @@ function wmfGetOverrideSettings() {
 			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
 		],
 
-		'-wgCommentTempTableSchemaMigrationStage' => [
-			'default' => [
-				'rev_comment' => SCHEMA_COMPAT_NEW,
-			],
-		],
-
 		'-wgAbuseFilterActorTableSchemaMigrationStage' => [
 			'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 		],
