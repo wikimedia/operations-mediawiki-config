@@ -7240,8 +7240,9 @@ return [
 	'otrs_wikiwiki' => true, // T63297
 	'outreachwiki' => true,
 	'plwikimedia' => true, // T259087
-	'ruwikimedia' => true, // T121766
+	'ptwikisource' => true, // T339139
 	'punjabiwikimedia' => true, // T204477
+	'ruwikimedia' => true, // T121766
 	'sourceswiki' => true, // T201814
 	'specieswiki' => true, // T129888
 	'sewikimedia' => true, // T239091
@@ -7332,6 +7333,7 @@ return [
 	'default' => true,
 	'otrs_wikiwiki' => false, // T63297
 	'collabwiki' => false, // T313241
+	'ptwikisource' => false, // T339139
 ],
 'wmgTranslateESIndex' => [
 	'default' => 'ttmserver',
