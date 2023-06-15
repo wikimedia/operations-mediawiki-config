@@ -730,15 +730,13 @@ function wmfGetOverrideSettings() {
 		// probably to RESTbase but it just might be talking
 		// directly to the Parsoid API.
 		'wgVisualEditorDefaultParsoidClient' => [
-			'default' => 'vrs',
-			'dewiki' => 'direct', // T320531
+			'default' => 'direct', // T320529
 		],
 
 		// Needs to be false for wikis that have wgVisualEditorDefaultParsoidClient = 'direct'.
-		// This shouldn't be needed anyomore once we sort out the logic for $wgVisualEditorAllowLossySwitching.
+		// Shouldn't be needed anymore once everything uses that mode.
 		'wmgVisualEditorAccessRestbaseDirectly' => [
-			'default' => true,
-			'dewiki' => false, // T320531
+			'default' => false, // T320529
 		],
 
 		'wmgUseRSSExtension' => [
