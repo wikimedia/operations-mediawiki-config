@@ -5174,6 +5174,8 @@ return [
 ],
 'wgAbuseFilterEnableBlockedExternalDomain' => [
 	'default' => false,
+	'testwiki' => true,
+	'fawiki' => true,
 ],
 
 # @}
