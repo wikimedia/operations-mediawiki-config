@@ -8421,20 +8421,6 @@ return [
 	'eswiki' => 'internal-survey-perceived-performance-survey',
 ],
 
-'wgNavigationTimingOversampleFactor' => [
-	'default' => [
-		// 'geo' => [],
-		// 'userAgent' => [],
-		// 'pageName' => [],
-	],
-	'cawiki' => [
-		'wiki' => 1,
-	],
-	'commonswiki' => [
-		'wiki' => 10,
-	],
-],
-
 'wgNavigationTimingCpuBenchmarkSamplingFactor' => [
 	'default' => 2,
 	'eswiki' => 1,
