@@ -202,10 +202,8 @@ function wmfGetOverrideSettings() {
 						],
 					],
 				],
-				// See https://phabricator.wikimedia.org/T326214
+				// See https://phabricator.wikimedia.org/T326212
 				'mediawiki.special_diff_interactions' => [
-					'schema_title' => 'analytics/mediawiki/client/metrics_event',
-					'destination_event_service' => 'eventgate-analytics-external',
 					'producers' => [
 						'metrics_platform_client' => [
 							'events' => [
@@ -264,7 +262,12 @@ function wmfGetOverrideSettings() {
 				'wikifunctions.ui' => [
 					'schema_title' => '/analytics/mediawiki/client/metrics_event',
 					'destination_event_service' => 'eventgate-analytics-external',
-				]
+				],
+				// See https://phabricator.wikimedia.org/T326212
+				'mediawiki.special_diff_interactions' => [
+					'schema_title' => 'analytics/mediawiki/client/metrics_event',
+					'destination_event_service' => 'eventgate-analytics-external',
+				],
 			]
 		],
 
