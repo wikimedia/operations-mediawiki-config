@@ -2580,7 +2580,11 @@ return [
 		'rollbacker' => [ 'rollback' => true ], // T265509
 		'eliminator' => [
 			'delete' => true, // T302670
-		]
+		],
+		'patroller' => [ // T338826
+			'autopatrol' => true,
+			'patrol' => true,
+		],
 	],
 	'+vecwiki' => [
 		'flood' => [ 'bot' => true ],
@@ -4256,7 +4260,8 @@ return [
 		'sysop' => [
 			'rollbacker', // T265509
 			'eliminator', // T302670
-	],
+			'patroller', // T338826
+		],
 	],
 	'+vecwiki' => [
 		'sysop' => [ 'flood' ],
@@ -5378,6 +5383,7 @@ return [
 		'sysop' => [
 			'rollbacker', // T265509
 			'eliminator', // T302670
+			'patroller', // T338826
 		],
 	],
 	'+viwiki' => [
