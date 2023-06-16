@@ -8297,10 +8297,6 @@ return [
 	'wikipedia' => false,
 ],
 
-'wgContentTranslationDefaultParsoidClient' => [
-	'default' => 'direct', // T339322
-],
-
 'wgSpecialContributeSkinsEnabled' => [
 	'default' => [],
 	'bnwiki' => [ "minerva", "vector-2022" ],
