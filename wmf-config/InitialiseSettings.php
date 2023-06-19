@@ -5177,9 +5177,13 @@ return [
 	'default' => [ 'default' => 86400, ],
 ],
 'wgAbuseFilterEnableBlockedExternalDomain' => [
-	'default' => false,
-	'testwiki' => true,
-	'fawiki' => true,
+	'default' => true,
+	// Meta holds the shared spam blacklist
+	'metawiki' => false,
+	// Wikibase doesn't work with the new system (T65632)
+	'wikidatawiki' => false,
+	'testwikidatawiki' => false,
+	'commonswiki' => false
 ],
 
 # @}
