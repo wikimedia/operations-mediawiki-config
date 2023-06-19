@@ -232,7 +232,7 @@ function wmfGetOverrideSettings() {
 					'producers' => [
 						'metrics_platform_client' => [
 							'events' => [
-								'wf.ui',
+								'wf.ui.',
 							],
 							'provide_values' => [
 								'agent_client_platform_family',
@@ -252,7 +252,7 @@ function wmfGetOverrideSettings() {
 						],
 					],
 					'sample' => [
-						'unit' => 'session',
+						'unit' => 'pageview',
 						'rate' => 1,
 					],
 				]
@@ -260,7 +260,7 @@ function wmfGetOverrideSettings() {
 			'+metawiki' => [
 				// See https://phabricator.wikimedia.org/T336722
 				'wikifunctions.ui' => [
-					'schema_title' => '/analytics/mediawiki/client/metrics_event',
+					'schema_title' => 'analytics/mediawiki/client/metrics_event',
 					'destination_event_service' => 'eventgate-analytics-external',
 				],
 				// See https://phabricator.wikimedia.org/T326212
