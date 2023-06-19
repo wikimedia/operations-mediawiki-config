@@ -409,15 +409,6 @@ class InitialiseSettingsTest extends PHPUnit\Framework\TestCase {
 			'officewiki', $this->config, 'production'
 		);
 
-		$this->assertEquals(
-			'windows-1252',
-			$enwikiSettings['wgLegacyEncoding'],
-			'Enable by dbname, wgLegacyEncoding for enwiki'
-		);
-		$this->assertFalse(
-			$dewikiSettings['wgLegacyEncoding'],
-			'Disable by dbname, wgLegacyEncoding for most other wikis'
-		);
 		$this->assertFalse(
 			$officewikiSettings['groupOverrides2']['*']['read'],
 			'Set by "private" tag, restrict reading on officewiki'

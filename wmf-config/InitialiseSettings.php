@@ -50,13 +50,9 @@ return [
 	'wgNoticeProject',
 	'wgRightsUrl',
 ],
-// For live conversion of old revisions:
 'wgLegacyEncoding' => [
 	'default' => false,
-
-	'enwiki' => 'windows-1252',
 ],
-
 'wgCapitalLinks' => [
 	'default' => true,
 	'jbowiki' => false,
