@@ -55,6 +55,10 @@ return [
 	'default' => false,
 
 	'enwiki' => 'windows-1252',
+	'nlwiki' => 'windows-1252',
+	'svwiki' => 'windows-1252',
+	'svwiktionary' => 'windows-1252',
+	'dawiki' => 'windows-1252',
 ],
 
 'wgCapitalLinks' => [
