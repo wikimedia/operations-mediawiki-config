@@ -8591,23 +8591,6 @@ return [
 	'default' => true,
 ],
 
-// EventBusStreamNamesMap is used by EventBus HookHandlers that produce
-// events to map from an internal stream name to the actual produced
-// stream name.   This is usually only set while a stream is still in
-// development/testing.
-// NOTE: This setting can be removed once
-// https://gerrit.wikimedia.org/r/c/mediawiki/extensions/EventBus/+/920377
-// is deployed everywhere.
-'wgEventBusStreamNamesMap' => [
-	// We are in a release candidate phase for
-	// mediawiki.page_change  Override the default stream name until
-	// we release it.
-	// NOTE: the values here MUST map to a key in wgEventStreams.
-	'default' => [
-		'mediawiki_page_change' => 'mediawiki.page_change.v1'
-	]
-],
-
 // Enable sessionTick on these wikis
 'wgWMESessionTick' => [
 	'default' => true,
