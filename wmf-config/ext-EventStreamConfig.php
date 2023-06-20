@@ -1385,8 +1385,8 @@ return [
 			// monitoring job can produce events through EventGate.
 			// page_content_change is produced directly to Kafka jumbo-eqiad,
 			// so we need to use an eventgate that also produces to jumbo-eqiad.
-			// We use eventgate-analytics
-			'destination_event_service' => 'eventgate-analytics',
+			// We use eventgate-analytics-external.
+			'destination_event_service' => 'eventgate-analytics-external',
 		],
 		// This stream will be used by the streaming enrichment pipeline
 		// to emit error events encountered during enrichment.
