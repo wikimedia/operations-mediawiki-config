@@ -1523,7 +1523,6 @@ if ( $wmgUseSecurePoll ) {
 	wfLoadExtension( 'SecurePoll' );
 
 	$wgSecurePollUseNamespace = $wmgSecurePollUseNamespace;
-	$wgSecurePollScript = 'auth-api.php';
 	$wgHooks['SecurePoll_JumpUrl'][] = static function ( $page, &$url ) use ( $site, $lang ) {
 		$url = wfAppendQuery( $url, [ 'site' => $site, 'lang' => $lang ] );
 	};
