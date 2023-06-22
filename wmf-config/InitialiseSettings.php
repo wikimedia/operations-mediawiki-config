@@ -6537,13 +6537,17 @@ return [
 
 // Control the probability with which Parsoid's /{domain}/v3/page/html endpoint
 // writes to the parser cache. This endpoint is hit by RESTbase when pre-populating
-// its cache after a page is edited. Setting this to 1 cause all edits to trigger
-// a parser cache write, putting full pressure on the parser cache.
-// This needs to be enabled gradually. See T322672.
+// its cache after a page is edited. This mechanism for populating the cache is
+// redundant to ParsoidCachePrewarmJob as controleld by the WarmParsoidParserCache
+// flag in wgParsoidCacheConfig.
+// Setting this to 1 cause all content served from parsoid endpoints to be stored
+// in the parser cache. Setting it to 0 will prevent cache writes in the parsoid,
+// endpoints, leaving it to ParsoidCachePrewarmJob to populate the cache.
 'wgTemporaryParsoidHandlerParserCacheWriteRatio' => [
 	'default' => 1.0, // Enabled per default
 	'commonswiki' => 0.0, // disable for commons, useless for file descriptions
 	'wikidatawiki' => 0.0, // disable for wikidata, we shouldn't render items anyway
+	'frwiki' => 0.0, // Experiment for T339867: see if jobrunners can handle all parsing
 ],
 
 'wgLanguageConverterCacheType' => [
