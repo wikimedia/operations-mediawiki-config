@@ -420,6 +420,9 @@ $wgKartographerMapServer = 'https://maps-beta.wmflabs.org';
 $wgKartographerNearby = true;
 $wgKartographerNearbyClustering = true;
 
+// Temporary feature flag for the Parsoid support for Kartographer (T340134)
+$wgKartographerParsoidSupport = true;
+
 // Enable max-width for editing. T307725.
 $wgVectorMaxWidthOptions['exclude']['querystring']['action'] = '(history|edit)';
 
