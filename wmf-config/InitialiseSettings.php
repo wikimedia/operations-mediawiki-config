@@ -4569,6 +4569,7 @@ return [
 	'fawiki' => true, // T303173
 	'fiwiki' => true, // T257073
 	'enwikisource' => true, // T288021
+	'ruwiki' => true, // T340274
 ],
 
 'wmgCollectionArticleNamespaces' => [
