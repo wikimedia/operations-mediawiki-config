@@ -114,7 +114,7 @@ call_user_func( static function () {
 		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 
 	} elseif ( $wgDBname == 'plwiki' ) {
-		// T45617, T50043
+		// T45617, T50043, T340397
 		$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 		$wgFlaggedRevsAutopromote['days'] = 90;
 		$wgFlaggedRevsAutopromote['edits'] = 500;
@@ -122,8 +122,7 @@ call_user_func( static function () {
 		$wgFlaggedRevsAutopromote['benchmarks'] = 15;
 		$wgFlaggedRevsAutopromote['totalContentEdits'] = 500;
 		$wgFlaggedRevsAutopromote['uniqueContentPages'] = 10;
-		$wgFlaggedRevsAutopromote['editComments'] = 30;
-		$wgFlaggedRevsAutopromote['userpageBytes'] = 100;
+		$wgFlaggedRevsAutopromote['editComments'] = 500;
 
 	} elseif ( $wgDBname == 'ptwikibooks' ) {
 		$wgFlaggedRevsAutopromote = [
