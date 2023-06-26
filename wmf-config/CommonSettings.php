@@ -1436,6 +1436,7 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 		'tarballName' => '$EXT-$REF-$SHA.tar.gz',
 		'repoListUrl' => 'https://gerrit.wikimedia.org/r/projects/?b=master&p=mediawiki/$TYPE/',
 		'sourceUrl' => 'https://gerrit.wikimedia.org/r/mediawiki/$TYPE/$EXT.git',
+		'proxy' => $wgLocalHTTPProxy,
 	];
 
 	// Current stable release
