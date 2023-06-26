@@ -500,6 +500,9 @@ return [
 		'Author' => 106,
 		'Author_talk' => 107,
 	],
+	'+extwiki' => [
+		'Güiquipeya' => NS_PROJECT, // T337696
+	],
 	'+fawiki' => [
 		'كاربر' => NS_USER,
 		'بحث كاربر' => NS_USER_TALK,
