@@ -6549,6 +6549,7 @@ return [
 	'wikidatawiki' => 0.0, // disable for wikidata, we shouldn't render items anyway
 	'frwiki' => 0.0, // Experiment for T339867: see if jobrunners can handle all parsing
 	'dewiki' => 0.0, // Experiment for T339867: see if jobrunners can handle all parsing
+	'enwiki' => 0.0, // Experiment for T339867: see if jobrunners can handle all parsing
 ],
 
 'wgLanguageConverterCacheType' => [
