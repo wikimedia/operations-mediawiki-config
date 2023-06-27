@@ -2660,8 +2660,6 @@ if ( $wmgUseVisualEditor ) {
 	if ( $wmgVisualEditorAccessRestbaseDirectly ) {
 		$wgVisualEditorRestbaseURL = "/api/rest_v1/page/html/";
 		$wgVisualEditorFullRestbaseURL = "/api/rest_";
-		// There should be no lossy switching in RESTBase mode, but just in case
-		$wgVisualEditorAllowLossySwitching = false;
 	} else {
 		if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 			// (T241961) Just for wikitech, load the Parsoid extension and
@@ -2672,8 +2670,6 @@ if ( $wmgUseVisualEditor ) {
 			// Note that wgVirtualRestConfig['modules']['parsoid'] isn't set as wmgUseParsoid is false
 			$wgVisualEditorParsoidAutoConfig = true;
 		}
-		// Prefer lossy switching (dirty diffs) to not being able to switch editors
-		$wgVisualEditorAllowLossySwitching = true;
 	}
 
 	// Tab configuration
