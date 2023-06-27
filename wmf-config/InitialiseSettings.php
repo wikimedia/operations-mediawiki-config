@@ -6545,12 +6545,9 @@ return [
 // in the parser cache. Setting it to 0 will prevent cache writes in the parsoid,
 // endpoints, leaving it to ParsoidCachePrewarmJob to populate the cache.
 'wgTemporaryParsoidHandlerParserCacheWriteRatio' => [
-	'default' => 1.0, // Enabled per default
+	'default' => 0.0, // Experiment for T339867: see if jobrunners can handle all parsing
 	'commonswiki' => 0.0, // disable for commons, useless for file descriptions
 	'wikidatawiki' => 0.0, // disable for wikidata, we shouldn't render items anyway
-	'frwiki' => 0.0, // Experiment for T339867: see if jobrunners can handle all parsing
-	'dewiki' => 0.0, // Experiment for T339867: see if jobrunners can handle all parsing
-	'enwiki' => 0.0, // Experiment for T339867: see if jobrunners can handle all parsing
 ],
 
 'wgLanguageConverterCacheType' => [
