@@ -2674,12 +2674,7 @@ if ( $wmgUseVisualEditor ) {
 	}
 
 	// User access configuration
-	if ( $wmgVisualEditorDefault ) {
-		$wgDefaultUserOptions['visualeditor-enable'] = 1;
-	} else {
-		$wgDefaultUserOptions['visualeditor-enable'] = 0;
-		$wgVisualEditorEnableBetaFeature = true;
-	}
+	$wgVisualEditorEnableBetaFeature = !$wmgVisualEditorDefault;
 
 	// Feedback configuration
 	if ( $wmgVisualEditorConsolidateFeedback ) {
