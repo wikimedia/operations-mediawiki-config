@@ -443,6 +443,7 @@ if ( $wmgUsePhonos ) {
 
 if ( $wgDBname == 'dewiki' ) {
 	$wgAutoCreateTempUser['enabled'] = true;
+	$wgGroupPermissions['temp']['edit'] = true;
 }
 
 }
