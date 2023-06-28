@@ -1950,6 +1950,7 @@ Wiktionary:
         comment_2x: T138801
         commons_wordmark: 'File:Wiktionary-wordmark-en.svg'
         comment_wordmark: 'T157476, T249047'
+        local_icon: true
     eowiktionary:
         comment: T45240
         comment_1_5x: T150618
@@ -1959,6 +1960,7 @@ Wiktionary:
         no_2x: true
         commons_wordmark: 'File:Wiktionary-wordmark-es.svg'
         comment_wordmark: T254059
+        local_tagline: true
     etwiktionary:
         comment: T45240
         comment_1_5x: T150618
@@ -2010,6 +2012,7 @@ Wiktionary:
         comment: T45240
         no_1_5x: true
         no_2x: true
+        selected_icon: enwiktionary
     guwwiktionary:
         commons: 'File:Wiktionary-logo-guw-v6.svg'
     gvwiktionary:
@@ -2140,7 +2143,10 @@ Wiktionary:
         comment: T45240
         comment_1_5x: T150618
         comment_2x: T150618
-    niawiktionary: null
+    niawiktionary:
+        local_wordmark: true
+        local_tagline: true
+        local_icon: true
     mgwiktionary:
         no_1_5x: true
         no_2x: true
@@ -2150,7 +2156,7 @@ Wiktionary:
         comment: T236861
         comment_1_5x: T236861
         comment_2x: T236861
-        no_icon: true
+        selected_icon: enwiktionary
     miwiktionary:
         comment: T45240
         comment_1_5x: T150618
@@ -2281,7 +2287,7 @@ Wiktionary:
         comment: T238105
         comment_1_5x: T238105
         comment_2x: T238105
-        no_icon: true
+        local_icon: true
     simplewiktionary:
         no_1_5x: true
         no_2x: true
@@ -2304,7 +2310,9 @@ Wiktionary:
     srwiktionary:
         comment_1_5x: T172245
         comment_2x: T172245
-        no_icon: true
+        local_icon: true
+        local_tagline: true
+        local_wordmark: true
     suwiktionary:
         comment: T45240
         comment_1_5x: T150618
@@ -2339,7 +2347,7 @@ Wiktionary:
         comment: T176008
         comment_1_5x: T176008
         comment_2x: T176008
-        no_icon: true
+        local_icon: true
         commons_wordmark: 'File:Wiktionary-wordmark-tr.svg'
         comment_wordmark: T328499
     ttwiktionary:
@@ -2353,6 +2361,7 @@ Wiktionary:
     ukwiktionary:
         comment_1_5x: T150618
         comment_2x: T150618
+        local_icon: true
     urwiktionary:
         comment: T187209
         comment_1_5x: T187209
@@ -2398,7 +2407,7 @@ Wikiquote:
     arwikiquote:
         no_1_5x: true
         no_2x: true
-        no_icon: true
+        local_icon: true
     aswikiquote:
         commons: File:Wikiquote-logo-as.svg
     azwikiquote:
@@ -2579,7 +2588,7 @@ Wikiquote:
         comment: T97510
         no_1_5x: true
         no_2x: true
-        no_icon: true
+        selected_icon: arwikiquote
     viwikiquote: null
     zhwikiquote:
         commons: 'File:Wikiquote-logo-zh-hant.svg'
@@ -3322,14 +3331,17 @@ Wikivoyage:
     arwikimedia:
         no_1_5x: true
         no_2x: true
+        selected_icon: outreachwiki
     azwikimedia:
         commons: 'File:Azerbaijani Wikimedians Black logo-en SVG.svg'
     bdwikimedia:
         no_1_5x: true
         no_2x: true
+        selected_icon: outreachwiki
     bewikimedia:
         no_1_5x: true
         no_2x: true
+        selected_icon: outreachwiki
     brwikimedia:
         comment: T257925
         comment_1_5x: T257925
@@ -3343,14 +3355,17 @@ Wikivoyage:
         comment: T98676
         no_1_5x: true
         no_2x: true
+        selected_icon: outreachwiki
     cowikimedia:
         no_1_5x: true
         no_2x: true
+        selected_icon: outreachwiki
     dkwikimedia:
         commons: 'File:Wikimedia_Danmark_logo.svg'
         comment: T332784
         comment_1_5x: T332784
         comment_2x: T332784
+        selected_icon: outreachwiki
     ecwikimedia:
         comment: T135521
         comment_1_5x: T135521
@@ -3359,25 +3374,32 @@ Wikivoyage:
     etwikimedia:
         no_1_5x: true
         no_2x: true
+        selected_icon: outreachwiki
     fiwikimedia:
         no_1_5x: true
         no_2x: true
+        selected_icon: outreachwiki
     gewikimedia:
         comment: T236389
         comment_1_5x: T236389
         comment_2x: T236389
     grwikimedia:
         comment: T245911
+        selected_icon: outreachwiki
     hiwikimedia: null
-    id_internalwikimedia: null
+    id_internalwikimedia:
+        selected_icon: outreachwiki
     idwikimedia:
         comment: T192726
         comment_1_5x: T192726
         comment_2x: T192726
-    maiwikimedia: null
+        selected_icon: outreachwiki
+    maiwikimedia:
+        selected_icon: outreachwiki
     mkwikimedia:
         no_1_5x: true
         no_2x: true
+        selected_icon: outreachwiki
     mxwikimedia:
         no_1_5x: true
         no_2x: true
@@ -3388,6 +3410,7 @@ Wikivoyage:
     nlwikimedia:
         no_1_5x: true
         no_2x: true
+        selected_icon: outreachwiki
     nowikimedia:
         no_1_5x: true
         no_2x: true
@@ -3396,20 +3419,28 @@ Wikivoyage:
     nycwikimedia:
         no_1_5x: true
         no_2x: true
+        selected_icon: outreachwiki
     nzwikimedia:
         no_1_5x: true
         no_2x: true
+        selected_icon: outreachwiki
     pa_uswikimedia:
         no_1_5x: true
         no_2x: true
+        selected_icon: outreachwiki
     plwikimedia:
         no_1_5x: true
         no_2x: true
+        selected_icon: outreachwiki
     ptwikimedia:
         comment: T126832
         comment_1_5x: T126832
         comment_2x: T126832
-    punjabiwikimedia: null
+        selected_icon: outreachwiki
+    punjabiwikimedia:
+        no_1_5x: true
+        no_2x: true
+        selected_icon: outreachwiki
     romdwikimedia:
         commons: 'File:Wikimedia Community Logo WMROMD.svg'
         comment: T187184
@@ -3419,9 +3450,11 @@ Wikivoyage:
     rswikimedia:
         no_1_5x: true
         no_2x: true
+        selected_icon: outreachwiki
     ruwikimedia:
         no_1_5x: true
         no_2x: true
+        selected_icon: outreachwiki
     sewikimedia:
         no_1_5x: true
         no_2x: true
@@ -3430,15 +3463,18 @@ Wikivoyage:
         comment: T323850
         comment_1_5x: T323850
         comment_2x: T323850
+        selected_icon: outreachwiki
     uawikimedia:
         no_1_5x: true
         no_2x: true
+        selected_icon: outreachwiki
     vewikimedia:
         commons: 'File:Wikimedia Venezuela logo negro.svg'
     wbwikimedia:
         comment: T162510
         comment_1_5x: T162510
         comment_2x: T162510
+        selected_icon: outreachwiki
 'Special wikis':
     advisorswiki:
         comment: T202844
@@ -3451,7 +3487,7 @@ Wikivoyage:
     apiportalwiki:
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimedia
+        selected_icon: outreachwiki
     arbcom_cswiki:
         comment: T151731
         comment_1_5x: T151731
@@ -3487,19 +3523,19 @@ Wikivoyage:
     auditcomwiki:
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimedia
+        selected_icon: outreachwiki
     boardwiki:
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimedia
+        selected_icon: outreachwiki
     boardgovcomwiki:
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimedia
+        selected_icon: outreachwiki
     chairwiki:
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimedia
+        selected_icon: outreachwiki
     chapcomwiki:
         comment_1_5x: T193024
         comment_2x: T193024
@@ -3525,7 +3561,7 @@ Wikivoyage:
     electcomwiki:
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimedia
+        selected_icon: outreachwiki
     execwiki:
         no_1_5x: true
         no_2x: true
@@ -3533,7 +3569,7 @@ Wikivoyage:
         comment: T50379
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimedia
+        selected_icon: outreachwiki
     foundationwiki:
         commons_wordmark: 'File:Foundation-wordmark.svg'
         comment_wordmark: T295303
@@ -3542,7 +3578,7 @@ Wikivoyage:
         comment: T50379
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimedia
+        selected_icon: outreachwiki
     incubatorwiki:
         comment_1_5x: T230122
         comment_2x: T230122
@@ -3550,7 +3586,7 @@ Wikivoyage:
     internalwiki:
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimedia
+        selected_icon: outreachwiki
     legalteamwiki:
         no_1_5x: true
         no_2x: true
@@ -3558,7 +3594,7 @@ Wikivoyage:
         comment: T50236
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimedia
+        selected_icon: outreachwiki
     mediawikiwiki:
         commons: 'File:MediaWiki-2020-logo.svg'
         commons_wordmark: 'File:MediaWiki-2020-wordmark.svg'
@@ -3571,7 +3607,7 @@ Wikivoyage:
     movementroleswiki:
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimedia
+        selected_icon: outreachwiki
     nostalgiawiki:
         no_1_5x: true
         no_2x: true
@@ -3582,10 +3618,10 @@ Wikivoyage:
     ombudsmenwiki:
         commons: 'File:Wikimedia Ombuds logo.svg'
         comment: T50379
-        selected_icon: wikimedia
+        selected_icon: outreachwiki
     otrs_wikiwiki:
         commons: 'File:Wikimedia_VRT_RGB_logo.svg'
-        selected_icon: wikimedia
+        selected_icon: outreachwiki
     outreachwiki:
         no_1_5x: true
         no_2x: true
@@ -3595,19 +3631,19 @@ Wikivoyage:
     projectcomwiki:
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimedia
+        selected_icon: outreachwiki
     qualitywiki:
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimedia
+        selected_icon: outreachwiki
     searchcomwiki:
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimedia
+        selected_icon: outreachwiki
     spcomwiki:
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimedia
+        selected_icon: outreachwiki
     specieswiki:
         commons: 'File:WikiSpecies_logo.svg'
         comment: 'T306037, T310961'
@@ -3663,11 +3699,15 @@ Wikivoyage:
         selected_wordmark: wikidatawiki
         local_icon: true
         comment_icon: T299512
+    techconductwiki:
+        no_1_5x: true
+        no_2x: true
+        selected_icon: outreachwiki
     transitionteamwiki:
         comment: T50379
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimedia
+        selected_icon: outreachwiki
     thankyouwiki:
         selected: donatewiki
         comment: 'always same as donatewiki, see T259002'
@@ -3805,7 +3845,7 @@ Wikivoyage:
         comment: T50376
         no_1_5x: true
         no_2x: true
-        selected_icon: wikimaniawiki
+        selected_icon: wikimania
     wikimaniawiki:
         comment_1_5x: T194340, T337044
         comment_2x: T194340, T337044
