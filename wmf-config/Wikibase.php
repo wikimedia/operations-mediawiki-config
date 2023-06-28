@@ -129,6 +129,8 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['sandboxEntityIds'] = $wmgWikibaseRepoSandboxEntityIds;
 	}
 
+	// configure entity sources and namespaces explicitly
+	$wgWBRepoSettings['defaultEntityNamespaces'] = false;
 	$wgWBRepoSettings['entitySources'] = $wmgWikibaseEntitySources;
 	if ( isset( $wmgWikibaseRepoLocalEntitySourceName ) ) {
 		$wgWBRepoSettings['localEntitySourceName'] = $wmgWikibaseRepoLocalEntitySourceName;
