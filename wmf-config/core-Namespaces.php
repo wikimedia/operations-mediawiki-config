@@ -471,6 +471,7 @@ return [
 	'+eowikisource' => [
 		'Auxtoro' => 102,
 		'Auxtoro-Diskuto' => 103,
+		'VF' => NS_PROJECT, // T340609
 	],
 	'+eswiki' => [
 		'CAT' => NS_CATEGORY, // T183612
