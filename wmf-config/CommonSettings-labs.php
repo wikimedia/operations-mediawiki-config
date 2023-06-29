@@ -416,10 +416,6 @@ if ( $wmgUseSecurePoll ) {
 // Point to the deployment-prep kartotherian server, see T310150.
 $wgKartographerMapServer = 'https://maps-beta.wmflabs.org';
 
-// Temporary feature flag for the Kartographer nearby feature see T304076
-$wgKartographerNearby = true;
-$wgKartographerNearbyClustering = true;
-
 // Temporary feature flag for the Parsoid support for Kartographer (T340134)
 $wgKartographerParsoidSupport = true;
 
