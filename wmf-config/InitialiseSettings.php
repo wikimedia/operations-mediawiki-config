@@ -3738,17 +3738,17 @@ return [
 
 'wmgUsePhonos' => [
 	'default' => false,
-	'testwiki' => true, // T321084
 	'afwiktionary' => true, // T324561
 	'arwiki' => true, // T324561
+	'mediawikiwiki' => true,  // T336763
 	'small' => true, // T336763
+	'testwiki' => true, // T321084
 ],
 
 # T336763
 'wgPhonosInlineAudioPlayerMode' => [
-	'default' => false,
+	'default' => true, // T336763
 	'testwiki' => false,
-	'small' => true, // T336763
 ],
 
 'wgPhonosPath' => [
