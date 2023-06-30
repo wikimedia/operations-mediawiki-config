@@ -62,16 +62,10 @@ function wmfGetOverrideSettings() {
 
 		'wgLanguageCode' => [
 			'votewiki' => 'en', // T295242
-			'wikifunctionswiki' => 'en', // Temporary until wikifunctions.org is a real wiki and so in special.dblist
 		],
 
 		'wgSitename' => [
 			'wikivoyage'     => 'Wikivoyage',
-			'wikifunctionswiki' => 'Wikifunctions',
-		],
-
-		'wgWikimediaMessagesLicensing' => [
-			'wikifunctionswiki' => 'wikifunctions',
 		],
 
 		'-wgServer' => [
@@ -202,48 +196,6 @@ function wmfGetOverrideSettings() {
 						],
 					],
 				],
-			],
-			'+wikifunctionswiki' => [
-				// See https://phabricator.wikimedia.org/T336722
-				'wikifunctions.ui' => [
-					'schema_title' => 'analytics/mediawiki/client/metrics_event',
-					'destination_event_service' => 'eventgate-analytics-external',
-					'producers' => [
-						'metrics_platform_client' => [
-							'events' => [
-								'wf.ui.',
-							],
-							'provide_values' => [
-								'agent_client_platform_family',
-								'page_id',
-								'page_title',
-								'page_revision_id',
-								'performer_is_logged_in',
-								'performer_id',
-								'performer_name',
-								'performer_session_id',
-								'performer_pageview_id',
-								'performer_language',
-								'performer_language_variant',
-								'performer_edit_count',
-								'performer_edit_count_bucket',
-								'performer_groups',
-								'performer_is_bot',
-							],
-						],
-					],
-					'sample' => [
-						'unit' => 'pageview',
-						'rate' => 1,
-					],
-				]
-			],
-			'+metawiki' => [
-				// See https://phabricator.wikimedia.org/T336722
-				'wikifunctions.ui' => [
-					'schema_title' => 'analytics/mediawiki/client/metrics_event',
-					'destination_event_service' => 'eventgate-analytics-external',
-				],
 			]
 		],
 
@@ -282,9 +234,6 @@ function wmfGetOverrideSettings() {
 			'+enwiki' => [
 				'mediawiki.ipinfo_interaction',
 				'desktop_mobile_link_clicks',
-			],
-			'+wikifunctionswiki' => [
-				'wikifunctions.ui',
 			],
 		],
 
@@ -534,11 +483,6 @@ function wmfGetOverrideSettings() {
 			'default'    => false,
 			'enwiki'     => true,
 			'simplewiki' => true,
-		],
-
-		'wmgUseKartographer' => [
-			'default' => true,
-			'wikifunctionswiki' => false,
 		],
 
 		'wgWMEDesktopWebUIActionsTracking' => [
@@ -2397,25 +2341,6 @@ function wmfGetOverrideSettings() {
 
 		'wmgUseChessBrowser' => [
 			'default' => true,
-		],
-
-		// Temporary until Wikifunctions is not just in Beta Cluster
-		'wgNamespaceAliases' => [
-			'+wikifunctionswiki' => [
-				'ZObject' => NS_MAIN,
-				'ZObject_talk' => NS_TALK,
-			],
-		],
-		'wgFavicon' => [
-			'wikifunctionswiki' => '/static/favicon/wikifunctions.ico',
-		],
-		'wmgCentralAuthLoginIcon' => [
-			'wikifunctionswiki' => '/srv/mediawiki/static/images/sul/wikifunctions.png',
-		],
-
-		// (T289315) Early roll-out to Beta Cluster only
-		'wmgUseWikiLambda' => [
-			'wikifunctionswiki' => true,
 		],
 
 		// T303004
