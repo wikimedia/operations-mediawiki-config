@@ -853,6 +853,8 @@ if ( $wmgUseCORS ) {
 		'*.wikivoyage.org',
 		'www.mediawiki.org',
 		'm.mediawiki.org',
+		'www.wikifunctions.org',
+		'm.wikifunctions.org',
 		'advisory.wikimedia.org',
 		'advisory.m.wikimedia.org',
 		'affcom.wikimedia.org',
@@ -4071,7 +4073,7 @@ if ( $wmgUseGrowthExperiments ) {
 	$wgGELinkRecommendationServiceUrl = $wmgLocalServices['linkrecommendation'];
 }
 
-if ( $wmgUseWikiLambda && $wmgRealm === 'labs' ) {
+if ( $wmgUseWikiLambda ) {
 	wfLoadExtension( 'WikiLambda' );
 
 	$wgWikiLambdaOrchestratorLocation = $wmgLocalServices['wikifunctions-orchestrator'];

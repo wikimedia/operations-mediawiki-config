@@ -955,6 +955,7 @@ return [
 'wbwikimedia' => [ 'fishbowl', 'small', 'group1' ],
 'wg_enwiki' => [ 'wikipedia', 'private', 'small', 'visualeditor-nondefault', 'nowikidatadescriptiontaglines' ],
 'wikidatawiki' => [ 'special', 'flow', 'wikidata', 'wikibaserepo', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
+'wikifunctionswiki' => [ 'special', 'desktop-improvements', 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'wikimania2005wiki' => [ 'special', 'closed', 'small', 'wikimania', 'group0', 'nowikidatadescriptiontaglines' ],
 'wikimania2006wiki' => [ 'special', 'closed', 'small', 'wikimania', 'group0', 'nowikidatadescriptiontaglines' ],
 'wikimania2007wiki' => [ 'special', 'closed', 'small', 'wikimania', 'group0', 'nowikidatadescriptiontaglines' ],

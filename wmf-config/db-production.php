@@ -115,6 +115,7 @@ $wgLBFactoryConf = [
 	'trwikivoyage'  => 's5',
 	'trvwiki'       => 's5',
 	'vewikimedia'   => 's5',
+	'wikifunctionswiki'  => 's5',
 	'wawikisource'  => 's5',
 
 	# s6: large wikis + wikitech

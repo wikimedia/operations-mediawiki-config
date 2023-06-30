@@ -1609,6 +1609,10 @@ return [
 		'L' => 146, // T195493
 		'E' => 640, // T245529
 	],
+	'+wikifunctionswiki' => [
+		'ZObject' => NS_MAIN,
+		'ZObject_talk' => NS_TALK,
+	],
 	'+yiwiki' => [
 		'וויקיפעדיע' => NS_PROJECT,
 		'וויקיפעדיע_רעדן' => NS_PROJECT_TALK,
@@ -1658,6 +1662,10 @@ return [
 		'T' => NS_TEMPLATE,
 		'U' => NS_USER,
 		'CAT' => NS_CATEGORY,
+	],
+	'+wikifunctionswiki' => [
+		'ZObject' => NS_MAIN,
+		'ZObject_talk' => NS_TALK,
 	],
 	'+wuuwiki' => [
 		// English aliases - T124389
@@ -5005,6 +5013,7 @@ return [
 	'wikipedia' => 'Wikipedia',
 	'wikibooks' => 'Wikibooks',
 	'wikidata' => 'Wikidata',
+	'wikifunctionswiki' => 'Wikifunctions',
 	'wikimania' => 'Wikimania',
 	'wikimedia' => 'Wikimedia', // chapters
 	'wikinews' => 'Wikinews',
@@ -5673,6 +5682,7 @@ return [
 	'vepwiki' => 'Paginad_Vikipedii',
 	'vewikimedia' => 'Asociación_discusión',
 	'wawiktionary' => 'Wiccionaire_copene', // T181782
+	'wikifunctionswiki' => 'Wikifunctions_talk',
 	'xmfwiki' => 'ვიკიპედია_სხუნუა',
 ],
 # @} end of wgMetaNamespaceTalk

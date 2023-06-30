@@ -2765,6 +2765,92 @@ return [
 		],
 		'flood' => [ 'bot' => true ], // T50013
 	],
+	'+wikifunctionswiki' => [
+		'*' => [
+			// Temporarily during initial, locked-down deployment, no function calling
+			// or wikitext editing for logged-out users
+			'wikilambda-execute' => false,
+			'edit' => false,
+		],
+		'user' => [
+			// Temporarily during initial, locked-down deployment, no editing for basic logged-in
+			// users (this is for regular wikitext pages, including talk pages etc.)
+			'edit' => false,
+
+			// Temporarily during early, limited deployment, basic logged-in users can't do this
+			'wikilambda-create' => false,
+			'wikilambda-create-function' => false,
+			'wikilambda-create-implementation' => false,
+			'wikilambda-create-tester' => false,
+			'wikilambda-edit' => false,
+			'wikilambda-edit-argument-label' => false,
+			'wikilambda-edit-function' => false,
+			'wikilambda-edit-implementation' => false,
+			'wikilambda-edit-key-label' => false,
+			'wikilambda-edit-object-alias' => false,
+			'wikilambda-edit-object-label' => false,
+			'wikilambda-edit-tester' => false,
+			'wikilambda-edit-user-function' => false,
+		],
+		'functioneer' => [
+			// Temporarily during early, limited deployment, re-grant to functioneers the standard
+			// Wikifunctions-specific rights that logged-in users can't do
+			'wikilambda-create' => true,
+			'wikilambda-create-function' => true,
+			'wikilambda-create-implementation' => true,
+			'wikilambda-create-tester' => true,
+			'wikilambda-edit' => true,
+			'wikilambda-edit-argument-label' => true,
+			'wikilambda-edit-function' => true,
+			'wikilambda-edit-implementation' => true,
+			'wikilambda-edit-key-label' => true,
+			'wikilambda-edit-object-alias' => true,
+			'wikilambda-edit-object-label' => true,
+			'wikilambda-edit-tester' => true,
+			'wikilambda-edit-user-function' => true,
+
+			// Temporarily during early, limited deployment, functioneers can't do this
+			"wikilambda-create-type" => false,
+		],
+		'wikifunctions-staff' => [
+			'wikilambda-connect-implementation' => true,
+			'wikilambda-connect-tester' => true,
+			'wikilambda-create' => true,
+			'wikilambda-create-boolean' => true,
+			'wikilambda-create-function' => true,
+			'wikilambda-create-implementation' => true,
+			'wikilambda-create-language' => true,
+			'wikilambda-create-predefined' => true,
+			'wikilambda-create-programming' => true,
+			'wikilambda-create-tester' => true,
+			'wikilambda-create-type' => true,
+			'wikilambda-create-unit' => true,
+			'wikilambda-disconnect-implementation' => true,
+			'wikilambda-disconnect-tester' => true,
+			'wikilambda-edit' => true,
+			'wikilambda-edit-argument-label' => true,
+			'wikilambda-edit-attached-implementation' => true,
+			'wikilambda-edit-attached-tester' => true,
+			'wikilambda-edit-builtin-function' => true,
+			'wikilambda-edit-boolean' => true,
+			'wikilambda-edit-function' => true,
+			'wikilambda-edit-function-definition' => true,
+			'wikilambda-edit-implementation' => true,
+			'wikilambda-edit-key-label' => true,
+			'wikilambda-edit-language' => true,
+			'wikilambda-edit-object-alias' => true,
+			'wikilambda-edit-object-label' => true,
+			'wikilambda-edit-object-type' => true,
+			'wikilambda-edit-predefined' => true,
+			'wikilambda-edit-programming' => true,
+			'wikilambda-edit-running-function' => true,
+			'wikilambda-edit-tester' => true,
+			'wikilambda-edit-type' => true,
+			'wikilambda-edit-unit' => true,
+			'wikilambda-edit-user-function' => true,
+			'wikilambda-execute' => true,
+		],
+	],
 	'+wikimaniawiki' => [
 		// Uploads are restricted to sysop and an uploader group - T225505
 		'uploader' => [
@@ -4328,6 +4414,10 @@ return [
 		],
 		'wikidata-staff' => [ 'wikidata-staff', ], // T74459
 	],
+	'+wikifunctionswiki' => [
+		'bureaucrat' => [ 'wikifunctions-staff' ],
+		'wikifunctions-staff' => [ 'wikifunctions-staff' ],
+	],
 	'+wikimaniawiki' => [
 		'sysop' => [ 'uploader' ], // T225505
 	],
@@ -5455,6 +5545,10 @@ return [
 			'wikidata-staff', // T74459
 		],
 		'wikidata-staff' => [ 'wikidata-staff', ], // T74459
+	],
+	'+wikifunctionswiki' => [
+		'bureaucrat' => [ 'wikifunctions-staff' ],
+		'wikifunctions-staff' => [ 'wikifunctions-staff' ],
 	],
 	'+wikimaniawiki' => [
 		'sysop' => [ 'uploader' ],  // T225505

@@ -1515,6 +1515,41 @@ return [
 			'destination_event_service' => 'eventgate-main',
 			'canary_events_enabled' => false,
 		],
+
+		// (T336722) Wikifunctions-specific stream
+		'wikifunctions.ui' => [
+			'schema_title' => 'analytics/mediawiki/client/metrics_event',
+			'destination_event_service' => 'eventgate-analytics-external',
+			'producers' => [
+				'metrics_platform_client' => [
+					'events' => [
+						'wf.ui.',
+					],
+					'provide_values' => [
+						'agent_client_platform_family',
+						'page_id',
+						'page_title',
+						'page_revision_id',
+						'performer_is_logged_in',
+						'performer_id',
+						'performer_name',
+						'performer_session_id',
+						'performer_pageview_id',
+						'performer_language',
+						'performer_language_variant',
+						'performer_edit_count',
+						'performer_edit_count_bucket',
+						'performer_groups',
+						'performer_is_bot',
+					],
+				],
+			],
+			'sample' => [
+				'unit' => 'pageview',
+				'rate' => 1,
+			],
+		],
+
 	],
 	'+group0' => [
 		'mediawiki.web_ui.interactions' => [

@@ -220,6 +220,7 @@ return [
 	'usabilitywiki' => 'en',
 	'votewiki' => 'en',
 	'wg_enwiki' => 'en',
+	'wikifunctionswiki' => 'en',
 	'wikimania' => 'en',
 	'wikimaniateamwiki' => 'en',
 ],
@@ -696,6 +697,7 @@ return [
 	'svwikiversity' => false, // T28037
 	'viwikivoyage' => false, // T54034
 	'vowiki' => false, // T15740
+	'wikifunctionswiki' => false,
 	'xmfwiki' => false,
 	'zhwikiquote' => false, // T311017
 	'zhwikisource' => false, // T295265
@@ -802,6 +804,7 @@ return [
 	'svwikisource' => false,
 	'svwiktionary' => false,
 	'specieswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
+	'wikifunctionswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 	'tawiki' => '/wiki/விக்கிப்பீடியா:File_Upload_Wizard', // T85697
 	'tewiki' => '/wiki/వికీపీడియా:ఫైల్_ఎక్కింపు_విజర్డు', // T59042
 	'thwiki' => '/wiki/%E0%B8%A7%E0%B8%B4%E0%B8%81%E0%B8%B4%E0%B8%9E%E0%B8%B5%E0%B9%80%E0%B8%94%E0%B8%B5%E0%B8%A2:%E0%B8%AD%E0%B8%B1%E0%B8%9B%E0%B9%82%E0%B8%AB%E0%B8%A5%E0%B8%94',
@@ -916,6 +919,7 @@ return [
 	'vewikimedia' => '//ve.wikimedia.org',
 	'votewiki' => '//vote.wikimedia.org',
 	'wikidatawiki' => '//www.wikidata.org',
+	'wikifunctionswiki' => '//www.wikifunctions.org',
 	'wikimania2005wiki' => '//wikimania2005.wikimedia.org',
 	'wikimania2006wiki' => '//wikimania2006.wikimedia.org',
 	'wikimania2007wiki' => '//wikimania2007.wikimedia.org',
@@ -1018,6 +1022,7 @@ return [
 	'vewikimedia' => 'https://ve.wikimedia.org',
 	'votewiki' => 'https://vote.wikimedia.org',
 	'wikidatawiki' => 'https://www.wikidata.org',
+	'wikifunctionswiki' => 'https://www.wikifunctions.org',
 	'wikimania2005wiki' => 'https://wikimania2005.wikimedia.org',
 	'wikimania2006wiki' => 'https://wikimania2006.wikimedia.org',
 	'wikimania2007wiki' => 'https://wikimania2007.wikimedia.org',
@@ -1047,6 +1052,7 @@ return [
 	'wikipedia' => 'Wikipedia',
 	'wikibooks' => 'Wikibooks',
 	'wikidata' => 'Wikidata',
+	'wikifunctionswiki' => 'Wikifunctions',
 	'wikimania' => 'Wikimania',
 	'wikimedia' => 'Wikimedia',
 	'wikinews' => 'Wikinews',
@@ -1993,6 +1999,7 @@ return [
 	'testwiki' => 'test',
 	'wikimania' => 'wikimedia',
 	'wikidata' => 'wikidata',
+	'wikifunctionswiki' => 'wikifunctions',
 	'wikivoyage' => 'wikivoyage',
 ],
 
@@ -2357,6 +2364,10 @@ return [
 		'logged_in' => false,
 		'logged_out' => false
 	],
+	'wikifunctionswiki' => [
+		'logged_in' => false,
+		'logged_out' => false
+	],
 	'mediawikiwiki' => [
 		'logged_in' => false,
 		'logged_out' => false
@@ -2366,6 +2377,7 @@ return [
 		'logged_out' => false
 	],
 ],
+
 // Shows language selector beside the main page title.
 'wgVectorLanguageInMainPageHeader' => [
 	'default' => [
@@ -2724,6 +2736,7 @@ return [
 
 	// Projects
 	'wikidata' => true, // T43907
+	'wikifunctionswiki' => true,
 	'wikivoyage' => true, // requested by Erik
 
 	// Individual wikis
@@ -3165,6 +3178,7 @@ return [
 	'wikiversity' => [ 'meta', 'b', 'incubator' ],
 	'wikivoyage' => [ 'w', 'w:en', 'en', 'fr', 'es', 'ru', 'id', 'commons', 'meta', 'incubator' ],
 	'wikidata' => [ 'meta', 'commons', 'en', 'de', 'fr', 'es' ],
+	'wikifunctionswiki' => [ 'meta', 'commons', 'incubator', 'ar', 'en', 'es', 'fr', 'ru', 'zh' ], // cross-projects plus UN 6
 
 	// Specific wikis
 
@@ -4155,6 +4169,7 @@ return [
 	'usabilitywiki' => '/static/favicon/usability.ico',
 	'votewiki' => '/static/favicon/wmf.ico',
 	'wikidatawiki' => '/static/favicon/wikidata.ico',
+	'wikifunctionswiki' => '/static/favicon/wikifunctions.ico',
 	'wikimaniateamwiki' => '/static/favicon/wikimania.ico',
 ],
 # @} end of wgFavicon
@@ -4425,6 +4440,7 @@ return [
 	'commonswiki' => '/srv/mediawiki/static/images/sul/commons.png',
 	'mediawikiwiki' => '/srv/mediawiki/static/images/sul/mediawiki.png',
 	'wikidatawiki' => '/srv/mediawiki/static/images/sul/wikidata.png',
+	'wikifunctionswiki' => '/srv/mediawiki/static/images/sul/wikifunctions.png',
 	'specieswiki' => '/srv/mediawiki/static/images/sul/wikispecies.png',
 	'incubatorwiki' => '/srv/mediawiki/static/images/sul/incubatorwiki.png',
 	'wikivoyage' => '/srv/mediawiki/static/images/sul/wikivoyage.png',
@@ -4447,6 +4463,7 @@ return [
 		'.wikiversity.org' => 'enwikiversity',
 		'.mediawiki.org' => 'mediawikiwiki',
 		'www.wikidata.org' => 'wikidatawiki',
+		'www.wikifunctions.org' => 'wikifunctionswiki',
 		'species.wikimedia.org' => 'specieswiki',
 		'incubator.wikimedia.org' => 'incubatorwiki',
 		'.wikivoyage.org' => 'enwikivoyage',
@@ -4849,6 +4866,10 @@ return [
 		'sysop' => [ 'flood' ], // T50013, T48856
 		'wikidata-staff' => [ 'interface-admin' ], // T202065
 	],
+	'wikifunctionswiki' => [
+		// Special over-privileged group for initial deployment, to reduce over time
+		'wikifunctions-staff' => [ 'interface-admin','functioneer','functionmaintainer','sysop','bureaucrat' ]
+	],
 	'wikitech' => [
 		'contentadmin' => [ 'flood' ],
 		'sysop' => [ 'flood' ],
@@ -4888,6 +4909,10 @@ return [
 		'sysop' => [ 'flood' ], // T50013, T48856
 		'flood' => [ 'flood' ], // T50013
 		'wikidata-staff' => [ 'interface-admin' ], // T202065
+	],
+	'wikifunctionswiki' => [
+		// Special over-privileged group for initial deployment, to reduce over time
+		'wikifunctions-staff' => [ 'interface-admin', 'functioneer', 'functionmaintainer', 'sysop', 'bureaucrat' ]
 	],
 	'wikitech' => [
 		'contentadmin' => [ 'flood' ],
@@ -5194,6 +5219,7 @@ return [
 	'trwikisource' => 'any', // T248747
 	'viwikibooks' => 'any', // T314239
 	'wikidatawiki' => 'any', // T144687
+	'wikifunctionswiki' => 'any',
 	'zhwikinews' => 'any', // T53604
 	'zhwikiversity' => 'any', // T214946
 ],
@@ -5848,6 +5874,7 @@ return [
 	'zh_classicalwiki' => true, // Starting from SET
 	'zh_yuewiki' => true,       // Starting from SET
 
+	'wikifunctionswiki' => true,       // Starting from SET
 	'officewiki' => true,
 ],
 
@@ -6134,6 +6161,9 @@ return [
 		'Programs' => true // T67067
 	],
 	'+wikidata' => [
+		'Project' => true,
+	],
+	'+wikifunctionswiki' => [
 		'Project' => true,
 	],
 	'+wikitech' => [
@@ -6860,6 +6890,7 @@ return [
 	'mediawikiwiki' => 'm.%h1.%h2',
 	'sourceswiki' => 'm.%h0.%h1', // T38002
 	'wikidatawiki' => 'm.%h1.%h2',
+	'wikifunctionswiki' => 'm.%h1.%h2',
 	'wikitech' => '', // Not behind Varnish so no black magick
 ],
 'wgMFAutodetectMobileView' => [
@@ -7051,6 +7082,7 @@ return [
 	'vewikimedia' => true,
 	'wbwikimedia' => true, // T162510
 	'wikidata' => true, // T43585
+	'wikifunctionswiki' => true,
 	'wikimania2012wiki' => true, // T36120
 	'wikimania2013wiki' => true, // T38477
 	'wikimania2014wiki' => true,
@@ -7390,6 +7422,7 @@ return [
 	'metawiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Meta-logo.svg.png',
 	'specieswiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikispecies-logo.svg.png',
 	'wikidatawiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikidata-logo.svg.png',
+	'wikifunctionswiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikifunctions-logo.svg.png',
 	'testwikidatawiki' => '/static/images/project-logos/notifications/120px-Notification-icon-Wikidata-logo.svg.png',
 ],
 'wmgEchoCrossWikiByDefault' => [
@@ -9160,6 +9193,7 @@ return [
 	'specieswiki' => 'species',
 	'wikidatawiki' => 'wikidata',
 	'testwikidatawiki' => 'testwikidata',
+	'wikifunctionswiki' => 'wikifunctions',
 	'wikimaniawiki' => 'wikimania',
 	'outreachwiki' => 'outreach',
 ],
@@ -10665,6 +10699,7 @@ return [
 	'default' => 'standard',
 	'wikinews' => 'wikinews',
 	'wikidata' => 'wikidata',
+	'wikifunctionswiki' => 'wikifunctions',
 	'commonswiki' => 'commons',
 	'testcommonswiki' => 'commons',
 ],
@@ -10673,6 +10708,7 @@ return [
 	'default' => null,
 	// Wikidata footer, T112606
 	'wikidata' => 'Wikidata:Copyright',
+	'wikifunctionswiki' => 'Wikifunctions:Copyright',
 ],
 'wgRightsUrl' => [
 	// Link to the translation of the license in the relevant language where available
@@ -10691,6 +10727,11 @@ return [
 	'wikidata' => 'All structured data from the main and property namespace is available under ' .
 		'the Creative Commons CC0 License; text in the other namespaces is available under ' .
 		'the Creative Commons Attribution-ShareAlike License; additional terms may apply.',
+	'wikifunctionswiki' => 'All function definitions, labels, and documentation in the main ' .
+		'namespace are available under the Creative Commons CC0 License. All code fragments and ' .
+		'implementations in the main namespace are available under the Apache 2.0 License. Text in ' .
+		'other namespaces is available under the Creative Commons Attribution-ShareAlike License; ' .
+		'additional terms may apply..',
 ],
 
 'wgMessageCacheType' => [
@@ -11048,6 +11089,7 @@ return [
 
 'wmgUseKartographer' => [
 	'default' => true,
+	'wikifunctionswiki' => false,
 	'private' => false,
 ],
 
@@ -11498,6 +11540,7 @@ return [
 		'wikisource.org',
 		'*.wikiquote.org',
 		'*.wikidata.org',
+		'*.wikifunctions.org',
 		'*.wikivoyage.org',
 		'*.mediawiki.org',
 	],
@@ -12080,9 +12123,9 @@ return [
 	'group0' => true,
 ],
 
-// Early roll-out to Beta Cluster only
 'wmgUseWikiLambda' => [
 	'default' => false,
+	'wikifunctionswiki' => true,
 ],
 
 'wmgUseWikistories' => [

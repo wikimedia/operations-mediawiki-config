@@ -90,6 +90,7 @@ return [
 		'mediawiki.edit_attempt',
 		'development.network.probe',
 		'mediawiki.special_diff_interactions',
+		'wikifunctions.ui',
 	],
 	'+group0' => [
 		'mediawiki.web_ui.interactions',

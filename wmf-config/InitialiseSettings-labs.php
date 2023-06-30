@@ -2282,6 +2282,7 @@ function wmfGetOverrideSettings() {
 				'wikisource.org',
 				'*.wikiquote.org',
 				'*.wikidata.org',
+				'*.wikifunctions.org',
 				'*.wikivoyage.org',
 				'*.mediawiki.org',
 
@@ -2403,7 +2404,6 @@ function wmfGetOverrideSettings() {
 			'+wikifunctionswiki' => [
 				'ZObject' => NS_MAIN,
 				'ZObject_talk' => NS_TALK,
-				'Wikifunctions' => NS_PROJECT,
 			],
 		],
 		'wgFavicon' => [
