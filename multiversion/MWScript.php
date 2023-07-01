@@ -104,7 +104,6 @@ EOT
 		'extensions/WikimediaMaintenance/listDatabases.php',
 		'extensions/WikimediaMaintenance/sanityCheck.php',
 		'extensions/WikimediaMaintenance/storage/testRctComplete.php',
-		'extensions/CentralAuth/maintenance/migrateStewards.php',
 	];
 
 	$scriptArgs = array_slice( $argv, 2 );
