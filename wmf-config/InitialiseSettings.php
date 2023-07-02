@@ -3098,6 +3098,7 @@ return [
 'wgEnablePartialActionBlocks' => [
 	'default' => false,
 	'testwiki' => true,
+	'bnwiki' => true, // T340904
 	'cswiki' => true, // T315525
 	'fawiki' => true, // T315525
 	'ptwiki' => true, // T317157
