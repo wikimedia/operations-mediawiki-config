@@ -3790,6 +3790,7 @@ return [
 
 'wgProofreadPageEnableEditInSequence' => [
 	'napwikisource' => true, // T337472
+	'itwikisource' => true, // T340847
 ],
 
 'wgProofreadPageBookNamespaces' => [
