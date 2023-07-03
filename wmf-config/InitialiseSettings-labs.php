@@ -1864,9 +1864,6 @@ function wmfGetOverrideSettings() {
 		'wmgWikibaseRepoEnableRefTabs' => [
 			'wikidatawiki' => true,
 		],
-		'wmgWikibaseClientEchoIcon' => [
-			'default' => [ 'path' => '/static/images/wikibase/echoIcon.svg' ],
-		],
 		'wmgWBRepoCanonicalUriProperty' => [
 			'default' => null,
 			'wikidata' => 'P174944',
