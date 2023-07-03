@@ -4567,9 +4567,10 @@ return [
 'wgCollectionDisableSidebarLink' => [
 	'default' => false,
 	'enwiki' => true, // T241683
+	'enwikisource' => true, // T288021
 	'fawiki' => true, // T303173
 	'fiwiki' => true, // T257073
-	'enwikisource' => true, // T288021
+	'nowiki' => true, // T340981
 	'ruwiki' => true, // T340274
 ],
 
