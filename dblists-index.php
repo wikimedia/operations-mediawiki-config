@@ -327,6 +327,7 @@ return [
 'gorwiktionary' => [ 'small', 'wikidataclient', 'commonsuploads', 'group1' ],
 'gotwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'gotwikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
+'gpewiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],
 'grantswiki' => [ 'special', 'private', 'small', 'visualeditor-nondefault', 'group1', 'nowikidatadescriptiontaglines' ],
 'grwikimedia' => [ 'fishbowl', 'small', 'group1', 'nowikidatadescriptiontaglines' ],
 'gucwiki' => [ 'wikipedia', 'small', 'wikidataclient', 'commonsuploads' ],

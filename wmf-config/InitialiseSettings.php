@@ -383,6 +383,7 @@ return [
 	'gomwiktionary' => 'Asia/Kolkata', // T249506
 	'gorwiki' => 'Asia/Makassar', // T189109
 	'gorwiktionary' => 'Asia/Makassar', // T327986
+	'gpewiki' => 'Africa/Accra',
 	'grwikimedia' => 'Europe/Athens', // T245911
 	'gucwiki' => 'America/Bogota',
 	'guwiki' => 'Asia/Kolkata',

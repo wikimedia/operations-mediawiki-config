@@ -147,6 +147,7 @@ return [
 	'gomwiki' => '/static/images/project-logos/gomwiki.png',
 	'gorwiki' => '/static/images/project-logos/gorwiki.png',
 	'gotwiki' => '/static/images/project-logos/gotwiki.png',
+	'gpewiki' => '/static/images/project-logos/gpewiki.png',
 	'guwiki' => '/static/images/project-logos/guwiki.png',
 	'gucwiki' => '/static/images/project-logos/gucwiki.png',
 	'gurwiki' => '/static/images/project-logos/gurwiki.png',
@@ -995,6 +996,7 @@ return [
 	'gnwiki' => '/static/images/project-logos/gnwiki-1.5x.png', // T150618
 	'gomwiki' => '/static/images/project-logos/gomwiki-1.5x.png', // T150618
 	'gorwiki' => '/static/images/project-logos/gorwiki-1.5x.png',
+	'gpewiki' => '/static/images/project-logos/gpewiki-1.5x.png',
 	'guwiki' => '/static/images/project-logos/guwiki-1.5x.png', // T150618
 	'gucwiki' => '/static/images/project-logos/gucwiki-1.5x.png',
 	'gurwiki' => '/static/images/project-logos/gurwiki-1.5x.png',
@@ -1609,6 +1611,7 @@ return [
 	'gnwiki' => '/static/images/project-logos/gnwiki-2x.png', // T150618
 	'gomwiki' => '/static/images/project-logos/gomwiki-2x.png', // T150618
 	'gorwiki' => '/static/images/project-logos/gorwiki-2x.png',
+	'gpewiki' => '/static/images/project-logos/gpewiki-2x.png',
 	'guwiki' => '/static/images/project-logos/guwiki-2x.png', // T150618
 	'gucwiki' => '/static/images/project-logos/gucwiki-2x.png',
 	'gurwiki' => '/static/images/project-logos/gurwiki-2x.png',
