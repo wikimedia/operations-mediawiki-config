@@ -425,6 +425,7 @@ $wgVectorMaxWidthOptions['exclude']['querystring']['action'] = '(history|edit)';
 if ( $wmgUseCampaignEvents ) {
 	$wgCampaignEventsDatabaseCluster = false;
 	$wgCampaignEventsDatabaseName = 'wikishared';
+	$wgCampaignEventsProgramsAndEventsDashboardInstance = 'staging';
 	// Re-add right removed in the production config
 	$wgGroupPermissions['user']['campaignevents-enable-registration'] = true;
 	$wgGroupPermissions['user']['campaignevents-organize-events'] = true;
