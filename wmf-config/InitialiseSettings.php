@@ -9157,6 +9157,7 @@ return [
 	'wikidatawiki' => 'wikidata',
 	'testwikidatawiki' => 'testwikidata',
 	'wikimaniawiki' => 'wikimania',
+	'outreachwiki' => 'outreach',
 ],
 
 'wmgWikibaseEntityDataFormats' => [
