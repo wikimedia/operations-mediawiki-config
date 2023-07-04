@@ -11,7 +11,7 @@ return [
 	'eqiad' => [
 		'udp2log' => 'deployment-mwlog01.deployment-prep.eqiad1.wikimedia.cloud:8420',
 		'xenon' => 'deployment-mwlog01.deployment-prep.eqiad1.wikimedia.cloud',
-		'xhgui-pdo' => 'mysql:host=deployment-mdb01.deployment-prep.eqiad.wmflabs;dbname=xhgui',
+		'xhgui-pdo' => 'mysql:host=deployment-db11.deployment-prep.eqiad.wmflabs;dbname=xhgui',
 		'excimer-ui-url' => 'https://performance.wikimedia.beta.wmflabs.org/excimer/',
 		'excimer-ui-server' => 'https://deployment-webperf21.deployment-prep.eqiad1.wikimedia.cloud/excimer/',
 		'statsd' => 'prometheus-labmon.eqiad.wmnet',
