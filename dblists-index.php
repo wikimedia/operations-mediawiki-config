@@ -425,7 +425,7 @@ return [
 'itwikiquote' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'group1', 'cirrussearch-big-indices' ],
 'itwikisource' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
 'itwikiversity' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
-'itwikivoyage' => [ 'medium', 'wikidataclient', 'commonsuploads', 'group1' ],
+'itwikivoyage' => [ 'medium', 'wikidataclient', 'commonsuploads', 'group1', 'modern-mainpage' ],
 'itwiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
 'iuwiki' => [ 'wikipedia', 'desktop-improvements', 'small', 'wikidataclient', 'commonsuploads' ],
 'iuwiktionary' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
