@@ -3702,7 +3702,7 @@ Wikivoyage:
     techconductwiki:
         no_1_5x: true
         no_2x: true
-        selected_icon: outreachwiki
+        selected_icon: metawiki
     transitionteamwiki:
         comment: T50379
         no_1_5x: true
@@ -3777,79 +3777,95 @@ Wikivoyage:
         no_1_5x: true
         no_2x: true
         selected_icon: wikimaniawiki
+        selected_wordmark: wikimaniawiki
     wikimania2006wiki:
         comment: T50382
         no_1_5x: true
         no_2x: true
         selected_icon: wikimaniawiki
+        selected_wordmark: wikimaniawiki
     wikimania2007wiki:
         comment: T50382
         no_1_5x: true
         no_2x: true
         selected_icon: wikimaniawiki
+        selected_wordmark: wikimaniawiki
     wikimania2008wiki:
         comment: T50382
         no_1_5x: true
         no_2x: true
         selected_icon: wikimaniawiki
+        selected_wordmark: wikimaniawiki
     wikimania2009wiki:
         comment: T50382
         no_1_5x: true
         no_2x: true
         selected_icon: wikimaniawiki
+        selected_wordmark: wikimaniawiki
     wikimania2010wiki:
         comment: T50382
         no_1_5x: true
         no_2x: true
         selected_icon: wikimaniawiki
+        selected_wordmark: wikimaniawiki
     wikimania2011wiki:
         comment: T50382
         no_1_5x: true
         no_2x: true
         selected_icon: wikimaniawiki
+        selected_wordmark: wikimaniawiki
     wikimania2012wiki:
         comment: T50382
         no_1_5x: true
         no_2x: true
         selected_icon: wikimaniawiki
+        selected_wordmark: wikimaniawiki
     wikimania2013wiki:
         comment: T50382
         no_1_5x: true
         no_2x: true
         selected_icon: wikimaniawiki
+        selected_wordmark: wikimaniawiki
     wikimania2014wiki:
         comment: T58398
         no_1_5x: true
         no_2x: true
         selected_icon: wikimaniawiki
+        selected_wordmark: wikimaniawiki
     wikimania2015wiki:
         comment: T50382
         no_1_5x: true
         no_2x: true
         selected_icon: wikimaniawiki
+        selected_wordmark: wikimaniawiki
     wikimania2016wiki:
         no_1_5x: true
         no_2x: true
         selected_icon: wikimaniawiki
+        selected_wordmark: wikimaniawiki
     wikimania2017wiki:
         comment: T122062
         no_1_5x: true
         no_2x: true
         selected_icon: wikimaniawiki
+        selected_wordmark: wikimaniawiki
     wikimania2018wiki:
         comment: T173042
         comment_1_5x: T194340
         comment_2x: T194340
         selected_icon: wikimaniawiki
+        selected_wordmark: wikimaniawiki
     wikimaniateamwiki:
         comment: T50376
         no_1_5x: true
         no_2x: true
         selected_icon: wikimania
+        selected_wordmark: wikimaniawiki
     wikimaniawiki:
         comment_1_5x: T194340, T337044
         comment_2x: T194340, T337044
         selected: wikimaniawiki-2023
+        local_wordmark: true
         variants:
             wikimaniawiki-2023:
                 commons: 'File:Wikimania 2023 Singapore Square logo.svg'

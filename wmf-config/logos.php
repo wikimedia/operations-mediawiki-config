@@ -3524,6 +3524,81 @@ return [
 		'width' => 130,
 		'height' => 17,
 	],
+	'wikimania2005wiki' => [
+		'src' => '/static/images/mobile/copyright/wikimaniawiki-wordmark.svg',
+		'width' => 145,
+		'height' => 17,
+	],
+	'wikimania2006wiki' => [
+		'src' => '/static/images/mobile/copyright/wikimaniawiki-wordmark.svg',
+		'width' => 145,
+		'height' => 17,
+	],
+	'wikimania2007wiki' => [
+		'src' => '/static/images/mobile/copyright/wikimaniawiki-wordmark.svg',
+		'width' => 145,
+		'height' => 17,
+	],
+	'wikimania2008wiki' => [
+		'src' => '/static/images/mobile/copyright/wikimaniawiki-wordmark.svg',
+		'width' => 145,
+		'height' => 17,
+	],
+	'wikimania2009wiki' => [
+		'src' => '/static/images/mobile/copyright/wikimaniawiki-wordmark.svg',
+		'width' => 145,
+		'height' => 17,
+	],
+	'wikimania2010wiki' => [
+		'src' => '/static/images/mobile/copyright/wikimaniawiki-wordmark.svg',
+		'width' => 145,
+		'height' => 17,
+	],
+	'wikimania2011wiki' => [
+		'src' => '/static/images/mobile/copyright/wikimaniawiki-wordmark.svg',
+		'width' => 145,
+		'height' => 17,
+	],
+	'wikimania2012wiki' => [
+		'src' => '/static/images/mobile/copyright/wikimaniawiki-wordmark.svg',
+		'width' => 145,
+		'height' => 17,
+	],
+	'wikimania2013wiki' => [
+		'src' => '/static/images/mobile/copyright/wikimaniawiki-wordmark.svg',
+		'width' => 145,
+		'height' => 17,
+	],
+	'wikimania2014wiki' => [
+		'src' => '/static/images/mobile/copyright/wikimaniawiki-wordmark.svg',
+		'width' => 145,
+		'height' => 17,
+	],
+	'wikimania2015wiki' => [
+		'src' => '/static/images/mobile/copyright/wikimaniawiki-wordmark.svg',
+		'width' => 145,
+		'height' => 17,
+	],
+	'wikimania2016wiki' => [
+		'src' => '/static/images/mobile/copyright/wikimaniawiki-wordmark.svg',
+		'width' => 145,
+		'height' => 17,
+	],
+	'wikimania2017wiki' => [
+		'src' => '/static/images/mobile/copyright/wikimaniawiki-wordmark.svg',
+		'width' => 145,
+		'height' => 17,
+	],
+	'wikimania2018wiki' => [
+		'src' => '/static/images/mobile/copyright/wikimaniawiki-wordmark.svg',
+		'width' => 145,
+		'height' => 17,
+	],
+	'wikimaniateamwiki' => [
+		'src' => '/static/images/mobile/copyright/wikimaniawiki-wordmark.svg',
+		'width' => 145,
+		'height' => 17,
+	],
 	'wikimaniawiki' => [ // T286405
 		'src' => '/static/images/mobile/copyright/wikimaniawiki-wordmark.svg',
 		'width' => 145,
@@ -5401,7 +5476,7 @@ return [
 	'testcommonswiki' => '/static/images/icons/commonswiki.svg', // T299512
 	'testwiki' => '/static/images/icons/testwiki.png', // T299512
 	'testwikidatawiki' => '/static/images/icons/testwikidatawiki.svg', // T299512
-	'techconductwiki' => '/static/images/icons/outreachwiki.svg',
+	'techconductwiki' => '/static/images/icons/metawiki.svg',
 	'transitionteamwiki' => '/static/images/icons/outreachwiki.svg',
 	'votewiki' => '/static/images/icons/wikimedia.svg',
 	'wg_enwiki' => '/static/images/icons/metawiki.svg',
