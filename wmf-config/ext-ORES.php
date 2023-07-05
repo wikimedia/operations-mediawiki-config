@@ -44,6 +44,10 @@ return [
 	'wikidatawiki' => true, // T130212
 	'zhwiki' => true, // T225562
 ],
+'wgOresUseLiftwing' => [
+	'default' => false,
+	'testwiki' => true, // T319170
+],
 'wgOresModels' => [
 	'default' => [
 		'damaging' => [ 'enabled' => true ],
