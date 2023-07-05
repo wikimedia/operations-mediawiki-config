@@ -34,7 +34,7 @@ class MWMultiVersion {
 	 * @var string[]
 	 */
 	public const DB_LISTS = [
-		// When updating list run ./docroot/noc/createTxtFileSymlinks.sh
+		// When updating list run ./docroot/noc/createTxtFileSymlinks.sh and `composer manage-dblist update`
 		// Expand computed dblists with ./multiversion/bin/expanddblist
 		'wikipedia',
 		'special',
@@ -46,7 +46,6 @@ class MWMultiVersion {
 		'flaggedrevs',
 		'small',
 		'medium',
-		'large',
 		'wikimania',
 		'wikidata',
 		'wikibaserepo',

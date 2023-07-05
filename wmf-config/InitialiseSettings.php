@@ -10448,28 +10448,15 @@ return [
 ],
 
 'wmgUseGlobalAbuseFilters' => [
-	// Enabled by default on all SUL small/medium wikis. Large wikis may
-	// opt-in, there is no performance issue in doing so.
+	// Enabled on all public sites, see T341159.
 	'default' => true,
 	'fishbowl' => false,
-	'large' => false,
 	'nonglobal' => false,
 	'private' => false,
 
-	// Individual wikis
-	// Can set either true or false as-needed to override the default or group setting.
-	'enwikisource' => true, // T78496
-	'frwiki' => true, // T120568
-	'incubatorwiki' => true,
-	'mediawikiwiki' => true,
-	'metawiki' => true,
-	'ptwiki' => true, // T140395
-	'ruwikinews' => true, // Needs explicit enable after moving to large wiki
-	'specieswiki' => true,
-	'test2wiki' => true,
-	'testwiki' => true,
-	'warwiki' => true, // T230304
-	'wikidatawiki' => true,
+	// Individual wiki overrides
+	'enwiki' => false, // T341159
+	'jawiki' => false, // T341159
 ],
 
 'wmgUseCampaigns' => [
