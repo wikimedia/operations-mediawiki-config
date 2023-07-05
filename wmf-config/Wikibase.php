@@ -243,6 +243,11 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( isset( $wmgWikibaseTmpEnableMulLanguageCode ) ) {
 		$wgWBRepoSettings['tmpEnableMulLanguageCode'] = $wmgWikibaseTmpEnableMulLanguageCode;
 	}
+
+	// Temporary, added in T339104, to be removed in T330217
+	if ( isset( $wmgWikibaseTmpAlwaysShowMulLanguageCode ) ) {
+		$wgWBRepoSettings['tmpAlwaysShowMulLanguageCode'] = $wmgWikibaseTmpAlwaysShowMulLanguageCode;
+	}
 }
 
 if ( $wmgUseWikibaseClient ) {
