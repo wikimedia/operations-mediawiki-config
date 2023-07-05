@@ -11129,6 +11129,13 @@ return [
 // T246493
 'wmgUseNearbyPages' => [
 	'default' => true,
+	// T341133
+	'wiktionary' => false,
+	'wikisource' => false,
+	'wikiquote' => false,
+	'wikiversity' => false,
+	'wikibooks' => false,
+	'wikinews' => false,
 ],
 'wgNearbyPagesUrl' => [
 	'default' => '/w/api.php',
