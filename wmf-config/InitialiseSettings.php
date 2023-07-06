@@ -3967,6 +3967,7 @@ return [
 	'itwikibooks' => true,
 	'jawikibooks' => true, // T289383
 	'nlwikibooks' => true,
+	'pawikibooks' => true, // T340613
 	'plwikibooks' => true,
 	'ptwikibooks' => true,
 	'huwikibooks' => true, // T168471
