@@ -370,6 +370,8 @@ $wgMessageCacheType = CACHE_ACCEL;
 
 // This will work for most wikis, which is considered good enough.
 $wgPageViewInfoWikimediaDomain = "$lang.$site.org";
+$wgPageViewInfoWikimediaEndpoint = 'https://wikimedia.org/api/rest_v1';
+
 if ( $wmgUseGrowthExperiments ) {
 	$wgGERestbaseUrl = $wgGERestbaseUrl ?: "https://$lang.$site.org/api/rest_v1";
 	// Overrides CommonSettings.php which would use LabsServices.php,
