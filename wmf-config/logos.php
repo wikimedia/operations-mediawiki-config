@@ -842,7 +842,7 @@ return [
 	'execwiki' => '/static/images/project-logos/execwiki.png',
 	'fdcwiki' => '/static/images/project-logos/fdcwiki.png', // T50379
 	'foundationwiki' => '/static/images/project-logos/foundationwiki.png',
-	'grantswiki' => '/static/images/project-logos/outreachwiki.png',
+	'grantswiki' => '/static/images/project-logos/projectcomwiki.png',
 	'iegcomwiki' => '/static/images/project-logos/iegcomwiki.png', // T50379
 	'incubatorwiki' => '/static/images/project-logos/incubatorwiki.png',
 	'internalwiki' => '/static/images/project-logos/internalwiki.png',
@@ -3351,6 +3351,11 @@ return [
 		'width' => 120,
 		'height' => 17,
 	],
+	'idwiktionary' => [
+		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-id.svg',
+		'width' => 361,
+		'height' => 62,
+	],
 	'iewiktionary' => [
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-ie.svg',
 		'width' => 120,
@@ -4218,11 +4223,7 @@ return [
 		'width' => 141,
 		'height' => 31,
 	],
-	'grantswiki' => [
-		'src' => '/static/images/mobile/copyright/outreachwiki-wordmark.svg',
-		'width' => 120,
-		'height' => 29,
-	],
+	'grantswiki' => null,
 	'mediawikiwiki' => [ // T268230
 		'src' => '/static/images/mobile/copyright/mediawikiwiki-wordmark.svg',
 		'width' => 120,

@@ -2086,6 +2086,7 @@ Wiktionary:
     idwiktionary:
         comment_1_5x: T150618
         comment_2x: T150618
+        commons_wordmark: File:Wiktionary-wordmark-id.svg
     iewiktionary:
         comment: T45240
         comment_1_5x: T150618
@@ -3827,9 +3828,9 @@ Wikivoyage:
         no_1_5x: true
         no_1_5x: true
         no_2x: true
-        selected: outreachwiki
+        selected: projectcomwiki
         selected_icon: outreachwiki
-        selected_wordmark: outreachwiki
+        no_wordmark: true
     iegcomwiki:
         comment: T50379
         no_1_5x: true
