@@ -4009,7 +4009,7 @@ if ( $wmgUseKartographer && $wmgUseJsonConfig ) {
 
 if ( $wmgUsePageViewInfo ) {
 	wfLoadExtension( 'PageViewInfo' );
-	$wgPageViewInfoWikimediaEndpoint = $wmgLocalServices['restbase'];
+	$wgPageViewInfoWikimediaEndpoint = $wmgLocalServices['restbase'] . '/wikimedia.org/v1';
 }
 
 if ( $wgDBname === 'foundationwiki' ) {
