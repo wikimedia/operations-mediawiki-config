@@ -6636,6 +6636,11 @@ return [
 	'default' => false,
 ],
 
+// T337943, T340959
+'wgCheckUserPurgeOldClientHintsData' => [
+	'default' => false,
+],
+
 // ----------- CheckUser end ----------
 
 // IPInfo extension
