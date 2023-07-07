@@ -639,36 +639,6 @@ function wmfGetOverrideSettings() {
 					],
 				]
 			],
-			'enwiki' => [
-				'name' => 'skin-vector-zebra-experiment',
-				'enabled' => true,
-				'buckets' => [
-					'unsampled' => [
-						'samplingRate' => 0
-					],
-					'control' => [
-						'samplingRate' => 0.5
-					],
-					'treatment' => [
-						'samplingRate' => 0.5
-					],
-				]
-			],
-			'eswiki' => [
-				'name' => 'skin-vector-zebra-experiment',
-				'enabled' => true,
-				'buckets' => [
-					'unsampled' => [
-						'samplingRate' => 0
-					],
-					'control' => [
-						'samplingRate' => 0.5
-					],
-					'treatment' => [
-						'samplingRate' => 0.5
-					],
-				]
-			]
 		],
 		'wgVectorPromoteAddTopic' => [
 			'default' => true
