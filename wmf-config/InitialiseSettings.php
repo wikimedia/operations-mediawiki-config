@@ -12070,28 +12070,11 @@ return [
 ],
 
 'wgParserEnableLegacyMediaDOM' => [
-	'default' => true,
-	'group0' => false,
-	'test2wiki' => false,
-	'wikitech' => false,
-	'cswiki' => false,
-	'enwikivoyage' => false,
-	'viwiki' => false,
-	'itwiki' => false,
-	'cawiki' => false,
-	'group1' => false,
-	// Careful with these, since they can partake in cross-wiki inclusion.
-	// See T51097#7401266
-	'metawiki' => true,
-	'commonswiki' => true,
+	'default' => false,
 ],
 
 'wgUseContentMediaStyles' => [
 	'default' => false,
-	// Continue to serve these styles on metawiki since we've previsouly
-	// disabled $wgParserEnableLegacyMediaDOM there and cached content may
-	// still need styling.
-	'metawiki' => true,
 ],
 
 // Temporary setting to stage the rollout of $wgLocalHTTPProxy (T288848)
