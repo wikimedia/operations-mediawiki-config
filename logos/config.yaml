@@ -1602,6 +1602,8 @@ Wikipedia:
         local_tagline: true
         local_wordmark: true
     thwiki:
+        commons: 'File:Wikipedia-logo-v2-th.svg'
+        comment: T341407
         comment_1_5x: T150618
         comment_2x: T150618
         commons_wordmark: 'File:Wikipedia-wordmark-th.svg'

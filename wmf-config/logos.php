@@ -337,7 +337,7 @@ return [
 	'tetwiki' => '/static/images/project-logos/tetwiki.png', // T48589
 	'tewiki' => '/static/images/project-logos/tewiki.png',
 	'tgwiki' => '/static/images/project-logos/tgwiki.png', // T48589
-	'thwiki' => '/static/images/project-logos/thwiki.png',
+	'thwiki' => '/static/images/project-logos/thwiki.png', // T341407
 	'tiwiki' => '/static/images/project-logos/tiwiki.png', // T249451
 	'tkwiki' => '/static/images/project-logos/tkwiki.png', // T48589
 	'tlwiki' => '/static/images/project-logos/tlwiki.png',
