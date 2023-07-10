@@ -5446,6 +5446,7 @@ return [
 	'default' => true,
 	'private' => false,
 	'lockeddown' => false,
+	'wikitech' => false, // T341470
 ],
 
 'wgUrlShortenerReadOnly' => [
