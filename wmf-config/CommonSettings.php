@@ -3790,6 +3790,7 @@ if ( $wmgUseORES ) {
 	wfLoadExtension( 'ORES' );
 	$wgOresBaseUrl = 'http://localhost:6010/';
 	$wgOresFrontendBaseUrl = 'https://ores.wikimedia.org/';
+	$wgOresLiftWingBaseUrl = 'https://inference.discovery.wmnet:30443/';
 	$wgDefaultUserOptions['oresDamagingPref'] =
 		$wgDefaultUserOptions['rcOresDamagingPref'] =
 		$wmgOresDefaultSensitivityLevel;
