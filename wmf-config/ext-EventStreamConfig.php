@@ -1037,29 +1037,6 @@ return [
 			],
 		],
 
-		// See https://phabricator.wikimedia.org/T326212
-		'mediawiki.special_diff_interactions' => [
-			'schema_title' => 'analytics/mediawiki/client/metrics_event',
-			'destination_event_service' => 'eventgate-analytics-external',
-			'producers' => [
-				'metrics_platform_client' => [
-					'events' => [
-						'specialDiff.click.', // T326214, T326216
-					],
-					'provide_values' => [
-						'mediawiki_skin',
-						'mediawiki_version',
-						'mediawiki_is_production',
-						'mediawiki_database',
-						'performer_is_logged_in',
-						'performer_groups',
-						'performer_edit_count_bucket',
-						'performer_registration_dt',
-					],
-				],
-			],
-		],
-
 		// See https://phabricator.wikimedia.org/T309602
 		'mediawiki.visual_editor_feature_use' => [
 			'schema_title' => 'analytics/mediawiki/client/metrics_event',
