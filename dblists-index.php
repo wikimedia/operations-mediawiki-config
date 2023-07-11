@@ -469,7 +469,7 @@ return [
 'knwiki' => [ 'wikipedia', 'desktop-improvements', 'medium', 'wikidataclient', 'cirrussearch-big-indices' ],
 'knwikibooks' => [ 'closed', 'small', 'wikidataclient', 'visualeditor-nondefault', 'group0', 'nowikidatadescriptiontaglines' ],
 'knwikiquote' => [ 'small', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1' ],
-'knwikisource' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
+'knwikisource' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'mobile-anon-talk', 'nowikidatadescriptiontaglines', 'cirrussearch-big-indices' ],
 'knwiktionary' => [ 'medium', 'wikidataclient', 'visualeditor-nondefault', 'commonsuploads', 'group1', 'nowikidatadescriptiontaglines' ],
 'koiwiki' => [ 'wikipedia', 'desktop-improvements', 'small', 'wikidataclient', 'commonsuploads' ],
 'kowiki' => [ 'wikipedia', 'desktop-improvements', 'wikidataclient', 'commonsuploads', 'cirrussearch-big-indices' ],
