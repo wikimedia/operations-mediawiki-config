@@ -3351,11 +3351,6 @@ return [
 		'width' => 120,
 		'height' => 17,
 	],
-	'idwiktionary' => [
-		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-id.svg',
-		'width' => 361,
-		'height' => 62,
-	],
 	'iewiktionary' => [
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-ie.svg',
 		'width' => 120,
