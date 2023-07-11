@@ -197,7 +197,7 @@ return [
 	'kkwiki' => '/static/images/project-logos/kkwiki.png',
 	'klwiki' => '/static/images/project-logos/klwiki.png',
 	'kmwiki' => '/static/images/project-logos/kmwiki.png',
-	'knwiki' => '/static/images/project-logos/knwiki-temp.png', // T48589,T338136
+	'knwiki' => '/static/images/project-logos/knwiki.png', // T48589, T338136
 	'koiwiki' => '/static/images/project-logos/koiwiki.png',
 	'kowiki' => '/static/images/project-logos/kowiki.png',
 	'krwiki' => '/static/images/project-logos/krwiki.png',
@@ -1043,7 +1043,7 @@ return [
 	'kkwiki' => '/static/images/project-logos/kkwiki-1.5x.png', // T150618
 	'klwiki' => '/static/images/project-logos/klwiki-1.5x.png', // T150618
 	'kmwiki' => '/static/images/project-logos/kmwiki-1.5x.png', // T150618
-	'knwiki' => '/static/images/project-logos/knwiki-temp-1.5x.png', // T150618,T338136
+	'knwiki' => '/static/images/project-logos/knwiki-1.5x.png', // T150618, T338136
 	'koiwiki' => '/static/images/project-logos/koiwiki-1.5x.png', // T150618
 	'kowiki' => '/static/images/project-logos/kowiki-1.5x.png', // T150618
 	'krcwiki' => '/static/images/project-logos/krcwiki-1.5x.png', // T150618
@@ -1657,7 +1657,7 @@ return [
 	'kkwiki' => '/static/images/project-logos/kkwiki-2x.png', // T150618
 	'klwiki' => '/static/images/project-logos/klwiki-2x.png', // T150618
 	'kmwiki' => '/static/images/project-logos/kmwiki-2x.png', // T150618
-	'knwiki' => '/static/images/project-logos/knwiki-temp-2x.png', // T150618,T338136
+	'knwiki' => '/static/images/project-logos/knwiki-2x.png', // T150618, T338136
 	'koiwiki' => '/static/images/project-logos/koiwiki-2x.png', // T150618
 	'kowiki' => '/static/images/project-logos/kowiki-2x.png', // T150618
 	'krcwiki' => '/static/images/project-logos/krcwiki-2x.png', // T150618
@@ -2638,7 +2638,7 @@ return [
 		'width' => 81,
 		'height' => 32,
 	],
-	'knwiki' => [
+	'knwiki' => [ // T338136
 		'src' => '/static/images/mobile/copyright/wikipedia-wordmark-kn.svg',
 		'width' => 118,
 		'height' => 20,
@@ -5098,7 +5098,7 @@ return [
 		'width' => 81,
 		'height' => 14,
 	],
-	'knwiki' => [
+	'knwiki' => [ // T338136
 		'src' => '/static/images/mobile/copyright/wikipedia-tagline-kn.svg',
 		'width' => 121,
 		'height' => 15,
@@ -6604,7 +6604,6 @@ return [
 	'wikimedia' => '/static/images/icons/wikimedia.svg',
 
 	// Wikipedia
-	'knwiki' => '/static/images/icons/knwiki-temp.svg', // T338136
 
 	// Wiktionary
 	'angwiktionary' => null,
