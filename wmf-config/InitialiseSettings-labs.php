@@ -48,7 +48,7 @@ function wmfGetOverrideSettings() {
 		'wgParserCacheType' => [
 			// Like production, but without the mysql fallback behind it
 			// See $wgObjectCaches['mysql-multiwrite'] in CommonSettings.php
-			'default' => 'mcrouter-with-onhost-tier',
+			'default' => 'mcrouter',
 		],
 
 		'wgParsoidCacheConfig' => [

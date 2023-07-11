@@ -50,10 +50,6 @@ $wgObjectCaches['mcrouter-primary-dc'] = array_merge(
 	$wgObjectCaches['mcrouter'],
 	[ 'routingPrefix' => "/$wmgMasterDatacenter/mw/" ]
 );
-$wgObjectCaches['mcrouter-with-onhost-tier'] = array_merge(
-	$wgObjectCaches['mcrouter'],
-	[ 'routingPrefix' => "/$wmgDatacenter/mw-with-onhost-tier/" ]
-);
 
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	// nutcracker only; no mcrouter present
