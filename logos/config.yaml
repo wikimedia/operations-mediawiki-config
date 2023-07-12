@@ -1874,11 +1874,9 @@ Wiktionary:
     angwiktionary:
         no_1_5x: true
         no_2x: true
-        no_icon: true
     anwiktionary:
         no_1_5x: true
         no_2x: true
-        no_icon: true
     arwiktionary:
         comment_1_5x: T150618
         comment_2x: T150618
@@ -1903,7 +1901,6 @@ Wiktionary:
     bgwiktionary:
         no_1_5x: true
         no_2x: true
-        no_icon: true
     bnwiktionary:
         comment: T45240
         comment_1_5x: T150618
@@ -1914,7 +1911,6 @@ Wiktionary:
     brwiktionary:
         no_1_5x: true
         no_2x: true
-        no_icon: true
     bswiktionary:
         comment: T45240
         comment_1_5x: T159542
@@ -1924,7 +1920,6 @@ Wiktionary:
     cawiktionary:
         no_1_5x: true
         no_2x: true
-        no_icon: true
         commons_wordmark: 'File:Wiktionary-wordmark-ca.svg'
         comment_wordmark: T331823
     ckbwiktionary:
@@ -1944,13 +1939,11 @@ Wiktionary:
     cswiktionary:
         comment_1_5x: T150618
         comment_2x: T150618
-        no_icon: true
         commons_wordmark: 'File:Wiktionary-wordmark-cs.svg'
         comment_wordmark: T328357
     cywiktionary:
         no_1_5x: true
         no_2x: true
-        no_icon: true
     dawiktionary:
         comment: T45240
         comment_1_5x: T150618
@@ -1961,7 +1954,6 @@ Wiktionary:
         comment: T320891
         comment_1_5x: T320891
         comment_2x: T320891
-        no_icon: true
     elwiktionary:
         no_1_5x: true
         no_2x: true
@@ -1991,7 +1983,6 @@ Wiktionary:
     euwiktionary:
         no_1_5x: true
         no_2x: true
-        no_icon: true
     fawiktionary:
         no_1_5x: true
         no_2x: true
@@ -2056,7 +2047,6 @@ Wiktionary:
     hewiktionary:
         commons_wordmark: 'File:Wiktionary-wordmark-he.svg'
         comment_wordmark: T308411
-        no_icon: true
     hiwiktionary:
         comment: T45240
         comment_1_5x: T150618
@@ -2071,7 +2061,6 @@ Wiktionary:
     huwiktionary:
         comment_1_5x: T150618
         comment_2x: T150618
-        no_icon: true
     hywiktionary:
         comment: T45240
         comment_1_5x: T150618
@@ -2087,6 +2076,7 @@ Wiktionary:
     idwiktionary:
         comment_1_5x: T150618
         comment_2x: T150618
+        commons_wordmark: File:Wiktionary-wordmark-id.svg
     iewiktionary:
         comment: T45240
         comment_1_5x: T150618
@@ -2102,11 +2092,9 @@ Wiktionary:
     iowiktionary:
         no_1_5x: true
         no_2x: true
-        no_icon: true
     iswiktionary:
         no_1_5x: true
         no_2x: true
-        no_icon: true
     itwiktionary:
         comment_1_5x: T150618
         comment_2x: T150618
@@ -2129,7 +2117,6 @@ Wiktionary:
     kawiktionary:
         no_1_5x: true
         no_2x: true
-        no_icon: true
     kbdwiktionary:
         commons: 'File:Wiktionary-logo-kbd.svg'
     kkwiktionary:
@@ -2145,7 +2132,6 @@ Wiktionary:
         comment: T31380
         comment_1_5x: T150618
         comment_2x: T150618
-        no_icon: true
     kowiktionary:
         comment_1_5x: T150618
         comment_2x: T150618
@@ -2161,7 +2147,6 @@ Wiktionary:
     kuwiktionary:
         no_1_5x: true
         no_2x: true
-        no_icon: true
         commons_wordmark: 'File:Wiktionary-wordmark-ku.svg'
         comment_wordmark: T326067
     kwwiktionary:
@@ -2178,11 +2163,9 @@ Wiktionary:
     lawiktionary:
         no_1_5x: true
         no_2x: true
-        no_icon: true
     lbwiktionary:
         no_1_5x: true
         no_2x: true
-        no_icon: true
     liwiktionary:
         commons: 'File:Wiktionary-logo-li.svg'
         comment: T45240
@@ -2197,7 +2180,6 @@ Wiktionary:
     ltwiktionary:
         no_1_5x: true
         no_2x: true
-        no_icon: true
         local_tagline: true
         local_wordmark: true
     lvwiktionary:
@@ -2213,7 +2195,6 @@ Wiktionary:
     mgwiktionary:
         no_1_5x: true
         no_2x: true
-        no_icon: true
     minwiktionary:
         commons: 'File:Wiktionary-logo-min.svg'
         comment: T236861
@@ -2230,7 +2211,6 @@ Wiktionary:
         comment: T140566
         no_1_5x: true
         no_2x: true
-        no_icon: true
     mlwiktionary:
         comment: T43785
         comment_1_5x: T150618
@@ -2299,7 +2279,6 @@ Wiktionary:
     nowiktionary:
         no_1_5x: true
         no_2x: true
-        no_icon: true
     ocwiktionary:
         comment: T54019
         comment_1_5x: T150618
@@ -2309,7 +2288,6 @@ Wiktionary:
     orwiktionary:
         comment_1_5x: T150618
         comment_2x: T150618
-        no_icon: true
     pawiktionary:
         comment: T45240
         comment_1_5x: T150618
@@ -2340,7 +2318,6 @@ Wiktionary:
     quwiktionary:
         no_1_5x: true
         no_2x: true
-        no_icon: true
     roa_rupwiktionary:
         comment: T45240
         no_1_5x: true
@@ -2348,13 +2325,11 @@ Wiktionary:
     rowiktionary:
         no_1_5x: true
         no_2x: true
-        no_icon: true
     ruwiktionary:
         no_1_5x: true
         no_2x: true
         commons_wordmark: 'File:Wiktionary-wordmark-ru.svg'
         comment_wordmark: T308233
-        no_icon: true
     sawiktionary:
         comment: T45240
         comment_1_5x: T150618
@@ -2376,11 +2351,9 @@ Wiktionary:
     sgwiktionary:
         no_1_5x: true
         no_2x: true
-        no_icon: true
     shwiktionary:
         no_1_5x: true
         no_2x: true
-        no_icon: true
     shnwiktionary:
         local_tagline: true
         local_wordmark: true
@@ -2395,11 +2368,9 @@ Wiktionary:
     simplewiktionary:
         no_1_5x: true
         no_2x: true
-        no_icon: true
     siwiktionary:
         comment_1_5x: T150618
         comment_2x: T150618
-        no_icon: true
     skwiktionary:
         comment: T45240
         comment_1_5x: T150618
@@ -2438,7 +2409,6 @@ Wiktionary:
     tawiktionary:
         no_1_5x: true
         no_2x: true
-        no_icon: true
     tewiktionary:
         comment: T45240
         comment_1_5x: T150618
@@ -2504,7 +2474,6 @@ Wiktionary:
     vowiktionary:
         no_1_5x: true
         no_2x: true
-        no_icon: true
     wawiktionary:
         comment: T45240
         comment_1_5x: T150618
@@ -2663,6 +2632,7 @@ Wikiquote:
     knwikiquote:
         commons: 'File:Wikiquote-logo-kn.svg'
         comment: T104260
+        commons_wordmark: 'File:Wikiquote-wordmark-kn.svg'
         comment_1_5x: T150618
         comment_2x: T150618
     kowikiquote:
@@ -3029,7 +2999,6 @@ Wikibooks:
     sqwikibooks:
         no_1_5x: true
         no_2x: true
-        no_icon: true
     srwikibooks:
         comment_1_5x: T159534
         comment_2x: T159534
@@ -3324,7 +3293,7 @@ Wikisource:
         comment: T110806
         no_1_5x: true
         no_2x: true
-        local_wordmark: true
+        commons_wordmark: 'File:Wikisource-wordmark-kn.svg'
     kowikisource:
         comment: T40543
         no_1_5x: true
@@ -3449,7 +3418,6 @@ Wikiversity:
         comment: T308604
         comment_1_5x: T308604
         comment_2x: T308604
-        no_icon: true
     cswikiversity:
         comment: T54019
         comment_1_5x: T150618

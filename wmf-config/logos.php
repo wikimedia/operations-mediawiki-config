@@ -3354,6 +3354,11 @@ return [
 		'width' => 120,
 		'height' => 17,
 	],
+	'idwiktionary' => [
+		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-id.svg',
+		'width' => 129,
+		'height' => 19,
+	],
 	'iewiktionary' => [
 		'src' => '/static/images/mobile/copyright/wiktionary-wordmark-ie.svg',
 		'width' => 120,
@@ -3709,6 +3714,11 @@ return [
 	'igwikiquote' => [
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-ig.svg',
 		'width' => 128,
+		'height' => 50,
+	],
+	'knwikiquote' => [
+		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-kn.svg',
+		'width' => 146,
 		'height' => 50,
 	],
 	'mlwikiquote' => [
@@ -4104,8 +4114,8 @@ return [
 	],
 	'knwikisource' => [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-kn.svg',
-		'width' => 146,
-		'height' => 27,
+		'width' => 110,
+		'height' => 32,
 	],
 	'lawikisource' => [
 		'src' => '/static/images/mobile/copyright/wikisource-wordmark-la.svg',
@@ -6614,53 +6624,20 @@ return [
 	// Wikipedia
 
 	// Wiktionary
-	'angwiktionary' => null,
-	'anwiktionary' => null,
-	'bgwiktionary' => null,
-	'brwiktionary' => null,
-	'cawiktionary' => null,
-	'cswiktionary' => null,
-	'cywiktionary' => null,
-	'dewiktionary' => null,
 	'enwiktionary' => '/static/images/icons/enwiktionary.svg',
-	'euwiktionary' => null,
 	'guwwiktionary' => '/static/images/icons/enwiktionary.svg',
-	'hewiktionary' => null,
-	'huwiktionary' => null,
-	'iowiktionary' => null,
-	'iswiktionary' => null,
-	'kawiktionary' => null,
-	'knwiktionary' => null,
-	'kuwiktionary' => null,
-	'lawiktionary' => null,
-	'lbwiktionary' => null,
-	'ltwiktionary' => null,
 	'niawiktionary' => '/static/images/icons/niawiktionary.svg',
-	'mgwiktionary' => null,
 	'minwiktionary' => '/static/images/icons/enwiktionary.svg',
-	'mkwiktionary' => null,
-	'nowiktionary' => null,
-	'orwiktionary' => null,
-	'quwiktionary' => null,
-	'rowiktionary' => null,
-	'ruwiktionary' => null,
-	'sgwiktionary' => null,
-	'shwiktionary' => null,
 	'shywiktionary' => '/static/images/icons/shywiktionary.svg',
-	'simplewiktionary' => null,
-	'siwiktionary' => null,
 	'srwiktionary' => '/static/images/icons/srwiktionary.svg',
-	'tawiktionary' => null,
 	'trwiktionary' => '/static/images/icons/trwiktionary.svg',
 	'ukwiktionary' => '/static/images/icons/ukwiktionary.svg',
-	'vowiktionary' => null,
 
 	// Wikiquote
 	'arwikiquote' => '/static/images/icons/arwikiquote.svg',
 	'urwikiquote' => '/static/images/icons/arwikiquote.svg',
 
 	// Wikibooks
-	'sqwikibooks' => null,
 
 	// Wikinews
 
@@ -6668,7 +6645,6 @@ return [
 	'sourceswiki' => '/static/images/icons/wikisource.svg',
 
 	// Wikiversity
-	'betawikiversity' => null,
 
 	// Wikivoyage
 
