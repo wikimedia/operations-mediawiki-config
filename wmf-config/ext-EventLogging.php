@@ -89,6 +89,7 @@ return [
 		'mediawiki.maps_interaction',
 		'mediawiki.edit_attempt',
 		'development.network.probe',
+		'mediawiki.special_diff_interactions',
 	],
 	'+group0' => [
 		'mediawiki.web_ui.interactions',

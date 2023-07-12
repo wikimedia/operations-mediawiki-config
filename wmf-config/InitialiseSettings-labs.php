@@ -282,7 +282,6 @@ function wmfGetOverrideSettings() {
 			'+enwiki' => [
 				'mediawiki.ipinfo_interaction',
 				'desktop_mobile_link_clicks',
-				'mediawiki.special_diff_interactions',
 			],
 			'+wikifunctionswiki' => [
 				'wikifunctions.ui',
