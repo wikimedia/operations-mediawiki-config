@@ -1730,6 +1730,15 @@ return [
 			'templateeditor' => true, // T269067
 		],
 	],
+	'+mywiki' => [
+		'autopatrolled' => [ 'autopatrol' => true, ], // T341026
+		'patroller' => [
+			'autopatrol' => true, // T341026
+			'patrol' => true, // T341026
+			'rollback' => true, // T341026
+			'suppressredirect' => true, // T341026
+		],
+	],
 	'+mznwiki' => [
 		// Uploads are restricted to a uploader group - T187187
 		'user' => [ 'reupload-own' => false, ],
@@ -3840,6 +3849,12 @@ return [
 			'patroller',  // T269067
 		],
 	],
+	'+mywiki' => [
+		'sysop' => [
+			'autopatrolled', // T341026
+			'patroller', // T341026
+		],
+	],
 	'+mznwiki' => [
 		'sysop' => [ 'uploader' ],
 	],
@@ -5098,6 +5113,12 @@ return [
 		'sysop' => [
 			'templateeditor',  // T269067
 			'patroller',  // T269067
+		],
+	],
+	'+mywiki' => [
+		'sysop' => [
+			'autopatrolled', // T341026
+			'patroller', // T341026
 		],
 	],
 	'+mznwiki' => [
