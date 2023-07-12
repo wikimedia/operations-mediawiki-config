@@ -4792,6 +4792,7 @@ return [
 	'+plwikisource' => [ 102 => 1, 104 => 1, 124 => 1, ], // T154711
 	'+ptwikisource' => [ 102 => 1, 104 => 1 ],
 	'+rowikisource' => [ 102 => 1, 106 => 1 ], // T31190
+	'+ruwikibooks' => [ 104 => 1 ], // Recipe, T341708
 	'+ruwikisource' => [ 106 => 1 ],
 	'+ruwikivoyage' => [ 6 => 1, 14 => 1, 100 => 1, 104 => 1, 106 => 1 ],
 	'+sewikimedia' => [ 100 => 1 ], // T48882
