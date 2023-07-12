@@ -1291,10 +1291,11 @@ return [
 	'hywikisource' => 'Վիքիդարան',
 	'hywiktionary' => 'Վիքիբառարան',
 	'iawiktionary' => 'Wiktionario',
-	'iegcomwiki' => 'Individual Engagement Grants Committee Wiki',
 	'idwikibooks' => 'Wikibuku',
 	'idwikimedia' => 'Wikimedia Indonesia', // T192726
+	'idwikiquote' => 'Wikikutip', // T341177
 	'id_internalwikimedia' => 'Wikimedia Indonesia (internal)',
+	'iegcomwiki' => 'Individual Engagement Grants Committee Wiki',
 	'ilwikimedia' => 'ויקימדיה',
 	'incubatorwiki' => 'Wikimedia Incubator',
 	'inhwiki' => 'Википеди',

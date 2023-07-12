@@ -5216,6 +5216,7 @@ return [
 	'iawiktionary' => 'Wiktionario',
 	'idwikibooks' => 'Wikibuku',
 	'idwikimedia' => 'Wikimedia_Indonesia',
+	'idwikiquote' => 'Wikikutip', // T341177
 	'iegcomwiki' => 'Project',
 	'igwikiquote' => 'Wikikwotu',
 	'ilwikimedia' => 'ויקימדיה',
