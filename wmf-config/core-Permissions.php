@@ -2051,7 +2051,11 @@ return [
 			'suppressredirect' => true,
 			'upload' => true,
 		],
-		'editor' => [ 'editautoreviewprotected' => true ], // T337430
+		'editor' => [
+			'editautoreviewprotected' => true, // T337430
+			'move-categorypages' => true, // T341707
+			'suppressredirect' => true, // T341707
+		],
 		'engineer' => [ // T144599, T190619
 			'apihighlimits' => true,
 			'editcontentmodel' => true,
