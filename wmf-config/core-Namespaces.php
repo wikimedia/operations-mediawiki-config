@@ -1029,6 +1029,10 @@ return [
 	'mnwwiktionary' => [
 		'အဆက်လက္ကရဴ' => 100, // T314023
 		'အဆက်လက္ကရဴ_ဓရီုကျာ' => 101, // T314023
+		'ကာရန်' => 106, // T330689
+		'ကာရန်_ဓရီုကျ' => 107, // T330689
+		'ဗီုပြင်သိုင်တၟိ' => 110, // T330689
+		'ဗီုပြင်သိုင်တၟိ_ဓရီုကျ' => 111, // T330689
 	],
 	'+mrwiki' => [
 		'विपी' => NS_PROJECT,
@@ -3590,6 +3594,10 @@ return [
 	'mnwwiktionary' => [
 		100 => 'Appendix', // T314023
 		101 => 'Appendix_talk', // T314023
+		106 => 'Rhymes', // T330689 - Rhymes
+		107 => 'Rhymes_talk', // T330689 - Rhymes_talk
+		118 => 'Reconstruction', // T330689 - Reconstruction
+		119 => 'Reconstruction_talk', // T330689 - Reconstruction_talk
 	],
 	'mrwiktionary' => [
 		104 => 'सूची',
