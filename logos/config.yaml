@@ -2643,6 +2643,13 @@ Wikiquote:
         comment_1_5x: T150618
         comment_2x: T150618
         local_wordmark: true
+    idwikiquote:
+        commons: 'File:Wikiquote-logo-id.svg'
+        comment: T341177
+        comment_1_5x: T341177
+        comment_2x: T341177
+        commons_wordmark: 'File:Wikiquote-wordmark-id.svg'
+        comment_wordmark: T341177
     igwikiquote:
         commons: 'File:Wikiquote-logo-ig.svg'
         local_wordmark: true

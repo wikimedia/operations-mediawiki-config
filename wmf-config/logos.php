@@ -543,6 +543,7 @@ return [
 	'hrwikiquote' => '/static/images/project-logos/hrwikiquote.png',
 	'huwikiquote' => '/static/images/project-logos/huwikiquote.png',
 	'hywikiquote' => '/static/images/project-logos/hywikiquote.png',
+	'idwikiquote' => '/static/images/project-logos/idwikiquote.png', // T341177
 	'igwikiquote' => '/static/images/project-logos/igwikiquote.png',
 	'iswikiquote' => '/static/images/project-logos/iswikiquote.png',
 	'kawikiquote' => '/static/images/project-logos/kawikiquote.png',
@@ -1332,6 +1333,7 @@ return [
 	'hewikiquote' => '/static/images/project-logos/hewikiquote-1.5x.png',
 	'hrwikiquote' => '/static/images/project-logos/hrwikiquote-1.5x.png', // T150618
 	'hywikiquote' => '/static/images/project-logos/hywikiquote-1.5x.png', // T150618
+	'idwikiquote' => '/static/images/project-logos/idwikiquote-1.5x.png', // T341177
 	'igwikiquote' => '/static/images/project-logos/igwikiquote-1.5x.png',
 	'knwikiquote' => '/static/images/project-logos/knwikiquote-1.5x.png', // T150618
 	'mlwikiquote' => '/static/images/project-logos/mlwikiquote-1.5x.png', // T150618
@@ -1946,6 +1948,7 @@ return [
 	'hewikiquote' => '/static/images/project-logos/hewikiquote-2x.png',
 	'hrwikiquote' => '/static/images/project-logos/hrwikiquote-2x.png', // T150618
 	'hywikiquote' => '/static/images/project-logos/hywikiquote-2x.png', // T150618
+	'idwikiquote' => '/static/images/project-logos/idwikiquote-2x.png', // T341177
 	'igwikiquote' => '/static/images/project-logos/igwikiquote-2x.png',
 	'knwikiquote' => '/static/images/project-logos/knwikiquote-2x.png', // T150618
 	'mlwikiquote' => '/static/images/project-logos/mlwikiquote-2x.png', // T150618
@@ -3697,6 +3700,11 @@ return [
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-hy.svg',
 		'width' => 140,
 		'height' => 48,
+	],
+	'idwikiquote' => [ // T341177
+		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-id.svg',
+		'width' => 118,
+		'height' => 40,
 	],
 	'igwikiquote' => [
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-ig.svg',
