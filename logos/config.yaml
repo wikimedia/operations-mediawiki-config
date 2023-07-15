@@ -2564,7 +2564,8 @@ Wikiquote:
         comment: 'T319183, T323131'
         comment_1_5x: 'T319183, T323131'
         comment_2x: 'T319183, T323131'
-        local_wordmark: true
+        commons_wordmark: 'File:Wikiquote-wordmark-bn.svg'
+        comment_wordmark: T341910
     bswikiquote:
         no_1_5x: true
         no_2x: true
@@ -3832,7 +3833,6 @@ Wikivoyage:
         comment_wordmark: T295303
         selected_icon: wikimedia
     grantswiki:
-        no_1_5x: true
         no_1_5x: true
         no_2x: true
         selected: projectcomwiki

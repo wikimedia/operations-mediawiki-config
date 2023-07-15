@@ -3636,10 +3636,10 @@ return [
 		'width' => 100,
 		'height' => 50,
 	],
-	'bnwikiquote' => [
+	'bnwikiquote' => [ // T341910
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-bn.svg',
-		'width' => 140,
-		'height' => 42,
+		'width' => 101,
+		'height' => 27,
 	],
 	'bswikiquote' => [
 		'src' => '/static/images/mobile/copyright/wikiquote-wordmark-bs.svg',
