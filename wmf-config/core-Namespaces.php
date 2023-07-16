@@ -731,6 +731,8 @@ return [
 		'Author_talk' => 101,
 	],
 	'+huwiktionary' => [
+		'Appendix' => 100, // T341926
+		'Appendix_talk' => 101, // T341926
 		'Függelék_vita' => 101, // T44505
 		'Index_vita' => 103,
 	],
